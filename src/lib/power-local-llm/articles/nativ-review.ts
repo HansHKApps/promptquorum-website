@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Nativ is a free, open-source (MIT) Mac app that runs open AI models on Apple Silicon through a bundled MLX server and adds chat, image generation, dictation and a local API for coding tools.** It needs a Mac with an M1 or later chip and macOS 26 or newer, installs from a DMG or Homebrew, and, according to the maker, works offline once a model is downloaded. It is a young project from a Polish company, and PromptQuorum has not tested it.',
+      '**Nativ is a free, open-source (MIT) Mac app that runs open AI models on Apple Silicon through a bundled MLX server and adds chat, image generation, dictation and a local API for coding tools.** It needs a Mac with an M1 or later chip and macOS 26 or newer, installs from a DMG or Homebrew, and, according to the maker, works offline once a model is downloaded. It is a young project from a Polish company. The maker describes it as free and account-free, although the terms mention that paid plans such as Nativ Pro might come later. PromptQuorum has not tested it.',
     quickAnswerTop: {
       en: {
         question: 'What is Nativ and who is it for?',
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**According to the maker, your chats, prompts, files and outputs stay on your Mac; the app goes online to download models and check for updates, and diagnostic data is opt-in.**',
           'According to the privacy policy (last updated 16 November 2026), Neywa Labs does not collect, access or store your content, does not use it to train or evaluate models, and does not sell personal information. Diagnostic data such as crash reports, app and macOS version, chip and memory size, performance figures and feature-usage events may be collected only with the consent the app requests on first launch, and you can withdraw it in Settings. The policy says it never includes the content of your sessions or which specific models you use.',
           'The FAQ adds that models are downloaded straight from Hugging Face and that update checks reach Neywa Labs or its update provider, which may see request details such as an IP address and app version. The website uses PostHog analytics with a cookie banner.',
-          'The policy also contains a payment-processor placeholder in square brackets and sections on registration, licence keys and purchases, although the maker describes the app as free and account-free. The terms add that paid plans such as Nativ Pro might come later. Read both documents again before relying on them, and note that the code is MIT-licensed and public, so the data flow can be audited.',
+          'The policy also contains a payment-processor placeholder in square brackets and sections on registration, licence keys and purchases, although the maker describes the app as free and account-free. The terms add that paid plans such as Nativ Pro might come later. Read both documents again before relying on them, and note that the code is MIT-licensed and public, so the data flow can in principle be inspected; PromptQuorum has not done so.',
         ],
       },
       whoShouldUse: {
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Nativ is worth a look if you own an Apple Silicon Mac and want a free, open-source local AI app that bundles chat, images, dictation and a local API for coding agents.**',
           'On paper it covers a lot: a bundled MLX server, a Hugging Face model library with fit warnings, OpenAI- and Anthropic-compatible endpoints, set-up for ten coding agents and six editors, an audio extension and MCP support, with v0.4.6 released on 16 November 2026 and a commit on 17 November 2026.',
-          'The trade-offs are real. It runs only on Apple Silicon with macOS 26 or newer, it is a young project with a 0.4 version number, and the privacy policy still contains a bracketed placeholder and sections on accounts and purchases. PromptQuorum has not tested the app, so start with a small model, read the current privacy policy and check that dictation, image generation and the API work for your use before relying on it.',
+          'The trade-offs are real. It runs only on Apple Silicon with macOS 26 or newer, it is a young project with a 0.4 version number, and when PromptQuorum checked on 18 November 2026 the privacy policy contained a bracketed placeholder and sections on accounts and purchases. PromptQuorum has not tested the app, so start with a small model, read the current privacy policy and check that dictation, image generation and the API work for your use before relying on it.',
         ],
       },
       sources: {
@@ -293,7 +293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Nativ ist eine kostenlose, MIT-lizenzierte Mac-App von Neywa Labs, die offene KI-Modelle über einen mitgelieferten MLX-Server auf Apple Silicon ausführt. Sie bietet Chat mit Bildeingabe, Bilderzeugung, Diktat und Meeting-Notizen sowie eine lokale, OpenAI- und Anthropic-kompatible API, die Coding-Agenten nutzen können. Diese Rezension stützt sich auf die Website des Entwicklers, die Datenschutzerklärung und die Nutzungsbedingungen, das GitHub-Repository und die Release-Seite, geprüft am 18. November 2026. PromptQuorum hat die App nicht selbst getestet.',
     metaDescription:
-      'Nativ ist eine kostenlose MIT-Mac-App, die offene KI-Modelle mit MLX auf Apple Silicon ausführt: Chat, Bilder, Diktat und lokale API für Coding-Agenten. Installation.',
+      'Nativ ist eine kostenlose MIT-Mac-App, die offene KI-Modelle mit MLX auf Apple Silicon ausführt: Chat, Bilder, Diktat und lokale API für Coding-Agenten.',
     twitterDescription:
       'Nativ führt offene Modelle mit MLX auf Ihrem Mac aus: Chat, Bilderzeugung, Diktat und lokale API für Coding-Agenten. Kostenlos, MIT, nur Apple Silicon. Was belegt ist.',
     audience:
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Nativ ist eine kostenlose, quelloffene (MIT) Mac-App, die offene KI-Modelle über einen mitgelieferten MLX-Server auf Apple Silicon ausführt und Chat, Bilderzeugung, Diktat und eine lokale API für Coding-Werkzeuge ergänzt.** Sie benötigt einen Mac mit M1-Chip oder neuer und macOS 26 oder neuer, wird per DMG oder Homebrew installiert und arbeitet laut Entwickler offline, sobald ein Modell geladen ist. Es ist ein junges Projekt eines polnischen Unternehmens, und PromptQuorum hat es nicht getestet.',
+      '**Nativ ist eine kostenlose, quelloffene (MIT) Mac-App, die offene KI-Modelle über einen mitgelieferten MLX-Server auf Apple Silicon ausführt und Chat, Bilderzeugung, Diktat und eine lokale API für Coding-Werkzeuge ergänzt.** Sie benötigt einen Mac mit M1-Chip oder neuer und macOS 26 oder neuer, wird per DMG oder Homebrew installiert und arbeitet laut Entwickler offline, sobald ein Modell geladen ist. Es ist ein junges Projekt eines polnischen Unternehmens. Der Entwickler beschreibt sie als kostenlos und kontofrei, doch die Bedingungen erwähnen, dass später bezahlte Tarife wie Nativ Pro kommen könnten. PromptQuorum hat sie nicht getestet.',
     quickAnswerTop: {
       de: {
         question: 'Was ist Nativ, und für wen ist es gedacht?',
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nativ ist eine native macOS-App mit mitgeliefertem mlx-vlm-Server, Modellbibliothek, Chat, Bilder-Tab, Diktat und lokaler API. Sie eignet sich für Besitzer von Apple-Silicon-Macs, die lokale KI ohne Konto wollen, und für Entwickler, die Claude Code, Codex oder einen Editor mit einem Modell auf dem eigenen Mac verbinden möchten.',
         bullets: [
           'Kostenlos und MIT-lizenziert; nur Mac, Apple Silicon (M1 oder neuer), macOS 26 oder neuer.',
-          'Chat mit Bildeingabe, Bilderzeugung und -bearbeitung, Spracherkennung und -ausgabe, Meeting-Notizen und Diktat, laut Entwickler alles auf dem Mac.',
+          'Chat mit Bildeingabe, Bilderzeugung und -bearbeitung, Sprachmodelle, Meeting-Notizen und Diktat, laut Entwickler alles auf dem Mac.',
           'Lokaler Server mit OpenAI- und Anthropic-kompatiblen Endpunkten; Einrichtungshilfen für genannte Coding-Agenten und Editoren.',
           'Modelle stammen von Hugging Face; die App warnt, wenn ein Modell möglicherweise nicht in den Speicher passt.',
           'Repository im Juli 2026 angelegt; die Datenschutzerklärung enthält einen Platzhalter in eckigen Klammern und behandelt Konten und Käufe, obwohl die App kostenlos ist.',
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Open Source unter MIT und kostenlos; laut Entwickler gibt es kein Konto und kein Abonnement, und die Bedingungen sagen, dass bezahlte Tarife wie Nativ Pro vor einem Kauf ihre Konditionen zeigen würden.',
           'Läuft nur auf Macs mit Apple Silicon (M1 oder neuer) und macOS 26 oder neuer; MLX läuft nicht auf Intel-Macs.',
-          'Funktionen: Chat mit Bildeingabe, Bilderzeugung und -bearbeitung, Spracherkennung und -ausgabe, Diktat in jeder App, Meeting-Notizen, geplante Prompts und MCP-Server mit Zustimmung pro Werkzeug.',
+          'Funktionen: Chat mit Bildeingabe, Bilderzeugung und -bearbeitung, Sprachmodelle, Diktat in jeder App, Meeting-Notizen, geplante Prompts und MCP-Server mit Zustimmung pro Werkzeug.',
           'Ein lokaler Server auf Port 8080 bietet OpenAI- und Anthropic-kompatible Endpunkte, und die App richtet Coding-Agenten wie Claude Code, Codex, OpenCode, Aider und Goose dafür ein.',
           'PromptQuorum hat die App nicht getestet. Die Datenschutzerklärung enthält einen Platzhalter in eckigen Klammern und Abschnitte zu Konten, Lizenzschlüsseln und Käufen, obwohl der Entwickler die App als kostenlos und kontofrei beschreibt.',
         ],
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Laut Entwickler bleiben Ihre Chats, Prompts, Dateien und Ausgaben auf Ihrem Mac; die App geht online, um Modelle zu laden und nach Updates zu suchen, und Diagnosedaten sind freiwillig.**',
           'Laut Datenschutzerklärung (zuletzt aktualisiert am 16. November 2026) erhebt, ruft oder speichert Neywa Labs Ihre Inhalte nicht, nutzt sie nicht zum Trainieren oder Bewerten von Modellen und verkauft keine personenbezogenen Daten. Diagnosedaten wie Absturzberichte, App- und macOS-Version, Chip und Speichergröße, Leistungswerte und Ereignisse zur Funktionsnutzung dürfen nur mit der Einwilligung erhoben werden, die die App beim ersten Start abfragt, und Sie können sie in den Einstellungen widerrufen. Die Erklärung sagt, dass sie nie Inhalte Ihrer Sitzungen oder die konkret genutzten Modelle enthalten.',
           'Die FAQ ergänzt, dass Modelle direkt von Hugging Face geladen werden und dass Update-Prüfungen Neywa Labs oder dessen Update-Anbieter erreichen, der Anfragedetails wie IP-Adresse und App-Version sehen kann. Die Website nutzt PostHog-Analysen mit Cookie-Banner.',
-          'Die Erklärung enthält außerdem einen Platzhalter für den Zahlungsdienstleister in eckigen Klammern sowie Abschnitte zu Registrierung, Lizenzschlüsseln und Käufen, obwohl der Entwickler die App als kostenlos und kontofrei beschreibt. Die Bedingungen ergänzen, dass später bezahlte Tarife wie Nativ Pro kommen könnten. Lesen Sie beide Dokumente erneut, bevor Sie sich darauf verlassen; der Code steht unter MIT-Lizenz und ist öffentlich, der Datenfluss lässt sich also prüfen.',
+          'Die Erklärung enthält außerdem einen Platzhalter für den Zahlungsdienstleister in eckigen Klammern sowie Abschnitte zu Registrierung, Lizenzschlüsseln und Käufen, obwohl der Entwickler die App als kostenlos und kontofrei beschreibt. Die Bedingungen ergänzen, dass später bezahlte Tarife wie Nativ Pro kommen könnten. Lesen Sie beide Dokumente erneut, bevor Sie sich darauf verlassen; der Code steht unter MIT-Lizenz und ist öffentlich, der Datenfluss lässt sich also grundsätzlich prüfen; PromptQuorum hat das nicht getan.',
         ],
       },
       whoShouldUse: {
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Nativ ist einen Blick wert, wenn Sie einen Apple-Silicon-Mac besitzen und eine kostenlose Open-Source-App für lokale KI wollen, die Chat, Bilder, Diktat und eine lokale API für Coding-Agenten bündelt.**',
           'Auf dem Papier deckt sie viel ab: einen mitgelieferten MLX-Server, eine Hugging-Face-Modellbibliothek mit Passungshinweisen, OpenAI- und Anthropic-kompatible Endpunkte, Einrichtung für zehn Coding-Agenten und sechs Editoren, eine Audio-Erweiterung und MCP-Unterstützung, mit v0.4.6 am 16. November 2026 und einem Commit am 17. November 2026.',
-          'Die Kompromisse sind real. Sie läuft nur auf Apple Silicon mit macOS 26 oder neuer, ist ein junges Projekt mit Versionsnummer 0.4, und die Datenschutzerklärung enthält noch einen Platzhalter in eckigen Klammern und Abschnitte zu Konten und Käufen. PromptQuorum hat die App nicht getestet; beginnen Sie mit einem kleinen Modell, lesen Sie die aktuelle Datenschutzerklärung und prüfen Sie, ob Diktat, Bilderzeugung und API für Ihren Zweck funktionieren, bevor Sie sich darauf verlassen.',
+          'Die Kompromisse sind real. Sie läuft nur auf Apple Silicon mit macOS 26 oder neuer, ist ein junges Projekt mit Versionsnummer 0.4, und als PromptQuorum am 18. November 2026 nachsah, enthielt die Datenschutzerklärung einen Platzhalter in eckigen Klammern und Abschnitte zu Konten und Käufen. PromptQuorum hat die App nicht getestet; beginnen Sie mit einem kleinen Modell, lesen Sie die aktuelle Datenschutzerklärung und prüfen Sie, ob Diktat, Bilderzeugung und API für Ihren Zweck funktionieren, bevor Sie sich darauf verlassen.',
         ],
       },
       sources: {
@@ -557,12 +557,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/nativ-review-hero-fr.webp',
-    title: 'Test de Nativ : application Mac gratuite et open source pour l\'IA locale avec MLX',
-    seoTitle: 'Test de Nativ : app d\'IA locale gratuite pour Mac',
+    title: 'Avis sur Nativ : application Mac gratuite et open source pour l\'IA locale avec MLX',
+    seoTitle: 'Avis sur Nativ : app d\'IA locale gratuite pour Mac',
     intro:
-      'Nativ est une application Mac gratuite sous licence MIT, éditée par Neywa Labs, qui exécute des modèles d\'IA ouverts sur Apple Silicon grâce à un serveur MLX intégré. Elle propose le chat avec envoi d\'images, la génération d\'images, la dictée et les notes de réunion, ainsi qu\'une API locale compatible OpenAI et Anthropic que les agents de code peuvent utiliser. Ce test s\'appuie sur le site du développeur, sa politique de confidentialité et ses conditions d\'utilisation, le dépôt GitHub et la page des versions, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application.',
+      'Nativ est une application Mac gratuite sous licence MIT, éditée par Neywa Labs, qui exécute des modèles d\'IA ouverts sur Apple Silicon grâce à un serveur MLX intégré. Elle propose le chat avec envoi d\'images, la génération d\'images, la dictée et les notes de réunion, ainsi qu\'une API locale compatible OpenAI et Anthropic que les agents de code peuvent utiliser. Cet avis s\'appuie sur le site du développeur, sa politique de confidentialité et ses conditions d\'utilisation, le dépôt GitHub et la page des versions, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application.',
     metaDescription:
-      'Nativ est une app Mac gratuite sous licence MIT qui exécute des modèles d\'IA ouverts avec MLX sur Apple Silicon : chat, images, dictée et API locale pour agents de code.',
+      'Nativ est une app Mac gratuite sous licence MIT qui exécute des modèles d\'IA ouverts avec MLX sur Apple Silicon : chat, images, dictée et API locale.',
     twitterDescription:
       'Nativ exécute des modèles ouverts sur votre Mac avec MLX : chat, images, dictée et API locale pour agents de code. Gratuit, MIT, Apple Silicon uniquement. Ce qui est confirmé.',
     audience:
@@ -570,9 +570,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'test de Nativ',
+    primaryTerm: 'avis sur Nativ',
     targetKeywords: [
-      'test de Nativ',
+      'avis sur Nativ',
       'application IA locale pour Mac',
       'application MLX Apple Silicon',
       'Nativ Neywa Labs',
@@ -581,7 +581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Nativ est une application Mac gratuite et open source (MIT) qui exécute des modèles d\'IA ouverts sur Apple Silicon via un serveur MLX intégré, avec chat, génération d\'images, dictée et une API locale pour les outils de code.** Elle exige un Mac équipé d\'une puce M1 ou plus récente et macOS 26 ou plus récent, s\'installe par DMG ou Homebrew et fonctionne hors ligne, selon le développeur, une fois un modèle téléchargé. C\'est un projet jeune, porté par une société polonaise, et PromptQuorum ne l\'a pas testé.',
+      '**Nativ est une application Mac gratuite et open source (MIT) qui exécute des modèles d\'IA ouverts sur Apple Silicon via un serveur MLX intégré, avec chat, génération d\'images, dictée et une API locale pour les outils de code.** Elle exige un Mac équipé d\'une puce M1 ou plus récente et macOS 26 ou plus récent, s\'installe par DMG ou Homebrew et fonctionne hors ligne, selon le développeur, une fois un modèle téléchargé. C\'est un projet jeune, porté par une société polonaise. Le développeur la présente comme gratuite et sans compte, mais les conditions mentionnent que des offres payantes comme Nativ Pro pourraient venir plus tard. PromptQuorum ne l\'a pas testée.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que Nativ et à qui s\'adresse-t-il ?',
@@ -589,7 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nativ est une application macOS native qui réunit un serveur mlx-vlm, une bibliothèque de modèles, le chat, un onglet d\'images, la dictée et une API locale. Elle convient aux propriétaires de Mac Apple Silicon qui veulent une IA locale sans compte, et aux développeurs qui souhaitent relier Claude Code, Codex ou un éditeur à un modèle sur leur propre Mac.',
         bullets: [
           'Gratuit et sous licence MIT ; Mac uniquement, Apple Silicon (M1 ou plus récent), macOS 26 ou plus récent.',
-          'Chat avec images, génération et retouche d\'images, reconnaissance et synthèse vocales, notes de réunion et dictée, le tout sur le Mac selon le développeur.',
+          'Chat avec images, génération et retouche d\'images, modèles vocaux, notes de réunion et dictée, le tout sur le Mac selon le développeur.',
           'Serveur local aux points d\'accès compatibles OpenAI et Anthropic ; assistants de configuration pour des agents de code et éditeurs cités.',
           'Les modèles viennent de Hugging Face ; l\'app avertit quand un modèle risque de ne pas tenir en mémoire.',
           'Dépôt créé en juillet 2026 ; la politique de confidentialité contient encore un espace réservé entre crochets et traite des comptes et des achats alors que l\'app est gratuite.',
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Open source sous licence MIT et gratuit ; le développeur indique qu\'il n\'y a ni compte ni abonnement, et les conditions précisent que d\'éventuelles offres payantes comme Nativ Pro afficheraient leurs conditions avant tout achat.',
           'Fonctionne uniquement sur les Mac Apple Silicon (M1 ou plus récent) avec macOS 26 ou plus récent ; MLX ne fonctionne pas sur les Mac Intel.',
-          'Fonctions : chat avec images, génération et retouche d\'images, reconnaissance et synthèse vocales, dictée dans toute app, notes de réunion, requêtes planifiées et serveurs MCP avec consentement par outil.',
+          'Fonctions : chat avec images, génération et retouche d\'images, modèles vocaux, dictée dans toute app, notes de réunion, requêtes planifiées et serveurs MCP avec consentement par outil.',
           'Un serveur local sur le port 8080 propose des points d\'accès compatibles OpenAI et Anthropic, et l\'app configure des agents de code comme Claude Code, Codex, OpenCode, Aider et Goose pour l\'utiliser.',
           'PromptQuorum n\'a pas testé l\'application. La politique de confidentialité contient un espace réservé entre crochets et des sections sur les comptes, les clés de licence et les achats, alors que le développeur présente l\'app comme gratuite et sans compte.',
         ],
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Selon le développeur, vos discussions, requêtes, fichiers et résultats restent sur votre Mac ; l\'app se connecte pour télécharger des modèles et rechercher des mises à jour, et les données de diagnostic sont facultatives.**',
           'Selon la politique de confidentialité (mise à jour le 16 novembre 2026), Neywa Labs ne collecte, ne consulte ni ne stocke votre contenu, ne s\'en sert pas pour entraîner ou évaluer des modèles et ne vend pas de données personnelles. Des données de diagnostic, comme les rapports de plantage, les versions de l\'app et de macOS, la puce et la mémoire, les mesures de performance et les événements d\'usage des fonctions, ne peuvent être recueillies qu\'avec le consentement demandé au premier lancement, que vous pouvez retirer dans les réglages. La politique précise qu\'elles n\'incluent jamais le contenu de vos sessions ni les modèles précis que vous utilisez.',
           'La FAQ ajoute que les modèles sont téléchargés directement depuis Hugging Face et que les vérifications de mise à jour atteignent Neywa Labs ou son prestataire de mises à jour, qui peut voir des détails de requête comme l\'adresse IP et la version de l\'app. Le site utilise l\'analyse PostHog avec un bandeau de cookies.',
-          'La politique contient aussi un espace réservé pour le prestataire de paiement entre crochets et des sections sur l\'inscription, les clés de licence et les achats, alors que le développeur présente l\'app comme gratuite et sans compte. Les conditions ajoutent que des offres payantes comme Nativ Pro pourraient venir plus tard. Relisez les deux documents avant de vous y fier ; le code est sous licence MIT et public, le flux de données peut donc être vérifié.',
+          'La politique contient aussi un espace réservé pour le prestataire de paiement entre crochets et des sections sur l\'inscription, les clés de licence et les achats, alors que le développeur présente l\'app comme gratuite et sans compte. Les conditions ajoutent que des offres payantes comme Nativ Pro pourraient venir plus tard. Relisez les deux documents avant de vous y fier ; le code est sous licence MIT et public, le flux de données peut donc en principe être vérifié ; PromptQuorum ne l\'a pas fait.',
         ],
       },
       whoShouldUse: {
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Non vérifié : vitesse, usage mémoire, qualité des réponses et des images, précision de la dictée. PromptQuorum n\'a pas lancé l\'app.',
           'Non vérifié : que rien ne quitte le Mac en dehors des téléchargements de modèles et des vérifications de mise à jour. L\'affirmation vient du développeur, et PromptQuorum n\'a ni audité le code ni inspecté le trafic réseau.',
           'Non vérifié : comment les sections de la politique de confidentialité sur le compte, la licence et les achats, et l\'espace réservé « [PAYMENT PROCESSOR NAME] », s\'accordent avec une app gratuite, et ce que couvrirait « Nativ Pro ».',
-          'Non vérifié : l\'affirmation du développeur d\'être l\'équipe derrière mlx-vlm et mlx-audio, le nombre de modèles exécutables dans l\'app et le nombre d\'utilisateurs. Aucun test indépendant n\'a été trouvé.',
+          'Non vérifié : l\'affirmation du développeur d\'être l\'équipe derrière mlx-vlm et mlx-audio, le nombre de modèles exécutables dans l\'app et le nombre d\'utilisateurs. Aucun avis indépendant n\'a été trouvé.',
           'Non vérifié : si le DMG est notarisé et quelle mémoire minimale un modèle donné exige sur votre Mac.',
         ],
       },
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Nativ face aux alternatives',
         itemHeadings: true,
         content: [
-          '**Nativ concurrence d\'autres apps de bureau locales et des outils d\'inférence pour Mac ; PromptQuorum ne les a pas comparés en pratique.** Les outils ci-dessous figurent dans l\'annuaire et sont décrits d\'après leurs propres tests.',
+          '**Nativ concurrence d\'autres apps de bureau locales et des outils d\'inférence pour Mac ; PromptQuorum ne les a pas comparés en pratique.** Les outils ci-dessous figurent dans l\'annuaire et sont décrits d\'après les avis publiés sur ce site.',
         ],
         columns: ['Outil', 'Selon les sources'],
         rows: [
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Nativ mérite un coup d\'œil si vous possédez un Mac Apple Silicon et voulez une app d\'IA locale gratuite et open source qui réunit chat, images, dictée et une API locale pour les agents de code.**',
           'Sur le papier, elle couvre beaucoup : un serveur MLX intégré, une bibliothèque de modèles Hugging Face avec avertissements d\'adéquation, des points d\'accès compatibles OpenAI et Anthropic, la configuration de dix agents de code et de six éditeurs, une extension audio et la prise en charge de MCP, avec la v0.4.6 du 16 novembre 2026 et un commit du 17 novembre 2026.',
-          'Les compromis sont réels. Elle ne fonctionne que sur Apple Silicon avec macOS 26 ou plus récent, c\'est un projet jeune en version 0.4, et la politique de confidentialité contient encore un espace réservé entre crochets et des sections sur les comptes et les achats. PromptQuorum n\'a pas testé l\'app : commencez par un petit modèle, lisez la politique de confidentialité en vigueur et vérifiez que la dictée, la génération d\'images et l\'API conviennent à votre usage avant de vous y fier.',
+          'Les compromis sont réels. Elle ne fonctionne que sur Apple Silicon avec macOS 26 ou plus récent, c\'est un projet jeune en version 0.4, et, lors de la vérification de PromptQuorum le 18 novembre 2026, la politique de confidentialité contenait un espace réservé entre crochets et des sections sur les comptes et les achats. PromptQuorum n\'a pas testé l\'app : commencez par un petit modèle, lisez la politique de confidentialité en vigueur et vérifiez que la dictée, la génération d\'images et l\'API conviennent à votre usage avant de vous y fier.',
         ],
       },
       sources: {
@@ -809,10 +809,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Test de LM Studio](/fr/power-local-llm/lm-studio-review) — une app de bureau avec navigateur de modèles intégré et mode serveur.',
-          '[Test de Jan](/fr/power-local-llm/jan-review) — une app de chat de bureau open source, pensée pour le hors ligne.',
-          '[Test d\'oMLX](/fr/power-local-llm/omlx-review) — un serveur d\'inférence basé sur MLX pour Apple Silicon, avec cache SSD.',
-          '[Test d\'Osaurus](/fr/power-local-llm/osaurus-ai-review) — une app Swift native gratuite sous licence MIT pour les Mac Apple Silicon.',
+          '[Avis sur LM Studio](/fr/power-local-llm/lm-studio-review) — une app de bureau avec navigateur de modèles intégré et mode serveur.',
+          '[Avis sur Jan](/fr/power-local-llm/jan-review) — une app de chat de bureau open source, pensée pour le hors ligne.',
+          '[Avis sur oMLX](/fr/power-local-llm/omlx-review) — un serveur d\'inférence basé sur MLX pour Apple Silicon, avec cache SSD.',
+          '[Avis sur Osaurus](/fr/power-local-llm/osaurus-ai-review) — une app Swift native gratuite sous licence MIT pour les Mac Apple Silicon.',
           '[Annuaire des logiciels de LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale.',
         ],
       },
@@ -831,7 +831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Nativ es una app de Mac gratuita con licencia MIT, de Neywa Labs, que ejecuta modelos de IA abiertos en Apple Silicon mediante un servidor MLX incluido. Ofrece chat con entrada de imágenes, generación de imágenes, dictado y notas de reuniones, además de una API local compatible con OpenAI y Anthropic que pueden usar los agentes de programación. Esta reseña se basa en el sitio web del desarrollador, su política de privacidad y sus términos, el repositorio de GitHub y su página de versiones, consultados el 18 de noviembre de 2026. PromptQuorum no ha probado la app.',
     metaDescription:
-      'Nativ es una app de Mac gratuita con licencia MIT que ejecuta modelos de IA abiertos con MLX en Apple Silicon: chat, imágenes, dictado y API local para agentes de programación.',
+      'Nativ es una app de Mac gratuita con licencia MIT que ejecuta modelos de IA abiertos con MLX en Apple Silicon: chat, imágenes, dictado y API local.',
     twitterDescription:
       'Nativ ejecuta modelos abiertos en tu Mac con MLX: chat, generación de imágenes, dictado y API local para agentes de programación. Gratis, MIT, solo Apple Silicon. Qué está confirmado.',
     audience:
@@ -850,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Nativ es una app de Mac gratuita y de código abierto (MIT) que ejecuta modelos de IA abiertos en Apple Silicon mediante un servidor MLX incluido y añade chat, generación de imágenes, dictado y una API local para herramientas de programación.** Necesita un Mac con chip M1 o posterior y macOS 26 o posterior, se instala con un DMG o con Homebrew y funciona sin conexión, según el desarrollador, una vez descargado un modelo. Es un proyecto joven de una empresa polaca, y PromptQuorum no lo ha probado.',
+      '**Nativ es una app de Mac gratuita y de código abierto (MIT) que ejecuta modelos de IA abiertos en Apple Silicon mediante un servidor MLX incluido y añade chat, generación de imágenes, dictado y una API local para herramientas de programación.** Necesita un Mac con chip M1 o posterior y macOS 26 o posterior, se instala con un DMG o con Homebrew y funciona sin conexión, según el desarrollador, una vez descargado un modelo. Es un proyecto joven de una empresa polaca. El desarrollador la presenta como gratuita y sin cuenta, aunque los términos mencionan que podrían llegar más adelante planes de pago como Nativ Pro. PromptQuorum no la ha probado.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es Nativ y para quién es?',
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nativ es una app nativa de macOS que incluye un servidor mlx-vlm, una biblioteca de modelos, chat, una pestaña de imágenes, dictado y una API local. Encaja con quienes tienen un Mac con Apple Silicon y quieren IA local sin cuenta, y con desarrolladores que quieren conectar Claude Code, Codex o un editor a un modelo en su propio Mac.',
         bullets: [
           'Gratis y con licencia MIT; solo Mac, Apple Silicon (M1 o posterior), macOS 26 o posterior.',
-          'Chat con entrada de imágenes, generación y edición de imágenes, reconocimiento y síntesis de voz, notas de reuniones y dictado, todo en el Mac según el desarrollador.',
+          'Chat con entrada de imágenes, generación y edición de imágenes, modelos de voz, notas de reuniones y dictado, todo en el Mac según el desarrollador.',
           'Servidor local con endpoints compatibles con OpenAI y Anthropic; asistentes de configuración para agentes de programación y editores concretos.',
           'Los modelos vienen de Hugging Face; la app avisa cuando un modelo puede no caber en tu memoria.',
           'Repositorio creado en julio de 2026; la política de privacidad aún contiene un marcador de posición entre corchetes y trata cuentas y compras aunque la app es gratuita.',
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Código abierto con licencia MIT y gratis; el desarrollador dice que no hay cuenta ni suscripción, y los términos indican que unos planes de pago como Nativ Pro mostrarían sus condiciones antes de cualquier compra.',
           'Funciona solo en Mac con Apple Silicon (M1 o posterior) y macOS 26 o posterior; MLX no funciona en Mac con Intel.',
-          'Funciones: chat con entrada de imágenes, generación y edición de imágenes, reconocimiento y síntesis de voz, dictado en cualquier app, notas de reuniones, prompts programados y servidores MCP con consentimiento por herramienta.',
+          'Funciones: chat con entrada de imágenes, generación y edición de imágenes, modelos de voz, dictado en cualquier app, notas de reuniones, prompts programados y servidores MCP con consentimiento por herramienta.',
           'Un servidor local en el puerto 8080 ofrece endpoints compatibles con OpenAI y Anthropic, y la app configura agentes de programación como Claude Code, Codex, OpenCode, Aider y Goose para usarlo.',
           'PromptQuorum no ha probado la app. La política de privacidad contiene un marcador de posición entre corchetes y secciones sobre cuentas, claves de licencia y compras, aunque el desarrollador presenta la app como gratuita y sin cuenta.',
         ],
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Según el desarrollador, tus chats, prompts, archivos y resultados se quedan en tu Mac; la app se conecta para descargar modelos y buscar actualizaciones, y los datos de diagnóstico son opcionales.**',
           'Según la política de privacidad (actualizada el 16 de noviembre de 2026), Neywa Labs no recopila, consulta ni almacena tu contenido, no lo usa para entrenar ni evaluar modelos y no vende datos personales. Los datos de diagnóstico, como informes de fallos, versión de la app y de macOS, chip y tamaño de memoria, cifras de rendimiento y eventos de uso de funciones, solo pueden recogerse con el consentimiento que la app pide en el primer inicio y que puedes retirar en Ajustes. La política dice que nunca incluyen el contenido de tus sesiones ni qué modelos concretos usas.',
           'Las preguntas frecuentes añaden que los modelos se descargan directamente de Hugging Face y que las comprobaciones de actualización llegan a Neywa Labs o a su proveedor de actualizaciones, que puede ver datos de la solicitud como la dirección IP y la versión de la app. El sitio web usa analíticas de PostHog con un banner de cookies.',
-          'La política también contiene un marcador de posición del procesador de pagos entre corchetes y secciones sobre registro, claves de licencia y compras, aunque el desarrollador presenta la app como gratuita y sin cuenta. Los términos añaden que podrían llegar más adelante planes de pago como Nativ Pro. Vuelve a leer ambos documentos antes de fiarte de ellos; el código tiene licencia MIT y es público, así que el flujo de datos se puede auditar.',
+          'La política también contiene un marcador de posición del procesador de pagos entre corchetes y secciones sobre registro, claves de licencia y compras, aunque el desarrollador presenta la app como gratuita y sin cuenta. Los términos añaden que podrían llegar más adelante planes de pago como Nativ Pro. Vuelve a leer ambos documentos antes de fiarte de ellos; el código tiene licencia MIT y es público, así que el flujo de datos se puede revisar en principio; PromptQuorum no lo ha hecho.',
         ],
       },
       whoShouldUse: {
@@ -1057,7 +1057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Nativ merece una mirada si tienes un Mac con Apple Silicon y quieres una app de IA local gratuita y de código abierto que reúna chat, imágenes, dictado y una API local para agentes de programación.**',
           'Sobre el papel cubre mucho: un servidor MLX incluido, una biblioteca de modelos de Hugging Face con avisos de ajuste, endpoints compatibles con OpenAI y Anthropic, configuración para diez agentes de programación y seis editores, una extensión de audio y compatibilidad con MCP, con la v0.4.6 del 16 de noviembre de 2026 y un commit del 17 de noviembre de 2026.',
-          'Las contrapartidas son reales. Funciona solo en Apple Silicon con macOS 26 o posterior, es un proyecto joven con número de versión 0.4, y la política de privacidad aún contiene un marcador de posición entre corchetes y secciones sobre cuentas y compras. PromptQuorum no ha probado la app: empieza con un modelo pequeño, lee la política de privacidad vigente y comprueba que el dictado, la generación de imágenes y la API sirven para tu uso antes de fiarte de ella.',
+          'Las contrapartidas son reales. Funciona solo en Apple Silicon con macOS 26 o posterior, es un proyecto joven con número de versión 0.4, y, cuando PromptQuorum lo comprobó el 18 de noviembre de 2026, la política de privacidad contenía un marcador de posición entre corchetes y secciones sobre cuentas y compras. PromptQuorum no ha probado la app: empieza con un modelo pequeño, lee la política de privacidad vigente y comprueba que el dictado, la generación de imágenes y la API sirven para tu uso antes de fiarte de ella.',
         ],
       },
       sources: {
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Nativ é um app de Mac gratuito, com licença MIT, da Neywa Labs, que executa modelos de IA abertos no Apple Silicon por meio de um servidor MLX incluído. Ele oferece chat com entrada de imagens, geração de imagens, ditado e notas de reuniões, além de uma API local compatível com OpenAI e Anthropic que agentes de programação podem usar. Esta análise se baseia no site do desenvolvedor, na política de privacidade e nos termos de uso, no repositório do GitHub e na página de versões, consultados em 18 de novembro de 2026. A PromptQuorum não testou o app.',
     metaDescription:
-      'O Nativ é um app de Mac gratuito com licença MIT que executa modelos de IA abertos com MLX no Apple Silicon: chat, imagens, ditado e API local para agentes de programação.',
+      'O Nativ é um app de Mac gratuito com licença MIT que executa modelos de IA abertos com MLX no Apple Silicon: chat, imagens, ditado e API local.',
     twitterDescription:
       'O Nativ executa modelos abertos no seu Mac com MLX: chat, geração de imagens, ditado e API local para agentes de programação. Grátis, MIT, só Apple Silicon. O que está confirmado.',
     audience:
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**O Nativ é um app de Mac gratuito e de código aberto (MIT) que executa modelos de IA abertos no Apple Silicon por meio de um servidor MLX incluído e acrescenta chat, geração de imagens, ditado e uma API local para ferramentas de programação.** Ele exige um Mac com chip M1 ou mais recente e macOS 26 ou mais recente, é instalado por DMG ou Homebrew e funciona offline, segundo o desenvolvedor, depois que um modelo é baixado. É um projeto jovem de uma empresa polonesa, e a PromptQuorum não o testou.',
+      '**O Nativ é um app de Mac gratuito e de código aberto (MIT) que executa modelos de IA abertos no Apple Silicon por meio de um servidor MLX incluído e acrescenta chat, geração de imagens, ditado e uma API local para ferramentas de programação.** Ele exige um Mac com chip M1 ou mais recente e macOS 26 ou mais recente, é instalado por DMG ou Homebrew e funciona offline, segundo o desenvolvedor, depois que um modelo é baixado. É um projeto jovem de uma empresa polonesa. O desenvolvedor a apresenta como gratuita e sem conta, embora os termos mencionem que planos pagos como o Nativ Pro poderiam chegar depois. A PromptQuorum não a testou.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o Nativ e para quem ele serve?',
@@ -1127,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Nativ é um app nativo de macOS que reúne um servidor mlx-vlm, uma biblioteca de modelos, chat, uma aba de imagens, ditado e uma API local. Serve para quem tem um Mac com Apple Silicon e quer IA local sem conta, e para desenvolvedores que querem conectar o Claude Code, o Codex ou um editor a um modelo no próprio Mac.',
         bullets: [
           'Grátis e com licença MIT; só Mac, Apple Silicon (M1 ou mais recente), macOS 26 ou mais recente.',
-          'Chat com entrada de imagens, geração e edição de imagens, reconhecimento e síntese de voz, notas de reuniões e ditado, tudo no Mac segundo o desenvolvedor.',
+          'Chat com entrada de imagens, geração e edição de imagens, modelos de voz, notas de reuniões e ditado, tudo no Mac segundo o desenvolvedor.',
           'Servidor local com endpoints compatíveis com OpenAI e Anthropic; assistentes de configuração para agentes de programação e editores citados.',
           'Os modelos vêm do Hugging Face; o app avisa quando um modelo pode não caber na sua memória.',
           'Repositório criado em julho de 2026; a política de privacidade ainda tem um marcador entre colchetes e trata de contas e compras, embora o app seja gratuito.',
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Código aberto com licença MIT e gratuito; o desenvolvedor diz que não há conta nem assinatura, e os termos dizem que planos pagos como o Nativ Pro mostrariam suas condições antes de qualquer compra.',
           'Roda apenas em Macs com Apple Silicon (M1 ou mais recente) e macOS 26 ou mais recente; o MLX não roda em Macs com Intel.',
-          'Recursos: chat com entrada de imagens, geração e edição de imagens, reconhecimento e síntese de voz, ditado em qualquer app, notas de reuniões, prompts agendados e servidores MCP com consentimento por ferramenta.',
+          'Recursos: chat com entrada de imagens, geração e edição de imagens, modelos de voz, ditado em qualquer app, notas de reuniões, prompts agendados e servidores MCP com consentimento por ferramenta.',
           'Um servidor local na porta 8080 oferece endpoints compatíveis com OpenAI e Anthropic, e o app configura agentes de programação como Claude Code, Codex, OpenCode, Aider e Goose para usá-lo.',
           'A PromptQuorum não testou o app. A política de privacidade contém um marcador entre colchetes e seções sobre contas, chaves de licença e compras, embora o desenvolvedor apresente o app como gratuito e sem conta.',
         ],
@@ -1246,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Segundo o desenvolvedor, seus chats, prompts, arquivos e resultados ficam no seu Mac; o app se conecta para baixar modelos e verificar atualizações, e os dados de diagnóstico são opcionais.**',
           'Segundo a política de privacidade (atualizada em 16 de novembro de 2026), a Neywa Labs não coleta, acessa nem armazena seu conteúdo, não o usa para treinar ou avaliar modelos e não vende dados pessoais. Dados de diagnóstico, como relatórios de falhas, versão do app e do macOS, chip e tamanho da memória, medições de desempenho e eventos de uso de recursos, só podem ser coletados com o consentimento que o app pede na primeira abertura e que você pode retirar nos Ajustes. A política diz que eles nunca incluem o conteúdo das suas sessões nem quais modelos específicos você usa.',
           'As perguntas frequentes acrescentam que os modelos são baixados direto do Hugging Face e que as verificações de atualização chegam à Neywa Labs ou ao seu provedor de atualizações, que pode ver dados da requisição, como endereço IP e versão do app. O site usa análises do PostHog com um banner de cookies.',
-          'A política também contém um marcador do processador de pagamentos entre colchetes e seções sobre cadastro, chaves de licença e compras, embora o desenvolvedor apresente o app como gratuito e sem conta. Os termos acrescentam que planos pagos como o Nativ Pro poderiam chegar depois. Releia os dois documentos antes de confiar neles; o código tem licença MIT e é público, então o fluxo de dados pode ser auditado.',
+          'A política também contém um marcador do processador de pagamentos entre colchetes e seções sobre cadastro, chaves de licença e compras, embora o desenvolvedor apresente o app como gratuito e sem conta. Os termos acrescentam que planos pagos como o Nativ Pro poderiam chegar depois. Releia os dois documentos antes de confiar neles; o código tem licença MIT e é público, então o fluxo de dados pode, em princípio, ser inspecionado; a PromptQuorum não fez isso.',
         ],
       },
       whoShouldUse: {
@@ -1326,7 +1326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O Nativ vale uma olhada se você tem um Mac com Apple Silicon e quer um app de IA local gratuito e de código aberto que reúna chat, imagens, ditado e uma API local para agentes de programação.**',
           'No papel, ele cobre muita coisa: um servidor MLX incluído, uma biblioteca de modelos do Hugging Face com avisos de adequação, endpoints compatíveis com OpenAI e Anthropic, configuração para dez agentes de programação e seis editores, uma extensão de áudio e suporte a MCP, com a v0.4.6 de 16 de novembro de 2026 e um commit de 17 de novembro de 2026.',
-          'As contrapartidas são reais. Ele roda apenas no Apple Silicon com macOS 26 ou mais recente, é um projeto jovem com número de versão 0.4, e a política de privacidade ainda tem um marcador entre colchetes e seções sobre contas e compras. A PromptQuorum não testou o app: comece com um modelo pequeno, leia a política de privacidade atual e confira se ditado, geração de imagens e API servem para o seu uso antes de confiar nele.',
+          'As contrapartidas são reais. Ele roda apenas no Apple Silicon com macOS 26 ou mais recente, é um projeto jovem com número de versão 0.4, e, quando a PromptQuorum verificou em 18 de novembro de 2026, a política de privacidade tinha um marcador entre colchetes e seções sobre contas e compras. A PromptQuorum não testou o app: comece com um modelo pequeno, leia a política de privacidade atual e confira se ditado, geração de imagens e API servem para o seu uso antes de confiar nele.',
         ],
       },
       sources: {
@@ -1388,7 +1388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Nativは、同梱のMLXサーバーでApple Silicon上のオープンなAIモデルを動かし、チャット、画像生成、音声入力、コーディングツール向けローカルAPIを加えた、無料のオープンソース（MIT）Macアプリです。** M1以降のチップを積んだMacとmacOS 26以降が必要で、DMGまたはHomebrewでインストールし、開発元によると、モデルをダウンロードした後はオフラインでも動きます。ポーランドの企業による新しいプロジェクトで、PromptQuorumはテストしていません。',
+      '**Nativは、同梱のMLXサーバーでApple Silicon上のオープンなAIモデルを動かし、チャット、画像生成、音声入力、コーディングツール向けローカルAPIを加えた、無料のオープンソース（MIT）Macアプリです。** M1以降のチップを積んだMacとmacOS 26以降が必要で、DMGまたはHomebrewでインストールし、開発元によると、モデルをダウンロードした後はオフラインでも動きます。ポーランドの企業による新しいプロジェクトです。開発元は無料でアカウント不要のアプリだと説明していますが、利用規約はNativ Proのような有料プランが今後登場する可能性にも触れています。PromptQuorumはテストしていません。',
     quickAnswerTop: {
       ja: {
         question: 'Nativとは何で、誰に向いていますか？',
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nativは、mlx-vlmサーバー、モデルライブラリ、チャット、画像タブ、音声入力、ローカルAPIをまとめたネイティブのmacOSアプリです。アカウントなしでローカルAIを使いたいApple Siliconの所有者や、Claude Code、Codex、エディタを自分のMac上のモデルにつなぎたい開発者に向いています。',
         bullets: [
           '無料でMIT License。Mac専用で、Apple Silicon（M1以降）とmacOS 26以降が必要です。',
-          '画像入力付きチャット、画像の生成と編集、音声の認識と合成、会議ノート、音声入力。開発元によると、すべてMac上で動きます。',
+          '画像入力付きチャット、画像の生成と編集、音声モデル、会議ノート、音声入力。開発元によると、すべてMac上で動きます。',
           'OpenAI・Anthropic互換エンドポイントを持つローカルサーバー。名前の挙がったコーディングエージェントやエディタ向けの設定支援があります。',
           'モデルはHugging Faceから取得します。メモリに収まらない可能性があるモデルには警告が出ます。',
           'リポジトリは2026年7月に作成。無料アプリなのに、プライバシーポリシーには角括弧付きのプレースホルダーが残り、アカウントや購入にも触れています。',
@@ -1437,7 +1437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'MIT Licenseで無料です。開発元はアカウントもサブスクリプションもないとしており、利用規約には、Nativ Proのような有料プランを提供する場合は購入前に条件を示すとあります。',
           'Apple Silicon（M1以降）とmacOS 26以降のMacだけで動作します。MLXはIntel Macでは動きません。',
-          '機能：画像入力付きチャット、画像の生成と編集、音声の認識と合成、あらゆるアプリでの音声入力、会議ノート、定期実行プロンプト、ツールごとの同意付きMCPサーバー。',
+          '機能：画像入力付きチャット、画像の生成と編集、音声モデル、あらゆるアプリでの音声入力、会議ノート、定期実行プロンプト、ツールごとの同意付きMCPサーバー。',
           'ポート8080のローカルサーバーがOpenAI・Anthropic互換のエンドポイントを提供し、Claude Code、Codex、OpenCode、Aider、Gooseなどのコーディングエージェントの設定もアプリが支援します。',
           'PromptQuorumはアプリをテストしていません。プライバシーポリシーには、角括弧付きの決済事業者のプレースホルダーと、アカウント、ライセンスキー、購入の項目があります。開発元は無料でアカウント不要のアプリだと説明しています。',
         ],
@@ -1515,7 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**開発元によると、チャット、プロンプト、ファイル、出力はMac内にとどまります。アプリはモデル取得と更新確認のためにネットワークへ接続し、診断データは任意です。**',
           'プライバシーポリシー（2026年11月16日更新）によると、Neywa Labsはコンテンツを収集・閲覧・保存せず、モデルの学習や評価にも使わず、個人情報を販売しません。クラッシュレポート、アプリとmacOSのバージョン、チップとメモリ容量、性能の数値、機能の利用イベントといった診断データは、初回起動時にアプリが求める同意がある場合にだけ収集でき、設定で撤回できます。ポリシーは、セッションの内容や使用した具体的なモデルは含まれないとしています。',
           'FAQによると、モデルはHugging Faceから直接取得され、更新確認はNeywa Labsまたはその更新配信事業者に届き、IPアドレスやアプリのバージョンなどのリクエスト情報が見える場合があります。Webサイトは、Cookieバナー付きでPostHogの解析を使っています。',
-          'ポリシーには、角括弧付きの決済事業者のプレースホルダーと、登録、ライセンスキー、購入に関する項目もあります。開発元は無料でアカウント不要のアプリだと説明しています。利用規約は、Nativ Proのような有料プランが今後登場する可能性にも触れています。頼る前に両文書を読み直してください。コードはMIT Licenseで公開されているため、データの流れは検証できます。',
+          'ポリシーには、角括弧付きの決済事業者のプレースホルダーと、登録、ライセンスキー、購入に関する項目もあります。開発元は無料でアカウント不要のアプリだと説明しています。利用規約は、Nativ Proのような有料プランが今後登場する可能性にも触れています。頼る前に両文書を読み直してください。コードはMIT Licenseで公開されているため、データの流れは原理的には検証できますが、PromptQuorumは検証していません。',
         ],
       },
       whoShouldUse: {
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Nativは、Apple SiliconのMacを持っていて、チャット、画像、音声入力、コーディングエージェント向けローカルAPIをまとめた無料のオープンソースのローカルAIアプリを探しているなら、試す価値があります。**',
           '仕様上は多くをカバーします。同梱のMLXサーバー、適合警告付きのHugging Faceモデルライブラリ、OpenAI・Anthropic互換エンドポイント、10種のコーディングエージェントと6種のエディタの設定支援、オーディオ拡張、MCP対応があり、2026年11月16日にv0.4.6、11月17日にコミットがありました。',
-          'トレードオフも現実的です。動作はApple SiliconとmacOS 26以降に限られ、バージョン番号が0.4の新しいプロジェクトで、プライバシーポリシーには角括弧付きのプレースホルダーとアカウント・購入の項目が残っています。PromptQuorumはアプリをテストしていません。小さなモデルから始め、最新のプライバシーポリシーを読み、音声入力、画像生成、APIが用途に合うかを確認してから頼ってください。',
+          'トレードオフも現実的です。動作はApple SiliconとmacOS 26以降に限られ、バージョン番号が0.4の新しいプロジェクトで、PromptQuorumが2026年11月18日に確認した時点では、プライバシーポリシーに角括弧付きのプレースホルダーとアカウント・購入の項目がありました。PromptQuorumはアプリをテストしていません。小さなモデルから始め、最新のプライバシーポリシーを読み、音声入力、画像生成、APIが用途に合うかを確認してから頼ってください。',
         ],
       },
       sources: {
@@ -1633,10 +1633,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/nativ-review-hero-zh.webp',
-    title: 'Nativ 评测：免费开源的 Mac 本地 AI 应用',
-    seoTitle: 'Nativ 评测：免费的 Mac 本地 AI 应用',
+    title: 'Nativ 点评：免费开源的 Mac 本地 AI 应用',
+    seoTitle: 'Nativ 点评：免费的 Mac 本地 AI 应用',
     intro:
-      'Nativ 是 Neywa Labs 推出的免费 Mac 应用，采用 MIT 许可证，通过内置的 MLX 服务器在 Apple Silicon 上运行开放 AI 模型。它提供支持图片输入的对话、图像生成、听写和会议笔记，并带有兼容 OpenAI 与 Anthropic 的本地 API，编程智能体可以直接使用。本评测基于开发者的官网、隐私政策与使用条款、GitHub 仓库及发布页面，核对日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过该应用。',
+      'Nativ 是 Neywa Labs 推出的免费 Mac 应用，采用 MIT 许可证，通过内置的 MLX 服务器在 Apple Silicon 上运行开放 AI 模型。它提供支持图片输入的对话、图像生成、听写和会议笔记，并带有兼容 OpenAI 与 Anthropic 的本地 API，编程智能体可以直接使用。本点评基于开发者的官网、隐私政策与使用条款、GitHub 仓库及发布页面，核对日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过该应用。',
     metaDescription:
       'Nativ 是免费的 MIT 许可 Mac 应用，用 MLX 在 Apple Silicon 上运行开放 AI 模型：对话、图像、听写，以及供编程智能体使用的本地 API。',
     twitterDescription:
@@ -1646,9 +1646,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '阅读约7分钟',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Nativ 评测',
+    primaryTerm: 'Nativ 点评',
     targetKeywords: [
-      'Nativ 评测',
+      'Nativ 点评',
       'Mac 本地 AI 应用',
       'MLX 应用 Apple Silicon',
       'Nativ Neywa Labs',
@@ -1657,7 +1657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Nativ 是一款免费开源（MIT）的 Mac 应用，通过内置的 MLX 服务器在 Apple Silicon 上运行开放 AI 模型，并提供对话、图像生成、听写以及供编程工具使用的本地 API。** 它需要搭载 M1 或更新芯片的 Mac 和 macOS 26 或更高版本，可用 DMG 或 Homebrew 安装，据开发者称，下载模型后可离线使用。这是一家波兰公司的新项目，PromptQuorum 没有测试过它。',
+      '**Nativ 是一款免费开源（MIT）的 Mac 应用，通过内置的 MLX 服务器在 Apple Silicon 上运行开放 AI 模型，并提供对话、图像生成、听写以及供编程工具使用的本地 API。** 它需要搭载 M1 或更新芯片的 Mac 和 macOS 26 或更高版本，可用 DMG 或 Homebrew 安装，据开发者称，下载模型后可离线使用。这是一家波兰公司的新项目。开发者称该应用免费且无需账号，但使用条款提到将来可能推出 Nativ Pro 之类的付费方案。PromptQuorum 没有测试过它。',
     quickAnswerTop: {
       zh: {
         question: 'Nativ 是什么，适合谁用？',
@@ -1665,7 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nativ 是一款原生 macOS 应用，内置 mlx-vlm 服务器、模型库、对话、图像标签页、听写和本地 API。适合想不注册账号就使用本地 AI 的 Apple Silicon 用户，也适合想把 Claude Code、Codex 或编辑器连到自己 Mac 上模型的开发者。',
         bullets: [
           '免费，MIT 许可证；仅限 Mac，需要 Apple Silicon（M1 或更新）和 macOS 26 或更高版本。',
-          '支持图片输入的对话、图像生成与编辑、语音识别与合成、会议笔记和听写；据开发者称全部在 Mac 本地完成。',
+          '支持图片输入的对话、图像生成与编辑、语音模型、会议笔记和听写；据开发者称全部在 Mac 本地完成。',
           '本地服务器提供兼容 OpenAI 和 Anthropic 的端点；为文中列出的编程智能体和编辑器提供配置辅助。',
           '模型来自 Hugging Face；当模型可能装不进内存时，应用会给出提示。',
           '仓库创建于 2026 年 7 月；尽管应用免费，隐私政策里仍有方括号占位符，并涉及账号和购买。',
@@ -1706,7 +1706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '开源（MIT）且免费；开发者表示没有账号和订阅，使用条款还说明，如果将来推出 Nativ Pro 之类的付费方案，会在购买前展示条款。',
           '仅支持搭载 Apple Silicon（M1 或更新）并运行 macOS 26 或更高版本的 Mac；MLX 无法在 Intel Mac 上运行。',
-          '功能：支持图片输入的对话、图像生成与编辑、语音识别与合成、任意应用中的听写、会议笔记、定时提示词，以及逐工具征得同意的 MCP 服务器。',
+          '功能：支持图片输入的对话、图像生成与编辑、语音模型、任意应用中的听写、会议笔记、定时提示词，以及逐工具征得同意的 MCP 服务器。',
           '8080 端口的本地服务器提供兼容 OpenAI 和 Anthropic 的端点，应用还能为 Claude Code、Codex、OpenCode、Aider、Goose 等编程智能体配置使用它。',
           'PromptQuorum 没有测试过该应用。隐私政策里有方括号中的支付处理方占位符，以及关于账号、许可证密钥和购买的章节，而开发者称该应用免费且无需账号。',
         ],
@@ -1784,7 +1784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**据开发者称，你的对话、提示词、文件和输出都留在你的 Mac 上；应用会联网下载模型和检查更新，诊断数据需要你主动同意。**',
           '根据隐私政策（2026 年 11 月 16 日更新），Neywa Labs 不收集、访问或存储你的内容，不用它训练或评估模型，也不出售个人信息。崩溃报告、应用和 macOS 版本、芯片和内存大小、性能数据以及功能使用事件等诊断数据，只有在你于首次启动时同意后才可能收集，并且可在设置中撤回。政策称这些数据从不包含会话内容或你使用的具体模型。',
           '常见问题补充说，模型直接从 Hugging Face 下载，更新检查会到达 Neywa Labs 或其更新服务提供方，对方可能看到 IP 地址和应用版本等请求信息。网站使用 PostHog 分析并带有 Cookie 横幅。',
-          '政策中还有方括号中的支付处理方占位符，以及关于注册、许可证密钥和购买的章节，而开发者称该应用免费且无需账号。使用条款还提到，将来可能推出 Nativ Pro 之类的付费方案。依赖它们之前请重新阅读这两份文件；代码采用 MIT 许可证并且公开，因此数据流向可以被审查。',
+          '政策中还有方括号中的支付处理方占位符，以及关于注册、许可证密钥和购买的章节，而开发者称该应用免费且无需账号。使用条款还提到，将来可能推出 Nativ Pro 之类的付费方案。依赖它们之前请重新阅读这两份文件；代码采用 MIT 许可证并且公开，因此数据流向原则上可以被审查，但 PromptQuorum 没有这样做。',
         ],
       },
       whoShouldUse: {
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '未核实：速度、内存占用、回答质量、图像质量和听写准确度。PromptQuorum 没有运行过该应用。',
           '未核实：除模型下载和更新检查之外，是否确实没有任何数据离开 Mac。这是开发者的说法，PromptQuorum 没有审计代码，也没有检查网络流量。',
           '未核实：隐私政策中的账号、许可证和购买章节以及“[PAYMENT PROCESSOR NAME]”占位符如何与免费应用相符，以及“Nativ Pro”会包含什么。',
-          '未核实：开发者称自己是 mlx-vlm 和 mlx-audio 背后团队的说法、应用中可运行的模型数量和用户数量。未找到独立评测。',
+          '未核实：开发者称自己是 mlx-vlm 和 mlx-audio 背后团队的说法、应用中可运行的模型数量和用户数量。未找到独立点评。',
           '未核实：DMG 是否经过公证，以及某个模型在你的 Mac 上至少需要多少内存。',
         ],
       },
@@ -1821,7 +1821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Nativ 与替代方案对比',
         itemHeadings: true,
         content: [
-          '**Nativ 与其他本地桌面应用和 Mac 推理工具存在竞争；PromptQuorum 没有实际对比过它们。** 下列工具均收录于目录，并根据各自的评测进行描述。',
+          '**Nativ 与其他本地桌面应用和 Mac 推理工具存在竞争；PromptQuorum 没有实际对比过它们。** 下列工具均收录于目录，并根据各自的点评进行描述。',
         ],
         columns: ['工具', '来源中的记载'],
         rows: [
@@ -1864,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**如果你有一台 Apple Silicon Mac，想要一个集对话、图像、听写和编程智能体本地 API 于一体的免费开源本地 AI 应用，Nativ 值得一看。**',
           '从纸面上看，它覆盖面很广：内置 MLX 服务器、带适配提示的 Hugging Face 模型库、兼容 OpenAI 和 Anthropic 的端点、对十个编程智能体和六个编辑器的配置支持、音频扩展和 MCP 支持，v0.4.6 发布于 2026 年 11 月 16 日，最近一次提交在 2026 年 11 月 17 日。',
-          '取舍同样真实。它只能在 Apple Silicon 与 macOS 26 或更高版本上运行，是版本号 0.4 的新项目，隐私政策里仍有方括号占位符以及关于账号和购买的章节。PromptQuorum 没有测试过该应用：请先用小模型试用，阅读当前的隐私政策，并确认听写、图像生成和 API 适合你的用途后再依赖它。',
+          '取舍同样真实。它只能在 Apple Silicon 与 macOS 26 或更高版本上运行，是版本号 0.4 的新项目，PromptQuorum 于 2026 年 11 月 18 日核查时，隐私政策里有方括号占位符以及关于账号和购买的章节。PromptQuorum 没有测试过该应用：请先用小模型试用，阅读当前的隐私政策，并确认听写、图像生成和 API 适合你的用途后再依赖它。',
         ],
       },
       sources: {
@@ -1885,10 +1885,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[LM Studio 评测](/zh/power-local-llm/lm-studio-review) — 内置模型浏览器和服务器模式的桌面应用。',
-          '[Jan 评测](/zh/power-local-llm/jan-review) — 注重离线使用的开源桌面对话应用。',
-          '[oMLX 评测](/zh/power-local-llm/omlx-review) — 面向 Apple Silicon、带 SSD 缓存的 MLX 推理服务器。',
-          '[Osaurus 评测](/zh/power-local-llm/osaurus-ai-review) — 面向 Apple Silicon Mac 的免费 MIT 许可原生 Swift 应用。',
+          '[LM Studio 点评](/zh/power-local-llm/lm-studio-review) — 内置模型浏览器和服务器模式的桌面应用。',
+          '[Jan 点评](/zh/power-local-llm/jan-review) — 注重离线使用的开源桌面对话应用。',
+          '[oMLX 点评](/zh/power-local-llm/omlx-review) — 面向 Apple Silicon、带 SSD 缓存的 MLX 推理服务器。',
+          '[Osaurus 点评](/zh/power-local-llm/osaurus-ai-review) — 面向 Apple Silicon Mac 的免费 MIT 许可原生 Swift 应用。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。',
         ],
       },
@@ -1903,7 +1903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Easiest Desktop Apps',
     heroImage: '/images/nativ-review-hero-ko.webp',
     title: 'Nativ 리뷰: MLX로 구동하는 무료 오픈소스 Mac용 로컬 AI 앱',
-    seoTitle: 'Nativ 리뷰: Mac용 무료 로컬 AI 앱',
+    seoTitle: 'Nativ 리뷰: MLX 기반 Mac용 무료 로컬 AI 앱',
     intro:
       'Nativ는 Neywa Labs가 만든 MIT 라이선스의 무료 Mac 앱으로, 내장된 MLX 서버를 통해 Apple Silicon에서 오픈 AI 모델을 실행합니다. 이미지 입력을 지원하는 채팅, 이미지 생성, 받아쓰기와 회의 노트에 더해 코딩 에이전트가 쓸 수 있는 OpenAI·Anthropic 호환 로컬 API를 제공합니다. 이 리뷰는 개발사의 웹사이트, 개인정보 처리방침과 이용 약관, GitHub 저장소, 릴리스 페이지를 바탕으로 하며 2026년 11월 18일에 확인했습니다. PromptQuorum은 앱을 직접 테스트하지 않았습니다.',
     metaDescription:
@@ -1926,7 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Nativ는 내장된 MLX 서버로 Apple Silicon에서 오픈 AI 모델을 실행하고, 채팅, 이미지 생성, 받아쓰기, 코딩 도구용 로컬 API를 더한 무료 오픈소스(MIT) Mac 앱입니다.** M1 이상 칩이 탑재된 Mac과 macOS 26 이상이 필요하며, DMG 또는 Homebrew로 설치하고 개발사에 따르면 모델을 내려받은 뒤에는 오프라인에서도 동작합니다. 폴란드 기업이 만든 신생 프로젝트이며, PromptQuorum은 테스트하지 않았습니다.',
+      '**Nativ는 내장된 MLX 서버로 Apple Silicon에서 오픈 AI 모델을 실행하고, 채팅, 이미지 생성, 받아쓰기, 코딩 도구용 로컬 API를 더한 무료 오픈소스(MIT) Mac 앱입니다.** M1 이상 칩이 탑재된 Mac과 macOS 26 이상이 필요하며, DMG 또는 Homebrew로 설치하고 개발사에 따르면 모델을 내려받은 뒤에는 오프라인에서도 동작합니다. 폴란드 기업이 만든 신생 프로젝트입니다. 개발사는 이 앱이 무료이고 계정이 필요 없다고 설명하지만, 이용 약관은 Nativ Pro 같은 유료 요금제가 나중에 나올 수 있다고 언급합니다. PromptQuorum은 테스트하지 않았습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Nativ는 무엇이며 누구에게 적합합니까?',
@@ -1934,7 +1934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nativ는 mlx-vlm 서버, 모델 라이브러리, 채팅, 이미지 탭, 받아쓰기, 로컬 API를 묶은 네이티브 macOS 앱입니다. 계정 없이 로컬 AI를 쓰고 싶은 Apple Silicon 사용자와, Claude Code, Codex, 편집기를 자신의 Mac에 있는 모델에 연결하려는 개발자에게 적합합니다.',
         bullets: [
           '무료이며 MIT 라이선스입니다. Mac 전용이며 Apple Silicon(M1 이상)과 macOS 26 이상이 필요합니다.',
-          '이미지 입력 채팅, 이미지 생성과 편집, 음성 인식과 합성, 회의 노트, 받아쓰기를 제공하며, 개발사에 따르면 모두 Mac에서 처리됩니다.',
+          '이미지 입력 채팅, 이미지 생성과 편집, 음성 모델, 회의 노트, 받아쓰기를 제공하며, 개발사에 따르면 모두 Mac에서 처리됩니다.',
           'OpenAI·Anthropic 호환 엔드포인트를 갖춘 로컬 서버가 있으며, 언급된 코딩 에이전트와 편집기를 위한 설정 도우미가 있습니다.',
           '모델은 Hugging Face에서 가져오며, 메모리에 맞지 않을 수 있는 모델에는 앱이 경고를 표시합니다.',
           '저장소는 2026년 7월에 만들어졌습니다. 앱이 무료인데도 개인정보 처리방침에는 대괄호로 된 자리 표시자가 남아 있고 계정과 구매 항목이 포함되어 있습니다.',
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'MIT 라이선스의 오픈소스이며 무료입니다. 개발사는 계정과 구독이 없다고 밝혔고, 이용 약관은 Nativ Pro 같은 유료 요금제를 제공하게 되면 구매 전에 조건을 보여 주겠다고 설명합니다.',
           'Apple Silicon(M1 이상)과 macOS 26 이상이 설치된 Mac에서만 동작합니다. MLX는 Intel Mac에서 실행되지 않습니다.',
-          '기능: 이미지 입력 채팅, 이미지 생성과 편집, 음성 인식과 합성, 모든 앱에서의 받아쓰기, 회의 노트, 예약 프롬프트, 도구별 동의가 필요한 MCP 서버.',
+          '기능: 이미지 입력 채팅, 이미지 생성과 편집, 음성 모델, 모든 앱에서의 받아쓰기, 회의 노트, 예약 프롬프트, 도구별 동의가 필요한 MCP 서버.',
           '8080 포트의 로컬 서버가 OpenAI·Anthropic 호환 엔드포인트를 제공하며, 앱이 Claude Code, Codex, OpenCode, Aider, Goose 같은 코딩 에이전트가 이를 쓰도록 설정해 줍니다.',
           'PromptQuorum은 앱을 테스트하지 않았습니다. 개인정보 처리방침에는 대괄호로 된 결제 대행사 자리 표시자와 계정, 라이선스 키, 구매 항목이 있으며, 개발사는 이 앱이 무료이고 계정이 필요 없다고 설명합니다.',
         ],
@@ -2053,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**개발사에 따르면 채팅, 프롬프트, 파일, 출력은 Mac에 남습니다. 앱은 모델을 내려받고 업데이트를 확인하기 위해 접속하며, 진단 데이터는 동의한 경우에만 수집됩니다.**',
           '개인정보 처리방침(2026년 11월 16일 업데이트)에 따르면 Neywa Labs는 사용자의 콘텐츠를 수집, 열람, 저장하지 않고, 모델 학습이나 평가에 쓰지 않으며, 개인정보를 판매하지 않습니다. 충돌 보고서, 앱과 macOS 버전, 칩과 메모리 크기, 성능 수치, 기능 사용 이벤트 같은 진단 데이터는 첫 실행 때 앱이 요청하는 동의가 있을 때만 수집될 수 있으며, 설정에서 철회할 수 있습니다. 방침은 이 데이터에 세션 내용이나 사용한 특정 모델이 포함되지 않는다고 설명합니다.',
           'FAQ는 모델이 Hugging Face에서 직접 내려받아지며, 업데이트 확인은 Neywa Labs 또는 업데이트 제공 업체에 도달해 IP 주소와 앱 버전 같은 요청 정보가 보일 수 있다고 덧붙입니다. 웹사이트는 쿠키 배너와 함께 PostHog 분석을 사용합니다.',
-          '방침에는 대괄호로 된 결제 대행사 자리 표시자와 가입, 라이선스 키, 구매에 관한 항목도 있으며, 개발사는 이 앱이 무료이고 계정이 필요 없다고 설명합니다. 이용 약관은 Nativ Pro 같은 유료 요금제가 나중에 나올 수 있다고도 덧붙입니다. 의존하기 전에 두 문서를 다시 읽어 보십시오. 코드는 MIT 라이선스로 공개되어 있어 데이터 흐름을 점검할 수 있습니다.',
+          '방침에는 대괄호로 된 결제 대행사 자리 표시자와 가입, 라이선스 키, 구매에 관한 항목도 있으며, 개발사는 이 앱이 무료이고 계정이 필요 없다고 설명합니다. 이용 약관은 Nativ Pro 같은 유료 요금제가 나중에 나올 수 있다고도 덧붙입니다. 의존하기 전에 두 문서를 다시 읽어 보십시오. 코드는 MIT 라이선스로 공개되어 있어 데이터 흐름을 원칙적으로 점검할 수 있지만, PromptQuorum은 점검하지 않았습니다.',
         ],
       },
       whoShouldUse: {
@@ -2133,7 +2133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Apple Silicon Mac이 있고 채팅, 이미지, 받아쓰기, 코딩 에이전트용 로컬 API를 하나로 묶은 무료 오픈소스 로컬 AI 앱을 원한다면 Nativ는 살펴볼 만합니다.**',
           '사양상 범위가 넓습니다. 내장 MLX 서버, 적합 경고가 있는 Hugging Face 모델 라이브러리, OpenAI·Anthropic 호환 엔드포인트, 10개 코딩 에이전트와 6개 편집기 설정, 오디오 확장, MCP 지원을 갖췄고, 2026년 11월 16일에 v0.4.6이, 2026년 11월 17일에 커밋이 있었습니다.',
-          '절충점도 분명합니다. Apple Silicon과 macOS 26 이상에서만 동작하고, 버전 번호가 0.4인 신생 프로젝트이며, 개인정보 처리방침에는 대괄호로 된 자리 표시자와 계정·구매 항목이 남아 있습니다. PromptQuorum은 앱을 테스트하지 않았으므로, 작은 모델로 시작하고 최신 개인정보 처리방침을 읽은 뒤 받아쓰기, 이미지 생성, API가 용도에 맞는지 확인한 다음 의존하십시오.',
+          '절충점도 분명합니다. Apple Silicon과 macOS 26 이상에서만 동작하고, 버전 번호가 0.4인 신생 프로젝트이며, PromptQuorum이 2026년 11월 18일에 확인했을 때 개인정보 처리방침에는 대괄호로 된 자리 표시자와 계정·구매 항목이 있었습니다. PromptQuorum은 앱을 테스트하지 않았으므로, 작은 모델로 시작하고 최신 개인정보 처리방침을 읽은 뒤 받아쓰기, 이미지 생성, API가 용도에 맞는지 확인한 다음 의존하십시오.',
         ],
       },
       sources: {
@@ -2195,7 +2195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Nativ تطبيق Mac مجاني ومفتوح المصدر (MIT) يشغّل نماذج الذكاء الاصطناعي المفتوحة على Apple Silicon عبر خادم MLX مرفق، ويضيف الدردشة وتوليد الصور والإملاء وواجهة برمجة محلية لأدوات البرمجة.** يتطلب جهاز Mac بمعالج M1 أو أحدث ونظام macOS 26 أو أحدث، ويُثبَّت عبر DMG أو Homebrew، ويعمل دون اتصال بعد تنزيل نموذج بحسب المطوّر. هو مشروع حديث من شركة بولندية، ولم تختبره PromptQuorum.',
+      '**Nativ تطبيق Mac مجاني ومفتوح المصدر (MIT) يشغّل نماذج الذكاء الاصطناعي المفتوحة على Apple Silicon عبر خادم MLX مرفق، ويضيف الدردشة وتوليد الصور والإملاء وواجهة برمجة محلية لأدوات البرمجة.** يتطلب جهاز Mac بمعالج M1 أو أحدث ونظام macOS 26 أو أحدث، ويُثبَّت عبر DMG أو Homebrew، ويعمل دون اتصال بعد تنزيل نموذج بحسب المطوّر. هو مشروع حديث من شركة بولندية. ويصفه المطوّر بأنه مجاني وبلا حساب، لكن الشروط تذكر أن خططًا مدفوعة مثل Nativ Pro قد تأتي لاحقًا. ولم تختبره PromptQuorum.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو Nativ ولمن هو؟',
@@ -2203,7 +2203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nativ تطبيق macOS أصلي يضم خادم mlx-vlm ومكتبة نماذج ودردشة وتبويب صور وإملاءً وواجهة برمجة محلية. يناسب أصحاب أجهزة Mac بمعالج Apple Silicon الذين يريدون ذكاءً اصطناعيًا محليًا بلا حساب، والمطوّرين الذين يريدون ربط Claude Code أو Codex أو محرّر بنموذج على جهاز Mac الخاص بهم.',
         bullets: [
           'مجاني وبترخيص MIT؛ لـ Mac فقط، مع Apple Silicon (M1 أو أحدث) وmacOS 26 أو أحدث.',
-          'دردشة مع إدخال الصور، وتوليد الصور وتحريرها، والتعرّف على الكلام وتوليده، وملاحظات الاجتماعات، والإملاء؛ وكل ذلك على جهاز Mac بحسب المطوّر.',
+          'دردشة مع إدخال الصور، وتوليد الصور وتحريرها، ونماذج الكلام، وملاحظات الاجتماعات، والإملاء؛ وكل ذلك على جهاز Mac بحسب المطوّر.',
           'خادم محلي بنقاط نهاية متوافقة مع OpenAI وAnthropic؛ ومساعدات إعداد لوكلاء البرمجة والمحررات المذكورة.',
           'النماذج تأتي من Hugging Face؛ ويحذّر التطبيق عندما قد لا يتسع النموذج في ذاكرتك.',
           'أُنشئ المستودع في يوليو 2026؛ وما زالت سياسة الخصوصية تحتوي عنصرًا نائبًا بين أقواس مربعة وتتناول الحسابات والمشتريات مع أن التطبيق مجاني.',
@@ -2244,7 +2244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'مفتوح المصدر بترخيص MIT ومجاني؛ يقول المطوّر إنه لا يوجد حساب ولا اشتراك، وتذكر الشروط أن أي خطط مدفوعة مثل Nativ Pro ستعرض شروطها قبل أي عملية شراء.',
           'يعمل فقط على أجهزة Mac بمعالج Apple Silicon (M1 أو أحدث) ونظام macOS 26 أو أحدث؛ ولا يعمل MLX على أجهزة Mac بمعالج Intel.',
-          'الميزات: دردشة مع إدخال الصور، وتوليد الصور وتحريرها، والتعرّف على الكلام وتوليده، وإملاء في أي تطبيق، وملاحظات اجتماعات، وطلبات مجدولة، وخوادم MCP مع موافقة لكل أداة.',
+          'الميزات: دردشة مع إدخال الصور، وتوليد الصور وتحريرها، ونماذج الكلام، وإملاء في أي تطبيق، وملاحظات اجتماعات، وطلبات مجدولة، وخوادم MCP مع موافقة لكل أداة.',
           'يوفّر خادم محلي على المنفذ 8080 نقاط نهاية متوافقة مع OpenAI وAnthropic، ويُعدّ التطبيق وكلاء برمجة مثل Claude Code وCodex وOpenCode وAider وGoose لاستخدامه.',
           'لم تختبر PromptQuorum التطبيق. تحتوي سياسة الخصوصية على عنصر نائب لمعالج الدفع بين أقواس مربعة وأقسام عن الحسابات ومفاتيح الترخيص والمشتريات، مع أن المطوّر يصف التطبيق بأنه مجاني وبلا حساب.',
         ],
@@ -2322,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**بحسب المطوّر، تبقى محادثاتك ومطالباتك وملفاتك ومخرجاتك على جهاز Mac؛ ويتصل التطبيق بالإنترنت لتنزيل النماذج والتحقق من التحديثات، وبيانات التشخيص اختيارية.**',
           'بحسب سياسة الخصوصية (آخر تحديث في 16 نوفمبر 2026)، لا تجمع Neywa Labs محتواك ولا تطّلع عليه ولا تخزّنه، ولا تستخدمه لتدريب النماذج أو تقييمها، ولا تبيع المعلومات الشخصية. ولا يجوز جمع بيانات التشخيص، مثل تقارير الأعطال وإصدار التطبيق وmacOS والمعالج وحجم الذاكرة وقياسات الأداء وأحداث استخدام الميزات، إلا بموافقتك التي يطلبها التطبيق عند أول تشغيل ويمكنك سحبها من الإعدادات. وتقول السياسة إنها لا تتضمن أبدًا محتوى جلساتك ولا النماذج المحددة التي تستخدمها.',
           'تضيف الأسئلة الشائعة أن النماذج تُنزَّل مباشرة من Hugging Face، وأن طلبات التحقق من التحديثات تصل إلى Neywa Labs أو مزوّد التحديثات لديها، وقد يرى تفاصيل الطلب مثل عنوان IP وإصدار التطبيق. ويستخدم الموقع تحليلات PostHog مع شريط موافقة على ملفات تعريف الارتباط.',
-          'وتحتوي السياسة أيضًا على عنصر نائب لمعالج الدفع بين أقواس مربعة وأقسام عن التسجيل ومفاتيح الترخيص والمشتريات، مع أن المطوّر يصف التطبيق بأنه مجاني وبلا حساب. وتضيف الشروط أن خططًا مدفوعة مثل Nativ Pro قد تأتي لاحقًا. أعد قراءة الوثيقتين قبل الاعتماد عليهما؛ فالشيفرة بترخيص MIT وعلنية، ولذلك يمكن تدقيق تدفق البيانات.',
+          'وتحتوي السياسة أيضًا على عنصر نائب لمعالج الدفع بين أقواس مربعة وأقسام عن التسجيل ومفاتيح الترخيص والمشتريات، مع أن المطوّر يصف التطبيق بأنه مجاني وبلا حساب. وتضيف الشروط أن خططًا مدفوعة مثل Nativ Pro قد تأتي لاحقًا. أعد قراءة الوثيقتين قبل الاعتماد عليهما؛ فالشيفرة بترخيص MIT وعلنية، ولذلك يمكن من حيث المبدأ فحص تدفق البيانات، لكن PromptQuorum لم تفعل ذلك.',
         ],
       },
       whoShouldUse: {
@@ -2402,7 +2402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يستحق Nativ نظرة إن كنت تملك جهاز Mac بمعالج Apple Silicon وتريد تطبيق ذكاء اصطناعي محليًا مجانيًا ومفتوح المصدر يجمع الدردشة والصور والإملاء وواجهة برمجة محلية لوكلاء البرمجة.**',
           'على الورق يغطي الكثير: خادم MLX مرفق، ومكتبة نماذج Hugging Face مع تحذيرات الملاءمة، ونقاط نهاية متوافقة مع OpenAI وAnthropic، وإعدادًا لعشرة وكلاء برمجة وستة محررات، وامتدادًا صوتيًا، ودعمًا لـ MCP، مع الإصدار v0.4.6 في 16 نوفمبر 2026 وcommit في 17 نوفمبر 2026.',
-          'المقايضات حقيقية. يعمل فقط على Apple Silicon مع macOS 26 أو أحدث، وهو مشروع حديث برقم إصدار 0.4، وما زالت سياسة الخصوصية تحتوي عنصرًا نائبًا بين أقواس مربعة وأقسامًا عن الحسابات والمشتريات. لم تختبر PromptQuorum التطبيق، لذا ابدأ بنموذج صغير، واقرأ سياسة الخصوصية الحالية، وتأكد من أن الإملاء وتوليد الصور والواجهة البرمجية تناسب استخدامك قبل الاعتماد عليه.',
+          'المقايضات حقيقية. يعمل فقط على Apple Silicon مع macOS 26 أو أحدث، وهو مشروع حديث برقم إصدار 0.4، وعندما راجعته PromptQuorum في 18 نوفمبر 2026 كانت سياسة الخصوصية تحتوي عنصرًا نائبًا بين أقواس مربعة وأقسامًا عن الحسابات والمشتريات. لم تختبر PromptQuorum التطبيق، لذا ابدأ بنموذج صغير، واقرأ سياسة الخصوصية الحالية، وتأكد من أن الإملاء وتوليد الصور والواجهة البرمجية تناسب استخدامك قبل الاعتماد عليه.',
         ],
       },
       sources: {
