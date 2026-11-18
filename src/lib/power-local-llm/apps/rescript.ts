@@ -52,7 +52,7 @@ export const app: ToolRecord = {
   installEvidence: 'On 2026-11-18 the GitHub release v1.2.5 listed Rescript-mac-arm64.dmg and Rescript-mac-x64.dmg (macOS), Rescript-Setup.exe (Windows), and Rescript-linux.AppImage and Rescript-linux.deb (Linux). The README and the website link the same downloads, and a browser version at app.getrescript.com needs no install. The README says desktop builds auto-update from GitHub Releases.',
   tagline: {
     en: 'Source-available editor that cuts video and audio by deleting words in a Whisper transcript, with speaker labels and optional voice-cloned line fixes',
-    de: 'Quelltextoffener Editor, der Video und Audio durch Löschen von Wörtern in einem Whisper-Transkript schneidet, mit Sprecherlabels und optionalen Zeilenkorrekturen per Stimmklon',
+    de: 'Editor mit einsehbarem Quellcode, der Video und Audio durch Löschen von Wörtern in einem Whisper-Transkript schneidet, mit Sprecherlabels und optionalen Zeilenkorrekturen per Stimmklon',
     fr: 'Éditeur à code source disponible qui coupe la vidéo et l’audio en supprimant des mots d’une transcription Whisper, avec étiquettes de locuteurs et correction facultative de phrases à la voix clonée',
     ja: 'Whisperの文字起こしから単語を削除するだけで動画・音声をカットできるソース公開型エディター。話者ラベルと、声のクローンによる任意のセリフ修正に対応しています',
     zh: '源码可见的编辑器，在 Whisper 转写文本中删除词语即可剪辑视频和音频，带说话人标签和可选的克隆声音台词修正',
