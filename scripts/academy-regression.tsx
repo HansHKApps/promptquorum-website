@@ -1,13 +1,14 @@
 // PromptQuorum Academy — Phase 2 acceptance run (docs/academy/SPEC.md 16, Phase 2): 20 subjects through the real
-// model: quick check -> simulated answers -> programme. Checks every programme against the SPEC 7.3 limits and
+// model: quick check -> simulated answers -> programme -> lesson 1 (Phase 3). Checks every programme against the SPEC 7.3 limits and
 // prints attempts, clamps, failures and token usage. Needs ACADEMY_ANTHROPIC_API_KEY or ANTHROPIC_API_KEY, read from
 // .env.local in the repo root (or the shell environment).
-// Costs real money (Haiku 5.5, ~40 calls; well under one US dollar). Run: npm run academy:regression [-- --limit 5]
+// Costs real money (Haiku 5.5, ~60 calls; about one US dollar at most). Run: npm run academy:regression [-- --limit 5]
 
 import Anthropic from '@anthropic-ai/sdk'
 import { generateDiagnostic } from '../src/lib/academy/diagnostic'
 import { summarizeDiagnostic } from '../src/lib/academy/diagnostic-summary'
 import { generateProgramme, programmeProblems } from '../src/lib/academy/programme'
+import { generateLesson, lessonLength, lessonWordBudget } from '../src/lib/academy/lesson'
 import type { AcademyLang, Level, TestMode } from '../src/lib/academy/types'
 
 const SUBJECTS: [string, AcademyLang, number, Level, TestMode][] = [
@@ -45,6 +46,7 @@ async function main() {
   }
   const client = new Anthropic({ apiKey, maxRetries: 1, timeout: 60_000 })
   const rows: string[] = []
+  const lessonNotes: string[] = []
   let failures = 0
   let ruleBreaks = 0
   let clamps = 0
@@ -69,6 +71,18 @@ async function main() {
       const problems = programmeProblems(programme, req)
       if (problems.length) ruleBreaks++
       const sum = programme.lessons.reduce((a, l) => a + l.estimatedMinutes, 0)
+      // Phase 3: generate lesson 1 and check its links and length.
+      const first = programme.lessons[0]
+      const lesson = await generateLesson(client, {
+        subject, language, selfLevel: level, objectives: programme.objectives, index: 0,
+        lesson: { title: first.title, topic: first.topic, estimatedMinutes: first.estimatedMinutes, objectiveIds: first.objectiveIds, recap: first.recap },
+        otherTitles: programme.lessons.slice(1).map((l) => l.title),
+      })
+      extraAttempts += lesson.attempts - 1
+      const foreign = lesson.furtherReading.filter((r) => !lesson.materialUrls.includes(r.url))
+      if (foreign.length) ruleBreaks++
+      const words = lessonLength({ sections: lesson.sections, furtherReading: [] }, language)
+      lessonNotes.push(`| ${subject} | ${lesson.sections.length} sections | ${words}/${lessonWordBudget(first.estimatedMinutes, first.recap)} words | ${lesson.furtherReading.length} links${foreign.length ? ' FOREIGN: ' + foreign.map((f) => f.url).join(' ') : ''} | ${lesson.materialUrls.length} pages found |`)
       rows.push(
         `| ${subject} | ${language} | ${diag.questions.length} q | ${programme.lessons.length} lessons, ${programme.objectives.length} obj | ${sum}/${minutes} min | ${problems.length ? 'BREAK: ' + problems.join('; ') : clamped ? 'clamped' : 'ok'} | ${diag.attempts}+${attempts} | ${Date.now() - started} ms |`,
       )
@@ -80,6 +94,8 @@ async function main() {
 
   console.log('\n| Subject | Lang | Quick check | Programme | Reading/total | Rules | Attempts | Time |\n|---|---|---|---|---|---|---|---|')
   console.log(rows.join('\n'))
+  console.log('\n| Subject | Lesson 1 | Length | Further reading | Material |\n|---|---|---|---|---|')
+  console.log(lessonNotes.join('\n'))
   const n = Math.min(limit, SUBJECTS.length)
   console.log(`\nSubjects: ${n} · failed: ${failures} · rule breaks after clamp: ${ruleBreaks} · clamped: ${clamps} · extra attempts (schema/rule failures): ${extraAttempts}`)
   console.log('Token usage per call is in the [academy] generation log lines above.')

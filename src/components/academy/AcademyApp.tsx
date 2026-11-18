@@ -8,10 +8,12 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS } from '@/lib/academy/config'
 import { clearAcademyState, defaultDraft } from '@/lib/academy/store'
 import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
+import { lessonsDone, nextOpenLesson, openLesson } from '@/lib/academy/progress'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import { LEVELS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
+import { LessonView } from './LessonView'
 import { useAcademyState } from './useAcademyState'
 
 export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicSuggestion[] }) {
@@ -43,10 +45,13 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           {tx.storageBlocked}
         </p>
       )}
-      {state.view === 'programme' && state.programme ? (
+      {state.view === 'lesson' && state.programme ? (
+        <LessonView tx={tx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(tx, code)} />
+      ) : state.view === 'programme' && state.programme ? (
         <ProgrammeView
           tx={tx}
           programme={state.programme}
+          onOpenLesson={(i) => update((s) => (s.programme ? { ...s, view: 'lesson', programme: openLesson(s.programme, i) } : s))}
           onStartOver={() => update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined }))}
         />
       ) : state.view === 'diagnostic' ? (
@@ -484,12 +489,25 @@ function toProgramme(
 
 // ------------------------------------------------------------------------------------------ programme view
 
-function ProgrammeView({ tx, programme, onStartOver }: { tx: AcademyCopy; programme: Programme; onStartOver: () => void }) {
+function ProgrammeView({
+  tx,
+  programme,
+  onOpenLesson,
+  onStartOver,
+}: {
+  tx: AcademyCopy
+  programme: Programme
+  onOpenLesson: (index: number) => void
+  onStartOver: () => void
+}) {
   const reading = programme.lessons.reduce((s, l) => s + l.estimatedMinutes, 0)
   const total = reading + programme.testPlan.testMinutes
   const { finalQuestions, lessonQuizQuestions } = programme.testPlan
   const testLine =
     programme.testMode === 'none' ? tx.testPlanNone : programme.testMode === 'final' ? tx.testPlanFinal(finalQuestions) : tx.testPlanPerLesson(lessonQuizQuestions, finalQuestions)
+  const next = nextOpenLesson(programme)
+  const done = lessonsDone(programme)
+  const minutesSpent = Math.round(programme.progress.secondsSpent / 60)
   return (
     <section aria-labelledby="academy-programme" className="space-y-5 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
       <div>
@@ -497,7 +515,17 @@ function ProgrammeView({ tx, programme, onStartOver }: { tx: AcademyCopy; progra
           {tx.programmeTitle}: {programme.subject}
         </h2>
         <p className="mt-1 text-sm text-gray-600">{tx.totalTime(tx.minutes(total))}</p>
+        {minutesSpent > 0 && <p className="text-sm text-gray-600">{tx.timeSpent(tx.minutes(minutesSpent))}</p>}
+        <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-purple-100" role="progressbar" aria-valuemin={0} aria-valuemax={programme.lessons.length} aria-valuenow={done}>
+          <div className="h-full bg-purple-600 transition-all" style={{ width: `${(done / programme.lessons.length) * 100}%` }} />
+        </div>
       </div>
+      {next === -1 && (
+        <div className="rounded-xl bg-green-50 px-4 py-3 text-green-900" role="status">
+          <p className="font-medium">{tx.lessonsDoneTitle}</p>
+          <p className="text-sm">{programme.testMode === 'none' ? tx.programmeComplete : tx.testsComing}</p>
+        </div>
+      )}
       <div>
         <h3 className="font-medium text-gray-900">{tx.objectivesTitle}</h3>
         <ul className="mt-2 list-disc space-y-1 ps-5 text-gray-700">
@@ -509,31 +537,47 @@ function ProgrammeView({ tx, programme, onStartOver }: { tx: AcademyCopy; progra
       <div>
         <h3 className="font-medium text-gray-900">{tx.lessonsTitle}</h3>
         <ol className="mt-2 space-y-2">
-          {programme.lessons.map((l, i) => (
-            <li key={l.id} className="flex items-start gap-3 rounded-xl border border-gray-200 px-4 py-3">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-purple-100 text-xs font-semibold text-purple-700">{i + 1}</span>
-              <span className="min-w-0 flex-1">
-                <span className="block font-medium text-gray-900">
-                  {l.title}
-                  {l.recap && <span className="ms-2 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-normal text-gray-600">{tx.recapBadge}</span>}
-                </span>
-                <span className="block text-sm text-gray-500">{l.topic}</span>
-              </span>
-              <span className="shrink-0 whitespace-nowrap text-sm text-gray-500">{tx.minutes(l.estimatedMinutes)}</span>
-            </li>
-          ))}
+          {programme.lessons.map((l, i) => {
+            const isDone = programme.progress.lessonStatus[l.id] === 'done'
+            return (
+              <li key={l.id}>
+                <button
+                  type="button"
+                  onClick={() => onOpenLesson(i)}
+                  className="flex w-full items-start gap-3 rounded-xl border border-gray-200 px-4 py-3 text-start hover:border-purple-400 hover:bg-purple-50"
+                >
+                  <span
+                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${isDone ? 'bg-green-600 text-white' : 'bg-purple-100 text-purple-700'}`}
+                    aria-hidden="true"
+                  >
+                    {isDone ? '✓' : i + 1}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-medium text-gray-900">
+                      {l.title}
+                      {l.recap && <span className="ms-2 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-normal text-gray-600">{tx.recapBadge}</span>}
+                      {isDone && <span className="ms-2 rounded-full bg-green-50 px-2 py-0.5 text-xs font-normal text-green-800">{tx.statusDone}</span>}
+                    </span>
+                    <span className="block text-sm text-gray-500">{l.topic}</span>
+                  </span>
+                  <span className="shrink-0 whitespace-nowrap text-sm text-gray-500">{tx.minutes(l.estimatedMinutes)}</span>
+                </button>
+              </li>
+            )
+          })}
         </ol>
       </div>
       <p className="text-sm text-gray-700">{testLine}</p>
-      <div className="flex flex-wrap items-center gap-3">
-        <button type="button" disabled className="cursor-not-allowed rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white opacity-50">
-          {tx.startLesson}
+      {next !== -1 && (
+        <button type="button" onClick={() => onOpenLesson(next)} className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700">
+          {next === 0 && done === 0 ? tx.startLesson : tx.continueLesson(next + 1)}
         </button>
-        <span className="text-sm text-gray-500">{tx.lessonsComing}</span>
+      )}
+      <div>
+        <button type="button" onClick={onStartOver} className="text-sm text-purple-700 underline underline-offset-2">
+          {tx.startOver}
+        </button>
       </div>
-      <button type="button" onClick={onStartOver} className="text-sm text-purple-700 underline underline-offset-2">
-        {tx.startOver}
-      </button>
     </section>
   )
 }

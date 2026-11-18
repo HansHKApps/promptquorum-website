@@ -76,8 +76,22 @@ export const copy: AcademyCopy = {
   testPlanPerLesson: (q, f) => `Ein Quiz mit ${q} Fragen nach jeder Lektion, dann ein Abschlusstest mit ${f} Fragen.`,
   totalTime: (d) => `Gesamtzeit: etwa ${d}`,
   startLesson: 'Lektion 1 starten',
-  lessonsComing: 'Die Lektionen selbst sind noch nicht verfügbar.',
   startOver: 'Neu beginnen',
+  continueLesson: (n) => `Weiter mit Lektion ${n}`,
+  statusDone: 'Erledigt',
+  timeSpent: (d) => `Bisherige Lernzeit: ${d}`,
+  lessonsDoneTitle: 'Alle Lektionen erledigt',
+  testsComing: 'Die Tests sind noch nicht verfügbar.',
+  programmeComplete: 'Sie haben dieses Programm abgeschlossen.',
+
+  lessonOf: (i, n) => `Lektion ${i} von ${n}`,
+  preparingLesson: 'Ihre Lektion wird geschrieben …',
+  lessonObjectives: 'Diese Lektion hilft Ihnen',
+  backToProgramme: 'Zurück zum Programm',
+  doneNext: 'Erledigt, nächste Lektion',
+  doneLast: 'Erledigt, Lektionen abschließen',
+  furtherReading: 'Weiterlesen',
+  fromPromptQuorum: 'Von PromptQuorum',
 
   privacyNote:
     'Kein Konto nötig. Ihr Fortschritt wird nur in diesem Browser gespeichert. Um Lektionen, Fragen und Tutor-Antworten zu erstellen, werden Ihr Thema, Ihre Antworten und Ihre Nachrichten an den Tutor an unseren KI-Anbieter (Anthropic) übermittelt; bitte geben Sie dort keine personenbezogenen Daten ein. Der Name für Ihr Zertifikat bleibt in diesem Browser. Zum Schutz vor Missbrauch werden Anfragen mit einem kurzlebigen, gehashten Schlüssel aus Ihrer IP-Adresse begrenzt. Wenn Sie Feedback geben, speichern wir die Bewertung, den Kommentar und das gelernte Thema, ohne Ihren Namen und ohne Konto.',

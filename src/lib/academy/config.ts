@@ -22,3 +22,9 @@ export const ACADEMY_PATH = '/academy'
 export function academyEnabled(): boolean {
   return process.env.ACADEMY_ENABLED === 'true'
 }
+
+/** Active-time tracking (SPEC 6.1): counted only while the tab is visible and the learner interacted recently. */
+export const ACADEMY_IDLE_AFTER_MS = 60_000
+export const ACADEMY_TICK_SECONDS = 5
+/** A lesson never counts more than this multiple of its estimated reading time. */
+export const ACADEMY_LESSON_TIME_CAP_FACTOR = 3

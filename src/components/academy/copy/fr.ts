@@ -76,8 +76,22 @@ export const copy: AcademyCopy = {
   testPlanPerLesson: (q, f) => `Un quiz de ${q} questions après chaque leçon, puis un test final de ${f} questions.`,
   totalTime: (d) => `Durée totale : environ ${d}`,
   startLesson: 'Commencer la leçon 1',
-  lessonsComing: 'Les leçons elles-mêmes ne sont pas encore disponibles.',
   startOver: 'Recommencer',
+  continueLesson: (n) => `Continuer avec la leçon ${n}`,
+  statusDone: 'Terminée',
+  timeSpent: (d) => `Temps d'apprentissage jusqu'ici : ${d}`,
+  lessonsDoneTitle: 'Toutes les leçons sont terminées',
+  testsComing: 'Les tests ne sont pas encore disponibles.',
+  programmeComplete: 'Vous avez terminé ce programme.',
+
+  lessonOf: (i, n) => `Leçon ${i} sur ${n}`,
+  preparingLesson: 'Rédaction de votre leçon…',
+  lessonObjectives: 'Cette leçon vous aide à',
+  backToProgramme: 'Retour au programme',
+  doneNext: 'Terminé, leçon suivante',
+  doneLast: 'Terminé, finir les leçons',
+  furtherReading: 'Pour aller plus loin',
+  fromPromptQuorum: 'De PromptQuorum',
 
   privacyNote:
     "Aucun compte requis. Votre progression est enregistrée uniquement dans ce navigateur. Pour créer les leçons, les questions et les réponses du tuteur, votre sujet, vos réponses et vos messages au tuteur sont envoyés à notre fournisseur d'IA (Anthropic) ; merci de ne pas y saisir de données personnelles. Le nom figurant sur votre certificat reste dans ce navigateur. Pour éviter les abus, les requêtes sont limitées à l'aide d'une clé hachée et temporaire dérivée de votre adresse IP. Si vous laissez un avis, nous enregistrons la note, le commentaire et le sujet étudié, sans votre nom ni compte.",

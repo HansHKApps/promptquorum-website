@@ -74,8 +74,22 @@ export const copy: AcademyCopy = {
   testPlanPerLesson: (q, f) => `每课后 ${q} 道题的小测验，最后是 ${f} 道题的期末测试。`,
   totalTime: (d) => `总时长：约${d}`,
   startLesson: '开始第 1 课',
-  lessonsComing: '课程内容暂未开放。',
   startOver: '重新开始',
+  continueLesson: (n) => `继续第 ${n} 课`,
+  statusDone: '已完成',
+  timeSpent: (d) => `目前学习时长：${d}`,
+  lessonsDoneTitle: '所有课程已完成',
+  testsComing: '测试暂未开放。',
+  programmeComplete: '你已完成本学习计划。',
+
+  lessonOf: (i, n) => `第 ${i} 课，共 ${n} 课`,
+  preparingLesson: '正在编写课程…',
+  lessonObjectives: '本课帮助你',
+  backToProgramme: '返回学习计划',
+  doneNext: '完成，下一课',
+  doneLast: '完成，结束课程',
+  furtherReading: '延伸阅读',
+  fromPromptQuorum: '来自 PromptQuorum',
 
   privacyNote:
     '无需账号。你的进度只保存在此浏览器中。为生成课程、题目和辅导回答，你的主题、答案和发给辅导的消息会发送给我们的AI服务商（Anthropic），请勿在其中输入个人信息。证书上的姓名只保留在此浏览器中。为防止滥用，我们使用由你的IP地址生成的短期哈希密钥来限制请求次数。如果你留下反馈，我们会保存评分、评论和你学习的主题，不含姓名，也不关联账号。',

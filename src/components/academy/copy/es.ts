@@ -75,8 +75,22 @@ export const copy: AcademyCopy = {
   testPlanPerLesson: (q, f) => `Un quiz de ${q} preguntas tras cada lección y luego un test final de ${f} preguntas.`,
   totalTime: (d) => `Tiempo total: unos ${d}`,
   startLesson: 'Empezar la lección 1',
-  lessonsComing: 'Las lecciones aún no están disponibles.',
   startOver: 'Empezar de nuevo',
+  continueLesson: (n) => `Continuar con la lección ${n}`,
+  statusDone: 'Hecha',
+  timeSpent: (d) => `Tiempo de aprendizaje hasta ahora: ${d}`,
+  lessonsDoneTitle: 'Todas las lecciones hechas',
+  testsComing: 'Los tests aún no están disponibles.',
+  programmeComplete: 'Has completado este programa.',
+
+  lessonOf: (i, n) => `Lección ${i} de ${n}`,
+  preparingLesson: 'Escribiendo tu lección…',
+  lessonObjectives: 'Esta lección te ayuda a',
+  backToProgramme: 'Volver al programa',
+  doneNext: 'Hecho, siguiente lección',
+  doneLast: 'Hecho, terminar lecciones',
+  furtherReading: 'Para seguir leyendo',
+  fromPromptQuorum: 'De PromptQuorum',
 
   privacyNote:
     'No necesitas cuenta. Tu progreso se guarda solo en este navegador. Para crear lecciones, preguntas y respuestas del tutor, tu tema, tus respuestas y tus mensajes al tutor se envían a nuestro proveedor de IA (Anthropic); no escribas datos personales en ellos. El nombre de tu certificado se queda en este navegador. Para evitar abusos, limitamos las solicitudes con una clave temporal cifrada (hash) derivada de tu dirección IP. Si dejas tu opinión, guardamos la valoración, el comentario y el tema que estudiaste, sin tu nombre ni cuenta.',

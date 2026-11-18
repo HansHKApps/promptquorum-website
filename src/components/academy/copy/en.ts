@@ -74,8 +74,22 @@ export const copy: AcademyCopy = {
   testPlanPerLesson: (q, f) => `A ${q}-question quiz after each lesson, then a final test with ${f} questions.`,
   totalTime: (d) => `Total time: about ${d}`,
   startLesson: 'Start lesson 1',
-  lessonsComing: 'The lessons themselves are not available yet.',
   startOver: 'Start over',
+  continueLesson: (n) => `Continue with lesson ${n}`,
+  statusDone: 'Done',
+  timeSpent: (d) => `Learning time so far: ${d}`,
+  lessonsDoneTitle: 'All lessons done',
+  testsComing: 'The tests are not available yet.',
+  programmeComplete: 'You have completed this programme.',
+
+  lessonOf: (i, n) => `Lesson ${i} of ${n}`,
+  preparingLesson: 'Writing your lesson…',
+  lessonObjectives: 'This lesson helps you',
+  backToProgramme: 'Back to programme',
+  doneNext: 'Done, next lesson',
+  doneLast: 'Done, finish lessons',
+  furtherReading: 'Further reading',
+  fromPromptQuorum: 'From PromptQuorum',
 
   privacyNote:
     'No account needed. Your progress is saved in this browser only. To create lessons, questions and tutor answers, your subject, your answers and your tutor messages are sent to our AI provider (Anthropic); please do not type personal data into them. The name for your certificate stays in this browser. To prevent abuse, requests are rate-limited with a short-lived hashed key derived from your IP address. If you leave feedback, we store the rating, the comment and the subject you studied, without your name or any account.',

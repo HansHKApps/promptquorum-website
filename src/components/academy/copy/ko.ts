@@ -74,8 +74,22 @@ export const copy: AcademyCopy = {
   testPlanPerLesson: (q, f) => `레슨마다 ${q}문항 퀴즈, 마지막에 ${f}문항 최종 테스트.`,
   totalTime: (d) => `총 시간: 약 ${d}`,
   startLesson: '레슨 1 시작',
-  lessonsComing: '레슨 본문은 아직 제공되지 않습니다.',
   startOver: '처음부터 다시',
+  continueLesson: (n) => `레슨 ${n} 계속하기`,
+  statusDone: '완료',
+  timeSpent: (d) => `지금까지 학습 시간: ${d}`,
+  lessonsDoneTitle: '모든 레슨 완료',
+  testsComing: '테스트는 아직 제공되지 않습니다.',
+  programmeComplete: '이 프로그램을 수료하셨습니다.',
+
+  lessonOf: (i, n) => `레슨 ${i} / ${n}`,
+  preparingLesson: '레슨을 작성하고 있습니다…',
+  lessonObjectives: '이 레슨의 목표',
+  backToProgramme: '프로그램으로 돌아가기',
+  doneNext: '완료, 다음 레슨',
+  doneLast: '완료, 레슨 마치기',
+  furtherReading: '더 읽어 보기',
+  fromPromptQuorum: 'PromptQuorum 자료',
 
   privacyNote:
     '계정이 필요 없습니다. 진행 상황은 이 브라우저에만 저장됩니다. 레슨, 문제, 튜터 답변을 만들기 위해 주제, 답변, 튜터에게 보낸 메시지가 AI 제공업체(Anthropic)로 전송되므로 개인정보를 입력하지 마십시오. 수료증에 들어갈 이름은 이 브라우저에만 남습니다. 남용을 막기 위해 IP 주소에서 만든 단기 해시 키로 요청 횟수를 제한합니다. 피드백을 남기시면 이름이나 계정 없이 평점, 댓글, 학습한 주제를 저장합니다.',

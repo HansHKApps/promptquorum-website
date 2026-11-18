@@ -39,6 +39,35 @@ Supersedes SPEC 2 #9 and #10, SPEC 4.1 and SPEC 12, plus the 2026-11-17 MCP-key 
 2. **Free-text feedback comments may be stored server-side.** SPEC 8a stands as written: max 500 characters, "no personal data" notice. This differs from Ask Hans, which accepts no free text. The privacy policy needs an Academy section before launch (SPEC 14).
 3. **Unmerged-branch rule (SPEC 17) applies to Academy work only.** Hans left it to Claude: at most one open Academy branch at a time. Website branches from other, unrelated sessions do not count.
 
+## Phase 3 choices (Claude, 2026-11-18, open to change)
+
+**Generation**
+- Lessons are generated on first open (`POST /api/academy/lesson`) and stored in the learner's programme, so each lesson costs one generation per learner. Rate limit: 40 per IP hash per hour.
+
+**Grounding (SPEC 7.2)**
+- Two in-process searches: lesson title + topic, and topic + subject.
+- Only real article pages count. Site pages and the bare `/directory` link are dropped.
+- The top 2 articles are read with `getArticle`. Their prose (titles, paragraphs, lists, FAQs, HTML removed) is passed as at most 10,000 characters, about 3,000 tokens.
+- The app tools (`search_apps` / `compare_apps` / `explain_license`) are not used yet.
+
+**Further reading: cannot contain an invented URL**
+- The model picks pages by number from the numbered list of found pages.
+- Code maps numbers to the URLs from the search, drops unknown numbers and removes duplicates.
+- Every link, bare URL, HTML tag and heading marker in the lesson text is stripped.
+- Acceptance test: `test:academy`, "further-reading URLs are 100% from the content search".
+
+**Length (SPEC 11)**
+- Budget: 150 words per minute, at least 250 and at most 900. Recaps at most 300.
+- Japanese and Chinese are counted as characters / 2.
+- Over budget by more than 30%: one retry; after that the lesson is accepted, because length is a cost guard, not a correctness rule.
+
+**Lesson screen and progress**
+- The lesson screen always shows the subject, "lesson x of y", a progress bar and the lesson's objectives.
+- Further reading carries a "From PromptQuorum" label. The text is rendered with the Ask Hans markdown component (React nodes only, no raw HTML).
+- Active time (SPEC 6.1) counts in 5-second ticks while the tab is visible and the learner interacted within the last 60 seconds. It is capped at 3× the lesson estimate. The total time is shown on the programme screen.
+- Lessons can be opened in any order from the programme screen.
+- With test mode "none", all lessons done completes the programme (SPEC 9). Otherwise it waits for the tests (Phase 4).
+
 ## Phase 2 choices (Claude, 2026-11-18, open to change)
 
 **Model and generation**

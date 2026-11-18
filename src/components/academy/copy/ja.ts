@@ -74,8 +74,22 @@ export const copy: AcademyCopy = {
   testPlanPerLesson: (q, f) => `各レッスン後に${q}問のクイズ、最後に${f}問の最終テスト。`,
   totalTime: (d) => `合計時間：約${d}`,
   startLesson: 'レッスン1を始める',
-  lessonsComing: 'レッスン本体はまだ利用できません。',
   startOver: '最初からやり直す',
+  continueLesson: (n) => `レッスン${n}から続ける`,
+  statusDone: '完了',
+  timeSpent: (d) => `これまでの学習時間：${d}`,
+  lessonsDoneTitle: 'すべてのレッスンが完了しました',
+  testsComing: 'テストはまだ利用できません。',
+  programmeComplete: 'このプログラムを修了しました。',
+
+  lessonOf: (i, n) => `レッスン ${i} / ${n}`,
+  preparingLesson: 'レッスンを作成しています…',
+  lessonObjectives: 'このレッスンの目標',
+  backToProgramme: 'プログラムに戻る',
+  doneNext: '完了して次のレッスンへ',
+  doneLast: '完了してレッスンを終える',
+  furtherReading: '関連記事',
+  fromPromptQuorum: 'PromptQuorumより',
 
   privacyNote:
     'アカウントは不要です。進捗はこのブラウザにのみ保存されます。レッスン、問題、チューターの回答を作成するため、テーマ、回答、チューターへのメッセージをAIプロバイダー（Anthropic）に送信します。これらに個人情報を入力しないでください。修了証のお名前はこのブラウザ内にとどまります。不正利用防止のため、IPアドレスから生成した短期間のハッシュキーでリクエスト数を制限しています。フィードバックをいただいた場合は、評価、コメント、学習したテーマを、お名前やアカウントなしで保存します。',

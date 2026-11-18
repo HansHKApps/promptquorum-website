@@ -72,3 +72,33 @@ export const programmeRequestSchema = z.object({
   }),
 })
 export type ProgrammeRequest = z.infer<typeof programmeRequestSchema>
+
+// -------------------------------------------------------------------------------------------- lessons (Phase 3)
+
+export const lessonOutputSchema = z.object({
+  sections: z
+    .array(z.object({ heading: z.string(), body: z.string().describe('Markdown: short paragraphs, lists, **bold**. No links, no URLs, no headings') }))
+    .describe('3 to 6 short sections in teaching order'),
+  furtherReading: z
+    .array(z.object({ ref: z.number().int().describe('Number of a PromptQuorum page from <material>') }))
+    .describe('0 to 3 pages from <material> that are worth reading next; empty if none fits'),
+})
+export type LessonOutput = z.infer<typeof lessonOutputSchema>
+
+export const lessonRequestSchema = z.object({
+  subject,
+  language: z.enum(ALL_LANGS),
+  selfLevel: z.enum(LEVELS),
+  objectives: z.array(z.string().max(300)).min(1).max(8),
+  lesson: z.object({
+    title: z.string().min(1).max(200),
+    topic: z.string().min(1).max(80),
+    estimatedMinutes: z.number().int().min(1).max(120),
+    objectiveIds: z.array(z.number().int().min(0).max(7)).max(8),
+    recap: z.boolean().optional(),
+  }),
+  index: z.number().int().min(0).max(11),
+  /** titles of the other lessons, so this one does not repeat them */
+  otherTitles: z.array(z.string().max(200)).max(12),
+})
+export type LessonRequest = z.infer<typeof lessonRequestSchema>

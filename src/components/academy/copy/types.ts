@@ -64,8 +64,24 @@ export interface AcademyCopy {
   /** receives the formatted duration, e.g. "1 h" or "90 min" */
   totalTime: (duration: string) => string
   startLesson: string
-  lessonsComing: string
   startOver: string
+  continueLesson: (n: number) => string
+  statusDone: string
+  /** receives the formatted duration */
+  timeSpent: (duration: string) => string
+  lessonsDoneTitle: string
+  testsComing: string
+  programmeComplete: string
+
+  // Lesson screen
+  lessonOf: (i: number, n: number) => string
+  preparingLesson: string
+  lessonObjectives: string
+  backToProgramme: string
+  doneNext: string
+  doneLast: string
+  furtherReading: string
+  fromPromptQuorum: string
 
   // Privacy strip
   privacyNote: string

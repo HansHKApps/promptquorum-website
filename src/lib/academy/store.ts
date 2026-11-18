@@ -68,7 +68,7 @@ export function migrateAcademyState(raw: unknown): AcademyState {
   // A screen needs the data it shows; otherwise fall back to setup.
   const view = viewSchema.safeParse(r.view)
   if (view.success) {
-    const ok = view.data === 'setup' || (view.data === 'diagnostic' && state.draft) || (view.data === 'programme' && state.programme)
+    const ok = view.data === 'setup' || (view.data === 'diagnostic' && state.draft) || ((view.data === 'programme' || view.data === 'lesson') && state.programme)
     if (ok) state.view = view.data
   }
   return state

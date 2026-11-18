@@ -75,6 +75,8 @@ export interface Programme {
     quizResults: QuizResult[]
     finalResult?: QuizResult
     secondsSpent: number
+    /** active seconds per lesson id (capped, SPEC 6.1) */
+    lessonSeconds?: Record<string, number>
     startedAt: string
     completedAt?: string
   }
@@ -82,7 +84,7 @@ export interface Programme {
 }
 
 /** Screens of the Academy tool. They are views inside /academy, not separate URLs (like the Ask Hans window). */
-export const ACADEMY_VIEWS = ['setup', 'diagnostic', 'programme'] as const
+export const ACADEMY_VIEWS = ['setup', 'diagnostic', 'programme', 'lesson'] as const
 export type AcademyView = (typeof ACADEMY_VIEWS)[number]
 
 /** The quick check in progress (before a programme exists). */

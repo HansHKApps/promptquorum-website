@@ -18,7 +18,10 @@ import { generateDiagnostic } from '../src/lib/academy/diagnostic'
 import { AcademyGenerationError, generateStructured, type ParseClient } from '../src/lib/academy/generate'
 import { clampProgramme, contentMinutes, programmeProblems, testMinutes } from '../src/lib/academy/programme'
 import { diagnosticOutputSchema, programmeOutputSchema, type GeneratedQuestion, type ProgrammeOutput } from '../src/lib/academy/schemas'
-import type { Question } from '../src/lib/academy/types'
+import type { Programme, Question } from '../src/lib/academy/types'
+import { articleText, finalizeLesson, findMaterial, generateLesson, lessonProblems, stripLinks, toMaterial } from '../src/lib/academy/lesson'
+import { addActiveTime, markLessonDone, nextOpenLesson, openLesson } from '../src/lib/academy/progress'
+import { getArticle } from '../src/lib/mcp/tools'
 
 let failed = 0
 const pending: Promise<void>[] = []
@@ -276,6 +279,95 @@ t('store: quick check and programme survive reload; a screen without its data fa
   assert.equal(back.view, 'diagnostic')
   assert.equal(back.quickCheck?.questions[0].prompt, 'Question 1?')
   assert.equal(migrateAcademyState({ version: 1, view: 'programme', draft }).view, 'setup')
+})
+
+// ------------------------------------------------------------------------------------------ Phase 3
+
+t('lessons: material keeps only real article pages, as absolute URLs, deduplicated', () => {
+  const m = toMaterial([
+    { title: 'Frameworks', description: '', url: 'https://www.promptquorum.com/frameworks', hub: 'site' },
+    { title: 'Directory', description: '', url: '/de/directory', hub: 'power-local-llm' },
+    { title: 'Q levels', description: 'd', url: '/de/local-llms/quantization-levels-comparison', hub: 'local-llms' },
+    { title: 'Q levels again', description: 'd', url: '/de/local-llms/quantization-levels-comparison', hub: 'local-llms' },
+    { title: 'VRAM', description: 'd', url: '/prompt-bites/how-much-vram-for-local-llm', hub: 'prompt-bites' },
+  ])
+  assert.deepEqual(m.map((x) => x.url), ['https://www.promptquorum.com/de/local-llms/quantization-levels-comparison', 'https://www.promptquorum.com/prompt-bites/how-much-vram-for-local-llm'])
+  assert.deepEqual(m.map((x) => x.ref), [1, 2])
+  assert.equal(m[0].cluster, 'local-llms')
+})
+
+t('lessons: real search finds readable PromptQuorum articles in en and de', () => {
+  for (const [lang, title] of [['en', 'Quantization levels in practice'], ['de', 'Quantisierungsstufen in der Praxis']] as const) {
+    const m = findMaterial({ subject: 'Local LLMs', language: lang, lesson: { title, topic: 'Quantization', estimatedMinutes: 10, objectiveIds: [0] } })
+    assert.ok(m.length >= 2, `${lang}: ${m.length} pages`)
+    assert.ok(m.every((x) => x.url.startsWith('https://www.promptquorum.com/')), lang)
+    const a = getArticle({ cluster: m[0].cluster, slug: m[0].slug, lang })
+    const text = articleText(a.article, 5000)
+    assert.ok(text.length > 500 && !/<[a-z]+[ >]/i.test(text), `${lang}: article text ${text.length} chars, no HTML`)
+  }
+})
+
+t('lessons: links, URLs, HTML and headings are removed from lesson text', () => {
+  const out = stripLinks('See [the guide](https://evil.example/x) or https://foo.bar/y and www.spam.com now.\n## Heading\n<b>bold</b> **kept**')
+  assert.ok(!/https?:|www\.|\]\(|<b>|^##/m.test(out), out)
+  assert.ok(out.includes('the guide') && out.includes('**kept**'))
+})
+
+t('lessons (SPEC acceptance): further-reading URLs are 100% from the content search, never from the model', async () => {
+  const req = { subject: 'Local LLMs', language: 'en' as const, selfLevel: 'beginner' as const, objectives: ['Choose a quantization level'], lesson: { title: 'Quantization levels in practice', topic: 'Quantization', estimatedMinutes: 8, objectiveIds: [0] }, index: 0, otherTitles: [] }
+  const out = {
+    sections: [
+      { heading: 'Why quantization', body: 'Read [this](https://invented.example/page) first. https://made-up.example' },
+      { heading: 'Levels', body: 'Q4 vs Q8.' },
+      { heading: 'Choosing', body: 'Pick by RAM.' },
+    ],
+    furtherReading: [{ ref: 1 }, { ref: 99 }, { ref: 1 }, { ref: 2 }],
+  }
+  const lesson = await generateLesson(fakeClient([{ out }]), req)
+  assert.ok(lesson.furtherReading.length >= 1, 'picked something')
+  for (const r of lesson.furtherReading) {
+    assert.ok(lesson.materialUrls.includes(r.url), `not from search: ${r.url}`)
+    assert.equal(r.source, 'promptquorum')
+  }
+  assert.equal(new Set(lesson.furtherReading.map((r) => r.url)).size, lesson.furtherReading.length, 'no duplicates')
+  assert.ok(!lesson.sections.some((x) => /invented|made-up|https?:/.test(x.body)), 'model URLs stripped from text')
+})
+
+t('lessons: rule check flags section count, overlong text and unknown material numbers', () => {
+  const req = { subject: 'x'.repeat(5), language: 'en' as const, selfLevel: 'some' as const, objectives: ['o'], lesson: { title: 't', topic: 'p', estimatedMinutes: 2, objectiveIds: [0], recap: true }, index: 0, otherTitles: [] }
+  const long = { heading: 'h', body: 'word '.repeat(500) }
+  const p = lessonProblems({ sections: [long, long], furtherReading: [{ ref: 5 }] }, req, 3)
+  assert.ok(p.some((x) => x.startsWith('sections')) && p.some((x) => x.includes('words')) && p.some((x) => x.startsWith('furtherReading')), p.join(' | '))
+  assert.equal(finalizeLesson({ sections: [{ heading: 'a', body: 'b' }], furtherReading: [{ ref: 7 }] }, []).furtherReading.length, 0)
+})
+
+function sampleProgramme(testMode: Programme['testMode'] = 'final'): Programme {
+  const lessons = [1, 2].map((n) => ({ id: `lesson-${n}`, title: `L${n}`, topic: 'T', estimatedMinutes: 10, objectiveIds: [0], sections: [], furtherReading: [] }))
+  return {
+    id: 'p', createdAt: '', language: 'en', subject: 'S', availableMinutes: 30, selfLevel: 'beginner', testMode,
+    diagnostic: { questions: [], answers: {}, gaps: [], estimatedLevel: 'beginner' }, objectives: ['o'], lessons,
+    testPlan: { finalQuestions: 10, lessonQuizQuestions: 0, testMinutes: 8 },
+    progress: { currentLesson: 0, lessonStatus: { 'lesson-1': 'todo', 'lesson-2': 'todo' }, quizResults: [], secondsSpent: 0, startedAt: '' },
+  }
+}
+
+t('progress: active time is capped at 3x the lesson estimate; status never goes back from done', () => {
+  let p = sampleProgramme()
+  for (let i = 0; i < 1000; i++) p = addActiveTime(p, 'lesson-1', 5)
+  assert.equal(p.progress.lessonSeconds?.['lesson-1'], 10 * 60 * 3)
+  assert.equal(p.progress.secondsSpent, 1800)
+  p = markLessonDone(p, 0)
+  p = openLesson(p, 0)
+  assert.equal(p.progress.lessonStatus['lesson-1'], 'done')
+  assert.equal(nextOpenLesson(p), 1)
+})
+
+t('progress: all lessons done completes a no-test programme, but not one with tests (SPEC 9)', () => {
+  const none = markLessonDone(markLessonDone(sampleProgramme('none'), 0), 1)
+  assert.ok(none.progress.completedAt)
+  assert.equal(nextOpenLesson(none), -1)
+  const withTest = markLessonDone(markLessonDone(sampleProgramme('final'), 0), 1)
+  assert.equal(withTest.progress.completedAt, undefined)
 })
 
 void Promise.all(pending).then(() => {if (failed) {
