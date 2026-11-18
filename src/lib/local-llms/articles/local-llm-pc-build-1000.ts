@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-11-18',
     current_hardware_mentioned: ['RTX 3060 12GB', 'Ryzen 5 7600', 'DDR5-6000'],
     designSkin: 'hub',
-    theme: '하드웨어 설정',
+    theme: 'Hardware Setups',
     title: '중고 GPU로 $1,000 미만 로컬 LLM PC 빌드(2026)',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-ko.webp',
     seoTitle: '중고 GPU로 $1,000 미만 로컬 LLM PC 빌드(2026)',
