@@ -7,6 +7,8 @@ import { toOutputLocale } from '@/lib/i18n/constants'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { getAskHansTotals } from '@/lib/askhans/totals'
 import { getAskHansReport } from '@/lib/askhans/report'
+import { getUmamiStat } from '@/lib/partners/umami'
+import { t as tHome } from '@/components/home/home-i18n'
 import { HUB_TONES } from '@/components/hub-template/palette'
 import { AskHansOpenButton } from './AskHansOpenButton'
 import { AskHansReport } from './AskHansReport'
@@ -17,7 +19,7 @@ import { AskHansDocs } from './AskHansDocs'
 
 export async function AskHansBlock({ lang }: { lang: Language }) {
   if (process.env.ASK_HANS_ENABLED !== 'true') return null
-  const [totals, report] = await Promise.all([getAskHansTotals(), getAskHansReport()])
+  const [totals, report, umami] = await Promise.all([getAskHansTotals(), getAskHansReport(), getUmamiStat()])
   const fmt = (n: number) => n.toLocaleString(toOutputLocale(lang))
   const points = [tAsk('point1', lang), tAsk('point2', lang), tAsk('point3', lang)]
   const tone = HUB_TONES.violet
@@ -62,6 +64,12 @@ export async function AskHansBlock({ lang }: { lang: Language }) {
                   <dd className="text-3xl font-extrabold tabular-nums">{fmt(totals.opens)}</dd>
                   <dt className="text-xs font-medium text-text-secondary">{tAsk('statOpens', lang)}</dt>
                 </div>
+                {umami && (
+                  <div className="col-span-2">
+                    <dd className="text-3xl font-extrabold tabular-nums">{fmt(umami.pageviews)}</dd>
+                    <dt className="text-xs font-medium text-text-secondary">{tHome('statPageViews', lang)}</dt>
+                  </div>
+                )}
               </dl>
               <p className="mt-3.5 text-xs font-medium text-text-secondary">
                 {totals.since ? `${tAsk('since', lang)} ${formatDisplayDate(totals.since, lang)}. ` : ''}
