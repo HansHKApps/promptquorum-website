@@ -246,6 +246,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can Claude or Cursor search my Zotero library through PapersGPT?',
             a: 'Yes, per the maker. The Zotero MCP server, built on the DocsAgent package, works with MCP clients such as Claude Desktop, Claude Code and Cursor. Start the search core with npx @docsagent/docsagent start or pip install docsagent-mcp, then add the server to your client\'s MCP settings.',
           },
+          {
+            q: 'What is Literature Radar in PapersGPT?',
+            a: 'Per the README, it delivers a daily digest of new papers on topics you subscribe to, from arXiv, PubMed, Semantic Scholar, Europe PMC, Crossref, bioRxiv and medRxiv. Queries go from your machine to those sources with no relay server, according to the maker. The pricing page puts Explore in Basic and Track in Premium and Business.',
+          },
+          {
+            q: 'What does AutoPilot do?',
+            a: 'AutoPilot reads a whole collection toward a research goal and writes findings into structured Zotero notes; the maker says it can run overnight on cloud or local models. The pricing page lists it under Premium and Business. PromptQuorum has not run it.',
+          },
+          {
+            q: 'Which AI models can PapersGPT use?',
+            a: 'Per the maker: 30+ cloud models, your own API key, a custom OpenAI-compatible endpoint, Ollama, or built-in local models such as Gemma 4, Qwen 3.5 and Mistral 7B downloaded from Hugging Face.',
+          },
+          {
+            q: 'Can PapersGPT search my whole Zotero library?',
+            a: 'Yes, per the maker: tick "Search entire library" to retrieve passages across all indexed PDFs and get one synthesized answer. The pricing page lists whole-library chat from the Basic plan upward.',
+          },
+          {
+            q: 'Does PapersGPT cite its sources?',
+            a: 'The maker says every answer carries click-to-jump citations that open the cited paper. PromptQuorum has not checked citation accuracy.',
+          },
+          {
+            q: 'Do my chats stay on my computer?',
+            a: 'The maker says parsing, indexing and search run locally and that chats go straight to the model provider you choose. The privacy policy dates from 25 May 2024, before the built-in AI credits of v2.3.0, and the pages PromptQuorum read do not say whether those chats pass through a PapersGPT server.',
+          },
+          {
+            q: 'Is PapersGPT actively maintained?',
+            a: 'Release v2.3.0 appeared on 13 November 2026, and the last commit on GitHub was on 16 November 2026 (a README change). The site\'s changelog page ends at v0.6.0, so this review takes its version information from GitHub.',
+          },
         ],
       },
       verdict: {
@@ -521,6 +549,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Können Claude oder Cursor meine Zotero-Bibliothek über PapersGPT durchsuchen?',
             a: 'Ja, laut Entwickler. Der Zotero-MCP-Server auf Basis des DocsAgent-Pakets funktioniert mit MCP-Clients wie Claude Desktop, Claude Code und Cursor. Starten Sie den Suchkern mit npx @docsagent/docsagent start oder pip install docsagent-mcp und tragen Sie den Server in die MCP-Einstellungen Ihres Clients ein.',
+          },
+          {
+            q: 'Was ist Literature Radar in PapersGPT?',
+            a: 'Laut README liefert es einen täglichen Überblick über neue Paper zu abonnierten Themen von arXiv, PubMed, Semantic Scholar, Europe PMC, Crossref, bioRxiv und medRxiv. Die Anfragen gehen laut Entwickler ohne Relay-Server von Ihrem Rechner an diese Quellen. Die Preisseite ordnet Explore dem Tarif Basic und Track den Tarifen Premium und Business zu.',
+          },
+          {
+            q: 'Was macht AutoPilot?',
+            a: 'AutoPilot liest eine ganze Sammlung im Hinblick auf ein Forschungsziel und schreibt die Ergebnisse in strukturierte Zotero-Notizen; laut Entwickler kann es über Nacht mit Cloud- oder lokalen Modellen laufen. Die Preisseite führt es unter Premium und Business auf. PromptQuorum hat es nicht ausgeführt.',
+          },
+          {
+            q: 'Welche KI-Modelle kann PapersGPT nutzen?',
+            a: 'Laut Entwickler: über 30 Cloud-Modelle, Ihr eigener API-Schlüssel, ein eigener OpenAI-kompatibler Endpunkt, Ollama oder eingebaute lokale Modelle wie Gemma 4, Qwen 3.5 und Mistral 7B, die von Hugging Face geladen werden.',
+          },
+          {
+            q: 'Kann PapersGPT meine gesamte Zotero-Bibliothek durchsuchen?',
+            a: 'Ja, laut Entwickler: Mit „Search entire library“ ruft das Plugin Passagen aus allen indexierten PDFs ab und liefert eine zusammengeführte Antwort. Die Preisseite führt den Chat über die ganze Bibliothek ab dem Tarif Basic auf.',
+          },
+          {
+            q: 'Nennt PapersGPT seine Quellen?',
+            a: 'Laut Entwickler trägt jede Antwort Quellenangaben, die per Klick das zitierte Paper öffnen. PromptQuorum hat die Genauigkeit der Quellenangaben nicht geprüft.',
+          },
+          {
+            q: 'Bleiben meine Chats auf meinem Rechner?',
+            a: 'Laut Entwickler laufen Parsing, Indexierung und Suche lokal, und Chats gehen direkt an den von Ihnen gewählten Modellanbieter. Die Datenschutzerklärung stammt vom 25. Mai 2024, also von vor den eingebauten KI-Credits von v2.3.0, und auf den von PromptQuorum gelesenen Seiten steht nicht, ob diese Chats über einen PapersGPT-Server laufen.',
+          },
+          {
+            q: 'Wird PapersGPT aktiv gepflegt?',
+            a: 'Version v2.3.0 erschien am 13. November 2026, der letzte Commit auf GitHub war am 16. November 2026 (eine README-Änderung). Die Changelog-Seite der Website endet bei v0.6.0, daher stammen die Versionsangaben dieses Reviews von GitHub.',
           },
         ],
       },
@@ -798,6 +854,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Pueden Claude o Cursor buscar en mi biblioteca de Zotero a través de PapersGPT?',
             a: 'Sí, según el desarrollador. El servidor MCP de Zotero, basado en el paquete DocsAgent, funciona con clientes MCP como Claude Desktop, Claude Code y Cursor. Inicia el núcleo de búsqueda con npx @docsagent/docsagent start o pip install docsagent-mcp y añade el servidor a los ajustes MCP de tu cliente.',
           },
+          {
+            q: '¿Qué es Literature Radar en PapersGPT?',
+            a: 'Según el README, entrega un resumen diario de artículos nuevos sobre los temas a los que te suscribes, de arXiv, PubMed, Semantic Scholar, Europe PMC, Crossref, bioRxiv y medRxiv. Según el desarrollador, las consultas van de tu equipo a esas fuentes sin servidor intermediario. La página de precios sitúa Explore en Basic, y Track en Premium y Business.',
+          },
+          {
+            q: '¿Qué hace AutoPilot?',
+            a: 'AutoPilot lee una colección entera con un objetivo de investigación y escribe los hallazgos en notas de Zotero estructuradas; el desarrollador dice que puede funcionar durante la noche con modelos en la nube o locales. La página de precios lo incluye en Premium y Business. PromptQuorum no lo ha ejecutado.',
+          },
+          {
+            q: '¿Qué modelos de IA puede usar PapersGPT?',
+            a: 'Según el desarrollador: más de 30 modelos en la nube, tu propia clave de API, un endpoint personalizado compatible con OpenAI, Ollama o modelos locales integrados como Gemma 4, Qwen 3.5 y Mistral 7B, descargados de Hugging Face.',
+          },
+          {
+            q: '¿Puede PapersGPT buscar en toda mi biblioteca de Zotero?',
+            a: 'Sí, según el desarrollador: marca «Search entire library» para recuperar pasajes de todos los PDF indexados y obtener una respuesta sintetizada. La página de precios incluye el chat sobre toda la biblioteca desde el plan Basic.',
+          },
+          {
+            q: '¿PapersGPT cita sus fuentes?',
+            a: 'El desarrollador afirma que cada respuesta incluye citas que abren el artículo citado con un clic. PromptQuorum no ha comprobado la exactitud de las citas.',
+          },
+          {
+            q: '¿Mis chats se quedan en mi equipo?',
+            a: 'El desarrollador afirma que el análisis, la indexación y la búsqueda se ejecutan en local y que los chats van directamente al proveedor de modelos que elijas. La política de privacidad es del 25 de mayo de 2024, anterior a los créditos de IA integrados de la v2.3.0, y las páginas que leyó PromptQuorum no aclaran si esos chats pasan por un servidor de PapersGPT.',
+          },
+          {
+            q: '¿PapersGPT se mantiene activamente?',
+            a: 'La versión v2.3.0 salió el 13 de noviembre de 2026 y el último commit en GitHub fue el 16 de noviembre de 2026 (un cambio en el README). La página de changelog del sitio termina en la v0.6.0, así que esta reseña toma la información de versión de GitHub.',
+          },
         ],
       },
       verdict: {
@@ -1073,6 +1157,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Claude ou Cursor peuvent-ils interroger ma bibliothèque Zotero via PapersGPT ?',
             a: 'Oui, selon le développeur. Le serveur MCP Zotero, fondé sur le paquet DocsAgent, fonctionne avec des clients MCP comme Claude Desktop, Claude Code et Cursor. Démarrez le noyau de recherche avec npx @docsagent/docsagent start ou pip install docsagent-mcp, puis ajoutez le serveur aux paramètres MCP de votre client.',
+          },
+          {
+            q: 'Qu\'est-ce que Literature Radar dans PapersGPT ?',
+            a: 'D\'après le README, il livre chaque jour un résumé des nouveaux articles sur les sujets auxquels vous vous abonnez, issus d\'arXiv, PubMed, Semantic Scholar, Europe PMC, Crossref, bioRxiv et medRxiv. Selon le développeur, les requêtes partent de votre machine vers ces sources sans serveur relais. La page des tarifs place Explore dans Basic, et Track dans Premium et Business.',
+          },
+          {
+            q: 'Que fait AutoPilot ?',
+            a: 'AutoPilot lit toute une collection en vue d\'un objectif de recherche et écrit les résultats dans des notes Zotero structurées ; le développeur affirme qu\'il peut tourner pendant la nuit avec des modèles cloud ou locaux. La page des tarifs le range sous Premium et Business. PromptQuorum ne l\'a pas exécuté.',
+          },
+          {
+            q: 'Quels modèles d\'IA PapersGPT peut-il utiliser ?',
+            a: 'Selon le développeur : plus de 30 modèles cloud, votre propre clé API, un point d\'accès personnalisé compatible OpenAI, Ollama, ou des modèles locaux intégrés comme Gemma 4, Qwen 3.5 et Mistral 7B, téléchargés depuis Hugging Face.',
+          },
+          {
+            q: 'PapersGPT peut-il rechercher dans toute ma bibliothèque Zotero ?',
+            a: 'Oui, selon le développeur : cochez « Search entire library » pour récupérer des passages dans tous les PDF indexés et obtenir une réponse unique. La page des tarifs indique le chat sur toute la bibliothèque à partir du forfait Basic.',
+          },
+          {
+            q: 'PapersGPT cite-t-il ses sources ?',
+            a: 'Le développeur affirme que chaque réponse comporte des citations qui ouvrent d\'un clic l\'article cité. PromptQuorum n\'a pas vérifié l\'exactitude des citations.',
+          },
+          {
+            q: 'Mes conversations restent-elles sur mon ordinateur ?',
+            a: 'Le développeur indique que l\'analyse, l\'indexation et la recherche s\'exécutent en local et que les conversations vont directement au fournisseur de modèle que vous choisissez. La politique de confidentialité date du 25 mai 2024, avant les crédits d\'IA intégrés de la v2.3.0, et les pages lues par PromptQuorum ne précisent pas si ces conversations transitent par un serveur PapersGPT.',
+          },
+          {
+            q: 'PapersGPT est-il activement maintenu ?',
+            a: 'La version v2.3.0 est sortie le 13 novembre 2026, et le dernier commit sur GitHub date du 16 novembre 2026 (une modification du README). La page de changelog du site s\'arrête à la v0.6.0 ; cette fiche tire donc ses informations de version de GitHub.',
           },
         ],
       },
@@ -1350,6 +1462,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'ClaudeやCursorからPapersGPT経由でZoteroライブラリを検索できますか？',
             a: '開発元によると可能です。DocsAgentパッケージをベースにしたZotero MCPサーバーは、Claude Desktop、Claude Code、CursorなどのMCPクライアントで使えます。npx @docsagent/docsagent startまたはpip install docsagent-mcpで検索コアを起動し、クライアントのMCP設定にサーバーを追加します。',
           },
+          {
+            q: 'PapersGPTのLiterature Radarとは何ですか？',
+            a: 'READMEによると、購読したトピックの新着論文を、arXiv、PubMed、Semantic Scholar、Europe PMC、Crossref、bioRxiv、medRxivから毎日のダイジェストとして届ける機能です。開発者によると、クエリはリレーサーバーを介さず、お使いのマシンからこれらのソースへ送られます。料金ページでは、ExploreはBasic、TrackはPremiumとBusinessに含まれています。',
+          },
+          {
+            q: 'AutoPilotは何をしますか？',
+            a: 'AutoPilotは、研究目標に沿ってコレクション全体を読み、結果を構造化したZoteroノートに書き込みます。開発者は、クラウドモデルまたはローカルモデルで一晩中実行できると述べています。料金ページではPremiumとBusinessに含まれています。PromptQuorumは実行していません。',
+          },
+          {
+            q: 'PapersGPTはどのAIモデルを使えますか？',
+            a: '開発者によると、30以上のクラウドモデル、ご自身のAPIキー、OpenAI互換のカスタムエンドポイント、Ollama、またはHugging Faceから取得する組み込みローカルモデル（Gemma 4、Qwen 3.5、Mistral 7Bなど）です。',
+          },
+          {
+            q: 'PapersGPTはZoteroライブラリ全体を検索できますか？',
+            a: 'はい、開発者によると可能です。「Search entire library」をオンにすると、インデックス化したすべてのPDFから該当箇所を取り出し、1つにまとめた回答を返します。料金ページでは、ライブラリ全体のチャットはBasicプラン以上に含まれています。',
+          },
+          {
+            q: 'PapersGPTは出典を示しますか？',
+            a: '開発者によると、すべての回答に、クリックで引用元の論文が開く引用が付きます。PromptQuorumは引用の正確さを確認していません。',
+          },
+          {
+            q: 'チャットの内容は自分のコンピューターに残りますか？',
+            a: '開発者によると、解析、インデックス作成、検索はローカルで動作し、チャットは選択したモデルプロバイダーに直接送られます。プライバシーポリシーは2024年5月25日付で、v2.3.0の組み込みAIクレジットより前のものです。PromptQuorumが読んだページには、これらのチャットがPapersGPTのサーバーを経由するかどうかは書かれていません。',
+          },
+          {
+            q: 'PapersGPTは活発にメンテナンスされていますか？',
+            a: 'v2.3.0は2026年11月13日に公開され、GitHubの最新コミットは2026年11月16日（READMEの変更）でした。サイトの変更履歴ページはv0.6.0で止まっているため、このレビューではバージョン情報をGitHubから取っています。',
+          },
         ],
       },
       verdict: {
@@ -1625,6 +1765,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Claude ou Cursor podem pesquisar minha biblioteca do Zotero pelo PapersGPT?',
             a: 'Sim, segundo o desenvolvedor. O servidor MCP do Zotero, baseado no pacote DocsAgent, funciona com clientes MCP como Claude Desktop, Claude Code e Cursor. Inicie o núcleo de busca com npx @docsagent/docsagent start ou pip install docsagent-mcp e adicione o servidor às configurações de MCP do seu cliente.',
+          },
+          {
+            q: 'O que é o Literature Radar no PapersGPT?',
+            a: 'Segundo o README, ele entrega um resumo diário de artigos novos sobre os temas que você assina, vindos de arXiv, PubMed, Semantic Scholar, Europe PMC, Crossref, bioRxiv e medRxiv. De acordo com o desenvolvedor, as consultas vão do seu computador a essas fontes sem servidor intermediário. A página de preços coloca o Explore no Basic e o Track no Premium e no Business.',
+          },
+          {
+            q: 'O que o AutoPilot faz?',
+            a: 'O AutoPilot lê uma coleção inteira com base em um objetivo de pesquisa e escreve os achados em notas estruturadas do Zotero; o desenvolvedor diz que ele pode rodar durante a noite com modelos na nuvem ou locais. A página de preços o lista no Premium e no Business. A PromptQuorum não o executou.',
+          },
+          {
+            q: 'Quais modelos de IA o PapersGPT pode usar?',
+            a: 'Segundo o desenvolvedor: mais de 30 modelos na nuvem, sua própria chave de API, um endpoint personalizado compatível com OpenAI, Ollama ou modelos locais integrados como Gemma 4, Qwen 3.5 e Mistral 7B, baixados do Hugging Face.',
+          },
+          {
+            q: 'O PapersGPT pode pesquisar em toda a minha biblioteca do Zotero?',
+            a: 'Sim, segundo o desenvolvedor: marque "Search entire library" para recuperar trechos de todos os PDFs indexados e obter uma resposta única. A página de preços lista o chat com a biblioteca inteira a partir do plano Basic.',
+          },
+          {
+            q: 'O PapersGPT cita suas fontes?',
+            a: 'O desenvolvedor afirma que cada resposta traz citações que abrem o artigo citado com um clique. A PromptQuorum não verificou a precisão das citações.',
+          },
+          {
+            q: 'Minhas conversas ficam no meu computador?',
+            a: 'O desenvolvedor afirma que análise, indexação e busca rodam localmente e que as conversas vão direto ao provedor de modelos que você escolher. A política de privacidade é de 25 de maio de 2024, anterior aos créditos de IA integrados da v2.3.0, e as páginas que a PromptQuorum leu não dizem se essas conversas passam por um servidor do PapersGPT.',
+          },
+          {
+            q: 'O PapersGPT está sendo mantido ativamente?',
+            a: 'A versão v2.3.0 saiu em 13 de novembro de 2026, e o último commit no GitHub foi em 16 de novembro de 2026 (uma alteração no README). A página de changelog do site termina na v0.6.0, então esta análise tira as informações de versão do GitHub.',
           },
         ],
       },
@@ -1902,6 +2070,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Claude 或 Cursor 能通过 PapersGPT 搜索我的 Zotero 文献库吗？',
             a: '据开发者称可以。基于 DocsAgent 包的 Zotero MCP 服务器可配合 Claude Desktop、Claude Code、Cursor 等 MCP 客户端使用。用 npx @docsagent/docsagent start 或 pip install docsagent-mcp 启动搜索核心，再把服务器添加到客户端的 MCP 设置中。',
           },
+          {
+            q: 'PapersGPT 的 Literature Radar 是什么？',
+            a: '据 README，它会就你订阅的主题，每天推送来自 arXiv、PubMed、Semantic Scholar、Europe PMC、Crossref、bioRxiv 和 medRxiv 的新论文摘要。据开发者称，查询从你的电脑直接发往这些来源，没有中转服务器。定价页面将 Explore 归入 Basic，Track 归入 Premium 和 Business。',
+          },
+          {
+            q: 'AutoPilot 有什么作用？',
+            a: 'AutoPilot 围绕研究目标阅读整个文献集合，并将发现写入结构化的 Zotero 笔记；开发者称它可以使用云端或本地模型通宵运行。定价页面将其列在 Premium 和 Business 下。PromptQuorum 未运行过它。',
+          },
+          {
+            q: 'PapersGPT 可以使用哪些 AI 模型？',
+            a: '据开发者称：30 多个云端模型、你自己的 API 密钥、自定义的 OpenAI 兼容端点、Ollama，或从 Hugging Face 下载的内置本地模型（如 Gemma 4、Qwen 3.5 和 Mistral 7B）。',
+          },
+          {
+            q: 'PapersGPT 能搜索我的整个 Zotero 文献库吗？',
+            a: '据开发者称可以：勾选“Search entire library”，即可从所有已索引的 PDF 中检索段落并得到一份综合回答。定价页面将整库对话列在 Basic 及以上方案中。',
+          },
+          {
+            q: 'PapersGPT 会注明来源吗？',
+            a: '开发者称每个回答都带有可点击跳转的引用，点击即可打开被引论文。PromptQuorum 未核实引用的准确性。',
+          },
+          {
+            q: '我的对话会留在自己的电脑上吗？',
+            a: '开发者称解析、索引和搜索都在本地运行，对话直接发送给你所选的模型提供商。隐私政策的日期为 2024年5月25日，早于 v2.3.0 的内置 AI 额度；PromptQuorum 阅读的页面也没有说明这些对话是否经过 PapersGPT 服务器。',
+          },
+          {
+            q: 'PapersGPT 仍在积极维护吗？',
+            a: 'v2.3.0 于 2026年11月13日发布，GitHub 上的最近一次提交在 2026年11月16日（仅修改 README）。网站的更新日志页面止于 v0.6.0，因此本文的版本信息取自 GitHub。',
+          },
         ],
       },
       verdict: {
@@ -2178,6 +2374,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل يستطيع Claude أو Cursor البحث في مكتبة Zotero عبر PapersGPT؟',
             a: 'نعم بحسب المطوّر. يعمل خادم MCP لـ Zotero المبني على حزمة DocsAgent مع عملاء MCP مثل Claude Desktop وClaude Code وCursor. شغّل نواة البحث بالأمر npx @docsagent/docsagent start أو pip install docsagent-mcp، ثم أضف الخادم إلى إعدادات MCP في عميلك.',
           },
+          {
+            q: 'ما هو Literature Radar في PapersGPT؟',
+            a: 'بحسب README، يقدّم ملخصًا يوميًا للأوراق الجديدة في المواضيع التي تشترك فيها، من arXiv وPubMed وSemantic Scholar وEurope PMC وCrossref وbioRxiv وmedRxiv. ووفق المطوّر تنتقل الاستعلامات من جهازك إلى هذه المصادر دون خادم وسيط. وتضع صفحة الأسعار Explore في خطة Basic وTrack في خطتي Premium وBusiness.',
+          },
+          {
+            q: 'ماذا يفعل AutoPilot؟',
+            a: 'يقرأ AutoPilot مجموعة كاملة سعيًا إلى هدف بحثي ويكتب النتائج في ملاحظات Zotero منظمة؛ ويقول المطوّر إنه يستطيع العمل طوال الليل بنماذج سحابية أو محلية. وتدرجه صفحة الأسعار ضمن Premium وBusiness. ولم تشغّله PromptQuorum.',
+          },
+          {
+            q: 'ما نماذج الذكاء الاصطناعي التي يستطيع PapersGPT استخدامها؟',
+            a: 'بحسب المطوّر: أكثر من 30 نموذجًا سحابيًا، أو مفتاح API الخاص بك، أو نقطة وصول مخصصة متوافقة مع OpenAI، أو Ollama، أو نماذج محلية مدمجة مثل Gemma 4 وQwen 3.5 وMistral 7B تُنزَّل من Hugging Face.',
+          },
+          {
+            q: 'هل يستطيع PapersGPT البحث في مكتبة Zotero كلها؟',
+            a: 'نعم بحسب المطوّر: فعّل «Search entire library» لاسترجاع مقاطع من كل ملفات PDF المفهرسة والحصول على إجابة واحدة مجمّعة. وتدرج صفحة الأسعار الدردشة مع المكتبة كلها ابتداءً من خطة Basic.',
+          },
+          {
+            q: 'هل يذكر PapersGPT مصادره؟',
+            a: 'يقول المطوّر إن كل إجابة تحمل اقتباسات يفتح النقر عليها الورقة المقتبسة. ولم تتحقق PromptQuorum من دقة الاقتباسات.',
+          },
+          {
+            q: 'هل تبقى محادثاتي على جهازي؟',
+            a: 'يقول المطوّر إن التحليل والفهرسة والبحث تعمل محليًا وإن المحادثات تذهب مباشرة إلى مزوّد النماذج الذي تختاره. وسياسة الخصوصية مؤرخة في 25 مايو 2024، أي قبل أرصدة الذكاء الاصطناعي المدمجة في v2.3.0، ولا تذكر الصفحات التي قرأتها PromptQuorum ما إذا كانت هذه المحادثات تمر عبر خادم PapersGPT.',
+          },
+          {
+            q: 'هل يُصان PapersGPT بنشاط؟',
+            a: 'صدر الإصدار v2.3.0 في 13 نوفمبر 2026، وكان آخر commit على GitHub في 16 نوفمبر 2026 (تعديل على README). وتنتهي صفحة سجل التغييرات في الموقع عند v0.6.0، لذلك تأخذ هذه المراجعة معلومات الإصدار من GitHub.',
+          },
         ],
       },
       verdict: {
@@ -2453,6 +2677,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Claude나 Cursor가 PapersGPT를 통해 내 Zotero 라이브러리를 검색할 수 있습니까?',
             a: '개발자에 따르면 가능합니다. DocsAgent 패키지를 기반으로 한 Zotero MCP 서버는 Claude Desktop, Claude Code, Cursor 같은 MCP 클라이언트와 함께 작동합니다. npx @docsagent/docsagent start 또는 pip install docsagent-mcp로 검색 코어를 시작한 뒤 클라이언트의 MCP 설정에 서버를 추가하십시오.',
+          },
+          {
+            q: 'PapersGPT의 Literature Radar는 무엇입니까?',
+            a: 'README에 따르면 구독한 주제의 새 논문을 arXiv, PubMed, Semantic Scholar, Europe PMC, Crossref, bioRxiv, medRxiv에서 모아 매일 요약으로 전달합니다. 개발자에 따르면 쿼리는 중계 서버 없이 사용자의 컴퓨터에서 이들 소스로 직접 전송됩니다. 가격 페이지에서는 Explore가 Basic에, Track이 Premium과 Business에 포함되어 있습니다.',
+          },
+          {
+            q: 'AutoPilot은 어떤 일을 합니까?',
+            a: 'AutoPilot은 연구 목표에 맞춰 컬렉션 전체를 읽고 결과를 구조화된 Zotero 노트로 작성합니다. 개발자는 클라우드 또는 로컬 모델로 밤새 실행할 수 있다고 말합니다. 가격 페이지에서는 Premium과 Business에 포함되어 있습니다. PromptQuorum은 실행해 보지 않았습니다.',
+          },
+          {
+            q: 'PapersGPT는 어떤 AI 모델을 사용할 수 있습니까?',
+            a: '개발자에 따르면 30개 이상의 클라우드 모델, 본인의 API 키, OpenAI 호환 사용자 지정 엔드포인트, Ollama, 또는 Hugging Face에서 내려받는 내장 로컬 모델(Gemma 4, Qwen 3.5, Mistral 7B 등)을 사용할 수 있습니다.',
+          },
+          {
+            q: 'PapersGPT로 Zotero 라이브러리 전체를 검색할 수 있습니까?',
+            a: '개발자에 따르면 가능합니다. "Search entire library"를 선택하면 인덱싱된 모든 PDF에서 관련 구절을 찾아 하나의 종합 답변을 제공합니다. 가격 페이지에서는 라이브러리 전체 대화가 Basic 요금제 이상에 포함되어 있습니다.',
+          },
+          {
+            q: 'PapersGPT는 출처를 표시합니까?',
+            a: '개발자에 따르면 모든 답변에 클릭하면 인용된 논문이 열리는 인용이 붙습니다. PromptQuorum은 인용의 정확성을 확인하지 않았습니다.',
+          },
+          {
+            q: '대화 내용이 내 컴퓨터에 남습니까?',
+            a: '개발자에 따르면 분석, 인덱싱, 검색은 로컬에서 실행되고 대화는 사용자가 선택한 모델 제공업체로 직접 전송됩니다. 개인정보 처리방침은 2024년 5월 25일자로 v2.3.0의 내장 AI 크레딧보다 앞선 것이며, PromptQuorum이 읽은 페이지에는 이러한 대화가 PapersGPT 서버를 거치는지 여부가 나와 있지 않습니다.',
+          },
+          {
+            q: 'PapersGPT는 활발히 유지 관리되고 있습니까?',
+            a: 'v2.3.0은 2026년 11월 13일에 나왔고, GitHub의 마지막 커밋은 2026년 11월 16일(README 변경)이었습니다. 사이트의 변경 이력 페이지는 v0.6.0에서 끝나므로, 이 리뷰는 버전 정보를 GitHub에서 가져왔습니다.',
           },
         ],
       },
