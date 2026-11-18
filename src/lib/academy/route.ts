@@ -49,7 +49,7 @@ export async function academyGuard<S extends z.ZodType>(
   opts: { name: string; schema: S; requests: number; window: `${number} ${'m' | 'h'}` },
 ): Promise<{ body: z.infer<S> } | { response: Response }> {
   if (!academyEnabled()) return { response: academyError('disabled', 404) }
-  if (!process.env.ANTHROPIC_API_KEY) return { response: academyError('unavailable', 503) }
+  if (!academyApiKey()) return { response: academyError('unavailable', 503) }
 
   let raw: unknown
   try {
@@ -70,8 +70,16 @@ export async function academyGuard<S extends z.ZodType>(
   return { body: parsed.data }
 }
 
+/**
+ * Academy's own key (its own Anthropic workspace: separate cost view and a hard monthly spend limit there),
+ * falling back to the key Ask Hans uses.
+ */
+export function academyApiKey(): string | undefined {
+  return process.env.ACADEMY_ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY || undefined
+}
+
 export function academyClient(): Anthropic {
-  return new Anthropic({ maxRetries: 1, timeout: ACADEMY_TIMEOUT_MS })
+  return new Anthropic({ apiKey: academyApiKey(), maxRetries: 1, timeout: ACADEMY_TIMEOUT_MS })
 }
 
 /** Maps a thrown error to a response; logs the reason without learner text. */

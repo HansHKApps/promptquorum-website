@@ -1,6 +1,7 @@
 // PromptQuorum Academy — Phase 2 acceptance run (docs/academy/SPEC.md 16, Phase 2): 20 subjects through the real
 // model: quick check -> simulated answers -> programme. Checks every programme against the SPEC 7.3 limits and
-// prints attempts, clamps, failures and token usage. Needs ANTHROPIC_API_KEY (or an `ant auth login` profile).
+// prints attempts, clamps, failures and token usage. Needs ACADEMY_ANTHROPIC_API_KEY or ANTHROPIC_API_KEY, read from
+// .env.local in the repo root (or the shell environment).
 // Costs real money (Haiku 5.5, ~40 calls; well under one US dollar). Run: npm run academy:regression [-- --limit 5]
 
 import Anthropic from '@anthropic-ai/sdk'
@@ -37,7 +38,12 @@ const limitArg = process.argv.indexOf('--limit')
 const limit = limitArg > 0 ? Number(process.argv[limitArg + 1]) : SUBJECTS.length
 
 async function main() {
-  const client = new Anthropic({ maxRetries: 1, timeout: 60_000 })
+  const apiKey = process.env.ACADEMY_ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY
+  if (!apiKey) {
+    console.error('No API key: put ACADEMY_ANTHROPIC_API_KEY=... into .env.local in the repo root, then run again.')
+    process.exit(1)
+  }
+  const client = new Anthropic({ apiKey, maxRetries: 1, timeout: 60_000 })
   const rows: string[] = []
   let failures = 0
   let ruleBreaks = 0
