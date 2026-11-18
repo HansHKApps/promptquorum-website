@@ -315,6 +315,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'labelme':                                 'labelme',
   'openwork':                                'openwork',
   'airi':                                    'airi',
+  'ultimate-vocal-remover':                  'ultimate-vocal-remover',
   'skales':                                  'skales',
   'halo':                                    'halo',
   'yovoice':                                 'yovoice',
