@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**The README describes a program that runs on your computer, and it mentions no account, upload or telemetry.**',
           'The installers bundle the interface, Python, PyTorch and the other dependencies, and the README presents separation as something the app does locally. The README also says an update package can be downloaded from inside the app, so the app can make network requests for updates. It does not state what else the app contacts, and it gives no privacy statement. PromptQuorum did not capture network traffic.',
-          'The website is a separate matter. Its cookie banner says the site uses cookies to analyze traffic. The footer links only a Contact address, so there is no privacy policy, terms page or imprint to read.',
+          'The website is a separate matter. Its cookie banner says the site uses cookies to analyze traffic. The footer links only a Contact address, so no privacy policy, terms page or imprint was found.',
         ],
       },
       whoShouldUse: {
@@ -256,7 +256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Ultimate Vocal Remover is worth trying if you want free, local stem separation and can accept a technical interface and an installer from 2023.**',
           'On paper it covers the basics well: three model families, a free MIT-licensed app, installers for Windows and macOS, and Apple Silicon GPU support for some models. The maker is still working on it, with a README revision on 6 October 2026 and a dated plan for UVR 6.',
-          'The trade-offs are clear. The newest tagged release is from September 2023, Linux needs manual setup, and there is no privacy policy or named company behind the project. Hardware needs beyond the GPU minimum are unstated, and PromptQuorum has not tested separation quality. Try it on a few songs you have the rights to use, and re-check the official site before you rely on UVR 6.',
+          'The trade-offs are clear. The newest tagged release is from September 2023, Linux needs manual setup, and no privacy policy was found and no company is named behind the project. Hardware needs beyond the GPU minimum are unstated, and PromptQuorum has not tested separation quality. Try it on a few songs you have the rights to use, and re-check the official site before you rely on UVR 6.',
         ],
       },
       sources: {
@@ -446,7 +446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Die README beschreibt ein Programm, das auf Ihrem Computer läuft, und erwähnt weder Konto noch Upload oder Telemetrie.**',
           'Die Installer bündeln die Oberfläche, Python, PyTorch und die übrigen Abhängigkeiten, und die README stellt die Trennung als etwas dar, das die App lokal erledigt. Außerdem sagt sie, ein Update-Paket könne aus der App heruntergeladen werden; die App kann also Netzwerkanfragen für Updates senden. Sie nennt nicht, was die App sonst kontaktiert, und enthält keine Datenschutzaussage. PromptQuorum hat keinen Netzwerkverkehr mitgeschnitten.',
-          'Die Website ist eine andere Sache. Ihr Cookie-Banner sagt, die Seite nutze Cookies zur Analyse des Datenverkehrs. Die Fußzeile verlinkt nur eine Kontaktadresse; es gibt also keine Datenschutzerklärung, keine Nutzungsbedingungen und kein Impressum zum Nachlesen.',
+          'Die Website ist eine andere Sache. Ihr Cookie-Banner sagt, die Seite nutze Cookies zur Analyse des Datenverkehrs. Die Fußzeile verlinkt nur eine Kontaktadresse; es wurde also weder eine Datenschutzerklärung noch Nutzungsbedingungen noch ein Impressum gefunden.',
         ],
       },
       whoShouldUse: {
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Ultimate Vocal Remover ist einen Versuch wert, wenn Sie kostenlose, lokale Stem-Trennung wollen und eine technische Oberfläche sowie einen älteren Installer akzeptieren.**',
           'Auf dem Papier deckt es die Grundlagen gut ab: drei Modellfamilien, eine kostenlose App unter MIT-Lizenz, Installer für Windows und macOS und GPU-Unterstützung für Apple Silicon bei einigen Modellen. Der Hersteller arbeitet weiter daran, mit einer README-Überarbeitung am 6. Oktober 2026 und einem datierten Plan für UVR 6.',
-          'Die Kompromisse sind klar. Die neueste getaggte Version stammt vom September 2023, Linux erfordert manuelle Einrichtung, und hinter dem Projekt stehen weder eine Datenschutzerklärung noch eine genannte Firma. Hardwareanforderungen jenseits des GPU-Minimums sind nicht angegeben, und PromptQuorum hat die Trennqualität nicht getestet. Probieren Sie es an einigen Songs aus, deren Nutzung Ihnen erlaubt ist, und prüfen Sie die offizielle Website erneut, bevor Sie sich auf UVR 6 verlassen.',
+          'Die Kompromisse sind klar. Die neueste getaggte Version stammt vom September 2023, Linux erfordert manuelle Einrichtung, und es wurde weder eine Datenschutzerklärung gefunden noch eine Firma hinter dem Projekt genannt. Hardwareanforderungen jenseits des GPU-Minimums sind nicht angegeben, und PromptQuorum hat die Trennqualität nicht getestet. Probieren Sie es an einigen Songs aus, deren Nutzung Ihnen erlaubt ist, und prüfen Sie die offizielle Website erneut, bevor Sie sich auf UVR 6 verlassen.',
         ],
       },
       sources: {
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**El README describe un programa que se ejecuta en tu ordenador y no menciona cuenta, subida de archivos ni telemetría.**',
           'Los instaladores incluyen la interfaz, Python, PyTorch y el resto de dependencias, y el README presenta la separación como algo que la app hace en local. También dice que un paquete de actualización puede descargarse desde la propia app, así que esta puede hacer peticiones de red para actualizarse. No indica con qué más se conecta la app ni ofrece una declaración de privacidad. PromptQuorum no capturó el tráfico de red.',
-          'El sitio web es otra cosa. Su aviso de cookies dice que el sitio usa cookies para analizar el tráfico. El pie de página solo enlaza una dirección de contacto, así que no hay política de privacidad, página de términos ni aviso legal que leer.',
+          'El sitio web es otra cosa. Su aviso de cookies dice que el sitio usa cookies para analizar el tráfico. El pie de página solo enlaza una dirección de contacto, así que no se encontró política de privacidad, página de términos ni aviso legal.',
         ],
       },
       whoShouldUse: {
@@ -802,7 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Ultimate Vocal Remover merece una prueba si quieres separación de stems gratuita y local y aceptas una interfaz técnica y un instalador veterano.**',
           'Sobre el papel cubre bien lo básico: tres familias de modelos, una app gratuita con licencia MIT, instaladores para Windows y macOS y compatibilidad con la GPU de Apple Silicon en algunos modelos. El fabricante sigue trabajando en ella, con una revisión del README el 6 de octubre de 2026 y un plan con fecha para UVR 6.',
-          'Los inconvenientes son claros. La última versión etiquetada es de septiembre de 2023, Linux requiere instalación manual, y no hay política de privacidad ni empresa nombrada detrás del proyecto. Los requisitos de hardware más allá del mínimo de GPU no constan, y PromptQuorum no ha probado la calidad de la separación. Pruébala con algunas canciones cuyo uso te esté permitido y vuelve a consultar el sitio oficial antes de depender de UVR 6.',
+          'Los inconvenientes son claros. La última versión etiquetada es de septiembre de 2023, Linux requiere instalación manual, y no se encontró política de privacidad ni se nombra a ninguna empresa detrás del proyecto. Los requisitos de hardware más allá del mínimo de GPU no constan, y PromptQuorum no ha probado la calidad de la separación. Pruébala con algunas canciones cuyo uso te esté permitido y vuelve a consultar el sitio oficial antes de depender de UVR 6.',
         ],
       },
       sources: {
@@ -992,7 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**Le README décrit un programme qui s'exécute sur votre ordinateur et ne mentionne ni compte, ni envoi de fichiers, ni télémétrie.**",
           "Les installateurs regroupent l'interface, Python, PyTorch et les autres dépendances, et le README présente la séparation comme un traitement local de l'application. Il indique aussi qu'un paquet de mise à jour peut être téléchargé depuis l'application, qui peut donc faire des requêtes réseau pour se mettre à jour. Il ne dit pas ce que l'application contacte d'autre et ne contient aucune déclaration de confidentialité. PromptQuorum n'a pas capturé le trafic réseau.",
-          "Le site web est un autre sujet. Sa bannière de cookies dit que le site utilise des cookies pour analyser le trafic. Le pied de page ne renvoie qu'à une adresse de contact : il n'y a donc ni politique de confidentialité, ni conditions d'utilisation, ni mentions légales à lire.",
+          "Le site web est un autre sujet. Sa bannière de cookies dit que le site utilise des cookies pour analyser le trafic. Le pied de page ne renvoie qu'à une adresse de contact : aucune politique de confidentialité, aucune condition d'utilisation ni aucune mention légale n'a donc été trouvée.",
         ],
       },
       whoShouldUse: {
@@ -1075,7 +1075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**Ultimate Vocal Remover vaut l'essai si vous voulez une séparation de stems gratuite et locale et acceptez une interface technique et un installateur de 2023.**",
           "Sur le papier, il couvre bien l'essentiel : trois familles de modèles, une application gratuite sous licence MIT, des installateurs pour Windows et macOS et la prise en charge du GPU d'Apple Silicon pour certains modèles. Le fabricant y travaille toujours, avec une révision du README le 6 octobre 2026 et un calendrier daté pour UVR 6.",
-          "Les compromis sont nets. La dernière version étiquetée date de septembre 2023, Linux demande une installation manuelle, et le projet n'a ni politique de confidentialité ni société nommée derrière lui. Les besoins matériels au-delà du minimum GPU ne sont pas indiqués, et PromptQuorum n'a pas testé la qualité de séparation. Essayez-le sur quelques morceaux que vous avez le droit d'utiliser, et revérifiez le site officiel avant de compter sur UVR 6.",
+          "Les compromis sont nets. La dernière version étiquetée date de septembre 2023, Linux demande une installation manuelle, et aucune politique de confidentialité n'a été trouvée ni aucune société nommée derrière le projet. Les besoins matériels au-delà du minimum GPU ne sont pas indiqués, et PromptQuorum n'a pas testé la qualité de séparation. Essayez-le sur quelques morceaux que vous avez le droit d'utiliser, et revérifiez le site officiel avant de compter sur UVR 6.",
         ],
       },
       sources: {
@@ -1265,7 +1265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**READMEは自分のコンピューター上で動くプログラムとして説明しており、アカウント、アップロード、テレメトリには触れていません。**',
           'インストーラーにはインターフェース、Python、PyTorchなどの依存関係が同梱され、READMEは分離をアプリがローカルで行う処理として説明しています。READMEは、アップデートパッケージをアプリ内からダウンロードできるとも述べているため、アプリは更新のためにネットワーク要求を行うことがあります。それ以外に何に接続するかは記載がなく、プライバシーに関する声明もありません。PromptQuorumはネットワーク通信を記録していません。',
-          'Webサイトは別の話です。Cookieバナーには、サイトがトラフィック分析にCookieを使うとあります。フッターにはContactのアドレスしかリンクされておらず、プライバシーポリシー、利用規約、運営者情報は読めません。',
+          'Webサイトは別の話です。Cookieバナーには、サイトがトラフィック分析にCookieを使うとあります。フッターにはContactのアドレスしかリンクされておらず、プライバシーポリシー、利用規約、運営者情報は見つかりませんでした。',
         ],
       },
       whoShouldUse: {
@@ -1348,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Ultimate Vocal Removerは、無料のローカルなステム分離がほしく、技術的なインターフェースと2023年のインストーラーを受け入れられるなら試す価値があります。**',
           '紙の上では基本をよくカバーしています。3つのモデルファミリー、MITライセンスの無料アプリ、WindowsとmacOS向けのインストーラー、一部モデルでのApple SiliconのGPU対応です。開発者は引き続き取り組んでおり、2026年10月6日にREADMEを改訂し、UVR 6の日付つきの計画もあります。',
-          'トレードオフははっきりしています。最新のタグ付きリリースは2023年9月のもので、Linuxは手動セットアップが必要で、プロジェクトの背後にプライバシーポリシーも会社名もありません。GPUの最低要件以外のハードウェア要件は記載がなく、PromptQuorumは分離品質をテストしていません。利用権のある数曲で試し、UVR 6に頼る前に公式サイトを再確認してください。',
+          'トレードオフははっきりしています。最新のタグ付きリリースは2023年9月のもので、Linuxは手動セットアップが必要で、プライバシーポリシーは見つからず、プロジェクトの背後にある会社名も示されていません。GPUの最低要件以外のハードウェア要件は記載がなく、PromptQuorumは分離品質をテストしていません。利用権のある数曲で試し、UVR 6に頼る前に公式サイトを再確認してください。',
         ],
       },
       sources: {
@@ -1538,7 +1538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O README descreve um programa que roda no seu computador e não menciona conta, envio de arquivos nem telemetria.**',
           'Os instaladores trazem a interface, o Python, o PyTorch e as demais dependências, e o README apresenta a separação como algo que o app faz localmente. Ele também diz que um pacote de atualização pode ser baixado de dentro do app, então o app pode fazer requisições de rede para atualizações. Não informa com o que mais o app se comunica e não traz nenhuma declaração de privacidade. A PromptQuorum não capturou o tráfego de rede.',
-          'O site é outro assunto. O aviso de cookies diz que o site usa cookies para analisar o tráfego. O rodapé só linka um endereço de contato, então não há política de privacidade, página de termos nem aviso legal para ler.',
+          'O site é outro assunto. O aviso de cookies diz que o site usa cookies para analisar o tráfego. O rodapé só linka um endereço de contato, então não foi encontrada política de privacidade, página de termos nem aviso legal.',
         ],
       },
       whoShouldUse: {
@@ -1621,7 +1621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O Ultimate Vocal Remover vale o teste se você quer separação de stems gratuita e local e aceita uma interface técnica e um instalador de 2023.**',
           'No papel, ele cobre bem o básico: três famílias de modelos, um app gratuito com licença MIT, instaladores para Windows e macOS e suporte à GPU do Apple Silicon em alguns modelos. O fabricante continua trabalhando nele, com uma revisão do README em 6 de outubro de 2026 e um plano com data para o UVR 6.',
-          'As contrapartidas são claras. A versão marcada mais recente é de setembro de 2023, o Linux exige configuração manual, e não há política de privacidade nem empresa citada por trás do projeto. Os requisitos de hardware além do mínimo de GPU não são informados, e a PromptQuorum não testou a qualidade da separação. Teste com algumas músicas que você tem direito de usar e confira o site oficial de novo antes de depender do UVR 6.',
+          'As contrapartidas são claras. A versão marcada mais recente é de setembro de 2023, o Linux exige configuração manual, e não foi encontrada política de privacidade nem há empresa citada por trás do projeto. Os requisitos de hardware além do mínimo de GPU não são informados, e a PromptQuorum não testou a qualidade da separação. Teste com algumas músicas que você tem direito de usar e confira o site oficial de novo antes de depender do UVR 6.',
         ],
       },
       sources: {
@@ -1811,7 +1811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**README 把它描述为在您电脑上运行的程序，没有提到账号、上传或遥测。**',
           '安装程序打包了界面、Python、PyTorch 和其他依赖，README 把分离描述为应用在本地完成的工作。README 还说可以在应用内下载更新包，因此应用可能为更新发出网络请求。它没有说明应用还会联系什么，也没有给出隐私声明。PromptQuorum 没有抓取网络流量。',
-          '网站是另一回事。它的 Cookie 提示称网站使用 Cookie 分析流量。页脚只链接了一个联系地址，因此没有隐私政策、条款页面或公司信息页可读。',
+          '网站是另一回事。它的 Cookie 提示称网站使用 Cookie 分析流量。页脚只链接了一个联系地址，因此没有找到隐私政策、条款页面或公司信息页。',
         ],
       },
       whoShouldUse: {
@@ -1894,7 +1894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**如果您想要免费的本地音轨分离，并且能接受技术味较重的界面和2023 年的安装程序，Ultimate Vocal Remover 值得一试。**',
           '从纸面上看，它把基础功能做得不错：三类模型、免费且采用 MIT 许可证的应用、Windows 和 macOS 的安装程序，以及部分模型对 Apple 芯片 GPU 的支持。开发者仍在继续开发，2026 年 10 月 6 日修订了 README，并给出了带日期的 UVR 6 计划。',
-          '取舍也很明显。最新的带标签版本是 2023 年 9 月的，Linux 需要手动配置，项目背后既没有隐私政策，也没有具名公司。除 GPU 最低要求外的硬件需求未说明，PromptQuorum 也没有测试分离质量。请先用几首您有权使用的歌曲试试，并在依赖 UVR 6 之前再次查看官方网站。',
+          '取舍也很明显。最新的带标签版本是 2023 年 9 月的，Linux 需要手动配置，没有找到隐私政策，项目背后也没有具名公司。除 GPU 最低要求外的硬件需求未说明，PromptQuorum 也没有测试分离质量。请先用几首您有权使用的歌曲试试，并在依赖 UVR 6 之前再次查看官方网站。',
         ],
       },
       sources: {
@@ -2084,7 +2084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يصف README برنامجًا يعمل على حاسوبك، ولا يذكر حسابًا أو رفعًا للملفات أو قياسًا عن بُعد.**',
           'تضم المثبّتات الواجهة وPython وPyTorch وبقية التبعيات، ويعرض README الفصل بوصفه عملًا يؤديه التطبيق محليًا. ويقول أيضًا إنه يمكن تنزيل حزمة تحديث من داخل التطبيق، فقد يرسل التطبيق طلبات شبكة للتحديثات. ولا يذكر ما الذي يتصل به التطبيق أيضًا، ولا يقدّم بيانًا عن الخصوصية. لم تلتقط PromptQuorum حركة الشبكة.',
-          'الموقع أمر مختلف. يقول إشعار ملفات تعريف الارتباط فيه إن الموقع يستخدمها لتحليل الزيارات. ولا يربط التذييل إلا بعنوان اتصال، فلا توجد سياسة خصوصية ولا صفحة شروط ولا بيانات قانونية للاطلاع عليها.',
+          'الموقع أمر مختلف. يقول إشعار ملفات تعريف الارتباط فيه إن الموقع يستخدمها لتحليل الزيارات. ولا يربط التذييل إلا بعنوان اتصال، فلم تُعثر على سياسة خصوصية ولا صفحة شروط ولا بيانات قانونية.',
         ],
       },
       whoShouldUse: {
@@ -2167,7 +2167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يستحق Ultimate Vocal Remover التجربة إن كنت تريد فصل مسارات مجانيًا ومحليًا وتقبل واجهة تقنية ومثبّتًا يعود إلى 2023.**',
           'على الورق يغطي الأساسيات جيدًا: ثلاث عائلات من النماذج، وتطبيق مجاني بترخيص MIT، ومثبّتات لـ Windows وmacOS، ودعم GPU لـ Apple Silicon في بعض النماذج. ولا يزال المطوّر يعمل عليه، مع مراجعة لـ README في 6 أكتوبر 2026 وخطة مؤرَّخة لـ UVR 6.',
-          'المفاضلات واضحة. أحدث إصدار موسوم يعود إلى سبتمبر 2023، وLinux يتطلب إعدادًا يدويًا، ولا توجد سياسة خصوصية ولا شركة مذكورة وراء المشروع. ومتطلبات العتاد بعد الحد الأدنى لـ GPU غير مذكورة، ولم تختبر PromptQuorum جودة الفصل. جرّبه على أغانٍ يحق لك استخدامها، وأعد مراجعة الموقع الرسمي قبل أن تعتمد على UVR 6.',
+          'المفاضلات واضحة. أحدث إصدار موسوم يعود إلى سبتمبر 2023، وLinux يتطلب إعدادًا يدويًا، ولم تُعثر على سياسة خصوصية، ولا توجد شركة مذكورة وراء المشروع. ومتطلبات العتاد بعد الحد الأدنى لـ GPU غير مذكورة، ولم تختبر PromptQuorum جودة الفصل. جرّبه على أغانٍ يحق لك استخدامها، وأعد مراجعة الموقع الرسمي قبل أن تعتمد على UVR 6.',
         ],
       },
       sources: {
@@ -2357,7 +2357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**README는 사용자의 컴퓨터에서 실행되는 프로그램으로 설명하며, 계정, 업로드, 텔레메트리는 언급하지 않습니다.**',
           '설치 파일에는 인터페이스, Python, PyTorch 등 의존성이 번들로 들어 있고, README는 분리를 앱이 로컬에서 처리하는 작업으로 소개합니다. 또한 앱 안에서 업데이트 패키지를 내려받을 수 있다고 하므로, 앱이 업데이트를 위해 네트워크 요청을 보낼 수 있습니다. 그 밖에 앱이 무엇에 접속하는지는 나와 있지 않고, 개인정보 보호에 관한 설명도 없습니다. PromptQuorum은 네트워크 트래픽을 캡처하지 않았습니다.',
-          '웹사이트는 별개의 문제입니다. 쿠키 배너에는 사이트가 트래픽 분석에 쿠키를 사용한다고 되어 있습니다. 푸터에는 연락처 주소만 링크되어 있어, 읽을 수 있는 개인정보 처리방침, 이용 약관, 사업자 정보가 없습니다.',
+          '웹사이트는 별개의 문제입니다. 쿠키 배너에는 사이트가 트래픽 분석에 쿠키를 사용한다고 되어 있습니다. 푸터에는 연락처 주소만 링크되어 있어, 개인정보 처리방침, 이용 약관, 사업자 정보를 찾지 못했습니다.',
         ],
       },
       whoShouldUse: {
@@ -2440,7 +2440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**무료 로컬 스템 분리를 원하고 기술적인 인터페이스와 2023년의 설치 파일을 받아들일 수 있다면 Ultimate Vocal Remover는 써 볼 만합니다.**',
           '서류상으로는 기본을 잘 갖추고 있습니다. 세 가지 모델 계열, MIT 라이선스의 무료 앱, Windows와 macOS용 설치 파일, 일부 모델에서의 Apple Silicon GPU 지원이 그렇습니다. 제작자는 계속 작업 중이며, 2026년 10월 6일에 README를 수정했고 날짜가 명시된 UVR 6 계획도 있습니다.',
-          '절충점은 분명합니다. 최신 태그 릴리스는 2023년 9월 것이고, Linux는 수동 설정이 필요하며, 프로젝트 뒤에 개인정보 처리방침도 명시된 회사도 없습니다. GPU 최소 사양 이외의 하드웨어 요구 사항은 나와 있지 않고, PromptQuorum은 분리 품질을 테스트하지 않았습니다. 사용 권한이 있는 노래 몇 곡으로 시험해 보시고, UVR 6에 의존하기 전에 공식 사이트를 다시 확인하십시오.',
+          '절충점은 분명합니다. 최신 태그 릴리스는 2023년 9월 것이고, Linux는 수동 설정이 필요하며, 개인정보 처리방침을 찾지 못했고, 프로젝트 뒤에 명시된 회사도 없습니다. GPU 최소 사양 이외의 하드웨어 요구 사항은 나와 있지 않고, PromptQuorum은 분리 품질을 테스트하지 않았습니다. 사용 권한이 있는 노래 몇 곡으로 시험해 보시고, UVR 6에 의존하기 전에 공식 사이트를 다시 확인하십시오.',
         ],
       },
       sources: {
