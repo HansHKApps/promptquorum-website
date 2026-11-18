@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Think of it as an AI research assistant that lives in Zotero: it reads the PDFs you already collected and answers questions about them with citations. The AI model can be a cloud service, your own key or a model running on your computer.',
+            text: 'Think of it as an AI research assistant that lives in Zotero: it is described as reading the PDFs you already collected and answering questions about them with citations. The AI model can be a cloud service, your own key or a model running on your computer.',
           },
         ],
         items: [
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Item': 'RAM / GPU / disk', 'Stated figure': 'Not stated; depends on the model' },
           { 'Item': 'MCP server', 'Stated figure': 'Node.js (npx) or Python 3.10+' },
         ],
-        note: 'Built-in AI credits need at least PapersGPT v2.3.0, according to the pricing page. Local models run on your computer and need no key; a cloud model needs network access.',
+        note: 'Built-in AI credits need at least PapersGPT v2.3.0, according to the pricing page. Per the maker, local models run on your computer and need no key; a cloud model needs network access.',
       },
       features: {
         id: 'features',
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Stellen Sie es sich als KI-Forschungsassistenten vor, der in Zotero lebt: Er liest die PDFs, die Sie bereits gesammelt haben, und beantwortet Fragen dazu mit Quellenangaben. Das KI-Modell kann ein Cloud-Dienst, Ihr eigener Schlüssel oder ein Modell auf Ihrem Rechner sein.',
+            text: 'Stellen Sie es sich als KI-Forschungsassistenten vor, der in Zotero lebt: Laut Entwickler liest er die PDFs, die Sie bereits gesammelt haben, und beantwortet Fragen dazu mit Quellenangaben. Das KI-Modell kann ein Cloud-Dienst, Ihr eigener Schlüssel oder ein Modell auf Ihrem Rechner sein.',
           },
         ],
         items: [
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Punkt': 'RAM / GPU / Speicher', 'Angegebener Wert': 'Nicht angegeben; vom Modell abhängig' },
           { 'Punkt': 'MCP-Server', 'Angegebener Wert': 'Node.js (npx) oder Python 3.10+' },
         ],
-        note: 'Laut Preisseite brauchen die integrierten KI-Credits mindestens PapersGPT v2.3.0. Lokale Modelle laufen auf Ihrem Rechner und brauchen keinen Schlüssel; ein Cloud-Modell braucht Netzzugang.',
+        note: 'Laut Preisseite brauchen die integrierten KI-Credits mindestens PapersGPT v2.3.0. Laut Entwickler laufen lokale Modelle auf Ihrem Rechner und brauchen keinen Schlüssel; ein Cloud-Modell braucht Netzzugang.',
       },
       features: {
         id: 'features',
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Piensa en un asistente de investigación con IA que vive en Zotero: lee los PDF que ya has reunido y responde preguntas sobre ellos con citas. El modelo de IA puede ser un servicio en la nube, tu propia clave o un modelo que se ejecuta en tu equipo.',
+            text: 'Piensa en un asistente de investigación con IA que vive en Zotero: según el desarrollador, lee los PDF que ya has reunido y responde preguntas sobre ellos con citas. El modelo de IA puede ser un servicio en la nube, tu propia clave o un modelo que se ejecuta en tu equipo.',
           },
         ],
         items: [
@@ -698,7 +698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Elemento': 'RAM / GPU / disco', 'Dato indicado': 'No indicado; depende del modelo' },
           { 'Elemento': 'Servidor MCP', 'Dato indicado': 'Node.js (npx) o Python 3.10+' },
         ],
-        note: 'Según la página de precios, los créditos de IA integrados requieren al menos PapersGPT v2.3.0. Los modelos locales se ejecutan en tu equipo y no necesitan clave; un modelo en la nube necesita acceso a la red.',
+        note: 'Según la página de precios, los créditos de IA integrados requieren al menos PapersGPT v2.3.0. Según el desarrollador, los modelos locales se ejecutan en tu equipo y no necesitan clave; un modelo en la nube necesita acceso a la red.',
       },
       features: {
         id: 'features',
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Voyez-le comme un assistant de recherche IA installé dans Zotero : il lit les PDF que vous avez déjà rassemblés et répond à vos questions avec des citations. Le modèle d\'IA peut être un service cloud, votre propre clé ou un modèle exécuté sur votre ordinateur.',
+            text: 'Voyez-le comme un assistant de recherche IA installé dans Zotero : selon le développeur, il lit les PDF que vous avez déjà rassemblés et répond à vos questions avec des citations. Le modèle d\'IA peut être un service cloud, votre propre clé ou un modèle exécuté sur votre ordinateur.',
           },
         ],
         items: [
@@ -974,7 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Élément': 'RAM / GPU / disque', 'Valeur indiquée': 'Non indiqué ; dépend du modèle' },
           { 'Élément': 'Serveur MCP', 'Valeur indiquée': 'Node.js (npx) ou Python 3.10+' },
         ],
-        note: 'D\'après la page des tarifs, les crédits d\'IA intégrés nécessitent au moins PapersGPT v2.3.0. Les modèles locaux s\'exécutent sur votre ordinateur sans clé ; un modèle cloud nécessite un accès réseau.',
+        note: 'D\'après la page des tarifs, les crédits d\'IA intégrés nécessitent au moins PapersGPT v2.3.0. Selon le développeur, les modèles locaux s\'exécutent sur votre ordinateur sans clé ; un modèle cloud nécessite un accès réseau.',
       },
       features: {
         id: 'features',
@@ -1030,7 +1030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Non vérifié : les conditions de l\'offre gratuite. La FAQ décrit des modèles locaux gratuits sans limite de durée ; la page des tarifs décrit un essai de 20 chats avec un seul PDF et des exécutions limitées.',
           'Non vérifié : les prix. La page des tarifs, la FAQ et les données structurées du site affichent des montants différents ; aucun n\'est donc cité ici.',
           'Non vérifié : si les chats qui utilisent les crédits intégrés passent par un serveur PapersGPT, et ce que couvre la politique de confidentialité de 2024 après la v2.3.0.',
-          'Non vérifié : la société ou le pays derrière le projet, les nombres d\'utilisateurs et les notes affichés par le site, et les tests indépendants. Aucun n\'a été trouvé, et les pages comparatives du développeur n\'ont pas été considérées comme indépendantes.',
+          'Non vérifié : la société ou le pays derrière le projet, les nombres d\'utilisateurs et les notes affichés par le site, et les avis indépendants. Aucun n\'a été trouvé, et les pages comparatives du développeur n\'ont pas été considérées comme indépendantes.',
           'Non vérifié : les informations de version. La page de journal des modifications du site s\'arrête à la v0.6.0 et ses données structurées indiquent 0.6.0, alors que les versions GitHub atteignent la v2.3.0 ; cet avis suit GitHub.',
         ],
       },
@@ -1189,7 +1189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Zoteroの中に常駐するAI研究アシスタントと考えてください。すでに集めたPDFを読み、引用付きで質問に答えます。AIモデルは、クラウドサービス、自分のキー、または自分のPCで動くモデルから選べます。',
+            text: 'Zoteroの中に常駐するAI研究アシスタントと考えてください。開発元によると、すでに集めたPDFを読み、引用付きで質問に答えます。AIモデルは、クラウドサービス、自分のキー、または自分のPCで動くモデルから選べます。',
           },
         ],
         items: [
@@ -1250,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'RAM／GPU／ディスク', '記載されている内容': '記載なし。モデルによる' },
           { '項目': 'MCPサーバー', '記載されている内容': 'Node.js（npx）またはPython 3.10+' },
         ],
-        note: '料金ページによると、内蔵AIクレジットにはPapersGPT v2.3.0以降が必要です。ローカルモデルは自分のPCで動きキーは不要ですが、クラウドモデルにはネットワーク接続が必要です。',
+        note: '料金ページによると、内蔵AIクレジットにはPapersGPT v2.3.0以降が必要です。開発元によると、ローカルモデルは自分のPCで動きキーは不要ですが、クラウドモデルにはネットワーク接続が必要です。',
       },
       features: {
         id: 'features',
@@ -1465,7 +1465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Pense nele como um assistente de pesquisa com IA que mora no Zotero: ele lê os PDFs que você já reuniu e responde a perguntas sobre eles com citações. O modelo de IA pode ser um serviço na nuvem, sua própria chave ou um modelo rodando no seu computador.',
+            text: 'Pense nele como um assistente de pesquisa com IA que mora no Zotero: segundo o desenvolvedor, ele lê os PDFs que você já reuniu e responde a perguntas sobre eles com citações. O modelo de IA pode ser um serviço na nuvem, sua própria chave ou um modelo rodando no seu computador.',
           },
         ],
         items: [
@@ -1526,7 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Item': 'RAM / GPU / disco', 'Valor informado': 'Não informado; depende do modelo' },
           { 'Item': 'Servidor MCP', 'Valor informado': 'Node.js (npx) ou Python 3.10+' },
         ],
-        note: 'Segundo a página de preços, os créditos de IA integrados exigem pelo menos o PapersGPT v2.3.0. Os modelos locais rodam no seu computador e não precisam de chave; um modelo na nuvem precisa de acesso à rede.',
+        note: 'Segundo a página de preços, os créditos de IA integrados exigem pelo menos o PapersGPT v2.3.0. Segundo o desenvolvedor, os modelos locais rodam no seu computador e não precisam de chave; um modelo na nuvem precisa de acesso à rede.',
       },
       features: {
         id: 'features',
@@ -1741,7 +1741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '可以把它看作常驻在 Zotero 里的 AI 研究助手：它阅读你已收集的 PDF，并以带引用的方式回答问题。AI 模型可以是云服务、你自己的密钥，或在你电脑上运行的模型。',
+            text: '可以把它看作常驻在 Zotero 里的 AI 研究助手：据开发者介绍，它阅读你已收集的 PDF，并以带引用的方式回答问题。AI 模型可以是云服务、你自己的密钥，或在你电脑上运行的模型。',
           },
         ],
         items: [
@@ -1802,7 +1802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '项目': '内存 / GPU / 磁盘', '资料中的说明': '未说明；取决于模型' },
           { '项目': 'MCP 服务器', '资料中的说明': 'Node.js（npx）或 Python 3.10+' },
         ],
-        note: '据定价页，内置 AI 额度至少需要 PapersGPT v2.3.0。本地模型在你的电脑上运行，无需密钥；云端模型需要联网。',
+        note: '据定价页，内置 AI 额度至少需要 PapersGPT v2.3.0。据开发者介绍，本地模型在你的电脑上运行，无需密钥；云端模型需要联网。',
       },
       features: {
         id: 'features',
@@ -1858,7 +1858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '未核实：免费版条件。FAQ 描述的是不限时免费的本地模型；定价页描述的是含 20 次单 PDF 对话和有限运行次数的试用。',
           '未核实：价格。定价页、FAQ 和网站结构化数据显示的金额不同，因此本文不引用任何金额。',
           '未核实：使用内置额度的对话是否经过 PapersGPT 服务器，以及 2024 年的隐私政策在 v2.3.0 之后覆盖哪些内容。',
-          '未核实：项目背后的公司或国家、网站展示的用户数和评分，以及独立的第三方测试。均未找到，开发者自己的对比页面也未被视为独立来源。',
+          '未核实：项目背后的公司或国家、网站展示的用户数和评分，以及独立的第三方点评。均未找到，开发者自己的对比页面也未被视为独立来源。',
           '未核实：版本信息。网站的更新日志页止于 v0.6.0，结构化数据也写 0.6.0，而 GitHub 发布已到 v2.3.0；本解读以 GitHub 为准。',
         ],
       },
@@ -2017,7 +2017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'فكّر فيه كمساعد بحثي بالذكاء الاصطناعي يعيش داخل Zotero: يقرأ ملفات PDF التي جمعتها بالفعل ويجيب عن أسئلتك مع اقتباسات. يمكن أن يكون النموذج خدمة سحابية أو مفتاحك الخاص أو نموذجًا يعمل على حاسوبك.',
+            text: 'فكّر فيه كمساعد بحثي بالذكاء الاصطناعي يعيش داخل Zotero: بحسب المطوّر، يقرأ ملفات PDF التي جمعتها بالفعل ويجيب عن أسئلتك مع اقتباسات. يمكن أن يكون النموذج خدمة سحابية أو مفتاحك الخاص أو نموذجًا يعمل على حاسوبك.',
           },
         ],
         items: [
@@ -2078,7 +2078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'البند': 'الذاكرة / GPU / القرص', 'القيمة المعلنة': 'غير معلن؛ يعتمد على النموذج' },
           { 'البند': 'خادم MCP', 'القيمة المعلنة': 'Node.js (npx) أو Python 3.10+' },
         ],
-        note: 'بحسب صفحة الأسعار، يتطلب رصيد الذكاء الاصطناعي المدمج الإصدار PapersGPT v2.3.0 على الأقل. تعمل النماذج المحلية على حاسوبك دون مفتاح؛ أما النموذج السحابي فيحتاج إلى اتصال بالشبكة.',
+        note: 'بحسب صفحة الأسعار، يتطلب رصيد الذكاء الاصطناعي المدمج الإصدار PapersGPT v2.3.0 على الأقل. بحسب المطوّر، تعمل النماذج المحلية على حاسوبك دون مفتاح؛ أما النموذج السحابي فيحتاج إلى اتصال بالشبكة.',
       },
       features: {
         id: 'features',
@@ -2233,7 +2233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'PapersGPT는 PDF 채팅, 라이브러리 전체 검색, 논문 추적을 제공하는 AGPL-3.0 Zotero 플러그인입니다. 클라우드·로컬 모델과 MCP 지원, 설치와 개인정보를 정리했습니다.',
     twitterDescription:
-      'PapersGPT는 Zotero에 PDF 채팅, 라이브러리 전체 검색, 논문 추적을 더합니다. 클라우드·로컬 모델과 MCP 서버 지원. 오픈소스, 프리미엄 모델.',
+      'PapersGPT는 Zotero에 PDF 채팅, 라이브러리 전체 검색, 논문 추적을 더합니다. 클라우드·로컬 모델과 MCP 서버 지원. 오픈소스, 일부 무료(프리미엄 요금제).',
     audience:
       'Zotero로 논문을 관리하는 연구자와 학생, 논문 라이브러리를 MCP 클라이언트에 연결하는 개발자, 문헌 작업용 AI 도구를 검토하는 팀',
     readTime: '7분 읽기',
@@ -2293,7 +2293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Zotero 안에 상주하는 AI 연구 비서라고 생각하시면 됩니다. 이미 모아 둔 PDF를 읽고 인용과 함께 질문에 답합니다. AI 모델은 클라우드 서비스, 본인의 키, 또는 본인 컴퓨터에서 실행되는 모델 중에서 고를 수 있습니다.',
+            text: 'Zotero 안에 상주하는 AI 연구 비서라고 생각하시면 됩니다. 개발자에 따르면 이미 모아 둔 PDF를 읽고 인용과 함께 질문에 답합니다. AI 모델은 클라우드 서비스, 본인의 키, 또는 본인 컴퓨터에서 실행되는 모델 중에서 고를 수 있습니다.',
           },
         ],
         items: [
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': 'RAM / GPU / 디스크', '명시된 내용': '명시되지 않음, 모델에 따라 다름' },
           { '항목': 'MCP 서버', '명시된 내용': 'Node.js(npx) 또는 Python 3.10+' },
         ],
-        note: '요금 페이지에 따르면 내장 AI 크레딧에는 PapersGPT v2.3.0 이상이 필요합니다. 로컬 모델은 본인 컴퓨터에서 실행되어 키가 필요 없고, 클라우드 모델은 네트워크 접속이 필요합니다.',
+        note: '요금 페이지에 따르면 내장 AI 크레딧에는 PapersGPT v2.3.0 이상이 필요합니다. 개발자에 따르면 로컬 모델은 본인 컴퓨터에서 실행되어 키가 필요 없고, 클라우드 모델은 네트워크 접속이 필요합니다.',
       },
       features: {
         id: 'features',
