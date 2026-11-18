@@ -121,6 +121,43 @@ export async function PartnersPage({ lang }: { lang: Language }) {
 
         <div className="space-y-12 text-gray-700 text-sm leading-relaxed">
           <section>
+            <h2 className="text-base font-semibold text-gray-900 mb-2">{c.audience.heading}</h2>
+            <p>{c.audience.intro}</p>
+
+            <h3 className="mt-6 text-sm font-semibold text-gray-900">{c.audience.metricsHeading}</h3>
+            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              {c.audience.metrics.map(m => (
+                <div key={m.label} className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                  <p className="text-xs font-medium text-gray-500">{m.label}</p>
+                  <p className="mt-1 text-lg font-bold text-gray-900">{m.value}</p>
+                  <p className="mt-1 text-xs text-gray-500">{m.note}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-6">{c.audience.countriesIntro}</p>
+
+            <h3 className="mt-6 text-sm font-semibold text-gray-900">{c.audience.whoHeading}</h3>
+            <ul className="mt-2 list-disc ps-5 space-y-1">
+              {c.audience.who.map(item => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <h3 className="mt-6 text-sm font-semibold text-gray-900">{c.audience.whatHeading}</h3>
+            <ul className="mt-2 list-disc ps-5 space-y-1">
+              {c.audience.what.map(item => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <h3 className="mt-6 text-sm font-semibold text-gray-900">{c.audience.fromHeading}</h3>
+            <p className="mt-2">{c.audience.from}</p>
+
+            <p className="mt-4 text-xs text-gray-500">{c.audience.footnote}</p>
+          </section>
+
+          <section>
             <h2 className="text-base font-semibold text-gray-900 mb-2">{c.partners.heading}</h2>
             <p>{c.partners.intro}</p>
             <p className="mt-3">{withEmail(c.partners.contact)}</p>
