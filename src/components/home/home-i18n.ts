@@ -385,6 +385,62 @@ const HOME_UI = {
     ko: 'Ask Hans 이용 현황 보기 →',
   },
 
+  // --- Stat tile drawers (makers-verified / hands-on-tested lists, StatListDrawer.tsx) ---
+  statListCloseAria: {
+    en: 'Close', de: 'Schließen', fr: 'Fermer', ja: '閉じる', zh: '关闭', es: 'Cerrar', pt: 'Fechar',
+    ar: 'إغلاق', ko: '닫기',
+  },
+  statListFounderHeadingTemplate: {
+    en: '{count} apps verified by their makers', de: '{count} von ihren Machern bestätigte Apps',
+    fr: '{count} applications vérifiées par leurs créateurs', ja: '開発元が確認したアプリ {count} 件',
+    zh: '{count} 个经开发者确认的应用', es: '{count} apps verificadas por sus creadores',
+    pt: '{count} apps verificados por seus criadores', ar: '{count} تطبيق تحقق منه صانعه',
+    ko: '개발자가 직접 확인한 앱 {count}개',
+  },
+  statListHandsOnHeadingTemplate: {
+    en: '{count} apps tested hands-on', de: '{count} Apps im Praxistest',
+    fr: '{count} applications testées en pratique', ja: '実機でテストしたアプリ {count} 件',
+    zh: '{count} 个亲自实测的应用', es: '{count} apps probadas en la práctica',
+    pt: '{count} apps testados na prática', ar: '{count} تطبيق اختبرناه عمليًا',
+    ko: '직접 테스트한 앱 {count}개',
+  },
+  statListReviewedOnceTemplate: {
+    en: 'Reviewed {date}', de: 'Bestätigt am {date}', fr: 'Vérifié le {date}', ja: '確認日：{date}',
+    zh: '确认于 {date}', es: 'Verificado el {date}', pt: 'Verificado em {date}', ar: 'تم التحقق في {date}',
+    ko: '{date} 확인',
+  },
+  statListReviewedAgainTemplate: {
+    en: 'Reviewed {count} times — last on {date}',
+    de: '{count}-mal bestätigt — zuletzt am {date}',
+    fr: 'Vérifié {count} fois — la dernière le {date}',
+    ja: '{count} 回確認済み（最終確認日：{date}）',
+    zh: '已确认 {count} 次——最近一次为 {date}',
+    es: 'Verificado {count} veces — la última el {date}',
+    pt: 'Verificado {count} vezes — a última em {date}',
+    ar: 'تم التحقق {count} مرات — آخرها في {date}',
+    ko: '{count}회 확인됨 — 최근 확인일 {date}',
+  },
+  statListPublishedTemplate: {
+    en: 'Published {date}', de: 'Veröffentlicht am {date}', fr: 'Publié le {date}', ja: '公開日：{date}',
+    zh: '发布于 {date}', es: 'Publicado el {date}', pt: 'Publicado em {date}', ar: 'نُشر في {date}',
+    ko: '{date} 게시',
+  },
+  statListViewReview: {
+    en: 'Read the review →', de: 'Test lesen →', fr: 'Lire le test →', ja: 'レビューを読む →',
+    zh: '阅读评测 →', es: 'Leer la reseña →', pt: 'Ler a análise →', ar: 'اقرأ المراجعة ←',
+    ko: '리뷰 읽기 →',
+  },
+  statListViewHandsOn: {
+    en: 'Read the hands-on test →', de: 'Praxistest lesen →', fr: 'Lire le test pratique →',
+    ja: '実機テストを読む →', zh: '阅读实测报告 →', es: 'Leer la prueba práctica →',
+    pt: 'Ler o teste prático →', ar: 'اقرأ الاختبار العملي ←', ko: '직접 테스트 읽기 →',
+  },
+  statListViewInDirectory: {
+    en: 'View in the directory →', de: 'Im Verzeichnis ansehen →', fr: "Voir dans l'annuaire →",
+    ja: 'ディレクトリで見る →', zh: '在目录中查看 →', es: 'Ver en el directorio →',
+    pt: 'Ver no diretório →', ar: 'عرض في الدليل ←', ko: '디렉터리에서 보기 →',
+  },
+
   // --- Recent Mentions ---
   mentionsTitle: {
     en: 'Recent Mentions', de: 'Aktuelle Erwähnungen', fr: 'Mentions récentes', ja: '最近の言及', zh: '近期提及',

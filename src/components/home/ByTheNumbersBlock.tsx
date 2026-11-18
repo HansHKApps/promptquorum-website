@@ -1,10 +1,11 @@
-import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
 import { getHomeStats } from '@/lib/home/stats'
+import { getFounderVerifiedApps, getHandsOnTestedApps } from '@/lib/home/statDetails'
 import { getMcpUsageSnapshotCached } from '@/lib/mcp/usage'
 import { getAskHansTotals } from '@/lib/askhans/totals'
 import { HomeIcon, type HomeIconName } from './HomeIcon'
 import { SURFACE_CLASS } from './homeSurface'
+import { StatTilesClient, type StatTileItem } from './StatTilesClient'
 import { t } from './home-i18n'
 
 /**
@@ -16,11 +17,13 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
   const mcpUsage = await getMcpUsageSnapshotCached()
   const askHansOn = process.env.ASK_HANS_ENABLED === 'true'
   const askHansTotals = askHansOn ? await getAskHansTotals() : null
+  const founderVerifiedApps = getFounderVerifiedApps(lang)
+  const handsOnTestedApps = getHandsOnTestedApps(lang)
   const mcpStatsHref = lang === 'en' ? '/mcp-stats' : `/${lang}/mcp-stats`
   const askHansHref = lang === 'en' ? '/askhans' : `/${lang}/askhans`
   const directoryHref = lang === 'en' ? '/directory' : `/${lang}/directory`
 
-  const items: { label: string; value: string; icon: HomeIconName; href?: string; hint?: string; desc?: string }[] = [
+  const items: StatTileItem[] = [
     {
       label: t('statAppsTracked', lang),
       value: stats.totalApps.toLocaleString(),
@@ -34,6 +37,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
       value: stats.founderVerified.toString(),
       icon: 'verified',
       desc: t('statFounderVerifiedDesc', lang),
+      drawer: 'founder',
     },
     { label: t('statArticlesPublished', lang), value: stats.totalArticles.toLocaleString(), icon: 'posts' },
     {
@@ -41,6 +45,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
       value: stats.handsOnTests.toLocaleString(),
       icon: 'test',
       desc: t('statHandsOnTestsDesc', lang),
+      drawer: 'handsOn',
     },
     {
       label: t('statMcpCalls', lang),
@@ -64,32 +69,15 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
     return (
       <section aria-label={t('statsTitle', lang)} className={`mb-8 rounded-xl border ${SURFACE_CLASS.stat} p-3`}>
         <dl className={`grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 ${items.length > 6 ? 'xl:grid-cols-7' : ''}`}>
-          {items.map((item) => {
-            const tile = (
-              <>
-                <dt className="flex items-center gap-1.5 text-xs text-text-secondary">
-                  <HomeIcon name={item.icon} size={14} />
-                  {item.label}
-                </dt>
-                <dd className="mt-1 text-2xl font-semibold leading-none text-text-primary">{item.value}</dd>
-                {item.desc && <p className="mt-1.5 text-[11px] leading-snug text-text-secondary">{item.desc}</p>}
-                {item.hint && <p className="mt-1 text-[11px] font-medium text-primary">{item.hint}</p>}
-              </>
-            )
-            return item.href ? (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="rounded-lg border border-tone-list-edge bg-tone-list p-3 transition hover:shadow-md hover:-translate-y-0.5"
-              >
-                {tile}
-              </Link>
-            ) : (
-              <div key={item.label} className="rounded-lg border border-tone-list-edge bg-tone-list p-3">
-                {tile}
-              </div>
-            )
-          })}
+          <StatTilesClient
+            items={items}
+            layout="bar"
+            lang={lang}
+            founderItems={founderVerifiedApps}
+            handsOnItems={handsOnTestedApps}
+            mcpStatsHref={mcpStatsHref}
+            askHansHref={askHansHref}
+          />
         </dl>
       </section>
     )
@@ -102,32 +90,15 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
         {t('statsTitle', lang)}
       </h3>
       <dl className="grid grid-cols-2 gap-3">
-        {items.map((item) => {
-          const tile = (
-            <>
-              <dt className="flex items-center gap-1.5 text-xs text-text-secondary">
-                <HomeIcon name={item.icon} size={14} />
-                {item.label}
-              </dt>
-              <dd className="mt-1 text-3xl font-semibold leading-none text-text-primary">{item.value}</dd>
-              {item.desc && <p className="mt-1.5 text-[11px] leading-snug text-text-secondary">{item.desc}</p>}
-              {item.hint && <p className="mt-1.5 text-[11px] font-medium text-primary">{item.hint}</p>}
-            </>
-          )
-          return item.href ? (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={`${item.href === mcpStatsHref || item.href === askHansHref ? 'col-span-2 ' : ''}rounded-lg border border-tone-list-edge bg-tone-list p-3 transition hover:shadow-md hover:-translate-y-0.5`}
-            >
-              {tile}
-            </Link>
-          ) : (
-            <div key={item.label} className="rounded-lg border border-tone-list-edge bg-tone-list p-3">
-              {tile}
-            </div>
-          )
-        })}
+        <StatTilesClient
+          items={items}
+          layout="card"
+          lang={lang}
+          founderItems={founderVerifiedApps}
+          handsOnItems={handsOnTestedApps}
+          mcpStatsHref={mcpStatsHref}
+          askHansHref={askHansHref}
+        />
       </dl>
     </div>
   )
