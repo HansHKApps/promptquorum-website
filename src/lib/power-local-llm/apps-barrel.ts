@@ -314,6 +314,7 @@ import { app as app_open_generative_ai } from './apps/open-generative-ai'
 import { app as app_labelme } from './apps/labelme'
 import { app as app_openwork } from './apps/openwork'
 import { app as app_airi } from './apps/airi'
+import { app as app_inbox_zero } from './apps/inbox-zero'
 import { app as app_skales } from './apps/skales'
 import { app as app_halo } from './apps/halo'
 import { app as app_yovoice } from './apps/yovoice'
@@ -642,6 +643,7 @@ export const localAiApps: ToolRecord[] = [
   app_labelme,
   app_openwork,
   app_airi,
+  app_inbox_zero,
   app_skales,
   app_halo,
   app_yovoice,

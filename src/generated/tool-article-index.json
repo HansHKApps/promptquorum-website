@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 377,
+    "totalCount": 378,
     "capped": true
   },
   "llama.cpp": {
@@ -11043,6 +11043,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Inbox Zero": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "inbox-zero-review",
+        "title": "Inbox Zero Review: AI Email Assistant for Gmail and Outlook",
+        "url": "/power-local-llm/inbox-zero-review",
+        "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Skales": {
     "articles": [
       {
@@ -13463,6 +13477,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "inbox-zero-review",
+        "title": "Inbox Zero Review: AI Email Assistant for Gmail and Outlook",
+        "url": "/power-local-llm/inbox-zero-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-pdf-parsers-compared",
         "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
         "url": "/power-local-llm/local-pdf-parsers-compared",
@@ -13500,17 +13522,9 @@
         "url": "/power-local-llm/pooled-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "reactive-resume-review",
-        "title": "Reactive Resume Review: Free Open-Source Resume Builder",
-        "url": "/power-local-llm/reactive-resume-review",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 280,
+    "totalCount": 281,
     "capped": true
   },
   "Qdrant": {
