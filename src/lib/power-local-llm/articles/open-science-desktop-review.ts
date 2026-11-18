@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/open-science-desktop-review-hero-ja.webp',
     title: 'Open Science Desktop レビュー：自分のファイルで使える無料のAI研究ワークベンチ',
-    seoTitle: 'Open Science Desktopレビュー：AI研究ワークベンチ',
+    seoTitle: 'Open Science Desktopレビュー：AI研究環境',
     intro:
       'Open Science Desktop（旧称 Open Science）は、macOS、Windows、Linux向けの無料のデスクトップアプリで、MITライセンスです。文献検索、コード、ノートブック、図、レポートまでを扱う研究用のエージェント環境をまとめており、プロジェクトのファイルと実行履歴はローカルのフォルダーに残ります。モデルプロバイダーはご自身で接続するため、ローカルのエンドポイントを指定しない限り、モデル自体は通常クラウドで動きます。このレビューは、開発元のサイト、GitHubリポジトリ、README、リリースページに基づいています。PromptQuorumはこのアプリをインストールしておらず、試用もしていません。',
     metaDescription:
