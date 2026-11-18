@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF is a PDF editor and document-processing platform that you run yourself, on a desktop or on a server.** The maker is Stirling PDF Inc., which calls itself a U.S. company in its privacy policy.",
           "Per the maker, it offers 60+ tools on desktop or server, including edit, merge, split, sign, redact, convert, OCR and compress. The README says 50+, so the tool count is inconsistent between sources.",
           "Beyond the editor, the maker describes no-code pipelines, a REST API, an MCP interface, webhooks and an AI assistant. The project is described as open-core: the README links to Server Plan and Enterprise offerings.",
-          "Independent coverage exists. Pocket-lint and XDA Developers have published favourable pieces, and one XDA writer later switched to another self-hosted toolkit citing privacy concerns, although the details are not in our notes. See [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) for one positive review.",
+          "Independent coverage is mixed. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) published a positive review. XDA Developers published a first-person piece, “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it” (5 November 2025), in which the writer says they left for BentoPDF after concerns about a cookie banner and analytics cookies and a “tracking pixel” that, according to the article, were on by default and later made optional. PromptQuorum has not verified these claims; the maker's privacy policy is the primary source.",
           "This review is not hands-on. It summarises the maker's pages and public sources, and maker statements are attributed as such."
         ]
       },
@@ -261,7 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Account requirement for the desktop and Docker versions: not stated.",
           "The '30M+ downloads' figure is a maker claim without independent confirmation.",
           "A hosted service: the Terms of Service reportedly mention one, but no details were verified.",
-          "The details of the XDA article by a writer who switched away, and of the cookie-banner criticism, could not be recorded.",
+          "The XDA article's claims about the cookie banner, analytics cookies and tracking pixel are the writer's own account and were not independently verified.",
           "Headquarters: the only primary-source address is a San Francisco mailing address, and the policy calls the maker a U.S. company.",
           "Fork count and store rating: not available."
         ]
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "alternatives",
         "title": "Alternatives",
         "content": [
-          "**The sources name four alternatives, but PromptQuorum has not compared them hands-on.** The notes below only restate what the sources say."
+          "**The sources name two alternatives, but PromptQuorum has not compared them hands-on.** The notes below only restate what the sources say."
         ],
         "columns": [
           "Alternative",
@@ -285,14 +285,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Alternative": "Adobe Acrobat",
             "What the sources say": "Commercial PDF editor that reviewers say Stirling PDF replaces."
           },
-          {
-            "Alternative": "UPDF",
-            "What the sources say": "Sells a competing PDF product and publishes a review of Stirling PDF, so that review comes from a party with a commercial interest."
-          },
-          {
-            "Alternative": "SwifDoo PDF",
-            "What the sources say": "Sells a competing PDF product and publishes a review of Stirling PDF, so that review comes from a party with a commercial interest."
-          }
         ]
       },
       "faq": {
@@ -475,7 +467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF ist ein PDF-Editor und eine Plattform zur Dokumentenverarbeitung, die Sie selbst betreiben – auf dem Desktop oder auf einem Server.** Hersteller ist Stirling PDF Inc., die sich in ihrer Datenschutzerklärung als US-Unternehmen bezeichnet.",
           "Laut Hersteller bietet es mehr als 60 Werkzeuge für Desktop oder Server, darunter Bearbeiten, Zusammenführen, Teilen, Signieren, Schwärzen, Konvertieren, OCR und Komprimieren. Die README nennt mehr als 50, die Werkzeugzahl ist zwischen den Quellen also uneinheitlich.",
           "Über den Editor hinaus beschreibt der Hersteller No-Code-Pipelines, eine REST API, eine MCP-Schnittstelle, Webhooks und einen KI-Assistenten. Das Projekt wird als Open-Core beschrieben: Die README verweist auf Angebote für Server Plan und Enterprise.",
-          "Es gibt unabhängige Berichterstattung. Pocket-lint und XDA Developers haben wohlwollende Beiträge veröffentlicht, und ein XDA-Autor wechselte später aus Datenschutzgründen zu einem anderen selbst gehosteten Toolkit, wobei die Einzelheiten nicht in unseren Notizen stehen. Eine positive Besprechung finden Sie bei [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review).",
+          "Die unabhängige Berichterstattung ist gemischt. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) hat eine positive Besprechung veröffentlicht. XDA Developers veröffentlichte einen Ich-Bericht, „I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it“ (5. November 2025), in dem der Autor schreibt, er sei nach Bedenken wegen eines Cookie-Banners sowie Analyse-Cookies und eines „Tracking-Pixels“, die laut Artikel standardmäßig aktiv waren und später optional wurden, zu BentoPDF gewechselt. PromptQuorum hat diese Aussagen nicht geprüft; die Datenschutzerklärung des Herstellers ist die Primärquelle.",
           "Dieser Überblick beruht nicht auf eigenen Tests. Er fasst die Seiten des Herstellers und öffentliche Quellen zusammen; Herstelleraussagen sind als solche gekennzeichnet."
         ]
       },
@@ -608,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Kontopflicht für die Desktop- und Docker-Versionen: nicht angegeben.",
           "Die Zahl „30M+ Downloads“ ist eine Herstelleraussage ohne unabhängige Bestätigung.",
           "Ein gehosteter Dienst: Die Nutzungsbedingungen erwähnen einen solchen angeblich, Einzelheiten wurden jedoch nicht geprüft.",
-          "Die Einzelheiten des XDA-Artikels eines Autors, der gewechselt ist, sowie der Kritik am Cookie-Banner konnten nicht erfasst werden.",
+          "Die Aussagen des XDA-Artikels zu Cookie-Banner, Analyse-Cookies und Tracking-Pixel sind die Darstellung des Autors und wurden nicht unabhängig geprüft.",
           "Firmensitz: Die einzige Adresse aus einer Primärquelle ist eine Postadresse in San Francisco, und die Richtlinie bezeichnet den Hersteller als US-Unternehmen.",
           "Anzahl der Forks und Store-Bewertung: nicht verfügbar."
         ]
@@ -617,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "alternatives",
         "title": "Alternativen",
         "content": [
-          "**Die Quellen nennen vier Alternativen, PromptQuorum hat sie aber nicht praktisch verglichen.** Die folgenden Hinweise geben nur wieder, was die Quellen sagen."
+          "**Die Quellen nennen zwei Alternativen, PromptQuorum hat sie aber nicht praktisch verglichen.** Die folgenden Hinweise geben nur wieder, was die Quellen sagen."
         ],
         "columns": [
           "Alternative",
@@ -632,14 +624,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Alternative": "Adobe Acrobat",
             "Aussage der Quellen": "Kommerzieller PDF-Editor, den Stirling PDF laut Testern ersetzt."
           },
-          {
-            "Alternative": "UPDF",
-            "Aussage der Quellen": "Verkauft ein konkurrierendes PDF-Produkt und veröffentlicht eine Besprechung von Stirling PDF; diese Besprechung stammt daher von einer Partei mit wirtschaftlichem Interesse."
-          },
-          {
-            "Alternative": "SwifDoo PDF",
-            "Aussage der Quellen": "Verkauft ein konkurrierendes PDF-Produkt und veröffentlicht eine Besprechung von Stirling PDF; diese Besprechung stammt daher von einer Partei mit wirtschaftlichem Interesse."
-          }
         ]
       },
       "faq": {
@@ -823,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF est un éditeur PDF et une plateforme de traitement de documents que vous exécutez vous-même, sur un poste ou sur un serveur.** L'éditeur est Stirling PDF Inc., qui se présente comme une société américaine dans sa politique de confidentialité.",
           "Selon l'éditeur, elle propose plus de 60 outils sur poste ou serveur, dont modifier, fusionner, scinder, signer, caviarder, convertir, OCR et compresser. Le README parle de plus de 50, le nombre d'outils diffère donc selon les sources.",
           "Au-delà de l'éditeur de PDF, l'éditeur du logiciel décrit des pipelines sans code, une API REST, une interface MCP, des webhooks et un assistant IA. Le projet est décrit comme open-core : le README renvoie vers les offres Server Plan et Enterprise.",
-          "Il existe des articles indépendants. Pocket-lint et XDA Developers ont publié des textes favorables, et un rédacteur de XDA est ensuite passé à une autre boîte à outils auto-hébergée en invoquant des préoccupations de confidentialité, mais les détails ne figurent pas dans nos notes. Voir [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) pour un avis positif.",
+          "La couverture indépendante est partagée. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) a publié un avis positif. XDA Developers a publié un article à la première personne, « I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it » (5 novembre 2025), où le rédacteur dit être passé à BentoPDF après des inquiétudes concernant une bannière de cookies, des cookies d'analyse et un « tracking pixel » qui, selon l'article, étaient activés par défaut avant de devenir optionnels. PromptQuorum n'a pas vérifié ces affirmations ; la politique de confidentialité de l'éditeur est la source primaire.",
           "Cet avis ne repose pas sur un test pratique. Il résume les pages de l'éditeur et des sources publiques, et les déclarations de l'éditeur sont présentées comme telles."
         ]
       },
@@ -956,7 +940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Obligation de compte pour les versions de bureau et Docker : non indiquée.",
           "Le chiffre « 30M+ téléchargements » est une affirmation de l'éditeur sans confirmation indépendante.",
           "Un service hébergé : les conditions d'utilisation en mentionneraient un, mais aucun détail n'a été vérifié.",
-          "Les détails de l'article de XDA d'un rédacteur qui a changé d'outil, et de la critique sur la bannière de cookies, n'ont pas pu être relevés.",
+          "Les affirmations de l'article de XDA sur la bannière de cookies, les cookies d'analyse et le tracking pixel sont le récit du rédacteur et n'ont pas été vérifiées de manière indépendante.",
           "Siège : la seule adresse issue d'une source primaire est une adresse postale à San Francisco, et la politique présente l'éditeur comme une société américaine.",
           "Nombre de forks et note sur les magasins d'applications : non disponibles."
         ]
@@ -965,7 +949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "alternatives",
         "title": "Alternatives",
         "content": [
-          "**Les sources citent quatre alternatives, mais PromptQuorum ne les a pas comparées en pratique.** Les notes ci-dessous reprennent seulement ce que disent les sources."
+          "**Les sources citent deux alternatives, mais PromptQuorum ne les a pas comparées en pratique.** Les notes ci-dessous reprennent seulement ce que disent les sources."
         ],
         "columns": [
           "Alternative",
@@ -980,14 +964,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "Alternative": "Adobe Acrobat",
             "Ce que disent les sources": "Éditeur PDF commercial que, selon des testeurs, Stirling PDF remplace."
           },
-          {
-            "Alternative": "UPDF",
-            "Ce que disent les sources": "Vend un produit PDF concurrent et publie un avis sur Stirling PDF ; cet avis émane donc d'une partie ayant un intérêt commercial."
-          },
-          {
-            "Alternative": "SwifDoo PDF",
-            "Ce que disent les sources": "Vend un produit PDF concurrent et publie un avis sur Stirling PDF ; cet avis émane donc d'une partie ayant un intérêt commercial."
-          }
         ]
       },
       "faq": {
@@ -1171,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDFは、デスクトップまたはサーバー上で自分で運用するPDFエディタ兼ドキュメント処理プラットフォームです。**開発元はStirling PDF Inc.で、プライバシーポリシーでは米国の企業と称しています。",
           "開発元によると、デスクトップまたはサーバーで60以上のツールを提供し、編集、結合、分割、署名、墨消し、変換、OCR、圧縮などに対応します。READMEでは50以上とされており、ツール数は情報源によって食い違っています。",
           "エディタのほかに、開発元はノーコードのパイプライン、REST API、MCPインターフェース、Webhook、AIアシスタントを挙げています。プロジェクトはオープンコアとされ、READMEにはServer PlanとEnterpriseへのリンクがあります。",
-          "第三者による報道もあります。Pocket-lintとXDA Developersは好意的な記事を公開しており、XDAのライター1名はその後、プライバシー上の懸念を理由に別のセルフホスト型ツールキットへ乗り換えましたが、詳細は私たちの調査メモにはありません。肯定的なレビューの一例として[Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)をご覧ください。",
+          "第三者による報道は評価が分かれています。[Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)は肯定的なレビューを公開しました。XDA Developersは一人称の記事「I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it」（2025年11月5日）を公開し、筆者はCookieバナーと、記事によれば既定で有効だった分析用Cookieおよび「トラッキングピクセル」（のちに任意設定になったとされる）への懸念を受けてBentoPDFに乗り換えたと述べています。PromptQuorumはこれらの主張を確認しておらず、メーカーのプライバシーポリシーが一次情報です。",
           "このレビューは実機での検証に基づくものではありません。開発元のページと公開情報をまとめたもので、開発元の主張はそのように明記しています。"
         ]
       },
@@ -1304,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "デスクトップ版とDocker版のアカウント要否：記載なし。",
           "「30M+ downloads」という数字は開発元の主張で、第三者による裏付けはありません。",
           "ホスト型サービス：利用規約に記載があるとされていますが、詳細は確認していません。",
-          "乗り換えたライターによるXDAの記事の詳細と、Cookieバナーに関する批判の内容は、記録できませんでした。",
+          "XDAの記事にあるCookieバナー、分析用Cookie、トラッキングピクセルに関する記述は筆者本人の説明であり、独自には検証していません。",
           "本社所在地：一次情報で確認できる住所はサンフランシスコの郵送先住所のみで、ポリシーでは開発元を米国の企業としています。",
           "フォーク数とストアの評価：入手できませんでした。"
         ]
@@ -1313,7 +1289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "alternatives",
         "title": "代替ツール",
         "content": [
-          "**情報源は4つの代替ツールを挙げていますが、PromptQuorumは実機での比較をしていません。**以下のメモは、情報源の記述を言い換えたものにすぎません。"
+          "**情報源は2つの代替ツールを挙げていますが、PromptQuorumは実機での比較をしていません。**以下のメモは、情報源の記述を言い換えたものにすぎません。"
         ],
         "columns": [
           "代替ツール",
@@ -1328,14 +1304,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "代替ツール": "Adobe Acrobat",
             "情報源の記載": "レビュアーがStirling PDFで置き換えられるとしている商用PDFエディタ。"
           },
-          {
-            "代替ツール": "UPDF",
-            "情報源の記載": "競合するPDF製品を販売し、Stirling PDFのレビューも公開しています。そのレビューは商業的な利害関係のある立場から書かれたものです。"
-          },
-          {
-            "代替ツール": "SwifDoo PDF",
-            "情報源の記載": "競合するPDF製品を販売し、Stirling PDFのレビューも公開しています。そのレビューは商業的な利害関係のある立場から書かれたものです。"
-          }
         ]
       },
       "faq": {
@@ -1519,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF 是一个由你自己在桌面或服务器上运行的 PDF 编辑与文档处理平台。** 开发方为 Stirling PDF Inc.，其隐私政策中自称是一家美国公司。",
           "据开发方称，它在桌面或服务器上提供 60 多种工具，包括编辑、合并、拆分、签名、涂黑脱敏、转换、OCR 和压缩。README 写的是 50 多种，因此各来源对工具数量的说法不一致。",
           "除编辑器外，开发方还介绍了无代码流水线、REST API、MCP 接口、Webhook 和 AI 助手。该项目被描述为开放核心：README 中链接了 Server Plan 和 Enterprise 方案。",
-          "另有独立媒体报道。Pocket-lint 和 XDA Developers 都发表过正面评价，其中一位 XDA 作者后来出于隐私顾虑改用了另一款自托管工具包，但具体细节不在我们的记录中。正面评价可参见 [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)。",
+          "独立媒体的报道褒贬不一。[Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) 发表了一篇正面评价。XDA Developers 发表了一篇第一人称文章《I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it》（2025 年 11 月 5 日），作者称自己因对 Cookie 横幅、以及据该文章称默认开启（后来改为可选）的分析 Cookie 和“tracking pixel”的担忧而改用 BentoPDF。PromptQuorum 未核实这些说法；厂商的隐私政策是一手来源。",
           "本评测并非亲身实测。内容汇总自开发方页面和公开来源，开发方的说法均已注明出处。"
         ]
       },
@@ -1652,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "桌面版和 Docker 版是否需要账号：未说明。",
           "“3000 万+下载量”这一数字是开发方的说法，没有独立证实。",
           "托管服务：据称服务条款提到了托管服务，但细节未经核实。",
-          "那位改用其他工具的作者所写的 XDA 文章细节，以及对 Cookie 横幅的批评，均无法记录。",
+          "XDA 文章中关于 Cookie 横幅、分析 Cookie 和 tracking pixel 的说法是作者本人的叙述，未经独立核实。",
           "总部：唯一的第一手地址是旧金山的一个邮寄地址，政策中称开发方为美国公司。",
           "复刻（fork）数量和应用商店评分：无法获取。"
         ]
@@ -1661,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "alternatives",
         "title": "替代品",
         "content": [
-          "**来源列出了四种替代品，但 PromptQuorum 未对它们做过实测对比。** 以下说明仅复述来源所述内容。"
+          "**来源列出了两种替代品，但 PromptQuorum 未对它们做过实测对比。** 以下说明仅复述来源所述内容。"
         ],
         "columns": [
           "替代品",
@@ -1676,14 +1644,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "替代品": "Adobe Acrobat",
             "来源所述": "商业 PDF 编辑器，评测者称 Stirling PDF 可以替代它。"
           },
-          {
-            "替代品": "UPDF",
-            "来源所述": "销售竞争性 PDF 产品，并发布了对 Stirling PDF 的评测；该评测出自与之有商业利益关系的一方。"
-          },
-          {
-            "替代品": "SwifDoo PDF",
-            "来源所述": "销售竞争性 PDF 产品，并发布了对 Stirling PDF 的评测；该评测出自与之有商业利益关系的一方。"
-          }
         ]
       },
       "faq": {
@@ -1867,7 +1827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF es un editor de PDF y plataforma de procesamiento de documentos que tú mismo ejecutas, en un equipo de escritorio o en un servidor.** El fabricante es Stirling PDF Inc., que en su política de privacidad se describe como una empresa estadounidense.",
           "Según el fabricante, ofrece más de 60 herramientas en escritorio o servidor, entre ellas editar, combinar, dividir, firmar, censurar, convertir, OCR y comprimir. El README indica más de 50, por lo que el número de herramientas no coincide entre fuentes.",
           "Además del editor, el fabricante describe pipelines sin código, una API REST, una interfaz MCP, webhooks y un asistente de IA. El proyecto se describe como open-core: el README enlaza a las ofertas Server Plan y Enterprise.",
-          "Existe cobertura independiente. Pocket-lint y XDA Developers han publicado artículos favorables, y un redactor de XDA cambió después a otro kit de herramientas autoalojado por motivos de privacidad, aunque los detalles no constan en nuestras notas. Consulta [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) para ver una reseña positiva.",
+          "La cobertura independiente es mixta. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) publicó una reseña positiva. XDA Developers publicó un artículo en primera persona, «I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it» (5 de noviembre de 2025), en el que el redactor dice que cambió a BentoPDF por su preocupación ante un banner de cookies y unas cookies de análisis y un «tracking pixel» que, según el artículo, estaban activados por defecto y después pasaron a ser opcionales. PromptQuorum no ha verificado estas afirmaciones; la política de privacidad del fabricante es la fuente primaria.",
           "Esta reseña no se basa en una prueba práctica. Resume las páginas del fabricante y fuentes públicas, y las afirmaciones del fabricante se atribuyen como tales."
         ]
       },
@@ -2000,7 +1960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Requisito de cuenta en las versiones de escritorio y Docker: no se indica.",
           "La cifra de «30M+ downloads» es una afirmación del fabricante sin confirmación independiente.",
           "Un servicio alojado: según se informa, los Términos de servicio mencionan uno, pero no se verificó ningún detalle.",
-          "No se pudieron registrar los detalles del artículo de XDA de un redactor que cambió de herramienta, ni de las críticas al banner de cookies.",
+          "Lo que dice el artículo de XDA sobre el banner de cookies, las cookies de análisis y el tracking pixel es el relato del redactor y no se verificó de forma independiente.",
           "Sede: la única dirección de fuente primaria es un apartado postal en San Francisco, y la política describe al fabricante como una empresa estadounidense.",
           "Número de forks y valoración en tiendas: no disponibles."
         ]
@@ -2009,7 +1969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "alternatives",
         "title": "Alternativas",
         "content": [
-          "**Las fuentes nombran cuatro alternativas, pero PromptQuorum no las ha comparado en la práctica.** Las notas siguientes solo repiten lo que indican las fuentes."
+          "**Las fuentes nombran dos alternativas, pero PromptQuorum no las ha comparado en la práctica.** Las notas siguientes solo repiten lo que indican las fuentes."
         ],
         "columns": [
           "Alternativa",
@@ -2022,16 +1982,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Alternativa": "Adobe Acrobat",
-            "Qué indican las fuentes": "Editor de PDF comercial que, según los analistas, Stirling PDF puede reemplazar."
+            "Qué indican las fuentes": "Editor de PDF comercial que, según los revisores, Stirling PDF puede reemplazar."
           },
-          {
-            "Alternativa": "UPDF",
-            "Qué indican las fuentes": "Vende un producto PDF competidor y publica una reseña de Stirling PDF; esa reseña procede de una parte con interés comercial."
-          },
-          {
-            "Alternativa": "SwifDoo PDF",
-            "Qué indican las fuentes": "Vende un producto PDF competidor y publica una reseña de Stirling PDF; esa reseña procede de una parte con interés comercial."
-          }
         ]
       },
       "faq": {
@@ -2215,7 +2167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**O Stirling PDF é um editor de PDF e plataforma de processamento de documentos que você mesmo executa, em um desktop ou em um servidor.** O fabricante é a Stirling PDF Inc., que se descreve como uma empresa dos EUA em sua política de privacidade.",
           "Segundo o fabricante, são mais de 60 ferramentas no desktop ou no servidor, incluindo editar, mesclar, dividir, assinar, ocultar dados sensíveis, converter, OCR e compactar. O README diz mais de 50, portanto a contagem de ferramentas é inconsistente entre as fontes.",
           "Além do editor, o fabricante descreve pipelines no-code, uma API REST, uma interface MCP, webhooks e um assistente de IA. O projeto é descrito como open-core: o README aponta para as ofertas Server Plan e Enterprise.",
-          "Há cobertura independente. A Pocket-lint e a XDA Developers publicaram textos favoráveis, e um redator da XDA depois migrou para outro kit auto-hospedado citando preocupações com privacidade, embora os detalhes não estejam em nossas anotações. Veja a [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) para uma análise positiva.",
+          "A cobertura independente é mista. A [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) publicou uma análise positiva. A XDA Developers publicou um texto em primeira pessoa, “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it” (5 de novembro de 2025), em que o redator diz ter migrado para o BentoPDF após preocupações com um banner de cookies e com cookies de análise e um “tracking pixel” que, segundo o artigo, estavam ativados por padrão e depois passaram a ser opcionais. A PromptQuorum não verificou essas afirmações; a política de privacidade do fabricante é a fonte primária.",
           "Esta análise não é prática. Ela resume as páginas do fabricante e fontes públicas, e as declarações do fabricante são atribuídas como tal."
         ]
       },
@@ -2348,7 +2300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Exigência de conta nas versões desktop e Docker: não informada.",
           "O número de '30M+ downloads' é uma afirmação do fabricante, sem confirmação independente.",
           "Um serviço hospedado: os Termos de Serviço supostamente mencionam um, mas nenhum detalhe foi verificado.",
-          "Os detalhes do artigo da XDA de um redator que migrou para outra ferramenta, e das críticas ao banner de cookies, não puderam ser registrados.",
+          "O que o artigo da XDA diz sobre o banner de cookies, os cookies de análise e o tracking pixel é o relato do redator e não foi verificado de forma independente.",
           "Sede: o único endereço em fonte primária é um endereço postal em San Francisco, e a política chama o fabricante de empresa dos EUA.",
           "Número de forks e avaliação em lojas: não disponíveis."
         ]
@@ -2357,7 +2309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "alternatives",
         "title": "Alternativas",
         "content": [
-          "**As fontes citam quatro alternativas, mas a PromptQuorum não as comparou na prática.** As notas abaixo apenas repetem o que as fontes dizem."
+          "**As fontes citam duas alternativas, mas a PromptQuorum não as comparou na prática.** As notas abaixo apenas repetem o que as fontes dizem."
         ],
         "columns": [
           "Alternativa",
@@ -2370,16 +2322,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             "Alternativa": "Adobe Acrobat",
-            "O que as fontes dizem": "Editor de PDF comercial que, segundo os analistas, o Stirling PDF substitui."
+            "O que as fontes dizem": "Editor de PDF comercial que, segundo os revisores, o Stirling PDF substitui."
           },
-          {
-            "Alternativa": "UPDF",
-            "O que as fontes dizem": "Vende um produto de PDF concorrente e publica uma análise do Stirling PDF; essa análise vem de uma parte com interesse comercial."
-          },
-          {
-            "Alternativa": "SwifDoo PDF",
-            "O que as fontes dizem": "Vende um produto de PDF concorrente e publica uma análise do Stirling PDF; essa análise vem de uma parte com interesse comercial."
-          }
         ]
       },
       "faq": {
@@ -2563,7 +2507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF محرر PDF ومنصة لمعالجة المستندات تشغّلها بنفسك، على سطح المكتب أو على خادم.** الجهة المطوِّرة هي Stirling PDF Inc.، وتصف نفسها في سياسة الخصوصية بأنها شركة أمريكية.",
           "بحسب الجهة المطوِّرة، يقدّم أكثر من 60 أداة على سطح المكتب أو الخادم، منها التحرير والدمج والتقسيم والتوقيع وحجب البيانات والتحويل وOCR والضغط. يذكر ملف README أكثر من 50 أداة، لذا فإن عدد الأدوات غير متسق بين المصادر.",
           "إلى جانب المحرر، تصف الجهة المطوِّرة مسارات عمل بلا كتابة شيفرة (no-code pipelines) وواجهة REST API وواجهة MCP وwebhooks ومساعداً يعمل بالذكاء الاصطناعي. يوصف المشروع بأنه مفتوح النواة: يربط README بعروض Server Plan وEnterprise.",
-          "توجد تغطية مستقلة. نشر كل من Pocket-lint وXDA Developers مقالات إيجابية، ثم انتقل أحد كتّاب XDA لاحقاً إلى مجموعة أدوات أخرى مستضافة ذاتياً مشيراً إلى مخاوف تتعلق بالخصوصية، رغم أن التفاصيل غير موجودة في ملاحظاتنا. انظر [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) لمراجعة إيجابية.",
+          "التغطية المستقلة متباينة. نشر [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review) مراجعة إيجابية. ونشر XDA Developers مقالاً بصيغة المتكلم بعنوان “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it” (5 نوفمبر 2025)، يقول فيه الكاتب إنه انتقل إلى BentoPDF بعد مخاوف بشأن شريط ملفات تعريف الارتباط وملفات تعريف ارتباط التحليلات و«tracking pixel» كانت، بحسب المقال، مفعّلة افتراضياً ثم صارت اختيارية لاحقاً. لم تتحقق PromptQuorum من هذه الادعاءات؛ وسياسة الخصوصية لدى الجهة المطوّرة هي المصدر الأولي.",
           "هذه المراجعة ليست تجربة عملية. هي تلخّص صفحات الجهة المطوِّرة والمصادر العامة، وتُنسب أقوال المطوِّر إليه صراحةً."
         ]
       },
@@ -2696,7 +2640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "اشتراط الحساب في نسختي سطح المكتب وDocker: غير مذكور.",
           "رقم '30M+ downloads' ادعاء من المطوِّر دون تأكيد مستقل.",
           "خدمة مستضافة: يُقال إن شروط الخدمة تذكر واحدة، لكن لم يُتحقق من أي تفاصيل.",
-          "تعذّر تسجيل تفاصيل مقال XDA لكاتب انتقل إلى أداة أخرى، وتفاصيل انتقادات شريط ملفات تعريف الارتباط.",
+          "ما ورد في مقال XDA عن شريط ملفات تعريف الارتباط وملفات تعريف ارتباط التحليلات وtracking pixel هو رواية الكاتب ولم يُتحقق منه بشكل مستقل.",
           "المقر الرئيسي: العنوان الوحيد في مصدر أساسي هو عنوان بريدي في سان فرانسيسكو، وتصف السياسة الجهة المطوِّرة بأنها شركة أمريكية.",
           "عدد الـ forks وتقييم المتجر: غير متاحين."
         ]
@@ -2705,7 +2649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "alternatives",
         "title": "البدائل",
         "content": [
-          "**تسمّي المصادر أربعة بدائل، لكن PromptQuorum لم تقارنها عملياً.** الملاحظات أدناه تعيد ذكر ما تقوله المصادر فقط."
+          "**تسمّي المصادر بديلين، لكن PromptQuorum لم تقارنها عملياً.** الملاحظات أدناه تعيد ذكر ما تقوله المصادر فقط."
         ],
         "columns": [
           "البديل",
@@ -2720,14 +2664,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "البديل": "Adobe Acrobat",
             "ما تذكره المصادر": "محرر PDF تجاري يقول المراجعون إن Stirling PDF يحل محله."
           },
-          {
-            "البديل": "UPDF",
-            "ما تذكره المصادر": "يبيع منتج PDF منافساً وينشر مراجعة لـ Stirling PDF؛ فهذه المراجعة صادرة عن جهة لها مصلحة تجارية."
-          },
-          {
-            "البديل": "SwifDoo PDF",
-            "ما تذكره المصادر": "يبيع منتج PDF منافساً وينشر مراجعة لـ Stirling PDF؛ فهذه المراجعة صادرة عن جهة لها مصلحة تجارية."
-          }
         ]
       },
       "faq": {
@@ -2911,7 +2847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Stirling PDF는 데스크톱이나 서버에서 직접 운영하는 PDF 편집기이자 문서 처리 플랫폼입니다.** 제작사는 Stirling PDF Inc.이며, 개인정보 처리방침에서 스스로를 미국 기업이라고 밝히고 있습니다.",
           "제작사에 따르면 데스크톱 또는 서버에서 편집, 병합, 분할, 서명, 가림 처리, 변환, OCR, 압축 등 60개 이상의 도구를 제공합니다. README에는 50개 이상이라고 되어 있어, 출처마다 도구 수가 일치하지 않습니다.",
           "제작사는 편집기 외에도 노코드 파이프라인, REST API, MCP 인터페이스, 웹훅, AI 어시스턴트를 설명합니다. 프로젝트는 오픈코어로 소개되며, README에는 Server Plan과 Enterprise 상품 링크가 있습니다.",
-          "독립적인 보도도 있습니다. Pocket-lint와 XDA Developers가 호의적인 기사를 게재했고, XDA의 한 필자는 이후 개인정보 우려를 이유로 다른 셀프 호스팅 툴킷으로 옮겼지만, 자세한 내용은 저희 메모에 없습니다. 긍정적인 리뷰 하나는 [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)에서 볼 수 있습니다.",
+          "독립적인 보도는 엇갈립니다. [Pocket-lint](https://www.pocket-lint.com/i-replaced-adobe-acrobat-with-free-pdf-editor/?utm_source=promptquorum.com&utm_medium=referral&utm_campaign=app-review)는 긍정적인 리뷰를 게재했습니다. XDA Developers는 1인칭 기사 “I ditched Stirling PDF for this self-hosted PDF toolkit, and I don't regret it”(2025년 11월 5일)를 게재했으며, 필자는 쿠키 배너와 기사에 따르면 기본으로 켜져 있다가 나중에 선택 사항이 된 분석 쿠키 및 “tracking pixel”에 대한 우려로 BentoPDF로 옮겼다고 밝힙니다. PromptQuorum은 이러한 주장을 확인하지 않았으며, 제조사의 개인정보 처리방침이 1차 출처입니다.",
           "이 리뷰는 직접 사용해 본 결과가 아닙니다. 제작사 페이지와 공개 자료를 정리한 것이며, 제작사의 설명은 그렇게 표시했습니다."
         ]
       },
@@ -3044,7 +2980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "데스크톱 및 Docker 버전의 계정 요구 여부: 명시되어 있지 않습니다.",
           "'다운로드 3,000만 회 이상'이라는 수치는 독립적인 확인이 없는 제작사의 주장입니다.",
           "호스팅 서비스: 서비스 약관에 언급이 있다고 알려져 있으나 세부 내용은 확인하지 못했습니다.",
-          "다른 도구로 옮긴 필자의 XDA 기사 내용과 쿠키 배너 비판의 세부 내용은 기록하지 못했습니다.",
+          "XDA 기사의 쿠키 배너, 분석 쿠키, tracking pixel에 관한 내용은 필자의 설명이며 독립적으로 검증하지 않았습니다.",
           "본사 소재지: 1차 출처에서 확인된 주소는 샌프란시스코 우편 주소뿐이며, 처리방침은 제작사를 미국 기업이라고 밝힙니다.",
           "포크 수와 스토어 평점: 확인할 수 없었습니다."
         ]
@@ -3053,7 +2989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "alternatives",
         "title": "대안",
         "content": [
-          "**출처에는 네 가지 대안이 나오지만 PromptQuorum은 직접 비교해 보지 않았습니다.** 아래 내용은 출처의 설명을 그대로 옮긴 것입니다."
+          "**출처에는 두 가지 대안이 나오지만 PromptQuorum은 직접 비교해 보지 않았습니다.** 아래 내용은 출처의 설명을 그대로 옮긴 것입니다."
         ],
         "columns": [
           "대안",
@@ -3068,14 +3004,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "대안": "Adobe Acrobat",
             "출처에 나온 내용": "리뷰어들이 Stirling PDF로 대체할 수 있다고 말하는 상용 PDF 편집기."
           },
-          {
-            "대안": "UPDF",
-            "출처에 나온 내용": "경쟁 PDF 제품을 판매하며 Stirling PDF 리뷰를 게재합니다. 해당 리뷰는 상업적 이해관계가 있는 쪽에서 작성한 것입니다."
-          },
-          {
-            "대안": "SwifDoo PDF",
-            "출처에 나온 내용": "경쟁 PDF 제품을 판매하며 Stirling PDF 리뷰를 게재합니다. 해당 리뷰는 상업적 이해관계가 있는 쪽에서 작성한 것입니다."
-          }
         ]
       },
       "faq": {
