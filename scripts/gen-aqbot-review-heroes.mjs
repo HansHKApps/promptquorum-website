@@ -19,6 +19,9 @@ new Function('module', 'exports', 'require', js)(mod, mod.exports, () => ({}))
 const article = mod.exports.article
 const stripMd = (s) => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\s+/g, ' ').trim()
 
+// Arabic poster headline: shortened from the article title so no line starts or ends on a stranded particle/construct word.
+const AR_POSTER_TITLE = 'مراجعة AQBot: عميل ذكاء اصطناعي لسطح المكتب'
+
 const L = {
   en: { hl: ["Open-source desktop AI client", "Agents, MCP and document chat", "Local API gateway for coding tools"], price: "Price", priceV: "Free", lic: "License", licV: "AGPL-3.0", plat: "Runs on", platV: "macOS, Windows, Linux", footer: "PromptQuorum Guide" },
   de: { hl: ["Quelloffener Desktop-KI-Client", "Agenten, MCP und Dokumenten-Chat", "Lokales API-Gateway für Coding-Tools"], price: "Preis", priceV: "Kostenlos", lic: "Lizenz", licV: "AGPL-3.0", plat: "Läuft auf", platV: "macOS, Windows, Linux", footer: "PromptQuorum-Leitfaden" },
@@ -39,7 +42,7 @@ for (const lang of Object.keys(L)) {
   const t = L[lang]
   const spec = {
     lang,
-    title: stripMd(article[lang].title),
+    title: AR_POSTER_TITLE && lang === 'ar' ? AR_POSTER_TITLE : stripMd(article[lang].title),
     highlights: t.hl,
     facts: [
       { label: t.price, value: t.priceV },

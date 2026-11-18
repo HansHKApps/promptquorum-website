@@ -257,6 +257,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'How often does AQBot update?',
             a: 'GitHub lists version 0.0.163 on 9 October 2026, 0.0.164 on 19 October 2026 and 0.0.165 on 26 October 2026, and the last commit on the main branch was on 31 October 2026.',
           },
+          {
+            q: 'Which systems does AQBot run on, and why does macOS show a warning?',
+            a: 'The v0.0.165 release lists DMG images for macOS on Apple silicon and Intel, setup EXE and MSI installers and portable ZIP files for Windows 10 and 11 on x64 and ARM64, an AppImage for Linux on x64, and DEB and RPM packages for Linux on x64 and ARM64. The maker says the macOS build is signed with the project’s own certificate, not an Apple Developer ID, so macOS may report the app as damaged or from an unverified developer; its instructions are to Control-click AQBot.app and choose Open. Do this only if you trust where you downloaded the file.',
+          },
+          {
+            q: 'Which AI providers can I connect to AQBot?',
+            a: 'According to the maker, chat connects to OpenAI, Claude, Gemini, DeepSeek, Qwen, Zhipu AI, xAI, AWS Bedrock and any OpenAI-compatible endpoint, including local servers such as Ollama. You add your own API key and fetch the provider’s model list. PromptQuorum did not test any provider connection.',
+          },
+          {
+            q: 'Where does AQBot store my data, and is it private?',
+            a: 'According to the maker, ~/.aqbot holds the database, the encryption key, the vector store and TLS files, and ~/Documents/aqbot holds images, attachments and backups; API keys are encrypted with AES-256 using a local master key. PromptQuorum found no privacy policy on the website and did not inspect network traffic, so it cannot confirm that data stays on your computer, and it found no statement on whether usage statistics are sent.',
+          },
+          {
+            q: 'Is AQBot’s Agent mode sandboxed?',
+            a: 'No, according to the maker’s FAQ: the folder you choose is the process’s starting working directory, not a filesystem sandbox. Agent mode can read and edit files and run commands, and the permission modes are ask every time, auto-accept edits and full access. PromptQuorum did not test how the approvals behave, so start with a test folder.',
+          },
+          {
+            q: 'Does AQBot support MCP?',
+            a: 'According to the maker, yes: AQBot runs MCP servers over stdio, SSE or StreamableHTTP and includes built-in tools such as @aqbot/fetch. A separate ACP workbench drives external agents that speak the Agent Client Protocol, such as Codex, Claude Agent, Gemini CLI, Cline and OpenCode. PromptQuorum did not test any of this.',
+          },
+          {
+            q: 'Can I chat with my own documents in AQBot?',
+            a: 'According to the maker, yes: you can index private files into a local sqlite-vec knowledge base and attach files, search results and memories to the context. Web search is available through Tavily, Exa, Zhipu or Bocha. PromptQuorum did not check retrieval quality or where documents are processed when they are indexed.',
+          },
         ],
       },
       verdict: {
@@ -538,6 +562,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Wie oft wird AQBot aktualisiert?',
             a: 'GitHub listet Version 0.0.163 am 9. Oktober 2026, 0.0.164 am 19. Oktober 2026 und 0.0.165 am 26. Oktober 2026; der letzte Commit auf dem Hauptzweig stammt vom 31. Oktober 2026.',
+          },
+          {
+            q: 'Auf welchen Systemen läuft AQBot, und warum zeigt macOS eine Warnung?',
+            a: 'Die Version v0.0.165 listet DMG-Images für macOS auf Apple Silicon und Intel, Setup-EXE- und MSI-Installer sowie portable ZIP-Dateien für Windows 10 und 11 auf x64 und ARM64, ein AppImage für Linux auf x64 sowie DEB- und RPM-Pakete für Linux auf x64 und ARM64. Laut Hersteller ist der macOS-Build mit dem eigenen Zertifikat des Projekts signiert, nicht mit einer Apple Developer ID; daher meldet macOS die App eventuell als beschädigt oder von einem nicht verifizierten Entwickler. Die Anleitung des Herstellers lautet: AQBot.app mit gedrückter Control-Taste anklicken und „Öffnen“ wählen. Tun Sie das nur, wenn Sie der Quelle des Downloads vertrauen.',
+          },
+          {
+            q: 'Welche KI-Anbieter kann ich mit AQBot verbinden?',
+            a: 'Laut Hersteller verbindet sich der Chat mit OpenAI, Claude, Gemini, DeepSeek, Qwen, Zhipu AI, xAI, AWS Bedrock und jedem OpenAI-kompatiblen Endpunkt, auch mit lokalen Servern wie Ollama. Sie tragen Ihren eigenen API-Schlüssel ein und rufen die Modellliste des Anbieters ab. PromptQuorum hat keine Anbieterverbindung getestet.',
+          },
+          {
+            q: 'Wo speichert AQBot meine Daten, und sind sie privat?',
+            a: 'Laut Hersteller liegen in ~/.aqbot die Datenbank, der Verschlüsselungsschlüssel, der Vektorspeicher und TLS-Dateien, in ~/Documents/aqbot Bilder, Anhänge und Backups; API-Schlüssel werden mit AES-256 und einem lokalen Hauptschlüssel verschlüsselt. PromptQuorum fand auf der Website keine Datenschutzerklärung und hat den Netzwerkverkehr nicht untersucht; es kann daher nicht bestätigen, dass die Daten auf Ihrem Rechner bleiben, und fand keine Angabe dazu, ob Nutzungsstatistiken gesendet werden.',
+          },
+          {
+            q: 'Läuft der Agent-Modus von AQBot in einer Sandbox?',
+            a: 'Nein, laut FAQ des Herstellers: Der gewählte Ordner ist das Startverzeichnis des Prozesses, keine Dateisystem-Sandbox. Der Agent-Modus kann Dateien lesen und bearbeiten und Befehle ausführen; die Berechtigungsmodi sind „jedes Mal fragen“, „Änderungen automatisch akzeptieren“ und „voller Zugriff“. PromptQuorum hat nicht getestet, wie sich die Freigaben verhalten; beginnen Sie daher mit einem Testordner.',
+          },
+          {
+            q: 'Unterstützt AQBot MCP?',
+            a: 'Laut Hersteller ja: AQBot führt MCP-Server über stdio, SSE oder StreamableHTTP aus und enthält eingebaute Werkzeuge wie @aqbot/fetch. Eine separate ACP-Arbeitsumgebung steuert externe Agenten, die das Agent Client Protocol sprechen, etwa Codex, Claude Agent, Gemini CLI, Cline und OpenCode. PromptQuorum hat nichts davon getestet.',
+          },
+          {
+            q: 'Kann ich in AQBot mit meinen eigenen Dokumenten chatten?',
+            a: 'Laut Hersteller ja: Sie können private Dateien in eine lokale sqlite-vec-Wissensbasis indizieren und Dateien, Suchergebnisse und Erinnerungen an den Kontext anhängen. Die Websuche läuft über Tavily, Exa, Zhipu oder Bocha. PromptQuorum hat weder die Trefferqualität geprüft noch, wo Dokumente beim Indizieren verarbeitet werden.',
           },
         ],
       },
@@ -821,6 +869,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'À quelle fréquence AQBot est-il mis à jour ?',
             a: 'GitHub liste la version 0.0.163 le 9 octobre 2026, la 0.0.164 le 19 octobre 2026 et la 0.0.165 le 26 octobre 2026, et le dernier commit sur la branche principale date du 31 octobre 2026.',
           },
+          {
+            q: 'Sur quels systèmes AQBot fonctionne-t-il, et pourquoi macOS affiche-t-il un avertissement ?',
+            a: 'La version v0.0.165 propose des images DMG pour macOS sur Apple silicon et Intel, des installateurs EXE et MSI et des fichiers ZIP portables pour Windows 10 et 11 en x64 et ARM64, un AppImage pour Linux en x64, ainsi que des paquets DEB et RPM pour Linux en x64 et ARM64. Selon l’éditeur, la version macOS est signée avec le certificat propre du projet, et non avec un Apple Developer ID ; macOS peut donc signaler l’application comme endommagée ou provenant d’un développeur non vérifié. La procédure indiquée est de faire un Control-clic sur AQBot.app puis de choisir Ouvrir. Ne le faites que si vous faites confiance à la source du téléchargement.',
+          },
+          {
+            q: 'Quels fournisseurs d’IA puis-je connecter à AQBot ?',
+            a: 'Selon l’éditeur, la discussion se connecte à OpenAI, Claude, Gemini, DeepSeek, Qwen, Zhipu AI, xAI, AWS Bedrock et à tout point d’accès compatible OpenAI, y compris des serveurs locaux comme Ollama. Vous ajoutez votre propre clé API et récupérez la liste des modèles du fournisseur. PromptQuorum n’a testé aucune connexion à un fournisseur.',
+          },
+          {
+            q: 'Où AQBot stocke-t-il mes données, et sont-elles privées ?',
+            a: 'Selon l’éditeur, ~/.aqbot contient la base de données, la clé de chiffrement, le magasin vectoriel et les fichiers TLS, et ~/Documents/aqbot contient les images, les pièces jointes et les sauvegardes ; les clés API sont chiffrées en AES-256 avec une clé maîtresse locale. PromptQuorum n’a trouvé aucune politique de confidentialité sur le site et n’a pas inspecté le trafic réseau ; il ne peut donc pas confirmer que les données restent sur votre ordinateur, et n’a trouvé aucune indication sur l’envoi éventuel de statistiques d’usage.',
+          },
+          {
+            q: 'Le mode Agent d’AQBot est-il isolé dans un bac à sable ?',
+            a: 'Non, selon la FAQ de l’éditeur : le dossier que vous choisissez est le répertoire de travail de départ du processus, et non un bac à sable du système de fichiers. Le mode Agent peut lire et modifier des fichiers et exécuter des commandes ; les modes d’autorisation sont « demander à chaque fois », « accepter automatiquement les modifications » et « accès complet ». PromptQuorum n’a pas testé le comportement des validations ; commencez donc par un dossier de test.',
+          },
+          {
+            q: 'AQBot prend-il en charge MCP ?',
+            a: 'Selon l’éditeur, oui : AQBot exécute des serveurs MCP via stdio, SSE ou StreamableHTTP et inclut des outils intégrés comme @aqbot/fetch. Un atelier ACP distinct pilote des agents externes compatibles avec l’Agent Client Protocol, comme Codex, Claude Agent, Gemini CLI, Cline et OpenCode. PromptQuorum n’a rien testé de tout cela.',
+          },
+          {
+            q: 'Puis-je discuter avec mes propres documents dans AQBot ?',
+            a: 'Selon l’éditeur, oui : vous pouvez indexer des fichiers privés dans une base de connaissances locale sqlite-vec et joindre des fichiers, des résultats de recherche et des souvenirs au contexte. La recherche web passe par Tavily, Exa, Zhipu ou Bocha. PromptQuorum n’a vérifié ni la qualité de la recherche documentaire ni l’endroit où les documents sont traités lors de l’indexation.',
+          },
         ],
       },
       verdict: {
@@ -1102,6 +1174,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Cada cuánto se actualiza AQBot?',
             a: 'GitHub lista la versión 0.0.163 el 9 de octubre de 2026, la 0.0.164 el 19 de octubre de 2026 y la 0.0.165 el 26 de octubre de 2026, y el último commit de la rama principal es del 31 de octubre de 2026.',
+          },
+          {
+            q: '¿En qué sistemas funciona AQBot y por qué macOS muestra una advertencia?',
+            a: 'La versión v0.0.165 incluye imágenes DMG para macOS en Apple silicon e Intel, instaladores EXE y MSI y archivos ZIP portátiles para Windows 10 y 11 en x64 y ARM64, un AppImage para Linux en x64, y paquetes DEB y RPM para Linux en x64 y ARM64. Según el desarrollador, la versión de macOS está firmada con el certificado propio del proyecto, no con un Apple Developer ID, por lo que macOS puede indicar que la app está dañada o es de un desarrollador no verificado. Sus instrucciones son hacer Control-clic en AQBot.app y elegir Abrir. Hazlo solo si confías en el origen de la descarga.',
+          },
+          {
+            q: '¿Qué proveedores de IA puedo conectar a AQBot?',
+            a: 'Según el desarrollador, el chat se conecta a OpenAI, Claude, Gemini, DeepSeek, Qwen, Zhipu AI, xAI, AWS Bedrock y cualquier endpoint compatible con OpenAI, incluidos servidores locales como Ollama. Añades tu propia clave de API y obtienes la lista de modelos del proveedor. PromptQuorum no probó ninguna conexión con proveedores.',
+          },
+          {
+            q: '¿Dónde guarda AQBot mis datos y son privados?',
+            a: 'Según el desarrollador, ~/.aqbot contiene la base de datos, la clave de cifrado, el almacén vectorial y los archivos TLS, y ~/Documents/aqbot contiene imágenes, adjuntos y copias de seguridad; las claves de API se cifran con AES-256 mediante una clave maestra local. PromptQuorum no encontró una política de privacidad en el sitio web y no inspeccionó el tráfico de red, por lo que no puede confirmar que los datos se queden en tu equipo, y tampoco encontró ninguna indicación de si se envían estadísticas de uso.',
+          },
+          {
+            q: '¿El modo Agente de AQBot funciona en un entorno aislado?',
+            a: 'No, según las preguntas frecuentes del desarrollador: la carpeta que eliges es el directorio de trabajo inicial del proceso, no un entorno aislado del sistema de archivos. El modo Agente puede leer y editar archivos y ejecutar comandos; los modos de permiso son preguntar siempre, aceptar ediciones automáticamente y acceso total. PromptQuorum no probó cómo se comportan las aprobaciones, así que empieza con una carpeta de prueba.',
+          },
+          {
+            q: '¿Admite AQBot MCP?',
+            a: 'Según el desarrollador, sí: AQBot ejecuta servidores MCP mediante stdio, SSE o StreamableHTTP e incluye herramientas integradas como @aqbot/fetch. Un banco de trabajo ACP aparte controla agentes externos que hablan el Agent Client Protocol, como Codex, Claude Agent, Gemini CLI, Cline y OpenCode. PromptQuorum no probó nada de esto.',
+          },
+          {
+            q: '¿Puedo chatear con mis propios documentos en AQBot?',
+            a: 'Según el desarrollador, sí: puedes indexar archivos privados en una base de conocimiento local sqlite-vec y adjuntar archivos, resultados de búsqueda y recuerdos al contexto. La búsqueda web está disponible mediante Tavily, Exa, Zhipu o Bocha. PromptQuorum no comprobó la calidad de la recuperación ni dónde se procesan los documentos al indexarlos.',
           },
         ],
       },
@@ -1385,6 +1481,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Com que frequência o AQBot é atualizado?',
             a: 'O GitHub lista a versão 0.0.163 em 9 de outubro de 2026, a 0.0.164 em 19 de outubro de 2026 e a 0.0.165 em 26 de outubro de 2026, e o último commit da branch principal é de 31 de outubro de 2026.',
           },
+          {
+            q: 'Em quais sistemas o AQBot funciona e por que o macOS mostra um aviso?',
+            a: 'A versão v0.0.165 lista imagens DMG para macOS em Apple silicon e Intel, instaladores EXE e MSI e arquivos ZIP portáteis para Windows 10 e 11 em x64 e ARM64, um AppImage para Linux em x64, e pacotes DEB e RPM para Linux em x64 e ARM64. Segundo o desenvolvedor, a versão para macOS é assinada com o certificado próprio do projeto, não com um Apple Developer ID, então o macOS pode informar que o app está danificado ou é de um desenvolvedor não verificado. As instruções dele são clicar no AQBot.app com a tecla Control pressionada e escolher Abrir. Faça isso somente se você confiar na origem do download.',
+          },
+          {
+            q: 'Quais provedores de IA posso conectar ao AQBot?',
+            a: 'Segundo o desenvolvedor, o chat se conecta a OpenAI, Claude, Gemini, DeepSeek, Qwen, Zhipu AI, xAI, AWS Bedrock e a qualquer endpoint compatível com OpenAI, incluindo servidores locais como o Ollama. Você adiciona sua própria chave de API e busca a lista de modelos do provedor. A PromptQuorum não testou nenhuma conexão com provedores.',
+          },
+          {
+            q: 'Onde o AQBot guarda meus dados e eles são privados?',
+            a: 'Segundo o desenvolvedor, ~/.aqbot guarda o banco de dados, a chave de criptografia, o armazenamento vetorial e os arquivos TLS, e ~/Documents/aqbot guarda imagens, anexos e backups; as chaves de API são criptografadas com AES-256 usando uma chave mestra local. A PromptQuorum não encontrou política de privacidade no site e não inspecionou o tráfego de rede, então não pode confirmar que os dados ficam no seu computador, e também não achou nenhuma informação sobre o envio de estatísticas de uso.',
+          },
+          {
+            q: 'O modo Agente do AQBot roda em um ambiente isolado?',
+            a: 'Não, segundo o FAQ do desenvolvedor: a pasta que você escolhe é o diretório de trabalho inicial do processo, não um sandbox do sistema de arquivos. O modo Agente pode ler e editar arquivos e executar comandos; os modos de permissão são perguntar sempre, aceitar edições automaticamente e acesso total. A PromptQuorum não testou como as aprovações se comportam, então comece com uma pasta de teste.',
+          },
+          {
+            q: 'O AQBot oferece suporte a MCP?',
+            a: 'Segundo o desenvolvedor, sim: o AQBot executa servidores MCP por stdio, SSE ou StreamableHTTP e inclui ferramentas integradas como @aqbot/fetch. Uma bancada ACP separada controla agentes externos que falam o Agent Client Protocol, como Codex, Claude Agent, Gemini CLI, Cline e OpenCode. A PromptQuorum não testou nada disso.',
+          },
+          {
+            q: 'Posso conversar com meus próprios documentos no AQBot?',
+            a: 'Segundo o desenvolvedor, sim: você pode indexar arquivos privados em uma base de conhecimento local sqlite-vec e anexar arquivos, resultados de busca e memórias ao contexto. A busca na web está disponível por meio de Tavily, Exa, Zhipu ou Bocha. A PromptQuorum não verificou a qualidade da recuperação nem onde os documentos são processados ao serem indexados.',
+          },
         ],
       },
       verdict: {
@@ -1666,6 +1786,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'AQBotはどのくらいの頻度で更新されますか？',
             a: 'GitHubには、2026年10月9日にバージョン0.0.163、10月19日に0.0.164、10月26日に0.0.165が載っており、メインブランチの最新コミットは2026年10月31日です。',
+          },
+          {
+            q: 'AQBotはどのシステムで動きますか？ macOSで警告が出るのはなぜですか？',
+            a: 'v0.0.165のリリースには、Apple siliconとIntel向けのmacOS用DMG、x64とARM64のWindows 10/11向けのセットアップEXEとMSIインストーラーおよびポータブルZIP、x64のLinux向けAppImage、x64とARM64のLinux向けDEBとRPMパッケージが載っています。開発元によれば、macOS版はApple Developer IDではなくプロジェクト独自の証明書で署名されているため、macOSがアプリを「壊れている」または「未確認の開発元」と表示することがあります。開発元の案内では、AQBot.appをControlキーを押しながらクリックして「開く」を選びます。ダウンロード元を信頼できる場合にのみ行ってください。',
+          },
+          {
+            q: 'AQBotにはどのAIプロバイダーを接続できますか？',
+            a: '開発元によれば、チャットはOpenAI、Claude、Gemini、DeepSeek、Qwen、Zhipu AI、xAI、AWS Bedrock、およびOllamaなどのローカルサーバーを含むOpenAI互換エンドポイントに接続できます。自分のAPIキーを追加し、プロバイダーのモデル一覧を取得します。PromptQuorumはプロバイダーへの接続を試していません。',
+          },
+          {
+            q: 'AQBotはデータをどこに保存しますか？ プライバシーは守られますか？',
+            a: '開発元によれば、~/.aqbotにはデータベース、暗号化キー、ベクトルストア、TLSファイルが、~/Documents/aqbotには画像、添付ファイル、バックアップが保存されます。APIキーはローカルのマスターキーを使ってAES-256で暗号化されます。PromptQuorumはウェブサイトにプライバシーポリシーを見つけられず、ネットワーク通信も調べていないため、データがパソコン内にとどまるかは確認できず、利用統計が送信されるかどうかの記述も見つけられませんでした。',
+          },
+          {
+            q: 'AQBotのエージェントモードはサンドボックス内で動きますか？',
+            a: '開発元のFAQによれば、いいえ。選んだフォルダーはプロセスの開始時の作業ディレクトリであり、ファイルシステムのサンドボックスではありません。エージェントモードはファイルの読み取りと編集、コマンドの実行ができ、権限モードは「毎回確認」「編集を自動承認」「フルアクセス」です。PromptQuorumは承認の動作を試していないため、まずはテスト用のフォルダーで始めてください。',
+          },
+          {
+            q: 'AQBotはMCPに対応していますか？',
+            a: '開発元によれば、対応しています。AQBotはstdio、SSE、StreamableHTTPでMCPサーバーを実行し、@aqbot/fetchなどの組み込みツールを備えています。別のACPワークベンチでは、Agent Client Protocolに対応する外部エージェント（Codex、Claude Agent、Gemini CLI、Cline、OpenCodeなど）を操作できます。PromptQuorumはこれらを試していません。',
+          },
+          {
+            q: 'AQBotで自分のドキュメントとチャットできますか？',
+            a: '開発元によれば、できます。非公開のファイルをローカルのsqlite-vecナレッジベースにインデックスし、ファイル、検索結果、メモリをコンテキストに添付できます。ウェブ検索はTavily、Exa、Zhipu、Bochaで利用できます。PromptQuorumは検索品質も、インデックス時にドキュメントがどこで処理されるかも確認していません。',
           },
         ],
       },
@@ -1949,6 +2093,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'AQBot 多久更新一次？',
             a: 'GitHub 列出的版本有：2026年10月9日的 0.0.163、10月19日的 0.0.164 和 10月26日的 0.0.165，主分支最近一次提交在 2026年10月31日。',
           },
+          {
+            q: 'AQBot 可以在哪些系统上运行？为什么 macOS 会显示警告？',
+            a: 'v0.0.165 版本列出了面向 Apple silicon 和 Intel 的 macOS DMG 镜像，面向 x64 和 ARM64 版 Windows 10 与 11 的安装 EXE、MSI 安装包和便携 ZIP 文件，面向 x64 Linux 的 AppImage，以及面向 x64 和 ARM64 Linux 的 DEB 和 RPM 包。据开发者称，macOS 版本使用项目自己的证书签名，而非 Apple Developer ID，因此 macOS 可能提示应用已损坏或来自未验证的开发者；其说明是按住 Control 键点按 AQBot.app 并选择“打开”。仅当你信任下载来源时才这样做。',
+          },
+          {
+            q: '可以把哪些 AI 服务商连接到 AQBot？',
+            a: '据开发者称，对话可连接 OpenAI、Claude、Gemini、DeepSeek、Qwen、Zhipu AI、xAI、AWS Bedrock，以及任何兼容 OpenAI 的端点，包括 Ollama 等本地服务器。你添加自己的 API 密钥并获取该服务商的模型列表。PromptQuorum 没有测试任何服务商连接。',
+          },
+          {
+            q: 'AQBot 把我的数据存在哪里？是私密的吗？',
+            a: '据开发者称，~/.aqbot 存放数据库、加密密钥、向量库和 TLS 文件，~/Documents/aqbot 存放图片、附件和备份；API 密钥使用本地主密钥以 AES-256 加密。PromptQuorum 在网站上没有找到隐私政策，也没有检查网络流量，因此无法确认数据是否只留在你的电脑上，也没有找到关于是否发送使用统计的说明。',
+          },
+          {
+            q: 'AQBot 的 Agent 模式在沙盒中运行吗？',
+            a: '据开发者的常见问题，不是：你选择的文件夹只是进程的起始工作目录，而不是文件系统沙盒。Agent 模式可以读取和编辑文件并运行命令，权限模式包括每次询问、自动接受编辑和完全访问。PromptQuorum 没有测试审批的实际表现，因此建议先用测试文件夹。',
+          },
+          {
+            q: 'AQBot 支持 MCP 吗？',
+            a: '据开发者称支持：AQBot 通过 stdio、SSE 或 StreamableHTTP 运行 MCP 服务器，并内置 @aqbot/fetch 等工具。另有独立的 ACP 工作台，可驱动支持 Agent Client Protocol 的外部智能体，如 Codex、Claude Agent、Gemini CLI、Cline 和 OpenCode。PromptQuorum 没有测试其中任何一项。',
+          },
+          {
+            q: '可以在 AQBot 里和自己的文档对话吗？',
+            a: '据开发者称可以：你可以把私人文件索引到本地 sqlite-vec 知识库，并把文件、搜索结果和记忆附加到上下文中。网页搜索可通过 Tavily、Exa、Zhipu 或 Bocha 使用。PromptQuorum 没有检查检索质量，也没有确认文档在建立索引时在哪里处理。',
+          },
         ],
       },
       verdict: {
@@ -2231,6 +2399,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'AQBot은 얼마나 자주 업데이트됩니까?',
             a: 'GitHub에는 2026년 10월 9일에 0.0.163, 10월 19일에 0.0.164, 10월 26일에 0.0.165 버전이 올라와 있으며, 메인 브랜치의 마지막 커밋은 2026년 10월 31일입니다.',
           },
+          {
+            q: 'AQBot은 어떤 시스템에서 실행되며, macOS에 경고가 뜨는 이유는 무엇입니까?',
+            a: 'v0.0.165 릴리스에는 Apple silicon과 Intel용 macOS DMG 이미지, x64와 ARM64 Windows 10·11용 설치 EXE와 MSI 설치 파일 및 포터블 ZIP 파일, x64 Linux용 AppImage, x64와 ARM64 Linux용 DEB 및 RPM 패키지가 올라와 있습니다. 개발사에 따르면 macOS 빌드는 Apple Developer ID가 아닌 프로젝트 자체 인증서로 서명되어 있어, macOS가 앱이 손상되었거나 확인되지 않은 개발자의 앱이라고 알릴 수 있습니다. 개발사의 안내는 Control 키를 누른 채 AQBot.app을 클릭하고 열기를 선택하는 것입니다. 다운로드한 출처를 신뢰할 때만 그렇게 하십시오.',
+          },
+          {
+            q: 'AQBot에 어떤 AI 제공업체를 연결할 수 있습니까?',
+            a: '개발사에 따르면 채팅은 OpenAI, Claude, Gemini, DeepSeek, Qwen, Zhipu AI, xAI, AWS Bedrock와 Ollama 같은 로컬 서버를 포함한 모든 OpenAI 호환 엔드포인트에 연결됩니다. 직접 발급한 API 키를 추가하고 제공업체의 모델 목록을 가져옵니다. PromptQuorum은 제공업체 연결을 테스트하지 않았습니다.',
+          },
+          {
+            q: 'AQBot은 내 데이터를 어디에 저장하며 비공개입니까?',
+            a: '개발사에 따르면 ~/.aqbot에는 데이터베이스, 암호화 키, 벡터 저장소, TLS 파일이, ~/Documents/aqbot에는 이미지, 첨부 파일, 백업이 저장되며, API 키는 로컬 마스터 키로 AES-256 암호화됩니다. PromptQuorum은 웹사이트에서 개인정보 처리방침을 찾지 못했고 네트워크 트래픽도 점검하지 않았으므로 데이터가 컴퓨터에 머무는지 확인할 수 없으며, 사용 통계를 전송하는지에 대한 설명도 찾지 못했습니다.',
+          },
+          {
+            q: 'AQBot의 에이전트 모드는 샌드박스에서 실행됩니까?',
+            a: '개발사 FAQ에 따르면 아닙니다. 선택한 폴더는 프로세스의 시작 작업 디렉터리일 뿐 파일 시스템 샌드박스가 아닙니다. 에이전트 모드는 파일을 읽고 편집하고 명령을 실행할 수 있으며, 권한 모드는 매번 묻기, 편집 자동 수락, 전체 접근입니다. PromptQuorum은 승인이 어떻게 동작하는지 테스트하지 않았으므로 테스트용 폴더로 시작하십시오.',
+          },
+          {
+            q: 'AQBot은 MCP를 지원합니까?',
+            a: '개발사에 따르면 지원합니다. AQBot은 stdio, SSE, StreamableHTTP로 MCP 서버를 실행하며 @aqbot/fetch 같은 내장 도구를 포함합니다. 별도의 ACP 워크벤치는 Agent Client Protocol을 사용하는 외부 에이전트(Codex, Claude Agent, Gemini CLI, Cline, OpenCode 등)를 구동합니다. PromptQuorum은 이 중 어느 것도 테스트하지 않았습니다.',
+          },
+          {
+            q: 'AQBot에서 내 문서와 채팅할 수 있습니까?',
+            a: '개발사에 따르면 가능합니다. 비공개 파일을 로컬 sqlite-vec 지식 베이스에 색인하고 파일, 검색 결과, 메모리를 컨텍스트에 첨부할 수 있습니다. 웹 검색은 Tavily, Exa, Zhipu, Bocha로 사용할 수 있습니다. PromptQuorum은 검색 품질도, 색인 시 문서가 어디에서 처리되는지도 확인하지 않았습니다.',
+          },
         ],
       },
       verdict: {
@@ -2512,6 +2704,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'كم مرة يُحدَّث AQBot؟',
             a: 'يسرد GitHub الإصدار 0.0.163 في 9 أكتوبر 2026، والإصدار 0.0.164 في 19 أكتوبر 2026، والإصدار 0.0.165 في 26 أكتوبر 2026، وكان آخر إيداع على الفرع الرئيسي في 31 أكتوبر 2026.',
+          },
+          {
+            q: 'على أي أنظمة يعمل AQBot، ولماذا يعرض macOS تحذيرًا؟',
+            a: 'يسرد الإصدار v0.0.165 صور DMG لنظام macOS على Apple silicon وIntel، ومثبّتات EXE وMSI وملفات ZIP محمولة لنظام Windows 10 و11 على x64 وARM64، وملف AppImage لنظام Linux على x64، وحزم DEB وRPM لنظام Linux على x64 وARM64. بحسب المطوّر، نسخة macOS موقّعة بشهادة المشروع الخاصة لا بمعرّف Apple Developer ID، لذا قد يبلّغ macOS بأن التطبيق تالف أو من مطوّر غير موثَّق؛ وتعليمات المطوّر هي النقر على AQBot.app مع الضغط على Control ثم اختيار «فتح». افعل ذلك فقط إذا كنت تثق بمصدر تنزيل الملف.',
+          },
+          {
+            q: 'ما مزوّدو الذكاء الاصطناعي الذين يمكنني ربطهم بـ AQBot؟',
+            a: 'بحسب المطوّر، تتصل الدردشة بـ OpenAI وClaude وGemini وDeepSeek وQwen وZhipu AI وxAI وAWS Bedrock وبأي نقطة وصول متوافقة مع OpenAI، بما فيها الخوادم المحلية مثل Ollama. تضيف مفتاح API الخاص بك وتجلب قائمة نماذج المزوّد. لم تختبر PromptQuorum أي اتصال بمزوّد.',
+          },
+          {
+            q: 'أين يخزّن AQBot بياناتي، وهل هي خاصة؟',
+            a: 'بحسب المطوّر، يحتفظ المجلد ~/.aqbot بقاعدة البيانات ومفتاح التشفير ومخزن المتجهات وملفات TLS، ويحتفظ ~/Documents/aqbot بالصور والمرفقات والنسخ الاحتياطية؛ وتُشفَّر مفاتيح API بخوارزمية AES-256 بمفتاح رئيسي محلي. لم تجد PromptQuorum سياسة خصوصية على الموقع ولم تفحص حركة الشبكة، لذا لا تستطيع تأكيد بقاء البيانات على حاسوبك، ولم تجد أي بيان عمّا إذا كانت إحصاءات الاستخدام تُرسل.',
+          },
+          {
+            q: 'هل يعمل وضع الوكيل في AQBot داخل بيئة معزولة؟',
+            a: 'لا، بحسب الأسئلة الشائعة لدى المطوّر: المجلد الذي تختاره هو دليل العمل الابتدائي للعملية، وليس بيئة معزولة لنظام الملفات. يمكن لوضع الوكيل قراءة الملفات وتعديلها وتنفيذ الأوامر، وأوضاع الأذونات هي السؤال في كل مرة وقبول التعديلات تلقائيًا والوصول الكامل. لم تختبر PromptQuorum سلوك الموافقات، لذا ابدأ بمجلد تجريبي.',
+          },
+          {
+            q: 'هل يدعم AQBot بروتوكول MCP؟',
+            a: 'بحسب المطوّر، نعم: يشغّل AQBot خوادم MCP عبر stdio أو SSE أو StreamableHTTP، ويتضمن أدوات مدمجة مثل @aqbot/fetch. وتتحكم بيئة عمل ACP منفصلة في وكلاء خارجيين يتحدثون بروتوكول Agent Client Protocol، مثل Codex وClaude Agent وGemini CLI وCline وOpenCode. لم تختبر PromptQuorum شيئًا من هذا.',
+          },
+          {
+            q: 'هل يمكنني الدردشة مع مستنداتي الخاصة في AQBot؟',
+            a: 'بحسب المطوّر، نعم: يمكنك فهرسة الملفات الخاصة في قاعدة معرفة محلية بـ sqlite-vec وإرفاق الملفات ونتائج البحث والذكريات بالسياق. ويتوفر البحث على الويب عبر Tavily أو Exa أو Zhipu أو Bocha. لم تتحقق PromptQuorum من جودة الاسترجاع ولا من مكان معالجة المستندات عند فهرستها.',
           },
         ],
       },

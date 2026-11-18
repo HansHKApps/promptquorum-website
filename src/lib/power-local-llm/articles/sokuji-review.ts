@@ -260,6 +260,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'How often does Sokuji update?',
             a: 'GitHub lists version 0.50.1 on 10 November 2026, 0.50.2 on 11 November 2026, 0.50.3 on 14 November 2026 and 0.50.4 on 16 November 2026, and the last commit on the main branch was on 18 November 2026.',
           },
+          {
+            q: 'Which systems does Sokuji run on?',
+            a: 'According to the maker’s Commerce Disclosure page, the desktop app needs Windows 10 or later, macOS 13 or later, or Linux (Ubuntu 20.04 or later recommended). The Chrome and Edge extension needs Chromium 116 or newer. The maker publishes no memory or GPU minimum, and PromptQuorum did not measure memory use or speed.',
+          },
+          {
+            q: 'Do I need an account or an API key for Sokuji?',
+            a: 'According to the maker, no account is needed to use Sokuji with your own API key or with on-device models, and neither is required just to install it. To translate you need one of three sources: on-device models, your own API key for a cloud provider, or a prepaid Kizuna AI account.',
+          },
+          {
+            q: 'Which translation providers does Sokuji support?',
+            a: 'The README and the maker’s documentation list OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, OpenAI-compatible endpoints (desktop only), a Kizuna AI account and on-device Local Inference. Voice cloning is listed for Palabra.ai, Doubao AST 2.0 and Soniox. According to the maker, meeting content then goes to the provider you pick.',
+          },
+          {
+            q: 'What does two-way mode do?',
+            a: 'According to the maker, you set two languages and Sokuji detects which one is spoken and translates in both directions, as a translated voice or as live subtitles. The README attributes this mode to Soniox and says it covers more than 60 languages. PromptQuorum did not test the language detection or the translation quality.',
+          },
+          {
+            q: 'Does Sokuji need extra audio software?',
+            a: 'According to the download page, the Windows virtual microphone needs VB-CABLE, which is installed separately; on macOS the audio driver ships inside the installer; on Linux the app creates the virtual microphone through PulseAudio or PipeWire and needs pulseaudio-utils. The extension works only on supported meeting sites, so for other apps you need the desktop app.',
+          },
+          {
+            q: 'How good are the on-device models compared with cloud models?',
+            a: 'PromptQuorum has not measured this. The maker’s own Local AI page says a large hosted model is still ahead of on-device models on accuracy and latency, and that for a high-stakes call you will probably want one. On-device models are downloaded once and, according to the README, need no expensive GPU.',
+          },
         ],
       },
       verdict: {
@@ -547,6 +571,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Wie oft wird Sokuji aktualisiert?',
             a: 'GitHub listet Version 0.50.1 vom 10. November 2026, 0.50.2 vom 11. November 2026, 0.50.3 vom 14. November 2026 und 0.50.4 vom 16. November 2026; der letzte Commit auf dem Hauptzweig stammt vom 18. November 2026.',
+          },
+          {
+            q: 'Auf welchen Systemen läuft Sokuji?',
+            a: 'Laut der Seite „Commerce Disclosure“ des Herstellers braucht die Desktop-App Windows 10 oder neuer, macOS 13 oder neuer oder Linux (Ubuntu 20.04 oder neuer empfohlen). Die Erweiterung für Chrome und Edge braucht Chromium 116 oder neuer. Der Hersteller nennt keine Mindestwerte für Arbeitsspeicher oder GPU, und PromptQuorum hat weder Speicherverbrauch noch Geschwindigkeit gemessen.',
+          },
+          {
+            q: 'Brauche ich für Sokuji ein Konto oder einen API-Schlüssel?',
+            a: 'Laut Hersteller ist für die Nutzung mit eigenem API-Schlüssel oder mit Modellen auf dem Gerät kein Konto nötig, und für die bloße Installation ist keines von beidem erforderlich. Zum Übersetzen brauchen Sie eine von drei Quellen: Modelle auf dem Gerät, Ihren eigenen API-Schlüssel für einen Cloud-Anbieter oder ein vorausbezahltes Kizuna-AI-Konto.',
+          },
+          {
+            q: 'Welche Übersetzungsanbieter unterstützt Sokuji?',
+            a: 'Die README und die Dokumentation des Herstellers nennen OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, OpenAI-kompatible Endpunkte (nur Desktop), ein Kizuna-AI-Konto und lokale Inferenz auf dem Gerät. Stimmklonen wird für Palabra.ai, Doubao AST 2.0 und Soniox aufgeführt. Laut Hersteller gehen Meeting-Inhalte dann an den von Ihnen gewählten Anbieter.',
+          },
+          {
+            q: 'Was macht der Zwei-Wege-Modus?',
+            a: 'Laut Hersteller stellen Sie zwei Sprachen ein, und Sokuji erkennt, welche gesprochen wird, und übersetzt in beide Richtungen, als übersetzte Stimme oder als Live-Untertitel. Die README ordnet diesen Modus Soniox zu und nennt mehr als 60 Sprachen. PromptQuorum hat weder die Spracherkennung noch die Übersetzungsqualität getestet.',
+          },
+          {
+            q: 'Braucht Sokuji zusätzliche Audio-Software?',
+            a: 'Laut Download-Seite braucht das virtuelle Mikrofon unter Windows VB-CABLE, das separat installiert wird; unter macOS liegt der Audiotreiber dem Installer bei; unter Linux erzeugt die App das virtuelle Mikrofon über PulseAudio oder PipeWire und benötigt pulseaudio-utils. Die Erweiterung funktioniert nur auf unterstützten Meeting-Seiten, für andere Apps brauchen Sie die Desktop-App.',
+          },
+          {
+            q: 'Wie gut sind die Modelle auf dem Gerät im Vergleich zu Cloud-Modellen?',
+            a: 'PromptQuorum hat das nicht gemessen. Die Local-AI-Seite des Herstellers sagt selbst, dass ein großes gehostetes Modell bei Genauigkeit und Latenz noch vor den Modellen auf dem Gerät liegt und dass Sie für ein wichtiges Gespräch wahrscheinlich eines wollen. Modelle auf dem Gerät werden einmal heruntergeladen und brauchen laut README keine teure GPU.',
           },
         ],
       },
@@ -836,6 +884,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'À quelle fréquence Sokuji est-il mis à jour ?',
             a: 'GitHub liste la version 0.50.1 du 10 novembre 2026, la 0.50.2 du 11 novembre 2026, la 0.50.3 du 14 novembre 2026 et la 0.50.4 du 16 novembre 2026 ; le dernier commit sur la branche principale date du 18 novembre 2026.',
           },
+          {
+            q: 'Sur quels systèmes Sokuji fonctionne-t-il ?',
+            a: 'Selon la page « Commerce Disclosure » de l’éditeur, l’application de bureau nécessite Windows 10 ou une version plus récente, macOS 13 ou plus récent, ou Linux (Ubuntu 20.04 ou plus récent recommandé). L’extension Chrome et Edge nécessite Chromium 116 ou plus récent. L’éditeur ne publie aucun minimum de mémoire ni de GPU, et PromptQuorum n’a mesuré ni l’utilisation de la mémoire ni la vitesse.',
+          },
+          {
+            q: 'Faut-il un compte ou une clé API pour Sokuji ?',
+            a: 'Selon l’éditeur, aucun compte n’est nécessaire pour utiliser Sokuji avec votre propre clé API ou avec des modèles sur l’appareil, et ni l’un ni l’autre n’est requis pour simplement l’installer. Pour traduire, il faut l’une de ces trois sources : des modèles sur l’appareil, votre propre clé API auprès d’un fournisseur cloud, ou un compte Kizuna AI prépayé.',
+          },
+          {
+            q: 'Quels fournisseurs de traduction Sokuji prend-il en charge ?',
+            a: 'Le README et la documentation de l’éditeur citent OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, des points d’accès compatibles OpenAI (application de bureau uniquement), un compte Kizuna AI et l’inférence locale sur l’appareil. Le clonage de voix est indiqué pour Palabra.ai, Doubao AST 2.0 et Soniox. Selon l’éditeur, le contenu des réunions va alors au fournisseur que vous avez choisi.',
+          },
+          {
+            q: 'À quoi sert le mode bidirectionnel ?',
+            a: 'Selon l’éditeur, vous définissez deux langues, et Sokuji détecte laquelle est parlée et traduit dans les deux sens, sous forme de voix traduite ou de sous-titres en direct. Le README attribue ce mode à Soniox et indique qu’il couvre plus de 60 langues. PromptQuorum n’a testé ni la détection de la langue ni la qualité de la traduction.',
+          },
+          {
+            q: 'Sokuji nécessite-t-il un logiciel audio supplémentaire ?',
+            a: 'Selon la page de téléchargement, le micro virtuel sous Windows nécessite VB-CABLE, installé séparément ; sous macOS, le pilote audio est fourni dans l’installateur ; sous Linux, l’application crée le micro virtuel via PulseAudio ou PipeWire et a besoin de pulseaudio-utils. L’extension ne fonctionne que sur les sites de réunion pris en charge ; pour les autres applications, il faut l’application de bureau.',
+          },
+          {
+            q: 'Que valent les modèles sur l’appareil par rapport aux modèles cloud ?',
+            a: 'PromptQuorum ne l’a pas mesuré. La page Local AI de l’éditeur indique elle-même qu’un grand modèle hébergé reste devant les modèles sur l’appareil en précision et en latence, et que pour un appel à enjeux élevés, vous en voudrez probablement un. Les modèles sur l’appareil se téléchargent une seule fois et, selon le README, ne demandent pas de GPU coûteux.',
+          },
         ],
       },
       verdict: {
@@ -1123,6 +1195,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Cada cuánto se actualiza Sokuji?',
             a: 'GitHub lista la versión 0.50.1 del 10 de noviembre de 2026, la 0.50.2 del 11 de noviembre de 2026, la 0.50.3 del 14 de noviembre de 2026 y la 0.50.4 del 16 de noviembre de 2026; el último commit de la rama principal es del 18 de noviembre de 2026.',
+          },
+          {
+            q: '¿En qué sistemas funciona Sokuji?',
+            a: 'Según la página «Commerce Disclosure» del desarrollador, la aplicación de escritorio requiere Windows 10 o posterior, macOS 13 o posterior, o Linux (se recomienda Ubuntu 20.04 o posterior). La extensión de Chrome y Edge requiere Chromium 116 o posterior. El desarrollador no publica mínimos de memoria ni de GPU, y PromptQuorum no midió el uso de memoria ni la velocidad.',
+          },
+          {
+            q: '¿Necesito una cuenta o una clave de API para Sokuji?',
+            a: 'Según el desarrollador, no hace falta cuenta para usar Sokuji con tu propia clave de API o con modelos en el dispositivo, y tampoco se necesita ninguna de las dos solo para instalarlo. Para traducir necesitas una de tres fuentes: modelos en el dispositivo, tu propia clave de API de un proveedor en la nube o una cuenta de Kizuna AI de prepago.',
+          },
+          {
+            q: '¿Qué proveedores de traducción admite Sokuji?',
+            a: 'El README y la documentación del desarrollador mencionan OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, endpoints compatibles con OpenAI (solo en escritorio), una cuenta de Kizuna AI y la inferencia local en el dispositivo. La clonación de voz figura para Palabra.ai, Doubao AST 2.0 y Soniox. Según el desarrollador, el contenido de las reuniones va entonces al proveedor que elijas.',
+          },
+          {
+            q: '¿Qué hace el modo bidireccional?',
+            a: 'Según el desarrollador, defines dos idiomas y Sokuji detecta cuál se habla y traduce en ambos sentidos, como voz traducida o como subtítulos en directo. El README atribuye este modo a Soniox y dice que cubre más de 60 idiomas. PromptQuorum no probó la detección del idioma ni la calidad de la traducción.',
+          },
+          {
+            q: '¿Necesita Sokuji software de audio adicional?',
+            a: 'Según la página de descargas, el micrófono virtual en Windows necesita VB-CABLE, que se instala aparte; en macOS el controlador de audio viene dentro del instalador; en Linux la app crea el micrófono virtual mediante PulseAudio o PipeWire y necesita pulseaudio-utils. La extensión solo funciona en los sitios de reuniones compatibles, así que para otras aplicaciones necesitas la app de escritorio.',
+          },
+          {
+            q: '¿Qué tal son los modelos en el dispositivo frente a los modelos en la nube?',
+            a: 'PromptQuorum no lo midió. La propia página Local AI del desarrollador dice que un modelo grande alojado sigue por delante de los modelos en el dispositivo en precisión y latencia, y que para una llamada importante probablemente querrás uno. Los modelos en el dispositivo se descargan una vez y, según el README, no necesitan una GPU cara.',
           },
         ],
       },
@@ -1412,6 +1508,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Com que frequência o Sokuji é atualizado?',
             a: 'O GitHub lista a versão 0.50.1 de 10 de novembro de 2026, a 0.50.2 de 11 de novembro de 2026, a 0.50.3 de 14 de novembro de 2026 e a 0.50.4 de 16 de novembro de 2026; o último commit no ramo principal é de 18 de novembro de 2026.',
           },
+          {
+            q: 'Em quais sistemas o Sokuji funciona?',
+            a: 'Segundo a página “Commerce Disclosure” do desenvolvedor, o aplicativo de desktop exige Windows 10 ou posterior, macOS 13 ou posterior, ou Linux (Ubuntu 20.04 ou posterior recomendado). A extensão para Chrome e Edge exige Chromium 116 ou posterior. O desenvolvedor não publica mínimos de memória nem de GPU, e a PromptQuorum não mediu o uso de memória nem a velocidade.',
+          },
+          {
+            q: 'Preciso de uma conta ou de uma chave de API para usar o Sokuji?',
+            a: 'Segundo o desenvolvedor, não é preciso conta para usar o Sokuji com sua própria chave de API ou com modelos no dispositivo, e nenhuma das duas é exigida só para instalá-lo. Para traduzir, você precisa de uma de três fontes: modelos no dispositivo, sua própria chave de API de um provedor na nuvem ou uma conta da Kizuna AI pré-paga.',
+          },
+          {
+            q: 'Quais provedores de tradução o Sokuji suporta?',
+            a: 'O README e a documentação do desenvolvedor listam OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, endpoints compatíveis com OpenAI (somente no desktop), uma conta da Kizuna AI e a inferência local no dispositivo. A clonagem de voz aparece para Palabra.ai, Doubao AST 2.0 e Soniox. Segundo o desenvolvedor, o conteúdo das reuniões vai então para o provedor que você escolher.',
+          },
+          {
+            q: 'O que o modo bidirecional faz?',
+            a: 'Segundo o desenvolvedor, você define dois idiomas e o Sokuji detecta qual deles está sendo falado e traduz nos dois sentidos, como voz traduzida ou como legendas ao vivo. O README atribui esse modo ao Soniox e diz que ele cobre mais de 60 idiomas. A PromptQuorum não testou a detecção de idioma nem a qualidade da tradução.',
+          },
+          {
+            q: 'O Sokuji precisa de algum software de áudio adicional?',
+            a: 'Segundo a página de download, o microfone virtual no Windows precisa do VB-CABLE, instalado separadamente; no macOS o driver de áudio vem dentro do instalador; no Linux o app cria o microfone virtual por meio do PulseAudio ou do PipeWire e precisa do pulseaudio-utils. A extensão só funciona em sites de reunião compatíveis, então para outros aplicativos você precisa do app de desktop.',
+          },
+          {
+            q: 'Como são os modelos no dispositivo em comparação com os modelos na nuvem?',
+            a: 'A PromptQuorum não mediu isso. A própria página Local AI do desenvolvedor diz que um grande modelo hospedado ainda está à frente dos modelos no dispositivo em precisão e latência, e que para uma chamada importante você provavelmente vai querer um. Os modelos no dispositivo são baixados uma vez e, segundo o README, não exigem uma GPU cara.',
+          },
         ],
       },
       verdict: {
@@ -1699,6 +1819,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Sokujiはどのくらいの頻度で更新されますか？',
             a: 'GitHubには、2026年11月10日のバージョン0.50.1、11月11日の0.50.2、11月14日の0.50.3、11月16日の0.50.4が載っており、メインブランチの最新コミットは2026年11月18日です。',
+          },
+          {
+            q: 'Sokujiはどのシステムで動きますか？',
+            a: '開発元の「Commerce Disclosure」ページによれば、デスクトップアプリにはWindows 10以降、macOS 13以降、またはLinux（Ubuntu 20.04以降を推奨）が必要です。ChromeとEdgeの拡張機能にはChromium 116以降が必要です。開発元はメモリやGPUの最小要件を公表しておらず、PromptQuorumはメモリ使用量も速度も測定していません。',
+          },
+          {
+            q: 'SokujiにアカウントやAPIキーは必要ですか？',
+            a: '開発元によれば、自分のAPIキーまたはオンデバイスモデルでSokujiを使うのにアカウントは不要で、インストールするだけならどちらも必要ありません。翻訳するには、オンデバイスモデル、クラウドプロバイダーの自分のAPIキー、プリペイドのKizuna AIアカウントのいずれかが必要です。',
+          },
+          {
+            q: 'Sokujiはどの翻訳プロバイダーに対応していますか？',
+            a: 'READMEと開発元のドキュメントには、OpenAI、Google Gemini、Palabra.ai、Doubao AST 2.0、Soniox、Qwen LiveTranslate、OpenAI互換エンドポイント（デスクトップのみ）、Kizuna AIアカウント、オンデバイスのローカル推論が挙げられています。声のクローンはPalabra.ai、Doubao AST 2.0、Sonioxで挙げられています。開発元によれば、会議の内容は選んだプロバイダーへ送られます。',
+          },
+          {
+            q: '双方向モードとは何ですか？',
+            a: '開発元によれば、2つの言語を設定すると、Sokujiはどちらが話されているかを検出し、翻訳音声またはライブ字幕として双方向に翻訳します。READMEはこのモードをSonioxによるものとしており、60を超える言語に対応するとしています。PromptQuorumは言語検出も翻訳品質も試していません。',
+          },
+          {
+            q: 'Sokujiに追加のオーディオソフトは必要ですか？',
+            a: 'ダウンロードページによれば、Windowsの仮想マイクには別途インストールするVB-CABLEが必要です。macOSではオーディオドライバーがインストーラーに含まれています。Linuxではアプリが PulseAudio または PipeWire を通じて仮想マイクを作成し、pulseaudio-utils が必要です。拡張機能は対応する会議サイトでのみ動くため、それ以外のアプリにはデスクトップアプリが必要です。',
+          },
+          {
+            q: 'オンデバイスモデルはクラウドモデルと比べてどうですか？',
+            a: 'PromptQuorumは測定していません。開発元のLocal AIページ自体が、大きなホスト型モデルは精度と遅延の面でオンデバイスモデルをまだ上回っており、重要な通話ではおそらくそちらを使いたくなると述べています。オンデバイスモデルは一度ダウンロードするだけで、READMEによれば高価なGPUは不要です。',
           },
         ],
       },
@@ -1988,6 +2132,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Sokuji 多久更新一次？',
             a: 'GitHub 列出了 2026 年 11 月 10 日的 0.50.1 版本、11 月 11 日的 0.50.2、11 月 14 日的 0.50.3 和 11 月 16 日的 0.50.4，主分支最近一次提交在 2026 年 11 月 18 日。',
           },
+          {
+            q: 'Sokuji 可以在哪些系统上运行？',
+            a: '据开发者的“Commerce Disclosure”页面，桌面应用需要 Windows 10 或更高版本、macOS 13 或更高版本，或 Linux（推荐 Ubuntu 20.04 或更高版本）。Chrome 和 Edge 扩展需要 Chromium 116 或更高版本。开发者没有公布内存或 GPU 的最低要求，PromptQuorum 也没有测量内存占用或速度。',
+          },
+          {
+            q: '使用 Sokuji 需要账号或 API 密钥吗？',
+            a: '据开发者称，使用自己的 API 密钥或设备端模型时无需账号，仅安装也不需要二者之一。要进行翻译，需要三种来源之一：设备端模型、你自己在云端服务商处获得的 API 密钥，或预付的 Kizuna AI 账号。',
+          },
+          {
+            q: 'Sokuji 支持哪些翻译服务商？',
+            a: 'README 和开发者文档列出了 OpenAI、Google Gemini、Palabra.ai、Doubao AST 2.0、Soniox、Qwen LiveTranslate、兼容 OpenAI 的端点（仅桌面版）、Kizuna AI 账号以及设备端本地推理。声音克隆在 Palabra.ai、Doubao AST 2.0 和 Soniox 下列出。据开发者称，会议内容随后会发送到你所选的服务商。',
+          },
+          {
+            q: '双向模式有什么作用？',
+            a: '据开发者称，你设置两种语言后，Sokuji 会检测当前说的是哪一种，并以翻译语音或实时字幕的形式双向翻译。README 将该模式归于 Soniox，并称其覆盖 60 多种语言。PromptQuorum 没有测试语言检测或翻译质量。',
+          },
+          {
+            q: 'Sokuji 需要额外的音频软件吗？',
+            a: '据下载页说明，Windows 上的虚拟麦克风需要另行安装 VB-CABLE；macOS 上音频驱动随安装包提供；Linux 上应用通过 PulseAudio 或 PipeWire 创建虚拟麦克风，并需要 pulseaudio-utils。扩展只能在受支持的会议网站上使用，其他应用则需要桌面应用。',
+          },
+          {
+            q: '设备端模型和云端模型相比表现如何？',
+            a: 'PromptQuorum 没有测量过。开发者自己的 Local AI 页面称，大型托管模型在准确度和延迟上仍领先于设备端模型，重要通话你很可能会想用前者。设备端模型只需下载一次，据 README 称不需要昂贵的 GPU。',
+          },
         ],
       },
       verdict: {
@@ -2276,6 +2444,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Sokuji는 얼마나 자주 업데이트됩니까?',
             a: 'GitHub에는 2026년 11월 10일의 0.50.1, 11월 11일의 0.50.2, 11월 14일의 0.50.3, 11월 16일의 0.50.4 버전이 올라와 있으며, 메인 브랜치의 마지막 커밋은 2026년 11월 18일입니다.',
           },
+          {
+            q: 'Sokuji는 어떤 시스템에서 실행됩니까?',
+            a: '개발사의 “Commerce Disclosure” 페이지에 따르면 데스크톱 앱에는 Windows 10 이상, macOS 13 이상 또는 Linux(Ubuntu 20.04 이상 권장)가 필요합니다. Chrome과 Edge 확장 프로그램에는 Chromium 116 이상이 필요합니다. 개발사는 메모리나 GPU 최소 사양을 공개하지 않았으며, PromptQuorum은 메모리 사용량도 속도도 측정하지 않았습니다.',
+          },
+          {
+            q: 'Sokuji를 쓰려면 계정이나 API 키가 필요합니까?',
+            a: '개발사에 따르면 직접 발급한 API 키나 기기 내 모델로 Sokuji를 쓸 때는 계정이 필요 없으며, 설치만 하는 데에는 둘 다 필요하지 않습니다. 번역하려면 기기 내 모델, 클라우드 제공업체의 직접 발급 API 키, 선불 Kizuna AI 계정 중 하나가 필요합니다.',
+          },
+          {
+            q: 'Sokuji는 어떤 번역 제공업체를 지원합니까?',
+            a: 'README와 개발사 문서에는 OpenAI, Google Gemini, Palabra.ai, Doubao AST 2.0, Soniox, Qwen LiveTranslate, OpenAI 호환 엔드포인트(데스크톱 전용), Kizuna AI 계정, 기기 내 로컬 추론이 나와 있습니다. 음성 복제는 Palabra.ai, Doubao AST 2.0, Soniox에 대해 기재되어 있습니다. 개발사에 따르면 회의 내용은 이후 선택한 제공업체로 전송됩니다.',
+          },
+          {
+            q: '양방향 모드는 무엇을 합니까?',
+            a: '개발사에 따르면 두 언어를 설정하면 Sokuji가 어느 언어로 말하는지 감지하여 번역 음성이나 실시간 자막으로 양방향 번역합니다. README는 이 모드를 Soniox의 기능으로 소개하며 60개가 넘는 언어를 지원한다고 밝힙니다. PromptQuorum은 언어 감지도 번역 품질도 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Sokuji에는 추가 오디오 소프트웨어가 필요합니까?',
+            a: '다운로드 페이지에 따르면 Windows의 가상 마이크에는 별도로 설치하는 VB-CABLE이 필요하고, macOS에서는 오디오 드라이버가 설치 프로그램에 포함되어 있으며, Linux에서는 앱이 PulseAudio 또는 PipeWire를 통해 가상 마이크를 만들고 pulseaudio-utils가 필요합니다. 확장 프로그램은 지원되는 회의 사이트에서만 작동하므로 다른 앱에는 데스크톱 앱이 필요합니다.',
+          },
+          {
+            q: '기기 내 모델은 클라우드 모델과 비교해 어떻습니까?',
+            a: 'PromptQuorum은 이를 측정하지 않았습니다. 개발사의 Local AI 페이지 자체에서, 대형 호스팅 모델이 정확도와 지연 시간에서 아직 기기 내 모델보다 앞서며 중요한 통화에는 그쪽이 필요할 가능성이 크다고 밝힙니다. 기기 내 모델은 한 번만 내려받으면 되며, README에 따르면 값비싼 GPU가 필요하지 않습니다.',
+          },
         ],
       },
       verdict: {
@@ -2563,6 +2755,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'كم مرة يُحدَّث Sokuji؟',
             a: 'يسرد GitHub الإصدار 0.50.1 في 10 نوفمبر 2026، والإصدار 0.50.2 في 11 نوفمبر 2026، والإصدار 0.50.3 في 14 نوفمبر 2026، والإصدار 0.50.4 في 16 نوفمبر 2026، وكان آخر commit في الفرع الرئيسي في 18 نوفمبر 2026.',
+          },
+          {
+            q: 'على أي أنظمة يعمل Sokuji؟',
+            a: 'بحسب صفحة «Commerce Disclosure» لدى المطوّر، يتطلب تطبيق سطح المكتب Windows 10 أو أحدث، أو macOS 13 أو أحدث، أو Linux (يُوصى بـ Ubuntu 20.04 أو أحدث). وتتطلب إضافة Chrome وEdge إصدار Chromium 116 أو أحدث. لا ينشر المطوّر حدًا أدنى للذاكرة أو لوحدة GPU، ولم تقس PromptQuorum استهلاك الذاكرة ولا السرعة.',
+          },
+          {
+            q: 'هل أحتاج إلى حساب أو مفتاح API لاستخدام Sokuji؟',
+            a: 'بحسب المطوّر، لا حاجة إلى حساب لاستخدام Sokuji بمفتاح API خاص بك أو بنماذج على الجهاز، ولا يلزم أيٌّ منهما لمجرد التثبيت. وللترجمة تحتاج إلى أحد ثلاثة مصادر: نماذج على الجهاز، أو مفتاح API خاص بك لدى مزوّد سحابي، أو حساب Kizuna AI مدفوع مسبقًا.',
+          },
+          {
+            q: 'ما مزوّدو الترجمة الذين يدعمهم Sokuji؟',
+            a: 'يذكر ملف README ووثائق المطوّر كلًّا من OpenAI وGoogle Gemini وPalabra.ai وDoubao AST 2.0 وSoniox وQwen LiveTranslate، ونقاط وصول متوافقة مع OpenAI (على سطح المكتب فقط)، وحساب Kizuna AI، والاستدلال المحلي على الجهاز. ويُذكر استنساخ الصوت لـ Palabra.ai وDoubao AST 2.0 وSoniox. وبحسب المطوّر، يذهب محتوى الاجتماعات بعدها إلى المزوّد الذي تختاره.',
+          },
+          {
+            q: 'ماذا يفعل الوضع ثنائي الاتجاه؟',
+            a: 'بحسب المطوّر، تحدّد لغتين فيتعرّف Sokuji على اللغة المنطوقة ويترجم في الاتجاهين، بصوت مترجم أو بترجمة نصية فورية. ينسب ملف README هذا الوضع إلى Soniox ويقول إنه يغطي أكثر من 60 لغة. لم تختبر PromptQuorum التعرّف على اللغة ولا جودة الترجمة.',
+          },
+          {
+            q: 'هل يحتاج Sokuji إلى برامج صوت إضافية؟',
+            a: 'بحسب صفحة التنزيل، يحتاج الميكروفون الافتراضي على Windows إلى VB-CABLE الذي يُثبَّت بشكل منفصل؛ وعلى macOS يأتي مشغّل الصوت ضمن المثبّت؛ وعلى Linux ينشئ التطبيق الميكروفون الافتراضي عبر PulseAudio أو PipeWire ويحتاج إلى pulseaudio-utils. وتعمل الإضافة فقط على مواقع الاجتماعات المدعومة، لذا تحتاج إلى تطبيق سطح المكتب مع التطبيقات الأخرى.',
+          },
+          {
+            q: 'ما مدى جودة النماذج على الجهاز مقارنة بالنماذج السحابية؟',
+            a: 'لم تقس PromptQuorum ذلك. وتقول صفحة Local AI لدى المطوّر نفسه إن النموذج الكبير المستضاف لا يزال متقدمًا على النماذج على الجهاز في الدقة وزمن الاستجابة، وإنك على الأرجح ستريد واحدًا منها لمكالمة عالية الأهمية. تُنزَّل النماذج على الجهاز مرة واحدة، وبحسب ملف README لا تحتاج إلى وحدة GPU باهظة.',
           },
         ],
       },
