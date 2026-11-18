@@ -39,6 +39,38 @@ Supersedes SPEC 2 #9 and #10, SPEC 4.1 and SPEC 12, plus the 2026-11-17 MCP-key 
 2. **Free-text feedback comments may be stored server-side.** SPEC 8a stands as written: max 500 characters, "no personal data" notice. This differs from Ask Hans, which accepts no free text. The privacy policy needs an Academy section before launch (SPEC 14).
 3. **Unmerged-branch rule (SPEC 17) applies to Academy work only.** Hans left it to Claude: at most one open Academy branch at a time. Website branches from other, unrelated sessions do not count.
 
+## Phase 4 choices (Claude, 2026-11-18, open to change)
+
+**One route for both quiz kinds**
+- `POST /api/academy/quiz` with `kind: lesson | final` serves the lesson quiz and the final test (SPEC 7 names `/api/final-test` separately).
+- Rate limit 20 per IP hash per hour. `maxDuration` 120 s: up to two generation rounds plus two verification calls.
+
+**Question generation and verification (SPEC 7.4)**
+- **Source text:** what the learner actually read. Lesson quiz: that lesson, up to 4,000 characters. Final test: every lesson, up to 2,500 characters each.
+- **Verification:** a separate call gets the source text and the questions in their shuffled order, without the key, and answers 1/2/3, or 0 if none is clearly right. Any disagreement discards the question.
+- **Extras and top-up:** 30% extra questions are generated. If too many fail, one more round generates replacements (max 2 rounds).
+- **Minimum size:** below it, the request fails and the learner sees a retry instead of a short quiz. Lesson quiz: 2 of 3. Final test: 80% of its size.
+- **Topic balance:** the final test is spread evenly over the lesson topics (round robin, SPEC 7.5).
+
+**Scoring (SPEC 8)**
+- Pure functions in `src/lib/academy/scoring.ts`.
+- **Every-lesson mode:** pools the lesson quizzes and the final test.
+- **Final-only mode:** counts only the final test.
+- **Pass mark:** 70%, inclusive. Topics below 70% are flagged "below the pass mark".
+- **Retakes:** a retake generates new questions; every attempt is kept. The FIRST passing attempt counts (that is the certificate score).
+- **Completion (SPEC 9):** all lessons done, all lesson quizzes taken (every-lesson mode), and a pass.
+
+**Quiz flow and results screen**
+- One question at a time. An answer shows "Correct." / "Not quite.", the explanation, and the reason the chosen wrong answer is wrong. The quiz in progress survives a reload.
+- In every-lesson mode the lesson quiz follows "Done" right away. The programme screen offers "Continue the quiz" / a missing lesson quiz / "Start the final test" / "See results".
+- The results screen shows the overall %, per-topic bars, pass/fail, learning time, the attempt number and a per-question review. If not passed: the weak topics plus a retake button. If passed: the certificate button, disabled until Phase 6.
+
+**Acceptance (unit tests)**
+- A planted question with a wrong "correct" answer is rejected by verification.
+- The correct-answer position is roughly uniform over 100 generated questions.
+- Scoring and pass logic are covered.
+- The real-model rejection rate is printed by `npm run academy:regression`, which now also generates a verified lesson-1 quiz per subject.
+
 ## Phase 3 choices (Claude, 2026-11-18, open to change)
 
 **Generation**

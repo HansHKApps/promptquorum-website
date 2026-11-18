@@ -1,14 +1,15 @@
 // PromptQuorum Academy — Phase 2 acceptance run (docs/academy/SPEC.md 16, Phase 2): 20 subjects through the real
-// model: quick check -> simulated answers -> programme -> lesson 1 (Phase 3). Checks every programme against the SPEC 7.3 limits and
+// model: quick check -> simulated answers -> programme -> lesson 1 (Phase 3) -> verified lesson-1 quiz (Phase 4). Checks every programme against the SPEC 7.3 limits and
 // prints attempts, clamps, failures and token usage. Needs ACADEMY_ANTHROPIC_API_KEY or ANTHROPIC_API_KEY, read from
 // .env.local in the repo root (or the shell environment).
-// Costs real money (Haiku 5.5, ~60 calls; about one US dollar at most). Run: npm run academy:regression [-- --limit 5]
+// Costs real money (Haiku 5.5, ~100 calls; about one to two US dollars). Run: npm run academy:regression [-- --limit 5]
 
 import Anthropic from '@anthropic-ai/sdk'
 import { generateDiagnostic } from '../src/lib/academy/diagnostic'
 import { summarizeDiagnostic } from '../src/lib/academy/diagnostic-summary'
 import { generateProgramme, programmeProblems } from '../src/lib/academy/programme'
 import { generateLesson, lessonLength, lessonWordBudget } from '../src/lib/academy/lesson'
+import { generateQuiz } from '../src/lib/academy/quiz'
 import type { AcademyLang, Level, TestMode } from '../src/lib/academy/types'
 
 const SUBJECTS: [string, AcademyLang, number, Level, TestMode][] = [
@@ -51,6 +52,8 @@ async function main() {
   let ruleBreaks = 0
   let clamps = 0
   let extraAttempts = 0
+  let quizGenerated = 0
+  let quizRejected = 0
 
   for (const [subject, language, minutes, level, testMode] of SUBJECTS.slice(0, limit)) {
     const started = Date.now()
@@ -82,7 +85,12 @@ async function main() {
       const foreign = lesson.furtherReading.filter((r) => !lesson.materialUrls.includes(r.url))
       if (foreign.length) ruleBreaks++
       const words = lessonLength({ sections: lesson.sections, furtherReading: [] }, language)
-      lessonNotes.push(`| ${subject} | ${lesson.sections.length} sections | ${words}/${lessonWordBudget(first.estimatedMinutes, first.recap)} words | ${lesson.furtherReading.length} links${foreign.length ? ' FOREIGN: ' + foreign.map((f) => f.url).join(' ') : ''} | ${lesson.materialUrls.length} pages found |`)
+      // Phase 4: a verified quiz on lesson 1 (SPEC 18: log the verification rejection rate).
+      const lessonText = lesson.sections.map((x) => `${x.heading}\n${x.body}`).join('\n\n').slice(0, 4000)
+      const quiz = await generateQuiz(client, { kind: 'lesson', subject, language, selfLevel: level, availableMinutes: minutes, objectives: programme.objectives, lessons: [{ title: first.title, topic: first.topic, text: lessonText }] })
+      quizGenerated += quiz.generated
+      quizRejected += quiz.rejected
+      lessonNotes.push(`| ${subject} | ${lesson.sections.length} sections | ${words}/${lessonWordBudget(first.estimatedMinutes, first.recap)} words | ${lesson.furtherReading.length} links${foreign.length ? ' FOREIGN: ' + foreign.map((f) => f.url).join(' ') : ''} | ${lesson.materialUrls.length} pages found | quiz ${quiz.questions.length} kept, ${quiz.rejected}/${quiz.generated} rejected |`)
       rows.push(
         `| ${subject} | ${language} | ${diag.questions.length} q | ${programme.lessons.length} lessons, ${programme.objectives.length} obj | ${sum}/${minutes} min | ${problems.length ? 'BREAK: ' + problems.join('; ') : clamped ? 'clamped' : 'ok'} | ${diag.attempts}+${attempts} | ${Date.now() - started} ms |`,
       )
@@ -94,10 +102,11 @@ async function main() {
 
   console.log('\n| Subject | Lang | Quick check | Programme | Reading/total | Rules | Attempts | Time |\n|---|---|---|---|---|---|---|---|')
   console.log(rows.join('\n'))
-  console.log('\n| Subject | Lesson 1 | Length | Further reading | Material |\n|---|---|---|---|---|')
+  console.log('\n| Subject | Lesson 1 | Length | Further reading | Material | Quiz |\n|---|---|---|---|---|---|')
   console.log(lessonNotes.join('\n'))
   const n = Math.min(limit, SUBJECTS.length)
   console.log(`\nSubjects: ${n} · failed: ${failures} · rule breaks after clamp: ${ruleBreaks} · clamped: ${clamps} · extra attempts (schema/rule failures): ${extraAttempts}`)
+  console.log(`Quiz verification: ${quizRejected} of ${quizGenerated} generated questions rejected (${quizGenerated ? Math.round((quizRejected / quizGenerated) * 100) : 0}%).`)
   console.log('Token usage per call is in the [academy] generation log lines above.')
   if (failures || ruleBreaks) process.exit(1)
 }

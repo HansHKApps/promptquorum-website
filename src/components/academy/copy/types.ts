@@ -70,7 +70,6 @@ export interface AcademyCopy {
   /** receives the formatted duration */
   timeSpent: (duration: string) => string
   lessonsDoneTitle: string
-  testsComing: string
   programmeComplete: string
 
   // Lesson screen
@@ -82,6 +81,34 @@ export interface AcademyCopy {
   doneLast: string
   furtherReading: string
   fromPromptQuorum: string
+
+  // Quizzes and results
+  lessonQuizTitle: (n: number) => string
+  finalTestTitle: string
+  preparingQuiz: string
+  correctFeedback: string
+  wrongFeedback: string
+  nextQuestion: string
+  seeResult: string
+  quizScore: (correct: number, total: number) => string
+  continueLessons: string
+  continueQuiz: string
+  startFinalTest: string
+  seeResults: string
+  resultsTitle: string
+  overallScore: (percent: number) => string
+  passedText: (mark: number) => string
+  notPassedText: (mark: number) => string
+  topicScores: string
+  weakTopic: string
+  weakTopicsHint: string
+  reviewAnswers: string
+  yourAnswer: string
+  correctAnswer: string
+  retakeFinal: string
+  attemptOf: (n: number) => string
+  downloadCertificate: string
+  certificateComing: string
 
   // Privacy strip
   privacyNote: string

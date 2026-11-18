@@ -39,6 +39,8 @@ export interface QuizResult {
   total: number
   byTopic: Record<string, { correct: number; total: number }>
   takenAt: string
+  /** the questions of this attempt, for the per-question review */
+  questions?: Question[]
 }
 
 export interface Lesson {
@@ -74,6 +76,10 @@ export interface Programme {
     lessonStatus: Record<string, 'todo' | 'viewed' | 'done'>
     quizResults: QuizResult[]
     finalResult?: QuizResult
+    /** every final-test attempt in order (retakes, SPEC 8) */
+    finalAttempts?: QuizResult[]
+    /** quiz in progress: id is a lesson id or "final"; answers by question id */
+    activeQuiz?: { quizId: string; questions: Question[]; answers: Record<string, number> }
     secondsSpent: number
     /** active seconds per lesson id (capped, SPEC 6.1) */
     lessonSeconds?: Record<string, number>
@@ -84,7 +90,7 @@ export interface Programme {
 }
 
 /** Screens of the Academy tool. They are views inside /academy, not separate URLs (like the Ask Hans window). */
-export const ACADEMY_VIEWS = ['setup', 'diagnostic', 'programme', 'lesson'] as const
+export const ACADEMY_VIEWS = ['setup', 'diagnostic', 'programme', 'lesson', 'quiz', 'results'] as const
 export type AcademyView = (typeof ACADEMY_VIEWS)[number]
 
 /** The quick check in progress (before a programme exists). */

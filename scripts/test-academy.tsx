@@ -22,6 +22,8 @@ import type { Programme, Question } from '../src/lib/academy/types'
 import { articleText, finalizeLesson, findMaterial, generateLesson, lessonProblems, stripLinks, toMaterial } from '../src/lib/academy/lesson'
 import { addActiveTime, markLessonDone, nextOpenLesson, openLesson } from '../src/lib/academy/progress'
 import { getArticle } from '../src/lib/mcp/tools'
+import { balancedPick, generateQuiz, QuizShortError, topicPlan, verifyQuestions } from '../src/lib/academy/quiz'
+import { countingFinal, isCompleted, PASS_MARK, programmeScore, scoreQuiz } from '../src/lib/academy/scoring'
 
 let failed = 0
 const pending: Promise<void>[] = []
@@ -368,6 +370,139 @@ t('progress: all lessons done completes a no-test programme, but not one with te
   assert.equal(nextOpenLesson(none), -1)
   const withTest = markLessonDone(markLessonDone(sampleProgramme('final'), 0), 1)
   assert.equal(withTest.progress.completedAt, undefined)
+})
+
+// ------------------------------------------------------------------------------------------ Phase 4
+
+/**
+ * Fake model for quizzes: generation calls return `make(n)` questions; verification calls answer by picking the
+ * option that starts with "Right" (a verifier that knows the truth). A planted question marks a wrong answer as
+ * "correct", so the honest verifier disagrees with it.
+ */
+function quizClient(make: (n: number) => GeneratedQuestion[]): ParseClient & { calls: { label: string }[] } {
+  const calls: { label: string }[] = []
+  return {
+    calls,
+    messages: {
+      parse: (async (params: { system: { text: string }[]; messages: { content: string }[] }) => {
+        const isVerify = params.system[0].text.startsWith('You check test questions')
+        calls.push({ label: isVerify ? 'verify' : 'generate' })
+        const usage = { input_tokens: 1, output_tokens: 1, cache_read_input_tokens: 0 }
+        if (!isVerify) {
+          const want = Number(/Write (\d+) questions/.exec(params.messages[0].content)?.[1] ?? 3)
+          return { stop_reason: 'end_turn', parsed_output: { questions: make(want) }, usage }
+        }
+        const blocks = params.messages[0].content.split(/\n(?=\d+\. )/).filter((b) => /^\d+\. /.test(b))
+        const answers = blocks.map((b) => {
+          const n = Number(/^(\d+)\./.exec(b)![1])
+          const opts = [...b.matchAll(/\n\s+([123])\) (.*)/g)].map((m) => m[2])
+          const pick = opts.findIndex((o) => o.startsWith('Right'))
+          return { n, choice: pick + 1 }
+        })
+        return { stop_reason: 'end_turn', parsed_output: { answers }, usage }
+      }) as unknown as ParseClient['messages']['parse'],
+    },
+  }
+}
+
+const quizReq = (kind: 'lesson' | 'final', topics = ['Hardware', 'Quantization']) => ({
+  kind,
+  subject: 'Local LLMs',
+  language: 'en' as const,
+  selfLevel: 'beginner' as const,
+  availableMinutes: 60,
+  lessons: topics.map((t) => ({ title: `About ${t}`, topic: t, text: `Lesson text about ${t}.` })),
+  objectives: ['o'],
+})
+
+t('quiz (SPEC acceptance): the verification pass rejects a deliberately wrong planted question', async () => {
+  const planted: GeneratedQuestion = { ...gq(99, 'Hardware'), correct: 'Wrong but marked correct', wrong: ['Right actual answer', 'Wrong other'] }
+  const client = quizClient(() => [gq(1, 'Hardware'), planted, gq(2, 'Hardware'), gq(3, 'Hardware')])
+  const r = await generateQuiz(client, quizReq('lesson', ['Hardware']))
+  assert.equal(r.questions.length, 3)
+  assert.ok(!r.questions.some((q) => q.prompt === 'Question 99?'), 'planted question must not survive')
+  assert.ok(r.rejected >= 1)
+  // Direct check of the verifier on the planted question alone.
+  const pq = toQuestion(planted, 'lesson')
+  const ok = await verifyQuestions(quizClient(() => []), quizReq('lesson', ['Hardware']), [pq])
+  assert.equal(ok.size, 0)
+})
+
+t('quiz (SPEC acceptance): correct-answer position is roughly uniform over 100 generated questions', async () => {
+  let n = 0
+  const client = quizClient((want) => Array.from({ length: want }, () => gq(++n, ['Hardware', 'Quantization'][n % 2])))
+  const counts = [0, 0, 0]
+  let total = 0
+  while (total < 100) {
+    const r = await generateQuiz(client, quizReq('final'))
+    for (const q of r.questions) {
+      counts[q.correctIndex]++
+      total++
+    }
+  }
+  for (const c of counts) assert.ok(c >= 15 && c <= 55, `positions ${counts} over ${total}`)
+})
+
+t('quiz: too many rejections after 2 rounds fail the request instead of shipping a short quiz', async () => {
+  const bad = (n: number): GeneratedQuestion => ({ ...gq(n, 'Hardware'), correct: 'Wrong marked', wrong: ['Right real', 'Wrong x'] })
+  const client = quizClient((want) => Array.from({ length: want }, (_, i) => bad(i)))
+  await assert.rejects(generateQuiz(client, quizReq('lesson', ['Hardware'])), QuizShortError)
+  assert.equal(client.calls.filter((c) => c.label === 'generate').length, 2, 'max 2 generation rounds')
+})
+
+t('quiz: final test spreads questions evenly over lesson topics', () => {
+  assert.deepEqual(topicPlan(['A', 'B', 'C'], 10), { A: 4, B: 3, C: 3 })
+  const qs = [...Array(8)].map((_, i) => toQuestion(gq(i, 'A'), 'final')).concat([...Array(3)].map((_, i) => toQuestion(gq(i + 20, 'B'), 'final')))
+  const picked = balancedPick(qs, { A: 3, B: 3 }, 6)
+  assert.deepEqual([picked.filter((q) => q.topic === 'A').length, picked.filter((q) => q.topic === 'B').length], [3, 3])
+})
+
+function scoredProgramme(mode: Programme['testMode']): Programme {
+  const p = sampleProgramme(mode)
+  for (const l of p.lessons) p.progress.lessonStatus[l.id] = 'done'
+  return p
+}
+const qset = (topic: string, n: number) => Array.from({ length: n }, (_, i) => toQuestion(gq(i, topic), 'final', () => 0))
+const answersFor = (qs: Question[], right: number) => Object.fromEntries(qs.map((q, i) => [q.id, i < right ? 0 : 1]))
+
+t('scoring: final-only mode scores the final test; pass at exactly 70%; diagnostic never counts', () => {
+  const p = scoredProgramme('final')
+  p.diagnostic.questions = qset('X', 5) // must be ignored
+  const qs = qset('Hardware', 10)
+  p.progress.finalAttempts = [scoreQuiz('final-1', qs, answersFor(qs, 7))]
+  const s = programmeScore(p)!
+  assert.deepEqual([s.percent, s.passed, s.total], [70, true, 10])
+  assert.equal(PASS_MARK, 70)
+  p.progress.finalAttempts = [scoreQuiz('final-1', qs, answersFor(qs, 6))]
+  assert.equal(programmeScore(p)!.passed, false)
+})
+
+t('scoring: every-lesson mode pools lesson quizzes and the final test; weak topics flagged', () => {
+  const p = scoredProgramme('per_lesson_and_final')
+  const l1 = qset('Hardware', 3), l2 = qset('Quantization', 3), fin = [...qset('Hardware', 5), ...qset('Quantization', 5)]
+  p.progress.quizResults = [scoreQuiz('lesson-1', l1, answersFor(l1, 3)), scoreQuiz('lesson-2', l2, answersFor(l2, 1))]
+  const finAns = Object.fromEntries(fin.map((q, i) => [q.id, i < 5 ? 0 : i < 7 ? 0 : 1])) // Hardware 5/5, Quantization 2/5
+  p.progress.finalAttempts = [scoreQuiz('final-1', fin, finAns)]
+  const s = programmeScore(p)!
+  assert.equal(s.total, 16)
+  assert.equal(s.correct, 3 + 1 + 7)
+  assert.equal(s.percent, Math.round((11 / 16) * 100))
+  assert.deepEqual(s.byTopic.filter((t) => t.weak).map((t) => t.topic), ['Quantization'])
+  assert.equal(programmeScore(sampleProgramme('none')), null, 'no tests: no score')
+})
+
+t('scoring: retakes keep history; the first passing attempt counts; completion needs lessons, quizzes and a pass', () => {
+  const p = scoredProgramme('final')
+  const a = qset('Hardware', 10), b = qset('Hardware', 10), c = qset('Hardware', 10)
+  p.progress.finalAttempts = [scoreQuiz('final-1', a, answersFor(a, 5))]
+  assert.equal(isCompleted(p), false)
+  p.progress.finalAttempts.push(scoreQuiz('final-2', b, answersFor(b, 8)), scoreQuiz('final-3', c, answersFor(c, 9)))
+  assert.equal(countingFinal(p)!.quizId, 'final-2')
+  assert.equal(programmeScore(p)!.percent, 80)
+  assert.equal(isCompleted(p), true)
+  const per = scoredProgramme('per_lesson_and_final')
+  per.progress.finalAttempts = [scoreQuiz('final-1', a, answersFor(a, 10))]
+  assert.equal(isCompleted(per), false, 'lesson quizzes missing')
 })
 
 void Promise.all(pending).then(() => {if (failed) {

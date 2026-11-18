@@ -1,0 +1,214 @@
+'use client'
+
+// PromptQuorum Academy — lesson quiz and final test (docs/academy/SPEC.md 5.5). One question at a time, three
+// options, immediate feedback with the explanation, a short result at the end. The quiz in progress (questions and
+// answers) is kept in the stored programme, so a reload continues where the learner was.
+
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { scoreQuiz } from '@/lib/academy/scoring'
+import type { AcademyErrorCode } from '@/lib/academy/route-errors'
+import type { Programme, Question, QuizResult } from '@/lib/academy/types'
+import type { AcademyCopy } from './copy'
+import type { useAcademyState } from './useAcademyState'
+
+type Update = ReturnType<typeof useAcademyState>['update']
+type Post = <T>(url: string, body: unknown) => Promise<{ ok: true; data: T } | { ok: false; code: AcademyErrorCode | 'network' }>
+
+/** Lesson text sent as the quiz source (the verifier checks answers against exactly this text). */
+export function lessonSource(p: Programme, ids: string[], maxChars: number) {
+  return p.lessons
+    .filter((l) => ids.includes(l.id))
+    .map((l) => ({ title: l.title, topic: l.topic, text: l.sections.map((s) => `${s.heading}\n${s.body}`).join('\n\n').slice(0, maxChars) }))
+}
+
+export function QuizView({ tx, programme, update, postJson, errorText }: { tx: AcademyCopy; programme: Programme; update: Update; postJson: Post; errorText: (c: AcademyErrorCode | 'network') => string }) {
+  const active = programme.progress.activeQuiz
+  // After the last answer the active quiz is cleared; the finished result keeps which quiz it was.
+  const [finished, setFinished] = useState<{ result: QuizResult; quizId: string } | null>(null)
+  const quizId = finished?.quizId ?? active?.quizId
+  const isFinal = quizId === 'final'
+  const lessonIndex = programme.lessons.findIndex((l) => l.id === quizId)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<AcademyErrorCode | 'network' | null>(null)
+  const [feedbackFor, setFeedbackFor] = useState<string | null>(null)
+  const requested = useRef<string | null>(null)
+
+  const updateProgramme = useCallback((fn: (p: Programme) => Programme) => update((s) => (s.programme ? { ...s, programme: fn(s.programme) } : s)), [update])
+
+  const load = useCallback(async () => {
+    if (!active) return
+    setError(null)
+    setLoading(true)
+    const ids = isFinal ? programme.lessons.map((l) => l.id) : [active.quizId]
+    const res = await postJson<{ questions: Question[] }>('/api/academy/quiz', {
+      kind: isFinal ? 'final' : 'lesson',
+      subject: programme.subject.slice(0, 120),
+      language: programme.language,
+      selfLevel: programme.selfLevel,
+      availableMinutes: programme.availableMinutes,
+      lessons: lessonSource(programme, ids, isFinal ? 2500 : 4000),
+      objectives: programme.objectives,
+    })
+    setLoading(false)
+    if (!res.ok) return setError(res.code)
+    updateProgramme((p) => (p.progress.activeQuiz ? { ...p, progress: { ...p.progress, activeQuiz: { ...p.progress.activeQuiz, questions: res.data.questions } } } : p))
+  }, [active, isFinal, programme, postJson, updateProgramme])
+
+  useEffect(() => {
+    if (!active || active.questions.length || requested.current === active.quizId) return
+    requested.current = active.quizId
+    void load()
+  }, [active, load])
+
+  const backToProgramme = () => update((s) => ({ ...s, view: 'programme' }))
+
+  // Short result after the last question.
+  if (finished) {
+    const next = lessonIndex >= 0 && lessonIndex + 1 < programme.lessons.length ? lessonIndex + 1 : -1
+    return (
+      <section className="space-y-4 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6" aria-live="polite">
+        <h2 className="text-xl font-semibold text-gray-900">{isFinal ? tx.finalTestTitle : tx.lessonQuizTitle(lessonIndex + 1)}</h2>
+        <p className="text-lg text-gray-800">{tx.quizScore(finished.result.correct, finished.result.total)}</p>
+        <button
+          type="button"
+          onClick={() =>
+            update((s) =>
+              isFinal ? { ...s, view: 'results' } : next >= 0 && s.programme ? { ...s, view: 'lesson', programme: { ...s.programme, progress: { ...s.programme.progress, currentLesson: next } } } : { ...s, view: 'programme' },
+            )
+          }
+          className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700"
+        >
+          {isFinal ? tx.seeResults : tx.continueLessons}
+        </button>
+      </section>
+    )
+  }
+
+  // No quiz and no result to show (e.g. stale screen after a reload): back to the programme.
+  if (!active) return <Finisher run={backToProgramme} />
+  const title = isFinal ? tx.finalTestTitle : tx.lessonQuizTitle(lessonIndex + 1)
+
+  if (error) {
+    return (
+      <div className="space-y-3 rounded-2xl border border-red-200 bg-red-50 p-5 text-red-900" role="alert">
+        <p>{errorText(error)}</p>
+        <div className="flex flex-wrap gap-3">
+          <button type="button" onClick={() => void load()} className="rounded-xl bg-purple-600 px-4 py-2 font-medium text-white hover:bg-purple-700">
+            {tx.retry}
+          </button>
+          <button type="button" onClick={backToProgramme} className="rounded-xl border border-red-300 bg-white px-4 py-2 font-medium text-red-900">
+            {tx.backToProgramme}
+          </button>
+        </div>
+      </div>
+    )
+  }
+  if (loading || !active.questions.length) {
+    return (
+      <div className="flex items-center gap-3 rounded-2xl border border-purple-100 bg-white p-6 text-gray-700" role="status" aria-live="polite">
+        <span className="h-5 w-5 shrink-0 animate-spin rounded-full border-2 border-purple-200 border-t-purple-600" aria-hidden="true" />
+        {tx.preparingQuiz}
+      </div>
+    )
+  }
+
+  const questions = active.questions
+  const total = questions.length
+  // The question on screen: the one just answered (feedback), else the first unanswered one.
+  const current = feedbackFor ? questions.find((q) => q.id === feedbackFor) : questions.find((q) => !(q.id in active.answers))
+  if (!current) {
+    // All answered (e.g. after a reload): finish now.
+    return <Finisher run={() => finish(active.answers)} />
+  }
+  const index = questions.indexOf(current)
+  const chosen = active.answers[current.id]
+  const answered = chosen !== undefined
+
+  function finish(answers: Record<string, number>) {
+    const resultId = isFinal ? `final-${(programme.progress.finalAttempts?.length ?? 0) + 1}` : active!.quizId
+    const result: QuizResult = { ...scoreQuiz(resultId, questions, answers), questions }
+    updateProgramme((p) => {
+      const progress = { ...p.progress, activeQuiz: undefined }
+      if (isFinal) {
+        const attempts = [...(p.progress.finalAttempts ?? []), result]
+        return { ...p, finalTest: questions, progress: { ...progress, finalAttempts: attempts, finalResult: result } }
+      }
+      return { ...p, progress: { ...progress, quizResults: [...p.progress.quizResults.filter((r) => r.quizId !== result.quizId), result] } }
+    })
+    setFeedbackFor(null)
+    setFinished({ result, quizId: active!.quizId })
+  }
+
+  const choose = (i: number) => {
+    if (answered) return
+    updateProgramme((p) =>
+      p.progress.activeQuiz ? { ...p, progress: { ...p.progress, activeQuiz: { ...p.progress.activeQuiz, answers: { ...p.progress.activeQuiz.answers, [current.id]: i } } } } : p,
+    )
+    setFeedbackFor(current.id)
+  }
+  const next = () => {
+    const last = index === total - 1
+    setFeedbackFor(null)
+    if (last) finish(active.answers)
+  }
+
+  return (
+    <section aria-labelledby="academy-quiz" className="space-y-5 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
+      <div>
+        <h2 id="academy-quiz" className="text-xl font-semibold text-gray-900">
+          {title}
+        </h2>
+        <div className="mt-2 flex items-center justify-between text-sm text-gray-500">
+          <span>{tx.questionOf(index + 1, total)}</span>
+          <span>{programme.subject}</span>
+        </div>
+        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-purple-100" aria-hidden="true">
+          <div className="h-full bg-purple-600 transition-all" style={{ width: `${((index + (answered ? 1 : 0)) / total) * 100}%` }} />
+        </div>
+      </div>
+      <fieldset key={current.id}>
+        <legend className="text-lg font-medium text-gray-900">{current.prompt}</legend>
+        <div className="mt-3 grid gap-2">
+          {current.options.map((o, i) => {
+            const isCorrect = i === current.correctIndex
+            const state = !answered ? 'idle' : isCorrect ? 'correct' : i === chosen ? 'wrong' : 'other'
+            const cls = {
+              idle: 'border-gray-300 hover:border-purple-600 hover:bg-purple-50',
+              correct: 'border-green-600 bg-green-50 text-green-900',
+              wrong: 'border-red-500 bg-red-50 text-red-900',
+              other: 'border-gray-200 text-gray-500',
+            }[state]
+            return (
+              <button key={i} type="button" onClick={() => choose(i)} disabled={answered} aria-pressed={chosen === i} className={`rounded-xl border px-4 py-3 text-start ${cls}`}>
+                {o}
+              </button>
+            )
+          })}
+        </div>
+      </fieldset>
+      {answered && (
+        <div className={`space-y-2 rounded-xl p-4 text-sm ${chosen === current.correctIndex ? 'bg-green-50 text-green-900' : 'bg-amber-50 text-amber-900'}`} role="status" aria-live="polite">
+          <p className="font-semibold">{chosen === current.correctIndex ? tx.correctFeedback : tx.wrongFeedback}</p>
+          <p>{current.explanationCorrect}</p>
+          {chosen !== current.correctIndex && current.explanationWrong[chosen] && <p>{current.explanationWrong[chosen]}</p>}
+          <button type="button" onClick={next} className="mt-1 rounded-xl bg-purple-600 px-5 py-2 font-medium text-white hover:bg-purple-700">
+            {index === total - 1 ? tx.seeResult : tx.nextQuestion}
+          </button>
+        </div>
+      )}
+      <button type="button" onClick={backToProgramme} className="text-sm text-purple-700 underline underline-offset-2">
+        {tx.backToProgramme}
+      </button>
+    </section>
+  )
+}
+
+function Finisher({ run }: { run: () => void }) {
+  const done = useRef(false)
+  useEffect(() => {
+    if (done.current) return
+    done.current = true
+    run()
+  }, [run])
+  return null
+}

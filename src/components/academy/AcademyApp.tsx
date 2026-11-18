@@ -9,11 +9,14 @@ import { ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS,
 import { clearAcademyState, defaultDraft } from '@/lib/academy/store'
 import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
 import { lessonsDone, nextOpenLesson, openLesson } from '@/lib/academy/progress'
+import { programmeScore } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import { LEVELS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
 import { LessonView } from './LessonView'
+import { QuizView } from './QuizView'
+import { ResultsView } from './ResultsView'
 import { useAcademyState } from './useAcademyState'
 
 export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicSuggestion[] }) {
@@ -45,13 +48,32 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           {tx.storageBlocked}
         </p>
       )}
-      {state.view === 'lesson' && state.programme ? (
+      {state.view === 'quiz' && state.programme ? (
+        <QuizView tx={tx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(tx, code)} />
+      ) : state.view === 'results' && state.programme && programmeScore(state.programme) ? (
+        <ResultsView tx={tx} programme={state.programme} update={update} />
+      ) : state.view === 'lesson' && state.programme ? (
         <LessonView tx={tx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(tx, code)} />
       ) : state.view === 'programme' && state.programme ? (
         <ProgrammeView
           tx={tx}
           programme={state.programme}
           onOpenLesson={(i) => update((s) => (s.programme ? { ...s, view: 'lesson', programme: openLesson(s.programme, i) } : s))}
+          onStartQuiz={(quizId) =>
+            update((s) =>
+              s.programme
+                ? {
+                    ...s,
+                    view: 'quiz',
+                    programme:
+                      s.programme.progress.activeQuiz?.quizId === quizId
+                        ? s.programme
+                        : { ...s.programme, progress: { ...s.programme.progress, activeQuiz: { quizId, questions: [], answers: {} } } },
+                  }
+                : s,
+            )
+          }
+          onShowResults={() => update((s) => ({ ...s, view: 'results' }))}
           onStartOver={() => update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined }))}
         />
       ) : state.view === 'diagnostic' ? (
@@ -493,11 +515,15 @@ function ProgrammeView({
   tx,
   programme,
   onOpenLesson,
+  onStartQuiz,
+  onShowResults,
   onStartOver,
 }: {
   tx: AcademyCopy
   programme: Programme
   onOpenLesson: (index: number) => void
+  onStartQuiz: (quizId: string) => void
+  onShowResults: () => void
   onStartOver: () => void
 }) {
   const reading = programme.lessons.reduce((s, l) => s + l.estimatedMinutes, 0)
@@ -508,6 +534,13 @@ function ProgrammeView({
   const next = nextOpenLesson(programme)
   const done = lessonsDone(programme)
   const minutesSpent = Math.round(programme.progress.secondsSpent / 60)
+  const active = programme.progress.activeQuiz
+  const hasFinal = (programme.progress.finalAttempts?.length ?? 0) > 0
+  // "Every lesson" mode: a lesson marked done without its quiz (e.g. the quiz was left) gets the quiz first.
+  const missingQuiz =
+    programme.testMode === 'per_lesson_and_final'
+      ? programme.lessons.findIndex((l) => programme.progress.lessonStatus[l.id] === 'done' && !programme.progress.quizResults.some((r) => r.quizId === l.id))
+      : -1
   return (
     <section aria-labelledby="academy-programme" className="space-y-5 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
       <div>
@@ -523,7 +556,7 @@ function ProgrammeView({
       {next === -1 && (
         <div className="rounded-xl bg-green-50 px-4 py-3 text-green-900" role="status">
           <p className="font-medium">{tx.lessonsDoneTitle}</p>
-          <p className="text-sm">{programme.testMode === 'none' ? tx.programmeComplete : tx.testsComing}</p>
+          {programme.testMode === 'none' && <p className="text-sm">{tx.programmeComplete}</p>}
         </div>
       )}
       <div>
@@ -568,11 +601,30 @@ function ProgrammeView({
         </ol>
       </div>
       <p className="text-sm text-gray-700">{testLine}</p>
-      {next !== -1 && (
-        <button type="button" onClick={() => onOpenLesson(next)} className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700">
-          {next === 0 && done === 0 ? tx.startLesson : tx.continueLesson(next + 1)}
-        </button>
-      )}
+      <div className="flex flex-wrap gap-3">
+        {active ? (
+          <button type="button" onClick={() => onStartQuiz(active.quizId)} className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700">
+            {tx.continueQuiz}
+          </button>
+        ) : missingQuiz >= 0 ? (
+          <button type="button" onClick={() => onStartQuiz(programme.lessons[missingQuiz].id)} className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700">
+            {tx.lessonQuizTitle(missingQuiz + 1)}
+          </button>
+        ) : next !== -1 ? (
+          <button type="button" onClick={() => onOpenLesson(next)} className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700">
+            {next === 0 && done === 0 ? tx.startLesson : tx.continueLesson(next + 1)}
+          </button>
+        ) : programme.testMode !== 'none' && !hasFinal ? (
+          <button type="button" onClick={() => onStartQuiz('final')} className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700">
+            {tx.startFinalTest}
+          </button>
+        ) : null}
+        {hasFinal && (
+          <button type="button" onClick={onShowResults} className="rounded-xl border border-purple-300 px-6 py-3 font-semibold text-purple-800 hover:bg-purple-50">
+            {tx.seeResults}
+          </button>
+        )}
+      </div>
       <div>
         <button type="button" onClick={onStartOver} className="text-sm text-purple-700 underline underline-offset-2">
           {tx.startOver}

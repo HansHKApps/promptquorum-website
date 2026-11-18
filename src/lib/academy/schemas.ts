@@ -102,3 +102,33 @@ export const lessonRequestSchema = z.object({
   otherTitles: z.array(z.string().max(200)).max(12),
 })
 export type LessonRequest = z.infer<typeof lessonRequestSchema>
+
+// ---------------------------------------------------------------------------------------------- quizzes (Phase 4)
+
+export const quizOutputSchema = z.object({
+  questions: z.array(generatedQuestionSchema).describe('The requested number of questions, spread over the requested topics'),
+})
+export type QuizOutput = z.infer<typeof quizOutputSchema>
+
+/** The verifier's answers: one per question, by number, choosing option 1, 2 or 3 (or 0 if none is defensible). */
+export const verifyOutputSchema = z.object({
+  answers: z.array(z.object({ n: z.number().int(), choice: z.number().int().describe('1, 2 or 3; 0 if no option is clearly correct') })),
+})
+export type VerifyOutput = z.infer<typeof verifyOutputSchema>
+
+const sourceText = z.string().max(4000)
+
+export const quizRequestSchema = z.object({
+  kind: z.enum(['lesson', 'final']),
+  subject,
+  language: z.enum(ALL_LANGS),
+  selfLevel: z.enum(LEVELS),
+  availableMinutes: minutes,
+  /** lesson quiz: one entry (that lesson); final test: every lesson, trimmed text */
+  lessons: z
+    .array(z.object({ title: z.string().max(200), topic: z.string().min(1).max(80), text: sourceText }))
+    .min(1)
+    .max(12),
+  objectives: z.array(z.string().max(300)).max(8),
+})
+export type QuizRequest = z.infer<typeof quizRequestSchema>

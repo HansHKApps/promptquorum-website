@@ -90,7 +90,17 @@ export function LessonView({
   const done = lessonsDone(programme)
   const objectives = lesson.objectiveIds.map((i) => programme.objectives[i]).filter(Boolean)
   const last = index === total - 1
+  const needsQuiz = programme.testMode === 'per_lesson_and_final' && !programme.progress.quizResults.some((r) => r.quizId === lesson.id)
   const finish = () => {
+    if (needsQuiz) {
+      // "Every lesson" mode: the lesson quiz comes right after the lesson (SPEC 2 #2).
+      update((s) => {
+        if (!s.programme) return s
+        const marked = markLessonDone(s.programme, index)
+        return { ...s, view: 'quiz', programme: { ...marked, progress: { ...marked.progress, activeQuiz: { quizId: lesson.id, questions: [], answers: {} } } } }
+      })
+      return
+    }
     updateProgramme((p) => {
       const marked = markLessonDone(p, index)
       return last ? marked : { ...marked, progress: { ...marked.progress, currentLesson: index + 1 } }
