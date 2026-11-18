@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-04-04',
     leadAnswerBlock: '**Gemma 4 31B and Qwen3.8-27B are the two local LLMs to start with for creative writing; both fit one 24 GB GPU.** Gemma 4 31B is the prose pick, Qwen3.8-27B the long-project pick. Smaller tiers are below. Editorial ranking from model cards and public leaderboards, not a PromptQuorum test.',
     audience: 'Beginners running their first local LLM on consumer hardware',
-    dateModified: '2026-11-15',
+    dateModified: '2026-11-17',
     readTime: '9 min read',
     educationalLevel: 'Beginner',
     primaryTerm: 'local LLM creative writing',
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Below 24 GB the choice is smaller and less proven, so test before you commit.** Smaller models generally keep long scenes consistent less reliably than larger ones.',
         ],
         items: [
-          '**8 GB: Qwen3.5 9B** (`qwen3.5:9b`, 6.6–7.6 GB, 256K context). The newest model in the 8 GB class on Ollama. No creative-writing score is published for it, so run your own scenes.',
+          '**8 GB: Qwen3.5 9B** (`qwen3.5:9b`, 6.6–7.6 GB, 256K context). A recent model in the 8 GB class on Ollama. No creative-writing score is published for it, so run your own scenes.',
           '**12 GB: Gemma 4 12B** (`gemma4:12b`, 7.7–8.0 GB, 256K context, Apache 2.0). Featherless lists a rubric of 15.71 and 1270.4 Elo for it on EQ-Bench Creative Writing v3.',
           '**16 GB: Mistral Small 3 24B** (`mistral-small:24b`, 14 GB, 32K context, Apache 2.0). An older model that stays on the list because few newer models fit 16 GB. It leaves only about 2 GB for context, so keep prompts short.',
         ],
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which local LLMs work best for writing with only 8 GB of VRAM?',
-            a: 'Qwen3.5 9B (6.6–7.6 GB, 256K context) is the newest model in the 8 GB class on Ollama. No creative-writing score is published for it, so run your own test scenes, and expect smaller models to hold long scenes together less reliably than the 24 GB models.',
+            a: 'Qwen3.5 9B (6.6–7.6 GB, 256K context) is a recent model in the 8 GB class on Ollama. No creative-writing score is published for it, so run your own test scenes, and expect smaller models to hold long scenes together less reliably than the 24 GB models.',
           },
           {
             q: 'What are the best open-source models for poetry?',
@@ -491,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-04-04',
     leadAnswerBlock: '**Gemma 4 31B y Qwen3.8-27B son los dos LLM locales para empezar en escritura creativa; ambos caben en una GPU de 24 GB.** Gemma 4 31B es la opción para prosa y Qwen3.8-27B para proyectos largos. Los niveles menores están abajo. Ranking editorial, no una prueba de PromptQuorum.',
     audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
-    dateModified: '2026-11-15',
+    dateModified: '2026-11-17',
     readTime: '9 min de lectura',
     educationalLevel: 'Beginner',
     primaryTerm: 'LLM local escritura creativa',
@@ -743,7 +743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Por debajo de 24 GB la oferta es menor y está menos contrastada, así que prueba antes de decidir.** Los modelos pequeños suelen mantener la coherencia de escenas largas peor que los grandes.',
         ],
         items: [
-          '**8 GB: Qwen3.5 9B** (`qwen3.5:9b`, 6.6–7.6 GB, contexto de 256K). El modelo más reciente de la clase de 8 GB en Ollama. No hay puntuación creativa publicada, así que prueba tus propias escenas.',
+          '**8 GB: Qwen3.5 9B** (`qwen3.5:9b`, 6.6–7.6 GB, contexto de 256K). Un modelo reciente de la clase de 8 GB en Ollama. No hay puntuación creativa publicada, así que prueba tus propias escenas.',
           '**12 GB: Gemma 4 12B** (`gemma4:12b`, 7.7–8.0 GB, contexto de 256K, Apache 2.0). Featherless indica una rúbrica de 15.71 y 1270.4 Elo en EQ-Bench Creative Writing v3.',
           '**16 GB: Mistral Small 3 24B** (`mistral-small:24b`, 14 GB, contexto de 32K, Apache 2.0). Un modelo más antiguo que sigue en la lista porque pocos modelos más nuevos caben en 16 GB. Deja solo unos 2 GB para el contexto, así que mantén los prompts cortos.',
         ],
@@ -838,7 +838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué LLM locales funcionan mejor para escribir con solo 8 GB de VRAM?',
-            a: 'Qwen3.5 9B (6.6–7.6 GB, contexto de 256K) es el modelo más reciente de la clase de 8 GB en Ollama. No hay puntuación creativa publicada, así que haz tus propias escenas de prueba y espera que los modelos pequeños mantengan las escenas largas con menos fiabilidad que los de 24 GB.',
+            a: 'Qwen3.5 9B (6.6–7.6 GB, contexto de 256K) es un modelo reciente de la clase de 8 GB en Ollama. No hay puntuación creativa publicada, así que haz tus propias escenas de prueba y espera que los modelos pequeños mantengan las escenas largas con menos fiabilidad que los de 24 GB.',
           },
           {
             q: '¿Qué modelo de pesos abiertos es el mejor para poesía?',
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-04-04',
     leadAnswerBlock: '**نموذجا Gemma 4 31B وQwen3.8-27B هما أفضل بداية محلية للكتابة الإبداعية، ويعمل كلاهما على GPU بذاكرة 24 GB.** الأول خيار النثر والثاني خيار المشاريع الطويلة. مع 8 و12 و16 GB استخدم Qwen3.5 9B أو Gemma 4 12B أو Mistral Small 3 24B. ترتيب تحريري وليس اختبارًا من PromptQuorum.',
     audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي لهم على عتاد استهلاكي',
-    dateModified: '2026-11-15',
+    dateModified: '2026-11-17',
     readTime: '9 دقائق للقراءة',
     educationalLevel: 'Beginner',
     primaryTerm: 'LLM محلي للكتابة الإبداعية',
@@ -1181,7 +1181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**دون 24 GB تكون الخيارات أقل وأقل اختبارًا، لذا جرّب قبل أن تلتزم.** النماذج الأصغر تحافظ عمومًا على اتساق المشاهد الطويلة بدرجة أقل من الأكبر.',
         ],
         items: [
-          '**8 GB: Qwen3.5 9B** (`qwen3.5:9b`، 6.6–7.6 GB، سياق 256K). أحدث نموذج في فئة 8 GB على Ollama. لا توجد درجة إبداعية منشورة له، فجرّب مشاهدك الخاصة.',
+          '**8 GB: Qwen3.5 9B** (`qwen3.5:9b`، 6.6–7.6 GB، سياق 256K). نموذج حديث في فئة 8 GB على Ollama. لا توجد درجة إبداعية منشورة له، فجرّب مشاهدك الخاصة.',
           '**12 GB: Gemma 4 12B** (`gemma4:12b`، 7.7–8.0 GB، سياق 256K، Apache 2.0). تذكر Featherless له معيارًا قدره 15.71 و1270.4 Elo في EQ-Bench Creative Writing v3.',
           '**16 GB: Mistral Small 3 24B** (`mistral-small:24b`، 14 GB، سياق 32K، Apache 2.0). نموذج أقدم يبقى في القائمة لأن قلة من النماذج الأحدث تتسع في 16 GB. يترك نحو 2 GB فقط للسياق، فأبقِ المطالبات قصيرة.',
         ],
@@ -1276,7 +1276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما أفضل نماذج LLM المحلية للكتابة بذاكرة VRAM لا تتجاوز 8 GB؟',
-            a: 'يُعد Qwen3.5 9B (6.6–7.6 GB، سياق 256K) أحدث نموذج في فئة 8 GB على Ollama. لا توجد له درجة إبداعية منشورة، فجرّب مشاهد اختبار خاصة بك وتوقع أن تحافظ النماذج الأصغر على تماسك المشاهد الطويلة بدرجة أقل من نماذج 24 GB.',
+            a: 'يُعد Qwen3.5 9B (6.6–7.6 GB، سياق 256K) نموذجًا حديثًا في فئة 8 GB على Ollama. لا توجد له درجة إبداعية منشورة، فجرّب مشاهد اختبار خاصة بك وتوقع أن تحافظ النماذج الأصغر على تماسك المشاهد الطويلة بدرجة أقل من نماذج 24 GB.',
           },
           {
             q: 'ما أفضل نموذج مفتوح الأوزان للشعر؟',
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-04-04',
     leadAnswerBlock: '**Gemma 4 31B e Qwen3.8-27B são os dois LLMs locais para começar na escrita criativa; ambos cabem em uma GPU de 24 GB.** O Gemma 4 31B é a escolha de prosa e o Qwen3.8-27B a de projetos longos. Ranking editorial, não um teste da PromptQuorum.',
     audience: 'Iniciantes rodando o primeiro LLM local em hardware de consumo',
-    dateModified: '2026-11-15',
+    dateModified: '2026-11-17',
     readTime: '9 min de leitura',
     educationalLevel: 'Beginner',
     primaryTerm: 'LLM local escrita criativa',
@@ -1619,7 +1619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Abaixo de 24 GB a escolha é menor e menos comprovada; por isso teste antes de se decidir.** Modelos menores costumam manter cenas longas coerentes com menos confiabilidade do que os maiores.',
         ],
         items: [
-          '**8 GB: Qwen3.5 9B** (`qwen3.5:9b`, 6.6–7.6 GB, contexto de 256K). O modelo mais recente da classe de 8 GB no Ollama. Não há pontuação criativa publicada; rode suas próprias cenas.',
+          '**8 GB: Qwen3.5 9B** (`qwen3.5:9b`, 6.6–7.6 GB, contexto de 256K). Um modelo recente da classe de 8 GB no Ollama. Não há pontuação criativa publicada; rode suas próprias cenas.',
           '**12 GB: Gemma 4 12B** (`gemma4:12b`, 7.7–8.0 GB, contexto de 256K, Apache 2.0). A Featherless lista rubrica de 15.71 e 1270.4 Elo para ele no EQ-Bench Creative Writing v3.',
           '**16 GB: Mistral Small 3 24B** (`mistral-small:24b`, 14 GB, contexto de 32K, Apache 2.0). Um modelo mais antigo que permanece na lista porque poucos modelos mais novos cabem em 16 GB. Sobram só cerca de 2 GB para o contexto; mantenha os prompts curtos.',
         ],
@@ -1714,7 +1714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais LLMs locais funcionam melhor para escrever com apenas 8 GB de VRAM?',
-            a: 'O Qwen3.5 9B (6.6–7.6 GB, contexto de 256K) é o modelo mais recente da classe de 8 GB no Ollama. Não há pontuação criativa publicada; faça suas próprias cenas de teste e espere que modelos menores segurem cenas longas com menos confiabilidade do que os de 24 GB.',
+            a: 'O Qwen3.5 9B (6.6–7.6 GB, contexto de 256K) é um modelo recente da classe de 8 GB no Ollama. Não há pontuação criativa publicada; faça suas próprias cenas de teste e espere que modelos menores segurem cenas longas com menos confiabilidade do que os de 24 GB.',
           },
           {
             q: 'Qual modelo de pesos abertos é o melhor para poesia?',
@@ -1805,7 +1805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-04-04',
     leadAnswerBlock: '**Gemma 4 31B und Qwen3.8-27B sind die beiden lokalen LLMs für den Start beim kreativen Schreiben; beide passen auf eine 24-GB-GPU.** Gemma 4 31B ist die Prosa-Wahl, Qwen3.8-27B die Wahl für lange Projekte. Kleinere Stufen folgen unten. Redaktionelle Rangliste aus Modellkarten und Leaderboards, kein PromptQuorum-Test.',
     audience: 'Einsteiger, die ihr erstes lokales LLM auf Consumer-Hardware betreiben',
-    dateModified: '2026-11-15',
+    dateModified: '2026-11-17',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Anfänger',
     primaryTerm: 'lokales LLM kreatives Schreiben',
@@ -2057,7 +2057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Unterhalb von 24 GB ist die Auswahl kleiner und weniger erprobt; testen Sie daher vor der Entscheidung.** Kleinere Modelle halten lange Szenen in der Regel weniger zuverlässig konsistent als größere.',
         ],
         items: [
-          '**8 GB: Qwen3.5 9B** (`qwen3.5:9b`, 6,6–7,6 GB, 256K Kontext). Das neueste Modell der 8-GB-Klasse bei Ollama. Für das Modell ist kein Kreativwert veröffentlicht; testen Sie eigene Szenen.',
+          '**8 GB: Qwen3.5 9B** (`qwen3.5:9b`, 6,6–7,6 GB, 256K Kontext). Ein aktuelles Modell der 8-GB-Klasse bei Ollama. Für das Modell ist kein Kreativwert veröffentlicht; testen Sie eigene Szenen.',
           '**12 GB: Gemma 4 12B** (`gemma4:12b`, 7,7–8,0 GB, 256K Kontext, Apache 2.0). Featherless nennt für EQ-Bench Creative Writing v3 eine Rubrik von 15,71 und 1270,4 Elo.',
           '**16 GB: Mistral Small 3 24B** (`mistral-small:24b`, 14 GB, 32K Kontext, Apache 2.0). Ein älteres Modell, das auf der Liste bleibt, weil nur wenige neuere Modelle in 16 GB passen. Es lässt nur etwa 2 GB für den Kontext, halten Sie Prompts daher kurz.',
         ],
@@ -2152,7 +2152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche lokalen LLMs eignen sich zum Schreiben mit nur 8 GB VRAM?',
-            a: 'Qwen3.5 9B (6,6–7,6 GB, 256K Kontext) ist das neueste Modell der 8-GB-Klasse bei Ollama. Für das Modell ist kein Kreativwert veröffentlicht; führen Sie daher eigene Testszenen durch und rechnen Sie damit, dass kleinere Modelle lange Szenen weniger zuverlässig zusammenhalten als die 24-GB-Modelle.',
+            a: 'Qwen3.5 9B (6,6–7,6 GB, 256K Kontext) ist ein aktuelles Modell der 8-GB-Klasse bei Ollama. Für das Modell ist kein Kreativwert veröffentlicht; führen Sie daher eigene Testszenen durch und rechnen Sie damit, dass kleinere Modelle lange Szenen weniger zuverlässig zusammenhalten als die 24-GB-Modelle.',
           },
           {
             q: 'Welches Open-Weight-Modell ist am besten für Poesie?',
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-04-04',
     leadAnswerBlock: '**Gemma 4 31B et Qwen3.8-27B sont les deux LLM locaux pour débuter en écriture créative ; tous deux tiennent sur un GPU de 24 Go.** Gemma 4 31B est le choix prose, Qwen3.8-27B le choix projets longs. Les paliers inférieurs suivent. Classement éditorial, pas un test PromptQuorum.',
     audience: 'Débutants qui lancent leur premier LLM local sur du matériel grand public',
-    dateModified: '2026-11-15',
+    dateModified: '2026-11-17',
     readTime: '9 min de lecture',
     educationalLevel: 'Débutant',
     primaryTerm: 'LLM local écriture créative',
@@ -2495,7 +2495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**En dessous de 24 Go, le choix est plus restreint et moins éprouvé : testez avant de vous engager.** Les petits modèles gardent généralement moins bien la cohérence des scènes longues que les grands.',
         ],
         items: [
-          '**8 Go : Qwen3.5 9B** (`qwen3.5:9b`, 6.6–7.6 Go, contexte de 256K). Le modèle le plus récent de la classe 8 Go sur Ollama. Aucun score créatif n\'est publié : essayez vos propres scènes.',
+          '**8 Go : Qwen3.5 9B** (`qwen3.5:9b`, 6.6–7.6 Go, contexte de 256K). Un modèle récent de la classe 8 Go sur Ollama. Aucun score créatif n\'est publié : essayez vos propres scènes.',
           '**12 Go : Gemma 4 12B** (`gemma4:12b`, 7.7–8.0 Go, contexte de 256K, Apache 2.0). Featherless indique une rubrique de 15.71 et 1270.4 Elo sur EQ-Bench Creative Writing v3.',
           '**16 Go : Mistral Small 3 24B** (`mistral-small:24b`, 14 Go, contexte de 32K, Apache 2.0). Un modèle plus ancien qui reste dans la liste parce que peu de modèles plus récents tiennent en 16 Go. Il ne laisse qu\'environ 2 Go pour le contexte : gardez des prompts courts.',
         ],
@@ -2590,7 +2590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quels LLM locaux conviennent le mieux pour écrire avec seulement 8 Go de VRAM ?',
-            a: 'Qwen3.5 9B (6.6–7.6 Go, contexte de 256K) est le modèle le plus récent de la classe 8 Go sur Ollama. Aucun score créatif n\'est publié : faites vos propres scènes de test, et attendez-vous à ce que les petits modèles tiennent moins bien les scènes longues que les modèles de 24 Go.',
+            a: 'Qwen3.5 9B (6.6–7.6 Go, contexte de 256K) est un modèle récent de la classe 8 Go sur Ollama. Aucun score créatif n\'est publié : faites vos propres scènes de test, et attendez-vous à ce que les petits modèles tiennent moins bien les scènes longues que les modèles de 24 Go.',
           },
           {
             q: 'Quel modèle à poids ouverts est le meilleur pour la poésie ?',
@@ -2681,7 +2681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-04-04',
     leadAnswerBlock: '**創作で最初に試すローカルLLMは Gemma 4 31B と Qwen3.8-27B で、どちらも24 GBのGPU 1枚に収まります。** 散文は Gemma 4 31B、長編は Qwen3.8-27B です。8、12、16 GBでは Qwen3.5 9B、Gemma 4 12B、Mistral Small 3 24B を選びます。編集部の順位で、PromptQuorumの検証結果ではありません。',
     audience: '一般向けハードウェアで初めてローカルLLMを動かす初心者',
-    dateModified: '2026-11-15',
+    dateModified: '2026-11-17',
     readTime: '9分読',
     educationalLevel: '初心者',
     primaryTerm: 'ローカルLLM創作',
@@ -2933,7 +2933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**24 GB未満では選択肢が少なく、実績も十分ではないため、決める前に試してください。** 小型モデルは一般に、長い場面の一貫性を大型モデルほど保てません。',
         ],
         items: [
-          '**8 GB: Qwen3.5 9B**（`qwen3.5:9b`、6.6〜7.6 GB、256Kコンテキスト）。Ollamaで8 GBクラスの最新モデルです。創作スコアは公開されていないため、自分の場面で試してください。',
+          '**8 GB: Qwen3.5 9B**（`qwen3.5:9b`、6.6〜7.6 GB、256Kコンテキスト）。Ollamaで8 GBクラスの比較的新しいモデルです。創作スコアは公開されていないため、自分の場面で試してください。',
           '**12 GB: Gemma 4 12B**（`gemma4:12b`、7.7〜8.0 GB、256Kコンテキスト、Apache 2.0）。FeatherlessはEQ-Bench Creative Writing v3でルーブリック15.71、1270.4 Eloと報告しています。',
           '**16 GB: Mistral Small 3 24B**（`mistral-small:24b`、14 GB、32Kコンテキスト、Apache 2.0）。16 GBに収まる新しいモデルが少ないため、古いながら残しています。コンテキスト用の余裕は約2 GBなので、プロンプトは短くしてください。',
         ],
@@ -3028,7 +3028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'VRAMが8 GBだけの場合、執筆に向くローカルLLMは？',
-            a: 'Qwen3.5 9B（6.6〜7.6 GB、256Kコンテキスト）が、Ollamaの8 GBクラスで最新のモデルです。創作スコアは公開されていないため、自分の場面で試してください。小型モデルは、24 GBクラスのモデルより長い場面をまとめる力が弱いと考えておきましょう。',
+            a: 'Qwen3.5 9B（6.6〜7.6 GB、256Kコンテキスト）は、Ollamaの8 GBクラスで比較的新しいモデルです。創作スコアは公開されていないため、自分の場面で試してください。小型モデルは、24 GBクラスのモデルより長い場面をまとめる力が弱いと考えておきましょう。',
           },
           {
             q: '詩に最適なオープンウェイトモデルはどれですか？',
@@ -3119,7 +3119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-04-04',
     leadAnswerBlock: '**创意写作最值得先试的本地LLM是 Gemma 4 31B 和 Qwen3.8-27B，两者都能放进一张24 GB显卡。** 散文选 Gemma 4 31B，长篇项目选 Qwen3.8-27B。8、12、16 GB分别用 Qwen3.5 9B、Gemma 4 12B 和 Mistral Small 3 24B。这是编辑排名，不是PromptQuorum的测试结果。',
     audience: '在消费级硬件上运行首个本地LLM的初学者',
-    dateModified: '2026-11-15',
+    dateModified: '2026-11-17',
     readTime: '阅读约9分钟',
     educationalLevel: '初学者',
     primaryTerm: '本地LLM创意写作',
@@ -3371,7 +3371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**24 GB以下的选择更少，也更缺乏验证，请先测试再决定。** 小模型通常比大模型更难在长场景中保持前后一致。',
         ],
         items: [
-          '**8 GB：Qwen3.5 9B**（`qwen3.5:9b`，6.6–7.6 GB，256K上下文）。Ollama上8 GB档位最新的模型。没有公开的创作得分，请用自己的场景测试。',
+          '**8 GB：Qwen3.5 9B**（`qwen3.5:9b`，6.6–7.6 GB，256K上下文）。Ollama上8 GB档位较新的模型。没有公开的创作得分，请用自己的场景测试。',
           '**12 GB：Gemma 4 12B**（`gemma4:12b`，7.7–8.0 GB，256K上下文，Apache 2.0）。Featherless给出其在EQ-Bench Creative Writing v3上的评分细则为15.71、1270.4 Elo。',
           '**16 GB：Mistral Small 3 24B**（`mistral-small:24b`，14 GB，32K上下文，Apache 2.0）。这是一款较早的模型，因为能放进16 GB的新模型很少而保留在列表中。它只给上下文留约2 GB，请保持提示词简短。',
         ],
@@ -3466,7 +3466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '只有8 GB显存时，哪些本地LLM最适合写作？',
-            a: 'Qwen3.5 9B（6.6–7.6 GB，256K上下文）是Ollama上8 GB档位最新的模型。它没有公开的创作得分，请用自己的测试场景验证，并预期小模型在长场景中的连贯性不如24 GB的模型。',
+            a: 'Qwen3.5 9B（6.6–7.6 GB，256K上下文）是Ollama上8 GB档位较新的模型。它没有公开的创作得分，请用自己的测试场景验证，并预期小模型在长场景中的连贯性不如24 GB的模型。',
           },
           {
             q: '写诗用哪个开放权重模型最好？',
@@ -3557,7 +3557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-04-04',
     leadAnswerBlock: '**창작 글쓰기에서 가장 먼저 써 볼 로컬 LLM은 Gemma 4 31B와 Qwen3.8-27B이며, 둘 다 24 GB GPU 한 장에 들어갑니다.** 산문은 Gemma 4 31B, 장편은 Qwen3.8-27B입니다. 8, 12, 16 GB에서는 Qwen3.5 9B, Gemma 4 12B, Mistral Small 3 24B를 사용합니다. 편집 순위이며 PromptQuorum의 테스트 결과가 아닙니다.',
     audience: '일반 소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
-    dateModified: '2026-11-15',
+    dateModified: '2026-11-17',
     readTime: '9분 읽기',
     educationalLevel: '초급',
     primaryTerm: '로컬 LLM 창작 글쓰기',
@@ -3809,7 +3809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**24 GB 미만에서는 선택지가 적고 검증도 덜 되어 있으므로 결정하기 전에 테스트하십시오.** 작은 모델은 일반적으로 긴 장면의 일관성을 큰 모델만큼 유지하지 못합니다.',
         ],
         items: [
-          '**8 GB: Qwen3.5 9B**(`qwen3.5:9b`, 6.6–7.6 GB, 256K 컨텍스트). Ollama의 8 GB급에서 가장 새로운 모델입니다. 창작 점수는 공개되어 있지 않으므로 본인의 장면으로 시험하십시오.',
+          '**8 GB: Qwen3.5 9B**(`qwen3.5:9b`, 6.6–7.6 GB, 256K 컨텍스트). Ollama의 8 GB급에서 비교적 최근에 나온 모델입니다. 창작 점수는 공개되어 있지 않으므로 본인의 장면으로 시험하십시오.',
           '**12 GB: Gemma 4 12B**(`gemma4:12b`, 7.7–8.0 GB, 256K 컨텍스트, Apache 2.0). Featherless는 EQ-Bench Creative Writing v3에서 루브릭 15.71, 1270.4 Elo로 보고합니다.',
           '**16 GB: Mistral Small 3 24B**(`mistral-small:24b`, 14 GB, 32K 컨텍스트, Apache 2.0). 16 GB에 들어가는 최신 모델이 적어서 목록에 남긴 오래된 모델입니다. 컨텍스트용으로 약 2 GB만 남으므로 프롬프트를 짧게 유지하십시오.',
         ],
@@ -3904,7 +3904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'VRAM이 8 GB뿐일 때 글쓰기에 맞는 로컬 LLM은 무엇인가요?',
-            a: 'Qwen3.5 9B(6.6–7.6 GB, 256K 컨텍스트)가 Ollama의 8 GB급에서 가장 새로운 모델입니다. 창작 점수는 공개되어 있지 않으므로 본인의 테스트 장면으로 확인하고, 작은 모델은 긴 장면을 24 GB급 모델만큼 안정적으로 유지하지 못할 수 있다고 생각하십시오.',
+            a: 'Qwen3.5 9B(6.6–7.6 GB, 256K 컨텍스트)가 Ollama의 8 GB급에서 비교적 최근에 나온 모델입니다. 창작 점수는 공개되어 있지 않으므로 본인의 테스트 장면으로 확인하고, 작은 모델은 긴 장면을 24 GB급 모델만큼 안정적으로 유지하지 못할 수 있다고 생각하십시오.',
           },
           {
             q: '시에 가장 좋은 오픈 웨이트 모델은 무엇인가요?',

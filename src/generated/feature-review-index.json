@@ -1049,6 +1049,11 @@
     "urlSlug": "reins-review",
     "url": "/power-local-llm/reins-review"
   },
+  "conduit": {
+    "cluster": "power-local-llm",
+    "urlSlug": "conduit-review",
+    "url": "/power-local-llm/conduit-review"
+  },
   "phantasm": {
     "cluster": "power-local-llm",
     "urlSlug": "phantasm-review",
@@ -1094,10 +1099,40 @@
     "urlSlug": "screenpipe-review",
     "url": "/power-local-llm/screenpipe-review"
   },
+  "skales": {
+    "cluster": "power-local-llm",
+    "urlSlug": "skales-review",
+    "url": "/power-local-llm/skales-review"
+  },
+  "halo": {
+    "cluster": "power-local-llm",
+    "urlSlug": "halo-review",
+    "url": "/power-local-llm/halo-review"
+  },
+  "yovoice": {
+    "cluster": "power-local-llm",
+    "urlSlug": "yovoice-review",
+    "url": "/power-local-llm/yovoice-review"
+  },
+  "open-science-desktop": {
+    "cluster": "power-local-llm",
+    "urlSlug": "open-science-desktop-review",
+    "url": "/power-local-llm/open-science-desktop-review"
+  },
   "cozyclay": {
     "cluster": "power-local-llm",
     "urlSlug": "cozyclay-review",
     "url": "/power-local-llm/cozyclay-review"
+  },
+  "papersgpt": {
+    "cluster": "power-local-llm",
+    "urlSlug": "papersgpt-review",
+    "url": "/power-local-llm/papersgpt-review"
+  },
+  "solomd": {
+    "cluster": "power-local-llm",
+    "urlSlug": "solomd-review",
+    "url": "/power-local-llm/solomd-review"
   },
   "lyonesse": {
     "cluster": "power-local-llm",

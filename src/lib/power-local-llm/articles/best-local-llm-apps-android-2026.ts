@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: 'Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones',
@@ -91,6 +91,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Laria: Paid Local and Cloud Model Assistant (Not Benchmarked)', anchor: '#laria' },
       { label: 'Mobile LM Server: Local API Server on Your Phone (Not Benchmarked)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: Simple Offline Chat with Built-in Models (Not Benchmarked)', anchor: '#on-device-llm' },
+      { label: 'Conduit: Client for Open WebUI and Your Own Endpoints (Not Benchmarked)', anchor: '#conduit' },
+      { label: 'Skales: Agent App for Desktop and Phone (Not Benchmarked)', anchor: '#skales' },
       { label: 'Android Fragmentation: Storage, RAM, and Background Limits', anchor: '#android-fragmentation' },
       { label: 'Android Share Sheet Integration', anchor: '#share-sheet' },
       { label: 'Sideload and Termux Paths', anchor: '#sideload-paths' },
@@ -520,6 +522,44 @@ snippetBlocks: [
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: Client for Open WebUI and Your Own Endpoints (Not Benchmarked)',
+        content:
+          '**Conduit is an Android and iPhone client for your own Open WebUI server that also connects directly to OpenAI-compatible endpoints, Ollama, OpenRouter and Hermes agents.** It was added after the main comparison, so it is not in the speed numbers.',
+        items: [
+          '**Backends:** Open WebUI, LibreChat (beta), direct OpenAI-compatible endpoints, Ollama, OpenRouter and Hermes agents; only on iPhone, Apple\'s on-device model (iOS 26) runs on the phone itself.',
+          '**Features:** Streaming chat, file and image attachments, voice input and a voice-call mode, home-screen widgets and a share sheet.',
+          '**Requirements and price:** Android 7.0+ per the website. Google Play lists the app with an Install button and no price, and free APKs are attached to the GitHub releases.',
+          '**Privacy and licence:** The privacy policy says no backend of the developer receives your content; an optional push relay carries only encrypted notifications. GPL-3.0 source code.',
+          '**Install path:** Google Play, or the APK on GitHub Releases. Version 4.3.1 was released on 11 November 2026; the Play listing shows 10K+ downloads.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the Play listing, the developer\'s website, privacy policy and GitHub repository; we have not opened Conduit on our test phones. Full notes: [Conduit review](/power-local-llm/conduit-review).',
+          },
+        ],
+      },
+      skales: {
+        id: 'skales',
+        title: 'Skales: Agent App for Desktop and Phone (Not Benchmarked)',
+        content:
+          '**Skales is a proprietary AI agent app for Windows, Mac, Linux, Android and iPhone; its mobile app is available on Google Play.** It was added after the main comparison, so it is not in the comparison table and was not part of our testing.',
+        items: [
+          '**What it does:** The maker describes an agent that plans and carries out multi-step tasks with tools and memory, using a model you choose. The phone app runs on its own or pairs with the desktop by QR code over an end-to-end encrypted relay, and the mobile page says it can also run a model on the device. We did not verify any of this.',
+          '**Models:** For the Skales app as a whole, the maker names a free trial model, your own provider keys, Skales Local, Ollama and LM Studio; which of these the phone app supports was not checked.',
+          '**Requirements and price:** Android 10+ per the maker. Skales is free for private use, education and businesses of up to two people; the Google Play listing renders only with JavaScript and was not read, so its price, version and download count are unverified.',
+          '**Privacy and licence:** The privacy notice describes Skales as installed programs, not a cloud service, with API keys held in the operating system\'s secure storage on Android and iOS. The licence is proprietary and the source code is not published, so these claims cannot be audited independently.',
+          '**Install path:** Google Play. The desktop version 12.9.65 was released on 10 November 2026; the phone app\'s own version was not checked.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'The details above come from the developer\'s website, privacy notice, licence and GitHub repository; we have not opened Skales on our test phones. Full notes: [Skales review](/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Android Fragmentation: Storage, RAM, and Background Limits',
@@ -694,7 +734,7 @@ snippetBlocks: [
       '@type': 'TechArticle',
       headline: 'Best Local LLM Apps for Android 2026: 6 Apps Tested on Real Phones',
       datePublished: '2026-05-08',
-      dateModified: '2026-11-13',
+      dateModified: '2026-11-17',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'en',
       image: buildOgImageObject(OG_SLUG, 'en'),
@@ -720,7 +760,7 @@ snippetBlocks: [
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: 'Beste lokale LLM-Apps für Android 2026: 6 Apps im Vergleich auf echten Telefonen',
@@ -798,6 +838,8 @@ snippetBlocks: [
       { label: 'Laria: kostenpflichtiger Assistent mit lokalen und Cloud-Modellen (nicht gemessen)', anchor: '#laria' },
       { label: 'Mobile LM Server: lokaler API-Server auf dem Telefon (nicht gemessen)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: einfacher Offline-Chat mit integrierten Modellen (nicht gemessen)', anchor: '#on-device-llm' },
+      { label: 'Conduit: Client für Open WebUI und eigene Endpunkte (nicht gemessen)', anchor: '#conduit' },
+      { label: 'Skales: Agenten-App für Desktop und Smartphone (nicht gemessen)', anchor: '#skales' },
       { label: 'Android-Fragmentierung: Speicher, RAM und Hintergrundlimits', anchor: '#android-fragmentation' },
       { label: 'Android Share Sheet Integration', anchor: '#share-sheet' },
       { label: 'Sideload- und Termux-Wege', anchor: '#sideload-paths' },
@@ -1226,6 +1268,44 @@ snippetBlocks: [
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: Client für Open WebUI und eigene Endpunkte (nicht gemessen)',
+        content:
+          '**Conduit ist ein Android- und iPhone-Client für Ihren eigenen Open-WebUI-Server, der sich auch direkt mit OpenAI-kompatiblen Endpunkten, Ollama, OpenRouter und Hermes-Agenten verbindet.** Er wurde nach dem Hauptvergleich ergänzt und steht deshalb nicht in den Geschwindigkeitswerten.',
+        items: [
+          '**Backends:** Open WebUI, LibreChat (Beta), direkte OpenAI-kompatible Endpunkte, Ollama, OpenRouter und Hermes-Agenten; nur auf dem iPhone läuft Apples On-Device-Modell (iOS 26) auf dem Telefon selbst.',
+          '**Funktionen:** Streaming-Chat, Datei- und Bildanhänge, Spracheingabe und Sprachanruf-Modus, Widgets auf dem Startbildschirm und ein Teilen-Menü.',
+          '**Anforderungen und Preis:** Android 7.0 oder neuer laut Website. Google Play führt die App mit Installieren-Schaltfläche und ohne Preis, und kostenlose APKs hängen an den GitHub-Releases.',
+          '**Datenschutz und Lizenz:** Laut Datenschutzerklärung erhält kein Backend des Entwicklers Ihre Inhalte; ein optionales Push-Relay leitet nur verschlüsselte Benachrichtigungen weiter. Quellcode unter GPL-3.0.',
+          '**Installationsweg:** Google Play oder das APK bei den GitHub-Releases. Version 4.3.1 erschien am 11. November 2026; der Play-Eintrag zeigt über 10.000 Downloads.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus dem Play-Eintrag sowie der Website, der Datenschutzerklärung und dem GitHub-Repository des Entwicklers; wir haben Conduit nicht auf unseren Testtelefonen geöffnet. Alle Details: [Conduit-Rezension](/de/power-local-llm/conduit-review).',
+          },
+        ],
+      },
+      skales: {
+        id: 'skales',
+        title: 'Skales: Agenten-App für Desktop und Smartphone (nicht gemessen)',
+        content:
+          '**Skales ist eine proprietäre KI-Agenten-App für Windows, Mac, Linux, Android und iPhone; die Mobil-App gibt es bei Google Play.** Sie wurde nach dem Hauptvergleich ergänzt, steht deshalb nicht in der Vergleichstabelle und war nicht Teil unseres Tests.',
+        items: [
+          '**Funktionen:** Laut Hersteller ein Agent, der mehrstufige Aufgaben mit Werkzeugen und Gedächtnis plant und ausführt, mit einem Modell Ihrer Wahl. Die Handy-App läuft allein oder koppelt sich per QR-Code über ein Ende-zu-Ende-verschlüsseltes Relay mit dem Desktop; laut Mobilseite kann sie auch ein Modell auf dem Gerät ausführen. Das haben wir nicht überprüft.',
+          '**Modelle:** Für die Skales-App insgesamt nennt der Hersteller ein kostenloses Testmodell, eigene Anbieter-Schlüssel, Skales Local, Ollama und LM Studio; welche davon die Handy-App unterstützt, haben wir nicht geprüft.',
+          '**Anforderungen und Preis:** Android 10 oder neuer laut Hersteller. Skales ist für private Nutzung, Bildung und Unternehmen mit bis zu zwei Personen kostenlos; der Google-Play-Eintrag wird nur mit JavaScript dargestellt und wurde nicht gelesen, daher sind Preis, Version und Downloadzahl nicht geprüft.',
+          '**Datenschutz und Lizenz:** Die Datenschutzerklärung beschreibt Skales als installierte Programme, nicht als Cloud-Dienst; API-Schlüssel liegen unter Android und iOS im sicheren Speicher des Betriebssystems. Die Lizenz ist proprietär und der Quellcode nicht veröffentlicht, daher lassen sich diese Angaben nicht unabhängig prüfen.',
+          '**Installationsweg:** Google Play. Die Desktop-Version 12.9.65 erschien am 10. November 2026; die Version der Handy-App haben wir nicht geprüft.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Die Angaben stammen aus der Website, der Datenschutzerklärung, der Lizenz und dem GitHub-Repository des Entwicklers; wir haben Skales nicht auf unseren Testtelefonen geöffnet. Alle Details: [Skales-Rezension](/de/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Android-Fragmentierung: Speicher, RAM und Hintergrundlimits',
@@ -1423,7 +1503,7 @@ snippetBlocks: [
       '@type': 'TechArticle',
       headline: 'Beste lokale LLM-Apps für Android 2026: 6 Apps im Vergleich auf echten Telefonen',
       datePublished: '2026-05-08',
-      dateModified: '2026-11-13',
+      dateModified: '2026-11-17',
       url: 'https://www.promptquorum.com/de/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'de',
       image: buildOgImageObject(OG_SLUG, 'de'),
@@ -1449,7 +1529,7 @@ snippetBlocks: [
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: 'Meilleures applications LLM locales pour Android en 2026 : 6 applications testées sur de vrais téléphones',
@@ -1527,6 +1607,8 @@ snippetBlocks: [
       { label: 'Laria : assistant payant avec modèles locaux et cloud (non mesuré)', anchor: '#laria' },
       { label: 'Mobile LM Server : serveur API local sur votre téléphone (non mesuré)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM : chat hors ligne simple avec modèles intégrés (non mesuré)', anchor: '#on-device-llm' },
+      { label: 'Conduit : client pour Open WebUI et vos propres serveurs (non mesuré)', anchor: '#conduit' },
+      { label: 'Skales : appli d’agent pour ordinateur et téléphone (non mesuré)', anchor: '#skales' },
       { label: 'Fragmentation Android : Stockage, RAM et limites d\'arrière-plan', anchor: '#android-fragmentation' },
       { label: 'Intégration feuille de partage Android', anchor: '#share-sheet' },
       { label: 'Chemins de sideload et Termux : L\'avantage Android', anchor: '#sideload-paths' },
@@ -1955,6 +2037,44 @@ snippetBlocks: [
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit : client pour Open WebUI et vos propres serveurs (non mesuré)',
+        content:
+          '**Conduit est un client Android et iPhone pour votre propre serveur Open WebUI, qui se connecte aussi directement à des points d’accès compatibles OpenAI, Ollama, OpenRouter et des agents Hermes.** Il a été ajouté après le comparatif principal ; il ne figure donc pas dans les chiffres de vitesse.',
+        items: [
+          '**Serveurs :** Open WebUI, LibreChat (bêta), points d’accès directs compatibles OpenAI, Ollama, OpenRouter et agents Hermes ; seul l’iPhone exécute le modèle sur l’appareil d’Apple (iOS 26) sur le téléphone lui-même.',
+          '**Fonctions :** Chat en streaming, pièces jointes fichiers et images, saisie vocale et mode appel vocal, widgets sur l’écran d’accueil et feuille de partage.',
+          '**Configuration et prix :** Android 7.0 ou ultérieur selon le site. Google Play liste l’appli avec un bouton Installer et sans prix, et des APK gratuits sont joints aux publications GitHub.',
+          '**Confidentialité et licence :** La politique de confidentialité indique qu’aucun serveur du développeur ne reçoit vos contenus ; un relais push facultatif ne transporte que des notifications chiffrées. Code source sous GPL-3.0.',
+          '**Voie d’installation :** Google Play ou l’APK des publications GitHub. La version 4.3.1 est sortie le 11 novembre 2026 ; la fiche Play affiche plus de 10 000 téléchargements.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les informations ci-dessus proviennent de la fiche Play, du site web, de la politique de confidentialité et du dépôt GitHub du développeur ; nous n’avons pas ouvert Conduit sur nos téléphones de test. Notes complètes : [test de Conduit](/fr/power-local-llm/conduit-review).',
+          },
+        ],
+      },
+      skales: {
+        id: 'skales',
+        title: 'Skales : appli d’agent pour ordinateur et téléphone (non mesuré)',
+        content:
+          '**Skales est une appli d’agent IA propriétaire pour Windows, Mac, Linux, Android et iPhone ; son appli mobile est disponible sur Google Play.** Elle a été ajoutée après le comparatif principal ; elle ne figure donc pas dans le tableau comparatif et n’a pas fait partie de nos tests.',
+        items: [
+          '**Fonctions :** Selon l’éditeur, un agent qui planifie et exécute des tâches en plusieurs étapes avec des outils et une mémoire, avec le modèle de votre choix. L’appli mobile fonctionne seule ou s’associe au poste de travail par QR code via un relais chiffré de bout en bout ; la page mobile dit qu’elle peut aussi exécuter un modèle sur l’appareil. Nous n’avons rien vérifié de cela.',
+          '**Modèles :** Pour l’appli Skales dans son ensemble, l’éditeur cite un modèle d’essai gratuit, vos propres clés de fournisseur, Skales Local, Ollama et LM Studio ; nous n’avons pas vérifié lesquels l’appli mobile prend en charge.',
+          '**Configuration et prix :** Android 10 ou ultérieur selon l’éditeur. Skales est gratuit pour un usage privé, l’éducation et les entreprises de deux personnes au plus ; la fiche Google Play ne s’affiche qu’avec JavaScript et n’a pas été lue, donc son prix, sa version et son nombre de téléchargements ne sont pas vérifiés.',
+          '**Confidentialité et licence :** L’avis de confidentialité décrit Skales comme des programmes installés, et non comme un service cloud ; les clés d’API sont conservées dans le stockage sécurisé du système sur Android et iOS. La licence est propriétaire et le code source n’est pas publié ; ces affirmations ne peuvent donc pas être auditées de façon indépendante.',
+          '**Voie d’installation :** Google Play. La version de bureau 12.9.65 a été publiée le 10 novembre 2026 ; nous n’avons pas vérifié la version propre à l’appli mobile.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les informations ci-dessus proviennent du site web, de l’avis de confidentialité, de la licence et du dépôt GitHub du développeur ; nous n’avons pas ouvert Skales sur nos téléphones de test. Notes complètes : [test de Skales](/fr/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Fragmentation Android : Stockage, RAM et limites d\'arrière-plan',
@@ -2133,7 +2253,7 @@ snippetBlocks: [
       '@type': 'TechArticle',
       headline: 'Meilleures applications IA locales pour Android 2026 : 6 applications comparées sur des téléphones réels',
       datePublished: '2026-05-08',
-      dateModified: '2026-11-13',
+      dateModified: '2026-11-17',
       url: 'https://www.promptquorum.com/fr/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'fr',
       image: buildOgImageObject(OG_SLUG, 'fr'),
@@ -2159,7 +2279,7 @@ snippetBlocks: [
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: '2026年 Android用ローカルLLMアプリの最良 : 6つのアプリ実機比較',
@@ -2237,6 +2357,8 @@ snippetBlocks: [
       { label: 'Laria:ローカルモデルとクラウドモデルを使える有料アシスタント(未計測)', anchor: '#laria' },
       { label: 'Mobile LM Server:スマホで動くローカルAPIサーバー(未計測)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM:内蔵モデルで使えるシンプルなオフラインチャット(未計測)', anchor: '#on-device-llm' },
+      { label: 'Conduit：Open WebUIと自前エンドポイント向けクライアント（未計測）', anchor: '#conduit' },
+      { label: 'Skales：デスクトップとスマートフォン向けエージェントアプリ（未計測）', anchor: '#skales' },
       { label: 'Android の断片化：ストレージ、RAM、バックグラウンド制限', anchor: '#android-fragmentation' },
       { label: 'Android シェアシート統合', anchor: '#share-sheet' },
       { label: 'サイドロードと Termux パス：Android の利点', anchor: '#sideload-paths' },
@@ -2665,6 +2787,44 @@ snippetBlocks: [
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit：Open WebUIと自前エンドポイント向けクライアント（未計測）',
+        content:
+          '**Conduitは、自分のOpen WebUIサーバー向けのAndroid・iPhoneクライアントで、OpenAI互換エンドポイント、Ollama、OpenRouter、Hermesエージェントにも直接接続できます。**メインの比較のあとに追加したため、速度の数値には含まれません。',
+        items: [
+          '**接続先：**Open WebUI、LibreChat（ベータ）、OpenAI互換エンドポイントへの直接接続、Ollama、OpenRouter、Hermesエージェント。スマートフォン上で動くのは、iPhoneのAppleオンデバイスモデル（iOS 26）だけです。',
+          '**機能：**ストリーミングチャット、ファイルと画像の添付、音声入力と音声通話モード、ホーム画面ウィジェット、共有シート。',
+          '**動作要件と価格：**公式サイトによればAndroid 7.0以降。Google Playではインストールボタンがあり価格表示はなく、GitHubのリリースに無料のAPKが添付されています。',
+          '**プライバシーとライセンス：**プライバシーポリシーは、開発者のバックエンドがコンテンツを受け取ることはないとしており、任意のプッシュリレーは暗号化済みの通知だけを中継します。ソースコードはGPL-3.0です。',
+          '**入手経路：**Google Play、またはGitHubリリースのAPK。バージョン4.3.1は2026年11月11日に公開され、Playの掲載では1万回以上のダウンロードと表示されています。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記の内容は、Google Playの掲載情報、開発者の公式サイト、プライバシーポリシー、GitHubリポジトリに基づきます。当方のテスト用スマートフォンでConduitは開いていません。詳細：[Conduitレビュー](/ja/power-local-llm/conduit-review)。',
+          },
+        ],
+      },
+      skales: {
+        id: 'skales',
+        title: 'Skales：デスクトップとスマートフォン向けエージェントアプリ（未計測）',
+        content:
+          '**Skalesは、Windows、Mac、Linux、Android、iPhone向けのプロプライエタリなAIエージェントアプリで、モバイルアプリはGoogle Playで入手できます。**メインの比較のあとに追加したため、比較表には含まれず、当方のテスト対象でもありません。',
+        items: [
+          '**機能：**開発元の説明では、選んだモデルを使い、ツールとメモリで複数ステップのタスクを計画・実行するエージェントです。スマートフォンアプリは単独で動くか、QRコードでエンドツーエンド暗号化リレー経由でデスクトップとペアリングでき、モバイルページによれば端末上でモデルを動かすこともできます。これらは確認していません。',
+          '**モデル：**Skalesアプリ全体について、開発元は無料の試用モデル、自分のプロバイダーキー、Skales Local、Ollama、LM Studioを挙げています。スマートフォンアプリがどれに対応するかは確認していません。',
+          '**動作要件と価格：**開発元によるとAndroid 10以降。Skalesは個人利用、教育、2人までの事業者なら無料です。Google Playの掲載ページはJavaScriptがないと表示されず読めていないため、価格、バージョン、ダウンロード数は未確認です。',
+          '**プライバシーとライセンス：**プライバシー通知は、Skalesをクラウドサービスではなくインストール型のプログラムと説明し、APIキーはAndroidとiOSではOSの安全なストレージに保管されるとしています。ライセンスはプロプライエタリでソースコードは公開されていないため、これらの記述を独立して検証することはできません。',
+          '**入手経路：**Google Play。デスクトップ版12.9.65は2026年11月10日公開です。スマートフォンアプリ自体のバージョンは確認していません。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '上記の内容は、開発者の公式サイト、プライバシー通知、ライセンス、GitHubリポジトリに基づきます。当方のテスト用スマートフォンでSkalesは開いていません。詳細：[Skalesレビュー](/ja/power-local-llm/skales-review)。',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Android の断片化：ストレージ、RAM、バックグラウンド制限',
@@ -2859,7 +3019,7 @@ snippetBlocks: [
       '@type': 'TechArticle',
       headline: '2026年 Android 向けベスト・ローカル LLM アプリ：6つのアプリを実スマートフォンで比較',
       datePublished: '2026-05-08',
-      dateModified: '2026-11-13',
+      dateModified: '2026-11-17',
       url: 'https://www.promptquorum.com/ja/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'ja',
       image: buildOgImageObject(OG_SLUG, 'ja'),
@@ -2885,7 +3045,7 @@ snippetBlocks: [
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: '2026年安卓最佳本地LLM应用：6款应用真机对比',
@@ -2963,6 +3123,8 @@ snippetBlocks: [
       { label: 'Laria:同时支持本地与云端模型的付费助手(未实测)', anchor: '#laria' },
       { label: 'Mobile LM Server:手机上的本地 API 服务器(未实测)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM:内置模型的简单离线聊天(未实测)', anchor: '#on-device-llm' },
+      { label: 'Conduit：面向 Open WebUI 和自有接口的客户端（未测速）', anchor: '#conduit' },
+      { label: 'Skales：面向桌面和手机的智能体应用（未测速）', anchor: '#skales' },
       { label: '安卓碎片化：存储、RAM 与后台限制', anchor: '#android-fragmentation' },
       { label: '安卓分享菜单集成', anchor: '#share-sheet' },
       { label: '侧载与 Termux 路径', anchor: '#sideload-paths' },
@@ -3392,6 +3554,44 @@ snippetBlocks: [
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit：面向 Open WebUI 和自有接口的客户端（未测速）',
+        content:
+          '**Conduit 是面向自建 Open WebUI 服务器的 Android 和 iPhone 客户端，也可直接连接兼容 OpenAI 的接口、Ollama、OpenRouter 和 Hermes 智能体。**它是在主体对比之后加入的，因此不在速度数据中。',
+        items: [
+          '**后端：**Open WebUI、LibreChat（测试版）、直连兼容 OpenAI 的接口、Ollama、OpenRouter 和 Hermes 智能体；只有 iPhone 上的 Apple 设备端模型（iOS 26）在手机本机运行。',
+          '**功能：**流式聊天、文件和图片附件、语音输入和语音通话模式、主屏幕小组件和分享菜单。',
+          '**要求与价格：**据官网为 Android 7.0 或更高。Google Play 显示安装按钮、无价格，GitHub 发布页附有免费的 APK。',
+          '**隐私与许可：**隐私政策称开发者没有任何后端接收你的内容；可选的推送中继只转发加密通知。源代码为 GPL-3.0。',
+          '**安装途径：**Google Play，或 GitHub 发布页上的 APK。4.3.1 版发布于 2026 年 11 月 11 日；Play 页面显示下载量超过 1 万。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上内容来自 Play 页面、开发者官网、隐私政策和 GitHub 仓库；我们没有在测试手机上打开过 Conduit。完整说明：[Conduit 评测](/zh/power-local-llm/conduit-review)。',
+          },
+        ],
+      },
+      skales: {
+        id: 'skales',
+        title: 'Skales：面向桌面和手机的智能体应用（未测速）',
+        content:
+          '**Skales 是一款专有的 AI 智能体应用，支持 Windows、Mac、Linux、Android 和 iPhone；其手机应用可在 Google Play 获取。**它是在主体对比之后加入的，因此不在对比表中，也未参与我们的测试。',
+        items: [
+          '**功能：**据开发者介绍，这是一个用你选择的模型、借助工具和记忆来规划并执行多步任务的智能体。手机应用可独立运行，也可通过二维码经端到端加密的中继与桌面端配对；移动端页面称它还能在设备上运行模型。以上我们均未验证。',
+          '**模型：**就 Skales 应用整体而言，开发者列出了免费试用模型、你自己的服务商密钥、Skales Local、Ollama 和 LM Studio；手机应用支持其中哪些，我们没有核实。',
+          '**要求与价格：**据开发者称需要 Android 10 或更高。Skales 对个人使用、教育和不超过两人的企业免费；Google Play 页面只有启用 JavaScript 才能显示，我们没有读取，因此价格、版本和下载量均未核实。',
+          '**隐私与许可：**隐私声明把 Skales 描述为安装在本机的程序，而非云服务；在 Android 和 iOS 上，API 密钥保存在操作系统的安全存储中。许可为专有，源代码未公开，因此这些说法无法被独立审计。',
+          '**安装途径：**Google Play。桌面版 12.9.65 发布于 2026 年 11 月 10 日；手机应用自身的版本我们没有核实。',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '以上内容来自开发者官网、隐私声明、许可文本和 GitHub 仓库；我们没有在测试手机上打开过 Skales。完整说明：[Skales 评测](/zh/power-local-llm/skales-review)。',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: '安卓碎片化：存储、RAM 与后台限制',
@@ -3566,7 +3766,7 @@ snippetBlocks: [
       '@type': 'TechArticle',
       headline: '2026年安卓最佳本地LLM应用：6款应用真机测试',
       datePublished: '2026-05-08',
-      dateModified: '2026-11-13',
+      dateModified: '2026-11-17',
       url: 'https://www.promptquorum.com/zh/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'zh',
       image: buildOgImageObject(OG_SLUG, 'zh'),
@@ -3592,7 +3792,7 @@ snippetBlocks: [
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: 'Las mejores apps de LLM local para Android en 2026: 6 apps comparadas en teléfonos reales',
@@ -3670,6 +3870,8 @@ snippetBlocks: [
       { label: 'Laria: asistente de pago con modelos locales y en la nube (sin medir)', anchor: '#laria' },
       { label: 'Mobile LM Server: servidor API local en tu teléfono (sin medir)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: chat sin conexión sencillo con modelos integrados (sin medir)', anchor: '#on-device-llm' },
+      { label: 'Conduit: cliente para Open WebUI y tus propios endpoints (sin medir)', anchor: '#conduit' },
+      { label: 'Skales: app de agente para escritorio y móvil (sin medir)', anchor: '#skales' },
       { label: 'Fragmentación Android: almacenamiento, RAM y límites en segundo plano', anchor: '#android-fragmentation' },
       { label: 'Integración con el panel compartir de Android', anchor: '#share-sheet' },
       { label: 'Rutas de sideload y Termux', anchor: '#sideload-paths' },
@@ -4098,6 +4300,44 @@ snippetBlocks: [
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: cliente para Open WebUI y tus propios endpoints (sin medir)',
+        content:
+          '**Conduit es un cliente para Android e iPhone de tu propio servidor Open WebUI que también se conecta directamente a endpoints compatibles con OpenAI, Ollama, OpenRouter y agentes Hermes.** Se añadió después de la comparativa principal, así que no figura en las cifras de velocidad.',
+        items: [
+          '**Backends:** Open WebUI, LibreChat (beta), endpoints directos compatibles con OpenAI, Ollama, OpenRouter y agentes Hermes; solo en iPhone, el modelo en el dispositivo de Apple (iOS 26) se ejecuta en el propio teléfono.',
+          '**Funciones:** Chat con streaming, archivos e imágenes adjuntos, entrada de voz y modo de llamada de voz, widgets en la pantalla de inicio y menú de compartir.',
+          '**Requisitos y precio:** Android 7.0 o posterior según el sitio web. Google Play lista la app con botón Instalar y sin precio, y hay APK gratuitos adjuntos a las versiones de GitHub.',
+          '**Privacidad y licencia:** La política de privacidad dice que ningún backend del desarrollador recibe tu contenido; un relé push opcional solo transporta notificaciones cifradas. Código fuente bajo GPL-3.0.',
+          '**Vía de instalación:** Google Play o el APK de las versiones de GitHub. La versión 4.3.1 se publicó el 11 de noviembre de 2026; la ficha de Play muestra más de 10 000 descargas.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos anteriores proceden de la ficha de Play y del sitio web, la política de privacidad y el repositorio de GitHub del desarrollador; no hemos abierto Conduit en nuestros teléfonos de prueba. Notas completas: [reseña de Conduit](/es/power-local-llm/conduit-review).',
+          },
+        ],
+      },
+      skales: {
+        id: 'skales',
+        title: 'Skales: app de agente para escritorio y móvil (sin medir)',
+        content:
+          '**Skales es una app de agente de IA propietaria para Windows, Mac, Linux, Android y iPhone; su app móvil está disponible en Google Play.** Se añadió después de la comparativa principal, así que no figura en la tabla comparativa ni formó parte de nuestras pruebas.',
+        items: [
+          '**Qué hace:** Según el desarrollador, un agente que planifica y ejecuta tareas de varios pasos con herramientas y memoria, usando el modelo que elijas. La app del móvil funciona sola o se empareja con el escritorio mediante código QR a través de un relé cifrado de extremo a extremo, y la página móvil dice que también puede ejecutar un modelo en el dispositivo. No hemos verificado nada de esto.',
+          '**Modelos:** Para la app Skales en conjunto, el desarrollador menciona un modelo de prueba gratuito, tus propias claves de proveedor, Skales Local, Ollama y LM Studio; no comprobamos cuáles admite la app móvil.',
+          '**Requisitos y precio:** Android 10 o posterior según el desarrollador. Skales es gratis para uso privado, educación y empresas de hasta dos personas; la ficha de Google Play solo se muestra con JavaScript y no se leyó, así que su precio, versión y número de descargas no están verificados.',
+          '**Privacidad y licencia:** El aviso de privacidad describe Skales como programas instalados, no como un servicio en la nube; las claves de API se guardan en el almacenamiento seguro del sistema operativo en Android e iOS. La licencia es propietaria y el código fuente no está publicado, por lo que estas afirmaciones no se pueden auditar de forma independiente.',
+          '**Vía de instalación:** Google Play. La versión de escritorio 12.9.65 se publicó el 10 de noviembre de 2026; no comprobamos la versión propia de la app móvil.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Los datos anteriores proceden del sitio web, el aviso de privacidad, la licencia y el repositorio de GitHub del desarrollador; no hemos abierto Skales en nuestros teléfonos de prueba. Notas completas: [reseña de Skales](/es/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Fragmentación Android: almacenamiento, RAM y límites en segundo plano',
@@ -4272,7 +4512,7 @@ snippetBlocks: [
       '@type': 'TechArticle',
       headline: 'Las mejores apps de LLM local para Android en 2026: 6 apps comparadas en teléfonos reales',
       datePublished: '2026-05-08',
-      dateModified: '2026-11-13',
+      dateModified: '2026-11-17',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'es',
       image: buildOgImageObject(OG_SLUG, 'es'),
@@ -4298,7 +4538,7 @@ snippetBlocks: [
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: 'Os melhores apps de LLM local para Android em 2026: 6 apps comparados em celulares reais',
@@ -4376,6 +4616,8 @@ snippetBlocks: [
       { label: 'Laria: assistente pago com modelos locais e na nuvem (não medido)', anchor: '#laria' },
       { label: 'Mobile LM Server: servidor de API local no seu celular (não medido)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: chat offline simples com modelos integrados (não medido)', anchor: '#on-device-llm' },
+      { label: 'Conduit: cliente para Open WebUI e seus próprios endpoints (não medido)', anchor: '#conduit' },
+      { label: 'Skales: app de agente para desktop e celular (não medido)', anchor: '#skales' },
       { label: 'Fragmentação do Android: armazenamento, RAM e limites em segundo plano', anchor: '#android-fragmentation' },
       { label: 'Integração com o painel de compartilhamento do Android', anchor: '#share-sheet' },
       { label: 'Caminhos de sideload e Termux', anchor: '#sideload-paths' },
@@ -4804,6 +5046,44 @@ snippetBlocks: [
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: cliente para Open WebUI e seus próprios endpoints (não medido)',
+        content:
+          '**O Conduit é um cliente para Android e iPhone do seu próprio servidor Open WebUI que também se conecta diretamente a endpoints compatíveis com OpenAI, Ollama, OpenRouter e agentes Hermes.** Foi adicionado depois do comparativo principal, por isso não está nos números de velocidade.',
+        items: [
+          '**Backends:** Open WebUI, LibreChat (beta), endpoints diretos compatíveis com OpenAI, Ollama, OpenRouter e agentes Hermes; só no iPhone o modelo no aparelho da Apple (iOS 26) roda no próprio celular.',
+          '**Recursos:** Chat com streaming, anexos de arquivos e imagens, entrada por voz e modo de chamada de voz, widgets na tela inicial e menu de compartilhamento.',
+          '**Requisitos e preço:** Android 7.0 ou superior segundo o site. O Google Play lista o app com botão Instalar e sem preço, e há APKs gratuitos anexados às versões do GitHub.',
+          '**Privacidade e licença:** A política de privacidade diz que nenhum backend do desenvolvedor recebe o seu conteúdo; um relé push opcional só transporta notificações criptografadas. Código-fonte sob GPL-3.0.',
+          '**Caminho de instalação:** Google Play ou o APK das versões do GitHub. A versão 4.3.1 foi lançada em 11 de novembro de 2026; a página do Play mostra mais de 10 mil downloads.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados acima vêm da página do Play e do site, da política de privacidade e do repositório do GitHub do desenvolvedor; não abrimos o Conduit em nossos celulares de teste. Notas completas: [análise do Conduit](/pt/power-local-llm/conduit-review).',
+          },
+        ],
+      },
+      skales: {
+        id: 'skales',
+        title: 'Skales: app de agente para desktop e celular (não medido)',
+        content:
+          '**O Skales é um app de agente de IA proprietário para Windows, Mac, Linux, Android e iPhone; o app para celular está disponível no Google Play.** Foi adicionado depois do comparativo principal, por isso não está na tabela comparativa nem fez parte dos nossos testes.',
+        items: [
+          '**O que faz:** Segundo o desenvolvedor, um agente que planeja e executa tarefas de várias etapas com ferramentas e memória, usando o modelo que você escolher. O app do celular funciona sozinho ou se emparelha com o desktop por QR code por meio de um relé criptografado de ponta a ponta, e a página mobile diz que ele também pode rodar um modelo no aparelho. Não verificamos nada disso.',
+          '**Modelos:** Para o app Skales como um todo, o desenvolvedor cita um modelo de teste gratuito, suas próprias chaves de provedor, Skales Local, Ollama e LM Studio; não verificamos quais deles o app do celular suporta.',
+          '**Requisitos e preço:** Android 10 ou superior segundo o desenvolvedor. O Skales é gratuito para uso privado, educação e empresas de até duas pessoas; a página do Google Play só é exibida com JavaScript e não foi lida, então preço, versão e número de downloads não estão verificados.',
+          '**Privacidade e licença:** O aviso de privacidade descreve o Skales como programas instalados, não como um serviço em nuvem; as chaves de API ficam no armazenamento seguro do sistema operacional no Android e no iOS. A licença é proprietária e o código-fonte não é publicado, então essas afirmações não podem ser auditadas de forma independente.',
+          '**Caminho de instalação:** Google Play. A versão para desktop 12.9.65 foi lançada em 10 de novembro de 2026; não verificamos a versão própria do app do celular.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Os dados acima vêm do site, do aviso de privacidade, da licença e do repositório do GitHub do desenvolvedor; não abrimos o Skales em nossos celulares de teste. Notas completas: [análise do Skales](/pt/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Fragmentação do Android: armazenamento, RAM e limites em segundo plano',
@@ -4978,7 +5258,7 @@ snippetBlocks: [
       '@type': 'TechArticle',
       headline: 'Os melhores apps de LLM local para Android em 2026: 6 apps comparados em celulares reais',
       datePublished: '2026-05-08',
-      dateModified: '2026-11-13',
+      dateModified: '2026-11-17',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'pt-BR',
       image: buildOgImageObject(OG_SLUG, 'pt'),
@@ -5004,7 +5284,7 @@ snippetBlocks: [
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: 'أفضل تطبيقات النماذج اللغوية المحلية لنظام ⁨Android⁩ في ⁨2026⁩: مقارنة ⁨6⁩ تطبيقات على هواتف حقيقية',
@@ -5082,6 +5362,8 @@ snippetBlocks: [
       { label: 'Laria: مساعد مدفوع بنماذج محلية وسحابية (لم يُقَس)', anchor: '#laria' },
       { label: 'Mobile LM Server: خادم API محلي على هاتفك (لم يُقَس)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: دردشة بسيطة دون اتصال بنماذج مدمجة (لم يُقَس)', anchor: '#on-device-llm' },
+      { label: 'Conduit: عميل لـ Open WebUI ونقاط النهاية الخاصة بك (لم يُقَس)', anchor: '#conduit' },
+      { label: 'Skales: تطبيق وكيل لسطح المكتب والهاتف (لم يُقَس)', anchor: '#skales' },
       { label: 'تشرذم Android: التخزين والذاكرة وحدود الخلفية', anchor: '#android-fragmentation' },
       { label: 'التكامل مع قائمة المشاركة في Android', anchor: '#share-sheet' },
       { label: 'مسارات التحميل الجانبي وTermux', anchor: '#sideload-paths' },
@@ -5510,6 +5792,44 @@ snippetBlocks: [
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: عميل لـ Open WebUI ونقاط النهاية الخاصة بك (لم يُقَس)',
+        content:
+          '**Conduit عميل لـ Android وiPhone لخادم Open WebUI الخاص بك، ويتصل أيضًا مباشرة بنقاط نهاية متوافقة مع OpenAI وبـ Ollama وOpenRouter ووكلاء Hermes.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في أرقام السرعة.',
+        items: [
+          '**الخوادم:** Open WebUI وLibreChat (تجريبي) ونقاط نهاية مباشرة متوافقة مع OpenAI وOllama وOpenRouter ووكلاء Hermes؛ وعلى iPhone فقط يعمل نموذج Apple على الجهاز (iOS 26) على الهاتف نفسه.',
+          '**الميزات:** دردشة ببث مباشر، ومرفقات الملفات والصور، وإدخال صوتي ووضع مكالمة صوتية، وأدوات على الشاشة الرئيسية، وقائمة مشاركة.',
+          '**المتطلبات والسعر:** Android 7.0 أو أحدث بحسب الموقع. يُدرج Google Play التطبيق بزر تثبيت ودون سعر، وتُرفق ملفات APK مجانية بإصدارات GitHub.',
+          '**الخصوصية والترخيص:** تقول سياسة الخصوصية إن أي خادم للمطوّر لا يستقبل محتواك؛ ولا ينقل مرحّل الإشعارات الاختياري سوى إشعارات مشفّرة. الشيفرة المصدرية بترخيص GPL-3.0.',
+          '**طريقة التثبيت:** Google Play أو ملف APK من إصدارات GitHub. صدر الإصدار 4.3.1 في 11 نوفمبر 2026؛ وتعرض صفحة Play أكثر من 10K تنزيل.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'التفاصيل أعلاه مصدرها صفحة Play وموقع المطوّر وسياسة الخصوصية ومستودع GitHub؛ ولم نفتح Conduit على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة Conduit](/ar/power-local-llm/conduit-review).',
+          },
+        ],
+      },
+      skales: {
+        id: 'skales',
+        title: 'Skales: تطبيق وكيل لسطح المكتب والهاتف (لم يُقَس)',
+        content:
+          '**Skales تطبيق وكيل ذكاء اصطناعي مغلق المصدر لأنظمة Windows وMac وLinux وAndroid وiPhone، وتطبيقه للهاتف متاح على Google Play.** أُضيف بعد المقارنة الرئيسية، لذلك لا يظهر في جدول المقارنة ولم يكن جزءًا من اختباراتنا.',
+        items: [
+          '**ما يفعله:** يصفه المطوّر بأنه وكيل يخطط لمهام متعددة الخطوات وينفذها بالأدوات والذاكرة باستخدام نموذج تختاره. يعمل تطبيق الهاتف بمفرده أو يقترن بسطح المكتب برمز QR عبر مرحّل مشفّر من طرف إلى طرف، وتقول صفحة الجوال إنه يستطيع أيضًا تشغيل نموذج على الجهاز. لم نتحقق من أي من ذلك.',
+          '**النماذج:** بالنسبة إلى تطبيق Skales ككل، يذكر المطوّر نموذجًا تجريبيًا مجانيًا ومفاتيح المزوّد الخاصة بك وSkales Local وOllama وLM Studio؛ ولم نتحقق مما يدعمه تطبيق الهاتف منها.',
+          '**المتطلبات والسعر:** Android 10 أو أحدث بحسب المطوّر. Skales مجاني للاستخدام الخاص والتعليم والشركات حتى شخصين؛ وصفحة Google Play لا تُعرض إلا مع JavaScript ولم تُقرأ، لذا لم يُتحقق من السعر والإصدار وعدد التنزيلات.',
+          '**الخصوصية والترخيص:** يصف إشعار الخصوصية Skales بأنه برامج مثبّتة وليس خدمة سحابية، وتُحفظ مفاتيح API في التخزين الآمن لنظام التشغيل على Android وiOS. الترخيص مغلق المصدر والشيفرة المصدرية غير منشورة، لذلك لا يمكن تدقيق هذه الادعاءات بصورة مستقلة.',
+          '**طريقة التثبيت:** Google Play. صدر إصدار سطح المكتب 12.9.65 في 10 نوفمبر 2026؛ ولم نتحقق من إصدار تطبيق الهاتف نفسه.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'التفاصيل أعلاه مصدرها موقع المطوّر وإشعار الخصوصية والترخيص ومستودع GitHub؛ ولم نفتح Skales على هواتف الاختبار لدينا. الملاحظات الكاملة: [مراجعة Skales](/ar/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'تشرذم Android: التخزين والذاكرة وحدود الخلفية',
@@ -5684,7 +6004,7 @@ snippetBlocks: [
       '@type': 'TechArticle',
       headline: 'أفضل تطبيقات النماذج اللغوية المحلية لنظام Android في 2026: مقارنة 6 تطبيقات على هواتف حقيقية',
       datePublished: '2026-05-08',
-      dateModified: '2026-11-13',
+      dateModified: '2026-11-17',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'ar',
       image: buildOgImageObject(OG_SLUG, 'ar'),
@@ -5710,7 +6030,7 @@ snippetBlocks: [
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-11-13',
+    dateModified: '2026-11-17',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     title: '2026년 Android용 최고의 로컬 LLM 앱: 실제 스마트폰으로 비교한 6가지 앱',
@@ -5788,6 +6108,8 @@ snippetBlocks: [
       { label: 'Laria: 로컬·클라우드 모델을 함께 쓰는 유료 어시스턴트(미측정)', anchor: '#laria' },
       { label: 'Mobile LM Server: 휴대폰에서 돌리는 로컬 API 서버(미측정)', anchor: '#mobile-lm-server' },
       { label: 'On Device LLM: 내장 모델로 쓰는 간단한 오프라인 채팅(미측정)', anchor: '#on-device-llm' },
+      { label: 'Conduit: Open WebUI와 자체 엔드포인트용 클라이언트(미측정)', anchor: '#conduit' },
+      { label: 'Skales: 데스크톱·휴대폰용 에이전트 앱(미측정)', anchor: '#skales' },
       { label: 'Android 파편화: 스토리지, RAM, 백그라운드 제한', anchor: '#android-fragmentation' },
       { label: 'Android 공유 패널 통합', anchor: '#share-sheet' },
       { label: '사이드로드 및 Termux 경로', anchor: '#sideload-paths' },
@@ -6220,6 +6542,44 @@ snippetBlocks: [
           },
         ],
       },
+      conduit: {
+        id: 'conduit',
+        title: 'Conduit: Open WebUI와 자체 엔드포인트용 클라이언트(미측정)',
+        content:
+          '**Conduit은 직접 운영하는 Open WebUI 서버용 Android·iPhone 클라이언트로, OpenAI 호환 엔드포인트, Ollama, OpenRouter, Hermes 에이전트에도 직접 연결합니다.** 주요 비교 이후에 추가되어 속도 수치에는 포함되어 있지 않습니다.',
+        items: [
+          '**백엔드:** Open WebUI, LibreChat(베타), OpenAI 호환 엔드포인트 직접 연결, Ollama, OpenRouter, Hermes 에이전트. 휴대폰 자체에서 실행되는 것은 iPhone의 Apple 기기 내 모델(iOS 26)뿐입니다.',
+          '**기능:** 스트리밍 채팅, 파일·이미지 첨부, 음성 입력과 음성 통화 모드, 홈 화면 위젯, 공유 시트.',
+          '**요구 사항과 가격:** 웹사이트에 따르면 Android 7.0 이상. Google Play에는 설치 버튼이 있고 가격 표시는 없으며, GitHub 릴리스에 무료 APK가 첨부되어 있습니다.',
+          '**개인정보와 라이선스:** 개인정보 처리방침은 개발자의 백엔드가 콘텐츠를 받지 않으며 선택형 푸시 릴레이는 암호화된 알림만 전달한다고 밝힙니다. 소스 코드는 GPL-3.0입니다.',
+          '**설치 경로:** Google Play 또는 GitHub 릴리스의 APK. 버전 4.3.1은 2026년 11월 11일에 출시되었고, Play 등록 정보에는 다운로드 1만 회 이상이 표시됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 Play 등록 정보, 개발자 웹사이트, 개인정보 처리방침, GitHub 저장소에서 가져온 것이며, 저희 테스트 휴대폰에서 Conduit을 열어 보지는 않았습니다. 자세한 내용: [Conduit 리뷰](/ko/power-local-llm/conduit-review).',
+          },
+        ],
+      },
+      skales: {
+        id: 'skales',
+        title: 'Skales: 데스크톱·휴대폰용 에이전트 앱(미측정)',
+        content:
+          '**Skales는 Windows, Mac, Linux, Android, iPhone용 독점 AI 에이전트 앱이며, 모바일 앱은 Google Play에서 받을 수 있습니다.** 주요 비교 이후에 추가되어 비교표에 없으며 저희 테스트 대상도 아니었습니다.',
+        items: [
+          '**기능:** 개발사 설명에 따르면 사용자가 고른 모델로 도구와 메모리를 활용해 여러 단계의 작업을 계획하고 실행하는 에이전트입니다. 휴대폰 앱은 단독으로 동작하거나 QR 코드로 종단간 암호화 릴레이를 거쳐 데스크톱과 연결되며, 모바일 페이지는 기기에서 모델도 실행할 수 있다고 설명합니다. 이 내용은 확인하지 않았습니다.',
+          '**모델:** Skales 앱 전체 기준으로 개발사는 무료 체험 모델, 자신의 제공업체 키, Skales Local, Ollama, LM Studio를 언급합니다. 휴대폰 앱이 이 중 무엇을 지원하는지는 확인하지 않았습니다.',
+          '**요구 사항과 가격:** 개발사에 따르면 Android 10 이상. Skales는 개인 사용, 교육, 2인 이하 사업체에는 무료입니다. Google Play 등록 정보는 JavaScript가 있어야 표시되어 읽지 못했으므로 가격, 버전, 다운로드 수는 확인되지 않았습니다.',
+          '**개인정보와 라이선스:** 개인정보 처리 안내는 Skales를 클라우드 서비스가 아닌 설치형 프로그램으로 설명하며, Android와 iOS에서는 API 키를 운영체제의 보안 저장소에 보관한다고 밝힙니다. 라이선스는 독점이고 소스 코드는 공개되지 않아 이 설명들을 독립적으로 검증할 수 없습니다.',
+          '**설치 경로:** Google Play. 데스크톱 버전 12.9.65는 2026년 11월 10일에 출시되었으며, 휴대폰 앱 자체의 버전은 확인하지 않았습니다.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '위 내용은 개발자 웹사이트, 개인정보 처리 안내, 라이선스, GitHub 저장소에서 가져온 것이며, 저희 테스트 휴대폰에서 Skales를 열어 보지는 않았습니다. 자세한 내용: [Skales 리뷰](/ko/power-local-llm/skales-review).',
+          },
+        ],
+      },
       androidFragmentation: {
         id: 'android-fragmentation',
         title: 'Android 파편화: 스토리지, RAM, 백그라운드 제한',
@@ -6394,7 +6754,7 @@ snippetBlocks: [
       '@type': 'TechArticle',
       headline: '2026년 Android용 최고의 로컬 LLM 앱: 실제 스마트폰으로 비교한 6가지 앱',
       datePublished: '2026-05-08',
-      dateModified: '2026-11-13',
+      dateModified: '2026-11-17',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'ko',
       image: buildOgImageObject(OG_SLUG, 'ko'),

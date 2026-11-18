@@ -1,0 +1,1532 @@
+{
+  "id": "pq-test-stratosort-2026-11-17",
+  "hero": "stratosort-welcome-screen-guided-mode",
+  "date_human": "17 November 2026",
+  "captured": "Test date and end time not recorded; files in the screenshots carry the date 2026-11-17 in their new names, so the session ran on or after that day; the ID and the dates on this page use the draft date 2026-11-17",
+  "standard_version": "0.2",
+  "locale": "en",
+  "app": {
+    "name": "StratoSort",
+    "slug": "stratosort",
+    "vendor": "Ben Kennedy (per the founder statement in the directory)",
+    "category": "Local AI file organizer, Mac",
+    "platform": "macOS (Apple Silicon)",
+    "pricing_url": "https://stratosort.com"
+  },
+  "title": "StratoSort on an M4 Pro Mac with 24 GB: A Dry Run Before Any File Moved, Mixed Matching, and a Link to Another Local AI App over MCP",
+  "page_title": "StratoSort Test",
+  "dek": "A second session after the tester's first attempt did not work out: guided setup, a dry run, per-file review and a full sorting run, a spreadsheet read as 300 characters, and the document index queried from a second local AI app over MCP.",
+  "seo": {
+    "title": "StratoSort Hands-on Test: Mac File Sorting and MCP",
+    "description": "Hands-on test of StratoSort on a 24 GB M4 Pro Mac: dry run, per-file review, a 286-file move, mixed matching and a link to Loci over MCP."
+  },
+  "faq": [
+    [
+      "Does StratoSort move files before you approve them?",
+      "Not in the session. The five-file dry run said \"Nothing has moved\", and each file got a review card before the move. Whether every file was reviewed before the 286-file move is not recorded.",
+      "observed"
+    ],
+    [
+      "How well did StratoSort sort the test files?",
+      "Mixed. In the dry run two of five files were assigned to a folder; in the review step a banner counted 126 uncategorized files; two Search Console exports went to the fallback although their folder was named as closest. No accuracy count was made.",
+      "measured"
+    ],
+    [
+      "Can another AI app query StratoSort over MCP?",
+      "Yes, in the session. The Loci app connected, listed four tools and returned results from list_smart_folders and search_documents. The tester had to work out the connection himself; get_document_summary and chat_with_documents were not called.",
+      "observed"
+    ],
+    [
+      "Does StratoSort rename files?",
+      "Yes, in the move list: original names were replaced by lowercase names with a date. The result was not checked on disk, and the rewording function was not tried.",
+      "observed"
+    ],
+    [
+      "Is StratoSort private and offline?",
+      "The welcome screen says private and on-device, and the founder statement says no account and no telemetry. No network traffic was inspected and no offline run was tried, so this is not verified.",
+      "vendor-claim"
+    ],
+    [
+      "What was not tested?",
+      "Undo, copy mode, Dashboard mode, AI and model settings, the document-chat tool, timing, memory, offline use and uninstall. The app version and the models used were not recorded.",
+      "observed"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-11-17",
+  "started": "2026-11-17",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "StratoSort. The installer label reads \"StratoSort Stack\"; the window header reads \"StratoSort\".",
+      "observed"
+    ],
+    [
+      "Version",
+      "Not recorded. The PromptQuorum directory lists 5.1.2 (GitHub release of 2026-11-01), checked 2026-11-10; the tester's build may differ.",
+      null
+    ],
+    [
+      "Source",
+      "Not recorded. The directory lists stratosort.com and the GitHub repository iLevyTate/StratoSortStack.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans (founder of PromptQuorum)",
+      "observed"
+    ],
+    [
+      "Start / end",
+      "Not stated. Files in the screenshots carry the date 2026-11-17 in their new names, so the session ran on or after that day; the draft date is the same (inference). End time not recorded.",
+      "assumption"
+    ],
+    [
+      "Hardware",
+      "Apple M4 Pro, 24 GB unified memory, as stated by the tester.",
+      "tester-view"
+    ],
+    [
+      "System",
+      "macOS 27, as stated by the tester.",
+      "tester-view"
+    ],
+    [
+      "Why tested",
+      "The first attempt did not work out. The tester wrote to the developer, then tried again with guided steps. He calls the app business-oriented and is interested in file order for a company he plans to start.",
+      "tester-view"
+    ],
+    [
+      "Objective",
+      "Not stated as a goal. The notes show sorting a prepared test set into output folders, reviewing and moving the files, and connecting the app to Loci, another local AI app.",
+      null
+    ],
+    [
+      "Test data",
+      "About 286 files (5 in the dry run plus 281 analysed afterwards). Content types seen: Search Console Excel exports, Clarity CSV exports, Word test notes, images. Smart folders seen: Pictures, Leftovers, excel GSc, Clarity, plus the fallback Uncategorized. Output on an external SSD.",
+      "observed"
+    ],
+    [
+      "Second app",
+      "The MCP client is Loci, as stated by the tester (the dictated notes read \"Low key\" and \"Loki\"). The client screens do not show its name.",
+      "tester-view"
+    ],
+    [
+      "AI help used",
+      "Claude drafted this report from the tester's Word notes and 22 screenshots. The notes were probably dictated by voice (assumption).",
+      "assumption"
+    ],
+    [
+      "Disclosure",
+      "The tester founded PromptQuorum, a content site and directory about local AI apps. StratoSort was added to the directory on 2026-11-10 with an AI-written review based on the maker's pages and a founder statement supplied by the developer, not on hands-on testing. The tester is in contact with the developer, who responded to the tester's first attempt. StratoSort receives clicks from the site. No payment or sponsorship is recorded in the notes.",
+      "observed"
+    ]
+  ],
+  "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps. StratoSort was added to the directory on 2026-11-10 with an AI-written review based on the maker's pages and a founder statement supplied by the developer, not on hands-on testing. The tester is in contact with the developer, who responded to the tester's first attempt. StratoSort receives clicks from the site. No payment or sponsorship is recorded in the notes.",
+  "verdict": {
+    "general": "An on-device file organizer by its own description, with safeguards the tester could see: a dry run, a per-file review before anything moves, and an MCP link that the app says only reads. In this session analysis, review and a file move were run (the end of the move is not recorded) and the MCP link worked from another local AI app, but matching was mixed and needs tuning. Undo, copy mode, the document-chat tool, the models used, offline operation, the privacy claims and uninstall were not tested.",
+    "fit": "The tester sees it as a promising tool that needs small tests and repeated fine-tuning, and plans to retest next year when he has more business documents. He sees the MCP link, possibly with a retrieval layer on top, as the interesting direction. No decision on continued use is stated."
+  },
+  "scores": [
+    [
+      "Installation",
+      null,
+      "Installer window seen; size, model download and setup time not recorded."
+    ],
+    [
+      "Onboarding and model choice",
+      3,
+      "Guided mode and dry run help; the folder concept was unclear to the tester and a whole-folder read failed."
+    ],
+    [
+      "Core function",
+      3,
+      "Per-file review, renaming and moving worked; matching was mixed and spreadsheets were read in part."
+    ],
+    [
+      "Guidance and iteration",
+      3,
+      "Folder-description hint, Details view and per-file choices; the preview step is not interactive."
+    ],
+    [
+      "Integration (MCP)",
+      3,
+      "Connected and two read tools worked; setup needed reverse engineering."
+    ],
+    [
+      "Performance",
+      null,
+      "Analysis and move times not recorded."
+    ],
+    [
+      "Documentation",
+      null,
+      "Only in-app text and the developer's guidance mentioned by the tester; neither read in detail."
+    ],
+    [
+      "Trust and privacy",
+      null,
+      "Not audited."
+    ],
+    [
+      "Uninstall",
+      null,
+      "Not tested."
+    ]
+  ],
+  "scores_note": "Scores are proposed by the report author from the tester's evidence; n/a means not tested, not zero.",
+  "tldr": [
+    [
+      "observed",
+      "StratoSort is a desktop app that suggests names and folders for files and lets the user review them before anything moves. The tester ran it on an Apple M4 Pro with 24 GB, in a second session after a first attempt that did not work out."
+    ],
+    [
+      "measured",
+      "A five-file dry run moved nothing and assigned two files to a folder, at 43 % and 65 % confidence. After analysing 281 more files, a banner counted 126 uncategorized."
+    ],
+    [
+      "observed",
+      "An Excel file was read as 300 characters, and two Search Console exports ended in the fallback although their folder was named as closest."
+    ],
+    [
+      "observed",
+      "A 286-file move to an external SSD renamed files to lowercase names with a date. The end of the move is not recorded."
+    ],
+    [
+      "observed",
+      "Over MCP, the Loci app listed the smart folders and searched the documents for \"Clarity data\"; the tester had to work out the connection himself."
+    ],
+    [
+      "vendor-claim",
+      "The app says it is private and on-device and that its MCP tools only read. Network traffic, offline use, undo, copy mode, memory, timing and uninstall were not tested."
+    ]
+  ],
+  "quotes": [
+    "You need to start small with some files and then check it, check it, check it, and fine-tune all the rules.",
+    "Having worked in consulting, I know the worst thing is always keeping an order in file systems, and then afterwards finding something."
+  ],
+  "quote_note": "Tester notes, lightly edited from dictation. Both are his judgment, not measurements.",
+  "moments_title": "Six moments that shaped this test",
+  "moments_nav": "Six moments",
+  "moments": [
+    [
+      "Dry run first",
+      "Five files, nothing moved.",
+      "stratosort-five-file-dry-run-where-files-would-go",
+      "chapter-dryrun"
+    ],
+    [
+      "A spreadsheet read as 300 characters",
+      "Details view of one Excel file.",
+      "stratosort-extracted-text-300-characters",
+      "chapter-review"
+    ],
+    [
+      "Closest match named, file still unsorted",
+      "Two Excel exports in the fallback.",
+      "stratosort-review-cards-fallback-no-folder-match",
+      "chapter-review"
+    ],
+    [
+      "A folder suggested from the site name",
+      "Banner in the review step.",
+      "stratosort-126-files-uncategorized-banner",
+      "chapter-review"
+    ],
+    [
+      "New names in the move list",
+      "Planned operations of the move.",
+      "stratosort-organize-286-files-planned-operations",
+      "chapter-move"
+    ],
+    [
+      "Another local app asks Strato",
+      "Search result over MCP.",
+      "stratosort-mcp-search-result-clarity-folder-files",
+      "chapter-mcp"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "Earlier attempt, installer and first launch",
+      "items": [
+        [
+          "observed",
+          "This was the tester's second session. In the first he clicked through without reading the guidance, found the app not self-explanatory and thinks he made setup mistakes. What went wrong is not recorded.",
+          null
+        ],
+        [
+          "observed",
+          "He then wrote to the developer, who by his account reviewed the comments and addressed some issues within several days. No message is shown; the issues and the version are not recorded.",
+          null
+        ],
+        [
+          "observed",
+          "The installer window shows the app icon, labelled \"StratoSort Stack\", beside an Applications shortcut. Installer size is not recorded.",
+          "stratosort-dmg-window-app-and-applications"
+        ],
+        [
+          "observed",
+          "The app opens on a welcome screen: \"Step 1 of 5, Start securely\", a Guided and a Dashboard mode, and a main button \"Organize files now, recommended for a first session\", with side buttons for AI and model settings and smart folders. He chose guided steps because he wanted to follow the instructions this time. A notification bell shows a count; its content is not recorded.",
+          "stratosort-welcome-screen-guided-mode"
+        ],
+        [
+          "observed",
+          "Two cards offer other starting points: Guided steps and Dashboard.",
+          "stratosort-start-options-guided-steps-or-dashboard"
+        ],
+        [
+          "third-party",
+          "The models offered, chosen and downloaded, their size and the setup time are not recorded. The directory lists about 7 GB for the base models.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-dryrun",
+      "title": "Folders and the dry run",
+      "items": [
+        [
+          "observed",
+          "The tester asked the app to read a whole folder and it did not, so he gave it individual files. The folder, any message and the cause are not recorded; no screenshot.",
+          null
+        ],
+        [
+          "tester-view",
+          "He built the folder structure in Finder, an input folder plus output folders, and found that easier than doing it in the app. The app speaks of smart folders with a description, while he thinks in input and output folders. In-app folder creation does exist (see the banner in the review step).",
+          null
+        ],
+        [
+          "observed",
+          "The output folders were on an external SSD, as the move list and the MCP table show. The tester says the first attempt had not accepted it; the cause was not recorded.",
+          null
+        ],
+        [
+          "measured",
+          "A first test on five files showed where each would go; the screen says \"Nothing has moved\". Two files were assigned: a Clarity CSV to Clarity at 43 % confidence and a picture to Pictures at 65 %. Three went to Uncategorized, each with a closest folder named: Clarity, Leftovers and excel GSc. His own review-notes file was among the three.",
+          "stratosort-five-file-dry-run-where-files-would-go"
+        ],
+        [
+          "tester-view",
+          "He was not convinced and wanted a form at that step to confirm or reject each result, instead of going back to edit the folders and run again. The screen offers \"Edit Smart Folders\" and \"Analyze the other 281 files\"; per-file choices appear later, in the review step.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-review",
+      "title": "Analysis and review",
+      "items": [
+        [
+          "measured",
+          "The other 281 files were analysed. The progress card shows \"Analyzing 5 of 281 files, 2 % complete\", the file being processed and a Stop button. Total analysis time is not recorded.",
+          "stratosort-analysis-progress-5-of-281-files"
+        ],
+        [
+          "observed",
+          "In the review step each file has a card with a checkbox, an editable suggested name, a category dropdown (best match plus other suggestions), a \"Needs review\" note with the reason, a confidence bar and a Details link. Whether every file was reviewed before the move is not recorded.",
+          "stratosort-category-dropdown-suggested-folders"
+        ],
+        [
+          "observed",
+          "Details shows project, purpose, date, document type, method, length, a summary, keywords, reasoning and the extracted text. The tester reads this as the way to fine-tune the sorting and says some data is extracted and kept in what he calls a database; the screens show the extracted fields only.",
+          "stratosort-file-analysis-details-metadata"
+        ],
+        [
+          "observed",
+          "For an Excel file the extracted text is 300 characters and ends with an ellipsis after the column headers and a few rows. Whether the limit applies to other file types or to the classification step is not known (assumption: it may explain weak matches on spreadsheets).",
+          "stratosort-extracted-text-300-characters"
+        ],
+        [
+          "observed",
+          "Two Search Console Excel exports of 6 KB each, named after the site URL, got descriptive suggested names but went to the fallback, although the note names \"excel GSc\", the tester's folder for them, as closest. The cause was not isolated.",
+          "stratosort-review-cards-fallback-no-folder-match"
+        ],
+        [
+          "measured",
+          "A banner reads \"126 files are uncategorized\" and \"103 are from Promptquorum. Want a Smart Folder for them?\", with Create folder, Different folder and Reanalyze buttons. The suggestion appears to follow the site name in the file names, not the content type (assumption).",
+          "stratosort-126-files-uncategorized-banner"
+        ],
+        [
+          "tester-estimate",
+          "The tester first felt the match was 70 to 80 percent and revised this to about 40 percent not matched after seeing the uncategorized count. Taken against the 286 files, 126 would be 44 %; that is a calculation and assumes both counts refer to the same files.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-move",
+      "title": "Moving files",
+      "items": [
+        [
+          "observed",
+          "\"Organize 286 files, moving files to their destinations\" lists planned operations with green ticks and paths on the external SSD; step navigation is paused until the move finishes or is cancelled. The tester's own test-notes documents were among the files. The end of the move is not recorded.",
+          "stratosort-organize-286-files-planned-operations"
+        ],
+        [
+          "observed",
+          "The move list replaced original names with lowercase names and a date, for example \"Gesamtansicht.jpeg\" became \"gesamtansicht-2026-10-20.jpeg\" and \"StratoSort hands on review.docx\" became \"stratosort-review-2026-11-12.docx\". The tester wrote that renaming was not tried; the list shows it was applied in this run. The result was not checked on disk, and the origin of the dates is not shown.",
+          null
+        ],
+        [
+          "measured",
+          "One WhatsApp image of 126 KB was added on its own and got a card with a suggested name, Pictures as best match and 64 % confidence. The tester says single files from anywhere on the computer can be added and sorted with the rest, and he values this.",
+          "stratosort-single-file-card-whatsapp-image-64-confidence"
+        ],
+        [
+          "observed",
+          "A second capture reads \"Organize 75 files\"; its relation to the 286-file run is not recorded, and neither end is shown.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-mcp",
+      "title": "A link to another local AI app over MCP",
+      "items": [
+        [
+          "observed",
+          "The app has an MCP screen listing four tools: search_documents, chat_with_documents, get_document_summary and list_smart_folders, with buttons that copy the setup for Claude Desktop, Cursor and Zed.",
+          "stratosort-mcp-tool-list-and-client-setup"
+        ],
+        [
+          "vendor-claim",
+          "A line on that screen says: \"These tools only read. None of them moves, renames or deletes files.\"",
+          null
+        ],
+        [
+          "observed",
+          "The tester says he had to \"backwards engineer\" the connection to another local AI app. What failed and what he changed are not recorded.",
+          null
+        ],
+        [
+          "observed",
+          "The client, Loci, reports \"Strato is connected and offers 4 tools\" at a local address and says for each tool that it does not say whether it can change things. That the tools carry no read-only marker is an assumption; the app says they only read.",
+          "stratosort-mcp-connected-in-client-four-tools"
+        ],
+        [
+          "observed",
+          "Loci's server list shows PromptQuorum with 27 tools and Strato with 4 tools, both connected.",
+          "stratosort-mcp-servers-list-in-client"
+        ],
+        [
+          "measured",
+          "list_smart_folders returned a table with folder, file count, description and destination path. Visible rows: Uncategorized 53, Pictures 8, excel GSc 196. The 53 does not match the 126 seen earlier in the review step; the time between the two is not recorded, so they are not reconciled.",
+          "stratosort-mcp-list-smart-folders-result-table"
+        ],
+        [
+          "observed",
+          "Before the search, Loci asked \"Allow Strato to run search_documents?\" with the query \"Clarity data\", a local address, and the buttons Allow once and Decline.",
+          "stratosort-mcp-search-documents-permission-prompt"
+        ],
+        [
+          "observed",
+          "search_documents with the query \"Clarity data\" returned four CSV files from the Clarity folder, each with a one-line description. The client's reply guesses that the source is Microsoft Clarity or a similar tool. Correctness against the file contents was not checked; the reply continues below the visible area.",
+          "stratosort-mcp-search-result-clarity-folder-files"
+        ],
+        [
+          "tester-view",
+          "He says it does not yet look like a retrieval system but moves toward a dataset that outside tools can query. He called only two of the four tools; get_document_summary and chat_with_documents were not called.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Decision",
+      "items": [
+        [
+          "observed",
+          "The notes end with an overall view and no decision on continued use.",
+          null
+        ],
+        [
+          "tester-view",
+          "In his understanding the app sorts files, needs time to fine-tune, and works best with a small start and repeated checking, adjusting the smart folders as you go. He used moving, not copying, and did not try the rewording and renaming functions.",
+          null
+        ],
+        [
+          "tester-view",
+          "He plans to set up a legal entity next year and to repeat the test with more documents to see whether it can keep his folder system in order. His interest is that combination with MCP and perhaps a retrieval layer on top.",
+          null
+        ],
+        [
+          "tester-view",
+          "\"You need to start small with some files and then check it, check it, check it, and fine-tune all the rules.\"",
+          null
+        ],
+        [
+          "tester-view",
+          "\"Having worked in consulting, I know the worst thing is always keeping an order in file systems, and then afterwards finding something.\"",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "Welcome screen: private, on-device, you review before any file moves.",
+      "Welcome screen",
+      "Review cards and \"Nothing has moved\" seen; on-device operation not verified.",
+      "vendor-claim"
+    ],
+    [
+      "\"Review, rename, and organize files with local AI.\"",
+      "Welcome screen",
+      "Review, rename and organize seen; which models ran, and whether locally, not recorded.",
+      "vendor-claim"
+    ],
+    [
+      "\"These tools only read. None of them moves, renames or deletes files.\"",
+      "MCP screen",
+      "Only two read calls made; no write attempt. The client says the tools do not state whether they can change things.",
+      "vendor-claim"
+    ],
+    [
+      "Hybrid semantic and keyword search with ranked results, snippets and scores.",
+      "MCP tool text",
+      "One search run; the visible reply is a file list; scores and snippets not visible.",
+      "vendor-claim"
+    ],
+    [
+      "Suggests names and folders you can review and undo; adds semantic search and document chat.",
+      "PromptQuorum directory entry",
+      "Names, folders and review seen; undo and document chat not tested.",
+      "third-party"
+    ],
+    [
+      "Works with Claude Desktop, Cursor and Zed.",
+      "PromptQuorum directory entry",
+      "Copy-config buttons for those three seen; connection made from another client.",
+      "third-party"
+    ],
+    [
+      "About 7 GB base model download after install.",
+      "PromptQuorum directory entry",
+      "Not recorded.",
+      "third-party"
+    ],
+    [
+      "No account, no telemetry, no outbound requests with update checks off and no cloud key.",
+      "Founder statement",
+      "No account screen among the screenshots; traffic not inspected.",
+      "vendor-claim"
+    ],
+    [
+      "The developer addressed some of the issues raised after the first attempt.",
+      "Tester's notes",
+      "Which issues and which version are not recorded.",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "First attempt, clicked through without guidance",
+      "StratoSort",
+      "Did not work out per the tester; details not recorded",
+      "Not recorded",
+      "Fail",
+      []
+    ],
+    [
+      "Launch in Guided mode",
+      "StratoSort",
+      "Reached the folder step",
+      "Not recorded",
+      "Pass",
+      [
+        "stratosort-welcome-screen-guided-mode"
+      ]
+    ],
+    [
+      "Read a whole folder in the app",
+      "StratoSort",
+      "Folder not read per the tester; no screenshot",
+      "Not recorded",
+      "Fail",
+      []
+    ],
+    [
+      "Add individual files",
+      "StratoSort",
+      "Worked per the tester",
+      "Not recorded",
+      "Pass",
+      []
+    ],
+    [
+      "Dry run on 5 files",
+      "StratoSort",
+      "2 matched a folder, 3 went to Uncategorized",
+      "Not recorded",
+      "Partial",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "Analyse the other 281 files",
+      "StratoSort",
+      "Started; end and duration not recorded",
+      "Not recorded",
+      "Partial",
+      [
+        "stratosort-analysis-progress-5-of-281-files"
+      ]
+    ],
+    [
+      "Open Details for one spreadsheet",
+      "StratoSort",
+      "Fields shown; text cut at 300 characters",
+      "Not recorded",
+      "Pass",
+      [
+        "stratosort-extracted-text-300-characters",
+        "stratosort-file-analysis-details-metadata"
+      ]
+    ],
+    [
+      "Sort two Search Console exports into \"excel GSc\"",
+      "StratoSort",
+      "Fallback instead",
+      "Not recorded",
+      "Fail",
+      [
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "Add one WhatsApp image",
+      "StratoSort",
+      "Ready for Pictures, 64 %",
+      "Not recorded",
+      "Pass",
+      [
+        "stratosort-single-file-card-whatsapp-image-64-confidence"
+      ]
+    ],
+    [
+      "Move 286 files to the external SSD",
+      "StratoSort",
+      "In progress at capture; end not recorded",
+      "Not recorded",
+      "Partial",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "Second move, 75 files",
+      "StratoSort",
+      "One progress capture only",
+      "Not recorded",
+      "Partial",
+      []
+    ],
+    [
+      "Rename files as part of the move",
+      "StratoSort",
+      "New names in the move list",
+      "Not recorded",
+      "Pass",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "Connect another local AI app over MCP",
+      "Loci",
+      "Connected after the tester worked out the setup himself",
+      "Not recorded",
+      "Partial",
+      [
+        "stratosort-mcp-connected-in-client-four-tools",
+        "stratosort-mcp-servers-list-in-client"
+      ]
+    ],
+    [
+      "list_smart_folders",
+      "Loci",
+      "Table returned",
+      "Not recorded",
+      "Pass",
+      [
+        "stratosort-mcp-list-smart-folders-result-table"
+      ]
+    ],
+    [
+      "search_documents, query \"Clarity data\"",
+      "Loci",
+      "Four files listed",
+      "Not recorded",
+      "Pass",
+      [
+        "stratosort-mcp-search-documents-permission-prompt",
+        "stratosort-mcp-search-result-clarity-folder-files"
+      ]
+    ],
+    [
+      "get_document_summary, chat_with_documents",
+      "Not applicable",
+      "Not called",
+      "Not recorded",
+      "Not completed",
+      []
+    ],
+    [
+      "Undo, copy mode, Dashboard mode, AI and model settings, offline use, uninstall",
+      "Not applicable",
+      "Not tested",
+      "Not recorded",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Wrote that renaming was not tried. The move list shows new names (for example a picture and a Word file in lowercase with a date) and green ticks, so renaming was applied in this run. Not checked on disk."
+    ],
+    [
+      "tester-error",
+      "In the first attempt he clicked through without reading the guidance and thinks he made setup mistakes. What went wrong is not recorded."
+    ],
+    [
+      "tester-error",
+      "Judged that it does not look like a retrieval system after calling only list_smart_folders and search_documents. The tool list also names get_document_summary and chat_with_documents, which were not called."
+    ],
+    [
+      "assumption",
+      "His estimate of \"40 % not matched\" is a rounding of the 44 % in the review chapter, if the 126 files belong to the 286. The earlier \"70 to 80 %\" was a feeling, not a count."
+    ],
+    [
+      "tester-error",
+      "Gaps in the record: app version, models and their download, input folder contents, the folder descriptions he wrote, analysis time, whether every file was reviewed before the move, whether the 286 and 75 file moves finished, how the MCP connection was made, what the developer changed, undo, uninstall. Voice-to-text slips were normalised: \"Stratosorgstack\" is StratoSort Stack, \"SST\" is SSD, \"M C Ps\" is MCPs. \"Low key\" and \"Loki\" are read as Loci, as confirmed by the tester. \"Some AI mechanism picked up that\" is read as the banner in the review step (assumption)."
+    ]
+  ],
+  "findings": [
+    [
+      "SS-01",
+      "The installer window shows the app icon, labelled \"StratoSort Stack\", beside an Applications shortcut. Installer size not recorded.",
+      "Install",
+      "observed",
+      "Info",
+      [
+        "stratosort-dmg-window-app-and-applications"
+      ]
+    ],
+    [
+      "SS-02",
+      "The welcome screen reads \"Step 1 of 5, Start securely\", offers a Guided and a Dashboard mode and a main button \"Organize files now, recommended for a first session\", with side buttons for AI and model settings and smart folders. The tester chose guided steps after the first attempt. A notification bell shows a count; its content is not recorded.",
+      "Onboarding",
+      "observed",
+      "Positive",
+      [
+        "stratosort-welcome-screen-guided-mode",
+        "stratosort-start-options-guided-steps-or-dashboard"
+      ]
+    ],
+    [
+      "SS-03",
+      "Models offered, chosen and downloaded, their size and the setup time are not recorded. The directory lists about 7 GB for the base models (third-party).",
+      "Onboarding",
+      "third-party",
+      "Info",
+      []
+    ],
+    [
+      "SS-04",
+      "Per the tester's notes the developer reviewed his comments from the first attempt and addressed some issues within several days. No message is shown; the issues and the version are not recorded.",
+      "Support",
+      "observed",
+      "Info",
+      []
+    ],
+    [
+      "SS-05",
+      "The tester asked the app to read a whole folder and it did not; he then gave individual files. The folder, any message and the cause are not recorded; no screenshot.",
+      "Folders",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SS-06",
+      "Creating the input folder and output folders was easier for the tester in Finder than in the app, and he found the app unclear here. The app speaks of smart folders with a description, while the tester thinks in input and output folders (tester view). In-app folder creation does exist (see the banner in the review step).",
+      "Folders",
+      "tester-view",
+      "Medium",
+      [
+        "stratosort-126-files-uncategorized-banner"
+      ]
+    ],
+    [
+      "SS-07",
+      "Output folders on an external SSD were used in this run, as the move list and the MCP table show. The tester says the first attempt did not take the external SSD; the cause was not recorded.",
+      "Folders",
+      "observed",
+      "Positive",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-08",
+      "\"Trying your Smart Folders\" analyses a few files and says \"No files are moved\". The result screen repeats \"Nothing has moved\" and tells the user to edit a folder's description if a file would land wrongly.",
+      "Dry run",
+      "observed",
+      "Positive",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-09",
+      "Of five files, two were assigned: a Clarity CSV to Clarity at 43 % confidence and a picture to Pictures at 65 %. Three went to Uncategorized, each with a closest folder named: Clarity, Leftovers and excel GSc. The tester's own review notes file was among the three.",
+      "Dry run",
+      "measured",
+      "Medium",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-10",
+      "At the preview step the tester wanted a form to confirm or reject each result (tester view). The screen offers \"Edit Smart Folders\" and \"Analyze the other 281 files\". Per-file choices appear later in the review step.",
+      "Dry run",
+      "tester-view",
+      "Low",
+      [
+        "stratosort-five-file-dry-run-where-files-would-go"
+      ]
+    ],
+    [
+      "SS-11",
+      "The progress card shows \"Analyzing 5 of 281 files, 2 % complete\", the file being processed and a Stop button. Total analysis time is not recorded.",
+      "Analysis",
+      "measured",
+      "Info",
+      [
+        "stratosort-analysis-progress-5-of-281-files"
+      ]
+    ],
+    [
+      "SS-12",
+      "Each file has a card with a checkbox, an editable suggested name, a category dropdown (best match plus other suggestions), a \"Needs review\" note with the reason, a confidence bar and a Details link. Whether every file was reviewed before the move is not recorded.",
+      "Review",
+      "observed",
+      "Positive",
+      [
+        "stratosort-category-dropdown-suggested-folders",
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "SS-13",
+      "Details shows project, purpose, date, document type, method, length, a summary, keywords, reasoning and the extracted text. That this is kept in a database is the tester's reading; the MCP tool text speaks of a cached analysis (vendor claim).",
+      "Review",
+      "observed",
+      "Positive",
+      [
+        "stratosort-file-analysis-details-metadata"
+      ]
+    ],
+    [
+      "SS-14",
+      "For an Excel file the extracted text is 300 characters and ends with an ellipsis after the column headers and a few rows. Whether the limit applies to other file types or to the classification step is not known (assumption: it may explain weak matches on spreadsheets).",
+      "Review",
+      "observed",
+      "Medium",
+      [
+        "stratosort-extracted-text-300-characters"
+      ]
+    ],
+    [
+      "SS-15",
+      "Two Search Console Excel exports of 6 KB each, named after the site URL, got descriptive suggested names but went to the fallback, although the note names \"excel GSc\", the tester's folder for them, as closest. Cause not isolated.",
+      "Review",
+      "observed",
+      "Medium",
+      [
+        "stratosort-review-cards-fallback-no-folder-match"
+      ]
+    ],
+    [
+      "SS-16",
+      "A banner reads \"126 files are uncategorized\" and \"103 are from Promptquorum. Want a Smart Folder for them?\" with Create folder, Different folder and Reanalyze buttons. The suggestion appears to follow the site name in the file names, not the content type (tester view and assumption). Reading the 126 as 44 % of 286 is a calculation (assumption).",
+      "Review",
+      "measured",
+      "Low",
+      [
+        "stratosort-126-files-uncategorized-banner"
+      ]
+    ],
+    [
+      "SS-17",
+      "\"Organize 286 files, moving files to their destinations\" lists planned operations with green ticks and paths on the external SSD; step navigation is paused until the move finishes or is cancelled. The tester's own test-notes documents were among the files. A second capture reads \"Organize 75 files\"; its relation to the first is not recorded, and neither end is shown.",
+      "Move",
+      "observed",
+      "Info",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-18",
+      "Original names were replaced in the move list by lowercase names with a date, for example \"Gesamtansicht.jpeg\" became \"gesamtansicht-2026-10-20.jpeg\" and \"StratoSort hands on review.docx\" became \"stratosort-review-2026-11-12.docx\". The origin of the dates is not shown.",
+      "Move",
+      "observed",
+      "Medium",
+      [
+        "stratosort-organize-286-files-planned-operations"
+      ]
+    ],
+    [
+      "SS-19",
+      "One WhatsApp image of 126 KB was added on its own and got a card with a suggested name, Pictures as best match and 64 % confidence. The tester says single files from anywhere can be added.",
+      "Move",
+      "measured",
+      "Positive",
+      [
+        "stratosort-single-file-card-whatsapp-image-64-confidence"
+      ]
+    ],
+    [
+      "SS-20",
+      "The app has an MCP screen listing four tools: search_documents, chat_with_documents, get_document_summary and list_smart_folders. A line says they only read and do not move, rename or delete files (vendor claim). Buttons copy the setup for Claude Desktop, Cursor and Zed.",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "stratosort-mcp-tool-list-and-client-setup"
+      ]
+    ],
+    [
+      "SS-21",
+      "The tester says he had to \"backwards engineer\" the connection to another local AI app. What failed and what he changed are not recorded.",
+      "MCP",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "SS-22",
+      "The client reports \"Strato is connected and offers 4 tools\" at a local address and says for each tool that it does not say whether it can change things. That the tools carry no read-only marker is an assumption; the app says they only read.",
+      "MCP",
+      "observed",
+      "Low",
+      [
+        "stratosort-mcp-connected-in-client-four-tools",
+        "stratosort-mcp-servers-list-in-client"
+      ]
+    ],
+    [
+      "SS-23",
+      "list_smart_folders returned a table with folder, file count, description and destination path. Visible rows: Uncategorized 53, Pictures 8, excel GSc 196. The 53 does not match the 126 seen earlier in the review step; the time between the two is not recorded, so they are not reconciled.",
+      "MCP",
+      "measured",
+      "Positive",
+      [
+        "stratosort-mcp-list-smart-folders-result-table"
+      ]
+    ],
+    [
+      "SS-24",
+      "search_documents with the query \"Clarity data\" returned four CSV files from the Clarity folder, each with a one-line description. The client's reply guesses that the source is Microsoft Clarity or a similar tool. Correctness against the file contents was not checked; the reply continues below the visible area.",
+      "MCP",
+      "observed",
+      "Positive",
+      [
+        "stratosort-mcp-search-documents-permission-prompt",
+        "stratosort-mcp-search-result-clarity-folder-files"
+      ]
+    ],
+    [
+      "SS-25",
+      "The welcome screen says private and on-device, and the founder says there is no account and no telemetry (vendor claims). No traffic was inspected, no offline run was tried, no account screen is among the screenshots and the models used are not recorded.",
+      "Trust",
+      "vendor-claim",
+      "Info",
+      []
+    ],
+    [
+      "SS-26",
+      "Not tested or not recorded: undo, copy mode, Dashboard mode, AI and model settings, get_document_summary, chat_with_documents, the rewording function, timing, memory, offline use, uninstall, Windows and Linux.",
+      "Scope",
+      "observed",
+      "Info",
+      []
+    ]
+  ],
+  "severity_note": "Severity is the impact on a first-time user. Proposed, not measured. Info marks a finding that is neither a problem nor a strength; Positive marks something that worked well.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Mac users with mixed, private document folders who accept starting small, checking often and tuning the folder descriptions (assumption from one session)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "Anyone who expects accurate sorting after the first pass."
+      ],
+      [
+        "third-party",
+        "Anyone who needs commercial use without checking the licence: the directory lists a noncommercial licence and a paid per-seat licence for commercial use."
+      ]
+    ],
+    "retest": "Retest on a new major version, after the issues the developer addressed are shipped, or when the tester has the company documents next year. Cover: record the app version and the models; run a known test set and count matched against uncategorized; the spreadsheet text limit; undo; copy mode; get_document_summary and chat_with_documents; offline use with traffic inspected; runtime memory; uninstall; the licence terms."
+  },
+  "background_intro": "Third-party and unverified. Kept apart from the test.",
+  "background": [
+    [
+      "third-party",
+      "Maker: Ben Kennedy, Ph.D., who says he built it solo over about 17 months of part-time work (vendor claim, founder statement of 2026-11-10)."
+    ],
+    [
+      "third-party",
+      "Source-available under PolyForm Noncommercial 1.0.0, freemium; the directory notes that commercial use needs a paid per-seat licence, that the project is very young, that an update check is on by default and that its privacy claims were not tested. Release 5.1.2 of 2026-11-01 with installers for Mac, Windows and Linux. Source: PromptQuorum directory entry, checked 2026-11-10."
+    ]
+  ],
+  "sources": [
+    "Tester's hands-on notes and screenshots (original Word notes; PDF of the raw notes to be added).",
+    "PromptQuorum directory entry and review of StratoSort (slug: stratosort), verified 2026-11-10.",
+    "Vendor site stratosort.com (vendor claims) and the source repository iLevyTate/StratoSortStack, listed in the directory and not opened for this test."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Observed",
+      "meaning": "Seen first-hand in the app, a screenshot or the tester's notes."
+    },
+    "measured": {
+      "label": "Measured",
+      "meaning": "A value read from a dialog, counter or tool, with the number given."
+    },
+    "tester-estimate": {
+      "label": "Tester estimate",
+      "meaning": "The tester's own estimate; not timed or counted."
+    },
+    "vendor-claim": {
+      "label": "Vendor claim",
+      "meaning": "Stated by the app, its store listing or its website; not verified."
+    },
+    "third-party": {
+      "label": "Third party",
+      "meaning": "From another source (an AI assistant, an article); not verified here."
+    },
+    "assumption": {
+      "label": "Assumption",
+      "meaning": "An inference. It may be wrong."
+    },
+    "tester-view": {
+      "label": "Tester view",
+      "meaning": "The tester's judgment or opinion."
+    },
+    "tester-error": {
+      "label": "Tester error",
+      "meaning": "Where the tester made a mistake or missed something."
+    }
+  },
+  "images": [
+    {
+      "id": "stratosort-welcome-screen-guided-mode",
+      "figure": 1,
+      "file": "stratosort-welcome-screen-guided-mode.webp",
+      "path": "images/stratosort-welcome-screen-guided-mode.webp",
+      "alt": "StratoSort welcome screen: Step 1 of 5, Guided mode on, a yellow Organize files now button, and buttons for AI and model settings and Smart folders.",
+      "caption": "Welcome screen in Guided mode. The privacy line is a vendor claim. Observed.",
+      "role": "hero",
+      "width": 1432,
+      "height": 791,
+      "bytes": 47780,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-five-file-dry-run-where-files-would-go",
+      "figure": 2,
+      "file": "stratosort-five-file-dry-run-where-files-would-go.webp",
+      "path": "images/stratosort-five-file-dry-run-where-files-would-go.webp",
+      "alt": "Preview titled Where these files would go: five files, three in Uncategorized, one Clarity CSV at 43 percent and one picture at 65 percent confidence.",
+      "caption": "Five-file dry run, nothing moved. Confidence values read from the app. Measured.",
+      "role": "moment",
+      "width": 1312,
+      "height": 992,
+      "bytes": 85956,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-dryrun"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-extracted-text-300-characters",
+      "figure": 3,
+      "file": "stratosort-extracted-text-300-characters.webp",
+      "path": "images/stratosort-extracted-text-300-characters.webp",
+      "alt": "Details panel with keywords sites, linking, page, and Extracted text of 300 characters from a spreadsheet, cut off after a few domain names.",
+      "caption": "Extracted text for an Excel file ends after 300 characters. Observed.",
+      "role": "moment",
+      "width": 928,
+      "height": 792,
+      "bytes": 29322,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-review-cards-fallback-no-folder-match",
+      "figure": 4,
+      "file": "stratosort-review-cards-fallback-no-folder-match.webp",
+      "path": "images/stratosort-review-cards-fallback-no-folder-match.webp",
+      "alt": "Two review cards for Search Console Excel exports with suggested names, category Fallback no folder match, and a note naming excel GSc as closest.",
+      "caption": "Two Excel exports left in the fallback although \"excel GSc\" was the closest folder. Observed.",
+      "role": "moment",
+      "width": 1600,
+      "height": 773,
+      "bytes": 64930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-126-files-uncategorized-banner",
+      "figure": 5,
+      "file": "stratosort-126-files-uncategorized-banner.webp",
+      "path": "images/stratosort-126-files-uncategorized-banner.webp",
+      "alt": "Banner: 126 files are uncategorized, 103 are from Promptquorum, with buttons Create folder for Promptquorum, Different folder and Reanalyze 126.",
+      "caption": "Uncategorized banner in the review step. Measured by the app.",
+      "role": "moment",
+      "width": 1600,
+      "height": 355,
+      "bytes": 23238,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-organize-286-files-planned-operations",
+      "figure": 6,
+      "file": "stratosort-organize-286-files-planned-operations.webp",
+      "path": "images/stratosort-organize-286-files-planned-operations.webp",
+      "alt": "Organize 286 files, moving files to their destinations, with a list of planned operations showing new lowercase file names and external SSD paths.",
+      "caption": "Planned operations with renamed files, early in the move. Observed.",
+      "role": "moment",
+      "width": 1600,
+      "height": 795,
+      "bytes": 62550,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-move"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-mcp-search-result-clarity-folder-files",
+      "figure": 7,
+      "file": "stratosort-mcp-search-result-clarity-folder-files.webp",
+      "path": "images/stratosort-mcp-search-result-clarity-folder-files.webp",
+      "alt": "Loci answers from Strato: four CSV files in the Clarity folder listed with short descriptions, reply continues below the visible area.",
+      "caption": "Result of the search_documents call \"Clarity data\" in Loci. Observed.",
+      "role": "moment",
+      "width": 1558,
+      "height": 946,
+      "bytes": 123930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Screenshot of the Loci app (MCP client)",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-dmg-window-app-and-applications",
+      "figure": 8,
+      "file": "stratosort-dmg-window-app-and-applications.webp",
+      "path": "images/stratosort-dmg-window-app-and-applications.webp",
+      "alt": "Installer window with the StratoSort Stack app icon, three stripes in gold, blue and navy, beside the Applications folder shortcut.",
+      "caption": "Installer window. Observed.",
+      "role": "gallery",
+      "width": 1374,
+      "height": 858,
+      "bytes": 21362,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-start-options-guided-steps-or-dashboard",
+      "figure": 9,
+      "file": "stratosort-start-options-guided-steps-or-dashboard.webp",
+      "path": "images/stratosort-start-options-guided-steps-or-dashboard.webp",
+      "alt": "Two cards under Prefer a different starting point: Guided steps and Dashboard, each with one line of description.",
+      "caption": "Alternative starting points. Observed.",
+      "role": "gallery",
+      "width": 1428,
+      "height": 364,
+      "bytes": 17060,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-analysis-progress-5-of-281-files",
+      "figure": 10,
+      "file": "stratosort-analysis-progress-5-of-281-files.webp",
+      "path": "images/stratosort-analysis-progress-5-of-281-files.webp",
+      "alt": "Progress card: Analyzing 5 of 281 files, 2 percent complete, currently processing a file named Loci app test.docx, with a Stop analysis button.",
+      "caption": "Analysis progress. Total duration not recorded. Measured.",
+      "role": "gallery",
+      "width": 1431,
+      "height": 287,
+      "bytes": 11658,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-category-dropdown-suggested-folders",
+      "figure": 11,
+      "file": "stratosort-category-dropdown-suggested-folders.webp",
+      "path": "images/stratosort-category-dropdown-suggested-folders.webp",
+      "alt": "Category dropdown with Suggested group: Pictures (best match), Leftovers, excel GSc and Clarity.",
+      "caption": "Per-file category choice in the review step. Observed.",
+      "role": "gallery",
+      "width": 844,
+      "height": 596,
+      "bytes": 14336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-file-analysis-details-metadata",
+      "figure": 12,
+      "file": "stratosort-file-analysis-details-metadata.webp",
+      "path": "images/stratosort-file-analysis-details-metadata.webp",
+      "alt": "File analysis details: project Top sites linking, date 2026-08-08, document type Excel Spreadsheet, method content, length 300 chars, and a summary.",
+      "caption": "Details view for one spreadsheet. Observed.",
+      "role": "gallery",
+      "width": 1012,
+      "height": 1024,
+      "bytes": 38536,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-review"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-single-file-card-whatsapp-image-64-confidence",
+      "figure": 13,
+      "file": "stratosort-single-file-card-whatsapp-image-64-confidence.webp",
+      "path": "images/stratosort-single-file-card-whatsapp-image-64-confidence.webp",
+      "alt": "Review card for a WhatsApp image of 126 KB, suggested name whatsapp-image-2026-11-10.jpeg, category Pictures best match, 64 percent confidence.",
+      "caption": "Single file added from outside the test folder. Measured.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 772,
+      "bytes": 26640,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-move"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-mcp-tool-list-and-client-setup",
+      "figure": 14,
+      "file": "stratosort-mcp-tool-list-and-client-setup.webp",
+      "path": "images/stratosort-mcp-tool-list-and-client-setup.webp",
+      "alt": "MCP screen listing four tools: search_documents, chat_with_documents, get_document_summary, list_smart_folders, a read-only note and Copy config buttons.",
+      "caption": "MCP screen in the app. The read-only line is a vendor claim. Observed.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 689,
+      "bytes": 54658,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Screenshot of the StratoSort app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-mcp-connected-in-client-four-tools",
+      "figure": 15,
+      "file": "stratosort-mcp-connected-in-client-four-tools.webp",
+      "path": "images/stratosort-mcp-connected-in-client-four-tools.webp",
+      "alt": "Loci dialog: Strato is connected and offers 4 tools, each marked Doesn't say whether it can change things, with inputs of search_documents listed.",
+      "caption": "Tool list as shown by Loci. Observed.",
+      "role": "gallery",
+      "width": 1348,
+      "height": 1272,
+      "bytes": 80732,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Screenshot of the Loci app (MCP client)",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-mcp-servers-list-in-client",
+      "figure": 16,
+      "file": "stratosort-mcp-servers-list-in-client.webp",
+      "path": "images/stratosort-mcp-servers-list-in-client.webp",
+      "alt": "Loci list of MCP servers: PromptQuorum with 27 tools and Strato with 4 tools, both connected, plus an Add a server row.",
+      "caption": "Server list in Loci. Observed.",
+      "role": "gallery",
+      "width": 1216,
+      "height": 492,
+      "bytes": 18196,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Screenshot of the Loci app (MCP client)",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-mcp-list-smart-folders-result-table",
+      "figure": 17,
+      "file": "stratosort-mcp-list-smart-folders-result-table.webp",
+      "path": "images/stratosort-mcp-list-smart-folders-result-table.webp",
+      "alt": "Loci table of smart folders: Uncategorized 53 files, Pictures 8, excel GSc 196, with descriptions and destination paths on the external SSD.",
+      "caption": "Result of list_smart_folders. Counts as shown; later rows not visible. Measured.",
+      "role": "gallery",
+      "width": 1586,
+      "height": 1040,
+      "bytes": 72116,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Screenshot of the Loci app (MCP client)",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    },
+    {
+      "id": "stratosort-mcp-search-documents-permission-prompt",
+      "figure": 18,
+      "file": "stratosort-mcp-search-documents-permission-prompt.webp",
+      "path": "images/stratosort-mcp-search-documents-permission-prompt.webp",
+      "alt": "Permission prompt: Allow Strato to run search_documents, query Clarity data, local address 127.0.0.1, buttons Allow once and Decline.",
+      "caption": "Permission prompt before the search. Observed.",
+      "role": "gallery",
+      "width": 1558,
+      "height": 1002,
+      "bytes": 53140,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-mcp"
+      ],
+      "subject": "Screenshot of the Loci app (MCP client)",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "Test date not recorded; exact time not recorded"
+    }
+  ],
+  "figure_order": [
+    "stratosort-welcome-screen-guided-mode",
+    "stratosort-five-file-dry-run-where-files-would-go",
+    "stratosort-extracted-text-300-characters",
+    "stratosort-review-cards-fallback-no-folder-match",
+    "stratosort-126-files-uncategorized-banner",
+    "stratosort-organize-286-files-planned-operations",
+    "stratosort-mcp-search-result-clarity-folder-files",
+    "stratosort-dmg-window-app-and-applications",
+    "stratosort-start-options-guided-steps-or-dashboard",
+    "stratosort-analysis-progress-5-of-281-files",
+    "stratosort-category-dropdown-suggested-folders",
+    "stratosort-file-analysis-details-metadata",
+    "stratosort-single-file-card-whatsapp-image-64-confidence",
+    "stratosort-mcp-tool-list-and-client-setup",
+    "stratosort-mcp-connected-in-client-four-tools",
+    "stratosort-mcp-servers-list-in-client",
+    "stratosort-mcp-list-smart-folders-result-table",
+    "stratosort-mcp-search-documents-permission-prompt"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum hands-on test · {app} · {date}",
+    "date_line": "17 November 2026",
+    "nav_aria": "Sections",
+    "nav": {
+      "verdict": "Verdict",
+      "moments": "Six moments",
+      "story": "How it went",
+      "claims": "Claims",
+      "fit": "Memory",
+      "log": "Usage log",
+      "errors": "Tester errors",
+      "findings": "Findings",
+      "background": "Background"
+    },
+    "related": "Related:",
+    "review_link": "PromptQuorum review of {app}",
+    "directory_link": "Local AI app directory",
+    "verdict_h": "Verdict",
+    "general_assessment": "General assessment",
+    "fit_for_tester": "Fit for the tester's use",
+    "scorecard": "Scorecard",
+    "status_prefix": "Status:",
+    "na": "n/a",
+    "score_aria": "{n} out of 5",
+    "details_h": "Test details",
+    "label_intro": "Every statement carries a label:",
+    "legend_link": "What the labels mean",
+    "disclosure_label": "Disclosure.",
+    "raw_notes": "Raw notes PDF:",
+    "to_be_added": "to be added",
+    "moments_h": "Six moments that shaped this test",
+    "see_context": "See it in context",
+    "story_h": "How the test went",
+    "claims_h": "Claims versus what the tester saw",
+    "claims_cols": [
+      "Claim",
+      "Source",
+      "Observed",
+      "Label"
+    ],
+    "fit_h": "Does it fit in 24 GB?",
+    "memory_line": "{gb} GB memory",
+    "above": "above {gb} GB",
+    "below": "below {gb} GB",
+    "log_h": "Usage log",
+    "log_cols": [
+      "#",
+      "Task",
+      "App",
+      "Result",
+      "Time",
+      "Status",
+      "Figures"
+    ],
+    "statuses": {
+      "Fail": "Fail",
+      "Partial": "Partial",
+      "Pass": "Pass",
+      "Not completed": "Not completed"
+    },
+    "errors_h": "Where the tester got it wrong",
+    "findings_h": "Findings register",
+    "filter_aria": "Filter findings by label",
+    "filter_all": "All",
+    "findings_cols": [
+      "ID",
+      "Finding",
+      "Category",
+      "Label",
+      "Severity",
+      "Figures"
+    ],
+    "severities": {
+      "High": "High",
+      "Medium": "Medium",
+      "Low": "Low",
+      "Positive": "Positive",
+      "Info": "Info"
+    },
+    "fig_abbr": "Fig.",
+    "figure": "Figure",
+    "enlarge": "Enlarge:",
+    "audience_h": "Who it is for",
+    "likely_fit": "Likely fit",
+    "likely_poor_fit": "Likely poor fit",
+    "retest": "Retest.",
+    "background_h": "Background on the maker",
+    "gallery_h": "More from the test",
+    "legend_h": "How to read the labels",
+    "sources_h": "Sources",
+    "footer_line": "Test ID {id} · Test standard v{version} · Raw notes PDF: to be added",
+    "crumb_home": "Home",
+    "crumb_directory": "Directory",
+    "crumb_test": "{app} hands-on test",
+    "faq_h": "Frequently asked questions",
+    "more_tests_h": "More hands-on tests"
+  }
+}

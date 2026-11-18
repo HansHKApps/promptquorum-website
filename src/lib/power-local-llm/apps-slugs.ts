@@ -272,6 +272,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'murmur':                                  'murmur',
   'fullmoon':                                'fullmoon',
   'reins':                                   'reins',
+  'conduit':                                 'conduit',
   'phantasm':                                'phantasm',
   'openvoiceos':                             'openvoiceos',
   'hillnote':                                'hillnote',
@@ -307,7 +308,13 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'kai-9000':                                'kai-9000',
   'scrypted':                                'scrypted',
   'screenpipe':                              'screenpipe',
+  'skales':                                  'skales',
+  'halo':                                    'halo',
+  'yovoice':                                 'yovoice',
+  'open-science-desktop':                    'open-science-desktop',
   'cozyclay':                                'cozyclay',
+  'papersgpt':                               'papersgpt',
+  'solomd':                                  'solomd',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)

@@ -121,6 +121,7 @@ import { article as a_localmindai_review } from './articles/localmindai-review'
 import { article as a_murmur_review } from './articles/murmur-review'
 import { article as a_fullmoon_review } from './articles/fullmoon-review'
 import { article as a_reins_review } from './articles/reins-review'
+import { article as a_conduit_review } from './articles/conduit-review'
 import { article as a_phantasm_review } from './articles/phantasm-review'
 import { article as a_openvoiceos_review } from './articles/openvoiceos-review'
 import { article as a_hillnote_review } from './articles/hillnote-review'
@@ -130,7 +131,13 @@ import { article as a_llm_vision_review } from './articles/llm-vision-review'
 import { article as a_picoclaw_review } from './articles/picoclaw-review'
 import { article as a_scrypted_review } from './articles/scrypted-review'
 import { article as a_screenpipe_review } from './articles/screenpipe-review'
+import { article as a_skales_review } from './articles/skales-review'
+import { article as a_halo_review } from './articles/halo-review'
+import { article as a_yovoice_review } from './articles/yovoice-review'
+import { article as a_open_science_desktop_review } from './articles/open-science-desktop-review'
 import { article as a_cozyclay_review } from './articles/cozyclay-review'
+import { article as a_papersgpt_review } from './articles/papersgpt-review'
+import { article as a_solomd_review } from './articles/solomd-review'
 import { article as a_lyonesse_review } from './articles/lyonesse-review'
 import { article as a_open_llm_vtuber_review } from './articles/open-llm-vtuber-review'
 import { article as a_presenton_review } from './articles/presenton-review'
@@ -853,6 +860,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'murmur-review':                                 a_murmur_review,
   'fullmoon-review':                               a_fullmoon_review,
   'reins-review':                                  a_reins_review,
+  'conduit-review':                                a_conduit_review,
   'phantasm-review':                               a_phantasm_review,
   'openvoiceos-review':                            a_openvoiceos_review,
   'hillnote-review':                               a_hillnote_review,
@@ -862,7 +870,13 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'picoclaw-review':                               a_picoclaw_review,
   'scrypted-review':                               a_scrypted_review,
   'screenpipe-review':                             a_screenpipe_review,
+  'skales-review':                                 a_skales_review,
+  'halo-review':                                   a_halo_review,
+  'yovoice-review':                                a_yovoice_review,
+  'open-science-desktop-review':                   a_open_science_desktop_review,
   'cozyclay-review':                              a_cozyclay_review,
+  'papersgpt-review':                             a_papersgpt_review,
+  'solomd-review':                                a_solomd_review,
   'lyonesse-review':                               a_lyonesse_review,
   'open-llm-vtuber-review':                        a_open_llm_vtuber_review,
   'presenton-review':                              a_presenton_review,

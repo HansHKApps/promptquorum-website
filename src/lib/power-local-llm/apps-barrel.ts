@@ -297,6 +297,7 @@ import { app as app_localmindai } from './apps/localmindai'
 import { app as app_murmur } from './apps/murmur'
 import { app as app_fullmoon } from './apps/fullmoon'
 import { app as app_reins } from './apps/reins'
+import { app as app_conduit } from './apps/conduit'
 import { app as app_phantasm } from './apps/phantasm'
 import { app as app_openvoiceos } from './apps/openvoiceos'
 import { app as app_hillnote } from './apps/hillnote'
@@ -306,7 +307,13 @@ import { app as app_llm_vision } from './apps/llm-vision'
 import { app as app_picoclaw } from './apps/picoclaw'
 import { app as app_scrypted } from './apps/scrypted'
 import { app as app_screenpipe } from './apps/screenpipe'
+import { app as app_skales } from './apps/skales'
+import { app as app_halo } from './apps/halo'
+import { app as app_yovoice } from './apps/yovoice'
+import { app as app_open_science_desktop } from './apps/open-science-desktop'
 import { app as app_cozyclay } from './apps/cozyclay'
+import { app as app_papersgpt } from './apps/papersgpt'
+import { app as app_solomd } from './apps/solomd'
 import { app as app_lyonesse } from './apps/lyonesse'
 import { app as app_open_llm_vtuber } from './apps/open-llm-vtuber'
 import { app as app_presenton } from './apps/presenton'
@@ -598,6 +605,7 @@ export const localAiApps: ToolRecord[] = [
   app_murmur,
   app_fullmoon,
   app_reins,
+  app_conduit,
   app_phantasm,
   app_openvoiceos,
   app_hillnote,
@@ -607,7 +615,13 @@ export const localAiApps: ToolRecord[] = [
   app_picoclaw,
   app_scrypted,
   app_screenpipe,
+  app_skales,
+  app_halo,
+  app_yovoice,
+  app_open_science_desktop,
   app_cozyclay,
+  app_papersgpt,
+  app_solomd,
   app_lyonesse,
   app_open_llm_vtuber,
   app_presenton,

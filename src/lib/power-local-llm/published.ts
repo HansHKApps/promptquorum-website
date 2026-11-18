@@ -627,6 +627,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // fullmoon review (Mobile & Edge LLMs, free MIT offline chat app for iPhone/iPad/Mac, stale since 2025) — 2026-10-30
   'fullmoon-review',
   'reins-review',
+  'conduit-review',
   'phantasm-review',
   'hillnote-review',
   'trilium-notes-review',
@@ -637,7 +638,13 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Scrypted review (Voice, Speech & Multimodal, camera/NVR platform with optional local LLM summaries) — 2026-11-01
   'scrypted-review',
   'screenpipe-review',
+  'skales-review',
+  'halo-review',
+  'yovoice-review',
+  'open-science-desktop-review',
   'cozyclay-review',
+  'papersgpt-review',
+  'solomd-review',
   // Lyonesse review (Voice, Speech & Multimodal, iPhone/iPad/Mac transcription) — 2026-10-26
   'lyonesse-review',
   'open-llm-vtuber-review',
