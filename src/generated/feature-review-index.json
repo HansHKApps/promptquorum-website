@@ -1109,6 +1109,11 @@
     "urlSlug": "screenpipe-review",
     "url": "/power-local-llm/screenpipe-review"
   },
+  "dyad": {
+    "cluster": "power-local-llm",
+    "urlSlug": "dyad-review",
+    "url": "/power-local-llm/dyad-review"
+  },
   "skales": {
     "cluster": "power-local-llm",
     "urlSlug": "skales-review",

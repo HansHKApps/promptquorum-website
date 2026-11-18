@@ -1003,6 +1003,7 @@ const HUB_THEMES: Array<{
       'claude-code-local-review',
       'little-coder-review',
       'libredb-studio-review',
+      'dyad-review',
     ],
   },
   {

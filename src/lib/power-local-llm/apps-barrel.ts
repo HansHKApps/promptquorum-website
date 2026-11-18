@@ -309,6 +309,7 @@ import { app as app_llm_vision } from './apps/llm-vision'
 import { app as app_picoclaw } from './apps/picoclaw'
 import { app as app_scrypted } from './apps/scrypted'
 import { app as app_screenpipe } from './apps/screenpipe'
+import { app as app_dyad } from './apps/dyad'
 import { app as app_skales } from './apps/skales'
 import { app as app_halo } from './apps/halo'
 import { app as app_yovoice } from './apps/yovoice'
@@ -631,6 +632,7 @@ export const localAiApps: ToolRecord[] = [
   app_picoclaw,
   app_scrypted,
   app_screenpipe,
+  app_dyad,
   app_skales,
   app_halo,
   app_yovoice,

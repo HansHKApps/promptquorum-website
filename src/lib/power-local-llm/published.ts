@@ -639,6 +639,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'scrypted-review',
   'screenpipe-review',
   'openhuman-review',
+  'dyad-review',
   'skales-review',
   'halo-review',
   'yovoice-review',

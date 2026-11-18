@@ -310,6 +310,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'kai-9000':                                'kai-9000',
   'scrypted':                                'scrypted',
   'screenpipe':                              'screenpipe',
+  'dyad':                                    'dyad',
   'skales':                                  'skales',
   'halo':                                    'halo',
   'yovoice':                                 'yovoice',
