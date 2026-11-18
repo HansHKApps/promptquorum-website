@@ -26,7 +26,7 @@ const L = {
   ja: { hl: ['Linux向けAIアシスタント', 'ローカルモデル、音声、MCP', '無料のオープンソース'], price: '価格', priceV: '無料', lic: 'ライセンス', licV: 'GPL-3.0', plat: '動作環境', platV: 'Linux（Flatpak）', footer: 'PromptQuorumガイド' },
   zh: { hl: ['Linux AI 助手', '本地模型、语音、MCP', '免费开源，GPL-3.0'], price: '价格', priceV: '免费', lic: '许可证', licV: 'GPL-3.0', plat: '运行于', platV: 'Linux（Flatpak）', footer: 'PromptQuorum 指南' },
   pt: { hl: ['Assistente de IA para Linux', 'Modelos locais, voz e MCP', 'Grátis e de código aberto, GPL-3.0'], price: 'Preço', priceV: 'Grátis', lic: 'Licença', licV: 'GPL-3.0', plat: 'Roda em', platV: 'Linux (Flatpak)', footer: 'Guia PromptQuorum' },
-  ar: { hl: ['مساعد ذكاء اصطناعي لنظام Linux', 'نماذج محلية، صوت، MCP', 'مجاني ومفتوح المصدر'], price: 'السعر', priceV: 'مجاني', lic: 'الترخيص', licV: 'GPL-3.0', plat: 'يعمل على', platV: 'Linux (Flatpak)', footer: 'دليل PromptQuorum' },
+  ar: { hl: ['مساعد ذكاء اصطناعي لسطح المكتب', 'نماذج محلية، صوت، MCP', 'مجاني ومفتوح المصدر'], price: 'السعر', priceV: 'مجاني', lic: 'الترخيص', licV: 'GPL-3.0', plat: 'يعمل على', platV: 'Linux (Flatpak)', footer: 'دليل PromptQuorum' },
   ko: { hl: ['Linux용 AI 어시스턴트', '로컬 모델, 음성, MCP', '무료 오픈소스, GPL-3.0'], price: '가격', priceV: '무료', lic: '라이선스', licV: 'GPL-3.0', plat: '실행 환경', platV: 'Linux(Flatpak)', footer: 'PromptQuorum 가이드' },
 }
 
@@ -38,7 +38,8 @@ for (const lang of Object.keys(L)) {
   const t = L[lang]
   const spec = {
     lang,
-    title: stripMd(article[lang].title),
+    // ar: dedicated short poster title (the article title's ':' after a Latin brand name renders as a detached colon and wraps badly)
+    title: lang === 'ar' ? 'مراجعة Newelle لنظام Linux' : stripMd(article[lang].title),
     highlights: t.hl,
     facts: [
       { label: t.price, value: t.priceV },

@@ -243,6 +243,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'How often does Oleafly update?',
             a: 'GitHub lists version 0.4.11 on 8 November 2026 and 0.4.12 on 13 November 2026, with commits on the main branch as recently as 17 November 2026. The README labels the project beta.',
           },
+          {
+            q: 'Is Oleafly free?',
+            a: 'According to the README, yes: it says "Free forever", including real-time collaboration, Git sync, Zotero and AI, and the code is AGPL-3.0. Hosted AI providers that you connect bill separately under their own terms, and live collaboration needs an Oleafly Server that you host. PromptQuorum did not verify these claims.',
+          },
+          {
+            q: 'Which operating systems does Oleafly support?',
+            a: 'The v0.4.12 release lists a DMG for macOS on Apple Silicon and Intel, an MSI and an EXE setup for Windows, and AppImage, DEB and RPM packages for Linux on x86_64 and ARM64; the Linux packages need glibc 2.35 or newer. PromptQuorum did not run the installers or check whether they are code-signed.',
+          },
+          {
+            q: 'Do I need to install LaTeX first?',
+            a: 'Not for a new project, according to the README: Tectonic, Typst and Pandoc are built in. A full distribution such as TeX Live, MacTeX, MiKTeX or TinyTeX is optional and takes over when a project needs one. PromptQuorum did not test whether your journal template compiles.',
+          },
+          {
+            q: 'Does Oleafly work with Git and Zotero?',
+            a: 'Per the README, yes: every project is a Git repository that you can push to GitHub, GitLab, Gitea, Forgejo, Codeberg or your own server, and you can cite from a Zotero library as you type. It also lists a literature search across arXiv, Semantic Scholar, Crossref, PubMed and OpenAlex.',
+          },
+          {
+            q: 'Does Oleafly send my data anywhere?',
+            a: 'The maker says there is no account and no telemetry, and that documents stay on your disk. The README adds that release builds check for an update when the app starts, and that cloud sync, literature lookups, hosted AI providers and a collaboration server use the network only when you switch them on. PromptQuorum did not inspect network traffic.',
+          },
+          {
+            q: 'Can Oleafly use a local model?',
+            a: 'Yes, per the README: the chat assistant can connect to a local Ollama model, which it says keeps AI traffic on your computer. PromptQuorum did not run a local model through Oleafly, and the hardware needs depend on the model you choose.',
+          },
+          {
+            q: 'Is Oleafly stable enough for a thesis?',
+            a: 'The README labels the project beta, the repository was created in July 2026 and version 0.4.12 is from 13 November 2026, so PromptQuorum cannot vouch for its stability. Try it on a copy of a project first, check that your template compiles and keep a backup of your Git history.',
+          },
+          {
+            q: 'Who develops Oleafly?',
+            a: 'The README credits Prajwal Murthy and contributors, and the code is public on GitHub. The last commit on the main branch was on 17 November 2026. PromptQuorum found no company, imprint or terms page, so it cannot say which country the project is based in.',
+          },
         ],
       },
       verdict: {
@@ -510,6 +542,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Wie oft wird Oleafly aktualisiert?',
             a: 'GitHub listet Version 0.4.11 vom 8. November 2026 und 0.4.12 vom 13. November 2026, mit Commits auf dem Hauptzweig bis zum 17. November 2026. Das README kennzeichnet das Projekt als Beta.',
+          },
+          {
+            q: 'Ist Oleafly kostenlos?',
+            a: 'Laut README ja: Dort steht "Free forever", einschließlich Echtzeit-Zusammenarbeit, Git-Sync, Zotero und KI, und der Code steht unter AGPL-3.0. Gehostete KI-Anbieter, die Sie anbinden, rechnen separat nach ihren eigenen Bedingungen ab, und die Live-Zusammenarbeit braucht einen Oleafly Server, den Sie selbst betreiben. PromptQuorum hat diese Angaben nicht überprüft.',
+          },
+          {
+            q: 'Welche Betriebssysteme unterstützt Oleafly?',
+            a: 'Das Release v0.4.12 listet ein DMG für macOS auf Apple Silicon und Intel, ein MSI und ein EXE-Setup für Windows sowie AppImage-, DEB- und RPM-Pakete für Linux auf x86_64 und ARM64; die Linux-Pakete brauchen glibc 2.35 oder neuer. PromptQuorum hat die Installer nicht ausgeführt und nicht geprüft, ob sie signiert sind.',
+          },
+          {
+            q: 'Muss ich zuerst LaTeX installieren?',
+            a: 'Für ein neues Projekt nicht, laut README: Tectonic, Typst und Pandoc sind eingebaut. Eine vollständige Distribution wie TeX Live, MacTeX, MiKTeX oder TinyTeX ist optional und übernimmt, wenn ein Projekt sie braucht. PromptQuorum hat nicht getestet, ob Ihre Zeitschriftenvorlage kompiliert.',
+          },
+          {
+            q: 'Funktioniert Oleafly mit Git und Zotero?',
+            a: 'Laut README ja: Jedes Projekt ist ein Git-Repository, das Sie zu GitHub, GitLab, Gitea, Forgejo, Codeberg oder Ihrem eigenen Server pushen können, und Sie können beim Tippen aus einer Zotero-Bibliothek zitieren. Außerdem nennt es eine Literatursuche über arXiv, Semantic Scholar, Crossref, PubMed und OpenAlex.',
+          },
+          {
+            q: 'Sendet Oleafly meine Daten irgendwohin?',
+            a: 'Laut Entwickler gibt es kein Konto und keine Telemetrie, und Dokumente bleiben auf Ihrer Festplatte. Das README ergänzt, dass Release-Builds beim Start nach einem Update suchen und dass Cloud-Sync, Literaturabfragen, gehostete KI-Anbieter und ein Kollaborationsserver das Netzwerk nur nutzen, wenn Sie sie einschalten. PromptQuorum hat den Netzwerkverkehr nicht untersucht.',
+          },
+          {
+            q: 'Kann Oleafly ein lokales Modell nutzen?',
+            a: 'Ja, laut README: Der Chat-Assistent kann sich mit einem lokalen Ollama-Modell verbinden, wodurch der KI-Datenverkehr laut README auf Ihrem Rechner bleibt. PromptQuorum hat kein lokales Modell über Oleafly betrieben, und der Hardwarebedarf hängt vom gewählten Modell ab.',
+          },
+          {
+            q: 'Ist Oleafly für eine Abschlussarbeit stabil genug?',
+            a: 'Das README bezeichnet das Projekt als Beta, das Repository entstand im Juli 2026 und Version 0.4.12 stammt vom 13. November 2026; PromptQuorum kann daher nicht für die Stabilität einstehen. Probieren Sie es zuerst an einer Kopie eines Projekts aus, prüfen Sie, ob Ihre Vorlage kompiliert, und sichern Sie Ihren Git-Verlauf.',
+          },
+          {
+            q: 'Wer entwickelt Oleafly?',
+            a: 'Das README nennt Prajwal Murthy und weitere Mitwirkende, der Code ist öffentlich auf GitHub. Der letzte Commit im Main-Branch stammt vom 17. November 2026. PromptQuorum fand weder Firma noch Impressum noch Nutzungsbedingungen und kann daher nicht sagen, in welchem Land das Projekt angesiedelt ist.',
           },
         ],
       },
@@ -779,6 +843,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'À quelle fréquence Oleafly est-il mis à jour ?',
             a: 'GitHub liste la version 0.4.11 du 8 novembre 2026 et la 0.4.12 du 13 novembre 2026, avec des commits sur la branche principale jusqu\'au 17 novembre 2026. Le README qualifie le projet de bêta.',
           },
+          {
+            q: 'Oleafly est-il gratuit ?',
+            a: 'Selon le README, oui : il indique « Free forever », y compris la collaboration en temps réel, la synchronisation Git, Zotero et l\'IA, et le code est sous AGPL-3.0. Les fournisseurs d\'IA hébergés que vous connectez facturent séparément selon leurs propres conditions, et la collaboration en direct nécessite un Oleafly Server que vous hébergez. PromptQuorum n\'a pas vérifié ces affirmations.',
+          },
+          {
+            q: 'Quels systèmes d\'exploitation Oleafly prend-il en charge ?',
+            a: 'La version v0.4.12 propose un DMG pour macOS (Apple Silicon et Intel), un MSI et un installateur EXE pour Windows, ainsi que des paquets AppImage, DEB et RPM pour Linux sur x86_64 et ARM64 ; les paquets Linux exigent glibc 2.35 ou plus récent. PromptQuorum n\'a pas exécuté les installateurs ni vérifié s\'ils sont signés.',
+          },
+          {
+            q: 'Dois-je d\'abord installer LaTeX ?',
+            a: 'Pas pour un nouveau projet, selon le README : Tectonic, Typst et Pandoc sont intégrés. Une distribution complète comme TeX Live, MacTeX, MiKTeX ou TinyTeX est facultative et prend le relais quand un projet en a besoin. PromptQuorum n\'a pas vérifié si le modèle de votre revue se compile.',
+          },
+          {
+            q: 'Oleafly fonctionne-t-il avec Git et Zotero ?',
+            a: 'Selon le README, oui : chaque projet est un dépôt Git que vous pouvez pousser vers GitHub, GitLab, Gitea, Forgejo, Codeberg ou votre propre serveur, et vous pouvez citer depuis une bibliothèque Zotero au fil de la frappe. Il mentionne aussi une recherche bibliographique dans arXiv, Semantic Scholar, Crossref, PubMed et OpenAlex.',
+          },
+          {
+            q: 'Oleafly envoie-t-il mes données quelque part ?',
+            a: 'Selon le développeur, il n\'y a ni compte ni télémétrie, et les documents restent sur votre disque. Le README précise que les versions publiées vérifient une mise à jour au démarrage, et que la synchronisation cloud, les recherches bibliographiques, les fournisseurs d\'IA hébergés et un serveur de collaboration n\'utilisent le réseau que si vous les activez. PromptQuorum n\'a pas inspecté le trafic réseau.',
+          },
+          {
+            q: 'Oleafly peut-il utiliser un modèle local ?',
+            a: 'Oui, selon le README : l\'assistant de discussion peut se connecter à un modèle Ollama local, ce qui, selon le README, garde le trafic d\'IA sur votre ordinateur. PromptQuorum n\'a pas fait tourner de modèle local avec Oleafly, et les besoins matériels dépendent du modèle choisi.',
+          },
+          {
+            q: 'Oleafly est-il assez stable pour une thèse ?',
+            a: 'Le README qualifie le projet de bêta, le dépôt a été créé en juillet 2026 et la version 0.4.12 date du 13 novembre 2026 ; PromptQuorum ne peut donc pas garantir sa stabilité. Essayez-le d\'abord sur une copie d\'un projet, vérifiez que votre modèle se compile et sauvegardez votre historique Git.',
+          },
+          {
+            q: 'Qui développe Oleafly ?',
+            a: 'Le README cite Prajwal Murthy et des contributeurs, et le code est public sur GitHub. Le dernier commit sur la branche main date du 17 novembre 2026. PromptQuorum n\'a trouvé ni société, ni mentions légales, ni conditions d\'utilisation et ne peut donc pas dire dans quel pays le projet est basé.',
+          },
         ],
       },
       verdict: {
@@ -1046,6 +1142,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Con qué frecuencia se actualiza Oleafly?',
             a: 'GitHub lista la versión 0.4.11 del 8 de noviembre de 2026 y la 0.4.12 del 13 de noviembre de 2026, con commits en la rama principal hasta el 17 de noviembre de 2026. El README califica el proyecto de beta.',
+          },
+          {
+            q: '¿Es Oleafly gratuito?',
+            a: 'Según el README, sí: dice "Free forever", incluidas la colaboración en tiempo real, la sincronización con Git, Zotero y la IA, y el código es AGPL-3.0. Los proveedores de IA alojados que conectes facturan aparte según sus propias condiciones, y la colaboración en vivo necesita un Oleafly Server que alojes tú. PromptQuorum no verificó estas afirmaciones.',
+          },
+          {
+            q: '¿Qué sistemas operativos admite Oleafly?',
+            a: 'La versión v0.4.12 incluye un DMG para macOS en Apple Silicon e Intel, un MSI y un instalador EXE para Windows, y paquetes AppImage, DEB y RPM para Linux en x86_64 y ARM64; los paquetes de Linux requieren glibc 2.35 o superior. PromptQuorum no ejecutó los instaladores ni comprobó si están firmados.',
+          },
+          {
+            q: '¿Necesito instalar LaTeX antes?',
+            a: 'No para un proyecto nuevo, según el README: Tectonic, Typst y Pandoc vienen integrados. Una distribución completa como TeX Live, MacTeX, MiKTeX o TinyTeX es opcional y entra en juego cuando un proyecto la necesita. PromptQuorum no probó si la plantilla de tu revista se compila.',
+          },
+          {
+            q: '¿Funciona Oleafly con Git y Zotero?',
+            a: 'Según el README, sí: cada proyecto es un repositorio Git que puedes enviar a GitHub, GitLab, Gitea, Forgejo, Codeberg o a tu propio servidor, y puedes citar desde una biblioteca de Zotero mientras escribes. También menciona una búsqueda de bibliografía en arXiv, Semantic Scholar, Crossref, PubMed y OpenAlex.',
+          },
+          {
+            q: '¿Envía Oleafly mis datos a algún sitio?',
+            a: 'Según el desarrollador, no hay cuenta ni telemetría, y los documentos permanecen en tu disco. El README añade que las versiones publicadas buscan una actualización al iniciarse, y que la sincronización en la nube, las consultas bibliográficas, los proveedores de IA alojados y un servidor de colaboración solo usan la red cuando los activas. PromptQuorum no inspeccionó el tráfico de red.',
+          },
+          {
+            q: '¿Puede Oleafly usar un modelo local?',
+            a: 'Sí, según el README: el asistente de chat puede conectarse a un modelo local de Ollama, lo que, según el README, mantiene el tráfico de IA en tu equipo. PromptQuorum no ejecutó ningún modelo local con Oleafly, y los requisitos de hardware dependen del modelo que elijas.',
+          },
+          {
+            q: '¿Es Oleafly lo bastante estable para una tesis?',
+            a: 'El README califica el proyecto de beta, el repositorio se creó en julio de 2026 y la versión 0.4.12 es del 13 de noviembre de 2026, así que PromptQuorum no puede garantizar su estabilidad. Pruébalo primero con una copia de un proyecto, comprueba que tu plantilla se compila y haz una copia de seguridad de tu historial de Git.',
+          },
+          {
+            q: '¿Quién desarrolla Oleafly?',
+            a: 'El README cita a Prajwal Murthy y a colaboradores, y el código es público en GitHub. El último commit de la rama main fue el 17 de noviembre de 2026. PromptQuorum no encontró empresa, aviso legal ni condiciones de uso, por lo que no puede decir en qué país tiene su sede el proyecto.',
           },
         ],
       },
@@ -1315,6 +1443,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Com que frequência o Oleafly é atualizado?',
             a: 'O GitHub lista a versão 0.4.11 de 8 de novembro de 2026 e a 0.4.12 de 13 de novembro de 2026, com commits no ramo principal até 17 de novembro de 2026. O README classifica o projeto como beta.',
           },
+          {
+            q: 'O Oleafly é gratuito?',
+            a: 'Segundo o README, sim: ele diz "Free forever", incluindo colaboração em tempo real, sincronização com Git, Zotero e IA, e o código é AGPL-3.0. Os provedores de IA hospedados que você conectar cobram à parte, conforme os próprios termos, e a colaboração ao vivo exige um Oleafly Server hospedado por você. A PromptQuorum não verificou essas afirmações.',
+          },
+          {
+            q: 'Quais sistemas operacionais o Oleafly suporta?',
+            a: 'A versão v0.4.12 traz um DMG para macOS em Apple Silicon e Intel, um MSI e um instalador EXE para Windows, e pacotes AppImage, DEB e RPM para Linux em x86_64 e ARM64; os pacotes do Linux exigem glibc 2.35 ou mais recente. A PromptQuorum não executou os instaladores nem verificou se são assinados.',
+          },
+          {
+            q: 'Preciso instalar o LaTeX antes?',
+            a: 'Não para um projeto novo, segundo o README: Tectonic, Typst e Pandoc já vêm embutidos. Uma distribuição completa como TeX Live, MacTeX, MiKTeX ou TinyTeX é opcional e assume quando um projeto precisa dela. A PromptQuorum não testou se o modelo da sua revista compila.',
+          },
+          {
+            q: 'O Oleafly funciona com Git e Zotero?',
+            a: 'Segundo o README, sim: cada projeto é um repositório Git que você pode enviar para GitHub, GitLab, Gitea, Forgejo, Codeberg ou seu próprio servidor, e é possível citar a partir de uma biblioteca do Zotero enquanto você digita. Ele também cita uma busca bibliográfica em arXiv, Semantic Scholar, Crossref, PubMed e OpenAlex.',
+          },
+          {
+            q: 'O Oleafly envia meus dados para algum lugar?',
+            a: 'Segundo o desenvolvedor, não há conta nem telemetria, e os documentos ficam no seu disco. O README acrescenta que as versões publicadas verificam atualização ao iniciar, e que a sincronização na nuvem, as consultas bibliográficas, os provedores de IA hospedados e um servidor de colaboração só usam a rede quando você os ativa. A PromptQuorum não inspecionou o tráfego de rede.',
+          },
+          {
+            q: 'O Oleafly pode usar um modelo local?',
+            a: 'Sim, segundo o README: o assistente de chat pode se conectar a um modelo local do Ollama, o que, segundo o README, mantém o tráfego de IA no seu computador. A PromptQuorum não executou nenhum modelo local com o Oleafly, e as necessidades de hardware dependem do modelo escolhido.',
+          },
+          {
+            q: 'O Oleafly é estável o bastante para uma tese?',
+            a: 'O README classifica o projeto como beta, o repositório foi criado em julho de 2026 e a versão 0.4.12 é de 13 de novembro de 2026; por isso a PromptQuorum não pode garantir a estabilidade. Experimente primeiro em uma cópia de um projeto, verifique se o seu modelo compila e faça backup do seu histórico do Git.',
+          },
+          {
+            q: 'Quem desenvolve o Oleafly?',
+            a: 'O README cita Prajwal Murthy e colaboradores, e o código é público no GitHub. O último commit na branch main foi em 17 de novembro de 2026. A PromptQuorum não encontrou empresa, aviso legal nem termos de uso, então não pode dizer em que país o projeto está sediado.',
+          },
         ],
       },
       verdict: {
@@ -1582,6 +1742,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Oleaflyの更新頻度はどのくらいですか？',
             a: 'GitHubには2026年11月8日のバージョン0.4.11と2026年11月13日の0.4.12が載っており、メインブランチには2026年11月17日までコミットがあります。READMEはプロジェクトをベータ版と表示しています。',
+          },
+          {
+            q: 'Oleaflyは無料ですか？',
+            a: 'READMEによると、はい。リアルタイム共同編集、Git同期、Zotero、AIを含めて「Free forever」と記載されており、コードはAGPL-3.0です。接続するホスト型AIプロバイダーは各社の条件で別途課金され、ライブ共同編集には自分でホストするOleafly Serverが必要です。これらの記載はPromptQuorumでは検証していません。',
+          },
+          {
+            q: 'Oleaflyはどのオペレーティングシステムに対応していますか？',
+            a: 'v0.4.12のリリースには、Apple SiliconとIntel向けのmacOS用DMG、Windows用のMSIとEXEのセットアップ、x86_64とARM64向けのLinux用AppImage、DEB、RPMが載っています。Linuxのパッケージにはglibc 2.35以降が必要です。インストーラーはPromptQuorumでは実行しておらず、コード署名の有無も確認していません。',
+          },
+          {
+            q: '先にLaTeXをインストールする必要がありますか？',
+            a: 'READMEによると、新しいプロジェクトでは不要です。Tectonic、Typst、Pandocが組み込まれています。TeX Live、MacTeX、MiKTeX、TinyTeXなどの完全なディストリビューションは任意で、プロジェクトが必要とする場合に引き継ぎます。お使いの学会誌テンプレートがコンパイルできるかはPromptQuorumでは試していません。',
+          },
+          {
+            q: 'OleaflyはGitやZoteroと連携できますか？',
+            a: 'READMEによると、はい。すべてのプロジェクトはGitリポジトリで、GitHub、GitLab、Gitea、Forgejo、Codeberg、または自分のサーバーにプッシュできます。入力しながらZoteroライブラリから引用することもできます。arXiv、Semantic Scholar、Crossref、PubMed、OpenAlexを横断する文献検索も挙げられています。',
+          },
+          {
+            q: 'Oleaflyはデータをどこかに送信しますか？',
+            a: '開発者によると、アカウントもテレメトリーもなく、文書はディスク上に残ります。READMEには、リリース版は起動時に更新を確認すること、クラウド同期、文献検索、ホスト型AIプロバイダー、共同編集サーバーは、有効にしたときだけネットワークを使うことが補足されています。ネットワーク通信はPromptQuorumでは調べていません。',
+          },
+          {
+            q: 'Oleaflyはローカルモデルを使えますか？',
+            a: 'はい。READMEによると、チャットアシスタントはローカルのOllamaモデルに接続でき、その場合AIの通信は自分のコンピューター上にとどまるとされています。OleaflyでのローカルモデルはPromptQuorumでは実行しておらず、必要なハードウェアは選ぶモデルによって変わります。',
+          },
+          {
+            q: 'Oleaflyは論文執筆に使えるほど安定していますか？',
+            a: 'READMEはプロジェクトをベータとしており、リポジトリは2026年7月に作成され、バージョン0.4.12は2026年11月13日のものです。そのため安定性はPromptQuorumでは保証できません。まずプロジェクトのコピーで試し、テンプレートがコンパイルできるか確認し、Gitの履歴をバックアップしてください。',
+          },
+          {
+            q: 'Oleaflyは誰が開発していますか？',
+            a: 'READMEにはPrajwal Murthy氏とコントリビューターが挙げられており、コードはGitHubで公開されています。mainブランチの最後のコミットは2026年11月17日です。PromptQuorumは会社、運営者情報、利用規約のページを見つけられなかったため、プロジェクトの拠点がどの国かは分かりません。',
           },
         ],
       },
@@ -1851,6 +2043,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Oleafly 多久更新一次？',
             a: 'GitHub 列出了 2026 年 11 月 8 日的 0.4.11 版和 2026 年 11 月 13 日的 0.4.12 版，主分支最近的提交在 2026 年 11 月 17 日。README 把项目标为测试版。',
           },
+          {
+            q: 'Oleafly 免费吗？',
+            a: '根据 README，免费：其中写明“Free forever”，包括实时协作、Git 同步、Zotero 和 AI，代码采用 AGPL-3.0。你连接的托管 AI 服务商会按各自条款另行收费，实时协作则需要你自己托管 Oleafly Server。PromptQuorum 没有核实这些说法。',
+          },
+          {
+            q: 'Oleafly 支持哪些操作系统？',
+            a: 'v0.4.12 版本提供：适用于 Apple Silicon 和 Intel 的 macOS DMG，Windows 的 MSI 和 EXE 安装程序，以及适用于 x86_64 和 ARM64 的 Linux AppImage、DEB 和 RPM 包；Linux 包需要 glibc 2.35 或更高版本。PromptQuorum 没有运行这些安装程序，也没有核实它们是否经过代码签名。',
+          },
+          {
+            q: '我需要先安装 LaTeX 吗？',
+            a: '根据 README，新项目不需要：Tectonic、Typst 和 Pandoc 已内置。TeX Live、MacTeX、MiKTeX 或 TinyTeX 等完整发行版是可选的，项目需要时由其接手。PromptQuorum 没有测试你的期刊模板能否编译。',
+          },
+          {
+            q: 'Oleafly 能配合 Git 和 Zotero 使用吗？',
+            a: '根据 README，可以：每个项目都是一个 Git 仓库，可推送到 GitHub、GitLab、Gitea、Forgejo、Codeberg 或你自己的服务器，输入时可从 Zotero 文献库引用。它还提到跨 arXiv、Semantic Scholar、Crossref、PubMed 和 OpenAlex 的文献检索。',
+          },
+          {
+            q: 'Oleafly 会把我的数据发送到别处吗？',
+            a: '据开发者称，没有账号也没有遥测，文档保留在你的磁盘上。README 补充说，正式发布版在启动时会检查更新，云同步、文献查询、托管 AI 服务商和协作服务器只在你开启时才使用网络。PromptQuorum 没有检查网络流量。',
+          },
+          {
+            q: 'Oleafly 能使用本地模型吗？',
+            a: '可以，根据 README：聊天助手可连接本地 Ollama 模型，README 称这样 AI 流量会留在你的电脑上。PromptQuorum 没有用 Oleafly 运行过本地模型，硬件需求取决于你选择的模型。',
+          },
+          {
+            q: 'Oleafly 稳定到可以用来写论文吗？',
+            a: 'README 把该项目标为测试版，仓库创建于 2026 年 7 月，0.4.12 版发布于 2026 年 11 月 13 日，因此 PromptQuorum 无法保证其稳定性。建议先在项目副本上试用，确认你的模板能够编译，并备份好 Git 历史。',
+          },
+          {
+            q: 'Oleafly 由谁开发？',
+            a: 'README 提到 Prajwal Murthy 和其他贡献者，代码公开在 GitHub 上。main 分支的最后一次提交在 2026 年 11 月 17 日。PromptQuorum 没有找到公司、法律声明或条款页面，因此无法说明该项目位于哪个国家。',
+          },
         ],
       },
       verdict: {
@@ -2119,6 +2343,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Oleafly는 얼마나 자주 업데이트됩니까?',
             a: 'GitHub에는 2026년 11월 8일의 버전 0.4.11과 2026년 11월 13일의 0.4.12가 올라와 있고, 메인 브랜치에는 2026년 11월 17일까지 커밋이 있습니다. README는 프로젝트를 베타로 표기합니다.',
           },
+          {
+            q: 'Oleafly는 무료입니까?',
+            a: 'README에 따르면 그렇습니다. 실시간 공동 작업, Git 동기화, Zotero, AI를 포함해 "Free forever"라고 적혀 있고 코드는 AGPL-3.0입니다. 연결하는 호스팅형 AI 제공업체는 각자의 약관에 따라 별도로 요금을 청구하며, 실시간 공동 작업에는 직접 호스팅하는 Oleafly Server가 필요합니다. 이 내용은 PromptQuorum이 검증하지 않았습니다.',
+          },
+          {
+            q: 'Oleafly는 어떤 운영체제를 지원합니까?',
+            a: 'v0.4.12 릴리스에는 Apple Silicon과 Intel용 macOS DMG, Windows용 MSI와 EXE 설치 프로그램, x86_64와 ARM64용 Linux AppImage, DEB, RPM 패키지가 있습니다. Linux 패키지에는 glibc 2.35 이상이 필요합니다. 설치 프로그램은 PromptQuorum이 실행하지 않았고 코드 서명 여부도 확인하지 않았습니다.',
+          },
+          {
+            q: '먼저 LaTeX를 설치해야 합니까?',
+            a: 'README에 따르면 새 프로젝트에는 필요하지 않습니다. Tectonic, Typst, Pandoc이 내장되어 있습니다. TeX Live, MacTeX, MiKTeX, TinyTeX 같은 전체 배포판은 선택 사항이며 프로젝트에 필요할 때 대신 사용됩니다. 사용하시는 학술지 템플릿이 컴파일되는지는 PromptQuorum이 테스트하지 않았습니다.',
+          },
+          {
+            q: 'Oleafly는 Git, Zotero와 함께 쓸 수 있습니까?',
+            a: 'README에 따르면 가능합니다. 모든 프로젝트는 Git 저장소이며 GitHub, GitLab, Gitea, Forgejo, Codeberg 또는 자체 서버로 푸시할 수 있고, 입력하면서 Zotero 라이브러리에서 인용할 수 있습니다. arXiv, Semantic Scholar, Crossref, PubMed, OpenAlex를 아우르는 문헌 검색도 언급되어 있습니다.',
+          },
+          {
+            q: 'Oleafly는 제 데이터를 어딘가로 전송합니까?',
+            a: '개발자에 따르면 계정도 텔레메트리도 없으며 문서는 디스크에 남습니다. README는 릴리스 빌드가 시작할 때 업데이트를 확인하며, 클라우드 동기화, 문헌 조회, 호스팅형 AI 제공업체, 공동 작업 서버는 사용자가 켰을 때만 네트워크를 사용한다고 덧붙입니다. 네트워크 트래픽은 PromptQuorum이 점검하지 않았습니다.',
+          },
+          {
+            q: 'Oleafly에서 로컬 모델을 사용할 수 있습니까?',
+            a: '네, README에 따르면 채팅 어시스턴트를 로컬 Ollama 모델에 연결할 수 있으며, README는 이 경우 AI 트래픽이 사용자의 컴퓨터에 머문다고 설명합니다. Oleafly에서 로컬 모델은 PromptQuorum이 실행해 보지 않았고, 필요한 하드웨어는 선택한 모델에 따라 달라집니다.',
+          },
+          {
+            q: 'Oleafly는 학위 논문에 쓸 만큼 안정적입니까?',
+            a: 'README는 이 프로젝트를 베타로 표시하고 있으며, 저장소는 2026년 7월에 만들어졌고 버전 0.4.12는 2026년 11월 13일 것입니다. 따라서 PromptQuorum은 안정성을 보증할 수 없습니다. 먼저 프로젝트 사본으로 시험해 보고, 템플릿이 컴파일되는지 확인하며, Git 기록을 백업하십시오.',
+          },
+          {
+            q: 'Oleafly는 누가 개발합니까?',
+            a: 'README에는 Prajwal Murthy와 기여자들이 명시되어 있고 코드는 GitHub에 공개되어 있습니다. main 브랜치의 마지막 커밋은 2026년 11월 17일입니다. PromptQuorum은 회사, 법적 고지, 이용약관 페이지를 찾지 못해 프로젝트가 어느 나라에 기반을 두는지 말할 수 없습니다.',
+          },
         ],
       },
       verdict: {
@@ -2386,6 +2642,38 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'كم مرة يُحدَّث Oleafly؟',
             a: 'يعرض GitHub الإصدار 0.4.11 في 8 نوفمبر 2026 والإصدار 0.4.12 في 13 نوفمبر 2026، مع إيداعات على الفرع الرئيسي حتى 17 نوفمبر 2026. ويصف README المشروع بأنه تجريبي.',
+          },
+          {
+            q: 'هل Oleafly مجاني؟',
+            a: 'بحسب README، نعم: يذكر عبارة "Free forever" بما يشمل التعاون في الوقت الفعلي ومزامنة Git وZotero والذكاء الاصطناعي، والشيفرة بترخيص AGPL-3.0. أما مزودو الذكاء الاصطناعي المستضافون الذين تربطهم به فيحاسبونك بشكل منفصل وفق شروطهم، ويحتاج التعاون المباشر إلى Oleafly Server تستضيفه بنفسك. لم تتحقق PromptQuorum من هذه الادعاءات.',
+          },
+          {
+            q: 'ما أنظمة التشغيل التي يدعمها Oleafly؟',
+            a: 'يسرد الإصدار v0.4.12 ملف DMG لنظام macOS على Apple Silicon وIntel، وملفي MSI وEXE للتثبيت على Windows، وحزم AppImage وDEB وRPM لنظام Linux على x86_64 وARM64؛ وتتطلب حزم Linux الإصدار 2.35 من glibc أو أحدث. لم تشغّل PromptQuorum المثبّتات ولم تتحقق من توقيعها.',
+          },
+          {
+            q: 'هل أحتاج إلى تثبيت LaTeX أولًا؟',
+            a: 'ليس لمشروع جديد، بحسب README: فمحركات Tectonic وTypst وPandoc مدمجة. أما التوزيعة الكاملة مثل TeX Live أو MacTeX أو MiKTeX أو TinyTeX فاختيارية وتتولى العمل عندما يحتاج إليها المشروع. لم تختبر PromptQuorum ما إذا كان قالب مجلتك يُترجَم بنجاح.',
+          },
+          {
+            q: 'هل يعمل Oleafly مع Git وZotero؟',
+            a: 'بحسب README، نعم: كل مشروع مستودع Git يمكنك دفعه إلى GitHub أو GitLab أو Gitea أو Forgejo أو Codeberg أو خادمك الخاص، ويمكنك الاقتباس من مكتبة Zotero أثناء الكتابة. ويذكر أيضًا بحثًا في الأدبيات عبر arXiv وSemantic Scholar وCrossref وPubMed وOpenAlex.',
+          },
+          {
+            q: 'هل يرسل Oleafly بياناتي إلى مكان ما؟',
+            a: 'يقول المطوّر إنه لا يوجد حساب ولا قياس عن بُعد، وإن المستندات تبقى على قرصك. ويضيف README أن نسخ الإصدار تتحقق من وجود تحديث عند بدء التشغيل، وأن المزامنة السحابية والبحث في الأدبيات ومزودي الذكاء الاصطناعي المستضافين وخادم التعاون لا تستخدم الشبكة إلا عند تفعيلها. لم تفحص PromptQuorum حركة الشبكة.',
+          },
+          {
+            q: 'هل يستطيع Oleafly استخدام نموذج محلي؟',
+            a: 'نعم، بحسب README: يمكن لمساعد الدردشة الاتصال بنموذج Ollama محلي، وهو ما يبقي بحسب README حركة الذكاء الاصطناعي على حاسوبك. لم تشغّل PromptQuorum نموذجًا محليًا عبر Oleafly، وتعتمد متطلبات العتاد على النموذج الذي تختاره.',
+          },
+          {
+            q: 'هل Oleafly مستقر بما يكفي لكتابة رسالة علمية؟',
+            a: 'يصنّف README المشروع على أنه تجريبي (beta)، وأُنشئ المستودع في يوليو 2026، والإصدار 0.4.12 بتاريخ 13 نوفمبر 2026، لذا لا تستطيع PromptQuorum الجزم باستقراره. جرّبه أولًا على نسخة من مشروع، وتحقق من أن قالبك يُترجَم، واحتفظ بنسخة احتياطية من سجل Git.',
+          },
+          {
+            q: 'من يطوّر Oleafly؟',
+            a: 'يذكر README الاسم Prajwal Murthy والمساهمين، والشيفرة علنية على GitHub. وكان آخر commit في الفرع main في 17 نوفمبر 2026. لم تجد PromptQuorum شركة أو بيانات قانونية أو صفحة شروط، فلا تستطيع القول في أي بلد يقع المشروع.',
           },
         ],
       },
