@@ -28959,5 +28959,131 @@
       "t14": "2026-12-02",
       "t28": "2026-12-16"
     }
+  },
+  {
+    "id": "13c13b91-a779-45a6-a7cf-458d67a10ebe",
+    "slug": "/local-llms/used-gpus-for-local-llms",
+    "date": "2026-11-15T09:05:05.197Z",
+    "fields": [
+      {
+        "field": "body-gpu-prices",
+        "old": "stale RTX 3090/4090/5090 prices",
+        "new": "tracker-sourced prices, derived maths recomputed"
+      }
+    ],
+    "reason": "GPU price/spec consistency with best-gpus-for-local-llms (InsiderLLM tracker 2026-10-15); fact fix only, no GSC pull",
+    "queries": [
+      "gpu prices local llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2236e619-3d0e-4a2f-ad5e-676c83ecafab",
+    "slug": "/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-11-15T09:05:05.232Z",
+    "fields": [
+      {
+        "field": "body-gpu-prices",
+        "old": "stale RTX 3090/4090/5090 prices",
+        "new": "tracker-sourced prices, derived maths recomputed"
+      }
+    ],
+    "reason": "GPU price/spec consistency with best-gpus-for-local-llms (InsiderLLM tracker 2026-10-15); fact fix only, no GSC pull",
+    "queries": [
+      "gpu prices local llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "7715aa4a-627e-4c40-91ed-fb6e1de5229e",
+    "slug": "/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-15T09:05:05.261Z",
+    "fields": [
+      {
+        "field": "body-gpu-prices",
+        "old": "stale RTX 3090/4090/5090 prices",
+        "new": "tracker-sourced prices, derived maths recomputed"
+      }
+    ],
+    "reason": "GPU price/spec consistency with best-gpus-for-local-llms (InsiderLLM tracker 2026-10-15); fact fix only, no GSC pull",
+    "queries": [
+      "gpu prices local llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "c0d10844-134a-4390-bd71-3244f23cd68f",
+    "slug": "/local-llms/gpu-vs-ai-subscription-roi",
+    "date": "2026-11-15T09:05:05.290Z",
+    "fields": [
+      {
+        "field": "body-gpu-prices",
+        "old": "stale RTX 3090/4090/5090 prices",
+        "new": "tracker-sourced prices, derived maths recomputed"
+      }
+    ],
+    "reason": "GPU price/spec consistency with best-gpus-for-local-llms (InsiderLLM tracker 2026-10-15); fact fix only, no GSC pull",
+    "queries": [
+      "gpu prices local llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "f9bb0291-101f-422e-902e-b4739c8b7ee1",
+    "slug": "/local-llms/local-llms-vs-claude-pro",
+    "date": "2026-11-15T09:05:05.319Z",
+    "fields": [
+      {
+        "field": "body-gpu-prices",
+        "old": "stale RTX 3090/4090/5090 prices",
+        "new": "tracker-sourced prices, derived maths recomputed"
+      }
+    ],
+    "reason": "GPU price/spec consistency with best-gpus-for-local-llms (InsiderLLM tracker 2026-10-15); fact fix only, no GSC pull",
+    "queries": [
+      "gpu prices local llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "2f475900-1631-4793-9941-a8c8c80e7502",
+    "slug": "/local-llms/rtx-5090-vs-rtx-4090-local-llm",
+    "date": "2026-11-15T09:05:05.348Z",
+    "fields": [
+      {
+        "field": "body-gpu-prices",
+        "old": "stale RTX 3090/4090/5090 prices",
+        "new": "tracker-sourced prices, derived maths recomputed"
+      }
+    ],
+    "reason": "GPU price/spec consistency with best-gpus-for-local-llms (InsiderLLM tracker 2026-10-15); fact fix only, no GSC pull",
+    "queries": [
+      "gpu prices local llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "b65aa526-1f12-4376-abb8-d3d2856c87d2",
+    "slug": "/power-local-llm/best-gpu-buying-guide-local-llm-2026",
+    "date": "2026-11-15T09:05:05.377Z",
+    "fields": [
+      {
+        "field": "body-gpu-prices",
+        "old": "stale RTX 3090/4090/5090 prices",
+        "new": "tracker-sourced prices, derived maths recomputed"
+      }
+    ],
+    "reason": "GPU price/spec consistency with best-gpus-for-local-llms (InsiderLLM tracker 2026-10-15); fact fix only, no GSC pull",
+    "queries": [
+      "gpu prices local llm"
+    ],
+    "baseline": null,
+    "deployedAt": null
   }
 ]
