@@ -956,6 +956,7 @@ const HUB_THEMES: Array<{
       'return-editor-review',
       'surfsense-review',
       'papersgpt-review',
+      'open-paper-review',
       'openrag-review',
       'marker-review',
       'docling-review',

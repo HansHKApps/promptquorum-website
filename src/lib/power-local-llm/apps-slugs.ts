@@ -340,6 +340,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'inbox-zero':                             'inbox-zero',
   'aqbot':                                  'aqbot',
   'oriveo':                                 'oriveo',
+  'open-paper':                             'open-paper',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
