@@ -12,9 +12,8 @@
 // - engine 'both': bundled sd.cpp plus external Wan2GP / Muapi API.
 // - hardware: no fixed floor; README gives per-engine notes (Z-Image 16 GB RAM recommended, Wan 2.1 1.3B ~8 GB VRAM, Wan2GP needs CUDA/ROCm), so variesByModel.
 // - Install: v2.0.0 assets .dmg (arm64 + x64), .exe, .AppImage, .deb. README says the app is not notarized (macOS) and not code-signed (Windows) -> warnings; tier kept at installer.
-// - HQ country IN: muapi.ai/terms "governed by the laws of India" and "courts of Bangalore, Karnataka"; muapi.ai/about "based in Bangalore, Karnataka, India" (operator Vadoo
-//   Internet Services Private Limited). The official product page is on muapi.ai. A secondary write-up says the maintainer is CTO at a related company; no primary page confirms the link
-//   between the maintainer and Vadoo, so the flag reflects the operator of the official website and hosted service, not a statement about the repository owner. The privacy policy names no country.
+// - HQ flag: none (owner decision 2026-11-18). muapi.ai/terms and /about put the operator (Vadoo Internet Services Private Limited) in Bangalore, India, but no primary page links the repository
+//   owner to that company, so a flag on the tile would imply a country for the maintainer that no source states. The review still quotes the Muapi terms (Indian law) as a fact about the hosted service.
 // - compare: only attributes the README states outright (Video Studio; Workflow Studio node-based builder). Inpainting, extensions, low-VRAM mode and a local API are not stated -> unset.
 // - Muapi terms (prohibit nudity/sexually explicit content on the Muapi service) vs README "no content filters": both are quoted in the review; no claim about which applies is made.
 // Last upstream update: 2026-11-16 (last code commit; a README-only commit followed on 2026-11-18; latest release v2.0.0 on 2026-05-23) -> NOT stale (3-month rule).
@@ -65,8 +64,6 @@ export const app: ToolRecord = {
     versionSourceUrl: 'https://github.com/Anil-matcha/Open-Generative-AI/releases/tag/v2.0.0',
   },
   verdict: 'Best for creators who want one open-source studio over many hosted image and video models, with a one-click desktop installer and optional local engines; limited by dependence on the paid Muapi API for most models, an unsigned installer, a hardware floor that depends on the local engine, and no PromptQuorum testing of output quality, speed or content-filter claims.',
-  hqCountry: 'IN',
-  hqCountrySource: 'https://muapi.ai/terms',
   lastVerifiedDate: '2026-11-18',
   lastUpstreamUpdate: '2026-11-16', // last code commit (GitHub API, 2026-11-18); README-only commit 2026-11-18; latest release v2.0.0 published 2026-05-23
   lastUpstreamUpdateSource: 'https://github.com/Anil-matcha/Open-Generative-AI/commits/main',
