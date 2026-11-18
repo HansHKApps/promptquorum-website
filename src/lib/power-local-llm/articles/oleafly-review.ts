@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/oleafly-review-hero-fr.webp',
     title: 'Avis sur Oleafly : éditeur LaTeX et Typst gratuit et open source avec agents IA',
-    seoTitle: 'Avis sur Oleafly : éditeur LaTeX et Typst gratuit et open source',
+    seoTitle: 'Avis sur Oleafly : éditeur LaTeX et Typst gratuit',
     intro:
       'Oleafly 0.4.12 est un éditeur de bureau gratuit, sous licence AGPL-3.0, pour rédiger des travaux scientifiques en LaTeX, Typst et Markdown. D\'après son README, il compile sur votre propre ordinateur, garde chaque projet dans un dépôt Git, cite depuis Zotero, permet aux coauteurs de travailler ensemble via un serveur que vous hébergez, et peut fonctionner avec des agents IA comme Claude Code et Codex ou avec un modèle Ollama local. Cet avis s\'appuie sur le site officiel, le dépôt GitHub avec ses notes de version et la page d\'Oleafly Server, consultés le 18 novembre 2026. PromptQuorum n\'a pas testé l\'application en pratique.',
     metaDescription:
@@ -1630,7 +1630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Oleafly 解读：支持 AI 智能体的免费开源 LaTeX 与 Typst 编辑器',
     seoTitle: 'Oleafly 解读：免费的 LaTeX 与 Typst 编辑器',
     intro:
-      'Oleafly 0.4.12 是一款免费的桌面编辑器，采用 AGPL-3.0 许可，用于以 LaTeX、Typst 和 Markdown 撰写研究论文。根据其 README，它在你自己的电脑上编译，把每个项目保存在 Git 仓库中，可从 Zotero 引用文献，并让合作者通过你自己托管的服务器共同编辑，还能配合 Claude Code、Codex 等 AI 智能体或本地 Ollama 模型使用。本评测基于官方网站、带发布说明的 GitHub 仓库以及 Oleafly Server 页面，核对日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过这款应用。',
+      'Oleafly 0.4.12 是一款免费的桌面编辑器，采用 AGPL-3.0 许可，用于以 LaTeX、Typst 和 Markdown 撰写研究论文。根据其 README，它在你自己的电脑上编译，把每个项目保存在 Git 仓库中，可从 Zotero 引用文献，并让合作者通过你自己托管的服务器共同编辑，还能配合 Claude Code、Codex 等 AI 智能体或本地 Ollama 模型使用。本解读基于官方网站、带发布说明的 GitHub 仓库以及 Oleafly Server 页面，核对日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过这款应用。',
     metaDescription:
       'Oleafly 是免费的 AGPL-3.0 桌面编辑器，支持 LaTeX、Typst 和 Markdown，提供 Git、Zotero、自托管协作和可选 AI 智能体。已确认的内容。',
     twitterDescription:
@@ -1817,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Oleafly 与替代方案对比',
         itemHeadings: true,
         content: [
-          '**Oleafly 与其他用于科研写作和 AI 辅助研究的桌面工具有重叠；PromptQuorum 没有实际对比过它们。** 下列工具都收录在目录中，描述依据各自的评测。',
+          '**Oleafly 与其他用于科研写作和 AI 辅助研究的桌面工具有重叠；PromptQuorum 没有实际对比过它们。** 下列工具都收录在目录中，描述依据各自的点评。',
         ],
         columns: ['工具', '来源中的记载'],
         rows: [
@@ -1898,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Oleafly 리뷰: AI 에이전트를 지원하는 무료 오픈소스 LaTeX·Typst 편집기',
     seoTitle: 'Oleafly 리뷰: 무료 LaTeX·Typst 편집기',
     intro:
-      'Oleafly 0.4.12는 LaTeX, Typst, Markdown으로 연구 논문을 쓰는 무료 데스크톱 편집기이며 라이선스는 AGPL-3.0입니다. README에 따르면 사용자의 컴퓨터에서 직접 컴파일하고, 모든 프로젝트를 Git 저장소로 관리하며, Zotero에서 인용할 수 있고, 직접 호스팅하는 서버를 통해 공저자와 함께 편집할 수 있습니다. Claude Code, Codex 같은 AI 에이전트나 로컬 Ollama 모델과도 함께 쓸 수 있습니다. 이 리뷰는 공식 웹사이트, 릴리스 노트가 있는 GitHub 저장소, Oleafly Server 페이지를 바탕으로 2026년 11월 18일에 확인했습니다. PromptQuorum은 앱을 직접 테스트하지 않았습니다.',
+      'Oleafly 0.4.12는 LaTeX, Typst, Markdown으로 연구 논문을 쓰는 무료 데스크톱 편집기이며 라이선스는 AGPL-3.0입니다. README에 따르면 사용자의 컴퓨터에서 컴파일하고, 모든 프로젝트를 Git 저장소로 관리하며, Zotero에서 인용할 수 있고, 직접 호스팅하는 서버를 통해 공저자와 함께 편집할 수 있습니다. Claude Code, Codex 같은 AI 에이전트나 로컬 Ollama 모델과도 함께 쓸 수 있습니다. 이 리뷰는 공식 웹사이트, 릴리스 노트가 있는 GitHub 저장소, Oleafly Server 페이지를 바탕으로 2026년 11월 18일에 확인했습니다. PromptQuorum은 앱을 직접 테스트하지 않았습니다.',
     metaDescription:
       'Oleafly는 LaTeX·Typst·Markdown용 무료 AGPL-3.0 편집기로 Git, Zotero, 자체 호스팅 공동 작업, 선택형 AI 에이전트를 지원합니다.',
     twitterDescription:
