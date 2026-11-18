@@ -10,6 +10,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-llms-for-creative-writing",
+        "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
+        "url": "/local-llms/best-local-llms-for-creative-writing",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "qwen-vs-llama-vs-mistral",
+        "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
+        "url": "/local-llms/qwen-vs-llama-vs-mistral",
+        "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
@@ -35,25 +51,9 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "best-local-llms-for-creative-writing",
-        "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
-        "url": "/local-llms/best-local-llms-for-creative-writing",
-        "dateModified": "2026-11-15",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
         "slug": "local-llm-security-privacy-checklist",
         "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
         "url": "/local-llms/local-llm-security-privacy-checklist",
-        "dateModified": "2026-11-15",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-vs-llama-vs-mistral",
-        "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
-        "url": "/local-llms/qwen-vs-llama-vs-mistral",
         "dateModified": "2026-11-15",
         "tier": "about"
       },
@@ -8430,7 +8430,7 @@
         "slug": "stratosort-review",
         "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
         "url": "/power-local-llm/stratosort-review",
-        "dateModified": "2026-11-10",
+        "dateModified": "2026-11-17",
         "tier": "mentioned"
       },
       {
@@ -14824,7 +14824,7 @@
         "slug": "stratosort-review",
         "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
         "url": "/power-local-llm/stratosort-review",
-        "dateModified": "2026-11-10",
+        "dateModified": "2026-11-17",
         "tier": "about"
       }
     ],

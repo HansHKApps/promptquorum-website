@@ -7861,7 +7861,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
     "excerpt": "Qwen3.8-27B wins coding: 61.7 SWE-bench Pro, fits 24 GB. Llama 4 Scout: 10M context, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU on 14 GB. Best per task?",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7870,7 +7870,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral Small 24B: 2026 Benchmark-Vergleich",
     "excerpt": "Qwen3.8-27B gewinnt beim Coding: 61,7 SWE-bench Pro, läuft auf 24 GB. Llama 4 Scout: 10M-Kontext, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU auf 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/de/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7879,7 +7879,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral Small 24B : Comparaison des benchmarks 2026",
     "excerpt": "Qwen3.8-27B gagne au codage : 61,7 SWE-bench Pro, tient dans 24 Go. Llama 4 Scout : contexte 10M, ~55 Go VRAM. Mistral Small 3.1 : 79 % MMLU à 14 Go.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/fr/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7888,7 +7888,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026ベンチマーク比較",
     "excerpt": "Qwen3.8-27BはSWE-bench Pro 61.7で24 GBに収まります。Llama 4 Scoutは10Mコンテキスト、Mistral Small 3.1はMMLU 79%。用途別に比較します。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ja/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7897,7 +7897,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral：2026基准对比",
     "excerpt": "Qwen3.8-27B在SWE-bench Pro得分61.7，24 GB可运行。Llama 4 Scout支持10M上下文，Mistral Small 3.1的MMLU为79%。按任务对比。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/zh/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7906,7 +7906,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparativa de LLM Local 2026",
     "excerpt": "Qwen3.8-27B gana en código: 61,7 SWE-bench Pro, cabe en 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU en 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/es/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7915,7 +7915,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparação de LLM Local 2026",
     "excerpt": "Qwen3.8-27B vence em código: 61,7 SWE-bench Pro, cabe em 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU em 14 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/pt/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7924,7 +7924,7 @@
     "title": "⁨Qwen3.8-27B⁩ مقابل ⁨Llama 4⁩ مقابل ⁨Mistral⁩: مقارنة ⁨LLM⁩ المحلي ⁨2026⁩",
     "excerpt": "⁨Qwen3.8-27B⁩ يتفوق برمجياً: ⁨61.7 SWE-bench Pro⁩ على ⁨24 GB. Llama 4 Scout⁩: سياق ⁨10M. Mistral Small 3.1⁩: ⁨79% MMLU⁩ على ⁨14 GB⁩. أي نموذج يفوز؟",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ar/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -7933,7 +7933,7 @@
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: 로컬 LLM 비교 2026",
     "excerpt": "Qwen3.8-27B 61.7 SWE-bench Pro(24GB), Llama 4 Scout 10M 컨텍스트, Mistral 79% MMLU. 작업별 비교.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ko/local-llms/qwen-vs-llama-vs-mistral",
     "cluster": "local-llms"
   },
@@ -8104,7 +8104,7 @@
     "title": "Best Local LLMs for Creative Writing in 2026: Fiction, Poetry and Long-Form Picks by VRAM",
     "excerpt": "Best local LLMs for creative writing and poetry in 2026: Gemma 4 31B and Qwen3.8-27B on 24 GB, plus picks for 8, 12, 16 and 48 GB with Ollama tags.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8113,7 +8113,7 @@
     "title": "Beste lokale LLMs für kreatives Schreiben 2026: Fiktion, Poesie und Langtexte nach VRAM",
     "excerpt": "Beste lokale LLMs für kreatives Schreiben, Geschichten und Poesie 2026: Gemma 4 31B und Qwen3.8-27B für 24 GB, dazu Empfehlungen für 8, 12, 16 und 48 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/de/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8122,7 +8122,7 @@
     "title": "Meilleurs LLM locaux pour l'écriture créative en 2026 : fiction, poésie et textes longs selon votre VRAM",
     "excerpt": "Meilleurs LLM locaux pour l'écriture créative, histoires et poésie en 2026 : Gemma 4 31B et Qwen3.8-27B pour 24 Go, plus des choix pour 8 à 48 Go.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/fr/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8131,7 +8131,7 @@
     "title": "2026年版 創作・小説向けローカルLLMのおすすめ: フィクション、詩、長編をVRAM別に紹介",
     "excerpt": "2026年の創作・小説・詩向けローカルLLMを紹介。24 GBなら Gemma 4 31B と Qwen3.8-27B、8・12・16・48 GB向けの候補とOllamaタグもまとめました。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ja/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8140,7 +8140,7 @@
     "title": "2026年创意写作本地LLM推荐：小说、诗歌与长篇内容，按显存选择",
     "excerpt": "2026年创意写作、小说与诗歌本地LLM推荐：24 GB显存选Gemma 4 31B或Qwen3.8-27B，另附8、12、16、48 GB档位推荐与Ollama标签。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/zh/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8149,7 +8149,7 @@
     "title": "Mejores LLM locales para escritura creativa en 2026: ficción, poesía y textos largos según tu VRAM",
     "excerpt": "Mejores LLM locales para escritura creativa, relatos y poesía en 2026: Gemma 4 31B y Qwen3.8-27B con 24 GB, más opciones para 8, 12, 16 y 48 GB.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/es/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8158,7 +8158,7 @@
     "title": "Melhores LLMs locais para escrita criativa em 2026: ficção, poesia e textos longos por VRAM",
     "excerpt": "Melhores LLMs locais para escrita criativa, contos e poesia em 2026: Gemma 4 31B e Qwen3.8-27B com 24 GB, mais opções para 8, 12, 16 e 48 GB com tags.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/pt/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8167,7 +8167,7 @@
     "title": "أفضل نماذج LLM المحلية للكتابة الإبداعية في 2026: الخيال والشعر والنصوص الطويلة حسب VRAM",
     "excerpt": "أفضل نماذج LLM المحلية للكتابة الإبداعية والقصص والشعر في 2026: Gemma 4 31B وQwen3.8-27B لذاكرة 24 GB، مع اختيارات لـ 8 و12 و16 و48 GB ووسوم Ollama.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ar/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -8176,7 +8176,7 @@
     "title": "2026년 창작 글쓰기용 로컬 LLM 추천: 소설, 시, 장편을 VRAM별로 정리",
     "excerpt": "2026년 창작 글쓰기, 소설, 시에 맞는 로컬 LLM 추천. 24 GB는 Gemma 4 31B와 Qwen3.8-27B, 8·12·16·48 GB 구간 추천과 Ollama 태그를 정리했습니다.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-17",
     "url": "/ko/local-llms/best-local-llms-for-creative-writing",
     "cluster": "local-llms"
   },
@@ -46082,7 +46082,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Conduit: عميل جوال لـ Open WebUI ونماذجك الخاصة",
-    "excerpt": "مراجعة Conduit: عميل أصلي لـ iPhone وAndroid يتصل بـ Open WebUI ونقاط نهاية متوافقة مع OpenAI وOllama ووكلاء Hermes. GPL-3.0، مدفوع على iOS. لم يُجرَّب.",
+    "excerpt": "مراجعة Conduit: عميل أصلي لـ iPhone وAndroid يتصل بـ Open WebUI ونقاط نهاية متوافقة مع OpenAI وOllama ووكلاء Hermes. GPL-3.0، iOS مدفوع. لم يُجرَّب.",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-17",
     "url": "/ar/power-local-llm/conduit-review",
@@ -46973,7 +46973,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Halo: محطة عمل ذكاء اصطناعي مفتوحة المصدر لسطح المكتب مع Digital Humans",
-    "excerpt": "مراجعة Halo: محطة عمل ذكاء اصطناعي مجانية بترخيص MIT مع دردشة ووكلاء برمجة ومتصفح ذكي وDigital Humans. تعرّف على النماذج والخصوصية والحدود قبل التثبيت.",
+    "excerpt": "مراجعة Halo: محطة عمل ذكاء اصطناعي مجانية بترخيص MIT مع دردشة ووكلاء برمجة ومتصفح ذكي وDigital Humans. النماذج والخصوصية والحدود قبل التثبيت.",
     "publishDate": "2026-11-17",
     "dateModified": "2026-11-17",
     "url": "/ar/power-local-llm/halo-review",
@@ -78176,7 +78176,7 @@
   {
     "lang": "ar",
     "title": "⁦Sprich⁩ على جهاز ⁦Mac⁩ بمعالج ⁦M4 Pro⁩ وذاكرة ⁦24 GB⁩: إملاء محلي يكتب في أي تطبيق",
-    "excerpt": "جلستان في ⁦9⁩ و⁦13⁩ نوفمبر ⁦2026⁩: إعداد متقن من خمس خطوات، وإملاء سريع بالإنجليزية والألمانية بعد أن استخدم المختبِر المفتاح بشكل صحيح، واجتماع سُجّل وقُسّم إلى متحدثين اثنين رغم رداءة صوت الغرفة، وواجهة بالألمانية فقط، ولم تُجرَّب عدة ميزات جانبية.",
+    "excerpt": "جلستان في ⁦9⁩ و⁦13⁩ نوفمبر ⁦2026⁩: إعداد متقن من خمس خطوات، وإملاء سريع بالإنجليزية والألمانية بعد أن استخدم المختبِر المفتاح بشكل صحيح، واجتماع سُجّل ونُسب إلى متحدثين اثنين (لم تُقيَّم الدقة؛ ويصف المختبِر صوت الغرفة بأنه رديء)، وواجهة بالألمانية فقط، ولم تُجرَّب عدة ميزات جانبية.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/ar/power-local-llm/sprich-hands-on-test",
@@ -78185,7 +78185,7 @@
   {
     "lang": "de",
     "title": "Sprich auf einem M4 Pro Mac mit 24 GB: Lokales Diktieren, das in jede App tippt",
-    "excerpt": "Zwei Sitzungen, am 9. und 13. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, ein trotz schlechtem Raumklang aufgenommenes und auf zwei Sprecher aufgeteiltes Meeting, eine nur deutsche Oberfläche und mehrere nicht ausprobierte Nebenfunktionen.",
+    "excerpt": "Zwei Sitzungen, am 9. und 13. November 2026: ein durchdachtes Setup in fünf Schritten, schnelles Diktieren auf Englisch und Deutsch, nachdem der Tester die Taste richtig benutzte, ein aufgenommenes und zwei Sprechern zugeordnetes Meeting (Genauigkeit nicht bewertet; den Raumklang nennt der Tester schlecht), eine nur deutsche Oberfläche und mehrere nicht ausprobierte Nebenfunktionen.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/de/power-local-llm/sprich-hands-on-test",
@@ -78194,7 +78194,7 @@
   {
     "lang": "es",
     "title": "Sprich en un Mac M4 Pro de 24 GB: dictado local que escribe en cualquier app",
-    "excerpt": "Dos sesiones, el 9 y el 13 de noviembre de 2026: una configuración cuidada en cinco pasos, dictado rápido en inglés y alemán una vez que el evaluador usó bien la tecla, una reunión grabada y separada en dos voces pese al mal sonido de la sala, una interfaz solo en alemán y varias funciones secundarias sin probar.",
+    "excerpt": "Dos sesiones, el 9 y el 13 de noviembre de 2026: una configuración cuidada en cinco pasos, dictado rápido en inglés y alemán una vez que el evaluador usó bien la tecla, una reunión grabada y separada en dos voces (precisión no valorada; el evaluador califica de malo el sonido de la sala), una interfaz solo en alemán y varias funciones secundarias sin probar.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/es/power-local-llm/sprich-hands-on-test",
@@ -78203,7 +78203,7 @@
   {
     "lang": "fr",
     "title": "Sprich sur un Mac M4 Pro de 24 GB : une dictée locale qui écrit dans n’importe quelle appli",
-    "excerpt": "Deux sessions, les 9 et 13 novembre 2026 : une configuration soignée en cinq étapes, une dictée rapide en anglais et en allemand une fois la touche bien utilisée, une réunion enregistrée et répartie entre deux intervenants malgré un son de pièce médiocre, une interface uniquement en allemand, et plusieurs fonctions annexes non essayées.",
+    "excerpt": "Deux sessions, les 9 et 13 novembre 2026 : une configuration soignée en cinq étapes, une dictée rapide en anglais et en allemand une fois la touche bien utilisée, une réunion enregistrée et répartie entre deux intervenants (précision non évaluée ; le testeur juge le son de la pièce médiocre), une interface uniquement en allemand, et plusieurs fonctions annexes non essayées.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/fr/power-local-llm/sprich-hands-on-test",
@@ -78212,7 +78212,7 @@
   {
     "lang": "ja",
     "title": "24 GBのM4 Pro MacでのSprich：あらゆるアプリに入力できるローカル音声入力",
-    "excerpt": "2回のセッション（2026年11月9日と13日）：よくできた5ステップのセットアップ、テスターがキーを正しく使ってからは英語とドイツ語で素早い音声入力、室内の音がひどく悪いなか2人の話者に分けて記録された会議、ドイツ語のみのインターフェース、そして試していない副次機能の多さ。",
+    "excerpt": "2回のセッション（2026年11月9日と13日）：よくできた5ステップのセットアップ、テスターがキーを正しく使ってからは英語とドイツ語で素早い音声入力、2人の話者が割り当てられて記録された会議（精度は採点していません。テスターは室内の音を悪いと述べています）、ドイツ語のみのインターフェース、そして試していない副次機能の多さ。",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/ja/power-local-llm/sprich-hands-on-test",
@@ -78221,7 +78221,7 @@
   {
     "lang": "en",
     "title": "Sprich on an M4 Pro Mac with 24 GB: Local Dictation That Types Into Any App",
-    "excerpt": "Two sessions, 9 and 13 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a meeting recorded and split into two speakers despite poor room sound, a German-only interface, and several side features not tried.",
+    "excerpt": "Two sessions, 9 and 13 November 2026: a polished five-step setup, quick dictation in English and German once the tester used the key correctly, a meeting recorded and split into two speakers (accuracy not scored; the tester calls the room sound poor), a German-only interface, and several side features not tried.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/power-local-llm/sprich-hands-on-test",
@@ -78230,7 +78230,7 @@
   {
     "lang": "ko",
     "title": "24 GB M4 Pro Mac에서 Sprich 직접 사용: 모든 앱에 입력되는 로컬 받아쓰기",
-    "excerpt": "2026년 11월 9일과 13일의 두 세션입니다. 다듬어진 5단계 설정, 테스터가 키를 제대로 사용한 뒤의 빠른 영어·독일어 받아쓰기, 방 안의 소리가 좋지 않았는데도 두 화자로 나뉘어 기록된 회의, 독일어 전용 인터페이스가 눈에 띄었고, 부가 기능은 여럿 사용해 보지 않았습니다.",
+    "excerpt": "2026년 11월 9일과 13일의 두 세션입니다. 다듬어진 5단계 설정, 테스터가 키를 제대로 사용한 뒤의 빠른 영어·독일어 받아쓰기, 두 화자가 배정되어 기록된 회의(정확도는 평가하지 않았고, 테스터는 방 안의 소리가 좋지 않다고 말합니다), 독일어 전용 인터페이스가 눈에 띄었고, 부가 기능은 여럿 사용해 보지 않았습니다.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/ko/power-local-llm/sprich-hands-on-test",
@@ -78239,7 +78239,7 @@
   {
     "lang": "pt",
     "title": "Sprich em um Mac M4 Pro com 24 GB: ditado local que digita em qualquer app",
-    "excerpt": "Duas sessões, em 9 e 13 de novembro de 2026: configuração refinada em cinco etapas, ditado rápido em inglês e alemão depois que o testador passou a usar a tecla corretamente, uma reunião gravada e separada em dois falantes apesar do som ruim da sala, interface somente em alemão e vários recursos extras sem ser testados.",
+    "excerpt": "Duas sessões, em 9 e 13 de novembro de 2026: configuração refinada em cinco etapas, ditado rápido em inglês e alemão depois que o testador passou a usar a tecla corretamente, uma reunião gravada e separada com dois falantes atribuídos (precisão não avaliada; o testador considera o som da sala ruim), interface somente em alemão e vários recursos extras sem ser testados.",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/pt/power-local-llm/sprich-hands-on-test",
@@ -78248,7 +78248,7 @@
   {
     "lang": "zh",
     "title": "24 GB 内存 M4 Pro Mac 上的 Sprich：能在任意应用中输入文字的本地听写",
-    "excerpt": "两次试用，2026年11月9日和13日：五步设置做得很精致；测试者按正确方式使用按键后，英语和德语听写很快；尽管房间里的声音很差，一场会议仍被录下并区分出两位说话人；界面只有德语；有几项附加功能没有试用。",
+    "excerpt": "两次试用，2026年11月9日和13日：五步设置做得很精致；测试者按正确方式使用按键后，英语和德语听写很快；一场会议被录下并分配出两位说话人（准确性未评分；测试者称房间里的声音很差）；界面只有德语；有几项附加功能没有试用。",
     "publishDate": "2026-11-10",
     "dateModified": "2026-11-10",
     "url": "/zh/power-local-llm/sprich-hands-on-test",
