@@ -1361,14 +1361,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "askimo-review",
-        "title": "Askimo Review: Desktop AI Chat Client for Local and Cloud Models",
-        "url": "/power-local-llm/askimo-review",
-        "dateModified": "2026-11-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -1380,6 +1372,14 @@
         "slug": "aqbot-review",
         "title": "AQBot Review: Desktop AI Client With Agents and a Local API Gateway",
         "url": "/power-local-llm/aqbot-review",
+        "dateModified": "2026-11-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "askimo-review",
+        "title": "Askimo Review: Desktop AI Chat Client for Local and Cloud Models",
+        "url": "/power-local-llm/askimo-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
