@@ -246,6 +246,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'How often does Rescript update?',
             a: 'GitHub lists version 1.2.3 on 3 October 2026, 1.2.4 on 5 October 2026 and 1.2.5 on 29 October 2026, with commits on the main branch as recently as 5 November 2026. The desktop apps check GitHub Releases for updates.',
           },
+          {
+            q: 'Which platforms does Rescript run on?',
+            a: 'According to the maker, in a browser (Chromium-based recommended) and as desktop apps for macOS (Apple Silicon and Intel), Windows and Linux. The v1.2.5 release lists a DMG, a setup EXE, an AppImage and a DEB package.',
+          },
         ],
       },
       verdict: {
@@ -296,7 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Rescript 1.2.5 ist ein Editor für Browser und Desktop, der Video oder Audio mit Whisper transkribiert, das Material beim Löschen von Wörtern schneidet und eine Zeile mit der Stimme des ursprünglichen Sprechers neu sprechen kann. Laut Website und README laufen Transkription, Bearbeitung und Export auf Ihrem eigenen Gerät, und nichts wird hochgeladen. Die Lizenz ist PolyForm Noncommercial 1.0.0, für die kommerzielle Nutzung ist daher eine kostenpflichtige Lizenz nötig. Diese Rezension beruht auf der offiziellen Website, dem GitHub-Repository mit seinen Releases sowie den Seiten zu Datenschutz, Nutzungsbedingungen und zulässiger Nutzung, geprüft am 18. November 2026. PromptQuorum hat die App nicht praktisch getestet.',
     metaDescription:
-      'Rescript schneidet Video und Audio durch Löschen von Wörtern im Whisper-Transkript, lokal auf Ihrem Rechner. Kostenlos für nicht kommerzielle Nutzung.',
+      'Rescript schneidet Video und Audio durch Löschen von Wörtern im Whisper-Transkript. Kostenlos für nicht kommerzielle Nutzung. Was belegt ist, laut Hersteller auch lokal.',
     twitterDescription:
       'Rescript: quelloffen einsehbarer Video- und Audio-Editor, der beim Löschen von Wörtern aus einem Whisper-Transkript das Material schneidet, mit Sprecherlabels und optionaler Zeilenkorrektur per Stimmklon. Was belegt ist.',
     audience:
@@ -517,6 +521,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Wie oft wird Rescript aktualisiert?',
             a: 'GitHub listet Version 1.2.3 am 3. Oktober 2026, 1.2.4 am 5. Oktober 2026 und 1.2.5 am 29. Oktober 2026, mit Commits auf dem Hauptzweig zuletzt am 5. November 2026. Die Desktop-Apps prüfen GitHub Releases auf Updates.',
           },
+          {
+            q: 'Auf welchen Plattformen läuft Rescript?',
+            a: 'Laut Hersteller im Browser (Chromium-basiert empfohlen) und als Desktop-App für macOS (Apple Silicon und Intel), Windows und Linux. Die Version 1.2.5 listet ein DMG, ein Setup-EXE, ein AppImage und ein DEB-Paket.',
+          },
         ],
       },
       verdict: {
@@ -562,10 +570,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/rescript-review-hero-fr.webp',
-    title: 'Test de Rescript : monter vidéo et audio en modifiant la transcription',
-    seoTitle: 'Test de Rescript : monter une vidéo via sa transcription',
+    title: 'Avis sur Rescript : monter vidéo et audio en modifiant la transcription',
+    seoTitle: 'Avis sur Rescript : monter une vidéo via sa transcription',
     intro:
-      'Rescript 1.2.5 est un éditeur pour navigateur et bureau qui transcrit une vidéo ou un audio avec Whisper, coupe les images quand vous supprimez des mots et peut redire une phrase avec la voix du locuteur d’origine. Selon son site et son README, la transcription, le montage et l’export s’exécutent sur votre appareil et rien n’est envoyé en ligne. La licence est PolyForm Noncommercial 1.0.0 : un usage commercial exige donc une licence payante. Ce test s’appuie sur le site officiel, le dépôt GitHub avec ses versions, ainsi que les pages de confidentialité, de conditions d’utilisation et d’usage acceptable, consultés le 18 novembre 2026. PromptQuorum n’a pas testé l’application en conditions réelles.',
+      'Rescript 1.2.5 est un éditeur pour navigateur et bureau qui transcrit une vidéo ou un audio avec Whisper, coupe les images quand vous supprimez des mots et peut redire une phrase avec la voix du locuteur d’origine. Selon son site et son README, la transcription, le montage et l’export s’exécutent sur votre appareil et rien n’est envoyé en ligne. La licence est PolyForm Noncommercial 1.0.0 : un usage commercial exige donc une licence payante. Cet avis s’appuie sur le site officiel, le dépôt GitHub avec ses versions, ainsi que les pages de confidentialité, de conditions d’utilisation et d’usage acceptable, consultés le 18 novembre 2026. PromptQuorum n’a pas testé l’application en conditions réelles.',
     metaDescription:
       'Rescript, éditeur à code source disponible, coupe vidéo et audio en supprimant des mots d’une transcription Whisper. Gratuit hors usage commercial.',
     twitterDescription:
@@ -575,9 +583,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'test de Rescript',
+    primaryTerm: 'avis sur Rescript',
     targetKeywords: [
-      'test Rescript',
+      'avis Rescript',
       'monter une vidéo par le texte',
       'éditeur vidéo basé sur la transcription',
       'éditeur vidéo Whisper local',
@@ -595,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Licence PolyForm Noncommercial 1.0.0 : gratuit hors usage commercial, et un usage commercial exige une licence payante.',
           'Selon le fabricant, la transcription Whisper avec horodatage par mot et étiquettes de locuteurs s’exécute sur votre appareil, dans le navigateur ou en application de bureau pour macOS, Windows et Linux.',
-          'Supprimez des mots pour couper les images ; un clic retire « um », « uh » et les silences de 0.3 seconde ou plus ; export de la vidéo, de l’audio, de la transcription, des sous-titres ou de timelines pour d’autres logiciels.',
+          'Supprimez des mots pour couper les images ; un clic retire « um », « uh » et les silences de 0,3 seconde ou plus ; export de la vidéo, de l’audio, de la transcription, des sous-titres ou de timelines pour d’autres logiciels.',
           'Regenerate redit une phrase avec la voix clonée du locuteur dans six langues ; la politique d’usage acceptable du fabricant exige le consentement du locuteur.',
           'Dépôt créé en juillet 2026 ; la version 1.2.5 est sortie le 29 octobre 2026 et le dernier commit sur la branche principale date du 5 novembre 2026.',
         ],
@@ -700,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Montage au mot près : sélectionnez des mots dans la transcription et supprimez-les ; la lecture saute chaque coupe en temps réel et la coupe suit les mots prononcés.',
-          'Nettoyage : un clic retire « um », « uh » et les mots parasites similaires, un autre retire les silences de 0.3 seconde ou plus dans tout le fichier.',
+          'Nettoyage : un clic retire « um », « uh » et les mots parasites similaires, un autre retire les silences de 0,3 seconde ou plus dans tout le fichier.',
           'Transcription : Whisper Base ou Whisper Small avec horodatage par mot, ou import d’un fichier de sous-titres SRT, VTT ou JSON existant.',
           'Locuteurs : des étiquettes automatiques regroupent la transcription selon qui parle, et les locuteurs peuvent être renommés.',
           'Timeline : forme d’onde, barre de mots avec poignées de minutage déplaçables, découpe, zones coupées, zoom et défilement, pour affiner les coupes au-delà des limites de mots.',
@@ -754,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Rescript face aux alternatives',
         itemHeadings: true,
         content: [
-          '**Rescript recoupe d’autres outils qui transcrivent et coupent des médias parlés ; PromptQuorum ne l’a pas comparé à eux en conditions réelles.** Les outils ci-dessous figurent dans l’annuaire et sont décrits d’après leurs propres tests.',
+          '**Rescript recoupe d’autres outils qui transcrivent et coupent des médias parlés ; PromptQuorum ne l’a pas comparé à eux en conditions réelles.** Les outils ci-dessous figurent dans l’annuaire et sont décrits d’après leurs avis respectifs.',
         ],
         columns: ['Outil', 'Selon les sources'],
         rows: [
@@ -788,6 +796,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'À quelle fréquence Rescript est-il mis à jour ?',
             a: 'GitHub liste la version 1.2.3 le 3 octobre 2026, la 1.2.4 le 5 octobre 2026 et la 1.2.5 le 29 octobre 2026, avec des commits sur la branche principale jusqu’au 5 novembre 2026. Les applications de bureau vérifient les mises à jour sur GitHub Releases.',
           },
+          {
+            q: 'Sur quelles plateformes Rescript fonctionne-t-il ?',
+            a: 'Selon le fabricant, dans un navigateur (basé sur Chromium recommandé) et en application de bureau pour macOS (Apple Silicon et Intel), Windows et Linux. La version 1.2.5 propose un DMG, un EXE d’installation, un AppImage et un paquet DEB.',
+          },
         ],
       },
       verdict: {
@@ -817,9 +829,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Test de FunClip](/fr/power-local-llm/funclip-review) — couper une vidéo via le texte de reconnaissance vocale, dans une interface web locale.',
-          '[Test de Subtitle Edit](/fr/power-local-llm/subtitle-edit-review) — un éditeur de sous-titres avec transcription locale de la famille Whisper.',
-          '[Test d’Aiko](/fr/power-local-llm/aiko-review) — transcription Whisper sur l’appareil pour les appareils Apple.',
+          '[Avis sur FunClip](/fr/power-local-llm/funclip-review) — couper une vidéo via le texte de reconnaissance vocale, dans une interface web locale.',
+          '[Avis sur Subtitle Edit](/fr/power-local-llm/subtitle-edit-review) — un éditeur de sous-titres avec transcription locale de la famille Whisper.',
+          '[Avis sur Aiko](/fr/power-local-llm/aiko-review) — transcription Whisper sur l’appareil pour les appareils Apple.',
           '[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locale.',
         ],
       },
@@ -866,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Licencia PolyForm Noncommercial 1.0.0: gratis para uso no comercial, y el uso comercial requiere una licencia de pago.',
           'Según el fabricante, la transcripción con Whisper, con marcas de tiempo por palabra y etiquetas de hablantes, se ejecuta en tu dispositivo, en el navegador o en apps de escritorio para macOS, Windows y Linux.',
-          'Borra palabras para cortar el material; un clic quita "um", "uh" y silencios de 0.3 segundos o más; exporta vídeo, audio, transcripción, subtítulos o líneas de tiempo para otros editores.',
+          'Borra palabras para cortar el material; un clic quita "um", "uh" y silencios de 0,3 segundos o más; exporta vídeo, audio, transcripción, subtítulos o líneas de tiempo para otros editores.',
           'Regenerate vuelve a decir una frase con la voz clonada del hablante en seis idiomas; la política de uso aceptable del fabricante exige el consentimiento del hablante.',
           'Repositorio creado en julio de 2026; la versión 1.2.5 salió el 29 de octubre de 2026 y el último commit en la rama principal fue el 5 de noviembre de 2026.',
         ],
@@ -971,7 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Edición palabra a palabra: selecciona palabras en la transcripción y bórralas; la reproducción salta cada corte en tiempo real y el corte sigue a las palabras habladas.',
-          'Limpieza: un clic quita "um", "uh" y muletillas parecidas, y otro quita los silencios de 0.3 segundos o más en todo el archivo.',
+          'Limpieza: un clic quita "um", "uh" y muletillas parecidas, y otro quita los silencios de 0,3 segundos o más en todo el archivo.',
           'Transcripción: Whisper Base o Whisper Small con marcas de tiempo por palabra, o importa en su lugar un archivo de subtítulos SRT, VTT o JSON existente.',
           'Hablantes: las etiquetas automáticas agrupan la transcripción según quién habla, y los hablantes se pueden renombrar.',
           'Línea de tiempo: forma de onda, barra de palabras con tiradores de tiempo que se arrastran, dividir, zonas de corte, zoom y desplazamiento, para afinar los cortes más allá de los límites de las palabras.',
@@ -1059,6 +1071,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Con qué frecuencia se actualiza Rescript?',
             a: 'GitHub lista la versión 1.2.3 el 3 de octubre de 2026, la 1.2.4 el 5 de octubre de 2026 y la 1.2.5 el 29 de octubre de 2026, con commits en la rama principal hasta el 5 de noviembre de 2026. Las apps de escritorio comprueban las actualizaciones en GitHub Releases.',
           },
+          {
+            q: '¿En qué plataformas funciona Rescript?',
+            a: 'Según el fabricante, en un navegador (se recomienda uno basado en Chromium) y como aplicación de escritorio para macOS (Apple Silicon e Intel), Windows y Linux. La versión 1.2.5 lista un DMG, un EXE de instalación, un AppImage y un paquete DEB.',
+          },
         ],
       },
       verdict: {
@@ -1137,7 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Licença PolyForm Noncommercial 1.0.0: grátis para uso não comercial, e o uso comercial exige uma licença paga.',
           'Segundo o fabricante, a transcrição com Whisper, com marcas de tempo por palavra e rótulos de falantes, roda no seu dispositivo, no navegador ou em apps desktop para macOS, Windows e Linux.',
-          'Apague palavras para cortar o material; um clique remove "um", "uh" e silêncios de 0.3 segundo ou mais; exporte vídeo, áudio, transcrição, legendas ou linhas do tempo para outros editores.',
+          'Apague palavras para cortar o material; um clique remove "um", "uh" e silêncios de 0,3 segundo ou mais; exporte vídeo, áudio, transcrição, legendas ou linhas do tempo para outros editores.',
           'O Regenerate refaz uma fala com a voz clonada do falante em seis idiomas; a política de uso aceitável do fabricante exige o consentimento do falante.',
           'Repositório criado em julho de 2026; a versão 1.2.5 saiu em 29 de outubro de 2026 e o último commit no ramo principal foi em 5 de novembro de 2026.',
         ],
@@ -1242,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Edição palavra por palavra: selecione palavras na transcrição e apague; a reprodução pula cada corte em tempo real e o corte acompanha as palavras faladas.',
-          'Limpeza: um clique remove "um", "uh" e vícios parecidos, e outro remove silêncios de 0.3 segundo ou mais no arquivo inteiro.',
+          'Limpeza: um clique remove "um", "uh" e vícios parecidos, e outro remove silêncios de 0,3 segundo ou mais no arquivo inteiro.',
           'Transcrição: Whisper Base ou Whisper Small com marcas de tempo por palavra, ou importe um arquivo de legendas SRT, VTT ou JSON já existente.',
           'Falantes: rótulos automáticos agrupam a transcrição por quem está falando, e os falantes podem ser renomeados.',
           'Linha do tempo: forma de onda, barra de palavras com alças de tempo arrastáveis, divisão, áreas de corte, zoom e rolagem, para refinar cortes além dos limites das palavras.',
@@ -1329,6 +1345,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Com que frequência o Rescript é atualizado?',
             a: 'O GitHub lista a versão 1.2.3 em 3 de outubro de 2026, a 1.2.4 em 5 de outubro de 2026 e a 1.2.5 em 29 de outubro de 2026, com commits no ramo principal até 5 de novembro de 2026. Os apps desktop verificam atualizações no GitHub Releases.',
+          },
+          {
+            q: 'Em quais plataformas o Rescript funciona?',
+            a: 'Segundo o fabricante, em um navegador (recomenda-se um baseado em Chromium) e como aplicativo de desktop para macOS (Apple Silicon e Intel), Windows e Linux. A versão 1.2.5 lista um DMG, um EXE de instalação, um AppImage e um pacote DEB.',
           },
         ],
       },
@@ -1601,6 +1621,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Rescriptはどのくらいの頻度で更新されますか？',
             a: 'GitHubには、バージョン1.2.3が2026年10月3日、1.2.4が2026年10月5日、1.2.5が2026年10月29日と記載され、メインブランチのコミットは2026年11月5日まであります。デスクトップアプリはGitHub Releasesで更新を確認します。',
           },
+          {
+            q: 'Rescriptはどのプラットフォームで動きますか？',
+            a: 'メーカーによると、ブラウザ（Chromiumベース推奨）と、macOS（Apple SiliconおよびIntel）・Windows・Linux向けのデスクトップアプリで動作します。v1.2.5のリリースにはDMG、セットアップEXE、AppImage、DEBパッケージが掲載されています。',
+          },
         ],
       },
       verdict: {
@@ -1646,10 +1670,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-05-18',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/rescript-review-hero-zh.webp',
-    title: 'Rescript 评测：编辑转写文本即可剪辑视频和音频',
-    seoTitle: 'Rescript 评测：通过转写文本剪辑视频',
+    title: 'Rescript 点评：编辑转写文本即可剪辑视频和音频',
+    seoTitle: 'Rescript 点评：通过转写文本剪辑视频和音频',
     intro:
-      'Rescript 1.2.5 是一款浏览器和桌面编辑器，用 Whisper 转写视频或音频，删除文字即可剪掉对应画面，还能用原说话人的声音重说一句台词。根据其官网和 README，转写、编辑和导出都在你自己的设备上完成，不会上传任何内容。许可证为 PolyForm Noncommercial 1.0.0，商业使用需要付费许可。本评测基于官网、含发布记录的 GitHub 仓库，以及隐私、条款和可接受使用页面，核查日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过该应用。',
+      'Rescript 1.2.5 是一款浏览器和桌面编辑器，用 Whisper 转写视频或音频，删除文字即可剪掉对应画面，还能用原说话人的声音重说一句台词。根据其官网和 README，转写、编辑和导出都在你自己的设备上完成，不会上传任何内容。许可证为 PolyForm Noncommercial 1.0.0，商业使用需要付费许可。本点评基于官网、含发布记录的 GitHub 仓库，以及隐私、条款和可接受使用页面，核查日期为 2026 年 11 月 18 日。PromptQuorum 没有实际测试过该应用。',
     metaDescription:
       'Rescript 是一款源码可见的编辑器，在 Whisper 转写文本中删除词语即可剪辑视频和音频，非商业使用免费。以下整理了已确认的信息和未核实的部分。',
     twitterDescription:
@@ -1659,9 +1683,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '阅读约7分钟',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Rescript 评测',
+    primaryTerm: 'Rescript 点评',
     targetKeywords: [
-      'Rescript 评测',
+      'Rescript 点评',
       '通过文字剪辑视频',
       '基于转写文本的视频编辑器',
       '本地 Whisper 视频编辑',
@@ -1765,14 +1789,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Rescript 需要较新的 macOS、Windows 或 Linux 电脑，或基于 Chromium 的浏览器；厂商没有公布内存或 GPU 的最低要求。**',
           '以下清单来自 README 和官网。Web 应用需要 SharedArrayBuffer，转写时在可用时使用 WebGPU，否则回退到 WASM。Regenerate 会为每种语言下载一个语音包：据厂商称，较快的模型约 140 MB，质量更高的模型约 360 MB。PromptQuorum 没有测量内存占用或速度。',
         ],
-        columns: ['项目', 'README 中的数据'],
+        columns: ['项目', '官方标注的数据'],
         rows: [
-          { '项目': '桌面端', 'README 中的数据': 'macOS（Apple Silicon、Intel）、Windows、Linux' },
-          { '项目': '浏览器', 'README 中的数据': '推荐基于 Chromium 的浏览器' },
-          { '项目': '转写', 'README 中的数据': 'Whisper Base 或 Small' },
-          { '项目': '说话人标签', 'README 中的数据': 'pyannote-segmentation-3.0' },
-          { '项目': '语音包', 'README 中的数据': '每种语言约 140 MB 或约 360 MB' },
-          { '项目': '内存和 GPU', 'README 中的数据': '未公布' },
+          { '项目': '桌面端', '官方标注的数据': 'macOS（Apple Silicon、Intel）、Windows、Linux' },
+          { '项目': '浏览器', '官方标注的数据': '推荐基于 Chromium 的浏览器' },
+          { '项目': '转写', '官方标注的数据': 'Whisper Base 或 Small' },
+          { '项目': '说话人标签', '官方标注的数据': 'pyannote-segmentation-3.0' },
+          { '项目': '语音包', '官方标注的数据': '每种语言约 140 MB 或约 360 MB' },
+          { '项目': '内存和 GPU', '官方标注的数据': '未公布' },
         ],
         note: 'Whisper 和说话人模型只从 Hugging Face 下载一次并缓存；据厂商称，此后编辑器无需网络连接即可工作。',
       },
@@ -1838,7 +1862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Rescript 与替代方案对比',
         itemHeadings: true,
         content: [
-          '**Rescript 与其他转写并剪辑口语媒体的工具有部分重叠；PromptQuorum 没有实际对比过它们。** 下列工具已收录在目录中，描述均来自它们各自的评测。',
+          '**Rescript 与其他转写并剪辑口语媒体的工具有部分重叠；PromptQuorum 没有实际对比过它们。** 下列工具已收录在目录中，描述均来自它们各自的点评。',
         ],
         columns: ['工具', '来源中的记载'],
         rows: [
@@ -1872,6 +1896,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Rescript 多久更新一次？',
             a: 'GitHub 显示 1.2.3 版本发布于 2026 年 10 月 3 日，1.2.4 于 2026 年 10 月 5 日，1.2.5 于 2026 年 10 月 29 日，主分支最近一次提交在 2026 年 11 月 5 日。桌面应用会向 GitHub Releases 检查更新。',
           },
+          {
+            q: 'Rescript 可在哪些平台上运行？',
+            a: '据厂商称，可在浏览器中运行（推荐基于 Chromium 的浏览器），也有适用于 macOS（Apple Silicon 和 Intel）、Windows 和 Linux 的桌面应用。v1.2.5 版本列出了 DMG、安装 EXE、AppImage 和 DEB 包。',
+          },
         ],
       },
       verdict: {
@@ -1901,9 +1929,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[FunClip 评测](/zh/power-local-llm/funclip-review) — 在本地 Web 界面中按语音识别文本裁剪视频。',
-          '[Subtitle Edit 评测](/zh/power-local-llm/subtitle-edit-review) — 支持本地 Whisper 系列转写的字幕编辑器。',
-          '[Aiko 评测](/zh/power-local-llm/aiko-review) — 面向苹果设备的设备端 Whisper 转写。',
+          '[FunClip 点评](/zh/power-local-llm/funclip-review) — 在本地 Web 界面中按语音识别文本裁剪视频。',
+          '[Subtitle Edit 点评](/zh/power-local-llm/subtitle-edit-review) — 支持本地 Whisper 系列转写的字幕编辑器。',
+          '[Aiko 点评](/zh/power-local-llm/aiko-review) — 面向苹果设备的设备端 Whisper 转写。',
           '[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。',
         ],
       },
@@ -2142,6 +2170,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Rescript는 얼마나 자주 업데이트됩니까?',
             a: 'GitHub에는 버전 1.2.3이 2026년 10월 3일, 1.2.4가 2026년 10월 5일, 1.2.5가 2026년 10월 29일로 기재되어 있고, 메인 브랜치 커밋은 2026년 11월 5일까지 있습니다. 데스크톱 앱은 GitHub Releases에서 업데이트를 확인합니다.',
+          },
+          {
+            q: 'Rescript는 어떤 플랫폼에서 실행되나요?',
+            a: '제조사에 따르면 브라우저(Chromium 기반 권장)와 macOS(Apple Silicon 및 Intel), Windows, Linux용 데스크톱 앱에서 실행됩니다. v1.2.5 릴리스에는 DMG, 설치용 EXE, AppImage, DEB 패키지가 올라와 있습니다.',
           },
         ],
       },
@@ -2413,6 +2445,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'كم مرة يُحدَّث Rescript؟',
             a: 'يعرض GitHub الإصدار 1.2.3 في 3 أكتوبر 2026 والإصدار 1.2.4 في 5 أكتوبر 2026 والإصدار 1.2.5 في 29 أكتوبر 2026، مع commits على الفرع الرئيسي حتى 5 نوفمبر 2026. وتفحص تطبيقات سطح المكتب التحديثات عبر GitHub Releases.',
+          },
+          {
+            q: 'على أي منصات يعمل Rescript؟',
+            a: 'بحسب الشركة المصنّعة، يعمل في المتصفح (يُنصح بمتصفح مبني على Chromium) وكتطبيق سطح مكتب لنظام macOS (Apple Silicon وIntel) وWindows وLinux. يسرد إصدار v1.2.5 ملف DMG وملف EXE للتثبيت وAppImage وحزمة DEB.',
           },
         ],
       },
