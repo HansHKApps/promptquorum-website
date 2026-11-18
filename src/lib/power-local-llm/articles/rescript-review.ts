@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Rescript ist ein quelloffen einsehbarer, für nicht kommerzielle Nutzung kostenloser Editor, der Video und Audio laut Hersteller mit Whisper auf Ihrem eigenen Gerät transkribiert und das Material beim Löschen von Wörtern aus dem Transkript schneidet.** Er läuft im Browser und als Desktop-App für macOS, Windows und Linux, kann eine Zeile mit der Stimme des Sprechers neu sprechen und exportiert Video, Audio, Untertitel oder Zeitleisten für andere Editoren. Kommerzielle Nutzung erfordert eine kostenpflichtige Lizenz, und PromptQuorum hat die App nicht getestet.',
+      '**Rescript ist ein Editor mit einsehbarem Quellcode (source-available), für nicht kommerzielle Nutzung kostenlos, der Video und Audio laut Hersteller mit Whisper auf Ihrem eigenen Gerät transkribiert und das Material beim Löschen von Wörtern aus dem Transkript schneidet.** Er läuft im Browser und als Desktop-App für macOS, Windows und Linux, kann eine Zeile mit der Stimme des Sprechers neu sprechen und exportiert Video, Audio, Untertitel oder Zeitleisten für andere Editoren. Kommerzielle Nutzung erfordert eine kostenpflichtige Lizenz, und PromptQuorum hat die App nicht getestet.',
     quickAnswerTop: {
       de: {
         question: 'Was ist Rescript, und für wen ist es gedacht?',
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Rescript ist ein quelloffen einsehbarer Editor, der laut Hersteller Video und Audio auf Ihrem Rechner transkribiert und das Material beim Löschen von Wörtern aus dem Transkript schneidet.',
+            text: 'Rescript ist ein Editor mit einsehbarem Quellcode, der laut Hersteller Video und Audio auf Ihrem Rechner transkribiert und das Material beim Löschen von Wörtern aus dem Transkript schneidet.',
           },
           {
             type: 'plain-terms',
@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Überblick',
         content: [
           '**Rescript ist ein transkriptbasierter Editor für Video und Audio, veröffentlicht als Web-App und als Desktop-App für macOS, Windows und Linux unter der Lizenz PolyForm Noncommercial 1.0.0.**',
-          'Er wird offen unter [github.com/wassgha/rescript](https://github.com/wassgha/rescript) entwickelt, wo die Lizenzdatei Wassim Gharbi und Mitwirkende nennt. Das Repository wurde im Juli 2026 angelegt; Version 1.2.5 erschien am 29. Oktober 2026, und der letzte Commit auf dem Hauptzweig stammt vom 5. November 2026. Die Entwicklung ist also aktiv, eine Warnung vor einem veralteten Projekt entfällt. Der Hersteller nennt das Projekt Open Source; da die Lizenz kommerzielle Nutzung ausschließt, beschreibt PromptQuorum es als quelloffen einsehbar. Website und Datenschutzseite sprechen von „we“ und nennen weder Firma noch Anschrift noch Impressum, die Nutzungsbedingungen unterliegen aber dem Recht des Bundesstaats Kalifornien, USA.',
+          'Er wird offen unter [github.com/wassgha/rescript](https://github.com/wassgha/rescript) entwickelt, wo die Lizenzdatei Wassim Gharbi und Mitwirkende nennt. Das Repository wurde im Juli 2026 angelegt; Version 1.2.5 erschien am 29. Oktober 2026, und der letzte Commit auf dem Hauptzweig stammt vom 5. November 2026. Die Entwicklung ist also aktiv, eine Warnung vor einem veralteten Projekt entfällt. Der Hersteller nennt das Projekt Open Source; da die Lizenz kommerzielle Nutzung ausschließt, beschreibt PromptQuorum es als Projekt mit einsehbarem Quellcode (source-available). Website und Datenschutzseite sprechen von „we“ und nennen weder Firma noch Anschrift noch Impressum, die Nutzungsbedingungen unterliegen aber dem Recht des Bundesstaats Kalifornien, USA.',
           'Laut Hersteller ziehen Sie eine Video- oder Audiodatei hinein, Whisper transkribiert sie auf Ihrem Gerät mit Zeitmarken pro Wort und Sprecherlabels, und das Löschen von Wörtern im Transkript schneidet das passende Material. Eine Zeitleiste zeigt Wellenform, Wortleiste und Schnittbereiche, und statt zu transkribieren können Sie eigene SRT-, VTT- oder JSON-Untertitel importieren. Die Funktion Regenerate schreibt eine markierte Zeile um und spricht sie mit der Stimme des Sprechers, die auf Ihrem Rechner aus etwa zehn Sekunden seines bereits in der Datei vorhandenen Tons geklont wird.',
           'PromptQuorum hat die App nicht ausgeführt und weder Transkriptionsgenauigkeit, Schnittqualität, Exporttreue noch die Qualität der neu gesprochenen Stimme geprüft.',
         ],
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Auf welchen Plattformen läuft Rescript?',
-            a: 'Laut Hersteller im Browser (Chromium-basiert empfohlen) und als Desktop-App für macOS (Apple Silicon und Intel), Windows und Linux. Die Version 1.2.5 listet ein DMG, ein Setup-EXE, ein AppImage und ein DEB-Paket.',
+            a: 'Laut Hersteller im Browser (Chromium-basiert empfohlen) und als Desktop-App für macOS (Apple Silicon und Intel), Windows und Linux. Die Version 1.2.5 listet ein DMG, eine Setup-EXE, ein AppImage und ein DEB-Paket.',
           },
         ],
       },
@@ -850,9 +850,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Rescript 1.2.5 es un editor para navegador y escritorio que transcribe vídeo o audio con Whisper, corta el material cuando borras palabras y puede volver a decir una frase con la voz del hablante original. Según su sitio web y su README, la transcripción, la edición y la exportación se ejecutan en tu propio dispositivo y no se sube nada. La licencia es PolyForm Noncommercial 1.0.0, así que el uso comercial requiere una licencia de pago. Esta reseña se basa en el sitio oficial, el repositorio de GitHub con sus versiones y las páginas de privacidad, términos y uso aceptable, consultados el 18 de noviembre de 2026. PromptQuorum no ha probado la aplicación en la práctica.',
     metaDescription:
-      'Rescript es un editor de código disponible que corta vídeo y audio al borrar palabras de una transcripción de Whisper. Gratis para uso no comercial.',
+      'Rescript es un editor con código fuente disponible que corta vídeo y audio borrando palabras de una transcripción de Whisper. Gratis para uso no comercial.',
     twitterDescription:
-      'Rescript: editor de vídeo y audio de código disponible que corta el material al borrar palabras de una transcripción de Whisper. Lo confirmado.',
+      'Rescript: editor de vídeo y audio con el código fuente disponible que corta el material al borrar palabras de una transcripción de Whisper. Lo confirmado.',
     audience:
       'Podcasters, entrevistadores y creadores de vídeo que cortan grabaciones habladas para uso no comercial, personas con grabaciones sensibles que quieren que la edición se quede en su equipo, y editores que quieren un primer montaje a partir del texto',
     readTime: '7 min de lectura',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**Rescript es un editor de código disponible, gratuito para uso no comercial, que transcribe vídeo y audio con Whisper en tu propio dispositivo, según el fabricante, y corta el material cuando borras palabras de la transcripción.** Funciona en el navegador y como app de escritorio para macOS, Windows y Linux, puede volver a decir una frase con la voz del hablante y exporta vídeo, audio, subtítulos o líneas de tiempo para otros editores. El uso comercial requiere una licencia de pago, y PromptQuorum no ha probado la aplicación.',
+      '**Rescript es un editor con el código fuente disponible, gratuito para uso no comercial, que transcribe vídeo y audio con Whisper en tu propio dispositivo, según el fabricante, y corta el material cuando borras palabras de la transcripción.** Funciona en el navegador y como app de escritorio para macOS, Windows y Linux, puede volver a decir una frase con la voz del hablante y exporta vídeo, audio, subtítulos o líneas de tiempo para otros editores. El uso comercial requiere una licencia de pago, y PromptQuorum no ha probado la aplicación.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es Rescript y para quién es?',
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Rescript es un editor de código disponible que, según el fabricante, transcribe vídeo y audio en tu equipo y corta el material cuando borras palabras de la transcripción.',
+            text: 'Rescript es un editor con el código fuente disponible que, según el fabricante, transcribe vídeo y audio en tu equipo y corta el material cuando borras palabras de la transcripción.',
           },
           {
             type: 'plain-terms',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumen',
         content: [
           '**Rescript es un editor basado en la transcripción para vídeo y audio, publicado como aplicación web y como apps de escritorio para macOS, Windows y Linux con la licencia PolyForm Noncommercial 1.0.0.**',
-          'Se desarrolla en abierto en [github.com/wassgha/rescript](https://github.com/wassgha/rescript), donde el archivo de licencia cita a Wassim Gharbi y a los colaboradores. El repositorio se creó en julio de 2026; la versión 1.2.5 apareció el 29 de octubre de 2026 y el último commit en la rama principal fue el 5 de noviembre de 2026, así que el desarrollo está activo y no se aplica ningún aviso de proyecto abandonado. El fabricante llama al proyecto de código abierto; como la licencia prohíbe el uso comercial, PromptQuorum lo describe como de código disponible. El sitio web y la página de privacidad dicen "we" y no nombran empresa, dirección ni aviso legal, pero los términos de uso se rigen por las leyes del Estado de California, Estados Unidos.',
+          'Se desarrolla en abierto en [github.com/wassgha/rescript](https://github.com/wassgha/rescript), donde el archivo de licencia cita a Wassim Gharbi y a los colaboradores. El repositorio se creó en julio de 2026; la versión 1.2.5 apareció el 29 de octubre de 2026 y el último commit en la rama principal fue el 5 de noviembre de 2026, así que el desarrollo está activo y no se aplica ningún aviso de proyecto abandonado. El fabricante llama al proyecto de código abierto; como la licencia prohíbe el uso comercial, PromptQuorum lo describe como un proyecto con el código fuente disponible. El sitio web y la página de privacidad dicen "we" y no nombran empresa, dirección ni aviso legal, pero los términos de uso se rigen por las leyes del Estado de California, Estados Unidos.',
           'Según el fabricante, arrastras un archivo de vídeo o audio, Whisper lo transcribe en tu dispositivo con marcas de tiempo por palabra y etiquetas de hablantes, y al borrar palabras de la transcripción se corta el material correspondiente. Una línea de tiempo muestra la forma de onda, una barra de palabras y las zonas cortadas, y puedes importar tus propios subtítulos SRT, VTT o JSON en lugar de transcribir. La función Regenerate reescribe una frase seleccionada y la dice con la voz de ese hablante, clonada en tu equipo a partir de unos diez segundos de su audio que ya están en el archivo.',
           'PromptQuorum no ha ejecutado la aplicación y no ha comprobado la precisión de la transcripción, la calidad de los cortes, la fidelidad de la exportación ni la calidad del habla regenerada.',
         ],
@@ -1125,9 +1125,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Rescript 1.2.5 é um editor para navegador e desktop que transcreve vídeo ou áudio com o Whisper, corta o material quando você apaga palavras e pode refazer uma fala com a voz do falante original. Segundo o site e o README, a transcrição, a edição e a exportação rodam no seu próprio dispositivo e nada é enviado. A licença é a PolyForm Noncommercial 1.0.0, então o uso comercial exige uma licença paga. Esta análise se baseia no site oficial, no repositório do GitHub com suas versões e nas páginas de privacidade, termos e uso aceitável, consultados em 18 de novembro de 2026. A PromptQuorum não testou o app na prática.',
     metaDescription:
-      'O Rescript é um editor de código disponível que corta vídeo e áudio ao apagar palavras de uma transcrição do Whisper. Grátis para uso não comercial.',
+      'O Rescript é um editor com código-fonte disponível que corta vídeo e áudio ao apagar palavras de uma transcrição do Whisper. Grátis para uso não comercial.',
     twitterDescription:
-      'Rescript: editor de vídeo e áudio de código disponível que corta o material ao apagar palavras de uma transcrição do Whisper. O que está confirmado.',
+      'Rescript: editor de vídeo e áudio com código-fonte disponível que corta o material ao apagar palavras de uma transcrição do Whisper. O que está confirmado.',
     audience:
       'Podcasters, entrevistadores e criadores de vídeo que cortam gravações faladas para uso não comercial, pessoas com gravações sensíveis que querem manter a edição no próprio computador e editores que querem um primeiro corte a partir do texto',
     readTime: '7 min de leitura',
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**O Rescript é um editor de código disponível, gratuito para uso não comercial, que transcreve vídeo e áudio com o Whisper no seu próprio dispositivo, segundo o fabricante, e corta o material quando você apaga palavras da transcrição.** Ele roda no navegador e como app desktop para macOS, Windows e Linux, pode refazer uma fala com a voz do falante e exporta vídeo, áudio, legendas ou linhas do tempo para outros editores. O uso comercial exige uma licença paga, e a PromptQuorum não testou o app.',
+      '**O Rescript é um editor com código-fonte disponível, gratuito para uso não comercial, que transcreve vídeo e áudio com o Whisper no seu próprio dispositivo, segundo o fabricante, e corta o material quando você apaga palavras da transcrição.** Ele roda no navegador e como app desktop para macOS, Windows e Linux, pode refazer uma fala com a voz do falante e exporta vídeo, áudio, legendas ou linhas do tempo para outros editores. O uso comercial exige uma licença paga, e a PromptQuorum não testou o app.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o Rescript e para quem ele serve?',
@@ -1183,7 +1183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'O Rescript é um editor de código disponível que, segundo o fabricante, transcreve vídeo e áudio no seu computador e corta o material quando você apaga palavras da transcrição.',
+            text: 'O Rescript é um editor com código-fonte disponível que, segundo o fabricante, transcreve vídeo e áudio no seu computador e corta o material quando você apaga palavras da transcrição.',
           },
           {
             type: 'plain-terms',
@@ -1209,7 +1209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Visão geral',
         content: [
           '**O Rescript é um editor baseado em transcrição para vídeo e áudio, lançado como app web e como apps desktop para macOS, Windows e Linux sob a licença PolyForm Noncommercial 1.0.0.**',
-          'Ele é desenvolvido abertamente em [github.com/wassgha/rescript](https://github.com/wassgha/rescript), onde o arquivo de licença cita Wassim Gharbi e colaboradores. O repositório foi criado em julho de 2026; a versão 1.2.5 apareceu em 29 de outubro de 2026 e o último commit no ramo principal foi em 5 de novembro de 2026, então o desenvolvimento está ativo e nenhum aviso de projeto abandonado se aplica. O fabricante chama o projeto de código aberto; como a licença proíbe o uso comercial, a PromptQuorum o descreve como de código disponível. O site e a página de privacidade dizem "we" e não nomeiam empresa, endereço nem aviso legal, mas os termos de uso são regidos pelas leis do Estado da Califórnia, nos Estados Unidos.',
+          'Ele é desenvolvido abertamente em [github.com/wassgha/rescript](https://github.com/wassgha/rescript), onde o arquivo de licença cita Wassim Gharbi e colaboradores. O repositório foi criado em julho de 2026; a versão 1.2.5 apareceu em 29 de outubro de 2026 e o último commit no ramo principal foi em 5 de novembro de 2026, então o desenvolvimento está ativo e nenhum aviso de projeto abandonado se aplica. O fabricante chama o projeto de código aberto; como a licença proíbe o uso comercial, a PromptQuorum o descreve como um projeto com código-fonte disponível. O site e a página de privacidade dizem "we" e não nomeiam empresa, endereço nem aviso legal, mas os termos de uso são regidos pelas leis do Estado da Califórnia, nos Estados Unidos.',
           'Segundo o fabricante, você arrasta um arquivo de vídeo ou áudio, o Whisper o transcreve no seu dispositivo com marcas de tempo por palavra e rótulos de falantes, e apagar palavras na transcrição corta o material correspondente. Uma linha do tempo mostra a forma de onda, uma barra de palavras e as áreas cortadas, e você pode importar suas próprias legendas SRT, VTT ou JSON em vez de transcrever. O recurso Regenerate reescreve uma fala selecionada e a diz com a voz desse falante, clonada no seu computador a partir de cerca de dez segundos do áudio dele que já está no arquivo.',
           'A PromptQuorum não executou o app e não verificou a precisão da transcrição, a qualidade dos cortes, a fidelidade da exportação nem a qualidade da fala regenerada.',
         ],
@@ -2221,11 +2221,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/rescript-review-hero-ar.webp',
     title: 'مراجعة Rescript: تحرير الفيديو والصوت بتعديل النص المفرَّغ',
-    seoTitle: 'مراجعة Rescript: تحرير الفيديو عبر نصه المفرَّغ',
+    seoTitle: 'مراجعة Rescript: تحرير الفيديو والصوت عبر نصه المفرَّغ',
     intro:
       'Rescript 1.2.5 محرر للمتصفح وسطح المكتب يفرّغ الفيديو أو الصوت بنموذج Whisper، ويقصّ المقطع عند حذف الكلمات من النص، ويمكنه إعادة نطق جملة بصوت المتحدث الأصلي. وبحسب موقعه الرسمي وملف README، تتم عمليات التفريغ والتحرير والتصدير على جهازك ولا يُرفع أي شيء. الترخيص هو PolyForm Noncommercial 1.0.0، لذا يتطلب الاستخدام التجاري ترخيصًا مدفوعًا. تستند هذه المراجعة إلى الموقع الرسمي ومستودع GitHub مع إصداراته وصفحات الخصوصية والشروط والاستخدام المقبول، وقد روجعت في 18 نوفمبر 2026. لم تختبر PromptQuorum التطبيق عمليًا.',
     metaDescription:
-      'Rescript محرر متاح الشيفرة المصدرية يقصّ الفيديو والصوت بحذف كلمات من نص Whisper المفرَّغ. مجاني للاستخدام غير التجاري. ما تم تأكيده.',
+      'Rescript محرر متاح الشيفرة المصدرية يقصّ الفيديو والصوت بحذف كلمات من نص Whisper المفرَّغ. مجاني للاستخدام غير التجاري وبترخيص PolyForm. ما تم تأكيده.',
     twitterDescription:
       'Rescript: محرر فيديو وصوت متاح الشيفرة المصدرية يقصّ المقطع عند حذف كلمات من نص Whisper المفرَّغ، مع تمييز المتحدثين وتصحيح الجمل بصوت مستنسَخ. ما تم تأكيده.',
     audience:
@@ -2448,7 +2448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'على أي منصات يعمل Rescript؟',
-            a: 'بحسب الشركة المصنّعة، يعمل في المتصفح (يُنصح بمتصفح مبني على Chromium) وكتطبيق سطح مكتب لنظام macOS (Apple Silicon وIntel) وWindows وLinux. يسرد إصدار v1.2.5 ملف DMG وملف EXE للتثبيت وAppImage وحزمة DEB.',
+            a: 'بحسب الشركة المصنِّعة، يعمل في المتصفح (يُنصح بمتصفح مبني على Chromium) وكتطبيق سطح مكتب لنظام macOS (Apple Silicon وIntel) وWindows وLinux. يسرد إصدار v1.2.5 ملف DMG وملف EXE للتثبيت وAppImage وحزمة DEB.',
           },
         ],
       },
