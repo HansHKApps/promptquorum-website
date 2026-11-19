@@ -1,5 +1,5 @@
 {
-  "_readme": "Editable by Hans. Replace image/links and set affiliate:true later; no code change needed. icon = lucide-react icon name. Verify links with: npm run askhans:check",
+  "_readme": "Editable by Hans. Replace image/links and set affiliate:true later; no code change needed. icon = lucide-react icon name. pictureLink.urls is keyed by site language (en/de/fr/ja/zh/es/pt/ar/ko); `default` is the required global fallback for any language with no entry of its own — zh/ar/ko currently fall back to `default` (a generic, country-neutral page) since there is no reliable local storefront for them. Verify links with: npm run askhans:check",
   "categories": [
     {
       "key": "prompt-engineering",
@@ -93,7 +93,15 @@
       "affiliate": false,
       "pictureLink": {
         "id": "pic-mini-pcs",
-        "url": "https://preisvergleich.check24.de/ul/mini-pcs/",
+        "urls": {
+          "default": "https://www.amazon.com/s?k=mini+pc",
+          "en": "https://www.amazon.com/s?k=mini+pc",
+          "de": "https://preisvergleich.check24.de/ul/mini-pcs/",
+          "fr": "https://www.amazon.fr/s?k=mini+pc",
+          "es": "https://www.amazon.es/s?k=mini+pc",
+          "pt": "https://www.amazon.com.br/s?k=mini+pc",
+          "ja": "https://www.amazon.co.jp/s?k=mini+pc"
+        },
         "affiliate": false
       },
       "links": [
@@ -139,7 +147,15 @@
       "affiliate": false,
       "pictureLink": {
         "id": "pic-gpus-vram",
-        "url": "https://preisvergleich.check24.de/ul/grafikkarten/",
+        "urls": {
+          "default": "https://www.amazon.com/s?k=graphics+card",
+          "en": "https://www.amazon.com/s?k=graphics+card",
+          "de": "https://preisvergleich.check24.de/ul/grafikkarten/",
+          "fr": "https://www.amazon.fr/s?k=carte+graphique",
+          "es": "https://www.amazon.es/s?k=tarjeta+grafica",
+          "pt": "https://www.amazon.com.br/s?k=placa+de+video",
+          "ja": "https://www.amazon.co.jp/s?k=graphics+card"
+        },
         "affiliate": false
       },
       "links": [
@@ -185,7 +201,15 @@
       "affiliate": false,
       "pictureLink": {
         "id": "pic-smart-home",
-        "url": "https://preisvergleich.check24.de/ul/smart-home-zentralen/",
+        "urls": {
+          "default": "https://www.amazon.com/s?k=smart+home+hub",
+          "en": "https://www.amazon.com/s?k=smart+home+hub",
+          "de": "https://preisvergleich.check24.de/ul/smart-home-zentralen/",
+          "fr": "https://www.amazon.fr/s?k=hub+domotique",
+          "es": "https://www.amazon.es/s?k=hub+domotico",
+          "pt": "https://www.amazon.com.br/s?k=hub+casa+inteligente",
+          "ja": "https://www.amazon.co.jp/s?k=smart+home+hub"
+        },
         "affiliate": false
       },
       "links": [
@@ -231,7 +255,15 @@
       "affiliate": false,
       "pictureLink": {
         "id": "pic-balcony-solar",
-        "url": "https://preisvergleich.heise.de/?cat=bmsesbk",
+        "urls": {
+          "default": "https://www.amazon.com/s?k=balcony+solar+panel",
+          "en": "https://www.amazon.com/s?k=balcony+solar+panel",
+          "de": "https://preisvergleich.heise.de/?cat=bmsesbk",
+          "fr": "https://www.amazon.fr/s?k=kit+solaire+balcon",
+          "es": "https://www.amazon.es/s?k=panel+solar+balcon",
+          "pt": "https://www.amazon.com.br/s?k=painel+solar+varanda",
+          "ja": "https://www.amazon.co.jp/s?k=balcony+solar+panel"
+        },
         "affiliate": false
       },
       "links": [
