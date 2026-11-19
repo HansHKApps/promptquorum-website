@@ -4,34 +4,36 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-22',
+    next_refresh_due: '2027-05-19',
+    last_full_refresh: '2026-11-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?',
-    seoTitle: 'ElevenLabs vs Piper vs XTTS v2 (2026): Which Is Best?',
+    title: 'Local ElevenLabs Alternatives: Piper vs XTTS v2 (2026)',
+    seoTitle: 'Local ElevenLabs Alternatives: Piper vs XTTS v2 (2026)',
     intro: 'ElevenLabs delivers the easiest path to a polished AI voice. Piper is the lightweight local choice for CPU-only and offline devices. XTTS v2 is the more interesting option when local voice cloning and privacy matter most. If you\'re choosing a TTS system for YouTube, podcasts, voice agents, audiobooks, or commercial content, the decision isn\'t just which voice sounds best — it\'s whether you want a managed cloud service or a local speech stack you operate yourself.',
-    metaDescription: 'ElevenLabs is the fastest path to a polished AI voice; Piper is the free, CPU-friendly local option; XTTS v2 wins for local voice cloning. Full comparison.',
+    metaDescription: 'There is no local ElevenLabs, but Piper (free, CPU-friendly, GPL-3.0) and XTTS v2 (voice cloning, non-commercial licence) come close. Which to pick?',
     publishDate: '2026-08-22',
-    dateModified: '2026-09-03',
+    dateModified: '2026-11-19',
     readTime: '12 min read',
     educationalLevel: 'Intermediate',
     audience: 'Content creators, developers, and teams choosing between cloud TTS and self-hosted speech synthesis.',
     primaryTerm: 'ElevenLabs vs local TTS',
-    targetKeywords: ['ElevenLabs vs Piper', 'local TTS', 'Piper TTS', 'XTTS v2', 'text-to-speech cloud vs local', 'free TTS', 'voice cloning', 'offline speech synthesis'],
-    twitterDescription: 'Should you pay for ElevenLabs or run Piper locally? Compare cloud TTS vs self-hosted speech synthesis.',
-    leadAnswerBlock: '**For most creators and businesses, ElevenLabs is the best overall choice — a managed voice platform with a free 10,000-credit tier and no local setup.** Piper is the best free/local option for CPU-only and offline devices like Raspberry Pi. XTTS v2 is the best choice specifically for local voice cloning, at the cost of a GPU and substantially more setup work.',
+    targetKeywords: ['ElevenLabs vs Piper', 'local TTS', 'Piper TTS', 'XTTS v2', 'text-to-speech cloud vs local', 'free TTS', 'voice cloning', 'offline speech synthesis', 'ElevenLabs local alternative', 'Piper TTS alternative'],
+    twitterDescription: 'There is no local ElevenLabs. Piper (CPU, GPL-3.0) and XTTS v2 (cloning, non-commercial) are the closest free options. Here is how they compare.',
+    leadAnswerBlock: '**For most people ElevenLabs is the easiest choice: a managed cloud service with a free 10,000-credit tier and no local version.** Piper is the free, CPU-friendly local option; XTTS v2 adds local voice cloning but needs a GPU and has had no model update since 2023.',
     quickAnswerTop: {
       en: {
         question: 'Should I use ElevenLabs or local TTS?',
         answer: 'ElevenLabs is a managed cloud platform — fast, polished, and hands-off, with a free tier and pay-as-you-go API pricing. Local TTS (Piper, XTTS v2) gives you offline control but requires setup, hardware, and operations responsibility. Best overall: ElevenLabs. Best for offline/embedded devices: Piper. Best for local voice cloning: XTTS v2.',
         bullets: [
+          'Status check (2026-11-19): ElevenLabs released Eleven v4 (90+ languages) on 2026-09-28 and its plan prices are unchanged. Piper is maintained at OHF-Voice/piper1-gpl (GPL-3.0; latest release v1.8.0, 2026-09-04), while the original rhasspy/piper repository is archived. XTTS v2 has had no model update since December 2023 and Coqui shut down in January 2024; its weights stay under the non-commercial CPML licence, and the community toolkit fork idiap/coqui-ai-TTS is still active (v0.28.0, 2026-10-19). XTTS v2 supports 17 languages.',
           'ElevenLabs: Free tier (10,000 credits/month), Starter $6/month (30k credits), Creator $22/month (121k credits), Pro $99/month (600k credits), Scale $299/month, Business $990/month. Also offers pay-as-you-go API credits with no subscription.',
           'ElevenLabs cut self-serve API pricing by up to 55% in May 2026 and introduced pay-as-you-go for developers who don\'t want a monthly plan.',
           'Piper: free, GPL-3.0-licensed engine (voices licensed separately), CPU-friendly, works offline once installed. Individual voice/model licenses can still differ.',
           'XTTS v2: free engine, supports voice cloning from a short reference clip, needs more setup and typically a GPU.',
           'For most creators: test ElevenLabs\' free tier first. Move to local TTS only if you hit a specific offline, privacy, or scale constraint.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -48,6 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Quick Answer', anchor: 'quick-answer' },
       { label: 'Our Verdict', anchor: 'short-answer' },
+      { label: 'Key Takeaways', anchor: 'tldr' },
       { label: 'Recommended Path for Most', anchor: 'recommended-path' },
       { label: 'At a Glance', anchor: 'at-a-glance' },
       { label: 'The Real Comparison: Service vs. Stack', anchor: 'service-vs-stack' },
@@ -86,6 +89,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     ],
     sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          'ElevenLabs is paid cloud with no local version: free 10,000 credits per month, paid plans from $6/month.',
+          'Piper is free, GPL-3.0-licensed, CPU-friendly and works offline; it is maintained at OHF-Voice/piper1-gpl (v1.8.0).',
+          'XTTS v2 clones a voice locally in 17 languages under a non-commercial licence, needs a GPU and has had no model update since December 2023.',
+          'Start with ElevenLabs\' free tier; choose Piper for offline or CPU-only needs, and XTTS v2 only if you need local cloning and the licence fits.'
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'XTTS v2 has had no model update since December 2023, and Coqui shut down in January 2024. The weights remain under the non-commercial CPML licence, so the project may be unmaintained — check before relying on it. Only the community toolkit fork idiap/coqui-ai-TTS is still updated (v0.28.0, 19 October 2026). Checked 19 November 2026.'
+          }
+        ]
+      },
       intro: {
         id: 'quick-answer',
         content: 'ElevenLabs is a hosted voice platform. Its current plans bundle text-to-speech with other voice and media features; credits are shared across products. Its free tier lists 10,000 credits per month, while paid plans add commercial-license access and higher allowances. Check the live pricing page before relying on any amount because features, credits, and pricing can change.\n\nPiper is an open-source local TTS engine. The actively maintained Piper repository (OHF-Voice/piper1-gpl) is GPL-3.0 licensed; an earlier version of the project was MIT-licensed before that repository was archived, so don\'t assume MIT from older sources. Individual voice datasets/checkpoints carry their own licenses and intended use, which can differ from the engine license and from each other. Treat the engine license and the selected voice/model license as separate questions, and confirm both against the current repository before commercial use.\n\nXTTS v2 and other local cloning-capable stacks can give you greater local control, but often require more setup, heavier hardware, and more careful review of model, voice, and commercial-use terms.\n\nThe right decision is therefore not "which voice is best?" It is: **Do you want a production service that abstracts away the infrastructure, or a local speech system that you operate and control?**\n\nPricing and plan details in this guide are checked against the live pricing page at each update — confirm current figures there before deciding, since providers change plans and credit allowances without notice.'
@@ -362,9 +381,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Dimension: 'Languages',
-            ElevenLabs: 'Many (dozens, platform-dependent — check current docs)',
+            ElevenLabs: '90+ languages for Eleven v4 (per ElevenLabs docs)',
             Piper: 'Many community voice packages across languages',
-            'XTTS v2 or Similar Local Cloning Stack': '16 languages officially documented, including cross-language cloning'
+            'XTTS v2 or Similar Local Cloning Stack': '17 languages officially documented, including cross-language cloning'
           },
           {
             Dimension: 'CPU-only operation',
@@ -420,14 +439,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'Hardware', 'Piper': 'CPU, including Raspberry Pi', 'XTTS v2': 'GPU preferable, substantially heavier' },
           { '': 'Speed', 'Piper': 'Fast', 'XTTS v2': 'Slower, quality- and cloning-focused' },
           { '': 'Voice cloning', 'Piper': 'No', 'XTTS v2': 'Yes, from a short reference clip' },
-          { '': 'Multilingual', 'Piper': 'Many community voice packages', 'XTTS v2': '16 languages, with cross-language cloning' },
+          { '': 'Multilingual', 'Piper': 'Many community voice packages', 'XTTS v2': '17 languages, with cross-language cloning' },
           { '': 'Complexity', 'Piper': 'Low — a lightweight assistant build', 'XTTS v2': 'Higher — more setup and licensing review' },
         ],
         items: [
           '**Choose Piper when:** you need speed, you have CPU-only hardware, you need Raspberry Pi support, you don\'t need cloning, and you want a lightweight voice assistant.',
           '**Choose XTTS v2 when:** you need voice cloning, voice quality and naturalness matter more than speed, you have a GPU, multilingual cloning matters, and you\'re comfortable with a more technical setup.'
         ],
-        note: 'Piper and XTTS v2 are the two most established local options, but they\'re not the only ones. Newer local TTS models targeting faster synthesis on modest hardware, and others pushing closer to XTTS-level naturalness and cloning quality, appear regularly. If you\'re evaluating local TTS from scratch, it\'s worth a quick look at current community leaderboards before committing — but Piper and XTTS v2 remain the safest, most documented starting points for most projects.',
+        note: 'Piper and XTTS v2 are the two most established local options, but they\'re not the only ones. Newer local TTS models targeting faster synthesis on modest hardware, and others pushing closer to XTTS-level naturalness and cloning quality, appear regularly. If you\'re evaluating local TTS from scratch, it\'s worth a quick look at current community leaderboards before committing — but Piper and XTTS v2 remain well-documented starting points for many projects, though XTTS v2 is no longer updated.',
         blockquote: 'For the full licensing breakdown on both engines — including per-voice and per-checkpoint terms — see our [Local TTS & Voice Cloning Licenses guide](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
@@ -624,7 +643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Requirements depend on model version, language, output length, concurrent requests, runtime, and latency target. CPU-based testing may be possible for some workflows, but a GPU or stronger local machine can be preferable for demanding workloads. Use the project\'s current documentation and test with your actual scripts before buying hardware.'
           },
           {
-            q: 'Can I build a fully offline voice assistant with Whisper, an LLM, and Piper?',
+            q: 'Can I build a offline voice assistant with Whisper, an LLM, and Piper?',
             a: 'Yes, in principle. A common architecture is local speech recognition, a local LLM, and local TTS. Each component must be installed locally and optional online integrations disabled if the goal is offline operation.'
           },
           {
@@ -637,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can XTTS v2 clone a voice?',
-            a: 'Yes. XTTS v2\'s documentation highlights voice cloning from a short reference audio clip, including cross-language cloning across its 16 supported languages.'
+            a: 'Yes. XTTS v2\'s documentation highlights voice cloning from a short reference audio clip, including cross-language cloning across its 17 supported languages.'
           },
           {
             q: 'Can XTTS v2 be used commercially?',
@@ -654,6 +673,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Which is cheaper at high volume?',
             a: 'It depends on your actual usage and the value of your time. Cloud metered pricing can grow with volume, while local hardware and setup are a one-time-ish cost plus ongoing operations. Calculate using your real request volume, not a hypothetical one, before switching.'
+          },
+          {
+            q: 'Is there a local version of ElevenLabs?',
+            a: 'No. ElevenLabs is a cloud service: it does not publish downloadable model weights or a local installer for its self-serve plans, so every generation goes through its servers. The closest local options are Piper (free, GPL-3.0, CPU-friendly, works offline) and XTTS v2 (local voice cloning from a short clip, non-commercial CPML licence, GPU recommended). Neither is an ElevenLabs model, and neither offers its curated voice library or managed service.'
+          },
+          {
+            q: 'What is a good Piper alternative?',
+            a: 'It depends on what Piper lacks for you. For voice cloning: XTTS v2 (17 languages, non-commercial licence, GPU recommended). For a small free model with 54 fixed voices in 8 languages under a permissive Apache 2.0 licence: Kokoro-82M, although its official repository has not been updated since 2025-08-06. For a managed service with cloning and 90+ languages: ElevenLabs. Chatterbox is MIT-licensed but has been retired since August 2026.'
           }
         ]
       },
@@ -777,10 +804,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ElevenLabs vs Piper vs XTTS v2: Which TTS Is Best in 2026?',
-      'description': 'ElevenLabs is the fastest path to a polished AI voice; Piper is the free, CPU-friendly local option; XTTS v2 wins for local voice cloning. Full comparison.',
+      'headline': 'Local ElevenLabs Alternatives: Piper vs XTTS v2 (2026)',
+      'description': 'There is no local ElevenLabs, but Piper (free, CPU-friendly, GPL-3.0) and XTTS v2 (voice cloning, non-commercial licence) come close. Which to pick?',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-09-03',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -896,7 +923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'Can I build a fully offline voice assistant with Whisper, an LLM, and Piper?',
+          'name': 'Can I build a offline voice assistant with Whisper, an LLM, and Piper?',
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Yes, in principle. A common architecture is local speech recognition, a local LLM, and local TTS. Each component must be installed locally and optional online integrations disabled if the goal is offline operation.'
@@ -923,7 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Can XTTS v2 clone a voice?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes. XTTS v2\'s documentation highlights voice cloning from a short reference audio clip, including cross-language cloning across its 16 supported languages.'
+            'text': 'Yes. XTTS v2\'s documentation highlights voice cloning from a short reference audio clip, including cross-language cloning across its 17 supported languages.'
           }
         },
         {
@@ -957,43 +984,60 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'It depends on your actual usage and the value of your time. Cloud metered pricing can grow with volume, while local hardware and setup are a one-time-ish cost plus ongoing operations. Calculate using your real request volume, not a hypothetical one, before switching.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is there a local version of ElevenLabs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. ElevenLabs is a cloud service: it does not publish downloadable model weights or a local installer for its self-serve plans, so every generation goes through its servers. The closest local options are Piper (free, GPL-3.0, CPU-friendly, works offline) and XTTS v2 (local voice cloning from a short clip, non-commercial CPML licence, GPU recommended). Neither is an ElevenLabs model, and neither offers its curated voice library or managed service.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is a good Piper alternative?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'It depends on what Piper lacks for you. For voice cloning: XTTS v2 (17 languages, non-commercial licence, GPU recommended). For a small free model with 54 fixed voices in 8 languages under a permissive Apache 2.0 licence: Kokoro-82M, although its official repository has not been updated since 2025-08-06. For a managed service with cloning and 90+ languages: ElevenLabs. Chatterbox is MIT-licensed but has been retired since August 2026.'
+          }
         }
       ]
     },
-    current_models_mentioned: [],
+    current_models_mentioned: ['Piper', 'XTTS v2', 'ElevenLabs Eleven v4'],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
     current_benchmarks_used: ['10,000 monthly credits (ElevenLabs Free)', '$6/month, 30,000 credits (ElevenLabs Starter)', '$22/month, 121,000 credits (ElevenLabs Creator)', '$99/month, 600,000 credits (ElevenLabs Pro)', '$299/month, 1,800,000 credits (ElevenLabs Scale)', '$990/month, 6,000,000 credits (ElevenLabs Business)', 'up to 55% API price cut, May 2026 (ElevenLabs)']
   },
   de: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-22',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'ElevenLabs vs. Piper vs. XTTS v2: Welche TTS ist 2026 am besten?',
-    seoTitle: 'ElevenLabs vs. Piper vs. XTTS v2 (2026): Was ist am besten?',
+    title: 'Lokale ElevenLabs-Alternativen: Piper vs. XTTS v2 (2026)',
+    seoTitle: 'Lokale ElevenLabs-Alternativen: Piper vs. XTTS v2 (2026)',
     intro: 'ElevenLabs bietet den einfachsten Weg zu einer ausgereiften KI-Stimme. Piper ist die leichtgewichtige lokale Wahl für CPU-only- und Offline-Geräte. XTTS v2 ist die interessantere Option, wenn lokales Voice Cloning und Datenschutz im Vordergrund stehen. Wenn Sie ein TTS-System für YouTube, Podcasts, Voice Agents, Hörbücher oder kommerzielle Inhalte wählen, geht es nicht nur darum, welche Stimme am besten klingt — sondern ob Sie einen gemanagten Cloud-Dienst oder einen selbst betriebenen lokalen Sprach-Stack wollen.',
-    metaDescription: 'ElevenLabs: schnellste KI-Stimme. Piper: kostenlose, CPU-freundliche lokale Option. XTTS v2: gewinnt bei lokalem Voice Cloning. Der volle Vergleich.',
+    metaDescription: 'Ein lokales ElevenLabs gibt es nicht, aber Piper (kostenlos, CPU, GPL-3.0) und XTTS v2 (Voice Cloning, nicht-kommerziell) kommen nah heran. Welches passt?',
     publishDate: '2026-08-22',
-    dateModified: '2026-09-03',
+    dateModified: '2026-11-19',
     readTime: '12 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Content-Creator, Entwickler und Teams, die zwischen Cloud-TTS und selbst gehosteter Sprachsynthese wählen.',
     primaryTerm: 'ElevenLabs vs. lokale TTS',
-    targetKeywords: ['ElevenLabs vs Piper', 'lokale TTS', 'Piper TTS', 'XTTS v2', 'Text-to-Speech Cloud vs lokal', 'kostenlose TTS', 'Voice Cloning', 'Offline-Sprachsynthese'],
-    twitterDescription: 'ElevenLabs bezahlen oder Piper lokal betreiben? Vergleich Cloud-TTS vs. selbst gehostete Sprachsynthese.',
-    leadAnswerBlock: '**Für die meisten Creator und Unternehmen ist ElevenLabs die beste Gesamtwahl — eine gemanagte Sprachplattform mit kostenlosem 10.000-Credit-Tarif und ohne lokale Einrichtung.** Piper ist die beste kostenlose/lokale Option für CPU-only- und Offline-Geräte wie Raspberry Pi. XTTS v2 ist die beste Wahl speziell für lokales Voice Cloning, allerdings mit einer GPU und deutlich mehr Einrichtungsaufwand.',
+    targetKeywords: ['ElevenLabs vs Piper', 'lokale TTS', 'Piper TTS', 'XTTS v2', 'Text-to-Speech Cloud vs lokal', 'kostenlose TTS', 'Voice Cloning', 'Offline-Sprachsynthese', 'ElevenLabs lokal Alternative', 'Piper TTS Alternative'],
+    twitterDescription: 'Es gibt kein lokales ElevenLabs. Piper (CPU, GPL-3.0) und XTTS v2 (Cloning, nicht-kommerziell) sind die nächsten kostenlosen Optionen. So schneiden sie ab.',
+    leadAnswerBlock: '**Für die meisten ist ElevenLabs die einfachste Wahl: ein gemanagter Cloud-Dienst mit kostenlosem Tarif (10.000 Credits) und ohne lokale Version.** Piper ist die kostenlose, CPU-freundliche lokale Option; XTTS v2 bietet lokales Voice Cloning, braucht aber eine GPU und erhielt seit 2023 kein Modell-Update.',
     quickAnswerTop: {
       de: {
         question: 'Soll ich ElevenLabs oder lokale TTS verwenden?',
         answer: 'ElevenLabs ist eine gemanagte Cloud-Plattform — schnell, ausgereift und ohne Verwaltungsaufwand, mit Gratistarif und nutzungsbasierter API-Abrechnung. Lokale TTS (Piper, XTTS v2) gibt Ihnen Offline-Kontrolle, erfordert aber Einrichtung, Hardware und Betriebsverantwortung. Beste Gesamtwahl: ElevenLabs. Beste Wahl für Offline-/eingebettete Geräte: Piper. Beste Wahl für lokales Voice Cloning: XTTS v2.',
         bullets: [
+          'Stand der Prüfung (2026-11-19): ElevenLabs hat am 2026-09-28 Eleven v4 (90+ Sprachen) veröffentlicht; die Tarifpreise sind unverändert. Piper wird unter OHF-Voice/piper1-gpl gepflegt (GPL-3.0; aktuelles Release v1.8.0, 2026-09-04), das ursprüngliche Repository rhasspy/piper ist archiviert. XTTS v2 hat seit Dezember 2023 kein Modell-Update erhalten, und Coqui hat im Januar 2024 den Betrieb eingestellt; die Gewichte bleiben unter der nicht-kommerziellen CPML-Lizenz, und der Community-Fork des Toolkits idiap/coqui-ai-TTS ist weiterhin aktiv (v0.28.0, 2026-10-19). XTTS v2 unterstützt 17 Sprachen.',
           'ElevenLabs: Gratistarif (10.000 Credits/Monat), Starter 6 $/Monat (30k Credits), Creator 22 $/Monat (121k Credits), Pro 99 $/Monat (600k Credits), Scale 299 $/Monat, Business 990 $/Monat. Zusätzlich nutzungsbasierte API-Credits ohne Abo.',
           'ElevenLabs senkte die Self-Serve-API-Preise im Mai 2026 um bis zu 55 % und führte nutzungsbasierte Abrechnung für Entwickler ohne Monatsabo ein.',
           'Piper: kostenlose, GPL-3.0-lizenzierte Engine (Stimmen separat lizenziert), CPU-freundlich, funktioniert nach der Installation offline. Einzelne Stimm-/Modelllizenzen können abweichen.',
           'XTTS v2: kostenlose Engine, unterstützt Voice Cloning aus einem kurzen Referenzclip, benötigt mehr Einrichtung und meist eine GPU.',
           'Für die meisten Creator: Testen Sie zuerst den ElevenLabs-Gratistarif. Wechseln Sie nur bei konkreten Offline-, Datenschutz- oder Skalierungsanforderungen zu lokaler TTS.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -1010,6 +1054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Kurzantwort', anchor: 'quick-answer' },
       { label: 'Unser Fazit', anchor: 'short-answer' },
+      { label: 'Zusammenfassung', anchor: 'tldr' },
       { label: 'Empfohlener Weg für die meisten', anchor: 'recommended-path' },
       { label: 'Auf einen Blick', anchor: 'at-a-glance' },
       { label: 'Der echte Vergleich: Service vs. Stack', anchor: 'service-vs-stack' },
@@ -1048,6 +1093,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     ],
     sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          'ElevenLabs ist kostenpflichtige Cloud ohne lokale Version: 10.000 Gratis-Credits pro Monat, bezahlte Tarife ab 6 $/Monat.',
+          'Piper ist kostenlos, GPL-3.0-lizenziert, CPU-freundlich und offline nutzbar; es wird unter OHF-Voice/piper1-gpl gepflegt (v1.8.0).',
+          'XTTS v2 klont Stimmen lokal in 17 Sprachen unter nicht-kommerzieller Lizenz, braucht eine GPU und erhielt seit Dezember 2023 kein Modell-Update.',
+          'Starten Sie mit dem Gratistarif von ElevenLabs; wählen Sie Piper für Offline- oder reine CPU-Anforderungen und XTTS v2 nur, wenn Sie lokales Cloning brauchen und die Lizenz passt.'
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'XTTS v2 hat seit Dezember 2023 kein Modell-Update erhalten, und Coqui hat im Januar 2024 den Betrieb eingestellt. Die Gewichte bleiben unter der nicht-kommerziellen CPML-Lizenz; das Projekt wird möglicherweise nicht mehr gepflegt – prüfen Sie dies, bevor Sie sich darauf verlassen. Nur der Community-Fork des Toolkits idiap/coqui-ai-TTS wird noch aktualisiert (v0.28.0, 19. Oktober 2026). Geprüft am 19. November 2026.'
+          }
+        ]
+      },
       intro: {
         id: 'quick-answer',
         content: 'ElevenLabs ist eine gehostete Sprachplattform. Die aktuellen Pläne bündeln Text-to-Speech mit anderen Sprach- und Medienfunktionen; Credits werden produktübergreifend geteilt. Der Gratistarif listet 10.000 Credits pro Monat, während bezahlte Pläne kommerziellen Lizenzzugang und höhere Kontingente hinzufügen. Prüfen Sie die aktuelle Preisseite, bevor Sie sich auf einen Betrag verlassen, da sich Funktionen, Credits und Preise ändern können.\n\nPiper ist eine Open-Source-TTS-Engine für den lokalen Betrieb. Das aktiv weiterentwickelte Piper-Repository (OHF-Voice/piper1-gpl) ist GPL-3.0-lizenziert; eine frühere Version des Projekts war MIT-lizenziert, bevor dieses Repository archiviert wurde — gehen Sie also nicht ohne Prüfung von MIT aus. Die Lizenzen und der vorgesehene Verwendungszweck einzelner Sprachdatensätze/Checkpoints können von der Engine-Lizenz und voneinander abweichen. Behandeln Sie die Engine-Lizenz und die Lizenz der ausgewählten Stimme/des Modells als getrennte Fragen und prüfen Sie beide anhand des aktuellen Repositorys, bevor Sie kommerziell einsetzen.\n\nXTTS v2 und andere lokale, klonfähige Stacks können Ihnen mehr lokale Kontrolle geben, erfordern aber oft mehr Einrichtung, stärkere Hardware und eine sorgfältigere Prüfung von Modell-, Stimm- und kommerziellen Nutzungsbedingungen.\n\nDie richtige Entscheidung lautet daher nicht "welche Stimme ist am besten?" Sondern: **Wollen Sie einen Produktionsservice, der die Infrastruktur abstrahiert, oder ein lokales Sprachsystem, das Sie selbst betreiben und kontrollieren?**\n\nPreis- und Tarifangaben in diesem Leitfaden werden bei jeder Aktualisierung mit der Live-Preisseite abgeglichen — bestätigen Sie aktuelle Zahlen dort, da Anbieter Pläne und Credit-Kontingente ohne Vorankündigung ändern.'
@@ -1326,9 +1387,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Dimension: 'Sprachen',
-            ElevenLabs: 'Viele (Dutzende, plattformabhängig — aktuelle Doku prüfen)',
+            ElevenLabs: '90+ Sprachen für Eleven v4 (laut ElevenLabs-Dokumentation)',
             Piper: 'Viele Community-Sprachpakete über verschiedene Sprachen',
-            'XTTS v2 or Similar Local Cloning Stack': '16 offiziell dokumentierte Sprachen, inklusive sprachübergreifendem Cloning'
+            'XTTS v2 or Similar Local Cloning Stack': '17 offiziell dokumentierte Sprachen, inklusive sprachübergreifendem Cloning'
           },
           {
             Dimension: 'Reiner CPU-Betrieb',
@@ -1384,14 +1445,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'Hardware', 'Piper': 'CPU, auch Raspberry Pi', 'XTTS v2': 'GPU bevorzugt, deutlich schwerer' },
           { '': 'Geschwindigkeit', 'Piper': 'Schnell', 'XTTS v2': 'Langsamer, qualitäts- und cloning-fokussiert' },
           { '': 'Voice Cloning', 'Piper': 'Nein', 'XTTS v2': 'Ja, aus einem kurzen Referenzclip' },
-          { '': 'Mehrsprachig', 'Piper': 'Viele Community-Sprachpakete', 'XTTS v2': '16 Sprachen, mit sprachübergreifendem Cloning' },
+          { '': 'Mehrsprachig', 'Piper': 'Viele Community-Sprachpakete', 'XTTS v2': '17 Sprachen, mit sprachübergreifendem Cloning' },
           { '': 'Komplexität', 'Piper': 'Niedrig — ein leichtgewichtiger Assistent-Aufbau', 'XTTS v2': 'Höher — mehr Einrichtung und Lizenzprüfung' },
         ],
         items: [
           '**Wählen Sie Piper, wenn:** Sie Geschwindigkeit brauchen, nur CPU-Hardware haben, Raspberry-Pi-Unterstützung brauchen, kein Cloning benötigen und einen leichtgewichtigen Sprachassistenten wollen.',
           '**Wählen Sie XTTS v2, wenn:** Sie Voice Cloning brauchen, Sprachqualität und Natürlichkeit wichtiger sind als Geschwindigkeit, Sie eine GPU haben, mehrsprachiges Cloning wichtig ist und Sie mit einer technischeren Einrichtung vertraut sind.'
         ],
-        note: 'Piper und XTTS v2 sind die zwei etabliertesten lokalen Optionen, aber nicht die einzigen. Neuere lokale TTS-Modelle, die schnellere Synthese auf bescheidener Hardware anstreben, und andere, die näher an XTTS-Niveau bei Natürlichkeit und Cloning-Qualität herankommen, tauchen regelmäßig auf. Wenn Sie lokale TTS von Grund auf evaluieren, lohnt sich ein kurzer Blick auf aktuelle Community-Ranglisten, bevor Sie sich festlegen — aber Piper und XTTS v2 bleiben die sichersten, am besten dokumentierten Startpunkte für die meisten Projekte.',
+        note: 'Piper und XTTS v2 sind die zwei etabliertesten lokalen Optionen, aber nicht die einzigen. Neuere lokale TTS-Modelle, die schnellere Synthese auf bescheidener Hardware anstreben, und andere, die näher an XTTS-Niveau bei Natürlichkeit und Cloning-Qualität herankommen, tauchen regelmäßig auf. Wenn Sie lokale TTS von Grund auf evaluieren, lohnt sich ein kurzer Blick auf aktuelle Community-Ranglisten, bevor Sie sich festlegen — aber Piper und XTTS v2 bleiben gut dokumentierte Startpunkte für viele Projekte, auch wenn XTTS v2 nicht mehr aktualisiert wird.',
         blockquote: 'Für die vollständige Lizenz-Aufschlüsselung beider Engines — inklusive Bedingungen pro Stimme und Checkpoint — siehe unseren [Leitfaden zu lokalen TTS- & Voice-Cloning-Lizenzen](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
@@ -1502,7 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wählen Sie NICHT ElevenLabs, wenn',
         content: 'Eine gemanagte Cloud-Plattform passt nicht, wenn eines davon auf Ihr Projekt zutrifft:',
         items: [
-          'Sie brauchen vollständig Offline-Betrieb.',
+          'Sie brauchen Offline-Betrieb.',
           'Ihre Daten dürfen Ihre eigene Infrastruktur nicht verlassen.',
           'Sie setzen auf Raspberry Pi oder anderer eingebetteter Hardware ein.',
           'Sie brauchen extrem hochvolumige lokale Inferenz, bei der nutzungsbasierte Cloud-Preise unwirtschaftlich werden.',
@@ -1601,7 +1662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann XTTS v2 eine Stimme klonen?',
-            a: 'Ja. Die Dokumentation von XTTS v2 hebt Voice Cloning aus einem kurzen Referenz-Audioclip hervor, inklusive sprachübergreifendem Cloning über die 16 unterstützten Sprachen.'
+            a: 'Ja. Die Dokumentation von XTTS v2 hebt Voice Cloning aus einem kurzen Referenz-Audioclip hervor, inklusive sprachübergreifendem Cloning über die 17 unterstützten Sprachen.'
           },
           {
             q: 'Kann XTTS v2 kommerziell genutzt werden?',
@@ -1618,6 +1679,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Was ist bei hohem Volumen günstiger?',
             a: 'Das hängt von Ihrer tatsächlichen Nutzung und dem Wert Ihrer Zeit ab. Nutzungsbasierte Cloud-Preise können mit dem Volumen wachsen, während lokale Hardware und Einrichtung eher einmalige Kosten plus laufenden Betrieb bedeuten. Kalkulieren Sie mit Ihrem realen Anfragevolumen, nicht einem hypothetischen, bevor Sie wechseln.'
+          },
+          {
+            q: 'Gibt es eine lokale Version von ElevenLabs?',
+            a: 'Nein. ElevenLabs ist ein Cloud-Dienst: Für die Self-Serve-Tarife werden weder herunterladbare Modellgewichte noch ein lokaler Installer angeboten, jede Erzeugung läuft über die Server des Anbieters. Die nächstliegenden lokalen Optionen sind Piper (kostenlos, GPL-3.0, CPU-freundlich, offline nutzbar) und XTTS v2 (lokales Voice Cloning aus einem kurzen Clip, nicht-kommerzielle CPML-Lizenz, GPU empfohlen). Keines von beiden ist ein ElevenLabs-Modell, und keines bietet dessen kuratierte Stimmenbibliothek oder gemanagten Dienst.'
+          },
+          {
+            q: 'Was ist eine gute Alternative zu Piper?',
+            a: 'Das hängt davon ab, was Ihnen bei Piper fehlt. Für Voice Cloning: XTTS v2 (17 Sprachen, nicht-kommerzielle Lizenz, GPU empfohlen). Für ein kleines kostenloses Modell mit 54 festen Stimmen in 8 Sprachen unter der freizügigen Apache-2.0-Lizenz: Kokoro-82M, auch wenn das offizielle Repository seit 2025-08-06 nicht aktualisiert wurde. Für einen gemanagten Dienst mit Cloning und 90+ Sprachen: ElevenLabs. Chatterbox steht unter MIT-Lizenz, ist aber seit August 2026 eingestellt.'
           }
         ]
       },
@@ -1736,10 +1805,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ElevenLabs vs. Piper vs. XTTS v2: Welche TTS ist 2026 am besten?',
-      'description': 'ElevenLabs ist der schnellste Weg zu einer ausgereiften KI-Stimme; Piper die kostenlose lokale Option; XTTS v2 gewinnt bei lokalem Voice Cloning. Der volle Vergleich.',
+      'headline': 'Lokale ElevenLabs-Alternativen: Piper vs. XTTS v2 (2026)',
+      'description': 'Ein lokales ElevenLabs gibt es nicht, aber Piper (kostenlos, CPU, GPL-3.0) und XTTS v2 (Voice Cloning, nicht-kommerziell) kommen nah heran. Welches passt?',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-09-03',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1882,7 +1951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Kann XTTS v2 eine Stimme klonen?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Ja. Die Dokumentation von XTTS v2 hebt Voice Cloning aus einem kurzen Referenz-Audioclip hervor, inklusive sprachübergreifendem Cloning über die 16 unterstützten Sprachen.'
+            'text': 'Ja. Die Dokumentation von XTTS v2 hebt Voice Cloning aus einem kurzen Referenz-Audioclip hervor, inklusive sprachübergreifendem Cloning über die 17 unterstützten Sprachen.'
           }
         },
         {
@@ -1916,43 +1985,60 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'Das hängt von Ihrer tatsächlichen Nutzung und dem Wert Ihrer Zeit ab. Nutzungsbasierte Cloud-Preise können mit dem Volumen wachsen, während lokale Hardware und Einrichtung eher einmalige Kosten plus laufenden Betrieb bedeuten. Kalkulieren Sie mit Ihrem realen Anfragevolumen, nicht einem hypothetischen, bevor Sie wechseln.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Gibt es eine lokale Version von ElevenLabs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nein. ElevenLabs ist ein Cloud-Dienst: Für die Self-Serve-Tarife werden weder herunterladbare Modellgewichte noch ein lokaler Installer angeboten, jede Erzeugung läuft über die Server des Anbieters. Die nächstliegenden lokalen Optionen sind Piper (kostenlos, GPL-3.0, CPU-freundlich, offline nutzbar) und XTTS v2 (lokales Voice Cloning aus einem kurzen Clip, nicht-kommerzielle CPML-Lizenz, GPU empfohlen). Keines von beiden ist ein ElevenLabs-Modell, und keines bietet dessen kuratierte Stimmenbibliothek oder gemanagten Dienst.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Was ist eine gute Alternative zu Piper?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Das hängt davon ab, was Ihnen bei Piper fehlt. Für Voice Cloning: XTTS v2 (17 Sprachen, nicht-kommerzielle Lizenz, GPU empfohlen). Für ein kleines kostenloses Modell mit 54 festen Stimmen in 8 Sprachen unter der freizügigen Apache-2.0-Lizenz: Kokoro-82M, auch wenn das offizielle Repository seit 2025-08-06 nicht aktualisiert wurde. Für einen gemanagten Dienst mit Cloning und 90+ Sprachen: ElevenLabs. Chatterbox steht unter MIT-Lizenz, ist aber seit August 2026 eingestellt.'
+          }
         }
       ]
     },
-    current_models_mentioned: [],
+    current_models_mentioned: ['Piper', 'XTTS v2', 'ElevenLabs Eleven v4'],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
     current_benchmarks_used: ['10.000 monatliche Credits (ElevenLabs Free)', '6 $/Monat, 30.000 Credits (ElevenLabs Starter)', '22 $/Monat, 121.000 Credits (ElevenLabs Creator)', '99 $/Monat, 600.000 Credits (ElevenLabs Pro)', '299 $/Monat, 1.800.000 Credits (ElevenLabs Scale)', '990 $/Monat, 6.000.000 Credits (ElevenLabs Business)', 'API-Preissenkung bis zu 55 %, Mai 2026 (ElevenLabs)']
   },
   fr: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-22',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'ElevenLabs vs Piper vs XTTS v2 : quel TTS choisir en 2026 ?',
-    seoTitle: 'ElevenLabs vs Piper vs XTTS v2 (2026) : lequel choisir ?',
+    title: 'Alternatives locales à ElevenLabs : Piper vs XTTS v2 (2026)',
+    seoTitle: 'Alternative locale à ElevenLabs : Piper vs XTTS v2 (2026)',
     intro: 'ElevenLabs offre le chemin le plus simple vers une voix IA aboutie. Piper est le choix local léger pour les appareils CPU-only et hors ligne. XTTS v2 est l\'option la plus intéressante quand le clonage vocal local et la confidentialité priment. Si vous choisissez un système TTS pour YouTube, un podcast, des agents vocaux, un livre audio ou un contenu commercial, la décision ne se limite pas à la voix qui sonne le mieux — il s\'agit de choisir entre un service cloud géré et un stack vocal local que vous exploitez vous-même.',
-    metaDescription: 'ElevenLabs : le chemin le plus rapide vers une voix IA aboutie. Piper : l\'option locale gratuite. XTTS v2 : le meilleur choix pour le clonage vocal local.',
+    metaDescription: 'Il n\'existe pas d\'ElevenLabs local, mais Piper (gratuit, CPU, GPL-3.0) et XTTS v2 (clonage, licence non commerciale) s\'en approchent. Lequel choisir ?',
     publishDate: '2026-08-22',
-    dateModified: '2026-09-03',
+    dateModified: '2026-11-19',
     readTime: '12 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Créateurs de contenu, développeurs et équipes qui choisissent entre TTS cloud et synthèse vocale auto-hébergée.',
     primaryTerm: 'ElevenLabs vs TTS local',
-    targetKeywords: ['ElevenLabs vs Piper', 'TTS local', 'Piper TTS', 'XTTS v2', 'text-to-speech cloud vs local', 'TTS gratuit', 'clonage vocal', 'synthèse vocale hors ligne'],
-    twitterDescription: 'Payer ElevenLabs ou faire tourner Piper en local ? Comparaison TTS cloud vs synthèse vocale auto-hébergée.',
-    leadAnswerBlock: '**Pour la plupart des créateurs et des entreprises, ElevenLabs est le meilleur choix global — une plateforme vocale gérée avec un plan gratuit de 10 000 crédits et aucune configuration locale.** Piper est la meilleure option gratuite/locale pour les appareils CPU-only et hors ligne comme le Raspberry Pi. XTTS v2 est le meilleur choix spécifiquement pour le clonage vocal local, au prix d\'un GPU et d\'une configuration nettement plus lourde.',
+    targetKeywords: ['ElevenLabs vs Piper', 'TTS local', 'Piper TTS', 'XTTS v2', 'text-to-speech cloud vs local', 'TTS gratuit', 'clonage vocal', 'synthèse vocale hors ligne', 'alternative locale à ElevenLabs', 'alternative à Piper TTS'],
+    twitterDescription: 'Il n\'existe pas d\'ElevenLabs local. Piper (CPU, GPL-3.0) et XTTS v2 (clonage, non commercial) sont les options gratuites les plus proches. Comparaison.',
+    leadAnswerBlock: '**Pour la plupart, ElevenLabs est le plus simple : cloud géré, forfait gratuit de 10 000 crédits, sans version locale.** Piper est l\'option locale gratuite et légère sur CPU ; XTTS v2 ajoute le clonage local mais exige un GPU, sans mise à jour depuis 2023.',
     quickAnswerTop: {
       fr: {
         question: 'Dois-je utiliser ElevenLabs ou un TTS local ?',
         answer: 'ElevenLabs est une plateforme cloud gérée — rapide, aboutie et sans gestion, avec un plan gratuit et une tarification API à l\'usage. Le TTS local (Piper, XTTS v2) vous donne le contrôle hors ligne mais exige configuration, matériel et responsabilité opérationnelle. Meilleur choix global : ElevenLabs. Meilleur pour les appareils hors ligne/embarqués : Piper. Meilleur pour le clonage vocal local : XTTS v2.',
         bullets: [
+          'Vérification (2026-11-19) : ElevenLabs a publié Eleven v4 (90+ langues) le 2026-09-28 ; les prix des forfaits n\'ont pas changé. Piper est maintenu sur OHF-Voice/piper1-gpl (GPL-3.0 ; dernière version v1.8.0, 2026-09-04), tandis que le dépôt d\'origine rhasspy/piper est archivé. XTTS v2 n\'a reçu aucune mise à jour de modèle depuis décembre 2023 et Coqui a cessé son activité en janvier 2024 ; ses poids restent sous la licence non commerciale CPML, et le fork communautaire de la boîte à outils idiap/coqui-ai-TTS reste actif (v0.28.0, 2026-10-19). XTTS v2 prend en charge 17 langues.',
           'ElevenLabs : plan gratuit (10 000 crédits/mois), Starter 6 $/mois (30k crédits), Creator 22 $/mois (121k crédits), Pro 99 $/mois (600k crédits), Scale 299 $/mois, Business 990 $/mois. Propose aussi des crédits API à l\'usage sans abonnement.',
           'ElevenLabs a réduit ses tarifs API en libre-service jusqu\'à 55 % en mai 2026 et a introduit la facturation à l\'usage pour les développeurs qui ne veulent pas d\'abonnement mensuel.',
           'Piper : moteur gratuit sous licence GPL-3.0 (voix sous licences séparées), adapté CPU, fonctionne hors ligne une fois installé. Les licences de voix/modèle individuelles peuvent différer.',
           'XTTS v2 : moteur gratuit, prend en charge le clonage vocal à partir d\'un court extrait de référence, exige plus de configuration et généralement un GPU.',
           'Pour la plupart des créateurs : testez d\'abord le plan gratuit ElevenLabs. Passez au TTS local seulement en cas de contrainte spécifique hors ligne, de confidentialité ou d\'échelle.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -1969,6 +2055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Réponse rapide', anchor: 'quick-answer' },
       { label: 'Notre verdict', anchor: 'short-answer' },
+      { label: 'Points clés', anchor: 'tldr' },
       { label: 'Le parcours recommandé pour la plupart', anchor: 'recommended-path' },
       { label: 'En un coup d\'œil', anchor: 'at-a-glance' },
       { label: 'La vraie comparaison : service vs stack', anchor: 'service-vs-stack' },
@@ -2007,6 +2094,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     ],
     sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          'ElevenLabs est un cloud payant sans version locale : 10 000 crédits gratuits par mois, forfaits payants à partir de 6 $/mois.',
+          'Piper est gratuit, sous licence GPL-3.0, léger sur CPU et utilisable hors ligne ; il est maintenu sur OHF-Voice/piper1-gpl (v1.8.0).',
+          'XTTS v2 clone une voix en local dans 17 langues sous licence non commerciale, exige un GPU et n\'a reçu aucune mise à jour de modèle depuis décembre 2023.',
+          'Commencez par le forfait gratuit d\'ElevenLabs ; choisissez Piper pour un besoin hors ligne ou CPU seul, et XTTS v2 uniquement si vous avez besoin du clonage local et que la licence convient.'
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'XTTS v2 n\'a reçu aucune mise à jour de modèle depuis décembre 2023, et Coqui a cessé son activité en janvier 2024. Les poids restent sous la licence non commerciale CPML ; le projet n\'est peut-être plus maintenu — vérifiez avant de vous y fier. Seul le fork communautaire de la boîte à outils idiap/coqui-ai-TTS est encore mis à jour (v0.28.0, 19 octobre 2026). Vérifié le 19 novembre 2026.'
+          }
+        ]
+      },
       intro: {
         id: 'quick-answer',
         content: 'ElevenLabs est une plateforme vocale hébergée. Ses plans actuels regroupent la synthèse vocale avec d\'autres fonctionnalités vocales et médias ; les crédits sont partagés entre les produits. Son plan gratuit propose 10 000 crédits par mois, tandis que les plans payants ajoutent l\'accès à la licence commerciale et des quotas plus élevés. Vérifiez la page de tarification en direct avant de vous fier à un montant, car fonctionnalités, crédits et prix peuvent changer.\n\nPiper est un moteur TTS local open source. Le dépôt activement maintenu (OHF-Voice/piper1-gpl) est sous licence GPL-3.0 ; une version antérieure du projet était sous licence MIT avant que ce dépôt ne soit archivé — ne présumez donc pas la licence MIT sans vérifier. Les licences et l\'usage prévu des jeux de données/checkpoints vocaux individuels peuvent différer de la licence du moteur et entre eux. Traitez la licence du moteur et celle de la voix/du modèle sélectionné comme des questions distinctes, et vérifiez les deux sur le dépôt actuel avant tout usage commercial.\n\nXTTS v2 et d\'autres stacks locaux capables de clonage peuvent vous offrir plus de contrôle local, mais exigent souvent plus de configuration, un matériel plus lourd et un examen plus attentif des conditions de modèle, de voix et d\'usage commercial.\n\nLa bonne décision n\'est donc pas « quelle voix est la meilleure ? ». C\'est : **voulez-vous un service de production qui masque l\'infrastructure, ou un système vocal local que vous exploitez et contrôlez vous-même ?**\n\nLes informations de prix et de plans de ce guide sont vérifiées par rapport à la page de tarification en direct à chaque mise à jour — confirmez-y les chiffres actuels, car les fournisseurs modifient leurs plans et quotas de crédits sans préavis.'
@@ -2285,9 +2388,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Dimension: 'Langues',
-            ElevenLabs: 'Nombreuses (dizaines, selon la plateforme — vérifiez la doc actuelle)',
+            ElevenLabs: '90+ langues pour Eleven v4 (selon la documentation ElevenLabs)',
             Piper: 'Nombreux paquets vocaux communautaires dans plusieurs langues',
-            'XTTS v2 or Similar Local Cloning Stack': '16 langues officiellement documentées, y compris le clonage inter-langues'
+            'XTTS v2 or Similar Local Cloning Stack': '17 langues officiellement documentées, y compris le clonage inter-langues'
           },
           {
             Dimension: 'Fonctionnement CPU seul',
@@ -2343,14 +2446,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'Matériel', 'Piper': 'CPU, y compris Raspberry Pi', 'XTTS v2': 'GPU préférable, nettement plus lourd' },
           { '': 'Vitesse', 'Piper': 'Rapide', 'XTTS v2': 'Plus lent, axé qualité et clonage' },
           { '': 'Clonage vocal', 'Piper': 'Non', 'XTTS v2': 'Oui, à partir d\'un court clip de référence' },
-          { '': 'Multilingue', 'Piper': 'Nombreux paquets vocaux communautaires', 'XTTS v2': '16 langues, avec clonage inter-langues' },
+          { '': 'Multilingue', 'Piper': 'Nombreux paquets vocaux communautaires', 'XTTS v2': '17 langues, avec clonage inter-langues' },
           { '': 'Complexité', 'Piper': 'Faible — une construction d\'assistant léger', 'XTTS v2': 'Plus élevée — plus de configuration et d\'examen des licences' },
         ],
         items: [
           '**Choisissez Piper quand :** vous avez besoin de vitesse, vous n\'avez que du matériel CPU, vous avez besoin du support Raspberry Pi, vous n\'avez pas besoin de clonage, et vous voulez un assistant vocal léger.',
           '**Choisissez XTTS v2 quand :** vous avez besoin de clonage vocal, la qualité et le naturel de la voix comptent plus que la vitesse, vous avez un GPU, le clonage multilingue compte, et vous êtes à l\'aise avec une configuration plus technique.'
         ],
-        note: 'Piper et XTTS v2 sont les deux options locales les plus établies, mais pas les seules. De nouveaux modèles TTS locaux visant une synthèse plus rapide sur du matériel modeste, et d\'autres se rapprochant du niveau de naturel et de qualité de clonage de XTTS, apparaissent régulièrement. Si vous évaluez le TTS local à partir de zéro, cela vaut la peine de jeter un œil aux classements communautaires actuels avant de vous engager — mais Piper et XTTS v2 restent les points de départ les plus sûrs et les mieux documentés pour la plupart des projets.',
+        note: 'Piper et XTTS v2 sont les deux options locales les plus établies, mais pas les seules. De nouveaux modèles TTS locaux visant une synthèse plus rapide sur du matériel modeste, et d\'autres se rapprochant du niveau de naturel et de qualité de clonage de XTTS, apparaissent régulièrement. Si vous évaluez le TTS local à partir de zéro, cela vaut la peine de jeter un œil aux classements communautaires actuels avant de vous engager — mais Piper et XTTS v2 restent des points de départ bien documentés pour de nombreux projets, même si XTTS v2 n\'est plus mis à jour.',
         blockquote: 'Pour le détail complet des licences des deux moteurs — y compris les conditions par voix et par checkpoint — consultez notre [guide des licences TTS local et clonage vocal](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
@@ -2461,7 +2564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ne choisissez PAS ElevenLabs si',
         content: 'Une plateforme cloud gérée ne convient pas si l\'un de ces éléments décrit votre projet :',
         items: [
-          'Vous avez besoin d\'un fonctionnement entièrement hors ligne.',
+          'Vous avez besoin d\'un fonctionnement hors ligne.',
           'Vos données ne peuvent pas quitter votre propre infrastructure.',
           'Vous déployez sur Raspberry Pi ou autre matériel embarqué.',
           'Vous avez besoin d\'une inférence locale à très haut volume où la tarification cloud à l\'usage devient non rentable.',
@@ -2560,7 +2663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'XTTS v2 peut-il cloner une voix ?',
-            a: 'Oui. La documentation de XTTS v2 met en avant le clonage vocal à partir d\'un court clip audio de référence, y compris le clonage inter-langues sur ses 16 langues prises en charge.'
+            a: 'Oui. La documentation de XTTS v2 met en avant le clonage vocal à partir d\'un court clip audio de référence, y compris le clonage inter-langues sur ses 17 langues prises en charge.'
           },
           {
             q: 'XTTS v2 peut-il être utilisé commercialement ?',
@@ -2577,6 +2680,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Qu\'est-ce qui est moins cher à haut volume ?',
             a: 'Cela dépend de votre usage réel et de la valeur de votre temps. La tarification cloud à l\'usage peut croître avec le volume, tandis que le matériel et la configuration locaux sont un coût plutôt ponctuel plus une exploitation continue. Calculez avec votre volume de requêtes réel, pas hypothétique, avant de changer.'
+          },
+          {
+            q: 'Existe-t-il une version locale d\'ElevenLabs ?',
+            a: 'Non. ElevenLabs est un service cloud : il ne publie ni poids de modèle téléchargeables ni installateur local pour ses forfaits en libre-service, donc chaque génération passe par ses serveurs. Les options locales les plus proches sont Piper (gratuit, GPL-3.0, léger sur CPU, utilisable hors ligne) et XTTS v2 (clonage vocal local à partir d\'un court extrait, licence non commerciale CPML, GPU recommandé). Aucun n\'est un modèle ElevenLabs, et aucun n\'offre sa bibliothèque de voix sélectionnées ni son service géré.'
+          },
+          {
+            q: 'Quelle est une bonne alternative à Piper ?',
+            a: 'Cela dépend de ce qui manque à Piper pour vous. Pour le clonage vocal : XTTS v2 (17 langues, licence non commerciale, GPU recommandé). Pour un petit modèle gratuit avec 54 voix fixes en 8 langues sous licence permissive Apache 2.0 : Kokoro-82M, même si son dépôt officiel n\'a pas été mis à jour depuis le 2025-08-06. Pour un service géré avec clonage et 90+ langues : ElevenLabs. Chatterbox est sous licence MIT mais abandonné depuis août 2026.'
           }
         ]
       },
@@ -2695,10 +2806,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ElevenLabs vs Piper vs XTTS v2 : quel TTS choisir en 2026 ?',
-      'description': 'ElevenLabs : le chemin le plus rapide vers une voix IA aboutie. Piper : l\'option locale gratuite. XTTS v2 : le meilleur choix pour le clonage vocal local.',
+      'headline': 'Alternatives locales à ElevenLabs : Piper vs XTTS v2 (2026)',
+      'description': 'Il n\'existe pas d\'ElevenLabs local, mais Piper (gratuit, CPU, GPL-3.0) et XTTS v2 (clonage, licence non commerciale) s\'en approchent. Lequel choisir ?',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-09-03',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -2841,7 +2952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'XTTS v2 peut-il cloner une voix ?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Oui. La documentation de XTTS v2 met en avant le clonage vocal à partir d\'un court clip audio de référence, y compris le clonage inter-langues sur ses 16 langues prises en charge.'
+            'text': 'Oui. La documentation de XTTS v2 met en avant le clonage vocal à partir d\'un court clip audio de référence, y compris le clonage inter-langues sur ses 17 langues prises en charge.'
           }
         },
         {
@@ -2875,43 +2986,60 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'Cela dépend de votre usage réel et de la valeur de votre temps. La tarification cloud à l\'usage peut croître avec le volume, tandis que le matériel et la configuration locaux sont un coût plutôt ponctuel plus une exploitation continue. Calculez avec votre volume de requêtes réel, pas hypothétique, avant de changer.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Existe-t-il une version locale d\'ElevenLabs ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Non. ElevenLabs est un service cloud : il ne publie ni poids de modèle téléchargeables ni installateur local pour ses forfaits en libre-service, donc chaque génération passe par ses serveurs. Les options locales les plus proches sont Piper (gratuit, GPL-3.0, léger sur CPU, utilisable hors ligne) et XTTS v2 (clonage vocal local à partir d\'un court extrait, licence non commerciale CPML, GPU recommandé). Aucun n\'est un modèle ElevenLabs, et aucun n\'offre sa bibliothèque de voix sélectionnées ni son service géré.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Quelle est une bonne alternative à Piper ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Cela dépend de ce qui manque à Piper pour vous. Pour le clonage vocal : XTTS v2 (17 langues, licence non commerciale, GPU recommandé). Pour un petit modèle gratuit avec 54 voix fixes en 8 langues sous licence permissive Apache 2.0 : Kokoro-82M, même si son dépôt officiel n\'a pas été mis à jour depuis le 2025-08-06. Pour un service géré avec clonage et 90+ langues : ElevenLabs. Chatterbox est sous licence MIT mais abandonné depuis août 2026.'
+          }
         }
       ]
     },
-    current_models_mentioned: [],
+    current_models_mentioned: ['Piper', 'XTTS v2', 'ElevenLabs Eleven v4'],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
     current_benchmarks_used: ['10 000 crédits mensuels (ElevenLabs Free)', '6 $/mois, 30 000 crédits (ElevenLabs Starter)', '22 $/mois, 121 000 crédits (ElevenLabs Creator)', '99 $/mois, 600 000 crédits (ElevenLabs Pro)', '299 $/mois, 1 800 000 crédits (ElevenLabs Scale)', '990 $/mois, 6 000 000 crédits (ElevenLabs Business)', 'baisse tarifaire API jusqu\'à 55 %, mai 2026 (ElevenLabs)']
   },
   zh: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-22',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: '2026年ElevenLabs对比Piper对比XTTS v2：哪个TTS最好？',
-    seoTitle: 'ElevenLabs对比Piper对比XTTS v2(2026)：哪个最好？',
+    title: '本地ElevenLabs替代方案：Piper对比XTTS v2(2026)',
+    seoTitle: 'ElevenLabs本地替代：Piper对比XTTS v2',
     intro: 'ElevenLabs提供通往成品级AI语音最简单的路径。Piper是CPU-only和离线设备的轻量级本地选择。XTTS v2是本地声音克隆和隐私最重要时更值得关注的选项。为YouTube、播客、语音智能体、有声书或商业内容选择TTS系统时，关键不只是哪个语音听起来最好——而是你想要托管云服务，还是自己运维的本地语音技术栈。',
-    metaDescription: 'ElevenLabs：通往成品级AI语音最快的路径。Piper：免费、对CPU友好的本地方案。XTTS v2：本地声音克隆的最佳选择。完整对比。',
+    metaDescription: '目前没有本地版 ElevenLabs，但 Piper(免费、适合 CPU、GPL-3.0)和 XTTS v2(语音克隆、非商业许可)最为接近。看看该选哪个。',
     publishDate: '2026-08-22',
-    dateModified: '2026-09-03',
+    dateModified: '2026-11-19',
     readTime: '12分钟阅读',
     educationalLevel: 'Intermediate',
     audience: '在云端TTS和自托管语音合成之间做选择的内容创作者、开发者与团队。',
     primaryTerm: 'ElevenLabs对比本地TTS',
-    targetKeywords: ['ElevenLabs对比Piper', '本地TTS', 'Piper TTS', 'XTTS v2', '云端与本地文本转语音', '免费TTS', '声音克隆', '离线语音合成'],
-    twitterDescription: '该付费用ElevenLabs还是本地跑Piper？对比云端TTS与自托管语音合成。',
-    leadAnswerBlock: '**对大多数创作者和企业来说，ElevenLabs是综合最佳之选——一个托管语音平台，有1万额度的免费版，无需本地搭建。** Piper是CPU-only和离线设备（如树莓派）的最佳免费/本地方案。XTTS v2是专门针对本地声音克隆的最佳选择，代价是需要GPU和明显更多的搭建工作。',
+    targetKeywords: ['ElevenLabs对比Piper', '本地TTS', 'Piper TTS', 'XTTS v2', '云端与本地文本转语音', '免费TTS', '声音克隆', '离线语音合成', 'ElevenLabs本地替代', 'Piper TTS替代'],
+    twitterDescription: '没有本地版 ElevenLabs。Piper(CPU、GPL-3.0)和 XTTS v2(克隆、非商业)是最接近的免费选择。对比如下。',
+    leadAnswerBlock: '**对大多数人来说，ElevenLabs 是最简单的选择：托管云服务，有 1 万积分的免费额度，没有本地版。** Piper 是免费、对 CPU 友好的本地方案；XTTS v2 支持本地声音克隆，但需要 GPU，且自 2023 年起没有模型更新。',
     quickAnswerTop: {
       zh: {
         question: '我该用ElevenLabs还是本地TTS？',
         answer: 'ElevenLabs是一个托管云平台——快速、成品化、无需操心，有免费版和按使用付费的API定价。本地TTS（Piper、XTTS v2）能给你离线控制权，但需要搭建、硬件投入和运维责任。综合最佳：ElevenLabs。离线/嵌入式设备最佳：Piper。本地声音克隆最佳：XTTS v2。',
         bullets: [
+          '核查结果(2026-11-19)：ElevenLabs 已于 2026-09-28 发布 Eleven v4(90 多种语言)，套餐价格未变。Piper 目前在 OHF-Voice/piper1-gpl 维护(GPL-3.0；最新版本 v1.8.0，2026-09-04)，原 rhasspy/piper 仓库已归档。XTTS v2 自 2023 年 12 月起没有模型更新，Coqui 已于 2024 年 1 月停止运营；其权重仍采用非商业的 CPML 许可，社区维护的工具包分支 idiap/coqui-ai-TTS 仍在活跃更新(v0.28.0，2026-10-19)。XTTS v2 支持 17 种语言。',
           'ElevenLabs：免费版（每月1万额度）、Starter每月6美元（3万额度）、Creator每月22美元（12.1万额度）、Pro每月99美元（60万额度）、Scale每月299美元、Business每月990美元。还提供无需订阅的按使用付费API额度。',
           'ElevenLabs于2026年5月将自助API价格最多下调55%，并为不想按月订阅的开发者推出了按使用付费方案。',
           'Piper：免费引擎，采用GPL-3.0许可（语音单独授权），对CPU友好，安装后可离线运行。个别语音/模型许可可能不同。',
           'XTTS v2：免费引擎，支持从一段简短参考音频克隆声音，需要更多搭建、通常还需要GPU。',
           '对大多数创作者：先测试ElevenLabs免费版。只有遇到具体的离线、隐私或规模限制时才转向本地TTS。'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -2928,6 +3056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '快速答案', anchor: 'quick-answer' },
       { label: '我们的结论', anchor: 'short-answer' },
+      { label: '核心要点', anchor: 'tldr' },
       { label: '大多数人的推荐路径', anchor: 'recommended-path' },
       { label: '一览表', anchor: 'at-a-glance' },
       { label: '真正的对比：服务对比技术栈', anchor: 'service-vs-stack' },
@@ -2966,6 +3095,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     ],
     sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          'ElevenLabs 是没有本地版的付费云服务：每月 1 万免费积分，付费套餐每月 6 美元起。',
+          'Piper 免费(GPL-3.0)、对 CPU 友好、可离线使用，在 OHF-Voice/piper1-gpl 维护(v1.8.0)。',
+          'XTTS v2 采用非商业许可，支持 17 种语言的本地声音克隆，需要 GPU，且自 2023 年 12 月起没有模型更新。',
+          '先用 ElevenLabs 的免费额度；离线或仅有 CPU 的需求选 Piper，只有需要本地克隆且许可合适时才选 XTTS v2。'
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'XTTS v2 自 2023 年 12 月起没有模型更新，Coqui 已于 2024 年 1 月停止运营。其权重仍采用非商业的 CPML 许可，项目可能已无人维护——依赖前请先确认。目前仍在更新的只有社区维护的工具包分支 idiap/coqui-ai-TTS(v0.28.0，2026 年 10 月 19 日)。核查日期：2026 年 11 月 19 日。'
+          }
+        ]
+      },
       intro: {
         id: 'quick-answer',
         content: 'ElevenLabs是一个托管语音平台。它目前的方案将文本转语音与其他语音、媒体功能捆绑在一起；额度在各产品间共享。免费版列出每月1万额度，付费方案则增加商用许可和更高的额度上限。由于功能、额度和价格可能变动，依赖任何数字前请先查阅实时定价页面。\n\nPiper是一个开源本地TTS引擎。目前积极维护的仓库（OHF-Voice/piper1-gpl）采用GPL-3.0许可；项目早期版本曾采用MIT许可，但该仓库已被归档，因此不要想当然地认为是MIT许可。各个语音数据集/模型检查点的许可和适用范围可能与引擎许可不同，彼此之间也可能不同。请将引擎许可和所选语音/模型许可视为两个独立的问题，并在商用前对照当前仓库核实两者。\n\nXTTS v2及其他支持本地克隆的技术栈能给你更强的本地控制权，但通常需要更多搭建工作、更强的硬件，以及对模型、语音和商用条款的更细致审查。\n\n因此，真正的决策不是"哪个语音最好？"而是：**你想要一个屏蔽了基础设施细节的生产级服务，还是一个由你自己运维和控制的本地语音系统？**\n\n本指南中的价格和方案详情会随每次更新与实时定价页面核对——由于服务商会在不另行通知的情况下调整方案和额度，请务必在那里确认最新数字。'
@@ -3178,7 +3323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '本地TTS是用前期搭建和持续运维责任来换取节省下来的持续服务开销。如果你需要控制权，这是一笔划算的交易；但如果你只是想在截稿前拿到一段成品配音，这通常是一笔不划算的交易。'
           }
         ],
-        blockquote: '**想为语音助手或嵌入式产品实现完全离线的控制？** Piper是最适合新手上手的本地TTS引擎。若要声音克隆，Coqui TTS和XTTS v2提供隐私优先的替代方案。[了解Piper →](https://github.com/OHF-Voice/piper1-gpl)'
+        blockquote: '**想为语音助手或嵌入式产品实现离线控制？** Piper是最适合新手上手的本地TTS引擎。若要声音克隆，Coqui TTS和XTTS v2提供隐私优先的替代方案。[了解Piper →](https://github.com/OHF-Voice/piper1-gpl)'
       },
       comparisonTable: {
         id: 'comparison-table',
@@ -3241,9 +3386,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Dimension: '语言覆盖',
-            ElevenLabs: '数十种（取决于平台——请查阅现行文档）',
+            ElevenLabs: 'Eleven v4 支持 90 多种语言(据 ElevenLabs 文档)',
             Piper: '跨多种语言的众多社区语音包',
-            'XTTS v2 or Similar Local Cloning Stack': '官方文档记录16种语言，含跨语言克隆'
+            'XTTS v2 or Similar Local Cloning Stack': '官方文档记录17种语言，含跨语言克隆'
           },
           {
             Dimension: '纯CPU运行',
@@ -3299,14 +3444,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': '硬件', 'Piper': 'CPU，含树莓派', 'XTTS v2': '首选GPU，明显更重' },
           { '': '速度', 'Piper': '快', 'XTTS v2': '较慢，注重质量和克隆效果' },
           { '': '声音克隆', 'Piper': '不支持', 'XTTS v2': '支持，从一段短参考音频即可' },
-          { '': '多语言', 'Piper': '众多社区语音包', 'XTTS v2': '16种语言，支持跨语言克隆' },
+          { '': '多语言', 'Piper': '众多社区语音包', 'XTTS v2': '17种语言，支持跨语言克隆' },
           { '': '复杂度', 'Piper': '低——轻量级助手项目', 'XTTS v2': '较高——需要更多搭建和许可审查' },
         ],
         items: [
           '**选Piper的情况：** 你需要速度快，你的硬件只有CPU，你需要树莓派支持，你不需要克隆功能，你想要一个轻量级语音助手。',
           '**选XTTS v2的情况：** 你需要声音克隆，语音质量和自然度比速度更重要，你有GPU，多语言克隆很关键，你能接受更偏技术的搭建过程。'
         ],
-        note: 'Piper和XTTS v2是最成熟的两个本地方案，但不是唯一选择。目标是在普通硬件上实现更快合成的新型本地TTS模型，以及不断逼近XTTS级自然度和克隆质量的其他方案，都在持续涌现。如果你是从零开始评估本地TTS，投入前值得快速看一眼当前的社区排行榜——但对大多数项目来说，Piper和XTTS v2仍是最安全、文档最完善的起点。',
+        note: 'Piper和XTTS v2是最成熟的两个本地方案，但不是唯一选择。目标是在普通硬件上实现更快合成的新型本地TTS模型，以及不断逼近XTTS级自然度和克隆质量的其他方案，都在持续涌现。如果你是从零开始评估本地TTS，投入前值得快速看一眼当前的社区排行榜——但对许多项目来说，Piper和XTTS v2仍是文档完善的起点，不过XTTS v2已不再更新。',
         blockquote: '关于这两款引擎的完整许可细则——包括逐语音和逐检查点的条款——请参阅我们的[本地TTS与声音克隆许可指南](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。'
       },
       hardwareGuide: {
@@ -3417,7 +3562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '以下情况不要选ElevenLabs',
         content: '如果以下任一描述符合你的项目，托管云平台就不适合：',
         items: [
-          '你需要完全离线运行。',
+          '你需要离线运行。',
           '你的数据不能离开自己的基础设施。',
           '你要部署在树莓派或其他嵌入式硬件上。',
           '你需要极高量的本地推理，而按请求计费的云端定价变得不经济。',
@@ -3516,7 +3661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'XTTS v2能克隆声音吗？',
-            a: '可以。XTTS v2的文档强调可从一段短参考音频克隆声音，包括在其支持的16种语言之间进行跨语言克隆。'
+            a: '可以。XTTS v2的文档强调可从一段短参考音频克隆声音，包括在其支持的17种语言之间进行跨语言克隆。'
           },
           {
             q: 'XTTS v2能用于商业用途吗？',
@@ -3533,6 +3678,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '高用量时哪个更便宜？',
             a: '这取决于你的实际用量和你时间的价值。云端按量计费可能随用量增长，而本地硬件和搭建是接近一次性的成本，加上持续的运维投入。切换前请用你真实的请求量而不是假设值来计算。'
+          },
+          {
+            q: 'ElevenLabs 有本地版吗？',
+            a: '没有。ElevenLabs 是云服务，其自助套餐不提供可下载的模型权重或本地安装程序，每次语音生成都经过其服务器。最接近的本地选择是 Piper(免费、GPL-3.0、对 CPU 友好、可离线使用)和 XTTS v2(基于短音频的本地声音克隆、非商业 CPML 许可、建议使用 GPU)。两者都不是 ElevenLabs 的模型，也都不提供它那样精选的声音库或托管服务。'
+          },
+          {
+            q: 'Piper 有什么好的替代方案？',
+            a: '取决于 Piper 缺少你需要的哪方面。需要声音克隆：XTTS v2(17 种语言、非商业许可、建议使用 GPU)。需要一个小型免费模型，含 8 种语言共 54 个固定语音，并采用宽松的 Apache 2.0 许可：Kokoro-82M，不过其官方仓库自 2025-08-06 起没有更新。需要带克隆和 90 多种语言的托管服务：ElevenLabs。Chatterbox 采用 MIT 许可，但已于 2026 年 8 月停止维护。'
           }
         ]
       },
@@ -3651,10 +3804,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': '2026年ElevenLabs对比Piper对比XTTS v2：哪个TTS最好？',
-      'description': 'ElevenLabs：通往成品级AI语音最快的路径。Piper：免费、对CPU友好的本地方案。XTTS v2：本地声音克隆的最佳选择。完整对比。',
+      'headline': '本地ElevenLabs替代方案：Piper对比XTTS v2(2026)',
+      'description': '目前没有本地版 ElevenLabs，但 Piper(免费、适合 CPU、GPL-3.0)和 XTTS v2(语音克隆、非商业许可)最为接近。看看该选哪个。',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-09-03',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -3797,7 +3950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'XTTS v2能克隆声音吗？',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '可以。XTTS v2的文档强调可从一段短参考音频克隆声音，包括在其支持的16种语言之间进行跨语言克隆。'
+            'text': '可以。XTTS v2的文档强调可从一段短参考音频克隆声音，包括在其支持的17种语言之间进行跨语言克隆。'
           }
         },
         {
@@ -3831,43 +3984,60 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': '这取决于你的实际用量和你时间的价值。云端按量计费可能随用量增长，而本地硬件和搭建是接近一次性的成本，加上持续的运维投入。切换前请用你真实的请求量而不是假设值来计算。'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ElevenLabs 有本地版吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '没有。ElevenLabs 是云服务，其自助套餐不提供可下载的模型权重或本地安装程序，每次语音生成都经过其服务器。最接近的本地选择是 Piper(免费、GPL-3.0、对 CPU 友好、可离线使用)和 XTTS v2(基于短音频的本地声音克隆、非商业 CPML 许可、建议使用 GPU)。两者都不是 ElevenLabs 的模型，也都不提供它那样精选的声音库或托管服务。'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Piper 有什么好的替代方案？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '取决于 Piper 缺少你需要的哪方面。需要声音克隆：XTTS v2(17 种语言、非商业许可、建议使用 GPU)。需要一个小型免费模型，含 8 种语言共 54 个固定语音，并采用宽松的 Apache 2.0 许可：Kokoro-82M，不过其官方仓库自 2025-08-06 起没有更新。需要带克隆和 90 多种语言的托管服务：ElevenLabs。Chatterbox 采用 MIT 许可，但已于 2026 年 8 月停止维护。'
+          }
         }
       ]
     },
-    current_models_mentioned: [],
+    current_models_mentioned: ['Piper', 'XTTS v2', 'ElevenLabs Eleven v4'],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
     current_benchmarks_used: ['每月1万额度（ElevenLabs Free）', '每月6美元，3万额度（ElevenLabs Starter）', '每月22美元，12.1万额度（ElevenLabs Creator）', '每月99美元，60万额度（ElevenLabs Pro）', '每月299美元，180万额度（ElevenLabs Scale）', '每月990美元，600万额度（ElevenLabs Business）', 'API价格最多下调55%，2026年5月（ElevenLabs）']
   },
   ja: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-22',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'ElevenLabs対Piper対XTTS v2:2026年、最良のTTSは?',
-    seoTitle: 'ElevenLabs対Piper対XTTS v2(2026):どれが最良?',
+    title: 'ElevenLabsのローカル代替:PiperとXTTS v2を比較(2026)',
+    seoTitle: 'ElevenLabsのローカル代替:PiperとXTTS v2',
     intro: 'ElevenLabsは、洗練されたAI音声への最も簡単な道を提供します。Piperは、CPU専用・オフライン端末向けの軽量なローカル選択肢です。XTTS v2は、ローカル音声クローンとプライバシーが最優先の場合により注目すべき選択肢です。YouTube、ポッドキャスト、音声エージェント、オーディオブック、商用コンテンツ向けにTTSシステムを選ぶ際、決め手は音質だけではなく、マネージド型クラウドサービスと自分で運用するローカル音声スタックのどちらを望むかです。',
-    metaDescription: 'ElevenLabsは洗練されたAI音声への最速の道。Piperは無料でCPUに優しいローカル選択肢。XTTS v2はローカル音声クローンで勝る。完全な比較をお届けします。',
+    metaDescription: 'ローカル版ElevenLabsはありませんが、Piper(無料・CPU向け・GPL-3.0)とXTTS v2(音声クローン・非商用ライセンス)が近い選択肢です。選び方を解説します。',
     publishDate: '2026-08-22',
-    dateModified: '2026-09-03',
+    dateModified: '2026-11-19',
     readTime: '12分で読了',
     educationalLevel: 'Intermediate',
     audience: 'クラウドTTSとセルフホスト型音声合成のどちらを選ぶか検討しているコンテンツクリエイター、開発者、チーム。',
     primaryTerm: 'ElevenLabs対ローカルTTS',
-    targetKeywords: ['ElevenLabs Piper 比較', 'ローカルTTS', 'Piper TTS', 'XTTS v2', 'テキスト読み上げ クラウド対ローカル', '無料TTS', '音声クローン', 'オフライン音声合成'],
-    twitterDescription: 'ElevenLabsに課金すべきか、それともPiperをローカルで動かすべきか?クラウドTTSとセルフホスト型音声合成を比較します。',
-    leadAnswerBlock: '**ほとんどのクリエイターと企業にとって、ElevenLabsが総合的に最良の選択肢です——無料クレジット10,000のプランがあり、ローカルセットアップが不要なマネージド型音声プラットフォームです。** Piperは、Raspberry PiなどCPU専用・オフライン端末向けの最良の無料/ローカル選択肢です。XTTS v2は、ローカル音声クローンに特化した最良の選択肢ですが、GPUと大幅に多いセットアップ作業が必要です。',
+    targetKeywords: ['ElevenLabs Piper 比較', 'ローカルTTS', 'Piper TTS', 'XTTS v2', 'テキスト読み上げ クラウド対ローカル', '無料TTS', '音声クローン', 'オフライン音声合成', 'ElevenLabs ローカル 代替', 'Piper TTS 代替'],
+    twitterDescription: 'ローカル版ElevenLabsはありません。Piper(CPU、GPL-3.0)とXTTS v2(クローン、非商用)が最も近い無料の選択肢です。比較します。',
+    leadAnswerBlock: '**ほとんどの人にはElevenLabsが最も簡単です。無料枠(1万クレジット)付きのマネージドクラウドで、ローカル版はありません。** Piperは無料でCPUに軽いローカル選択肢、XTTS v2はローカル音声クローンに対応しますがGPUが必要で、2023年以降モデルの更新はありません。',
     quickAnswerTop: {
       ja: {
         question: 'ElevenLabsとローカルTTS、どちらを使うべき?',
         answer: 'ElevenLabsはマネージド型のクラウドプラットフォームで、高速・洗練されていて、手間がかかりません。無料プランと従量課金制のAPI料金があります。ローカルTTS(Piper、XTTS v2)はオフラインでの制御性を提供しますが、セットアップ、ハードウェア、運用責任が必要です。総合的に最良:ElevenLabs。オフライン・組み込み端末に最良:Piper。ローカル音声クローンに最良:XTTS v2。',
         bullets: [
+          '確認結果(2026-11-19):ElevenLabsは2026-09-28にEleven v4(90以上の言語)を公開し、プラン料金に変更はありません。PiperはOHF-Voice/piper1-gpl(GPL-3.0、最新リリースv1.8.0、2026-09-04)で保守されており、元のrhasspy/piperリポジトリはアーカイブ済みです。XTTS v2は2023年12月以降モデルの更新がなく、Coquiは2024年1月に事業を終了しました。重みは非商用のCPMLライセンスのままで、コミュニティによるツールキットのフォークidiap/coqui-ai-TTSは活動を続けています(v0.28.0、2026-10-19)。XTTS v2は17言語に対応しています。',
           'ElevenLabs:無料プラン(月間10,000クレジット)、Starter月額$6(30,000クレジット)、Creator月額$22(121,000クレジット)、Pro月額$99(600,000クレジット)、Scale月額$299、Business月額$990。サブスクリプション不要の従量課金APIクレジットも提供。',
           'ElevenLabsは2026年5月、セルフサービスAPI料金を最大55%引き下げ、月額サブスクリプションを望まない開発者向けに従量課金制を導入しました。',
           'Piper:無料のGPL-3.0ライセンスエンジン(音声は別ライセンス)、CPUフレンドリー、インストール後はオフラインで動作。個々の音声・モデルのライセンスは異なる場合があります。',
           'XTTS v2:無料エンジン、短い参照音声からの音声クローンに対応、より多くのセットアップと通常GPUが必要。',
           'ほとんどのクリエイターには:まずElevenLabsの無料プランを試しましょう。特定のオフライン、プライバシー、規模の制約に直面した場合のみローカルTTSへ移行してください。'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -3884,6 +4054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'クイックアンサー', anchor: 'quick-answer' },
       { label: '結論を先に', anchor: 'short-answer' },
+      { label: '重要ポイント', anchor: 'tldr' },
       { label: 'ほとんどの人に推奨するルート', anchor: 'recommended-path' },
       { label: '概要一覧', anchor: 'at-a-glance' },
       { label: '本当の比較:サービス対スタック', anchor: 'service-vs-stack' },
@@ -3922,6 +4093,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     ],
     sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          'ElevenLabsはローカル版のない有料クラウドです。無料枠は月1万クレジット、有料プランは月6ドルから。',
+          'Piperは無料(GPL-3.0)でCPUに軽く、オフラインで動作します。OHF-Voice/piper1-gplで保守されています(v1.8.0)。',
+          'XTTS v2は非商用ライセンスで17言語のローカル音声クローンに対応しますが、GPUが必要で、2023年12月以降モデルの更新はありません。',
+          'まずElevenLabsの無料枠から始め、オフラインやCPUのみならPiper、ローカルクローンが必要でライセンスが合う場合のみXTTS v2を選びます。'
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'XTTS v2は2023年12月以降モデルの更新がなく、Coquiは2024年1月に事業を終了しました。重みは非商用のCPMLライセンスのままで、保守が止まっている可能性があるため、利用前に確認してください。更新が続いているのはコミュニティによるツールキットのフォークidiap/coqui-ai-TTSのみです(v0.28.0、2026年10月19日)。確認日:2026年11月19日。'
+          }
+        ]
+      },
       intro: {
         id: 'quick-answer',
         content: 'ElevenLabsはホスト型の音声プラットフォームです。現在のプランでは、テキスト読み上げが他の音声・メディア機能とセットになっており、クレジットは製品間で共有されます。無料プランは月間10,000クレジットを提供し、有料プランでは商用ライセンスの利用権と割り当ての増加が追加されます。機能、クレジット、料金は変更される可能性があるため、金額を当てにする前に最新の料金ページを確認してください。\n\nPiperはオープンソースのローカルTTSエンジンです。現在アクティブに開発が続くリポジトリ(OHF-Voice/piper1-gpl)はGPL-3.0ライセンスです。プロジェクトの初期バージョンはMITライセンスでしたが、そのリポジトリはアーカイブ済みのため、MITライセンスだと思い込まないでください。個々の音声データセットやチェックポイントのライセンスと想定用途は、エンジンのライセンスやそれぞれの間でも異なる場合があります。エンジンのライセンスと、選択した音声・モデルのライセンスは別問題として扱い、商用利用前に現行リポジトリで両方を確認してください。\n\nXTTS v2や他のローカルクローン対応スタックは、より高いローカル制御性を提供できますが、多くの場合、より多くのセットアップ、より重いハードウェア、モデル・音声・商用利用条件のより慎重な確認が必要です。\n\nしたがって正しい判断基準は「どの音声が一番優れているか?」ではありません。「インフラを意識せずに済むプロダクションサービスが欲しいのか、それとも自分で運用・制御するローカル音声システムが欲しいのか?」です。\n\nこのガイドの料金とプラン詳細は更新のたびに最新の料金ページと照合しています——プロバイダーは予告なくプランやクレジット割り当てを変更するため、判断の前に必ずそちらで最新の数値を確認してください。'
@@ -4197,9 +4384,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Dimension: '対応言語',
-            ElevenLabs: '多数(数十言語、プラットフォーム依存——最新のドキュメントを確認)',
+            ElevenLabs: 'Eleven v4で90以上の言語(ElevenLabsドキュメントによる)',
             Piper: '言語を横断する多数のコミュニティ音声パッケージ',
-            'XTTS v2 or Similar Local Cloning Stack': '公式にドキュメント化された16言語。言語横断クローンを含む'
+            'XTTS v2 or Similar Local Cloning Stack': '公式にドキュメント化された17言語。言語横断クローンを含む'
           },
           {
             Dimension: 'CPUのみでの動作',
@@ -4255,14 +4442,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'ハードウェア', 'Piper': 'Raspberry Piを含むCPU', 'XTTS v2': 'GPUが望ましく、大幅に重い' },
           { '': '速度', 'Piper': '高速', 'XTTS v2': 'より低速。品質とクローンに重点' },
           { '': '音声クローン', 'Piper': 'なし', 'XTTS v2': 'あり。短い参照クリップから可能' },
-          { '': '多言語対応', 'Piper': '多数のコミュニティ音声パッケージ', 'XTTS v2': '16言語。言語横断クローンに対応' },
+          { '': '多言語対応', 'Piper': '多数のコミュニティ音声パッケージ', 'XTTS v2': '17言語。言語横断クローンに対応' },
           { '': '複雑さ', 'Piper': '低い——軽量なアシスタント構築', 'XTTS v2': '高い——より多くのセットアップとライセンス確認が必要' },
         ],
         items: [
           '**Piperを選ぶべき場合:**速度が必要、CPUのみのハードウェアしかない、Raspberry Pi対応が必要、クローンは不要、軽量な音声アシスタントが欲しい場合。',
           '**XTTS v2を選ぶべき場合:**音声クローンが必要、速度よりも音声品質と自然さが重要、GPUがある、多言語クローンが重要、より技術的なセットアップに抵抗がない場合。'
         ],
-        note: 'PiperとXTTS v2は最も確立された2つのローカル選択肢ですが、それだけではありません。控えめなハードウェアでより高速な合成を目指す新しいローカルTTSモデルや、XTTS並みの自然さとクローン品質に近づこうとするモデルが定期的に登場しています。ローカルTTSをゼロから評価するなら、最終決定の前に最新のコミュニティランキングをざっと確認する価値があります——ただし、ほとんどのプロジェクトにとって、PiperとXTTS v2は依然として最も安全でドキュメントが充実した出発点です。',
+        note: 'PiperとXTTS v2は最も確立された2つのローカル選択肢ですが、それだけではありません。控えめなハードウェアでより高速な合成を目指す新しいローカルTTSモデルや、XTTS並みの自然さとクローン品質に近づこうとするモデルが定期的に登場しています。ローカルTTSをゼロから評価するなら、最終決定の前に最新のコミュニティランキングをざっと確認する価値があります——ただし、多くのプロジェクトにとって、PiperとXTTS v2は引き続きドキュメントが充実した出発点ですが、XTTS v2はもう更新されていません。',
         blockquote: '両エンジンのライセンスの詳細な内訳——音声ごと・チェックポイントごとの条件を含む——については、[ローカルTTSと音声クローンのライセンスガイド](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)をご覧ください。'
       },
       hardwareGuide: {
@@ -4472,7 +4659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'XTTS v2は音声をクローンできますか?',
-            a: 'はい。XTTS v2のドキュメントは、短い参照音声クリップからの音声クローンを強調しており、対応する16言語間での言語横断クローンも含まれます。'
+            a: 'はい。XTTS v2のドキュメントは、短い参照音声クリップからの音声クローンを強調しており、対応する17言語間での言語横断クローンも含まれます。'
           },
           {
             q: 'XTTS v2は商用利用できますか?',
@@ -4489,6 +4676,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '大量利用の場合、どちらが安いですか?',
             a: '実際の利用状況と自分の時間の価値によります。クラウドの従量課金は利用量に応じて増加し得る一方、ローカルのハードウェアとセットアップはほぼ一回限りの費用に継続的な運用が加わります。切り替える前に、仮定ではなく実際のリクエスト量を使って計算してください。'
+          },
+          {
+            q: 'ElevenLabsのローカル版はありますか?',
+            a: 'ありません。ElevenLabsはクラウドサービスで、セルフサービスプラン向けにダウンロード可能なモデル重みやローカル用インストーラーは公開されておらず、音声生成はすべて同社のサーバー経由で行われます。最も近いローカルの選択肢は、Piper(無料、GPL-3.0、CPUで軽量、オフライン動作)とXTTS v2(短いクリップからのローカル音声クローン、非商用CPMLライセンス、GPU推奨)です。どちらもElevenLabsのモデルではなく、厳選された音声ライブラリやマネージドサービスも提供しません。'
+          },
+          {
+            q: 'Piperの代わりになる良い選択肢は?',
+            a: 'Piperに何が足りないかによります。音声クローンならXTTS v2(17言語、非商用ライセンス、GPU推奨)。8言語・54の固定音声を持ち、寛容なApache 2.0ライセンスの小型無料モデルならKokoro-82M(ただし公式リポジトリは2025-08-06以降更新されていません)。クローンと90以上の言語に対応するマネージドサービスならElevenLabs。ChatterboxはMITライセンスですが、2026年8月に開発終了しています。'
           }
         ]
       },
@@ -4607,10 +4802,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ElevenLabs対Piper対XTTS v2:2026年、最良のTTSは?',
-      'description': 'ElevenLabsは洗練されたAI音声への最速の道。Piperは無料でCPUに優しいローカル選択肢。XTTS v2はローカル音声クローンで勝る。完全な比較をお届けします。',
+      'headline': 'ElevenLabsのローカル代替:PiperとXTTS v2を比較(2026)',
+      'description': 'ローカル版ElevenLabsはありませんが、Piper(無料・CPU向け・GPL-3.0)とXTTS v2(音声クローン・非商用ライセンス)が近い選択肢です。選び方を解説します。',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-09-03',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -4753,7 +4948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'XTTS v2は音声をクローンできますか?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'はい。XTTS v2のドキュメントは、短い参照音声クリップからの音声クローンを強調しており、対応する16言語間での言語横断クローンも含まれます。'
+            'text': 'はい。XTTS v2のドキュメントは、短い参照音声クリップからの音声クローンを強調しており、対応する17言語間での言語横断クローンも含まれます。'
           }
         },
         {
@@ -4787,43 +4982,60 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': '実際の利用状況と自分の時間の価値によります。クラウドの従量課金は利用量に応じて増加し得る一方、ローカルのハードウェアとセットアップはほぼ一回限りの費用に継続的な運用が加わります。切り替える前に、仮定ではなく実際のリクエスト量を使って計算してください。'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ElevenLabsのローカル版はありますか?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'ありません。ElevenLabsはクラウドサービスで、セルフサービスプラン向けにダウンロード可能なモデル重みやローカル用インストーラーは公開されておらず、音声生成はすべて同社のサーバー経由で行われます。最も近いローカルの選択肢は、Piper(無料、GPL-3.0、CPUで軽量、オフライン動作)とXTTS v2(短いクリップからのローカル音声クローン、非商用CPMLライセンス、GPU推奨)です。どちらもElevenLabsのモデルではなく、厳選された音声ライブラリやマネージドサービスも提供しません。'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Piperの代わりになる良い選択肢は?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Piperに何が足りないかによります。音声クローンならXTTS v2(17言語、非商用ライセンス、GPU推奨)。8言語・54の固定音声を持ち、寛容なApache 2.0ライセンスの小型無料モデルならKokoro-82M(ただし公式リポジトリは2025-08-06以降更新されていません)。クローンと90以上の言語に対応するマネージドサービスならElevenLabs。ChatterboxはMITライセンスですが、2026年8月に開発終了しています。'
+          }
         }
       ]
     },
-    current_models_mentioned: [],
+    current_models_mentioned: ['Piper', 'XTTS v2', 'ElevenLabs Eleven v4'],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
     current_benchmarks_used: ['月間10,000クレジット(ElevenLabs Free)', '月額$6、30,000クレジット(ElevenLabs Starter)', '月額$22、121,000クレジット(ElevenLabs Creator)', '月額$99、600,000クレジット(ElevenLabs Pro)', '月額$299、1,800,000クレジット(ElevenLabs Scale)', '月額$990、6,000,000クレジット(ElevenLabs Business)', 'API料金最大55%値下げ、2026年5月(ElevenLabs)']
   },
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-22',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'ElevenLabs vs Piper vs XTTS v2: ¿cuál es la mejor TTS en 2026?',
-    seoTitle: 'ElevenLabs vs Piper vs XTTS v2 (2026): ¿cuál es mejor?',
+    title: 'Alternativas locales a ElevenLabs: Piper vs XTTS v2 (2026)',
+    seoTitle: 'Alternativas locales a ElevenLabs: Piper vs XTTS v2 (2026)',
     intro: 'ElevenLabs ofrece el camino más sencillo hacia una voz de IA pulida. Piper es la opción local ligera para dispositivos solo CPU y offline. XTTS v2 es la opción más interesante cuando la clonación de voz local y la privacidad son la prioridad. Si estás eligiendo un sistema TTS para YouTube, podcasts, agentes de voz, audiolibros o contenido comercial, la decisión no es solo qué voz suena mejor, sino si quieres un servicio en la nube gestionado o un stack de voz local que tú mismo operes.',
-    metaDescription: 'ElevenLabs: el camino más rápido a una voz de IA pulida. Piper: la opción local gratis y apta para CPU. XTTS v2: la mejor opción para clonación de voz local.',
+    metaDescription: 'No existe un ElevenLabs local, pero Piper (gratis, apto para CPU, GPL-3.0) y XTTS v2 (clonación, licencia no comercial) se acercan. ¿Cuál elegir?',
     publishDate: '2026-08-22',
-    dateModified: '2026-09-03',
+    dateModified: '2026-11-19',
     readTime: '12 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Creadores de contenido, desarrolladores y equipos que eligen entre TTS en la nube y síntesis de voz autoalojada.',
     primaryTerm: 'ElevenLabs vs TTS local',
-    targetKeywords: ['ElevenLabs vs Piper', 'TTS local', 'Piper TTS', 'XTTS v2', 'texto a voz nube vs local', 'TTS gratis', 'clonación de voz', 'síntesis de voz offline'],
-    twitterDescription: '¿Pagar ElevenLabs o ejecutar Piper localmente? Compara TTS en la nube vs síntesis de voz autoalojada.',
-    leadAnswerBlock: '**Para la mayoría de creadores y empresas, ElevenLabs es la mejor opción general: una plataforma de voz gestionada con un nivel gratuito de 10.000 créditos y sin configuración local.** Piper es la mejor opción gratuita/local para dispositivos solo CPU y offline como la Raspberry Pi. XTTS v2 es la mejor opción específicamente para clonación de voz local, a costa de una GPU y bastante más trabajo de configuración.',
+    targetKeywords: ['ElevenLabs vs Piper', 'TTS local', 'Piper TTS', 'XTTS v2', 'texto a voz nube vs local', 'TTS gratis', 'clonación de voz', 'síntesis de voz offline', 'alternativa local a ElevenLabs', 'alternativa a Piper TTS'],
+    twitterDescription: 'No existe un ElevenLabs local. Piper (CPU, GPL-3.0) y XTTS v2 (clonación, no comercial) son las opciones gratuitas más cercanas. Así se comparan.',
+    leadAnswerBlock: '**Para la mayoría, ElevenLabs es lo más sencillo: nube gestionada, plan gratuito de 10.000 créditos y sin versión local.** Piper es la opción local gratuita y ligera en CPU; XTTS v2 añade clonación local, pero necesita GPU y no se actualiza desde 2023.',
     quickAnswerTop: {
       es: {
         question: '¿Debería usar ElevenLabs o TTS local?',
         answer: 'ElevenLabs es una plataforma en la nube gestionada: rápida, pulida y sin necesidad de intervención manual, con nivel gratuito y precios de API por uso. El TTS local (Piper, XTTS v2) te da control offline, pero requiere configuración, hardware y responsabilidad operativa. Mejor opción general: ElevenLabs. Mejor para dispositivos offline/embebidos: Piper. Mejor para clonación de voz local: XTTS v2.',
         bullets: [
+          'Comprobación (2026-11-19): ElevenLabs lanzó Eleven v4 (más de 90 idiomas) el 2026-09-28; los precios de los planes no han cambiado. Piper se mantiene en OHF-Voice/piper1-gpl (GPL-3.0; última versión v1.8.0, 2026-09-04), mientras que el repositorio original rhasspy/piper está archivado. XTTS v2 no ha recibido ninguna actualización del modelo desde diciembre de 2023 y Coqui cerró en enero de 2024; sus pesos siguen bajo la licencia no comercial CPML, y el fork comunitario del toolkit idiap/coqui-ai-TTS sigue activo (v0.28.0, 2026-10-19). XTTS v2 admite 17 idiomas.',
           'ElevenLabs: nivel gratuito (10.000 créditos/mes), Starter 6 $/mes (30k créditos), Creator 22 $/mes (121k créditos), Pro 99 $/mes (600k créditos), Scale 299 $/mes, Business 990 $/mes. También ofrece créditos de API por uso sin suscripción.',
           'ElevenLabs redujo los precios de su API en autoservicio hasta un 55 % en mayo de 2026 e introdujo el pago por uso para desarrolladores que no quieren una suscripción mensual.',
           'Piper: motor gratuito con licencia GPL-3.0 (las voces tienen licencias separadas), apto para CPU, funciona offline una vez instalado. Las licencias de voces/modelos individuales pueden variar.',
           'XTTS v2: motor gratuito, admite clonación de voz a partir de un clip de referencia corto, necesita más configuración y normalmente una GPU.',
           'Para la mayoría de creadores: prueba primero el nivel gratuito de ElevenLabs. Cambia a TTS local solo si te topas con una limitación específica de offline, privacidad o escala.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -4840,6 +5052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Respuesta rápida', anchor: 'quick-answer' },
       { label: 'Nuestro veredicto', anchor: 'short-answer' },
+      { label: 'Puntos clave', anchor: 'tldr' },
       { label: 'Ruta recomendada para la mayoría', anchor: 'recommended-path' },
       { label: 'De un vistazo', anchor: 'at-a-glance' },
       { label: 'La comparación real: servicio vs stack', anchor: 'service-vs-stack' },
@@ -4878,6 +5091,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     ],
     sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          'ElevenLabs es una nube de pago sin versión local: 10.000 créditos gratis al mes, planes de pago desde 6 $/mes.',
+          'Piper es gratis, con licencia GPL-3.0, ligero en CPU y funciona sin conexión; se mantiene en OHF-Voice/piper1-gpl (v1.8.0).',
+          'XTTS v2 clona una voz en local en 17 idiomas con licencia no comercial, necesita GPU y no recibe actualizaciones del modelo desde diciembre de 2023.',
+          'Empieza con el plan gratuito de ElevenLabs; elige Piper si necesitas funcionar sin conexión o solo con CPU, y XTTS v2 solo si necesitas clonación local y la licencia encaja.'
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'XTTS v2 no ha recibido ninguna actualización del modelo desde diciembre de 2023, y Coqui cerró en enero de 2024. Los pesos siguen bajo la licencia no comercial CPML; es posible que el proyecto ya no se mantenga: compruébalo antes de depender de él. Solo el fork comunitario del toolkit idiap/coqui-ai-TTS sigue actualizándose (v0.28.0, 19 de octubre de 2026). Comprobado el 19 de noviembre de 2026.'
+          }
+        ]
+      },
       intro: {
         id: 'quick-answer',
         content: 'ElevenLabs es una plataforma de voz alojada. Sus planes actuales combinan texto a voz con otras funciones de voz y medios; los créditos se comparten entre productos. Su nivel gratuito ofrece 10.000 créditos al mes, mientras que los planes de pago añaden acceso a licencia comercial y límites más altos. Revisa la página de precios en vivo antes de basarte en cualquier cifra, porque las funciones, los créditos y los precios pueden cambiar.\n\nPiper es un motor de TTS local de código abierto. El repositorio activamente mantenido (OHF-Voice/piper1-gpl) tiene licencia GPL-3.0; una versión anterior del proyecto tenía licencia MIT antes de que ese repositorio quedara archivado, así que no des por hecho la licencia MIT sin verificarlo. Las licencias y el uso previsto de los conjuntos de voces/checkpoints individuales pueden diferir de la licencia del motor y entre sí. Trata la licencia del motor y la licencia de la voz/modelo seleccionado como cuestiones separadas, y verifica ambas contra el repositorio actual antes de un uso comercial.\n\nXTTS v2 y otros stacks locales con capacidad de clonación pueden darte mayor control local, pero suelen requerir más configuración, hardware más potente y una revisión más cuidadosa de los términos del modelo, la voz y el uso comercial.\n\nPor eso, la decisión correcta no es "¿qué voz es mejor?" Es: **¿Quieres un servicio de producción que abstraiga la infraestructura, o un sistema de voz local que tú operes y controles?**\n\nLos precios y detalles de planes de esta guía se contrastan con la página de precios en vivo en cada actualización; confirma ahí las cifras actuales, ya que los proveedores cambian planes y asignaciones de créditos sin previo aviso.'
@@ -5156,9 +5385,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Dimension: 'Idiomas',
-            ElevenLabs: 'Muchos (decenas, según la plataforma; consulta la documentación actual)',
+            ElevenLabs: 'Más de 90 idiomas para Eleven v4 (según la documentación de ElevenLabs)',
             Piper: 'Muchos paquetes de voces comunitarios en varios idiomas',
-            'XTTS v2 or Similar Local Cloning Stack': '16 idiomas documentados oficialmente, incluyendo clonación entre idiomas'
+            'XTTS v2 or Similar Local Cloning Stack': '17 idiomas documentados oficialmente, incluyendo clonación entre idiomas'
           },
           {
             Dimension: 'Funcionamiento solo con CPU',
@@ -5214,14 +5443,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'Hardware', 'Piper': 'CPU, incluida Raspberry Pi', 'XTTS v2': 'Se prefiere GPU, sustancialmente más pesado' },
           { '': 'Velocidad', 'Piper': 'Rápido', 'XTTS v2': 'Más lento, centrado en calidad y clonación' },
           { '': 'Clonación de voz', 'Piper': 'No', 'XTTS v2': 'Sí, a partir de un breve clip de referencia' },
-          { '': 'Multilingüe', 'Piper': 'Muchos paquetes de voces comunitarios', 'XTTS v2': '16 idiomas, con clonación entre idiomas' },
+          { '': 'Multilingüe', 'Piper': 'Muchos paquetes de voces comunitarios', 'XTTS v2': '17 idiomas, con clonación entre idiomas' },
           { '': 'Complejidad', 'Piper': 'Baja: una construcción de asistente ligero', 'XTTS v2': 'Mayor: más configuración y revisión de licencias' },
         ],
         items: [
           '**Elige Piper cuando:** necesitas velocidad, tienes hardware solo con CPU, necesitas soporte para Raspberry Pi, no necesitas clonación y quieres un asistente de voz ligero.',
           '**Elige XTTS v2 cuando:** necesitas clonación de voz, la calidad y naturalidad de la voz importan más que la velocidad, tienes una GPU, la clonación multilingüe importa y te sientes cómodo con una configuración más técnica.'
         ],
-        note: 'Piper y XTTS v2 son las dos opciones locales más consolidadas, pero no son las únicas. Aparecen regularmente modelos de TTS local más nuevos orientados a una síntesis más rápida en hardware modesto, y otros que se acercan más al nivel de naturalidad y calidad de clonación de XTTS. Si estás evaluando el TTS local desde cero, vale la pena echar un vistazo rápido a las clasificaciones actuales de la comunidad antes de comprometerte, pero Piper y XTTS v2 siguen siendo los puntos de partida más seguros y documentados para la mayoría de proyectos.',
+        note: 'Piper y XTTS v2 son las dos opciones locales más consolidadas, pero no son las únicas. Aparecen regularmente modelos de TTS local más nuevos orientados a una síntesis más rápida en hardware modesto, y otros que se acercan más al nivel de naturalidad y calidad de clonación de XTTS. Si estás evaluando el TTS local desde cero, vale la pena echar un vistazo rápido a las clasificaciones actuales de la comunidad antes de comprometerte, pero Piper y XTTS v2 siguen siendo puntos de partida bien documentados para muchos proyectos, aunque XTTS v2 ya no se actualiza.',
         blockquote: 'Para el desglose completo de licencias de ambos motores, incluyendo términos por voz y por checkpoint, consulta nuestra [guía de licencias de TTS local y clonación de voz](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
@@ -5332,7 +5561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'No elijas ElevenLabs si',
         content: 'Una plataforma en la nube gestionada no encaja si alguna de estas describe tu proyecto:',
         items: [
-          'Necesitas funcionamiento completamente offline.',
+          'Necesitas funcionamiento offline.',
           'Tus datos no pueden salir de tu propia infraestructura.',
           'Estás desplegando en Raspberry Pi u otro hardware embebido.',
           'Necesitas inferencia local de volumen extremadamente alto, donde el precio por solicitud en la nube se vuelve poco rentable.',
@@ -5431,7 +5660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puede XTTS v2 clonar una voz?',
-            a: 'Sí. La documentación de XTTS v2 destaca la clonación de voz a partir de un breve clip de audio de referencia, incluyendo la clonación entre idiomas en sus 16 idiomas compatibles.'
+            a: 'Sí. La documentación de XTTS v2 destaca la clonación de voz a partir de un breve clip de audio de referencia, incluyendo la clonación entre idiomas en sus 17 idiomas compatibles.'
           },
           {
             q: '¿Se puede usar XTTS v2 comercialmente?',
@@ -5448,6 +5677,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Qué es más barato a alto volumen?',
             a: 'Depende de tu uso real y del valor de tu tiempo. El precio medido en la nube puede crecer con el volumen, mientras que el hardware y la configuración local son un coste más bien único, más operaciones continuas. Calcula usando tu volumen real de solicitudes, no uno hipotético, antes de cambiar.'
+          },
+          {
+            q: '¿Existe una versión local de ElevenLabs?',
+            a: 'No. ElevenLabs es un servicio en la nube: no publica pesos de modelo descargables ni un instalador local para sus planes de autoservicio, así que cada generación pasa por sus servidores. Las opciones locales más cercanas son Piper (gratis, GPL-3.0, ligero en CPU, funciona sin conexión) y XTTS v2 (clonación de voz local a partir de un clip corto, licencia no comercial CPML, GPU recomendada). Ninguno es un modelo de ElevenLabs, y ninguno ofrece su biblioteca de voces curada ni su servicio gestionado.'
+          },
+          {
+            q: '¿Cuál es una buena alternativa a Piper?',
+            a: 'Depende de lo que le falte a Piper para ti. Para clonación de voz: XTTS v2 (17 idiomas, licencia no comercial, GPU recomendada). Para un modelo pequeño y gratuito con 54 voces fijas en 8 idiomas y licencia permisiva Apache 2.0: Kokoro-82M, aunque su repositorio oficial no se actualiza desde el 2025-08-06. Para un servicio gestionado con clonación y más de 90 idiomas: ElevenLabs. Chatterbox tiene licencia MIT, pero está retirado desde agosto de 2026.'
           }
         ]
       },
@@ -5566,10 +5803,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ElevenLabs vs Piper vs XTTS v2: ¿cuál es la mejor TTS en 2026?',
-      'description': 'ElevenLabs: el camino más rápido a una voz de IA pulida. Piper: la opción local gratis y apta para CPU. XTTS v2: la mejor opción para clonación de voz local.',
+      'headline': 'Alternativas locales a ElevenLabs: Piper vs XTTS v2 (2026)',
+      'description': 'No existe un ElevenLabs local, pero Piper (gratis, apto para CPU, GPL-3.0) y XTTS v2 (clonación, licencia no comercial) se acercan. ¿Cuál elegir?',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-09-03',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -5712,7 +5949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '¿Puede XTTS v2 clonar una voz?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Sí. La documentación de XTTS v2 destaca la clonación de voz a partir de un breve clip de audio de referencia, incluyendo la clonación entre idiomas en sus 16 idiomas compatibles.'
+            'text': 'Sí. La documentación de XTTS v2 destaca la clonación de voz a partir de un breve clip de audio de referencia, incluyendo la clonación entre idiomas en sus 17 idiomas compatibles.'
           }
         },
         {
@@ -5746,43 +5983,60 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'Depende de tu uso real y del valor de tu tiempo. El precio medido en la nube puede crecer con el volumen, mientras que el hardware y la configuración local son un coste más bien único, más operaciones continuas. Calcula usando tu volumen real de solicitudes, no uno hipotético, antes de cambiar.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Existe una versión local de ElevenLabs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. ElevenLabs es un servicio en la nube: no publica pesos de modelo descargables ni un instalador local para sus planes de autoservicio, así que cada generación pasa por sus servidores. Las opciones locales más cercanas son Piper (gratis, GPL-3.0, ligero en CPU, funciona sin conexión) y XTTS v2 (clonación de voz local a partir de un clip corto, licencia no comercial CPML, GPU recomendada). Ninguno es un modelo de ElevenLabs, y ninguno ofrece su biblioteca de voces curada ni su servicio gestionado.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cuál es una buena alternativa a Piper?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Depende de lo que le falte a Piper para ti. Para clonación de voz: XTTS v2 (17 idiomas, licencia no comercial, GPU recomendada). Para un modelo pequeño y gratuito con 54 voces fijas en 8 idiomas y licencia permisiva Apache 2.0: Kokoro-82M, aunque su repositorio oficial no se actualiza desde el 2025-08-06. Para un servicio gestionado con clonación y más de 90 idiomas: ElevenLabs. Chatterbox tiene licencia MIT, pero está retirado desde agosto de 2026.'
+          }
         }
       ]
     },
-    current_models_mentioned: [],
+    current_models_mentioned: ['Piper', 'XTTS v2', 'ElevenLabs Eleven v4'],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
     current_benchmarks_used: ['10.000 créditos mensuales (ElevenLabs Free)', '6 $/mes, 30.000 créditos (ElevenLabs Starter)', '22 $/mes, 121.000 créditos (ElevenLabs Creator)', '99 $/mes, 600.000 créditos (ElevenLabs Pro)', '299 $/mes, 1.800.000 créditos (ElevenLabs Scale)', '990 $/mes, 6.000.000 créditos (ElevenLabs Business)', 'rebaja de precios de API de hasta el 55 %, mayo de 2026 (ElevenLabs)']
   },
   pt: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-22',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'ElevenLabs vs Piper vs XTTS v2: Qual é o Melhor TTS em 2026?',
-    seoTitle: 'ElevenLabs vs Piper vs XTTS v2 (2026): Qual é Melhor?',
+    title: 'Alternativas locais ao ElevenLabs: Piper vs XTTS v2 (2026)',
+    seoTitle: 'Alternativas locais ao ElevenLabs: Piper vs XTTS v2 (2026)',
     intro: 'O ElevenLabs oferece o caminho mais fácil para uma voz de IA refinada. O Piper é a escolha local leve para dispositivos apenas CPU e offline. O XTTS v2 é a opção mais interessante quando clonagem de voz local e privacidade são prioridade. Se você está escolhendo um sistema de TTS para YouTube, podcasts, agentes de voz, audiolivros ou conteúdo comercial, a decisão não é só qual voz soa melhor — é se você quer um serviço em nuvem gerenciado ou uma stack de voz local que você mesmo opera.',
-    metaDescription: 'ElevenLabs: o caminho mais rápido para uma voz de IA refinada. Piper: a opção local gratuita e amigável para CPU. XTTS v2: a melhor escolha para clonagem de voz local.',
+    metaDescription: 'Não existe um ElevenLabs local, mas Piper (grátis, leve em CPU, GPL-3.0) e XTTS v2 (clonagem, licença não comercial) chegam perto. Qual escolher?',
     publishDate: '2026-08-22',
-    dateModified: '2026-09-03',
+    dateModified: '2026-11-19',
     readTime: 'Leitura de 12 min',
     educationalLevel: 'Intermediate',
     audience: 'Criadores de conteúdo, desenvolvedores e equipes escolhendo entre TTS em nuvem e síntese de voz autogerenciada.',
     primaryTerm: 'ElevenLabs vs TTS local',
-    targetKeywords: ['ElevenLabs vs Piper', 'TTS local', 'Piper TTS', 'XTTS v2', 'text-to-speech nuvem vs local', 'TTS gratuito', 'clonagem de voz', 'síntese de fala offline'],
-    twitterDescription: 'Pagar pelo ElevenLabs ou rodar o Piper localmente? Compare TTS em nuvem vs síntese de fala autogerenciada.',
-    leadAnswerBlock: '**Para a maioria dos criadores e empresas, o ElevenLabs é a melhor escolha geral — uma plataforma de voz gerenciada com plano gratuito de 10.000 créditos e sem configuração local.** O Piper é a melhor opção gratuita/local para dispositivos apenas CPU e offline como o Raspberry Pi. O XTTS v2 é a melhor escolha especificamente para clonagem de voz local, ao custo de uma GPU e bem mais trabalho de configuração.',
+    targetKeywords: ['ElevenLabs vs Piper', 'TTS local', 'Piper TTS', 'XTTS v2', 'text-to-speech nuvem vs local', 'TTS gratuito', 'clonagem de voz', 'síntese de fala offline', 'alternativa local ao ElevenLabs', 'alternativa ao Piper TTS'],
+    twitterDescription: 'Não existe um ElevenLabs local. Piper (CPU, GPL-3.0) e XTTS v2 (clonagem, não comercial) são as opções gratuitas mais próximas. Veja a comparação.',
+    leadAnswerBlock: '**Para a maioria, o ElevenLabs é o mais simples: nuvem gerenciada, plano gratuito de 10.000 créditos e sem versão local.** O Piper é a opção local gratuita e leve em CPU; o XTTS v2 adiciona clonagem local, mas exige GPU e não é atualizado desde 2023.',
     quickAnswerTop: {
       pt: {
         question: 'Devo usar o ElevenLabs ou TTS local?',
         answer: 'O ElevenLabs é uma plataforma em nuvem gerenciada — rápida, refinada e sem necessidade de operação manual, com plano gratuito e preços de API por uso. O TTS local (Piper, XTTS v2) dá a você controle offline, mas exige configuração, hardware e responsabilidade operacional. Melhor escolha geral: ElevenLabs. Melhor para dispositivos offline/embarcados: Piper. Melhor para clonagem de voz local: XTTS v2.',
         bullets: [
+          'Verificação (2026-11-19): a ElevenLabs lançou o Eleven v4 (mais de 90 idiomas) em 2026-09-28; os preços dos planos não mudaram. O Piper é mantido em OHF-Voice/piper1-gpl (GPL-3.0; versão mais recente v1.8.0, 2026-09-04), enquanto o repositório original rhasspy/piper está arquivado. O XTTS v2 não recebe atualização de modelo desde dezembro de 2023 e a Coqui encerrou as atividades em janeiro de 2024; os pesos continuam sob a licença não comercial CPML, e o fork comunitário do toolkit idiap/coqui-ai-TTS segue ativo (v0.28.0, 2026-10-19). O XTTS v2 suporta 17 idiomas.',
           'ElevenLabs: plano gratuito (10.000 créditos/mês), Starter $6/mês (30 mil créditos), Creator $22/mês (121 mil créditos), Pro $99/mês (600 mil créditos), Scale $299/mês, Business $990/mês. Também oferece créditos de API por uso sem assinatura.',
           'O ElevenLabs cortou os preços da API self-service em até 55% em maio de 2026 e introduziu o pagamento por uso para desenvolvedores que não querem assinatura mensal.',
           'Piper: engine gratuita licenciada sob GPL-3.0 (vozes com licenças separadas), amigável para CPU, funciona offline após instalado. Licenças de voz/modelo individuais podem variar.',
           'XTTS v2: engine gratuita, suporta clonagem de voz a partir de um clipe curto de referência, exige mais configuração e geralmente uma GPU.',
           'Para a maioria dos criadores: teste primeiro o plano gratuito do ElevenLabs. Migre para TTS local apenas se encontrar uma restrição específica de offline, privacidade ou escala.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -5799,6 +6053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'Resposta Rápida', anchor: 'quick-answer' },
       { label: 'Nosso Veredito', anchor: 'short-answer' },
+      { label: 'Pontos principais', anchor: 'tldr' },
       { label: 'Caminho Recomendado para a Maioria', anchor: 'recommended-path' },
       { label: 'Visão Geral', anchor: 'at-a-glance' },
       { label: 'A Comparação Real: Serviço vs Stack', anchor: 'service-vs-stack' },
@@ -5837,6 +6092,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     ],
     sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          'O ElevenLabs é uma nuvem paga sem versão local: 10.000 créditos grátis por mês, planos pagos a partir de US$ 6/mês.',
+          'O Piper é gratuito, com licença GPL-3.0, leve em CPU e funciona offline; é mantido em OHF-Voice/piper1-gpl (v1.8.0).',
+          'O XTTS v2 clona uma voz localmente em 17 idiomas com licença não comercial, exige GPU e não recebe atualização de modelo desde dezembro de 2023.',
+          'Comece pelo plano gratuito do ElevenLabs; escolha o Piper para necessidades offline ou só com CPU, e o XTTS v2 apenas se precisar de clonagem local e a licença servir.'
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'O XTTS v2 não recebe atualização de modelo desde dezembro de 2023, e a Coqui encerrou as atividades em janeiro de 2024. Os pesos continuam sob a licença não comercial CPML; o projeto pode não estar mais sendo mantido — confira antes de depender dele. Apenas o fork comunitário do toolkit idiap/coqui-ai-TTS ainda é atualizado (v0.28.0, 19 de outubro de 2026). Verificado em 19 de novembro de 2026.'
+          }
+        ]
+      },
       intro: {
         id: 'quick-answer',
         content: 'O ElevenLabs é uma plataforma de voz hospedada. Seus planos atuais combinam text-to-speech com outros recursos de voz e mídia; os créditos são compartilhados entre produtos. O plano gratuito lista 10.000 créditos por mês, enquanto os planos pagos adicionam acesso a licença comercial e limites mais altos. Verifique a página de preços ao vivo antes de contar com qualquer valor, porque recursos, créditos e preços podem mudar.\n\nO Piper é uma engine de TTS local de código aberto. O repositório atualmente mantido (OHF-Voice/piper1-gpl) é licenciado sob GPL-3.0; uma versão anterior do projeto era licenciada sob MIT antes de esse repositório ser arquivado, então não presuma a licença MIT sem verificar. As licenças e o uso pretendido de datasets/checkpoints de vozes individuais podem diferir da licença da engine e entre si. Trate a licença da engine e a licença da voz/modelo selecionado como questões separadas, e verifique ambas no repositório atual antes de uso comercial.\n\nO XTTS v2 e outras stacks locais capazes de clonagem podem dar a você maior controle local, mas geralmente exigem mais configuração, hardware mais pesado e uma revisão mais cuidadosa dos termos de modelo, voz e uso comercial.\n\nA decisão correta, portanto, não é "qual voz é melhor?" É: **Você quer um serviço de produção que abstrai a infraestrutura, ou um sistema de fala local que você opera e controla?**\n\nOs detalhes de preços e planos neste guia são conferidos com a página de preços ao vivo a cada atualização — confirme os valores atuais lá, já que os provedores mudam planos e limites de créditos sem aviso prévio.'
@@ -6114,9 +6385,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Dimension: 'Idiomas',
-            ElevenLabs: 'Muitos (dezenas, dependendo da plataforma — verifique a documentação atual)',
+            ElevenLabs: 'Mais de 90 idiomas no Eleven v4 (segundo a documentação do ElevenLabs)',
             Piper: 'Muitos pacotes de voz da comunidade em vários idiomas',
-            'XTTS v2 or Similar Local Cloning Stack': '16 idiomas documentados oficialmente, incluindo clonagem entre idiomas'
+            'XTTS v2 or Similar Local Cloning Stack': '17 idiomas documentados oficialmente, incluindo clonagem entre idiomas'
           },
           {
             Dimension: 'Operação apenas com CPU',
@@ -6172,14 +6443,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'Hardware', 'Piper': 'CPU, incluindo Raspberry Pi', 'XTTS v2': 'GPU preferível, substancialmente mais pesada' },
           { '': 'Velocidade', 'Piper': 'Rápida', 'XTTS v2': 'Mais lenta, focada em qualidade e clonagem' },
           { '': 'Clonagem de voz', 'Piper': 'Não', 'XTTS v2': 'Sim, a partir de um curto clipe de referência' },
-          { '': 'Multilíngue', 'Piper': 'Muitos pacotes de voz da comunidade', 'XTTS v2': '16 idiomas, com clonagem entre idiomas' },
+          { '': 'Multilíngue', 'Piper': 'Muitos pacotes de voz da comunidade', 'XTTS v2': '17 idiomas, com clonagem entre idiomas' },
           { '': 'Complexidade', 'Piper': 'Baixa — uma construção de assistente leve', 'XTTS v2': 'Maior — mais configuração e revisão de licenciamento' },
         ],
         items: [
           '**Escolha o Piper quando:** você precisa de velocidade, tem hardware apenas com CPU, precisa de suporte a Raspberry Pi, não precisa de clonagem e quer um assistente de voz leve.',
           '**Escolha o XTTS v2 quando:** você precisa de clonagem de voz, qualidade e naturalidade da voz importam mais que velocidade, você tem uma GPU, clonagem multilíngue importa, e você está confortável com uma configuração mais técnica.'
         ],
-        note: 'O Piper e o XTTS v2 são as duas opções locais mais consolidadas, mas não são as únicas. Novos modelos de TTS local voltados para síntese mais rápida em hardware modesto, e outros que se aproximam do nível de naturalidade e qualidade de clonagem do XTTS, aparecem regularmente. Se você está avaliando TTS local do zero, vale a pena dar uma olhada rápida nos rankings atuais da comunidade antes de se comprometer — mas o Piper e o XTTS v2 continuam sendo os pontos de partida mais seguros e documentados para a maioria dos projetos.',
+        note: 'O Piper e o XTTS v2 são as duas opções locais mais consolidadas, mas não são as únicas. Novos modelos de TTS local voltados para síntese mais rápida em hardware modesto, e outros que se aproximam do nível de naturalidade e qualidade de clonagem do XTTS, aparecem regularmente. Se você está avaliando TTS local do zero, vale a pena dar uma olhada rápida nos rankings atuais da comunidade antes de se comprometer — mas o Piper e o XTTS v2 continuam sendo pontos de partida bem documentados para muitos projetos, embora o XTTS v2 não seja mais atualizado.',
         blockquote: 'Para o detalhamento completo de licenciamento de ambas as engines — incluindo termos por voz e por checkpoint — veja nosso [guia de Licenças de TTS Local e Clonagem de Voz](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
@@ -6290,7 +6561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Não Escolha o ElevenLabs Se',
         content: 'Uma plataforma em nuvem gerenciada é a escolha errada se qualquer uma destas afirmações descreve seu projeto:',
         items: [
-          'Você precisa de operação completamente offline.',
+          'Você precisa de operação offline.',
           'Seus dados não podem sair da sua própria infraestrutura.',
           'Você está implantando em Raspberry Pi ou outro hardware embarcado.',
           'Você precisa de inferência local de altíssimo volume, onde o preço em nuvem por requisição se torna inviável.',
@@ -6389,7 +6660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O XTTS v2 pode clonar uma voz?',
-            a: 'Sim. A documentação do XTTS v2 destaca a clonagem de voz a partir de um curto clipe de áudio de referência, incluindo clonagem entre idiomas nos seus 16 idiomas suportados.'
+            a: 'Sim. A documentação do XTTS v2 destaca a clonagem de voz a partir de um curto clipe de áudio de referência, incluindo clonagem entre idiomas nos seus 17 idiomas suportados.'
           },
           {
             q: 'O XTTS v2 pode ser usado comercialmente?',
@@ -6406,6 +6677,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Qual é mais barato em alto volume?',
             a: 'Depende do seu uso real e do valor do seu tempo. O preço medido em nuvem pode crescer com o volume, enquanto o hardware e a configuração local são um custo quase único mais operações contínuas. Calcule usando seu volume real de requisições, não um hipotético, antes de mudar.'
+          },
+          {
+            q: 'Existe uma versão local do ElevenLabs?',
+            a: 'Não. O ElevenLabs é um serviço em nuvem: não publica pesos de modelo para download nem um instalador local nos planos de autoatendimento, então toda geração passa pelos servidores dele. As opções locais mais próximas são o Piper (grátis, GPL-3.0, leve em CPU, funciona offline) e o XTTS v2 (clonagem de voz local a partir de um clipe curto, licença não comercial CPML, GPU recomendada). Nenhum dos dois é um modelo do ElevenLabs, e nenhum oferece a biblioteca de vozes curada nem o serviço gerenciado dele.'
+          },
+          {
+            q: 'Qual é uma boa alternativa ao Piper?',
+            a: 'Depende do que falta no Piper para você. Para clonagem de voz: XTTS v2 (17 idiomas, licença não comercial, GPU recomendada). Para um modelo pequeno e gratuito com 54 vozes fixas em 8 idiomas e licença permissiva Apache 2.0: Kokoro-82M, embora o repositório oficial não seja atualizado desde 2025-08-06. Para um serviço gerenciado com clonagem e mais de 90 idiomas: ElevenLabs. O Chatterbox tem licença MIT, mas está aposentado desde agosto de 2026.'
           }
         ]
       },
@@ -6524,10 +6803,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ElevenLabs vs Piper vs XTTS v2: Qual é o Melhor TTS em 2026?',
-      'description': 'ElevenLabs: o caminho mais rápido para uma voz de IA refinada. Piper: a opção local gratuita e amigável para CPU. XTTS v2: a melhor escolha para clonagem de voz local.',
+      'headline': 'Alternativas locais ao ElevenLabs: Piper vs XTTS v2 (2026)',
+      'description': 'Não existe um ElevenLabs local, mas Piper (grátis, leve em CPU, GPL-3.0) e XTTS v2 (clonagem, licença não comercial) chegam perto. Qual escolher?',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-09-03',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -6670,7 +6949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'O XTTS v2 pode clonar uma voz?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Sim. A documentação do XTTS v2 destaca a clonagem de voz a partir de um curto clipe de áudio de referência, incluindo clonagem entre idiomas nos seus 16 idiomas suportados.'
+            'text': 'Sim. A documentação do XTTS v2 destaca a clonagem de voz a partir de um curto clipe de áudio de referência, incluindo clonagem entre idiomas nos seus 17 idiomas suportados.'
           }
         },
         {
@@ -6704,43 +6983,60 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'Depende do seu uso real e do valor do seu tempo. O preço medido em nuvem pode crescer com o volume, enquanto o hardware e a configuração local são um custo quase único mais operações contínuas. Calcule usando seu volume real de requisições, não um hipotético, antes de mudar.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Existe uma versão local do ElevenLabs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Não. O ElevenLabs é um serviço em nuvem: não publica pesos de modelo para download nem um instalador local nos planos de autoatendimento, então toda geração passa pelos servidores dele. As opções locais mais próximas são o Piper (grátis, GPL-3.0, leve em CPU, funciona offline) e o XTTS v2 (clonagem de voz local a partir de um clipe curto, licença não comercial CPML, GPU recomendada). Nenhum dos dois é um modelo do ElevenLabs, e nenhum oferece a biblioteca de vozes curada nem o serviço gerenciado dele.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Qual é uma boa alternativa ao Piper?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Depende do que falta no Piper para você. Para clonagem de voz: XTTS v2 (17 idiomas, licença não comercial, GPU recomendada). Para um modelo pequeno e gratuito com 54 vozes fixas em 8 idiomas e licença permissiva Apache 2.0: Kokoro-82M, embora o repositório oficial não seja atualizado desde 2025-08-06. Para um serviço gerenciado com clonagem e mais de 90 idiomas: ElevenLabs. O Chatterbox tem licença MIT, mas está aposentado desde agosto de 2026.'
+          }
         }
       ]
     },
-    current_models_mentioned: [],
+    current_models_mentioned: ['Piper', 'XTTS v2', 'ElevenLabs Eleven v4'],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
     current_benchmarks_used: ['10.000 créditos mensais (ElevenLabs Free)', '$6/mês, 30.000 créditos (ElevenLabs Starter)', '$22/mês, 121.000 créditos (ElevenLabs Creator)', '$99/mês, 600.000 créditos (ElevenLabs Pro)', '$299/mês, 1.800.000 créditos (ElevenLabs Scale)', '$990/mês, 6.000.000 créditos (ElevenLabs Business)', 'corte de preço de API de até 55%, maio de 2026 (ElevenLabs)']
   },
   ko: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-22',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: '2026년 ElevenLabs vs Piper vs XTTS v2: 최고의 TTS는?',
-    seoTitle: 'ElevenLabs vs Piper vs XTTS v2(2026): 무엇이 최고인가',
+    title: 'ElevenLabs 로컬 대안: Piper vs XTTS v2 비교(2026)',
+    seoTitle: 'ElevenLabs 로컬 대안: Piper vs XTTS v2',
     intro: 'ElevenLabs는 완성도 높은 AI 음성으로 가는 가장 쉬운 길을 제공합니다. Piper는 CPU 전용 및 오프라인 기기를 위한 가벼운 로컬 선택지입니다. XTTS v2는 로컬 음성 복제와 프라이버시가 최우선일 때 더 눈여겨볼 만한 선택지입니다. 유튜브, 팟캐스트, 음성 에이전트, 오디오북, 상업적 콘텐츠를 위해 TTS 시스템을 선택할 때 중요한 것은 어떤 음성이 가장 좋게 들리는지만이 아니라, 관리형 클라우드 서비스와 직접 운영하는 로컬 음성 스택 중 무엇을 원하는지입니다.',
-    metaDescription: 'ElevenLabs는 완성도 높은 AI 음성으로 가는 가장 빠른 길입니다. Piper는 무료이고 CPU에 친화적인 로컬 선택지입니다. XTTS v2는 로컬 음성 복제에서 앞섭니다.',
+    metaDescription: 'ElevenLabs의 로컬 버전은 없지만 Piper(무료, CPU 친화, GPL-3.0)와 XTTS v2(음성 복제, 비상업 라이선스)가 가장 가깝습니다. 선택 기준을 정리했습니다.',
     publishDate: '2026-08-22',
-    dateModified: '2026-09-03',
+    dateModified: '2026-11-19',
     readTime: '읽는 시간 12분',
     educationalLevel: 'Intermediate',
     audience: '클라우드 TTS와 자체 호스팅 음성 합성 중에서 선택하려는 콘텐츠 크리에이터, 개발자, 팀.',
     primaryTerm: 'ElevenLabs vs 로컬 TTS',
-    targetKeywords: ['ElevenLabs vs Piper', '로컬 TTS', 'Piper TTS', 'XTTS v2', '텍스트 음성 변환 클라우드 vs 로컬', '무료 TTS', '음성 복제', '오프라인 음성 합성'],
-    twitterDescription: 'ElevenLabs에 비용을 지불해야 할까요, 아니면 Piper를 로컬에서 실행해야 할까요? 클라우드 TTS와 자체 호스팅 음성 합성을 비교합니다.',
-    leadAnswerBlock: '**대부분의 크리에이터와 기업에게는 ElevenLabs가 종합적으로 최선의 선택입니다. 무료 10,000 크레딧 티어를 제공하며 로컬 설정이 필요 없는 관리형 음성 플랫폼입니다.** Piper는 Raspberry Pi 같은 CPU 전용·오프라인 기기에 가장 좋은 무료/로컬 선택지입니다. XTTS v2는 로컬 음성 복제에 특화된 최선의 선택지이지만, GPU와 훨씬 더 많은 설정 작업이 필요합니다.',
+    targetKeywords: ['ElevenLabs vs Piper', '로컬 TTS', 'Piper TTS', 'XTTS v2', '텍스트 음성 변환 클라우드 vs 로컬', '무료 TTS', '음성 복제', '오프라인 음성 합성', 'ElevenLabs 로컬 대안', 'Piper TTS 대안'],
+    twitterDescription: '로컬 ElevenLabs는 없습니다. Piper(CPU, GPL-3.0)와 XTTS v2(복제, 비상업)가 가장 가까운 무료 선택지입니다. 비교해 보세요.',
+    leadAnswerBlock: '**대부분에게는 ElevenLabs가 가장 쉬운 선택입니다. 무료 1만 크레딧이 제공되는 관리형 클라우드이며 로컬 버전은 없습니다.** Piper는 무료이고 CPU에 가벼운 로컬 선택지, XTTS v2는 로컬 음성 복제를 지원하지만 GPU가 필요하고 2023년 이후 모델 업데이트가 없습니다.',
     quickAnswerTop: {
       ko: {
         question: 'ElevenLabs와 로컬 TTS 중 무엇을 써야 하나요?',
         answer: 'ElevenLabs는 관리형 클라우드 플랫폼으로, 빠르고 완성도가 높으며 손이 거의 가지 않습니다. 무료 티어와 사용량 기반 API 요금제를 제공합니다. 로컬 TTS(Piper, XTTS v2)는 오프라인 통제권을 제공하지만 설정, 하드웨어, 운영 책임이 필요합니다. 종합적으로 최선: ElevenLabs. 오프라인·임베디드 기기에 최선: Piper. 로컬 음성 복제에 최선: XTTS v2.',
         bullets: [
+          '확인 결과(2026-11-19): ElevenLabs는 2026-09-28에 Eleven v4(90개 이상 언어)를 출시했으며 요금제 가격은 그대로입니다. Piper는 OHF-Voice/piper1-gpl에서 관리되고(GPL-3.0, 최신 릴리스 v1.8.0, 2026-09-04) 원래의 rhasspy/piper 저장소는 보관(archived) 상태입니다. XTTS v2는 2023년 12월 이후 모델 업데이트가 없고 Coqui는 2024년 1월에 운영을 종료했습니다. 가중치는 비상업 CPML 라이선스를 유지하며, 커뮤니티 툴킷 포크 idiap/coqui-ai-TTS는 여전히 활발합니다(v0.28.0, 2026-10-19). XTTS v2는 17개 언어를 지원합니다.',
           'ElevenLabs: 무료 티어(월 10,000 크레딧), Starter 월 $6(3만 크레딧), Creator 월 $22(12만 1천 크레딧), Pro 월 $99(60만 크레딧), Scale 월 $299, Business 월 $990. 구독 없이 쓸 수 있는 사용량 기반 API 크레딧도 제공합니다.',
           'ElevenLabs는 2026년 5월 셀프서비스 API 요금을 최대 55% 인하했고, 월 구독을 원하지 않는 개발자를 위해 사용량 기반 결제를 도입했습니다.',
           'Piper: 무료 GPL-3.0 라이선스 엔진(음성은 별도 라이선스)으로 CPU에 친화적이며, 설치 후에는 오프라인으로 작동합니다. 개별 음성·모델 라이선스는 다를 수 있습니다.',
           'XTTS v2: 무료 엔진으로 짧은 참조 음성 클립으로 음성 복제를 지원하며, 더 많은 설정과 대개 GPU가 필요합니다.',
           '대부분의 크리에이터에게는 먼저 ElevenLabs 무료 티어를 테스트해볼 것을 권장합니다. 오프라인, 프라이버시, 규모 면에서 구체적인 제약에 부딪힐 때만 로컬 TTS로 전환하세요.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -6756,7 +7052,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/elevenlabs-vs-local-tts-hero-ko.webp',
     toc: [
       { label: '빠른 답변', anchor: 'quick-answer' },
-      { label: '결론', anchor: 'short-answer' },
+      { label: '간단한 답변', anchor: 'short-answer' },
+      { label: '핵심 내용', anchor: 'tldr' },
       { label: '대부분에게 권장하는 경로', anchor: 'recommended-path' },
       { label: '한눈에 보기', anchor: 'at-a-glance' },
       { label: '진짜 비교: 서비스 vs 스택', anchor: 'service-vs-stack' },
@@ -6795,13 +7092,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     ],
     sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          'ElevenLabs는 로컬 버전이 없는 유료 클라우드입니다. 월 1만 크레딧 무료, 유료 요금제는 월 6달러부터입니다.',
+          'Piper는 무료(GPL-3.0)이며 CPU에 가볍고 오프라인으로 동작합니다. OHF-Voice/piper1-gpl에서 관리됩니다(v1.8.0).',
+          'XTTS v2는 비상업 라이선스로 17개 언어의 로컬 음성 복제를 지원하지만 GPU가 필요하고 2023년 12월 이후 모델 업데이트가 없습니다.',
+          '먼저 ElevenLabs 무료 요금제로 시작하고, 오프라인이나 CPU 전용이면 Piper를, 로컬 복제가 필요하고 라이선스가 맞을 때만 XTTS v2를 선택하세요.'
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'XTTS v2는 2023년 12월 이후 모델 업데이트가 없고, Coqui는 2024년 1월에 운영을 종료했습니다. 가중치는 비상업 CPML 라이선스를 유지하며 프로젝트가 더 이상 관리되지 않을 수 있으니 의존하기 전에 확인하세요. 여전히 업데이트되는 것은 커뮤니티 툴킷 포크 idiap/coqui-ai-TTS뿐입니다(v0.28.0, 2026년 10월 19일). 확인일: 2026년 11월 19일.'
+          }
+        ]
+      },
       intro: {
         id: 'quick-answer',
         content: 'ElevenLabs는 호스팅형 음성 플랫폼입니다. 현재 플랜은 텍스트 음성 변환을 다른 음성·미디어 기능과 묶어 제공하며, 크레딧은 제품 간에 공유됩니다. 무료 티어는 월 10,000 크레딧을 제공하며, 유료 플랜은 상업적 라이선스 이용과 더 많은 허용량을 추가합니다. 기능, 크레딧, 가격은 변경될 수 있으므로 특정 수치에 의존하기 전에 실시간 가격 페이지를 확인하세요.\n\nPiper는 오픈소스 로컬 TTS 엔진입니다. 현재 활발히 유지보수되는 저장소(OHF-Voice/piper1-gpl)는 GPL-3.0 라이선스입니다. 프로젝트 초기 버전은 MIT 라이선스였지만 해당 저장소는 아카이브되었으므로, MIT 라이선스라고 함부로 가정하지 마세요. 개별 음성 데이터셋/체크포인트의 라이선스와 사용 목적은 엔진 라이선스와 다를 수 있고, 서로 간에도 다를 수 있습니다. 엔진 라이선스와 선택한 음성/모델 라이선스는 별개의 문제로 취급하고, 상업적 사용 전에 현재 저장소를 기준으로 둘 다 확인하세요.\n\nXTTS v2와 그 외 로컬 복제가 가능한 스택은 더 큰 로컬 통제권을 제공할 수 있지만, 보통 더 많은 설정, 더 무거운 하드웨어, 모델·음성·상업적 이용 약관에 대한 더 신중한 검토가 필요합니다.\n\n따라서 올바른 질문은 "어떤 음성이 가장 좋은가?"가 아닙니다. 진짜 질문은 다음과 같습니다. **인프라를 대신 처리해주는 프로덕션 서비스를 원하는가, 아니면 직접 운영하고 통제하는 로컬 음성 시스템을 원하는가?**\n\n이 가이드의 가격 및 플랜 세부 정보는 업데이트할 때마다 실시간 가격 페이지와 대조합니다. 제공업체가 예고 없이 플랜과 크레딧 할당량을 바꾸므로, 결정을 내리기 전에 그곳에서 현재 수치를 확인하세요.'
       },
       shortAnswer: {
         id: 'short-answer',
-        title: '결론',
+        title: '간단한 답변',
         content: '🏆 **종합적으로 최선:** ElevenLabs — 로컬 설정 없이 완성도 높은 전문가급 음성으로 가는 가장 쉬운 길입니다.\n💰 **최선의 무료/로컬 TTS:** Piper — 무료, GPL-3.0 라이선스, CPU 친화적, 오프라인 사용 가능.\n🔒 **로컬 음성 복제에 최선:** XTTS v2 — 직접 관리하는 하드웨어에서 짧은 참조 음성 클립으로 음성을 복제합니다.\n⚡ **오늘 당장 보이스오버가 필요할 때 최선:** ElevenLabs.\n🖥️ **Raspberry Pi·CPU 전용에 최선:** Piper.\n🧑‍💻 **최대한의 로컬 통제권을 원하는 개발자에게 최선:** XTTS v2.\n\n대부분의 크리에이터와 기업은 ElevenLabs부터 시작하세요. 오프라인, 프라이버시 민감, 임베디드 용도라면 Piper를 살펴보세요. 로컬 음성 복제라면 XTTS v2와 비슷한 로컬 모델을 조사해보세요.',
         decisionBlock: {
           title: 'TTS 방식을 선택하세요',
@@ -7070,9 +7383,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Dimension: '언어',
-            ElevenLabs: '다수(수십 개, 플랫폼에 따라 다름 — 현재 문서 확인)',
+            ElevenLabs: 'Eleven v4 기준 90개 이상 언어(ElevenLabs 문서 기준)',
             Piper: '여러 언어에 걸친 다수의 커뮤니티 음성 패키지',
-            'XTTS v2 or Similar Local Cloning Stack': '언어 간 복제를 포함해 공식적으로 문서화된 16개 언어'
+            'XTTS v2 or Similar Local Cloning Stack': '언어 간 복제를 포함해 공식적으로 문서화된 17개 언어'
           },
           {
             Dimension: 'CPU 전용 작동',
@@ -7128,14 +7441,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': '하드웨어', 'Piper': '라즈베리 파이를 포함한 CPU', 'XTTS v2': 'GPU가 바람직하며 상당히 더 무거움' },
           { '': '속도', 'Piper': '빠름', 'XTTS v2': '더 느리며 품질과 복제에 초점' },
           { '': '음성 복제', 'Piper': '불가', 'XTTS v2': '가능, 짧은 참조 클립으로부터' },
-          { '': '다국어', 'Piper': '다수의 커뮤니티 음성 패키지', 'XTTS v2': '언어 간 복제를 포함한 16개 언어' },
+          { '': '다국어', 'Piper': '다수의 커뮤니티 음성 패키지', 'XTTS v2': '언어 간 복제를 포함한 17개 언어' },
           { '': '복잡성', 'Piper': '낮음 — 가벼운 비서 구축', 'XTTS v2': '높음 — 더 많은 설정과 라이선스 검토 필요' },
         ],
         items: [
           '**Piper를 선택해야 할 때:** 속도가 필요하고, CPU 전용 하드웨어를 사용하며, 라즈베리 파이 지원이 필요하고, 복제가 필요 없으며, 가벼운 음성 비서를 원할 때.',
           '**XTTS v2를 선택해야 할 때:** 음성 복제가 필요하고, 속도보다 음성 품질과 자연스러움이 더 중요하며, GPU가 있고, 다국어 복제가 중요하며, 더 기술적인 설정에 익숙할 때.'
         ],
-        note: 'Piper와 XTTS v2는 가장 확립된 두 가지 로컬 옵션이지만, 유일한 선택지는 아닙니다. 보급형 하드웨어에서 더 빠른 합성을 목표로 하는 최신 로컬 TTS 모델과, XTTS 수준의 자연스러움과 복제 품질에 더 가까이 다가가는 모델들이 계속 등장하고 있습니다. 처음부터 로컬 TTS를 평가한다면 결정을 내리기 전에 현재 커뮤니티 리더보드를 잠깐 살펴볼 가치가 있습니다 — 하지만 대부분의 프로젝트에서 Piper와 XTTS v2는 여전히 가장 안전하고 가장 잘 문서화된 출발점입니다.',
+        note: 'Piper와 XTTS v2는 가장 확립된 두 가지 로컬 옵션이지만, 유일한 선택지는 아닙니다. 보급형 하드웨어에서 더 빠른 합성을 목표로 하는 최신 로컬 TTS 모델과, XTTS 수준의 자연스러움과 복제 품질에 더 가까이 다가가는 모델들이 계속 등장하고 있습니다. 처음부터 로컬 TTS를 평가한다면 결정을 내리기 전에 현재 커뮤니티 리더보드를 잠깐 살펴볼 가치가 있습니다 — 하지만 많은 프로젝트에서 Piper와 XTTS v2는 여전히 문서화가 잘 된 출발점이지만, XTTS v2는 더 이상 업데이트되지 않습니다.',
         blockquote: '두 엔진에 대한 전체 라이선스 세부 정보 — 음성별, 체크포인트별 약관 포함 — 는 [로컬 TTS 및 음성 복제 라이선스 가이드](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하세요.'
       },
       hardwareGuide: {
@@ -7345,7 +7658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'XTTS v2로 음성을 복제할 수 있나요?',
-            a: '네. XTTS v2 문서는 짧은 참조 오디오 클립을 이용한 음성 복제를 강조하며, 지원하는 16개 언어 간 언어 간 복제도 포함됩니다.'
+            a: '네. XTTS v2 문서는 짧은 참조 오디오 클립을 이용한 음성 복제를 강조하며, 지원하는 17개 언어 간 언어 간 복제도 포함됩니다.'
           },
           {
             q: 'XTTS v2를 상업적으로 사용할 수 있나요?',
@@ -7362,6 +7675,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '대량 사용 시 어느 쪽이 더 저렴한가요?',
             a: '실제 사용량과 자신의 시간의 가치에 따라 달라집니다. 클라우드 종량제 요금은 사용량에 따라 증가할 수 있는 반면, 로컬 하드웨어와 설정은 거의 일회성 비용에 지속적인 운영 비용이 더해집니다. 전환하기 전에 가상의 수치가 아니라 실제 요청량을 기준으로 계산하세요.'
+          },
+          {
+            q: 'ElevenLabs의 로컬 버전이 있나요?',
+            a: '없습니다. ElevenLabs는 클라우드 서비스이며, 셀프서비스 요금제에는 다운로드 가능한 모델 가중치나 로컬 설치 프로그램이 제공되지 않아 모든 음성 생성이 해당 서버를 거칩니다. 가장 가까운 로컬 선택지는 Piper(무료, GPL-3.0, CPU 친화, 오프라인 사용 가능)와 XTTS v2(짧은 클립 기반 로컬 음성 복제, 비상업 CPML 라이선스, GPU 권장)입니다. 둘 다 ElevenLabs 모델이 아니며, 엄선된 음성 라이브러리나 관리형 서비스도 제공하지 않습니다.'
+          },
+          {
+            q: 'Piper의 좋은 대안은 무엇인가요?',
+            a: 'Piper에서 무엇이 부족한지에 따라 다릅니다. 음성 복제라면 XTTS v2(17개 언어, 비상업 라이선스, GPU 권장). 8개 언어의 54개 고정 음성을 가진 작은 무료 모델이며 관대한 Apache 2.0 라이선스라면 Kokoro-82M(다만 공식 저장소는 2025-08-06 이후 업데이트가 없습니다). 복제와 90개 이상 언어를 지원하는 관리형 서비스라면 ElevenLabs. Chatterbox는 MIT 라이선스이지만 2026년 8월에 개발이 종료되었습니다.'
           }
         ]
       },
@@ -7480,10 +7801,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': '2026년 ElevenLabs vs Piper vs XTTS v2: 최고의 TTS는?',
-      'description': 'ElevenLabs는 완성도 높은 AI 음성으로 가는 가장 빠른 길입니다. Piper는 무료이고 CPU에 친화적인 로컬 선택지입니다. XTTS v2는 로컬 음성 복제에서 앞섭니다.',
+      'headline': 'ElevenLabs 로컬 대안: Piper vs XTTS v2 비교(2026)',
+      'description': 'ElevenLabs의 로컬 버전은 없지만 Piper(무료, CPU 친화, GPL-3.0)와 XTTS v2(음성 복제, 비상업 라이선스)가 가장 가깝습니다. 선택 기준을 정리했습니다.',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-09-03',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -7626,7 +7947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'XTTS v2로 음성을 복제할 수 있나요?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '네. XTTS v2 문서는 짧은 참조 오디오 클립을 이용한 음성 복제를 강조하며, 지원하는 16개 언어 간 언어 간 복제도 포함됩니다.'
+            'text': '네. XTTS v2 문서는 짧은 참조 오디오 클립을 이용한 음성 복제를 강조하며, 지원하는 17개 언어 간 언어 간 복제도 포함됩니다.'
           }
         },
         {
@@ -7660,40 +7981,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': '실제 사용량과 자신의 시간의 가치에 따라 달라집니다. 클라우드 종량제 요금은 사용량에 따라 증가할 수 있는 반면, 로컬 하드웨어와 설정은 거의 일회성 비용에 지속적인 운영 비용이 더해집니다. 전환하기 전에 가상의 수치가 아니라 실제 요청량을 기준으로 계산하세요.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ElevenLabs의 로컬 버전이 있나요?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '없습니다. ElevenLabs는 클라우드 서비스이며, 셀프서비스 요금제에는 다운로드 가능한 모델 가중치나 로컬 설치 프로그램이 제공되지 않아 모든 음성 생성이 해당 서버를 거칩니다. 가장 가까운 로컬 선택지는 Piper(무료, GPL-3.0, CPU 친화, 오프라인 사용 가능)와 XTTS v2(짧은 클립 기반 로컬 음성 복제, 비상업 CPML 라이선스, GPU 권장)입니다. 둘 다 ElevenLabs 모델이 아니며, 엄선된 음성 라이브러리나 관리형 서비스도 제공하지 않습니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Piper의 좋은 대안은 무엇인가요?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Piper에서 무엇이 부족한지에 따라 다릅니다. 음성 복제라면 XTTS v2(17개 언어, 비상업 라이선스, GPU 권장). 8개 언어의 54개 고정 음성을 가진 작은 무료 모델이며 관대한 Apache 2.0 라이선스라면 Kokoro-82M(다만 공식 저장소는 2025-08-06 이후 업데이트가 없습니다). 복제와 90개 이상 언어를 지원하는 관리형 서비스라면 ElevenLabs. Chatterbox는 MIT 라이선스이지만 2026년 8월에 개발이 종료되었습니다.'
+          }
         }
       ]
     }
   },
   ar: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-22',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'ElevenLabs مقابل Piper مقابل XTTS v2: أيهما الأفضل في 2026؟',
-    seoTitle: 'ElevenLabs مقابل Piper مقابل XTTS v2 (2026): أيهما الأفضل؟',
+    title: 'بدائل ElevenLabs المحلية: Piper مقابل XTTS v2 (2026)',
+    seoTitle: 'بدائل ElevenLabs المحلية: Piper مقابل XTTS v2 (2026)',
     intro: 'يوفر ElevenLabs أسهل طريق للحصول على صوت ذكاء اصطناعي احترافي. أما Piper فهو الخيار المحلي الخفيف للأجهزة التي تعمل بالمعالج المركزي فقط أو دون اتصال بالإنترنت. أما XTTS v2 فهو الخيار الأكثر إثارة للاهتمام عندما يكون استنساخ الصوت المحلي والخصوصية هما الأولوية. عند اختيار نظام TTS ليوتيوب أو البودكاست أو وكلاء الصوت أو الكتب الصوتية أو المحتوى التجاري، لا يتعلق القرار فقط بأي صوت يبدو أفضل — بل بما إذا كنت تريد خدمة سحابية مُدارة أم حزمة صوت محلية تُشغّلها بنفسك.',
-    metaDescription: 'ElevenLabs: أسرع طريق لصوت ذكاء اصطناعي احترافي. Piper: الخيار المحلي المجاني المتوافق مع المعالج المركزي. XTTS v2: الأفضل لاستنساخ الصوت محليًا.',
+    metaDescription: 'لا توجد نسخة محلية من ElevenLabs، لكن Piper (مجاني، يناسب المعالج، GPL-3.0) وXTTS v2 (استنساخ صوتي، ترخيص غير تجاري) الأقرب. أيهما تختار؟',
     publishDate: '2026-08-22',
-    dateModified: '2026-09-03',
+    dateModified: '2026-11-19',
     readTime: '12 دقيقة قراءة',
     educationalLevel: 'Intermediate',
     audience: 'صناع المحتوى والمطورون والفرق التي تختار بين تحويل النص إلى كلام السحابي والاستضافة الذاتية لتوليد الكلام.',
     primaryTerm: 'ElevenLabs مقابل تحويل النص إلى كلام المحلي',
-    targetKeywords: ['ElevenLabs مقابل Piper', 'تحويل نص إلى كلام محلي', 'Piper TTS', 'XTTS v2', 'تحويل النص إلى كلام سحابي مقابل محلي', 'TTS مجاني', 'استنساخ الصوت', 'توليد الكلام دون اتصال بالإنترنت'],
-    twitterDescription: 'هل تدفع مقابل ElevenLabs أم تشغّل Piper محليًا؟ قارن بين TTS السحابي والاستضافة الذاتية لتوليد الكلام.',
-    leadAnswerBlock: '**بالنسبة لمعظم صناع المحتوى والشركات، يُعد ElevenLabs الخيار الأفضل بشكل عام — منصة صوتية مُدارة توفر خطة مجانية برصيد 10,000 دون أي إعداد محلي.** أما Piper فهو أفضل خيار مجاني/محلي للأجهزة التي تعمل بالمعالج المركزي فقط أو دون اتصال بالإنترنت مثل Raspberry Pi. أما XTTS v2 فهو الخيار الأفضل تحديدًا لاستنساخ الصوت محليًا، على حساب وحدة معالجة رسومية (GPU) وقدر أكبر بكثير من الإعداد.',
+    targetKeywords: ['ElevenLabs مقابل Piper', 'تحويل نص إلى كلام محلي', 'Piper TTS', 'XTTS v2', 'تحويل النص إلى كلام سحابي مقابل محلي', 'TTS مجاني', 'استنساخ الصوت', 'توليد الكلام دون اتصال بالإنترنت', 'بديل ElevenLabs محلي', 'بديل Piper TTS'],
+    twitterDescription: 'لا يوجد ElevenLabs محلي. Piper (معالج، GPL-3.0) وXTTS v2 (استنساخ، غير تجاري) أقرب الخيارات المجانية. إليك المقارنة.',
+    leadAnswerBlock: '**لمعظم الناس ElevenLabs هو الخيار الأسهل: خدمة سحابية مُدارة بخطة مجانية بعشرة آلاف رصيد ودون نسخة محلية.** Piper خيار محلي مجاني خفيف على المعالج؛ وXTTS v2 يضيف استنساخ الصوت محليًا لكنه يحتاج GPU ولم يتلقَّ تحديثًا للنموذج منذ 2023.',
     quickAnswerTop: {
       ar: {
         question: 'هل يجب أن أستخدم ElevenLabs أم تحويل النص إلى كلام المحلي؟',
         answer: 'ElevenLabs منصة سحابية مُدارة — سريعة واحترافية ولا تتطلب أي تدخل تشغيلي منك، وتوفر خطة مجانية وتسعير API حسب الاستخدام. أما تحويل النص إلى كلام المحلي (Piper، XTTS v2) فيمنحك تحكمًا محليًا كاملًا دون اتصال بالإنترنت، لكنه يتطلب إعدادًا وأجهزة ومسؤولية تشغيلية. الأفضل بشكل عام: ElevenLabs. الأفضل للأجهزة العاملة دون اتصال بالإنترنت أو المدمجة: Piper. الأفضل لاستنساخ الصوت محليًا: XTTS v2.',
         bullets: [
+          'نتيجة التحقق (2026-11-19): أطلقت ElevenLabs نموذج Eleven v4 (أكثر من 90 لغة) في 2026-09-28 ولم تتغير أسعار خططها. يُصان Piper في OHF-Voice/piper1-gpl (GPL-3.0؛ أحدث إصدار v1.8.0 بتاريخ 2026-09-04) بينما أُرشف المستودع الأصلي rhasspy/piper. لم يتلقَّ XTTS v2 أي تحديث للنموذج منذ ديسمبر 2023، وأوقفت Coqui نشاطها في يناير 2024؛ وتبقى أوزانه تحت رخصة CPML غير التجارية، أما فرع مجتمعي لمجموعة الأدوات هو idiap/coqui-ai-TTS فما زال نشطًا (v0.28.0 بتاريخ 2026-10-19). يدعم XTTS v2 ‏17 لغة.',
           'ElevenLabs: خطة مجانية (10,000 رصيد شهريًا)، Starter بسعر 6 دولارات شهريًا (30 ألف رصيد)، Creator بسعر 22 دولارًا شهريًا (121 ألف رصيد)، Pro بسعر 99 دولارًا شهريًا (600 ألف رصيد)، Scale بسعر 299 دولارًا شهريًا، Business بسعر 990 دولارًا شهريًا. يوفر أيضًا أرصدة API حسب الاستخدام دون اشتراك.',
           'خفّض ElevenLabs أسعار واجهة برمجة التطبيقات (API) الذاتية الخدمة بنسبة تصل إلى 55% في مايو 2026، وأطلق نظام الدفع حسب الاستخدام للمطورين الذين لا يريدون اشتراكًا شهريًا.',
           'Piper: محرك مجاني مرخّص بموجب GPL-3.0 (الأصوات مرخّصة بشكل منفصل)، متوافق مع المعالج المركزي، ويعمل دون اتصال بالإنترنت بعد التثبيت. تراخيص الأصوات/النماذج الفردية قد تختلف.',
           'XTTS v2: محرك مجاني، يدعم استنساخ الصوت من مقطع صوتي مرجعي قصير، يتطلب إعدادًا أكبر وعادةً وحدة معالجة رسومية.',
           'بالنسبة لمعظم صناع المحتوى: جرّب أولًا الخطة المجانية من ElevenLabs. انتقل إلى TTS المحلي فقط إذا واجهت قيدًا محددًا يتعلق بالعمل دون اتصال بالإنترنت أو الخصوصية أو حجم الاستخدام.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -7710,6 +8048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: 'الإجابة السريعة', anchor: 'quick-answer' },
       { label: 'خلاصتنا', anchor: 'short-answer' },
+      { label: 'النقاط الرئيسية', anchor: 'tldr' },
       { label: 'المسار الموصى به لمعظم القراء', anchor: 'recommended-path' },
       { label: 'نظرة سريعة', anchor: 'at-a-glance' },
       { label: 'المقارنة الحقيقية: خدمة مقابل حزمة تقنية', anchor: 'service-vs-stack' },
@@ -7748,6 +8087,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       }
     ],
     sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          'ElevenLabs سحابة مدفوعة دون نسخة محلية: 10 آلاف رصيد مجاني شهريًا وخطط مدفوعة تبدأ من 6 دولارات شهريًا.',
+          'Piper مجاني برخصة GPL-3.0 وخفيف على المعالج ويعمل دون اتصال؛ ويُصان في OHF-Voice/piper1-gpl (v1.8.0).',
+          'يستنسخ XTTS v2 الصوت محليًا في 17 لغة برخصة غير تجارية، ويحتاج GPU، ولم يتلقَّ تحديثًا للنموذج منذ ديسمبر 2023.',
+          'ابدأ بالخطة المجانية من ElevenLabs؛ واختر Piper للاحتياج دون اتصال أو بالمعالج فقط، وXTTS v2 فقط إذا احتجت الاستنساخ المحلي وناسبتك الرخصة.'
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'لم يتلقَّ XTTS v2 أي تحديث للنموذج منذ ديسمبر 2023، وأوقفت Coqui نشاطها في يناير 2024. تبقى الأوزان تحت رخصة CPML غير التجارية وقد يكون المشروع غير مُصان، فتحقق قبل الاعتماد عليه. والفرع المجتمعي الوحيد الذي ما زال يُحدَّث هو فرع مجموعة الأدوات idiap/coqui-ai-TTS (v0.28.0، 19 أكتوبر 2026). تاريخ التحقق: 19 نوفمبر 2026.'
+          }
+        ]
+      },
       intro: {
         id: 'quick-answer',
         content: 'ElevenLabs منصة صوتية مُستضافة. تجمع خططها الحالية بين تحويل النص إلى كلام وميزات صوتية وإعلامية أخرى؛ ويتم تقاسم الأرصدة بين المنتجات. تتضمن خطتها المجانية 10,000 رصيد شهريًا، بينما تضيف الخطط المدفوعة وصولًا إلى الترخيص التجاري وحصصًا أعلى. تحقق من صفحة التسعير الحية قبل الاعتماد على أي رقم لأن الميزات والأرصدة والأسعار قابلة للتغيير.\n\nPiper محرك تحويل نص إلى كلام محلي مفتوح المصدر. المستودع الذي يخضع للصيانة النشطة حاليًا (OHF-Voice/piper1-gpl) مرخّص بموجب GPL-3.0؛ كانت نسخة سابقة من المشروع مرخّصة بموجب MIT قبل أن يُؤرشف ذلك المستودع، لذا لا تفترض ترخيص MIT دون تحقق. تراخيص واستخدامات ملفات الأصوات ونقاط التحقق الفردية قد تختلف عن ترخيص المحرك وعن بعضها البعض. تعامل مع ترخيص المحرك وترخيص الصوت/النموذج المُختار كمسألتين منفصلتين، وتحقق من كليهما مقابل المستودع الحالي قبل أي استخدام تجاري.\n\nيمكن أن يمنحك XTTS v2 وحزم الاستنساخ المحلية الأخرى تحكمًا محليًا أكبر، لكنها غالبًا ما تتطلب إعدادًا أكثر وأجهزة أثقل ومراجعة أدق لشروط النموذج والصوت والاستخدام التجاري.\n\nلذلك، فإن القرار الصحيح ليس "أي صوت هو الأفضل؟" بل هو: **هل تريد خدمة إنتاجية تُخفي عنك تفاصيل البنية التحتية، أم نظام كلام محلي تُشغّله وتتحكم فيه بنفسك؟**\n\nتتم مطابقة التسعير وتفاصيل الخطط في هذا الدليل مع صفحة التسعير الحية عند كل تحديث — تأكد من الأرقام الحالية هناك، لأن مزودي الخدمة يغيّرون الخطط وحصص الأرصدة دون إشعار مسبق.'
@@ -8024,9 +8379,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Dimension: 'اللغات',
-            ElevenLabs: 'عديدة (عشرات، حسب المنصة — تحقق من الوثائق الحالية)',
+            ElevenLabs: 'أكثر من 90 لغة في Eleven v4 (بحسب وثائق ElevenLabs)',
             Piper: 'العديد من حزم الأصوات المجتمعية عبر لغات مختلفة',
-            'XTTS v2 or Similar Local Cloning Stack': '16 لغة موثقة رسميًا، بما في ذلك الاستنساخ عبر اللغات'
+            'XTTS v2 or Similar Local Cloning Stack': '17 لغة موثقة رسميًا، بما في ذلك الاستنساخ عبر اللغات'
           },
           {
             Dimension: 'التشغيل بالمعالج المركزي فقط',
@@ -8082,14 +8437,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'الأجهزة', 'Piper': 'معالج مركزي، بما في ذلك Raspberry Pi', 'XTTS v2': 'يُفضّل وحدة معالجة رسومية، أثقل بكثير' },
           { '': 'السرعة', 'Piper': 'سريع', 'XTTS v2': 'أبطأ، يركز على الجودة والاستنساخ' },
           { '': 'استنساخ الصوت', 'Piper': 'لا', 'XTTS v2': 'نعم، من مقطع مرجعي قصير' },
-          { '': 'متعدد اللغات', 'Piper': 'العديد من حزم الأصوات المجتمعية', 'XTTS v2': '16 لغة، مع استنساخ عبر اللغات' },
+          { '': 'متعدد اللغات', 'Piper': 'العديد من حزم الأصوات المجتمعية', 'XTTS v2': '17 لغة، مع استنساخ عبر اللغات' },
           { '': 'التعقيد', 'Piper': 'منخفض — بناء مساعد خفيف', 'XTTS v2': 'أعلى — إعداد أكبر ومراجعة ترخيص' },
         ],
         items: [
           '**اختر Piper عندما:** تحتاج إلى سرعة، لديك أجهزة معالج مركزي فقط، تحتاج إلى دعم Raspberry Pi، لا تحتاج إلى استنساخ، وتريد مساعدًا صوتيًا خفيفًا.',
           '**اختر XTTS v2 عندما:** تحتاج إلى استنساخ الصوت، وتهمك جودة الصوت وطبيعيته أكثر من السرعة، ولديك وحدة معالجة رسومية، والاستنساخ متعدد اللغات مهم لك، وأنت مرتاح لإعداد أكثر تقنية.'
         ],
-        note: 'يُعد Piper و XTTS v2 الخيارين المحليين الأكثر رسوخًا، لكنهما ليسا الوحيدين. تظهر بانتظام نماذج TTS محلية أحدث تستهدف توليدًا أسرع على أجهزة متواضعة، وأخرى تقترب أكثر من مستوى XTTS في الطبيعية وجودة الاستنساخ. إذا كنت تُقيّم TTS المحلي من الصفر، يستحق الأمر إلقاء نظرة سريعة على لوحات ترتيب المجتمع الحالية قبل الالتزام — لكن يبقى Piper و XTTS v2 أكثر نقاط الانطلاق أمانًا وتوثيقًا لمعظم المشاريع.',
+        note: 'يُعد Piper و XTTS v2 الخيارين المحليين الأكثر رسوخًا، لكنهما ليسا الوحيدين. تظهر بانتظام نماذج TTS محلية أحدث تستهدف توليدًا أسرع على أجهزة متواضعة، وأخرى تقترب أكثر من مستوى XTTS في الطبيعية وجودة الاستنساخ. إذا كنت تُقيّم TTS المحلي من الصفر، يستحق الأمر إلقاء نظرة سريعة على لوحات ترتيب المجتمع الحالية قبل الالتزام — لكن يبقى Piper و XTTS v2 نقطتي انطلاق موثقتين جيدًا لكثير من المشاريع، رغم أن XTTS v2 لم يعد يُحدَّث.',
         blockquote: 'للاطلاع على التفصيل الكامل للترخيص لكلا المحركين — بما في ذلك الشروط الخاصة بكل صوت ونقطة تحقق — راجع دليلنا [تراخيص TTS واستنساخ الصوت المحلي](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
       },
       hardwareGuide: {
@@ -8299,7 +8654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكن لـ XTTS v2 استنساخ صوت؟',
-            a: 'نعم. تُبرز وثائق XTTS v2 استنساخ الصوت من مقطع صوتي مرجعي قصير، بما في ذلك الاستنساخ عبر اللغات ضمن 16 لغة مدعومة.'
+            a: 'نعم. تُبرز وثائق XTTS v2 استنساخ الصوت من مقطع صوتي مرجعي قصير، بما في ذلك الاستنساخ عبر اللغات ضمن 17 لغة مدعومة.'
           },
           {
             q: 'هل يمكن استخدام XTTS v2 تجاريًا؟',
@@ -8316,6 +8671,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'أيهما أرخص عند الحجم الكبير؟',
             a: 'يعتمد ذلك على استخدامك الفعلي وقيمة وقتك. قد ينمو التسعير السحابي المقيس مع الحجم، بينما تكون الأجهزة والإعداد المحليين تكلفة شبه لمرة واحدة بالإضافة إلى عمليات تشغيلية مستمرة. احسب باستخدام حجم طلباتك الحقيقي، لا حجم افتراضي، قبل التحول.'
+          },
+          {
+            q: 'هل توجد نسخة محلية من ElevenLabs؟',
+            a: 'لا. ElevenLabs خدمة سحابية: لا تنشر أوزان نموذج قابلة للتنزيل ولا مثبّتًا محليًا لخططها ذاتية الخدمة، لذا تمر كل عملية توليد عبر خوادمها. أقرب الخيارات المحلية هما Piper (مجاني، GPL-3.0، خفيف على المعالج، يعمل دون اتصال) وXTTS v2 (استنساخ صوتي محلي من مقطع قصير، ترخيص CPML غير تجاري، يوصى بوحدة معالجة رسومية). ولا يُعدّ أيٌّ منهما نموذجًا من ElevenLabs، ولا يوفّر أيٌّ منهما مكتبة أصواتها المنتقاة أو خدمتها المُدارة.'
+          },
+          {
+            q: 'ما بديل جيد لـ Piper؟',
+            a: 'يعتمد ذلك على ما ينقصك في Piper. لاستنساخ الصوت: XTTS v2 (17 لغة، ترخيص غير تجاري، يوصى بوحدة معالجة رسومية). لنموذج صغير مجاني بـ54 صوتًا ثابتًا في 8 لغات وبرخصة Apache 2.0 المتساهلة: Kokoro-82M، رغم أن مستودعه الرسمي لم يُحدَّث منذ 2025-08-06. لخدمة مُدارة مع استنساخ وأكثر من 90 لغة: ElevenLabs. أما Chatterbox فبرخصة MIT لكنه متوقف عن التطوير منذ أغسطس 2026.'
           }
         ]
       },
@@ -8434,10 +8797,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ElevenLabs مقابل Piper مقابل XTTS v2: أيهما الأفضل في 2026؟',
-      'description': 'ElevenLabs: أسرع طريق لصوت ذكاء اصطناعي احترافي. Piper: الخيار المحلي المجاني المتوافق مع المعالج المركزي. XTTS v2: الأفضل لاستنساخ الصوت محليًا.',
+      'headline': 'بدائل ElevenLabs المحلية: Piper مقابل XTTS v2 (2026)',
+      'description': 'لا توجد نسخة محلية من ElevenLabs، لكن Piper (مجاني، يناسب المعالج، GPL-3.0) وXTTS v2 (استنساخ صوتي، ترخيص غير تجاري) الأقرب. أيهما تختار؟',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-09-03',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -8580,7 +8943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'هل يمكن لـ XTTS v2 استنساخ صوت؟',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'نعم. تُبرز وثائق XTTS v2 استنساخ الصوت من مقطع صوتي مرجعي قصير، بما في ذلك الاستنساخ عبر اللغات ضمن 16 لغة مدعومة.'
+            'text': 'نعم. تُبرز وثائق XTTS v2 استنساخ الصوت من مقطع صوتي مرجعي قصير، بما في ذلك الاستنساخ عبر اللغات ضمن 17 لغة مدعومة.'
           }
         },
         {
@@ -8614,10 +8977,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'يعتمد ذلك على استخدامك الفعلي وقيمة وقتك. قد ينمو التسعير السحابي المقيس مع الحجم، بينما تكون الأجهزة والإعداد المحليين تكلفة شبه لمرة واحدة بالإضافة إلى عمليات تشغيلية مستمرة. احسب باستخدام حجم طلباتك الحقيقي، لا حجم افتراضي، قبل التحول.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل توجد نسخة محلية من ElevenLabs؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'لا. ElevenLabs خدمة سحابية: لا تنشر أوزان نموذج قابلة للتنزيل ولا مثبّتًا محليًا لخططها ذاتية الخدمة، لذا تمر كل عملية توليد عبر خوادمها. أقرب الخيارات المحلية هما Piper (مجاني، GPL-3.0، خفيف على المعالج، يعمل دون اتصال) وXTTS v2 (استنساخ صوتي محلي من مقطع قصير، ترخيص CPML غير تجاري، يوصى بوحدة معالجة رسومية). ولا يُعدّ أيٌّ منهما نموذجًا من ElevenLabs، ولا يوفّر أيٌّ منهما مكتبة أصواتها المنتقاة أو خدمتها المُدارة.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ما بديل جيد لـ Piper؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'يعتمد ذلك على ما ينقصك في Piper. لاستنساخ الصوت: XTTS v2 (17 لغة، ترخيص غير تجاري، يوصى بوحدة معالجة رسومية). لنموذج صغير مجاني بـ54 صوتًا ثابتًا في 8 لغات وبرخصة Apache 2.0 المتساهلة: Kokoro-82M، رغم أن مستودعه الرسمي لم يُحدَّث منذ 2025-08-06. لخدمة مُدارة مع استنساخ وأكثر من 90 لغة: ElevenLabs. أما Chatterbox فبرخصة MIT لكنه متوقف عن التطوير منذ أغسطس 2026.'
+          }
         }
       ]
     },
-    current_models_mentioned: [],
+    current_models_mentioned: ['Piper', 'XTTS v2', 'ElevenLabs Eleven v4'],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
     current_benchmarks_used: ['10,000 رصيد شهري (ElevenLabs Free)', '6 دولارات/شهر، 30,000 رصيد (ElevenLabs Starter)', '22 دولارًا/شهر، 121,000 رصيد (ElevenLabs Creator)', '99 دولارًا/شهر، 600,000 رصيد (ElevenLabs Pro)', '299 دولارًا/شهر، 1,800,000 رصيد (ElevenLabs Scale)', '990 دولارًا/شهر، 6,000,000 رصيد (ElevenLabs Business)', 'خفض أسعار API بنسبة تصل إلى 55%، مايو 2026 (ElevenLabs)']
   },

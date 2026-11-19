@@ -35,6 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'sillytavern-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-02', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-11-15', // GitHub API (latest release 1.19.0 on 2026-09-14, last push 2026-11-15 — newer wins), read 2026-11-19
   lastUpstreamUpdateSource: 'https://github.com/SillyTavern/SillyTavern',
 }

@@ -4,34 +4,36 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-11',
+    next_refresh_due: '2027-05-19',
+    last_full_refresh: '2026-11-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'Kokoro vs ElevenLabs: Local TTS vs Cloud Voice AI (2026)',
-    seoTitle: 'Kokoro vs ElevenLabs (2026): Local vs Cloud TTS',
+    title: 'Kokoro vs ElevenLabs: Free Local TTS or Paid Cloud? (2026)',
+    seoTitle: 'Kokoro vs ElevenLabs (2026): Free Local TTS or Paid Cloud?',
     intro: 'Kokoro is an 82-million-parameter, Apache-2.0-licensed open-weight text-to-speech model you download and run yourself, for free, with no internet connection required after setup. ElevenLabs is a paid cloud platform with a much larger voice library and instant voice cloning from a short audio sample. The decision is not which one sounds better in isolation — it is whether you want a free, offline, fixed-voice engine you operate, or a paid, hosted, cloning-capable service you rent.',
-    metaDescription: 'Kokoro is a free, 82M-parameter local TTS model with 54 fixed voices and no internet needed. ElevenLabs is a paid cloud platform with voice cloning. Full comparison.',
+    metaDescription: 'Kokoro is a free, Apache-2.0 local TTS model (82M parameters, 54 voices, 8 languages). ElevenLabs is paid cloud with cloning and 90+ languages. Compared.',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
+    dateModified: '2026-11-19',
     readTime: '11 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers, content creators, and teams choosing between a free local TTS model and a paid cloud voice platform.',
     primaryTerm: 'Kokoro vs ElevenLabs',
-    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'ElevenLabs alternative', 'local text-to-speech', 'open source TTS', 'free TTS model', 'offline voice synthesis', 'Kokoro-82M'],
-    twitterDescription: 'Kokoro is a free 82M-parameter local TTS model. ElevenLabs is a paid cloud platform with voice cloning. Here\'s how they actually compare.',
-    leadAnswerBlock: '**Choose Kokoro if you want free, offline, unlimited text-to-speech from a fixed set of voices and are comfortable running a model yourself. Choose ElevenLabs if you need voice cloning, dozens of languages, or a polished voice today with no local setup.** Kokoro is an 82M-parameter, Apache-2.0-licensed model that runs on CPU or a modest GPU. ElevenLabs is a metered cloud API with a free tier and paid plans.',
+    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'ElevenLabs alternative', 'local text-to-speech', 'open source TTS', 'free TTS model', 'offline voice synthesis', 'Kokoro-82M', 'ElevenLabs local', 'Kokoro TTS languages'],
+    twitterDescription: 'Kokoro is free, local and fixed-voice. ElevenLabs is paid, cloud-based and clones voices. Plans, licences and languages rechecked.',
+    leadAnswerBlock: '**Choose Kokoro for free, offline, fixed-voice text-to-speech you run yourself; choose ElevenLabs for voice cloning, 90+ languages or a polished voice with no setup.** Kokoro is an 82M-parameter, Apache-2.0 model with no official update since August 2025.',
     quickAnswerTop: {
       en: {
         question: 'Should I use Kokoro or ElevenLabs?',
         answer: 'Kokoro is a free, open-weight 82-million-parameter local TTS model (Apache 2.0, by hexgrad) that runs on CPU or a modest GPU and ships with 54 preset voices across 8 languages — but it has no built-in voice cloning. ElevenLabs is a paid cloud platform with a much larger voice catalog, zero-shot voice cloning from a short sample, and broader language coverage, at the cost of a subscription and sending your text to a third-party server. Best for free/offline/fixed-voice use: Kokoro. Best for voice cloning or maximum language coverage: ElevenLabs.',
         bullets: [
+          'Status check (2026-11-19): ElevenLabs released Eleven v4 (90+ languages) on 2026-09-28 and its plan prices are unchanged. Kokoro-82M is still on v1.0 (published 2025-01-27) and the official hexgrad repository was last updated on 2025-08-06, so there has been no official update for over a year; community wrappers such as Kokoro-FastAPI remain active.',
           'Kokoro: 82M parameters, Apache 2.0 license, StyleTTS2-derived architecture, free, runs locally on CPU or GPU, 54 built-in voices, no official voice cloning.',
           'ElevenLabs: Free tier (10,000 credits/month, no commercial license), Starter $6/month (30,000 credits, commercial license, instant voice cloning), Creator $22/month (121,000 credits, professional voice cloning), Pro $99/month (600,000 credits), Scale $299/month (1,800,000 credits), Business $990/month (6,000,000 credits). Verify current figures on ElevenLabs\' pricing page before deciding — plans and credit allowances change.',
           'Kokoro is multilingual at the model level across 8 languages (English, Spanish, French, Hindi, Italian, Japanese, Portuguese, Chinese); ElevenLabs lists broader language support on its site — check current docs for the exact count.',
           'Kokoro requires no internet after the model is downloaded; ElevenLabs requires connectivity to generate audio.',
           'For most creators who need a cloned or highly polished voice today: test ElevenLabs\' free tier. For developers who want a free, self-hosted engine with a fixed voice set and no per-character cost: start with Kokoro.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -96,6 +98,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No affiliate relationship exists between PromptQuorum and Kokoro/hexgrad; any ElevenLabs links in this article are disclosed per the affiliate notice near the top of the page.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Kokoro has had no official update since 6 August 2025 (hexgrad repository; model v1.0 published 27 January 2025, model card last changed 10 April 2025). The project may be unmaintained — check before relying on it. Community wrappers such as Kokoro-FastAPI are still updated. Checked 19 November 2026.'
+          },
           { type: 'note', text: 'Facts checked against the Kokoro-82M model card on Hugging Face and ElevenLabs\' public pricing page as of this article\'s publish date. Both can change — verify current terms before committing to either.' }
         ]
       },
@@ -106,7 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       shortAnswer: {
         id: 'short-answer',
         title: 'Our Verdict',
-        content: '🏆 **Best free/offline TTS:** Kokoro — an 82M-parameter, Apache-2.0 model you run yourself, at no per-character cost.\n💰 **Best for voice cloning:** ElevenLabs — zero-shot cloning from a short reference clip on paid plans.\n⚡ **Best for a polished voice today, no setup:** ElevenLabs.\n🖥️ **Best for CPU-only or modest-GPU hardware:** Kokoro.\n🔒 **Best for keeping text and audio off third-party servers:** Kokoro (once downloaded and run fully offline).\n🌍 **Best for maximum language coverage:** ElevenLabs — check its current docs for the exact language count; Kokoro covers 8 languages at the model level.\n\nFor developers and hobbyists building on a budget who don\'t need voice cloning, start with Kokoro. For creators and businesses who need a cloned voice, broader language support, or output today without installing anything, start with ElevenLabs\' free tier.',
+        content: '🏆 **Best free/offline TTS:** Kokoro — an 82M-parameter, Apache-2.0 model you run yourself, at no per-character cost.\n💰 **Best for voice cloning:** ElevenLabs — zero-shot cloning from a short reference clip on paid plans.\n⚡ **Best for a polished voice today, no setup:** ElevenLabs.\n🖥️ **Best for CPU-only or modest-GPU hardware:** Kokoro.\n🔒 **Best for keeping text and audio off third-party servers:** Kokoro (once downloaded and run offline).\n🌍 **Best for maximum language coverage:** ElevenLabs — check its current docs for the exact language count; Kokoro covers 8 languages at the model level.\n\nFor developers and hobbyists building on a budget who don\'t need voice cloning, start with Kokoro. For creators and businesses who need a cloned voice, broader language support, or output today without installing anything, start with ElevenLabs\' free tier.',
         decisionBlock: {
           title: 'Choose your TTS approach',
           cloudIf: [
@@ -116,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           localIf: [
             'You want free, unlimited generation with no per-character billing.',
-            'You need the pipeline to work fully offline once set up — kiosks, embedded devices, air-gapped systems.',
+            'You need the pipeline to work offline once set up — kiosks, embedded devices, isolated systems.',
             'You are fine picking from a fixed set of 54 voices rather than cloning a specific one.'
           ],
           quick: [
@@ -212,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Cloud Benefit': 'Broader documented language support',
-            'What It Changes in Practice': 'Check current ElevenLabs docs for the exact count; likely wider than Kokoro\'s 8 model-level languages'
+            'What It Changes in Practice': 'ElevenLabs documents 90+ languages for Eleven v4, versus Kokoro\'s 8 model-level languages'
           },
           {
             'Cloud Benefit': 'Hosted scaling',
@@ -334,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: 'Language coverage',
             Kokoro: '8 languages documented at the model level',
-            ElevenLabs: 'Broader documented coverage — check current docs for the exact count'
+            ElevenLabs: '90+ languages for Eleven v4 (per ElevenLabs docs)'
           },
           {
             Dimension: 'Privacy control',
@@ -407,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Practical answer': 'Calculate using your actual request volume and hardware cost'
           },
           {
-            Scenario: 'Offline or air-gapped deployment',
+            Scenario: 'Offline deployment',
             Kokoro: 'Excellent fit once model and voices are installed locally',
             ElevenLabs: 'Requires connectivity for normal use',
             'Practical answer': 'Kokoro wins (offline requirement)'
@@ -437,7 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Choose the free, local model if most of these statements describe you:',
         items: [
           'You want free, unlimited text-to-speech with no subscription or per-character billing.',
-          'You need the pipeline to run fully offline once set up — embedded devices, kiosks, air-gapped systems.',
+          'You need the pipeline to run offline once set up — embedded devices, kiosks, isolated systems.',
           'You are comfortable picking from a fixed set of 54 preset voices rather than cloning a specific one.',
           'You want to install, inspect, fine-tune, or redistribute the model under a permissive license.',
           'You are a developer comfortable setting up a Python environment and an inference pipeline.',
@@ -497,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'You need completely offline operation with no internet connection.',
           'Your text and audio cannot leave your own infrastructure.',
           'You need unlimited generation with zero per-character or per-credit cost.',
-          'You are running an air-gapped or embedded system with no network access.',
+          'You are running an offline or embedded system with no network access.',
           'You want full control over and visibility into the model weights themselves.',
         ],
         blockquote: 'If this is you, start with [Kokoro-82M on Hugging Face →](https://huggingface.co/hexgrad/Kokoro-82M) instead — free, Apache 2.0, and runs on CPU or a modest GPU.'
@@ -536,7 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I run Kokoro completely offline?',
-            a: 'Yes, once you have downloaded the model weights and voice packs, Kokoro can generate speech with no internet connection. ElevenLabs, as a cloud service, requires connectivity for normal use.'
+            a: 'Yes, once you have downloaded the model weights and voice packs, Kokoro can generate speech with no internet connection. ElevenLabs, as a cloud service, requires connectivity for normal use. Verify your own network policy and dependency setup before treating a deployment as offline.'
           },
           {
             q: 'Does ElevenLabs offer a free plan?',
@@ -554,6 +560,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can I clone my own voice for free with a local model?',
             a: 'Not with Kokoro directly, since it does not ship voice cloning. Other local, cloning-capable open models exist, but they typically require more setup and heavier hardware than Kokoro. Always obtain clear consent before cloning any voice, including your own, for commercial use, and review the specific tool\'s license and consent requirements.'
           },
+          {
+            q: 'Is there a local version of ElevenLabs?',
+            a: 'No. ElevenLabs is a cloud service: it does not publish downloadable model weights or a local installer for its self-serve plans, so every generation goes through its servers. The closest local options are open-weight models such as Kokoro-82M (free, Apache 2.0, 54 fixed voices), Piper or XTTS v2. None of them is an ElevenLabs model, and Kokoro does not match its voice cloning or language range.'
+          },
+          {
+            q: 'Does Kokoro support German, Korean or Polish?',
+            a: 'No. Kokoro-82M v1.0 ships 54 voices in 8 languages (English, Spanish, French, Hindi, Italian, Japanese, Portuguese and Chinese) and has no official German, Korean or Polish voices. For those languages use another local model such as XTTS v2 (non-commercial licence) or a cloud service: ElevenLabs documents 90+ languages for Eleven v4.'
+          }
         ]
       },
       verdict: {
@@ -634,13 +648,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     },
+    current_models_mentioned: ['Kokoro-82M', 'ElevenLabs Eleven v4'],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Kokoro vs ElevenLabs: Local TTS vs Cloud Voice AI (2026)',
-      'description': 'Kokoro is a free, 82M-parameter local TTS model with 54 fixed voices and no internet needed. ElevenLabs is a paid cloud platform with voice cloning. Full comparison.',
+      'headline': 'Kokoro vs ElevenLabs: Free Local TTS or Paid Cloud? (2026)',
+      'description': 'Kokoro is a free, Apache-2.0 local TTS model (82M parameters, 54 voices, 8 languages). ElevenLabs is paid cloud with cloning and 90+ languages. Compared.',
       'datePublished': '2026-09-11',
-      'dateModified': '2026-09-11',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -759,7 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Can I run Kokoro completely offline?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes, once you have downloaded the model weights and voice packs, Kokoro can generate speech with no internet connection. ElevenLabs, as a cloud service, requires connectivity for normal use.'
+            'text': 'Yes, once you have downloaded the model weights and voice packs, Kokoro can generate speech with no internet connection. ElevenLabs, as a cloud service, requires connectivity for normal use. Verify your own network policy and dependency setup before treating a deployment as offline.'
           }
         },
         {
@@ -793,40 +808,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'Not with Kokoro directly, since it does not ship voice cloning. Other local, cloning-capable open models exist, but they typically require more setup and heavier hardware than Kokoro. Always obtain clear consent before cloning any voice, including your own, for commercial use, and review the specific tool\'s license and consent requirements.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is there a local version of ElevenLabs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. ElevenLabs is a cloud service: it does not publish downloadable model weights or a local installer for its self-serve plans, so every generation goes through its servers. The closest local options are open-weight models such as Kokoro-82M (free, Apache 2.0, 54 fixed voices), Piper or XTTS v2. None of them is an ElevenLabs model, and Kokoro does not match its voice cloning or language range.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Kokoro support German, Korean or Polish?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Kokoro-82M v1.0 ships 54 voices in 8 languages (English, Spanish, French, Hindi, Italian, Japanese, Portuguese and Chinese) and has no official German, Korean or Polish voices. For those languages use another local model such as XTTS v2 (non-commercial licence) or a cloud service: ElevenLabs documents 90+ languages for Eleven v4.'
+          }
         }
       ]
     }
   },
   de: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-11',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'Kokoro vs ElevenLabs: Lokale TTS vs Cloud-Sprach-KI (2026)',
-    seoTitle: 'Kokoro vs ElevenLabs (2026): Lokal vs Cloud-TTS',
+    title: 'Kokoro vs ElevenLabs: Kostenlose lokale TTS oder Cloud? (2026)',
+    seoTitle: 'Kokoro vs ElevenLabs (2026): Gratis lokal oder Cloud?',
     intro: 'Kokoro ist ein 82-Millionen-Parameter-Text-to-Speech-Modell mit offenen Gewichten unter Apache-2.0-Lizenz, das Sie selbst herunterladen und ausführen – kostenlos und nach der Einrichtung ohne Internetverbindung. ElevenLabs ist eine kostenpflichtige Cloud-Plattform mit einer deutlich größeren Stimmbibliothek und sofortigem Stimmenklonen aus einer kurzen Audioprobe. Die Entscheidung lautet nicht, welche Lösung isoliert betrachtet besser klingt – sondern ob Sie eine kostenlose, offline nutzbare Engine mit festen Stimmen selbst betreiben möchten oder einen bezahlten, gehosteten Dienst mit Klonfunktion mieten wollen.',
-    metaDescription: 'Kokoro ist ein kostenloses, lokales TTS-Modell mit 82M Parametern, 54 festen Stimmen und ohne Internetzwang. ElevenLabs ist eine kostenpflichtige Cloud-Plattform mit Stimmenklonen. Der vollständige Vergleich.',
+    metaDescription: 'Kokoro ist ein kostenloses lokales TTS-Modell (Apache 2.0, 82M Parameter, 54 Stimmen, 8 Sprachen). ElevenLabs ist Cloud mit Stimmenklonen und 90+ Sprachen.',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
+    dateModified: '2026-11-19',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, Content-Ersteller und Teams, die zwischen einem kostenlosen lokalen TTS-Modell und einer kostenpflichtigen Cloud-Sprachplattform wählen.',
     primaryTerm: 'Kokoro vs ElevenLabs',
-    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'ElevenLabs Alternative', 'lokales Text-to-Speech', 'Open-Source-TTS', 'kostenloses TTS-Modell', 'Offline-Sprachsynthese', 'Kokoro-82M'],
-    twitterDescription: 'Kokoro ist ein kostenloses lokales TTS-Modell mit 82M Parametern. ElevenLabs ist eine kostenpflichtige Cloud-Plattform mit Stimmenklonen. So schneiden beide im Vergleich ab.',
-    leadAnswerBlock: '**Wählen Sie Kokoro, wenn Sie kostenlose, offline nutzbare, unbegrenzte Sprachsynthese aus einer festen Stimmenauswahl möchten und bereit sind, ein Modell selbst zu betreiben. Wählen Sie ElevenLabs, wenn Sie Stimmenklonen, Dutzende Sprachen oder eine ausgereifte Stimme sofort ohne lokale Einrichtung benötigen.** Kokoro ist ein 82M-Parameter-Modell unter Apache-2.0-Lizenz, das auf CPU oder einer moderaten GPU läuft. ElevenLabs ist eine abgerechnete Cloud-API mit kostenloser Stufe und bezahlten Plänen.',
+    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'ElevenLabs Alternative', 'lokales Text-to-Speech', 'Open-Source-TTS', 'kostenloses TTS-Modell', 'Offline-Sprachsynthese', 'Kokoro-82M', 'ElevenLabs lokal', 'Kokoro Sprachen'],
+    twitterDescription: 'Kokoro ist kostenlos, lokal und hat feste Stimmen. ElevenLabs ist kostenpflichtig, cloudbasiert und klont Stimmen. Tarife, Lizenzen und Sprachen neu geprüft.',
+    leadAnswerBlock: '**Wählen Sie Kokoro für kostenlose, offline nutzbare Sprachsynthese mit festen Stimmen, die Sie selbst betreiben; wählen Sie ElevenLabs für Stimmenklonen, 90+ Sprachen oder eine ausgereifte Stimme ohne Einrichtung.** Kokoro hat 82M Parameter, steht unter Apache 2.0 und wurde seit August 2025 nicht offiziell aktualisiert.',
     quickAnswerTop: {
       de: {
         question: 'Sollte ich Kokoro oder ElevenLabs verwenden?',
         answer: 'Kokoro ist ein kostenloses, offenes 82-Millionen-Parameter-TTS-Modell (Apache 2.0, von hexgrad), das auf CPU oder einer moderaten GPU läuft und mit 54 voreingestellten Stimmen in 8 Sprachen ausgeliefert wird – jedoch ohne integriertes Stimmenklonen. ElevenLabs ist eine kostenpflichtige Cloud-Plattform mit einem deutlich größeren Stimmenkatalog, Zero-Shot-Stimmenklonen aus einer kurzen Probe und breiterer Sprachabdeckung – auf Kosten eines Abonnements und der Übertragung Ihres Textes an einen Drittserver. Am besten für kostenlose/offline/feste Stimmen: Kokoro. Am besten für Stimmenklonen oder maximale Sprachabdeckung: ElevenLabs.',
         bullets: [
+          'Stand der Prüfung (2026-11-19): ElevenLabs hat am 2026-09-28 Eleven v4 (90+ Sprachen) veröffentlicht; die Tarifpreise sind unverändert. Kokoro-82M steht weiterhin auf v1.0 (veröffentlicht am 2025-01-27), und das offizielle hexgrad-Repository wurde zuletzt am 2025-08-06 aktualisiert – es gibt also seit über einem Jahr kein offizielles Update; Community-Wrapper wie Kokoro-FastAPI werden weiter gepflegt.',
           'Kokoro: 82M Parameter, Apache-2.0-Lizenz, von StyleTTS2 abgeleitete Architektur, kostenlos, läuft lokal auf CPU oder GPU, 54 integrierte Stimmen, kein offizielles Stimmenklonen.',
           'ElevenLabs: Kostenlose Stufe (10.000 Credits/Monat, keine kommerzielle Lizenz), Starter 6 $/Monat (30.000 Credits, kommerzielle Lizenz, sofortiges Stimmenklonen), Creator 22 $/Monat (121.000 Credits, professionelles Stimmenklonen), Pro 99 $/Monat (600.000 Credits), Scale 299 $/Monat (1.800.000 Credits), Business 990 $/Monat (6.000.000 Credits). Prüfen Sie die aktuellen Zahlen auf der Preisseite von ElevenLabs, bevor Sie sich entscheiden – Pläne und Credit-Kontingente ändern sich.',
           'Kokoro ist auf Modellebene in 8 Sprachen mehrsprachig (Englisch, Spanisch, Französisch, Hindi, Italienisch, Japanisch, Portugiesisch, Chinesisch); ElevenLabs listet auf seiner Website eine breitere Sprachunterstützung – prüfen Sie die aktuelle Dokumentation für die genaue Anzahl.',
           'Kokoro benötigt nach dem Modell-Download kein Internet mehr; ElevenLabs benötigt eine Verbindung zur Audiogenerierung.',
           'Für die meisten Ersteller, die heute eine geklonte oder hochwertige Stimme benötigen: Testen Sie die kostenlose Stufe von ElevenLabs. Für Entwickler, die eine kostenlose, selbst gehostete Engine mit festem Stimmensatz und ohne Kosten pro Zeichen wollen: Starten Sie mit Kokoro.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -891,6 +923,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zwischen PromptQuorum und Kokoro/hexgrad besteht keine Affiliate-Beziehung; etwaige ElevenLabs-Links in diesem Artikel sind gemäß dem Affiliate-Hinweis am Seitenanfang offengelegt.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Kokoro hat seit dem 6. August 2025 kein offizielles Update erhalten (hexgrad-Repository; Modell v1.0 veröffentlicht am 27. Januar 2025, Modellkarte zuletzt am 10. April 2025 geändert). Das Projekt wird möglicherweise nicht mehr gepflegt – prüfen Sie dies, bevor Sie sich darauf verlassen. Community-Wrapper wie Kokoro-FastAPI werden weiter aktualisiert. Geprüft am 19. November 2026.'
+          },
           { type: 'note', text: 'Fakten wurden anhand der Kokoro-82M-Modellkarte auf Hugging Face und der öffentlichen Preisseite von ElevenLabs zum Veröffentlichungsdatum dieses Artikels geprüft. Beide können sich ändern – prüfen Sie aktuelle Bedingungen, bevor Sie sich für eine Lösung entscheiden.' }
         ]
       },
@@ -901,7 +937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       shortAnswer: {
         id: 'short-answer',
         title: 'Unser Fazit',
-        content: '🏆 **Beste kostenlose/offline TTS:** Kokoro — ein 82M-Parameter-Modell unter Apache-2.0-Lizenz, das Sie selbst betreiben, ohne Kosten pro Zeichen.\n💰 **Beste Wahl für Stimmenklonen:** ElevenLabs — Zero-Shot-Klonen aus einem kurzen Referenzclip in bezahlten Plänen.\n⚡ **Beste Wahl für eine ausgereifte Stimme sofort, ohne Einrichtung:** ElevenLabs.\n🖥️ **Beste Wahl für reine CPU- oder moderate GPU-Hardware:** Kokoro.\n🔒 **Beste Wahl, um Text und Audio von Drittservern fernzuhalten:** Kokoro (sobald heruntergeladen und vollständig offline betrieben).\n🌍 **Beste Wahl für maximale Sprachabdeckung:** ElevenLabs — prüfen Sie die aktuelle Dokumentation für die genaue Anzahl; Kokoro deckt auf Modellebene 8 Sprachen ab.\n\nFür Entwickler und Hobbyisten mit begrenztem Budget, die kein Stimmenklonen benötigen, beginnen Sie mit Kokoro. Für Ersteller und Unternehmen, die eine geklonte Stimme, breitere Sprachunterstützung oder sofortige Ergebnisse ohne Installation benötigen, beginnen Sie mit der kostenlosen Stufe von ElevenLabs.',
+        content: '🏆 **Beste kostenlose/offline TTS:** Kokoro — ein 82M-Parameter-Modell unter Apache-2.0-Lizenz, das Sie selbst betreiben, ohne Kosten pro Zeichen.\n💰 **Beste Wahl für Stimmenklonen:** ElevenLabs — Zero-Shot-Klonen aus einem kurzen Referenzclip in bezahlten Plänen.\n⚡ **Beste Wahl für eine ausgereifte Stimme sofort, ohne Einrichtung:** ElevenLabs.\n🖥️ **Beste Wahl für reine CPU- oder moderate GPU-Hardware:** Kokoro.\n🔒 **Beste Wahl, um Text und Audio von Drittservern fernzuhalten:** Kokoro (sobald heruntergeladen und offline betrieben).\n🌍 **Beste Wahl für maximale Sprachabdeckung:** ElevenLabs — prüfen Sie die aktuelle Dokumentation für die genaue Anzahl; Kokoro deckt auf Modellebene 8 Sprachen ab.\n\nFür Entwickler und Hobbyisten mit begrenztem Budget, die kein Stimmenklonen benötigen, beginnen Sie mit Kokoro. Für Ersteller und Unternehmen, die eine geklonte Stimme, breitere Sprachunterstützung oder sofortige Ergebnisse ohne Installation benötigen, beginnen Sie mit der kostenlosen Stufe von ElevenLabs.',
         decisionBlock: {
           title: 'Wählen Sie Ihren TTS-Ansatz',
           cloudIf: [
@@ -911,7 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           localIf: [
             'Sie möchten kostenlose, unbegrenzte Generierung ohne Abrechnung pro Zeichen.',
-            'Die Pipeline muss nach der Einrichtung vollständig offline funktionieren — Kioske, eingebettete Geräte, abgeschottete Systeme.',
+            'Die Pipeline muss nach der Einrichtung offline funktionieren — Kioske, eingebettete Geräte, isolierte Systeme.',
             'Sie sind zufrieden damit, aus 54 festen Stimmen zu wählen, statt eine bestimmte zu klonen.'
           ],
           quick: [
@@ -1007,7 +1043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Cloud-Vorteil': 'Breitere dokumentierte Sprachunterstützung',
-            'Was das in der Praxis ändert': 'Prüfen Sie die aktuelle ElevenLabs-Dokumentation für die genaue Anzahl; vermutlich breiter als Kokoros 8 Sprachen auf Modellebene'
+            'Was das in der Praxis ändert': 'ElevenLabs dokumentiert für Eleven v4 über 90 Sprachen, Kokoro dagegen 8 Sprachen auf Modellebene'
           },
           {
             'Cloud-Vorteil': 'Gehostete Skalierung',
@@ -1129,7 +1165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: 'Sprachabdeckung',
             Kokoro: '8 Sprachen auf Modellebene dokumentiert',
-            ElevenLabs: 'Breitere dokumentierte Abdeckung — aktuelle Dokumentation für die genaue Anzahl prüfen'
+            ElevenLabs: '90+ Sprachen für Eleven v4 (laut ElevenLabs-Dokumentation)'
           },
           {
             Dimension: 'Datenschutzkontrolle',
@@ -1202,7 +1238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Praktische Antwort': 'Mit Ihrem tatsächlichen Anfragevolumen und Hardwarekosten kalkulieren'
           },
           {
-            Szenario: 'Offline- oder abgeschottete Bereitstellung',
+            Szenario: 'Offline- oder isolierte Bereitstellung',
             Kokoro: 'Hervorragend geeignet, sobald Modell und Stimmen lokal installiert sind',
             ElevenLabs: 'Erfordert Verbindung für normale Nutzung',
             'Praktische Antwort': 'Kokoro gewinnt (Offline-Anforderung)'
@@ -1232,7 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Wählen Sie das kostenlose, lokale Modell, wenn die meisten dieser Aussagen auf Sie zutreffen:',
         items: [
           'Sie möchten kostenlose, unbegrenzte Sprachsynthese ohne Abonnement oder Kosten pro Zeichen.',
-          'Die Pipeline muss nach der Einrichtung vollständig offline laufen — eingebettete Geräte, Kioske, abgeschottete Systeme.',
+          'Die Pipeline muss nach der Einrichtung offline laufen — eingebettete Geräte, Kioske, isolierte Systeme.',
           'Sie sind bereit, aus einem festen Satz von 54 voreingestellten Stimmen zu wählen, statt eine bestimmte zu klonen.',
           'Sie möchten das Modell unter einer freizügigen Lizenz installieren, prüfen, feinabstimmen oder weitergeben.',
           'Sie sind Entwickler und mit der Einrichtung einer Python-Umgebung und Inferenzpipeline vertraut.',
@@ -1289,10 +1325,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wählen Sie ElevenLabs nicht, wenn',
         content: 'Eine kostenpflichtige Cloud-Plattform ist die falsche Wahl, wenn eines davon auf Ihr Projekt zutrifft:',
         items: [
-          'Sie benötigen vollständig offline Betrieb ohne Internetverbindung.',
+          'Sie benötigen Offline-Betrieb ohne Internetverbindung.',
           'Ihr Text und Audio dürfen Ihre eigene Infrastruktur nicht verlassen.',
           'Sie benötigen unbegrenzte Generierung ohne jegliche Kosten pro Zeichen oder Credit.',
-          'Sie betreiben ein abgeschottetes oder eingebettetes System ohne Netzwerkzugang.',
+          'Sie betreiben ein isoliertes oder eingebettetes System ohne Netzwerkzugang.',
           'Sie wollen volle Kontrolle über und Einsicht in die Modellgewichte selbst.',
         ],
         blockquote: 'Wenn das auf Sie zutrifft, starten Sie stattdessen mit [Kokoro-82M auf Hugging Face →](https://huggingface.co/hexgrad/Kokoro-82M) — kostenlos, Apache 2.0, und läuft auf CPU oder moderater GPU.'
@@ -1330,8 +1366,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ElevenLabs listet einen Free-Plan (0 $, 10.000 Credits/Monat, keine kommerzielle Lizenz) bis hin zu bezahlten Plänen von Starter (6 $/Monat) bis Business (990 $/Monat, 6.000.000 Credits), plus individuelle Enterprise-Preise. Bestätigen Sie aktuelle Zahlen auf der ElevenLabs-Preisseite, da sich Pläne und Credit-Kosten ändern.'
           },
           {
-            q: 'Kann ich Kokoro vollständig offline betreiben?',
-            a: 'Ja, sobald Sie die Modellgewichte und Stimmpakete heruntergeladen haben, kann Kokoro Sprache ohne Internetverbindung generieren. ElevenLabs benötigt als Cloud-Dienst für die normale Nutzung eine Verbindung.'
+            q: 'Kann ich Kokoro offline betreiben?',
+            a: 'Ja, sobald Sie die Modellgewichte und Stimmpakete heruntergeladen haben, kann Kokoro Sprache ohne Internetverbindung generieren. ElevenLabs benötigt als Cloud-Dienst für die normale Nutzung eine Verbindung. Prüfen Sie Ihre eigene Netzwerkrichtlinie und Abhängigkeiten, bevor Sie eine Bereitstellung als offline betrachten.'
           },
           {
             q: 'Bietet ElevenLabs einen kostenlosen Plan?',
@@ -1349,6 +1385,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Kann ich meine eigene Stimme kostenlos mit einem lokalen Modell klonen?',
             a: 'Nicht direkt mit Kokoro, da es kein Stimmenklonen ausliefert. Es gibt andere lokale, klonfähige offene Modelle, die aber typischerweise mehr Einrichtung und stärkere Hardware als Kokoro benötigen. Holen Sie immer eine klare Zustimmung ein, bevor Sie eine Stimme, einschließlich Ihrer eigenen, kommerziell klonen, und prüfen Sie die Lizenz- und Einwilligungsanforderungen des jeweiligen Tools.'
           },
+          {
+            q: 'Gibt es eine lokale Version von ElevenLabs?',
+            a: 'Nein. ElevenLabs ist ein Cloud-Dienst: Für die Self-Serve-Tarife werden weder herunterladbare Modellgewichte noch ein lokaler Installer angeboten, jede Erzeugung läuft über die Server des Anbieters. Die nächstliegenden lokalen Optionen sind Open-Weight-Modelle wie Kokoro-82M (kostenlos, Apache 2.0, 54 feste Stimmen), Piper oder XTTS v2. Keines davon ist ein ElevenLabs-Modell, und Kokoro erreicht weder dessen Stimmenklonen noch dessen Sprachumfang.'
+          },
+          {
+            q: 'Unterstützt Kokoro Deutsch, Koreanisch oder Polnisch?',
+            a: 'Nein. Kokoro-82M v1.0 enthält 54 Stimmen in 8 Sprachen (Englisch, Spanisch, Französisch, Hindi, Italienisch, Japanisch, Portugiesisch und Chinesisch) und bietet keine offiziellen deutschen, koreanischen oder polnischen Stimmen. Für diese Sprachen brauchen Sie ein anderes lokales Modell wie XTTS v2 (nicht-kommerzielle Lizenz) oder einen Cloud-Dienst: ElevenLabs dokumentiert für Eleven v4 über 90 Sprachen.'
+          }
         ]
       },
       verdict: {
@@ -1429,13 +1473,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     },
+    current_models_mentioned: ['Kokoro-82M', 'ElevenLabs Eleven v4'],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Kokoro vs ElevenLabs: Lokale TTS vs Cloud-Sprach-KI (2026)',
-      'description': 'Kokoro ist ein kostenloses, lokales TTS-Modell mit 82M Parametern, 54 festen Stimmen und ohne Internetzwang. ElevenLabs ist eine kostenpflichtige Cloud-Plattform mit Stimmenklonen. Der vollständige Vergleich.',
+      'headline': 'Kokoro vs ElevenLabs: Kostenlose lokale TTS oder Cloud? (2026)',
+      'description': 'Kokoro ist ein kostenloses lokales TTS-Modell (Apache 2.0, 82M Parameter, 54 Stimmen, 8 Sprachen). ElevenLabs ist Cloud mit Stimmenklonen und 90+ Sprachen.',
       'datePublished': '2026-09-11',
-      'dateModified': '2026-09-11',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1451,7 +1496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'height': '60'
         }
       },
-      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/de/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -1486,7 +1531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/de/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -1551,10 +1596,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'Kann ich Kokoro vollständig offline betreiben?',
+          'name': 'Kann ich Kokoro offline betreiben?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Ja, sobald Sie die Modellgewichte und Stimmpakete heruntergeladen haben, kann Kokoro Sprache ohne Internetverbindung generieren. ElevenLabs benötigt als Cloud-Dienst für die normale Nutzung eine Verbindung.'
+            'text': 'Ja, sobald Sie die Modellgewichte und Stimmpakete heruntergeladen haben, kann Kokoro Sprache ohne Internetverbindung generieren. ElevenLabs benötigt als Cloud-Dienst für die normale Nutzung eine Verbindung. Prüfen Sie Ihre eigene Netzwerkrichtlinie und Abhängigkeiten, bevor Sie eine Bereitstellung als offline betrachten.'
           }
         },
         {
@@ -1588,40 +1633,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'Nicht direkt mit Kokoro, da es kein Stimmenklonen ausliefert. Es gibt andere lokale, klonfähige offene Modelle, die aber typischerweise mehr Einrichtung und stärkere Hardware als Kokoro benötigen. Holen Sie immer eine klare Zustimmung ein, bevor Sie eine Stimme, einschließlich Ihrer eigenen, kommerziell klonen, und prüfen Sie die Lizenz- und Einwilligungsanforderungen des jeweiligen Tools.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Gibt es eine lokale Version von ElevenLabs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nein. ElevenLabs ist ein Cloud-Dienst: Für die Self-Serve-Tarife werden weder herunterladbare Modellgewichte noch ein lokaler Installer angeboten, jede Erzeugung läuft über die Server des Anbieters. Die nächstliegenden lokalen Optionen sind Open-Weight-Modelle wie Kokoro-82M (kostenlos, Apache 2.0, 54 feste Stimmen), Piper oder XTTS v2. Keines davon ist ein ElevenLabs-Modell, und Kokoro erreicht weder dessen Stimmenklonen noch dessen Sprachumfang.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Unterstützt Kokoro Deutsch, Koreanisch oder Polnisch?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nein. Kokoro-82M v1.0 enthält 54 Stimmen in 8 Sprachen (Englisch, Spanisch, Französisch, Hindi, Italienisch, Japanisch, Portugiesisch und Chinesisch) und bietet keine offiziellen deutschen, koreanischen oder polnischen Stimmen. Für diese Sprachen brauchen Sie ein anderes lokales Modell wie XTTS v2 (nicht-kommerzielle Lizenz) oder einen Cloud-Dienst: ElevenLabs dokumentiert für Eleven v4 über 90 Sprachen.'
+          }
         }
       ]
     }
   },
   fr: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-11',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'Kokoro vs ElevenLabs : TTS local vs IA vocale cloud (2026)',
-    seoTitle: 'Kokoro vs ElevenLabs (2026) : TTS local vs cloud',
+    title: 'Kokoro vs ElevenLabs : TTS local gratuit ou cloud payant ? (2026)',
+    seoTitle: 'Kokoro vs ElevenLabs (2026) : TTS local gratuit ou cloud ?',
     intro: 'Kokoro est un modèle de synthèse vocale à poids ouverts de 82 millions de paramètres, sous licence Apache 2.0, que vous téléchargez et exécutez vous-même, gratuitement, sans connexion Internet après l\'installation. ElevenLabs est une plateforme cloud payante dotée d\'une bibliothèque de voix bien plus vaste et du clonage vocal instantané à partir d\'un court échantillon audio. La décision ne porte pas sur la voix qui sonne le mieux dans l\'absolu, mais sur le choix entre un moteur gratuit, hors ligne, à voix fixes, que vous exploitez vous-même, ou un service payant, hébergé, capable de clonage, que vous louez.',
-    metaDescription: 'Kokoro est un modèle TTS local gratuit de 82M de paramètres avec 54 voix fixes et sans besoin d\'Internet. ElevenLabs est une plateforme cloud payante avec clonage vocal. Comparatif complet.',
+    metaDescription: 'Kokoro est un modèle TTS local gratuit (Apache 2.0, 82M de paramètres, 54 voix, 8 langues). ElevenLabs est un cloud payant avec clonage et 90+ langues.',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
+    dateModified: '2026-11-19',
     readTime: '11 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs, créateurs de contenu et équipes qui choisissent entre un modèle TTS local gratuit et une plateforme vocale cloud payante.',
     primaryTerm: 'Kokoro vs ElevenLabs',
-    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'alternative à ElevenLabs', 'synthèse vocale locale', 'TTS open source', 'modèle TTS gratuit', 'synthèse vocale hors ligne', 'Kokoro-82M'],
-    twitterDescription: 'Kokoro est un modèle TTS local gratuit de 82M de paramètres. ElevenLabs est une plateforme cloud payante avec clonage vocal. Voici comment ils se comparent réellement.',
-    leadAnswerBlock: '**Choisissez Kokoro pour une synthèse vocale gratuite, hors ligne, illimitée, à partir d\'un ensemble de voix fixes, si vous êtes à l\'aise pour exécuter un modèle vous-même. Choisissez ElevenLabs si vous avez besoin de clonage vocal, de dizaines de langues, ou d\'une voix aboutie dès aujourd\'hui sans installation locale.** Kokoro est un modèle de 82M de paramètres, sous licence Apache 2.0, qui tourne sur CPU ou GPU modeste. ElevenLabs est une API cloud facturée à l\'usage, avec un palier gratuit et des offres payantes.',
+    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'alternative à ElevenLabs', 'synthèse vocale locale', 'TTS open source', 'modèle TTS gratuit', 'synthèse vocale hors ligne', 'Kokoro-82M', 'ElevenLabs en local', 'langues Kokoro'],
+    twitterDescription: 'Kokoro est gratuit, local et à voix fixes. ElevenLabs est payant, cloud et clone les voix. Forfaits, licences et langues revérifiés.',
+    leadAnswerBlock: '**Choisissez Kokoro pour une synthèse vocale gratuite, hors ligne et à voix fixes que vous exploitez vous-même ; choisissez ElevenLabs pour le clonage vocal, 90+ langues ou une voix soignée sans installation.** Kokoro (82M de paramètres, Apache 2.0) n\'a reçu aucune mise à jour officielle depuis août 2025.',
     quickAnswerTop: {
       fr: {
         question: 'Dois-je utiliser Kokoro ou ElevenLabs ?',
         answer: 'Kokoro est un modèle TTS local gratuit à poids ouverts de 82 millions de paramètres (Apache 2.0, par hexgrad) qui tourne sur CPU ou GPU modeste et propose 54 voix préréglées dans 8 langues — mais sans clonage vocal intégré. ElevenLabs est une plateforme cloud payante avec un catalogue de voix bien plus vaste, un clonage vocal zero-shot à partir d\'un court échantillon, et une couverture linguistique plus large, au prix d\'un abonnement et de l\'envoi de votre texte à un serveur tiers. Idéal pour un usage gratuit/hors ligne/voix fixes : Kokoro. Idéal pour le clonage vocal ou une couverture linguistique maximale : ElevenLabs.',
         bullets: [
+          'Vérification (2026-11-19) : ElevenLabs a publié Eleven v4 (90+ langues) le 2026-09-28 ; les prix des forfaits n\'ont pas changé. Kokoro-82M reste en v1.0 (publiée le 2025-01-27) et le dépôt officiel de hexgrad a été mis à jour pour la dernière fois le 2025-08-06 : aucune mise à jour officielle depuis plus d\'un an, mais des wrappers communautaires comme Kokoro-FastAPI restent actifs.',
           'Kokoro : 82M de paramètres, licence Apache 2.0, architecture dérivée de StyleTTS2, gratuit, s\'exécute localement sur CPU ou GPU, 54 voix intégrées, pas de clonage vocal officiel.',
           'ElevenLabs : palier gratuit (10 000 crédits/mois, sans licence commerciale), Starter 6 $/mois (30 000 crédits, licence commerciale, clonage vocal instantané), Creator 22 $/mois (121 000 crédits, clonage vocal professionnel), Pro 99 $/mois (600 000 crédits), Scale 299 $/mois (1 800 000 crédits), Business 990 $/mois (6 000 000 crédits). Vérifiez les chiffres actuels sur la page tarifaire d\'ElevenLabs avant de décider — les offres et les quotas de crédits évoluent.',
           'Kokoro est multilingue au niveau du modèle sur 8 langues (anglais, espagnol, français, hindi, italien, japonais, portugais, chinois) ; ElevenLabs annonce une couverture linguistique plus large sur son site — vérifiez la documentation actuelle pour le chiffre exact.',
           'Kokoro ne nécessite aucune connexion Internet une fois le modèle téléchargé ; ElevenLabs nécessite une connexion pour générer de l\'audio.',
           'Pour la plupart des créateurs ayant besoin d\'une voix clonée ou très aboutie dès aujourd\'hui : testez le palier gratuit d\'ElevenLabs. Pour les développeurs voulant un moteur gratuit auto-hébergé, à voix fixes et sans coût au caractère : commencez avec Kokoro.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -1686,6 +1748,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aucune relation d\'affiliation n\'existe entre PromptQuorum et Kokoro/hexgrad ; les éventuels liens ElevenLabs de cet article sont signalés conformément à l\'avis d\'affiliation en haut de page.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Kokoro n\'a reçu aucune mise à jour officielle depuis le 6 août 2025 (dépôt hexgrad ; modèle v1.0 publié le 27 janvier 2025, fiche du modèle modifiée pour la dernière fois le 10 avril 2025). Le projet n\'est peut-être plus maintenu — vérifiez avant de vous y fier. Des wrappers communautaires comme Kokoro-FastAPI restent mis à jour. Vérifié le 19 novembre 2026.'
+          },
           { type: 'note', text: 'Faits vérifiés par rapport à la fiche modèle Kokoro-82M sur Hugging Face et à la page tarifaire publique d\'ElevenLabs à la date de publication de cet article. Les deux peuvent évoluer — vérifiez les conditions actuelles avant de vous engager sur l\'une ou l\'autre solution.' }
         ]
       },
@@ -1696,7 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       shortAnswer: {
         id: 'short-answer',
         title: 'Notre verdict',
-        content: '🏆 **Meilleur TTS gratuit/hors ligne :** Kokoro — un modèle de 82M de paramètres sous licence Apache 2.0 que vous exploitez vous-même, sans coût au caractère.\n💰 **Meilleur pour le clonage vocal :** ElevenLabs — clonage zero-shot à partir d\'un court extrait de référence en offres payantes.\n⚡ **Meilleur pour une voix aboutie dès aujourd\'hui, sans installation :** ElevenLabs.\n🖥️ **Meilleur pour du matériel CPU uniquement ou GPU modeste :** Kokoro.\n🔒 **Meilleur pour garder texte et audio hors des serveurs tiers :** Kokoro (une fois téléchargé et exécuté entièrement hors ligne).\n🌍 **Meilleur pour une couverture linguistique maximale :** ElevenLabs — vérifiez sa documentation actuelle pour le chiffre exact ; Kokoro couvre 8 langues au niveau du modèle.\n\nPour les développeurs et amateurs avec un budget serré qui n\'ont pas besoin de clonage vocal, commencez avec Kokoro. Pour les créateurs et entreprises ayant besoin d\'une voix clonée, d\'une prise en charge linguistique plus large, ou d\'un résultat immédiat sans rien installer, commencez avec le palier gratuit d\'ElevenLabs.',
+        content: '🏆 **Meilleur TTS gratuit/hors ligne :** Kokoro — un modèle de 82M de paramètres sous licence Apache 2.0 que vous exploitez vous-même, sans coût au caractère.\n💰 **Meilleur pour le clonage vocal :** ElevenLabs — clonage zero-shot à partir d\'un court extrait de référence en offres payantes.\n⚡ **Meilleur pour une voix aboutie dès aujourd\'hui, sans installation :** ElevenLabs.\n🖥️ **Meilleur pour du matériel CPU uniquement ou GPU modeste :** Kokoro.\n🔒 **Meilleur pour garder texte et audio hors des serveurs tiers :** Kokoro (une fois téléchargé et exécuté hors ligne).\n🌍 **Meilleur pour une couverture linguistique maximale :** ElevenLabs — vérifiez sa documentation actuelle pour le chiffre exact ; Kokoro couvre 8 langues au niveau du modèle.\n\nPour les développeurs et amateurs avec un budget serré qui n\'ont pas besoin de clonage vocal, commencez avec Kokoro. Pour les créateurs et entreprises ayant besoin d\'une voix clonée, d\'une prise en charge linguistique plus large, ou d\'un résultat immédiat sans rien installer, commencez avec le palier gratuit d\'ElevenLabs.',
         decisionBlock: {
           title: 'Choisissez votre approche TTS',
           cloudIf: [
@@ -1706,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           localIf: [
             'Vous voulez une génération gratuite et illimitée sans facturation au caractère.',
-            'Le pipeline doit fonctionner entièrement hors ligne une fois configuré — bornes, appareils embarqués, systèmes isolés.',
+            'Le pipeline doit fonctionner hors ligne une fois configuré — bornes, appareils embarqués, systèmes isolés.',
             'Vous acceptez de choisir parmi un ensemble fixe de 54 voix plutôt que de cloner une voix spécifique.'
           ],
           quick: [
@@ -1802,7 +1868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Avantage cloud': 'Prise en charge linguistique documentée plus large',
-            'Ce que cela change en pratique': 'Vérifiez la documentation ElevenLabs actuelle pour le chiffre exact ; probablement plus large que les 8 langues de Kokoro au niveau du modèle'
+            'Ce que cela change en pratique': 'ElevenLabs documente plus de 90 langues pour Eleven v4, contre 8 langues au niveau du modèle pour Kokoro'
           },
           {
             'Avantage cloud': 'Mise à l\'échelle hébergée',
@@ -1924,7 +1990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimension: 'Couverture linguistique',
             Kokoro: '8 langues documentées au niveau du modèle',
-            ElevenLabs: 'Couverture documentée plus large — vérifier la documentation actuelle pour le chiffre exact'
+            ElevenLabs: '90+ langues pour Eleven v4 (selon la documentation ElevenLabs)'
           },
           {
             Dimension: 'Contrôle de la confidentialité',
@@ -2027,7 +2093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Choisissez le modèle local gratuit si la plupart de ces affirmations vous décrivent :',
         items: [
           'Vous voulez une synthèse vocale gratuite et illimitée, sans abonnement ni facturation au caractère.',
-          'Le pipeline doit fonctionner entièrement hors ligne une fois configuré — appareils embarqués, bornes, systèmes isolés.',
+          'Le pipeline doit fonctionner hors ligne une fois configuré — appareils embarqués, bornes, systèmes isolés.',
           'Vous acceptez de choisir parmi un ensemble fixe de 54 voix préréglées plutôt que de cloner une voix spécifique.',
           'Vous voulez installer, examiner, affiner ou redistribuer le modèle sous une licence permissive.',
           'Vous êtes développeur et à l\'aise avec la configuration d\'un environnement Python et d\'un pipeline d\'inférence.',
@@ -2084,7 +2150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ne choisissez pas ElevenLabs si',
         content: 'Une plateforme cloud payante est un mauvais choix si l\'une de ces affirmations décrit votre projet :',
         items: [
-          'Vous avez besoin d\'un fonctionnement entièrement hors ligne, sans connexion Internet.',
+          'Vous avez besoin d\'un fonctionnement hors ligne, sans connexion Internet.',
           'Votre texte et votre audio ne peuvent pas quitter votre propre infrastructure.',
           'Vous avez besoin d\'une génération illimitée sans aucun coût au caractère ou au crédit.',
           'Vous exploitez un système isolé ou embarqué sans accès réseau.',
@@ -2125,8 +2191,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ElevenLabs propose un plan Free (0 $, 10 000 crédits/mois, sans licence commerciale) jusqu\'à des offres payantes allant de Starter (6 $/mois) à Business (990 $/mois, 6 000 000 crédits), plus une tarification Enterprise personnalisée. Confirmez les chiffres actuels sur la page tarifaire ElevenLabs, car les offres et coûts en crédits évoluent.'
           },
           {
-            q: 'Puis-je exécuter Kokoro entièrement hors ligne ?',
-            a: 'Oui, une fois les poids du modèle et les packs de voix téléchargés, Kokoro peut générer de la parole sans connexion Internet. ElevenLabs, en tant que service cloud, nécessite une connexion pour un usage normal.'
+            q: 'Puis-je exécuter Kokoro hors ligne ?',
+            a: 'Oui, une fois les poids du modèle et les packs de voix téléchargés, Kokoro peut générer de la parole sans connexion Internet. ElevenLabs, en tant que service cloud, nécessite une connexion pour un usage normal. Vérifiez votre propre politique réseau et vos dépendances avant de considérer un déploiement comme hors ligne.'
           },
           {
             q: 'ElevenLabs propose-t-il un plan gratuit ?',
@@ -2144,6 +2210,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Puis-je cloner ma propre voix gratuitement avec un modèle local ?',
             a: 'Pas directement avec Kokoro, puisqu\'il ne propose pas de clonage vocal. D\'autres modèles ouverts locaux capables de clonage existent, mais ils nécessitent généralement plus de configuration et un matériel plus puissant que Kokoro. Obtenez toujours un consentement clair avant de cloner toute voix, y compris la vôtre, à des fins commerciales, et vérifiez la licence et les exigences de consentement de l\'outil spécifique.'
           },
+          {
+            q: 'Existe-t-il une version locale d\'ElevenLabs ?',
+            a: 'Non. ElevenLabs est un service cloud : il ne publie ni poids de modèle téléchargeables ni installateur local pour ses forfaits en libre-service, donc chaque génération passe par ses serveurs. Les options locales les plus proches sont des modèles open weight comme Kokoro-82M (gratuit, Apache 2.0, 54 voix fixes), Piper ou XTTS v2. Aucun n\'est un modèle ElevenLabs, et Kokoro n\'égale ni son clonage vocal ni sa couverture linguistique.'
+          },
+          {
+            q: 'Kokoro prend-il en charge l\'allemand, le coréen ou le polonais ?',
+            a: 'Non. Kokoro-82M v1.0 fournit 54 voix dans 8 langues (anglais, espagnol, français, hindi, italien, japonais, portugais et chinois) et n\'a pas de voix officielles en allemand, en coréen ni en polonais. Pour ces langues, utilisez un autre modèle local comme XTTS v2 (licence non commerciale) ou un service cloud : ElevenLabs documente plus de 90 langues pour Eleven v4.'
+          }
         ]
       },
       verdict: {
@@ -2224,13 +2298,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     },
+    current_models_mentioned: ['Kokoro-82M', 'ElevenLabs Eleven v4'],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Kokoro vs ElevenLabs : TTS local vs IA vocale cloud (2026)',
-      'description': 'Kokoro est un modèle TTS local gratuit de 82M de paramètres avec 54 voix fixes et sans besoin d\'Internet. ElevenLabs est une plateforme cloud payante avec clonage vocal. Comparatif complet.',
+      'headline': 'Kokoro vs ElevenLabs : TTS local gratuit ou cloud payant ? (2026)',
+      'description': 'Kokoro est un modèle TTS local gratuit (Apache 2.0, 82M de paramètres, 54 voix, 8 langues). ElevenLabs est un cloud payant avec clonage et 90+ langues.',
       'datePublished': '2026-09-11',
-      'dateModified': '2026-09-11',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -2246,7 +2321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'height': '60'
         }
       },
-      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/fr/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -2281,7 +2356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/fr/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -2346,10 +2421,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'Puis-je exécuter Kokoro entièrement hors ligne ?',
+          'name': 'Puis-je exécuter Kokoro hors ligne ?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Oui, une fois les poids du modèle et les packs de voix téléchargés, Kokoro peut générer de la parole sans connexion Internet. ElevenLabs, en tant que service cloud, nécessite une connexion pour un usage normal.'
+            'text': 'Oui, une fois les poids du modèle et les packs de voix téléchargés, Kokoro peut générer de la parole sans connexion Internet. ElevenLabs, en tant que service cloud, nécessite une connexion pour un usage normal. Vérifiez votre propre politique réseau et vos dépendances avant de considérer un déploiement comme hors ligne.'
           }
         },
         {
@@ -2383,40 +2458,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'Pas directement avec Kokoro, puisqu\'il ne propose pas de clonage vocal. D\'autres modèles ouverts locaux capables de clonage existent, mais ils nécessitent généralement plus de configuration et un matériel plus puissant que Kokoro. Obtenez toujours un consentement clair avant de cloner toute voix, y compris la vôtre, à des fins commerciales, et vérifiez la licence et les exigences de consentement de l\'outil spécifique.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Existe-t-il une version locale d\'ElevenLabs ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Non. ElevenLabs est un service cloud : il ne publie ni poids de modèle téléchargeables ni installateur local pour ses forfaits en libre-service, donc chaque génération passe par ses serveurs. Les options locales les plus proches sont des modèles open weight comme Kokoro-82M (gratuit, Apache 2.0, 54 voix fixes), Piper ou XTTS v2. Aucun n\'est un modèle ElevenLabs, et Kokoro n\'égale ni son clonage vocal ni sa couverture linguistique.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kokoro prend-il en charge l\'allemand, le coréen ou le polonais ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Non. Kokoro-82M v1.0 fournit 54 voix dans 8 langues (anglais, espagnol, français, hindi, italien, japonais, portugais et chinois) et n\'a pas de voix officielles en allemand, en coréen ni en polonais. Pour ces langues, utilisez un autre modèle local comme XTTS v2 (licence non commerciale) ou un service cloud : ElevenLabs documente plus de 90 langues pour Eleven v4.'
+          }
         }
       ]
     }
   },
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-11',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'Kokoro vs ElevenLabs: TTS local vs IA de voz en la nube (2026)',
-    seoTitle: 'Kokoro vs ElevenLabs (2026): TTS local vs nube',
+    title: 'Kokoro vs ElevenLabs: ¿TTS local gratis o nube de pago? (2026)',
+    seoTitle: 'Kokoro vs ElevenLabs (2026): ¿TTS local gratis o nube?',
     intro: 'Kokoro es un modelo de texto a voz de pesos abiertos con 82 millones de parámetros, licenciado bajo Apache 2.0, que descargas y ejecutas tú mismo, gratis, sin necesidad de conexión a Internet tras la instalación. ElevenLabs es una plataforma en la nube de pago con una biblioteca de voces mucho más amplia y clonación de voz instantánea a partir de una muestra de audio corta. La decisión no es qué opción suena mejor de forma aislada, sino si quieres un motor gratuito, sin conexión, de voces fijas que operas tú mismo, o un servicio de pago, alojado y con capacidad de clonación que alquilas.',
-    metaDescription: 'Kokoro es un modelo TTS local gratuito de 82M de parámetros con 54 voces fijas y sin necesidad de Internet. ElevenLabs es una plataforma en la nube de pago con clonación de voz. Comparativa completa.',
+    metaDescription: 'Kokoro es un modelo TTS local gratuito (Apache 2.0, 82M de parámetros, 54 voces, 8 idiomas). ElevenLabs es nube de pago con clonación y más de 90 idiomas.',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
+    dateModified: '2026-11-19',
     readTime: '11 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores, creadores de contenido y equipos que eligen entre un modelo TTS local gratuito y una plataforma de voz en la nube de pago.',
     primaryTerm: 'Kokoro vs ElevenLabs',
-    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'alternativa a ElevenLabs', 'texto a voz local', 'TTS de código abierto', 'modelo TTS gratuito', 'síntesis de voz sin conexión', 'Kokoro-82M'],
-    twitterDescription: 'Kokoro es un modelo TTS local gratuito de 82M de parámetros. ElevenLabs es una plataforma en la nube de pago con clonación de voz. Así se comparan en la práctica.',
-    leadAnswerBlock: '**Elige Kokoro si quieres texto a voz gratuito, sin conexión e ilimitado a partir de un conjunto fijo de voces y te sientes cómodo ejecutando un modelo tú mismo. Elige ElevenLabs si necesitas clonación de voz, docenas de idiomas o una voz pulida hoy mismo sin instalación local.** Kokoro es un modelo de 82M de parámetros bajo licencia Apache 2.0 que funciona en CPU o una GPU modesta. ElevenLabs es una API en la nube medida por uso, con un nivel gratuito y planes de pago.',
+    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'alternativa a ElevenLabs', 'texto a voz local', 'TTS de código abierto', 'modelo TTS gratuito', 'síntesis de voz sin conexión', 'Kokoro-82M', 'ElevenLabs local', 'idiomas Kokoro'],
+    twitterDescription: 'Kokoro es gratis, local y de voces fijas. ElevenLabs es de pago, en la nube y clona voces. Planes, licencias e idiomas revisados de nuevo.',
+    leadAnswerBlock: '**Elige Kokoro para texto a voz gratuito, sin conexión y con voces fijas que tú mismo ejecutas; elige ElevenLabs para clonación de voz, más de 90 idiomas o una voz pulida sin instalar nada.** Kokoro (82M de parámetros, Apache 2.0) no recibe actualizaciones oficiales desde agosto de 2025.',
     quickAnswerTop: {
       es: {
         question: '¿Debería usar Kokoro o ElevenLabs?',
         answer: 'Kokoro es un modelo TTS local gratuito de pesos abiertos con 82 millones de parámetros (Apache 2.0, de hexgrad) que funciona en CPU o una GPU modesta e incluye 54 voces preestablecidas en 8 idiomas, pero sin clonación de voz integrada. ElevenLabs es una plataforma en la nube de pago con un catálogo de voces mucho más amplio, clonación de voz zero-shot a partir de una muestra corta y una cobertura de idiomas más amplia, a costa de una suscripción y de enviar tu texto a un servidor de terceros. Mejor para uso gratuito/sin conexión/voces fijas: Kokoro. Mejor para clonación de voz o máxima cobertura de idiomas: ElevenLabs.',
         bullets: [
+          'Comprobación (2026-11-19): ElevenLabs lanzó Eleven v4 (más de 90 idiomas) el 2026-09-28; los precios de los planes no han cambiado. Kokoro-82M sigue en la v1.0 (publicada el 2025-01-27) y el repositorio oficial de hexgrad se actualizó por última vez el 2025-08-06, es decir, no hay actualización oficial desde hace más de un año; los wrappers de la comunidad, como Kokoro-FastAPI, siguen activos.',
           'Kokoro: 82M de parámetros, licencia Apache 2.0, arquitectura derivada de StyleTTS2, gratuito, se ejecuta localmente en CPU o GPU, 54 voces integradas, sin clonación de voz oficial.',
           'ElevenLabs: nivel gratuito (10.000 créditos/mes, sin licencia comercial), Starter 6 $/mes (30.000 créditos, licencia comercial, clonación de voz instantánea), Creator 22 $/mes (121.000 créditos, clonación de voz profesional), Pro 99 $/mes (600.000 créditos), Scale 299 $/mes (1.800.000 créditos), Business 990 $/mes (6.000.000 créditos). Verifica las cifras actuales en la página de precios de ElevenLabs antes de decidir: los planes y las asignaciones de créditos cambian.',
           'Kokoro es multilingüe a nivel de modelo en 8 idiomas (inglés, español, francés, hindi, italiano, japonés, portugués, chino); ElevenLabs indica una cobertura de idiomas más amplia en su sitio: consulta la documentación actual para conocer la cifra exacta.',
           'Kokoro no requiere Internet una vez descargado el modelo; ElevenLabs requiere conectividad para generar audio.',
           'Para la mayoría de los creadores que necesitan una voz clonada o muy pulida hoy: prueba el nivel gratuito de ElevenLabs. Para desarrolladores que quieren un motor gratuito y autoalojado con un conjunto fijo de voces y sin coste por carácter: empieza con Kokoro.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -2481,6 +2573,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No existe relación de afiliación entre PromptQuorum y Kokoro/hexgrad; cualquier enlace de ElevenLabs en este artículo se divulga conforme al aviso de afiliación en la parte superior de la página.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Kokoro no ha recibido ninguna actualización oficial desde el 6 de agosto de 2025 (repositorio de hexgrad; modelo v1.0 publicado el 27 de enero de 2025, ficha del modelo modificada por última vez el 10 de abril de 2025). Es posible que el proyecto ya no se mantenga: compruébalo antes de depender de él. Los wrappers de la comunidad, como Kokoro-FastAPI, siguen actualizándose. Comprobado el 19 de noviembre de 2026.'
+          },
           { type: 'note', text: 'Los datos se han verificado con la ficha de modelo de Kokoro-82M en Hugging Face y la página pública de precios de ElevenLabs a la fecha de publicación de este artículo. Ambos pueden cambiar: verifica las condiciones actuales antes de comprometerte con cualquiera de las dos opciones.' }
         ]
       },
@@ -2597,7 +2693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Beneficio de la nube': 'Soporte de idiomas documentado más amplio',
-            'Qué cambia en la práctica': 'Consulta la documentación actual de ElevenLabs para la cifra exacta; probablemente más amplia que los 8 idiomas de Kokoro a nivel de modelo'
+            'Qué cambia en la práctica': 'ElevenLabs documenta más de 90 idiomas para Eleven v4, frente a los 8 idiomas de Kokoro a nivel de modelo'
           },
           {
             'Beneficio de la nube': 'Escalado alojado',
@@ -2719,7 +2815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimensión: 'Cobertura de idiomas',
             Kokoro: '8 idiomas documentados a nivel de modelo',
-            ElevenLabs: 'Cobertura documentada más amplia — consultar documentación actual para la cifra exacta'
+            ElevenLabs: 'Más de 90 idiomas para Eleven v4 (según la documentación de ElevenLabs)'
           },
           {
             Dimensión: 'Control de privacidad',
@@ -2921,7 +3017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo ejecutar Kokoro completamente sin conexión?',
-            a: 'Sí, una vez descargados los pesos del modelo y los paquetes de voz, Kokoro puede generar voz sin conexión a Internet. ElevenLabs, como servicio en la nube, requiere conectividad para uso normal.'
+            a: 'Sí, una vez descargados los pesos del modelo y los paquetes de voz, Kokoro puede generar voz sin conexión a Internet. ElevenLabs, como servicio en la nube, requiere conectividad para uso normal. Comprueba tu propia política de red y tus dependencias antes de considerar un despliegue como sin conexión.'
           },
           {
             q: '¿ElevenLabs ofrece un plan gratuito?',
@@ -2939,6 +3035,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Puedo clonar mi propia voz gratis con un modelo local?',
             a: 'No directamente con Kokoro, ya que no incluye clonación de voz. Existen otros modelos abiertos locales con capacidad de clonación, pero normalmente requieren más configuración y hardware más potente que Kokoro. Obtén siempre un consentimiento claro antes de clonar cualquier voz, incluida la tuya, para uso comercial, y revisa la licencia y los requisitos de consentimiento de la herramienta específica.'
           },
+          {
+            q: '¿Existe una versión local de ElevenLabs?',
+            a: 'No. ElevenLabs es un servicio en la nube: no publica pesos de modelo descargables ni un instalador local para sus planes de autoservicio, así que cada generación pasa por sus servidores. Las opciones locales más cercanas son modelos de pesos abiertos como Kokoro-82M (gratis, Apache 2.0, 54 voces fijas), Piper o XTTS v2. Ninguno es un modelo de ElevenLabs, y Kokoro no iguala su clonación de voz ni su cobertura de idiomas.'
+          },
+          {
+            q: '¿Kokoro admite alemán, coreano o polaco?',
+            a: 'No. Kokoro-82M v1.0 incluye 54 voces en 8 idiomas (inglés, español, francés, hindi, italiano, japonés, portugués y chino) y no tiene voces oficiales en alemán, coreano ni polaco. Para esos idiomas usa otro modelo local como XTTS v2 (licencia no comercial) o un servicio en la nube: ElevenLabs documenta más de 90 idiomas para Eleven v4.'
+          }
         ]
       },
       verdict: {
@@ -3019,13 +3123,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     },
+    current_models_mentioned: ['Kokoro-82M', 'ElevenLabs Eleven v4'],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Kokoro vs ElevenLabs: TTS local vs IA de voz en la nube (2026)',
-      'description': 'Kokoro es un modelo TTS local gratuito de 82M de parámetros con 54 voces fijas y sin necesidad de Internet. ElevenLabs es una plataforma en la nube de pago con clonación de voz. Comparativa completa.',
+      'headline': 'Kokoro vs ElevenLabs: ¿TTS local gratis o nube de pago? (2026)',
+      'description': 'Kokoro es un modelo TTS local gratuito (Apache 2.0, 82M de parámetros, 54 voces, 8 idiomas). ElevenLabs es nube de pago con clonación y más de 90 idiomas.',
       'datePublished': '2026-09-11',
-      'dateModified': '2026-09-11',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -3041,7 +3146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'height': '60'
         }
       },
-      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/es/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -3076,7 +3181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/es/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -3144,7 +3249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '¿Puedo ejecutar Kokoro completamente sin conexión?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Sí, una vez descargados los pesos del modelo y los paquetes de voz, Kokoro puede generar voz sin conexión a Internet. ElevenLabs, como servicio en la nube, requiere conectividad para uso normal.'
+            'text': 'Sí, una vez descargados los pesos del modelo y los paquetes de voz, Kokoro puede generar voz sin conexión a Internet. ElevenLabs, como servicio en la nube, requiere conectividad para uso normal. Comprueba tu propia política de red y tus dependencias antes de considerar un despliegue como sin conexión.'
           }
         },
         {
@@ -3178,40 +3283,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'No directamente con Kokoro, ya que no incluye clonación de voz. Existen otros modelos abiertos locales con capacidad de clonación, pero normalmente requieren más configuración y hardware más potente que Kokoro. Obtén siempre un consentimiento claro antes de clonar cualquier voz, incluida la tuya, para uso comercial, y revisa la licencia y los requisitos de consentimiento de la herramienta específica.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Existe una versión local de ElevenLabs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. ElevenLabs es un servicio en la nube: no publica pesos de modelo descargables ni un instalador local para sus planes de autoservicio, así que cada generación pasa por sus servidores. Las opciones locales más cercanas son modelos de pesos abiertos como Kokoro-82M (gratis, Apache 2.0, 54 voces fijas), Piper o XTTS v2. Ninguno es un modelo de ElevenLabs, y Kokoro no iguala su clonación de voz ni su cobertura de idiomas.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Kokoro admite alemán, coreano o polaco?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Kokoro-82M v1.0 incluye 54 voces en 8 idiomas (inglés, español, francés, hindi, italiano, japonés, portugués y chino) y no tiene voces oficiales en alemán, coreano ni polaco. Para esos idiomas usa otro modelo local como XTTS v2 (licencia no comercial) o un servicio en la nube: ElevenLabs documenta más de 90 idiomas para Eleven v4.'
+          }
         }
       ]
     }
   },
   ja: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-11',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'Kokoro vs ElevenLabs:ローカルTTS vs クラウド音声AI(2026)',
-    seoTitle: 'Kokoro vs ElevenLabs(2026):ローカル vs クラウドTTS',
+    title: 'Kokoro vs ElevenLabs:無料ローカルTTSか有料クラウドか(2026)',
+    seoTitle: 'Kokoro vs ElevenLabs:無料ローカルTTS比較',
     intro: 'Kokoroは、8200万パラメータのApache 2.0ライセンスのオープンウェイトTTSモデルで、自分でダウンロードして無料で実行でき、セットアップ後はインターネット接続が不要です。ElevenLabsは、はるかに大規模な音声ライブラリと、短い音声サンプルからの即座の音声クローンを備えた有料クラウドプラットフォームです。決めるべきなのは単体でどちらの音声が優れているかではなく、無料でオフライン、固定音声のエンジンを自分で運用したいのか、有料でホスト型、クローン機能を備えたサービスをレンタルしたいのかということです。',
-    metaDescription: 'Kokoroは82Mパラメータの無料ローカルTTSモデルで、54の固定音声を備え、インターネット不要です。ElevenLabsは音声クローンを備えた有料クラウドプラットフォームです。完全比較。',
+    metaDescription: 'Kokoroは無料のローカルTTS(Apache 2.0、82Mパラメータ、54音声、8言語)。ElevenLabsは音声クローンと90以上の言語を備えた有料クラウド。料金とライセンスを再確認して比較。',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
+    dateModified: '2026-11-19',
     readTime: '11分で読めます',
     educationalLevel: 'Intermediate',
     audience: '無料のローカルTTSモデルと有料のクラウド音声プラットフォームのどちらを選ぶか検討している開発者、コンテンツ制作者、チーム向け。',
     primaryTerm: 'Kokoro vs ElevenLabs',
-    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'ElevenLabs 代替', 'ローカル音声合成', 'オープンソース TTS', '無料 TTS モデル', 'オフライン音声合成', 'Kokoro-82M'],
-    twitterDescription: 'Kokoroは82Mパラメータの無料ローカルTTSモデルです。ElevenLabsは音声クローンを備えた有料クラウドプラットフォームです。実際の比較はこちら。',
-    leadAnswerBlock: '**無料でオフライン、固定音声セットからの無制限の音声合成が欲しく、自分でモデルを運用することに抵抗がなければKokoroを選びましょう。音声クローン、数十の言語、または今日すぐにローカルセットアップなしで洗練された音声が必要ならElevenLabsを選びましょう。** Kokoroは82MパラメータのApache 2.0ライセンスモデルで、CPUまたは控えめなGPUで動作します。ElevenLabsは従量課金制のクラウドAPIで、無料枠と有料プランがあります。',
+    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'ElevenLabs 代替', 'ローカル音声合成', 'オープンソース TTS', '無料 TTS モデル', 'オフライン音声合成', 'Kokoro-82M', 'ElevenLabs ローカル', 'Kokoro 対応言語'],
+    twitterDescription: 'Kokoroは無料・ローカル・固定音声。ElevenLabsは有料・クラウド型で音声クローンに対応。プラン、ライセンス、言語を再確認しました。',
+    leadAnswerBlock: '**自分で動かす無料・オフライン・固定音声の音声合成ならKokoro、音声クローン・90以上の言語・セットアップ不要の完成度ならElevenLabsを選びます。** Kokoroは82Mパラメータ・Apache 2.0で、2025年8月以降公式の更新はありません。',
     quickAnswerTop: {
       ja: {
         question: 'KokoroとElevenLabsのどちらを使うべきですか?',
         answer: 'Kokoroは無料のオープンウェイト8200万パラメータのローカルTTSモデル(Apache 2.0、hexgrad提供)で、CPUまたは控えめなGPUで動作し、8言語にわたる54種類のプリセット音声を備えていますが、組み込みの音声クローン機能はありません。ElevenLabsは有料クラウドプラットフォームで、はるかに大規模な音声カタログ、短いサンプルからのゼロショット音声クローン、より広い言語対応を備えていますが、サブスクリプションと第三者サーバーへのテキスト送信が必要です。無料/オフライン/固定音声に最適:Kokoro。音声クローンまたは最大限の言語対応に最適:ElevenLabs。',
         bullets: [
+          '確認結果(2026-11-19):ElevenLabsは2026-09-28にEleven v4(90以上の言語)を公開し、プラン料金に変更はありません。Kokoro-82Mはv1.0(2025-01-27公開)のままで、hexgrad公式リポジトリの最終更新は2025-08-06です。公式の更新は1年以上ありませんが、Kokoro-FastAPIなどのコミュニティ製ラッパーは更新が続いています。',
           'Kokoro:8200万パラメータ、Apache 2.0ライセンス、StyleTTS2派生のアーキテクチャ、無料、CPUまたはGPUでローカル動作、54種類の内蔵音声、公式の音声クローンなし。',
           'ElevenLabs:無料枠(月10,000クレジット、商用ライセンスなし)、Starter月6ドル(30,000クレジット、商用ライセンス、即座の音声クローン)、Creator月22ドル(121,000クレジット、プロ向け音声クローン)、Pro月99ドル(600,000クレジット)、Scale月299ドル(1,800,000クレジット)、Business月990ドル(6,000,000クレジット)。決定前にElevenLabsの料金ページで最新の数値を確認してください——プランとクレジット割り当ては変更されます。',
           'Kokoroはモデルレベルで8言語(英語、スペイン語、フランス語、ヒンディー語、イタリア語、日本語、ポルトガル語、中国語)に対応した多言語モデルです。ElevenLabsは自社サイトでより広い言語対応を掲載しています——正確な数は最新のドキュメントで確認してください。',
           'Kokoroはモデルダウンロード後にインターネットが不要です。ElevenLabsは音声生成に接続が必要です。',
           '今日すぐにクローンまたは洗練された音声が必要なほとんどの制作者は、ElevenLabsの無料枠を試してください。文字数課金なしで固定音声セットの無料自己ホスト型エンジンが欲しい開発者は、Kokoroから始めてください。'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -3276,6 +3398,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'PromptQuorumとKokoro/hexgradの間にアフィリエイト関係はありません。この記事内のElevenLabsへのリンクはページ上部のアフィリエイト通知に従って開示されています。',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Kokoroは2025年8月6日以降、公式の更新がありません(hexgradリポジトリ。モデルv1.0は2025年1月27日公開、モデルカードの最終変更は2025年4月10日)。保守が止まっている可能性があるため、利用前に確認してください。Kokoro-FastAPIなどのコミュニティ製ラッパーは更新が続いています。確認日:2026年11月19日。'
+          },
           { type: 'note', text: '事実は、この記事の公開日時点でのHugging Face上のKokoro-82Mモデルカードと、ElevenLabsの公開料金ページと照合して確認しました。どちらも変更される可能性があるため、いずれかを選ぶ前に最新の条件を確認してください。' }
         ]
       },
@@ -3286,7 +3412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       shortAnswer: {
         id: 'short-answer',
         title: '総評',
-        content: '🏆 **無料/オフラインTTS最適:** Kokoro——文字あたりのコストなしで自分で運用する82MパラメータのApache 2.0モデル。\n💰 **音声クローン最適:** ElevenLabs——有料プランで短い参照クリップからのゼロショットクローン。\n⚡ **セットアップ不要で今日すぐ洗練された音声を得るのに最適:** ElevenLabs。\n🖥️ **CPUのみまたは控えめなGPUハードウェアに最適:** Kokoro。\n🔒 **テキストと音声を第三者サーバーから遠ざけるのに最適:** Kokoro(ダウンロード後、完全にオフラインで実行された場合)。\n🌍 **最大限の言語対応に最適:** ElevenLabs——正確な数は最新のドキュメントで確認してください。Kokoroはモデルレベルで8言語をカバーします。\n\n音声クローンが不要な予算重視の開発者や趣味利用者は、Kokoroから始めましょう。クローンされた音声、より広い言語サポート、または何もインストールせずに今日すぐ出力が必要な制作者や企業は、ElevenLabsの無料枠から始めましょう。',
+        content: '🏆 **無料/オフラインTTS最適:** Kokoro——文字あたりのコストなしで自分で運用する82MパラメータのApache 2.0モデル。\n💰 **音声クローン最適:** ElevenLabs——有料プランで短い参照クリップからのゼロショットクローン。\n⚡ **セットアップ不要で今日すぐ洗練された音声を得るのに最適:** ElevenLabs。\n🖥️ **CPUのみまたは控えめなGPUハードウェアに最適:** Kokoro。\n🔒 **テキストと音声を第三者サーバーから遠ざけるのに最適:** Kokoro(ダウンロード後、オフラインで実行された場合)。\n🌍 **最大限の言語対応に最適:** ElevenLabs——正確な数は最新のドキュメントで確認してください。Kokoroはモデルレベルで8言語をカバーします。\n\n音声クローンが不要な予算重視の開発者や趣味利用者は、Kokoroから始めましょう。クローンされた音声、より広い言語サポート、または何もインストールせずに今日すぐ出力が必要な制作者や企業は、ElevenLabsの無料枠から始めましょう。',
         decisionBlock: {
           title: 'TTSのアプローチを選ぶ',
           cloudIf: [
@@ -3296,7 +3422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           localIf: [
             '文字あたりの課金なしで無料・無制限の生成が欲しい。',
-            'セットアップ後にパイプラインが完全にオフラインで動作する必要がある——キオスク、組み込みデバイス、エアギャップシステム。',
+            'セットアップ後にパイプラインがオフラインで動作する必要がある——キオスク、組み込みデバイス、隔離システム。',
             '特定の音声をクローンするのではなく、54種類の固定音声セットから選ぶことで問題ない。'
           ],
           quick: [
@@ -3392,7 +3518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'クラウドの利点': 'より広くドキュメント化された言語対応',
-            '実際に何が変わるか': '正確な数は最新のElevenLabsドキュメントで確認。おそらくKokoroのモデルレベル8言語より広い'
+            '実際に何が変わるか': 'ElevenLabsはEleven v4で90以上の言語を公開しており、Kokoroのモデルレベルの8言語を上回ります'
           },
           {
             'クラウドの利点': 'ホスト型スケーリング',
@@ -3514,7 +3640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '項目': '言語対応',
             Kokoro: 'モデルレベルで8言語がドキュメント化',
-            ElevenLabs: 'よりドキュメント化された対応——正確な数は最新ドキュメントで確認'
+            ElevenLabs: 'Eleven v4で90以上の言語(ElevenLabsドキュメントによる)'
           },
           {
             '項目': 'プライバシー管理',
@@ -3587,7 +3713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '実用的な答え': '実際のリクエストボリュームとハードウェアコストで計算すること'
           },
           {
-            'シナリオ': 'オフラインまたはエアギャップ展開',
+            'シナリオ': 'オフライン展開',
             Kokoro: 'モデルと音声をローカルにインストールすれば最適',
             ElevenLabs: '通常利用には接続が必要',
             '実用的な答え': 'Kokoroが勝つ(オフライン要件)'
@@ -3617,7 +3743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '以下のほとんどが当てはまる場合、無料のローカルモデルを選んでください:',
         items: [
           'サブスクリプションや文字あたりの課金なしで無料・無制限の音声合成が欲しい。',
-          'セットアップ後にパイプラインが完全にオフラインで動作する必要がある——組み込みデバイス、キオスク、エアギャップシステム。',
+          'セットアップ後にパイプラインがオフラインで動作する必要がある——組み込みデバイス、キオスク、隔離システム。',
           '特定の音声をクローンするのではなく、54種類のプリセット音声の固定セットから選ぶことで問題ない。',
           '寛容なライセンスの下でモデルをインストール、検査、微調整、再配布したい。',
           '開発者で、Python環境と推論パイプラインのセットアップに抵抗がない。',
@@ -3677,7 +3803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'インターネット接続なしの完全なオフライン動作が必要。',
           'テキストと音声が自社インフラの外に出てはいけない。',
           '文字あたりまたはクレジットあたりのコストが一切ない無制限の生成が必要。',
-          'ネットワークアクセスのないエアギャップまたは組み込みシステムを運用している。',
+          'ネットワークアクセスのないオフラインまたは組み込みシステムを運用している。',
           'モデルの重み自体に対する完全な制御と可視性が欲しい。',
         ],
         blockquote: 'これに当てはまる場合は、代わりに[Hugging FaceのKokoro-82M →](https://huggingface.co/hexgrad/Kokoro-82M)から始めましょう——無料、Apache 2.0、CPUまたは控えめなGPUで動作します。'
@@ -3715,8 +3841,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ElevenLabsは、Freeプラン(0ドル、月10,000クレジット、商用ライセンスなし)から、Starter(月6ドル)からBusiness(月990ドル、6,000,000クレジット)までの有料プラン、さらにカスタムEnterprise料金を掲載しています。プランとクレジットコストは変更されるため、ElevenLabsの料金ページで最新の数値を確認してください。'
           },
           {
-            q: 'Kokoroを完全にオフラインで実行できますか?',
-            a: 'はい。モデルの重みと音声パックをダウンロードすれば、Kokoroはインターネット接続なしで音声を生成できます。ElevenLabsはクラウドサービスとして、通常利用に接続が必要です。'
+            q: 'Kokoroをオフラインで実行できますか?',
+            a: 'はい。モデルの重みと音声パックをダウンロードすれば、Kokoroはインターネット接続なしで音声を生成できます。ElevenLabsはクラウドサービスとして、通常利用に接続が必要です。 オフライン運用とみなす前に、自社のネットワークポリシーと依存関係を確認してください。'
           },
           {
             q: 'ElevenLabsは無料プランを提供していますか?',
@@ -3734,6 +3860,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'ローカルモデルで自分の音声を無料でクローンできますか?',
             a: 'Kokoroでは直接できません。音声クローンを提供していないためです。クローン対応の他のローカルオープンモデルは存在しますが、通常はKokoroよりも多くのセットアップとより強力なハードウェアが必要です。自分の音声を含め、商用目的で音声をクローンする前には必ず明確な同意を得て、特定のツールのライセンスと同意要件を確認してください。'
           },
+          {
+            q: 'ElevenLabsのローカル版はありますか?',
+            a: 'ありません。ElevenLabsはクラウドサービスで、セルフサービスプラン向けにダウンロード可能なモデル重みやローカル用インストーラーは公開されておらず、音声生成はすべて同社のサーバー経由で行われます。最も近いローカルの選択肢は、Kokoro-82M(無料、Apache 2.0、54の固定音声)、Piper、XTTS v2などのオープンウェイトモデルです。いずれもElevenLabsのモデルではなく、Kokoroは音声クローンや言語数の面でElevenLabsに及びません。'
+          },
+          {
+            q: 'Kokoroはドイツ語・韓国語・ポーランド語に対応していますか?',
+            a: 'いいえ。Kokoro-82M v1.0は8言語(英語、スペイン語、フランス語、ヒンディー語、イタリア語、日本語、ポルトガル語、中国語)の54音声を同梱しており、ドイツ語・韓国語・ポーランド語の公式音声はありません。これらの言語にはXTTS v2(非商用ライセンス)などの別のローカルモデルか、Eleven v4で90以上の言語を公開しているElevenLabsのようなクラウドサービスを使ってください。'
+          }
         ]
       },
       verdict: {
@@ -3814,13 +3948,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     },
+    current_models_mentioned: ['Kokoro-82M', 'ElevenLabs Eleven v4'],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Kokoro vs ElevenLabs:ローカルTTS vs クラウド音声AI(2026)',
-      'description': 'Kokoroは82Mパラメータの無料ローカルTTSモデルで、54の固定音声を備え、インターネット不要です。ElevenLabsは音声クローンを備えた有料クラウドプラットフォームです。完全比較。',
+      'headline': 'Kokoro vs ElevenLabs:無料ローカルTTSか有料クラウドか(2026)',
+      'description': 'Kokoroは無料のローカルTTS(Apache 2.0、82Mパラメータ、54音声、8言語)。ElevenLabsは音声クローンと90以上の言語を備えた有料クラウド。料金とライセンスを再確認して比較。',
       'datePublished': '2026-09-11',
-      'dateModified': '2026-09-11',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -3836,7 +3971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'height': '60'
         }
       },
-      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/ja/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -3871,7 +4006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/ja/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -3936,10 +4071,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'Kokoroを完全にオフラインで実行できますか?',
+          'name': 'Kokoroをオフラインで実行できますか?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'はい。モデルの重みと音声パックをダウンロードすれば、Kokoroはインターネット接続なしで音声を生成できます。ElevenLabsはクラウドサービスとして、通常利用に接続が必要です。'
+            'text': 'はい。モデルの重みと音声パックをダウンロードすれば、Kokoroはインターネット接続なしで音声を生成できます。ElevenLabsはクラウドサービスとして、通常利用に接続が必要です。 オフライン運用とみなす前に、自社のネットワークポリシーと依存関係を確認してください。'
           }
         },
         {
@@ -3973,40 +4108,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'Kokoroでは直接できません。音声クローンを提供していないためです。クローン対応の他のローカルオープンモデルは存在しますが、通常はKokoroよりも多くのセットアップとより強力なハードウェアが必要です。自分の音声を含め、商用目的で音声をクローンする前には必ず明確な同意を得て、特定のツールのライセンスと同意要件を確認してください。'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ElevenLabsのローカル版はありますか?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'ありません。ElevenLabsはクラウドサービスで、セルフサービスプラン向けにダウンロード可能なモデル重みやローカル用インストーラーは公開されておらず、音声生成はすべて同社のサーバー経由で行われます。最も近いローカルの選択肢は、Kokoro-82M(無料、Apache 2.0、54の固定音声)、Piper、XTTS v2などのオープンウェイトモデルです。いずれもElevenLabsのモデルではなく、Kokoroは音声クローンや言語数の面でElevenLabsに及びません。'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kokoroはドイツ語・韓国語・ポーランド語に対応していますか?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'いいえ。Kokoro-82M v1.0は8言語(英語、スペイン語、フランス語、ヒンディー語、イタリア語、日本語、ポルトガル語、中国語)の54音声を同梱しており、ドイツ語・韓国語・ポーランド語の公式音声はありません。これらの言語にはXTTS v2(非商用ライセンス)などの別のローカルモデルか、Eleven v4で90以上の言語を公開しているElevenLabsのようなクラウドサービスを使ってください。'
+          }
         }
       ]
     }
   },
   zh: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-11',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'Kokoro vs ElevenLabs:本地TTS对比云端语音AI(2026)',
-    seoTitle: 'Kokoro vs ElevenLabs(2026):本地对比云端TTS',
+    title: 'Kokoro vs ElevenLabs：免费本地TTS还是付费云端？(2026)',
+    seoTitle: 'Kokoro vs ElevenLabs：免费本地TTS对比',
     intro: 'Kokoro是一个拥有8200万参数、采用Apache 2.0许可证的开放权重文本转语音模型,你可以自己下载并运行,完全免费,设置完成后无需联网。ElevenLabs是一个付费云平台,拥有更庞大的语音库,并能从简短音频样本中即时克隆语音。真正需要决定的不是单独比较哪个声音更好听,而是你是想要一个免费、离线、固定语音的引擎自己运营,还是想租用一个付费、托管、具备克隆能力的服务。',
-    metaDescription: 'Kokoro是一款免费的本地TTS模型,拥有82M参数、54个固定语音,无需联网。ElevenLabs是具备语音克隆功能的付费云平台。完整对比。',
+    metaDescription: 'Kokoro是免费本地TTS模型(Apache 2.0、82M参数、54个语音、8种语言)；ElevenLabs是付费云端，支持声音克隆和90多种语言。价格与许可证已复核。',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
+    dateModified: '2026-11-19',
     readTime: '11分钟阅读',
     educationalLevel: 'Intermediate',
     audience: '在免费本地TTS模型和付费云端语音平台之间做选择的开发者、内容创作者和团队。',
     primaryTerm: 'Kokoro vs ElevenLabs',
-    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'ElevenLabs 替代品', '本地文本转语音', '开源TTS', '免费TTS模型', '离线语音合成', 'Kokoro-82M'],
-    twitterDescription: 'Kokoro是一款免费的本地TTS模型,拥有82M参数。ElevenLabs是具备语音克隆功能的付费云平台。以下是它们的实际对比。',
-    leadAnswerBlock: '**如果你想要免费、离线、无限量的文本转语音,并且愿意自己运行模型,请选择Kokoro。如果你需要语音克隆、几十种语言或今天就要一个无需本地设置的打磨过的声音,请选择ElevenLabs。** Kokoro是一个82M参数、采用Apache 2.0许可证的模型,可在CPU或中端GPU上运行。ElevenLabs是一个按量计费的云端API,有免费层级和付费方案。',
+    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'ElevenLabs 替代品', '本地文本转语音', '开源TTS', '免费TTS模型', '离线语音合成', 'Kokoro-82M', 'ElevenLabs本地', 'Kokoro支持语言'],
+    twitterDescription: 'Kokoro免费、本地运行、语音固定；ElevenLabs付费、云端托管、可克隆声音。套餐、许可证和语言已重新核实。',
+    leadAnswerBlock: '**想自己运行免费、可离线、语音固定的语音合成，选 Kokoro；需要声音克隆、90 多种语言或免安装的成熟音色，选 ElevenLabs。** Kokoro 为 82M 参数、Apache 2.0 许可，自 2025 年 8 月起没有官方更新。',
     quickAnswerTop: {
       zh: {
         question: '我应该使用Kokoro还是ElevenLabs?',
         answer: 'Kokoro是一款免费的开放权重8200万参数本地TTS模型(Apache 2.0,由hexgrad开发),可在CPU或中端GPU上运行,内置8种语言的54种预设语音——但没有内置语音克隆功能。ElevenLabs是一个付费云平台,拥有大得多的语音目录、可从简短样本进行零样本语音克隆,以及更广泛的语言覆盖,代价是需要订阅并将你的文本发送到第三方服务器。免费/离线/固定语音的最佳选择:Kokoro。语音克隆或最大语言覆盖的最佳选择:ElevenLabs。',
         bullets: [
+          '核查结果(2026-11-19)：ElevenLabs 已于 2026-09-28 发布 Eleven v4(90 多种语言)，套餐价格未变。Kokoro-82M 仍为 v1.0(2025-01-27 发布)，hexgrad 官方仓库最近一次更新是 2025-08-06，即官方已超过一年没有更新；不过 Kokoro-FastAPI 等社区封装项目仍在持续维护。',
           'Kokoro:8200万参数,Apache 2.0许可证,源自StyleTTS2的架构,免费,可在CPU或GPU上本地运行,54种内置语音,无官方语音克隆功能。',
           'ElevenLabs:免费层级(每月10,000积分,无商用许可),Starter每月6美元(30,000积分,含商用许可,即时语音克隆),Creator每月22美元(121,000积分,专业语音克隆),Pro每月99美元(600,000积分),Scale每月299美元(1,800,000积分),Business每月990美元(6,000,000积分)。决定前请在ElevenLabs定价页面核实最新数据——方案和积分额度会变化。',
           'Kokoro在模型层面支持8种语言(英语、西班牙语、法语、印地语、意大利语、日语、葡萄牙语、中文);ElevenLabs在其网站上列出了更广泛的语言支持——请查阅最新文档以获取确切数字。',
           'Kokoro下载模型后无需联网;ElevenLabs需要联网才能生成音频。',
           '对于大多数今天就需要克隆或高度打磨语音的创作者:试用ElevenLabs的免费层级。对于想要免费、自托管、固定语音集且无按字符成本的开发者:从Kokoro开始。'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -4071,6 +4223,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'PromptQuorum与Kokoro/hexgrad之间不存在联盟关系;本文中任何ElevenLabs链接均按页面顶部联盟披露说明进行披露。',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Kokoro 自 2025 年 8 月 6 日起没有官方更新(hexgrad 仓库；v1.0 模型发布于 2025 年 1 月 27 日，模型卡最后修改于 2025 年 4 月 10 日)。该项目可能已无人维护——依赖前请先确认。Kokoro-FastAPI 等社区封装项目仍在更新。核查日期：2026 年 11 月 19 日。'
+          },
           { type: 'note', text: '事实已根据Hugging Face上的Kokoro-82M模型卡片和ElevenLabs的公开定价页面在本文发布日期进行核实。两者均可能发生变化——在决定使用任何一方之前请核实最新条款。' }
         ]
       },
@@ -4081,7 +4237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       shortAnswer: {
         id: 'short-answer',
         title: '我们的结论',
-        content: '🏆 **最佳免费/离线TTS:** Kokoro——一个8200万参数、Apache 2.0许可证的模型,自己运营,没有按字符付费。\n💰 **最佳语音克隆:** ElevenLabs——付费方案可从简短参考片段进行零样本克隆。\n⚡ **今天就要打磨过的声音、无需设置的最佳选择:** ElevenLabs。\n🖥️ **纯CPU或中端GPU硬件的最佳选择:** Kokoro。\n🔒 **让文本和音频远离第三方服务器的最佳选择:** Kokoro(一旦下载并完全离线运行)。\n🌍 **最大语言覆盖的最佳选择:** ElevenLabs——请查阅其最新文档获取确切数字;Kokoro在模型层面覆盖8种语言。\n\n对于预算有限、不需要语音克隆的开发者和爱好者,从Kokoro开始。对于需要克隆语音、更广泛语言支持,或今天就要结果而无需安装任何东西的创作者和企业,从ElevenLabs的免费层级开始。',
+        content: '🏆 **最佳免费/离线TTS:** Kokoro——一个8200万参数、Apache 2.0许可证的模型,自己运营,没有按字符付费。\n💰 **最佳语音克隆:** ElevenLabs——付费方案可从简短参考片段进行零样本克隆。\n⚡ **今天就要打磨过的声音、无需设置的最佳选择:** ElevenLabs。\n🖥️ **纯CPU或中端GPU硬件的最佳选择:** Kokoro。\n🔒 **让文本和音频远离第三方服务器的最佳选择:** Kokoro(一旦下载并离线运行)。\n🌍 **最大语言覆盖的最佳选择:** ElevenLabs——请查阅其最新文档获取确切数字;Kokoro在模型层面覆盖8种语言。\n\n对于预算有限、不需要语音克隆的开发者和爱好者,从Kokoro开始。对于需要克隆语音、更广泛语言支持,或今天就要结果而无需安装任何东西的创作者和企业,从ElevenLabs的免费层级开始。',
         decisionBlock: {
           title: '选择你的TTS方案',
           cloudIf: [
@@ -4091,7 +4247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           localIf: [
             '你想要免费、无限量的生成,没有按字符计费。',
-            '流水线需要在设置完成后完全离线运行——信息亭、嵌入式设备、隔离系统。',
+            '流水线需要在设置完成后离线运行——信息亭、嵌入式设备、隔离系统。',
             '你可以接受从54种固定语音中选择,而不是克隆特定的声音。'
           ],
           quick: [
@@ -4187,7 +4343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '云端优势': '更广泛的文档化语言支持',
-            '实际改变了什么': '请查阅最新的ElevenLabs文档获取确切数字;可能比Kokoro模型层面的8种语言更广'
+            '实际改变了什么': 'ElevenLabs 为 Eleven v4 记录了 90 多种语言，而 Kokoro 在模型层面为 8 种语言'
           },
           {
             '云端优势': '托管扩展',
@@ -4309,7 +4465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '维度': '语言覆盖',
             Kokoro: '模型层面记录支持8种语言',
-            ElevenLabs: '文档化覆盖更广——请查阅最新文档获取确切数字'
+            ElevenLabs: 'Eleven v4 支持 90 多种语言(据 ElevenLabs 文档)'
           },
           {
             '维度': '隐私控制',
@@ -4412,7 +4568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '如果以下大多数描述符合你的情况,请选择免费的本地模型:',
         items: [
           '你想要免费、无限量的文本转语音,没有订阅或按字符计费。',
-          '流水线需要在设置完成后完全离线运行——嵌入式设备、信息亭、隔离系统。',
+          '流水线需要在设置完成后离线运行——嵌入式设备、信息亭、隔离系统。',
           '你可以接受从54种预设语音的固定集合中选择,而不是克隆特定的声音。',
           '你想在宽松许可证下安装、检查、微调或再分发模型。',
           '你是开发者,能够熟练设置Python环境和推理流水线。',
@@ -4469,7 +4625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '以下情况不要选择ElevenLabs',
         content: '如果以下任何一项描述你的项目,付费云平台就不适合:',
         items: [
-          '你需要完全离线运行,没有互联网连接。',
+          '你需要离线运行,没有互联网连接。',
           '你的文本和音频不能离开自己的基础设施。',
           '你需要无限量生成,没有任何按字符或按积分的成本。',
           '你运行的是没有网络访问的隔离或嵌入式系统。',
@@ -4510,8 +4666,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ElevenLabs列出了Free方案(0美元,每月10,000积分,无商用许可),以及从Starter(每月6美元)到Business(每月990美元,6,000,000积分)的付费方案,加上定制的Enterprise定价。由于方案和积分成本会变化,请在ElevenLabs定价页面确认最新数字。'
           },
           {
-            q: '我可以让Kokoro完全离线运行吗?',
-            a: '可以,一旦下载了模型权重和语音包,Kokoro就能在没有互联网连接的情况下生成语音。ElevenLabs作为云服务,正常使用需要联网。'
+            q: '我可以让Kokoro离线运行吗?',
+            a: '可以,一旦下载了模型权重和语音包,Kokoro就能在没有互联网连接的情况下生成语音。ElevenLabs作为云服务,正常使用需要联网。 在将部署视为离线之前，请先核实你自己的网络策略和依赖项。'
           },
           {
             q: 'ElevenLabs提供免费方案吗?',
@@ -4529,6 +4685,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '我可以用本地模型免费克隆自己的声音吗?',
             a: '不能直接用Kokoro实现,因为它不提供语音克隆功能。存在其他具备克隆能力的本地开放模型,但它们通常比Kokoro需要更多设置和更强的硬件。在为商业用途克隆任何声音(包括你自己的声音)之前,请务必获得明确同意,并核实具体工具的许可证和同意要求。'
           },
+          {
+            q: 'ElevenLabs 有本地版吗？',
+            a: '没有。ElevenLabs 是云服务，其自助套餐不提供可下载的模型权重或本地安装程序，每次语音生成都经过其服务器。最接近的本地选择是 Kokoro-82M(免费、Apache 2.0、54 个固定语音)、Piper 或 XTTS v2 这类开放权重模型。它们都不是 ElevenLabs 的模型，而且 Kokoro 在声音克隆和语言覆盖上不及 ElevenLabs。'
+          },
+          {
+            q: 'Kokoro 支持德语、韩语或波兰语吗？',
+            a: '不支持。Kokoro-82M v1.0 自带 54 个语音，覆盖 8 种语言(英语、西班牙语、法语、印地语、意大利语、日语、葡萄牙语、中文)，没有官方的德语、韩语或波兰语语音。这些语言请改用 XTTS v2(非商业许可)等其他本地模型，或使用云服务：ElevenLabs 的 Eleven v4 文档列出 90 多种语言。'
+          }
         ]
       },
       verdict: {
@@ -4609,13 +4773,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     },
+    current_models_mentioned: ['Kokoro-82M', 'ElevenLabs Eleven v4'],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Kokoro vs ElevenLabs:本地TTS对比云端语音AI(2026)',
-      'description': 'Kokoro是一款免费的本地TTS模型,拥有82M参数、54个固定语音,无需联网。ElevenLabs是具备语音克隆功能的付费云平台。完整对比。',
+      'headline': 'Kokoro vs ElevenLabs：免费本地TTS还是付费云端？(2026)',
+      'description': 'Kokoro是免费本地TTS模型(Apache 2.0、82M参数、54个语音、8种语言)；ElevenLabs是付费云端，支持声音克隆和90多种语言。价格与许可证已复核。',
       'datePublished': '2026-09-11',
-      'dateModified': '2026-09-11',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -4631,7 +4796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'height': '60'
         }
       },
-      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/zh/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -4666,7 +4831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/zh/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -4731,10 +4896,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': '我可以让Kokoro完全离线运行吗?',
+          'name': '我可以让Kokoro离线运行吗?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '可以,一旦下载了模型权重和语音包,Kokoro就能在没有互联网连接的情况下生成语音。ElevenLabs作为云服务,正常使用需要联网。'
+            'text': '可以,一旦下载了模型权重和语音包,Kokoro就能在没有互联网连接的情况下生成语音。ElevenLabs作为云服务,正常使用需要联网。 在将部署视为离线之前，请先核实你自己的网络策略和依赖项。'
           }
         },
         {
@@ -4768,40 +4933,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': '不能直接用Kokoro实现,因为它不提供语音克隆功能。存在其他具备克隆能力的本地开放模型,但它们通常比Kokoro需要更多设置和更强的硬件。在为商业用途克隆任何声音(包括你自己的声音)之前,请务必获得明确同意,并核实具体工具的许可证和同意要求。'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ElevenLabs 有本地版吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '没有。ElevenLabs 是云服务，其自助套餐不提供可下载的模型权重或本地安装程序，每次语音生成都经过其服务器。最接近的本地选择是 Kokoro-82M(免费、Apache 2.0、54 个固定语音)、Piper 或 XTTS v2 这类开放权重模型。它们都不是 ElevenLabs 的模型，而且 Kokoro 在声音克隆和语言覆盖上不及 ElevenLabs。'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kokoro 支持德语、韩语或波兰语吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '不支持。Kokoro-82M v1.0 自带 54 个语音，覆盖 8 种语言(英语、西班牙语、法语、印地语、意大利语、日语、葡萄牙语、中文)，没有官方的德语、韩语或波兰语语音。这些语言请改用 XTTS v2(非商业许可)等其他本地模型，或使用云服务：ElevenLabs 的 Eleven v4 文档列出 90 多种语言。'
+          }
         }
       ]
     }
   },
   pt: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-11',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'Kokoro vs ElevenLabs: TTS local vs IA de voz em nuvem (2026)',
-    seoTitle: 'Kokoro vs ElevenLabs (2026): TTS local vs nuvem',
+    title: 'Kokoro vs ElevenLabs: TTS local grátis ou nuvem paga? (2026)',
+    seoTitle: 'Kokoro vs ElevenLabs (2026): TTS local grátis ou nuvem?',
     intro: 'O Kokoro é um modelo de texto para voz de pesos abertos com 82 milhões de parâmetros, licenciado sob Apache 2.0, que você baixa e executa por conta própria, gratuitamente, sem precisar de conexão com a internet após a instalação. O ElevenLabs é uma plataforma em nuvem paga com uma biblioteca de vozes muito maior e clonagem de voz instantânea a partir de uma amostra de áudio curta. A decisão não é sobre qual soa melhor isoladamente, mas sim se você quer um mecanismo gratuito, offline e de vozes fixas que você mesmo opera, ou um serviço pago, hospedado e com capacidade de clonagem que você aluga.',
-    metaDescription: 'O Kokoro é um modelo TTS local gratuito com 82M de parâmetros, 54 vozes fixas e sem necessidade de internet. O ElevenLabs é uma plataforma em nuvem paga com clonagem de voz. Comparação completa.',
+    metaDescription: 'O Kokoro é um modelo TTS local gratuito (Apache 2.0, 82M de parâmetros, 54 vozes, 8 idiomas). O ElevenLabs é nuvem paga com clonagem e mais de 90 idiomas.',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
+    dateModified: '2026-11-19',
     readTime: '11 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores, criadores de conteúdo e equipes que escolhem entre um modelo TTS local gratuito e uma plataforma de voz em nuvem paga.',
     primaryTerm: 'Kokoro vs ElevenLabs',
-    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'alternativa ao ElevenLabs', 'texto para voz local', 'TTS de código aberto', 'modelo TTS gratuito', 'síntese de voz offline', 'Kokoro-82M'],
-    twitterDescription: 'O Kokoro é um modelo TTS local gratuito com 82M de parâmetros. O ElevenLabs é uma plataforma em nuvem paga com clonagem de voz. Veja como eles realmente se comparam.',
-    leadAnswerBlock: '**Escolha o Kokoro se você quer texto para voz gratuito, offline e ilimitado a partir de um conjunto fixo de vozes e está confortável em executar um modelo por conta própria. Escolha o ElevenLabs se você precisa de clonagem de voz, dezenas de idiomas ou uma voz pronta hoje sem instalação local.** O Kokoro é um modelo de 82M de parâmetros licenciado sob Apache 2.0 que roda em CPU ou GPU modesta. O ElevenLabs é uma API em nuvem medida por uso, com um plano gratuito e planos pagos.',
+    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'alternativa ao ElevenLabs', 'texto para voz local', 'TTS de código aberto', 'modelo TTS gratuito', 'síntese de voz offline', 'Kokoro-82M', 'ElevenLabs local', 'idiomas do Kokoro'],
+    twitterDescription: 'O Kokoro é grátis, local e de vozes fixas. O ElevenLabs é pago, em nuvem e clona vozes. Planos, licenças e idiomas reverificados.',
+    leadAnswerBlock: '**Escolha o Kokoro para texto para fala gratuito, offline e com vozes fixas que você mesmo executa; escolha o ElevenLabs para clonagem de voz, mais de 90 idiomas ou uma voz refinada sem instalação.** O Kokoro (82M de parâmetros, Apache 2.0) não recebe atualização oficial desde agosto de 2025.',
     quickAnswerTop: {
       pt: {
         question: 'Devo usar o Kokoro ou o ElevenLabs?',
         answer: 'O Kokoro é um modelo TTS local gratuito de pesos abertos com 82 milhões de parâmetros (Apache 2.0, da hexgrad) que roda em CPU ou GPU modesta e vem com 54 vozes predefinidas em 8 idiomas — mas sem clonagem de voz integrada. O ElevenLabs é uma plataforma em nuvem paga com um catálogo de vozes muito maior, clonagem de voz zero-shot a partir de uma amostra curta e cobertura de idiomas mais ampla, ao custo de uma assinatura e do envio do seu texto para um servidor de terceiros. Melhor para uso gratuito/offline/vozes fixas: Kokoro. Melhor para clonagem de voz ou máxima cobertura de idiomas: ElevenLabs.',
         bullets: [
+          'Verificação (2026-11-19): a ElevenLabs lançou o Eleven v4 (mais de 90 idiomas) em 2026-09-28; os preços dos planos não mudaram. O Kokoro-82M continua na v1.0 (publicada em 2025-01-27) e o repositório oficial da hexgrad foi atualizado pela última vez em 2025-08-06, ou seja, não há atualização oficial há mais de um ano; wrappers da comunidade, como o Kokoro-FastAPI, continuam ativos.',
           'Kokoro: 82M de parâmetros, licença Apache 2.0, arquitetura derivada do StyleTTS2, gratuito, roda localmente em CPU ou GPU, 54 vozes integradas, sem clonagem de voz oficial.',
           'ElevenLabs: plano gratuito (10.000 créditos/mês, sem licença comercial), Starter US$ 6/mês (30.000 créditos, licença comercial, clonagem de voz instantânea), Creator US$ 22/mês (121.000 créditos, clonagem de voz profissional), Pro US$ 99/mês (600.000 créditos), Scale US$ 299/mês (1.800.000 créditos), Business US$ 990/mês (6.000.000 créditos). Verifique os números atuais na página de preços do ElevenLabs antes de decidir — planos e cotas de créditos mudam.',
           'O Kokoro é multilíngue no nível do modelo em 8 idiomas (inglês, espanhol, francês, hindi, italiano, japonês, português, chinês); o ElevenLabs lista suporte a idiomas mais amplo em seu site — verifique a documentação atual para o número exato.',
           'O Kokoro não precisa de internet após o download do modelo; o ElevenLabs precisa de conexão para gerar áudio.',
           'Para a maioria dos criadores que precisam de uma voz clonada ou muito polida hoje: teste o plano gratuito do ElevenLabs. Para desenvolvedores que querem um mecanismo gratuito e auto-hospedado com um conjunto fixo de vozes e sem custo por caractere: comece com o Kokoro.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -4866,6 +5048,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Não há relação de afiliação entre a PromptQuorum e Kokoro/hexgrad; quaisquer links do ElevenLabs neste artigo são divulgados conforme o aviso de afiliação no topo da página.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'O Kokoro não recebe nenhuma atualização oficial desde 6 de agosto de 2025 (repositório da hexgrad; modelo v1.0 publicado em 27 de janeiro de 2025, ficha do modelo alterada pela última vez em 10 de abril de 2025). O projeto pode não estar mais sendo mantido — confira antes de depender dele. Wrappers da comunidade, como o Kokoro-FastAPI, continuam sendo atualizados. Verificado em 19 de novembro de 2026.'
+          },
           { type: 'note', text: 'Os fatos foram verificados com base na ficha do modelo Kokoro-82M no Hugging Face e na página pública de preços do ElevenLabs na data de publicação deste artigo. Ambos podem mudar — verifique os termos atuais antes de se comprometer com qualquer uma das opções.' }
         ]
       },
@@ -4876,7 +5062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       shortAnswer: {
         id: 'short-answer',
         title: 'Nosso veredito',
-        content: '🏆 **Melhor TTS gratuito/offline:** Kokoro — um modelo de 82M de parâmetros licenciado sob Apache 2.0 que você mesmo opera, sem custo por caractere.\n💰 **Melhor para clonagem de voz:** ElevenLabs — clonagem zero-shot a partir de um clipe de referência curto nos planos pagos.\n⚡ **Melhor para uma voz polida hoje, sem instalação:** ElevenLabs.\n🖥️ **Melhor para hardware somente CPU ou GPU modesta:** Kokoro.\n🔒 **Melhor para manter texto e áudio fora de servidores de terceiros:** Kokoro (uma vez baixado e executado totalmente offline).\n🌍 **Melhor para cobertura máxima de idiomas:** ElevenLabs — verifique a documentação atual para o número exato; o Kokoro cobre 8 idiomas no nível do modelo.\n\nPara desenvolvedores e entusiastas com orçamento limitado que não precisam de clonagem de voz, comece com o Kokoro. Para criadores e empresas que precisam de uma voz clonada, suporte mais amplo a idiomas, ou resultados hoje sem instalar nada, comece com o plano gratuito do ElevenLabs.',
+        content: '🏆 **Melhor TTS gratuito/offline:** Kokoro — um modelo de 82M de parâmetros licenciado sob Apache 2.0 que você mesmo opera, sem custo por caractere.\n💰 **Melhor para clonagem de voz:** ElevenLabs — clonagem zero-shot a partir de um clipe de referência curto nos planos pagos.\n⚡ **Melhor para uma voz polida hoje, sem instalação:** ElevenLabs.\n🖥️ **Melhor para hardware somente CPU ou GPU modesta:** Kokoro.\n🔒 **Melhor para manter texto e áudio fora de servidores de terceiros:** Kokoro (uma vez baixado e executado offline).\n🌍 **Melhor para cobertura máxima de idiomas:** ElevenLabs — verifique a documentação atual para o número exato; o Kokoro cobre 8 idiomas no nível do modelo.\n\nPara desenvolvedores e entusiastas com orçamento limitado que não precisam de clonagem de voz, comece com o Kokoro. Para criadores e empresas que precisam de uma voz clonada, suporte mais amplo a idiomas, ou resultados hoje sem instalar nada, comece com o plano gratuito do ElevenLabs.',
         decisionBlock: {
           title: 'Escolha sua abordagem de TTS',
           cloudIf: [
@@ -4886,7 +5072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           localIf: [
             'Você quer geração gratuita e ilimitada sem cobrança por caractere.',
-            'O pipeline precisa funcionar totalmente offline depois de configurado — quiosques, dispositivos embarcados, sistemas isolados.',
+            'O pipeline precisa funcionar offline depois de configurado — quiosques, dispositivos embarcados, sistemas isolados.',
             'Você está satisfeito escolhendo entre um conjunto fixo de 54 vozes em vez de clonar uma específica.'
           ],
           quick: [
@@ -4982,7 +5168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Benefício em nuvem': 'Suporte a idiomas documentado mais amplo',
-            'O que muda na prática': 'Verifique a documentação atual do ElevenLabs para o número exato; provavelmente mais amplo que os 8 idiomas do Kokoro no nível do modelo'
+            'O que muda na prática': 'O ElevenLabs documenta mais de 90 idiomas para o Eleven v4, contra os 8 idiomas do Kokoro no nível do modelo'
           },
           {
             'Benefício em nuvem': 'Escalonamento hospedado',
@@ -5104,7 +5290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Dimensão: 'Cobertura de idiomas',
             Kokoro: '8 idiomas documentados no nível do modelo',
-            ElevenLabs: 'Cobertura documentada mais ampla — verificar documentação atual para o número exato'
+            ElevenLabs: 'Mais de 90 idiomas no Eleven v4 (segundo a documentação do ElevenLabs)'
           },
           {
             Dimensão: 'Controle de privacidade',
@@ -5207,7 +5393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Escolha o modelo local gratuito se a maioria destas afirmações descreve você:',
         items: [
           'Você quer texto para voz gratuito e ilimitado sem assinatura ou cobrança por caractere.',
-          'O pipeline precisa rodar totalmente offline depois de configurado — dispositivos embarcados, quiosques, sistemas isolados.',
+          'O pipeline precisa rodar offline depois de configurado — dispositivos embarcados, quiosques, sistemas isolados.',
           'Você está confortável escolhendo entre um conjunto fixo de 54 vozes predefinidas em vez de clonar uma específica.',
           'Você quer instalar, inspecionar, ajustar ou redistribuir o modelo sob uma licença permissiva.',
           'Você é desenvolvedor e está confortável configurando um ambiente Python e um pipeline de inferência.',
@@ -5264,7 +5450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Não escolha o ElevenLabs se',
         content: 'Uma plataforma em nuvem paga é a escolha errada se algum destes descreve seu projeto:',
         items: [
-          'Você precisa de operação totalmente offline, sem conexão com a internet.',
+          'Você precisa de operação offline, sem conexão com a internet.',
           'Seu texto e áudio não podem sair da sua própria infraestrutura.',
           'Você precisa de geração ilimitada sem nenhum custo por caractere ou crédito.',
           'Você está rodando um sistema isolado ou embarcado sem acesso à rede.',
@@ -5305,8 +5491,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'O ElevenLabs lista um plano Free (US$ 0, 10.000 créditos/mês, sem licença comercial) até planos pagos que vão de Starter (US$ 6/mês) a Business (US$ 990/mês, 6.000.000 créditos), além de preços Enterprise personalizados. Confirme os números atuais na página de preços do ElevenLabs, já que planos e custos de créditos mudam.'
           },
           {
-            q: 'Posso rodar o Kokoro totalmente offline?',
-            a: 'Sim, depois de baixar os pesos do modelo e os pacotes de voz, o Kokoro pode gerar fala sem conexão com a internet. O ElevenLabs, como serviço em nuvem, requer conectividade para uso normal.'
+            q: 'Posso rodar o Kokoro offline?',
+            a: 'Sim, depois de baixar os pesos do modelo e os pacotes de voz, o Kokoro pode gerar fala sem conexão com a internet. O ElevenLabs, como serviço em nuvem, requer conectividade para uso normal. Verifique sua própria política de rede e suas dependências antes de considerar uma implantação como offline.'
           },
           {
             q: 'O ElevenLabs oferece um plano gratuito?',
@@ -5324,6 +5510,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Posso clonar minha própria voz gratuitamente com um modelo local?',
             a: 'Não diretamente com o Kokoro, já que ele não oferece clonagem de voz. Outros modelos abertos locais com capacidade de clonagem existem, mas normalmente exigem mais configuração e hardware mais potente que o Kokoro. Sempre obtenha consentimento claro antes de clonar qualquer voz, incluindo a sua própria, para uso comercial, e revise a licença e os requisitos de consentimento da ferramenta específica.'
           },
+          {
+            q: 'Existe uma versão local do ElevenLabs?',
+            a: 'Não. O ElevenLabs é um serviço em nuvem: não publica pesos de modelo para download nem um instalador local nos planos de autoatendimento, então toda geração passa pelos servidores dele. As opções locais mais próximas são modelos de pesos abertos como o Kokoro-82M (grátis, Apache 2.0, 54 vozes fixas), o Piper ou o XTTS v2. Nenhum deles é um modelo do ElevenLabs, e o Kokoro não iguala a clonagem de voz nem a cobertura de idiomas dele.'
+          },
+          {
+            q: 'O Kokoro suporta alemão, coreano ou polonês?',
+            a: 'Não. O Kokoro-82M v1.0 traz 54 vozes em 8 idiomas (inglês, espanhol, francês, hindi, italiano, japonês, português e chinês) e não tem vozes oficiais em alemão, coreano ou polonês. Para esses idiomas, use outro modelo local, como o XTTS v2 (licença não comercial), ou um serviço em nuvem: o ElevenLabs documenta mais de 90 idiomas para o Eleven v4.'
+          }
         ]
       },
       verdict: {
@@ -5404,13 +5598,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     },
+    current_models_mentioned: ['Kokoro-82M', 'ElevenLabs Eleven v4'],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Kokoro vs ElevenLabs: TTS local vs IA de voz em nuvem (2026)',
-      'description': 'O Kokoro é um modelo TTS local gratuito com 82M de parâmetros, 54 vozes fixas e sem necessidade de internet. O ElevenLabs é uma plataforma em nuvem paga com clonagem de voz. Comparação completa.',
+      'headline': 'Kokoro vs ElevenLabs: TTS local grátis ou nuvem paga? (2026)',
+      'description': 'O Kokoro é um modelo TTS local gratuito (Apache 2.0, 82M de parâmetros, 54 vozes, 8 idiomas). O ElevenLabs é nuvem paga com clonagem e mais de 90 idiomas.',
       'datePublished': '2026-09-11',
-      'dateModified': '2026-09-11',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -5426,7 +5621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'height': '60'
         }
       },
-      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/pt/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -5461,7 +5656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/pt/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -5526,10 +5721,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'Posso rodar o Kokoro totalmente offline?',
+          'name': 'Posso rodar o Kokoro offline?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Sim, depois de baixar os pesos do modelo e os pacotes de voz, o Kokoro pode gerar fala sem conexão com a internet. O ElevenLabs, como serviço em nuvem, requer conectividade para uso normal.'
+            'text': 'Sim, depois de baixar os pesos do modelo e os pacotes de voz, o Kokoro pode gerar fala sem conexão com a internet. O ElevenLabs, como serviço em nuvem, requer conectividade para uso normal. Verifique sua própria política de rede e suas dependências antes de considerar uma implantação como offline.'
           }
         },
         {
@@ -5563,40 +5758,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'Não diretamente com o Kokoro, já que ele não oferece clonagem de voz. Outros modelos abertos locais com capacidade de clonagem existem, mas normalmente exigem mais configuração e hardware mais potente que o Kokoro. Sempre obtenha consentimento claro antes de clonar qualquer voz, incluindo a sua própria, para uso comercial, e revise a licença e os requisitos de consentimento da ferramenta específica.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Existe uma versão local do ElevenLabs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Não. O ElevenLabs é um serviço em nuvem: não publica pesos de modelo para download nem um instalador local nos planos de autoatendimento, então toda geração passa pelos servidores dele. As opções locais mais próximas são modelos de pesos abertos como o Kokoro-82M (grátis, Apache 2.0, 54 vozes fixas), o Piper ou o XTTS v2. Nenhum deles é um modelo do ElevenLabs, e o Kokoro não iguala a clonagem de voz nem a cobertura de idiomas dele.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'O Kokoro suporta alemão, coreano ou polonês?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Não. O Kokoro-82M v1.0 traz 54 vozes em 8 idiomas (inglês, espanhol, francês, hindi, italiano, japonês, português e chinês) e não tem vozes oficiais em alemão, coreano ou polonês. Para esses idiomas, use outro modelo local, como o XTTS v2 (licença não comercial), ou um serviço em nuvem: o ElevenLabs documenta mais de 90 idiomas para o Eleven v4.'
+          }
         }
       ]
     }
   },
   ar: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-11',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'Kokoro مقابل ElevenLabs: تحويل النص إلى كلام محلي مقابل الذكاء الاصطناعي الصوتي السحابي (2026)',
-    seoTitle: 'Kokoro مقابل ElevenLabs (2026): محلي مقابل سحابي TTS',
+    title: 'Kokoro مقابل ElevenLabs: تحويل نص إلى كلام محلي مجاني أم سحابي مدفوع؟ (2026)',
+    seoTitle: 'Kokoro مقابل ElevenLabs (2026): محلي مجاني أم سحابي؟',
     intro: 'Kokoro هو نموذج تحويل نص إلى كلام مفتوح الأوزان بحجم 82 مليون معامل، مرخّص بموجب Apache 2.0، تقوم بتنزيله وتشغيله بنفسك، مجانًا، دون الحاجة إلى اتصال بالإنترنت بعد الإعداد. أما ElevenLabs فهو منصة سحابية مدفوعة تضم مكتبة أصوات أكبر بكثير واستنساخًا فوريًا للصوت من عينة صوتية قصيرة. القرار هنا ليس أي الصوتين أفضل بمعزل عن الآخر، بل ما إذا كنت تريد محركًا مجانيًا وغير متصل بالإنترنت ذا أصوات ثابتة تُشغّله بنفسك، أم خدمة مدفوعة ومستضافة وقادرة على الاستنساخ تستأجرها.',
-    metaDescription: 'Kokoro نموذج TTS محلي مجاني بـ82 مليون معامل و54 صوتًا ثابتًا ولا يحتاج إلى إنترنت. ElevenLabs منصة سحابية مدفوعة مع استنساخ صوتي. مقارنة كاملة.',
+    metaDescription: 'Kokoro نموذج TTS محلي مجاني (Apache 2.0، 82 مليون معامل، 54 صوتًا، 8 لغات). ElevenLabs منصة سحابية مدفوعة مع استنساخ صوتي وأكثر من 90 لغة.',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
+    dateModified: '2026-11-19',
     readTime: '11 دقيقة قراءة',
     educationalLevel: 'Intermediate',
     audience: 'المطورون ومنشئو المحتوى والفرق الذين يختارون بين نموذج TTS محلي مجاني ومنصة صوتية سحابية مدفوعة.',
     primaryTerm: 'Kokoro vs ElevenLabs',
-    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'بديل ElevenLabs', 'تحويل نص إلى كلام محلي', 'TTS مفتوح المصدر', 'نموذج TTS مجاني', 'تحويل صوتي دون اتصال', 'Kokoro-82M'],
-    twitterDescription: 'Kokoro نموذج TTS محلي مجاني بـ82 مليون معامل. ElevenLabs منصة سحابية مدفوعة مع استنساخ صوتي. إليك كيف يتقارنان فعليًا.',
-    leadAnswerBlock: '**اختر Kokoro إذا كنت تريد تحويل نص إلى كلام مجاني وغير متصل وغير محدود من مجموعة أصوات ثابتة، وتشعر بالارتياح لتشغيل نموذج بنفسك. اختر ElevenLabs إذا كنت بحاجة إلى استنساخ الصوت أو عشرات اللغات أو صوت جاهز اليوم دون إعداد محلي.** Kokoro نموذج بـ82 مليون معامل مرخّص بموجب Apache 2.0 يعمل على المعالج المركزي أو بطاقة رسومات متواضعة. أما ElevenLabs فهو واجهة برمجة سحابية مقاسة بالاستخدام، بمستوى مجاني وخطط مدفوعة.',
+    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'بديل ElevenLabs', 'تحويل نص إلى كلام محلي', 'TTS مفتوح المصدر', 'نموذج TTS مجاني', 'تحويل صوتي دون اتصال', 'Kokoro-82M', 'ElevenLabs محلي', 'لغات Kokoro'],
+    twitterDescription: 'Kokoro مجاني ومحلي بأصوات ثابتة. ElevenLabs مدفوع وسحابي ويستنسخ الأصوات. تمت إعادة التحقق من الخطط والتراخيص واللغات.',
+    leadAnswerBlock: '**اختر Kokoro لتحويل نص إلى كلام مجاني ودون اتصال بأصوات ثابتة تشغّله بنفسك؛ واختر ElevenLabs لاستنساخ الصوت وأكثر من 90 لغة أو صوت متقن دون إعداد.** نموذج Kokoro بحجم 82M معامل برخصة Apache 2.0 ولم يتلقَّ تحديثًا رسميًا منذ أغسطس 2025.',
     quickAnswerTop: {
       ar: {
         question: 'هل يجب أن أستخدم Kokoro أم ElevenLabs؟',
         answer: 'Kokoro نموذج TTS محلي مجاني مفتوح الأوزان بحجم 82 مليون معامل (Apache 2.0، من hexgrad) يعمل على المعالج المركزي أو بطاقة رسومات متواضعة، ويأتي مزودًا بـ54 صوتًا مسبق الضبط عبر 8 لغات — لكن دون استنساخ صوتي مدمج. أما ElevenLabs فهو منصة سحابية مدفوعة تضم فهرس أصوات أكبر بكثير، واستنساخًا صوتيًا بدون أمثلة سابقة من عينة قصيرة، وتغطية لغوية أوسع، مقابل اشتراك وإرسال نصك إلى خادم تابع لجهة خارجية. الأفضل للاستخدام المجاني/غير المتصل/الأصوات الثابتة: Kokoro. الأفضل للاستنساخ الصوتي أو أقصى تغطية لغوية: ElevenLabs.',
         bullets: [
+          'نتيجة التحقق (2026-11-19): أطلقت ElevenLabs نموذج Eleven v4 (أكثر من 90 لغة) في 2026-09-28 ولم تتغير أسعار خططها. لا يزال Kokoro-82M على الإصدار v1.0 (نُشر في 2025-01-27)، وآخر تحديث للمستودع الرسمي لـ hexgrad كان في 2025-08-06، أي لا يوجد تحديث رسمي منذ أكثر من عام؛ أما الأغلفة المجتمعية مثل Kokoro-FastAPI فما زالت نشطة.',
           'Kokoro: 82 مليون معامل، ترخيص Apache 2.0، بنية مشتقة من StyleTTS2، مجاني، يعمل محليًا على المعالج المركزي أو بطاقة الرسومات، 54 صوتًا مدمجًا، لا يوجد استنساخ صوتي رسمي.',
           'ElevenLabs: مستوى مجاني (10,000 رصيد/شهر، دون ترخيص تجاري)، Starter بـ6 دولارات/شهر (30,000 رصيد، ترخيص تجاري، استنساخ صوتي فوري)، Creator بـ22 دولارًا/شهر (121,000 رصيد، استنساخ صوتي احترافي)، Pro بـ99 دولارًا/شهر (600,000 رصيد)، Scale بـ299 دولارًا/شهر (1,800,000 رصيد)، Business بـ990 دولارًا/شهر (6,000,000 رصيد). تحقّق من الأرقام الحالية على صفحة أسعار ElevenLabs قبل اتخاذ القرار — الخطط ومخصصات الرصيد قابلة للتغيير.',
           'Kokoro متعدد اللغات على مستوى النموذج عبر 8 لغات (الإنجليزية والإسبانية والفرنسية والهندية والإيطالية واليابانية والبرتغالية والصينية)؛ يدرج ElevenLabs دعمًا لغويًا أوسع على موقعه — تحقّق من الوثائق الحالية للحصول على الرقم الدقيق.',
           'لا يحتاج Kokoro إلى إنترنت بعد تنزيل النموذج؛ يحتاج ElevenLabs إلى اتصال لتوليد الصوت.',
           'لمعظم منشئي المحتوى الذين يحتاجون إلى صوت مستنسخ أو مصقول للغاية اليوم: جرّب المستوى المجاني من ElevenLabs. للمطورين الذين يريدون محركًا مجانيًا ومستضافًا ذاتيًا بمجموعة أصوات ثابتة وبلا تكلفة لكل حرف: ابدأ بـKokoro.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -5661,6 +5873,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا توجد علاقة تابعة بين PromptQuorum وKokoro/hexgrad؛ يتم الإفصاح عن أي روابط لـElevenLabs في هذا المقال وفقًا لإشعار الشراكة التابعة أعلى الصفحة.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'لم يتلقَّ Kokoro أي تحديث رسمي منذ 6 أغسطس 2025 (مستودع hexgrad؛ صدر النموذج v1.0 في 27 يناير 2025 وآخر تعديل لبطاقة النموذج في 10 أبريل 2025). قد يكون المشروع غير مُصان، فتحقق قبل الاعتماد عليه. أما الأغلفة المجتمعية مثل Kokoro-FastAPI فما زالت تُحدَّث. تاريخ التحقق: 19 نوفمبر 2026.'
+          },
           { type: 'note', text: 'تم التحقق من الحقائق استنادًا إلى بطاقة نموذج Kokoro-82M على Hugging Face وصفحة أسعار ElevenLabs العامة اعتبارًا من تاريخ نشر هذا المقال. يمكن أن يتغير كلاهما — تحقّق من الشروط الحالية قبل الالتزام بأي من الحلّين.' }
         ]
       },
@@ -5671,7 +5887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       shortAnswer: {
         id: 'short-answer',
         title: 'رأينا',
-        content: '🏆 **أفضل TTS مجاني/غير متصل:** Kokoro — نموذج بـ82 مليون معامل مرخّص بموجب Apache 2.0 تُشغّله بنفسك، دون تكلفة لكل حرف.\n💰 **الأفضل للاستنساخ الصوتي:** ElevenLabs — استنساخ دون أمثلة سابقة من مقطع مرجعي قصير في الخطط المدفوعة.\n⚡ **الأفضل للحصول على صوت مصقول اليوم دون إعداد:** ElevenLabs.\n🖥️ **الأفضل لأجهزة تعتمد على المعالج المركزي فقط أو بطاقة رسومات متواضعة:** Kokoro.\n🔒 **الأفضل لإبقاء النص والصوت بعيدًا عن خوادم جهات خارجية:** Kokoro (بعد تنزيله وتشغيله بالكامل دون اتصال).\n🌍 **الأفضل لأقصى تغطية لغوية:** ElevenLabs — تحقّق من وثائقه الحالية للحصول على الرقم الدقيق؛ يغطي Kokoro 8 لغات على مستوى النموذج.\n\nللمطورين والهواة أصحاب الميزانية المحدودة الذين لا يحتاجون إلى استنساخ صوتي، ابدأ بـKokoro. لمنشئي المحتوى والشركات الذين يحتاجون إلى صوت مستنسخ أو دعم لغوي أوسع أو نتائج اليوم دون تثبيت أي شيء، ابدأ بالمستوى المجاني من ElevenLabs.',
+        content: '🏆 **أفضل TTS مجاني/غير متصل:** Kokoro — نموذج بـ82 مليون معامل مرخّص بموجب Apache 2.0 تُشغّله بنفسك، دون تكلفة لكل حرف.\n💰 **الأفضل للاستنساخ الصوتي:** ElevenLabs — استنساخ دون أمثلة سابقة من مقطع مرجعي قصير في الخطط المدفوعة.\n⚡ **الأفضل للحصول على صوت مصقول اليوم دون إعداد:** ElevenLabs.\n🖥️ **الأفضل لأجهزة تعتمد على المعالج المركزي فقط أو بطاقة رسومات متواضعة:** Kokoro.\n🔒 **الأفضل لإبقاء النص والصوت بعيدًا عن خوادم جهات خارجية:** Kokoro (بعد تنزيله وتشغيله دون اتصال).\n🌍 **الأفضل لأقصى تغطية لغوية:** ElevenLabs — تحقّق من وثائقه الحالية للحصول على الرقم الدقيق؛ يغطي Kokoro 8 لغات على مستوى النموذج.\n\nللمطورين والهواة أصحاب الميزانية المحدودة الذين لا يحتاجون إلى استنساخ صوتي، ابدأ بـKokoro. لمنشئي المحتوى والشركات الذين يحتاجون إلى صوت مستنسخ أو دعم لغوي أوسع أو نتائج اليوم دون تثبيت أي شيء، ابدأ بالمستوى المجاني من ElevenLabs.',
         decisionBlock: {
           title: 'اختر نهجك في TTS',
           cloudIf: [
@@ -5681,7 +5897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           localIf: [
             'تريد توليدًا مجانيًا وغير محدود دون فوترة لكل حرف.',
-            'يجب أن يعمل مسار المعالجة دون اتصال بالكامل بعد الإعداد — الأكشاك والأجهزة المدمجة والأنظمة المعزولة.',
+            'يجب أن يعمل مسار المعالجة دون اتصال بعد الإعداد — الأكشاك والأجهزة المدمجة والأنظمة غير المتصلة.',
             'أنت مرتاح للاختيار من مجموعة ثابتة من 54 صوتًا بدلًا من استنساخ صوت محدد.'
           ],
           quick: [
@@ -5777,7 +5993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'ميزة سحابية': 'دعم لغوي موثّق أوسع',
-            'ما الذي يتغير عمليًا': 'تحقّق من وثائق ElevenLabs الحالية للحصول على الرقم الدقيق؛ من المرجح أن يكون أوسع من لغات Kokoro الثماني على مستوى النموذج'
+            'ما الذي يتغير عمليًا': 'توثّق ElevenLabs أكثر من 90 لغة لنموذج Eleven v4، مقابل 8 لغات على مستوى النموذج في Kokoro'
           },
           {
             'ميزة سحابية': 'توسّع مستضاف',
@@ -5899,7 +6115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'البُعد': 'التغطية اللغوية',
             Kokoro: '8 لغات موثّقة على مستوى النموذج',
-            ElevenLabs: 'تغطية موثّقة أوسع — تحقّق من الوثائق الحالية للحصول على الرقم الدقيق'
+            ElevenLabs: 'أكثر من 90 لغة في Eleven v4 (بحسب وثائق ElevenLabs)'
           },
           {
             'البُعد': 'التحكم بالخصوصية',
@@ -5972,7 +6188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الإجابة العملية': 'احسب باستخدام حجم طلباتك الفعلي وتكلفة الأجهزة'
           },
           {
-            'السيناريو': 'نشر غير متصل أو معزول',
+            'السيناريو': 'نشر غير متصل',
             Kokoro: 'ملائم ممتاز بمجرد تثبيت النموذج والأصوات محليًا',
             ElevenLabs: 'يتطلب اتصالًا للاستخدام العادي',
             'الإجابة العملية': 'يفوز Kokoro (متطلب عدم الاتصال)'
@@ -6002,7 +6218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'اختر النموذج المحلي المجاني إذا كانت معظم هذه العبارات تصفك:',
         items: [
           'تريد تحويل نص إلى كلام مجاني وغير محدود دون اشتراك أو فوترة لكل حرف.',
-          'يجب أن يعمل مسار المعالجة دون اتصال بالكامل بعد الإعداد — الأجهزة المدمجة والأكشاك والأنظمة المعزولة.',
+          'يجب أن يعمل مسار المعالجة دون اتصال بعد الإعداد — الأجهزة المدمجة والأكشاك والأنظمة غير المتصلة.',
           'أنت مرتاح للاختيار من مجموعة ثابتة من 54 صوتًا مسبق الضبط بدلًا من استنساخ صوت محدد.',
           'تريد تثبيت النموذج وفحصه وضبطه دقيقًا أو إعادة توزيعه بموجب ترخيص متساهل.',
           'أنت مطور ومرتاح لإعداد بيئة بايثون ومسار استدلال.',
@@ -6059,10 +6275,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'لا تختر ElevenLabs إذا',
         content: 'منصة سحابية مدفوعة هي الخيار الخاطئ إذا وصف أي مما يلي مشروعك:',
         items: [
-          'تحتاج إلى تشغيل غير متصل بالكامل دون اتصال بالإنترنت.',
+          'تحتاج إلى تشغيل غير متصل دون اتصال بالإنترنت.',
           'لا يمكن أن يغادر نصك وصوتك بنيتك التحتية الخاصة.',
           'تحتاج إلى توليد غير محدود دون أي تكلفة لكل حرف أو رصيد.',
-          'تُشغّل نظامًا معزولًا أو مدمجًا دون وصول إلى الشبكة.',
+          'تُشغّل نظامًا غير متصل أو مدمجًا دون وصول إلى الشبكة.',
           'تريد تحكمًا كاملًا في أوزان النموذج نفسها ورؤية كاملة لها.',
         ],
         blockquote: 'إذا كان هذا وصفك، ابدأ بدلًا من ذلك بـ[Kokoro-82M على Hugging Face ←](https://huggingface.co/hexgrad/Kokoro-82M) — مجاني، ترخيص Apache 2.0، ويعمل على المعالج المركزي أو بطاقة رسومات متواضعة.'
@@ -6100,8 +6316,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'يُدرج ElevenLabs خطة Free (0 دولار، 10,000 رصيد/شهر، دون ترخيص تجاري) وصولًا إلى خطط مدفوعة تتراوح من Starter (6 دولارات/شهر) إلى Business (990 دولارًا/شهر، 6,000,000 رصيد)، بالإضافة إلى تسعير Enterprise مخصص. تأكّد من الأرقام الحالية على صفحة أسعار ElevenLabs، لأن الخطط وتكاليف الرصيد قابلة للتغيير.'
           },
           {
-            q: 'هل يمكنني تشغيل Kokoro دون اتصال بالكامل؟',
-            a: 'نعم، بمجرد تنزيل أوزان النموذج وحزم الأصوات، يمكن لـKokoro توليد الكلام دون اتصال بالإنترنت. أما ElevenLabs، كخدمة سحابية، فيتطلب اتصالًا للاستخدام العادي.'
+            q: 'هل يمكنني تشغيل Kokoro دون اتصال؟',
+            a: 'نعم، بمجرد تنزيل أوزان النموذج وحزم الأصوات، يمكن لـKokoro توليد الكلام دون اتصال بالإنترنت. أما ElevenLabs، كخدمة سحابية، فيتطلب اتصالًا للاستخدام العادي. تحقق من سياسة الشبكة والاعتماديات لديك قبل اعتبار النشر دون اتصال.'
           },
           {
             q: 'هل يقدّم ElevenLabs خطة مجانية؟',
@@ -6119,6 +6335,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل يمكنني استنساخ صوتي الخاص مجانًا باستخدام نموذج محلي؟',
             a: 'ليس مباشرةً مع Kokoro، لأنه لا يقدّم استنساخًا صوتيًا. توجد نماذج محلية مفتوحة أخرى قادرة على الاستنساخ، لكنها عادةً ما تتطلب إعدادًا أكثر وأجهزة أقوى من Kokoro. احصل دائمًا على موافقة واضحة قبل استنساخ أي صوت، بما في ذلك صوتك الخاص، لأغراض تجارية، وراجع ترخيص الأداة المحددة ومتطلبات الموافقة الخاصة بها.'
           },
+          {
+            q: 'هل توجد نسخة محلية من ElevenLabs؟',
+            a: 'لا. ElevenLabs خدمة سحابية: لا تنشر أوزان نموذج قابلة للتنزيل ولا مثبّتًا محليًا لخططها ذاتية الخدمة، لذا تمر كل عملية توليد عبر خوادمها. أقرب الخيارات المحلية نماذج مفتوحة الأوزان مثل Kokoro-82M (مجاني، Apache 2.0، 54 صوتًا ثابتًا) أو Piper أو XTTS v2. ولا يُعدّ أيٌّ منها نموذجًا من ElevenLabs، كما أن Kokoro لا يضاهي استنساخ الصوت ولا نطاق اللغات لديها.'
+          },
+          {
+            q: 'هل يدعم Kokoro الألمانية أو الكورية أو البولندية؟',
+            a: 'لا. يضم Kokoro-82M v1.0 ‏54 صوتًا بثماني لغات (الإنجليزية والإسبانية والفرنسية والهندية والإيطالية واليابانية والبرتغالية والصينية) ولا توجد أصوات رسمية للألمانية أو الكورية أو البولندية. لهذه اللغات استخدم نموذجًا محليًا آخر مثل XTTS v2 (ترخيص غير تجاري) أو خدمة سحابية: توثّق ElevenLabs أكثر من 90 لغة لنموذج Eleven v4.'
+          }
         ]
       },
       verdict: {
@@ -6199,13 +6423,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     },
+    current_models_mentioned: ['Kokoro-82M', 'ElevenLabs Eleven v4'],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Kokoro مقابل ElevenLabs: تحويل النص إلى كلام محلي مقابل الذكاء الاصطناعي الصوتي السحابي (2026)',
-      'description': 'Kokoro نموذج TTS محلي مجاني بـ82 مليون معامل و54 صوتًا ثابتًا ولا يحتاج إلى إنترنت. ElevenLabs منصة سحابية مدفوعة مع استنساخ صوتي. مقارنة كاملة.',
+      'headline': 'Kokoro مقابل ElevenLabs: تحويل نص إلى كلام محلي مجاني أم سحابي مدفوع؟ (2026)',
+      'description': 'Kokoro نموذج TTS محلي مجاني (Apache 2.0، 82 مليون معامل، 54 صوتًا، 8 لغات). ElevenLabs منصة سحابية مدفوعة مع استنساخ صوتي وأكثر من 90 لغة.',
       'datePublished': '2026-09-11',
-      'dateModified': '2026-09-11',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -6221,7 +6446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'height': '60'
         }
       },
-      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/ar/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -6256,7 +6481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/ar/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -6321,10 +6546,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'هل يمكنني تشغيل Kokoro دون اتصال بالكامل؟',
+          'name': 'هل يمكنني تشغيل Kokoro دون اتصال؟',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'نعم، بمجرد تنزيل أوزان النموذج وحزم الأصوات، يمكن لـKokoro توليد الكلام دون اتصال بالإنترنت. أما ElevenLabs، كخدمة سحابية، فيتطلب اتصالًا للاستخدام العادي.'
+            'text': 'نعم، بمجرد تنزيل أوزان النموذج وحزم الأصوات، يمكن لـKokoro توليد الكلام دون اتصال بالإنترنت. أما ElevenLabs، كخدمة سحابية، فيتطلب اتصالًا للاستخدام العادي. تحقق من سياسة الشبكة والاعتماديات لديك قبل اعتبار النشر دون اتصال.'
           }
         },
         {
@@ -6358,40 +6583,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'Answer',
             'text': 'ليس مباشرةً مع Kokoro، لأنه لا يقدّم استنساخًا صوتيًا. توجد نماذج محلية مفتوحة أخرى قادرة على الاستنساخ، لكنها عادةً ما تتطلب إعدادًا أكثر وأجهزة أقوى من Kokoro. احصل دائمًا على موافقة واضحة قبل استنساخ أي صوت، بما في ذلك صوتك الخاص، لأغراض تجارية، وراجع ترخيص الأداة المحددة ومتطلبات الموافقة الخاصة بها.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل توجد نسخة محلية من ElevenLabs؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'لا. ElevenLabs خدمة سحابية: لا تنشر أوزان نموذج قابلة للتنزيل ولا مثبّتًا محليًا لخططها ذاتية الخدمة، لذا تمر كل عملية توليد عبر خوادمها. أقرب الخيارات المحلية نماذج مفتوحة الأوزان مثل Kokoro-82M (مجاني، Apache 2.0، 54 صوتًا ثابتًا) أو Piper أو XTTS v2. ولا يُعدّ أيٌّ منها نموذجًا من ElevenLabs، كما أن Kokoro لا يضاهي استنساخ الصوت ولا نطاق اللغات لديها.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل يدعم Kokoro الألمانية أو الكورية أو البولندية؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'لا. يضم Kokoro-82M v1.0 ‏54 صوتًا بثماني لغات (الإنجليزية والإسبانية والفرنسية والهندية والإيطالية واليابانية والبرتغالية والصينية) ولا توجد أصوات رسمية للألمانية أو الكورية أو البولندية. لهذه اللغات استخدم نموذجًا محليًا آخر مثل XTTS v2 (ترخيص غير تجاري) أو خدمة سحابية: توثّق ElevenLabs أكثر من 90 لغة لنموذج Eleven v4.'
+          }
         }
       ]
     }
   },
   ko: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-03-11',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
-    title: 'Kokoro vs ElevenLabs: 로컬 TTS와 클라우드 음성 AI 비교(2026)',
-    seoTitle: 'Kokoro vs ElevenLabs(2026): 로컬 vs 클라우드 TTS',
+    title: 'Kokoro vs ElevenLabs: 무료 로컬 TTS인가 유료 클라우드인가(2026)',
+    seoTitle: 'Kokoro vs ElevenLabs: 무료 로컬 TTS 비교',
     intro: 'Kokoro는 8,200만 파라미터의 Apache 2.0 라이선스 오픈 웨이트 텍스트 음성 변환 모델로, 직접 다운로드하여 무료로 실행할 수 있으며 설정 후에는 인터넷 연결이 필요하지 않습니다. ElevenLabs는 훨씬 더 방대한 음성 라이브러리와 짧은 오디오 샘플로부터 즉시 음성을 복제할 수 있는 유료 클라우드 플랫폼입니다. 결정해야 할 문제는 단순히 어느 쪽 음성이 더 나은가가 아니라, 무료이고 오프라인이며 고정된 음성을 직접 운영할 것인지, 아니면 유료로 호스팅되며 복제 기능을 갖춘 서비스를 임대할 것인지입니다.',
-    metaDescription: 'Kokoro는 82M 파라미터, 54개 고정 음성을 갖춘 무료 로컬 TTS 모델로 인터넷이 필요 없습니다. ElevenLabs는 음성 복제 기능을 갖춘 유료 클라우드 플랫폼입니다. 전체 비교.',
+    metaDescription: 'Kokoro는 무료 로컬 TTS 모델(Apache 2.0, 82M 파라미터, 54개 음성, 8개 언어)입니다. ElevenLabs는 음성 복제와 90개 이상 언어를 지원하는 유료 클라우드입니다.',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
+    dateModified: '2026-11-19',
     readTime: '11분 읽기',
     educationalLevel: 'Intermediate',
     audience: '무료 로컬 TTS 모델과 유료 클라우드 음성 플랫폼 중에서 선택하는 개발자, 콘텐츠 제작자, 팀을 위한 가이드입니다.',
     primaryTerm: 'Kokoro vs ElevenLabs',
-    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'ElevenLabs 대안', '로컬 텍스트 음성 변환', '오픈소스 TTS', '무료 TTS 모델', '오프라인 음성 합성', 'Kokoro-82M'],
-    twitterDescription: 'Kokoro는 82M 파라미터의 무료 로컬 TTS 모델입니다. ElevenLabs는 음성 복제 기능을 갖춘 유료 클라우드 플랫폼입니다. 실제 비교 결과를 확인하세요.',
-    leadAnswerBlock: '**무료로 오프라인에서 고정된 음성 세트로 무제한 텍스트 음성 변환을 원하고 직접 모델을 실행하는 것이 편하다면 Kokoro를 선택하십시오. 음성 복제, 수십 개 언어, 또는 로컬 설정 없이 오늘 당장 완성도 높은 음성이 필요하다면 ElevenLabs를 선택하십시오.** Kokoro는 CPU 또는 보급형 GPU에서 실행되는 Apache 2.0 라이선스의 82M 파라미터 모델입니다. ElevenLabs는 무료 등급과 유료 플랜을 갖춘 사용량 기반 클라우드 API입니다.',
+    targetKeywords: ['Kokoro TTS', 'Kokoro vs ElevenLabs', 'ElevenLabs 대안', '로컬 텍스트 음성 변환', '오픈소스 TTS', '무료 TTS 모델', '오프라인 음성 합성', 'Kokoro-82M', 'ElevenLabs 로컬', 'Kokoro 지원 언어'],
+    twitterDescription: 'Kokoro는 무료이며 로컬에서 고정 음성으로 동작합니다. ElevenLabs는 유료 클라우드이며 음성 복제를 지원합니다. 요금제, 라이선스, 언어를 다시 확인했습니다.',
+    leadAnswerBlock: '**직접 운영하는 무료·오프라인·고정 음성 TTS가 필요하면 Kokoro를, 음성 복제·90개 이상 언어·설치 없는 완성도가 필요하면 ElevenLabs를 선택하세요.** Kokoro는 82M 파라미터, Apache 2.0이며 2025년 8월 이후 공식 업데이트가 없습니다.',
     quickAnswerTop: {
       ko: {
         question: 'Kokoro와 ElevenLabs 중 어느 것을 사용해야 합니까?',
         answer: 'Kokoro는 CPU 또는 보급형 GPU에서 실행되며 8개 언어에 걸쳐 54개의 사전 설정 음성을 제공하는 무료 오픈 웨이트 8,200만 파라미터 로컬 TTS 모델(Apache 2.0, hexgrad 제공)이지만 내장 음성 복제 기능은 없습니다. ElevenLabs는 훨씬 더 큰 음성 카탈로그, 짧은 샘플로부터의 제로샷 음성 복제, 더 폭넓은 언어 지원을 제공하는 유료 클라우드 플랫폼이지만 구독료와 텍스트를 제3자 서버로 전송해야 하는 비용이 따릅니다. 무료/오프라인/고정 음성에 가장 적합: Kokoro. 음성 복제 또는 최대 언어 지원에 가장 적합: ElevenLabs.',
         bullets: [
+          '확인 결과(2026-11-19): ElevenLabs는 2026-09-28에 Eleven v4(90개 이상 언어)를 출시했으며 요금제 가격은 그대로입니다. Kokoro-82M은 여전히 v1.0(2025-01-27 공개)이고, hexgrad 공식 저장소의 마지막 업데이트는 2025-08-06입니다. 공식 업데이트가 1년 넘게 없지만 Kokoro-FastAPI 같은 커뮤니티 래퍼는 계속 관리되고 있습니다.',
           'Kokoro: 8,200만 파라미터, Apache 2.0 라이선스, StyleTTS2 기반 아키텍처, 무료, CPU 또는 GPU에서 로컬 실행, 내장 음성 54개, 공식 음성 복제 없음.',
           'ElevenLabs: 무료 등급(월 10,000크레딧, 상업용 라이선스 없음), Starter 월 6달러(30,000크레딧, 상업용 라이선스, 즉시 음성 복제), Creator 월 22달러(121,000크레딧, 전문 음성 복제), Pro 월 99달러(600,000크레딧), Scale 월 299달러(1,800,000크레딧), Business 월 990달러(6,000,000크레딧). 결정하기 전에 ElevenLabs 요금제 페이지에서 최신 수치를 확인하십시오 — 플랜과 크레딧 할당량은 변경됩니다.',
           'Kokoro는 모델 수준에서 8개 언어(영어, 스페인어, 프랑스어, 힌디어, 이탈리아어, 일본어, 포르투갈어, 중국어)를 지원하는 다국어 모델입니다. ElevenLabs는 자사 사이트에서 더 폭넓은 언어 지원을 명시하고 있으므로 정확한 수치는 최신 문서를 확인하십시오.',
           'Kokoro는 모델 다운로드 후 인터넷이 필요 없습니다. ElevenLabs는 오디오 생성을 위해 연결이 필요합니다.',
           '오늘 당장 복제되거나 매우 완성도 높은 음성이 필요한 대부분의 제작자는 ElevenLabs의 무료 등급을 시험해 보십시오. 문자당 비용 없이 고정 음성 세트를 갖춘 무료 자체 호스팅 엔진을 원하는 개발자는 Kokoro부터 시작하십시오.'
         ],
-        updatedDate: '2026-09'
+        updatedDate: '2026-11'
       }
     },
     snippetBlocks: [
@@ -6408,7 +6650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     toc: [
       { label: '요약', anchor: 'tldr' },
       { label: '빠른 답변', anchor: 'quick-answer' },
-      { label: '결론', anchor: 'short-answer' },
+      { label: '간단한 답변', anchor: 'short-answer' },
       { label: '한눈에 보기', anchor: 'at-a-glance' },
       { label: 'Kokoro란 무엇인가?', anchor: 'what-is-kokoro' },
       { label: '클라우드 TTS의 상충 관계', anchor: 'cloud-costs' },
@@ -6456,6 +6698,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'PromptQuorum과 Kokoro/hexgrad 사이에는 제휴 관계가 없습니다. 이 글에 포함된 ElevenLabs 링크는 페이지 상단의 제휴 공지에 따라 공개됩니다.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Kokoro는 2025년 8월 6일 이후 공식 업데이트가 없습니다(hexgrad 저장소, v1.0 모델은 2025년 1월 27일 공개, 모델 카드 최종 수정은 2025년 4월 10일). 프로젝트가 더 이상 관리되지 않을 수 있으니 의존하기 전에 확인하세요. Kokoro-FastAPI 같은 커뮤니티 래퍼는 계속 업데이트되고 있습니다. 확인일: 2026년 11월 19일.'
+          },
           { type: 'note', text: '사실 확인은 이 글의 발행일 기준으로 Hugging Face의 Kokoro-82M 모델 카드와 ElevenLabs의 공개 요금제 페이지를 대조하여 이루어졌습니다. 두 정보 모두 변경될 수 있으므로 어느 쪽을 선택하기 전에 최신 조건을 확인하십시오.' }
         ]
       },
@@ -6465,8 +6711,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       shortAnswer: {
         id: 'short-answer',
-        title: '결론',
-        content: '🏆 **최고의 무료/오프라인 TTS:** Kokoro — 문자당 비용 없이 직접 운영하는 Apache 2.0 라이선스의 82M 파라미터 모델입니다.\n💰 **음성 복제에 가장 적합:** ElevenLabs — 유료 플랜에서 짧은 참조 클립을 이용한 제로샷 복제가 가능합니다.\n⚡ **설정 없이 오늘 당장 완성도 높은 음성을 얻기에 가장 적합:** ElevenLabs.\n🖥️ **CPU 전용 또는 보급형 GPU 하드웨어에 가장 적합:** Kokoro.\n🔒 **텍스트와 오디오를 제3자 서버에서 멀리 두기에 가장 적합:** Kokoro(다운로드 후 완전히 오프라인으로 실행할 경우).\n🌍 **최대 언어 지원에 가장 적합:** ElevenLabs — 정확한 수치는 최신 문서에서 확인하십시오. Kokoro는 모델 수준에서 8개 언어를 지원합니다.\n\n음성 복제가 필요 없는 예산이 빠듯한 개발자와 취미 사용자는 Kokoro부터 시작하십시오. 복제된 음성, 더 폭넓은 언어 지원, 또는 아무것도 설치하지 않고 오늘 당장 결과가 필요한 제작자와 기업은 ElevenLabs의 무료 등급부터 시작하십시오.',
+        title: '간단한 답변',
+        content: '🏆 **최고의 무료/오프라인 TTS:** Kokoro — 문자당 비용 없이 직접 운영하는 Apache 2.0 라이선스의 82M 파라미터 모델입니다.\n💰 **음성 복제에 가장 적합:** ElevenLabs — 유료 플랜에서 짧은 참조 클립을 이용한 제로샷 복제가 가능합니다.\n⚡ **설정 없이 오늘 당장 완성도 높은 음성을 얻기에 가장 적합:** ElevenLabs.\n🖥️ **CPU 전용 또는 보급형 GPU 하드웨어에 가장 적합:** Kokoro.\n🔒 **텍스트와 오디오를 제3자 서버에서 멀리 두기에 가장 적합:** Kokoro(다운로드 후 오프라인으로 실행할 경우).\n🌍 **최대 언어 지원에 가장 적합:** ElevenLabs — 정확한 수치는 최신 문서에서 확인하십시오. Kokoro는 모델 수준에서 8개 언어를 지원합니다.\n\n음성 복제가 필요 없는 예산이 빠듯한 개발자와 취미 사용자는 Kokoro부터 시작하십시오. 복제된 음성, 더 폭넓은 언어 지원, 또는 아무것도 설치하지 않고 오늘 당장 결과가 필요한 제작자와 기업은 ElevenLabs의 무료 등급부터 시작하십시오.',
         decisionBlock: {
           title: 'TTS 방식을 선택하십시오',
           cloudIf: [
@@ -6476,7 +6722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           localIf: [
             '문자당 과금 없이 무료로 무제한 생성을 원합니다.',
-            '파이프라인이 설정 후 완전히 오프라인으로 작동해야 합니다 — 키오스크, 임베디드 기기, 에어갭 시스템.',
+            '파이프라인이 설정 후 오프라인으로 작동해야 합니다 — 키오스크, 임베디드 기기, 격리 시스템.',
             '특정 음성을 복제하는 대신 54개의 고정 음성 중에서 선택하는 것으로 충분합니다.'
           ],
           quick: [
@@ -6572,7 +6818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '클라우드 이점': '더 폭넓게 문서화된 언어 지원',
-            '실제로 달라지는 점': '정확한 수치는 최신 ElevenLabs 문서를 확인하십시오. 모델 수준의 Kokoro 8개 언어보다 더 넓을 가능성이 큽니다'
+            '실제로 달라지는 점': 'ElevenLabs는 Eleven v4에서 90개 이상 언어를 문서화했으며, Kokoro의 모델 수준 8개 언어보다 많습니다'
           },
           {
             '클라우드 이점': '호스팅형 확장',
@@ -6694,7 +6940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '항목': '언어 지원',
             Kokoro: '모델 수준에서 8개 언어가 문서화됨',
-            ElevenLabs: '더 폭넓게 문서화된 지원 — 정확한 수치는 최신 문서 확인'
+            ElevenLabs: 'Eleven v4 기준 90개 이상 언어(ElevenLabs 문서 기준)'
           },
           {
             '항목': '개인정보 제어',
@@ -6767,7 +7013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '실용적인 답변': '실제 요청 물량과 하드웨어 비용으로 계산하십시오'
           },
           {
-            '시나리오': '오프라인 또는 에어갭 배포',
+            '시나리오': '오프라인 배포',
             Kokoro: '모델과 음성이 로컬에 설치되면 매우 적합함',
             ElevenLabs: '일반 사용에 연결이 필요함',
             '실용적인 답변': 'Kokoro가 우세함(오프라인 요건)'
@@ -6797,7 +7043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '다음 대부분이 본인에게 해당한다면 무료 로컬 모델을 선택하십시오:',
         items: [
           '구독이나 문자당 과금 없이 무료로 무제한 텍스트 음성 변환을 원합니다.',
-          '파이프라인이 설정 후 완전히 오프라인으로 작동해야 합니다 — 임베디드 기기, 키오스크, 에어갭 시스템.',
+          '파이프라인이 설정 후 오프라인으로 작동해야 합니다 — 임베디드 기기, 키오스크, 격리 시스템.',
           '특정 음성을 복제하는 대신 54개의 사전 설정 음성 중에서 선택하는 것이 편합니다.',
           '관대한 라이선스 하에 모델을 설치, 검사, 미세 조정, 재배포하고 싶습니다.',
           '개발자로서 Python 환경과 추론 파이프라인을 설정하는 것이 편합니다.',
@@ -6854,10 +7100,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '다음의 경우 ElevenLabs를 선택하지 마십시오',
         content: '다음 중 하나라도 프로젝트에 해당한다면 유료 클라우드 플랫폼은 적합하지 않습니다:',
         items: [
-          '인터넷 연결 없이 완전히 오프라인으로 작동해야 합니다.',
+          '인터넷 연결 없이 오프라인으로 작동해야 합니다.',
           '텍스트와 오디오가 자체 인프라를 벗어날 수 없습니다.',
           '문자당 또는 크레딧당 비용이 전혀 없이 무제한 생성이 필요합니다.',
-          '네트워크 접근이 없는 에어갭 또는 임베디드 시스템을 운영합니다.',
+          '네트워크 접근이 없는 오프라인 또는 임베디드 시스템을 운영합니다.',
           '모델 가중치 자체에 대한 완전한 통제와 가시성을 원합니다.',
         ],
         blockquote: '이것이 본인에게 해당한다면 대신 [Hugging Face의 Kokoro-82M →](https://huggingface.co/hexgrad/Kokoro-82M)부터 시작하십시오 — 무료, Apache 2.0이며 CPU 또는 보급형 GPU에서 실행됩니다.'
@@ -6895,8 +7141,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'ElevenLabs는 Free 플랜(0달러, 월 10,000크레딧, 상업용 라이선스 없음)부터 Starter(월 6달러)에서 Business(월 990달러, 6,000,000크레딧)에 이르는 유료 플랜, 그리고 맞춤형 Enterprise 가격까지 제공합니다. 플랜과 크레딧 비용이 변경되므로 ElevenLabs 요금제 페이지에서 최신 수치를 확인하십시오.'
           },
           {
-            q: 'Kokoro를 완전히 오프라인으로 실행할 수 있습니까?',
-            a: '예, 모델 가중치와 음성 팩을 다운로드한 후에는 Kokoro가 인터넷 연결 없이 음성을 생성할 수 있습니다. ElevenLabs는 클라우드 서비스로서 일반 사용에 연결이 필요합니다.'
+            q: 'Kokoro를 오프라인으로 실행할 수 있습니까?',
+            a: '예, 모델 가중치와 음성 팩을 다운로드한 후에는 Kokoro가 인터넷 연결 없이 음성을 생성할 수 있습니다. ElevenLabs는 클라우드 서비스로서 일반 사용에 연결이 필요합니다. 배포를 오프라인으로 간주하기 전에 자체 네트워크 정책과 의존성을 확인하세요.'
           },
           {
             q: 'ElevenLabs는 무료 플랜을 제공합니까?',
@@ -6914,6 +7160,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '로컬 모델로 내 음성을 무료로 복제할 수 있습니까?',
             a: 'Kokoro로는 직접 할 수 없습니다. 음성 복제를 제공하지 않기 때문입니다. 복제 기능을 갖춘 다른 로컬 오픈 모델이 존재하지만, 일반적으로 Kokoro보다 더 많은 설정과 더 강력한 하드웨어가 필요합니다. 본인의 음성을 포함해 상업적 목적으로 어떤 음성이든 복제하기 전에는 항상 명확한 동의를 얻고, 해당 도구의 라이선스와 동의 요건을 검토하십시오.'
           },
+          {
+            q: 'ElevenLabs의 로컬 버전이 있나요?',
+            a: '없습니다. ElevenLabs는 클라우드 서비스이며, 셀프서비스 요금제에는 다운로드 가능한 모델 가중치나 로컬 설치 프로그램이 제공되지 않아 모든 음성 생성이 해당 서버를 거칩니다. 가장 가까운 로컬 선택지는 Kokoro-82M(무료, Apache 2.0, 54개 고정 음성), Piper, XTTS v2 같은 오픈 웨이트 모델입니다. 이 중 어느 것도 ElevenLabs 모델이 아니며, Kokoro는 음성 복제와 언어 범위에서 ElevenLabs에 미치지 못합니다.'
+          },
+          {
+            q: 'Kokoro는 독일어, 한국어, 폴란드어를 지원하나요?',
+            a: '아니요. Kokoro-82M v1.0은 8개 언어(영어, 스페인어, 프랑스어, 힌디어, 이탈리아어, 일본어, 포르투갈어, 중국어)의 54개 음성을 제공하며, 독일어·한국어·폴란드어 공식 음성은 없습니다. 이 언어들은 XTTS v2(비상업 라이선스) 같은 다른 로컬 모델이나 Eleven v4에서 90개 이상 언어를 문서화한 ElevenLabs 같은 클라우드 서비스를 사용해야 합니다.'
+          }
         ]
       },
       verdict: {
@@ -6994,13 +7248,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       }
     },
+    current_models_mentioned: ['Kokoro-82M', 'ElevenLabs Eleven v4'],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Kokoro vs ElevenLabs: 로컬 TTS와 클라우드 음성 AI 비교(2026)',
-      'description': 'Kokoro는 82M 파라미터, 54개 고정 음성을 갖춘 무료 로컬 TTS 모델로 인터넷이 필요 없습니다. ElevenLabs는 음성 복제 기능을 갖춘 유료 클라우드 플랫폼입니다. 전체 비교.',
+      'headline': 'Kokoro vs ElevenLabs: 무료 로컬 TTS인가 유료 클라우드인가(2026)',
+      'description': 'Kokoro는 무료 로컬 TTS 모델(Apache 2.0, 82M 파라미터, 54개 음성, 8개 언어)입니다. ElevenLabs는 음성 복제와 90개 이상 언어를 지원하는 유료 클라우드입니다.',
       'datePublished': '2026-09-11',
-      'dateModified': '2026-09-11',
+      'dateModified': '2026-11-19',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -7016,7 +7271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'height': '60'
         }
       },
-      'url': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs',
+      'url': 'https://www.promptquorum.com/ko/power-local-llm/kokoro-vs-elevenlabs',
       'speakable': {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['h1', 'h2', '.key-takeaways']
@@ -7051,7 +7306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       'mainEntityOfPage': {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/kokoro-vs-elevenlabs'
+        '@id': 'https://www.promptquorum.com/ko/power-local-llm/kokoro-vs-elevenlabs'
       }
     },
     faqSchema: {
@@ -7116,10 +7371,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'Kokoro를 완전히 오프라인으로 실행할 수 있습니까?',
+          'name': 'Kokoro를 오프라인으로 실행할 수 있습니까?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '예, 모델 가중치와 음성 팩을 다운로드한 후에는 Kokoro가 인터넷 연결 없이 음성을 생성할 수 있습니다. ElevenLabs는 클라우드 서비스로서 일반 사용에 연결이 필요합니다.'
+            'text': '예, 모델 가중치와 음성 팩을 다운로드한 후에는 Kokoro가 인터넷 연결 없이 음성을 생성할 수 있습니다. ElevenLabs는 클라우드 서비스로서 일반 사용에 연결이 필요합니다. 배포를 오프라인으로 간주하기 전에 자체 네트워크 정책과 의존성을 확인하세요.'
           }
         },
         {
@@ -7152,6 +7407,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Kokoro로는 직접 할 수 없습니다. 음성 복제를 제공하지 않기 때문입니다. 복제 기능을 갖춘 다른 로컬 오픈 모델이 존재하지만, 일반적으로 Kokoro보다 더 많은 설정과 더 강력한 하드웨어가 필요합니다. 본인의 음성을 포함해 상업적 목적으로 어떤 음성이든 복제하기 전에는 항상 명확한 동의를 얻고, 해당 도구의 라이선스와 동의 요건을 검토하십시오.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ElevenLabs의 로컬 버전이 있나요?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '없습니다. ElevenLabs는 클라우드 서비스이며, 셀프서비스 요금제에는 다운로드 가능한 모델 가중치나 로컬 설치 프로그램이 제공되지 않아 모든 음성 생성이 해당 서버를 거칩니다. 가장 가까운 로컬 선택지는 Kokoro-82M(무료, Apache 2.0, 54개 고정 음성), Piper, XTTS v2 같은 오픈 웨이트 모델입니다. 이 중 어느 것도 ElevenLabs 모델이 아니며, Kokoro는 음성 복제와 언어 범위에서 ElevenLabs에 미치지 못합니다.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kokoro는 독일어, 한국어, 폴란드어를 지원하나요?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '아니요. Kokoro-82M v1.0은 8개 언어(영어, 스페인어, 프랑스어, 힌디어, 이탈리아어, 일본어, 포르투갈어, 중국어)의 54개 음성을 제공하며, 독일어·한국어·폴란드어 공식 음성은 없습니다. 이 언어들은 XTTS v2(비상업 라이선스) 같은 다른 로컬 모델이나 Eleven v4에서 90개 이상 언어를 문서화한 ElevenLabs 같은 클라우드 서비스를 사용해야 합니다.'
           }
         }
       ]

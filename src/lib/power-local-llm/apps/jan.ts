@@ -38,6 +38,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { desktopApp: true, builtInEngine: true, mcp: true, openaiApi: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release or push, whichever is newer), read 2026-11-02
+  lastUpstreamUpdate: '2026-11-18', // GitHub API (latest release v0.8.8 on 2026-10-28, last push 2026-11-18 — newer wins), read 2026-11-19
   lastUpstreamUpdateSource: 'https://github.com/janhq/jan',
 }
