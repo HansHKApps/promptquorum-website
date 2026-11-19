@@ -1139,6 +1139,11 @@
     "urlSlug": "inbox-zero-review",
     "url": "/power-local-llm/inbox-zero-review"
   },
+  "browser-use": {
+    "cluster": "power-local-llm",
+    "urlSlug": "browser-use-review",
+    "url": "/power-local-llm/browser-use-review"
+  },
   "ultimate-vocal-remover": {
     "cluster": "power-local-llm",
     "urlSlug": "ultimate-vocal-remover-review",

@@ -1074,6 +1074,7 @@ const HUB_THEMES: Array<{
       'home-generative-agent-review',
       'tecadrisebot-review',
       'local-operator-review',
+      'browser-use-review',
       'localmcp-review',
       'self-hosted-ai-starter-kit-review',
       'local-deep-research-review',
