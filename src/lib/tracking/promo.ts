@@ -1,6 +1,7 @@
 // Umami events for promo slots. Cookieless and anonymous like the rest of the site's Umami setup; no personal data.
 // Every event carries the same props so target x placement x variant x cluster x locale x device can be sliced.
 import type { PromoPlacement, PromoTarget, PromoVariant } from '@/lib/promo/types'
+import { sendWhenUmamiReady } from '@/lib/tracking/umami-events'
 
 /** What happened in the slot; the event name is `<target>_promo_<kind>` (see promoEventName). */
 export type PromoEvent = 'view' | 'click'
@@ -93,6 +94,11 @@ const LANDING_VIA = /^promo_(directory|mcp)_(p[1-5])$/
  * Arrival from a Directory / MCP promo slot: fires `directory_promo_landing` / `mcp_promo_landing` once per page view
  * when the URL carries `via=promo_<target>_<placement>`. Umami's path metric drops the query string, so the click
  * alone cannot be matched to an arrival. Props: target, placement, locale, page.
+ *
+ * Fires on mount (PromoLanding), before the afterInteractive Umami script is guaranteed to have loaded — unlike a
+ * slot's view/click, which happen at least 1 s after the page settled. Uses sendWhenUmamiReady so a fast page load
+ * does not silently drop the landing (the actual cause of most arrivals going missing: window.umami?.track() is a
+ * silent no-op when window.umami isn't attached yet).
  */
 export function trackPromoLanding(): void {
   try {
@@ -100,7 +106,7 @@ export function trackPromoLanding(): void {
     if (!m) return
     const target = m[1] as PromoTarget
     const page = window.location.pathname
-    window.umami?.track(promoEventName(target, 'landing'), {
+    sendWhenUmamiReady(promoEventName(target, 'landing'), {
       target,
       placement: m[2].toUpperCase(),
       locale: localeFromPath(page),

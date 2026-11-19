@@ -1,7 +1,9 @@
 // Ask Hans button experiment: read the counters and evaluate them (server only).
 //
 // Unit of analysis: the EXPOSURE = one tracked page load on a page with the button (no visitor or session ID exists, the
-// variant is held in memory only, and there is NO impression event any more: removed 2026-11-14 for the Umami quota).
+// variant is held in memory only). ask_hans_button_impression exists again (restored 2026-11-19, after the removal of
+// 2026-11-14 turned out to be the actual cause of the click/impression funnel going dark) but stays a secondary
+// cross-check, not the exposure source: it only counts a button actually scrolled into view, not every page load.
 //   exposure per variant = Umami pageviews since the experiment start / 3   (assignment is uniform, variant.ts)
 // The page-load total is not stored here: the dashboard takes it as input (`?pageviews=N`, read from Umami for the window
 // "start date to today"). Without it no leader can be named.

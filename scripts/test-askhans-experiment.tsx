@@ -87,13 +87,13 @@ t('decision rule refuses early or small data, accepts a real difference', () => 
   assert.notEqual(decide(small, 30).state, 'leader', 'a +9% lift is below the practical threshold')
 })
 
-t('exposure = tracked page loads / 3; no impression event exists', () => {
+t('exposure = tracked page loads / 3 (impression, restored 2026-11-19, is a cross-check, not the exposure source)', () => {
   assert.equal(exposurePerVariant(9000), 3000)
   assert.equal(exposurePerVariant(10000), 3333)
   assert.equal(exposurePerVariant(null), 0)
   assert.equal(exposurePerVariant(-5), 0)
   assert.equal(exposurePerVariant(Number.NaN), 0)
-  assert.ok(!('ask_hans_button_impression' in CTA_EVENTS), 'impression event must stay removed (Umami quota)')
+  assert.ok('ask_hans_button_impression' in CTA_EVENTS, 'impression event was restored 2026-11-19 — see scripts/test-tracking-events.tsx')
 })
 
 t('leader needs enough clicks per variant and a page-load total', () => {
