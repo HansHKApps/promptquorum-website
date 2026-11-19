@@ -66424,7 +66424,7 @@
     "title": "DeepSeek-R1 Distill VRAM Cheatsheet (2026)",
     "excerpt": "DeepSeek-R1 14B needs ~9.5 GB VRAM at Q4_K_M and fits a 16 GB card. Every distill (1.5B–70B) by quant: Q8_0, FP16, file size and minimum GPU.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -66433,7 +66433,7 @@
     "title": "DeepSeek-R1 Distill VRAM-Spickzettel (2026)",
     "excerpt": "DeepSeek-R1 14B braucht ~9.5 GB VRAM bei Q4_K_M und passt auf eine 16-GB-Karte. Jeder Distill (1.5B–70B) je Quant: Q8_0, FP16, Dateigröße, Mindest-GPU.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -66442,7 +66442,7 @@
     "title": "Aide-mémoire VRAM DeepSeek-R1 Distill (2026)",
     "excerpt": "DeepSeek-R1 14B demande ~9.5 GB de VRAM en Q4_K_M et tient sur une carte 16 GB. Chaque distillation (1.5B–70B) par quant : Q8_0, FP16, fichier, GPU minimum.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -66451,7 +66451,7 @@
     "title": "DeepSeek-R1 Distill VRAM 早見表（2026年版）",
     "excerpt": "DeepSeek-R1 14BはQ4_K_Mで約9.5 GBのVRAMを使い、16 GBカードに収まります。全Distill（1.5B〜70B）の量子化別VRAM・ファイルサイズ・最小GPUを掲載。",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -66460,7 +66460,7 @@
     "title": "DeepSeek-R1 Distill 显存速查表（2026）",
     "excerpt": "DeepSeek-R1 14B 在 Q4_K_M 下约需 9.5 GB 显存，可装入 16 GB 显卡。按量化等级列出全部 distill（1.5B–70B）的显存、文件大小和最低 GPU。",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -66469,7 +66469,7 @@
     "title": "Tabla de VRAM de DeepSeek-R1 Distill (2026)",
     "excerpt": "DeepSeek-R1 14B necesita ~9.5 GB de VRAM en Q4_K_M y cabe en una tarjeta de 16 GB. Cada distill (1.5B–70B) por cuantización: Q8_0, FP16, archivo y GPU mínima.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -66478,7 +66478,7 @@
     "title": "Tabela de VRAM do DeepSeek-R1 Distill (2026)",
     "excerpt": "DeepSeek-R1 14B precisa de ~9.5 GB de VRAM no Q4_K_M e cabe em uma placa de 16 GB. Cada distill (1.5B–70B) por quant: Q8_0, FP16, arquivo e GPU mínima.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -66487,7 +66487,7 @@
     "title": "جدول ⁨VRAM⁩ لنماذج ⁨DeepSeek-R1 Distill⁩ (⁨2026⁩)",
     "excerpt": "يحتاج ⁨DeepSeek-R1 14B⁩ إلى نحو ⁨9.5 GB⁩ من ⁨VRAM⁩ عند ⁨Q4_K_M⁩ ويتسع في بطاقة ⁨16 GB⁩. كل نماذج ⁨distill⁩ (من ⁨1.5B⁩ إلى ⁨70B⁩) حسب التكميم: ⁨VRAM⁩ وحجم الملف وأدنى ⁨GPU⁩.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -66496,7 +66496,7 @@
     "title": "DeepSeek-R1 Distill VRAM 치트시트 (2026)",
     "excerpt": "DeepSeek-R1 14B는 Q4_K_M에서 약 9.5 GB VRAM이 필요해 16 GB 카드에 들어갑니다. 모든 distill(1.5B–70B)의 양자화별 VRAM, 파일 크기, 최소 GPU를 정리했습니다.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
