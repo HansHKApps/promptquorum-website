@@ -27,6 +27,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "continue-dev-vs-cline-vs-aider-local",
         "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
         "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
@@ -70,14 +78,6 @@
         "slug": "multi-gpu-local-llms",
         "title": "Multi-GPU Local LLMs 2026: Run 70B Models Across 2+ GPUs with vLLM and Ollama",
         "url": "/local-llms/multi-gpu-local-llms",
-        "dateModified": "2026-11-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "airi-review",
-        "title": "AIRI Review: Open-Source AI Companion with Voice Chat and Game Integrations",
-        "url": "/power-local-llm/airi-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
@@ -1188,6 +1188,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
@@ -1249,14 +1257,6 @@
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
         "dateModified": "2026-10-16",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "cherry-studio-ai-desktop-client-2026",
-        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
-        "url": "/local-llms/cherry-studio-ai-desktop-client",
-        "dateModified": "2026-09-20",
         "tier": "about"
       }
     ],
@@ -2137,6 +2137,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
@@ -2197,14 +2205,6 @@
         "title": "LLM Vision Review: Camera Analysis for Home Assistant With Vision LLMs",
         "url": "/power-local-llm/llm-vision-review",
         "dateModified": "2026-11-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-10-31",
         "tier": "about"
       }
     ],
@@ -3529,6 +3529,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
@@ -3573,14 +3581,6 @@
         "title": "h2oGPT Review: Features, Setup, and Why the Project Is Archived",
         "url": "/power-local-llm/h2ogpt-review",
         "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
         "tier": "about"
       },
       {
@@ -3747,6 +3747,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -3791,14 +3799,6 @@
         "title": "RAGFlow Review: Citation-Grade RAG for Complex Documents",
         "url": "/power-local-llm/ragflow-document-understanding-rag-review",
         "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
         "tier": "about"
       },
       {
@@ -3965,6 +3965,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "milvus-review",
         "title": "Milvus Review: The Open-Source Vector Database for Local RAG",
         "url": "/power-local-llm/milvus-review",
@@ -4024,14 +4032,6 @@
         "slug": "haystack-deepset-rag-framework-review",
         "title": "Haystack Review: deepset's RAG Framework vs. LangChain and LlamaIndex",
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
-        "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ragflow-document-understanding-rag-review",
-        "title": "RAGFlow Review: Citation-Grade RAG for Complex Documents",
-        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       }
@@ -4137,6 +4137,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -4157,14 +4165,6 @@
         "title": "MaxKB Review: Self-Hosted RAG Platform for DeepSeek and Qwen",
         "url": "/power-local-llm/maxkb-review",
         "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
         "tier": "about"
       },
       {
@@ -12214,6 +12214,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-vector-database-2026",
         "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
@@ -12267,14 +12275,6 @@
         "title": "txtai Review: The Embedded Vector Database That Skips the Server",
         "url": "/power-local-llm/txtai-embedded-vector-database-review",
         "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
         "tier": "about"
       },
       {
@@ -13573,6 +13573,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "continue-dev-vs-cline-vs-aider-local",
         "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
         "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
@@ -13626,14 +13634,6 @@
         "url": "/power-local-llm/local-pdf-parsers-compared",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "loci-ai-review-offline-local-ai",
-        "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
-        "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 283,
@@ -13647,6 +13647,14 @@
         "title": "Qdrant Review: The Self-Hosted Vector Database for RAG",
         "url": "/power-local-llm/qdrant-review",
         "dateModified": "2026-09-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
@@ -13711,14 +13719,6 @@
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
         "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "dreamserver-review",
-        "title": "DreamServer Review: One-Command Local AI Server Stack",
-        "url": "/power-local-llm/dreamserver-review",
-        "dateModified": "2026-09-19",
         "tier": "about"
       }
     ],
@@ -14115,6 +14115,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "enterprise-rag-vector-database-deployment-guide-2026",
         "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
         "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
@@ -14175,14 +14183,6 @@
         "title": "Haystack Review: deepset's RAG Framework vs. LangChain and LlamaIndex",
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
         "tier": "about"
       }
     ],
