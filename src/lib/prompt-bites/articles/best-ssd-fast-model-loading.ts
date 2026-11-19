@@ -6,13 +6,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-ssd-fast-model-loading-overview-hero-en.webp',
-    title: 'Best SSD for Fast Model Loading in 2026?',
-    seoTitle: 'Best SSD for Fast LLM Model Loading 2026 | Prompt Bites',
-    metaDescription: 'Best SSD for fast LLM model loading: a PCIe Gen4 NVMe like the Samsung 990 Pro 2 TB. High sequential read pulls multi-GB models into RAM in seconds.',
+    title: 'Best SSD for Local AI Models & LLMs (2026): Gen4 vs Gen5',
+    seoTitle: 'Best SSD for Local AI Models & LLMs 2026: Gen4 vs Gen5',
+    metaDescription: 'Best SSD for local AI models and LLMs: PCIe Gen4 NVMe (Samsung 990 Pro) loads a 7B model in ~1 sec. Gen5 costs about the same — 2026 buying guide.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-05-19',
     current_models_mentioned: [],
     current_hardware_mentioned: ['Samsung 990 Pro 2 TB', 'WD Black SN850X 2 TB', 'Samsung 9100 Pro'],
     educationalLevel: 'Intermediate',
@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-mini-pc-for-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      'A 2 TB PCIe Gen4 NVMe SSD is the best choice for fast local LLM model loading — the Samsung 990 Pro 2 TB is the top pick, with the WD Black SN850X 2 TB as a near-identical alternative. A fast NVMe cuts the wait when starting or switching models from tens of seconds down to a few seconds. It does not, however, change tokens-per-second once a model is running — that depends on the GPU and memory bandwidth, not the drive.',
+      'A 2 TB PCIe Gen4 NVMe SSD is the best choice for local AI models and LLMs — the Samsung 990 Pro 2 TB is the top pick, with the WD Black SN850X 2 TB as a near-identical alternative. A PCIe Gen5 drive such as the Samsung 9100 Pro loads faster still and, in 2026, has repeatedly been priced the same as or only slightly above Gen4 — worth it if your motherboard supports Gen5, not worth a motherboard upgrade on its own. A fast NVMe cuts the wait when starting or switching local AI models from tens of seconds down to a few seconds. It does not, however, change tokens-per-second once a model is running — that depends on the GPU and memory bandwidth, not the drive.',
     toc: [
       { label: 'Best Pick: Samsung 990 Pro 2 TB', anchor: '#best-pick' },
       { label: 'SSD Speed vs. Inference Speed', anchor: '#loading-vs-inference' },
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Related Reading', anchor: '#related' },
     ],
     intro:
-      'Model loading is bottlenecked by sequential read speed: a 14B Q4 model is ~9 GB on disk, and the time to copy it to RAM is the time you wait between switching models. A fast NVMe SSD makes that wait disappear — but it has no effect on how fast the model generates text once it is running.',
+      'Running local AI models and LLMs means loading multi-gigabyte model files from disk, and that step is bottlenecked by sequential read speed: a 14B Q4 model is ~9 GB on disk, and the time to copy it to RAM is the time you wait between switching models. A fast internal NVMe SSD — Gen4 or Gen5 — makes that wait disappear; check at least two retailers before buying, since 2 TB pricing for both generations has swung sharply through 2026. The drive has no effect on how fast the model generates text once it is running.',
     quickAnswerTop: {
       en: {
         question: 'What SSD gives the fastest local LLM model loading?',
@@ -203,6 +203,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Does the operating-system drive need to be the same SSD?',
             a: 'No. You can put the OS on one drive and model files on a separate fast NVMe. This is a common setup. Just point Ollama or LM Studio to the model directory on the fast drive.',
+          },
+          {
+            q: 'How much does a fast internal SSD for local AI models cost?',
+            a: "A 2 TB PCIe Gen4 NVMe drive such as the Samsung 990 Pro or WD Black SN850X is the baseline spend for a usable local-AI model library. A 2 TB Gen5 drive such as the Samsung 9100 Pro has repeatedly been priced the same as, or only slightly above, the Gen4 tier through 2026 — check at least two retailers before buying, since SSD pricing has swung sharply this year. There is no separate 'AI-specific' SSD; any consumer NVMe drive with enough sequential read speed and capacity does the job.",
           },
         ],
       },

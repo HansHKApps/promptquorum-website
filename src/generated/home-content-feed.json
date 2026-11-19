@@ -63910,10 +63910,10 @@
   },
   {
     "lang": "en",
-    "title": "Best SSD for Fast Model Loading in 2026?",
-    "excerpt": "Best SSD for fast LLM model loading: a PCIe Gen4 NVMe like the Samsung 990 Pro 2 TB. High sequential read pulls multi-GB models into RAM in seconds.",
+    "title": "Best SSD for Local AI Models & LLMs (2026): Gen4 vs Gen5",
+    "excerpt": "Best SSD for local AI models and LLMs: PCIe Gen4 NVMe (Samsung 990 Pro) loads a 7B model in ~1 sec. Gen5 costs about the same — 2026 buying guide.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/prompt-bites/best-ssd-fast-model-loading",
     "cluster": "prompt-bites"
   },
