@@ -29113,5 +29113,41 @@
       "t14": "2026-12-02",
       "t28": "2026-12-16"
     }
+  },
+  {
+    "id": "d4cac090-3d2b-4d7c-99a1-9f7a6bcb3c1d",
+    "slug": "/power-local-llm/animatediff-video-generation-guide",
+    "date": "2026-11-19T07:22:05.623Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AnimateDiff 2026: Free Local AI Video From SD Models",
+        "new": "AnimateDiff 2026: Free SD 1.5/SDXL Video, No Retraining"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AnimateDiff turns Stable Diffusion checkpoints into video with no retraining. ComfyUI and A1111 setup, VRAM needs, motion LoRAs, and license fine print.",
+        "new": "AnimateDiff turns SD 1.5/SDXL checkpoints into video, free, no retraining. ComfyUI/A1111 setup, motion modules, VRAM needs, vs. Stable Video Diffusion."
+      }
+    ],
+    "reason": "geo-meta-optimizer: CTR declining (0.82% last 28d vs ~1.05% prior 62d) at position ~4.89; title/meta used generic 'SD Models' wording instead of exact query vocabulary (sd 1.5, sdxl, motion module, no retraining, vs Stable Video Diffusion) that dominates top GSC queries",
+    "queries": [
+      "animatediff",
+      "animatediff sd 1.5",
+      "animatediff (sd 1.5)",
+      "animatediff + sd 1.5",
+      "animatediff model",
+      "animatediff motion module",
+      "animatediff sdxl",
+      "stable video diffusion (svd) / animatediff"
+    ],
+    "baseline": {
+      "position": 4.89,
+      "impressions": 4629,
+      "clicks": 38,
+      "ctr": 0.008209116439835818,
+      "period": "2026-10-23 to 2026-11-19"
+    },
+    "deployedAt": null
   }
 ]

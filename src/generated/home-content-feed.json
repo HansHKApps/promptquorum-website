@@ -26732,7 +26732,7 @@
   {
     "lang": "en",
     "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
-    "excerpt": "AnimateDiff turns Stable Diffusion checkpoints into video with no retraining. ComfyUI and A1111 setup, VRAM needs, motion LoRAs, and license fine print.",
+    "excerpt": "AnimateDiff turns SD 1.5/SDXL checkpoints into video, free, no retraining. ComfyUI/A1111 setup, motion modules, VRAM needs, vs. Stable Video Diffusion.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
     "url": "/power-local-llm/animatediff-video-generation-guide",
