@@ -11,7 +11,7 @@
  *  - hasLiveSearch: whether the model searches the live web BY DEFAULT for end users.
  *    Tool-use integrations that must be explicitly wired are NOT counted as "default on".
  *
- * Last fact-checked: 2026-10-19
+ * Last fact-checked: 2026-11-19
  */
 
 export type SearchLayer =
@@ -74,18 +74,46 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
     sourceNote: 'Reliable knowledge cutoff May 2026 per Anthropic model overview; superseded by Claude Opus 5.5 and now listed as a legacy model.',
   },
   {
-    modelName: 'GPT-6 Astra / GPT-6.1 Sol (ChatGPT)',
+    modelName: 'GPT-6.2 Astra (ChatGPT)',
+    vendor: 'OpenAI',
+    cutoffDate: '2026-05',
+    cutoffVerified: false,
+    hasLiveSearchDefault: true,
+    searchLayer: 'Bing',
+    searchNote:
+      'Live web via Bing in the ChatGPT product, triggered by model or user. Supersedes GPT-6 Astra; released alongside GPT-6.2 Sol.',
+    license: 'Proprietary',
+    deployment: 'Cloud only',
+    sourceUrl: 'https://openai.com/index/introducing-gpt-6-2-astra-sol',
+    sourceNote: 'May 2026 knowledge cutoff for GPT-6.2 Astra (released Nov 17, 2026). OpenAI\'s own announcement page returned HTTP 403 on direct fetch (checked 2026-11-19); the date is corroborated by multiple independent outlets reporting the same OpenAI announcement — recheck against the primary page once it is reachable.',
+  },
+  {
+    modelName: 'GPT-6.2 Sol (ChatGPT)',
+    vendor: 'OpenAI',
+    cutoffDate: '2026-06',
+    cutoffVerified: false,
+    hasLiveSearchDefault: true,
+    searchLayer: 'Bing',
+    searchNote:
+      'Live web via Bing in the ChatGPT product, triggered by model or user. Supersedes GPT-6.1 Sol; released alongside GPT-6.2 Astra. GPT-6 Luna (cost-optimized tier) is unaffected by this release and keeps its May 2026 cutoff.',
+    license: 'Proprietary',
+    deployment: 'Cloud only',
+    sourceUrl: 'https://openai.com/index/introducing-gpt-6-2-astra-sol',
+    sourceNote: 'June 2026 knowledge cutoff for GPT-6.2 Sol (released Nov 17, 2026, same announcement as GPT-6.2 Astra). OpenAI\'s own announcement page returned HTTP 403 on direct fetch (checked 2026-11-19); the date is corroborated by multiple independent outlets reporting the same OpenAI announcement — recheck against the primary page once it is reachable.',
+  },
+  {
+    modelName: 'GPT-6 Astra / GPT-6.1 Sol (previous generation)',
     vendor: 'OpenAI',
     cutoffDate: '2026-04',
     cutoffVerified: true,
     hasLiveSearchDefault: true,
     searchLayer: 'Bing',
     searchNote:
-      'Live web via Bing in the ChatGPT product, triggered by model or user. GPT-6 Luna (cost-optimized tier) has a May 2026 cutoff. The GPT-6 family supersedes GPT-5.6.',
+      'Live web via Bing in the ChatGPT product, triggered by model or user. GPT-6 Luna (cost-optimized tier) has a May 2026 cutoff and is not superseded by this release. The GPT-6 family superseded GPT-5.6; GPT-6 Astra and GPT-6.1 Sol are now themselves superseded by GPT-6.2 Astra and GPT-6.2 Sol.',
     license: 'Proprietary',
     deployment: 'Cloud only',
     sourceUrl: 'https://developers.openai.com/api/docs/models',
-    sourceNote: 'April 2026 knowledge cutoff for GPT-6 Astra and GPT-6.1 Sol, May 2026 for GPT-6 Luna, per OpenAI model documentation (checked 2026-10-18).',
+    sourceNote: 'April 2026 knowledge cutoff for GPT-6 Astra and GPT-6.1 Sol per OpenAI model documentation (checked 2026-10-18); superseded 2026-11-17 by GPT-6.2 Astra and GPT-6.2 Sol.',
   },
   {
     modelName: 'GPT-5.6 (previous generation)',
@@ -346,4 +374,4 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
 export const ALL_MODELS: ModelCutoffEntry[] = [...CLOUD_MODELS, ...LOCAL_MODELS];
 
 /** Last date all entries above were fact-checked against primary sources. */
-export const CUTOFF_DATA_LAST_VERIFIED = '2026-10-19';
+export const CUTOFF_DATA_LAST_VERIFIED = '2026-11-19';
