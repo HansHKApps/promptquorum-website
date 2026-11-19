@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-voicestudio',
         title: 'What Is VoiceStudio?',
         content: [
-          '**VoiceStudio is a desktop studio for voice work that runs on your own computer: cloning a voice from a short sample, designing one from a description, dubbing video, transcribing, dictating and turning scripts or EPUB files into audiobooks.** The website calls it a free, open-source alternative to ElevenLabs with no account required, and its structured data also lists the name "OmniVoice Studio".',
+          '**VoiceStudio is a desktop studio for voice work that runs on your own computer: cloning a voice from a short sample, designing one from a description, dubbing video, transcribing, dictating and turning scripts or EPUB files into audiobooks.** The website calls it a free, open-source alternative to ElevenLabs with no account required (the free core app; a paid Pro build also exists), and its structured data also lists the name "OmniVoice Studio".',
           '**The README names k2-fsa/OmniVoice as the default engine and says the Model Manager offers dozens of other engines, with whisper.cpp for speech recognition.** The site and README claim 646 languages but give no per-engine breakdown, so treat that figure as a maker claim.',
         ],
       },
@@ -222,6 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceRights: {
         id: 'voice-rights',
         title: 'Voice Cloning, Consent and Model Licenses',
+        callouts: [{ type: 'warning', text: 'Do not clone a voice without the owner\'s consent. Cloning a person\'s voice without permission can infringe personality and data-protection rights and, depending on the use, can trigger labelling duties for synthetic audio. Obtain consent first; this is not legal advice.' }],
         content: ['**Cloning needs only a short sample, and the maker\'s own rules say it requires the voice owner\'s permission and prohibit impersonation and fraud, so consent is your responsibility.**'],
         items: [
           '**Consent and law.** Whether cloning a voice is lawful depends on the person, the purpose and the country; this review is not legal advice, and PromptQuorum has not assessed any jurisdiction.',
@@ -261,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': '[XTTS v2](/power-local-llm/xtts-v2-review)',
             'Platforms': 'macOS, Windows, Linux',
-            'Price / license': 'Free / CPML',
+            'Price / license': 'Free / CPML (non-commercial)',
             'Key difference': 'A single cloning model used as a library, with no studio, dubbing or dictation features',
           },
         ],
@@ -429,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-voicestudio',
         title: 'Was ist VoiceStudio?',
         content: [
-          '**VoiceStudio ist ein Desktop-Studio für Stimmarbeit, das auf Ihrem eigenen Computer läuft: eine Stimme aus einer kurzen Probe klonen, aus einer Beschreibung gestalten, Videos synchronisieren, transkribieren, diktieren und Skripte oder EPUB-Dateien in Hörbücher verwandeln.** Die Website nennt es eine kostenlose, quelloffene Alternative zu ElevenLabs ohne Kontopflicht, und seine strukturierten Daten führen zusätzlich den Namen „OmniVoice Studio“.',
+          '**VoiceStudio ist ein Desktop-Studio für Stimmarbeit, das auf Ihrem eigenen Computer läuft: eine Stimme aus einer kurzen Probe klonen, aus einer Beschreibung gestalten, Videos synchronisieren, transkribieren, diktieren und Skripte oder EPUB-Dateien in Hörbücher verwandeln.** Die Website nennt es eine kostenlose, quelloffene Alternative zu ElevenLabs ohne Kontopflicht (gemeint ist die kostenlose Kern-App; es gibt zusätzlich eine kostenpflichtige Pro-Version), und seine strukturierten Daten führen zusätzlich den Namen „OmniVoice Studio“.',
           '**Die README nennt k2-fsa/OmniVoice als Standard-Engine und sagt, der Model Manager biete Dutzende weitere Engines, mit whisper.cpp für die Spracherkennung.** Website und README behaupten 646 Sprachen, nennen aber keine Aufschlüsselung je Engine; die Zahl ist daher eine Herstelleraussage.',
         ],
       },
@@ -560,6 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceRights: {
         id: 'voice-rights',
         title: 'Stimmklonen, Einwilligung und Modelllizenzen',
+        callouts: [{ type: 'warning', text: 'Klonen Sie keine Stimme ohne Einwilligung der Person. Wer eine Stimme ohne Erlaubnis klont, kann Persönlichkeits- und Datenschutzrechte verletzen, und je nach Verwendung können Kennzeichnungspflichten für synthetische Audioinhalte entstehen. Holen Sie zuerst die Einwilligung ein; dies ist keine Rechtsberatung.' }],
         content: ['**Zum Klonen genügt eine kurze Probe, und die eigenen Regeln des Herstellers verlangen die Erlaubnis des Stimminhabers und verbieten Identitätsmissbrauch und Betrug; die Einwilligung liegt also in Ihrer Verantwortung.**'],
         items: [
           '**Einwilligung und Recht.** Ob das Klonen einer Stimme zulässig ist, hängt von der Person, dem Zweck und dem Land ab; diese Rezension ist keine Rechtsberatung, und PromptQuorum hat keine Rechtsordnung geprüft.',
@@ -599,7 +601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': '[XTTS v2](/de/power-local-llm/xtts-v2-review)',
             'Plattformen': 'macOS, Windows, Linux',
-            'Preis / Lizenz': 'Kostenlos / CPML',
+            'Preis / Lizenz': 'Kostenlos / CPML (nicht kommerziell)',
             'Wesentlicher Unterschied': 'Ein einzelnes Klonmodell als Bibliothek, ohne Studio-, Dubbing- oder Diktatfunktionen',
           },
         ],
@@ -727,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-voicestudio',
         title: '¿Qué es VoiceStudio?',
         content: [
-          '**VoiceStudio es un estudio de escritorio para trabajo con voz que se ejecuta en tu propio equipo: clonar una voz a partir de una muestra corta, diseñar una desde una descripción, doblar vídeos, transcribir, dictar y convertir guiones o archivos EPUB en audiolibros.** El sitio web lo presenta como una alternativa gratuita y de código abierto a ElevenLabs sin necesidad de cuenta, y sus datos estructurados añaden el nombre «OmniVoice Studio».',
+          '**VoiceStudio es un estudio de escritorio para trabajo con voz que se ejecuta en tu propio equipo: clonar una voz a partir de una muestra corta, diseñar una desde una descripción, doblar vídeos, transcribir, dictar y convertir guiones o archivos EPUB en audiolibros.** El sitio web lo presenta como una alternativa gratuita y de código abierto a ElevenLabs sin necesidad de cuenta (la app base es gratuita; también existe una versión Pro de pago), y sus datos estructurados añaden el nombre «OmniVoice Studio».',
           '**El README nombra k2-fsa/OmniVoice como motor por defecto y dice que el Model Manager ofrece decenas de motores más, con whisper.cpp para el reconocimiento de voz.** El sitio y el README afirman 646 idiomas, pero no dan un desglose por motor, así que esa cifra es una afirmación del creador.',
         ],
       },
@@ -858,6 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceRights: {
         id: 'voice-rights',
         title: 'Clonación de voz, consentimiento y licencias de modelos',
+        callouts: [{ type: 'warning', text: 'No clones una voz sin el consentimiento de su titular. Clonar la voz de una persona sin permiso puede vulnerar los derechos de la personalidad y de protección de datos y, según el uso, puede generar obligaciones de etiquetado del audio sintético. Obtén primero el consentimiento; esto no es asesoramiento jurídico.' }],
         content: ['**Clonar solo requiere una muestra corta, y las propias normas del creador exigen el permiso del titular de la voz y prohíben la suplantación y el fraude, así que el consentimiento es tu responsabilidad.**'],
         items: [
           '**Consentimiento y ley.** Que clonar una voz sea legal depende de la persona, la finalidad y el país; esta reseña no es asesoramiento jurídico y PromptQuorum no ha evaluado ninguna jurisdicción.',
@@ -897,7 +900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': '[XTTS v2](/es/power-local-llm/xtts-v2-review)',
             'Plataformas': 'macOS, Windows, Linux',
-            'Precio / licencia': 'Gratis / CPML',
+            'Precio / licencia': 'Gratis / CPML (no comercial)',
             'Diferencia clave': 'Un único modelo de clonación usado como biblioteca, sin estudio, doblaje ni dictado',
           },
         ],
@@ -1025,7 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-voicestudio',
         title: 'Qu’est-ce que VoiceStudio ?',
         content: [
-          '**VoiceStudio est un studio de bureau pour le travail vocal qui s’exécute sur votre propre ordinateur : cloner une voix à partir d’un court échantillon, en concevoir une à partir d’une description, doubler des vidéos, transcrire, dicter et transformer des scripts ou des fichiers EPUB en livres audio.** Le site le présente comme une alternative gratuite et open source à ElevenLabs sans compte requis, et ses données structurées ajoutent le nom « OmniVoice Studio ».',
+          '**VoiceStudio est un studio de bureau pour le travail vocal qui s’exécute sur votre propre ordinateur : cloner une voix à partir d’un court échantillon, en concevoir une à partir d’une description, doubler des vidéos, transcrire, dicter et transformer des scripts ou des fichiers EPUB en livres audio.** Le site le présente comme une alternative gratuite et open source à ElevenLabs sans compte requis (l’application de base est gratuite ; une version Pro payante existe aussi), et ses données structurées ajoutent le nom « OmniVoice Studio ».',
           '**Le README nomme k2-fsa/OmniVoice comme moteur par défaut et indique que le Model Manager propose des dizaines d’autres moteurs, avec whisper.cpp pour la reconnaissance vocale.** Le site et le README revendiquent 646 langues sans détailler par moteur ; ce chiffre est donc une affirmation de l’auteur.',
         ],
       },
@@ -1156,6 +1159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceRights: {
         id: 'voice-rights',
         title: 'Clonage vocal, consentement et licences des modèles',
+        callouts: [{ type: 'warning', text: 'Ne clonez pas une voix sans le consentement de son titulaire. Cloner la voix d’une personne sans autorisation peut porter atteinte aux droits de la personnalité et à la protection des données et, selon l’usage, entraîner des obligations d’étiquetage des contenus audio synthétiques. Obtenez d’abord le consentement ; ceci n’est pas un conseil juridique.' }],
         content: ['**Cloner ne demande qu’un court échantillon, et les propres règles de l’auteur exigent l’autorisation du titulaire de la voix et interdisent l’usurpation d’identité et la fraude ; le consentement relève donc de votre responsabilité.**'],
         items: [
           '**Consentement et droit.** La légalité du clonage d’une voix dépend de la personne, de la finalité et du pays ; ce test n’est pas un conseil juridique, et PromptQuorum n’a évalué aucune juridiction.',
@@ -1195,7 +1199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Application': '[XTTS v2](/fr/power-local-llm/xtts-v2-review)',
             'Plateformes': 'macOS, Windows, Linux',
-            'Prix / licence': 'Gratuit / CPML',
+            'Prix / licence': 'Gratuit / CPML (non commercial)',
             'Différence principale': 'Un seul modèle de clonage utilisé comme bibliothèque, sans studio, doublage ni dictée',
           },
         ],
@@ -1323,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-voicestudio',
         title: 'VoiceStudioとは',
         content: [
-          '**VoiceStudioは、お使いのコンピューター上で動く音声作業用のデスクトップスタジオです。短いサンプルからの声のクローン、説明からの声のデザイン、動画の吹き替え、文字起こし、音声入力、台本やEPUBのオーディオブック化ができます。** 公式サイトは、アカウント不要でElevenLabsの無料のオープンソース代替と位置づけており、構造化データには「OmniVoice Studio」という名前も載っています。',
+          '**VoiceStudioは、お使いのコンピューター上で動く音声作業用のデスクトップスタジオです。短いサンプルからの声のクローン、説明からの声のデザイン、動画の吹き替え、文字起こし、音声入力、台本やEPUBのオーディオブック化ができます。** 公式サイトは、アカウント不要でElevenLabsの無料のオープンソース代替（無料なのはコアアプリで、有料のPro版もあります）と位置づけており、構造化データには「OmniVoice Studio」という名前も載っています。',
           '**READMEはデフォルトエンジンとしてk2-fsa/OmniVoiceを挙げ、Model Managerで他にも数十のエンジンを使え、音声認識にはwhisper.cppを使うと述べています。** サイトとREADMEは646言語をうたっていますが、エンジンごとの内訳はないため、この数字は開発者の主張として扱ってください。',
         ],
       },
@@ -1454,6 +1458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceRights: {
         id: 'voice-rights',
         title: '声のクローン、同意、モデルライセンス',
+        callouts: [{ type: 'warning', text: '声の持ち主の同意なしに声をクローンしないでください。本人の許可なく声をクローンすると、人格権やデータ保護に関する権利を侵害するおそれがあり、用途によっては合成音声の表示義務が生じる場合があります。まず同意を得てください。これは法的助言ではありません。' }],
         content: ['**クローンには短いサンプルだけで足りますが、開発者自身のルールは声の持ち主の許可を求め、なりすましと詐欺を禁じています。同意を得る責任は利用者にあります。**'],
         items: [
           '**同意と法律。** 声のクローンが合法かどうかは、人物、目的、国によって異なります。このレビューは法的助言ではなく、PromptQuorumはどの法域も評価していません。',
@@ -1493,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'アプリ': '[XTTS v2](/ja/power-local-llm/xtts-v2-review)',
             '対応OS': 'macOS、Windows、Linux',
-            '価格／ライセンス': '無料／CPML',
+            '価格／ライセンス': '無料／CPML（非商用）',
             '主な違い': 'ライブラリとして使う単一のクローンモデルで、スタジオ・吹き替え・音声入力の機能なし',
           },
         ],
@@ -1621,7 +1626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-voicestudio',
         title: 'O que é o VoiceStudio?',
         content: [
-          '**O VoiceStudio é um estúdio de desktop para trabalho com voz que roda no seu próprio computador: clonar uma voz a partir de uma amostra curta, criar uma a partir de uma descrição, dublar vídeos, transcrever, ditar e transformar roteiros ou arquivos EPUB em audiolivros.** O site o apresenta como uma alternativa gratuita e de código aberto ao ElevenLabs, sem conta obrigatória, e seus dados estruturados acrescentam o nome «OmniVoice Studio».',
+          '**O VoiceStudio é um estúdio de desktop para trabalho com voz que roda no seu próprio computador: clonar uma voz a partir de uma amostra curta, criar uma a partir de uma descrição, dublar vídeos, transcrever, ditar e transformar roteiros ou arquivos EPUB em audiolivros.** O site o apresenta como uma alternativa gratuita e de código aberto ao ElevenLabs, sem conta obrigatória (o app básico é gratuito; também existe uma versão Pro paga), e seus dados estruturados acrescentam o nome «OmniVoice Studio».',
           '**O README cita k2-fsa/OmniVoice como mecanismo padrão e diz que o Model Manager oferece dezenas de outros, com whisper.cpp para reconhecimento de fala.** O site e o README afirmam 646 idiomas, mas não dão detalhamento por mecanismo; portanto esse número é uma afirmação do criador.',
         ],
       },
@@ -1752,6 +1757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceRights: {
         id: 'voice-rights',
         title: 'Clonagem de voz, consentimento e licenças de modelos',
+        callouts: [{ type: 'warning', text: 'Não clone uma voz sem o consentimento de quem a possui. Clonar a voz de uma pessoa sem permissão pode violar direitos da personalidade e de proteção de dados e, conforme o uso, gerar deveres de identificação de áudio sintético. Obtenha primeiro o consentimento; isto não é aconselhamento jurídico.' }],
         content: ['**Clonar exige apenas uma amostra curta, e as próprias regras do criador pedem a permissão do dono da voz e proíbem a falsa identidade e a fraude; o consentimento é, portanto, responsabilidade sua.**'],
         items: [
           '**Consentimento e lei.** Se clonar uma voz é legal depende da pessoa, da finalidade e do país; esta análise não é aconselhamento jurídico, e a PromptQuorum não avaliou nenhuma jurisdição.',
@@ -1791,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': '[XTTS v2](/pt/power-local-llm/xtts-v2-review)',
             'Plataformas': 'macOS, Windows, Linux',
-            'Preço / licença': 'Grátis / CPML',
+            'Preço / licença': 'Grátis / CPML (não comercial)',
             'Diferença principal': 'Um único modelo de clonagem usado como biblioteca, sem estúdio, dublagem nem ditado',
           },
         ],
@@ -1919,7 +1925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-voicestudio',
         title: 'ما هو VoiceStudio؟',
         content: [
-          '**VoiceStudio استوديو لسطح المكتب للعمل الصوتي يعمل على جهازك: استنساخ صوت من عيّنة قصيرة، وتصميم صوت من وصف، ودبلجة الفيديو، والنسخ، والإملاء، وتحويل النصوص أو ملفات EPUB إلى كتب صوتية.** يصفه الموقع بأنه بديل مجاني ومفتوح المصدر لـ ElevenLabs دون حاجة إلى حساب، وتذكر بياناته المنظّمة أيضًا الاسم «OmniVoice Studio».',
+          '**VoiceStudio استوديو لسطح المكتب للعمل الصوتي يعمل على جهازك: استنساخ صوت من عيّنة قصيرة، وتصميم صوت من وصف، ودبلجة الفيديو، والنسخ، والإملاء، وتحويل النصوص أو ملفات EPUB إلى كتب صوتية.** يصفه الموقع بأنه بديل مجاني ومفتوح المصدر لـ ElevenLabs دون حاجة إلى حساب (التطبيق الأساسي مجاني، وتوجد أيضًا نسخة Pro مدفوعة)، وتذكر بياناته المنظّمة أيضًا الاسم «OmniVoice Studio».',
           '**يذكر ملف README أن المحرك الافتراضي هو k2-fsa/OmniVoice، ويقول إن Model Manager يوفّر عشرات المحركات الأخرى، مع whisper.cpp للتعرّف على الكلام.** يدّعي الموقع وREADME دعم 646 لغة دون تفصيل لكل محرك، لذا يُعامَل هذا الرقم على أنه ادعاء من المطوّر.',
         ],
       },
@@ -2050,6 +2056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceRights: {
         id: 'voice-rights',
         title: 'استنساخ الصوت والموافقة وتراخيص النماذج',
+        callouts: [{ type: 'warning', text: 'لا تستنسخ صوتًا دون موافقة صاحبه. قد يمسّ استنساخ صوت شخص دون إذنه حقوق الشخصية وحقوق حماية البيانات، وقد يستتبع بحسب الاستخدام التزامات بالإفصاح عن الصوت الاصطناعي. احصل على الموافقة أولًا؛ وهذا ليس استشارة قانونية.' }],
         content: ['**يكفي لاستنساخ صوت عيّنة قصيرة، وتشترط قواعد المطوّر نفسها إذن صاحب الصوت وتحظر انتحال الهوية والاحتيال، لذا فالموافقة مسؤوليتك.**'],
         items: [
           '**الموافقة والقانون.** تعتمد مشروعية استنساخ صوت على الشخص والغرض والبلد؛ وهذه المراجعة ليست استشارة قانونية، ولم تقيّم PromptQuorum أي ولاية قضائية.',
@@ -2089,7 +2096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'التطبيق': '[XTTS v2](/ar/power-local-llm/xtts-v2-review)',
             'المنصات': 'macOS وWindows وLinux',
-            'السعر / الترخيص': 'مجاني / CPML',
+            'السعر / الترخيص': 'مجاني / CPML (غير تجاري)',
             'الفرق الأساسي': 'نموذج استنساخ واحد يُستخدم كمكتبة دون استوديو أو دبلجة أو إملاء',
           },
         ],
@@ -2217,7 +2224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-voicestudio',
         title: 'VoiceStudio 是什么？',
         content: [
-          '**VoiceStudio 是在您自己电脑上运行的语音工作桌面工作室：根据短样本克隆声音、根据描述设计声音、为视频配音、转写、听写，并把脚本或 EPUB 文件变成有声书。** 官网称其为无需账号、免费且开源的 ElevenLabs 替代品，其结构化数据中还列出名称“OmniVoice Studio”。',
+          '**VoiceStudio 是在您自己电脑上运行的语音工作桌面工作室：根据短样本克隆声音、根据描述设计声音、为视频配音、转写、听写，并把脚本或 EPUB 文件变成有声书。** 官网称其为无需账号、免费且开源的 ElevenLabs 替代品（免费的是核心应用，另有付费 Pro 版），其结构化数据中还列出名称“OmniVoice Studio”。',
           '**README 指明 k2-fsa/OmniVoice 为默认引擎，并称 Model Manager 提供数十种其他引擎，语音识别使用 whisper.cpp。** 官网和 README 声称支持 646 种语言，但没有按引擎的明细，因此该数字应视为开发者的说法。',
         ],
       },
@@ -2348,6 +2355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceRights: {
         id: 'voice-rights',
         title: '声音克隆、同意与模型许可证',
+        callouts: [{ type: 'warning', text: '未经声音所有者同意，请勿克隆其声音。未经许可克隆他人声音，可能侵犯人格权和数据保护方面的权利，并且视用途可能产生对合成音频的标识义务。请先取得同意；本文不构成法律意见。' }],
         content: ['**克隆只需要一段短样本，而开发者自己的规则要求获得声音所有者的许可，并禁止冒充和欺诈，因此获得同意是您的责任。**'],
         items: [
           '**同意与法律。** 克隆声音是否合法取决于当事人、目的和所在国家；本评测不构成法律意见，PromptQuorum 没有评估任何司法辖区。',
@@ -2387,7 +2395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '应用': '[XTTS v2](/zh/power-local-llm/xtts-v2-review)',
             '平台': 'macOS、Windows、Linux',
-            '价格 / 许可证': '免费 / CPML',
+            '价格 / 许可证': '免费 / CPML（非商业）',
             '主要区别': '作为库使用的单一克隆模型，没有工作室、配音或听写功能',
           },
         ],
@@ -2515,7 +2523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-voicestudio',
         title: 'VoiceStudio란?',
         content: [
-          '**VoiceStudio는 사용자의 컴퓨터에서 실행되는 음성 작업용 데스크톱 스튜디오입니다. 짧은 샘플로 목소리를 복제하고, 설명으로 목소리를 디자인하고, 영상을 더빙하고, 전사와 받아쓰기를 하며, 스크립트나 EPUB를 오디오북으로 만듭니다.** 웹사이트는 계정이 필요 없는 무료 오픈소스 ElevenLabs 대안이라고 소개하며, 구조화 데이터에는 "OmniVoice Studio"라는 이름도 올라 있습니다.',
+          '**VoiceStudio는 사용자의 컴퓨터에서 실행되는 음성 작업용 데스크톱 스튜디오입니다. 짧은 샘플로 목소리를 복제하고, 설명으로 목소리를 디자인하고, 영상을 더빙하고, 전사와 받아쓰기를 하며, 스크립트나 EPUB를 오디오북으로 만듭니다.** 웹사이트는 계정이 필요 없는 무료 오픈소스 ElevenLabs 대안(무료인 것은 코어 앱이며 유료 Pro 버전도 있음)이라고 소개하며, 구조화 데이터에는 "OmniVoice Studio"라는 이름도 올라 있습니다.',
           '**README는 기본 엔진으로 k2-fsa/OmniVoice를 들고, Model Manager에서 수십 가지 다른 엔진을 제공하며 음성 인식에는 whisper.cpp를 쓴다고 밝힙니다.** 사이트와 README는 646개 언어를 내세우지만 엔진별 내역은 없으므로, 이 수치는 개발자의 주장으로 보셔야 합니다.',
         ],
       },
@@ -2646,6 +2654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceRights: {
         id: 'voice-rights',
         title: '음성 복제, 동의, 모델 라이선스',
+        callouts: [{ type: 'warning', text: '음성 주인의 동의 없이 목소리를 복제하지 마십시오. 허락 없이 다른 사람의 목소리를 복제하면 인격권과 개인정보 보호 관련 권리를 침해할 수 있으며, 용도에 따라 합성 음성 표시 의무가 생길 수도 있습니다. 먼저 동의를 받으십시오. 이는 법률 자문이 아닙니다.' }],
         content: ['**복제에는 짧은 샘플만 있으면 되지만, 개발자 자신의 규칙은 목소리 주인의 허락을 요구하고 사칭과 사기를 금지하므로 동의를 구할 책임은 사용자에게 있습니다.**'],
         items: [
           '**동의와 법.** 목소리 복제가 적법한지는 사람, 목적, 국가에 따라 다릅니다. 이 리뷰는 법률 자문이 아니며, PromptQuorum은 어떤 법적 관할도 평가하지 않았습니다.',
@@ -2685,7 +2694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '앱': '[XTTS v2](/ko/power-local-llm/xtts-v2-review)',
             '플랫폼': 'macOS, Windows, Linux',
-            '가격 / 라이선스': '무료 / CPML',
+            '가격 / 라이선스': '무료 / CPML (비상업용)',
             '핵심 차이': '라이브러리로 쓰는 단일 복제 모델로 스튜디오, 더빙, 받아쓰기 기능 없음',
           },
         ],
