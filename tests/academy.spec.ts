@@ -385,7 +385,7 @@ function finishedProgramme(language: string, subject: string, lessonsDone = true
   const byTopic = { Basics: { correct: 9, total: 10 } }
   const attempt = { quizId: 'final-1', answers: {}, correct: 9, total: 10, byTopic, takenAt: '2026-11-19T11:00:00.000Z', questions: [] }
   const base = seededProgramme({ language, subject, testMode: 'final', testPlan: { finalQuestions: 10, lessonQuizQuestions: 0, testMinutes: 8 } }) as ReturnType<typeof seededProgramme> & { progress: Record<string, unknown>; lessons: { sections: unknown[] }[] }
-  base.lessons.forEach((l) => (l.sections = [{ heading: 'h', body: 'b' }]))
+  base.lessons.forEach((l) => ((l as { sections: unknown[] }).sections = [{ heading: 'h', body: 'b' }]))
   base.progress = {
     currentLesson: 1,
     lessonStatus: { 'lesson-1': 'done', 'lesson-2': lessonsDone ? 'done' : 'viewed' },
