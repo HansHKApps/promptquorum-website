@@ -62,6 +62,58 @@ export function normalizePrivateKey(raw: string): string {
   return `-----BEGIN ${m[1]}-----\n${(body.match(/.{1,64}/g) ?? []).join('\n')}\n-----END ${m[1]}-----\n`
 }
 
+/**
+ * Non-secret structural diagnosis of the configured key, for debugging a 'key-format' or
+ * 'no-credentials' failure without ever exposing key material. Temporary — remove once GSC works.
+ */
+export function diagnoseGscKey(): Record<string, unknown> {
+  const email = process.env.GSC_CLIENT_EMAIL
+  const raw = process.env.GSC_PRIVATE_KEY
+  const info: Record<string, unknown> = {
+    hasEmail: !!email,
+    emailLooksLikeServiceAccount: !!email && /^[^\s@]+@[^\s@]+\.iam\.gserviceaccount\.com$/.test(email),
+    hasRawKey: !!raw,
+  }
+  if (!raw) return info
+  const trimmed = raw.trim()
+  info.rawLength = raw.length
+  info.startsWithBrace = trimmed.startsWith('{')
+  info.startsWithQuote = trimmed.startsWith('"') || trimmed.startsWith("'")
+  info.startsWithBeginMarker = trimmed.startsWith('-----BEGIN')
+  info.containsLiteralBackslashN = raw.includes('\\n')
+  info.containsRealNewline = raw.includes('\n')
+  info.rawLineCount = raw.split('\n').length
+
+  let parsedAsJson = false
+  let jsonHasPrivateKeyField = false
+  if (trimmed.startsWith('{')) {
+    try {
+      const parsed = JSON.parse(raw) as { private_key?: unknown }
+      parsedAsJson = true
+      jsonHasPrivateKeyField = typeof parsed.private_key === 'string'
+    } catch {
+      /* not valid JSON */
+    }
+  }
+  info.parsedAsJson = parsedAsJson
+  info.jsonHasPrivateKeyField = jsonHasPrivateKeyField
+
+  const normalized = normalizePrivateKey(raw)
+  info.normalizedLength = normalized.length
+  info.normalizedHasBeginMarker = normalized.includes('-----BEGIN')
+  info.normalizedHasEndMarker = normalized.includes('-----END')
+  info.normalizedLineCount = normalized.split('\n').length
+
+  try {
+    createSign('RSA-SHA256').update('diagnostic').sign(normalized)
+    info.signOk = true
+  } catch (e) {
+    info.signOk = false
+    info.signError = e instanceof Error ? e.message : String(e)
+  }
+  return info
+}
+
 const b64url = (b: Buffer | string) => Buffer.from(b).toString('base64url')
 const isoDay = (d: Date) => d.toISOString().slice(0, 10)
 const fresh = (at: number) => Date.now() - at < GSC_REVALIDATE_SECONDS * 1000
