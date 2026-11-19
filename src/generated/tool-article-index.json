@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "ollama-vision-models-review",
+        "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
+        "url": "/power-local-llm/ollama-vision-models-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-budget-gpus-local-llm",
         "title": "Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives",
@@ -72,14 +80,6 @@
         "url": "/power-local-llm/askimo-review",
         "dateModified": "2026-11-18",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "memex-review",
-        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
-        "url": "/power-local-llm/memex-review",
-        "dateModified": "2026-11-18",
-        "tier": "about"
       }
     ],
     "totalCount": 382,
@@ -93,6 +93,14 @@
         "title": "llama.cpp: What It Is, How to Install, First Command",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-vision-models-review",
+        "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
+        "url": "/power-local-llm/ollama-vision-models-review",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
@@ -157,14 +165,6 @@
         "title": "Best Local AI Apps for iPhone in 2026 (Run LLMs Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
         "dateModified": "2026-11-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-gpus-for-local-llms",
-        "title": "Best GPUs for Local LLMs in 2026: VRAM Tiers, Speed and Prices",
-        "url": "/local-llms/best-gpus-for-local-llms",
-        "dateModified": "2026-11-15",
         "tier": "about"
       }
     ],
@@ -5814,6 +5814,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "ollama-vision-models-review",
+        "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
+        "url": "/power-local-llm/ollama-vision-models-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
         "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
@@ -5834,14 +5842,6 @@
         "slug": "multimodal-local-llms",
         "title": "Multimodal Local LLMs: Vision, Audio, and Text Processing",
         "url": "/local-llms/multimodal-local-llms",
-        "dateModified": "2026-10-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ollama-vision-models-review",
-        "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
-        "url": "/power-local-llm/ollama-vision-models-review",
         "dateModified": "2026-10-20",
         "tier": "about"
       },
@@ -5896,7 +5896,7 @@
         "slug": "ollama-vision-models-review",
         "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
         "url": "/power-local-llm/ollama-vision-models-review",
-        "dateModified": "2026-10-20",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
