@@ -64,6 +64,22 @@ export const affiliateDestinationDomain = (url: string): string => {
   }
 }
 
+/**
+ * True for an on-page anchor (`#section`) or any URL that resolves to this site's own hostname. `new URL('#x')`
+ * throws (no base), so affiliateDestinationDomain() fell back to returning the raw string "#x" as `partner` —
+ * that is not a hostname and must never reach the affiliate_click payload. Resolves relative to the current
+ * page so a same-site relative link is caught too, not only a bare hash.
+ */
+const isInternalUrl = (url: string): boolean => {
+  if (url.startsWith('#')) return true
+  if (typeof window === 'undefined') return false
+  try {
+    return new URL(url, window.location.href).hostname.replace(/^www\./, '') === window.location.hostname.replace(/^www\./, '')
+  } catch {
+    return false
+  }
+}
+
 /** True when a URL points at a known retailer / vendor domain. */
 export const isAffiliateUrl = (url: string): boolean => {
   try {
@@ -73,8 +89,15 @@ export const isAffiliateUrl = (url: string): boolean => {
   }
 }
 
-/** Fire an `affiliate_click` event to Umami. */
+/**
+ * Fire an `affiliate_click` event to Umami. Never fires for an on-page anchor or other same-site link — those
+ * are navigation, not a click on a third-party product/retailer link, and `partner` must always be a real
+ * hostname (see isInternalUrl). An AffiliateLink pointed at an in-page `#anchor` — e.g. a "Compare X vs Y"
+ * jump link rendered through the affiliateLinks catalog instead of a plain content link — is a content bug to
+ * fix at the source, not something this function should paper over by faking a hostname.
+ */
 export function trackAffiliateClick(p: AffiliateClickParams): void {
+  if (isInternalUrl(p.url)) return
   const payload = {
     destination_domain: affiliateDestinationDomain(p.url),
     product_category: p.productCategory,

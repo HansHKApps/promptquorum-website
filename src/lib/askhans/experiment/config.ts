@@ -24,8 +24,8 @@ export function ctaWinner(): CtaVariant | null {
 /**
  * Minimum evidence before the dashboard may call a leader (documented in docs/askhans-cta-experiment.md).
  * EXPOSURE per variant = tracked page loads on pages with the button (Umami pageviews, entered on the dashboard) / 3:
- * assignment is uniform (variant.ts) and no impression event is sent any more (quota). The scarce quantity is clicks,
- * so the guard that really binds is CTA_MIN_CLICKS_PER_VARIANT.
+ * assignment is uniform (variant.ts). ask_hans_button_impression (restored 2026-11-19) is a secondary cross-check,
+ * not the exposure source — the scarce quantity is clicks, so the guard that really binds is CTA_MIN_CLICKS_PER_VARIANT.
  */
 export const CTA_MIN_DAYS = 14
 export const CTA_MIN_EXPOSED_PER_VARIANT = 3000
@@ -44,11 +44,14 @@ export const CTA_PLACEMENTS = ['header', 'floating', 'about', 'page'] as const
 export type CtaPlacement = (typeof CTA_PLACEMENTS)[number]
 
 /**
- * Funnel events (there is deliberately NO impression event: removed 2026-11-14 for the Umami event quota; exposure comes
- * from page loads, see CTA_MIN_EXPOSED_PER_VARIANT). `consent: false` ones are anonymous counters sent like Umami (cookieless, no visitor ID); the others
- * follow the existing Ask Hans rule and are sent only after the visitor said "Yes" in the consent step.
+ * Funnel events. ask_hans_button_impression was removed 2026-11-14 for the Umami event quota, then restored
+ * 2026-11-19 (owner decision) once impressions had collapsed to near zero and clicks could no longer be read
+ * against a visible-exposure baseline; see docs/askhans-cta-experiment.md for the history. `consent: false` ones
+ * are anonymous counters sent like Umami (cookieless, no visitor ID); the others follow the existing Ask Hans
+ * rule and are sent only after the visitor said "Yes" in the consent step.
  */
 export const CTA_EVENTS = {
+  ask_hans_button_impression: { consent: false },
   ask_hans_button_click: { consent: false },
   ask_hans_opened: { consent: false },
   ask_hans_first_question: { consent: true },

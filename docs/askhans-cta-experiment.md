@@ -21,7 +21,7 @@ Copy: `src/components/askhans/copy/*.ts` → `ctaVariants` (9 locales, the exist
 Every event carries: experiment id, variant, language, device (mobile/desktop), page category.
 | Event | Fires when | Consent |
 |---|---|---|
-| ~~`ask_hans_button_impression`~~ | **Removed 2026-11-14** (Umami event quota) and dropped from the event whitelist. Exposure now comes from page loads (see KPIs). The historical counter stays in Redis for 120 days but is not read. Not to be restored, also not as a Redis-only counter. | n/a |
+| `ask_hans_button_impression` | once per page view, per button placement, when ≥50% of the button has been visible for ≥1 s (same visibility rule as the promo slots). Carries `via` (header / floating / about / page) like the click event. **Removed 2026-11-14** (Umami event quota); the removal made `ask_hans_button_impression` collapse toward zero within days (282 the day of the deploy, then 26 / 12 / 6 / 4 — stale cached bundles fading out) while `ask_hans_button_click` kept firing normally, breaking the click/impression funnel and the visible-exposure cross-check. The 2026-11-16 note below ("not to be restored") was superseded by the owner on **2026-11-19**: the event is restored, still Umami-only (no Redis-only impression counter — see cost note below, which still applies). Exposure for the dashboard's leader guard still comes from page loads (see KPIs), not from this event. | none |
 | `ask_hans_button_click` | click on an experiment button. Carries `via` (header / floating / about / page). | none |
 | `ask_hans_opened` | the window really opens (closed → open). `via` = the experiment button that asked for it, else `other` (⌘K, promo slots). | none |
 | `ask_hans_first_question` / `_second_question` / `_three_questions` | a question received a non-empty answer (empty or failed requests never count), 1st / 2nd / 3rd successful question of a conversation. Each fires once per conversation. | "Yes" |
@@ -62,7 +62,12 @@ Exposure limits: Umami pageviews may include visitors the experiment never track
 ## Before launch
 1. Owner review of the privacy wording (paragraph on branch session/askhans-privacy-paragraph, 9 locales): anonymous aggregate counters for button wording (variant, language, device, page category; no ID) are collected without consent, like the existing Umami events. (Not edited here: legal text is owner-reviewed.)
 2. Set the env vars above in Vercel.
-3. Test: `npm run test:askhans-experiment`.
+3. Test: `npm run test:askhans-experiment` and `npm run test:tracking-events` (impression event registration, Umami-ready retry, promo prop completeness).
 
-## Cost of bringing impressions back (for the record, NOT implemented)
-Owner decision 2026-11-16: no impression event in Umami (quota) and no Redis-only impressions. For the record, one Redis-only impression through `/api/ask/exp` costs about 8 commands: 1 rate-limit call, `hsetnx`, 4 `hincrby` (total, language, device, category), 1 more `hincrby` when `via` is set, and `expire`. At a 5% sample (random draw per page load, kept in memory, results multiplied by 20) that is about 0.4 commands per page load: for example 1,000 exposures a day cost about 400 commands a day, 5,000 a day about 2,000 a day.
+## Impression event history
+- **2026-11-14** (`9e91d0ccb`): `ask_hans_button_impression` removed from `useCta.tsx` and `CTA_EVENTS` (Umami event quota).
+- **2026-11-16**: this doc recorded an owner decision to keep it removed permanently, including as a Redis-only counter (cost analysis below).
+- **2026-11-19**: restored (Umami only) after the removal was identified as the cause of the click/impression funnel going dark — impressions fell to single digits per day within days of the removal while clicks kept firing at the usual 22-46/day, so clicks could no longer be read against a visible-exposure baseline. Still **not** a Redis-only counter — the cost reasoning below is why.
+
+### Cost of a Redis-only impression counter (for the record, NOT implemented)
+One Redis-only impression through `/api/ask/exp` costs about 8 commands: 1 rate-limit call, `hsetnx`, 4 `hincrby` (total, language, device, category), 1 more `hincrby` when `via` is set, and `expire`. At a 5% sample (random draw per page load, kept in memory, results multiplied by 20) that is about 0.4 commands per page load: for example 1,000 exposures a day cost about 400 commands a day, 5,000 a day about 2,000 a day.
