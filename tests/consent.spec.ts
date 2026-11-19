@@ -7,12 +7,12 @@ import { expect, test, type Page } from '@playwright/test'
 
 const DIALOG = '[role="dialog"][aria-labelledby="cookie-dialog-title"]'
 
-/** Requests to the consent-gated vendor (OneSignal), collected for the whole test. Clarity always loads, cookieless. */
+/** Requests to the consent-gated vendors (OneSignal, Clarity, Bing), collected for the whole test. */
 function trackVendors(page: Page) {
   const hits: string[] = []
   page.on('request', (r) => {
     const u = r.url()
-    if (/onesignal\.com/.test(u)) hits.push(u)
+    if (/onesignal\.com|clarity\.ms|c\.bing\.com|fonts\.googleapis\.com/.test(u)) hits.push(u)
   })
   return hits
 }
@@ -24,17 +24,16 @@ const stored = (page: Page) =>
   })
 
 test.describe('cookie dialog', () => {
-  test('first visit: dialog shown, Clarity loads cookieless (no _clck), no pq_* storage', async ({ page }) => {
+  test('first visit: dialog shown, no request to Clarity/OneSignal/Bing/Google Fonts, no pq_* storage', async ({ page }) => {
     const hits = trackVendors(page)
-    const clarity = page.waitForRequest(/clarity\.ms\/tag\//)
     await page.goto('/')
     await expect(page.locator(DIALOG)).toBeVisible()
-    await clarity
     await page.waitForTimeout(1500)
     expect(hits).toEqual([])
     expect((await page.context().cookies()).filter((c) => /^_cl(ck|sk)$/.test(c.name))).toEqual([])
     const keys = await page.evaluate(() => [...Object.keys(localStorage), ...Object.keys(sessionStorage)])
-    expect(keys.filter((k) => k.startsWith('pq_') && k !== 'pq_lang')).toEqual([])
+    // pq_adblock_sampled: the cookieless Umami ("Necessary") ad-block sampling flag, written on the first pageview.
+    expect(keys.filter((k) => k.startsWith('pq_') && k !== 'pq_lang' && k !== 'pq_adblock_sampled')).toEqual([])
   })
 
   test('Escape and backdrop do not dismiss before a choice is made', async ({ page }) => {
@@ -62,14 +61,24 @@ test.describe('cookie dialog', () => {
     expect(await stored(page)).toMatchObject({ state: 'granted', analytics: true, recordings: true, marketing: true, version: 2 })
   })
 
-  test('Save choices with only Analytics: Clarity stays cookieless, custom record', async ({ page }) => {
+  test('Save choices with only Analytics: Clarity loads cookieless, OneSignal stays off, custom record', async ({ page }) => {
     const hits = trackVendors(page)
     await page.goto('/')
     const dialog = page.locator(DIALOG)
     await dialog.getByRole('switch', { name: 'Analytics' }).click()
     await dialog.getByRole('button', { name: 'Save choices' }).click()
     expect(await stored(page)).toMatchObject({ state: 'custom', analytics: true, recordings: false, marketing: false })
-    await page.waitForTimeout(1500)
+    await page.waitForTimeout(2500)
+    expect(hits.some((u) => /clarity\.ms/.test(u))).toBe(true)
+    expect(hits.some((u) => /onesignal\.com/.test(u))).toBe(false)
+    expect((await page.context().cookies()).filter((c) => /^_cl(ck|sk)$/.test(c.name))).toEqual([])
+  })
+
+  test('Reject all: still no third-party requests', async ({ page }) => {
+    const hits = trackVendors(page)
+    await page.goto('/')
+    await page.locator(DIALOG).getByRole('button', { name: 'Reject all' }).click()
+    await page.waitForTimeout(2500)
     expect(hits).toEqual([])
   })
 

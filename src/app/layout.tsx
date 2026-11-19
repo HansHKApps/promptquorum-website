@@ -269,9 +269,9 @@ export default function RootLayout({
 
           {/* Umami: cookieless and anonymous, proxied same-origin via /lib/s, so it is
               listed under "Necessary" in the cookie dialog and the privacy policy.
-              Microsoft Clarity is injected by ClarityLoader: always in cookieless mode
-              (consentv2 denied), upgraded to full mode only after the visitor allows
-              "Session recordings".
+              Microsoft Clarity is injected by ClarityLoader only after the visitor allows
+              "Analytics" (cookieless) or "Session recordings" (full mode). Nothing loads
+              before consent (QA audit F2, owner decision 2026-11-19).
               GA4 removed. ConsentedAnalytics is a no-op stub kept for reversibility. */}
           <Script
             id="umami-script"

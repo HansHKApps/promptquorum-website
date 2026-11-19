@@ -28,24 +28,32 @@ function injectClarity() {
 }
 
 /**
- * Microsoft Clarity always loads, in cookieless mode (consentv2 storage denied): it
- * counts visits without cookies or persistent IDs, as before the cookie dialog.
- * Allowing "Session recordings" upgrades it to full mode (cookies + replay);
- * withdrawing drops back to cookieless and deletes Clarity's cookies.
+ * Microsoft Clarity loads ONLY after the visitor allowed "Analytics" or "Session recordings" (QA audit F2,
+ * owner decision 2026-11-19). Before that, and after "Reject all", no request goes to clarity.ms and nothing is
+ * stored. "Analytics" alone runs it cookieless (consentv2 storage denied); "Session recordings" upgrades it to
+ * full mode (cookies + replay). Withdrawing consent switches it back to denied and deletes its cookies and
+ * session key; the already-loaded script cannot be unloaded, so it stays idle until the next page load.
  */
 export function ClarityLoader() {
   useEffect(() => {
-    injectClarity()
-    window.clarity?.('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' })
-    let upgraded = false
+    let loaded = false
     return onConsentChange(() => {
-      if (hasConsent('recordings')) {
-        upgraded = true
-        window.clarity?.('consentv2', { ad_Storage: 'denied', analytics_Storage: 'granted' })
-      } else if (upgraded) {
-        upgraded = false
+      const recordings = hasConsent('recordings')
+      const analytics = hasConsent('analytics')
+      if (recordings || analytics) {
+        if (!loaded) {
+          loaded = true
+          injectClarity()
+        }
+        window.clarity?.('consentv2', { ad_Storage: 'denied', analytics_Storage: recordings ? 'granted' : 'denied' })
+      } else if (loaded) {
         window.clarity?.('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' })
         clearClarityCookies()
+        try {
+          window.sessionStorage.removeItem('_cltk')
+        } catch {
+          /* ignore */
+        }
       }
     })
   }, [])
