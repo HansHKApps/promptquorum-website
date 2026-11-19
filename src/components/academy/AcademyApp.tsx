@@ -21,20 +21,14 @@ import { useAcademyState } from './useAcademyState'
 
 export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicSuggestion[] }) {
   const tx = ACADEMY_COPY[lang]
-  const { state, ready, saved, update } = useAcademyState()
-  const [restored, setRestored] = useState<boolean | null>(null)
+  const { state, ready, saved, pending, continueSaved, discardSaved, update } = useAcademyState()
 
-  // After storage was read: a stored draft means "restored"; no draft (first visit, or data just deleted) gets a
-  // fresh one in memory only. It is written to storage on the learner's first change, so "Delete my data" leaves nothing.
+  // No draft yet (first visit, or data just deleted): a fresh one in memory only. Saved progress from an earlier
+  // visit is never restored silently; the setup screen offers "Continue" / "Start new" (F3).
   useEffect(() => {
     if (!ready) return
-    if (!state.draft) {
-      setRestored(false)
-      update((s) => ({ ...s, view: 'setup', draft: defaultDraft(lang) }), false)
-    } else if (restored === null) {
-      setRestored(true)
-    }
-  }, [ready, restored, state.draft, update, lang])
+    if (!state.draft) update((s) => ({ ...s, view: 'setup', draft: defaultDraft(lang) }), false)
+  }, [ready, state.draft, update, lang])
 
   const draft = state.draft
   if (!ready || !draft) {
@@ -83,12 +77,10 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           tx={tx}
           draft={draft}
           topics={topics}
-          restored={restored === true}
+          pendingSubject={pending?.programme?.subject ?? pending?.draft?.subject ?? null}
+          onContinue={continueSaved}
           onChange={(patch) => update((s) => ({ ...s, draft: { ...(s.draft ?? draft), ...patch, updatedAt: new Date().toISOString() } }))}
-          onStartNew={() => {
-            update((s) => ({ ...s, view: 'setup', draft: defaultDraft(lang), quickCheck: undefined, programme: undefined }))
-            setRestored(false)
-          }}
+          onStartNew={discardSaved}
           onSubmit={() =>
             update((s) => {
               const d = { ...(s.draft ?? draft), subject: (s.draft ?? draft).subject.trim() }
@@ -115,7 +107,8 @@ function SetupForm({
   tx,
   draft,
   topics,
-  restored,
+  pendingSubject,
+  onContinue,
   onChange,
   onStartNew,
   onSubmit,
@@ -123,7 +116,9 @@ function SetupForm({
   tx: AcademyCopy
   draft: SetupDraft
   topics: TopicSuggestion[]
-  restored: boolean
+  /** saved progress found in this browser (null = none): offered as Continue / Start new */
+  pendingSubject: string | null
+  onContinue: () => void
   onChange: (patch: Partial<SetupDraft>) => void
   onStartNew: () => void
   onSubmit: () => void
@@ -144,12 +139,17 @@ function SetupForm({
 
   return (
     <form onSubmit={submit} noValidate className="space-y-6 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
-      {restored && (
-        <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-purple-50 px-4 py-3 text-sm text-purple-900" role="status">
-          <span>{tx.restored}</span>
-          <button type="button" onClick={onStartNew} className="font-medium text-purple-700 underline underline-offset-2">
-            {tx.startNew}
-          </button>
+      {pendingSubject !== null && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl bg-purple-50 px-4 py-3 text-sm text-purple-900" role="status">
+          <span>{tx.savedFound(pendingSubject)}</span>
+          <span className="flex gap-4">
+            <button type="button" onClick={onContinue} className="font-semibold text-purple-800 underline underline-offset-2">
+              {tx.continueSaved}
+            </button>
+            <button type="button" onClick={onStartNew} className="font-medium text-purple-700 underline underline-offset-2">
+              {tx.startNew}
+            </button>
+          </span>
         </div>
       )}
 
@@ -241,6 +241,19 @@ function SetupForm({
           ))}
         </select>
       </div>
+
+      <label className="flex cursor-pointer items-start gap-3 text-sm text-gray-800">
+        <input
+          type="checkbox"
+          checked={draft.saveProgress}
+          onChange={(e) => change({ saveProgress: e.target.checked })}
+          className="mt-1 h-4 w-4 shrink-0 accent-purple-600"
+        />
+        <span>
+          <span className="block font-medium text-gray-900">{tx.saveProgressLabel}</span>
+          <span className="block text-gray-600">{tx.saveProgressHint}</span>
+        </span>
+      </label>
 
       <button type="submit" className="w-full rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 sm:w-auto">
         {tx.submit}

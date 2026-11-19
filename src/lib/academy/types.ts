@@ -18,6 +18,8 @@ export interface SetupDraft {
   selfLevel: Level
   testMode: TestMode
   language: AcademyLang
+  /** opt-in "Save my progress in this browser"; false = nothing is written to localStorage (F3) */
+  saveProgress: boolean
   updatedAt: string
 }
 
