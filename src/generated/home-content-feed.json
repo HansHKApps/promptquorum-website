@@ -65128,7 +65128,7 @@
     "title": "DeepSeek-V3 Local Hardware Requirements?",
     "excerpt": "DeepSeek-V3 needs ~405 GB RAM at Q4_K_M or 8× H200 GPUs at FP8. See RAM, GPU and Mac specs plus local alternatives such as V4-Flash and R1-Distill.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/prompt-bites/deepseek-v3-local-hardware-requirements",
     "cluster": "prompt-bites"
   },
@@ -65137,7 +65137,7 @@
     "title": "DeepSeek-V3 lokale Hardware-Anforderungen?",
     "excerpt": "DeepSeek-V3 braucht ~405 GB RAM bei Q4_K_M oder 8× H200-GPUs in FP8. RAM-, GPU- und Mac-Specs plus lokale Alternativen wie V4-Flash und R1-Distill.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/de/prompt-bites/deepseek-v3-local-hardware-requirements",
     "cluster": "prompt-bites"
   },
@@ -65146,7 +65146,7 @@
     "title": "Prérequis matériels pour DeepSeek-V3 en local ?",
     "excerpt": "DeepSeek-V3 exige ~405 Go de RAM en Q4_K_M ou 8× GPU H200 en FP8. Specs RAM, GPU et Mac, plus alternatives locales comme V4-Flash et R1-Distill.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/fr/prompt-bites/deepseek-v3-local-hardware-requirements",
     "cluster": "prompt-bites"
   },
@@ -65155,7 +65155,7 @@
     "title": "DeepSeek V3のローカル実行ハードウェア要件は？",
     "excerpt": "DeepSeek-V3はQ4_K_Mで約405 GBのRAM、FP8ではH200 GPU 8基が必要。RAM・GPU・Macのスペックと、V4-FlashやR1-Distillなどローカル代替案を解説。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ja/prompt-bites/deepseek-v3-local-hardware-requirements",
     "cluster": "prompt-bites"
   },
@@ -65164,7 +65164,7 @@
     "title": "DeepSeek V3本地运行硬件要求？",
     "excerpt": "DeepSeek V3在Q4_K_M下需约405 GB内存，FP8需8张H200 GPU。含内存、GPU、Mac规格，以及V4-Flash、R1-Distill等本地替代方案。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/zh/prompt-bites/deepseek-v3-local-hardware-requirements",
     "cluster": "prompt-bites"
   },
@@ -65173,7 +65173,7 @@
     "title": "¿Cuáles son los requisitos de hardware para ejecutar DeepSeek-V3 en local?",
     "excerpt": "DeepSeek-V3 necesita ~405 GB de RAM en Q4_K_M u 8× GPU H200 en FP8. Specs de RAM, GPU y Mac, más alternativas locales como V4-Flash y R1-Distill.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/es/prompt-bites/deepseek-v3-local-hardware-requirements",
     "cluster": "prompt-bites"
   },
@@ -65182,7 +65182,7 @@
     "title": "Quais são os requisitos de hardware para rodar o DeepSeek-V3 localmente?",
     "excerpt": "DeepSeek-V3 precisa de ~405 GB de RAM em Q4_K_M ou 8× GPUs H200 em FP8. Specs de RAM, GPU e Mac, mais alternativas locais como V4-Flash e R1-Distill.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/pt/prompt-bites/deepseek-v3-local-hardware-requirements",
     "cluster": "prompt-bites"
   },
@@ -65191,7 +65191,7 @@
     "title": "ما هي متطلبات الأجهزة لتشغيل ⁨DeepSeek-V3⁩ محلياً؟",
     "excerpt": "يحتاج DeepSeek-V3 إلى نحو 405 GB من RAM بصيغة Q4_K_M أو 8 وحدات H200 GPU بصيغة FP8. مواصفات RAM وGPU وMac وبدائل محلية مثل V4-Flash وR1-Distill.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ar/prompt-bites/deepseek-v3-local-hardware-requirements",
     "cluster": "prompt-bites"
   },
@@ -65200,7 +65200,7 @@
     "title": "DeepSeek V3를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?",
     "excerpt": "DeepSeek V3는 Q4_K_M에서 약 405 GB RAM, FP8에서는 H200 GPU 8장이 필요합니다. RAM·GPU·Mac 사양과 V4-Flash 등 로컬 대안을 정리했습니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ko/prompt-bites/deepseek-v3-local-hardware-requirements",
     "cluster": "prompt-bites"
   },
