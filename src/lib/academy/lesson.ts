@@ -137,7 +137,7 @@ Rules:
 - Do not mention dates, version numbers or prices unless they are in the <article> texts, and then say they can change.
 - Plain, friendly teaching tone; short paragraphs; examples welcome. Use **bold** for key terms and simple lists. No links, no URLs, no tables, no code blocks longer than 5 lines.
 - Do not repeat the other lessons of the programme (listed by title); refer to them briefly if needed.
-- furtherReading: choose up to ${READING_MAX} pages from <material> by their number, only ones that really deepen this lesson. Choose none if none fits.
+- furtherReading: choose up to ${READING_MAX} pages from <material> by their number, only ones whose title or description is about THIS lesson's topic or objective. A page on a merely related subject (another app, another use case, a different kind of model) does not qualify. Choose none if none fits; an empty list is better than an off-topic link.
 - Write everything in the language named in the request.`
 
 export function lessonUserMessage(req: LessonRequest, material: Material[], grounding: string): string {
@@ -161,10 +161,32 @@ export function lessonUserMessage(req: LessonRequest, material: Material[], grou
 
 export type GeneratedLesson = Pick<Lesson, 'sections' | 'furtherReading'>
 
-/** Model output -> lesson content: links stripped, further reading resolved from the material list only. */
-export function finalizeLesson(o: LessonOutput, material: Material[]): GeneratedLesson {
+/** Meaningful words of a text: 4+ letters/digits, or character pairs for scripts written without spaces (ja, zh, ko, ar-safe). */
+export function topicTokens(text: string): Set<string> {
+  const out = new Set<string>()
+  for (const word of text.toLowerCase().split(/[^\p{L}\p{N}]+/u)) {
+    if (/[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/.test(word)) {
+      for (let i = 0; i < word.length - 1; i++) out.add(word.slice(i, i + 2))
+    } else if (word.length >= 4) out.add(word)
+  }
+  return out
+}
+
+/** F17: a further-reading page must share at least one meaningful word with the lesson's title, topic or objectives. */
+export function isOnTopic(m: Pick<Material, 'title' | 'description'>, focus: string): boolean {
+  const want = topicTokens(focus)
+  if (!want.size) return true
+  for (const t of topicTokens(`${m.title} ${m.description}`)) if (want.has(t)) return true
+  return false
+}
+
+/** Model output -> lesson content: links stripped, further reading resolved from the material list only and kept on topic. */
+export function finalizeLesson(o: LessonOutput, material: Material[], focus?: string): GeneratedLesson {
   const byRef = new Map(material.map((m) => [m.ref, m]))
-  const picked = [...new Set(o.furtherReading.map((r) => r.ref))].map((r) => byRef.get(r)).filter((m): m is Material => !!m)
+  const picked = [...new Set(o.furtherReading.map((r) => r.ref))]
+    .map((r) => byRef.get(r))
+    .filter((m): m is Material => !!m)
+    .filter((m) => focus === undefined || isOnTopic(m, focus))
   return {
     sections: o.sections
       .slice(0, SECTIONS_MAX)
@@ -190,5 +212,6 @@ export async function generateLesson(client: ParseClient, req: LessonRequest, si
     // finalizeLesson drops unknown numbers, and length is only a cost guard.
     salvage: (v) => (v.sections.length >= 1 ? v : null),
   })
-  return { ...finalizeLesson(value, material), attempts, materialUrls: material.map((m) => m.url) }
+  const focus = [req.lesson.title, req.lesson.topic, ...req.lesson.objectiveIds.map((i) => req.objectives[i] ?? '')].join(' ')
+  return { ...finalizeLesson(value, material, focus), attempts, materialUrls: material.map((m) => m.url) }
 }

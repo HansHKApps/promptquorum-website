@@ -19,7 +19,7 @@ import { AcademyGenerationError, generateStructured, type ParseClient } from '..
 import { finalTestSize, clampProgramme, contentMinutes, programmeProblems, testMinutes } from '../src/lib/academy/programme'
 import { diagnosticOutputSchema, programmeOutputSchema, type GeneratedQuestion, type ProgrammeOutput } from '../src/lib/academy/schemas'
 import type { Programme, Question } from '../src/lib/academy/types'
-import { articleText, finalizeLesson, findMaterial, generateLesson, lessonProblems, stripLinks, toMaterial } from '../src/lib/academy/lesson'
+import { articleText, finalizeLesson, isOnTopic, findMaterial, generateLesson, lessonProblems, stripLinks, toMaterial } from '../src/lib/academy/lesson'
 import { addActiveTime, markLessonDone, nextOpenLesson, openLesson } from '../src/lib/academy/progress'
 import { getArticle } from '../src/lib/mcp/tools'
 import { balancedPick, generateQuiz, QuizShortError, topicPlan, verifyQuestions } from '../src/lib/academy/quiz'
@@ -559,6 +559,15 @@ t('F13: short programmes get a smaller final test so lessons keep their length',
   assert.equal(finalTestSize(90), 15)
   assert.equal(testMinutes('final', 15, 5), 4.5)
   assert.equal(contentMinutes('final', 15, 5), 11)
+})
+
+t('F17: further reading must share words with the lesson topic', () => {
+  const privacy = { title: 'Privacy of local AI: what stays on your device', description: 'Data protection basics' }
+  const vision = { title: 'Local vision models compared', description: 'Image understanding on your laptop' }
+  assert.equal(isOnTopic(privacy, 'Privacy recap data protection'), true)
+  assert.equal(isOnTopic(vision, 'Privacy recap data protection'), false)
+  assert.equal(isOnTopic({ title: 'ローカルLLMのプライバシー', description: '' }, 'プライバシー 保護'), true)
+  assert.equal(isOnTopic({ title: 'ローカルLLMの速度', description: '' }, 'プライバシー 保護'), false)
 })
 
 void Promise.all(pending).then(() => {if (failed) {
