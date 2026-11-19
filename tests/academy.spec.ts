@@ -186,3 +186,35 @@ test.describe('F10 / F8: AI label and notices', () => {
     await expect(page.getByText('For learners aged 16 or older.')).toBeVisible()
   })
 })
+
+test.describe('F6: correct answers stay on the server until answered', () => {
+  const quizQuestions = [1, 2].map((n) => ({ id: `qq${n}`, topic: 'Basics', kind: 'final', prompt: `Final question ${n}?`, options: ['A', 'B', 'C'], sealed: `sealed-token-${n}-xxxxxxxxxxxxxxxxxxxx` }))
+
+  test('stored quiz has no key before the answer; the verdict comes from /api/academy/answer', async ({ page }) => {
+    await page.route('**/api/academy/quiz', (r) => r.fulfill({ json: { questions: quizQuestions } }))
+    let sent: unknown = null
+    await page.route('**/api/academy/answer', (r) => {
+      sent = r.request().postDataJSON()
+      return r.fulfill({ json: { correct: false, correctIndex: 1, explanationCorrect: 'B is right because.', explanationChosen: 'A is wrong because.' } })
+    })
+    const programme = seededProgramme({
+      testMode: 'final',
+      testPlan: { finalQuestions: 2, lessonQuizQuestions: 0, testMinutes: 2 },
+      lessons: [{ id: 'lesson-1', title: 'L1', topic: 'Basics', estimatedMinutes: 5, objectiveIds: [0], sections: [{ heading: 'h', body: 'b' }], furtherReading: [] }],
+      progress: { currentLesson: 0, lessonStatus: { 'lesson-1': 'done' }, quizResults: [], secondsSpent: 0, startedAt: '2026-11-19T10:00:00.000Z', activeQuiz: { quizId: 'final', questions: [], answers: {} } },
+    })
+    await openSeededLesson(page, { ...programme } as ReturnType<typeof seededProgramme>)
+    // openSeededLesson seeds view 'lesson'; go to the quiz via the programme screen button.
+    await page.getByRole('button', { name: /back to programme/i }).click().catch(() => {})
+    await page.getByRole('button', { name: /continue the quiz/i }).click()
+    await expect(page.getByText('Final question 1?')).toBeVisible()
+    const before = (await stored(page)) ?? ''
+    expect(before).not.toContain('correctIndex')
+    expect(before).not.toContain('explanationCorrect')
+    expect(before).not.toContain('explanationWrong')
+    await page.getByRole('button', { name: 'A', exact: true }).click()
+    await expect(page.getByText('B is right because.')).toBeVisible()
+    await expect(page.getByText('A is wrong because.')).toBeVisible()
+    expect(sent).toEqual({ sealed: quizQuestions[0].sealed, choice: 0 })
+  })
+})

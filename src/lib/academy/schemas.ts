@@ -132,3 +132,12 @@ export const quizRequestSchema = z.object({
   objectives: z.array(z.string().max(300)).max(8),
 })
 export type QuizRequest = z.infer<typeof quizRequestSchema>
+
+// ------------------------------------------------------------------------------------------ answer check (F6)
+
+export const answerRequestSchema = z.object({
+  sealed: z.string().min(20).max(4000),
+  /** option index 0-2, or -1 for "not sure" */
+  choice: z.number().int().min(-1).max(2),
+})
+export type AnswerRequest = z.infer<typeof answerRequestSchema>

@@ -7,7 +7,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { scoreQuiz } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
-import type { Programme, Question, QuizResult } from '@/lib/academy/types'
+import type { Programme, QuizQuestion, QuizResult } from '@/lib/academy/types'
 import { AiBadge } from './AiBadge'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
@@ -32,6 +32,8 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<AcademyErrorCode | 'network' | null>(null)
   const [feedbackFor, setFeedbackFor] = useState<string | null>(null)
+  const [checking, setChecking] = useState(false)
+  const [checkError, setCheckError] = useState<AcademyErrorCode | 'network' | null>(null)
   const requested = useRef<string | null>(null)
 
   const updateProgramme = useCallback((fn: (p: Programme) => Programme) => update((s) => (s.programme ? { ...s, programme: fn(s.programme) } : s)), [update])
@@ -41,7 +43,7 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
     setError(null)
     setLoading(true)
     const ids = isFinal ? programme.lessons.map((l) => l.id) : [active.quizId]
-    const res = await postJson<{ questions: Question[] }>('/api/academy/quiz', {
+    const res = await postJson<{ questions: QuizQuestion[] }>('/api/academy/quiz', {
       kind: isFinal ? 'final' : 'lesson',
       subject: programme.subject.slice(0, 120),
       language: programme.language,
@@ -54,6 +56,14 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
     if (!res.ok) return setError(res.code)
     updateProgramme((p) => (p.progress.activeQuiz ? { ...p, progress: { ...p.progress, activeQuiz: { ...p.progress.activeQuiz, questions: res.data.questions } } } : p))
   }, [active, isFinal, programme, postJson, updateProgramme])
+
+  // A quiz stored before answers moved to the server holds the correct answers in the browser: drop it and generate a new one.
+  useEffect(() => {
+    if (active?.questions.length && active.questions.some((q) => !q.sealed)) {
+      requested.current = null
+      updateProgramme((p) => (p.progress.activeQuiz ? { ...p, progress: { ...p.progress, activeQuiz: { ...p.progress.activeQuiz, questions: [], answers: {} } } } : p))
+    }
+  }, [active, updateProgramme])
 
   useEffect(() => {
     if (!active || active.questions.length || requested.current === active.quizId) return
@@ -140,11 +150,21 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
     setFinished({ result, quizId: active!.quizId })
   }
 
-  const choose = (i: number) => {
-    if (answered) return
-    updateProgramme((p) =>
-      p.progress.activeQuiz ? { ...p, progress: { ...p.progress, activeQuiz: { ...p.progress.activeQuiz, answers: { ...p.progress.activeQuiz.answers, [current.id]: i } } } } : p,
-    )
+  // The server checks the answer (the key never reaches the browser before this), then the verdict is stored.
+  const choose = async (i: number) => {
+    if (answered || checking) return
+    setCheckError(null)
+    setChecking(true)
+    const res = await postJson<{ correct: boolean; correctIndex: 0 | 1 | 2; explanationCorrect: string; explanationChosen: string | null }>('/api/academy/answer', { sealed: current.sealed, choice: i })
+    setChecking(false)
+    if (!res.ok) return setCheckError(res.code)
+    const v = res.data
+    updateProgramme((p) => {
+      const aq = p.progress.activeQuiz
+      if (!aq) return p
+      const questions = aq.questions.map((x) => (x.id === current.id ? { ...x, reveal: { correctIndex: v.correctIndex, explanationCorrect: v.explanationCorrect, explanationChosen: v.explanationChosen } } : x))
+      return { ...p, progress: { ...p.progress, activeQuiz: { ...aq, questions, answers: { ...aq.answers, [current.id]: i } } } }
+    })
     setFeedbackFor(current.id)
   }
   const next = () => {
@@ -174,7 +194,7 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
         <legend className="text-lg font-medium text-gray-900">{current.prompt}</legend>
         <div className="mt-3 grid gap-2">
           {current.options.map((o, i) => {
-            const isCorrect = i === current.correctIndex
+            const isCorrect = i === current.reveal?.correctIndex
             const state = !answered ? 'idle' : isCorrect ? 'correct' : i === chosen ? 'wrong' : 'other'
             const cls = {
               idle: 'border-gray-300 hover:border-purple-600 hover:bg-purple-50',
@@ -183,21 +203,26 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
               other: 'border-gray-200 text-gray-500',
             }[state]
             return (
-              <button key={i} type="button" onClick={() => choose(i)} disabled={answered} aria-pressed={chosen === i} className={`rounded-xl border px-4 py-3 text-start ${cls}`}>
+              <button key={i} type="button" onClick={() => void choose(i)} disabled={answered || checking} aria-pressed={chosen === i} className={`rounded-xl border px-4 py-3 text-start ${cls}`}>
                 {o}
               </button>
             )
           })}
         </div>
       </fieldset>
-      {answered && (
-        <div className={`space-y-2 rounded-xl p-4 text-sm ${chosen === current.correctIndex ? 'bg-green-50 text-green-900' : 'bg-amber-50 text-amber-900'}`} role="status" aria-live="polite">
+      {checkError && (
+        <p className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-900" role="alert">
+          {errorText(checkError)} {tx.retry}
+        </p>
+      )}
+      {answered && current.reveal && (
+        <div className={`space-y-2 rounded-xl p-4 text-sm ${chosen === current.reveal.correctIndex ? 'bg-green-50 text-green-900' : 'bg-amber-50 text-amber-900'}`} role="status" aria-live="polite">
           <p className="flex flex-wrap items-center gap-2 font-semibold">
-            {chosen === current.correctIndex ? tx.correctFeedback : tx.wrongFeedback}
+            {chosen === current.reveal.correctIndex ? tx.correctFeedback : tx.wrongFeedback}
             <AiBadge text={tx.aiLabel} />
           </p>
-          <p>{current.explanationCorrect}</p>
-          {chosen !== current.correctIndex && current.explanationWrong[chosen] && <p>{current.explanationWrong[chosen]}</p>}
+          <p>{current.reveal.explanationCorrect}</p>
+          {chosen !== current.reveal.correctIndex && current.reveal.explanationChosen && <p>{current.reveal.explanationChosen}</p>}
           <button type="button" onClick={next} className="mt-1 rounded-xl bg-purple-600 px-5 py-2 font-medium text-white hover:bg-purple-700">
             {index === total - 1 ? tx.seeResult : tx.nextQuestion}
           </button>

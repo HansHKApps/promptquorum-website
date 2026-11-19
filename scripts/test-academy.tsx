@@ -505,6 +505,54 @@ t('scoring: retakes keep history; the first passing attempt counts; completion n
   assert.equal(isCompleted(per), false, 'lesson quizzes missing')
 })
 
+// ------------------------------------------------------------------------------------------ sealed keys (F6)
+import { judgeAnswer, openAnswerKey, sealAnswerKey, toClientQuestion } from '../src/lib/academy/seal'
+import { correctIndexOf } from '../src/lib/academy/scoring'
+
+t('F6: a client question carries no correct answer and no explanations, only a sealed key', () => {
+  const full = toQuestion(gq(1), 'final', () => 2)
+  const client = toClientQuestion(full, 'secret-a')
+  const json = JSON.stringify(client)
+  for (const leaked of ['correctIndex', 'explanationCorrect', 'explanationWrong', 'Expl']) assert.ok(!json.includes(leaked), `leaked ${leaked}`)
+  assert.ok(!json.includes(full.explanationCorrect))
+  assert.equal(client.options.length, 3)
+  const key = openAnswerKey(client.sealed, 'secret-a')
+  assert.equal(key?.id, full.id)
+  assert.equal(key?.correctIndex, 2)
+})
+
+t('F6: tampered tokens and tokens sealed with another secret are rejected', () => {
+  const token = sealAnswerKey({ id: 'q', correctIndex: 1, explanationCorrect: 'x', explanationWrong: [null, null, null] }, 'secret-a')
+  assert.equal(openAnswerKey(token, 'secret-b'), null)
+  const flipped = token.slice(0, -2) + (token.endsWith('AA') ? 'BB' : 'AA')
+  assert.equal(openAnswerKey(flipped, 'secret-a'), null)
+  assert.equal(openAnswerKey('not-a-token', 'secret-a'), null)
+})
+
+t('F6: the server verdict marks right, wrong and "not sure" correctly and returns the matching explanation', () => {
+  const key = { id: 'q', correctIndex: 1 as const, explanationCorrect: 'why right', explanationWrong: ['why A wrong', null, 'why C wrong'] }
+  assert.deepEqual(judgeAnswer(key, 1), { correct: true, correctIndex: 1, explanationCorrect: 'why right', explanationChosen: null })
+  assert.equal(judgeAnswer(key, 0).correct, false)
+  assert.equal(judgeAnswer(key, 0).explanationChosen, 'why A wrong')
+  assert.equal(judgeAnswer(key, 2).explanationChosen, 'why C wrong')
+  assert.equal(judgeAnswer(key, -1).correct, false)
+  assert.equal(judgeAnswer(key, -1).explanationChosen, null)
+})
+
+t('F6: scoring from revealed verdicts equals scoring from full questions (pass mark 70% unchanged)', () => {
+  const full = qset('A', 10)
+  const clientQs = full.map((q) => ({ ...toClientQuestion(q, 's'), reveal: { correctIndex: q.correctIndex, explanationCorrect: q.explanationCorrect } }))
+  const answers = answersFor(full, 7)
+  const a = scoreQuiz('final-1', full, answers)
+  const b = scoreQuiz('final-1', clientQs, answers)
+  assert.equal(b.correct, a.correct)
+  assert.equal(b.correct, 7)
+  assert.equal(correctIndexOf(clientQs[0]), full[0].correctIndex)
+  // Unrevealed questions never score as correct.
+  const hidden = full.map((q) => toClientQuestion(q, 's'))
+  assert.equal(scoreQuiz('final-1', hidden, answers).correct, 0)
+})
+
 void Promise.all(pending).then(() => {if (failed) {
   console.log(`\n${failed} test(s) failed`)
   process.exit(1)
