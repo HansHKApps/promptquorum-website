@@ -3679,7 +3679,7 @@
       ]
     },
     "best-local-reasoning-model-deepseek-r1-2026": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,
@@ -9253,7 +9253,7 @@
       "images": []
     },
     "liquid-apollo-review": {
-      "dateModified": "2026-11-09",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -16366,7 +16366,7 @@
       "images": []
     },
     "bestLlmRightNow": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
