@@ -16042,7 +16042,7 @@
     "title": "Whisper on Apple Silicon 2026: Metal Benchmarks, Core ML Setup, M1–M5 Speed Guide",
     "excerpt": "Whisper on Mac: Metal GPU benchmarks M1–M5, setup, real-time transcription. Large-v3 runs 10× real-time on M5 Pro. Core ML guide.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16051,7 +16051,7 @@
     "title": "Whisper auf Apple Silicon 2026: Metal-Benchmarks, Core-ML-Setup, M1–M5-Geschwindigkeitsleitfaden",
     "excerpt": "Whisper auf Mac: Metal GPU Benchmarks M1–M5, Setup, Echtzeit-Transkription. Large-v3 läuft 10× Realzeit auf M5 Pro. Core ML Anleitung.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/de/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16060,7 +16060,7 @@
     "title": "Whisper sur Apple Silicon 2026 : Benchmarks Metal, Configuration Core ML, Guide M1–M5",
     "excerpt": "Whisper sur Mac : benchmarks GPU Metal M1–M5, configuration, transcription temps réel. Large-v3 10× temps réel sur M5 Pro. Guide Core ML.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/fr/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16069,7 +16069,7 @@
     "title": "Apple Silicon上のWhisper 2026：MetalベンチマークとCore ML設定、M1–M5速度ガイド",
     "excerpt": "Whisper on Mac：Metal GPU ベンチマーク M1–M5、セットアップ、リアルタイム文字起こし。Large-v3は M5 Pro で10×リアルタイム実行。Core MLガイド、モデル選択、実装手順。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/ja/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16078,7 +16078,7 @@
     "title": "Apple Silicon上的Whisper 2026：Metal基准测试、Core ML设置、M1–M5速度指南",
     "excerpt": "Whisper on Mac：Metal GPU 基准测试 M1–M5、安装、实时转录。Large-v3 在 M5 Pro 上实现10倍实时速度。Core ML 配置指南、模型选择、实现步骤。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/zh/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16087,7 +16087,7 @@
     "title": "Whisper en Apple Silicon 2026: Benchmarks Metal, Configuración Core ML, Guía M1–M5",
     "excerpt": "Whisper en Mac: benchmarks GPU Metal M1–M5, configuración, transcripción en tiempo real. Large-v3 corre a 10× tiempo real en M5 Pro. Guía Core ML.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/es/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16096,7 +16096,7 @@
     "title": "Whisper no Apple Silicon 2026: benchmarks Metal, configuração Core ML, guia M1-M5",
     "excerpt": "Whisper no Mac: benchmarks GPU Metal M1-M5, configuração, transcrição em tempo real. Large-v3 roda a 10× tempo real no M5 Pro. Guia Core ML.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-05-15",
+    "dateModified": "2026-11-19",
     "url": "/pt/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16105,7 +16105,7 @@
     "title": "⁨Whisper⁩ على ⁨Apple Silicon 2026⁩: اختبارات ⁨Metal⁩ المرجعية، إعداد ⁨Core ML⁩، دليل ⁨M1⁩–⁨M5⁩",
     "excerpt": "⁨Whisper Large-v3⁩ يعمل بسرعة ⁨10⁩× الوقت الفعلي على ⁨M5 Pro⁩ عبر ⁨Metal⁩. اختبارات ⁨M1⁩–⁨M5 Max⁩، إعداد ⁨Core ML⁩، ودليل النسخ الفوري على ⁨Mac⁩.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/ar/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16114,7 +16114,7 @@
     "title": "Apple Silicon의 Whisper 2026: Metal 벤치마크, Core ML 설정, M1–M5 속도 가이드",
     "excerpt": "Mac에서의 Whisper: Metal GPU 벤치마크 M1–M5, 설정, 실시간 전사. Large-v3는 M5 Pro에서 10× 실시간 속도로 실행됩니다. Core ML 가이드.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/ko/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
