@@ -141,6 +141,7 @@ import { article as a_ultimate_vocal_remover_review } from './articles/ultimate-
 import { article as a_skales_review } from './articles/skales-review'
 import { article as a_halo_review } from './articles/halo-review'
 import { article as a_yovoice_review } from './articles/yovoice-review'
+import { article as a_voicestudio_review } from './articles/voicestudio-review'
 import { article as a_open_science_desktop_review } from './articles/open-science-desktop-review'
 import { article as a_cozyclay_review } from './articles/cozyclay-review'
 import { article as a_papersgpt_review } from './articles/papersgpt-review'
@@ -908,6 +909,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'skales-review':                                 a_skales_review,
   'halo-review':                                   a_halo_review,
   'yovoice-review':                                a_yovoice_review,
+  'voicestudio-review':                            a_voicestudio_review,
   'open-science-desktop-review':                   a_open_science_desktop_review,
   'cozyclay-review':                              a_cozyclay_review,
   'papersgpt-review':                             a_papersgpt_review,

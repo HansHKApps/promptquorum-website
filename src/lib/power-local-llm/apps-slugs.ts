@@ -319,6 +319,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'skales':                                  'skales',
   'halo':                                    'halo',
   'yovoice':                                 'yovoice',
+  'voicestudio':                             'voicestudio',
   'open-science-desktop':                    'open-science-desktop',
   'cozyclay':                                'cozyclay',
   'papersgpt':                               'papersgpt',
