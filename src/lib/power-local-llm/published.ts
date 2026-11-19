@@ -646,9 +646,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'openwork-review',
   'airi-review',
   'inbox-zero-review',
+  'browser-use-review',
+  'cc-switch-review',
   'skales-review',
   'halo-review',
   'yovoice-review',
+  'voicestudio-review',
   'open-science-desktop-review',
   'cozyclay-review',
   'papersgpt-review',
@@ -814,12 +817,14 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'pooled-review',
   'askimo-review',
   'reactive-resume-review',
+  'paperclip-review',
   'next-ai-draw-io-review',
   'ultimate-vocal-remover-review',
   'oriveo-review',
   'open-paper-review',
   'myagents-review',
   'llmfit-review',
+  'orca-review',
 
 ])
 
