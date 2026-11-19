@@ -4,6 +4,9 @@ import { getFounderVerifiedApps, getHandsOnTestedApps } from '@/lib/home/statDet
 import { getMcpUsageSnapshotCached } from '@/lib/mcp/usage'
 import { getAskHansTotals } from '@/lib/askhans/totals'
 import { getUmamiStat } from '@/lib/partners/umami'
+import { getGscStat } from '@/lib/partners/gsc'
+import { partnersContent } from '@/lib/partners/content'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { HomeIcon, type HomeIconName } from './HomeIcon'
 import { SURFACE_CLASS } from './homeSurface'
 import { StatTilesClient, type StatTileItem } from './StatTilesClient'
@@ -17,6 +20,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
   const stats = getHomeStats(lang)
   const mcpUsage = await getMcpUsageSnapshotCached()
   const umami = await getUmamiStat()
+  const gsc = await getGscStat()
   const askHansOn = process.env.ASK_HANS_ENABLED === 'true'
   const askHansTotals = askHansOn ? await getAskHansTotals() : null
   const founderVerifiedApps = getFounderVerifiedApps(lang)
@@ -69,6 +73,13 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
       ? [{
           label: t('statPageViews', lang),
           value: umami.pageviews.toLocaleString(),
+          icon: 'stats' as const,
+        }]
+      : []),
+    ...(gsc
+      ? [{
+          label: partnersContent[lang].stats.gscLabel.replace('{date}', formatDisplayDate(gsc.date, lang)),
+          value: gsc.clicks.toLocaleString(),
           icon: 'stats' as const,
         }]
       : []),
