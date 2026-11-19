@@ -782,6 +782,7 @@ const HUB_THEMES: Array<{
       'apple-mlx-vs-nvidia-cuda-local-llm-2026',
       'deepseek-vs-qwen-local-comparison-2026',
       'docker-model-runner-review',
+      'llmfit-review',
       'ai-tool-licenses-explained',
       'uncensored-llm-models',
       'exllamav2-explained',
