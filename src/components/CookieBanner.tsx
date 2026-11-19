@@ -225,11 +225,12 @@ function CookieBannerInner() {
           <button type="button" onClick={() => commit(ALL)} style={btnPrimary}>
             {c.acceptAll}
           </button>
+          {/* Accept all and Reject all carry the same visual weight (QA audit F11); Save selection stays secondary. */}
+          <button type="button" onClick={() => commit(NONE)} style={btnPrimary}>
+            {c.rejectAll}
+          </button>
           <button type="button" onClick={() => commit(choices)} style={btnSecondary}>
             {c.save}
-          </button>
-          <button type="button" onClick={() => commit(NONE)} style={btnSecondary}>
-            {c.rejectAll}
           </button>
         </div>
       </div>

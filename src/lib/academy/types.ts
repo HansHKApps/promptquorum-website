@@ -18,6 +18,8 @@ export interface SetupDraft {
   selfLevel: Level
   testMode: TestMode
   language: AcademyLang
+  /** opt-in "Save my progress in this browser"; false = nothing is written to localStorage (F3) */
+  saveProgress: boolean
   updatedAt: string
 }
 
@@ -32,6 +34,16 @@ export interface Question {
   explanationWrong: [string?, string?, string?]
 }
 
+/**
+ * A lesson-quiz or final-test question as the browser holds it (QA audit F6): the correct answer and the
+ * explanations stay on the server until the question is answered. `sealed` is the opaque key the server checks;
+ * `reveal` is filled from the server's verdict after the learner answered.
+ */
+export interface QuizQuestion extends Omit<Question, 'correctIndex' | 'explanationCorrect' | 'explanationWrong'> {
+  sealed: string
+  reveal?: { correctIndex: 0 | 1 | 2; explanationCorrect: string; explanationChosen?: string | null }
+}
+
 export interface QuizResult {
   quizId: string
   answers: Record<string, number>
@@ -40,7 +52,7 @@ export interface QuizResult {
   byTopic: Record<string, { correct: number; total: number }>
   takenAt: string
   /** the questions of this attempt, for the per-question review */
-  questions?: Question[]
+  questions?: QuizQuestion[]
 }
 
 export interface Lesson {
@@ -70,7 +82,7 @@ export interface Programme {
   objectives: string[]
   lessons: Lesson[]
   testPlan: { finalQuestions: number; lessonQuizQuestions: number; testMinutes: number }
-  finalTest?: Question[]
+  finalTest?: QuizQuestion[]
   progress: {
     currentLesson: number
     lessonStatus: Record<string, 'todo' | 'viewed' | 'done'>
@@ -79,7 +91,7 @@ export interface Programme {
     /** every final-test attempt in order (retakes, SPEC 8) */
     finalAttempts?: QuizResult[]
     /** quiz in progress: id is a lesson id or "final"; answers by question id */
-    activeQuiz?: { quizId: string; questions: Question[]; answers: Record<string, number> }
+    activeQuiz?: { quizId: string; questions: QuizQuestion[]; answers: Record<string, number> }
     secondsSpent: number
     /** active seconds per lesson id (capped, SPEC 6.1) */
     lessonSeconds?: Record<string, number>

@@ -34,6 +34,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-reasoning-model-deepseek-r1-2026",
+        "title": "Best Local Reasoning Model 2026: DeepSeek-R1 Ranked",
+        "url": "/local-llms/best-local-reasoning-model-deepseek-r1-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-rag-tools-for-business-documents-2026",
         "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
@@ -59,26 +67,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "llmfit-review",
-        "title": "llmfit Review: Find Which Local LLMs Fit Your Hardware",
-        "url": "/power-local-llm/llmfit-review",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
         "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "ollama-vision-models-review",
-        "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
-        "url": "/power-local-llm/ollama-vision-models-review",
+        "slug": "llmfit-review",
+        "title": "llmfit Review: Find Which Local LLMs Fit Your Hardware",
+        "url": "/power-local-llm/llmfit-review",
         "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-budget-gpus-local-llm",
-        "title": "Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives",
-        "url": "/local-llms/best-budget-gpus-local-llm",
-        "dateModified": "2026-11-18",
         "tier": "about"
       }
     ],
@@ -877,6 +877,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llmfit-review",
         "title": "llmfit Review: Find Which Local LLMs Fit Your Hardware",
         "url": "/power-local-llm/llmfit-review",
@@ -936,14 +944,6 @@
         "slug": "local-llm-security-privacy-checklist",
         "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
         "url": "/local-llms/local-llm-security-privacy-checklist",
-        "dateModified": "2026-11-15",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "run-qwen-locally-guide-2026",
-        "title": "How to Run Qwen 3.6 and Qwen 3.8 Locally in 2026: Ollama and LM Studio Setup Guide",
-        "url": "/local-llms/run-qwen-locally-guide-2026",
         "dateModified": "2026-11-15",
         "tier": "about"
       }
@@ -6203,6 +6203,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
@@ -6223,14 +6231,6 @@
         "title": "Local LLM App Alternatives in 2026: Options to LM Studio, Ollama, Open WebUI and PocketPal AI",
         "url": "/power-local-llm/local-llm-app-alternatives",
         "dateModified": "2026-11-10",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-11-09",
         "tier": "about"
       },
       {
@@ -6701,18 +6701,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
-        "dateModified": "2026-11-13",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-11-19",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-11-09",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       },
       {
@@ -6739,18 +6739,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
-        "dateModified": "2026-11-13",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-11-09",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -6796,7 +6796,7 @@
         "slug": "liquid-apollo-review",
         "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
         "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-11-09",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
@@ -7017,18 +7017,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
-        "dateModified": "2026-11-13",
+        "slug": "liquid-apollo-review",
+        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
+        "url": "/power-local-llm/liquid-apollo-review",
+        "dateModified": "2026-11-19",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "liquid-apollo-review",
-        "title": "Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud",
-        "url": "/power-local-llm/liquid-apollo-review",
-        "dateModified": "2026-11-09",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "mentioned"
       }
     ],

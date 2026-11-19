@@ -31,7 +31,17 @@ export interface AcademyCopy {
   tests: Record<TestMode, { label: string; hint: string }>
   languageLabel: string
   submit: string
-  restored: string
+  /** saved progress found in this browser; receives the subject */
+  savedFound: (subject: string) => string
+  continueSaved: string
+  saveProgressLabel: string
+  saveProgressHint: string
+  /** short label on AI-generated content (lessons, quizzes, explanations) */
+  aiLabel: string
+  ageNotice: string
+  personalDataWarning: string
+  /** "9 min lessons + 8 min test": receives lesson minutes and test minutes */
+  testSplit: (lessonMinutes: number, testMinutes: number) => string
   startNew: string
   storageBlocked: string
   loading: string

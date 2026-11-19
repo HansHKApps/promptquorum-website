@@ -22,6 +22,8 @@ const draftSchema = z.object({
   selfLevel: z.enum(LEVELS),
   testMode: z.enum(TEST_MODES),
   language: z.enum(ALL_LANGS),
+  // Progress stored before the opt-in existed was saved by design then: it stays loadable and stays saved.
+  saveProgress: z.boolean().optional().default(true),
   updatedAt: z.string(),
 })
 
@@ -115,5 +117,5 @@ export function clearAcademyState(storage: KeyValueStorage | null = browserStora
 }
 
 export function defaultDraft(language: AcademyLang): SetupDraft {
-  return { subject: '', availableMinutes: 60, selfLevel: 'beginner', testMode: 'final', language, updatedAt: new Date(0).toISOString() }
+  return { subject: '', availableMinutes: 60, selfLevel: 'beginner', testMode: 'final', language, saveProgress: false, updatedAt: new Date(0).toISOString() }
 }

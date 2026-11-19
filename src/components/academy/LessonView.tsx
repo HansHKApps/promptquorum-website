@@ -10,6 +10,8 @@ import { ACADEMY_IDLE_AFTER_MS, ACADEMY_TICK_SECONDS } from '@/lib/academy/confi
 import { addActiveTime, lessonsDone, markLessonDone, setLessonContent } from '@/lib/academy/progress'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { Lesson, Programme } from '@/lib/academy/types'
+import { AiBadge } from './AiBadge'
+import { Content } from './Content'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -91,7 +93,10 @@ export function LessonView({
   const objectives = lesson.objectiveIds.map((i) => programme.objectives[i]).filter(Boolean)
   const last = index === total - 1
   const needsQuiz = programme.testMode === 'per_lesson_and_final' && !programme.progress.quizResults.some((r) => r.quizId === lesson.id)
+  // The lesson text must be on screen and generation finished before the lesson can be marked done (F9).
+  const ready = lesson.sections.length > 0 && !loading && !error
   const finish = () => {
+    if (!ready) return
     if (needsQuiz) {
       // "Every lesson" mode: the lesson quiz comes right after the lesson (SPEC 2 #2).
       update((s) => {
@@ -123,9 +128,14 @@ export function LessonView({
 
       <article aria-labelledby="academy-lesson" className="space-y-5 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
         <header>
-          <h2 id="academy-lesson" className="text-2xl font-semibold text-gray-900">
-            {lesson.title}
-          </h2>
+          <Content lang={programme.language}>
+            <h2 id="academy-lesson" className="text-2xl font-semibold text-gray-900">
+              {lesson.title}
+            </h2>
+          </Content>
+          <p className="mt-2">
+            <AiBadge text={tx.aiLabel} />
+          </p>
           {objectives.length > 0 && (
             <div className="mt-3 rounded-xl bg-purple-50 px-4 py-3 text-sm text-purple-900">
               <span className="font-medium">{tx.lessonObjectives}:</span>
@@ -152,14 +162,16 @@ export function LessonView({
           </div>
         ) : (
           <>
-            {lesson.sections.map((s, i) => (
-              <section key={i} className="space-y-2">
-                <h3 className="text-lg font-semibold text-gray-900">{s.heading}</h3>
-                <div className="space-y-3 leading-relaxed text-gray-800">
-                  <Markdown text={s.body} />
-                </div>
-              </section>
-            ))}
+            <Content lang={programme.language} className="space-y-5">
+              {lesson.sections.map((s, i) => (
+                <section key={i} className="space-y-2">
+                  <h3 className="text-lg font-semibold text-gray-900">{s.heading}</h3>
+                  <div className="space-y-3 leading-relaxed text-gray-800">
+                    <Markdown text={s.body} />
+                  </div>
+                </section>
+              ))}
+            </Content>
             {lesson.furtherReading.length > 0 && (
               <aside aria-labelledby="academy-reading" className="rounded-xl border border-gray-200 p-4">
                 <h3 id="academy-reading" className="font-semibold text-gray-900">
@@ -184,7 +196,8 @@ export function LessonView({
           <button
             type="button"
             onClick={finish}
-            disabled={!lesson.sections.length}
+            disabled={!ready}
+            aria-disabled={!ready}
             className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-50"
           >
             {last ? tx.doneLast : tx.doneNext}

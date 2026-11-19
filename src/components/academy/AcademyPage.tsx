@@ -33,7 +33,7 @@ export function AcademyPage({ lang }: { lang: AcademyLang }) {
   const topics = buildAcademyTopics(lang, tx.hubs)
 
   return (
-    <div dir={getLangDir(lang)} className="min-h-screen bg-white">
+    <div lang={toOutputLocale(lang)} dir={getLangDir(lang)} className="min-h-screen bg-white">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 sm:py-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-8">
         <section aria-labelledby="academy-h1" className="min-w-0">
           <h1 id="academy-h1" className="text-3xl font-bold text-gray-900 sm:text-4xl">
