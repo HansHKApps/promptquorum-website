@@ -14339,6 +14339,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/browser-use-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/browser-use-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/browser-use-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/browser-use-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/browser-use-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/browser-use-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/browser-use-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/browser-use-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/browser-use-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/browseros-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -29495,6 +29540,51 @@
     "height": 675
   },
   "/images/llm-vision-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llmfit-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llmfit-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llmfit-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llmfit-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llmfit-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llmfit-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llmfit-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llmfit-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/llmfit-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -53589,6 +53679,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/t3-code-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/t3-code-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/t3-code-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/t3-code-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/t3-code-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/t3-code-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/t3-code-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/t3-code-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/t3-code-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/tabby-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -56000,6 +56135,51 @@
     "height": 675
   },
   "/images/voicebox-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voicestudio-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voicestudio-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voicestudio-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voicestudio-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voicestudio-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voicestudio-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voicestudio-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voicestudio-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voicestudio-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675

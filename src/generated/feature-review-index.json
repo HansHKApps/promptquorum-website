@@ -1139,6 +1139,16 @@
     "urlSlug": "inbox-zero-review",
     "url": "/power-local-llm/inbox-zero-review"
   },
+  "browser-use": {
+    "cluster": "power-local-llm",
+    "urlSlug": "browser-use-review",
+    "url": "/power-local-llm/browser-use-review"
+  },
+  "cc-switch": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cc-switch-review",
+    "url": "/power-local-llm/cc-switch-review"
+  },
   "ultimate-vocal-remover": {
     "cluster": "power-local-llm",
     "urlSlug": "ultimate-vocal-remover-review",
@@ -1158,6 +1168,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "yovoice-review",
     "url": "/power-local-llm/yovoice-review"
+  },
+  "voicestudio": {
+    "cluster": "power-local-llm",
+    "urlSlug": "voicestudio-review",
+    "url": "/power-local-llm/voicestudio-review"
   },
   "open-science-desktop": {
     "cluster": "power-local-llm",
@@ -1419,10 +1434,35 @@
     "urlSlug": "libretranslate-review",
     "url": "/power-local-llm/libretranslate-review"
   },
+  "humla": {
+    "cluster": "power-local-llm",
+    "urlSlug": "humla-review",
+    "url": "/power-local-llm/humla-review"
+  },
+  "llmfit": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llmfit-review",
+    "url": "/power-local-llm/llmfit-review"
+  },
+  "orca": {
+    "cluster": "power-local-llm",
+    "urlSlug": "orca-review",
+    "url": "/power-local-llm/orca-review"
+  },
   "reactive-resume": {
     "cluster": "power-local-llm",
     "urlSlug": "reactive-resume-review",
     "url": "/power-local-llm/reactive-resume-review"
+  },
+  "t3-code": {
+    "cluster": "power-local-llm",
+    "urlSlug": "t3-code-review",
+    "url": "/power-local-llm/t3-code-review"
+  },
+  "paperclip": {
+    "cluster": "power-local-llm",
+    "urlSlug": "paperclip-review",
+    "url": "/power-local-llm/paperclip-review"
   },
   "next-ai-draw-io": {
     "cluster": "power-local-llm",

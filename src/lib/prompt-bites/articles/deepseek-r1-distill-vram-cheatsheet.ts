@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM Cheatsheet 2026: Every Quant',
     metaDescription: 'DeepSeek-R1 14B needs ~9.5 GB VRAM at Q4_K_M and fits a 16 GB card. Every distill (1.5B–70B) by quant: Q8_0, FP16, file size and minimum GPU.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'Local LLM users sizing a GPU for a DeepSeek-R1 distill across quantization levels',
     affiliateDisclosure: true,
@@ -110,6 +110,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Update:** DeepSeek\'s current generation is DeepSeek-V4 (Flash and Pro), released as open weights under the MIT license (preview: April 24, 2026). DeepSeek\'s API now serves V4: the deepseek-chat (V3-generation) and deepseek-reasoner (R1-generation) aliases were announced as fully retired after July 24, 2026. The R1 distills are separate open-weight releases that were not part of that notice, and they still run locally. V4 itself is not a consumer-GPU model: V4-Pro has 1.6T total parameters (49B active) and the original V4-Flash 284B (13B active), so even at 4-bit precision (parameter count × 0.5 byte) the weights alone need roughly 140 GB (Flash) to 800 GB (Pro), and DeepSeek\'s model cards list no GPU requirement. For reasoning on a single consumer GPU, the distills remain the practical pick.',
         ],
       },
+      licenseLayers: {
+        id: 'r1-distill-license',
+        title: 'DeepSeek-R1 Distill Licensing: Two Layers, Not One',
+        content: [
+          '**DeepSeek licenses the R1 series — the model weights and this repository — under the MIT License,** which explicitly permits commercial use, modification and distillation into other models. That MIT grant covers DeepSeek\'s own code and the fine-tuning work it did to produce the distills.',
+          '**The Qwen-based distills (1.5B, 7B, 14B, 32B) are fine-tunes of Qwen2.5, which Alibaba licenses under Apache 2.0** — a permissive license with no field-of-use restriction, so stacking DeepSeek\'s MIT terms on top of it creates no extra compliance burden.',
+          '**The Llama-based distills (8B, 70B) are fine-tunes of Meta\'s Llama 3.1-8B and Llama 3.3-70B, which carry the Llama Community License, not a plain permissive license.** That license requires attribution ("Built with Llama") and bars any product or service with more than 700 million monthly active users from using the model without a separate license from Meta. DeepSeek\'s MIT label applies to its own contribution; it does not erase these upstream terms, and whether an MIT grant can fully override a base model\'s own license has been publicly questioned and is not authoritatively resolved. Before deploying the 8B or 70B distill commercially, check the Llama 3.1/3.3 Community License terms directly, not just DeepSeek\'s MIT notice.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -122,6 +131,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: 'How much VRAM does DeepSeek-R1 14B need when quantized?', a: 'About 9.5 GB at Q4_K_M (9.0 GB Ollama file), ~11.5 GB at Q5_K_M, ~13 GB at Q6_K and ~17 GB at Q8_0, each with a modest KV cache. Q8_0 is the first quant that overflows a 16 GB card.' },
           { q: 'Can I run DeepSeek-R1 14B on 16 GB of VRAM?', a: 'Yes. Q4_K_M uses about 9.5 GB and leaves roughly 6 GB for a longer context. Q6_K (~13 GB) is the highest quality that still leaves headroom; Q8_0 (~17 GB) does not fit.' },
           { q: 'Which DeepSeek-R1 distill fits an RTX 4070 Laptop (8 GB)?', a: 'The 7B or 8B at Q4_K_M (4.7–4.9 GB files, ~5.5–6 GB VRAM). The 14B needs ~9.5 GB, so it would partly run from system RAM and slow down.' },
+          { q: 'What license are the DeepSeek-R1 distills under?', a: 'Two layers. DeepSeek licenses its own R1 contribution (weights and this repository) under the MIT License, which permits commercial use and distillation. But the Qwen-based distills (1.5B, 7B, 14B, 32B) are fine-tunes of Qwen2.5 (Apache 2.0, no extra restriction), and the Llama-based distills (8B, 70B) are fine-tunes of Llama 3.1/3.3, which carry Meta\'s Llama Community License — attribution required, and no use by a product or service with over 700 million monthly active users without a separate license from Meta. Check the Llama Community License directly before deploying the 8B or 70B distill commercially.' },
         ],
       },
       relatedBites: {
@@ -146,7 +156,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM-Tabelle 2026: Jede Quant',
     metaDescription: 'DeepSeek-R1 14B braucht ~9.5 GB VRAM bei Q4_K_M und passt auf eine 16-GB-Karte. Jeder Distill (1.5B–70B) je Quant: Q8_0, FP16, Dateigröße, Mindest-GPU.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'Lokale-LLM-Nutzer, die eine GPU für einen DeepSeek-R1 Distill über mehrere Quantisierungsstufen hinweg dimensionieren',
     affiliateDisclosure: true,
@@ -243,6 +253,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Update:** Die aktuelle Generation von DeepSeek ist DeepSeek-V4 (Flash und Pro), veröffentlicht als Open Weights unter MIT-Lizenz (Preview: 24. April 2026). Die DeepSeek-API liefert jetzt V4: Die Aliase deepseek-chat (V3-Generation) und deepseek-reasoner (R1-Generation) wurden als nach dem 24. Juli 2026 vollständig abgeschaltet angekündigt. Die R1-Distills sind eigenständige Open-Weight-Releases, waren nicht Teil dieser Ankündigung und laufen weiterhin lokal. V4 selbst ist kein Modell für Consumer-GPUs: V4-Pro hat 1,6T Parameter insgesamt (49B aktiv), das ursprüngliche V4-Flash 284B (13B aktiv). Selbst bei 4-Bit-Präzision (Parameterzahl × 0,5 Byte) benötigen allein die Gewichte grob 140 GB (Flash) bis 800 GB (Pro); die Modellkarten von DeepSeek nennen keine GPU-Anforderung. Für Reasoning auf einer einzelnen Consumer-GPU bleiben die Distills die praktische Wahl.',
         ],
       },
+      licenseLayers: {
+        id: 'r1-distill-license',
+        title: 'DeepSeek-R1-Distill-Lizenzierung: Zwei Ebenen, nicht eine',
+        content: [
+          '**DeepSeek lizenziert die R1-Serie — die Modellgewichte und dieses Repository — unter der MIT-Lizenz,** die ausdrücklich kommerzielle Nutzung, Modifikation und Distillation in andere Modelle erlaubt. Diese MIT-Freigabe gilt für DeepSeeks eigenen Code und die Fine-Tuning-Arbeit, mit der die Distills erzeugt wurden.',
+          '**Die Qwen-basierten Distills (1.5B, 7B, 14B, 32B) sind Fine-Tunes von Qwen2.5, das Alibaba unter Apache 2.0 lizenziert** — eine permissive Lizenz ohne Einschränkung des Einsatzzwecks, sodass das Aufsetzen von DeepSeeks MIT-Bedingungen keinen zusätzlichen Compliance-Aufwand erzeugt.',
+          '**Die Llama-basierten Distills (8B, 70B) sind Fine-Tunes von Metas Llama 3.1-8B und Llama 3.3-70B, die unter der Llama Community License stehen — keiner rein permissiven Lizenz.** Diese verlangt eine Namensnennung ("Built with Llama") und untersagt die Nutzung durch Produkte oder Dienste mit mehr als 700 Millionen monatlich aktiven Nutzern ohne eine separate Lizenz von Meta. DeepSeeks MIT-Hinweis gilt für den eigenen Beitrag; er hebt diese vorgelagerten Bedingungen nicht auf, und ob eine MIT-Freigabe die Lizenz eines Basismodells vollständig überschreiben kann, wurde öffentlich infrage gestellt und ist nicht abschließend geklärt. Prüfen Sie vor einem kommerziellen Einsatz des 8B- oder 70B-Distills die Bedingungen der Llama-3.1/3.3-Community-Lizenz direkt, nicht nur DeepSeeks MIT-Hinweis.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
@@ -255,6 +274,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: 'Wie viel VRAM braucht DeepSeek-R1 14B quantisiert?', a: 'Etwa 9.5 GB bei Q4_K_M (9.0 GB Ollama-Datei), ~11.5 GB bei Q5_K_M, ~13 GB bei Q6_K und ~17 GB bei Q8_0, jeweils mit einem kleinen KV-Cache. Q8_0 ist die erste Quant, die eine 16-GB-Karte überläuft.' },
           { q: 'Kann ich DeepSeek-R1 14B mit 16 GB VRAM ausführen?', a: 'Ja. Q4_K_M belegt etwa 9.5 GB und lässt rund 6 GB für längeren Kontext. Q6_K (~13 GB) ist die höchste Qualität, die noch Spielraum lässt; Q8_0 (~17 GB) passt nicht.' },
           { q: 'Welcher DeepSeek-R1 Distill passt auf eine RTX 4070 Laptop (8 GB)?', a: 'Der 7B oder 8B mit Q4_K_M (Dateien von 4.7–4.9 GB, ~5.5–6 GB VRAM). Der 14B braucht ~9.5 GB, läuft also teilweise aus dem System-RAM und wird langsamer.' },
+          { q: 'Unter welcher Lizenz stehen die DeepSeek-R1-Distills?', a: 'Zwei Ebenen. DeepSeek lizenziert seinen eigenen R1-Beitrag (Gewichte und dieses Repository) unter der MIT-Lizenz, die kommerzielle Nutzung und Distillation erlaubt. Die Qwen-basierten Distills (1.5B, 7B, 14B, 32B) sind jedoch Fine-Tunes von Qwen2.5 (Apache 2.0, keine zusätzliche Einschränkung), und die Llama-basierten Distills (8B, 70B) sind Fine-Tunes von Llama 3.1/3.3, die unter Metas Llama Community License stehen — mit Namensnennungspflicht und einem Nutzungsverbot für Produkte oder Dienste mit über 700 Millionen monatlich aktiven Nutzern ohne separate Lizenz von Meta. Prüfen Sie vor einem kommerziellen Einsatz des 8B- oder 70B-Distills die Llama Community License direkt.' },
         ],
       },
       relatedBites: {
@@ -279,7 +299,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM DeepSeek-R1 Distill 2026 : chaque quant',
     metaDescription: 'DeepSeek-R1 14B demande ~9.5 GB de VRAM en Q4_K_M et tient sur une carte 16 GB. Chaque distillation (1.5B–70B) par quant : Q8_0, FP16, fichier, GPU minimum.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'Utilisateurs de LLM locaux dimensionnant un GPU pour une distillation DeepSeek-R1 selon les niveaux de quantification',
     affiliateDisclosure: true,
@@ -376,6 +396,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Mise à jour :** la génération actuelle de DeepSeek est DeepSeek-V4 (Flash et Pro), publiée en poids ouverts sous licence MIT (préversion : 24 avril 2026). L\'API de DeepSeek sert désormais V4 : les alias deepseek-chat (génération V3) et deepseek-reasoner (génération R1) ont été annoncés comme totalement retirés après le 24 juillet 2026. Les distillés R1 sont des publications open-weight distinctes, ne faisaient pas partie de cet avis et tournent toujours en local. V4 n\'est pas un modèle pour GPU grand public : V4-Pro compte 1.6T de paramètres au total (49B actifs) et le V4-Flash d\'origine 284B (13B actifs). Même en précision 4 bits (nombre de paramètres × 0.5 octet), les seuls poids demandent environ 140 Go (Flash) à 800 Go (Pro), et les fiches de modèle de DeepSeek n\'indiquent aucune exigence GPU. Pour du raisonnement sur un seul GPU grand public, les distillés restent le choix pratique.',
         ],
       },
+      licenseLayers: {
+        id: 'r1-distill-license',
+        title: 'Licence des distillations DeepSeek-R1 : deux niveaux, pas un seul',
+        content: [
+          '**DeepSeek place la série R1 — les poids du modèle et ce dépôt — sous licence MIT,** qui autorise explicitement l\'usage commercial, la modification et la distillation vers d\'autres modèles. Cette licence MIT couvre le code propre de DeepSeek et le travail de fine-tuning ayant produit les distillations.',
+          '**Les distillations basées sur Qwen (1.5B, 7B, 14B, 32B) sont des fine-tunes de Qwen2.5, que Alibaba place sous licence Apache 2.0** — une licence permissive sans restriction de domaine d\'usage, donc superposer les conditions MIT de DeepSeek n\'ajoute aucune contrainte de conformité.',
+          '**Les distillations basées sur Llama (8B, 70B) sont des fine-tunes des modèles Llama 3.1-8B et Llama 3.3-70B de Meta, régis par la Llama Community License, qui n\'est pas une licence purement permissive.** Elle impose une attribution (« Built with Llama ») et interdit l\'usage par tout produit ou service de plus de 700 millions d\'utilisateurs actifs mensuels sans licence séparée de Meta. La mention MIT de DeepSeek couvre sa propre contribution ; elle n\'efface pas ces conditions amont, et la question de savoir si une licence MIT peut primer sur la licence d\'un modèle de base a été publiquement soulevée sans réponse définitive. Avant tout déploiement commercial de la distillation 8B ou 70B, vérifiez directement les termes de la Llama 3.1/3.3 Community License, pas seulement la mention MIT de DeepSeek.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Questions fréquentes',
@@ -388,6 +417,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: 'Combien de VRAM faut-il pour DeepSeek-R1 14B quantifié ?', a: 'Environ 9.5 GB en Q4_K_M (fichier Ollama de 9.0 GB), ~11.5 GB en Q5_K_M, ~13 GB en Q6_K et ~17 GB en Q8_0, avec un petit cache KV. Q8_0 est la première quant qui dépasse une carte de 16 GB.' },
           { q: 'Puis-je exécuter DeepSeek-R1 14B avec 16 GB de VRAM ?', a: 'Oui. Q4_K_M utilise environ 9.5 GB et laisse à peu près 6 GB pour un contexte plus long. Q6_K (~13 GB) est la meilleure qualité qui laisse encore de la marge ; Q8_0 (~17 GB) ne tient pas.' },
           { q: 'Quelle distillation DeepSeek-R1 convient à une RTX 4070 Laptop (8 GB) ?', a: 'Le 7B ou le 8B en Q4_K_M (fichiers de 4.7–4.9 GB, ~5.5–6 GB de VRAM). Le 14B demande ~9.5 GB : il tournerait en partie depuis la RAM système et ralentirait.' },
+          { q: 'Sous quelle licence sont les distillations DeepSeek-R1 ?', a: 'Deux niveaux. DeepSeek place sa propre contribution R1 (poids et ce dépôt) sous licence MIT, qui autorise l\'usage commercial et la distillation. Mais les distillations basées sur Qwen (1.5B, 7B, 14B, 32B) sont des fine-tunes de Qwen2.5 (Apache 2.0, sans restriction supplémentaire), et les distillations basées sur Llama (8B, 70B) sont des fine-tunes de Llama 3.1/3.3, régies par la Llama Community License de Meta — attribution obligatoire, et interdiction d\'usage par un produit ou service de plus de 700 millions d\'utilisateurs actifs mensuels sans licence séparée de Meta. Vérifiez la Llama Community License directement avant un déploiement commercial de la distillation 8B ou 70B.' },
         ],
       },
       relatedBites: {
@@ -412,7 +442,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM早見表 2026：全量子化',
     metaDescription: 'DeepSeek-R1 14BはQ4_K_Mで約9.5 GBのVRAMを使い、16 GBカードに収まります。全Distill（1.5B〜70B）の量子化別VRAM・ファイルサイズ・最小GPUを掲載。',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: '量子化レベルを横断してDeepSeek-R1 Distill向けにGPUをサイジングするローカルLLMユーザー',
     affiliateDisclosure: true,
@@ -509,6 +539,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**更新:** DeepSeekの現在の世代はDeepSeek-V4(FlashおよびPro)で、MITライセンスのオープンウェイトとして公開されています(プレビュー版は2026年4月24日)。DeepSeekのAPIは現在V4を提供しており、deepseek-chat(V3世代)とdeepseek-reasoner(R1世代)のエイリアスは2026年7月24日以降に完全に廃止されると告知されました。R1の蒸留モデルは独立したオープンウェイトのリリースで、この告知の対象ではなく、引き続きローカルで動作します。V4自体はコンシューマーGPU向けのモデルではありません。V4-Proは総パラメータ1.6T(アクティブ49B)、当初のV4-Flashは284B(アクティブ13B)で、4ビット精度(パラメータ数×0.5バイト)でも重みだけでおよそ140 GB(Flash)から800 GB(Pro)が必要です。DeepSeekのモデルカードにGPU要件の記載はありません。コンシューマーGPU1枚での推論には、引き続き蒸留モデルが現実的な選択肢です。',
         ],
       },
+      licenseLayers: {
+        id: 'r1-distill-license',
+        title: 'DeepSeek-R1 Distillのライセンス:1層ではなく2層',
+        content: [
+          '**DeepSeekはR1シリーズ(モデルの重みとこのリポジトリ)をMITライセンスで公開しています。** これは商用利用、改変、他モデルへのdistillationを明示的に許可するものです。このMITライセンスはDeepSeek自身のコードと、distillを作成するためのfine-tuning作業に適用されます。',
+          '**Qwenベースのdistill(1.5B、7B、14B、32B)はQwen2.5のfine-tuneで、AlibabaはこれをApache 2.0ライセンスで公開しています。** Apache 2.0は用途を制限しないpermissiveなライセンスのため、DeepSeekのMIT条件を重ねてもコンプライアンス上の追加負担は発生しません。',
+          '**Llamaベースのdistill(8B、70B)はMetaのLlama 3.1-8BおよびLlama 3.3-70Bのfine-tuneで、単純なpermissiveライセンスではないLlama Community Licenseの対象です。** このライセンスは「Built with Llama」の表示義務を課し、月間アクティブユーザーが7億人を超える製品・サービスについてはMetaから別途ライセンスを取得しない限り利用を禁止しています。DeepSeekのMIT表記は自社の貢献分に適用されるものであり、この上流のライセンス条件を無効化するものではありません。MITライセンスがベースモデル自体のライセンスを完全に上書きできるかどうかは公に疑問視されており、決着していません。8Bまたは70Bのdistillを商用で展開する前に、DeepSeekのMIT表記だけでなくLlama 3.1/3.3 Community Licenseの条件を直接確認してください。',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'よくある質問',
@@ -521,6 +560,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: '量子化したDeepSeek-R1 14BのVRAMはどれくらい必要ですか？', a: 'Q4_K_Mで約9.5 GB（Ollamaファイル9.0 GB）、Q5_K_Mで~11.5 GB、Q6_Kで~13 GB、Q8_0で~17 GBです（いずれも小さめのKVキャッシュを含む）。16 GBカードを最初に超えるのがQ8_0です。' },
           { q: '16 GBのVRAMでDeepSeek-R1 14Bを実行できますか？', a: 'はい。Q4_K_Mは約9.5 GBで、長めのコンテキスト用に約6 GBが残ります。余裕を残せる最高品質はQ6_K（~13 GB）で、Q8_0（~17 GB）は収まりません。' },
           { q: 'RTX 4070 Laptop（8 GB）で動くDeepSeek-R1 Distillはどれですか？', a: 'Q4_K_Mの7Bまたは8B（ファイル4.7〜4.9 GB、VRAM ~5.5〜6 GB）です。14Bは~9.5 GB必要なため、一部がシステムRAMで動作し、遅くなります。' },
+          { q: 'DeepSeek-R1のdistillはどのライセンスですか?', a: '2層構造です。DeepSeekは自社のR1への貢献分(重みとこのリポジトリ)をMITライセンスで公開しており、商用利用とdistillationを許可しています。ただしQwenベースのdistill(1.5B、7B、14B、32B)はQwen2.5(Apache 2.0、追加制限なし)のfine-tuneで、Llamaベースのdistill(8B、70B)はLlama 3.1/3.3のfine-tuneであり、MetaのLlama Community License(表示義務あり、月間アクティブユーザー7億人超の製品・サービスはMetaからの別ライセンスが必要)が適用されます。8Bまたは70Bのdistillを商用利用する前に、Llama Community Licenseを直接確認してください。' },
         ],
       },
       relatedBites: {
@@ -545,7 +585,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill 显存速查表 2026：全量化',
     metaDescription: 'DeepSeek-R1 14B 在 Q4_K_M 下约需 9.5 GB 显存，可装入 16 GB 显卡。按量化等级列出全部 distill（1.5B–70B）的显存、文件大小和最低 GPU。',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: '需要为跨量化等级的 DeepSeek-R1 distill 选配 GPU 的本地 LLM 用户',
     affiliateDisclosure: true,
@@ -642,6 +682,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**更新：** DeepSeek 当前一代是 DeepSeek-V4（Flash 和 Pro），以 MIT 许可的开放权重发布（预览版：2026 年 4 月 24 日）。DeepSeek 的 API 现在提供 V4：deepseek-chat（V3 世代）和 deepseek-reasoner（R1 世代）别名已宣布在 2026 年 7 月 24 日之后完全停用。R1 蒸馏版是独立的开放权重发布，不在该通知范围内，仍可在本地运行。V4 本身并不是消费级 GPU 模型：V4-Pro 总参数 1.6T（激活 49B），最初的 V4-Flash 为 284B（激活 13B），即使按 4 位精度（参数量 × 0.5 字节）计算，仅权重就大约需要 140 GB（Flash）到 800 GB（Pro），而且 DeepSeek 的模型卡未列出 GPU 要求。若要在单张消费级 GPU 上做推理，蒸馏版仍是务实之选。',
         ],
       },
+      licenseLayers: {
+        id: 'r1-distill-license',
+        title: 'DeepSeek-R1 蒸馏版的许可:两层,而非一层',
+        content: [
+          '**DeepSeek 将 R1 系列——模型权重和本仓库——以 MIT 许可发布,** 明确允许商业使用、修改以及蒸馏到其他模型。该 MIT 许可适用于 DeepSeek 自身的代码以及生成这些蒸馏版所做的微调工作。',
+          '**基于 Qwen 的蒸馏版(1.5B、7B、14B、32B)是 Qwen2.5 的微调版本,阿里巴巴以 Apache 2.0 许可发布 Qwen2.5**——这是一种不限制使用场景的宽松许可,因此叠加 DeepSeek 的 MIT 条款不会带来额外的合规负担。',
+          '**基于 Llama 的蒸馏版(8B、70B)是 Meta 的 Llama 3.1-8B 和 Llama 3.3-70B 的微调版本,受 Llama Community License 约束,而非单纯的宽松许可。** 该许可要求署名("Built with Llama"),并禁止月活跃用户超过 7 亿的产品或服务在未从 Meta 获得单独许可的情况下使用该模型。DeepSeek 的 MIT 标注仅覆盖其自身的贡献部分,并不会抹去这些上游条款;MIT 许可能否完全覆盖基础模型自身的许可,这一问题已被公开质疑,尚无权威结论。在将 8B 或 70B 蒸馏版用于商业部署之前,应直接核查 Llama 3.1/3.3 Community License 的条款,而不仅是 DeepSeek 的 MIT 标注。',
+        ],
+      },
       faq: {
         id: 'faq',
         title: '常见问题',
@@ -654,6 +703,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: '量化后的 DeepSeek-R1 14B 需要多少显存？', a: 'Q4_K_M 约 9.5 GB（Ollama 文件 9.0 GB），Q5_K_M 约 11.5 GB，Q6_K 约 13 GB，Q8_0 约 17 GB，均含少量 KV 缓存。Q8_0 是第一个超出 16 GB 显卡的量化等级。' },
           { q: '我能用 16 GB 显存运行 DeepSeek-R1 14B 吗？', a: '可以。Q4_K_M 约占用 9.5 GB，可为更长的上下文留出约 6 GB。Q6_K（~13 GB）是仍留有余量的最高画质；Q8_0（~17 GB）装不下。' },
           { q: '哪个 DeepSeek-R1 distill 适合 RTX 4070 Laptop（8 GB）？', a: 'Q4_K_M 的 7B 或 8B（文件 4.7–4.9 GB，显存约 5.5–6 GB）。14B 需要约 9.5 GB，因此会部分依赖系统内存运行并变慢。' },
+          { q: 'DeepSeek-R1 蒸馏版采用什么许可？', a: '两层许可。DeepSeek 将自身对 R1 的贡献(权重和本仓库)以 MIT 许可发布，允许商业使用和蒸馏。但基于 Qwen 的蒸馏版(1.5B、7B、14B、32B)是 Qwen2.5(Apache 2.0，无额外限制)的微调版本，基于 Llama 的蒸馏版(8B、70B)是 Llama 3.1/3.3 的微调版本，受 Meta 的 Llama Community License 约束——需要署名，且月活跃用户超过 7 亿的产品或服务未获 Meta 单独许可不得使用。在将 8B 或 70B 蒸馏版用于商业部署前，请直接核查 Llama Community License。' },
         ],
       },
       relatedBites: {
@@ -678,7 +728,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM de DeepSeek-R1 Distill 2026: cada cuant.',
     metaDescription: 'DeepSeek-R1 14B necesita ~9.5 GB de VRAM en Q4_K_M y cabe en una tarjeta de 16 GB. Cada distill (1.5B–70B) por cuantización: Q8_0, FP16, archivo y GPU mínima.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'Usuarios de LLM locales que dimensionan una GPU para un distill de DeepSeek-R1 según los niveles de cuantización',
     affiliateDisclosure: true,
@@ -775,6 +825,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Actualización:** la generación actual de DeepSeek es DeepSeek-V4 (Flash y Pro), publicada como pesos abiertos con licencia MIT (versión preliminar: 24 de abril de 2026). La API de DeepSeek ya sirve V4: los alias deepseek-chat (generación V3) y deepseek-reasoner (generación R1) se anunciaron como totalmente retirados después del 24 de julio de 2026. Los destilados de R1 son lanzamientos de pesos abiertos independientes, no formaban parte de ese aviso y siguen ejecutándose en local. V4 no es un modelo para GPU de consumo: V4-Pro tiene 1.6T de parámetros en total (49B activos) y el V4-Flash original 284B (13B activos). Incluso con precisión de 4 bits (parámetros × 0.5 bytes), solo los pesos requieren unos 140 GB (Flash) a 800 GB (Pro), y las fichas de modelo de DeepSeek no indican ningún requisito de GPU. Para razonamiento en una sola GPU de consumo, los destilados siguen siendo la opción práctica.',
         ],
       },
+      licenseLayers: {
+        id: 'r1-distill-license',
+        title: 'Licencia de los destilados DeepSeek-R1: dos capas, no una',
+        content: [
+          '**DeepSeek publica la serie R1 —los pesos del modelo y este repositorio— bajo la licencia MIT,** que permite explícitamente el uso comercial, la modificación y la destilación hacia otros modelos. Esa licencia MIT cubre el código propio de DeepSeek y el trabajo de fine-tuning con el que se produjeron los destilados.',
+          '**Los destilados basados en Qwen (1.5B, 7B, 14B, 32B) son fine-tunes de Qwen2.5, que Alibaba licencia bajo Apache 2.0** —una licencia permisiva sin restricciones de uso, por lo que superponer las condiciones MIT de DeepSeek no añade ninguna carga de cumplimiento adicional.',
+          '**Los destilados basados en Llama (8B, 70B) son fine-tunes de Llama 3.1-8B y Llama 3.3-70B de Meta, regidos por la Llama Community License, que no es una licencia puramente permisiva.** Esa licencia exige atribución ("Built with Llama") y prohíbe su uso por cualquier producto o servicio con más de 700 millones de usuarios activos mensuales sin una licencia separada de Meta. El aviso MIT de DeepSeek cubre su propia contribución; no elimina estas condiciones previas, y si una licencia MIT puede anular por completo la licencia de un modelo base es una cuestión planteada públicamente y sin resolución definitiva. Antes de desplegar comercialmente el destilado de 8B o 70B, verifica directamente los términos de la Llama 3.1/3.3 Community License, no solo el aviso MIT de DeepSeek.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Preguntas frecuentes',
@@ -787,6 +846,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: '¿Cuánta VRAM necesita DeepSeek-R1 14B cuantizado?', a: 'Unos 9.5 GB en Q4_K_M (archivo de Ollama de 9.0 GB), ~11.5 GB en Q5_K_M, ~13 GB en Q6_K y ~17 GB en Q8_0, cada uno con una caché KV modesta. Q8_0 es la primera cuantización que desborda una tarjeta de 16 GB.' },
           { q: '¿Puedo ejecutar DeepSeek-R1 14B con 16 GB de VRAM?', a: 'Sí. Q4_K_M usa unos 9.5 GB y deja aproximadamente 6 GB para un contexto más largo. Q6_K (~13 GB) es la mayor calidad que aún deja margen; Q8_0 (~17 GB) no cabe.' },
           { q: '¿Qué distill de DeepSeek-R1 cabe en una RTX 4070 Laptop (8 GB)?', a: 'El de 7B o el de 8B en Q4_K_M (archivos de 4.7–4.9 GB, ~5.5–6 GB de VRAM). El 14B necesita ~9.5 GB, así que se ejecutaría en parte desde la RAM del sistema y iría más lento.' },
+          { q: '¿Qué licencia tienen los destilados de DeepSeek-R1?', a: 'Dos capas. DeepSeek licencia su propia contribución a R1 (pesos y este repositorio) bajo la licencia MIT, que permite el uso comercial y la destilación. Pero los destilados basados en Qwen (1.5B, 7B, 14B, 32B) son fine-tunes de Qwen2.5 (Apache 2.0, sin restricciones adicionales), y los destilados basados en Llama (8B, 70B) son fine-tunes de Llama 3.1/3.3, regidos por la Llama Community License de Meta —con atribución obligatoria y sin uso permitido para productos o servicios con más de 700 millones de usuarios activos mensuales sin licencia separada de Meta. Verifica la Llama Community License directamente antes de desplegar comercialmente el destilado de 8B o 70B.' },
         ],
       },
       relatedBites: {
@@ -811,7 +871,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM do DeepSeek-R1 Distill 2026: cada quant.',
     metaDescription: 'DeepSeek-R1 14B precisa de ~9.5 GB de VRAM no Q4_K_M e cabe em uma placa de 16 GB. Cada distill (1.5B–70B) por quant: Q8_0, FP16, arquivo e GPU mínima.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'Usuários de LLMs locais dimensionando uma GPU para um distill do DeepSeek-R1 entre níveis de quantização',
     affiliateDisclosure: true,
@@ -908,6 +968,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Atualização:** a geração atual da DeepSeek é o DeepSeek-V4 (Flash e Pro), publicado como pesos abertos sob licença MIT (prévia: 24 de abril de 2026). A API da DeepSeek agora serve o V4: os aliases deepseek-chat (geração V3) e deepseek-reasoner (geração R1) foram anunciados como totalmente desativados após 24 de julho de 2026. Os destilados do R1 são lançamentos de pesos abertos independentes, não faziam parte desse aviso e continuam rodando localmente. O V4 em si não é um modelo para GPU de consumo: o V4-Pro tem 1.6T de parâmetros no total (49B ativos) e o V4-Flash original 284B (13B ativos). Mesmo com precisão de 4 bits (parâmetros × 0.5 byte), só os pesos exigem cerca de 140 GB (Flash) a 800 GB (Pro), e as fichas de modelo da DeepSeek não listam nenhum requisito de GPU. Para raciocínio em uma única GPU de consumo, os destilados continuam sendo a escolha prática.',
         ],
       },
+      licenseLayers: {
+        id: 'r1-distill-license',
+        title: 'Licença dos destilados DeepSeek-R1: duas camadas, não uma',
+        content: [
+          '**A DeepSeek publica a série R1 — os pesos do modelo e este repositório — sob a licença MIT,** que permite explicitamente uso comercial, modificação e destilação para outros modelos. Essa licença MIT cobre o código da própria DeepSeek e o trabalho de fine-tuning usado para produzir os destilados.',
+          '**Os destilados baseados em Qwen (1.5B, 7B, 14B, 32B) são fine-tunes do Qwen2.5, que a Alibaba licencia sob Apache 2.0** — uma licença permissiva sem restrição de uso, então sobrepor os termos MIT da DeepSeek não cria nenhuma carga extra de conformidade.',
+          '**Os destilados baseados em Llama (8B, 70B) são fine-tunes do Llama 3.1-8B e do Llama 3.3-70B da Meta, regidos pela Llama Community License, que não é uma licença puramente permissiva.** Ela exige atribuição ("Built with Llama") e proíbe o uso por qualquer produto ou serviço com mais de 700 milhões de usuários ativos mensais sem uma licença separada da Meta. O aviso MIT da DeepSeek cobre apenas sua própria contribuição; ele não anula esses termos anteriores, e se uma licença MIT pode sobrepor por completo a licença de um modelo-base é uma questão levantada publicamente e sem resolução definitiva. Antes de implantar comercialmente o destilado de 8B ou 70B, verifique diretamente os termos da Llama 3.1/3.3 Community License, não apenas o aviso MIT da DeepSeek.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Perguntas frequentes',
@@ -920,6 +989,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: 'Quanta VRAM o DeepSeek-R1 14B quantizado precisa?', a: 'Cerca de 9.5 GB no Q4_K_M (arquivo do Ollama de 9.0 GB), ~11.5 GB no Q5_K_M, ~13 GB no Q6_K e ~17 GB no Q8_0, cada um com um cache KV modesto. O Q8_0 é a primeira quantização que estoura uma placa de 16 GB.' },
           { q: 'Posso rodar o DeepSeek-R1 14B com 16 GB de VRAM?', a: 'Sim. O Q4_K_M usa cerca de 9.5 GB e deixa aproximadamente 6 GB para um contexto maior. O Q6_K (~13 GB) é a maior qualidade que ainda deixa folga; o Q8_0 (~17 GB) não cabe.' },
           { q: 'Qual distill do DeepSeek-R1 cabe em uma RTX 4070 Laptop (8 GB)?', a: 'O de 7B ou o de 8B em Q4_K_M (arquivos de 4.7–4.9 GB, ~5.5–6 GB de VRAM). O 14B precisa de ~9.5 GB, então rodaria em parte a partir da RAM do sistema e ficaria mais lento.' },
+          { q: 'Qual é a licença dos destilados DeepSeek-R1?', a: 'Duas camadas. A DeepSeek licencia sua própria contribuição ao R1 (pesos e este repositório) sob a licença MIT, que permite uso comercial e destilação. Mas os destilados baseados em Qwen (1.5B, 7B, 14B, 32B) são fine-tunes do Qwen2.5 (Apache 2.0, sem restrição adicional), e os destilados baseados em Llama (8B, 70B) são fine-tunes do Llama 3.1/3.3, regidos pela Llama Community License da Meta — com atribuição obrigatória e sem uso permitido por produtos ou serviços com mais de 700 milhões de usuários ativos mensais sem licença separada da Meta. Verifique a Llama Community License diretamente antes de implantar comercialmente o destilado de 8B ou 70B.' },
         ],
       },
       relatedBites: {
@@ -944,7 +1014,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'جدول ⁨VRAM⁩ لـ ⁨DeepSeek-R1 Distill 2026⁩',
     metaDescription: 'يحتاج ⁨DeepSeek-R1 14B⁩ إلى نحو ⁨9.5 GB⁩ من ⁨VRAM⁩ عند ⁨Q4_K_M⁩ ويتسع في بطاقة ⁨16 GB⁩. كل نماذج ⁨distill⁩ (من ⁨1.5B⁩ إلى ⁨70B⁩) حسب التكميم: ⁨VRAM⁩ وحجم الملف وأدنى ⁨GPU⁩.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'مستخدمو نماذج LLM المحلية الذين يحددون حجم GPU لنموذج DeepSeek-R1 distill عبر مستويات التكميم',
     affiliateDisclosure: true,
@@ -1041,6 +1111,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**تحديث:** الجيل الحالي من DeepSeek هو DeepSeek-V4 (Flash وPro)، صدر بأوزان مفتوحة بترخيص MIT (النسخة التجريبية: 24 أبريل 2026). تقدّم واجهة DeepSeek البرمجية الآن V4: فقد أُعلن أن الاسمين المستعارين deepseek-chat (جيل V3) وdeepseek-reasoner (جيل R1) سيُوقفان نهائيًا بعد 24 يوليو 2026. نماذج R1 المُقطّرة إصدارات مستقلة بأوزان مفتوحة، ولم تكن ضمن هذا الإعلان، وما زالت تعمل محليًا. أما V4 نفسه فليس نموذجًا لبطاقات الرسوميات الاستهلاكية: يضم V4-Pro إجمالي 1.6T معامل (49B نشط)، ويضم V4-Flash الأصلي 284B (13B نشط)، وحتى بدقة 4 بت (عدد المعاملات × 0.5 بايت) تحتاج الأوزان وحدها إلى نحو 140 جيجابايت (Flash) حتى 800 جيجابايت (Pro)، ولا تذكر بطاقات نماذج DeepSeek أي متطلبات لوحدة GPU. وللاستدلال على بطاقة استهلاكية واحدة تبقى النماذج المُقطّرة الخيار العملي.',
         ],
       },
+      licenseLayers: {
+        id: 'r1-distill-license',
+        title: 'ترخيص نماذج DeepSeek-R1 المُقطّرة: طبقتان، لا طبقة واحدة',
+        content: [
+          '**تُرخّص DeepSeek سلسلة R1 — أوزان النموذج وهذا المستودع — بموجب ترخيص MIT،** الذي يسمح صريحًا بالاستخدام التجاري والتعديل والتقطير إلى نماذج أخرى. يشمل ترخيص MIT هذا كود DeepSeek نفسه وعمل الضبط الدقيق (fine-tuning) الذي أنتج هذه النماذج المُقطّرة.',
+          '**النماذج المُقطّرة المبنية على Qwen (1.5B، 7B، 14B، 32B) هي ضبط دقيق لـ Qwen2.5، الذي ترخّصه Alibaba بموجب Apache 2.0** — ترخيص متسامح لا يقيّد مجال الاستخدام، فتكديس شروط MIT الخاصة بـ DeepSeek فوقه لا يضيف أي عبء امتثال إضافي.',
+          '**النماذج المُقطّرة المبنية على Llama (8B، 70B) هي ضبط دقيق لـ Llama 3.1-8B وLlama 3.3-70B من Meta، وتخضع لترخيص Llama Community License، وهو ليس ترخيصًا متسامحًا بحتًا.** يفرض هذا الترخيص إسنادًا صريحًا ("Built with Llama") ويمنع استخدامه من قِبل أي منتج أو خدمة يتجاوز عدد مستخدميها النشطين شهريًا 700 مليون مستخدم دون ترخيص مستقل من Meta. إشعار MIT من DeepSeek يغطي مساهمتها الخاصة فقط؛ وهو لا يُلغي هذه الشروط السابقة، وما إذا كان ترخيص MIT يمكنه تجاوز ترخيص النموذج الأساسي بالكامل هو أمر أُثير علنًا ولم يُحسم بشكل نهائي. قبل أي استخدام تجاري للنموذج المُقطّر 8B أو 70B، يجب مراجعة شروط Llama 3.1/3.3 Community License مباشرة، لا إشعار MIT من DeepSeek فقط.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
@@ -1053,6 +1132,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: 'كم ⁨VRAM⁩ يحتاج ⁨DeepSeek-R1 14B⁩ بعد التكميم؟', a: 'نحو ⁨9.5 GB⁩ عند ⁨Q4_K_M⁩ (ملف ⁨Ollama⁩ بحجم ⁨9.0 GB⁩)، و⁨~11.5 GB⁩ عند ⁨Q5_K_M⁩، و⁨~13 GB⁩ عند ⁨Q6_K⁩، و⁨~17 GB⁩ عند ⁨Q8_0⁩، وكلها مع ذاكرة ⁨KV⁩ صغيرة. يُعد ⁨Q8_0⁩ أول تكميم يتجاوز بطاقة ⁨16 GB⁩.' },
           { q: 'هل يمكنني تشغيل ⁨DeepSeek-R1 14B⁩ على ⁨16 GB⁩ من ⁨VRAM⁩؟', a: 'نعم. يستخدم ⁨Q4_K_M⁩ نحو ⁨9.5 GB⁩ ويترك قرابة ⁨6 GB⁩ لسياق أطول. ويُعد ⁨Q6_K⁩ (⁨~13 GB⁩) أعلى جودة لا تزال تترك هامشًا؛ أما ⁨Q8_0⁩ (⁨~17 GB⁩) فلا يتسع.' },
           { q: 'أي ⁨distill⁩ من ⁨DeepSeek-R1⁩ يناسب ⁨RTX 4070 Laptop⁩ (⁨8 GB⁩)؟', a: 'نموذج ⁨7B⁩ أو ⁨8B⁩ عند ⁨Q4_K_M⁩ (ملفات ⁨4.7–4.9 GB⁩، و⁨VRAM⁩ بنحو ⁨5.5–6 GB⁩). يحتاج ⁨14B⁩ إلى ⁨~9.5 GB⁩، لذا سيعمل جزء منه من ذاكرة النظام ويصبح أبطأ.' },
+          { q: 'ما ترخيص نماذج DeepSeek-R1 المُقطّرة؟', a: 'طبقتان. تُرخّص DeepSeek مساهمتها الخاصة في R1 (الأوزان وهذا المستودع) بموجب ترخيص MIT، الذي يسمح بالاستخدام التجاري والتقطير. لكن النماذج المُقطّرة المبنية على Qwen (1.5B، 7B، 14B، 32B) هي ضبط دقيق لـ Qwen2.5 (برخصة Apache 2.0، دون قيود إضافية)، والنماذج المُقطّرة المبنية على Llama (8B، 70B) هي ضبط دقيق لـ Llama 3.1/3.3، وتخضع لترخيص Llama Community License من Meta — الذي يتطلب إسنادًا ويمنع استخدامها من قِبل منتج أو خدمة يتجاوز مستخدموها النشطون شهريًا 700 مليون دون ترخيص مستقل من Meta. راجع ترخيص Llama Community مباشرة قبل أي استخدام تجاري للنموذج المُقطّر 8B أو 70B.' },
         ],
       },
       relatedBites: {
@@ -1077,7 +1157,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM 치트시트 2026',
     metaDescription: 'DeepSeek-R1 14B는 Q4_K_M에서 약 9.5 GB VRAM이 필요해 16 GB 카드에 들어갑니다. 모든 distill(1.5B–70B)의 양자화별 VRAM, 파일 크기, 최소 GPU를 정리했습니다.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: '양자화 수준 전반에 걸쳐 DeepSeek-R1 distill용 GPU를 산정하는 로컬 LLM 사용자',
     affiliateDisclosure: true,
@@ -1174,6 +1254,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**업데이트:** DeepSeek의 현재 세대는 DeepSeek-V4(Flash 및 Pro)이며, MIT 라이선스의 오픈 웨이트로 공개되었습니다(프리뷰: 2026년 4월 24일). DeepSeek API는 이제 V4를 제공합니다. deepseek-chat(V3 세대)과 deepseek-reasoner(R1 세대) 별칭은 2026년 7월 24일 이후 완전히 폐지된다고 공지되었습니다. R1 증류 모델은 독립적인 오픈 웨이트 릴리스로서 해당 공지의 대상이 아니었으며 여전히 로컬에서 실행됩니다. V4 자체는 소비자용 GPU 모델이 아닙니다. V4-Pro는 총 1.6T 파라미터(활성 49B), 최초의 V4-Flash는 284B(활성 13B)이며, 4비트 정밀도(파라미터 수 × 0.5바이트)로도 가중치만 약 140 GB(Flash)에서 800 GB(Pro)가 필요하고, DeepSeek 모델 카드에는 GPU 요구 사항이 명시되어 있지 않습니다. 소비자용 GPU 한 장에서의 추론에는 증류 모델이 여전히 현실적인 선택입니다.',
         ],
       },
+      licenseLayers: {
+        id: 'r1-distill-license',
+        title: 'DeepSeek-R1 Distill 라이선스: 하나가 아니라 두 개의 층',
+        content: [
+          '**DeepSeek는 R1 시리즈(모델 가중치와 이 저장소)를 MIT 라이선스로 공개합니다.** 이는 상업적 사용, 수정, 그리고 다른 모델로의 distillation을 명시적으로 허용합니다. 이 MIT 라이선스는 DeepSeek 자체 코드와 distill을 만들기 위한 fine-tuning 작업에 적용됩니다.',
+          '**Qwen 기반 distill(1.5B, 7B, 14B, 32B)은 Qwen2.5의 fine-tune이며, Alibaba는 Qwen2.5를 Apache 2.0 라이선스로 공개합니다.** Apache 2.0은 사용 분야를 제한하지 않는 permissive 라이선스이므로, DeepSeek의 MIT 조건을 그 위에 적용해도 추가적인 컴플라이언스 부담이 생기지 않습니다.',
+          '**Llama 기반 distill(8B, 70B)은 Meta의 Llama 3.1-8B 및 Llama 3.3-70B의 fine-tune이며, 단순한 permissive 라이선스가 아닌 Llama Community License의 적용을 받습니다.** 이 라이선스는 "Built with Llama" 표기를 의무화하며, 월간 활성 사용자(MAU)가 7억 명을 초과하는 제품이나 서비스는 Meta로부터 별도 라이선스를 받지 않으면 사용할 수 없도록 금지합니다. DeepSeek의 MIT 표기는 자사의 기여분에만 적용되며, 이러한 상위 라이선스 조건을 무효화하지 않습니다. MIT 라이선스가 기반 모델 자체의 라이선스를 완전히 대체할 수 있는지는 공개적으로 의문이 제기되었으며 아직 명확히 해결되지 않았습니다. 8B 또는 70B distill을 상업적으로 배포하기 전에는 DeepSeek의 MIT 표기뿐만 아니라 Llama 3.1/3.3 Community License 조항을 직접 확인해야 합니다.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: '자주 묻는 질문',
@@ -1186,6 +1275,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: '양자화된 DeepSeek-R1 14B에는 VRAM이 얼마나 필요합니까?', a: 'Q4_K_M에서 약 9.5 GB(Ollama 파일 9.0 GB), Q5_K_M에서 ~11.5 GB, Q6_K에서 ~13 GB, Q8_0에서 ~17 GB이며 모두 작은 KV 캐시를 포함합니다. 16 GB 카드를 처음 넘는 양자화는 Q8_0입니다.' },
           { q: '16 GB VRAM으로 DeepSeek-R1 14B를 실행할 수 있습니까?', a: '예. Q4_K_M은 약 9.5 GB를 사용하며 더 긴 컨텍스트를 위해 약 6 GB가 남습니다. 여유를 남기는 최고 품질은 Q6_K(~13 GB)이고, Q8_0(~17 GB)은 들어가지 않습니다.' },
           { q: 'RTX 4070 Laptop(8 GB)에는 어떤 DeepSeek-R1 distill이 맞습니까?', a: 'Q4_K_M의 7B 또는 8B(파일 4.7–4.9 GB, VRAM ~5.5–6 GB)입니다. 14B는 ~9.5 GB가 필요하므로 일부가 시스템 RAM에서 실행되어 느려집니다.' },
+          { q: 'DeepSeek-R1 distill은 어떤 라이선스를 사용합니까?', a: '두 개의 층으로 구성됩니다. DeepSeek는 R1에 대한 자체 기여분(가중치와 이 저장소)을 MIT 라이선스로 공개하며, 이는 상업적 사용과 distillation을 허용합니다. 그러나 Qwen 기반 distill(1.5B, 7B, 14B, 32B)은 Qwen2.5(Apache 2.0, 추가 제한 없음)의 fine-tune이며, Llama 기반 distill(8B, 70B)은 Llama 3.1/3.3의 fine-tune으로 Meta의 Llama Community License의 적용을 받습니다. 이 라이선스는 표기를 의무화하며 월간 활성 사용자 7억 명을 초과하는 제품이나 서비스는 Meta의 별도 라이선스 없이 사용할 수 없습니다. 8B 또는 70B distill을 상업적으로 배포하기 전에는 Llama Community License를 직접 확인하십시오.' },
         ],
       },
       relatedBites: {
