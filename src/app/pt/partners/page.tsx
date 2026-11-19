@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 import { partnersContent } from '@/lib/partners/content'
 import { PartnersPage } from '@/components/PartnersPage'
 
@@ -14,6 +14,19 @@ export async function generateMetadata(): Promise<Metadata> {
     description: c.metaDescription,
     alternates: generateAlternates('/partners', 'pt', true, undefined, [...PATH_PREFIX_LANGS]),
     robots: { index: true, follow: true },
+    openGraph: {
+      title: c.metaTitle,
+      description: c.metaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+      ...ogLocale('pt'),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: c.metaTitle,
+      description: c.metaDescription,
+    },
   }
 }
 
