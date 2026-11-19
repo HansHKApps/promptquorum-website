@@ -522,6 +522,7 @@ import { article as a_askimo_review } from './articles/askimo-review'
 import { article as a_myagents_review } from './articles/myagents-review'
 import { article as a_orca_review } from './articles/orca-review'
 import { article as a_reactive_resume_review } from './articles/reactive-resume-review'
+import { article as a_paperclip_review } from './articles/paperclip-review'
 import { article as a_next_ai_draw_io_review } from './articles/next-ai-draw-io-review'
 import { article as a_oriveo_review } from './articles/oriveo-review'
 import { article as a_open_paper_review } from './articles/open-paper-review'
@@ -1086,6 +1087,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'myagents-review':                                     a_myagents_review,
   'orca-review':                                         a_orca_review,
   'reactive-resume-review':                              a_reactive_resume_review,
+  'paperclip-review':                                    a_paperclip_review,
   'next-ai-draw-io-review':                              a_next_ai_draw_io_review,
   'oriveo-review':                                       a_oriveo_review,
   'open-paper-review':                                   a_open_paper_review,

@@ -4402,7 +4402,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "AutoGen": {
@@ -4991,6 +4991,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "paperclip-review",
+        "title": "Paperclip Review: Open-Source Control Plane for AI Agent Teams",
+        "url": "/power-local-llm/paperclip-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
@@ -5052,17 +5060,9 @@
         "url": "/power-local-llm/skales-review",
         "dateModified": "2026-11-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
-        "dateModified": "2026-11-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "OpenHuman": {
@@ -8770,7 +8770,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 24,
+    "totalCount": 26,
     "capped": true
   },
   "MaxKB": {
@@ -11072,9 +11072,17 @@
         "url": "/power-local-llm/openwork-review",
         "dateModified": "2026-11-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "paperclip-review",
+        "title": "Paperclip Review: Open-Source Control Plane for AI Agent Teams",
+        "url": "/power-local-llm/paperclip-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "AIRI": {
@@ -12668,9 +12676,17 @@
         "url": "/power-local-llm/orca-review",
         "dateModified": "2026-11-19",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "paperclip-review",
+        "title": "Paperclip Review: Open-Source Control Plane for AI Agent Teams",
+        "url": "/power-local-llm/paperclip-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Orca": {
@@ -12695,6 +12711,20 @@
         "title": "Reactive Resume Review: Free Open-Source Resume Builder",
         "url": "/power-local-llm/reactive-resume-review",
         "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Paperclip": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "paperclip-review",
+        "title": "Paperclip Review: Open-Source Control Plane for AI Agent Teams",
+        "url": "/power-local-llm/paperclip-review",
+        "dateModified": "2026-11-19",
         "tier": "about"
       }
     ],
@@ -13671,6 +13701,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "paperclip-review",
+        "title": "Paperclip Review: Open-Source Control Plane for AI Agent Teams",
+        "url": "/power-local-llm/paperclip-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "alpaca-review",
         "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
         "url": "/power-local-llm/alpaca-review",
@@ -13692,25 +13730,9 @@
         "url": "/power-local-llm/docling-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "fablecut-review",
-        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
-        "url": "/power-local-llm/fablecut-review",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "inbox-zero-review",
-        "title": "Inbox Zero Review: AI Email Assistant for Gmail and Outlook",
-        "url": "/power-local-llm/inbox-zero-review",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 284,
+    "totalCount": 286,
     "capped": true
   },
   "Qdrant": {
