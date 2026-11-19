@@ -10,10 +10,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Best Ollama Models Under 4 GB VRAM (2026)',
     metaDescription: 'Phi-4 Mini and Qwen3 4B (2.5 GB each), Qwen3.5 2B (1.9 GB) and Gemma 3 1B (0.8 GB) fit in 4 GB VRAM. Llama 3.1 8B (4.9 GB) does not. Includes 4-bit tags.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-17',
-    last_full_refresh: '2026-10-17',
+    next_refresh_due: '2027-05-19',
+    last_full_refresh: '2026-11-19',
     current_models_mentioned: ['Phi-4 Mini', 'Qwen3 4B', 'Llama 3.2 3B', 'Qwen3.5 2B', 'Qwen3 1.7B', 'Gemma 3 1B', 'Gemma 4 E2B'],
     current_hardware_mentioned: ['RTX 3050 4 GB', 'GTX 1650 Super 4 GB', 'RX 6500 XT 4 GB'],
     educationalLevel: 'Intermediate',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen3.5 2B: newest family, text and image input (1.9 GB at q4_K_M)',
           'Gemma 3 1B: smallest option (0.8 GB)',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
       de: {
         question: 'Beste Ollama-Modelle für 4 GB VRAM?',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen3.5 2B: neueste Familie, Text- und Bildeingabe (1,9 GB bei q4_K_M)',
           'Gemma 3 1B: kleinste Option (0,8 GB)',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
       fr: {
         question: 'Meilleurs modèles Ollama pour 4 Go de VRAM ?',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen3.5 2B : famille la plus récente, texte et image (1,9 Go en q4_K_M)',
           'Gemma 3 1B : l\'option la plus petite (0,8 Go)',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
       ja: {
         question: '4 GB VRAM向け最良Ollamaモデルは？',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen3.5 2B: 最新ファミリー、テキストと画像入力（q4_K_Mで1.9 GB）',
           'Gemma 3 1B: 最小の選択肢（0.8 GB）',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
       zh: {
         question: '4 GB显存最佳Ollama模型？',
@@ -70,7 +70,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen3.5 2B：最新系列，支持文本和图像输入（q4_K_M为1.9 GB）',
           'Gemma 3 1B：最小的选择（0.8 GB）',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
       es: {
         question: '¿Mejores modelos Ollama para 4 GB de VRAM?',
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen3.5 2B: familia más reciente, entrada de texto e imagen (1,9 GB en q4_K_M)',
           'Gemma 3 1B: la opción más pequeña (0,8 GB)',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'What Fits in 4 GB VRAM',
         content: [
           '<strong>On a 4 GB GPU, models up to about 4 billion parameters fit at 4-bit quantization, and the Ollama download size is the number to check.</strong> A model needs its file size plus room for the context cache (the KV cache), which grows as the conversation gets longer. As a rule of thumb, keep the file at or below about 3 GB so the whole model stays on the GPU.',
-          'Phi-4 Mini and Qwen3 4B are the largest models in the table that leave that headroom, at 2.5 GB each. Qwen3.5 2B is the newest family and accepts images as well as text. Gemma 3 1B and Qwen3 1.7B suit a small file with a long context. File sizes come from the <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">Ollama model library</a>; speed depends on your GPU, so no tokens-per-second figures are quoted here. Newer generations do not replace them at this size: Qwen3.6 starts at 27B (17 GB), and no Gemma 4 download is smaller than 4.3 GB.',
+          'Phi-4 Mini and Qwen3 4B are the largest models in the table that leave that headroom, at 2.5 GB each. Qwen3.5 2B is the newest family and accepts images as well as text. Gemma 3 1B and Qwen3 1.7B suit a small file with a long context. File sizes come from the <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">Ollama model library</a>; speed depends on your GPU, so no tokens-per-second figures are quoted here. Newer generations do not replace them at this size: Qwen3.6 and Qwen3.8 both start at 27B (17-18 GB), and no Gemma 4 download is smaller than 4.3 GB.',
         ],
         columns: ['Model', 'Ollama tag', 'File size', 'Notes'],
         rows: [
@@ -197,9 +197,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste Ollama-Modelle für 4 GB VRAM (2026)',
     metaDescription: 'Phi-4 Mini und Qwen3 4B (je 2,5 GB), Qwen3.5 2B (1,9 GB) und Gemma 3 1B (0,8 GB) passen in 4 GB VRAM. Llama 3.1 8B (4,9 GB) nicht. Mit 4-Bit-Tags.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-17',
+    next_refresh_due: '2027-05-19',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Was in 4 GB VRAM passt',
         content: [
           '<strong>Auf einer 4-GB-GPU passen Modelle bis etwa 4 Milliarden Parameter bei 4-Bit-Quantisierung; maßgeblich ist die Ollama-Downloadgröße.</strong> Ein Modell braucht seine Dateigröße plus Platz für den Kontext-Cache (KV-Cache), der mit dem Gesprächsverlauf wächst. Als Faustregel sollte die Datei höchstens etwa 3 GB groß sein, damit das ganze Modell auf der GPU bleibt.',
-          'Phi-4 Mini und Qwen3 4B sind mit je 2,5 GB die größten Modelle der Tabelle, die diese Reserve lassen. Qwen3.5 2B ist die neueste Familie und verarbeitet neben Text auch Bilder. Gemma 3 1B und Qwen3 1.7B eignen sich für kleine Dateien mit langem Kontext. Die Dateigrößen stammen aus der <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">Ollama-Modellbibliothek</a>; die Geschwindigkeit hängt von Ihrer GPU ab, daher nennen wir keine Tokens-pro-Sekunde-Werte. Neuere Generationen ersetzen sie in dieser Größe nicht: Qwen3.6 beginnt bei 27B (17 GB), und kein Gemma-4-Download ist kleiner als 4,3 GB.',
+          'Phi-4 Mini und Qwen3 4B sind mit je 2,5 GB die größten Modelle der Tabelle, die diese Reserve lassen. Qwen3.5 2B ist die neueste Familie und verarbeitet neben Text auch Bilder. Gemma 3 1B und Qwen3 1.7B eignen sich für kleine Dateien mit langem Kontext. Die Dateigrößen stammen aus der <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">Ollama-Modellbibliothek</a>; die Geschwindigkeit hängt von Ihrer GPU ab, daher nennen wir keine Tokens-pro-Sekunde-Werte. Neuere Generationen ersetzen sie in dieser Größe nicht: Qwen3.6 und Qwen3.8 beginnen beide bei 27B (17-18 GB), und kein Gemma-4-Download ist kleiner als 4,3 GB.',
         ],
         columns: ['Modell', 'Ollama-Tag', 'Dateigröße', 'Hinweise'],
         rows: [
@@ -314,9 +314,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleurs modèles Ollama 4 Go VRAM (2026)',
     metaDescription: 'Phi-4 Mini et Qwen3 4B (2,5 Go chacun), Qwen3.5 2B (1,9 Go) et Gemma 3 1B (0,8 Go) tiennent dans 4 Go de VRAM. Pas Llama 3.1 8B (4,9 Go).',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-17',
+    next_refresh_due: '2027-05-19',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Ce qui tient dans 4 Go de VRAM',
         content: [
           '<strong>Sur un GPU de 4 Go, les modèles jusqu\'à environ 4 milliards de paramètres tiennent en quantification 4 bits, et la taille du téléchargement Ollama est le chiffre à vérifier.</strong> Un modèle exige sa taille de fichier plus de la place pour le cache de contexte (cache KV), qui grandit avec la conversation. En règle générale, gardez le fichier à environ 3 Go au plus pour que tout le modèle reste sur le GPU.',
-          'Phi-4 Mini et Qwen3 4B sont les plus grands modèles du tableau à laisser cette marge, avec 2,5 Go chacun. Qwen3.5 2B est la famille la plus récente et accepte les images en plus du texte. Gemma 3 1B et Qwen3 1.7B conviennent pour un petit fichier et un long contexte. Les tailles proviennent de la <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">bibliothèque de modèles Ollama</a> ; la vitesse dépend de votre GPU, aucun chiffre de tokens par seconde n\'est donc cité. Les générations plus récentes ne les remplacent pas à cette taille : Qwen3.6 commence à 27B (17 Go) et aucun téléchargement Gemma 4 ne fait moins de 4,3 Go.',
+          'Phi-4 Mini et Qwen3 4B sont les plus grands modèles du tableau à laisser cette marge, avec 2,5 Go chacun. Qwen3.5 2B est la famille la plus récente et accepte les images en plus du texte. Gemma 3 1B et Qwen3 1.7B conviennent pour un petit fichier et un long contexte. Les tailles proviennent de la <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">bibliothèque de modèles Ollama</a> ; la vitesse dépend de votre GPU, aucun chiffre de tokens par seconde n\'est donc cité. Les générations plus récentes ne les remplacent pas à cette taille : Qwen3.6 et Qwen3.8 commencent tous deux à 27B (17-18 Go) et aucun téléchargement Gemma 4 ne fait moins de 4,3 Go.',
         ],
         columns: ['Modèle', 'Tag Ollama', 'Taille', 'Remarques'],
         rows: [
@@ -431,9 +431,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '4 GB VRAMで動くOllamaモデル一覧（2026）',
     metaDescription: '4 GB VRAMにはPhi-4 MiniとQwen3 4B（各2.5 GB）、Qwen3.5 2B（1.9 GB）、Gemma 3 1B（0.8 GB）が収まります。Llama 3.1 8B（4.9 GB）は不可。',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-17',
+    next_refresh_due: '2027-05-19',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '4 GB VRAMに収まるモデル',
         content: [
           '<strong>4 GB GPUでは、4ビット量子化で約40億パラメータまでのモデルが収まり、確認すべき数値はOllamaのダウンロードサイズです。</strong>モデルにはファイルサイズに加え、会話が長くなるほど増えるコンテキストキャッシュ（KVキャッシュ）の余裕が必要です。目安として、モデル全体をGPUに載せるにはファイルを約3 GB以下に抑えます。',
-          'Phi-4 MiniとQwen3 4Bは、表の中でこの余裕を残せる最大のモデルで、各2.5 GBです。Qwen3.5 2Bは最新ファミリーで、テキストに加えて画像も扱えます。Gemma 3 1BとQwen3 1.7Bは、小さなファイルで長いコンテキストを使いたい場合に向きます。ファイルサイズは<a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">Ollamaモデルライブラリ</a>によるものです。速度はGPUに依存するため、トークン毎秒の数値は掲載していません。この容量帯では新世代が代わりにならない点にも注意が必要です。Qwen3.6は27B（17 GB）からで、Gemma 4には4.3 GB未満のダウンロードがありません。',
+          'Phi-4 MiniとQwen3 4Bは、表の中でこの余裕を残せる最大のモデルで、各2.5 GBです。Qwen3.5 2Bは最新ファミリーで、テキストに加えて画像も扱えます。Gemma 3 1BとQwen3 1.7Bは、小さなファイルで長いコンテキストを使いたい場合に向きます。ファイルサイズは<a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">Ollamaモデルライブラリ</a>によるものです。速度はGPUに依存するため、トークン毎秒の数値は掲載していません。この容量帯では新世代が代わりにならない点にも注意が必要です。Qwen3.6とQwen3.8はいずれも27B（17～18 GB）からで、Gemma 4には4.3 GB未満のダウンロードがありません。',
         ],
         columns: ['モデル', 'Ollamaタグ', 'サイズ', '備考'],
         rows: [
@@ -548,9 +548,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '4 GB显存可用的Ollama模型推荐（2026）',
     metaDescription: '4 GB显存可运行Phi-4 Mini和Qwen3 4B（各2.5 GB）、Qwen3.5 2B（1.9 GB）、Gemma 3 1B（0.8 GB）；Llama 3.1 8B（4.9 GB）放不下。含4位量化标签。',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-17',
+    next_refresh_due: '2027-05-19',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '4 GB显存能容纳的模型',
         content: [
           '<strong>在4 GB显卡上，4位量化下约40亿参数以内的模型可以放下，需要核对的数字是Ollama的下载大小。</strong>模型除文件大小外，还需要为上下文缓存（KV缓存）留出空间，缓存会随对话变长而增长。经验法则是文件不超过约3 GB，这样整个模型才能留在GPU上。',
-          'Phi-4 Mini和Qwen3 4B是表中仍能留出这一余量的最大模型，各2.5 GB。Qwen3.5 2B是最新系列，除文本外还支持图像。Gemma 3 1B和Qwen3 1.7B适合文件小、上下文长的需求。文件大小来自<a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">Ollama模型库</a>；速度取决于你的GPU，因此这里不列出每秒token数。新一代模型在这个体量上也无法替代它们：Qwen3.6从27B（17 GB）起步，Gemma 4的下载都不小于4.3 GB。',
+          'Phi-4 Mini和Qwen3 4B是表中仍能留出这一余量的最大模型，各2.5 GB。Qwen3.5 2B是最新系列，除文本外还支持图像。Gemma 3 1B和Qwen3 1.7B适合文件小、上下文长的需求。文件大小来自<a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">Ollama模型库</a>；速度取决于你的GPU，因此这里不列出每秒token数。新一代模型在这个体量上也无法替代它们：Qwen3.6和Qwen3.8都从27B（17-18 GB）起步，Gemma 4的下载都不小于4.3 GB。',
         ],
         columns: ['模型', 'Ollama标签', '文件大小', '说明'],
         rows: [
@@ -665,9 +665,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejores modelos Ollama para 4 GB de VRAM (2026)',
     metaDescription: 'Phi-4 Mini y Qwen3 4B (2,5 GB cada uno), Qwen3.5 2B (1,9 GB) y Gemma 3 1B (0,8 GB) caben en 4 GB de VRAM. Llama 3.1 8B (4,9 GB) no.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-17',
+    next_refresh_due: '2027-05-19',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Qué cabe en 4 GB de VRAM',
         content: [
           '<strong>En una GPU de 4 GB caben modelos de hasta unos 4000 millones de parámetros con cuantización de 4 bits, y el dato a comprobar es el tamaño de descarga de Ollama.</strong> Un modelo necesita su tamaño de archivo más espacio para la caché de contexto (caché KV), que crece a medida que la conversación se alarga. Como regla general, mantenga el archivo en unos 3 GB o menos para que todo el modelo quede en la GPU.',
-          'Phi-4 Mini y Qwen3 4B son los mayores modelos de la tabla que dejan ese margen, con 2,5 GB cada uno. Qwen3.5 2B es la familia más reciente y admite imágenes además de texto. Gemma 3 1B y Qwen3 1.7B sirven para un archivo pequeño con contexto largo. Los tamaños proceden de la <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">biblioteca de modelos de Ollama</a>; la velocidad depende de su GPU, así que no se citan tokens por segundo. Las generaciones más nuevas no los sustituyen a este tamaño: Qwen3.6 empieza en 27B (17 GB) y ninguna descarga de Gemma 4 es menor de 4,3 GB.',
+          'Phi-4 Mini y Qwen3 4B son los mayores modelos de la tabla que dejan ese margen, con 2,5 GB cada uno. Qwen3.5 2B es la familia más reciente y admite imágenes además de texto. Gemma 3 1B y Qwen3 1.7B sirven para un archivo pequeño con contexto largo. Los tamaños proceden de la <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">biblioteca de modelos de Ollama</a>; la velocidad depende de su GPU, así que no se citan tokens por segundo. Las generaciones más nuevas no los sustituyen a este tamaño: Qwen3.6 y Qwen3.8 empiezan ambos en 27B (17-18 GB) y ninguna descarga de Gemma 4 es menor de 4,3 GB.',
         ],
         columns: ['Modelo', 'Etiqueta Ollama', 'Tamaño', 'Notas'],
         rows: [
@@ -761,6 +761,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Caben Gemma 4 y Qwen3.5 en 4 GB?',
             a: 'Qwen3.5 0.8B y 2B caben con holgura y la versión 4B (q4_K_M, 3,3 GB) va justa. Gemma 4 E2B no cabe: su archivo q4_K_M pesa 4,6 GB.',
           },
+          {
+            q: '¿Cuánto pesa Ollama?',
+            a: 'Ollama (el programa) pesa unos cientos de MB. El peso que importa es el de cada modelo que descarga: desde 0,3 GB (Gemma 3 270M) hasta más de 240 GB (Llama 3.1 405B). Para 4 GB de VRAM, busque modelos de alrededor de 3 GB o menos, como phi4-mini o qwen3:4b (2,5 GB cada uno).',
+          },
         ],
       },
       relatedReading: {
@@ -782,9 +786,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhores modelos Ollama para 4 GB de VRAM (2026)',
     metaDescription: 'Phi-4 Mini e Qwen3 4B (2,5 GB cada), Qwen3.5 2B (1,9 GB) e Gemma 3 1B (0,8 GB) cabem em 4 GB de VRAM. Llama 3.1 8B (4,9 GB) não cabe.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-17',
+    next_refresh_due: '2027-05-19',
     quickAnswerTop: {
       pt: {
         question: 'Melhores modelos Ollama para 4 GB de VRAM?',
@@ -794,7 +798,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen3.5 2B: família mais recente, entrada de texto e imagem (1,9 GB em q4_K_M)',
           'Gemma 3 1B: a menor opção (0,8 GB)',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -812,7 +816,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'O que cabe em 4 GB de VRAM',
         content: [
           '<strong>Em uma GPU de 4 GB cabem modelos de até cerca de 4 bilhões de parâmetros em quantização de 4 bits, e o número a conferir é o tamanho do download no Ollama.</strong> Um modelo precisa do tamanho do arquivo mais espaço para o cache de contexto (cache KV), que cresce conforme a conversa se alonga. Como regra prática, mantenha o arquivo em cerca de 3 GB ou menos para que o modelo inteiro fique na GPU.',
-          'Phi-4 Mini e Qwen3 4B são os maiores modelos da tabela que deixam essa folga, com 2,5 GB cada. Qwen3.5 2B é a família mais recente e aceita imagens além de texto. Gemma 3 1B e Qwen3 1.7B servem para um arquivo pequeno com contexto longo. Os tamanhos vêm da <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">biblioteca de modelos do Ollama</a>; a velocidade depende da sua GPU, então não citamos tokens por segundo. As gerações mais novas não os substituem nesse tamanho: o Qwen3.6 começa em 27B (17 GB) e nenhum download do Gemma 4 é menor que 4,3 GB.',
+          'Phi-4 Mini e Qwen3 4B são os maiores modelos da tabela que deixam essa folga, com 2,5 GB cada. Qwen3.5 2B é a família mais recente e aceita imagens além de texto. Gemma 3 1B e Qwen3 1.7B servem para um arquivo pequeno com contexto longo. Os tamanhos vêm da <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">biblioteca de modelos do Ollama</a>; a velocidade depende da sua GPU, então não citamos tokens por segundo. As gerações mais novas não os substituem nesse tamanho: o Qwen3.6 e o Qwen3.8 começam ambos em 27B (17-18 GB) e nenhum download do Gemma 4 é menor que 4,3 GB.',
         ],
         columns: ['Modelo', 'Tag do Ollama', 'Tamanho', 'Observações'],
         rows: [
@@ -911,9 +915,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل نماذج ⁨Ollama⁩ لـ⁨4 GB VRAM⁩ ⁨(2026)⁩',
     metaDescription: '⁨4 GB VRAM⁩ تتسع لـ⁨Phi-4 Mini⁩ و⁨Qwen3 4B⁩ (⁨2.5 GB⁩ لكل منهما) و⁨Qwen3.5 2B⁩ (⁨1.9 GB⁩) و⁨Gemma 3 1B⁩ (⁨0.8 GB⁩). أما ⁨Llama 3.1 8B⁩ (⁨4.9 GB⁩) فلا يتسع.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-17',
+    next_refresh_due: '2027-05-19',
     quickAnswerTop: {
       ar: {
         question: 'أفضل نماذج Ollama لـ4 GB VRAM؟',
@@ -923,7 +927,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen3.5 2B: أحدث عائلة، إدخال نص وصورة (‏1.9 GB بصيغة q4_K_M)',
           'Gemma 3 1B: أصغر خيار (‏0.8 GB)',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -941,7 +945,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'ما يتسع في 4 GB VRAM',
         content: [
           '<strong>على بطاقة 4 GB تتسع النماذج حتى نحو 4 مليارات معامل بتكميم 4 بت، والرقم الذي يجب فحصه هو حجم تنزيل Ollama.</strong> يحتاج النموذج إلى حجم ملفه إضافة إلى مساحة لذاكرة السياق (ذاكرة KV) التي تكبر مع طول المحادثة. كقاعدة عامة، أبقِ الملف عند نحو 3 GB أو أقل ليبقى النموذج كله على البطاقة.',
-          'Phi-4 Mini وQwen3 4B هما أكبر نموذجين في الجدول يتركان هذا الهامش، بواقع 2.5 GB لكل منهما. Qwen3.5 2B هو أحدث عائلة ويقبل الصور إضافة إلى النص. يناسب Gemma 3 1B وQwen3 1.7B ملفاً صغيراً بسياق طويل. الأحجام من <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">مكتبة نماذج Ollama</a>؛ والسرعة تعتمد على بطاقتك، لذلك لا نذكر أرقام الرموز في الثانية. ولا تحلّ الأجيال الأحدث محلها بهذا الحجم: يبدأ Qwen3.6 من 27B (‏17 GB)، ولا يوجد تنزيل لـGemma 4 أصغر من 4.3 GB.',
+          'Phi-4 Mini وQwen3 4B هما أكبر نموذجين في الجدول يتركان هذا الهامش، بواقع 2.5 GB لكل منهما. Qwen3.5 2B هو أحدث عائلة ويقبل الصور إضافة إلى النص. يناسب Gemma 3 1B وQwen3 1.7B ملفاً صغيراً بسياق طويل. الأحجام من <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">مكتبة نماذج Ollama</a>؛ والسرعة تعتمد على بطاقتك، لذلك لا نذكر أرقام الرموز في الثانية. ولا تحلّ الأجيال الأحدث محلها بهذا الحجم: يبدأ كلٌّ من Qwen3.6 وQwen3.8 من 27B (‏17-18 GB)، ولا يوجد تنزيل لـGemma 4 أصغر من 4.3 GB.',
         ],
         columns: ['النموذج', 'وسم Ollama', 'حجم الملف', 'ملاحظات'],
         rows: [
@@ -1040,9 +1044,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 4GB VRAM 모델 추천 (2026)',
     metaDescription: '4GB VRAM에는 Phi-4 Mini와 Qwen3 4B(각 2.5GB), Qwen3.5 2B(1.9GB), Gemma 3 1B(0.8GB)가 들어갑니다. Llama 3.1 8B(4.9GB)는 불가합니다.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-17',
+    next_refresh_due: '2027-05-19',
     quickAnswerTop: {
       ko: {
         question: '4GB VRAM에 최적화된 Ollama 모델은 무엇입니까?',
@@ -1052,7 +1056,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen3.5 2B: 최신 계열, 텍스트와 이미지 입력 (q4_K_M 기준 1.9GB)',
           'Gemma 3 1B: 가장 작은 선택지 (0.8GB)',
         ],
-        updatedDate: '2026-10',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -1070,7 +1074,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '4GB VRAM에 들어가는 모델',
         content: [
           '<strong>4GB GPU에는 4비트 양자화 기준 약 40억 파라미터까지의 모델이 들어가며, 확인해야 할 숫자는 Ollama 다운로드 크기입니다.</strong> 모델에는 파일 크기에 더해 대화가 길어질수록 커지는 컨텍스트 캐시(KV 캐시) 공간이 필요합니다. 경험상 모델 전체를 GPU에 두려면 파일을 약 3GB 이하로 유지하십시오.',
-          'Phi-4 Mini와 Qwen3 4B는 표에서 이 여유를 남기는 가장 큰 모델이며 각 2.5GB입니다. Qwen3.5 2B는 최신 계열로 텍스트와 함께 이미지도 처리합니다. Gemma 3 1B와 Qwen3 1.7B는 작은 파일에 긴 컨텍스트가 필요할 때 적합합니다. 파일 크기는 <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">Ollama 모델 라이브러리</a> 기준이며, 속도는 GPU에 따라 달라 초당 토큰 수치는 싣지 않았습니다. 이 크기에서는 최신 세대가 대체하지 못합니다. Qwen3.6은 27B(17GB)부터 시작하고, Gemma 4에는 4.3GB보다 작은 다운로드가 없습니다.',
+          'Phi-4 Mini와 Qwen3 4B는 표에서 이 여유를 남기는 가장 큰 모델이며 각 2.5GB입니다. Qwen3.5 2B는 최신 계열로 텍스트와 함께 이미지도 처리합니다. Gemma 3 1B와 Qwen3 1.7B는 작은 파일에 긴 컨텍스트가 필요할 때 적합합니다. 파일 크기는 <a href="https://ollama.com/library" class="text-primary hover:underline" rel="noopener">Ollama 모델 라이브러리</a> 기준이며, 속도는 GPU에 따라 달라 초당 토큰 수치는 싣지 않았습니다. 이 크기에서는 최신 세대가 대체하지 못합니다. Qwen3.6과 Qwen3.8 모두 27B(17-18GB)부터 시작하며, Gemma 4에는 4.3GB보다 작은 다운로드가 없습니다.',
         ],
         columns: ['모델', 'Ollama 태그', '파일 크기', '비고'],
         rows: [
