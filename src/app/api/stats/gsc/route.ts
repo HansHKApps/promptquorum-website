@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { diagnoseGscKey, getGscLastError, getGscStat } from '@/lib/partners/gsc'
+import { getGscLastError, getGscStat } from '@/lib/partners/gsc'
 
 // Aggregate number only; no visitor-level data. Credentials stay server-side.
 // Dynamic on purpose: a prerendered route would cache a failed lookup for hours.
@@ -9,10 +9,7 @@ export const dynamic = 'force-dynamic'
 export async function GET() {
   const data = await getGscStat()
   if (!data) {
-    const reason = getGscLastError()
-    // Temporary: structural (non-secret) key diagnosis while 'key-format'/'no-credentials' is being fixed.
-    const debug = reason === 'key-format' || reason === 'no-credentials' ? diagnoseGscKey() : undefined
-    return NextResponse.json({ available: false, reason, debug }, { headers: { 'Cache-Control': 'no-store' } })
+    return NextResponse.json({ available: false, reason: getGscLastError() }, { headers: { 'Cache-Control': 'no-store' } })
   }
   return NextResponse.json(
     { available: true, ...data },

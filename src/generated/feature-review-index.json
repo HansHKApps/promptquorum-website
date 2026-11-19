@@ -1144,6 +1144,11 @@
     "urlSlug": "browser-use-review",
     "url": "/power-local-llm/browser-use-review"
   },
+  "cc-switch": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cc-switch-review",
+    "url": "/power-local-llm/cc-switch-review"
+  },
   "ultimate-vocal-remover": {
     "cluster": "power-local-llm",
     "urlSlug": "ultimate-vocal-remover-review",
@@ -1163,6 +1168,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "yovoice-review",
     "url": "/power-local-llm/yovoice-review"
+  },
+  "voicestudio": {
+    "cluster": "power-local-llm",
+    "urlSlug": "voicestudio-review",
+    "url": "/power-local-llm/voicestudio-review"
   },
   "open-science-desktop": {
     "cluster": "power-local-llm",
@@ -1419,10 +1429,20 @@
     "urlSlug": "myagents-review",
     "url": "/power-local-llm/myagents-review"
   },
+  "orca": {
+    "cluster": "power-local-llm",
+    "urlSlug": "orca-review",
+    "url": "/power-local-llm/orca-review"
+  },
   "reactive-resume": {
     "cluster": "power-local-llm",
     "urlSlug": "reactive-resume-review",
     "url": "/power-local-llm/reactive-resume-review"
+  },
+  "paperclip": {
+    "cluster": "power-local-llm",
+    "urlSlug": "paperclip-review",
+    "url": "/power-local-llm/paperclip-review"
   },
   "next-ai-draw-io": {
     "cluster": "power-local-llm",
