@@ -6,6 +6,7 @@ import type { NextRequest } from 'next/server'
 import { LESSON_QUIZ_SIZE, finalTestSize, generateProgramme, testMinutes } from '@/lib/academy/programme'
 import { ACADEMY_TIMEOUT_MS, academyClient, academyFailure, academyGuard, academyJson } from '@/lib/academy/route'
 import { programmeRequestSchema } from '@/lib/academy/schemas'
+import { recordAcademyProgramme } from '@/lib/academy/usage'
 
 export const runtime = 'nodejs'
 export const maxDuration = 60
@@ -16,6 +17,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   const body = guard.body
   try {
     const { programme } = await generateProgramme(academyClient(), body, AbortSignal.timeout(ACADEMY_TIMEOUT_MS))
+    await recordAcademyProgramme()
     return academyJson({
       objectives: programme.objectives,
       lessons: programme.lessons,

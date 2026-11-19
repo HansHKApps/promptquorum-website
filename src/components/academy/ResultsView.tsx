@@ -4,16 +4,22 @@
 // pass/fail against 70%, learning time, per-question review of the counting final-test attempt, retake with new
 // questions when not passed. The certificate download arrives in Phase 6.
 
+import { useState } from 'react'
+import { certificateBlocker, certificateFilename, certificateModel, NAME_MAX_CHARS } from '@/lib/academy/certificate'
 import { correctIndexOf, countingFinal, PASS_MARK, programmeScore } from '@/lib/academy/scoring'
 import type { Programme } from '@/lib/academy/types'
 import { AiBadge } from './AiBadge'
 import { Content } from './Content'
-import type { AcademyCopy } from './copy'
+import { ACADEMY_COPY, type AcademyCopy } from './copy'
+import { renderCertificatePdf } from './certificate-pdf'
 import type { useAcademyState } from './useAcademyState'
 
 type Update = ReturnType<typeof useAcademyState>['update']
 
 export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; programme: Programme; update: Update }) {
+  const [name, setName] = useState(programme.certificate?.learnerName ?? '')
+  const [creating, setCreating] = useState(false)
+  const [certError, setCertError] = useState(false)
   const score = programmeScore(programme)
   const final = countingFinal(programme)
   const attempts = programme.progress.finalAttempts?.length ?? 0
@@ -23,6 +29,33 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
     return null
   }
   const weak = score.byTopic.filter((t) => t.weak)
+  const blocker = certificateBlocker(programme, name)
+  const blockerText =
+    !blocker ? '' : blocker.code === 'name' ? tx.certNeedName : blocker.code === 'lessons' ? tx.certNeedLessons(blocker.done, blocker.total) : blocker.code === 'quizzes' ? tx.certNeedQuizzes : ''
+  // The certificate is written in the programme language, like the lessons.
+  const download = async () => {
+    if (blocker || creating) return
+    setCertError(false)
+    setCreating(true)
+    try {
+      const model = certificateModel(programme, name)
+      const blob = await renderCertificatePdf(model, ACADEMY_COPY[programme.language], programme.language)
+      update((st) => (st.programme ? { ...st, programme: { ...st.programme, certificate: { id: model.id, learnerName: model.name, issuedAt: model.issuedAt } } } : st))
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = certificateFilename(model.subject, model.id)
+      document.body.appendChild(a)
+      a.click()
+      a.remove()
+      setTimeout(() => URL.revokeObjectURL(url), 10_000)
+    } catch (err) {
+      console.error('[academy] certificate failed', err instanceof Error ? err.message : err)
+      setCertError(true)
+    } finally {
+      setCreating(false)
+    }
+  }
   const retake = () =>
     update((s) => (s.programme ? { ...s, view: 'quiz', programme: { ...s.programme, progress: { ...s.programme.progress, activeQuiz: { quizId: 'final', questions: [], answers: {} } } } } : s))
 
@@ -65,12 +98,40 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
 
       <div className="flex flex-wrap items-center gap-3">
         {score.passed ? (
-          <>
-            <button type="button" disabled className="cursor-not-allowed rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white opacity-50">
-              {tx.downloadCertificate}
-            </button>
-            <span className="text-sm text-gray-500">{tx.certificateComing}</span>
-          </>
+          <div className="w-full space-y-3">
+            <div>
+              <label htmlFor="academy-cert-name" className="block text-sm font-medium text-gray-900">
+                {tx.certNameLabel}
+              </label>
+              <input
+                id="academy-cert-name"
+                type="text"
+                value={name}
+                maxLength={NAME_MAX_CHARS}
+                onChange={(e) => setName(e.target.value)}
+                autoComplete="off"
+                aria-describedby="academy-cert-hint academy-cert-reason"
+                className="mt-1 w-full max-w-md rounded-xl border border-gray-300 px-4 py-2 text-base focus:border-purple-600 focus:outline-none"
+              />
+              <p id="academy-cert-hint" className="mt-1 text-sm text-gray-600">
+                {tx.certNameHint}
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                disabled={!!blocker || creating}
+                aria-disabled={!!blocker || creating}
+                onClick={() => void download()}
+                className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {creating ? tx.certCreating : tx.downloadCertificate}
+              </button>
+              <p id="academy-cert-reason" className="text-sm text-gray-700" role="status">
+                {certError ? tx.certError : blocker ? blockerText : ''}
+              </p>
+            </div>
+          </div>
         ) : (
           <div className="space-y-2">
             {weak.length > 0 && (

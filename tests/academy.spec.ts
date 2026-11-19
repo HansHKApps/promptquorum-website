@@ -37,10 +37,17 @@ async function mockDiagnostic(page: Page) {
   )
 }
 
+/** /academy is the entrance page; the tool itself is the Ask-Hans-style window opened by its button. */
+async function openTool(page: Page) {
+  await page.goto('/academy')
+  await page.getByRole('button', { name: /open the academy/i }).click()
+  await expect(page.getByRole('dialog', { name: 'PromptQuorum Academy' })).toBeVisible()
+}
+
 const stored = (page: Page) => page.evaluate((k) => localStorage.getItem(k), KEY)
 
 async function startSetup(page: Page, save: boolean) {
-  await page.goto('/academy')
+  await openTool(page)
   await page.getByLabel(/what do you want to learn/i).fill('Test subject')
   const box = page.getByLabel(/save my progress in this browser/i)
   await expect(box).not.toBeChecked() // unticked by default
@@ -141,7 +148,7 @@ async function openSeededLesson(page: Page, programme = seededProgramme()) {
       }),
     ],
   )
-  await page.goto('/academy')
+  await openTool(page)
   await page.getByRole('button', { name: /^continue$/i }).click()
 }
 
@@ -181,9 +188,9 @@ test.describe('F10 / F8: AI label and notices', () => {
 
   test('setup shows the personal-data warning next to the subject and the 16+ notice at the start button', async ({ page }) => {
     await preset(page)
-    await page.goto('/academy')
+    await openTool(page)
     await expect(page.getByText('Please do not enter personal data.').first()).toBeVisible()
-    await expect(page.getByText('For learners aged 16 or older.')).toBeVisible()
+    await expect(page.getByRole('dialog', { name: 'PromptQuorum Academy' }).getByText('For learners aged 16 or older.')).toBeVisible()
   })
 })
 
@@ -302,5 +309,197 @@ test.describe('F7: displayed content is not replaced', () => {
     await page.waitForTimeout(3000)
     expect(await read()).toBe(first)
     expect(calls).toBe(1)
+  })
+})
+
+
+// ------------------------------------------------------------------------------- window (same as Ask Hans)
+
+test.describe('Academy window behaves like the Ask Hans window', () => {
+  const win = (page: Page) => page.getByRole('dialog', { name: 'PromptQuorum Academy' })
+  const box = async (page: Page) => (await win(page).boundingBox())!
+
+  test('entrance page explains and opens the window; the tool is not inline on the page', async ({ page }) => {
+    await preset(page)
+    await page.goto('/academy')
+    await expect(page.getByRole('heading', { name: 'How it works' })).toBeVisible()
+    await expect(page.getByText(/programmes created so far/)).toBeVisible()
+    await expect(win(page)).toHaveCount(0)
+    await expect(page.getByLabel(/what do you want to learn/i)).toHaveCount(0)
+    await page.getByRole('button', { name: /open the academy/i }).click()
+    await expect(win(page)).toBeVisible()
+  })
+
+  test('drag by the header, resize by the corner, maximize and restore', async ({ page }) => {
+    await preset(page)
+    await openTool(page)
+    const a = await box(page)
+    await page.mouse.move(a.x + a.width / 2, a.y + 20)
+    await page.mouse.down()
+    await page.mouse.move(a.x + a.width / 2 - 120, a.y + 60, { steps: 5 })
+    await page.mouse.up()
+    const b = await box(page)
+    expect(Math.round(b.x)).toBe(Math.round(a.x - 120))
+    expect(Math.round(b.y)).toBe(Math.round(a.y + 40))
+    await page.mouse.move(b.x + b.width - 6, b.y + b.height - 6) // inside the rounded corner
+    await page.mouse.down()
+    await page.mouse.move(b.x + b.width - 86, b.y + b.height - 66, { steps: 5 })
+    await page.mouse.up()
+    const c = await box(page)
+    expect(c.width).toBeLessThan(b.width - 40)
+    expect(c.height).toBeLessThan(b.height - 30)
+    await page.getByRole('button', { name: 'Maximize' }).click()
+    const m = await box(page)
+    expect(m.width).toBeGreaterThan(c.width)
+    await page.getByRole('button', { name: 'Restore' }).click()
+    expect(Math.round((await box(page)).width)).toBe(Math.round(c.width))
+  })
+
+  test('closing leaves the Academy pill; the pill reopens the window; state survives a reload', async ({ page }) => {
+    await preset(page)
+    await openTool(page)
+    await page.getByRole('button', { name: 'Close' }).click()
+    await expect(win(page)).toHaveCount(0)
+    const pill = page.getByRole('button', { name: 'Open the PromptQuorum Academy' })
+    await expect(pill).toBeVisible()
+    await pill.click()
+    await expect(win(page)).toBeVisible()
+    await page.reload()
+    await expect(win(page)).toBeVisible()
+  })
+
+  test('the homepage counter tile opens the window', async ({ page }) => {
+    await preset(page)
+    await page.goto('/')
+    const tile = page.getByRole('link', { name: /Academy programmes created/ }).first()
+    await expect(tile).toBeVisible()
+    await tile.click()
+    await expect(win(page)).toBeVisible()
+    await expect(page).toHaveURL(/\/$/)
+  })
+})
+
+// ------------------------------------------------------------------------------------------ certificate (F5)
+
+function finishedProgramme(language: string, subject: string, lessonsDone = true) {
+  const byTopic = { Basics: { correct: 9, total: 10 } }
+  const attempt = { quizId: 'final-1', answers: {}, correct: 9, total: 10, byTopic, takenAt: '2026-11-19T11:00:00.000Z', questions: [] }
+  const base = seededProgramme({ language, subject, testMode: 'final', testPlan: { finalQuestions: 10, lessonQuizQuestions: 0, testMinutes: 8 } }) as ReturnType<typeof seededProgramme> & { progress: Record<string, unknown>; lessons: { sections: unknown[] }[] }
+  base.lessons.forEach((l) => ((l as { sections: unknown[] }).sections = [{ heading: 'h', body: 'b' }]))
+  base.progress = {
+    currentLesson: 1,
+    lessonStatus: { 'lesson-1': 'done', 'lesson-2': lessonsDone ? 'done' : 'viewed' },
+    quizResults: [],
+    finalAttempts: [attempt],
+    finalResult: attempt,
+    secondsSpent: 3720,
+    startedAt: '2026-11-19T09:00:00.000Z',
+  }
+  return base as unknown as ReturnType<typeof seededProgramme>
+}
+
+async function openResults(page: Page, programme: ReturnType<typeof seededProgramme>) {
+  await preset(page)
+  await page.addInitScript(
+    ([k, v]) => {
+      if (!localStorage.getItem(k)) localStorage.setItem(k, v)
+    },
+    [
+      KEY,
+      JSON.stringify({
+        version: 1,
+        view: 'results',
+        draft: { subject: 'x', availableMinutes: 60, selfLevel: 'beginner', testMode: 'final', language: 'en', saveProgress: true, updatedAt: '2026-11-19T10:00:00.000Z' },
+        programme,
+      }),
+    ],
+  )
+  await openTool(page)
+  await page.getByRole('button', { name: /^continue$/i }).click()
+  await expect(page.getByRole('button', { name: /download certificate/i })).toBeVisible()
+}
+
+/** The picture inside the PDF (the first JPEG stream). */
+function jpegOf(pdf: Buffer): Buffer {
+  const start = pdf.indexOf(Buffer.from([0xff, 0xd8, 0xff]))
+  const end = pdf.lastIndexOf(Buffer.from([0xff, 0xd9]))
+  return pdf.subarray(start, end + 2)
+}
+
+test.describe('F5: certificate', () => {
+  test('the button is disabled with a reason: first the name, then unfinished lessons', async ({ page }) => {
+    await openResults(page, finishedProgramme('en', 'Quantization basics'))
+    const btn = page.getByRole('button', { name: /download certificate/i })
+    await expect(btn).toBeDisabled()
+    await expect(page.getByText('Enter your name to download the certificate.')).toBeVisible()
+    await page.getByLabel(/your name for the certificate/i).fill('Test Person')
+    await expect(btn).toBeEnabled()
+    await expect(page.getByText('Enter your name to download the certificate.')).toHaveCount(0)
+  })
+
+  test('unfinished lessons block the download and say how many are left', async ({ page }) => {
+    await openResults(page, finishedProgramme('en', 'Quantization basics', false))
+    await page.getByLabel(/your name for the certificate/i).fill('Test Person')
+    await expect(page.getByRole('button', { name: /download certificate/i })).toBeDisabled()
+    await expect(page.getByText('Finish all lessons first: 1 of 2 done.')).toBeVisible()
+  })
+
+  for (const [lang, name, subject] of [
+    ['en', 'Test Person', 'Quantization basics'],
+    ['ja', '田中 愛子（テスト）', 'ローカルLLMの基礎'],
+    ['ar', 'اختبار محمد الأحمد', 'أساسيات النماذج المحلية'],
+    ['de', 'Tester Müller-Lüdenscheidt', 'Quantisierung für Anfänger'],
+  ] as const) {
+    test(`downloads a valid A4 landscape PDF with the ID and metadata (${lang})`, async ({ page }, testInfo) => {
+      await openResults(page, finishedProgramme(lang, subject))
+      await page.getByLabel(/your name for the certificate/i).fill(name)
+      const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: /download certificate/i }).click()])
+      expect(download.suggestedFilename()).toMatch(/^PromptQuorum-Academy-Certificate-[a-z0-9-]*-PQA-\d{4}-[0-9A-HJKMNP-TV-Z]{10}\.pdf$/)
+      const path = await download.path()
+      const fs = await import('node:fs')
+      const pdf = fs.readFileSync(path)
+      const text = pdf.toString('latin1')
+      expect(text.startsWith('%PDF-1.4')).toBe(true)
+      expect(text).toContain('/MediaBox [0 0 841.89 595.28]')
+      const id = /PQA-\d{4}-[0-9A-HJKMNP-TV-Z]{10}/.exec(download.suggestedFilename())![0]
+      expect(text).toContain(`/Keywords (${id})`)
+      if (lang === 'en') expect(text).toContain('(Learning Certificate')
+      const jpeg = jpegOf(pdf)
+      expect(jpeg.length).toBeGreaterThan(50_000) // a drawn page, not a blank one
+      fs.writeFileSync(testInfo.outputPath(`certificate-${lang}.jpg`), jpeg)
+    })
+  }
+})
+
+test.describe('F8: Terms page and links', () => {
+  for (const lang of ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']) {
+    test(`Terms, Privacy and Impressum load in ${lang}; Terms states the age and certificate rules`, async ({ page, request }) => {
+      const prefix = lang === 'en' ? '' : `/${lang}`
+      const res = await request.get(`${prefix}/terms`)
+      expect(res.status()).toBe(200)
+      const html = await res.text()
+      expect(html).toMatch(new RegExp(`<div lang="${lang}[A-Za-z-]*" dir="${lang === 'ar' ? 'rtl' : 'ltr'}"`))
+      expect(html).toMatch(/16/)
+      expect((html.match(/<h2/g) ?? []).length).toBeGreaterThanOrEqual(11)
+      expect((await request.get(`${prefix}/privacy`)).status()).toBe(200)
+      expect((await request.get('/impressum')).status()).toBe(200)
+      await preset(page)
+      await page.goto(`${prefix}/terms`)
+      await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+    })
+  }
+
+  test('footer links to Terms on every page', async ({ page }) => {
+    await preset(page)
+    await page.goto('/')
+    await expect(page.locator('footer a[href="/terms"]')).toBeVisible()
+    await page.goto('/de/academy')
+    await expect(page.locator('footer a[href="/de/terms"]')).toBeVisible()
+  })
+
+  test('the Academy setup links to the Terms next to the 16+ notice', async ({ page }) => {
+    await preset(page)
+    await openTool(page)
+    await expect(page.getByRole('dialog', { name: 'PromptQuorum Academy' }).getByRole('link', { name: 'Terms of Use' })).toHaveAttribute('href', '/terms')
   })
 })

@@ -13,6 +13,7 @@ import { programmeScore } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import { LEVELS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
+import { TERMS } from '@/lib/terms/content'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
 import { Content } from './Content'
 import { LessonView } from './LessonView'
@@ -77,6 +78,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
       ) : (
         <SetupForm
           tx={tx}
+          lang={lang}
           draft={draft}
           topics={topics}
           pendingSubject={pending?.programme?.subject ?? pending?.draft?.subject ?? null}
@@ -107,6 +109,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
 
 function SetupForm({
   tx,
+  lang,
   draft,
   topics,
   pendingSubject,
@@ -116,6 +119,7 @@ function SetupForm({
   onSubmit,
 }: {
   tx: AcademyCopy
+  lang: AcademyLang
   draft: SetupDraft
   topics: TopicSuggestion[]
   /** saved progress found in this browser (null = none): offered as Continue / Start new */
@@ -261,7 +265,12 @@ function SetupForm({
       <button type="submit" className="w-full rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 sm:w-auto">
         {tx.submit}
       </button>
-      <p className="text-sm text-gray-600">{tx.ageNotice}</p>
+      <p className="text-sm text-gray-600">
+        {tx.ageNotice}{' '}
+        <a href={lang === 'en' ? '/terms' : `/${lang}/terms`} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-purple-700">
+          {TERMS[lang].title}
+        </a>
+      </p>
     </form>
   )
 }

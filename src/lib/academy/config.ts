@@ -28,3 +28,8 @@ export const ACADEMY_IDLE_AFTER_MS = 60_000
 export const ACADEMY_TICK_SECONDS = 5
 /** A lesson never counts more than this multiple of its estimated reading time. */
 export const ACADEMY_LESSON_TIME_CAP_FACTOR = 3
+
+/** window event: open the Academy window from anywhere (home counter tile, /academy page), like ASK_HANS_OPEN_EVENT. */
+export const ACADEMY_OPEN_EVENT = 'academy:open'
+/** sessionStorage: window open / maximized / position and size (tab-scoped, never localStorage; same as Ask Hans' UI state). */
+export const ACADEMY_UI_KEY = 'academy.ui.v1'

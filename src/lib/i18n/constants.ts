@@ -80,7 +80,7 @@ export function toOutputLocale(lang: string): string {
 export const LOCALE_ROUTED_ROOTS = [
   'power-local-llm', 'prompt-bites', 'smart-home', 'balcony-solar',
   'prompt-engineering', 'local-llms', 'blog', 'frameworks',
-  'compare', 'features', 'how-it-works', 'faq', 'about', 'privacy',
+  'compare', 'features', 'how-it-works', 'faq', 'about', 'privacy', 'terms',
   'download', 'pq-apps', 'directory', 'mcp-stats', 'askhans', 'partners', 'academy',
 ] as const;
 

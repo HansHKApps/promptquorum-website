@@ -4,12 +4,13 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { ACADEMY_PATH, academyEnabled } from '@/lib/academy/config'
-import { buildAcademyTopics } from '@/lib/academy/topics'
 import type { AcademyLang } from '@/lib/academy/types'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, getLangDir, ogLocale, toOutputLocale } from '@/lib/i18n/constants'
 import { t as tTools } from '@/components/tools/tools-i18n'
-import { AcademyApp } from './AcademyApp'
+import { getAcademyProgrammesTotal } from '@/lib/academy/usage'
+import { TERMS } from '@/lib/terms/content'
+import { OpenAcademyButton } from './OpenAcademyButton'
 import { ACADEMY_COPY } from './copy'
 
 const SITE = 'https://www.promptquorum.com'
@@ -26,11 +27,11 @@ export function academyMetadata(lang: AcademyLang): Metadata {
   }
 }
 
-export function AcademyPage({ lang }: { lang: AcademyLang }) {
+export async function AcademyPage({ lang }: { lang: AcademyLang }) {
   if (!academyEnabled()) notFound()
   const tx = ACADEMY_COPY[lang]
   const url = `${SITE}${localizedPath(lang)}`
-  const topics = buildAcademyTopics(lang, tx.hubs)
+  const programmes = await getAcademyProgrammesTotal()
 
   return (
     <div lang={toOutputLocale(lang)} dir={getLangDir(lang)} className="min-h-screen bg-white">
@@ -40,8 +41,9 @@ export function AcademyPage({ lang }: { lang: AcademyLang }) {
             {tx.h1}
           </h1>
           <p className="mt-3 text-lg text-gray-600">{tx.intro}</p>
-          <div className="mt-6">
-            <AcademyApp lang={lang} topics={topics} />
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <OpenAcademyButton label={tx.openAcademy} />
+            <p className="text-sm text-gray-600">{tx.programmesCreated(programmes)}</p>
           </div>
         </section>
         <aside aria-labelledby="academy-how" className="min-w-0 self-start rounded-2xl border border-purple-100 bg-white p-5">
@@ -59,6 +61,12 @@ export function AcademyPage({ lang }: { lang: AcademyLang }) {
             ))}
           </ol>
           <p className="mt-4 text-xs text-gray-500">{tx.disclaimer}</p>
+          <p className="mt-2 text-xs text-gray-500">
+            {tx.ageNotice}{' '}
+            <a href={lang === 'en' ? '/terms' : `/${lang}/terms`} className="underline underline-offset-2">
+              {TERMS[lang].title}
+            </a>
+          </p>
         </aside>
       </div>
       <script
