@@ -141,6 +141,9 @@ export const copy: AskCopy = {
     historyHide: "過去の会話を閉じる",
     historyShow: (n: number) => `過去の会話を表示（${n}）`,
     historyClear: "保存した会話を削除",
+    pictureCta: "価格を比較する ↗",
+    pictureCaption: "AI生成画像・外部リンク（参考用、紹介料なし）",
+    pictureLinkLabel: (label) => `${label}：価格を比較する（外部リンク、新しいタブで開きます）`,
   },
 
   search: {

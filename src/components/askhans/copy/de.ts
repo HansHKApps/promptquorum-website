@@ -141,6 +141,9 @@ export const copy: AskCopy = {
     historyHide: "Frühere Gespräche ausblenden",
     historyShow: (n: number) => `Frühere Gespräche anzeigen (${n})`,
     historyClear: "Gespeicherte Gespräche löschen",
+    pictureCta: "Preise vergleichen ↗",
+    pictureCaption: "KI-generiertes Bild · Externer Link, nur zur Orientierung (keine Provision)",
+    pictureLinkLabel: (label) => `${label}: Preise vergleichen (externer Link, öffnet in neuem Tab)`,
   },
 
   search: {

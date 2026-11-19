@@ -281,6 +281,12 @@ export function UsageReportView({ lang, report, kind }: { lang: Language; report
         </div>
       )}
 
+      {!mcp && report.pictures && report.pictures.length > 0 && (
+        <div className="mt-4 grid gap-4 lg:grid-cols-2">
+          <BreakdownTable heading={tAsk('picturesHeading', lang)} firstCol={tAsk('picturesHeading', lang)} rows={report.pictures} label={topicLabel} lang={lang} />
+        </div>
+      )}
+
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         {!mcp && <BreakdownTable heading={tAsk('topicsHeading', lang)} firstCol={tAsk('topicsHeading', lang)} rows={report.categories} label={topicLabel} lang={lang} />}
         <BreakdownTable heading={tAsk('toolsHeading', lang)} firstCol={tAsk('toolsHeading', lang)} rows={report.tools} label={(k) => k} mono lang={lang} />

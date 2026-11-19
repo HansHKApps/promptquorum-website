@@ -8,7 +8,7 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react
 import dynamic from 'next/dynamic'
 import { ASK_HANS_LIMITS, ASK_HANS_OPEN_EVENT, ASK_HANS_SPLIT, ASK_HANS_CONSENT_TEXT_VERSION, ASK_HANS_PROMO_AFTER_S, ASK_HANS_STORAGE } from '@/lib/askhans/config'
 import { daysBucket, durationBucket, questionBucket } from '@/lib/askhans/engagement'
-import { DEFAULT_CATEGORY_KEY, type AskHansLink } from '@/lib/askhans/categories'
+import { DEFAULT_CATEGORY_KEY, type AskHansLink, type AskHansPictureLink } from '@/lib/askhans/categories'
 import { AskHansLogo } from './AskHansLogo'
 import { AskHansWindow } from './AskHansWindow'
 import { ConsentNotice } from './ConsentNotice'
@@ -452,6 +452,11 @@ export function AskHansRoot() {
     closeWindow(false) // chat state is already saved; the visitor reopens it with the logo
   }
 
+  // Topic picture click: opens in a new tab, so the window stays open (never closeWindow here).
+  const onPictureClick = (categoryKey: string, link: AskHansPictureLink) => {
+    if (consent?.value === 'yes') logEvent({ type: 'picture_click', visitId: visitId.current, category: categoryKey, linkId: link.id })
+  }
+
   // Click-through metric: anonymous counters only (source + coarse site section + "first click on this answer").
   const trackAnswerClick = (answerId: string | undefined, href: string, source: 'text' | 'panel') => {
     if (consent?.value !== 'yes') return
@@ -729,7 +734,7 @@ export function AskHansRoot() {
                 />
               )}
 
-              {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} promo={promo} onPromoClose={() => setPromo(false)} />}
+              {!isDesktop && showPanel && <MarketingPanel variant="strip" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onPictureClick={onPictureClick} onHide={() => setShowPanel(false)} promo={promo} onPromoClose={() => setPromo(false)} />}
 
               <form
                 className="flex-shrink-0 border-t border-border bg-white px-2.5 pb-2 pt-1.5 md:p-2.5"
@@ -784,7 +789,7 @@ export function AskHansRoot() {
               </form>
             </div>
 
-            {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onHide={() => setShowPanel(false)} promo={promo} onPromoClose={() => setPromo(false)} />}
+            {isDesktop && showPanel && <MarketingPanel variant="side" categoryKey={categoryKey} related={related} onLinkClick={onLinkClick} onRelatedClick={onRelatedClick} onPictureClick={onPictureClick} onHide={() => setShowPanel(false)} promo={promo} onPromoClose={() => setPromo(false)} />}
           </div>
           )}
         </AskHansWindow>

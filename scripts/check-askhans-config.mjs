@@ -23,6 +23,7 @@ if (categories.length !== 21) errors.push(`expected 21 categories (20 + default)
 if (!categories.some((c) => c.key === 'default')) errors.push('missing "default" category')
 
 const seen = new Set()
+const seenPictureLinkIds = new Set()
 for (const c of categories) {
   const where = `[${c.key}]`
   if (seen.has(c.key)) errors.push(`${where} duplicate key`)
@@ -47,6 +48,15 @@ for (const c of categories) {
     const [cluster, slug] = path.split('/')
     if (STATIC.has(path)) continue
     if (!slug || !CLUSTERS[cluster]?.has(slug)) errors.push(`${lw} unknown route ${l.url}`)
+  }
+  if (c.pictureLink) {
+    const pl = c.pictureLink
+    const plw = `${where} pictureLink`
+    if (typeof pl.id !== 'string' || !pl.id.startsWith('pic-')) errors.push(`${plw} id must start with "pic-" — got ${pl.id}`)
+    if (seenPictureLinkIds.has(pl.id)) errors.push(`${plw} duplicate id ${pl.id}`)
+    seenPictureLinkIds.add(pl.id)
+    if (typeof pl.url !== 'string' || !/^https:\/\//.test(pl.url)) errors.push(`${plw} url must be https — got ${pl.url}`)
+    if (typeof pl.affiliate !== 'boolean') errors.push(`${plw} affiliate must be boolean`)
   }
 }
 

@@ -59,5 +59,8 @@ dist/
 # Article corpus for the chat/MCP functions (regenerated in prebuild: npm run generate:askhans-corpus)
 /generated-corpus/
 
+# Source PNGs for Ask Hans topic pictures (2688x896) — converted to WebP by scripts/convert-askhans-topic-pictures.mjs; never committed
+/askhans-source-pngs/
+
 # Workflow monitoring log (may contain private text, never publish)
 workflow-monitoring/

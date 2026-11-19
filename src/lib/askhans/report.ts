@@ -40,6 +40,7 @@ function emptyReport(dates: string[]): AskHansReport {
     langs: [],
     powerProcesses: [],
     powerExports: [],
+    pictures: [],
     feedback: { count: zeroCounts(), sum: zeroCounts(), low: zeroCounts(), mail: zeroCounts(), all: { count: 0, sum: 0, low: 0, mail: 0 } },
     engagement: emptyEngagement(),
   }
@@ -90,6 +91,7 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     const powerWin = zeroCounts()
     const powerRows = new Map<string, WindowCounts>()
     const exportRows = new Map<string, WindowCounts>()
+    const pictureRows = new Map<string, WindowCounts>()
     const sampled = zeroCounts()
     const sampledOf = zeroCounts()
     const eng = emptyEngagement()
@@ -137,6 +139,15 @@ export async function getAskHansReport(): Promise<AskHansReport> {
         for (const w of wins) counts[w] += n
         target.set(key, counts)
       }
+      // Topic-picture clicks (pic:<category>:<linkId>), consent "Yes" only (same gate as link_click): grouped by category.
+      for (const [field, raw] of Object.entries(day)) {
+        const n = Number(raw) || 0
+        if (!n || !field.startsWith('pic:')) continue
+        const category = field.split(':')[1] ?? ''
+        const counts = pictureRows.get(category) ?? zeroCounts()
+        for (const w of wins) counts[w] += n
+        pictureRows.set(category, counts)
+      }
       if (!inBreakdown) return
       for (const w of wins) sampledOf[w] += answers
       for (const [field, raw] of Object.entries(day)) {
@@ -161,6 +172,7 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     ]
     report.powerProcesses = rankRows(powerRows)
     report.powerExports = rankRows(exportRows)
+    report.pictures = rankRows(pictureRows)
     const older = await olderRatings(totals.since, dates[0])
     fb.all = { count: fb.count.last30 + older.count, sum: fb.sum.last30 + older.sum, low: fb.low.last30 + older.low, mail: fb.mail.last30 + older.mail }
     report.feedback = fb

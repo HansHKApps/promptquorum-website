@@ -4,10 +4,13 @@
 // asked anything the links are the topic's placeholder cards; once an answer contains links to PromptQuorum pages,
 // those links (newest answer first) replace them, so the panel always follows the conversation.
 // Links are internal only: same tab. Clicking collapses Ask Hans to the logo (the chat is kept) and navigates.
-// `external` / `affiliate` are reserved in categories.json and not rendered yet.
+// `external` / `affiliate` on AskHansLink are reserved in categories.json and not rendered yet.
+//
+// Topic picture as a clickable link (v1, 2026-11-19): when a category carries `pictureLink`, the picture itself
+// becomes an external, non-affiliate price-comparison link (new tab, window stays open). See categories.ts.
 
 import Link from 'next/link'
-import { getCategory, type AskHansLink } from '@/lib/askhans/categories'
+import { getCategory, type AskHansLink, type AskHansPictureLink } from '@/lib/askhans/categories'
 import { useAskCopy, useAskLang, localizeAskPath } from './copy'
 import { AskIcon } from './icons'
 import type { RelatedLink } from './links'
@@ -19,6 +22,7 @@ interface Props {
   related: RelatedLink[]
   onLinkClick: (categoryKey: string, link: AskHansLink) => void
   onRelatedClick: (href: string) => void
+  onPictureClick: (categoryKey: string, link: AskHansPictureLink) => void
   /** hides the whole panel (the chat gets the full width / height) */
   onHide: () => void
   /** compact horizontal strip for phones */
@@ -64,6 +68,51 @@ function RelatedCard({ link, onClick, compact }: { link: RelatedLink; onClick: (
   )
 }
 
+/** Side-panel picture: full-size clickable image with a "compare prices" chip and a hover/focus shine sweep. */
+function PictureLink({ cat, label, onPictureClick }: { cat: ReturnType<typeof getCategory>; label: string; onPictureClick: Props['onPictureClick'] }) {
+  const tx = useAskCopy()
+  const link = cat.pictureLink
+  if (!link) return null
+  return (
+    <a
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      onClick={() => onPictureClick(cat.key, link)}
+      aria-label={tx.panel.pictureLinkLabel(label)}
+      className="group relative block h-full w-full overflow-hidden rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-primary"
+    >
+      <img src={cat.image} alt={cat.alt} width={1200} height={400} className="h-full w-full select-none object-cover transition-transform duration-300 group-hover:scale-[1.03]" draggable={false} />
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -skew-x-[18deg] bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 motion-safe:group-hover:animate-pic-shine motion-safe:group-focus-visible:animate-pic-shine"
+      />
+      <span className="pointer-events-none absolute bottom-1.5 end-1.5 rounded-full bg-black/70 px-2 py-0.5 text-[10px] font-semibold text-white shadow-sm backdrop-blur-sm">
+        {tx.panel.pictureCta}
+      </span>
+    </a>
+  )
+}
+
+/** Mobile strip thumbnail: same link, no chip/caption (too small). */
+function PictureThumbLink({ cat, label, onPictureClick }: { cat: ReturnType<typeof getCategory>; label: string; onPictureClick: Props['onPictureClick'] }) {
+  const tx = useAskCopy()
+  const link = cat.pictureLink
+  if (!link) return null
+  return (
+    <a
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      onClick={() => onPictureClick(cat.key, link)}
+      aria-label={tx.panel.pictureLinkLabel(label)}
+      className="h-14 w-14 flex-shrink-0 overflow-hidden rounded-md outline-none focus-visible:ring-2 focus-visible:ring-primary"
+    >
+      <img src={cat.image} alt={cat.alt} width={56} height={56} className="h-14 w-14 select-none object-cover" draggable={false} />
+    </a>
+  )
+}
+
 function HideButton({ onHide }: { onHide: () => void }) {
   const tx = useAskCopy()
   return (
@@ -79,7 +128,7 @@ function HideButton({ onHide }: { onHide: () => void }) {
   )
 }
 
-export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedClick, onHide, variant, promo, onPromoClose }: Props) {
+export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedClick, onPictureClick, onHide, variant, promo, onPromoClose }: Props) {
   const tx = useAskCopy()
   const lang = useAskLang()
   const cat = getCategory(categoryKey)
@@ -102,6 +151,8 @@ export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedCli
               <AskIcon name="X" className="h-3.5 w-3.5" />
             </button>
           </div>
+        ) : cat.pictureLink ? (
+          <PictureThumbLink cat={cat} label={label} onPictureClick={onPictureClick} />
         ) : (
           <img src={cat.image} alt={cat.alt} width={56} height={56} className="h-14 w-14 flex-shrink-0 rounded-md object-cover" />
         )}
@@ -120,10 +171,15 @@ export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedCli
         <p className="min-w-0 flex-1 truncate text-[11px] font-semibold uppercase tracking-wide text-primary">{label}</p>
         <HideButton onHide={onHide} />
       </div>
-      {/* Top third: topic picture, full width. Inactive in v1 — deliberately no handler, cursor or hover state. */}
+      {/* Top third: topic picture, full width. Clickable (cursor, chip, shine) only when the category carries pictureLink. */}
       <div className="h-[22%] max-h-28 min-h-[64px] flex-shrink-0 overflow-hidden rounded-lg" style={{ backgroundColor: 'hsl(var(--hero-from))' }}>
-        <img src={promo ? promoImage(lang) : cat.image} alt={promo ? tx.promo.imageAlt : cat.alt} width={900} height={300} className="h-full w-full select-none object-contain" draggable={false} />
+        {!promo && cat.pictureLink ? (
+          <PictureLink cat={cat} label={label} onPictureClick={onPictureClick} />
+        ) : (
+          <img src={promo ? promoImage(lang) : cat.image} alt={promo ? tx.promo.imageAlt : cat.alt} width={900} height={300} className="h-full w-full select-none object-contain" draggable={false} />
+        )}
       </div>
+      {!promo && cat.pictureLink && <p className="text-[10px] leading-snug text-muted-foreground">{tx.panel.pictureCaption}</p>}
       {promo && onPromoClose && <PromoCard onClose={onPromoClose} />}
       {/* Rest: links that fit the conversation. */}
       <nav aria-label={hasRelated ? tx.panel.relatedHeading : tx.panelLinksHeading} className="flex min-h-0 flex-1 flex-col gap-1.5 overflow-y-auto">

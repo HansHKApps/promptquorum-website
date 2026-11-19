@@ -164,6 +164,12 @@ export interface AskCopy {
     historyHide: string
     historyShow: (n: number) => string
     historyClear: string
+    /** small button chip on a clickable topic picture, e.g. "Compare prices ↗" */
+    pictureCta: string
+    /** muted caption under a clickable topic picture */
+    pictureCaption: string
+    /** accessible name of a clickable topic picture's link, given the category label */
+    pictureLinkLabel: (categoryLabel: string) => string
   }
 
   /** header search box that hands the question to Ask Hans */
