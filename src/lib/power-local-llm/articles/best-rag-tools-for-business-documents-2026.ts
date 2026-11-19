@@ -4,17 +4,17 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-25',
-    last_full_refresh: '2026-08-26',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-26',
+    next_refresh_due: '2026-12-19',
+    last_full_refresh: '2026-11-19',
+    next_seo_review_due: '2026-12-19',
+    last_seo_review: '2026-11-19',
     current_hardware_mentioned: ['Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro'],
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     heroImage: '/images/best-rag-tools-for-business-documents-2026-overview-hero-en.webp',
     affiliateDisclosure: true,
     title: 'Best RAG Tools for Business Documents 2026: Local & Private AI Compared',
-    seoTitle: 'Best Local RAG Tools for Business Documents 2026',
+    seoTitle: 'AnythingLLM vs RAGFlow: Best RAG Tools for Business 2026',
     intro:
       'Compare the best local RAG platforms for PDFs, Word files, Excel, contracts, and internal knowledge bases — which tools work with Ollama, support multiple users, provide citations, and keep private business data off the cloud. This guide sorts nine tools into three real categories (ready-to-use applications, AI workflow builders, and developer frameworks/infrastructure), gives a specific pick per business profile, and shows the hardware a business RAG stack actually needs.',
     metaDescription: 'Best RAG tools for business documents 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex compared by category, use case and hardware.',
@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local rag hardware requirements',
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     leadAnswerBlock:
       '**AnythingLLM is our top pick for most business teams in 2026: it handles PDF, Word, Excel and web URLs, can run fully local with Ollama, and supports multi-user workspaces without coding.** Based on published documentation and vendor specs, not hands-on lab testing. → [Check AnythingLLM](https://anythingllm.com)',
     quickAnswerTop: {
@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-verdict',
         title: 'Quick Verdict',
         highlight: true,
-        content: 'One pick per buyer profile, checked August 26, 2026 against each project\'s own documentation and GitHub activity — not a hands-on lab comparison.',
+        content: 'One pick per buyer profile, checked November 19, 2026 against each project\'s own documentation and GitHub activity — not a hands-on lab comparison.',
         items: [
           '**Best overall: AnythingLLM.** Best choice for most businesses that want private document Q&A without building a RAG system from scratch.',
           '**Best for complex documents: RAGFlow.** Best when document structure, table extraction, and retrieval quality matter more than simplicity.',
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'disclosure',
         title: 'Disclosure',
         content:
-          'This page contains product and software links, not affiliate links. PromptQuorum has no current affiliate relationship with AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant, or Weaviate, and earns no commission from clicks or purchases through this page. Recommendations are based on each project\'s own documentation, GitHub repository activity, and published feature comparisons, checked August 26, 2026 — not hands-on testing by PromptQuorum against a benchmark document set.',
+          'This page contains product and software links, not affiliate links. PromptQuorum has no current affiliate relationship with AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant, or Weaviate, and earns no commission from clicks or purchases through this page. Recommendations are based on each project\'s own documentation, GitHub repository activity, and published feature comparisons, checked November 19, 2026 — not hands-on testing by PromptQuorum against a benchmark document set.',
       },
       comparison: {
         id: 'comparison',
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Compare AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, and LlamaIndex for local business document RAG in 2026, by category and buyer profile.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-26',
+      dateModified: '2026-11-19',
       url: 'https://www.promptquorum.com/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'en',
       'proficiencyLevel': 'Intermediate',
@@ -587,10 +587,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-25',
-    last_full_refresh: '2026-08-26',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-26',
+    next_refresh_due: '2026-12-19',
+    last_full_refresh: '2026-11-19',
+    next_seo_review_due: '2026-12-19',
+    last_seo_review: '2026-11-19',
     current_hardware_mentioned: ['Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro'],
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokale rag hardware anforderungen',
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     leadAnswerBlock:
       '**AnythingLLM ist unsere Top-Empfehlung für die meisten Geschäftsteams 2026: Es verarbeitet PDF, Word, Excel und Web-URLs, kann mit Ollama lokal laufen und unterstützt Multi-User-Arbeitsbereiche ohne Programmierkenntnisse.** Basis sind veröffentlichte Dokumentation und Herstellerangaben, keine eigenen Labortests. → [AnythingLLM ansehen](https://anythingllm.com)',
     quickAnswerTop: {
@@ -684,7 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-verdict',
         title: 'Kurzfazit',
         highlight: true,
-        content: 'Eine Empfehlung pro Unternehmensprofil, Stand 26. August 2026, geprüft anhand der eigenen Dokumentation und GitHub-Aktivität jedes Projekts — kein praktischer Labor-Vergleich.',
+        content: 'Eine Empfehlung pro Unternehmensprofil, Stand 19. November 2026, geprüft anhand der eigenen Dokumentation und GitHub-Aktivität jedes Projekts — kein praktischer Labor-Vergleich.',
         items: [
           '**Insgesamt am besten: AnythingLLM.** Beste Wahl für die meisten Unternehmen, die private Dokumenten-Q&A wollen, ohne ein RAG-System von Grund auf selbst zu bauen.',
           '**Am besten für komplexe Dokumente: RAGFlow.** Am besten, wenn Dokumentstruktur, Tabellenextraktion und Retrieval-Qualität wichtiger sind als Einfachheit.',
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'disclosure',
         title: 'Offenlegung',
         content:
-          'Diese Seite enthält Produkt- und Software-Links, keine Affiliate-Links. PromptQuorum hat derzeit keine Affiliate-Beziehung zu AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant oder Weaviate und erzielt keine Provision aus Klicks oder Käufen über diese Seite. Empfehlungen basieren auf der eigenen Dokumentation jedes Projekts, der GitHub-Repository-Aktivität und veröffentlichten Funktionsvergleichen, Stand 26. August 2026 — nicht auf praktischen Tests von PromptQuorum gegen einen Benchmark-Dokumentensatz.',
+          'Diese Seite enthält Produkt- und Software-Links, keine Affiliate-Links. PromptQuorum hat derzeit keine Affiliate-Beziehung zu AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant oder Weaviate und erzielt keine Provision aus Klicks oder Käufen über diese Seite. Empfehlungen basieren auf der eigenen Dokumentation jedes Projekts, der GitHub-Repository-Aktivität und veröffentlichten Funktionsvergleichen, Stand 19. November 2026 — nicht auf praktischen Tests von PromptQuorum gegen einen Benchmark-Dokumentensatz.',
       },
       comparison: {
         id: 'comparison',
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Vergleichen Sie AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify und LlamaIndex für lokales geschäftliches Dokumenten-RAG 2026, nach Kategorie und Käuferprofil.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-26',
+      dateModified: '2026-11-19',
       url: 'https://www.promptquorum.com/de/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'de',
       'proficiencyLevel': 'Intermediate',
@@ -1178,10 +1178,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-25',
-    last_full_refresh: '2026-08-26',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-26',
+    next_refresh_due: '2026-12-19',
+    last_full_refresh: '2026-11-19',
+    next_seo_review_due: '2026-12-19',
+    last_seo_review: '2026-11-19',
     current_hardware_mentioned: ['Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro'],
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'configuration matérielle rag local',
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     leadAnswerBlock:
       '**AnythingLLM est notre premier choix pour la plupart des équipes en 2026 : il gère PDF, Word, Excel et URL web, peut tourner en local avec Ollama et propose des espaces multi-utilisateurs sans code.** Basé sur la documentation et les spécifications éditeurs, sans test en laboratoire. → [Découvrir AnythingLLM](https://anythingllm.com)',
     quickAnswerTop: {
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-verdict',
         title: 'Verdict rapide',
         highlight: true,
-        content: 'Un choix par profil d\'acheteur, vérifié le 26 août 2026 dans la documentation et l\'activité GitHub de chaque projet — pas un comparatif pratique en laboratoire.',
+        content: 'Un choix par profil d\'acheteur, vérifié le 19 novembre 2026 dans la documentation et l\'activité GitHub de chaque projet — pas un comparatif pratique en laboratoire.',
         items: [
           '**Meilleur choix global : AnythingLLM.** Idéal pour la plupart des entreprises qui veulent un Q&A documentaire privé sans construire un système RAG depuis zéro.',
           '**Meilleur pour documents complexes : RAGFlow.** Idéal quand la structure documentaire, l\'extraction de tableaux et la qualité de récupération priment sur la simplicité.',
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'disclosure',
         title: 'Transparence',
         content:
-          'Cette page contient des liens produits et logiciels, pas des liens d\'affiliation. PromptQuorum n\'a actuellement aucune relation d\'affiliation avec AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant ou Weaviate, et ne perçoit aucune commission sur les clics ou achats effectués via cette page. Les recommandations reposent sur la documentation de chaque projet, l\'activité de son dépôt GitHub et des comparatifs de fonctionnalités publiés, vérifiés le 26 août 2026 — et non sur des tests pratiques menés par PromptQuorum sur un corpus de documents de référence.',
+          'Cette page contient des liens produits et logiciels, pas des liens d\'affiliation. PromptQuorum n\'a actuellement aucune relation d\'affiliation avec AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant ou Weaviate, et ne perçoit aucune commission sur les clics ou achats effectués via cette page. Les recommandations reposent sur la documentation de chaque projet, l\'activité de son dépôt GitHub et des comparatifs de fonctionnalités publiés, vérifiés le 19 novembre 2026 — et non sur des tests pratiques menés par PromptQuorum sur un corpus de documents de référence.',
       },
       comparison: {
         id: 'comparison',
@@ -1753,7 +1753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Comparez AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify et LlamaIndex pour le RAG documentaire professionnel local en 2026, par catégorie et profil d\'acheteur.',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-26',
+      dateModified: '2026-11-19',
       url: 'https://www.promptquorum.com/fr/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'fr',
       'proficiencyLevel': 'Intermediate',
@@ -1761,10 +1761,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-25',
-    last_full_refresh: '2026-08-26',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-26',
+    next_refresh_due: '2026-12-19',
+    last_full_refresh: '2026-11-19',
+    next_seo_review_due: '2026-12-19',
+    last_seo_review: '2026-11-19',
     current_hardware_mentioned: ['Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro'],
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -1789,7 +1789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルRAG ハードウェア 要件',
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     leadAnswerBlock:
       '**ほとんどのビジネスチームには、まずAnythingLLMがおすすめです（2026年）。PDF・Word・Excel・URLを扱え、Ollamaでローカル動作し、コーディング不要で複数ユーザーに対応します。** 公開資料とベンダー仕様に基づく評価で、実機テストではありません。→ [AnythingLLMを確認](https://anythingllm.com)',
     quickAnswerTop: {
@@ -1858,7 +1858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-verdict',
         title: 'クイック結論',
         highlight: true,
-        content: '購入プロファイルごとの推奨は1つずつ。2026年8月26日時点で各プロジェクト自身のドキュメントとGitHubの活動状況を確認したものであり、実機によるラボ比較ではありません。',
+        content: '購入プロファイルごとの推奨は1つずつ。2026年11月19日時点で各プロジェクト自身のドキュメントとGitHubの活動状況を確認したものであり、実機によるラボ比較ではありません。',
         items: [
           '**総合ベスト：AnythingLLM。** 独自にRAGシステムを構築せずにプライベートな文書Q&Aを利用したいほとんどの企業に最適です。',
           '**複雑な文書に最適：RAGFlow。** シンプルさよりも、文書構造、表の抽出、検索精度が重要な場合に最適です。',
@@ -1910,7 +1910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'disclosure',
         title: '開示事項',
         content:
-          'このページには製品・ソフトウェアへのリンクが含まれていますが、アフィリエイトリンクではありません。PromptQuorumは、AnythingLLM、RAGFlow、PrivateGPT、Open WebUI、Dify、LlamaIndex、Chroma、Qdrant、Weaviateとの間に現時点でアフィリエイト関係はなく、このページ経由のクリックや購入から報酬を得ることはありません。推奨内容は、各プロジェクト自身のドキュメント、GitHubリポジトリの活動状況、公開されている機能比較に基づいており（2026年8月26日確認）、PromptQuorumがベンチマーク文書セットに対して実機テストを行った結果ではありません。',
+          'このページには製品・ソフトウェアへのリンクが含まれていますが、アフィリエイトリンクではありません。PromptQuorumは、AnythingLLM、RAGFlow、PrivateGPT、Open WebUI、Dify、LlamaIndex、Chroma、Qdrant、Weaviateとの間に現時点でアフィリエイト関係はなく、このページ経由のクリックや購入から報酬を得ることはありません。推奨内容は、各プロジェクト自身のドキュメント、GitHubリポジトリの活動状況、公開されている機能比較に基づいており（2026年11月19日確認）、PromptQuorumがベンチマーク文書セットに対して実機テストを行った結果ではありません。',
       },
       comparison: {
         id: 'comparison',
@@ -2336,7 +2336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'AnythingLLM、RAGFlow、PrivateGPT、Open WebUI、Dify、LlamaIndexを、カテゴリーと購入プロファイル別にローカルビジネス文書RAGとして2026年版で比較。',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-26',
+      dateModified: '2026-11-19',
       url: 'https://www.promptquorum.com/ja/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'ja',
       'proficiencyLevel': 'Intermediate',
@@ -2344,7 +2344,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-25',
+    next_refresh_due: '2026-12-19',
+    last_full_refresh: '2026-11-19',
+    next_seo_review_due: '2026-12-19',
+    last_seo_review: '2026-11-19',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     heroImage: '/images/best-rag-tools-for-business-documents-2026-overview-hero-zh.webp',
@@ -2359,7 +2362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: '为私有文档问答选择本地RAG软件的企业团队与开发者',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     leadAnswerBlock:
       '**2026年，大多数企业团队首推AnythingLLM：支持PDF、Word、Excel和网页链接，可通过Ollama本地运行，并提供无需编程的多用户工作区。** 依据官方文档和厂商规格，非实验室测试。→ [查看AnythingLLM](https://anythingllm.com)',
     quickAnswerTop: {
@@ -2428,7 +2431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-verdict',
         title: '快速结论',
         highlight: true,
-        content: '每种买家画像对应一个推荐，核对于2026年8月26日，依据各项目自身文档与GitHub活跃度——并非动手实验室对比测试。',
+        content: '每种买家画像对应一个推荐，核对于2026年11月19日，依据各项目自身文档与GitHub活跃度——并非动手实验室对比测试。',
         items: [
           '**综合最佳：AnythingLLM。** 大多数希望无需从零搭建RAG系统即可实现私有文档问答的企业首选。',
           '**复杂文档最佳：RAGFlow。** 当文档结构、表格提取和检索质量比易用性更重要时的最佳选择。',
@@ -2480,7 +2483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'disclosure',
         title: '信息披露',
         content:
-          '本页面包含产品和软件链接，但不是联盟营销链接。PromptQuorum目前与AnythingLLM、RAGFlow、PrivateGPT、Open WebUI、Dify、LlamaIndex、Chroma、Qdrant或Weaviate均无联盟合作关系，本页面的点击或购买不会为PromptQuorum带来任何佣金。所有推荐均基于各项目自身文档、GitHub仓库活跃度和公开的功能对比，核对于2026年8月26日——并非PromptQuorum对基准文档集进行的动手测试结果。',
+          '本页面包含产品和软件链接，但不是联盟营销链接。PromptQuorum目前与AnythingLLM、RAGFlow、PrivateGPT、Open WebUI、Dify、LlamaIndex、Chroma、Qdrant或Weaviate均无联盟合作关系，本页面的点击或购买不会为PromptQuorum带来任何佣金。所有推荐均基于各项目自身文档、GitHub仓库活跃度和公开的功能对比，核对于2026年11月19日——并非PromptQuorum对基准文档集进行的动手测试结果。',
       },
       comparison: {
         id: 'comparison',
@@ -2908,7 +2911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: '对比AnythingLLM、RAGFlow、PrivateGPT、Open WebUI、Dify和LlamaIndex在2026年本地企业文档RAG场景中的表现，按类别与买家画像分类。',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-26',
+      dateModified: '2026-11-19',
       url: 'https://www.promptquorum.com/zh/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'zh',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2918,10 +2921,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-25',
-    last_full_refresh: '2026-08-26',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-26',
+    next_refresh_due: '2026-12-19',
+    last_full_refresh: '2026-11-19',
+    next_seo_review_due: '2026-12-19',
+    last_seo_review: '2026-11-19',
     current_hardware_mentioned: ['Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro'],
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -2946,7 +2949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'requisitos de hardware rag local',
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     leadAnswerBlock:
       '**AnythingLLM es nuestra primera opción para la mayoría de los equipos empresariales en 2026: gestiona PDF, Word, Excel y URL, puede funcionar en local con Ollama y ofrece espacios multiusuario sin programar.** Basado en documentación publicada y especificaciones de proveedores, no en pruebas de laboratorio. → [Consulta AnythingLLM](https://anythingllm.com)',
     quickAnswerTop: {
@@ -3015,7 +3018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-verdict',
         title: 'Veredicto rápido',
         highlight: true,
-        content: 'Una recomendación por perfil de comprador, verificada el 26 de agosto de 2026 con la documentación propia de cada proyecto y su actividad en GitHub — no es una comparativa práctica de laboratorio.',
+        content: 'Una recomendación por perfil de comprador, verificada el 19 de noviembre de 2026 con la documentación propia de cada proyecto y su actividad en GitHub — no es una comparativa práctica de laboratorio.',
         items: [
           '**Mejor en general: AnythingLLM.** La mejor opción para la mayoría de las empresas que quieren consultar documentos privados sin construir un sistema RAG desde cero.',
           '**Mejor para documentos complejos: RAGFlow.** La mejor opción cuando la estructura del documento, la extracción de tablas y la calidad de recuperación importan más que la simplicidad.',
@@ -3067,7 +3070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'disclosure',
         title: 'Divulgación',
         content:
-          'Esta página contiene enlaces a productos y software, no enlaces de afiliados. PromptQuorum no tiene ninguna relación de afiliación actual con AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant ni Weaviate, y no obtiene ninguna comisión por los clics o compras realizados a través de esta página. Las recomendaciones se basan en la documentación propia de cada proyecto, la actividad de su repositorio en GitHub y comparativas de funciones publicadas, verificadas el 26 de agosto de 2026 — no en pruebas prácticas realizadas por PromptQuorum sobre un conjunto de documentos de referencia.',
+          'Esta página contiene enlaces a productos y software, no enlaces de afiliados. PromptQuorum no tiene ninguna relación de afiliación actual con AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant ni Weaviate, y no obtiene ninguna comisión por los clics o compras realizados a través de esta página. Las recomendaciones se basan en la documentación propia de cada proyecto, la actividad de su repositorio en GitHub y comparativas de funciones publicadas, verificadas el 19 de noviembre de 2026 — no en pruebas prácticas realizadas por PromptQuorum sobre un conjunto de documentos de referencia.',
       },
       comparison: {
         id: 'comparison',
@@ -3493,7 +3496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Compara AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify y LlamaIndex para RAG local de documentos empresariales en 2026, por categoría y perfil de comprador.',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-26',
+      dateModified: '2026-11-19',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'es',
       'proficiencyLevel': 'Intermediate',
@@ -3501,10 +3504,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-25',
-    last_full_refresh: '2026-08-26',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-26',
+    next_refresh_due: '2026-12-19',
+    last_full_refresh: '2026-11-19',
+    next_seo_review_due: '2026-12-19',
+    last_seo_review: '2026-11-19',
     current_hardware_mentioned: ['Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro'],
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -3529,7 +3532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'requisitos de hardware para rag local',
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     leadAnswerBlock:
       '**O AnythingLLM é nossa principal recomendação para a maioria das equipes em 2026: lida com PDF, Word, Excel e URLs, pode rodar localmente com o Ollama e oferece espaços multiusuário sem programar.** Baseado em documentação publicada e especificações de fornecedores, sem testes de laboratório. → [Conheça o AnythingLLM](https://anythingllm.com)',
     quickAnswerTop: {
@@ -3598,7 +3601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-verdict',
         title: 'Veredito Rápido',
         highlight: true,
-        content: 'Uma escolha por perfil de comprador, verificada em 26 de agosto de 2026 com base na documentação e na atividade no GitHub de cada projeto — não uma comparação prática em laboratório.',
+        content: 'Uma escolha por perfil de comprador, verificada em 19 de novembro de 2026 com base na documentação e na atividade no GitHub de cada projeto — não uma comparação prática em laboratório.',
         items: [
           '**Melhor no geral: AnythingLLM.** A melhor escolha para a maioria das empresas que querem consultar documentos de forma privada sem construir um sistema RAG do zero.',
           '**Melhor para documentos complexos: RAGFlow.** A melhor opção quando estrutura do documento, extração de tabelas e qualidade de recuperação importam mais do que simplicidade.',
@@ -3650,7 +3653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'disclosure',
         title: 'Divulgação',
         content:
-          'Esta página contém links de produtos e software, não links de afiliados. O PromptQuorum não tem nenhuma relação de afiliado atual com AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant ou Weaviate, e não recebe comissão por cliques ou compras feitas por meio desta página. As recomendações são baseadas na documentação de cada projeto, na atividade de seus repositórios no GitHub e em comparações de recursos publicadas, verificadas em 26 de agosto de 2026 — não em testes práticos do PromptQuorum com um conjunto de documentos de benchmark.',
+          'Esta página contém links de produtos e software, não links de afiliados. O PromptQuorum não tem nenhuma relação de afiliado atual com AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant ou Weaviate, e não recebe comissão por cliques ou compras feitas por meio desta página. As recomendações são baseadas na documentação de cada projeto, na atividade de seus repositórios no GitHub e em comparações de recursos publicadas, verificadas em 19 de novembro de 2026 — não em testes práticos do PromptQuorum com um conjunto de documentos de benchmark.',
       },
       comparison: {
         id: 'comparison',
@@ -4079,7 +4082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-26',
+      dateModified: '2026-11-19',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'pt-BR',
       'proficiencyLevel': 'Intermediate',
@@ -4088,10 +4091,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ar: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-25',
-    last_full_refresh: '2026-08-26',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-26',
+    next_refresh_due: '2026-12-19',
+    last_full_refresh: '2026-11-19',
+    next_seo_review_due: '2026-12-19',
+    last_seo_review: '2026-11-19',
     current_hardware_mentioned: ['Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro'],
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -4116,7 +4119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'متطلبات أجهزة RAG المحلي',
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     leadAnswerBlock:
       '**AnythingLLM هو اختيارنا الأول لمعظم فرق الأعمال في 2026: يتعامل مع PDF وWord وExcel وروابط الويب، ويمكن تشغيله محليًا مع Ollama، ويدعم مساحات عمل متعددة المستخدمين دون برمجة.** يستند إلى الوثائق المنشورة ومواصفات الموردين، وليس إلى اختبارات مخبرية. ← [تحقق من AnythingLLM](https://anythingllm.com)',
     quickAnswerTop: {
@@ -4185,7 +4188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-verdict',
         title: 'الحكم السريع',
         highlight: true,
-        content: 'اختيار واحد لكل فئة مشترين، تم التحقق منه في 26 أغسطس 2026 مقابل وثائق كل مشروع الخاصة ونشاط GitHub — وليس مقارنة عملية في المختبر.',
+        content: 'اختيار واحد لكل فئة مشترين، تم التحقق منه في 19 نوفمبر 2026 مقابل وثائق كل مشروع الخاصة ونشاط GitHub — وليس مقارنة عملية في المختبر.',
         items: [
           '**الأفضل عموماً: AnythingLLM.** أفضل خيار لمعظم الشركات التي تريد الإجابة الخاصة على أسئلة الوثائق دون بناء نظام RAG من الصفر.',
           '**الأفضل للوثائق المعقدة: RAGFlow.** أفضل خيار عندما تكون بنية الوثائق واستخراج الجداول وجودة الاسترجاع أهم من البساطة.',
@@ -4237,7 +4240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'disclosure',
         title: 'إفصاح',
         content:
-          'تحتوي هذه الصفحة على روابط منتجات وبرامج، وليست روابط تسويق بالعمولة. لا تربط PromptQuorum حالياً أي علاقة تسويق بالعمولة مع AnythingLLM أو RAGFlow أو PrivateGPT أو Open WebUI أو Dify أو LlamaIndex أو Chroma أو Qdrant أو Weaviate، ولا تحصل على أي عمولة من النقرات أو المشتريات عبر هذه الصفحة. تستند التوصيات إلى وثائق كل مشروع ونشاط مستودع GitHub الخاص به والمقارنات المنشورة للميزات، تم التحقق منها في 26 أغسطس 2026 — وليست اختباراً عملياً أجرته PromptQuorum مقابل مجموعة وثائق مرجعية.',
+          'تحتوي هذه الصفحة على روابط منتجات وبرامج، وليست روابط تسويق بالعمولة. لا تربط PromptQuorum حالياً أي علاقة تسويق بالعمولة مع AnythingLLM أو RAGFlow أو PrivateGPT أو Open WebUI أو Dify أو LlamaIndex أو Chroma أو Qdrant أو Weaviate، ولا تحصل على أي عمولة من النقرات أو المشتريات عبر هذه الصفحة. تستند التوصيات إلى وثائق كل مشروع ونشاط مستودع GitHub الخاص به والمقارنات المنشورة للميزات، تم التحقق منها في 19 نوفمبر 2026 — وليست اختباراً عملياً أجرته PromptQuorum مقابل مجموعة وثائق مرجعية.',
       },
       comparison: {
         id: 'comparison',
@@ -4663,7 +4666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'قارن AnythingLLM وRAGFlow وPrivateGPT وOpen WebUI وDify وLlamaIndex لـ RAG المحلي لوثائق الشركات في 2026، حسب الفئة وملف تعريف المشتري.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-26',
+      dateModified: '2026-11-19',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'ar',
       'proficiencyLevel': 'Intermediate',
@@ -4671,10 +4674,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-25',
-    last_full_refresh: '2026-08-26',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-26',
+    next_refresh_due: '2026-12-19',
+    last_full_refresh: '2026-11-19',
+    next_seo_review_due: '2026-12-19',
+    last_seo_review: '2026-11-19',
     current_hardware_mentioned: ['Beelink EQ14', 'GMKtec G3 Plus', 'Minisforum UM890 Pro'],
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -4699,7 +4702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 RAG 하드웨어 요구사항',
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     leadAnswerBlock:
       '**AnythingLLM은 2026년 대부분의 기업 팀에 우선 추천하는 RAG 도구입니다. PDF·Word·Excel·웹 URL을 처리하고 Ollama로 로컬 실행이 가능하며 코딩이 필요 없습니다.** 공개 문서와 공급업체 사양 기반이며 직접 테스트가 아닙니다. → [AnythingLLM 확인](https://anythingllm.com)',
     quickAnswerTop: {
@@ -4768,7 +4771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-verdict',
         title: '빠른 결론',
         highlight: true,
-        content: '2026년 8월 26일 기준으로 각 프로젝트 자체 문서와 GitHub 활동을 참고하여 확인한, 구매자 프로필별 추천입니다 — 직접 실습 비교가 아닙니다.',
+        content: '2026년 11월 19일 기준으로 각 프로젝트 자체 문서와 GitHub 활동을 참고하여 확인한, 구매자 프로필별 추천입니다 — 직접 실습 비교가 아닙니다.',
         items: [
           '**종합 최고: AnythingLLM.** 처음부터 RAG 시스템을 직접 구축하지 않고 프라이빗 문서 Q&A를 원하는 대부분의 기업에 가장 적합한 선택입니다.',
           '**복잡한 문서에 최적: RAGFlow.** 문서 구조, 표 추출, 검색 품질이 단순함보다 중요할 때 가장 적합합니다.',
@@ -4820,7 +4823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'disclosure',
         title: '공개 정보',
         content:
-          '이 페이지에는 제품 및 소프트웨어 링크가 포함되어 있으며, 제휴 링크가 아닙니다. PromptQuorum은 AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant, Weaviate와 현재 제휴 관계가 없으며, 이 페이지를 통한 클릭이나 구매로부터 수수료를 받지 않습니다. 추천 내용은 각 프로젝트 자체 문서, GitHub 저장소 활동, 공개된 기능 비교를 기반으로 하며(2026년 8월 26일 기준 확인) — PromptQuorum이 벤치마크 문서 세트를 대상으로 직접 실습 테스트를 수행한 결과가 아닙니다.',
+          '이 페이지에는 제품 및 소프트웨어 링크가 포함되어 있으며, 제휴 링크가 아닙니다. PromptQuorum은 AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex, Chroma, Qdrant, Weaviate와 현재 제휴 관계가 없으며, 이 페이지를 통한 클릭이나 구매로부터 수수료를 받지 않습니다. 추천 내용은 각 프로젝트 자체 문서, GitHub 저장소 활동, 공개된 기능 비교를 기반으로 하며(2026년 11월 19일 기준 확인) — PromptQuorum이 벤치마크 문서 세트를 대상으로 직접 실습 테스트를 수행한 결과가 아닙니다.',
       },
       comparison: {
         id: 'comparison',
@@ -5246,7 +5249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: '2026년 기업 문서의 로컬 RAG를 위해 AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex를 범주와 구매자 프로필별로 비교합니다.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-26',
+      dateModified: '2026-11-19',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'ko',
       'proficiencyLevel': 'Intermediate',
