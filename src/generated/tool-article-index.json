@@ -12621,6 +12621,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "Humla": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "humla-review",
+        "title": "Humla Review: Free, Open-Source AI Meeting Notes for Mac",
+        "url": "/power-local-llm/humla-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Reactive Resume": {
     "articles": [
       {
@@ -13589,6 +13603,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "humla-review",
+        "title": "Humla Review: Free, Open-Source AI Meeting Notes for Mac",
+        "url": "/power-local-llm/humla-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "alpaca-review",
         "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
         "url": "/power-local-llm/alpaca-review",
@@ -13626,17 +13648,9 @@
         "url": "/power-local-llm/inbox-zero-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-pdf-parsers-compared",
-        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
-        "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 283,
+    "totalCount": 284,
     "capped": true
   },
   "Qdrant": {
