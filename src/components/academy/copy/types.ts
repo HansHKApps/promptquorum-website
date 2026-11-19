@@ -130,7 +130,36 @@ export interface AcademyCopy {
   retakeFinal: string
   attemptOf: (n: number) => string
   downloadCertificate: string
-  certificateComing: string
+  certNameLabel: string
+  certNameHint: string
+  certNeedName: string
+  certNeedLessons: (done: number, total: number) => string
+  certNeedQuizzes: string
+  certCreating: string
+  certError: string
+  /** printed on the PDF, in the programme language */
+  cert: {
+    title: string
+    awardedTo: string
+    nameNote: string
+    forProgramme: string
+    objectives: string
+    topics: string
+    started: string
+    completed: string
+    learningTime: string
+    tests: string
+    overall: string
+    topicScores: string
+    passed: (mark: number) => string
+    id: string
+    issued: string
+    /** mandatory statement (SPEC 10): learning certificate, not an externally accredited qualification */
+    disclaimer: string
+    aiNote: string
+    notFor: string
+    idNote: string
+  }
 
   // Privacy strip
   privacyNote: string

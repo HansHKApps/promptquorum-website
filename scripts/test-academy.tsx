@@ -570,6 +570,113 @@ t('F17: further reading must share words with the lesson topic', () => {
   assert.equal(isOnTopic({ title: 'ローカルLLMの速度', description: '' }, 'プライバシー 保護'), false)
 })
 
+// ------------------------------------------------------------------------------------------ certificate (F5)
+import { CERTIFICATE_ID_PATTERN, certificateBlocker, certificateFilename, certificateModel, newCertificateId } from '../src/lib/academy/certificate'
+import { jpegToPdf, pdfString } from '../src/components/academy/certificate-pdf'
+
+function completedProgramme(mode: 'final' | 'per_lesson_and_final' = 'final'): Programme {
+  const p = scoredProgramme(mode)
+  p.progress.lessonStatus = Object.fromEntries(p.lessons.map((l) => [l.id, 'done' as const]))
+  p.progress.secondsSpent = 61 * 60
+  const fin = qset('Hardware', 10)
+  p.progress.finalAttempts = [scoreQuiz('final-1', fin, answersFor(fin, 9))]
+  if (mode === 'per_lesson_and_final') p.progress.quizResults = p.lessons.map((l) => scoreQuiz(l.id, qset('Hardware', 3), answersFor(qset('Hardware', 3), 3)))
+  return p
+}
+
+t('F5: certificate ID is PQA-YYYY-XXXXXXXXXX from an unambiguous base32 alphabet', () => {
+  const id = newCertificateId(new Date('2026-11-19T10:00:00Z'))
+  assert.match(id, CERTIFICATE_ID_PATTERN)
+  assert.ok(id.startsWith('PQA-2026-'))
+  assert.notEqual(newCertificateId(), newCertificateId())
+  assert.equal(newCertificateId(new Date('2027-01-01T00:00:00Z'), (n) => new Uint8Array(n)).slice(9), '0000000000')
+  assert.doesNotMatch(id.slice(9), /[ILOU]/)
+})
+
+t('F5: the download always has a reason until name, lessons, quizzes and the pass mark are all met', () => {
+  const p = completedProgramme()
+  assert.deepEqual(certificateBlocker(p, ''), { code: 'name' })
+  assert.deepEqual(certificateBlocker(p, ' A '), { code: 'name' })
+  assert.equal(certificateBlocker(p, 'Aiko Tanaka'), null)
+  const open = completedProgramme()
+  open.progress.lessonStatus[open.lessons[0].id] = 'viewed'
+  assert.deepEqual(certificateBlocker(open, 'Aiko'), { code: 'lessons', done: open.lessons.length - 1, total: open.lessons.length })
+  const noQuiz = completedProgramme('per_lesson_and_final')
+  noQuiz.progress.quizResults = []
+  const b = certificateBlocker(noQuiz, 'Aiko')
+  assert.ok(b && (b.code === 'quizzes' || b.code === 'notPassed'))
+  const failed = completedProgramme()
+  failed.progress.finalAttempts = [scoreQuiz('final-1', qset('A', 10), answersFor(qset('A', 10), 3))]
+  assert.deepEqual(certificateBlocker(failed, 'Aiko'), { code: 'notPassed' })
+  const none = completedProgramme()
+  none.testMode = 'none'
+  assert.deepEqual(certificateBlocker(none, 'Aiko'), { code: 'notPassed' })
+})
+
+t('F5: the model carries every field of SPEC 10 and the passing attempt', () => {
+  const p = completedProgramme()
+  const m = certificateModel(p, '  محمد الأحمد  ', new Date('2026-11-19T10:00:00Z'))
+  assert.equal(m.name, 'محمد الأحمد')
+  assert.equal(m.subject, p.subject)
+  assert.deepEqual(m.objectives, p.objectives)
+  assert.ok(m.topics.length > 0 && m.byTopic.length > 0)
+  assert.equal(m.learningMinutes, 61)
+  assert.equal(m.testMode, 'final')
+  assert.ok(m.percent >= PASS_MARK && m.passMark === 70)
+  assert.match(m.id, CERTIFICATE_ID_PATTERN)
+  assert.equal(m.issuedAt, '2026-11-19T10:00:00.000Z')
+  // A reissue keeps the ID and the issue date.
+  p.certificate = { id: m.id, learnerName: m.name, issuedAt: m.issuedAt }
+  const again = certificateModel(p, 'Other Name', new Date('2027-05-05T00:00:00Z'))
+  assert.equal(again.id, m.id)
+  assert.equal(again.issuedAt, m.issuedAt)
+  assert.throws(() => certificateModel(scoredProgramme('final'), 'X'), /not completed/)
+})
+
+t('F5: filename follows the spec; non-Latin subjects fall back to "programme"', () => {
+  assert.equal(certificateFilename('Quantization on 16 GB RAM!', 'PQA-2026-ABCDEFGHJK'), 'PromptQuorum-Academy-Certificate-quantization-on-16-gb-ram-PQA-2026-ABCDEFGHJK.pdf')
+  assert.equal(certificateFilename('ローカルLLM', 'PQA-2026-ABCDEFGHJK'), 'PromptQuorum-Academy-Certificate-llm-PQA-2026-ABCDEFGHJK.pdf')
+  assert.equal(certificateFilename('日本語', 'PQA-2026-ABCDEFGHJK'), 'PromptQuorum-Academy-Certificate-programme-PQA-2026-ABCDEFGHJK.pdf')
+})
+
+t('F5: PDF container is valid: header, A4 landscape, xref offsets point at their objects, metadata holds the ID', () => {
+  const jpeg = new Uint8Array([0xff, 0xd8, 1, 2, 3, 0xff, 0xd9])
+  const pdf = jpegToPdf(jpeg, { w: 3508, h: 2480 }, { title: 'Learning Certificate PQA-2026-ABCDEFGHJK', subject: 'Quantisierung für Anfänger', keywords: 'PQA-2026-ABCDEFGHJK', created: new Date('2026-11-19T10:00:00Z') })
+  const text = Buffer.from(pdf).toString('latin1')
+  assert.ok(text.startsWith('%PDF-1.4'))
+  assert.ok(text.includes('/MediaBox [0 0 841.89 595.28]'))
+  assert.ok(text.includes('/Filter /DCTDecode'))
+  assert.ok(text.includes('(Learning Certificate PQA-2026-ABCDEFGHJK)'))
+  assert.ok(text.includes('/Keywords (PQA-2026-ABCDEFGHJK)'))
+  assert.ok(/\/Subject <FEFF[0-9a-f]+>/.test(text), 'non-ASCII subject is UTF-16BE hex')
+  const start = Number(/startxref\n(\d+)/.exec(text)![1])
+  assert.ok(text.slice(start).startsWith('xref'))
+  const entries = [...text.slice(start).matchAll(/^(\d{10}) 00000 n $/gm)].map((m) => Number(m[1]))
+  assert.equal(entries.length, 6)
+  entries.forEach((off, i) => assert.ok(text.slice(off).startsWith(`${i + 1} 0 obj`), `object ${i + 1} at its offset`))
+  assert.ok(text.trimEnd().endsWith('%%EOF'))
+  assert.equal(pdfString('a(b)\\c'), '(a\\(b\\)\\\\c)')
+})
+
+t('F5: certificate texts in all 9 languages: mandatory statement present, nothing that claims accreditation, officialness or verifiability', () => {
+  for (const lang of ALL_LANGS) {
+    const c = ACADEMY_COPY[lang].cert
+    for (const k of ['title', 'awardedTo', 'nameNote', 'forProgramme', 'disclaimer', 'aiNote', 'notFor', 'idNote'] as const) assert.ok(c[k].trim().length > 1, `${lang}.cert.${k}`)
+    assert.ok(c.passed(70).includes('70'))
+    if (lang !== 'en') assert.notEqual(c.disclaimer, ACADEMY_COPY.en.cert.disclaimer, `${lang} disclaimer is translated`)
+  }
+  const en = ACADEMY_COPY.en.cert
+  const all = Object.values(en).filter((v) => typeof v === 'string').join(' ')
+  assert.doesNotMatch(all, /diploma|official|certified|verifiable/i)
+  assert.ok(/not an externally accredited academic qualification/.test(en.disclaimer))
+  assert.ok(/based on activities and results recorded by PromptQuorum/.test(en.disclaimer))
+  assert.ok(/not intended for admission, grading or employment/i.test(en.notFor))
+  assert.ok(/cannot be used to verify/i.test(en.idNote))
+  assert.ok(/not been verified/i.test(en.nameNote))
+  assert.ok(/AI/.test(en.aiNote))
+  assert.equal([...all.matchAll(/accredited/gi)].length, 1)
+})
+
 void Promise.all(pending).then(() => {if (failed) {
   console.log(`\n${failed} test(s) failed`)
   process.exit(1)
