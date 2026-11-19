@@ -18,6 +18,7 @@ const CLUSTERS = {
   'balcony-solar': slugKeys('src/lib/balcony-solar/slugs.ts'),
 }
 const STATIC = new Set(['directory', 'about', 'pq-apps', 'local-llms', 'power-local-llm', 'prompt-engineering', 'smart-home', 'balcony-solar', 'tools/what-can-i-run', 'tools/can-i-run-this'])
+const ASK_LANGS = new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'])
 
 if (categories.length !== 21) errors.push(`expected 21 categories (20 + default), found ${categories.length}`)
 if (!categories.some((c) => c.key === 'default')) errors.push('missing "default" category')
@@ -55,7 +56,14 @@ for (const c of categories) {
     if (typeof pl.id !== 'string' || !pl.id.startsWith('pic-')) errors.push(`${plw} id must start with "pic-" — got ${pl.id}`)
     if (seenPictureLinkIds.has(pl.id)) errors.push(`${plw} duplicate id ${pl.id}`)
     seenPictureLinkIds.add(pl.id)
-    if (typeof pl.url !== 'string' || !/^https:\/\//.test(pl.url)) errors.push(`${plw} url must be https — got ${pl.url}`)
+    if (typeof pl.urls !== 'object' || pl.urls === null) errors.push(`${plw} urls must be an object`)
+    else {
+      if (typeof pl.urls.default !== 'string' || !/^https:\/\//.test(pl.urls.default)) errors.push(`${plw} urls.default must be https — got ${pl.urls.default}`)
+      for (const [langKey, url] of Object.entries(pl.urls)) {
+        if (langKey !== 'default' && !ASK_LANGS.has(langKey)) errors.push(`${plw} urls has unknown language key ${langKey}`)
+        if (typeof url !== 'string' || !/^https:\/\//.test(url)) errors.push(`${plw} urls.${langKey} must be https — got ${url}`)
+      }
+    }
     if (typeof pl.affiliate !== 'boolean') errors.push(`${plw} affiliate must be boolean`)
   }
 }
