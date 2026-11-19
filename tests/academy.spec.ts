@@ -277,3 +277,30 @@ test.describe('F13: lessons + test split', () => {
     await expect(page.getByText('10 min lessons + 5 min test')).toBeVisible()
   })
 })
+
+test.describe('F7: displayed content is not replaced', () => {
+  test('one programme request per quick check; the shown programme stays identical', async ({ page }) => {
+    await preset(page)
+    await mockDiagnostic(page)
+    let calls = 0
+    await page.route('**/api/academy/programme', async (r) => {
+      calls++
+      await new Promise((res) => setTimeout(res, 500))
+      await r.fulfill({
+        json: {
+          objectives: ['O1', 'O2', 'O3'],
+          lessons: [1, 2, 3].map((n) => ({ title: `Lesson ${n}`, topic: 'Basics', estimatedMinutes: 10, objectiveIds: [0], recap: false })),
+          testPlan: { finalQuestions: 10, lessonQuizQuestions: 0, testMinutes: 8 },
+        },
+      })
+    })
+    await startSetup(page, false)
+    for (let i = 0; i < 5; i++) await page.getByRole('button', { name: 'A', exact: true }).click()
+    await expect(page.getByRole('heading', { name: /your programme/i })).toBeVisible()
+    const read = () => page.locator('#academy-programme').locator('xpath=..').innerText()
+    const first = await read()
+    await page.waitForTimeout(3000)
+    expect(await read()).toBe(first)
+    expect(calls).toBe(1)
+  })
+})
