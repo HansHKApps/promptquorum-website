@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-09",
+  "last_updated": "2026-11-19",
   "models": [
     {
       "company": "Supersonic Labs",
@@ -52,8 +52,8 @@
       "model": "Claude Fable 5.1",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Claude Fable 5.2",
       "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
       "verified_date": "2026-09-14",
       "notes": "'For demanding reasoning and long-horizon agentic work' per Anthropic's own comparison table; recommended when evals on Opus 5 at higher effort still fall short. 1M-token context, reliable knowledge cutoff Jun 2026, retirement not sooner than 2027-09-01. Supersedes Claude Fable 5. Anthropic's own pricing footnote also references a 'Claude Mythos 5.1' (2.5% cache-read discount tier, mirroring the Fable 5.1 rate) -- not independently verified via a dedicated model page this cycle; left untracked as a separate entry until confirmed, do not cite it as a distinct current model yet."
@@ -196,8 +196,8 @@
       "model": "GPT-6 Astra",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "GPT-6.2 Astra",
       "source_url": "https://developers.openai.com/api/docs/models",
       "verified_date": "2026-10-18",
       "notes": "CONFIRMED CURRENT (2026-10-18 fetch): OpenAI's own models docs list GPT-6 Astra as the most capable model ($10/$50/MTok, 1.05M context, knowledge cutoff Apr 2026). The previously-unresolved relationship to GPT-5.6 is now resolved: GPT-5.6 is fully superseded. GPT-6 Astra, GPT-6.1 Sol, and GPT-6 Luna are the three current tiers."
@@ -1372,8 +1372,8 @@
       "model": "Qwen3.8-Max",
       "type": "closed",
       "release_date": "2026-08-08",
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Qwen4-Max",
       "source_url": "https://huggingface.co/Qwen",
       "verified_date": "2026-09-14",
       "notes": "2.4T total / 95B active params (Qwen3.8-2.4T-A95B on Qwen's own Hugging Face org, uploaded 2026-08-08), text-only MoE, post-trained. Most capable model in the Qwen family per contemporaneous coverage; supersedes Qwen3.7-Max as flagship. Verify closed-API 'Qwen3.8-Max' branding against qwen.ai directly next cycle — this entry is confirmed via the official HF weights upload, not yet cross-checked against a qwen.ai blog post (that fetch returned no content this cycle). NOT VERIFIED 2026-11-09: Qwen's GitHub and Hugging Face pages carry only the blog title 'Qwen3.8-Max: A New Bar for Coding and Cowork' (August 2026) and no availability date; the qwen.ai blog itself was unreadable in this check. The release_date above is unconfirmed."
@@ -3484,8 +3484,8 @@
       "model": "GPT-6.1 Sol",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "GPT-6.2 Sol",
       "source_url": "https://developers.openai.com/api/docs/models",
       "verified_date": "2026-10-18",
       "notes": "Confirmed current per OpenAI's own models docs (2026-10-18 fetch). Balanced tier of the GPT-6 family, $2/MTok input, $10/MTok output. 1.05M-token context, knowledge cutoff Apr 2026. Part of the three-tier GPT-6 lineup: Astra (most capable) / Sol (balanced) / Luna (cost-optimized)."
@@ -3945,6 +3945,102 @@
       "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
       "verified_date": "2026-11-09",
       "notes": "Generation-level entry added 2026-11-09 so mentions of 'Llama 3.3' (with or without a size) match at a version boundary instead of falling through to the older 'Llama 3' entry. STATUS MIRRORS the existing size entries (Llama 3.3 70B), which the registry records as current; it was NOT re-verified against Meta's pages this cycle. Llama 4 (2025-04-05) is newer, but no page checked here says it replaces this generation. Sizes that Meta never released under this name (e.g. a '33B' or '34B' Llama 3.3) are not covered by this entry."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Fable 5.2",
+      "type": "closed",
+      "release_date": "2026-11-09",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://www.anthropic.com/news/claude-fable-5-2",
+      "verified_date": "2026-11-19",
+      "notes": "General-access successor to Claude Fable 5.1; shares underlying model with Claude Mythos 5.2 (access-tier variant)."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Mythos 5.2",
+      "type": "closed",
+      "release_date": "2026-11-09",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://www.anthropic.com/news/claude-fable-5-2",
+      "verified_date": "2026-11-19",
+      "notes": "Vetted-access-tier variant of Claude Fable 5.2 (cybersecurity/life-sciences verification programs); same underlying model as Fable 5.2, different access rules."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-6.2 Astra",
+      "type": "closed",
+      "release_date": "2026-11-17",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "verified_date": "2026-11-19",
+      "notes": "Frontier successor to GPT-6 Astra. Official OpenAI announcement page returned HTTP 403 to direct fetch on 2026-11-19; corroborated by multiple independent outlets (TechCrunch, 9to5Mac, Digital Trends, Decrypt) citing the same Nov 17, 2026 OpenAI announcement and pricing. Flagged for re-verification against the primary page when accessible."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-6.2 Sol",
+      "type": "closed",
+      "release_date": "2026-11-17",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "verified_date": "2026-11-19",
+      "notes": "Efficient successor to GPT-6.1 Sol, same release as GPT-6.2 Astra. Official page returned HTTP 403 to direct fetch on 2026-11-19; corroborated by multiple independent outlets citing the same OpenAI announcement. Flagged for re-verification against the primary page when accessible."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 4 Carbon",
+      "type": "closed",
+      "release_date": "2026-11-10",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/model-cards/gemini-4-carbon/",
+      "verified_date": "2026-11-19",
+      "notes": "Based on Gemini 4 Argon; heavier frontier model for long-horizon/deep-reasoning work. Argon remains current/listed, not superseded."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 4 Hydrogen",
+      "type": "closed",
+      "release_date": "2026-11-12",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/",
+      "verified_date": "2026-11-19",
+      "notes": "Adapted from Gemini 4 Carbon; fast/everyday-execution sibling model. No full critical-capability assessment required (no material capability gain over Argon)."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 4 Neon",
+      "type": "closed",
+      "release_date": "2026-11-18",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+      "verified_date": "2026-11-19",
+      "notes": "Adapted from Gemini 4 Carbon; safety evaluated against Hydrogen (comparable) and Argon (no material capability change, Argon critical-capability determination carried forward). Full Safety & Security Report pending at verification time."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen4-Max",
+      "type": "closed",
+      "release_date": "2026-11-16",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://www.alibabacloud.com/press-room/alibaba-unveils-qwen4-max",
+      "verified_date": "2026-11-19",
+      "notes": "Successor to Qwen3.8-Max; new Qwen4 MoE architecture, 1M-token context. Flagship weights not open at launch; Alibaba states smaller open-weight Qwen4 models will follow."
     }
   ],
   "sources": [

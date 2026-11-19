@@ -3,23 +3,26 @@
     "siteModel": "Qwen3 32B",
     "registryModel": "Qwen3",
     "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 13,
+    "superseded_by": "Qwen3.5",
+    "notes": "GENERATION-LEVEL status, successor corrected 2026-11-09 from Qwen3.6 to Qwen3.5: Qwen3.6 lists only 27B and 35B-A3B, while Qwen3.5 covers the whole size range (0.8B to 397B-A17B). Qwen's pages do NOT say Qwen3 is deprecated: the Qwen3 repo labels it 'Previous Qwen3 Release' and the original series (2025-04-29, sizes 0.6B, 1.7B, 4B, 8B, 14B, 32B, 30B-A3B, 235B-A22B, Apache 2.0) remains available. A mention of a Qwen3 size as something an app or tutorial uses is a factual statement, not necessarily an out-of-date recommendation. Earlier note: The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
+    "fileCount": 16,
     "files": [
-      "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
+      "src/lib/prompt-bites/articles/best-local-llm-32gb-unified-memory-mac.ts",
+      "src/lib/prompt-bites/articles/strix-halo-ollama-vulkan.ts",
+      "src/lib/prompt-bites/articles/can-you-run-qwen3-on-ollama.ts",
+      "src/lib/power-local-llm/articles/best-local-llms-customer-support-call-centers-enterprise.ts",
       "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
       "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts",
-      "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts",
-      "src/lib/power-local-llm/articles/local-ai-agents-with-mcp.ts",
-      "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
       "src/lib/power-local-llm/articles/uncensored-local-llm-creative-writing-ethics.ts",
-      "src/lib/power-local-llm/articles/best-local-llms-customer-support-call-centers-enterprise.ts",
-      "src/lib/power-local-llm/articles/qwen-local-deployment-complete-guide-2026.ts",
+      "src/lib/power-local-llm/articles/local-ai-agents-with-mcp.ts",
       "src/lib/power-local-llm/articles/best-local-models-tool-calling-2026.ts",
-      "src/lib/prompt-bites/articles/can-you-run-qwen3-on-ollama.ts",
-      "src/lib/prompt-bites/articles/strix-halo-ollama-vulkan.ts",
-      "src/lib/prompt-bites/articles/best-local-llm-32gb-unified-memory-mac.ts"
+      "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
+      "src/lib/power-local-llm/articles/qwen-local-deployment-complete-guide-2026.ts",
+      "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts",
+      "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
+      "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts",
+      "src/lib/local-llms/articles/how-much-unified-memory-for-local-llm.ts",
+      "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts"
     ]
   },
   {
@@ -30,38 +33,38 @@
     "notes": "Site mentions: DeepSeek-V3 (8x), 'DeepSeek Coder V3' (6x). DeepSeek's own docs confirm the deepseek-chat alias (V3-generation) is deprecating 2026-07-24 — this is a substantial, date-driven flag, not just a generational note.",
     "fileCount": 12,
     "files": [
-      "src/lib/local-llms/articles/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026.ts",
+      "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
+      "src/lib/prompt-bites/articles/is-deepseek-gdpr-safe.ts",
+      "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts",
+      "src/lib/power-local-llm/articles/local-llm-code-review-ci-cd.ts",
       "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
       "src/lib/power-local-llm/articles/local-coding-llm-without-internet.ts",
-      "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts",
       "src/lib/power-local-llm/articles/replace-github-copilot-with-local-llm.ts",
-      "src/lib/power-local-llm/articles/continue-dev-vs-cline-vs-aider-local.ts",
-      "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
       "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/power-local-llm/articles/local-llm-code-review-ci-cd.ts",
-      "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
-      "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts",
-      "src/lib/prompt-bites/articles/is-deepseek-gdpr-safe.ts"
+      "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
+      "src/lib/power-local-llm/articles/continue-dev-vs-cline-vs-aider-local.ts",
+      "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts",
+      "src/lib/local-llms/articles/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026.ts"
     ]
   },
   {
-    "siteModel": "Qwen3-Coder 30B",
-    "registryModel": "Qwen3",
+    "siteModel": "GPT-6 Astra",
+    "registryModel": "GPT-6 Astra",
     "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
+    "superseded_by": "GPT-6.2 Astra",
+    "notes": "CONFIRMED CURRENT (2026-10-18 fetch): OpenAI's own models docs list GPT-6 Astra as the most capable model ($10/$50/MTok, 1.05M context, knowledge cutoff Apr 2026). The previously-unresolved relationship to GPT-5.6 is now resolved: GPT-5.6 is fully superseded. GPT-6 Astra, GPT-6.1 Sol, and GPT-6 Luna are the three current tiers.",
     "fileCount": 10,
     "files": [
-      "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
-      "src/lib/power-local-llm/articles/local-coding-llm-without-internet.ts",
-      "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts",
-      "src/lib/power-local-llm/articles/local-ai-agents-with-mcp.ts",
-      "src/lib/power-local-llm/articles/replace-github-copilot-with-local-llm.ts",
-      "src/lib/power-local-llm/articles/continue-dev-vs-cline-vs-aider-local.ts",
-      "src/lib/power-local-llm/articles/best-local-models-tool-calling-2026.ts",
-      "src/lib/power-local-llm/articles/local-llm-code-review-ci-cd.ts",
-      "src/lib/prompt-bites/articles/best-models-amd-5700x-3070ti.ts",
-      "src/lib/prompt-bites/articles/qwen-coder-vs-deepseek-coder.ts"
+      "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+      "src/lib/prompt-engineering/articles/how-llms-actually-work.ts",
+      "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
+      "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
+      "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
+      "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
+      "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
+      "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
+      "src/lib/prompt-bites/articles/best-llm-right-now.ts",
+      "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
     ]
   },
   {
@@ -73,14 +76,14 @@
     "fileCount": 9,
     "files": [
       "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
-      "src/lib/local-llms/articles/deepseek-local-china-data-privacy-2026.ts",
-      "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
-      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
-      "src/lib/local-llms/articles/local-llm-hardware-guide.ts",
-      "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
+      "src/lib/prompt-bites/articles/is-deepseek-gdpr-safe.ts",
       "src/lib/power-local-llm/articles/best-local-llms-customer-support-call-centers-enterprise.ts",
       "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/prompt-bites/articles/is-deepseek-gdpr-safe.ts"
+      "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
+      "src/lib/local-llms/articles/deepseek-local-china-data-privacy-2026.ts",
+      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
+      "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
+      "src/lib/local-llms/articles/local-llm-hardware-guide.ts"
     ]
   },
   {
@@ -91,47 +94,63 @@
     "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4.",
     "fileCount": 9,
     "files": [
-      "src/lib/local-llms/articles/local-llm-hardware-guide.ts",
-      "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts",
       "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts",
-      "src/lib/power-local-llm/articles/local-llm-with-obsidian-2026.ts",
-      "src/lib/power-local-llm/articles/voice-assistant-local-mobile-offline.ts",
-      "src/lib/power-local-llm/articles/best-local-llm-apps-iphone-2026.ts",
-      "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts",
       "src/lib/power-local-llm/articles/run-ai-on-tablet-ipad-android.ts",
-      "src/lib/power-local-llm/articles/local-llm-with-logseq-and-joplin.ts"
+      "src/lib/power-local-llm/articles/local-llm-with-logseq-and-joplin.ts",
+      "src/lib/power-local-llm/articles/local-llm-with-obsidian-2026.ts",
+      "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts",
+      "src/lib/power-local-llm/articles/voice-assistant-local-mobile-offline.ts",
+      "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts",
+      "src/lib/power-local-llm/articles/best-local-llm-apps-iphone-2026.ts",
+      "src/lib/local-llms/articles/local-llm-hardware-guide.ts"
     ]
   },
   {
-    "siteModel": "Qwen3.8 27B",
-    "registryModel": "Qwen3",
+    "siteModel": "GPT-6.1 Sol",
+    "registryModel": "GPT-6.1 Sol",
     "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
+    "superseded_by": "GPT-6.2 Sol",
+    "notes": "Confirmed current per OpenAI's own models docs (2026-10-18 fetch). Balanced tier of the GPT-6 family, $2/MTok input, $10/MTok output. 1.05M-token context, knowledge cutoff Apr 2026. Part of the three-tier GPT-6 lineup: Astra (most capable) / Sol (balanced) / Luna (cost-optimized).",
     "fileCount": 6,
     "files": [
-      "src/lib/local-llms/articles/best-local-llms-for-coding.ts",
-      "src/lib/local-llms/articles/local-llm-hardware-guide.ts",
-      "src/lib/power-local-llm/articles/replace-grammarly-notion-ai-with-local.ts",
-      "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts",
-      "src/lib/prompt-bites/articles/best-local-llm-document-summarization.ts",
-      "src/lib/prompt-bites/articles/best-local-llm-coding-12gb-vram.ts"
+      "src/lib/prompt-engineering/articles/tokens-costs-limits.ts",
+      "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+      "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
+      "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
+      "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
+      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
+    ]
+  },
+  {
+    "siteModel": "Qwen3 0.6B",
+    "registryModel": "Qwen3",
+    "status": "superseded",
+    "superseded_by": "Qwen3.5",
+    "notes": "GENERATION-LEVEL status, successor corrected 2026-11-09 from Qwen3.6 to Qwen3.5: Qwen3.6 lists only 27B and 35B-A3B, while Qwen3.5 covers the whole size range (0.8B to 397B-A17B). Qwen's pages do NOT say Qwen3 is deprecated: the Qwen3 repo labels it 'Previous Qwen3 Release' and the original series (2025-04-29, sizes 0.6B, 1.7B, 4B, 8B, 14B, 32B, 30B-A3B, 235B-A22B, Apache 2.0) remains available. A mention of a Qwen3 size as something an app or tutorial uses is a factual statement, not necessarily an out-of-date recommendation. Earlier note: The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
+    "fileCount": 6,
+    "files": [
+      "src/lib/prompt-bites/articles/best-ollama-models-cpu-only.ts",
+      "src/lib/prompt-bites/articles/can-you-run-rag-on-2gb-ram.ts",
+      "src/lib/prompt-bites/articles/can-you-run-qwen3-on-ollama.ts",
+      "src/lib/power-local-llm/articles/local-ai-on-android-guide.ts",
+      "src/lib/local-llms/articles/fastest-local-llms-low-end-pcs.ts",
+      "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts"
     ]
   },
   {
     "siteModel": "Qwen3",
     "registryModel": "Qwen3",
     "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
+    "superseded_by": "Qwen3.5",
+    "notes": "GENERATION-LEVEL status, successor corrected 2026-11-09 from Qwen3.6 to Qwen3.5: Qwen3.6 lists only 27B and 35B-A3B, while Qwen3.5 covers the whole size range (0.8B to 397B-A17B). Qwen's pages do NOT say Qwen3 is deprecated: the Qwen3 repo labels it 'Previous Qwen3 Release' and the original series (2025-04-29, sizes 0.6B, 1.7B, 4B, 8B, 14B, 32B, 30B-A3B, 235B-A22B, Apache 2.0) remains available. A mention of a Qwen3 size as something an app or tutorial uses is a factual statement, not necessarily an out-of-date recommendation. Earlier note: The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
     "fileCount": 6,
     "files": [
-      "src/lib/local-llms/articles/llm-quantization-explained.ts",
-      "src/lib/power-local-llm/articles/off-grid-ai-review.ts",
-      "src/lib/power-local-llm/articles/fullmoon-review.ts",
+      "src/lib/power-local-llm/articles/on-device-ai-translator-review.ts",
       "src/lib/power-local-llm/articles/lyonesse-review.ts",
       "src/lib/power-local-llm/articles/on-device-ai-review.ts",
-      "src/lib/power-local-llm/articles/on-device-ai-translator-review.ts"
+      "src/lib/power-local-llm/articles/fullmoon-review.ts",
+      "src/lib/power-local-llm/articles/off-grid-ai-review.ts",
+      "src/lib/local-llms/articles/llm-quantization-explained.ts"
     ]
   },
   {
@@ -165,18 +184,18 @@
     ]
   },
   {
-    "siteModel": "Qwen3 0.6B",
-    "registryModel": "Qwen3",
+    "siteModel": "Gemma 3 1B",
+    "registryModel": "Gemma 3",
     "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
+    "superseded_by": "Gemma 4",
+    "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4.",
     "fileCount": 5,
     "files": [
-      "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
-      "src/lib/local-llms/articles/fastest-local-llms-low-end-pcs.ts",
-      "src/lib/prompt-bites/articles/can-you-run-qwen3-on-ollama.ts",
+      "src/lib/prompt-bites/articles/best-ollama-models-4gb-vram.ts",
       "src/lib/prompt-bites/articles/best-ollama-models-cpu-only.ts",
-      "src/lib/prompt-bites/articles/can-you-run-rag-on-2gb-ram.ts"
+      "src/lib/power-local-llm/articles/local-ai-on-android-guide.ts",
+      "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts",
+      "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts"
     ]
   },
   {
@@ -194,20 +213,6 @@
     ]
   },
   {
-    "siteModel": "Gemma 3 1B",
-    "registryModel": "Gemma 3",
-    "status": "superseded",
-    "superseded_by": "Gemma 4",
-    "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4.",
-    "fileCount": 4,
-    "files": [
-      "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts",
-      "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts",
-      "src/lib/prompt-bites/articles/best-ollama-models-cpu-only.ts",
-      "src/lib/prompt-bites/articles/best-ollama-models-4gb-vram.ts"
-    ]
-  },
-  {
     "siteModel": "Llama 3",
     "registryModel": "Llama 3",
     "status": "superseded",
@@ -215,10 +220,10 @@
     "notes": "Original Llama 3 (8B and 70B only — no 3.x point release), distinct generation from Llama 3.1/3.2/3.3. Covers \"Llama 3\", \"Llama 3 8B\", and \"Llama 3 70B\" via prefix match.",
     "fileCount": 4,
     "files": [
-      "src/lib/power-local-llm/articles/mlc-chat-review.ts",
-      "src/lib/power-local-llm/articles/ollama-local-ai-review.ts",
+      "src/lib/prompt-bites/articles/convert-ollama-model-to-mlx.ts",
       "src/lib/power-local-llm/articles/on-device-ai-review.ts",
-      "src/lib/prompt-bites/articles/convert-ollama-model-to-mlx.ts"
+      "src/lib/power-local-llm/articles/mlc-chat-review.ts",
+      "src/lib/power-local-llm/articles/ollama-local-ai-review.ts"
     ]
   },
   {
@@ -230,8 +235,8 @@
     "fileCount": 3,
     "files": [
       "src/lib/prompt-engineering/articles/ai-code-review.ts",
-      "src/lib/local-llms/articles/local-llms-for-coding-workflows.ts",
-      "src/lib/local-llms/articles/local-llm-hardware-guide.ts"
+      "src/lib/local-llms/articles/local-llm-hardware-guide.ts",
+      "src/lib/local-llms/articles/local-llms-for-coding-workflows.ts"
     ]
   },
   {
@@ -242,74 +247,9 @@
     "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4.",
     "fileCount": 3,
     "files": [
-      "src/lib/local-llms/articles/how-much-unified-memory-for-local-llm.ts",
+      "src/lib/prompt-bites/articles/best-local-llm-16gb-ram-laptop.ts",
       "src/lib/power-local-llm/articles/best-laptop-for-local-llm.ts",
-      "src/lib/prompt-bites/articles/best-local-llm-16gb-ram-laptop.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3 34B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 3,
-    "files": [
-      "src/lib/local-llms/articles/how-much-unified-memory-for-local-llm.ts",
-      "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts",
-      "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3.5 0.8B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 3,
-    "files": [
-      "src/lib/local-llms/articles/fastest-local-llms-low-end-pcs.ts",
-      "src/lib/local-llms/articles/small-local-llm-models.ts",
-      "src/lib/prompt-bites/articles/local-ai-trend-2027-small-language-models.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3.5 2B",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 3,
-    "files": [
-      "src/lib/local-llms/articles/fastest-local-llms-low-end-pcs.ts",
-      "src/lib/local-llms/articles/small-local-llm-models.ts",
-      "src/lib/prompt-bites/articles/best-ollama-models-4gb-vram.ts"
-    ]
-  },
-  {
-    "siteModel": "qwen3-coder:30b",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 3,
-    "files": [
-      "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
-      "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
-      "src/lib/local-llms/articles/best-local-llms-for-coding.ts"
-    ]
-  },
-  {
-    "siteModel": "Llama 3.1",
-    "registryModel": "Llama 3",
-    "status": "superseded",
-    "superseded_by": "Llama 3.1 8B",
-    "notes": "Original Llama 3 (8B and 70B only — no 3.x point release), distinct generation from Llama 3.1/3.2/3.3. Covers \"Llama 3\", \"Llama 3 8B\", and \"Llama 3 70B\" via prefix match.",
-    "fileCount": 3,
-    "files": [
-      "src/lib/power-local-llm/articles/idefics-review.ts",
-      "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts"
+      "src/lib/local-llms/articles/how-much-unified-memory-for-local-llm.ts"
     ]
   },
   {
@@ -325,15 +265,15 @@
     ]
   },
   {
-    "siteModel": "qwen3:30b",
-    "registryModel": "Qwen3",
+    "siteModel": "Mistral Large 3",
+    "registryModel": "Mistral Large 3",
     "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
+    "superseded_by": "Mistral Large 4",
+    "notes": "Superseded by Mistral Large 4 (v26.10, released 2026-10-06 per mistral.ai/news). Was version tag v25.12.",
     "fileCount": 2,
     "files": [
-      "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
-      "src/lib/local-llms/articles/top-open-source-models-ollama.ts"
+      "src/lib/prompt-bites/articles/local-ai-trend-2027-frontier-desktop-ai.ts",
+      "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts"
     ]
   },
   {
@@ -344,20 +284,8 @@
     "notes": "MoE coding model, 16B/236B total-parameter variants (2.4B/21B active). Covers site mentions of \"DeepSeek Coder V2\" and \"DeepSeek Coder V2 16B\" via prefix match. superseded_by points at the general lineage successor, not a coder-specific one-to-one replacement.",
     "fileCount": 2,
     "files": [
-      "src/lib/local-llms/articles/mac-mini-m5-local-ai-server.ts",
-      "src/lib/prompt-bites/articles/is-deepseek-gdpr-safe.ts"
-    ]
-  },
-  {
-    "siteModel": "Mixtral 8x22B",
-    "registryModel": "Mixtral 8x22B",
-    "status": "superseded",
-    "superseded_by": "Mistral Large 3",
-    "notes": "176B total / ~44B active MoE. Covers site mentions of \"Mixtral 8x22B\" and \"Mixtral 8x22B Instruct\" via prefix match.",
-    "fileCount": 2,
-    "files": [
-      "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts",
-      "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts"
+      "src/lib/prompt-bites/articles/is-deepseek-gdpr-safe.ts",
+      "src/lib/local-llms/articles/mac-mini-m5-local-ai-server.ts"
     ]
   },
   {
@@ -368,8 +296,8 @@
     "notes": "Vision-language model family. Covers site mentions of \"Qwen2-VL 2B\", \"Qwen2-VL 7B\", and \"Qwen2-VL 72B\" via prefix match. Superseded by Qwen2.5-VL (already registered as current).",
     "fileCount": 2,
     "files": [
-      "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts",
-      "src/lib/power-local-llm/articles/lyonesse-review.ts"
+      "src/lib/power-local-llm/articles/lyonesse-review.ts",
+      "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
     ]
   },
   {
@@ -380,20 +308,8 @@
     "notes": "Covers site mentions of \"Gemma 2 2B\" and \"Gemma 2B\" via prefix match — this registry has no bare pre-Gemma-2 \"Gemma\" entry, so \"Gemma 2B\" (missing the generation number) resolves against this Gemma 2 entry rather than being left unknown.",
     "fileCount": 2,
     "files": [
-      "src/lib/power-local-llm/articles/private-llm-review.ts",
-      "src/lib/power-local-llm/articles/pocketpal-ai-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Mistral Large 3",
-    "registryModel": "Mistral Large 3",
-    "status": "superseded",
-    "superseded_by": "Mistral Large 4",
-    "notes": "Superseded by Mistral Large 4 (v26.10, released 2026-10-06 per mistral.ai/news). Was version tag v25.12.",
-    "fileCount": 2,
-    "files": [
-      "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts",
-      "src/lib/prompt-bites/articles/local-ai-trend-2027-frontier-desktop-ai.ts"
+      "src/lib/power-local-llm/articles/pocketpal-ai-review.ts",
+      "src/lib/power-local-llm/articles/private-llm-review.ts"
     ]
   },
   {
@@ -409,39 +325,15 @@
     ]
   },
   {
-    "siteModel": "Llama 3.2",
-    "registryModel": "Llama 3",
-    "status": "superseded",
-    "superseded_by": "Llama 3.1 8B",
-    "notes": "Original Llama 3 (8B and 70B only — no 3.x point release), distinct generation from Llama 3.1/3.2/3.3. Covers \"Llama 3\", \"Llama 3 8B\", and \"Llama 3 70B\" via prefix match.",
-    "fileCount": 2,
-    "files": [
-      "src/lib/power-local-llm/articles/fullmoon-review.ts",
-      "src/lib/power-local-llm/articles/lm-playground-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Llama 3.3",
-    "registryModel": "Llama 3",
-    "status": "superseded",
-    "superseded_by": "Llama 3.1 8B",
-    "notes": "Original Llama 3 (8B and 70B only — no 3.x point release), distinct generation from Llama 3.1/3.2/3.3. Covers \"Llama 3\", \"Llama 3 8B\", and \"Llama 3 70B\" via prefix match.",
-    "fileCount": 2,
-    "files": [
-      "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
-      "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3.5-35B-A3B",
+    "siteModel": "qwen3:30b",
     "registryModel": "Qwen3",
     "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
+    "superseded_by": "Qwen3.5",
+    "notes": "GENERATION-LEVEL status, successor corrected 2026-11-09 from Qwen3.6 to Qwen3.5: Qwen3.6 lists only 27B and 35B-A3B, while Qwen3.5 covers the whole size range (0.8B to 397B-A17B). Qwen's pages do NOT say Qwen3 is deprecated: the Qwen3 repo labels it 'Previous Qwen3 Release' and the original series (2025-04-29, sizes 0.6B, 1.7B, 4B, 8B, 14B, 32B, 30B-A3B, 235B-A22B, Apache 2.0) remains available. A mention of a Qwen3 size as something an app or tutorial uses is a factual statement, not necessarily an out-of-date recommendation. Earlier note: The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
     "fileCount": 2,
     "files": [
-      "src/lib/prompt-bites/articles/mlx-vs-ollama-vs-llamacpp.ts",
-      "src/lib/prompt-bites/articles/ollama-mlx-apple-silicon.ts"
+      "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+      "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts"
     ]
   },
   {
@@ -453,6 +345,17 @@
     "fileCount": 1,
     "files": [
       "src/lib/prompt-engineering/articles/how-to-test-prompts-across-models.ts"
+    ]
+  },
+  {
+    "siteModel": "Claude Fable 5.1",
+    "registryModel": "Claude Fable 5.1",
+    "status": "superseded",
+    "superseded_by": "Claude Fable 5.2",
+    "notes": "'For demanding reasoning and long-horizon agentic work' per Anthropic's own comparison table; recommended when evals on Opus 5 at higher effort still fall short. 1M-token context, reliable knowledge cutoff Jun 2026, retirement not sooner than 2027-09-01. Supersedes Claude Fable 5. Anthropic's own pricing footnote also references a 'Claude Mythos 5.1' (2.5% cache-read discount tier, mirroring the Fable 5.1 rate) -- not independently verified via a dedicated model page this cycle; left untracked as a separate entry until confirmed, do not cite it as a distinct current model yet.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts"
     ]
   },
   {
@@ -475,303 +378,6 @@
     "fileCount": 1,
     "files": [
       "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek Coder V2 16B",
-    "registryModel": "DeepSeek Coder V2",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V3",
-    "notes": "MoE coding model, 16B/236B total-parameter variants (2.4B/21B active). Covers site mentions of \"DeepSeek Coder V2\" and \"DeepSeek Coder V2 16B\" via prefix match. superseded_by points at the general lineage successor, not a coder-specific one-to-one replacement.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek 67B",
-    "registryModel": "DeepSeek 67B",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-V3",
-    "notes": "Original DeepSeek LLM 67B (the pre-MoE generation). Long since superseded by the V2/V3/V4 MoE lineage; superseded_by points at the general-purpose lineage successor already in this registry, not a like-for-like replacement.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts"
-    ]
-  },
-  {
-    "siteModel": "OpenAI o1-mini",
-    "registryModel": "OpenAI o1-mini",
-    "status": "superseded",
-    "superseded_by": null,
-    "notes": "Alias entry (company-prefixed spelling, matches this site's convention) for the same model registered bare as 'o1-mini'.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "ChatGLM4 9B",
-    "registryModel": "ChatGLM4 9B",
-    "status": "superseded",
-    "superseded_by": "GLM-4.7",
-    "notes": "Officially named GLM-4-9B by Zhipu AI (registered here as 'ChatGLM4 9B' to match this site's exact usage, mirroring the xinference model-registry naming this site content describes). 128K context, 26-language support.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
-    ]
-  },
-  {
-    "siteModel": "Mixtral 8x22B Instruct",
-    "registryModel": "Mixtral 8x22B",
-    "status": "superseded",
-    "superseded_by": "Mistral Large 3",
-    "notes": "176B total / ~44B active MoE. Covers site mentions of \"Mixtral 8x22B\" and \"Mixtral 8x22B Instruct\" via prefix match.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
-    ]
-  },
-  {
-    "siteModel": "Kimi K2",
-    "registryModel": "Kimi K2",
-    "status": "superseded",
-    "superseded_by": "Kimi K2.5",
-    "notes": "1T total / 32B active params, MoE. Site's 'Kimi K2.6' mentions (4x, local-llms cluster) were briefly 'corrected' to this model on 2026-07-13 (commit 322eea7a4) then reverted the same day (commit d4415f41d) once K2.6 was independently confirmed real — see the Kimi K2.6 entry's notes for the full account.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/open-weight-vs-open-source-ai-models.ts"
-    ]
-  },
-  {
-    "siteModel": "Phi-3 3.8B",
-    "registryModel": "Phi-3 3.8B",
-    "status": "superseded",
-    "superseded_by": "Phi-4",
-    "notes": "Phi-3-mini, 3.8B parameters. Superseded by Phi-4.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/text-generation-webui-vs-vllm-vs-llamacpp.ts"
-    ]
-  },
-  {
-    "siteModel": "Mixtral 8x7B",
-    "registryModel": "Mixtral 8x7B",
-    "status": "superseded",
-    "superseded_by": "Mistral Large 3",
-    "notes": "First-generation Mixtral MoE (8 experts x 7B). Site's best-models-apple-silicon-2026.ts originally said 'Mistral 8x7B' (company name instead of product name) — fixed to the correct product name 'Mixtral 8x7B' in the same pass that added this entry.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen-VL",
-    "registryModel": "Qwen-VL",
-    "status": "superseded",
-    "superseded_by": "Qwen2.5-VL",
-    "notes": "Original Qwen vision-language model.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/localai-apexcreator-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Llama 3.3 34B",
-    "registryModel": "Llama 3",
-    "status": "superseded",
-    "superseded_by": "Llama 3.1 8B",
-    "notes": "Original Llama 3 (8B and 70B only — no 3.x point release), distinct generation from Llama 3.1/3.2/3.3. Covers \"Llama 3\", \"Llama 3 8B\", and \"Llama 3 70B\" via prefix match.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3.5 VL",
-    "registryModel": "Qwen3.5 VL",
-    "status": "superseded",
-    "superseded_by": "Qwen3-VL",
-    "notes": "Earlier Qwen3.5-generation vision-language variant; Qwen3-VL (flagship Qwen3-VL-235B-A22B) is the current VL line per huggingface.co/Qwen (2026-11-09 fetch).",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/secret-ai-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Stable Diffusion 2.0",
-    "registryModel": "Stable Diffusion 2.0",
-    "status": "superseded",
-    "superseded_by": null,
-    "notes": "Superseded by later Stable Diffusion generations already tracked in this registry.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/invokeai-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Gemma 3 4B IT",
-    "registryModel": "Gemma 3",
-    "status": "superseded",
-    "superseded_by": "Gemma 4",
-    "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/ai-file-sorter-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Flamingo",
-    "registryModel": "Flamingo",
-    "status": "superseded",
-    "superseded_by": null,
-    "notes": "Early visual-language model from DeepMind, superseded by later open efforts it inspired (e.g. Idefics).",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/idefics-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Idefics2",
-    "registryModel": "Idefics",
-    "status": "superseded",
-    "superseded_by": "Idefics3",
-    "notes": "Open reproduction of Flamingo. Covers \"Idefics\" and \"Idefics2\" via prefix match — Idefics3 registered separately as current.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/idefics-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Mistral-7B",
-    "registryModel": "Mistral-7B",
-    "status": "superseded",
-    "superseded_by": "Mistral 7B",
-    "notes": "Hyphenated-spelling alias for the model already registered as 'Mistral 7B'.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/idefics-review.ts"
-    ]
-  },
-  {
-    "siteModel": "LLaMA 3.2",
-    "registryModel": "Llama 3",
-    "status": "superseded",
-    "superseded_by": "Llama 3.1 8B",
-    "notes": "Original Llama 3 (8B and 70B only — no 3.x point release), distinct generation from Llama 3.1/3.2/3.3. Covers \"Llama 3\", \"Llama 3 8B\", and \"Llama 3 70B\" via prefix match.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/private-mind-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Llama 3.3 33B",
-    "registryModel": "Llama 3",
-    "status": "superseded",
-    "superseded_by": "Llama 3.1 8B",
-    "notes": "Original Llama 3 (8B and 70B only — no 3.x point release), distinct generation from Llama 3.1/3.2/3.3. Covers \"Llama 3\", \"Llama 3 8B\", and \"Llama 3 70B\" via prefix match.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/local-ai-workstation-build-guide.ts"
-    ]
-  },
-  {
-    "siteModel": "Stable Diffusion 2.1",
-    "registryModel": "Stable Diffusion 2.1",
-    "status": "superseded",
-    "superseded_by": null,
-    "notes": "Minor update to Stable Diffusion 2.0.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/stable-diffusion-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Stable Diffusion 3 Medium",
-    "registryModel": "Stable Diffusion 3 Medium",
-    "status": "superseded",
-    "superseded_by": null,
-    "notes": "Open-weight release of the SD3 family.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/stable-diffusion-review.ts"
-    ]
-  },
-  {
-    "siteModel": "DeepSeek Coder 33B",
-    "registryModel": "DeepSeek Coder 33B",
-    "status": "superseded",
-    "superseded_by": "DeepSeek-Coder-V2-Lite",
-    "notes": "Largest size in the original DeepSeek-Coder v1 lineup (1.3B/5.7B/6.7B/33B).",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/best-ai-coding-tools-comparison-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3 ASR",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/subtitle-edit-review.ts"
-    ]
-  },
-  {
-    "siteModel": "FLUX.1",
-    "registryModel": "FLUX.1",
-    "status": "superseded",
-    "superseded_by": null,
-    "notes": "First FLUX generation.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/fooocus-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Gemma 2 2B",
-    "registryModel": "Gemma 2",
-    "status": "superseded",
-    "superseded_by": "Gemma 4",
-    "notes": "Covers site mentions of \"Gemma 2 2B\" and \"Gemma 2B\" via prefix match — this registry has no bare pre-Gemma-2 \"Gemma\" entry, so \"Gemma 2B\" (missing the generation number) resolves against this Gemma 2 entry rather than being left unknown.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/on-device-llm-review.ts"
-    ]
-  },
-  {
-    "siteModel": "Gemma 3n E2B / E4B",
-    "registryModel": "Gemma 3",
-    "status": "superseded",
-    "superseded_by": "Gemma 4",
-    "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3.5 (0.8B to 35B)",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3.8",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/prompt-bites/articles/best-china-compliant-local-llm.ts"
     ]
   },
   {
@@ -819,6 +425,17 @@
     ]
   },
   {
+    "siteModel": "Llama 3 70B",
+    "registryModel": "Llama 3",
+    "status": "superseded",
+    "superseded_by": "Llama 3.1 8B",
+    "notes": "Original Llama 3 (8B and 70B only — no 3.x point release), distinct generation from Llama 3.1/3.2/3.3. Covers \"Llama 3\", \"Llama 3 8B\", and \"Llama 3 70B\" via prefix match.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/prompt-bites/articles/vram-for-70b-model.ts"
+    ]
+  },
+  {
     "siteModel": "Llama 3 8B",
     "registryModel": "Llama 3",
     "status": "superseded",
@@ -830,25 +447,14 @@
     ]
   },
   {
-    "siteModel": "Kimi K3",
-    "registryModel": "Kimi K3",
-    "status": "superseded",
-    "superseded_by": "Kimi K3.1 Pro",
-    "notes": "'Kimi's most capable flagship model to date' per Moonshot's own platform page, 1M-token context, positioned for software engineering / knowledge work / deep reasoning. Supersedes Kimi K2.6 as the general-purpose flagship. Kimi K2.7 Code (coding-specialist) remains a separate current entry, not superseded by K3. CORRECTION (2026-08-27, same-cycle re-check): confirmed via huggingface.co/moonshotai/Kimi-K3 that K3 ships under a proprietary \"Kimi K3 License\", not open-weight -- unlike K2.6/K2.7 Code. It is NOT a valid local/Ollama substitute for K2.6. Do not treat K2.6 as stale in any local-LLM/Ollama context; K3 supersedes it only as the closed hosted-API flagship.",
+    "siteModel": "Mistral Nemo 12B",
+    "registryModel": "Mistral Nemo 12B",
+    "status": "deprecated",
+    "superseded_by": null,
+    "notes": "Co-developed with NVIDIA, 128K context, Apache 2.0. Deprecated by Mistral effective 2026-10-22 in favor of Qwen3.5-9B per their own deprecation notice. Status updated from 'current' to 'deprecated' on 2026-10-25 now that the deprecation date has passed.",
     "fileCount": 1,
     "files": [
-      "src/lib/prompt-bites/articles/local-ai-trend-2027-frontier-desktop-ai.ts"
-    ]
-  },
-  {
-    "siteModel": "Qwen3.5",
-    "registryModel": "Qwen3",
-    "status": "superseded",
-    "superseded_by": "Qwen3.6",
-    "notes": "The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
-    "fileCount": 1,
-    "files": [
-      "src/lib/prompt-bites/articles/convert-ollama-model-to-mlx.ts"
+      "src/lib/prompt-bites/articles/best-ollama-models-rtx-3060-12gb.ts"
     ]
   },
   {
@@ -863,25 +469,333 @@
     ]
   },
   {
-    "siteModel": "Llama 3 70B",
-    "registryModel": "Llama 3",
+    "siteModel": "Gemma 1.1 7B",
+    "registryModel": "Gemma 1.1 7B",
     "status": "superseded",
-    "superseded_by": "Llama 3.1 8B",
-    "notes": "Original Llama 3 (8B and 70B only — no 3.x point release), distinct generation from Llama 3.1/3.2/3.3. Covers \"Llama 3\", \"Llama 3 8B\", and \"Llama 3 70B\" via prefix match.",
+    "superseded_by": "Gemma 4",
+    "notes": "Gemma 1.1 release dated April 5, 2024 on the Gemma releases page; the original 2B/7B Gemma release was February 21, 2024. 7B instruction-tuned card tag: license gemma. GENERATION-LEVEL status, following the registry's existing treatment of Gemma 2 and Gemma 3 (both superseded by Gemma 4): Google's pages do NOT say Gemma 1.1 is deprecated, and its card says the previous model stays available in the same repo. A mention of Gemma 1.1 7B as a model an app can load is a factual statement, not an out-of-date recommendation.",
     "fileCount": 1,
     "files": [
-      "src/lib/prompt-bites/articles/vram-for-70b-model.ts"
+      "src/lib/power-local-llm/articles/ai-file-sorter-review.ts"
     ]
   },
   {
-    "siteModel": "Mistral Nemo 12B",
-    "registryModel": "Mistral Nemo 12B",
-    "status": "deprecated",
-    "superseded_by": null,
-    "notes": "Co-developed with NVIDIA, 128K context, Apache 2.0. Deprecated by Mistral effective 2026-10-22 in favor of Qwen3.5-9B per their own deprecation notice. Status updated from 'current' to 'deprecated' on 2026-10-25 now that the deprecation date has passed.",
+    "siteModel": "Gemma 3 4B IT",
+    "registryModel": "Gemma 3",
+    "status": "superseded",
+    "superseded_by": "Gemma 4",
+    "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4.",
     "fileCount": 1,
     "files": [
-      "src/lib/prompt-bites/articles/best-ollama-models-rtx-3060-12gb.ts"
+      "src/lib/power-local-llm/articles/ai-file-sorter-review.ts"
+    ]
+  },
+  {
+    "siteModel": "DeepSeek Coder 33B",
+    "registryModel": "DeepSeek Coder 33B",
+    "status": "superseded",
+    "superseded_by": "DeepSeek-Coder-V2-Lite",
+    "notes": "Largest size in the original DeepSeek-Coder v1 lineup (1.3B/5.7B/6.7B/33B).",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/best-ai-coding-tools-comparison-2026.ts"
+    ]
+  },
+  {
+    "siteModel": "Gemma 2 2B",
+    "registryModel": "Gemma 2",
+    "status": "superseded",
+    "superseded_by": "Gemma 4",
+    "notes": "Covers site mentions of \"Gemma 2 2B\" and \"Gemma 2B\" via prefix match — this registry has no bare pre-Gemma-2 \"Gemma\" entry, so \"Gemma 2B\" (missing the generation number) resolves against this Gemma 2 entry rather than being left unknown.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/on-device-llm-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Qwen3 ASR",
+    "registryModel": "Qwen3",
+    "status": "superseded",
+    "superseded_by": "Qwen3.5",
+    "notes": "GENERATION-LEVEL status, successor corrected 2026-11-09 from Qwen3.6 to Qwen3.5: Qwen3.6 lists only 27B and 35B-A3B, while Qwen3.5 covers the whole size range (0.8B to 397B-A17B). Qwen's pages do NOT say Qwen3 is deprecated: the Qwen3 repo labels it 'Previous Qwen3 Release' and the original series (2025-04-29, sizes 0.6B, 1.7B, 4B, 8B, 14B, 32B, 30B-A3B, 235B-A22B, Apache 2.0) remains available. A mention of a Qwen3 size as something an app or tutorial uses is a factual statement, not necessarily an out-of-date recommendation. Earlier note: The dominant model generation across the site by far: Qwen3 32B/14B/8B/7B/1.7B/34B, Qwen3-Coder 30B/7B/32B, Qwen 3 Coder 14B, etc. — roughly 90+ combined mentions across 20+ distinct 'Qwen3 <size>' strings (see data/model-to-files.json). Sizes 0.6B-235B-A22B per Qwen's own architecture post. Still fully available and widely deployed via Ollama/LM Studio — 'superseded' here means generationally, not retired; most site pages recommending 'Qwen3 X' as a current local-LLM pick are factually fine to keep using it, but should note Qwen3.6 exists as the newer option where the page's framing is 'the latest Qwen.'",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/subtitle-edit-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Qwen-VL",
+    "registryModel": "Qwen-VL",
+    "status": "superseded",
+    "superseded_by": "Qwen2.5-VL",
+    "notes": "Original Qwen vision-language model.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/localai-apexcreator-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Gemma 3n E2B",
+    "registryModel": "Gemma 3",
+    "status": "superseded",
+    "superseded_by": "Gemma 4",
+    "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/local-ai-on-android-guide.ts"
+    ]
+  },
+  {
+    "siteModel": "FLUX.1",
+    "registryModel": "FLUX.1",
+    "status": "superseded",
+    "superseded_by": null,
+    "notes": "First FLUX generation.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/fooocus-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Qwen3.5 VL",
+    "registryModel": "Qwen3.5 VL",
+    "status": "superseded",
+    "superseded_by": "Qwen3-VL",
+    "notes": "Earlier Qwen3.5-generation vision-language variant; Qwen3-VL (flagship Qwen3-VL-235B-A22B) is the current VL line per huggingface.co/Qwen (2026-11-09 fetch).",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/secret-ai-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Gemma 3n E2B / E4B",
+    "registryModel": "Gemma 3",
+    "status": "superseded",
+    "superseded_by": "Gemma 4",
+    "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts"
+    ]
+  },
+  {
+    "siteModel": "Flamingo",
+    "registryModel": "Flamingo",
+    "status": "superseded",
+    "superseded_by": null,
+    "notes": "Early visual-language model from DeepMind, superseded by later open efforts it inspired (e.g. Idefics).",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/idefics-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Idefics2",
+    "registryModel": "Idefics",
+    "status": "superseded",
+    "superseded_by": "Idefics3",
+    "notes": "Open reproduction of Flamingo. Covers \"Idefics\" and \"Idefics2\" via prefix match — Idefics3 registered separately as current.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/idefics-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Mistral-7B",
+    "registryModel": "Mistral-7B",
+    "status": "superseded",
+    "superseded_by": "Mistral 7B",
+    "notes": "Hyphenated-spelling alias for the model already registered as 'Mistral 7B'.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/idefics-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Stable Diffusion 2.0",
+    "registryModel": "Stable Diffusion 2.0",
+    "status": "superseded",
+    "superseded_by": null,
+    "notes": "Superseded by later Stable Diffusion generations already tracked in this registry.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/invokeai-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Gemma 3",
+    "registryModel": "Gemma 3",
+    "status": "superseded",
+    "superseded_by": "Gemma 4",
+    "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/ollama-vision-models-review.ts"
+    ]
+  },
+  {
+    "siteModel": "LFM2-1.2B",
+    "registryModel": "LFM2-1.2B",
+    "status": "deprecated",
+    "superseded_by": null,
+    "notes": "CORRECTED 2026-11-09: Liquid AI's own models page lists this model under 'Deprecated' (previously recorded here as current). The page names no replacement, so no successor is claimed. Earlier note: Dense LFM2 size.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
+    ]
+  },
+  {
+    "siteModel": "LFM2-2.6B",
+    "registryModel": "LFM2-2.6B",
+    "status": "deprecated",
+    "superseded_by": null,
+    "notes": "CORRECTED 2026-11-09: Liquid AI's own models page lists this model under 'Deprecated' (previously recorded here as current). The page names no replacement, so no successor is claimed. Earlier note: Largest dense LFM2 size.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
+    ]
+  },
+  {
+    "siteModel": "LFM2-350M",
+    "registryModel": "LFM2-350M",
+    "status": "deprecated",
+    "superseded_by": null,
+    "notes": "CORRECTED 2026-11-09: Liquid AI's own models page lists this model under 'Deprecated' (previously recorded here as current). The page names no replacement, so no successor is claimed. Earlier note: Smallest dense LFM2 size. Family also ships 700M, 1.2B, 2.6B dense sizes plus an 8.3B-A1.5B MoE variant, all 32K context.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
+    ]
+  },
+  {
+    "siteModel": "LFM2-700M",
+    "registryModel": "LFM2-700M",
+    "status": "deprecated",
+    "superseded_by": null,
+    "notes": "CORRECTED 2026-11-09: Liquid AI's own models page lists this model under 'Deprecated' (previously recorded here as current). The page names no replacement, so no successor is claimed. Earlier note: Dense LFM2 size.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Stable Diffusion 2.1",
+    "registryModel": "Stable Diffusion 2.1",
+    "status": "superseded",
+    "superseded_by": null,
+    "notes": "Minor update to Stable Diffusion 2.0.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/stable-diffusion-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Stable Diffusion 3 Medium",
+    "registryModel": "Stable Diffusion 3 Medium",
+    "status": "superseded",
+    "superseded_by": null,
+    "notes": "Open-weight release of the SD3 family.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/power-local-llm/articles/stable-diffusion-review.ts"
+    ]
+  },
+  {
+    "siteModel": "Kimi K2",
+    "registryModel": "Kimi K2",
+    "status": "superseded",
+    "superseded_by": "Kimi K2.5",
+    "notes": "1T total / 32B active params, MoE. Site's 'Kimi K2.6' mentions (4x, local-llms cluster) were briefly 'corrected' to this model on 2026-07-13 (commit 322eea7a4) then reverted the same day (commit d4415f41d) once K2.6 was independently confirmed real — see the Kimi K2.6 entry's notes for the full account.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/local-llms/articles/open-weight-vs-open-source-ai-models.ts"
+    ]
+  },
+  {
+    "siteModel": "DeepSeek 67B",
+    "registryModel": "DeepSeek 67B",
+    "status": "superseded",
+    "superseded_by": "DeepSeek-V3",
+    "notes": "Original DeepSeek LLM 67B (the pre-MoE generation). Long since superseded by the V2/V3/V4 MoE lineage; superseded_by points at the general-purpose lineage successor already in this registry, not a like-for-like replacement.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts"
+    ]
+  },
+  {
+    "siteModel": "Mixtral 8x22B",
+    "registryModel": "Mixtral 8x22B",
+    "status": "superseded",
+    "superseded_by": "Mistral Large 3",
+    "notes": "176B total / ~44B active MoE. Covers site mentions of \"Mixtral 8x22B\" and \"Mixtral 8x22B Instruct\" via prefix match.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts"
+    ]
+  },
+  {
+    "siteModel": "Phi-3 3.8B",
+    "registryModel": "Phi-3 3.8B",
+    "status": "superseded",
+    "superseded_by": "Phi-4",
+    "notes": "Phi-3-mini, 3.8B parameters. Superseded by Phi-4.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/local-llms/articles/text-generation-webui-vs-vllm-vs-llamacpp.ts"
+    ]
+  },
+  {
+    "siteModel": "DeepSeek Coder V2 16B",
+    "registryModel": "DeepSeek Coder V2",
+    "status": "superseded",
+    "superseded_by": "DeepSeek-V3",
+    "notes": "MoE coding model, 16B/236B total-parameter variants (2.4B/21B active). Covers site mentions of \"DeepSeek Coder V2\" and \"DeepSeek Coder V2 16B\" via prefix match. superseded_by points at the general lineage successor, not a coder-specific one-to-one replacement.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts"
+    ]
+  },
+  {
+    "siteModel": "ChatGLM4 9B",
+    "registryModel": "ChatGLM4 9B",
+    "status": "superseded",
+    "superseded_by": "GLM-4.7",
+    "notes": "Officially named GLM-4-9B by Zhipu AI (registered here as 'ChatGLM4 9B' to match this site's exact usage, mirroring the xinference model-registry naming this site content describes). 128K context, 26-language support.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
+    ]
+  },
+  {
+    "siteModel": "Mixtral 8x22B Instruct",
+    "registryModel": "Mixtral 8x22B",
+    "status": "superseded",
+    "superseded_by": "Mistral Large 3",
+    "notes": "176B total / ~44B active MoE. Covers site mentions of \"Mixtral 8x22B\" and \"Mixtral 8x22B Instruct\" via prefix match.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
+    ]
+  },
+  {
+    "siteModel": "OpenAI o1-mini",
+    "registryModel": "OpenAI o1-mini",
+    "status": "superseded",
+    "superseded_by": null,
+    "notes": "Alias entry (company-prefixed spelling, matches this site's convention) for the same model registered bare as 'o1-mini'.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
+    ]
+  },
+  {
+    "siteModel": "Mixtral 8x7B",
+    "registryModel": "Mixtral 8x7B",
+    "status": "superseded",
+    "superseded_by": "Mistral Large 3",
+    "notes": "First-generation Mixtral MoE (8 experts x 7B). Site's best-models-apple-silicon-2026.ts originally said 'Mistral 8x7B' (company name instead of product name) — fixed to the correct product name 'Mixtral 8x7B' in the same pass that added this entry.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts"
     ]
   }
 ]
