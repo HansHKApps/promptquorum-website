@@ -24952,7 +24952,7 @@
     "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
     "excerpt": "Official CPML license text for XTTS v2 (non-commercial), linked from Hugging Face. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. Full license table, VRAM comparison.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-11-19",
     "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
     "cluster": "power-local-llm"
   },
@@ -24961,7 +24961,7 @@
     "title": "Lokale TTS- und Voice-Cloning-Lizenzen 2026: Welche Engines erlauben kommerzielle Nutzung (Piper, XTTS v2, F5-TTS, Coqui)",
     "excerpt": "Offizieller CPML-Lizenztext für XTTS v2 (nicht kommerziell), verlinkt von Hugging Face. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. Lizenztabelle, VRAM-Vergleich.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-11-19",
     "url": "/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
     "cluster": "power-local-llm"
   },
@@ -24970,7 +24970,7 @@
     "title": "Licences TTS local et clonage vocal 2026 : quels moteurs autorisent l'usage commercial (Piper, XTTS v2, F5-TTS, Coqui)",
     "excerpt": "Texte officiel de la licence CPML pour XTTS v2 (non commerciale), lié depuis Hugging Face. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. Tableau des licences, comparatif VRAM.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-11-19",
     "url": "/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
     "cluster": "power-local-llm"
   },
@@ -24979,7 +24979,7 @@
     "title": "ローカルTTSとボイスクローニングのライセンス2026：商用利用できるエンジンは？（Piper、XTTS v2、F5-TTS、Coqui）",
     "excerpt": "XTTS v2の公式CPMLライセンス全文（非商用)、Hugging Faceへのリンク付き。Piper=GPL-3.0-or-later、F5-TTS=CC-BY-NC。ライセンス表とVRAM比較。2026年版。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-11-19",
     "url": "/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
     "cluster": "power-local-llm"
   },
@@ -24988,7 +24988,7 @@
     "title": "本地TTS与声音克隆许可证2026：哪些引擎允许商业使用（Piper、XTTS v2、F5-TTS、Coqui）",
     "excerpt": "XTTS v2的官方CPML许可证全文（非商业），链接自Hugging Face。Piper=GPL-3.0-or-later，F5-TTS=CC-BY-NC。含许可证对照表与VRAM对比。2026版。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-11-19",
     "url": "/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
     "cluster": "power-local-llm"
   },
@@ -24997,7 +24997,7 @@
     "title": "Licencias de TTS local y clonación de voz 2026: qué motores permiten uso comercial (Piper, XTTS v2, F5-TTS, Coqui)",
     "excerpt": "Texto oficial de la licencia CPML de XTTS v2 (no comercial), enlazado desde Hugging Face. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. Tabla de licencias, comparativa VRAM.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-11-19",
     "url": "/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
     "cluster": "power-local-llm"
   },
@@ -25006,7 +25006,7 @@
     "title": "Licenças de TTS local e clonagem de voz 2026: quais motores permitem uso comercial (Piper, XTTS v2, F5-TTS, Coqui)",
     "excerpt": "Texto oficial da licença CPML do XTTS v2 (não comercial), vinculado do Hugging Face. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. Tabela de licenças, comparação VRAM.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-11-19",
     "url": "/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
     "cluster": "power-local-llm"
   },
@@ -25015,7 +25015,7 @@
     "title": "تراخيص ⁨TTS⁩ المحلي واستنساخ الصوت ⁨2026⁩: أي المحركات تسمح بالاستخدام التجاري (⁨Piper⁩ و⁨XTTS v2⁩ و⁨F5-TTS⁩ و⁨Coqui⁩)",
     "excerpt": "نص ترخيص ⁨CPML⁩ الرسمي لـ ⁨XTTS v2⁩ (غير تجاري)، من ⁨Hugging Face⁩. ⁨Piper⁩=⁨GPL-3.0-or-later⁩، ⁨F5-TTS⁩=⁨CC-BY-NC⁩. جدول التراخيص ومقارنة ⁨VRAM⁩.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-11-19",
     "url": "/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
     "cluster": "power-local-llm"
   },
@@ -25024,7 +25024,7 @@
     "title": "로컬 TTS 및 음성 복제 라이선스 2026: 상업적 사용이 가능한 엔진 (Piper, XTTS v2, F5-TTS, Coqui)",
     "excerpt": "XTTS v2의 공식 CPML 라이선스 전문(비상업용), Hugging Face 링크 포함. Piper=GPL-3.0-or-later, F5-TTS=CC-BY-NC. 라이선스 표와 VRAM 비교.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-11-19",
     "url": "/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
     "cluster": "power-local-llm"
   },

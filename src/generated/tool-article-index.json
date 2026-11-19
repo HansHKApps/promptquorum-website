@@ -5395,6 +5395,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
+        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
+        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "build-local-voice-assistant-2026",
         "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
         "url": "/power-local-llm/build-local-voice-assistant-2026",
@@ -5431,14 +5439,6 @@
         "title": "Whisper on Apple Silicon 2026: Metal Benchmarks, Core ML Setup, M1–M5 Speed Guide",
         "url": "/local-llms/apple-silicon-whisper-metal-benchmark",
         "dateModified": "2026-08-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
-        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
-        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
-        "dateModified": "2026-07-15",
         "tier": "about"
       },
       {
@@ -5503,6 +5503,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
+        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
+        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
@@ -5531,14 +5539,6 @@
         "title": "XTTS v2 Review: Multilingual Voice Cloning from 6 Seconds of Audio",
         "url": "/power-local-llm/xtts-v2-review",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
-        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
-        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
-        "dateModified": "2026-07-15",
         "tier": "about"
       },
       {
@@ -5585,6 +5585,14 @@
         "title": "XTTS v2 Review: Multilingual Voice Cloning from 6 Seconds of Audio",
         "url": "/power-local-llm/xtts-v2-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
+        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
+        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
@@ -5650,14 +5658,6 @@
         "url": "/power-local-llm/bark-tts-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "styletts-2-review",
-        "title": "StyleTTS 2 Review: Columbia's MIT-Licensed Research Model for Natural Speech",
-        "url": "/power-local-llm/styletts-2-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
     "totalCount": 16,
@@ -5671,6 +5671,14 @@
         "title": "Bark TTS Review: Suno's MIT-Licensed Model for Laughter, Sighs, and Speech",
         "url": "/power-local-llm/bark-tts-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
+        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
+        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
@@ -5715,14 +5723,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
-        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
-        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
-        "dateModified": "2026-07-15",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "open-llm-vtuber-review",
         "title": "Open-LLM-VTuber Review: Self-Hosted Voice Chat with a Live2D Avatar",
         "url": "/power-local-llm/open-llm-vtuber-review",
@@ -5761,6 +5761,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
+        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
+        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
@@ -5781,14 +5789,6 @@
         "title": "Piper vs Kokoro TTS (2026): Which Local Voice Engine Should You Use?",
         "url": "/power-local-llm/piper-vs-kokoro-tts",
         "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
-        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
-        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
-        "dateModified": "2026-07-15",
         "tier": "about"
       },
       {
@@ -11357,6 +11357,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
+        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
+        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "airi-review",
         "title": "AIRI Review: Open-Source AI Companion with Voice Chat and Game Integrations",
         "url": "/power-local-llm/airi-review",
@@ -11416,14 +11424,6 @@
         "slug": "best-beginner-local-llm-models",
         "title": "Best Beginner Local LLMs 2026: 4GB & 8GB RAM Models (Llama, Phi, Gemma, Qwen)",
         "url": "/local-llms/best-beginner-local-llm-models",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-mini-pcs-local-llm",
-        "title": "Best Mini PCs for Local LLMs 2026: Mac Mini M6, M5 Pro, and Framework Desktop Compared",
-        "url": "/local-llms/best-mini-pcs-local-llm",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
