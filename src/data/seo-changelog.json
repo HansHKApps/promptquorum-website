@@ -29240,5 +29240,1034 @@
       "t14": "2026-12-03",
       "t28": "2026-12-17"
     }
+  },
+  {
+    "id": "c2435050-8980-4579-b07a-d5c43d0721fe",
+    "slug": "/prompt-bites/best-frontend-for-ollama",
+    "date": "2026-11-19T18:58:04.527Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Frontend for Ollama? | Prompt Bites | PromptQuorum",
+        "new": "Best Frontend for Ollama? Open WebUI, Jan | Prompt Bites"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI is the best Ollama frontend. SillyTavern for roleplay, Jan for model management. All three are free and open source.",
+        "new": "Open WebUI is our top Ollama frontend pick: free, with RAG, on Linux and Windows. Jan, Chatbox and Page Assist need no Docker; SillyTavern suits roleplay."
+      }
+    ],
+    "reason": "[en] CTR lift: answer in title+meta, GUI/Linux/Windows/free intent",
+    "queries": [
+      "ollama frontend",
+      "best ollama frontend",
+      "best frontend for ollama",
+      "best gui for ollama",
+      "ollama front end"
+    ],
+    "baseline": {
+      "position": 4.5,
+      "impressions": 799,
+      "clicks": 10,
+      "ctr": 0.012515644555694618,
+      "period": "28d 2026-10-23..2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e961a111-048e-4a0f-8d44-eca62a239c8a",
+    "slug": "/prompt-bites/best-frontend-for-ollama",
+    "date": "2026-11-19T18:58:04.624Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Bestes Frontend für Ollama? | Prompt Bites | PromptQuorum",
+        "new": "Bestes Frontend für Ollama? Open WebUI, Jan | Prompt Bites"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI ist das beste Ollama-Frontend. SillyTavern für Rollenspiele. Jan ergänzt die Modellverwaltung. Alle kostenlos und Open Source.",
+        "new": "Unsere Wahl für Ollama: Open WebUI, kostenlos, mit RAG, unter Linux und Windows. Jan, Chatbox und Page Assist ohne Docker; SillyTavern fürs Rollenspiel."
+      }
+    ],
+    "reason": "[de] own-locale queries: ollama frontend (+linux/windows)",
+    "queries": [
+      "ollama frontend",
+      "ollama frontend linux",
+      "ollama frontend windows",
+      "ollama frontends"
+    ],
+    "baseline": {
+      "position": 3.27,
+      "impressions": 204,
+      "clicks": 13,
+      "ctr": 0.06372549019607843,
+      "period": "28d 2026-10-23..2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "eae1f64f-5e87-474f-97b0-3c134fb68f1c",
+    "slug": "/prompt-bites/best-frontend-for-ollama",
+    "date": "2026-11-19T18:58:04.741Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "previous seoTitle (fr)",
+        "new": "see article (fr)"
+      }
+    ],
+    "reason": "[fr] data-free locale review: meta budget, answer-in-meta, Chatbox/Page Assist coverage",
+    "queries": [
+      "ollama frontend"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8acb0b76-7d5f-46c3-936b-a219f1def98d",
+    "slug": "/prompt-bites/best-frontend-for-ollama",
+    "date": "2026-11-19T18:58:04.840Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "previous seoTitle (ja)",
+        "new": "see article (ja)"
+      }
+    ],
+    "reason": "[ja] data-free locale review: meta budget, answer-in-meta, Chatbox/Page Assist coverage",
+    "queries": [
+      "ollama frontend"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "621b0446-bb42-4061-9490-b4f2489b6471",
+    "slug": "/prompt-bites/best-frontend-for-ollama",
+    "date": "2026-11-19T18:58:04.937Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "previous seoTitle (zh)",
+        "new": "see article (zh)"
+      }
+    ],
+    "reason": "[zh] data-free locale review: meta budget, answer-in-meta, Chatbox/Page Assist coverage",
+    "queries": [
+      "ollama frontend"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "cfeeba9a-bce6-4eb0-84fa-898d573b88d9",
+    "slug": "/prompt-bites/best-frontend-for-ollama",
+    "date": "2026-11-19T18:58:05.033Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "previous seoTitle (es)",
+        "new": "see article (es)"
+      }
+    ],
+    "reason": "[es] data-free locale review: meta budget, answer-in-meta, Chatbox/Page Assist coverage",
+    "queries": [
+      "ollama frontend"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "669f040f-aee7-4df8-82c4-f0118dd36d6c",
+    "slug": "/prompt-bites/best-frontend-for-ollama",
+    "date": "2026-11-19T18:58:05.129Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "previous seoTitle (pt)",
+        "new": "see article (pt)"
+      }
+    ],
+    "reason": "[pt] data-free locale review: meta budget, answer-in-meta, Chatbox/Page Assist coverage",
+    "queries": [
+      "ollama frontend"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "76d72772-dbfc-4833-aac6-a950356fae2e",
+    "slug": "/prompt-bites/best-frontend-for-ollama",
+    "date": "2026-11-19T18:58:05.224Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "previous seoTitle (ar)",
+        "new": "see article (ar)"
+      }
+    ],
+    "reason": "[ar] data-free locale review: meta budget, answer-in-meta, Chatbox/Page Assist coverage",
+    "queries": [
+      "ollama frontend"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "8c7d4948-459f-4313-be24-120707b1b610",
+    "slug": "/prompt-bites/best-frontend-for-ollama",
+    "date": "2026-11-19T18:58:05.322Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "previous seoTitle (ko)",
+        "new": "see article (ko)"
+      }
+    ],
+    "reason": "[ko] data-free locale review: meta budget, answer-in-meta, Chatbox/Page Assist coverage",
+    "queries": [
+      "ollama frontend"
+    ],
+    "baseline": null,
+    "deployedAt": null
+  },
+  {
+    "id": "54f0fb09-1276-429a-808b-9c250262f397",
+    "slug": "/power-local-llm/kokoro-vs-elevenlabs",
+    "date": "2026-11-19T18:59:56.231Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kokoro vs ElevenLabs (2026): Local vs Cloud TTS",
+        "new": "Kokoro vs ElevenLabs (2026): Free Local TTS or Paid Cloud?"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Kokoro is a free, 82M-parameter local TTS model with 54 fixed voices and no internet needed. ElevenLabs is a paid cloud platform with voice cloning. Full comparison.",
+        "new": "Kokoro is a free, Apache-2.0 local TTS model (82M parameters, 54 voices, 8 languages). ElevenLabs is paid cloud with cloning and 90+ languages. Compared."
+      }
+    ],
+    "reason": "CTR 1.04% at pos 4.4: align title/meta to elevenlabs local / kokoro vs elevenlabs; add local-version and language FAQs; stale-upstream status",
+    "queries": [
+      "elevenlabs local",
+      "elevenlabs local model",
+      "kokoro vs elevenlabs",
+      "elevenlabs vs kokoro",
+      "kokoro tts polish"
+    ],
+    "baseline": {
+      "position": 4.4,
+      "impressions": 963,
+      "clicks": 10,
+      "ctr": 0.010384215991692628,
+      "period": "2026-10-23 to 2026-11-19 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "09c37cd2-2f72-4601-805b-4942f4924647",
+    "slug": "/power-local-llm/chatterbox-vs-elevenlabs",
+    "date": "2026-11-19T18:59:56.329Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chatterbox vs ElevenLabs (2026): Which Voice Cloning Wins?",
+        "new": "Is Chatterbox Free? Chatterbox vs ElevenLabs (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chatterbox is a free, MIT-licensed local voice-cloning model from Resemble AI; ElevenLabs is a paid, managed cloud platform. Full comparison and buying guide.",
+        "new": "Chatterbox is free under MIT but now retired, with no updates or support. ElevenLabs is paid and maintained. Voice cloning, cost and setup compared."
+      }
+    ],
+    "reason": "CTR 1.17% at pos 4.9: target is chatterbox free / alternatives; page now states Chatterbox retired Aug 2026; new FAQs maintained/alternatives/model choice",
+    "queries": [
+      "chatterbox vs elevenlabs",
+      "is chatterbox free",
+      "chatterbox alternative",
+      "chatterbox alternatives",
+      "chatterbox turbo",
+      "chatterbox multilingual v3"
+    ],
+    "baseline": {
+      "position": 4.92,
+      "impressions": 1711,
+      "clicks": 20,
+      "ctr": 0.011689070718877849,
+      "period": "2026-10-23 to 2026-11-19 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "94151817-7a98-4811-8e7b-0bb9826bf20b",
+    "slug": "/power-local-llm/elevenlabs-vs-local-tts-piper-xtts",
+    "date": "2026-11-19T18:59:56.424Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ElevenLabs vs Piper vs XTTS v2 (2026): Which Is Best?",
+        "new": "Local ElevenLabs Alternatives: Piper vs XTTS v2 (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ElevenLabs is the fastest path to a polished AI voice; Piper is the free, CPU-friendly local option; XTTS v2 wins for local voice cloning. Full comparison.",
+        "new": "There is no local ElevenLabs, but Piper (free, CPU-friendly, GPL-3.0) and XTTS v2 (voice cloning, non-commercial licence) come close. Which to pick?"
+      }
+    ],
+    "reason": "CTR 1.03% at pos 4.4: target is elevenlabs local / local elevenlabs / piper alternative; XTTS v2 languages corrected 16 to 17",
+    "queries": [
+      "elevenlabs local",
+      "local elevenlabs",
+      "elevenlabs local model",
+      "eleven labs local",
+      "piper alternative",
+      "piper tts alternative"
+    ],
+    "baseline": {
+      "position": 4.44,
+      "impressions": 486,
+      "clicks": 5,
+      "ctr": 0.0102880658436214,
+      "period": "2026-10-23 to 2026-11-19 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "69bfa9b5-a600-48b8-b246-5189d017cb7a",
+    "slug": "/ja/power-local-llm/kokoro-vs-elevenlabs",
+    "date": "2026-11-19T19:00:04.188Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kokoro vs ElevenLabs(2026):ローカル vs クラウドTTS",
+        "new": "Kokoro vs ElevenLabs:無料ローカルTTS比較"
+      }
+    ],
+    "reason": "ja: 232 impr, 4 clicks; target elevenlabs ローカル, kokoro tts local",
+    "queries": [
+      "elevenlabs ローカル",
+      "kokoro tts local",
+      "kokoro tts license"
+    ],
+    "baseline": {
+      "position": 5.85,
+      "impressions": 232,
+      "clicks": 4,
+      "ctr": 0.017241379310344827,
+      "period": "2026-10-23 to 2026-11-19 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "109ac30a-8336-4fd1-87d1-e4355925e549",
+    "slug": "/zh/power-local-llm/kokoro-vs-elevenlabs",
+    "date": "2026-11-19T19:00:04.283Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Kokoro vs ElevenLabs(2026):本地对比云端TTS",
+        "new": "Kokoro vs ElevenLabs：免费本地TTS对比"
+      }
+    ],
+    "reason": "zh: 55 impr, 0 clicks; target kokoro是什么, kokoro vs elevenlabs",
+    "queries": [
+      "kokoro是什么",
+      "kokoro vs elevenlabs",
+      "kokoro 意思"
+    ],
+    "baseline": {
+      "position": 6.82,
+      "impressions": 55,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "2026-10-23 to 2026-11-19 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c1e9bc5e-1bc6-4975-9fda-adda8a92ca7e",
+    "slug": "/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts",
+    "date": "2026-11-19T19:00:04.379Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ElevenLabs vs. Piper vs. XTTS v2 (2026): Was ist am besten?",
+        "new": "Lokale ElevenLabs-Alternativen: Piper vs. XTTS v2 (2026)"
+      }
+    ],
+    "reason": "de: 228 impr, 4 clicks; target piper sprachmodelle, piper tts alternative, beste lokale tts, xtts-v2",
+    "queries": [
+      "piper sprachmodelle",
+      "piper tts alternative",
+      "beste lokale tts",
+      "xtts-v2"
+    ],
+    "baseline": {
+      "position": 4.72,
+      "impressions": 228,
+      "clicks": 4,
+      "ctr": 0.017543859649122806,
+      "period": "2026-10-23 to 2026-11-19 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "00d5af6f-498e-4a3c-804b-0870f61bbebe",
+    "slug": "/de/power-local-llm/chatterbox-vs-elevenlabs",
+    "date": "2026-11-19T19:00:04.475Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chatterbox vs ElevenLabs (2026): Wer gewinnt?",
+        "new": "Ist Chatterbox kostenlos? Chatterbox vs ElevenLabs (2026)"
+      }
+    ],
+    "reason": "de: 110 impr, 2 clicks; target chatterbox alternative, chatterbox multilingual",
+    "queries": [
+      "chatterbox",
+      "chatterbox alternative",
+      "chatterbox multilingual"
+    ],
+    "baseline": {
+      "position": 6.39,
+      "impressions": 110,
+      "clicks": 2,
+      "ctr": 0.01818181818181818,
+      "period": "2026-10-23 to 2026-11-19 (28d)"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "503ef8d3-031b-4a46-b7fb-a8731525616e",
+    "slug": "/local-llms/best-local-llms-business-writing",
+    "date": "2026-11-19T19:00:07.641Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Best Local LLMs for Business Writing in 2026: Email, Proposals, and Brand Voice",
+        "new": "Best Local LLMs for Writing Emails and Business Documents in 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Best Local LLMs for Business Writing 2026: Email & Memos",
+        "new": "Best Local LLM for Email & Business Writing in 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mistral Small 3.1 24B leads for emails and memos. Qwen3 8B excels at non-English writing. 7B-24B models outperform 70B. Ollama setup in 10 minutes.",
+        "new": "Best local LLMs for writing emails and business documents: Mistral Small 3.2 24B for concise drafts, Qwen3.8-27B for proposals, Gemma 4 12B for laptops."
+      }
+    ],
+    "reason": "CTR refresh: title/meta aligned to email-writing queries; models updated to 2026 generation (GSC 28d 2026-10-23..2026-11-19)",
+    "queries": [
+      "best llm for email writing",
+      "which llm is best for writing emails",
+      "best llm for writing emails",
+      "best local llm for writing",
+      "what is the best llm for small teams?",
+      "local llm writing style analysis prompt engineering"
+    ],
+    "baseline": {
+      "position": 4.63,
+      "impressions": 1274,
+      "clicks": 17,
+      "ctr": 0.013343799058084773,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "312e4209-2966-4b0c-8f50-1aa252de89ee",
+    "slug": "/es/local-llms/best-local-llms-business-writing",
+    "date": "2026-11-19T19:00:07.673Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Mejores LLMs locales para redacción profesional en 2026: correos, propuestas y voz de marca",
+        "new": "Mejores LLMs locales para escribir correos y documentos de empresa 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Mejores LLMs locales para redacción profesional 2026",
+        "new": "Mejor LLM local para correos y redacción profesional 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mistral Small 3.1 24B lidera para correos y memos; Qwen3 8B destaca en redacción multilingüe. Los modelos 7B–24B superan a los 70B. Ollama en 10 min.",
+        "new": "Mejores LLMs locales para correos y documentos: Mistral Small 3.2 24B para borradores concisos, Qwen3.8-27B para propuestas, Gemma 4 12B en portátiles."
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries): meta aligned to refreshed EN picks and local search intent",
+    "queries": [
+      "modelos de lenguaje para empresas",
+      "correos mistral"
+    ],
+    "baseline": {
+      "position": 4.12,
+      "impressions": 122,
+      "clicks": 3,
+      "ctr": 0.02459016393442623,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "286369cc-fd93-4c88-828d-249609869a67",
+    "slug": "/ar/local-llms/best-local-llms-business-writing",
+    "date": "2026-11-19T19:00:07.704Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "أفضل نماذج ⁨LLM⁩ المحلية للكتابة المهنية في ⁨2026⁩: رسائل البريد والمقترحات وصوت العلامة التجارية",
+        "new": "أفضل نماذج LLM المحلية لكتابة رسائل البريد ومستندات الأعمال في 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "⁨LLM⁩ محلي للكتابة المهنية ⁨2026⁩: ⁨Mistral⁩ و⁨Qwen⁩ مقارنة",
+        "new": "أفضل LLM محلي لكتابة البريد ومستندات الأعمال 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "⁨Mistral Small 3.1 24B⁩ يتصدّر رسائل البريد والمذكرات. ⁨Qwen3 8B⁩ الأفضل للكتابة متعددة اللغات. نماذج ⁨7B⁩–⁨24B⁩ تتفوق على ⁨70B. Ollama⁩ يُعدّ في ⁨10⁩ دقائق.",
+        "new": "أفضل نماذج LLM المحلية لكتابة البريد والمستندات: Mistral Small 3.2 24B لمسودات موجزة، وQwen3.8-27B للمقترحات، وGemma 4 12B للحواسيب المحمولة."
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries): meta aligned to refreshed EN picks and local search intent",
+    "queries": [
+      "(none visible)"
+    ],
+    "baseline": {
+      "position": 5,
+      "impressions": 4,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "12dffc7d-d253-43cf-a48a-d3ef78a214b1",
+    "slug": "/pt/local-llms/best-local-llms-business-writing",
+    "date": "2026-11-19T19:00:07.735Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Melhores LLMs locais para escrita profissional em 2026: e-mails, propostas e voz da marca",
+        "new": "Melhores LLMs locais para escrever e-mails e documentos de negócios 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Melhores LLMs locais para escrita profissional 2026",
+        "new": "Melhor LLM local para e-mails e escrita profissional 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O Mistral Small 3.1 24B lidera para e-mails e memos; o Qwen3 8B se destaca na escrita multilíngue. Os modelos 7B–24B superam os 70B. Ollama em 10 min.",
+        "new": "Melhores LLMs locais para e-mails e documentos: Mistral Small 3.2 24B para rascunhos concisos, Qwen3.8-27B para propostas, Gemma 4 12B em notebooks."
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries): meta aligned to refreshed EN picks and local search intent",
+    "queries": [
+      "melhores ferramentas de escrita de ia para redação de propostas"
+    ],
+    "baseline": {
+      "position": 5.9,
+      "impressions": 215,
+      "clicks": 4,
+      "ctr": 0.018604651162790697,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a7710ab3-9304-4ad6-9ef6-63abe47a3c0e",
+    "slug": "/de/local-llms/best-local-llms-business-writing",
+    "date": "2026-11-19T19:00:07.767Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Die besten lokalen LLMs für Geschäftskorrespondenz 2026: E-Mail, Angebote und Markenstimme",
+        "new": "Die besten lokalen LLMs für E-Mails und Geschäftskorrespondenz 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Beste lokale LLMs für Geschäftskorrespondenz 2026: E-Mail",
+        "new": "Bestes lokales LLM für E-Mails & Geschäftstexte 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mistral Small 3.1 24B führt bei E-Mails und Memos. Qwen3 8B bei mehrsprachiger Korrespondenz. 7B-24B-Modelle übertreffen 70B. Ollama-Setup in 10 Minuten.",
+        "new": "Beste lokale LLMs für E-Mails und Geschäftstexte: Mistral Small 3.2 24B für knappe Entwürfe, Qwen3.8-27B für Angebote, Gemma 4 12B für Laptops."
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries): meta aligned to refreshed EN picks and local search intent",
+    "queries": [
+      "llm für unternehmen",
+      "geschäfts e mail erstellen"
+    ],
+    "baseline": {
+      "position": 5.15,
+      "impressions": 130,
+      "clicks": 5,
+      "ctr": 0.038461538461538464,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "626d6125-d0b1-406d-9d26-93fd3d01d57b",
+    "slug": "/fr/local-llms/best-local-llms-business-writing",
+    "date": "2026-11-19T19:00:07.799Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Meilleurs LLMs locaux pour rédaction professionnelle en 2026 : emails, propositions et voix de marque",
+        "new": "Meilleurs LLM locaux pour écrire des e-mails et documents pro en 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Meilleurs LLMs locaux pour rédaction métier 2026",
+        "new": "Meilleur LLM local pour e-mails et rédaction pro 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mistral Small 3.1 24B excellent emails/mémos. Qwen3 8B multilingue. Modèles 7B-24B surpassent 70B. Configuration Ollama 10 min. Guide complet.",
+        "new": "Meilleurs LLM locaux pour e-mails et documents : Mistral Small 3.2 24B pour brouillons concis, Qwen3.8-27B pour propositions, Gemma 4 12B en portable."
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries): meta aligned to refreshed EN picks and local search intent",
+    "queries": [
+      "llm local entreprise"
+    ],
+    "baseline": {
+      "position": 4.79,
+      "impressions": 203,
+      "clicks": 8,
+      "ctr": 0.03940886699507389,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "105cb2ae-4e8c-47af-80d5-6ea42e6d19da",
+    "slug": "/ja/local-llms/best-local-llms-business-writing",
+    "date": "2026-11-19T19:00:07.830Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "2026年ビジネスライティング向けベストなローカルLLM: メール、提案、ブランドボイス",
+        "new": "メールとビジネス文書向けベストなローカルLLM【2026年版】"
+      },
+      {
+        "field": "seoTitle",
+        "old": "2026年ビジネスライティング向けベストLLM：Mistral・Qwen・Llama完全比較ガイド",
+        "new": "メール・ビジネス文書向けローカルLLMおすすめ2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mistral Small 3.1 24B最適（メール・メモ）。Qwen3 8B多言語卓越。7B-24Bが70B超越。プロンプトエンジニアリング実例・Ollama完全セットアップガイド・敬語対応。",
+        "new": "メールやビジネス文書に合うローカルLLMを紹介。簡潔な下書きはMistral Small 3.2 24B、提案書はQwen3.8-27B、ノートPCはGemma 4 12B。Ollamaコマンド付き。"
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries): meta aligned to refreshed EN picks and local search intent",
+    "queries": [
+      "(none visible)"
+    ],
+    "baseline": {
+      "position": 5.17,
+      "impressions": 6,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "b3ffe115-826c-4393-bbf1-9857baf94139",
+    "slug": "/zh/local-llms/best-local-llms-business-writing",
+    "date": "2026-11-19T19:00:07.861Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "2026年商业写作最佳本地LLM：电子邮件、提案和品牌声音",
+        "new": "2026年写邮件和商务文档的最佳本地LLM"
+      },
+      {
+        "field": "seoTitle",
+        "old": "2026年商业写作最佳本地LLM：Mistral·Qwen·Llama深度对比评测指南",
+        "new": "2026年写邮件与商务文档的最佳本地LLM推荐榜单"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Mistral Small 3.1 24B商务邮件最优。Qwen3 8B多语言卓越。7B-24B模型超越70B。Ollama部署10分钟。完整提示工程实例·品牌声音配置·部署最佳实践。",
+        "new": "写邮件和商务文档的最佳本地LLM：简洁草稿选Mistral Small 3.2 24B，提案选Qwen3.8-27B，笔记本选Gemma 4 12B。附Ollama命令。"
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries): meta aligned to refreshed EN picks and local search intent",
+    "queries": [
+      "(no page data)"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "cdf8cb09-fc94-41ca-9cc5-b9842694c262",
+    "slug": "/ko/local-llms/best-local-llms-business-writing",
+    "date": "2026-11-19T19:00:07.892Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "2026년 비즈니스 문서 작성을 위한 최고의 로컬 LLM: 이메일, 제안서, 브랜드 보이스",
+        "new": "2026년 이메일·비즈니스 문서 작성용 최고의 로컬 LLM"
+      },
+      {
+        "field": "seoTitle",
+        "old": "2026년 비즈니스 문서 작성 최고의 로컬 LLM: 이메일 & 메모",
+        "new": "이메일·비즈니스 문서용 최고의 로컬 LLM 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "이메일과 메모에는 Mistral Small 3.1 24B가 최적입니다. 비영어권 문서 작성에는 Qwen3 8B가 탁월합니다. 7B~24B 모델이 70B보다 우수합니다. Ollama 설정은 10분이면 충분합니다.",
+        "new": "이메일과 비즈니스 문서에 맞는 로컬 LLM: 간결한 초안은 Mistral Small 3.2 24B, 제안서는 Qwen3.8-27B, 노트북은 Gemma 4 12B입니다. Ollama 명령어 포함."
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries): meta aligned to refreshed EN picks and local search intent",
+    "queries": [
+      "비즈니스 문서 비용",
+      "비즈니스 문서 전문가"
+    ],
+    "baseline": {
+      "position": 6.41,
+      "impressions": 32,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "a72d396d-823b-45e3-bddb-f8cc0004ca41",
+    "slug": "/local-llms/chatbox-review",
+    "date": "2026-11-19T19:05:10.114Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Chatbox Review 2026: Cross-Platform AI Chat Client for Desktop, Web, and Mobile",
+        "new": "Chatbox Review: Free, Open-Source AI Chat Client for Desktop, Web and Mobile"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Chatbox Review 2026: Desktop, Web & Mobile AI Client",
+        "new": "Chatbox Review: Free? Open Source? Linux, Web, Pricing"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chatbox is a GPLv3-licensed AI chat client with 41,600+ GitHub stars, native apps on 5 platforms plus web, and paid Chatbox AI plans from $3.99/month. 2026 review.",
+        "new": "Chatbox review: free GPLv3 AI chat client for Windows, macOS, Linux, iOS, Android and web. Latest v1.24.4, GitHub download, Ollama and Chatbox AI pricing."
+      }
+    ],
+    "reason": "CTR lift: title/meta aligned to real queries in this locale (free/open source/Linux/GitHub/pricing) and refreshed facts (v1.24.4, Chatbox AI free tier)",
+    "queries": [
+      "chatbox github releases",
+      "chatbox github",
+      "chatbox review",
+      "chatbox web",
+      "chatbox linux",
+      "chatbox open source",
+      "chatbox pricing",
+      "is chatbox free"
+    ],
+    "baseline": {
+      "position": 4.93,
+      "impressions": 2222,
+      "clicks": 26,
+      "ctr": 0.011701170117011701,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "3ccf30ad-295f-47e7-932a-57f964291212",
+    "slug": "/de/local-llms/chatbox-review",
+    "date": "2026-11-19T19:05:10.144Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Chatbox-Rezension 2026: KI-Chat-Client für Desktop, Web und Mobilgeräte",
+        "new": "Chatbox-Test: Kostenloser, quelloffener KI-Chat-Client für Desktop, Web und Mobilgeräte"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Chatbox-Rezension 2026: Desktop-, Web- & Mobil-Client",
+        "new": "Chatbox-Test: kostenlos? Open Source, Linux, Preise"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chatbox ist ein KI-Chat-Client mit GPLv3-Lizenz, 41.600+ GitHub-Sternen, nativen Apps auf 5 Plattformen plus Web, und bezahlten Chatbox-AI-Plänen ab 3,99 $/Monat. Rezension 2026.",
+        "new": "Chatbox-Test: kostenloser KI-Chat-Client unter GPLv3 für Windows, macOS, Linux, iOS, Android und Web. Version 1.24.4, GitHub, Ollama, Chatbox-AI-Preise."
+      }
+    ],
+    "reason": "CTR lift: title/meta aligned to real queries in this locale (free/open source/Linux/GitHub/pricing) and refreshed facts (v1.24.4, Chatbox AI free tier)",
+    "queries": [
+      "chatbox",
+      "chatbox ki",
+      "chatbox linux",
+      "ist es kostenlos",
+      "was ist chatbox ai"
+    ],
+    "baseline": {
+      "position": 7.15,
+      "impressions": 253,
+      "clicks": 4,
+      "ctr": 0.015810276679841896,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "e381850e-6a01-4217-910d-76d2ba890ef4",
+    "slug": "/fr/local-llms/chatbox-review",
+    "date": "2026-11-19T19:05:10.173Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Chatbox : avis 2026 sur le client de chat IA multiplateforme (bureau, web, mobile)",
+        "new": "Chatbox : avis sur le client de chat IA gratuit et open source (bureau, web, mobile)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Chatbox : avis 2026 (bureau, web, mobile)",
+        "new": "Chatbox : avis, gratuit ? Open source, Linux, prix"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chatbox est un client de chat IA sous licence GPLv3, avec 41 600+ étoiles GitHub, des applications natives sur 5 plateformes plus le web, et des offres Chatbox AI dès 3,99 $/mois. Avis 2026.",
+        "new": "Avis Chatbox : client de chat IA gratuit sous GPLv3 pour Windows, macOS, Linux, iOS, Android et web. Version 1.24.4, GitHub, Ollama et prix de Chatbox AI."
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries); title/meta aligned to real EN/global query intent (free, open source, Linux, GitHub releases, pricing) and refreshed facts (1.24.4)",
+    "baseline": {
+      "position": 5.6,
+      "impressions": 20,
+      "clicks": 1,
+      "ctr": 0.05,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "307939ec-6303-436d-a77e-f25aa1505a72",
+    "slug": "/es/local-llms/chatbox-review",
+    "date": "2026-11-19T19:05:10.202Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Chatbox: análisis 2026 del cliente de chat IA multiplataforma (escritorio, web, móvil)",
+        "new": "Chatbox: qué es y análisis del cliente de chat IA gratuito y de código abierto (escritorio, web, móvil)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Chatbox: análisis 2026 (escritorio, web, móvil)",
+        "new": "Chatbox: qué es, gratis, código abierto y precios"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chatbox es un cliente de chat IA con licencia GPLv3, más de 41.600 estrellas en GitHub, apps nativas en 5 plataformas más web, y planes Chatbox AI desde 3,99 $/mes. Análisis 2026.",
+        "new": "Qué es Chatbox: cliente de chat IA gratis con GPLv3 para Windows, macOS, Linux, iOS, Android y web. Versión 1.24.4, GitHub, Ollama y precios de Chatbox AI."
+      }
+    ],
+    "reason": "CTR lift: title/meta aligned to real queries in this locale (free/open source/Linux/GitHub/pricing) and refreshed facts (v1.24.4, Chatbox AI free tier)",
+    "queries": [
+      "chatbox que es",
+      "chat-box.ai que es",
+      "chat box ai que es",
+      "chatbox linux",
+      "chatbox github"
+    ],
+    "baseline": {
+      "position": 5.46,
+      "impressions": 632,
+      "clicks": 3,
+      "ctr": 0.004746835443037975,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "daddd3d6-b51a-49cf-95a5-dae62571daa2",
+    "slug": "/pt/local-llms/chatbox-review",
+    "date": "2026-11-19T19:05:10.231Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Chatbox: análise 2026 do cliente de chat de IA multiplataforma (desktop, web, mobile)",
+        "new": "Chatbox: análise do cliente de chat de IA gratuito e de código aberto (desktop, web, mobile)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Chatbox: análise 2026 (desktop, web, mobile)",
+        "new": "Chatbox: análise, é grátis? Código aberto, Linux, preços"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O Chatbox é um cliente de chat de IA com licença GPLv3, mais de 41.600 estrelas no GitHub, apps nativos em 5 plataformas mais web, e planos Chatbox AI a partir de US$ 3,99/mês. Análise 2026.",
+        "new": "Análise do Chatbox: cliente de chat de IA grátis com GPLv3 para Windows, macOS, Linux, iOS, Android e web. v1.24.4, GitHub, Ollama e preços do Chatbox AI."
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries); title/meta aligned to real EN/global query intent (free, open source, Linux, GitHub releases, pricing) and refreshed facts (1.24.4)",
+    "baseline": {
+      "position": 6,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "60048404-f868-4639-ac64-7bb2ea3abff6",
+    "slug": "/ja/local-llms/chatbox-review",
+    "date": "2026-11-19T19:05:10.261Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Chatboxレビュー2026：デスクトップ・Web・モバイル対応のAIチャットクライアント",
+        "new": "Chatboxレビュー：無料・オープンソースのAIチャットクライアント（デスクトップ・Web・モバイル）"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Chatboxレビュー2026：デスクトップ・Web・モバイル",
+        "new": "Chatboxレビュー：無料？評判・料金・Linux"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ChatboxはGPLv3ライセンスのAIチャットクライアントで、GitHubスター41,600以上、5プラットフォーム+Webのネイティブアプリ、月額3.99ドルからのChatbox AIプランを提供。2026年レビュー。",
+        "new": "ChatboxはGPLv3の無料AIチャットクライアント。Windows・macOS・Linux・iOS・Android・Web対応、v1.24.4。GitHub入手先、Ollama、Chatbox AI料金を解説。"
+      }
+    ],
+    "reason": "CTR lift: title/meta aligned to real queries in this locale (free/open source/Linux/GitHub/pricing) and refreshed facts (v1.24.4, Chatbox AI free tier)",
+    "queries": [
+      "chatbox ai 評判",
+      "chatbox ai 料金",
+      "chatbox ai 無料",
+      "chatbox ai とは",
+      "ollama chatbox"
+    ],
+    "baseline": {
+      "position": 5.98,
+      "impressions": 328,
+      "clicks": 8,
+      "ctr": 0.024390243902439025,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "0bdc2802-c0d2-4453-8cc4-1856e38a11f8",
+    "slug": "/zh/local-llms/chatbox-review",
+    "date": "2026-11-19T19:05:10.290Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Chatbox 2026评测：支持桌面、网页与移动端的跨平台AI聊天客户端",
+        "new": "Chatbox评测：免费开源的AI聊天客户端（支持桌面、网页与移动端）"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Chatbox 2026评测：桌面、网页与移动端",
+        "new": "Chatbox评测：免费吗？开源、Linux、价格与出品方"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chatbox是采用GPLv3许可证的AI聊天客户端，GitHub星标数超过41,600，在5个平台加网页端提供原生应用，Chatbox AI付费计划起价每月3.99美元。2026评测。",
+        "new": "Chatbox是GPLv3许可证的免费AI聊天客户端，支持Windows、macOS、Linux、iOS、Android和网页版，最新v1.24.4，可连接Ollama，附GitHub下载与Chatbox AI价格。"
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries); title/meta aligned to real EN/global query intent (free, open source, Linux, GitHub releases, pricing) and refreshed facts (1.24.4)",
+    "queries": [
+      "chatbox 是 哪个 公司 的"
+    ],
+    "baseline": {
+      "position": 6.33,
+      "impressions": 141,
+      "clicks": 4,
+      "ctr": 0.028368794326241134,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "4fbd5c25-50ed-408c-a5db-71d84e9a8047",
+    "slug": "/ar/local-llms/chatbox-review",
+    "date": "2026-11-19T19:05:10.319Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "مراجعة Chatbox 2026: عميل دردشة ذكاء اصطناعي متعدد المنصات لسطح المكتب والويب والهاتف",
+        "new": "مراجعة Chatbox: عميل دردشة ذكاء اصطناعي مجاني ومفتوح المصدر لسطح المكتب والويب والهاتف"
+      },
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Chatbox 2026: سطح المكتب والويب والهاتف",
+        "new": "مراجعة Chatbox: مجاني؟ مفتوح المصدر، Linux والأسعار"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chatbox عميل دردشة ذكاء اصطناعي برخصة GPLv3 وأكثر من 41,600 نجمة على GitHub، تطبيقات أصلية على 5 منصات بالإضافة إلى الويب، وخطط Chatbox AI ابتداءً من 3.99$ شهرياً. مراجعة 2026.",
+        "new": "مراجعة Chatbox: عميل دردشة مجاني برخصة GPLv3 لأنظمة Windows وmacOS وLinux وiOS وAndroid والويب. الإصدار v1.24.4 وGitHub وOllama وأسعار Chatbox AI."
+      }
+    ],
+    "reason": "Data-free locale review (too few per-locale queries); title/meta aligned to real EN/global query intent (free, open source, Linux, GitHub releases, pricing) and refreshed facts (1.24.4)",
+    "baseline": {
+      "position": 6.17,
+      "impressions": 12,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "c64a42cf-5cbf-42b5-a4cb-c0a361a3b110",
+    "slug": "/ko/local-llms/chatbox-review",
+    "date": "2026-11-19T19:05:10.349Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Chatbox 리뷰 2026: 데스크톱·웹·모바일용 크로스플랫폼 AI 채팅 클라이언트",
+        "new": "Chatbox 후기: 무료 오픈소스 AI 채팅 클라이언트 (데스크톱·웹·모바일)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Chatbox 리뷰 2026: 데스크톱·웹·모바일",
+        "new": "Chatbox 후기: 무료? 오픈소스·Linux·가격"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chatbox는 GPLv3 라이선스 AI 채팅 클라이언트로 GitHub 스타 41,600개 이상, 5개 플랫폼 및 웹용 네이티브 앱, 월 3.99달러부터 시작하는 Chatbox AI 플랜을 제공합니다. 2026년 리뷰.",
+        "new": "Chatbox는 GPLv3 무료 AI 채팅 클라이언트입니다. Windows·macOS·Linux·iOS·Android·웹, v1.24.4, Ollama, Chatbox AI 가격을 다룹니다."
+      }
+    ],
+    "reason": "CTR lift: title/meta aligned to real queries in this locale (free/open source/Linux/GitHub/pricing) and refreshed facts (v1.24.4, Chatbox AI free tier)",
+    "queries": [
+      "chatbox 후기",
+      "chatbox llm",
+      "chatbox linux"
+    ],
+    "baseline": {
+      "position": 3.93,
+      "impressions": 126,
+      "clicks": 3,
+      "ctr": 0.023809523809523808,
+      "period": "28d to 2026-11-19"
+    },
+    "deployedAt": null
   }
 ]

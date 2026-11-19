@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'GPL 3.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // official site (chatboxai.app) states no minimum RAM/hardware across its Windows/macOS/Linux/iOS/Android/web builds; floor depends on the model backend configured, verified 2026-09-13
-  stars: 41637,
+  stars: 42439,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
@@ -34,9 +34,9 @@ export const app: ToolRecord = {
     ko: '크로스플랫폼 데스크톱 및 웹 클라이언트',
   },
   reviewSlug: 'chatbox-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  // Comparison attributes: each value verified against the project's official README/site and release notes (Ollama in README, MCP and file conversation in 1.21-1.24 notes) on 2026-11-19; a missing key = not stated there, never false.
   compare: { ollama: true, mcp: true, fileChat: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-29', // GitHub API (latest release or push, whichever is newer), read 2026-11-06
+  lastUpstreamUpdate: '2026-11-18', // GitHub API (latest release v1.24.4 on 2026-11-12, or last push 2026-11-18, whichever is newer), read 2026-11-19
   lastUpstreamUpdateSource: 'https://github.com/chatboxai/chatbox',
 }

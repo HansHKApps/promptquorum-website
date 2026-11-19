@@ -931,7 +931,7 @@
       "images": []
     },
     "chatbox-review": {
-      "dateModified": "2026-09-11",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -2464,7 +2464,7 @@
       ]
     },
     "best-local-llms-business-writing": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2479,20 +2479,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/model-selection-business-writing.svg",
-          "title": "Mistral Small 3.1 24B excels at precise, concise emails with best tone control (8-15 sec). Llama 3.1 8B adapts well to brand voice examples (5-10 sec). Qwen3 8B is fastest with native multilingual support for non-English business correspondence (3-8 sec)."
-        },
-        {
-          "url": "/images/common-mistakes-prevention-en.svg",
-          "title": "Left side (red): Common pitfalls when setting up local writing assistants. Right side (green): Proven solutions. Key mistakes to avoid: using 70B models for fast emails, omitting brand voice examples, trusting unrefined first drafts, ignoring context window limitations, and using one-size-fits-all model configurations."
-        },
-        {
-          "url": "/images/setup-workflow-business-writing-en.svg",
-          "title": "Five-step setup workflow: 1) Install Ollama from ollama.ai, 2) Pull Mistral Small 3.1 model, 3) Install Continue extension for VS Code, 4) Create custom system prompt with brand voice examples, 5) Start using Ctrl+K hotkey to refine business emails. Total setup time: ~10 minutes."
-        }
-      ]
+      "images": []
     },
     "best-7b-models-consumer-hardware": {
       "dateModified": "2026-11-09",
@@ -5684,8 +5671,8 @@
       "images": []
     },
     "knowledge-cutoffs-and-geo": {
-      "dateModified": "2026-10-19",
-      "lastFactChecked": "2026-10-19",
+      "dateModified": "2026-11-19",
+      "lastFactChecked": "2026-11-19",
       "publishDate": "2026-06-12",
       "hasSections": true,
       "langs": [
@@ -6172,7 +6159,7 @@
       ]
     },
     "elevenlabs-vs-local-tts-piper-xtts": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-08-22",
       "hasSections": true,
@@ -9955,7 +9942,7 @@
       "images": []
     },
     "kokoro-vs-elevenlabs": {
-      "dateModified": "2026-09-11",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -9973,7 +9960,7 @@
       "images": []
     },
     "chatterbox-vs-elevenlabs": {
-      "dateModified": "2026-09-11",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -16150,7 +16137,7 @@
       ]
     },
     "bestFrontendForOllama": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -17032,7 +17019,7 @@
       "images": []
     },
     "aiModelKnowledgeCutoffDates": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-12",
       "hasSections": true,

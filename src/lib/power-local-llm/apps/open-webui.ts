@@ -38,6 +38,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { dockerDeploy: true, ollama: true, customEndpoint: true, mcp: true, fileChat: true, multiUser: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-11-14', // GitHub API (latest release v0.13.3 on 2026-11-08, last push 2026-11-14 — newer wins), read 2026-11-14
+  lastUpstreamUpdate: '2026-11-19', // GitHub API (latest release v0.13.4 on 2026-11-17, last push 2026-11-19 — newer wins), read 2026-11-19
   lastUpstreamUpdateSource: 'https://github.com/open-webui/open-webui',
 }
