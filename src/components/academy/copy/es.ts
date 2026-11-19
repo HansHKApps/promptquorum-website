@@ -58,6 +58,13 @@ export const copy: AcademyCopy = {
   testSplit: (l, t) => `${l} min de lecciones + ${t} min de prueba`,
   storageBlocked: 'Este navegador no permite guardar. Puedes continuar, pero perderás tu progreso al cerrar la página.',
   loading: 'Cargando',
+  tagline: 'Aprendizaje de IA personalizado, gratis',
+  windowClose: 'Cerrar',
+  windowMaximize: 'Maximizar',
+  windowRestore: 'Restaurar',
+  launcherTitle: 'Abrir PromptQuorum Academy',
+  openAcademy: 'Abrir la Academy',
+  programmesCreated: (n) => `${n.toLocaleString('es')} programas creados hasta ahora`,
 
   diagnosticTitle: 'Diagnóstico rápido',
   diagnosticIntro: 'Responde unas preguntas rápidas para que tu programa omita lo que ya sabes. No hay nota.',

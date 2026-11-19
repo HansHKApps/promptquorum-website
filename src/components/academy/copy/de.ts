@@ -59,6 +59,13 @@ export const copy: AcademyCopy = {
   storageBlocked:
     'Dieser Browser erlaubt kein Speichern. Sie können fortfahren, aber Ihr Fortschritt geht verloren, wenn Sie die Seite schließen.',
   loading: 'Wird geladen',
+  tagline: 'Persönliches KI-Lernen, kostenlos',
+  windowClose: 'Schließen',
+  windowMaximize: 'Maximieren',
+  windowRestore: 'Wiederherstellen',
+  launcherTitle: 'PromptQuorum Academy öffnen',
+  openAcademy: 'Academy öffnen',
+  programmesCreated: (n) => `Bisher ${n.toLocaleString('de')} Lernpläne erstellt`,
 
   diagnosticTitle: 'Einstufung',
   diagnosticIntro: 'Beantworten Sie einige kurze Fragen, damit Ihr Programm überspringt, was Sie schon wissen. Es gibt keine Bewertung.',

@@ -37,10 +37,17 @@ async function mockDiagnostic(page: Page) {
   )
 }
 
+/** /academy is the entrance page; the tool itself is the Ask-Hans-style window opened by its button. */
+async function openTool(page: Page) {
+  await page.goto('/academy')
+  await page.getByRole('button', { name: /open the academy/i }).click()
+  await expect(page.getByRole('dialog', { name: 'PromptQuorum Academy' })).toBeVisible()
+}
+
 const stored = (page: Page) => page.evaluate((k) => localStorage.getItem(k), KEY)
 
 async function startSetup(page: Page, save: boolean) {
-  await page.goto('/academy')
+  await openTool(page)
   await page.getByLabel(/what do you want to learn/i).fill('Test subject')
   const box = page.getByLabel(/save my progress in this browser/i)
   await expect(box).not.toBeChecked() // unticked by default
@@ -141,7 +148,7 @@ async function openSeededLesson(page: Page, programme = seededProgramme()) {
       }),
     ],
   )
-  await page.goto('/academy')
+  await openTool(page)
   await page.getByRole('button', { name: /^continue$/i }).click()
 }
 
@@ -181,7 +188,7 @@ test.describe('F10 / F8: AI label and notices', () => {
 
   test('setup shows the personal-data warning next to the subject and the 16+ notice at the start button', async ({ page }) => {
     await preset(page)
-    await page.goto('/academy')
+    await openTool(page)
     await expect(page.getByText('Please do not enter personal data.').first()).toBeVisible()
     await expect(page.getByText('For learners aged 16 or older.')).toBeVisible()
   })
@@ -302,5 +309,72 @@ test.describe('F7: displayed content is not replaced', () => {
     await page.waitForTimeout(3000)
     expect(await read()).toBe(first)
     expect(calls).toBe(1)
+  })
+})
+
+
+// ------------------------------------------------------------------------------- window (same as Ask Hans)
+
+test.describe('Academy window behaves like the Ask Hans window', () => {
+  const win = (page: Page) => page.getByRole('dialog', { name: 'PromptQuorum Academy' })
+  const box = async (page: Page) => (await win(page).boundingBox())!
+
+  test('entrance page explains and opens the window; the tool is not inline on the page', async ({ page }) => {
+    await preset(page)
+    await page.goto('/academy')
+    await expect(page.getByRole('heading', { name: 'How it works' })).toBeVisible()
+    await expect(page.getByText(/programmes created so far/)).toBeVisible()
+    await expect(win(page)).toHaveCount(0)
+    await expect(page.getByLabel(/what do you want to learn/i)).toHaveCount(0)
+    await page.getByRole('button', { name: /open the academy/i }).click()
+    await expect(win(page)).toBeVisible()
+  })
+
+  test('drag by the header, resize by the corner, maximize and restore', async ({ page }) => {
+    await preset(page)
+    await openTool(page)
+    const a = await box(page)
+    await page.mouse.move(a.x + a.width / 2, a.y + 20)
+    await page.mouse.down()
+    await page.mouse.move(a.x + a.width / 2 - 120, a.y + 60, { steps: 5 })
+    await page.mouse.up()
+    const b = await box(page)
+    expect(Math.round(b.x)).toBe(Math.round(a.x - 120))
+    expect(Math.round(b.y)).toBe(Math.round(a.y + 40))
+    await page.mouse.move(b.x + b.width - 6, b.y + b.height - 6) // inside the rounded corner
+    await page.mouse.down()
+    await page.mouse.move(b.x + b.width - 86, b.y + b.height - 66, { steps: 5 })
+    await page.mouse.up()
+    const c = await box(page)
+    expect(c.width).toBeLessThan(b.width - 40)
+    expect(c.height).toBeLessThan(b.height - 30)
+    await page.getByRole('button', { name: 'Maximize' }).click()
+    const m = await box(page)
+    expect(m.width).toBeGreaterThan(c.width)
+    await page.getByRole('button', { name: 'Restore' }).click()
+    expect(Math.round((await box(page)).width)).toBe(Math.round(c.width))
+  })
+
+  test('closing leaves the Academy pill; the pill reopens the window; state survives a reload', async ({ page }) => {
+    await preset(page)
+    await openTool(page)
+    await page.getByRole('button', { name: 'Close' }).click()
+    await expect(win(page)).toHaveCount(0)
+    const pill = page.getByRole('button', { name: 'Open the PromptQuorum Academy' })
+    await expect(pill).toBeVisible()
+    await pill.click()
+    await expect(win(page)).toBeVisible()
+    await page.reload()
+    await expect(win(page)).toBeVisible()
+  })
+
+  test('the homepage counter tile opens the window', async ({ page }) => {
+    await preset(page)
+    await page.goto('/')
+    const tile = page.getByRole('link', { name: /Academy programmes created/ }).first()
+    await expect(tile).toBeVisible()
+    await tile.click()
+    await expect(win(page)).toBeVisible()
+    await expect(page).toHaveURL(/\/$/)
   })
 })

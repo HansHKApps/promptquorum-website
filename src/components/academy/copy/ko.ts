@@ -57,6 +57,13 @@ export const copy: AcademyCopy = {
   testSplit: (l, t) => `수업 ${l}분 + 시험 ${t}분`,
   storageBlocked: '이 브라우저는 저장을 허용하지 않습니다. 계속할 수 있지만 페이지를 닫으면 진행 상황이 사라집니다.',
   loading: '불러오는 중',
+  tagline: '맞춤형 AI 학습, 무료',
+  windowClose: '닫기',
+  windowMaximize: '최대화',
+  windowRestore: '복원',
+  launcherTitle: 'PromptQuorum Academy 열기',
+  openAcademy: 'Academy 열기',
+  programmesCreated: (n) => `지금까지 생성된 학습 프로그램: ${n.toLocaleString('ko')}개`,
 
   diagnosticTitle: '빠른 진단',
   diagnosticIntro: '짧은 질문 몇 개에 답하시면 이미 알고 계신 내용은 프로그램에서 건너뜁니다. 점수는 없습니다.',

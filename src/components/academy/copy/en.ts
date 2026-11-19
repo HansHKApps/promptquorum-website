@@ -57,6 +57,13 @@ export const copy: AcademyCopy = {
   testSplit: (l, t) => `${l} min lessons + ${t} min test`,
   storageBlocked: 'This browser does not allow saving. You can continue, but your progress is lost when you close the page.',
   loading: 'Loading',
+  tagline: 'Personalized AI learning, free',
+  windowClose: 'Close',
+  windowMaximize: 'Maximize',
+  windowRestore: 'Restore',
+  launcherTitle: 'Open the PromptQuorum Academy',
+  openAcademy: 'Open the Academy',
+  programmesCreated: (n) => `${n.toLocaleString('en')} programmes created so far`,
 
   diagnosticTitle: 'Quick check',
   diagnosticIntro: 'Answer a few quick questions so your programme skips what you already know. There is no score.',

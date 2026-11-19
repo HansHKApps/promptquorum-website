@@ -44,6 +44,8 @@ import { AdblockCheck } from '@/components/AdblockCheck'
 import { PromoLanding } from '@/components/promo/PromoLanding'
 import { OneSignalInit } from '@/components/OneSignalInit'
 import { ClarityLoader } from '@/components/ClarityLoader'
+import { AcademyRoot } from '@/components/academy/AcademyRoot'
+import { academyEnabled } from '@/lib/academy/config'
 import { ConsentEnforcer } from '@/components/ConsentEnforcer'
 import { PushPromptBanner } from '@/components/PushPromptBanner'
 import { McpFloatingCta } from '@/components/McpFloatingCta'
@@ -264,6 +266,7 @@ export default function RootLayout({
           <PushPromptBanner />
           <McpFloatingCta />
           {process.env.NEXT_PUBLIC_ASK_HANS_ENABLED === 'true' && <AskHansRoot />}
+          {academyEnabled() && <AcademyRoot />}
           <TableOfContentsButton />
           <GooglePreferredSourcesCard />
 

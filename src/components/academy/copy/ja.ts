@@ -57,6 +57,13 @@ export const copy: AcademyCopy = {
   testSplit: (l, t) => `レッスン${l}分 + テスト${t}分`,
   storageBlocked: 'このブラウザでは保存できません。続行はできますが、ページを閉じると進捗は失われます。',
   loading: '読み込み中',
+  tagline: 'あなた専用のAI学習（無料）',
+  windowClose: '閉じる',
+  windowMaximize: '最大化',
+  windowRestore: '元に戻す',
+  launcherTitle: 'PromptQuorum Academyを開く',
+  openAcademy: 'Academyを開く',
+  programmesCreated: (n) => `これまでに作成されたプログラム：${n.toLocaleString('ja')}件`,
 
   diagnosticTitle: '診断',
   diagnosticIntro: 'いくつかの短い質問に答えると、すでに知っている内容をプログラムから省きます。採点はありません。',

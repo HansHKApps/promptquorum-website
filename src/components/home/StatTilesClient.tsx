@@ -5,6 +5,7 @@
 // component so it can keep awaiting its data sources — only the click/open
 // state here needs to run on the client.
 
+import { openAcademy } from '@/components/academy/OpenAcademyButton'
 import { useState } from 'react'
 import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
@@ -17,6 +18,8 @@ export type StatTileItem = {
   value: string
   icon: HomeIconName
   href?: string
+  /** click opens the Academy window instead of navigating (the href stays for middle-click / no-JS) */
+  opensAcademy?: boolean
   hint?: string
   desc?: string
   drawer?: 'founder' | 'handsOn'
@@ -72,6 +75,11 @@ export function StatTilesClient({
             <Link
               key={item.label}
               href={item.href}
+              onClick={(e) => {
+                if (!item.opensAcademy || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return
+                e.preventDefault()
+                openAcademy()
+              }}
               className={`${layout === 'card' && (item.href === mcpStatsHref || item.href === askHansHref) ? 'col-span-2 ' : ''}rounded-lg border border-tone-list-edge bg-tone-list p-3 transition hover:shadow-md hover:-translate-y-0.5`}
             >
               {renderTile(item)}

@@ -46,6 +46,18 @@ export interface AcademyCopy {
   storageBlocked: string
   loading: string
 
+  // Window (floating tool window like Ask Hans)
+  tagline: string
+  windowClose: string
+  windowMaximize: string
+  windowRestore: string
+  /** tooltip / accessible name of the floating launcher pill */
+  launcherTitle: string
+  /** button on the /academy page that opens the window */
+  openAcademy: string
+  /** usage counter on the entrance page */
+  programmesCreated: (n: number) => string
+
   // Quick check
   diagnosticTitle: string
   diagnosticIntro: string

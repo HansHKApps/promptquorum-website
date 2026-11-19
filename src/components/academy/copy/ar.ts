@@ -57,6 +57,13 @@ export const copy: AcademyCopy = {
   testSplit: (l, t) => `${l} دقيقة دروس + ${t} دقيقة اختبار`,
   storageBlocked: 'هذا المتصفح لا يسمح بالحفظ. يمكنك المتابعة، لكن تقدّمك سيضيع عند إغلاق الصفحة.',
   loading: 'جارٍ التحميل',
+  tagline: 'تعلّم مخصص للذكاء الاصطناعي، مجانًا',
+  windowClose: 'إغلاق',
+  windowMaximize: 'تكبير',
+  windowRestore: 'استعادة',
+  launcherTitle: 'افتح PromptQuorum Academy',
+  openAcademy: 'افتح Academy',
+  programmesCreated: (n) => `عدد البرامج التي أُنشئت حتى الآن: ${n.toLocaleString('ar')}`,
 
   diagnosticTitle: 'التشخيص السريع',
   diagnosticIntro: 'أجب عن بضعة أسئلة سريعة ليتخطّى برنامجك ما تعرفه مسبقًا. لا توجد درجة.',

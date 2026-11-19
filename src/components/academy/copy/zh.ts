@@ -57,6 +57,13 @@ export const copy: AcademyCopy = {
   testSplit: (l, t) => `${l} 分钟课程 + ${t} 分钟测试`,
   storageBlocked: '此浏览器不允许保存。你可以继续，但关闭页面后进度会丢失。',
   loading: '加载中',
+  tagline: '个性化 AI 学习，免费',
+  windowClose: '关闭',
+  windowMaximize: '最大化',
+  windowRestore: '还原',
+  launcherTitle: '打开 PromptQuorum Academy',
+  openAcademy: '打开 Academy',
+  programmesCreated: (n) => `迄今已创建 ${n.toLocaleString('zh')} 个学习计划`,
 
   diagnosticTitle: '快速诊断',
   diagnosticIntro: '回答几道快速问题，你的学习计划会跳过你已经掌握的内容。不计分。',

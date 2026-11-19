@@ -59,6 +59,13 @@ export const copy: AcademyCopy = {
   storageBlocked:
     "Ce navigateur n'autorise pas l'enregistrement. Vous pouvez continuer, mais votre progression sera perdue à la fermeture de la page.",
   loading: 'Chargement',
+  tagline: "Apprentissage de l'IA personnalisé, gratuit",
+  windowClose: 'Fermer',
+  windowMaximize: 'Agrandir',
+  windowRestore: 'Restaurer',
+  launcherTitle: 'Ouvrir la PromptQuorum Academy',
+  openAcademy: "Ouvrir l'Academy",
+  programmesCreated: (n) => `${n.toLocaleString('fr')} parcours créés jusqu'ici`,
 
   diagnosticTitle: 'Évaluation rapide',
   diagnosticIntro: "Répondez à quelques questions rapides pour que votre programme saute ce que vous savez déjà. Il n'y a pas de note.",
