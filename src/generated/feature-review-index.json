@@ -1159,6 +1159,11 @@
     "urlSlug": "yovoice-review",
     "url": "/power-local-llm/yovoice-review"
   },
+  "voicestudio": {
+    "cluster": "power-local-llm",
+    "urlSlug": "voicestudio-review",
+    "url": "/power-local-llm/voicestudio-review"
+  },
   "open-science-desktop": {
     "cluster": "power-local-llm",
     "urlSlug": "open-science-desktop-review",

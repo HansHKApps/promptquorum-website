@@ -5294,7 +5294,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 32,
+    "totalCount": 33,
     "capped": true
   },
   "faster-whisper": {
@@ -11255,6 +11255,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "VoiceStudio": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "voicestudio-review",
+        "title": "VoiceStudio Review: Free Local Voice Cloning and Dubbing Studio",
+        "url": "/power-local-llm/voicestudio-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Open Science Desktop": {

@@ -319,6 +319,7 @@ import { app as app_ultimate_vocal_remover } from './apps/ultimate-vocal-remover
 import { app as app_skales } from './apps/skales'
 import { app as app_halo } from './apps/halo'
 import { app as app_yovoice } from './apps/yovoice'
+import { app as app_voicestudio } from './apps/voicestudio'
 import { app as app_open_science_desktop } from './apps/open-science-desktop'
 import { app as app_cozyclay } from './apps/cozyclay'
 import { app as app_papersgpt } from './apps/papersgpt'
@@ -655,6 +656,7 @@ export const localAiApps: ToolRecord[] = [
   app_skales,
   app_halo,
   app_yovoice,
+  app_voicestudio,
   app_open_science_desktop,
   app_cozyclay,
   app_papersgpt,
