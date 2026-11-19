@@ -265,6 +265,6 @@ test.describe('F12: setup form', () => {
     await preset(page)
     await page.goto('/academy')
     await page.waitForTimeout(32_000)
-    await expect(page.getByText(/preferred source/i)).toHaveCount(0)
+    await expect(page.getByText('Improve your PromptQuorum results in Google')).toHaveCount(0)
   })
 })
