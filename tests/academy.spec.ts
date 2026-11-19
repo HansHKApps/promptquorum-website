@@ -229,3 +229,24 @@ test.describe('F15: lang and dir', () => {
     await expect(page.locator('[lang="de"][dir="ltr"]', { hasText: 'Body text of the lesson.' })).toBeVisible()
   })
 })
+
+test.describe('F11 / F14: consent buttons and headers', () => {
+  test('response carries nosniff and a strict referrer policy', async ({ request }) => {
+    const res = await request.get('/academy')
+    expect(res.headers()['x-content-type-options']).toBe('nosniff')
+    expect(res.headers()['referrer-policy']).toBe('strict-origin-when-cross-origin')
+  })
+
+  test('Accept all and Reject all look the same; no Google Fonts request is made', async ({ page }) => {
+    const fonts: string[] = []
+    page.on('request', (r) => /fonts\.(googleapis|gstatic)\.com/.test(r.url()) && fonts.push(r.url()))
+    await page.goto('/academy')
+    const dialog = page.locator('[role="dialog"][aria-labelledby="cookie-dialog-title"]')
+    await expect(dialog).toBeVisible()
+    const style = (name: RegExp) => dialog.getByRole('button', { name }).evaluate((el) => { const c = getComputedStyle(el); return [c.backgroundColor, c.color, c.borderTopColor, c.fontWeight, c.padding].join('|') })
+    expect(await style(/reject all/i)).toBe(await style(/accept all/i))
+    expect(await style(/save/i)).not.toBe(await style(/accept all/i))
+    await page.waitForTimeout(1500)
+    expect(fonts).toEqual([])
+  })
+})
