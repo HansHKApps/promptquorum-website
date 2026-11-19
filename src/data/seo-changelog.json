@@ -29153,5 +29153,38 @@
       "t14": "2026-12-03",
       "t28": "2026-12-17"
     }
+  },
+  {
+    "id": "d73df17f-b272-4c37-8a8f-ef0e0fec8abf",
+    "slug": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
+    "date": "2026-11-19T07:40:21.104Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Continue.dev vs Cline vs Aider: Local Coding Agent Verdict 2026",
+        "new": "Continue.dev vs Cline vs Aider: 3-Way 2026 Verdict"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Continue.dev, Cline, and Aider compared as local coding agents in 2026. Edit model, IDE fit, undo, tool calls, and context strategy - picked by workflow, not hype.",
+        "new": "Continue.dev, Cline, and Aider compared as local coding agents in 2026: autocomplete vs autonomous agent vs git-native diffs - picked by workflow, not hype."
+      }
+    ],
+    "reason": "geo-meta-optimizer: EN title/meta were over budget (63/163 chars vs 58/155 limits) and target vs-queries at pos 2-6 showed CTR well below potential (continue vs cline: pos 2.84, CTR 1.86%); tightened to budget and kept exact vs-query vocabulary",
+    "queries": [
+      "cline vs continue",
+      "continue vs cline",
+      "aider vs cline",
+      "continue or cline",
+      "vscode cline vs continue"
+    ],
+    "baseline": {
+      "position": 4.87,
+      "impressions": 15371,
+      "clicks": 87,
+      "ctr": 0.005660009108060634,
+      "period": "2026-08-22 to 2026-11-19"
+    },
+    "deployedAt": null
   }
 ]

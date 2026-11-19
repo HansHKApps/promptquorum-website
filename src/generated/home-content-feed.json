@@ -22115,9 +22115,9 @@
   {
     "lang": "en",
     "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
-    "excerpt": "Continue.dev, Cline, and Aider compared as local coding agents in 2026. Edit model, IDE fit, undo, tool calls, and context strategy — picked by workflow, not hype.",
+    "excerpt": "Continue.dev, Cline, and Aider compared as local coding agents in 2026: autocomplete vs autonomous agent vs git-native diffs — picked by workflow, not hype.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-19",
     "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
     "cluster": "power-local-llm"
   },
@@ -22126,16 +22126,16 @@
     "title": "Continue.dev vs Cline vs Aider: Der beste lokale Coding Agent in 2026",
     "excerpt": "Continue.dev, Cline und Aider als lokale Coding-Agenten 2026 im Vergleich: Edit-Modell, IDE-Integration, Undo und Kontext-Strategien nach Workflow.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-19",
     "url": "/de/power-local-llm/continue-dev-vs-cline-vs-aider-local",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Continue.dev vs Cline vs Aider : Meilleur agent de codage local 2026",
-    "excerpt": "Continue.dev, Cline et Aider comparés comme agents de codage locaux 2026. Modèle d'édition, intégration IDE, annulation et stratégies de contexte — choisis par flux de travail, pas par effet de mode.",
+    "excerpt": "Continue.dev, Cline et Aider comparés comme agents de codage locaux 2026 : autocomplétion, agent autonome ou diff natif Git — choisis par flux de travail.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-19",
     "url": "/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local",
     "cluster": "power-local-llm"
   },
@@ -22144,7 +22144,7 @@
     "title": "Continue.dev vs Cline vs Aider：ローカルコーディング AI 2026 比較",
     "excerpt": "Continue.dev、Cline、Aiderを徹底比較。ローカルLLMで動くAIコーディングアシスタント3種の設定、自動補完、エージェント機能、対応エディタを2026年版で検証。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-19",
     "url": "/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local",
     "cluster": "power-local-llm"
   },
@@ -22153,7 +22153,7 @@
     "title": "Continue.dev vs Cline vs Aider：2026 年本地编码代理对比",
     "excerpt": "Continue.dev、Cline、Aider对比：三款支持本地LLM的AI编程助手。设置方法、自动补全、代理功能和编辑器支持全面评测。2026年本地开发工具选择指南。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-19",
     "url": "/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local",
     "cluster": "power-local-llm"
   },
@@ -22162,7 +22162,7 @@
     "title": "Continue.dev vs Cline vs Aider: Mejor agente de código local en 2026",
     "excerpt": "Continue.dev, Cline y Aider comparados como agentes de código local en 2026: modelo de edición, integración con IDE, deshacer y estrategia de contexto.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-19",
     "url": "/es/power-local-llm/continue-dev-vs-cline-vs-aider-local",
     "cluster": "power-local-llm"
   },
@@ -22171,7 +22171,7 @@
     "title": "Continue.dev vs Cline vs Aider: Melhor agente de código local em 2026",
     "excerpt": "Continue.dev, Cline e Aider comparados como agentes de código local em 2026: modelo de edição, integração com IDE, desfazer e estratégia de contexto.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-19",
     "url": "/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local",
     "cluster": "power-local-llm"
   },
@@ -22180,7 +22180,7 @@
     "title": "⁨Continue.dev⁩ مقابل ⁨Cline⁩ مقابل ⁨Aider⁩: أفضل وكيل برمجة محلي في ⁨2026⁩",
     "excerpt": "Continue.dev للإكمال التلقائي وCline للوكيل المستقل وAider لفوارق Git. مقارنة نموذج التحرير والتكامل مع IDE وخيارات التراجع محلياً.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-19",
     "url": "/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local",
     "cluster": "power-local-llm"
   },
@@ -22189,7 +22189,7 @@
     "title": "Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코드 에이전트",
     "excerpt": "Continue.dev, Cline, Aider를 2026년 로컬 코드 에이전트로 비교: 편집 모델, IDE 통합, 실행 취소, 컨텍스트 전략.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-19",
     "url": "/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local",
     "cluster": "power-local-llm"
   },
