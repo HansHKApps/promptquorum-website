@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       audience: 'Developers, analysts, and prompt engineers choosing between instruction-only and example-driven prompts',
       next_refresh_due: '2027-04-19',
       last_full_refresh: '2026-10-19',
-      current_models_mentioned: ['Claude Opus 5.5', 'Claude Sonnet 5.5', 'Claude Haiku 5.5', 'GPT-6 Astra', 'Gemini 4 Argon', 'Gemini 3.8 Flash', 'Llama 4 Scout', 'Qwen3 8B', 'Gemma 4'],
+      current_models_mentioned: ['Claude Opus 5.5', 'Claude Sonnet 5.5', 'Claude Haiku 5.5', 'GPT-6.2 Astra', 'Gemini 4 Argon', 'Gemini 3.8 Flash', 'Llama 4 Scout', 'Qwen3 8B', 'Gemma 4'],
       aboutTopics: ['Few-Shot Learning', 'Zero-Shot Learning', 'Prompt Engineering', 'In-Context Learning'],
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -217,11 +217,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'reasoning-models',
           title: 'Reasoning Models Narrowed the Zero-Shot Gap',
           content: [
-            '**Strong instruction tuning has closed much of the accuracy gap that few-shot prompting used to buy on frontier models.** On Claude Opus 5.5, GPT-6 Astra, and Gemini 4 Argon, a precisely written zero-shot instruction now matches few-shot on many general tasks — but that convergence does not hold across the whole model landscape.',
+            '**Strong instruction tuning has closed much of the accuracy gap that few-shot prompting used to buy on frontier models.** On Claude Opus 5.5, GPT-6.2 Astra, and Gemini 4 Argon, a precisely written zero-shot instruction now matches few-shot on many general tasks — but that convergence does not hold across the whole model landscape.',
             'Where few-shot still earns its tokens is format and vocabulary: proprietary label sets, internal schemas, house tone, and edge cases the model has never encountered in pre-training. And on smaller or locally hosted models, few-shot is often among the most effective accuracy levers available without fine-tuning.',
           ],
           rows: [
-            { 'Model class': 'Frontier reasoning (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', 'Zero-shot quality': 'High on general tasks', 'Does few-shot still help?': 'Mainly for output format, house style, and proprietary label sets' },
+            { 'Model class': 'Frontier reasoning (Claude Opus 5.5, GPT-6.2 Astra, Gemini 4 Argon)', 'Zero-shot quality': 'High on general tasks', 'Does few-shot still help?': 'Mainly for output format, house style, and proprietary label sets' },
             { 'Model class': 'Frontier non-reasoning (Claude Sonnet 5.5, Gemini 3.8 Flash)', 'Zero-shot quality': 'Good', 'Does few-shot still help?': 'Yes — for narrow domains and strict schemas' },
             { 'Model class': 'Small hosted (Claude Haiku 5.5, Gemini 3.5 Flash-Lite)', 'Zero-shot quality': 'Mixed on specialized tasks', 'Does few-shot still help?': 'Yes — usually the largest single accuracy gain' },
             { 'Model class': 'Local open-weight 7–30B (Qwen3 8B, Llama 4 Scout, Gemma 4)', 'Zero-shot quality': 'Variable; format drift is common', 'Does few-shot still help?': 'Yes — often the difference between usable and unusable output' },
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-pq-helps',
           title: 'How PromptQuorum Helps You Choose',
           content: [
-            '**PromptQuorum is a multi-model AI dispatch tool that lets you test zero shot and few shot prompts across multiple providers in one place.** You can send the same instruction-only prompt and the same example-augmented prompt to models such as GPT-6 Astra, Claude Opus 5.5, and Gemini 4 Argon side by side.',
+            '**PromptQuorum is a multi-model AI dispatch tool that lets you test zero shot and few shot prompts across multiple providers in one place.** You can send the same instruction-only prompt and the same example-augmented prompt to models such as GPT-6.2 Astra, Claude Opus 5.5, and Gemini 4 Argon side by side.',
             'Inside PromptQuorum, you can:',
           ],
           items: [
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Does few-shot prompting still help on reasoning models?',
-              a: 'Less than it used to for raw accuracy, more than you would expect for format. On Claude Opus 5.5, GPT-6 Astra, and Gemini 4 Argon, a precise zero-shot instruction often matches few-shot on general tasks. But when you need an exact JSON schema, a proprietary label vocabulary, or a specific house tone, examples are still the most reliable way to get it.',
+              a: 'Less than it used to for raw accuracy, more than you would expect for format. On Claude Opus 5.5, GPT-6.2 Astra, and Gemini 4 Argon, a precise zero-shot instruction often matches few-shot on general tasks. But when you need an exact JSON schema, a proprietary label vocabulary, or a specific house tone, examples are still the most reliable way to get it.',
             },
             {
               q: 'Why did adding examples make my output worse?',
@@ -550,11 +550,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'reasoning-models',
           title: 'Reasoning-Modelle haben den Zero-Shot-Abstand verkleinert',
           content: [
-            '**Starkes Instruction Tuning hat einen Großteil des Genauigkeitsvorsprungs eingeebnet, den Few-Shot Prompting bei Frontier-Modellen früher brachte.** Auf Claude Opus 5.5, GPT-6 Astra und Gemini 4 Argon erreicht eine präzise formulierte Zero-Shot-Anweisung heute bei vielen allgemeinen Aufgaben dasselbe Niveau wie Few-Shot — diese Annäherung gilt aber nicht für die gesamte Modelllandschaft.',
+            '**Starkes Instruction Tuning hat einen Großteil des Genauigkeitsvorsprungs eingeebnet, den Few-Shot Prompting bei Frontier-Modellen früher brachte.** Auf Claude Opus 5.5, GPT-6.2 Astra und Gemini 4 Argon erreicht eine präzise formulierte Zero-Shot-Anweisung heute bei vielen allgemeinen Aufgaben dasselbe Niveau wie Few-Shot — diese Annäherung gilt aber nicht für die gesamte Modelllandschaft.',
             'Wo Few-Shot seine Tokens weiterhin verdient, sind Format und Vokabular: proprietäre Label-Sets, interne Schemata, Hausstil und Randfälle, die dem Modell im Pre-Training nie begegnet sind. Und bei kleineren oder lokal betriebenen Modellen ist Few-Shot oft einer der wirksamsten Genauigkeitshebel ohne Fine-Tuning.',
           ],
           rows: [
-            { 'Modellklasse': 'Frontier-Reasoning (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', 'Zero-Shot-Qualität': 'Hoch bei allgemeinen Aufgaben', 'Bringt Few-Shot noch etwas?': 'Vor allem für Ausgabeformat, Hausstil und proprietäre Label-Sets' },
+            { 'Modellklasse': 'Frontier-Reasoning (Claude Opus 5.5, GPT-6.2 Astra, Gemini 4 Argon)', 'Zero-Shot-Qualität': 'Hoch bei allgemeinen Aufgaben', 'Bringt Few-Shot noch etwas?': 'Vor allem für Ausgabeformat, Hausstil und proprietäre Label-Sets' },
             { 'Modellklasse': 'Frontier ohne Reasoning (Claude Sonnet 5.5, Gemini 3.8 Flash)', 'Zero-Shot-Qualität': 'Gut', 'Bringt Few-Shot noch etwas?': 'Ja — bei engen Domänen und strengen Schemata' },
             { 'Modellklasse': 'Kleine gehostete Modelle (Claude Haiku 5.5, Gemini 3.5 Flash-Lite)', 'Zero-Shot-Qualität': 'Gemischt bei Spezialaufgaben', 'Bringt Few-Shot noch etwas?': 'Ja — meist der größte einzelne Genauigkeitsgewinn' },
             { 'Modellklasse': 'Lokale Open-Weight-Modelle 7–30B (Qwen3 8B, Llama 4 Scout, Gemma 4)', 'Zero-Shot-Qualität': 'Schwankend; Formatabweichungen sind häufig', 'Bringt Few-Shot noch etwas?': 'Ja — oft der Unterschied zwischen brauchbarer und unbrauchbarer Ausgabe' },
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-pq-helps',
           title: 'Wie PromptQuorum bei der Wahl hilft',
           content: [
-            '**PromptQuorum ist ein Multi-Modell-KI-Dispatch-Tool, mit dem Sie Zero-Shot- und Few-Shot-Prompts an einem Ort über mehrere Anbieter hinweg testen.** Sie können denselben reinen Anweisungs-Prompt und denselben beispielgestützten Prompt an Modelle wie GPT-6 Astra, Claude Opus 5.5 und Gemini 4 Argon nebeneinander schicken.',
+            '**PromptQuorum ist ein Multi-Modell-KI-Dispatch-Tool, mit dem Sie Zero-Shot- und Few-Shot-Prompts an einem Ort über mehrere Anbieter hinweg testen.** Sie können denselben reinen Anweisungs-Prompt und denselben beispielgestützten Prompt an Modelle wie GPT-6.2 Astra, Claude Opus 5.5 und Gemini 4 Argon nebeneinander schicken.',
             'In PromptQuorum können Sie:',
           ],
           items: [
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Hilft Few-Shot Prompting bei Reasoning-Modellen noch?',
-              a: 'Für reine Genauigkeit weniger als früher, für das Format mehr, als man erwarten würde. Auf Claude Opus 5.5, GPT-6 Astra und Gemini 4 Argon erreicht eine präzise Zero-Shot-Anweisung bei allgemeinen Aufgaben oft dasselbe Niveau. Brauchen Sie aber ein exaktes JSON-Schema, ein proprietäres Label-Vokabular oder eine bestimmte Hausstimme, sind Beispiele weiterhin der verlässlichste Weg dorthin.',
+              a: 'Für reine Genauigkeit weniger als früher, für das Format mehr, als man erwarten würde. Auf Claude Opus 5.5, GPT-6.2 Astra und Gemini 4 Argon erreicht eine präzise Zero-Shot-Anweisung bei allgemeinen Aufgaben oft dasselbe Niveau. Brauchen Sie aber ein exaktes JSON-Schema, ein proprietäres Label-Vokabular oder eine bestimmte Hausstimme, sind Beispiele weiterhin der verlässlichste Weg dorthin.',
             },
             {
               q: 'Warum wurde meine Ausgabe durch zusätzliche Beispiele schlechter?',
@@ -668,7 +668,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Gibt es Datenschutz- oder Compliance-Folgen, wenn Few-Shot-Beispiele Kundendaten enthalten?',
-              a: 'Ja. Enthalten Ihre Few-Shot-Beispiele echte Kundendaten, unterliegen sie den Anforderungen der DSGVO. Verwenden Sie anonymisierte oder synthetische Beispiele, um Datenschutzverstöße zu vermeiden, und dokumentieren Sie, wie Beispiele erhoben, gespeichert und eingesetzt werden. Für deutsche Unternehmen und Behörden ist das ein kritischer Kontrollpunkt.',
+              a: 'Ja. Enthalten Ihre Few-Shot-Beispiele echte Kundendaten, unterliegen sie den Anforderungen der DSGVO. Verwenden Sie anonymisierte oder synthetische Beispiele, um Datenschutzverstöße zu vermeiden, und dokumentieren Sie, wie Beispiele erhoben, gespeichert und eingesetzt werden. Für deutsche Unternehmen und Behörden ist das ein kritischer Kontrollpunkt. Dies ist keine Rechtsberatung — klären Sie konkrete Fälle mit Ihrem Datenschutzbeauftragten oder einer Fachanwältin/einem Fachanwalt für IT-Recht.',
             },
           ],
         },
@@ -890,11 +890,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'reasoning-models',
           title: 'Los modelos de razonamiento acortaron la distancia con Zero-Shot',
           content: [
-            '**Un ajuste por instrucciones potente ha cerrado buena parte de la ventaja de precisión que antes compraba el few-shot prompting en los modelos de frontera.** En Claude Opus 5.5, GPT-6 Astra y Gemini 4 Argon, una instrucción zero-shot bien escrita iguala hoy a few-shot en muchas tareas generales, pero esa convergencia no se extiende a todo el panorama de modelos.',
+            '**Un ajuste por instrucciones potente ha cerrado buena parte de la ventaja de precisión que antes compraba el few-shot prompting en los modelos de frontera.** En Claude Opus 5.5, GPT-6.2 Astra y Gemini 4 Argon, una instrucción zero-shot bien escrita iguala hoy a few-shot en muchas tareas generales, pero esa convergencia no se extiende a todo el panorama de modelos.',
             'Donde few-shot sigue justificando sus tokens es en formato y vocabulario: conjuntos de etiquetas propios, esquemas internos, tono de la casa y casos límite que el modelo nunca vio en el preentrenamiento. Y en modelos pequeños o alojados localmente, few-shot sigue siendo a menudo una de las palancas de precisión más eficaces sin recurrir al fine-tuning.',
           ],
           rows: [
-            { 'Clase de modelo': 'Razonamiento de frontera (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', 'Calidad zero-shot': 'Alta en tareas generales', '¿Sigue ayudando few-shot?': 'Sobre todo para formato de salida, estilo de la casa y etiquetas propias' },
+            { 'Clase de modelo': 'Razonamiento de frontera (Claude Opus 5.5, GPT-6.2 Astra, Gemini 4 Argon)', 'Calidad zero-shot': 'Alta en tareas generales', '¿Sigue ayudando few-shot?': 'Sobre todo para formato de salida, estilo de la casa y etiquetas propias' },
             { 'Clase de modelo': 'Frontera sin razonamiento (Claude Sonnet 5.5, Gemini 3.8 Flash)', 'Calidad zero-shot': 'Buena', '¿Sigue ayudando few-shot?': 'Sí — en dominios estrechos y esquemas estrictos' },
             { 'Clase de modelo': 'Modelos pequeños alojados (Claude Haiku 5.5, Gemini 3.5 Flash-Lite)', 'Calidad zero-shot': 'Irregular en tareas especializadas', '¿Sigue ayudando few-shot?': 'Sí — normalmente la mayor ganancia individual de precisión' },
             { 'Clase de modelo': 'Open-weight local de 7–30B (Qwen3 8B, Llama 4 Scout, Gemma 4)', 'Calidad zero-shot': 'Variable; la deriva de formato es habitual', '¿Sigue ayudando few-shot?': 'Sí — a menudo marca la diferencia entre salida usable e inservible' },
@@ -939,7 +939,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-pq-helps',
           title: 'Cómo te ayuda PromptQuorum a elegir',
           content: [
-            '**PromptQuorum es una herramienta de despacho de IA multimodelo que te permite probar prompts zero-shot y few-shot en varios proveedores desde un mismo sitio.** Puedes enviar el mismo prompt de solo instrucción y el mismo prompt con ejemplos a modelos como GPT-6 Astra, Claude Opus 5.5 y Gemini 4 Argon en paralelo.',
+            '**PromptQuorum es una herramienta de despacho de IA multimodelo que te permite probar prompts zero-shot y few-shot en varios proveedores desde un mismo sitio.** Puedes enviar el mismo prompt de solo instrucción y el mismo prompt con ejemplos a modelos como GPT-6.2 Astra, Claude Opus 5.5 y Gemini 4 Argon en paralelo.',
             'Dentro de PromptQuorum puedes:',
           ],
           items: [
@@ -984,7 +984,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Sigue ayudando el few-shot prompting en modelos de razonamiento?',
-              a: 'Menos que antes para la precisión pura, más de lo que esperarías para el formato. En Claude Opus 5.5, GPT-6 Astra y Gemini 4 Argon, una instrucción zero-shot precisa suele igualar a few-shot en tareas generales. Pero si necesitas un esquema JSON exacto, un vocabulario de etiquetas propio o un tono concreto, los ejemplos siguen siendo la vía más fiable.',
+              a: 'Menos que antes para la precisión pura, más de lo que esperarías para el formato. En Claude Opus 5.5, GPT-6.2 Astra y Gemini 4 Argon, una instrucción zero-shot precisa suele igualar a few-shot en tareas generales. Pero si necesitas un esquema JSON exacto, un vocabulario de etiquetas propio o un tono concreto, los ejemplos siguen siendo la vía más fiable.',
             },
             {
               q: '¿Por qué empeoró mi salida al añadir ejemplos?',
@@ -1224,11 +1224,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'reasoning-models',
           title: 'Les modèles de raisonnement ont réduit l\'écart avec le Zero-Shot',
           content: [
-            '**Un instruction tuning solide a comblé une grande partie de l\'avantage de précision que le few-shot prompting offrait auparavant sur les modèles de pointe.** Sur Claude Opus 5.5, GPT-6 Astra et Gemini 4 Argon, une consigne zero-shot rédigée avec précision égale désormais le few-shot sur de nombreuses tâches générales — mais cette convergence ne vaut pas pour tout le paysage des modèles.',
+            '**Un instruction tuning solide a comblé une grande partie de l\'avantage de précision que le few-shot prompting offrait auparavant sur les modèles de pointe.** Sur Claude Opus 5.5, GPT-6.2 Astra et Gemini 4 Argon, une consigne zero-shot rédigée avec précision égale désormais le few-shot sur de nombreuses tâches générales — mais cette convergence ne vaut pas pour tout le paysage des modèles.',
             'Là où le few-shot justifie encore ses tokens, c\'est sur le format et le vocabulaire : jeux d\'étiquettes propriétaires, schémas internes, ton maison et cas limites jamais rencontrés au pré-entraînement. Et sur les modèles plus petits ou hébergés localement, le few-shot demeure souvent l\'un des leviers de précision les plus efficaces sans fine-tuning.',
           ],
           rows: [
-            { 'Classe de modèle': 'Raisonnement de pointe (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', 'Qualité en zero-shot': 'Élevée sur les tâches générales', 'Le few-shot aide-t-il encore ?': 'Surtout pour le format de sortie, le style maison et les étiquettes propriétaires' },
+            { 'Classe de modèle': 'Raisonnement de pointe (Claude Opus 5.5, GPT-6.2 Astra, Gemini 4 Argon)', 'Qualité en zero-shot': 'Élevée sur les tâches générales', 'Le few-shot aide-t-il encore ?': 'Surtout pour le format de sortie, le style maison et les étiquettes propriétaires' },
             { 'Classe de modèle': 'Pointe sans raisonnement (Claude Sonnet 5.5, Gemini 3.8 Flash)', 'Qualité en zero-shot': 'Bonne', 'Le few-shot aide-t-il encore ?': 'Oui — pour les domaines étroits et les schémas stricts' },
             { 'Classe de modèle': 'Petits modèles hébergés (Claude Haiku 5.5, Gemini 3.5 Flash-Lite)', 'Qualité en zero-shot': 'Inégale sur les tâches spécialisées', 'Le few-shot aide-t-il encore ?': 'Oui — généralement le plus grand gain de précision à lui seul' },
             { 'Classe de modèle': 'Open-weight local 7–30B (Qwen3 8B, Llama 4 Scout, Gemma 4)', 'Qualité en zero-shot': 'Variable ; les dérives de format sont fréquentes', 'Le few-shot aide-t-il encore ?': 'Oui — souvent la différence entre une sortie exploitable et inutilisable' },
@@ -1273,7 +1273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-pq-helps',
           title: 'Comment PromptQuorum vous aide à choisir',
           content: [
-            '**PromptQuorum est un outil de dispatch IA multi-modèles qui permet de tester des prompts zero-shot et few-shot sur plusieurs fournisseurs au même endroit.** Vous pouvez envoyer le même prompt sans exemple et le même prompt enrichi d\'exemples à des modèles comme GPT-6 Astra, Claude Opus 5.5 et Gemini 4 Argon, côte à côte.',
+            '**PromptQuorum est un outil de dispatch IA multi-modèles qui permet de tester des prompts zero-shot et few-shot sur plusieurs fournisseurs au même endroit.** Vous pouvez envoyer le même prompt sans exemple et le même prompt enrichi d\'exemples à des modèles comme GPT-6.2 Astra, Claude Opus 5.5 et Gemini 4 Argon, côte à côte.',
             'Dans PromptQuorum, vous pouvez :',
           ],
           items: [
@@ -1299,7 +1299,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Considérations pour les marchés francophones',
           content: [
             'En France, en Belgique et au Canada francophone, les équipes préfèrent souvent des workflows structurés et documentés. Lors de la mise en œuvre de Few-Shot Prompting dans des contextes professionnels francophones, documentez clairement vos stratégies d\'exemples et vos seuils de précision. Cela facilite l\'adoption et l\'audit dans les organisations régies par des réglementations strictes.',
-            'Point d\'attention RGPD : si vos exemples proviennent de tickets ou de messages clients réels, ils constituent des données à caractère personnel dès qu\'ils entrent dans un modèle de prompt versionné. La CNIL attend une base légale et une minimisation ; anonymisez ou synthétisez les exemples avant de les stocker.',
+            'Point d\'attention RGPD : si vos exemples proviennent de tickets ou de messages clients réels, ils constituent des données à caractère personnel dès qu\'ils entrent dans un modèle de prompt versionné. La CNIL attend une base légale et une minimisation ; anonymisez ou synthétisez les exemples avant de les stocker. Ceci ne constitue pas un conseil juridique — pour un cas concret, consultez votre délégué à la protection des données ou un avocat spécialisé.',
           ],
         },
         avantagesComparatifs: {
@@ -1335,7 +1335,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Le few-shot prompting aide-t-il encore sur les modèles de raisonnement ?',
-              a: 'Moins qu\'avant pour la précision brute, plus qu\'on ne le croit pour le format. Sur Claude Opus 5.5, GPT-6 Astra et Gemini 4 Argon, une consigne zero-shot précise égale souvent le few-shot sur les tâches générales. Mais dès qu\'il faut un schéma JSON exact, un vocabulaire d\'étiquettes propriétaire ou un ton maison précis, les exemples restent le moyen le plus fiable d\'y arriver.',
+              a: 'Moins qu\'avant pour la précision brute, plus qu\'on ne le croit pour le format. Sur Claude Opus 5.5, GPT-6.2 Astra et Gemini 4 Argon, une consigne zero-shot précise égale souvent le few-shot sur les tâches générales. Mais dès qu\'il faut un schéma JSON exact, un vocabulaire d\'étiquettes propriétaire ou un ton maison précis, les exemples restent le moyen le plus fiable d\'y arriver.',
             },
             {
               q: 'Pourquoi ma sortie s\'est-elle dégradée après l\'ajout d\'exemples ?',
@@ -1574,11 +1574,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'reasoning-models',
           title: '推論モデルがゼロショットとの差を縮めた',
           content: [
-            '**強力な指示チューニングにより、かつてフューショットが稼いでいた精度差の多くはフロンティアモデルで解消しました。** Claude Opus 5.5、GPT-6 Astra、Gemini 4 Argonでは、丁寧に書かれたゼロショット指示が多くの一般タスクでフューショットに並びます。ただしこの収束はモデル全体に当てはまるわけではありません。',
+            '**強力な指示チューニングにより、かつてフューショットが稼いでいた精度差の多くはフロンティアモデルで解消しました。** Claude Opus 5.5、GPT-6.2 Astra、Gemini 4 Argonでは、丁寧に書かれたゼロショット指示が多くの一般タスクでフューショットに並びます。ただしこの収束はモデル全体に当てはまるわけではありません。',
             'フューショットが今もトークン分の価値を出すのは形式と語彙です。独自のラベル体系、社内スキーマ、社内トーン、事前学習で見たことのない例外ケースが該当します。さらに小型モデルやローカル運用のモデルでは、ファインチューニングを除けば、依然として最も効果的な精度改善手段の1つであることが多いです。',
           ],
           rows: [
-            { 'モデル区分': 'フロンティア推論（Claude Opus 5.5、GPT-6 Astra、Gemini 4 Argon）', 'ゼロショットの品質': '一般タスクで高い', 'フューショットは今も有効か': '主に出力形式・社内トーン・独自ラベル体系で有効' },
+            { 'モデル区分': 'フロンティア推論（Claude Opus 5.5、GPT-6.2 Astra、Gemini 4 Argon）', 'ゼロショットの品質': '一般タスクで高い', 'フューショットは今も有効か': '主に出力形式・社内トーン・独自ラベル体系で有効' },
             { 'モデル区分': 'フロンティア非推論（Claude Sonnet 5.5、Gemini 3.8 Flash）', 'ゼロショットの品質': '良好', 'フューショットは今も有効か': '有効。狭い領域と厳密なスキーマで効く' },
             { 'モデル区分': '小型ホスト型（Claude Haiku 5.5、Gemini 3.5 Flash-Lite）', 'ゼロショットの品質': '専門タスクでは不安定', 'フューショットは今も有効か': '有効。単独では最大の精度改善になることが多い' },
             { 'モデル区分': 'ローカルのオープンウェイト7〜30B（Qwen3 8B、Llama 4 Scout、Gemma 4）', 'ゼロショットの品質': 'ばらつきが大きく形式崩れが起きやすい', 'フューショットは今も有効か': '有効。実用に耐えるかどうかを分けることが多い' },
@@ -1623,7 +1623,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-pq-helps',
           title: 'PromptQuorumによる使い分けの検証',
           content: [
-            '**PromptQuorumは、ゼロショットとフューショットのプロンプトを複数プロバイダーで一括検証できるマルチモデルAIディスパッチツールです。** 指示のみのプロンプトと例つきのプロンプトを、GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argonなどへ同時に送って並べて比較できます。',
+            '**PromptQuorumは、ゼロショットとフューショットのプロンプトを複数プロバイダーで一括検証できるマルチモデルAIディスパッチツールです。** 指示のみのプロンプトと例つきのプロンプトを、GPT-6.2 Astra、Claude Opus 5.5、Gemini 4 Argonなどへ同時に送って並べて比較できます。',
             'PromptQuorumでできること：',
           ],
           items: [
@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '推論モデルでもフューショットは有効ですか。',
-              a: '素の精度に対する効果は以前より小さく、形式に対する効果は想像以上に大きいというのが実情です。Claude Opus 5.5、GPT-6 Astra、Gemini 4 Argonでは、精密なゼロショット指示が一般タスクでフューショットに並ぶことがよくあります。ただし正確なJSONスキーマ、独自のラベル語彙、特定の社内トーンが必要なら、例を示すのが今も最も確実な方法です。',
+              a: '素の精度に対する効果は以前より小さく、形式に対する効果は想像以上に大きいというのが実情です。Claude Opus 5.5、GPT-6.2 Astra、Gemini 4 Argonでは、精密なゼロショット指示が一般タスクでフューショットに並ぶことがよくあります。ただし正確なJSONスキーマ、独自のラベル語彙、特定の社内トーンが必要なら、例を示すのが今も最も確実な方法です。',
             },
             {
               q: '例を足したら出力が悪くなったのはなぜですか。',
@@ -1906,11 +1906,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'reasoning-models',
           title: '推理模型缩小了零样本的差距',
           content: [
-            '**强力的指令微调，已经补上了少样本提示过去在前沿模型上换来的大部分准确率优势。** 在 Claude Opus 5.5、GPT-6 Astra 和 Gemini 4 Argon 上，一条写得足够精确的零样本指令，如今在许多通用任务上已能与少样本持平——但这种收敛并不适用于所有模型。',
+            '**强力的指令微调，已经补上了少样本提示过去在前沿模型上换来的大部分准确率优势。** 在 Claude Opus 5.5、GPT-6.2 Astra 和 Gemini 4 Argon 上，一条写得足够精确的零样本指令，如今在许多通用任务上已能与少样本持平——但这种收敛并不适用于所有模型。',
             '少样本仍然值回 token 的地方在于格式与词表：自有标签体系、内部结构、公司语气，以及模型在预训练中从未见过的边缘情况。而在更小或本地部署的模型上，少样本往往仍是不做微调时最有效的准确率杠杆之一。',
           ],
           rows: [
-            { '模型类别': '前沿推理模型（Claude Opus 5.5、GPT-6 Astra、Gemini 4 Argon）', '零样本表现': '通用任务上很好', '少样本还有用吗': '主要用于输出格式、公司语气和自有标签体系' },
+            { '模型类别': '前沿推理模型（Claude Opus 5.5、GPT-6.2 Astra、Gemini 4 Argon）', '零样本表现': '通用任务上很好', '少样本还有用吗': '主要用于输出格式、公司语气和自有标签体系' },
             { '模型类别': '前沿非推理模型（Claude Sonnet 5.5、Gemini 3.8 Flash）', '零样本表现': '良好', '少样本还有用吗': '有用——适用于窄领域和严格结构' },
             { '模型类别': '小型托管模型（Claude Haiku 5.5、Gemini 3.5 Flash-Lite）', '零样本表现': '专业任务上不稳定', '少样本还有用吗': '有用——通常是单项收益最大的准确率提升' },
             { '模型类别': '本地开源权重 7–30B（Qwen3 8B、Llama 4 Scout、Gemma 4）', '零样本表现': '波动较大，容易跑偏格式', '少样本还有用吗': '有用——往往决定输出可用还是不可用' },
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-pq-helps',
           title: 'PromptQuorum 如何帮你做选择',
           content: [
-            '**PromptQuorum 是一款多模型 AI 分发工具，让你在同一个地方跨多家服务商测试零样本和少样本提示词。** 你可以把同一条纯指令提示词和同一条带示例提示词，同时发给 GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon 等模型并排比较。',
+            '**PromptQuorum 是一款多模型 AI 分发工具，让你在同一个地方跨多家服务商测试零样本和少样本提示词。** 你可以把同一条纯指令提示词和同一条带示例提示词，同时发给 GPT-6.2 Astra、Claude Opus 5.5、Gemini 4 Argon 等模型并排比较。',
             '在 PromptQuorum 中，你可以：',
           ],
           items: [
@@ -2000,7 +2000,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '在推理模型上，少样本提示还有用吗？',
-              a: '就纯准确率而言不如从前，但在格式方面比大多数人预想的更有用。在 Claude Opus 5.5、GPT-6 Astra 和 Gemini 4 Argon 上，一条精确的零样本指令在通用任务中往往已能与少样本持平。但当你需要精确的 JSON 结构、自有标签词表或特定的公司语气时，给示例仍然是最可靠的办法。',
+              a: '就纯准确率而言不如从前，但在格式方面比大多数人预想的更有用。在 Claude Opus 5.5、GPT-6.2 Astra 和 Gemini 4 Argon 上，一条精确的零样本指令在通用任务中往往已能与少样本持平。但当你需要精确的 JSON 结构、自有标签词表或特定的公司语气时，给示例仍然是最可靠的办法。',
             },
             {
               q: '为什么加了示例之后输出反而更差了？',
@@ -2238,11 +2238,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'reasoning-models',
           title: 'Modelos de raciocínio reduziram a diferença do zero-shot',
           content: [
-            '**Um ajuste por instruções forte fechou boa parte da vantagem de precisão que o few-shot prompting comprava nos modelos de ponta.** No Claude Opus 5.5, GPT-6 Astra e Gemini 4 Argon, uma instrução zero-shot bem escrita hoje empata com o few-shot em muitas tarefas gerais — mas essa convergência não vale para todo o cenário de modelos.',
+            '**Um ajuste por instruções forte fechou boa parte da vantagem de precisão que o few-shot prompting comprava nos modelos de ponta.** No Claude Opus 5.5, GPT-6.2 Astra e Gemini 4 Argon, uma instrução zero-shot bem escrita hoje empata com o few-shot em muitas tarefas gerais — mas essa convergência não vale para todo o cenário de modelos.',
             'O few-shot continua valendo seus tokens em formato e vocabulário: conjuntos de rótulos proprietários, esquemas internos, tom da casa e casos extremos que o modelo nunca viu no pré-treinamento. E em modelos menores ou hospedados localmente, o few-shot segue sendo, com frequência, uma das alavancas de precisão mais eficazes sem fine-tuning.',
           ],
           rows: [
-            { 'Classe de modelo': 'Raciocínio de ponta (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', 'Qualidade em zero-shot': 'Alta em tarefas gerais', 'O few-shot ainda ajuda?': 'Principalmente para formato de saída, tom da casa e rótulos proprietários' },
+            { 'Classe de modelo': 'Raciocínio de ponta (Claude Opus 5.5, GPT-6.2 Astra, Gemini 4 Argon)', 'Qualidade em zero-shot': 'Alta em tarefas gerais', 'O few-shot ainda ajuda?': 'Principalmente para formato de saída, tom da casa e rótulos proprietários' },
             { 'Classe de modelo': 'Ponta sem raciocínio (Claude Sonnet 5.5, Gemini 3.8 Flash)', 'Qualidade em zero-shot': 'Boa', 'O few-shot ainda ajuda?': 'Sim — em domínios estreitos e esquemas rígidos' },
             { 'Classe de modelo': 'Modelos pequenos hospedados (Claude Haiku 5.5, Gemini 3.5 Flash-Lite)', 'Qualidade em zero-shot': 'Irregular em tarefas especializadas', 'O few-shot ainda ajuda?': 'Sim — normalmente o maior ganho isolado de precisão' },
             { 'Classe de modelo': 'Open-weight local de 7–30B (Qwen3 8B, Llama 4 Scout, Gemma 4)', 'Qualidade em zero-shot': 'Variável; desvio de formato é comum', 'O few-shot ainda ajuda?': 'Sim — muitas vezes é a diferença entre saída utilizável e inútil' },
@@ -2287,7 +2287,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-pq-helps',
           title: 'Como o PromptQuorum ajuda você a escolher',
           content: [
-            '**O PromptQuorum é uma ferramenta de despacho de IA multimodelo que permite testar prompts zero-shot e few-shot em vários provedores no mesmo lugar.** Você pode enviar o mesmo prompt só com instrução e o mesmo prompt com exemplos para modelos como GPT-6 Astra, Claude Opus 5.5 e Gemini 4 Argon lado a lado.',
+            '**O PromptQuorum é uma ferramenta de despacho de IA multimodelo que permite testar prompts zero-shot e few-shot em vários provedores no mesmo lugar.** Você pode enviar o mesmo prompt só com instrução e o mesmo prompt com exemplos para modelos como GPT-6.2 Astra, Claude Opus 5.5 e Gemini 4 Argon lado a lado.',
             'Dentro do PromptQuorum, você pode:',
           ],
           items: [
@@ -2332,7 +2332,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Few-shot prompting ainda ajuda em modelos de raciocínio?',
-              a: 'Menos do que antes para precisão pura, mais do que se imagina para formato. No Claude Opus 5.5, GPT-6 Astra e Gemini 4 Argon, uma instrução zero-shot precisa costuma empatar com o few-shot em tarefas gerais. Mas quando você precisa de um esquema JSON exato, um vocabulário de rótulos proprietário ou um tom específico, os exemplos continuam sendo o caminho mais confiável.',
+              a: 'Menos do que antes para precisão pura, mais do que se imagina para formato. No Claude Opus 5.5, GPT-6.2 Astra e Gemini 4 Argon, uma instrução zero-shot precisa costuma empatar com o few-shot em tarefas gerais. Mas quando você precisa de um esquema JSON exato, um vocabulário de rótulos proprietário ou um tom específico, os exemplos continuam sendo o caminho mais confiável.',
             },
             {
               q: 'Por que minha saída piorou depois de acrescentar exemplos?',
@@ -2570,11 +2570,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'reasoning-models',
           title: 'نماذج الاستدلال قلّصت فارق التوجيه الصفري',
           content: [
-            '**ضبط التعليمات القوي أغلق جزءًا كبيرًا من فارق الدقة الذي كانت الأمثلة القليلة تشتريه في النماذج المتقدمة.** على Claude Opus 5.5 وGPT-6 Astra وGemini 4 Argon، صارت التعليمة الصفرية المصاغة بدقّة تضاهي الأمثلة القليلة في كثير من المهام العامة — لكن هذا التقارب لا يسري على مشهد النماذج كله.',
+            '**ضبط التعليمات القوي أغلق جزءًا كبيرًا من فارق الدقة الذي كانت الأمثلة القليلة تشتريه في النماذج المتقدمة.** على Claude Opus 5.5 وGPT-6.2 Astra وGemini 4 Argon، صارت التعليمة الصفرية المصاغة بدقّة تضاهي الأمثلة القليلة في كثير من المهام العامة — لكن هذا التقارب لا يسري على مشهد النماذج كله.',
             'ما تزال الأمثلة تستحق رموزها في الصيغة والمفردات: مجموعات التسميات الخاصة، والمخططات الداخلية، ونبرة المؤسسة، والحالات الحدّية التي لم يصادفها النموذج في التدريب المسبق. وفي النماذج الأصغر أو المستضافة محليًا تظل الأمثلة في كثير من الأحيان من أقوى روافع الدقة المتاحة دون ضبط دقيق.',
           ],
           rows: [
-            { 'فئة النموذج': 'استدلال متقدم (Claude Opus 5.5، GPT-6 Astra، Gemini 4 Argon)', 'جودة التوجيه الصفري': 'عالية في المهام العامة', 'هل تفيد الأمثلة القليلة؟': 'أساسًا لصيغة المخرجات وأسلوب المؤسسة والتسميات الخاصة' },
+            { 'فئة النموذج': 'استدلال متقدم (Claude Opus 5.5، GPT-6.2 Astra، Gemini 4 Argon)', 'جودة التوجيه الصفري': 'عالية في المهام العامة', 'هل تفيد الأمثلة القليلة؟': 'أساسًا لصيغة المخرجات وأسلوب المؤسسة والتسميات الخاصة' },
             { 'فئة النموذج': 'متقدم بلا استدلال (Claude Sonnet 5.5، Gemini 3.8 Flash)', 'جودة التوجيه الصفري': 'جيدة', 'هل تفيد الأمثلة القليلة؟': 'نعم — في المجالات الضيقة والمخططات الصارمة' },
             { 'فئة النموذج': 'نماذج صغيرة مستضافة (Claude Haiku 5.5، Gemini 3.5 Flash-Lite)', 'جودة التوجيه الصفري': 'متفاوتة في المهام المتخصصة', 'هل تفيد الأمثلة القليلة؟': 'نعم — عادةً أكبر مكسب دقة منفرد' },
             { 'فئة النموذج': 'نماذج محلية مفتوحة الأوزان 7–30B (Qwen3 8B، Llama 4 Scout، Gemma 4)', 'جودة التوجيه الصفري': 'متغيّرة؛ الانحراف عن الصيغة شائع', 'هل تفيد الأمثلة القليلة؟': 'نعم — غالبًا الفارق بين مخرجات صالحة وأخرى غير صالحة' },
@@ -2619,7 +2619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-pq-helps',
           title: 'كيف يساعدك PromptQuorum على الاختيار',
           content: [
-            '**PromptQuorum أداة توزيع ذكاء اصطناعي متعددة النماذج تتيح لك اختبار الموجّهات الصفرية والمدعومة بالأمثلة عبر عدة مزوّدين في مكان واحد.** يمكنك إرسال الموجّه ذاته بتعليمة فقط والموجّه ذاته مع أمثلة إلى نماذج مثل GPT-6 Astra وClaude Opus 5.5 وGemini 4 Argon جنبًا إلى جنب.',
+            '**PromptQuorum أداة توزيع ذكاء اصطناعي متعددة النماذج تتيح لك اختبار الموجّهات الصفرية والمدعومة بالأمثلة عبر عدة مزوّدين في مكان واحد.** يمكنك إرسال الموجّه ذاته بتعليمة فقط والموجّه ذاته مع أمثلة إلى نماذج مثل GPT-6.2 Astra وClaude Opus 5.5 وGemini 4 Argon جنبًا إلى جنب.',
             'داخل PromptQuorum يمكنك:',
           ],
           items: [
@@ -2664,7 +2664,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'هل ما زالت الأمثلة القليلة تفيد مع نماذج الاستدلال؟',
-              a: 'أقل من السابق بالنسبة للدقة المجرّدة، وأكثر مما تتوقّع بالنسبة للصيغة. على Claude Opus 5.5 وGPT-6 Astra وGemini 4 Argon تضاهي التعليمة الصفرية الدقيقة الأمثلة القليلة في كثير من المهام العامة. لكن حين تحتاج إلى مخطط JSON محدد أو مفردات تسميات خاصة أو نبرة مؤسسية بعينها، تبقى الأمثلة أوثق طريق للوصول إليها.',
+              a: 'أقل من السابق بالنسبة للدقة المجرّدة، وأكثر مما تتوقّع بالنسبة للصيغة. على Claude Opus 5.5 وGPT-6.2 Astra وGemini 4 Argon تضاهي التعليمة الصفرية الدقيقة الأمثلة القليلة في كثير من المهام العامة. لكن حين تحتاج إلى مخطط JSON محدد أو مفردات تسميات خاصة أو نبرة مؤسسية بعينها، تبقى الأمثلة أوثق طريق للوصول إليها.',
             },
             {
               q: 'لماذا ساءت مخرجاتي بعد إضافة الأمثلة؟',
@@ -2902,11 +2902,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'reasoning-models',
           title: '추론 모델이 제로샷과의 격차를 좁혔다',
           content: [
-            '**강력한 지시 튜닝 덕분에 퓨샷 프롬프팅이 프런티어 모델에서 벌어 주던 정확도 우위는 상당 부분 사라졌습니다.** Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon에서는 정교하게 쓴 제로샷 지시가 많은 일반 과제에서 퓨샷과 대등합니다. 다만 이 수렴이 모든 모델에 해당하지는 않습니다.',
+            '**강력한 지시 튜닝 덕분에 퓨샷 프롬프팅이 프런티어 모델에서 벌어 주던 정확도 우위는 상당 부분 사라졌습니다.** Claude Opus 5.5, GPT-6.2 Astra, Gemini 4 Argon에서는 정교하게 쓴 제로샷 지시가 많은 일반 과제에서 퓨샷과 대등합니다. 다만 이 수렴이 모든 모델에 해당하지는 않습니다.',
             '퓨샷이 여전히 토큰값을 하는 영역은 형식과 어휘입니다. 자체 라벨 체계, 내부 스키마, 사내 톤, 사전 학습에서 본 적 없는 예외 사례가 그렇습니다. 또한 소형 모델이나 로컬 호스팅 모델에서는 파인튜닝을 제외하면 여전히 가장 효과적인 정확도 수단 중 하나인 경우가 많습니다.',
           ],
           rows: [
-            { '모델 분류': '프런티어 추론(Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', '제로샷 품질': '일반 과제에서 높음', '퓨샷이 여전히 도움이 되나': '주로 출력 형식, 사내 톤, 자체 라벨 체계에서' },
+            { '모델 분류': '프런티어 추론(Claude Opus 5.5, GPT-6.2 Astra, Gemini 4 Argon)', '제로샷 품질': '일반 과제에서 높음', '퓨샷이 여전히 도움이 되나': '주로 출력 형식, 사내 톤, 자체 라벨 체계에서' },
             { '모델 분류': '프런티어 비추론(Claude Sonnet 5.5, Gemini 3.8 Flash)', '제로샷 품질': '양호', '퓨샷이 여전히 도움이 되나': '그렇다 — 좁은 도메인과 엄격한 스키마에서' },
             { '모델 분류': '소형 호스팅(Claude Haiku 5.5, Gemini 3.5 Flash-Lite)', '제로샷 품질': '전문 과제에서는 들쭉날쭉', '퓨샷이 여전히 도움이 되나': '그렇다 — 단일 항목으로 가장 큰 정확도 향상인 경우가 많음' },
             { '모델 분류': '로컬 오픈웨이트 7~30B(Qwen3 8B, Llama 4 Scout, Gemma 4)', '제로샷 품질': '편차가 크고 형식 이탈이 잦음', '퓨샷이 여전히 도움이 되나': '그렇다 — 쓸 만한 출력과 못 쓰는 출력을 가르는 경우가 많음' },
@@ -2951,7 +2951,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-pq-helps',
           title: 'PromptQuorum이 선택을 돕는 방법',
           content: [
-            '**PromptQuorum은 제로샷과 퓨샷 프롬프트를 여러 제공사에 걸쳐 한곳에서 테스트할 수 있는 멀티모델 AI 디스패치 도구입니다.** 지시만 담은 프롬프트와 예시를 붙인 프롬프트를 GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon 같은 모델에 동시에 보내 나란히 비교할 수 있습니다.',
+            '**PromptQuorum은 제로샷과 퓨샷 프롬프트를 여러 제공사에 걸쳐 한곳에서 테스트할 수 있는 멀티모델 AI 디스패치 도구입니다.** 지시만 담은 프롬프트와 예시를 붙인 프롬프트를 GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon 같은 모델에 동시에 보내 나란히 비교할 수 있습니다.',
             'PromptQuorum에서 할 수 있는 일:',
           ],
           items: [
@@ -2996,7 +2996,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '추론 모델에서도 퓨샷 프롬프팅이 도움이 되나요?',
-              a: '순수 정확도 측면에서는 예전만 못하지만, 형식 측면에서는 생각보다 훨씬 유용합니다. Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon에서는 정확하게 쓴 제로샷 지시가 일반 과제에서 퓨샷과 대등한 경우가 많습니다. 다만 정확한 JSON 스키마, 자체 라벨 어휘, 특정한 사내 톤이 필요하다면 예시를 주는 것이 여전히 가장 확실한 방법입니다.',
+              a: '순수 정확도 측면에서는 예전만 못하지만, 형식 측면에서는 생각보다 훨씬 유용합니다. Claude Opus 5.5, GPT-6.2 Astra, Gemini 4 Argon에서는 정확하게 쓴 제로샷 지시가 일반 과제에서 퓨샷과 대등한 경우가 많습니다. 다만 정확한 JSON 스키마, 자체 라벨 어휘, 특정한 사내 톤이 필요하다면 예시를 주는 것이 여전히 가장 확실한 방법입니다.',
             },
             {
               q: '예시를 넣었더니 출력이 왜 나빠졌나요?',
