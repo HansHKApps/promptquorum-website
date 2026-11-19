@@ -1449,6 +1449,11 @@
     "urlSlug": "reactive-resume-review",
     "url": "/power-local-llm/reactive-resume-review"
   },
+  "t3-code": {
+    "cluster": "power-local-llm",
+    "urlSlug": "t3-code-review",
+    "url": "/power-local-llm/t3-code-review"
+  },
   "paperclip": {
     "cluster": "power-local-llm",
     "urlSlug": "paperclip-review",
