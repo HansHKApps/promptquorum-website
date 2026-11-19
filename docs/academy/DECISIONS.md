@@ -4,13 +4,12 @@ Newest first. Each entry: date, who decided, what, and what it changes in [SPEC.
 
 ## 2026-11-19 (QA audit): open items needing an owner decision
 
-- **F1 subdomain:** `academy.promptquorum.com` returns Vercel `DEPLOYMENT_NOT_FOUND` because no such deployment exists (by decision, below). Nothing in code, sitemap or links points to it (only the obsolete SPEC). Options: (a) do nothing; (b) attach the domain to the website project in Vercel and add `{ source: '/:path*', has: [{ type: 'host', value: 'academy.promptquorum.com' }], destination: 'https://www.promptquorum.com/academy', permanent: true }` to `redirects()` in `next.config.ts` (the DNS record and domain attachment are a dashboard step, not done here).
 - **F2 pre-consent Clarity:** Clarity loads cookieless before consent by design (`ClarityLoader.tsx`, asserted in `tests/consent.spec.ts`), site-wide. Loading it only after consent is a site-wide analytics/legal decision.
 - **F4 tutor, F5 certificate:** not built (Phases 5/6); the certificate button is disabled "until Phase 6", there is no time gate.
 - **F8 Terms page:** no Terms page exists; its text (incl. "16 years or older") is a legal document.
-- **F14 CSP / HSTS:** removing `unsafe-inline`/`unsafe-eval` needs nonces (dynamic rendering for every page); HSTS left as is.
+- **F14 (decided by Claude, 2026-11-19):** HSTS stays as is (`includeSubDomains`/`preload` would bind every subdomain, irreversible for a preload list). CSP `unsafe-inline`/`unsafe-eval` stay: removing them needs per-request nonces, which makes every page dynamic and loses the static/CDN caching, and `unsafe-eval` cannot be dropped safely without testing Clarity and OneSignal in a production build. Revisit together with the `[locale]` refactor.
 - **F15:** root `<html lang/dir>` stays hardcoded until the `[locale]` refactor.
-- **F16 nav link:** Academy is deliberately unlinked during the quiet test.
+- **F16 nav link:** later (owner, 2026-11-19). Not done now.
 
 ## 2026-11-18 (Hans): Academy is a website tool like Ask Hans, not a separate app
 
