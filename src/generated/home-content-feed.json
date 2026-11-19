@@ -62131,7 +62131,7 @@
     "title": "Best Ollama Models for 4 GB VRAM?",
     "excerpt": "Phi-4 Mini and Qwen3 4B (2.5 GB each), Qwen3.5 2B (1.9 GB) and Gemma 3 1B (0.8 GB) fit in 4 GB VRAM. Llama 3.1 8B (4.9 GB) does not. Includes 4-bit tags.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/prompt-bites/best-ollama-models-4gb-vram",
     "cluster": "prompt-bites"
   },
@@ -62140,7 +62140,7 @@
     "title": "Beste Ollama-Modelle für 4 GB VRAM?",
     "excerpt": "Phi-4 Mini und Qwen3 4B (je 2,5 GB), Qwen3.5 2B (1,9 GB) und Gemma 3 1B (0,8 GB) passen in 4 GB VRAM. Llama 3.1 8B (4,9 GB) nicht. Mit 4-Bit-Tags.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/de/prompt-bites/best-ollama-models-4gb-vram",
     "cluster": "prompt-bites"
   },
@@ -62149,7 +62149,7 @@
     "title": "Meilleurs modèles Ollama pour 4 Go de VRAM ?",
     "excerpt": "Phi-4 Mini et Qwen3 4B (2,5 Go chacun), Qwen3.5 2B (1,9 Go) et Gemma 3 1B (0,8 Go) tiennent dans 4 Go de VRAM. Pas Llama 3.1 8B (4,9 Go).",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/fr/prompt-bites/best-ollama-models-4gb-vram",
     "cluster": "prompt-bites"
   },
@@ -62158,7 +62158,7 @@
     "title": "4 GB VRAM向け最良Ollamaモデルは？",
     "excerpt": "4 GB VRAMにはPhi-4 MiniとQwen3 4B（各2.5 GB）、Qwen3.5 2B（1.9 GB）、Gemma 3 1B（0.8 GB）が収まります。Llama 3.1 8B（4.9 GB）は不可。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ja/prompt-bites/best-ollama-models-4gb-vram",
     "cluster": "prompt-bites"
   },
@@ -62167,7 +62167,7 @@
     "title": "4 GB显存最佳Ollama模型？",
     "excerpt": "4 GB显存可运行Phi-4 Mini和Qwen3 4B（各2.5 GB）、Qwen3.5 2B（1.9 GB）、Gemma 3 1B（0.8 GB）；Llama 3.1 8B（4.9 GB）放不下。含4位量化标签。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/zh/prompt-bites/best-ollama-models-4gb-vram",
     "cluster": "prompt-bites"
   },
@@ -62176,7 +62176,7 @@
     "title": "¿Mejores modelos Ollama para 4 GB de VRAM?",
     "excerpt": "Phi-4 Mini y Qwen3 4B (2,5 GB cada uno), Qwen3.5 2B (1,9 GB) y Gemma 3 1B (0,8 GB) caben en 4 GB de VRAM. Llama 3.1 8B (4,9 GB) no.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/es/prompt-bites/best-ollama-models-4gb-vram",
     "cluster": "prompt-bites"
   },
@@ -62185,7 +62185,7 @@
     "title": "Melhores modelos Ollama para 4 GB de VRAM?",
     "excerpt": "Phi-4 Mini e Qwen3 4B (2,5 GB cada), Qwen3.5 2B (1,9 GB) e Gemma 3 1B (0,8 GB) cabem em 4 GB de VRAM. Llama 3.1 8B (4,9 GB) não cabe.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/pt/prompt-bites/best-ollama-models-4gb-vram",
     "cluster": "prompt-bites"
   },
@@ -62194,7 +62194,7 @@
     "title": "أفضل نماذج ⁨Ollama⁩ لـ⁨4 GB VRAM⁩؟",
     "excerpt": "⁨4 GB VRAM⁩ تتسع لـ⁨Phi-4 Mini⁩ و⁨Qwen3 4B⁩ (⁨2.5 GB⁩ لكل منهما) و⁨Qwen3.5 2B⁩ (⁨1.9 GB⁩) و⁨Gemma 3 1B⁩ (⁨0.8 GB⁩). أما ⁨Llama 3.1 8B⁩ (⁨4.9 GB⁩) فلا يتسع.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ar/prompt-bites/best-ollama-models-4gb-vram",
     "cluster": "prompt-bites"
   },
@@ -62203,7 +62203,7 @@
     "title": "4GB VRAM에 최적화된 Ollama 모델은?",
     "excerpt": "4GB VRAM에는 Phi-4 Mini와 Qwen3 4B(각 2.5GB), Qwen3.5 2B(1.9GB), Gemma 3 1B(0.8GB)가 들어갑니다. Llama 3.1 8B(4.9GB)는 불가합니다.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ko/prompt-bites/best-ollama-models-4gb-vram",
     "cluster": "prompt-bites"
   },
