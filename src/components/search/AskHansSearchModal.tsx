@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Logo } from '@/components/Logo'
 import { useAskCopy } from '@/components/askhans/copy'
+import { AskIcon } from '@/components/askhans/icons'
+import { useIsDesktop } from '@/components/askhans/useIsDesktop'
 import { ASK_HANS_LIMITS } from '@/lib/askhans/config'
 
 interface Props {
@@ -21,8 +23,11 @@ interface Props {
 export function AskHansSearchModal({ isOpen, onClose, onSubmit, onPower }: Props) {
   const tx = useAskCopy()
   const t = tx.search
+  const isDesktop = useIsDesktop()
   const [question, setQuestion] = useState('')
   const [mounted, setMounted] = useState(false)
+  // Desktop-only: expands the modal to fill the viewport, same window chrome as AskHansWindow's maximize toggle.
+  const [maximized, setMaximized] = useState(false)
   const inputRef = useRef<HTMLTextAreaElement>(null)
 
   // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -51,10 +56,18 @@ export function AskHansSearchModal({ isOpen, onClose, onSubmit, onPower }: Props
 
   useEffect(() => {
     if (!isOpen) return
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return
+      // First Esc restores a maximized window, like AskHansWindow; only the next Esc closes it.
+      if (maximized) {
+        setMaximized(false)
+        return
+      }
+      onClose()
+    }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [isOpen, onClose])
+  }, [isOpen, maximized, onClose])
 
   if (!isOpen || !mounted) return null
 
@@ -65,6 +78,10 @@ export function AskHansSearchModal({ isOpen, onClose, onSubmit, onPower }: Props
     onSubmit(q)
   }
 
+  const desktopSizeClasses = maximized
+    ? 'md:inset-0 md:h-full md:w-full md:max-h-none md:max-w-none md:translate-x-0 md:rounded-none md:border-0 md:shadow-none'
+    : 'md:inset-auto md:top-[12vh] md:left-1/2 md:max-h-[76vh] md:w-full md:max-w-[760px] md:-translate-x-1/2 md:rounded-2xl md:border md:border-[hsl(var(--hero-edge))] md:shadow-[0_24px_80px_-12px_rgba(76,29,149,0.45)]'
+
   return createPortal(
     <>
       <div className="fixed inset-0 z-50 bg-[hsl(265_40%_12%/0.55)] backdrop-blur-[2px]" onClick={onClose} aria-hidden="true" />
@@ -73,7 +90,7 @@ export function AskHansSearchModal({ isOpen, onClose, onSubmit, onPower }: Props
         dir={tx.dir}
         aria-modal="true"
         aria-label={t.modalAriaLabel}
-        className="fixed z-50 flex flex-col overflow-hidden bg-white inset-0 md:inset-auto md:top-[12vh] md:left-1/2 md:max-h-[76vh] md:w-full md:max-w-[760px] md:-translate-x-1/2 md:rounded-2xl md:border md:border-[hsl(var(--hero-edge))] md:shadow-[0_24px_80px_-12px_rgba(76,29,149,0.45)]"
+        className={`fixed z-50 flex flex-col overflow-hidden bg-white inset-0 ${desktopSizeClasses}`}
       >
         {/* Brand header */}
         <div
@@ -81,16 +98,29 @@ export function AskHansSearchModal({ isOpen, onClose, onSubmit, onPower }: Props
           style={{ background: 'linear-gradient(135deg, hsl(var(--hero-from)) 0%, hsl(265 70% 90%) 55%, hsl(290 70% 93%) 100%)' }}
         >
           <div className="pointer-events-none absolute -right-10 -top-12 h-40 w-40 rounded-full bg-[hsl(265_70%_70%/0.25)] blur-2xl" aria-hidden="true" />
-          <button
-            onClick={onClose}
-            className="absolute end-2 top-2 z-10 flex h-10 w-10 items-center justify-center rounded-full text-[hsl(var(--primary))] hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[hsl(var(--primary))] md:end-3 md:top-3 md:h-9 md:w-9"
-            aria-label={t.close}
-          >
-            <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M18 6 6 18M6 6l12 12" />
-            </svg>
-          </button>
-          <div className="relative flex items-center gap-3 pe-10">
+          <div className="absolute end-2 top-2 z-10 flex items-center gap-1 md:end-3 md:top-3">
+            {isDesktop && (
+              <button
+                type="button"
+                onClick={() => setMaximized((m) => !m)}
+                aria-label={maximized ? tx.restore : tx.maximize}
+                title={maximized ? tx.restore : tx.maximize}
+                className="flex h-10 w-10 items-center justify-center rounded-full text-[hsl(var(--primary))] hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[hsl(var(--primary))] md:h-9 md:w-9"
+              >
+                <AskIcon name={maximized ? 'Minimize2' : 'Maximize2'} className="h-4 w-4" />
+              </button>
+            )}
+            <button
+              onClick={onClose}
+              className="flex h-10 w-10 items-center justify-center rounded-full text-[hsl(var(--primary))] hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[hsl(var(--primary))] md:h-9 md:w-9"
+              aria-label={t.close}
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div className="relative flex items-center gap-3 pe-10 md:pe-20">
             <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md ring-1 ring-[hsl(var(--hero-edge))]" aria-hidden="true">
               <Logo size={32} role="presentation" aria-hidden="true" />
             </span>

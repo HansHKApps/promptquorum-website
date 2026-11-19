@@ -16042,7 +16042,7 @@
     "title": "Whisper on Apple Silicon 2026: Metal Benchmarks, Core ML Setup, M1–M5 Speed Guide",
     "excerpt": "Whisper on Mac: Metal GPU benchmarks M1–M5, setup, real-time transcription. Large-v3 runs 10× real-time on M5 Pro. Core ML guide.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16051,7 +16051,7 @@
     "title": "Whisper auf Apple Silicon 2026: Metal-Benchmarks, Core-ML-Setup, M1–M5-Geschwindigkeitsleitfaden",
     "excerpt": "Whisper auf Mac: Metal GPU Benchmarks M1–M5, Setup, Echtzeit-Transkription. Large-v3 läuft 10× Realzeit auf M5 Pro. Core ML Anleitung.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/de/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16060,7 +16060,7 @@
     "title": "Whisper sur Apple Silicon 2026 : Benchmarks Metal, Configuration Core ML, Guide M1–M5",
     "excerpt": "Whisper sur Mac : benchmarks GPU Metal M1–M5, configuration, transcription temps réel. Large-v3 10× temps réel sur M5 Pro. Guide Core ML.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/fr/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16069,7 +16069,7 @@
     "title": "Apple Silicon上のWhisper 2026：MetalベンチマークとCore ML設定、M1–M5速度ガイド",
     "excerpt": "Whisper on Mac：Metal GPU ベンチマーク M1–M5、セットアップ、リアルタイム文字起こし。Large-v3は M5 Pro で10×リアルタイム実行。Core MLガイド、モデル選択、実装手順。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/ja/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16078,7 +16078,7 @@
     "title": "Apple Silicon上的Whisper 2026：Metal基准测试、Core ML设置、M1–M5速度指南",
     "excerpt": "Whisper on Mac：Metal GPU 基准测试 M1–M5、安装、实时转录。Large-v3 在 M5 Pro 上实现10倍实时速度。Core ML 配置指南、模型选择、实现步骤。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/zh/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16087,7 +16087,7 @@
     "title": "Whisper en Apple Silicon 2026: Benchmarks Metal, Configuración Core ML, Guía M1–M5",
     "excerpt": "Whisper en Mac: benchmarks GPU Metal M1–M5, configuración, transcripción en tiempo real. Large-v3 corre a 10× tiempo real en M5 Pro. Guía Core ML.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/es/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16096,7 +16096,7 @@
     "title": "Whisper no Apple Silicon 2026: benchmarks Metal, configuração Core ML, guia M1-M5",
     "excerpt": "Whisper no Mac: benchmarks GPU Metal M1-M5, configuração, transcrição em tempo real. Large-v3 roda a 10× tempo real no M5 Pro. Guia Core ML.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-05-15",
+    "dateModified": "2026-11-19",
     "url": "/pt/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16105,7 +16105,7 @@
     "title": "⁨Whisper⁩ على ⁨Apple Silicon 2026⁩: اختبارات ⁨Metal⁩ المرجعية، إعداد ⁨Core ML⁩، دليل ⁨M1⁩–⁨M5⁩",
     "excerpt": "⁨Whisper Large-v3⁩ يعمل بسرعة ⁨10⁩× الوقت الفعلي على ⁨M5 Pro⁩ عبر ⁨Metal⁩. اختبارات ⁨M1⁩–⁨M5 Max⁩، إعداد ⁨Core ML⁩، ودليل النسخ الفوري على ⁨Mac⁩.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/ar/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16114,7 +16114,7 @@
     "title": "Apple Silicon의 Whisper 2026: Metal 벤치마크, Core ML 설정, M1–M5 속도 가이드",
     "excerpt": "Mac에서의 Whisper: Metal GPU 벤치마크 M1–M5, 설정, 실시간 전사. Large-v3는 M5 Pro에서 10× 실시간 속도로 실행됩니다. Core ML 가이드.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/ko/local-llms/apple-silicon-whisper-metal-benchmark",
     "cluster": "local-llms"
   },
@@ -16933,7 +16933,7 @@
     "title": "AutoDL Pricing 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU",
     "excerpt": "AutoDL GPU pricing 2026: A100 80GB from ¥5.98/hr (~$0.82), RTX 4090 from ¥2.68/hr — cheapest China GPU cloud vs Alibaba Cloud PAI and Tencent Cloud TI.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-19",
     "url": "/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
     "cluster": "local-llms"
   },
@@ -16942,7 +16942,7 @@
     "title": "AutoDL-Preise 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU",
     "excerpt": "AutoDL A100 80 GB kostet ¥5,98/Std. (~0,82 $) — günstigste China-GPU-Cloud, vs. ¥8–12/Std. bei Alibaba Cloud PAI und ¥7,5–10/Std. bei Tencent Cloud TI. RTX 4090 ab ¥2,68/Std.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-19",
     "url": "/de/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
     "cluster": "local-llms"
   },
@@ -16951,7 +16951,7 @@
     "title": "Tarifs AutoDL 2026 : A100 80 Go vs Alibaba Cloud & Tencent GPU",
     "excerpt": "L'A100 80 Go d'AutoDL est à ¥5,98/h (~0,82 $) — le cloud GPU le moins cher de Chine, contre ¥8–12/h chez Alibaba Cloud PAI et ¥7,5–10/h chez Tencent Cloud TI. RTX 4090 dès ¥2,68/h.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-19",
     "url": "/fr/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
     "cluster": "local-llms"
   },
@@ -16960,7 +16960,7 @@
     "title": "AutoDL料金2026：A100 80GB vs Alibaba Cloud・テンセントクラウドGPU",
     "excerpt": "AutoDLのA100 80GBは¥5.98/時間（約0.82ドル）——中国最安のGPUクラウド。Alibaba Cloud PAIの¥8〜12/時間、テンセントクラウドTIの¥7.5〜10/時間より安い。RTX 4090は¥2.68/時間から。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-19",
     "url": "/ja/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
     "cluster": "local-llms"
   },
@@ -16969,7 +16969,7 @@
     "title": "AutoDL价格2026：A100 80GB对比阿里云与腾讯云GPU",
     "excerpt": "AutoDL的A100 80GB为¥5.98/时（约0.82美元）——中国最便宜GPU云，低于阿里云PAI的¥8-12/时和腾讯云TI的¥7.5-10/时。RTX 4090低至¥2.68/时。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-19",
     "url": "/zh/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
     "cluster": "local-llms"
   },
@@ -16978,7 +16978,7 @@
     "title": "Precios de AutoDL 2026: A100 80 GB vs Alibaba Cloud y Tencent GPU",
     "excerpt": "El A100 80 GB de AutoDL cuesta ¥5,98/h (~$0,82) — la nube GPU más barata de China, frente a ¥8–12/h en Alibaba Cloud PAI y ¥7,5–10/h en Tencent Cloud TI. RTX 4090 desde ¥2,68/h.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-19",
     "url": "/es/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
     "cluster": "local-llms"
   },
@@ -16987,7 +16987,7 @@
     "title": "Preços do AutoDL 2026: A100 80 GB vs Alibaba Cloud e Tencent GPU",
     "excerpt": "O A100 80 GB do AutoDL custa ¥5,98/h (~US$ 0,82) — a nuvem GPU mais barata da China, contra ¥8–12/h no Alibaba Cloud PAI e ¥7,5–10/h no Tencent Cloud TI. RTX 4090 a partir de ¥2,68/h.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-19",
     "url": "/pt/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
     "cluster": "local-llms"
   },
@@ -16996,7 +16996,7 @@
     "title": "أسعار ⁨AutoDL⁩ ⁨2026⁩: ⁨A100 80 GB⁩ مقابل ⁨Alibaba Cloud⁩ و⁨Tencent GPU⁩",
     "excerpt": "A100 80 GB لدى AutoDL بـ ¥5.98/ساعة (نحو 0.82 دولار) — أرخص GPU سحابي صيني، مقابل ¥8–12/ساعة على Alibaba Cloud PAI و¥7.5–10/ساعة على Tencent Cloud TI. RTX 4090 ابتداءً من ¥2.68/ساعة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-19",
     "url": "/ar/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
     "cluster": "local-llms"
   },
@@ -17005,7 +17005,7 @@
     "title": "AutoDL 가격 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU",
     "excerpt": "AutoDL A100 80 GB는 ¥5.98/시간(~$0.82) — 중국 최저가 GPU 클라우드로, Alibaba Cloud PAI ¥8–12/시간, Tencent Cloud TI ¥7.5–10/시간보다 저렴. RTX 4090 ¥2.68/시간부터.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-11-19",
     "url": "/ko/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
     "cluster": "local-llms"
   },
@@ -25924,7 +25924,7 @@
     "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
     "excerpt": "Best RAG tools for business documents 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex compared by category, use case and hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
     "cluster": "power-local-llm"
   },
@@ -25933,7 +25933,7 @@
     "title": "Beste RAG-Tools für Geschäftsdokumente 2026: Lokale und private KI im Vergleich",
     "excerpt": "Beste RAG-Tools für Geschäftsdokumente 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex nach Kategorie, Einsatz, Hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/de/power-local-llm/best-rag-tools-for-business-documents-2026",
     "cluster": "power-local-llm"
   },
@@ -25942,7 +25942,7 @@
     "title": "Meilleurs outils RAG pour documents professionnels 2026 : IA locale et privée comparée",
     "excerpt": "Meilleurs outils RAG pour documents pro 2026 : AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex comparés par catégorie, usage et matériel.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/fr/power-local-llm/best-rag-tools-for-business-documents-2026",
     "cluster": "power-local-llm"
   },
@@ -25951,7 +25951,7 @@
     "title": "ビジネス文書向けベストRAGツール2026年版：ローカル・プライベートAI比較",
     "excerpt": "ビジネス文書向けRAGツール2026年版：AnythingLLM、RAGFlow、PrivateGPT、Open WebUI、Dify、LlamaIndexをカテゴリー・用途・必要ハードウェア別に比較。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/ja/power-local-llm/best-rag-tools-for-business-documents-2026",
     "cluster": "power-local-llm"
   },
@@ -25960,7 +25960,7 @@
     "title": "2026年商业文档最佳RAG工具：本地与私有AI工具对比",
     "excerpt": "2026年商业文档最佳RAG工具对比：AnythingLLM、RAGFlow、PrivateGPT、Open WebUI、Dify、LlamaIndex按类别、使用场景与所需硬件全面比较。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/zh/power-local-llm/best-rag-tools-for-business-documents-2026",
     "cluster": "power-local-llm"
   },
@@ -25969,7 +25969,7 @@
     "title": "Mejores herramientas RAG para documentos empresariales 2026: IA local y privada comparada",
     "excerpt": "Mejores herramientas RAG para documentos empresariales 2026: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex por categoría, uso y hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/es/power-local-llm/best-rag-tools-for-business-documents-2026",
     "cluster": "power-local-llm"
   },
@@ -25978,7 +25978,7 @@
     "title": "Melhores Ferramentas RAG para Documentos Corporativos 2026: IA Local e Privada Comparada",
     "excerpt": "Melhores ferramentas RAG para documentos corporativos: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI e Dify comparados por categoria e hardware necessário.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/pt/power-local-llm/best-rag-tools-for-business-documents-2026",
     "cluster": "power-local-llm"
   },
@@ -25987,7 +25987,7 @@
     "title": "أفضل أدوات RAG لوثائق الشركات 2026: مقارنة الذكاء الاصطناعي المحلي والخاص",
     "excerpt": "أفضل أدوات RAG لوثائق الشركات 2026: مقارنة AnythingLLM وRAGFlow وPrivateGPT وOpen WebUI وDify وLlamaIndex حسب الفئة وحالة الاستخدام والأجهزة المطلوبة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/ar/power-local-llm/best-rag-tools-for-business-documents-2026",
     "cluster": "power-local-llm"
   },
@@ -25996,7 +25996,7 @@
     "title": "2026년 기업 문서를 위한 최고의 RAG 도구: 로컬 및 프라이빗 AI 비교",
     "excerpt": "2026년 기업 문서용 RAG 도구 비교: AnythingLLM, RAGFlow, PrivateGPT, Open WebUI, Dify, LlamaIndex를 범주·사용 사례·하드웨어별로 비교합니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-19",
     "url": "/ko/power-local-llm/best-rag-tools-for-business-documents-2026",
     "cluster": "power-local-llm"
   },
@@ -35966,81 +35966,81 @@
   {
     "lang": "en",
     "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
-    "excerpt": "Best local TTS for an NVIDIA GPU: XTTS v2, Chatterbox, Bark, and Kokoro compared on VRAM, CUDA speedup, voice cloning, and license — with a clear pick per use case.",
+    "excerpt": "Best GPU for TTS: XTTS v2, Chatterbox v3, Bark, and Kokoro compared on VRAM, the hardware voice cloning locally needs, and license — with a clear pick per use case.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-19",
     "url": "/power-local-llm/best-local-tts-nvidia-gpu",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Die beste lokale TTS-Engine für ein NVIDIA-GPU-Setup (2026)",
-    "excerpt": "Beste lokale TTS für eine NVIDIA-GPU: XTTS v2, Chatterbox, Bark und Kokoro im Vergleich zu VRAM, CUDA-Beschleunigung, Voice-Cloning und Lizenz — mit klarer Empfehlung je Anwendungsfall.",
+    "excerpt": "Beste GPU für TTS: XTTS v2, Chatterbox v3, Bark und Kokoro im Vergleich — VRAM, Hardware für Voice-Cloning und Lizenz, mit klarer Empfehlung.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-19",
     "url": "/de/power-local-llm/best-local-tts-nvidia-gpu",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Meilleur moteur TTS local pour une configuration GPU NVIDIA (2026)",
-    "excerpt": "Meilleur TTS local pour GPU NVIDIA : XTTS v2, Chatterbox, Bark et Kokoro comparés sur VRAM, accélération CUDA, clonage vocal et licence — avec un choix clair par cas d'usage.",
+    "excerpt": "Meilleur GPU pour TTS : XTTS v2, Chatterbox v3, Bark et Kokoro comparés sur VRAM, matériel pour clonage vocal et licence — choix clair par usage.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-19",
     "url": "/fr/power-local-llm/best-local-tts-nvidia-gpu",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "NVIDIA GPU環境向け ベストなローカルTTSエンジン(2026)",
-    "excerpt": "NVIDIA GPU向けベストなローカルTTS: XTTS v2、Chatterbox、Bark、KokoroをVRAM、CUDAによる高速化、ボイスクローニング、ライセンスで比較。ユースケース別の明確な選択肢も紹介。",
+    "excerpt": "TTSに最適なGPUは? XTTS v2、Chatterbox v3、Bark、KokoroをVRAM、ボイスクローニングに必要なハードウェア、ライセンスで比較。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-19",
     "url": "/ja/power-local-llm/best-local-tts-nvidia-gpu",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "NVIDIA GPU 配置下最佳本地 TTS 引擎(2026)",
-    "excerpt": "NVIDIA GPU 下最佳本地 TTS:对比 XTTS v2、Chatterbox、Bark 和 Kokoro 的 VRAM、CUDA 加速效果、声音克隆能力和许可证——并给出各使用场景的明确选择。",
+    "excerpt": "TTS最佳GPU是什么?对比 XTTS v2、Chatterbox v3、Bark 和 Kokoro 的 VRAM、声音克隆所需硬件和许可证。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-19",
     "url": "/zh/power-local-llm/best-local-tts-nvidia-gpu",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Mejor motor TTS local para una configuración con GPU NVIDIA (2026)",
-    "excerpt": "Mejor TTS local para una GPU NVIDIA: XTTS v2, Chatterbox, Bark y Kokoro comparados en VRAM, aceleración CUDA, clonación de voz y licencia — con una recomendación clara por caso de uso.",
+    "excerpt": "Mejor GPU para TTS: XTTS v2, Chatterbox v3, Bark y Kokoro comparados en VRAM, el hardware para clonar voz y licencia — con una recomendación clara.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-19",
     "url": "/es/power-local-llm/best-local-tts-nvidia-gpu",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "O Melhor Motor de TTS Local para uma GPU NVIDIA (2026)",
-    "excerpt": "Melhor TTS local para uma GPU NVIDIA: XTTS v2, Chatterbox, Bark e Kokoro comparados em VRAM, aceleração CUDA, clonagem de voz e licença — com uma recomendação clara por caso de uso.",
+    "excerpt": "Melhor GPU para TTS: XTTS v2, Chatterbox v3, Bark e Kokoro comparados em VRAM, o hardware para clonagem de voz e licença — com recomendação clara.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-19",
     "url": "/pt/power-local-llm/best-local-tts-nvidia-gpu",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "أفضل محرك تحويل نص إلى كلام محلي لإعداد GPU من NVIDIA (2026)",
-    "excerpt": "أفضل TTS محلي لـ GPU من NVIDIA: مقارنة XTTS v2 وChatterbox وBark وKokoro من حيث VRAM وتسريع CUDA واستنساخ الصوت والترخيص — مع اختيار واضح لكل حالة استخدام.",
+    "excerpt": "أفضل GPU لـ TTS: مقارنة XTTS v2 وChatterbox v3 وBark وKokoro من حيث VRAM والأجهزة اللازمة لاستنساخ الصوت والترخيص.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-19",
     "url": "/ar/power-local-llm/best-local-tts-nvidia-gpu",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "NVIDIA GPU 환경을 위한 최고의 로컬 TTS 엔진(2026)",
-    "excerpt": "NVIDIA GPU용 최고의 로컬 TTS: XTTS v2, Chatterbox, Bark, Kokoro를 VRAM, CUDA 가속, 음성 클로닝, 라이선스 기준으로 비교합니다. 사용 사례별 명확한 추천도 제공합니다.",
+    "excerpt": "TTS 최적 GPU는? XTTS v2, Chatterbox v3, Bark, Kokoro를 VRAM, 음성 클로닝에 필요한 하드웨어, 라이선스로 비교합니다.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-09-11",
+    "dateModified": "2026-11-19",
     "url": "/ko/power-local-llm/best-local-tts-nvidia-gpu",
     "cluster": "power-local-llm"
   },
@@ -62698,7 +62698,7 @@
     "title": "Best 14B Model for Coding?",
     "excerpt": "Best 14B model for coding: Qwen2.5-Coder 14B, 89.6% HumanEval (Qwen-reported) in ~10 GB VRAM. For general use: Qwen3 14B or Phi-4. Compared on Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62707,7 +62707,7 @@
     "title": "Bestes 14B-Modell für Coding?",
     "excerpt": "Bestes 14B-Modell fürs Coding: Qwen2.5-Coder 14B, 89,6 % HumanEval (Qwen-Angabe) bei ~10 GB VRAM. Allgemein: Qwen3 14B oder Phi-4. Vergleich auf Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/de/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62716,7 +62716,7 @@
     "title": "Meilleur modèle 14B pour le coding ?",
     "excerpt": "Meilleur modèle 14B pour coder : Qwen2.5-Coder 14B, 89,6 % HumanEval (chiffre Qwen) pour ~10 Go de VRAM. Usage général : Qwen3 14B ou Phi-4. Comparatif Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/fr/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62725,7 +62725,7 @@
     "title": "コーディングに最適な14Bモデルは？",
     "excerpt": "コーディング向け最適14BはQwen2.5-Coder 14B（HumanEval 89.6%・Qwen公表値、約10 GB VRAM）。汎用ならQwen3 14BかPhi-4。Ollamaで比較します。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ja/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62734,7 +62734,7 @@
     "title": "编程最佳14B模型是哪款？",
     "excerpt": "编程首选14B模型是Qwen2.5-Coder 14B：HumanEval 89.6%（Qwen公布），约10 GB显存。通用场景可选Qwen3 14B或Phi-4。基于Ollama的对比。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/zh/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62743,16 +62743,16 @@
     "title": "¿El mejor modelo 14B para coding?",
     "excerpt": "Mejor modelo 14B para coding: Qwen2.5-Coder 14B, 89,6 % en HumanEval (cifra de Qwen) con ~10 GB de VRAM. Uso general: Qwen3 14B o Phi-4. Comparativa en Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/es/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
-    "title": "¿El mejor modelo 14B para coding?",
+    "title": "Qual é o melhor modelo 14B para programação?",
     "excerpt": "Melhor modelo 14B para programar: Qwen2.5-Coder 14B, 89,6% no HumanEval (número da Qwen) com ~10 GB de VRAM. Uso geral: Qwen3 14B ou Phi-4. Comparativo no Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/pt/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62761,7 +62761,7 @@
     "title": "أفضل نموذج ⁨14B⁩ للبرمجة؟",
     "excerpt": "أفضل نموذج ⁨14B⁩ للبرمجة هو ⁨Qwen2.5-Coder 14B⁩: ‏⁨89.6%⁩ على ⁨HumanEval⁩ بنحو ⁨10 GB VRAM⁩. للاستخدام العام: ⁨Qwen3 14B⁩ أو ⁨Phi-4⁩. مقارنة على ⁨Ollama⁩.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ar/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62770,7 +62770,7 @@
     "title": "코딩에 최적인 14B 모델은 무엇입니까?",
     "excerpt": "코딩용 최고의 14B 모델은 Qwen2.5-Coder 14B: HumanEval 89.6%(Qwen 발표), VRAM 약 10 GB. 범용은 Qwen3 14B 또는 Phi-4. Ollama 기준 비교.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ko/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -74360,9 +74360,9 @@
   {
     "lang": "en",
     "title": "Anker SOLIX: Balcony Solar Company Profile",
-    "excerpt": "Company profile for Anker SOLIX: history, ownership, product range, and role in the balcony solar market.",
+    "excerpt": "Anker SOLIX company profile: founded 2011, made in Shenzhen & Changsha, China. Shenzhen-listed since 2020. Ownership, Solarbank lineup, EU-only market.",
     "publishDate": "2026-07-19",
-    "dateModified": "2026-07-20",
+    "dateModified": "2026-11-19",
     "url": "/balcony-solar/anker-solix-balcony-solar",
     "cluster": "balcony-solar"
   },

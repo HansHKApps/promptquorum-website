@@ -11,8 +11,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
-    next_refresh_due: '2027-03-11',
+    dateModified: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/best-local-tts-nvidia-gpu-hero-en.webp',
@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'If you already own an NVIDIA GPU, the local text-to-speech engines worth running are different from the CPU-only picks most guides default to. XTTS v2, Chatterbox, and Bark all trade CPU speed for voice-cloning quality and expressiveness that only makes sense once CUDA acceleration is available — and Kokoro is included here specifically as the counterpoint, because a GPU does not automatically mean you need the heaviest model. This guide compares all four on VRAM requirements, how much each one actually benefits from CUDA, voice-cloning capability, and license, so you pick the engine that matches your hardware and your actual use case instead of defaulting to whichever one has the flashiest demo video.',
     metaDescription:
-      'Best local TTS for an NVIDIA GPU: XTTS v2, Chatterbox, Bark, and Kokoro compared on VRAM, CUDA speedup, voice cloning, and license — with a clear pick per use case.',
+      'Best GPU for TTS: XTTS v2, Chatterbox v3, Bark, and Kokoro compared on VRAM, the hardware voice cloning locally needs, and license — with a clear pick per use case.',
     twitterDescription:
       'You have an NVIDIA GPU and want local TTS. XTTS v2, Chatterbox, and Bark actually use that CUDA acceleration — Kokoro mostly does not need it. Full VRAM and license comparison for 2026.',
     audience:
@@ -38,6 +38,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gpu accelerated text to speech',
       'chatterbox tts review',
       'kokoro tts gpu',
+      'best gpu for tts',
+      'hardware for voice cloning locally',
     ],
     current_models_mentioned: ['XTTS v2', 'Chatterbox', 'Bark', 'Kokoro'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CUDA', 'CPU'],
@@ -56,7 +58,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A GPU is not required for any of these four, but XTTS v2, Chatterbox, and Bark are meaningfully slower without CUDA acceleration.',
           'None of these four engines guarantees consent verification — never clone a real person\'s voice without their explicit permission.',
         ],
-        updatedDate: '2026-09-11',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -67,6 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Chatterbox: Best Real-Time Cloning', anchor: 'chatterbox' },
       { label: 'Bark: Best Expressive, Non-Speech Audio', anchor: 'bark' },
       { label: 'Kokoro: When a GPU Is Overkill', anchor: 'kokoro' },
+      { label: 'Other NVIDIA GPU TTS Options', anchor: 'other-options' },
       { label: 'How Much VRAM Do You Actually Need?', anchor: 'vram-guide' },
       { label: 'Voice Cloning and Consent', anchor: 'consent' },
       { label: 'Frequently Asked Questions', anchor: 'faq' },
@@ -124,12 +127,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**XTTS v2, released by Coqui and run through the [Coqui TTS toolkit](/power-local-llm/coqui-tts-review), is the best local voice-cloning option for GPU owners who need the highest quality achievable from a short reference clip.** It clones a voice from as little as 6 seconds of reference audio and speaks it back across 17 languages, including cross-lingual cloning — clone a voice from English audio, speak the result in Spanish or Japanese.',
           'On VRAM, XTTS v2\'s model weights are roughly 2 GB, but 4 GB is the practical minimum to run it and 4-6 GB is recommended for real-time inference, per PromptQuorum\'s dedicated [XTTS v2 review](/power-local-llm/xtts-v2-review). The license is the deciding factor for most readers: the Coqui Public Model License (CPML) is explicitly non-commercial, and because Coqui AI, the company, shut down its paid services in December 2023, there is currently no confirmed active pathway to a commercial license.',
+          'The original coqui-ai/TTS toolkit repository is itself unmaintained, but a community fork — [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), maintained by the Idiap Research Institute and published on PyPI as `coqui-tts` — keeps shipping releases (v0.27.5 in January 2026) under the same `tts_models/multilingual/multi-dataset/xtts_v2` model identifier. That keeps the toolkit installable and bug-fixed going forward; it does not change the XTTS v2 model\'s own CPML license, which stays non-commercial regardless of which fork runs it.',
         ],
         items: [
           'Use XTTS v2 if: your project is personal, academic, or a non-commercial prototype and you want the best cloning quality available locally.',
           'Avoid XTTS v2 if: you need a commercial license — its CPML terms are non-commercial with no confirmed active licensing path since Coqui AI\'s 2023 shutdown.',
           '**VRAM:** ~2 GB model weights, 4 GB minimum, 4-6 GB recommended for real-time inference.',
           '**Best for:** highest-fidelity local voice cloning, 17-language cross-lingual support, non-commercial or research use.',
+          'The toolkit itself lives on through the community-maintained [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) fork (`pip install coqui-tts`) — useful for installs and bug fixes, irrelevant to the model\'s non-commercial license.',
         ],
         note: 'Full licensing detail, real usage commands, and limitations are covered in PromptQuorum\'s dedicated [XTTS v2 review](/power-local-llm/xtts-v2-review).',
       },
@@ -139,13 +144,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Chatterbox, released by Resemble AI on [GitHub](https://github.com/resemble-ai/chatterbox), is the best pick for GPU owners who want real-time conversational voice cloning under a fully permissive, commercial-friendly license.** It is licensed under the **MIT License**, which — unlike XTTS v2\'s non-commercial CPML — permits commercial use without a separate agreement.',
           'Chatterbox ships in multiple sizes: a Nano variant (110 million parameters) that Resemble AI\'s own documentation says runs faster than real time on 8 CPU cores, a Turbo variant (350 million parameters) built for low latency, and a Multilingual variant (roughly 500 million parameters, on a backbone that credits Llama 3 in its architecture) supporting 20+ languages. Zero-shot voice cloning works from a reference audio clip — Resemble AI\'s own example uses a 10-second clip, though the README does not state an official minimum duration the way XTTS v2\'s does.',
-          'Resemble AI\'s public README does not publish an exact VRAM figure, so treat any specific GB number you see elsewhere as unverified until you test it on your own card. What is documented: the Nano variant runs acceptably on CPU alone, while the larger Turbo and Multilingual variants are built for GPU-accelerated, low-latency generation — CUDA and Apple Silicon (MPS) are both supported.',
+          'Chatterbox kept moving through 2026: the Multilingual variant now defaults to a newer v3 architecture (selectable via the `t3_model="v3"` parameter, with the original kept available as `t3_model="v2"`), and Resemble AI added a Flash variant built on a diffusion-LLM architecture specifically for high-throughput, at-scale deployments, alongside the existing Nano and Turbo sizes.',
+          'Resemble AI\'s public README still does not publish a single unified VRAM figure, so treat any specific GB number you see elsewhere as unverified until you test it on your own card. What is documented, from NVIDIA\'s own NVIGI packaging of the Chatterbox models: roughly 2.3 GB for Turbo running TTS-only, roughly 3.5 GB for Multilingual running TTS-only, and 8.5 GB or more for a full pipeline that adds speech recognition and text generation around the TTS step. Those are NVIDIA\'s packaging numbers, not Resemble AI\'s own published figures, but they are the most concrete VRAM data available for Chatterbox today. CUDA and Apple Silicon (MPS) are both supported.',
         ],
         items: [
           'Use Chatterbox if: you need commercial-use-eligible voice cloning with real-time or near-real-time latency, such as an interactive voice application.',
-          'Avoid Chatterbox if: you need a documented, guaranteed minimum VRAM figure before buying hardware — Resemble AI has not published one.',
-          '**VRAM:** not officially published; the smaller Nano variant is CPU-capable, while Turbo and Multilingual variants target GPU acceleration for real-time speed.',
+          'Avoid Chatterbox if: you need a documented, guaranteed minimum VRAM figure directly from Resemble AI before buying hardware — the company still has not published a unified one.',
+          '**VRAM:** not officially unified by Resemble AI; NVIDIA\'s own packaging lists ~2.3 GB (Turbo, TTS-only), ~3.5 GB (Multilingual, TTS-only), and ~8.5 GB+ for a full ASR+TTS pipeline.',
           '**Best for:** commercial products needing zero-shot conversational voice cloning under a permissive license.',
+          'Chatterbox Multilingual now defaults to a v3 architecture, and a newer Flash variant (diffusion-LLM architecture) targets high-throughput, at-scale deployments — both sit alongside the original Nano and Turbo sizes.',
           'Every Chatterbox output carries Resemble AI\'s own Perth watermarking, described in its documentation as an imperceptible neural watermark that survives MP3 compression — a built-in provenance signal, not a substitute for consent (see the Voice Cloning and Consent section below).',
         ],
       },
@@ -170,12 +177,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Kokoro is included here as the counterpoint: owning an NVIDIA GPU does not mean every TTS workload needs one, and Kokoro is proof.** At 82 million parameters, it is dramatically smaller than XTTS v2, Chatterbox, or Bark, and its own Hugging Face model card documents real-time or faster synthesis on CPU alone, with GPU use adding headroom rather than being a requirement.',
           'Kokoro is licensed under Apache 2.0, which — like Chatterbox\'s MIT license — permits commercial use without restriction. It does not support voice cloning, so it is not a substitute for XTTS v2 or Chatterbox if cloning is the requirement, but for straightforward narration, read-aloud text, or a voice layer in an app where cloning is not needed, it is a lighter and simpler choice.',
+          'Kokoro\'s own model hasn\'t changed since its January 2025 release (v1.0, 82M parameters) — no newer version has shipped as of late 2026 — but the tooling around it has: NVIDIA publishes its own ONNX-optimized build, and the popular [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) project ships separate CUDA Docker images by GPU generation. Cards from the GTX 900 series through the RTX 40 series use one default image; RTX 50-series/Blackwell cards need CUDA 12.8 and a separate `cu128` build.',
         ],
         items: [
           'Use Kokoro if: your workload is plain narration or read-aloud text, you want to keep your GPU\'s VRAM free for an LLM or other workload, or you need CPU-only deployment.',
           'Avoid Kokoro if: you need voice cloning — it does not support it, use XTTS v2 or Chatterbox instead.',
           '**VRAM:** roughly 2 GB when run on GPU; runs at real-time speed on CPU alone, per its own model card.',
           '**Best for:** simple narration and read-aloud use cases where the heavier cloning engines would be genuinely overkill.',
+          'RTX 50-series/Blackwell owners need CUDA 12.8 and the `cu128` GPU runtime build — the standard Kokoro-FastAPI GPU image (built for GTX 900 through RTX 40 series) does not cover newer cards.',
+        ],
+      },
+      otherOptions: {
+        id: 'other-options',
+        title: 'Other NVIDIA GPU TTS Options Worth Knowing About',
+        content: [
+          '**XTTS v2, Chatterbox, Bark, and Kokoro are not the only NVIDIA-accelerated local TTS engines — Fish Speech and F5-TTS are the two newest entrants worth tracking, though neither currently has a commercial-friendly license.**',
+          'Fish Audio released Fish Speech S2 in March 2026 as the successor to S1, and some 2026 community benchmarks rank it above F5-TTS on audio quality. F5-TTS is the lighter of the two at roughly 2 GB of VRAM, versus roughly 6 GB for Fish Speech. Both ship under non-commercial licenses — F5-TTS under CC-BY-NC and Fish Speech\'s open release under CC-BY-NC-SA-4.0 — so for a commercial product, Chatterbox\'s MIT license or Kokoro\'s Apache-2.0 license remain the safer picks covered in this guide.',
+        ],
+        items: [
+          '**Fish Speech S2** (March 2026): Fish Audio\'s newest release, ranked well in some community quality benchmarks; roughly 6 GB VRAM; CC-BY-NC-SA-4.0 license (non-commercial).',
+          '**F5-TTS**: lighter at roughly 2 GB VRAM; CC-BY-NC license (non-commercial).',
+          'Neither engine currently offers a commercial-friendly license — if a commercial deployment is the goal, Chatterbox (MIT) or Kokoro (Apache-2.0) are the engines in this guide to use instead.',
         ],
       },
       comparisonTable: {
@@ -195,7 +217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Engine': 'Chatterbox',
-            'VRAM (GPU)': 'Not officially published',
+            'VRAM (GPU)': '~2.3-8.5+ GB (NVIDIA, by variant)',
             'GPU speed benefit': 'Large for real-time use',
             'Voice cloning': 'Yes, zero-shot',
             'License': 'MIT',
@@ -271,7 +293,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I use Chatterbox commercially?',
-            a: 'Yes. Chatterbox, released by Resemble AI, is licensed under the MIT License, which permits commercial use without a separate agreement — unlike XTTS v2\'s non-commercial CPML license.',
+            a: 'Yes. Chatterbox, released by Resemble AI, is licensed under the MIT License, which permits commercial use without a separate agreement — unlike XTTS v2\'s non-commercial CPML license. The Multilingual variant now defaults to a newer v3 architecture, and a Flash variant targets high-throughput deployments; neither change affects the MIT license.',
+          },
+          {
+            q: 'What is the best GPU for TTS?',
+            a: 'Any NVIDIA GPU with 6 GB of VRAM or more comfortably runs XTTS v2, Chatterbox, and Kokoro; only Bark\'s full model needs more, at about 12 GB (or about 8 GB with its small-model flag). There is no single "best" GPU model for every case — match the card\'s VRAM to the engine you actually need rather than buying for the heaviest option by default.',
+          },
+          {
+            q: 'What hardware do I need to run voice cloning locally?',
+            a: 'For XTTS v2, 4-6 GB of VRAM is enough for real-time cloning. Chatterbox does not publish a single unified VRAM figure, but NVIDIA\'s own packaging of the models lists roughly 2.3-3.5 GB for the Turbo and Multilingual variants running TTS-only, and 8.5 GB or more for a full pipeline that adds speech recognition. Both also run on CPU, just meaningfully slower than with CUDA acceleration.',
           },
           {
             q: 'Is a GPU overkill for local TTS?',
@@ -299,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'For readers who already have an NVIDIA GPU and want to use it for text-to-speech, the choice comes down to what the audio needs to do. XTTS v2 is the pick for the highest achievable voice-cloning quality in a non-commercial or research context, given its non-commercial CPML license. Chatterbox is the pick when the same cloning capability needs to ship in a commercial product, thanks to its MIT license and real-time-oriented smaller model sizes. Bark is the pick specifically when the project needs expressive, non-speech audio — laughter, sighs, simple music — and can spend 8-12 GB of VRAM to get it, with the caveat that its maintenance status is uncertain. Kokoro remains the right choice whenever cloning is not the requirement: it runs comfortably on CPU alone, so reserving GPU VRAM for it is rarely worth doing. If unsure, start with Kokoro for simple narration and move up to XTTS v2 or Chatterbox only once a real cloning requirement appears — that keeps your GPU\'s VRAM available for whatever else you are running alongside it, including a local LLM. For the licensing details behind every engine mentioned here, see PromptQuorum\'s [local TTS and voice-cloning licensing guide](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).',
+          'For readers who already have an NVIDIA GPU and want to use it for text-to-speech, the choice comes down to what the audio needs to do. XTTS v2 is the pick for the highest achievable voice-cloning quality in a non-commercial or research context, given its non-commercial CPML license — kept installable today by the community-maintained [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) fork, even though the license itself hasn\'t changed. Chatterbox is the pick when the same cloning capability needs to ship in a commercial product, thanks to its MIT license and real-time-oriented smaller model sizes; it kept moving through 2026 with a v3 Multilingual architecture and a new Flash variant for high-throughput deployments, but that evolution doesn\'t change the licensing calculus here. Bark is the pick specifically when the project needs expressive, non-speech audio — laughter, sighs, simple music — and can spend 8-12 GB of VRAM to get it, with the caveat that its maintenance status is uncertain. Kokoro remains the right choice whenever cloning is not the requirement: it runs comfortably on CPU alone, so reserving GPU VRAM for it is rarely worth doing. Newer entrants Fish Speech and F5-TTS are worth tracking but currently ship under non-commercial licenses (CC-BY-NC-SA-4.0 and CC-BY-NC respectively), so they don\'t change the recommendation for a commercial product. If unsure, start with Kokoro for simple narration and move up to XTTS v2 or Chatterbox only once a real cloning requirement appears — that keeps your GPU\'s VRAM available for whatever else you are running alongside it, including a local LLM. For the licensing details behind every engine mentioned here, see PromptQuorum\'s [local TTS and voice-cloning licensing guide](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).',
       },
       sources: {
         id: 'sources',
@@ -310,6 +340,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox on GitHub](https://github.com/resemble-ai/chatterbox) — README: installation, MIT license, watermarking, and CPU/GPU support.',
           '[suno-ai/bark on GitHub](https://github.com/suno-ai/bark) — README: license, VRAM/small-model flag, and maintenance/commit history.',
           '[Kokoro-82M on Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — model card: parameter count, Apache-2.0 license, and CPU/GPU performance.',
+          '[NVIDIA NVIGI: Chatterbox TTS Model Card](https://docs.nvidia.com/ace-for-games/chatterbox-tts/nvigi-chatterbox-model-card.html) — per-variant VRAM figures for Chatterbox Turbo, Multilingual, and a full ASR+TTS pipeline.',
+          '[idiap/coqui-ai-TTS on GitHub](https://github.com/idiap/coqui-ai-TTS) — the actively maintained community fork of the Coqui TTS toolkit that still runs the XTTS v2 model.',
+          '[Kokoro-FastAPI on GitHub](https://github.com/remsky/Kokoro-FastAPI) — CUDA Docker image matrix by GPU generation, including the CUDA 12.8 requirement for RTX 50-series/Blackwell cards.',
           '[XTTS v2 Review](/power-local-llm/xtts-v2-review) — PromptQuorum\'s dedicated review with full usage commands and licensing detail.',
           '[Bark TTS Review](/power-local-llm/bark-tts-review) — PromptQuorum\'s dedicated review with VRAM figures and maintenance status.',
           '[Local TTS & Voice Cloning Licenses](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — full licensing and VRAM comparison across local TTS engines.',
@@ -332,11 +365,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Best Local TTS Engine for an NVIDIA GPU Setup (2026)',
       description:
-        'Best local TTS for an NVIDIA GPU: XTTS v2, Chatterbox, Bark, and Kokoro compared on VRAM, CUDA speedup, voice cloning, and license — with a clear pick per use case.',
+        'Best GPU for TTS: XTTS v2, Chatterbox v3, Bark, and Kokoro compared on VRAM, the hardware voice cloning locally needs, and license — with a clear pick per use case.',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-tts-nvidia-gpu',
       inLanguage: 'en',
       datePublished: '2026-09-11',
-      dateModified: '2026-09-11',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -365,8 +398,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
-    next_refresh_due: '2027-03-11',
+    dateModified: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/best-local-tts-nvidia-gpu-hero-de.webp',
@@ -375,7 +408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Wenn Sie bereits eine NVIDIA-GPU besitzen, unterscheiden sich die lohnenden lokalen Text-zu-Sprache-Engines von den reinen CPU-Empfehlungen, auf die die meisten Ratgeber standardmäßig setzen. XTTS v2, Chatterbox und Bark tauschen alle CPU-Geschwindigkeit gegen Voice-Cloning-Qualität und Ausdrucksstärke ein, was erst mit CUDA-Beschleunigung wirklich sinnvoll wird — und Kokoro ist hier gezielt als Gegenbeispiel aufgeführt, denn eine GPU bedeutet nicht automatisch, dass Sie das schwerste Modell brauchen. Dieser Leitfaden vergleicht alle vier Engines anhand von VRAM-Bedarf, dem tatsächlichen Nutzen von CUDA, der Voice-Cloning-Fähigkeit und der Lizenz, damit Sie die Engine wählen, die zu Ihrer Hardware und Ihrem tatsächlichen Anwendungsfall passt — statt sich für das Modell mit dem beeindruckendsten Demo-Video zu entscheiden.',
     metaDescription:
-      'Beste lokale TTS für eine NVIDIA-GPU: XTTS v2, Chatterbox, Bark und Kokoro im Vergleich zu VRAM, CUDA-Beschleunigung, Voice-Cloning und Lizenz — mit klarer Empfehlung je Anwendungsfall.',
+      'Beste GPU für TTS: XTTS v2, Chatterbox v3, Bark und Kokoro im Vergleich — VRAM, Hardware für Voice-Cloning und Lizenz, mit klarer Empfehlung.',
     twitterDescription:
       'Sie haben eine NVIDIA-GPU und wollen lokales TTS. XTTS v2, Chatterbox und Bark nutzen diese CUDA-Beschleunigung tatsächlich — Kokoro braucht sie kaum. Vollständiger VRAM- und Lizenzvergleich für 2026.',
     audience:
@@ -409,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Für keine dieser vier Engines ist eine GPU zwingend erforderlich, aber XTTS v2, Chatterbox und Bark sind ohne CUDA-Beschleunigung merklich langsamer.',
         'Keine dieser vier Engines garantiert eine Einwilligungsprüfung — klonen Sie niemals die Stimme einer echten Person ohne deren ausdrückliche Erlaubnis.',
       ],
-      updatedDate: '2026-09-11',
+      updatedDate: '2026-11-19',
     },
     toc: [
       { label: 'Kurzantwort', anchor: 'quick-answer' },
@@ -419,6 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Chatterbox: bestes Echtzeit-Cloning', anchor: 'chatterbox' },
       { label: 'Bark: bestes ausdrucksstarkes, nicht-sprachliches Audio', anchor: 'bark' },
       { label: 'Kokoro: wenn eine GPU überdimensioniert ist', anchor: 'kokoro' },
+      { label: 'Weitere TTS-Optionen für NVIDIA-GPUs', anchor: 'other-options' },
       { label: 'Wie viel VRAM brauchen Sie tatsächlich?', anchor: 'vram-guide' },
       { label: 'Voice-Cloning und Einwilligung', anchor: 'consent' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
@@ -476,12 +510,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**XTTS v2, veröffentlicht von Coqui und ausgeführt über das [Coqui-TTS-Toolkit](/de/power-local-llm/coqui-tts-review), ist die beste lokale Voice-Cloning-Option für GPU-Besitzer, die die höchste aus einem kurzen Referenzclip erreichbare Qualität benötigen.** Es klont eine Stimme aus nur 6 Sekunden Referenzaudio und spricht sie in 17 Sprachen zurück, einschließlich sprachübergreifendem Cloning — eine Stimme aus englischem Audio klonen und auf Spanisch oder Japanisch sprechen lassen.',
           'Beim VRAM betragen XTTS v2s Modellgewichte etwa 2 GB, doch 4 GB sind das praktische Minimum zum Ausführen, und 4-6 GB werden für Echtzeit-Inferenz empfohlen, laut PromptQuorums dediziertem [XTTS-v2-Test](/de/power-local-llm/xtts-v2-review). Die Lizenz ist für die meisten Leser der entscheidende Faktor: Die Coqui Public Model License (CPML) ist ausdrücklich nicht-kommerziell, und da Coqui AI, das Unternehmen, seine kostenpflichtigen Dienste im Dezember 2023 einstellte, gibt es derzeit keinen bestätigten aktiven Weg zu einer kommerziellen Lizenz.',
+          'Das ursprüngliche coqui-ai/TTS-Toolkit-Repository selbst ist unbetreut, doch ein Community-Fork — [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), betreut vom Idiap Research Institute und auf PyPI als `coqui-tts` veröffentlicht — liefert weiterhin Releases (v0.27.5 im Januar 2026) unter derselben Modellkennung `tts_models/multilingual/multi-dataset/xtts_v2`. Das hält das Toolkit installierbar und fehlerbereinigt; es ändert nichts an der nicht-kommerziellen CPML-Lizenz des XTTS-v2-Modells selbst, unabhängig davon, welcher Fork es ausführt.',
         ],
         items: [
           'Nutzen Sie XTTS v2, wenn: Ihr Projekt privat, akademisch oder ein nicht-kommerzieller Prototyp ist und Sie die beste lokal verfügbare Cloning-Qualität wollen.',
           'Vermeiden Sie XTTS v2, wenn: Sie eine kommerzielle Lizenz benötigen — seine CPML-Bedingungen sind nicht-kommerziell, ohne bestätigten aktiven Lizenzweg seit Coqui AIs Schließung 2023.',
           '**VRAM:** ~2 GB Modellgewichte, 4 GB Minimum, 4-6 GB empfohlen für Echtzeit-Inferenz.',
           '**Am besten für:** höchste Treue beim lokalen Voice-Cloning, sprachübergreifende Unterstützung für 17 Sprachen, nicht-kommerzielle oder Forschungsnutzung.',
+          'Das Toolkit selbst lebt im community-betreuten [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)-Fork weiter (`pip install coqui-tts`) — nützlich für Installation und Fehlerbehebungen, ohne Einfluss auf die nicht-kommerzielle Modell-Lizenz.',
         ],
         note: 'Vollständige Lizenzdetails, echte Nutzungsbefehle und Einschränkungen finden Sie in PromptQuorums dediziertem [XTTS-v2-Test](/de/power-local-llm/xtts-v2-review).',
       },
@@ -491,13 +527,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Chatterbox, veröffentlicht von Resemble AI auf [GitHub](https://github.com/resemble-ai/chatterbox), ist die beste Wahl für GPU-Besitzer, die Echtzeit-Konversations-Voice-Cloning unter einer vollständig freizügigen, kommerzialisierbaren Lizenz wollen.** Es steht unter der **MIT-Lizenz**, die — anders als XTTS v2s nicht-kommerzielle CPML — kommerzielle Nutzung ohne separate Vereinbarung erlaubt.',
           'Chatterbox erscheint in mehreren Größen: eine Nano-Variante (110 Millionen Parameter), die laut Resemble AIs eigener Dokumentation auf 8 CPU-Kernen schneller als Echtzeit läuft, eine Turbo-Variante (350 Millionen Parameter) für niedrige Latenz, und eine mehrsprachige Variante (rund 500 Millionen Parameter, auf einem Backbone, das Llama 3 in seiner Architektur nennt), die über 20 Sprachen unterstützt. Zero-Shot-Voice-Cloning funktioniert aus einem Referenzaudioclip — Resemble AIs eigenes Beispiel nutzt einen 10-Sekunden-Clip, wobei das README keine offizielle Mindestdauer wie bei XTTS v2 angibt.',
-          'Resemble AIs öffentliches README veröffentlicht keinen exakten VRAM-Wert — behandeln Sie jede spezifische GB-Zahl, die Sie anderswo sehen, als unbestätigt, bis Sie sie auf Ihrer eigenen Karte testen. Dokumentiert ist: Die Nano-Variante läuft akzeptabel allein auf der CPU, während die größeren Turbo- und Multilingual-Varianten für GPU-beschleunigte, latenzarme Generierung ausgelegt sind — sowohl CUDA als auch Apple Silicon (MPS) werden unterstützt.',
+          'Chatterbox entwickelte sich 2026 weiter: Die Multilingual-Variante nutzt inzwischen standardmäßig eine neuere v3-Architektur (wählbar über den Parameter `t3_model="v3"`, die ursprüngliche Version bleibt als `t3_model="v2"` verfügbar), und Resemble AI ergänzte eine Flash-Variante auf Basis einer Diffusion-LLM-Architektur speziell für Deployments mit hohem Durchsatz, neben den bestehenden Nano- und Turbo-Größen.',
+          'Resemble AIs öffentliches README veröffentlicht weiterhin keinen einheitlichen VRAM-Wert — behandeln Sie jede spezifische GB-Zahl, die Sie anderswo sehen, als unbestätigt, bis Sie sie auf Ihrer eigenen Karte testen. Dokumentiert ist, aus NVIDIAs eigener NVIGI-Verpackung der Chatterbox-Modelle: rund 2,3 GB für Turbo nur für TTS, rund 3,5 GB für Multilingual nur für TTS, und 8,5 GB oder mehr für eine vollständige Pipeline, die Spracherkennung und Texterzeugung um den TTS-Schritt ergänzt. Das sind NVIDIAs Verpackungswerte, nicht Resemble AIs eigene veröffentlichte Zahlen, aber derzeit die konkretesten verfügbaren VRAM-Daten für Chatterbox. Sowohl CUDA als auch Apple Silicon (MPS) werden unterstützt.',
         ],
         items: [
           'Nutzen Sie Chatterbox, wenn: Sie kommerziell nutzbares Voice-Cloning mit Echtzeit- oder Nahe-Echtzeit-Latenz benötigen, etwa für eine interaktive Sprachanwendung.',
-          'Vermeiden Sie Chatterbox, wenn: Sie vor dem Hardwarekauf eine dokumentierte, garantierte VRAM-Mindestangabe benötigen — Resemble AI hat keine veröffentlicht.',
-          '**VRAM:** nicht offiziell veröffentlicht; die kleinere Nano-Variante ist CPU-fähig, während Turbo- und Multilingual-Varianten auf GPU-Beschleunigung für Echtzeitgeschwindigkeit zielen.',
+          'Vermeiden Sie Chatterbox, wenn: Sie vor dem Hardwarekauf eine dokumentierte, garantierte VRAM-Mindestangabe direkt von Resemble AI benötigen — das Unternehmen hat weiterhin keine einheitliche veröffentlicht.',
+          '**VRAM:** nicht einheitlich von Resemble AI veröffentlicht; NVIDIAs eigene Verpackung nennt ~2,3 GB (Turbo, nur TTS), ~3,5 GB (Multilingual, nur TTS) und ~8,5+ GB für eine vollständige ASR+TTS-Pipeline.',
           '**Am besten für:** kommerzielle Produkte, die Zero-Shot-Konversations-Voice-Cloning unter einer freizügigen Lizenz benötigen.',
+          'Chatterbox Multilingual nutzt inzwischen standardmäßig eine v3-Architektur, und eine neuere Flash-Variante (Diffusion-LLM-Architektur) zielt auf Deployments mit hohem Durchsatz — beide ergänzen die ursprünglichen Nano- und Turbo-Größen.',
           'Jede Chatterbox-Ausgabe trägt Resemble AIs eigenes Perth-Wasserzeichen, laut Dokumentation ein nicht wahrnehmbares neuronales Wasserzeichen, das MP3-Kompression übersteht — ein eingebautes Herkunftssignal, kein Ersatz für Einwilligung (siehe Abschnitt Voice-Cloning und Einwilligung unten).',
         ],
       },
@@ -522,12 +560,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Kokoro ist hier als Gegenbeispiel aufgeführt: Der Besitz einer NVIDIA-GPU bedeutet nicht, dass jede TTS-Aufgabe eine braucht, und Kokoro ist der Beweis.** Mit 82 Millionen Parametern ist es deutlich kleiner als XTTS v2, Chatterbox oder Bark, und seine eigene Hugging-Face-Model-Card dokumentiert Echtzeit- oder schnellere Synthese allein auf der CPU, wobei GPU-Nutzung nur zusätzlichen Spielraum bringt, aber keine Voraussetzung ist.',
           'Kokoro steht unter der Apache-2.0-Lizenz, die — wie Chatterboxs MIT-Lizenz — kommerzielle Nutzung ohne Einschränkung erlaubt. Es unterstützt kein Voice-Cloning und ist daher kein Ersatz für XTTS v2 oder Chatterbox, wenn Cloning die Anforderung ist, doch für einfache Vertonung, Vorlesetext oder eine Sprachebene in einer App, in der Cloning nicht benötigt wird, ist es eine leichtere und einfachere Wahl.',
+          'Kokoros eigenes Modell hat sich seit dem Release im Januar 2025 (v1.0, 82M Parameter) nicht verändert — bis Ende 2026 ist keine neuere Version erschienen —, doch das Umfeld hat sich weiterentwickelt: NVIDIA veröffentlicht einen eigenen ONNX-optimierten Build, und das populäre [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI)-Projekt liefert separate CUDA-Docker-Images je GPU-Generation. Karten von der GTX-900-Serie bis zur RTX-40-Serie nutzen ein Standard-Image; RTX-50-Serie/Blackwell-Karten benötigen CUDA 12.8 und einen separaten `cu128`-Build.',
         ],
         items: [
           'Nutzen Sie Kokoro, wenn: Ihre Aufgabe reine Vertonung oder Vorlesetext ist, Sie den VRAM Ihrer GPU für ein LLM oder eine andere Aufgabe freihalten wollen, oder Sie eine reine CPU-Bereitstellung benötigen.',
           'Vermeiden Sie Kokoro, wenn: Sie Voice-Cloning benötigen — das unterstützt es nicht, nutzen Sie stattdessen XTTS v2 oder Chatterbox.',
           '**VRAM:** rund 2 GB bei GPU-Betrieb; läuft laut eigener Model-Card allein auf der CPU in Echtzeitgeschwindigkeit.',
           '**Am besten für:** einfache Vertonung und Vorlesetext-Anwendungsfälle, bei denen die schwereren Cloning-Engines wirklich überdimensioniert wären.',
+          'RTX-50-Serie/Blackwell-Besitzer benötigen CUDA 12.8 und den `cu128`-GPU-Laufzeit-Build — das Standard-Kokoro-FastAPI-GPU-Image (für GTX 900 bis RTX 40) deckt neuere Karten nicht ab.',
+        ],
+      },
+      otherOptions: {
+        id: 'other-options',
+        title: 'Weitere TTS-Optionen für NVIDIA-GPUs',
+        content: [
+          '**XTTS v2, Chatterbox, Bark und Kokoro sind nicht die einzigen NVIDIA-beschleunigten lokalen TTS-Engines — Fish Speech und F5-TTS sind die beiden neuesten Einsteiger, die einen Blick wert sind, auch wenn beide derzeit keine kommerzialisierbare Lizenz haben.**',
+          'Fish Audio veröffentlichte Fish Speech S2 im März 2026 als Nachfolger von S1, und manche Community-Benchmarks aus 2026 bewerten es bei der Audioqualität über F5-TTS. F5-TTS ist mit rund 2 GB VRAM das leichtere der beiden, gegenüber rund 6 GB bei Fish Speech. Beide stehen unter nicht-kommerziellen Lizenzen — F5-TTS unter CC-BY-NC und Fish Speechs offenes Release unter CC-BY-NC-SA-4.0 —, sodass für ein kommerzielles Produkt Chatterboxs MIT-Lizenz oder Kokoros Apache-2.0-Lizenz die sichereren, in diesem Leitfaden behandelten Optionen bleiben.',
+        ],
+        items: [
+          '**Fish Speech S2** (März 2026): Fish Audios neuestes Release, in manchen Community-Qualitätsbenchmarks gut bewertet; rund 6 GB VRAM; CC-BY-NC-SA-4.0-Lizenz (nicht-kommerziell).',
+          '**F5-TTS**: leichter mit rund 2 GB VRAM; CC-BY-NC-Lizenz (nicht-kommerziell).',
+          'Keine der beiden Engines bietet derzeit eine kommerzialisierbare Lizenz — für ein kommerzielles Deployment sind Chatterbox (MIT) oder Kokoro (Apache-2.0) die in diesem Leitfaden passenden Engines.',
         ],
       },
       comparisonTable: {
@@ -547,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Engine': 'Chatterbox',
-            'VRAM (GPU)': 'Nicht offiziell veröffentlicht',
+            'VRAM (GPU)': '~2,3-8,5+ GB (NVIDIA, je Variante)',
             'GPU-Geschwindigkeitsvorteil': 'Groß für Echtzeitnutzung',
             'Voice-Cloning': 'Ja, Zero-Shot',
             'Lizenz': 'MIT',
@@ -623,7 +676,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Darf ich Chatterbox kommerziell nutzen?',
-            a: 'Ja. Chatterbox, veröffentlicht von Resemble AI, steht unter der MIT-Lizenz, die kommerzielle Nutzung ohne separate Vereinbarung erlaubt — anders als XTTS v2s nicht-kommerzielle CPML-Lizenz.',
+            a: 'Ja. Chatterbox, veröffentlicht von Resemble AI, steht unter der MIT-Lizenz, die kommerzielle Nutzung ohne separate Vereinbarung erlaubt — anders als XTTS v2s nicht-kommerzielle CPML-Lizenz. Die Multilingual-Variante nutzt inzwischen standardmäßig eine neuere v3-Architektur, und eine Flash-Variante zielt auf Deployments mit hohem Durchsatz; keine dieser Änderungen betrifft die MIT-Lizenz.',
+          },
+          {
+            q: 'Was ist die beste GPU für TTS?',
+            a: 'Jede NVIDIA-GPU mit 6 GB VRAM oder mehr führt XTTS v2, Chatterbox und Kokoro problemlos aus; nur Barks volles Modell benötigt mehr, rund 12 GB (oder rund 8 GB mit der Small-Model-Variable). Es gibt keine einzelne „beste" GPU für jeden Fall — wählen Sie den VRAM der Karte passend zur tatsächlich benötigten Engine, statt standardmäßig für die schwerste Option zu kaufen.',
+          },
+          {
+            q: 'Welche Hardware brauche ich, um Voice-Cloning lokal auszuführen?',
+            a: 'Für XTTS v2 reichen 4-6 GB VRAM für Echtzeit-Cloning. Chatterbox veröffentlicht keinen einheitlichen VRAM-Wert, doch NVIDIAs eigene Verpackung der Modelle nennt rund 2,3-3,5 GB für die Turbo- und Multilingual-Variante allein für TTS und 8,5 GB oder mehr für eine vollständige Pipeline mit zusätzlicher Spracherkennung. Beide laufen auch auf der CPU, nur merklich langsamer als mit CUDA-Beschleunigung.',
           },
           {
             q: 'Ist eine GPU für lokales TTS überdimensioniert?',
@@ -651,7 +712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Für Leser, die bereits eine NVIDIA-GPU besitzen und sie für Text-zu-Sprache nutzen möchten, hängt die Wahl davon ab, was das Audio leisten muss. XTTS v2 ist die Wahl für die höchste erreichbare Voice-Cloning-Qualität in einem nicht-kommerziellen oder Forschungskontext, aufgrund seiner nicht-kommerziellen CPML-Lizenz. Chatterbox ist die Wahl, wenn dieselbe Cloning-Fähigkeit in einem kommerziellen Produkt eingesetzt werden muss, dank seiner MIT-Lizenz und der auf Echtzeit ausgelegten kleineren Modellgrößen. Bark ist speziell die Wahl, wenn das Projekt ausdrucksstarkes, nicht-sprachliches Audio benötigt — Lachen, Seufzer, einfache Musik — und dafür 8-12 GB VRAM investieren kann, mit dem Vorbehalt, dass sein Wartungsstatus ungewiss ist. Kokoro bleibt die richtige Wahl, wann immer Cloning nicht die Anforderung ist: Es läuft problemlos allein auf der CPU, sodass das Reservieren von GPU-VRAM dafür selten lohnt. Im Zweifel starten Sie mit Kokoro für einfache Vertonung und steigen erst auf XTTS v2 oder Chatterbox um, sobald eine echte Cloning-Anforderung entsteht — so bleibt der VRAM Ihrer GPU für alles andere verfügbar, was Sie parallel betreiben, einschließlich eines lokalen LLM. Die Lizenzdetails zu jeder hier genannten Engine finden Sie in PromptQuorums [Leitfaden zu lokalen TTS- und Voice-Cloning-Lizenzen](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).',
+          'Für Leser, die bereits eine NVIDIA-GPU besitzen und sie für Text-zu-Sprache nutzen möchten, hängt die Wahl davon ab, was das Audio leisten muss. XTTS v2 ist die Wahl für die höchste erreichbare Voice-Cloning-Qualität in einem nicht-kommerziellen oder Forschungskontext, aufgrund seiner nicht-kommerziellen CPML-Lizenz — heute installierbar gehalten durch den community-betreuten [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)-Fork, auch wenn sich die Lizenz selbst nicht geändert hat. Chatterbox ist die Wahl, wenn dieselbe Cloning-Fähigkeit in einem kommerziellen Produkt eingesetzt werden muss, dank seiner MIT-Lizenz und der auf Echtzeit ausgelegten kleineren Modellgrößen; es entwickelte sich 2026 mit einer v3-Multilingual-Architektur und einer neuen Flash-Variante für Deployments mit hohem Durchsatz weiter, was an der Lizenzlage hier jedoch nichts ändert. Bark ist speziell die Wahl, wenn das Projekt ausdrucksstarkes, nicht-sprachliches Audio benötigt — Lachen, Seufzer, einfache Musik — und dafür 8-12 GB VRAM investieren kann, mit dem Vorbehalt, dass sein Wartungsstatus ungewiss ist. Kokoro bleibt die richtige Wahl, wann immer Cloning nicht die Anforderung ist: Es läuft problemlos allein auf der CPU, sodass das Reservieren von GPU-VRAM dafür selten lohnt. Die neueren Einsteiger Fish Speech und F5-TTS sind einen Blick wert, stehen aber derzeit unter nicht-kommerziellen Lizenzen (CC-BY-NC-SA-4.0 bzw. CC-BY-NC), sodass sie die Empfehlung für ein kommerzielles Produkt nicht ändern. Im Zweifel starten Sie mit Kokoro für einfache Vertonung und steigen erst auf XTTS v2 oder Chatterbox um, sobald eine echte Cloning-Anforderung entsteht — so bleibt der VRAM Ihrer GPU für alles andere verfügbar, was Sie parallel betreiben, einschließlich eines lokalen LLM. Die Lizenzdetails zu jeder hier genannten Engine finden Sie in PromptQuorums [Leitfaden zu lokalen TTS- und Voice-Cloning-Lizenzen](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).',
       },
       sources: {
         id: 'sources',
@@ -662,6 +723,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox auf GitHub](https://github.com/resemble-ai/chatterbox) — README: Installation, MIT-Lizenz, Wasserzeichen und CPU-/GPU-Unterstützung.',
           '[suno-ai/bark auf GitHub](https://github.com/suno-ai/bark) — README: Lizenz, VRAM-/Small-Model-Variable und Wartungs-/Commit-Historie.',
           '[Kokoro-82M auf Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — Model-Card: Parameterzahl, Apache-2.0-Lizenz und CPU-/GPU-Performance.',
+          '[NVIDIA NVIGI: Chatterbox-TTS-Model-Card](https://docs.nvidia.com/ace-for-games/chatterbox-tts/nvigi-chatterbox-model-card.html) — VRAM-Werte je Variante für Chatterbox Turbo, Multilingual und eine vollständige ASR+TTS-Pipeline.',
+          '[idiap/coqui-ai-TTS auf GitHub](https://github.com/idiap/coqui-ai-TTS) — der aktiv betreute Community-Fork des Coqui-TTS-Toolkits, der weiterhin das XTTS-v2-Modell ausführt.',
+          '[Kokoro-FastAPI auf GitHub](https://github.com/remsky/Kokoro-FastAPI) — CUDA-Docker-Image-Matrix je GPU-Generation, einschließlich der CUDA-12.8-Anforderung für RTX-50-Serie/Blackwell-Karten.',
           '[XTTS-v2-Test](/de/power-local-llm/xtts-v2-review) — PromptQuorums dedizierter Test mit vollständigen Nutzungsbefehlen und Lizenzdetails.',
           '[Bark-TTS-Test](/de/power-local-llm/bark-tts-review) — PromptQuorums dedizierter Test mit VRAM-Werten und Wartungsstatus.',
           '[Lokale TTS- und Voice-Cloning-Lizenzen](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — vollständiger Lizenz- und VRAM-Vergleich über lokale TTS-Engines hinweg.',
@@ -684,11 +748,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Die beste lokale TTS-Engine für ein NVIDIA-GPU-Setup (2026)',
       description:
-        'Beste lokale TTS für eine NVIDIA-GPU: XTTS v2, Chatterbox, Bark und Kokoro im Vergleich zu VRAM, CUDA-Beschleunigung, Voice-Cloning und Lizenz — mit klarer Empfehlung je Anwendungsfall.',
+        'Beste GPU für TTS: XTTS v2, Chatterbox v3, Bark und Kokoro im Vergleich — VRAM, Hardware für Voice-Cloning und Lizenz, mit klarer Empfehlung.',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-tts-nvidia-gpu',
       inLanguage: 'de',
       datePublished: '2026-09-11',
-      dateModified: '2026-09-11',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -717,8 +781,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
-    next_refresh_due: '2027-03-11',
+    dateModified: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/best-local-tts-nvidia-gpu-hero-fr.webp',
@@ -727,7 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Si vous possédez déjà un GPU NVIDIA, les moteurs de synthèse vocale locaux qui valent la peine diffèrent des choix CPU par défaut de la plupart des guides. XTTS v2, Chatterbox et Bark échangent tous de la vitesse CPU contre une qualité de clonage vocal et une expressivité qui ne prennent tout leur sens qu\'avec l\'accélération CUDA — et Kokoro figure ici précisément comme contre-exemple, car posséder un GPU ne signifie pas automatiquement avoir besoin du modèle le plus lourd. Ce guide compare les quatre moteurs sur leurs besoins en VRAM, le bénéfice réel de CUDA, leur capacité de clonage vocal et leur licence, afin que vous choisissiez le moteur adapté à votre matériel et à votre usage réel plutôt que celui de la vidéo de démonstration la plus impressionnante.',
     metaDescription:
-      'Meilleur TTS local pour GPU NVIDIA : XTTS v2, Chatterbox, Bark et Kokoro comparés sur VRAM, accélération CUDA, clonage vocal et licence — avec un choix clair par cas d\'usage.',
+      'Meilleur GPU pour TTS : XTTS v2, Chatterbox v3, Bark et Kokoro comparés sur VRAM, matériel pour clonage vocal et licence — choix clair par usage.',
     twitterDescription:
       'Vous avez un GPU NVIDIA et voulez du TTS local. XTTS v2, Chatterbox et Bark exploitent vraiment cette accélération CUDA — Kokoro en a rarement besoin. Comparatif complet VRAM et licences pour 2026.',
     audience:
@@ -761,7 +825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Aucun de ces quatre moteurs n\'exige un GPU, mais XTTS v2, Chatterbox et Bark sont sensiblement plus lents sans accélération CUDA.',
         'Aucun de ces quatre moteurs ne garantit une vérification du consentement — ne clonez jamais la voix d\'une personne réelle sans son autorisation explicite.',
       ],
-      updatedDate: '2026-09-11',
+      updatedDate: '2026-11-19',
     },
     toc: [
       { label: 'Réponse rapide', anchor: 'quick-answer' },
@@ -771,6 +835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Chatterbox : meilleur clonage en temps réel', anchor: 'chatterbox' },
       { label: 'Bark : meilleur audio expressif non vocal', anchor: 'bark' },
       { label: 'Kokoro : quand un GPU est superflu', anchor: 'kokoro' },
+      { label: 'Autres options TTS pour GPU NVIDIA', anchor: 'other-options' },
       { label: 'Combien de VRAM vous faut-il vraiment ?', anchor: 'vram-guide' },
       { label: 'Clonage vocal et consentement', anchor: 'consent' },
       { label: 'Questions fréquemment posées', anchor: 'faq' },
@@ -828,12 +893,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**XTTS v2, publié par Coqui et exécuté via le [toolkit Coqui TTS](/fr/power-local-llm/coqui-tts-review), est la meilleure option de clonage vocal local pour les possesseurs de GPU cherchant la meilleure qualité atteignable à partir d\'un court extrait de référence.** Il clone une voix à partir de seulement 6 secondes d\'audio de référence et la restitue dans 17 langues, y compris en clonage translinguistique — cloner une voix à partir d\'un audio anglais et la faire parler en espagnol ou en japonais.',
           'Côté VRAM, les poids du modèle XTTS v2 pèsent environ 2 Go, mais 4 Go constituent le minimum pratique pour le faire tourner, et 4-6 Go sont recommandés pour une inférence en temps réel, selon le [test XTTS v2](/fr/power-local-llm/xtts-v2-review) dédié de PromptQuorum. La licence est le facteur décisif pour la plupart des lecteurs : la Coqui Public Model License (CPML) est explicitement non commerciale, et comme Coqui AI, l\'entreprise, a cessé ses services payants en décembre 2023, il n\'existe actuellement aucune voie confirmée vers une licence commerciale.',
+          'Le dépôt du toolkit coqui-ai/TTS original n\'est lui-même plus maintenu, mais un fork communautaire — [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), maintenu par l\'Idiap Research Institute et publié sur PyPI sous le nom `coqui-tts` — continue de livrer des versions (v0.27.5 en janvier 2026) sous le même identifiant de modèle `tts_models/multilingual/multi-dataset/xtts_v2`. Cela garde le toolkit installable et corrigé des bugs ; cela ne change rien à la licence CPML non commerciale du modèle XTTS v2 lui-même, quel que soit le fork qui l\'exécute.',
         ],
         items: [
           'Utilisez XTTS v2 si : votre projet est personnel, académique ou un prototype non commercial et vous voulez la meilleure qualité de clonage disponible localement.',
           'Évitez XTTS v2 si : vous avez besoin d\'une licence commerciale — ses conditions CPML sont non commerciales, sans voie de licence active confirmée depuis la fermeture de Coqui AI en 2023.',
           '**VRAM :** ~2 Go pour les poids du modèle, 4 Go minimum, 4-6 Go recommandés pour l\'inférence en temps réel.',
           '**Idéal pour :** clonage vocal local de plus haute fidélité, prise en charge translinguistique de 17 langues, usage non commercial ou recherche.',
+          'Le toolkit lui-même survit grâce au fork communautaire [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) (`pip install coqui-tts`) — utile pour l\'installation et les correctifs, sans effet sur la licence non commerciale du modèle.',
         ],
         note: 'Détails de licence complets, commandes d\'usage réelles et limites sont couverts dans le [test XTTS v2](/fr/power-local-llm/xtts-v2-review) dédié de PromptQuorum.',
       },
@@ -843,13 +910,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Chatterbox, publié par Resemble AI sur [GitHub](https://github.com/resemble-ai/chatterbox), est le meilleur choix pour les possesseurs de GPU voulant du clonage vocal conversationnel en temps réel sous une licence entièrement permissive et compatible commercial.** Il est sous **licence MIT**, qui — contrairement à la CPML non commerciale de XTTS v2 — autorise l\'usage commercial sans accord séparé.',
           'Chatterbox est disponible en plusieurs tailles : une variante Nano (110 millions de paramètres) que la documentation de Resemble AI décrit comme plus rapide que le temps réel sur 8 cœurs CPU, une variante Turbo (350 millions de paramètres) conçue pour la faible latence, et une variante multilingue (environ 500 millions de paramètres, sur une architecture qui crédite Llama 3) prenant en charge plus de 20 langues. Le clonage vocal zero-shot fonctionne à partir d\'un extrait audio de référence — l\'exemple officiel de Resemble AI utilise un clip de 10 secondes, bien que le README n\'indique pas de durée minimale officielle comme celui de XTTS v2.',
-          'Le README public de Resemble AI ne publie pas de chiffre VRAM exact — traitez tout chiffre en Go précis vu ailleurs comme non vérifié tant que vous ne l\'avez pas testé sur votre propre carte. Ce qui est documenté : la variante Nano fonctionne correctement sur CPU seul, tandis que les variantes Turbo et Multilingual, plus grandes, sont conçues pour une génération accélérée par GPU à faible latence — CUDA et Apple Silicon (MPS) sont tous deux pris en charge.',
+          'Chatterbox a continué d\'évoluer en 2026 : la variante Multilingual utilise désormais par défaut une architecture v3 plus récente (sélectionnable via le paramètre `t3_model="v3"`, l\'original restant disponible en `t3_model="v2"`), et Resemble AI a ajouté une variante Flash sur une architecture diffusion-LLM, pensée spécifiquement pour des déploiements à très fort débit, aux côtés des tailles Nano et Turbo existantes.',
+          'Le README public de Resemble AI ne publie toujours pas de chiffre VRAM unique — traitez tout chiffre en Go précis vu ailleurs comme non vérifié tant que vous ne l\'avez pas testé sur votre propre carte. Ce qui est documenté, via le conditionnement NVIGI propre à NVIDIA des modèles Chatterbox : environ 2,3 Go pour Turbo en TTS seul, environ 3,5 Go pour Multilingual en TTS seul, et 8,5 Go ou plus pour un pipeline complet ajoutant reconnaissance vocale et génération de texte autour de l\'étape TTS. Ce sont les chiffres de conditionnement de NVIDIA, pas ceux publiés par Resemble AI elle-même, mais ils restent les données VRAM les plus concrètes disponibles pour Chatterbox aujourd\'hui. CUDA et Apple Silicon (MPS) sont tous deux pris en charge.',
         ],
         items: [
           'Utilisez Chatterbox si : vous avez besoin d\'un clonage vocal éligible à un usage commercial avec une latence en temps réel ou quasi temps réel, comme pour une application vocale interactive.',
-          'Évitez Chatterbox si : vous avez besoin d\'un chiffre VRAM minimum documenté et garanti avant d\'acheter du matériel — Resemble AI n\'en a pas publié.',
-          '**VRAM :** non officiellement publié ; la variante Nano, plus petite, est compatible CPU, tandis que les variantes Turbo et Multilingual visent l\'accélération GPU pour une vitesse temps réel.',
+          'Évitez Chatterbox si : vous avez besoin d\'un chiffre VRAM minimum documenté et garanti directement par Resemble AI avant d\'acheter du matériel — l\'entreprise n\'en a toujours pas publié de chiffre unique.',
+          '**VRAM :** non unifié par Resemble AI ; le conditionnement propre à NVIDIA indique ~2,3 Go (Turbo, TTS seul), ~3,5 Go (Multilingual, TTS seul) et ~8,5 Go et plus pour un pipeline ASR+TTS complet.',
           '**Idéal pour :** produits commerciaux nécessitant un clonage vocal conversationnel zero-shot sous licence permissive.',
+          'Chatterbox Multilingual utilise désormais par défaut une architecture v3, et une nouvelle variante Flash (architecture diffusion-LLM) cible les déploiements à fort débit — les deux s\'ajoutent aux tailles Nano et Turbo d\'origine.',
           'Chaque sortie Chatterbox porte le filigrane Perth propre à Resemble AI, décrit dans sa documentation comme un filigrane neuronal imperceptible qui survit à la compression MP3 — un signal de provenance intégré, pas un substitut au consentement (voir la section Clonage vocal et consentement ci-dessous).',
         ],
       },
@@ -874,12 +943,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Kokoro figure ici comme contre-exemple : posséder un GPU NVIDIA ne signifie pas que chaque charge TTS en a besoin, et Kokoro le prouve.** Avec 82 millions de paramètres, il est nettement plus petit que XTTS v2, Chatterbox ou Bark, et sa propre fiche modèle Hugging Face documente une synthèse en temps réel ou plus rapide sur CPU seul, l\'usage d\'un GPU apportant de la marge plutôt qu\'une nécessité.',
           'Kokoro est sous licence Apache 2.0, qui — comme la licence MIT de Chatterbox — autorise l\'usage commercial sans restriction. Il ne prend pas en charge le clonage vocal, il ne remplace donc pas XTTS v2 ou Chatterbox si le clonage est requis, mais pour de la narration simple, de la lecture de texte, ou une couche vocale dans une application où le clonage n\'est pas nécessaire, c\'est un choix plus léger et plus simple.',
+          'Le modèle Kokoro lui-même n\'a pas changé depuis sa sortie de janvier 2025 (v1.0, 82 M de paramètres) — aucune version plus récente n\'est parue fin 2026 — mais l\'écosystème autour a évolué : NVIDIA publie son propre build optimisé ONNX, et le projet populaire [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) propose des images Docker CUDA distinctes par génération de GPU. Les cartes de la série GTX 900 à la série RTX 40 utilisent une image par défaut ; les cartes RTX série 50/Blackwell nécessitent CUDA 12.8 et un build `cu128` séparé.',
         ],
         items: [
           'Utilisez Kokoro si : votre charge est de la narration simple ou de la lecture de texte, vous voulez garder le VRAM de votre GPU libre pour un LLM ou une autre tâche, ou vous avez besoin d\'un déploiement CPU uniquement.',
           'Évitez Kokoro si : vous avez besoin de clonage vocal — il ne le prend pas en charge, utilisez plutôt XTTS v2 ou Chatterbox.',
           '**VRAM :** environ 2 Go sur GPU ; tourne à vitesse temps réel sur CPU seul, selon sa propre fiche modèle.',
           '**Idéal pour :** narration simple et lecture de texte, cas où les moteurs de clonage plus lourds seraient vraiment superflus.',
+          'Les possesseurs de cartes RTX série 50/Blackwell ont besoin de CUDA 12.8 et du build GPU `cu128` — l\'image GPU Kokoro-FastAPI standard (pour GTX 900 à RTX 40) ne couvre pas les cartes plus récentes.',
+        ],
+      },
+      otherOptions: {
+        id: 'other-options',
+        title: 'Autres options TTS pour GPU NVIDIA',
+        content: [
+          '**XTTS v2, Chatterbox, Bark et Kokoro ne sont pas les seuls moteurs TTS locaux accélérés par NVIDIA — Fish Speech et F5-TTS sont les deux nouveaux arrivants à surveiller, même si ni l\'un ni l\'autre n\'a actuellement de licence compatible commercial.**',
+          'Fish Audio a sorti Fish Speech S2 en mars 2026 comme successeur de S1, et certains benchmarks communautaires de 2026 le classent au-dessus de F5-TTS en qualité audio. F5-TTS est le plus léger des deux avec environ 2 Go de VRAM, contre environ 6 Go pour Fish Speech. Les deux sont sous licence non commerciale — F5-TTS sous CC-BY-NC et la version ouverte de Fish Speech sous CC-BY-NC-SA-4.0 —, donc pour un produit commercial, la licence MIT de Chatterbox ou la licence Apache 2.0 de Kokoro restent les choix plus sûrs couverts dans ce guide.',
+        ],
+        items: [
+          '**Fish Speech S2** (mars 2026) : la dernière sortie de Fish Audio, bien classée dans certains benchmarks communautaires de qualité ; environ 6 Go de VRAM ; licence CC-BY-NC-SA-4.0 (non commerciale).',
+          '**F5-TTS** : plus léger avec environ 2 Go de VRAM ; licence CC-BY-NC (non commerciale).',
+          'Aucun des deux moteurs n\'offre actuellement de licence compatible commercial — pour un déploiement commercial, Chatterbox (MIT) ou Kokoro (Apache 2.0) sont les moteurs à utiliser dans ce guide.',
         ],
       },
       comparisonTable: {
@@ -899,7 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Moteur': 'Chatterbox',
-            'VRAM (GPU)': 'Non officiellement publié',
+            'VRAM (GPU)': '~2,3-8,5+ Go (NVIDIA, par variante)',
             'Gain de vitesse GPU': 'Important en temps réel',
             'Clonage vocal': 'Oui, zero-shot',
             'Licence': 'MIT',
@@ -975,7 +1059,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Puis-je utiliser Chatterbox commercialement ?',
-            a: 'Oui. Chatterbox, publié par Resemble AI, est sous licence MIT, qui autorise l\'usage commercial sans accord séparé — contrairement à la licence CPML non commerciale de XTTS v2.',
+            a: 'Oui. Chatterbox, publié par Resemble AI, est sous licence MIT, qui autorise l\'usage commercial sans accord séparé — contrairement à la licence CPML non commerciale de XTTS v2. La variante Multilingual utilise désormais par défaut une architecture v3 plus récente, et une variante Flash cible les déploiements à fort débit ; aucun de ces changements n\'affecte la licence MIT.',
+          },
+          {
+            q: 'Quel est le meilleur GPU pour le TTS ?',
+            a: 'Tout GPU NVIDIA avec 6 Go de VRAM ou plus fait tourner confortablement XTTS v2, Chatterbox et Kokoro ; seul le modèle complet de Bark en demande davantage, environ 12 Go (ou environ 8 Go avec son drapeau petit modèle). Il n\'existe pas de « meilleur » GPU unique pour tous les cas — adaptez le VRAM de la carte au moteur réellement nécessaire plutôt que d\'acheter par défaut pour l\'option la plus lourde.',
+          },
+          {
+            q: 'Quel matériel faut-il pour faire du clonage vocal local ?',
+            a: 'Pour XTTS v2, 4-6 Go de VRAM suffisent pour un clonage en temps réel. Chatterbox ne publie pas de chiffre VRAM unique, mais le conditionnement propre à NVIDIA des modèles indique environ 2,3-3,5 Go pour les variantes Turbo et Multilingual en TTS seul, et 8,5 Go ou plus pour un pipeline complet ajoutant la reconnaissance vocale. Les deux fonctionnent aussi sur CPU, juste sensiblement plus lentement qu\'avec l\'accélération CUDA.',
           },
           {
             q: 'Un GPU est-il superflu pour du TTS local ?',
@@ -1003,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Pour les lecteurs possédant déjà un GPU NVIDIA et voulant l\'exploiter pour la synthèse vocale, le choix dépend de ce que l\'audio doit accomplir. XTTS v2 est le choix pour la meilleure qualité de clonage vocal atteignable dans un contexte non commercial ou de recherche, du fait de sa licence CPML non commerciale. Chatterbox est le choix quand cette même capacité de clonage doit être livrée dans un produit commercial, grâce à sa licence MIT et ses modèles plus petits conçus pour le temps réel. Bark est le choix spécifiquement quand le projet a besoin d\'audio expressif non vocal — rires, soupirs, musique simple — et peut consacrer 8-12 Go de VRAM pour l\'obtenir, avec la réserve que son statut de maintenance est incertain. Kokoro reste le bon choix dès lors que le clonage n\'est pas requis : il tourne confortablement sur CPU seul, donc réserver du VRAM GPU pour lui vaut rarement la peine. En cas de doute, commencez avec Kokoro pour de la narration simple et ne passez à XTTS v2 ou Chatterbox qu\'une fois un véritable besoin de clonage identifié — cela garde le VRAM de votre GPU disponible pour tout ce que vous faites tourner à côté, y compris un LLM local. Pour les détails de licence de chaque moteur mentionné ici, voir le [guide des licences TTS et clonage vocal locaux](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
+          'Pour les lecteurs possédant déjà un GPU NVIDIA et voulant l\'exploiter pour la synthèse vocale, le choix dépend de ce que l\'audio doit accomplir. XTTS v2 est le choix pour la meilleure qualité de clonage vocal atteignable dans un contexte non commercial ou de recherche, du fait de sa licence CPML non commerciale — maintenu installable aujourd\'hui grâce au fork communautaire [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), même si la licence elle-même n\'a pas changé. Chatterbox est le choix quand cette même capacité de clonage doit être livrée dans un produit commercial, grâce à sa licence MIT et ses modèles plus petits conçus pour le temps réel ; il a continué d\'évoluer en 2026 avec une architecture v3 pour Multilingual et une nouvelle variante Flash pour les déploiements à fort débit, sans que cela change le calcul de licence ici. Bark est le choix spécifiquement quand le projet a besoin d\'audio expressif non vocal — rires, soupirs, musique simple — et peut consacrer 8-12 Go de VRAM pour l\'obtenir, avec la réserve que son statut de maintenance est incertain. Kokoro reste le bon choix dès lors que le clonage n\'est pas requis : il tourne confortablement sur CPU seul, donc réserver du VRAM GPU pour lui vaut rarement la peine. Les nouveaux arrivants Fish Speech et F5-TTS sont à surveiller mais restent sous licence non commerciale (CC-BY-NC-SA-4.0 et CC-BY-NC respectivement), donc ils ne changent pas la recommandation pour un produit commercial. En cas de doute, commencez avec Kokoro pour de la narration simple et ne passez à XTTS v2 ou Chatterbox qu\'une fois un véritable besoin de clonage identifié — cela garde le VRAM de votre GPU disponible pour tout ce que vous faites tourner à côté, y compris un LLM local. Pour les détails de licence de chaque moteur mentionné ici, voir le [guide des licences TTS et clonage vocal locaux](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
       },
       sources: {
         id: 'sources',
@@ -1014,6 +1106,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox sur GitHub](https://github.com/resemble-ai/chatterbox) — README : installation, licence MIT, filigrane et prise en charge CPU/GPU.',
           '[suno-ai/bark sur GitHub](https://github.com/suno-ai/bark) — README : licence, drapeau VRAM/petit modèle et historique de maintenance/commits.',
           '[Kokoro-82M sur Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — fiche modèle : nombre de paramètres, licence Apache 2.0 et performance CPU/GPU.',
+          '[NVIDIA NVIGI : fiche modèle Chatterbox TTS](https://docs.nvidia.com/ace-for-games/chatterbox-tts/nvigi-chatterbox-model-card.html) — chiffres VRAM par variante pour Chatterbox Turbo, Multilingual et un pipeline ASR+TTS complet.',
+          '[idiap/coqui-ai-TTS sur GitHub](https://github.com/idiap/coqui-ai-TTS) — le fork communautaire activement maintenu du toolkit Coqui TTS, qui fait toujours tourner le modèle XTTS v2.',
+          '[Kokoro-FastAPI sur GitHub](https://github.com/remsky/Kokoro-FastAPI) — matrice d\'images Docker CUDA par génération de GPU, incluant l\'exigence CUDA 12.8 pour les cartes RTX série 50/Blackwell.',
           '[Test XTTS v2](/fr/power-local-llm/xtts-v2-review) — le test dédié de PromptQuorum avec commandes d\'usage complètes et détails de licence.',
           '[Test Bark TTS](/fr/power-local-llm/bark-tts-review) — le test dédié de PromptQuorum avec chiffres VRAM et statut de maintenance.',
           '[Licences TTS et clonage vocal locaux](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparatif complet des licences et du VRAM des moteurs TTS locaux.',
@@ -1036,11 +1131,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Meilleur moteur TTS local pour une configuration GPU NVIDIA (2026)',
       description:
-        'Meilleur TTS local pour GPU NVIDIA : XTTS v2, Chatterbox, Bark et Kokoro comparés sur VRAM, accélération CUDA, clonage vocal et licence — avec un choix clair par cas d\'usage.',
+        'Meilleur GPU pour TTS : XTTS v2, Chatterbox v3, Bark et Kokoro comparés sur VRAM, matériel pour clonage vocal et licence — choix clair par usage.',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-tts-nvidia-gpu',
       inLanguage: 'fr',
       datePublished: '2026-09-11',
-      dateModified: '2026-09-11',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1069,8 +1164,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
-    next_refresh_due: '2027-03-11',
+    dateModified: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/best-local-tts-nvidia-gpu-hero-es.webp',
@@ -1079,7 +1174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Si ya tienes una GPU NVIDIA, los motores locales de texto a voz que vale la pena usar son distintos de las opciones solo-CPU que la mayoría de guías recomiendan por defecto. XTTS v2, Chatterbox y Bark cambian velocidad de CPU por calidad de clonación de voz y expresividad, algo que solo tiene sentido con aceleración CUDA disponible — y Kokoro aparece aquí precisamente como contraejemplo, porque tener una GPU no significa automáticamente que necesites el modelo más pesado. Esta guía compara los cuatro en requisitos de VRAM, cuánto se beneficia realmente cada uno de CUDA, capacidad de clonación de voz y licencia, para que elijas el motor que se ajuste a tu hardware y a tu caso de uso real en lugar del que tenga el vídeo de demostración más llamativo.',
     metaDescription:
-      'Mejor TTS local para una GPU NVIDIA: XTTS v2, Chatterbox, Bark y Kokoro comparados en VRAM, aceleración CUDA, clonación de voz y licencia — con una recomendación clara por caso de uso.',
+      'Mejor GPU para TTS: XTTS v2, Chatterbox v3, Bark y Kokoro comparados en VRAM, el hardware para clonar voz y licencia — con una recomendación clara.',
     twitterDescription:
       'Tienes una GPU NVIDIA y quieres TTS local. XTTS v2, Chatterbox y Bark sí aprovechan esa aceleración CUDA — Kokoro apenas la necesita. Comparativa completa de VRAM y licencias para 2026.',
     audience:
@@ -1113,7 +1208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Ninguno de estos cuatro motores requiere una GPU, pero XTTS v2, Chatterbox y Bark son notablemente más lentos sin aceleración CUDA.',
         'Ninguno de estos cuatro motores garantiza verificación de consentimiento — nunca clones la voz de una persona real sin su permiso explícito.',
       ],
-      updatedDate: '2026-09-11',
+      updatedDate: '2026-11-19',
     },
     toc: [
       { label: 'Respuesta rápida', anchor: 'quick-answer' },
@@ -1123,6 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Chatterbox: mejor clonación en tiempo real', anchor: 'chatterbox' },
       { label: 'Bark: mejor audio expresivo no vocal', anchor: 'bark' },
       { label: 'Kokoro: cuando una GPU es excesiva', anchor: 'kokoro' },
+      { label: 'Otras opciones de TTS para GPU NVIDIA', anchor: 'other-options' },
       { label: '¿Cuánta VRAM necesitas realmente?', anchor: 'vram-guide' },
       { label: 'Clonación de voz y consentimiento', anchor: 'consent' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
@@ -1180,12 +1276,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**XTTS v2, publicado por Coqui y ejecutado a través del [conjunto de herramientas Coqui TTS](/es/power-local-llm/coqui-tts-review), es la mejor opción de clonación de voz local para propietarios de GPU que necesitan la mayor calidad alcanzable a partir de un clip de referencia corto.** Clona una voz a partir de tan solo 6 segundos de audio de referencia y la reproduce en 17 idiomas, incluyendo clonación entre idiomas — clonar una voz a partir de audio en inglés y hablar el resultado en español o japonés.',
           'En cuanto a VRAM, los pesos del modelo de XTTS v2 rondan los 2 GB, pero 4 GB es el mínimo práctico para ejecutarlo, y se recomiendan 4-6 GB para inferencia en tiempo real, según la [reseña de XTTS v2](/es/power-local-llm/xtts-v2-review) dedicada de PromptQuorum. La licencia es el factor decisivo para la mayoría de lectores: la Coqui Public Model License (CPML) es explícitamente no comercial, y como Coqui AI, la empresa, cerró sus servicios de pago en diciembre de 2023, actualmente no hay una vía confirmada hacia una licencia comercial.',
+          'El repositorio original del conjunto de herramientas coqui-ai/TTS ya no tiene mantenimiento propio, pero una bifurcación comunitaria — [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), mantenida por el Idiap Research Institute y publicada en PyPI como `coqui-tts` — sigue publicando versiones (v0.27.5 en enero de 2026) bajo el mismo identificador de modelo `tts_models/multilingual/multi-dataset/xtts_v2`. Eso mantiene el conjunto de herramientas instalable y con correcciones de errores; no cambia nada de la licencia CPML no comercial del propio modelo XTTS v2, sin importar qué bifurcación lo ejecute.',
         ],
         items: [
           'Usa XTTS v2 si: tu proyecto es personal, académico o un prototipo no comercial y quieres la mejor calidad de clonación disponible localmente.',
           'Evita XTTS v2 si: necesitas una licencia comercial — sus términos CPML son no comerciales, sin una vía de licencia activa confirmada desde el cierre de Coqui AI en 2023.',
           '**VRAM:** ~2 GB de pesos del modelo, 4 GB mínimo, 4-6 GB recomendados para inferencia en tiempo real.',
           '**Ideal para:** clonación de voz local de la más alta fidelidad, soporte translingüe de 17 idiomas, uso no comercial o de investigación.',
+          'El conjunto de herramientas en sí sigue vivo gracias a la bifurcación comunitaria [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) (`pip install coqui-tts`) — útil para instalación y correcciones, sin efecto sobre la licencia no comercial del modelo.',
         ],
         note: 'Detalles completos de licencia, comandos de uso reales y limitaciones se cubren en la [reseña de XTTS v2](/es/power-local-llm/xtts-v2-review) dedicada de PromptQuorum.',
       },
@@ -1195,13 +1293,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Chatterbox, publicado por Resemble AI en [GitHub](https://github.com/resemble-ai/chatterbox), es la mejor opción para propietarios de GPU que quieren clonación de voz conversacional en tiempo real bajo una licencia totalmente permisiva y apta para uso comercial.** Está bajo la **licencia MIT**, que — a diferencia de la CPML no comercial de XTTS v2 — permite el uso comercial sin un acuerdo aparte.',
           'Chatterbox viene en varios tamaños: una variante Nano (110 millones de parámetros) que la propia documentación de Resemble AI describe como más rápida que tiempo real en 8 núcleos de CPU, una variante Turbo (350 millones de parámetros) diseñada para baja latencia, y una variante multilingüe (unos 500 millones de parámetros, sobre una arquitectura que atribuye a Llama 3) que admite más de 20 idiomas. La clonación de voz zero-shot funciona a partir de un clip de audio de referencia — el ejemplo oficial de Resemble AI usa un clip de 10 segundos, aunque el README no indica una duración mínima oficial como sí hace el de XTTS v2.',
-          'El README público de Resemble AI no publica una cifra exacta de VRAM, así que trata cualquier número específico en GB que veas en otro lugar como no verificado hasta que lo pruebes en tu propia tarjeta. Lo documentado es: la variante Nano funciona aceptablemente solo con CPU, mientras que las variantes más grandes Turbo y Multilingual están diseñadas para generación acelerada por GPU y baja latencia — se admiten tanto CUDA como Apple Silicon (MPS).',
+          'Chatterbox siguió evolucionando durante 2026: la variante Multilingual ahora usa por defecto una arquitectura v3 más reciente (seleccionable mediante el parámetro `t3_model="v3"`, con la original aún disponible como `t3_model="v2"`), y Resemble AI añadió una variante Flash basada en una arquitectura de difusión-LLM, pensada específicamente para despliegues de alto rendimiento, junto a los tamaños Nano y Turbo existentes.',
+          'El README público de Resemble AI sigue sin publicar una cifra única de VRAM, así que trata cualquier número específico en GB que veas en otro lugar como no verificado hasta que lo pruebes en tu propia tarjeta. Lo documentado, a partir del empaquetado NVIGI propio de NVIDIA de los modelos Chatterbox: unos 2,3 GB para Turbo solo en TTS, unos 3,5 GB para Multilingual solo en TTS, y 8,5 GB o más para una canalización completa que añade reconocimiento de voz y generación de texto alrededor del paso de TTS. Son las cifras de empaquetado de NVIDIA, no las propias de Resemble AI, pero son los datos de VRAM más concretos disponibles para Chatterbox hoy. Se admiten tanto CUDA como Apple Silicon (MPS).',
         ],
         items: [
           'Usa Chatterbox si: necesitas clonación de voz apta para uso comercial con latencia en tiempo real o casi en tiempo real, como una aplicación de voz interactiva.',
-          'Evita Chatterbox si: necesitas una cifra de VRAM mínima documentada y garantizada antes de comprar hardware — Resemble AI no ha publicado una.',
-          '**VRAM:** no publicada oficialmente; la variante Nano, más pequeña, es compatible con CPU, mientras que las variantes Turbo y Multilingual apuntan a aceleración GPU para velocidad de tiempo real.',
+          'Evita Chatterbox si: necesitas una cifra de VRAM mínima documentada y garantizada directamente por Resemble AI antes de comprar hardware — la empresa sigue sin publicar una cifra única.',
+          '**VRAM:** no unificada por Resemble AI; el empaquetado propio de NVIDIA indica ~2,3 GB (Turbo, solo TTS), ~3,5 GB (Multilingual, solo TTS) y ~8,5+ GB para una canalización ASR+TTS completa.',
           '**Ideal para:** productos comerciales que necesiten clonación de voz conversacional zero-shot bajo una licencia permisiva.',
+          'Chatterbox Multilingual ahora usa por defecto una arquitectura v3, y una nueva variante Flash (arquitectura de difusión-LLM) apunta a despliegues de alto rendimiento — ambas se suman a los tamaños Nano y Turbo originales.',
           'Cada salida de Chatterbox lleva la marca de agua Perth propia de Resemble AI, descrita en su documentación como una marca de agua neuronal imperceptible que sobrevive a la compresión MP3 — una señal de procedencia integrada, no un sustituto del consentimiento (ver la sección Clonación de voz y consentimiento más abajo).',
         ],
       },
@@ -1226,12 +1326,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Kokoro aparece aquí como contraejemplo: tener una GPU NVIDIA no significa que toda carga de TTS necesite una, y Kokoro lo demuestra.** Con 82 millones de parámetros, es drásticamente más pequeño que XTTS v2, Chatterbox o Bark, y su propia ficha de modelo en Hugging Face documenta síntesis en tiempo real o más rápida solo con CPU, con el uso de GPU añadiendo margen en lugar de ser un requisito.',
           'Kokoro tiene licencia Apache 2.0, que — como la licencia MIT de Chatterbox — permite uso comercial sin restricciones. No admite clonación de voz, por lo que no sustituye a XTTS v2 o Chatterbox si la clonación es el requisito, pero para narración simple, lectura de texto en voz alta, o una capa de voz en una aplicación donde no se necesita clonación, es una opción más ligera y sencilla.',
+          'El propio modelo de Kokoro no ha cambiado desde su lanzamiento de enero de 2025 (v1.0, 82M de parámetros) — no ha salido una versión más reciente hasta finales de 2026 — pero el ecosistema a su alrededor sí: NVIDIA publica su propio build optimizado en ONNX, y el popular proyecto [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) ofrece imágenes Docker CUDA independientes por generación de GPU. Las tarjetas de la serie GTX 900 a la serie RTX 40 usan una imagen por defecto; las tarjetas RTX serie 50/Blackwell necesitan CUDA 12.8 y un build `cu128` aparte.',
         ],
         items: [
           'Usa Kokoro si: tu carga de trabajo es narración simple o lectura de texto, quieres mantener libre la VRAM de tu GPU para un LLM u otra tarea, o necesitas un despliegue solo con CPU.',
           'Evita Kokoro si: necesitas clonación de voz — no la admite, usa XTTS v2 o Chatterbox en su lugar.',
           '**VRAM:** aproximadamente 2 GB si se ejecuta en GPU; funciona a velocidad de tiempo real solo con CPU, según su propia ficha de modelo.',
           '**Ideal para:** narración simple y casos de lectura de texto en voz alta donde los motores de clonación más pesados serían realmente excesivos.',
+          'Los propietarios de tarjetas RTX serie 50/Blackwell necesitan CUDA 12.8 y el build `cu128` del runtime GPU — la imagen GPU estándar de Kokoro-FastAPI (para GTX 900 a RTX 40) no cubre las tarjetas más nuevas.',
+        ],
+      },
+      otherOptions: {
+        id: 'other-options',
+        title: 'Otras opciones de TTS para GPU NVIDIA',
+        content: [
+          '**XTTS v2, Chatterbox, Bark y Kokoro no son los únicos motores TTS locales acelerados por NVIDIA — Fish Speech y F5-TTS son los dos recién llegados más destacados a seguir, aunque ninguno tiene actualmente una licencia apta para uso comercial.**',
+          'Fish Audio lanzó Fish Speech S2 en marzo de 2026 como sucesor de S1, y algunos benchmarks comunitarios de 2026 lo sitúan por encima de F5-TTS en calidad de audio. F5-TTS es el más ligero de los dos, con unos 2 GB de VRAM, frente a unos 6 GB de Fish Speech. Ambos tienen licencia no comercial — F5-TTS bajo CC-BY-NC y el lanzamiento abierto de Fish Speech bajo CC-BY-NC-SA-4.0 —, así que para un producto comercial, la licencia MIT de Chatterbox o la licencia Apache 2.0 de Kokoro siguen siendo las opciones más seguras cubiertas en esta guía.',
+        ],
+        items: [
+          '**Fish Speech S2** (marzo de 2026): el lanzamiento más reciente de Fish Audio, bien valorado en algunos benchmarks comunitarios de calidad; unos 6 GB de VRAM; licencia CC-BY-NC-SA-4.0 (no comercial).',
+          '**F5-TTS**: más ligero, con unos 2 GB de VRAM; licencia CC-BY-NC (no comercial).',
+          'Ninguno de los dos motores ofrece actualmente una licencia apta para uso comercial — si el objetivo es un despliegue comercial, Chatterbox (MIT) o Kokoro (Apache 2.0) son los motores adecuados de esta guía.',
         ],
       },
       comparisonTable: {
@@ -1251,7 +1366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Motor': 'Chatterbox',
-            'VRAM (GPU)': 'No publicado oficialmente',
+            'VRAM (GPU)': '~2,3-8,5+ GB (NVIDIA, por variante)',
             'Beneficio de velocidad GPU': 'Grande para uso en tiempo real',
             'Clonación de voz': 'Sí, zero-shot',
             'Licencia': 'MIT',
@@ -1327,7 +1442,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usar Chatterbox comercialmente?',
-            a: 'Sí. Chatterbox, publicado por Resemble AI, tiene licencia MIT, que permite uso comercial sin un acuerdo aparte — a diferencia de la licencia CPML no comercial de XTTS v2.',
+            a: 'Sí. Chatterbox, publicado por Resemble AI, tiene licencia MIT, que permite uso comercial sin un acuerdo aparte — a diferencia de la licencia CPML no comercial de XTTS v2. La variante Multilingual ahora usa por defecto una arquitectura v3 más reciente, y una variante Flash apunta a despliegues de alto rendimiento; ninguno de estos cambios afecta a la licencia MIT.',
+          },
+          {
+            q: '¿Cuál es la mejor GPU para TTS?',
+            a: 'Cualquier GPU NVIDIA con 6 GB de VRAM o más ejecuta cómodamente XTTS v2, Chatterbox y Kokoro; solo el modelo completo de Bark necesita más, unos 12 GB (u unos 8 GB con su variable de modelo pequeño). No existe una única "mejor" GPU para todos los casos — ajusta la VRAM de la tarjeta al motor que realmente necesitas en lugar de comprar por defecto para la opción más pesada.',
+          },
+          {
+            q: '¿Qué hardware necesito para ejecutar clonación de voz local?',
+            a: 'Para XTTS v2, 4-6 GB de VRAM bastan para clonación en tiempo real. Chatterbox no publica una cifra única de VRAM, pero el empaquetado propio de NVIDIA de los modelos indica unos 2,3-3,5 GB para las variantes Turbo y Multilingual solo en TTS, y 8,5 GB o más para una canalización completa que añade reconocimiento de voz. Ambos también funcionan en CPU, solo notablemente más lento que con aceleración CUDA.',
           },
           {
             q: '¿Es excesiva una GPU para TTS local?',
@@ -1355,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Para lectores que ya tienen una GPU NVIDIA y quieren usarla para texto a voz, la elección depende de lo que el audio necesite hacer. XTTS v2 es la opción para la mayor calidad de clonación de voz alcanzable en un contexto no comercial o de investigación, dada su licencia CPML no comercial. Chatterbox es la opción cuando esa misma capacidad de clonación necesita llevarse a un producto comercial, gracias a su licencia MIT y sus tamaños de modelo más pequeños orientados al tiempo real. Bark es la opción específicamente cuando el proyecto necesita audio expresivo no vocal — risas, suspiros, música simple — y puede permitirse gastar 8-12 GB de VRAM para conseguirlo, con la salvedad de que su estado de mantenimiento es incierto. Kokoro sigue siendo la opción correcta siempre que la clonación no sea el requisito: funciona cómodamente solo con CPU, así que reservar VRAM de GPU para él rara vez merece la pena. Si tienes dudas, empieza con Kokoro para narración simple y sube a XTTS v2 o Chatterbox solo cuando aparezca un requisito real de clonación — eso mantiene la VRAM de tu GPU disponible para lo que sea que ejecutes junto a ello, incluido un LLM local. Para los detalles de licencia de cada motor mencionado aquí, consulta la [guía de licencias de TTS y clonación de voz locales](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
+          'Para lectores que ya tienen una GPU NVIDIA y quieren usarla para texto a voz, la elección depende de lo que el audio necesite hacer. XTTS v2 es la opción para la mayor calidad de clonación de voz alcanzable en un contexto no comercial o de investigación, dada su licencia CPML no comercial — mantenida instalable hoy gracias a la bifurcación comunitaria [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), aunque la licencia en sí no haya cambiado. Chatterbox es la opción cuando esa misma capacidad de clonación necesita llevarse a un producto comercial, gracias a su licencia MIT y sus tamaños de modelo más pequeños orientados al tiempo real; siguió evolucionando en 2026 con una arquitectura v3 para Multilingual y una nueva variante Flash para despliegues de alto rendimiento, sin que eso cambie el panorama de licencias aquí. Bark es la opción específicamente cuando el proyecto necesita audio expresivo no vocal — risas, suspiros, música simple — y puede permitirse gastar 8-12 GB de VRAM para conseguirlo, con la salvedad de que su estado de mantenimiento es incierto. Kokoro sigue siendo la opción correcta siempre que la clonación no sea el requisito: funciona cómodamente solo con CPU, así que reservar VRAM de GPU para él rara vez merece la pena. Los recién llegados Fish Speech y F5-TTS merecen seguimiento, pero siguen con licencia no comercial (CC-BY-NC-SA-4.0 y CC-BY-NC respectivamente), así que no cambian la recomendación para un producto comercial. Si tienes dudas, empieza con Kokoro para narración simple y sube a XTTS v2 o Chatterbox solo cuando aparezca un requisito real de clonación — eso mantiene la VRAM de tu GPU disponible para lo que sea que ejecutes junto a ello, incluido un LLM local. Para los detalles de licencia de cada motor mencionado aquí, consulta la [guía de licencias de TTS y clonación de voz locales](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) de PromptQuorum.',
       },
       sources: {
         id: 'sources',
@@ -1366,6 +1489,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox en GitHub](https://github.com/resemble-ai/chatterbox) — README: instalación, licencia MIT, marca de agua y soporte CPU/GPU.',
           '[suno-ai/bark en GitHub](https://github.com/suno-ai/bark) — README: licencia, variable de VRAM/modelo pequeño e historial de mantenimiento/commits.',
           '[Kokoro-82M en Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — ficha de modelo: número de parámetros, licencia Apache 2.0 y rendimiento CPU/GPU.',
+          '[NVIDIA NVIGI: ficha de modelo de Chatterbox TTS](https://docs.nvidia.com/ace-for-games/chatterbox-tts/nvigi-chatterbox-model-card.html) — cifras de VRAM por variante para Chatterbox Turbo, Multilingual y una canalización ASR+TTS completa.',
+          '[idiap/coqui-ai-TTS en GitHub](https://github.com/idiap/coqui-ai-TTS) — la bifurcación comunitaria activamente mantenida del conjunto de herramientas Coqui TTS, que sigue ejecutando el modelo XTTS v2.',
+          '[Kokoro-FastAPI en GitHub](https://github.com/remsky/Kokoro-FastAPI) — matriz de imágenes Docker CUDA por generación de GPU, incluido el requisito de CUDA 12.8 para tarjetas RTX serie 50/Blackwell.',
           '[Reseña de XTTS v2](/es/power-local-llm/xtts-v2-review) — la reseña dedicada de PromptQuorum con comandos de uso completos y detalles de licencia.',
           '[Reseña de Bark TTS](/es/power-local-llm/bark-tts-review) — la reseña dedicada de PromptQuorum con cifras de VRAM y estado de mantenimiento.',
           '[Licencias de TTS y clonación de voz locales](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparativa completa de licencias y VRAM entre motores TTS locales.',
@@ -1388,11 +1514,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Mejor motor TTS local para una configuración con GPU NVIDIA (2026)',
       description:
-        'Mejor TTS local para una GPU NVIDIA: XTTS v2, Chatterbox, Bark y Kokoro comparados en VRAM, aceleración CUDA, clonación de voz y licencia — con una recomendación clara por caso de uso.',
+        'Mejor GPU para TTS: XTTS v2, Chatterbox v3, Bark y Kokoro comparados en VRAM, el hardware para clonar voz y licencia — con una recomendación clara.',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-tts-nvidia-gpu',
       inLanguage: 'es',
       datePublished: '2026-09-11',
-      dateModified: '2026-09-11',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1421,8 +1547,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
-    next_refresh_due: '2027-03-11',
+    dateModified: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/best-local-tts-nvidia-gpu-hero-ja.webp',
@@ -1431,7 +1557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'すでにNVIDIA GPUを持っているなら、実行する価値のあるローカルTTS(テキスト読み上げ)エンジンは、多くのガイドがデフォルトで挙げるCPU専用の選択肢とは異なります。XTTS v2、Chatterbox、BarkはいずれもCPUの速度をボイスクローニング品質と表現力に置き換えるモデルで、CUDAアクセラレーションが使える環境で初めて意味を持ちます。一方Kokoroはここであえて対比として取り上げています。GPUを持っているからといって、自動的に最も重いモデルが必要になるわけではないからです。このガイドでは、VRAM要件、CUDAから実際にどれだけ恩恵を受けるか、ボイスクローニング機能、そしてライセンスという4つの軸で4モデルを比較し、デモ動画が最も派手なモデルではなく、自分のハードウェアと実際のユースケースに合ったエンジンを選べるようにします。',
     metaDescription:
-      'NVIDIA GPU向けベストなローカルTTS: XTTS v2、Chatterbox、Bark、KokoroをVRAM、CUDAによる高速化、ボイスクローニング、ライセンスで比較。ユースケース別の明確な選択肢も紹介。',
+      'TTSに最適なGPUは? XTTS v2、Chatterbox v3、Bark、KokoroをVRAM、ボイスクローニングに必要なハードウェア、ライセンスで比較。',
     twitterDescription:
       'NVIDIA GPUを持っていてローカルTTSを探しているなら。XTTS v2、Chatterbox、BarkはそのCUDAアクセラレーションを実際に活用しますが、Kokoroはほとんど必要としません。2026年版の完全なVRAMとライセンス比較。',
     audience:
@@ -1465,7 +1591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'この4つのいずれもGPUは必須ではないが、XTTS v2、Chatterbox、BarkはCUDAアクセラレーションなしでは明らかに遅くなる。',
         'この4つのいずれも同意の確認を保証しない — 実在の人物の声を本人の明示的な許可なくクローンしてはならない。',
       ],
-      updatedDate: '2026-09-11',
+      updatedDate: '2026-11-19',
     },
     toc: [
       { label: 'クイックアンサー', anchor: 'quick-answer' },
@@ -1475,6 +1601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Chatterbox: 最良のリアルタイムクローニング', anchor: 'chatterbox' },
       { label: 'Bark: 最良の表現力豊かな非音声オーディオ', anchor: 'bark' },
       { label: 'Kokoro: GPUがオーバースペックな場合', anchor: 'kokoro' },
+      { label: 'NVIDIA GPU向けその他のTTS選択肢', anchor: 'other-options' },
       { label: '実際に必要なVRAMはどれくらいか', anchor: 'vram-guide' },
       { label: 'ボイスクローニングと同意', anchor: 'consent' },
       { label: 'よくある質問', anchor: 'faq' },
@@ -1532,12 +1659,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Coquiがリリースし、[Coqui TTSツールキット](/ja/power-local-llm/coqui-tts-review)を通じて実行されるXTTS v2は、短い参照クリップから達成可能な最高品質を必要とするGPU所有者にとって最良のローカルボイスクローニングの選択肢である。** わずか6秒の参照音声から声をクローンし、17言語で読み上げることができる。クロスリンガルクローニング — 英語の音声から声をクローンし、スペイン語や日本語で話させる — にも対応する。',
           'VRAMについては、XTTS v2のモデル重みは約2GBだが、実行には4GBが実用上の最低ラインであり、リアルタイム推論には4-6GBが推奨される。詳細はPromptQuorumの[XTTS v2レビュー](/ja/power-local-llm/xtts-v2-review)を参照。ほとんどの読者にとって決め手となるのはライセンスである。Coqui Public Model License(CPML)は明確に非商用であり、この会社であるCoqui AIが2023年12月に有料サービスを終了したため、現時点で確認された商用ライセンスへの有効な道筋は存在しない。',
+          '元のcoqui-ai/TTSツールキット自体はメンテナンスされていないが、コミュニティフォークの[idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)(Idiap Research Instituteが維持し、PyPIでは`coqui-tts`として公開)が、同じ`tts_models/multilingual/multi-dataset/xtts_v2`というモデル識別子のもとでリリースを続けている(2026年1月にv0.27.5)。これによりツールキット自体はインストール可能でバグ修正済みの状態が保たれるが、XTTS v2モデル自体の非商用CPMLライセンスには変化はなく、どのフォークで実行してもそれは変わらない。',
         ],
         items: [
           'XTTS v2を使うべき場合: プロジェクトが個人利用、学術用途、または非商用のプロトタイプであり、ローカルで得られる最高のクローニング品質を求める場合。',
           'XTTS v2を避けるべき場合: 商用ライセンスが必要な場合 — CPML条件は非商用であり、2023年のCoqui AIの閉鎖以来、確認された有効な商用ライセンスへの道筋はない。',
           '**VRAM:** モデル重みが約2GB、最低4GB、リアルタイム推論には4-6GBを推奨。',
           '**最適な用途:** ローカルで得られる最も忠実度の高いボイスクローニング、17言語のクロスリンガル対応、非商用または研究用途。',
+          'ツールキット自体はコミュニティ維持の[idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)フォーク(`pip install coqui-tts`)によって存続している — インストールやバグ修正には有用だが、モデルの非商用ライセンスには影響しない。',
         ],
         note: '完全なライセンス詳細、実際の使用コマンド、制限事項はPromptQuorumの[XTTS v2レビュー](/ja/power-local-llm/xtts-v2-review)で扱っている。',
       },
@@ -1547,13 +1676,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Resemble AIが[GitHub](https://github.com/resemble-ai/chatterbox)で公開したChatterboxは、完全に自由で商用利用可能なライセンスのもとでリアルタイムの会話型ボイスクローニングを求めるGPU所有者にとって最良の選択肢である。** **MITライセンス**のもとにあり、XTTS v2の非商用CPMLとは異なり、別途の契約なしで商用利用が可能である。',
           'Chatterboxは複数のサイズで提供されている。Resemble AI自身のドキュメントによれば8コアのCPUでリアルタイムより高速に動作するNanoバリアント(1億1000万パラメータ)、低遅延向けのTurboバリアント(3億5000万パラメータ)、そしてアーキテクチャにLlama 3を由来として挙げるバックボーンを持ち20以上の言語をサポートするMultilingualバリアント(約5億パラメータ)がある。ゼロショットのボイスクローニングは参照オーディオクリップから機能する — Resemble AI自身の例では10秒のクリップを使用しているが、READMEにはXTTS v2のような公式な最小時間の記載はない。',
-          'Resemble AIの公開READMEには正確なVRAM値が記載されていないため、他の場所で見かける具体的なGB数値は、自分のカードでテストするまでは未確認のものとして扱うこと。文書化されているのは以下の点である。Nanoバリアントは CPU のみで問題なく動作する一方、より大きなTurboおよびMultilingualバリアントはGPUアクセラレーションによる低遅延生成向けに設計されている — CUDAとApple Silicon(MPS)の両方がサポートされている。',
+          'Chatterboxは2026年を通じて進化を続けた。Multilingualバリアントは現在、新しいv3アーキテクチャをデフォルトで使用し(`t3_model="v3"`パラメータで選択可能、元のアーキテクチャは`t3_model="v2"`として引き続き利用可能)、Resemble AIは既存のNanoとTurboのサイズに加え、diffusion-LLMアーキテクチャをベースに高スループットの大規模展開向けに設計されたFlashバリアントを追加した。',
+          'Resemble AIの公開READMEには依然として統一されたVRAM値が記載されていないため、他の場所で見かける具体的なGB数値は、自分のカードでテストするまでは未確認のものとして扱うこと。文書化されているのは、NVIDIA独自のChatterboxモデルのNVIGIパッケージングによる値である。TTS単体でのTurboは約2.3GB、TTS単体でのMultilingualは約3.5GB、音声認識とテキスト生成をTTSステップの前後に追加したフルパイプラインでは8.5GB以上となる。これらはResemble AI自身の公開数値ではなくNVIDIAのパッケージング数値だが、現時点でChatterboxについて入手できる最も具体的なVRAMデータである。CUDAとApple Silicon(MPS)の両方がサポートされている。',
         ],
         items: [
           'Chatterboxを使うべき場合: インタラクティブな音声アプリケーションなど、リアルタイムまたはほぼリアルタイムの遅延で商用利用可能なボイスクローニングが必要な場合。',
-          'Chatterboxを避けるべき場合: ハードウェアを購入する前に、文書化され保証された最小VRAM値が必要な場合 — Resemble AIはそれを公開していない。',
-          '**VRAM:** 公式には未公開。より小さなNanoバリアントはCPU対応、TurboおよびMultilingualバリアントはリアルタイム速度のためにGPUアクセラレーションを目標としている。',
+          'Chatterboxを避けるべき場合: ハードウェアを購入する前に、Resemble AI自身が文書化し保証した最小VRAM値が必要な場合 — 同社は依然として統一された数値を公開していない。',
+          '**VRAM:** Resemble AIによる統一値は未公開。NVIDIA独自のパッケージングでは約2.3GB(Turbo、TTS単体)、約3.5GB(Multilingual、TTS単体)、フルのASR+TTSパイプラインで約8.5GB以上とされている。',
           '**最適な用途:** 自由なライセンスのもとでゼロショットの会話型ボイスクローニングを必要とする商用製品。',
+          'Chatterbox Multilingualは現在v3アーキテクチャをデフォルトで使用し、新しいFlashバリアント(diffusion-LLMアーキテクチャ)は高スループットの大規模展開を対象としている — どちらも元のNanoとTurboのサイズに加わる形である。',
           'Chatterboxの出力にはすべてResemble AI独自のPerth電子透かしが付与されており、ドキュメントではMP3圧縮を経ても残る知覚不能なニューラル透かしと説明されている — これは組み込みの出所シグナルであり、同意の代替物ではない(下記のボイスクローニングと同意のセクションを参照)。',
         ],
       },
@@ -1578,12 +1709,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Kokoroはここで対比として取り上げている。NVIDIA GPUを持っているからといって、すべてのTTSワークロードにそれが必要というわけではなく、Kokoroはその証明である。** 8200万パラメータという規模で、XTTS v2、Chatterbox、Barkよりも劇的に小さく、Hugging Faceの公式モデルカードはCPUのみでリアルタイムまたはそれ以上の速度の合成を文書化している。GPUの利用は必須ではなく、あくまで余裕をもたらすものである。',
           'KokoroはApache 2.0ライセンスのもとにあり、ChatterboxのMITライセンスと同様に、制限なしで商用利用が可能である。ボイスクローニングには対応していないため、クローニングが要件である場合はXTTS v2やChatterboxの代替にはならないが、単純なナレーション、読み上げテキスト、あるいはクローニングが不要なアプリの音声レイヤーには、より軽量でシンプルな選択肢となる。',
+          'Kokoroのモデル自体は2025年1月のリリース(v1.0、8200万パラメータ)以来変化しておらず、2026年後半時点でも新しいバージョンは出ていない。しかし周辺のツール環境は進化している。NVIDIAは独自のONNX最適化ビルドを公開しており、人気の[Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI)プロジェクトはGPU世代ごとに別々のCUDA Dockerイメージを提供している。GTX 900シリーズからRTX 40シリーズまでのカードは標準イメージを使用し、RTX 50シリーズ/Blackwellカードは CUDA 12.8 と別途の`cu128`ビルドを必要とする。',
         ],
         items: [
           'Kokoroを使うべき場合: ワークロードが単純なナレーションや読み上げテキストであり、LLMなど他のワークロードのためにGPUのVRAMを空けておきたい、またはCPUのみの展開が必要な場合。',
           'Kokoroを避けるべき場合: ボイスクローニングが必要な場合 — 対応していないため、代わりにXTTS v2かChatterboxを使う。',
           '**VRAM:** GPUで実行する場合は約2GB。公式モデルカードによればCPUのみでもリアルタイム速度で動作する。',
           '**最適な用途:** より重いクローニングエンジンが本当にオーバースペックとなる、単純なナレーションや読み上げテキストのユースケース。',
+          'RTX 50シリーズ/BlackwellカードのユーザーはCUDA 12.8と`cu128`のGPUランタイムビルドが必要である — 標準のKokoro-FastAPI GPUイメージ(GTX 900からRTX 40向け)は新しいカードをカバーしない。',
+        ],
+      },
+      otherOptions: {
+        id: 'other-options',
+        title: 'NVIDIA GPU向けその他のTTS選択肢',
+        content: [
+          '**XTTS v2、Chatterbox、Bark、Kokoroだけが、NVIDIAで高速化されるローカルTTSエンジンではない。Fish SpeechとF5-TTSは、注目すべき最新の2つの選択肢だが、どちらも現時点では商用利用に適したライセンスを持たない。**',
+          'Fish AudioはS1の後継として2026年3月にFish Speech S2をリリースし、2026年のいくつかのコミュニティベンチマークでは音声品質がF5-TTSを上回ると評価されている。F5-TTSは約2GBのVRAMで、Fish Speechの約6GBに比べて軽量である。両者とも非商用ライセンス — F5-TTSはCC-BY-NC、Fish Speechのオープン版はCC-BY-NC-SA-4.0 — のもとにあるため、商用製品では、本ガイドで扱っているChatterboxのMITライセンスやKokoroのApache 2.0ライセンスの方が安全な選択肢であり続ける。',
+        ],
+        items: [
+          '**Fish Speech S2**(2026年3月): Fish Audioの最新リリースで、一部のコミュニティ品質ベンチマークで高評価; 約6GBのVRAM; CC-BY-NC-SA-4.0ライセンス(非商用)。',
+          '**F5-TTS**: より軽量で約2GBのVRAM; CC-BY-NCライセンス(非商用)。',
+          'どちらのエンジンも現時点では商用利用に適したライセンスを提供していない — 商用展開が目的であれば、本ガイドのChatterbox(MIT)またはKokoro(Apache 2.0)を使うべきである。',
         ],
       },
       comparisonTable: {
@@ -1603,7 +1749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'エンジン': 'Chatterbox',
-            'VRAM(GPU)': '公式未公開',
+            'VRAM(GPU)': '約2.3-8.5GB以上(NVIDIA、バリアントによる)',
             'GPU速度メリット': 'リアルタイム利用で大',
             'ボイスクローニング': 'あり、ゼロショット',
             'ライセンス': 'MIT',
@@ -1679,7 +1825,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Chatterboxを商用利用できるか?',
-            a: 'はい。Resemble AIがリリースしたChatterboxはMITライセンスのもとにあり、別途の契約なしで商用利用が可能である — XTTS v2の非商用CPMLライセンスとは異なる。',
+            a: 'はい。Resemble AIがリリースしたChatterboxはMITライセンスのもとにあり、別途の契約なしで商用利用が可能である — XTTS v2の非商用CPMLライセンスとは異なる。Multilingualバリアントは現在v3アーキテクチャをデフォルトで使用し、Flashバリアントは高スループットの展開を対象としているが、いずれもMITライセンスには影響しない。',
+          },
+          {
+            q: 'TTSに最適なGPUは何か?',
+            a: '6GB以上のVRAMを持つNVIDIA GPUであれば、XTTS v2、Chatterbox、Kokoroを余裕をもって実行できる。より多くを必要とするのはBarkのフルモデルのみで、約12GB(または小型モデルフラグで約8GB)が必要である。すべての場面で通用する単一の「最適な」GPUは存在しない — デフォルトで最も重い選択肢を購入するのではなく、実際に必要なエンジンにカードのVRAMを合わせること。',
+          },
+          {
+            q: 'ローカルでボイスクローニングを行うにはどのようなハードウェアが必要か?',
+            a: 'XTTS v2の場合、リアルタイムクローニングには4-6GBのVRAMで十分である。Chatterboxは統一されたVRAM値を公開していないが、NVIDIA独自のモデルパッケージングでは、TurboおよびMultilingualバリアントがTTS単体で約2.3-3.5GB、音声認識を追加したフルパイプラインで8.5GB以上とされている。どちらもCPUでも動作するが、CUDAアクセラレーションがある場合に比べて明らかに遅くなる。',
           },
           {
             q: 'ローカルTTSにGPUはオーバースペックか?',
@@ -1707,7 +1861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'すでにNVIDIA GPUを持っていて、それをテキスト読み上げに活用したい読者にとって、選択はその音声に何をさせたいかによって決まる。非商用のCPMLライセンスを踏まえると、非商用または研究用途で達成可能な最高のボイスクローニング品質を求めるならXTTS v2が選択肢となる。同じクローニング能力を商用製品として出荷する必要がある場合は、MITライセンスとリアルタイム志向の小型モデルサイズを備えたChatterboxが選択肢となる。プロジェクトが表現力豊かな非音声オーディオ — 笑い声、ため息、シンプルな音楽 — を必要とし、それを得るために8-12GBのVRAMを費やせる場合は、メンテナンス状況が不確かである点に留意しつつBarkが選択肢となる。クローニングが要件でない限り、Kokoroは引き続き正しい選択肢である。CPUのみで問題なく動作するため、そのためにGPUのVRAMを確保する価値はほとんどない。迷ったら、単純なナレーションにはKokoroから始め、本当にクローニングの要件が出てきた段階で初めてXTTS v2やChatterboxに移行する — そうすることで、ローカルLLMを含め、並行して動かす他の処理のためにGPUのVRAMを確保しておける。ここで挙げた各エンジンのライセンスの詳細については、PromptQuorumの[ローカルTTSおよびボイスクローニングのライセンスガイド](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)を参照。',
+          'すでにNVIDIA GPUを持っていて、それをテキスト読み上げに活用したい読者にとって、選択はその音声に何をさせたいかによって決まる。非商用のCPMLライセンスを踏まえると、非商用または研究用途で達成可能な最高のボイスクローニング品質を求めるならXTTS v2が選択肢となる — ライセンス自体は変わっていないものの、コミュニティ維持の[idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)フォークによって今日もインストール可能な状態が保たれている。同じクローニング能力を商用製品として出荷する必要がある場合は、MITライセンスとリアルタイム志向の小型モデルサイズを備えたChatterboxが選択肢となる。2026年にはMultilingual向けのv3アーキテクチャと、高スループット展開向けの新しいFlashバリアントで進化を続けたが、ここでのライセンスの考え方は変わらない。プロジェクトが表現力豊かな非音声オーディオ — 笑い声、ため息、シンプルな音楽 — を必要とし、それを得るために8-12GBのVRAMを費やせる場合は、メンテナンス状況が不確かである点に留意しつつBarkが選択肢となる。クローニングが要件でない限り、Kokoroは引き続き正しい選択肢である。CPUのみで問題なく動作するため、そのためにGPUのVRAMを確保する価値はほとんどない。新しい選択肢であるFish SpeechとF5-TTSは注目に値するが、現時点では非商用ライセンス(それぞれCC-BY-NC-SA-4.0とCC-BY-NC)のもとにあるため、商用製品向けの推奨は変わらない。迷ったら、単純なナレーションにはKokoroから始め、本当にクローニングの要件が出てきた段階で初めてXTTS v2やChatterboxに移行する — そうすることで、ローカルLLMを含め、並行して動かす他の処理のためにGPUのVRAMを確保しておける。ここで挙げた各エンジンのライセンスの詳細については、PromptQuorumの[ローカルTTSおよびボイスクローニングのライセンスガイド](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)を参照。',
       },
       sources: {
         id: 'sources',
@@ -1718,6 +1872,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub上のresemble-ai/chatterbox](https://github.com/resemble-ai/chatterbox) — README: インストール、MITライセンス、電子透かし、CPU/GPUサポート。',
           '[GitHub上のsuno-ai/bark](https://github.com/suno-ai/bark) — README: ライセンス、VRAM/小型モデルフラグ、メンテナンス/コミット履歴。',
           '[Hugging Face上のKokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — モデルカード: パラメータ数、Apache 2.0ライセンス、CPU/GPU性能。',
+          '[NVIDIA NVIGI: Chatterbox TTSモデルカード](https://docs.nvidia.com/ace-for-games/chatterbox-tts/nvigi-chatterbox-model-card.html) — Chatterbox Turbo、Multilingual、フルASR+TTSパイプラインのバリアント別VRAM値。',
+          '[GitHub上のidiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — Coqui TTSツールキットの活発に維持されているコミュニティフォークで、現在もXTTS v2モデルを実行する。',
+          '[GitHub上のKokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) — GPU世代別のCUDA Dockerイメージ一覧。RTX 50シリーズ/BlackwellカードのCUDA 12.8要件を含む。',
           '[XTTS v2レビュー](/ja/power-local-llm/xtts-v2-review) — 完全な使用コマンドとライセンス詳細を含むPromptQuorumの専用レビュー。',
           '[Bark TTSレビュー](/ja/power-local-llm/bark-tts-review) — VRAM値とメンテナンス状況を含むPromptQuorumの専用レビュー。',
           '[ローカルTTSおよびボイスクローニングのライセンス](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — ローカルTTSエンジン全体のライセンスとVRAMの完全比較。',
@@ -1740,11 +1897,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'NVIDIA GPU環境向け ベストなローカルTTSエンジン(2026)',
       description:
-        'NVIDIA GPU向けベストなローカルTTS: XTTS v2、Chatterbox、Bark、KokoroをVRAM、CUDAによる高速化、ボイスクローニング、ライセンスで比較。ユースケース別の明確な選択肢も紹介。',
+        'TTSに最適なGPUは? XTTS v2、Chatterbox v3、Bark、KokoroをVRAM、ボイスクローニングに必要なハードウェア、ライセンスで比較。',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-tts-nvidia-gpu',
       inLanguage: 'ja',
       datePublished: '2026-09-11',
-      dateModified: '2026-09-11',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1773,8 +1930,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
-    next_refresh_due: '2027-03-11',
+    dateModified: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/best-local-tts-nvidia-gpu-hero-zh.webp',
@@ -1783,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '如果你已经拥有一块 NVIDIA GPU,值得运行的本地文本转语音引擎与大多数指南默认推荐的纯 CPU 方案不同。XTTS v2、Chatterbox 和 Bark 都是用 CPU 速度换取声音克隆质量和表现力,而这种取舍只有在有 CUDA 加速的情况下才真正划算——本文特意把 Kokoro 也列出来作为反例,因为拥有 GPU 并不意味着自动就要用最重的模型。本指南从 VRAM 需求、CUDA 实际带来的收益、声音克隆能力和许可证四个维度比较这四款引擎,帮你根据自己的硬件和真实使用场景选择合适的引擎,而不是选演示视频最炫的那个。',
     metaDescription:
-      'NVIDIA GPU 下最佳本地 TTS:对比 XTTS v2、Chatterbox、Bark 和 Kokoro 的 VRAM、CUDA 加速效果、声音克隆能力和许可证——并给出各使用场景的明确选择。',
+      'TTS最佳GPU是什么?对比 XTTS v2、Chatterbox v3、Bark 和 Kokoro 的 VRAM、声音克隆所需硬件和许可证。',
     twitterDescription:
       '你有一块 NVIDIA GPU,想跑本地 TTS。XTTS v2、Chatterbox 和 Bark 真正用得上 CUDA 加速——Kokoro 几乎不需要。2026 年完整的 VRAM 与许可证对比。',
     audience:
@@ -1817,7 +1974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '这四款引擎都不强制要求 GPU,但没有 CUDA 加速时,XTTS v2、Chatterbox 和 Bark 会明显变慢。',
         '这四款引擎都不保证进行同意验证——切勿在未经本人明确许可的情况下克隆真实人物的声音。',
       ],
-      updatedDate: '2026-09-11',
+      updatedDate: '2026-11-19',
     },
     toc: [
       { label: '快速解答', anchor: 'quick-answer' },
@@ -1827,6 +1984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Chatterbox:最佳实时克隆', anchor: 'chatterbox' },
       { label: 'Bark:最佳非语音表现力音频', anchor: 'bark' },
       { label: 'Kokoro:GPU 属于过度配置的场景', anchor: 'kokoro' },
+      { label: 'NVIDIA GPU 上其他 TTS 选择', anchor: 'other-options' },
       { label: '你实际需要多少 VRAM?', anchor: 'vram-guide' },
       { label: '声音克隆与同意', anchor: 'consent' },
       { label: '常见问题', anchor: 'faq' },
@@ -1884,12 +2042,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**XTTS v2 由 Coqui 发布,通过 [Coqui TTS 工具包](/zh/power-local-llm/coqui-tts-review)运行,是需要从短参考片段中获得最高可达质量的 GPU 用户的最佳本地声音克隆选择。** 它仅需 6 秒参考音频即可克隆一个声音,并支持用该声音输出 17 种语言,包括跨语言克隆——用英语音频克隆声音,再用西班牙语或日语说出来。',
           '在 VRAM 方面,XTTS v2 的模型权重约为 2 GB,但实用的最低运行门槛是 4 GB,实时推理建议 4-6 GB,详见 PromptQuorum 的 [XTTS v2 测评](/zh/power-local-llm/xtts-v2-review)。对大多数读者而言,许可证才是决定性因素:Coqui Public Model License(CPML)明确为非商业许可,而由于该公司 Coqui AI 已于 2023 年 12 月关闭其付费服务,目前没有确认可行的商业许可途径。',
+          '原版 coqui-ai/TTS 工具包仓库本身已无人维护,但社区分支 [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)(由 Idiap Research Institute 维护,并以 `coqui-tts` 的名称发布在 PyPI 上)仍在持续发布新版本(2026 年 1 月发布了 v0.27.5),并使用与原版相同的模型标识符 `tts_models/multilingual/multi-dataset/xtts_v2`。这让该工具包本身保持可安装、持续修复错误的状态,但不会改变 XTTS v2 模型本身非商业的 CPML 许可证——无论由哪个分支运行都是如此。',
         ],
         items: [
           '适合使用 XTTS v2 的情况:项目属于个人、学术或非商业原型,你想要本地可获得的最佳克隆质量。',
           '不适合使用 XTTS v2 的情况:你需要商业许可证——其 CPML 条款为非商业性质,自 2023 年 Coqui AI 关闭以来,没有确认的有效商业许可途径。',
           '**VRAM:** 模型权重约 2 GB,最低 4 GB,实时推理建议 4-6 GB。',
           '**最适合:** 本地可实现的最高保真度声音克隆,支持 17 种语言的跨语言能力,非商业或研究用途。',
+          '该工具包本身通过社区维护的 [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) 分支(`pip install coqui-tts`)延续下来——有助于安装和修复错误,但不影响模型的非商业许可证。',
         ],
         note: '完整的许可证细节、真实使用命令和限制,详见 PromptQuorum 的 [XTTS v2 测评](/zh/power-local-llm/xtts-v2-review)。',
       },
@@ -1899,13 +2059,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Chatterbox 由 Resemble AI 发布于 [GitHub](https://github.com/resemble-ai/chatterbox),是希望在完全宽松、可商用的许可证下实现实时对话式声音克隆的 GPU 用户的最佳选择。** 它采用 **MIT 许可证**,与 XTTS v2 的非商业 CPML 不同,无需单独协议即可商用。',
           'Chatterbox 提供多种规格:Nano 变体(1.1 亿参数),Resemble AI 自己的文档称其在 8 核 CPU 上运行速度快于实时;为低延迟设计的 Turbo 变体(3.5 亿参数);以及支持 20 多种语言的多语言变体(约 5 亿参数,其骨干网络在架构中提及借鉴了 Llama 3)。零样本声音克隆通过参考音频片段实现——Resemble AI 自己的示例使用了一个 10 秒的片段,但 README 并未像 XTTS v2 那样给出官方最短时长。',
-          'Resemble AI 的公开 README 没有公布确切的 VRAM 数值,因此你在其他地方看到的任何具体 GB 数字,在你自己用显卡实测之前都应视为未经证实。已有文档记录的是:Nano 变体单靠 CPU 即可正常运行,而更大的 Turbo 和多语言变体则是为 GPU 加速的低延迟生成而设计——同时支持 CUDA 和 Apple Silicon(MPS)。',
+          'Chatterbox 在 2026 年持续演进:多语言变体现在默认使用更新的 v3 架构(可通过 `t3_model="v3"` 参数选择,原版架构仍可通过 `t3_model="v2"` 使用),Resemble AI 还新增了基于 diffusion-LLM 架构、专为高吞吐量大规模部署设计的 Flash 变体,与现有的 Nano 和 Turbo 规格并存。',
+          'Resemble AI 的公开 README 仍未公布统一的 VRAM 数值,因此你在其他地方看到的任何具体 GB 数字,在你自己用显卡实测之前都应视为未经证实。已有文档记录的是来自 NVIDIA 自家 Chatterbox 模型 NVIGI 封装的数据:仅运行 TTS 的 Turbo 约需 2.3 GB,仅运行 TTS 的多语言变体约需 3.5 GB,而在 TTS 步骤前后加上语音识别和文本生成的完整流水线则需要 8.5 GB 以上。这些是 NVIDIA 自己打包测出的数值,而非 Resemble AI 自己公布的数字,但它们是目前能找到的关于 Chatterbox 最具体的 VRAM 数据。CUDA 和 Apple Silicon(MPS)均受支持。',
         ],
         items: [
           '适合使用 Chatterbox 的情况:你需要可用于商业的声音克隆,并具备实时或接近实时的延迟,例如交互式语音应用。',
-          '不适合使用 Chatterbox 的情况:你在购买硬件前需要有据可查、有保证的最低 VRAM 数值——Resemble AI 尚未公布。',
-          '**VRAM:** 官方未公布;较小的 Nano 变体支持 CPU,而 Turbo 和多语言变体则面向 GPU 加速以获得实时速度。',
+          '不适合使用 Chatterbox 的情况:你在购买硬件前需要 Resemble AI 自己提供的、有据可查且有保证的最低 VRAM 数值——该公司仍未公布统一的数字。',
+          '**VRAM:** Resemble AI 未给出统一数值;NVIDIA 自家封装数据显示约 2.3 GB(Turbo,仅 TTS)、约 3.5 GB(多语言,仅 TTS),完整 ASR+TTS 流水线约 8.5 GB 以上。',
           '**最适合:** 需要在宽松许可证下实现零样本对话式声音克隆的商业产品。',
+          'Chatterbox 多语言变体现在默认使用 v3 架构,新的 Flash 变体(diffusion-LLM 架构)则面向高吞吐量大规模部署——两者都是在原有 Nano 和 Turbo 规格基础上新增的。',
           '每个 Chatterbox 输出都带有 Resemble AI 自有的 Perth 水印,其文档将其描述为一种经过 MP3 压缩后依然存在的、不可感知的神经网络水印——这是一种内置的溯源信号,而非同意的替代品(见下文声音克隆与同意部分)。',
         ],
       },
@@ -1930,12 +2092,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**这里把 Kokoro 列为反例:拥有 NVIDIA GPU 并不意味着每个 TTS 工作负载都需要用到它,Kokoro 就是证明。** 凭借 8200 万参数,它比 XTTS v2、Chatterbox 或 Bark 都小得多,其自身的 Hugging Face 模型卡记录了单靠 CPU 即可实现的实时或更快合成速度,使用 GPU 只是增加余量,而不是必要条件。',
           'Kokoro 采用 Apache 2.0 许可证,与 Chatterbox 的 MIT 许可证一样,允许不受限制的商业使用。它不支持声音克隆,因此如果克隆是硬性需求,它无法替代 XTTS v2 或 Chatterbox;但对于简单旁白、朗读文本,或不需要克隆的应用语音层,它是一个更轻量、更简单的选择。',
+          'Kokoro 的模型本身自 2025 年 1 月发布(v1.0,8200 万参数)以来没有变化——截至 2026 年下半年也没有更新版本发布——但围绕它的工具生态在演进:NVIDIA 发布了自己的 ONNX 优化版本,而广受欢迎的 [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) 项目为不同 GPU 代际提供了独立的 CUDA Docker 镜像。从 GTX 900 系列到 RTX 40 系列的显卡使用一个默认镜像;RTX 50 系列/Blackwell 显卡则需要 CUDA 12.8 以及单独的 `cu128` 构建版本。',
         ],
         items: [
           '适合使用 Kokoro 的情况:你的工作负载是纯旁白或朗读文本,你想为 LLM 或其他任务保留 GPU 显存,或者你需要纯 CPU 部署。',
           '不适合使用 Kokoro 的情况:你需要声音克隆——它不支持,请改用 XTTS v2 或 Chatterbox。',
           '**VRAM:** 在 GPU 上运行约 2 GB;据其自身模型卡,单靠 CPU 也能达到实时速度。',
           '**最适合:** 更重的克隆引擎确实属于过度配置的简单旁白和朗读文本场景。',
+          'RTX 50 系列/Blackwell 显卡用户需要 CUDA 12.8 和 `cu128` GPU 运行时构建版本——标准的 Kokoro-FastAPI GPU 镜像(面向 GTX 900 到 RTX 40 系列)无法覆盖较新的显卡。',
+        ],
+      },
+      otherOptions: {
+        id: 'other-options',
+        title: 'NVIDIA GPU 上其他 TTS 选择',
+        content: [
+          '**XTTS v2、Chatterbox、Bark 和 Kokoro 并非唯一的 NVIDIA 加速本地 TTS 引擎——Fish Speech 和 F5-TTS 是值得关注的两款最新选项,不过目前都没有适合商用的许可证。**',
+          'Fish Audio 于 2026 年 3 月发布了 Fish Speech S2,作为 S1 的后续版本,2026 年的一些社区基准测试将其音频质量评价高于 F5-TTS。F5-TTS 是两者中更轻量的一个,约需 2 GB VRAM,而 Fish Speech 约需 6 GB。两者均采用非商业许可证——F5-TTS 为 CC-BY-NC,Fish Speech 的开放版本为 CC-BY-NC-SA-4.0——因此对于商业产品而言,本指南中 Chatterbox 的 MIT 许可证或 Kokoro 的 Apache 2.0 许可证仍是更安全的选择。',
+        ],
+        items: [
+          '**Fish Speech S2**(2026 年 3 月):Fish Audio 的最新版本,在部分社区质量基准测试中评价不错;约 6 GB VRAM;CC-BY-NC-SA-4.0 许可证(非商业)。',
+          '**F5-TTS**:更轻量,约 2 GB VRAM;CC-BY-NC 许可证(非商业)。',
+          '这两款引擎目前都没有提供适合商用的许可证——如果目标是商业部署,应使用本指南中的 Chatterbox(MIT)或 Kokoro(Apache 2.0)。',
         ],
       },
       comparisonTable: {
@@ -1955,7 +2132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '引擎': 'Chatterbox',
-            'VRAM(GPU)': '官方未公布',
+            'VRAM(GPU)': '约 2.3-8.5+ GB(NVIDIA,按变体)',
             'GPU 速度收益': '实时场景下收益大',
             '声音克隆': '支持,零样本',
             '许可证': 'MIT',
@@ -2031,7 +2208,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我可以将 Chatterbox 用于商业用途吗?',
-            a: '可以。Resemble AI 发布的 Chatterbox 采用 MIT 许可证,无需单独协议即可商用——这与 XTTS v2 的非商业 CPML 许可证不同。',
+            a: '可以。Resemble AI 发布的 Chatterbox 采用 MIT 许可证,无需单独协议即可商用——这与 XTTS v2 的非商业 CPML 许可证不同。多语言变体现在默认使用更新的 v3 架构,Flash 变体则面向高吞吐量部署,这些变化都不影响 MIT 许可证。',
+          },
+          {
+            q: 'TTS 最佳 GPU 是什么?',
+            a: '任何拥有 6 GB 以上 VRAM 的 NVIDIA GPU 都能轻松运行 XTTS v2、Chatterbox 和 Kokoro;只有 Bark 的完整模型需要更多,约 12 GB(或使用小模型标志时约 8 GB)。没有适用于所有场景的单一"最佳"GPU——应根据你实际需要的引擎来匹配显卡的 VRAM,而不是默认购买最重的选项。',
+          },
+          {
+            q: '在本地运行声音克隆需要什么硬件?',
+            a: '对于 XTTS v2,4-6 GB VRAM 就足以实现实时克隆。Chatterbox 没有公布统一的 VRAM 数值,但 NVIDIA 自家对模型的封装数据显示,Turbo 和多语言变体仅运行 TTS 时约需 2.3-3.5 GB,而加上语音识别的完整流水线则需要 8.5 GB 以上。两者也都能在 CPU 上运行,只是比使用 CUDA 加速时明显更慢。',
           },
           {
             q: '本地 TTS 使用 GPU 是不是过度配置?',
@@ -2059,7 +2244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          '对于已经拥有 NVIDIA GPU、想将其用于文本转语音的读者来说,选择取决于音频需要实现什么效果。鉴于其非商业 CPML 许可证,在非商业或研究场景下追求可达到的最高声音克隆质量,XTTS v2 是首选。当同样的克隆能力需要投入商业产品时,凭借 MIT 许可证及面向实时场景的较小模型规格,Chatterbox 是首选。当项目特别需要富有表现力的非语音音频——笑声、叹息、简单音乐——并能为此花费 8-12 GB VRAM 时,Bark 是首选,但需注意其维护状态不确定。只要克隆不是硬性需求,Kokoro 始终是正确选择:它单靠 CPU 就能运行良好,因此为它预留 GPU 显存很少值得。如果拿不准,可以从 Kokoro 用于简单旁白开始,只有在出现真正的克隆需求时才升级到 XTTS v2 或 Chatterbox——这样能让你 GPU 的显存留给同时运行的其他任务,包括本地 LLM。关于本文提到的每款引擎的许可证详情,参见 PromptQuorum 的[本地 TTS 与声音克隆许可证指南](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。',
+          '对于已经拥有 NVIDIA GPU、想将其用于文本转语音的读者来说,选择取决于音频需要实现什么效果。鉴于其非商业 CPML 许可证,在非商业或研究场景下追求可达到的最高声音克隆质量,XTTS v2 是首选——如今依靠社区维护的 [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) 分支保持可安装状态,尽管许可证本身没有改变。当同样的克隆能力需要投入商业产品时,凭借 MIT 许可证及面向实时场景的较小模型规格,Chatterbox 是首选;2026 年它继续演进,多语言变体用上了 v3 架构,并新增了面向高吞吐量部署的 Flash 变体,但这并未改变这里的许可证考量。当项目特别需要富有表现力的非语音音频——笑声、叹息、简单音乐——并能为此花费 8-12 GB VRAM 时,Bark 是首选,但需注意其维护状态不确定。只要克隆不是硬性需求,Kokoro 始终是正确选择:它单靠 CPU 就能运行良好,因此为它预留 GPU 显存很少值得。较新的 Fish Speech 和 F5-TTS 值得关注,但目前仍采用非商业许可证(分别为 CC-BY-NC-SA-4.0 和 CC-BY-NC),因此不会改变针对商业产品的推荐。如果拿不准,可以从 Kokoro 用于简单旁白开始,只有在出现真正的克隆需求时才升级到 XTTS v2 或 Chatterbox——这样能让你 GPU 的显存留给同时运行的其他任务,包括本地 LLM。关于本文提到的每款引擎的许可证详情,参见 PromptQuorum 的[本地 TTS 与声音克隆许可证指南](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)。',
       },
       sources: {
         id: 'sources',
@@ -2070,6 +2255,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub 上的 resemble-ai/chatterbox](https://github.com/resemble-ai/chatterbox) — README:安装、MIT 许可证、水印以及 CPU/GPU 支持。',
           '[GitHub 上的 suno-ai/bark](https://github.com/suno-ai/bark) — README:许可证、VRAM/小模型标志以及维护/提交历史。',
           '[Hugging Face 上的 Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — 模型卡:参数量、Apache 2.0 许可证以及 CPU/GPU 性能。',
+          '[NVIDIA NVIGI:Chatterbox TTS 模型卡](https://docs.nvidia.com/ace-for-games/chatterbox-tts/nvigi-chatterbox-model-card.html) — Chatterbox Turbo、多语言变体以及完整 ASR+TTS 流水线各自的 VRAM 数值。',
+          '[GitHub 上的 idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — 持续活跃维护的 Coqui TTS 工具包社区分支,目前仍在运行 XTTS v2 模型。',
+          '[GitHub 上的 Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) — 按 GPU 代际提供的 CUDA Docker 镜像矩阵,包含 RTX 50 系列/Blackwell 显卡所需的 CUDA 12.8 要求。',
           '[XTTS v2 测评](/zh/power-local-llm/xtts-v2-review) — PromptQuorum 的专项测评,含完整使用命令和许可证细节。',
           '[Bark TTS 测评](/zh/power-local-llm/bark-tts-review) — PromptQuorum 的专项测评,含 VRAM 数据和维护状态。',
           '[本地 TTS 与声音克隆许可证](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 各本地 TTS 引擎的完整许可证与 VRAM 对比。',
@@ -2092,11 +2280,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'NVIDIA GPU 配置下最佳本地 TTS 引擎(2026)',
       description:
-        'NVIDIA GPU 下最佳本地 TTS:对比 XTTS v2、Chatterbox、Bark 和 Kokoro 的 VRAM、CUDA 加速效果、声音克隆能力和许可证——并给出各使用场景的明确选择。',
+        'TTS最佳GPU是什么?对比 XTTS v2、Chatterbox v3、Bark 和 Kokoro 的 VRAM、声音克隆所需硬件和许可证。',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-tts-nvidia-gpu',
       inLanguage: 'zh',
       datePublished: '2026-09-11',
-      dateModified: '2026-09-11',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -2125,8 +2313,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
-    next_refresh_due: '2027-03-11',
+    dateModified: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/best-local-tts-nvidia-gpu-hero-pt.webp',
@@ -2135,7 +2323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Se você já tem uma GPU NVIDIA, os motores locais de conversão de texto em fala que valem a pena rodar são diferentes das opções somente-CPU que a maioria dos guias recomenda por padrão. XTTS v2, Chatterbox e Bark trocam velocidade de CPU por qualidade de clonagem de voz e expressividade, algo que só faz sentido de verdade com aceleração CUDA disponível — e o Kokoro entra aqui justamente como contraponto, porque ter uma GPU não significa automaticamente precisar do modelo mais pesado. Este guia compara os quatro em requisitos de VRAM, quanto cada um realmente se beneficia da CUDA, capacidade de clonagem de voz e licença, para que você escolha o motor certo para seu hardware e seu caso de uso real, em vez do que tem o vídeo de demonstração mais chamativo.',
     metaDescription:
-      'Melhor TTS local para uma GPU NVIDIA: XTTS v2, Chatterbox, Bark e Kokoro comparados em VRAM, aceleração CUDA, clonagem de voz e licença — com uma recomendação clara por caso de uso.',
+      'Melhor GPU para TTS: XTTS v2, Chatterbox v3, Bark e Kokoro comparados em VRAM, o hardware para clonagem de voz e licença — com recomendação clara.',
     twitterDescription:
       'Você tem uma GPU NVIDIA e quer TTS local. XTTS v2, Chatterbox e Bark realmente aproveitam essa aceleração CUDA — o Kokoro quase não precisa dela. Comparativo completo de VRAM e licenças para 2026.',
     audience:
@@ -2169,7 +2357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Nenhum desses quatro motores exige uma GPU, mas o XTTS v2, o Chatterbox e o Bark ficam perceptivelmente mais lentos sem aceleração CUDA.',
         'Nenhum desses quatro motores garante verificação de consentimento — nunca clone a voz de uma pessoa real sem sua permissão explícita.',
       ],
-      updatedDate: '2026-09-11',
+      updatedDate: '2026-11-19',
     },
     toc: [
       { label: 'Resposta rápida', anchor: 'quick-answer' },
@@ -2179,6 +2367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Chatterbox: melhor clonagem em tempo real', anchor: 'chatterbox' },
       { label: 'Bark: melhor áudio expressivo não vocal', anchor: 'bark' },
       { label: 'Kokoro: quando uma GPU é excessiva', anchor: 'kokoro' },
+      { label: 'Outras opções de TTS para GPU NVIDIA', anchor: 'other-options' },
       { label: 'Quanta VRAM você realmente precisa?', anchor: 'vram-guide' },
       { label: 'Clonagem de voz e consentimento', anchor: 'consent' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
@@ -2236,12 +2425,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O XTTS v2, lançado pela Coqui e executado por meio do [kit de ferramentas Coqui TTS](/pt/power-local-llm/coqui-tts-review), é a melhor opção de clonagem de voz local para quem tem GPU e precisa da maior qualidade alcançável a partir de um clipe de referência curto.** Ele clona uma voz a partir de apenas 6 segundos de áudio de referência e a reproduz em 17 idiomas, incluindo clonagem entre idiomas — clonar uma voz a partir de áudio em inglês e falar o resultado em espanhol ou japonês.',
           'Em termos de VRAM, os pesos do modelo do XTTS v2 têm cerca de 2 GB, mas 4 GB é o mínimo prático para rodá-lo, e 4-6 GB são recomendados para inferência em tempo real, segundo a [análise do XTTS v2](/pt/power-local-llm/xtts-v2-review) dedicada da PromptQuorum. A licença é o fator decisivo para a maioria dos leitores: a Coqui Public Model License (CPML) é explicitamente não comercial, e como a Coqui AI, a empresa, encerrou seus serviços pagos em dezembro de 2023, atualmente não há um caminho confirmado para uma licença comercial.',
+          'O repositório original do kit de ferramentas coqui-ai/TTS não tem mais manutenção própria, mas um fork comunitário — o [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), mantido pelo Idiap Research Institute e publicado no PyPI como `coqui-tts` — continua lançando versões (v0.27.5 em janeiro de 2026) sob o mesmo identificador de modelo `tts_models/multilingual/multi-dataset/xtts_v2`. Isso mantém o kit de ferramentas instalável e com correções de bugs; não muda nada na licença CPML não comercial do próprio modelo XTTS v2, independentemente de qual fork o execute.',
         ],
         items: [
           'Use o XTTS v2 se: seu projeto for pessoal, acadêmico ou um protótipo não comercial e você quiser a melhor qualidade de clonagem disponível localmente.',
           'Evite o XTTS v2 se: você precisar de uma licença comercial — seus termos CPML são não comerciais, sem caminho de licenciamento ativo confirmado desde o fechamento da Coqui AI em 2023.',
           '**VRAM:** ~2 GB de pesos do modelo, 4 GB no mínimo, 4-6 GB recomendados para inferência em tempo real.',
           '**Ideal para:** clonagem de voz local da mais alta fidelidade, suporte multilíngue cruzado a 17 idiomas, uso não comercial ou de pesquisa.',
+          'O kit de ferramentas em si sobrevive graças ao fork comunitário [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) (`pip install coqui-tts`) — útil para instalação e correções, sem efeito sobre a licença não comercial do modelo.',
         ],
         note: 'Detalhes completos de licença, comandos de uso reais e limitações são cobertos na [análise do XTTS v2](/pt/power-local-llm/xtts-v2-review) dedicada da PromptQuorum.',
       },
@@ -2251,13 +2442,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O Chatterbox, lançado pela Resemble AI no [GitHub](https://github.com/resemble-ai/chatterbox), é a melhor escolha para quem tem GPU e quer clonagem de voz conversacional em tempo real sob uma licença totalmente permissiva e apta para uso comercial.** Ele está sob a **licença MIT**, que — diferentemente da CPML não comercial do XTTS v2 — permite uso comercial sem um acordo separado.',
           'O Chatterbox vem em vários tamanhos: uma variante Nano (110 milhões de parâmetros) que a própria documentação da Resemble AI descreve como mais rápida que tempo real em 8 núcleos de CPU, uma variante Turbo (350 milhões de parâmetros) construída para baixa latência, e uma variante multilíngue (cerca de 500 milhões de parâmetros, sobre uma arquitetura que credita o Llama 3) com suporte a mais de 20 idiomas. A clonagem de voz zero-shot funciona a partir de um clipe de áudio de referência — o exemplo oficial da Resemble AI usa um clipe de 10 segundos, embora o README não informe uma duração mínima oficial como o do XTTS v2.',
-          'O README público da Resemble AI não publica um valor exato de VRAM, então trate qualquer número específico em GB que você veja em outro lugar como não verificado até testá-lo na sua própria placa. O que está documentado: a variante Nano roda de forma aceitável só com CPU, enquanto as variantes maiores Turbo e Multilingual são construídas para geração acelerada por GPU e de baixa latência — tanto CUDA quanto Apple Silicon (MPS) são compatíveis.',
+          'O Chatterbox continuou evoluindo em 2026: a variante Multilingual agora usa por padrão uma arquitetura v3 mais recente (selecionável via o parâmetro `t3_model="v3"`, com a versão original ainda disponível como `t3_model="v2"`), e a Resemble AI adicionou uma variante Flash baseada em uma arquitetura diffusion-LLM, pensada especificamente para implantações de alto throughput, ao lado dos tamanhos Nano e Turbo já existentes.',
+          'O README público da Resemble AI ainda não publica um valor unificado de VRAM, então trate qualquer número específico em GB que você veja em outro lugar como não verificado até testá-lo na sua própria placa. O que está documentado, a partir do empacotamento NVIGI da própria NVIDIA para os modelos Chatterbox: cerca de 2,3 GB para o Turbo só com TTS, cerca de 3,5 GB para o Multilingual só com TTS, e 8,5 GB ou mais para um pipeline completo que adiciona reconhecimento de fala e geração de texto em torno da etapa de TTS. Esses são números de empacotamento da NVIDIA, não valores publicados pela própria Resemble AI, mas são os dados de VRAM mais concretos disponíveis para o Chatterbox atualmente. Tanto CUDA quanto Apple Silicon (MPS) são compatíveis.',
         ],
         items: [
           'Use o Chatterbox se: você precisar de clonagem de voz apta para uso comercial com latência em tempo real ou quase em tempo real, como em uma aplicação de voz interativa.',
-          'Evite o Chatterbox se: você precisar de um valor mínimo de VRAM documentado e garantido antes de comprar hardware — a Resemble AI não publicou um.',
-          '**VRAM:** não publicado oficialmente; a variante Nano, menor, é compatível com CPU, enquanto as variantes Turbo e Multilingual visam a aceleração por GPU para velocidade de tempo real.',
+          'Evite o Chatterbox se: você precisar de um valor mínimo de VRAM documentado e garantido diretamente pela Resemble AI antes de comprar hardware — a empresa ainda não publicou um número unificado.',
+          '**VRAM:** não unificado pela Resemble AI; o empacotamento próprio da NVIDIA indica ~2,3 GB (Turbo, só TTS), ~3,5 GB (Multilingual, só TTS) e ~8,5 GB ou mais para um pipeline completo de ASR+TTS.',
           '**Ideal para:** produtos comerciais que precisam de clonagem de voz conversacional zero-shot sob uma licença permissiva.',
+          'O Chatterbox Multilingual agora usa por padrão uma arquitetura v3, e uma nova variante Flash (arquitetura diffusion-LLM) tem como alvo implantações de alto throughput — ambas se somam aos tamanhos Nano e Turbo originais.',
           'Toda saída do Chatterbox carrega a marca d\'água Perth própria da Resemble AI, descrita em sua documentação como uma marca d\'água neural imperceptível que sobrevive à compressão MP3 — um sinal de proveniência embutido, não um substituto para o consentimento (veja a seção Clonagem de voz e consentimento abaixo).',
         ],
       },
@@ -2282,12 +2475,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O Kokoro entra aqui como contraponto: ter uma GPU NVIDIA não significa que toda carga de trabalho de TTS precise de uma, e o Kokoro prova isso.** Com 82 milhões de parâmetros, ele é drasticamente menor que o XTTS v2, o Chatterbox ou o Bark, e sua própria ficha de modelo no Hugging Face documenta síntese em tempo real ou mais rápida só com CPU, com o uso de GPU adicionando folga em vez de ser um requisito.',
           'O Kokoro está sob licença Apache 2.0, que — assim como a licença MIT do Chatterbox — permite uso comercial sem restrições. Ele não suporta clonagem de voz, então não substitui o XTTS v2 ou o Chatterbox quando a clonagem é o requisito, mas para narração simples, leitura de texto em voz alta, ou uma camada de voz em um aplicativo em que a clonagem não é necessária, ele é uma escolha mais leve e mais simples.',
+          'O modelo do Kokoro em si não mudou desde seu lançamento em janeiro de 2025 (v1.0, 82M de parâmetros) — nenhuma versão mais recente saiu até o fim de 2026 — mas o ecossistema em torno dele evoluiu: a NVIDIA publica seu próprio build otimizado em ONNX, e o popular projeto [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) oferece imagens Docker CUDA separadas por geração de GPU. Placas da série GTX 900 até a série RTX 40 usam uma imagem padrão; placas RTX série 50/Blackwell precisam de CUDA 12.8 e um build `cu128` separado.',
         ],
         items: [
           'Use o Kokoro se: sua carga de trabalho for narração simples ou leitura de texto em voz alta, você quiser manter a VRAM da sua GPU livre para um LLM ou outra tarefa, ou precisar de uma implantação somente-CPU.',
           'Evite o Kokoro se: você precisar de clonagem de voz — ele não a suporta, use o XTTS v2 ou o Chatterbox em vez disso.',
           '**VRAM:** aproximadamente 2 GB quando rodado em GPU; roda em velocidade de tempo real só com CPU, segundo sua própria ficha de modelo.',
           '**Ideal para:** narração simples e casos de leitura de texto em voz alta em que os motores de clonagem mais pesados seriam realmente excessivos.',
+          'Quem tem placas RTX série 50/Blackwell precisa de CUDA 12.8 e do build `cu128` do runtime de GPU — a imagem GPU padrão do Kokoro-FastAPI (feita para GTX 900 até RTX 40) não cobre as placas mais novas.',
+        ],
+      },
+      otherOptions: {
+        id: 'other-options',
+        title: 'Outras opções de TTS para GPU NVIDIA',
+        content: [
+          '**O XTTS v2, o Chatterbox, o Bark e o Kokoro não são os únicos motores de TTS locais acelerados por NVIDIA — o Fish Speech e o F5-TTS são os dois novos nomes mais relevantes a acompanhar, embora nenhum dos dois tenha hoje uma licença apta para uso comercial.**',
+          'A Fish Audio lançou o Fish Speech S2 em março de 2026 como sucessor do S1, e alguns benchmarks comunitários de 2026 o colocam acima do F5-TTS em qualidade de áudio. O F5-TTS é o mais leve dos dois, com cerca de 2 GB de VRAM, contra cerca de 6 GB do Fish Speech. Ambos têm licença não comercial — o F5-TTS sob CC-BY-NC e a versão aberta do Fish Speech sob CC-BY-NC-SA-4.0 —, então, para um produto comercial, a licença MIT do Chatterbox ou a licença Apache 2.0 do Kokoro continuam sendo as escolhas mais seguras cobertas neste guia.',
+        ],
+        items: [
+          '**Fish Speech S2** (março de 2026): o lançamento mais recente da Fish Audio, bem avaliado em alguns benchmarks comunitários de qualidade; cerca de 6 GB de VRAM; licença CC-BY-NC-SA-4.0 (não comercial).',
+          '**F5-TTS**: mais leve, com cerca de 2 GB de VRAM; licença CC-BY-NC (não comercial).',
+          'Nenhum dos dois motores oferece hoje uma licença apta para uso comercial — se o objetivo for uma implantação comercial, o Chatterbox (MIT) ou o Kokoro (Apache 2.0) são os motores certos deste guia.',
         ],
       },
       comparisonTable: {
@@ -2307,7 +2515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Motor': 'Chatterbox',
-            'VRAM (GPU)': 'Não publicado oficialmente',
+            'VRAM (GPU)': '~2,3-8,5+ GB (NVIDIA, por variante)',
             'Ganho de velocidade com GPU': 'Grande para uso em tempo real',
             'Clonagem de voz': 'Sim, zero-shot',
             'Licença': 'MIT',
@@ -2383,7 +2591,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso usar o Chatterbox comercialmente?',
-            a: 'Sim. O Chatterbox, lançado pela Resemble AI, está sob licença MIT, que permite uso comercial sem um acordo separado — diferentemente da licença CPML não comercial do XTTS v2.',
+            a: 'Sim. O Chatterbox, lançado pela Resemble AI, está sob licença MIT, que permite uso comercial sem um acordo separado — diferentemente da licença CPML não comercial do XTTS v2. A variante Multilingual agora usa por padrão uma arquitetura v3 mais recente, e uma variante Flash tem como alvo implantações de alto throughput; nenhuma dessas mudanças afeta a licença MIT.',
+          },
+          {
+            q: 'Qual é a melhor GPU para TTS?',
+            a: 'Qualquer GPU NVIDIA com 6 GB de VRAM ou mais roda confortavelmente o XTTS v2, o Chatterbox e o Kokoro; só o modelo completo do Bark precisa de mais, cerca de 12 GB (ou cerca de 8 GB com sua flag de modelo pequeno). Não existe uma única "melhor" GPU para todos os casos — combine a VRAM da placa com o motor que você realmente precisa, em vez de comprar por padrão a opção mais pesada.',
+          },
+          {
+            q: 'Que hardware eu preciso para rodar clonagem de voz local?',
+            a: 'Para o XTTS v2, 4-6 GB de VRAM bastam para clonagem em tempo real. O Chatterbox não publica um valor único de VRAM, mas o empacotamento próprio da NVIDIA para os modelos indica cerca de 2,3-3,5 GB para as variantes Turbo e Multilingual só com TTS, e 8,5 GB ou mais para um pipeline completo que adiciona reconhecimento de fala. Ambos também rodam em CPU, só que perceptivelmente mais devagar do que com aceleração CUDA.',
           },
           {
             q: 'Uma GPU é excessiva para TTS local?',
@@ -2411,7 +2627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'Para leitores que já têm uma GPU NVIDIA e querem usá-la para conversão de texto em fala, a escolha depende do que o áudio precisa fazer. O XTTS v2 é a escolha para a mais alta qualidade de clonagem de voz alcançável em um contexto não comercial ou de pesquisa, dada sua licença CPML não comercial. O Chatterbox é a escolha quando essa mesma capacidade de clonagem precisa ser entregue em um produto comercial, graças à sua licença MIT e aos tamanhos de modelo menores voltados para tempo real. O Bark é a escolha especificamente quando o projeto precisa de áudio expressivo não vocal — risadas, suspiros, música simples — e pode gastar 8-12 GB de VRAM para consegui-lo, com a ressalva de que seu status de manutenção é incerto. O Kokoro continua sendo a escolha certa sempre que a clonagem não for o requisito: ele roda confortavelmente só com CPU, então reservar VRAM de GPU para ele raramente vale a pena. Na dúvida, comece com o Kokoro para narração simples e migre para o XTTS v2 ou o Chatterbox só quando surgir um requisito real de clonagem — isso mantém a VRAM da sua GPU disponível para o que mais você estiver rodando junto, inclusive um LLM local. Para os detalhes de licença de cada motor mencionado aqui, veja o [guia de licenças de TTS e clonagem de voz locais](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) da PromptQuorum.',
+          'Para leitores que já têm uma GPU NVIDIA e querem usá-la para conversão de texto em fala, a escolha depende do que o áudio precisa fazer. O XTTS v2 é a escolha para a mais alta qualidade de clonagem de voz alcançável em um contexto não comercial ou de pesquisa, dada sua licença CPML não comercial — mantido instalável hoje graças ao fork comunitário [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), mesmo que a licença em si não tenha mudado. O Chatterbox é a escolha quando essa mesma capacidade de clonagem precisa ser entregue em um produto comercial, graças à sua licença MIT e aos tamanhos de modelo menores voltados para tempo real; ele continuou evoluindo em 2026 com uma arquitetura v3 para o Multilingual e uma nova variante Flash para implantações de alto throughput, sem que isso mude o panorama de licenças aqui. O Bark é a escolha especificamente quando o projeto precisa de áudio expressivo não vocal — risadas, suspiros, música simples — e pode gastar 8-12 GB de VRAM para consegui-lo, com a ressalva de que seu status de manutenção é incerto. O Kokoro continua sendo a escolha certa sempre que a clonagem não for o requisito: ele roda confortavelmente só com CPU, então reservar VRAM de GPU para ele raramente vale a pena. Os novos nomes Fish Speech e F5-TTS merecem atenção, mas seguem com licença não comercial (CC-BY-NC-SA-4.0 e CC-BY-NC, respectivamente), então não mudam a recomendação para um produto comercial. Na dúvida, comece com o Kokoro para narração simples e migre para o XTTS v2 ou o Chatterbox só quando surgir um requisito real de clonagem — isso mantém a VRAM da sua GPU disponível para o que mais você estiver rodando junto, inclusive um LLM local. Para os detalhes de licença de cada motor mencionado aqui, veja o [guia de licenças de TTS e clonagem de voz locais](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) da PromptQuorum.',
       },
       sources: {
         id: 'sources',
@@ -2422,6 +2638,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox no GitHub](https://github.com/resemble-ai/chatterbox) — README: instalação, licença MIT, marca d\'água e suporte a CPU/GPU.',
           '[suno-ai/bark no GitHub](https://github.com/suno-ai/bark) — README: licença, flag de VRAM/modelo pequeno e histórico de manutenção/commits.',
           '[Kokoro-82M no Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — ficha do modelo: contagem de parâmetros, licença Apache 2.0 e desempenho em CPU/GPU.',
+          '[NVIDIA NVIGI: ficha de modelo do Chatterbox TTS](https://docs.nvidia.com/ace-for-games/chatterbox-tts/nvigi-chatterbox-model-card.html) — valores de VRAM por variante para Chatterbox Turbo, Multilingual e um pipeline ASR+TTS completo.',
+          '[idiap/coqui-ai-TTS no GitHub](https://github.com/idiap/coqui-ai-TTS) — o fork comunitário ativamente mantido do kit de ferramentas Coqui TTS, que ainda executa o modelo XTTS v2.',
+          '[Kokoro-FastAPI no GitHub](https://github.com/remsky/Kokoro-FastAPI) — matriz de imagens Docker CUDA por geração de GPU, incluindo o requisito de CUDA 12.8 para placas RTX série 50/Blackwell.',
           '[Análise do XTTS v2](/pt/power-local-llm/xtts-v2-review) — a análise dedicada da PromptQuorum com comandos de uso completos e detalhes de licença.',
           '[Análise do Bark TTS](/pt/power-local-llm/bark-tts-review) — a análise dedicada da PromptQuorum com valores de VRAM e status de manutenção.',
           '[Licenças de TTS e clonagem de voz locais](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparativo completo de licenças e VRAM entre os motores de TTS locais.',
@@ -2444,11 +2663,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'O Melhor Motor de TTS Local para uma GPU NVIDIA (2026)',
       description:
-        'Melhor TTS local para uma GPU NVIDIA: XTTS v2, Chatterbox, Bark e Kokoro comparados em VRAM, aceleração CUDA, clonagem de voz e licença — com uma recomendação clara por caso de uso.',
+        'Melhor GPU para TTS: XTTS v2, Chatterbox v3, Bark e Kokoro comparados em VRAM, o hardware para clonagem de voz e licença — com recomendação clara.',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-tts-nvidia-gpu',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-11',
-      dateModified: '2026-09-11',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -2477,8 +2696,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
-    next_refresh_due: '2027-03-11',
+    dateModified: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/best-local-tts-nvidia-gpu-hero-ar.webp',
@@ -2487,7 +2706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'إذا كنت تمتلك بالفعل GPU من NVIDIA، فإن محركات تحويل النص إلى كلام المحلية التي تستحق التشغيل تختلف عن خيارات CPU فقط التي تعتمدها معظم الأدلة افتراضيًا. XTTS v2 وChatterbox وBark تستبدل جميعها سرعة CPU بجودة استنساخ الصوت والتعبيرية، وهو ما لا يصبح منطقيًا حقًا إلا مع توفر تسريع CUDA — أما Kokoro فيُدرج هنا تحديدًا كنقيض، لأن امتلاك GPU لا يعني تلقائيًا أنك بحاجة إلى النموذج الأثقل. يقارن هذا الدليل بين النماذج الأربعة من حيث متطلبات VRAM، ومدى استفادة كل منها فعليًا من CUDA، والقدرة على استنساخ الصوت، والترخيص، حتى تختار المحرك الذي يناسب أجهزتك وحالة استخدامك الفعلية بدلًا من اختيار النموذج صاحب فيديو العرض الأكثر بريقًا.',
     metaDescription:
-      'أفضل TTS محلي لـ GPU من NVIDIA: مقارنة XTTS v2 وChatterbox وBark وKokoro من حيث VRAM وتسريع CUDA واستنساخ الصوت والترخيص — مع اختيار واضح لكل حالة استخدام.',
+      'أفضل GPU لـ TTS: مقارنة XTTS v2 وChatterbox v3 وBark وKokoro من حيث VRAM والأجهزة اللازمة لاستنساخ الصوت والترخيص.',
     twitterDescription:
       'لديك GPU من NVIDIA وتريد TTS محليًا. XTTS v2 وChatterbox وBark تستفيد فعليًا من تسريع CUDA — بينما لا يحتاجه Kokoro تقريبًا. مقارنة كاملة لـ VRAM والتراخيص لعام 2026.',
     audience:
@@ -2521,7 +2740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'لا يتطلب أي من هذه المحركات الأربعة GPU بشكل إلزامي، لكن XTTS v2 وChatterbox وBark أبطأ بشكل ملحوظ دون تسريع CUDA.',
         'لا يضمن أي من هذه المحركات الأربعة التحقق من الموافقة — لا تستنسخ أبدًا صوت شخص حقيقي دون إذنه الصريح.',
       ],
-      updatedDate: '2026-09-11',
+      updatedDate: '2026-11-19',
     },
     toc: [
       { label: 'الإجابة السريعة', anchor: 'quick-answer' },
@@ -2531,6 +2750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Chatterbox: أفضل استنساخ فوري', anchor: 'chatterbox' },
       { label: 'Bark: أفضل صوت تعبيري غير كلامي', anchor: 'bark' },
       { label: 'Kokoro: عندما تكون GPU مبالغة', anchor: 'kokoro' },
+      { label: 'خيارات TTS أخرى لوحدات GPU من NVIDIA', anchor: 'other-options' },
       { label: 'كم من VRAM تحتاج فعليًا؟', anchor: 'vram-guide' },
       { label: 'استنساخ الصوت والموافقة', anchor: 'consent' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
@@ -2588,12 +2808,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**XTTS v2، الذي أصدرته Coqui ويُشغَّل عبر [مجموعة أدوات Coqui TTS](/ar/power-local-llm/coqui-tts-review)، هو أفضل خيار محلي لاستنساخ الصوت لمالكي GPU الذين يحتاجون إلى أعلى جودة يمكن تحقيقها من مقطع مرجعي قصير.** يستنسخ صوتًا من 6 ثوانٍ فقط من الصوت المرجعي وينطقه بـ17 لغة، بما في ذلك الاستنساخ عبر اللغات — استنساخ صوت من صوت إنجليزي وجعله يتحدث بالإسبانية أو اليابانية.',
           'من حيث VRAM، تبلغ أوزان نموذج XTTS v2 حوالي 2 جيجابايت، لكن 4 جيجابايت هو الحد الأدنى العملي لتشغيله، ويُنصح بـ4-6 جيجابايت للاستدلال الفوري، وفقًا لـ[مراجعة XTTS v2](/ar/power-local-llm/xtts-v2-review) المخصصة من PromptQuorum. الترخيص هو العامل الحاسم لمعظم القراء: Coqui Public Model License (CPML) غير تجاري صراحةً، وبما أن Coqui AI، الشركة، أوقفت خدماتها المدفوعة في ديسمبر 2023، فلا يوجد حاليًا مسار مؤكد نحو ترخيص تجاري.',
+          'مستودع مجموعة أدوات coqui-ai/TTS الأصلي نفسه لا يحظى بصيانة، لكن فرعًا مجتمعيًا — [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)، تتولى صيانته مؤسسة Idiap Research Institute ويُنشر على PyPI باسم `coqui-tts` — لا يزال يصدر إصدارات جديدة (v0.27.5 في يناير 2026) باستخدام نفس معرّف النموذج `tts_models/multilingual/multi-dataset/xtts_v2`. هذا يحافظ على إمكانية تثبيت مجموعة الأدوات وإصلاح أخطائها؛ ولا يغيّر شيئًا في ترخيص CPML غير التجاري لنموذج XTTS v2 نفسه، بغض النظر عن الفرع الذي يُشغّله.',
         ],
         items: [
           'استخدم XTTS v2 إذا: كان مشروعك شخصيًا أو أكاديميًا أو نموذجًا أوليًا غير تجاري وتريد أفضل جودة استنساخ متاحة محليًا.',
           'تجنّب XTTS v2 إذا: كنت بحاجة إلى ترخيص تجاري — فشروط CPML الخاصة به غير تجارية، بلا مسار ترخيص نشط مؤكد منذ إغلاق Coqui AI عام 2023.',
           '**VRAM:** حوالي 2 جيجابايت لأوزان النموذج، 4 جيجابايت كحد أدنى، ويُنصح بـ4-6 جيجابايت للاستدلال الفوري.',
           '**الأنسب لـ:** استنساخ الصوت المحلي الأعلى دقة، دعم عبر اللغات لـ17 لغة، الاستخدام غير التجاري أو البحثي.',
+          'تستمر مجموعة الأدوات نفسها بفضل الفرع المجتمعي [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) (`pip install coqui-tts`) — مفيد للتثبيت وإصلاح الأخطاء، دون أي تأثير على ترخيص النموذج غير التجاري.',
         ],
         note: 'تفاصيل الترخيص الكاملة، وأوامر الاستخدام الحقيقية، والقيود مذكورة في [مراجعة XTTS v2](/ar/power-local-llm/xtts-v2-review) المخصصة من PromptQuorum.',
       },
@@ -2603,13 +2825,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Chatterbox، الذي أصدرته Resemble AI على [GitHub](https://github.com/resemble-ai/chatterbox)، هو الخيار الأفضل لمالكي GPU الذين يريدون استنساخ صوت حواري فوري بموجب ترخيص متساهل تمامًا ومناسب تجاريًا.** إنه مرخّص بموجب **ترخيص MIT**، الذي — على عكس CPML غير التجاري الخاص بـXTTS v2 — يسمح بالاستخدام التجاري دون اتفاقية منفصلة.',
           'يأتي Chatterbox بعدة أحجام: نسخة Nano (110 مليون معامل) تصفها وثائق Resemble AI نفسها بأنها تعمل بسرعة أعلى من الوقت الفعلي على 8 أنوية CPU، ونسخة Turbo (350 مليون معامل) مصممة لزمن استجابة منخفض، ونسخة متعددة اللغات (حوالي 500 مليون معامل، على بنية تنسب في تصميمها إلى Llama 3) تدعم أكثر من 20 لغة. يعمل استنساخ الصوت بدون أمثلة مسبقة (zero-shot) انطلاقًا من مقطع صوتي مرجعي — يستخدم المثال الرسمي لـResemble AI مقطعًا مدته 10 ثوانٍ، رغم أن ملف README لا يذكر مدة دنيا رسمية كما يفعل ملف XTTS v2.',
-          'لا ينشر ملف README العام لـResemble AI رقمًا دقيقًا لـVRAM، لذا تعامل مع أي رقم محدد بالجيجابايت تراه في مكان آخر على أنه غير مؤكد حتى تختبره على بطاقتك الخاصة. ما هو موثّق هو: تعمل نسخة Nano بشكل مقبول على CPU وحدها، بينما صُممت نسختا Turbo وMultilingual الأكبر للتوليد المسرَّع بواسطة GPU وبزمن استجابة منخفض — وكلاهما يدعم CUDA وApple Silicon (MPS).',
+          'استمر Chatterbox في التطور خلال عام 2026: تستخدم نسخة Multilingual الآن بنية v3 أحدث افتراضيًا (يمكن اختيارها عبر المعامل `t3_model="v3"`، مع بقاء البنية الأصلية متاحة عبر `t3_model="v2"`)، وأضافت Resemble AI نسخة Flash مبنية على بنية diffusion-LLM، مصممة خصيصًا لعمليات النشر عالية الإنتاجية، إلى جانب أحجام Nano وTurbo الحالية.',
+          'لا يزال ملف README العام لـResemble AI لا ينشر رقمًا موحّدًا لـVRAM، لذا تعامل مع أي رقم محدد بالجيجابايت تراه في مكان آخر على أنه غير مؤكد حتى تختبره على بطاقتك الخاصة. ما هو موثّق، من خلال تغليف NVIGI الخاص بـNVIDIA لنماذج Chatterbox: حوالي 2.3 جيجابايت لنسخة Turbo عند تشغيل TTS فقط، وحوالي 3.5 جيجابايت لنسخة Multilingual عند تشغيل TTS فقط، و8.5 جيجابايت أو أكثر لخط أنابيب كامل يضيف التعرف على الكلام وتوليد النص حول خطوة TTS. هذه أرقام تغليف من NVIDIA، وليست أرقامًا نشرتها Resemble AI نفسها، لكنها أكثر بيانات VRAM تحديدًا متاحة لـChatterbox حاليًا. يدعم كلا من CUDA وApple Silicon (MPS).',
         ],
         items: [
           'استخدم Chatterbox إذا: كنت بحاجة إلى استنساخ صوت مناسب تجاريًا بزمن استجابة فوري أو شبه فوري، مثل تطبيق صوتي تفاعلي.',
-          'تجنّب Chatterbox إذا: كنت بحاجة إلى رقم أدنى موثّق ومضمون لـVRAM قبل شراء الأجهزة — لم تنشر Resemble AI رقمًا كهذا.',
-          '**VRAM:** غير منشور رسميًا؛ نسخة Nano الأصغر متوافقة مع CPU، بينما تستهدف نسختا Turbo وMultilingual التسريع بواسطة GPU لسرعة الوقت الفعلي.',
+          'تجنّب Chatterbox إذا: كنت بحاجة إلى رقم أدنى موثّق ومضمون لـVRAM من Resemble AI نفسها قبل شراء الأجهزة — لم تنشر الشركة رقمًا موحّدًا بعد.',
+          '**VRAM:** لا رقم موحّد من Resemble AI؛ يشير تغليف NVIDIA الخاص إلى حوالي 2.3 جيجابايت (Turbo، TTS فقط)، وحوالي 3.5 جيجابايت (Multilingual، TTS فقط)، وحوالي 8.5 جيجابايت أو أكثر لخط أنابيب كامل من ASR+TTS.',
           '**الأنسب لـ:** المنتجات التجارية التي تحتاج إلى استنساخ صوت حواري بدون أمثلة مسبقة بموجب ترخيص متساهل.',
+          'تستخدم نسخة Chatterbox Multilingual الآن بنية v3 افتراضيًا، وتستهدف نسخة Flash الجديدة (بنية diffusion-LLM) عمليات النشر عالية الإنتاجية — كلاهما يُضاف إلى أحجام Nano وTurbo الأصلية.',
           'يحمل كل ناتج من Chatterbox علامة مائية خاصة بـResemble AI تُدعى Perth، وتصفها وثائقه بأنها علامة مائية عصبية غير مُدركة تبقى بعد ضغط MP3 — وهي إشارة أصل مدمجة، وليست بديلًا عن الموافقة (راجع قسم استنساخ الصوت والموافقة أدناه).',
         ],
       },
@@ -2634,12 +2858,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يُدرج Kokoro هنا كنقيض: امتلاك GPU من NVIDIA لا يعني أن كل عبء عمل لـTTS يحتاج إليها، وKokoro دليل على ذلك.** بمعاملاته البالغة 82 مليونًا، هو أصغر بشكل كبير من XTTS v2 وChatterbox وBark، وتوثّق بطاقة نموذجه الخاصة على Hugging Face تركيبًا بسرعة الوقت الفعلي أو أسرع على CPU وحدها، مع إضافة استخدام GPU هامشًا إضافيًا لا شرطًا لازمًا.',
           'Kokoro مرخّص بموجب Apache 2.0، الذي — مثل ترخيص MIT الخاص بـChatterbox — يسمح بالاستخدام التجاري دون قيود. لا يدعم استنساخ الصوت، لذا فهو ليس بديلًا عن XTTS v2 أو Chatterbox إذا كان الاستنساخ هو المطلوب، لكن بالنسبة للسرد البسيط، أو قراءة النص بصوت عالٍ، أو طبقة صوتية في تطبيق لا يحتاج إلى استنساخ، فهو خيار أخف وأبسط.',
+          'لم يتغيّر نموذج Kokoro نفسه منذ إصداره في يناير 2025 (v1.0، 82 مليون معامل) — ولم يصدر إصدار أحدث حتى أواخر عام 2026 — لكن بيئة الأدوات المحيطة به تطورت: تنشر NVIDIA نسخة محسّنة خاصة بها بتنسيق ONNX، ويوفّر مشروع [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) الشائع صور Docker مخصصة لـCUDA لكل فئة من أجيال GPU. تستخدم البطاقات من سلسلة GTX 900 إلى سلسلة RTX 40 صورة افتراضية واحدة؛ أما بطاقات سلسلة RTX 50/Blackwell فتحتاج إلى CUDA 12.8 وإصدار `cu128` منفصل.',
         ],
         items: [
           'استخدم Kokoro إذا: كان عبء عملك سردًا بسيطًا أو قراءة نص بصوت عالٍ، وتريد إبقاء VRAM الخاصة بـGPU لديك متاحة لنموذج لغوي كبير أو مهمة أخرى، أو كنت بحاجة إلى نشر يعتمد فقط على CPU.',
           'تجنّب Kokoro إذا: كنت بحاجة إلى استنساخ صوت — فهو لا يدعمه، استخدم XTTS v2 أو Chatterbox بدلًا من ذلك.',
           '**VRAM:** حوالي 2 جيجابايت عند التشغيل على GPU؛ يعمل بسرعة الوقت الفعلي على CPU وحدها، وفقًا لبطاقة نموذجه الخاصة.',
           '**الأنسب لـ:** حالات السرد البسيط وقراءة النص بصوت عالٍ حيث ستكون محركات الاستنساخ الأثقل مبالغة فعلًا.',
+          'يحتاج أصحاب بطاقات RTX سلسلة 50/Blackwell إلى CUDA 12.8 وإصدار `cu128` من بيئة تشغيل GPU — لا تغطي صورة Kokoro-FastAPI القياسية لـGPU (المخصصة لسلسلة GTX 900 إلى RTX 40) البطاقات الأحدث.',
+        ],
+      },
+      otherOptions: {
+        id: 'other-options',
+        title: 'خيارات TTS أخرى لوحدات GPU من NVIDIA',
+        content: [
+          '**XTTS v2 وChatterbox وBark وKokoro ليست المحركات الوحيدة لتحويل النص إلى كلام محليًا والمسرَّعة بواسطة NVIDIA — يُعد Fish Speech وF5-TTS أحدث إضافتين تستحقان المتابعة، وإن لم يكن لأي منهما حاليًا ترخيص مناسب للاستخدام التجاري.**',
+          'أصدرت Fish Audio نموذج Fish Speech S2 في مارس 2026 كخليفة لـS1، وتضع بعض المقارنات المجتمعية لعام 2026 جودة صوته فوق F5-TTS. يُعد F5-TTS الأخف بين الاثنين بحوالي 2 جيجابايت من VRAM، مقارنة بحوالي 6 جيجابايت لـFish Speech. كلاهما مرخّص بترخيص غير تجاري — F5-TTS بموجب CC-BY-NC، وإصدار Fish Speech المفتوح بموجب CC-BY-NC-SA-4.0 — لذا بالنسبة لمنتج تجاري، يبقى ترخيص MIT الخاص بـChatterbox أو ترخيص Apache 2.0 الخاص بـKokoro الخيارين الأكثر أمانًا من بين ما يغطيه هذا الدليل.',
+        ],
+        items: [
+          '**Fish Speech S2** (مارس 2026): أحدث إصدار من Fish Audio، حاز تقييمًا جيدًا في بعض مقارنات الجودة المجتمعية؛ حوالي 6 جيجابايت VRAM؛ ترخيص CC-BY-NC-SA-4.0 (غير تجاري).',
+          '**F5-TTS**: أخف وزنًا بحوالي 2 جيجابايت VRAM؛ ترخيص CC-BY-NC (غير تجاري).',
+          'لا يقدّم أي من المحركين حاليًا ترخيصًا مناسبًا للاستخدام التجاري — إذا كان الهدف نشرًا تجاريًا، فإن Chatterbox (MIT) أو Kokoro (Apache 2.0) هما المحركان المناسبان من هذا الدليل.',
         ],
       },
       comparisonTable: {
@@ -2659,7 +2898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'المحرك': 'Chatterbox',
-            'VRAM (GPU)': 'غير منشور رسميًا',
+            'VRAM (GPU)': 'حوالي 2.3-8.5+ جيجابايت (NVIDIA، حسب النسخة)',
             'فائدة سرعة GPU': 'كبيرة للاستخدام الفوري',
             'استنساخ الصوت': 'نعم، بدون أمثلة مسبقة',
             'الترخيص': 'MIT',
@@ -2735,7 +2974,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني استخدام Chatterbox تجاريًا؟',
-            a: 'نعم. Chatterbox، الذي أصدرته Resemble AI، مرخّص بموجب MIT، الذي يسمح بالاستخدام التجاري دون اتفاقية منفصلة — على عكس ترخيص CPML غير التجاري الخاص بـXTTS v2.',
+            a: 'نعم. Chatterbox، الذي أصدرته Resemble AI، مرخّص بموجب MIT، الذي يسمح بالاستخدام التجاري دون اتفاقية منفصلة — على عكس ترخيص CPML غير التجاري الخاص بـXTTS v2. تستخدم نسخة Multilingual الآن بنية v3 أحدث افتراضيًا، وتستهدف نسخة Flash عمليات النشر عالية الإنتاجية؛ ولا يؤثر أي من هذين التغييرين على ترخيص MIT.',
+          },
+          {
+            q: 'ما أفضل GPU لـ TTS؟',
+            a: 'أي GPU من NVIDIA بذاكرة VRAM تبلغ 6 جيجابايت أو أكثر تُشغّل بارتياح XTTS v2 وChatterbox وKokoro؛ فقط النموذج الكامل لـBark يحتاج إلى أكثر من ذلك، حوالي 12 جيجابايت (أو حوالي 8 جيجابايت مع علامة النموذج الصغير). لا توجد GPU واحدة "أفضل" تناسب كل الحالات — اختر VRAM البطاقة بما يتناسب مع المحرك الذي تحتاجه فعليًا بدلًا من الشراء افتراضيًا للخيار الأثقل.',
+          },
+          {
+            q: 'ما الأجهزة التي أحتاجها لتشغيل استنساخ الصوت محليًا؟',
+            a: 'بالنسبة لـXTTS v2، تكفي 4-6 جيجابايت من VRAM للاستنساخ الفوري. لا ينشر Chatterbox رقمًا موحّدًا لـVRAM، لكن تغليف NVIDIA الخاص بالنماذج يشير إلى حوالي 2.3-3.5 جيجابايت لنسختي Turbo وMultilingual عند تشغيل TTS فقط، وإلى 8.5 جيجابايت أو أكثر لخط أنابيب كامل يضيف التعرف على الكلام. يعمل كلاهما أيضًا على CPU، لكن بشكل أبطأ ملحوظ مقارنة بتسريع CUDA.',
           },
           {
             q: 'هل GPU مبالغ فيها لـTTS المحلي؟',
@@ -2763,7 +3010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الحكم النهائي',
         content:
-          'بالنسبة للقراء الذين يمتلكون بالفعل GPU من NVIDIA ويريدون استخدامها لتحويل النص إلى كلام، يعتمد الاختيار على ما يحتاجه الصوت. XTTS v2 هو الخيار لأعلى جودة استنساخ صوت يمكن تحقيقها في سياق غير تجاري أو بحثي، نظرًا لترخيصه CPML غير التجاري. Chatterbox هو الخيار عندما يجب أن تُشحن قدرة الاستنساخ نفسها في منتج تجاري، بفضل ترخيصه MIT وأحجام نماذجه الأصغر الموجهة نحو الوقت الفعلي. Bark هو الخيار تحديدًا عندما يحتاج المشروع إلى صوت تعبيري غير كلامي — ضحك، تنهدات، موسيقى بسيطة — ويمكنه إنفاق 8-12 جيجابايت من VRAM للحصول عليه، مع التحفظ بأن حالة صيانته غير مؤكدة. يبقى Kokoro الخيار الصحيح كلما لم يكن الاستنساخ مطلوبًا: فهو يعمل بارتياح على CPU وحدها، لذا نادرًا ما يستحق تخصيص VRAM من GPU له. إذا لم تكن متأكدًا، ابدأ بـKokoro للسرد البسيط وانتقل إلى XTTS v2 أو Chatterbox فقط عندما تظهر حاجة استنساخ حقيقية — وهذا يبقي VRAM الخاصة بـGPU لديك متاحة لكل ما تشغّله بجانبها، بما في ذلك نموذج لغوي كبير محلي. للاطلاع على تفاصيل الترخيص لكل محرك مذكور هنا، راجع [دليل تراخيص TTS واستنساخ الصوت المحلية](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) من PromptQuorum.',
+          'بالنسبة للقراء الذين يمتلكون بالفعل GPU من NVIDIA ويريدون استخدامها لتحويل النص إلى كلام، يعتمد الاختيار على ما يحتاجه الصوت. XTTS v2 هو الخيار لأعلى جودة استنساخ صوت يمكن تحقيقها في سياق غير تجاري أو بحثي، نظرًا لترخيصه CPML غير التجاري — ويبقى قابلًا للتثبيت اليوم بفضل الفرع المجتمعي [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)، حتى مع بقاء الترخيص نفسه دون تغيير. Chatterbox هو الخيار عندما يجب أن تُشحن قدرة الاستنساخ نفسها في منتج تجاري، بفضل ترخيصه MIT وأحجام نماذجه الأصغر الموجهة نحو الوقت الفعلي؛ واستمر في التطور خلال عام 2026 ببنية v3 لنسخة Multilingual ونسخة Flash جديدة لعمليات النشر عالية الإنتاجية، دون أن يغيّر ذلك موازين الترخيص هنا. Bark هو الخيار تحديدًا عندما يحتاج المشروع إلى صوت تعبيري غير كلامي — ضحك، تنهدات، موسيقى بسيطة — ويمكنه إنفاق 8-12 جيجابايت من VRAM للحصول عليه، مع التحفظ بأن حالة صيانته غير مؤكدة. يبقى Kokoro الخيار الصحيح كلما لم يكن الاستنساخ مطلوبًا: فهو يعمل بارتياح على CPU وحدها، لذا نادرًا ما يستحق تخصيص VRAM من GPU له. يستحق الإضافتان الجديدتان Fish Speech وF5-TTS المتابعة، لكنهما لا تزالان بترخيص غير تجاري (CC-BY-NC-SA-4.0 وCC-BY-NC على الترتيب)، لذا لا تغيّران التوصية بالنسبة لمنتج تجاري. إذا لم تكن متأكدًا، ابدأ بـKokoro للسرد البسيط وانتقل إلى XTTS v2 أو Chatterbox فقط عندما تظهر حاجة استنساخ حقيقية — وهذا يبقي VRAM الخاصة بـGPU لديك متاحة لكل ما تشغّله بجانبها، بما في ذلك نموذج لغوي كبير محلي. للاطلاع على تفاصيل الترخيص لكل محرك مذكور هنا، راجع [دليل تراخيص TTS واستنساخ الصوت المحلية](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) من PromptQuorum.',
       },
       sources: {
         id: 'sources',
@@ -2774,6 +3021,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[resemble-ai/chatterbox على GitHub](https://github.com/resemble-ai/chatterbox) — README: التثبيت، ترخيص MIT، العلامة المائية، ودعم CPU/GPU.',
           '[suno-ai/bark على GitHub](https://github.com/suno-ai/bark) — README: الترخيص، علامة VRAM/النموذج الصغير، وسجل الصيانة/التعديلات.',
           '[Kokoro-82M على Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M) — بطاقة النموذج: عدد المعاملات، ترخيص Apache 2.0، وأداء CPU/GPU.',
+          '[NVIDIA NVIGI: بطاقة نموذج Chatterbox TTS](https://docs.nvidia.com/ace-for-games/chatterbox-tts/nvigi-chatterbox-model-card.html) — أرقام VRAM لكل نسخة من Chatterbox Turbo وMultilingual وخط أنابيب كامل من ASR+TTS.',
+          '[idiap/coqui-ai-TTS على GitHub](https://github.com/idiap/coqui-ai-TTS) — الفرع المجتمعي النشط لمجموعة أدوات Coqui TTS، والذي لا يزال يُشغّل نموذج XTTS v2.',
+          '[Kokoro-FastAPI على GitHub](https://github.com/remsky/Kokoro-FastAPI) — مصفوفة صور Docker لـCUDA بحسب جيل GPU، بما في ذلك متطلب CUDA 12.8 لبطاقات RTX سلسلة 50/Blackwell.',
           '[مراجعة XTTS v2](/ar/power-local-llm/xtts-v2-review) — مراجعة PromptQuorum المخصصة مع أوامر استخدام كاملة وتفاصيل الترخيص.',
           '[مراجعة Bark TTS](/ar/power-local-llm/bark-tts-review) — مراجعة PromptQuorum المخصصة مع أرقام VRAM وحالة الصيانة.',
           '[تراخيص TTS واستنساخ الصوت المحلية](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — مقارنة كاملة للتراخيص وVRAM عبر محركات TTS المحلية.',
@@ -2796,11 +3046,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'أفضل محرك تحويل نص إلى كلام محلي لإعداد GPU من NVIDIA (2026)',
       description:
-        'أفضل TTS محلي لـ GPU من NVIDIA: مقارنة XTTS v2 وChatterbox وBark وKokoro من حيث VRAM وتسريع CUDA واستنساخ الصوت والترخيص — مع اختيار واضح لكل حالة استخدام.',
+        'أفضل GPU لـ TTS: مقارنة XTTS v2 وChatterbox v3 وBark وKokoro من حيث VRAM والأجهزة اللازمة لاستنساخ الصوت والترخيص.',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-tts-nvidia-gpu',
       inLanguage: 'ar',
       datePublished: '2026-09-11',
-      dateModified: '2026-09-11',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -2829,8 +3079,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-11',
-    dateModified: '2026-09-11',
-    next_refresh_due: '2027-03-11',
+    dateModified: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/best-local-tts-nvidia-gpu-hero-ko.webp',
@@ -2839,7 +3089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '이미 NVIDIA GPU를 보유하고 있다면, 실행할 가치가 있는 로컬 텍스트 음성 변환 엔진은 대부분의 가이드가 기본으로 제시하는 CPU 전용 선택지와는 다릅니다. XTTS v2, Chatterbox, Bark는 모두 CPU 속도를 음성 클로닝 품질과 표현력으로 맞바꾸며, 이는 CUDA 가속을 사용할 수 있을 때에야 비로소 의미가 있습니다. Kokoro는 여기서 의도적으로 대비 사례로 다룹니다. GPU를 보유하고 있다고 해서 자동으로 가장 무거운 모델이 필요한 것은 아니기 때문입니다. 이 가이드는 VRAM 요구 사항, 각 엔진이 CUDA로부터 실제로 얻는 이점, 음성 클로닝 기능, 라이선스를 기준으로 네 가지 모델을 비교하여, 가장 화려한 데모 영상을 가진 엔진이 아니라 여러분의 하드웨어와 실제 사용 사례에 맞는 엔진을 선택할 수 있도록 돕습니다.',
     metaDescription:
-      'NVIDIA GPU용 최고의 로컬 TTS: XTTS v2, Chatterbox, Bark, Kokoro를 VRAM, CUDA 가속, 음성 클로닝, 라이선스 기준으로 비교합니다. 사용 사례별 명확한 추천도 제공합니다.',
+      'TTS 최적 GPU는? XTTS v2, Chatterbox v3, Bark, Kokoro를 VRAM, 음성 클로닝에 필요한 하드웨어, 라이선스로 비교합니다.',
     twitterDescription:
       'NVIDIA GPU가 있고 로컬 TTS를 찾고 있다면. XTTS v2, Chatterbox, Bark는 실제로 CUDA 가속을 활용하지만, Kokoro는 거의 필요로 하지 않습니다. 2026년판 VRAM 및 라이선스 완전 비교.',
     audience:
@@ -2873,7 +3123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '이 네 엔진 중 어느 것도 GPU를 반드시 요구하지는 않지만, XTTS v2, Chatterbox, Bark는 CUDA 가속 없이는 눈에 띄게 느려집니다.',
         '이 네 엔진 중 어느 것도 동의 확인을 보장하지 않습니다 — 실제 인물의 목소리를 본인의 명시적 허가 없이 절대 복제하지 마세요.',
       ],
-      updatedDate: '2026-09-11',
+      updatedDate: '2026-11-19',
     },
     toc: [
       { label: '빠른 답변', anchor: 'quick-answer' },
@@ -2883,6 +3133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Chatterbox: 최고의 실시간 클로닝', anchor: 'chatterbox' },
       { label: 'Bark: 최고의 비언어적 표현력 오디오', anchor: 'bark' },
       { label: 'Kokoro: GPU가 과할 때', anchor: 'kokoro' },
+      { label: 'NVIDIA GPU를 위한 다른 TTS 옵션', anchor: 'other-options' },
       { label: '실제로 필요한 VRAM은 얼마인가', anchor: 'vram-guide' },
       { label: '음성 클로닝과 동의', anchor: 'consent' },
       { label: '자주 묻는 질문', anchor: 'faq' },
@@ -2940,12 +3191,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Coqui가 공개하고 [Coqui TTS 툴킷](/ko/power-local-llm/coqui-tts-review)을 통해 실행되는 XTTS v2는, 짧은 참조 클립으로부터 달성 가능한 최고 품질을 필요로 하는 GPU 보유자에게 최고의 로컬 음성 클로닝 옵션입니다.** 단 6초의 참조 오디오만으로 목소리를 복제하고 17개 언어로 다시 말하게 할 수 있으며, 크로스 언어 클로닝—영어 오디오에서 목소리를 복제한 뒤 스페인어나 일본어로 말하게 하는 것—도 포함됩니다.',
           'VRAM 측면에서 XTTS v2의 모델 가중치는 약 2GB이지만, 실행을 위한 실질적인 최소치는 4GB이며 실시간 추론에는 4-6GB가 권장됩니다. 자세한 내용은 PromptQuorum의 [XTTS v2 리뷰](/ko/power-local-llm/xtts-v2-review)를 참고하세요. 대부분의 독자에게 결정적인 요소는 라이선스입니다. Coqui Public Model License(CPML)는 명시적으로 비상업용이며, 이 회사인 Coqui AI가 2023년 12월 유료 서비스를 종료했기 때문에 현재 확인된 활성 상업용 라이선스 경로는 없습니다.',
+          '원래의 coqui-ai/TTS 툴킷 저장소 자체는 더 이상 유지 관리되지 않지만, Idiap Research Institute가 관리하고 PyPI에서 `coqui-tts`로 배포되는 커뮤니티 포크 [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)가 동일한 `tts_models/multilingual/multi-dataset/xtts_v2` 모델 식별자로 계속해서 새 버전(2026년 1월 v0.27.5)을 내놓고 있습니다. 이는 툴킷 자체를 설치 가능하고 버그가 수정된 상태로 유지해 주지만, XTTS v2 모델 자체의 비상업용 CPML 라이선스는 어떤 포크로 실행하든 변하지 않습니다.',
         ],
         items: [
           'XTTS v2를 사용해야 하는 경우: 프로젝트가 개인용, 학술용, 또는 비상업적 프로토타입이며 로컬에서 얻을 수 있는 최고의 클로닝 품질을 원하는 경우.',
           'XTTS v2를 피해야 하는 경우: 상업용 라이선스가 필요한 경우 — CPML 조건은 비상업용이며, 2023년 Coqui AI의 서비스 종료 이후 확인된 활성 상업용 라이선스 경로가 없습니다.',
           '**VRAM:** 모델 가중치 약 2GB, 최소 4GB, 실시간 추론에는 4-6GB 권장.',
           '**최적의 용도:** 로컬에서 가능한 가장 충실도 높은 음성 클로닝, 17개 언어 크로스 언어 지원, 비상업용 또는 연구 용도.',
+          '툴킷 자체는 커뮤니티가 유지 관리하는 [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) 포크(`pip install coqui-tts`)를 통해 명맥을 이어가고 있습니다 — 설치와 버그 수정에는 유용하지만, 모델의 비상업용 라이선스에는 영향이 없습니다.',
         ],
         note: '전체 라이선스 상세 내용, 실제 사용 명령어, 제한 사항은 PromptQuorum의 [XTTS v2 리뷰](/ko/power-local-llm/xtts-v2-review)에서 다룹니다.',
       },
@@ -2955,13 +3208,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Resemble AI가 [GitHub](https://github.com/resemble-ai/chatterbox)에 공개한 Chatterbox는, 완전히 자유롭고 상업적으로 사용 가능한 라이선스 아래 실시간 대화형 음성 클로닝을 원하는 GPU 보유자에게 최고의 선택지입니다.** **MIT 라이선스**를 따르며, XTTS v2의 비상업용 CPML과 달리 별도 계약 없이 상업적 사용이 가능합니다.',
           'Chatterbox는 여러 크기로 제공됩니다. Resemble AI 자체 문서에 따르면 8코어 CPU에서 실시간보다 빠르게 실행되는 Nano 변형(1억 1000만 파라미터), 낮은 지연 시간을 위해 만들어진 Turbo 변형(3억 5000만 파라미터), 그리고 아키텍처상 Llama 3를 근간으로 언급하는 백본을 가지고 20개 이상의 언어를 지원하는 다국어 변형(약 5억 파라미터)이 있습니다. 제로샷 음성 클로닝은 참조 오디오 클립을 통해 작동합니다 — Resemble AI 자체 예시는 10초 클립을 사용하지만, README에는 XTTS v2처럼 공식 최소 길이가 명시되어 있지 않습니다.',
-          'Resemble AI의 공개 README에는 정확한 VRAM 수치가 게시되어 있지 않으므로, 다른 곳에서 본 구체적인 GB 수치는 자신의 카드에서 직접 테스트하기 전까지는 미확인 정보로 취급하세요. 문서화된 내용은 다음과 같습니다. Nano 변형은 CPU만으로도 무난하게 실행되는 반면, 더 큰 Turbo 및 다국어 변형은 GPU 가속의 저지연 생성을 위해 설계되었으며 — CUDA와 Apple Silicon(MPS)을 모두 지원합니다.',
+          'Chatterbox는 2026년 내내 계속 발전했습니다. 다국어 변형은 이제 기본적으로 더 새로운 v3 아키텍처를 사용하며(`t3_model="v3"` 매개변수로 선택 가능, 원래 아키텍처는 `t3_model="v2"`로 여전히 사용 가능), Resemble AI는 기존 Nano 및 Turbo 크기와 함께 고처리량 대규모 배포를 위해 설계된 diffusion-LLM 아키텍처 기반의 Flash 변형을 추가했습니다.',
+          'Resemble AI의 공개 README에는 여전히 통합된 VRAM 수치가 게시되어 있지 않으므로, 다른 곳에서 본 구체적인 GB 수치는 자신의 카드에서 직접 테스트하기 전까지는 미확인 정보로 취급하세요. 문서화된 내용은 NVIDIA 자체의 Chatterbox 모델 NVIGI 패키징을 통해 확인할 수 있습니다. TTS만 실행하는 Turbo는 약 2.3GB, TTS만 실행하는 다국어 변형은 약 3.5GB, TTS 단계 앞뒤로 음성 인식과 텍스트 생성을 추가한 전체 파이프라인은 8.5GB 이상입니다. 이는 Resemble AI 자체가 발표한 수치가 아니라 NVIDIA의 패키징 수치이지만, 현재 Chatterbox에 대해 구할 수 있는 가장 구체적인 VRAM 데이터입니다. CUDA와 Apple Silicon(MPS)을 모두 지원합니다.',
         ],
         items: [
           'Chatterbox를 사용해야 하는 경우: 인터랙티브 음성 애플리케이션처럼 실시간 또는 준실시간 지연 시간으로 상업적으로 사용 가능한 음성 클로닝이 필요한 경우.',
-          'Chatterbox를 피해야 하는 경우: 하드웨어를 구매하기 전에 문서화되고 보장된 최소 VRAM 수치가 필요한 경우 — Resemble AI는 이를 공개하지 않았습니다.',
-          '**VRAM:** 공식적으로 공개되지 않음; 더 작은 Nano 변형은 CPU를 지원하고, Turbo 및 다국어 변형은 실시간 속도를 위해 GPU 가속을 목표로 합니다.',
+          'Chatterbox를 피해야 하는 경우: 하드웨어를 구매하기 전에 Resemble AI가 직접 문서화하고 보장한 최소 VRAM 수치가 필요한 경우 — 해당 회사는 여전히 통합된 수치를 공개하지 않았습니다.',
+          '**VRAM:** Resemble AI가 통합된 수치를 제공하지 않음; NVIDIA 자체 패키징에 따르면 Turbo(TTS만) 약 2.3GB, 다국어(TTS만) 약 3.5GB, 전체 ASR+TTS 파이프라인 약 8.5GB 이상.',
           '**최적의 용도:** 자유로운 라이선스 아래 제로샷 대화형 음성 클로닝이 필요한 상업용 제품.',
+          'Chatterbox 다국어 변형은 이제 기본적으로 v3 아키텍처를 사용하며, 새로운 Flash 변형(diffusion-LLM 아키텍처)은 고처리량 대규모 배포를 목표로 합니다 — 둘 다 기존 Nano 및 Turbo 크기에 추가된 것입니다.',
           '모든 Chatterbox 출력에는 Resemble AI 고유의 Perth 워터마크가 포함되며, 문서에서는 MP3 압축을 거쳐도 남아 있는 인지 불가능한 신경망 워터마크로 설명합니다 — 이는 내장된 출처 신호일 뿐, 동의를 대체하지는 않습니다(아래 음성 클로닝과 동의 섹션 참조).',
         ],
       },
@@ -2986,12 +3241,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Kokoro는 여기서 대비 사례로 다룹니다. NVIDIA GPU를 보유하고 있다고 해서 모든 TTS 워크로드에 GPU가 필요한 것은 아니며, Kokoro가 그 증거입니다.** 8200만 개 파라미터로 XTTS v2, Chatterbox, Bark보다 훨씬 작으며, 자체 Hugging Face 모델 카드는 CPU만으로도 실시간 또는 그 이상의 속도로 합성이 이루어진다고 문서화하고 있습니다. GPU 사용은 필수가 아니라 여유를 더해 줄 뿐입니다.',
           'Kokoro는 Apache 2.0 라이선스를 따르며, 이는 Chatterbox의 MIT 라이선스와 마찬가지로 제한 없이 상업적 사용을 허용합니다. 음성 클로닝을 지원하지 않으므로 클로닝이 요구 사항이라면 XTTS v2나 Chatterbox를 대체할 수 없지만, 단순한 내레이션, 텍스트 읽기, 또는 클로닝이 필요 없는 앱의 음성 레이어에는 더 가볍고 단순한 선택지입니다.',
+          'Kokoro 모델 자체는 2025년 1월 출시(v1.0, 8200만 파라미터) 이후 변경되지 않았으며, 2026년 하반기까지도 새 버전은 나오지 않았습니다. 하지만 주변 도구 생태계는 발전했습니다. NVIDIA는 자체 ONNX 최적화 빌드를 공개했고, 인기 있는 [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) 프로젝트는 GPU 세대별로 별도의 CUDA Docker 이미지를 제공합니다. GTX 900 시리즈부터 RTX 40 시리즈까지는 하나의 기본 이미지를 사용하며, RTX 50 시리즈/Blackwell 카드는 CUDA 12.8과 별도의 `cu128` 빌드가 필요합니다.',
         ],
         items: [
           'Kokoro를 사용해야 하는 경우: 워크로드가 단순한 내레이션이나 텍스트 읽기이고, LLM이나 다른 작업을 위해 GPU의 VRAM을 비워 두고 싶거나, CPU 전용 배포가 필요한 경우.',
           'Kokoro를 피해야 하는 경우: 음성 클로닝이 필요한 경우 — 지원하지 않으므로 대신 XTTS v2나 Chatterbox를 사용하세요.',
           '**VRAM:** GPU에서 실행 시 약 2GB; 자체 모델 카드에 따르면 CPU만으로도 실시간 속도로 실행됩니다.',
           '**최적의 용도:** 더 무거운 클로닝 엔진이 정말로 과한 상황인 단순 내레이션 및 텍스트 읽기 사용 사례.',
+          'RTX 50 시리즈/Blackwell 카드 사용자는 CUDA 12.8과 `cu128` GPU 런타임 빌드가 필요합니다 — GTX 900부터 RTX 40까지를 위해 만들어진 표준 Kokoro-FastAPI GPU 이미지는 최신 카드를 지원하지 않습니다.',
+        ],
+      },
+      otherOptions: {
+        id: 'other-options',
+        title: 'NVIDIA GPU를 위한 다른 TTS 옵션',
+        content: [
+          '**XTTS v2, Chatterbox, Bark, Kokoro만이 NVIDIA 가속 로컬 TTS 엔진은 아닙니다 — Fish Speech와 F5-TTS는 주목할 만한 두 가지 최신 선택지지만, 둘 다 현재 상업적 사용에 적합한 라이선스는 없습니다.**',
+          'Fish Audio는 2026년 3월 S1의 후속작으로 Fish Speech S2를 출시했으며, 2026년의 일부 커뮤니티 벤치마크는 오디오 품질에서 이를 F5-TTS보다 높게 평가합니다. F5-TTS는 둘 중 더 가벼워 VRAM이 약 2GB이며, Fish Speech는 약 6GB입니다. 둘 다 비상업용 라이선스 아래 있습니다 — F5-TTS는 CC-BY-NC, Fish Speech의 오픈 릴리스는 CC-BY-NC-SA-4.0 — 이므로, 상업용 제품이라면 이 가이드에서 다룬 Chatterbox의 MIT 라이선스나 Kokoro의 Apache 2.0 라이선스가 여전히 더 안전한 선택입니다.',
+        ],
+        items: [
+          '**Fish Speech S2**(2026년 3월): Fish Audio의 최신 릴리스로 일부 커뮤니티 품질 벤치마크에서 좋은 평가를 받음; VRAM 약 6GB; CC-BY-NC-SA-4.0 라이선스(비상업용).',
+          '**F5-TTS**: 더 가벼워 VRAM 약 2GB; CC-BY-NC 라이선스(비상업용).',
+          '두 엔진 모두 현재 상업적 사용에 적합한 라이선스를 제공하지 않습니다 — 상업적 배포가 목표라면 이 가이드에서는 Chatterbox(MIT)나 Kokoro(Apache 2.0)를 사용해야 합니다.',
         ],
       },
       comparisonTable: {
@@ -3011,7 +3281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '엔진': 'Chatterbox',
-            'VRAM(GPU)': '공식 미공개',
+            'VRAM(GPU)': '약 2.3-8.5GB 이상(NVIDIA, 변형별)',
             'GPU 속도 이점': '실시간 사용에서 큼',
             '음성 클로닝': '있음, 제로샷',
             '라이선스': 'MIT',
@@ -3087,7 +3357,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Chatterbox를 상업적으로 사용할 수 있나요?',
-            a: '네. Resemble AI가 공개한 Chatterbox는 MIT 라이선스를 따르며, 별도 계약 없이 상업적 사용이 가능합니다 — XTTS v2의 비상업용 CPML 라이선스와는 다릅니다.',
+            a: '네. Resemble AI가 공개한 Chatterbox는 MIT 라이선스를 따르며, 별도 계약 없이 상업적 사용이 가능합니다 — XTTS v2의 비상업용 CPML 라이선스와는 다릅니다. 다국어 변형은 이제 기본적으로 더 새로운 v3 아키텍처를 사용하며, Flash 변형은 고처리량 배포를 목표로 하지만, 두 변화 모두 MIT 라이선스에는 영향을 주지 않습니다.',
+          },
+          {
+            q: 'TTS에 가장 좋은 GPU는 무엇인가요?',
+            a: 'VRAM이 6GB 이상인 NVIDIA GPU라면 XTTS v2, Chatterbox, Kokoro를 여유롭게 실행할 수 있습니다. 더 많은 VRAM이 필요한 것은 Bark의 전체 모델뿐으로, 약 12GB(소형 모델 플래그 사용 시 약 8GB)가 필요합니다. 모든 상황에 맞는 단 하나의 "최고" GPU는 없습니다 — 기본적으로 가장 무거운 옵션을 사서는 안 되고, 실제로 필요한 엔진에 맞춰 카드의 VRAM을 선택하세요.',
+          },
+          {
+            q: '로컬에서 음성 클로닝을 실행하려면 어떤 하드웨어가 필요한가요?',
+            a: 'XTTS v2의 경우 실시간 클로닝에는 4-6GB의 VRAM이면 충분합니다. Chatterbox는 단일 VRAM 수치를 공개하지 않지만, NVIDIA 자체의 모델 패키징에 따르면 Turbo 및 다국어 변형이 TTS만 실행할 때 약 2.3-3.5GB, 음성 인식을 추가한 전체 파이프라인에는 8.5GB 이상이 필요합니다. 둘 다 CPU에서도 실행되지만, CUDA 가속을 사용할 때보다 눈에 띄게 느립니다.',
           },
           {
             q: '로컬 TTS에 GPU는 과한가요?',
@@ -3115,7 +3393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          '이미 NVIDIA GPU를 보유하고 있으며 이를 텍스트 음성 변환에 활용하고자 하는 독자에게는, 오디오가 무엇을 해야 하는지에 따라 선택이 달라집니다. 비상업용 CPML 라이선스를 고려할 때, 비상업적 또는 연구 목적에서 달성 가능한 최고의 음성 클로닝 품질을 원한다면 XTTS v2가 선택지입니다. 동일한 클로닝 기능을 상업 제품에 탑재해야 한다면, MIT 라이선스와 실시간 지향의 더 작은 모델 크기 덕분에 Chatterbox가 선택지입니다. 프로젝트에 비언어적 표현력 오디오—웃음, 한숨, 간단한 음악—가 필요하고 이를 위해 8-12GB의 VRAM을 투입할 수 있다면, 유지 관리 상태가 불확실하다는 점을 유의한 채로 Bark가 선택지입니다. 클로닝이 요구 사항이 아닌 한 Kokoro는 여전히 올바른 선택입니다. CPU만으로도 여유롭게 실행되므로 이를 위해 GPU VRAM을 확보해 둘 가치는 거의 없습니다. 확신이 서지 않는다면 단순 내레이션에는 Kokoro로 시작하고, 실제로 클로닝 요구 사항이 생겼을 때에만 XTTS v2나 Chatterbox로 넘어가세요 — 그렇게 하면 로컬 LLM을 포함해 함께 실행하는 다른 작업을 위해 GPU의 VRAM을 계속 확보해 둘 수 있습니다. 여기서 언급한 각 엔진의 라이선스 상세 내용은 PromptQuorum의 [로컬 TTS 및 음성 클로닝 라이선스 가이드](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하세요.',
+          '이미 NVIDIA GPU를 보유하고 있으며 이를 텍스트 음성 변환에 활용하고자 하는 독자에게는, 오디오가 무엇을 해야 하는지에 따라 선택이 달라집니다. 비상업용 CPML 라이선스를 고려할 때, 비상업적 또는 연구 목적에서 달성 가능한 최고의 음성 클로닝 품질을 원한다면 XTTS v2가 선택지입니다 — 라이선스 자체는 바뀌지 않았지만, 커뮤니티가 유지 관리하는 [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) 포크 덕분에 오늘날에도 설치 가능한 상태로 남아 있습니다. 동일한 클로닝 기능을 상업 제품에 탑재해야 한다면, MIT 라이선스와 실시간 지향의 더 작은 모델 크기 덕분에 Chatterbox가 선택지입니다. 2026년에는 다국어용 v3 아키텍처와 고처리량 배포를 위한 새로운 Flash 변형으로 계속 발전했지만, 이것이 여기서의 라이선스 판단을 바꾸지는 않습니다. 프로젝트에 비언어적 표현력 오디오—웃음, 한숨, 간단한 음악—가 필요하고 이를 위해 8-12GB의 VRAM을 투입할 수 있다면, 유지 관리 상태가 불확실하다는 점을 유의한 채로 Bark가 선택지입니다. 클로닝이 요구 사항이 아닌 한 Kokoro는 여전히 올바른 선택입니다. CPU만으로도 여유롭게 실행되므로 이를 위해 GPU VRAM을 확보해 둘 가치는 거의 없습니다. 새로운 선택지인 Fish Speech와 F5-TTS는 주목할 만하지만 여전히 비상업용 라이선스(각각 CC-BY-NC-SA-4.0과 CC-BY-NC)를 따르므로 상업용 제품에 대한 추천을 바꾸지는 않습니다. 확신이 서지 않는다면 단순 내레이션에는 Kokoro로 시작하고, 실제로 클로닝 요구 사항이 생겼을 때에만 XTTS v2나 Chatterbox로 넘어가세요 — 그렇게 하면 로컬 LLM을 포함해 함께 실행하는 다른 작업을 위해 GPU의 VRAM을 계속 확보해 둘 수 있습니다. 여기서 언급한 각 엔진의 라이선스 상세 내용은 PromptQuorum의 [로컬 TTS 및 음성 클로닝 라이선스 가이드](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하세요.',
       },
       sources: {
         id: 'sources',
@@ -3126,6 +3404,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GitHub의 resemble-ai/chatterbox](https://github.com/resemble-ai/chatterbox) — README: 설치, MIT 라이선스, 워터마크, CPU/GPU 지원.',
           '[GitHub의 suno-ai/bark](https://github.com/suno-ai/bark) — README: 라이선스, VRAM/소형 모델 플래그, 유지 관리/커밋 이력.',
           '[Hugging Face의 Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) — 모델 카드: 파라미터 수, Apache 2.0 라이선스, CPU/GPU 성능.',
+          '[NVIDIA NVIGI: Chatterbox TTS 모델 카드](https://docs.nvidia.com/ace-for-games/chatterbox-tts/nvigi-chatterbox-model-card.html) — Chatterbox Turbo, 다국어, 전체 ASR+TTS 파이프라인별 VRAM 수치.',
+          '[GitHub의 idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — 여전히 XTTS v2 모델을 실행하는, 활발하게 유지 관리되는 Coqui TTS 툴킷의 커뮤니티 포크.',
+          '[GitHub의 Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) — GPU 세대별 CUDA Docker 이미지 매트릭스, RTX 50 시리즈/Blackwell 카드에 필요한 CUDA 12.8 요구 사항 포함.',
           '[XTTS v2 리뷰](/ko/power-local-llm/xtts-v2-review) — 전체 사용 명령어와 라이선스 상세 내용을 담은 PromptQuorum 전용 리뷰.',
           '[Bark TTS 리뷰](/ko/power-local-llm/bark-tts-review) — VRAM 수치와 유지 관리 상태를 담은 PromptQuorum 전용 리뷰.',
           '[로컬 TTS 및 음성 클로닝 라이선스](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 로컬 TTS 엔진 전반의 라이선스와 VRAM 완전 비교.',
@@ -3148,11 +3429,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'NVIDIA GPU 환경을 위한 최고의 로컬 TTS 엔진(2026)',
       description:
-        'NVIDIA GPU용 최고의 로컬 TTS: XTTS v2, Chatterbox, Bark, Kokoro를 VRAM, CUDA 가속, 음성 클로닝, 라이선스 기준으로 비교합니다. 사용 사례별 명확한 추천도 제공합니다.',
+        'TTS 최적 GPU는? XTTS v2, Chatterbox v3, Bark, Kokoro를 VRAM, 음성 클로닝에 필요한 하드웨어, 라이선스로 비교합니다.',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-tts-nvidia-gpu',
       inLanguage: 'ko',
       datePublished: '2026-09-11',
-      dateModified: '2026-09-11',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',

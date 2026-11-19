@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Model Comparisons',
     title: 'Best 14B Model for Coding?',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     seoTitle: 'Best 14B Models 2026: Coding and General Use',
     metaDescription: 'Best 14B model for coding: Qwen2.5-Coder 14B, 89.6% HumanEval (Qwen-reported) in ~10 GB VRAM. For general use: Qwen3 14B or Phi-4. Compared on Ollama.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-en.webp',
@@ -28,6 +28,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'best-moe-models-local-coding',
     ],
     is_living_page: false,
+    leadAnswerBlock:
+      'Qwen2.5-Coder 14B is the best 14B model for coding, scoring 89.6% on HumanEval in Qwen\'s own technical report against 81.1% for DeepSeek-Coder-V2-Lite and 67.7% for StarCoder2 15B, and it needs about 10 GB VRAM (9.0 GB download). Qwen\'s newer Qwen3-Coder line has no 14B dense model — it ships only as a 30B-A3B or 480B-A35B mixture-of-experts model — so Qwen2.5-Coder 14B remains the right pick at this VRAM budget. For general, non-coding work at 14B, choose Qwen3 14B or Phi-4 instead.',
     quickAnswerTop: {
       en: {
         question: 'Best 14B model for coding?',
@@ -90,11 +92,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'StarCoder2 15B Instruct scores 67.7% on HumanEval and trails both models on this benchmark',
           'With 12 GB VRAM, run Qwen2.5-Coder 14B; below 8 GB, drop to a 7B coder. All HumanEval figures are vendor-reported instruct-model results, not PromptQuorum measurements',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen2.5-Coder 14B Instruct scores 89.6% on HumanEval in Qwen\'s own report, the highest of the three 14B-class coding models compared here, and needs about 10 GB VRAM; Qwen3-Coder has no 14B dense variant.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'To run a 14B coding model locally, pick Qwen2.5-Coder 14B for the best HumanEval score or DeepSeek-Coder-V2-Lite as a MoE alternative — both need about 10 GB VRAM. Qwen3-Coder only ships as larger 30B-A3B or 480B-A35B models, not a 14B.',
+          },
+        ],
       },
       body1: {
         title: 'Qwen2.5-Coder 14B Leads on HumanEval',
         content: [
-          '<strong>Qwen2.5-Coder-14B-Instruct scores 89.6% on HumanEval in the Qwen2.5-Coder technical report, the highest of the three models compared here.</strong> These are vendor-reported instruct-model results, not PromptQuorum measurements and not Q4_K_M results; quantized local builds can score slightly differently.',
+          '<strong>Qwen2.5-Coder-14B-Instruct scores 89.6% on HumanEval in the <a href="https://arxiv.org/abs/2409.12186" class="text-primary hover:underline">Qwen2.5-Coder technical report</a>, the highest of the three models compared here.</strong> These are vendor-reported instruct-model results, not PromptQuorum measurements and not Q4_K_M results; quantized local builds can score slightly differently.',
           'DeepSeek-Coder-V2-Lite-Instruct scores 81.1% in the same table. It is a mixture-of-experts model with 16B total and 2.4B active parameters, so it is not a dense 14B model, but its 8.9 GB Ollama download puts it in the same VRAM class. The 8.5-point HumanEval gap favours Qwen; DeepSeek is a reasonable alternative if you already use it.',
           'StarCoder2-15B-Instruct-v0.1 scores 67.7% in the same table. It was trained on The Stack v2 and suits repository-oriented work, but on HumanEval it trails both models above.',
         ],
@@ -161,6 +173,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'What quantization should I use for a 14B coding model?',
             a: 'Q4_K_M is the common default: it keeps most of the FP16 quality at well under half the memory, though the loss varies by model and task. Q5_K_M adds about 1 GB VRAM for a slightly higher quality ceiling, worth it only if you have 12+ GB VRAM and run short context lengths.',
           },
+          {
+            q: 'Is there a Qwen3-Coder 14B model?',
+            a: 'No. Qwen\'s Qwen3-Coder line ships as a 30B-A3B mixture-of-experts model (30.5B total, 3.3B active) and a 480B-A35B flagship — there is no 14B dense Qwen3-Coder release. For a dense 14B coding model, Qwen2.5-Coder 14B, compared above, is the one to use.',
+          },
         ],
       },
       relatedReading: {
@@ -171,7 +187,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
     },
-    last_full_refresh: '2026-10-17',
+    last_full_refresh: '2026-11-19',
   },
   de: {
     designSkin: 'hub',
@@ -181,9 +197,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Bestes 14B-Modell fürs Coding: Qwen2.5-Coder 14B, 89,6 % HumanEval (Qwen-Angabe) bei ~10 GB VRAM. Allgemein: Qwen3 14B oder Phi-4. Vergleich auf Ollama.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-de.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
+    leadAnswerBlock:
+      'Qwen2.5-Coder 14B ist das beste 14B-Modell fürs Coding: Im eigenen Bericht von Qwen erzielt es 89,6 % auf HumanEval, gegenüber 81,1 % für DeepSeek-Coder-V2-Lite und 67,7 % für StarCoder2 15B, und braucht etwa 10 GB VRAM (9,0 GB Download). Qwens neuere Qwen3-Coder-Reihe hat kein dichtes 14B-Modell — sie erscheint nur als Mixture-of-Experts-Modell mit 30B-A3B oder 480B-A35B — daher bleibt Qwen2.5-Coder 14B die richtige Wahl in dieser VRAM-Klasse. Für allgemeine, nicht codingbezogene Aufgaben bei 14B wählen Sie stattdessen Qwen3 14B oder Phi-4.',
     quickAnswerTop: {
       de: {
         question: 'Bestes 14B-Modell für Coding?',
@@ -206,11 +224,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'StarCoder2 15B Instruct erzielt 67,7 % auf HumanEval und liegt bei diesem Benchmark hinter beiden Modellen',
           'Mit 12 GB VRAM nehmen Sie Qwen2.5-Coder 14B; unter 8 GB weichen Sie auf einen 7B-Coder aus. Alle HumanEval-Werte sind vom Hersteller berichtete Instruct-Ergebnisse, keine PromptQuorum-Messungen',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen2.5-Coder 14B Instruct erzielt in Qwens eigenem Bericht 89,6 % auf HumanEval, den höchsten Wert der drei hier verglichenen 14B-Coding-Modelle, und braucht etwa 10 GB VRAM; Qwen3-Coder gibt es nicht als dichtes 14B-Modell.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Für ein lokales 14B-Coding-Modell wählen Sie Qwen2.5-Coder 14B für den besten HumanEval-Wert oder DeepSeek-Coder-V2-Lite als MoE-Alternative — beide brauchen etwa 10 GB VRAM. Qwen3-Coder erscheint nur als größere 30B-A3B- oder 480B-A35B-Modelle, nicht als 14B.',
+          },
+        ],
       },
       body1: {
         title: 'Qwen2.5-Coder 14B führt beim HumanEval',
         content: [
-          '<strong>Qwen2.5-Coder-14B-Instruct erzielt im Qwen2.5-Coder-Technical-Report 89,6 % auf HumanEval, den höchsten Wert der drei hier verglichenen Modelle.</strong> Es sind vom Hersteller berichtete Instruct-Ergebnisse, keine PromptQuorum-Messungen und keine Q4_K_M-Ergebnisse; quantisierte lokale Builds können leicht abweichen.',
+          '<strong>Qwen2.5-Coder-14B-Instruct erzielt im <a href="https://arxiv.org/abs/2409.12186" class="text-primary hover:underline">Qwen2.5-Coder-Technical-Report</a> 89,6 % auf HumanEval, den höchsten Wert der drei hier verglichenen Modelle.</strong> Es sind vom Hersteller berichtete Instruct-Ergebnisse, keine PromptQuorum-Messungen und keine Q4_K_M-Ergebnisse; quantisierte lokale Builds können leicht abweichen.',
           'DeepSeek-Coder-V2-Lite-Instruct erzielt in derselben Tabelle 81,1 %. Es ist ein Mixture-of-Experts-Modell mit 16B Gesamt- und 2,4B aktiven Parametern, also kein dichtes 14B-Modell, doch der 8,9-GB-Ollama-Download ordnet es in dieselbe VRAM-Klasse ein. Der Abstand von 8,5 Punkten auf HumanEval spricht für Qwen; DeepSeek bleibt eine vernünftige Alternative, wenn Sie es bereits nutzen.',
           'StarCoder2-15B-Instruct-v0.1 erzielt in derselben Tabelle 67,7 %. Es wurde auf The Stack v2 trainiert und eignet sich für repository-orientierte Arbeit, liegt auf HumanEval aber hinter beiden oben genannten Modellen.',
         ],
@@ -277,6 +305,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Welche Quantisierung sollte ich für ein 14B-Coding-Modell verwenden?',
             a: 'Q4_K_M ist der übliche Standard: Es behält den Großteil der FP16-Qualität bei deutlich weniger als der Hälfte des Speichers, wobei der Verlust je nach Modell und Aufgabe variiert. Q5_K_M braucht etwa 1 GB mehr VRAM für eine etwas höhere Qualitätsgrenze und lohnt sich nur bei 12+ GB VRAM und kurzen Kontextlängen.',
           },
+          {
+            q: 'Gibt es ein Qwen3-Coder-14B-Modell?',
+            a: 'Nein. Qwens Qwen3-Coder-Reihe erscheint als Mixture-of-Experts-Modell mit 30B-A3B (30,5B gesamt, 3,3B aktiv) und als 480B-A35B-Flaggschiff — ein dichtes 14B-Qwen3-Coder-Modell gibt es nicht. Für ein dichtes 14B-Coding-Modell ist Qwen2.5-Coder 14B, oben verglichen, die richtige Wahl.',
+          },
         ],
       },
     },
@@ -289,9 +321,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Meilleur modèle 14B pour coder : Qwen2.5-Coder 14B, 89,6 % HumanEval (chiffre Qwen) pour ~10 Go de VRAM. Usage général : Qwen3 14B ou Phi-4. Comparatif Ollama.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-fr.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
+    leadAnswerBlock:
+      'Qwen2.5-Coder 14B est le meilleur modèle 14B pour le coding : dans le propre rapport de Qwen, il obtient 89,6 % sur HumanEval, contre 81,1 % pour DeepSeek-Coder-V2-Lite et 67,7 % pour StarCoder2 15B, et nécessite environ 10 Go de VRAM (9,0 Go à télécharger). La gamme Qwen3-Coder, plus récente, n\'a pas de modèle dense en 14B — elle n\'existe qu\'en mélange d\'experts 30B-A3B ou 480B-A35B — donc Qwen2.5-Coder 14B reste le bon choix dans cette classe de VRAM. Pour un usage général, hors coding, à 14B, choisissez plutôt Qwen3 14B ou Phi-4.',
     quickAnswerTop: {
       fr: {
         question: 'Meilleur modèle 14B pour le coding ?',
@@ -314,11 +348,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'StarCoder2 15B Instruct obtient 67,7 % sur HumanEval et reste derrière les deux autres sur ce benchmark',
           'Avec 12 Go de VRAM, utilisez Qwen2.5-Coder 14B ; sous 8 Go, passez à un modèle de code 7B. Tous les chiffres HumanEval sont des résultats instruct publiés par les éditeurs, pas des mesures PromptQuorum',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen2.5-Coder 14B Instruct obtient 89,6 % sur HumanEval dans le rapport de Qwen, le meilleur score des trois modèles de coding 14B comparés ici, et nécessite environ 10 Go de VRAM ; Qwen3-Coder n\'existe pas en version dense 14B.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Pour un modèle de coding 14B en local, choisissez Qwen2.5-Coder 14B pour le meilleur score HumanEval ou DeepSeek-Coder-V2-Lite comme alternative MoE — les deux nécessitent environ 10 Go de VRAM. Qwen3-Coder n\'existe qu\'en versions plus grandes, 30B-A3B ou 480B-A35B, pas en 14B.',
+          },
+        ],
       },
       body1: {
         title: 'Qwen2.5-Coder 14B en tête sur HumanEval',
         content: [
-          '<strong>Qwen2.5-Coder-14B-Instruct obtient 89,6 % sur HumanEval dans le rapport technique Qwen2.5-Coder, le meilleur score des trois modèles comparés ici.</strong> Ce sont des résultats instruct publiés par l\'éditeur, pas des mesures PromptQuorum ni des résultats en Q4_K_M ; les versions locales quantifiées peuvent donner des scores légèrement différents.',
+          '<strong>Qwen2.5-Coder-14B-Instruct obtient 89,6 % sur HumanEval dans le <a href="https://arxiv.org/abs/2409.12186" class="text-primary hover:underline">rapport technique Qwen2.5-Coder</a>, le meilleur score des trois modèles comparés ici.</strong> Ce sont des résultats instruct publiés par l\'éditeur, pas des mesures PromptQuorum ni des résultats en Q4_K_M ; les versions locales quantifiées peuvent donner des scores légèrement différents.',
           'DeepSeek-Coder-V2-Lite-Instruct obtient 81,1 % dans le même tableau. C\'est un modèle à mélange d\'experts de 16B au total et 2,4B actifs, donc pas un modèle dense de 14B, mais son téléchargement Ollama de 8,9 Go le place dans la même classe de VRAM. L\'écart de 8,5 points sur HumanEval favorise Qwen ; DeepSeek reste une alternative raisonnable si vous l\'utilisez déjà.',
           'StarCoder2-15B-Instruct-v0.1 obtient 67,7 % dans le même tableau. Entraîné sur The Stack v2, il convient au travail orienté dépôts de code, mais sur HumanEval il reste derrière les deux modèles ci-dessus.',
         ],
@@ -385,6 +429,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Quelle quantification utiliser pour un modèle de coding 14B ?',
             a: 'Q4_K_M est le choix courant : il conserve l\'essentiel de la qualité FP16 pour bien moins de la moitié de la mémoire, la perte variant selon le modèle et la tâche. Q5_K_M ajoute environ 1 Go de VRAM pour un plafond de qualité légèrement plus haut, utile seulement avec 12 Go+ de VRAM et des contextes courts.',
           },
+          {
+            q: 'Existe-t-il un modèle Qwen3-Coder 14B ?',
+            a: 'Non. La gamme Qwen3-Coder de Qwen existe en mélange d\'experts 30B-A3B (30,5B au total, 3,3B actifs) et en modèle phare 480B-A35B — il n\'y a pas de version dense en 14B de Qwen3-Coder. Pour un modèle de coding dense en 14B, Qwen2.5-Coder 14B, comparé ci-dessus, est le bon choix.',
+          },
         ],
       },
     },
@@ -397,9 +445,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'コーディング向け最適14BはQwen2.5-Coder 14B（HumanEval 89.6%・Qwen公表値、約10 GB VRAM）。汎用ならQwen3 14BかPhi-4。Ollamaで比較します。',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-ja.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
+    leadAnswerBlock:
+      'コーディングに最適な14BモデルはQwen2.5-Coder 14Bです。Qwen自身のレポートでHumanEval 89.6%を記録し、DeepSeek-Coder-V2-Liteの81.1%、StarCoder2 15Bの67.7%を上回ります。必要VRAMは約10 GB（ダウンロード9.0 GB）です。Qwenの新しいQwen3-Coderシリーズには14Bの密なモデルはなく、30B-A3Bまたは480B-A35BのMixture-of-Expertsモデルとしてのみ提供されています。そのため、このVRAM帯ではQwen2.5-Coder 14Bが適切な選択です。コーディング以外の汎用用途で14Bを使うなら、Qwen3 14BまたはPhi-4を選んでください。',
     quickAnswerTop: {
       ja: {
         question: 'コーディングに最適な14Bモデルは？',
@@ -422,11 +472,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'StarCoder2 15B InstructはHumanEval 67.7%で、このベンチマークでは両モデルに及びません',
           'VRAMが12 GBならQwen2.5-Coder 14Bを、8 GB未満なら7Bのコーディングモデルを使ってください。HumanEvalの数値はすべて各社公表のinstruct結果であり、PromptQuorumの実測ではありません',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen2.5-Coder 14B Instructは、Qwen自身のレポートでHumanEval 89.6%を記録し、ここで比較した3つの14Bコーディングモデルの中で最高で、約10 GBのVRAMが必要です。Qwen3-Coderには密な14Bモデルはありません。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'ローカルで14Bのコーディングモデルを使うなら、HumanEvalの数値が最も高いQwen2.5-Coder 14B、またはMoEの代替としてDeepSeek-Coder-V2-Liteを選んでください。どちらも約10 GBのVRAMが必要です。Qwen3-Coderは30B-A3Bまたは480B-A35Bのより大きなモデルとしてのみ存在し、14B版はありません。',
+          },
+        ],
       },
       body1: {
         title: 'Qwen2.5-Coder 14BがHumanEvalで首位',
         content: [
-          '<strong>Qwen2.5-Coder-14B-Instructは、Qwen2.5-Coder技術レポートでHumanEval 89.6%を記録し、比較した3モデルで最高です。</strong>これは各社公表のinstruct結果であり、PromptQuorumの実測でもQ4_K_Mの結果でもありません。量子化したローカル版では多少異なる場合があります。',
+          '<strong>Qwen2.5-Coder-14B-Instructは、<a href="https://arxiv.org/abs/2409.12186" class="text-primary hover:underline">Qwen2.5-Coder技術レポート</a>でHumanEval 89.6%を記録し、比較した3モデルで最高です。</strong>これは各社公表のinstruct結果であり、PromptQuorumの実測でもQ4_K_Mの結果でもありません。量子化したローカル版では多少異なる場合があります。',
           'DeepSeek-Coder-V2-Lite-Instructは同じ表で81.1%です。総パラメータ16B・アクティブ2.4BのMixture-of-Expertsモデルで、密な14Bモデルではありませんが、Ollamaのダウンロードが8.9 GBのため同じVRAMクラスに入ります。HumanEvalの8.5ポイント差はQwenに有利で、すでに使っているならDeepSeekも妥当な代替です。',
           'StarCoder2-15B-Instruct-v0.1は同じ表で67.7%です。The Stack v2で学習されリポジトリ指向の作業に向きますが、HumanEvalでは上の2モデルに及びません。',
         ],
@@ -493,6 +553,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '14Bコーディングモデルにはどの量子化を使うべきですか？',
             a: 'Q4_K_Mが一般的な標準です。FP16の品質の大部分を保ちつつメモリは半分をかなり下回りますが、損失はモデルやタスクによって異なります。Q5_K_Mは約1 GB多くVRAMを使い品質の上限がわずかに上がるため、12 GB以上のVRAMで短いコンテキストの場合にのみ価値があります。',
           },
+          {
+            q: 'Qwen3-Coder 14Bモデルは存在しますか？',
+            a: 'いいえ。QwenのQwen3-Coderシリーズは30B-A3B（総パラメータ30.5B、アクティブ3.3B）のMixture-of-Expertsモデルと480B-A35Bのフラッグシップモデルとして提供されており、密な14BのQwen3-Coderは存在しません。密な14Bコーディングモデルが必要な場合は、上で比較したQwen2.5-Coder 14Bを使ってください。',
+          },
         ],
       },
     },
@@ -505,9 +569,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: '编程首选14B模型是Qwen2.5-Coder 14B：HumanEval 89.6%（Qwen公布），约10 GB显存。通用场景可选Qwen3 14B或Phi-4。基于Ollama的对比。',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-zh.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
+    leadAnswerBlock:
+      '编程最佳14B模型是Qwen2.5-Coder 14B。在Qwen自己的报告中，它的HumanEval为89.6%，高于DeepSeek-Coder-V2-Lite的81.1%和StarCoder2 15B的67.7%，所需显存约10 GB（下载9.0 GB）。Qwen较新的Qwen3-Coder系列没有14B稠密模型，只提供30B-A3B或480B-A35B的混合专家模型，因此在这一显存档位，Qwen2.5-Coder 14B仍是正确选择。若需编程之外的通用14B模型，请选择Qwen3 14B或Phi-4。',
     quickAnswerTop: {
       zh: {
         question: '编程最佳14B模型是哪款？',
@@ -530,11 +596,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'StarCoder2 15B Instruct 的 HumanEval 为 67.7%，在该基准上落后于另外两款',
           '12 GB 显存用 Qwen2.5-Coder 14B；低于 8 GB 则改用 7B 编程模型。所有 HumanEval 数字均为厂商公布的 instruct 结果，并非 PromptQuorum 实测',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '在 Qwen 自己的报告中，Qwen2.5-Coder 14B Instruct 的 HumanEval 为 89.6%，是本文对比的三款 14B 编程模型中最高的，需要约 10 GB 显存；Qwen3-Coder 没有 14B 稠密版本。',
+          },
+          {
+            type: 'plain-terms',
+            text: '若要在本地运行14B编程模型，选择HumanEval得分最高的Qwen2.5-Coder 14B，或作为MoE替代方案的DeepSeek-Coder-V2-Lite——两者都需要约10 GB显存。Qwen3-Coder只提供更大的30B-A3B或480B-A35B版本，没有14B版本。',
+          },
+        ],
       },
       body1: {
         title: 'Qwen2.5-Coder 14B 在 HumanEval 上领先',
         content: [
-          '<strong>在 Qwen2.5-Coder 技术报告中，Qwen2.5-Coder-14B-Instruct 的 HumanEval 为 89.6%，是本文对比的三款模型中最高的。</strong>这些是厂商公布的 instruct 结果，并非 PromptQuorum 实测，也不是 Q4_K_M 的结果；量化后的本地版本得分可能略有不同。',
+          '<strong>在<a href="https://arxiv.org/abs/2409.12186" class="text-primary hover:underline">Qwen2.5-Coder 技术报告</a>中，Qwen2.5-Coder-14B-Instruct 的 HumanEval 为 89.6%，是本文对比的三款模型中最高的。</strong>这些是厂商公布的 instruct 结果，并非 PromptQuorum 实测，也不是 Q4_K_M 的结果；量化后的本地版本得分可能略有不同。',
           'DeepSeek-Coder-V2-Lite-Instruct 在同一张表中为 81.1%。它是总参数 16B、激活 2.4B 的混合专家模型，不是稠密 14B 模型，但 8.9 GB 的 Ollama 下载使其属于同一显存档次。HumanEval 上 8.5 分的差距对 Qwen 有利；如果你已经在用 DeepSeek，它仍是合理的替代。',
           'StarCoder2-15B-Instruct-v0.1 在同一张表中为 67.7%。它基于 The Stack v2 训练，适合面向代码仓库的工作，但在 HumanEval 上落后于上述两款模型。',
         ],
@@ -601,6 +677,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '14B编程模型应使用哪种量化？',
             a: 'Q4_K_M 是常用的默认选择：它以远不到一半的内存保留 FP16 的大部分质量，但损失因模型和任务而异。Q5_K_M 多占约 1 GB 显存，质量上限略高，仅在有 12 GB 以上显存且上下文较短时才值得。',
           },
+          {
+            q: '有Qwen3-Coder 14B模型吗？',
+            a: '没有。Qwen的Qwen3-Coder系列提供30B-A3B混合专家模型（总参数30.5B，激活3.3B）和480B-A35B旗舰模型，并没有14B稠密版本的Qwen3-Coder。如果需要稠密的14B编程模型，请使用上文对比的Qwen2.5-Coder 14B。',
+          },
         ],
       },
     },
@@ -613,9 +693,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Mejor modelo 14B para coding: Qwen2.5-Coder 14B, 89,6 % en HumanEval (cifra de Qwen) con ~10 GB de VRAM. Uso general: Qwen3 14B o Phi-4. Comparativa en Ollama.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-es.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
+    leadAnswerBlock:
+      'El mejor modelo 14B para coding es Qwen2.5-Coder 14B: en el propio informe de Qwen obtiene 89,6 % en HumanEval, frente a 81,1 % de DeepSeek-Coder-V2-Lite y 67,7 % de StarCoder2 15B, y necesita unos 10 GB de VRAM (descarga de 9,0 GB). La línea más reciente de Qwen, Qwen3-Coder, no tiene un modelo denso de 14B — solo existe como modelo de mezcla de expertos 30B-A3B o como buque insignia 480B-A35B —, así que Qwen2.5-Coder 14B sigue siendo la opción correcta en este rango de VRAM. Para uso general, fuera del coding, a 14B, elige Qwen3 14B o Phi-4.',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor modelo 14B para coding?',
@@ -638,11 +720,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'StarCoder2 15B Instruct obtiene 67,7 % en HumanEval y queda por detrás de ambos en este benchmark',
           'Con 12 GB de VRAM usa Qwen2.5-Coder 14B; por debajo de 8 GB, baja a un modelo de código de 7B. Todas las cifras de HumanEval son resultados instruct publicados por los fabricantes, no mediciones de PromptQuorum',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen2.5-Coder 14B Instruct obtiene 89,6 % en HumanEval en el propio informe de Qwen, la cifra más alta de los tres modelos de coding 14B comparados aquí, y necesita unos 10 GB de VRAM; Qwen3-Coder no tiene versión densa de 14B.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Para un modelo de coding 14B en local, elige Qwen2.5-Coder 14B por la mejor puntuación en HumanEval, o DeepSeek-Coder-V2-Lite como alternativa MoE — ambos necesitan unos 10 GB de VRAM. Qwen3-Coder solo existe en versiones más grandes, 30B-A3B o 480B-A35B, no en 14B.',
+          },
+        ],
       },
       body1: {
         title: 'Qwen2.5-Coder 14B lidera en HumanEval',
         content: [
-          '<strong>Qwen2.5-Coder-14B-Instruct obtiene 89,6 % en HumanEval en el informe técnico de Qwen2.5-Coder, la cifra más alta de los tres modelos comparados aquí.</strong> Son resultados instruct publicados por el fabricante, no mediciones de PromptQuorum ni resultados en Q4_K_M; las versiones locales cuantizadas pueden puntuar algo distinto.',
+          '<strong>Qwen2.5-Coder-14B-Instruct obtiene 89,6 % en HumanEval en el <a href="https://arxiv.org/abs/2409.12186" class="text-primary hover:underline">informe técnico de Qwen2.5-Coder</a>, la cifra más alta de los tres modelos comparados aquí.</strong> Son resultados instruct publicados por el fabricante, no mediciones de PromptQuorum ni resultados en Q4_K_M; las versiones locales cuantizadas pueden puntuar algo distinto.',
           'DeepSeek-Coder-V2-Lite-Instruct obtiene 81,1 % en la misma tabla. Es un modelo de mezcla de expertos con 16B en total y 2,4B activos, por lo que no es un modelo denso de 14B, pero su descarga de 8,9 GB en Ollama lo sitúa en la misma clase de VRAM. La diferencia de 8,5 puntos en HumanEval favorece a Qwen; DeepSeek sigue siendo una alternativa razonable si ya lo usas.',
           'StarCoder2-15B-Instruct-v0.1 obtiene 67,7 % en la misma tabla. Se entrenó con The Stack v2 y encaja en trabajo orientado a repositorios, pero en HumanEval queda por detrás de los dos anteriores.',
         ],
@@ -709,6 +801,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Qué cuantización debo usar para un modelo de coding 14B?',
             a: 'Q4_K_M es el valor habitual: conserva la mayor parte de la calidad FP16 con bastante menos de la mitad de la memoria, aunque la pérdida varía según el modelo y la tarea. Q5_K_M añade aproximadamente 1 GB de VRAM para un techo de calidad algo mayor, y solo compensa con 12+ GB de VRAM y contextos cortos.',
           },
+          {
+            q: '¿Existe un modelo Qwen3-Coder 14B?',
+            a: 'No. La línea Qwen3-Coder de Qwen existe como modelo de mezcla de expertos 30B-A3B (30,5B en total, 3,3B activos) y como buque insignia 480B-A35B — no hay una versión densa de 14B de Qwen3-Coder. Para un modelo de coding denso de 14B, usa Qwen2.5-Coder 14B, comparado arriba.',
+          },
         ],
       },
     },
@@ -716,14 +812,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   pt: {
     designSkin: 'hub',
     theme: 'Model Comparisons',
-    title: '¿El mejor modelo 14B para coding?',
+    title: 'Qual é o melhor modelo 14B para programação?',
     seoTitle: 'Melhores modelos 14B 2026: programação e uso geral',
     metaDescription: 'Melhor modelo 14B para programar: Qwen2.5-Coder 14B, 89,6% no HumanEval (número da Qwen) com ~10 GB de VRAM. Uso geral: Qwen3 14B ou Phi-4. Comparativo no Ollama.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-pt.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
+    leadAnswerBlock:
+      'O melhor modelo 14B para programação é o Qwen2.5-Coder 14B: no próprio relatório da Qwen, ele marca 89,6% no HumanEval, contra 81,1% do DeepSeek-Coder-V2-Lite e 67,7% do StarCoder2 15B, e precisa de cerca de 10 GB de VRAM (download de 9,0 GB). A linha mais recente da Qwen, o Qwen3-Coder, não tem um modelo denso de 14B — ele só existe como modelo de mistura de especialistas 30B-A3B ou como carro-chefe 480B-A35B —, então o Qwen2.5-Coder 14B continua sendo a escolha certa nessa faixa de VRAM. Para uso geral, fora da programação, em 14B, escolha o Qwen3 14B ou o Phi-4.',
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor modelo 14B para programação?',
@@ -746,11 +844,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'O StarCoder2 15B Instruct marca 67,7% no HumanEval e fica atrás dos dois outros nesse benchmark',
           'Com 12 GB de VRAM, use o Qwen2.5-Coder 14B; abaixo de 8 GB, desça para um modelo de código de 7B. Todos os números do HumanEval são resultados instruct divulgados pelos fabricantes, não medições da PromptQuorum',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'O Qwen2.5-Coder 14B Instruct marca 89,6% no HumanEval no relatório da própria Qwen, a maior pontuação entre os três modelos de programação 14B comparados aqui, e precisa de cerca de 10 GB de VRAM; o Qwen3-Coder não tem versão densa de 14B.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Para um modelo de programação 14B localmente, escolha o Qwen2.5-Coder 14B pela melhor pontuação no HumanEval, ou o DeepSeek-Coder-V2-Lite como alternativa MoE — ambos precisam de cerca de 10 GB de VRAM. O Qwen3-Coder só existe em versões maiores, 30B-A3B ou 480B-A35B, não em 14B.',
+          },
+        ],
       },
       body1: {
         title: 'O Qwen2.5-Coder 14B lidera no HumanEval',
         content: [
-          '<strong>O Qwen2.5-Coder-14B-Instruct marca 89,6% no HumanEval no relatório técnico do Qwen2.5-Coder, a maior pontuação entre os três modelos comparados aqui.</strong> São resultados instruct divulgados pelo fabricante, não medições da PromptQuorum nem resultados em Q4_K_M; builds locais quantizados podem pontuar um pouco diferente.',
+          '<strong>O Qwen2.5-Coder-14B-Instruct marca 89,6% no HumanEval no <a href="https://arxiv.org/abs/2409.12186" class="text-primary hover:underline">relatório técnico do Qwen2.5-Coder</a>, a maior pontuação entre os três modelos comparados aqui.</strong> São resultados instruct divulgados pelo fabricante, não medições da PromptQuorum nem resultados em Q4_K_M; builds locais quantizados podem pontuar um pouco diferente.',
           'O DeepSeek-Coder-V2-Lite-Instruct marca 81,1% na mesma tabela. É um modelo de mistura de especialistas com 16B no total e 2,4B ativos, portanto não é um modelo denso de 14B, mas seu download de 8,9 GB no Ollama o coloca na mesma classe de VRAM. A diferença de 8,5 pontos no HumanEval favorece a Qwen; o DeepSeek continua sendo uma alternativa razoável se você já o usa.',
           'O StarCoder2-15B-Instruct-v0.1 marca 67,7% na mesma tabela. Foi treinado no The Stack v2 e serve para trabalho orientado a repositórios, mas no HumanEval fica atrás dos dois modelos acima.',
         ],
@@ -817,6 +925,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Qual quantização devo usar para um modelo de programação 14B?',
             a: 'O Q4_K_M é o padrão comum: mantém a maior parte da qualidade FP16 com bem menos da metade da memória, embora a perda varie conforme o modelo e a tarefa. O Q5_K_M acrescenta cerca de 1 GB de VRAM para um teto de qualidade um pouco maior, e só vale a pena com 12+ GB de VRAM e contextos curtos.',
           },
+          {
+            q: 'Existe um modelo Qwen3-Coder 14B?',
+            a: 'Não. A linha Qwen3-Coder da Qwen existe como modelo de mistura de especialistas 30B-A3B (30,5B no total, 3,3B ativos) e como carro-chefe 480B-A35B — não há uma versão densa de 14B do Qwen3-Coder. Para um modelo de programação denso de 14B, use o Qwen2.5-Coder 14B, comparado acima.',
+          },
         ],
       },
     },
@@ -829,9 +941,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'أفضل نموذج ⁨14B⁩ للبرمجة هو ⁨Qwen2.5-Coder 14B⁩: ‏⁨89.6%⁩ على ⁨HumanEval⁩ بنحو ⁨10 GB VRAM⁩. للاستخدام العام: ⁨Qwen3 14B⁩ أو ⁨Phi-4⁩. مقارنة على ⁨Ollama⁩.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-ar.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
+    leadAnswerBlock:
+      'أفضل نموذج 14B للبرمجة هو Qwen2.5-Coder 14B: في تقرير Qwen نفسه، يسجّل 89.6% على HumanEval مقابل 81.1% لـ DeepSeek-Coder-V2-Lite و67.7% لـ StarCoder2 15B، ويحتاج نحو 10 GB VRAM (تنزيل 9.0 GB). سلسلة Qwen3-Coder الأحدث من Qwen لا تضم نموذجًا كثيفًا بحجم 14B — فهي تصدر فقط كنموذج مزيج خبراء بحجم 30B-A3B أو كنموذج رائد بحجم 480B-A35B — لذا يبقى Qwen2.5-Coder 14B الخيار الصحيح في هذه الفئة من VRAM. للاستخدام العام خارج البرمجة بحجم 14B، اختر Qwen3 14B أو Phi-4.',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل نموذج 14B للبرمجة؟',
@@ -854,11 +968,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'يسجّل StarCoder2 15B Instruct نسبة 67.7% في HumanEval ويتأخر عن النموذجين الآخرين في هذا المقياس',
           'مع 12 GB VRAM شغّل Qwen2.5-Coder 14B؛ وأقل من 8 GB انتقل إلى نموذج برمجة بحجم 7B. كل أرقام HumanEval نتائج instruct أعلنتها الشركات وليست قياسات من PromptQuorum',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'يسجّل Qwen2.5-Coder 14B Instruct نسبة 89.6% في HumanEval في تقرير Qwen نفسه، وهي الأعلى بين نماذج البرمجة الثلاثة بحجم 14B المقارنة هنا، ويحتاج نحو 10 GB VRAM؛ ولا توجد نسخة كثيفة بحجم 14B من Qwen3-Coder.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'لتشغيل نموذج برمجة بحجم 14B محليًا، اختر Qwen2.5-Coder 14B لأعلى نتيجة HumanEval، أو DeepSeek-Coder-V2-Lite كبديل بمزيج الخبراء — يحتاج كلاهما نحو 10 GB VRAM. يصدر Qwen3-Coder فقط بنماذج أكبر بحجم 30B-A3B أو 480B-A35B، دون نسخة بحجم 14B.',
+          },
+        ],
       },
       body1: {
         title: 'Qwen2.5-Coder 14B يتصدر HumanEval',
         content: [
-          '<strong>يسجّل Qwen2.5-Coder-14B-Instruct نسبة 89.6% في HumanEval في التقرير التقني لـ Qwen2.5-Coder، وهي الأعلى بين النماذج الثلاثة المقارنة هنا.</strong> هذه نتائج instruct أعلنتها الشركة المطورة، وليست قياسات من PromptQuorum ولا نتائج Q4_K_M؛ وقد تختلف الدرجات قليلًا في النسخ المحلية المكمّمة.',
+          '<strong>يسجّل Qwen2.5-Coder-14B-Instruct نسبة 89.6% في HumanEval في <a href="https://arxiv.org/abs/2409.12186" class="text-primary hover:underline">التقرير التقني لـ Qwen2.5-Coder</a>، وهي الأعلى بين النماذج الثلاثة المقارنة هنا.</strong> هذه نتائج instruct أعلنتها الشركة المطورة، وليست قياسات من PromptQuorum ولا نتائج Q4_K_M؛ وقد تختلف الدرجات قليلًا في النسخ المحلية المكمّمة.',
           'يسجّل DeepSeek-Coder-V2-Lite-Instruct نسبة 81.1% في الجدول نفسه. وهو نموذج مزيج خبراء بإجمالي 16B و2.4B نشطة، فليس نموذجًا كثيفًا بحجم 14B، لكن تنزيله في Ollama (‏8.9 GB) يضعه في فئة VRAM نفسها. فارق 8.5 نقطة في HumanEval لصالح Qwen؛ ويبقى DeepSeek بديلًا معقولًا إن كنت تستخدمه بالفعل.',
           'يسجّل StarCoder2-15B-Instruct-v0.1 نسبة 67.7% في الجدول نفسه. تم تدريبه على The Stack v2 ويناسب العمل الموجّه إلى المستودعات، لكنه يتأخر في HumanEval عن النموذجين السابقين.',
         ],
@@ -925,6 +1049,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'ما التكميم الذي يجب استخدامه لنموذج برمجة 14B؟',
             a: 'يُعد Q4_K_M الخيار الشائع: يحتفظ بمعظم جودة FP16 بأقل بكثير من نصف الذاكرة، مع اختلاف الفقد بحسب النموذج والمهمة. ويضيف Q5_K_M نحو 1 GB من VRAM لسقف جودة أعلى قليلًا، ولا يستحق ذلك إلا مع 12 GB VRAM أو أكثر وسياقات قصيرة.',
           },
+          {
+            q: 'هل يوجد نموذج Qwen3-Coder 14B؟',
+            a: 'لا. تصدر سلسلة Qwen3-Coder من Qwen كنموذج مزيج خبراء بحجم 30B-A3B (إجمالي 30.5B، نشطة 3.3B) وكنموذج رائد بحجم 480B-A35B — ولا توجد نسخة كثيفة بحجم 14B من Qwen3-Coder. لنموذج برمجة كثيف بحجم 14B، استخدم Qwen2.5-Coder 14B، المقارن أعلاه.',
+          },
         ],
       },
     },
@@ -937,9 +1065,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: '코딩용 최고의 14B 모델은 Qwen2.5-Coder 14B: HumanEval 89.6%(Qwen 발표), VRAM 약 10 GB. 범용은 Qwen3 14B 또는 Phi-4. Ollama 기준 비교.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-ko.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
+    leadAnswerBlock:
+      '코딩에 최적인 14B 모델은 Qwen2.5-Coder 14B입니다. Qwen 자체 보고서에서 HumanEval 89.6%를 기록해 DeepSeek-Coder-V2-Lite의 81.1%, StarCoder2 15B의 67.7%를 앞서며, 약 10 GB VRAM(다운로드 9.0 GB)이 필요합니다. Qwen의 최신 Qwen3-Coder 라인업에는 14B 밀집 모델이 없으며, 30B-A3B 또는 480B-A35B 전문가 혼합 모델로만 출시됩니다. 따라서 이 VRAM 구간에서는 Qwen2.5-Coder 14B가 적절한 선택입니다. 코딩 외 범용 용도로 14B 모델이 필요하다면 Qwen3 14B 또는 Phi-4를 선택하십시오.',
     quickAnswerTop: {
       ko: {
         question: '코딩에 최적인 14B 모델은 무엇입니까?',
@@ -976,7 +1106,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Qwen2.5-Coder 14B가 HumanEval에서 선두입니다',
         content: [
-          '<strong>Qwen2.5-Coder-14B-Instruct는 Qwen2.5-Coder 기술 보고서에서 HumanEval 89.6%를 기록하여 비교한 세 모델 중 가장 높습니다.</strong> 이는 제조사가 발표한 instruct 결과이며 PromptQuorum 실측도, Q4_K_M 결과도 아닙니다. 양자화된 로컬 빌드는 점수가 다소 다를 수 있습니다.',
+          '<strong>Qwen2.5-Coder-14B-Instruct는 <a href="https://arxiv.org/abs/2409.12186" class="text-primary hover:underline">Qwen2.5-Coder 기술 보고서</a>에서 HumanEval 89.6%를 기록하여 비교한 세 모델 중 가장 높습니다.</strong> 이는 제조사가 발표한 instruct 결과이며 PromptQuorum 실측도, Q4_K_M 결과도 아닙니다. 양자화된 로컬 빌드는 점수가 다소 다를 수 있습니다.',
           'DeepSeek-Coder-V2-Lite-Instruct는 같은 표에서 81.1%입니다. 총 16B, 활성 2.4B 파라미터의 전문가 혼합 모델이라 밀집 14B 모델은 아니지만, 8.9 GB Ollama 다운로드로 같은 VRAM 등급에 속합니다. HumanEval 8.5점 차이는 Qwen에 유리하며, 이미 사용 중이라면 DeepSeek도 합리적인 대안입니다.',
           'StarCoder2-15B-Instruct-v0.1은 같은 표에서 67.7%입니다. The Stack v2로 학습되어 저장소 중심 작업에 적합하지만 HumanEval에서는 위 두 모델에 뒤처집니다.',
         ],
@@ -1042,6 +1172,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '14B 코딩 모델에는 어떤 양자화를 사용해야 합니까?',
             a: 'Q4_K_M이 일반적인 기본값입니다. FP16 품질 대부분을 절반에 훨씬 못 미치는 메모리로 유지하지만, 손실은 모델과 작업에 따라 다릅니다. Q5_K_M은 VRAM을 약 1 GB 더 사용하며 품질 상한이 약간 높아지므로 12 GB 이상 VRAM에 짧은 컨텍스트일 때만 가치가 있습니다.',
+          },
+          {
+            q: 'Qwen3-Coder 14B 모델이 존재합니까?',
+            a: '아니요. Qwen의 Qwen3-Coder 라인업은 30B-A3B 전문가 혼합 모델(총 30.5B, 활성 3.3B)과 480B-A35B 플래그십 모델로만 출시되며, 밀집 14B 버전의 Qwen3-Coder는 존재하지 않습니다. 밀집 14B 코딩 모델이 필요하다면 위에서 비교한 Qwen2.5-Coder 14B를 사용하십시오.',
           },
         ],
       },
