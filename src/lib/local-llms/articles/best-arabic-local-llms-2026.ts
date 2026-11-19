@@ -7,26 +7,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-arabic-local-llms-2026-overview-hero-en.webp',
     seoTitle: 'Best Arabic LLMs 2026: Jais, Falcon, ALLaM, Fanar (OALL)',
     metaDescription: 'Compare Jais, Falcon-H1-Arabic, ALLaM and Fanar-2 with real Open Arabic LLM Leaderboard (OALL) scores, VRAM requirements, and on-premise setup for 2026.',
-    intro: 'Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) and Falcon-H1-Arabic 7B (TII, Abu Dhabi) are the top Arabic-native local LLMs in 2026. For general multilingual workloads with strong Arabic support, Qwen3-8B leads HELM Arabic benchmarks among models sized for consumer hardware. All three run on-premise with Ollama or vLLM, keeping Arabic-language data within national borders. This guide ranks the models, gives a VRAM table, and shows how to deploy and evaluate Arabic AI locally.',
+    intro: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi, Apache 2.0), released October 2026, and Falcon-H1-Arabic 7B (TII, Abu Dhabi) are the top Arabic-native local LLMs in 2026. For general multilingual workloads with strong Arabic support, Qwen3-8B leads HELM Arabic benchmarks among models sized for consumer hardware. All three run on-premise with Ollama or vLLM, keeping Arabic-language data within national borders. This guide ranks the models, gives a VRAM table, and shows how to deploy and evaluate Arabic AI locally.',
     designSkin: 'hub',
     theme: 'Best Models',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-14',
+    next_refresh_due: '2027-05-19',
     publishDate: '2026-06-14',
-    dateModified: '2026-08-28',
-    last_full_refresh: '2026-08-28',
+    dateModified: '2026-11-19',
+    last_full_refresh: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'Arabic-speaking enterprises, Gulf developers, and teams deploying Arabic NLP locally',
     readTime: '13 min read',
     primaryTerm: 'Arabic local LLM',
     affiliateDisclosure: false,
-    leadAnswerBlock: '**Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) and Falcon-H1-Arabic 7B (TII Abu Dhabi) are the top Arabic-native local LLMs in 2026. For general multilingual workloads with strong Arabic support, Qwen3-8B leads on HELM Arabic benchmarks among models sized for consumer hardware. All three run on-premise with Ollama or vLLM, keeping Arabic-language personal data within national borders.**',
+    leadAnswerBlock: '**Jais 3 (MBZUAI/Inception42, Abu Dhabi, Apache 2.0), released October 2026, and Falcon-H1-Arabic 7B (TII Abu Dhabi) are the top Arabic-native local LLMs in 2026. For general multilingual workloads with strong Arabic support, Qwen3-8B leads on HELM Arabic benchmarks among models sized for consumer hardware. All three run on-premise with Ollama or vLLM, keeping Arabic-language personal data within national borders.**',
     quickAnswerTop: {
       en: {
         question: 'What is the best Arabic local LLM in 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) is the strongest Arabic-native local LLM in 2026, trained on 126B Arabic tokens with Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), released October 2026, is the strongest Arabic-native local LLM in 2026, available in sizes from 0.9B to 32B under Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
         bullets: [
-          'Jais 30B: best Arabic-native model, 126B Arabic training tokens, Apache 2.0, needs ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): best Arabic-native model, released October 2026 by MBZUAI/Inception42, Apache 2.0, 32B needs ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, consumer GPU friendly',
           'Qwen3-8B: best multilingual option with strong Arabic, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Saudi national model, powers HUMAIN Chat; research license',
@@ -36,9 +36,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ar: {
         question: 'ما أفضل نموذج ذكاء اصطناعي عربي محلي في 2026؟',
-        answer: 'Jais 30B (Core42/G42، أبوظبي) هو أقوى نموذج محلي عربي أصيل في 2026، مُدرَّب على 126 مليار رمز عربي بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42، أبوظبي)، الذي صدر في أكتوبر 2026، هو أقوى نموذج محلي عربي أصيل في 2026، ويتوفر بأحجام من 0.9B إلى 32B بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
         bullets: [
-          'Jais 30B: أفضل نموذج عربي أصيل، 126 مليار رمز تدريب عربي، Apache 2.0، يحتاج ~18-20 GB VRAM عند Q4',
+          'Jais 3 (7B/32B): أفضل نموذج عربي أصيل، صدر في أكتوبر 2026 من MBZUAI/Inception42، Apache 2.0، يحتاج إصدار 32B إلى ~19-20 GB VRAM عند Q4',
           'Falcon-H1-Arabic 7B: مؤسسة الابتكار التقني أبوظبي، Q4_K_M ~5 GB VRAM، مناسب لـ GPU المستهلكين',
           'Qwen3-8B: أفضل خيار متعدد اللغات مع دعم عربي قوي، ~5-6 GB VRAM عند Q4',
           'ALLaM 34B (HUMAIN/SDAIA): النموذج الوطني السعودي، يُشغِّل تطبيق HUMAIN Chat؛ ترخيص بحثي',
@@ -48,9 +48,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Was ist das beste arabische lokale LLM im Jahr 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) ist das stärkste arabisch-native lokale LLM im Jahr 2026, trainiert auf 126 Milliarden arabischen Tokens mit Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), veröffentlicht im Oktober 2026, ist das stärkste arabisch-native lokale LLM im Jahr 2026, verfügbar in Größen von 0,9B bis 32B unter Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
         bullets: [
-          'Jais 30B: bestes arabisch-natives Modell, 126 Mrd. arabische Trainings-Tokens, Apache 2.0, benötigt ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): bestes arabisch-natives Modell, veröffentlicht im Oktober 2026 von MBZUAI/Inception42, Apache 2.0, 32B benötigt ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, Consumer-GPU-kompatibel',
           'Qwen3-8B: bester multilingualer Ansatz mit starkem Arabisch, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Nationales saudi-arabisches Modell; Forschungslizenz',
@@ -60,9 +60,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor LLM local árabe en 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dabi) es el LLM local árabe nativo más potente en 2026, entrenado con 126B tokens en árabe con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dabi), lanzado en octubre de 2026, es el LLM local árabe nativo más potente en 2026, disponible en tamaños de 0.9B a 32B con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
         bullets: [
-          'Jais 30B: mejor modelo árabe nativo, 126B tokens de entrenamiento en árabe, Apache 2.0, necesita ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): mejor modelo árabe nativo, lanzado en octubre de 2026 por MBZUAI/Inception42, Apache 2.0, la versión 32B necesita ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dabi, Q4_K_M ~5 GB VRAM, compatible con GPU de consumidor',
           'Qwen3-8B: mejor opción multilingüe con fuerte soporte árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudí; licencia de investigación',
@@ -72,9 +72,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM local arabophone en 2026 ?',
-        answer: 'Jais 30B (Core42/G42, Abou Dabi) est le LLM local arabophone natif le plus puissant en 2026, entraîné sur 126 milliards de tokens arabes avec licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abou Dabi), sorti en octobre 2026, est le LLM local arabophone natif le plus puissant en 2026, disponible en tailles de 0,9B à 32B sous licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
         bullets: [
-          'Jais 30B : meilleur modèle arabophone natif, 126 milliards de tokens arabes, Apache 2.0, nécessite ~18-20 Go VRAM Q4',
+          'Jais 3 (7B/32B) : meilleur modèle arabophone natif, sorti en octobre 2026 par MBZUAI/Inception42, Apache 2.0, la version 32B nécessite ~19-20 Go VRAM Q4',
           'Falcon-H1-Arabic 7B : TII Abou Dabi, Q4_K_M ~5 Go VRAM, compatible GPU grand public',
           'Qwen3-8B : meilleure option multilingue avec fort support arabe, ~5-6 Go VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA) : modèle national saoudien ; licence recherche',
@@ -84,9 +84,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年のベストなアラビア語対応ローカルLLMは？',
-        answer: 'Jais 30B（Core42/G42、アブダビ）は2026年で最も優れたアラビア語ネイティブのローカルLLMです。1,260億のアラビア語トークンで訓練され、Apache 2.0ライセンスで利用可能。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
+        answer: 'Jais 3（MBZUAI/Inception42、アブダビ）は2026年10月にリリースされ、2026年で最も優れたアラビア語ネイティブのローカルLLMです。0.9Bから32Bまでのサイズで利用可能、Apache 2.0ライセンス。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
         bullets: [
-          'Jais 30B: アラビア語ネイティブ最強、1,260億アラビア語トークン、Apache 2.0、Q4で ~18-20 GB VRAM',
+          'Jais 3（7B/32B）: アラビア語ネイティブ最強、2026年10月にMBZUAI/Inception42がリリース、Apache 2.0、32Bは ~19-20 GB VRAM（Q4）が必要',
           'Falcon-H1-Arabic 7B: TII アブダビ、Q4_K_M ~5 GB VRAM、コンシューマーGPU対応',
           'Qwen3-8B: アラビア語サポートが強い多言語ベストオプション、Q4 ~5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）: サウジ国家モデル、リサーチライセンス',
@@ -96,9 +96,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pt: {
         question: 'Qual é o melhor LLM local árabe em 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) é o LLM local árabe nativo mais poderoso em 2026, treinado com 126B tokens em árabe com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), lançado em outubro de 2026, é o LLM local árabe nativo mais poderoso em 2026, disponível em tamanhos de 0,9B a 32B com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
         bullets: [
-          'Jais 30B: melhor modelo árabe nativo, 126B tokens de treinamento em árabe, Apache 2.0, requer ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): melhor modelo árabe nativo, lançado em outubro de 2026 pela MBZUAI/Inception42, Apache 2.0, a versão 32B precisa de ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, compatível com GPU de consumidor',
           'Qwen3-8B: melhor opção multilíngue com forte suporte ao árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudita; licença de pesquisa',
@@ -108,9 +108,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年最佳阿拉伯语本地LLM是什么？',
-        answer: 'Jais 30B（Core42/G42，阿布扎比）是2026年最强的阿拉伯语原生本地LLM，使用1260亿阿拉伯语token训练，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
+        answer: 'Jais 3（MBZUAI/Inception42，阿布扎比）于2026年10月发布，是2026年最强的阿拉伯语原生本地LLM，提供从0.9B到32B的多种尺寸，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
         bullets: [
-          'Jais 30B：最佳阿拉伯语原生模型，1260亿阿拉伯语训练token，Apache 2.0，Q4需约18-20 GB VRAM',
+          'Jais 3（7B/32B）：最佳阿拉伯语原生模型，2026年10月由MBZUAI/Inception42发布，Apache 2.0，32B版本需约19-20 GB VRAM（Q4）',
           'Falcon-H1-Arabic 7B：TII阿布扎比，Q4_K_M约5 GB VRAM，兼容消费级GPU',
           'Qwen3-8B：具有强阿拉伯语支持的最佳多语言选项，Q4约5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）：沙特国家模型；研究许可证',
@@ -120,9 +120,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ko: {
         question: '2026년 최고의 아랍어 로컬 LLM은 무엇입니까?',
-        answer: 'Jais 30B(Core42/G42, 아부다비)는 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 1,260억 개의 아랍어 토큰으로 훈련되었으며 Apache 2.0 라이선스를 제공합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
+        answer: 'Jais 3(MBZUAI/Inception42, 아부다비)는 2026년 10월 출시되어 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 0.9B부터 32B까지 다양한 크기로 제공되며 Apache 2.0 라이선스를 적용합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
         bullets: [
-          'Jais 30B: 최고의 아랍어 네이티브 모델, 아랍어 훈련 토큰 1,260억 개, Apache 2.0, Q4 ~18-20 GB VRAM 필요',
+          'Jais 3(7B/32B): 최고의 아랍어 네이티브 모델, 2026년 10월 MBZUAI/Inception42 출시, Apache 2.0, 32B 버전은 ~19-20 GB VRAM(Q4) 필요',
           'Falcon-H1-Arabic 7B: TII 아부다비, Q4_K_M ~5 GB VRAM, 소비자 GPU 호환',
           'Qwen3-8B: 강력한 아랍어 지원을 갖춘 최고의 다국어 옵션, Q4 ~5-6 GB VRAM',
           'ALLaM 34B(HUMAIN/SDAIA): 사우디 국가 모델; 연구 라이선스',
@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Jais 30B (Core42/G42, Abu Dhabi):** Best Arabic-native local LLM in 2026. Trained on 126B Arabic + 251B English tokens. Apache 2.0 license. Needs ~18-20 GB VRAM at Q4 quantization (multi-GPU or enterprise GPU for full FP16).',
+          '**Jais 3 (MBZUAI/Inception42, Abu Dhabi):** Best Arabic-native local LLM in 2026, released October 2026, replacing the earlier Jais 30B. Six models from 0.9B to a 375B MoE flagship. Apache 2.0 license. The 32B pick needs ~19-20 GB VRAM at Q4 quantization (enterprise GPU); the 7B pick needs only ~5.6 GB (GGUF Q4_K_M).',
           '**Falcon-H1-Arabic 7B (TII, Abu Dhabi):** UAE-native Arabic-focused model. Runs on consumer GPUs: Q4_K_M ~5 GB VRAM. Built on Falcon-H1 hybrid architecture, trained on native (non-translated) Arabic datasets.',
           '**Qwen3-8B (Alibaba Cloud):** Best multilingual option with strong Arabic support. 0.786 mean on HELM Arabic (235B variant); 8B fits Q4 in ~5-6 GB VRAM. 119-language support.',
           '**ALLaM 34B (HUMAIN/SDAIA, Saudi Arabia):** Saudi national model, powers HUMAIN Chat. Research/non-commercial license for public access. Available on Microsoft Azure AI (7B variant).',
@@ -157,8 +157,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Data sovereignty:** Running Arabic NLP locally keeps personal data within national borders — aligns with UAE PDPL, Saudi NDMO, and Gulf data-sovereignty goals.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Jais 30B (Apache 2.0, Abu Dhabi) and Falcon-H1-Arabic 7B (TII, Abu Dhabi) are the top Arabic-native local LLMs in 2026, with Qwen3-8B leading multilingual Arabic benchmarks for consumer hardware.' },
-          { type: 'plain-terms', text: 'The best Arabic AI you can run on your own server: Jais 30B for best Arabic quality (needs a high-end GPU), Falcon-H1-Arabic 7B for regular computers, or Qwen3-8B if you also need other languages.' },
+          { type: 'one-sentence', text: 'Jais 3 (Apache 2.0, Abu Dhabi, released October 2026) and Falcon-H1-Arabic 7B (TII, Abu Dhabi) are the top Arabic-native local LLMs in 2026, with Qwen3-8B leading multilingual Arabic benchmarks for consumer hardware.' },
+          { type: 'plain-terms', text: 'The best Arabic AI you can run on your own server: Jais 3 for best Arabic quality (the 32B pick needs a high-end GPU, the 7B pick runs on a regular gaming GPU), Falcon-H1-Arabic 7B for regular computers, or Qwen3-8B if you also need other languages.' },
         ],
       },
       whyArabicMatters: {
@@ -176,9 +176,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Best Arabic Local LLMs: Ranked for On-Premise Deployment',
         content: 'Ranked by Arabic-language capability and suitability for local/on-premise deployment.',
         image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
-        imageCaption: 'Decision tree for choosing an Arabic local LLM: Jais 30B for best Arabic quality (~19-20 GB VRAM), Falcon-H1-Arabic 7B for consumer GPUs (~5 GB), Qwen3-8B for multilingual use (~5-6 GB), or Llama 3.1-8B as a broad multilingual baseline.',
+        imageCaption: 'Decision tree for choosing an Arabic local LLM: Jais-3-32B for best Arabic quality (~19-20 GB VRAM), Jais-3-7B or Falcon-H1-Arabic 7B for consumer GPUs (~5-6 GB), Qwen3-8B for multilingual use (~5-6 GB), or Llama 3.1-8B as a broad multilingual baseline.',
         items: [
-          '**1. Jais 30B — Best Arabic Quality (Apache 2.0, On-Premise Ready).** Developer: Core42 / Inception AI (G42 group, Abu Dhabi) + MBZUAI research + Cerebras training. Training: 126B Arabic tokens + 251B English tokens + 50B code tokens. Human evaluation shows Jais 30B outperforms Jais 13B in Arabic 96% of evaluations. License: Apache 2.0 (fully open, commercial use allowed). Hugging Face: inceptionai/jais-30b-v3. VRAM: ~18-20 GB Q4 estimate (enterprise GPU or multi-GPU for FP16). Best for: highest Arabic quality in enterprise document processing, customer support, and government deployments where Arabic is primary.',
+          '**1. Jais 3 (7B / 32B) — Best Arabic Quality, Newest Generation (Apache 2.0, On-Premise Ready).** Developer: Institute of Foundation Models (IFM) at MBZUAI + Inception42, with Cerebras Systems (Abu Dhabi). Released October 16, 2026, replacing the earlier Jais 30B as the flagship Arabic model line. Lineup: six models from 0.9B to a 375B (23B-active) MoE flagship; Jais-3-7B and Jais-3-32B are the on-premise-sized picks. License: Apache 2.0 across all six language models. Hugging Face: inception42/Jais-3-7B, inception42/Jais-3-32B. Context: up to 512K tokens. MBZUAI and Inception42 report that Jais-3-7B and Jais-3-32B post the highest average Arabic scores among open models of comparable size on their own benchmark suite (Arabic MMLU, AraGen v3, Belebele, QADI dialect ID) — developer-reported, not independently verified. VRAM: Jais-3-7B GGUF Q4_K_M ~5.6 GB (confirmed from released GGUF files); Jais-3-32B ~19-20 GB Q4 estimate. Best for: highest Arabic quality in enterprise document processing, customer support, and government deployments where Arabic is primary.',
           '**2. Falcon-H1-Arabic 7B — Best for Consumer Hardware (TII Abu Dhabi).** Developer: Technology Innovation Institute (TII), Abu Dhabi (under the Advanced Technology Research Council). Base: Falcon-H1 hybrid architecture (released January 5, 2026). Training: native (non-translated) Arabic datasets, MSA and regional dialects. License: Falcon LLM License — permissive, commercial use allowed. VRAM: Q4_K_M ~5 GB — runs on RTX 4060 8GB, RTX 3060 12GB, and equivalent. Benchmark: scores 71.47% on the Open Arabic LLM Leaderboard (OALL) — the top score among ~10B-class Arabic models, ahead of ALLaM-7B, Fanar-9B, and Qwen3-8B, and superseding the original Falcon 3-based Falcon Arabic checkpoint. Best for: consumer and prosumer hardware deployments; a UAE-native model from an Abu Dhabi institution.',
           '**3. Qwen3-8B — Best Multilingual Option with Strong Arabic (Alibaba Cloud).** Developer: Alibaba Cloud. Languages: 119 languages and dialects. Benchmark: Qwen3-235B-A22B scored 0.786 mean on HELM Arabic; the 8B variant is recommended for local hardware. License: Apache 2.0. VRAM: Q4_K_M ~5-6 GB. Best for: teams needing Arabic + English + other languages in one model; widely supported in Ollama (ollama pull qwen3:8b).',
           '**4. ALLaM 34B / 7B — Saudi National Model (HUMAIN/SDAIA).** Developer: SDAIA (Saudi Data and AI Authority) / HUMAIN (Saudi national AI company). Versions: 7B (Hugging Face, research access) and 34B (powers HUMAIN Chat). Azure: ALLaM-2-7B-Instruct available on Microsoft Azure AI since September 2024. License: research/non-commercial for public access; enterprise licensing via HUMAIN. Best for: Saudi government and enterprise deployments; a sovereign model aligned with Vision 2030.',
@@ -192,12 +192,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'VRAM Requirements for Arabic Local LLMs',
         content: 'Required VRAM by model and quantization. Rows marked * are parameter-scaling estimates (no official benchmark found). Always verify with your specific hardware before deployment.',
         image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
-        imageCaption: 'VRAM requirements for Arabic local LLMs at Q4_K_M quantization: Gemma 3 4B needs ~3 GB, Falcon-H1-Arabic 7B and ALLaM 7B need ~5 GB, Qwen3-8B needs 5-6 GB, Jais 13B needs 8-10 GB, and Jais 30B needs 19-20 GB VRAM.',
+        imageCaption: 'VRAM requirements for Arabic local LLMs at Q4_K_M quantization: Gemma 3 4B needs ~3 GB, Falcon-H1-Arabic 7B, Jais-3-7B, and ALLaM 7B need ~5-6 GB, Qwen3-8B needs 5-6 GB, and Jais-3-32B needs 19-20 GB VRAM.',
         columns: ['Model', 'Params', 'Q4_K_M VRAM', 'FP16 VRAM', 'Min Hardware'],
         rows: [
           { 'Model': 'Falcon-H1-Arabic', 'Params': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', 'Min Hardware': 'RTX 4060 8 GB / RTX 3060 12 GB' },
-          { 'Model': 'Jais 13B', 'Params': '13B', 'Q4_K_M VRAM': '~8-10 GB*', 'FP16 VRAM': '~26 GB*', 'Min Hardware': 'RTX 3090 24 GB (Q4)' },
-          { 'Model': 'Jais 30B', 'Params': '30B', 'Q4_K_M VRAM': '~18-20 GB*', 'FP16 VRAM': '~60 GB*', 'Min Hardware': 'RTX 4090 24 GB (Q4 tight), A100 40 GB (FP16)' },
+          { 'Model': 'Jais-3-7B', 'Params': '7B', 'Q4_K_M VRAM': '~5.6 GB', 'FP16 VRAM': '~18 GB', 'Min Hardware': 'RTX 4060 8 GB / RTX 3060 12 GB' },
+          { 'Model': 'Jais-3-32B', 'Params': '32B', 'Q4_K_M VRAM': '~19-20 GB*', 'FP16 VRAM': '~64 GB*', 'Min Hardware': 'RTX 4090 24 GB (Q4 tight), A100 40 GB (FP16)' },
           { 'Model': 'ALLaM', 'Params': '7B', 'Q4_K_M VRAM': '~5 GB*', 'FP16 VRAM': '~16 GB*', 'Min Hardware': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'Model': 'Fanar-2', 'Params': '27B', 'Q4_K_M VRAM': '~16-17 GB*', 'FP16 VRAM': '~54 GB*', 'Min Hardware': 'RTX 4090 24 GB (Q4)' },
           { 'Model': 'Qwen3', 'Params': '8B', 'Q4_K_M VRAM': '~5-6 GB', 'FP16 VRAM': '~16 GB', 'Min Hardware': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Install Ollama: curl -fsSL https://ollama.com/install.sh | sh (Linux) or download from ollama.com (Windows/Mac). Supports Falcon-H1-Arabic natively.',
           'Pull and run Falcon-H1-Arabic 7B: ollama run hf.co/tiiuae/Falcon-H1-Arabic-7B-Instruct-GGUF — ~5 GB download, auto-runs after pulling. Test Arabic with a prompt like "اكتب قصيدة عن أبوظبي" (Write a poem about Abu Dhabi).',
           'Pull Qwen3-8B for multilingual: ollama pull qwen3:8b — ~5 GB download. Strong Arabic across MSA and dialect contexts.',
-          'For Jais 30B: download from Hugging Face (inceptionai/jais-30b-v3), convert to GGUF with llama.cpp convert tools, quantize to Q4_K_M, then load with Ollama (ollama create jais-30b -f Modelfile) or the llama.cpp server.',
+          'For Jais-3-7B: GGUF builds are published directly by the developers — ollama run hf.co/inception42/Jais-3-7B-GGUF (Q4_K_M ~5.6 GB). For Jais-3-32B: download from Hugging Face (inception42/Jais-3-32B), convert to GGUF with llama.cpp convert tools if a pre-built GGUF is not yet available, quantize to Q4_K_M, then load with Ollama or the llama.cpp server.',
           'Production inference: use vLLM for high-throughput Arabic API serving. vLLM supports Falcon-H1-Arabic and Qwen3 natively. Expose via an OpenAI-compatible endpoint at localhost:8000.',
           'Arabic prompt tip: always specify the language — "أجب باللغة العربية الفصحى" (Answer in Modern Standard Arabic). For dialect, include example sentences from the target dialect in the system prompt.',
         ],
@@ -237,15 +237,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Can I run an Arabic LLM on a regular gaming laptop?',
-            a: 'Yes, for 7B-class models at Q4 quantization. Falcon-H1-Arabic 7B and Qwen3-8B require ~5-6 GB VRAM — most gaming laptops with an RTX 4060 (8 GB) or RTX 3060 (12 GB) can run them. Jais 30B requires a high-end desktop GPU (RTX 4090 24 GB) or an enterprise GPU at Q4 quantization.',
+            a: 'Yes, for 7B-class models at Q4 quantization. Falcon-H1-Arabic 7B, Jais-3-7B, and Qwen3-8B require ~5-6 GB VRAM — most gaming laptops with an RTX 4060 (8 GB) or RTX 3060 (12 GB) can run them. Jais-3-32B requires a high-end desktop GPU (RTX 4090 24 GB) or an enterprise GPU at Q4 quantization.',
           },
           {
             q: 'What is the difference between Jais and Falcon-H1-Arabic?',
-            a: 'Both are Abu Dhabi-originated Arabic-capable models. Jais (Core42/G42) is larger (up to 30B) and trained specifically as Arabic-English bilingual with 126B Arabic tokens — optimised for Arabic quality at enterprise scale. Falcon-H1-Arabic is a 7B model from TII (a different Abu Dhabi institution) built on the broader Falcon-H1 hybrid architecture — consumer-GPU friendly and part of the UAE AI ecosystem. For best Arabic quality: Jais 30B. For consumer hardware: Falcon-H1-Arabic 7B.',
+            a: 'Both are Abu Dhabi-originated Arabic-capable models. Jais 3 (MBZUAI/Inception42) is the newer, larger family (up to a 375B MoE flagship, with 7B and 32B dense picks sized for on-premise) and is trained specifically for Arabic at enterprise scale. Falcon-H1-Arabic is a 7B model from TII (a different Abu Dhabi institution) built on the broader Falcon-H1 hybrid architecture — consumer-GPU friendly and part of the UAE AI ecosystem. For best Arabic quality: Jais-3-32B. For consumer hardware: Falcon-H1-Arabic 7B or Jais-3-7B.',
           },
           {
             q: 'Does Qwen3 support Arabic as well as dedicated Arabic models?',
-            a: 'Qwen3 has very strong general Arabic support (119 languages, leading HELM Arabic score). For purely Arabic enterprise deployments requiring the absolute best Arabic quality, Jais 30B is generally preferred. For mixed multilingual workloads where Arabic is one of several languages needed, Qwen3-8B is often the better choice due to its breadth and ease of deployment.',
+            a: 'Qwen3 has very strong general Arabic support (119 languages, leading HELM Arabic score). For purely Arabic enterprise deployments requiring the absolute best Arabic quality, Jais-3-32B is generally preferred. For mixed multilingual workloads where Arabic is one of several languages needed, Qwen3-8B is often the better choice due to its breadth and ease of deployment.',
           },
           {
             q: 'What is ALLaM and can I use it commercially?',
@@ -261,7 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which Arabic LLM is best for UAE government deployments?',
-            a: 'Falcon-H1-Arabic 7B (from TII, Abu Dhabi) and Jais 30B (from Core42/G42, Abu Dhabi) are both UAE-native models with provenance from UAE government-affiliated research institutions. For sovereignty and auditability, these are the most aligned choices. Both can be deployed on-premise without any data leaving UAE infrastructure. See our [UAE PDPL data sovereignty guide](/ko/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
+            a: 'Falcon-H1-Arabic 7B (from TII, Abu Dhabi) and Jais 3 (from MBZUAI/Inception42, Abu Dhabi) are both UAE-native models with provenance from UAE government-affiliated research institutions. For sovereignty and auditability, these are the most aligned choices. Both can be deployed on-premise without any data leaving UAE infrastructure. See our [UAE PDPL data sovereignty guide](/ko/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
           },
           {
             q: 'How do I handle Gulf Arabic dialect vs. MSA in prompts?',
@@ -269,11 +269,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I fine-tune Jais or Falcon-H1-Arabic on my own Arabic data?',
-            a: 'Yes — both use open licenses (Apache 2.0 for Jais, Falcon LLM License for Falcon-H1-Arabic) that permit fine-tuning. Use LoRA or QLoRA fine-tuning with tools like Unsloth or the PEFT library. Fine-tuning on domain-specific Arabic data (legal, medical, financial) significantly improves quality for specialized use cases. Keep fine-tuning data on-premise for PDPL compliance.',
+            a: 'Yes — both use open licenses (Apache 2.0 for Jais, Falcon LLM License for Falcon-H1-Arabic) that permit fine-tuning. Use LoRA or QLoRA fine-tuning with tools like Unsloth or the PEFT library. Fine-tuning on domain-specific Arabic data (legal, medical, financial) significantly improves quality for specialized use cases. Keep fine-tuning data on-premise, which reduces PDPL cross-border transfer risk — full compliance also depends on your organization\'s lawful basis and safeguards.',
           },
           {
-            q: 'What hardware do I need to run Jais 30B locally?',
-            a: 'At Q4_K_M quantization, Jais 30B requires an estimated 18-20 GB VRAM (estimate — no official benchmark). An NVIDIA RTX 4090 (24 GB) can run it at Q4 with moderate context; an A100 40 GB handles it comfortably at FP16. For production throughput, two RTX 4090s in multi-GPU mode or a single A100/H100 is recommended. See our [VRAM calculator guide](/ko/local-llms/vram-calculator-local-llm).',
+            q: 'What hardware do I need to run Jais 3 locally?',
+            a: 'Jais-3-7B needs only ~5.6 GB VRAM at GGUF Q4_K_M — any RTX 4060 (8 GB) or better runs it. Jais-3-32B needs an estimated 19-20 GB VRAM at Q4_K_M (parameter-scaling estimate — no official benchmark yet). An NVIDIA RTX 4090 (24 GB) can run the 32B at Q4 with moderate context; an A100 40 GB handles it comfortably at FP16. For production throughput, two RTX 4090s in multi-GPU mode or a single A100/H100 is recommended. See our [VRAM calculator guide](/ko/local-llms/vram-calculator-local-llm).',
           },
         ],
       },
@@ -295,8 +295,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Technology Innovation Institute (TII) — Falcon-H1-Arabic announcement, January 5, 2026 — tii.ae',
           'Falcon-H1-Arabic Hugging Face model page — huggingface.co/blog/tiiuae/falcon-h1-arabic',
-          'Core42 / Cerebras — Jais 30B press release — cerebras.ai and g42.ai',
-          'Jais 30B on Hugging Face — huggingface.co/inceptionai/jais-30b-v3',
+          'MBZUAI Institute of Foundation Models / Inception42 — Jais 3 launch announcement, October 16, 2026 — mbzuai.ac.ae and wam.ae',
+          'Jais 3 on Hugging Face — huggingface.co/inception42/Jais-3-7B and huggingface.co/inception42/Jais-3-32B',
+          'Core42 / Cerebras — Jais 30B (previous generation) press release — cerebras.ai and g42.ai',
           'SDAIA / HUMAIN — ALLaM 34B announcement, May 2025 — humain.ai',
           'ALLaM-2-7B on Microsoft Azure AI — techcommunity.microsoft.com (September 2024)',
           'QCRI / HBKU — "Fanar 2.0: Arabic Generative AI Stack" technical report and Fanar-2-27B-Instruct model card — arxiv.org/abs/2603.16397',
@@ -311,16 +312,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Best Arabic Local LLMs: Jais, Falcon & Running Arabic AI On-Premise (2026)',
-      'description': 'Jais 30B and Falcon-H1-Arabic 7B are the top Arabic local LLMs in 2026. VRAM table, setup guide, and quality evaluation benchmarks for on-premise Arabic AI deployment.',
+      'description': 'Jais 3 and Falcon-H1-Arabic 7B are the top Arabic local LLMs in 2026. VRAM table, setup guide, and quality evaluation benchmarks for on-premise Arabic AI deployment.',
       'url': 'https://www.promptquorum.com/local-llms/best-arabic-local-llms-2026',
       'datePublished': '2026-06-14',
-      'dateModified': '2026-08-28',
+      'dateModified': '2026-11-19',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
       'inLanguage': 'en',
       'about': [
-        { '@type': 'SoftwareApplication', 'name': 'Jais 30B' },
+        { '@type': 'SoftwareApplication', 'name': 'Jais 3' },
         { '@type': 'SoftwareApplication', 'name': 'Falcon-H1-Arabic' },
         { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
         { '@type': 'Thing', 'name': 'Arabic NLP' },
@@ -333,16 +334,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'en',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'Can I run an Arabic LLM on a regular gaming laptop?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, for 7B-class models at Q4 quantization. Falcon-H1-Arabic 7B and Qwen3-8B require ~5-6 GB VRAM — most gaming laptops with an RTX 4060 (8 GB) or RTX 3060 (12 GB) can run them. Jais 30B requires a high-end desktop GPU (RTX 4090 24 GB) or an enterprise GPU at Q4 quantization.' } },
-        { '@type': 'Question', 'name': 'What is the difference between Jais and Falcon-H1-Arabic?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Both are Abu Dhabi-originated Arabic-capable models. Jais (Core42/G42) is larger (up to 30B) and trained specifically as Arabic-English bilingual with 126B Arabic tokens. Falcon-H1-Arabic is a 7B model from TII built on the Falcon-H1 hybrid architecture — consumer-GPU friendly. For best Arabic quality: Jais 30B. For consumer hardware: Falcon-H1-Arabic 7B.' } },
-        { '@type': 'Question', 'name': 'Does Qwen3 support Arabic as well as dedicated Arabic models?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 has very strong general Arabic support (119 languages, leading HELM Arabic score). For purely Arabic enterprise deployments requiring the absolute best Arabic quality, Jais 30B is generally preferred. For mixed multilingual workloads, Qwen3-8B is often the better choice due to its breadth and ease of deployment.' } },
+        { '@type': 'Question', 'name': 'Can I run an Arabic LLM on a regular gaming laptop?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, for 7B-class models at Q4 quantization. Falcon-H1-Arabic 7B, Jais-3-7B, and Qwen3-8B require ~5-6 GB VRAM — most gaming laptops with an RTX 4060 (8 GB) or RTX 3060 (12 GB) can run them. Jais-3-32B requires a high-end desktop GPU (RTX 4090 24 GB) or an enterprise GPU at Q4 quantization.' } },
+        { '@type': 'Question', 'name': 'What is the difference between Jais and Falcon-H1-Arabic?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Both are Abu Dhabi-originated Arabic-capable models. Jais 3 (MBZUAI/Inception42) is the newer, larger family (up to a 375B MoE flagship, with 7B and 32B dense picks). Falcon-H1-Arabic is a 7B model from TII built on the Falcon-H1 hybrid architecture — consumer-GPU friendly. For best Arabic quality: Jais-3-32B. For consumer hardware: Falcon-H1-Arabic 7B or Jais-3-7B.' } },
+        { '@type': 'Question', 'name': 'Does Qwen3 support Arabic as well as dedicated Arabic models?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 has very strong general Arabic support (119 languages, leading HELM Arabic score). For purely Arabic enterprise deployments requiring the absolute best Arabic quality, Jais-3-32B is generally preferred. For mixed multilingual workloads, Qwen3-8B is often the better choice due to its breadth and ease of deployment.' } },
         { '@type': 'Question', 'name': 'What is ALLaM and can I use it commercially?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ALLaM is a Saudi national Arabic-centric LLM family from SDAIA (now under the HUMAIN brand). The public releases (7B on Hugging Face, 7B on Azure AI) carry research/non-commercial licenses. For commercial use, contact HUMAIN/SDAIA directly. ALLaM 34B powers the national HUMAIN Chat app but has restricted public access.' } },
         { '@type': 'Question', 'name': 'How does Arabic tokenization affect model quality?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Arabic script requires proper tokenization to avoid character-level errors. Models trained natively on Arabic (Jais, Falcon-H1-Arabic) use tokenizers optimized for Arabic morphology. General multilingual models may tokenize Arabic inefficiently, leading to quality degradation on complex Arabic text. Test with your actual input data before production.' } },
         { '@type': 'Question', 'name': 'Can Arabic local LLMs handle right-to-left (RTL) documents?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The models generate Arabic text in the correct right-to-left direction — models produce proper RTL Arabic in Unicode. Your application interface must handle RTL rendering (HTML dir="rtl", CSS direction:rtl). llama.cpp, Ollama, and vLLM return Unicode Arabic text correctly; the UI layer handles direction.' } },
-        { '@type': 'Question', 'name': 'Which Arabic LLM is best for UAE government deployments?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (from TII, Abu Dhabi) and Jais 30B (from Core42/G42, Abu Dhabi) are both UAE-native models with provenance from UAE government-affiliated research institutions. For sovereignty and auditability, these are the most aligned choices. Both can be deployed on-premise without any data leaving UAE infrastructure.' } },
+        { '@type': 'Question', 'name': 'Which Arabic LLM is best for UAE government deployments?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (from TII, Abu Dhabi) and Jais 3 (from MBZUAI/Inception42, Abu Dhabi) are both UAE-native models with provenance from UAE government-affiliated research institutions. For sovereignty and auditability, these are the most aligned choices. Both can be deployed on-premise without any data leaving UAE infrastructure.' } },
         { '@type': 'Question', 'name': 'How do I handle Gulf Arabic dialect vs. MSA in prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Default system prompt: answer in Modern Standard Arabic. For Gulf Arabic (Emirati, Saudi, Kuwaiti), add example dialect phrases in your system prompt or fine-tune on domain data. All listed models handle MSA well; dialect quality varies. Test with 5-10 example dialect queries before assuming production quality.' } },
-        { '@type': 'Question', 'name': 'Can I fine-tune Jais or Falcon-H1-Arabic on my own Arabic data?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — both use open licenses (Apache 2.0 for Jais, Falcon LLM License for Falcon-H1-Arabic) that permit fine-tuning. Use LoRA or QLoRA with tools like Unsloth or the PEFT library. Fine-tuning on domain-specific Arabic data significantly improves quality. Keep fine-tuning data on-premise for PDPL compliance.' } },
-        { '@type': 'Question', 'name': 'What hardware do I need to run Jais 30B locally?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'At Q4_K_M quantization, Jais 30B requires an estimated 18-20 GB VRAM (no official benchmark). An RTX 4090 (24 GB) can run it at Q4 with moderate context; an A100 40 GB handles it comfortably at FP16. For production throughput, two RTX 4090s in multi-GPU mode or a single A100/H100 is recommended.' } },
+        { '@type': 'Question', 'name': 'Can I fine-tune Jais or Falcon-H1-Arabic on my own Arabic data?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — both use open licenses (Apache 2.0 for Jais, Falcon LLM License for Falcon-H1-Arabic) that permit fine-tuning. Use LoRA or QLoRA with tools like Unsloth or the PEFT library. Fine-tuning on domain-specific Arabic data significantly improves quality. Keep fine-tuning data on-premise, which reduces PDPL cross-border transfer risk — full compliance also depends on your organization\'s lawful basis and safeguards.' } },
+        { '@type': 'Question', 'name': 'What hardware do I need to run Jais 3 locally?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Jais-3-7B needs only ~5.6 GB VRAM at GGUF Q4_K_M. Jais-3-32B needs an estimated 19-20 GB VRAM at Q4_K_M (parameter-scaling estimate, no official benchmark yet). An RTX 4090 (24 GB) can run the 32B at Q4 with moderate context; an A100 40 GB handles it comfortably at FP16. For production throughput, two RTX 4090s in multi-GPU mode or a single A100/H100 is recommended.' } },
       ],
     },
     itemListSchema: {
@@ -351,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'Best Arabic Local LLMs 2026',
       'numberOfItems': 7,
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 30B', 'description': 'Best Arabic-native local LLM. 126B Arabic training tokens, Apache 2.0, Core42/G42 Abu Dhabi.' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 3', 'description': 'Best Arabic-native local LLM, newest generation (October 2026). 0.9B-375B lineup, Apache 2.0, MBZUAI/Inception42 Abu Dhabi.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Falcon-H1-Arabic 7B', 'description': 'Best for consumer hardware. TII Abu Dhabi. Q4_K_M ~5 GB VRAM. Falcon LLM License.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3-8B', 'description': 'Best multilingual option with strong Arabic. HELM Arabic top performer. Apache 2.0.' },
         { '@type': 'ListItem', 'position': 4, 'name': 'ALLaM 34B', 'description': 'Saudi national Arabic model (HUMAIN/SDAIA). Powers HUMAIN Chat. Research license.' },
@@ -365,26 +366,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'أفضل نماذج ⁨LLM⁩ العربية المحلية: ⁨Jais⁩ و⁨Falcon⁩ وتشغيل الذكاء الاصطناعي العربي داخل المؤسسة (⁨2026⁩)',
     heroImage: '/images/best-arabic-local-llms-2026-overview-hero-ar.webp',
     seoTitle: 'أفضل نماذج الذكاء الاصطناعي العربية محليًا ⁨2026⁩',
-    metaDescription: 'نماذج الذكاء الاصطناعي العربية المحلية: ⁨Jais 30B⁩ و⁨Falcon-H1-Arabic 7B⁩ و⁨Qwen3-8B⁩ الأفضل في ⁨2026⁩. جدول ⁨VRAM⁩ ودليل الإعداد داخل المؤسسة والتقييم.',
-    intro: 'يُعد Jais 30B (Core42/G42، أبوظبي، Apache 2.0) وFalcon-H1-Arabic 7B (TII، أبوظبي) أفضل نماذج LLM المحلية العربية الأصيلة في 2026. للأعباء متعددة اللغات مع دعم عربي قوي، يتصدر Qwen3-8B معايير HELM Arabic بين النماذج المصممة لأجهزة المستهلكين. تعمل النماذج الثلاثة جميعها داخل المؤسسة عبر Ollama أو vLLM، مع إبقاء البيانات باللغة العربية داخل الحدود الوطنية. يصنّف هذا الدليل النماذج، ويقدّم جدول VRAM، ويوضّح كيفية نشر الذكاء الاصطناعي العربي وتقييمه محليًا.',
+    metaDescription: 'نماذج الذكاء الاصطناعي العربية المحلية: ⁨Jais 3⁩ و⁨Falcon-H1-Arabic 7B⁩ و⁨Qwen3-8B⁩ الأفضل في ⁨2026⁩. جدول ⁨VRAM⁩ ودليل الإعداد داخل المؤسسة والتقييم.',
+    intro: 'يُعد Jais 3 (MBZUAI/Inception42، أبوظبي، Apache 2.0)، الذي صدر في أكتوبر 2026، وFalcon-H1-Arabic 7B (TII، أبوظبي) أفضل نماذج LLM المحلية العربية الأصيلة في 2026. للأعباء متعددة اللغات مع دعم عربي قوي، يتصدر Qwen3-8B معايير HELM Arabic بين النماذج المصممة لأجهزة المستهلكين. تعمل النماذج الثلاثة جميعها داخل المؤسسة عبر Ollama أو vLLM، مع إبقاء البيانات باللغة العربية داخل الحدود الوطنية. يصنّف هذا الدليل النماذج، ويقدّم جدول VRAM، ويوضّح كيفية نشر الذكاء الاصطناعي العربي وتقييمه محليًا.',
     designSkin: 'hub',
     theme: 'Best Models',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-14',
+    next_refresh_due: '2027-05-19',
     publishDate: '2026-06-14',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'المؤسسات الناطقة بالعربية، ومطوّرو الخليج، والفرق التي تنشر معالجة اللغة الطبيعية العربية محليًا',
     readTime: '13 دقيقة للقراءة',
     primaryTerm: 'Arabic local LLM',
     affiliateDisclosure: false,
-    leadAnswerBlock: '**يُعد Jais 30B (Core42/G42، أبوظبي، Apache 2.0) وFalcon-H1-Arabic 7B (TII أبوظبي) أفضل نماذج LLM المحلية العربية الأصيلة في 2026. للأعباء متعددة اللغات مع دعم عربي قوي، يتصدر Qwen3-8B معايير HELM Arabic بين النماذج المصممة لأجهزة المستهلكين. تعمل النماذج الثلاثة جميعها داخل المؤسسة عبر Ollama أو vLLM، مع إبقاء البيانات الشخصية باللغة العربية داخل الحدود الوطنية.**',
+    leadAnswerBlock: '**يُعد Jais 3 (MBZUAI/Inception42، أبوظبي، Apache 2.0)، الذي صدر في أكتوبر 2026، وFalcon-H1-Arabic 7B (TII أبوظبي) أفضل نماذج LLM المحلية العربية الأصيلة في 2026. للأعباء متعددة اللغات مع دعم عربي قوي، يتصدر Qwen3-8B معايير HELM Arabic بين النماذج المصممة لأجهزة المستهلكين. تعمل النماذج الثلاثة جميعها داخل المؤسسة عبر Ollama أو vLLM، مع إبقاء البيانات الشخصية باللغة العربية داخل الحدود الوطنية.**',
     quickAnswerTop: {
       en: {
         question: 'What is the best Arabic local LLM in 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) is the strongest Arabic-native local LLM in 2026, trained on 126B Arabic tokens with Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), released October 2026, is the strongest Arabic-native local LLM in 2026, available in sizes from 0.9B to 32B under Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
         bullets: [
-          'Jais 30B: best Arabic-native model, 126B Arabic training tokens, Apache 2.0, needs ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): best Arabic-native model, released October 2026 by MBZUAI/Inception42, Apache 2.0, 32B needs ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, consumer GPU friendly',
           'Qwen3-8B: best multilingual option with strong Arabic, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Saudi national model, powers HUMAIN Chat; research license',
@@ -394,9 +395,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ar: {
         question: 'ما أفضل نموذج ذكاء اصطناعي عربي محلي في 2026؟',
-        answer: 'Jais 30B (Core42/G42، أبوظبي) هو أقوى نموذج محلي عربي أصيل في 2026، مُدرَّب على 126 مليار رمز عربي بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42، أبوظبي)، الذي صدر في أكتوبر 2026، هو أقوى نموذج محلي عربي أصيل في 2026، ويتوفر بأحجام من 0.9B إلى 32B بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
         bullets: [
-          'Jais 30B: أفضل نموذج عربي أصيل، 126 مليار رمز تدريب عربي، Apache 2.0، يحتاج ~18-20 GB VRAM عند Q4',
+          'Jais 3 (7B/32B): أفضل نموذج عربي أصيل، صدر في أكتوبر 2026 من MBZUAI/Inception42، Apache 2.0، يحتاج إصدار 32B إلى ~19-20 GB VRAM عند Q4',
           'Falcon-H1-Arabic 7B: مؤسسة الابتكار التقني أبوظبي، Q4_K_M ~5 GB VRAM، مناسب لـ GPU المستهلكين',
           'Qwen3-8B: أفضل خيار متعدد اللغات مع دعم عربي قوي، ~5-6 GB VRAM عند Q4',
           'ALLaM 34B (HUMAIN/SDAIA): النموذج الوطني السعودي، يُشغِّل تطبيق HUMAIN Chat؛ ترخيص بحثي',
@@ -406,9 +407,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Was ist das beste arabische lokale LLM im Jahr 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) ist das stärkste arabisch-native lokale LLM im Jahr 2026, trainiert auf 126 Milliarden arabischen Tokens mit Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), veröffentlicht im Oktober 2026, ist das stärkste arabisch-native lokale LLM im Jahr 2026, verfügbar in Größen von 0,9B bis 32B unter Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
         bullets: [
-          'Jais 30B: bestes arabisch-natives Modell, 126 Mrd. arabische Trainings-Tokens, Apache 2.0, benötigt ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): bestes arabisch-natives Modell, veröffentlicht im Oktober 2026 von MBZUAI/Inception42, Apache 2.0, 32B benötigt ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, Consumer-GPU-kompatibel',
           'Qwen3-8B: bester multilingualer Ansatz mit starkem Arabisch, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Nationales saudi-arabisches Modell; Forschungslizenz',
@@ -418,9 +419,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor LLM local árabe en 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dabi) es el LLM local árabe nativo más potente en 2026, entrenado con 126B tokens en árabe con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dabi), lanzado en octubre de 2026, es el LLM local árabe nativo más potente en 2026, disponible en tamaños de 0.9B a 32B con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
         bullets: [
-          'Jais 30B: mejor modelo árabe nativo, 126B tokens de entrenamiento en árabe, Apache 2.0, necesita ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): mejor modelo árabe nativo, lanzado en octubre de 2026 por MBZUAI/Inception42, Apache 2.0, la versión 32B necesita ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dabi, Q4_K_M ~5 GB VRAM, compatible con GPU de consumidor',
           'Qwen3-8B: mejor opción multilingüe con fuerte soporte árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudí; licencia de investigación',
@@ -430,9 +431,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM local arabophone en 2026 ?',
-        answer: 'Jais 30B (Core42/G42, Abou Dabi) est le LLM local arabophone natif le plus puissant en 2026, entraîné sur 126 milliards de tokens arabes avec licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abou Dabi), sorti en octobre 2026, est le LLM local arabophone natif le plus puissant en 2026, disponible en tailles de 0,9B à 32B sous licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
         bullets: [
-          'Jais 30B : meilleur modèle arabophone natif, 126 milliards de tokens arabes, Apache 2.0, nécessite ~18-20 Go VRAM Q4',
+          'Jais 3 (7B/32B) : meilleur modèle arabophone natif, sorti en octobre 2026 par MBZUAI/Inception42, Apache 2.0, la version 32B nécessite ~19-20 Go VRAM Q4',
           'Falcon-H1-Arabic 7B : TII Abou Dabi, Q4_K_M ~5 Go VRAM, compatible GPU grand public',
           'Qwen3-8B : meilleure option multilingue avec fort support arabe, ~5-6 Go VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA) : modèle national saoudien ; licence recherche',
@@ -442,9 +443,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年のベストなアラビア語対応ローカルLLMは？',
-        answer: 'Jais 30B（Core42/G42、アブダビ）は2026年で最も優れたアラビア語ネイティブのローカルLLMです。1,260億のアラビア語トークンで訓練され、Apache 2.0ライセンスで利用可能。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
+        answer: 'Jais 3（MBZUAI/Inception42、アブダビ）は2026年10月にリリースされ、2026年で最も優れたアラビア語ネイティブのローカルLLMです。0.9Bから32Bまでのサイズで利用可能、Apache 2.0ライセンス。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
         bullets: [
-          'Jais 30B: アラビア語ネイティブ最強、1,260億アラビア語トークン、Apache 2.0、Q4で ~18-20 GB VRAM',
+          'Jais 3（7B/32B）: アラビア語ネイティブ最強、2026年10月にMBZUAI/Inception42がリリース、Apache 2.0、32Bは ~19-20 GB VRAM（Q4）が必要',
           'Falcon-H1-Arabic 7B: TII アブダビ、Q4_K_M ~5 GB VRAM、コンシューマーGPU対応',
           'Qwen3-8B: アラビア語サポートが強い多言語ベストオプション、Q4 ~5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）: サウジ国家モデル、リサーチライセンス',
@@ -454,9 +455,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pt: {
         question: 'Qual é o melhor LLM local árabe em 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) é o LLM local árabe nativo mais poderoso em 2026, treinado com 126B tokens em árabe com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), lançado em outubro de 2026, é o LLM local árabe nativo mais poderoso em 2026, disponível em tamanhos de 0,9B a 32B com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
         bullets: [
-          'Jais 30B: melhor modelo árabe nativo, 126B tokens de treinamento em árabe, Apache 2.0, requer ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): melhor modelo árabe nativo, lançado em outubro de 2026 pela MBZUAI/Inception42, Apache 2.0, a versão 32B precisa de ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, compatível com GPU de consumidor',
           'Qwen3-8B: melhor opção multilíngue com forte suporte ao árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudita; licença de pesquisa',
@@ -466,9 +467,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年最佳阿拉伯语本地LLM是什么？',
-        answer: 'Jais 30B（Core42/G42，阿布扎比）是2026年最强的阿拉伯语原生本地LLM，使用1260亿阿拉伯语token训练，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
+        answer: 'Jais 3（MBZUAI/Inception42，阿布扎比）于2026年10月发布，是2026年最强的阿拉伯语原生本地LLM，提供从0.9B到32B的多种尺寸，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
         bullets: [
-          'Jais 30B：最佳阿拉伯语原生模型，1260亿阿拉伯语训练token，Apache 2.0，Q4需约18-20 GB VRAM',
+          'Jais 3（7B/32B）：最佳阿拉伯语原生模型，2026年10月由MBZUAI/Inception42发布，Apache 2.0，32B版本需约19-20 GB VRAM（Q4）',
           'Falcon-H1-Arabic 7B：TII阿布扎比，Q4_K_M约5 GB VRAM，兼容消费级GPU',
           'Qwen3-8B：具有强阿拉伯语支持的最佳多语言选项，Q4约5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）：沙特国家模型；研究许可证',
@@ -478,9 +479,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ko: {
         question: '2026년 최고의 아랍어 로컬 LLM은 무엇입니까?',
-        answer: 'Jais 30B(Core42/G42, 아부다비)는 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 1,260억 개의 아랍어 토큰으로 훈련되었으며 Apache 2.0 라이선스를 제공합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
+        answer: 'Jais 3(MBZUAI/Inception42, 아부다비)는 2026년 10월 출시되어 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 0.9B부터 32B까지 다양한 크기로 제공되며 Apache 2.0 라이선스를 적용합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
         bullets: [
-          'Jais 30B: 최고의 아랍어 네이티브 모델, 아랍어 훈련 토큰 1,260억 개, Apache 2.0, Q4 ~18-20 GB VRAM 필요',
+          'Jais 3(7B/32B): 최고의 아랍어 네이티브 모델, 2026년 10월 MBZUAI/Inception42 출시, Apache 2.0, 32B 버전은 ~19-20 GB VRAM(Q4) 필요',
           'Falcon-H1-Arabic 7B: TII 아부다비, Q4_K_M ~5 GB VRAM, 소비자 GPU 호환',
           'Qwen3-8B: 강력한 아랍어 지원을 갖춘 최고의 다국어 옵션, Q4 ~5-6 GB VRAM',
           'ALLaM 34B(HUMAIN/SDAIA): 사우디 국가 모델; 연구 라이선스',
@@ -505,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Jais 30B (Core42/G42، أبوظبي):** أفضل نموذج LLM محلي عربي أصيل في 2026. مُدرَّب على 126B رمز عربي + 251B رمز إنجليزي. ترخيص Apache 2.0. يحتاج ~18-20 GB VRAM عند تكميم Q4 (GPU متعدد أو GPU مؤسسي للتشغيل الكامل بدقة FP16).',
+          '**Jais 3 (MBZUAI/Inception42، أبوظبي):** أفضل نموذج LLM محلي عربي أصيل في 2026، صدر في أكتوبر 2026 ليحلّ محل Jais 30B السابق. ستة نماذج من 0.9B إلى نموذج رائد MoE بحجم 375B. ترخيص Apache 2.0. يحتاج إصدار 32B إلى ~19-20 GB VRAM عند Q4 (GPU مؤسسي)؛ ويحتاج إصدار 7B إلى ~5.6 GB فقط (GGUF عند Q4_K_M).',
           '**Falcon-H1-Arabic 7B (TII، أبوظبي):** نموذج إماراتي أصيل مركّز على العربية. يعمل على بطاقات GPU للمستهلكين: Q4_K_M ~5 GB VRAM. مبني على معمارية Falcon-H1 الهجينة، ومُدرَّب على مجموعات بيانات عربية أصيلة (غير مترجمة).',
           '**Qwen3-8B (Alibaba Cloud):** أفضل خيار متعدد اللغات مع دعم عربي قوي. حقق متوسط 0.786 على HELM Arabic (إصدار 235B)؛ ويناسب الإصدار 8B تكميم Q4 ضمن ~5-6 GB VRAM. دعم 119 لغة.',
           '**ALLaM 34B (HUMAIN/SDAIA، السعودية):** النموذج الوطني السعودي، يُشغِّل تطبيق HUMAIN Chat. ترخيص بحثي/غير تجاري للوصول العام. متاح على Microsoft Azure AI (إصدار 7B).',
@@ -515,8 +516,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**السيادة على البيانات:** تشغيل معالجة اللغة الطبيعية العربية محليًا يُبقي البيانات الشخصية داخل الحدود الوطنية — بما يتوافق مع PDPL الإماراتي وSaudi NDMO وأهداف السيادة على البيانات في الخليج.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'يُعد Jais 30B (Apache 2.0، أبوظبي) وFalcon-H1-Arabic 7B (TII، أبوظبي) أفضل نماذج LLM المحلية العربية الأصيلة في 2026، مع تصدّر Qwen3-8B لمعايير العربية متعددة اللغات لأجهزة المستهلكين.' },
-          { type: 'plain-terms', text: 'أفضل ذكاء اصطناعي عربي يمكنك تشغيله على خادمك الخاص: Jais 30B لأفضل جودة عربية (يحتاج GPU متطور)، أو Falcon-H1-Arabic 7B للحواسيب العادية، أو Qwen3-8B إذا كنت بحاجة إلى لغات أخرى أيضًا.' },
+          { type: 'one-sentence', text: 'يُعد Jais 3 (Apache 2.0، أبوظبي، صدر في أكتوبر 2026) وFalcon-H1-Arabic 7B (TII، أبوظبي) أفضل نماذج LLM المحلية العربية الأصيلة في 2026، مع تصدّر Qwen3-8B لمعايير العربية متعددة اللغات لأجهزة المستهلكين.' },
+          { type: 'plain-terms', text: 'أفضل ذكاء اصطناعي عربي يمكنك تشغيله على خادمك الخاص: Jais 3 لأفضل جودة عربية (إصدار 32B يحتاج GPU متطور، وإصدار 7B يعمل على بطاقة ألعاب عادية)، أو Falcon-H1-Arabic 7B للحواسيب العادية، أو Qwen3-8B إذا كنت بحاجة إلى لغات أخرى أيضًا.' },
         ],
       },
       whyArabicMatters: {
@@ -534,9 +535,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'أفضل نماذج LLM العربية المحلية: مرتبة للنشر داخل المؤسسة',
         content: 'مرتبة حسب القدرة على اللغة العربية والملاءمة للنشر المحلي/داخل المؤسسة.',
         image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
-        imageCaption: 'شجرة قرار لاختيار نموذج LLM عربي محلي: Jais 30B لأفضل جودة عربية (~19-20 GB VRAM)، وFalcon-H1-Arabic 7B لبطاقات GPU الاستهلاكية (~5 GB)، وQwen3-8B للاستخدام متعدد اللغات (~5-6 GB)، أو Llama 3.1-8B كخيار أساسي متعدد اللغات.',
+        imageCaption: 'شجرة قرار لاختيار نموذج LLM عربي محلي: Jais-3-32B لأفضل جودة عربية (~19-20 GB VRAM)، وJais-3-7B أو Falcon-H1-Arabic 7B لبطاقات GPU الاستهلاكية (~5-6 GB)، وQwen3-8B للاستخدام متعدد اللغات (~5-6 GB)، أو Llama 3.1-8B كخيار أساسي متعدد اللغات.',
         items: [
-          '**1. Jais 30B — أفضل جودة عربية (Apache 2.0، جاهز داخل المؤسسة).** المطوّر: Core42 / Inception AI (مجموعة G42، أبوظبي) + أبحاث MBZUAI + تدريب Cerebras. التدريب: 126B رمز عربي + 251B رمز إنجليزي + 50B رمز برمجي. يُظهر التقييم البشري أن Jais 30B يتفوق على Jais 13B في العربية في 96% من التقييمات. الترخيص: Apache 2.0 (مفتوح بالكامل، الاستخدام التجاري مسموح). Hugging Face: inceptionai/jais-30b-v3. VRAM: تقدير ~18-20 GB عند Q4 (GPU مؤسسي أو متعدد لدقة FP16). الأفضل لـ: أعلى جودة عربية في معالجة المستندات المؤسسية ودعم العملاء والنشر الحكومي حيث تكون العربية لغة أساسية.',
+          '**1. Jais 3 (7B / 32B) — أفضل جودة عربية، الجيل الأحدث (Apache 2.0، جاهز داخل المؤسسة).** المطوّر: معهد نماذج الأساس (IFM) في MBZUAI وInception42، بالتعاون مع Cerebras Systems (أبوظبي). صدر في 16 أكتوبر 2026، ليحلّ محل Jais 30B السابق كخط النماذج العربية الرائد. التشكيلة: ستة نماذج من 0.9B إلى نموذج رائد بحجم 375B (23B نشط) من نوع MoE؛ ويُعدّ Jais-3-7B وJais-3-32B الخيارين المناسبين للتشغيل داخل المؤسسة. الترخيص: Apache 2.0 لجميع النماذج اللغوية الستة. Hugging Face: inception42/Jais-3-7B، inception42/Jais-3-32B. طول السياق: حتى 512K رمز. تفيد MBZUAI وInception42 بأن Jais-3-7B وJais-3-32B يحققان أعلى متوسط دقة عربية بين النماذج المفتوحة من حجم مماثل على مجموعة اختبارات المطوّرين الخاصة (Arabic MMLU وAraGen v3 وBelebele وQADI لتحديد اللهجة) — وهي أرقام أعلنها المطوّرون ولم تُتحقّق منها جهة مستقلة. VRAM: Jais-3-7B بصيغة GGUF عند Q4_K_M ~5.6 GB (مؤكَّد من ملفات GGUF المُصدرة)؛ Jais-3-32B تقدير ~19-20 GB عند Q4. الأفضل لـ: أعلى جودة عربية في معالجة المستندات المؤسسية ودعم العملاء والنشر الحكومي حيث تكون العربية اللغة الأساسية.',
           '**2. Falcon-H1-Arabic 7B — الأفضل لأجهزة المستهلكين (TII أبوظبي).** المطوّر: مؤسسة الابتكار التقني (TII)، أبوظبي (تحت مجلس أبحاث التكنولوجيا المتقدمة). الأساس: معمارية Falcon-H1 الهجينة (صدرت في 5 يناير 2026). التدريب: مجموعات بيانات عربية أصيلة (غير مترجمة)، الفصحى واللهجات الإقليمية. الترخيص: Falcon LLM License — متساهل، الاستخدام التجاري مسموح. VRAM: Q4_K_M ~5 GB — يعمل على RTX 4060 8GB وRTX 3060 12GB وما يعادلها. المعيار: يحقق 71.47% على Open Arabic LLM Leaderboard (OALL) — أعلى نتيجة بين النماذج العربية بفئة ~10B، متفوقًا على ALLaM-7B وFanar-9B وQwen3-8B، ويحل محل نسخة Falcon Arabic القديمة المبنية على Falcon 3. الأفضل لـ: عمليات النشر على أجهزة المستهلكين والمستخدمين المتقدمين؛ نموذج إماراتي أصيل من مؤسسة في أبوظبي.',
           '**3. Qwen3-8B — أفضل خيار متعدد اللغات مع دعم عربي قوي (Alibaba Cloud).** المطوّر: Alibaba Cloud. اللغات: 119 لغة ولهجة. المعيار: حقق Qwen3-235B-A22B متوسط 0.786 على HELM Arabic؛ ويُوصى بالإصدار 8B للأجهزة المحلية. الترخيص: Apache 2.0. VRAM: Q4_K_M ~5-6 GB. الأفضل لـ: الفرق التي تحتاج العربية + الإنجليزية + لغات أخرى في نموذج واحد؛ مدعوم على نطاق واسع في Ollama (ollama pull qwen3:8b).',
           '**4. ALLaM 34B / 7B — النموذج الوطني السعودي (HUMAIN/SDAIA).** المطوّر: SDAIA (الهيئة السعودية للبيانات والذكاء الاصطناعي) / HUMAIN (الشركة الوطنية السعودية للذكاء الاصطناعي). الإصدارات: 7B (Hugging Face، وصول بحثي) و34B (يُشغِّل HUMAIN Chat). Azure: ALLaM-2-7B-Instruct متاح على Microsoft Azure AI منذ September 2024. الترخيص: بحثي/غير تجاري للوصول العام؛ الترخيص المؤسسي عبر HUMAIN. الأفضل لـ: عمليات النشر الحكومية والمؤسسية السعودية؛ نموذج سيادي متوافق مع رؤية 2030.',
@@ -550,12 +551,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'متطلبات VRAM لنماذج LLM العربية المحلية',
         content: 'متطلبات VRAM حسب النموذج والتكميم. الصفوف المميزة بـ * هي تقديرات قائمة على تحجيم المعاملات (لم يُعثر على معيار رسمي). تحقّق دائمًا من أجهزتك المحددة قبل النشر.',
         image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
-        imageCaption: 'متطلبات VRAM لنماذج LLM العربية المحلية عند تكميم Q4_K_M: يحتاج Gemma 3 4B نحو 3 GB، ويحتاج Falcon-H1-Arabic 7B وALLaM 7B نحو 5 GB، ويحتاج Qwen3-8B من 5 إلى 6 GB، ويحتاج Jais 13B من 8 إلى 10 GB، بينما يحتاج Jais 30B من 19 إلى 20 GB VRAM.',
+        imageCaption: 'متطلبات VRAM لنماذج LLM العربية المحلية عند تكميم Q4_K_M: يحتاج Gemma 3 4B نحو 3 GB، ويحتاج Falcon-H1-Arabic 7B وJais-3-7B وALLaM 7B نحو 5-6 GB، ويحتاج Qwen3-8B من 5 إلى 6 GB، بينما يحتاج Jais-3-32B من 19 إلى 20 GB VRAM.',
         columns: ['النموذج', 'المعاملات', 'VRAM عند Q4_K_M', 'VRAM عند FP16', 'الحد الأدنى للأجهزة'],
         rows: [
           { 'النموذج': 'Falcon-H1-Arabic', 'المعاملات': '7B', 'VRAM عند Q4_K_M': '~5 GB', 'VRAM عند FP16': '~16.7 GB', 'الحد الأدنى للأجهزة': 'RTX 4060 8 GB / RTX 3060 12 GB' },
-          { 'النموذج': 'Jais 13B', 'المعاملات': '13B', 'VRAM عند Q4_K_M': '~8-10 GB*', 'VRAM عند FP16': '~26 GB*', 'الحد الأدنى للأجهزة': 'RTX 3090 24 GB (Q4)' },
-          { 'النموذج': 'Jais 30B', 'المعاملات': '30B', 'VRAM عند Q4_K_M': '~18-20 GB*', 'VRAM عند FP16': '~60 GB*', 'الحد الأدنى للأجهزة': 'RTX 4090 24 GB (Q4 ضيق)، A100 40 GB (FP16)' },
+          { 'النموذج': 'Jais-3-7B', 'المعاملات': '7B', 'VRAM عند Q4_K_M': '~5.6 GB', 'VRAM عند FP16': '~18 GB', 'الحد الأدنى للأجهزة': 'RTX 4060 8 GB / RTX 3060 12 GB' },
+          { 'النموذج': 'Jais-3-32B', 'المعاملات': '32B', 'VRAM عند Q4_K_M': '~19-20 GB*', 'VRAM عند FP16': '~64 GB*', 'الحد الأدنى للأجهزة': 'RTX 4090 24 GB (Q4 ضيق)، A100 40 GB (FP16)' },
           { 'النموذج': 'ALLaM', 'المعاملات': '7B', 'VRAM عند Q4_K_M': '~5 GB*', 'VRAM عند FP16': '~16 GB*', 'الحد الأدنى للأجهزة': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'النموذج': 'Fanar-2', 'المعاملات': '27B', 'VRAM عند Q4_K_M': '~16-17 GB*', 'VRAM عند FP16': '~54 GB*', 'الحد الأدنى للأجهزة': 'RTX 4090 24 GB (Q4)' },
           { 'النموذج': 'Qwen3', 'المعاملات': '8B', 'VRAM عند Q4_K_M': '~5-6 GB', 'VRAM عند FP16': '~16 GB', 'الحد الأدنى للأجهزة': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -571,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ثبّت Ollama: curl -fsSL https://ollama.com/install.sh | sh (لينكس) أو نزّله من ollama.com (ويندوز/ماك). يدعم Falcon-H1-Arabic أصليًا.',
           'اسحب وشغّل Falcon-H1-Arabic 7B: ollama run hf.co/tiiuae/Falcon-H1-Arabic-7B-Instruct-GGUF — تنزيل بحجم ~5 GB، يبدأ التشغيل تلقائيًا بعد السحب. اختبر العربية بموجّه مثل "اكتب قصيدة عن أبوظبي".',
           'اسحب Qwen3-8B للاستخدام متعدد اللغات: ollama pull qwen3:8b — تنزيل بحجم ~5 GB. عربية قوية عبر سياقات الفصحى واللهجة.',
-          'لـ Jais 30B: نزّله من Hugging Face (inceptionai/jais-30b-v3)، وحوّله إلى GGUF بأدوات التحويل في llama.cpp، وكمّمه إلى Q4_K_M، ثم حمّله مع Ollama (ollama create jais-30b -f Modelfile) أو عبر خادم llama.cpp.',
+          'لـ Jais-3-7B: ملفات GGUF متوفرة مباشرة من المطوّرين — ollama run hf.co/inception42/Jais-3-7B-GGUF (Q4_K_M ~5.6 GB). لـ Jais-3-32B: نزّله من Hugging Face (inception42/Jais-3-32B)، وحوّله إلى GGUF بأدوات التحويل في llama.cpp إذا لم يتوفر ملف GGUF جاهز، وكمّمه إلى Q4_K_M، ثم حمّله مع Ollama أو عبر خادم llama.cpp.',
           'الاستنتاج في الإنتاج: استخدم vLLM لتقديم واجهة برمجة تطبيقات عربية عالية الإنتاجية. يدعم vLLM نموذجي Falcon-H1-Arabic وQwen3 أصليًا. اعرضه عبر نقطة نهاية متوافقة مع OpenAI على localhost:8000.',
           'نصيحة الموجّه العربي: حدّد اللغة دائمًا — "أجب باللغة العربية الفصحى". للهجة، أدرج أمثلة جمل من اللهجة المستهدفة في موجّه النظام.',
         ],
@@ -595,15 +596,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل يمكنني تشغيل نموذج LLM عربي على حاسوب محمول عادي للألعاب؟',
-            a: 'نعم، للنماذج من فئة 7B عند تكميم Q4. يتطلب Falcon-H1-Arabic 7B وQwen3-8B نحو ~5-6 GB VRAM — ومعظم الحواسيب المحمولة للألعاب المزوّدة بـ RTX 4060 (8 GB) أو RTX 3060 (12 GB) يمكنها تشغيلها. أما Jais 30B فيتطلب GPU مكتبي متطور (RTX 4090 24 GB) أو GPU مؤسسي عند تكميم Q4.',
+            a: 'نعم، للنماذج من فئة 7B عند تكميم Q4. يتطلب Falcon-H1-Arabic 7B وJais-3-7B وQwen3-8B نحو ~5-6 GB VRAM — ومعظم الحواسيب المحمولة للألعاب المزوّدة بـ RTX 4060 (8 GB) أو RTX 3060 (12 GB) يمكنها تشغيلها. أما Jais-3-32B فيتطلب GPU مكتبي متطور (RTX 4090 24 GB) أو GPU مؤسسي عند تكميم Q4.',
           },
           {
             q: 'ما الفرق بين Jais وFalcon-H1-Arabic؟',
-            a: 'كلاهما نموذجان قادران على العربية من أصل أبوظبي. Jais (Core42/G42) أكبر (حتى 30B) ومُدرَّب تحديدًا كنموذج عربي-إنجليزي ثنائي اللغة بـ 126B رمز عربي — مُحسَّن لجودة العربية على نطاق مؤسسي. أما Falcon-H1-Arabic فهو نموذج 7B من TII (مؤسسة أبوظبية مختلفة) مبني على معمارية Falcon-H1 الهجينة الأوسع — مناسب لـ GPU المستهلكين وجزء من منظومة الذكاء الاصطناعي الإماراتية. لأفضل جودة عربية: Jais 30B. لأجهزة المستهلكين: Falcon-H1-Arabic 7B.',
+            a: 'كلاهما نموذجان قادران على العربية من أصل أبوظبي. Jais 3 (MBZUAI/Inception42) هو الجيل الأحدث والأكبر (حتى نموذج رائد MoE بحجم 375B، مع إصدارين كثيفين 7B و32B مناسبين للتشغيل داخل المؤسسة) ومُدرَّب تحديدًا للعربية على نطاق مؤسسي. أما Falcon-H1-Arabic فهو نموذج 7B من TII (مؤسسة أبوظبية مختلفة) مبني على معمارية Falcon-H1 الهجينة الأوسع — مناسب لـ GPU المستهلكين وجزء من منظومة الذكاء الاصطناعي الإماراتية. لأفضل جودة عربية: Jais-3-32B. لأجهزة المستهلكين: Falcon-H1-Arabic 7B أو Jais-3-7B.',
           },
           {
             q: 'هل يدعم Qwen3 العربية بنفس جودة النماذج العربية المخصصة؟',
-            a: 'يتمتع Qwen3 بدعم عربي عام قوي جدًا (119 لغة، درجة HELM Arabic متصدرة). لعمليات النشر المؤسسية العربية البحتة التي تتطلب أفضل جودة عربية على الإطلاق، يُفضَّل Jais 30B عمومًا. أما للأعباء المختلطة متعددة اللغات حيث تكون العربية إحدى عدة لغات مطلوبة، فغالبًا ما يكون Qwen3-8B الخيار الأفضل بفضل اتساعه وسهولة نشره.',
+            a: 'يتمتع Qwen3 بدعم عربي عام قوي جدًا (119 لغة، درجة HELM Arabic متصدرة). لعمليات النشر المؤسسية العربية البحتة التي تتطلب أفضل جودة عربية على الإطلاق، يُفضَّل Jais-3-32B عمومًا. أما للأعباء المختلطة متعددة اللغات حيث تكون العربية إحدى عدة لغات مطلوبة، فغالبًا ما يكون Qwen3-8B الخيار الأفضل بفضل اتساعه وسهولة نشره.',
           },
           {
             q: 'ما هو ALLaM وهل يمكنني استخدامه تجاريًا؟',
@@ -619,7 +620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما أفضل نموذج LLM عربي لعمليات النشر الحكومية الإماراتية؟',
-            a: 'Falcon-H1-Arabic 7B (من TII، أبوظبي) وJais 30B (من Core42/G42، أبوظبي) كلاهما نموذجان إماراتيان أصيلان لهما منشأ من مؤسسات بحثية مرتبطة بالحكومة الإماراتية. من حيث السيادة وقابلية التدقيق، هذان هما الخياران الأكثر توافقًا. ويمكن نشر كليهما داخل المؤسسة دون خروج أي بيانات من البنية التحتية الإماراتية. راجع [دليل السيادة على البيانات وPDPL الإماراتي](/ar/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
+            a: 'Falcon-H1-Arabic 7B (من TII، أبوظبي) وJais 3 (من MBZUAI/Inception42، أبوظبي) كلاهما نموذجان إماراتيان أصيلان لهما منشأ من مؤسسات بحثية مرتبطة بالحكومة الإماراتية. من حيث السيادة وقابلية التدقيق، هذان هما الخياران الأكثر توافقًا. ويمكن نشر كليهما داخل المؤسسة دون خروج أي بيانات من البنية التحتية الإماراتية. راجع [دليل السيادة على البيانات وPDPL الإماراتي](/ar/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
           },
           {
             q: 'كيف أتعامل مع اللهجة العربية الخليجية مقابل الفصحى في الموجّهات؟',
@@ -627,11 +628,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني ضبط Jais أو Falcon-H1-Arabic بدقة على بياناتي العربية الخاصة؟',
-            a: 'نعم — كلاهما يستخدم تراخيص مفتوحة (Apache 2.0 لـ Jais، وFalcon LLM License لـ Falcon-H1-Arabic) تسمح بالضبط الدقيق. استخدم الضبط الدقيق بـ LoRA أو QLoRA مع أدوات مثل Unsloth أو مكتبة PEFT. يحسّن الضبط الدقيق على بيانات عربية خاصة بالمجال (قانونية، طبية، مالية) الجودة بشكل كبير لحالات الاستخدام المتخصصة. أبقِ بيانات الضبط الدقيق داخل المؤسسة للامتثال لـ PDPL.',
+            a: 'نعم — كلاهما يستخدم تراخيص مفتوحة (Apache 2.0 لـ Jais، وFalcon LLM License لـ Falcon-H1-Arabic) تسمح بالضبط الدقيق. استخدم الضبط الدقيق بـ LoRA أو QLoRA مع أدوات مثل Unsloth أو مكتبة PEFT. يحسّن الضبط الدقيق على بيانات عربية خاصة بالمجال (قانونية، طبية، مالية) الجودة بشكل كبير لحالات الاستخدام المتخصصة. أبقِ بيانات الضبط الدقيق داخل المؤسسة، فهذا يقلّل من مخاطر نقل البيانات عبر الحدود بموجب PDPL — أما الامتثال الكامل فيعتمد أيضًا على الأساس القانوني لمؤسستك وضماناتها.',
           },
           {
-            q: 'ما الأجهزة التي أحتاجها لتشغيل Jais 30B محليًا؟',
-            a: 'عند تكميم Q4_K_M، يتطلب Jais 30B ما يُقدَّر بـ 18-20 GB VRAM (تقدير — لا يوجد معيار رسمي). يمكن لـ NVIDIA RTX 4090 (24 GB) تشغيله عند Q4 بسياق متوسط؛ ويتعامل معه A100 40 GB بأريحية عند FP16. لإنتاجية الإنتاج، يُوصى ببطاقتي RTX 4090 في وضع GPU متعدد أو بطاقة A100/H100 واحدة. راجع [دليل حاسبة VRAM](/ar/local-llms/vram-calculator-local-llm).',
+            q: 'ما الأجهزة التي أحتاجها لتشغيل Jais 3 محليًا؟',
+            a: 'يحتاج Jais-3-7B فقط إلى ~5.6 GB VRAM بصيغة GGUF عند Q4_K_M — أي بطاقة RTX 4060 (8 GB) أو أفضل تكفي. ويحتاج Jais-3-32B إلى ما يُقدَّر بـ 19-20 GB VRAM عند Q4_K_M (تقدير بالقياس على عدد المعاملات — لا يوجد معيار رسمي حتى الآن). يمكن لـ NVIDIA RTX 4090 (24 GB) تشغيل إصدار 32B عند Q4 بسياق متوسط؛ ويتعامل معه A100 40 GB بأريحية عند FP16. لإنتاجية الإنتاج، يُوصى ببطاقتي RTX 4090 في وضع GPU متعدد أو بطاقة A100/H100 واحدة. راجع [دليل حاسبة VRAM](/ar/local-llms/vram-calculator-local-llm).',
           },
         ],
       },
@@ -653,8 +654,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Technology Innovation Institute (TII) — إعلان Falcon-H1-Arabic، January 5, 2026 — tii.ae',
           'صفحة نموذج Falcon-H1-Arabic على Hugging Face — huggingface.co/blog/tiiuae/falcon-h1-arabic',
-          'Core42 / Cerebras — البيان الصحفي لـ Jais 30B — cerebras.ai وg42.ai',
-          'Jais 30B على Hugging Face — huggingface.co/inceptionai/jais-30b-v3',
+          'معهد نماذج الأساس التابع لـ MBZUAI / Inception42 — بيان إطلاق Jais 3، 16 أكتوبر 2026 — mbzuai.ac.ae وwam.ae',
+          'Jais 3 على Hugging Face — huggingface.co/inception42/Jais-3-7B وhuggingface.co/inception42/Jais-3-32B',
+          'Core42 / Cerebras — البيان الصحفي لـ Jais 30B (الجيل السابق) — cerebras.ai وg42.ai',
           'SDAIA / HUMAIN — إعلان ALLaM 34B، May 2025 — humain.ai',
           'ALLaM-2-7B على Microsoft Azure AI — techcommunity.microsoft.com (September 2024)',
           'QCRI / HBKU — التقرير التقني "Fanar 2.0: Arabic Generative AI Stack" وبطاقة نموذج Fanar-2-27B-Instruct — arxiv.org/abs/2603.16397',
@@ -669,16 +671,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'أفضل نماذج LLM العربية المحلية: Jais وFalcon وتشغيل الذكاء الاصطناعي العربي داخل المؤسسة (2026)',
-      'description': 'يُعد Jais 30B وFalcon-H1-Arabic 7B أفضل نماذج LLM العربية المحلية في 2026. جدول VRAM ودليل الإعداد ومعايير تقييم الجودة لنشر الذكاء الاصطناعي العربي داخل المؤسسة.',
+      'description': 'يُعد Jais 3 وFalcon-H1-Arabic 7B أفضل نماذج LLM العربية المحلية في 2026. جدول VRAM ودليل الإعداد ومعايير تقييم الجودة لنشر الذكاء الاصطناعي العربي داخل المؤسسة.',
       'url': 'https://www.promptquorum.com/ar/local-llms/best-arabic-local-llms-2026',
       'datePublished': '2026-06-14',
-      'dateModified': '2026-08-28',
+      'dateModified': '2026-11-19',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
       'inLanguage': 'ar',
       'about': [
-        { '@type': 'SoftwareApplication', 'name': 'Jais 30B' },
+        { '@type': 'SoftwareApplication', 'name': 'Jais 3' },
         { '@type': 'SoftwareApplication', 'name': 'Falcon-H1-Arabic' },
         { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
         { '@type': 'Thing', 'name': 'Arabic NLP' },
@@ -691,16 +693,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'ar',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'هل يمكنني تشغيل نموذج LLM عربي على حاسوب محمول عادي للألعاب؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، للنماذج من فئة 7B عند تكميم Q4. يتطلب Falcon-H1-Arabic 7B وQwen3-8B نحو ~5-6 GB VRAM — ومعظم الحواسيب المحمولة للألعاب المزوّدة بـ RTX 4060 (8 GB) أو RTX 3060 (12 GB) يمكنها تشغيلها. أما Jais 30B فيتطلب GPU مكتبي متطور (RTX 4090 24 GB) أو GPU مؤسسي عند تكميم Q4.' } },
-        { '@type': 'Question', 'name': 'ما الفرق بين Jais وFalcon-H1-Arabic؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'كلاهما نموذجان قادران على العربية من أصل أبوظبي. Jais (Core42/G42) أكبر (حتى 30B) ومُدرَّب تحديدًا كنموذج عربي-إنجليزي ثنائي اللغة بـ 126B رمز عربي. أما Falcon-H1-Arabic فهو نموذج 7B من TII مبني على معمارية Falcon-H1 الهجينة — مناسب لـ GPU المستهلكين. لأفضل جودة عربية: Jais 30B. لأجهزة المستهلكين: Falcon-H1-Arabic 7B.' } },
-        { '@type': 'Question', 'name': 'هل يدعم Qwen3 العربية بنفس جودة النماذج العربية المخصصة؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يتمتع Qwen3 بدعم عربي عام قوي جدًا (119 لغة، درجة HELM Arabic متصدرة). لعمليات النشر المؤسسية العربية البحتة التي تتطلب أفضل جودة عربية على الإطلاق، يُفضَّل Jais 30B عمومًا. أما للأعباء المختلطة متعددة اللغات، فغالبًا ما يكون Qwen3-8B الخيار الأفضل بفضل اتساعه وسهولة نشره.' } },
+        { '@type': 'Question', 'name': 'هل يمكنني تشغيل نموذج LLM عربي على حاسوب محمول عادي للألعاب؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، للنماذج من فئة 7B عند تكميم Q4. يتطلب Falcon-H1-Arabic 7B وJais-3-7B وQwen3-8B نحو ~5-6 GB VRAM — ومعظم الحواسيب المحمولة للألعاب المزوّدة بـ RTX 4060 (8 GB) أو RTX 3060 (12 GB) يمكنها تشغيلها. أما Jais-3-32B فيتطلب GPU مكتبي متطور (RTX 4090 24 GB) أو GPU مؤسسي عند تكميم Q4.' } },
+        { '@type': 'Question', 'name': 'ما الفرق بين Jais وFalcon-H1-Arabic؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'كلاهما نموذجان قادران على العربية من أصل أبوظبي. Jais 3 (MBZUAI/Inception42) هو الجيل الأحدث والأكبر (حتى نموذج رائد MoE بحجم 375B، مع إصدارين كثيفين 7B و32B). أما Falcon-H1-Arabic فهو نموذج 7B من TII مبني على معمارية Falcon-H1 الهجينة — مناسب لـ GPU المستهلكين. لأفضل جودة عربية: Jais-3-32B. لأجهزة المستهلكين: Falcon-H1-Arabic 7B أو Jais-3-7B.' } },
+        { '@type': 'Question', 'name': 'هل يدعم Qwen3 العربية بنفس جودة النماذج العربية المخصصة؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يتمتع Qwen3 بدعم عربي عام قوي جدًا (119 لغة، درجة HELM Arabic متصدرة). لعمليات النشر المؤسسية العربية البحتة التي تتطلب أفضل جودة عربية على الإطلاق، يُفضَّل Jais-3-32B عمومًا. أما للأعباء المختلطة متعددة اللغات، فغالبًا ما يكون Qwen3-8B الخيار الأفضل بفضل اتساعه وسهولة نشره.' } },
         { '@type': 'Question', 'name': 'ما هو ALLaM وهل يمكنني استخدامه تجاريًا؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ALLaM هو عائلة نماذج LLM وطنية سعودية متمحورة حول العربية من SDAIA (الآن تحت علامة HUMAIN). تحمل الإصدارات العامة (7B على Hugging Face، 7B على Azure AI) تراخيص بحثية/غير تجارية. للاستخدام التجاري، تواصل مع HUMAIN/SDAIA مباشرة. يُشغِّل ALLaM 34B تطبيق HUMAIN Chat الوطني لكن وصوله العام مقيّد.' } },
         { '@type': 'Question', 'name': 'كيف يؤثر ترميز العربية على جودة النموذج؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تتطلب الكتابة العربية ترميزًا صحيحًا لتجنّب الأخطاء على مستوى الحروف. تستخدم النماذج المُدرَّبة أصليًا على العربية (Jais وFalcon-H1-Arabic) أدوات ترميز مُحسَّنة لصرف اللغة العربية. قد تُرمّز النماذج العامة متعددة اللغات العربية بشكل غير فعّال، مما يؤدي إلى تدهور الجودة على النصوص العربية المعقّدة. اختبر ببيانات إدخالك الفعلية قبل النشر.' } },
         { '@type': 'Question', 'name': 'هل يمكن لنماذج LLM العربية المحلية التعامل مع مستندات اليمين إلى اليسار (RTL)؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تولّد النماذج النص العربي في الاتجاه الصحيح من اليمين إلى اليسار — تنتج النماذج عربية RTL سليمة بترميز Unicode. يجب أن تتعامل واجهة تطبيقك مع عرض RTL (HTML dir="rtl"، CSS direction:rtl). تُرجع llama.cpp وOllama وvLLM نص Unicode العربي بشكل صحيح؛ وتتولى طبقة واجهة المستخدم الاتجاه.' } },
-        { '@type': 'Question', 'name': 'ما أفضل نموذج LLM عربي لعمليات النشر الحكومية الإماراتية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (من TII، أبوظبي) وJais 30B (من Core42/G42، أبوظبي) كلاهما نموذجان إماراتيان أصيلان لهما منشأ من مؤسسات بحثية مرتبطة بالحكومة الإماراتية. من حيث السيادة وقابلية التدقيق، هذان هما الخياران الأكثر توافقًا. ويمكن نشر كليهما داخل المؤسسة دون خروج أي بيانات من البنية التحتية الإماراتية.' } },
+        { '@type': 'Question', 'name': 'ما أفضل نموذج LLM عربي لعمليات النشر الحكومية الإماراتية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (من TII، أبوظبي) وJais 3 (من MBZUAI/Inception42، أبوظبي) كلاهما نموذجان إماراتيان أصيلان لهما منشأ من مؤسسات بحثية مرتبطة بالحكومة الإماراتية. من حيث السيادة وقابلية التدقيق، هذان هما الخياران الأكثر توافقًا. ويمكن نشر كليهما داخل المؤسسة دون خروج أي بيانات من البنية التحتية الإماراتية.' } },
         { '@type': 'Question', 'name': 'كيف أتعامل مع اللهجة العربية الخليجية مقابل الفصحى في الموجّهات؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'موجّه النظام الافتراضي: أجب باللغة العربية الفصحى. للعربية الخليجية (الإماراتية والسعودية والكويتية)، أضف عبارات لهجة كأمثلة في موجّه النظام أو اضبط بدقة على بيانات المجال. تتعامل جميع النماذج المذكورة جيدًا مع الفصحى؛ وتتفاوت جودة اللهجة. اختبر بـ 5-10 استعلامات لهجة كأمثلة قبل افتراض الجودة الإنتاجية.' } },
-        { '@type': 'Question', 'name': 'هل يمكنني ضبط Jais أو Falcon-H1-Arabic بدقة على بياناتي العربية الخاصة؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم — كلاهما يستخدم تراخيص مفتوحة (Apache 2.0 لـ Jais، وFalcon LLM License لـ Falcon-H1-Arabic) تسمح بالضبط الدقيق. استخدم LoRA أو QLoRA مع أدوات مثل Unsloth أو مكتبة PEFT. يحسّن الضبط الدقيق على بيانات عربية خاصة بالمجال الجودة بشكل كبير. أبقِ بيانات الضبط الدقيق داخل المؤسسة للامتثال لـ PDPL.' } },
-        { '@type': 'Question', 'name': 'ما الأجهزة التي أحتاجها لتشغيل Jais 30B محليًا؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'عند تكميم Q4_K_M، يتطلب Jais 30B ما يُقدَّر بـ 18-20 GB VRAM (لا يوجد معيار رسمي). يمكن لـ RTX 4090 (24 GB) تشغيله عند Q4 بسياق متوسط؛ ويتعامل معه A100 40 GB بأريحية عند FP16. لإنتاجية الإنتاج، يُوصى ببطاقتي RTX 4090 في وضع GPU متعدد أو بطاقة A100/H100 واحدة.' } },
+        { '@type': 'Question', 'name': 'هل يمكنني ضبط Jais أو Falcon-H1-Arabic بدقة على بياناتي العربية الخاصة؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم — كلاهما يستخدم تراخيص مفتوحة (Apache 2.0 لـ Jais، وFalcon LLM License لـ Falcon-H1-Arabic) تسمح بالضبط الدقيق. استخدم LoRA أو QLoRA مع أدوات مثل Unsloth أو مكتبة PEFT. يحسّن الضبط الدقيق على بيانات عربية خاصة بالمجال الجودة بشكل كبير. أبقِ بيانات الضبط الدقيق داخل المؤسسة، فهذا يقلّل من مخاطر نقل البيانات عبر الحدود بموجب PDPL — أما الامتثال الكامل فيعتمد أيضًا على الأساس القانوني لمؤسستك وضماناتها.' } },
+        { '@type': 'Question', 'name': 'ما الأجهزة التي أحتاجها لتشغيل Jais 3 محليًا؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يحتاج Jais-3-7B فقط إلى ~5.6 GB VRAM بصيغة GGUF عند Q4_K_M. ويحتاج Jais-3-32B إلى ما يُقدَّر بـ 19-20 GB VRAM عند Q4_K_M (تقدير — لا يوجد معيار رسمي حتى الآن). يمكن لـ RTX 4090 (24 GB) تشغيل إصدار 32B عند Q4 بسياق متوسط؛ ويتعامل معه A100 40 GB بأريحية عند FP16. لإنتاجية الإنتاج، يُوصى ببطاقتي RTX 4090 في وضع GPU متعدد أو بطاقة A100/H100 واحدة.' } },
       ],
     },
     itemListSchema: {
@@ -709,7 +711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'أفضل نماذج LLM العربية المحلية 2026',
       'numberOfItems': 7,
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 30B', 'description': 'أفضل نموذج LLM محلي عربي أصيل. 126B رمز تدريب عربي، Apache 2.0، Core42/G42 أبوظبي.' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 3', 'description': 'أفضل نموذج LLM محلي عربي أصيل، الجيل الأحدث (أكتوبر 2026). تشكيلة من 0.9B إلى 375B، Apache 2.0، MBZUAI/Inception42 أبوظبي.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Falcon-H1-Arabic 7B', 'description': 'الأفضل لأجهزة المستهلكين. TII أبوظبي. Q4_K_M ~5 GB VRAM. Falcon LLM License.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3-8B', 'description': 'أفضل خيار متعدد اللغات مع دعم عربي قوي. متصدر HELM Arabic. Apache 2.0.' },
         { '@type': 'ListItem', 'position': 4, 'name': 'ALLaM 34B', 'description': 'النموذج العربي الوطني السعودي (HUMAIN/SDAIA). يُشغِّل HUMAIN Chat. ترخيص بحثي.' },
@@ -723,26 +725,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Beste arabische lokale LLMs: Jais, Falcon und arabische KI On-Premise betreiben (2026)',
     heroImage: '/images/best-arabic-local-llms-2026-overview-hero-de.webp',
     seoTitle: 'Beste arabische lokale LLMs 2026: Jais, Falcon-H1-Arabic',
-    metaDescription: 'Jais 30B, Falcon-H1-Arabic 7B und Qwen3-8B im Vergleich: die besten arabischen lokalen LLMs 2026. Mit VRAM-Tabelle, On-Premise-Setup und Bewertungstipps.',
-    intro: 'Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) und Falcon-H1-Arabic 7B (TII, Abu Dhabi) sind die besten arabisch-nativen lokalen LLMs im Jahr 2026. Für allgemeine multilinguale Workloads mit starker arabischer Unterstützung führt Qwen3-8B die HELM-Arabic-Benchmarks unter den für Consumer-Hardware dimensionierten Modellen an. Alle drei laufen On-Premise mit Ollama oder vLLM und halten arabischsprachige Daten innerhalb der nationalen Grenzen. Dieser Leitfaden ordnet die Modelle, liefert eine VRAM-Tabelle und zeigt, wie Sie arabische KI lokal bereitstellen und bewerten.',
+    metaDescription: 'Jais 3, Falcon-H1-Arabic 7B und Qwen3-8B im Vergleich: die besten arabischen lokalen LLMs 2026. Mit VRAM-Tabelle, On-Premise-Setup und Bewertungstipps.',
+    intro: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi, Apache 2.0), veröffentlicht im Oktober 2026, und Falcon-H1-Arabic 7B (TII, Abu Dhabi) sind die besten arabisch-nativen lokalen LLMs im Jahr 2026. Für allgemeine multilinguale Workloads mit starker arabischer Unterstützung führt Qwen3-8B die HELM-Arabic-Benchmarks unter den für Consumer-Hardware dimensionierten Modellen an. Alle drei laufen On-Premise mit Ollama oder vLLM und halten arabischsprachige Daten innerhalb der nationalen Grenzen. Dieser Leitfaden ordnet die Modelle, liefert eine VRAM-Tabelle und zeigt, wie Sie arabische KI lokal bereitstellen und bewerten.',
     designSkin: 'hub',
     theme: 'Best Models',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-14',
+    next_refresh_due: '2027-05-19',
     publishDate: '2026-06-14',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'Arabischsprachige Unternehmen, Entwickler am Golf und Teams, die arabische NLP lokal bereitstellen',
     readTime: '13 Min. Lesezeit',
     primaryTerm: 'Arabic local LLM',
     affiliateDisclosure: false,
-    leadAnswerBlock: '**Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) und Falcon-H1-Arabic 7B (TII Abu Dhabi) sind die besten arabisch-nativen lokalen LLMs im Jahr 2026. Für allgemeine multilinguale Workloads mit starker arabischer Unterstützung führt Qwen3-8B die HELM-Arabic-Benchmarks unter den für Consumer-Hardware dimensionierten Modellen an. Alle drei laufen On-Premise mit Ollama oder vLLM und halten arabischsprachige personenbezogene Daten innerhalb der nationalen Grenzen.**',
+    leadAnswerBlock: '**Jais 3 (MBZUAI/Inception42, Abu Dhabi, Apache 2.0), veröffentlicht im Oktober 2026, und Falcon-H1-Arabic 7B (TII Abu Dhabi) sind die besten arabisch-nativen lokalen LLMs im Jahr 2026. Für allgemeine multilinguale Workloads mit starker arabischer Unterstützung führt Qwen3-8B die HELM-Arabic-Benchmarks unter den für Consumer-Hardware dimensionierten Modellen an. Alle drei laufen On-Premise mit Ollama oder vLLM und halten arabischsprachige personenbezogene Daten innerhalb der nationalen Grenzen.**',
     quickAnswerTop: {
       en: {
         question: 'What is the best Arabic local LLM in 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) is the strongest Arabic-native local LLM in 2026, trained on 126B Arabic tokens with Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), released October 2026, is the strongest Arabic-native local LLM in 2026, available in sizes from 0.9B to 32B under Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
         bullets: [
-          'Jais 30B: best Arabic-native model, 126B Arabic training tokens, Apache 2.0, needs ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): best Arabic-native model, released October 2026 by MBZUAI/Inception42, Apache 2.0, 32B needs ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, consumer GPU friendly',
           'Qwen3-8B: best multilingual option with strong Arabic, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Saudi national model, powers HUMAIN Chat; research license',
@@ -752,9 +754,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ar: {
         question: 'ما أفضل نموذج ذكاء اصطناعي عربي محلي في 2026؟',
-        answer: 'Jais 30B (Core42/G42، أبوظبي) هو أقوى نموذج محلي عربي أصيل في 2026، مُدرَّب على 126 مليار رمز عربي بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42، أبوظبي)، الذي صدر في أكتوبر 2026، هو أقوى نموذج محلي عربي أصيل في 2026، ويتوفر بأحجام من 0.9B إلى 32B بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
         bullets: [
-          'Jais 30B: أفضل نموذج عربي أصيل، 126 مليار رمز تدريب عربي، Apache 2.0، يحتاج ~18-20 GB VRAM عند Q4',
+          'Jais 3 (7B/32B): أفضل نموذج عربي أصيل، صدر في أكتوبر 2026 من MBZUAI/Inception42، Apache 2.0، يحتاج إصدار 32B إلى ~19-20 GB VRAM عند Q4',
           'Falcon-H1-Arabic 7B: مؤسسة الابتكار التقني أبوظبي، Q4_K_M ~5 GB VRAM، مناسب لـ GPU المستهلكين',
           'Qwen3-8B: أفضل خيار متعدد اللغات مع دعم عربي قوي، ~5-6 GB VRAM عند Q4',
           'ALLaM 34B (HUMAIN/SDAIA): النموذج الوطني السعودي، يُشغِّل تطبيق HUMAIN Chat؛ ترخيص بحثي',
@@ -764,9 +766,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Was ist das beste arabische lokale LLM im Jahr 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) ist das stärkste arabisch-native lokale LLM im Jahr 2026, trainiert auf 126 Milliarden arabischen Tokens mit Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), veröffentlicht im Oktober 2026, ist das stärkste arabisch-native lokale LLM im Jahr 2026, verfügbar in Größen von 0,9B bis 32B unter Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
         bullets: [
-          'Jais 30B: bestes arabisch-natives Modell, 126 Mrd. arabische Trainings-Tokens, Apache 2.0, benötigt ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): bestes arabisch-natives Modell, veröffentlicht im Oktober 2026 von MBZUAI/Inception42, Apache 2.0, 32B benötigt ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, Consumer-GPU-kompatibel',
           'Qwen3-8B: bester multilingualer Ansatz mit starkem Arabisch, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Nationales saudi-arabisches Modell; Forschungslizenz',
@@ -776,9 +778,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor LLM local árabe en 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dabi) es el LLM local árabe nativo más potente en 2026, entrenado con 126B tokens en árabe con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dabi), lanzado en octubre de 2026, es el LLM local árabe nativo más potente en 2026, disponible en tamaños de 0.9B a 32B con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
         bullets: [
-          'Jais 30B: mejor modelo árabe nativo, 126B tokens de entrenamiento en árabe, Apache 2.0, necesita ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): mejor modelo árabe nativo, lanzado en octubre de 2026 por MBZUAI/Inception42, Apache 2.0, la versión 32B necesita ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dabi, Q4_K_M ~5 GB VRAM, compatible con GPU de consumidor',
           'Qwen3-8B: mejor opción multilingüe con fuerte soporte árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudí; licencia de investigación',
@@ -788,9 +790,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM local arabophone en 2026 ?',
-        answer: 'Jais 30B (Core42/G42, Abou Dabi) est le LLM local arabophone natif le plus puissant en 2026, entraîné sur 126 milliards de tokens arabes avec licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abou Dabi), sorti en octobre 2026, est le LLM local arabophone natif le plus puissant en 2026, disponible en tailles de 0,9B à 32B sous licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
         bullets: [
-          'Jais 30B : meilleur modèle arabophone natif, 126 milliards de tokens arabes, Apache 2.0, nécessite ~18-20 Go VRAM Q4',
+          'Jais 3 (7B/32B) : meilleur modèle arabophone natif, sorti en octobre 2026 par MBZUAI/Inception42, Apache 2.0, la version 32B nécessite ~19-20 Go VRAM Q4',
           'Falcon-H1-Arabic 7B : TII Abou Dabi, Q4_K_M ~5 Go VRAM, compatible GPU grand public',
           'Qwen3-8B : meilleure option multilingue avec fort support arabe, ~5-6 Go VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA) : modèle national saoudien ; licence recherche',
@@ -800,9 +802,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年のベストなアラビア語対応ローカルLLMは？',
-        answer: 'Jais 30B（Core42/G42、アブダビ）は2026年で最も優れたアラビア語ネイティブのローカルLLMです。1,260億のアラビア語トークンで訓練され、Apache 2.0ライセンスで利用可能。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
+        answer: 'Jais 3（MBZUAI/Inception42、アブダビ）は2026年10月にリリースされ、2026年で最も優れたアラビア語ネイティブのローカルLLMです。0.9Bから32Bまでのサイズで利用可能、Apache 2.0ライセンス。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
         bullets: [
-          'Jais 30B: アラビア語ネイティブ最強、1,260億アラビア語トークン、Apache 2.0、Q4で ~18-20 GB VRAM',
+          'Jais 3（7B/32B）: アラビア語ネイティブ最強、2026年10月にMBZUAI/Inception42がリリース、Apache 2.0、32Bは ~19-20 GB VRAM（Q4）が必要',
           'Falcon-H1-Arabic 7B: TII アブダビ、Q4_K_M ~5 GB VRAM、コンシューマーGPU対応',
           'Qwen3-8B: アラビア語サポートが強い多言語ベストオプション、Q4 ~5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）: サウジ国家モデル、リサーチライセンス',
@@ -812,9 +814,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pt: {
         question: 'Qual é o melhor LLM local árabe em 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) é o LLM local árabe nativo mais poderoso em 2026, treinado com 126B tokens em árabe com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), lançado em outubro de 2026, é o LLM local árabe nativo mais poderoso em 2026, disponível em tamanhos de 0,9B a 32B com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
         bullets: [
-          'Jais 30B: melhor modelo árabe nativo, 126B tokens de treinamento em árabe, Apache 2.0, requer ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): melhor modelo árabe nativo, lançado em outubro de 2026 pela MBZUAI/Inception42, Apache 2.0, a versão 32B precisa de ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, compatível com GPU de consumidor',
           'Qwen3-8B: melhor opção multilíngue com forte suporte ao árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudita; licença de pesquisa',
@@ -824,9 +826,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年最佳阿拉伯语本地LLM是什么？',
-        answer: 'Jais 30B（Core42/G42，阿布扎比）是2026年最强的阿拉伯语原生本地LLM，使用1260亿阿拉伯语token训练，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
+        answer: 'Jais 3（MBZUAI/Inception42，阿布扎比）于2026年10月发布，是2026年最强的阿拉伯语原生本地LLM，提供从0.9B到32B的多种尺寸，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
         bullets: [
-          'Jais 30B：最佳阿拉伯语原生模型，1260亿阿拉伯语训练token，Apache 2.0，Q4需约18-20 GB VRAM',
+          'Jais 3（7B/32B）：最佳阿拉伯语原生模型，2026年10月由MBZUAI/Inception42发布，Apache 2.0，32B版本需约19-20 GB VRAM（Q4）',
           'Falcon-H1-Arabic 7B：TII阿布扎比，Q4_K_M约5 GB VRAM，兼容消费级GPU',
           'Qwen3-8B：具有强阿拉伯语支持的最佳多语言选项，Q4约5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）：沙特国家模型；研究许可证',
@@ -836,9 +838,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ko: {
         question: '2026년 최고의 아랍어 로컬 LLM은 무엇입니까?',
-        answer: 'Jais 30B(Core42/G42, 아부다비)는 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 1,260억 개의 아랍어 토큰으로 훈련되었으며 Apache 2.0 라이선스를 제공합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
+        answer: 'Jais 3(MBZUAI/Inception42, 아부다비)는 2026년 10월 출시되어 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 0.9B부터 32B까지 다양한 크기로 제공되며 Apache 2.0 라이선스를 적용합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
         bullets: [
-          'Jais 30B: 최고의 아랍어 네이티브 모델, 아랍어 훈련 토큰 1,260억 개, Apache 2.0, Q4 ~18-20 GB VRAM 필요',
+          'Jais 3(7B/32B): 최고의 아랍어 네이티브 모델, 2026년 10월 MBZUAI/Inception42 출시, Apache 2.0, 32B 버전은 ~19-20 GB VRAM(Q4) 필요',
           'Falcon-H1-Arabic 7B: TII 아부다비, Q4_K_M ~5 GB VRAM, 소비자 GPU 호환',
           'Qwen3-8B: 강력한 아랍어 지원을 갖춘 최고의 다국어 옵션, Q4 ~5-6 GB VRAM',
           'ALLaM 34B(HUMAIN/SDAIA): 사우디 국가 모델; 연구 라이선스',
@@ -863,7 +865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Jais 30B (Core42/G42, Abu Dhabi):** Bestes arabisch-natives lokales LLM im Jahr 2026. Trainiert auf 126B arabischen + 251B englischen Tokens. Apache-2.0-Lizenz. Benötigt ~18-20 GB VRAM bei Q4-Quantisierung (Multi-GPU oder Enterprise-GPU für vollständiges FP16).',
+          '**Jais 3 (MBZUAI/Inception42, Abu Dhabi):** Bestes arabisch-natives lokales LLM im Jahr 2026, veröffentlicht im Oktober 2026 als Nachfolger des früheren Jais 30B. Sechs Modelle von 0,9B bis zu einem 375B-MoE-Flaggschiff. Apache-2.0-Lizenz. Die 32B-Variante benötigt ~19-20 GB VRAM bei Q4-Quantisierung (Enterprise-GPU); die 7B-Variante nur ~5,6 GB (GGUF Q4_K_M).',
           '**Falcon-H1-Arabic 7B (TII, Abu Dhabi):** Arabisch-fokussiertes Modell aus den VAE. Läuft auf Consumer-GPUs: Q4_K_M ~5 GB VRAM. Aufgebaut auf der hybriden Falcon-H1-Architektur, trainiert auf nativen (nicht übersetzten) arabischen Datensätzen.',
           '**Qwen3-8B (Alibaba Cloud):** Beste multilinguale Option mit starker arabischer Unterstützung. 0,786 Mittelwert auf HELM Arabic (235B-Variante); 8B passt bei Q4 in ~5-6 GB VRAM. Unterstützung für 119 Sprachen.',
           '**ALLaM 34B (HUMAIN/SDAIA, Saudi-Arabien):** Saudi-arabisches Nationalmodell, betreibt HUMAIN Chat. Forschungs-/nicht-kommerzielle Lizenz für den öffentlichen Zugang. Verfügbar auf Microsoft Azure AI (7B-Variante).',
@@ -873,8 +875,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Datensouveränität:** Der lokale Betrieb arabischer NLP hält personenbezogene Daten innerhalb der nationalen Grenzen — im Einklang mit dem UAE PDPL, der saudischen NDMO und den Datensouveränitätszielen am Golf.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Jais 30B (Apache 2.0, Abu Dhabi) und Falcon-H1-Arabic 7B (TII, Abu Dhabi) sind die besten arabisch-nativen lokalen LLMs im Jahr 2026, wobei Qwen3-8B die multilingualen arabischen Benchmarks für Consumer-Hardware anführt.' },
-          { type: 'plain-terms', text: 'Die beste arabische KI, die Sie auf Ihrem eigenen Server betreiben können: Jais 30B für beste arabische Qualität (benötigt eine High-End-GPU), Falcon-H1-Arabic 7B für normale Computer oder Qwen3-8B, wenn Sie auch andere Sprachen benötigen.' },
+          { type: 'one-sentence', text: 'Jais 3 (Apache 2.0, Abu Dhabi, veröffentlicht im Oktober 2026) und Falcon-H1-Arabic 7B (TII, Abu Dhabi) sind die besten arabisch-nativen lokalen LLMs im Jahr 2026, wobei Qwen3-8B die multilingualen arabischen Benchmarks für Consumer-Hardware anführt.' },
+          { type: 'plain-terms', text: 'Die beste arabische KI, die Sie auf Ihrem eigenen Server betreiben können: Jais 3 für beste arabische Qualität (die 32B-Variante benötigt eine High-End-GPU, die 7B-Variante läuft auf einer normalen Gaming-GPU), Falcon-H1-Arabic 7B für normale Computer oder Qwen3-8B, wenn Sie auch andere Sprachen benötigen.' },
         ],
       },
       whyArabicMatters: {
@@ -892,9 +894,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Beste arabische lokale LLMs: im Ranking für On-Premise-Bereitstellung',
         content: 'Geordnet nach arabischer Sprachfähigkeit und Eignung für lokale/On-Premise-Bereitstellung.',
         image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
-        imageCaption: 'Entscheidungsbaum zur Wahl eines arabischen lokalen LLM: Jais 30B für beste arabische Qualität (~19-20 GB VRAM), Falcon-H1-Arabic 7B für Consumer-GPUs (~5 GB), Qwen3-8B für mehrsprachige Nutzung (~5-6 GB) oder Llama 3.1-8B als breite mehrsprachige Basisoption.',
+        imageCaption: 'Entscheidungsbaum zur Wahl eines arabischen lokalen LLM: Jais-3-32B für beste arabische Qualität (~19-20 GB VRAM), Jais-3-7B oder Falcon-H1-Arabic 7B für Consumer-GPUs (~5-6 GB), Qwen3-8B für mehrsprachige Nutzung (~5-6 GB) oder Llama 3.1-8B als breite mehrsprachige Basisoption.',
         items: [
-          '**1. Jais 30B — Beste arabische Qualität (Apache 2.0, On-Premise-bereit).** Entwickler: Core42 / Inception AI (G42-Gruppe, Abu Dhabi) + MBZUAI-Forschung + Cerebras-Training. Training: 126B arabische Tokens + 251B englische Tokens + 50B Code-Tokens. Die menschliche Bewertung zeigt, dass Jais 30B in 96 % der Bewertungen besser im Arabischen abschneidet als Jais 13B. Lizenz: Apache 2.0 (vollständig offen, kommerzielle Nutzung erlaubt). Hugging Face: inceptionai/jais-30b-v3. VRAM: ~18-20 GB Q4-Schätzung (Enterprise-GPU oder Multi-GPU für FP16). Am besten geeignet für: höchste arabische Qualität bei der Verarbeitung von Unternehmensdokumenten, im Kundensupport und bei Behördeneinsätzen, in denen Arabisch die Hauptsprache ist.',
+          '**1. Jais 3 (7B / 32B) — Beste arabische Qualität, neueste Generation (Apache 2.0, On-Premise-bereit).** Entwickler: Institute of Foundation Models (IFM) an der MBZUAI + Inception42, mit Cerebras Systems (Abu Dhabi). Veröffentlicht am 16. Oktober 2026 — löst das frühere Jais 30B als Flaggschiff-Modellreihe für Arabisch ab. Lineup: sechs Modelle von 0,9B bis zu einem 375B-MoE-Flaggschiff (23B aktiv); Jais-3-7B und Jais-3-32B sind die für On-Premise geeigneten Größen. Lizenz: Apache 2.0 für alle sechs Sprachmodelle. Hugging Face: inception42/Jais-3-7B, inception42/Jais-3-32B. Kontext: bis zu 512K Tokens. MBZUAI und Inception42 berichten, dass Jais-3-7B und Jais-3-32B die höchsten durchschnittlichen arabischen Werte unter offenen Modellen vergleichbarer Größe auf ihrer eigenen Benchmark-Suite erzielen (Arabic MMLU, AraGen v3, Belebele, QADI-Dialekterkennung) — Angaben der Entwickler, nicht unabhängig verifiziert. VRAM: Jais-3-7B GGUF Q4_K_M ~5,6 GB (bestätigt anhand der veröffentlichten GGUF-Dateien); Jais-3-32B ~19-20 GB Q4-Schätzung. Am besten geeignet für: höchste arabische Qualität bei der Verarbeitung von Unternehmensdokumenten, im Kundensupport und bei Behördeneinsätzen, in denen Arabisch die Hauptsprache ist.',
           '**2. Falcon-H1-Arabic 7B — Am besten für Consumer-Hardware (TII Abu Dhabi).** Entwickler: Technology Innovation Institute (TII), Abu Dhabi (unter dem Advanced Technology Research Council). Basis: hybride Falcon-H1-Architektur (veröffentlicht am 5. Januar 2026). Training: native (nicht übersetzte) arabische Datensätze, MSA und regionale Dialekte. Lizenz: Falcon LLM License — permissiv, kommerzielle Nutzung erlaubt. VRAM: Q4_K_M ~5 GB — läuft auf RTX 4060 8GB, RTX 3060 12GB und gleichwertigen Karten. Benchmark: erzielt 71,47 % auf dem Open Arabic LLM Leaderboard (OALL) — der Spitzenwert unter arabischen Modellen der ~10B-Klasse, vor ALLaM-7B, Fanar-9B und Qwen3-8B, und löst damit den ursprünglichen Falcon-3-basierten Falcon-Arabic-Checkpoint ab. Am besten geeignet für: Bereitstellungen auf Consumer- und Prosumer-Hardware; ein VAE-natives Modell einer Institution aus Abu Dhabi.',
           '**3. Qwen3-8B — Beste multilinguale Option mit starkem Arabisch (Alibaba Cloud).** Entwickler: Alibaba Cloud. Sprachen: 119 Sprachen und Dialekte. Benchmark: Qwen3-235B-A22B erreichte 0,786 Mittelwert auf HELM Arabic; die 8B-Variante wird für lokale Hardware empfohlen. Lizenz: Apache 2.0. VRAM: Q4_K_M ~5-6 GB. Am besten geeignet für: Teams, die Arabisch + Englisch + weitere Sprachen in einem Modell benötigen; wird in Ollama breit unterstützt (ollama pull qwen3:8b).',
           '**4. ALLaM 34B / 7B — Saudi-arabisches Nationalmodell (HUMAIN/SDAIA).** Entwickler: SDAIA (Saudi Data and AI Authority) / HUMAIN (saudi-arabisches nationales KI-Unternehmen). Versionen: 7B (Hugging Face, Forschungszugang) und 34B (betreibt HUMAIN Chat). Azure: ALLaM-2-7B-Instruct seit September 2024 auf Microsoft Azure AI verfügbar. Lizenz: Forschung/nicht-kommerziell für den öffentlichen Zugang; Unternehmenslizenzierung über HUMAIN. Am besten geeignet für: saudi-arabische Behörden- und Unternehmenseinsätze; ein souveränes Modell im Einklang mit Vision 2030.',
@@ -908,12 +910,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'VRAM-Anforderungen für arabische lokale LLMs',
         content: 'Erforderlicher VRAM nach Modell und Quantisierung. Mit * markierte Zeilen sind Schätzungen auf Basis der Parameterskalierung (kein offizieller Benchmark gefunden). Überprüfen Sie vor der Bereitstellung stets mit Ihrer konkreten Hardware.',
         image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
-        imageCaption: 'VRAM-Bedarf arabischer lokaler LLMs bei Q4_K_M-Quantisierung: Gemma 3 4B benötigt ~3 GB, Falcon-H1-Arabic 7B und ALLaM 7B benötigen ~5 GB, Qwen3-8B benötigt 5-6 GB, Jais 13B benötigt 8-10 GB und Jais 30B benötigt 19-20 GB VRAM.',
+        imageCaption: 'VRAM-Bedarf arabischer lokaler LLMs bei Q4_K_M-Quantisierung: Gemma 3 4B benötigt ~3 GB, Falcon-H1-Arabic 7B, Jais-3-7B und ALLaM 7B benötigen ~5-6 GB, Qwen3-8B benötigt 5-6 GB, und Jais-3-32B benötigt 19-20 GB VRAM.',
         columns: ['Modell', 'Parameter', 'Q4_K_M VRAM', 'FP16 VRAM', 'Mindesthardware'],
         rows: [
           { 'Modell': 'Falcon-H1-Arabic', 'Parameter': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', 'Mindesthardware': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'Modell': 'Jais 13B', 'Parameter': '13B', 'Q4_K_M VRAM': '~8-10 GB*', 'FP16 VRAM': '~26 GB*', 'Mindesthardware': 'RTX 3090 24 GB (Q4)' },
-          { 'Modell': 'Jais 30B', 'Parameter': '30B', 'Q4_K_M VRAM': '~18-20 GB*', 'FP16 VRAM': '~60 GB*', 'Mindesthardware': 'RTX 4090 24 GB (Q4 knapp), A100 40 GB (FP16)' },
+          { 'Modell': 'Jais-3-7B', 'Parameter': '7B', 'Q4_K_M VRAM': '~5,6 GB', 'FP16 VRAM': '~18 GB', 'Mindesthardware': 'RTX 4060 8 GB / RTX 3060 12 GB' },
+          { 'Modell': 'Jais-3-32B', 'Parameter': '32B', 'Q4_K_M VRAM': '~19-20 GB*', 'FP16 VRAM': '~64 GB*', 'Mindesthardware': 'RTX 4090 24 GB (Q4 knapp), A100 40 GB (FP16)' },
           { 'Modell': 'ALLaM', 'Parameter': '7B', 'Q4_K_M VRAM': '~5 GB*', 'FP16 VRAM': '~16 GB*', 'Mindesthardware': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'Modell': 'Fanar-2', 'Parameter': '27B', 'Q4_K_M VRAM': '~16-17 GB*', 'FP16 VRAM': '~54 GB*', 'Mindesthardware': 'RTX 4090 24 GB (Q4)' },
           { 'Modell': 'Qwen3', 'Parameter': '8B', 'Q4_K_M VRAM': '~5-6 GB', 'FP16 VRAM': '~16 GB', 'Mindesthardware': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -929,7 +932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ollama installieren: curl -fsSL https://ollama.com/install.sh | sh (Linux) oder von ollama.com herunterladen (Windows/Mac). Unterstützt Falcon-H1-Arabic nativ.',
           'Falcon-H1-Arabic 7B laden und starten: ollama run hf.co/tiiuae/Falcon-H1-Arabic-7B-Instruct-GGUF — ~5 GB Download, startet nach dem Laden automatisch. Testen Sie Arabisch mit einem Prompt wie „اكتب قصيدة عن أبوظبي" (Schreibe ein Gedicht über Abu Dhabi).',
           'Qwen3-8B für Multilingual laden: ollama pull qwen3:8b — ~5 GB Download. Starkes Arabisch über MSA- und Dialektkontexte hinweg.',
-          'Für Jais 30B: von Hugging Face herunterladen (inceptionai/jais-30b-v3), mit den llama.cpp-Konvertierungstools in GGUF konvertieren, auf Q4_K_M quantisieren und dann mit Ollama laden (ollama create jais-30b -f Modelfile) oder dem llama.cpp-Server.',
+          'Für Jais-3-7B: GGUF-Builds werden direkt von den Entwicklern veröffentlicht — ollama run hf.co/inception42/Jais-3-7B-GGUF (Q4_K_M ~5,6 GB). Für Jais-3-32B: von Hugging Face herunterladen (inception42/Jais-3-32B), falls noch kein fertiges GGUF verfügbar ist mit den llama.cpp-Konvertierungstools in GGUF konvertieren, auf Q4_K_M quantisieren und dann mit Ollama oder dem llama.cpp-Server laden.',
           'Produktionsinferenz: Verwenden Sie vLLM für das Bereitstellen einer arabischen API mit hohem Durchsatz. vLLM unterstützt Falcon-H1-Arabic und Qwen3 nativ. Stellen Sie es über einen OpenAI-kompatiblen Endpunkt unter localhost:8000 bereit.',
           'Tipp für arabische Prompts: Geben Sie stets die Sprache an — „أجب باللغة العربية الفصحى" (Antworte auf modernem Hocharabisch). Für Dialekt fügen Sie Beispielsätze aus dem Zieldialekt in den System-Prompt ein.',
         ],
@@ -953,15 +956,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Kann ich ein arabisches LLM auf einem normalen Gaming-Laptop betreiben?',
-            a: 'Ja, für Modelle der 7B-Klasse bei Q4-Quantisierung. Falcon-H1-Arabic 7B und Qwen3-8B benötigen ~5-6 GB VRAM — die meisten Gaming-Laptops mit einer RTX 4060 (8 GB) oder RTX 3060 (12 GB) können sie ausführen. Jais 30B erfordert eine High-End-Desktop-GPU (RTX 4090 24 GB) oder eine Enterprise-GPU bei Q4-Quantisierung.',
+            a: 'Ja, für Modelle der 7B-Klasse bei Q4-Quantisierung. Falcon-H1-Arabic 7B, Jais-3-7B und Qwen3-8B benötigen ~5-6 GB VRAM — die meisten Gaming-Laptops mit einer RTX 4060 (8 GB) oder RTX 3060 (12 GB) können sie ausführen. Jais-3-32B erfordert eine High-End-Desktop-GPU (RTX 4090 24 GB) oder eine Enterprise-GPU bei Q4-Quantisierung.',
           },
           {
             q: 'Was ist der Unterschied zwischen Jais und Falcon-H1-Arabic?',
-            a: 'Beide sind arabischfähige Modelle mit Ursprung in Abu Dhabi. Jais (Core42/G42) ist größer (bis zu 30B) und speziell als arabisch-englisch zweisprachig mit 126B arabischen Tokens trainiert — optimiert für arabische Qualität im Unternehmensmaßstab. Falcon-H1-Arabic ist ein 7B-Modell von TII (einer anderen Institution in Abu Dhabi), aufgebaut auf der breiteren hybriden Falcon-H1-Architektur — Consumer-GPU-freundlich und Teil des VAE-KI-Ökosystems. Für beste arabische Qualität: Jais 30B. Für Consumer-Hardware: Falcon-H1-Arabic 7B.',
+            a: 'Beide sind arabischfähige Modelle mit Ursprung in Abu Dhabi. Jais 3 (MBZUAI/Inception42) ist die neuere, größere Familie (bis zu einem 375B-MoE-Flaggschiff, mit dichten 7B- und 32B-Varianten für On-Premise) und speziell für Arabisch im Unternehmensmaßstab trainiert. Falcon-H1-Arabic ist ein 7B-Modell von TII (einer anderen Institution in Abu Dhabi), aufgebaut auf der breiteren hybriden Falcon-H1-Architektur — Consumer-GPU-freundlich und Teil des VAE-KI-Ökosystems. Für beste arabische Qualität: Jais-3-32B. Für Consumer-Hardware: Falcon-H1-Arabic 7B oder Jais-3-7B.',
           },
           {
             q: 'Unterstützt Qwen3 Arabisch ebenso gut wie dedizierte arabische Modelle?',
-            a: 'Qwen3 verfügt über eine sehr starke allgemeine arabische Unterstützung (119 Sprachen, führender HELM-Arabic-Wert). Für rein arabische Unternehmenseinsätze, die die absolut beste arabische Qualität erfordern, wird im Allgemeinen Jais 30B bevorzugt. Für gemischte multilinguale Workloads, bei denen Arabisch eine von mehreren benötigten Sprachen ist, ist Qwen3-8B aufgrund seiner Breite und einfachen Bereitstellung oft die bessere Wahl.',
+            a: 'Qwen3 verfügt über eine sehr starke allgemeine arabische Unterstützung (119 Sprachen, führender HELM-Arabic-Wert). Für rein arabische Unternehmenseinsätze, die die absolut beste arabische Qualität erfordern, wird im Allgemeinen Jais-3-32B bevorzugt. Für gemischte multilinguale Workloads, bei denen Arabisch eine von mehreren benötigten Sprachen ist, ist Qwen3-8B aufgrund seiner Breite und einfachen Bereitstellung oft die bessere Wahl.',
           },
           {
             q: 'Was ist ALLaM und kann ich es kommerziell nutzen?',
@@ -977,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welches arabische LLM ist am besten für Behördeneinsätze in den VAE geeignet?',
-            a: 'Falcon-H1-Arabic 7B (von TII, Abu Dhabi) und Jais 30B (von Core42/G42, Abu Dhabi) sind beide VAE-native Modelle mit Herkunft aus regierungsnahen Forschungsinstitutionen der VAE. Für Souveränität und Prüfbarkeit sind dies die am besten passenden Optionen. Beide können On-Premise bereitgestellt werden, ohne dass Daten die VAE-Infrastruktur verlassen. Siehe unseren [Leitfaden zur UAE-PDPL-Datensouveränität](/de/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
+            a: 'Falcon-H1-Arabic 7B (von TII, Abu Dhabi) und Jais 3 (von MBZUAI/Inception42, Abu Dhabi) sind beide VAE-native Modelle mit Herkunft aus regierungsnahen Forschungsinstitutionen der VAE. Für Souveränität und Prüfbarkeit sind dies die am besten passenden Optionen. Beide können On-Premise bereitgestellt werden, ohne dass Daten die VAE-Infrastruktur verlassen. Siehe unseren [Leitfaden zur UAE-PDPL-Datensouveränität](/de/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
           },
           {
             q: 'Wie gehe ich mit Golf-Arabisch-Dialekt vs. MSA in Prompts um?',
@@ -985,11 +988,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich Jais oder Falcon-H1-Arabic auf meinen eigenen arabischen Daten feinabstimmen?',
-            a: 'Ja — beide verwenden offene Lizenzen (Apache 2.0 für Jais, Falcon LLM License für Falcon-H1-Arabic), die Feinabstimmung erlauben. Verwenden Sie LoRA- oder QLoRA-Feinabstimmung mit Tools wie Unsloth oder der PEFT-Bibliothek. Die Feinabstimmung auf domänenspezifischen arabischen Daten (juristisch, medizinisch, finanziell) verbessert die Qualität für spezialisierte Anwendungsfälle erheblich. Halten Sie die Feinabstimmungsdaten zur PDPL-Konformität On-Premise.',
+            a: 'Ja — beide verwenden offene Lizenzen (Apache 2.0 für Jais, Falcon LLM License für Falcon-H1-Arabic), die Feinabstimmung erlauben. Verwenden Sie LoRA- oder QLoRA-Feinabstimmung mit Tools wie Unsloth oder der PEFT-Bibliothek. Die Feinabstimmung auf domänenspezifischen arabischen Daten (juristisch, medizinisch, finanziell) verbessert die Qualität für spezialisierte Anwendungsfälle erheblich. Halten Sie die Feinabstimmungsdaten On-Premise — das verringert das grenzüberschreitende Übermittlungsrisiko unter der PDPL; die vollständige Konformität hängt zusätzlich von der Rechtsgrundlage und den Schutzmaßnahmen Ihrer Organisation ab.',
           },
           {
-            q: 'Welche Hardware benötige ich, um Jais 30B lokal zu betreiben?',
-            a: 'Bei Q4_K_M-Quantisierung benötigt Jais 30B geschätzte 18-20 GB VRAM (Schätzung — kein offizieller Benchmark). Eine NVIDIA RTX 4090 (24 GB) kann es bei Q4 mit moderatem Kontext ausführen; eine A100 40 GB bewältigt es bei FP16 komfortabel. Für Produktionsdurchsatz werden zwei RTX 4090 im Multi-GPU-Modus oder eine einzelne A100/H100 empfohlen. Siehe unseren [Leitfaden zum VRAM-Rechner](/de/local-llms/vram-calculator-local-llm).',
+            q: 'Welche Hardware benötige ich, um Jais 3 lokal zu betreiben?',
+            a: 'Jais-3-7B benötigt bei GGUF Q4_K_M nur ~5,6 GB VRAM — jede RTX 4060 (8 GB) oder besser reicht aus. Jais-3-32B benötigt geschätzte 19-20 GB VRAM bei Q4_K_M (Schätzung anhand der Parameterzahl — noch kein offizieller Benchmark). Eine NVIDIA RTX 4090 (24 GB) kann die 32B-Variante bei Q4 mit moderatem Kontext ausführen; eine A100 40 GB bewältigt es bei FP16 komfortabel. Für Produktionsdurchsatz werden zwei RTX 4090 im Multi-GPU-Modus oder eine einzelne A100/H100 empfohlen. Siehe unseren [Leitfaden zum VRAM-Rechner](/de/local-llms/vram-calculator-local-llm).',
           },
         ],
       },
@@ -1011,8 +1014,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Technology Innovation Institute (TII) — Falcon-H1-Arabic announcement, January 5, 2026 — tii.ae',
           'Falcon-H1-Arabic Hugging Face model page — huggingface.co/blog/tiiuae/falcon-h1-arabic',
-          'Core42 / Cerebras — Jais 30B press release — cerebras.ai and g42.ai',
-          'Jais 30B on Hugging Face — huggingface.co/inceptionai/jais-30b-v3',
+          'MBZUAI Institute of Foundation Models / Inception42 — Jais 3 launch announcement, October 16, 2026 — mbzuai.ac.ae and wam.ae',
+          'Jais 3 on Hugging Face — huggingface.co/inception42/Jais-3-7B and huggingface.co/inception42/Jais-3-32B',
+          'Core42 / Cerebras — Jais 30B (previous generation) press release — cerebras.ai and g42.ai',
           'SDAIA / HUMAIN — ALLaM 34B announcement, May 2025 — humain.ai',
           'ALLaM-2-7B on Microsoft Azure AI — techcommunity.microsoft.com (September 2024)',
           'QCRI / HBKU — Technischer Bericht „Fanar 2.0: Arabic Generative AI Stack" und Modellkarte zu Fanar-2-27B-Instruct — arxiv.org/abs/2603.16397',
@@ -1027,16 +1031,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Beste arabische lokale LLMs: Jais, Falcon und arabische KI On-Premise betreiben (2026)',
-      'description': 'Jais 30B und Falcon-H1-Arabic 7B sind die besten arabischen lokalen LLMs im Jahr 2026. VRAM-Tabelle, Einrichtungsanleitung und Benchmarks zur Qualitätsbewertung für die On-Premise-Bereitstellung arabischer KI.',
+      'description': 'Jais 3 und Falcon-H1-Arabic 7B sind die besten arabischen lokalen LLMs im Jahr 2026. VRAM-Tabelle, Einrichtungsanleitung und Benchmarks zur Qualitätsbewertung für die On-Premise-Bereitstellung arabischer KI.',
       'url': 'https://www.promptquorum.com/de/local-llms/best-arabic-local-llms-2026',
       'datePublished': '2026-06-14',
-      'dateModified': '2026-08-28',
+      'dateModified': '2026-11-19',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
       'inLanguage': 'de',
       'about': [
-        { '@type': 'SoftwareApplication', 'name': 'Jais 30B' },
+        { '@type': 'SoftwareApplication', 'name': 'Jais 3' },
         { '@type': 'SoftwareApplication', 'name': 'Falcon-H1-Arabic' },
         { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
         { '@type': 'Thing', 'name': 'Arabic NLP' },
@@ -1049,16 +1053,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'de',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'Kann ich ein arabisches LLM auf einem normalen Gaming-Laptop betreiben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, für Modelle der 7B-Klasse bei Q4-Quantisierung. Falcon-H1-Arabic 7B und Qwen3-8B benötigen ~5-6 GB VRAM — die meisten Gaming-Laptops mit einer RTX 4060 (8 GB) oder RTX 3060 (12 GB) können sie ausführen. Jais 30B erfordert eine High-End-Desktop-GPU (RTX 4090 24 GB) oder eine Enterprise-GPU bei Q4-Quantisierung.' } },
-        { '@type': 'Question', 'name': 'Was ist der Unterschied zwischen Jais und Falcon-H1-Arabic?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Beide sind arabischfähige Modelle mit Ursprung in Abu Dhabi. Jais (Core42/G42) ist größer (bis zu 30B) und speziell als arabisch-englisch zweisprachig mit 126B arabischen Tokens trainiert. Falcon-H1-Arabic ist ein 7B-Modell von TII, aufgebaut auf der hybriden Falcon-H1-Architektur — Consumer-GPU-freundlich. Für beste arabische Qualität: Jais 30B. Für Consumer-Hardware: Falcon-H1-Arabic 7B.' } },
-        { '@type': 'Question', 'name': 'Unterstützt Qwen3 Arabisch ebenso gut wie dedizierte arabische Modelle?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 verfügt über eine sehr starke allgemeine arabische Unterstützung (119 Sprachen, führender HELM-Arabic-Wert). Für rein arabische Unternehmenseinsätze, die die absolut beste arabische Qualität erfordern, wird im Allgemeinen Jais 30B bevorzugt. Für gemischte multilinguale Workloads ist Qwen3-8B aufgrund seiner Breite und einfachen Bereitstellung oft die bessere Wahl.' } },
+        { '@type': 'Question', 'name': 'Kann ich ein arabisches LLM auf einem normalen Gaming-Laptop betreiben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, für Modelle der 7B-Klasse bei Q4-Quantisierung. Falcon-H1-Arabic 7B, Jais-3-7B und Qwen3-8B benötigen ~5-6 GB VRAM — die meisten Gaming-Laptops mit einer RTX 4060 (8 GB) oder RTX 3060 (12 GB) können sie ausführen. Jais-3-32B erfordert eine High-End-Desktop-GPU (RTX 4090 24 GB) oder eine Enterprise-GPU bei Q4-Quantisierung.' } },
+        { '@type': 'Question', 'name': 'Was ist der Unterschied zwischen Jais und Falcon-H1-Arabic?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Beide sind arabischfähige Modelle mit Ursprung in Abu Dhabi. Jais 3 (MBZUAI/Inception42) ist die neuere, größere Familie (bis zu einem 375B-MoE-Flaggschiff, mit dichten 7B- und 32B-Varianten). Falcon-H1-Arabic ist ein 7B-Modell von TII, aufgebaut auf der hybriden Falcon-H1-Architektur — Consumer-GPU-freundlich. Für beste arabische Qualität: Jais-3-32B. Für Consumer-Hardware: Falcon-H1-Arabic 7B oder Jais-3-7B.' } },
+        { '@type': 'Question', 'name': 'Unterstützt Qwen3 Arabisch ebenso gut wie dedizierte arabische Modelle?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 verfügt über eine sehr starke allgemeine arabische Unterstützung (119 Sprachen, führender HELM-Arabic-Wert). Für rein arabische Unternehmenseinsätze, die die absolut beste arabische Qualität erfordern, wird im Allgemeinen Jais-3-32B bevorzugt. Für gemischte multilinguale Workloads ist Qwen3-8B aufgrund seiner Breite und einfachen Bereitstellung oft die bessere Wahl.' } },
         { '@type': 'Question', 'name': 'Was ist ALLaM und kann ich es kommerziell nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ALLaM ist eine saudi-arabische nationale, arabisch-zentrierte LLM-Familie von SDAIA (jetzt unter der Marke HUMAIN). Die öffentlichen Veröffentlichungen (7B auf Hugging Face, 7B auf Azure AI) tragen Forschungs-/nicht-kommerzielle Lizenzen. Für die kommerzielle Nutzung wenden Sie sich direkt an HUMAIN/SDAIA. ALLaM 34B betreibt die nationale HUMAIN-Chat-App, hat aber einen eingeschränkten öffentlichen Zugang.' } },
         { '@type': 'Question', 'name': 'Wie wirkt sich die arabische Tokenisierung auf die Modellqualität aus?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Arabische Schrift erfordert eine korrekte Tokenisierung, um Fehler auf Zeichenebene zu vermeiden. Nativ auf Arabisch trainierte Modelle (Jais, Falcon-H1-Arabic) verwenden für die arabische Morphologie optimierte Tokenizer. Allgemeine multilinguale Modelle können Arabisch ineffizient tokenisieren, was zu Qualitätseinbußen bei komplexem arabischem Text führt. Testen Sie mit Ihren tatsächlichen Eingabedaten vor dem produktiven Einsatz.' } },
         { '@type': 'Question', 'name': 'Können arabische lokale LLMs Rechts-nach-Links-Dokumente (RTL) verarbeiten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Die Modelle erzeugen arabischen Text in der korrekten Rechts-nach-Links-Richtung — die Modelle produzieren korrektes RTL-Arabisch in Unicode. Ihre Anwendungsoberfläche muss die RTL-Darstellung handhaben (HTML dir="rtl", CSS direction:rtl). llama.cpp, Ollama und vLLM geben Unicode-Arabisch korrekt zurück; die UI-Schicht handhabt die Richtung.' } },
-        { '@type': 'Question', 'name': 'Welches arabische LLM ist am besten für Behördeneinsätze in den VAE geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (von TII, Abu Dhabi) und Jais 30B (von Core42/G42, Abu Dhabi) sind beide VAE-native Modelle mit Herkunft aus regierungsnahen Forschungsinstitutionen der VAE. Für Souveränität und Prüfbarkeit sind dies die am besten passenden Optionen. Beide können On-Premise bereitgestellt werden, ohne dass Daten die VAE-Infrastruktur verlassen.' } },
+        { '@type': 'Question', 'name': 'Welches arabische LLM ist am besten für Behördeneinsätze in den VAE geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (von TII, Abu Dhabi) und Jais 3 (von MBZUAI/Inception42, Abu Dhabi) sind beide VAE-native Modelle mit Herkunft aus regierungsnahen Forschungsinstitutionen der VAE. Für Souveränität und Prüfbarkeit sind dies die am besten passenden Optionen. Beide können On-Premise bereitgestellt werden, ohne dass Daten die VAE-Infrastruktur verlassen.' } },
         { '@type': 'Question', 'name': 'Wie gehe ich mit Golf-Arabisch-Dialekt vs. MSA in Prompts um?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Standard-System-Prompt: Antworte auf modernem Hocharabisch. Für Golf-Arabisch (Emiratisch, Saudisch, Kuwaitisch) fügen Sie Beispiel-Dialektphrasen in Ihren System-Prompt ein oder feinabstimmen Sie auf Domänendaten. Alle aufgeführten Modelle beherrschen MSA gut; die Dialektqualität variiert. Testen Sie mit 5-10 Beispiel-Dialektabfragen, bevor Sie von Produktionsqualität ausgehen.' } },
-        { '@type': 'Question', 'name': 'Kann ich Jais oder Falcon-H1-Arabic auf meinen eigenen arabischen Daten feinabstimmen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja — beide verwenden offene Lizenzen (Apache 2.0 für Jais, Falcon LLM License für Falcon-H1-Arabic), die Feinabstimmung erlauben. Verwenden Sie LoRA oder QLoRA mit Tools wie Unsloth oder der PEFT-Bibliothek. Die Feinabstimmung auf domänenspezifischen arabischen Daten verbessert die Qualität erheblich. Halten Sie die Feinabstimmungsdaten zur PDPL-Konformität On-Premise.' } },
-        { '@type': 'Question', 'name': 'Welche Hardware benötige ich, um Jais 30B lokal zu betreiben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei Q4_K_M-Quantisierung benötigt Jais 30B geschätzte 18-20 GB VRAM (kein offizieller Benchmark). Eine RTX 4090 (24 GB) kann es bei Q4 mit moderatem Kontext ausführen; eine A100 40 GB bewältigt es bei FP16 komfortabel. Für Produktionsdurchsatz werden zwei RTX 4090 im Multi-GPU-Modus oder eine einzelne A100/H100 empfohlen.' } },
+        { '@type': 'Question', 'name': 'Kann ich Jais oder Falcon-H1-Arabic auf meinen eigenen arabischen Daten feinabstimmen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja — beide verwenden offene Lizenzen (Apache 2.0 für Jais, Falcon LLM License für Falcon-H1-Arabic), die Feinabstimmung erlauben. Verwenden Sie LoRA oder QLoRA mit Tools wie Unsloth oder der PEFT-Bibliothek. Die Feinabstimmung auf domänenspezifischen arabischen Daten verbessert die Qualität erheblich. Halten Sie die Feinabstimmungsdaten On-Premise — das verringert das grenzüberschreitende Übermittlungsrisiko unter der PDPL; die vollständige Konformität hängt zusätzlich von der Rechtsgrundlage und den Schutzmaßnahmen Ihrer Organisation ab.' } },
+        { '@type': 'Question', 'name': 'Welche Hardware benötige ich, um Jais 3 lokal zu betreiben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Jais-3-7B benötigt bei GGUF Q4_K_M nur ~5,6 GB VRAM. Jais-3-32B benötigt geschätzte 19-20 GB VRAM bei Q4_K_M (Schätzung, kein offizieller Benchmark). Eine RTX 4090 (24 GB) kann die 32B-Variante bei Q4 mit moderatem Kontext ausführen; eine A100 40 GB bewältigt es bei FP16 komfortabel. Für Produktionsdurchsatz werden zwei RTX 4090 im Multi-GPU-Modus oder eine einzelne A100/H100 empfohlen.' } },
       ],
     },
     itemListSchema: {
@@ -1067,7 +1071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'Beste arabische lokale LLMs 2026',
       'numberOfItems': 7,
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 30B', 'description': 'Bestes arabisch-natives lokales LLM. 126B arabische Trainings-Tokens, Apache 2.0, Core42/G42 Abu Dhabi.' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 3', 'description': 'Bestes arabisch-natives lokales LLM, neueste Generation (Oktober 2026). Lineup von 0,9B bis 375B, Apache 2.0, MBZUAI/Inception42 Abu Dhabi.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Falcon-H1-Arabic 7B', 'description': 'Am besten für Consumer-Hardware. TII Abu Dhabi. Q4_K_M ~5 GB VRAM. Falcon LLM License.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3-8B', 'description': 'Beste multilinguale Option mit starkem Arabisch. HELM-Arabic-Spitzenreiter. Apache 2.0.' },
         { '@type': 'ListItem', 'position': 4, 'name': 'ALLaM 34B', 'description': 'Saudi-arabisches nationales arabisches Modell (HUMAIN/SDAIA). Betreibt HUMAIN Chat. Forschungslizenz.' },
@@ -1081,26 +1085,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Mejores LLM locales en árabe: Jais, Falcon y ejecutar IA árabe on-premise (2026)',
     heroImage: '/images/best-arabic-local-llms-2026-overview-hero-es.webp',
     seoTitle: 'Mejores LLM locales en árabe 2026: Jais y Falcon',
-    metaDescription: 'Jais 30B, Falcon-H1-Arabic 7B y Qwen3-8B son los mejores LLM locales en árabe en 2026. Tabla de VRAM, guía de instalación on-premise y evaluación.',
-    intro: 'Jais 30B (Core42/G42, Abu Dabi, Apache 2.0) y Falcon-H1-Arabic 7B (TII, Abu Dabi) son los mejores LLM locales nativos en árabe en 2026. Para cargas de trabajo multilingües generales con un fuerte soporte de árabe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos dimensionados para hardware de consumidor. Los tres se ejecutan on-premise con Ollama o vLLM, manteniendo los datos en lengua árabe dentro de las fronteras nacionales. Esta guía clasifica los modelos, ofrece una tabla de VRAM y muestra cómo desplegar y evaluar IA árabe localmente.',
+    metaDescription: 'Jais 3, Falcon-H1-Arabic 7B y Qwen3-8B son los mejores LLM locales en árabe en 2026. Tabla de VRAM, guía de instalación on-premise y evaluación.',
+    intro: 'Jais 3 (MBZUAI/Inception42, Abu Dabi, Apache 2.0), lanzado en octubre de 2026, y Falcon-H1-Arabic 7B (TII, Abu Dabi) son los mejores LLM locales nativos en árabe en 2026. Para cargas de trabajo multilingües generales con un fuerte soporte de árabe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos dimensionados para hardware de consumidor. Los tres se ejecutan on-premise con Ollama o vLLM, manteniendo los datos en lengua árabe dentro de las fronteras nacionales. Esta guía clasifica los modelos, ofrece una tabla de VRAM y muestra cómo desplegar y evaluar IA árabe localmente.',
     designSkin: 'hub',
     theme: 'Best Models',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-14',
+    next_refresh_due: '2027-05-19',
     publishDate: '2026-06-14',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'Empresas de habla árabe, desarrolladores del Golfo y equipos que despliegan NLP árabe localmente',
     readTime: '13 min de lectura',
     primaryTerm: 'Arabic local LLM',
     affiliateDisclosure: false,
-    leadAnswerBlock: '**Jais 30B (Core42/G42, Abu Dabi, Apache 2.0) y Falcon-H1-Arabic 7B (TII Abu Dabi) son los mejores LLM locales nativos en árabe en 2026. Para cargas de trabajo multilingües generales con un fuerte soporte de árabe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos dimensionados para hardware de consumidor. Los tres se ejecutan on-premise con Ollama o vLLM, manteniendo los datos personales en lengua árabe dentro de las fronteras nacionales.**',
+    leadAnswerBlock: '**Jais 3 (MBZUAI/Inception42, Abu Dabi, Apache 2.0), lanzado en octubre de 2026, y Falcon-H1-Arabic 7B (TII Abu Dabi) son los mejores LLM locales nativos en árabe en 2026. Para cargas de trabajo multilingües generales con un fuerte soporte de árabe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos dimensionados para hardware de consumidor. Los tres se ejecutan on-premise con Ollama o vLLM, manteniendo los datos personales en lengua árabe dentro de las fronteras nacionales.**',
     quickAnswerTop: {
       en: {
         question: 'What is the best Arabic local LLM in 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) is the strongest Arabic-native local LLM in 2026, trained on 126B Arabic tokens with Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), released October 2026, is the strongest Arabic-native local LLM in 2026, available in sizes from 0.9B to 32B under Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
         bullets: [
-          'Jais 30B: best Arabic-native model, 126B Arabic training tokens, Apache 2.0, needs ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): best Arabic-native model, released October 2026 by MBZUAI/Inception42, Apache 2.0, 32B needs ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, consumer GPU friendly',
           'Qwen3-8B: best multilingual option with strong Arabic, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Saudi national model, powers HUMAIN Chat; research license',
@@ -1110,9 +1114,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ar: {
         question: 'ما أفضل نموذج ذكاء اصطناعي عربي محلي في 2026؟',
-        answer: 'Jais 30B (Core42/G42، أبوظبي) هو أقوى نموذج محلي عربي أصيل في 2026، مُدرَّب على 126 مليار رمز عربي بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42، أبوظبي)، الذي صدر في أكتوبر 2026، هو أقوى نموذج محلي عربي أصيل في 2026، ويتوفر بأحجام من 0.9B إلى 32B بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
         bullets: [
-          'Jais 30B: أفضل نموذج عربي أصيل، 126 مليار رمز تدريب عربي، Apache 2.0، يحتاج ~18-20 GB VRAM عند Q4',
+          'Jais 3 (7B/32B): أفضل نموذج عربي أصيل، صدر في أكتوبر 2026 من MBZUAI/Inception42، Apache 2.0، يحتاج إصدار 32B إلى ~19-20 GB VRAM عند Q4',
           'Falcon-H1-Arabic 7B: مؤسسة الابتكار التقني أبوظبي، Q4_K_M ~5 GB VRAM، مناسب لـ GPU المستهلكين',
           'Qwen3-8B: أفضل خيار متعدد اللغات مع دعم عربي قوي، ~5-6 GB VRAM عند Q4',
           'ALLaM 34B (HUMAIN/SDAIA): النموذج الوطني السعودي، يُشغِّل تطبيق HUMAIN Chat؛ ترخيص بحثي',
@@ -1122,9 +1126,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Was ist das beste arabische lokale LLM im Jahr 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) ist das stärkste arabisch-native lokale LLM im Jahr 2026, trainiert auf 126 Milliarden arabischen Tokens mit Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), veröffentlicht im Oktober 2026, ist das stärkste arabisch-native lokale LLM im Jahr 2026, verfügbar in Größen von 0,9B bis 32B unter Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
         bullets: [
-          'Jais 30B: bestes arabisch-natives Modell, 126 Mrd. arabische Trainings-Tokens, Apache 2.0, benötigt ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): bestes arabisch-natives Modell, veröffentlicht im Oktober 2026 von MBZUAI/Inception42, Apache 2.0, 32B benötigt ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, Consumer-GPU-kompatibel',
           'Qwen3-8B: bester multilingualer Ansatz mit starkem Arabisch, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Nationales saudi-arabisches Modell; Forschungslizenz',
@@ -1134,9 +1138,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor LLM local árabe en 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dabi) es el LLM local árabe nativo más potente en 2026, entrenado con 126B tokens en árabe con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dabi), lanzado en octubre de 2026, es el LLM local árabe nativo más potente en 2026, disponible en tamaños de 0.9B a 32B con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
         bullets: [
-          'Jais 30B: mejor modelo árabe nativo, 126B tokens de entrenamiento en árabe, Apache 2.0, necesita ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): mejor modelo árabe nativo, lanzado en octubre de 2026 por MBZUAI/Inception42, Apache 2.0, la versión 32B necesita ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dabi, Q4_K_M ~5 GB VRAM, compatible con GPU de consumidor',
           'Qwen3-8B: mejor opción multilingüe con fuerte soporte árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudí; licencia de investigación',
@@ -1146,9 +1150,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM local arabophone en 2026 ?',
-        answer: 'Jais 30B (Core42/G42, Abou Dabi) est le LLM local arabophone natif le plus puissant en 2026, entraîné sur 126 milliards de tokens arabes avec licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abou Dabi), sorti en octobre 2026, est le LLM local arabophone natif le plus puissant en 2026, disponible en tailles de 0,9B à 32B sous licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
         bullets: [
-          'Jais 30B : meilleur modèle arabophone natif, 126 milliards de tokens arabes, Apache 2.0, nécessite ~18-20 Go VRAM Q4',
+          'Jais 3 (7B/32B) : meilleur modèle arabophone natif, sorti en octobre 2026 par MBZUAI/Inception42, Apache 2.0, la version 32B nécessite ~19-20 Go VRAM Q4',
           'Falcon-H1-Arabic 7B : TII Abou Dabi, Q4_K_M ~5 Go VRAM, compatible GPU grand public',
           'Qwen3-8B : meilleure option multilingue avec fort support arabe, ~5-6 Go VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA) : modèle national saoudien ; licence recherche',
@@ -1158,9 +1162,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年のベストなアラビア語対応ローカルLLMは？',
-        answer: 'Jais 30B（Core42/G42、アブダビ）は2026年で最も優れたアラビア語ネイティブのローカルLLMです。1,260億のアラビア語トークンで訓練され、Apache 2.0ライセンスで利用可能。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
+        answer: 'Jais 3（MBZUAI/Inception42、アブダビ）は2026年10月にリリースされ、2026年で最も優れたアラビア語ネイティブのローカルLLMです。0.9Bから32Bまでのサイズで利用可能、Apache 2.0ライセンス。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
         bullets: [
-          'Jais 30B: アラビア語ネイティブ最強、1,260億アラビア語トークン、Apache 2.0、Q4で ~18-20 GB VRAM',
+          'Jais 3（7B/32B）: アラビア語ネイティブ最強、2026年10月にMBZUAI/Inception42がリリース、Apache 2.0、32Bは ~19-20 GB VRAM（Q4）が必要',
           'Falcon-H1-Arabic 7B: TII アブダビ、Q4_K_M ~5 GB VRAM、コンシューマーGPU対応',
           'Qwen3-8B: アラビア語サポートが強い多言語ベストオプション、Q4 ~5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）: サウジ国家モデル、リサーチライセンス',
@@ -1170,9 +1174,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pt: {
         question: 'Qual é o melhor LLM local árabe em 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) é o LLM local árabe nativo mais poderoso em 2026, treinado com 126B tokens em árabe com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), lançado em outubro de 2026, é o LLM local árabe nativo mais poderoso em 2026, disponível em tamanhos de 0,9B a 32B com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
         bullets: [
-          'Jais 30B: melhor modelo árabe nativo, 126B tokens de treinamento em árabe, Apache 2.0, requer ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): melhor modelo árabe nativo, lançado em outubro de 2026 pela MBZUAI/Inception42, Apache 2.0, a versão 32B precisa de ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, compatível com GPU de consumidor',
           'Qwen3-8B: melhor opção multilíngue com forte suporte ao árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudita; licença de pesquisa',
@@ -1182,9 +1186,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年最佳阿拉伯语本地LLM是什么？',
-        answer: 'Jais 30B（Core42/G42，阿布扎比）是2026年最强的阿拉伯语原生本地LLM，使用1260亿阿拉伯语token训练，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
+        answer: 'Jais 3（MBZUAI/Inception42，阿布扎比）于2026年10月发布，是2026年最强的阿拉伯语原生本地LLM，提供从0.9B到32B的多种尺寸，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
         bullets: [
-          'Jais 30B：最佳阿拉伯语原生模型，1260亿阿拉伯语训练token，Apache 2.0，Q4需约18-20 GB VRAM',
+          'Jais 3（7B/32B）：最佳阿拉伯语原生模型，2026年10月由MBZUAI/Inception42发布，Apache 2.0，32B版本需约19-20 GB VRAM（Q4）',
           'Falcon-H1-Arabic 7B：TII阿布扎比，Q4_K_M约5 GB VRAM，兼容消费级GPU',
           'Qwen3-8B：具有强阿拉伯语支持的最佳多语言选项，Q4约5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）：沙特国家模型；研究许可证',
@@ -1194,9 +1198,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ko: {
         question: '2026년 최고의 아랍어 로컬 LLM은 무엇입니까?',
-        answer: 'Jais 30B(Core42/G42, 아부다비)는 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 1,260억 개의 아랍어 토큰으로 훈련되었으며 Apache 2.0 라이선스를 제공합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
+        answer: 'Jais 3(MBZUAI/Inception42, 아부다비)는 2026년 10월 출시되어 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 0.9B부터 32B까지 다양한 크기로 제공되며 Apache 2.0 라이선스를 적용합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
         bullets: [
-          'Jais 30B: 최고의 아랍어 네이티브 모델, 아랍어 훈련 토큰 1,260억 개, Apache 2.0, Q4 ~18-20 GB VRAM 필요',
+          'Jais 3(7B/32B): 최고의 아랍어 네이티브 모델, 2026년 10월 MBZUAI/Inception42 출시, Apache 2.0, 32B 버전은 ~19-20 GB VRAM(Q4) 필요',
           'Falcon-H1-Arabic 7B: TII 아부다비, Q4_K_M ~5 GB VRAM, 소비자 GPU 호환',
           'Qwen3-8B: 강력한 아랍어 지원을 갖춘 최고의 다국어 옵션, Q4 ~5-6 GB VRAM',
           'ALLaM 34B(HUMAIN/SDAIA): 사우디 국가 모델; 연구 라이선스',
@@ -1221,7 +1225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Jais 30B (Core42/G42, Abu Dabi):** Mejor LLM local nativo en árabe en 2026. Entrenado con 126B tokens en árabe + 251B tokens en inglés. Licencia Apache 2.0. Necesita ~18-20 GB VRAM con cuantización Q4 (multi-GPU o GPU empresarial para FP16 completo).',
+          '**Jais 3 (MBZUAI/Inception42, Abu Dabi):** Mejor LLM local nativo en árabe en 2026, lanzado en octubre de 2026 como sucesor del anterior Jais 30B. Seis modelos desde 0.9B hasta un modelo insignia MoE de 375B. Licencia Apache 2.0. La versión de 32B necesita ~19-20 GB VRAM con cuantización Q4 (GPU empresarial); la de 7B solo ~5.6 GB (GGUF Q4_K_M).',
           '**Falcon-H1-Arabic 7B (TII, Abu Dabi):** Modelo nativo de EAU centrado en el árabe. Funciona en GPUs de consumidor: Q4_K_M ~5 GB VRAM. Construido sobre la arquitectura híbrida Falcon-H1, entrenado con datasets de árabe nativo (no traducido).',
           '**Qwen3-8B (Alibaba Cloud):** Mejor opción multilingüe con fuerte soporte de árabe. Media de 0.786 en HELM Arabic (variante 235B); el 8B cabe en Q4 en ~5-6 GB VRAM. Soporte de 119 idiomas.',
           '**ALLaM 34B (HUMAIN/SDAIA, Arabia Saudí):** Modelo nacional saudí, impulsa HUMAIN Chat. Licencia de investigación/no comercial para acceso público. Disponible en Microsoft Azure AI (variante 7B).',
@@ -1231,8 +1235,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Soberanía de datos:** Ejecutar NLP árabe localmente mantiene los datos personales dentro de las fronteras nacionales, en línea con la PDPL de EAU, la NDMO de Arabia Saudí y los objetivos de soberanía de datos del Golfo.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Jais 30B (Apache 2.0, Abu Dabi) y Falcon-H1-Arabic 7B (TII, Abu Dabi) son los mejores LLM locales nativos en árabe en 2026, con Qwen3-8B liderando los benchmarks multilingües de árabe para hardware de consumidor.' },
-          { type: 'plain-terms', text: 'La mejor IA árabe que puedes ejecutar en tu propio servidor: Jais 30B para la mejor calidad en árabe (necesita una GPU de gama alta), Falcon-H1-Arabic 7B para computadoras normales, o Qwen3-8B si también necesitas otros idiomas.' },
+          { type: 'one-sentence', text: 'Jais 3 (Apache 2.0, Abu Dabi, lanzado en octubre de 2026) y Falcon-H1-Arabic 7B (TII, Abu Dabi) son los mejores LLM locales nativos en árabe en 2026, con Qwen3-8B liderando los benchmarks multilingües de árabe para hardware de consumidor.' },
+          { type: 'plain-terms', text: 'La mejor IA árabe que puedes ejecutar en tu propio servidor: Jais 3 para la mejor calidad en árabe (la versión de 32B necesita una GPU de gama alta, la de 7B funciona en una GPU gaming normal), Falcon-H1-Arabic 7B para computadoras normales, o Qwen3-8B si también necesitas otros idiomas.' },
         ],
       },
       whyArabicMatters: {
@@ -1250,9 +1254,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Mejores LLM locales en árabe: clasificación para despliegue on-premise',
         content: 'Clasificados por capacidad en lengua árabe e idoneidad para despliegue local/on-premise.',
         image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
-        imageCaption: 'Árbol de decisión para elegir un LLM local en árabe: Jais 30B para la mejor calidad en árabe (~19-20 GB de VRAM), Falcon-H1-Arabic 7B para GPU de consumo (~5 GB), Qwen3-8B para uso multilingüe (~5-6 GB) o Llama 3.1-8B como opción base multilingüe.',
+        imageCaption: 'Árbol de decisión para elegir un LLM local en árabe: Jais-3-32B para la mejor calidad en árabe (~19-20 GB de VRAM), Jais-3-7B o Falcon-H1-Arabic 7B para GPU de consumo (~5-6 GB), Qwen3-8B para uso multilingüe (~5-6 GB) o Llama 3.1-8B como opción base multilingüe.',
         items: [
-          '**1. Jais 30B — Mejor calidad en árabe (Apache 2.0, listo para on-premise).** Desarrollador: Core42 / Inception AI (grupo G42, Abu Dabi) + investigación de MBZUAI + entrenamiento de Cerebras. Entrenamiento: 126B tokens en árabe + 251B tokens en inglés + 50B tokens de código. La evaluación humana muestra que Jais 30B supera a Jais 13B en árabe en el 96% de las evaluaciones. Licencia: Apache 2.0 (totalmente abierta, uso comercial permitido). Hugging Face: inceptionai/jais-30b-v3. VRAM: estimación ~18-20 GB Q4 (GPU empresarial o multi-GPU para FP16). Mejor para: la más alta calidad en árabe en procesamiento de documentos empresariales, atención al cliente y despliegues gubernamentales donde el árabe es primario.',
+          '**1. Jais 3 (7B / 32B) — Mejor calidad en árabe, generación más reciente (Apache 2.0, listo para on-premise).** Desarrollador: Institute of Foundation Models (IFM) de MBZUAI + Inception42, con Cerebras Systems (Abu Dabi). Lanzado el 16 de octubre de 2026, sustituyendo al anterior Jais 30B como la línea insignia de modelos árabes. Gama: seis modelos desde 0.9B hasta un modelo insignia MoE de 375B (23B activos); Jais-3-7B y Jais-3-32B son las opciones de tamaño adecuado para on-premise. Licencia: Apache 2.0 en los seis modelos de lenguaje. Hugging Face: inception42/Jais-3-7B, inception42/Jais-3-32B. Contexto: hasta 512K tokens. MBZUAI e Inception42 informan que Jais-3-7B y Jais-3-32B logran las puntuaciones medias en árabe más altas entre modelos abiertos de tamaño comparable en su propio conjunto de benchmarks (Arabic MMLU, AraGen v3, Belebele, identificación de dialecto QADI) — datos reportados por los desarrolladores, no verificados de forma independiente. VRAM: Jais-3-7B en GGUF a Q4_K_M ~5.6 GB (confirmado a partir de los archivos GGUF publicados); Jais-3-32B ~19-20 GB estimado a Q4. Mejor para: la más alta calidad en árabe en procesamiento de documentos empresariales, atención al cliente y despliegues gubernamentales donde el árabe es primario.',
           '**2. Falcon-H1-Arabic 7B — Mejor para hardware de consumidor (TII Abu Dabi).** Desarrollador: Technology Innovation Institute (TII), Abu Dabi (bajo el Advanced Technology Research Council). Base: arquitectura híbrida Falcon-H1 (lanzada el 5 de enero de 2026). Entrenamiento: datasets de árabe nativo (no traducido), MSA y dialectos regionales. Licencia: Falcon LLM License — permisiva, uso comercial permitido. VRAM: Q4_K_M ~5 GB — funciona en RTX 4060 8GB, RTX 3060 12GB y equivalentes. Benchmark: obtiene 71,47 % en el Open Arabic LLM Leaderboard (OALL) — la puntuación más alta entre los modelos árabes de clase ~10B, por delante de ALLaM-7B, Fanar-9B y Qwen3-8B, y sustituye al checkpoint original de Falcon Arabic basado en Falcon 3. Mejor para: despliegues en hardware de consumidor y prosumidor; un modelo nativo de EAU de una institución de Abu Dabi.',
           '**3. Qwen3-8B — Mejor opción multilingüe con fuerte árabe (Alibaba Cloud).** Desarrollador: Alibaba Cloud. Idiomas: 119 idiomas y dialectos. Benchmark: Qwen3-235B-A22B obtuvo una media de 0.786 en HELM Arabic; se recomienda la variante 8B para hardware local. Licencia: Apache 2.0. VRAM: Q4_K_M ~5-6 GB. Mejor para: equipos que necesitan árabe + inglés + otros idiomas en un solo modelo; ampliamente soportado en Ollama (ollama pull qwen3:8b).',
           '**4. ALLaM 34B / 7B — Modelo nacional saudí (HUMAIN/SDAIA).** Desarrollador: SDAIA (Saudi Data and AI Authority) / HUMAIN (compañía nacional saudí de IA). Versiones: 7B (Hugging Face, acceso de investigación) y 34B (impulsa HUMAIN Chat). Azure: ALLaM-2-7B-Instruct disponible en Microsoft Azure AI desde septiembre de 2024. Licencia: investigación/no comercial para acceso público; licenciamiento empresarial vía HUMAIN. Mejor para: despliegues gubernamentales y empresariales saudíes; un modelo soberano alineado con la Vision 2030.',
@@ -1266,12 +1270,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Requisitos de VRAM para LLM locales en árabe',
         content: 'VRAM requerida por modelo y cuantización. Las filas marcadas con * son estimaciones por escalado de parámetros (no se encontró benchmark oficial). Verifica siempre con tu hardware específico antes del despliegue.',
         image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
-        imageCaption: 'Requisitos de VRAM de los LLM locales en árabe con cuantización Q4_K_M: Gemma 3 4B necesita ~3 GB, Falcon-H1-Arabic 7B y ALLaM 7B necesitan ~5 GB, Qwen3-8B necesita 5-6 GB, Jais 13B necesita 8-10 GB y Jais 30B necesita 19-20 GB de VRAM.',
+        imageCaption: 'Requisitos de VRAM de los LLM locales en árabe con cuantización Q4_K_M: Gemma 3 4B necesita ~3 GB, Falcon-H1-Arabic 7B, Jais-3-7B y ALLaM 7B necesitan ~5-6 GB, Qwen3-8B necesita 5-6 GB, y Jais-3-32B necesita 19-20 GB de VRAM.',
         columns: ['Modelo', 'Parámetros', 'VRAM Q4_K_M', 'VRAM FP16', 'Hardware mínimo'],
         rows: [
           { 'Modelo': 'Falcon-H1-Arabic', 'Parámetros': '7B', 'VRAM Q4_K_M': '~5 GB', 'VRAM FP16': '~16.7 GB', 'Hardware mínimo': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'Modelo': 'Jais 13B', 'Parámetros': '13B', 'VRAM Q4_K_M': '~8-10 GB*', 'VRAM FP16': '~26 GB*', 'Hardware mínimo': 'RTX 3090 24 GB (Q4)' },
-          { 'Modelo': 'Jais 30B', 'Parámetros': '30B', 'VRAM Q4_K_M': '~18-20 GB*', 'VRAM FP16': '~60 GB*', 'Hardware mínimo': 'RTX 4090 24 GB (Q4 justo), A100 40 GB (FP16)' },
+          { 'Modelo': 'Jais-3-7B', 'Parámetros': '7B', 'VRAM Q4_K_M': '~5.6 GB', 'VRAM FP16': '~18 GB', 'Hardware mínimo': 'RTX 4060 8 GB / RTX 3060 12 GB' },
+          { 'Modelo': 'Jais-3-32B', 'Parámetros': '32B', 'VRAM Q4_K_M': '~19-20 GB*', 'VRAM FP16': '~64 GB*', 'Hardware mínimo': 'RTX 4090 24 GB (Q4 justo), A100 40 GB (FP16)' },
           { 'Modelo': 'ALLaM', 'Parámetros': '7B', 'VRAM Q4_K_M': '~5 GB*', 'VRAM FP16': '~16 GB*', 'Hardware mínimo': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'Modelo': 'Fanar-2', 'Parámetros': '27B', 'VRAM Q4_K_M': '~16-17 GB*', 'VRAM FP16': '~54 GB*', 'Hardware mínimo': 'RTX 4090 24 GB (Q4)' },
           { 'Modelo': 'Qwen3', 'Parámetros': '8B', 'VRAM Q4_K_M': '~5-6 GB', 'VRAM FP16': '~16 GB', 'Hardware mínimo': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -1287,7 +1292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instala Ollama: curl -fsSL https://ollama.com/install.sh | sh (Linux) o descárgalo desde ollama.com (Windows/Mac). Soporta Falcon-H1-Arabic de forma nativa.',
           'Descarga y ejecuta Falcon-H1-Arabic 7B: ollama run hf.co/tiiuae/Falcon-H1-Arabic-7B-Instruct-GGUF — descarga de ~5 GB, se ejecuta automáticamente tras la descarga. Prueba el árabe con un prompt como "اكتب قصيدة عن أبوظبي" (Escribe un poema sobre Abu Dabi).',
           'Descarga Qwen3-8B para multilingüe: ollama pull qwen3:8b — descarga de ~5 GB. Fuerte árabe en contextos de MSA y dialecto.',
-          'Para Jais 30B: descárgalo desde Hugging Face (inceptionai/jais-30b-v3), conviértelo a GGUF con las herramientas de conversión de llama.cpp, cuantízalo a Q4_K_M y luego cárgalo con Ollama (ollama create jais-30b -f Modelfile) o el servidor de llama.cpp.',
+          'Para Jais-3-7B: los desarrolladores publican directamente los builds GGUF — ollama run hf.co/inception42/Jais-3-7B-GGUF (Q4_K_M ~5.6 GB). Para Jais-3-32B: descárgalo desde Hugging Face (inception42/Jais-3-32B), conviértelo a GGUF con las herramientas de conversión de llama.cpp si aún no hay un GGUF preconstruido, cuantízalo a Q4_K_M y luego cárgalo con Ollama o el servidor de llama.cpp.',
           'Inferencia en producción: usa vLLM para servir una API en árabe de alto rendimiento. vLLM soporta Falcon-H1-Arabic y Qwen3 de forma nativa. Exponlo mediante un endpoint compatible con OpenAI en localhost:8000.',
           'Consejo para prompts en árabe: especifica siempre el idioma — "أجب باللغة العربية الفصحى" (Responde en árabe estándar moderno). Para dialecto, incluye frases de ejemplo del dialecto objetivo en el system prompt.',
         ],
@@ -1311,15 +1316,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Puedo ejecutar un LLM en árabe en una laptop gaming normal?',
-            a: 'Sí, para modelos de clase 7B con cuantización Q4. Falcon-H1-Arabic 7B y Qwen3-8B requieren ~5-6 GB VRAM — la mayoría de las laptops gaming con una RTX 4060 (8 GB) o RTX 3060 (12 GB) pueden ejecutarlos. Jais 30B requiere una GPU de escritorio de gama alta (RTX 4090 24 GB) o una GPU empresarial con cuantización Q4.',
+            a: 'Sí, para modelos de clase 7B con cuantización Q4. Falcon-H1-Arabic 7B, Jais-3-7B y Qwen3-8B requieren ~5-6 GB VRAM — la mayoría de las laptops gaming con una RTX 4060 (8 GB) o RTX 3060 (12 GB) pueden ejecutarlos. Jais-3-32B requiere una GPU de escritorio de gama alta (RTX 4090 24 GB) o una GPU empresarial con cuantización Q4.',
           },
           {
             q: '¿Cuál es la diferencia entre Jais y Falcon-H1-Arabic?',
-            a: 'Ambos son modelos con capacidad en árabe originados en Abu Dabi. Jais (Core42/G42) es más grande (hasta 30B) y entrenado específicamente como bilingüe árabe-inglés con 126B tokens en árabe — optimizado para calidad en árabe a escala empresarial. Falcon-H1-Arabic es un modelo 7B de TII (una institución distinta de Abu Dabi) construido sobre la arquitectura híbrida Falcon-H1 más amplia — compatible con GPU de consumidor y parte del ecosistema de IA de EAU. Para la mejor calidad en árabe: Jais 30B. Para hardware de consumidor: Falcon-H1-Arabic 7B.',
+            a: 'Ambos son modelos con capacidad en árabe originados en Abu Dabi. Jais 3 (MBZUAI/Inception42) es la familia más nueva y más grande (hasta un modelo insignia MoE de 375B, con versiones densas de 7B y 32B para on-premise) y está entrenado específicamente para árabe a escala empresarial. Falcon-H1-Arabic es un modelo 7B de TII (una institución distinta de Abu Dabi) construido sobre la arquitectura híbrida Falcon-H1 más amplia — compatible con GPU de consumidor y parte del ecosistema de IA de EAU. Para la mejor calidad en árabe: Jais-3-32B. Para hardware de consumidor: Falcon-H1-Arabic 7B o Jais-3-7B.',
           },
           {
             q: '¿Soporta Qwen3 el árabe tan bien como los modelos dedicados al árabe?',
-            a: 'Qwen3 tiene un soporte general de árabe muy fuerte (119 idiomas, puntuación líder en HELM Arabic). Para despliegues empresariales puramente en árabe que requieren la mejor calidad absoluta en árabe, generalmente se prefiere Jais 30B. Para cargas de trabajo multilingües mixtas donde el árabe es uno de varios idiomas necesarios, Qwen3-8B suele ser la mejor opción por su amplitud y facilidad de despliegue.',
+            a: 'Qwen3 tiene un soporte general de árabe muy fuerte (119 idiomas, puntuación líder en HELM Arabic). Para despliegues empresariales puramente en árabe que requieren la mejor calidad absoluta en árabe, generalmente se prefiere Jais-3-32B. Para cargas de trabajo multilingües mixtas donde el árabe es uno de varios idiomas necesarios, Qwen3-8B suele ser la mejor opción por su amplitud y facilidad de despliegue.',
           },
           {
             q: '¿Qué es ALLaM y puedo usarlo comercialmente?',
@@ -1335,7 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es el mejor LLM en árabe para despliegues gubernamentales de EAU?',
-            a: 'Falcon-H1-Arabic 7B (de TII, Abu Dabi) y Jais 30B (de Core42/G42, Abu Dabi) son ambos modelos nativos de EAU con procedencia de instituciones de investigación afiliadas al gobierno de EAU. Para soberanía y auditabilidad, estas son las opciones más alineadas. Ambos pueden desplegarse on-premise sin que ningún dato salga de la infraestructura de EAU. Consulta nuestra [guía de soberanía de datos PDPL de EAU](/es/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
+            a: 'Falcon-H1-Arabic 7B (de TII, Abu Dabi) y Jais 3 (de MBZUAI/Inception42, Abu Dabi) son ambos modelos nativos de EAU con procedencia de instituciones de investigación afiliadas al gobierno de EAU. Para soberanía y auditabilidad, estas son las opciones más alineadas. Ambos pueden desplegarse on-premise sin que ningún dato salga de la infraestructura de EAU. Consulta nuestra [guía de soberanía de datos PDPL de EAU](/es/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
           },
           {
             q: '¿Cómo manejo el dialecto árabe del Golfo vs. MSA en los prompts?',
@@ -1343,11 +1348,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo hacer fine-tuning de Jais o Falcon-H1-Arabic con mis propios datos en árabe?',
-            a: 'Sí — ambos usan licencias abiertas (Apache 2.0 para Jais, Falcon LLM License para Falcon-H1-Arabic) que permiten el fine-tuning. Usa fine-tuning con LoRA o QLoRA con herramientas como Unsloth o la librería PEFT. El fine-tuning con datos en árabe específicos del dominio (legal, médico, financiero) mejora significativamente la calidad para casos de uso especializados. Mantén los datos de fine-tuning on-premise para el cumplimiento de la PDPL.',
+            a: 'Sí — ambos usan licencias abiertas (Apache 2.0 para Jais, Falcon LLM License para Falcon-H1-Arabic) que permiten el fine-tuning. Usa fine-tuning con LoRA o QLoRA con herramientas como Unsloth o la librería PEFT. El fine-tuning con datos en árabe específicos del dominio (legal, médico, financiero) mejora significativamente la calidad para casos de uso especializados. Mantén los datos de fine-tuning on-premise, lo que reduce el riesgo de transferencia transfronteriza bajo la PDPL — el cumplimiento total también depende de la base legal y las salvaguardas de tu organización.',
           },
           {
-            q: '¿Qué hardware necesito para ejecutar Jais 30B localmente?',
-            a: 'Con cuantización Q4_K_M, Jais 30B requiere un estimado de 18-20 GB VRAM (estimación — sin benchmark oficial). Una NVIDIA RTX 4090 (24 GB) puede ejecutarlo en Q4 con contexto moderado; una A100 40 GB lo maneja cómodamente en FP16. Para rendimiento en producción, se recomiendan dos RTX 4090 en modo multi-GPU o una sola A100/H100. Consulta nuestra [guía de calculadora de VRAM](/es/local-llms/vram-calculator-local-llm).',
+            q: '¿Qué hardware necesito para ejecutar Jais 3 localmente?',
+            a: 'Jais-3-7B solo necesita ~5.6 GB VRAM en GGUF Q4_K_M — cualquier RTX 4060 (8 GB) o superior lo ejecuta. Jais-3-32B requiere un estimado de 19-20 GB VRAM a Q4_K_M (estimación por escalado de parámetros — aún sin benchmark oficial). Una NVIDIA RTX 4090 (24 GB) puede ejecutar la versión de 32B en Q4 con contexto moderado; una A100 40 GB lo maneja cómodamente en FP16. Para rendimiento en producción, se recomiendan dos RTX 4090 en modo multi-GPU o una sola A100/H100. Consulta nuestra [guía de calculadora de VRAM](/es/local-llms/vram-calculator-local-llm).',
           },
         ],
       },
@@ -1369,8 +1374,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Technology Innovation Institute (TII) — anuncio de Falcon-H1-Arabic, January 5, 2026 — tii.ae',
           'Página del modelo Falcon-H1-Arabic en Hugging Face — huggingface.co/blog/tiiuae/falcon-h1-arabic',
-          'Core42 / Cerebras — nota de prensa de Jais 30B — cerebras.ai y g42.ai',
-          'Jais 30B en Hugging Face — huggingface.co/inceptionai/jais-30b-v3',
+          'MBZUAI Institute of Foundation Models / Inception42 — anuncio de lanzamiento de Jais 3, 16 de octubre de 2026 — mbzuai.ac.ae y wam.ae',
+          'Jais 3 en Hugging Face — huggingface.co/inception42/Jais-3-7B y huggingface.co/inception42/Jais-3-32B',
+          'Core42 / Cerebras — nota de prensa de Jais 30B (generación anterior) — cerebras.ai y g42.ai',
           'SDAIA / HUMAIN — anuncio de ALLaM 34B, mayo de 2025 — humain.ai',
           'ALLaM-2-7B en Microsoft Azure AI — techcommunity.microsoft.com (septiembre de 2024)',
           'QCRI / HBKU — Informe técnico "Fanar 2.0: Arabic Generative AI Stack" y ficha del modelo Fanar-2-27B-Instruct — arxiv.org/abs/2603.16397',
@@ -1385,16 +1391,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Mejores LLM locales en árabe: Jais, Falcon y ejecutar IA árabe on-premise (2026)',
-      'description': 'Jais 30B y Falcon-H1-Arabic 7B son los mejores LLM locales en árabe en 2026. Tabla de VRAM, guía de instalación y benchmarks de evaluación de calidad para el despliegue on-premise de IA árabe.',
+      'description': 'Jais 3 y Falcon-H1-Arabic 7B son los mejores LLM locales en árabe en 2026. Tabla de VRAM, guía de instalación y benchmarks de evaluación de calidad para el despliegue on-premise de IA árabe.',
       'url': 'https://www.promptquorum.com/es/local-llms/best-arabic-local-llms-2026',
       'datePublished': '2026-06-14',
-      'dateModified': '2026-08-28',
+      'dateModified': '2026-11-19',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
       'inLanguage': 'es',
       'about': [
-        { '@type': 'SoftwareApplication', 'name': 'Jais 30B' },
+        { '@type': 'SoftwareApplication', 'name': 'Jais 3' },
         { '@type': 'SoftwareApplication', 'name': 'Falcon-H1-Arabic' },
         { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
         { '@type': 'Thing', 'name': 'Arabic NLP' },
@@ -1407,16 +1413,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'es',
       'mainEntity': [
-        { '@type': 'Question', 'name': '¿Puedo ejecutar un LLM en árabe en una laptop gaming normal?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para modelos de clase 7B con cuantización Q4. Falcon-H1-Arabic 7B y Qwen3-8B requieren ~5-6 GB VRAM — la mayoría de las laptops gaming con una RTX 4060 (8 GB) o RTX 3060 (12 GB) pueden ejecutarlos. Jais 30B requiere una GPU de escritorio de gama alta (RTX 4090 24 GB) o una GPU empresarial con cuantización Q4.' } },
-        { '@type': 'Question', 'name': '¿Cuál es la diferencia entre Jais y Falcon-H1-Arabic?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ambos son modelos con capacidad en árabe originados en Abu Dabi. Jais (Core42/G42) es más grande (hasta 30B) y entrenado específicamente como bilingüe árabe-inglés con 126B tokens en árabe. Falcon-H1-Arabic es un modelo 7B de TII construido sobre la arquitectura híbrida Falcon-H1 — compatible con GPU de consumidor. Para la mejor calidad en árabe: Jais 30B. Para hardware de consumidor: Falcon-H1-Arabic 7B.' } },
-        { '@type': 'Question', 'name': '¿Soporta Qwen3 el árabe tan bien como los modelos dedicados al árabe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 tiene un soporte general de árabe muy fuerte (119 idiomas, puntuación líder en HELM Arabic). Para despliegues empresariales puramente en árabe que requieren la mejor calidad absoluta en árabe, generalmente se prefiere Jais 30B. Para cargas de trabajo multilingües mixtas, Qwen3-8B suele ser la mejor opción por su amplitud y facilidad de despliegue.' } },
+        { '@type': 'Question', 'name': '¿Puedo ejecutar un LLM en árabe en una laptop gaming normal?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para modelos de clase 7B con cuantización Q4. Falcon-H1-Arabic 7B, Jais-3-7B y Qwen3-8B requieren ~5-6 GB VRAM — la mayoría de las laptops gaming con una RTX 4060 (8 GB) o RTX 3060 (12 GB) pueden ejecutarlos. Jais-3-32B requiere una GPU de escritorio de gama alta (RTX 4090 24 GB) o una GPU empresarial con cuantización Q4.' } },
+        { '@type': 'Question', 'name': '¿Cuál es la diferencia entre Jais y Falcon-H1-Arabic?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ambos son modelos con capacidad en árabe originados en Abu Dabi. Jais 3 (MBZUAI/Inception42) es la familia más nueva y más grande (hasta un modelo insignia MoE de 375B, con versiones densas de 7B y 32B). Falcon-H1-Arabic es un modelo 7B de TII construido sobre la arquitectura híbrida Falcon-H1 — compatible con GPU de consumidor. Para la mejor calidad en árabe: Jais-3-32B. Para hardware de consumidor: Falcon-H1-Arabic 7B o Jais-3-7B.' } },
+        { '@type': 'Question', 'name': '¿Soporta Qwen3 el árabe tan bien como los modelos dedicados al árabe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 tiene un soporte general de árabe muy fuerte (119 idiomas, puntuación líder en HELM Arabic). Para despliegues empresariales puramente en árabe que requieren la mejor calidad absoluta en árabe, generalmente se prefiere Jais-3-32B. Para cargas de trabajo multilingües mixtas, Qwen3-8B suele ser la mejor opción por su amplitud y facilidad de despliegue.' } },
         { '@type': 'Question', 'name': '¿Qué es ALLaM y puedo usarlo comercialmente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ALLaM es una familia de LLM nacional saudí centrada en el árabe de SDAIA (ahora bajo la marca HUMAIN). Las versiones públicas (7B en Hugging Face, 7B en Azure AI) llevan licencias de investigación/no comerciales. Para uso comercial, contacta directamente a HUMAIN/SDAIA. ALLaM 34B impulsa la app nacional HUMAIN Chat pero tiene acceso público restringido.' } },
         { '@type': 'Question', 'name': '¿Cómo afecta la tokenización del árabe a la calidad del modelo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La escritura árabe requiere una tokenización adecuada para evitar errores a nivel de carácter. Los modelos entrenados de forma nativa en árabe (Jais, Falcon-H1-Arabic) usan tokenizadores optimizados para la morfología árabe. Los modelos multilingües generales pueden tokenizar el árabe de forma ineficiente, lo que provoca degradación de calidad en textos árabes complejos. Prueba con tus datos de entrada reales antes de producción.' } },
         { '@type': 'Question', 'name': '¿Pueden los LLM locales en árabe manejar documentos de derecha a izquierda (RTL)?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Los modelos generan texto en árabe en la dirección correcta de derecha a izquierda — los modelos producen árabe RTL correcto en Unicode. La interfaz de tu aplicación debe manejar el renderizado RTL (HTML dir="rtl", CSS direction:rtl). llama.cpp, Ollama y vLLM devuelven texto árabe Unicode correctamente; la capa de UI maneja la dirección.' } },
-        { '@type': 'Question', 'name': '¿Cuál es el mejor LLM en árabe para despliegues gubernamentales de EAU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (de TII, Abu Dabi) y Jais 30B (de Core42/G42, Abu Dabi) son ambos modelos nativos de EAU con procedencia de instituciones de investigación afiliadas al gobierno de EAU. Para soberanía y auditabilidad, estas son las opciones más alineadas. Ambos pueden desplegarse on-premise sin que ningún dato salga de la infraestructura de EAU.' } },
+        { '@type': 'Question', 'name': '¿Cuál es el mejor LLM en árabe para despliegues gubernamentales de EAU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (de TII, Abu Dabi) y Jais 3 (de MBZUAI/Inception42, Abu Dabi) son ambos modelos nativos de EAU con procedencia de instituciones de investigación afiliadas al gobierno de EAU. Para soberanía y auditabilidad, estas son las opciones más alineadas. Ambos pueden desplegarse on-premise sin que ningún dato salga de la infraestructura de EAU.' } },
         { '@type': 'Question', 'name': '¿Cómo manejo el dialecto árabe del Golfo vs. MSA en los prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'System prompt por defecto: responde en árabe estándar moderno. Para árabe del Golfo (emiratí, saudí, kuwaití), añade frases de ejemplo del dialecto en tu system prompt o haz fine-tuning con datos de dominio. Todos los modelos listados manejan bien el MSA; la calidad del dialecto varía. Prueba con 5-10 consultas de ejemplo en dialecto antes de asumir calidad de producción.' } },
-        { '@type': 'Question', 'name': '¿Puedo hacer fine-tuning de Jais o Falcon-H1-Arabic con mis propios datos en árabe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí — ambos usan licencias abiertas (Apache 2.0 para Jais, Falcon LLM License para Falcon-H1-Arabic) que permiten el fine-tuning. Usa LoRA o QLoRA con herramientas como Unsloth o la librería PEFT. El fine-tuning con datos en árabe específicos del dominio mejora significativamente la calidad. Mantén los datos de fine-tuning on-premise para el cumplimiento de la PDPL.' } },
-        { '@type': 'Question', 'name': '¿Qué hardware necesito para ejecutar Jais 30B localmente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Con cuantización Q4_K_M, Jais 30B requiere un estimado de 18-20 GB VRAM (sin benchmark oficial). Una RTX 4090 (24 GB) puede ejecutarlo en Q4 con contexto moderado; una A100 40 GB lo maneja cómodamente en FP16. Para rendimiento en producción, se recomiendan dos RTX 4090 en modo multi-GPU o una sola A100/H100.' } },
+        { '@type': 'Question', 'name': '¿Puedo hacer fine-tuning de Jais o Falcon-H1-Arabic con mis propios datos en árabe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí — ambos usan licencias abiertas (Apache 2.0 para Jais, Falcon LLM License para Falcon-H1-Arabic) que permiten el fine-tuning. Usa LoRA o QLoRA con herramientas como Unsloth o la librería PEFT. El fine-tuning con datos en árabe específicos del dominio mejora significativamente la calidad. Mantén los datos de fine-tuning on-premise, lo que reduce el riesgo de transferencia transfronteriza bajo la PDPL — el cumplimiento total también depende de la base legal y las salvaguardas de tu organización.' } },
+        { '@type': 'Question', 'name': '¿Qué hardware necesito para ejecutar Jais 3 localmente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Jais-3-7B solo necesita ~5.6 GB VRAM en GGUF Q4_K_M. Jais-3-32B requiere un estimado de 19-20 GB VRAM a Q4_K_M (estimación, sin benchmark oficial). Una RTX 4090 (24 GB) puede ejecutar la versión de 32B en Q4 con contexto moderado; una A100 40 GB lo maneja cómodamente en FP16. Para rendimiento en producción, se recomiendan dos RTX 4090 en modo multi-GPU o una sola A100/H100.' } },
       ],
     },
     itemListSchema: {
@@ -1426,7 +1432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numberOfItems': 7,
       'inLanguage': 'es',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 30B', 'description': 'Mejor LLM local nativo en árabe. 126B tokens de entrenamiento en árabe, Apache 2.0, Core42/G42 Abu Dabi.' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 3', 'description': 'Mejor LLM local nativo en árabe, generación más reciente (octubre de 2026). Gama de 0.9B a 375B, Apache 2.0, MBZUAI/Inception42 Abu Dabi.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Falcon-H1-Arabic 7B', 'description': 'Mejor para hardware de consumidor. TII Abu Dabi. Q4_K_M ~5 GB VRAM. Falcon LLM License.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3-8B', 'description': 'Mejor opción multilingüe con fuerte árabe. Líder en HELM Arabic. Apache 2.0.' },
         { '@type': 'ListItem', 'position': 4, 'name': 'ALLaM 34B', 'description': 'Modelo nacional saudí en árabe (HUMAIN/SDAIA). Impulsa HUMAIN Chat. Licencia de investigación.' },
@@ -1440,26 +1446,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Meilleurs LLM locaux arabophones : Jais, Falcon et exécution de l\'IA arabe sur site (2026)',
     heroImage: '/images/best-arabic-local-llms-2026-overview-hero-fr.webp',
     seoTitle: 'Meilleurs LLM locaux arabophones 2026 : Jais, Falcon',
-    metaDescription: 'Jais 30B, Falcon-H1-Arabic 7B et Qwen3-8B : les meilleurs LLM locaux arabophones en 2026. Tableau VRAM, installation sur site et conseils d\'évaluation.',
-    intro: 'Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) et Falcon-H1-Arabic 7B (TII, Abu Dhabi) sont les meilleurs LLM locaux nativement arabophones en 2026. Pour les charges de travail multilingues générales avec un fort support arabe, Qwen3-8B domine les benchmarks HELM Arabic parmi les modèles dimensionnés pour le matériel grand public. Les trois s\'exécutent sur site avec Ollama ou vLLM, en gardant les données en langue arabe à l\'intérieur des frontières nationales. Ce guide classe les modèles, fournit un tableau VRAM et montre comment déployer et évaluer l\'IA arabe en local.',
+    metaDescription: 'Jais 3, Falcon-H1-Arabic 7B et Qwen3-8B : les meilleurs LLM locaux arabophones en 2026. Tableau VRAM, installation sur site et conseils d\'évaluation.',
+    intro: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi, Apache 2.0), sorti en octobre 2026, et Falcon-H1-Arabic 7B (TII, Abu Dhabi) sont les meilleurs LLM locaux nativement arabophones en 2026. Pour les charges de travail multilingues générales avec un fort support arabe, Qwen3-8B domine les benchmarks HELM Arabic parmi les modèles dimensionnés pour le matériel grand public. Les trois s\'exécutent sur site avec Ollama ou vLLM, en gardant les données en langue arabe à l\'intérieur des frontières nationales. Ce guide classe les modèles, fournit un tableau VRAM et montre comment déployer et évaluer l\'IA arabe en local.',
     designSkin: 'hub',
     theme: 'Best Models',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-14',
+    next_refresh_due: '2027-05-19',
     publishDate: '2026-06-14',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'Entreprises arabophones, développeurs du Golfe et équipes déployant le NLP arabe en local',
     readTime: '13 min de lecture',
     primaryTerm: 'LLM local arabophone',
     affiliateDisclosure: false,
-    leadAnswerBlock: '**Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) et Falcon-H1-Arabic 7B (TII Abu Dhabi) sont les meilleurs LLM locaux nativement arabophones en 2026. Pour les charges de travail multilingues générales avec un fort support arabe, Qwen3-8B domine les benchmarks HELM Arabic parmi les modèles dimensionnés pour le matériel grand public. Les trois s\'exécutent sur site avec Ollama ou vLLM, en gardant les données personnelles en langue arabe à l\'intérieur des frontières nationales.**',
+    leadAnswerBlock: '**Jais 3 (MBZUAI/Inception42, Abu Dhabi, Apache 2.0), sorti en octobre 2026, et Falcon-H1-Arabic 7B (TII Abu Dhabi) sont les meilleurs LLM locaux nativement arabophones en 2026. Pour les charges de travail multilingues générales avec un fort support arabe, Qwen3-8B domine les benchmarks HELM Arabic parmi les modèles dimensionnés pour le matériel grand public. Les trois s\'exécutent sur site avec Ollama ou vLLM, en gardant les données personnelles en langue arabe à l\'intérieur des frontières nationales.**',
     quickAnswerTop: {
       en: {
         question: 'What is the best Arabic local LLM in 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) is the strongest Arabic-native local LLM in 2026, trained on 126B Arabic tokens with Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), released October 2026, is the strongest Arabic-native local LLM in 2026, available in sizes from 0.9B to 32B under Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
         bullets: [
-          'Jais 30B: best Arabic-native model, 126B Arabic training tokens, Apache 2.0, needs ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): best Arabic-native model, released October 2026 by MBZUAI/Inception42, Apache 2.0, 32B needs ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, consumer GPU friendly',
           'Qwen3-8B: best multilingual option with strong Arabic, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Saudi national model, powers HUMAIN Chat; research license',
@@ -1469,9 +1475,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ar: {
         question: 'ما أفضل نموذج ذكاء اصطناعي عربي محلي في 2026؟',
-        answer: 'Jais 30B (Core42/G42، أبوظبي) هو أقوى نموذج محلي عربي أصيل في 2026، مُدرَّب على 126 مليار رمز عربي بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42، أبوظبي)، الذي صدر في أكتوبر 2026، هو أقوى نموذج محلي عربي أصيل في 2026، ويتوفر بأحجام من 0.9B إلى 32B بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
         bullets: [
-          'Jais 30B: أفضل نموذج عربي أصيل، 126 مليار رمز تدريب عربي، Apache 2.0، يحتاج ~18-20 GB VRAM عند Q4',
+          'Jais 3 (7B/32B): أفضل نموذج عربي أصيل، صدر في أكتوبر 2026 من MBZUAI/Inception42، Apache 2.0، يحتاج إصدار 32B إلى ~19-20 GB VRAM عند Q4',
           'Falcon-H1-Arabic 7B: مؤسسة الابتكار التقني أبوظبي، Q4_K_M ~5 GB VRAM، مناسب لـ GPU المستهلكين',
           'Qwen3-8B: أفضل خيار متعدد اللغات مع دعم عربي قوي، ~5-6 GB VRAM عند Q4',
           'ALLaM 34B (HUMAIN/SDAIA): النموذج الوطني السعودي، يُشغِّل تطبيق HUMAIN Chat؛ ترخيص بحثي',
@@ -1481,9 +1487,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Was ist das beste arabische lokale LLM im Jahr 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) ist das stärkste arabisch-native lokale LLM im Jahr 2026, trainiert auf 126 Milliarden arabischen Tokens mit Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), veröffentlicht im Oktober 2026, ist das stärkste arabisch-native lokale LLM im Jahr 2026, verfügbar in Größen von 0,9B bis 32B unter Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
         bullets: [
-          'Jais 30B: bestes arabisch-natives Modell, 126 Mrd. arabische Trainings-Tokens, Apache 2.0, benötigt ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): bestes arabisch-natives Modell, veröffentlicht im Oktober 2026 von MBZUAI/Inception42, Apache 2.0, 32B benötigt ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, Consumer-GPU-kompatibel',
           'Qwen3-8B: bester multilingualer Ansatz mit starkem Arabisch, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Nationales saudi-arabisches Modell; Forschungslizenz',
@@ -1493,9 +1499,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor LLM local árabe en 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dabi) es el LLM local árabe nativo más potente en 2026, entrenado con 126B tokens en árabe con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dabi), lanzado en octubre de 2026, es el LLM local árabe nativo más potente en 2026, disponible en tamaños de 0.9B a 32B con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
         bullets: [
-          'Jais 30B: mejor modelo árabe nativo, 126B tokens de entrenamiento en árabe, Apache 2.0, necesita ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): mejor modelo árabe nativo, lanzado en octubre de 2026 por MBZUAI/Inception42, Apache 2.0, la versión 32B necesita ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dabi, Q4_K_M ~5 GB VRAM, compatible con GPU de consumidor',
           'Qwen3-8B: mejor opción multilingüe con fuerte soporte árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudí; licencia de investigación',
@@ -1505,9 +1511,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM local arabophone en 2026 ?',
-        answer: 'Jais 30B (Core42/G42, Abou Dabi) est le LLM local arabophone natif le plus puissant en 2026, entraîné sur 126 milliards de tokens arabes avec licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abou Dabi), sorti en octobre 2026, est le LLM local arabophone natif le plus puissant en 2026, disponible en tailles de 0,9B à 32B sous licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
         bullets: [
-          'Jais 30B : meilleur modèle arabophone natif, 126 milliards de tokens arabes, Apache 2.0, nécessite ~18-20 Go VRAM Q4',
+          'Jais 3 (7B/32B) : meilleur modèle arabophone natif, sorti en octobre 2026 par MBZUAI/Inception42, Apache 2.0, la version 32B nécessite ~19-20 Go VRAM Q4',
           'Falcon-H1-Arabic 7B : TII Abou Dabi, Q4_K_M ~5 Go VRAM, compatible GPU grand public',
           'Qwen3-8B : meilleure option multilingue avec fort support arabe, ~5-6 Go VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA) : modèle national saoudien ; licence recherche',
@@ -1517,9 +1523,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年のベストなアラビア語対応ローカルLLMは？',
-        answer: 'Jais 30B（Core42/G42、アブダビ）は2026年で最も優れたアラビア語ネイティブのローカルLLMです。1,260億のアラビア語トークンで訓練され、Apache 2.0ライセンスで利用可能。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
+        answer: 'Jais 3（MBZUAI/Inception42、アブダビ）は2026年10月にリリースされ、2026年で最も優れたアラビア語ネイティブのローカルLLMです。0.9Bから32Bまでのサイズで利用可能、Apache 2.0ライセンス。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
         bullets: [
-          'Jais 30B: アラビア語ネイティブ最強、1,260億アラビア語トークン、Apache 2.0、Q4で ~18-20 GB VRAM',
+          'Jais 3（7B/32B）: アラビア語ネイティブ最強、2026年10月にMBZUAI/Inception42がリリース、Apache 2.0、32Bは ~19-20 GB VRAM（Q4）が必要',
           'Falcon-H1-Arabic 7B: TII アブダビ、Q4_K_M ~5 GB VRAM、コンシューマーGPU対応',
           'Qwen3-8B: アラビア語サポートが強い多言語ベストオプション、Q4 ~5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）: サウジ国家モデル、リサーチライセンス',
@@ -1529,9 +1535,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pt: {
         question: 'Qual é o melhor LLM local árabe em 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) é o LLM local árabe nativo mais poderoso em 2026, treinado com 126B tokens em árabe com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), lançado em outubro de 2026, é o LLM local árabe nativo mais poderoso em 2026, disponível em tamanhos de 0,9B a 32B com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
         bullets: [
-          'Jais 30B: melhor modelo árabe nativo, 126B tokens de treinamento em árabe, Apache 2.0, requer ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): melhor modelo árabe nativo, lançado em outubro de 2026 pela MBZUAI/Inception42, Apache 2.0, a versão 32B precisa de ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, compatível com GPU de consumidor',
           'Qwen3-8B: melhor opção multilíngue com forte suporte ao árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudita; licença de pesquisa',
@@ -1541,9 +1547,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年最佳阿拉伯语本地LLM是什么？',
-        answer: 'Jais 30B（Core42/G42，阿布扎比）是2026年最强的阿拉伯语原生本地LLM，使用1260亿阿拉伯语token训练，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
+        answer: 'Jais 3（MBZUAI/Inception42，阿布扎比）于2026年10月发布，是2026年最强的阿拉伯语原生本地LLM，提供从0.9B到32B的多种尺寸，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
         bullets: [
-          'Jais 30B：最佳阿拉伯语原生模型，1260亿阿拉伯语训练token，Apache 2.0，Q4需约18-20 GB VRAM',
+          'Jais 3（7B/32B）：最佳阿拉伯语原生模型，2026年10月由MBZUAI/Inception42发布，Apache 2.0，32B版本需约19-20 GB VRAM（Q4）',
           'Falcon-H1-Arabic 7B：TII阿布扎比，Q4_K_M约5 GB VRAM，兼容消费级GPU',
           'Qwen3-8B：具有强阿拉伯语支持的最佳多语言选项，Q4约5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）：沙特国家模型；研究许可证',
@@ -1553,9 +1559,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ko: {
         question: '2026년 최고의 아랍어 로컬 LLM은 무엇입니까?',
-        answer: 'Jais 30B(Core42/G42, 아부다비)는 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 1,260억 개의 아랍어 토큰으로 훈련되었으며 Apache 2.0 라이선스를 제공합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
+        answer: 'Jais 3(MBZUAI/Inception42, 아부다비)는 2026년 10월 출시되어 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 0.9B부터 32B까지 다양한 크기로 제공되며 Apache 2.0 라이선스를 적용합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
         bullets: [
-          'Jais 30B: 최고의 아랍어 네이티브 모델, 아랍어 훈련 토큰 1,260억 개, Apache 2.0, Q4 ~18-20 GB VRAM 필요',
+          'Jais 3(7B/32B): 최고의 아랍어 네이티브 모델, 2026년 10월 MBZUAI/Inception42 출시, Apache 2.0, 32B 버전은 ~19-20 GB VRAM(Q4) 필요',
           'Falcon-H1-Arabic 7B: TII 아부다비, Q4_K_M ~5 GB VRAM, 소비자 GPU 호환',
           'Qwen3-8B: 강력한 아랍어 지원을 갖춘 최고의 다국어 옵션, Q4 ~5-6 GB VRAM',
           'ALLaM 34B(HUMAIN/SDAIA): 사우디 국가 모델; 연구 라이선스',
@@ -1580,7 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Jais 30B (Core42/G42, Abu Dhabi) :** Meilleur LLM local nativement arabophone en 2026. Entraîné sur 126B tokens arabes + 251B tokens anglais. Licence Apache 2.0. Nécessite ~18-20 GB VRAM en quantification Q4 (multi-GPU ou GPU entreprise pour le FP16 complet).',
+          '**Jais 3 (MBZUAI/Inception42, Abu Dhabi) :** Meilleur LLM local nativement arabophone en 2026, sorti en octobre 2026 pour succéder à l\'ancien Jais 30B. Six modèles, de 0,9B à un modèle MoE phare de 375B. Licence Apache 2.0. La version 32B nécessite ~19-20 GB VRAM en quantification Q4 (GPU entreprise) ; la version 7B seulement ~5,6 GB (GGUF Q4_K_M).',
           '**Falcon-H1-Arabic 7B (TII, Abu Dhabi) :** Modèle natif des Émirats axé sur l\'arabe. Fonctionne sur des GPU grand public : Q4_K_M ~5 GB VRAM. Construit sur l\'architecture hybride Falcon-H1, entraîné sur des jeux de données arabes natifs (non traduits).',
           '**Qwen3-8B (Alibaba Cloud) :** Meilleure option multilingue avec un fort support arabe. Moyenne de 0,786 sur HELM Arabic (variante 235B) ; la version 8B tient en Q4 dans ~5-6 GB VRAM. Support de 119 langues.',
           '**ALLaM 34B (HUMAIN/SDAIA, Arabie saoudite) :** Modèle national saoudien, propulse HUMAIN Chat. Licence recherche/non commerciale pour l\'accès public. Disponible sur Microsoft Azure AI (variante 7B).',
@@ -1590,8 +1596,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Souveraineté des données :** Exécuter le NLP arabe en local garde les données personnelles à l\'intérieur des frontières nationales — conforme à l\'UAE PDPL, au NDMO saoudien et aux objectifs de souveraineté des données du Golfe.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Jais 30B (Apache 2.0, Abu Dhabi) et Falcon-H1-Arabic 7B (TII, Abu Dhabi) sont les meilleurs LLM locaux nativement arabophones en 2026, Qwen3-8B dominant les benchmarks arabes multilingues pour le matériel grand public.' },
-          { type: 'plain-terms', text: 'La meilleure IA arabe que vous pouvez exécuter sur votre propre serveur : Jais 30B pour la meilleure qualité arabe (nécessite un GPU haut de gamme), Falcon-H1-Arabic 7B pour les ordinateurs ordinaires, ou Qwen3-8B si vous avez aussi besoin d\'autres langues.' },
+          { type: 'one-sentence', text: 'Jais 3 (Apache 2.0, Abu Dhabi, sorti en octobre 2026) et Falcon-H1-Arabic 7B (TII, Abu Dhabi) sont les meilleurs LLM locaux nativement arabophones en 2026, Qwen3-8B dominant les benchmarks arabes multilingues pour le matériel grand public.' },
+          { type: 'plain-terms', text: 'La meilleure IA arabe que vous pouvez exécuter sur votre propre serveur : Jais 3 pour la meilleure qualité arabe (la version 32B nécessite un GPU haut de gamme, la version 7B fonctionne sur un GPU de jeu ordinaire), Falcon-H1-Arabic 7B pour les ordinateurs ordinaires, ou Qwen3-8B si vous avez aussi besoin d\'autres langues.' },
         ],
       },
       whyArabicMatters: {
@@ -1609,9 +1615,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Meilleurs LLM locaux arabophones : classés pour le déploiement sur site',
         content: 'Classés par capacité en langue arabe et adéquation au déploiement local/sur site.',
         image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
-        imageCaption: 'Arbre de décision pour choisir un LLM local arabophone : Jais 30B pour la meilleure qualité en arabe (~19-20 Go de VRAM), Falcon-H1-Arabic 7B pour GPU grand public (~5 Go), Qwen3-8B pour un usage multilingue (~5-6 Go), ou Llama 3.1-8B comme base multilingue polyvalente.',
+        imageCaption: 'Arbre de décision pour choisir un LLM local arabophone : Jais-3-32B pour la meilleure qualité en arabe (~19-20 Go de VRAM), Jais-3-7B ou Falcon-H1-Arabic 7B pour GPU grand public (~5-6 Go), Qwen3-8B pour un usage multilingue (~5-6 Go), ou Llama 3.1-8B comme base multilingue polyvalente.',
         items: [
-          '**1. Jais 30B — Meilleure qualité arabe (Apache 2.0, prêt pour le sur site).** Développeur : Core42 / Inception AI (groupe G42, Abu Dhabi) + recherche MBZUAI + entraînement Cerebras. Entraînement : 126B tokens arabes + 251B tokens anglais + 50B tokens de code. L\'évaluation humaine montre que Jais 30B surpasse Jais 13B en arabe dans 96% des évaluations. Licence : Apache 2.0 (entièrement ouverte, usage commercial autorisé). Hugging Face : inceptionai/jais-30b-v3. VRAM : estimation ~18-20 GB Q4 (GPU entreprise ou multi-GPU pour le FP16). Idéal pour : la plus haute qualité arabe dans le traitement documentaire d\'entreprise, le support client et les déploiements gouvernementaux où l\'arabe est primordial.',
+          '**1. Jais 3 (7B / 32B) — Meilleure qualité arabe, dernière génération (Apache 2.0, prêt pour le sur site).** Développeur : Institute of Foundation Models (IFM) de la MBZUAI + Inception42, avec Cerebras Systems (Abu Dhabi). Sorti le 16 octobre 2026, remplaçant l\'ancien Jais 30B comme gamme phare pour l\'arabe. Gamme : six modèles, de 0,9B à un modèle MoE phare de 375B (23B actifs) ; Jais-3-7B et Jais-3-32B sont les tailles adaptées au sur site. Licence : Apache 2.0 pour les six modèles de langage. Hugging Face : inception42/Jais-3-7B, inception42/Jais-3-32B. Contexte : jusqu\'à 512K tokens. MBZUAI et Inception42 indiquent que Jais-3-7B et Jais-3-32B obtiennent les meilleurs scores arabes moyens parmi les modèles ouverts de taille comparable sur leur propre suite de benchmarks (Arabic MMLU, AraGen v3, Belebele, identification de dialecte QADI) — des chiffres communiqués par les développeurs, non vérifiés de façon indépendante. VRAM : Jais-3-7B en GGUF à Q4_K_M ~5,6 Go (confirmé à partir des fichiers GGUF publiés) ; Jais-3-32B ~19-20 Go estimé à Q4. Idéal pour : la plus haute qualité arabe dans le traitement documentaire d\'entreprise, le support client et les déploiements gouvernementaux où l\'arabe est primordial.',
           '**2. Falcon-H1-Arabic 7B — Idéal pour le matériel grand public (TII Abu Dhabi).** Développeur : Technology Innovation Institute (TII), Abu Dhabi (sous l\'Advanced Technology Research Council). Base : architecture hybride Falcon-H1 (publiée le 5 janvier 2026). Entraînement : jeux de données arabes natifs (non traduits), MSA et dialectes régionaux. Licence : Falcon LLM License — permissive, usage commercial autorisé. VRAM : Q4_K_M ~5 GB — fonctionne sur RTX 4060 8GB, RTX 3060 12GB et équivalents. Benchmark : atteint 71,47 % sur l\'Open Arabic LLM Leaderboard (OALL) — le meilleur score parmi les modèles arabes de classe ~10B, devant ALLaM-7B, Fanar-9B et Qwen3-8B, et remplace le checkpoint Falcon Arabic original basé sur Falcon 3. Idéal pour : les déploiements sur matériel grand public et prosommateur ; un modèle natif des Émirats issu d\'une institution d\'Abu Dhabi.',
           '**3. Qwen3-8B — Meilleure option multilingue avec un fort support arabe (Alibaba Cloud).** Développeur : Alibaba Cloud. Langues : 119 langues et dialectes. Benchmark : Qwen3-235B-A22B a obtenu une moyenne de 0,786 sur HELM Arabic ; la variante 8B est recommandée pour le matériel local. Licence : Apache 2.0. VRAM : Q4_K_M ~5-6 GB. Idéal pour : les équipes ayant besoin d\'arabe + anglais + autres langues dans un seul modèle ; largement pris en charge dans Ollama (ollama pull qwen3:8b).',
           '**4. ALLaM 34B / 7B — Modèle national saoudien (HUMAIN/SDAIA).** Développeur : SDAIA (Saudi Data and AI Authority) / HUMAIN (entreprise nationale saoudienne d\'IA). Versions : 7B (Hugging Face, accès recherche) et 34B (propulse HUMAIN Chat). Azure : ALLaM-2-7B-Instruct disponible sur Microsoft Azure AI depuis septembre 2024. Licence : recherche/non commerciale pour l\'accès public ; licence entreprise via HUMAIN. Idéal pour : les déploiements gouvernementaux et d\'entreprise saoudiens ; un modèle souverain aligné sur Vision 2030.',
@@ -1625,12 +1631,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Besoins en VRAM des LLM locaux arabophones',
         content: 'VRAM requise par modèle et quantification. Les lignes marquées * sont des estimations basées sur la mise à l\'échelle des paramètres (aucun benchmark officiel trouvé). Vérifiez toujours avec votre matériel spécifique avant le déploiement.',
         image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
-        imageCaption: 'Besoins en VRAM des LLM locaux arabophones en quantification Q4_K_M : Gemma 3 4B nécessite ~3 Go, Falcon-H1-Arabic 7B et ALLaM 7B nécessitent ~5 Go, Qwen3-8B nécessite 5-6 Go, Jais 13B nécessite 8-10 Go et Jais 30B nécessite 19-20 Go de VRAM.',
+        imageCaption: 'Besoins en VRAM des LLM locaux arabophones en quantification Q4_K_M : Gemma 3 4B nécessite ~3 Go, Falcon-H1-Arabic 7B, Jais-3-7B et ALLaM 7B nécessitent ~5-6 Go, Qwen3-8B nécessite 5-6 Go, et Jais-3-32B nécessite 19-20 Go de VRAM.',
         columns: ['Modèle', 'Paramètres', 'VRAM Q4_K_M', 'VRAM FP16', 'Matériel minimal'],
         rows: [
           { 'Modèle': 'Falcon-H1-Arabic', 'Paramètres': '7B', 'VRAM Q4_K_M': '~5 GB', 'VRAM FP16': '~16.7 GB', 'Matériel minimal': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'Modèle': 'Jais 13B', 'Paramètres': '13B', 'VRAM Q4_K_M': '~8-10 GB*', 'VRAM FP16': '~26 GB*', 'Matériel minimal': 'RTX 3090 24 GB (Q4)' },
-          { 'Modèle': 'Jais 30B', 'Paramètres': '30B', 'VRAM Q4_K_M': '~18-20 GB*', 'VRAM FP16': '~60 GB*', 'Matériel minimal': 'RTX 4090 24 GB (Q4 juste), A100 40 GB (FP16)' },
+          { 'Modèle': 'Jais-3-7B', 'Paramètres': '7B', 'VRAM Q4_K_M': '~5,6 GB', 'VRAM FP16': '~18 GB', 'Matériel minimal': 'RTX 4060 8 GB / RTX 3060 12 GB' },
+          { 'Modèle': 'Jais-3-32B', 'Paramètres': '32B', 'VRAM Q4_K_M': '~19-20 GB*', 'VRAM FP16': '~64 GB*', 'Matériel minimal': 'RTX 4090 24 GB (Q4 juste), A100 40 GB (FP16)' },
           { 'Modèle': 'ALLaM', 'Paramètres': '7B', 'VRAM Q4_K_M': '~5 GB*', 'VRAM FP16': '~16 GB*', 'Matériel minimal': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'Modèle': 'Fanar-2', 'Paramètres': '27B', 'VRAM Q4_K_M': '~16-17 GB*', 'VRAM FP16': '~54 GB*', 'Matériel minimal': 'RTX 4090 24 GB (Q4)' },
           { 'Modèle': 'Qwen3', 'Paramètres': '8B', 'VRAM Q4_K_M': '~5-6 GB', 'VRAM FP16': '~16 GB', 'Matériel minimal': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -1646,7 +1653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installez Ollama : curl -fsSL https://ollama.com/install.sh | sh (Linux) ou téléchargez depuis ollama.com (Windows/Mac). Prend en charge Falcon-H1-Arabic nativement.',
           'Téléchargez et exécutez Falcon-H1-Arabic 7B : ollama run hf.co/tiiuae/Falcon-H1-Arabic-7B-Instruct-GGUF — téléchargement ~5 Go, démarre automatiquement après le téléchargement. Testez l\'arabe avec une invite comme « اكتب قصيدة عن أبوظبي » (Écris un poème sur Abu Dhabi).',
           'Téléchargez Qwen3-8B pour le multilingue : ollama pull qwen3:8b — téléchargement ~5 GB. Arabe solide dans les contextes MSA et dialectaux.',
-          'Pour Jais 30B : téléchargez depuis Hugging Face (inceptionai/jais-30b-v3), convertissez en GGUF avec les outils de conversion llama.cpp, quantifiez en Q4_K_M, puis chargez avec Ollama (ollama create jais-30b -f Modelfile) ou le serveur llama.cpp.',
+          'Pour Jais-3-7B : les builds GGUF sont publiés directement par les développeurs — ollama run hf.co/inception42/Jais-3-7B-GGUF (Q4_K_M ~5,6 Go). Pour Jais-3-32B : téléchargez depuis Hugging Face (inception42/Jais-3-32B), convertissez en GGUF avec les outils de conversion llama.cpp si aucun GGUF préconstruit n\'est encore disponible, quantifiez en Q4_K_M, puis chargez avec Ollama ou le serveur llama.cpp.',
           'Inférence en production : utilisez vLLM pour servir une API arabe à haut débit. vLLM prend en charge Falcon-H1-Arabic et Qwen3 nativement. Exposez via un endpoint compatible OpenAI sur localhost:8000.',
           'Astuce pour les invites en arabe : spécifiez toujours la langue — « أجب باللغة العربية الفصحى » (Réponds en arabe standard moderne). Pour le dialecte, incluez des exemples de phrases du dialecte cible dans le system prompt.',
         ],
@@ -1670,15 +1677,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Puis-je exécuter un LLM arabe sur un ordinateur portable de jeu ordinaire ?',
-            a: 'Oui, pour les modèles de classe 7B en quantification Q4. Falcon-H1-Arabic 7B et Qwen3-8B nécessitent ~5-6 GB VRAM — la plupart des ordinateurs portables de jeu avec une RTX 4060 (8 GB) ou RTX 3060 (12 GB) peuvent les exécuter. Jais 30B nécessite un GPU de bureau haut de gamme (RTX 4090 24 GB) ou un GPU entreprise en quantification Q4.',
+            a: 'Oui, pour les modèles de classe 7B en quantification Q4. Falcon-H1-Arabic 7B, Jais-3-7B et Qwen3-8B nécessitent ~5-6 GB VRAM — la plupart des ordinateurs portables de jeu avec une RTX 4060 (8 GB) ou RTX 3060 (12 GB) peuvent les exécuter. Jais-3-32B nécessite un GPU de bureau haut de gamme (RTX 4090 24 GB) ou un GPU entreprise en quantification Q4.',
           },
           {
             q: 'Quelle est la différence entre Jais et Falcon-H1-Arabic ?',
-            a: 'Les deux sont des modèles arabophones originaires d\'Abu Dhabi. Jais (Core42/G42) est plus grand (jusqu\'à 30B) et entraîné spécifiquement comme bilingue arabe-anglais avec 126B tokens arabes — optimisé pour la qualité arabe à l\'échelle de l\'entreprise. Falcon-H1-Arabic est un modèle 7B de TII (une institution d\'Abu Dhabi différente) construit sur l\'architecture hybride Falcon-H1 plus large — compatible GPU grand public et faisant partie de l\'écosystème IA des Émirats. Pour la meilleure qualité arabe : Jais 30B. Pour le matériel grand public : Falcon-H1-Arabic 7B.',
+            a: 'Les deux sont des modèles arabophones originaires d\'Abu Dhabi. Jais 3 (MBZUAI/Inception42) est la famille la plus récente et la plus grande (jusqu\'à un modèle MoE phare de 375B, avec des versions denses 7B et 32B pour le sur site) et est entraîné spécifiquement pour l\'arabe à l\'échelle de l\'entreprise. Falcon-H1-Arabic est un modèle 7B de TII (une institution d\'Abu Dhabi différente) construit sur l\'architecture hybride Falcon-H1 plus large — compatible GPU grand public et faisant partie de l\'écosystème IA des Émirats. Pour la meilleure qualité arabe : Jais-3-32B. Pour le matériel grand public : Falcon-H1-Arabic 7B ou Jais-3-7B.',
           },
           {
             q: 'Qwen3 prend-il en charge l\'arabe aussi bien que les modèles arabes dédiés ?',
-            a: 'Qwen3 a un très fort support arabe général (119 langues, meilleur score HELM Arabic). Pour les déploiements d\'entreprise purement arabes nécessitant la toute meilleure qualité arabe, Jais 30B est généralement préféré. Pour les charges de travail multilingues mixtes où l\'arabe est l\'une de plusieurs langues nécessaires, Qwen3-8B est souvent le meilleur choix en raison de son étendue et de sa facilité de déploiement.',
+            a: 'Qwen3 a un très fort support arabe général (119 langues, meilleur score HELM Arabic). Pour les déploiements d\'entreprise purement arabes nécessitant la toute meilleure qualité arabe, Jais-3-32B est généralement préféré. Pour les charges de travail multilingues mixtes où l\'arabe est l\'une de plusieurs langues nécessaires, Qwen3-8B est souvent le meilleur choix en raison de son étendue et de sa facilité de déploiement.',
           },
           {
             q: 'Qu\'est-ce qu\'ALLaM et puis-je l\'utiliser commercialement ?',
@@ -1694,7 +1701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel LLM arabe est le meilleur pour les déploiements gouvernementaux aux Émirats ?',
-            a: 'Falcon-H1-Arabic 7B (de TII, Abu Dhabi) et Jais 30B (de Core42/G42, Abu Dhabi) sont tous deux des modèles natifs des Émirats avec une provenance d\'institutions de recherche affiliées au gouvernement émirien. Pour la souveraineté et l\'auditabilité, ce sont les choix les plus alignés. Les deux peuvent être déployés sur site sans qu\'aucune donnée ne quitte l\'infrastructure des Émirats. Consultez notre [guide de souveraineté des données UAE PDPL](/fr/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
+            a: 'Falcon-H1-Arabic 7B (de TII, Abu Dhabi) et Jais 3 (de MBZUAI/Inception42, Abu Dhabi) sont tous deux des modèles natifs des Émirats avec une provenance d\'institutions de recherche affiliées au gouvernement émirien. Pour la souveraineté et l\'auditabilité, ce sont les choix les plus alignés. Les deux peuvent être déployés sur site sans qu\'aucune donnée ne quitte l\'infrastructure des Émirats. Consultez notre [guide de souveraineté des données UAE PDPL](/fr/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
           },
           {
             q: 'Comment gérer l\'arabe dialectal du Golfe vs. le MSA dans les invites ?',
@@ -1702,11 +1709,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Puis-je affiner Jais ou Falcon-H1-Arabic sur mes propres données arabes ?',
-            a: 'Oui — les deux utilisent des licences ouvertes (Apache 2.0 pour Jais, Falcon LLM License pour Falcon-H1-Arabic) qui permettent l\'affinage. Utilisez l\'affinage LoRA ou QLoRA avec des outils comme Unsloth ou la bibliothèque PEFT. L\'affinage sur des données arabes spécifiques au domaine (juridique, médical, financier) améliore significativement la qualité pour les cas d\'usage spécialisés. Gardez les données d\'affinage sur site pour la conformité PDPL.',
+            a: 'Oui — les deux utilisent des licences ouvertes (Apache 2.0 pour Jais, Falcon LLM License pour Falcon-H1-Arabic) qui permettent l\'affinage. Utilisez l\'affinage LoRA ou QLoRA avec des outils comme Unsloth ou la bibliothèque PEFT. L\'affinage sur des données arabes spécifiques au domaine (juridique, médical, financier) améliore significativement la qualité pour les cas d\'usage spécialisés. Gardez les données d\'affinage sur site, ce qui réduit le risque de transfert transfrontalier au titre de la PDPL — la conformité complète dépend aussi de la base légale et des garanties de votre organisation.',
           },
           {
-            q: 'De quel matériel ai-je besoin pour exécuter Jais 30B en local ?',
-            a: 'En quantification Q4_K_M, Jais 30B nécessite une estimation de 18-20 GB VRAM (estimation — aucun benchmark officiel). Une NVIDIA RTX 4090 (24 GB) peut l\'exécuter en Q4 avec un contexte modéré ; une A100 40 GB le gère confortablement en FP16. Pour le débit en production, deux RTX 4090 en mode multi-GPU ou une seule A100/H100 sont recommandées. Consultez notre [guide du calculateur de VRAM](/fr/local-llms/vram-calculator-local-llm).',
+            q: 'De quel matériel ai-je besoin pour exécuter Jais 3 en local ?',
+            a: 'Jais-3-7B ne nécessite que ~5,6 GB VRAM en GGUF Q4_K_M — n\'importe quelle RTX 4060 (8 GB) ou mieux suffit. Jais-3-32B nécessite une estimation de 19-20 GB VRAM à Q4_K_M (estimation par mise à l\'échelle des paramètres — aucun benchmark officiel pour l\'instant). Une NVIDIA RTX 4090 (24 GB) peut exécuter la version 32B en Q4 avec un contexte modéré ; une A100 40 GB le gère confortablement en FP16. Pour le débit en production, deux RTX 4090 en mode multi-GPU ou une seule A100/H100 sont recommandées. Consultez notre [guide du calculateur de VRAM](/fr/local-llms/vram-calculator-local-llm).',
           },
         ],
       },
@@ -1728,8 +1735,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Technology Innovation Institute (TII) — Annonce Falcon-H1-Arabic, January 5, 2026 — tii.ae',
           'Page du modèle Falcon-H1-Arabic sur Hugging Face — huggingface.co/blog/tiiuae/falcon-h1-arabic',
-          'Core42 / Cerebras — Communiqué de presse Jais 30B — cerebras.ai et g42.ai',
-          'Jais 30B sur Hugging Face — huggingface.co/inceptionai/jais-30b-v3',
+          'MBZUAI Institute of Foundation Models / Inception42 — annonce de lancement de Jais 3, 16 octobre 2026 — mbzuai.ac.ae et wam.ae',
+          'Jais 3 sur Hugging Face — huggingface.co/inception42/Jais-3-7B et huggingface.co/inception42/Jais-3-32B',
+          'Core42 / Cerebras — Communiqué de presse Jais 30B (génération précédente) — cerebras.ai et g42.ai',
           'SDAIA / HUMAIN — Annonce ALLaM 34B, mai 2025 — humain.ai',
           'ALLaM-2-7B sur Microsoft Azure AI — techcommunity.microsoft.com (septembre 2024)',
           'QCRI / HBKU — Rapport technique « Fanar 2.0: Arabic Generative AI Stack » et fiche du modèle Fanar-2-27B-Instruct — arxiv.org/abs/2603.16397',
@@ -1744,16 +1752,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Meilleurs LLM locaux arabophones : Jais, Falcon et exécution de l\'IA arabe sur site (2026)',
-      'description': 'Jais 30B et Falcon-H1-Arabic 7B sont les meilleurs LLM locaux arabophones en 2026. Tableau VRAM, guide d\'installation et benchmarks d\'évaluation de la qualité pour le déploiement de l\'IA arabe sur site.',
+      'description': 'Jais 3 et Falcon-H1-Arabic 7B sont les meilleurs LLM locaux arabophones en 2026. Tableau VRAM, guide d\'installation et benchmarks d\'évaluation de la qualité pour le déploiement de l\'IA arabe sur site.',
       'url': 'https://www.promptquorum.com/fr/local-llms/best-arabic-local-llms-2026',
       'datePublished': '2026-06-14',
-      'dateModified': '2026-08-28',
+      'dateModified': '2026-11-19',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
       'inLanguage': 'fr',
       'about': [
-        { '@type': 'SoftwareApplication', 'name': 'Jais 30B' },
+        { '@type': 'SoftwareApplication', 'name': 'Jais 3' },
         { '@type': 'SoftwareApplication', 'name': 'Falcon-H1-Arabic' },
         { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
         { '@type': 'Thing', 'name': 'Arabic NLP' },
@@ -1766,16 +1774,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'fr',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'Puis-je exécuter un LLM arabe sur un ordinateur portable de jeu ordinaire ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, pour les modèles de classe 7B en quantification Q4. Falcon-H1-Arabic 7B et Qwen3-8B nécessitent ~5-6 GB VRAM — la plupart des ordinateurs portables de jeu avec une RTX 4060 (8 GB) ou RTX 3060 (12 GB) peuvent les exécuter. Jais 30B nécessite un GPU de bureau haut de gamme (RTX 4090 24 GB) ou un GPU entreprise en quantification Q4.' } },
-        { '@type': 'Question', 'name': 'Quelle est la différence entre Jais et Falcon-H1-Arabic ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les deux sont des modèles arabophones originaires d\'Abu Dhabi. Jais (Core42/G42) est plus grand (jusqu\'à 30B) et entraîné spécifiquement comme bilingue arabe-anglais avec 126B tokens arabes. Falcon-H1-Arabic est un modèle 7B de TII construit sur l\'architecture hybride Falcon-H1 — compatible GPU grand public. Pour la meilleure qualité arabe : Jais 30B. Pour le matériel grand public : Falcon-H1-Arabic 7B.' } },
-        { '@type': 'Question', 'name': 'Qwen3 prend-il en charge l\'arabe aussi bien que les modèles arabes dédiés ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 a un très fort support arabe général (119 langues, meilleur score HELM Arabic). Pour les déploiements d\'entreprise purement arabes nécessitant la toute meilleure qualité arabe, Jais 30B est généralement préféré. Pour les charges de travail multilingues mixtes, Qwen3-8B est souvent le meilleur choix en raison de son étendue et de sa facilité de déploiement.' } },
+        { '@type': 'Question', 'name': 'Puis-je exécuter un LLM arabe sur un ordinateur portable de jeu ordinaire ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, pour les modèles de classe 7B en quantification Q4. Falcon-H1-Arabic 7B, Jais-3-7B et Qwen3-8B nécessitent ~5-6 GB VRAM — la plupart des ordinateurs portables de jeu avec une RTX 4060 (8 GB) ou RTX 3060 (12 GB) peuvent les exécuter. Jais-3-32B nécessite un GPU de bureau haut de gamme (RTX 4090 24 GB) ou un GPU entreprise en quantification Q4.' } },
+        { '@type': 'Question', 'name': 'Quelle est la différence entre Jais et Falcon-H1-Arabic ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les deux sont des modèles arabophones originaires d\'Abu Dhabi. Jais 3 (MBZUAI/Inception42) est la famille la plus récente et la plus grande (jusqu\'à un modèle MoE phare de 375B, avec des versions denses 7B et 32B). Falcon-H1-Arabic est un modèle 7B de TII construit sur l\'architecture hybride Falcon-H1 — compatible GPU grand public. Pour la meilleure qualité arabe : Jais-3-32B. Pour le matériel grand public : Falcon-H1-Arabic 7B ou Jais-3-7B.' } },
+        { '@type': 'Question', 'name': 'Qwen3 prend-il en charge l\'arabe aussi bien que les modèles arabes dédiés ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 a un très fort support arabe général (119 langues, meilleur score HELM Arabic). Pour les déploiements d\'entreprise purement arabes nécessitant la toute meilleure qualité arabe, Jais-3-32B est généralement préféré. Pour les charges de travail multilingues mixtes, Qwen3-8B est souvent le meilleur choix en raison de son étendue et de sa facilité de déploiement.' } },
         { '@type': 'Question', 'name': 'Qu\'est-ce qu\'ALLaM et puis-je l\'utiliser commercialement ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ALLaM est une famille de LLM nationaux saoudiens centrés sur l\'arabe, issue de SDAIA (désormais sous la marque HUMAIN). Les publications publiques (7B sur Hugging Face, 7B sur Azure AI) portent des licences recherche/non commerciales. Pour un usage commercial, contactez directement HUMAIN/SDAIA. ALLaM 34B propulse l\'application nationale HUMAIN Chat mais a un accès public restreint.' } },
         { '@type': 'Question', 'name': 'Comment la tokenisation de l\'arabe affecte-t-elle la qualité du modèle ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'écriture arabe nécessite une tokenisation appropriée pour éviter les erreurs au niveau des caractères. Les modèles entraînés nativement sur l\'arabe (Jais, Falcon-H1-Arabic) utilisent des tokeniseurs optimisés pour la morphologie arabe. Les modèles multilingues généralistes peuvent tokeniser l\'arabe de manière inefficace, entraînant une dégradation de la qualité sur les textes arabes complexes. Testez avec vos données d\'entrée réelles avant la production.' } },
         { '@type': 'Question', 'name': 'Les LLM locaux arabophones peuvent-ils gérer les documents de droite à gauche (RTL) ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les modèles génèrent le texte arabe dans la bonne direction de droite à gauche — les modèles produisent un arabe RTL correct en Unicode. L\'interface de votre application doit gérer le rendu RTL (HTML dir="rtl", CSS direction:rtl). llama.cpp, Ollama et vLLM renvoient correctement le texte arabe Unicode ; la couche interface gère la direction.' } },
-        { '@type': 'Question', 'name': 'Quel LLM arabe est le meilleur pour les déploiements gouvernementaux aux Émirats ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (de TII, Abu Dhabi) et Jais 30B (de Core42/G42, Abu Dhabi) sont tous deux des modèles natifs des Émirats avec une provenance d\'institutions de recherche affiliées au gouvernement émirien. Pour la souveraineté et l\'auditabilité, ce sont les choix les plus alignés. Les deux peuvent être déployés sur site sans qu\'aucune donnée ne quitte l\'infrastructure des Émirats.' } },
+        { '@type': 'Question', 'name': 'Quel LLM arabe est le meilleur pour les déploiements gouvernementaux aux Émirats ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (de TII, Abu Dhabi) et Jais 3 (de MBZUAI/Inception42, Abu Dhabi) sont tous deux des modèles natifs des Émirats avec une provenance d\'institutions de recherche affiliées au gouvernement émirien. Pour la souveraineté et l\'auditabilité, ce sont les choix les plus alignés. Les deux peuvent être déployés sur site sans qu\'aucune donnée ne quitte l\'infrastructure des Émirats.' } },
         { '@type': 'Question', 'name': 'Comment gérer l\'arabe dialectal du Golfe vs. le MSA dans les invites ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'System prompt par défaut : répondre en arabe standard moderne. Pour l\'arabe du Golfe (émirien, saoudien, koweïtien), ajoutez des phrases dialectales en exemple dans votre system prompt ou affinez sur des données de domaine. Tous les modèles listés gèrent bien le MSA ; la qualité dialectale varie. Testez avec 5-10 requêtes dialectales en exemple avant de présumer de la qualité en production.' } },
-        { '@type': 'Question', 'name': 'Puis-je affiner Jais ou Falcon-H1-Arabic sur mes propres données arabes ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui — les deux utilisent des licences ouvertes (Apache 2.0 pour Jais, Falcon LLM License pour Falcon-H1-Arabic) qui permettent l\'affinage. Utilisez LoRA ou QLoRA avec des outils comme Unsloth ou la bibliothèque PEFT. L\'affinage sur des données arabes spécifiques au domaine améliore significativement la qualité. Gardez les données d\'affinage sur site pour la conformité PDPL.' } },
-        { '@type': 'Question', 'name': 'De quel matériel ai-je besoin pour exécuter Jais 30B en local ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En quantification Q4_K_M, Jais 30B nécessite une estimation de 18-20 GB VRAM (aucun benchmark officiel). Une RTX 4090 (24 GB) peut l\'exécuter en Q4 avec un contexte modéré ; une A100 40 GB le gère confortablement en FP16. Pour le débit en production, deux RTX 4090 en mode multi-GPU ou une seule A100/H100 sont recommandées.' } },
+        { '@type': 'Question', 'name': 'Puis-je affiner Jais ou Falcon-H1-Arabic sur mes propres données arabes ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui — les deux utilisent des licences ouvertes (Apache 2.0 pour Jais, Falcon LLM License pour Falcon-H1-Arabic) qui permettent l\'affinage. Utilisez LoRA ou QLoRA avec des outils comme Unsloth ou la bibliothèque PEFT. L\'affinage sur des données arabes spécifiques au domaine améliore significativement la qualité. Gardez les données d\'affinage sur site, ce qui réduit le risque de transfert transfrontalier au titre de la PDPL — la conformité complète dépend aussi de la base légale et des garanties de votre organisation.' } },
+        { '@type': 'Question', 'name': 'De quel matériel ai-je besoin pour exécuter Jais 3 en local ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Jais-3-7B ne nécessite que ~5,6 GB VRAM en GGUF Q4_K_M. Jais-3-32B nécessite une estimation de 19-20 GB VRAM à Q4_K_M (estimation, aucun benchmark officiel). Une RTX 4090 (24 GB) peut exécuter la version 32B en Q4 avec un contexte modéré ; une A100 40 GB le gère confortablement en FP16. Pour le débit en production, deux RTX 4090 en mode multi-GPU ou une seule A100/H100 sont recommandées.' } },
       ],
     },
     itemListSchema: {
@@ -1784,7 +1792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'Meilleurs LLM locaux arabophones 2026',
       'numberOfItems': 7,
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 30B', 'description': 'Meilleur LLM local nativement arabophone. 126B tokens arabes d\'entraînement, Apache 2.0, Core42/G42 Abu Dhabi.' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 3', 'description': 'Meilleur LLM local nativement arabophone, génération la plus récente (octobre 2026). Gamme de 0,9B à 375B, Apache 2.0, MBZUAI/Inception42 Abu Dhabi.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Falcon-H1-Arabic 7B', 'description': 'Idéal pour le matériel grand public. TII Abu Dhabi. Q4_K_M ~5 GB VRAM. Falcon LLM License.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3-8B', 'description': 'Meilleure option multilingue avec un fort support arabe. Meilleur sur HELM Arabic. Apache 2.0.' },
         { '@type': 'ListItem', 'position': 4, 'name': 'ALLaM 34B', 'description': 'Modèle arabe national saoudien (HUMAIN/SDAIA). Propulse HUMAIN Chat. Licence recherche.' },
@@ -1798,26 +1806,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ベストなアラビア語対応ローカルLLM：Jais、Falcon、オンプレミスでのアラビア語AI実行（2026）',
     heroImage: '/images/best-arabic-local-llms-2026-overview-hero-ja.webp',
     seoTitle: 'ベストなアラビア語ローカルLLM 2026：Jais・Falcon比較',
-    metaDescription: 'Jais 30B・Falcon-H1-Arabic 7B・Qwen3-8Bが2026年のベストなアラビア語ローカルLLM。VRAM表、オンプレミス設定、品質評価のコツを解説。',
-    intro: 'Jais 30B（Core42/G42、アブダビ、Apache 2.0）とFalcon-H1-Arabic 7B（TII、アブダビ）は2026年のトップのアラビア語ネイティブローカルLLMです。アラビア語サポートが強い汎用の多言語ワークロードでは、Qwen3-8Bがコンシューマーハードウェア向けのサイズのモデルの中でHELM Arabicベンチマークをリードしています。3つともOllamaまたはvLLMでオンプレミス実行でき、アラビア語データを国内に留めておけます。本ガイドではこれらのモデルをランク付けし、VRAM表を示し、アラビア語AIをローカルでデプロイ・評価する方法を解説します。',
+    metaDescription: 'Jais 3・Falcon-H1-Arabic 7B・Qwen3-8Bが2026年のベストなアラビア語ローカルLLM。VRAM表、オンプレミス設定、品質評価のコツを解説。',
+    intro: 'Jais 3（MBZUAI/Inception42、アブダビ、Apache 2.0、2026年10月リリース）とFalcon-H1-Arabic 7B（TII、アブダビ）は2026年のトップのアラビア語ネイティブローカルLLMです。アラビア語サポートが強い汎用の多言語ワークロードでは、Qwen3-8Bがコンシューマーハードウェア向けのサイズのモデルの中でHELM Arabicベンチマークをリードしています。3つともOllamaまたはvLLMでオンプレミス実行でき、アラビア語データを国内に留めておけます。本ガイドではこれらのモデルをランク付けし、VRAM表を示し、アラビア語AIをローカルでデプロイ・評価する方法を解説します。',
     designSkin: 'hub',
     theme: 'Best Models',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-14',
+    next_refresh_due: '2027-05-19',
     publishDate: '2026-06-14',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'アラビア語圏の企業、湾岸地域の開発者、アラビア語NLPをローカルでデプロイするチーム',
     readTime: '13分で読める',
     primaryTerm: 'Arabic local LLM',
     affiliateDisclosure: false,
-    leadAnswerBlock: '**Jais 30B（Core42/G42、アブダビ、Apache 2.0）とFalcon-H1-Arabic 7B（TII アブダビ）は2026年のトップのアラビア語ネイティブローカルLLMです。アラビア語サポートが強い汎用の多言語ワークロードでは、Qwen3-8Bがコンシューマーハードウェア向けのサイズのモデルの中でHELM Arabicベンチマークをリードしています。3つともOllamaまたはvLLMでオンプレミス実行でき、アラビア語の個人データを国内に留めておけます。**',
+    leadAnswerBlock: '**Jais 3（MBZUAI/Inception42、アブダビ、Apache 2.0、2026年10月リリース）とFalcon-H1-Arabic 7B（TII アブダビ）は2026年のトップのアラビア語ネイティブローカルLLMです。アラビア語サポートが強い汎用の多言語ワークロードでは、Qwen3-8Bがコンシューマーハードウェア向けのサイズのモデルの中でHELM Arabicベンチマークをリードしています。3つともOllamaまたはvLLMでオンプレミス実行でき、アラビア語の個人データを国内に留めておけます。**',
     quickAnswerTop: {
       en: {
         question: 'What is the best Arabic local LLM in 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) is the strongest Arabic-native local LLM in 2026, trained on 126B Arabic tokens with Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), released October 2026, is the strongest Arabic-native local LLM in 2026, available in sizes from 0.9B to 32B under Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
         bullets: [
-          'Jais 30B: best Arabic-native model, 126B Arabic training tokens, Apache 2.0, needs ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): best Arabic-native model, released October 2026 by MBZUAI/Inception42, Apache 2.0, 32B needs ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, consumer GPU friendly',
           'Qwen3-8B: best multilingual option with strong Arabic, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Saudi national model, powers HUMAIN Chat; research license',
@@ -1827,9 +1835,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ar: {
         question: 'ما أفضل نموذج ذكاء اصطناعي عربي محلي في 2026؟',
-        answer: 'Jais 30B (Core42/G42، أبوظبي) هو أقوى نموذج محلي عربي أصيل في 2026، مُدرَّب على 126 مليار رمز عربي بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42، أبوظبي)، الذي صدر في أكتوبر 2026، هو أقوى نموذج محلي عربي أصيل في 2026، ويتوفر بأحجام من 0.9B إلى 32B بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
         bullets: [
-          'Jais 30B: أفضل نموذج عربي أصيل، 126 مليار رمز تدريب عربي، Apache 2.0، يحتاج ~18-20 GB VRAM عند Q4',
+          'Jais 3 (7B/32B): أفضل نموذج عربي أصيل، صدر في أكتوبر 2026 من MBZUAI/Inception42، Apache 2.0، يحتاج إصدار 32B إلى ~19-20 GB VRAM عند Q4',
           'Falcon-H1-Arabic 7B: مؤسسة الابتكار التقني أبوظبي، Q4_K_M ~5 GB VRAM، مناسب لـ GPU المستهلكين',
           'Qwen3-8B: أفضل خيار متعدد اللغات مع دعم عربي قوي، ~5-6 GB VRAM عند Q4',
           'ALLaM 34B (HUMAIN/SDAIA): النموذج الوطني السعودي، يُشغِّل تطبيق HUMAIN Chat؛ ترخيص بحثي',
@@ -1839,9 +1847,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Was ist das beste arabische lokale LLM im Jahr 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) ist das stärkste arabisch-native lokale LLM im Jahr 2026, trainiert auf 126 Milliarden arabischen Tokens mit Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), veröffentlicht im Oktober 2026, ist das stärkste arabisch-native lokale LLM im Jahr 2026, verfügbar in Größen von 0,9B bis 32B unter Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
         bullets: [
-          'Jais 30B: bestes arabisch-natives Modell, 126 Mrd. arabische Trainings-Tokens, Apache 2.0, benötigt ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): bestes arabisch-natives Modell, veröffentlicht im Oktober 2026 von MBZUAI/Inception42, Apache 2.0, 32B benötigt ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, Consumer-GPU-kompatibel',
           'Qwen3-8B: bester multilingualer Ansatz mit starkem Arabisch, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Nationales saudi-arabisches Modell; Forschungslizenz',
@@ -1851,9 +1859,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor LLM local árabe en 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dabi) es el LLM local árabe nativo más potente en 2026, entrenado con 126B tokens en árabe con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dabi), lanzado en octubre de 2026, es el LLM local árabe nativo más potente en 2026, disponible en tamaños de 0.9B a 32B con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
         bullets: [
-          'Jais 30B: mejor modelo árabe nativo, 126B tokens de entrenamiento en árabe, Apache 2.0, necesita ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): mejor modelo árabe nativo, lanzado en octubre de 2026 por MBZUAI/Inception42, Apache 2.0, la versión 32B necesita ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dabi, Q4_K_M ~5 GB VRAM, compatible con GPU de consumidor',
           'Qwen3-8B: mejor opción multilingüe con fuerte soporte árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudí; licencia de investigación',
@@ -1863,9 +1871,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM local arabophone en 2026 ?',
-        answer: 'Jais 30B (Core42/G42, Abou Dabi) est le LLM local arabophone natif le plus puissant en 2026, entraîné sur 126 milliards de tokens arabes avec licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abou Dabi), sorti en octobre 2026, est le LLM local arabophone natif le plus puissant en 2026, disponible en tailles de 0,9B à 32B sous licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
         bullets: [
-          'Jais 30B : meilleur modèle arabophone natif, 126 milliards de tokens arabes, Apache 2.0, nécessite ~18-20 Go VRAM Q4',
+          'Jais 3 (7B/32B) : meilleur modèle arabophone natif, sorti en octobre 2026 par MBZUAI/Inception42, Apache 2.0, la version 32B nécessite ~19-20 Go VRAM Q4',
           'Falcon-H1-Arabic 7B : TII Abou Dabi, Q4_K_M ~5 Go VRAM, compatible GPU grand public',
           'Qwen3-8B : meilleure option multilingue avec fort support arabe, ~5-6 Go VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA) : modèle national saoudien ; licence recherche',
@@ -1875,9 +1883,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年のベストなアラビア語対応ローカルLLMは？',
-        answer: 'Jais 30B（Core42/G42、アブダビ）は2026年で最も優れたアラビア語ネイティブのローカルLLMです。1,260億のアラビア語トークンで訓練され、Apache 2.0ライセンスで利用可能。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
+        answer: 'Jais 3（MBZUAI/Inception42、アブダビ）は2026年10月にリリースされ、2026年で最も優れたアラビア語ネイティブのローカルLLMです。0.9Bから32Bまでのサイズで利用可能、Apache 2.0ライセンス。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
         bullets: [
-          'Jais 30B: アラビア語ネイティブ最強、1,260億アラビア語トークン、Apache 2.0、Q4で ~18-20 GB VRAM',
+          'Jais 3（7B/32B）: アラビア語ネイティブ最強、2026年10月にMBZUAI/Inception42がリリース、Apache 2.0、32Bは ~19-20 GB VRAM（Q4）が必要',
           'Falcon-H1-Arabic 7B: TII アブダビ、Q4_K_M ~5 GB VRAM、コンシューマーGPU対応',
           'Qwen3-8B: アラビア語サポートが強い多言語ベストオプション、Q4 ~5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）: サウジ国家モデル、リサーチライセンス',
@@ -1887,9 +1895,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pt: {
         question: 'Qual é o melhor LLM local árabe em 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) é o LLM local árabe nativo mais poderoso em 2026, treinado com 126B tokens em árabe com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), lançado em outubro de 2026, é o LLM local árabe nativo mais poderoso em 2026, disponível em tamanhos de 0,9B a 32B com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
         bullets: [
-          'Jais 30B: melhor modelo árabe nativo, 126B tokens de treinamento em árabe, Apache 2.0, requer ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): melhor modelo árabe nativo, lançado em outubro de 2026 pela MBZUAI/Inception42, Apache 2.0, a versão 32B precisa de ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, compatível com GPU de consumidor',
           'Qwen3-8B: melhor opção multilíngue com forte suporte ao árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudita; licença de pesquisa',
@@ -1899,9 +1907,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年最佳阿拉伯语本地LLM是什么？',
-        answer: 'Jais 30B（Core42/G42，阿布扎比）是2026年最强的阿拉伯语原生本地LLM，使用1260亿阿拉伯语token训练，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
+        answer: 'Jais 3（MBZUAI/Inception42，阿布扎比）于2026年10月发布，是2026年最强的阿拉伯语原生本地LLM，提供从0.9B到32B的多种尺寸，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
         bullets: [
-          'Jais 30B：最佳阿拉伯语原生模型，1260亿阿拉伯语训练token，Apache 2.0，Q4需约18-20 GB VRAM',
+          'Jais 3（7B/32B）：最佳阿拉伯语原生模型，2026年10月由MBZUAI/Inception42发布，Apache 2.0，32B版本需约19-20 GB VRAM（Q4）',
           'Falcon-H1-Arabic 7B：TII阿布扎比，Q4_K_M约5 GB VRAM，兼容消费级GPU',
           'Qwen3-8B：具有强阿拉伯语支持的最佳多语言选项，Q4约5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）：沙特国家模型；研究许可证',
@@ -1911,9 +1919,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ko: {
         question: '2026년 최고의 아랍어 로컬 LLM은 무엇입니까?',
-        answer: 'Jais 30B(Core42/G42, 아부다비)는 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 1,260억 개의 아랍어 토큰으로 훈련되었으며 Apache 2.0 라이선스를 제공합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
+        answer: 'Jais 3(MBZUAI/Inception42, 아부다비)는 2026년 10월 출시되어 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 0.9B부터 32B까지 다양한 크기로 제공되며 Apache 2.0 라이선스를 적용합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
         bullets: [
-          'Jais 30B: 최고의 아랍어 네이티브 모델, 아랍어 훈련 토큰 1,260억 개, Apache 2.0, Q4 ~18-20 GB VRAM 필요',
+          'Jais 3(7B/32B): 최고의 아랍어 네이티브 모델, 2026년 10월 MBZUAI/Inception42 출시, Apache 2.0, 32B 버전은 ~19-20 GB VRAM(Q4) 필요',
           'Falcon-H1-Arabic 7B: TII 아부다비, Q4_K_M ~5 GB VRAM, 소비자 GPU 호환',
           'Qwen3-8B: 강력한 아랍어 지원을 갖춘 최고의 다국어 옵션, Q4 ~5-6 GB VRAM',
           'ALLaM 34B(HUMAIN/SDAIA): 사우디 국가 모델; 연구 라이선스',
@@ -1938,7 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Jais 30B（Core42/G42、アブダビ）:** 2026年のベストなアラビア語ネイティブローカルLLM。126B アラビア語 + 251B 英語トークンで訓練。Apache 2.0ライセンス。Q4量子化で ~18-20 GB VRAM が必要（完全なFP16にはマルチGPUまたはエンタープライズGPU）。',
+          '**Jais 3（MBZUAI/Inception42、アブダビ）:** 2026年のベストなアラビア語ネイティブローカルLLM。2026年10月リリースで、旧世代のJais 30Bを置き換えました。0.9Bから375BのMoE旗艦モデルまで6モデル。Apache 2.0ライセンス。32B版はQ4量子化で ~19-20 GB VRAM が必要（エンタープライズGPU）；7B版はわずか ~5.6 GB（GGUF Q4_K_M）。',
           '**Falcon-H1-Arabic 7B（TII、アブダビ）:** UAEネイティブのアラビア語特化モデル。コンシューマーGPUで動作：Q4_K_M ~5 GB VRAM。Falcon-H1ハイブリッドアーキテクチャをベースとし、ネイティブ（非翻訳）のアラビア語データセットで訓練。',
           '**Qwen3-8B（Alibaba Cloud）:** アラビア語サポートが強い多言語ベストオプション。HELM Arabicで平均0.786（235B版）；8BはQ4で ~5-6 GB VRAM に収まる。119言語サポート。',
           '**ALLaM 34B（HUMAIN/SDAIA、サウジアラビア）:** サウジの国家モデル、HUMAIN Chatを稼働。一般公開はリサーチ/非商用ライセンス。Microsoft Azure AIで利用可能（7B版）。',
@@ -1948,8 +1956,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**データ主権:** アラビア語NLPをローカルで実行すると個人データが国内に留まり、UAE PDPL、サウジのNDMO、湾岸地域のデータ主権目標に沿います。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Jais 30B（Apache 2.0、アブダビ）とFalcon-H1-Arabic 7B（TII、アブダビ）は2026年のトップのアラビア語ネイティブローカルLLMであり、Qwen3-8Bがコンシューマーハードウェア向けの多言語アラビア語ベンチマークをリードしています。' },
-          { type: 'plain-terms', text: '自前のサーバーで実行できるベストなアラビア語AI：最高のアラビア語品質ならJais 30B（ハイエンドGPUが必要）、一般的なPCならFalcon-H1-Arabic 7B、他の言語も必要ならQwen3-8B。' },
+          { type: 'one-sentence', text: 'Jais 3（Apache 2.0、アブダビ、2026年10月リリース）とFalcon-H1-Arabic 7B（TII、アブダビ）は2026年のトップのアラビア語ネイティブローカルLLMであり、Qwen3-8Bがコンシューマーハードウェア向けの多言語アラビア語ベンチマークをリードしています。' },
+          { type: 'plain-terms', text: '自前のサーバーで実行できるベストなアラビア語AI：最高のアラビア語品質ならJais 3（32B版はハイエンドGPUが必要、7B版は普通のゲーミングGPUで動作）、一般的なPCならFalcon-H1-Arabic 7B、他の言語も必要ならQwen3-8B。' },
         ],
       },
       whyArabicMatters: {
@@ -1967,9 +1975,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ベストなアラビア語ローカルLLM：オンプレミスデプロイ向けランキング',
         content: 'アラビア語能力とローカル/オンプレミスデプロイへの適性でランク付けしています。',
         image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
-        imageCaption: 'アラビア語対応ローカルLLMの選び方の決定木: 最高のアラビア語品質にはJais 30B（~19-20 GB VRAM）、コンシューマーGPUにはFalcon-H1-Arabic 7B（~5 GB）、多言語用途にはQwen3-8B（~5-6 GB）、幅広い多言語ベースラインにはLlama 3.1-8B。',
+        imageCaption: 'アラビア語対応ローカルLLMの選び方の決定木: 最高のアラビア語品質にはJais-3-32B（~19-20 GB VRAM）、コンシューマーGPUにはJais-3-7BまたはFalcon-H1-Arabic 7B（~5-6 GB）、多言語用途にはQwen3-8B（~5-6 GB）、幅広い多言語ベースラインにはLlama 3.1-8B。',
         items: [
-          '**1. Jais 30B — ベストなアラビア語品質（Apache 2.0、オンプレミス対応）。** 開発元：Core42 / Inception AI（G42グループ、アブダビ）+ MBZUAIの研究 + Cerebrasの訓練。訓練：126B アラビア語トークン + 251B 英語トークン + 50B コードトークン。人による評価では、Jais 30Bは評価の96%でアラビア語においてJais 13Bを上回ります。ライセンス：Apache 2.0（完全オープン、商用利用可）。Hugging Face：inceptionai/jais-30b-v3。VRAM：Q4で ~18-20 GB の見積もり（FP16にはエンタープライズGPUまたはマルチGPU）。最適な用途：アラビア語が主となるエンタープライズの文書処理、カスタマーサポート、政府向けデプロイでの最高のアラビア語品質。',
+          '**1. Jais 3（7B / 32B）— 最高のアラビア語品質、最新世代（Apache 2.0、オンプレミス対応）。** 開発元：MBZUAIのInstitute of Foundation Models（IFM）+ Inception42、Cerebras Systemsと協力（アブダビ）。2026年10月16日にリリースされ、旧世代のJais 30Bに代わる新たな旗艦アラビア語モデル系列となりました。ラインアップ：0.9Bから375B（アクティブ23B）のMoE旗艦モデルまで6モデル。Jais-3-7BとJais-3-32Bがオンプレミス向けの適正サイズです。ライセンス：6つの言語モデルすべてでApache 2.0。Hugging Face：inception42/Jais-3-7B、inception42/Jais-3-32B。コンテキスト長：最大512Kトークン。MBZUAIとInception42によると、Jais-3-7BとJais-3-32Bは独自のベンチマーク一式（Arabic MMLU、AraGen v3、Belebele、QADI方言識別）において同規模のオープンモデルの中で最高の平均アラビア語スコアを記録しているとのこと——これは開発元の発表であり、独立した検証は行われていません。VRAM：Jais-3-7BのGGUF Q4_K_Mで ~5.6 GB（公開されたGGUFファイルから確認済み）；Jais-3-32Bは ~19-20 GB（Q4での見積もり）。最適な用途：アラビア語が主となるエンタープライズの文書処理、カスタマーサポート、政府向けデプロイでの最高のアラビア語品質。',
           '**2. Falcon-H1-Arabic 7B — コンシューマーハードウェアに最適（TII アブダビ）。** 開発元：Technology Innovation Institute（TII）、アブダビ（Advanced Technology Research Council傘下）。ベース：Falcon-H1ハイブリッドアーキテクチャ（2026年1月5日リリース）。訓練：ネイティブ（非翻訳）のアラビア語データセット、MSAおよび地域方言。ライセンス：Falcon LLM License — 寛容で商用利用可。VRAM：Q4_K_M ~5 GB — RTX 4060 8GB、RTX 3060 12GB、同等品で動作。ベンチマーク：Open Arabic LLM Leaderboard（OALL）で71.47%を記録 — 約10Bクラスのアラビア語モデルで最高スコアであり、ALLaM-7B、Fanar-9B、Qwen3-8Bを上回り、旧Falcon 3ベースのFalcon Arabicチェックポイントを置き換える。最適な用途：コンシューマーおよびプロシューマー向けハードウェアでのデプロイ；アブダビの機関によるUAEネイティブモデル。',
           '**3. Qwen3-8B — アラビア語が強い多言語ベストオプション（Alibaba Cloud）。** 開発元：Alibaba Cloud。言語：119の言語と方言。ベンチマーク：Qwen3-235B-A22BはHELM Arabicで平均0.786を記録；8B版はローカルハードウェアに推奨。ライセンス：Apache 2.0。VRAM：Q4_K_M ~5-6 GB。最適な用途：1つのモデルでアラビア語 + 英語 + 他言語が必要なチーム；Ollamaで広くサポート（ollama pull qwen3:8b）。',
           '**4. ALLaM 34B / 7B — サウジ国家モデル（HUMAIN/SDAIA）。** 開発元：SDAIA（Saudi Data and AI Authority）/ HUMAIN（サウジの国家AI企業）。バージョン：7B（Hugging Face、リサーチアクセス）と34B（HUMAIN Chatを稼働）。Azure：ALLaM-2-7B-Instructは2024年9月以降Microsoft Azure AIで利用可能。ライセンス：一般公開はリサーチ/非商用；エンタープライズライセンスはHUMAIN経由。最適な用途：サウジ政府およびエンタープライズのデプロイ；Vision 2030に沿った主権モデル。',
@@ -1983,12 +1991,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'アラビア語ローカルLLMのVRAM要件',
         content: 'モデルと量子化別の必要VRAM。*印の行はパラメータスケーリングによる見積もり（公式ベンチマークなし）です。デプロイ前に必ず自分の具体的なハードウェアで確認してください。',
         image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
-        imageCaption: 'Q4_K_M量子化におけるアラビア語ローカルLLMのVRAM要件: Gemma 3 4Bは約3 GB、Falcon-H1-Arabic 7BとALLaM 7Bは約5 GB、Qwen3-8Bは5-6 GB、Jais 13Bは8-10 GB、Jais 30Bは19-20 GBのVRAMが必要。',
+        imageCaption: 'Q4_K_M量子化におけるアラビア語ローカルLLMのVRAM要件: Gemma 3 4Bは約3 GB、Falcon-H1-Arabic 7B、Jais-3-7B、ALLaM 7Bは約5-6 GB、Qwen3-8Bは5-6 GB、Jais-3-32Bは19-20 GBのVRAMが必要。',
         columns: ['モデル', 'パラメータ', 'Q4_K_M VRAM', 'FP16 VRAM', '最小ハードウェア'],
         rows: [
           { 'モデル': 'Falcon-H1-Arabic', 'パラメータ': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', '最小ハードウェア': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'モデル': 'Jais 13B', 'パラメータ': '13B', 'Q4_K_M VRAM': '~8-10 GB*', 'FP16 VRAM': '~26 GB*', '最小ハードウェア': 'RTX 3090 24 GB (Q4)' },
-          { 'モデル': 'Jais 30B', 'パラメータ': '30B', 'Q4_K_M VRAM': '~18-20 GB*', 'FP16 VRAM': '~60 GB*', '最小ハードウェア': 'RTX 4090 24 GB (Q4 tight), A100 40 GB (FP16)' },
+          { 'モデル': 'Jais-3-7B', 'パラメータ': '7B', 'Q4_K_M VRAM': '~5.6 GB', 'FP16 VRAM': '~18 GB', '最小ハードウェア': 'RTX 4060 8 GB / RTX 3060 12 GB' },
+          { 'モデル': 'Jais-3-32B', 'パラメータ': '32B', 'Q4_K_M VRAM': '~19-20 GB*', 'FP16 VRAM': '~64 GB*', '最小ハードウェア': 'RTX 4090 24 GB (Q4 tight), A100 40 GB (FP16)' },
           { 'モデル': 'ALLaM', 'パラメータ': '7B', 'Q4_K_M VRAM': '~5 GB*', 'FP16 VRAM': '~16 GB*', '最小ハードウェア': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'モデル': 'Fanar-2', 'パラメータ': '27B', 'Q4_K_M VRAM': '~16-17 GB*', 'FP16 VRAM': '~54 GB*', '最小ハードウェア': 'RTX 4090 24 GB (Q4)' },
           { 'モデル': 'Qwen3', 'パラメータ': '8B', 'Q4_K_M VRAM': '~5-6 GB', 'FP16 VRAM': '~16 GB', '最小ハードウェア': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -2004,7 +2013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ollamaをインストール：curl -fsSL https://ollama.com/install.sh | sh（Linux）またはollama.comからダウンロード（Windows/Mac）。Falcon-H1-Arabicをネイティブにサポート。',
           'Falcon-H1-Arabic 7Bをプルして実行：ollama run hf.co/tiiuae/Falcon-H1-Arabic-7B-Instruct-GGUF — ~5 GB のダウンロード後、自動的に実行される。「اكتب قصيدة عن أبوظبي」（アブダビについての詩を書いて）のようなプロンプトでアラビア語をテスト。',
           '多言語向けにQwen3-8Bをプル：ollama pull qwen3:8b — ~5 GB のダウンロード。MSAと方言の両方の文脈で強いアラビア語。',
-          'Jais 30Bの場合：Hugging Face（inceptionai/jais-30b-v3）からダウンロードし、llama.cppの変換ツールでGGUFに変換、Q4_K_Mに量子化してからOllama（ollama create jais-30b -f Modelfile）またはllama.cppサーバーでロード。',
+          'Jais-3-7Bの場合：開発元が直接GGUFビルドを公開しています — ollama run hf.co/inception42/Jais-3-7B-GGUF（Q4_K_M ~5.6 GB）。Jais-3-32Bの場合：Hugging Face（inception42/Jais-3-32B）からダウンロードし、ビルド済みGGUFがまだなければllama.cppの変換ツールでGGUFに変換、Q4_K_Mに量子化してからOllamaまたはllama.cppサーバーでロード。',
           '本番推論：高スループットのアラビア語APIサービングにはvLLMを使用。vLLMはFalcon-H1-ArabicとQwen3をネイティブにサポート。localhost:8000でOpenAI互換エンドポイントとして公開。',
           'アラビア語プロンプトのヒント：常に言語を指定 — 「أجب باللغة العربية الفصحى」（現代標準アラビア語で答えて）。方言の場合は、対象方言の例文をシステムプロンプトに含めてください。',
         ],
@@ -2028,15 +2037,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '一般的なゲーミングノートPCでアラビア語LLMを実行できますか？',
-            a: 'はい、Q4量子化の7Bクラスのモデルなら可能です。Falcon-H1-Arabic 7BとQwen3-8Bは ~5-6 GB VRAM が必要 — RTX 4060（8 GB）やRTX 3060（12 GB）を搭載したほとんどのゲーミングノートPCで実行できます。Jais 30BにはハイエンドのデスクトップGPU（RTX 4090 24 GB）またはエンタープライズGPUがQ4量子化で必要です。',
+            a: 'はい、Q4量子化の7Bクラスのモデルなら可能です。Falcon-H1-Arabic 7B、Jais-3-7B、Qwen3-8Bは ~5-6 GB VRAM が必要 — RTX 4060（8 GB）やRTX 3060（12 GB）を搭載したほとんどのゲーミングノートPCで実行できます。Jais-3-32BにはハイエンドのデスクトップGPU（RTX 4090 24 GB）またはエンタープライズGPUがQ4量子化で必要です。',
           },
           {
             q: 'JaisとFalcon-H1-Arabicの違いは何ですか？',
-            a: 'どちらもアブダビ発のアラビア語対応モデルです。Jais（Core42/G42）はより大きく（最大30B）、126B アラビア語トークンでアラビア語-英語バイリンガルとして専用に訓練 — エンタープライズ規模でのアラビア語品質に最適化されています。Falcon-H1-Arabicは別のアブダビの機関であるTIIによる7Bモデルで、より広範なFalcon-H1ハイブリッドアーキテクチャをベースに構築 — コンシューマーGPUに優しく、UAEのAIエコシステムの一部です。最高のアラビア語品質なら：Jais 30B。コンシューマーハードウェアなら：Falcon-H1-Arabic 7B。',
+            a: 'どちらもアブダビ発のアラビア語対応モデルです。Jais 3（MBZUAI/Inception42）はより新しく、より大きなファミリー（最大375BのMoE旗艦モデルまで、オンプレミス向けの密な7B・32B版あり）で、エンタープライズ規模のアラビア語用に専用に訓練されています。Falcon-H1-Arabicは別のアブダビの機関であるTIIによる7Bモデルで、より広範なFalcon-H1ハイブリッドアーキテクチャをベースに構築 — コンシューマーGPUに優しく、UAEのAIエコシステムの一部です。最高のアラビア語品質なら：Jais-3-32B。コンシューマーハードウェアなら：Falcon-H1-Arabic 7BまたはJais-3-7B。',
           },
           {
             q: 'Qwen3は専用のアラビア語モデルと同等にアラビア語をサポートしますか？',
-            a: 'Qwen3は非常に強い汎用アラビア語サポートを持っています（119言語、HELM Arabicでトップスコア）。最高のアラビア語品質を絶対的に求める純粋なアラビア語エンタープライズデプロイには、一般にJais 30Bが好まれます。アラビア語が必要な複数言語の1つである混合多言語ワークロードでは、Qwen3-8Bがその幅広さとデプロイの容易さからより良い選択となることがよくあります。',
+            a: 'Qwen3は非常に強い汎用アラビア語サポートを持っています（119言語、HELM Arabicでトップスコア）。最高のアラビア語品質を絶対的に求める純粋なアラビア語エンタープライズデプロイには、一般にJais-3-32Bが好まれます。アラビア語が必要な複数言語の1つである混合多言語ワークロードでは、Qwen3-8Bがその幅広さとデプロイの容易さからより良い選択となることがよくあります。',
           },
           {
             q: 'ALLaMとは何で、商用利用できますか？',
@@ -2052,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'UAE政府のデプロイにはどのアラビア語LLMが最適ですか？',
-            a: 'Falcon-H1-Arabic 7B（TII、アブダビ発）とJais 30B（Core42/G42、アブダビ発）はどちらも、UAE政府系の研究機関に由来するUAEネイティブモデルです。主権と監査可能性の点で、これらが最も適合する選択肢です。両方とも、データがUAEのインフラから出ることなくオンプレミスでデプロイできます。当社の[UAE PDPLデータ主権ガイド](/ja/local-llms/uae-pdpl-data-sovereignty-local-ai-2026)をご覧ください。',
+            a: 'Falcon-H1-Arabic 7B（TII、アブダビ発）とJais 3（MBZUAI/Inception42、アブダビ発）はどちらも、UAE政府系の研究機関に由来するUAEネイティブモデルです。主権と監査可能性の点で、これらが最も適合する選択肢です。両方とも、データがUAEのインフラから出ることなくオンプレミスでデプロイできます。当社の[UAE PDPLデータ主権ガイド](/ja/local-llms/uae-pdpl-data-sovereignty-local-ai-2026)をご覧ください。',
           },
           {
             q: 'プロンプトで湾岸アラビア語方言とMSAをどう扱えばよいですか？',
@@ -2060,11 +2069,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '自分のアラビア語データでJaisやFalcon-H1-Arabicをファインチューニングできますか？',
-            a: 'はい — どちらもファインチューニングを許可するオープンライセンス（JaisはApache 2.0、Falcon-H1-ArabicはFalcon LLM License）を使用しています。UnslothやPEFTライブラリのようなツールでLoRAまたはQLoRAファインチューニングを使用します。ドメイン固有のアラビア語データ（法務、医療、金融）でのファインチューニングは、専門的なユースケースの品質を大幅に向上させます。PDPLコンプライアンスのため、ファインチューニングデータはオンプレミスに保ってください。',
+            a: 'はい — どちらもファインチューニングを許可するオープンライセンス（JaisはApache 2.0、Falcon-H1-ArabicはFalcon LLM License）を使用しています。UnslothやPEFTライブラリのようなツールでLoRAまたはQLoRAファインチューニングを使用します。ドメイン固有のアラビア語データ（法務、医療、金融）でのファインチューニングは、専門的なユースケースの品質を大幅に向上させます。ファインチューニングデータをオンプレミスに保つことで、PDPL上の国境を越えたデータ移転リスクを減らせます。ただし完全な準拠には、組織の法的根拠や保護措置も別途必要です。',
           },
           {
-            q: 'Jais 30Bをローカルで実行するにはどのハードウェアが必要ですか？',
-            a: 'Q4_K_M量子化では、Jais 30Bは推定18-20 GB VRAM が必要です（見積もり — 公式ベンチマークなし）。NVIDIA RTX 4090（24 GB）は中程度のコンテキストでQ4で実行可能；A100 40 GB はFP16でも余裕を持って扱えます。本番のスループットには、マルチGPUモードの2枚のRTX 4090、または単一のA100/H100が推奨されます。当社の[VRAM計算ガイド](/ja/local-llms/vram-calculator-local-llm)をご覧ください。',
+            q: 'Jais 3をローカルで実行するにはどのハードウェアが必要ですか？',
+            a: 'Jais-3-7BはGGUF Q4_K_Mでわずか ~5.6 GB VRAM で済みます — RTX 4060（8 GB）以上なら十分です。Jais-3-32Bは推定19-20 GB VRAM が必要です（パラメータ数からの見積もり — 公式ベンチマークはまだなし）。NVIDIA RTX 4090（24 GB）は32B版を中程度のコンテキストでQ4で実行可能；A100 40 GB はFP16でも余裕を持って扱えます。本番のスループットには、マルチGPUモードの2枚のRTX 4090、または単一のA100/H100が推奨されます。当社の[VRAM計算ガイド](/ja/local-llms/vram-calculator-local-llm)をご覧ください。',
           },
         ],
       },
@@ -2086,8 +2095,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Technology Innovation Institute (TII) — Falcon-H1-Arabic announcement, January 5, 2026 — tii.ae',
           'Falcon-H1-Arabic Hugging Face model page — huggingface.co/blog/tiiuae/falcon-h1-arabic',
-          'Core42 / Cerebras — Jais 30B press release — cerebras.ai and g42.ai',
-          'Jais 30B on Hugging Face — huggingface.co/inceptionai/jais-30b-v3',
+          'MBZUAI Institute of Foundation Models / Inception42 — Jais 3 launch announcement, October 16, 2026 — mbzuai.ac.ae and wam.ae',
+          'Jais 3 on Hugging Face — huggingface.co/inception42/Jais-3-7B and huggingface.co/inception42/Jais-3-32B',
+          'Core42 / Cerebras — Jais 30B (previous generation) press release — cerebras.ai and g42.ai',
           'SDAIA / HUMAIN — ALLaM 34B announcement, May 2025 — humain.ai',
           'ALLaM-2-7B on Microsoft Azure AI — techcommunity.microsoft.com (September 2024)',
           'QCRI / HBKU — 技術レポート「Fanar 2.0: Arabic Generative AI Stack」およびFanar-2-27B-Instructモデルカード — arxiv.org/abs/2603.16397',
@@ -2102,16 +2112,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'ベストなアラビア語対応ローカルLLM：Jais、Falcon、オンプレミスでのアラビア語AI実行（2026）',
-      'description': 'Jais 30BとFalcon-H1-Arabic 7Bは2026年のトップのアラビア語ローカルLLMです。オンプレミスのアラビア語AIデプロイ向けのVRAM表、設定ガイド、品質評価ベンチマーク。',
+      'description': 'Jais 3とFalcon-H1-Arabic 7Bは2026年のトップのアラビア語ローカルLLMです。オンプレミスのアラビア語AIデプロイ向けのVRAM表、設定ガイド、品質評価ベンチマーク。',
       'url': 'https://www.promptquorum.com/ja/local-llms/best-arabic-local-llms-2026',
       'datePublished': '2026-06-14',
-      'dateModified': '2026-08-28',
+      'dateModified': '2026-11-19',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
       'inLanguage': 'ja',
       'about': [
-        { '@type': 'SoftwareApplication', 'name': 'Jais 30B' },
+        { '@type': 'SoftwareApplication', 'name': 'Jais 3' },
         { '@type': 'SoftwareApplication', 'name': 'Falcon-H1-Arabic' },
         { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
         { '@type': 'Thing', 'name': 'Arabic NLP' },
@@ -2124,16 +2134,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'ja',
       'mainEntity': [
-        { '@type': 'Question', 'name': '一般的なゲーミングノートPCでアラビア語LLMを実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、Q4量子化の7Bクラスのモデルなら可能です。Falcon-H1-Arabic 7BとQwen3-8Bは ~5-6 GB VRAM が必要 — RTX 4060（8 GB）やRTX 3060（12 GB）を搭載したほとんどのゲーミングノートPCで実行できます。Jais 30BにはハイエンドのデスクトップGPU（RTX 4090 24 GB）またはエンタープライズGPUがQ4量子化で必要です。' } },
-        { '@type': 'Question', 'name': 'JaisとFalcon-H1-Arabicの違いは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'どちらもアブダビ発のアラビア語対応モデルです。Jais（Core42/G42）はより大きく（最大30B）、126B アラビア語トークンでアラビア語-英語バイリンガルとして専用に訓練されています。Falcon-H1-ArabicはTIIによる7Bモデルで、Falcon-H1ハイブリッドアーキテクチャをベースに構築 — コンシューマーGPUに優しいです。最高のアラビア語品質なら：Jais 30B。コンシューマーハードウェアなら：Falcon-H1-Arabic 7B。' } },
-        { '@type': 'Question', 'name': 'Qwen3は専用のアラビア語モデルと同等にアラビア語をサポートしますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3は非常に強い汎用アラビア語サポートを持っています（119言語、HELM Arabicでトップスコア）。最高のアラビア語品質を絶対的に求める純粋なアラビア語エンタープライズデプロイには、一般にJais 30Bが好まれます。混合多言語ワークロードでは、Qwen3-8Bがその幅広さとデプロイの容易さからより良い選択となることがよくあります。' } },
+        { '@type': 'Question', 'name': '一般的なゲーミングノートPCでアラビア語LLMを実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、Q4量子化の7Bクラスのモデルなら可能です。Falcon-H1-Arabic 7B、Jais-3-7B、Qwen3-8Bは ~5-6 GB VRAM が必要 — RTX 4060（8 GB）やRTX 3060（12 GB）を搭載したほとんどのゲーミングノートPCで実行できます。Jais-3-32BにはハイエンドのデスクトップGPU（RTX 4090 24 GB）またはエンタープライズGPUがQ4量子化で必要です。' } },
+        { '@type': 'Question', 'name': 'JaisとFalcon-H1-Arabicの違いは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'どちらもアブダビ発のアラビア語対応モデルです。Jais 3（MBZUAI/Inception42）はより新しく、より大きなファミリー（最大375BのMoE旗艦モデルまで、密な7B・32B版あり）です。Falcon-H1-ArabicはTIIによる7Bモデルで、Falcon-H1ハイブリッドアーキテクチャをベースに構築 — コンシューマーGPUに優しいです。最高のアラビア語品質なら：Jais-3-32B。コンシューマーハードウェアなら：Falcon-H1-Arabic 7BまたはJais-3-7B。' } },
+        { '@type': 'Question', 'name': 'Qwen3は専用のアラビア語モデルと同等にアラビア語をサポートしますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3は非常に強い汎用アラビア語サポートを持っています（119言語、HELM Arabicでトップスコア）。最高のアラビア語品質を絶対的に求める純粋なアラビア語エンタープライズデプロイには、一般にJais-3-32Bが好まれます。混合多言語ワークロードでは、Qwen3-8Bがその幅広さとデプロイの容易さからより良い選択となることがよくあります。' } },
         { '@type': 'Question', 'name': 'ALLaMとは何で、商用利用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ALLaMはSDAIA（現在はHUMAINブランドの傘下）によるサウジの国家アラビア語中心のLLMファミリーです。一般公開版（Hugging Faceの7B、Azure AIの7B）はリサーチ/非商用ライセンスです。商用利用にはHUMAIN/SDAIAに直接お問い合わせください。ALLaM 34Bは国家のHUMAIN Chatアプリを稼働していますが、一般公開は制限されています。' } },
         { '@type': 'Question', 'name': 'アラビア語のトークン化はモデルの品質にどう影響しますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'アラビア文字は文字レベルのエラーを避けるために適切なトークン化が必要です。アラビア語でネイティブに訓練されたモデル（Jais、Falcon-H1-Arabic）は、アラビア語の形態論に最適化されたトークナイザーを使用します。汎用の多言語モデルはアラビア語を非効率にトークン化することがあり、複雑なアラビア語テキストで品質が低下します。本番前に実際の入力データでテストしてください。' } },
         { '@type': 'Question', 'name': 'アラビア語ローカルLLMは右から左（RTL）の文書を扱えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'モデルは正しい右から左の方向でアラビア語テキストを生成します — モデルはUnicodeで適切なRTLアラビア語を生成します。アプリケーションのインターフェースがRTLレンダリング（HTML dir="rtl"、CSS direction:rtl）を扱う必要があります。llama.cpp、Ollama、vLLMはUnicodeのアラビア語テキストを正しく返します；方向はUIレイヤーが扱います。' } },
-        { '@type': 'Question', 'name': 'UAE政府のデプロイにはどのアラビア語LLMが最適ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B（TII、アブダビ発）とJais 30B（Core42/G42、アブダビ発）はどちらも、UAE政府系の研究機関に由来するUAEネイティブモデルです。主権と監査可能性の点で、これらが最も適合する選択肢です。両方とも、データがUAEのインフラから出ることなくオンプレミスでデプロイできます。' } },
+        { '@type': 'Question', 'name': 'UAE政府のデプロイにはどのアラビア語LLMが最適ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B（TII、アブダビ発）とJais 3（MBZUAI/Inception42、アブダビ発）はどちらも、UAE政府系の研究機関に由来するUAEネイティブモデルです。主権と監査可能性の点で、これらが最も適合する選択肢です。両方とも、データがUAEのインフラから出ることなくオンプレミスでデプロイできます。' } },
         { '@type': 'Question', 'name': 'プロンプトで湾岸アラビア語方言とMSAをどう扱えばよいですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'デフォルトのシステムプロンプト：現代標準アラビア語で答える。湾岸アラビア語（エミラティ、サウジ、クウェート）の場合は、システムプロンプトに方言の例文を追加するか、ドメインデータでファインチューニングします。掲載した全モデルはMSAを適切に扱えます；方言の品質はさまざまです。本番品質を前提とする前に、5〜10個の方言クエリの例でテストしてください。' } },
-        { '@type': 'Question', 'name': '自分のアラビア語データでJaisやFalcon-H1-Arabicをファインチューニングできますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい — どちらもファインチューニングを許可するオープンライセンス（JaisはApache 2.0、Falcon-H1-ArabicはFalcon LLM License）を使用しています。UnslothやPEFTライブラリのようなツールでLoRAまたはQLoRAを使用します。ドメイン固有のアラビア語データでのファインチューニングは品質を大幅に向上させます。PDPLコンプライアンスのため、ファインチューニングデータはオンプレミスに保ってください。' } },
-        { '@type': 'Question', 'name': 'Jais 30Bをローカルで実行するにはどのハードウェアが必要ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M量子化では、Jais 30Bは推定18-20 GB VRAM が必要です（公式ベンチマークなし）。RTX 4090（24 GB）は中程度のコンテキストでQ4で実行可能；A100 40 GB はFP16でも余裕を持って扱えます。本番のスループットには、マルチGPUモードの2枚のRTX 4090、または単一のA100/H100が推奨されます。' } },
+        { '@type': 'Question', 'name': '自分のアラビア語データでJaisやFalcon-H1-Arabicをファインチューニングできますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい — どちらもファインチューニングを許可するオープンライセンス（JaisはApache 2.0、Falcon-H1-ArabicはFalcon LLM License）を使用しています。UnslothやPEFTライブラリのようなツールでLoRAまたはQLoRAを使用します。ドメイン固有のアラビア語データでのファインチューニングは品質を大幅に向上させます。ファインチューニングデータをオンプレミスに保つことで、PDPL上の国境を越えたデータ移転リスクを減らせます。ただし完全な準拠には、組織の法的根拠や保護措置も別途必要です。' } },
+        { '@type': 'Question', 'name': 'Jais 3をローカルで実行するにはどのハードウェアが必要ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Jais-3-7BはGGUF Q4_K_Mでわずか ~5.6 GB VRAM で済みます。Jais-3-32Bは推定19-20 GB VRAM が必要です（見積もり、公式ベンチマークなし）。RTX 4090（24 GB）は32B版を中程度のコンテキストでQ4で実行可能；A100 40 GB はFP16でも余裕を持って扱えます。本番のスループットには、マルチGPUモードの2枚のRTX 4090、または単一のA100/H100が推奨されます。' } },
       ],
     },
     itemListSchema: {
@@ -2142,7 +2152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'ベストなアラビア語ローカルLLM 2026',
       'numberOfItems': 7,
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 30B', 'description': 'ベストなアラビア語ネイティブローカルLLM。126B アラビア語訓練トークン、Apache 2.0、Core42/G42 アブダビ。' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 3', 'description': 'ベストなアラビア語ネイティブローカルLLM、最新世代（2026年10月）。0.9Bから375Bのラインアップ、Apache 2.0、MBZUAI/Inception42 アブダビ。' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Falcon-H1-Arabic 7B', 'description': 'コンシューマーハードウェアに最適。TII アブダビ。Q4_K_M ~5 GB VRAM。Falcon LLM License。' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3-8B', 'description': 'アラビア語が強い多言語ベストオプション。HELM Arabicトップパフォーマー。Apache 2.0。' },
         { '@type': 'ListItem', 'position': 4, 'name': 'ALLaM 34B', 'description': 'サウジの国家アラビア語モデル（HUMAIN/SDAIA）。HUMAIN Chatを稼働。リサーチライセンス。' },
@@ -2156,26 +2166,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Melhores LLMs locais em árabe: Jais, Falcon e IA em árabe on-premise (2026)',
     heroImage: '/images/best-arabic-local-llms-2026-overview-hero-pt.webp',
     seoTitle: 'Melhores LLMs locais em árabe 2026: Jais e Falcon',
-    metaDescription: 'Jais 30B, Falcon-H1-Arabic 7B e Qwen3-8B são os melhores LLMs locais em árabe em 2026. Tabela de VRAM, guia de instalação on-premise e avaliação.',
-    intro: 'Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) e Falcon-H1-Arabic 7B (TII, Abu Dhabi) são os principais LLMs locais nativos em árabe em 2026. Para cargas de trabalho multilíngues gerais com forte suporte ao árabe, o Qwen3-8B lidera os benchmarks HELM Arabic entre modelos dimensionados para hardware de consumidor. Os três rodam on-premise com Ollama ou vLLM, mantendo os dados em árabe dentro das fronteiras nacionais. Este guia classifica os modelos, traz uma tabela de VRAM e mostra como implantar e avaliar IA em árabe localmente.',
+    metaDescription: 'Jais 3, Falcon-H1-Arabic 7B e Qwen3-8B são os melhores LLMs locais em árabe em 2026. Tabela de VRAM, guia de instalação on-premise e avaliação.',
+    intro: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi, Apache 2.0), lançado em outubro de 2026, e Falcon-H1-Arabic 7B (TII, Abu Dhabi) são os principais LLMs locais nativos em árabe em 2026. Para cargas de trabalho multilíngues gerais com forte suporte ao árabe, o Qwen3-8B lidera os benchmarks HELM Arabic entre modelos dimensionados para hardware de consumidor. Os três rodam on-premise com Ollama ou vLLM, mantendo os dados em árabe dentro das fronteiras nacionais. Este guia classifica os modelos, traz uma tabela de VRAM e mostra como implantar e avaliar IA em árabe localmente.',
     designSkin: 'hub',
     theme: 'Best Models',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-14',
+    next_refresh_due: '2027-05-19',
     publishDate: '2026-06-14',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: 'Empresas de língua árabe, desenvolvedores do Golfo e equipes que implantam NLP em árabe localmente',
     readTime: '13 min de leitura',
     primaryTerm: 'Arabic local LLM',
     affiliateDisclosure: false,
-    leadAnswerBlock: '**Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) e Falcon-H1-Arabic 7B (TII Abu Dhabi) são os principais LLMs locais nativos em árabe em 2026. Para cargas de trabalho multilíngues gerais com forte suporte ao árabe, o Qwen3-8B lidera os benchmarks HELM Arabic entre modelos dimensionados para hardware de consumidor. Os três rodam on-premise com Ollama ou vLLM, mantendo os dados pessoais em árabe dentro das fronteiras nacionais.**',
+    leadAnswerBlock: '**Jais 3 (MBZUAI/Inception42, Abu Dhabi, Apache 2.0), lançado em outubro de 2026, e Falcon-H1-Arabic 7B (TII Abu Dhabi) são os principais LLMs locais nativos em árabe em 2026. Para cargas de trabalho multilíngues gerais com forte suporte ao árabe, o Qwen3-8B lidera os benchmarks HELM Arabic entre modelos dimensionados para hardware de consumidor. Os três rodam on-premise com Ollama ou vLLM, mantendo os dados pessoais em árabe dentro das fronteiras nacionais.**',
     quickAnswerTop: {
       en: {
         question: 'What is the best Arabic local LLM in 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) is the strongest Arabic-native local LLM in 2026, trained on 126B Arabic tokens with Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), released October 2026, is the strongest Arabic-native local LLM in 2026, available in sizes from 0.9B to 32B under Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
         bullets: [
-          'Jais 30B: best Arabic-native model, 126B Arabic training tokens, Apache 2.0, needs ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): best Arabic-native model, released October 2026 by MBZUAI/Inception42, Apache 2.0, 32B needs ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, consumer GPU friendly',
           'Qwen3-8B: best multilingual option with strong Arabic, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Saudi national model, powers HUMAIN Chat; research license',
@@ -2185,9 +2195,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ar: {
         question: 'ما أفضل نموذج ذكاء اصطناعي عربي محلي في 2026؟',
-        answer: 'Jais 30B (Core42/G42، أبوظبي) هو أقوى نموذج محلي عربي أصيل في 2026، مُدرَّب على 126 مليار رمز عربي بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42، أبوظبي)، الذي صدر في أكتوبر 2026، هو أقوى نموذج محلي عربي أصيل في 2026، ويتوفر بأحجام من 0.9B إلى 32B بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
         bullets: [
-          'Jais 30B: أفضل نموذج عربي أصيل، 126 مليار رمز تدريب عربي، Apache 2.0، يحتاج ~18-20 GB VRAM عند Q4',
+          'Jais 3 (7B/32B): أفضل نموذج عربي أصيل، صدر في أكتوبر 2026 من MBZUAI/Inception42، Apache 2.0، يحتاج إصدار 32B إلى ~19-20 GB VRAM عند Q4',
           'Falcon-H1-Arabic 7B: مؤسسة الابتكار التقني أبوظبي، Q4_K_M ~5 GB VRAM، مناسب لـ GPU المستهلكين',
           'Qwen3-8B: أفضل خيار متعدد اللغات مع دعم عربي قوي، ~5-6 GB VRAM عند Q4',
           'ALLaM 34B (HUMAIN/SDAIA): النموذج الوطني السعودي، يُشغِّل تطبيق HUMAIN Chat؛ ترخيص بحثي',
@@ -2197,9 +2207,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Was ist das beste arabische lokale LLM im Jahr 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) ist das stärkste arabisch-native lokale LLM im Jahr 2026, trainiert auf 126 Milliarden arabischen Tokens mit Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), veröffentlicht im Oktober 2026, ist das stärkste arabisch-native lokale LLM im Jahr 2026, verfügbar in Größen von 0,9B bis 32B unter Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
         bullets: [
-          'Jais 30B: bestes arabisch-natives Modell, 126 Mrd. arabische Trainings-Tokens, Apache 2.0, benötigt ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): bestes arabisch-natives Modell, veröffentlicht im Oktober 2026 von MBZUAI/Inception42, Apache 2.0, 32B benötigt ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, Consumer-GPU-kompatibel',
           'Qwen3-8B: bester multilingualer Ansatz mit starkem Arabisch, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Nationales saudi-arabisches Modell; Forschungslizenz',
@@ -2209,9 +2219,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor LLM local árabe en 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dabi) es el LLM local árabe nativo más potente en 2026, entrenado con 126B tokens en árabe con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dabi), lanzado en octubre de 2026, es el LLM local árabe nativo más potente en 2026, disponible en tamaños de 0.9B a 32B con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
         bullets: [
-          'Jais 30B: mejor modelo árabe nativo, 126B tokens de entrenamiento en árabe, Apache 2.0, necesita ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): mejor modelo árabe nativo, lanzado en octubre de 2026 por MBZUAI/Inception42, Apache 2.0, la versión 32B necesita ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dabi, Q4_K_M ~5 GB VRAM, compatible con GPU de consumidor',
           'Qwen3-8B: mejor opción multilingüe con fuerte soporte árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudí; licencia de investigación',
@@ -2221,9 +2231,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM local arabophone en 2026 ?',
-        answer: 'Jais 30B (Core42/G42, Abou Dabi) est le LLM local arabophone natif le plus puissant en 2026, entraîné sur 126 milliards de tokens arabes avec licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abou Dabi), sorti en octobre 2026, est le LLM local arabophone natif le plus puissant en 2026, disponible en tailles de 0,9B à 32B sous licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
         bullets: [
-          'Jais 30B : meilleur modèle arabophone natif, 126 milliards de tokens arabes, Apache 2.0, nécessite ~18-20 Go VRAM Q4',
+          'Jais 3 (7B/32B) : meilleur modèle arabophone natif, sorti en octobre 2026 par MBZUAI/Inception42, Apache 2.0, la version 32B nécessite ~19-20 Go VRAM Q4',
           'Falcon-H1-Arabic 7B : TII Abou Dabi, Q4_K_M ~5 Go VRAM, compatible GPU grand public',
           'Qwen3-8B : meilleure option multilingue avec fort support arabe, ~5-6 Go VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA) : modèle national saoudien ; licence recherche',
@@ -2233,9 +2243,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年のベストなアラビア語対応ローカルLLMは？',
-        answer: 'Jais 30B（Core42/G42、アブダビ）は2026年で最も優れたアラビア語ネイティブのローカルLLMです。1,260億のアラビア語トークンで訓練され、Apache 2.0ライセンスで利用可能。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
+        answer: 'Jais 3（MBZUAI/Inception42、アブダビ）は2026年10月にリリースされ、2026年で最も優れたアラビア語ネイティブのローカルLLMです。0.9Bから32Bまでのサイズで利用可能、Apache 2.0ライセンス。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
         bullets: [
-          'Jais 30B: アラビア語ネイティブ最強、1,260億アラビア語トークン、Apache 2.0、Q4で ~18-20 GB VRAM',
+          'Jais 3（7B/32B）: アラビア語ネイティブ最強、2026年10月にMBZUAI/Inception42がリリース、Apache 2.0、32Bは ~19-20 GB VRAM（Q4）が必要',
           'Falcon-H1-Arabic 7B: TII アブダビ、Q4_K_M ~5 GB VRAM、コンシューマーGPU対応',
           'Qwen3-8B: アラビア語サポートが強い多言語ベストオプション、Q4 ~5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）: サウジ国家モデル、リサーチライセンス',
@@ -2245,9 +2255,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pt: {
         question: 'Qual é o melhor LLM local árabe em 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) é o LLM local árabe nativo mais poderoso em 2026, treinado com 126B tokens em árabe com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), lançado em outubro de 2026, é o LLM local árabe nativo mais poderoso em 2026, disponível em tamanhos de 0,9B a 32B com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
         bullets: [
-          'Jais 30B: melhor modelo árabe nativo, 126B tokens de treinamento em árabe, Apache 2.0, requer ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): melhor modelo árabe nativo, lançado em outubro de 2026 pela MBZUAI/Inception42, Apache 2.0, a versão 32B precisa de ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, compatível com GPU de consumidor',
           'Qwen3-8B: melhor opção multilíngue com forte suporte ao árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudita; licença de pesquisa',
@@ -2257,9 +2267,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年最佳阿拉伯语本地LLM是什么？',
-        answer: 'Jais 30B（Core42/G42，阿布扎比）是2026年最强的阿拉伯语原生本地LLM，使用1260亿阿拉伯语token训练，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
+        answer: 'Jais 3（MBZUAI/Inception42，阿布扎比）于2026年10月发布，是2026年最强的阿拉伯语原生本地LLM，提供从0.9B到32B的多种尺寸，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
         bullets: [
-          'Jais 30B：最佳阿拉伯语原生模型，1260亿阿拉伯语训练token，Apache 2.0，Q4需约18-20 GB VRAM',
+          'Jais 3（7B/32B）：最佳阿拉伯语原生模型，2026年10月由MBZUAI/Inception42发布，Apache 2.0，32B版本需约19-20 GB VRAM（Q4）',
           'Falcon-H1-Arabic 7B：TII阿布扎比，Q4_K_M约5 GB VRAM，兼容消费级GPU',
           'Qwen3-8B：具有强阿拉伯语支持的最佳多语言选项，Q4约5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）：沙特国家模型；研究许可证',
@@ -2269,9 +2279,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ko: {
         question: '2026년 최고의 아랍어 로컬 LLM은 무엇입니까?',
-        answer: 'Jais 30B(Core42/G42, 아부다비)는 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 1,260억 개의 아랍어 토큰으로 훈련되었으며 Apache 2.0 라이선스를 제공합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
+        answer: 'Jais 3(MBZUAI/Inception42, 아부다비)는 2026년 10월 출시되어 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 0.9B부터 32B까지 다양한 크기로 제공되며 Apache 2.0 라이선스를 적용합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
         bullets: [
-          'Jais 30B: 최고의 아랍어 네이티브 모델, 아랍어 훈련 토큰 1,260억 개, Apache 2.0, Q4 ~18-20 GB VRAM 필요',
+          'Jais 3(7B/32B): 최고의 아랍어 네이티브 모델, 2026년 10월 MBZUAI/Inception42 출시, Apache 2.0, 32B 버전은 ~19-20 GB VRAM(Q4) 필요',
           'Falcon-H1-Arabic 7B: TII 아부다비, Q4_K_M ~5 GB VRAM, 소비자 GPU 호환',
           'Qwen3-8B: 강력한 아랍어 지원을 갖춘 최고의 다국어 옵션, Q4 ~5-6 GB VRAM',
           'ALLaM 34B(HUMAIN/SDAIA): 사우디 국가 모델; 연구 라이선스',
@@ -2296,7 +2306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Jais 30B (Core42/G42, Abu Dhabi):** Melhor LLM local nativo em árabe em 2026. Treinado com 126B tokens em árabe + 251B tokens em inglês. Licença Apache 2.0. Requer ~18-20 GB VRAM em quantização Q4 (multi-GPU ou GPU enterprise para FP16 completo).',
+          '**Jais 3 (MBZUAI/Inception42, Abu Dhabi):** Melhor LLM local nativo em árabe em 2026, lançado em outubro de 2026 substituindo o antigo Jais 30B. Seis modelos, de 0,9B a um modelo principal MoE de 375B. Licença Apache 2.0. A versão 32B requer ~19-20 GB VRAM em quantização Q4 (GPU enterprise); a de 7B precisa de apenas ~5,6 GB (GGUF Q4_K_M).',
           '**Falcon-H1-Arabic 7B (TII, Abu Dhabi):** Modelo focado em árabe nativo dos Emirados. Roda em GPUs de consumidor: Q4_K_M ~5 GB VRAM. Construído sobre a arquitetura híbrida Falcon-H1, treinado em datasets em árabe nativo (não traduzidos).',
           '**Qwen3-8B (Alibaba Cloud):** Melhor opção multilíngue com forte suporte ao árabe. Média de 0.786 no HELM Arabic (variante 235B); o 8B cabe em Q4 em ~5-6 GB VRAM. Suporte a 119 idiomas.',
           '**ALLaM 34B (HUMAIN/SDAIA, Arábia Saudita):** Modelo nacional saudita, alimenta o HUMAIN Chat. Licença de pesquisa/não comercial para acesso público. Disponível no Microsoft Azure AI (variante 7B).',
@@ -2306,8 +2316,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Soberania de dados:** Rodar NLP em árabe localmente mantém os dados pessoais dentro das fronteiras nacionais — alinha-se com a UAE PDPL, a NDMO saudita e os objetivos de soberania de dados do Golfo.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Jais 30B (Apache 2.0, Abu Dhabi) e Falcon-H1-Arabic 7B (TII, Abu Dhabi) são os principais LLMs locais nativos em árabe em 2026, com o Qwen3-8B liderando os benchmarks multilíngues de árabe para hardware de consumidor.' },
-          { type: 'plain-terms', text: 'A melhor IA em árabe que você pode rodar no seu próprio servidor: Jais 30B para a melhor qualidade em árabe (precisa de uma GPU de ponta), Falcon-H1-Arabic 7B para computadores comuns ou Qwen3-8B se você também precisar de outros idiomas.' },
+          { type: 'one-sentence', text: 'Jais 3 (Apache 2.0, Abu Dhabi, lançado em outubro de 2026) e Falcon-H1-Arabic 7B (TII, Abu Dhabi) são os principais LLMs locais nativos em árabe em 2026, com o Qwen3-8B liderando os benchmarks multilíngues de árabe para hardware de consumidor.' },
+          { type: 'plain-terms', text: 'A melhor IA em árabe que você pode rodar no seu próprio servidor: Jais 3 para a melhor qualidade em árabe (a versão 32B precisa de uma GPU de ponta, a de 7B roda em uma GPU gamer comum), Falcon-H1-Arabic 7B para computadores comuns ou Qwen3-8B se você também precisar de outros idiomas.' },
         ],
       },
       whyArabicMatters: {
@@ -2325,9 +2335,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Melhores LLMs locais em árabe: classificados para implantação on-premise',
         content: 'Classificados por capacidade em árabe e adequação para implantação local/on-premise.',
         image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
-        imageCaption: 'Árvore de decisão para escolher um LLM local em árabe: Jais 30B para a melhor qualidade em árabe (~19-20 GB de VRAM), Falcon-H1-Arabic 7B para GPUs de consumidor (~5 GB), Qwen3-8B para uso multilíngue (~5-6 GB) ou Llama 3.1-8B como base multilíngue ampla.',
+        imageCaption: 'Árvore de decisão para escolher um LLM local em árabe: Jais-3-32B para a melhor qualidade em árabe (~19-20 GB de VRAM), Jais-3-7B ou Falcon-H1-Arabic 7B para GPUs de consumidor (~5-6 GB), Qwen3-8B para uso multilíngue (~5-6 GB) ou Llama 3.1-8B como base multilíngue ampla.',
         items: [
-          '**1. Jais 30B — Melhor qualidade em árabe (Apache 2.0, pronto para on-premise).** Desenvolvedor: Core42 / Inception AI (grupo G42, Abu Dhabi) + pesquisa MBZUAI + treinamento Cerebras. Treinamento: 126B tokens em árabe + 251B tokens em inglês + 50B tokens de código. A avaliação humana mostra que o Jais 30B supera o Jais 13B em árabe em 96% das avaliações. Licença: Apache 2.0 (totalmente aberta, uso comercial permitido). Hugging Face: inceptionai/jais-30b-v3. VRAM: estimativa de ~18-20 GB Q4 (GPU enterprise ou multi-GPU para FP16). Melhor para: máxima qualidade em árabe em processamento de documentos empresariais, suporte ao cliente e implantações governamentais onde o árabe é primário.',
+          '**1. Jais 3 (7B / 32B) — Melhor qualidade em árabe, geração mais recente (Apache 2.0, pronto para on-premise).** Desenvolvedor: Institute of Foundation Models (IFM) da MBZUAI + Inception42, com a Cerebras Systems (Abu Dhabi). Lançado em 16 de outubro de 2026, substituindo o antigo Jais 30B como linha principal de modelos em árabe. Lineup: seis modelos, de 0,9B a um modelo principal MoE de 375B (23B ativos); Jais-3-7B e Jais-3-32B são os tamanhos adequados para on-premise. Licença: Apache 2.0 em todos os seis modelos de linguagem. Hugging Face: inception42/Jais-3-7B, inception42/Jais-3-32B. Contexto: até 512K tokens. A MBZUAI e a Inception42 informam que Jais-3-7B e Jais-3-32B alcançam as maiores pontuações médias em árabe entre modelos abertos de tamanho comparável em seu próprio conjunto de benchmarks (Arabic MMLU, AraGen v3, Belebele, identificação de dialeto QADI) — dados divulgados pelos desenvolvedores, não verificados de forma independente. VRAM: Jais-3-7B em GGUF a Q4_K_M ~5,6 GB (confirmado pelos arquivos GGUF lançados); Jais-3-32B ~19-20 GB estimado em Q4. Melhor para: máxima qualidade em árabe em processamento de documentos empresariais, suporte ao cliente e implantações governamentais onde o árabe é primário.',
           '**2. Falcon-H1-Arabic 7B — Melhor para hardware de consumidor (TII Abu Dhabi).** Desenvolvedor: Technology Innovation Institute (TII), Abu Dhabi (sob o Advanced Technology Research Council). Base: arquitetura híbrida Falcon-H1 (lançada em 5 de janeiro de 2026). Treinamento: datasets em árabe nativo (não traduzidos), MSA e dialetos regionais. Licença: Falcon LLM License — permissiva, uso comercial permitido. VRAM: Q4_K_M ~5 GB — roda em RTX 4060 8GB, RTX 3060 12GB e equivalentes. Benchmark: obtém 71,47% no Open Arabic LLM Leaderboard (OALL) — a maior pontuação entre os modelos árabes da classe ~10B, à frente do ALLaM-7B, Fanar-9B e Qwen3-8B, substituindo o checkpoint original do Falcon Arabic baseado no Falcon 3. Melhor para: implantações em hardware de consumidor e prosumer; um modelo nativo dos Emirados de uma instituição de Abu Dhabi.',
           '**3. Qwen3-8B — Melhor opção multilíngue com forte suporte ao árabe (Alibaba Cloud).** Desenvolvedor: Alibaba Cloud. Idiomas: 119 idiomas e dialetos. Benchmark: Qwen3-235B-A22B obteve média de 0.786 no HELM Arabic; a variante 8B é recomendada para hardware local. Licença: Apache 2.0. VRAM: Q4_K_M ~5-6 GB. Melhor para: equipes que precisam de árabe + inglês + outros idiomas em um único modelo; amplamente suportado no Ollama (ollama pull qwen3:8b).',
           '**4. ALLaM 34B / 7B — Modelo nacional saudita (HUMAIN/SDAIA).** Desenvolvedor: SDAIA (Saudi Data and AI Authority) / HUMAIN (empresa nacional de IA saudita). Versões: 7B (Hugging Face, acesso para pesquisa) e 34B (alimenta o HUMAIN Chat). Azure: ALLaM-2-7B-Instruct disponível no Microsoft Azure AI desde setembro de 2024. Licença: pesquisa/não comercial para acesso público; licenciamento empresarial via HUMAIN. Melhor para: implantações governamentais e empresariais sauditas; um modelo soberano alinhado com a Vision 2030.',
@@ -2341,12 +2351,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Requisitos de VRAM para LLMs locais em árabe',
         content: 'VRAM necessária por modelo e quantização. As linhas marcadas com * são estimativas baseadas no escalonamento de parâmetros (nenhum benchmark oficial encontrado). Sempre verifique com seu hardware específico antes da implantação.',
         image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
-        imageCaption: 'Requisitos de VRAM dos LLMs locais em árabe com quantização Q4_K_M: Gemma 3 4B precisa de ~3 GB, Falcon-H1-Arabic 7B e ALLaM 7B precisam de ~5 GB, Qwen3-8B precisa de 5-6 GB, Jais 13B precisa de 8-10 GB e Jais 30B precisa de 19-20 GB de VRAM.',
+        imageCaption: 'Requisitos de VRAM dos LLMs locais em árabe com quantização Q4_K_M: Gemma 3 4B precisa de ~3 GB, Falcon-H1-Arabic 7B, Jais-3-7B e ALLaM 7B precisam de ~5-6 GB, Qwen3-8B precisa de 5-6 GB, e Jais-3-32B precisa de 19-20 GB de VRAM.',
         columns: ['Modelo', 'Parâmetros', 'Q4_K_M VRAM', 'FP16 VRAM', 'Hardware mínimo'],
         rows: [
           { 'Modelo': 'Falcon-H1-Arabic', 'Parâmetros': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', 'Hardware mínimo': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'Modelo': 'Jais 13B', 'Parâmetros': '13B', 'Q4_K_M VRAM': '~8-10 GB*', 'FP16 VRAM': '~26 GB*', 'Hardware mínimo': 'RTX 3090 24 GB (Q4)' },
-          { 'Modelo': 'Jais 30B', 'Parâmetros': '30B', 'Q4_K_M VRAM': '~18-20 GB*', 'FP16 VRAM': '~60 GB*', 'Hardware mínimo': 'RTX 4090 24 GB (Q4 justo), A100 40 GB (FP16)' },
+          { 'Modelo': 'Jais-3-7B', 'Parâmetros': '7B', 'Q4_K_M VRAM': '~5,6 GB', 'FP16 VRAM': '~18 GB', 'Hardware mínimo': 'RTX 4060 8 GB / RTX 3060 12 GB' },
+          { 'Modelo': 'Jais-3-32B', 'Parâmetros': '32B', 'Q4_K_M VRAM': '~19-20 GB*', 'FP16 VRAM': '~64 GB*', 'Hardware mínimo': 'RTX 4090 24 GB (Q4 justo), A100 40 GB (FP16)' },
           { 'Modelo': 'ALLaM', 'Parâmetros': '7B', 'Q4_K_M VRAM': '~5 GB*', 'FP16 VRAM': '~16 GB*', 'Hardware mínimo': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { 'Modelo': 'Fanar-2', 'Parâmetros': '27B', 'Q4_K_M VRAM': '~16-17 GB*', 'FP16 VRAM': '~54 GB*', 'Hardware mínimo': 'RTX 4090 24 GB (Q4)' },
           { 'Modelo': 'Qwen3', 'Parâmetros': '8B', 'Q4_K_M VRAM': '~5-6 GB', 'FP16 VRAM': '~16 GB', 'Hardware mínimo': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -2362,7 +2373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instale o Ollama: curl -fsSL https://ollama.com/install.sh | sh (Linux) ou baixe em ollama.com (Windows/Mac). Suporta o Falcon-H1-Arabic nativamente.',
           'Baixe e execute o Falcon-H1-Arabic 7B: ollama run hf.co/tiiuae/Falcon-H1-Arabic-7B-Instruct-GGUF — download de ~5 GB, inicia automaticamente após o download. Teste o árabe com um prompt como "اكتب قصيدة عن أبوظبي" (Escreva um poema sobre Abu Dhabi).',
           'Baixe o Qwen3-8B para multilíngue: ollama pull qwen3:8b — download de ~5 GB. Forte em árabe em contextos de MSA e dialeto.',
-          'Para o Jais 30B: baixe do Hugging Face (inceptionai/jais-30b-v3), converta para GGUF com as ferramentas de conversão do llama.cpp, quantize para Q4_K_M e então carregue com o Ollama (ollama create jais-30b -f Modelfile) ou o servidor llama.cpp.',
+          'Para o Jais-3-7B: builds GGUF são publicados diretamente pelos desenvolvedores — ollama run hf.co/inception42/Jais-3-7B-GGUF (Q4_K_M ~5,6 GB). Para o Jais-3-32B: baixe do Hugging Face (inception42/Jais-3-32B), converta para GGUF com as ferramentas de conversão do llama.cpp caso ainda não haja um GGUF pronto, quantize para Q4_K_M e então carregue com o Ollama ou o servidor llama.cpp.',
           'Inferência em produção: use vLLM para servir uma API em árabe de alto throughput. O vLLM suporta Falcon-H1-Arabic e Qwen3 nativamente. Exponha via um endpoint compatível com OpenAI em localhost:8000.',
           'Dica de prompt em árabe: sempre especifique o idioma — "أجب باللغة العربية الفصحى" (Responda em árabe padrão moderno). Para dialeto, inclua frases de exemplo do dialeto-alvo no system prompt.',
         ],
@@ -2386,15 +2397,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Posso rodar um LLM em árabe em um notebook gamer comum?',
-            a: 'Sim, para modelos da classe 7B em quantização Q4. Falcon-H1-Arabic 7B e Qwen3-8B requerem ~5-6 GB VRAM — a maioria dos notebooks gamers com uma RTX 4060 (8 GB) ou RTX 3060 (12 GB) consegue rodá-los. O Jais 30B requer uma GPU desktop de ponta (RTX 4090 24 GB) ou uma GPU enterprise em quantização Q4.',
+            a: 'Sim, para modelos da classe 7B em quantização Q4. Falcon-H1-Arabic 7B, Jais-3-7B e Qwen3-8B requerem ~5-6 GB VRAM — a maioria dos notebooks gamers com uma RTX 4060 (8 GB) ou RTX 3060 (12 GB) consegue rodá-los. O Jais-3-32B requer uma GPU desktop de ponta (RTX 4090 24 GB) ou uma GPU enterprise em quantização Q4.',
           },
           {
             q: 'Qual é a diferença entre Jais e Falcon-H1-Arabic?',
-            a: 'Ambos são modelos capazes em árabe originados em Abu Dhabi. O Jais (Core42/G42) é maior (até 30B) e treinado especificamente como bilíngue árabe-inglês com 126B tokens em árabe — otimizado para qualidade em árabe em escala empresarial. O Falcon-H1-Arabic é um modelo 7B do TII (uma instituição diferente de Abu Dhabi) construído sobre a arquitetura híbrida Falcon-H1 — compatível com GPU de consumidor e parte do ecossistema de IA dos Emirados. Para a melhor qualidade em árabe: Jais 30B. Para hardware de consumidor: Falcon-H1-Arabic 7B.',
+            a: 'Ambos são modelos capazes em árabe originados em Abu Dhabi. O Jais 3 (MBZUAI/Inception42) é a família mais nova e maior (até um modelo principal MoE de 375B, com versões densas de 7B e 32B para on-premise) e é treinado especificamente para árabe em escala empresarial. O Falcon-H1-Arabic é um modelo 7B do TII (uma instituição diferente de Abu Dhabi) construído sobre a arquitetura híbrida Falcon-H1 — compatível com GPU de consumidor e parte do ecossistema de IA dos Emirados. Para a melhor qualidade em árabe: Jais-3-32B. Para hardware de consumidor: Falcon-H1-Arabic 7B ou Jais-3-7B.',
           },
           {
             q: 'O Qwen3 suporta árabe tão bem quanto modelos dedicados ao árabe?',
-            a: 'O Qwen3 tem suporte geral muito forte ao árabe (119 idiomas, pontuação líder no HELM Arabic). Para implantações empresariais puramente em árabe que exigem a melhor qualidade absoluta em árabe, o Jais 30B é geralmente preferido. Para cargas de trabalho multilíngues mistas em que o árabe é um de vários idiomas necessários, o Qwen3-8B costuma ser a melhor escolha devido à sua amplitude e facilidade de implantação.',
+            a: 'O Qwen3 tem suporte geral muito forte ao árabe (119 idiomas, pontuação líder no HELM Arabic). Para implantações empresariais puramente em árabe que exigem a melhor qualidade absoluta em árabe, o Jais-3-32B é geralmente preferido. Para cargas de trabalho multilíngues mistas em que o árabe é um de vários idiomas necessários, o Qwen3-8B costuma ser a melhor escolha devido à sua amplitude e facilidade de implantação.',
           },
           {
             q: 'O que é o ALLaM e posso usá-lo comercialmente?',
@@ -2410,7 +2421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual LLM em árabe é o melhor para implantações governamentais dos Emirados?',
-            a: 'Falcon-H1-Arabic 7B (do TII, Abu Dhabi) e Jais 30B (do Core42/G42, Abu Dhabi) são ambos modelos nativos dos Emirados com proveniência de instituições de pesquisa afiliadas ao governo dos Emirados. Para soberania e auditabilidade, essas são as escolhas mais alinhadas. Ambos podem ser implantados on-premise sem que nenhum dado saia da infraestrutura dos Emirados. Veja nosso [guia de soberania de dados da UAE PDPL](/pt/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
+            a: 'Falcon-H1-Arabic 7B (do TII, Abu Dhabi) e Jais 3 (da MBZUAI/Inception42, Abu Dhabi) são ambos modelos nativos dos Emirados com proveniência de instituições de pesquisa afiliadas ao governo dos Emirados. Para soberania e auditabilidade, essas são as escolhas mais alinhadas. Ambos podem ser implantados on-premise sem que nenhum dado saia da infraestrutura dos Emirados. Veja nosso [guia de soberania de dados da UAE PDPL](/pt/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
           },
           {
             q: 'Como lido com o dialeto do árabe do Golfo vs. MSA nos prompts?',
@@ -2418,11 +2429,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso fazer fine-tuning do Jais ou do Falcon-H1-Arabic nos meus próprios dados em árabe?',
-            a: 'Sim — ambos usam licenças abertas (Apache 2.0 para o Jais, Falcon LLM License para o Falcon-H1-Arabic) que permitem fine-tuning. Use fine-tuning com LoRA ou QLoRA com ferramentas como Unsloth ou a biblioteca PEFT. Fazer fine-tuning em dados em árabe específicos do domínio (jurídico, médico, financeiro) melhora significativamente a qualidade para casos de uso especializados. Mantenha os dados de fine-tuning on-premise para conformidade com a PDPL.',
+            a: 'Sim — ambos usam licenças abertas (Apache 2.0 para o Jais, Falcon LLM License para o Falcon-H1-Arabic) que permitem fine-tuning. Use fine-tuning com LoRA ou QLoRA com ferramentas como Unsloth ou a biblioteca PEFT. Fazer fine-tuning em dados em árabe específicos do domínio (jurídico, médico, financeiro) melhora significativamente a qualidade para casos de uso especializados. Mantenha os dados de fine-tuning on-premise, o que reduz o risco de transferência transfronteiriça sob a PDPL — a conformidade total também depende da base legal e das salvaguardas da sua organização.',
           },
           {
-            q: 'De que hardware preciso para rodar o Jais 30B localmente?',
-            a: 'Em quantização Q4_K_M, o Jais 30B requer uma estimativa de 18-20 GB VRAM (estimativa — sem benchmark oficial). Uma NVIDIA RTX 4090 (24 GB) consegue rodá-lo em Q4 com contexto moderado; uma A100 40 GB lida com ele confortavelmente em FP16. Para throughput de produção, recomenda-se duas RTX 4090s em modo multi-GPU ou uma única A100/H100. Veja nosso [guia da calculadora de VRAM](/pt/local-llms/vram-calculator-local-llm).',
+            q: 'De que hardware preciso para rodar o Jais 3 localmente?',
+            a: 'O Jais-3-7B precisa de apenas ~5,6 GB VRAM em GGUF Q4_K_M — qualquer RTX 4060 (8 GB) ou melhor roda. O Jais-3-32B requer uma estimativa de 19-20 GB VRAM a Q4_K_M (estimativa por escala de parâmetros — ainda sem benchmark oficial). Uma NVIDIA RTX 4090 (24 GB) consegue rodar a versão 32B em Q4 com contexto moderado; uma A100 40 GB lida com ele confortavelmente em FP16. Para throughput de produção, recomenda-se duas RTX 4090s em modo multi-GPU ou uma única A100/H100. Veja nosso [guia da calculadora de VRAM](/pt/local-llms/vram-calculator-local-llm).',
           },
         ],
       },
@@ -2444,8 +2455,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Technology Innovation Institute (TII) — Anúncio do Falcon-H1-Arabic, January 5, 2026 — tii.ae',
           'Página do modelo Falcon-H1-Arabic no Hugging Face — huggingface.co/blog/tiiuae/falcon-h1-arabic',
-          'Core42 / Cerebras — Press release do Jais 30B — cerebras.ai e g42.ai',
-          'Jais 30B no Hugging Face — huggingface.co/inceptionai/jais-30b-v3',
+          'MBZUAI Institute of Foundation Models / Inception42 — anúncio de lançamento do Jais 3, 16 de outubro de 2026 — mbzuai.ac.ae e wam.ae',
+          'Jais 3 no Hugging Face — huggingface.co/inception42/Jais-3-7B e huggingface.co/inception42/Jais-3-32B',
+          'Core42 / Cerebras — Press release do Jais 30B (geração anterior) — cerebras.ai e g42.ai',
           'SDAIA / HUMAIN — Anúncio do ALLaM 34B, maio de 2025 — humain.ai',
           'ALLaM-2-7B no Microsoft Azure AI — techcommunity.microsoft.com (setembro de 2024)',
           'QCRI / HBKU — Relatório técnico "Fanar 2.0: Arabic Generative AI Stack" e model card do Fanar-2-27B-Instruct — arxiv.org/abs/2603.16397',
@@ -2460,16 +2472,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Melhores LLMs locais em árabe: Jais, Falcon e IA em árabe on-premise (2026)',
-      'description': 'Jais 30B e Falcon-H1-Arabic 7B são os melhores LLMs locais em árabe em 2026. Tabela de VRAM, guia de configuração e benchmarks de avaliação de qualidade para implantação de IA em árabe on-premise.',
+      'description': 'Jais 3 e Falcon-H1-Arabic 7B são os melhores LLMs locais em árabe em 2026. Tabela de VRAM, guia de configuração e benchmarks de avaliação de qualidade para implantação de IA em árabe on-premise.',
       'url': 'https://www.promptquorum.com/pt/local-llms/best-arabic-local-llms-2026',
       'datePublished': '2026-06-14',
-      'dateModified': '2026-08-28',
+      'dateModified': '2026-11-19',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
       'inLanguage': 'pt-BR',
       'about': [
-        { '@type': 'SoftwareApplication', 'name': 'Jais 30B' },
+        { '@type': 'SoftwareApplication', 'name': 'Jais 3' },
         { '@type': 'SoftwareApplication', 'name': 'Falcon-H1-Arabic' },
         { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
         { '@type': 'Thing', 'name': 'Arabic NLP' },
@@ -2482,16 +2494,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'pt-BR',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'Posso rodar um LLM em árabe em um notebook gamer comum?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, para modelos da classe 7B em quantização Q4. Falcon-H1-Arabic 7B e Qwen3-8B requerem ~5-6 GB VRAM — a maioria dos notebooks gamers com uma RTX 4060 (8 GB) ou RTX 3060 (12 GB) consegue rodá-los. O Jais 30B requer uma GPU desktop de ponta (RTX 4090 24 GB) ou uma GPU enterprise em quantização Q4.' } },
-        { '@type': 'Question', 'name': 'Qual é a diferença entre Jais e Falcon-H1-Arabic?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ambos são modelos capazes em árabe originados em Abu Dhabi. O Jais (Core42/G42) é maior (até 30B) e treinado especificamente como bilíngue árabe-inglês com 126B tokens em árabe. O Falcon-H1-Arabic é um modelo 7B do TII construído sobre a arquitetura híbrida Falcon-H1 — compatível com GPU de consumidor. Para a melhor qualidade em árabe: Jais 30B. Para hardware de consumidor: Falcon-H1-Arabic 7B.' } },
-        { '@type': 'Question', 'name': 'O Qwen3 suporta árabe tão bem quanto modelos dedicados ao árabe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O Qwen3 tem suporte geral muito forte ao árabe (119 idiomas, pontuação líder no HELM Arabic). Para implantações empresariais puramente em árabe que exigem a melhor qualidade absoluta em árabe, o Jais 30B é geralmente preferido. Para cargas de trabalho multilíngues mistas, o Qwen3-8B costuma ser a melhor escolha devido à sua amplitude e facilidade de implantação.' } },
+        { '@type': 'Question', 'name': 'Posso rodar um LLM em árabe em um notebook gamer comum?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, para modelos da classe 7B em quantização Q4. Falcon-H1-Arabic 7B, Jais-3-7B e Qwen3-8B requerem ~5-6 GB VRAM — a maioria dos notebooks gamers com uma RTX 4060 (8 GB) ou RTX 3060 (12 GB) consegue rodá-los. O Jais-3-32B requer uma GPU desktop de ponta (RTX 4090 24 GB) ou uma GPU enterprise em quantização Q4.' } },
+        { '@type': 'Question', 'name': 'Qual é a diferença entre Jais e Falcon-H1-Arabic?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ambos são modelos capazes em árabe originados em Abu Dhabi. O Jais 3 (MBZUAI/Inception42) é a família mais nova e maior (até um modelo principal MoE de 375B, com versões densas de 7B e 32B). O Falcon-H1-Arabic é um modelo 7B do TII construído sobre a arquitetura híbrida Falcon-H1 — compatível com GPU de consumidor. Para a melhor qualidade em árabe: Jais-3-32B. Para hardware de consumidor: Falcon-H1-Arabic 7B ou Jais-3-7B.' } },
+        { '@type': 'Question', 'name': 'O Qwen3 suporta árabe tão bem quanto modelos dedicados ao árabe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O Qwen3 tem suporte geral muito forte ao árabe (119 idiomas, pontuação líder no HELM Arabic). Para implantações empresariais puramente em árabe que exigem a melhor qualidade absoluta em árabe, o Jais-3-32B é geralmente preferido. Para cargas de trabalho multilíngues mistas, o Qwen3-8B costuma ser a melhor escolha devido à sua amplitude e facilidade de implantação.' } },
         { '@type': 'Question', 'name': 'O que é o ALLaM e posso usá-lo comercialmente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O ALLaM é uma família de LLMs nacional saudita centrada no árabe da SDAIA (agora sob a marca HUMAIN). Os lançamentos públicos (7B no Hugging Face, 7B no Azure AI) têm licenças de pesquisa/não comerciais. Para uso comercial, contate a HUMAIN/SDAIA diretamente. O ALLaM 34B alimenta o app nacional HUMAIN Chat, mas tem acesso público restrito.' } },
         { '@type': 'Question', 'name': 'Como a tokenização do árabe afeta a qualidade do modelo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A escrita árabe requer tokenização adequada para evitar erros em nível de caractere. Modelos treinados nativamente em árabe (Jais, Falcon-H1-Arabic) usam tokenizadores otimizados para a morfologia árabe. Modelos multilíngues gerais podem tokenizar o árabe de forma ineficiente, levando à degradação da qualidade em textos árabes complexos. Teste com seus dados de entrada reais antes da produção.' } },
         { '@type': 'Question', 'name': 'LLMs locais em árabe conseguem lidar com documentos da direita para a esquerda (RTL)?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Os modelos geram texto em árabe na direção correta da direita para a esquerda — os modelos produzem árabe RTL adequado em Unicode. A interface da sua aplicação deve lidar com a renderização RTL (HTML dir="rtl", CSS direction:rtl). llama.cpp, Ollama e vLLM retornam texto em árabe Unicode corretamente; a camada de UI lida com a direção.' } },
-        { '@type': 'Question', 'name': 'Qual LLM em árabe é o melhor para implantações governamentais dos Emirados?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (do TII, Abu Dhabi) e Jais 30B (do Core42/G42, Abu Dhabi) são ambos modelos nativos dos Emirados com proveniência de instituições de pesquisa afiliadas ao governo dos Emirados. Para soberania e auditabilidade, essas são as escolhas mais alinhadas. Ambos podem ser implantados on-premise sem que nenhum dado saia da infraestrutura dos Emirados.' } },
+        { '@type': 'Question', 'name': 'Qual LLM em árabe é o melhor para implantações governamentais dos Emirados?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B (do TII, Abu Dhabi) e Jais 3 (da MBZUAI/Inception42, Abu Dhabi) são ambos modelos nativos dos Emirados com proveniência de instituições de pesquisa afiliadas ao governo dos Emirados. Para soberania e auditabilidade, essas são as escolhas mais alinhadas. Ambos podem ser implantados on-premise sem que nenhum dado saia da infraestrutura dos Emirados.' } },
         { '@type': 'Question', 'name': 'Como lido com o dialeto do árabe do Golfo vs. MSA nos prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'System prompt padrão: responda em árabe padrão moderno. Para o árabe do Golfo (emirati, saudita, kuwaitiano), adicione frases de exemplo em dialeto no seu system prompt ou faça fine-tuning em dados do domínio. Todos os modelos listados lidam bem com o MSA; a qualidade do dialeto varia. Teste com 5-10 consultas de exemplo em dialeto antes de presumir qualidade de produção.' } },
-        { '@type': 'Question', 'name': 'Posso fazer fine-tuning do Jais ou do Falcon-H1-Arabic nos meus próprios dados em árabe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim — ambos usam licenças abertas (Apache 2.0 para o Jais, Falcon LLM License para o Falcon-H1-Arabic) que permitem fine-tuning. Use LoRA ou QLoRA com ferramentas como Unsloth ou a biblioteca PEFT. Fazer fine-tuning em dados em árabe específicos do domínio melhora significativamente a qualidade. Mantenha os dados de fine-tuning on-premise para conformidade com a PDPL.' } },
-        { '@type': 'Question', 'name': 'De que hardware preciso para rodar o Jais 30B localmente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Em quantização Q4_K_M, o Jais 30B requer uma estimativa de 18-20 GB VRAM (sem benchmark oficial). Uma RTX 4090 (24 GB) consegue rodá-lo em Q4 com contexto moderado; uma A100 40 GB lida com ele confortavelmente em FP16. Para throughput de produção, recomenda-se duas RTX 4090s em modo multi-GPU ou uma única A100/H100.' } },
+        { '@type': 'Question', 'name': 'Posso fazer fine-tuning do Jais ou do Falcon-H1-Arabic nos meus próprios dados em árabe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim — ambos usam licenças abertas (Apache 2.0 para o Jais, Falcon LLM License para o Falcon-H1-Arabic) que permitem fine-tuning. Use LoRA ou QLoRA com ferramentas como Unsloth ou a biblioteca PEFT. Fazer fine-tuning em dados em árabe específicos do domínio melhora significativamente a qualidade. Mantenha os dados de fine-tuning on-premise, o que reduz o risco de transferência transfronteiriça sob a PDPL — a conformidade total também depende da base legal e das salvaguardas da sua organização.' } },
+        { '@type': 'Question', 'name': 'De que hardware preciso para rodar o Jais 3 localmente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O Jais-3-7B precisa de apenas ~5,6 GB VRAM em GGUF Q4_K_M. O Jais-3-32B requer uma estimativa de 19-20 GB VRAM a Q4_K_M (estimativa, sem benchmark oficial). Uma RTX 4090 (24 GB) consegue rodar a versão 32B em Q4 com contexto moderado; uma A100 40 GB lida com ele confortavelmente em FP16. Para throughput de produção, recomenda-se duas RTX 4090s em modo multi-GPU ou uma única A100/H100.' } },
       ],
     },
     itemListSchema: {
@@ -2501,7 +2513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numberOfItems': 7,
       'inLanguage': 'pt-BR',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 30B', 'description': 'Melhor LLM local nativo em árabe. 126B tokens de treinamento em árabe, Apache 2.0, Core42/G42 Abu Dhabi.' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 3', 'description': 'Melhor LLM local nativo em árabe, geração mais recente (outubro de 2026). Lineup de 0,9B a 375B, Apache 2.0, MBZUAI/Inception42 Abu Dhabi.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Falcon-H1-Arabic 7B', 'description': 'Melhor para hardware de consumidor. TII Abu Dhabi. Q4_K_M ~5 GB VRAM. Falcon LLM License.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3-8B', 'description': 'Melhor opção multilíngue com forte suporte ao árabe. Líder no HELM Arabic. Apache 2.0.' },
         { '@type': 'ListItem', 'position': 4, 'name': 'ALLaM 34B', 'description': 'Modelo nacional saudita em árabe (HUMAIN/SDAIA). Alimenta o HUMAIN Chat. Licença de pesquisa.' },
@@ -2515,26 +2527,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '最佳阿拉伯语本地LLM：Jais、Falcon 及在本地运行阿拉伯语 AI（2026）',
     heroImage: '/images/best-arabic-local-llms-2026-overview-hero-zh.webp',
     seoTitle: '2026最佳阿拉伯语本地LLM：Jais、Falcon-H1-Arabic对比',
-    metaDescription: 'Jais 30B、Falcon-H1-Arabic 7B、Qwen3-8B 是 2026 年最佳阿拉伯语本地 LLM。含 VRAM 表、本地部署指南与质量评估建议。',
-    intro: 'Jais 30B（Core42/G42，阿布扎比，Apache 2.0）和 Falcon-H1-Arabic 7B（TII，阿布扎比）是 2026 年最顶尖的阿拉伯语原生本地 LLM。对于需要强阿拉伯语支持的通用多语言工作负载，Qwen3-8B 在适配消费级硬件的模型中领跑 HELM Arabic 基准。这三款模型都可以用 Ollama 或 vLLM 在本地运行，将阿拉伯语数据保留在国境之内。本指南对这些模型进行排名，提供 VRAM 表，并展示如何在本地部署和评估阿拉伯语 AI。',
+    metaDescription: 'Jais 3、Falcon-H1-Arabic 7B、Qwen3-8B 是 2026 年最佳阿拉伯语本地 LLM。含 VRAM 表、本地部署指南与质量评估建议。',
+    intro: 'Jais 3（MBZUAI/Inception42，阿布扎比，Apache 2.0，2026年10月发布）和 Falcon-H1-Arabic 7B（TII，阿布扎比）是 2026 年最顶尖的阿拉伯语原生本地 LLM。对于需要强阿拉伯语支持的通用多语言工作负载，Qwen3-8B 在适配消费级硬件的模型中领跑 HELM Arabic 基准。这三款模型都可以用 Ollama 或 vLLM 在本地运行，将阿拉伯语数据保留在国境之内。本指南对这些模型进行排名，提供 VRAM 表，并展示如何在本地部署和评估阿拉伯语 AI。',
     designSkin: 'hub',
     theme: 'Best Models',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-14',
+    next_refresh_due: '2027-05-19',
     publishDate: '2026-06-14',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: '阿拉伯语企业、海湾地区开发者，以及在本地部署阿拉伯语 NLP 的团队',
     readTime: '阅读约13分钟',
     primaryTerm: 'Arabic local LLM',
     affiliateDisclosure: false,
-    leadAnswerBlock: '**Jais 30B（Core42/G42，阿布扎比，Apache 2.0）和 Falcon-H1-Arabic 7B（TII 阿布扎比）是 2026 年最顶尖的阿拉伯语原生本地 LLM。对于需要强阿拉伯语支持的通用多语言工作负载，Qwen3-8B 在适配消费级硬件的模型中领跑 HELM Arabic 基准。这三款都可以用 Ollama 或 vLLM 在本地运行，将阿拉伯语个人数据保留在国境之内。**',
+    leadAnswerBlock: '**Jais 3（MBZUAI/Inception42，阿布扎比，Apache 2.0，2026年10月发布）和 Falcon-H1-Arabic 7B（TII 阿布扎比）是 2026 年最顶尖的阿拉伯语原生本地 LLM。对于需要强阿拉伯语支持的通用多语言工作负载，Qwen3-8B 在适配消费级硬件的模型中领跑 HELM Arabic 基准。这三款都可以用 Ollama 或 vLLM 在本地运行，将阿拉伯语个人数据保留在国境之内。**',
     quickAnswerTop: {
       en: {
         question: 'What is the best Arabic local LLM in 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) is the strongest Arabic-native local LLM in 2026, trained on 126B Arabic tokens with Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), released October 2026, is the strongest Arabic-native local LLM in 2026, available in sizes from 0.9B to 32B under Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
         bullets: [
-          'Jais 30B: best Arabic-native model, 126B Arabic training tokens, Apache 2.0, needs ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): best Arabic-native model, released October 2026 by MBZUAI/Inception42, Apache 2.0, 32B needs ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, consumer GPU friendly',
           'Qwen3-8B: best multilingual option with strong Arabic, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Saudi national model, powers HUMAIN Chat; research license',
@@ -2544,9 +2556,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ar: {
         question: 'ما أفضل نموذج ذكاء اصطناعي عربي محلي في 2026؟',
-        answer: 'Jais 30B (Core42/G42، أبوظبي) هو أقوى نموذج محلي عربي أصيل في 2026، مُدرَّب على 126 مليار رمز عربي بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42، أبوظبي)، الذي صدر في أكتوبر 2026، هو أقوى نموذج محلي عربي أصيل في 2026، ويتوفر بأحجام من 0.9B إلى 32B بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
         bullets: [
-          'Jais 30B: أفضل نموذج عربي أصيل، 126 مليار رمز تدريب عربي، Apache 2.0، يحتاج ~18-20 GB VRAM عند Q4',
+          'Jais 3 (7B/32B): أفضل نموذج عربي أصيل، صدر في أكتوبر 2026 من MBZUAI/Inception42، Apache 2.0، يحتاج إصدار 32B إلى ~19-20 GB VRAM عند Q4',
           'Falcon-H1-Arabic 7B: مؤسسة الابتكار التقني أبوظبي، Q4_K_M ~5 GB VRAM، مناسب لـ GPU المستهلكين',
           'Qwen3-8B: أفضل خيار متعدد اللغات مع دعم عربي قوي، ~5-6 GB VRAM عند Q4',
           'ALLaM 34B (HUMAIN/SDAIA): النموذج الوطني السعودي، يُشغِّل تطبيق HUMAIN Chat؛ ترخيص بحثي',
@@ -2556,9 +2568,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Was ist das beste arabische lokale LLM im Jahr 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) ist das stärkste arabisch-native lokale LLM im Jahr 2026, trainiert auf 126 Milliarden arabischen Tokens mit Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), veröffentlicht im Oktober 2026, ist das stärkste arabisch-native lokale LLM im Jahr 2026, verfügbar in Größen von 0,9B bis 32B unter Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
         bullets: [
-          'Jais 30B: bestes arabisch-natives Modell, 126 Mrd. arabische Trainings-Tokens, Apache 2.0, benötigt ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): bestes arabisch-natives Modell, veröffentlicht im Oktober 2026 von MBZUAI/Inception42, Apache 2.0, 32B benötigt ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, Consumer-GPU-kompatibel',
           'Qwen3-8B: bester multilingualer Ansatz mit starkem Arabisch, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Nationales saudi-arabisches Modell; Forschungslizenz',
@@ -2568,9 +2580,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor LLM local árabe en 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dabi) es el LLM local árabe nativo más potente en 2026, entrenado con 126B tokens en árabe con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dabi), lanzado en octubre de 2026, es el LLM local árabe nativo más potente en 2026, disponible en tamaños de 0.9B a 32B con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
         bullets: [
-          'Jais 30B: mejor modelo árabe nativo, 126B tokens de entrenamiento en árabe, Apache 2.0, necesita ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): mejor modelo árabe nativo, lanzado en octubre de 2026 por MBZUAI/Inception42, Apache 2.0, la versión 32B necesita ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dabi, Q4_K_M ~5 GB VRAM, compatible con GPU de consumidor',
           'Qwen3-8B: mejor opción multilingüe con fuerte soporte árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudí; licencia de investigación',
@@ -2580,9 +2592,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM local arabophone en 2026 ?',
-        answer: 'Jais 30B (Core42/G42, Abou Dabi) est le LLM local arabophone natif le plus puissant en 2026, entraîné sur 126 milliards de tokens arabes avec licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abou Dabi), sorti en octobre 2026, est le LLM local arabophone natif le plus puissant en 2026, disponible en tailles de 0,9B à 32B sous licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
         bullets: [
-          'Jais 30B : meilleur modèle arabophone natif, 126 milliards de tokens arabes, Apache 2.0, nécessite ~18-20 Go VRAM Q4',
+          'Jais 3 (7B/32B) : meilleur modèle arabophone natif, sorti en octobre 2026 par MBZUAI/Inception42, Apache 2.0, la version 32B nécessite ~19-20 Go VRAM Q4',
           'Falcon-H1-Arabic 7B : TII Abou Dabi, Q4_K_M ~5 Go VRAM, compatible GPU grand public',
           'Qwen3-8B : meilleure option multilingue avec fort support arabe, ~5-6 Go VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA) : modèle national saoudien ; licence recherche',
@@ -2592,9 +2604,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年のベストなアラビア語対応ローカルLLMは？',
-        answer: 'Jais 30B（Core42/G42、アブダビ）は2026年で最も優れたアラビア語ネイティブのローカルLLMです。1,260億のアラビア語トークンで訓練され、Apache 2.0ライセンスで利用可能。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
+        answer: 'Jais 3（MBZUAI/Inception42、アブダビ）は2026年10月にリリースされ、2026年で最も優れたアラビア語ネイティブのローカルLLMです。0.9Bから32Bまでのサイズで利用可能、Apache 2.0ライセンス。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
         bullets: [
-          'Jais 30B: アラビア語ネイティブ最強、1,260億アラビア語トークン、Apache 2.0、Q4で ~18-20 GB VRAM',
+          'Jais 3（7B/32B）: アラビア語ネイティブ最強、2026年10月にMBZUAI/Inception42がリリース、Apache 2.0、32Bは ~19-20 GB VRAM（Q4）が必要',
           'Falcon-H1-Arabic 7B: TII アブダビ、Q4_K_M ~5 GB VRAM、コンシューマーGPU対応',
           'Qwen3-8B: アラビア語サポートが強い多言語ベストオプション、Q4 ~5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）: サウジ国家モデル、リサーチライセンス',
@@ -2604,9 +2616,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pt: {
         question: 'Qual é o melhor LLM local árabe em 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) é o LLM local árabe nativo mais poderoso em 2026, treinado com 126B tokens em árabe com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), lançado em outubro de 2026, é o LLM local árabe nativo mais poderoso em 2026, disponível em tamanhos de 0,9B a 32B com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
         bullets: [
-          'Jais 30B: melhor modelo árabe nativo, 126B tokens de treinamento em árabe, Apache 2.0, requer ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): melhor modelo árabe nativo, lançado em outubro de 2026 pela MBZUAI/Inception42, Apache 2.0, a versão 32B precisa de ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, compatível com GPU de consumidor',
           'Qwen3-8B: melhor opção multilíngue com forte suporte ao árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudita; licença de pesquisa',
@@ -2616,9 +2628,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年最佳阿拉伯语本地LLM是什么？',
-        answer: 'Jais 30B（Core42/G42，阿布扎比）是2026年最强的阿拉伯语原生本地LLM，使用1260亿阿拉伯语token训练，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
+        answer: 'Jais 3（MBZUAI/Inception42，阿布扎比）于2026年10月发布，是2026年最强的阿拉伯语原生本地LLM，提供从0.9B到32B的多种尺寸，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
         bullets: [
-          'Jais 30B：最佳阿拉伯语原生模型，1260亿阿拉伯语训练token，Apache 2.0，Q4需约18-20 GB VRAM',
+          'Jais 3（7B/32B）：最佳阿拉伯语原生模型，2026年10月由MBZUAI/Inception42发布，Apache 2.0，32B版本需约19-20 GB VRAM（Q4）',
           'Falcon-H1-Arabic 7B：TII阿布扎比，Q4_K_M约5 GB VRAM，兼容消费级GPU',
           'Qwen3-8B：具有强阿拉伯语支持的最佳多语言选项，Q4约5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）：沙特国家模型；研究许可证',
@@ -2628,9 +2640,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ko: {
         question: '2026년 최고의 아랍어 로컬 LLM은 무엇입니까?',
-        answer: 'Jais 30B(Core42/G42, 아부다비)는 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 1,260억 개의 아랍어 토큰으로 훈련되었으며 Apache 2.0 라이선스를 제공합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
+        answer: 'Jais 3(MBZUAI/Inception42, 아부다비)는 2026년 10월 출시되어 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 0.9B부터 32B까지 다양한 크기로 제공되며 Apache 2.0 라이선스를 적용합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
         bullets: [
-          'Jais 30B: 최고의 아랍어 네이티브 모델, 아랍어 훈련 토큰 1,260억 개, Apache 2.0, Q4 ~18-20 GB VRAM 필요',
+          'Jais 3(7B/32B): 최고의 아랍어 네이티브 모델, 2026년 10월 MBZUAI/Inception42 출시, Apache 2.0, 32B 버전은 ~19-20 GB VRAM(Q4) 필요',
           'Falcon-H1-Arabic 7B: TII 아부다비, Q4_K_M ~5 GB VRAM, 소비자 GPU 호환',
           'Qwen3-8B: 강력한 아랍어 지원을 갖춘 최고의 다국어 옵션, Q4 ~5-6 GB VRAM',
           'ALLaM 34B(HUMAIN/SDAIA): 사우디 국가 모델; 연구 라이선스',
@@ -2655,7 +2667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Jais 30B（Core42/G42，阿布扎比）：** 2026 年最佳阿拉伯语原生本地 LLM。使用 126B 阿拉伯语 + 251B 英语 token 训练。Apache 2.0 许可证。Q4 量化下需约 18-20 GB VRAM（完整 FP16 需多 GPU 或企业级 GPU）。',
+          '**Jais 3（MBZUAI/Inception42，阿布扎比）：** 2026 年最佳阿拉伯语原生本地 LLM，于2026年10月发布，取代此前的 Jais 30B。从 0.9B 到 375B MoE 旗舰模型共六款。Apache 2.0 许可证。32B 版本在 Q4 量化下需约 19-20 GB VRAM（企业级 GPU）；7B 版本仅需约 5.6 GB（GGUF Q4_K_M）。',
           '**Falcon-H1-Arabic 7B（TII，阿布扎比）：** 阿联酋原生、专注阿拉伯语的模型。可在消费级 GPU 上运行：Q4_K_M 约 5 GB VRAM。基于 Falcon-H1 混合架构构建，使用原生（非翻译）阿拉伯语数据集训练。',
           '**Qwen3-8B（Alibaba Cloud）：** 具有强阿拉伯语支持的最佳多语言选项。HELM Arabic 平均得分 0.786（235B 变体）；8B 在 Q4 下约需 5-6 GB VRAM。支持 119 种语言。',
           '**ALLaM 34B（HUMAIN/SDAIA，沙特阿拉伯）：** 沙特国家模型，驱动 HUMAIN Chat。公开访问采用研究/非商业许可证。Microsoft Azure AI 上提供（7B 变体）。',
@@ -2665,8 +2677,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**数据主权：** 在本地运行阿拉伯语 NLP 可将个人数据保留在国境之内——符合 UAE PDPL、Saudi NDMO 以及海湾地区数据主权目标。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Jais 30B（Apache 2.0，阿布扎比）和 Falcon-H1-Arabic 7B（TII，阿布扎比）是 2026 年最顶尖的阿拉伯语原生本地 LLM，而 Qwen3-8B 在消费级硬件的多语言阿拉伯语基准上领先。' },
-          { type: 'plain-terms', text: '你可以在自己服务器上运行的最佳阿拉伯语 AI：Jais 30B 提供最佳阿拉伯语质量（需要高端 GPU），Falcon-H1-Arabic 7B 适用于普通电脑，如果你还需要其他语言则选 Qwen3-8B。' },
+          { type: 'one-sentence', text: 'Jais 3（Apache 2.0，阿布扎比，2026年10月发布）和 Falcon-H1-Arabic 7B（TII，阿布扎比）是 2026 年最顶尖的阿拉伯语原生本地 LLM，而 Qwen3-8B 在消费级硬件的多语言阿拉伯语基准上领先。' },
+          { type: 'plain-terms', text: '你可以在自己服务器上运行的最佳阿拉伯语 AI：Jais 3 提供最佳阿拉伯语质量（32B 版本需要高端 GPU，7B 版本可在普通游戏 GPU 上运行），Falcon-H1-Arabic 7B 适用于普通电脑，如果你还需要其他语言则选 Qwen3-8B。' },
         ],
       },
       whyArabicMatters: {
@@ -2684,9 +2696,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '最佳阿拉伯语本地 LLM：本地部署排名',
         content: '按阿拉伯语能力和本地/本地部署适用性排名。',
         image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
-        imageCaption: '选择阿拉伯语本地LLM的决策树:追求最佳阿拉伯语质量选Jais 30B(约19-20 GB VRAM),消费级GPU选Falcon-H1-Arabic 7B(约5 GB),多语言场景选Qwen3-8B(约5-6 GB),或选择Llama 3.1-8B作为广泛的多语言基线模型。',
+        imageCaption: '选择阿拉伯语本地LLM的决策树:追求最佳阿拉伯语质量选Jais-3-32B(约19-20 GB VRAM),消费级GPU选Jais-3-7B或Falcon-H1-Arabic 7B(约5-6 GB),多语言场景选Qwen3-8B(约5-6 GB),或选择Llama 3.1-8B作为广泛的多语言基线模型。',
         items: [
-          '**1. Jais 30B — 最佳阿拉伯语质量（Apache 2.0，可本地部署）。** 开发者：Core42 / Inception AI（G42 集团，阿布扎比）+ MBZUAI 研究 + Cerebras 训练。训练：126B 阿拉伯语 token + 251B 英语 token + 50B 代码 token。人工评估显示 Jais 30B 在 96% 的阿拉伯语评估中优于 Jais 13B。许可证：Apache 2.0（完全开放，允许商业使用）。Hugging Face：inceptionai/jais-30b-v3。VRAM：Q4 估计约 18-20 GB（FP16 需企业级 GPU 或多 GPU）。最适合：以阿拉伯语为主的企业文档处理、客户支持和政府部署中追求最高阿拉伯语质量的场景。',
+          '**1. Jais 3（7B / 32B）——最佳阿拉伯语质量，最新一代（Apache 2.0，可本地部署）。** 开发者：MBZUAI 基础模型研究所（IFM）+ Inception42，与 Cerebras Systems 合作（阿布扎比）。于2026年10月16日发布，取代此前的 Jais 30B 成为阿拉伯语旗舰模型系列。阵容：从 0.9B 到 375B（激活 23B）MoE 旗舰模型共六款；Jais-3-7B 和 Jais-3-32B 是适合本地部署的尺寸。许可证：六款语言模型均采用 Apache 2.0。Hugging Face：inception42/Jais-3-7B、inception42/Jais-3-32B。上下文长度：最高 512K token。据 MBZUAI 和 Inception42 称，在其自有基准测试套件（Arabic MMLU、AraGen v3、Belebele、QADI 方言识别）上，Jais-3-7B 和 Jais-3-32B 在同等规模的开放模型中取得最高平均阿拉伯语得分——这是开发者自报数据，未经独立验证。VRAM：Jais-3-7B 的 GGUF Q4_K_M 约 5.6 GB（已从发布的 GGUF 文件确认）；Jais-3-32B 约 19-20 GB（Q4 估算）。最适合：以阿拉伯语为主的企业文档处理、客户支持和政府部署中追求最高阿拉伯语质量的场景。',
           '**2. Falcon-H1-Arabic 7B — 最适合消费级硬件（TII 阿布扎比）。** 开发者：Technology Innovation Institute（TII），阿布扎比（隶属 Advanced Technology Research Council）。基础：Falcon-H1 混合架构（发布于 2026年1月5日）。训练：原生（非翻译）阿拉伯语数据集，含 MSA 和地区方言。许可证：Falcon LLM License——宽松，允许商业使用。VRAM：Q4_K_M 约 5 GB——可在 RTX 4060 8GB、RTX 3060 12GB 及同等硬件上运行。基准：在 Open Arabic LLM Leaderboard（OALL）上取得 71.47% 的成绩——在约 10B 级阿拉伯语模型中排名第一，超过 ALLaM-7B、Fanar-9B 和 Qwen3-8B，并取代了基于 Falcon 3 的旧版 Falcon Arabic 检查点。最适合：消费级和专业消费级硬件部署；来自阿布扎比机构的阿联酋原生模型。',
           '**3. Qwen3-8B — 具有强阿拉伯语支持的最佳多语言选项（Alibaba Cloud）。** 开发者：Alibaba Cloud。语言：119 种语言和方言。基准：Qwen3-235B-A22B 在 HELM Arabic 上取得 0.786 平均分；推荐 8B 变体用于本地硬件。许可证：Apache 2.0。VRAM：Q4_K_M 约 5-6 GB。最适合：需要在单一模型中同时使用阿拉伯语 + 英语 + 其他语言的团队；在 Ollama 中广泛支持（ollama pull qwen3:8b）。',
           '**4. ALLaM 34B / 7B — 沙特国家模型（HUMAIN/SDAIA）。** 开发者：SDAIA（Saudi Data and AI Authority）/ HUMAIN（沙特国家 AI 公司）。版本：7B（Hugging Face，研究访问）和 34B（驱动 HUMAIN Chat）。Azure：ALLaM-2-7B-Instruct 自 2024 年 9 月起在 Microsoft Azure AI 上提供。许可证：公开访问采用研究/非商业许可证；企业许可通过 HUMAIN。最适合：沙特政府和企业部署；符合 Vision 2030 的主权模型。',
@@ -2700,12 +2712,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '阿拉伯语本地 LLM 的 VRAM 需求',
         content: '按模型和量化方式列出所需 VRAM。标注 * 的行为参数缩放估算（未找到官方基准）。部署前请务必用你的具体硬件验证。',
         image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
-        imageCaption: 'Q4_K_M量化下阿拉伯语本地LLM的VRAM需求:Gemma 3 4B约需3 GB,Falcon-H1-Arabic 7B与ALLaM 7B约需5 GB,Qwen3-8B需5-6 GB,Jais 13B需8-10 GB,Jais 30B需19-20 GB VRAM。',
+        imageCaption: 'Q4_K_M量化下阿拉伯语本地LLM的VRAM需求:Gemma 3 4B约需3 GB,Falcon-H1-Arabic 7B、Jais-3-7B与ALLaM 7B约需5-6 GB,Qwen3-8B需5-6 GB,Jais-3-32B需19-20 GB VRAM。',
         columns: ['模型', '参数量', 'Q4_K_M VRAM', 'FP16 VRAM', '最低硬件'],
         rows: [
           { '模型': 'Falcon-H1-Arabic', '参数量': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', '最低硬件': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { '模型': 'Jais 13B', '参数量': '13B', 'Q4_K_M VRAM': '~8-10 GB*', 'FP16 VRAM': '~26 GB*', '最低硬件': 'RTX 3090 24 GB (Q4)' },
-          { '模型': 'Jais 30B', '参数量': '30B', 'Q4_K_M VRAM': '~18-20 GB*', 'FP16 VRAM': '~60 GB*', '最低硬件': 'RTX 4090 24 GB（Q4 吃紧）, A100 40 GB (FP16)' },
+          { '模型': 'Jais-3-7B', '参数量': '7B', 'Q4_K_M VRAM': '~5.6 GB', 'FP16 VRAM': '~18 GB', '最低硬件': 'RTX 4060 8 GB / RTX 3060 12 GB' },
+          { '模型': 'Jais-3-32B', '参数量': '32B', 'Q4_K_M VRAM': '~19-20 GB*', 'FP16 VRAM': '~64 GB*', '最低硬件': 'RTX 4090 24 GB（Q4 吃紧）, A100 40 GB (FP16)' },
           { '模型': 'ALLaM', '参数量': '7B', 'Q4_K_M VRAM': '~5 GB*', 'FP16 VRAM': '~16 GB*', '最低硬件': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { '模型': 'Fanar-2', '参数量': '27B', 'Q4_K_M VRAM': '~16-17 GB*', 'FP16 VRAM': '~54 GB*', '最低硬件': 'RTX 4090 24 GB (Q4)' },
           { '模型': 'Qwen3', '参数量': '8B', 'Q4_K_M VRAM': '~5-6 GB', 'FP16 VRAM': '~16 GB', '最低硬件': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -2721,7 +2734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '安装 Ollama：curl -fsSL https://ollama.com/install.sh | sh（Linux）或从 ollama.com 下载（Windows/Mac）。原生支持 Falcon-H1-Arabic。',
           '拉取并运行 Falcon-H1-Arabic 7B：ollama run hf.co/tiiuae/Falcon-H1-Arabic-7B-Instruct-GGUF——约 5 GB 下载，下载后自动运行。用类似 "اكتب قصيدة عن أبوظبي"（写一首关于阿布扎比的诗）的提示词测试阿拉伯语。',
           '拉取 Qwen3-8B 用于多语言：ollama pull qwen3:8b——约 5 GB 下载。在 MSA 和方言场景下都有强阿拉伯语能力。',
-          '对于 Jais 30B：从 Hugging Face 下载（inceptionai/jais-30b-v3），用 llama.cpp 转换工具转为 GGUF，量化为 Q4_K_M，然后用 Ollama 加载（ollama create jais-30b -f Modelfile）或 llama.cpp 服务器加载。',
+          '对于 Jais-3-7B：开发者直接发布了 GGUF 构建版本——ollama run hf.co/inception42/Jais-3-7B-GGUF（Q4_K_M 约 5.6 GB）。对于 Jais-3-32B：从 Hugging Face 下载（inception42/Jais-3-32B），如果还没有预构建的 GGUF，就用 llama.cpp 转换工具转为 GGUF，量化为 Q4_K_M，然后用 Ollama 或 llama.cpp 服务器加载。',
           '生产推理：使用 vLLM 进行高吞吐量阿拉伯语 API 服务。vLLM 原生支持 Falcon-H1-Arabic 和 Qwen3。通过 localhost:8000 上的 OpenAI 兼容端点暴露。',
           '阿拉伯语提示词技巧：始终指定语言——"أجب باللغة العربية الفصحى"（用现代标准阿拉伯语回答）。对于方言，请在系统提示词中包含目标方言的示例句子。',
         ],
@@ -2745,15 +2758,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '我能在普通游戏笔记本上运行阿拉伯语 LLM 吗？',
-            a: '可以，对于 Q4 量化的 7B 级模型。Falcon-H1-Arabic 7B 和 Qwen3-8B 需要约 5-6 GB VRAM——大多数配备 RTX 4060（8 GB）或 RTX 3060（12 GB）的游戏笔记本都能运行。Jais 30B 在 Q4 量化下需要高端桌面 GPU（RTX 4090 24 GB）或企业级 GPU。',
+            a: '可以，对于 Q4 量化的 7B 级模型。Falcon-H1-Arabic 7B、Jais-3-7B 和 Qwen3-8B 需要约 5-6 GB VRAM——大多数配备 RTX 4060（8 GB）或 RTX 3060（12 GB）的游戏笔记本都能运行。Jais-3-32B 在 Q4 量化下需要高端桌面 GPU（RTX 4090 24 GB）或企业级 GPU。',
           },
           {
             q: 'Jais 和 Falcon-H1-Arabic 有什么区别？',
-            a: '两者都源自阿布扎比，都具备阿拉伯语能力。Jais（Core42/G42）更大（最高 30B），专门作为阿拉伯语-英语双语模型训练，含 126B 阿拉伯语 token——针对企业级阿拉伯语质量优化。Falcon-H1-Arabic 是来自 TII（另一家阿布扎比机构）的 7B 模型，基于更广泛的 Falcon-H1 混合架构构建——对消费级 GPU 友好，属于阿联酋 AI 生态系统的一部分。追求最佳阿拉伯语质量：Jais 30B。消费级硬件：Falcon-H1-Arabic 7B。',
+            a: '两者都源自阿布扎比，都具备阿拉伯语能力。Jais 3（MBZUAI/Inception42）是更新、更大的系列（最高可达 375B MoE 旗舰模型，还有适合本地部署的 7B 和 32B 密集版本），专门针对企业级阿拉伯语训练。Falcon-H1-Arabic 是来自 TII（另一家阿布扎比机构）的 7B 模型，基于更广泛的 Falcon-H1 混合架构构建——对消费级 GPU 友好，属于阿联酋 AI 生态系统的一部分。追求最佳阿拉伯语质量：Jais-3-32B。消费级硬件：Falcon-H1-Arabic 7B 或 Jais-3-7B。',
           },
           {
             q: 'Qwen3 对阿拉伯语的支持和专用阿拉伯语模型一样好吗？',
-            a: 'Qwen3 拥有非常强的通用阿拉伯语支持（119 种语言，领先的 HELM Arabic 分数）。对于需要绝对最佳阿拉伯语质量的纯阿拉伯语企业部署，通常更倾向于 Jais 30B。对于阿拉伯语只是多种所需语言之一的混合多语言工作负载，Qwen3-8B 凭借其广度和易部署性往往是更好的选择。',
+            a: 'Qwen3 拥有非常强的通用阿拉伯语支持（119 种语言，领先的 HELM Arabic 分数）。对于需要绝对最佳阿拉伯语质量的纯阿拉伯语企业部署，通常更倾向于 Jais-3-32B。对于阿拉伯语只是多种所需语言之一的混合多语言工作负载，Qwen3-8B 凭借其广度和易部署性往往是更好的选择。',
           },
           {
             q: 'ALLaM 是什么，我能用于商业用途吗？',
@@ -2769,7 +2782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪款阿拉伯语 LLM 最适合阿联酋政府部署？',
-            a: 'Falcon-H1-Arabic 7B（来自 TII，阿布扎比）和 Jais 30B（来自 Core42/G42，阿布扎比）都是阿联酋原生模型，出自与阿联酋政府有关联的研究机构。从主权和可审计性来看，这是最契合的选择。两者都可本地部署，无需任何数据离开阿联酋基础设施。参见我们的 [UAE PDPL 数据主权指南](/zh/local-llms/uae-pdpl-data-sovereignty-local-ai-2026)。',
+            a: 'Falcon-H1-Arabic 7B（来自 TII，阿布扎比）和 Jais 3（来自 MBZUAI/Inception42，阿布扎比）都是阿联酋原生模型，出自与阿联酋政府有关联的研究机构。从主权和可审计性来看，这是最契合的选择。两者都可本地部署，无需任何数据离开阿联酋基础设施。参见我们的 [UAE PDPL 数据主权指南](/zh/local-llms/uae-pdpl-data-sovereignty-local-ai-2026)。',
           },
           {
             q: '在提示词中如何处理海湾阿拉伯语方言与 MSA？',
@@ -2777,11 +2790,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我能用自己的阿拉伯语数据微调 Jais 或 Falcon-H1-Arabic 吗？',
-            a: '可以——两者都使用允许微调的开放许可证（Jais 为 Apache 2.0，Falcon-H1-Arabic 为 Falcon LLM License）。使用 LoRA 或 QLoRA 微调，配合 Unsloth 或 PEFT 库等工具。在领域特定阿拉伯语数据（法律、医疗、金融）上微调能显著提升专业用例的质量。为符合 PDPL 合规，请将微调数据保留在本地。',
+            a: '可以——两者都使用允许微调的开放许可证（Jais 为 Apache 2.0，Falcon-H1-Arabic 为 Falcon LLM License）。使用 LoRA 或 QLoRA 微调，配合 Unsloth 或 PEFT 库等工具。在领域特定阿拉伯语数据（法律、医疗、金融）上微调能显著提升专业用例的质量。将微调数据保留在本地可降低 PDPL 下跨境传输的风险——完整合规还取决于您所在机构的合法依据和保障措施。',
           },
           {
-            q: '在本地运行 Jais 30B 需要什么硬件？',
-            a: '在 Q4_K_M 量化下，Jais 30B 估计需要 18-20 GB VRAM（估算——无官方基准）。NVIDIA RTX 4090（24 GB）可在 Q4 下以中等上下文运行；A100 40 GB 可在 FP16 下轻松处理。对于生产吞吐量，推荐两块 RTX 4090 多 GPU 模式或单块 A100/H100。参见我们的 [VRAM 计算器指南](/zh/local-llms/vram-calculator-local-llm)。',
+            q: '在本地运行 Jais 3 需要什么硬件？',
+            a: 'Jais-3-7B 在 GGUF Q4_K_M 下仅需约 5.6 GB VRAM——任何 RTX 4060（8 GB）或更好的显卡都能运行。Jais-3-32B 在 Q4_K_M 下估计需要 19-20 GB VRAM（按参数规模估算——目前尚无官方基准）。NVIDIA RTX 4090（24 GB）可在 Q4 下以中等上下文运行 32B 版本；A100 40 GB 可在 FP16 下轻松处理。对于生产吞吐量，推荐两块 RTX 4090 多 GPU 模式或单块 A100/H100。参见我们的 [VRAM 计算器指南](/zh/local-llms/vram-calculator-local-llm)。',
           },
         ],
       },
@@ -2803,8 +2816,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Technology Innovation Institute (TII) — Falcon-H1-Arabic 公告，January 5, 2026 — tii.ae',
           'Falcon-H1-Arabic Hugging Face 模型页面 — huggingface.co/blog/tiiuae/falcon-h1-arabic',
-          'Core42 / Cerebras — Jais 30B 新闻稿 — cerebras.ai and g42.ai',
-          'Jais 30B on Hugging Face — huggingface.co/inceptionai/jais-30b-v3',
+          'MBZUAI 基础模型研究所 / Inception42 — Jais 3 发布公告，2026年10月16日 — mbzuai.ac.ae and wam.ae',
+          'Jais 3 on Hugging Face — huggingface.co/inception42/Jais-3-7B and huggingface.co/inception42/Jais-3-32B',
+          'Core42 / Cerebras — Jais 30B（上一代）新闻稿 — cerebras.ai and g42.ai',
           'SDAIA / HUMAIN — ALLaM 34B 公告，May 2025 — humain.ai',
           'ALLaM-2-7B on Microsoft Azure AI — techcommunity.microsoft.com (September 2024)',
           'QCRI / HBKU — 技术报告《Fanar 2.0: Arabic Generative AI Stack》与 Fanar-2-27B-Instruct 模型卡 — arxiv.org/abs/2603.16397',
@@ -2819,16 +2833,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': '最佳阿拉伯语本地LLM：Jais、Falcon 及在本地运行阿拉伯语 AI（2026）',
-      'description': 'Jais 30B 和 Falcon-H1-Arabic 7B 是 2026 年最顶尖的阿拉伯语本地 LLM。含 VRAM 表、部署指南，以及本地阿拉伯语 AI 部署的质量评估基准。',
+      'description': 'Jais 3 和 Falcon-H1-Arabic 7B 是 2026 年最顶尖的阿拉伯语本地 LLM。含 VRAM 表、部署指南，以及本地阿拉伯语 AI 部署的质量评估基准。',
       'url': 'https://www.promptquorum.com/zh/local-llms/best-arabic-local-llms-2026',
       'datePublished': '2026-06-14',
-      'dateModified': '2026-08-28',
+      'dateModified': '2026-11-19',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
       'inLanguage': 'zh',
       'about': [
-        { '@type': 'SoftwareApplication', 'name': 'Jais 30B' },
+        { '@type': 'SoftwareApplication', 'name': 'Jais 3' },
         { '@type': 'SoftwareApplication', 'name': 'Falcon-H1-Arabic' },
         { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
         { '@type': 'Thing', 'name': 'Arabic NLP' },
@@ -2841,16 +2855,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'zh',
       'mainEntity': [
-        { '@type': 'Question', 'name': '我能在普通游戏笔记本上运行阿拉伯语 LLM 吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，对于 Q4 量化的 7B 级模型。Falcon-H1-Arabic 7B 和 Qwen3-8B 需要约 5-6 GB VRAM——大多数配备 RTX 4060（8 GB）或 RTX 3060（12 GB）的游戏笔记本都能运行。Jais 30B 在 Q4 量化下需要高端桌面 GPU（RTX 4090 24 GB）或企业级 GPU。' } },
-        { '@type': 'Question', 'name': 'Jais 和 Falcon-H1-Arabic 有什么区别？', 'acceptedAnswer': { '@type': 'Answer', 'text': '两者都源自阿布扎比，都具备阿拉伯语能力。Jais（Core42/G42）更大（最高 30B），专门作为阿拉伯语-英语双语模型训练，含 126B 阿拉伯语 token。Falcon-H1-Arabic 是来自 TII 的 7B 模型，基于 Falcon-H1 混合架构构建——对消费级 GPU 友好。追求最佳阿拉伯语质量：Jais 30B。消费级硬件：Falcon-H1-Arabic 7B。' } },
-        { '@type': 'Question', 'name': 'Qwen3 对阿拉伯语的支持和专用阿拉伯语模型一样好吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 拥有非常强的通用阿拉伯语支持（119 种语言，领先的 HELM Arabic 分数）。对于需要绝对最佳阿拉伯语质量的纯阿拉伯语企业部署，通常更倾向于 Jais 30B。对于混合多语言工作负载，Qwen3-8B 凭借其广度和易部署性往往是更好的选择。' } },
+        { '@type': 'Question', 'name': '我能在普通游戏笔记本上运行阿拉伯语 LLM 吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，对于 Q4 量化的 7B 级模型。Falcon-H1-Arabic 7B、Jais-3-7B 和 Qwen3-8B 需要约 5-6 GB VRAM——大多数配备 RTX 4060（8 GB）或 RTX 3060（12 GB）的游戏笔记本都能运行。Jais-3-32B 在 Q4 量化下需要高端桌面 GPU（RTX 4090 24 GB）或企业级 GPU。' } },
+        { '@type': 'Question', 'name': 'Jais 和 Falcon-H1-Arabic 有什么区别？', 'acceptedAnswer': { '@type': 'Answer', 'text': '两者都源自阿布扎比，都具备阿拉伯语能力。Jais 3（MBZUAI/Inception42）是更新、更大的系列（最高可达 375B MoE 旗舰模型，有 7B 和 32B 密集版本）。Falcon-H1-Arabic 是来自 TII 的 7B 模型，基于 Falcon-H1 混合架构构建——对消费级 GPU 友好。追求最佳阿拉伯语质量：Jais-3-32B。消费级硬件：Falcon-H1-Arabic 7B 或 Jais-3-7B。' } },
+        { '@type': 'Question', 'name': 'Qwen3 对阿拉伯语的支持和专用阿拉伯语模型一样好吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 拥有非常强的通用阿拉伯语支持（119 种语言，领先的 HELM Arabic 分数）。对于需要绝对最佳阿拉伯语质量的纯阿拉伯语企业部署，通常更倾向于 Jais-3-32B。对于混合多语言工作负载，Qwen3-8B 凭借其广度和易部署性往往是更好的选择。' } },
         { '@type': 'Question', 'name': 'ALLaM 是什么，我能用于商业用途吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ALLaM 是来自 SDAIA（现归于 HUMAIN 品牌）的沙特国家阿拉伯语为中心的 LLM 系列。公开版本（Hugging Face 上的 7B、Azure AI 上的 7B）采用研究/非商业许可证。对于商业用途，请直接联系 HUMAIN/SDAIA。ALLaM 34B 驱动国家级 HUMAIN Chat 应用，但公开访问受限。' } },
         { '@type': 'Question', 'name': '阿拉伯语 tokenization 如何影响模型质量？', 'acceptedAnswer': { '@type': 'Answer', 'text': '阿拉伯文需要正确的 tokenization 以避免字符级错误。在阿拉伯语上原生训练的模型（Jais、Falcon-H1-Arabic）使用针对阿拉伯语形态优化的 tokenizer。通用多语言模型可能对阿拉伯语进行低效 tokenization，导致复杂阿拉伯文本质量下降。生产前请用你的实际输入数据测试。' } },
         { '@type': 'Question', 'name': '阿拉伯语本地 LLM 能处理从右到左（RTL）文档吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '这些模型按正确的从右到左方向生成阿拉伯文本——模型在 Unicode 中产生正确的 RTL 阿拉伯文。你的应用界面必须处理 RTL 渲染（HTML dir="rtl"、CSS direction:rtl）。llama.cpp、Ollama 和 vLLM 会正确返回 Unicode 阿拉伯文本；方向由 UI 层处理。' } },
-        { '@type': 'Question', 'name': '哪款阿拉伯语 LLM 最适合阿联酋政府部署？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B（来自 TII，阿布扎比）和 Jais 30B（来自 Core42/G42，阿布扎比）都是阿联酋原生模型，出自与阿联酋政府有关联的研究机构。从主权和可审计性来看，这是最契合的选择。两者都可本地部署，无需任何数据离开阿联酋基础设施。' } },
+        { '@type': 'Question', 'name': '哪款阿拉伯语 LLM 最适合阿联酋政府部署？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B（来自 TII，阿布扎比）和 Jais 3（来自 MBZUAI/Inception42，阿布扎比）都是阿联酋原生模型，出自与阿联酋政府有关联的研究机构。从主权和可审计性来看，这是最契合的选择。两者都可本地部署，无需任何数据离开阿联酋基础设施。' } },
         { '@type': 'Question', 'name': '在提示词中如何处理海湾阿拉伯语方言与 MSA？', 'acceptedAnswer': { '@type': 'Answer', 'text': '默认系统提示词：用现代标准阿拉伯语回答。对于海湾阿拉伯语（阿联酋、沙特、科威特），在系统提示词中添加示例方言短语，或在领域数据上微调。所有列出的模型都能很好地处理 MSA；方言质量各异。在假定可用于生产之前，请用 5-10 条示例方言查询测试。' } },
-        { '@type': 'Question', 'name': '我能用自己的阿拉伯语数据微调 Jais 或 Falcon-H1-Arabic 吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以——两者都使用允许微调的开放许可证（Jais 为 Apache 2.0，Falcon-H1-Arabic 为 Falcon LLM License）。使用 LoRA 或 QLoRA，配合 Unsloth 或 PEFT 库等工具。在领域特定阿拉伯语数据上微调能显著提升质量。为符合 PDPL 合规，请将微调数据保留在本地。' } },
-        { '@type': 'Question', 'name': '在本地运行 Jais 30B 需要什么硬件？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在 Q4_K_M 量化下，Jais 30B 估计需要 18-20 GB VRAM（无官方基准）。RTX 4090（24 GB）可在 Q4 下以中等上下文运行；A100 40 GB 可在 FP16 下轻松处理。对于生产吞吐量，推荐两块 RTX 4090 多 GPU 模式或单块 A100/H100。' } },
+        { '@type': 'Question', 'name': '我能用自己的阿拉伯语数据微调 Jais 或 Falcon-H1-Arabic 吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以——两者都使用允许微调的开放许可证（Jais 为 Apache 2.0，Falcon-H1-Arabic 为 Falcon LLM License）。使用 LoRA 或 QLoRA，配合 Unsloth 或 PEFT 库等工具。在领域特定阿拉伯语数据上微调能显著提升质量。将微调数据保留在本地可降低 PDPL 下跨境传输的风险——完整合规还取决于您所在机构的合法依据和保障措施。' } },
+        { '@type': 'Question', 'name': '在本地运行 Jais 3 需要什么硬件？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Jais-3-7B 在 GGUF Q4_K_M 下仅需约 5.6 GB VRAM。Jais-3-32B 在 Q4_K_M 下估计需要 19-20 GB VRAM（估算，无官方基准）。RTX 4090（24 GB）可在 Q4 下以中等上下文运行 32B 版本；A100 40 GB 可在 FP16 下轻松处理。对于生产吞吐量，推荐两块 RTX 4090 多 GPU 模式或单块 A100/H100。' } },
       ],
     },
     itemListSchema: {
@@ -2860,7 +2874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numberOfItems': 7,
       'inLanguage': 'zh',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 30B', 'description': '最佳阿拉伯语原生本地 LLM。126B 阿拉伯语训练 token，Apache 2.0，Core42/G42 阿布扎比。' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 3', 'description': '最佳阿拉伯语原生本地 LLM，最新一代（2026年10月）。0.9B 至 375B 阵容，Apache 2.0，MBZUAI/Inception42 阿布扎比。' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Falcon-H1-Arabic 7B', 'description': '最适合消费级硬件。TII 阿布扎比。Q4_K_M 约 5 GB VRAM。Falcon LLM License。' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3-8B', 'description': '具有强阿拉伯语支持的最佳多语言选项。HELM Arabic 顶尖表现。Apache 2.0。' },
         { '@type': 'ListItem', 'position': 4, 'name': 'ALLaM 34B', 'description': '沙特国家阿拉伯语模型（HUMAIN/SDAIA）。驱动 HUMAIN Chat。研究许可证。' },
@@ -2874,26 +2888,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '최고의 아랍어 로컬 LLM: Jais, Falcon 및 아랍어 AI 온프레미스 실행 (2026)',
     heroImage: '/images/best-arabic-local-llms-2026-overview-hero-ko.webp',
     seoTitle: '2026 최고의 아랍어 로컬 LLM: Jais, Falcon 비교',
-    metaDescription: 'Jais 30B, Falcon-H1-Arabic 7B, Qwen3-8B은 2026년 최고의 아랍어 로컬 LLM. VRAM 표, 온프레미스 설정, 품질 평가 팁을 제공합니다.',
-    intro: 'Jais 30B (Core42/G42, 아부다비, Apache 2.0)와 Falcon-H1-Arabic 7B (TII, 아부다비)는 2026년 최고의 아랍어 네이티브 로컬 LLM입니다. 강력한 아랍어 지원을 갖춘 일반 다국어 워크로드의 경우, Qwen3-8B이 소비자 하드웨어에 맞는 크기의 모델 중에서 HELM Arabic 벤치마크를 선도합니다. 세 모델 모두 Ollama 또는 vLLM으로 온프레미스에서 실행되어 아랍어 데이터를 국경 내에 유지합니다. 본 가이드는 모델 순위를 매기고, VRAM 표를 제공하며, 아랍어 AI를 로컬에서 배포하고 평가하는 방법을 보여드립니다.',
+    metaDescription: 'Jais 3, Falcon-H1-Arabic 7B, Qwen3-8B은 2026년 최고의 아랍어 로컬 LLM. VRAM 표, 온프레미스 설정, 품질 평가 팁을 제공합니다.',
+    intro: 'Jais 3 (MBZUAI/Inception42, 아부다비, Apache 2.0, 2026년 10월 출시)와 Falcon-H1-Arabic 7B (TII, 아부다비)는 2026년 최고의 아랍어 네이티브 로컬 LLM입니다. 강력한 아랍어 지원을 갖춘 일반 다국어 워크로드의 경우, Qwen3-8B이 소비자 하드웨어에 맞는 크기의 모델 중에서 HELM Arabic 벤치마크를 선도합니다. 세 모델 모두 Ollama 또는 vLLM으로 온프레미스에서 실행되어 아랍어 데이터를 국경 내에 유지합니다. 본 가이드는 모델 순위를 매기고, VRAM 표를 제공하며, 아랍어 AI를 로컬에서 배포하고 평가하는 방법을 보여드립니다.',
     designSkin: 'hub',
     theme: 'Best Models',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-14',
+    next_refresh_due: '2027-05-19',
     publishDate: '2026-06-14',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-19',
     educationalLevel: 'Intermediate',
     audience: '아랍어를 사용하는 기업, 걸프 지역 개발자, 아랍어 NLP를 로컬에 배포하는 팀',
     readTime: '13분 읽기',
     primaryTerm: '아랍어 로컬 LLM',
     affiliateDisclosure: false,
-    leadAnswerBlock: '**Jais 30B (Core42/G42, 아부다비, Apache 2.0)와 Falcon-H1-Arabic 7B (TII 아부다비)는 2026년 최고의 아랍어 네이티브 로컬 LLM입니다. 강력한 아랍어 지원을 갖춘 일반 다국어 워크로드의 경우, Qwen3-8B이 소비자 하드웨어에 맞는 크기의 모델 중에서 HELM Arabic 벤치마크를 선도합니다. 세 모델 모두 Ollama 또는 vLLM으로 온프레미스에서 실행되어 아랍어 개인정보를 국경 내에 유지합니다.**',
+    leadAnswerBlock: '**Jais 3 (MBZUAI/Inception42, 아부다비, Apache 2.0, 2026년 10월 출시)와 Falcon-H1-Arabic 7B (TII 아부다비)는 2026년 최고의 아랍어 네이티브 로컬 LLM입니다. 강력한 아랍어 지원을 갖춘 일반 다국어 워크로드의 경우, Qwen3-8B이 소비자 하드웨어에 맞는 크기의 모델 중에서 HELM Arabic 벤치마크를 선도합니다. 세 모델 모두 Ollama 또는 vLLM으로 온프레미스에서 실행되어 아랍어 개인정보를 국경 내에 유지합니다.**',
     quickAnswerTop: {
       en: {
         question: 'What is the best Arabic local LLM in 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) is the strongest Arabic-native local LLM in 2026, trained on 126B Arabic tokens with Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), released October 2026, is the strongest Arabic-native local LLM in 2026, available in sizes from 0.9B to 32B under Apache 2.0 license. For smaller hardware, Falcon-H1-Arabic 7B (TII Abu Dhabi) runs on consumer GPUs with Q4_K_M ~5 GB VRAM. For multilingual workloads, Qwen3-8B leads HELM Arabic benchmarks among 8B-class models.',
         bullets: [
-          'Jais 30B: best Arabic-native model, 126B Arabic training tokens, Apache 2.0, needs ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): best Arabic-native model, released October 2026 by MBZUAI/Inception42, Apache 2.0, 32B needs ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, consumer GPU friendly',
           'Qwen3-8B: best multilingual option with strong Arabic, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Saudi national model, powers HUMAIN Chat; research license',
@@ -2903,9 +2917,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ar: {
         question: 'ما أفضل نموذج ذكاء اصطناعي عربي محلي في 2026؟',
-        answer: 'Jais 30B (Core42/G42، أبوظبي) هو أقوى نموذج محلي عربي أصيل في 2026، مُدرَّب على 126 مليار رمز عربي بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42، أبوظبي)، الذي صدر في أكتوبر 2026، هو أقوى نموذج محلي عربي أصيل في 2026، ويتوفر بأحجام من 0.9B إلى 32B بترخيص Apache 2.0. لأجهزة GPU الأصغر، يعمل Falcon-H1-Arabic 7B (مؤسسة الابتكار التقني، أبوظبي) على بطاقات المستهلكين بمتطلبات VRAM تبلغ ~5 GB عند التكميم Q4_K_M. للأعباء متعددة اللغات، يتصدر Qwen3-8B معيار HELM Arabic بين النماذج بحجم 8B.',
         bullets: [
-          'Jais 30B: أفضل نموذج عربي أصيل، 126 مليار رمز تدريب عربي، Apache 2.0، يحتاج ~18-20 GB VRAM عند Q4',
+          'Jais 3 (7B/32B): أفضل نموذج عربي أصيل، صدر في أكتوبر 2026 من MBZUAI/Inception42، Apache 2.0، يحتاج إصدار 32B إلى ~19-20 GB VRAM عند Q4',
           'Falcon-H1-Arabic 7B: مؤسسة الابتكار التقني أبوظبي، Q4_K_M ~5 GB VRAM، مناسب لـ GPU المستهلكين',
           'Qwen3-8B: أفضل خيار متعدد اللغات مع دعم عربي قوي، ~5-6 GB VRAM عند Q4',
           'ALLaM 34B (HUMAIN/SDAIA): النموذج الوطني السعودي، يُشغِّل تطبيق HUMAIN Chat؛ ترخيص بحثي',
@@ -2915,9 +2929,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Was ist das beste arabische lokale LLM im Jahr 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) ist das stärkste arabisch-native lokale LLM im Jahr 2026, trainiert auf 126 Milliarden arabischen Tokens mit Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), veröffentlicht im Oktober 2026, ist das stärkste arabisch-native lokale LLM im Jahr 2026, verfügbar in Größen von 0,9B bis 32B unter Apache-2.0-Lizenz. Für kleinere Hardware läuft Falcon-H1-Arabic 7B (TII Abu Dhabi) auf Consumer-GPUs mit Q4_K_M ~5 GB VRAM. Für multilinguale Workloads führt Qwen3-8B die HELM-Arabic-Benchmarks in der 8B-Klasse an.',
         bullets: [
-          'Jais 30B: bestes arabisch-natives Modell, 126 Mrd. arabische Trainings-Tokens, Apache 2.0, benötigt ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): bestes arabisch-natives Modell, veröffentlicht im Oktober 2026 von MBZUAI/Inception42, Apache 2.0, 32B benötigt ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, Consumer-GPU-kompatibel',
           'Qwen3-8B: bester multilingualer Ansatz mit starkem Arabisch, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): Nationales saudi-arabisches Modell; Forschungslizenz',
@@ -2927,9 +2941,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor LLM local árabe en 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dabi) es el LLM local árabe nativo más potente en 2026, entrenado con 126B tokens en árabe con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dabi), lanzado en octubre de 2026, es el LLM local árabe nativo más potente en 2026, disponible en tamaños de 0.9B a 32B con licencia Apache 2.0. Para hardware más pequeño, Falcon-H1-Arabic 7B (TII Abu Dabi) funciona en GPUs de consumidor con Q4_K_M ~5 GB de VRAM. Para cargas de trabajo multilingüe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos de clase 8B.',
         bullets: [
-          'Jais 30B: mejor modelo árabe nativo, 126B tokens de entrenamiento en árabe, Apache 2.0, necesita ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): mejor modelo árabe nativo, lanzado en octubre de 2026 por MBZUAI/Inception42, Apache 2.0, la versión 32B necesita ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dabi, Q4_K_M ~5 GB VRAM, compatible con GPU de consumidor',
           'Qwen3-8B: mejor opción multilingüe con fuerte soporte árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudí; licencia de investigación',
@@ -2939,9 +2953,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel est le meilleur LLM local arabophone en 2026 ?',
-        answer: 'Jais 30B (Core42/G42, Abou Dabi) est le LLM local arabophone natif le plus puissant en 2026, entraîné sur 126 milliards de tokens arabes avec licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abou Dabi), sorti en octobre 2026, est le LLM local arabophone natif le plus puissant en 2026, disponible en tailles de 0,9B à 32B sous licence Apache 2.0. Pour le matériel plus modeste, Falcon-H1-Arabic 7B (TII Abou Dabi) fonctionne sur des GPU grand public avec Q4_K_M ~5 Go de VRAM. Pour les charges de travail multilingues, Qwen3-8B domine les benchmarks HELM Arabic dans la catégorie 8B.',
         bullets: [
-          'Jais 30B : meilleur modèle arabophone natif, 126 milliards de tokens arabes, Apache 2.0, nécessite ~18-20 Go VRAM Q4',
+          'Jais 3 (7B/32B) : meilleur modèle arabophone natif, sorti en octobre 2026 par MBZUAI/Inception42, Apache 2.0, la version 32B nécessite ~19-20 Go VRAM Q4',
           'Falcon-H1-Arabic 7B : TII Abou Dabi, Q4_K_M ~5 Go VRAM, compatible GPU grand public',
           'Qwen3-8B : meilleure option multilingue avec fort support arabe, ~5-6 Go VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA) : modèle national saoudien ; licence recherche',
@@ -2951,9 +2965,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年のベストなアラビア語対応ローカルLLMは？',
-        answer: 'Jais 30B（Core42/G42、アブダビ）は2026年で最も優れたアラビア語ネイティブのローカルLLMです。1,260億のアラビア語トークンで訓練され、Apache 2.0ライセンスで利用可能。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
+        answer: 'Jais 3（MBZUAI/Inception42、アブダビ）は2026年10月にリリースされ、2026年で最も優れたアラビア語ネイティブのローカルLLMです。0.9Bから32Bまでのサイズで利用可能、Apache 2.0ライセンス。小型ハードウェア向けにはFalcon-H1-Arabic 7B（TII アブダビ）がQ4_K_M ~5 GB VRAMでコンシューマーGPUで動作。多言語ワークロードではQwen3-8BがHELM Arabicベンチマークで8Bクラストップ。',
         bullets: [
-          'Jais 30B: アラビア語ネイティブ最強、1,260億アラビア語トークン、Apache 2.0、Q4で ~18-20 GB VRAM',
+          'Jais 3（7B/32B）: アラビア語ネイティブ最強、2026年10月にMBZUAI/Inception42がリリース、Apache 2.0、32Bは ~19-20 GB VRAM（Q4）が必要',
           'Falcon-H1-Arabic 7B: TII アブダビ、Q4_K_M ~5 GB VRAM、コンシューマーGPU対応',
           'Qwen3-8B: アラビア語サポートが強い多言語ベストオプション、Q4 ~5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）: サウジ国家モデル、リサーチライセンス',
@@ -2963,9 +2977,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pt: {
         question: 'Qual é o melhor LLM local árabe em 2026?',
-        answer: 'Jais 30B (Core42/G42, Abu Dhabi) é o LLM local árabe nativo mais poderoso em 2026, treinado com 126B tokens em árabe com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
+        answer: 'Jais 3 (MBZUAI/Inception42, Abu Dhabi), lançado em outubro de 2026, é o LLM local árabe nativo mais poderoso em 2026, disponível em tamanhos de 0,9B a 32B com licença Apache 2.0. Para hardware menor, Falcon-H1-Arabic 7B (TII Abu Dhabi) roda em GPUs de consumidor com Q4_K_M ~5 GB de VRAM. Para cargas de trabalho multilíngues, Qwen3-8B lidera nos benchmarks HELM Arabic entre modelos da classe 8B.',
         bullets: [
-          'Jais 30B: melhor modelo árabe nativo, 126B tokens de treinamento em árabe, Apache 2.0, requer ~18-20 GB VRAM Q4',
+          'Jais 3 (7B/32B): melhor modelo árabe nativo, lançado em outubro de 2026 pela MBZUAI/Inception42, Apache 2.0, a versão 32B precisa de ~19-20 GB VRAM Q4',
           'Falcon-H1-Arabic 7B: TII Abu Dhabi, Q4_K_M ~5 GB VRAM, compatível com GPU de consumidor',
           'Qwen3-8B: melhor opção multilíngue com forte suporte ao árabe, ~5-6 GB VRAM Q4',
           'ALLaM 34B (HUMAIN/SDAIA): modelo nacional saudita; licença de pesquisa',
@@ -2975,9 +2989,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年最佳阿拉伯语本地LLM是什么？',
-        answer: 'Jais 30B（Core42/G42，阿布扎比）是2026年最强的阿拉伯语原生本地LLM，使用1260亿阿拉伯语token训练，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
+        answer: 'Jais 3（MBZUAI/Inception42，阿布扎比）于2026年10月发布，是2026年最强的阿拉伯语原生本地LLM，提供从0.9B到32B的多种尺寸，采用Apache 2.0许可证。对于较小硬件，Falcon-H1-Arabic 7B（TII阿布扎比）在消费级GPU上运行，Q4_K_M仅需约5 GB VRAM。对于多语言工作负载，Qwen3-8B在8B级别模型中领跑HELM Arabic基准。',
         bullets: [
-          'Jais 30B：最佳阿拉伯语原生模型，1260亿阿拉伯语训练token，Apache 2.0，Q4需约18-20 GB VRAM',
+          'Jais 3（7B/32B）：最佳阿拉伯语原生模型，2026年10月由MBZUAI/Inception42发布，Apache 2.0，32B版本需约19-20 GB VRAM（Q4）',
           'Falcon-H1-Arabic 7B：TII阿布扎比，Q4_K_M约5 GB VRAM，兼容消费级GPU',
           'Qwen3-8B：具有强阿拉伯语支持的最佳多语言选项，Q4约5-6 GB VRAM',
           'ALLaM 34B（HUMAIN/SDAIA）：沙特国家模型；研究许可证',
@@ -2987,9 +3001,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ko: {
         question: '2026년 최고의 아랍어 로컬 LLM은 무엇입니까?',
-        answer: 'Jais 30B(Core42/G42, 아부다비)는 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 1,260억 개의 아랍어 토큰으로 훈련되었으며 Apache 2.0 라이선스를 제공합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
+        answer: 'Jais 3(MBZUAI/Inception42, 아부다비)는 2026년 10월 출시되어 2026년 가장 강력한 아랍어 네이티브 로컬 LLM으로, 0.9B부터 32B까지 다양한 크기로 제공되며 Apache 2.0 라이선스를 적용합니다. 소형 하드웨어의 경우 Falcon-H1-Arabic 7B(TII 아부다비)가 Q4_K_M ~5 GB VRAM으로 소비자 GPU에서 실행됩니다. 다국어 워크로드에서는 Qwen3-8B가 8B 클래스 모델 중 HELM Arabic 벤치마크를 선도합니다.',
         bullets: [
-          'Jais 30B: 최고의 아랍어 네이티브 모델, 아랍어 훈련 토큰 1,260억 개, Apache 2.0, Q4 ~18-20 GB VRAM 필요',
+          'Jais 3(7B/32B): 최고의 아랍어 네이티브 모델, 2026년 10월 MBZUAI/Inception42 출시, Apache 2.0, 32B 버전은 ~19-20 GB VRAM(Q4) 필요',
           'Falcon-H1-Arabic 7B: TII 아부다비, Q4_K_M ~5 GB VRAM, 소비자 GPU 호환',
           'Qwen3-8B: 강력한 아랍어 지원을 갖춘 최고의 다국어 옵션, Q4 ~5-6 GB VRAM',
           'ALLaM 34B(HUMAIN/SDAIA): 사우디 국가 모델; 연구 라이선스',
@@ -3014,7 +3028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Jais 30B (Core42/G42, 아부다비):** 2026년 최고의 아랍어 네이티브 로컬 LLM입니다. 126B 아랍어 + 251B 영어 토큰으로 훈련되었습니다. Apache 2.0 라이선스. Q4 양자화 시 ~18-20 GB VRAM이 필요합니다(전체 FP16의 경우 멀티 GPU 또는 엔터프라이즈 GPU 필요).',
+          '**Jais 3 (MBZUAI/Inception42, 아부다비):** 2026년 최고의 아랍어 네이티브 로컬 LLM으로, 2026년 10월 출시되어 기존 Jais 30B를 대체했습니다. 0.9B부터 375B MoE 플래그십까지 총 6개 모델. Apache 2.0 라이선스. 32B 버전은 Q4 양자화 시 ~19-20 GB VRAM이 필요합니다(엔터프라이즈 GPU); 7B 버전은 ~5.6 GB만 필요합니다(GGUF Q4_K_M).',
           '**Falcon-H1-Arabic 7B (TII, 아부다비):** UAE 네이티브 아랍어 중심 모델입니다. 소비자 GPU에서 실행됩니다: Q4_K_M ~5 GB VRAM. Falcon-H1 하이브리드 아키텍처 기반이며, 네이티브(비번역) 아랍어 데이터셋으로 훈련되었습니다.',
           '**Qwen3-8B (Alibaba Cloud):** 강력한 아랍어 지원을 갖춘 최고의 다국어 옵션입니다. HELM Arabic에서 평균 0.786(235B 변형); 8B는 Q4에서 ~5-6 GB VRAM에 맞습니다. 119개 언어 지원.',
           '**ALLaM 34B (HUMAIN/SDAIA, 사우디아라비아):** 사우디 국가 모델로, HUMAIN Chat을 구동합니다. 공개 접근용 연구/비상업용 라이선스입니다. Microsoft Azure AI에서 이용 가능(7B 변형).',
@@ -3024,8 +3038,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**데이터 주권:** 아랍어 NLP를 로컬에서 실행하면 개인정보가 국경 내에 유지됩니다 — UAE PDPL, 사우디 NDMO 및 걸프 데이터 주권 목표에 부합합니다.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Jais 30B (Apache 2.0, 아부다비)와 Falcon-H1-Arabic 7B (TII, 아부다비)는 2026년 최고의 아랍어 네이티브 로컬 LLM이며, Qwen3-8B는 소비자 하드웨어용 다국어 아랍어 벤치마크를 선도합니다.' },
-          { type: 'plain-terms', text: '자체 서버에서 실행할 수 있는 최고의 아랍어 AI: 최고의 아랍어 품질을 위한 Jais 30B(고급 GPU 필요), 일반 컴퓨터용 Falcon-H1-Arabic 7B, 또는 다른 언어도 필요하다면 Qwen3-8B.' },
+          { type: 'one-sentence', text: 'Jais 3 (Apache 2.0, 아부다비, 2026년 10월 출시)와 Falcon-H1-Arabic 7B (TII, 아부다비)는 2026년 최고의 아랍어 네이티브 로컬 LLM이며, Qwen3-8B는 소비자 하드웨어용 다국어 아랍어 벤치마크를 선도합니다.' },
+          { type: 'plain-terms', text: '자체 서버에서 실행할 수 있는 최고의 아랍어 AI: 최고의 아랍어 품질을 위한 Jais 3(32B 버전은 고급 GPU 필요, 7B 버전은 일반 게이밍 GPU에서 실행), 일반 컴퓨터용 Falcon-H1-Arabic 7B, 또는 다른 언어도 필요하다면 Qwen3-8B.' },
         ],
       },
       whyArabicMatters: {
@@ -3043,9 +3057,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '최고의 아랍어 로컬 LLM: 온프레미스 배포를 위한 순위',
         content: '아랍어 능력 및 로컬/온프레미스 배포 적합성에 따라 순위를 매겼습니다.',
         image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
-        imageCaption: '아랍어 로컬 LLM 선택을 위한 의사결정 트리: 최고의 아랍어 품질을 원하면 Jais 30B(~19-20 GB VRAM), 소비자용 GPU에는 Falcon-H1-Arabic 7B(~5 GB), 다국어 활용에는 Qwen3-8B(~5-6 GB), 폭넓은 다국어 기본 모델로는 Llama 3.1-8B.',
+        imageCaption: '아랍어 로컬 LLM 선택을 위한 의사결정 트리: 최고의 아랍어 품질을 원하면 Jais-3-32B(~19-20 GB VRAM), 소비자용 GPU에는 Jais-3-7B 또는 Falcon-H1-Arabic 7B(~5-6 GB), 다국어 활용에는 Qwen3-8B(~5-6 GB), 폭넓은 다국어 기본 모델로는 Llama 3.1-8B.',
         items: [
-          '**1. Jais 30B — 최고의 아랍어 품질 (Apache 2.0, 온프레미스 준비 완료).** 개발사: Core42 / Inception AI (G42 그룹, 아부다비) + MBZUAI 연구 + Cerebras 훈련. 훈련: 126B 아랍어 토큰 + 251B 영어 토큰 + 50B 코드 토큰. 인간 평가에서 Jais 30B는 평가의 96%에서 아랍어로 Jais 13B를 능가합니다. 라이선스: Apache 2.0(완전 공개, 상업적 사용 허용). Hugging Face: inceptionai/jais-30b-v3. VRAM: ~18-20 GB Q4 추정치(FP16의 경우 엔터프라이즈 GPU 또는 멀티 GPU). 최적 용도: 아랍어가 주된 엔터프라이즈 문서 처리, 고객 지원, 정부 배포에서 최고의 아랍어 품질.',
+          '**1. Jais 3 (7B / 32B) — 최고의 아랍어 품질, 최신 세대 (Apache 2.0, 온프레미스 준비 완료).** 개발사: MBZUAI의 Institute of Foundation Models(IFM) + Inception42, Cerebras Systems와 협력 (아부다비). 2026년 10월 16일 출시되어 기존 Jais 30B를 대체하는 새로운 대표 아랍어 모델 라인입니다. 라인업: 0.9B부터 375B(활성 23B) MoE 플래그십까지 총 6개 모델; Jais-3-7B와 Jais-3-32B가 온프레미스에 적합한 크기입니다. 라이선스: 6개 언어 모델 모두 Apache 2.0. Hugging Face: inception42/Jais-3-7B, inception42/Jais-3-32B. 컨텍스트: 최대 512K 토큰. MBZUAI와 Inception42에 따르면 Jais-3-7B와 Jais-3-32B는 자체 벤치마크 세트(Arabic MMLU, AraGen v3, Belebele, QADI 방언 식별)에서 유사 크기의 오픈 모델 중 가장 높은 평균 아랍어 점수를 기록했습니다 — 이는 개발사가 발표한 수치이며 독립적으로 검증되지 않았습니다. VRAM: Jais-3-7B GGUF Q4_K_M 기준 ~5.6 GB(공개된 GGUF 파일로 확인); Jais-3-32B는 Q4 기준 ~19-20 GB 추정치입니다. 최적 용도: 아랍어가 주된 엔터프라이즈 문서 처리, 고객 지원, 정부 배포에서 최고의 아랍어 품질.',
           '**2. Falcon-H1-Arabic 7B — 소비자 하드웨어에 최적 (TII 아부다비).** 개발사: Technology Innovation Institute (TII), 아부다비(Advanced Technology Research Council 산하). 기반: Falcon-H1 하이브리드 아키텍처(2026년 1월 5일 출시). 훈련: 네이티브(비번역) 아랍어 데이터셋, MSA 및 지역 방언. 라이선스: Falcon LLM License — 허용적, 상업적 사용 허용. VRAM: Q4_K_M ~5 GB — RTX 4060 8GB, RTX 3060 12GB 및 동급에서 실행. 벤치마크: Open Arabic LLM Leaderboard(OALL)에서 71.47%를 기록해 ~10B급 아랍어 모델 중 최고 점수를 기록했으며 ALLaM-7B, Fanar-9B, Qwen3-8B를 앞서고, 기존 Falcon 3 기반 Falcon Arabic 체크포인트를 대체한다. 최적 용도: 소비자 및 프로슈머 하드웨어 배포; 아부다비 기관의 UAE 네이티브 모델.',
           '**3. Qwen3-8B — 강력한 아랍어를 갖춘 최고의 다국어 옵션 (Alibaba Cloud).** 개발사: Alibaba Cloud. 언어: 119개 언어 및 방언. 벤치마크: Qwen3-235B-A22B는 HELM Arabic에서 평균 0.786을 기록; 로컬 하드웨어에는 8B 변형이 권장됩니다. 라이선스: Apache 2.0. VRAM: Q4_K_M ~5-6 GB. 최적 용도: 하나의 모델에 아랍어 + 영어 + 기타 언어가 필요한 팀; Ollama에서 폭넓게 지원됨(ollama pull qwen3:8b).',
           '**4. ALLaM 34B / 7B — 사우디 국가 모델 (HUMAIN/SDAIA).** 개발사: SDAIA (Saudi Data and AI Authority) / HUMAIN (사우디 국가 AI 회사). 버전: 7B(Hugging Face, 연구 접근) 및 34B(HUMAIN Chat 구동). Azure: ALLaM-2-7B-Instruct는 September 2024부터 Microsoft Azure AI에서 이용 가능. 라이선스: 공개 접근용 연구/비상업용; HUMAIN을 통한 엔터프라이즈 라이선싱. 최적 용도: 사우디 정부 및 엔터프라이즈 배포; Vision 2030에 부합하는 주권 모델.',
@@ -3059,12 +3073,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '아랍어 로컬 LLM의 VRAM 요구 사항',
         content: '모델 및 양자화별 필요 VRAM입니다. *로 표시된 행은 파라미터 스케일링 추정치입니다(공식 벤치마크 없음). 배포 전에 항상 특정 하드웨어로 확인하십시오.',
         image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
-        imageCaption: 'Q4_K_M 양자화 기준 아랍어 로컬 LLM의 VRAM 요구 사항: Gemma 3 4B는 약 3 GB, Falcon-H1-Arabic 7B와 ALLaM 7B는 약 5 GB, Qwen3-8B는 5-6 GB, Jais 13B는 8-10 GB, Jais 30B는 19-20 GB VRAM이 필요합니다.',
+        imageCaption: 'Q4_K_M 양자화 기준 아랍어 로컬 LLM의 VRAM 요구 사항: Gemma 3 4B는 약 3 GB, Falcon-H1-Arabic 7B, Jais-3-7B, ALLaM 7B는 약 5-6 GB, Qwen3-8B는 5-6 GB, Jais-3-32B는 19-20 GB VRAM이 필요합니다.',
         columns: ['모델', '파라미터', 'Q4_K_M VRAM', 'FP16 VRAM', '최소 하드웨어'],
         rows: [
           { '모델': 'Falcon-H1-Arabic', '파라미터': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', '최소 하드웨어': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { '모델': 'Jais 13B', '파라미터': '13B', 'Q4_K_M VRAM': '~8-10 GB*', 'FP16 VRAM': '~26 GB*', '최소 하드웨어': 'RTX 3090 24 GB (Q4)' },
-          { '모델': 'Jais 30B', '파라미터': '30B', 'Q4_K_M VRAM': '~18-20 GB*', 'FP16 VRAM': '~60 GB*', '최소 하드웨어': 'RTX 4090 24 GB (Q4 빠듯함), A100 40 GB (FP16)' },
+          { '모델': 'Jais-3-7B', '파라미터': '7B', 'Q4_K_M VRAM': '~5.6 GB', 'FP16 VRAM': '~18 GB', '최소 하드웨어': 'RTX 4060 8 GB / RTX 3060 12 GB' },
+          { '모델': 'Jais-3-32B', '파라미터': '32B', 'Q4_K_M VRAM': '~19-20 GB*', 'FP16 VRAM': '~64 GB*', '최소 하드웨어': 'RTX 4090 24 GB (Q4 빠듯함), A100 40 GB (FP16)' },
           { '모델': 'ALLaM', '파라미터': '7B', 'Q4_K_M VRAM': '~5 GB*', 'FP16 VRAM': '~16 GB*', '최소 하드웨어': 'RTX 4060 8 GB / RTX 3060 12 GB' },
           { '모델': 'Fanar-2', '파라미터': '27B', 'Q4_K_M VRAM': '~16-17 GB*', 'FP16 VRAM': '~54 GB*', '최소 하드웨어': 'RTX 4090 24 GB (Q4)' },
           { '모델': 'Qwen3', '파라미터': '8B', 'Q4_K_M VRAM': '~5-6 GB', 'FP16 VRAM': '~16 GB', '최소 하드웨어': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -3080,7 +3095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ollama 설치: curl -fsSL https://ollama.com/install.sh | sh (Linux) 또는 ollama.com에서 다운로드(Windows/Mac). Falcon-H1-Arabic를 네이티브로 지원합니다.',
           'Falcon-H1-Arabic 7B 받아서 실행: ollama run hf.co/tiiuae/Falcon-H1-Arabic-7B-Instruct-GGUF — ~5 GB 다운로드 후 자동 실행. "اكتب قصيدة عن أبوظبي"(아부다비에 관한 시를 쓰세요)와 같은 프롬프트로 아랍어를 테스트하십시오.',
           '다국어용 Qwen3-8B 받기: ollama pull qwen3:8b — ~5 GB 다운로드. MSA 및 방언 맥락 전반에서 강력한 아랍어.',
-          'Jais 30B의 경우: Hugging Face(inceptionai/jais-30b-v3)에서 다운로드하고, llama.cpp 변환 도구로 GGUF로 변환하고, Q4_K_M으로 양자화한 다음, Ollama(ollama create jais-30b -f Modelfile) 또는 llama.cpp 서버로 로드하십시오.',
+          'Jais-3-7B의 경우: 개발사가 직접 GGUF 빌드를 공개했습니다 — ollama run hf.co/inception42/Jais-3-7B-GGUF (Q4_K_M ~5.6 GB). Jais-3-32B의 경우: Hugging Face(inception42/Jais-3-32B)에서 다운로드하고, 아직 미리 빌드된 GGUF가 없다면 llama.cpp 변환 도구로 GGUF로 변환하고, Q4_K_M으로 양자화한 다음, Ollama 또는 llama.cpp 서버로 로드하십시오.',
           '프로덕션 추론: 고처리량 아랍어 API 서빙에 vLLM을 사용하십시오. vLLM은 Falcon-H1-Arabic와 Qwen3를 네이티브로 지원합니다. localhost:8000에서 OpenAI 호환 엔드포인트로 노출하십시오.',
           '아랍어 프롬프트 팁: 항상 언어를 지정하십시오 — "أجب باللغة العربية الفصحى"(현대 표준 아랍어로 답하세요). 방언의 경우, 시스템 프롬프트에 대상 방언의 예시 문장을 포함하십시오.',
         ],
@@ -3104,15 +3119,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '일반 게이밍 노트북에서 아랍어 LLM을 실행할 수 있습니까?',
-            a: '예, Q4 양자화의 7B 클래스 모델의 경우 가능합니다. Falcon-H1-Arabic 7B와 Qwen3-8B는 ~5-6 GB VRAM이 필요합니다 — RTX 4060(8 GB) 또는 RTX 3060(12 GB)을 갖춘 대부분의 게이밍 노트북에서 실행할 수 있습니다. Jais 30B는 고급 데스크톱 GPU(RTX 4090 24 GB) 또는 Q4 양자화의 엔터프라이즈 GPU가 필요합니다.',
+            a: '예, Q4 양자화의 7B 클래스 모델의 경우 가능합니다. Falcon-H1-Arabic 7B, Jais-3-7B, Qwen3-8B는 ~5-6 GB VRAM이 필요합니다 — RTX 4060(8 GB) 또는 RTX 3060(12 GB)을 갖춘 대부분의 게이밍 노트북에서 실행할 수 있습니다. Jais-3-32B는 고급 데스크톱 GPU(RTX 4090 24 GB) 또는 Q4 양자화의 엔터프라이즈 GPU가 필요합니다.',
           },
           {
             q: 'Jais와 Falcon-H1-Arabic의 차이점은 무엇입니까?',
-            a: '둘 다 아부다비에서 시작된 아랍어 지원 모델입니다. Jais(Core42/G42)는 더 크고(최대 30B) 126B 아랍어 토큰으로 아랍어-영어 이중 언어로 특별히 훈련되었습니다 — 엔터프라이즈 규모에서 아랍어 품질에 최적화되었습니다. Falcon-H1-Arabic은 TII(다른 아부다비 기관)의 7B 모델로, 더 광범위한 Falcon-H1 하이브리드 아키텍처 기반입니다 — 소비자 GPU 친화적이며 UAE AI 생태계의 일부입니다. 최고의 아랍어 품질: Jais 30B. 소비자 하드웨어: Falcon-H1-Arabic 7B.',
+            a: '둘 다 아부다비에서 시작된 아랍어 지원 모델입니다. Jais 3(MBZUAI/Inception42)는 더 새롭고 더 큰 패밀리(최대 375B MoE 플래그십까지, 온프레미스용 7B·32B 밀집 버전 포함)로, 엔터프라이즈 규모의 아랍어를 위해 특별히 훈련되었습니다. Falcon-H1-Arabic은 TII(다른 아부다비 기관)의 7B 모델로, 더 광범위한 Falcon-H1 하이브리드 아키텍처 기반입니다 — 소비자 GPU 친화적이며 UAE AI 생태계의 일부입니다. 최고의 아랍어 품질: Jais-3-32B. 소비자 하드웨어: Falcon-H1-Arabic 7B 또는 Jais-3-7B.',
           },
           {
             q: 'Qwen3는 전용 아랍어 모델만큼 아랍어를 지원합니까?',
-            a: 'Qwen3는 매우 강력한 일반 아랍어 지원(119개 언어, 선도적인 HELM Arabic 점수)을 갖추고 있습니다. 절대적으로 최고의 아랍어 품질이 필요한 순수 아랍어 엔터프라이즈 배포의 경우, 일반적으로 Jais 30B가 선호됩니다. 아랍어가 필요한 여러 언어 중 하나인 혼합 다국어 워크로드의 경우, 그 폭과 배포 용이성으로 인해 Qwen3-8B가 더 나은 선택인 경우가 많습니다.',
+            a: 'Qwen3는 매우 강력한 일반 아랍어 지원(119개 언어, 선도적인 HELM Arabic 점수)을 갖추고 있습니다. 절대적으로 최고의 아랍어 품질이 필요한 순수 아랍어 엔터프라이즈 배포의 경우, 일반적으로 Jais-3-32B가 선호됩니다. 아랍어가 필요한 여러 언어 중 하나인 혼합 다국어 워크로드의 경우, 그 폭과 배포 용이성으로 인해 Qwen3-8B가 더 나은 선택인 경우가 많습니다.',
           },
           {
             q: 'ALLaM은 무엇이며 상업적으로 사용할 수 있습니까?',
@@ -3128,7 +3143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'UAE 정부 배포에 가장 적합한 아랍어 LLM은 무엇입니까?',
-            a: 'Falcon-H1-Arabic 7B(TII, 아부다비)와 Jais 30B(Core42/G42, 아부다비)는 모두 UAE 정부 제휴 연구 기관에서 유래한 UAE 네이티브 모델입니다. 주권과 감사 가능성 측면에서 가장 부합하는 선택입니다. 둘 다 데이터가 UAE 인프라를 벗어나지 않고 온프레미스에 배포할 수 있습니다. [UAE PDPL 데이터 주권 가이드](/ko/local-llms/uae-pdpl-data-sovereignty-local-ai-2026)를 참조하십시오.',
+            a: 'Falcon-H1-Arabic 7B(TII, 아부다비)와 Jais 3(MBZUAI/Inception42, 아부다비)는 모두 UAE 정부 제휴 연구 기관에서 유래한 UAE 네이티브 모델입니다. 주권과 감사 가능성 측면에서 가장 부합하는 선택입니다. 둘 다 데이터가 UAE 인프라를 벗어나지 않고 온프레미스에 배포할 수 있습니다. [UAE PDPL 데이터 주권 가이드](/ko/local-llms/uae-pdpl-data-sovereignty-local-ai-2026)를 참조하십시오.',
           },
           {
             q: '프롬프트에서 걸프 아랍어 방언과 MSA를 어떻게 처리합니까?',
@@ -3136,11 +3151,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Jais 또는 Falcon-H1-Arabic을 자체 아랍어 데이터로 미세 조정할 수 있습니까?',
-            a: '예 — 둘 다 미세 조정을 허용하는 공개 라이선스(Jais는 Apache 2.0, Falcon-H1-Arabic은 Falcon LLM License)를 사용합니다. Unsloth 또는 PEFT 라이브러리와 같은 도구로 LoRA 또는 QLoRA 미세 조정을 사용하십시오. 도메인별 아랍어 데이터(법률, 의료, 금융)로 미세 조정하면 특화된 사용 사례의 품질이 크게 향상됩니다. PDPL 준수를 위해 미세 조정 데이터를 온프레미스에 유지하십시오.',
+            a: '예 — 둘 다 미세 조정을 허용하는 공개 라이선스(Jais는 Apache 2.0, Falcon-H1-Arabic은 Falcon LLM License)를 사용합니다. Unsloth 또는 PEFT 라이브러리와 같은 도구로 LoRA 또는 QLoRA 미세 조정을 사용하십시오. 도메인별 아랍어 데이터(법률, 의료, 금융)로 미세 조정하면 특화된 사용 사례의 품질이 크게 향상됩니다. 미세 조정 데이터를 온프레미스에 유지하면 PDPL상의 국경 간 전송 위험이 줄어듭니다 — 완전한 준수를 위해서는 조직의 법적 근거와 안전장치도 별도로 필요합니다.',
           },
           {
-            q: 'Jais 30B를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
-            a: 'Q4_K_M 양자화에서 Jais 30B는 추정 18-20 GB VRAM이 필요합니다(추정치 — 공식 벤치마크 없음). NVIDIA RTX 4090(24 GB)은 적당한 컨텍스트로 Q4에서 실행할 수 있으며; A100 40 GB은 FP16에서 편안하게 처리합니다. 프로덕션 처리량의 경우, 멀티 GPU 모드의 두 개 RTX 4090 또는 단일 A100/H100이 권장됩니다. [VRAM 계산기 가이드](/ko/local-llms/vram-calculator-local-llm)를 참조하십시오.',
+            q: 'Jais 3를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
+            a: 'Jais-3-7B는 GGUF Q4_K_M 기준 ~5.6 GB VRAM만 필요합니다 — RTX 4060(8 GB) 이상이면 충분합니다. Jais-3-32B는 Q4_K_M 기준 추정 19-20 GB VRAM이 필요합니다(파라미터 규모에 따른 추정치 — 아직 공식 벤치마크 없음). NVIDIA RTX 4090(24 GB)은 32B 버전을 적당한 컨텍스트로 Q4에서 실행할 수 있으며; A100 40 GB은 FP16에서 편안하게 처리합니다. 프로덕션 처리량의 경우, 멀티 GPU 모드의 두 개 RTX 4090 또는 단일 A100/H100이 권장됩니다. [VRAM 계산기 가이드](/ko/local-llms/vram-calculator-local-llm)를 참조하십시오.',
           },
         ],
       },
@@ -3162,8 +3177,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Technology Innovation Institute (TII) — Falcon-H1-Arabic 발표, January 5, 2026 — tii.ae',
           'Falcon-H1-Arabic Hugging Face 모델 페이지 — huggingface.co/blog/tiiuae/falcon-h1-arabic',
-          'Core42 / Cerebras — Jais 30B 보도 자료 — cerebras.ai 및 g42.ai',
-          'Jais 30B on Hugging Face — huggingface.co/inceptionai/jais-30b-v3',
+          'MBZUAI Institute of Foundation Models / Inception42 — Jais 3 출시 발표, 2026년 10월 16일 — mbzuai.ac.ae 및 wam.ae',
+          'Jais 3 on Hugging Face — huggingface.co/inception42/Jais-3-7B 및 huggingface.co/inception42/Jais-3-32B',
+          'Core42 / Cerebras — Jais 30B(이전 세대) 보도 자료 — cerebras.ai 및 g42.ai',
           'SDAIA / HUMAIN — ALLaM 34B 발표, May 2025 — humain.ai',
           'ALLaM-2-7B on Microsoft Azure AI — techcommunity.microsoft.com (September 2024)',
           'QCRI / HBKU — 기술 보고서 "Fanar 2.0: Arabic Generative AI Stack" 및 Fanar-2-27B-Instruct 모델 카드 — arxiv.org/abs/2603.16397',
@@ -3178,16 +3194,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': '최고의 아랍어 로컬 LLM: Jais, Falcon 및 아랍어 AI 온프레미스 실행 (2026)',
-      'description': 'Jais 30B와 Falcon-H1-Arabic 7B는 2026년 최고의 아랍어 로컬 LLM입니다. 온프레미스 아랍어 AI 배포를 위한 VRAM 표, 설정 가이드 및 품질 평가 벤치마크를 제공합니다.',
+      'description': 'Jais 3와 Falcon-H1-Arabic 7B는 2026년 최고의 아랍어 로컬 LLM입니다. 온프레미스 아랍어 AI 배포를 위한 VRAM 표, 설정 가이드 및 품질 평가 벤치마크를 제공합니다.',
       'url': 'https://www.promptquorum.com/ko/local-llms/best-arabic-local-llms-2026',
       'datePublished': '2026-06-14',
-      'dateModified': '2026-08-28',
+      'dateModified': '2026-11-19',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
       'inLanguage': 'ko',
       'about': [
-        { '@type': 'SoftwareApplication', 'name': 'Jais 30B' },
+        { '@type': 'SoftwareApplication', 'name': 'Jais 3' },
         { '@type': 'SoftwareApplication', 'name': 'Falcon-H1-Arabic' },
         { '@type': 'SoftwareApplication', 'name': 'Qwen3' },
         { '@type': 'Thing', 'name': 'Arabic NLP' },
@@ -3200,16 +3216,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'ko',
       'mainEntity': [
-        { '@type': 'Question', 'name': '일반 게이밍 노트북에서 아랍어 LLM을 실행할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '예, Q4 양자화의 7B 클래스 모델의 경우 가능합니다. Falcon-H1-Arabic 7B와 Qwen3-8B는 ~5-6 GB VRAM이 필요합니다 — RTX 4060(8 GB) 또는 RTX 3060(12 GB)을 갖춘 대부분의 게이밍 노트북에서 실행할 수 있습니다. Jais 30B는 고급 데스크톱 GPU(RTX 4090 24 GB) 또는 Q4 양자화의 엔터프라이즈 GPU가 필요합니다.' } },
-        { '@type': 'Question', 'name': 'Jais와 Falcon-H1-Arabic의 차이점은 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '둘 다 아부다비에서 시작된 아랍어 지원 모델입니다. Jais(Core42/G42)는 더 크고(최대 30B) 126B 아랍어 토큰으로 아랍어-영어 이중 언어로 특별히 훈련되었습니다. Falcon-H1-Arabic은 TII의 7B 모델로 Falcon-H1 하이브리드 아키텍처 기반입니다 — 소비자 GPU 친화적입니다. 최고의 아랍어 품질: Jais 30B. 소비자 하드웨어: Falcon-H1-Arabic 7B.' } },
-        { '@type': 'Question', 'name': 'Qwen3는 전용 아랍어 모델만큼 아랍어를 지원합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3는 매우 강력한 일반 아랍어 지원(119개 언어, 선도적인 HELM Arabic 점수)을 갖추고 있습니다. 절대적으로 최고의 아랍어 품질이 필요한 순수 아랍어 엔터프라이즈 배포의 경우, 일반적으로 Jais 30B가 선호됩니다. 혼합 다국어 워크로드의 경우, 그 폭과 배포 용이성으로 인해 Qwen3-8B가 더 나은 선택인 경우가 많습니다.' } },
+        { '@type': 'Question', 'name': '일반 게이밍 노트북에서 아랍어 LLM을 실행할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '예, Q4 양자화의 7B 클래스 모델의 경우 가능합니다. Falcon-H1-Arabic 7B, Jais-3-7B, Qwen3-8B는 ~5-6 GB VRAM이 필요합니다 — RTX 4060(8 GB) 또는 RTX 3060(12 GB)을 갖춘 대부분의 게이밍 노트북에서 실행할 수 있습니다. Jais-3-32B는 고급 데스크톱 GPU(RTX 4090 24 GB) 또는 Q4 양자화의 엔터프라이즈 GPU가 필요합니다.' } },
+        { '@type': 'Question', 'name': 'Jais와 Falcon-H1-Arabic의 차이점은 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '둘 다 아부다비에서 시작된 아랍어 지원 모델입니다. Jais 3(MBZUAI/Inception42)는 더 새롭고 더 큰 패밀리(최대 375B MoE 플래그십까지, 7B·32B 밀집 버전 포함)입니다. Falcon-H1-Arabic은 TII의 7B 모델로 Falcon-H1 하이브리드 아키텍처 기반입니다 — 소비자 GPU 친화적입니다. 최고의 아랍어 품질: Jais-3-32B. 소비자 하드웨어: Falcon-H1-Arabic 7B 또는 Jais-3-7B.' } },
+        { '@type': 'Question', 'name': 'Qwen3는 전용 아랍어 모델만큼 아랍어를 지원합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3는 매우 강력한 일반 아랍어 지원(119개 언어, 선도적인 HELM Arabic 점수)을 갖추고 있습니다. 절대적으로 최고의 아랍어 품질이 필요한 순수 아랍어 엔터프라이즈 배포의 경우, 일반적으로 Jais-3-32B가 선호됩니다. 혼합 다국어 워크로드의 경우, 그 폭과 배포 용이성으로 인해 Qwen3-8B가 더 나은 선택인 경우가 많습니다.' } },
         { '@type': 'Question', 'name': 'ALLaM은 무엇이며 상업적으로 사용할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ALLaM은 SDAIA(현재 HUMAIN 브랜드 산하)의 사우디 국가 아랍어 중심 LLM 제품군입니다. 공개 릴리스(Hugging Face의 7B, Azure AI의 7B)는 연구/비상업용 라이선스를 따릅니다. 상업적 사용의 경우, HUMAIN/SDAIA에 직접 문의하십시오. ALLaM 34B는 국가 HUMAIN Chat 앱을 구동하지만 공개 접근이 제한되어 있습니다.' } },
         { '@type': 'Question', 'name': '아랍어 토큰화는 모델 품질에 어떤 영향을 미칩니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '아랍어 스크립트는 문자 수준 오류를 피하기 위해 적절한 토큰화가 필요합니다. 아랍어로 네이티브 훈련된 모델(Jais, Falcon-H1-Arabic)은 아랍어 형태론에 최적화된 토크나이저를 사용합니다. 일반 다국어 모델은 아랍어를 비효율적으로 토큰화할 수 있어 복잡한 아랍어 텍스트에서 품질 저하를 초래합니다. 프로덕션 전에 실제 입력 데이터로 테스트하십시오.' } },
         { '@type': 'Question', 'name': '아랍어 로컬 LLM이 오른쪽에서 왼쪽(RTL) 문서를 처리할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '모델은 올바른 오른쪽에서 왼쪽 방향으로 아랍어 텍스트를 생성합니다 — 모델은 유니코드로 적절한 RTL 아랍어를 생성합니다. 애플리케이션 인터페이스가 RTL 렌더링(HTML dir="rtl", CSS direction:rtl)을 처리해야 합니다. llama.cpp, Ollama, vLLM은 유니코드 아랍어 텍스트를 올바르게 반환하며; 방향은 UI 레이어가 처리합니다.' } },
-        { '@type': 'Question', 'name': 'UAE 정부 배포에 가장 적합한 아랍어 LLM은 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B(TII, 아부다비)와 Jais 30B(Core42/G42, 아부다비)는 모두 UAE 정부 제휴 연구 기관에서 유래한 UAE 네이티브 모델입니다. 주권과 감사 가능성 측면에서 가장 부합하는 선택입니다. 둘 다 데이터가 UAE 인프라를 벗어나지 않고 온프레미스에 배포할 수 있습니다.' } },
+        { '@type': 'Question', 'name': 'UAE 정부 배포에 가장 적합한 아랍어 LLM은 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Falcon-H1-Arabic 7B(TII, 아부다비)와 Jais 3(MBZUAI/Inception42, 아부다비)는 모두 UAE 정부 제휴 연구 기관에서 유래한 UAE 네이티브 모델입니다. 주권과 감사 가능성 측면에서 가장 부합하는 선택입니다. 둘 다 데이터가 UAE 인프라를 벗어나지 않고 온프레미스에 배포할 수 있습니다.' } },
         { '@type': 'Question', 'name': '프롬프트에서 걸프 아랍어 방언과 MSA를 어떻게 처리합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '기본 시스템 프롬프트: 현대 표준 아랍어로 답하세요. 걸프 아랍어(에미리트, 사우디, 쿠웨이트)의 경우, 시스템 프롬프트에 예시 방언 구문을 추가하거나 도메인 데이터로 미세 조정하십시오. 나열된 모든 모델이 MSA를 잘 처리합니다; 방언 품질은 다양합니다. 프로덕션 품질을 가정하기 전에 5-10개의 예시 방언 쿼리로 테스트하십시오.' } },
-        { '@type': 'Question', 'name': 'Jais 또는 Falcon-H1-Arabic을 자체 아랍어 데이터로 미세 조정할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '예 — 둘 다 미세 조정을 허용하는 공개 라이선스(Jais는 Apache 2.0, Falcon-H1-Arabic은 Falcon LLM License)를 사용합니다. Unsloth 또는 PEFT 라이브러리와 같은 도구로 LoRA 또는 QLoRA를 사용하십시오. 도메인별 아랍어 데이터로 미세 조정하면 품질이 크게 향상됩니다. PDPL 준수를 위해 미세 조정 데이터를 온프레미스에 유지하십시오.' } },
-        { '@type': 'Question', 'name': 'Jais 30B를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M 양자화에서 Jais 30B는 추정 18-20 GB VRAM이 필요합니다(공식 벤치마크 없음). RTX 4090(24 GB)은 적당한 컨텍스트로 Q4에서 실행할 수 있으며; A100 40 GB은 FP16에서 편안하게 처리합니다. 프로덕션 처리량의 경우, 멀티 GPU 모드의 두 개 RTX 4090 또는 단일 A100/H100이 권장됩니다.' } },
+        { '@type': 'Question', 'name': 'Jais 또는 Falcon-H1-Arabic을 자체 아랍어 데이터로 미세 조정할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '예 — 둘 다 미세 조정을 허용하는 공개 라이선스(Jais는 Apache 2.0, Falcon-H1-Arabic은 Falcon LLM License)를 사용합니다. Unsloth 또는 PEFT 라이브러리와 같은 도구로 LoRA 또는 QLoRA를 사용하십시오. 도메인별 아랍어 데이터로 미세 조정하면 품질이 크게 향상됩니다. 미세 조정 데이터를 온프레미스에 유지하면 PDPL상의 국경 간 전송 위험이 줄어듭니다 — 완전한 준수를 위해서는 조직의 법적 근거와 안전장치도 별도로 필요합니다.' } },
+        { '@type': 'Question', 'name': 'Jais 3를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Jais-3-7B는 GGUF Q4_K_M 기준 ~5.6 GB VRAM만 필요합니다. Jais-3-32B는 Q4_K_M 기준 추정 19-20 GB VRAM이 필요합니다(추정치, 공식 벤치마크 없음). RTX 4090(24 GB)은 32B 버전을 적당한 컨텍스트로 Q4에서 실행할 수 있으며; A100 40 GB은 FP16에서 편안하게 처리합니다. 프로덕션 처리량의 경우, 멀티 GPU 모드의 두 개 RTX 4090 또는 단일 A100/H100이 권장됩니다.' } },
       ],
     },
     itemListSchema: {
@@ -3218,7 +3234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'name': 'Best Arabic Local LLMs 2026',
       'numberOfItems': 7,
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 30B', 'description': '최고의 아랍어 네이티브 로컬 LLM. 126B 아랍어 훈련 토큰, Apache 2.0, Core42/G42 아부다비.' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Jais 3', 'description': '최고의 아랍어 네이티브 로컬 LLM, 최신 세대 (2026년 10월). 0.9B부터 375B까지의 라인업, Apache 2.0, MBZUAI/Inception42 아부다비.' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Falcon-H1-Arabic 7B', 'description': '소비자 하드웨어에 최적. TII 아부다비. Q4_K_M ~5 GB VRAM. Falcon LLM License.' },
         { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3-8B', 'description': '강력한 아랍어를 갖춘 최고의 다국어 옵션. HELM Arabic 최고 성능. Apache 2.0.' },
         { '@type': 'ListItem', 'position': 4, 'name': 'ALLaM 34B', 'description': '사우디 국가 아랍어 모델(HUMAIN/SDAIA). HUMAIN Chat 구동. 연구 라이선스.' },
