@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     last_full_refresh: '2026-08-31',
-    current_models_mentioned: ['GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
+    current_models_mentioned: ['GPT-6.2 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
     toc: [
       { label: 'Problems Each Tool Solves', anchor: '#which-problem-each-tool-solves' },
       { label: 'Instructor: Pydantic Extraction', anchor: '#instructor' },
@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor: Pydantic Extraction',
-        content: '**Instructor is a widely used structured output library. It wraps any LLM API — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — and returns validated Pydantic models instead of raw text.** Instructor retries automatically when validation fails; you still need to handle the case where retries are exhausted.',
+        content: '**Instructor is a widely used structured output library. It wraps any LLM API — OpenAI GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — and returns validated Pydantic models instead of raw text.** Instructor retries automatically when validation fails; you still need to handle the case where retries are exhausted.',
         items: [
           'Works with every major provider (OpenAI, Anthropic, Google, Groq, Mistral) and local models via Ollama or vLLM',
           'Pydantic v2 schemas: type hints, validation rules, docstring descriptions embedded in schema',
@@ -217,7 +217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: Cross-Model Testing',
-        content: '**PromptQuorum is our own product, and it is not a structured output library itself, but a testing platform for validating structured output consistency across models.** Run the same prompt against GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, and many other models simultaneously. Measure schema compliance, latency, and cost per model.',
+        content: '**PromptQuorum is our own product, and it is not a structured output library itself, but a testing platform for validating structured output consistency across models.** Run the same prompt against GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon, and many other models simultaneously. Measure schema compliance, latency, and cost per model.',
         items: [
           'Multi-model dispatch in a single API call — test one prompt against many models',
           'Structured output compliance metrics — pass rate, latency, cost per model',
@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Not testing local vs. API model differences',
-            problem: 'Outlines on llama.cpp behaves differently than Instructor on GPT-6 Astra. Schema compliance rates differ per model. Building only for a frontier API model, then deploying to a small local one, causes production failures.',
+            problem: 'Outlines on llama.cpp behaves differently than Instructor on GPT-6.2 Astra. Schema compliance rates differ per model. Building only for a frontier API model, then deploying to a small local one, causes production failures.',
             fix: 'Test all intended model backends early. Use PromptQuorum (our own product) to run the same prompt across local (vLLM, Ollama) and hosted (OpenAI, Anthropic, Google) models.'
           },
           {
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'How do I test if structured output is reliable?',
-            a: 'Use PromptQuorum (our own product) to run the same prompt across multiple models and measure schema compliance. Different models — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — have different structured output reliability, and small local models differ more again. Test before deploying to production, and unit test with Instructor or Pydantic validation locally.'
+            a: 'Use PromptQuorum (our own product) to run the same prompt across multiple models and measure schema compliance. Different models — GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon — have different structured output reliability, and small local models differ more again. Test before deploying to production, and unit test with Instructor or Pydantic validation locally.'
           },
           {
             q: 'What does "constrained decoding" mean?',
@@ -401,7 +401,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     last_full_refresh: '2026-08-31',
-    current_models_mentioned: ['GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
+    current_models_mentioned: ['GPT-6.2 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
     toc: [
       { label: 'Probleme, die jedes Tool löst', anchor: '#which-problem-each-tool-solves' },
       { label: 'Instructor: Pydantic-Extraktion', anchor: '#instructor' },
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor: Pydantic-Extraktion',
-        content: '**Instructor ist eine weit verbreitete Structured Output-Bibliothek. Sie umhüllt jede LLM-API — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — und gibt validierte Pydantic-Modelle statt Rohtext zurück.** Instructor wiederholt den Aufruf bei Validierungsfehlern automatisch; den Fall ausgeschöpfter Wiederholungen müssen Sie weiterhin selbst behandeln.',
+        content: '**Instructor ist eine weit verbreitete Structured Output-Bibliothek. Sie umhüllt jede LLM-API — OpenAI GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — und gibt validierte Pydantic-Modelle statt Rohtext zurück.** Instructor wiederholt den Aufruf bei Validierungsfehlern automatisch; den Fall ausgeschöpfter Wiederholungen müssen Sie weiterhin selbst behandeln.',
         items: [
           'Funktioniert mit allen großen Providern (OpenAI, Anthropic, Google, Groq, Mistral) und lokalen Modellen via Ollama oder vLLM',
           'Pydantic v2 Schemas: Typ-Hinweise, Validierungsregeln, Docstring-Beschreibungen im Schema',
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: Modellübergreifende Tests',
-        content: '**PromptQuorum ist unser eigenes Produkt und keine Structured Output-Bibliothek selbst, sondern eine Testplattform zur Validierung der Structured Output-Konsistenz über Modelle hinweg.** Führen Sie denselben Prompt gleichzeitig gegen GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon und viele weitere Modelle aus. Messen Sie Schema-Konformität, Latenz und Kosten pro Modell.',
+        content: '**PromptQuorum ist unser eigenes Produkt und keine Structured Output-Bibliothek selbst, sondern eine Testplattform zur Validierung der Structured Output-Konsistenz über Modelle hinweg.** Führen Sie denselben Prompt gleichzeitig gegen GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon und viele weitere Modelle aus. Messen Sie Schema-Konformität, Latenz und Kosten pro Modell.',
         items: [
           'Multi-Modell-Dispatch in einem einzigen API-Aufruf — einen Prompt gegen viele Modelle testen',
           'Structured Output-Konformitätsmetriken — Erfolgsrate, Latenz, Kosten pro Modell',
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Unterschiede zwischen lokalen und API-Modellen nicht testen',
-            problem: 'Outlines auf llama.cpp verhält sich anders als Instructor auf GPT-6 Astra. Schema-Konformitätsraten variieren je nach Modell. Nur für ein Frontier-API-Modell bauen und dann auf ein kleines lokales Modell ausrollen, führt zu Produktionsfehlern.',
+            problem: 'Outlines auf llama.cpp verhält sich anders als Instructor auf GPT-6.2 Astra. Schema-Konformitätsraten variieren je nach Modell. Nur für ein Frontier-API-Modell bauen und dann auf ein kleines lokales Modell ausrollen, führt zu Produktionsfehlern.',
             fix: 'Alle beabsichtigten Modell-Backends früh testen. PromptQuorum (unser eigenes Produkt) verwenden, um denselben Prompt über lokale (vLLM, Ollama) und gehostete Modelle (OpenAI, Anthropic, Google) auszuführen.'
           },
           {
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Wie teste ich, ob Structured Output zuverlässig ist?',
-            a: 'Verwenden Sie PromptQuorum (unser eigenes Produkt), um denselben Prompt über mehrere Modelle hinweg auszuführen und die Schema-Konformität zu messen. Verschiedene Modelle — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — haben unterschiedliche Zuverlässigkeit, und kleine lokale Modelle unterscheiden sich noch stärker. Testen Sie vor der Bereitstellung in der Produktion und validieren Sie lokal mit Instructor oder Pydantic.'
+            a: 'Verwenden Sie PromptQuorum (unser eigenes Produkt), um denselben Prompt über mehrere Modelle hinweg auszuführen und die Schema-Konformität zu messen. Verschiedene Modelle — GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon — haben unterschiedliche Zuverlässigkeit, und kleine lokale Modelle unterscheiden sich noch stärker. Testen Sie vor der Bereitstellung in der Produktion und validieren Sie lokal mit Instructor oder Pydantic.'
           },
           {
             q: 'Was bedeutet "Constrained Decoding"?',
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     last_full_refresh: '2026-08-31',
-    current_models_mentioned: ['GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
+    current_models_mentioned: ['GPT-6.2 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
     toc: [
       { label: 'Problemas que resuelve cada herramienta', anchor: '#which-problem-each-tool-solves' },
       { label: 'Instructor: extracción Pydantic', anchor: '#instructor' },
@@ -903,7 +903,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor: extracción Pydantic',
-        content: '**Instructor es una biblioteca de structured output muy utilizada. Envuelve cualquier API LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — y devuelve modelos Pydantic validados en lugar de texto sin formato.** Instructor reintenta automáticamente cuando falla la validación; aun así debes gestionar el caso en que se agoten los reintentos.',
+        content: '**Instructor es una biblioteca de structured output muy utilizada. Envuelve cualquier API LLM — OpenAI GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — y devuelve modelos Pydantic validados en lugar de texto sin formato.** Instructor reintenta automáticamente cuando falla la validación; aun así debes gestionar el caso en que se agoten los reintentos.',
         items: [
           'Funciona con todos los proveedores principales (OpenAI, Anthropic, Google, Groq, Mistral) y modelos locales vía Ollama o vLLM',
           'Esquemas Pydantic v2: hints de tipo, reglas de validación, descripciones de docstring integradas en el esquema',
@@ -984,7 +984,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: testing multi-modelo',
-        content: '**PromptQuorum es un producto propio y no es una biblioteca de structured output en sí misma, sino una plataforma de testing para validar la consistencia del structured output entre modelos.** Ejecuta el mismo prompt simultáneamente contra GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon y muchos modelos más. Mide el cumplimiento del esquema, la latencia y el coste por modelo.',
+        content: '**PromptQuorum es un producto propio y no es una biblioteca de structured output en sí misma, sino una plataforma de testing para validar la consistencia del structured output entre modelos.** Ejecuta el mismo prompt simultáneamente contra GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon y muchos modelos más. Mide el cumplimiento del esquema, la latencia y el coste por modelo.',
         items: [
           'Despacho multi-modelo en una sola llamada API — testea un prompt contra muchos modelos',
           'Métricas de cumplimiento de structured output — tasa de paso, latencia, coste por modelo',
@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'No testear diferencias entre modelos locales y de API',
-            problem: 'Outlines en llama.cpp se comporta de forma diferente que Instructor en GPT-6 Astra. Las tasas de cumplimiento del esquema difieren por modelo. Construir solo para un modelo frontera de API y luego desplegar en uno local pequeño causa fallos en producción.',
+            problem: 'Outlines en llama.cpp se comporta de forma diferente que Instructor en GPT-6.2 Astra. Las tasas de cumplimiento del esquema difieren por modelo. Construir solo para un modelo frontera de API y luego desplegar en uno local pequeño causa fallos en producción.',
             fix: 'Testea todos los backends de modelos previstos pronto. Usa PromptQuorum (nuestro propio producto) para ejecutar el mismo prompt en modelos locales (vLLM, Ollama) y alojados (OpenAI, Anthropic, Google).'
           },
           {
@@ -1107,7 +1107,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '¿Cómo testo si el structured output es fiable?',
-            a: 'Usa PromptQuorum (nuestro propio producto) para ejecutar el mismo prompt en múltiples modelos y medir el cumplimiento del esquema. Diferentes modelos — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — tienen distintos niveles de fiabilidad, y los modelos locales pequeños difieren aún más. Testea antes de desplegar en producción y valida localmente con Instructor o Pydantic.'
+            a: 'Usa PromptQuorum (nuestro propio producto) para ejecutar el mismo prompt en múltiples modelos y medir el cumplimiento del esquema. Diferentes modelos — GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon — tienen distintos niveles de fiabilidad, y los modelos locales pequeños difieren aún más. Testea antes de desplegar en producción y valida localmente con Instructor o Pydantic.'
           },
           {
             q: '¿Qué significa "constrained decoding"?',
@@ -1169,7 +1169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     last_full_refresh: '2026-08-31',
-    current_models_mentioned: ['GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
+    current_models_mentioned: ['GPT-6.2 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
     toc: [
       { label: 'Problemas que cada ferramenta resolve', anchor: '#which-problem-each-tool-solves' },
       { label: 'Instructor: extração Pydantic', anchor: '#instructor' },
@@ -1277,7 +1277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor: extração Pydantic',
-        content: '**Instructor é uma biblioteca de structured output muito usada. Envolve qualquer API LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — e retorna modelos Pydantic validados em vez de texto simples.** Instructor refaz a tentativa automaticamente quando a validação falha; você ainda precisa tratar o caso em que as tentativas se esgotam.',
+        content: '**Instructor é uma biblioteca de structured output muito usada. Envolve qualquer API LLM — OpenAI GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — e retorna modelos Pydantic validados em vez de texto simples.** Instructor refaz a tentativa automaticamente quando a validação falha; você ainda precisa tratar o caso em que as tentativas se esgotam.',
         items: [
           'Funciona com todos os principais provedores (OpenAI, Anthropic, Google, Groq, Mistral) e modelos locais via Ollama ou vLLM',
           'Esquemas Pydantic v2: type hints, regras de validação, descrições de docstring integradas no esquema',
@@ -1358,7 +1358,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: testes multi-modelo',
-        content: '**PromptQuorum é um produto nosso e não é uma biblioteca de structured output em si, mas uma plataforma de testes para validar a consistência do structured output entre modelos.** Execute o mesmo prompt simultaneamente contra GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon e muitos outros modelos. Meça a conformidade do esquema, a latência e o custo por modelo.',
+        content: '**PromptQuorum é um produto nosso e não é uma biblioteca de structured output em si, mas uma plataforma de testes para validar a consistência do structured output entre modelos.** Execute o mesmo prompt simultaneamente contra GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon e muitos outros modelos. Meça a conformidade do esquema, a latência e o custo por modelo.',
         items: [
           'Despacho multi-modelo em uma única chamada de API — teste um prompt contra muitos modelos',
           'Métricas de conformidade de structured output — taxa de aprovação, latência, custo por modelo',
@@ -1423,7 +1423,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Não testar diferenças entre modelos locais e de API',
-            problem: 'Outlines no llama.cpp se comporta de forma diferente do Instructor no GPT-6 Astra. As taxas de conformidade do esquema diferem por modelo. Construir apenas para um modelo de fronteira via API e depois implantar em um modelo local pequeno causa falhas em produção.',
+            problem: 'Outlines no llama.cpp se comporta de forma diferente do Instructor no GPT-6.2 Astra. As taxas de conformidade do esquema diferem por modelo. Construir apenas para um modelo de fronteira via API e depois implantar em um modelo local pequeno causa falhas em produção.',
             fix: 'Teste todos os backends de modelos previstos cedo. Use PromptQuorum (nosso próprio produto) para executar o mesmo prompt em modelos locais (vLLM, Ollama) e hospedados (OpenAI, Anthropic, Google).'
           },
           {
@@ -1481,7 +1481,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Como testo se o structured output é confiável?',
-            a: 'Use PromptQuorum (nosso próprio produto) para executar o mesmo prompt em múltiplos modelos e medir a conformidade do esquema. Diferentes modelos — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — têm níveis diferentes de confiabilidade, e modelos locais pequenos variam ainda mais. Teste antes de implantar em produção e valide localmente com Instructor ou Pydantic.'
+            a: 'Use PromptQuorum (nosso próprio produto) para executar o mesmo prompt em múltiplos modelos e medir a conformidade do esquema. Diferentes modelos — GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon — têm níveis diferentes de confiabilidade, e modelos locais pequenos variam ainda mais. Teste antes de implantar em produção e valide localmente com Instructor ou Pydantic.'
           },
           {
             q: 'O que significa "constrained decoding"?',
@@ -1543,7 +1543,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     last_full_refresh: '2026-08-31',
-    current_models_mentioned: ['GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
+    current_models_mentioned: ['GPT-6.2 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
     toc: [
       { label: 'Problèmes résolus par chaque outil', anchor: '#which-problem-each-tool-solves' },
       { label: 'Instructor : extraction Pydantic', anchor: '#instructor' },
@@ -1652,7 +1652,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor : extraction Pydantic',
-        content: '**Instructor est une bibliothèque de Structured Output très utilisée. Elle enveloppe toute API LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — et retourne des modèles Pydantic validés plutôt que du texte brut.** Instructor réessaie automatiquement en cas d\'échec de validation ; vous devez tout de même gérer le cas où les tentatives sont épuisées.',
+        content: '**Instructor est une bibliothèque de Structured Output très utilisée. Elle enveloppe toute API LLM — OpenAI GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — et retourne des modèles Pydantic validés plutôt que du texte brut.** Instructor réessaie automatiquement en cas d\'échec de validation ; vous devez tout de même gérer le cas où les tentatives sont épuisées.',
         items: [
           'Fonctionne avec tous les grands fournisseurs (OpenAI, Anthropic, Google, Groq, Mistral) et les modèles locaux via Ollama ou vLLM',
           'Schémas Pydantic v2 : indices de type, règles de validation, descriptions docstring intégrées au schéma',
@@ -1733,7 +1733,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum : tests multi-modèles',
-        content: '**PromptQuorum est notre propre produit et n\'est pas une bibliothèque de Structured Output en soi, mais une plateforme de test pour valider la cohérence du Structured Output entre les modèles.** Exécutez le même prompt simultanément contre GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon et de nombreux autres modèles. Mesurez la conformité du schéma, la latence et le coût par modèle.',
+        content: '**PromptQuorum est notre propre produit et n\'est pas une bibliothèque de Structured Output en soi, mais une plateforme de test pour valider la cohérence du Structured Output entre les modèles.** Exécutez le même prompt simultanément contre GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon et de nombreux autres modèles. Mesurez la conformité du schéma, la latence et le coût par modèle.',
         items: [
           'Dispatch multi-modèles en un seul appel API — tester un prompt contre de nombreux modèles',
           'Métriques de conformité Structured Output — taux de réussite, latence, coût par modèle',
@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Ne pas tester les différences entre modèles locaux et API',
-            problem: 'Outlines sur llama.cpp se comporte différemment qu\'Instructor sur GPT-6 Astra. Les taux de conformité varient selon le modèle. Construire seulement pour un modèle d\'API de pointe puis déployer sur un petit modèle local cause des échecs en production.',
+            problem: 'Outlines sur llama.cpp se comporte différemment qu\'Instructor sur GPT-6.2 Astra. Les taux de conformité varient selon le modèle. Construire seulement pour un modèle d\'API de pointe puis déployer sur un petit modèle local cause des échecs en production.',
             fix: 'Tester tous les backends de modèles prévus tôt. Utiliser PromptQuorum (notre propre produit) pour exécuter le même prompt sur des modèles locaux (vLLM, Ollama) et hébergés (OpenAI, Anthropic, Google).'
           },
           {
@@ -1868,7 +1868,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Comment tester si Structured Output est fiable ?',
-            a: 'Utilisez PromptQuorum (notre propre produit) pour exécuter le même prompt sur plusieurs modèles et mesurer la conformité du schéma. Les modèles diffèrent — GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon — et les petits modèles locaux davantage encore. Testez avant de déployer en production et validez localement avec Instructor ou Pydantic.'
+            a: 'Utilisez PromptQuorum (notre propre produit) pour exécuter le même prompt sur plusieurs modèles et mesurer la conformité du schéma. Les modèles diffèrent — GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon — et les petits modèles locaux davantage encore. Testez avant de déployer en production et validez localement avec Instructor ou Pydantic.'
           },
           {
             q: 'Qu\'entend-on par "décodage contraint" ?',
@@ -1929,7 +1929,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     last_full_refresh: '2026-08-31',
-    current_models_mentioned: ['GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
+    current_models_mentioned: ['GPT-6.2 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
     toc: [
       { label: '各ツールが解決する問題', anchor: '#which-problem-each-tool-solves' },
       { label: 'Instructor：Pydantic抽出', anchor: '#instructor' },
@@ -2042,7 +2042,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor：Pydantic抽出',
-        content: '**InstructorはStructured Outputライブラリとして広く使われています。あらゆるLLM API — OpenAI GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon、Ollama、vLLM — をラップし、生テキストではなく検証済みPydanticモデルを返します。** Instructorはバリデーション失敗時に自動でリトライしますが、リトライを使い切った場合の処理は別途必要です。',
+        content: '**InstructorはStructured Outputライブラリとして広く使われています。あらゆるLLM API — OpenAI GPT-6.2 Astra、Claude Opus 5.5、Gemini 4 Argon、Ollama、vLLM — をラップし、生テキストではなく検証済みPydanticモデルを返します。** Instructorはバリデーション失敗時に自動でリトライしますが、リトライを使い切った場合の処理は別途必要です。',
         items: [
           '主要Providerすべてに対応（OpenAI、Anthropic、Google、Groq、Mistral）、OllamaやvLLM経由のローカルモデルにも対応',
           'Pydantic v2スキーマ：型ヒント、バリデーションルール、スキーマに埋め込まれたdocstring説明',
@@ -2123,7 +2123,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum：クロスモデルテスト',
-        content: '**PromptQuorumは当社の製品であり、それ自体はStructured Outputライブラリではなく、モデル間のStructured Output一貫性を検証するためのテストプラットフォームです。** GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon、多数の他のモデルに対して同じプロンプトを同時に実行します。モデルごとのスキーマ準拠率、レイテンシ、コストを測定します。',
+        content: '**PromptQuorumは当社の製品であり、それ自体はStructured Outputライブラリではなく、モデル間のStructured Output一貫性を検証するためのテストプラットフォームです。** GPT-6.2 Astra、Claude Opus 5.5、Gemini 4 Argon、多数の他のモデルに対して同じプロンプトを同時に実行します。モデルごとのスキーマ準拠率、レイテンシ、コストを測定します。',
         items: [
           '単一API呼び出しでマルチモデルディスパッチ — 多数のモデルに対してプロンプトをテスト',
           'Structured Output準拠メトリクス — 合格率、レイテンシ、モデルごとのコスト',
@@ -2188,7 +2188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'ローカルとAPIモデルの違いをテストしない',
-            problem: 'llama.cpp上のOutlinesはGPT-6 Astra上のInstructorとは異なる動作をします。スキーマ準拠率はモデルによって異なります。フロンティアのAPIモデルだけで構築してから小さなローカルモデルにデプロイすると、本番障害が発生します。',
+            problem: 'llama.cpp上のOutlinesはGPT-6.2 Astra上のInstructorとは異なる動作をします。スキーマ準拠率はモデルによって異なります。フロンティアのAPIモデルだけで構築してから小さなローカルモデルにデプロイすると、本番障害が発生します。',
             fix: 'すべての予定モデルバックエンドを早期にテストします。PromptQuorum（当社の製品）を使用して、ローカル（vLLM、Ollama）とホスト型（OpenAI、Anthropic、Google）のモデルで同じプロンプトを実行します。'
           },
           {
@@ -2258,7 +2258,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Structured Outputが信頼性を高いかテストするにはどうすればよいですか？',
-            a: 'PromptQuorum（当社の製品）を使用して、複数のモデルで同じプロンプトを実行し、スキーマ準拠を測定します。GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argonといったモデルごとに信頼性は異なり、小さなローカルモデルではさらに差が開きます。本番デプロイ前にテストし、ローカルではInstructorやPydanticで検証してください。'
+            a: 'PromptQuorum（当社の製品）を使用して、複数のモデルで同じプロンプトを実行し、スキーマ準拠を測定します。GPT-6.2 Astra、Claude Opus 5.5、Gemini 4 Argonといったモデルごとに信頼性は異なり、小さなローカルモデルではさらに差が開きます。本番デプロイ前にテストし、ローカルではInstructorやPydanticで検証してください。'
           },
           {
             q: '「Constrained Decoding」とはどういう意味ですか？',
@@ -2327,7 +2327,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     last_full_refresh: '2026-08-31',
-    current_models_mentioned: ['GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
+    current_models_mentioned: ['GPT-6.2 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
     toc: [
       { label: '各工具解决的问题', anchor: '#which-problem-each-tool-solves' },
       { label: 'Instructor：Pydantic提取', anchor: '#instructor' },
@@ -2440,7 +2440,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor：Pydantic提取',
-        content: '**Instructor是一个被广泛使用的结构化输出库。它封装任何LLM API — OpenAI GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon、Ollama、vLLM — 并返回经验证的Pydantic模型而非原始文本。** Instructor在验证失败时会自动重试；重试次数用尽的情况仍需自行处理。',
+        content: '**Instructor是一个被广泛使用的结构化输出库。它封装任何LLM API — OpenAI GPT-6.2 Astra、Claude Opus 5.5、Gemini 4 Argon、Ollama、vLLM — 并返回经验证的Pydantic模型而非原始文本。** Instructor在验证失败时会自动重试；重试次数用尽的情况仍需自行处理。',
         items: [
           '支持所有主流Provider（OpenAI、Anthropic、Google、Groq、Mistral）以及通过Ollama或vLLM运行的本地模型',
           'Pydantic v2模式：类型提示、验证规则、嵌入模式的docstring描述',
@@ -2521,7 +2521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum：跨模型测试',
-        content: '**PromptQuorum是我们自己的产品，本身不是结构化输出库，而是用于验证跨模型结构化输出一致性的测试平台。** 同时对GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon和许多其他模型运行相同的Prompt。测量每个模型的模式合规性、延迟和成本。',
+        content: '**PromptQuorum是我们自己的产品，本身不是结构化输出库，而是用于验证跨模型结构化输出一致性的测试平台。** 同时对GPT-6.2 Astra、Claude Opus 5.5、Gemini 4 Argon和许多其他模型运行相同的Prompt。测量每个模型的模式合规性、延迟和成本。',
         items: [
           '单次API调用中的多模型分发 — 对多个模型测试一个Prompt',
           '结构化输出合规性指标 — 通过率、延迟、每个模型的成本',
@@ -2586,7 +2586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: '不测试本地和API模型之间的差异',
-            problem: 'llama.cpp上的Outlines与GPT-6 Astra上的Instructor行为不同。模式合规率因模型而异。只为前沿API模型构建，然后部署到小型本地模型，会导致生产失败。',
+            problem: 'llama.cpp上的Outlines与GPT-6.2 Astra上的Instructor行为不同。模式合规率因模型而异。只为前沿API模型构建，然后部署到小型本地模型，会导致生产失败。',
             fix: '尽早测试所有预期的模型后端。使用PromptQuorum（我们自己的产品）在本地（vLLM、Ollama）和托管（OpenAI、Anthropic、Google）模型上运行相同的Prompt。'
           },
           {
@@ -2657,7 +2657,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '如何测试结构化输出的可靠性？',
-            a: '使用PromptQuorum（我们自己的产品）在多个模型上运行相同的Prompt并测量模式合规性。GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argon等模型的可靠性各不相同，小型本地模型差异更大。在部署到生产前进行测试，并在本地用Instructor或Pydantic做验证。'
+            a: '使用PromptQuorum（我们自己的产品）在多个模型上运行相同的Prompt并测量模式合规性。GPT-6.2 Astra、Claude Opus 5.5、Gemini 4 Argon等模型的可靠性各不相同，小型本地模型差异更大。在部署到生产前进行测试，并在本地用Instructor或Pydantic做验证。'
           },
           {
             q: '"约束解码"是什么意思？',
@@ -2727,7 +2727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     last_full_refresh: '2026-08-31',
-    current_models_mentioned: ['GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
+    current_models_mentioned: ['GPT-6.2 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
     toc: [
       { label: 'المشكلة التي تحلها كل أداة', anchor: '#which-problem-each-tool-solves' },
       { label: 'Instructor: استخراج Pydantic', anchor: '#instructor' },
@@ -2835,7 +2835,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor: استخراج Pydantic',
-        content: '**Instructor مكتبة واسعة الاستخدام لـ structured output. تغلف أي API للـ LLM — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — وتُعيد نماذج Pydantic محققة بدلاً من نص خام.** يعيد Instructor المحاولة تلقائياً عند فشل التحقق؛ ولا تزال بحاجة إلى معالجة حالة استنفاد المحاولات.',
+        content: '**Instructor مكتبة واسعة الاستخدام لـ structured output. تغلف أي API للـ LLM — OpenAI GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — وتُعيد نماذج Pydantic محققة بدلاً من نص خام.** يعيد Instructor المحاولة تلقائياً عند فشل التحقق؛ ولا تزال بحاجة إلى معالجة حالة استنفاد المحاولات.',
         items: [
           'يعمل مع كل المزودين الكبار (OpenAI, Anthropic, Google, Groq, Mistral) والنماذج المحلية عبر Ollama أو vLLM',
           'مخططات Pydantic v2: تلميحات الأنواع وقواعد التحقق وأوصاف docstring مدمجة في المخطط',
@@ -2916,7 +2916,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: اختبار متعدد النماذج',
-        content: '**PromptQuorum منتج خاص بنا وليست مكتبة structured output بذاتها، بل منصة اختبار للتحقق من اتساق structured output عبر النماذج.** تشغّل نفس الـ prompt في وقت واحد مقابل GPT-6 Astra و Claude Opus 5.5 و Gemini 4 Argon ونماذج أخرى عديدة. تقيس الامتثال للمخطط والكمون والتكلفة لكل نموذج.',
+        content: '**PromptQuorum منتج خاص بنا وليست مكتبة structured output بذاتها، بل منصة اختبار للتحقق من اتساق structured output عبر النماذج.** تشغّل نفس الـ prompt في وقت واحد مقابل GPT-6.2 Astra و Claude Opus 5.5 و Gemini 4 Argon ونماذج أخرى عديدة. تقيس الامتثال للمخطط والكمون والتكلفة لكل نموذج.',
         items: [
           'إرسال متعدد النماذج في نداء API واحد — اختبر prompt مقابل نماذج عديدة',
           'مقاييس امتثال structured output — معدل النجاح والكمون والتكلفة لكل نموذج',
@@ -2981,7 +2981,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'عدم اختبار الفروق بين النماذج المحلية ونماذج API',
-            problem: 'Outlines على llama.cpp يتصرف بشكل مختلف عن Instructor على GPT-6 Astra. تختلف معدلات الامتثال للمخطط بحسب النموذج. البناء لنموذج API متقدم فقط ثم النشر على نموذج محلي صغير يسبب إخفاقات في الإنتاج.',
+            problem: 'Outlines على llama.cpp يتصرف بشكل مختلف عن Instructor على GPT-6.2 Astra. تختلف معدلات الامتثال للمخطط بحسب النموذج. البناء لنموذج API متقدم فقط ثم النشر على نموذج محلي صغير يسبب إخفاقات في الإنتاج.',
             fix: 'اختبر جميع backends النماذج المخطط لها مبكراً. استخدم PromptQuorum (منتجنا الخاص) لتشغيل نفس الـ prompt على نماذج محلية (vLLM, Ollama) ومستضافة (OpenAI, Anthropic, Google).'
           },
           {
@@ -3039,7 +3039,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'كيف أختبر موثوقية structured output؟',
-            a: 'استخدم PromptQuorum (منتجنا الخاص) لتشغيل نفس الـ prompt عبر نماذج متعددة وقياس الامتثال للمخطط. تتفاوت الموثوقية بين GPT-6 Astra و Claude Opus 5.5 و Gemini 4 Argon، وتتفاوت أكثر مع النماذج المحلية الصغيرة. اختبر قبل النشر في الإنتاج، وتحقق محلياً باستخدام Instructor أو Pydantic.'
+            a: 'استخدم PromptQuorum (منتجنا الخاص) لتشغيل نفس الـ prompt عبر نماذج متعددة وقياس الامتثال للمخطط. تتفاوت الموثوقية بين GPT-6.2 Astra و Claude Opus 5.5 و Gemini 4 Argon، وتتفاوت أكثر مع النماذج المحلية الصغيرة. اختبر قبل النشر في الإنتاج، وتحقق محلياً باستخدام Instructor أو Pydantic.'
           },
           {
             q: 'ماذا يعني "constrained decoding"؟',
@@ -3100,7 +3100,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     last_full_refresh: '2026-08-31',
-    current_models_mentioned: ['GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
+    current_models_mentioned: ['GPT-6.2 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon'],
     toc: [
       { label: '각 도구가 해결하는 문제', anchor: '#which-problem-each-tool-solves' },
       { label: 'Instructor: Pydantic 추출', anchor: '#instructor' },
@@ -3208,7 +3208,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       instructor: {
         id: 'instructor',
         title: 'Instructor: Pydantic 추출',
-        content: '**Instructor는 널리 쓰이는 structured output 라이브러리입니다. 모든 LLM API — OpenAI GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — 을 래핑하고 일반 텍스트 대신 검증된 Pydantic 모델을 반환합니다.** Instructor는 유효성 검사가 실패하면 자동으로 재시도하지만, 재시도를 모두 소진한 경우의 처리는 직접 해야 합니다.',
+        content: '**Instructor는 널리 쓰이는 structured output 라이브러리입니다. 모든 LLM API — OpenAI GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon, Ollama, vLLM — 을 래핑하고 일반 텍스트 대신 검증된 Pydantic 모델을 반환합니다.** Instructor는 유효성 검사가 실패하면 자동으로 재시도하지만, 재시도를 모두 소진한 경우의 처리는 직접 해야 합니다.',
         items: [
           '모든 주요 공급자(OpenAI, Anthropic, Google, Groq, Mistral)와 Ollama·vLLM을 통한 로컬 모델에서 작동합니다',
           'Pydantic v2 스키마: 스키마에 통합된 타입 힌트, 유효성 검사 규칙, docstring 설명',
@@ -3289,7 +3289,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       promptquorum: {
         id: 'promptquorum',
         title: 'PromptQuorum: 멀티 모델 테스트',
-        content: '**PromptQuorum은 자사 제품이며 그 자체로는 structured output 라이브러리가 아니라 모델 간 structured output 일관성을 검증하는 테스트 플랫폼입니다.** 동일한 프롬프트를 GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon 및 다수의 모델에 동시에 실행하십시오. 모델별 스키마 준수율, 지연 시간 및 비용을 측정합니다.',
+        content: '**PromptQuorum은 자사 제품이며 그 자체로는 structured output 라이브러리가 아니라 모델 간 structured output 일관성을 검증하는 테스트 플랫폼입니다.** 동일한 프롬프트를 GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon 및 다수의 모델에 동시에 실행하십시오. 모델별 스키마 준수율, 지연 시간 및 비용을 측정합니다.',
         items: [
           '단일 API 호출로 멀티 모델 디스패치 — 많은 모델에서 프롬프트를 테스트합니다',
           'Structured output 준수 메트릭 — 통과율, 지연 시간, 모델별 비용',
@@ -3354,7 +3354,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: '로컬 모델과 API 모델 간의 차이를 테스트하지 않음',
-            problem: 'llama.cpp의 Outlines는 GPT-6 Astra의 Instructor와 다르게 작동합니다. 스키마 준수율은 모델마다 다릅니다. 프런티어 API 모델만을 위해 구축한 다음 작은 로컬 모델로 배포하면 프로덕션 실패가 발생합니다.',
+            problem: 'llama.cpp의 Outlines는 GPT-6.2 Astra의 Instructor와 다르게 작동합니다. 스키마 준수율은 모델마다 다릅니다. 프런티어 API 모델만을 위해 구축한 다음 작은 로컬 모델로 배포하면 프로덕션 실패가 발생합니다.',
             fix: '예상하는 모든 모델 백엔드를 일찍 테스트하십시오. PromptQuorum(자사 제품)을 사용하여 로컬 모델(vLLM, Ollama)과 호스팅 모델(OpenAI, Anthropic, Google)에서 동일한 프롬프트를 실행하십시오.'
           },
           {
@@ -3412,7 +3412,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Structured output의 신뢰성을 어떻게 테스트합니까?',
-            a: 'PromptQuorum(자사 제품)을 사용하여 여러 모델에서 동일한 프롬프트를 실행하고 스키마 준수율을 측정하십시오. GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon는 신뢰성 수준이 서로 다르고, 작은 로컬 모델은 차이가 더 큽니다. 프로덕션에 배포하기 전에 테스트하고, 로컬에서는 Instructor나 Pydantic으로 검증하십시오.'
+            a: 'PromptQuorum(자사 제품)을 사용하여 여러 모델에서 동일한 프롬프트를 실행하고 스키마 준수율을 측정하십시오. GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon는 신뢰성 수준이 서로 다르고, 작은 로컬 모델은 차이가 더 큽니다. 프로덕션에 배포하기 전에 테스트하고, 로컬에서는 Instructor나 Pydantic으로 검증하십시오.'
           },
           {
             q: '"constrained decoding"이란 무엇을 의미합니까?',

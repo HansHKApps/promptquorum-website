@@ -497,7 +497,7 @@
   {
     "lang": "de",
     "title": "Temperatur und Top-P: Kontrolliere die KI-Kreativität",
-    "excerpt": "Temperatur 0–2 und Top-P 0,1–1,0 kontrollieren KI-Zufälligkeit direkt. Optimale Werte für Code, Zusammenfassungen, Brainstorming. GPT-6 Astra, Claude, Gemini.",
+    "excerpt": "Temperatur 0–2 und Top-P 0,1–1,0 kontrollieren KI-Zufälligkeit direkt. Optimale Werte für Code, Zusammenfassungen, Brainstorming. GPT-6.2 Astra, Claude, Gemini.",
     "publishDate": "2026-03-22",
     "dateModified": "2026-10-19",
     "url": "/de/prompt-engineering/temperature-and-top-p-control-ai-creativity",
@@ -515,7 +515,7 @@
   {
     "lang": "ja",
     "title": "温度とTop-P：AI創造性を制御する",
-    "excerpt": "温度は0.0〜2.0でAI出力のランダム性を制御し、Top-Pは0.1〜1.0で語彙選択の幅を調整します。コードには低温度（0.1〜0.3）、ブレーンストーミングには高温度（0.8以上）を推奨します。GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argonで確認済みの設定値を提供します。",
+    "excerpt": "温度は0.0〜2.0でAI出力のランダム性を制御し、Top-Pは0.1〜1.0で語彙選択の幅を調整します。コードには低温度（0.1〜0.3）、ブレーンストーミングには高温度（0.8以上）を推奨します。GPT-6.2 Astra、Claude Opus 5.5、Gemini 4 Argonで確認済みの設定値を提供します。",
     "publishDate": "2026-03-22",
     "dateModified": "2026-10-19",
     "url": "/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity",
@@ -524,7 +524,7 @@
   {
     "lang": "zh",
     "title": "温度和Top-P：控制AI创造力",
-    "excerpt": "温度参数范围0至2控制AI输出的随机程度，Top-P参数范围0.1至1.0决定模型考虑的词汇选项范围。代码生成推荐低温度（0.1至0.3），头脑风暴推荐高温度（0.8以上）。GPT-6 Astra、Claude Opus 5.5和Gemini 4 Argon均已完整验证以上参数设置效果。",
+    "excerpt": "温度参数范围0至2控制AI输出的随机程度，Top-P参数范围0.1至1.0决定模型考虑的词汇选项范围。代码生成推荐低温度（0.1至0.3），头脑风暴推荐高温度（0.8以上）。GPT-6.2 Astra、Claude Opus 5.5和Gemini 4 Argon均已完整验证以上参数设置效果。",
     "publishDate": "2026-03-22",
     "dateModified": "2026-10-19",
     "url": "/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity",
@@ -974,7 +974,7 @@
   {
     "lang": "en",
     "title": "GPT, Claude or Gemini: How to Pick the Right AI Model",
-    "excerpt": "Compare GPT-6 Astra, Claude Opus 5.5 and Gemini 4 Argon by task, price and context window. Decision matrix, vendor price comparison and routing guide.",
+    "excerpt": "Compare GPT-6.2 Astra, Claude Opus 5.5 and Gemini 4 Argon by task, price and context window. Decision matrix, vendor price comparison and routing guide.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -983,7 +983,7 @@
   {
     "lang": "de",
     "title": "GPT, Claude oder Gemini: Wie Sie das richtige KI-Modell auswählen",
-    "excerpt": "GPT-6 Astra, Claude Opus 5.5 und Gemini 4 Argon im Vergleich nach Aufgabe, Preis und Kontextfenster. Entscheidungsmatrix, Preisvergleich und Routing-Leitfaden.",
+    "excerpt": "GPT-6.2 Astra, Claude Opus 5.5 und Gemini 4 Argon im Vergleich nach Aufgabe, Preis und Kontextfenster. Entscheidungsmatrix, Preisvergleich und Routing-Leitfaden.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -992,7 +992,7 @@
   {
     "lang": "fr",
     "title": "GPT, Claude ou Gemini : comment choisir le bon modèle d'IA",
-    "excerpt": "GPT-6 Astra, Claude Opus 5.5 et Gemini 4 Argon comparés par tâche, prix et contexte. Matrice de décision, comparatif des prix officiels et guide de routage.",
+    "excerpt": "GPT-6.2 Astra, Claude Opus 5.5 et Gemini 4 Argon comparés par tâche, prix et contexte. Matrice de décision, comparatif des prix officiels et guide de routage.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1001,7 +1001,7 @@
   {
     "lang": "ja",
     "title": "GPT、Claude、Gemini：適切なAIモデルの選び方",
-    "excerpt": "GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argonをタスク、価格、コンテキストで比較。判断マトリクス、各社の価格比較、ルーティング指針を掲載。",
+    "excerpt": "GPT-6.2 Astra、Claude Opus 5.5、Gemini 4 Argonをタスク、価格、コンテキストで比較。判断マトリクス、各社の価格比較、ルーティング指針を掲載。",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1010,7 +1010,7 @@
   {
     "lang": "zh",
     "title": "GPT、Claude 还是 Gemini：如何选择合适的 AI 模型",
-    "excerpt": "按任务、价格和上下文窗口对比 GPT-6 Astra、Claude Opus 5.5 与 Gemini 4 Argon。含决策矩阵、官方价格对比与路由方案。",
+    "excerpt": "按任务、价格和上下文窗口对比 GPT-6.2 Astra、Claude Opus 5.5 与 Gemini 4 Argon。含决策矩阵、官方价格对比与路由方案。",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1019,7 +1019,7 @@
   {
     "lang": "es",
     "title": "GPT, Claude o Gemini: Cómo elegir el modelo de IA correcto",
-    "excerpt": "GPT-6 Astra, Claude Opus 5.5 y Gemini 4 Argon comparados por tarea, precio y ventana de contexto. Matriz de decisión, precios y guía de enrutamiento.",
+    "excerpt": "GPT-6.2 Astra, Claude Opus 5.5 y Gemini 4 Argon comparados por tarea, precio y ventana de contexto. Matriz de decisión, precios y guía de enrutamiento.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1028,7 +1028,7 @@
   {
     "lang": "pt",
     "title": "GPT, Claude ou Gemini: Como Escolher o Modelo de IA Certo",
-    "excerpt": "GPT-6 Astra, Claude Opus 5.5 e Gemini 4 Argon comparados por tarefa, preço e janela de contexto. Matriz de decisão, preços e guia de roteamento.",
+    "excerpt": "GPT-6.2 Astra, Claude Opus 5.5 e Gemini 4 Argon comparados por tarefa, preço e janela de contexto. Matriz de decisão, preços e guia de roteamento.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1037,7 +1037,7 @@
   {
     "lang": "ar",
     "title": "⁨GPT⁩ أم ⁨Claude⁩ أم ⁨Gemini⁩: كيف تختار نموذج الذكاء الاصطناعي المناسب",
-    "excerpt": "مقارنة ⁨GPT-6 Astra⁩ و⁨Claude Opus 5.5⁩ و⁨Gemini 4 Argon⁩ حسب المهمة والسعر ونافذة السياق. مصفوفة قرار ومقارنة أسعار ودليل التوجيه.",
+    "excerpt": "مقارنة ⁨GPT-6.2 Astra⁩ و⁨Claude Opus 5.5⁩ و⁨Gemini 4 Argon⁩ حسب المهمة والسعر ونافذة السياق. مصفوفة قرار ومقارنة أسعار ودليل التوجيه.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/ar/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1046,7 +1046,7 @@
   {
     "lang": "ko",
     "title": "GPT, Claude, Gemini: 올바른 AI 모델을 선택하는 방법",
-    "excerpt": "GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon을 작업, 가격, 컨텍스트로 비교합니다. 의사결정 매트릭스, 가격 비교, 라우팅 가이드를 제공합니다.",
+    "excerpt": "GPT-6.2 Astra, Claude Opus 5.5, Gemini 4 Argon을 작업, 가격, 컨텍스트로 비교합니다. 의사결정 매트릭스, 가격 비교, 라우팅 가이드를 제공합니다.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
