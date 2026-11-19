@@ -29186,5 +29186,51 @@
       "period": "2026-08-22 to 2026-11-19"
     },
     "deployedAt": null
+  },
+  {
+    "id": "addc3542-740a-44f2-905a-78c45d616a66",
+    "slug": "/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
+    "date": "2026-11-19T08:10:57.927Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (es)",
+        "old": "es: System Prompt vs User Prompt: Diferencias 2026 | Los system prompts definen el comportamiento de la IA...",
+        "new": "es: ¿Qué Es un System Prompt? Diferencias con User Prompt | Un system prompt define cómo se comporta un modelo de IA en toda la sesión..."
+      },
+      {
+        "field": "metaDescription (pt)",
+        "old": "pt: System prompts definem o comportamento da IA para toda a sessão... (170 chars, over budget)",
+        "new": "pt: System prompt define o comportamento da IA durante toda a sessão... (145 chars)"
+      },
+      {
+        "field": "seoTitle,metaDescription (ja)",
+        "old": "ja: 49-char title (budget 24-32, 17 over) / 137-char desc (budget 70-110, 27 over)",
+        "new": "ja: システムプロンプトとユーザープロンプトの違いとは (24 chars) / 73-char desc"
+      },
+      {
+        "field": "metaDescription (ar)",
+        "old": "ar: 157-char desc with bidi marks (budget 110-150, 7 over)",
+        "new": "ar: 128-char desc, bidi marks removed"
+      },
+      {
+        "field": "seoTitle (pt)",
+        "old": "pt: System Prompt vs User Prompt: Diferenças 2026 (45 chars, under 48 min)",
+        "new": "pt: System Prompt vs User Prompt: As Diferenças (2026) (50 chars)"
+      }
+    ],
+    "reason": "geo-meta-optimizer: ES rewrite for 0% CTR at pos 1.8-3.2 on definitional 'qué es un system prompt' cluster (45 impr/28d) — snippet not compelling (position<=3 bucket); JA/PT/AR were pure budget-violation fixes (JA title 49>32 max, JA desc 137>110 max, PT desc 170>155 max, AR desc 157>150 max with bidi marks). EN/DE/FR/ZH/KO: NO CHANGE — vocabulary already matches dominant queries from the prior 2026-08-29 optimization, budgets compliant, and ZH/KO already convert well (4.38%/2.85% CTR).",
+    "queries": [
+      "que es un system prompt",
+      "que es system prompt",
+      "que es el system prompt"
+    ],
+    "baseline": {
+      "position": 3.19,
+      "impressions": 45,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "2026-10-23 to 2026-11-19"
+    },
+    "deployedAt": null
   }
 ]

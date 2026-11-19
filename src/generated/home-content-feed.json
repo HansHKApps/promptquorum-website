@@ -895,23 +895,23 @@
     "title": "System Prompt vs User Prompt: What's the Difference in 2026",
     "excerpt": "A system prompt sets AI behavior for the whole session; a user prompt drives one request. See the difference, API examples, and debug patterns.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-19",
     "url": "/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "de",
     "title": "System Prompt vs User Prompt: Der Unterschied in 2026",
-    "excerpt": "System Prompts legen das KI-Verhalten fest; User Prompts steuern jede Anfrage. Unterschied, Interaktion und Beispiele für GPT-5.6 und Claude erklärt.",
+    "excerpt": "System Prompts legen das KI-Verhalten fest; User Prompts steuern jede Anfrage. Unterschied, Interaktion und Beispiele für GPT-6 und Claude erklärt.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-11-19",
     "url": "/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "fr",
     "title": "Prompt Système vs Prompt Utilisateur : Quelle est la Différence en 2026",
-    "excerpt": "Les prompts système définissent le comportement IA. Les prompts utilisateur gèrent chaque requête. Différences clés et exemples pour GPT-5.6 et Claude.",
+    "excerpt": "Les prompts système définissent le comportement IA. Les prompts utilisateur gèrent chaque requête. Différences clés et exemples pour GPT-6 et Claude.",
     "publishDate": "2026-03-22",
     "dateModified": "2026-03-22",
     "url": "/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
@@ -920,7 +920,7 @@
   {
     "lang": "ja",
     "title": "システムプロンプト対ユーザープロンプト：違いとは",
-    "excerpt": "システムプロンプトはAIの役割・制約・出力形式をセッション全体で設定します。ユーザープロンプトはリクエストごとの具体的なタスクを定義します。API構造の違い、GPT-5.6とClaude Sonnet 5を使った実例、効果的なシステムプロンプトを設計する5つの原則を解説します。",
+    "excerpt": "システムプロンプトはセッション全体のAI挙動を設定し、ユーザープロンプトは1回のリクエストを指定します。違いとAPI実例、設計の原則を解説します。",
     "publishDate": "2026-03-22",
     "dateModified": "2026-03-22",
     "url": "/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
@@ -929,36 +929,36 @@
   {
     "lang": "zh",
     "title": "系统提示词 vs 用户提示词：2026 年的区别",
-    "excerpt": "系统提示词定义 AI 的行为。用户提示词处理每次请求。关键区别与 GPT-5.6 和 Claude 的示例。",
+    "excerpt": "系统提示词定义 AI 的行为。用户提示词处理每次请求。关键区别与 GPT-6 和 Claude 的示例。",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-11-19",
     "url": "/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "es",
     "title": "System Prompt vs User Prompt: La diferencia en 2026",
-    "excerpt": "Los system prompts definen el comportamiento de la IA. Los user prompts gestionan cada solicitud. Diferencias clave y ejemplos para GPT-5.6 y Claude.",
+    "excerpt": "Un system prompt define cómo se comporta un modelo de IA en toda la sesión; el user prompt controla cada solicitud. Ejemplos y patrones de depuración.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-11-19",
     "url": "/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "pt",
     "title": "System Prompt vs User Prompt: A Diferença em 2026",
-    "excerpt": "System prompts definem o comportamento da IA para toda a sessão; user prompts gerenciam cada solicitação. Diferenças, exemplos e padrões de depuração para GPT-5.6 e Claude.",
+    "excerpt": "System prompt define o comportamento da IA durante toda a sessão; user prompt controla cada solicitação. Diferenças, exemplos de API e depuração.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-11-19",
     "url": "/pt/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ar",
     "title": "⁨System Prompt⁩ مقابل ⁨User Prompt⁩: الفرق في ⁨2026⁩",
-    "excerpt": "⁨System prompts⁩ تُحدد ⁨70%⁩ من ثبات مخرجات ⁨LLMs⁩. تعلّم الفرق بين ⁨system prompt⁩ و⁨user prompt⁩ وكيف يتفاعلان في ⁨GPT⁩ و⁨Claude⁩ و⁨Ollama⁩ مع أمثلة ⁨API⁩.",
+    "excerpt": "يحدد system prompt سلوك الذكاء الاصطناعي طوال الجلسة، بينما يدير user prompt كل طلب. الفرق بين GPT وClaude وOllama مع أمثلة API.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-11-19",
     "url": "/ar/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
     "cluster": "prompt-engineering"
   },
@@ -967,7 +967,7 @@
     "title": "시스템 프롬프트 vs 사용자 프롬프트: 2026년 기준 차이점",
     "excerpt": "시스템 프롬프트 vs 사용자 프롬프트: 하나는 세션 전체의 AI 동작을 제어하고, 하나는 각 턴을 이끕니다. API 예제 및 디버그 패턴 포함.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-11-19",
     "url": "/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
     "cluster": "prompt-engineering"
   },
