@@ -6,15 +6,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-en.webp',
-    title: 'RTX 3060 12GB: Best GPU Under $300 for Local LLMs (2026)?',
+    title: 'RTX 3060 12GB: Best GPU Under $300 for Local LLMs (2026)',
     seoTitle: 'RTX 3060 12GB for Local LLM 2026: Best GPU Under $300',
-    metaDescription: 'The used RTX 3060 12GB is the best GPU under $300 for local LLMs — 12GB VRAM runs every 7B and most 14B models at Q4, and CUDA works with Ollama out of the box. Check today\'s price.',
+    metaDescription: 'Used RTX 3060 12GB now runs $350+ (2026 memory shortage) — still the top 12GB pick for local LLMs. See today\'s price and the real under-$300 option.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-05-19',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT'],
+    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT', 'Intel Arc B580 12GB'],
     educationalLevel: 'Intermediate',
     audience: 'Budget buyers choosing a first GPU for local LLM inference',
     affiliateDisclosure: true,
@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-ollama-models-rtx-3060-12gb'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>The used NVIDIA RTX 3060 12GB is the best GPU under $300 for local LLMs.</strong> Its 12GB of VRAM runs every 7B model and most 14B models at Q4, and NVIDIA CUDA works out of the box with Ollama — no driver hunting. Check today\'s used price rather than trusting an old number: a 2026 memory shortage has pushed GPU prices up, and the AMD RX 6700 XT (the usual budget alternative) is no longer meaningfully cheaper.',
+      '<strong>As of November 2026, the used NVIDIA RTX 3060 12GB no longer reliably sells under $300.</strong> A 2026 GDDR6 memory shortage pushed Nvidia to relaunch the card at retail, and that spike dragged used prices to roughly $350–360 (resaleprices.com, November 19, 2026) — the AMD RX 6700 XT tracks it closely at about the same price. Both remain the best-supported 12GB GPUs for local LLMs if your budget can stretch past $300: 12GB of VRAM runs every 7B model and most 14B models at Q4, and NVIDIA CUDA works out of the box with Ollama — no driver hunting. If you need to stay strictly under $300, the new Intel Arc B580 12GB (around $250–290 when in stock) is the closest match today, though its setup is less turnkey than CUDA. Check current listings before buying — this market has moved fast all year.',
     toc: [
       { label: 'Best Pick: Used RTX 3060 12GB', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -31,17 +31,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Related Reading', anchor: '#related' },
     ],
     intro:
-      'Under $300, two used cards dominate local LLM inference: the NVIDIA RTX 3060 12GB and the AMD RX 6700 XT. Both carry 12GB of VRAM — enough for 7B and most 13B–14B models at Q4. The difference used to be price; in 2026 it\'s mostly software friction.',
+      'GPU prices for local LLM inference moved sharply in 2026. A 2026 GDDR6 memory shortage pushed Nvidia to relaunch the RTX 3060 12GB at retail, and the spike dragged both new and used prices for 12GB cards well past the $300 mark this guide is built around. The used NVIDIA RTX 3060 12GB and AMD RX 6700 XT now both run roughly $350 on the resale market (resaleprices.com, November 19, 2026) — still the best-supported 12GB options for local LLMs, just no longer a strict budget pick. Readers who need to stay under $300 today should look at the new Intel Arc B580 12GB instead.',
     quickAnswerTop: {
       en: {
         question: 'What is the best GPU under $300 for running local LLMs?',
-        answer: 'A used RTX 3060 12GB is the best GPU under $300 for local LLMs — 12GB VRAM runs all 7B and most 14B models, and CUDA works with Ollama with no setup. Check the current used price rather than an old figure — GPU pricing has moved a lot in 2026.',
+        answer: 'The used RTX 3060 12GB is still the best-supported 12GB GPU for local LLMs, but as of November 2026 it no longer reliably sells under $300 — a memory shortage pushed used prices to roughly $350–360. If you need to stay strictly under $300, the new Intel Arc B580 12GB (12GB VRAM, around $250–290 when in stock) is the closest fit today; for 7B-only use, an 8GB RTX 2060 Super (~$200) or RX 6600 (~$230) also works.',
         bullets: [
-          'RTX 3060 12GB runs Llama 3 8B Q4_K_M at roughly 25 tok/s and Qwen 14B Q4_K_M at roughly 15 tok/s.',
-          'RX 6700 XT 12GB matches the VRAM but needs ROCm on Linux — and as of this check, it\'s no longer meaningfully cheaper than the RTX 3060.',
-          'Avoid 8GB GPUs at this price point — the VRAM ceiling blocks 14B models entirely.',
+          'RTX 3060 12GB still runs Llama 3 8B Q4_K_M at roughly 25 tok/s and Qwen 14B Q4_K_M at roughly 15 tok/s — the performance case is unchanged, but the card now costs about $350–360 used (resaleprices.com, November 19, 2026).',
+          'RX 6700 XT 12GB matches the VRAM and the price (~$352 used) but still needs ROCm on Linux — it is no longer a cheaper alternative, just a Linux-only one.',
+          'Intel Arc B580 12GB (new, ~$250–290 when in stock) is the most reliable way to stay under $300 with 12GB of VRAM; expect SYCL/IPEX-LLM setup, not CUDA-simple.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -49,19 +49,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Best pick: used NVIDIA RTX 3060 12GB — CUDA works instantly with Ollama and llama.cpp',
-          'Alternative: used AMD RX 6700 XT — same 12GB VRAM, but ROCm setup adds hours of work, and it\'s no longer meaningfully cheaper in 2026',
-          'Both cards run every 7B model and most 13B–14B models at Q4; neither fits a 70B model',
-          'Buy the RTX 3060 in its 12GB version — the 6GB variant only runs 3B models and looks identical in listings',
+          'Price alert: used RTX 3060 12GB and RX 6700 XT now average $350–360 (resaleprices.com, November 19, 2026) — a 2026 memory shortage pushed both well past this guide\'s $300 budget',
+          'Best-supported 12GB pick regardless of price: NVIDIA RTX 3060 12GB — CUDA works instantly with Ollama and llama.cpp',
+          'Actually under $300 today: Intel Arc B580 12GB (new, ~$250–290), though setup is less turnkey than CUDA',
+          'Both RTX 3060 12GB and RX 6700 XT run every 7B model and most 13B–14B models at Q4; none of the GPUs here fit a 70B model',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'The RTX 3060 12GB is the best-supported 12GB GPU for local LLMs, but as of November 2026 it costs roughly $350–360 used; the Intel Arc B580 12GB (~$250–290 new) is the best option that still fits under $300.' },
+          { type: 'plain-terms', text: 'GPU prices for local AI spiked in 2026 — the classic $300 pick (RTX 3060 12GB) now runs closer to $350, so check current listings and consider the Arc B580 if you need to stay under budget.' },
         ],
       },
       bestPick: {
         id: 'best-pick',
-        title: 'Best Pick: Used NVIDIA RTX 3060 12GB',
+        title: 'Best 12GB Pick: Used NVIDIA RTX 3060 12GB (Now ~$350+, Above $300 Budget)',
         content: [
-          '<strong>The used NVIDIA RTX 3060 12GB is the best GPU under $300 for local LLMs because 12GB of VRAM plus zero-setup CUDA support gives you a working LLM box in minutes.</strong> It runs Mistral Small, Llama 3 8B, and Qwen3 8B at 15–20 tokens per second, and most 13B–14B models at Q4.',
-          'The RTX 3060 wins on software, not just VRAM. Ollama and llama.cpp detect NVIDIA GPUs via CUDA automatically on Windows and Linux — no driver hunting, no ROCm. The AMD RX 6700 XT matches the 12GB capacity, but as of this check its used price has converged with the RTX 3060\'s — the 2026 memory shortage narrowed the price gap that used to make it the budget pick. Choose it only if you already prefer Linux/ROCm; the cost savings that used to justify it mostly aren\'t there anymore.',
-          'Whichever you buy, avoid the 6GB RTX 3060 variant — it looks identical in listings but only fits 3B models.',
+          '<strong>The used NVIDIA RTX 3060 12GB is still the best-supported 12GB GPU for local LLMs, but as of November 2026 it no longer reliably sells under $300.</strong> A 2026 GDDR6 memory shortage pushed Nvidia to relaunch new RTX 3060 12GB units at retail, and that spike dragged the used market up with it: resaleprices.com puts the used average at $356 (range $337–$363, up 5.4% in 30 days) as of November 19, 2026. It still runs Mistral Small, Llama 3 8B, and Qwen3 8B at 15–20 tokens per second, and most 13B–14B models at Q4 — the performance case hasn\'t changed, only the price.',
+          'The RTX 3060 wins on software, not just VRAM. Ollama and llama.cpp detect NVIDIA GPUs via CUDA automatically on Windows and Linux — no driver hunting, no ROCm. The AMD RX 6700 XT matches the 12GB capacity and, as of this check, costs about the same used ($352 average, resaleprices.com, November 19, 2026) — so there\'s no longer a price reason to put up with ROCm\'s setup time. Choose it only if you already prefer Linux/ROCm.',
+          'If your budget is a hard $300, skip both of these for now. The new Intel Arc B580 12GB has stayed closer to its $249 list price — typically $250–290 when in stock — and gives you the same 12GB ceiling without the used-market premium. It needs llama.cpp\'s SYCL backend or IPEX-LLM rather than CUDA, which is less plug-and-play but workable. See the comparison table below.',
+          'Whichever 12GB card you buy, avoid the 6GB RTX 3060 variant — it looks identical in listings but only fits 3B models.',
         ],
         affiliateLinks: [
           {
@@ -82,18 +87,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'gpu',
             label: 'Check used RX 6700 XT prices on eBay',
           },
+          {
+            url: 'https://www.newegg.com/p/pl?d=Intel+Arc+B580',
+            productName: 'Intel Arc B580 12GB (new)',
+            productCategory: 'gpu',
+            label: 'Check Intel Arc B580 12GB price on Newegg',
+          },
         ],
       },
       comparison: {
         id: 'comparison',
-        title: 'RTX 3060 12GB vs RX 6700 XT for Local LLMs',
+        title: 'RTX 3060 12GB vs RX 6700 XT vs Arc B580 for Local LLMs',
         content: [
-          '<strong>Both cards carry 12GB of VRAM, so model capacity is identical — the real decision is CUDA versus ROCm.</strong> Check current prices for each before buying; the 2026 memory shortage keeps used GPU pricing volatile and has already erased most of the price gap between these two.',
+          '<strong>All three cards carry 12GB of VRAM, so model capacity is identical — the real decision is price versus software maturity.</strong> As of November 19, 2026 (resaleprices.com), the two used cards both run $350–360 — above this guide\'s $300 budget — while the new Intel Arc B580 is the one still regularly found near or under $300. Check current listings before buying; this market has moved fast all year.',
         ],
-        columns: ['GPU', 'VRAM', 'Setup', 'Best for'],
+        columns: ['GPU', 'VRAM', 'Current Price', 'Setup', 'Best for'],
         rows: [
-          { GPU: 'RTX 3060 12GB', VRAM: '12GB', Setup: 'CUDA, instant', 'Best for': 'Best pick — no setup friction' },
-          { GPU: 'RX 6700 XT', VRAM: '12GB', Setup: 'ROCm, hours', 'Best for': 'Only if you already prefer Linux/AMD' },
+          { GPU: 'RTX 3060 12GB (used)', VRAM: '12GB', 'Current Price': '~$356', Setup: 'CUDA, instant', 'Best for': 'Best software support — if budget allows' },
+          { GPU: 'RX 6700 XT (used)', VRAM: '12GB', 'Current Price': '~$352', Setup: 'ROCm, hours', 'Best for': 'Only if already on Linux/AMD' },
+          { GPU: 'Arc B580 12GB (new)', VRAM: '12GB', 'Current Price': '~$250–290', Setup: 'SYCL/IPEX-LLM', 'Best for': 'Actually under $300 today' },
         ],
       },
       modelGuide: {
@@ -115,12 +127,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quick Answers About Sub-$300 GPUs for Local LLMs',
         faqs: [
           {
-            q: 'Can a $300 GPU run local LLMs well?',
-            a: 'Yes. A used RTX 3060 12GB or RX 6700 XT runs every 7B model at 15–20 tokens per second and most 13B–14B models at Q4 quantization. Both have 12GB of VRAM, which is enough for general chat, coding assistance, and summarization.',
+            q: 'Is the RTX 3060 12GB still under $300 in 2026?',
+            a: 'No — not as of November 2026. A 2026 GDDR6 memory shortage pushed the used RTX 3060 12GB to roughly $350–360 (resaleprices.com, November 19, 2026), and the RX 6700 XT tracks it closely. Both are still the best-supported 12GB picks for local LLMs if your budget allows. If you need to stay under $300, the new Intel Arc B580 12GB (around $250–290 when in stock) is the closest match today.',
           },
           {
             q: 'Why pick the RTX 3060 over the RX 6700 XT if they cost about the same now?',
-            a: 'The RTX 3060 uses NVIDIA CUDA, which Ollama and llama.cpp detect automatically with no setup. The RX 6700 XT needs ROCm — typically hours to configure on Linux, and unsupported on Windows for fast inference. When the two cards cost roughly the same, there\'s no longer a savings that offsets that setup time.',
+            a: 'The RTX 3060 uses NVIDIA CUDA, which Ollama and llama.cpp detect automatically with no setup. The RX 6700 XT needs ROCm — typically hours to configure on Linux, and unsupported on Windows for fast inference. As of November 2026 both cards run $350–360 used, so there\'s no savings left to offset that setup time — unless you already run Linux/ROCm.',
           },
           {
             q: 'Should I buy the 6GB or 12GB RTX 3060?',
@@ -147,15 +159,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-de.webp',
-    title: 'RTX 3060 12GB: Beste GPU unter 300 € für lokale LLMs (2026)?',
+    title: 'RTX 3060 12GB: Beste GPU unter 300 € für lokale LLMs (2026)',
     seoTitle: 'RTX 3060 12GB für lokale LLMs 2026: Beste GPU unter 300 €',
-    metaDescription: 'Die gebrauchte RTX 3060 12GB ist die beste GPU unter 300 € für lokale LLMs — 12 GB VRAM führt jedes 7B- und die meisten 14B-Modelle bei Q4 aus, CUDA läuft mit Ollama sofort. Aktuellen Preis prüfen.',
+    metaDescription: 'Gebrauchte RTX 3060 12GB kostet jetzt deutlich mehr (Speicherknappheit 2026) — weiterhin die beste 12-GB-Wahl für lokale LLMs. Aktuellen Preis und die echte 300-€-Alternative ansehen.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-05-19',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT'],
+    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT', 'Intel Arc B580 12GB'],
     educationalLevel: 'Intermediate',
     audience: 'Budget-Käufer, die eine erste GPU für lokale LLM-Inferenz suchen',
     affiliateDisclosure: true,
@@ -163,7 +175,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-ollama-models-rtx-3060-12gb'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>Die gebrauchte NVIDIA RTX 3060 12 GB ist die beste GPU unter 300 € für lokale LLMs.</strong> Ihre 12 GB VRAM führen jedes 7B-Modell und die meisten 14B-Modelle bei Q4 aus, und NVIDIA CUDA läuft mit Ollama sofort — keine Treibersuche. Prüfen Sie den aktuellen Gebrauchtpreis statt einer alten Zahl zu vertrauen: eine Speicherknappheit 2026 hat die GPU-Preise steigen lassen, und die AMD RX 6700 XT (die übliche Budget-Alternative) ist nicht mehr spürbar günstiger.',
+      '<strong>Stand November 2026 verkauft sich die gebrauchte NVIDIA RTX 3060 12 GB nicht mehr zuverlässig unter 300 €.</strong> Eine GDDR6-Speicherknappheit 2026 veranlasste Nvidia, die Karte neu aufzulegen — Neuware liegt laut PC Games Hardware und MacG inzwischen wieder bei ca. 330–333 €, und auch Gebrauchtangebote sind deutlich teurer geworden. Die AMD RX 6700 XT (die übliche Budget-Alternative) liegt preislich etwa gleichauf. Beide bleiben die am besten unterstützten 12-GB-GPUs für lokale LLMs, wenn Ihr Budget etwas über 300 € reicht: 12 GB VRAM führen jedes 7B-Modell und die meisten 14B-Modelle bei Q4 aus, und NVIDIA CUDA läuft mit Ollama sofort — keine Treibersuche. Wer strikt unter 300 € bleiben muss, findet mit der neuen Intel Arc B580 12GB (neu, je nach Verfügbarkeit oft noch im Budget) die derzeit passendste Option — allerdings mit weniger unkomplizierter Einrichtung als CUDA. Prüfen Sie aktuelle Kleinanzeigen-Angebote vor dem Kauf — der Markt bewegt sich das ganze Jahr 2026 schnell.',
     toc: [
       { label: 'Beste Wahl: gebrauchte RTX 3060 12GB', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -172,17 +184,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Weiterführende Artikel', anchor: '#related' },
     ],
     intro:
-      'Unter 300 € dominieren zwei gebrauchte Karten die lokale LLM-Inferenz: die NVIDIA RTX 3060 12 GB und die AMD RX 6700 XT. Beide bieten 12 GB VRAM — genug für 7B- und die meisten 13B–14B-Modelle bei Q4. Früher war der Unterschied der Preis; 2026 ist es vor allem Software-Reibung.',
+      'Die GPU-Preise für lokale LLM-Inferenz haben sich 2026 stark bewegt. Eine GDDR6-Speicherknappheit veranlasste Nvidia, die RTX 3060 12 GB neu aufzulegen, und der Preisschub zog sowohl Neu- als auch Gebrauchtpreise für 12-GB-Karten deutlich über die 300-€-Marke, auf die dieser Ratgeber ursprünglich zugeschnitten war. Die gebrauchte NVIDIA RTX 3060 12 GB und die AMD RX 6700 XT liegen inzwischen beide klar über 300 € — weiterhin die am besten unterstützten 12-GB-Karten für lokale LLMs, aber keine strikte Budget-Wahl mehr. Wer unter 300 € bleiben muss, sollte stattdessen die neue Intel Arc B580 12GB prüfen.',
     quickAnswerTop: {
       de: {
         question: 'Was ist die beste GPU unter 300 € für lokale LLMs?',
-        answer: 'Eine gebrauchte RTX 3060 12 GB ist die beste GPU unter 300 € für lokale LLMs — 12 GB VRAM führt alle 7B- und die meisten 14B-Modelle aus, und CUDA läuft mit Ollama ohne Einrichtung. Prüfen Sie den aktuellen Gebrauchtpreis statt einer alten Zahl — die GPU-Preise haben sich 2026 stark bewegt.',
+        answer: 'Die gebrauchte RTX 3060 12 GB ist weiterhin die am besten unterstützte 12-GB-GPU für lokale LLMs, verkauft sich aber Stand November 2026 nicht mehr zuverlässig unter 300 €. Wer strikt unter 300 € bleiben muss, findet mit der neuen Intel Arc B580 12GB (12 GB VRAM, oft noch im Budget bei Verfügbarkeit) die derzeit passendste Option; für reine 7B-Nutzung funktioniert auch eine 8-GB-Karte wie die RTX 2060 Super oder RX 6600.',
         bullets: [
-          'RTX 3060 12 GB läuft Llama 3 8B Q4_K_M mit ~25 tok/s und Qwen 14B Q4_K_M mit ~15 tok/s.',
-          'RX 6700 XT 12 GB bietet dieselbe VRAM-Kapazität, benötigt aber ROCm unter Linux — und ist zum Zeitpunkt dieser Prüfung nicht mehr spürbar günstiger als die RTX 3060.',
-          'GPUs mit 8 GB bei diesem Budget vermeiden — die VRAM-Grenze blockiert 14B-Modelle vollständig.',
+          'RTX 3060 12 GB läuft weiterhin mit Llama 3 8B Q4_K_M bei ~25 tok/s und Qwen 14B Q4_K_M bei ~15 tok/s — die Leistung ist unverändert, nur die Karte ist jetzt deutlich teurer als früher.',
+          'RX 6700 XT 12 GB bietet dieselbe VRAM-Kapazität und liegt preislich etwa gleichauf, benötigt aber weiterhin ROCm unter Linux — keine günstigere Alternative mehr, nur eine Linux-Option.',
+          'Intel Arc B580 12GB (neu) ist derzeit der zuverlässigste Weg zu 12 GB VRAM im 300-€-Budget; dafür ist die Einrichtung über SYCL/IPEX-LLM weniger unkompliziert als CUDA.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -190,19 +202,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Beste Wahl: gebrauchte NVIDIA RTX 3060 12 GB — CUDA arbeitet sofort mit Ollama und llama.cpp',
-          'Alternative: gebrauchte AMD RX 6700 XT — dieselben 12 GB VRAM, aber ROCm-Einrichtung kostet Stunden, und ist 2026 nicht mehr spürbar günstiger',
-          'Beide Karten führen jedes 7B-Modell und die meisten 13B–14B-Modelle bei Q4 aus; keine reicht für ein 70B-Modell',
-          'Kaufen Sie die RTX 3060 in der 12-GB-Version — die 6-GB-Variante führt nur 3B-Modelle aus und sieht in Anzeigen identisch aus',
+          'Preis-Hinweis: Gebrauchte RTX 3060 12 GB und RX 6700 XT sind durch die Speicherknappheit 2026 deutlich über das 300-€-Budget dieses Ratgebers gestiegen',
+          'Am besten unterstützte 12-GB-Karte, unabhängig vom Preis: NVIDIA RTX 3060 12 GB — CUDA arbeitet sofort mit Ollama und llama.cpp',
+          'Tatsächlich noch unter 300 € erhältlich: Intel Arc B580 12GB (neu), dafür weniger unkomplizierte Einrichtung als CUDA',
+          'RTX 3060 12 GB und RX 6700 XT führen beide jedes 7B-Modell und die meisten 13B–14B-Modelle bei Q4 aus; keine der hier genannten Karten reicht für ein 70B-Modell',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Die RTX 3060 12 GB ist die am besten unterstützte 12-GB-GPU für lokale LLMs, kostet aber Stand November 2026 deutlich mehr als früher; die Intel Arc B580 12GB (neu) ist die beste Option, die noch ins 300-€-Budget passt.' },
+          { type: 'plain-terms', text: 'Die GPU-Preise für lokale KI sind 2026 stark gestiegen — die klassische 300-€-Wahl (RTX 3060 12 GB) ist jetzt deutlich teurer, also aktuelle Angebote prüfen und bei knappem Budget die Arc B580 in Betracht ziehen.' },
         ],
       },
       bestPick: {
         id: 'best-pick',
-        title: 'Beste Wahl: gebrauchte NVIDIA RTX 3060 12GB',
+        title: 'Beste 12-GB-Wahl: gebrauchte NVIDIA RTX 3060 12GB (jetzt deutlich über 300 €)',
         content: [
-          '<strong>Die gebrauchte NVIDIA RTX 3060 12 GB ist die beste GPU unter 300 € für lokale LLMs, weil 12 GB VRAM plus CUDA-Unterstützung ohne Einrichtungsaufwand in Minuten ein funktionierendes LLM-System ergeben.</strong> Sie führt Mistral Small, Llama 3 8B und Qwen3 8B mit 15-20 Token pro Sekunde aus und die meisten 13B–14B-Modelle bei Q4.',
-          'Die RTX 3060 gewinnt bei der Software, nicht nur beim VRAM. Ollama und llama.cpp erkennen NVIDIA-GPUs unter Windows und Linux automatisch über CUDA — keine Treibersuche, kein ROCm. Die AMD RX 6700 XT erreicht dieselbe 12-GB-Kapazität, doch ihr Gebrauchtpreis hat sich zum Zeitpunkt dieser Prüfung dem der RTX 3060 angenähert — die Speicherknappheit 2026 hat den Preisunterschied verkleinert, der sie früher zur Budget-Wahl machte. Wählen Sie sie nur, wenn Sie Linux/ROCm bereits bevorzugen; die Ersparnis, die sie früher rechtfertigte, ist größtenteils weg.',
-          'Egal welche Karte Sie kaufen: Vermeiden Sie die 6-GB-Variante der RTX 3060 — sie sieht in Anzeigen identisch aus, passt aber nur für 3B-Modelle.',
+          '<strong>Die gebrauchte NVIDIA RTX 3060 12 GB ist weiterhin die am besten unterstützte 12-GB-GPU für lokale LLMs, verkauft sich aber Stand November 2026 nicht mehr zuverlässig unter 300 €.</strong> Eine GDDR6-Speicherknappheit 2026 veranlasste Nvidia, die Karte neu aufzulegen; laut PC Games Hardware und MacG kostet eine Neuauflage inzwischen wieder rund 330–333 €, und auch Gebrauchtangebote sind spürbar teurer geworden. Die Karte führt weiterhin Mistral Small, Llama 3 8B und Qwen3 8B mit 15-20 Token pro Sekunde aus und die meisten 13B–14B-Modelle bei Q4 — an der Leistung hat sich nichts geändert, nur am Preis.',
+          'Die RTX 3060 gewinnt bei der Software, nicht nur beim VRAM. Ollama und llama.cpp erkennen NVIDIA-GPUs unter Windows und Linux automatisch über CUDA — keine Treibersuche, kein ROCm. Die AMD RX 6700 XT erreicht dieselbe 12-GB-Kapazität und liegt preislich etwa gleichauf — es gibt also keinen Preisvorteil mehr, der den ROCm-Einrichtungsaufwand ausgleicht. Wählen Sie sie nur, wenn Sie Linux/ROCm bereits bevorzugen.',
+          'Wenn Ihr Budget strikt 300 € ist, verzichten Sie vorerst auf beide. Die neue Intel Arc B580 12GB liegt näher an ihrem UVP von 249 US-Dollar und ist je nach Verfügbarkeit oft noch im Budget — mit derselben 12-GB-Obergrenze, ohne den Gebrauchtmarkt-Aufschlag. Sie benötigt llama.cpps SYCL-Backend oder IPEX-LLM statt CUDA, was weniger unkompliziert, aber machbar ist. Siehe Vergleichstabelle unten.',
+          'Egal welche 12-GB-Karte Sie kaufen: Vermeiden Sie die 6-GB-Variante der RTX 3060 — sie sieht in Anzeigen identisch aus, passt aber nur für 3B-Modelle.',
         ],
         affiliateLinks: [
           {
@@ -215,7 +232,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             url: 'https://www.kleinanzeigen.de/s-pc-zubehoer-software/grafikkarten/rtx-3060-12gb/k0c225+pc_zubehoer_software.art_s:grafikkarten',
             productName: 'NVIDIA RTX 3060 12GB (gebraucht)',
             productCategory: 'gpu',
-            priceRange: 'ca. 220–290 €',
             label: 'Gebrauchte RTX 3060 12GB auf Kleinanzeigen prüfen',
           },
           {
@@ -224,18 +240,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'gpu',
             label: 'RX 6700 XT Preis bei Amazon.de prüfen',
           },
+          {
+            url: 'https://www.amazon.de/s?k=Intel+Arc+B580',
+            productName: 'Intel Arc B580 12GB (neu)',
+            productCategory: 'gpu',
+            label: 'Intel Arc B580 12GB Preis bei Amazon.de prüfen',
+          },
         ],
       },
       comparison: {
         id: 'comparison',
-        title: 'RTX 3060 12GB vs RX 6700 XT für lokale LLMs',
+        title: 'RTX 3060 12GB vs RX 6700 XT vs Arc B580 für lokale LLMs',
         content: [
-          '<strong>Beide Karten haben 12 GB VRAM, die Modellkapazität ist also identisch — die eigentliche Entscheidung lautet CUDA gegen ROCm.</strong> Prüfen Sie vor dem Kauf die aktuellen Preise beider Karten; die Speicherknappheit 2026 hält die Gebrauchtpreise volatil und hat den früheren Preisunterschied zwischen den beiden bereits größtenteils eingeebnet.',
+          '<strong>Alle drei Karten haben 12 GB VRAM, die Modellkapazität ist also identisch — die eigentliche Entscheidung ist Preis gegen Software-Reife.</strong> Stand November 2026 liegen beide Gebrauchtkarten deutlich über 300 €, während die neue Intel Arc B580 regelmäßig nahe oder unter 300 € zu finden ist. Prüfen Sie aktuelle Angebote vor dem Kauf — der Markt bewegt sich das ganze Jahr 2026 schnell.',
         ],
-        columns: ['GPU', 'VRAM', 'Einrichtung', 'Geeignet für'],
+        columns: ['GPU', 'VRAM', 'Aktueller Preis', 'Einrichtung', 'Geeignet für'],
         rows: [
-          { GPU: 'RTX 3060 12 GB', VRAM: '12 GB', Einrichtung: 'CUDA, sofort', 'Geeignet für': 'Beste Wahl — keine Reibung' },
-          { GPU: 'RX 6700 XT', VRAM: '12 GB', Einrichtung: 'ROCm, Stunden', 'Geeignet für': 'Nur bei Linux/AMD-Präferenz' },
+          { GPU: 'RTX 3060 12 GB (gebraucht)', VRAM: '12 GB', 'Aktueller Preis': 'ca. 330 €+', Einrichtung: 'CUDA, sofort', 'Geeignet für': 'Beste Software-Unterstützung — bei ausreichendem Budget' },
+          { GPU: 'RX 6700 XT (gebraucht)', VRAM: '12 GB', 'Aktueller Preis': 'ca. 330 €+', Einrichtung: 'ROCm, Stunden', 'Geeignet für': 'Nur bei Linux/AMD-Präferenz' },
+          { GPU: 'Arc B580 12GB (neu)', VRAM: '12 GB', 'Aktueller Preis': 'ca. 250–290 €', Einrichtung: 'SYCL/IPEX-LLM', 'Geeignet für': 'Tatsächlich noch unter 300 €' },
         ],
       },
       modelGuide: {
@@ -257,12 +280,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Kurze Antworten zu GPUs unter 300 € für lokale LLMs',
         faqs: [
           {
-            q: 'Kann eine 300-€-GPU lokale LLMs gut ausführen?',
-            a: 'Ja. Eine gebrauchte RTX 3060 12 GB oder RX 6700 XT führt jedes 7B-Modell mit 15-20 Token pro Sekunde aus und die meisten 13B–14B-Modelle bei Q4-Quantisierung. Beide haben 12 GB VRAM — genug für allgemeinen Chat, Coding-Unterstützung und Zusammenfassung.',
+            q: 'Ist die RTX 3060 12 GB 2026 noch unter 300 € erhältlich?',
+            a: 'Nein — Stand November 2026 nicht mehr zuverlässig. Eine GDDR6-Speicherknappheit 2026 hat die gebrauchte RTX 3060 12 GB deutlich über 300 € getrieben (Neuauflage laut PC Games Hardware/MacG bei ca. 330–333 €), und die RX 6700 XT liegt preislich etwa gleichauf. Beide bleiben die am besten unterstützten 12-GB-Karten für lokale LLMs, wenn das Budget reicht. Wer unter 300 € bleiben muss, findet mit der neuen Intel Arc B580 12GB derzeit die passendste Option.',
           },
           {
             q: 'Warum die RTX 3060 statt der RX 6700 XT, wenn beide etwa gleich viel kosten?',
-            a: 'Die RTX 3060 nutzt NVIDIA CUDA, das Ollama und llama.cpp automatisch ohne Einrichtung erkennen. Die RX 6700 XT benötigt ROCm — typischerweise Stunden unter Linux und unter Windows für schnelle Inferenz nicht unterstützt. Wenn beide Karten etwa gleich viel kosten, gibt es keine Ersparnis mehr, die diesen Zeitaufwand ausgleicht.',
+            a: 'Die RTX 3060 nutzt NVIDIA CUDA, das Ollama und llama.cpp automatisch ohne Einrichtung erkennen. Die RX 6700 XT benötigt ROCm — typischerweise Stunden unter Linux und unter Windows für schnelle Inferenz nicht unterstützt. Stand November 2026 kosten beide Karten gebraucht etwa gleich viel, es gibt also keine Ersparnis mehr, die diesen Zeitaufwand ausgleicht — außer Sie bevorzugen Linux/ROCm bereits.',
           },
           {
             q: 'Soll ich die 6-GB- oder 12-GB-RTX 3060 kaufen?',
@@ -289,15 +312,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-fr.webp',
-    title: 'RTX 3060 12 Go : meilleure GPU à moins de 300 € pour les LLM locaux (2026) ?',
+    title: 'RTX 3060 12 Go : meilleure GPU à moins de 300 € pour les LLM locaux (2026)',
     seoTitle: 'RTX 3060 12 Go pour LLM local 2026 : meilleure GPU sous 300 €',
-    metaDescription: 'La RTX 3060 12 Go d\'occasion est la meilleure GPU sous 300 € pour les LLM locaux — 12 Go de VRAM fait tourner tous les 7B et la plupart des 14B en Q4, CUDA fonctionne avec Ollama sans configuration. Vérifiez le prix actuel.',
+    metaDescription: 'La RTX 3060 12 Go d\'occasion coûte désormais bien plus (pénurie de mémoire 2026) — toujours la meilleure GPU 12 Go pour LLM locaux. Voir le prix actuel et la vraie alternative sous 300 €.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-05-19',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT'],
+    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT', 'Intel Arc B580 12GB'],
     educationalLevel: 'Intermediate',
     audience: 'Acheteurs à budget limité choisissant une première GPU pour l\'inférence LLM locale',
     affiliateDisclosure: true,
@@ -305,7 +328,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-ollama-models-rtx-3060-12gb'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>La RTX 3060 12 Go d\'occasion est la meilleure GPU à moins de 300 € pour les LLM locaux.</strong> Ses 12 Go de VRAM font tourner tous les modèles 7B et la plupart des 14B en Q4, et NVIDIA CUDA fonctionne avec Ollama dès l\'installation — sans chasse aux pilotes. Vérifiez le prix d\'occasion actuel plutôt que de vous fier à un ancien chiffre : une pénurie de mémoire en 2026 a fait grimper les prix des GPU, et la RX 6700 XT d\'AMD (l\'alternative économique habituelle) n\'est plus vraiment moins chère.',
+      '<strong>En novembre 2026, la RTX 3060 12 Go d\'occasion ne se vend plus de manière fiable sous 300 €.</strong> Une pénurie de mémoire GDDR6 en 2026 a poussé Nvidia à relancer la carte, et selon GPUPrix (juillet 2026) le neuf coûte de nouveau environ 300 à 380 € — l\'occasion n\'est plus très en dessous. La RX 6700 XT d\'AMD (l\'alternative économique habituelle) se négocie à un prix comparable. Les deux restent les GPU 12 Go les mieux prises en charge pour les LLM locaux si votre budget peut dépasser légèrement 300 € : 12 Go de VRAM font tourner tous les modèles 7B et la plupart des 14B en Q4, et NVIDIA CUDA fonctionne avec Ollama dès l\'installation — sans chasse aux pilotes. Pour rester strictement sous 300 €, la nouvelle Intel Arc B580 12 Go est aujourd\'hui l\'option la plus fiable, avec une installation moins immédiate que CUDA. Vérifiez les annonces actuelles avant d\'acheter — ce marché bouge vite depuis le début de l\'année.',
     toc: [
       { label: 'Meilleur choix : RTX 3060 12 Go d\'occasion', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -314,17 +337,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Lectures complémentaires', anchor: '#related' },
     ],
     intro:
-      'Sous 300 €, deux cartes d\'occasion dominent l\'inférence LLM locale : la NVIDIA RTX 3060 12 Go et l\'AMD RX 6700 XT. Toutes deux offrent 12 Go de VRAM — suffisant pour les modèles 7B et la plupart des 13B–14B en Q4. La différence était autrefois le prix ; en 2026, c\'est surtout la friction logicielle.',
+      'Les prix des GPU pour l\'inférence LLM locale ont fortement bougé en 2026. Une pénurie de mémoire GDDR6 a poussé Nvidia à relancer la RTX 3060 12 Go, et cette hausse a entraîné les prix des cartes 12 Go — neuves comme d\'occasion — bien au-delà des 300 € sur lesquels ce guide était construit. La RTX 3060 12 Go d\'occasion et la RX 6700 XT d\'AMD se négocient désormais toutes deux nettement au-dessus de 300 € — toujours les GPU 12 Go les mieux prises en charge pour les LLM locaux, mais plus un choix économique strict. Les lecteurs qui doivent rester sous 300 € devraient plutôt regarder la nouvelle Intel Arc B580 12 Go.',
     quickAnswerTop: {
       fr: {
         question: 'Quelle est la meilleure GPU à moins de 300 € pour les LLM locaux ?',
-        answer: 'Une RTX 3060 12 Go d\'occasion est la meilleure GPU sous 300 € pour les LLM locaux — 12 Go de VRAM fait tourner tous les 7B et la plupart des 14B, et CUDA fonctionne avec Ollama sans configuration. Vérifiez le prix d\'occasion actuel plutôt qu\'un ancien chiffre — les prix des GPU ont beaucoup bougé en 2026.',
+        answer: 'La RTX 3060 12 Go d\'occasion reste la GPU 12 Go la mieux prise en charge pour les LLM locaux, mais en novembre 2026 elle ne se vend plus de manière fiable sous 300 €. Pour rester strictement sous 300 €, la nouvelle Intel Arc B580 12 Go (12 Go de VRAM, souvent encore dans le budget selon la disponibilité) est l\'option la plus proche aujourd\'hui ; pour un usage 7B uniquement, une carte 8 Go comme la RTX 2060 Super ou la RX 6600 fonctionne aussi.',
         bullets: [
-          'La RTX 3060 12 Go fait tourner Llama 3 8B Q4_K_M à environ 25 tok/s et Qwen 14B Q4_K_M à environ 15 tok/s.',
-          'La RX 6700 XT 12 Go offre la même capacité VRAM mais nécessite ROCm sous Linux — et au moment de cette vérification, elle n\'est plus vraiment moins chère que la RTX 3060.',
-          'Évitez les GPU 8 Go à ce budget — le plafond VRAM bloque entièrement les modèles 14B.',
+          'La RTX 3060 12 Go fait toujours tourner Llama 3 8B Q4_K_M à environ 25 tok/s et Qwen 14B Q4_K_M à environ 15 tok/s — la performance n\'a pas changé, seul le prix a grimpé.',
+          'La RX 6700 XT 12 Go offre la même capacité VRAM et un prix comparable, mais nécessite toujours ROCm sous Linux — ce n\'est plus une alternative moins chère, juste une option Linux.',
+          'L\'Intel Arc B580 12 Go (neuve) est aujourd\'hui le moyen le plus fiable de rester sous 300 € avec 12 Go de VRAM ; l\'installation passe par SYCL/IPEX-LLM, moins immédiate que CUDA.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -332,19 +355,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Meilleur choix : NVIDIA RTX 3060 12 Go d\'occasion — CUDA fonctionne instantanément avec Ollama et llama.cpp',
-          'Alternative : AMD RX 6700 XT d\'occasion — même 12 Go de VRAM, mais la configuration ROCm ajoute des heures de travail, et n\'est plus vraiment moins chère en 2026',
-          'Les deux cartes font tourner tous les modèles 7B et la plupart des 13B–14B en Q4 ; aucune ne convient pour un modèle 70B',
-          'Achetez la RTX 3060 en version 12 Go — la variante 6 Go ne fait tourner que des modèles 3B et est identique en apparence dans les annonces',
+          'Alerte prix : la RTX 3060 12 Go et la RX 6700 XT d\'occasion sont désormais bien au-dessus des 300 € de ce guide, à cause de la pénurie de mémoire de 2026',
+          'Meilleur support logiciel 12 Go, indépendamment du prix : NVIDIA RTX 3060 12 Go d\'occasion — CUDA fonctionne instantanément avec Ollama et llama.cpp',
+          'Encore sous 300 € aujourd\'hui : Intel Arc B580 12 Go (neuve), avec une installation moins immédiate que CUDA',
+          'La RTX 3060 12 Go et la RX 6700 XT font toutes deux tourner tous les modèles 7B et la plupart des 13B–14B en Q4 ; aucune carte de ce guide ne convient pour un modèle 70B',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'La RTX 3060 12 Go est la GPU 12 Go la mieux prise en charge pour les LLM locaux, mais en novembre 2026 elle coûte nettement plus qu\'avant ; l\'Intel Arc B580 12 Go (neuve) est la meilleure option qui reste sous 300 €.' },
+          { type: 'plain-terms', text: 'Les prix des GPU pour l\'IA locale ont flambé en 2026 — le choix classique à 300 € (RTX 3060 12 Go) coûte désormais bien plus, donc vérifiez les annonces actuelles et regardez l\'Arc B580 si votre budget est serré.' },
         ],
       },
       bestPick: {
         id: 'best-pick',
-        title: 'Meilleur choix : RTX 3060 12 Go d\'occasion',
+        title: 'Meilleur choix 12 Go : RTX 3060 12 Go d\'occasion (désormais bien au-dessus de 300 €)',
         content: [
-          '<strong>La RTX 3060 12 Go d\'occasion est la meilleure GPU sous 300 € pour les LLM locaux, car 12 Go de VRAM associés à un support CUDA sans configuration donnent une machine LLM fonctionnelle en quelques minutes.</strong> Elle fait tourner Mistral Small, Llama 3 8B et Qwen3 8B à 15-20 tokens par seconde, et la plupart des modèles 13B–14B en Q4.',
-          'La RTX 3060 gagne sur le logiciel, pas seulement sur la VRAM. Ollama et llama.cpp détectent automatiquement les GPU NVIDIA via CUDA sous Windows et Linux — sans chasse aux pilotes, sans ROCm. La RX 6700 XT d\'AMD atteint la même capacité de 12 Go, mais son prix d\'occasion s\'est aligné sur celui de la RTX 3060 au moment de cette vérification — la pénurie de mémoire de 2026 a réduit l\'écart de prix qui en faisait autrefois le choix économique. Ne la choisissez que si vous préférez déjà Linux/ROCm ; l\'économie qui la justifiait autrefois a en grande partie disparu.',
-          'Quelle que soit la carte que vous achetez, évitez la variante 6 Go de la RTX 3060 — elle est identique en apparence dans les annonces, mais ne convient qu\'à des modèles 3B.',
+          '<strong>La RTX 3060 12 Go d\'occasion reste la GPU 12 Go la mieux prise en charge pour les LLM locaux, mais en novembre 2026 elle ne se vend plus de manière fiable sous 300 €.</strong> Une pénurie de mémoire GDDR6 en 2026 a poussé Nvidia à relancer la carte ; selon GPUPrix (juillet 2026), le neuf coûte à nouveau environ 300 à 380 €, et l\'occasion a suivi la même tendance. Elle fait toujours tourner Mistral Small, Llama 3 8B et Qwen3 8B à 15-20 tokens par seconde, et la plupart des modèles 13B–14B en Q4 — la performance n\'a pas changé, seul le prix a grimpé.',
+          'La RTX 3060 gagne sur le logiciel, pas seulement sur la VRAM. Ollama et llama.cpp détectent automatiquement les GPU NVIDIA via CUDA sous Windows et Linux — sans chasse aux pilotes, sans ROCm. La RX 6700 XT d\'AMD atteint la même capacité de 12 Go à un prix comparable — il n\'y a donc plus d\'économie pour compenser le temps de configuration ROCm. Ne la choisissez que si vous préférez déjà Linux/ROCm.',
+          'Si votre budget est strictement de 300 €, laissez ces deux cartes de côté pour l\'instant. La nouvelle Intel Arc B580 12 Go est restée plus proche de son prix de lancement de 249 $ — souvent encore dans le budget selon la disponibilité — pour le même plafond de 12 Go, sans la prime du marché de l\'occasion. Elle nécessite le backend SYCL de llama.cpp ou IPEX-LLM plutôt que CUDA, moins immédiat mais fonctionnel. Voir le tableau comparatif ci-dessous.',
+          'Quelle que soit la carte 12 Go que vous achetez, évitez la variante 6 Go de la RTX 3060 — elle est identique en apparence dans les annonces, mais ne convient qu\'à des modèles 3B.',
         ],
         affiliateLinks: [
           {
@@ -365,18 +393,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'gpu',
             label: 'Vérifier le prix de la RX 6700 XT sur Amazon.fr',
           },
+          {
+            url: 'https://www.amazon.fr/s?k=Intel+Arc+B580',
+            productName: 'Intel Arc B580 12GB (neuve)',
+            productCategory: 'gpu',
+            label: 'Vérifier le prix de l\'Intel Arc B580 12 Go sur Amazon.fr',
+          },
         ],
       },
       comparison: {
         id: 'comparison',
-        title: 'RTX 3060 12 Go vs RX 6700 XT pour les LLM locaux',
+        title: 'RTX 3060 12 Go vs RX 6700 XT vs Arc B580 pour les LLM locaux',
         content: [
-          '<strong>Les deux cartes ont 12 Go de VRAM, la capacité de modèle est donc identique — la vraie décision est CUDA contre ROCm.</strong> Vérifiez les prix actuels de chacune avant d\'acheter ; la pénurie de mémoire de 2026 maintient les prix des GPU d\'occasion volatils et a déjà effacé l\'essentiel de l\'écart de prix entre les deux.',
+          '<strong>Les trois cartes ont 12 Go de VRAM, la capacité de modèle est donc identique — la vraie décision est le prix contre la maturité logicielle.</strong> En novembre 2026, les deux cartes d\'occasion coûtent toutes deux nettement plus de 300 €, tandis que la nouvelle Intel Arc B580 se trouve régulièrement proche ou sous 300 €. Vérifiez les annonces actuelles avant d\'acheter — ce marché bouge vite depuis le début de l\'année.',
         ],
-        columns: ['GPU', 'VRAM', 'Configuration', 'Idéal pour'],
+        columns: ['GPU', 'VRAM', 'Prix actuel', 'Configuration', 'Idéal pour'],
         rows: [
-          { GPU: 'RTX 3060 12 Go', VRAM: '12 Go', Configuration: 'CUDA, instantané', 'Idéal pour': 'Meilleur choix — aucune friction' },
-          { GPU: 'RX 6700 XT', VRAM: '12 Go', Configuration: 'ROCm, plusieurs heures', 'Idéal pour': 'Seulement si vous préférez déjà Linux/AMD' },
+          { GPU: 'RTX 3060 12 Go (occasion)', VRAM: '12 Go', 'Prix actuel': 'env. 330 €+', Configuration: 'CUDA, instantané', 'Idéal pour': 'Meilleur support logiciel — si le budget le permet' },
+          { GPU: 'RX 6700 XT (occasion)', VRAM: '12 Go', 'Prix actuel': 'env. 330 €+', Configuration: 'ROCm, plusieurs heures', 'Idéal pour': 'Seulement si vous préférez déjà Linux/AMD' },
+          { GPU: 'Arc B580 12 Go (neuve)', VRAM: '12 Go', 'Prix actuel': 'env. 250–290 €', Configuration: 'SYCL/IPEX-LLM', 'Idéal pour': 'Encore sous 300 € aujourd\'hui' },
         ],
       },
       modelGuide: {
@@ -398,12 +433,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Réponses rapides sur les GPU à moins de 300 € pour les LLM locaux',
         faqs: [
           {
-            q: 'Une GPU à 300 € peut-elle bien faire tourner des LLM locaux ?',
-            a: 'Oui. Une RTX 3060 12 Go ou une RX 6700 XT d\'occasion fait tourner tous les modèles 7B à 15-20 tokens par seconde et la plupart des modèles 13B–14B en quantisation Q4. Les deux ont 12 Go de VRAM, suffisant pour le chat général, l\'assistance au code et le résumé.',
+            q: 'La RTX 3060 12 Go est-elle encore sous 300 € en 2026 ?',
+            a: 'Non — plus de manière fiable en novembre 2026. Une pénurie de mémoire GDDR6 en 2026 a poussé la RTX 3060 12 Go d\'occasion bien au-dessus de 300 € (le neuf est revenu à environ 300-380 € selon GPUPrix), et la RX 6700 XT se négocie à un prix comparable. Les deux restent les GPU 12 Go les mieux prises en charge pour les LLM locaux si le budget le permet. Pour rester sous 300 €, la nouvelle Intel Arc B580 12 Go est aujourd\'hui l\'option la plus proche.',
           },
           {
             q: 'Pourquoi choisir la RTX 3060 plutôt que la RX 6700 XT si elles coûtent à peu près pareil maintenant ?',
-            a: 'La RTX 3060 utilise NVIDIA CUDA, qu\'Ollama et llama.cpp détectent automatiquement sans configuration. La RX 6700 XT nécessite ROCm — généralement plusieurs heures de configuration sous Linux, et non pris en charge sous Windows pour une inférence rapide. Quand les deux cartes coûtent à peu près pareil, il n\'y a plus d\'économie pour compenser ce temps de configuration.',
+            a: 'La RTX 3060 utilise NVIDIA CUDA, qu\'Ollama et llama.cpp détectent automatiquement sans configuration. La RX 6700 XT nécessite ROCm — généralement plusieurs heures de configuration sous Linux, et non pris en charge sous Windows pour une inférence rapide. En novembre 2026, les deux cartes d\'occasion coûtent à peu près pareil, il n\'y a donc plus d\'économie pour compenser ce temps de configuration — sauf si vous préférez déjà Linux/ROCm.',
           },
           {
             q: 'Dois-je acheter la RTX 3060 6 Go ou 12 Go ?',
@@ -430,15 +465,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ja.webp',
-    title: 'RTX 3060 12GB：300ドル以下でローカルLLMに最適なGPUは（2026年版）？',
+    title: 'RTX 3060 12GB：300ドル以下でローカルLLMに最適なGPUは（2026年版）',
     seoTitle: 'RTX 3060 12GBでローカルLLM 2026：300ドル以下最良GPU',
-    metaDescription: '中古RTX 3060 12GBは300ドル以下のローカルLLM向け最良GPUです——12GB VRAMで全7Bと大半の14BモデルをQ4で動かせ、CUDAはOllamaで設定不要です。現在の価格を確認してください。',
+    metaDescription: '中古RTX 3060 12GBは2026年のメモリ不足で価格が上昇——それでもローカルLLM向け12GB最良GPUです。現在の価格と本当に300ドル以下で買える選択肢を確認してください。',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-05-19',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT'],
+    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT', 'Intel Arc B580 12GB'],
     educationalLevel: 'Intermediate',
     audience: 'ローカルLLM推論向けに最初のGPUを選ぶ予算重視の購入者',
     affiliateDisclosure: true,
@@ -446,7 +481,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-ollama-models-rtx-3060-12gb'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>中古のNVIDIA RTX 3060 12GBが、300ドル以下でローカルLLMに最適なGPUです。</strong> 12GBのVRAMで全7Bモデルと大半の14BモデルをQ4で動かせ、NVIDIA CUDAはOllamaで設定不要——ドライバー探しも不要です。古い数字を信じるのではなく現在の中古価格を確認してください。2026年のメモリ不足でGPU価格が上昇しており、通常の予算代替であるAMD RX 6700 XTも、もはや明確に安いわけではありません。',
+      '<strong>2026年11月時点で、中古のNVIDIA RTX 3060 12GBはもはや確実に300ドル以下では買えません。</strong> 2026年のGDDR6メモリ不足によりNvidiaがこのカードを再発売し、その価格上昇が中古市場にも波及して、resaleprices.com（2026年11月19日時点）によると中古価格は約350〜360ドルまで上がりました——AMD RX 6700 XTもほぼ同じ価格帯です。予算が300ドルを少し超えられるなら、どちらも依然としてローカルLLM向け最も対応が充実した12GB GPUです：12GBのVRAMで全7Bモデルと大半の14BモデルをQ4で動かせ、NVIDIA CUDAはOllamaで設定不要——ドライバー探しも不要です。厳密に300ドル以下にこだわる場合は、新品のIntel Arc B580 12GB（在庫があれば約250〜290ドル）が現時点で最も近い選択肢ですが、セットアップはCUDAほど簡単ではありません。この市場は2026年を通じて動きが速いため、購入前に現在の価格を確認してください。日本国内の実売価格は販売店や中古店によって異なります——現地の価格もあわせてご確認ください。',
     toc: [
       { label: '最良の選択：中古RTX 3060 12GB', anchor: '#best-pick' },
       { label: 'RTX 3060 対 RX 6700 XT', anchor: '#comparison' },
@@ -455,17 +490,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: '関連記事', anchor: '#related' },
     ],
     intro:
-      '300ドル以下では、2枚の中古カードがローカルLLM推論を席巻しています：NVIDIA RTX 3060 12GBとAMD RX 6700 XTです。どちらも12GBのVRAMを備え——7Bと大半の13B〜14BモデルをQ4で動かすのに十分です。かつては価格が違いでしたが、2026年では主にソフトウェアの手間が違いになっています。',
+      '2026年、ローカルLLM推論向けGPUの価格は大きく動きました。2026年のGDDR6メモリ不足によりNvidiaがRTX 3060 12GBを再発売し、その価格上昇が新品・中古を問わず12GBカードの価格を、本ガイドが前提とする300ドルという水準から大きく引き上げました。中古のNVIDIA RTX 3060 12GBとAMD RX 6700 XTは、現在どちらも中古で約350ドル前後で取引されています（resaleprices.com、2026年11月19日時点）——依然としてローカルLLM向け最良の12GBカードですが、厳密な予算向けの選択肢ではなくなりました。今日300ドル以下にこだわりたい読者は、新品のIntel Arc B580 12GBを検討してください。',
     quickAnswerTop: {
       ja: {
         question: '300ドル以下でローカルLLMを動かすのに最適なGPUは？',
-        answer: '中古のRTX 3060 12GBが、300ドル以下でローカルLLMに最適なGPUです——12GB VRAMで全7Bと大半の14Bモデルを動かせ、CUDAはOllamaで設定不要で動作します。古い数字ではなく現在の中古価格を確認してください——2026年にGPU価格は大きく変動しています。',
+        answer: '中古のRTX 3060 12GBは依然としてローカルLLM向け最も対応が充実した12GB GPUですが、2026年11月時点ではもはや確実に300ドル以下では買えません。厳密に300ドル以下にこだわる場合は、新品のIntel Arc B580 12GB（12GB VRAM、在庫があれば約250〜290ドル）が現時点で最も近い選択肢です。7B専用であれば、8GBのRTX 2060 Super（約200ドル）やRX 6600（約230ドル）も使えます。',
         bullets: [
-          'RTX 3060 12GBはLlama 3 8B Q4_K_Mを約25 tok/s、Qwen 14B Q4_K_Mを約15 tok/sで動作。',
-          'RX 6700 XT 12GBは同じVRAM容量を持ちますが、LinuxでのROCmが必要——そしてこの確認時点では、RTX 3060よりも明確に安いわけではありません。',
-          'この予算帯では8GB GPUを避けてください——VRAMの上限が14Bモデルを完全にブロックします。',
+          'RTX 3060 12GBは依然としてLlama 3 8B Q4_K_Mを約25 tok/s、Qwen 14B Q4_K_Mを約15 tok/sで動作——性能は変わらず、カード自体の価格が約350〜360ドル（resaleprices.com、2026年11月19日時点）に上がりました。',
+          'RX 6700 XT 12GBは同じVRAM容量と同程度の価格（約352ドル）ですが、LinuxでのROCmが依然として必要——もはや安価な代替案ではなく、Linux専用の選択肢になりました。',
+          'Intel Arc B580 12GB（新品、在庫があれば約250〜290ドル）は、12GB VRAMを300ドル以下で確保する最も確実な方法ですが、CUDAほど簡単ではないSYCL/IPEX-LLMでのセットアップが必要です。',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -473,19 +508,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '最良の選択：中古のNVIDIA RTX 3060 12GB——CUDAはOllamaとllama.cppで即座に動作',
-          '代替案：中古のAMD RX 6700 XT——同じ12GB VRAMだが、ROCmの設定に数時間かかり、2026年ではもはや明確に安くない',
-          'どちらのカードも全7Bモデルと大半の13B〜14BモデルをQ4で動かせる；どちらも70Bモデルには対応しない',
-          'RTX 3060は12GB版を購入すること——6GB版は3Bモデルしか動かせず、出品では見分けがつかない',
+          '価格の注意：中古のRTX 3060 12GBとRX 6700 XTは、2026年のメモリ不足により約350〜360ドル（resaleprices.com、2026年11月19日時点）まで上昇し、本ガイドの300ドル予算を大きく超えています',
+          '価格を問わず最も充実した12GBサポート：NVIDIA RTX 3060 12GB——CUDAはOllamaとllama.cppで即座に動作',
+          '今日実際に300ドル以下で買えるのは：Intel Arc B580 12GB（新品、約250〜290ドル）——ただしセットアップはCUDAほど簡単ではない',
+          'RTX 3060 12GBとRX 6700 XTはどちらも全7Bモデルと大半の13B〜14BモデルをQ4で動かせる；このガイドのどのGPUも70Bモデルには対応しない',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'RTX 3060 12GBはローカルLLM向け最も対応が充実した12GB GPUですが、2026年11月時点で中古価格は約350〜360ドルに上昇しました；今も300ドル以下に収まる最良の選択肢はIntel Arc B580 12GB（新品、約250〜290ドル）です。' },
+          { type: 'plain-terms', text: 'ローカルAI向けGPUの価格は2026年に急上昇しました——定番の300ドル候補だったRTX 3060 12GBは今は約350ドルに近いので、現在の価格を確認し、予算が厳しい場合はArc B580を検討してください。' },
         ],
       },
       bestPick: {
         id: 'best-pick',
-        title: '最良の選択：中古NVIDIA RTX 3060 12GB',
+        title: '最良の12GB選択：中古NVIDIA RTX 3060 12GB（現在は約350ドル以上、300ドルを超える）',
         content: [
-          '<strong>中古のNVIDIA RTX 3060 12GBが300ドル以下でローカルLLMに最適なGPUである理由は、12GBのVRAMと設定不要のCUDAサポートにより、数分で動作するLLM環境が手に入るからです。</strong> Mistral Small、Llama 3 8B、Qwen3 8Bを15〜20トークン毎秒で動かし、大半の13B〜14BモデルもQ4で動作します。',
-          'RTX 3060はVRAMだけでなくソフトウェアでも優れています。OllamaとLlama.cppはWindowsとLinuxの両方でNVIDIA GPUをCUDA経由で自動検出します——ドライバー探しもROCmも不要です。AMD RX 6700 XTは同じ12GB容量を実現していますが、この確認時点で中古価格はRTX 3060に近づいています——2026年のメモリ不足が、かつて予算重視の選択肢たらしめていた価格差を縮めました。すでにLinux/ROCmを好む場合にのみ選んでください；かつてそれを正当化していたコスト削減効果は、ほとんどなくなっています。',
-          'どちらを購入するにせよ、RTX 3060の6GB版は避けてください——出品では見分けがつきませんが、3Bモデルしか動作しません。',
+          '<strong>中古のNVIDIA RTX 3060 12GBは依然としてローカルLLM向け最も対応が充実した12GB GPUですが、2026年11月時点ではもはや確実に300ドル以下では買えません。</strong> 2026年のGDDR6メモリ不足によりNvidiaが新品のRTX 3060 12GBを再発売し、その価格上昇が中古市場にも波及しました：resaleprices.com（2026年11月19日時点）によると、中古の平均価格は356ドル（337〜363ドルの範囲、過去30日で5.4%上昇）です。性能は変わらず、Mistral Small、Llama 3 8B、Qwen3 8Bを15〜20トークン毎秒で動かし、大半の13B〜14BモデルもQ4で動作します——変わったのは価格だけです。',
+          'RTX 3060はVRAMだけでなくソフトウェアでも優れています。OllamaとLlama.cppはWindowsとLinuxの両方でNVIDIA GPUをCUDA経由で自動検出します——ドライバー探しもROCmも不要です。AMD RX 6700 XTは同じ12GB容量を実現しており、この確認時点での中古価格（resaleprices.com、2026年11月19日時点、平均352ドル）もほぼ同じです——もはやROCmの設定時間を埋め合わせる価格面のメリットはありません。すでにLinux/ROCmを好む場合にのみ選んでください。',
+          '予算が厳密に300ドルなら、この2枚は今は見送りましょう。新品のIntel Arc B580 12GBは249ドルの販売価格に近いままで、在庫があれば典型的に250〜290ドル——同じ12GBの上限を、中古市場の上乗せなしで得られます。CUDAではなくllama.cppのSYCLバックエンドかIPEX-LLMが必要で、簡単さは劣りますが動作します。下記の比較表を参照してください。',
+          'どのカードを購入するにせよ、RTX 3060の6GB版は避けてください——出品では見分けがつきませんが、3Bモデルしか動作しません。',
         ],
         affiliateLinks: [
           {
@@ -498,7 +538,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             url: 'https://www.sofmap.com/search_result.aspx?keyword=RTX+3060+12GB',
             productName: 'NVIDIA RTX 3060 12GB（中古）',
             productCategory: 'gpu',
-            priceRange: '約2.2万円〜3.3万円',
             label: 'ソフマップで中古RTX 3060 12GBの価格を確認する',
           },
           {
@@ -507,18 +546,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'gpu',
             label: 'Amazon.co.jpでRX 6700 XTの価格を確認する',
           },
+          {
+            url: 'https://www.amazon.co.jp/s?k=Intel+Arc+B580',
+            productName: 'Intel Arc B580 12GB（新品）',
+            productCategory: 'gpu',
+            label: 'Amazon.co.jpでIntel Arc B580 12GBの価格を確認する',
+          },
         ],
       },
       comparison: {
         id: 'comparison',
-        title: 'RTX 3060 12GB 対 RX 6700 XT ローカルLLM比較',
+        title: 'RTX 3060 12GB 対 RX 6700 XT 対 Arc B580 ローカルLLM比較',
         content: [
-          '<strong>どちらも12GBのVRAMを持つため、モデル容量は同じです——本当の決め手はCUDAかROCmかです。</strong> 購入前にそれぞれの現在の価格を確認してください。2026年のメモリ不足により中古GPU価格は変動が激しく、両者の間の価格差はすでにほぼなくなっています。',
+          '<strong>3枚とも12GBのVRAMを持つため、モデル容量は同じです——本当の決め手は価格とソフトウェアの成熟度です。</strong> 2026年11月19日時点（resaleprices.com）で、2枚の中古カードはどちらも350〜360ドルと本ガイドの300ドル予算を超えていますが、新品のIntel Arc B580は300ドル前後またはそれ以下で見つかることが多くなっています。この市場は2026年を通じて動きが速いため、購入前に現在の価格を確認してください。',
         ],
-        columns: ['GPU', 'VRAM', '設定', '最適な用途'],
+        columns: ['GPU', 'VRAM', '現在の価格', '設定', '最適な用途'],
         rows: [
-          { GPU: 'RTX 3060 12GB', VRAM: '12GB', 設定: 'CUDA、即座', 最適な用途: '最良の選択——手間なし' },
-          { GPU: 'RX 6700 XT', VRAM: '12GB', 設定: 'ROCm、数時間', 最適な用途: 'すでにLinux/AMDを好む場合のみ' },
+          { GPU: 'RTX 3060 12GB（中古）', VRAM: '12GB', 現在の価格: '約356ドル', 設定: 'CUDA、即座', 最適な用途: '最も充実したソフト対応——予算が許せば' },
+          { GPU: 'RX 6700 XT（中古）', VRAM: '12GB', 現在の価格: '約352ドル', 設定: 'ROCm、数時間', 最適な用途: 'すでにLinux/AMDを好む場合のみ' },
+          { GPU: 'Arc B580 12GB（新品）', VRAM: '12GB', 現在の価格: '約250〜290ドル', 設定: 'SYCL/IPEX-LLM', 最適な用途: '今も300ドル以下で買える' },
         ],
       },
       modelGuide: {
@@ -540,12 +586,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '300ドル以下GPUに関するローカルLLM Q&A',
         faqs: [
           {
-            q: '300ドルのGPUでローカルLLMをうまく動かせますか？',
-            a: 'はい。中古のRTX 3060 12GBまたはRX 6700 XTは、全7Bモデルを15〜20トークン毎秒で動かし、大半の13B〜14BモデルをQ4量子化で動作させます。どちらも12GBのVRAMを持ち、一般的なチャット、コーディング支援、要約には十分です。',
+            q: 'RTX 3060 12GBは2026年も300ドル以下で買えますか？',
+            a: 'いいえ——2026年11月時点ではもはや確実ではありません。2026年のGDDR6メモリ不足により、中古のRTX 3060 12GBは約350〜360ドル（resaleprices.com、2026年11月19日時点）まで上昇し、RX 6700 XTもほぼ同じ価格です。予算が許せば、どちらも依然としてローカルLLM向け最も対応が充実した12GBカードです。300ドル以下にこだわるなら、新品のIntel Arc B580 12GB（在庫があれば約250〜290ドル）が現時点で最も近い選択肢です。',
           },
           {
             q: '今では価格がほぼ同じなのに、なぜRX 6700 XTよりRTX 3060を選ぶのですか？',
-            a: 'RTX 3060はNVIDIA CUDAを使用しており、OllamaとLlama.cppが設定不要で自動検出します。RX 6700 XTはROCmが必要で、通常Linuxで数時間の設定が必要であり、Windowsでは高速推論に対応していません。両方のカードがほぼ同じ価格であれば、その設定時間を埋め合わせる節約分はもはやありません。',
+            a: 'RTX 3060はNVIDIA CUDAを使用しており、OllamaとLlama.cppが設定不要で自動検出します。RX 6700 XTはROCmが必要で、通常Linuxで数時間の設定が必要であり、Windowsでは高速推論に対応していません。2026年11月時点で両方のカードの中古価格はほぼ同じであり、すでにLinux/ROCmを好む場合を除けば、その設定時間を埋め合わせる節約分はもはやありません。',
           },
           {
             q: 'RTX 3060は6GB版と12GB版のどちらを買うべきですか？',
@@ -572,15 +618,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-zh.webp',
-    title: 'RTX 3060 12GB：300美元以下本地LLM最佳GPU（2026年）？',
+    title: 'RTX 3060 12GB：300美元以下本地LLM最佳GPU（2026年）',
     seoTitle: 'RTX 3060 12GB本地LLM 2026：300美元以下最佳GPU',
-    metaDescription: '二手RTX 3060 12GB是300美元以下本地LLM最佳GPU——12GB显存可在Q4下运行所有7B和大多数14B模型，CUDA与Ollama开箱即用。请查看当前价格。',
+    metaDescription: '二手RTX 3060 12GB因2026年显存短缺价格大涨——仍是本地LLM最佳12GB显卡。查看当前价格，以及真正300美元以下的替代方案。',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-05-19',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT'],
+    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT', 'Intel Arc B580 12GB'],
     educationalLevel: 'Intermediate',
     audience: '为本地LLM推理选择第一张显卡的预算型买家',
     affiliateDisclosure: true,
@@ -588,7 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-ollama-models-rtx-3060-12gb'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>二手NVIDIA RTX 3060 12GB是300美元以下本地LLM的最佳GPU。</strong> 其12GB显存可在Q4下运行所有7B模型和大多数14B模型，NVIDIA CUDA与Ollama开箱即用——无需寻找驱动。请查看当前二手价格，而不要相信旧数字：2026年的显存短缺推高了显卡价格，而通常作为预算替代方案的AMD RX 6700 XT也不再明显更便宜。',
+      '<strong>截至2026年11月，二手NVIDIA RTX 3060 12GB已不再能可靠地以300美元以下购得。</strong> 2026年的GDDR6显存短缺促使Nvidia重新发售这款显卡，这次涨价也波及了二手市场：据resaleprices.com（2026年11月19日数据），二手均价已升至约350至360美元——AMD RX 6700 XT的价格也紧随其后，基本相同。如果预算能稍微超过300美元，这两款仍是本地LLM软件支持最完善的12GB显卡：12GB显存可在Q4下运行所有7B模型和大多数14B模型，NVIDIA CUDA与Ollama开箱即用——无需寻找驱动。如果必须严格控制在300美元以内，新款Intel Arc B580 12GB（有货时约250至290美元）目前是最接近的选择，但其配置不如CUDA那样简便。购买前请务必查看当前价格——这个市场在2026年全年波动都很快。',
     toc: [
       { label: '最佳选择：二手RTX 3060 12GB', anchor: '#best-pick' },
       { label: 'RTX 3060 对比 RX 6700 XT', anchor: '#comparison' },
@@ -597,17 +643,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: '相关阅读', anchor: '#related' },
     ],
     intro:
-      '在300美元以下，两张二手显卡主导着本地LLM推理：NVIDIA RTX 3060 12GB和AMD RX 6700 XT。两者都配备12GB显存——足以在Q4下运行7B和大多数13B至14B模型。过去两者的区别在于价格；到了2026年，主要区别变成了软件使用的便利程度。',
+      '2026年，本地LLM推理用显卡的价格出现了剧烈波动。2026年的GDDR6显存短缺促使Nvidia重新发售RTX 3060 12GB，这波涨价把12GB显卡的新品和二手价格都推高到远超本指南原本设定的300美元门槛。二手的NVIDIA RTX 3060 12GB和AMD RX 6700 XT目前在转售市场上都约为350美元左右（resaleprices.com，2026年11月19日数据）——它们仍是本地LLM软件支持最完善的12GB显卡，只是已不再是严格意义上的预算之选。如果你今天必须控制在300美元以内，应该转而考虑新款Intel Arc B580 12GB。',
     quickAnswerTop: {
       zh: {
         question: '300美元以下运行本地LLM的最佳GPU是什么？',
-        answer: '二手RTX 3060 12GB是300美元以下本地LLM的最佳GPU——12GB显存可运行所有7B和大多数14B模型，CUDA与Ollama无需配置即可使用。请查看当前二手价格，而不是依据旧数字——2026年显卡价格波动很大。',
+        answer: '二手RTX 3060 12GB仍是本地LLM软件支持最完善的12GB显卡，但截至2026年11月，它已不再能可靠地以300美元以下购得。如果必须严格控制在300美元以内，新款Intel Arc B580 12GB（12GB显存，有货时约250至290美元）是目前最接近的选择；如果只需运行7B模型，8GB的RTX 2060 Super（约200美元）或RX 6600（约230美元）也可以。',
         bullets: [
-          'RTX 3060 12GB运行Llama 3 8B Q4_K_M约25 tok/s，运行Qwen 14B Q4_K_M约15 tok/s。',
-          'RX 6700 XT 12GB拥有相同的显存容量，但需要在Linux上配置ROCm——而截至本次核实，它已不再比RTX 3060明显便宜。',
-          '在这个价位应避免8GB显卡——显存上限会完全阻止运行14B模型。',
+          'RTX 3060 12GB仍能以约25 tok/s运行Llama 3 8B Q4_K_M，以约15 tok/s运行Qwen 14B Q4_K_M——性能没有变化，只是显卡本身现在要贵得多（约350至360美元，resaleprices.com，2026年11月19日数据）。',
+          'RX 6700 XT 12GB拥有相同的显存容量和相近的价格（约352美元），但仍需要在Linux上配置ROCm——它已不再是更便宜的替代方案，只是一个仅限Linux的选项。',
+          'Intel Arc B580 12GB（新品，有货时约250至290美元）目前是在300美元以内获得12GB显存最可靠的方式；但需要通过SYCL/IPEX-LLM配置，不如CUDA简便。',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -615,19 +661,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '最佳选择：二手NVIDIA RTX 3060 12GB——CUDA可与Ollama和llama.cpp即时配合使用',
-          '替代方案：二手AMD RX 6700 XT——同样是12GB显存，但ROCm配置需要数小时，而且到2026年已不再明显更便宜',
-          '两张显卡都能在Q4下运行所有7B模型和大多数13B至14B模型；都无法容纳70B模型',
-          '购买RTX 3060时选择12GB版本——6GB版本只能运行3B模型，且在商品列表中与12GB版难以区分',
+          '价格提醒：受2026年显存短缺影响，二手RTX 3060 12GB和RX 6700 XT的均价已升至约350至360美元（resaleprices.com，2026年11月19日数据），远超本指南设定的300美元预算',
+          '不论价格如何，软件支持最完善的12GB显卡：NVIDIA RTX 3060 12GB——CUDA可与Ollama和llama.cpp即时配合使用',
+          '今天真正能在300美元以内买到的：Intel Arc B580 12GB（新品，约250至290美元），但配置不如CUDA简便',
+          'RTX 3060 12GB和RX 6700 XT都能在Q4下运行所有7B模型和大多数13B至14B模型；本指南中的显卡都无法容纳70B模型',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'RTX 3060 12GB是本地LLM软件支持最完善的12GB显卡，但截至2026年11月，其二手价格已升至约350至360美元；Intel Arc B580 12GB（新品，约250至290美元）是目前仍能控制在300美元以内的最佳选择。' },
+          { type: 'plain-terms', text: '2026年本地AI用显卡价格大幅上涨——曾经300美元级的经典之选RTX 3060 12GB现在接近350美元，请查看当前价格，预算紧张时可考虑Arc B580。' },
         ],
       },
       bestPick: {
         id: 'best-pick',
-        title: '最佳选择：二手NVIDIA RTX 3060 12GB',
+        title: '最佳12GB选择：二手NVIDIA RTX 3060 12GB（现价已超300美元）',
         content: [
-          '<strong>二手NVIDIA RTX 3060 12GB是300美元以下本地LLM的最佳GPU，因为12GB显存加上零配置的CUDA支持，几分钟内就能搭建出可用的LLM环境。</strong> 它能以每秒15至20个token的速度运行Mistral Small、Llama 3 8B和Qwen3 8B，并能在Q4下运行大多数13B至14B模型。',
-          'RTX 3060的优势不仅在于显存，更在于软件生态。Ollama和llama.cpp在Windows和Linux上都能通过CUDA自动检测NVIDIA显卡——无需寻找驱动，无需配置ROCm。AMD RX 6700 XT达到了同样的12GB容量，但截至本次核实，其二手价格已经与RTX 3060趋同——2026年的显存短缺缩小了曾让它成为预算之选的价格差距。只有在你本身就偏好Linux/ROCm时才选择它；曾经支撑这一选择的省钱理由，如今大多已不复存在。',
-          '无论购买哪一张，都要避免RTX 3060的6GB版本——它在商品列表中看起来完全一样，但只能运行3B模型。',
+          '<strong>二手NVIDIA RTX 3060 12GB仍是本地LLM软件支持最完善的12GB显卡，但截至2026年11月，它已不再能可靠地以300美元以下购得。</strong> 2026年的GDDR6显存短缺促使Nvidia重新发售新款RTX 3060 12GB，这波涨价也波及了二手市场：据resaleprices.com（2026年11月19日数据），二手均价已达356美元（区间337至363美元，30天内上涨5.4%）。它仍能以每秒15至20个token的速度运行Mistral Small、Llama 3 8B和Qwen3 8B，并能在Q4下运行大多数13B至14B模型——性能没有变化，变的只是价格。',
+          'RTX 3060的优势不仅在于显存，更在于软件生态。Ollama和llama.cpp在Windows和Linux上都能通过CUDA自动检测NVIDIA显卡——无需寻找驱动，无需配置ROCm。AMD RX 6700 XT达到了同样的12GB容量，截至本次核实其二手价格也基本相同（resaleprices.com，2026年11月19日数据，均价352美元）——因此已没有价格优势来抵消ROCm的配置时间。只有在你本身就偏好Linux/ROCm时才选择它。',
+          '如果预算必须严格控制在300美元以内，这两款现在都不是理想选择。新款Intel Arc B580 12GB的价格更接近其249美元的建议零售价——有货时通常约250至290美元——提供同样的12GB上限，且没有二手市场的溢价。它需要通过llama.cpp的SYCL后端或IPEX-LLM配置，而不是CUDA，操作上不如CUDA简便，但可以运行。详见下方对比表。',
+          '无论购买哪一张12GB显卡，都要避免RTX 3060的6GB版本——它在商品列表中看起来完全一样，但只能运行3B模型。',
         ],
         affiliateLinks: [
           {
@@ -648,18 +699,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'gpu',
             label: '在Amazon查看RX 6700 XT价格',
           },
+          {
+            url: 'https://www.amazon.com/s?k=Intel+Arc+B580',
+            productName: 'Intel Arc B580 12GB（新品）',
+            productCategory: 'gpu',
+            label: '在Amazon查看Intel Arc B580 12GB价格',
+          },
         ],
       },
       comparison: {
         id: 'comparison',
-        title: 'RTX 3060 12GB 对比 RX 6700 XT：本地LLM',
+        title: 'RTX 3060 12GB 对比 RX 6700 XT 对比 Arc B580：本地LLM',
         content: [
-          '<strong>两张显卡都配备12GB显存，因此模型容量相同——真正的决定因素是CUDA还是ROCm。</strong> 购买前请查看各自的当前价格；2026年的显存短缺让二手显卡价格持续波动，并已基本消除了两者之间原有的价格差距。',
+          '<strong>三张显卡都配备12GB显存，因此模型容量相同——真正的决定因素是价格与软件成熟度。</strong> 截至2026年11月19日（resaleprices.com），两张二手显卡的价格都已明显超过300美元，而新款Intel Arc B580则经常能在300美元左右或以下买到。购买前请查看当前价格——这个市场在2026年全年波动都很快。',
         ],
-        columns: ['显卡', '显存', '配置', '最适合'],
+        columns: ['显卡', '显存', '当前价格', '配置', '最适合'],
         rows: [
-          { 显卡: 'RTX 3060 12GB', 显存: '12GB', 配置: 'CUDA，即时可用', 最适合: '最佳选择——无配置烦恼' },
-          { 显卡: 'RX 6700 XT', 显存: '12GB', 配置: 'ROCm，需数小时', 最适合: '仅适合已偏好Linux/AMD的用户' },
+          { 显卡: 'RTX 3060 12GB（二手）', 显存: '12GB', 当前价格: '约356美元', 配置: 'CUDA，即时可用', 最适合: '软件支持最佳——预算允许时' },
+          { 显卡: 'RX 6700 XT（二手）', 显存: '12GB', 当前价格: '约352美元', 配置: 'ROCm，需数小时', 最适合: '仅适合已偏好Linux/AMD的用户' },
+          { 显卡: 'Arc B580 12GB（新品）', 显存: '12GB', 当前价格: '约250至290美元', 配置: 'SYCL/IPEX-LLM', 最适合: '目前仍在300美元以内' },
         ],
       },
       modelGuide: {
@@ -681,12 +739,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '关于300美元以下本地LLM显卡的常见问题',
         faqs: [
           {
-            q: '300美元的显卡能很好地运行本地LLM吗？',
-            a: '可以。二手RTX 3060 12GB或RX 6700 XT能以每秒15至20个token的速度运行所有7B模型，并能在Q4量化下运行大多数13B至14B模型。两者都拥有12GB显存，足以满足一般聊天、编程辅助和摘要生成的需求。',
+            q: '2026年RTX 3060 12GB还能以300美元以下买到吗？',
+            a: '不能——截至2026年11月已不再能可靠地买到。2026年的GDDR6显存短缺把二手RTX 3060 12GB推高到约350至360美元（resaleprices.com，2026年11月19日数据），RX 6700 XT的价格也紧随其后。如果预算允许，两者仍是本地LLM软件支持最完善的12GB显卡。如果必须控制在300美元以内，新款Intel Arc B580 12GB（有货时约250至290美元）目前是最接近的选择。',
           },
           {
             q: '如果两者现在价格差不多，为什么要选RTX 3060而不是RX 6700 XT？',
-            a: 'RTX 3060使用NVIDIA CUDA，Ollama和llama.cpp会自动检测，无需任何配置。RX 6700 XT需要ROCm——在Linux上通常需要数小时配置，且在Windows上不支持快速推理。当两张显卡价格相近时，已经没有省下的钱能弥补这段配置时间了。',
+            a: 'RTX 3060使用NVIDIA CUDA，Ollama和llama.cpp会自动检测，无需任何配置。RX 6700 XT需要ROCm——在Linux上通常需要数小时配置，且在Windows上不支持快速推理。截至2026年11月，两张二手显卡的价格已基本相同，因此除非你本身就偏好Linux/ROCm，否则已经没有省下的钱能弥补这段配置时间了。',
           },
           {
             q: '我应该买RTX 3060的6GB版还是12GB版？',
@@ -713,15 +771,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-es.webp',
-    title: 'RTX 3060 12GB: ¿mejor GPU por menos de 300 $ para LLMs locales (2026)?',
+    title: 'RTX 3060 12GB: ¿mejor GPU por menos de 300 $ para LLMs locales (2026)',
     seoTitle: 'RTX 3060 12GB para LLM local 2026: mejor GPU bajo 300 $',
-    metaDescription: 'La RTX 3060 12GB de segunda mano es la mejor GPU por menos de 300 $ para LLMs locales — 12 GB de VRAM ejecuta todos los 7B y la mayoría de 14B en Q4, CUDA funciona con Ollama sin configuración. Consulta el precio actual.',
+    metaDescription: 'La RTX 3060 12GB de segunda mano ahora cuesta mucho más (escasez de memoria 2026) — sigue siendo la mejor GPU de 12 GB para LLMs locales. Ve el precio actual y la alternativa real bajo 300 $.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-05-19',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT'],
+    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT', 'Intel Arc B580 12GB'],
     educationalLevel: 'Intermediate',
     audience: 'Compradores con presupuesto ajustado que eligen su primera GPU para inferencia de LLM local',
     affiliateDisclosure: true,
@@ -729,7 +787,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-ollama-models-rtx-3060-12gb'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>La RTX 3060 12GB de segunda mano es la mejor GPU por menos de 300 $ para LLMs locales.</strong> Sus 12 GB de VRAM ejecutan todos los modelos 7B y la mayoría de los 14B en Q4, y NVIDIA CUDA funciona con Ollama nada más instalarlo — sin buscar drivers. Consulta el precio de segunda mano actual en lugar de fiarte de una cifra antigua: una escasez de memoria en 2026 ha subido los precios de las GPU, y la AMD RX 6700 XT (la alternativa económica habitual) ya no es notablemente más barata.',
+      '<strong>Desde noviembre de 2026, la RTX 3060 12GB de segunda mano ya no se vende de forma fiable por menos de 300 $.</strong> Una escasez de memoria GDDR6 en 2026 llevó a Nvidia a relanzar la tarjeta, y esa subida arrastró también al mercado de segunda mano: según resaleprices.com (19 de noviembre de 2026), el precio usado promedio ronda los 350-360 $ — la AMD RX 6700 XT se mueve a un precio muy similar. Ambas siguen siendo las GPU de 12 GB mejor compatibles para LLMs locales si tu presupuesto puede superar un poco los 300 $: 12 GB de VRAM ejecutan todos los modelos 7B y la mayoría de los 14B en Q4, y NVIDIA CUDA funciona con Ollama nada más instalarlo — sin buscar drivers. Si necesitas quedarte estrictamente bajo 300 $, la nueva Intel Arc B580 12GB (unos 250-290 $ cuando hay stock) es hoy la opción más cercana, aunque su configuración es menos inmediata que CUDA. Comprueba los precios actuales antes de comprar — los precios locales en España y Latinoamérica pueden variar según impuestos y disponibilidad.',
     toc: [
       { label: 'Mejor opción: RTX 3060 12GB de segunda mano', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -738,17 +796,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Lecturas relacionadas', anchor: '#related' },
     ],
     intro:
-      'Por menos de 300 $, dos tarjetas de segunda mano dominan la inferencia de LLM local: la NVIDIA RTX 3060 12GB y la AMD RX 6700 XT. Ambas tienen 12 GB de VRAM — suficiente para modelos 7B y la mayoría de 13B–14B en Q4. Antes la diferencia era el precio; en 2026 es sobre todo la fricción del software.',
+      'Los precios de GPU para inferencia de LLM local se movieron con fuerza en 2026. Una escasez de memoria GDDR6 llevó a Nvidia a relanzar la RTX 3060 12GB, y esa subida arrastró los precios de las tarjetas de 12 GB — nuevas y de segunda mano — muy por encima de los 300 $ en los que se basa esta guía. La RTX 3060 12GB de segunda mano y la AMD RX 6700 XT ahora rondan ambas los 350 $ en el mercado de reventa (resaleprices.com, 19 de noviembre de 2026) — siguen siendo las mejores GPU de 12 GB para LLMs locales, solo que ya no son una opción de presupuesto estricto. Si necesitas quedarte bajo 300 $ hoy, mira la nueva Intel Arc B580 12GB.',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es la mejor GPU por menos de 300 $ para ejecutar LLMs locales?',
-        answer: 'Una RTX 3060 12GB de segunda mano es la mejor GPU por menos de 300 $ para LLMs locales — 12 GB de VRAM ejecuta todos los 7B y la mayoría de los 14B, y CUDA funciona con Ollama sin configuración. Consulta el precio de segunda mano actual en lugar de una cifra antigua — los precios de las GPU se han movido mucho en 2026.',
+        answer: 'La RTX 3060 12GB de segunda mano sigue siendo la GPU de 12 GB mejor compatible para LLMs locales, pero desde noviembre de 2026 ya no se vende de forma fiable por menos de 300 $. Si necesitas quedarte estrictamente bajo 300 $, la nueva Intel Arc B580 12GB (12 GB de VRAM, a menudo aún dentro del presupuesto según disponibilidad) es hoy la opción más cercana; para uso solo con modelos 7B, una tarjeta de 8 GB como la RTX 2060 Super (~200 $) o la RX 6600 (~230 $) también funciona.',
         bullets: [
-          'La RTX 3060 12GB ejecuta Llama 3 8B Q4_K_M a unos 25 tok/s y Qwen 14B Q4_K_M a unos 15 tok/s.',
-          'La RX 6700 XT 12GB iguala la capacidad de VRAM pero necesita ROCm en Linux — y, a fecha de esta comprobación, ya no es notablemente más barata que la RTX 3060.',
-          'Evita las GPU de 8 GB en este presupuesto — el techo de VRAM bloquea por completo los modelos 14B.',
+          'La RTX 3060 12GB sigue ejecutando Llama 3 8B Q4_K_M a unos 25 tok/s y Qwen 14B Q4_K_M a unos 15 tok/s — el rendimiento no ha cambiado, solo el precio ha subido.',
+          'La RX 6700 XT 12GB iguala la capacidad de VRAM y el precio (~352 $ de segunda mano), pero sigue necesitando ROCm en Linux — ya no es una alternativa más barata, solo una opción para Linux.',
+          'La Intel Arc B580 12GB (nueva, ~250-290 $ cuando hay stock) es hoy la forma más fiable de quedarte bajo 300 $ con 12 GB de VRAM; espera una configuración vía SYCL/IPEX-LLM, no tan simple como CUDA.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -756,19 +814,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Mejor opción: NVIDIA RTX 3060 12GB de segunda mano — CUDA funciona al instante con Ollama y llama.cpp',
-          'Alternativa: AMD RX 6700 XT de segunda mano — misma VRAM de 12 GB, pero configurar ROCm añade horas de trabajo, y en 2026 ya no es notablemente más barata',
-          'Ambas tarjetas ejecutan todos los modelos 7B y la mayoría de 13B–14B en Q4; ninguna soporta un modelo 70B',
-          'Compra la RTX 3060 en su versión de 12 GB — la variante de 6 GB solo ejecuta modelos 3B y es idéntica en los anuncios',
+          'Alerta de precio: la RTX 3060 12GB y la RX 6700 XT de segunda mano ahora promedian 350-360 $ (resaleprices.com, 19 de noviembre de 2026) — una escasez de memoria en 2026 las llevó muy por encima del presupuesto de 300 $ de esta guía',
+          'Mejor compatibilidad de 12 GB, sin importar el precio: NVIDIA RTX 3060 12GB de segunda mano — CUDA funciona al instante con Ollama y llama.cpp',
+          'La que sí está bajo 300 $ hoy: Intel Arc B580 12GB (nueva, ~250-290 $), aunque su configuración es menos inmediata que CUDA',
+          'La RTX 3060 12GB y la RX 6700 XT ejecutan todos los modelos 7B y la mayoría de 13B–14B en Q4; ninguna GPU de esta guía soporta un modelo 70B',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'La RTX 3060 12GB es la GPU de 12 GB mejor compatible para LLMs locales, pero desde noviembre de 2026 cuesta unos 350-360 $ de segunda mano; la Intel Arc B580 12GB (nueva, ~250-290 $) es la mejor opción que aún queda bajo 300 $.' },
+          { type: 'plain-terms', text: 'Los precios de GPU para IA local se dispararon en 2026 — la elección clásica de 300 $ (RTX 3060 12GB) ahora cuesta cerca de 350 $, así que revisa los precios actuales y considera la Arc B580 si tu presupuesto es ajustado.' },
         ],
       },
       bestPick: {
         id: 'best-pick',
-        title: 'Mejor opción: NVIDIA RTX 3060 12GB de segunda mano',
+        title: 'Mejor opción de 12 GB: RTX 3060 12GB de segunda mano (ahora por encima de 300 $)',
         content: [
-          '<strong>La RTX 3060 12GB de segunda mano es la mejor GPU por menos de 300 $ para LLMs locales porque 12 GB de VRAM más soporte CUDA sin configuración te dan una máquina de LLM funcionando en minutos.</strong> Ejecuta Mistral Small, Llama 3 8B y Qwen3 8B a 15-20 tokens por segundo, y la mayoría de los modelos 13B–14B en Q4.',
-          'La RTX 3060 gana por el software, no solo por la VRAM. Ollama y llama.cpp detectan las GPU NVIDIA vía CUDA automáticamente en Windows y Linux — sin buscar drivers, sin ROCm. La AMD RX 6700 XT iguala esa capacidad de 12 GB, pero su precio de segunda mano se ha acercado al de la RTX 3060 a fecha de esta comprobación — la escasez de memoria de 2026 redujo la diferencia de precio que antes la convertía en la opción económica. Elígela solo si ya prefieres Linux/ROCm; el ahorro que antes la justificaba ha desaparecido en su mayor parte.',
-          'Compres la que compres, evita la variante de 6 GB de la RTX 3060 — es idéntica en los anuncios, pero solo sirve para modelos 3B.',
+          '<strong>La RTX 3060 12GB de segunda mano sigue siendo la GPU de 12 GB mejor compatible para LLMs locales, pero desde noviembre de 2026 ya no se vende de forma fiable por menos de 300 $.</strong> Una escasez de memoria GDDR6 en 2026 llevó a Nvidia a relanzar nuevas unidades de la RTX 3060 12GB, y esa subida arrastró también al mercado de segunda mano: resaleprices.com sitúa el precio usado promedio en 356 $ (rango 337-363 $, +5,4% en 30 días) a 19 de noviembre de 2026. Sigue ejecutando Mistral Small, Llama 3 8B y Qwen3 8B a 15-20 tokens por segundo, y la mayoría de los modelos 13B–14B en Q4 — el rendimiento no ha cambiado, solo el precio.',
+          'La RTX 3060 gana por el software, no solo por la VRAM. Ollama y llama.cpp detectan las GPU NVIDIA vía CUDA automáticamente en Windows y Linux — sin buscar drivers, sin ROCm. La AMD RX 6700 XT iguala esa capacidad de 12 GB y cuesta prácticamente lo mismo de segunda mano (352 $ de media, resaleprices.com, 19 de noviembre de 2026) — ya no hay ahorro que compense el tiempo de configuración de ROCm. Elígela solo si ya prefieres Linux/ROCm.',
+          'Si tu presupuesto es estrictamente 300 $, deja estas dos de lado por ahora. La nueva Intel Arc B580 12GB se ha mantenido más cerca de su precio de lanzamiento de 249 $ — normalmente 250-290 $ cuando hay stock — con el mismo techo de 12 GB, sin la prima del mercado de segunda mano. Necesita el backend SYCL de llama.cpp o IPEX-LLM en lugar de CUDA, menos inmediato pero funcional. Ve la tabla comparativa a continuación.',
+          'Compres la tarjeta de 12 GB que compres, evita la variante de 6 GB de la RTX 3060 — es idéntica en los anuncios, pero solo sirve para modelos 3B.',
         ],
         affiliateLinks: [
           {
@@ -789,18 +852,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'gpu',
             label: 'Consultar el precio de la RX 6700 XT en Amazon.es',
           },
+          {
+            url: 'https://www.amazon.es/s?k=Intel+Arc+B580',
+            productName: 'Intel Arc B580 12GB (nueva)',
+            productCategory: 'gpu',
+            label: 'Consultar el precio de la Intel Arc B580 12GB en Amazon.es',
+          },
         ],
       },
       comparison: {
         id: 'comparison',
-        title: 'RTX 3060 12GB vs RX 6700 XT para LLMs locales',
+        title: 'RTX 3060 12GB vs RX 6700 XT vs Arc B580 para LLMs locales',
         content: [
-          '<strong>Ambas tarjetas tienen 12 GB de VRAM, así que la capacidad de modelo es idéntica — la decisión real es CUDA frente a ROCm.</strong> Consulta los precios actuales de cada una antes de comprar; la escasez de memoria de 2026 mantiene volátiles los precios de las GPU de segunda mano y ya ha borrado la mayor parte de la diferencia de precio entre ambas.',
+          '<strong>Las tres tarjetas tienen 12 GB de VRAM, así que la capacidad de modelo es idéntica — la decisión real es precio frente a madurez del software.</strong> A 19 de noviembre de 2026 (resaleprices.com), las dos tarjetas de segunda mano cuestan ambas 350-360 $ — por encima del presupuesto de 300 $ de esta guía — mientras que la nueva Intel Arc B580 se encuentra regularmente cerca o por debajo de 300 $. Consulta los precios actuales antes de comprar — este mercado se ha movido rápido durante todo el año.',
         ],
-        columns: ['GPU', 'VRAM', 'Configuración', 'Ideal para'],
+        columns: ['GPU', 'VRAM', 'Precio actual', 'Configuración', 'Ideal para'],
         rows: [
-          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', Configuración: 'CUDA, instantáneo', 'Ideal para': 'Mejor opción — sin fricción' },
-          { GPU: 'RX 6700 XT', VRAM: '12 GB', Configuración: 'ROCm, horas', 'Ideal para': 'Solo si ya prefieres Linux/AMD' },
+          { GPU: 'RTX 3060 12GB (usada)', VRAM: '12 GB', 'Precio actual': '~356 $', Configuración: 'CUDA, instantáneo', 'Ideal para': 'Mejor compatibilidad de software — si el presupuesto lo permite' },
+          { GPU: 'RX 6700 XT (usada)', VRAM: '12 GB', 'Precio actual': '~352 $', Configuración: 'ROCm, horas', 'Ideal para': 'Solo si ya prefieres Linux/AMD' },
+          { GPU: 'Arc B580 12GB (nueva)', VRAM: '12 GB', 'Precio actual': '~250-290 $', Configuración: 'SYCL/IPEX-LLM', 'Ideal para': 'La que sí está bajo 300 $ hoy' },
         ],
       },
       modelGuide: {
@@ -822,12 +892,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Respuestas rápidas sobre GPU por menos de 300 $ para LLMs locales',
         faqs: [
           {
-            q: '¿Puede una GPU de 300 $ ejecutar bien LLMs locales?',
-            a: 'Sí. Una RTX 3060 12GB o una RX 6700 XT de segunda mano ejecuta todos los modelos 7B a 15-20 tokens por segundo y la mayoría de los modelos 13B–14B en cuantización Q4. Ambas tienen 12 GB de VRAM, suficiente para chat general, asistencia de código y resúmenes.',
+            q: '¿Sigue la RTX 3060 12GB por debajo de 300 $ en 2026?',
+            a: 'No — ya no de forma fiable desde noviembre de 2026. Una escasez de memoria GDDR6 en 2026 llevó la RTX 3060 12GB de segunda mano muy por encima de 300 $ (promedio de 356 $, resaleprices.com, 19 de noviembre de 2026), y la RX 6700 XT se mueve a un precio muy similar. Ambas siguen siendo las mejores GPU de 12 GB para LLMs locales si el presupuesto lo permite. Si necesitas quedarte bajo 300 $, la nueva Intel Arc B580 12GB (unos 250-290 $ cuando hay stock) es hoy la opción más cercana.',
           },
           {
             q: '¿Por qué elegir la RTX 3060 en vez de la RX 6700 XT si ahora cuestan más o menos lo mismo?',
-            a: 'La RTX 3060 usa NVIDIA CUDA, que Ollama y llama.cpp detectan automáticamente sin configuración. La RX 6700 XT necesita ROCm — normalmente horas de configuración en Linux, y sin soporte en Windows para inferencia rápida. Cuando ambas tarjetas cuestan más o menos lo mismo, ya no hay un ahorro que compense ese tiempo de configuración.',
+            a: 'La RTX 3060 usa NVIDIA CUDA, que Ollama y llama.cpp detectan automáticamente sin configuración. La RX 6700 XT necesita ROCm — normalmente horas de configuración en Linux, y sin soporte en Windows para inferencia rápida. Desde noviembre de 2026 ambas tarjetas de segunda mano cuestan prácticamente lo mismo, así que ya no hay un ahorro que compense ese tiempo de configuración, salvo que ya prefieras Linux/ROCm.',
           },
           {
             q: '¿Debo comprar la RTX 3060 de 6 GB o de 12 GB?',
@@ -854,15 +924,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-pt.webp',
-    title: 'RTX 3060 12GB: Melhor GPU Abaixo de US$ 300 para LLMs Locais (2026)?',
+    title: 'RTX 3060 12GB: Melhor GPU Abaixo de US$ 300 para LLMs Locais (2026)',
     seoTitle: 'RTX 3060 12GB para LLM Local 2026: Melhor GPU Abaixo de US$ 300',
-    metaDescription: 'A RTX 3060 12GB usada é a melhor GPU abaixo de US$ 300 para LLMs locais — 12GB de VRAM roda todos os modelos 7B e a maioria dos 14B em Q4, e a CUDA funciona com o Ollama sem configuração. Confira o preço atual.',
+    metaDescription: 'A RTX 3060 12GB usada agora custa muito mais (escassez de memória 2026) — ainda a melhor GPU de 12GB para LLMs locais. Veja o preço atual e a alternativa real abaixo de US$ 300.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-05-19',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT'],
+    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT', 'Intel Arc B580 12GB'],
     educationalLevel: 'Intermediate',
     audience: 'Compradores com orçamento limitado escolhendo a primeira GPU para inferência de LLM local',
     affiliateDisclosure: true,
@@ -870,7 +940,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-ollama-models-rtx-3060-12gb'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>A RTX 3060 12GB usada é a melhor GPU abaixo de US$ 300 para LLMs locais.</strong> Seus 12GB de VRAM rodam todos os modelos 7B e a maioria dos modelos 14B em Q4, e a NVIDIA CUDA funciona com o Ollama assim que você instala — sem precisar caçar drivers. Confira o preço usado atual em vez de confiar em um número antigo: uma escassez de memória em 2026 elevou os preços das GPUs, e a AMD RX 6700 XT (a alternativa econômica de sempre) não é mais visivelmente mais barata.',
+      '<strong>Desde novembro de 2026, a RTX 3060 12GB usada não é mais vendida de forma confiável abaixo de US$ 300.</strong> Uma escassez de memória GDDR6 em 2026 levou a Nvidia a relançar a placa, e essa alta também afetou o mercado de usados: segundo a resaleprices.com (19 de novembro de 2026), o preço médio usado agora é de cerca de US$ 350-360 — a AMD RX 6700 XT está num preço bem parecido. As duas continuam sendo as GPUs de 12GB com melhor suporte para LLMs locais se o seu orçamento puder passar um pouco de US$ 300: 12GB de VRAM rodam todos os modelos 7B e a maioria dos modelos 14B em Q4, e a NVIDIA CUDA funciona com o Ollama assim que você instala — sem precisar caçar drivers. Se você precisa ficar estritamente abaixo de US$ 300, a nova Intel Arc B580 12GB (cerca de US$ 250-290 quando em estoque) é a opção mais próxima hoje, embora sua configuração seja menos direta que a CUDA. Confira os preços atuais antes de comprar — os preços no Brasil podem variar bastante devido a impostos de importação.',
     toc: [
       { label: 'Melhor Escolha: RTX 3060 12GB Usada', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -879,17 +949,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Leituras Relacionadas', anchor: '#related' },
     ],
     intro:
-      'Abaixo de US$ 300, duas placas usadas dominam a inferência de LLM local: a NVIDIA RTX 3060 12GB e a AMD RX 6700 XT. Ambas têm 12GB de VRAM — suficiente para modelos 7B e a maioria dos 13B–14B em Q4. Antes a diferença era o preço; em 2026, é principalmente o atrito de software.',
+      'Os preços de GPU para inferência de LLM local se moveram bastante em 2026. Uma escassez de memória GDDR6 levou a Nvidia a relançar a RTX 3060 12GB, e essa alta empurrou os preços de placas de 12GB — novas e usadas — bem além dos US$ 300 em que este guia se baseava. A RTX 3060 12GB usada e a AMD RX 6700 XT agora custam cerca de US$ 350 no mercado de usados (resaleprices.com, 19 de novembro de 2026) — ainda as melhores placas de 12GB para LLMs locais, só que não são mais uma escolha de orçamento estrito. Quem precisa ficar abaixo de US$ 300 hoje deve olhar para a nova Intel Arc B580 12GB.',
     quickAnswerTop: {
       pt: {
         question: 'Qual é a melhor GPU abaixo de US$ 300 para rodar LLMs locais?',
-        answer: 'Uma RTX 3060 12GB usada é a melhor GPU abaixo de US$ 300 para LLMs locais — 12GB de VRAM roda todos os modelos 7B e a maioria dos 14B, e a CUDA funciona com o Ollama sem nenhuma configuração. Confira o preço usado atual em vez de um número antigo — os preços de GPU mudaram muito em 2026.',
+        answer: 'A RTX 3060 12GB usada ainda é a GPU de 12GB com melhor suporte para LLMs locais, mas desde novembro de 2026 ela não é mais vendida de forma confiável abaixo de US$ 300. Se você precisa ficar estritamente abaixo de US$ 300, a nova Intel Arc B580 12GB (12GB de VRAM, muitas vezes ainda dentro do orçamento dependendo do estoque) é a opção mais próxima hoje; para uso só com modelos 7B, uma placa de 8GB como a RTX 2060 Super (~US$ 200) ou a RX 6600 (~US$ 230) também funciona.',
         bullets: [
-          'A RTX 3060 12GB roda o Llama 3 8B Q4_K_M a cerca de 25 tok/s e o Qwen 14B Q4_K_M a cerca de 15 tok/s.',
-          'A RX 6700 XT 12GB tem a mesma capacidade de VRAM, mas exige ROCm no Linux — e, nesta verificação, não é mais visivelmente mais barata do que a RTX 3060.',
-          'Evite GPUs de 8GB nessa faixa de preço — o teto de VRAM bloqueia completamente os modelos 14B.',
+          'A RTX 3060 12GB ainda roda o Llama 3 8B Q4_K_M a cerca de 25 tok/s e o Qwen 14B Q4_K_M a cerca de 15 tok/s — o desempenho não mudou, só o preço subiu bastante.',
+          'A RX 6700 XT 12GB tem a mesma capacidade de VRAM e um preço parecido (~US$ 352 usada), mas ainda exige ROCm no Linux — não é mais uma alternativa mais barata, só uma opção para Linux.',
+          'A Intel Arc B580 12GB (nova, ~US$ 250-290 quando em estoque) é hoje o jeito mais confiável de ficar abaixo de US$ 300 com 12GB de VRAM; espere uma configuração via SYCL/IPEX-LLM, não tão simples quanto a CUDA.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -897,19 +967,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Melhor escolha: NVIDIA RTX 3060 12GB usada — a CUDA funciona instantaneamente com Ollama e llama.cpp',
-          'Alternativa: AMD RX 6700 XT usada — mesmos 12GB de VRAM, mas a configuração do ROCm adiciona horas de trabalho, e não é mais visivelmente mais barata em 2026',
-          'As duas placas rodam todos os modelos 7B e a maioria dos 13B–14B em Q4; nenhuma comporta um modelo 70B',
-          'Compre a RTX 3060 na versão de 12GB — a variante de 6GB só roda modelos 3B e é idêntica nos anúncios',
+          'Alerta de preço: a RTX 3060 12GB e a RX 6700 XT usadas agora custam em média US$ 350-360 (resaleprices.com, 19 de novembro de 2026) — uma escassez de memória em 2026 as levou bem acima do orçamento de US$ 300 deste guia',
+          'Melhor suporte de 12GB, independente do preço: NVIDIA RTX 3060 12GB usada — a CUDA funciona instantaneamente com Ollama e llama.cpp',
+          'A que realmente fica abaixo de US$ 300 hoje: Intel Arc B580 12GB (nova, ~US$ 250-290), embora a configuração seja menos direta que a CUDA',
+          'A RTX 3060 12GB e a RX 6700 XT rodam todos os modelos 7B e a maioria dos 13B–14B em Q4; nenhuma GPU deste guia comporta um modelo 70B',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'A RTX 3060 12GB é a GPU de 12GB com melhor suporte para LLMs locais, mas desde novembro de 2026 ela custa cerca de US$ 350-360 usada; a Intel Arc B580 12GB (nova, ~US$ 250-290) é a melhor opção que ainda fica abaixo de US$ 300.' },
+          { type: 'plain-terms', text: 'Os preços de GPU para IA local dispararam em 2026 — a escolha clássica de US$ 300 (RTX 3060 12GB) agora custa perto de US$ 350, então confira os preços atuais e considere a Arc B580 se o orçamento estiver apertado.' },
         ],
       },
       bestPick: {
         id: 'best-pick',
-        title: 'Melhor Escolha: NVIDIA RTX 3060 12GB Usada',
+        title: 'Melhor Escolha de 12GB: NVIDIA RTX 3060 12GB Usada (agora acima de US$ 300)',
         content: [
-          '<strong>A RTX 3060 12GB usada é a melhor GPU abaixo de US$ 300 para LLMs locais porque 12GB de VRAM somados ao suporte CUDA sem configuração te dão uma máquina de LLM funcionando em minutos.</strong> Ela roda o Mistral Small, o Llama 3 8B e o Qwen3 8B a 15-20 tokens por segundo, e a maioria dos modelos 13B–14B em Q4.',
-          'A RTX 3060 vence pelo software, não só pela VRAM. O Ollama e o llama.cpp detectam GPUs NVIDIA via CUDA automaticamente no Windows e no Linux — sem caçar drivers, sem ROCm. A AMD RX 6700 XT iguala essa capacidade de 12GB, mas seu preço usado convergiu com o da RTX 3060 nesta verificação — a escassez de memória de 2026 reduziu a diferença de preço que antes a tornava a escolha econômica. Escolha-a apenas se você já preferir Linux/ROCm; a economia que costumava justificá-la praticamente desapareceu.',
-          'Seja qual for a placa que você comprar, evite a variante de 6GB da RTX 3060 — ela parece idêntica nos anúncios, mas só comporta modelos 3B.',
+          '<strong>A RTX 3060 12GB usada ainda é a GPU de 12GB com melhor suporte para LLMs locais, mas desde novembro de 2026 ela não é mais vendida de forma confiável abaixo de US$ 300.</strong> Uma escassez de memória GDDR6 em 2026 levou a Nvidia a relançar novas unidades da RTX 3060 12GB, e essa alta também afetou o mercado de usados: a resaleprices.com situa o preço médio usado em US$ 356 (faixa de US$ 337-363, alta de 5,4% em 30 dias) em 19 de novembro de 2026. Ela ainda roda o Mistral Small, o Llama 3 8B e o Qwen3 8B a 15-20 tokens por segundo, e a maioria dos modelos 13B–14B em Q4 — o desempenho não mudou, só o preço.',
+          'A RTX 3060 vence pelo software, não só pela VRAM. O Ollama e o llama.cpp detectam GPUs NVIDIA via CUDA automaticamente no Windows e no Linux — sem caçar drivers, sem ROCm. A AMD RX 6700 XT iguala essa capacidade de 12GB e custa praticamente o mesmo usada (média de US$ 352, resaleprices.com, 19 de novembro de 2026) — então não há mais economia que compense o tempo de configuração do ROCm. Escolha-a apenas se você já preferir Linux/ROCm.',
+          'Se o seu orçamento é estritamente US$ 300, deixe essas duas de lado por agora. A nova Intel Arc B580 12GB ficou mais próxima do seu preço de lançamento de US$ 249 — normalmente US$ 250-290 quando em estoque — com o mesmo limite de 12GB, sem o ágio do mercado de usados. Ela precisa do backend SYCL do llama.cpp ou do IPEX-LLM em vez de CUDA, menos direto mas funcional. Veja a tabela comparativa abaixo.',
+          'Seja qual for a placa de 12GB que você comprar, evite a variante de 6GB da RTX 3060 — ela parece idêntica nos anúncios, mas só comporta modelos 3B.',
         ],
         affiliateLinks: [
           {
@@ -930,18 +1005,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'gpu',
             label: 'Confira o preço da RX 6700 XT na Amazon.com.br',
           },
+          {
+            url: 'https://www.amazon.com.br/s?k=Intel+Arc+B580',
+            productName: 'Intel Arc B580 12GB (nova)',
+            productCategory: 'gpu',
+            label: 'Confira o preço da Intel Arc B580 12GB na Amazon.com.br',
+          },
         ],
       },
       comparison: {
         id: 'comparison',
-        title: 'RTX 3060 12GB vs RX 6700 XT para LLMs Locais',
+        title: 'RTX 3060 12GB vs RX 6700 XT vs Arc B580 para LLMs Locais',
         content: [
-          '<strong>As duas placas têm 12GB de VRAM, então a capacidade de modelo é idêntica — a decisão real é CUDA contra ROCm.</strong> Confira os preços atuais de cada uma antes de comprar; a escassez de memória de 2026 mantém os preços de GPUs usadas voláteis e já apagou a maior parte da diferença de preço entre as duas.',
+          '<strong>As três placas têm 12GB de VRAM, então a capacidade de modelo é idêntica — a decisão real é preço contra maturidade do software.</strong> Em 19 de novembro de 2026 (resaleprices.com), as duas placas usadas custam ambas US$ 350-360 — acima do orçamento de US$ 300 deste guia — enquanto a nova Intel Arc B580 é encontrada regularmente perto ou abaixo de US$ 300. Confira os preços atuais antes de comprar — esse mercado se move rápido durante todo o ano.',
         ],
-        columns: ['GPU', 'VRAM', 'Configuração', 'Melhor para'],
+        columns: ['GPU', 'VRAM', 'Preço Atual', 'Configuração', 'Melhor para'],
         rows: [
-          { GPU: 'RTX 3060 12GB', VRAM: '12GB', Configuração: 'CUDA, instantânea', 'Melhor para': 'Melhor escolha — sem atrito' },
-          { GPU: 'RX 6700 XT', VRAM: '12GB', Configuração: 'ROCm, horas', 'Melhor para': 'Só se você já preferir Linux/AMD' },
+          { GPU: 'RTX 3060 12GB (usada)', VRAM: '12GB', 'Preço Atual': '~US$ 356', Configuração: 'CUDA, instantânea', 'Melhor para': 'Melhor suporte de software — se o orçamento permitir' },
+          { GPU: 'RX 6700 XT (usada)', VRAM: '12GB', 'Preço Atual': '~US$ 352', Configuração: 'ROCm, horas', 'Melhor para': 'Só se você já preferir Linux/AMD' },
+          { GPU: 'Arc B580 12GB (nova)', VRAM: '12GB', 'Preço Atual': '~US$ 250-290', Configuração: 'SYCL/IPEX-LLM', 'Melhor para': 'A que realmente fica abaixo de US$ 300' },
         ],
       },
       modelGuide: {
@@ -963,12 +1045,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Respostas Rápidas Sobre GPUs Abaixo de US$ 300 para LLMs Locais',
         faqs: [
           {
-            q: 'Uma GPU de US$ 300 consegue rodar LLMs locais bem?',
-            a: 'Sim. Uma RTX 3060 12GB ou RX 6700 XT usada roda todos os modelos 7B a 15-20 tokens por segundo e a maioria dos modelos 13B–14B em quantização Q4. Ambas têm 12GB de VRAM, suficiente para chat geral, assistência de código e resumo.',
+            q: 'A RTX 3060 12GB ainda fica abaixo de US$ 300 em 2026?',
+            a: 'Não — já não de forma confiável desde novembro de 2026. Uma escassez de memória GDDR6 em 2026 levou a RTX 3060 12GB usada bem acima de US$ 300 (média de US$ 356, resaleprices.com, 19 de novembro de 2026), e a RX 6700 XT está num preço bem parecido. As duas continuam sendo as melhores placas de 12GB para LLMs locais se o orçamento permitir. Se você precisa ficar abaixo de US$ 300, a nova Intel Arc B580 12GB (cerca de US$ 250-290 quando em estoque) é a opção mais próxima hoje.',
           },
           {
             q: 'Por que escolher a RTX 3060 em vez da RX 6700 XT se agora elas custam praticamente o mesmo?',
-            a: 'A RTX 3060 usa CUDA da NVIDIA, que o Ollama e o llama.cpp detectam automaticamente sem configuração. A RX 6700 XT precisa de ROCm — normalmente horas de configuração no Linux, e sem suporte no Windows para inferência rápida. Quando as duas placas custam praticamente o mesmo, não existe mais uma economia que compense esse tempo de configuração.',
+            a: 'A RTX 3060 usa CUDA da NVIDIA, que o Ollama e o llama.cpp detectam automaticamente sem configuração. A RX 6700 XT precisa de ROCm — normalmente horas de configuração no Linux, e sem suporte no Windows para inferência rápida. Desde novembro de 2026 as duas placas usadas custam praticamente o mesmo, então não existe mais uma economia que compense esse tempo de configuração — a menos que você já prefira Linux/ROCm.',
           },
           {
             q: 'Devo comprar a RTX 3060 de 6GB ou de 12GB?',
@@ -995,15 +1077,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ar.webp',
-    title: 'RTX 3060 12GB: أفضل بطاقة رسومات بأقل من 300 دولار للنماذج اللغوية المحلية (2026)؟',
+    title: 'RTX 3060 12GB: أفضل بطاقة رسومات بأقل من 300 دولار للنماذج اللغوية المحلية (2026)',
     seoTitle: 'RTX 3060 12GB للنماذج اللغوية المحلية 2026: الأفضل بأقل من 300 دولار',
-    metaDescription: 'بطاقة RTX 3060 12GB المستعملة هي أفضل بطاقة رسومات بأقل من 300 دولار للنماذج اللغوية المحلية — 12 جيجابايت VRAM تشغّل كل نماذج 7B ومعظم 14B بصيغة Q4، وCUDA تعمل مع Ollama دون إعداد. تحقق من السعر الحالي.',
+    metaDescription: 'أصبحت بطاقة RTX 3060 12GB المستعملة أغلى بكثير (نقص الذاكرة 2026) — لكنها تبقى أفضل بطاقة 12 جيجابايت للنماذج اللغوية المحلية. تحقق من السعر الحالي والبديل الحقيقي بأقل من 300 دولار.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-05-19',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT'],
+    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT', 'Intel Arc B580 12GB'],
     educationalLevel: 'Intermediate',
     audience: 'المشترون ذوو الميزانية المحدودة الذين يختارون أول بطاقة رسومات لاستدلال النماذج اللغوية المحلية',
     affiliateDisclosure: true,
@@ -1011,7 +1093,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-ollama-models-rtx-3060-12gb'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>بطاقة NVIDIA RTX 3060 12GB المستعملة هي أفضل بطاقة رسومات بأقل من 300 دولار للنماذج اللغوية المحلية.</strong> توفر ذاكرتها البالغة 12 جيجابايت VRAM تشغيل كل نموذج 7B ومعظم نماذج 14B بصيغة Q4، وتعمل NVIDIA CUDA مع Ollama فور التثبيت — دون البحث عن تعريفات. تحقق من السعر الحالي المستعمل بدلًا من الاعتماد على رقم قديم: أدى نقص في الذاكرة عام 2026 إلى ارتفاع أسعار بطاقات الرسومات، ولم تعد AMD RX 6700 XT (البديل الاقتصادي المعتاد) أرخص بشكل ملحوظ.',
+      '<strong>منذ نوفمبر 2026، لم تعد بطاقة NVIDIA RTX 3060 12GB المستعملة تُباع بشكل موثوق بأقل من 300 دولار.</strong> دفع نقص في ذاكرة GDDR6 عام 2026 شركة Nvidia إلى إعادة إطلاق البطاقة، وامتد ارتفاع السعر إلى السوق المستعملة أيضًا: يضع موقع resaleprices.com (19 نوفمبر 2026) متوسط السعر المستعمل عند نحو 350-360 دولارًا — وتسير AMD RX 6700 XT بسعر مقارب جدًا. تبقى كلتا البطاقتين الأفضل دعمًا بسعة 12 جيجابايت للنماذج اللغوية المحلية إذا سمحت ميزانيتك بتجاوز 300 دولار قليلًا: توفر 12 جيجابايت VRAM تشغيل كل نموذج 7B ومعظم نماذج 14B بصيغة Q4، وتعمل NVIDIA CUDA مع Ollama فور التثبيت — دون البحث عن تعريفات. إذا احتجت إلى البقاء تحت 300 دولار تمامًا، فإن بطاقة Intel Arc B580 12GB الجديدة (نحو 250-290 دولارًا عند توفرها) هي الأقرب حاليًا، رغم أن إعدادها أقل سهولة من CUDA. تحقق من الأسعار الحالية قبل الشراء — تحرك هذا السوق بسرعة طوال عام 2026.',
     toc: [
       { label: 'أفضل اختيار: RTX 3060 12GB مستعملة', anchor: '#best-pick' },
       { label: 'RTX 3060 مقابل RX 6700 XT', anchor: '#comparison' },
@@ -1020,17 +1102,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'قراءات ذات صلة', anchor: '#related' },
     ],
     intro:
-      'بأقل من 300 دولار، تهيمن بطاقتان مستعملتان على استدلال النماذج اللغوية المحلية: NVIDIA RTX 3060 12GB وAMD RX 6700 XT. تحمل كلتاهما 12 جيجابايت VRAM — كافية لنماذج 7B ومعظم نماذج 13B–14B بصيغة Q4. كان الفرق سابقًا هو السعر؛ في 2026 أصبح في الغالب احتكاك البرمجيات.',
+      'تحركت أسعار بطاقات الرسومات لاستدلال النماذج اللغوية المحلية بشكل كبير في 2026. دفع نقص في ذاكرة GDDR6 شركة Nvidia إلى إعادة إطلاق RTX 3060 12GB، وامتد هذا الارتفاع إلى أسعار البطاقات الجديدة والمستعملة بسعة 12 جيجابايت لتتجاوز بشكل واضح حد 300 دولار الذي بُني عليه هذا الدليل. تتداول الآن بطاقة NVIDIA RTX 3060 12GB المستعملة وAMD RX 6700 XT عند نحو 350 دولارًا في سوق إعادة البيع (resaleprices.com، 19 نوفمبر 2026) — ولا تزالان أفضل بطاقتين من ناحية الدعم البرمجي بسعة 12 جيجابايت للنماذج اللغوية المحلية، لكنهما لم تعودا خيارًا اقتصاديًا صارمًا. من يحتاج إلى البقاء تحت 300 دولار اليوم يجب أن ينظر إلى بطاقة Intel Arc B580 12GB الجديدة.',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل بطاقة رسومات بأقل من 300 دولار لتشغيل النماذج اللغوية المحلية؟',
-        answer: 'بطاقة RTX 3060 12GB مستعملة هي أفضل بطاقة رسومات بأقل من 300 دولار للنماذج اللغوية المحلية — 12 جيجابايت VRAM تشغّل كل نماذج 7B ومعظم 14B، وتعمل CUDA مع Ollama دون أي إعداد. تحقق من السعر المستعمل الحالي بدلًا من رقم قديم — تحركت أسعار بطاقات الرسومات كثيرًا في 2026.',
+        answer: 'لا تزال بطاقة RTX 3060 12GB المستعملة الأفضل دعمًا بسعة 12 جيجابايت للنماذج اللغوية المحلية، لكنها منذ نوفمبر 2026 لم تعد تُباع بشكل موثوق بأقل من 300 دولار. إذا احتجت إلى البقاء تحت 300 دولار تمامًا، فإن بطاقة Intel Arc B580 12GB الجديدة (12 جيجابايت VRAM، وغالبًا ما تبقى ضمن الميزانية حسب التوفر) هي الأقرب حاليًا؛ وللاستخدام مع نماذج 7B فقط، تعمل أيضًا بطاقة بسعة 8 جيجابايت مثل RTX 2060 Super (نحو 200 دولار) أو RX 6600 (نحو 230 دولارًا).',
         bullets: [
-          'تشغّل RTX 3060 12GB نموذج Llama 3 8B بصيغة Q4_K_M بسرعة نحو 25 رمزًا/ثانية وQwen 14B بصيغة Q4_K_M بسرعة نحو 15 رمزًا/ثانية.',
-          'توفر RX 6700 XT 12GB نفس سعة VRAM لكنها تحتاج إلى ROCm على Linux — ووقت هذا التحقق، لم تعد أرخص بشكل ملحوظ من RTX 3060.',
-          'تجنّب بطاقات الرسومات بسعة 8 جيجابايت عند هذه الميزانية — يمنع سقف VRAM تشغيل نماذج 14B تمامًا.',
+          'لا تزال RTX 3060 12GB تشغّل Llama 3 8B بصيغة Q4_K_M بسرعة نحو 25 رمزًا/ثانية وQwen 14B بصيغة Q4_K_M بسرعة نحو 15 رمزًا/ثانية — لم يتغيّر الأداء، لكن سعر البطاقة نفسه ارتفع بشكل كبير.',
+          'توفر RX 6700 XT 12GB نفس سعة VRAM وسعرًا مقاربًا (نحو 352 دولارًا مستعملة)، لكنها لا تزال تحتاج إلى ROCm على Linux — ولم تعد بديلًا أرخص، بل مجرد خيار مخصص لـ Linux.',
+          'بطاقة Intel Arc B580 12GB (جديدة، نحو 250-290 دولارًا عند توفرها) هي أكثر الطرق الموثوقة للبقاء تحت 300 دولار بسعة 12 جيجابايت VRAM؛ توقّع إعدادًا عبر SYCL/IPEX-LLM أقل سهولة من CUDA.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -1038,19 +1120,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'أفضل اختيار: NVIDIA RTX 3060 12GB مستعملة — تعمل CUDA فورًا مع Ollama وllama.cpp',
-          'بديل: AMD RX 6700 XT مستعملة — نفس سعة 12 جيجابايت VRAM، لكن إعداد ROCm يضيف ساعات من العمل، ولم تعد أرخص بشكل ملحوظ في 2026',
-          'تشغّل كلتا البطاقتين كل نموذج 7B ومعظم نماذج 13B–14B بصيغة Q4؛ لا تستوعب أي منهما نموذج 70B',
-          'اشترِ RTX 3060 بإصدار 12 جيجابايت — الإصدار بسعة 6 جيجابايت يشغّل نماذج 3B فقط ويبدو مطابقًا في الإعلانات',
+          'تنبيه سعري: ارتفع متوسط سعر RTX 3060 12GB وRX 6700 XT المستعملتين إلى نحو 350-360 دولارًا (resaleprices.com، 19 نوفمبر 2026) — بسبب نقص الذاكرة عام 2026، متجاوزًا بوضوح ميزانية 300 دولار لهذا الدليل',
+          'أفضل دعم برمجي بسعة 12 جيجابايت بصرف النظر عن السعر: NVIDIA RTX 3060 12GB مستعملة — تعمل CUDA فورًا مع Ollama وllama.cpp',
+          'ما يبقى فعليًا تحت 300 دولار اليوم: Intel Arc B580 12GB (جديدة)، رغم أن إعدادها أقل سهولة من CUDA',
+          'تشغّل RTX 3060 12GB وRX 6700 XT كلتاهما كل نموذج 7B ومعظم نماذج 13B–14B بصيغة Q4؛ لا تستوعب أي بطاقة في هذا الدليل نموذج 70B',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'بطاقة RTX 3060 12GB هي الأفضل دعمًا بسعة 12 جيجابايت للنماذج اللغوية المحلية، لكن سعرها المستعمل ارتفع منذ نوفمبر 2026 إلى نحو 350-360 دولارًا؛ وتبقى Intel Arc B580 12GB الجديدة (نحو 250-290 دولارًا) أفضل خيار لا يزال تحت 300 دولار.' },
+          { type: 'plain-terms', text: 'ارتفعت أسعار بطاقات الرسومات للذكاء الاصطناعي المحلي بشكل حاد في 2026 — الخيار الكلاسيكي بـ 300 دولار (RTX 3060 12GB) أصبح سعره قريبًا من 350 دولارًا، فتحقق من الأسعار الحالية وفكّر في Arc B580 إذا كانت ميزانيتك محدودة.' },
         ],
       },
       bestPick: {
         id: 'best-pick',
-        title: 'أفضل اختيار: NVIDIA RTX 3060 12GB مستعملة',
+        title: 'أفضل اختيار بسعة 12 جيجابايت: NVIDIA RTX 3060 12GB مستعملة (أصبحت الآن أعلى من 300 دولار)',
         content: [
-          '<strong>بطاقة NVIDIA RTX 3060 12GB المستعملة هي أفضل بطاقة رسومات بأقل من 300 دولار للنماذج اللغوية المحلية لأن 12 جيجابايت VRAM مع دعم CUDA بلا إعداد يمنحانك جهاز نماذج لغوية جاهزًا خلال دقائق.</strong> تشغّل Mistral Small وLlama 3 8B وQwen3 8B بسرعة 15-20 رمزًا في الثانية، ومعظم نماذج 13B–14B بصيغة Q4.',
-          'تتفوق RTX 3060 بفضل البرمجيات، لا بسعة VRAM فقط. يكتشف Ollama وllama.cpp بطاقات NVIDIA تلقائيًا عبر CUDA على Windows وLinux — دون البحث عن تعريفات، ودون ROCm. تصل AMD RX 6700 XT إلى نفس سعة 12 جيجابايت، لكن سعرها المستعمل اقترب من سعر RTX 3060 وقت هذا التحقق — قلّص نقص الذاكرة في 2026 فجوة السعر التي كانت تجعلها الخيار الاقتصادي سابقًا. اختَرها فقط إذا كنت تفضّل بالفعل Linux/ROCm؛ فالتوفير الذي كان يبرر شراءها تقلّص إلى حد كبير.',
-          'أيًا كانت البطاقة التي تشتريها، تجنّب إصدار RTX 3060 بسعة 6 جيجابايت — يبدو مطابقًا في الإعلانات لكنه يشغّل نماذج 3B فقط.',
+          '<strong>لا تزال بطاقة NVIDIA RTX 3060 12GB المستعملة الأفضل دعمًا بسعة 12 جيجابايت للنماذج اللغوية المحلية، لكنها منذ نوفمبر 2026 لم تعد تُباع بشكل موثوق بأقل من 300 دولار.</strong> دفع نقص في ذاكرة GDDR6 عام 2026 شركة Nvidia إلى إعادة إطلاق وحدات جديدة من RTX 3060 12GB، وامتد هذا الارتفاع إلى السوق المستعملة أيضًا: يضع موقع resaleprices.com متوسط السعر المستعمل عند 356 دولارًا (بنطاق 337-363 دولارًا، بارتفاع 5.4٪ خلال 30 يومًا) حتى 19 نوفمبر 2026. لا تزال تشغّل Mistral Small وLlama 3 8B وQwen3 8B بسرعة 15-20 رمزًا في الثانية، ومعظم نماذج 13B–14B بصيغة Q4 — لم يتغيّر الأداء، بل السعر فقط.',
+          'تتفوق RTX 3060 بفضل البرمجيات، لا بسعة VRAM فقط. يكتشف Ollama وllama.cpp بطاقات NVIDIA تلقائيًا عبر CUDA على Windows وLinux — دون البحث عن تعريفات، ودون ROCm. تصل AMD RX 6700 XT إلى نفس سعة 12 جيجابايت وتكلّف تقريبًا نفس السعر مستعملة (متوسط 352 دولارًا، resaleprices.com، 19 نوفمبر 2026) — فلم يتبقَّ توفير يعوّض وقت إعداد ROCm. اختَرها فقط إذا كنت تفضّل بالفعل Linux/ROCm.',
+          'إذا كانت ميزانيتك 300 دولار بشكل صارم، تجاوز هاتين البطاقتين حاليًا. حافظت Intel Arc B580 12GB الجديدة على سعر أقرب إلى سعرها المعلن 249 دولارًا — وغالبًا 250-290 دولارًا عند توفرها — بنفس سقف 12 جيجابايت، دون علاوة السوق المستعملة. تحتاج إلى واجهة SYCL في llama.cpp أو IPEX-LLM بدلًا من CUDA، وهو أقل سهولة لكنه عملي. انظر جدول المقارنة أدناه.',
+          'أيًا كانت البطاقة بسعة 12 جيجابايت التي تشتريها، تجنّب إصدار RTX 3060 بسعة 6 جيجابايت — يبدو مطابقًا في الإعلانات لكنه يشغّل نماذج 3B فقط.',
         ],
         affiliateLinks: [
           {
@@ -1071,18 +1158,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'gpu',
             label: 'تحقق من سعر RX 6700 XT على أمازون',
           },
+          {
+            url: 'https://www.amazon.com/s?k=Intel+Arc+B580',
+            productName: 'Intel Arc B580 12GB (جديدة)',
+            productCategory: 'gpu',
+            label: 'تحقق من سعر Intel Arc B580 12GB على أمازون',
+          },
         ],
       },
       comparison: {
         id: 'comparison',
-        title: 'RTX 3060 12GB مقابل RX 6700 XT للنماذج اللغوية المحلية',
+        title: 'RTX 3060 12GB مقابل RX 6700 XT مقابل Arc B580 للنماذج اللغوية المحلية',
         content: [
-          '<strong>تحمل كلتا البطاقتين 12 جيجابايت VRAM، لذا سعة النماذج متطابقة — القرار الحقيقي هو CUDA مقابل ROCm.</strong> تحقق من الأسعار الحالية لكل منهما قبل الشراء؛ يبقي نقص الذاكرة في 2026 أسعار البطاقات المستعملة متقلبة، وقد محا بالفعل معظم فجوة السعر بينهما.',
+          '<strong>تحمل البطاقات الثلاث 12 جيجابايت VRAM، لذا سعة النماذج متطابقة — القرار الحقيقي هو السعر مقابل نضج البرمجيات.</strong> حتى 19 نوفمبر 2026 (resaleprices.com)، تكلّف البطاقتان المستعملتان كلتاهما 350-360 دولارًا — أعلى من ميزانية 300 دولار لهذا الدليل — بينما تُوجد بطاقة Intel Arc B580 الجديدة غالبًا بالقرب من 300 دولار أو أقل. تحقق من الأسعار الحالية قبل الشراء — تحرك هذا السوق بسرعة طوال العام.',
         ],
-        columns: ['البطاقة', 'VRAM', 'الإعداد', 'الأنسب لـ'],
+        columns: ['البطاقة', 'VRAM', 'السعر الحالي', 'الإعداد', 'الأنسب لـ'],
         rows: [
-          { البطاقة: 'RTX 3060 12GB', VRAM: '12 جيجابايت', الإعداد: 'CUDA، فوري', 'الأنسب لـ': 'أفضل اختيار — بلا احتكاك' },
-          { البطاقة: 'RX 6700 XT', VRAM: '12 جيجابايت', الإعداد: 'ROCm، ساعات', 'الأنسب لـ': 'فقط إذا كنت تفضّل Linux/AMD بالفعل' },
+          { البطاقة: 'RTX 3060 12GB (مستعملة)', VRAM: '12 جيجابايت', 'السعر الحالي': 'نحو 356 دولارًا', الإعداد: 'CUDA، فوري', 'الأنسب لـ': 'أفضل دعم برمجي — إذا سمحت الميزانية' },
+          { البطاقة: 'RX 6700 XT (مستعملة)', VRAM: '12 جيجابايت', 'السعر الحالي': 'نحو 352 دولارًا', الإعداد: 'ROCm، ساعات', 'الأنسب لـ': 'فقط إذا كنت تفضّل Linux/AMD بالفعل' },
+          { البطاقة: 'Arc B580 12GB (جديدة)', VRAM: '12 جيجابايت', 'السعر الحالي': 'نحو 250-290 دولارًا', الإعداد: 'SYCL/IPEX-LLM', 'الأنسب لـ': 'ما يبقى فعليًا تحت 300 دولار' },
         ],
       },
       modelGuide: {
@@ -1104,12 +1198,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'إجابات سريعة عن بطاقات الرسومات بأقل من 300 دولار للنماذج اللغوية المحلية',
         faqs: [
           {
-            q: 'هل يمكن لبطاقة رسومات بسعر 300 دولار تشغيل النماذج اللغوية المحلية جيدًا؟',
-            a: 'نعم. تشغّل RTX 3060 12GB أو RX 6700 XT المستعملة كل نموذج 7B بسرعة 15-20 رمزًا في الثانية، ومعظم نماذج 13B–14B بتكميم Q4. تمتلك كلتاهما 12 جيجابايت VRAM، وهو ما يكفي للمحادثة العامة والمساعدة البرمجية والتلخيص.',
+            q: 'هل تبقى RTX 3060 12GB تحت 300 دولار في 2026؟',
+            a: 'لا — ليس بشكل موثوق منذ نوفمبر 2026. دفع نقص في ذاكرة GDDR6 عام 2026 بطاقة RTX 3060 12GB المستعملة إلى ما فوق 300 دولار بوضوح (بمتوسط 356 دولارًا، resaleprices.com، 19 نوفمبر 2026)، وتسير RX 6700 XT بسعر مقارب جدًا. تبقى كلتاهما أفضل بطاقتين من ناحية الدعم البرمجي بسعة 12 جيجابايت للنماذج اللغوية المحلية إذا سمحت الميزانية. إذا احتجت إلى البقاء تحت 300 دولار، فإن بطاقة Intel Arc B580 12GB الجديدة (نحو 250-290 دولارًا عند توفرها) هي الأقرب حاليًا.',
           },
           {
             q: 'لماذا اختيار RTX 3060 بدلًا من RX 6700 XT إذا كان سعرهما متقاربًا الآن؟',
-            a: 'تستخدم RTX 3060 تقنية NVIDIA CUDA التي يكتشفها Ollama وllama.cpp تلقائيًا دون إعداد. تحتاج RX 6700 XT إلى ROCm — عادةً ساعات من الإعداد على Linux، وغير مدعومة على Windows للاستدلال السريع. عندما تتقارب أسعار البطاقتين، لم يعد هناك توفير يعوّض وقت الإعداد هذا.',
+            a: 'تستخدم RTX 3060 تقنية NVIDIA CUDA التي يكتشفها Ollama وllama.cpp تلقائيًا دون إعداد. تحتاج RX 6700 XT إلى ROCm — عادةً ساعات من الإعداد على Linux، وغير مدعومة على Windows للاستدلال السريع. منذ نوفمبر 2026 تكلّف البطاقتان المستعملتان تقريبًا نفس السعر، فلم يعد هناك توفير يعوّض وقت الإعداد هذا — إلا إذا كنت تفضّل بالفعل Linux/ROCm.',
           },
           {
             q: 'هل أشتري RTX 3060 بسعة 6 جيجابايت أم 12 جيجابايت؟',
@@ -1136,15 +1230,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     designSkin: 'hub',
     theme: 'Hardware-Specific',
     heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ko.webp',
-    title: 'RTX 3060 12GB: 로컬 LLM용 300달러 이하 최고의 GPU는（2026년）?',
+    title: 'RTX 3060 12GB: 로컬 LLM용 300달러 이하 최고의 GPU는（2026년）',
     seoTitle: 'RTX 3060 12GB 로컬 LLM 2026: 300달러 이하 최고의 GPU',
-    metaDescription: '중고 RTX 3060 12GB는 로컬 LLM을 위한 300달러 이하 최고의 GPU입니다 — 12GB VRAM으로 모든 7B와 대부분의 14B 모델을 Q4로 실행하며, CUDA는 Ollama와 설정 없이 바로 작동합니다. 현재 가격을 확인하십시오.',
+    metaDescription: '중고 RTX 3060 12GB는 2026년 메모리 부족으로 가격이 크게 올랐습니다 — 그래도 로컬 LLM용 최고의 12GB GPU입니다. 현재 가격과 실제 300달러 이하 대안을 확인하십시오.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-05-19',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT'],
+    current_hardware_mentioned: ['RTX 3060 12 GB', 'RX 6700 XT', 'Intel Arc B580 12GB'],
     educationalLevel: 'Intermediate',
     audience: '로컬 LLM 추론을 위한 첫 GPU를 선택하는 예산 중시 구매자',
     affiliateDisclosure: true,
@@ -1152,7 +1246,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-ollama-models-rtx-3060-12gb'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>중고 NVIDIA RTX 3060 12GB는 로컬 LLM을 위한 300달러 이하 최고의 GPU입니다.</strong> 12GB VRAM으로 모든 7B 모델과 대부분의 14B 모델을 Q4로 실행할 수 있으며, NVIDIA CUDA는 설치하자마자 Ollama와 함께 작동합니다 — 드라이버를 찾아 헤맬 필요가 없습니다. 오래된 수치를 믿지 말고 현재 중고 가격을 확인하십시오. 2026년 메모리 부족으로 GPU 가격이 상승했으며, 일반적인 예산형 대안인 AMD RX 6700 XT도 더 이상 눈에 띄게 저렴하지 않습니다.',
+      '<strong>2026년 11월 기준, 중고 NVIDIA RTX 3060 12GB는 더 이상 300달러 이하로 안정적으로 구매할 수 없습니다.</strong> 2026년 GDDR6 메모리 부족으로 Nvidia가 이 카드를 재출시했고, 그 가격 상승은 중고 시장에도 번졌습니다. resaleprices.com(2026년 11월 19일 기준)에 따르면 중고 평균 가격은 약 350~360달러이며, AMD RX 6700 XT도 거의 같은 가격대입니다. 예산이 300달러를 약간 넘길 수 있다면 두 카드 모두 여전히 로컬 LLM용 소프트웨어 지원이 가장 우수한 12GB GPU입니다: 12GB VRAM으로 모든 7B 모델과 대부분의 14B 모델을 Q4로 실행하며, NVIDIA CUDA는 Ollama와 설정 없이 바로 작동합니다 — 드라이버를 찾아 헤맬 필요가 없습니다. 엄격히 300달러 이하를 유지해야 한다면, 새로 나온 Intel Arc B580 12GB(재고가 있을 때 약 250~290달러)가 현재 가장 가까운 선택이지만, 설정은 CUDA보다 덜 간단합니다. 구매 전 현재 가격을 확인하십시오 — 이 시장은 2026년 내내 빠르게 움직였습니다.',
     toc: [
       { label: '최고의 선택: 중고 RTX 3060 12GB', anchor: '#best-pick' },
       { label: 'RTX 3060 대 RX 6700 XT', anchor: '#comparison' },
@@ -1161,17 +1255,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: '관련 읽을거리', anchor: '#related' },
     ],
     intro:
-      '300달러 이하에서는 두 종류의 중고 카드가 로컬 LLM 추론을 지배합니다: NVIDIA RTX 3060 12GB와 AMD RX 6700 XT입니다. 둘 다 12GB VRAM을 갖추고 있어 — 7B와 대부분의 13B~14B 모델을 Q4로 실행하기에 충분합니다. 예전에는 가격이 차이점이었지만, 2026년에는 대부분 소프트웨어 사용 편의성이 차이점입니다.',
+      '2026년 로컬 LLM 추론용 GPU 가격은 크게 움직였습니다. 2026년 GDDR6 메모리 부족으로 Nvidia가 RTX 3060 12GB를 재출시했고, 이 가격 상승은 신품과 중고를 가리지 않고 12GB 카드 가격을 본 가이드가 기준으로 삼는 300달러를 크게 넘어서게 만들었습니다. 중고 NVIDIA RTX 3060 12GB와 AMD RX 6700 XT는 현재 재판매 시장에서 둘 다 약 350달러 선에서 거래됩니다(resaleprices.com, 2026년 11월 19일 기준) — 여전히 로컬 LLM용 최고의 12GB 카드이지만, 더 이상 엄격한 예산형 선택은 아닙니다. 오늘 300달러 이하를 유지해야 하는 독자는 새로 나온 Intel Arc B580 12GB를 살펴봐야 합니다.',
     quickAnswerTop: {
       ko: {
         question: '로컬 LLM을 실행하기 위한 300달러 이하 최고의 GPU는 무엇입니까?',
-        answer: '중고 RTX 3060 12GB는 로컬 LLM을 위한 300달러 이하 최고의 GPU입니다 — 12GB VRAM으로 모든 7B와 대부분의 14B 모델을 실행하며, CUDA는 설정 없이 Ollama와 함께 작동합니다. 오래된 수치가 아니라 현재 중고 가격을 확인하십시오 — 2026년에 GPU 가격이 크게 변동했습니다.',
+        answer: '중고 RTX 3060 12GB는 여전히 로컬 LLM용 소프트웨어 지원이 가장 우수한 12GB GPU이지만, 2026년 11월 기준 더 이상 300달러 이하로 안정적으로 구매할 수 없습니다. 엄격히 300달러 이하를 유지해야 한다면, 새로 나온 Intel Arc B580 12GB(12GB VRAM, 재고 상황에 따라 예산 안에 드는 경우가 많음)가 현재 가장 가까운 선택입니다. 7B 모델만 사용한다면 RTX 2060 Super(약 200달러)나 RX 6600(약 230달러) 같은 8GB 카드도 가능합니다.',
         bullets: [
-          'RTX 3060 12GB는 Llama 3 8B Q4_K_M을 약 25 tok/s로, Qwen 14B Q4_K_M을 약 15 tok/s로 실행합니다.',
-          'RX 6700 XT 12GB는 동일한 VRAM 용량을 제공하지만 Linux에서 ROCm이 필요합니다 — 그리고 이 확인 시점 기준으로 RTX 3060보다 더 이상 눈에 띄게 저렴하지 않습니다.',
-          '이 가격대에서는 8GB GPU를 피하십시오 — VRAM 한계가 14B 모델을 완전히 차단합니다.',
+          'RTX 3060 12GB는 여전히 Llama 3 8B Q4_K_M을 약 25 tok/s로, Qwen 14B Q4_K_M을 약 15 tok/s로 실행합니다 — 성능은 그대로이지만 카드 가격 자체가 크게 올랐습니다.',
+          'RX 6700 XT 12GB는 동일한 VRAM 용량과 비슷한 가격(중고 약 352달러)을 제공하지만 여전히 Linux에서 ROCm이 필요합니다 — 더 이상 저렴한 대안이 아니라 Linux 전용 선택일 뿐입니다.',
+          'Intel Arc B580 12GB(신품, 재고가 있을 때 약 250~290달러)는 현재 300달러 이하로 12GB VRAM을 확보하는 가장 확실한 방법입니다; CUDA만큼 간단하지 않은 SYCL/IPEX-LLM 설정이 필요합니다.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-11',
       },
     },
     sections: {
@@ -1179,19 +1273,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '최고의 선택: 중고 NVIDIA RTX 3060 12GB — CUDA가 Ollama 및 llama.cpp와 즉시 작동합니다',
-          '대안: 중고 AMD RX 6700 XT — 동일한 12GB VRAM이지만 ROCm 설정에 몇 시간이 걸리며, 2026년에는 더 이상 눈에 띄게 저렴하지 않습니다',
-          '두 카드 모두 모든 7B 모델과 대부분의 13B~14B 모델을 Q4로 실행합니다; 둘 다 70B 모델은 담지 못합니다',
-          'RTX 3060은 12GB 버전을 구매하십시오 — 6GB 버전은 3B 모델만 실행할 수 있으며 상품 목록에서 구분이 어렵습니다',
+          '가격 알림: 중고 RTX 3060 12GB와 RX 6700 XT는 2026년 메모리 부족으로 평균 350~360달러(resaleprices.com, 2026년 11월 19일 기준)까지 올라 본 가이드의 300달러 예산을 크게 넘어섰습니다',
+          '가격과 무관하게 가장 우수한 소프트웨어 지원: 중고 NVIDIA RTX 3060 12GB — CUDA가 Ollama 및 llama.cpp와 즉시 작동합니다',
+          '오늘 실제로 300달러 이하인 제품: Intel Arc B580 12GB(신품), 다만 설정은 CUDA보다 덜 간단합니다',
+          'RTX 3060 12GB와 RX 6700 XT는 모두 모든 7B 모델과 대부분의 13B~14B 모델을 Q4로 실행합니다; 본 가이드의 어떤 GPU도 70B 모델은 담지 못합니다',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'RTX 3060 12GB는 로컬 LLM용 소프트웨어 지원이 가장 우수한 12GB GPU이지만, 2026년 11월 기준 중고 가격이 약 350~360달러로 올랐습니다; 300달러 이하를 유지하는 최선의 선택은 Intel Arc B580 12GB(신품, 약 250~290달러)입니다.' },
+          { type: 'plain-terms', text: '로컬 AI용 GPU 가격은 2026년에 급등했습니다 — 전통적인 300달러급 선택지였던 RTX 3060 12GB는 이제 350달러에 가까워졌으니, 현재 가격을 확인하고 예산이 빠듯하다면 Arc B580을 고려하십시오.' },
         ],
       },
       bestPick: {
         id: 'best-pick',
-        title: '최고의 선택: 중고 NVIDIA RTX 3060 12GB',
+        title: '최고의 12GB 선택: 중고 NVIDIA RTX 3060 12GB(현재는 300달러를 크게 넘음)',
         content: [
-          '<strong>중고 NVIDIA RTX 3060 12GB가 로컬 LLM을 위한 300달러 이하 최고의 GPU인 이유는 12GB VRAM과 설정이 필요 없는 CUDA 지원이 몇 분 안에 작동하는 LLM 환경을 제공하기 때문입니다.</strong> Mistral Small, Llama 3 8B, Qwen3 8B를 초당 15~20 토큰으로 실행하며, 대부분의 13B~14B 모델을 Q4로 실행합니다.',
-          'RTX 3060은 VRAM뿐만 아니라 소프트웨어에서도 우위를 점합니다. Ollama와 llama.cpp는 Windows와 Linux 모두에서 CUDA를 통해 NVIDIA GPU를 자동으로 감지합니다 — 드라이버를 찾을 필요도, ROCm도 필요 없습니다. AMD RX 6700 XT는 동일한 12GB 용량에 도달하지만, 이 확인 시점 기준으로 중고 가격이 RTX 3060과 비슷해졌습니다 — 2026년 메모리 부족이 예전에 이 카드를 예산형 선택지로 만들었던 가격 차이를 좁혔습니다. 이미 Linux/ROCm을 선호하는 경우에만 선택하십시오; 예전에 이를 정당화했던 비용 절감 효과는 대부분 사라졌습니다.',
-          '어느 쪽을 구매하든, RTX 3060의 6GB 버전은 피하십시오 — 상품 목록에서는 동일해 보이지만 3B 모델만 지원합니다.',
+          '<strong>중고 NVIDIA RTX 3060 12GB는 여전히 로컬 LLM용 소프트웨어 지원이 가장 우수한 12GB GPU이지만, 2026년 11월 기준 더 이상 300달러 이하로 안정적으로 구매할 수 없습니다.</strong> 2026년 GDDR6 메모리 부족으로 Nvidia가 새 RTX 3060 12GB를 재출시했고, 이 가격 상승은 중고 시장에도 번졌습니다: resaleprices.com(2026년 11월 19일 기준)에 따르면 중고 평균 가격은 356달러(337~363달러 범위, 30일간 5.4% 상승)입니다. 여전히 Mistral Small, Llama 3 8B, Qwen3 8B를 초당 15~20 토큰으로 실행하며, 대부분의 13B~14B 모델을 Q4로 실행합니다 — 성능 면에서는 달라진 것이 없고, 가격만 달라졌습니다.',
+          'RTX 3060은 VRAM뿐만 아니라 소프트웨어에서도 우위를 점합니다. Ollama와 llama.cpp는 Windows와 Linux 모두에서 CUDA를 통해 NVIDIA GPU를 자동으로 감지합니다 — 드라이버를 찾을 필요도, ROCm도 필요 없습니다. AMD RX 6700 XT는 동일한 12GB 용량에 도달하며 이 확인 시점(resaleprices.com, 2026년 11월 19일, 평균 352달러) 기준으로 가격도 거의 같습니다 — ROCm 설정 시간을 상쇄할 가격상의 이점이 더 이상 없습니다. 이미 Linux/ROCm을 선호하는 경우에만 선택하십시오.',
+          '예산이 엄격히 300달러라면, 지금은 이 두 카드를 제외하십시오. 새로 나온 Intel Arc B580 12GB는 249달러 출시가에 더 가까운 가격대를 유지하고 있습니다 — 재고가 있을 때 보통 250~290달러 — 중고 시장의 프리미엄 없이 동일한 12GB 상한을 제공합니다. CUDA 대신 llama.cpp의 SYCL 백엔드나 IPEX-LLM이 필요해 덜 간단하지만 작동합니다. 아래 비교표를 참고하십시오.',
+          '어느 12GB 카드를 구매하든, RTX 3060의 6GB 버전은 피하십시오 — 상품 목록에서는 동일해 보이지만 3B 모델만 지원합니다.',
         ],
         affiliateLinks: [
           {
@@ -1212,18 +1311,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'gpu',
             label: 'Amazon에서 RX 6700 XT 가격 확인',
           },
+          {
+            url: 'https://www.amazon.com/s?k=Intel+Arc+B580',
+            productName: 'Intel Arc B580 12GB(신품)',
+            productCategory: 'gpu',
+            label: 'Amazon에서 Intel Arc B580 12GB 가격 확인',
+          },
         ],
       },
       comparison: {
         id: 'comparison',
-        title: 'RTX 3060 12GB 대 RX 6700 XT: 로컬 LLM 비교',
+        title: 'RTX 3060 12GB 대 RX 6700 XT 대 Arc B580: 로컬 LLM 비교',
         content: [
-          '<strong>두 카드 모두 12GB VRAM을 갖추고 있어 모델 용량은 동일합니다 — 실질적인 결정은 CUDA냐 ROCm이냐입니다.</strong> 구매 전 각각의 현재 가격을 확인하십시오; 2026년 메모리 부족으로 중고 GPU 가격이 계속 변동하고 있으며, 이미 두 카드 사이의 가격 차이 대부분을 없앴습니다.',
+          '<strong>세 카드 모두 12GB VRAM을 갖추고 있어 모델 용량은 동일합니다 — 실질적인 결정은 가격 대 소프트웨어 성숙도입니다.</strong> 2026년 11월 19일 기준(resaleprices.com) 두 중고 카드 모두 350~360달러로 본 가이드의 300달러 예산을 넘어서지만, 새로 나온 Intel Arc B580은 300달러 근처 또는 그 이하에서 꾸준히 발견됩니다. 구매 전 현재 가격을 확인하십시오 — 이 시장은 한 해 내내 빠르게 움직였습니다.',
         ],
-        columns: ['GPU', 'VRAM', '설정', '최적 대상'],
+        columns: ['GPU', 'VRAM', '현재 가격', '설정', '최적 대상'],
         rows: [
-          { GPU: 'RTX 3060 12GB', VRAM: '12GB', 설정: 'CUDA, 즉시', '최적 대상': '최고의 선택 — 설정 번거로움 없음' },
-          { GPU: 'RX 6700 XT', VRAM: '12GB', 설정: 'ROCm, 몇 시간', '최적 대상': '이미 Linux/AMD를 선호하는 경우에만' },
+          { GPU: 'RTX 3060 12GB(중고)', VRAM: '12GB', '현재 가격': '약 356달러', 설정: 'CUDA, 즉시', '최적 대상': '최고의 소프트웨어 지원 — 예산이 허락한다면' },
+          { GPU: 'RX 6700 XT(중고)', VRAM: '12GB', '현재 가격': '약 352달러', 설정: 'ROCm, 몇 시간', '최적 대상': '이미 Linux/AMD를 선호하는 경우에만' },
+          { GPU: 'Arc B580 12GB(신품)', VRAM: '12GB', '현재 가격': '약 250~290달러', 설정: 'SYCL/IPEX-LLM', '최적 대상': '오늘 실제로 300달러 이하' },
         ],
       },
       modelGuide: {
@@ -1245,12 +1351,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '300달러 이하 GPU에 관한 로컬 LLM 빠른 답변',
         faqs: [
           {
-            q: '300달러짜리 GPU로 로컬 LLM을 잘 실행할 수 있습니까?',
-            a: '네. 중고 RTX 3060 12GB 또는 RX 6700 XT는 모든 7B 모델을 초당 15~20 토큰으로 실행하며, 대부분의 13B~14B 모델을 Q4 양자화로 실행합니다. 둘 다 12GB VRAM을 갖추고 있어 일반 채팅, 코딩 지원, 요약에 충분합니다.',
+            q: 'RTX 3060 12GB는 2026년에도 300달러 이하입니까?',
+            a: '아니요 — 2026년 11월 기준 더 이상 안정적으로 그렇지 않습니다. 2026년 GDDR6 메모리 부족으로 중고 RTX 3060 12GB는 300달러를 크게 넘어섰고(평균 356달러, resaleprices.com, 2026년 11월 19일 기준), RX 6700 XT도 거의 같은 가격대입니다. 예산이 허락한다면 둘 다 여전히 로컬 LLM용 최고의 12GB 카드입니다. 300달러 이하를 유지해야 한다면, 새로 나온 Intel Arc B580 12GB(재고가 있을 때 약 250~290달러)가 현재 가장 가까운 선택입니다.',
           },
           {
             q: '지금 가격이 거의 비슷하다면 왜 RX 6700 XT 대신 RTX 3060을 선택해야 합니까?',
-            a: 'RTX 3060은 NVIDIA CUDA를 사용하며, Ollama와 llama.cpp가 설정 없이 자동으로 감지합니다. RX 6700 XT는 ROCm이 필요하며, 일반적으로 Linux에서 몇 시간의 설정이 필요하고 Windows에서는 빠른 추론을 지원하지 않습니다. 두 카드의 가격이 거의 비슷할 때는 그 설정 시간을 상쇄할 만한 절감액이 더 이상 없습니다.',
+            a: 'RTX 3060은 NVIDIA CUDA를 사용하며, Ollama와 llama.cpp가 설정 없이 자동으로 감지합니다. RX 6700 XT는 ROCm이 필요하며, 일반적으로 Linux에서 몇 시간의 설정이 필요하고 Windows에서는 빠른 추론을 지원하지 않습니다. 2026년 11월 기준 두 중고 카드의 가격이 거의 비슷하므로, 이미 Linux/ROCm을 선호하지 않는 한 그 설정 시간을 상쇄할 만한 절감액이 더 이상 없습니다.',
           },
           {
             q: 'RTX 3060은 6GB와 12GB 중 무엇을 사야 합니까?',
