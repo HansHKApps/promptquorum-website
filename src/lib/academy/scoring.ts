@@ -3,17 +3,22 @@
 // questions never count. Pass = 70% or more. "none": no score. "final": the final test only.
 // "per_lesson_and_final": every lesson quiz plus the final test, pooled.
 
-import type { Programme, Question, QuizResult } from './types'
+import type { Programme, Question, QuizQuestion, QuizResult } from './types'
 
 export const PASS_MARK = 70
 
-export function scoreQuiz(quizId: string, questions: Question[], answers: Record<string, number>): QuizResult {
+/** The correct option of a question: from the server's verdict (`reveal`), or from a full question (tests, quick check). */
+export function correctIndexOf(q: Question | QuizQuestion): number | undefined {
+  return 'correctIndex' in q ? q.correctIndex : q.reveal?.correctIndex
+}
+
+export function scoreQuiz(quizId: string, questions: (Question | QuizQuestion)[], answers: Record<string, number>): QuizResult {
   const byTopic: QuizResult['byTopic'] = {}
   let correct = 0
   for (const q of questions) {
     const t = (byTopic[q.topic] ??= { correct: 0, total: 0 })
     t.total++
-    if (answers[q.id] === q.correctIndex) {
+    if (answers[q.id] === correctIndexOf(q)) {
       t.correct++
       correct++
     }

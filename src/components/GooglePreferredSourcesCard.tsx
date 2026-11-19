@@ -30,7 +30,8 @@ const SLOT_ID = 'google_preferred_sources'
 // even though it can't survive a reload or a new tab.
 let sessionShownFallback = false
 
-const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/settings(\/|$)/, /\/preferences(\/|$)/]
+// /academy: no popups over the learning tool (QA audit F12), it covered the "Continue" button.
+const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/settings(\/|$)/, /\/preferences(\/|$)/, /\/academy(\/|$)/]
 
 type Copy = {
   title: string

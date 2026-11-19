@@ -14,6 +14,7 @@ import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import { LEVELS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
+import { Content } from './Content'
 import { LessonView } from './LessonView'
 import { QuizView } from './QuizView'
 import { ResultsView } from './ResultsView'
@@ -21,20 +22,14 @@ import { useAcademyState } from './useAcademyState'
 
 export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicSuggestion[] }) {
   const tx = ACADEMY_COPY[lang]
-  const { state, ready, saved, update } = useAcademyState()
-  const [restored, setRestored] = useState<boolean | null>(null)
+  const { state, ready, saved, pending, continueSaved, discardSaved, update } = useAcademyState()
 
-  // After storage was read: a stored draft means "restored"; no draft (first visit, or data just deleted) gets a
-  // fresh one in memory only. It is written to storage on the learner's first change, so "Delete my data" leaves nothing.
+  // No draft yet (first visit, or data just deleted): a fresh one in memory only. Saved progress from an earlier
+  // visit is never restored silently; the setup screen offers "Continue" / "Start new" (F3).
   useEffect(() => {
     if (!ready) return
-    if (!state.draft) {
-      setRestored(false)
-      update((s) => ({ ...s, view: 'setup', draft: defaultDraft(lang) }), false)
-    } else if (restored === null) {
-      setRestored(true)
-    }
-  }, [ready, restored, state.draft, update, lang])
+    if (!state.draft) update((s) => ({ ...s, view: 'setup', draft: defaultDraft(lang) }), false)
+  }, [ready, state.draft, update, lang])
 
   const draft = state.draft
   if (!ready || !draft) {
@@ -74,7 +69,8 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
             )
           }
           onShowResults={() => update((s) => ({ ...s, view: 'results' }))}
-          onStartOver={() => update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined }))}
+          // "Start over" also empties the subject field, so new text is not appended to the old subject (F12).
+          onStartOver={() => update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined, draft: s.draft ? { ...s.draft, subject: '' } : s.draft }))}
         />
       ) : state.view === 'diagnostic' ? (
         <QuickCheckView tx={tx} draft={draft} quickCheck={state.quickCheck} update={update} />
@@ -83,12 +79,10 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           tx={tx}
           draft={draft}
           topics={topics}
-          restored={restored === true}
+          pendingSubject={pending?.programme?.subject ?? pending?.draft?.subject ?? null}
+          onContinue={continueSaved}
           onChange={(patch) => update((s) => ({ ...s, draft: { ...(s.draft ?? draft), ...patch, updatedAt: new Date().toISOString() } }))}
-          onStartNew={() => {
-            update((s) => ({ ...s, view: 'setup', draft: defaultDraft(lang), quickCheck: undefined, programme: undefined }))
-            setRestored(false)
-          }}
+          onStartNew={discardSaved}
           onSubmit={() =>
             update((s) => {
               const d = { ...(s.draft ?? draft), subject: (s.draft ?? draft).subject.trim() }
@@ -115,7 +109,8 @@ function SetupForm({
   tx,
   draft,
   topics,
-  restored,
+  pendingSubject,
+  onContinue,
   onChange,
   onStartNew,
   onSubmit,
@@ -123,7 +118,9 @@ function SetupForm({
   tx: AcademyCopy
   draft: SetupDraft
   topics: TopicSuggestion[]
-  restored: boolean
+  /** saved progress found in this browser (null = none): offered as Continue / Start new */
+  pendingSubject: string | null
+  onContinue: () => void
   onChange: (patch: Partial<SetupDraft>) => void
   onStartNew: () => void
   onSubmit: () => void
@@ -144,12 +141,17 @@ function SetupForm({
 
   return (
     <form onSubmit={submit} noValidate className="space-y-6 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
-      {restored && (
-        <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-purple-50 px-4 py-3 text-sm text-purple-900" role="status">
-          <span>{tx.restored}</span>
-          <button type="button" onClick={onStartNew} className="font-medium text-purple-700 underline underline-offset-2">
-            {tx.startNew}
-          </button>
+      {pendingSubject !== null && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl bg-purple-50 px-4 py-3 text-sm text-purple-900" role="status">
+          <span>{tx.savedFound(pendingSubject)}</span>
+          <span className="flex gap-4">
+            <button type="button" onClick={onContinue} className="font-semibold text-purple-800 underline underline-offset-2">
+              {tx.continueSaved}
+            </button>
+            <button type="button" onClick={onStartNew} className="font-medium text-purple-700 underline underline-offset-2">
+              {tx.startNew}
+            </button>
+          </span>
         </div>
       )}
 
@@ -173,6 +175,7 @@ function SetupForm({
             {tx.subjectError}
           </p>
         )}
+        <p className="mt-2 text-sm text-gray-600">{tx.personalDataWarning}</p>
         {topics.length > 0 && (
           <div className="mt-3">
             <p className="text-sm text-gray-600">{tx.suggestions}</p>
@@ -242,9 +245,23 @@ function SetupForm({
         </select>
       </div>
 
+      <label className="flex cursor-pointer items-start gap-3 text-sm text-gray-800">
+        <input
+          type="checkbox"
+          checked={draft.saveProgress}
+          onChange={(e) => change({ saveProgress: e.target.checked })}
+          className="mt-1 h-4 w-4 shrink-0 accent-purple-600"
+        />
+        <span>
+          <span className="block font-medium text-gray-900">{tx.saveProgressLabel}</span>
+          <span className="block text-gray-600">{tx.saveProgressHint}</span>
+        </span>
+      </label>
+
       <button type="submit" className="w-full rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 sm:w-auto">
         {tx.submit}
       </button>
+      <p className="text-sm text-gray-600">{tx.ageNotice}</p>
     </form>
   )
 }
@@ -548,6 +565,7 @@ function ProgrammeView({
           {tx.programmeTitle}: {programme.subject}
         </h2>
         <p className="mt-1 text-sm text-gray-600">{tx.totalTime(tx.minutes(total))}</p>
+        {programme.testMode !== 'none' && <p className="text-sm text-gray-600">{tx.testSplit(reading, Math.round(programme.testPlan.testMinutes))}</p>}
         {minutesSpent > 0 && <p className="text-sm text-gray-600">{tx.timeSpent(tx.minutes(minutesSpent))}</p>}
         <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-purple-100" role="progressbar" aria-valuemin={0} aria-valuemax={programme.lessons.length} aria-valuenow={done}>
           <div className="h-full bg-purple-600 transition-all" style={{ width: `${(done / programme.lessons.length) * 100}%` }} />
@@ -561,14 +579,17 @@ function ProgrammeView({
       )}
       <div>
         <h3 className="font-medium text-gray-900">{tx.objectivesTitle}</h3>
-        <ul className="mt-2 list-disc space-y-1 ps-5 text-gray-700">
-          {programme.objectives.map((o, i) => (
-            <li key={i}>{o}</li>
-          ))}
-        </ul>
+        <Content lang={programme.language}>
+          <ul className="mt-2 list-disc space-y-1 ps-5 text-gray-700">
+            {programme.objectives.map((o, i) => (
+              <li key={i}>{o}</li>
+            ))}
+          </ul>
+        </Content>
       </div>
       <div>
         <h3 className="font-medium text-gray-900">{tx.lessonsTitle}</h3>
+        <Content lang={programme.language}>
         <ol className="mt-2 space-y-2">
           {programme.lessons.map((l, i) => {
             const isDone = programme.progress.lessonStatus[l.id] === 'done'
@@ -599,6 +620,7 @@ function ProgrammeView({
             )
           })}
         </ol>
+        </Content>
       </div>
       <p className="text-sm text-gray-700">{testLine}</p>
       <div className="flex flex-wrap gap-3">

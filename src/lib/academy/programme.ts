@@ -15,10 +15,13 @@ export const OBJECTIVES_MAX = 8
 export const LESSON_MINUTES_MIN = 2
 export const MINUTES_TOLERANCE = 0.2
 
-/** SPEC 7.5: lesson quiz 3 questions; final test 10 questions up to 60 min, 15 above. */
+/**
+ * SPEC 7.5: lesson quiz 3 questions; final test 10 questions up to 60 min, 15 above.
+ * QA audit F13: a 15-minute programme gets a 6-question test, so the lessons are not squeezed to 1-2 minutes each.
+ */
 export const LESSON_QUIZ_SIZE = 3
 export function finalTestSize(availableMinutes: number): number {
-  return availableMinutes <= 60 ? 10 : 15
+  return availableMinutes <= 15 ? 6 : availableMinutes <= 60 ? 10 : 15
 }
 /** Assumed answering time per question (reading, choosing, reading the explanation). */
 export const MINUTES_PER_QUESTION = 0.75

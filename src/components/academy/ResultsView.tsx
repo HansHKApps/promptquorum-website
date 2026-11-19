@@ -4,8 +4,10 @@
 // pass/fail against 70%, learning time, per-question review of the counting final-test attempt, retake with new
 // questions when not passed. The certificate download arrives in Phase 6.
 
-import { countingFinal, PASS_MARK, programmeScore } from '@/lib/academy/scoring'
+import { correctIndexOf, countingFinal, PASS_MARK, programmeScore } from '@/lib/academy/scoring'
 import type { Programme } from '@/lib/academy/types'
+import { AiBadge } from './AiBadge'
+import { Content } from './Content'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -86,10 +88,13 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
       {final.questions && (
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="cursor-pointer font-medium text-gray-900">{tx.reviewAnswers}</summary>
+          <Content lang={programme.language}>
           <ol className="mt-3 space-y-4">
             {final.questions.map((q, i) => {
               const a = final.answers[q.id]
-              const right = a === q.correctIndex
+              const correctIndex = correctIndexOf(q)
+              const right = a === correctIndex
+              const explanation = 'reveal' in q ? q.reveal?.explanationCorrect : (q as { explanationCorrect?: string }).explanationCorrect
               return (
                 <li key={q.id} className="space-y-1 text-sm">
                   <p className="font-medium text-gray-900">
@@ -100,14 +105,17 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
                   </p>
                   {!right && (
                     <p className="text-gray-800">
-                      {tx.correctAnswer}: {q.options[q.correctIndex]}
+                      {tx.correctAnswer}: {correctIndex !== undefined ? q.options[correctIndex] : '–'}
                     </p>
                   )}
-                  <p className="text-gray-600">{q.explanationCorrect}</p>
+                  <p className="text-gray-600">
+                    {explanation} <AiBadge text={tx.aiLabel} />
+                  </p>
                 </li>
               )
             })}
           </ol>
+          </Content>
         </details>
       )}
 
