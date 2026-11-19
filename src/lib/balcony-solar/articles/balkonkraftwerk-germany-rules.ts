@@ -9,8 +9,8 @@ const de = getCountryData('de')!;
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-04-18',
-    last_full_refresh: '2026-10-18',
+    next_refresh_due: '2027-05-19',
+    last_full_refresh: '2026-11-19',
     theme: 'Balcony Solar Legislation',
     title: 'Balkonkraftwerk Rules in Germany: The Complete 2026 Guide',
     heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-en.webp',
@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Germany is the origin market for balcony solar — the "Balkonkraftwerk" — and has the most established regulatory framework of any country this guide covers. This page tracks the current 800W inverter cap, the single-registration process, and a newer product standard that took effect in December 2025.',
     metaDescription: 'Balkonkraftwerk rules in Germany: 800 VA cap, one-month MaStR registration, moving, decommissioning and DIN VDE V 0126-95 — checked against § 8 EEG.',
     publishDate: '2026-07-02',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-19',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'German balcony solar buyers and renters confirming current legal requirements',
@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'DIN VDE V 0126-95 (effective 2025-12-01) is the first dedicated EU product safety standard for plug-in solar',
           'Storage-equipped (battery) balcony systems are excluded from this simplified regime entirely',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -69,6 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '800W Inverter Limit',
         content: [
           `**The inverter AC output cap is ${de.powerLimitW}W, unchanged since the May 2024 Solarpaket I reform.** It's now anchored in two sources: § 8 EEG 2023 sets the legal ceiling, and DIN VDE V 0126-95 — a technical/safety product standard effective December 1, 2025 — reinforces it as the first dedicated EU product standard for plug-in solar devices.`,
+          'A separately revised grid-connection technical rule, VDE-AR-N 4105:2026-03, lets individual grid operators keep applying their previous connection terms until March 1, 2027 while they roll the update into their own Technische Anschlussbedingungen (TAB); the German utility association BDEW circulated an updated model TAB text dated July 31, 2026. This detail comes from secondary consumer-advisory sources, not independently confirmed against the primary VDE text, and it governs how grid operators implement the connection process — it does not change the 800W/2,000 Wp caps themselves.',
         ],
       },
       registration: {
@@ -84,7 +85,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Register within one month of commissioning, enter changes within one month, and keep your existing registration when you move.** § 5 MaStRV requires registration within one month of commissioning, and the Marktstammdatenregister help says changes to registered data must also be entered within one month.',
           'When you move, the MaStR help (written for solar units in general, not Balkonkraftwerke specifically) says to update the location of the existing unit and keep the first commissioning date from the original site — no decommissioning entry is needed for a move. To take a unit out of service, the start of a temporary or final decommissioning must be registered within one month (§ 5 MaStRV); a grid-operator notice is not required for Balkonkraftwerke.',
-          'Skipping registration is an administrative offence. Guides quote fines of up to €50,000, but they disagree on the legal basis and none document a fine against a private user, so treat that figure as unconfirmed. For scope, § 8 (5a) EEG 2023 covers devices up to 2 kW installed capacity and up to 800 VA inverter output.',
+          'Skipping registration is an administrative offence; consumer guides including ADAC cite § 95 EnWG as the basis. Guides quote fines of up to €50,000, but they disagree on the exact legal basis and none document a fine actually issued against a private user, so treat that figure as unconfirmed. For scope, § 8 (5a) EEG 2023 covers devices up to 2 kW installed capacity and up to 800 VA inverter output.',
+        ],
+        callouts: [
+          { type: 'info', text: 'This page summarizes publicly available regulatory sources for general information only — it is not legal advice. For your specific situation, confirm current requirements with your grid operator, the Bundesnetzagentur, or a qualified lawyer.' },
         ],
       },
       plugTypes: {
@@ -133,6 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Are there subsidies for Balkonkraftwerk in Germany?', a: 'Some states and municipalities offer subsidies, but availability and amount vary significantly by region — check your specific state or city\'s current program rather than assuming a nationwide subsidy applies.' },
           { q: 'When do I have to register my Balkonkraftwerk?', a: 'Within one month of commissioning, under § 5 MaStRV. Commissioning is when the device first feeds AC power into the household network — usually when the plug goes in.' },
           { q: 'What do I do with my Balkonkraftwerk when I move?', a: 'Update the location of the existing MaStR entry within one month and keep the original first-commissioning date; the MaStR help states that no decommissioning is registered for a move. That guidance is written for solar units in general, not Balkonkraftwerke specifically.' },
+          { q: 'Can a Balkonkraftwerk reach 7,000 watts (7 kW)?', a: 'No — claims of a "7,000-watt Balkonkraftwerk" circulating online describe theoretical module wattage or storage concepts, not the permitted grid feed-in. Two separate caps still apply and both must hold for the simplified Balkonkraftwerk privilege: 800W inverter AC output and 2,000 Wp module capacity. Exceeding only the 2,000 Wp module limit while the inverter stays at 800 VA may still register as a small-generation unit with some grid operators; exceeding the 800 VA inverter cap itself drops the installation into the standard, fully regulated PV-system category requiring a licensed electrician — this detail is sourced from consumer-advisory guides, not independently confirmed against primary VDE text.' },
         ],
       },
       relatedReading: {
@@ -149,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Balkonkraftwerk Rules in Germany: The Complete 2026 Guide',
       description: 'Balkonkraftwerk rules in Germany: 800W inverter cap, Marktstammdatenregister registration, and the new DIN VDE V 0126-95 standard — verified against primary legal text.',
       datePublished: '2026-07-02',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/balcony-solar/balkonkraftwerk-germany-rules',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
@@ -165,9 +170,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-es.webp',
     seoTitle: 'Balkonkraftwerk en Alemania: normas, límites y registro',
     intro: 'Alemania es el mercado de origen de la energía solar de balcón — el "Balkonkraftwerk" — y cuenta con el marco regulatorio más consolidado de todos los países que cubre esta guía. Esta página recoge el límite vigente de 800 W en el inversor, el proceso de registro único, y una norma de producto más reciente que entró en vigor en diciembre de 2025.',
-    metaDescription: 'Balkonkraftwerk en Alemania: límite de 800 VA, registro en el MaStR en el plazo de un mes, mudanza, baja y norma DIN VDE V 0126-95. Verificado con el § 8 EEG.',
+    metaDescription: 'Balkonkraftwerk en Alemania: 800 W de inversor y 2.000 Wp de panel, un solo registro MaStR en un mes. Normas verificadas con el § 8 EEG y DIN VDE V 0126-95.',
     publishDate: '2026-07-02',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-19',
     readTime: '9 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores e inquilinos alemanes de energía solar de balcón que confirman los requisitos legales vigentes',
@@ -185,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'DIN VDE V 0126-95 (vigente desde el 1-12-2025) es la primera norma de seguridad de producto específica de la UE para energía solar enchufable',
           'Los sistemas de balcón con batería quedan totalmente excluidos de este régimen simplificado',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -218,6 +223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Límite de 800 W del inversor',
         content: [
           `**El límite de salida de CA del inversor es de ${de.powerLimitW} W, sin cambios desde la reforma Solarpaket I de mayo de 2024.** Actualmente está respaldado por dos fuentes: el § 8 EEG 2023 fija el techo legal, y DIN VDE V 0126-95 — una norma técnica y de seguridad de producto vigente desde el 1 de diciembre de 2025 — lo refuerza como la primera norma de producto específica de la UE para dispositivos solares enchufables.`,
+          'Una norma técnica de conexión a red revisada por separado, VDE-AR-N 4105:2026-03, permite que cada operadora de red siga aplicando sus condiciones de conexión anteriores hasta el 1 de marzo de 2027 mientras incorpora la actualización a sus propias Technische Anschlussbedingungen (TAB); la asociación alemana de empresas energéticas BDEW difundió un texto modelo de TAB actualizado con fecha del 31 de julio de 2026. Este dato procede de fuentes secundarias de asesoría al consumidor, no confirmado de forma independiente con el texto primario del VDE, y regula cómo las operadoras de red implementan el proceso de conexión — no cambia los límites de 800 W / 2.000 Wp en sí.',
         ],
       },
       registration: {
@@ -233,7 +239,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Registre el equipo en el plazo de un mes desde su puesta en marcha, anote los cambios en un mes y conserve su registro existente al mudarse.** El § 5 MaStRV exige el registro en el plazo de un mes desde la puesta en servicio, y la ayuda del Marktstammdatenregister indica que los cambios en los datos registrados también deben anotarse en un mes.',
           'En una mudanza, la ayuda del MaStR (redactada para instalaciones solares en general, no específicamente para Balkonkraftwerke) indica actualizar la ubicación de la unidad existente y conservar la fecha de primera puesta en servicio del emplazamiento original; para una mudanza no hace falta registrar ninguna baja. Para retirar una unidad de servicio, el inicio de una puesta fuera de servicio temporal o definitiva debe registrarse en un mes (§ 5 MaStRV); para los Balkonkraftwerke no se requiere aviso al operador de red.',
-          'No registrarse es una infracción administrativa. Algunas guías citan multas de hasta 50.000 €, pero discrepan sobre la base legal y ninguna documenta una multa a un particular, por lo que esa cifra no está confirmada. En cuanto al alcance, el § 8 apdo. 5a EEG 2023 abarca equipos de hasta 2 kW de potencia instalada y 800 VA de potencia del inversor.',
+          'No registrarse es una infracción administrativa; guías de consumo como la del ADAC citan el § 95 EnWG como base. Algunas guías citan multas de hasta 50.000 €, pero discrepan sobre la base legal exacta y ninguna documenta una multa realmente impuesta a un particular, por lo que esa cifra no está confirmada. En cuanto al alcance, el § 8 apdo. 5a EEG 2023 abarca equipos de hasta 2 kW de potencia instalada y 800 VA de potencia del inversor.',
+        ],
+        callouts: [
+          { type: 'info', text: 'Esta página resume fuentes regulatorias públicas con fines meramente informativos — no constituye asesoramiento legal. Para su situación concreta, confirme los requisitos vigentes con su operadora de red, la Bundesnetzagentur o un abogado cualificado.' },
         ],
       },
       plugTypes: {
@@ -282,6 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Existen subvenciones para el Balkonkraftwerk en Alemania?', a: 'Algunos estados y municipios ofrecen subvenciones, pero la disponibilidad y el importe varían mucho según la región — consulta el programa vigente de tu estado o ciudad en lugar de asumir que existe una subvención a nivel nacional.' },
           { q: '¿Cuándo debo registrar mi Balkonkraftwerk?', a: 'En el plazo de un mes desde la puesta en servicio (§ 5 MaStRV). La puesta en servicio es cuando el equipo inyecta por primera vez corriente alterna en la red doméstica, normalmente al enchufarlo.' },
           { q: '¿Qué hago con mi Balkonkraftwerk si me mudo?', a: 'Actualice la ubicación del registro MaStR existente en un mes y conserve la fecha original de primera puesta en servicio; según la ayuda del MaStR, en una mudanza no se registra ninguna baja. Esa ayuda está redactada para instalaciones solares en general, no específicamente para Balkonkraftwerke.' },
+          { q: '¿Puede un Balkonkraftwerk alcanzar 7.000 vatios (7 kW)?', a: 'No — las afirmaciones sobre un «Balkonkraftwerk de 7.000 vatios» que circulan en internet describen la potencia teórica de los módulos o conceptos de almacenamiento, no la inyección a la red permitida. Siguen aplicándose dos límites independientes, y ambos deben cumplirse para mantener el régimen simplificado del Balkonkraftwerk: 800 W de salida de CA del inversor y 2.000 Wp de capacidad de módulos. Superar solo el límite de 2.000 Wp en los módulos mientras el inversor se mantiene en 800 VA puede seguir registrándose como una pequeña instalación de generación con algunas operadoras de red; superar el límite de 800 VA del inversor hace que la instalación entre en la categoría de instalación fotovoltaica estándar y totalmente regulada, que requiere un electricista autorizado — este dato procede de guías de asesoría al consumidor, no confirmado de forma independiente con el texto primario del VDE.' },
         ],
       },
       relatedReading: {
@@ -298,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Normas del Balkonkraftwerk en Alemania: La guía completa 2026',
       description: 'Normas del Balkonkraftwerk en Alemania: límite de 800 W en el inversor, registro en el Marktstammdatenregister y la nueva norma DIN VDE V 0126-95 — verificado con el texto legal primario.',
       datePublished: '2026-07-02',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-19',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/es/balcony-solar/balkonkraftwerk-germany-rules',
@@ -317,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'A Alemanha é o mercado de origem da energia solar de varanda — o "Balkonkraftwerk" — e tem o marco regulatório mais consolidado entre todos os países cobertos por este guia. Esta página acompanha o limite atual de 800 W no inversor, o processo de registro único, e um novo padrão de produto que entrou em vigor em dezembro de 2025.',
     metaDescription: 'Balkonkraftwerk na Alemanha: limite de 800 VA, registro no MaStR em até um mês, mudança, desativação e a norma DIN VDE V 0126-95. Verificado com o § 8 EEG.',
     publishDate: '2026-07-02',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-19',
     readTime: '9 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores e locatários alemães de energia solar de varanda que buscam confirmar os requisitos legais atuais',
@@ -335,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'DIN VDE V 0126-95 (vigente desde 01/12/2025) é o primeiro padrão de segurança de produto dedicado da UE para energia solar plugável',
           'Sistemas de varanda com bateria são totalmente excluídos desse regime simplificado',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -368,6 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Limite de 800 W do inversor',
         content: [
           `**O limite de saída CA do inversor é de ${de.powerLimitW} W, inalterado desde a reforma Solarpaket I de maio de 2024.** Ele está agora ancorado em duas fontes: o § 8 EEG 2023 define o teto legal, e o DIN VDE V 0126-95 — um padrão técnico/de segurança de produto vigente desde 1º de dezembro de 2025 — reforça isso como o primeiro padrão de produto dedicado da UE para dispositivos solares plugáveis.`,
+          'Uma regra técnica de conexão à rede revisada separadamente, a VDE-AR-N 4105:2026-03, permite que cada operadora de rede continue aplicando suas condições de conexão anteriores até 1º de março de 2027 enquanto incorpora a atualização às suas próprias Technische Anschlussbedingungen (TAB); a associação alemã de empresas de energia BDEW divulgou um texto-modelo de TAB atualizado datado de 31 de julho de 2026. Esse detalhe vem de fontes secundárias de orientação ao consumidor, não confirmado de forma independente no texto primário do VDE, e regula como as operadoras de rede implementam o processo de conexão — não altera os limites de 800 W / 2.000 Wp em si.',
         ],
       },
       registration: {
@@ -383,7 +394,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Registre o equipamento no prazo de um mês após a entrada em operação, informe alterações em um mês e mantenha o registro existente ao se mudar.** O § 5 MaStRV exige o registro no prazo de um mês após a entrada em operação, e a ajuda do Marktstammdatenregister informa que alterações nos dados registrados também devem ser inseridas em um mês.',
           'Numa mudança, a ajuda do MaStR (redigida para instalações solares em geral, não especificamente para Balkonkraftwerke) orienta atualizar a localização da unidade existente e manter a data da primeira entrada em operação do local original — não é preciso registrar desativação por causa de uma mudança. Para tirar uma unidade de serviço, o início de uma desativação temporária ou definitiva deve ser registrado em um mês (§ 5 MaStRV); para Balkonkraftwerke não é exigida notificação à operadora de rede.',
-          'Deixar de registrar é uma infração administrativa. Alguns guias citam multas de até 50.000 €, mas divergem quanto à base legal e nenhum documenta multa a um particular; portanto, esse valor não está confirmado. Quanto ao alcance, o § 8 (5a) EEG 2023 abrange equipamentos de até 2 kW de potência instalada e 800 VA de potência do inversor.',
+          'Deixar de registrar é uma infração administrativa; guias de consumo como o da ADAC citam o § 95 EnWG como base. Alguns guias citam multas de até 50.000 €, mas divergem quanto à base legal exata e nenhum documenta multa realmente aplicada a um particular; portanto, esse valor não está confirmado. Quanto ao alcance, o § 8 (5a) EEG 2023 abrange equipamentos de até 2 kW de potência instalada e 800 VA de potência do inversor.',
+        ],
+        callouts: [
+          { type: 'info', text: 'Esta página resume fontes regulatórias públicas apenas para fins informativos — não constitui aconselhamento jurídico. Para a sua situação específica, confirme os requisitos atuais com a sua operadora de rede, a Bundesnetzagentur ou um advogado qualificado.' },
         ],
       },
       plugTypes: {
@@ -432,6 +446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Existem subsídios para o Balkonkraftwerk na Alemanha?', a: 'Alguns estados e municípios oferecem subsídios, mas a disponibilidade e o valor variam bastante por região — consulte o programa atual do seu estado ou cidade em vez de presumir que existe um subsídio nacional.' },
           { q: 'Quando devo registrar meu Balkonkraftwerk?', a: 'No prazo de um mês após a entrada em operação (§ 5 MaStRV). A entrada em operação ocorre quando o equipamento injeta pela primeira vez corrente alternada na rede doméstica — normalmente ao ligar o plugue.' },
           { q: 'O que fazer com meu Balkonkraftwerk ao me mudar?', a: 'Atualize a localização do registro MaStR existente em um mês e mantenha a data original da primeira entrada em operação; segundo a ajuda do MaStR, não se registra desativação por causa de uma mudança. Essa ajuda é redigida para instalações solares em geral, não especificamente para Balkonkraftwerke.' },
+          { q: 'Um Balkonkraftwerk pode chegar a 7.000 watts (7 kW)?', a: 'Não — afirmações sobre um "Balkonkraftwerk de 7.000 watts" que circulam online descrevem a potência teórica dos módulos ou conceitos de armazenamento, não a injeção na rede permitida. Dois limites separados continuam valendo, e ambos precisam ser respeitados para manter o regime simplificado do Balkonkraftwerk: 800 W de saída CA do inversor e 2.000 Wp de capacidade de módulos. Ultrapassar apenas o limite de 2.000 Wp nos módulos, mantendo o inversor em 800 VA, ainda pode ser registrado como uma unidade de pequena geração junto a algumas operadoras de rede; ultrapassar o limite de 800 VA do inversor em si coloca a instalação na categoria padrão de sistema fotovoltaico, totalmente regulada e que exige um eletricista licenciado — esse detalhe vem de guias de orientação ao consumidor, não confirmado de forma independente no texto primário do VDE.' },
         ],
       },
       relatedReading: {
@@ -448,7 +463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Regras do Balkonkraftwerk na Alemanha: O Guia Completo 2026',
       description: 'Regras do Balkonkraftwerk na Alemanha: limite de 800 W no inversor, registro no Marktstammdatenregister, e o novo padrão DIN VDE V 0126-95 — verificado com o texto legal primário.',
       datePublished: '2026-07-02',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-19',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/pt/balcony-solar/balkonkraftwerk-germany-rules',
@@ -467,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'ألمانيا هي السوق الأصلي للطاقة الشمسية القابلة للتركيب على الشرفة — المعروفة باسم "Balkonkraftwerk" — وتمتلك أكثر إطار تنظيمي رسوخًا بين جميع الدول التي يغطيها هذا الدليل. تتابع هذه الصفحة الحد الحالي البالغ 800 واط لخرج العاكس، وعملية التسجيل الواحدة، ومعيار منتج أحدث دخل حيز التنفيذ في ديسمبر 2025.',
     metaDescription: 'Balkonkraftwerk في ألمانيا: حد 800 فولت أمبير، والتسجيل في MaStR خلال شهر، والانتقال والإيقاف، ومعيار DIN VDE V 0126-95. تم التحقق مقابل § 8 EEG.',
     publishDate: '2026-07-02',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-19',
     readTime: '9 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مشترو ومستأجرو الطاقة الشمسية للشرفة في ألمانيا الراغبون في تأكيد المتطلبات القانونية الحالية',
@@ -485,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُعد DIN VDE V 0126-95 (الساري منذ 2025-12-01) أول معيار سلامة منتج مخصص في الاتحاد الأوروبي للطاقة الشمسية القابلة للتوصيل',
           'تُستبعد أنظمة الشرفة المزوّدة ببطارية بالكامل من هذا النظام المبسّط',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -518,6 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'حد 800 واط للعاكس',
         content: [
           `**حد خرج التيار المتردد للعاكس هو ${de.powerLimitW} واط، دون تغيير منذ إصلاح Solarpaket I في مايو 2024.** وهو الآن مُرسَّخ في مصدرين: يحدد § 8 EEG 2023 السقف القانوني، ويعزّزه DIN VDE V 0126-95 — وهو معيار تقني/سلامة للمنتجات ساري المفعول منذ 1 ديسمبر 2025 — باعتباره أول معيار منتج مخصص في الاتحاد الأوروبي لأجهزة الطاقة الشمسية القابلة للتوصيل.`,
+          'تسمح قاعدة فنية منقّحة بشكل منفصل لربط الشبكة، وهي VDE-AR-N 4105:2026-03، لكل مشغّل شبكة بمواصلة تطبيق شروط الربط السابقة الخاصة به حتى 1 مارس 2027 أثناء دمج التحديث في شروط الربط التقنية الخاصة به (Technische Anschlussbedingungen، TAB)؛ وقد عمّمت رابطة شركات الطاقة الألمانية BDEW نصًا نموذجيًا مُحدَّثًا لـ TAB بتاريخ 31 يوليو 2026. هذا التفصيل مصدره دلائل استهلاكية ثانوية، ولم يُؤكَّد بشكل مستقل بالرجوع إلى نص VDE الأساسي، وهو ينظّم كيفية تنفيذ مشغّلي الشبكة لعملية الربط — ولا يُغيّر حدود 800 واط / 2,000 واط ذروة نفسها.',
         ],
       },
       registration: {
@@ -533,7 +549,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**سجّل الجهاز خلال شهر واحد من بدء التشغيل، وأدخل أي تغييرات خلال شهر واحد، واحتفظ بتسجيلك الحالي عند الانتقال.** يشترط § 5 MaStRV التسجيل خلال شهر واحد من بدء التشغيل، وتوضح مساعدة Marktstammdatenregister أن التغييرات في البيانات المسجلة يجب إدخالها أيضًا خلال شهر واحد.',
           'عند الانتقال، تفيد مساعدة MaStR (المكتوبة للأنظمة الشمسية عمومًا وليس لأجهزة Balkonkraftwerke تحديدًا) بتحديث موقع الوحدة الحالية والاحتفاظ بتاريخ أول تشغيل في الموقع الأصلي — ولا حاجة لتسجيل إيقاف بسبب الانتقال. أما لإخراج وحدة من الخدمة، فيجب تسجيل بدء الإيقاف المؤقت أو النهائي خلال شهر واحد (§ 5 MaStRV)؛ ولا يلزم إخطار مشغّل الشبكة بالنسبة إلى Balkonkraftwerke.',
-          'عدم التسجيل مخالفة إدارية. تذكر بعض الأدلة غرامات تصل إلى 50,000 يورو، لكنها تختلف في الأساس القانوني ولا يوثّق أي منها غرامة بحق مستخدم فردي، لذا فهذا الرقم غير مؤكَّد. أما نطاق التطبيق، فيشمل § 8 الفقرة 5a من EEG 2023 الأجهزة بقدرة مركّبة تصل إلى 2 كيلوواط وقدرة عاكس تصل إلى 800 فولت أمبير.',
+          'عدم التسجيل مخالفة إدارية؛ وتستشهد أدلة استهلاكية مثل ADAC بـ § 95 EnWG كأساس لها. تذكر بعض الأدلة غرامات تصل إلى 50,000 يورو، لكنها تختلف في الأساس القانوني الدقيق ولا يوثّق أي منها غرامة فُرضت فعليًا بحق مستخدم فردي، لذا فهذا الرقم غير مؤكَّد. أما نطاق التطبيق، فيشمل § 8 الفقرة 5a من EEG 2023 الأجهزة بقدرة مركّبة تصل إلى 2 كيلوواط وقدرة عاكس تصل إلى 800 فولت أمبير.',
+        ],
+        callouts: [
+          { type: 'info', text: 'تلخّص هذه الصفحة مصادر تنظيمية متاحة للعامة لأغراض معلوماتية عامة فقط — وهي ليست استشارة قانونية. للاطلاع على وضعك الخاص، تأكد من المتطلبات الحالية مع مشغّل الشبكة الخاص بك أو Bundesnetzagentur أو محامٍ مؤهّل.' },
         ],
       },
       plugTypes: {
@@ -582,6 +601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل توجد إعانات لـ Balkonkraftwerk في ألمانيا؟', a: 'تقدّم بعض الولايات والبلديات إعانات، لكن التوافر والمبلغ يختلفان بشكل كبير حسب المنطقة — تحقق من البرنامج الحالي لولايتك أو مدينتك بدلاً من افتراض وجود إعانة على مستوى البلاد.' },
           { q: 'متى يجب أن أسجّل Balkonkraftwerk الخاص بي؟', a: 'خلال شهر واحد من بدء التشغيل (§ 5 MaStRV). يُقصد ببدء التشغيل أول مرة يضخّ فيها الجهاز تيارًا متناوبًا في الشبكة المنزلية — عادةً عند إدخال القابس.' },
           { q: 'ماذا أفعل بـ Balkonkraftwerk عند الانتقال إلى مسكن جديد؟', a: 'حدّث موقع سجل MaStR الحالي خلال شهر واحد واحتفظ بتاريخ أول تشغيل الأصلي؛ وتفيد مساعدة MaStR بأنه لا يُسجَّل إيقاف بسبب الانتقال. وهذه المساعدة مكتوبة للأنظمة الشمسية عمومًا وليس لأجهزة Balkonkraftwerke تحديدًا.' },
+          { q: 'هل يمكن أن يصل Balkonkraftwerk إلى 7,000 واط (7 كيلوواط)؟', a: 'لا — الادعاءات المتداولة على الإنترنت بوجود "Balkonkraftwerk بقدرة 7,000 واط" تصف قدرة الوحدات النظرية أو مفاهيم التخزين، لا القدرة المسموح بتغذيتها إلى الشبكة. يظل حدّان مستقلان ساريين، ويجب استيفاء كلاهما للحفاظ على امتياز Balkonkraftwerk المبسّط: 800 واط لخرج التيار المتردد للعاكس، و2,000 واط ذروة لسعة الوحدات. تجاوز حد الوحدات البالغ 2,000 واط ذروة فقط مع بقاء العاكس عند 800 فولت أمبير قد لا يزال يُسجَّل كوحدة توليد صغيرة لدى بعض مشغّلي الشبكة؛ أما تجاوز حد العاكس البالغ 800 فولت أمبير نفسه فيُدخل التركيب في فئة أنظمة الطاقة الشمسية القياسية المنظَّمة بالكامل، التي تتطلب كهربائيًا مرخّصًا — هذا التفصيل مصدره دلائل استهلاكية، ولم يُؤكَّد بشكل مستقل بالرجوع إلى نص VDE الأساسي.' },
         ],
       },
       relatedReading: {
@@ -598,7 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'قواعد Balkonkraftwerk في ألمانيا: الدليل الكامل 2026',
       description: 'قواعد Balkonkraftwerk في ألمانيا: حد 800 واط لخرج العاكس، والتسجيل في Marktstammdatenregister، ومعيار DIN VDE V 0126-95 الجديد — تم التحقق منها مقابل النص القانوني الأساسي.',
       datePublished: '2026-07-02',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-19',
       inLanguage: 'ar',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ar/balcony-solar/balkonkraftwerk-germany-rules',
@@ -617,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'ドイツはバルコニーソーラー — 「Balkonkraftwerk」— の発祥市場であり、本ガイドが扱うどの国よりも規制枠組みが確立されています。このページでは、現行の800Wインバーター上限、単一登録プロセス、そして2025年12月に発効した新しい製品規格を追跡します。',
     metaDescription: 'ドイツのBalkonkraftwerk：800VAの上限、1か月以内のMaStR登録、引っ越し・運転停止、DIN VDE V 0126-95。§ 8 EEGに基づき確認済み。',
     publishDate: '2026-07-02',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-19',
     readTime: '約9分',
     educationalLevel: 'Intermediate',
     audience: '現行の法的要件を確認するドイツのバルコニーソーラー購入者・賃貸入居者',
@@ -635,7 +655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'DIN VDE V 0126-95（2025年12月1日発効）は、プラグイン太陽光専用のEU初の製品安全規格',
           '蓄電池搭載のバルコニーシステムはこの簡素化された制度から完全に除外される',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -668,6 +688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '800Wインバーター上限',
         content: [
           `**インバーター交流出力上限は${de.powerLimitW}Wで、2024年5月のSolarpaket I改革以降変更されていません。** 現在は2つの情報源に根拠を持ちます：§8 EEG 2023が法的上限を定め、2025年12月1日発効の技術/安全製品規格であるDIN VDE V 0126-95が、プラグイン太陽光機器専用のEU初の製品規格としてこれを補強しています。`,
+          '個別に改訂された系統接続の技術規則VDE-AR-N 4105:2026-03により、各配電事業者は自社のTechnische Anschlussbedingungen（TAB、技術接続条件）に更新を取り込む間、2027年3月1日まで従来の接続条件を継続して適用できます。ドイツの電力事業者団体BDEWは2026年7月31日付で更新されたTABのモデル文面を発表しました。この詳細は消費者向けガイドという二次情報源によるもので、一次VDE文書に基づいて独立して確認されたものではなく、配電事業者が接続プロセスをどのように実施するかを規定するものです — 800W／2,000Wpの上限自体を変更するものではありません。',
         ],
       },
       registration: {
@@ -683,7 +704,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**稼働開始から1か月以内に登録し、変更も1か月以内に入力し、引っ越しの際は既存の登録を引き継ぎます。** § 5 MaStRVは稼働開始から1か月以内の登録を求めており、Marktstammdatenregisterのヘルプも、登録済みデータの変更を1か月以内に入力するよう定めています。',
           '引っ越しの場合、MaStRヘルプ（Balkonkraftwerkに限らず太陽光ユニット全般向けの記載）によれば、既存ユニットの所在地を更新し、最初の設置場所での初回稼働日を維持します。引っ越しのために運転停止を登録する必要はありません。ユニットを運転停止にする場合は、一時的または最終的な運転停止の開始を1か月以内に登録します（§ 5 MaStRV）。Balkonkraftwerkでは系統運用者への通知は不要です。',
-          '登録を怠ることは秩序違反にあたります。ガイドによっては最大5万ユーロの過料が挙げられていますが、法的根拠の説明は一致せず、個人に科された例を示すものもないため、この金額は未確認です。適用範囲として、§ 8 Abs. 5a EEG 2023は設備容量2kWまで、インバーター出力800VAまでの機器を対象としています。',
+          '登録を怠ることは秩序違反にあたります。ADACなどの消費者向けガイドは§ 95 EnWGを根拠として挙げています。ガイドによっては最大5万ユーロの過料が挙げられていますが、正確な法的根拠の説明は一致せず、個人に実際に科された例を示すものもないため、この金額は未確認です。適用範囲として、§ 8 Abs. 5a EEG 2023は設備容量2kWまで、インバーター出力800VAまでの機器を対象としています。',
+        ],
+        callouts: [
+          { type: 'info', text: 'このページは公開されている規制情報源を一般的な情報提供のみを目的として要約したものであり、法的助言ではありません。個別の状況については、配電事業者、連邦ネットワーク庁（Bundesnetzagentur）、または資格を持つ弁護士に現行の要件をご確認ください。' },
         ],
       },
       plugTypes: {
@@ -732,6 +756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ドイツにはBalkonkraftwerk向けの補助金がありますか？', a: '一部の州や自治体が補助金を提供していますが、利用可能性と金額は地域によって大きく異なります — 全国一律の補助金が適用されると想定せず、お住まいの州や市の現行プログラムを確認してください。' },
           { q: 'Balkonkraftwerkはいつまでに登録する必要がありますか？', a: '稼働開始から1か月以内です（§ 5 MaStRV）。稼働開始とは、機器が初めて家庭内配線に交流電力を供給した時点で、通常はプラグを初めて差し込んだときです。' },
           { q: '引っ越すときBalkonkraftwerkはどうすればよいですか？', a: '既存のMaStR登録の所在地を1か月以内に更新し、当初の初回稼働日を維持します。MaStRヘルプによれば、引っ越しでは運転停止は登録しません。このヘルプはBalkonkraftwerkに限らず太陽光ユニット全般向けの記載です。' },
+          { q: 'Balkonkraftwerkは7,000W（7kW）に達することができますか？', a: 'いいえ — インターネット上で見られる「7,000WのBalkonkraftwerk」という主張は、理論上のモジュール出力や蓄電コンセプトを指しているのであって、許容される系統への供給電力ではありません。簡素化されたBalkonkraftwerk特例が成立するには、依然として2つの独立した上限（インバーター交流出力800Wとモジュール容量2,000Wp）の両方を満たす必要があります。インバーターを800VAに保ったままモジュールの2,000Wp上限のみを超える場合、一部の配電事業者では小規模発電ユニットとして登録できる場合があります。インバーターの800VA上限自体を超える場合は、有資格電気技師が必要な標準的かつ完全に規制されたPVシステムのカテゴリーに入ります — この詳細は消費者向けガイドによるもので、一次VDE文書に基づいて独立して確認されたものではありません。' },
         ],
       },
       relatedReading: {
@@ -748,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'ドイツのBalkonkraftwerkルール：2026年完全ガイド',
       description: 'ドイツのBalkonkraftwerkルール：800Wインバーター上限、Marktstammdatenregister登録、新しいDIN VDE V 0126-95規格 — 一次法的文書に基づき確認済み、2026年7月。',
       datePublished: '2026-07-02',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-19',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ja/balcony-solar/balkonkraftwerk-germany-rules',
       inLanguage: 'ja',
@@ -767,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '德国是阳台光伏——"Balkonkraftwerk"——的发源市场，拥有本指南所涵盖国家中最成熟的监管框架。本页面追踪现行的800W逆变器上限、单一注册流程，以及2025年12月生效的新产品标准。',
     metaDescription: '德国Balkonkraftwerk规定：800 VA上限、一个月内MaStR注册、搬家与停用，以及DIN VDE V 0126-95标准。已对照§ 8 EEG核实。',
     publishDate: '2026-07-02',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-19',
     readTime: '约9分钟',
     educationalLevel: 'Intermediate',
     audience: '正在确认现行法律要求的德国阳台光伏购买者和租户',
@@ -785,7 +810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'DIN VDE V 0126-95（2025-12-01生效）是欧盟首个专门针对插拔式光伏的产品安全标准',
           '配备储能（电池）的阳台系统完全被排除在这一简化制度之外',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -818,6 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '800W逆变器限制',
         content: [
           `**逆变器交流输出上限为${de.powerLimitW}W，自2024年5月Solarpaket I改革以来未变。** 目前有两个信息来源作为依据：§8 EEG 2023设定了法定上限，而DIN VDE V 0126-95——一项自2025年12月1日生效的技术/安全产品标准——作为欧盟首个专门针对插拔式光伏设备的产品标准，进一步强化了这一限制。`,
+          '另一项单独修订的电网接入技术规则VDE-AR-N 4105:2026-03允许各配电运营商在将更新内容纳入自身的《技术接入条件》（Technische Anschlussbedingungen，TAB）之前，继续沿用此前的接入条款，直至2027年3月1日。德国能源行业协会BDEW已发布更新后的TAB示范文本，日期为2026年7月31日。该细节来自消费者指南等二手信息来源，并未根据VDE一手文本独立核实，它规定的是配电运营商如何实施接入流程——并不改变800W/2,000Wp这两项上限本身。',
         ],
       },
       registration: {
@@ -833,7 +859,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**在投入运行后一个月内完成注册，变更也须在一个月内录入，搬家时沿用已有注册。** § 5 MaStRV 要求在投入运行后一个月内注册，Marktstammdatenregister 的帮助页面也说明，已登记数据的变更同样须在一个月内录入。',
           '搬家时，MaStR 帮助（针对一般光伏设备撰写，并非专门针对 Balkonkraftwerke）说明：更新现有设备的所在地，并保留在原地点的首次投运日期——搬家无需登记停用。若要让设备停止运行，须在一个月内登记临时或最终停用的开始（§ 5 MaStRV）；Balkonkraftwerke 无需通知电网运营商。',
-          '未注册属于行政违规。部分指南提到最高 5 万欧元的罚款，但它们对法律依据说法不一，也没有记录针对个人用户的罚款案例，因此该数字未经证实。适用范围方面，§ 8 Abs. 5a EEG 2023 涵盖装机容量不超过 2 千瓦、逆变器输出不超过 800 VA 的设备。',
+          '未注册属于行政违规；ADAC等消费者指南将§ 95 EnWG列为依据。部分指南提到最高 5 万欧元的罚款，但它们对确切法律依据说法不一，也没有记录针对个人用户实际开出的罚款案例，因此该数字未经证实。适用范围方面，§ 8 Abs. 5a EEG 2023 涵盖装机容量不超过 2 千瓦、逆变器输出不超过 800 VA 的设备。',
+        ],
+        callouts: [
+          { type: 'info', text: '本页内容基于公开的监管信息来源，仅供一般信息参考之用——并不构成法律建议。如需针对您的具体情况确认现行要求，请咨询您的配电运营商、联邦网络署（Bundesnetzagentur）或具备相应资质的律师。' },
         ],
       },
       plugTypes: {
@@ -882,6 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '德国有针对Balkonkraftwerk的补贴吗？', a: '部分州和市政当局提供补贴，但可获得性和金额因地区而异——请查询你所在州或城市当前的具体计划，而不要假设全国统一适用补贴。' },
           { q: '我的 Balkonkraftwerke 什么时候必须注册？', a: '须在投入运行后一个月内注册（§ 5 MaStRV）。投入运行是指设备首次向家庭电网输送交流电，通常是第一次插上插头时。' },
           { q: '搬家时我的 Balkonkraftwerke 该怎么办？', a: '在一个月内更新现有 MaStR 条目的所在地，并保留最初的首次投运日期；根据 MaStR 帮助，搬家无需登记停用。该帮助针对一般光伏设备撰写，并非专门针对 Balkonkraftwerke。' },
+          { q: 'Balkonkraftwerk 能达到 7,000 瓦（7 kW）吗？', a: '不能——网上流传的"7,000瓦Balkonkraftwerk"说法指的是理论组件功率或储能概念，并非允许并网输出的功率。要维持简化的Balkonkraftwerk特权，仍需同时满足两项独立上限：800W逆变器交流输出和2,000Wp组件容量。若仅组件功率超过2,000Wp而逆变器仍保持在800VA，部分配电运营商仍可将其登记为小型发电单元；若逆变器本身超过800VA上限，该装置则归入标准的、受完全监管的光伏系统类别，需由持证电工安装——该细节来自消费者指南，并未根据VDE一手文本独立核实。' },
         ],
       },
       relatedReading: {
@@ -898,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '德国Balkonkraftwerk规定：2026年完整指南',
       description: 'Balkonkraftwerk德国规定：800W逆变器上限、Marktstammdatenregister注册以及新的DIN VDE V 0126-95标准——已核对一手法律文本，2026年7月。',
       datePublished: '2026-07-02',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-19',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/zh/balcony-solar/balkonkraftwerk-germany-rules',
       inLanguage: 'zh',
@@ -917,7 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'L\'Allemagne est le marché d\'origine du solaire de balcon — le « Balkonkraftwerk » — et dispose du cadre réglementaire le plus établi de tous les pays couverts par ce guide. Cette page suit le plafond actuel de 800 W de l\'onduleur, le processus d\'enregistrement unique, et une nouvelle norme produit entrée en vigueur en décembre 2025.',
     metaDescription: 'Balkonkraftwerk en Allemagne : plafond de 800 VA, enregistrement MaStR sous un mois, déménagement, mise hors service et norme DIN VDE V 0126-95. Vérifié d\'après le § 8 EEG.',
     publishDate: '2026-07-02',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-19',
     readTime: '9 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Acheteurs et locataires allemands de solaire de balcon confirmant les exigences légales actuelles',
@@ -935,7 +965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'DIN VDE V 0126-95 (en vigueur depuis le 01/12/2025) est la première norme de sécurité produit dédiée de l\'UE pour le solaire plug-in',
           'Les systèmes de balcon équipés de stockage (batterie) sont entièrement exclus de ce régime simplifié',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -968,6 +998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Limite de 800 W de l\'onduleur',
         content: [
           `**Le plafond de sortie CA de l\'onduleur est de ${de.powerLimitW} W, inchangé depuis la réforme Solarpaket I de mai 2024.** Il est désormais ancré dans deux sources : le § 8 EEG 2023 fixe le plafond légal, et DIN VDE V 0126-95 — une norme produit technique/de sécurité en vigueur depuis le 1er décembre 2025 — le renforce en tant que première norme produit dédiée de l\'UE pour les dispositifs solaires plug-in.`,
+          'Une règle technique de raccordement au réseau révisée séparément, VDE-AR-N 4105:2026-03, permet à chaque gestionnaire de réseau de continuer à appliquer ses conditions de raccordement antérieures jusqu\'au 1er mars 2027, pendant qu\'il intègre la mise à jour dans ses propres Technische Anschlussbedingungen (TAB) ; l\'association allemande des entreprises énergétiques BDEW a diffusé un texte-modèle de TAB mis à jour daté du 31 juillet 2026. Ce détail provient de sources secondaires de conseil aux consommateurs, non confirmé indépendamment par rapport au texte primaire du VDE, et il régit la façon dont les gestionnaires de réseau mettent en œuvre le processus de raccordement — il ne modifie pas les plafonds de 800 W / 2 000 Wp eux-mêmes.',
         ],
       },
       registration: {
@@ -983,7 +1014,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Enregistrez l\'appareil dans le mois suivant sa mise en service, saisissez les modifications dans le mois et conservez votre inscription existante en cas de déménagement.** Le § 5 MaStRV exige l\'enregistrement dans le mois suivant la mise en service, et l\'aide du Marktstammdatenregister précise que les modifications des données enregistrées doivent aussi être saisies dans le mois.',
           'En cas de déménagement, l\'aide du MaStR (rédigée pour les installations solaires en général, pas spécifiquement pour les Balkonkraftwerke) indique de mettre à jour l\'emplacement de l\'unité existante et de conserver la date de première mise en service du site d\'origine — aucune mise hors service n\'est à enregistrer pour un déménagement. Pour mettre une unité hors service, le début d\'une mise hors service temporaire ou définitive doit être enregistré dans le mois (§ 5 MaStRV) ; aucune notification à l\'opérateur de réseau n\'est requise pour les Balkonkraftwerke.',
-          'Ne pas s\'enregistrer constitue une infraction administrative. Des guides citent des amendes allant jusqu\'à 50 000 €, mais ils divergent sur la base légale et aucun ne documente d\'amende contre un particulier : ce montant n\'est donc pas confirmé. Pour le champ d\'application, le § 8 al. 5a EEG 2023 couvre les appareils jusqu\'à 2 kW de puissance installée et 800 VA de puissance d\'onduleur.',
+          'Ne pas s\'enregistrer constitue une infraction administrative ; des guides destinés aux consommateurs, dont celui de l\'ADAC, citent le § 95 EnWG comme base légale. Des guides citent des amendes allant jusqu\'à 50 000 €, mais ils divergent sur la base légale exacte et aucun ne documente d\'amende réellement infligée à un particulier : ce montant n\'est donc pas confirmé. Pour le champ d\'application, le § 8 al. 5a EEG 2023 couvre les appareils jusqu\'à 2 kW de puissance installée et 800 VA de puissance d\'onduleur.',
+        ],
+        callouts: [
+          { type: 'info', text: 'Cette page résume des sources réglementaires publiques à titre d\'information générale uniquement — elle ne constitue pas un conseil juridique. Pour votre situation précise, vérifiez les exigences actuelles auprès de votre gestionnaire de réseau, de la Bundesnetzagentur ou d\'un avocat qualifié.' },
         ],
       },
       plugTypes: {
@@ -1032,6 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Y a-t-il des subventions pour le Balkonkraftwerk en Allemagne ?', a: 'Certains Länder et municipalités proposent des subventions, mais la disponibilité et le montant varient considérablement selon la région — vérifiez le programme actuel de votre Land ou ville spécifique plutôt que de présumer qu\'une subvention nationale s\'applique.' },
           { q: 'Quand dois-je enregistrer mon Balkonkraftwerk ?', a: 'Dans le mois suivant la mise en service (§ 5 MaStRV). La mise en service correspond au moment où l\'appareil injecte pour la première fois du courant alternatif dans le réseau domestique — généralement lorsqu\'on branche la prise.' },
           { q: 'Que faire de mon Balkonkraftwerk en cas de déménagement ?', a: 'Mettez à jour l\'emplacement de l\'inscription MaStR existante dans le mois et conservez la date de première mise en service d\'origine ; selon l\'aide du MaStR, aucune mise hors service n\'est enregistrée pour un déménagement. Cette aide est rédigée pour les installations solaires en général, pas spécifiquement pour les Balkonkraftwerke.' },
+          { q: 'Un Balkonkraftwerk peut-il atteindre 7 000 watts (7 kW) ?', a: 'Non — les affirmations sur un « Balkonkraftwerk de 7 000 watts » qui circulent en ligne décrivent la puissance théorique des modules ou des concepts de stockage, pas l\'injection réseau autorisée. Deux plafonds distincts s\'appliquent toujours, et les deux doivent être respectés pour conserver le régime simplifié du Balkonkraftwerk : 800 W de sortie CA de l\'onduleur et 2 000 Wp de capacité de modules. Dépasser uniquement le plafond de 2 000 Wp des modules tout en maintenant l\'onduleur à 800 VA peut encore être enregistré comme petite unité de production auprès de certains gestionnaires de réseau ; dépasser le plafond de 800 VA de l\'onduleur lui-même fait basculer l\'installation dans la catégorie standard des systèmes photovoltaïques, entièrement réglementée et nécessitant un électricien agréé — ce détail provient de guides destinés aux consommateurs, non confirmé indépendamment par rapport au texte primaire du VDE.' },
         ],
       },
       relatedReading: {
@@ -1048,7 +1083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Règles du Balkonkraftwerk en Allemagne : le guide complet 2026',
       description: 'Règles du Balkonkraftwerk en Allemagne : plafond de 800 W de l\'onduleur, enregistrement au Marktstammdatenregister, et la nouvelle norme DIN VDE V 0126-95 — vérifié par rapport au texte légal primaire.',
       datePublished: '2026-07-02',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/fr/balcony-solar/balkonkraftwerk-germany-rules',
       inLanguage: 'fr',
@@ -1067,7 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '독일은 발코니 태양광 — "Balkonkraftwerk" — 의 발상지 시장이며, 이 가이드가 다루는 어느 국가보다 가장 확립된 규제 체계를 갖추고 있습니다. 이 페이지는 현행 800W 인버터 상한, 단일 등록 절차, 그리고 2025년 12월에 발효된 새로운 제품 규격을 추적합니다.',
     metaDescription: '독일 Balkonkraftwerk: 800VA 상한, 한 달 이내 MaStR 등록, 이사·가동 중단, DIN VDE V 0126-95 규격. § 8 EEG 대조 확인.',
     publishDate: '2026-07-02',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-19',
     readTime: '9분 읽기',
     educationalLevel: 'Intermediate',
     audience: '현행 법적 요건을 확인 중인 독일 발코니 태양광 구매자 및 세입자',
@@ -1085,7 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'DIN VDE V 0126-95(2025-12-01 발효)는 플러그인 태양광 전용 EU 최초의 제품 안전 규격',
           '저장장치(배터리) 장착 발코니 시스템은 이 간소화된 제도에서 완전히 제외됨',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -1118,6 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '800W 인버터 제한',
         content: [
           `**인버터 교류 출력 상한은 ${de.powerLimitW}W로, 2024년 5월 Solarpaket I 개혁 이후 변경되지 않았습니다.** 현재 두 가지 출처에 근거를 두고 있습니다: §8 EEG 2023이 법적 상한을 설정하고, 2025년 12월 1일 발효된 기술/안전 제품 규격인 DIN VDE V 0126-95가 플러그인 태양광 기기 전용 EU 최초의 제품 규격으로서 이를 강화합니다.`,
+          '별도로 개정된 전력망 연계 기술 규칙인 VDE-AR-N 4105:2026-03에 따라, 각 배전사업자는 자체 기술연계조건(Technische Anschlussbedingungen, TAB)에 개정 내용을 반영하는 동안 2027년 3월 1일까지 기존 연계 조건을 계속 적용할 수 있습니다. 독일 에너지업계 협회 BDEW는 2026년 7월 31일자로 개정된 TAB 표준 문안을 배포했습니다. 이 세부 사항은 소비자 안내 자료 등 2차 출처에서 나온 것으로, 1차 VDE 문서를 대조하여 독립적으로 확인되지 않았으며, 배전사업자가 연계 절차를 어떻게 시행하는지를 규정할 뿐 800W/2,000Wp 상한 자체를 바꾸지는 않습니다.',
         ],
       },
       registration: {
@@ -1133,7 +1169,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**가동 시작 후 한 달 이내에 등록하고, 변경 사항도 한 달 이내에 입력하며, 이사할 때는 기존 등록을 유지하세요.** § 5 MaStRV는 가동 시작 후 한 달 이내 등록을 요구하며, Marktstammdatenregister 도움말도 등록된 데이터의 변경을 한 달 이내에 입력해야 한다고 설명합니다.',
           '이사할 때는 MaStR 도움말(Balkonkraftwerke만이 아니라 태양광 설비 전반을 대상으로 작성됨)에 따라 기존 설비의 소재지를 갱신하고 최초 설치 장소에서의 최초 가동일을 유지합니다. 이사 때문에 가동 중단을 등록할 필요는 없습니다. 설비를 가동 중단하려면 일시적 또는 최종 가동 중단의 시작을 한 달 이내에 등록해야 하며(§ 5 MaStRV), Balkonkraftwerke는 배전사업자에 대한 통지가 필요하지 않습니다.',
-          '등록하지 않는 것은 질서위반 행위입니다. 일부 가이드는 최대 5만 유로의 과태료를 언급하지만, 법적 근거에 대한 설명이 서로 다르고 개인에게 부과된 사례를 제시하는 곳도 없으므로 이 금액은 확인되지 않았습니다. 적용 범위는 § 8 Abs. 5a EEG 2023이 설치 용량 2kW 이하, 인버터 출력 800VA 이하 기기를 대상으로 합니다.',
+          '등록하지 않는 것은 질서위반 행위입니다. ADAC 등 소비자 안내 자료는 § 95 EnWG을 근거로 제시합니다. 일부 가이드는 최대 5만 유로의 과태료를 언급하지만, 정확한 법적 근거에 대한 설명이 서로 다르고 개인에게 실제로 부과된 사례를 제시하는 곳도 없으므로 이 금액은 확인되지 않았습니다. 적용 범위는 § 8 Abs. 5a EEG 2023이 설치 용량 2kW 이하, 인버터 출력 800VA 이하 기기를 대상으로 합니다.',
+        ],
+        callouts: [
+          { type: 'info', text: '이 페이지는 공개된 규제 관련 출처를 일반 정보 제공 목적으로만 정리한 것으로, 법률 자문이 아닙니다. 구체적인 상황에 대해서는 배전사업자, 연방망청(Bundesnetzagentur) 또는 자격을 갖춘 변호사를 통해 현행 요건을 확인하십시오.' },
         ],
       },
       plugTypes: {
@@ -1182,6 +1221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '독일에는 Balkonkraftwerk에 대한 보조금이 있나요?', a: '일부 주와 지자체가 보조금을 제공하지만, 이용 가능 여부와 금액은 지역에 따라 크게 다릅니다 — 전국적인 보조금이 적용된다고 가정하지 말고, 귀하가 속한 주나 도시의 현행 프로그램을 확인하십시오.' },
           { q: 'Balkonkraftwerke는 언제까지 등록해야 하나요?', a: '가동 시작 후 한 달 이내입니다(§ 5 MaStRV). 가동 시작은 기기가 처음으로 가정 내 배선에 교류 전력을 공급하는 시점으로, 보통 플러그를 처음 꽂을 때입니다.' },
           { q: '이사할 때 Balkonkraftwerke는 어떻게 하나요?', a: '기존 MaStR 항목의 소재지를 한 달 이내에 갱신하고 당초의 최초 가동일을 유지합니다. MaStR 도움말에 따르면 이사로 인한 가동 중단은 등록하지 않습니다. 이 도움말은 Balkonkraftwerke만이 아니라 태양광 설비 전반을 대상으로 작성되었습니다.' },
+          { q: 'Balkonkraftwerk가 7,000와트(7kW)에 이를 수 있나요?', a: '아니요 — 온라인에서 떠도는 "7,000와트 Balkonkraftwerk"라는 주장은 이론상의 모듈 출력이나 저장장치 개념을 가리키는 것으로, 허용되는 계통 공급 전력을 의미하지 않습니다. 간소화된 Balkonkraftwerk 특례가 유지되려면 여전히 두 가지 독립된 상한, 즉 인버터 교류 출력 800W와 모듈 용량 2,000Wp를 모두 충족해야 합니다. 인버터를 800VA로 유지한 채 모듈 2,000Wp 상한만 초과하는 경우 일부 배전사업자에게는 소규모 발전 설비로 등록할 수 있습니다. 반면 인버터의 800VA 상한 자체를 초과하면 면허를 가진 전기 기술자가 필요한 표준적인 완전 규제 대상 태양광 시스템 범주에 속하게 됩니다 — 이 세부 사항은 소비자 안내 자료에서 나온 것으로, 1차 VDE 문서를 대조하여 독립적으로 확인되지 않았습니다.' },
         ],
       },
       relatedReading: {
@@ -1198,7 +1238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '독일 Balkonkraftwerk 규정: 2026년 완전 가이드',
       description: '독일 Balkonkraftwerk 규정: 800W 인버터 상한, Marktstammdatenregister 등록, 그리고 새로운 DIN VDE V 0126-95 규격 — 1차 법률 문서 대조 확인.',
       datePublished: '2026-07-02',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-19',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ko/balcony-solar/balkonkraftwerk-germany-rules',
       inLanguage: 'ko',
@@ -1217,7 +1257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Deutschland ist der Ursprungsmarkt des Balkonkraftwerks und besitzt den am weitesten entwickelten Rechtsrahmen aller in diesem Leitfaden behandelten Länder. Diese Seite dokumentiert die aktuelle Wechselrichter-Obergrenze von 800 W, das vereinfachte Anmeldeverfahren und eine neue Produktnorm, die seit Dezember 2025 gilt.',
     metaDescription: 'Balkonkraftwerk Deutschland: Was ist erlaubt? 800-VA-Grenze, 2.000 Wp, MaStR-Anmeldung binnen eines Monats, Umzug und Stilllegung — geprüft an § 8 EEG.',
     publishDate: '2026-07-02',
-    dateModified: '2026-10-18',
+    dateModified: '2026-11-19',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer und Mieter von Balkonkraftwerken in Deutschland, die die aktuellen gesetzlichen Anforderungen bestätigen möchten',
@@ -1235,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'DIN VDE V 0126-95 (gültig ab 1.12.2025) ist die erste EU-Produktsicherheitsnorm speziell für steckbare Solargeräte',
           'Balkonspeicher (mit Batterie) sind ausdrücklich von dieser vereinfachten Regelung ausgenommen',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -1268,6 +1308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '800-W-Grenze am Wechselrichter',
         content: [
           `**Die Obergrenze am Wechselrichter-AC-Ausgang beträgt ${de.powerLimitW} W — unverändert seit der Solarpaket-I-Reform im Mai 2024.** Sie ist in zwei Quellen verankert: § 8 EEG 2023 setzt die rechtliche Grenze, und DIN VDE V 0126-95 — eine technische Produktsicherheitsnorm, die seit dem 1. Dezember 2025 gilt — festigt sie als erste spezielle EU-Produktnorm für steckbare Solargeräte.`,
+          'Eine separat überarbeitete technische Netzanschlussregel, die VDE-AR-N 4105:2026-03, erlaubt es einzelnen Netzbetreibern, ihre bisherigen Anschlussbedingungen bis zum 1. März 2027 weiter anzuwenden, während sie die Neuerung in ihre eigenen Technischen Anschlussbedingungen (TAB) übernehmen; der Branchenverband BDEW hat dazu einen aktualisierten Muster-TAB-Text mit Datum vom 31. Juli 2026 veröffentlicht. Dieses Detail stammt aus sekundären Verbraucherratgebern und wurde nicht unabhängig anhand des primären VDE-Texts bestätigt. Es regelt, wie Netzbetreiber den Anschlussprozess umsetzen — die Grenzwerte von 800 W bzw. 2.000 Wp selbst ändert es nicht.',
         ],
       },
       registration: {
@@ -1283,7 +1324,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Melden Sie das Balkonkraftwerk innerhalb eines Monats nach Inbetriebnahme an, tragen Sie Änderungen innerhalb eines Monats nach und behalten Sie beim Umzug Ihren bestehenden Eintrag.** § 5 MaStRV verlangt die Registrierung innerhalb eines Monats nach der Inbetriebnahme, und laut Hilfe des Marktstammdatenregisters müssen auch Änderungen an den eingetragenen Daten innerhalb eines Monats erfasst werden.',
           'Beim Umzug gilt laut MaStR-Hilfe (allgemein für Solaranlagen formuliert, nicht speziell für Balkonkraftwerke): Standort der bestehenden Einheit aktualisieren und das erstmalige Inbetriebnahmedatum vom ersten Standort behalten — für einen Umzug ist keine Stilllegung zu registrieren. Soll ein Gerät außer Betrieb gehen, ist der Beginn einer vorläufigen oder endgültigen Stilllegung innerhalb eines Monats zu registrieren (§ 5 MaStRV); eine Meldung an den Netzbetreiber ist für Balkonkraftwerke nicht nötig.',
-          'Eine fehlende Anmeldung ist eine Ordnungswidrigkeit. Ratgeber nennen Bußgelder von bis zu 50.000 €, sind sich aber bei der Rechtsgrundlage uneinig und belegen keinen Fall gegen Privatpersonen — der Betrag ist daher nicht bestätigt. Zum Geltungsbereich: § 8 Abs. 5a EEG 2023 erfasst Geräte bis 2 Kilowatt installierter Leistung und bis 800 Voltampere Wechselrichterleistung.',
+          'Eine fehlende Anmeldung ist eine Ordnungswidrigkeit; Verbraucherratgeber wie der ADAC nennen § 95 EnWG als Grundlage. Ratgeber nennen Bußgelder von bis zu 50.000 €, sind sich aber bei der genauen Rechtsgrundlage uneinig und belegen keinen tatsächlich gegen eine Privatperson verhängten Fall — der Betrag ist daher nicht bestätigt. Zum Geltungsbereich: § 8 Abs. 5a EEG 2023 erfasst Geräte bis 2 Kilowatt installierter Leistung und bis 800 Voltampere Wechselrichterleistung.',
+        ],
+        callouts: [
+          { type: 'info', text: 'Diese Seite fasst öffentlich zugängliche Regulierungsquellen ausschließlich zur allgemeinen Information zusammen — sie ist keine Rechtsberatung. Klären Sie Ihre konkrete Situation mit Ihrem Netzbetreiber, der Bundesnetzagentur oder einer Rechtsanwältin bzw. einem Rechtsanwalt.' },
         ],
       },
       plugTypes: {
@@ -1332,6 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Gibt es Förderprogramme für Balkonkraftwerke in Deutschland?', a: 'Einige Bundesländer und Kommunen bieten Förderungen an, aber Verfügbarkeit und Höhe variieren stark nach Region — prüfen Sie das aktuelle Programm Ihres Bundeslandes oder Ihrer Stadt, anstatt von einer bundesweiten Förderung auszugehen.' },
           { q: 'Wann muss ich mein Balkonkraftwerk anmelden?', a: 'Innerhalb eines Monats nach der Inbetriebnahme (§ 5 MaStRV). Als Inbetriebnahme gilt, wenn das Gerät erstmals Wechselstrom ins Hausnetz einspeist — meist beim ersten Einstecken.' },
           { q: 'Was muss ich beim Umzug mit meinem Balkonkraftwerk tun?', a: 'Den Standort des bestehenden MaStR-Eintrags innerhalb eines Monats aktualisieren und das ursprüngliche Inbetriebnahmedatum behalten; laut MaStR-Hilfe wird für einen Umzug keine Stilllegung registriert. Die Hilfe ist allgemein für Solaranlagen formuliert, nicht speziell für Balkonkraftwerke.' },
+          { q: 'Kann ein Balkonkraftwerk 7.000 Watt (7 kW) erreichen?', a: 'Nein — online kursierende Behauptungen über ein "7.000-Watt-Balkonkraftwerk" beziehen sich auf die theoretische Modulleistung oder auf Speicherkonzepte, nicht auf die zulässige Einspeiseleistung ins Netz. Für das vereinfachte Balkonkraftwerk-Privileg gelten weiterhin zwei unabhängige Grenzen, die beide eingehalten werden müssen: 800 W Wechselrichter-AC-Ausgang und 2.000 Wp Modulkapazität. Wird nur die 2.000-Wp-Modulgrenze überschritten, während der Wechselrichter bei 800 VA bleibt, lässt sich die Anlage bei manchen Netzbetreibern weiterhin als Kleinsterzeugungsanlage anmelden. Wird die 800-VA-Grenze des Wechselrichters selbst überschritten, fällt die Anlage in die reguläre, vollständig genehmigungspflichtige PV-Kategorie mit Pflicht zur Installation durch eine Elektrofachkraft — dieses Detail stammt aus Verbraucherratgebern und wurde nicht unabhängig anhand des primären VDE-Texts bestätigt.' },
         ],
       },
       relatedReading: {
@@ -1348,7 +1393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Balkonkraftwerk in Deutschland: Der vollständige Ratgeber 2026',
       description: 'Balkonkraftwerk-Regeln in Deutschland: 800-W-Grenze am Wechselrichter-Ausgang, Anmeldung im Marktstammdatenregister und die neue Norm DIN VDE V 0126-95 — geprüft anhand des primären Gesetzestexts.',
       datePublished: '2026-07-02',
-      dateModified: '2026-10-18',
+      dateModified: '2026-11-19',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/de/balcony-solar/balkonkraftwerk-germany-rules',
