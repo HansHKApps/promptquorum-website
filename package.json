@@ -52,6 +52,8 @@
     "test:app-activity": "node scripts/test-app-activity.mjs",
     "test:askhans-experiment": "npx -y tsx@4.21.0 scripts/test-askhans-experiment.tsx",
     "test:tracking-events": "npx -y tsx@4.21.0 scripts/test-tracking-events.tsx",
+    "test:academy": "npx -y tsx@4.21.0 scripts/test-academy.tsx",
+    "academy:regression": "npx -y tsx@4.21.0 --env-file-if-exists=.env.local scripts/academy-regression.tsx",
     "askhans:check": "node scripts/check-askhans-config.mjs",
     "askhans:pictures": "node scripts/gen-askhans-pictures.mjs",
     "askhans:topic-pictures": "node scripts/convert-askhans-topic-pictures.mjs",
