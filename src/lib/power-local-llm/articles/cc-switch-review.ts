@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'CC Switch local routing',
       'CC Switch download',
     ],
-    leadAnswerBlock: `**CC Switch is a free, MIT-licensed desktop app for Windows, macOS and Linux that switches API providers for Claude Code, Codex, Gemini CLI and other AI coding tools.** It is a configuration and routing layer, not an AI model, and PromptQuorum found no privacy policy on the official site.`,
+    leadAnswerBlock: `**CC Switch is a free, MIT-licensed desktop app for Windows, macOS and Linux that switches API providers for Claude Code, Codex, Gemini CLI and other AI coding tools.** It is a configuration and routing layer, not an AI model, and at the time of the last refresh PromptQuorum found no privacy policy on [ccswitch.io](https://ccswitch.io) or in the repository files.`,
     quickAnswerTop: {
       en: {
         question: 'What is CC Switch and what does it cost?',
@@ -73,10 +73,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Coverage: the README lists twelve managed tools, from Claude Code and Codex to OpenCode, Pi and Kimi Code; the official site lists sixteen',
-          'Switching replaces only the endpoint, key and model, so plugins, hooks, MCP servers and your own comments stay as they are',
+          'Per the README, switching replaces only the endpoint, key and model; plugins, hooks, MCP servers and comments stay',
           'Three modes: Direct, Routing (format conversion and failover) and Aggregation (models from several providers in one list)',
           'MCP servers, Skills and prompts are added once and synced to the tools you choose',
-          'It ships no model; every request still goes to the provider you add',
+          'It ships no model; in Direct mode requests go to the provider you add, while Routing mode can redirect them to another provider, and the app fetches model pricing data',
         ],
       },
       overview: {
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Subscriptions: the README warns that using a ChatGPT, Copilot or Grok subscription outside the official client "may violate the vendor\'s terms of service" and tells you to assess the risk yourself',
           'Sponsors: the README carries banners and discount codes for third-party relay services; PromptQuorum has not evaluated any of them',
         ],
-        note: 'PromptQuorum found no privacy policy, terms, imprint or company address on ccswitch.io or in the repository files, only an individual author and a volunteer team, so no company HQ is shown. If a legal or data-residency decision depends on who runs the project, confirm it directly.',
+        note: 'At the time of the last refresh, PromptQuorum found no privacy policy, terms, imprint or company address on [ccswitch.io](https://ccswitch.io) or in the repository files, only an individual author and a volunteer team, so no company HQ is shown. If a legal or data-residency decision depends on who runs the project, confirm it directly. This review is not legal advice; for data-protection decisions consult a qualified professional.',
       },
       whoShouldUse: {
         id: 'who-should-use-cc-switch',
@@ -174,8 +174,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'CC Switch manages the settings of coding tools on one machine, while the tools below are gateway servers. See the [Local AI Directory](/directory) for the full catalog.',
         items: [
           '**LiteLLM** — a single OpenAI-compatible gateway for 100+ provider APIs with routing and cost tracking; a server you run for applications or a team. See the [LiteLLM review](/power-local-llm/litellm-review).',
-          '**ClawRouter** — a self-hosted router for autonomous agents that decides locally which model to call; no desktop configuration screens. See the [ClawRouter review](/power-local-llm/clawrouter-review).',
-          '**AIClient2API** — a self-hosted proxy that converts Gemini CLI, Codex, Grok, Kiro and Antigravity client protocols into one OpenAI-compatible API. See the [AIClient2API review](/power-local-llm/aiclient2api-review).',
+          '**ClawRouter** — a self-hosted router for autonomous agents that decides locally which model to call; described in our review as a local Node.js proxy and CLI rather than a GUI desktop app. See the [ClawRouter review](/power-local-llm/clawrouter-review).',
+          '**AIClient2API** — a self-hosted proxy that converts Gemini CLI, Codex, Grok, Kiro and Antigravity client protocols into one OpenAI-compatible API. Mind the vendor-terms warning under Pricing, License, and Privacy before using subscriptions this way. See the [AIClient2API review](/power-local-llm/aiclient2api-review).',
         ],
         note: 'This is not an exhaustive list of routers; see the [Local AI Directory](/directory) for the regularly updated catalog, including the CC Switch entry.',
       },
@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'CC Switch lokales Routing',
       'CC Switch Download',
     ],
-    leadAnswerBlock: `**CC Switch ist eine kostenlose, MIT-lizenzierte Desktop-App für Windows, macOS und Linux, die API-Anbieter für Claude Code, Codex, Gemini CLI und weitere KI-Coding-Tools umschaltet.** Sie ist eine Konfigurations- und Routing-Schicht, kein KI-Modell, und PromptQuorum hat auf der offiziellen Website keine Datenschutzerklärung gefunden.`,
+    leadAnswerBlock: `**CC Switch ist eine kostenlose, MIT-lizenzierte Desktop-App für Windows, macOS und Linux, die API-Anbieter für Claude Code, Codex, Gemini CLI und weitere KI-Coding-Tools umschaltet.** Sie ist eine Konfigurations- und Routing-Schicht, kein KI-Modell, und PromptQuorum hat zum Zeitpunkt der letzten Aktualisierung auf [ccswitch.io](https://ccswitch.io) und in den Repository-Dateien keine Datenschutzerklärung gefunden.`,
     quickAnswerTop: {
       de: {
         question: 'Was ist CC Switch und was kostet es?',
@@ -272,10 +272,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Abdeckung: Das README nennt zwölf verwaltete Tools, von Claude Code und Codex bis OpenCode, Pi und Kimi Code; die offizielle Website nennt sechzehn',
-          'Beim Umschalten werden nur Endpunkt, Schlüssel und Modell ersetzt; Plugins, Hooks, MCP-Server und eigene Kommentare bleiben erhalten',
+          'Laut README ersetzt das Umschalten nur Endpunkt, Schlüssel und Modell; Plugins, Hooks, MCP-Server und Kommentare bleiben erhalten',
           'Drei Modi: Direkt, Routing (Formatumwandlung und Failover) und Aggregation (Modelle mehrerer Anbieter in einer Liste)',
           'MCP-Server, Skills und Prompts werden einmal angelegt und mit den gewählten Tools synchronisiert',
-          'Es bringt kein Modell mit; jede Anfrage geht weiterhin an den Anbieter, den Sie hinzufügen',
+          'Es bringt kein Modell mit; im Direktmodus gehen Anfragen an den hinzugefügten Anbieter, im Routing-Modus können sie an einen anderen Anbieter umgeleitet werden, und die App ruft Preisdaten ab',
         ],
       },
       overview: {
@@ -342,7 +342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Abonnements: Das README warnt, dass die Nutzung eines ChatGPT-, Copilot- oder Grok-Abonnements außerhalb des offiziellen Clients gegen die Nutzungsbedingungen des Anbieters verstoßen könne, und verweist auf Ihre eigene Risikoabwägung',
           'Sponsoren: Das README enthält Banner und Rabattcodes für Relay-Dienste Dritter; PromptQuorum hat keinen davon bewertet',
         ],
-        note: 'PromptQuorum hat auf ccswitch.io und in den Repository-Dateien weder Datenschutzerklärung, Nutzungsbedingungen, Impressum noch Firmenadresse gefunden, nur einen einzelnen Autor und ein Freiwilligenteam; deshalb wird kein Firmensitz angezeigt. Hängt eine rechtliche oder datenschutzrechtliche Entscheidung davon ab, wer das Projekt betreibt, klären Sie das direkt.',
+        note: 'PromptQuorum hat zum Zeitpunkt der letzten Aktualisierung auf [ccswitch.io](https://ccswitch.io) und in den Repository-Dateien weder Datenschutzerklärung, Nutzungsbedingungen, Impressum noch Firmenadresse gefunden, nur einen einzelnen Autor und ein Freiwilligenteam; deshalb wird kein Firmensitz angezeigt. Hängt eine rechtliche oder datenschutzrechtliche Entscheidung davon ab, wer das Projekt betreibt, klären Sie das direkt. Diese Review ist keine Rechtsberatung; für datenschutzrechtliche Entscheidungen ziehen Sie eine qualifizierte Fachperson hinzu.',
       },
       whoShouldUse: {
         id: 'who-should-use-cc-switch',
@@ -373,8 +373,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'CC Switch verwaltet die Einstellungen von Coding-Tools auf einem Rechner, die Tools unten sind dagegen Gateway-Server. Den vollständigen Katalog finden Sie im [Lokalen KI-Verzeichnis](/de/directory).',
         items: [
           '**LiteLLM** — ein einziges OpenAI-kompatibles Gateway für mehr als 100 Anbieter-APIs mit Routing und Kostenverfolgung; ein Server, den Sie für Anwendungen oder ein Team betreiben. Siehe die [LiteLLM-Review](/de/power-local-llm/litellm-review).',
-          '**ClawRouter** — ein selbst gehosteter Router für autonome Agenten, der lokal entscheidet, welches Modell aufgerufen wird; ohne Desktop-Konfigurationsoberfläche. Siehe die [ClawRouter-Review](/de/power-local-llm/clawrouter-review).',
-          '**AIClient2API** — ein selbst gehosteter Proxy, der die Client-Protokolle von Gemini CLI, Codex, Grok, Kiro und Antigravity in eine OpenAI-kompatible API umwandelt. Siehe die [AIClient2API-Review](/de/power-local-llm/aiclient2api-review).',
+          '**ClawRouter** — ein selbst gehosteter Router für autonome Agenten, der lokal entscheidet, welches Modell aufgerufen wird; in unserer Review als lokaler Node.js-Proxy mit CLI beschrieben, nicht als GUI-Desktop-App. Siehe die [ClawRouter-Review](/de/power-local-llm/clawrouter-review).',
+          '**AIClient2API** — ein selbst gehosteter Proxy, der die Client-Protokolle von Gemini CLI, Codex, Grok, Kiro und Antigravity in eine OpenAI-kompatible API umwandelt. Beachten Sie vor der Nutzung von Abonnements auf diesem Weg die Warnung zu Anbieterbedingungen unter „Preise, Lizenz und Datenschutz“. Siehe die [AIClient2API-Review](/de/power-local-llm/aiclient2api-review).',
         ],
         note: 'Dies ist keine vollständige Liste von Routern; den regelmäßig aktualisierten Katalog samt CC-Switch-Eintrag finden Sie im [Lokalen KI-Verzeichnis](/de/directory).',
       },
@@ -435,7 +435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'CC Switch routage local',
       'CC Switch téléchargement',
     ],
-    leadAnswerBlock: `**CC Switch est une application de bureau gratuite sous licence MIT pour Windows, macOS et Linux qui change de fournisseur d'API pour Claude Code, Codex, Gemini CLI et d'autres outils de codage IA.** C'est une couche de configuration et de routage, pas un modèle d'IA, et PromptQuorum n'a trouvé aucune politique de confidentialité sur le site officiel.`,
+    leadAnswerBlock: `**CC Switch est une application de bureau gratuite sous licence MIT pour Windows, macOS et Linux qui change de fournisseur d'API pour Claude Code, Codex, Gemini CLI et d'autres outils de codage IA.** C'est une couche de configuration et de routage, pas un modèle d'IA, et lors de la dernière mise à jour, PromptQuorum n'a trouvé aucune politique de confidentialité sur [ccswitch.io](https://ccswitch.io) ni dans les fichiers du dépôt.`,
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que CC Switch et combien coûte-t-il ?',
@@ -471,10 +471,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Couverture : le README liste douze outils gérés, de Claude Code et Codex à OpenCode, Pi et Kimi Code ; le site officiel en liste seize',
-          'Le changement ne remplace que le point d\'accès, la clé et le modèle ; plugins, hooks, serveurs MCP et vos propres commentaires restent en place',
+          'Selon le README, le changement ne remplace que le point d\'accès, la clé et le modèle ; plugins, hooks, serveurs MCP et commentaires restent en place',
           'Trois modes : Direct, Routage (conversion de format et basculement) et Agrégation (modèles de plusieurs fournisseurs dans une même liste)',
           'Serveurs MCP, Skills et prompts s\'ajoutent une fois et se synchronisent avec les outils choisis',
-          'Aucun modèle n\'est fourni ; chaque requête part toujours vers le fournisseur que vous ajoutez',
+          'Aucun modèle n\'est fourni ; en mode Direct, les requêtes partent vers le fournisseur ajouté, tandis que le mode Routage peut les rediriger vers un autre fournisseur, et l\'application récupère des données de tarification',
         ],
       },
       overview: {
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Abonnements : le README avertit que l\'usage d\'un abonnement ChatGPT, Copilot ou Grok en dehors du client officiel peut enfreindre les conditions d\'utilisation du fournisseur et vous demande d\'évaluer vous-même le risque',
           'Sponsors : le README comporte des bannières et des codes de réduction pour des services de relais tiers ; PromptQuorum n\'en a évalué aucun',
         ],
-        note: 'PromptQuorum n\'a trouvé ni politique de confidentialité, ni conditions d\'utilisation, ni mentions légales, ni adresse d\'entreprise sur ccswitch.io ou dans les fichiers du dépôt, seulement un auteur individuel et une équipe de bénévoles ; aucun siège n\'est donc affiché. Si une décision juridique ou de localisation des données dépend de l\'exploitant du projet, confirmez-le directement.',
+        note: 'Lors de la dernière mise à jour, PromptQuorum n\'a trouvé ni politique de confidentialité, ni conditions d\'utilisation, ni mentions légales, ni adresse d\'entreprise sur [ccswitch.io](https://ccswitch.io) ou dans les fichiers du dépôt, seulement un auteur individuel et une équipe de bénévoles ; aucun siège n\'est donc affiché. Si une décision juridique ou de localisation des données dépend de l\'exploitant du projet, confirmez-le directement. Ce test ne constitue pas un conseil juridique ; pour toute décision relative à la protection des données, consultez un professionnel qualifié.',
       },
       whoShouldUse: {
         id: 'who-should-use-cc-switch',
@@ -572,8 +572,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'CC Switch gère les paramètres des outils de codage sur une machine, alors que les outils ci-dessous sont des serveurs passerelles. Voir l\'[annuaire IA locale](/fr/directory) pour le catalogue complet.',
         items: [
           '**LiteLLM** — une passerelle unique compatible OpenAI pour plus de 100 API de fournisseurs, avec routage et suivi des coûts ; un serveur que vous exploitez pour des applications ou une équipe. Voir le [test de LiteLLM](/fr/power-local-llm/litellm-review).',
-          '**ClawRouter** — un routeur auto-hébergé pour agents autonomes qui décide localement quel modèle appeler ; sans écrans de configuration de bureau. Voir le [test de ClawRouter](/fr/power-local-llm/clawrouter-review).',
-          '**AIClient2API** — un proxy auto-hébergé qui convertit les protocoles clients de Gemini CLI, Codex, Grok, Kiro et Antigravity en une seule API compatible OpenAI. Voir le [test d\'AIClient2API](/fr/power-local-llm/aiclient2api-review).',
+          '**ClawRouter** — un routeur auto-hébergé pour agents autonomes qui décide localement quel modèle appeler ; décrit dans notre test comme un proxy Node.js local avec CLI, et non comme une application de bureau avec interface graphique. Voir le [test de ClawRouter](/fr/power-local-llm/clawrouter-review).',
+          '**AIClient2API** — un proxy auto-hébergé qui convertit les protocoles clients de Gemini CLI, Codex, Grok, Kiro et Antigravity en une seule API compatible OpenAI. Avant d\'utiliser des abonnements de cette manière, tenez compte de l\'avertissement sur les conditions des fournisseurs dans « Tarifs, licence et confidentialité ». Voir le [test d\'AIClient2API](/fr/power-local-llm/aiclient2api-review).',
         ],
         note: 'Cette liste de routeurs n\'est pas exhaustive ; consultez l\'[annuaire IA locale](/fr/directory) pour le catalogue régulièrement mis à jour, y compris la fiche CC Switch.',
       },
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'CC Switch ローカルルーティング',
       'CC Switch ダウンロード',
     ],
-    leadAnswerBlock: `**CC Switchは、Claude Code、Codex、Gemini CLIなどのAIコーディングツールのAPIプロバイダーを切り替える、Windows・macOS・Linux向けの無料のMITライセンス・デスクトップアプリです。** 設定とルーティングのための層であってAIモデルではなく、PromptQuorumは公式サイトでプライバシーポリシーを見つけられませんでした。`,
+    leadAnswerBlock: `**CC Switchは、Claude Code、Codex、Gemini CLIなどのAIコーディングツールのAPIプロバイダーを切り替える、Windows・macOS・Linux向けの無料のMITライセンス・デスクトップアプリです。** 設定とルーティングのための層であってAIモデルではなく、PromptQuorumは最終更新時点で、[ccswitch.io](https://ccswitch.io)にもリポジトリのファイルにもプライバシーポリシーを見つけられませんでした。`,
     quickAnswerTop: {
       ja: {
         question: 'CC Switchとは何で、費用はいくらですか？',
@@ -670,10 +670,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '対応範囲：READMEは管理対象ツールとしてClaude CodeやCodexからOpenCode、Pi、Kimi Codeまで12個を挙げ、公式サイトは16個を挙げています',
-          '切り替えで置き換わるのはエンドポイント、キー、モデルだけで、プラグイン、フック、MCPサーバー、自分で書いたコメントはそのまま残ります',
+          'READMEによると、切り替えで置き換わるのはエンドポイント、キー、モデルだけで、プラグイン、フック、MCPサーバー、コメントはそのまま残ります',
           '3つのモード：ダイレクト、ルーティング（形式変換とフェイルオーバー）、アグリゲーション（複数プロバイダーのモデルを1つの一覧に集約）',
           'MCPサーバー、Skills、プロンプトは一度追加すれば、選んだツールに同期されます',
-          'モデルは同梱されておらず、すべてのリクエストは追加したプロバイダーに送られます',
+          'モデルは同梱されていません。ダイレクトモードではリクエストは追加したプロバイダーに送られますが、ルーティングモードでは別のプロバイダーへ振り分けられることがあり、アプリは料金データも取得します',
         ],
       },
       overview: {
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'サブスクリプション：READMEは、ChatGPT、Copilot、Grokのサブスクリプションを公式クライアント以外で使うとベンダーの利用規約に違反する可能性があると警告し、リスクは自分で判断するよう求めています',
           'スポンサー：READMEにはサードパーティの中継サービスのバナーと割引コードが載っています。PromptQuorumはそれらを評価していません',
         ],
-        note: 'PromptQuorumはccswitch.ioにもリポジトリのファイルにも、プライバシーポリシー、利用規約、運営者情報、企業の住所を見つけられず、個人の作者とボランティアのチームが確認できただけです。そのため企業の本社所在地は表示していません。誰がプロジェクトを運営しているかによって法務やデータ保管場所の判断が変わる場合は、直接確認してください。',
+        note: 'PromptQuorumは最終更新時点で、[ccswitch.io](https://ccswitch.io)にもリポジトリのファイルにも、プライバシーポリシー、利用規約、運営者情報、企業の住所を見つけられず、個人の作者とボランティアのチームが確認できただけです。そのため企業の本社所在地は表示していません。誰がプロジェクトを運営しているかによって法務やデータ保管場所の判断が変わる場合は、直接確認してください。このレビューは法的助言ではありません。データ保護に関する判断は、資格のある専門家にご相談ください。',
       },
       whoShouldUse: {
         id: 'who-should-use-cc-switch',
@@ -771,8 +771,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'CC Switchは1台のマシン上のコーディングツールの設定を管理しますが、以下のツールはゲートウェイサーバーです。全体のカタログは[ローカルAIディレクトリ](/ja/directory)をご覧ください。',
         items: [
           '**LiteLLM** — 100以上のプロバイダーAPIをルーティングとコスト追跡付きでまとめる、OpenAI互換の単一ゲートウェイ。アプリケーションやチーム向けに運用するサーバーです。[LiteLLMレビュー](/ja/power-local-llm/litellm-review)をご覧ください。',
-          '**ClawRouter** — どのモデルを呼ぶかをローカルで判断する、自律エージェント向けのセルフホスト型ルーター。デスクトップの設定画面はありません。[ClawRouterレビュー](/ja/power-local-llm/clawrouter-review)をご覧ください。',
-          '**AIClient2API** — Gemini CLI、Codex、Grok、Kiro、Antigravityのクライアントプロトコルを1つのOpenAI互換APIに変換するセルフホスト型プロキシ。[AIClient2APIレビュー](/ja/power-local-llm/aiclient2api-review)をご覧ください。',
+          '**ClawRouter** — どのモデルを呼ぶかをローカルで判断する、自律エージェント向けのセルフホスト型ルーター。当サイトのレビューでは、GUIのデスクトップアプリではなくローカルのNode.jsプロキシ兼CLIとして紹介しています。[ClawRouterレビュー](/ja/power-local-llm/clawrouter-review)をご覧ください。',
+          '**AIClient2API** — Gemini CLI、Codex、Grok、Kiro、Antigravityのクライアントプロトコルを1つのOpenAI互換APIに変換するセルフホスト型プロキシ。サブスクリプションをこの方法で使う前に、「価格・ライセンス・プライバシー」のベンダー規約に関する警告をご確認ください。[AIClient2APIレビュー](/ja/power-local-llm/aiclient2api-review)をご覧ください。',
         ],
         note: 'これはルーターの網羅的な一覧ではありません。定期的に更新されるカタログ（CC Switchの掲載を含む）は[ローカルAIディレクトリ](/ja/directory)をご覧ください。',
       },
@@ -833,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'CC Switch 本地路由',
       'CC Switch 下载',
     ],
-    leadAnswerBlock: `**CC Switch 是一款适用于 Windows、macOS 和 Linux 的免费 MIT 许可桌面应用，可为 Claude Code、Codex、Gemini CLI 等 AI 编程工具切换 API 服务商。** 它是配置与路由层，不是 AI 模型，PromptQuorum 在官方网站上没有找到隐私政策。`,
+    leadAnswerBlock: `**CC Switch 是一款适用于 Windows、macOS 和 Linux 的免费 MIT 许可桌面应用，可为 Claude Code、Codex、Gemini CLI 等 AI 编程工具切换 API 服务商。** 它是配置与路由层，不是 AI 模型，PromptQuorum 在最近一次更新时，没有在 [ccswitch.io](https://ccswitch.io) 或仓库文件中找到隐私政策。`,
     quickAnswerTop: {
       zh: {
         question: 'CC Switch 是什么，费用如何？',
@@ -869,10 +869,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '覆盖范围：README 列出十二个受管理的工具，从 Claude Code、Codex 到 OpenCode、Pi 和 Kimi Code；官方网站列出十六个',
-          '切换时只替换端点、密钥和模型，插件、钩子、MCP 服务器以及你自己写的注释都保持不变',
+          '根据 README，切换时只替换端点、密钥和模型，插件、钩子、MCP 服务器和注释都保持不变',
           '三种模式：直连、路由（格式转换与故障转移）和聚合（多个服务商的模型合并为一个列表）',
           'MCP 服务器、Skills 和提示词只需添加一次，即可同步到你选择的工具',
-          '它不附带任何模型；每个请求仍然发往你添加的服务商',
+          '它不附带任何模型；直连模式下请求发往你添加的服务商，路由模式可能把请求转发到其他服务商，应用还会获取定价数据',
         ],
       },
       overview: {
@@ -939,7 +939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '订阅：README 警告，在官方客户端之外使用 ChatGPT、Copilot 或 Grok 订阅可能违反供应商的服务条款，并要求你自行评估风险',
           '赞助商：README 中有第三方中转服务的横幅和折扣码；PromptQuorum 没有评估其中任何一个',
         ],
-        note: 'PromptQuorum 在 ccswitch.io 和仓库文件中都没有找到隐私政策、服务条款、法律声明或公司地址，只看到一位个人作者和一个志愿者团队，因此不显示公司总部所在地。如果法律或数据驻留方面的决定取决于谁在运营该项目，请直接向其确认。',
+        note: 'PromptQuorum 在最近一次更新时，没有在 [ccswitch.io](https://ccswitch.io) 和仓库文件中都没有找到隐私政策、服务条款、法律声明或公司地址，只看到一位个人作者和一个志愿者团队，因此不显示公司总部所在地。如果法律或数据驻留方面的决定取决于谁在运营该项目，请直接向其确认。本评测不构成法律意见；涉及数据保护的决定，请咨询合格的专业人士。',
       },
       whoShouldUse: {
         id: 'who-should-use-cc-switch',
@@ -970,8 +970,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'CC Switch 管理的是单台机器上编程工具的设置，而下面这些工具是网关服务器。完整目录请见[本地 AI 目录](/zh/directory)。',
         items: [
           '**LiteLLM** — 一个兼容 OpenAI 的统一网关，覆盖 100 多个服务商 API，带路由和成本追踪；是你为应用或团队运行的服务器。参见 [LiteLLM 评测](/zh/power-local-llm/litellm-review)。',
-          '**ClawRouter** — 面向自主智能体的自托管路由器，在本地决定调用哪个模型；没有桌面配置界面。参见 [ClawRouter 评测](/zh/power-local-llm/clawrouter-review)。',
-          '**AIClient2API** — 自托管代理，把 Gemini CLI、Codex、Grok、Kiro 和 Antigravity 的客户端协议转换为一个兼容 OpenAI 的 API。参见 [AIClient2API 评测](/zh/power-local-llm/aiclient2api-review)。',
+          '**ClawRouter** — 面向自主智能体的自托管路由器，在本地决定调用哪个模型；我们的评测将其描述为本地 Node.js 代理和 CLI，而不是图形界面桌面应用。参见 [ClawRouter 评测](/zh/power-local-llm/clawrouter-review)。',
+          '**AIClient2API** — 自托管代理，把 Gemini CLI、Codex、Grok、Kiro 和 Antigravity 的客户端协议转换为一个兼容 OpenAI 的 API。以这种方式使用订阅之前，请留意“价格、许可与隐私”中关于服务商条款的警告。参见 [AIClient2API 评测](/zh/power-local-llm/aiclient2api-review)。',
         ],
         note: '这不是路由器的完整列表；定期更新的目录（包括 CC Switch 条目）请见[本地 AI 目录](/zh/directory)。',
       },
@@ -1032,7 +1032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'CC Switch enrutamiento local',
       'CC Switch descarga',
     ],
-    leadAnswerBlock: `**CC Switch es una aplicación de escritorio gratuita con licencia MIT para Windows, macOS y Linux que cambia de proveedor de API en Claude Code, Codex, Gemini CLI y otras herramientas de programación con IA.** Es una capa de configuración y enrutamiento, no un modelo de IA, y PromptQuorum no encontró ninguna política de privacidad en el sitio oficial.`,
+    leadAnswerBlock: `**CC Switch es una aplicación de escritorio gratuita con licencia MIT para Windows, macOS y Linux que cambia de proveedor de API en Claude Code, Codex, Gemini CLI y otras herramientas de programación con IA.** Es una capa de configuración y enrutamiento, no un modelo de IA, y en la última actualización PromptQuorum no encontró ninguna política de privacidad en [ccswitch.io](https://ccswitch.io) ni en los archivos del repositorio.`,
     quickAnswerTop: {
       es: {
         question: '¿Qué es CC Switch y cuánto cuesta?',
@@ -1068,10 +1068,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Cobertura: el README enumera doce herramientas gestionadas, de Claude Code y Codex a OpenCode, Pi y Kimi Code; el sitio oficial enumera dieciséis',
-          'Al cambiar solo se sustituyen el endpoint, la clave y el modelo; los plugins, hooks, servidores MCP y tus propios comentarios se conservan',
+          'Según el README, al cambiar solo se sustituyen el endpoint, la clave y el modelo; los plugins, hooks, servidores MCP y los comentarios se conservan',
           'Tres modos: Directo, Enrutamiento (conversión de formato y conmutación por error) y Agregación (modelos de varios proveedores en una lista)',
           'Los servidores MCP, Skills y prompts se añaden una vez y se sincronizan con las herramientas que elijas',
-          'No incluye ningún modelo; cada solicitud sigue yendo al proveedor que añadas',
+          'No incluye ningún modelo; en modo Directo las solicitudes van al proveedor que añadas, mientras que el modo Enrutamiento puede redirigirlas a otro proveedor, y la aplicación obtiene datos de precios',
         ],
       },
       overview: {
@@ -1138,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Suscripciones: el README advierte de que usar una suscripción de ChatGPT, Copilot o Grok fuera del cliente oficial puede infringir las condiciones del proveedor y te pide que evalúes el riesgo por tu cuenta',
           'Patrocinadores: el README incluye banners y códigos de descuento de servicios de relé de terceros; PromptQuorum no ha evaluado ninguno',
         ],
-        note: 'PromptQuorum no encontró política de privacidad, términos, aviso legal ni dirección de empresa en ccswitch.io ni en los archivos del repositorio, solo un autor individual y un equipo de voluntarios; por eso no se muestra sede de empresa. Si una decisión legal o de residencia de datos depende de quién opera el proyecto, confírmalo directamente.',
+        note: 'En la última actualización, PromptQuorum no encontró política de privacidad, términos, aviso legal ni dirección de empresa en [ccswitch.io](https://ccswitch.io) ni en los archivos del repositorio, solo un autor individual y un equipo de voluntarios; por eso no se muestra sede de empresa. Si una decisión legal o de residencia de datos depende de quién opera el proyecto, confírmalo directamente. Esta reseña no es asesoramiento legal; para decisiones de protección de datos, consulta a un profesional cualificado.',
       },
       whoShouldUse: {
         id: 'who-should-use-cc-switch',
@@ -1169,8 +1169,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'CC Switch gestiona los ajustes de las herramientas de programación en un equipo, mientras que las herramientas siguientes son servidores pasarela. Consulta el [Directorio de IA local](/es/directory) para ver el catálogo completo.',
         items: [
           '**LiteLLM** — una pasarela única compatible con OpenAI para más de 100 API de proveedores, con enrutamiento y seguimiento de costes; un servidor que ejecutas para aplicaciones o un equipo. Consulta la [reseña de LiteLLM](/es/power-local-llm/litellm-review).',
-          '**ClawRouter** — un enrutador autoalojado para agentes autónomos que decide localmente qué modelo llamar; sin pantallas de configuración de escritorio. Consulta la [reseña de ClawRouter](/es/power-local-llm/clawrouter-review).',
-          '**AIClient2API** — un proxy autoalojado que convierte los protocolos de cliente de Gemini CLI, Codex, Grok, Kiro y Antigravity en una única API compatible con OpenAI. Consulta la [reseña de AIClient2API](/es/power-local-llm/aiclient2api-review).',
+          '**ClawRouter** — un enrutador autoalojado para agentes autónomos que decide localmente qué modelo llamar; descrito en nuestra reseña como un proxy local de Node.js con CLI, no como una aplicación de escritorio con interfaz gráfica. Consulta la [reseña de ClawRouter](/es/power-local-llm/clawrouter-review).',
+          '**AIClient2API** — un proxy autoalojado que convierte los protocolos de cliente de Gemini CLI, Codex, Grok, Kiro y Antigravity en una única API compatible con OpenAI. Antes de usar suscripciones de este modo, ten en cuenta la advertencia sobre los términos de los proveedores en «Precio, licencia y privacidad». Consulta la [reseña de AIClient2API](/es/power-local-llm/aiclient2api-review).',
         ],
         note: 'Esta no es una lista exhaustiva de enrutadores; consulta el [Directorio de IA local](/es/directory) para ver el catálogo actualizado con regularidad, incluida la ficha de CC Switch.',
       },
@@ -1231,7 +1231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'CC Switch roteamento local',
       'CC Switch download',
     ],
-    leadAnswerBlock: `**O CC Switch é um aplicativo de desktop gratuito com licença MIT para Windows, macOS e Linux que troca o provedor de API do Claude Code, Codex, Gemini CLI e de outras ferramentas de programação com IA.** É uma camada de configuração e roteamento, não um modelo de IA, e a PromptQuorum não encontrou política de privacidade no site oficial.`,
+    leadAnswerBlock: `**O CC Switch é um aplicativo de desktop gratuito com licença MIT para Windows, macOS e Linux que troca o provedor de API do Claude Code, Codex, Gemini CLI e de outras ferramentas de programação com IA.** É uma camada de configuração e roteamento, não um modelo de IA, e na última atualização a PromptQuorum não encontrou política de privacidade em [ccswitch.io](https://ccswitch.io) nem nos arquivos do repositório.`,
     quickAnswerTop: {
       pt: {
         question: 'O que é o CC Switch e quanto custa?',
@@ -1267,10 +1267,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Cobertura: o README lista doze ferramentas gerenciadas, do Claude Code e Codex ao OpenCode, Pi e Kimi Code; o site oficial lista dezesseis',
-          'A troca substitui apenas o endpoint, a chave e o modelo; plugins, hooks, servidores MCP e seus próprios comentários permanecem',
+          'Segundo o README, a troca substitui apenas o endpoint, a chave e o modelo; plugins, hooks, servidores MCP e comentários permanecem',
           'Três modos: Direto, Roteamento (conversão de formato e failover) e Agregação (modelos de vários provedores em uma lista)',
           'Servidores MCP, Skills e prompts são adicionados uma vez e sincronizados com as ferramentas que você escolher',
-          'Não inclui nenhum modelo; cada solicitação continua indo para o provedor que você adicionar',
+          'Não inclui nenhum modelo; no modo Direto, as solicitações vão para o provedor que você adicionar, enquanto o modo Roteamento pode redirecioná-las a outro provedor, e o aplicativo busca dados de preços',
         ],
       },
       overview: {
@@ -1337,7 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Assinaturas: o README avisa que usar uma assinatura do ChatGPT, Copilot ou Grok fora do cliente oficial pode violar os termos de serviço do fornecedor e pede que você avalie o risco por conta própria',
           'Patrocinadores: o README traz banners e códigos de desconto de serviços de relay de terceiros; a PromptQuorum não avaliou nenhum deles',
         ],
-        note: 'A PromptQuorum não encontrou política de privacidade, termos, aviso legal nem endereço de empresa em ccswitch.io ou nos arquivos do repositório, apenas um autor individual e uma equipe de voluntários; por isso nenhuma sede de empresa é exibida. Se uma decisão jurídica ou de residência de dados depender de quem opera o projeto, confirme diretamente.',
+        note: 'Na última atualização, a PromptQuorum não encontrou política de privacidade, termos, aviso legal nem endereço de empresa em [ccswitch.io](https://ccswitch.io) ou nos arquivos do repositório, apenas um autor individual e uma equipe de voluntários; por isso nenhuma sede de empresa é exibida. Se uma decisão jurídica ou de residência de dados depender de quem opera o projeto, confirme diretamente. Esta análise não é aconselhamento jurídico; para decisões de proteção de dados, consulte um profissional qualificado.',
       },
       whoShouldUse: {
         id: 'who-should-use-cc-switch',
@@ -1368,8 +1368,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'O CC Switch gerencia as configurações das ferramentas de programação em uma máquina, enquanto as ferramentas abaixo são servidores gateway. Veja o [Diretório de IA local](/pt/directory) para o catálogo completo.',
         items: [
           '**LiteLLM** — um gateway único compatível com OpenAI para mais de 100 APIs de provedores, com roteamento e acompanhamento de custos; um servidor que você opera para aplicações ou uma equipe. Veja a [análise do LiteLLM](/pt/power-local-llm/litellm-review).',
-          '**ClawRouter** — um roteador auto-hospedado para agentes autônomos que decide localmente qual modelo chamar; sem telas de configuração de desktop. Veja a [análise do ClawRouter](/pt/power-local-llm/clawrouter-review).',
-          '**AIClient2API** — um proxy auto-hospedado que converte os protocolos de cliente do Gemini CLI, Codex, Grok, Kiro e Antigravity em uma única API compatível com OpenAI. Veja a [análise do AIClient2API](/pt/power-local-llm/aiclient2api-review).',
+          '**ClawRouter** — um roteador auto-hospedado para agentes autônomos que decide localmente qual modelo chamar; descrito em nossa análise como um proxy local em Node.js com CLI, e não como um aplicativo de desktop com interface gráfica. Veja a [análise do ClawRouter](/pt/power-local-llm/clawrouter-review).',
+          '**AIClient2API** — um proxy auto-hospedado que converte os protocolos de cliente do Gemini CLI, Codex, Grok, Kiro e Antigravity em uma única API compatível com OpenAI. Antes de usar assinaturas dessa forma, observe o aviso sobre os termos dos provedores em “Preço, licença e privacidade”. Veja a [análise do AIClient2API](/pt/power-local-llm/aiclient2api-review).',
         ],
         note: 'Esta não é uma lista exaustiva de roteadores; veja o [Diretório de IA local](/pt/directory) para o catálogo atualizado regularmente, incluindo a entrada do CC Switch.',
       },
@@ -1430,7 +1430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'CC Switch التوجيه المحلي',
       'تنزيل CC Switch',
     ],
-    leadAnswerBlock: `**CC Switch تطبيق سطح مكتب مجاني برخصة MIT لأنظمة Windows وmacOS وLinux يبدّل مزوّد API في Claude Code وCodex وGemini CLI وغيرها من أدوات البرمجة بالذكاء الاصطناعي.** وهو طبقة للإعداد والتوجيه وليس نموذج ذكاء اصطناعي، ولم تجد PromptQuorum سياسة خصوصية على الموقع الرسمي.`,
+    leadAnswerBlock: `**CC Switch تطبيق سطح مكتب مجاني برخصة MIT لأنظمة Windows وmacOS وLinux يبدّل مزوّد API في Claude Code وCodex وGemini CLI وغيرها من أدوات البرمجة بالذكاء الاصطناعي.** وهو طبقة للإعداد والتوجيه وليس نموذج ذكاء اصطناعي، ولم تجد PromptQuorum عند آخر تحديث سياسة خصوصية على [ccswitch.io](https://ccswitch.io) ولا في ملفات المستودع.`,
     quickAnswerTop: {
       ar: {
         question: 'ما هو CC Switch وكم تبلغ تكلفته؟',
@@ -1466,10 +1466,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'التغطية: يذكر README اثنتي عشرة أداة مُدارة، من Claude Code وCodex إلى OpenCode وPi وKimi Code، ويذكر الموقع الرسمي ست عشرة',
-          'يستبدل التبديل نقطة النهاية والمفتاح والنموذج فقط، فتبقى الإضافات وhooks وخوادم MCP وتعليقاتك كما هي',
+          'بحسب README، يستبدل التبديل نقطة النهاية والمفتاح والنموذج فقط، وتبقى الإضافات وhooks وخوادم MCP والتعليقات كما هي',
           'ثلاثة أوضاع: مباشر، وتوجيه (تحويل صيغ وتبديل تلقائي عند الفشل)، وتجميع (نماذج عدة مزوّدين في قائمة واحدة)',
           'تُضاف خوادم MCP وSkills والموجّهات مرة واحدة وتُزامَن مع الأدوات التي تختارها',
-          'لا يأتي بأي نموذج؛ فكل طلب ما يزال يذهب إلى المزوّد الذي تضيفه',
+          'لا يأتي بأي نموذج؛ ففي الوضع المباشر تذهب الطلبات إلى المزوّد الذي تضيفه، وقد يعيد وضع التوجيه توجيهها إلى مزوّد آخر، كما يجلب التطبيق بيانات الأسعار',
         ],
       },
       overview: {
@@ -1536,7 +1536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الاشتراكات: يحذّر README من أن استخدام اشتراك ChatGPT أو Copilot أو Grok خارج العميل الرسمي قد يخالف شروط خدمة المزوّد، ويطلب منك تقدير المخاطرة بنفسك',
           'الرعاة: يتضمن README لافتات وأكواد خصم لخدمات ترحيل تابعة لجهات خارجية؛ ولم تقيّم PromptQuorum أيًّا منها',
         ],
-        note: 'لم تجد PromptQuorum سياسة خصوصية أو شروطًا أو إشعارًا قانونيًا أو عنوان شركة على ccswitch.io أو في ملفات المستودع، بل مؤلفًا فردًا وفريقًا من المتطوعين فقط، ولذلك لا يظهر مقر للشركة. وإذا كان قرار قانوني أو قرار يخص إقامة البيانات يعتمد على من يشغّل المشروع، فتأكد من ذلك مباشرة.',
+        note: 'لم تجد PromptQuorum عند آخر تحديث سياسة خصوصية أو شروطًا أو إشعارًا قانونيًا أو عنوان شركة على [ccswitch.io](https://ccswitch.io) أو في ملفات المستودع، بل مؤلفًا فردًا وفريقًا من المتطوعين فقط، ولذلك لا يظهر مقر للشركة. وإذا كان قرار قانوني أو قرار يخص إقامة البيانات يعتمد على من يشغّل المشروع، فتأكد من ذلك مباشرة. هذه المراجعة ليست استشارة قانونية؛ ولقرارات حماية البيانات استشر مختصًا مؤهلًا.',
       },
       whoShouldUse: {
         id: 'who-should-use-cc-switch',
@@ -1567,8 +1567,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'يدير CC Switch إعدادات أدوات البرمجة على جهاز واحد، أما الأدوات أدناه فهي خوادم بوابات. راجع [دليل الذكاء الاصطناعي المحلي](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**LiteLLM** — بوابة واحدة متوافقة مع OpenAI لأكثر من 100 واجهة API لمزوّدين، مع توجيه وتتبع للتكلفة؛ وهي خادم تشغّله للتطبيقات أو لفريق. راجع [مراجعة LiteLLM](/ar/power-local-llm/litellm-review).',
-          '**ClawRouter** — موجّه مستضاف ذاتيًا للوكلاء المستقلين يقرر محليًا أي نموذج يستدعي؛ بلا شاشات إعداد لسطح المكتب. راجع [مراجعة ClawRouter](/ar/power-local-llm/clawrouter-review).',
-          '**AIClient2API** — وكيل مستضاف ذاتيًا يحوّل بروتوكولات عملاء Gemini CLI وCodex وGrok وKiro وAntigravity إلى واجهة API واحدة متوافقة مع OpenAI. راجع [مراجعة AIClient2API](/ar/power-local-llm/aiclient2api-review).',
+          '**ClawRouter** — موجّه مستضاف ذاتيًا للوكلاء المستقلين يقرر محليًا أي نموذج يستدعي؛ تصفه مراجعتنا بأنه وكيل Node.js محلي مع CLI وليس تطبيق سطح مكتب بواجهة رسومية. راجع [مراجعة ClawRouter](/ar/power-local-llm/clawrouter-review).',
+          '**AIClient2API** — وكيل مستضاف ذاتيًا يحوّل بروتوكولات عملاء Gemini CLI وCodex وGrok وKiro وAntigravity إلى واجهة API واحدة متوافقة مع OpenAI. قبل استخدام الاشتراكات بهذه الطريقة، انتبه إلى التحذير بشأن شروط المزوّدين في «السعر والرخصة والخصوصية». راجع [مراجعة AIClient2API](/ar/power-local-llm/aiclient2api-review).',
         ],
         note: 'هذه ليست قائمة شاملة بأدوات التوجيه؛ راجع [دليل الذكاء الاصطناعي المحلي](/ar/directory) للاطلاع على الكتالوج المحدَّث بانتظام، بما في ذلك إدخال CC Switch.',
       },
@@ -1629,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'CC Switch 로컬 라우팅',
       'CC Switch 다운로드',
     ],
-    leadAnswerBlock: `**CC Switch는 Claude Code, Codex, Gemini CLI 등 AI 코딩 도구의 API 제공업체를 전환하는 Windows·macOS·Linux용 무료 MIT 라이선스 데스크톱 앱입니다.** 설정과 라우팅을 담당하는 계층일 뿐 AI 모델이 아니며, PromptQuorum은 공식 사이트에서 개인정보 처리방침을 찾지 못했습니다.`,
+    leadAnswerBlock: `**CC Switch는 Claude Code, Codex, Gemini CLI 등 AI 코딩 도구의 API 제공업체를 전환하는 Windows·macOS·Linux용 무료 MIT 라이선스 데스크톱 앱입니다.** 설정과 라우팅을 담당하는 계층일 뿐 AI 모델이 아니며, PromptQuorum은 마지막 업데이트 시점에 [ccswitch.io](https://ccswitch.io)와 저장소 파일 어디에서도 개인정보 처리방침을 찾지 못했습니다.`,
     quickAnswerTop: {
       ko: {
         question: 'CC Switch는 무엇이며 비용은 얼마입니까?',
@@ -1665,10 +1665,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '지원 범위: README는 Claude Code와 Codex부터 OpenCode, Pi, Kimi Code까지 관리 대상 도구 12개를 나열하고, 공식 사이트는 16개를 나열합니다',
-          '전환할 때는 엔드포인트, 키, 모델만 교체되며 플러그인, 훅, MCP 서버, 직접 작성한 주석은 그대로 유지됩니다',
+          'README에 따르면 전환할 때는 엔드포인트, 키, 모델만 교체되며 플러그인, 훅, MCP 서버, 주석은 그대로 유지됩니다',
           '세 가지 모드: 직접 연결, 라우팅(형식 변환과 장애 조치), 통합(여러 제공업체의 모델을 한 목록으로 표시)',
           'MCP 서버, Skills, 프롬프트는 한 번 추가하면 선택한 도구에 동기화됩니다',
-          '모델은 포함되어 있지 않으며, 모든 요청은 여전히 추가한 제공업체로 전달됩니다',
+          '모델은 포함되어 있지 않습니다. 직접 연결 모드에서는 요청이 추가한 제공업체로 가지만 라우팅 모드는 다른 제공업체로 보낼 수 있으며, 앱은 가격 데이터도 가져옵니다',
         ],
       },
       overview: {
@@ -1735,7 +1735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '구독: README는 ChatGPT, Copilot, Grok 구독을 공식 클라이언트 밖에서 사용하면 공급업체의 이용 약관을 위반할 수 있다고 경고하며 위험은 직접 판단하라고 안내합니다',
           '스폰서: README에는 제3자 릴레이 서비스의 배너와 할인 코드가 실려 있습니다. PromptQuorum은 그중 어느 것도 평가하지 않았습니다',
         ],
-        note: 'PromptQuorum은 ccswitch.io와 저장소 파일 어디에서도 개인정보 처리방침, 이용 약관, 운영자 정보, 회사 주소를 찾지 못했고 개인 작성자와 자원봉사 팀만 확인했습니다. 그래서 회사 본사 위치는 표시하지 않습니다. 누가 프로젝트를 운영하는지에 따라 법적 판단이나 데이터 보관 위치 판단이 달라진다면 직접 확인하시기 바랍니다.',
+        note: 'PromptQuorum은 마지막 업데이트 시점에 [ccswitch.io](https://ccswitch.io)와 저장소 파일 어디에서도 개인정보 처리방침, 이용 약관, 운영자 정보, 회사 주소를 찾지 못했고 개인 작성자와 자원봉사 팀만 확인했습니다. 그래서 회사 본사 위치는 표시하지 않습니다. 누가 프로젝트를 운영하는지에 따라 법적 판단이나 데이터 보관 위치 판단이 달라진다면 직접 확인하시기 바랍니다. 이 리뷰는 법률 자문이 아닙니다. 데이터 보호에 관한 판단은 자격을 갖춘 전문가와 상의하시기 바랍니다.',
       },
       whoShouldUse: {
         id: 'who-should-use-cc-switch',
@@ -1766,8 +1766,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'CC Switch는 한 대의 컴퓨터에서 코딩 도구의 설정을 관리하지만, 아래 도구들은 게이트웨이 서버입니다. 전체 카탈로그는 [로컬 AI 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**LiteLLM** — 100개 이상의 제공업체 API를 라우팅과 비용 추적과 함께 묶는 OpenAI 호환 단일 게이트웨이로, 애플리케이션이나 팀을 위해 직접 운영하는 서버입니다. [LiteLLM 리뷰](/ko/power-local-llm/litellm-review)를 참고하세요.',
-          '**ClawRouter** — 어떤 모델을 호출할지 로컬에서 결정하는 자율 에이전트용 셀프호스팅 라우터로, 데스크톱 설정 화면은 없습니다. [ClawRouter 리뷰](/ko/power-local-llm/clawrouter-review)를 참고하세요.',
-          '**AIClient2API** — Gemini CLI, Codex, Grok, Kiro, Antigravity의 클라이언트 프로토콜을 하나의 OpenAI 호환 API로 변환하는 셀프호스팅 프록시입니다. [AIClient2API 리뷰](/ko/power-local-llm/aiclient2api-review)를 참고하세요.',
+          '**ClawRouter** — 어떤 모델을 호출할지 로컬에서 결정하는 자율 에이전트용 셀프호스팅 라우터로, 저희 리뷰에서는 GUI 데스크톱 앱이 아니라 로컬 Node.js 프록시와 CLI로 설명합니다. [ClawRouter 리뷰](/ko/power-local-llm/clawrouter-review)를 참고하세요.',
+          '**AIClient2API** — Gemini CLI, Codex, Grok, Kiro, Antigravity의 클라이언트 프로토콜을 하나의 OpenAI 호환 API로 변환하는 셀프호스팅 프록시입니다. 구독을 이 방식으로 사용하기 전에 「가격, 라이선스, 프라이버시」의 제공업체 약관 경고를 확인하시기 바랍니다. [AIClient2API 리뷰](/ko/power-local-llm/aiclient2api-review)를 참고하세요.',
         ],
         note: '이것은 라우터의 전체 목록이 아닙니다. 정기적으로 업데이트되는 카탈로그(CC Switch 항목 포함)는 [로컬 AI 디렉터리](/ko/directory)를 참고하세요.',
       },
