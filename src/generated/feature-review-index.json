@@ -1419,6 +1419,11 @@
     "urlSlug": "reactive-resume-review",
     "url": "/power-local-llm/reactive-resume-review"
   },
+  "paperclip": {
+    "cluster": "power-local-llm",
+    "urlSlug": "paperclip-review",
+    "url": "/power-local-llm/paperclip-review"
+  },
   "next-ai-draw-io": {
     "cluster": "power-local-llm",
     "urlSlug": "next-ai-draw-io-review",

@@ -372,6 +372,7 @@ import { app as app_pooled } from './apps/pooled'
 import { app as app_askimo } from './apps/askimo'
 import { app as app_myagents } from './apps/myagents'
 import { app as app_reactive_resume } from './apps/reactive-resume'
+import { app as app_paperclip } from './apps/paperclip'
 import { app as app_next_ai_draw_io } from './apps/next-ai-draw-io'
 import { app as app_funclip } from './apps/funclip'
 import { app as app_intentkit } from './apps/intentkit'
@@ -706,6 +707,7 @@ export const localAiApps: ToolRecord[] = [
   app_askimo,
   app_myagents,
   app_reactive_resume,
+  app_paperclip,
   app_next_ai_draw_io,
   app_funclip,
   app_intentkit,

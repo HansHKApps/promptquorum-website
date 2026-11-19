@@ -1090,6 +1090,7 @@ const HUB_THEMES: Array<{
       'lexora-review',
       'kition-review',
       'openwork-review',
+      'paperclip-review',
     ],
   },
   {
