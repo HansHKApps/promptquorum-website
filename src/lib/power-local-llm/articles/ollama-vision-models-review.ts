@@ -11,18 +11,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-10-20',
-    next_refresh_due: '2027-03-05',
+    dateModified: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/ollama-vision-models-review-hero-en.webp',
     title: 'Ollama Vision Models: How to Actually Run Image Models Locally',
-    seoTitle: 'Ollama Vision Models: A Practical Running Guide',
+    seoTitle: 'Ollama Vision Models: 11 Options, Tested Commands',
     intro:
-      'Ollama, the local model runner built on top of [llama.cpp](https://github.com/ggml-org/llama.cpp), added multimodal (image-input) support in version 0.1.15 back in December 2023, and rebuilt it into a dedicated multimodal engine in May 2026. This guide is a focused, practical reference for actually running vision-capable models through Ollama today: which models are currently listed in its [library](https://ollama.com/library), the real CLI and HTTP API syntax for passing an image, and honest guidance on what Ollama is not good for. If you want a deep dive on one specific model, see PromptQuorum\'s [LLaVA review](/power-local-llm/llava-review); for a broader comparison across all local vision models regardless of runner, see the [local vision models guide](/power-local-llm/local-vision-models-llava-ollama-2026).',
+      'Ollama, the local model runner built on top of [llama.cpp](https://github.com/ggml-org/llama.cpp), added multimodal (image-input) support in version 0.1.15 back in December 2023, and rebuilt it into a dedicated multimodal engine in May 2026. This guide is a focused, practical reference for actually running vision-capable models (also called VLMs, or vision-language models) through Ollama today: which models are currently listed in its [library](https://ollama.com/library), the real CLI and HTTP API syntax for passing an image, and honest guidance on what Ollama is not good for. If you want a deep dive on one specific model, see PromptQuorum\'s [LLaVA review](/power-local-llm/llava-review); for a broader comparison across all local vision models regardless of runner, see the [local vision models guide](/power-local-llm/local-vision-models-llava-ollama-2026).',
     metaDescription:
-      'Ollama vision models 2026: the practical how-to for running image-capable models through Ollama. Real pull/run commands, the /api/generate JSON shape with base64 images, and which models are actually listed.',
+      'Ollama runs 11 vision models locally: LLaVA, Llama 3.2 Vision, Qwen2.5-VL, Qwen3-VL and more. Verified pull/run commands and the exact image API JSON.',
     twitterDescription:
-      'Ollama vision models 2026: a focused, practical guide to running image-capable models through Ollama — real CLI commands, the actual /api/generate and /api/chat JSON shape for images, and which vision models are currently in Ollama\'s library, verified.',
+      'Ollama vision models 2026: a focused, practical guide to running image-capable models (VLMs) through Ollama — real CLI commands, the actual /api/generate and /api/chat JSON shape for images, and which vision models are currently in Ollama\'s library, verified.',
     audience:
       'Developers who already use or are considering Ollama and want a practical, verified reference for running vision-capable models through it specifically, rather than a comparison of vision models in the abstract.',
     readTime: '12 min read',
@@ -37,25 +37,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama pull vision model',
       'ollama vision models list',
       'ollama api generate images',
+      'ollama vlm',
+      'ollama vision language models',
     ],
-    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'MiniCPM-V', 'Moondream', 'Gemma 4', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
+    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'Qwen3-VL', 'MiniCPM-V', 'Moondream', 'Gemma 3', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Ollama supports running vision-capable (multimodal) models locally, and has since version 0.1.15 in December 2023.** As of this review, Ollama\'s own [model library](https://ollama.com/library) lists LLaVA (and its `llava-llama3`/`llava-phi3`/`bakllava` variants), Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, and Mistral Small 3.1 as vision-capable. Pull one with `ollama pull llava`, run it with `ollama run llava "describe this image: ./photo.jpg"`, or call it programmatically via `/api/generate` or `/api/chat` with a base64-encoded image in an `images` array. This guide covers the real commands, the documented API shape, and where Ollama is and is not the right tool — for a dedicated review of LLaVA specifically, see PromptQuorum\'s [LLaVA review](/power-local-llm/llava-review).',
+      '**Ollama supports running vision-capable (multimodal) models locally, and has since version 0.1.15 in December 2023.** As of this review, Ollama\'s own [model library](https://ollama.com/library) lists LLaVA (and its `llava-llama3`/`llava-phi3`/`bakllava` variants), Llama 3.2 Vision, Qwen2.5-VL, Qwen3-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, and Mistral Small 3.1 as vision-capable. Pull one with `ollama pull llava`, run it with `ollama run llava "describe this image: ./photo.jpg"`, or call it programmatically via `/api/generate` or `/api/chat` with a base64-encoded image in an `images` array. This guide covers the real commands, the documented API shape, and where Ollama is and is not the right tool — for a dedicated review of LLaVA specifically, see PromptQuorum\'s [LLaVA review](/power-local-llm/llava-review).',
     quickAnswerTop: {
       en: {
         question: 'Which vision models does Ollama support and how do I run one?',
         answer:
-          'As of this review, Ollama\'s library lists LLaVA (plus llava-llama3, llava-phi3, and bakllava variants), Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3 (4B and up), Llama 4, and Mistral Small 3.1 as vision-capable models you can pull directly. Run `ollama pull <model>` then `ollama run <model> "describe this image: ./photo.jpg"` — referencing the image\'s file path directly in the prompt text is enough; there is no separate `--image` flag. For programmatic use, POST to `http://localhost:11434/api/generate` or `/api/chat` with the image as a base64-encoded string in an `images` array, documented in Ollama\'s own `docs/api.md`. Ollama added this multimodal support in version 0.1.15 (December 2023) and rebuilt it into a dedicated multimodal engine in May 2026 for newer models like Llama 4, Gemma 3, Qwen2.5-VL, and Mistral Small 3.1. Ollama is inference-only — it cannot fine-tune or train a model — and, being built primarily around open-weight models, will generally lag the newest proprietary cloud multimodal capability.',
+          'As of this review, Ollama\'s library lists LLaVA (plus llava-llama3, llava-phi3, and bakllava variants), Llama 3.2 Vision, Qwen2.5-VL, Qwen3-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3 (4B and up), Llama 4, and Mistral Small 3.1 as vision-capable models you can pull directly. Run `ollama pull <model>` then `ollama run <model> "describe this image: ./photo.jpg"` — referencing the image\'s file path directly in the prompt text is enough; there is no separate `--image` flag. For programmatic use, POST to `http://localhost:11434/api/generate` or `/api/chat` with the image as a base64-encoded string in an `images` array, documented in Ollama\'s own `docs/api.md`. Ollama added this multimodal support in version 0.1.15 (December 2023) and rebuilt it into a dedicated multimodal engine in May 2026 for newer models like Llama 4, Gemma 3, Qwen2.5-VL, and Mistral Small 3.1. Ollama is inference-only — it cannot fine-tune or train a model — and, being built primarily around open-weight models, will generally lag the newest proprietary cloud multimodal capability.',
         bullets: [
-          'Verified vision-capable models currently in Ollama\'s library: LLaVA, llava-llama3, llava-phi3, bakllava, Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, Mistral Small 3.1.',
+          'Verified vision-capable models currently in Ollama\'s library: LLaVA, llava-llama3, llava-phi3, bakllava, Llama 3.2 Vision, Qwen2.5-VL, Qwen3-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, Mistral Small 3.1.',
           'CLI: `ollama pull <model>` then `ollama run <model> "describe this image: ./photo.jpg"` — reference the file path directly in the prompt.',
           'HTTP API: POST to `/api/generate` or `/api/chat` with a base64-encoded image in an `images` array, per Ollama\'s own `docs/api.md`.',
           'Multimodal support added in Ollama v0.1.15 (December 2023); rebuilt into a dedicated multimodal engine in May 2026.',
           'Ollama is inference-only: no fine-tuning or training support.',
           'Built on llama.cpp since Ollama\'s mid-2023 origin; now also supports Apple\'s MLX as an alternative backend on Apple Silicon.',
         ],
-        updatedDate: '2026-09-06',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -80,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Ollama has supported running vision-capable (multimodal) models locally since version 0.1.15 in December 2023, currently lists LLaVA, Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, and Mistral Small 3.1 in its library, and supports both a simple CLI (reference an image file path in the prompt) and an HTTP API (base64-encoded images in a JSON `images` array).',
+            text: 'Ollama has supported running vision-capable (multimodal) models locally since version 0.1.15 in December 2023, currently lists LLaVA, Llama 3.2 Vision, Qwen2.5-VL, Qwen3-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, and Mistral Small 3.1 in its library, and supports both a simple CLI (reference an image file path in the prompt) and an HTTP API (base64-encoded images in a JSON `images` array).',
           },
           {
             type: 'plain-terms',
@@ -89,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Multimodal support added in Ollama v0.1.15 (December 12, 2023); rebuilt into a dedicated multimodal engine in May 2026.',
-          'Verified vision-capable models currently listed: LLaVA (plus llava-llama3, llava-phi3, bakllava), Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, Mistral Small 3.1.',
+          'Verified vision-capable models currently listed: LLaVA (plus llava-llama3, llava-phi3, bakllava), Llama 3.2 Vision, Qwen2.5-VL, Qwen3-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, Mistral Small 3.1.',
           'CLI: reference an image file path directly in the `ollama run` prompt text — no separate flag.',
           'HTTP API: `/api/generate` and `/api/chat` accept a base64-encoded image in an `images` array, documented in Ollama\'s own `docs/api.md`.',
           'Ollama is inference-only: it runs models, it does not fine-tune or train them.',
@@ -183,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Notes': '24B, ~15 GB; Apache-2.0 licensed, vision plus text',
           },
         ],
-        note: 'Ollama\'s library moves fast: `qwen3-vl` has already joined `qwen2.5vl` as a newer, more capable Qwen vision option (up to 256K context) since the rest of this article was drafted. Models not confirmed to have their own Ollama library page as of this review, despite being discussed elsewhere as vision models: `qwen2-vl` (superseded by `qwen2.5vl`) and a standalone `llava-next` entry (LLaVA-NeXT/1.6 improvements are folded into the `llava` listing itself). Always check `ollama.com/library/<name>` directly before depending on a specific model name — this table is a snapshot, not a live feed.',
+        note: 'Ollama\'s library moves fast: `qwen3-vl` now requires Ollama 0.12.7 or later and ranges from 2B (1.9 GB) up to 235B (143 GB), including a `qwen3-vl:235b-cloud` variant. Models not confirmed to have their own Ollama library page as of this review, despite being discussed elsewhere as vision models: `qwen2-vl` (superseded by `qwen2.5vl`) and a standalone `llava-next` entry (LLaVA-NeXT/1.6 improvements are folded into the `llava` listing itself). Always check `ollama.com/library/<name>` directly before depending on a specific model name — this table is a snapshot, not a live feed.',
       },
       installWalkthrough: {
         id: 'install-walkthrough',
@@ -345,7 +347,11 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
         faqs: [
           {
             q: 'Does Ollama support vision models?',
-            a: 'Yes. Ollama added multimodal (image-input) support in version 0.1.15, released December 12, 2023, and rebuilt it into a dedicated multimodal engine around May 2026. As of this review, its library lists LLaVA, Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, and Mistral Small 3.1 as vision-capable models.',
+            a: 'Yes. Ollama added multimodal (image-input) support in version 0.1.15, released December 12, 2023, and rebuilt it into a dedicated multimodal engine around May 2026. As of this review, its library lists LLaVA, Llama 3.2 Vision, Qwen2.5-VL, Qwen3-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, and Mistral Small 3.1 as vision-capable models.',
+          },
+          {
+            q: 'What does VLM mean, and does Ollama run VLMs?',
+            a: 'VLM stands for vision-language model: a model that accepts both image and text input, unlike a text-only LLM. "Ollama vision model" and "Ollama VLM" refer to the same thing — every model in the table above is a VLM you can pull and run through Ollama.',
           },
           {
             q: 'How do I pass an image to a model in Ollama?',
@@ -357,7 +363,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
           },
           {
             q: 'Which vision models are currently available in Ollama\'s library?',
-            a: 'As verified for this review: LLaVA (plus llava-llama3, llava-phi3, bakllava variants), Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3 (4B and larger), Llama 4, and Mistral Small 3.1. Check ollama.com/library directly, since this list can change.',
+            a: 'As verified for this review: LLaVA (plus llava-llama3, llava-phi3, bakllava variants), Llama 3.2 Vision, Qwen2.5-VL, Qwen3-VL (2B to 235B), MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3 (4B and larger), Llama 4, and Mistral Small 3.1. Check ollama.com/library directly, since this list can change.',
           },
           {
             q: 'Can Ollama fine-tune a vision model?',
@@ -387,7 +393,8 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
           '[Ollama v0.1.15 release notes](https://github.com/ollama/ollama/releases/tag/v0.1.15) — the original multimodal/LLaVA support announcement, December 12, 2023.',
           '[Ollama\'s new engine for multimodal models](https://ollama.com/blog/multimodal-models) — the May 2026 multimodal engine rebuild, covering Llama 4, Gemma 3, Qwen2.5-VL, and Mistral Small 3.1.',
           '[Ollama API documentation](https://github.com/ollama/ollama/blob/main/docs/api.md) — the documented `/api/generate` and `/api/chat` request/response shape for images.',
-          '[Ollama model library](https://ollama.com/library) — the live library used to verify every model listed in this article, including individual pages for [llava](https://ollama.com/library/llava), [llama3.2-vision](https://ollama.com/library/llama3.2-vision), [qwen2.5vl](https://ollama.com/library/qwen2.5vl), [minicpm-v](https://ollama.com/library/minicpm-v), [moondream](https://ollama.com/library/moondream), [granite3.2-vision](https://ollama.com/library/granite3.2-vision), [gemma3](https://ollama.com/library/gemma3), [llama4](https://ollama.com/library/llama4), and [mistral-small3.1](https://ollama.com/library/mistral-small3.1).',
+          '[Ollama model library](https://ollama.com/library) — the live library used to verify every model listed in this article, including individual pages for [llava](https://ollama.com/library/llava), [llama3.2-vision](https://ollama.com/library/llama3.2-vision), [qwen2.5vl](https://ollama.com/library/qwen2.5vl), [qwen3-vl](https://ollama.com/library/qwen3-vl), [minicpm-v](https://ollama.com/library/minicpm-v), [moondream](https://ollama.com/library/moondream), [granite3.2-vision](https://ollama.com/library/granite3.2-vision), [gemma3](https://ollama.com/library/gemma3), [llama4](https://ollama.com/library/llama4), and [mistral-small3.1](https://ollama.com/library/mistral-small3.1).',
+          '[Ollama v0.40.16 release notes](https://github.com/ollama/ollama/releases) — confirms Ollama\'s current release cadence as of this review (published November 9, 2026).',
         ],
       },
       relatedReading: {
@@ -396,7 +403,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
         items: [
           '[LLaVA Review (2026)](/power-local-llm/llava-review) — a dedicated deep dive on LLaVA specifically, including its history and license nuance.',
           '[Local Vision Models 2026: LLaVA, Llama 3.2 Vision, Qwen3-VL & Ollama Multimodal Setup](/power-local-llm/local-vision-models-llava-ollama-2026) — a broader, task-by-task comparison across current local vision models.',
-          '[Ollama Latest Version 2026: v0.33.1 + Best Models by Use Case](/local-llms/top-open-source-models-ollama) — Ollama\'s wider model catalog beyond vision, including which text models are most popular.',
+          '[Ollama\'s Open-Source Model Catalog: Best Models by Use Case](/local-llms/top-open-source-models-ollama) — Ollama\'s wider model catalog beyond vision, including which text models are most popular.',
         ],
       },
     },
@@ -405,11 +412,11 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
       '@type': 'TechArticle',
       headline: 'Ollama Vision Models (2026): How to Actually Run Image Models Locally',
       description:
-        'Ollama vision models 2026: the practical how-to for running image-capable models through Ollama. Real pull/run commands, the /api/generate JSON shape with base64 images, and which models are actually listed.',
+        'Ollama runs 11 vision models locally: LLaVA, Llama 3.2 Vision, Qwen2.5-VL, Qwen3-VL and more. Verified pull/run commands and the exact image API JSON.',
       url: 'https://www.promptquorum.com/power-local-llm/ollama-vision-models-review',
       inLanguage: 'en',
       datePublished: '2026-09-06',
-      dateModified: '2026-10-20',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -464,7 +471,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
       'ollama vision modelle liste',
       'ollama api generate images',
     ],
-    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'MiniCPM-V', 'Moondream', 'Gemma 4', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
+    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'Qwen3-VL', 'MiniCPM-V', 'Moondream', 'Gemma 3', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**Ollama unterstützt das lokale Ausführen von Vision-fähigen (multimodalen) Modellen, und zwar seit Version 0.1.15 im Dezember 2023.** Zum Zeitpunkt dieser Rezension listet Ollamas eigene [Modellbibliothek](https://ollama.com/library) LLaVA (und seine Varianten `llava-llama3`/`llava-phi3`/`bakllava`), Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4 und Mistral Small 3.1 als Vision-fähig auf. Laden Sie eines mit `ollama pull llava` herunter, führen Sie es mit `ollama run llava "describe this image: ./photo.jpg"` aus, oder rufen Sie es programmatisch über `/api/generate` oder `/api/chat` mit einem Base64-kodierten Bild in einem `images`-Array auf. Dieser Leitfaden behandelt die echten Befehle, die dokumentierte API-Form und wo Ollama das richtige Werkzeug ist und wo nicht — für einen dedizierte Rezension zu LLaVA speziell siehe PromptQuorums [LLaVA-Rezension](/de/power-local-llm/llava-review).',
@@ -890,7 +897,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
       'liste modèles vision ollama',
       'ollama api generate images',
     ],
-    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'MiniCPM-V', 'Moondream', 'Gemma 4', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
+    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'Qwen3-VL', 'MiniCPM-V', 'Moondream', 'Gemma 3', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**Ollama prend en charge l\'exécution locale de modèles capables de vision (multimodaux), et ce depuis la version 0.1.15 en décembre 2023.** Au moment de cet avis, la [bibliothèque de modèles](https://ollama.com/library) propre à Ollama liste LLaVA (et ses variantes `llava-llama3`/`llava-phi3`/`bakllava`), Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4 et Mistral Small 3.1 comme capables de vision. Téléchargez-en un avec `ollama pull llava`, exécutez-le avec `ollama run llava "describe this image: ./photo.jpg"`, ou appelez-le par programmation via `/api/generate` ou `/api/chat` avec une image encodée en base64 dans un tableau `images`. Ce guide couvre les vraies commandes, la forme d\'API documentée, et où Ollama est ou n\'est pas le bon outil — pour un avis dédié à LLaVA spécifiquement, voir l\'[avis LLaVA](/fr/power-local-llm/llava-review) de PromptQuorum.',
@@ -1316,7 +1323,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
       'lista modelos de visión ollama',
       'ollama api generate images',
     ],
-    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'MiniCPM-V', 'Moondream', 'Gemma 4', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
+    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'Qwen3-VL', 'MiniCPM-V', 'Moondream', 'Gemma 3', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**Ollama admite la ejecución local de modelos capaces de visión (multimodales), y lo hace desde la versión 0.1.15 en diciembre de 2023.** Al momento de este análisis, la propia [biblioteca de modelos](https://ollama.com/library) de Ollama lista LLaVA (y sus variantes `llava-llama3`/`llava-phi3`/`bakllava`), Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4 y Mistral Small 3.1 como capaces de visión. Descarga uno con `ollama pull llava`, ejecútalo con `ollama run llava "describe this image: ./photo.jpg"`, o llámalo mediante programación vía `/api/generate` o `/api/chat` con una imagen codificada en base64 en un arreglo `images`. Esta guía cubre los comandos reales, la forma de API documentada, y dónde Ollama es y no es la herramienta adecuada — para un análisis dedicado a LLaVA específicamente, consulta el [análisis de LLaVA](/es/power-local-llm/llava-review) de PromptQuorum.',
@@ -1742,7 +1749,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
       'ollama ビジョンモデル 一覧',
       'ollama api generate images',
     ],
-    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'MiniCPM-V', 'Moondream', 'Gemma 4', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
+    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'Qwen3-VL', 'MiniCPM-V', 'Moondream', 'Gemma 3', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**Ollamaはビジョン対応(マルチモーダル)モデルをローカルで動かせる。2023年12月のバージョン0.1.15以降、それは可能だ。** 本レビュー時点で、Ollama自身の[モデルライブラリ](https://ollama.com/library)にはLLaVA(および`llava-llama3`/`llava-phi3`/`bakllava`の各バリアント)、Llama 3.2 Vision、Qwen2.5-VL、MiniCPM-V、Moondream、Granite 3.2 Vision、Gemma 3、Llama 4、Mistral Small 3.1がビジョン対応モデルとして掲載されている。`ollama pull llava`でダウンロードし、`ollama run llava "describe this image: ./photo.jpg"`で実行するか、`/api/generate`または`/api/chat`にbase64エンコードした画像を`images`配列で渡してプログラムから呼び出せる。本ガイドでは実際のコマンド、ドキュメント化されたAPI形式、そしてOllamaが向いている場面と向いていない場面を正直に扱う——LLaVA単体の詳細レビューはPromptQuorumの[LLaVAレビュー](/ja/power-local-llm/llava-review)を参照。',
@@ -2168,7 +2175,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
       'lista de modelos de visão ollama',
       'ollama api generate images',
     ],
-    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'MiniCPM-V', 'Moondream', 'Gemma 4', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
+    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'Qwen3-VL', 'MiniCPM-V', 'Moondream', 'Gemma 3', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**O Ollama oferece suporte para rodar modelos com capacidade de visão (multimodais) localmente, desde a versão 0.1.15 em dezembro de 2023.** No momento desta análise, a própria [biblioteca de modelos](https://ollama.com/library) do Ollama lista LLaVA (e suas variantes `llava-llama3`/`llava-phi3`/`bakllava`), Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4 e Mistral Small 3.1 como modelos com capacidade de visão. Baixe um com `ollama pull llava`, execute-o com `ollama run llava "describe this image: ./photo.jpg"`, ou chame-o programaticamente via `/api/generate` ou `/api/chat` com uma imagem codificada em base64 em um array `images`. Este guia cobre os comandos reais, o formato de API documentado e onde o Ollama é — e não é — a ferramenta certa. Para uma análise dedicada ao LLaVA especificamente, veja a [análise do LLaVA](/pt/power-local-llm/llava-review) do PromptQuorum.',
@@ -2594,7 +2601,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
       'قائمة نماذج رؤية ollama',
       'ollama api generate images',
     ],
-    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'MiniCPM-V', 'Moondream', 'Gemma 4', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
+    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'Qwen3-VL', 'MiniCPM-V', 'Moondream', 'Gemma 3', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**يدعم Ollama تشغيل النماذج القادرة على الرؤية (متعددة الوسائط) محليًا، وذلك منذ الإصدار 0.1.15 في ديسمبر 2023.** حتى وقت هذه المراجعة، تُدرج [مكتبة نماذج](https://ollama.com/library) Ollama نفسها LLaVA (وأشكاله `llava-llama3`/`llava-phi3`/`bakllava`)، وLlama 3.2 Vision، وQwen2.5-VL، وMiniCPM-V، وMoondream، وGranite 3.2 Vision، وGemma 3، وLlama 4، وMistral Small 3.1 بوصفها نماذج قادرة على الرؤية. نزّل أحدها عبر `ollama pull llava`، وشغّله عبر `ollama run llava "describe this image: ./photo.jpg"`، أو استدعه برمجيًا عبر `/api/generate` أو `/api/chat` مع صورة مُرمّزة بـ base64 ضمن مصفوفة `images`. يغطي هذا الدليل الأوامر الفعلية، وصيغة API الموثقة، وأين يكون Ollama الأداة الصحيحة وأين لا يكون — للاطلاع على مراجعة مخصصة لـ LLaVA تحديدًا، راجع [مراجعة LLaVA](/ar/power-local-llm/llava-review) من PromptQuorum.',
@@ -3020,7 +3027,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
       'ollama视觉模型列表',
       'ollama api generate images',
     ],
-    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'MiniCPM-V', 'Moondream', 'Gemma 4', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
+    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'Qwen3-VL', 'MiniCPM-V', 'Moondream', 'Gemma 3', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**Ollama支持在本地运行具备视觉能力(多模态)的模型,自2023年12月的0.1.15版本起便是如此。** 截至本次评测,Ollama自己的[模型库](https://ollama.com/library)列出了LLaVA(及其`llava-llama3`/`llava-phi3`/`bakllava`变体)、Llama 3.2 Vision、Qwen2.5-VL、MiniCPM-V、Moondream、Granite 3.2 Vision、Gemma 3、Llama 4以及Mistral Small 3.1作为具备视觉能力的模型。使用`ollama pull llava`下载,通过`ollama run llava "describe this image: ./photo.jpg"`运行,或通过`/api/generate`或`/api/chat`以`images`数组中的base64编码图像方式进行程序化调用。本指南涵盖真实命令、有文档记录的API格式,以及Ollama适合与不适合的场景——若想深入了解LLaVA本身,请参阅PromptQuorum的[LLaVA评测](/zh/power-local-llm/llava-review)。',
@@ -3446,7 +3453,7 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
       'ollama 비전 모델 목록',
       'ollama api generate images',
     ],
-    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'MiniCPM-V', 'Moondream', 'Gemma 4', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
+    current_models_mentioned: ['LLaVA', 'Llama 3.2 Vision', 'Qwen2.5-VL', 'Qwen3-VL', 'MiniCPM-V', 'Moondream', 'Gemma 3', 'Llama 4', 'Mistral Small 3.1', 'Granite 3.2 Vision'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**Ollama는 비전 지원(멀티모달) 모델을 로컬에서 실행할 수 있으며, 2023년 12월 버전 0.1.15부터 이를 지원해왔다.** 이 리뷰 작성 시점 기준, Ollama 자체 [모델 라이브러리](https://ollama.com/library)에는 LLaVA(및 `llava-llama3`/`llava-phi3`/`bakllava` 변형), Llama 3.2 Vision, Qwen2.5-VL, MiniCPM-V, Moondream, Granite 3.2 Vision, Gemma 3, Llama 4, Mistral Small 3.1이 비전 지원 모델로 등록되어 있다. `ollama pull llava`로 다운로드하고, `ollama run llava "describe this image: ./photo.jpg"`로 실행하거나, `/api/generate` 또는 `/api/chat`에 base64로 인코딩된 이미지를 `images` 배열에 담아 프로그래밍 방식으로 호출할 수 있다. 이 가이드는 실제 명령어, 문서화된 API 형식, 그리고 Ollama가 적합한 곳과 그렇지 않은 곳을 솔직하게 다룬다 — LLaVA 자체에 대한 심층 리뷰는 PromptQuorum의 [LLaVA 리뷰](/ko/power-local-llm/llava-review)를 참고하라.',

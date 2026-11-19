@@ -37,6 +37,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { ocr: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
-  lastUpstreamUpdateSource: 'https://github.com/ollama/ollama',
+  lastUpstreamUpdate: '2026-11-09', // Ollama v0.40.16 release, checked via GitHub Releases on 2026-11-19
+  lastUpstreamUpdateSource: 'https://github.com/ollama/ollama/releases',
 }
