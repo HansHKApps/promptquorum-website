@@ -62698,7 +62698,7 @@
     "title": "Best 14B Model for Coding?",
     "excerpt": "Best 14B model for coding: Qwen2.5-Coder 14B, 89.6% HumanEval (Qwen-reported) in ~10 GB VRAM. For general use: Qwen3 14B or Phi-4. Compared on Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62707,7 +62707,7 @@
     "title": "Bestes 14B-Modell für Coding?",
     "excerpt": "Bestes 14B-Modell fürs Coding: Qwen2.5-Coder 14B, 89,6 % HumanEval (Qwen-Angabe) bei ~10 GB VRAM. Allgemein: Qwen3 14B oder Phi-4. Vergleich auf Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/de/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62716,7 +62716,7 @@
     "title": "Meilleur modèle 14B pour le coding ?",
     "excerpt": "Meilleur modèle 14B pour coder : Qwen2.5-Coder 14B, 89,6 % HumanEval (chiffre Qwen) pour ~10 Go de VRAM. Usage général : Qwen3 14B ou Phi-4. Comparatif Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/fr/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62725,7 +62725,7 @@
     "title": "コーディングに最適な14Bモデルは？",
     "excerpt": "コーディング向け最適14BはQwen2.5-Coder 14B（HumanEval 89.6%・Qwen公表値、約10 GB VRAM）。汎用ならQwen3 14BかPhi-4。Ollamaで比較します。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ja/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62734,7 +62734,7 @@
     "title": "编程最佳14B模型是哪款？",
     "excerpt": "编程首选14B模型是Qwen2.5-Coder 14B：HumanEval 89.6%（Qwen公布），约10 GB显存。通用场景可选Qwen3 14B或Phi-4。基于Ollama的对比。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/zh/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62743,16 +62743,16 @@
     "title": "¿El mejor modelo 14B para coding?",
     "excerpt": "Mejor modelo 14B para coding: Qwen2.5-Coder 14B, 89,6 % en HumanEval (cifra de Qwen) con ~10 GB de VRAM. Uso general: Qwen3 14B o Phi-4. Comparativa en Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/es/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
-    "title": "¿El mejor modelo 14B para coding?",
+    "title": "Qual é o melhor modelo 14B para programação?",
     "excerpt": "Melhor modelo 14B para programar: Qwen2.5-Coder 14B, 89,6% no HumanEval (número da Qwen) com ~10 GB de VRAM. Uso geral: Qwen3 14B ou Phi-4. Comparativo no Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/pt/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62761,7 +62761,7 @@
     "title": "أفضل نموذج ⁨14B⁩ للبرمجة؟",
     "excerpt": "أفضل نموذج ⁨14B⁩ للبرمجة هو ⁨Qwen2.5-Coder 14B⁩: ‏⁨89.6%⁩ على ⁨HumanEval⁩ بنحو ⁨10 GB VRAM⁩. للاستخدام العام: ⁨Qwen3 14B⁩ أو ⁨Phi-4⁩. مقارنة على ⁨Ollama⁩.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ar/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
@@ -62770,7 +62770,7 @@
     "title": "코딩에 최적인 14B 모델은 무엇입니까?",
     "excerpt": "코딩용 최고의 14B 모델은 Qwen2.5-Coder 14B: HumanEval 89.6%(Qwen 발표), VRAM 약 10 GB. 범용은 Qwen3 14B 또는 Phi-4. Ollama 기준 비교.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-19",
     "url": "/ko/prompt-bites/best-14b-models-coding",
     "cluster": "prompt-bites"
   },
