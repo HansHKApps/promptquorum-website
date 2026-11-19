@@ -5543,6 +5543,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-tts-nvidia-gpu",
+        "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
+        "url": "/power-local-llm/best-local-tts-nvidia-gpu",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "build-local-voice-assistant-2026",
         "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
         "url": "/power-local-llm/build-local-voice-assistant-2026",
@@ -5564,14 +5572,6 @@
         "url": "/power-local-llm/best-local-tts-mac",
         "dateModified": "2026-09-11",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-tts-nvidia-gpu",
-        "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
-        "url": "/power-local-llm/best-local-tts-nvidia-gpu",
-        "dateModified": "2026-09-11",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 13,
@@ -5585,6 +5585,14 @@
         "title": "XTTS v2 Review: Multilingual Voice Cloning from 6 Seconds of Audio",
         "url": "/power-local-llm/xtts-v2-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-tts-nvidia-gpu",
+        "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
+        "url": "/power-local-llm/best-local-tts-nvidia-gpu",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
@@ -5608,14 +5616,6 @@
         "slug": "best-local-tts-mac",
         "title": "Best Local TTS Engine for Mac (2026): What Actually Uses Apple Silicon",
         "url": "/power-local-llm/best-local-tts-mac",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-tts-nvidia-gpu",
-        "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
-        "url": "/power-local-llm/best-local-tts-nvidia-gpu",
         "dateModified": "2026-09-11",
         "tier": "about"
       },
@@ -5675,6 +5675,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-tts-nvidia-gpu",
+        "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
+        "url": "/power-local-llm/best-local-tts-nvidia-gpu",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-tts-voice-cloning-piper-coqui-xtts",
         "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
         "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
@@ -5694,14 +5702,6 @@
         "slug": "best-local-tts-mac",
         "title": "Best Local TTS Engine for Mac (2026): What Actually Uses Apple Silicon",
         "url": "/power-local-llm/best-local-tts-mac",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-tts-nvidia-gpu",
-        "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
-        "url": "/power-local-llm/best-local-tts-nvidia-gpu",
         "dateModified": "2026-09-11",
         "tier": "about"
       },
@@ -13565,6 +13565,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-tts-nvidia-gpu",
+        "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
+        "url": "/power-local-llm/best-local-tts-nvidia-gpu",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "continue-dev-vs-cline-vs-aider-local",
         "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
         "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
@@ -13624,14 +13632,6 @@
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "memex-review",
-        "title": "Memex Review: Open-Source AI Journal for iPhone and Android",
-        "url": "/power-local-llm/memex-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
       }
