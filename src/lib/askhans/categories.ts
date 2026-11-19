@@ -2,6 +2,7 @@
 // Hans edits the JSON file; nothing here needs to change when categories, pictures or links do.
 
 import raw from './categories.json'
+import type { AskLang } from '@/components/askhans/copy/types'
 
 export interface AskHansLink {
   id: string
@@ -21,9 +22,19 @@ export interface AskHansLink {
 /** Topic-picture link (v1): one plain, non-affiliate price-comparison page per category picture. */
 export interface AskHansPictureLink {
   id: string
-  url: string
+  /**
+   * Per-language destination. `default` is the required global fallback (a generic, country-neutral
+   * page, e.g. amazon.com) used for any language with no entry of its own — never another language's
+   * local page. See `pictureLinkUrl()`.
+   */
+  urls: Partial<Record<AskLang, string>> & { default: string }
   /** always false in v1 — PromptQuorum has no affiliate programme; reserved for a later, explicit decision */
   affiliate: boolean
+}
+
+/** Resolves a topic-picture link to the visitor's own language, falling back to the global default. */
+export function pictureLinkUrl(link: AskHansPictureLink, lang: AskLang): string {
+  return link.urls[lang] ?? link.urls.default
 }
 
 export interface AskHansCategory {

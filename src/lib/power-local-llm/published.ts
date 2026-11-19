@@ -646,9 +646,11 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'openwork-review',
   'airi-review',
   'inbox-zero-review',
+  'cc-switch-review',
   'skales-review',
   'halo-review',
   'yovoice-review',
+  'voicestudio-review',
   'open-science-desktop-review',
   'cozyclay-review',
   'papersgpt-review',
@@ -820,6 +822,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'oriveo-review',
   'open-paper-review',
   'myagents-review',
+  'orca-review',
 
 ])
 

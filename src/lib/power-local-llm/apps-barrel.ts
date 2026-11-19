@@ -315,10 +315,12 @@ import { app as app_labelme } from './apps/labelme'
 import { app as app_openwork } from './apps/openwork'
 import { app as app_airi } from './apps/airi'
 import { app as app_inbox_zero } from './apps/inbox-zero'
+import { app as app_cc_switch } from './apps/cc-switch'
 import { app as app_ultimate_vocal_remover } from './apps/ultimate-vocal-remover'
 import { app as app_skales } from './apps/skales'
 import { app as app_halo } from './apps/halo'
 import { app as app_yovoice } from './apps/yovoice'
+import { app as app_voicestudio } from './apps/voicestudio'
 import { app as app_open_science_desktop } from './apps/open-science-desktop'
 import { app as app_cozyclay } from './apps/cozyclay'
 import { app as app_papersgpt } from './apps/papersgpt'
@@ -371,6 +373,7 @@ import { app as app_kition } from './apps/kition'
 import { app as app_pooled } from './apps/pooled'
 import { app as app_askimo } from './apps/askimo'
 import { app as app_myagents } from './apps/myagents'
+import { app as app_orca } from './apps/orca'
 import { app as app_reactive_resume } from './apps/reactive-resume'
 import { app as app_paperclip } from './apps/paperclip'
 import { app as app_next_ai_draw_io } from './apps/next-ai-draw-io'
@@ -651,10 +654,12 @@ export const localAiApps: ToolRecord[] = [
   app_openwork,
   app_airi,
   app_inbox_zero,
+  app_cc_switch,
   app_ultimate_vocal_remover,
   app_skales,
   app_halo,
   app_yovoice,
+  app_voicestudio,
   app_open_science_desktop,
   app_cozyclay,
   app_papersgpt,
@@ -706,6 +711,7 @@ export const localAiApps: ToolRecord[] = [
   app_pooled,
   app_askimo,
   app_myagents,
+  app_orca,
   app_reactive_resume,
   app_paperclip,
   app_next_ai_draw_io,
