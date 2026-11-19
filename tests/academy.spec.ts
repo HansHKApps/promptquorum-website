@@ -95,3 +95,94 @@ test.describe('F3: progress is saved only with opt-in', () => {
     await expect(page.getByLabel(/what do you want to learn/i)).toHaveValue('')
   })
 })
+
+// ------------------------------------------------------------------------------------------------ seeded programme
+
+function seededProgramme(overrides: Record<string, unknown> = {}) {
+  const lesson = (n: number) => ({
+    id: `lesson-${n}`,
+    title: `Lesson title ${n}`,
+    topic: 'Basics',
+    estimatedMinutes: 5,
+    objectiveIds: [0],
+    sections: [],
+    furtherReading: [],
+  })
+  return {
+    id: 'p1',
+    createdAt: '2026-11-19T10:00:00.000Z',
+    language: 'en',
+    subject: 'Test subject',
+    availableMinutes: 30,
+    selfLevel: 'beginner',
+    testMode: 'none',
+    diagnostic: { questions: [], answers: {}, gaps: [], estimatedLevel: 'beginner' },
+    objectives: ['Objective one', 'Objective two', 'Objective three'],
+    lessons: [lesson(1), lesson(2)],
+    testPlan: { finalQuestions: 0, lessonQuizQuestions: 0, testMinutes: 0 },
+    progress: { currentLesson: 0, lessonStatus: { 'lesson-1': 'viewed', 'lesson-2': 'todo' }, quizResults: [], secondsSpent: 0, startedAt: '2026-11-19T10:00:00.000Z' },
+    ...overrides,
+  }
+}
+
+async function openSeededLesson(page: Page, programme = seededProgramme()) {
+  await preset(page)
+  await page.addInitScript(
+    ([k, v]) => {
+      if (!localStorage.getItem(k)) localStorage.setItem(k, v)
+    },
+    [
+      KEY,
+      JSON.stringify({
+        version: 1,
+        view: 'lesson',
+        draft: { subject: 'Test subject', availableMinutes: 30, selfLevel: 'beginner', testMode: 'none', language: 'en', saveProgress: true, updatedAt: '2026-11-19T10:00:00.000Z' },
+        programme,
+      }),
+    ],
+  )
+  await page.goto('/academy')
+  await page.getByRole('button', { name: /^continue$/i }).click()
+}
+
+const lessonReply = { sections: [{ heading: 'Intro', body: 'Body text of the lesson.' }], furtherReading: [] }
+
+test.describe('F9: "Done" waits for the lesson', () => {
+  test('button is disabled while the lesson is generated and enabled once the text is shown', async ({ page }) => {
+    let release!: () => void
+    const gate = new Promise<void>((r) => (release = r))
+    await page.route('**/api/academy/lesson', async (route) => {
+      await gate
+      await route.fulfill({ json: lessonReply })
+    })
+    await openSeededLesson(page)
+    const done = page.getByRole('button', { name: /done, next lesson/i })
+    await expect(page.getByText(/writing your lesson/i)).toBeVisible()
+    await expect(done).toBeDisabled()
+    release()
+    await expect(page.getByText('Body text of the lesson.')).toBeVisible()
+    await expect(done).toBeEnabled()
+  })
+
+  test('a failed generation shows an error with Try again and keeps Done disabled', async ({ page }) => {
+    await page.route('**/api/academy/lesson', (route) => route.fulfill({ status: 502, json: { error: 'generation' } }))
+    await openSeededLesson(page)
+    await expect(page.getByRole('button', { name: /try again/i })).toBeVisible()
+    await expect(page.getByRole('button', { name: /done, next lesson/i })).toBeDisabled()
+  })
+})
+
+test.describe('F10 / F8: AI label and notices', () => {
+  test('the lesson carries an AI-generated label', async ({ page }) => {
+    await page.route('**/api/academy/lesson', (route) => route.fulfill({ json: lessonReply }))
+    await openSeededLesson(page)
+    await expect(page.getByRole('article').getByText('AI-generated')).toBeVisible()
+  })
+
+  test('setup shows the personal-data warning next to the subject and the 16+ notice at the start button', async ({ page }) => {
+    await preset(page)
+    await page.goto('/academy')
+    await expect(page.getByText('Please do not enter personal data.').first()).toBeVisible()
+    await expect(page.getByText('For learners aged 16 or older.')).toBeVisible()
+  })
+})

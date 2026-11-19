@@ -173,6 +173,7 @@ function SetupForm({
             {tx.subjectError}
           </p>
         )}
+        <p className="mt-2 text-sm text-gray-600">{tx.personalDataWarning}</p>
         {topics.length > 0 && (
           <div className="mt-3">
             <p className="text-sm text-gray-600">{tx.suggestions}</p>
@@ -258,6 +259,7 @@ function SetupForm({
       <button type="submit" className="w-full rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 sm:w-auto">
         {tx.submit}
       </button>
+      <p className="text-sm text-gray-600">{tx.ageNotice}</p>
     </form>
   )
 }

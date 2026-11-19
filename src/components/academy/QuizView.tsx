@@ -8,6 +8,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { scoreQuiz } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { Programme, Question, QuizResult } from '@/lib/academy/types'
+import { AiBadge } from './AiBadge'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -159,7 +160,10 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
           {title}
         </h2>
         <div className="mt-2 flex items-center justify-between text-sm text-gray-500">
-          <span>{tx.questionOf(index + 1, total)}</span>
+          <span className="flex items-center gap-2">
+            {tx.questionOf(index + 1, total)}
+            <AiBadge text={tx.aiLabel} />
+          </span>
           <span>{programme.subject}</span>
         </div>
         <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-purple-100" aria-hidden="true">
@@ -188,7 +192,10 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
       </fieldset>
       {answered && (
         <div className={`space-y-2 rounded-xl p-4 text-sm ${chosen === current.correctIndex ? 'bg-green-50 text-green-900' : 'bg-amber-50 text-amber-900'}`} role="status" aria-live="polite">
-          <p className="font-semibold">{chosen === current.correctIndex ? tx.correctFeedback : tx.wrongFeedback}</p>
+          <p className="flex flex-wrap items-center gap-2 font-semibold">
+            {chosen === current.correctIndex ? tx.correctFeedback : tx.wrongFeedback}
+            <AiBadge text={tx.aiLabel} />
+          </p>
           <p>{current.explanationCorrect}</p>
           {chosen !== current.correctIndex && current.explanationWrong[chosen] && <p>{current.explanationWrong[chosen]}</p>}
           <button type="button" onClick={next} className="mt-1 rounded-xl bg-purple-600 px-5 py-2 font-medium text-white hover:bg-purple-700">

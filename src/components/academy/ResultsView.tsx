@@ -6,6 +6,7 @@
 
 import { countingFinal, PASS_MARK, programmeScore } from '@/lib/academy/scoring'
 import type { Programme } from '@/lib/academy/types'
+import { AiBadge } from './AiBadge'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -103,7 +104,9 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
                       {tx.correctAnswer}: {q.options[q.correctIndex]}
                     </p>
                   )}
-                  <p className="text-gray-600">{q.explanationCorrect}</p>
+                  <p className="text-gray-600">
+                    {q.explanationCorrect} <AiBadge text={tx.aiLabel} />
+                  </p>
                 </li>
               )
             })}

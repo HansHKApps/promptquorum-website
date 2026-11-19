@@ -10,6 +10,7 @@ import { ACADEMY_IDLE_AFTER_MS, ACADEMY_TICK_SECONDS } from '@/lib/academy/confi
 import { addActiveTime, lessonsDone, markLessonDone, setLessonContent } from '@/lib/academy/progress'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { Lesson, Programme } from '@/lib/academy/types'
+import { AiBadge } from './AiBadge'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -91,7 +92,10 @@ export function LessonView({
   const objectives = lesson.objectiveIds.map((i) => programme.objectives[i]).filter(Boolean)
   const last = index === total - 1
   const needsQuiz = programme.testMode === 'per_lesson_and_final' && !programme.progress.quizResults.some((r) => r.quizId === lesson.id)
+  // The lesson text must be on screen and generation finished before the lesson can be marked done (F9).
+  const ready = lesson.sections.length > 0 && !loading && !error
   const finish = () => {
+    if (!ready) return
     if (needsQuiz) {
       // "Every lesson" mode: the lesson quiz comes right after the lesson (SPEC 2 #2).
       update((s) => {
@@ -126,6 +130,9 @@ export function LessonView({
           <h2 id="academy-lesson" className="text-2xl font-semibold text-gray-900">
             {lesson.title}
           </h2>
+          <p className="mt-2">
+            <AiBadge text={tx.aiLabel} />
+          </p>
           {objectives.length > 0 && (
             <div className="mt-3 rounded-xl bg-purple-50 px-4 py-3 text-sm text-purple-900">
               <span className="font-medium">{tx.lessonObjectives}:</span>
@@ -184,7 +191,8 @@ export function LessonView({
           <button
             type="button"
             onClick={finish}
-            disabled={!lesson.sections.length}
+            disabled={!ready}
+            aria-disabled={!ready}
             className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-50"
           >
             {last ? tx.doneLast : tx.doneNext}
