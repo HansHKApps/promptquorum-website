@@ -73,16 +73,6 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
           hint: t('statAskHansCallsHint', lang),
         }]
       : []),
-    ...(academyTotal !== null
-      ? [{
-          label: t('statAcademyProgrammes', lang),
-          value: academyTotal.toLocaleString(),
-          icon: 'posts' as const,
-          href: academyHref,
-          opensAcademy: true,
-          hint: t('statAcademyProgrammesHint', lang),
-        }]
-      : []),
     ...(umami
       ? [{
           label: t('statPageViews', lang),
@@ -95,6 +85,17 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
           label: partnersContent[lang].stats.gscLabel.replace('{date}', formatDisplayDate(gsc.date, lang)),
           value: gsc.clicks.toLocaleString(),
           icon: 'stats' as const,
+        }]
+      : []),
+    // Last tile: sits after the page-view and Google-search tiles (owner request 2026-11-19).
+    ...(academyTotal !== null
+      ? [{
+          label: t('statAcademyProgrammes', lang),
+          value: academyTotal.toLocaleString(),
+          icon: 'posts' as const,
+          href: academyHref,
+          opensAcademy: true,
+          hint: t('statAcademyProgrammesHint', lang),
         }]
       : []),
   ]
