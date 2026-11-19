@@ -268,3 +268,12 @@ test.describe('F12: setup form', () => {
     await expect(page.getByText('Improve your PromptQuorum results in Google')).toHaveCount(0)
   })
 })
+
+test.describe('F13: lessons + test split', () => {
+  test('programme page shows the split', async ({ page }) => {
+    await page.route('**/api/academy/lesson', (r) => r.fulfill({ json: lessonReply }))
+    await openSeededLesson(page, seededProgramme({ testMode: 'final', testPlan: { finalQuestions: 6, lessonQuizQuestions: 0, testMinutes: 4.5 } }))
+    await page.getByRole('button', { name: /back to programme/i }).click()
+    await expect(page.getByText('10 min lessons + 5 min test')).toBeVisible()
+  })
+})
