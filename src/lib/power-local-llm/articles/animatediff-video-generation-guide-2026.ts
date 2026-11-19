@@ -17,13 +17,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Image & Video Generation',
     heroImage: '/images/animatediff-video-generation-guide-2026-hero-en.webp',
     title: 'AnimateDiff Guide 2026: Animate Any Stable Diffusion Model',
-    seoTitle: 'AnimateDiff 2026: Free Local AI Video From SD Models',
+    seoTitle: 'AnimateDiff 2026: Free SD 1.5/SDXL Video, No Retraining',
     intro:
       'AnimateDiff ([github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)) is an open-source motion module that adds animation capability to existing Stable Diffusion checkpoints without retraining the base model. Instead of a standalone video model, it is a plug-in component: pair it with a Stable Diffusion 1.5 or SDXL checkpoint you already use, and the motion module injects temporal (frame-to-frame) coherence so the same style, character, or art direction that model already produces as a still image comes out as a short animated clip. It runs entirely on your own GPU through ComfyUI or the AUTOMATIC1111 WebUI, at no cost, and the project is Apache 2.0 licensed — with one caveat worth knowing before you plan any commercial use, covered in the license section below.',
     metaDescription:
-      'AnimateDiff turns Stable Diffusion checkpoints into video with no retraining. ComfyUI and A1111 setup, VRAM needs, motion LoRAs, and license fine print.',
+      'AnimateDiff turns SD 1.5/SDXL checkpoints into video, free, no retraining. ComfyUI/A1111 setup, motion modules, VRAM needs, vs. Stable Video Diffusion.',
     twitterDescription:
-      'AnimateDiff review 2026: free, Apache-2.0 motion module that animates any Stable Diffusion checkpoint. Setup, VRAM needs, motion LoRAs, and the license caveat most guides skip.',
+      'AnimateDiff 2026: free, Apache-2.0 motion module that animates SD 1.5/SDXL checkpoints into video, no retraining. Setup, VRAM needs, motion LoRAs, and the license caveat most guides skip.',
     audience:
       'Digital artists and hobbyists already running Stable Diffusion locally who want short stylized animation clips from their existing checkpoints and LoRAs, without a cloud video subscription.',
     readTime: '11 min read',
