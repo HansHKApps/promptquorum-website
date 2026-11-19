@@ -29,6 +29,7 @@ export interface PartnersContent {
     intro: string
     metricsHeading: string
     metrics: { label: string; value: string; note: string }[]
+    metricsAsOf: string
     countriesIntro: string
     whoHeading: string
     who: string[]
@@ -99,6 +100,7 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Languages', value: '9', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: 'Pages', value: 'About 9,000', note: 'Site-wide' },
       ],
+      metricsAsOf: 'Screenshot and numbers above taken on 18 November 2026.',
       countriesIntro:
         'Readers do not sit in one market. Japan, the United States, South Korea and Germany each deliver 12 to 16 percent of Google Search clicks, and together account for more than half. Every page exists in all 9 languages, so companies selling into Japan, Korea, Germany or France can reach readers there in their own language. The live country breakdown below updates automatically.',
       whoHeading: 'Who is reading',
@@ -177,6 +179,7 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Sprachen', value: '9', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: 'Seiten', value: 'Etwa 9.000', note: 'Website-weit' },
       ],
+      metricsAsOf: 'Screenshot und Zahlen oben stammen vom 18. November 2026.',
       countriesIntro:
         'Die Leserschaft konzentriert sich nicht auf einen Markt. Japan, die USA, Südkorea und Deutschland liefern jeweils 12 bis 16 Prozent der Google-Suchklicks und zusammen mehr als die Hälfte. Jede Seite existiert in allen 9 Sprachen, sodass Unternehmen, die nach Japan, Korea, Deutschland oder Frankreich verkaufen, Leser dort in ihrer eigenen Sprache erreichen können. Die Länderaufstellung unten aktualisiert sich automatisch live.',
       whoHeading: 'Wer liest',
@@ -255,6 +258,7 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Langues', value: '9', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: 'Pages', value: 'Environ 9 000', note: "Sur l'ensemble du site" },
       ],
+      metricsAsOf: "Capture d'écran et chiffres ci-dessus relevés le 18 novembre 2026.",
       countriesIntro:
         "Les lecteurs ne se concentrent pas sur un seul marché. Le Japon, les États-Unis, la Corée du Sud et l'Allemagne apportent chacun 12 à 16 % des clics de recherche Google, et plus de la moitié ensemble. Chaque page existe dans les 9 langues, donc les entreprises qui vendent au Japon, en Corée, en Allemagne ou en France peuvent atteindre ces lecteurs dans leur propre langue. Le détail par pays en direct ci-dessous se met à jour automatiquement.",
       whoHeading: 'Qui lit',
@@ -333,6 +337,7 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: '対応言語数', value: '9言語', note: 'EN、DE、FR、ES、PT、JA、KO、ZH、AR' },
         { label: 'ページ数', value: '約9,000ページ', note: 'サイト全体' },
       ],
+      metricsAsOf: '上記のスクリーンショットと数値は2026年11月18日時点のものです。',
       countriesIntro:
         '読者は一つの市場に集中していません。日本、米国、韓国、ドイツはそれぞれGoogle検索クリックの12〜16%を占め、合計で半分を超えます。すべてのページは9言語で公開されているため、日本、韓国、ドイツ、フランスに販路を持つ企業は、それぞれの言語で読者にアプローチできます。下にある国別の内訳はライブで自動更新されます。',
       whoHeading: '読者層の特徴',
@@ -410,6 +415,7 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: '支持语言数', value: '9 种', note: 'EN、DE、FR、ES、PT、JA、KO、ZH、AR' },
         { label: '页面数', value: '约 9,000 个', note: '覆盖全站' },
       ],
+      metricsAsOf: '以上截图及数据截至 2026 年 11 月 18 日。',
       countriesIntro:
         '读者并不集中在单一市场。日本、美国、韩国和德国各占 Google 搜索点击量的 12% 至 16%，合计超过一半。每个页面都提供全部 9 种语言版本，因此面向日本、韩国、德国或法国销售的企业可以用当地语言接触这些读者。下方的实时国家/地区分布会自动更新。',
       whoHeading: '读者画像',
@@ -488,6 +494,7 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Idiomas', value: '9', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: 'Páginas', value: 'Unas 9.000', note: 'En todo el sitio' },
       ],
+      metricsAsOf: 'Captura y cifras de arriba tomadas el 18 de noviembre de 2026.',
       countriesIntro:
         'Los lectores no se concentran en un solo mercado. Japón, Estados Unidos, Corea del Sur y Alemania aportan, cada uno, entre el 12 % y el 16 % de los clics de búsqueda de Google, y juntos superan la mitad del total. Cada página existe en los 9 idiomas, así que las empresas que venden en Japón, Corea, Alemania o Francia pueden llegar a esos lectores en su propio idioma. El desglose por país en vivo, más abajo, se actualiza automáticamente.',
       whoHeading: 'Quién lee',
@@ -566,6 +573,7 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Idiomas', value: '9', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: 'Páginas', value: 'Cerca de 9.000', note: 'Em todo o site' },
       ],
+      metricsAsOf: 'Captura de tela e números acima registrados em 18 de novembro de 2026.',
       countriesIntro:
         'Os leitores não estão concentrados em um único mercado. Japão, Estados Unidos, Coreia do Sul e Alemanha respondem, cada um, por 12% a 16% dos cliques de busca do Google, somando mais da metade. Cada página existe nos 9 idiomas, então empresas que vendem para Japão, Coreia, Alemanha ou França podem alcançar esses leitores no próprio idioma deles. O detalhamento por país em tempo real, abaixo, se atualiza automaticamente.',
       whoHeading: 'Quem lê',
@@ -644,6 +652,7 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'اللغات', value: '9', note: 'EN، DE، FR، ES، PT، JA، KO، ZH، AR' },
         { label: 'الصفحات', value: 'حوالي 9,000', note: 'على مستوى الموقع كله' },
       ],
+      metricsAsOf: 'لقطة الشاشة والأرقام أعلاه مأخوذة بتاريخ 18 نوفمبر 2026.',
       countriesIntro:
         'لا يتركّز القرّاء في سوق واحدة. تساهم كل من اليابان والولايات المتحدة وكوريا الجنوبية وألمانيا بنسبة 12 إلى 16 بالمئة من نقرات بحث Google، ومجتمعة تتجاوز النصف. كل صفحة متوفرة بجميع 9 لغات، لذا يمكن للشركات التي تبيع في اليابان أو كوريا أو ألمانيا أو فرنسا الوصول إلى القرّاء هناك بلغتهم الخاصة. يتحدّث التوزيع المباشر حسب الدولة أدناه تلقائيًا.',
       whoHeading: 'من هم القرّاء',
@@ -722,6 +731,7 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: '지원 언어', value: '9개', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: '페이지 수', value: '약 9,000개', note: '사이트 전체' },
       ],
+      metricsAsOf: '위 스크린샷과 수치는 2026년 11월 18일 기준입니다.',
       countriesIntro:
         '독자는 한 시장에 집중되어 있지 않습니다. 일본, 미국, 한국, 독일이 각각 Google 검색 클릭의 12~16%를 차지하며, 합산하면 전체의 절반을 넘습니다. 모든 페이지는 9개 언어로 제공되므로, 일본·한국·독일·프랑스에 제품을 판매하는 기업은 해당 지역 독자에게 그들의 언어로 다가갈 수 있습니다. 아래의 실시간 국가별 현황은 자동으로 갱신됩니다.',
       whoHeading: '독자층의 특징',
