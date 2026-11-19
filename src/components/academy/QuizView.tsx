@@ -9,6 +9,7 @@ import { scoreQuiz } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { Programme, QuizQuestion, QuizResult } from '@/lib/academy/types'
 import { AiBadge } from './AiBadge'
+import { Content } from './Content'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -191,8 +192,9 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
         </div>
       </div>
       <fieldset key={current.id}>
-        <legend className="text-lg font-medium text-gray-900">{current.prompt}</legend>
-        <div className="mt-3 grid gap-2">
+        <Content lang={programme.language}>
+          <legend className="text-lg font-medium text-gray-900">{current.prompt}</legend>
+          <div className="mt-3 grid gap-2">
           {current.options.map((o, i) => {
             const isCorrect = i === current.reveal?.correctIndex
             const state = !answered ? 'idle' : isCorrect ? 'correct' : i === chosen ? 'wrong' : 'other'
@@ -208,7 +210,8 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
               </button>
             )
           })}
-        </div>
+          </div>
+        </Content>
       </fieldset>
       {checkError && (
         <p className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-900" role="alert">
@@ -221,8 +224,10 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
             {chosen === current.reveal.correctIndex ? tx.correctFeedback : tx.wrongFeedback}
             <AiBadge text={tx.aiLabel} />
           </p>
-          <p>{current.reveal.explanationCorrect}</p>
-          {chosen !== current.reveal.correctIndex && current.reveal.explanationChosen && <p>{current.reveal.explanationChosen}</p>}
+          <Content lang={programme.language} className="space-y-2">
+            <p>{current.reveal.explanationCorrect}</p>
+            {chosen !== current.reveal.correctIndex && current.reveal.explanationChosen && <p>{current.reveal.explanationChosen}</p>}
+          </Content>
           <button type="button" onClick={next} className="mt-1 rounded-xl bg-purple-600 px-5 py-2 font-medium text-white hover:bg-purple-700">
             {index === total - 1 ? tx.seeResult : tx.nextQuestion}
           </button>

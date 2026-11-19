@@ -218,3 +218,14 @@ test.describe('F6: correct answers stay on the server until answered', () => {
     expect(sent).toEqual({ sealed: quizQuestions[0].sealed, choice: 0 })
   })
 })
+
+test.describe('F15: lang and dir', () => {
+  test('server HTML of the Arabic page marks the tool rtl; a German lesson on it is lang=de dir=ltr', async ({ page, request }) => {
+    const html = await (await request.get('/ar/academy')).text()
+    expect(html).toMatch(/<div lang="ar" dir="rtl"/)
+    await page.route('**/api/academy/lesson', (r) => r.fulfill({ json: lessonReply }))
+    await openSeededLesson(page, seededProgramme({ language: 'de' }))
+    // (the UI stays in English here: the seeded page is /academy)
+    await expect(page.locator('[lang="de"][dir="ltr"]', { hasText: 'Body text of the lesson.' })).toBeVisible()
+  })
+})

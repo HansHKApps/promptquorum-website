@@ -14,6 +14,7 @@ import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import { LEVELS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
+import { Content } from './Content'
 import { LessonView } from './LessonView'
 import { QuizView } from './QuizView'
 import { ResultsView } from './ResultsView'
@@ -576,14 +577,17 @@ function ProgrammeView({
       )}
       <div>
         <h3 className="font-medium text-gray-900">{tx.objectivesTitle}</h3>
-        <ul className="mt-2 list-disc space-y-1 ps-5 text-gray-700">
-          {programme.objectives.map((o, i) => (
-            <li key={i}>{o}</li>
-          ))}
-        </ul>
+        <Content lang={programme.language}>
+          <ul className="mt-2 list-disc space-y-1 ps-5 text-gray-700">
+            {programme.objectives.map((o, i) => (
+              <li key={i}>{o}</li>
+            ))}
+          </ul>
+        </Content>
       </div>
       <div>
         <h3 className="font-medium text-gray-900">{tx.lessonsTitle}</h3>
+        <Content lang={programme.language}>
         <ol className="mt-2 space-y-2">
           {programme.lessons.map((l, i) => {
             const isDone = programme.progress.lessonStatus[l.id] === 'done'
@@ -614,6 +618,7 @@ function ProgrammeView({
             )
           })}
         </ol>
+        </Content>
       </div>
       <p className="text-sm text-gray-700">{testLine}</p>
       <div className="flex flex-wrap gap-3">

@@ -7,6 +7,7 @@
 import { correctIndexOf, countingFinal, PASS_MARK, programmeScore } from '@/lib/academy/scoring'
 import type { Programme } from '@/lib/academy/types'
 import { AiBadge } from './AiBadge'
+import { Content } from './Content'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -87,6 +88,7 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
       {final.questions && (
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="cursor-pointer font-medium text-gray-900">{tx.reviewAnswers}</summary>
+          <Content lang={programme.language}>
           <ol className="mt-3 space-y-4">
             {final.questions.map((q, i) => {
               const a = final.answers[q.id]
@@ -113,6 +115,7 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
               )
             })}
           </ol>
+          </Content>
         </details>
       )}
 

@@ -11,6 +11,7 @@ import { addActiveTime, lessonsDone, markLessonDone, setLessonContent } from '@/
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { Lesson, Programme } from '@/lib/academy/types'
 import { AiBadge } from './AiBadge'
+import { Content } from './Content'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -127,9 +128,11 @@ export function LessonView({
 
       <article aria-labelledby="academy-lesson" className="space-y-5 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
         <header>
-          <h2 id="academy-lesson" className="text-2xl font-semibold text-gray-900">
-            {lesson.title}
-          </h2>
+          <Content lang={programme.language}>
+            <h2 id="academy-lesson" className="text-2xl font-semibold text-gray-900">
+              {lesson.title}
+            </h2>
+          </Content>
           <p className="mt-2">
             <AiBadge text={tx.aiLabel} />
           </p>
@@ -159,14 +162,16 @@ export function LessonView({
           </div>
         ) : (
           <>
-            {lesson.sections.map((s, i) => (
-              <section key={i} className="space-y-2">
-                <h3 className="text-lg font-semibold text-gray-900">{s.heading}</h3>
-                <div className="space-y-3 leading-relaxed text-gray-800">
-                  <Markdown text={s.body} />
-                </div>
-              </section>
-            ))}
+            <Content lang={programme.language} className="space-y-5">
+              {lesson.sections.map((s, i) => (
+                <section key={i} className="space-y-2">
+                  <h3 className="text-lg font-semibold text-gray-900">{s.heading}</h3>
+                  <div className="space-y-3 leading-relaxed text-gray-800">
+                    <Markdown text={s.body} />
+                  </div>
+                </section>
+              ))}
+            </Content>
             {lesson.furtherReading.length > 0 && (
               <aside aria-labelledby="academy-reading" className="rounded-xl border border-gray-200 p-4">
                 <h3 id="academy-reading" className="font-semibold text-gray-900">
