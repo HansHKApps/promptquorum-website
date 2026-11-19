@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
+        "title": "AutoDL Pricing 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU",
+        "url": "/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "continue-dev-vs-cline-vs-aider-local",
         "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
@@ -70,14 +78,6 @@
         "slug": "alpaca-review",
         "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
         "url": "/power-local-llm/alpaca-review",
-        "dateModified": "2026-11-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "aqbot-review",
-        "title": "AQBot Review: Desktop AI Client With Agents and a Local API Gateway",
-        "url": "/power-local-llm/aqbot-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
@@ -11356,6 +11356,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
+        "title": "AutoDL Pricing 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU",
+        "url": "/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-tts-voice-cloning-piper-coqui-xtts",
         "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
@@ -11416,14 +11424,6 @@
         "slug": "best-ai-coding-assistant-local-llm",
         "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
         "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-beginner-local-llm-models",
-        "title": "Best Beginner Local LLMs 2026: 4GB & 8GB RAM Models (Llama, Phi, Gemma, Qwen)",
-        "url": "/local-llms/best-beginner-local-llm-models",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
       }
