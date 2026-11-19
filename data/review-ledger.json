@@ -47,6 +47,12 @@
       "action": "refresh",
       "summary": "Weekly cycle 2026-11-09: retrieved official sources for 13 min-coverage labs (6 blocked by env network policy, fixed mid-cycle via update_environment; OpenAI/Meta blocked by bot-protection/classifier, left unverified). Confirmed drift: DeepSeek retired deepseek-v4-flash in favor of DeepSeek-V4.1-Flash-1017 (superseded); added 4 new Gemini 3.8 Live/TTS variants from aistudio.google.com; filled in Grok 4.7 release_date (2026-09) from docs.x.ai. Confirmed no change: Mistral, Cohere, Z.ai GLM-5.3, Microsoft Phi-4, Kimi K3.1 Pro all still current per official sources. Site-content diff and validate-model-names run (informational/report-only this cycle, no page edits); baseline-aware gate shows 1469 pre-existing violations (debt predating this cycle, not newly introduced) -- flagged for owner, baseline not rewritten.",
       "branch": "fix/model-refresh-2026-11-09"
+    },
+    {
+      "date": "2026-11-19",
+      "action": "refresh",
+      "summary": "Weekly retrieval cycle 2026-11-19: added Claude Fable 5.2/Mythos 5.2, GPT-6.2 Astra/Sol, Gemini 4 Carbon/Hydrogen/Neon, Qwen4-Max; superseded Fable 5.1, GPT-6 Astra, GPT-6.1 Sol, Qwen3.8-Max. Diff flags: 10 files mention stale GPT-6 Astra, 6 files GPT-6.1 Sol, 1 file Claude Fable 5.1.",
+      "branch": "session/model-registry-refresh-2026-11-19"
     }
   ]
 }
