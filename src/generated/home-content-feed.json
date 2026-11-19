@@ -78005,18 +78005,18 @@
   {
     "lang": "en",
     "title": "How to Build a Smart Home With Zero Subscriptions (2026)",
-    "excerpt": "Build a smart home with zero subscriptions: local-capable devices, a local hub, and local camera storage replace monthly fees with one-time hardware costs.",
+    "excerpt": "Yes — run a smart home with no subscription: local-capable devices, Home Assistant, and Frigate camera storage replace monthly fees. See the full setup.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
   {
     "lang": "de",
     "title": "Ein Smart Home ganz ohne Abonnements bauen (2026)",
-    "excerpt": "Smart Home ohne Abonnements bauen 2026: lokale Geräte, lokaler Hub und lokaler Kameraspeicher ersetzen monatliche Gebühren durch einmalige Hardwarekosten.",
+    "excerpt": "Ja, ein Smart Home ohne Abo ist möglich: lokale Geräte, Home Assistant und Frigate-Kameraspeicher ersetzen monatliche Kosten durch einmalige Hardware.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/de/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -78025,7 +78025,7 @@
     "title": "Construire une Maison Connectée Sans Aucun Abonnement (2026)",
     "excerpt": "Construire une maison connectée sans abonnement en 2026 : appareils locaux, hub local et stockage local des caméras éliminent les frais mensuels.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/fr/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -78034,7 +78034,7 @@
     "title": "サブスクなしでスマートホームを作る方法（2026）",
     "excerpt": "サブスクなしでスマートホームを作る方法（2026年版）：Home Assistant を中心に、ローカル機器・ローカルハブ・クラウドカメラ不要の構成で月額料金をゼロに。初期費用のみで長期的に安く運用する方法を解説。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/ja/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -78043,7 +78043,7 @@
     "title": "如何打造零订阅的智能家居（2026）",
     "excerpt": "打造零订阅智能家居的完整方案（2026）：选用支持本地运行的设备和 Home Assistant 中枢，用 Frigate 本地存储摄像头画面，以一次性硬件成本彻底取代按月付费。含设备推荐、成本计算与长期节省分析。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/zh/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -78052,7 +78052,7 @@
     "title": "Cómo Construir un Smart Home con Cero Suscripciones (2026)",
     "excerpt": "Construye un smart home sin suscripciones en 2026: dispositivos locales, hub local y almacenamiento local de cámaras eliminan las cuotas mensuales.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/es/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -78061,7 +78061,7 @@
     "title": "Como Construir uma Casa Inteligente Sem Nenhuma Assinatura (2026)",
     "excerpt": "Construa uma casa inteligente sem assinaturas em 2026: dispositivos locais, hub local e armazenamento local de câmeras eliminam as taxas mensais.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/pt/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -78070,16 +78070,16 @@
     "title": "كيف تبني منزلًا ذكيًا بدون اشتراكات (⁨2026⁩)",
     "excerpt": "معظم اشتراكات المنزل الذكي تأتي من الكاميرات السحابية. Home Assistant وFrigate يُغنيان عن الرسوم الشهرية بتكلفة أجهزة واحدة فقط.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/ar/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
   {
     "lang": "ko",
     "title": "구독료 없이 스마트홈 구축하는 방법 (2026)",
-    "excerpt": "구독료 없는 스마트홈 구축: 로컬 가능 기기, 로컬 허브, 로컬 카메라 저장이 월정액을 일회성 하드웨어 비용으로 대체합니다.",
+    "excerpt": "구독료 없는 스마트홈 구축: 로컬 허브 Home Assistant와 Frigate 카메라 저장으로 월정액을 일회성 하드웨어 비용으로 대체합니다.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-11-19",
     "url": "/ko/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
