@@ -1296,6 +1296,7 @@ const HUB_THEMES: Array<{
       'openwhispr-review',
       'voicebox-review',
       'yovoice-review',
+      'voicestudio-review',
       'xtts-v2-review',
       'elevenlabs-vs-local-tts-piper-xtts',
       'voice-ai-writers-cloud-vs-local',
