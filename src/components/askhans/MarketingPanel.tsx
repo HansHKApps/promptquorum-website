@@ -8,9 +8,11 @@
 //
 // Topic picture as a clickable link (v1, 2026-11-19): when a category carries `pictureLink`, the picture itself
 // becomes an external, non-affiliate price-comparison link (new tab, window stays open). See categories.ts.
+// The destination is resolved per visitor language via pictureLinkUrl() (2026-11-19) — never one fixed domain
+// for every locale; a language with no entry of its own falls back to the global `urls.default`.
 
 import Link from 'next/link'
-import { getCategory, type AskHansLink, type AskHansPictureLink } from '@/lib/askhans/categories'
+import { getCategory, pictureLinkUrl, type AskHansLink, type AskHansPictureLink } from '@/lib/askhans/categories'
 import { useAskCopy, useAskLang, localizeAskPath } from './copy'
 import { AskIcon } from './icons'
 import type { RelatedLink } from './links'
@@ -71,11 +73,12 @@ function RelatedCard({ link, onClick, compact }: { link: RelatedLink; onClick: (
 /** Side-panel picture: full-size clickable image with a "compare prices" chip and a hover/focus shine sweep. */
 function PictureLink({ cat, label, onPictureClick }: { cat: ReturnType<typeof getCategory>; label: string; onPictureClick: Props['onPictureClick'] }) {
   const tx = useAskCopy()
+  const lang = useAskLang()
   const link = cat.pictureLink
   if (!link) return null
   return (
     <a
-      href={link.url}
+      href={pictureLinkUrl(link, lang)}
       target="_blank"
       rel="noopener noreferrer nofollow"
       onClick={() => onPictureClick(cat.key, link)}
@@ -97,11 +100,12 @@ function PictureLink({ cat, label, onPictureClick }: { cat: ReturnType<typeof ge
 /** Mobile strip thumbnail: same link, no chip/caption (too small). */
 function PictureThumbLink({ cat, label, onPictureClick }: { cat: ReturnType<typeof getCategory>; label: string; onPictureClick: Props['onPictureClick'] }) {
   const tx = useAskCopy()
+  const lang = useAskLang()
   const link = cat.pictureLink
   if (!link) return null
   return (
     <a
-      href={link.url}
+      href={pictureLinkUrl(link, lang)}
       target="_blank"
       rel="noopener noreferrer nofollow"
       onClick={() => onPictureClick(cat.key, link)}

@@ -646,9 +646,12 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'openwork-review',
   'airi-review',
   'inbox-zero-review',
+  'browser-use-review',
+  'cc-switch-review',
   'skales-review',
   'halo-review',
   'yovoice-review',
+  'voicestudio-review',
   'open-science-desktop-review',
   'cozyclay-review',
   'papersgpt-review',
@@ -814,6 +817,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'pooled-review',
   'askimo-review',
   'reactive-resume-review',
+  'paperclip-review',
   'next-ai-draw-io-review',
   'ultimate-vocal-remover-review',
   'oriveo-review',
@@ -821,6 +825,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'myagents-review',
   // Humla review (Voice, Speech & Multimodal, free open-source AI meeting notepad for Apple Silicon Macs) — 2026-11-19
   'humla-review',
+  'llmfit-review',
+  'orca-review',
 
 ])
 
