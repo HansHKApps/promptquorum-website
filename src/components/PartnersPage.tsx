@@ -134,6 +134,7 @@ export async function PartnersPage({ lang }: { lang: Language }) {
                 </div>
               ))}
             </div>
+            <p className="mt-2 text-xs text-gray-500">{c.audience.metricsAsOf}</p>
 
             <p className="mt-6">{c.audience.countriesIntro}</p>
 
