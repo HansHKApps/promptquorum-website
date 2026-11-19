@@ -1414,6 +1414,11 @@
     "urlSlug": "myagents-review",
     "url": "/power-local-llm/myagents-review"
   },
+  "llmfit": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llmfit-review",
+    "url": "/power-local-llm/llmfit-review"
+  },
   "reactive-resume": {
     "cluster": "power-local-llm",
     "urlSlug": "reactive-resume-review",
