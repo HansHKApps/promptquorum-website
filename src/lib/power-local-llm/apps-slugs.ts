@@ -337,6 +337,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'pooled':                                 'pooled',
   'askimo':                                 'askimo',
   'myagents':                               'myagents',
+  'humla':                                  'humla',
   'llmfit':                                 'llmfit',
   'orca':                                   'orca',
   'reactive-resume':                        'reactive-resume',

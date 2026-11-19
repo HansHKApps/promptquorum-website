@@ -1311,6 +1311,7 @@ const HUB_THEMES: Array<{
       'aquavoice-review',
       'meetily-review',
       'anarlog-review',
+      'humla-review',
       'perfect-memory-review',
       'funclip-review',
       'openai-edge-tts-review',

@@ -12735,6 +12735,20 @@
     "totalCount": 3,
     "capped": false
   },
+  "Humla": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "humla-review",
+        "title": "Humla Review: Free, Open-Source AI Meeting Notes for Mac",
+        "url": "/power-local-llm/humla-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "llmfit": {
     "articles": [
       {
@@ -13753,6 +13767,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "humla-review",
+        "title": "Humla Review: Free, Open-Source AI Meeting Notes for Mac",
+        "url": "/power-local-llm/humla-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "orca-review",
         "title": "Orca Review: Open-Source Agent IDE for Parallel Coding Agents",
         "url": "/power-local-llm/orca-review",
@@ -13782,17 +13804,9 @@
         "url": "/power-local-llm/cozyclay-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "docling-review",
-        "title": "Docling Review: Open-Source PDF and Document Parser for RAG",
-        "url": "/power-local-llm/docling-review",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 286,
+    "totalCount": 287,
     "capped": true
   },
   "Qdrant": {

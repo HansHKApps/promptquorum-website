@@ -374,6 +374,7 @@ import { app as app_kition } from './apps/kition'
 import { app as app_pooled } from './apps/pooled'
 import { app as app_askimo } from './apps/askimo'
 import { app as app_myagents } from './apps/myagents'
+import { app as app_humla } from './apps/humla'
 import { app as app_llmfit } from './apps/llmfit'
 import { app as app_orca } from './apps/orca'
 import { app as app_reactive_resume } from './apps/reactive-resume'
@@ -714,6 +715,7 @@ export const localAiApps: ToolRecord[] = [
   app_pooled,
   app_askimo,
   app_myagents,
+  app_humla,
   app_llmfit,
   app_orca,
   app_reactive_resume,

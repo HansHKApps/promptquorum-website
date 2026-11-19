@@ -1429,6 +1429,11 @@
     "urlSlug": "myagents-review",
     "url": "/power-local-llm/myagents-review"
   },
+  "humla": {
+    "cluster": "power-local-llm",
+    "urlSlug": "humla-review",
+    "url": "/power-local-llm/humla-review"
+  },
   "llmfit": {
     "cluster": "power-local-llm",
     "urlSlug": "llmfit-review",
