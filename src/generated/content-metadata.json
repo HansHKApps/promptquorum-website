@@ -3548,7 +3548,7 @@
       ]
     },
     "best-arabic-local-llms-2026": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-14",
       "hasSections": true,
@@ -3566,11 +3566,11 @@
       "images": [
         {
           "url": "/images/best-arabic-local-llms-2026-decision-tree-en.svg",
-          "title": "Decision tree for choosing an Arabic local LLM: Jais 30B for best Arabic quality (~19-20 GB VRAM), Falcon-H1-Arabic 7B for consumer GPUs (~5 GB), Qwen3-8B for multilingual use (~5-6 GB), or Llama 3.1-8B as a broad multilingual baseline."
+          "title": "Decision tree for choosing an Arabic local LLM: Jais-3-32B for best Arabic quality (~19-20 GB VRAM), Jais-3-7B or Falcon-H1-Arabic 7B for consumer GPUs (~5-6 GB), Qwen3-8B for multilingual use (~5-6 GB), or Llama 3.1-8B as a broad multilingual baseline."
         },
         {
           "url": "/images/best-arabic-local-llms-2026-vram-by-model-en.svg",
-          "title": "VRAM requirements for Arabic local LLMs at Q4_K_M quantization: Gemma 3 4B needs ~3 GB, Falcon-H1-Arabic 7B and ALLaM 7B need ~5 GB, Qwen3-8B needs 5-6 GB, Jais 13B needs 8-10 GB, and Jais 30B needs 19-20 GB VRAM."
+          "title": "VRAM requirements for Arabic local LLMs at Q4_K_M quantization: Gemma 3 4B needs ~3 GB, Falcon-H1-Arabic 7B, Jais-3-7B, and ALLaM 7B need ~5-6 GB, Qwen3-8B needs 5-6 GB, and Jais-3-32B needs 19-20 GB VRAM."
         }
       ]
     },
