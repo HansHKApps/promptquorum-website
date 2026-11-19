@@ -315,6 +315,7 @@ import { app as app_labelme } from './apps/labelme'
 import { app as app_openwork } from './apps/openwork'
 import { app as app_airi } from './apps/airi'
 import { app as app_inbox_zero } from './apps/inbox-zero'
+import { app as app_browser_use } from './apps/browser-use'
 import { app as app_cc_switch } from './apps/cc-switch'
 import { app as app_ultimate_vocal_remover } from './apps/ultimate-vocal-remover'
 import { app as app_skales } from './apps/skales'
@@ -654,6 +655,7 @@ export const localAiApps: ToolRecord[] = [
   app_openwork,
   app_airi,
   app_inbox_zero,
+  app_browser_use,
   app_cc_switch,
   app_ultimate_vocal_remover,
   app_skales,

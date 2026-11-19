@@ -342,6 +342,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'paperclip':                              'paperclip',
   'next-ai-draw-io':                        'next-ai-draw-io',
   'inbox-zero':                             'inbox-zero',
+  'browser-use':                            'browser-use',
   'cc-switch':                              'cc-switch',
   'aqbot':                                  'aqbot',
   'oriveo':                                 'oriveo',

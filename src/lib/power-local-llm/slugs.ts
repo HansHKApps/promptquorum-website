@@ -627,6 +627,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'openwork-review':                          'openwork-review',
   'airi-review':                              'airi-review',
   'inbox-zero-review':                        'inbox-zero-review',
+  'browser-use-review':                       'browser-use-review',
   'cc-switch-review':                         'cc-switch-review',
   'ultimate-vocal-remover-review':            'ultimate-vocal-remover-review',
   'skales-review':                           'skales-review',
