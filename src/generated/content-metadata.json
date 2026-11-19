@@ -15570,6 +15570,24 @@
       ],
       "images": []
     },
+    "orca-review": {
+      "dateModified": "2026-11-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "reactive-resume-review": {
       "dateModified": "2026-11-18",
       "lastFactChecked": null,

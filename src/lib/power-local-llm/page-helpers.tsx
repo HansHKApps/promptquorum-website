@@ -1044,6 +1044,7 @@ const HUB_THEMES: Array<{
       'leon-ai-review',
       'agent-zero-review',
       'myagents-review',
+      'orca-review',
       'taskweaver-review',
       'dspy-review',
       'camel-review',

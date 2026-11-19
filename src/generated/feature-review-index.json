@@ -1419,6 +1419,11 @@
     "urlSlug": "myagents-review",
     "url": "/power-local-llm/myagents-review"
   },
+  "orca": {
+    "cluster": "power-local-llm",
+    "urlSlug": "orca-review",
+    "url": "/power-local-llm/orca-review"
+  },
   "reactive-resume": {
     "cluster": "power-local-llm",
     "urlSlug": "reactive-resume-review",

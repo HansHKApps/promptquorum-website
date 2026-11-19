@@ -60832,6 +60832,87 @@
   },
   {
     "lang": "en",
+    "title": "Orca Review: Open-Source Agent IDE for Parallel Coding Agents",
+    "excerpt": "Orca review: free, open-source (MIT) agent IDE for macOS, Windows and Linux. Runs Claude Code, Codex and more in parallel git worktrees with diff review.",
+    "publishDate": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "url": "/power-local-llm/orca-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Orca Review: Open-Source-Agenten-IDE für parallele Coding-Agenten",
+    "excerpt": "Orca Review: kostenlose, quelloffene (MIT) Agenten-IDE für macOS, Windows und Linux. Führt Claude Code und Codex parallel in Git-Worktrees aus.",
+    "publishDate": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "url": "/de/power-local-llm/orca-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Orca Review : IDE d'agents open source pour agents de code parallèles",
+    "excerpt": "Orca Review : IDE d'agents gratuit et open source (MIT) pour macOS, Windows et Linux. Exécute Claude Code et Codex en parallèle dans des git worktrees.",
+    "publishDate": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "url": "/fr/power-local-llm/orca-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Orcaレビュー：並列コーディングエージェント向けオープンソースIDE",
+    "excerpt": "Orcaレビュー：macOS・Windows・Linux向けの無料オープンソース（MIT）エージェントIDE。Claude CodeやCodexをgit worktreeで並列実行します。",
+    "publishDate": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "url": "/ja/power-local-llm/orca-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Orca 评测：面向并行编程 Agent 的开源 Agent IDE",
+    "excerpt": "Orca 评测：面向 macOS、Windows 和 Linux 的免费开源（MIT）Agent IDE，可在 git worktree 中并行运行 Claude Code、Codex 等。",
+    "publishDate": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "url": "/zh/power-local-llm/orca-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Orca Review: IDE de agentes de código abierto para agentes de programación en paralelo",
+    "excerpt": "Orca review: IDE de agentes gratuito y de código abierto (MIT) para macOS, Windows y Linux. Ejecuta Claude Code y Codex en paralelo en git worktrees.",
+    "publishDate": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "url": "/es/power-local-llm/orca-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Orca Review: IDE de agentes de código aberto para agentes de programação em paralelo",
+    "excerpt": "Orca review: IDE de agentes gratuita e de código aberto (MIT) para macOS, Windows e Linux. Executa Claude Code e Codex em paralelo em git worktrees.",
+    "publishDate": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "url": "/pt/power-local-llm/orca-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Orca: بيئة IDE مفتوحة المصدر للوكلاء تشغّل وكلاء البرمجة بالتوازي",
+    "excerpt": "مراجعة Orca: بيئة IDE مجانية ومفتوحة المصدر (MIT) للوكلاء على macOS وWindows وLinux، تشغّل Claude Code وCodex بالتوازي في git worktrees مع مراجعة الفروق.",
+    "publishDate": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "url": "/ar/power-local-llm/orca-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Orca 리뷰: 병렬 코딩 에이전트를 위한 오픈소스 에이전트 IDE",
+    "excerpt": "Orca 리뷰: macOS, Windows, Linux용 무료 오픈소스(MIT) 에이전트 IDE. Claude Code, Codex 등을 git worktree에서 병렬 실행합니다.",
+    "publishDate": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "url": "/ko/power-local-llm/orca-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Reactive Resume Review: Free Open-Source Resume Builder",
     "excerpt": "Reactive Resume review: free MIT-licensed resume and cover-letter builder with PDF, Word and Markdown export, an optional AI assistant and self-hosting.",
     "publishDate": "2026-11-18",

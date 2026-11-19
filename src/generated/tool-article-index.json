@@ -8379,6 +8379,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "orca-review",
+        "title": "Orca Review: Open-Source Agent IDE for Parallel Coding Agents",
+        "url": "/power-local-llm/orca-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nativ-review",
         "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
         "url": "/power-local-llm/nativ-review",
@@ -8440,17 +8448,9 @@
         "url": "/power-local-llm/myagents-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "coil-review",
-        "title": "Coil Review: A Mac Agent Harness That Shows Which Model Answered",
-        "url": "/power-local-llm/coil-review",
-        "dateModified": "2026-10-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Zed": {
@@ -8699,6 +8699,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "orca-review",
+        "title": "Orca Review: Open-Source Agent IDE for Parallel Coding Agents",
+        "url": "/power-local-llm/orca-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "aqbot-review",
         "title": "AQBot Review: Desktop AI Client With Agents and a Local API Gateway",
         "url": "/power-local-llm/aqbot-review",
@@ -8760,17 +8768,9 @@
         "url": "/power-local-llm/omlx-review",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
-        "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "MaxKB": {
@@ -12630,6 +12630,28 @@
         "url": "/power-local-llm/myagents-review",
         "dateModified": "2026-11-18",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "orca-review",
+        "title": "Orca Review: Open-Source Agent IDE for Parallel Coding Agents",
+        "url": "/power-local-llm/orca-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Orca": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "orca-review",
+        "title": "Orca Review: Open-Source Agent IDE for Parallel Coding Agents",
+        "url": "/power-local-llm/orca-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
@@ -13603,6 +13625,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "orca-review",
+        "title": "Orca Review: Open-Source Agent IDE for Parallel Coding Agents",
+        "url": "/power-local-llm/orca-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "alpaca-review",
         "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
         "url": "/power-local-llm/alpaca-review",
@@ -13640,17 +13670,9 @@
         "url": "/power-local-llm/inbox-zero-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-pdf-parsers-compared",
-        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
-        "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 283,
+    "totalCount": 284,
     "capped": true
   },
   "Qdrant": {
