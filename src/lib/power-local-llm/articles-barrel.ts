@@ -518,6 +518,7 @@ import { article as a_kition_review } from './articles/kition-review'
 import { article as a_pooled_review } from './articles/pooled-review'
 import { article as a_askimo_review } from './articles/askimo-review'
 import { article as a_myagents_review } from './articles/myagents-review'
+import { article as a_orca_review } from './articles/orca-review'
 import { article as a_reactive_resume_review } from './articles/reactive-resume-review'
 import { article as a_next_ai_draw_io_review } from './articles/next-ai-draw-io-review'
 import { article as a_oriveo_review } from './articles/oriveo-review'
@@ -1079,6 +1080,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'pooled-review':                                       a_pooled_review,
   'askimo-review':                                       a_askimo_review,
   'myagents-review':                                     a_myagents_review,
+  'orca-review':                                         a_orca_review,
   'reactive-resume-review':                              a_reactive_resume_review,
   'next-ai-draw-io-review':                              a_next_ai_draw_io_review,
   'oriveo-review':                                       a_oriveo_review,
