@@ -12621,6 +12621,36 @@
     "totalCount": 1,
     "capped": false
   },
+  "LibreTranslate": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "libretranslate-review",
+        "title": "LibreTranslate Review: Free Self-Hosted Translation API and Web Interface",
+        "url": "/power-local-llm/libretranslate-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "argos-translate-review",
+        "title": "Argos Translate Review: Free Offline Translation for Python and the Command Line",
+        "url": "/power-local-llm/argos-translate-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "linguister-review",
+        "title": "Linguist Review: Open-Source Browser Translator With an Offline Mode",
+        "url": "/power-local-llm/linguister-review",
+        "dateModified": "2026-11-13",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
+    "capped": false
+  },
   "Reactive Resume": {
     "articles": [
       {
@@ -15087,6 +15117,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "libretranslate-review",
+        "title": "LibreTranslate Review: Free Self-Hosted Translation API and Web Interface",
+        "url": "/power-local-llm/libretranslate-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "argos-translate-review",
         "title": "Argos Translate Review: Free Offline Translation for Python and the Command Line",
         "url": "/power-local-llm/argos-translate-review",
@@ -15102,7 +15140,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Llamatik": {
@@ -15460,9 +15498,17 @@
         "url": "/power-local-llm/argos-translate-review",
         "dateModified": "2026-11-13",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "libretranslate-review",
+        "title": "LibreTranslate Review: Free Self-Hosted Translation API and Web Interface",
+        "url": "/power-local-llm/libretranslate-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Linguist": {
