@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   license: 'Apache-2.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: 16, cpuOnly: false }, // per github.com/hiyouga/LlamaFactory docs: CPU training is supported but impractical; LoRA fine-tuning a 7B model documented at ~16 GB VRAM, as low as ~4 GB with 2-bit QLoRA, verified 2026-09-14
-  stars: 74751,
+  stars: 76131, // GitHub API, verified 2026-11-19
   addedDate: '2026-09-14',
   status: 'listed',
   uses: ['build'],
@@ -36,7 +36,7 @@ export const app: ToolRecord = {
   pqReview: { date: '2026-09-20', version: 'v0.9.5', versionSourceUrl: 'https://github.com/hiyouga/LlamaFactory/releases/tag/v0.9.5' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { lowVram: true, loraQlora: true, webUi: true, multiGpu: true, exportGguf: true },
-  lastVerifiedDate: '2026-09-14',
-  lastUpstreamUpdate: '2026-10-10', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastVerifiedDate: '2026-11-19',
+  lastUpstreamUpdate: '2026-11-18', // GitHub API: pushed_at (newer than latest tagged release v0.9.5, 2026-05-30), read 2026-11-19
   lastUpstreamUpdateSource: 'https://github.com/hiyouga/LlamaFactory',
 }

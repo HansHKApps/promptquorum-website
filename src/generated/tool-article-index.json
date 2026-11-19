@@ -190,6 +190,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "multi-gpu-local-llms",
         "title": "Multi-GPU Local LLMs 2026: Run 70B Models Across 2+ GPUs with vLLM and Ollama",
@@ -242,14 +250,6 @@
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
         "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-11-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-cpp-explained",
-        "title": "llama.cpp: What It Is, How to Install, First Command",
-        "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-11-14",
         "tier": "about"
       }
@@ -5815,6 +5815,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ollama-vision-models-review",
         "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
         "url": "/power-local-llm/ollama-vision-models-review",
@@ -5850,14 +5858,6 @@
         "slug": "idefics-review",
         "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
         "url": "/power-local-llm/idefics-review",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-factory-review",
-        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
-        "url": "/power-local-llm/llama-factory-review",
         "dateModified": "2026-10-19",
         "tier": "about"
       },
@@ -8344,7 +8344,7 @@
         "slug": "llama-factory-review",
         "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
         "url": "/power-local-llm/llama-factory-review",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-11-19",
         "tier": "mentioned"
       },
       {
@@ -9774,6 +9774,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "llama-factory-review",
+        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
+        "url": "/power-local-llm/llama-factory-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "future-of-local-llms",
         "title": "Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI",
@@ -9802,14 +9810,6 @@
         "slug": "long-context-local-llms",
         "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
         "url": "/local-llms/long-context-local-llms",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-factory-review",
-        "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
-        "url": "/power-local-llm/llama-factory-review",
         "dateModified": "2026-10-19",
         "tier": "about"
       },
@@ -9856,7 +9856,7 @@
         "slug": "llama-factory-review",
         "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
         "url": "/power-local-llm/llama-factory-review",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
