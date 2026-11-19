@@ -6,17 +6,17 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-19',
+    next_refresh_due: '2027-05-19',
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/anker-solix-balcony-solar-overview-hero-en.webp',
     title: 'Anker SOLIX: Balcony Solar Company Profile',
-    seoTitle: 'Anker SOLIX Balcony Solar Company Profile',
-    metaDescription: 'Company profile for Anker SOLIX: history, ownership, product range, and role in the balcony solar market.',
+    seoTitle: 'Anker SOLIX Company Profile: Owner & Made-In Country',
+    metaDescription: "Anker SOLIX company profile: founded 2011, made in Shenzhen & Changsha, China. Shenzhen-listed since 2020. Ownership, Solarbank lineup, EU-only market.",
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-11-19',
     audience: 'Readers researching Anker SOLIX as a company, distinct from buying-comparison intent',
     intro: 'Anker SOLIX\'s parent, Anker Innovations, has been publicly traded on the Shenzhen Stock Exchange since 2020 — a rarity in a balcony solar market where most competing brands are privately held. The company also occupies a dual role few peers share: it designs its own Solarbank battery hardware and sells finished kits directly to consumers rather than operating in a single supply-chain layer. Readers comparing balcony solar batteries before buying should see the EcoFlow vs. Anker vs. Zendure comparison instead — this page covers company history and structure only.',
-    leadAnswerBlock: '**Anker SOLIX is the balcony solar and home-energy-storage brand of Anker Innovations, a company founded in 2011 and headquartered across Shenzhen and Changsha, China, that has been publicly listed on the Shenzhen Stock Exchange since 2020.** SOLIX sells its Solarbank battery lineup directly to consumers in Germany, Austria, and other EU markets with confirmed VDE-AR-N 4105 grid-connection certification, but the product line is not sold or certified for the US market — Anker\'s own US storefront lists 17 portable power-station products and no Solarbank, and no UL 1741 listing has been found for a Solarbank model.',
+    leadAnswerBlock: '**Anker SOLIX is the balcony solar and home-energy-storage brand of Anker Innovations, a company founded in 2011 and headquartered across Shenzhen and Changsha, China, that has been publicly listed on the Shenzhen Stock Exchange since 2020, and added a dual listing on the Hong Kong Stock Exchange (stock code 00668) in July 2026.** SOLIX sells its Solarbank battery lineup directly to consumers in Germany, Austria, and other EU markets with confirmed VDE-AR-N 4105 grid-connection certification, but the product line is not sold or certified for the US market — Anker\'s own US storefront lists a lineup of portable power-station products and no Solarbank, and no UL 1741 listing has been found for a Solarbank model.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -24,10 +24,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: Key Facts',
         items: [
           'Anker SOLIX is a brand of Anker Innovations, founded in 2011 and headquartered across Shenzhen and Changsha, China.',
-          'Anker Innovations has been publicly listed on the Shenzhen Stock Exchange since 2020.',
+          'Anker Innovations has been publicly listed on the Shenzhen Stock Exchange since 2020, and added a dual listing on the Hong Kong Stock Exchange (stock code 00668) in July 2026.',
           'The SOLIX brand covers Anker\'s Solarbank battery lineup, sold alongside panels and microinverters as packaged balcony solar kits.',
           'Confirmed markets include Germany, Austria, and other EU countries with VDE-AR-N 4105 grid-connection certification.',
-          'Anker SOLIX Solarbank models are not sold or certified for the US market — no UL 1741 listing has been found, and Anker\'s US storefront ([ankersolix.com](https://ankersolix.com)) lists 17 portable power-station products but no Solarbank.',
+          'Anker SOLIX Solarbank models are not sold or certified for the US market — no UL 1741 listing has been found, and Anker\'s US storefront ([ankersolix.com](https://ankersolix.com)) lists a lineup of portable power-station products but no Solarbank.',
           'Anker is one of the few balcony solar companies that both manufactures its own battery hardware and sells direct to consumers, rather than operating in only one supply-chain layer.',
         ],
       },
@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: Company Snapshot',
         image: '/images/anker-solix-balcony-solar-snapshot-en.svg',
         imageCaption: 'Anker Innovations, founded 2011, Shenzhen-Changsha, China; publicly listed on the Shenzhen Stock Exchange since 2020.',
-        content: 'Anker Innovations was founded in 2011 and is headquartered across Shenzhen and Changsha, China. The company has been publicly listed on the Shenzhen Stock Exchange since 2020, which distinguishes it from most balcony solar kit resellers — many of the brands referenced across this site\'s market comparisons are privately held. SOLIX is Anker\'s dedicated brand for solar panels, portable power stations, and home battery storage, including the Solarbank line used in balcony solar kits.',
+        content: 'Anker Innovations was founded in 2011 and is headquartered across Shenzhen and Changsha, China. The company has been publicly listed on the Shenzhen Stock Exchange since 2020, and added a dual listing on the Hong Kong Stock Exchange (stock code 00668) in July 2026, which distinguishes it from most balcony solar kit resellers — many of the brands referenced across this site\'s market comparisons are privately held. SOLIX is Anker\'s dedicated brand for solar panels, portable power stations, and home battery storage, including the Solarbank line used in balcony solar kits.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Anker SOLIX is the solar and battery-storage brand of Anker Innovations, a Shenzhen-Changsha-based company founded in 2011 and publicly listed since 2020.' },
           { type: 'plain-terms', text: 'Anker SOLIX isn\'t a separate startup — it\'s a product line from Anker, the same publicly traded Chinese electronics company known for phone chargers and power banks.' },
@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'SOLIX Timeline',
         image: '/images/anker-solix-balcony-solar-timeline-en.svg',
         imageCaption: 'Company-confirmed launch date for the SOLIX brand; product lineup dates from press coverage.',
-        content: 'Anker introduced SOLIX as its dedicated solar and energy-storage brand, extending the company\'s existing portable-power-station business into home battery storage and balcony solar kits. Subsequent Solarbank models expanded the lineup\'s capacity and feature set, with the most recent addition being the Solarbank 4 Pro, unveiled in Berlin with pre-orders opened in June 2026. Anker has scoped that launch explicitly to Germany, Austria, and the EU, with press coverage noting only that North America availability may follow "later," without a stated date.',
+        content: 'Anker introduced SOLIX as its dedicated solar and energy-storage brand, extending the company\'s existing portable-power-station business into home battery storage and balcony solar kits. Subsequent Solarbank models expanded the lineup\'s capacity and feature set throughout 2026 — including the Solarbank 4 Pro, unveiled in Berlin with pre-orders opened in June 2026 — with the most recent addition being the Solarbank Max, presented at the IFA Berlin trade show in September 2026. Anker has scoped that launch explicitly to Germany, Austria, and the EU, with press coverage noting only that North America availability may follow "later," without a stated date.',
       },
       lineup: {
         title: 'Solarbank Lineup (Capacity)',
@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Confirmed Markets',
         image: '/images/anker-solix-balcony-solar-markets-en.svg',
         imageCaption: 'Grid-connection certificates confirmed for these markets; US sale is confirmed absent.',
-        content: 'Anker SOLIX Solarbank products are confirmed sold in Germany, Austria, and other EU markets, backed by VDE-AR-N 4105 grid-connection certification for Germany. The US market is a confirmed absence rather than an unconfirmed gap: Anker\'s own US storefront ([ankersolix.com](https://ankersolix.com)) lists 17 portable power-station products and no Solarbank model, and no UL 1741 grid-interactive inverter listing — the certification legally required for grid-connected sale in the US — has been found for any Solarbank product. Anker has not stated a date for entering the US balcony solar market.',
+        content: 'Anker SOLIX Solarbank products are confirmed sold in Germany, Austria, and other EU markets, backed by VDE-AR-N 4105 grid-connection certification for Germany. The US market is a confirmed absence rather than an unconfirmed gap: Anker\'s own US storefront ([ankersolix.com](https://ankersolix.com)) lists a lineup of portable power-station products and no Solarbank model, and no UL 1741 grid-interactive inverter listing — the certification legally required for grid-connected sale in the US — has been found for any Solarbank product. Anker has not stated a date for entering the US balcony solar market.',
       },
       position: {
         title: 'Where Anker SOLIX Sits',
@@ -76,11 +76,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Who owns Anker SOLIX?', a: 'Anker SOLIX is a brand owned and operated by Anker Innovations, a company founded in 2011 and headquartered across Shenzhen and Changsha, China. It is not a separate, independently owned company.' },
-          { q: 'Is Anker Innovations a public company?', a: 'Yes. Anker Innovations has been publicly listed on the Shenzhen Stock Exchange since 2020.' },
+          { q: 'Is Anker Innovations a public company?', a: 'Yes. Anker Innovations has been publicly listed on the Shenzhen Stock Exchange since 2020, and added a dual listing on the Hong Kong Stock Exchange (stock code 00668) in July 2026.' },
           { q: 'Where are Anker SOLIX products made?', a: 'Anker Innovations manufactures its products through its Shenzhen-Changsha, China-based operations. Anker, EcoFlow, and Zendure are all China-manufactured, Shenzhen-based balcony solar brands.' },
-          { q: 'What is the Solarbank lineup?', a: 'Solarbank is Anker\'s battery-storage product family for balcony solar and home energy storage. Models are sold with solar panels and microinverters as packaged kits, with battery capacity listed per model directly by Anker. The most recent model, the Solarbank 4 Pro, was unveiled in Berlin with pre-orders opened in June 2026.' },
+          { q: 'What is the Solarbank lineup?', a: 'Solarbank is Anker\'s battery-storage product family for balcony solar and home energy storage. Models are sold with solar panels and microinverters as packaged kits, with battery capacity listed per model directly by Anker. The most recent model, the Solarbank Max, was presented at the IFA Berlin trade show in September 2026, following the Solarbank 4 Pro unveiled in Berlin with pre-orders opened in June 2026.' },
           { q: 'Which markets does Anker SOLIX sell in?', a: 'Anker SOLIX confirms sales in Germany, Austria, and other EU markets, with VDE-AR-N 4105 grid-connection certification confirmed for Germany. Anker has scoped recent product launches, including the Solarbank 4 Pro, explicitly to Germany, Austria, and the EU.' },
-          { q: 'Is Anker SOLIX certified or sold in the US?', a: 'No. Anker SOLIX Solarbank models are not sold or certified for the US market. Anker\'s own US storefront ([ankersolix.com](https://ankersolix.com)) lists 17 portable power-station products but no Solarbank, and no UL 1741 grid-interactive inverter listing has been found for any Solarbank model.' },
+          { q: 'Is Anker SOLIX certified or sold in the US?', a: 'No. Anker SOLIX Solarbank models are not sold or certified for the US market. Anker\'s own US storefront ([ankersolix.com](https://ankersolix.com)) lists a lineup of portable power-station products but no Solarbank, and no UL 1741 grid-interactive inverter listing has been found for any Solarbank model.' },
           { q: 'Why isn\'t Anker SOLIX available in the US?', a: 'The absence reads as a certification and regulatory gap rather than a stated trade-policy decision: no UL 1741 listing and no FCC equipment authorization have been found for Solarbank products. Anker has only said North America availability may follow "later," without a stated date.' },
           { q: 'How does Anker SOLIX compare structurally to pure microinverter makers?', a: 'Most balcony solar companies operate in a single supply-chain layer — either making panels, making microinverters/batteries, or reselling packaged kits. Anker SOLIX is one of the few brands that spans two layers: it manufactures its own battery hardware and also sells finished kits directly to consumers, rather than sourcing batteries from a separate supplier.' },
           { q: 'Does Anker SOLIX make its own solar panels?', a: 'Anker SOLIX\'s primary manufacturing focus within its own kits is battery hardware. Panel-layer companies most frequently cited in balcony solar market comparisons — such as Meyer Burger, Solarwatt, and Heckert — are separate businesses from kit resellers like Anker.' },
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-20',
     audience: 'Leser, die sich über Anker SOLIX als Unternehmen informieren möchten, unabhängig von Kaufvergleichs-Interesse',
     intro: 'Anker SOLIX\' Mutterkonzern Anker Innovations ist seit 2020 an der Shenzhen Stock Exchange börsennotiert — eine Seltenheit in einem Balkonkraftwerk-Markt, in dem die meisten konkurrierenden Marken in Privatbesitz sind. Das Unternehmen nimmt zudem eine Doppelrolle ein, die nur wenige Wettbewerber teilen: Es entwickelt seine eigene Solarbank-Batteriehardware und verkauft fertige Sets direkt an Verbraucher, statt nur in einer Ebene der Lieferkette tätig zu sein. Leser, die vor dem Kauf Balkonkraftwerk-Batterien vergleichen möchten, sollten stattdessen den Vergleich EcoFlow vs. Anker vs. Zendure lesen — dieser Beitrag behandelt ausschließlich Unternehmensgeschichte und -struktur.',
-    leadAnswerBlock: '**Anker SOLIX ist die Marke für Balkonkraftwerke und Heimspeicher von Anker Innovations, einem 2011 gegründeten Unternehmen mit Sitz in Shenzhen und Changsha, China, das seit 2020 an der Shenzhen Stock Exchange börsennotiert ist.** SOLIX verkauft seine Solarbank-Batterieserie direkt an Verbraucher in Deutschland, Österreich und weiteren EU-Märkten mit bestätigter VDE-AR-N 4105-Netzanschlusszertifizierung, ist jedoch für den US-Markt weder zugelassen noch dort verkauft — der eigene US-Onlineshop von Anker listet 17 tragbare Powerstations-Produkte, aber keine Solarbank, und für kein Solarbank-Modell wurde eine UL-1741-Zulassung gefunden.',
+    leadAnswerBlock: '**Anker SOLIX ist die Marke für Balkonkraftwerke und Heimspeicher von Anker Innovations, einem 2011 gegründeten Unternehmen mit Sitz in Shenzhen und Changsha, China, das seit 2020 an der Shenzhen Stock Exchange und seit Juli 2026 zusätzlich an der Hongkonger Börse (Aktiencode 00668) börsennotiert ist.** SOLIX verkauft seine Solarbank-Batterieserie direkt an Verbraucher in Deutschland, Österreich und weiteren EU-Märkten mit bestätigter VDE-AR-N 4105-Netzanschlusszertifizierung, ist jedoch für den US-Markt weder zugelassen noch dort verkauft — der eigene US-Onlineshop von Anker listet mehrere tragbare Powerstations-Produkte, aber keine Solarbank, und für kein Solarbank-Modell wurde eine UL-1741-Zulassung gefunden.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -106,10 +106,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: Die wichtigsten Fakten',
         items: [
           'Anker SOLIX ist eine Marke von Anker Innovations, gegründet 2011 mit Sitz in Shenzhen und Changsha, China.',
-          'Anker Innovations ist seit 2020 börsennotiert an der Shenzhen Stock Exchange.',
+          'Anker Innovations ist seit 2020 an der Shenzhen Stock Exchange und seit Juli 2026 zusätzlich an der Hongkonger Börse (Aktiencode 00668) börsennotiert.',
           'Die Marke SOLIX umfasst Ankers Solarbank-Batterieserie, die zusammen mit Panels und Mikrowechselrichtern als komplette Balkonkraftwerk-Sets verkauft wird.',
           'Bestätigte Märkte sind Deutschland, Österreich und weitere EU-Länder mit VDE-AR-N 4105-Netzanschlusszertifizierung.',
-          'Anker SOLIX Solarbank-Modelle sind für den US-Markt weder zugelassen noch dort verkauft – es wurde keine UL-1741-Zulassung gefunden, und Ankers US-Onlineshop ([ankersolix.com](https://ankersolix.com)) listet 17 Powerstations-Produkte, aber keine Solarbank.',
+          'Anker SOLIX Solarbank-Modelle sind für den US-Markt weder zugelassen noch dort verkauft – es wurde keine UL-1741-Zulassung gefunden, und Ankers US-Onlineshop ([ankersolix.com](https://ankersolix.com)) listet mehrere Powerstations-Produkte, aber keine Solarbank.',
           'Anker gehört zu den wenigen Balkonkraftwerk-Unternehmen, die sowohl eigene Batteriehardware fertigen als auch direkt an Verbraucher verkaufen, statt nur in einer Ebene der Lieferkette tätig zu sein.',
         ],
       },
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: Unternehmensübersicht',
         image: '/images/anker-solix-balcony-solar-snapshot-en.svg',
         imageCaption: 'Anker Innovations, gegründet 2011, Shenzhen-Changsha, China; seit 2020 börsennotiert an der Shenzhen Stock Exchange.',
-        content: 'Anker Innovations wurde 2011 gegründet und hat seinen Sitz in Shenzhen und Changsha, China. Das Unternehmen ist seit 2020 an der Shenzhen Stock Exchange börsennotiert – ein Unterschied zu den meisten Balkonkraftwerk-Wiederverkäufern, von denen viele der in den Marktvergleichen dieser Seite genannten Marken in Privatbesitz sind. SOLIX ist Ankers eigene Marke für Solarpanels, tragbare Powerstations und Heimspeicher, einschließlich der Solarbank-Serie, die in Balkonkraftwerk-Sets verwendet wird.',
+        content: 'Anker Innovations wurde 2011 gegründet und hat seinen Sitz in Shenzhen und Changsha, China. Das Unternehmen ist seit 2020 an der Shenzhen Stock Exchange und seit Juli 2026 zusätzlich an der Hongkonger Börse (Aktiencode 00668) börsennotiert – ein Unterschied zu den meisten Balkonkraftwerk-Wiederverkäufern, von denen viele der in den Marktvergleichen dieser Seite genannten Marken in Privatbesitz sind. SOLIX ist Ankers eigene Marke für Solarpanels, tragbare Powerstations und Heimspeicher, einschließlich der Solarbank-Serie, die in Balkonkraftwerk-Sets verwendet wird.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Anker SOLIX ist die Solar- und Speichermarke von Anker Innovations, einem 2011 gegründeten und seit 2020 börsennotierten Unternehmen mit Sitz in Shenzhen und Changsha.' },
           { type: 'plain-terms', text: 'Anker SOLIX ist kein eigenständiges Start-up, sondern eine Produktlinie von Anker – demselben börsennotierten chinesischen Elektronikunternehmen, das für Ladegeräte und Powerbanks bekannt ist.' },
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'SOLIX-Zeitleiste',
         image: '/images/anker-solix-balcony-solar-timeline-en.svg',
         imageCaption: 'Vom Unternehmen bestätigtes Einführungsdatum der Marke SOLIX; Daten zur Produktpalette stammen aus der Presseberichterstattung.',
-        content: 'Anker führte SOLIX als eigene Marke für Solar und Energiespeicher ein und erweiterte damit das bestehende Powerstation-Geschäft um Heimspeicher und Balkonkraftwerk-Sets. Nachfolgende Solarbank-Modelle erweiterten Kapazität und Funktionsumfang der Serie; die jüngste Ergänzung ist die Solarbank 4 Pro, vorgestellt in Berlin mit Vorbestellungen ab Juni 2026. Anker hat diesen Launch ausdrücklich auf Deutschland, Österreich und die EU zugeschnitten – die Presseberichterstattung erwähnt lediglich, dass Nordamerika „später“ folgen könnte, ohne konkretes Datum.',
+        content: 'Anker führte SOLIX als eigene Marke für Solar und Energiespeicher ein und erweiterte damit das bestehende Powerstation-Geschäft um Heimspeicher und Balkonkraftwerk-Sets. Nachfolgende Solarbank-Modelle erweiterten Kapazität und Funktionsumfang der Serie im Laufe des Jahres 2026 – darunter die Solarbank 4 Pro, vorgestellt in Berlin mit Vorbestellungen ab Juni 2026 –, wobei die Solarbank Max, präsentiert auf der IFA Berlin im September 2026, die jüngste Ergänzung ist. Anker hat diesen Launch ausdrücklich auf Deutschland, Österreich und die EU zugeschnitten – die Presseberichterstattung erwähnt lediglich, dass Nordamerika „später“ folgen könnte, ohne konkretes Datum.',
       },
       lineup: {
         title: 'Solarbank-Produktpalette (Kapazität)',
@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bestätigte Märkte',
         image: '/images/anker-solix-balcony-solar-markets-en.svg',
         imageCaption: 'Netzanschlusszertifikate für diese Märkte bestätigt; ein Verkauf in den USA ist nachweislich nicht gegeben.',
-        content: 'Anker-SOLIX-Solarbank-Produkte werden bestätigt in Deutschland, Österreich und weiteren EU-Märkten verkauft, gestützt auf die für Deutschland bestätigte VDE-AR-N-4105-Netzanschlusszertifizierung. Der US-Markt ist eine bestätigte Abwesenheit und keine unklare Lücke: Ankers eigener US-Onlineshop ([ankersolix.com](https://ankersolix.com)) listet 17 Powerstations-Produkte und keine Solarbank, und für kein Solarbank-Produkt wurde eine UL-1741-Zulassung für netzinteraktive Wechselrichter gefunden – die in den USA gesetzlich für den netzgekoppelten Verkauf vorgeschriebene Zertifizierung. Anker hat kein Datum für einen Markteintritt in den USA genannt.',
+        content: 'Anker-SOLIX-Solarbank-Produkte werden bestätigt in Deutschland, Österreich und weiteren EU-Märkten verkauft, gestützt auf die für Deutschland bestätigte VDE-AR-N-4105-Netzanschlusszertifizierung. Der US-Markt ist eine bestätigte Abwesenheit und keine unklare Lücke: Ankers eigener US-Onlineshop ([ankersolix.com](https://ankersolix.com)) listet mehrere Powerstations-Produkte und keine Solarbank, und für kein Solarbank-Produkt wurde eine UL-1741-Zulassung für netzinteraktive Wechselrichter gefunden – die in den USA gesetzlich für den netzgekoppelten Verkauf vorgeschriebene Zertifizierung. Anker hat kein Datum für einen Markteintritt in den USA genannt.',
       },
       position: {
         title: 'Wo Anker SOLIX steht',
@@ -158,11 +158,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Wem gehört Anker SOLIX?', a: 'Anker SOLIX ist eine Marke von Anker Innovations, einem 2011 gegründeten Unternehmen mit Sitz in Shenzhen und Changsha, China. Es handelt sich nicht um ein eigenständiges, unabhängiges Unternehmen.' },
-          { q: 'Ist Anker Innovations ein börsennotiertes Unternehmen?', a: 'Ja. Anker Innovations ist seit 2020 an der Shenzhen Stock Exchange börsennotiert.' },
+          { q: 'Ist Anker Innovations ein börsennotiertes Unternehmen?', a: 'Ja. Anker Innovations ist seit 2020 an der Shenzhen Stock Exchange und seit Juli 2026 zusätzlich an der Hongkonger Börse (Aktiencode 00668) börsennotiert.' },
           { q: 'Wo werden Anker-SOLIX-Produkte hergestellt?', a: 'Anker Innovations fertigt seine Produkte über seine Standorte in Shenzhen und Changsha, China. Anker, EcoFlow und Zendure sind allesamt in China gefertigte, in Shenzhen ansässige Balkonkraftwerk-Marken.' },
-          { q: 'Was ist die Solarbank-Produktpalette?', a: 'Solarbank ist Ankers Batteriespeicher-Produktfamilie für Balkonkraftwerke und Heimspeicher. Die Modelle werden zusammen mit Solarpanels und Mikrowechselrichtern als komplette Sets verkauft, wobei die Batteriekapazität direkt von Anker je Modell angegeben wird. Das jüngste Modell, die Solarbank 4 Pro, wurde in Berlin vorgestellt, Vorbestellungen liefen ab Juni 2026.' },
+          { q: 'Was ist die Solarbank-Produktpalette?', a: 'Solarbank ist Ankers Batteriespeicher-Produktfamilie für Balkonkraftwerke und Heimspeicher. Die Modelle werden zusammen mit Solarpanels und Mikrowechselrichtern als komplette Sets verkauft, wobei die Batteriekapazität direkt von Anker je Modell angegeben wird. Das jüngste Modell, die Solarbank Max, wurde auf der IFA Berlin im September 2026 vorgestellt, nach der Solarbank 4 Pro, die in Berlin präsentiert wurde und ab Juni 2026 vorbestellt werden konnte.' },
           { q: 'In welchen Märkten verkauft Anker SOLIX?', a: 'Anker SOLIX bestätigt Verkäufe in Deutschland, Österreich und weiteren EU-Märkten, mit für Deutschland bestätigter VDE-AR-N-4105-Netzanschlusszertifizierung. Anker hat aktuelle Produktlaunches, darunter die Solarbank 4 Pro, ausdrücklich auf Deutschland, Österreich und die EU zugeschnitten.' },
-          { q: 'Ist Anker SOLIX in den USA zertifiziert oder erhältlich?', a: 'Nein. Anker-SOLIX-Solarbank-Modelle sind für den US-Markt weder zugelassen noch dort verkauft. Ankers eigener US-Onlineshop ([ankersolix.com](https://ankersolix.com)) listet 17 Powerstations-Produkte, aber keine Solarbank, und für kein Solarbank-Modell wurde eine UL-1741-Zulassung für netzinteraktive Wechselrichter gefunden.' },
+          { q: 'Ist Anker SOLIX in den USA zertifiziert oder erhältlich?', a: 'Nein. Anker-SOLIX-Solarbank-Modelle sind für den US-Markt weder zugelassen noch dort verkauft. Ankers eigener US-Onlineshop ([ankersolix.com](https://ankersolix.com)) listet mehrere Powerstations-Produkte, aber keine Solarbank, und für kein Solarbank-Modell wurde eine UL-1741-Zulassung für netzinteraktive Wechselrichter gefunden.' },
           { q: 'Warum ist Anker SOLIX in den USA nicht erhältlich?', a: 'Die Abwesenheit deutet eher auf eine Zertifizierungs- und Regulierungslücke hin als auf eine erklärte handelspolitische Entscheidung: Für Solarbank-Produkte wurden weder eine UL-1741-Zulassung noch eine FCC-Gerätezulassung gefunden. Anker hat lediglich erklärt, dass Nordamerika „später“ folgen könnte, ohne konkretes Datum.' },
           { q: 'Wie unterscheidet sich Anker SOLIX strukturell von reinen Mikrowechselrichter-Herstellern?', a: 'Die meisten Balkonkraftwerk-Unternehmen sind nur in einer Ebene der Lieferkette tätig – entweder Panelherstellung, Mikrowechselrichter-/Batterieherstellung oder Verkauf fertiger Sets. Anker SOLIX ist eine der wenigen Marken, die zwei Ebenen abdeckt: Das Unternehmen fertigt seine eigene Batteriehardware und verkauft zugleich fertige Sets direkt an Verbraucher, statt Batterien von einem separaten Zulieferer zu beziehen.' },
           { q: 'Stellt Anker SOLIX auch eigene Solarpanels her?', a: 'Der Fertigungsschwerpunkt von Anker SOLIX innerhalb der eigenen Sets liegt auf Batteriehardware. Die in Marktvergleichen für Balkonkraftwerke am häufigsten genannten Panelhersteller – etwa Meyer Burger, Solarwatt und Heckert – sind eigenständige Unternehmen, getrennt von Kit-Wiederverkäufern wie Anker.' },
@@ -180,7 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-20',
     audience: 'Lecteurs qui recherchent des informations sur Anker SOLIX en tant qu\'entreprise, indépendamment d\'une intention d\'achat comparatif',
     intro: 'La maison mère d\'Anker SOLIX, Anker Innovations, est cotée en bourse à la Shenzhen Stock Exchange depuis 2020 — une rareté sur un marché du solaire de balcon où la plupart des marques concurrentes restent privées. L\'entreprise cumule aussi un double rôle peu partagé : elle conçoit son propre matériel de batterie Solarbank et vend des kits finis directement aux consommateurs, plutôt que d\'opérer sur un seul niveau de la chaîne d\'approvisionnement. Pour comparer les batteries solaires de balcon avant l\'achat, voir plutôt la comparaison EcoFlow vs. Anker vs. Zendure — cette page ne couvre que l\'historique et la structure de l\'entreprise.',
-    leadAnswerBlock: '**Anker SOLIX est la marque solaire et de stockage d\'énergie domestique d\'Anker Innovations, une entreprise fondée en 2011 et dont le siège est réparti entre Shenzhen et Changsha, en Chine, cotée en bourse à la Shenzhen Stock Exchange depuis 2020.** SOLIX vend sa gamme de batteries Solarbank directement aux consommateurs en Allemagne, en Autriche et dans d\'autres marchés de l\'UE avec une certification de raccordement au réseau VDE-AR-N 4105 confirmée, mais la gamme n\'est ni vendue ni certifiée pour le marché américain — la propre boutique en ligne américaine d\'Anker répertorie 17 produits de stations d\'alimentation portables et aucun Solarbank, et aucune homologation UL 1741 n\'a été trouvée pour un modèle Solarbank.',
+    leadAnswerBlock: '**Anker SOLIX est la marque solaire et de stockage d\'énergie domestique d\'Anker Innovations, une entreprise fondée en 2011 et dont le siège est réparti entre Shenzhen et Changsha, en Chine, cotée en bourse à la Shenzhen Stock Exchange depuis 2020, et double cotée à la Bourse de Hong Kong (code 00668) depuis juillet 2026.** SOLIX vend sa gamme de batteries Solarbank directement aux consommateurs en Allemagne, en Autriche et dans d\'autres marchés de l\'UE avec une certification de raccordement au réseau VDE-AR-N 4105 confirmée, mais la gamme n\'est ni vendue ni certifiée pour le marché américain — la propre boutique en ligne américaine d\'Anker répertorie plusieurs produits de stations d\'alimentation portables et aucun Solarbank, et aucune homologation UL 1741 n\'a été trouvée pour un modèle Solarbank.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -188,10 +188,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX : les chiffres clés',
         items: [
           'Anker SOLIX est une marque d\'Anker Innovations, fondée en 2011, avec un siège réparti entre Shenzhen et Changsha, en Chine.',
-          'Anker Innovations est cotée en bourse à la Shenzhen Stock Exchange depuis 2020.',
+          'Anker Innovations est cotée en bourse à la Shenzhen Stock Exchange depuis 2020, et double cotée à la Bourse de Hong Kong (code 00668) depuis juillet 2026.',
           'La marque SOLIX couvre la gamme de batteries Solarbank d\'Anker, vendue avec des panneaux et des micro-onduleurs sous forme de kits solaires de balcon complets.',
           'Les marchés confirmés incluent l\'Allemagne, l\'Autriche et d\'autres pays de l\'UE avec certification de raccordement au réseau VDE-AR-N 4105.',
-          'Les modèles Anker SOLIX Solarbank ne sont ni vendus ni certifiés pour le marché américain — aucune homologation UL 1741 n\'a été trouvée, et la boutique américaine d\'Anker ([ankersolix.com](https://ankersolix.com)) répertorie 17 produits de stations d\'alimentation portables mais aucun Solarbank.',
+          'Les modèles Anker SOLIX Solarbank ne sont ni vendus ni certifiés pour le marché américain — aucune homologation UL 1741 n\'a été trouvée, et la boutique américaine d\'Anker ([ankersolix.com](https://ankersolix.com)) répertorie plusieurs produits de stations d\'alimentation portables mais aucun Solarbank.',
           'Anker est l\'une des rares entreprises solaires de balcon à la fois fabriquer son propre matériel de batterie et vendre directement aux consommateurs, plutôt que d\'opérer sur un seul niveau de la chaîne d\'approvisionnement.',
         ],
       },
@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX : aperçu de l\'entreprise',
         image: '/images/anker-solix-balcony-solar-snapshot-en.svg',
         imageCaption: 'Anker Innovations, fondée en 2011, avec un siège réparti entre Shenzhen et Changsha, en Chine ; cotée en bourse à la Shenzhen Stock Exchange depuis 2020.',
-        content: 'Anker Innovations a été fondée en 2011 et son siège est réparti entre Shenzhen et Changsha, en Chine. L\'entreprise est cotée en bourse à la Shenzhen Stock Exchange depuis 2020, ce qui la distingue de la plupart des revendeurs de kits solaires de balcon — bon nombre des marques citées dans les comparaisons de marché de ce site sont détenues à titre privé. SOLIX est la marque dédiée d\'Anker pour les panneaux solaires, les stations d\'alimentation portables et le stockage d\'énergie domestique, y compris la gamme Solarbank utilisée dans les kits solaires de balcon.',
+        content: 'Anker Innovations a été fondée en 2011 et son siège est réparti entre Shenzhen et Changsha, en Chine. L\'entreprise est cotée en bourse à la Shenzhen Stock Exchange depuis 2020, et double cotée à la Bourse de Hong Kong (code 00668) depuis juillet 2026, ce qui la distingue de la plupart des revendeurs de kits solaires de balcon — bon nombre des marques citées dans les comparaisons de marché de ce site sont détenues à titre privé. SOLIX est la marque dédiée d\'Anker pour les panneaux solaires, les stations d\'alimentation portables et le stockage d\'énergie domestique, y compris la gamme Solarbank utilisée dans les kits solaires de balcon.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Anker SOLIX est la marque solaire et de stockage par batterie d\'Anker Innovations, une entreprise basée à Shenzhen-Changsha, fondée en 2011 et cotée en bourse depuis 2020.' },
           { type: 'plain-terms', text: 'Anker SOLIX n\'est pas une start-up distincte — c\'est une gamme de produits d\'Anker, la même entreprise chinoise d\'électronique cotée en bourse connue pour ses chargeurs de téléphone et ses batteries externes.' },
@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Chronologie SOLIX',
         image: '/images/anker-solix-balcony-solar-timeline-en.svg',
         imageCaption: 'Date de lancement de la marque SOLIX confirmée par l\'entreprise ; dates de la gamme de produits issues de la couverture médiatique.',
-        content: 'Anker a lancé SOLIX comme sa marque dédiée au solaire et au stockage d\'énergie, prolongeant son activité existante de stations d\'alimentation portables vers le stockage domestique et les kits solaires de balcon. Les modèles Solarbank successifs ont élargi la capacité et les fonctionnalités de la gamme, le plus récent étant le Solarbank 4 Pro, dévoilé à Berlin avec des précommandes ouvertes en juin 2026. Anker a explicitement limité ce lancement à l\'Allemagne, à l\'Autriche et à l\'UE, la presse indiquant seulement que la disponibilité en Amérique du Nord pourrait suivre « plus tard », sans date précisée.',
+        content: 'Anker a lancé SOLIX comme sa marque dédiée au solaire et au stockage d\'énergie, prolongeant son activité existante de stations d\'alimentation portables vers le stockage domestique et les kits solaires de balcon. Les modèles Solarbank successifs ont élargi la capacité et les fonctionnalités de la gamme tout au long de 2026 — dont le Solarbank 4 Pro, dévoilé à Berlin avec des précommandes ouvertes en juin 2026 —, le plus récent étant le Solarbank Max, présenté à l\'IFA de Berlin en septembre 2026. Anker a explicitement limité ce lancement à l\'Allemagne, à l\'Autriche et à l\'UE, la presse indiquant seulement que la disponibilité en Amérique du Nord pourrait suivre « plus tard », sans date précisée.',
       },
       lineup: {
         title: 'Gamme Solarbank (capacité)',
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Marchés confirmés',
         image: '/images/anker-solix-balcony-solar-markets-en.svg',
         imageCaption: 'Certificats de raccordement au réseau confirmés pour ces marchés ; la vente aux États-Unis est confirmée comme absente.',
-        content: 'Les produits Anker SOLIX Solarbank sont confirmés en vente en Allemagne, en Autriche et dans d\'autres marchés de l\'UE, avec une certification de raccordement au réseau VDE-AR-N 4105 confirmée pour l\'Allemagne. Le marché américain est une absence confirmée plutôt qu\'une zone d\'ombre : la propre boutique en ligne américaine d\'Anker ([ankersolix.com](https://ankersolix.com)) répertorie 17 produits de stations d\'alimentation portables et aucun modèle Solarbank, et aucune homologation d\'onduleur interactif avec le réseau UL 1741 — la certification légalement requise pour une vente raccordée au réseau aux États-Unis — n\'a été trouvée pour un produit Solarbank. Anker n\'a annoncé aucune date d\'entrée sur le marché américain.',
+        content: 'Les produits Anker SOLIX Solarbank sont confirmés en vente en Allemagne, en Autriche et dans d\'autres marchés de l\'UE, avec une certification de raccordement au réseau VDE-AR-N 4105 confirmée pour l\'Allemagne. Le marché américain est une absence confirmée plutôt qu\'une zone d\'ombre : la propre boutique en ligne américaine d\'Anker ([ankersolix.com](https://ankersolix.com)) répertorie plusieurs produits de stations d\'alimentation portables et aucun modèle Solarbank, et aucune homologation d\'onduleur interactif avec le réseau UL 1741 — la certification légalement requise pour une vente raccordée au réseau aux États-Unis — n\'a été trouvée pour un produit Solarbank. Anker n\'a annoncé aucune date d\'entrée sur le marché américain.',
       },
       position: {
         title: 'Positionnement d\'Anker SOLIX',
@@ -240,11 +240,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Qui possède Anker SOLIX ?', a: 'Anker SOLIX est une marque détenue et exploitée par Anker Innovations, une entreprise fondée en 2011 et dont le siège est réparti entre Shenzhen et Changsha, en Chine. Ce n\'est pas une entreprise distincte et indépendante.' },
-          { q: 'Anker Innovations est-elle une entreprise cotée en bourse ?', a: 'Oui. Anker Innovations est cotée en bourse à la Shenzhen Stock Exchange depuis 2020.' },
+          { q: 'Anker Innovations est-elle une entreprise cotée en bourse ?', a: 'Oui. Anker Innovations est cotée en bourse à la Shenzhen Stock Exchange depuis 2020, et double cotée à la Bourse de Hong Kong (code 00668) depuis juillet 2026.' },
           { q: 'Où sont fabriqués les produits Anker SOLIX ?', a: 'Anker Innovations fabrique ses produits via ses opérations basées à Shenzhen et Changsha, en Chine. Anker, EcoFlow et Zendure sont toutes des marques de solaire de balcon fabriquées en Chine, basées à Shenzhen.' },
-          { q: 'Qu\'est-ce que la gamme Solarbank ?', a: 'Solarbank est la famille de produits de stockage par batterie d\'Anker pour le solaire de balcon et le stockage d\'énergie domestique. Les modèles sont vendus avec des panneaux solaires et des micro-onduleurs sous forme de kits complets, la capacité de batterie étant indiquée par modèle directement par Anker. Le modèle le plus récent, le Solarbank 4 Pro, a été dévoilé à Berlin avec des précommandes ouvertes en juin 2026.' },
+          { q: 'Qu\'est-ce que la gamme Solarbank ?', a: 'Solarbank est la famille de produits de stockage par batterie d\'Anker pour le solaire de balcon et le stockage d\'énergie domestique. Les modèles sont vendus avec des panneaux solaires et des micro-onduleurs sous forme de kits complets, la capacité de batterie étant indiquée par modèle directement par Anker. Le modèle le plus récent, le Solarbank Max, a été présenté à l\'IFA de Berlin en septembre 2026, après le Solarbank 4 Pro dévoilé à Berlin avec des précommandes ouvertes en juin 2026.' },
           { q: 'Sur quels marchés Anker SOLIX vend-elle ?', a: 'Anker SOLIX confirme des ventes en Allemagne, en Autriche et dans d\'autres marchés de l\'UE, avec une certification de raccordement au réseau VDE-AR-N 4105 confirmée pour l\'Allemagne. Anker a explicitement limité ses lancements de produits récents, dont le Solarbank 4 Pro, à l\'Allemagne, à l\'Autriche et à l\'UE.' },
-          { q: 'Anker SOLIX est-elle certifiée ou vendue aux États-Unis ?', a: 'Non. Les modèles Anker SOLIX Solarbank ne sont ni vendus ni certifiés pour le marché américain. La propre boutique en ligne américaine d\'Anker ([ankersolix.com](https://ankersolix.com)) répertorie 17 produits de stations d\'alimentation portables mais aucun Solarbank, et aucune homologation d\'onduleur interactif avec le réseau UL 1741 n\'a été trouvée pour un modèle Solarbank.' },
+          { q: 'Anker SOLIX est-elle certifiée ou vendue aux États-Unis ?', a: 'Non. Les modèles Anker SOLIX Solarbank ne sont ni vendus ni certifiés pour le marché américain. La propre boutique en ligne américaine d\'Anker ([ankersolix.com](https://ankersolix.com)) répertorie plusieurs produits de stations d\'alimentation portables mais aucun Solarbank, et aucune homologation d\'onduleur interactif avec le réseau UL 1741 n\'a été trouvée pour un modèle Solarbank.' },
           { q: 'Pourquoi Anker SOLIX n\'est-elle pas disponible aux États-Unis ?', a: 'Cette absence relève davantage d\'un écart de certification et de réglementation que d\'une décision de politique commerciale déclarée : aucune homologation UL 1741 ni autorisation d\'équipement FCC n\'a été trouvée pour les produits Solarbank. Anker a seulement indiqué que la disponibilité en Amérique du Nord pourrait suivre « plus tard », sans date précisée.' },
           { q: 'Comment Anker SOLIX se compare-t-elle structurellement aux fabricants de micro-onduleurs purs ?', a: 'La plupart des entreprises du solaire de balcon opèrent sur un seul niveau de la chaîne d\'approvisionnement — fabrication de panneaux, fabrication de micro-onduleurs/batteries, ou revente de kits finis. Anker SOLIX fait partie des rares marques à couvrir deux niveaux : elle fabrique son propre matériel de batterie et vend aussi des kits finis directement aux consommateurs, plutôt que de sourcer les batteries auprès d\'un fournisseur distinct.' },
           { q: 'Anker SOLIX fabrique-t-elle ses propres panneaux solaires ?', a: 'L\'effort de fabrication d\'Anker SOLIX au sein de ses propres kits porte principalement sur le matériel de batterie. Les fabricants de panneaux les plus fréquemment cités dans les comparaisons de marché du solaire de balcon — comme Meyer Burger, Solarwatt et Heckert — sont des entreprises distinctes des revendeurs de kits comme Anker.' },
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-20',
     audience: '購入比較目的ではなく、企業としてのAnker SOLIXについて調べている読者向け',
     intro: 'Anker SOLIXの親会社Anker Innovationsは、2020年より深セン証券取引所に上場しています。競合ブランドの多くが非公開企業であるベランダ太陽光市場では珍しい存在です。同社は独自のSolarbankバッテリーハードウェアを設計し、完成キットを消費者に直接販売するという、他社にあまり見られない二重の役割も担っています。購入前にバッテリーを比較したい読者は、EcoFlow対Anker対Zendureの比較記事をご覧ください——本記事では企業の沿革と構造のみを扱います。',
-    leadAnswerBlock: '**Anker SOLIXは、2011年に設立され、中国の深セン・長沙に拠点を置き、2020年より深セン証券取引所に上場しているAnker Innovationsのベランダ太陽光発電・家庭用蓄電ブランドです。**SOLIXはSolarbankバッテリーラインナップをドイツ、オーストラリア、その他のEU市場で消費者に直接販売しており、VDE-AR-N 4105系統連系認証が確認されていますが、この製品ラインは米国市場では販売・認証されていません——Anker自身の米国ストアフロントには17種類のポータブル電源製品が掲載されていますがSolarbankはなく、SolarbankモデルのUL 1741認証も見つかっていません。',
+    leadAnswerBlock: '**Anker SOLIXは、2011年に設立され、中国の深セン・長沙に拠点を置き、2020年より深セン証券取引所に、さらに2026年7月より香港証券取引所（株式コード00668）にも重複上場しているAnker Innovationsのベランダ太陽光発電・家庭用蓄電ブランドです。**SOLIXはSolarbankバッテリーラインナップをドイツ、オーストラリア、その他のEU市場で消費者に直接販売しており、VDE-AR-N 4105系統連系認証が確認されていますが、この製品ラインは米国市場では販売・認証されていません——Anker自身の米国ストアフロントには複数のポータブル電源製品が掲載されていますがSolarbankはなく、SolarbankモデルのUL 1741認証も見つかっていません。',
     sections: {
       tldr: {
         id: 'tldr',
@@ -270,10 +270,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX：重要な事実',
         items: [
           'Anker SOLIXは、2011年に設立され、中国の深セン・長沙に拠点を置くAnker Innovationsのブランドです。',
-          'Anker Innovationsは2020年より深セン証券取引所に上場しています。',
+          'Anker Innovationsは2020年より深セン証券取引所に、さらに2026年7月より香港証券取引所（株式コード00668）にも重複上場しています。',
           'SOLIXブランドはAnkerのSolarbankバッテリーラインナップを指し、パネルやマイクロインバーターとともにベランダ太陽光発電キットとしてパッケージ販売されています。',
           '確認済み市場にはドイツ、オーストリア、その他VDE-AR-N 4105系統連系認証を持つEU諸国が含まれます。',
-          'Anker SOLIXのSolarbankモデルは米国市場では販売・認証されていません——UL 1741認証は見つかっておらず、Ankerの米国ストアフロント（ankersolix.com）には17種類のポータブル電源製品が掲載されていますがSolarbankはありません。',
+          'Anker SOLIXのSolarbankモデルは米国市場では販売・認証されていません——UL 1741認証は見つかっておらず、Ankerの米国ストアフロント（ankersolix.com）には複数のポータブル電源製品が掲載されていますがSolarbankはありません。',
           'Ankerは、サプライチェーンの一層のみで事業を行うのではなく、自社でバッテリーハードウェアを製造しながら消費者に直接販売する数少ないベランダ太陽光発電企業の一つです。',
         ],
       },
@@ -281,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX：企業スナップショット',
         image: '/images/anker-solix-balcony-solar-snapshot-en.svg',
         imageCaption: 'Anker Innovationsは2011年設立、中国深セン・長沙が拠点。2020年より深セン証券取引所に上場。',
-        content: 'Anker Innovationsは2011年に設立され、中国の深セン・長沙に拠点を置いています。同社は2020年より深セン証券取引所に上場しており、これはほとんどのベランダ太陽光発電キット販売業者とは異なる点です——本サイトの市場比較で言及される多くのブランドは非公開企業です。SOLIXは、太陽光パネル、ポータブル電源、そしてベランダ太陽光発電キットに使われるSolarbankラインナップを含む家庭用蓄電のための、Anker専用ブランドです。',
+        content: 'Anker Innovationsは2011年に設立され、中国の深セン・長沙に拠点を置いています。同社は2020年より深セン証券取引所に、さらに2026年7月より香港証券取引所（株式コード00668）にも重複上場しており、これはほとんどのベランダ太陽光発電キット販売業者とは異なる点です——本サイトの市場比較で言及される多くのブランドは非公開企業です。SOLIXは、太陽光パネル、ポータブル電源、そしてベランダ太陽光発電キットに使われるSolarbankラインナップを含む家庭用蓄電のための、Anker専用ブランドです。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Anker SOLIXは、2011年設立、2020年以降上場している深セン・長沙拠点のAnker Innovationsの太陽光・蓄電ブランドです。' },
           { type: 'plain-terms', text: 'Anker SOLIXは独立したスタートアップではなく、携帯充電器やモバイルバッテリーで知られる同じ上場中国電子機器企業Ankerの製品ラインです。' },
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'SOLIXタイムライン',
         image: '/images/anker-solix-balcony-solar-timeline-en.svg',
         imageCaption: 'SOLIXブランドの発売日は企業が確認済み。製品ラインナップの日付は報道に基づく。',
-        content: 'Ankerは、既存のポータブル電源事業を家庭用蓄電とベランダ太陽光発電キットへと拡張する形で、太陽光・蓄電専用ブランドとしてSOLIXを立ち上げました。その後のSolarbankモデルはラインナップの容量と機能を拡大しており、最新モデルはSolarbank 4 Proで、ベルリンで発表され2026年6月に予約受付が開始されました。Ankerはこのローンチをドイツ、オーストリア、EUに明確に限定しており、報道では北米展開は「後日」続く可能性があるとのみ触れられ、具体的な時期は示されていません。',
+        content: 'Ankerは、既存のポータブル電源事業を家庭用蓄電とベランダ太陽光発電キットへと拡張する形で、太陽光・蓄電専用ブランドとしてSOLIXを立ち上げました。その後のSolarbankモデルは2026年を通じてラインナップの容量と機能を拡大しており、ベルリンで発表され2026年6月に予約受付が開始されたSolarbank 4 Proを経て、2026年9月にベルリンのIFAで発表されたSolarbank Maxが最新モデルとなっています。Ankerはこのローンチをドイツ、オーストリア、EUに明確に限定しており、報道では北米展開は「後日」続く可能性があるとのみ触れられ、具体的な時期は示されていません。',
       },
       lineup: {
         title: 'Solarbankラインナップ（容量）',
@@ -303,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '確認済み市場',
         image: '/images/anker-solix-balcony-solar-markets-en.svg',
         imageCaption: 'これらの市場では系統連系認証が確認されています。米国での販売は行われていないことが確認されています。',
-        content: 'Anker SOLIXのSolarbank製品は、ドイツ、オーストリア、その他のEU市場での販売が確認されており、ドイツについてはVDE-AR-N 4105系統連系認証が確認されています。米国市場は不明確なギャップではなく、確認済みの不在です。Anker自身の米国ストアフロント（ankersolix.com）には17種類のポータブル電源製品が掲載されていますがSolarbankモデルはなく、米国で系統連系販売に法的に必要なUL 1741系統連系インバーター認証も、どのSolarbank製品についても見つかっていません。Ankerは米国市場参入の時期を発表していません。',
+        content: 'Anker SOLIXのSolarbank製品は、ドイツ、オーストリア、その他のEU市場での販売が確認されており、ドイツについてはVDE-AR-N 4105系統連系認証が確認されています。米国市場は不明確なギャップではなく、確認済みの不在です。Anker自身の米国ストアフロント（ankersolix.com）には複数のポータブル電源製品が掲載されていますがSolarbankモデルはなく、米国で系統連系販売に法的に必要なUL 1741系統連系インバーター認証も、どのSolarbank製品についても見つかっていません。Ankerは米国市場参入の時期を発表していません。',
       },
       position: {
         title: 'Anker SOLIXの立ち位置',
@@ -322,11 +322,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'Anker SOLIXはどこが所有していますか？', a: 'Anker SOLIXは、2011年に設立され、中国の深セン・長沙に拠点を置くAnker Innovationsが所有・運営するブランドです。独立した別会社ではありません。' },
-          { q: 'Anker Innovationsは上場企業ですか？', a: 'はい。Anker Innovationsは2020年より深セン証券取引所に上場しています。' },
+          { q: 'Anker Innovationsは上場企業ですか？', a: 'はい。Anker Innovationsは2020年より深セン証券取引所に、さらに2026年7月より香港証券取引所（株式コード00668）にも重複上場しています。' },
           { q: 'Anker SOLIX製品はどこで製造されていますか？', a: 'Anker Innovationsは、中国の深セン・長沙を拠点とする事業を通じて製品を製造しています。Anker、EcoFlow、Zendureはいずれも深セン拠点の中国製造ベランダ太陽光発電ブランドです。' },
-          { q: 'Solarbankラインナップとは何ですか？', a: 'Solarbankは、ベランダ太陽光発電と家庭用蓄電向けのAnkerのバッテリー製品ファミリーです。各モデルは太陽光パネルやマイクロインバーターとともに完全なキットとして販売されており、バッテリー容量はAnkerが直接モデルごとに公表しています。最新モデルのSolarbank 4 Proはベルリンで発表され、2026年6月に予約受付が開始されました。' },
+          { q: 'Solarbankラインナップとは何ですか？', a: 'Solarbankは、ベランダ太陽光発電と家庭用蓄電向けのAnkerのバッテリー製品ファミリーです。各モデルは太陽光パネルやマイクロインバーターとともに完全なキットとして販売されており、バッテリー容量はAnkerが直接モデルごとに公表しています。最新モデルのSolarbank Maxは2026年9月にベルリンのIFAで発表され、ベルリンで発表され2026年6月に予約受付が開始されたSolarbank 4 Proに続くモデルです。' },
           { q: 'Anker SOLIXはどの市場で販売していますか？', a: 'Anker SOLIXは、ドイツについて確認済みのVDE-AR-N 4105系統連系認証とともに、ドイツ、オーストリア、その他のEU市場での販売を確認しています。Ankerは、Solarbank 4 Proを含む最近の製品ローンチをドイツ、オーストリア、EUに明確に限定しています。' },
-          { q: 'Anker SOLIXは米国で認証・販売されていますか？', a: 'いいえ。Anker SOLIXのSolarbankモデルは米国市場では販売・認証されていません。Anker自身の米国ストアフロント（ankersolix.com）には17種類のポータブル電源製品が掲載されていますがSolarbankはなく、いずれのSolarbankモデルについてもUL 1741系統連系インバーター認証は見つかっていません。' },
+          { q: 'Anker SOLIXは米国で認証・販売されていますか？', a: 'いいえ。Anker SOLIXのSolarbankモデルは米国市場では販売・認証されていません。Anker自身の米国ストアフロント（ankersolix.com）には複数のポータブル電源製品が掲載されていますがSolarbankはなく、いずれのSolarbankモデルについてもUL 1741系統連系インバーター認証は見つかっていません。' },
           { q: 'なぜAnker SOLIXは米国で入手できないのですか？', a: 'この不在は、明言された通商政策上の判断というよりも、認証・規制上のギャップとして読み取れます。Solarbank製品についてUL 1741認証もFCC機器認証も見つかっていません。Ankerは北米展開が「後日」続く可能性があるとのみ述べており、具体的な時期は示していません。' },
           { q: 'Anker SOLIXは純粋なマイクロインバーターメーカーと構造的にどう違いますか？', a: 'ほとんどのベランダ太陽光発電企業は、パネル製造、マイクロインバーター/バッテリー製造、または完成キットの再販という、サプライチェーンの単一層のみで事業を行っています。Anker SOLIXは、別のサプライヤーからバッテリーを調達するのではなく、自社でバッテリーハードウェアを製造しつつ、完成キットも消費者に直接販売する、2つの層にまたがる数少ないブランドの一つです。' },
           { q: 'Anker SOLIXは自社で太陽光パネルも製造していますか？', a: '自社キット内でのAnker SOLIXの製造の中心はバッテリーハードウェアです。ベランダ太陽光発電の市場比較で最も頻繁に言及されるパネルメーカー——Meyer Burger、Solarwatt、Heckertなど——は、Ankerのようなキット販売業者とは別の企業です。' },
@@ -344,7 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-20',
     audience: '面向研究Anker SOLIX企业背景而非购买比较意图的读者',
     intro: 'Anker SOLIX的母公司Anker Innovations自2020年起在深圳证券交易所上市——在阳台光伏市场中，大多数竞争品牌为私营企业，这一点较为罕见。该公司还承担着少数同行才有的双重角色：既自主设计Solarbank电池硬件，又将成品套件直接销售给消费者，而非仅在供应链的单一环节运作。购买前想比较阳台光伏电池的读者，请参阅EcoFlow对比Anker对比Zendure的比较文章——本页仅介绍企业历史与结构。',
-    leadAnswerBlock: '**Anker SOLIX是Anker Innovations旗下的阳台太阳能与家庭储能品牌，该公司成立于2011年，总部位于中国深圳与长沙，自2020年起在深圳证券交易所上市。**SOLIX将其Solarbank电池产品线直接销往德国、奥地利及其他欧盟市场，已确认获得VDE-AR-N 4105并网认证，但该产品线并未在美国市场销售或获得认证——Anker自身的美国官网列出17款便携式电源产品，但没有Solarbank，且未发现任何Solarbank型号获得UL 1741认证。',
+    leadAnswerBlock: '**Anker SOLIX是Anker Innovations旗下的阳台太阳能与家庭储能品牌，该公司成立于2011年，总部位于中国深圳与长沙，自2020年起在深圳证券交易所上市，并于2026年7月起在香港证券交易所（股票代码00668）双重上市。**SOLIX将其Solarbank电池产品线直接销往德国、奥地利及其他欧盟市场，已确认获得VDE-AR-N 4105并网认证，但该产品线并未在美国市场销售或获得认证——Anker自身的美国官网列出多款便携式电源产品，但没有Solarbank，且未发现任何Solarbank型号获得UL 1741认证。',
     sections: {
       tldr: {
         id: 'tldr',
@@ -352,10 +352,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX：核心事实',
         items: [
           'Anker SOLIX是Anker Innovations旗下品牌，该公司成立于2011年，总部位于中国深圳与长沙。',
-          'Anker Innovations自2020年起在深圳证券交易所上市。',
+          'Anker Innovations自2020年起在深圳证券交易所上市，并于2026年7月起在香港证券交易所（股票代码00668）双重上市。',
           'SOLIX品牌涵盖Anker的Solarbank电池产品线，与面板和微型逆变器一起打包销售，作为阳台太阳能套件。',
           '已确认的市场包括德国、奥地利及其他拥有VDE-AR-N 4105并网认证的欧盟国家。',
-          'Anker SOLIX Solarbank型号未在美国市场销售或获得认证——未发现UL 1741认证记录，Anker美国官网（ankersolix.com）列出17款便携式电源产品，但没有Solarbank。',
+          'Anker SOLIX Solarbank型号未在美国市场销售或获得认证——未发现UL 1741认证记录，Anker美国官网（ankersolix.com）列出多款便携式电源产品，但没有Solarbank。',
           'Anker是少数几家既自行生产电池硬件、又直接面向消费者销售的阳台太阳能企业之一，而非仅在供应链单一层面运营。',
         ],
       },
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX：企业概况',
         image: '/images/anker-solix-balcony-solar-snapshot-en.svg',
         imageCaption: 'Anker Innovations成立于2011年，总部位于中国深圳-长沙；自2020年起在深圳证券交易所上市。',
-        content: 'Anker Innovations成立于2011年，总部位于中国深圳与长沙。该公司自2020年起在深圳证券交易所上市，这一点与大多数阳台太阳能套件经销商不同——本站市场比较中提及的许多品牌均为私人持有。SOLIX是Anker专门用于太阳能面板、便携式电源和家庭储能的品牌，其中包括用于阳台太阳能套件的Solarbank产品线。',
+        content: 'Anker Innovations成立于2011年，总部位于中国深圳与长沙。该公司自2020年起在深圳证券交易所上市，并于2026年7月起在香港证券交易所（股票代码00668）双重上市，这一点与大多数阳台太阳能套件经销商不同——本站市场比较中提及的许多品牌均为私人持有。SOLIX是Anker专门用于太阳能面板、便携式电源和家庭储能的品牌，其中包括用于阳台太阳能套件的Solarbank产品线。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Anker SOLIX是Anker Innovations旗下的太阳能与储能品牌，该公司总部位于深圳-长沙，成立于2011年，自2020年起上市。' },
           { type: 'plain-terms', text: 'Anker SOLIX并非独立初创公司，而是Anker旗下的一条产品线——Anker正是那家以手机充电器和移动电源闻名的上市中国电子公司。' },
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'SOLIX时间线',
         image: '/images/anker-solix-balcony-solar-timeline-en.svg',
         imageCaption: 'SOLIX品牌的发布日期已由公司确认；产品线日期来自媒体报道。',
-        content: 'Anker推出SOLIX作为其专属太阳能与储能品牌，将公司现有的便携式电源业务延伸至家庭储能和阳台太阳能套件领域。此后推出的Solarbank型号不断扩展该产品线的容量与功能，最新产品为Solarbank 4 Pro，于柏林发布，2026年6月开放预订。Anker明确将此次发布限定于德国、奥地利和欧盟市场，媒体报道仅提及北美市场可能"稍后"跟进，但未给出具体时间。',
+        content: 'Anker推出SOLIX作为其专属太阳能与储能品牌，将公司现有的便携式电源业务延伸至家庭储能和阳台太阳能套件领域。此后推出的Solarbank型号在2026年全年不断扩展该产品线的容量与功能——包括于柏林发布、2026年6月开放预订的Solarbank 4 Pro——最新产品为2026年9月在柏林IFA展会上发布的Solarbank Max。Anker明确将此次发布限定于德国、奥地利和欧盟市场，媒体报道仅提及北美市场可能"稍后"跟进，但未给出具体时间。',
       },
       lineup: {
         title: 'Solarbank产品线（容量）',
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '已确认市场',
         image: '/images/anker-solix-balcony-solar-markets-en.svg',
         imageCaption: '这些市场的并网认证已获确认；已确认美国未销售该产品。',
-        content: 'Anker SOLIX的Solarbank产品已确认在德国、奥地利及其他欧盟市场销售，其中德国市场的VDE-AR-N 4105并网认证已获确认。美国市场并非模糊不清的空白，而是已确认的缺席：Anker自身的美国官网（ankersolix.com）列出17款便携式电源产品，但没有Solarbank型号；美国法律要求并网销售需具备的UL 1741并网逆变器认证，在任何Solarbank产品上均未发现。Anker尚未公布进入美国市场的时间。',
+        content: 'Anker SOLIX的Solarbank产品已确认在德国、奥地利及其他欧盟市场销售，其中德国市场的VDE-AR-N 4105并网认证已获确认。美国市场并非模糊不清的空白，而是已确认的缺席：Anker自身的美国官网（ankersolix.com）列出多款便携式电源产品，但没有Solarbank型号；美国法律要求并网销售需具备的UL 1741并网逆变器认证，在任何Solarbank产品上均未发现。Anker尚未公布进入美国市场的时间。',
       },
       position: {
         title: 'Anker SOLIX的市场定位',
@@ -404,11 +404,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: 'Anker SOLIX归谁所有？', a: 'Anker SOLIX是Anker Innovations旗下并运营的品牌，该公司成立于2011年，总部位于中国深圳与长沙。它并非独立的单独公司。' },
-          { q: 'Anker Innovations是上市公司吗？', a: '是的。Anker Innovations自2020年起在深圳证券交易所上市。' },
+          { q: 'Anker Innovations是上市公司吗？', a: '是的。Anker Innovations自2020年起在深圳证券交易所上市，并于2026年7月起在香港证券交易所（股票代码00668）双重上市。' },
           { q: 'Anker SOLIX产品在哪里生产？', a: 'Anker Innovations通过其位于中国深圳与长沙的业务生产产品。Anker、EcoFlow和Zendure均为在中国生产、总部位于深圳的阳台太阳能品牌。' },
-          { q: 'Solarbank产品线是什么？', a: 'Solarbank是Anker面向阳台太阳能和家庭储能的电池产品系列。各型号与太阳能面板和微型逆变器一起打包销售，电池容量由Anker直接按型号公布。最新型号Solarbank 4 Pro于柏林发布，2026年6月开放预订。' },
+          { q: 'Solarbank产品线是什么？', a: 'Solarbank是Anker面向阳台太阳能和家庭储能的电池产品系列。各型号与太阳能面板和微型逆变器一起打包销售，电池容量由Anker直接按型号公布。最新型号Solarbank Max于2026年9月在柏林IFA展会上发布，此前是于柏林发布、2026年6月开放预订的Solarbank 4 Pro。' },
           { q: 'Anker SOLIX在哪些市场销售？', a: 'Anker SOLIX确认在德国、奥地利及其他欧盟市场销售，德国市场的VDE-AR-N 4105并网认证已获确认。Anker明确将包括Solarbank 4 Pro在内的近期产品发布限定于德国、奥地利和欧盟。' },
-          { q: 'Anker SOLIX在美国获得认证或销售了吗？', a: '没有。Anker SOLIX的Solarbank型号未在美国市场销售或获得认证。Anker自身的美国官网（ankersolix.com）列出17款便携式电源产品，但没有Solarbank，且任何Solarbank型号均未发现UL 1741并网逆变器认证记录。' },
+          { q: 'Anker SOLIX在美国获得认证或销售了吗？', a: '没有。Anker SOLIX的Solarbank型号未在美国市场销售或获得认证。Anker自身的美国官网（ankersolix.com）列出多款便携式电源产品，但没有Solarbank，且任何Solarbank型号均未发现UL 1741并网逆变器认证记录。' },
           { q: '为什么Anker SOLIX没有进入美国市场？', a: '这种缺席更像是认证与监管方面的空白，而非明确宣布的贸易政策决定：Solarbank产品未发现UL 1741认证或FCC设备授权记录。Anker仅表示北美市场可能"稍后"跟进，但未给出具体时间。' },
           { q: 'Anker SOLIX与纯微型逆变器制造商相比，在结构上有何不同？', a: '大多数阳台太阳能企业仅在供应链的单一层面运营——要么生产面板，要么生产微型逆变器/电池，要么转售成品套件。Anker SOLIX是少数横跨两个层面的品牌之一：它自行生产电池硬件，同时也直接向消费者销售成品套件，而非从独立供应商采购电池。' },
           { q: 'Anker SOLIX是否自行生产太阳能面板？', a: 'Anker SOLIX在自有套件中的主要生产重点是电池硬件。阳台太阳能市场比较中最常被提及的面板制造商——如Meyer Burger、Solarwatt和Heckert——是与Anker这类套件经销商相互独立的企业。' },
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-20',
     audience: 'Lectores que investigan a Anker SOLIX como empresa, más allá de la intención de comparar antes de comprar',
     intro: 'La matriz de Anker SOLIX, Anker Innovations, cotiza en la Bolsa de Shenzhen desde 2020, algo poco habitual en un mercado de solar de balcón donde la mayoría de las marcas competidoras son privadas. La empresa también ocupa un doble papel que pocos rivales comparten: diseña su propio hardware de batería Solarbank y vende kits terminados directamente al consumidor, en lugar de operar en una sola capa de la cadena de suministro. Si comparas baterías solares de balcón antes de comprar, consulta la comparación EcoFlow vs. Anker vs. Zendure — esta página solo cubre la historia y estructura de la empresa.',
-    leadAnswerBlock: '**Anker SOLIX es la marca de energía solar y almacenamiento de energía doméstico de Anker Innovations, una empresa fundada en 2011 y con sede repartida entre Shenzhen y Changsha, China, que cotiza en la Bolsa de Shenzhen desde 2020.** SOLIX vende su gama de baterías Solarbank directamente a los consumidores en Alemania, Austria y otros mercados de la UE con certificación de conexión a red VDE-AR-N 4105 confirmada, pero la línea de productos no se vende ni está certificada para el mercado estadounidense — la propia tienda en línea de Anker en EE. UU. enumera 17 productos de estaciones de energía portátiles y ningún Solarbank, y no se ha encontrado homologación UL 1741 para ningún modelo Solarbank.',
+    leadAnswerBlock: '**Anker SOLIX es la marca de energía solar y almacenamiento de energía doméstico de Anker Innovations, una empresa fundada en 2011 y con sede repartida entre Shenzhen y Changsha, China, que cotiza en la Bolsa de Shenzhen desde 2020, y que además cotiza en la Bolsa de Hong Kong (código 00668) desde julio de 2026.** SOLIX vende su gama de baterías Solarbank directamente a los consumidores en Alemania, Austria y otros mercados de la UE con certificación de conexión a red VDE-AR-N 4105 confirmada, pero la línea de productos no se vende ni está certificada para el mercado estadounidense — la propia tienda en línea de Anker en EE. UU. enumera varios productos de estaciones de energía portátiles y ningún Solarbank, y no se ha encontrado homologación UL 1741 para ningún modelo Solarbank.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -434,10 +434,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: datos clave',
         items: [
           'Anker SOLIX es una marca de Anker Innovations, fundada en 2011, con sede repartida entre Shenzhen y Changsha, China.',
-          'Anker Innovations cotiza en la Bolsa de Shenzhen desde 2020.',
+          'Anker Innovations cotiza en la Bolsa de Shenzhen desde 2020, y además cotiza en la Bolsa de Hong Kong (código 00668) desde julio de 2026.',
           'La marca SOLIX abarca la gama de baterías Solarbank de Anker, vendida junto con paneles y microinversores como kits solares de balcón completos.',
           'Los mercados confirmados incluyen Alemania, Austria y otros países de la UE con certificación de conexión a red VDE-AR-N 4105.',
-          'Los modelos Anker SOLIX Solarbank no se venden ni están certificados para el mercado estadounidense — no se ha encontrado homologación UL 1741, y la tienda en línea de Anker en EE. UU. ([ankersolix.com](https://ankersolix.com)) enumera 17 productos de estaciones de energía portátiles pero ningún Solarbank.',
+          'Los modelos Anker SOLIX Solarbank no se venden ni están certificados para el mercado estadounidense — no se ha encontrado homologación UL 1741, y la tienda en línea de Anker en EE. UU. ([ankersolix.com](https://ankersolix.com)) enumera varios productos de estaciones de energía portátiles pero ningún Solarbank.',
           'Anker es una de las pocas empresas de energía solar de balcón que tanto fabrica su propio hardware de batería como vende directamente a los consumidores, en lugar de operar en un único nivel de la cadena de suministro.',
         ],
       },
@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: panorama de la empresa',
         image: '/images/anker-solix-balcony-solar-snapshot-en.svg',
         imageCaption: 'Anker Innovations, fundada en 2011, con sede en Shenzhen-Changsha, China; cotiza en la Bolsa de Shenzhen desde 2020.',
-        content: 'Anker Innovations fue fundada en 2011 y tiene su sede repartida entre Shenzhen y Changsha, China. La empresa cotiza en la Bolsa de Shenzhen desde 2020, lo que la distingue de la mayoría de los revendedores de kits solares de balcón — muchas de las marcas mencionadas en las comparaciones de mercado de este sitio son de propiedad privada. SOLIX es la marca dedicada de Anker para paneles solares, estaciones de energía portátiles y almacenamiento de energía doméstico, incluida la línea Solarbank utilizada en los kits solares de balcón.',
+        content: 'Anker Innovations fue fundada en 2011 y tiene su sede repartida entre Shenzhen y Changsha, China. La empresa cotiza en la Bolsa de Shenzhen desde 2020, y además cotiza en la Bolsa de Hong Kong (código 00668) desde julio de 2026, lo que la distingue de la mayoría de los revendedores de kits solares de balcón — muchas de las marcas mencionadas en las comparaciones de mercado de este sitio son de propiedad privada. SOLIX es la marca dedicada de Anker para paneles solares, estaciones de energía portátiles y almacenamiento de energía doméstico, incluida la línea Solarbank utilizada en los kits solares de balcón.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Anker SOLIX es la marca de energía solar y almacenamiento por batería de Anker Innovations, una empresa con sede en Shenzhen-Changsha, fundada en 2011 y que cotiza en bolsa desde 2020.' },
           { type: 'plain-terms', text: 'Anker SOLIX no es una startup independiente — es una línea de productos de Anker, la misma empresa china de electrónica que cotiza en bolsa conocida por sus cargadores de móvil y baterías externas.' },
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cronología de SOLIX',
         image: '/images/anker-solix-balcony-solar-timeline-en.svg',
         imageCaption: 'Fecha de lanzamiento de la marca SOLIX confirmada por la empresa; las fechas de la gama de productos proceden de la cobertura de prensa.',
-        content: 'Anker introdujo SOLIX como su marca dedicada a la energía solar y el almacenamiento de energía, extendiendo su negocio existente de estaciones de energía portátiles hacia el almacenamiento doméstico y los kits solares de balcón. Los modelos Solarbank posteriores ampliaron la capacidad y las funciones de la gama, siendo la incorporación más reciente el Solarbank 4 Pro, presentado en Berlín con preventas abiertas en junio de 2026. Anker ha limitado explícitamente ese lanzamiento a Alemania, Austria y la UE, con cobertura de prensa que solo señala que la disponibilidad en Norteamérica podría llegar "más adelante", sin fecha indicada.',
+        content: 'Anker introdujo SOLIX como su marca dedicada a la energía solar y el almacenamiento de energía, extendiendo su negocio existente de estaciones de energía portátiles hacia el almacenamiento doméstico y los kits solares de balcón. Los modelos Solarbank posteriores ampliaron la capacidad y las funciones de la gama a lo largo de 2026 — incluido el Solarbank 4 Pro, presentado en Berlín con preventas abiertas en junio de 2026 —, siendo la incorporación más reciente el Solarbank Max, presentado en la feria IFA de Berlín en septiembre de 2026. Anker ha limitado explícitamente ese lanzamiento a Alemania, Austria y la UE, con cobertura de prensa que solo señala que la disponibilidad en Norteamérica podría llegar "más adelante", sin fecha indicada.',
       },
       lineup: {
         title: 'Gama Solarbank (capacidad)',
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Mercados confirmados',
         image: '/images/anker-solix-balcony-solar-markets-en.svg',
         imageCaption: 'Certificados de conexión a red confirmados para estos mercados; se confirma la ausencia de venta en Estados Unidos.',
-        content: 'Los productos Anker SOLIX Solarbank están confirmados a la venta en Alemania, Austria y otros mercados de la UE, respaldados por la certificación de conexión a red VDE-AR-N 4105 confirmada para Alemania. El mercado estadounidense es una ausencia confirmada y no una laguna sin confirmar: la propia tienda en línea de Anker en EE. UU. ([ankersolix.com](https://ankersolix.com)) enumera 17 productos de estaciones de energía portátiles y ningún modelo Solarbank, y no se ha encontrado ninguna homologación de inversor interactivo con la red UL 1741 — la certificación legalmente requerida para la venta conectada a la red en EE. UU. — para ningún producto Solarbank. Anker no ha indicado una fecha para entrar en el mercado estadounidense.',
+        content: 'Los productos Anker SOLIX Solarbank están confirmados a la venta en Alemania, Austria y otros mercados de la UE, respaldados por la certificación de conexión a red VDE-AR-N 4105 confirmada para Alemania. El mercado estadounidense es una ausencia confirmada y no una laguna sin confirmar: la propia tienda en línea de Anker en EE. UU. ([ankersolix.com](https://ankersolix.com)) enumera varios productos de estaciones de energía portátiles y ningún modelo Solarbank, y no se ha encontrado ninguna homologación de inversor interactivo con la red UL 1741 — la certificación legalmente requerida para la venta conectada a la red en EE. UU. — para ningún producto Solarbank. Anker no ha indicado una fecha para entrar en el mercado estadounidense.',
       },
       position: {
         title: 'Dónde se sitúa Anker SOLIX',
@@ -486,11 +486,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Quién es el propietario de Anker SOLIX?', a: 'Anker SOLIX es una marca propiedad de Anker Innovations y operada por esta, una empresa fundada en 2011 con sede repartida entre Shenzhen y Changsha, China. No es una empresa independiente aparte.' },
-          { q: '¿Anker Innovations es una empresa que cotiza en bolsa?', a: 'Sí. Anker Innovations cotiza en la Bolsa de Shenzhen desde 2020.' },
+          { q: '¿Anker Innovations es una empresa que cotiza en bolsa?', a: 'Sí. Anker Innovations cotiza en la Bolsa de Shenzhen desde 2020, y además cotiza en la Bolsa de Hong Kong (código 00668) desde julio de 2026.' },
           { q: '¿Dónde se fabrican los productos Anker SOLIX?', a: 'Anker Innovations fabrica sus productos a través de sus operaciones con sede en Shenzhen y Changsha, China. Anker, EcoFlow y Zendure son marcas de energía solar de balcón fabricadas en China con sede en Shenzhen.' },
-          { q: '¿Qué es la gama Solarbank?', a: 'Solarbank es la familia de productos de almacenamiento por batería de Anker para energía solar de balcón y almacenamiento de energía doméstico. Los modelos se venden con paneles solares y microinversores como kits completos, con la capacidad de batería indicada por modelo directamente por Anker. El modelo más reciente, el Solarbank 4 Pro, se presentó en Berlín con preventas abiertas en junio de 2026.' },
+          { q: '¿Qué es la gama Solarbank?', a: 'Solarbank es la familia de productos de almacenamiento por batería de Anker para energía solar de balcón y almacenamiento de energía doméstico. Los modelos se venden con paneles solares y microinversores como kits completos, con la capacidad de batería indicada por modelo directamente por Anker. El modelo más reciente, el Solarbank Max, se presentó en la feria IFA de Berlín en septiembre de 2026, tras el Solarbank 4 Pro presentado en Berlín con preventas abiertas en junio de 2026.' },
           { q: '¿En qué mercados vende Anker SOLIX?', a: 'Anker SOLIX confirma ventas en Alemania, Austria y otros mercados de la UE, con certificación de conexión a red VDE-AR-N 4105 confirmada para Alemania. Anker ha limitado explícitamente sus lanzamientos recientes de productos, incluido el Solarbank 4 Pro, a Alemania, Austria y la UE.' },
-          { q: '¿Anker SOLIX está certificada o se vende en Estados Unidos?', a: 'No. Los modelos Anker SOLIX Solarbank no se venden ni están certificados para el mercado estadounidense. La propia tienda en línea de Anker en EE. UU. ([ankersolix.com](https://ankersolix.com)) enumera 17 productos de estaciones de energía portátiles pero ningún Solarbank, y no se ha encontrado ninguna homologación de inversor interactivo con la red UL 1741 para ningún modelo Solarbank.' },
+          { q: '¿Anker SOLIX está certificada o se vende en Estados Unidos?', a: 'No. Los modelos Anker SOLIX Solarbank no se venden ni están certificados para el mercado estadounidense. La propia tienda en línea de Anker en EE. UU. ([ankersolix.com](https://ankersolix.com)) enumera varios productos de estaciones de energía portátiles pero ningún Solarbank, y no se ha encontrado ninguna homologación de inversor interactivo con la red UL 1741 para ningún modelo Solarbank.' },
           { q: '¿Por qué Anker SOLIX no está disponible en Estados Unidos?', a: 'La ausencia se interpreta como una laguna de certificación y regulación más que como una decisión declarada de política comercial: no se ha encontrado ninguna homologación UL 1741 ni autorización de equipo de la FCC para los productos Solarbank. Anker solo ha dicho que la disponibilidad en Norteamérica podría llegar "más adelante", sin fecha indicada.' },
           { q: '¿Cómo se compara Anker SOLIX estructuralmente con los fabricantes puros de microinversores?', a: 'La mayoría de las empresas de energía solar de balcón operan en un solo nivel de la cadena de suministro — fabricación de paneles, fabricación de microinversores/baterías, o reventa de kits terminados. Anker SOLIX es una de las pocas marcas que abarca dos niveles: fabrica su propio hardware de batería y también vende kits terminados directamente a los consumidores, en lugar de comprar baterías a un proveedor independiente.' },
           { q: '¿Anker SOLIX fabrica también sus propios paneles solares?', a: 'El enfoque principal de fabricación de Anker SOLIX dentro de sus propios kits es el hardware de batería. Las empresas fabricantes de paneles más citadas en las comparaciones de mercado de energía solar de balcón — como Meyer Burger, Solarwatt y Heckert — son empresas separadas de los revendedores de kits como Anker.' },
@@ -508,7 +508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-20',
     audience: 'Leitores que pesquisam a Anker SOLIX como empresa, além da intenção de comparação de compra',
     intro: 'A controladora da Anker SOLIX, a Anker Innovations, é negociada na Bolsa de Shenzhen desde 2020 — uma raridade em um mercado de energia solar de varanda onde a maioria das marcas concorrentes é de capital fechado. A empresa também ocupa um papel duplo que poucos concorrentes compartilham: projeta seu próprio hardware de bateria Solarbank e vende kits prontos diretamente ao consumidor, em vez de atuar em apenas uma camada da cadeia de suprimentos. Se você está comparando baterias solares de varanda antes de comprar, consulte a comparação EcoFlow vs. Anker vs. Zendure — esta página trata apenas do histórico e da estrutura da empresa.',
-    leadAnswerBlock: '**A Anker SOLIX é a marca de energia solar e armazenamento de energia residencial da Anker Innovations, uma empresa fundada em 2011 e com sede dividida entre Shenzhen e Changsha, China, listada na Bolsa de Shenzhen desde 2020.** A SOLIX vende sua linha de baterias Solarbank diretamente a consumidores na Alemanha, Áustria e outros mercados da UE, com certificação de conexão à rede VDE-AR-N 4105 confirmada, mas a linha de produtos não é vendida nem certificada para o mercado dos EUA — a própria loja online americana da Anker lista 17 produtos de estações de energia portáteis e nenhum Solarbank, e nenhuma homologação UL 1741 foi encontrada para qualquer modelo Solarbank.',
+    leadAnswerBlock: '**A Anker SOLIX é a marca de energia solar e armazenamento de energia residencial da Anker Innovations, uma empresa fundada em 2011 e com sede dividida entre Shenzhen e Changsha, China, listada na Bolsa de Shenzhen desde 2020, e passou a ter listagem dupla na Bolsa de Hong Kong (código 00668) a partir de julho de 2026.** A SOLIX vende sua linha de baterias Solarbank diretamente a consumidores na Alemanha, Áustria e outros mercados da UE, com certificação de conexão à rede VDE-AR-N 4105 confirmada, mas a linha de produtos não é vendida nem certificada para o mercado dos EUA — a própria loja online americana da Anker lista vários produtos de estações de energia portáteis e nenhum Solarbank, e nenhuma homologação UL 1741 foi encontrada para qualquer modelo Solarbank.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -516,10 +516,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: principais fatos',
         items: [
           'A Anker SOLIX é uma marca da Anker Innovations, fundada em 2011, com sede dividida entre Shenzhen e Changsha, China.',
-          'A Anker Innovations está listada na Bolsa de Shenzhen desde 2020.',
+          'A Anker Innovations está listada na Bolsa de Shenzhen desde 2020, e passou a ter listagem dupla na Bolsa de Hong Kong (código 00668) a partir de julho de 2026.',
           'A marca SOLIX abrange a linha de baterias Solarbank da Anker, vendida junto com painéis e microinversores como kits completos de energia solar de varanda.',
           'Os mercados confirmados incluem Alemanha, Áustria e outros países da UE com certificação de conexão à rede VDE-AR-N 4105.',
-          'Os modelos Anker SOLIX Solarbank não são vendidos nem certificados para o mercado dos EUA — nenhuma homologação UL 1741 foi encontrada, e a loja online americana da Anker ([ankersolix.com](https://ankersolix.com)) lista 17 produtos de estações de energia portáteis, mas nenhum Solarbank.',
+          'Os modelos Anker SOLIX Solarbank não são vendidos nem certificados para o mercado dos EUA — nenhuma homologação UL 1741 foi encontrada, e a loja online americana da Anker ([ankersolix.com](https://ankersolix.com)) lista vários produtos de estações de energia portáteis, mas nenhum Solarbank.',
           'A Anker é uma das poucas empresas de energia solar de varanda que tanto fabrica seu próprio hardware de bateria quanto vende diretamente ao consumidor, em vez de atuar em apenas uma camada da cadeia de suprimentos.',
         ],
       },
@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: visão geral da empresa',
         image: '/images/anker-solix-balcony-solar-snapshot-en.svg',
         imageCaption: 'Anker Innovations, fundada em 2011, com sede em Shenzhen-Changsha, China; listada na Bolsa de Shenzhen desde 2020.',
-        content: 'A Anker Innovations foi fundada em 2011 e tem sede dividida entre Shenzhen e Changsha, China. A empresa está listada na Bolsa de Shenzhen desde 2020, o que a distingue da maioria dos revendedores de kits de energia solar de varanda — muitas das marcas citadas nas comparações de mercado deste site são de capital fechado. A SOLIX é a marca dedicada da Anker para painéis solares, estações de energia portáteis e armazenamento de energia residencial, incluindo a linha Solarbank usada em kits de energia solar de varanda.',
+        content: 'A Anker Innovations foi fundada em 2011 e tem sede dividida entre Shenzhen e Changsha, China. A empresa está listada na Bolsa de Shenzhen desde 2020, e passou a ter listagem dupla na Bolsa de Hong Kong (código 00668) a partir de julho de 2026, o que a distingue da maioria dos revendedores de kits de energia solar de varanda — muitas das marcas citadas nas comparações de mercado deste site são de capital fechado. A SOLIX é a marca dedicada da Anker para painéis solares, estações de energia portáteis e armazenamento de energia residencial, incluindo a linha Solarbank usada em kits de energia solar de varanda.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'A Anker SOLIX é a marca de energia solar e armazenamento por bateria da Anker Innovations, uma empresa com sede em Shenzhen-Changsha, fundada em 2011 e listada em bolsa desde 2020.' },
           { type: 'plain-terms', text: 'A Anker SOLIX não é uma startup separada — é uma linha de produtos da Anker, a mesma empresa chinesa de eletrônicos de capital aberto conhecida por carregadores de celular e baterias portáteis.' },
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Linha do tempo da SOLIX',
         image: '/images/anker-solix-balcony-solar-timeline-en.svg',
         imageCaption: 'Data de lançamento da marca SOLIX confirmada pela empresa; datas da linha de produtos com base em cobertura da imprensa.',
-        content: 'A Anker introduziu a SOLIX como sua marca dedicada a energia solar e armazenamento de energia, expandindo seu negócio já existente de estações de energia portáteis para armazenamento residencial e kits de energia solar de varanda. Modelos Solarbank subsequentes ampliaram a capacidade e o conjunto de recursos da linha, sendo a adição mais recente o Solarbank 4 Pro, revelado em Berlim com pré-vendas abertas em junho de 2026. A Anker limitou explicitamente esse lançamento à Alemanha, Áustria e UE, com a cobertura da imprensa apenas observando que a disponibilidade na América do Norte pode vir "mais tarde", sem data informada.',
+        content: 'A Anker introduziu a SOLIX como sua marca dedicada a energia solar e armazenamento de energia, expandindo seu negócio já existente de estações de energia portáteis para armazenamento residencial e kits de energia solar de varanda. Modelos Solarbank subsequentes ampliaram a capacidade e o conjunto de recursos da linha ao longo de 2026 — incluindo o Solarbank 4 Pro, revelado em Berlim com pré-vendas abertas em junho de 2026 —, sendo a adição mais recente o Solarbank Max, apresentado na feira IFA de Berlim em setembro de 2026. A Anker limitou explicitamente esse lançamento à Alemanha, Áustria e UE, com a cobertura da imprensa apenas observando que a disponibilidade na América do Norte pode vir "mais tarde", sem data informada.',
       },
       lineup: {
         title: 'Linha Solarbank (capacidade)',
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Mercados confirmados',
         image: '/images/anker-solix-balcony-solar-markets-en.svg',
         imageCaption: 'Certificados de conexão à rede confirmados para esses mercados; confirma-se a ausência de venda nos Estados Unidos.',
-        content: 'Os produtos Anker SOLIX Solarbank são confirmados à venda na Alemanha, Áustria e outros mercados da UE, respaldados pela certificação de conexão à rede VDE-AR-N 4105 confirmada para a Alemanha. O mercado dos EUA é uma ausência confirmada, não uma lacuna não confirmada: a própria loja online americana da Anker ([ankersolix.com](https://ankersolix.com)) lista 17 produtos de estações de energia portáteis e nenhum modelo Solarbank, e nenhuma homologação de inversor interativo com a rede UL 1741 — a certificação legalmente exigida para venda conectada à rede nos EUA — foi encontrada para qualquer produto Solarbank. A Anker não informou uma data para entrar no mercado dos EUA.',
+        content: 'Os produtos Anker SOLIX Solarbank são confirmados à venda na Alemanha, Áustria e outros mercados da UE, respaldados pela certificação de conexão à rede VDE-AR-N 4105 confirmada para a Alemanha. O mercado dos EUA é uma ausência confirmada, não uma lacuna não confirmada: a própria loja online americana da Anker ([ankersolix.com](https://ankersolix.com)) lista vários produtos de estações de energia portáteis e nenhum modelo Solarbank, e nenhuma homologação de inversor interativo com a rede UL 1741 — a certificação legalmente exigida para venda conectada à rede nos EUA — foi encontrada para qualquer produto Solarbank. A Anker não informou uma data para entrar no mercado dos EUA.',
       },
       position: {
         title: 'Onde a Anker SOLIX se posiciona',
@@ -568,11 +568,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Quem é o dono da Anker SOLIX?', a: 'A Anker SOLIX é uma marca de propriedade e operada pela Anker Innovations, uma empresa fundada em 2011 com sede dividida entre Shenzhen e Changsha, China. Não é uma empresa separada e independente.' },
-          { q: 'A Anker Innovations é uma empresa de capital aberto?', a: 'Sim. A Anker Innovations está listada na Bolsa de Shenzhen desde 2020.' },
+          { q: 'A Anker Innovations é uma empresa de capital aberto?', a: 'Sim. A Anker Innovations está listada na Bolsa de Shenzhen desde 2020, e passou a ter listagem dupla na Bolsa de Hong Kong (código 00668) a partir de julho de 2026.' },
           { q: 'Onde os produtos Anker SOLIX são fabricados?', a: 'A Anker Innovations fabrica seus produtos por meio de suas operações baseadas em Shenzhen e Changsha, China. Anker, EcoFlow e Zendure são todas marcas de energia solar de varanda fabricadas na China, com sede em Shenzhen.' },
-          { q: 'O que é a linha Solarbank?', a: 'Solarbank é a família de produtos de armazenamento por bateria da Anker para energia solar de varanda e armazenamento de energia residencial. Os modelos são vendidos com painéis solares e microinversores como kits completos, com a capacidade da bateria divulgada por modelo diretamente pela Anker. O modelo mais recente, o Solarbank 4 Pro, foi revelado em Berlim com pré-vendas abertas em junho de 2026.' },
+          { q: 'O que é a linha Solarbank?', a: 'Solarbank é a família de produtos de armazenamento por bateria da Anker para energia solar de varanda e armazenamento de energia residencial. Os modelos são vendidos com painéis solares e microinversores como kits completos, com a capacidade da bateria divulgada por modelo diretamente pela Anker. O modelo mais recente, o Solarbank Max, foi apresentado na feira IFA de Berlim em setembro de 2026, após o Solarbank 4 Pro revelado em Berlim com pré-vendas abertas em junho de 2026.' },
           { q: 'Em quais mercados a Anker SOLIX vende?', a: 'A Anker SOLIX confirma vendas na Alemanha, Áustria e outros mercados da UE, com certificação de conexão à rede VDE-AR-N 4105 confirmada para a Alemanha. A Anker limitou explicitamente seus lançamentos de produtos recentes, incluindo o Solarbank 4 Pro, à Alemanha, Áustria e UE.' },
-          { q: 'A Anker SOLIX é certificada ou vendida nos EUA?', a: 'Não. Os modelos Anker SOLIX Solarbank não são vendidos nem certificados para o mercado dos EUA. A própria loja online americana da Anker ([ankersolix.com](https://ankersolix.com)) lista 17 produtos de estações de energia portáteis, mas nenhum Solarbank, e nenhuma homologação de inversor interativo com a rede UL 1741 foi encontrada para qualquer modelo Solarbank.' },
+          { q: 'A Anker SOLIX é certificada ou vendida nos EUA?', a: 'Não. Os modelos Anker SOLIX Solarbank não são vendidos nem certificados para o mercado dos EUA. A própria loja online americana da Anker ([ankersolix.com](https://ankersolix.com)) lista vários produtos de estações de energia portáteis, mas nenhum Solarbank, e nenhuma homologação de inversor interativo com a rede UL 1741 foi encontrada para qualquer modelo Solarbank.' },
           { q: 'Por que a Anker SOLIX não está disponível nos EUA?', a: 'A ausência se lê como uma lacuna de certificação e regulamentação, e não como uma decisão declarada de política comercial: nenhuma homologação UL 1741 nem autorização de equipamento da FCC foi encontrada para os produtos Solarbank. A Anker apenas disse que a disponibilidade na América do Norte pode vir "mais tarde", sem data informada.' },
           { q: 'Como a Anker SOLIX se compara estruturalmente a fabricantes puros de microinversores?', a: 'A maioria das empresas de energia solar de varanda atua em uma única camada da cadeia de suprimentos — fabricando painéis, fabricando microinversores/baterias, ou revendendo kits prontos. A Anker SOLIX é uma das poucas marcas que atua em duas camadas: fabrica seu próprio hardware de bateria e também vende kits prontos diretamente aos consumidores, em vez de comprar baterias de um fornecedor separado.' },
           { q: 'A Anker SOLIX também fabrica seus próprios painéis solares?', a: 'O foco principal de fabricação da Anker SOLIX dentro de seus próprios kits é o hardware de bateria. As empresas fabricantes de painéis mais citadas nas comparações de mercado de energia solar de varanda — como Meyer Burger, Solarwatt e Heckert — são empresas separadas dos revendedores de kits como a Anker.' },
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-20',
     audience: 'القراء الذين يبحثون عن Anker SOLIX كشركة، بمعزل عن نية المقارنة الشرائية',
     intro: 'الشركة الأم لـ Anker SOLIX، وهي Anker Innovations، مدرجة في بورصة Shenzhen منذ عام 2020 — وهو أمر نادر في سوق الطاقة الشمسية للشرفات حيث تظل معظم العلامات المنافسة مملوكة ملكية خاصة. تتولى الشركة أيضًا دورًا مزدوجًا لا يشاركها فيه سوى قلة من المنافسين: فهي تصمم أجهزة بطارية Solarbank الخاصة بها وتبيع أطقمًا جاهزة مباشرة للمستهلكين، بدلاً من العمل في طبقة واحدة فقط من سلسلة التوريد. القراء الذين يقارنون بطاريات الطاقة الشمسية للشرفات قبل الشراء يمكنهم الرجوع بدلاً من ذلك إلى مقارنة EcoFlow مقابل Anker مقابل Zendure — تتناول هذه الصفحة تاريخ الشركة وهيكلها فقط.',
-    leadAnswerBlock: '**Anker SOLIX هي علامة الطاقة الشمسية وتخزين الطاقة المنزلية التابعة لشركة Anker Innovations، وهي شركة تأسست عام 2011 ومقرها موزع بين شنجن وتشانغشا في الصين، ومدرجة في بورصة شنجن منذ عام 2020.** تبيع SOLIX تشكيلة بطاريات Solarbank مباشرة للمستهلكين في ألمانيا والنمسا وأسواق أخرى في الاتحاد الأوروبي مع شهادة اتصال بالشبكة VDE-AR-N 4105 مؤكدة، لكن هذه التشكيلة غير مباعة أو معتمدة لسوق الولايات المتحدة — متجر Anker الأمريكي الخاص يعرض 17 منتج محطة طاقة محمولة ولا يوجد Solarbank، ولم يُعثر على أي اعتماد UL 1741 لأي طراز Solarbank.',
+    leadAnswerBlock: '**Anker SOLIX هي علامة الطاقة الشمسية وتخزين الطاقة المنزلية التابعة لشركة Anker Innovations، وهي شركة تأسست عام 2011 ومقرها موزع بين شنجن وتشانغشا في الصين، ومدرجة في بورصة شنجن منذ عام 2020، كما أصبحت مدرجة أيضًا في بورصة هونغ كونغ (رمز السهم 00668) منذ يوليو 2026.** تبيع SOLIX تشكيلة بطاريات Solarbank مباشرة للمستهلكين في ألمانيا والنمسا وأسواق أخرى في الاتحاد الأوروبي مع شهادة اتصال بالشبكة VDE-AR-N 4105 مؤكدة، لكن هذه التشكيلة غير مباعة أو معتمدة لسوق الولايات المتحدة — متجر Anker الأمريكي الخاص يعرض عدة منتجات من محطات الطاقة المحمولة ولا يوجد Solarbank، ولم يُعثر على أي اعتماد UL 1741 لأي طراز Solarbank.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -598,10 +598,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: أهم الحقائق',
         items: [
           'Anker SOLIX علامة تجارية تابعة لشركة Anker Innovations، تأسست عام 2011 ومقرها موزع بين شنجن وتشانغشا في الصين.',
-          'شركة Anker Innovations مدرجة في بورصة شنجن منذ عام 2020.',
+          'شركة Anker Innovations مدرجة في بورصة شنجن منذ عام 2020، وأصبحت مدرجة أيضًا في بورصة هونغ كونغ (رمز السهم 00668) منذ يوليو 2026.',
           'تشمل علامة SOLIX تشكيلة بطاريات Solarbank من Anker، التي تُباع مع الألواح والعواكس الصغيرة كأطقم كاملة للطاقة الشمسية للشرفات.',
           'تشمل الأسواق المؤكدة ألمانيا والنمسا ودولاً أخرى في الاتحاد الأوروبي بشهادة اتصال بالشبكة VDE-AR-N 4105.',
-          'لا تُباع طرازات Anker SOLIX Solarbank ولا تحمل اعتمادًا لسوق الولايات المتحدة — لم يُعثر على اعتماد UL 1741، ويعرض متجر Anker الأمريكي ([ankersolix.com](https://ankersolix.com)) 17 منتج محطة طاقة محمولة دون أي Solarbank.',
+          'لا تُباع طرازات Anker SOLIX Solarbank ولا تحمل اعتمادًا لسوق الولايات المتحدة — لم يُعثر على اعتماد UL 1741، ويعرض متجر Anker الأمريكي ([ankersolix.com](https://ankersolix.com)) عدة منتجات من محطات الطاقة المحمولة دون أي Solarbank.',
           'تُعد Anker واحدة من الشركات القليلة في مجال الطاقة الشمسية للشرفات التي تصنّع عتاد البطاريات الخاص بها وتبيع مباشرة للمستهلكين في آن واحد، بدلاً من العمل في مستوى واحد فقط من سلسلة التوريد.',
         ],
       },
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: لمحة عن الشركة',
         image: '/images/anker-solix-balcony-solar-snapshot-en.svg',
         imageCaption: 'تأسست شركة Anker Innovations عام 2011 ومقرها شنجن-تشانغشا في الصين؛ مدرجة في بورصة شنجن منذ عام 2020.',
-        content: 'تأسست Anker Innovations عام 2011 ومقرها موزع بين شنجن وتشانغشا في الصين. الشركة مدرجة في بورصة شنجن منذ عام 2020، وهو ما يميزها عن معظم موزعي أطقم الطاقة الشمسية للشرفات — العديد من العلامات التجارية المذكورة في مقارنات السوق على هذا الموقع مملوكة ملكية خاصة. SOLIX هي علامة Anker المخصصة للألواح الشمسية ومحطات الطاقة المحمولة وتخزين الطاقة المنزلية، بما في ذلك تشكيلة Solarbank المستخدمة في أطقم الطاقة الشمسية للشرفات.',
+        content: 'تأسست Anker Innovations عام 2011 ومقرها موزع بين شنجن وتشانغشا في الصين. الشركة مدرجة في بورصة شنجن منذ عام 2020، وأصبحت مدرجة أيضًا في بورصة هونغ كونغ (رمز السهم 00668) منذ يوليو 2026، وهو ما يميزها عن معظم موزعي أطقم الطاقة الشمسية للشرفات — العديد من العلامات التجارية المذكورة في مقارنات السوق على هذا الموقع مملوكة ملكية خاصة. SOLIX هي علامة Anker المخصصة للألواح الشمسية ومحطات الطاقة المحمولة وتخزين الطاقة المنزلية، بما في ذلك تشكيلة Solarbank المستخدمة في أطقم الطاقة الشمسية للشرفات.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Anker SOLIX هي علامة الطاقة الشمسية وتخزين البطاريات التابعة لشركة Anker Innovations، ومقرها شنجن-تشانغشا، تأسست عام 2011 ومدرجة في البورصة منذ عام 2020.' },
           { type: 'plain-terms', text: 'Anker SOLIX ليست شركة ناشئة منفصلة — إنها خط منتجات تابع لشركة Anker، وهي نفس الشركة الصينية المدرجة في البورصة والمعروفة بشواحن الهواتف والبطاريات المحمولة.' },
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الجدول الزمني لـ SOLIX',
         image: '/images/anker-solix-balcony-solar-timeline-en.svg',
         imageCaption: 'تاريخ إطلاق علامة SOLIX مؤكد من الشركة؛ تواريخ تشكيلة المنتجات مستمدة من التغطية الصحفية.',
-        content: 'أطلقت Anker علامة SOLIX كعلامتها المخصصة للطاقة الشمسية وتخزين الطاقة، موسّعة نشاطها القائم في محطات الطاقة المحمولة ليشمل التخزين المنزلي وأطقم الطاقة الشمسية للشرفات. وسّعت طرازات Solarbank اللاحقة سعة التشكيلة ومجموعة ميزاتها، وكان آخر إضافة هي Solarbank 4 Pro، التي كُشف عنها في برلين مع فتح الطلبات المسبقة في يونيو 2026. حصرت Anker هذا الإطلاق صراحةً في ألمانيا والنمسا والاتحاد الأوروبي، مع تغطية صحفية تشير فقط إلى أن توفر المنتج في أمريكا الشمالية قد يأتي "لاحقًا"، دون تحديد موعد.',
+        content: 'أطلقت Anker علامة SOLIX كعلامتها المخصصة للطاقة الشمسية وتخزين الطاقة، موسّعة نشاطها القائم في محطات الطاقة المحمولة ليشمل التخزين المنزلي وأطقم الطاقة الشمسية للشرفات. وسّعت طرازات Solarbank اللاحقة سعة التشكيلة ومجموعة ميزاتها على مدار عام 2026 — بما في ذلك Solarbank 4 Pro، التي كُشف عنها في برلين مع فتح الطلبات المسبقة في يونيو 2026 — وكانت آخر إضافة هي Solarbank Max، التي قُدّمت في معرض IFA ببرلين في سبتمبر 2026. حصرت Anker هذا الإطلاق صراحةً في ألمانيا والنمسا والاتحاد الأوروبي، مع تغطية صحفية تشير فقط إلى أن توفر المنتج في أمريكا الشمالية قد يأتي "لاحقًا"، دون تحديد موعد.',
       },
       lineup: {
         title: 'تشكيلة Solarbank (السعة)',
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسواق المؤكدة',
         image: '/images/anker-solix-balcony-solar-markets-en.svg',
         imageCaption: 'شهادات الربط بالشبكة مؤكدة لهذه الأسواق؛ تأكد عدم وجود مبيعات في الولايات المتحدة.',
-        content: 'تُباع منتجات Anker SOLIX Solarbank بشكل مؤكد في ألمانيا والنمسا وأسواق أخرى في الاتحاد الأوروبي، بدعم من شهادة الاتصال بالشبكة VDE-AR-N 4105 المؤكدة لألمانيا. غياب السوق الأمريكية أمر مؤكد وليس فجوة غير مؤكدة: متجر Anker الأمريكي الخاص ([ankersolix.com](https://ankersolix.com)) يعرض 17 منتج محطة طاقة محمولة دون أي طراز Solarbank، ولم يُعثر على أي اعتماد لعاكس تفاعلي مع الشبكة UL 1741 — وهو الاعتماد المطلوب قانونيًا للبيع المتصل بالشبكة في الولايات المتحدة — لأي منتج Solarbank. لم تحدد Anker موعدًا لدخول السوق الأمريكية.',
+        content: 'تُباع منتجات Anker SOLIX Solarbank بشكل مؤكد في ألمانيا والنمسا وأسواق أخرى في الاتحاد الأوروبي، بدعم من شهادة الاتصال بالشبكة VDE-AR-N 4105 المؤكدة لألمانيا. غياب السوق الأمريكية أمر مؤكد وليس فجوة غير مؤكدة: متجر Anker الأمريكي الخاص ([ankersolix.com](https://ankersolix.com)) يعرض عدة منتجات من محطات الطاقة المحمولة دون أي طراز Solarbank، ولم يُعثر على أي اعتماد لعاكس تفاعلي مع الشبكة UL 1741 — وهو الاعتماد المطلوب قانونيًا للبيع المتصل بالشبكة في الولايات المتحدة — لأي منتج Solarbank. لم تحدد Anker موعدًا لدخول السوق الأمريكية.',
       },
       position: {
         title: 'موقع Anker SOLIX',
@@ -650,11 +650,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'من يملك Anker SOLIX؟', a: 'Anker SOLIX علامة تجارية مملوكة ومُشغّلة من قبل شركة Anker Innovations، التي تأسست عام 2011 ومقرها موزع بين شنجن وتشانغشا في الصين. إنها ليست شركة مستقلة منفصلة.' },
-          { q: 'هل Anker Innovations شركة مدرجة في البورصة؟', a: 'نعم. Anker Innovations مدرجة في بورصة شنجن منذ عام 2020.' },
+          { q: 'هل Anker Innovations شركة مدرجة في البورصة؟', a: 'نعم. Anker Innovations مدرجة في بورصة شنجن منذ عام 2020، وأصبحت مدرجة أيضًا في بورصة هونغ كونغ (رمز السهم 00668) منذ يوليو 2026.' },
           { q: 'أين تُصنع منتجات Anker SOLIX؟', a: 'تصنّع Anker Innovations منتجاتها من خلال عملياتها في شنجن وتشانغشا بالصين. تُعد Anker وEcoFlow وZendure جميعها علامات تجارية للطاقة الشمسية للشرفات مصنّعة في الصين ومقرها شنجن.' },
-          { q: 'ما هي تشكيلة Solarbank؟', a: 'Solarbank هي عائلة منتجات تخزين البطاريات التابعة لـ Anker لطاقة الشرفات الشمسية وتخزين الطاقة المنزلية. تُباع الطرازات مع الألواح الشمسية والعواكس الصغيرة كأطقم كاملة، مع إعلان سعة البطارية لكل طراز مباشرة من Anker. آخر طراز، Solarbank 4 Pro، كُشف عنه في برلين مع فتح الطلبات المسبقة في يونيو 2026.' },
+          { q: 'ما هي تشكيلة Solarbank؟', a: 'Solarbank هي عائلة منتجات تخزين البطاريات التابعة لـ Anker لطاقة الشرفات الشمسية وتخزين الطاقة المنزلية. تُباع الطرازات مع الألواح الشمسية والعواكس الصغيرة كأطقم كاملة، مع إعلان سعة البطارية لكل طراز مباشرة من Anker. آخر طراز، Solarbank Max، قُدّم في معرض IFA ببرلين في سبتمبر 2026، بعد Solarbank 4 Pro الذي كُشف عنه في برلين مع فتح الطلبات المسبقة في يونيو 2026.' },
           { q: 'في أي أسواق تبيع Anker SOLIX؟', a: 'تؤكد Anker SOLIX مبيعات في ألمانيا والنمسا وأسواق أخرى في الاتحاد الأوروبي، مع شهادة اتصال بالشبكة VDE-AR-N 4105 مؤكدة لألمانيا. حصرت Anker إطلاقات منتجاتها الأخيرة، بما فيها Solarbank 4 Pro، صراحةً في ألمانيا والنمسا والاتحاد الأوروبي.' },
-          { q: 'هل Anker SOLIX معتمدة أو مباعة في الولايات المتحدة؟', a: 'لا. لا تُباع طرازات Anker SOLIX Solarbank ولا تحمل اعتمادًا لسوق الولايات المتحدة. يعرض متجر Anker الأمريكي الخاص ([ankersolix.com](https://ankersolix.com)) 17 منتج محطة طاقة محمولة دون أي Solarbank، ولم يُعثر على أي اعتماد لعاكس تفاعلي مع الشبكة UL 1741 لأي طراز Solarbank.' },
+          { q: 'هل Anker SOLIX معتمدة أو مباعة في الولايات المتحدة؟', a: 'لا. لا تُباع طرازات Anker SOLIX Solarbank ولا تحمل اعتمادًا لسوق الولايات المتحدة. يعرض متجر Anker الأمريكي الخاص ([ankersolix.com](https://ankersolix.com)) عدة منتجات من محطات الطاقة المحمولة دون أي Solarbank، ولم يُعثر على أي اعتماد لعاكس تفاعلي مع الشبكة UL 1741 لأي طراز Solarbank.' },
           { q: 'لماذا لا تتوفر Anker SOLIX في الولايات المتحدة؟', a: 'يُقرأ هذا الغياب كفجوة اعتماد وتنظيم أكثر من كونه قرارًا معلنًا في السياسة التجارية: لم يُعثر على اعتماد UL 1741 أو تصريح معدات من FCC لمنتجات Solarbank. قالت Anker فقط إن توفر المنتج في أمريكا الشمالية قد يأتي "لاحقًا"، دون تحديد موعد.' },
           { q: 'كيف تقارن Anker SOLIX هيكليًا بمصنّعي العواكس الصغيرة الخالصين؟', a: 'تعمل معظم شركات الطاقة الشمسية للشرفات في مستوى واحد فقط من سلسلة التوريد — إما تصنيع الألواح، أو تصنيع العواكس الصغيرة/البطاريات، أو إعادة بيع الأطقم الجاهزة. تُعد Anker SOLIX واحدة من العلامات القليلة التي تعمل على مستويين: فهي تصنّع عتاد البطاريات الخاص بها وتبيع أيضًا أطقمًا جاهزة مباشرة للمستهلكين، بدلاً من الحصول على البطاريات من مورّد منفصل.' },
           { q: 'هل تصنّع Anker SOLIX ألواحها الشمسية الخاصة أيضًا؟', a: 'يتركز التصنيع الأساسي لـ Anker SOLIX ضمن أطقمها الخاصة على عتاد البطاريات. الشركات المصنّعة للألواح الأكثر ذكرًا في مقارنات سوق الطاقة الشمسية للشرفات — مثل Meyer Burger وSolarwatt وHeckert — هي شركات منفصلة عن موزعي الأطقم مثل Anker.' },
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-20',
     audience: '구매 비교 목적이 아니라 기업으로서의 Anker SOLIX를 조사하는 독자',
     intro: 'Anker SOLIX의 모회사인 Anker Innovations는 2020년부터 심천 증권거래소에 상장되어 있습니다 — 경쟁 브랜드 대부분이 비상장 기업인 발코니 태양광 시장에서는 드문 사례입니다. 이 회사는 또한 소수의 경쟁사만이 갖춘 이중적 역할을 수행합니다. 자체적으로 Solarbank 배터리 하드웨어를 설계하고, 완성된 키트를 소비자에게 직접 판매하며, 공급망의 단일 계층에서만 활동하지 않습니다. 구매 전 발코니 태양광 배터리를 비교하려는 독자는 EcoFlow 대 Anker 대 Zendure 비교 기사를 참고하시기 바랍니다 — 본 페이지는 기업 연혁과 구조만을 다룹니다.',
-    leadAnswerBlock: '**Anker SOLIX는 2011년에 설립되어 중국 선전과 창사에 본사를 두고, 2020년부터 선전 증권거래소에 상장되어 있는 Anker Innovations의 발코니 태양광 및 가정용 에너지 저장 브랜드입니다.** SOLIX는 Solarbank 배터리 라인업을 독일, 오스트리아 및 기타 EU 시장의 소비자에게 직접 판매하고 있으며 VDE-AR-N 4105 계통 연계 인증이 확인되었지만, 이 제품 라인은 미국 시장에서는 판매되거나 인증되지 않습니다 — Anker의 자체 미국 스토어프론트에는 17개의 휴대용 전원 제품이 등재되어 있지만 Solarbank는 없으며, 어떤 Solarbank 모델에 대해서도 UL 1741 인증이 확인되지 않았습니다.',
+    leadAnswerBlock: '**Anker SOLIX는 2011년에 설립되어 중국 선전과 창사에 본사를 두고, 2020년부터 선전 증권거래소에, 그리고 2026년 7월부터 홍콩 증권거래소(종목코드 00668)에도 이중 상장되어 있는 Anker Innovations의 발코니 태양광 및 가정용 에너지 저장 브랜드입니다.** SOLIX는 Solarbank 배터리 라인업을 독일, 오스트리아 및 기타 EU 시장의 소비자에게 직접 판매하고 있으며 VDE-AR-N 4105 계통 연계 인증이 확인되었지만, 이 제품 라인은 미국 시장에서는 판매되거나 인증되지 않습니다 — Anker의 자체 미국 스토어프론트에는 여러 종류의 휴대용 전원 제품이 등재되어 있지만 Solarbank는 없으며, 어떤 Solarbank 모델에 대해서도 UL 1741 인증이 확인되지 않았습니다.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -680,10 +680,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: 핵심 사실',
         items: [
           'Anker SOLIX는 2011년에 설립되어 중국 선전과 창사에 본사를 둔 Anker Innovations의 브랜드입니다.',
-          'Anker Innovations는 2020년부터 선전 증권거래소에 상장되어 있습니다.',
+          'Anker Innovations는 2020년부터 선전 증권거래소에, 그리고 2026년 7월부터 홍콩 증권거래소(종목코드 00668)에도 이중 상장되어 있습니다.',
           'SOLIX 브랜드는 패널 및 마이크로인버터와 함께 완전한 발코니 태양광 키트로 판매되는 Anker의 Solarbank 배터리 라인업을 포괄합니다.',
           '확인된 시장에는 독일, 오스트리아, 그리고 VDE-AR-N 4105 계통 연계 인증을 보유한 기타 EU 국가가 포함됩니다.',
-          'Anker SOLIX Solarbank 모델은 미국 시장에서 판매되거나 인증되지 않습니다 — UL 1741 인증이 확인되지 않았으며, Anker의 미국 스토어프론트([ankersolix.com](https://ankersolix.com))에는 17개의 휴대용 전원 제품이 등재되어 있지만 Solarbank는 없습니다.',
+          'Anker SOLIX Solarbank 모델은 미국 시장에서 판매되거나 인증되지 않습니다 — UL 1741 인증이 확인되지 않았으며, Anker의 미국 스토어프론트([ankersolix.com](https://ankersolix.com))에는 여러 종류의 휴대용 전원 제품이 등재되어 있지만 Solarbank는 없습니다.',
           'Anker는 공급망의 단일 계층에서만 활동하는 대신, 자체 배터리 하드웨어를 제조하면서 동시에 소비자에게 직접 판매하는 몇 안 되는 발코니 태양광 기업 중 하나입니다.',
         ],
       },
@@ -691,7 +691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Anker SOLIX: 기업 스냅샷',
         image: '/images/anker-solix-balcony-solar-snapshot-en.svg',
         imageCaption: 'Anker Innovations는 2011년에 설립되었으며 중국 선전-창사에 본사를 두고 있습니다. 2020년부터 선전 증권거래소에 상장되어 있습니다.',
-        content: 'Anker Innovations는 2011년에 설립되었으며 중국 선전과 창사에 본사를 두고 있습니다. 이 회사는 2020년부터 선전 증권거래소에 상장되어 있으며, 이는 대부분의 발코니 태양광 키트 판매업체와 구별되는 점입니다 — 이 사이트의 시장 비교에서 언급되는 많은 브랜드가 비상장 기업입니다. SOLIX는 발코니 태양광 키트에 사용되는 Solarbank 라인업을 포함해, 태양광 패널, 휴대용 전원, 가정용 에너지 저장을 위한 Anker의 전용 브랜드입니다.',
+        content: 'Anker Innovations는 2011년에 설립되었으며 중국 선전과 창사에 본사를 두고 있습니다. 이 회사는 2020년부터 선전 증권거래소에, 그리고 2026년 7월부터 홍콩 증권거래소(종목코드 00668)에도 이중 상장되어 있으며, 이는 대부분의 발코니 태양광 키트 판매업체와 구별되는 점입니다 — 이 사이트의 시장 비교에서 언급되는 많은 브랜드가 비상장 기업입니다. SOLIX는 발코니 태양광 키트에 사용되는 Solarbank 라인업을 포함해, 태양광 패널, 휴대용 전원, 가정용 에너지 저장을 위한 Anker의 전용 브랜드입니다.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Anker SOLIX는 2011년에 설립되어 2020년부터 상장된, 선전-창사에 본사를 둔 Anker Innovations의 태양광 및 배터리 저장 브랜드입니다.' },
           { type: 'plain-terms', text: 'Anker SOLIX는 별도의 스타트업이 아니라, 휴대폰 충전기와 보조배터리로 잘 알려진 동일한 상장 중국 전자 기업인 Anker의 제품 라인입니다.' },
@@ -701,7 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'SOLIX 타임라인',
         image: '/images/anker-solix-balcony-solar-timeline-en.svg',
         imageCaption: 'SOLIX 브랜드의 출시일은 기업 측에서 확인되었으며, 제품 라인업 날짜는 언론 보도를 기반으로 합니다.',
-        content: 'Anker는 기존 휴대용 전원 사업을 가정용 에너지 저장과 발코니 태양광 키트로 확장하며 SOLIX를 전용 태양광 및 에너지 저장 브랜드로 도입했습니다. 이후 출시된 Solarbank 모델들은 라인업의 용량과 기능을 확장했으며, 가장 최근 추가된 모델은 Solarbank 4 Pro로, 베를린에서 공개되어 2026년 6월에 예약 주문이 시작되었습니다. Anker는 이 출시를 독일, 오스트리아, EU로 명확히 한정했으며, 언론 보도에서는 북미 지역은 "나중에" 뒤따를 수 있다고만 언급했을 뿐 구체적인 일정은 밝히지 않았습니다.',
+        content: 'Anker는 기존 휴대용 전원 사업을 가정용 에너지 저장과 발코니 태양광 키트로 확장하며 SOLIX를 전용 태양광 및 에너지 저장 브랜드로 도입했습니다. 이후 출시된 Solarbank 모델들은 2026년 내내 라인업의 용량과 기능을 확장했으며, 베를린에서 공개되어 2026년 6월에 예약 주문이 시작된 Solarbank 4 Pro를 거쳐, 2026년 9월 베를린 IFA에서 공개된 Solarbank Max가 가장 최근 추가된 모델입니다. Anker는 이 출시를 독일, 오스트리아, EU로 명확히 한정했으며, 언론 보도에서는 북미 지역은 "나중에" 뒤따를 수 있다고만 언급했을 뿐 구체적인 일정은 밝히지 않았습니다.',
       },
       lineup: {
         title: 'Solarbank 라인업 (용량)',
@@ -713,7 +713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '확인된 시장',
         image: '/images/anker-solix-balcony-solar-markets-en.svg',
         imageCaption: '이들 시장에서는 계통 연계 인증이 확인되었습니다. 미국에서는 판매되지 않는 것으로 확인되었습니다.',
-        content: 'Anker SOLIX Solarbank 제품은 독일, 오스트리아 및 기타 EU 시장에서 판매되는 것으로 확인되었으며, 독일에 대해서는 VDE-AR-N 4105 계통 연계 인증이 확인되었습니다. 미국 시장은 불확실한 공백이 아니라 확인된 부재입니다. Anker의 자체 미국 스토어프론트([ankersolix.com](https://ankersolix.com))에는 17개의 휴대용 전원 제품이 등재되어 있지만 Solarbank 모델은 없으며, 미국에서 계통 연계 판매에 법적으로 요구되는 UL 1741 계통 연계 인버터 인증도 어떤 Solarbank 제품에 대해서도 확인되지 않았습니다. Anker는 미국 시장 진출 일정을 발표하지 않았습니다.',
+        content: 'Anker SOLIX Solarbank 제품은 독일, 오스트리아 및 기타 EU 시장에서 판매되는 것으로 확인되었으며, 독일에 대해서는 VDE-AR-N 4105 계통 연계 인증이 확인되었습니다. 미국 시장은 불확실한 공백이 아니라 확인된 부재입니다. Anker의 자체 미국 스토어프론트([ankersolix.com](https://ankersolix.com))에는 여러 종류의 휴대용 전원 제품이 등재되어 있지만 Solarbank 모델은 없으며, 미국에서 계통 연계 판매에 법적으로 요구되는 UL 1741 계통 연계 인버터 인증도 어떤 Solarbank 제품에 대해서도 확인되지 않았습니다. Anker는 미국 시장 진출 일정을 발표하지 않았습니다.',
       },
       position: {
         title: 'Anker SOLIX의 시장 위치',
@@ -732,11 +732,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'Anker SOLIX는 누가 소유하고 있나요?', a: 'Anker SOLIX는 2011년에 설립되어 중국 선전과 창사에 본사를 둔 Anker Innovations가 소유하고 운영하는 브랜드입니다. 별도의 독립 회사가 아닙니다.' },
-          { q: 'Anker Innovations는 상장 기업인가요?', a: '네. Anker Innovations는 2020년부터 선전 증권거래소에 상장되어 있습니다.' },
+          { q: 'Anker Innovations는 상장 기업인가요?', a: '네. Anker Innovations는 2020년부터 선전 증권거래소에, 그리고 2026년 7월부터 홍콩 증권거래소(종목코드 00668)에도 이중 상장되어 있습니다.' },
           { q: 'Anker SOLIX 제품은 어디에서 제조되나요?', a: 'Anker Innovations는 중국 선전과 창사에 기반을 둔 사업장을 통해 제품을 제조합니다. Anker, EcoFlow, Zendure는 모두 중국에서 제조되며 선전에 본사를 둔 발코니 태양광 브랜드입니다.' },
-          { q: 'Solarbank 라인업이란 무엇인가요?', a: 'Solarbank는 발코니 태양광 및 가정용 에너지 저장을 위한 Anker의 배터리 저장 제품군입니다. 각 모델은 태양광 패널 및 마이크로인버터와 함께 완전한 키트로 판매되며, 배터리 용량은 Anker가 모델별로 직접 공개합니다. 최신 모델인 Solarbank 4 Pro는 베를린에서 공개되었으며 2026년 6월에 예약 주문이 시작되었습니다.' },
+          { q: 'Solarbank 라인업이란 무엇인가요?', a: 'Solarbank는 발코니 태양광 및 가정용 에너지 저장을 위한 Anker의 배터리 저장 제품군입니다. 각 모델은 태양광 패널 및 마이크로인버터와 함께 완전한 키트로 판매되며, 배터리 용량은 Anker가 모델별로 직접 공개합니다. 최신 모델인 Solarbank Max는 2026년 9월 베를린 IFA에서 공개되었으며, 이는 베를린에서 공개되어 2026년 6월에 예약 주문이 시작된 Solarbank 4 Pro 이후의 모델입니다.' },
           { q: 'Anker SOLIX는 어느 시장에서 판매되나요?', a: 'Anker SOLIX는 독일에 대해 확인된 VDE-AR-N 4105 계통 연계 인증과 함께 독일, 오스트리아 및 기타 EU 시장에서의 판매를 확인하고 있습니다. Anker는 Solarbank 4 Pro를 포함한 최근 제품 출시를 독일, 오스트리아, EU로 명확히 한정했습니다.' },
-          { q: 'Anker SOLIX는 미국에서 인증되거나 판매되나요?', a: '아니요. Anker SOLIX Solarbank 모델은 미국 시장에서 판매되거나 인증되지 않습니다. Anker의 자체 미국 스토어프론트([ankersolix.com](https://ankersolix.com))에는 17개의 휴대용 전원 제품이 등재되어 있지만 Solarbank는 없으며, 어떤 Solarbank 모델에 대해서도 UL 1741 계통 연계 인버터 인증이 확인되지 않았습니다.' },
+          { q: 'Anker SOLIX는 미국에서 인증되거나 판매되나요?', a: '아니요. Anker SOLIX Solarbank 모델은 미국 시장에서 판매되거나 인증되지 않습니다. Anker의 자체 미국 스토어프론트([ankersolix.com](https://ankersolix.com))에는 여러 종류의 휴대용 전원 제품이 등재되어 있지만 Solarbank는 없으며, 어떤 Solarbank 모델에 대해서도 UL 1741 계통 연계 인버터 인증이 확인되지 않았습니다.' },
           { q: 'Anker SOLIX는 왜 미국에서 이용할 수 없나요?', a: '이러한 부재는 명시된 통상 정책 결정이라기보다는 인증 및 규제상의 공백으로 읽힙니다. Solarbank 제품에 대해 UL 1741 인증이나 FCC 장비 인증이 확인되지 않았습니다. Anker는 북미 지역이 "나중에" 뒤따를 수 있다고만 밝혔을 뿐 구체적인 일정은 제시하지 않았습니다.' },
           { q: 'Anker SOLIX는 순수 마이크로인버터 제조사와 구조적으로 어떻게 다른가요?', a: '대부분의 발코니 태양광 기업은 패널 제조, 마이크로인버터/배터리 제조, 또는 완제품 키트 재판매 중 공급망의 단일 계층에서만 활동합니다. Anker SOLIX는 두 계층에 걸쳐 있는 몇 안 되는 브랜드 중 하나입니다 — 별도의 공급업체에서 배터리를 조달하는 대신 자체 배터리 하드웨어를 제조하는 동시에 완제품 키트도 소비자에게 직접 판매합니다.' },
           { q: 'Anker SOLIX는 자체 태양광 패널도 제조하나요?', a: 'Anker SOLIX가 자체 키트 내에서 주력으로 제조하는 부분은 배터리 하드웨어입니다. 발코니 태양광 시장 비교에서 가장 자주 언급되는 패널 제조사 — Meyer Burger, Solarwatt, Heckert 등 — 는 Anker와 같은 키트 판매업체와는 별개의 기업입니다.' },
