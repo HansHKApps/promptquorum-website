@@ -250,3 +250,21 @@ test.describe('F11 / F14: consent buttons and headers', () => {
     expect(fonts).toEqual([])
   })
 })
+
+test.describe('F12: setup form', () => {
+  test('Start over empties the subject field', async ({ page }) => {
+    await openSeededLesson(page)
+    await page.route('**/api/academy/lesson', (r) => r.fulfill({ json: lessonReply }))
+    await page.getByRole('button', { name: /back to programme/i }).click()
+    await page.getByRole('button', { name: /start over/i }).click()
+    await expect(page.getByLabel(/what do you want to learn/i)).toHaveValue('')
+  })
+
+  test('no Google preferred-source card on /academy', async ({ page }) => {
+    test.setTimeout(60_000)
+    await preset(page)
+    await page.goto('/academy')
+    await page.waitForTimeout(32_000)
+    await expect(page.getByText(/preferred source/i)).toHaveCount(0)
+  })
+})

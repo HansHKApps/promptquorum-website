@@ -69,7 +69,8 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
             )
           }
           onShowResults={() => update((s) => ({ ...s, view: 'results' }))}
-          onStartOver={() => update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined }))}
+          // "Start over" also empties the subject field, so new text is not appended to the old subject (F12).
+          onStartOver={() => update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined, draft: s.draft ? { ...s.draft, subject: '' } : s.draft }))}
         />
       ) : state.view === 'diagnostic' ? (
         <QuickCheckView tx={tx} draft={draft} quickCheck={state.quickCheck} update={update} />

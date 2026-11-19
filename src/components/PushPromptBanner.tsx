@@ -380,6 +380,9 @@ export function PushPromptBanner() {
   // Web push is a Marketing category: nothing mounts (no timers, no counters, no prompt)
   // until the visitor allows it, and withdrawing consent unmounts it again.
   const marketing = useConsent('marketing')
+  // Not over the Academy learning tool (QA audit F12).
+  const pathname = usePathname()
+  if (/\/academy(\/|$)/.test(pathname ?? '')) return null
   // No Suspense boundary needed since useSearchParams() is gone — usePathname()
   // and useLang() do not suspend.
   return marketing ? <PushPromptBannerInner /> : null
