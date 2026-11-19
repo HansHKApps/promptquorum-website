@@ -1250,6 +1250,7 @@ const HUB_THEMES: Array<{
       'surf-review',
       'translate-books-with-llms-review',
       'argos-translate-review',
+      'libretranslate-review',
       'linguister-review',
       'presenton-review',
       'screenpipe-review',

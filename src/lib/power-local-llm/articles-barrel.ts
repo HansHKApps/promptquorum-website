@@ -521,6 +521,7 @@ import { article as a_kition_review } from './articles/kition-review'
 import { article as a_pooled_review } from './articles/pooled-review'
 import { article as a_askimo_review } from './articles/askimo-review'
 import { article as a_myagents_review } from './articles/myagents-review'
+import { article as a_libretranslate_review } from './articles/libretranslate-review'
 import { article as a_humla_review } from './articles/humla-review'
 import { article as a_llmfit_review } from './articles/llmfit-review'
 import { article as a_orca_review } from './articles/orca-review'
@@ -1090,6 +1091,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'pooled-review':                                       a_pooled_review,
   'askimo-review':                                       a_askimo_review,
   'myagents-review':                                     a_myagents_review,
+  'libretranslate-review':                               a_libretranslate_review,
   'humla-review':                                        a_humla_review,
   'llmfit-review':                                       a_llmfit_review,
   'orca-review':                                         a_orca_review,

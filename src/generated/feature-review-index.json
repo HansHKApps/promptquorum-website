@@ -1429,6 +1429,11 @@
     "urlSlug": "myagents-review",
     "url": "/power-local-llm/myagents-review"
   },
+  "libretranslate": {
+    "cluster": "power-local-llm",
+    "urlSlug": "libretranslate-review",
+    "url": "/power-local-llm/libretranslate-review"
+  },
   "humla": {
     "cluster": "power-local-llm",
     "urlSlug": "humla-review",
