@@ -9,6 +9,7 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, getLangDir, ogLocale, toOutputLocale } from '@/lib/i18n/constants'
 import { t as tTools } from '@/components/tools/tools-i18n'
 import { getAcademyProgrammesTotal } from '@/lib/academy/usage'
+import { TERMS } from '@/lib/terms/content'
 import { OpenAcademyButton } from './OpenAcademyButton'
 import { ACADEMY_COPY } from './copy'
 
@@ -60,6 +61,12 @@ export async function AcademyPage({ lang }: { lang: AcademyLang }) {
             ))}
           </ol>
           <p className="mt-4 text-xs text-gray-500">{tx.disclaimer}</p>
+          <p className="mt-2 text-xs text-gray-500">
+            {tx.ageNotice}{' '}
+            <a href={lang === 'en' ? '/terms' : `/${lang}/terms`} className="underline underline-offset-2">
+              {TERMS[lang].title}
+            </a>
+          </p>
         </aside>
       </div>
       <script

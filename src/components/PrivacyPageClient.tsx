@@ -133,6 +133,8 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
             <P>{t.privacyS3Para2}</P>
             <H3>{t.privacyS3Sub3}</H3>
             <P>{t.privacyS3Para3}</P>
+            <H3>{t.privacyS3SubAcademy}</H3>
+            <P>{t.privacyS3ParaAcademy}</P>
           </section>
 
           {/* Section 4 */}

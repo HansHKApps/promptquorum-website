@@ -1,5 +1,6 @@
 'use client'
 
+import { TERMS } from '@/lib/terms/content'
 import { useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { Logo } from './Logo'
@@ -229,6 +230,8 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
             <a href={`${langPrefix}/about/state-of-local-ai`} className="hover:text-primary transition-colors">{SOLA_SERIES_NAMES[effectiveLang]}</a>
             <span aria-hidden="true">•</span>
             <a href={`${langPrefix}/privacy`} className="hover:text-primary transition-colors">{t.privacy}</a>
+            <span aria-hidden="true">•</span>
+            <a href={`${langPrefix}/terms`} className="hover:text-primary transition-colors">{TERMS[effectiveLang].title}</a>
             <span aria-hidden="true">•</span>
             <a href="/impressum" className="hover:text-primary transition-colors">{t.impressum}</a>
             <span aria-hidden="true">•</span>

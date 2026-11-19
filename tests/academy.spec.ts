@@ -190,7 +190,7 @@ test.describe('F10 / F8: AI label and notices', () => {
     await preset(page)
     await openTool(page)
     await expect(page.getByText('Please do not enter personal data.').first()).toBeVisible()
-    await expect(page.getByText('For learners aged 16 or older.')).toBeVisible()
+    await expect(page.getByRole('dialog', { name: 'PromptQuorum Academy' }).getByText('For learners aged 16 or older.')).toBeVisible()
   })
 })
 
@@ -469,4 +469,37 @@ test.describe('F5: certificate', () => {
       fs.writeFileSync(testInfo.outputPath(`certificate-${lang}.jpg`), jpeg)
     })
   }
+})
+
+test.describe('F8: Terms page and links', () => {
+  for (const lang of ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']) {
+    test(`Terms, Privacy and Impressum load in ${lang}; Terms states the age and certificate rules`, async ({ page, request }) => {
+      const prefix = lang === 'en' ? '' : `/${lang}`
+      const res = await request.get(`${prefix}/terms`)
+      expect(res.status()).toBe(200)
+      const html = await res.text()
+      expect(html).toMatch(new RegExp(`<div lang="${lang}[A-Za-z-]*" dir="${lang === 'ar' ? 'rtl' : 'ltr'}"`))
+      expect(html).toMatch(/16/)
+      expect((html.match(/<h2/g) ?? []).length).toBeGreaterThanOrEqual(11)
+      expect((await request.get(`${prefix}/privacy`)).status()).toBe(200)
+      expect((await request.get('/impressum')).status()).toBe(200)
+      await preset(page)
+      await page.goto(`${prefix}/terms`)
+      await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+    })
+  }
+
+  test('footer links to Terms on every page', async ({ page }) => {
+    await preset(page)
+    await page.goto('/')
+    await expect(page.locator('footer a[href="/terms"]')).toBeVisible()
+    await page.goto('/de/academy')
+    await expect(page.locator('footer a[href="/de/terms"]')).toBeVisible()
+  })
+
+  test('the Academy setup links to the Terms next to the 16+ notice', async ({ page }) => {
+    await preset(page)
+    await openTool(page)
+    await expect(page.getByRole('dialog', { name: 'PromptQuorum Academy' }).getByRole('link', { name: 'Terms of Use' })).toHaveAttribute('href', '/terms')
+  })
 })
