@@ -55,8 +55,15 @@ export interface AcademyCopy {
   launcherTitle: string
   /** button on the /academy page that opens the window */
   openAcademy: string
-  /** usage counter on the entrance page */
-  programmesCreated: (n: number) => string
+  /** three selling points on the entrance page */
+  points: [string, string, string]
+  statsHeading: string
+  statProgrammes: string
+  statLessons: string
+  statTests: string
+  statCertificates: string
+  statsSince: string
+  statsNote: string
 
   // Quick check
   diagnosticTitle: string

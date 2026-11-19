@@ -94,7 +94,6 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
           value: academyTotal.toLocaleString(),
           icon: 'posts' as const,
           href: academyHref,
-          opensAcademy: true,
           hint: t('statAcademyProgrammesHint', lang),
         }]
       : []),

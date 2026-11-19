@@ -6,6 +6,7 @@ import type { NextRequest } from 'next/server'
 import { generateLesson } from '@/lib/academy/lesson'
 import { ACADEMY_TIMEOUT_MS, academyClient, academyFailure, academyGuard, academyJson } from '@/lib/academy/route'
 import { lessonRequestSchema } from '@/lib/academy/schemas'
+import { recordAcademy } from '@/lib/academy/usage'
 
 export const runtime = 'nodejs'
 export const maxDuration = 60
@@ -16,6 +17,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   if ('response' in guard) return guard.response
   try {
     const { sections, furtherReading } = await generateLesson(academyClient(), guard.body, AbortSignal.timeout(ACADEMY_TIMEOUT_MS))
+    await recordAcademy('lesson')
     return academyJson({ sections, furtherReading })
   } catch (err) {
     return academyFailure('lesson', err)

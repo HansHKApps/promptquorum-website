@@ -49,6 +49,8 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
       a.click()
       a.remove()
       setTimeout(() => URL.revokeObjectURL(url), 10_000)
+      // Anonymous total only (no body beyond the event type); never blocks or fails the download.
+      void fetch('/api/academy/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type: 'certificate' }) }).catch(() => {})
     } catch (err) {
       console.error('[academy] certificate failed', err instanceof Error ? err.message : err)
       setCertError(true)
