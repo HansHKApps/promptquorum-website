@@ -1002,6 +1002,7 @@ const HUB_THEMES: Array<{
       'windsurf-review',
       'bodega-one-code-review',
       'atlarix-review',
+      't3-code-review',
       'local-llm-code-development-compared',
       'claude-code-local-review',
       'little-coder-review',

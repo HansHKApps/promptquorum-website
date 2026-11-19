@@ -2936,7 +2936,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 49,
+    "totalCount": 50,
     "capped": true
   },
   "Atlarix": {
@@ -3270,9 +3270,17 @@
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "t3-code-review",
+        "title": "T3 Code Review: Open-Source Interface for Coding Agents",
+        "url": "/power-local-llm/t3-code-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Twinny": {
@@ -8699,6 +8707,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "t3-code-review",
+        "title": "T3 Code Review: Open-Source Interface for Coding Agents",
+        "url": "/power-local-llm/t3-code-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "aqbot-review",
         "title": "AQBot Review: Desktop AI Client With Agents and a Local API Gateway",
         "url": "/power-local-llm/aqbot-review",
@@ -8760,17 +8776,9 @@
         "url": "/power-local-llm/omlx-review",
         "dateModified": "2026-10-23",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
-        "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "MaxKB": {
@@ -12635,6 +12643,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "T3 Code": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "t3-code-review",
+        "title": "T3 Code Review: Open-Source Interface for Coding Agents",
+        "url": "/power-local-llm/t3-code-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Next AI Draw.io": {
     "articles": [
       {
@@ -13589,6 +13611,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "t3-code-review",
+        "title": "T3 Code Review: Open-Source Interface for Coding Agents",
+        "url": "/power-local-llm/t3-code-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "alpaca-review",
         "title": "Alpaca Review: The GNOME Desktop Chat Client for Ollama",
         "url": "/power-local-llm/alpaca-review",
@@ -13626,17 +13656,9 @@
         "url": "/power-local-llm/inbox-zero-review",
         "dateModified": "2026-11-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-pdf-parsers-compared",
-        "title": "Local PDF Parsers Compared (2026): Docling, Marker, MinerU, OpenDataLoader PDF and More",
-        "url": "/power-local-llm/local-pdf-parsers-compared",
-        "dateModified": "2026-11-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 283,
+    "totalCount": 284,
     "capped": true
   },
   "Qdrant": {
