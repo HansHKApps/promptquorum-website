@@ -1139,6 +1139,11 @@
     "urlSlug": "inbox-zero-review",
     "url": "/power-local-llm/inbox-zero-review"
   },
+  "cc-switch": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cc-switch-review",
+    "url": "/power-local-llm/cc-switch-review"
+  },
   "ultimate-vocal-remover": {
     "cluster": "power-local-llm",
     "urlSlug": "ultimate-vocal-remover-review",

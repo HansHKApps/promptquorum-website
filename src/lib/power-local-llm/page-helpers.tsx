@@ -845,6 +845,7 @@ const HUB_THEMES: Array<{
       'plano-review',
       'turbo-fieldfare-review',
       'clawrouter-review',
+      'cc-switch-review',
       'kserve-review',
       'shimmy-review',
       'lorax-review',

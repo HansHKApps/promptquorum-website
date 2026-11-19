@@ -9962,7 +9962,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "multica": {
@@ -10097,6 +10097,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cc-switch-review",
+        "title": "CC Switch Review: Provider Manager for AI Coding Tools",
+        "url": "/power-local-llm/cc-switch-review",
+        "dateModified": "2026-11-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -10120,7 +10128,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Baserow": {
@@ -11091,6 +11099,20 @@
         "title": "Inbox Zero Review: AI Email Assistant for Gmail and Outlook",
         "url": "/power-local-llm/inbox-zero-review",
         "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "CC Switch": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "cc-switch-review",
+        "title": "CC Switch Review: Provider Manager for AI Coding Tools",
+        "url": "/power-local-llm/cc-switch-review",
+        "dateModified": "2026-11-19",
         "tier": "about"
       }
     ],
@@ -12345,6 +12367,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cc-switch-review",
+        "title": "CC Switch Review: Provider Manager for AI Coding Tools",
+        "url": "/power-local-llm/cc-switch-review",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "litellm-review",
         "title": "LiteLLM Review: One Gateway for 100+ LLM Provider APIs",
         "url": "/power-local-llm/litellm-review",
@@ -12360,7 +12390,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "cognee": {
@@ -13612,6 +13642,14 @@
         "slug": "best-rag-tools-for-business-documents-2026",
         "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "cc-switch-review",
+        "title": "CC Switch Review: Provider Manager for AI Coding Tools",
+        "url": "/power-local-llm/cc-switch-review",
         "dateModified": "2026-11-19",
         "tier": "mentioned"
       },

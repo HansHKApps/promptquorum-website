@@ -341,6 +341,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'reactive-resume':                        'reactive-resume',
   'next-ai-draw-io':                        'next-ai-draw-io',
   'inbox-zero':                             'inbox-zero',
+  'cc-switch':                              'cc-switch',
   'aqbot':                                  'aqbot',
   'oriveo':                                 'oriveo',
   'open-paper':                             'open-paper',
