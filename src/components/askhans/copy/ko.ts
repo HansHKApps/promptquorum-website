@@ -98,7 +98,7 @@ export const copy: AskCopy = {
   info: {
     label: "Ask Hans 소개",
     title: "Ask Hans란 무엇입니까?",
-    intro: "Ask Hans는 이 웹사이트의 소프트웨어 디렉터리, 가이드, 리뷰, 하드웨어 데이터 등 PromptQuorum 자체 콘텐츠만을 사용하여 질문에 답하는 AI 어시스턴트입니다. 개발 중인 베타 도구이며 Hans 본인이 아닙니다.",
+    intro: "Ask Hans는 이 웹사이트의 소프트웨어 디렉터리, 가이드, 리뷰, 하드웨어 데이터 등 PromptQuorum 자체 콘텐츠만을 사용하여 질문에 답하는 AI 어시스턴트입니다. Hans 본인이 아닙니다.",
     canTitle: "할 수 있는 일",
     can: ["소프트웨어 디렉터리에서 로컬 AI 앱을 찾아 비교하고 대안을 안내합니다.", "사용하시는 하드웨어(RAM, VRAM)에서 모델을 실행할 수 있는지 확인합니다.", "소프트웨어 라이선스를 쉬운 말로 설명하고 소프트웨어 스택을 제안합니다.", "이 사이트의 해당 가이드, 리뷰, 하드웨어 페이지를 사용하시는 언어로 안내합니다."],
     cannotTitle: "할 수 없는 일",
@@ -147,7 +147,7 @@ export const copy: AskCopy = {
   },
 
   search: {
-    badge: "신규 · 베타",
+    badge: "신규",
     headline: "질문해 주십시오 — Ask Hans가 답변합니다",
     pitch: "링크 목록 대신, PromptQuorum의 소프트웨어 디렉터리, 가이드, 하드웨어 데이터를 바탕으로 만든 답변을 사용하시는 언어로 받아 보실 수 있습니다. 새로운 방식의 사이트 검색이며, 아직 개발 중입니다.",
     examples: ["내 PDF를 로컬에서 검색할 수 있는 앱은 무엇입니까?", "16 GB Mac에서 Llama가 실행됩니까?", "Home Assistant 서버로 쓸 만한 미니 PC는 무엇입니까?"],

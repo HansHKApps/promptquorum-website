@@ -174,7 +174,7 @@ export interface AskCopy {
 
   /** header search box that hands the question to Ask Hans */
   search: {
-    /** small pill, e.g. "New · Beta" */
+    /** small pill, e.g. "New" */
     badge: string
     headline: string
     /** factual one-liner about what the box does (no superlatives, no "first/unique" claims) */

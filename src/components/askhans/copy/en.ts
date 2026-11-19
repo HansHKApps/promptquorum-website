@@ -98,7 +98,7 @@ export const copy: AskCopy = {
   info: {
     label: "About Ask Hans",
     title: "What is Ask Hans?",
-    intro: "Ask Hans is an AI assistant that answers your questions using only PromptQuorum's own content: the software directory, guides, reviews and hardware data on this website. It is a beta tool in development and not Hans himself.",
+    intro: "Ask Hans is an AI assistant that answers your questions using only PromptQuorum's own content: the software directory, guides, reviews and hardware data on this website. It is not Hans himself.",
     canTitle: "What it can do",
     can: ["Find and compare local-AI apps from the software directory and name alternatives.", "Check whether your hardware (RAM, VRAM) can run a model.", "Explain software licenses in plain language and suggest a software stack.", "Point you to the matching guides, reviews and hardware pages on this site, in your language."],
     cannotTitle: "What it cannot do",
@@ -147,7 +147,7 @@ export const copy: AskCopy = {
   },
 
   search: {
-    badge: "New · Beta",
+    badge: "New",
     headline: "Ask a question — Ask Hans answers",
     pitch: "Instead of a list of links, you get an answer built from PromptQuorum's own software directory, guides and hardware data, in your language. A new kind of site search, still in development.",
     examples: ["Which app can search my PDFs locally?", "Does Llama run on a Mac with 16 GB?", "Which mini PC works as a Home Assistant server?"],

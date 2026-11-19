@@ -98,7 +98,7 @@ export const copy: AskCopy = {
   info: {
     label: "关于 Ask Hans",
     title: "什么是 Ask Hans？",
-    intro: "Ask Hans 是一款 AI 助手，仅依据 PromptQuorum 自有内容回答您的问题，包括本网站的软件目录、指南、评测和硬件数据。它是一款开发中的测试版工具，并不是 Hans 本人。",
+    intro: "Ask Hans 是一款 AI 助手，仅依据 PromptQuorum 自有内容回答您的问题，包括本网站的软件目录、指南、评测和硬件数据。它并不是 Hans 本人。",
     canTitle: "它能做什么",
     can: ["从软件目录中查找并比较本地 AI 应用，并列出替代方案。", "检查您的硬件（RAM、VRAM）能否运行某个模型。", "用通俗的语言解释软件许可证，并推荐软件组合。", "用您的语言为您指引本网站上相应的指南、评测和硬件页面。"],
     cannotTitle: "它不能做什么",
@@ -147,7 +147,7 @@ export const copy: AskCopy = {
   },
 
   search: {
-    badge: "新功能 · 测试版",
+    badge: "新功能",
     headline: "提出问题——Ask Hans 为您解答",
     pitch: "您得到的不是一串链接，而是基于 PromptQuorum 自有的软件目录、指南和硬件数据整理出的答案，并使用您的语言。这是一种新的站内搜索方式，仍在开发中。",
     examples: ["哪个应用可以在本地搜索我的 PDF？", "Llama 能在 16 GB 的 Mac 上运行吗？", "哪款迷你主机适合做 Home Assistant 服务器？"],
