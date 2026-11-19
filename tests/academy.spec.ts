@@ -319,11 +319,12 @@ test.describe('Academy window behaves like the Ask Hans window', () => {
   const win = (page: Page) => page.getByRole('dialog', { name: 'PromptQuorum Academy' })
   const box = async (page: Page) => (await win(page).boundingBox())!
 
-  test('entrance page explains and opens the window; the tool is not inline on the page', async ({ page }) => {
+  test('entrance page explains, shows the counters and opens the window; the tool is not inline on the page', async ({ page }) => {
     await preset(page)
     await page.goto('/academy')
     await expect(page.getByRole('heading', { name: 'How it works' })).toBeVisible()
-    await expect(page.getByText(/programmes created so far/)).toBeVisible()
+    for (const label of ['Programmes created', 'Lessons written', 'Tests taken', 'Certificates downloaded']) await expect(page.getByText(label, { exact: true })).toBeVisible()
+    await expect(page.getByText('Anonymous totals. No personal data is counted.')).toBeVisible()
     await expect(win(page)).toHaveCount(0)
     await expect(page.getByLabel(/what do you want to learn/i)).toHaveCount(0)
     await page.getByRole('button', { name: /open the academy/i }).click()
@@ -368,14 +369,16 @@ test.describe('Academy window behaves like the Ask Hans window', () => {
     await expect(win(page)).toBeVisible()
   })
 
-  test('the homepage counter tile opens the window', async ({ page }) => {
+  test('the homepage counter tile leads to the /academy entrance page', async ({ page }) => {
     await preset(page)
     await page.goto('/')
     const tile = page.getByRole('link', { name: /Academy programmes created/ }).first()
     await expect(tile).toBeVisible()
     await tile.click()
+    await expect(page).toHaveURL(/\/academy$/)
+    await expect(page.getByRole('heading', { level: 1, name: 'PromptQuorum Academy' })).toBeVisible()
+    await page.getByRole('button', { name: /open the academy/i }).click()
     await expect(win(page)).toBeVisible()
-    await expect(page).toHaveURL(/\/$/)
   })
 })
 

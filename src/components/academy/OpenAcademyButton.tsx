@@ -8,9 +8,9 @@ export function openAcademy(): void {
 }
 
 /** Button on the /academy entrance page. */
-export function OpenAcademyButton({ label }: { label: string }) {
+export function OpenAcademyButton({ label, className }: { label: string; className?: string }) {
   return (
-    <button type="button" onClick={openAcademy} className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700">
+    <button type="button" onClick={openAcademy} className={className ?? 'rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700'}>
       {label}
     </button>
   )

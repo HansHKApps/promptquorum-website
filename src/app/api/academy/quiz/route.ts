@@ -8,6 +8,7 @@ import { QuizShortError, generateQuiz } from '@/lib/academy/quiz'
 import { ACADEMY_TIMEOUT_MS, academyClient, academyError, academyFailure, academyGuard, academyJson } from '@/lib/academy/route'
 import { quizRequestSchema } from '@/lib/academy/schemas'
 import { toClientQuestion } from '@/lib/academy/seal'
+import { recordAcademy } from '@/lib/academy/usage'
 
 export const runtime = 'nodejs'
 // Up to two generation rounds plus two verification calls.
@@ -18,6 +19,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   if ('response' in guard) return guard.response
   try {
     const { questions } = await generateQuiz(academyClient(), guard.body, AbortSignal.timeout(ACADEMY_TIMEOUT_MS * 2))
+    if (guard.body.kind === 'final') await recordAcademy('test')
     return academyJson({ questions: questions.map((q) => toClientQuestion(q)) })
   } catch (err) {
     if (err instanceof QuizShortError) {
