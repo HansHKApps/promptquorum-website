@@ -565,6 +565,7 @@ function ProgrammeView({
           {tx.programmeTitle}: {programme.subject}
         </h2>
         <p className="mt-1 text-sm text-gray-600">{tx.totalTime(tx.minutes(total))}</p>
+        {programme.testMode !== 'none' && <p className="text-sm text-gray-600">{tx.testSplit(reading, Math.round(programme.testPlan.testMinutes))}</p>}
         {minutesSpent > 0 && <p className="text-sm text-gray-600">{tx.timeSpent(tx.minutes(minutesSpent))}</p>}
         <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-purple-100" role="progressbar" aria-valuemin={0} aria-valuemax={programme.lessons.length} aria-valuenow={done}>
           <div className="h-full bg-purple-600 transition-all" style={{ width: `${(done / programme.lessons.length) * 100}%` }} />

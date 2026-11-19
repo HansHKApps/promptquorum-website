@@ -16,7 +16,7 @@ import { questionProblems, toQuestion } from '../src/lib/academy/questions'
 import { summarizeDiagnostic } from '../src/lib/academy/diagnostic-summary'
 import { generateDiagnostic } from '../src/lib/academy/diagnostic'
 import { AcademyGenerationError, generateStructured, type ParseClient } from '../src/lib/academy/generate'
-import { clampProgramme, contentMinutes, programmeProblems, testMinutes } from '../src/lib/academy/programme'
+import { finalTestSize, clampProgramme, contentMinutes, programmeProblems, testMinutes } from '../src/lib/academy/programme'
 import { diagnosticOutputSchema, programmeOutputSchema, type GeneratedQuestion, type ProgrammeOutput } from '../src/lib/academy/schemas'
 import type { Programme, Question } from '../src/lib/academy/types'
 import { articleText, finalizeLesson, findMaterial, generateLesson, lessonProblems, stripLinks, toMaterial } from '../src/lib/academy/lesson'
@@ -551,6 +551,14 @@ t('F6: scoring from revealed verdicts equals scoring from full questions (pass m
   // Unrevealed questions never score as correct.
   const hidden = full.map((q) => toClientQuestion(q, 's'))
   assert.equal(scoreQuiz('final-1', hidden, answers).correct, 0)
+})
+
+t('F13: short programmes get a smaller final test so lessons keep their length', () => {
+  assert.equal(finalTestSize(15), 6)
+  assert.equal(finalTestSize(30), 10)
+  assert.equal(finalTestSize(90), 15)
+  assert.equal(testMinutes('final', 15, 5), 4.5)
+  assert.equal(contentMinutes('final', 15, 5), 11)
 })
 
 void Promise.all(pending).then(() => {if (failed) {
