@@ -58,6 +58,8 @@ export interface UsageReportBase {
   powerProcesses?: ReportRow[]
   /** Ask Hans only: Power Mode report exports per format (consent "Yes" only) */
   powerExports?: ReportRow[]
+  /** Ask Hans only: topic-picture clicks per category (consent "Yes" only) */
+  pictures?: ReportRow[]
   /** Ask Hans only */
   feedback?: FeedbackStats
   /** Ask Hans only */

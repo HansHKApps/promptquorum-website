@@ -142,6 +142,9 @@ export const copy: AskCopy = {
     historyHide: "إخفاء المحادثات السابقة",
     historyShow: (n: number) => `إظهار المحادثات السابقة (${n})`,
     historyClear: "حذف المحادثات المحفوظة",
+    pictureCta: "مقارنة الأسعار ↗",
+    pictureCaption: "صورة مولَّدة بالذكاء الاصطناعي · رابط خارجي للتوجيه فقط (بدون عمولة)",
+    pictureLinkLabel: (label) => `${label}: مقارنة الأسعار (رابط خارجي، يفتح في تبويب جديد)`,
   },
 
   search: {

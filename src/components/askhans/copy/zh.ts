@@ -141,6 +141,9 @@ export const copy: AskCopy = {
     historyHide: "隐藏以往的对话",
     historyShow: (n: number) => `显示以往的对话（${n}）`,
     historyClear: "删除已保存的对话",
+    pictureCta: "比较价格 ↗",
+    pictureCaption: "AI 生成图片 · 外部链接，仅供参考（无佣金）",
+    pictureLinkLabel: (label) => `${label}：比较价格（外部链接，将在新标签页中打开）`,
   },
 
   search: {

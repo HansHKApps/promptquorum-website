@@ -36,6 +36,7 @@ Erfasst werden: gewählte Themenkategorie, verwendete Werkzeuge (z. B. „App-Su
 (Kategorie und Link-Kennung), ob und in welchen Bereich der Website (nur der erste Pfadabschnitt, z. B. „power-local-llm“) ein Link
 aus einer Antwort angeklickt wurde, Klicks auf „Neu“ und eine zufällige, anonyme Besuchs-ID, die keiner Person zugeordnet ist.
 **Nicht erfasst werden:** Fragetext, Antworttext, IP-Adresse, Namen. Veröffentlicht werden nur zusammengefasste Zahlen (Seite /mcp-stats). Zwecke: Statistik, Verbesserung von Ask Hans und der Inhalte.
+[PRÜFEN] Seit 2026-11-19 zählen wir mit Ihrer Einwilligung außerdem Klicks auf die Themenbilder im Seitenpanel (nur Kategorie und Bild-Kennung, kein Fragetext).
 Einwilligungstext Version 2026-11-07-v6 (Nennung der nachgeschlagenen Apps/Kategorien, Zwecke, Freiwilligkeit, Widerruf mit Wirkung für die Zukunft, Hinweis auf die Gesamtzähler ohne Einwilligung).
 
 **d1) Wiederkehr und Nutzungsdauer — nur mit Ihrer Einwilligung („Ja, einverstanden“), Einwilligungstext Version 2026-11-07-v6.**

@@ -91,6 +91,11 @@
       "image": "/askhans/mini-pcs.svg",
       "alt": "Mini-PCs",
       "affiliate": false,
+      "pictureLink": {
+        "id": "pic-mini-pcs",
+        "url": "https://preisvergleich.check24.de/ul/mini-pcs/",
+        "affiliate": false
+      },
       "links": [
         {
           "id": "mp-best",
@@ -132,6 +137,11 @@
       "image": "/askhans/gpus-vram.svg",
       "alt": "Grafikkarten & VRAM",
       "affiliate": false,
+      "pictureLink": {
+        "id": "pic-gpus-vram",
+        "url": "https://preisvergleich.check24.de/ul/grafikkarten/",
+        "affiliate": false
+      },
       "links": [
         {
           "id": "gp-best",
@@ -173,6 +183,11 @@
       "image": "/askhans/smart-home.svg",
       "alt": "Smart Home",
       "affiliate": false,
+      "pictureLink": {
+        "id": "pic-smart-home",
+        "url": "https://preisvergleich.check24.de/ul/smart-home-zentralen/",
+        "affiliate": false
+      },
       "links": [
         {
           "id": "sh-hub",
@@ -214,6 +229,11 @@
       "image": "/askhans/balcony-solar.svg",
       "alt": "Balkonkraftwerk",
       "affiliate": false,
+      "pictureLink": {
+        "id": "pic-balcony-solar",
+        "url": "https://preisvergleich.heise.de/?cat=bmsesbk",
+        "affiliate": false
+      },
       "links": [
         {
           "id": "bs-hub",

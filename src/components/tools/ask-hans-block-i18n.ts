@@ -250,6 +250,17 @@ const ASK_UI = {
     ar: 'فئات الدليل التي جرى البحث فيها',
     ko: '조회된 디렉터리 카테고리',
   },
+  picturesHeading: {
+    en: 'Topic-picture clicks per category',
+    de: 'Bildklicks pro Kategorie',
+    fr: 'Clics sur les images par catégorie',
+    ja: 'カテゴリ別の画像クリック数',
+    zh: '各类别的图片点击次数',
+    es: 'Clics en imágenes por categoría',
+    pt: 'Cliques em imagens por categoria',
+    ar: 'نقرات الصور حسب الفئة',
+    ko: '카테고리별 이미지 클릭 수',
+  },
   toolsHeading: {
     en: 'Tools Ask Hans used',
     de: 'Genutzte Werkzeuge',

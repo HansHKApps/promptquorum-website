@@ -18,6 +18,14 @@ export interface AskHansLink {
   affiliate: boolean
 }
 
+/** Topic-picture link (v1): one plain, non-affiliate price-comparison page per category picture. */
+export interface AskHansPictureLink {
+  id: string
+  url: string
+  /** always false in v1 — PromptQuorum has no affiliate programme; reserved for a later, explicit decision */
+  affiliate: boolean
+}
+
 export interface AskHansCategory {
   key: string
   label_de: string
@@ -28,6 +36,8 @@ export interface AskHansCategory {
   alt: string
   affiliate: boolean
   links: AskHansLink[]
+  /** optional: makes the topic picture itself a clickable external link (see MarketingPanel) */
+  pictureLink?: AskHansPictureLink
 }
 
 export const ASK_HANS_CATEGORIES = (raw as { categories: AskHansCategory[] }).categories

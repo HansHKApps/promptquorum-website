@@ -53,6 +53,7 @@
     "test:askhans-experiment": "npx -y tsx@4.21.0 scripts/test-askhans-experiment.tsx",
     "askhans:check": "node scripts/check-askhans-config.mjs",
     "askhans:pictures": "node scripts/gen-askhans-pictures.mjs",
+    "askhans:topic-pictures": "node scripts/convert-askhans-topic-pictures.mjs",
     "askhans:promo": "node scripts/gen-askhans-promo.mjs",
     "askhans:stats": "node scripts/askhans-stats.mjs",
     "test:stale-banner": "node scripts/test-stale-banner.mjs",

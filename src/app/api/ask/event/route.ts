@@ -5,7 +5,7 @@
 // Never stored: question/answer text, IP address, names.
 //
 // Keys:
-//   askhans:day:<YYYY-MM-DD>      hash of counters  (open_src:<promo_source>, q:<cat>, tool:<name>, link:<cat>:<id>, share:<answer|promo|report>:<channel>, pexport:<copy|md|docx|pdf>, pexport:<process>:<format>, power:<process> (+ total_power), app:<slug>, dircat:<key>, click:<text|panel>:<section>,
+//   askhans:day:<YYYY-MM-DD>      hash of counters  (open_src:<promo_source>, q:<cat>, tool:<name>, link:<cat>:<id>, pic:<cat>:<id>, share:<answer|promo|report>:<channel>, pexport:<copy|md|docx|pdf>, pexport:<process>:<format>, power:<process> (+ total_power), app:<slug>, dircat:<key>, click:<text|panel>:<section>,
 //                                 answers_clicked, followup_click, new, lang:<xx>, consent_yes/no/withdrawn,
 //                                 sessions, ret:<new|back>, days:<bucket>, dur:<bucket>, msgs:<bucket>)
 //   askhans:visits:<YYYY-MM-DD>   set of anonymous visit IDs (random, not linked to a person)
@@ -46,6 +46,7 @@ async function pruneConsentProofs(): Promise<void> {
 }
 const TOOL_NAME = /^[a-z_]{3,40}$/
 const LINK_IDS = new Set(ASK_HANS_CATEGORIES.flatMap((c) => c.links.map((l) => l.id)))
+const PICTURE_LINK_IDS = new Set(ASK_HANS_CATEGORIES.flatMap((c) => (c.pictureLink ? [c.pictureLink.id] : [])))
 const CLICK_SOURCES = new Set(['text', 'panel'])
 const SHARE_SOURCES = new Set(['answer', 'promo', 'report'])
 const SHARE_CHANNELS = new Set(['copy', 'copy_plain', 'email', 'whatsapp', 'telegram', 'native', 'link'])
@@ -113,6 +114,13 @@ export async function POST(req: NextRequest) {
       case 'link_click': {
         if (!visitId || !isCategoryKey(b.category) || typeof b.linkId !== 'string' || !LINK_IDS.has(b.linkId)) return new NextResponse(null, { status: 400 })
         pipe.hincrby(dayKey, `link:${b.category}:${b.linkId}`, 1)
+        break
+      }
+      case 'picture_click': {
+        // Click on a category's topic picture (plain price-comparison link, no affiliate programme, no commission).
+        if (!visitId || !isCategoryKey(b.category) || typeof b.linkId !== 'string' || !PICTURE_LINK_IDS.has(b.linkId)) return new NextResponse(null, { status: 400 })
+        pipe.hincrby(dayKey, `pic:${b.category}:${b.linkId}`, 1)
+        pipe.hincrby('askhans:total', 'pic_clicks', 1)
         break
       }
       case 'answer_click': {

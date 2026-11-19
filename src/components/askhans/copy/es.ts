@@ -141,6 +141,9 @@ export const copy: AskCopy = {
     historyHide: "Ocultar conversaciones anteriores",
     historyShow: (n: number) => `Mostrar conversaciones anteriores (${n})`,
     historyClear: "Eliminar conversaciones guardadas",
+    pictureCta: "Comparar precios ↗",
+    pictureCaption: "Imagen generada por IA · Enlace externo, solo orientativo (sin comisión)",
+    pictureLinkLabel: (label) => `${label}: comparar precios (enlace externo, se abre en una pestaña nueva)`,
   },
 
   search: {

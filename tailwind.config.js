@@ -153,6 +153,12 @@ module.exports = {
 					'50%': { opacity: '0.1' },
 					'75%': { opacity: '0.85' },
 				},
+				// Ask Hans clickable topic picture: one shine sweep per hover/focus (replayed by group-hover/group-focus toggling the class).
+				'pic-shine': {
+					'0%': { transform: 'translateX(-130%) skewX(-18deg)', opacity: '0' },
+					'20%': { opacity: '0.5' },
+					'100%': { transform: 'translateX(260%) skewX(-18deg)', opacity: '0' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -162,6 +168,7 @@ module.exports = {
 				'aff-shine': 'aff-shine 1.2s ease-out 0.15s 1 both',
 				'aff-icon-pop': 'aff-icon-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1 both',
 				'aff-glow': 'aff-glow 2.4s ease-in-out 0.3s 1 both',
+				'pic-shine': 'pic-shine 0.9s ease-out 1',
 			},
 		},
 	},
