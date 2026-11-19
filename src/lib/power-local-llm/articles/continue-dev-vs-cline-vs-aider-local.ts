@@ -9,18 +9,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-19',
+    last_full_refresh: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-en.webp',
     title: 'Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026',
-    seoTitle: 'Continue.dev vs Cline vs Aider: Local Coding Agent Verdict 2026',
+    seoTitle: 'Continue.dev vs Cline vs Aider: 3-Way 2026 Verdict',
     intro:
       'Continue.dev, Cline, and Aider are the three serious open-source coding harnesses that pair cleanly with a local LLM in 2026. They are not interchangeable: each is built around a different workflow primitive — autocomplete, autonomous agent loop, or git-native diff. Pick by workflow first, model second, and you avoid 90% of the integration pain.',
     metaDescription:
-      'Continue.dev, Cline, and Aider compared as local coding agents in 2026. Edit model, IDE fit, undo, tool calls, and context strategy — picked by workflow, not hype.',
+      'Continue.dev, Cline, and Aider compared as local coding agents in 2026: autocomplete vs autonomous agent vs git-native diffs — picked by workflow, not hype.',
     twitterDescription:
       'Three local coding harnesses, three different workflow primitives. Continue.dev for autocomplete, Cline for autonomous agents, Aider for git-native diffs. Verdict per workflow inside.',
     current_models_mentioned: [
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All three work with any OpenAI-compatible local endpoint — Ollama is the easiest path, llama.cpp and vLLM are supported through provider configs.',
           'Workflow fit beats raw capability. Forcing a terminal-first dev into Cline (or a VS Code-only dev into Aider) costs more time than the harness saves.',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Feature': 'Primary surface',
             'Continue.dev': 'VS Code and JetBrains extension',
-            'Cline': 'VS Code extension',
+            'Cline': 'VS Code extension + JetBrains (early access)',
             'Aider': 'Terminal CLI (any editor on the side)',
           },
           {
@@ -239,7 +239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cline treats coding as an agent task, not a series of edits.** You give it an objective; it plans, reads files, edits them, runs commands, and asks you to approve each step.',
         items: [
-          '**Install path:** VS Code Marketplace (no JetBrains version). Configuration is GUI-driven inside the extension panel — provider, model, auto-approve settings, custom instructions.',
+          '**Install path:** VS Code Marketplace, plus a JetBrains plugin (early access) for IntelliJ, PyCharm, WebStorm, GoLand, and others. Configuration is GUI-driven inside the extension panel — provider, model, auto-approve settings, custom instructions.',
           '**Workflow primitive:** autonomous agent loop with explicit Plan and Act modes. Plan mode reasons about the task without writing files; Act mode executes the plan with tool calls. An approval gate appears between steps unless you place tools on an auto-approve allow-list.',
           '**Local model setup:** any OpenAI-compatible endpoint. Ollama is one click. For llama.cpp or vLLM, point Cline at the OpenAI-compatible server URL. The agent loop is token-heavy — reserve a model with at least a 32K context window (Qwen3-Coder 30B at 32K, DeepSeek-V3 at 128K).',
           '**Tool surface:** `read_file`, `write_to_file`, `replace_in_file`, `execute_command`, `list_files`, `search_files`, `browser_action`, `ask_followup_question`, `attempt_completion`. The set is small and well-documented; tool schemas use a custom XML format the model must emit cleanly.',
@@ -352,9 +352,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Editor reach is where the three harnesses diverge most visibly.** This is the dimension most readers actually care about; it is also the easiest to test in 10 minutes.',
         items: [
           '**Continue.dev** — VS Code Marketplace and JetBrains Marketplace. The JetBrains build is real (IntelliJ, PyCharm, GoLand, WebStorm, etc.) and has feature parity with the VS Code build for autocomplete and chat. Cursor users can install the VS Code extension; behaviour matches VS Code.',
-          '**Cline** — VS Code extension only. Works in Cursor (which is a VS Code fork) but is not officially tested there; the extension surface is identical and most users report no issues. JetBrains users are out of luck for now.',
+          '**Cline** — VS Code Marketplace, plus a JetBrains plugin (early access covering IntelliJ, PyCharm, WebStorm, GoLand, Android Studio) and an identical extension surface in Cursor and Windsurf (both VS Code forks, neither officially tested). The JetBrains build is newer than the VS Code build and has fewer users putting it through its paces.',
           '**Aider** — terminal-first; integrates with any editor by sitting next to it. VS Code: open the integrated terminal, run Aider, edit in the editor pane while Aider commits. JetBrains: same pattern in the JetBrains terminal. Vim/Neovim: paired with `:e!` to reload after Aider commits, this is a productive flow. Cursor: identical to VS Code.',
-          '**Practical implication for JetBrains users:** Continue.dev or Aider are your only options.',
+          '**Practical implication for JetBrains users:** Continue.dev and Aider remain the most mature picks; Cline\'s JetBrains plugin now works too, but it is early access — expect rougher edges than the VS Code extension.',
           '**Practical implication for Vim/Neovim users:** Aider is the natural fit. Continue.dev has community Neovim integrations of varying maturity; the official surface is VS Code and JetBrains.',
         ],
       },
@@ -405,7 +405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Use case': 'JetBrains IDE (IntelliJ, GoLand, PyCharm) user',
             'Best fit': 'Continue.dev or Aider',
-            'Why': 'Cline is VS Code-only',
+            'Why': 'Most mature; Cline\'s JetBrains plugin is early access',
           },
         ],
       },
@@ -415,7 +415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Five questions, in order, get most readers to the right pick.**',
         items: [
-          '**1. Are you in JetBrains, Vim, or working over SSH?** → If yes, you are between Continue.dev (JetBrains only) and Aider (Vim/SSH). Skip to Q4. If no, continue.',
+          '**1. Are you in JetBrains, Vim, or working over SSH?** → If yes: for JetBrains, Continue.dev and Aider are the mature picks (Cline has a JetBrains plugin too, but it is early access). For Vim/SSH, Aider. Skip to Q4. If no, continue.',
           '**2. Do you want an autonomous agent that edits multiple files in one task?** → Yes: Cline. No: continue.',
           '**3. Do you want autocomplete plus an in-IDE chat panel?** → Yes: Continue.dev. No: continue.',
           '**4. Do you review changes through `git diff` and want every edit auto-committed?** → Yes: Aider. No: Continue.dev (the default).',
@@ -487,7 +487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which has the best community and extension ecosystem?',
-            a: 'Continue.dev has the largest user base and most third-party `@`-context providers (custom retrieval sources, plug-in tools). Cline has a smaller but very active community focused on agent workflows. Aider has the deepest documentation of any of the three — the project blog publishes detailed analyses of edit-format reliability and model behaviour. For a casual user, Continue.dev\'s ecosystem is the friendliest entry point.',
+            a: 'Continue.dev built up the largest community of the three and the most third-party `@`-context providers while it was actively developed; that existing ecosystem is still there to search, even though it stopped growing after development ended in 2026 (see the status note above). Cline has a smaller community today, but it is active and growing, focused on agent workflows. Aider\'s documentation is, in our experience, the most detailed of the three — the project blog publishes in-depth analyses of edit-format reliability and model behaviour. For a casual user today, Cline\'s actively growing community is the better long-term bet; Continue.dev\'s archive is still useful for solved problems.',
           },
         ],
       },
@@ -509,9 +509,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-19',
+    last_full_refresh: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-de.webp',
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alle drei funktionieren mit jedem OpenAI-kompatiblen lokalen Endpoint — Ollama ist der einfachste Weg, llama.cpp und vLLM werden durch Provider-Konfigurationen unterstützt.',
           'Workflow-Anpassung schlägt rohe Kapazität. Einen Terminal-First-Dev in Cline zu zwingen (oder einen VS Code-Only-Dev in Aider) kostet mehr Zeit, als der Harness spart.',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Funktion': 'Primäre Oberfläche',
             'Continue.dev': 'VS Code- und JetBrains-Extension',
-            'Cline': 'VS Code-Extension',
+            'Cline': 'VS Code-Extension + JetBrains (Early Access)',
             'Aider': 'Terminal-CLI (beliebiger Editor daneben)',
           },
           {
@@ -739,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cline behandelt Coding als eine Agent-Aufgabe, nicht als eine Serie von Edits.** Sie geben ihm ein Ziel; es plant, liest Dateien, bearbeitet sie, führt Befehle aus und bittet Sie, jeden Schritt zu genehmigen.',
         items: [
-          '**Install-Weg:** VS Code Marketplace (keine JetBrains-Version). Konfiguration ist GUI-gesteuert in der Extension-Panel — Provider, Modell, Auto-Approve-Einstellungen, benutzerdefinierte Anweisungen.',
+          '**Install-Weg:** VS Code Marketplace, plus eine JetBrains-Extension (Early Access) für IntelliJ, PyCharm, WebStorm, GoLand und weitere. Konfiguration ist GUI-gesteuert in der Extension-Panel — Provider, Modell, Auto-Approve-Einstellungen, benutzerdefinierte Anweisungen.',
           '**Workflow-Primitive:** Autonome Agent-Schleife mit expliziten Plan- und Act-Modi. Plan-Modus denkt über die Aufgabe nach, ohne Dateien zu schreiben; Act-Modus führt den Plan mit Tool-Calls aus. Ein Approval-Gate erscheint zwischen Schritten, es sei denn, Sie setzen Tools auf eine Auto-Approve-Allow-Liste.',
           '**Lokale Modell-Einrichtung:** Beliebiger OpenAI-kompatible Endpoint. Ollama ist ein Klick. Für llama.cpp oder vLLM zeigen Sie Cline auf die OpenAI-kompatible Server-URL. Die Agent-Schleife ist Token-schwer — reservieren Sie ein Modell mit mindestens einem 32K-Kontext-Fenster (Qwen3-Coder 30B bei 32K, DeepSeek-V3 bei 128K).',
           '**Tool-Oberfläche:** `read_file`, `write_to_file`, `replace_in_file`, `execute_command`, `list_files`, `search_files`, `browser_action`, `ask_followup_question`, `attempt_completion`. Die Menge ist klein und gut dokumentiert; Tool-Schemata verwenden ein benutzerdefiniertes XML-Format, das das Modell sauber ausgeben muss.',
@@ -852,9 +852,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Editor-Reichweite ist, wo sich die drei Harnesses am sichtbarsten unterscheiden.** Dies ist die Dimension, die die meisten Leser tatsächlich interessiert; sie ist auch am einfachsten in 10 Minuten zu testen.',
         items: [
           '**Continue.dev** — VS Code Marketplace und JetBrains Marketplace. Der JetBrains-Build ist real (IntelliJ, PyCharm, GoLand, WebStorm, usw.) und hat Feature-Parität mit dem VS Code-Build für Autocomplete und Chat. Cursor-Nutzer können die VS Code-Extension installieren; das Verhalten passt VS Code.',
-          '**Cline** — nur VS Code-Extension. Funktioniert in Cursor (das ist ein VS Code-Fork), ist aber nicht offiziell dort getestet; die Extension-Oberfläche ist identisch und die meisten Nutzer melden keine Probleme. JetBrains-Nutzer haben für jetzt kein Glück.',
+          '**Cline** — VS Code Marketplace, plus eine JetBrains-Extension (Early Access für IntelliJ, PyCharm, WebStorm, GoLand, Android Studio) und eine identische Extension-Oberfläche in Cursor und Windsurf (beide VS-Code-Forks, keiner davon offiziell getestet). Der JetBrains-Build ist neuer als der VS Code-Build und entsprechend weniger erprobt.',
           '**Aider** — Terminal-First; integriert mit jedem Editor, indem er daneben sitzt. VS Code: öffnen Sie das integrierte Terminal, führen Sie Aider aus, bearbeiten Sie in der Editor-Pane, während Aider committed. JetBrains: gleiches Muster im JetBrains-Terminal. Vim/Neovim: gepaart mit `:e!` zum Neuladen nach Aider-Commits, ist das ein produktiver Flow. Cursor: identisch mit VS Code.',
-          '**Praktische Implikation für JetBrains-Nutzer:** Continue.dev oder Aider sind Ihre einzigen Optionen.',
+          '**Praktische Implikation für JetBrains-Nutzer:** Continue.dev und Aider sind die ausgereiftesten Optionen; Clines JetBrains-Extension funktioniert inzwischen auch, ist aber Early Access — mit mehr Kanten als die VS-Code-Extension.',
           '**Praktische Implikation für Vim/Neovim-Nutzer:** Aider ist der natürliche Fit. Continue.dev hat Community-Neovim-Integrationen unterschiedlicher Reife; die offizielle Oberfläche ist VS Code und JetBrains.',
         ],
       },
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Anwendungsfall': 'JetBrains IDE (IntelliJ, GoLand, PyCharm) Nutzer',
             'Bester Fit': 'Continue.dev oder Aider',
-            'Warum': 'Cline ist nur VS Code',
+            'Warum': 'Am ausgereiftesten; Clines JetBrains-Plugin ist Early Access',
           },
         ],
       },
@@ -915,7 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Fünf Fragen, in Reihenfolge, bringen die meisten Leser zur richtigen Wahl.**',
         items: [
-          '**1. Befinden Sie sich in JetBrains, Vim oder arbeiten Sie über SSH?** → Wenn ja, sind Sie zwischen Continue.dev (nur JetBrains) und Aider (Vim/SSH). Gehen Sie zu Q4. Wenn nein, fahren Sie fort.',
+          '**1. Befinden Sie sich in JetBrains, Vim oder arbeiten Sie über SSH?** → Wenn ja: Für JetBrains sind Continue.dev und Aider die ausgereiften Optionen (Cline hat ebenfalls eine JetBrains-Extension, aber Early Access). Für Vim/SSH: Aider. Gehen Sie zu Q4. Wenn nein, fahren Sie fort.',
           '**2. Möchten Sie einen autonomen Agenten, der mehrere Dateien in einer Aufgabe bearbeitet?** → Ja: Cline. Nein: fahren Sie fort.',
           '**3. Möchten Sie Autocomplete plus ein In-IDE-Chat-Panel?** → Ja: Continue.dev. Nein: fahren Sie fort.',
           '**4. Überprüfen Sie Changes via `git diff` und möchten jeden Edit automatisch committed?** → Ja: Aider. Nein: Continue.dev (Standard).',
@@ -987,7 +987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Müssen DevOps oder Platform-Engineering-Teams DSGVO-Anforderungen für lokale Coding Agents beachten?',
-            a: 'Ja, besonders wenn Code oder Logs, die sich auf lokale LLMs beziehen, EU-Nutzerdaten enthalten könnten. DSGVO Artikel 28 verlangt, dass alle Datenverarbeitungswerkzeuge (einschließlich der Harnesses selbst) Data Processing Agreements (DPA) mit den eingesetzten Anbietern haben. Lokale LLMs selbst (Ollama, llama.cpp) speichern keine personenbezogenen Daten, aber die Logs und Code-Verzeichnisse, die sie indizieren, könnten sensible Informationen enthalten. Das BSI-Grundschutz-Katalog empfohlen für deutsche Organisationen zusätzliche Härtung. Konsultieren Sie Ihr Datenschutzteam, bevor Sie einen Harness in einer Production Environment in einer regulierten Branche bereitstellen.',
+            a: 'Potenziell ja — vor allem wenn Code oder Logs, die sich auf lokale LLMs beziehen, personenbezogene Daten von EU-Nutzern enthalten könnten. Läuft ein Harness über einen Cloud-Modell-Anbieter statt rein lokal gegen Ollama oder llama.cpp, kann DSGVO Artikel 28 einen Data-Processing-Agreement (DPA) mit diesem Anbieter verlangen. Rein lokale Inferenz mit Ollama oder llama.cpp verarbeitet selbst keine personenbezogenen Daten, aber die Logs und Code-Verzeichnisse, die sie indizieren, können sensible Informationen enthalten. Für deutsche Organisationen empfiehlt sich dabei zusätzlich eine Ausrichtung am BSI-Grundschutz. Das ist keine Rechtsberatung — konsultieren Sie Ihr Datenschutzteam, bevor Sie einen Harness in einer Produktionsumgebung in einer regulierten Branche einsetzen.',
           },
           {
             q: 'Welcher Coding Agent ist am beste für Mittelstand (kleine bis mittlere Unternehmen) geeignet?',
@@ -1012,9 +1012,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-19',
+    last_full_refresh: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-fr.webp',
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       "Continue.dev, Cline et Aider sont les trois outils de codage open-source sérieux qui s'intègrent correctement avec un LLM local en 2026. Ils ne sont pas interchangeables : chacun est construit autour d'une primitive de flux de travail différente — autocomplétion, boucle d'agent autonome ou diff natif Git. Choisissez d'abord selon le flux de travail, le modèle en second lieu, et vous évitez 90 % des problèmes d'intégration.",
     metaDescription:
-      'Continue.dev, Cline et Aider comparés comme agents de codage locaux 2026. Modèle d\'édition, intégration IDE, annulation et stratégies de contexte — choisis par flux de travail, pas par effet de mode.',
+      "Continue.dev, Cline et Aider comparés comme agents de codage locaux 2026 : autocomplétion, agent autonome ou diff natif Git — choisis par flux de travail.",
     twitterDescription:
       'Trois outils de codage locaux, trois primitives de flux de travail différentes. Continue.dev pour l\'autocomplétion, Cline pour les agents autonomes, Aider pour les diffs natifs Git. Verdict par flux de travail à l\'intérieur.',
     current_models_mentioned: [
@@ -1066,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les trois fonctionnent avec n\'importe quel endpoint compatible OpenAI local — Ollama est le chemin le plus facile, llama.cpp et vLLM sont pris en charge via les configurations de fournisseur.',
           "L'adaptation au flux de travail surpasse la capacité brute. Forcer un développeur basé sur le terminal dans Cline (ou un développeur uniquement VS Code dans Aider) coûte plus de temps que l'outil ne peut en économiser.",
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -1140,7 +1140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Fonctionnalité': 'Surface primaire',
             'Continue.dev': 'Extension VS Code et JetBrains',
-            'Cline': 'Extension VS Code',
+            'Cline': 'Extension VS Code + JetBrains (accès anticipé)',
             'Aider': "CLI terminal (n'importe quel éditeur à côté)",
           },
           {
@@ -1242,7 +1242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Cline traite le codage comme une tâche d'agent, pas comme une série d'éditions.** Vous lui donnez un objectif ; il planifie, lit les fichiers, les édite, exécute les commandes et vous demande d'approuver chaque étape.",
         items: [
-          "**Chemin d'installation :** VS Code Marketplace (pas de version JetBrains). La configuration est pilotée par interface graphique dans le panneau d'extension — fournisseur, modèle, paramètres d'approbation automatique, instructions personnalisées.",
+          "**Chemin d'installation :** VS Code Marketplace, plus une extension JetBrains (accès anticipé) pour IntelliJ, PyCharm, WebStorm, GoLand et d'autres. La configuration est pilotée par interface graphique dans le panneau d'extension — fournisseur, modèle, paramètres d'approbation automatique, instructions personnalisées.",
           "**Primitive de flux de travail :** boucle d'agent autonome avec des modes Plan et Act explicites. Le mode Plan raisonne sur la tâche sans écrire les fichiers ; le mode Act exécute le plan avec les appels d'outils. Une porte d'approbation apparaît entre les étapes sauf si vous mettez les outils sur une liste d'permission d'approbation automatique.",
           "**Configuration du modèle local :** tout endpoint compatible OpenAI. Ollama est un clic. Pour llama.cpp ou vLLM, pointez Cline vers l'URL du serveur compatible OpenAI. La boucle d'agent consomme beaucoup de jetons — réservez un modèle avec au moins une fenêtre de contexte 32K (Qwen3-Coder 30B à 32K, DeepSeek-V3 à 128K).",
           "**Surface d'outils :** `read_file`, `write_to_file`, `replace_in_file`, `execute_command`, `list_files`, `search_files`, `browser_action`, `ask_followup_question`, `attempt_completion`. L'ensemble est petit et bien documenté ; les schémas d'outils utilisent un format XML personnalisé que le modèle doit émettre correctement.",
@@ -1355,9 +1355,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**La portée de l'éditeur est le lieu où les trois outils divergent le plus visiblement.** C'est la dimension que la plupart des lecteurs se soucient réellement ; c'est aussi la plus facile à tester en 10 minutes.",
         items: [
           '**Continue.dev** — VS Code Marketplace et JetBrains Marketplace. La construction JetBrains est réelle (IntelliJ, PyCharm, GoLand, WebStorm, etc.) et a la parité des fonctionnalités avec la construction VS Code pour l\'autocomplétion et le chat. Les utilisateurs de Cursor peuvent installer l\'extension VS Code ; le comportement correspond à VS Code.',
-          '**Cline** — uniquement extension VS Code. Fonctionne dans Cursor (qui est un fork VS Code) mais n\'est pas officiellement testé ; la surface d\'extension est identique et la plupart des utilisateurs ne signalent aucun problème. Les utilisateurs de JetBrains n\'ont pas de chance pour le moment.',
+          "**Cline** — VS Code Marketplace, plus une extension JetBrains (accès anticipé pour IntelliJ, PyCharm, WebStorm, GoLand, Android Studio) et une surface d'extension identique dans Cursor et Windsurf (deux forks de VS Code, ni l'un ni l'autre officiellement testé). La version JetBrains est plus récente que la version VS Code et donc moins éprouvée.",
           "**Aider** — basé sur le terminal ; s'intègre avec n'importe quel éditeur en s'asseillant à côté. VS Code : ouvrez le terminal intégré, exécutez Aider, éditez dans le volet d'éditeur pendant qu'Aider commite. JetBrains : même motif dans le terminal JetBrains. Vim/Neovim : associé à `:e!` pour recharger après les commits d'Aider, c'est un flux productif. Cursor : identique à VS Code.",
-          "**Implication pratique pour les utilisateurs de JetBrains :** Continue.dev ou Aider sont vos seules options.",
+          "**Implication pratique pour les utilisateurs de JetBrains :** Continue.dev et Aider restent les choix les plus matures ; l'extension JetBrains de Cline fonctionne désormais aussi, mais elle est en accès anticipé — attendez-vous à plus d'aspérités que sur VS Code.",
           "**Implication pratique pour les utilisateurs de Vim/Neovim :** Aider est le fit naturel. Continue.dev a des intégrations Neovim communautaires de maturité variable ; la surface officielle est VS Code et JetBrains.",
         ],
       },
@@ -1408,7 +1408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Cas d\'usage': 'Utilisateur IDE JetBrains (IntelliJ, GoLand, PyCharm)',
             'Meilleur fit': 'Continue.dev ou Aider',
-            'Pourquoi': 'Cline est uniquement VS Code',
+            'Pourquoi': 'Le plus mature ; le plugin JetBrains de Cline est en accès anticipé',
           },
         ],
       },
@@ -1418,7 +1418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Cinq questions, dans l'ordre, amènent la plupart des lecteurs au bon choix.**",
         items: [
-          "**1. Êtes-vous dans JetBrains, Vim ou travaillez-vous via SSH ?** → Si oui, vous êtes entre Continue.dev (JetBrains uniquement) et Aider (Vim/SSH). Passez à Q4. Sinon, continuez.",
+          "**1. Êtes-vous dans JetBrains, Vim ou travaillez-vous via SSH ?** → Si oui : pour JetBrains, Continue.dev et Aider sont les choix matures (Cline a aussi un plugin JetBrains, mais en accès anticipé). Pour Vim/SSH : Aider. Passez à Q4. Sinon, continuez.",
           "**2. Voulez-vous un agent autonome qui édite plusieurs fichiers en une seule tâche ?** → Oui : Cline. Non : continuez.",
           "**3. Voulez-vous l'autocomplétion plus un panneau de chat intégré à l'IDE ?** → Oui : Continue.dev. Non : continuez.",
           "**4. Examinez-vous les modifications via `git diff` et voulez-vous que chaque édition soit commitée automatiquement ?** → Oui : Aider. Non : Continue.dev (par défaut).",
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Les équipes DevOps/SRE doivent-elles respecter les exigences du RGPD/CNIL pour les agents de codage locaux ?',
-            a: 'Oui, en particulier si le code ou les logs liés aux LLMs locaux contiennent des données d\'utilisateurs de l\'UE. Le RGPD Article 28 exige que tous les outils de traitement des données (y compris les harnesses eux-mêmes) aient des Accords de traitement des données (DPA) avec les fournisseurs déployés. Les LLMs locaux eux-mêmes (Ollama, llama.cpp) ne stockent pas de données personnelles, mais les logs et répertoires de code qu\'ils indexent pourraient contenir des informations sensibles. Le CNIL recommande une documentation explicite sur le contrôle des données et la gouvernance. Pour les dépôts contenant du code client ou des propriétés intellectuelles, assurez-vous que le modèle local est déployé sur l\'infrastructure appartenant à l\'entreprise sans accès externe. Consultez votre équipe de conformité avant le déploiement en production dans une industrie régulée.',
+            a: 'Potentiellement oui — en particulier si le code ou les logs liés aux LLMs locaux contiennent des données d\'utilisateurs de l\'UE. Si un harness passe par un fournisseur de modèle cloud plutôt que par une inférence purement locale (Ollama, llama.cpp), le RGPD Article 28 peut exiger un Accord de traitement des données (DPA) avec ce fournisseur. L\'inférence purement locale ne traite elle-même aucune donnée personnelle, mais les logs et répertoires de code qu\'elle indexe pourraient contenir des informations sensibles. La CNIL recommande une documentation explicite sur le contrôle des données et la gouvernance. Pour les dépôts contenant du code client ou de la propriété intellectuelle, assurez-vous que le modèle local est déployé sur une infrastructure appartenant à l\'entreprise, sans accès externe. Ceci ne constitue pas un conseil juridique — consultez votre équipe de conformité avant tout déploiement en production dans un secteur régulé.',
           },
           {
             q: 'Quel agent de codage convient le mieux aux petites équipes et PME en France ?',
@@ -1515,9 +1515,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-19',
+    last_full_refresh: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ja.webp',
@@ -1569,7 +1569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '3 つすべてがローカルの OpenAI 互換エンドポイントで動作します。Ollama が最も簡単なパス、llama.cpp と vLLM はプロバイダー設定でサポートされています。',
           'ワークフロー適合性は生のキャパシティを超えています。ターミナル最優先の開発者を Cline に強制するか、VS Code のみの開発者を Aider に強制すると、ツールが節約するより多くの時間がかかります。',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -1643,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '機能': 'プライマリサーフェス',
             'Continue.dev': 'VS Code および JetBrains 拡張機能',
-            'Cline': 'VS Code 拡張機能',
+            'Cline': 'VS Code 拡張機能 + JetBrains（早期アクセス）',
             'Aider': 'ターミナル CLI（サイドの任意のエディタ）',
           },
           {
@@ -1745,7 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cline はコーディングをエージェントタスクとして扱います。編集のシリーズではありません。** 目的を与えます。計画し、ファイルを読み、編集し、コマンドを実行し、各ステップの承認をリクエストします。',
         items: [
-          '**インストールパス：** VS Code Marketplace（JetBrains バージョンはありません）。設定は拡張パネル内で GUI 駆動されます。プロバイダー、モデル、自動承認設定、カスタム指示。',
+          '**インストールパス：** VS Code Marketplace に加え、IntelliJ、PyCharm、WebStorm、GoLand などに対応する JetBrains プラグイン（早期アクセス）。設定は拡張パネル内で GUI 駆動されます。プロバイダー、モデル、自動承認設定、カスタム指示。',
           '**ワークフロープリミティブ：** 明示的な Plan および Act モード付き自律エージェントループ。Plan モードはファイルを書き込まずにタスクについて理由を述べます。Act モードはツール呼び出しでプランを実行します。自動承認許可リストにツールを配置しない限り、ステップ間に承認ゲートが表示されます。',
           '**ローカルモデル設定：** OpenAI 互換エンドポイント。Ollama はワンクリック。llama.cpp または vLLM の場合、Cline を OpenAI 互換サーバー URL にポイントします。エージェントループはトークン集約的です。最低でも 32K コンテキストウィンドウを備えたモデルを予約します（Qwen3-Coder 30B at 32K、DeepSeek-V3 at 128K）。',
           '**ツールサーフェス：** `read_file`、`write_to_file`、`replace_in_file`、`execute_command`、`list_files`、`search_files`、`browser_action`、`ask_followup_question`、`attempt_completion`。セットは小さく、よく文書化されています。ツールスキーマはモデルが適切に出力する必要があるカスタム XML 形式を使用します。',
@@ -1858,9 +1858,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**エディタの範囲は、3 つのツールが最も明らかに分岐する場所です。** これは、ほとんどの読者が実際に気にかけている次元です。また、10 分でテストするのが最も簡単です。',
         items: [
           '**Continue.dev** — VS Code Marketplace および JetBrains Marketplace。JetBrains ビルドは本物です（IntelliJ、PyCharm、GoLand、WebStorm など）で、VS Code ビルドと オートコンプリートとチャット機能の同等性があります。Cursor ユーザーは VS Code 拡張機能をインストールできます。動作は VS Code と一致します。',
-          '**Cline** — VS Code 拡張機能のみ。Cursor（VS Code フォーク）で動作しますが、正式にテストされていません。拡張表面は同一で、ほとんどのユーザーは問題を報告しません。JetBrains ユーザーは今のところ運がありません。',
+          '**Cline** — VS Code Marketplace に加え、IntelliJ、PyCharm、WebStorm、GoLand、Android Studio をカバーする JetBrains プラグイン（早期アクセス）、さらに Cursor と Windsurf（いずれも VS Code のフォークで、公式テスト対象外）でも同一の拡張機能が動作します。JetBrains ビルドは VS Code ビルドより新しく、実績もまだ少ないです。',
           '**Aider** — ターミナル最優先。エディタの隣に座ることで任意のエディタと統合します。VS Code：統合ターミナルを開き、Aider を実行し、Aider がコミットしている間、エディタペーンで編集します。JetBrains：JetBrains ターミナルで同じパターン。Vim/Neovim：`:e!` と対になって Aider コミット後にリロードすると、これは生産的なフローです。Cursor：VS Code と同じです。',
-          '**JetBrains ユーザーの実用的な含意：** Continue.dev または Aider がオプションだけです。',
+          '**JetBrains ユーザーの実用的な含意：** Continue.dev と Aider が最も実績のある選択肢です。Cline の JetBrains プラグインも動作しますが早期アクセスなので、VS Code 版より粗さが残ります。',
           '**Vim/Neovim ユーザーの実用的な含意：** Aider は自然なフィット。Continue.dev には可変的な成熟度のコミュニティ Neovim 統合があります。公式なサーフェスは VS Code と JetBrains です。',
         ],
       },
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ユースケース': 'JetBrains IDE（IntelliJ、GoLand、PyCharm）ユーザー',
             '最適なフィット': 'Continue.dev または Aider',
-            '理由': 'Cline は VS Code のみ',
+            '理由': '最も実績あり。Cline の JetBrains プラグインは早期アクセス',
           },
         ],
       },
@@ -1920,7 +1920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '判断フロー：どれを選ぶべきか',
         content: '**順序付きの 5 つの質問は、ほとんどの読者を正しい選択に導きます。**',
         items: [
-          '**1. JetBrains、Vim、または SSH 経由で作業していますか？** → はい：Continue.dev（JetBrains のみ）と Aider（Vim/SSH）の間。Q4 にスキップしてください。いいえ：続ける。',
+          '**1. JetBrains、Vim、または SSH 経由で作業していますか？** → はい：JetBrains なら Continue.dev と Aider が実績のある選択肢（Cline にも JetBrains プラグインがありますが早期アクセス）。Vim/SSH なら Aider。Q4 にスキップしてください。いいえ：続ける。',
           '**2. 複数のファイルを 1 つのタスクで編集する自律エージェントを希望していますか？** → はい：Cline。いいえ：続ける。',
           '**3. オートコンプリートと IDE 統合チャットパネルを希望していますか？** → はい：Continue.dev。いいえ：続ける。',
           '**4. `git diff` を通じて変更をレビューし、すべての編集を自動的にコミットしますか？** → はい：Aider。いいえ：Continue.dev（デフォルト）。',
@@ -2017,9 +2017,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-19',
+    last_full_refresh: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-zh.webp',
@@ -2071,7 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三个都适用于任何 OpenAI 兼容的本地端点 — Ollama 是最简单的路径，llama.cpp 和 vLLM 通过提供商配置支持。',
           '工作流适配性优于原始能力。强迫一个终端优先的开发者进入 Cline（或一个仅 VS Code 的开发者进入 Aider）花费的时间比工具能节省的更多。',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -2145,7 +2145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '功能': '主要表面',
             'Continue.dev': 'VS Code 和 JetBrains 扩展',
-            'Cline': 'VS Code 扩展',
+            'Cline': 'VS Code 扩展 + JetBrains（早期访问）',
             'Aider': '终端 CLI（任何编辑器在旁边）',
           },
           {
@@ -2247,7 +2247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cline 将编码视为代理任务，而不是一系列编辑。** 您给它一个目标；它计划、读取文件、编辑它们、执行命令并要求您批准每个步骤。',
         items: [
-          '**安装路径：** VS Code Marketplace（没有 JetBrains 版本）。配置在扩展面板内由 GUI 驱动 — 提供者、模型、自动批准设置、自定义指令。',
+          '**安装路径：** VS Code Marketplace，外加覆盖 IntelliJ、PyCharm、WebStorm、GoLand 等的 JetBrains 插件（早期访问）。配置在扩展面板内由 GUI 驱动 — 提供者、模型、自动批准设置、自定义指令。',
           '**工作流原语：** 具有明确的计划和行动模式的自主代理循环。计划模式推理任务而不编写文件；行动模式用工具调用执行计划。除非您将工具放在自动批准允许列表上，否则步骤之间会出现批准门。',
           '**本地模型设置：** 任何 OpenAI 兼容端点。Ollama 是一键。对于 llama.cpp 或 vLLM，将 Cline 指向 OpenAI 兼容服务器 URL。代理循环是令牌密集的 — 预留至少 32K 上下文窗口的模型（Qwen3-Coder 30B at 32K、DeepSeek-V3 at 128K）。',
           '**工具表面：** `read_file`、`write_to_file`、`replace_in_file`、`execute_command`、`list_files`、`search_files`、`browser_action`、`ask_followup_question`、`attempt_completion`。集合很小，文档齐全；工具模式使用模型必须正确输出的自定义 XML 格式。',
@@ -2360,9 +2360,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**编辑器范围是三个工具最明显分散的地方。** 这是大多数读者实际关心的维度；这也是最容易在 10 分钟内测试的。',
         items: [
           '**Continue.dev** — VS Code Marketplace 和 JetBrains Marketplace。JetBrains 构建是真实的（IntelliJ、PyCharm、GoLand、WebStorm 等），与 VS Code 构建的自动完成和聊天特性具有同等地位。Cursor 用户可以安装 VS Code 扩展；行为与 VS Code 相匹配。',
-          '**Cline** — 仅 VS Code 扩展。在 Cursor（VS Code 分叉）中工作，但未正式测试；扩展表面相同，大多数用户报告没有问题。JetBrains 用户现在没有运气。',
+          '**Cline** — VS Code Marketplace，外加覆盖 IntelliJ、PyCharm、WebStorm、GoLand、Android Studio 的 JetBrains 插件（早期访问），以及 Cursor 和 Windsurf（两者都是 VS Code 分叉，均未经官方测试）中相同的扩展界面。JetBrains 版本比 VS Code 版本更新，经过的实际检验也更少。',
           '**Aider** — 以终端为先；通过坐在编辑器旁边与任何编辑器集成。VS Code：打开集成终端，运行 Aider，在编辑器窗格中编辑，同时 Aider 提交。JetBrains：JetBrains 终端中的相同模式。Vim/Neovim：与 `:e!` 配对以在 Aider 提交后重新加载，这是一个生产性的流程。Cursor：与 VS Code 相同。',
-          '**JetBrains 用户的实际含义：** Continue.dev 或 Aider 是您的唯一选择。',
+          '**JetBrains 用户的实际含义：** Continue.dev 和 Aider 仍是最成熟的选择；Cline 的 JetBrains 插件现在也能用，但仍是早期访问版本 —— 比 VS Code 扩展更多毛边。',
           '**Vim/Neovim 用户的实际含义：** Aider 是自然适配。Continue.dev 有社区 Neovim 集成，成熟度各不相同；官方表面是 VS Code 和 JetBrains。',
         ],
       },
@@ -2413,7 +2413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '用例': 'JetBrains IDE（IntelliJ、GoLand、PyCharm）用户',
             '最佳选择': 'Continue.dev 或 Aider',
-            '为什么': 'Cline 仅 VS Code',
+            '为什么': '最成熟；Cline 的 JetBrains 插件仍是早期访问',
           },
         ],
       },
@@ -2422,7 +2422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '决策树：应该选择哪一个',
         content: '**按顺序的五个问题可以将大多数读者引导到正确的选择。**',
         items: [
-          '**1. 您在 JetBrains、Vim 或通过 SSH 工作吗？** → 是：您在 Continue.dev（仅 JetBrains）和 Aider（Vim/SSH）之间。跳到 Q4。否：继续。',
+          '**1. 您在 JetBrains、Vim 或通过 SSH 工作吗？** → 是：JetBrains 用户首选 Continue.dev 和 Aider（最成熟；Cline 也有 JetBrains 插件，但仍是早期访问）；Vim/SSH 用户选 Aider。跳到 Q4。否：继续。',
           '**2. 您想要一个在一个任务中编辑多个文件的自主代理吗？** → 是：Cline。否：继续。',
           '**3. 您想要自动完成加上 IDE 集成聊天面板吗？** → 是：Continue.dev。否：继续。',
           '**4. 您通过 `git diff` 审核更改并希望所有编辑都自动提交吗？** → 是：Aider。否：Continue.dev（默认）。',
@@ -2519,9 +2519,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-19',
+    last_full_refresh: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-es.webp',
@@ -2573,7 +2573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los tres funcionan con cualquier endpoint local compatible con OpenAI — Ollama es el camino más sencillo, llama.cpp y vLLM son compatibles mediante configuraciones de proveedor.',
           'La adecuación al flujo de trabajo supera la capacidad bruta. Forzar a un desarrollador orientado al terminal en Cline (o a uno exclusivo de VS Code en Aider) cuesta más tiempo del que la herramienta ahorra.',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -2647,7 +2647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Característica': 'Superficie principal',
             'Continue.dev': 'Extensión de VS Code y JetBrains',
-            'Cline': 'Extensión de VS Code',
+            'Cline': 'Extensión de VS Code + JetBrains (acceso anticipado)',
             'Aider': 'CLI de terminal (cualquier editor al lado)',
           },
           {
@@ -2749,7 +2749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cline trata el código como una tarea de agente, no como una serie de ediciones.** Le das un objetivo; planifica, lee archivos, los edita, ejecuta comandos y te pide que apruebes cada paso.',
         items: [
-          '**Ruta de instalación:** VS Code Marketplace (sin versión para JetBrains). La configuración se hace por GUI dentro del panel de la extensión — proveedor, modelo, configuración de auto-aprobación, instrucciones personalizadas.',
+          '**Ruta de instalación:** VS Code Marketplace, más un plugin de JetBrains (acceso anticipado) para IntelliJ, PyCharm, WebStorm, GoLand y otros. La configuración se hace por GUI dentro del panel de la extensión — proveedor, modelo, configuración de auto-aprobación, instrucciones personalizadas.',
           '**Primitiva de flujo de trabajo:** bucle de agente autónomo con modos Plan y Actuar explícitos. El modo Plan razona sobre la tarea sin escribir archivos; el modo Actuar ejecuta el plan con llamadas a herramientas. Aparece una puerta de aprobación entre pasos a menos que coloques herramientas en una lista de permisos de auto-aprobación.',
           '**Configuración de modelo local:** cualquier endpoint compatible con OpenAI. Ollama es un clic. Para llama.cpp o vLLM, apunta Cline a la URL del servidor compatible con OpenAI. El bucle de agente consume muchos tokens — reserva un modelo con al menos una ventana de contexto de 32K (Qwen3-Coder 30B en 32K, DeepSeek-V3 en 128K).',
           '**Superficie de herramientas:** `read_file`, `write_to_file`, `replace_in_file`, `execute_command`, `list_files`, `search_files`, `browser_action`, `ask_followup_question`, `attempt_completion`. El conjunto es pequeño y bien documentado; los esquemas de herramientas usan un formato XML personalizado que el modelo debe emitir correctamente.',
@@ -2862,9 +2862,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**El alcance del editor es donde las tres herramientas divergen más visiblemente.** Esta es la dimensión que más importa a la mayoría de los lectores; también es la más fácil de probar en 10 minutos.',
         items: [
           '**Continue.dev** — VS Code Marketplace y JetBrains Marketplace. La build de JetBrains es real (IntelliJ, PyCharm, GoLand, WebStorm, etc.) y tiene paridad de funciones con la build de VS Code para autocompletado y chat. Los usuarios de Cursor pueden instalar la extensión de VS Code; el comportamiento coincide con VS Code.',
-          '**Cline** — solo extensión de VS Code. Funciona en Cursor (que es un fork de VS Code) pero no está probado oficialmente; la superficie de la extensión es idéntica y la mayoría de los usuarios no reportan problemas. Los usuarios de JetBrains por ahora están sin opción.',
+          '**Cline** — VS Code Marketplace, más un plugin de JetBrains (acceso anticipado para IntelliJ, PyCharm, WebStorm, GoLand, Android Studio) y la misma superficie de extensión en Cursor y Windsurf (ambos forks de VS Code, ninguno probado oficialmente). La versión de JetBrains es más reciente que la de VS Code y, por tanto, menos probada.',
           '**Aider** — orientado al terminal; se integra con cualquier editor situándose junto a él. VS Code: abre el terminal integrado, ejecuta Aider, edita en el panel del editor mientras Aider hace commit. JetBrains: el mismo patrón en el terminal de JetBrains. Vim/Neovim: combinado con `:e!` para recargar tras los commits de Aider, esto es un flujo productivo. Cursor: idéntico a VS Code.',
-          '**Implicación práctica para usuarios de JetBrains:** Continue.dev o Aider son tus únicas opciones.',
+          '**Implicación práctica para usuarios de JetBrains:** Continue.dev y Aider siguen siendo las opciones más maduras; el plugin de JetBrains de Cline ya funciona, pero está en acceso anticipado, con más aristas que la extensión de VS Code.',
           '**Implicación práctica para usuarios de Vim/Neovim:** Aider es la opción natural. Continue.dev tiene integraciones de Neovim de la comunidad con madurez variable; la superficie oficial es VS Code y JetBrains.',
         ],
       },
@@ -2915,7 +2915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Caso de uso': 'Usuario de IDE JetBrains (IntelliJ, GoLand, PyCharm)',
             'Mejor opción': 'Continue.dev o Aider',
-            'Por qué': 'Cline es solo para VS Code',
+            'Por qué': 'Más maduro; el plugin de JetBrains de Cline es acceso anticipado',
           },
         ],
       },
@@ -2925,7 +2925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cinco preguntas, en orden, llevan a la mayoría de los lectores a la elección correcta.**',
         items: [
-          '**1. ¿Estás en JetBrains, Vim o trabajando por SSH?** → Si sí, estás entre Continue.dev (solo JetBrains) y Aider (Vim/SSH). Salta a la Q4. Si no, continúa.',
+          '**1. ¿Estás en JetBrains, Vim o trabajando por SSH?** → Si sí: para JetBrains, Continue.dev y Aider son las opciones más maduras (Cline también tiene plugin de JetBrains, pero en acceso anticipado). Para Vim/SSH: Aider. Salta a la Q4. Si no, continúa.',
           '**2. ¿Quieres un agente autónomo que edite múltiples archivos en una sola tarea?** → Sí: Cline. No: continúa.',
           '**3. ¿Quieres autocompletado más un panel de chat integrado en el IDE?** → Sí: Continue.dev. No: continúa.',
           '**4. ¿Revisas los cambios con `git diff` y quieres que cada edición se haga commit automáticamente?** → Sí: Aider. No: Continue.dev (la opción predeterminada).',
@@ -3026,7 +3026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/continue-dev-vs-cline-vs-aider-local',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -3035,9 +3035,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-19',
+    last_full_refresh: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-pt.webp',
@@ -3089,7 +3089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os três funcionam com qualquer endpoint local compatível com OpenAI — o Ollama é o caminho mais simples, llama.cpp e vLLM são compatíveis por meio de configurações de provedor.',
           'A adequação ao fluxo de trabalho supera a capacidade bruta. Forçar um desenvolvedor orientado ao terminal a usar o Cline (ou um exclusivo do VS Code a usar o Aider) custa mais tempo do que a ferramenta economiza.',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -3163,7 +3163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Característica': 'Superfície principal',
             'Continue.dev': 'Extensão de VS Code e JetBrains',
-            'Cline': 'Extensão do VS Code',
+            'Cline': 'Extensão do VS Code + JetBrains (acesso antecipado)',
             'Aider': 'CLI de terminal (qualquer editor ao lado)',
           },
           {
@@ -3265,7 +3265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O Cline trata o código como uma tarefa de agente, não como uma série de edições.** Você lhe dá um objetivo; ele planeja, lê arquivos, edita-os, executa comandos e pede que você aprove cada etapa.',
         items: [
-          '**Caminho de instalação:** VS Code Marketplace (sem versão para JetBrains). A configuração é feita por GUI dentro do painel da extensão — provedor, modelo, configuração de autoaprovação, instruções personalizadas.',
+          '**Caminho de instalação:** VS Code Marketplace, além de um plugin JetBrains (acesso antecipado) para IntelliJ, PyCharm, WebStorm, GoLand e outros. A configuração é feita por GUI dentro do painel da extensão — provedor, modelo, configuração de autoaprovação, instruções personalizadas.',
           '**Primitiva de fluxo de trabalho:** loop de agente autônomo com modos Plan e Act explícitos. O modo Plan raciocina sobre a tarefa sem gravar arquivos; o modo Act executa o plano com chamadas de ferramentas. Um portão de aprovação aparece entre as etapas, a menos que você coloque ferramentas em uma lista de permissões de autoaprovação.',
           '**Configuração de modelo local:** qualquer endpoint compatível com OpenAI. O Ollama é um clique. Para llama.cpp ou vLLM, aponte o Cline para a URL do servidor compatível com OpenAI. O loop de agente consome muitos tokens — reserve um modelo com pelo menos uma janela de contexto de 32K (Qwen3-Coder 30B em 32K, DeepSeek-V3 em 128K).',
           '**Superfície de ferramentas:** `read_file`, `write_to_file`, `replace_in_file`, `execute_command`, `list_files`, `search_files`, `browser_action`, `ask_followup_question`, `attempt_completion`. O conjunto é pequeno e bem documentado; os esquemas de ferramentas usam um formato XML personalizado que o modelo deve emitir corretamente.',
@@ -3378,9 +3378,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O alcance do editor é onde as três ferramentas divergem de forma mais visível.** Esta é a dimensão que mais importa para a maioria dos leitores; também é a mais fácil de testar em 10 minutos.',
         items: [
           '**Continue.dev** — VS Code Marketplace e JetBrains Marketplace. A build do JetBrains é real (IntelliJ, PyCharm, GoLand, WebStorm, etc.) e tem paridade de recursos com a build do VS Code para autocompletar e chat. Os usuários do Cursor podem instalar a extensão do VS Code; o comportamento coincide com o VS Code.',
-          '**Cline** — somente extensão do VS Code. Funciona no Cursor (que é um fork do VS Code) mas não é testado oficialmente; a superfície da extensão é idêntica e a maioria dos usuários não relata problemas. Os usuários do JetBrains por enquanto estão sem opção.',
+          '**Cline** — VS Code Marketplace, mais um plugin JetBrains (acesso antecipado para IntelliJ, PyCharm, WebStorm, GoLand, Android Studio) e a mesma superfície de extensão no Cursor e no Windsurf (ambos forks do VS Code, nenhum testado oficialmente). A versão JetBrains é mais recente que a do VS Code e, portanto, menos testada na prática.',
           '**Aider** — orientado ao terminal; integra-se com qualquer editor ficando ao lado dele. VS Code: abra o terminal integrado, execute o Aider, edite no painel do editor enquanto o Aider faz commit. JetBrains: o mesmo padrão no terminal do JetBrains. Vim/Neovim: combinado com `:e!` para recarregar após os commits do Aider, este é um fluxo produtivo. Cursor: idêntico ao VS Code.',
-          '**Implicação prática para usuários do JetBrains:** Continue.dev ou Aider são suas únicas opções.',
+          '**Implicação prática para usuários do JetBrains:** Continue.dev e Aider continuam sendo as opções mais maduras; o plugin JetBrains do Cline agora também funciona, mas está em acesso antecipado — espere mais arestas do que na extensão do VS Code.',
           '**Implicação prática para usuários do Vim/Neovim:** o Aider é a opção natural. O Continue.dev tem integrações de Neovim da comunidade com maturidade variável; a superfície oficial é VS Code e JetBrains.',
         ],
       },
@@ -3431,7 +3431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Caso de uso': 'Usuário de IDE JetBrains (IntelliJ, GoLand, PyCharm)',
             'Melhor opção': 'Continue.dev ou Aider',
-            'Por quê': 'O Cline é somente para VS Code',
+            'Por quê': 'Mais maduro; o plugin JetBrains do Cline é acesso antecipado',
           },
         ],
       },
@@ -3441,7 +3441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cinco perguntas, em ordem, levam a maioria dos leitores à escolha certa.**',
         items: [
-          '**1. Você está no JetBrains, Vim ou trabalhando por SSH?** → Se sim, você está entre Continue.dev (somente JetBrains) e Aider (Vim/SSH). Pule para a Q4. Se não, continue.',
+          '**1. Você está no JetBrains, Vim ou trabalhando por SSH?** → Se sim: para JetBrains, Continue.dev e Aider são as opções mais maduras (o Cline também tem plugin JetBrains, mas em acesso antecipado). Para Vim/SSH: Aider. Pule para a Q4. Se não, continue.',
           '**2. Você quer um agente autônomo que edite vários arquivos em uma única tarefa?** → Sim: Cline. Não: continue.',
           '**3. Você quer autocompletar mais um painel de chat integrado ao IDE?** → Sim: Continue.dev. Não: continue.',
           '**4. Você revisa as mudanças com `git diff` e quer que cada edição seja commitada automaticamente?** → Sim: Aider. Não: Continue.dev (a opção padrão).',
@@ -3542,7 +3542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -3551,9 +3551,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-19',
+    last_full_refresh: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ar.webp',
@@ -3605,7 +3605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تعمل الأدوات الثلاث مع أي نقطة نهاية محلية متوافقة مع OpenAI — Ollama هو الطريق الأيسر، وllama.cpp وvLLM مدعومان عبر إعدادات الموفر.',
           'ملاءمة سير العمل تتفوق على القدرة الخام. إجبار مطور يعمل في الطرفية على Cline (أو مطور يعمل في VS Code على Aider) يكلّف وقتاً أكثر مما توفره الأداة.',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -3679,7 +3679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الميزة': 'السطح الرئيسي',
             'Continue.dev': 'إضافة لـVS Code وJetBrains',
-            'Cline': 'إضافة لـVS Code',
+            'Cline': 'إضافة لـVS Code + JetBrains (وصول مبكر)',
             'Aider': 'واجهة سطر أوامر (أي محرر بجانبها)',
           },
           {
@@ -3781,7 +3781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**تتعامل أداة Cline مع الكود باعتباره مهمة وكيل لا سلسلة تعديلات.** تعطيها هدفاً؛ فتخطط وتقرأ الملفات وتحررها وتنفذ الأوامر وتطلب منك الموافقة في كل خطوة.',
         items: [
-          '**مسار التثبيت:** VS Code Marketplace (لا إصدار لـJetBrains). يتم الإعداد عبر واجهة المستخدم داخل لوحة الإضافة — الموفر والنموذج وإعداد الموافقة التلقائية والتعليمات المخصصة.',
+          '**مسار التثبيت:** VS Code Marketplace، بالإضافة إلى إضافة JetBrains (وصول مبكر) لـ IntelliJ وPyCharm وWebStorm وGoLand وغيرها. يتم الإعداد عبر واجهة المستخدم داخل لوحة الإضافة — الموفر والنموذج وإعداد الموافقة التلقائية والتعليمات المخصصة.',
           '**بدائية سير العمل:** حلقة وكيل مستقل بأوضاع تخطيط وتنفيذ صريحة. يُفكّر وضع التخطيط في المهمة دون كتابة ملفات؛ يُنفّذ وضع التنفيذ الخطة عبر استدعاءات أدوات. تظهر بوابة موافقة بين الخطوات ما لم تضع الأدوات في قائمة أذونات الموافقة التلقائية.',
           '**إعداد النموذج المحلي:** أي نقطة نهاية متوافقة مع OpenAI. Ollama بنقرة واحدة. لـllama.cpp أو vLLM، وجّه Cline إلى URL الخادم المتوافق مع OpenAI. تستهلك حلقة الوكيل توكن كثيرة — احتفظ بنموذج بنافذة سياق لا تقل عن 32K (Qwen3-Coder 30B بـ32K، وDeepSeek-V3 بـ128K).',
           '**سطح الأدوات:** `read_file` و`write_to_file` و`replace_in_file` و`execute_command` و`list_files` و`search_files` و`browser_action` و`ask_followup_question` و`attempt_completion`. المجموعة صغيرة وموثقة جيداً؛ تستخدم مخططات الأدوات صيغة XML مخصصة يجب أن يصدرها النموذج بشكل صحيح.',
@@ -3894,9 +3894,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**نطاق المحرر هو المكان الذي تتباين فيه الأدوات الثلاث بشكل أوضح.** هذا هو البُعد الأهم لمعظم القراء؛ وهو أيضاً الأسهل في الاختبار خلال 10 دقائق.',
         items: [
           '**تطبيق Continue.dev** — VS Code Marketplace وJetBrains Marketplace. إصدار JetBrains حقيقي (IntelliJ وPyCharm وGoLand وWebStorm وغيرها) ومتكافئ بالميزات مع إصدار VS Code للإكمال التلقائي والدردشة. يمكن لمستخدمي Cursor تثبيت إضافة VS Code؛ السلوك مماثل لـVS Code.',
-          '**أداة Cline** — إضافة VS Code فقط. تعمل في Cursor (وهو fork من VS Code) لكنها غير مختبرة رسمياً؛ سطح الإضافة متطابق ومعظم المستخدمين لا يُبلغون عن مشكلات. مستخدمو JetBrains ليس لديهم خيار حالياً.',
+          '**أداة Cline** — VS Code Marketplace، بالإضافة إلى إضافة JetBrains (وصول مبكر تشمل IntelliJ وPyCharm وWebStorm وGoLand وAndroid Studio)، ونفس سطح الإضافة في Cursor وWindsurf (كلاهما fork من VS Code، ولم يُختبر أي منهما رسمياً). إصدار JetBrains أحدث من إصدار VS Code، وبالتالي أقل اختباراً في الاستخدام الفعلي.',
           '**أداة Aider** — موجهة للطرفية؛ تتكامل مع أي محرر بوجودها بجانبه. VS Code: افتح الطرفية المدمجة، شغّل Aider، حرر في لوحة المحرر بينما يودّع Aider. JetBrains: نفس النمط في طرفية JetBrains. Vim/Neovim: مقترن مع `:e!` لإعادة التحميل بعد commits Aider، هذا تدفق منتج. Cursor: مماثل لـVS Code.',
-          '**الانعكاس العملي لمستخدمي JetBrains:** Continue.dev أو Aider هما خياراك الوحيدان.',
+          '**الانعكاس العملي لمستخدمي JetBrains:** يبقى Continue.dev وAider الخيارين الأكثر نضجاً؛ إضافة JetBrains من Cline تعمل الآن أيضاً، لكنها في وصول مبكر — فتوقع خشونة أكبر مقارنة بإضافة VS Code.',
           '**الانعكاس العملي لمستخدمي Vim/Neovim:** Aider هو الخيار الطبيعي. لـContinue.dev تكاملات Neovim من المجتمع بنضج متفاوت؛ السطح الرسمي هو VS Code وJetBrains.',
         ],
       },
@@ -3947,7 +3947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'حالة الاستخدام': 'مستخدم بيئة تطوير JetBrains (IntelliJ وGoLand وPyCharm)',
             'الخيار الأفضل': 'Continue.dev أو Aider',
-            'السبب': 'Cline لـVS Code فقط',
+            'السبب': 'الأنضج؛ إضافة JetBrains من Cline في وصول مبكر',
           },
         ],
       },
@@ -3957,7 +3957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**خمسة أسئلة بالترتيب تقود معظم القراء إلى الاختيار الصحيح.**',
         items: [
-          '**1. هل أنت في JetBrains أو Vim أو تعمل عبر SSH؟** → إن نعم، أنت بين Continue.dev (JetBrains فقط) وAider (Vim/SSH). انتقل إلى السؤال 4. إن لا، تابع.',
+          '**1. هل أنت في JetBrains أو Vim أو تعمل عبر SSH؟** → إن نعم: لمستخدمي JetBrains، Continue.dev وAider هما الخياران الأنضج (لدى Cline إضافة JetBrains أيضاً، لكنها في وصول مبكر). لمستخدمي Vim/SSH: Aider. انتقل إلى السؤال 4. إن لا، تابع.',
           '**2. هل تريد وكيلاً مستقلاً يحرر ملفات متعددة في مهمة واحدة؟** → نعم: Cline. لا: تابع.',
           '**3. هل تريد إكمالاً تلقائياً مع لوحة دردشة مدمجة في بيئة التطوير؟** → نعم: Continue.dev. لا: تابع.',
           '**4. هل تراجع التغييرات بـ`git diff` وتريد أن يُودَع كل تحرير تلقائياً؟** → نعم: Aider. لا: Continue.dev (الخيار الافتراضي).',
@@ -4058,7 +4058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -4067,9 +4067,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
-    last_full_refresh: '2026-08-27',
-    next_refresh_due: '2027-02-27',
+    dateModified: '2026-11-19',
+    last_full_refresh: '2026-11-19',
+    next_refresh_due: '2027-05-19',
     designSkin: 'hub',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ko.webp',
@@ -4121,7 +4121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 도구 모두 OpenAI 호환 로컬 엔드포인트에서 작동합니다 — Ollama가 가장 간단한 경로이며, llama.cpp와 vLLM은 공급자 설정을 통해 호환됩니다.',
           '워크플로우 적합성이 원시 능력을 능가합니다. 터미널 지향 개발자를 Cline에 억지로 맞추거나(또는 VS Code 전용 개발자를 Aider에) 도구가 절약하는 것보다 더 많은 시간이 소요됩니다.',
         ],
-        updatedDate: '2026-08-27',
+        updatedDate: '2026-11-19',
       },
     },
     toc: [
@@ -4195,7 +4195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '기능': '주요 인터페이스',
             'Continue.dev': 'VS Code 및 JetBrains 확장',
-            'Cline': 'VS Code 확장',
+            'Cline': 'VS Code 확장 + JetBrains(초기 액세스)',
             'Aider': '터미널 CLI (모든 편집기와 나란히)',
           },
           {
@@ -4297,7 +4297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cline은 코드를 일련의 편집이 아닌 에이전트 작업으로 처리합니다.** 목표를 제시하면 계획하고, 파일을 읽고, 편집하고, 명령을 실행하며 각 단계를 승인하도록 요청합니다.',
         items: [
-          '**설치 경로:** VS Code Marketplace(JetBrains 버전 없음). 설정은 확장 패널 내 GUI를 통해 수행됩니다 — 공급자, 모델, 자동 승인 설정, 커스텀 지침.',
+          '**설치 경로:** VS Code Marketplace와 더불어 IntelliJ, PyCharm, WebStorm, GoLand 등을 지원하는 JetBrains 플러그인(얼리 액세스). 설정은 확장 패널 내 GUI를 통해 수행됩니다 — 공급자, 모델, 자동 승인 설정, 커스텀 지침.',
           '**워크플로우 원시 요소:** 명시적인 Plan 및 Act 모드를 갖춘 자율 에이전트 루프. Plan 모드는 파일 작성 없이 작업을 추론하고, Act 모드는 도구 호출로 계획을 실행합니다. 자동 승인 허용 목록에 도구를 추가하지 않는 한 단계 사이에 승인 게이트가 나타납니다.',
           '**로컬 모델 설정:** 모든 OpenAI 호환 엔드포인트. Ollama는 원클릭입니다. llama.cpp 또는 vLLM의 경우, Cline을 OpenAI 호환 서버 URL로 지정합니다. 에이전트 루프는 토큰을 많이 사용합니다 — 최소 32K 컨텍스트 윈도우의 모델을 사용하십시오(32K에서 Qwen3-Coder 30B, 128K에서 DeepSeek-V3).',
           '**도구 표면:** `read_file`, `write_to_file`, `replace_in_file`, `execute_command`, `list_files`, `search_files`, `browser_action`, `ask_followup_question`, `attempt_completion`. 세트는 작고 잘 문서화되어 있습니다. 도구 스키마는 모델이 올바르게 출력해야 하는 커스텀 XML 형식을 사용합니다.',
@@ -4410,9 +4410,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**편집기 범위는 세 도구가 가장 눈에 띄게 다른 곳입니다.** 이것은 대부분의 독자에게 가장 중요한 차원입니다. 또한 10분 안에 테스트하기 가장 쉬운 것입니다.',
         items: [
           '**Continue.dev** — VS Code Marketplace 및 JetBrains Marketplace. JetBrains 빌드는 실제이며(IntelliJ, PyCharm, GoLand, WebStorm 등) 자동완성과 채팅에 대해 VS Code 빌드와 기능 동등성을 갖습니다. Cursor 사용자는 VS Code 확장을 설치할 수 있으며 동작이 VS Code와 일치합니다.',
-          '**Cline** — VS Code 확장 전용. Cursor(VS Code 포크)에서 작동하지만 공식적으로 테스트되지 않았습니다. 확장 표면이 동일하고 대부분의 사용자가 문제를 보고하지 않습니다. JetBrains 사용자는 현재 옵션이 없습니다.',
+          '**Cline** — VS Code Marketplace와 더불어 IntelliJ, PyCharm, WebStorm, GoLand, Android Studio를 지원하는 JetBrains 플러그인(얼리 액세스), 그리고 Cursor와 Windsurf(둘 다 VS Code 포크, 공식 테스트 대상 아님)에서도 동일한 확장 화면이 동작합니다. JetBrains 빌드는 VS Code 빌드보다 더 최근에 나와 실전 검증이 아직 적습니다.',
           '**Aider** — 터미널 지향으로, 편집기 옆에 위치하여 모든 편집기와 통합됩니다. VS Code: 통합 터미널을 열고 Aider를 실행하며 Aider가 커밋하는 동안 편집기 패널에서 편집합니다. JetBrains: JetBrains 터미널의 동일한 패턴. Vim/Neovim: Aider 커밋 후 재로드를 위한 `:e!`와 결합하면 생산적인 워크플로우입니다. Cursor: VS Code와 동일합니다.',
-          '**JetBrains 사용자를 위한 실용적 시사점:** Continue.dev 또는 Aider만이 옵션입니다.',
+          '**JetBrains 사용자를 위한 실용적 시사점:** Continue.dev와 Aider가 여전히 가장 성숙한 선택지입니다. Cline의 JetBrains 플러그인도 이제 동작하지만 얼리 액세스 단계라 VS Code 확장보다 거칠게 느껴질 수 있습니다.',
           '**Vim/Neovim 사용자를 위한 실용적 시사점:** Aider가 자연스러운 선택입니다. Continue.dev는 가변적인 성숙도를 가진 커뮤니티 Neovim 통합이 있으며, 공식 표면은 VS Code와 JetBrains입니다.',
         ],
       },
@@ -4463,7 +4463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '사용 사례': 'JetBrains IDE(IntelliJ, GoLand, PyCharm) 사용자',
             '최선의 선택': 'Continue.dev 또는 Aider',
-            '이유': 'Cline은 VS Code 전용입니다',
+            '이유': '가장 성숙함; Cline의 JetBrains 플러그인은 얼리 액세스',
           },
         ],
       },
@@ -4473,7 +4473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**순서대로 다섯 가지 질문이 대부분의 독자를 올바른 선택으로 안내합니다.**',
         items: [
-          '**1. JetBrains, Vim에 있거나 SSH로 작업하고 있습니까?** → 그렇다면 Continue.dev(JetBrains 전용)와 Aider(Vim/SSH) 사이에 있습니다. Q4로 건너뛰십시오. 그렇지 않으면 계속하십시오.',
+          '**1. JetBrains, Vim에 있거나 SSH로 작업하고 있습니까?** → 그렇다면: JetBrains에서는 Continue.dev와 Aider가 가장 성숙한 선택지입니다(Cline도 JetBrains 플러그인이 있지만 얼리 액세스입니다). Vim/SSH에서는 Aider. Q4로 건너뛰십시오. 그렇지 않으면 계속하십시오.',
           '**2. 단일 작업에서 여러 파일을 편집하는 자율 에이전트를 원합니까?** → 예: Cline. 아니오: 계속하십시오.',
           '**3. IDE 통합 채팅 패널과 함께 자동완성을 원합니까?** → 예: Continue.dev. 아니오: 계속하십시오.',
           '**4. `git diff`로 변경 사항을 검토하며 각 편집이 자동으로 커밋되기를 원합니까?** → 예: Aider. 아니오: Continue.dev(기본 선택).',
@@ -4574,7 +4574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
