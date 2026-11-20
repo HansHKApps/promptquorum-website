@@ -10,10 +10,58 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "genoffice-review",
         "title": "GenOffice Review: Open-Source AI Office Suite for Word, Excel and PowerPoint Files",
         "url": "/power-local-llm/genoffice-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-multimodal-pipeline-voice-vision-text",
+        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
+        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
         "dateModified": "2026-11-20",
         "tier": "about"
       },
@@ -30,54 +78,6 @@
         "slug": "alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
         "title": "AutoDL Pricing 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU",
         "url": "/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
-        "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-whisper-metal-benchmark",
-        "title": "Whisper on Apple Silicon 2026: Metal Benchmarks, Core ML Setup, M1–M5 Speed Guide",
-        "url": "/local-llms/apple-silicon-whisper-metal-benchmark",
-        "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-arabic-local-llms-2026",
-        "title": "Best Arabic Local LLMs: Jais, Falcon & Running Arabic AI On-Premise (2026)",
-        "url": "/local-llms/best-arabic-local-llms-2026",
-        "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-business-writing",
-        "title": "Best Local LLMs for Writing Emails and Business Documents in 2026",
-        "url": "/local-llms/best-local-llms-business-writing",
-        "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-reasoning-model-deepseek-r1-2026",
-        "title": "Best Local Reasoning Model 2026: DeepSeek-R1 Ranked",
-        "url": "/local-llms/best-local-reasoning-model-deepseek-r1-2026",
-        "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "chatbox-review",
-        "title": "Chatbox Review: Free, Open-Source AI Chat Client for Desktop, Web and Mobile",
-        "url": "/local-llms/chatbox-review",
-        "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-11-19",
         "tier": "about"
       }
@@ -737,18 +737,18 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
-        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-11-07",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-03",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-11-07",
         "tier": "mentioned"
       },
       {
@@ -876,10 +876,26 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "genoffice-review",
         "title": "GenOffice Review: Open-Source AI Office Suite for Word, Excel and PowerPoint Files",
         "url": "/power-local-llm/genoffice-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
         "dateModified": "2026-11-20",
         "tier": "about"
       },
@@ -930,22 +946,6 @@
         "url": "/power-local-llm/askimo-review",
         "dateModified": "2026-11-18",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rtx-3090-local-llm-buy-or-rent",
-        "title": "RTX 3090 for Local LLMs in 2026: Should You Buy One or Rent One?",
-        "url": "/power-local-llm/rtx-3090-local-llm-buy-or-rent",
-        "dateModified": "2026-11-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "solomd-review",
-        "title": "SoloMD Review: Free Markdown Notes App with AI Chat for Local Models and MCP",
-        "url": "/power-local-llm/solomd-review",
-        "dateModified": "2026-11-18",
-        "tier": "about"
       }
     ],
     "totalCount": 195,
@@ -963,18 +963,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-app-non-technical-users",
-        "title": "Best Local AI App for Non-Technical Users (2026)",
-        "url": "/power-local-llm/local-ai-app-non-technical-users",
-        "dateModified": "2026-10-28",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "local-ai-app-non-technical-users",
+        "title": "Best Local AI App for Non-Technical Users (2026)",
+        "url": "/power-local-llm/local-ai-app-non-technical-users",
+        "dateModified": "2026-10-28",
         "tier": "about"
       },
       {
@@ -1275,6 +1275,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-mac",
         "title": "Best Local LLM Apps for Mac in 2026: LM Studio, Ollama, Jan and 5 More",
         "url": "/power-local-llm/best-local-llm-apps-mac",
@@ -1295,14 +1303,6 @@
         "title": "Best Local AI App for Non-Technical Users (2026)",
         "url": "/power-local-llm/local-ai-app-non-technical-users",
         "dateModified": "2026-10-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -1625,18 +1625,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-30",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -1706,7 +1706,15 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -1722,14 +1730,6 @@
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
       },
@@ -1835,18 +1835,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
-        "dateModified": "2026-11-13",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "slug": "local-ai-on-iphone-guide",
+        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
+        "url": "/power-local-llm/local-ai-on-iphone-guide",
+        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -1942,7 +1942,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -2008,7 +2008,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -2086,7 +2086,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
@@ -2133,6 +2133,14 @@
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
         "url": "/local-llms/open-webui-review",
         "dateModified": "2026-11-14",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -2189,14 +2197,6 @@
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
         "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2535,6 +2535,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "chatbox-review",
         "title": "Chatbox Review: Free, Open-Source AI Chat Client for Desktop, Web and Mobile",
         "url": "/local-llms/chatbox-review",
@@ -2555,14 +2563,6 @@
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
         "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2589,6 +2589,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "chatbox-review",
         "title": "Chatbox Review: Free, Open-Source AI Chat Client for Desktop, Web and Mobile",
         "url": "/local-llms/chatbox-review",
@@ -2601,14 +2609,6 @@
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-11-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-03",
         "tier": "about"
       },
       {
@@ -2630,7 +2630,7 @@
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-11-03",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -2779,6 +2779,38 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-models-tool-calling-2026",
+        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
+        "url": "/power-local-llm/best-local-models-tool-calling-2026",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "continue-dev-vs-cline-vs-aider-local",
         "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
         "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
@@ -2803,22 +2835,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-models-tool-calling-2026",
-        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
-        "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-with-mcp",
-        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
-        "url": "/power-local-llm/local-ai-agents-with-mcp",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "local-coding-llm-without-internet",
         "title": "Local Coding LLM Without Internet: Fully Offline Dev Setup (2026)",
         "url": "/power-local-llm/local-coding-llm-without-internet",
@@ -2831,22 +2847,6 @@
         "title": "Best Local LLM Frontends & Chat UIs in 2026: Open WebUI, Enchanted UI, and More",
         "url": "/local-llms/best-local-llm-frontends",
         "dateModified": "2026-10-31",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "deepseek-vs-qwen-coding-local-2026",
-        "title": "DeepSeek V4 vs Qwen3.8 for Local Coding 2026",
-        "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
-        "dateModified": "2026-10-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llms-with-vscode-cursor",
-        "title": "Local LLMs With VS Code and Cursor: Setup and Best Practices",
-        "url": "/local-llms/local-llms-with-vscode-cursor",
-        "dateModified": "2026-10-17",
         "tier": "about"
       }
     ],
@@ -2861,6 +2861,38 @@
         "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
         "url": "/power-local-llm/cline-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-models-tool-calling-2026",
+        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
+        "url": "/power-local-llm/best-local-models-tool-calling-2026",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -2881,25 +2913,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-models-tool-calling-2026",
-        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
-        "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "local-ai-agents-business-workflows-eu-compliance",
         "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
         "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-with-mcp",
-        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
-        "url": "/power-local-llm/local-ai-agents-with-mcp",
         "dateModified": "2026-11-06",
         "tier": "about"
       },
@@ -2917,22 +2933,6 @@
         "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
         "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
         "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
-        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
-        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
         "tier": "about"
       }
     ],
@@ -2986,6 +2986,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-ai-coding-assistant-local-llm",
         "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
@@ -3007,14 +3015,6 @@
         "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
         "url": "/power-local-llm/ollama-local-ai-review",
         "dateModified": "2026-10-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -3111,18 +3111,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-ide-plugins-2026",
-        "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
-        "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
-        "dateModified": "2026-10-17",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "best-local-llm-ide-plugins-2026",
+        "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
+        "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
+        "dateModified": "2026-10-17",
         "tier": "about"
       },
       {
@@ -3200,7 +3200,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -3268,7 +3268,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -3298,7 +3298,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -3317,6 +3317,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-ide-plugins-2026",
         "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
         "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
@@ -3329,14 +3337,6 @@
         "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
         "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline",
         "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
         "tier": "about"
       }
     ],
@@ -3355,6 +3355,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-models-tool-calling-2026",
+        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
+        "url": "/power-local-llm/best-local-models-tool-calling-2026",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "continue-dev-vs-cline-vs-aider-local",
         "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
         "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
@@ -3367,14 +3375,6 @@
         "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
         "url": "/power-local-llm/nativ-review",
         "dateModified": "2026-11-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-models-tool-calling-2026",
-        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
-        "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-11-06",
         "tier": "about"
       },
       {
@@ -3436,7 +3436,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -3518,7 +3518,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -3755,18 +3755,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-11-19",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
@@ -3841,18 +3841,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "dify-ai-workflow-builder-review",
-        "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
-        "url": "/power-local-llm/dify-ai-workflow-builder-review",
-        "dateModified": "2026-10-30",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -3919,18 +3919,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "openrag-review",
-        "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
-        "url": "/power-local-llm/openrag-review",
-        "dateModified": "2026-11-06",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "openrag-review",
+        "title": "OpenRAG Review: Open-Source Agentic RAG Platform",
+        "url": "/power-local-llm/openrag-review",
+        "dateModified": "2026-11-06",
         "tier": "about"
       },
       {
@@ -4339,10 +4339,10 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-30",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -4350,7 +4350,15 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "nanobot-review",
+        "title": "Nanobot Review: A Self-Hosted AI Agent Framework",
+        "url": "/power-local-llm/nanobot-review",
+        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -4394,14 +4402,6 @@
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "autonomous-local-agents-actually-work",
-        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
-        "url": "/power-local-llm/autonomous-local-agents-actually-work",
-        "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
         "cluster": "local-llms",
         "slug": "best-ai-agent-framework-2026",
         "title": "Best AI Agent Framework 2026: LangGraph vs CrewAI vs n8n",
@@ -4425,10 +4425,18 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -4469,14 +4477,6 @@
         "title": "Semantic Kernel Review: Features, Pricing, Alternatives",
         "url": "/power-local-llm/semantic-kernel-review",
         "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autonomous-local-agents-actually-work",
-        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
-        "url": "/power-local-llm/autonomous-local-agents-actually-work",
-        "dateModified": "2026-08-29",
         "tier": "about"
       },
       {
@@ -4560,7 +4560,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -4626,6 +4626,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-llm-observability-tools-2026",
         "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
@@ -4658,14 +4666,6 @@
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "autonomous-local-agents-actually-work",
-        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
-        "url": "/power-local-llm/autonomous-local-agents-actually-work",
-        "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
         "cluster": "local-llms",
         "slug": "best-ai-agent-framework-2026",
         "title": "Best AI Agent Framework 2026: LangGraph vs CrewAI vs n8n",
@@ -4683,17 +4683,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-ai-agents-business-workflows-eu-compliance",
-        "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
-        "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
-        "dateModified": "2026-11-06",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "pydantic-ai-review",
-        "title": "Pydantic AI Review: Features, Structured Outputs, Alternatives",
-        "url": "/power-local-llm/pydantic-ai-review",
+        "slug": "local-ai-agents-business-workflows-eu-compliance",
+        "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
+        "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
         "dateModified": "2026-11-06",
         "tier": "mentioned"
       }
@@ -4708,7 +4708,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -4727,18 +4727,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "browser-use-review",
-        "title": "Browser Use Review: Open-Source AI Browser Agent for Python",
-        "url": "/power-local-llm/browser-use-review",
-        "dateModified": "2026-11-19",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "browser-use-review",
+        "title": "Browser Use Review: Open-Source AI Browser Agent for Python",
+        "url": "/power-local-llm/browser-use-review",
+        "dateModified": "2026-11-19",
         "tier": "about"
       }
     ],
@@ -4790,7 +4790,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -4836,7 +4836,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -4906,7 +4906,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -4936,7 +4936,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -4966,7 +4966,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -5055,6 +5055,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nativ-review",
         "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
         "url": "/power-local-llm/nativ-review",
@@ -5067,14 +5075,6 @@
         "title": "PapersGPT Review: Zotero AI Plugin for PDF Chat, Library Search and MCP",
         "url": "/power-local-llm/papersgpt-review",
         "dateModified": "2026-11-18",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "skales-review",
-        "title": "Skales Review: AI Agent App With Your Own Key or Local Models",
-        "url": "/power-local-llm/skales-review",
-        "dateModified": "2026-11-17",
         "tier": "mentioned"
       }
     ],
@@ -5110,7 +5110,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -5196,7 +5196,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -5238,19 +5238,27 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-multimodal-pipeline-voice-vision-text",
+        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
+        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-whisper-metal-benchmark",
         "title": "Whisper on Apple Silicon 2026: Metal Benchmarks, Core ML Setup, M1–M5 Speed Guide",
         "url": "/local-llms/apple-silicon-whisper-metal-benchmark",
         "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -5295,14 +5303,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-multimodal-pipeline-voice-vision-text",
-        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
-        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "hilbertraum-review",
         "title": "HilbertRaum Review: A Portable, Offline AI Workspace for Chat and Your Own Documents",
         "url": "/power-local-llm/hilbertraum-review",
@@ -5325,18 +5325,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "whisper-cpp-review",
-        "title": "Whisper.cpp Review: Local Speech-to-Text in Pure C/C++",
-        "url": "/power-local-llm/whisper-cpp-review",
-        "dateModified": "2026-11-14",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "slug": "whisper-cpp-review",
+        "title": "Whisper.cpp Review: Local Speech-to-Text in Pure C/C++",
+        "url": "/power-local-llm/whisper-cpp-review",
+        "dateModified": "2026-11-14",
         "tier": "about"
       },
       {
@@ -5365,6 +5365,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-multimodal-pipeline-voice-vision-text",
+        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
+        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "openshorts-review",
         "title": "OpenShorts Review: Open-Source AI Clip Maker for Vertical Shorts",
         "url": "/power-local-llm/openshorts-review",
@@ -5386,14 +5394,6 @@
         "url": "/local-llms/apple-silicon-whisper-metal-benchmark",
         "dateModified": "2026-11-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "build-local-voice-assistant-2026",
-        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
-        "url": "/power-local-llm/build-local-voice-assistant-2026",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 19,
@@ -5407,6 +5407,14 @@
         "title": "Piper TTS Review: Fast, Local Neural Text-to-Speech",
         "url": "/power-local-llm/piper-tts-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-multimodal-pipeline-voice-vision-text",
+        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
+        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -5435,14 +5443,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-multimodal-pipeline-voice-vision-text",
-        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
-        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "openai-edge-tts-review",
         "title": "openai-edge-tts Review: A Free OpenAI-Compatible TTS Server",
         "url": "/power-local-llm/openai-edge-tts-review",
@@ -5462,7 +5462,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
@@ -5519,18 +5519,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
-        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
-        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
-        "dateModified": "2026-11-19",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "slug": "local-tts-voice-cloning-piper-coqui-xtts",
+        "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
+        "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
+        "dateModified": "2026-11-19",
         "tier": "about"
       },
       {
@@ -5691,6 +5691,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-tts-nvidia-gpu",
         "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
         "url": "/power-local-llm/best-local-tts-nvidia-gpu",
@@ -5703,14 +5711,6 @@
         "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
         "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
         "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -5777,6 +5777,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "kokoro-vs-elevenlabs",
         "title": "Kokoro vs ElevenLabs: Free Local TTS or Paid Cloud? (2026)",
         "url": "/power-local-llm/kokoro-vs-elevenlabs",
@@ -5789,14 +5797,6 @@
         "title": "Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)",
         "url": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
         "dateModified": "2026-11-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-voice-audio-compared",
-        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-        "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
         "tier": "about"
       },
       {
@@ -5827,6 +5827,14 @@
         "title": "LLaVA Review: The Research Model That Started Local Vision AI",
         "url": "/power-local-llm/llava-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -5879,14 +5887,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "mlc-chat-review",
         "title": "MLC Chat Review: The Mobile App Built on MLC LLM, Assessed Honestly",
         "url": "/power-local-llm/mlc-chat-review",
@@ -5917,18 +5917,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "idefics-review",
-        "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
-        "url": "/power-local-llm/idefics-review",
-        "dateModified": "2026-10-19",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "slug": "idefics-review",
+        "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
+        "url": "/power-local-llm/idefics-review",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -5966,7 +5966,7 @@
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -7123,6 +7123,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-image-generation-vs-cloud",
+        "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
+        "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "stable-diffusion-forge-review",
         "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
         "url": "/power-local-llm/stable-diffusion-forge-review",
@@ -7176,22 +7192,6 @@
         "url": "/power-local-llm/layla-review",
         "dateModified": "2026-10-30",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "haplo-ai-review",
-        "title": "Haplo AI Review: Offline Chat and Image App for iPhone and Mac",
-        "url": "/power-local-llm/haplo-ai-review",
-        "dateModified": "2026-10-24",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "galaxy-s26-local-ai-on-device-2026",
-        "title": "Running Local AI on the Galaxy S26: On-Device AI Explained (2026)",
-        "url": "/local-llms/galaxy-s26-local-ai-on-device-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
       }
     ],
     "totalCount": 38,
@@ -7205,6 +7205,38 @@
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
         "dateModified": "2026-11-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-image-generation-vs-cloud",
+        "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
+        "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -7246,38 +7278,6 @@
         "url": "/power-local-llm/draw-things-review",
         "dateModified": "2026-10-09",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stableswarmui-review",
-        "title": "SwarmUI Review: The Multi-GPU Stable Diffusion Web UI",
-        "url": "/power-local-llm/stableswarmui-review",
-        "dateModified": "2026-10-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tina-review",
-        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
-        "url": "/power-local-llm/tina-review",
-        "dateModified": "2026-10-04",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
     "totalCount": 27,
@@ -7291,6 +7291,14 @@
         "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
         "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -7335,14 +7343,6 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "controlnet-review",
         "title": "ControlNet Review: Structural Control for Stable Diffusion",
         "url": "/power-local-llm/controlnet-review",
@@ -7376,7 +7376,7 @@
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -7391,6 +7391,14 @@
         "title": "Fooocus Review: The Simplest Local Stable Diffusion UI",
         "url": "/power-local-llm/fooocus-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -7415,14 +7423,6 @@
         "title": "SwarmUI Review: The Multi-GPU Stable Diffusion Web UI",
         "url": "/power-local-llm/stableswarmui-review",
         "dateModified": "2026-10-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -7484,7 +7484,7 @@
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -7503,6 +7503,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "stable-diffusion-forge-review",
         "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
         "url": "/power-local-llm/stable-diffusion-forge-review",
@@ -7515,14 +7523,6 @@
         "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
         "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -7550,6 +7550,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-image-generation-vs-cloud",
+        "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
+        "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
@@ -7563,14 +7571,6 @@
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
         "dateModified": "2026-11-03",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "krita-ai-diffusion-review",
-        "title": "Krita AI Diffusion Review: Open-Source AI Painting Plugin",
-        "url": "/power-local-llm/krita-ai-diffusion-review",
-        "dateModified": "2026-10-30",
         "tier": "mentioned"
       }
     ],
@@ -7589,18 +7589,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "pcai-photo-retouch-review",
-        "title": "pcAI Photo Retouch Review: Offline Photo Restoration and Art Styles on iPhone and Mac",
-        "url": "/power-local-llm/pcai-photo-retouch-review",
-        "dateModified": "2026-10-16",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "slug": "pcai-photo-retouch-review",
+        "title": "pcAI Photo Retouch Review: Offline Photo Restoration and Art Styles on iPhone and Mac",
+        "url": "/power-local-llm/pcai-photo-retouch-review",
+        "dateModified": "2026-10-16",
         "tier": "mentioned"
       }
     ],
@@ -7622,23 +7622,23 @@
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-11-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-video-generation-vs-cloud",
-        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
-        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
         "slug": "local-ai-image-generation-vs-cloud",
         "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
         "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
-        "dateModified": "2026-08-21",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -8131,6 +8131,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "metagpt-agnai-risuai-explained",
         "title": "MetaGPT vs Agnai vs RisuAI: What Each AI Agent Tool Is Actually For",
         "url": "/power-local-llm/metagpt-agnai-risuai-explained",
@@ -8139,18 +8147,10 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "autonomous-local-agents-actually-work",
-        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
-        "url": "/power-local-llm/autonomous-local-agents-actually-work",
-        "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -8395,6 +8395,30 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-models-tool-calling-2026",
+        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
+        "url": "/power-local-llm/best-local-models-tool-calling-2026",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "orca-review",
         "title": "Orca Review: Open-Source Agent IDE for Parallel Coding Agents",
         "url": "/power-local-llm/orca-review",
@@ -8419,25 +8443,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-models-tool-calling-2026",
-        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
-        "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "local-ai-agents-business-workflows-eu-compliance",
         "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
         "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
-        "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-with-mcp",
-        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
-        "url": "/power-local-llm/local-ai-agents-with-mcp",
         "dateModified": "2026-11-06",
         "tier": "about"
       },
@@ -8447,14 +8455,6 @@
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
         "dateModified": "2026-10-30",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -8481,18 +8481,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-11-11",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
@@ -8606,7 +8606,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -8628,7 +8628,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -8658,7 +8658,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -8677,18 +8677,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atomic-chat-review",
-        "title": "Atomic Chat Review: Local AI, Agents, and API",
-        "url": "/power-local-llm/atomic-chat-review",
-        "dateModified": "2026-11-11",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "atomic-chat-review",
+        "title": "Atomic Chat Review: Local AI, Agents, and API",
+        "url": "/power-local-llm/atomic-chat-review",
+        "dateModified": "2026-11-11",
         "tier": "about"
       },
       {
@@ -8711,6 +8711,14 @@
         "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
         "url": "/power-local-llm/opencode-review",
         "dateModified": "2026-11-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -8775,14 +8783,6 @@
         "title": "Atomic Chat Review: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
         "dateModified": "2026-11-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tgpt-review",
-        "title": "tgpt Review: AI in Your Terminal, No API Key Required",
-        "url": "/power-local-llm/tgpt-review",
-        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],
@@ -8924,7 +8924,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -9216,7 +9216,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -9265,6 +9265,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-agents-business-workflows-eu-compliance",
         "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
         "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
@@ -9277,14 +9285,6 @@
         "title": "Self-Hosted AI Starter Kit Review: n8n + Ollama + Qdrant in One Compose File",
         "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
         "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -9467,6 +9467,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-on-android-guide",
         "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
         "url": "/power-local-llm/local-ai-on-android-guide",
@@ -9478,14 +9486,6 @@
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
       },
@@ -9554,7 +9554,7 @@
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -9598,7 +9598,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
@@ -9766,7 +9766,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -10023,18 +10023,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "picoclaw-review",
-        "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
-        "url": "/power-local-llm/picoclaw-review",
-        "dateModified": "2026-11-01",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "picoclaw-review",
+        "title": "PicoClaw Review: Open-Source AI Agent for Small Devices",
+        "url": "/power-local-llm/picoclaw-review",
+        "dateModified": "2026-11-01",
         "tier": "about"
       },
       {
@@ -10170,7 +10170,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -11082,9 +11082,17 @@
         "url": "/power-local-llm/modly-review",
         "dateModified": "2026-11-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Open Generative AI": {
@@ -11204,9 +11212,25 @@
         "url": "/power-local-llm/nanobrowser-review",
         "dateModified": "2026-11-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "CC Switch": {
@@ -11496,6 +11520,22 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-multimodal-pipeline-voice-vision-text",
+        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
+        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
         "title": "AutoDL Pricing 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU",
@@ -11549,22 +11589,6 @@
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-11-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llms-vs-claude-pro",
-        "title": "Local LLMs vs Claude Pro: Privacy, Cost, and Quality",
-        "url": "/local-llms/local-llms-vs-claude-pro",
-        "dateModified": "2026-11-15",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-amd-mini-pc-local-llm-2026",
-        "title": "Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared",
-        "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
-        "dateModified": "2026-11-14",
         "tier": "mentioned"
       }
     ],
@@ -11633,6 +11657,30 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "continue-dev-vs-cline-vs-aider-local",
         "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
         "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
@@ -11677,30 +11725,6 @@
         "title": "Local AI on Android in 2026: What Is Possible, What Is Not, and the Apps We Cover",
         "url": "/power-local-llm/local-ai-on-android-guide",
         "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
-        "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-ai-coding-assistant-local-llm",
-        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
-        "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-11-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-beginner-local-llm-models",
-        "title": "Best Beginner Local LLMs 2026: 4GB & 8GB RAM Models (Llama, Phi, Gemma, Qwen)",
-        "url": "/local-llms/best-beginner-local-llm-models",
-        "dateModified": "2026-11-09",
         "tier": "about"
       }
     ],
@@ -11944,7 +11968,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -12545,18 +12569,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-10-24",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "local-llm-run-serve-compared",
+        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
+        "url": "/power-local-llm/local-llm-run-serve-compared",
+        "dateModified": "2026-10-24",
         "tier": "mentioned"
       }
     ],
@@ -12670,9 +12694,17 @@
         "url": "/power-local-llm/openshorts-review",
         "dateModified": "2026-11-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Lexora": {
@@ -12939,10 +12971,10 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "fablecut-review",
-        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
-        "url": "/power-local-llm/fablecut-review",
-        "dateModified": "2026-11-18",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
@@ -12950,15 +12982,15 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "slug": "fablecut-review",
+        "title": "FableCut Review: The Browser Video Editor AI Agents Can Drive",
+        "url": "/power-local-llm/fablecut-review",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       }
     ],
@@ -12980,7 +13012,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -13002,7 +13034,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -13232,7 +13264,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -13308,7 +13340,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -13428,7 +13460,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
@@ -13558,7 +13590,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
@@ -13772,7 +13804,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -13824,7 +13856,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -13842,75 +13874,75 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "page-assist-review",
+        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
+        "url": "/local-llms/page-assist-review",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autonomous-local-agents-actually-work",
+        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
+        "url": "/power-local-llm/autonomous-local-agents-actually-work",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-models-tool-calling-2026",
+        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
+        "url": "/power-local-llm/best-local-models-tool-calling-2026",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-agents-with-mcp",
+        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
+        "url": "/power-local-llm/local-ai-agents-with-mcp",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-image-generation-vs-cloud",
+        "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
+        "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "nanobrowser-review",
         "title": "Nanobrowser Review: Free Open-Source AI Browser Agent for Chrome and Edge",
         "url": "/power-local-llm/nanobrowser-review",
         "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openshorts-review",
-        "title": "OpenShorts Review: Open-Source AI Clip Maker for Vertical Shorts",
-        "url": "/power-local-llm/openshorts-review",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "chatbox-review",
-        "title": "Chatbox Review: Free, Open-Source AI Chat Client for Desktop, Web and Mobile",
-        "url": "/local-llms/chatbox-review",
-        "dateModified": "2026-11-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-tts-nvidia-gpu",
-        "title": "Best Local TTS Engine for an NVIDIA GPU Setup (2026)",
-        "url": "/power-local-llm/best-local-tts-nvidia-gpu",
-        "dateModified": "2026-11-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-11-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cc-switch-review",
-        "title": "CC Switch Review: Provider Manager for AI Coding Tools",
-        "url": "/power-local-llm/cc-switch-review",
-        "dateModified": "2026-11-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chatterbox-vs-elevenlabs",
-        "title": "Is Chatterbox Free? Chatterbox vs ElevenLabs Compared (2026)",
-        "url": "/power-local-llm/chatterbox-vs-elevenlabs",
-        "dateModified": "2026-11-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "continue-dev-vs-cline-vs-aider-local",
-        "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
-        "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
-        "dateModified": "2026-11-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "elevenlabs-vs-local-tts-piper-xtts",
-        "title": "Local ElevenLabs Alternatives: Piper vs XTTS v2 (2026)",
-        "url": "/power-local-llm/elevenlabs-vs-local-tts-piper-xtts",
-        "dateModified": "2026-11-19",
         "tier": "mentioned"
       }
     ],
@@ -14064,7 +14096,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -14216,7 +14248,7 @@
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "dateModified": "2026-11-20",
         "tier": "about"
       },
       {
@@ -14298,7 +14330,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -14482,7 +14514,7 @@
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -14504,7 +14536,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
@@ -15722,7 +15754,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
@@ -15832,7 +15864,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -15904,7 +15936,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       },
       {
@@ -15934,7 +15966,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -15956,7 +15988,7 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
-        "dateModified": "2026-11-13",
+        "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
     ],
@@ -16574,9 +16606,25 @@
         "url": "/power-local-llm/pyvideotrans-review",
         "dateModified": "2026-11-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   }
 }

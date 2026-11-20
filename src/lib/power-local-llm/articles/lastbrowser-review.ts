@@ -376,7 +376,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Page Assist Review](/local-llms/page-assist-review) — a browser-extension sidebar that works with Ollama.",
           "[Sidekick Review](/power-local-llm/sidekick-review) — an unrelated, native macOS app for chatting with a local LLM.",
-          "[Local LLM Software Directory](/directory) — the full catalogue of local AI tools."
+          "[Local LLM Software Directory](/directory) — the full catalogue of local AI tools.",
+          "[Nanobrowser Review](/power-local-llm/nanobrowser-review) — a free open-source Chrome and Edge extension whose agent clicks and types in your own browser, with a cloud model or a local Ollama or LM Studio model."
         ]
       }
     },
@@ -821,7 +822,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Page-Assist-Rezension](/de/local-llms/page-assist-review) — eine Browser-Erweiterung mit Seitenleiste, die mit Ollama funktioniert.",
           "[Sidekick-Rezension](/de/power-local-llm/sidekick-review) — eine unabhängige, native macOS-App zum Chatten mit einem lokalen LLM.",
-          "[Verzeichnis lokaler LLM-Software](/de/directory) — der vollständige Katalog lokaler KI-Tools."
+          "[Verzeichnis lokaler LLM-Software](/de/directory) — der vollständige Katalog lokaler KI-Tools.",
+          "[Nanobrowser Rezension](/de/power-local-llm/nanobrowser-review) — eine kostenlose, quelloffene Chrome- und Edge-Erweiterung, deren Agent in Ihrem eigenen Browser klickt und tippt, mit Cloud-Modell oder lokalem Ollama- bzw. LM-Studio-Modell."
         ]
       }
     }
@@ -1194,7 +1196,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Reseña de Page Assist](/es/local-llms/page-assist-review) — una barra lateral en forma de extensión de navegador que funciona con Ollama.",
           "[Reseña de Sidekick](/es/power-local-llm/sidekick-review) — una app nativa de macOS, sin relación, para chatear con un LLM local.",
-          "[Directorio de software LLM local](/es/directory) — el catálogo completo de herramientas de IA local."
+          "[Directorio de software LLM local](/es/directory) — el catálogo completo de herramientas de IA local.",
+          "[Reseña de Nanobrowser](/es/power-local-llm/nanobrowser-review) — una extensión gratuita y de código abierto para Chrome y Edge cuyo agente hace clic y escribe en tu propio navegador, con un modelo en la nube o un modelo local de Ollama o LM Studio."
         ]
       }
     }
@@ -1567,7 +1570,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Test de Page Assist](/fr/local-llms/page-assist-review) — une barre latérale en extension de navigateur qui fonctionne avec Ollama.",
           "[Test de Sidekick](/fr/power-local-llm/sidekick-review) — une appli macOS native, sans rapport, pour discuter avec un LLM local.",
-          "[Répertoire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locale."
+          "[Répertoire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locale.",
+          "[Test de Nanobrowser](/fr/power-local-llm/nanobrowser-review) — une extension gratuite et open source pour Chrome et Edge dont l'agent clique et saisit du texte dans votre propre navigateur, avec un modèle cloud ou un modèle local Ollama ou LM Studio."
         ]
       }
     }
@@ -1940,7 +1944,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Page Assistレビュー](/ja/local-llms/page-assist-review) — Ollamaに対応する、ブラウザ拡張機能のサイドバー。",
           "[Sidekickレビュー](/ja/power-local-llm/sidekick-review) — ローカルLLMとチャットする、無関係なネイティブのmacOSアプリ。",
-          "[ローカルLLMソフトウェアディレクトリ](/ja/directory) — ローカルAIツールの全カタログ。"
+          "[ローカルLLMソフトウェアディレクトリ](/ja/directory) — ローカルAIツールの全カタログ。",
+          "[Nanobrowserレビュー](/ja/power-local-llm/nanobrowser-review) — ご自身のブラウザー内でエージェントがクリックや入力を行う、ChromeとEdge向けの無料オープンソース拡張機能。クラウドモデルまたはローカルのOllama・LM Studioモデルを使えます。"
         ]
       }
     }
@@ -2313,7 +2318,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Análise do Page Assist](/pt/local-llms/page-assist-review) — uma barra lateral em extensão de navegador que funciona com o Ollama.",
           "[Análise do Sidekick](/pt/power-local-llm/sidekick-review) — um app nativo para macOS, sem relação com o LastBrowser, para conversar com um LLM local.",
-          "[Diretório de software LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local."
+          "[Diretório de software LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local.",
+          "[Análise do Nanobrowser](/pt/power-local-llm/nanobrowser-review) — uma extensão gratuita e de código aberto para Chrome e Edge cujo agente clica e digita no seu próprio navegador, com um modelo na nuvem ou um modelo local do Ollama ou do LM Studio."
         ]
       }
     }
@@ -2686,7 +2692,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[مراجعة Page Assist](/ar/local-llms/page-assist-review) — شريط جانبي على شكل إضافة للمتصفح يعمل مع Ollama.",
           "[مراجعة Sidekick](/ar/power-local-llm/sidekick-review) — تطبيق macOS أصلي لا علاقة له بما سبق للدردشة مع نموذج لغوي محلي.",
-          "[دليل برمجيات النماذج المحلية](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية."
+          "[دليل برمجيات النماذج المحلية](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية.",
+          "[مراجعة Nanobrowser](/ar/power-local-llm/nanobrowser-review) — إضافة مجانية ومفتوحة المصدر لمتصفحي Chrome وEdge يقوم وكيلها بالنقر والكتابة في متصفحك أنت، بنموذج سحابي أو نموذج Ollama أو LM Studio محلي."
         ]
       }
     }
@@ -3059,7 +3066,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Page Assist 评测](/zh/local-llms/page-assist-review) — 可配合 Ollama 使用的浏览器扩展侧边栏。",
           "[Sidekick 评测](/zh/power-local-llm/sidekick-review) — 与之无关的原生 macOS 应用，用于与本地 LLM 聊天。",
-          "[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。"
+          "[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。",
+          "[Nanobrowser评测](/zh/power-local-llm/nanobrowser-review) — 适用于 Chrome 和 Edge 的免费开源扩展，其智能体在您自己的浏览器中点击和输入，可搭配云端模型或本地 Ollama、LM Studio 模型。"
         ]
       }
     }
@@ -3432,7 +3440,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Page Assist 리뷰](/ko/local-llms/page-assist-review) — Ollama와 함께 작동하는 브라우저 확장 프로그램 사이드바.",
           "[Sidekick 리뷰](/ko/power-local-llm/sidekick-review) — 로컬 LLM과 채팅하는, 관련 없는 네이티브 macOS 앱.",
-          "[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 로컬 AI 도구 전체 카탈로그."
+          "[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 로컬 AI 도구 전체 카탈로그.",
+          "[Nanobrowser 리뷰](/ko/power-local-llm/nanobrowser-review) — 에이전트가 내 브라우저에서 직접 클릭하고 입력하는 Chrome·Edge용 무료 오픈소스 확장으로, 클라우드 모델이나 로컬 Ollama·LM Studio 모델을 쓸 수 있습니다."
         ]
       }
     }
