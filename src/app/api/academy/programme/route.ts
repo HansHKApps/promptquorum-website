@@ -7,6 +7,7 @@ import { LESSON_QUIZ_SIZE, finalTestSize, generateProgramme, testMinutes } from 
 import { ACADEMY_TIMEOUT_MS, academyClient, academyFailure, academyGuard, academyJson } from '@/lib/academy/route'
 import { programmeRequestSchema } from '@/lib/academy/schemas'
 import { recordAcademyProgramme } from '@/lib/academy/usage'
+import { recordDemand } from '@/lib/academy/demand-store'
 
 export const runtime = 'nodejs'
 export const maxDuration = 60
@@ -18,6 +19,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   try {
     const { programme } = await generateProgramme(academyClient(), body, AbortSignal.timeout(ACADEMY_TIMEOUT_MS))
     await recordAcademyProgramme()
+    await recordDemand('programme', { subject: body.subject, language: body.language, level: body.selfLevel, minutes: body.availableMinutes, testMode: body.testMode })
     return academyJson({
       objectives: programme.objectives,
       lessons: programme.lessons,

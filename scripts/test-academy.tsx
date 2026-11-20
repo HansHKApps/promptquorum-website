@@ -25,6 +25,8 @@ import { getArticle } from '../src/lib/mcp/tools'
 import { balancedPick, generateQuiz, QuizShortError, topicPlan, verifyQuestions } from '../src/lib/academy/quiz'
 import { countingFinal, isCompleted, PASS_MARK, programmeScore, scoreQuiz } from '../src/lib/academy/scoring'
 
+import { classifySubject, isoWeekKey, normalizeSubject, demandLanguage, DEMAND_THEMES } from '../src/lib/academy/demand'
+
 let failed = 0
 const pending: Promise<void>[] = []
 const t = (name: string, fn: () => void | Promise<void>) => {
@@ -780,6 +782,31 @@ t('lessons: follow-up questions are capped at three and stripped of links', () =
   const f = finalizeLesson(o, [])
   assert.equal(f.followUpQuestions!.length, 3)
   assert.ok(f.followUpQuestions!.every((q) => !/https?:/.test(q)))
+})
+
+t('demand: subjects are normalised and personal-looking text is refused', () => {
+  assert.equal(normalizeSubject('  Quantization for Local LLMs!  '), 'quantization for local llms')
+  assert.equal(normalizeSubject('mail me at jane@example.com'), null)
+  assert.equal(normalizeSubject('see https://example.com/x'), null)
+  assert.equal(normalizeSubject('call 0049 170 1234567'), null)
+  assert.equal(normalizeSubject('x'), null)
+  assert.equal(normalizeSubject('a b c d e f g h i'), null)
+  assert.equal(normalizeSubject('x'.repeat(61)), null)
+  assert.equal(normalizeSubject('RTX 4090 setup'), 'rtx 4090 setup')
+})
+
+t('demand: themes classify and every theme key is unique', () => {
+  assert.equal(classifySubject('best gpu for ollama'), 'gpu-hardware')
+  assert.equal(classifySubject('prompt engineering basics'), 'prompt-engineering')
+  assert.equal(classifySubject('medieval history'), 'other')
+  assert.equal(new Set(DEMAND_THEMES.map((x) => x.key)).size, DEMAND_THEMES.length)
+})
+
+t('demand: week key and language bucket', () => {
+  assert.equal(isoWeekKey(new Date('2026-11-20T10:00:00Z')), '2026-W47')
+  assert.equal(isoWeekKey(new Date('2027-01-03T10:00:00Z')), '2026-W53')
+  assert.equal(demandLanguage('de'), 'de')
+  assert.equal(demandLanguage('custom:sw:0:Swahili'), 'other')
 })
 
 void Promise.all(pending).then(() => {if (failed) {
