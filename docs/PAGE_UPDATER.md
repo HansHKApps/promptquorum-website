@@ -442,6 +442,16 @@ This report serves as the audit trail for the update and prevents the "I think I
 **Wrong:** Updating facts and translations but never opening the raw HTML / JSON-LD of the page.
 **Why it fails:** the head, schema and alt text are generated from fields the content pass never reads (`schema:` overrides, `heroImage`, `relatedReading`, `howTo`). They drift silently — a review can describe version 2.0 while its schema still says `Thing`, its `og:image` is the site logo and its FAQPage lists one more question than the page shows. Step 4.8 exists so the refresh ends with what crawlers and answer engines actually receive.
 
+### 10. Status-Note Refresh
+**Wrong:** Adding a new dated status note at the top of a page while leaving contradicting statements in the body. Seen on the Brazil, China, and US-battery balcony-solar pages in November 2026: each page received an updated status paragraph, but older body sections still contained the figures the new note was superseding.
+**Why it fails:** the page reads as self-contradictory. A reader who scrolls past the status note hits statements that directly contradict it. Google reads the whole page and interprets the contradiction as low editorial quality. AI answer engines may extract the contradicting claim rather than the corrected note.
+**Fix:** a refresh that adds or updates a status note must also update every body section that the note renders obsolete. Use the §Batch and Delegated Refresh Runs rule h (Refresh depth) as the standard: check every section heading in the file and decide whether it needs an update. Never treat a status note as a substitute for a body pass.
+
+### 11. Visible Edit History
+**Wrong:** Leaving text like "an earlier version of this profile cited…", "this figure replaces the earlier untraceable figure in the previous section", or "see previous version for details" in published copy.
+**Why it fails:** these phrases repeat the unverified or incorrect claim, signal editorial unreliability, and persist in JSON-LD and AI-scraped text. A reader — or an AI answer engine — encountering "an earlier version cited X" now knows both the wrong figure X and the correction; the wrong figure is in the indexed content.
+**Fix:** edit silently. Remove the old claim and write the correct claim as if it were always there. Never explain what was removed or reference what a previous version said. If the correction is material enough to warrant disclosure (factual error affecting a purchasing decision), use a separate `{ type: 'note', text: '...' }` callout stating the current correct fact without mentioning the error. See `scripts/validate-edit-history-phrases.mjs` for automated detection.
+
 ---
 
 ## Batch and Delegated Refresh Runs
