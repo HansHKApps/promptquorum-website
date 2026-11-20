@@ -348,6 +348,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'inbox-zero':                             'inbox-zero',
   't3-code':                                't3-code',
   'browser-use':                            'browser-use',
+  'nanobrowser':                            'nanobrowser',
   'cc-switch':                              'cc-switch',
   'aqbot':                                  'aqbot',
   'oriveo':                                 'oriveo',

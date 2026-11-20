@@ -1154,6 +1154,11 @@
     "urlSlug": "browser-use-review",
     "url": "/power-local-llm/browser-use-review"
   },
+  "nanobrowser": {
+    "cluster": "power-local-llm",
+    "urlSlug": "nanobrowser-review",
+    "url": "/power-local-llm/nanobrowser-review"
+  },
   "cc-switch": {
     "cluster": "power-local-llm",
     "urlSlug": "cc-switch-review",

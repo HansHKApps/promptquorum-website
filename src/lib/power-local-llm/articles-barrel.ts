@@ -140,6 +140,7 @@ import { article as a_openwork_review } from './articles/openwork-review'
 import { article as a_airi_review } from './articles/airi-review'
 import { article as a_inbox_zero_review } from './articles/inbox-zero-review'
 import { article as a_browser_use_review } from './articles/browser-use-review'
+import { article as a_nanobrowser_review } from './articles/nanobrowser-review'
 import { article as a_cc_switch_review } from './articles/cc-switch-review'
 import { article as a_ultimate_vocal_remover_review } from './articles/ultimate-vocal-remover-review'
 import { article as a_skales_review } from './articles/skales-review'
@@ -918,6 +919,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'airi-review':                                   a_airi_review,
   'inbox-zero-review':                             a_inbox_zero_review,
   'browser-use-review':                            a_browser_use_review,
+  'nanobrowser-review':                            a_nanobrowser_review,
   'cc-switch-review':                              a_cc_switch_review,
   'ultimate-vocal-remover-review':                 a_ultimate_vocal_remover_review,
   'skales-review':                                 a_skales_review,
