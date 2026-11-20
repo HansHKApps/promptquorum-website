@@ -54,7 +54,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     en: {
       category: 'Prompt Engineering',
       title: '8 Prompt Engineering Frameworks Explained: CRAFT vs CO-STAR vs APE',
-      intro: 'Master the top prompt frameworks and learn which one works best for your use case.',
+      intro: 'Master the top prompt frameworks and learn which one fits.',
       publishDate: 'Published March 14, 2026',
       last_full_refresh: '2026-11-20',
       readTime: '8 min read',
@@ -97,7 +97,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. CO-STAR Framework',
-          content: 'Best for: Business communication, professional writing, decision-making. Credited to GovTech Singapore\'s Data Science & AI team and used to win Singapore\'s first GPT-4 prompt engineering competition ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
+          content: 'Best for: Business communication, professional writing, decision-making. Credited to GovTech Singapore\'s Data Science & AI team, whose officers use it in the agency\'s Prompt Engineering Playbook ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'The Fields:',
@@ -123,7 +123,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costarWhy: {
           title: 'Why It Works:',
-          content: 'CO-STAR separates style from tone (style is the presentation, tone is the emotion), which gives you much more control over how the AI writes. It\'s excellent for corporate or professional contexts where precision matters.',
+          content: 'CO-STAR separates style from tone (style is the presentation, tone is the emotion), which gives you more control over how the AI writes. It\'s excellent for corporate or professional contexts where precision matters.',
         },
         specs: {
           title: '3. SPECS Framework',
@@ -289,7 +289,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     ar: {
       category: 'Prompt Engineering',
       title: 'شرح 8 من أطر هندسة الأوامر: CRAFT مقابل CO-STAR مقابل APE',
-      intro: 'أتقن أفضل أطر الأوامر وتعرّف على أيّها يناسب حالة استخدامك.',
+      intro: 'أتقن أفضل أطر الأوامر واعرف أيّها يناسبك.',
       publishDate: 'نُشر في 14 مارس 2026',
       readTime: '8 دقائق للقراءة',
       heroComponent: 'FrameworkWheel',
@@ -331,7 +331,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. إطار CO-STAR',
-          content: 'الأنسب لـ: التواصل التجاري، الكتابة المهنية، اتخاذ القرار. يُنسب إلى فريق علوم البيانات والذكاء الاصطناعي في GovTech Singapore، وقد استُخدم للفوز بأول مسابقة لهندسة الأوامر مع GPT-4 في سنغافورة ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
+          content: 'الأنسب لـ: التواصل التجاري، الكتابة المهنية، اتخاذ القرار. يُنسب إلى فريق علوم البيانات والذكاء الاصطناعي في GovTech Singapore، ويستخدمه موظفو الوكالة في دليل هندسة الأوامر الخاص بها ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'الحقول:',
@@ -357,7 +357,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costarWhy: {
           title: 'لماذا ينجح:',
-          content: 'يفصل CO-STAR الأسلوب عن النبرة (الأسلوب هو طريقة العرض، والنبرة هي العاطفة)، مما يمنحك تحكماً أكبر بكثير في طريقة كتابة الذكاء الاصطناعي. وهو ممتاز للسياقات المؤسسية أو المهنية حيث تهمّ الدقة.',
+          content: 'يفصل CO-STAR الأسلوب عن النبرة (الأسلوب هو طريقة العرض، والنبرة هي العاطفة)، مما يمنحك تحكماً أكبر في طريقة كتابة الذكاء الاصطناعي. وهو ممتاز للسياقات المؤسسية أو المهنية حيث تهمّ الدقة.',
         },
         specs: {
           title: '3. إطار SPECS',
@@ -523,7 +523,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     de: {
       category: 'Prompt Engineering',
       title: '8 Prompt Engineering Frameworks erklärt: CRAFT vs CO-STAR vs APE',
-      intro: 'Meistern Sie die Top-Prompt-Frameworks und erfahren Sie, welcher für Ihren Anwendungsfall am besten geeignet ist.',
+      intro: 'Meistern Sie die Top-Prompt-Frameworks und finden Sie heraus, welcher für Sie passt.',
       publishDate: 'Veröffentlicht 14. März 2026',
       readTime: '8 min Lesezeit',
       heroComponent: 'FrameworkWheel',
@@ -565,7 +565,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. CO-STAR Framework',
-          content: 'Am besten für: Geschäftskommunikation, professionelles Schreiben, Entscheidungsfindung. Dem Data-Science-&-AI-Team von GovTech Singapur zugeschrieben und beim ersten GPT-4-Prompt-Engineering-Wettbewerb Singapurs eingesetzt, den es gewann ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
+          content: 'Am besten für: Geschäftskommunikation, professionelles Schreiben, Entscheidungsfindung. Dem Data-Science-&-AI-Team von GovTech Singapur zugeschrieben; die Mitarbeiter der Behörde nutzen es im Prompt-Engineering-Playbook der Agentur ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'Die Felder:',
@@ -591,7 +591,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costarWhy: {
           title: 'Warum es funktioniert:',
-          content: 'CO-STAR trennt Stil von Ton (Stil ist die Präsentation, Ton ist die Emotion), was Ihnen viel mehr Kontrolle über das Schreiben der KI gibt. Es ist ausgezeichnet für geschäftliche oder professionelle Kontexte, wo Genauigkeit wichtig ist.',
+          content: 'CO-STAR trennt Stil von Ton (Stil ist die Präsentation, Ton ist die Emotion), was Ihnen mehr Kontrolle über das Schreiben der KI gibt. Es ist ausgezeichnet für geschäftliche oder professionelle Kontexte, wo Genauigkeit wichtig ist.',
         },
         specs: {
           title: '3. SPECS Framework',
@@ -757,7 +757,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     fr: {
       category: 'Prompt Engineering',
       title: '8 frameworks d\'ingénierie des prompts expliqués : CRAFT vs CO-STAR vs APE',
-      intro: 'Maîtrisez les meilleurs frameworks de prompts et apprenez lequel convient le mieux à votre cas d\'utilisation.',
+      intro: 'Maîtrisez les meilleurs frameworks de prompts et trouvez lequel vous convient.',
       publishDate: 'Publié le 14 mars 2026',
       readTime: '8 min de lecture',
       heroComponent: 'FrameworkWheel',
@@ -799,7 +799,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. Framework CO-STAR',
-          content: 'Idéal pour : communication d\'entreprise, rédaction professionnelle, aide à la décision. Attribué à l\'équipe Data Science & AI de GovTech Singapour et utilisé pour remporter le premier concours de prompt engineering GPT-4 de Singapour ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
+          content: 'Idéal pour : communication d\'entreprise, rédaction professionnelle, aide à la décision. Attribué à l\'équipe Data Science & AI de GovTech Singapour, dont les agents l\'utilisent dans le Prompt Engineering Playbook de l\'agence ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'Les champs :',
@@ -825,7 +825,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costarWhy: {
           title: 'Pourquoi cela fonctionne :',
-          content: 'CO-STAR sépare le style du ton (le style est la présentation, le ton est l\'émotion), ce qui vous donne beaucoup plus de contrôle sur la façon dont l\'IA écrit. C\'est excellent pour les contextes d\'entreprise ou professionnels où la précision est importante.',
+          content: 'CO-STAR sépare le style du ton (le style est la présentation, le ton est l\'émotion), ce qui vous donne plus de contrôle sur la façon dont l\'IA écrit. C\'est excellent pour les contextes d\'entreprise ou professionnels où la précision est importante.',
         },
         specs: {
           title: '3. Framework SPECS',
@@ -991,7 +991,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     ja: {
       category: 'プロンプトエンジニアリング',
       title: '8つのプロンプトエンジニアリングフレームワーク解説：CRAFT vs CO-STAR vs APE',
-      intro: '主要なプロンプトフレームワークをマスターし、ユースケースに最適なものを学びましょう。',
+      intro: '主要なプロンプトフレームワークをマスターし、自分に合うものを見つけましょう。',
       publishDate: '2026年3月14日公開',
       readTime: '8分で読む',
       heroComponent: 'FrameworkWheel',
@@ -1033,7 +1033,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. CO-STARフレームワーク',
-          content: '向いている用途：ビジネスコミュニケーション、プロフェッショナルな文章作成、意思決定。シンガポール政府テック庁（GovTech Singapore）のData Science & AIチームによるものとされ、シンガポール初のGPT-4プロンプトエンジニアリングコンテストで優勝した際に使われました（[GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)）。',
+          content: '向いている用途：ビジネスコミュニケーション、プロフェッショナルな文章作成、意思決定。シンガポール政府テック庁（GovTech Singapore）のData Science & AIチームによるものとされており、同庁の職員がプロンプトエンジニアリングプレイブックで活用しています（[GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)）。',
         },
         costarFields: {
           title: 'フィールド：',
@@ -1059,7 +1059,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costarWhy: {
           title: 'なぜうまくいくのか：',
-          content: 'CO-STARはスタイルとトーンを分離します（スタイルはプレゼンテーション、トーンは感情）。これにより、AIがどのように書くかをはるかに多く制御できます。 企業や専門的なコンテキストで精度が重要な場合に優れています。',
+          content: 'CO-STARはスタイルとトーンを分離します（スタイルはプレゼンテーション、トーンは感情）。これにより、AIがどのように書くかをより細かく制御できます。 企業や専門的なコンテキストで精度が重要な場合に優れています。',
         },
         specs: {
           title: '3. SPECSフレームワーク',
@@ -1225,7 +1225,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     zh: {
       category: '提示词工程',
       title: '8个提示词工程框架解释：CRAFT vs CO-STAR vs APE',
-      intro: '掌握顶级提示词框架，学习哪一个最适合您的用例。',
+      intro: '掌握顶级提示词框架，找到最适合您的那一个。',
       publishDate: '发布于2026年3月14日',
       readTime: '8分钟阅读',
       heroComponent: 'FrameworkWheel',
@@ -1267,7 +1267,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. CO-STAR框架',
-          content: '适用场景：商务沟通、专业写作、决策。该框架被认为出自新加坡政府科技局（GovTech Singapore）的数据科学与AI团队，并曾用于赢得新加坡首届GPT-4提示工程竞赛（[GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)）。',
+          content: '适用场景：商务沟通、专业写作、决策。该框架被认为出自新加坡政府科技局（GovTech Singapore）的数据科学与AI团队，该机构的工作人员在其提示词工程手册中使用该框架（[GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)）。',
         },
         costarFields: {
           title: '字段：',
@@ -1459,7 +1459,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     es: {
       category: 'Ingeniería de Prompts',
       title: '8 Marcos de Ingeniería de Prompts Explicados: CRAFT vs CO-STAR vs APE',
-      intro: 'Domina los marcos de prompts principales y aprende cuál funciona mejor para tu caso de uso.',
+      intro: 'Domina los marcos de prompts principales y descubre cuál te conviene.',
       publishDate: 'Publicado el 14 de marzo de 2026',
       readTime: '8 min de lectura',
       heroComponent: 'FrameworkWheel',
@@ -1501,7 +1501,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. Marco CO-STAR',
-          content: 'Ideal para: comunicación empresarial, redacción profesional, toma de decisiones. Se atribuye al equipo de Data Science & AI de GovTech Singapur y se usó para ganar el primer concurso de prompt engineering con GPT-4 de Singapur ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
+          content: 'Ideal para: comunicación empresarial, redacción profesional, toma de decisiones. Se atribuye al equipo de Data Science & AI de GovTech Singapur, cuyos funcionarios lo utilizan en el Prompt Engineering Playbook de la agencia ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'Los Campos:',
@@ -1527,7 +1527,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costarWhy: {
           title: 'Por Qué Funciona:',
-          content: 'CO-STAR separa el estilo del tono (el estilo es la presentación, el tono es la emoción), lo que te da mucho más control sobre cómo escribe la IA. Es excelente para contextos empresariales o profesionales donde la precisión es importante.',
+          content: 'CO-STAR separa el estilo del tono (el estilo es la presentación, el tono es la emoción), lo que te da más control sobre cómo escribe la IA. Es excelente para contextos empresariales o profesionales donde la precisión es importante.',
         },
         specs: {
           title: '3. Marco SPECS',
@@ -1693,7 +1693,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     pt: {
       category: 'Engenharia de Prompts',
       title: '8 Frameworks de Engenharia de Prompts Explicados: CRAFT vs CO-STAR vs APE',
-      intro: 'Domine os principais frameworks de prompts e descubra qual funciona melhor para o seu caso de uso.',
+      intro: 'Domine os principais frameworks de prompts e descubra qual se encaixa para você.',
       publishDate: 'Publicado em 14 de março de 2026',
       readTime: '8 min de leitura',
       heroComponent: 'FrameworkWheel',
@@ -1735,7 +1735,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. Framework CO-STAR',
-          content: 'Ideal para: comunicação empresarial, redação profissional, tomada de decisões. Atribuído à equipe de Data Science & AI da GovTech Singapura e usado para vencer a primeira competição de prompt engineering com GPT-4 de Singapura ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
+          content: 'Ideal para: comunicação empresarial, redação profissional, tomada de decisões. Atribuído à equipe de Data Science & AI da GovTech Singapura, cujos funcionários o utilizam no Prompt Engineering Playbook da agência ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'Os Campos:',
@@ -1761,7 +1761,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costarWhy: {
           title: 'Por Que Funciona:',
-          content: 'O CO-STAR separa estilo de tom (estilo é a apresentação, tom é a emoção), o que lhe dá muito mais controle sobre como a IA escreve. É excelente para contextos empresariais ou profissionais onde a precisão importa.',
+          content: 'O CO-STAR separa estilo de tom (estilo é a apresentação, tom é a emoção), o que lhe dá mais controle sobre como a IA escreve. É excelente para contextos empresariais ou profissionais onde a precisão importa.',
         },
         specs: {
           title: '3. Framework SPECS',
@@ -1927,7 +1927,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     ko: {
       category: '프롬프트 엔지니어링',
       title: '8가지 프롬프트 엔지니어링 프레임워크 설명: CRAFT vs CO-STAR vs APE',
-      intro: '상위 프롬프트 프레임워크를 마스터하고 사용 사례에 가장 잘 맞는 것이 무엇인지 알아보세요.',
+      intro: '상위 프롬프트 프레임워크를 마스터하고 자신에게 맞는 것을 찾아보세요.',
       publishDate: '게시 2026년 3월 14일',
       readTime: '8분 읽기',
       heroComponent: 'FrameworkWheel',
@@ -1969,7 +1969,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. CO-STAR 프레임워크',
-          content: '적합한 용도: 비즈니스 커뮤니케이션, 전문적인 글쓰기, 의사결정. 싱가포르 GovTech의 Data Science & AI 팀이 만든 것으로 알려져 있으며, 싱가포르 최초의 GPT-4 프롬프트 엔지니어링 대회에서 우승하는 데 사용되었습니다([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
+          content: '적합한 용도: 비즈니스 커뮤니케이션, 전문적인 글쓰기, 의사결정. 싱가포르 GovTech의 Data Science & AI 팀이 만든 것으로 알려져 있으며, 해당 기관 직원들이 기관의 프롬프트 엔지니어링 플레이북에서 활용하고 있습니다([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: '필드:',
@@ -19183,7 +19183,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'The Problem with Trusting a Single AI Model',
           content: [
             'Every large language model produces outputs based on its training data, architecture, and inference parameters. When you ask one model a question and it returns a confident answer, you have no way to know whether that answer reflects broad knowledge consensus or a plausible-sounding fabrication.',
-            'This is not a flaw unique to any one model. Current large language models can hallucinate, producing false statements with the same fluency and confidence as accurate ones. Published benchmarks show rates that vary widely by model and task, so no model can be assumed immune.',
+            'This is not a flaw unique to any one model. Current large language models can hallucinate, producing false statements with the same fluency and confidence as accurate ones. Hallucination rates vary by model and task; check the benchmark you rely on.',
             'The single-model problem compounds in high-stakes situations: a medical query, a legal question, a financial calculation. If one model is wrong, you have no signal that it is wrong. The answer looks exactly like a correct one.',
           ],
         },
@@ -19262,7 +19262,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'What is consensus scoring in AI? — Consensus scoring is a technique that sends the same prompt to multiple AI models and analyses the pattern of agreement and disagreement across their responses to produce a reliability signal for each claim.',
             'How does PromptQuorum calculate consensus? — After collecting responses from multiple models in the Quorum step, your connected LLM runs analyses such as Atomic Facts, Overlap Mapping, Confidence Scoring, and Hallucination Detection to show which claims are shared, which are contested, and which appear in only one response. PromptQuorum never calls an LLM with its own API keys; the analysis runs through the LLM you connect.',
             'Is a high consensus score always correct? — No. High consensus is a reliability signal, not a guarantee. If a false claim appears in the training data of multiple models, all of them may confidently repeat it. Consensus scoring helps reduce hallucination risk; it does not eliminate it. Use it as a filter, not a replacement for primary-source verification in high-stakes decisions.',
-            'Which AI models does PromptQuorum use for consensus? — You choose. PromptQuorum supports 25+ cloud AI services including OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral, and Cohere, plus local models through Ollama, LM Studio, Jan AI, and any OpenAI-compatible endpoint. You configure which to include using your own API keys; local models run without sending data off your device.',
+            'Which AI models does PromptQuorum use for consensus? — You choose. PromptQuorum supports 25+ cloud AI services including OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral, and Cohere, plus local models through Ollama, LM Studio, Jan AI, and any OpenAI-compatible endpoint. You configure which to include using your own API keys; local models run on your own machine, so prompts sent to them do not go to a cloud provider.',
           ],
         },
       },
@@ -19290,7 +19290,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'مشكلة الوثوق بنموذج ذكاء اصطناعي واحد',
           content: [
             'ينتج كل نموذج لغوي كبير مخرجاته بناءً على بيانات تدريبه ومعماريته ومعاملات الاستدلال الخاصة به. وعندما تسأل نموذجًا واحدًا فيجيب بثقة، لا تملك وسيلة لمعرفة ما إذا كانت الإجابة تعكس توافقًا معرفيًا واسعًا أم اختلاقًا يبدو معقولًا.',
-            'هذا ليس عيبًا يخص نموذجًا بعينه. فالنماذج اللغوية الكبيرة الحالية قد تهلوس، فتنتج عبارات خاطئة بالطلاقة والثقة نفسها التي تنتج بها العبارات الصحيحة. وتُظهر الاختبارات المنشورة معدلات تتفاوت كثيرًا بحسب النموذج والمهمة، فلا يمكن افتراض أن أي نموذج بمنأى عن ذلك.',
+            'هذا ليس عيبًا يخص نموذجًا بعينه. فالنماذج اللغوية الكبيرة الحالية قد تهلوس، فتنتج عبارات خاطئة بالطلاقة والثقة نفسها التي تنتج بها العبارات الصحيحة. تتفاوت معدلات الهلوسة بحسب النموذج والمهمة؛ راجع المعيار الذي تعتمد عليه.',
             'تتفاقم مشكلة النموذج الواحد في المواقف عالية المخاطر: استفسار طبي أو مسألة قانونية أو حساب مالي. فإذا أخطأ نموذج ما فلن يصلك أي مؤشر على ذلك. تبدو الإجابة تمامًا كأي إجابة صحيحة.',
           ],
         },
@@ -19369,7 +19369,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'ما هو تسجيل التوافق في الذكاء الاصطناعي؟ — تقنية ترسل الأمر نفسه إلى عدة نماذج ذكاء اصطناعي وتحلّل نمط الاتفاق والاختلاف بين إجاباتها لإنتاج إشارة موثوقية لكل ادعاء.',
             'كيف يحسب PromptQuorum التوافق؟ — بعد جمع إجابات عدة نماذج في خطوة Quorum، يجري نموذج LLM المتصل لديك تحليلات مثل Atomic Facts وOverlap Mapping وConfidence Scoring واكتشاف الهلوسة ليُظهر أي الادعاءات مشتركة وأيها متنازع عليها وأيها يظهر في إجابة واحدة فقط. ولا يستدعي PromptQuorum أي LLM بمفاتيح API خاصة به؛ بل يجري التحليل عبر LLM الذي تربطه أنت.',
             'هل درجة التوافق المرتفعة صحيحة دائمًا؟ — لا. التوافق المرتفع إشارة موثوقية وليس ضمانًا. فإذا ظهر ادعاء خاطئ في بيانات تدريب عدة نماذج فقد تكرره جميعها بثقة. ويساعد تسجيل التوافق على تقليل خطر الهلوسة لكنه لا يلغيه. استخدمه مرشّحًا لا بديلًا عن التحقق من المصادر الأولية في القرارات عالية المخاطر.',
-            'ما نماذج الذكاء الاصطناعي التي يستخدمها PromptQuorum للتوافق؟ — أنت من يختار. يدعم PromptQuorum أكثر من 25 خدمة ذكاء اصطناعي سحابية، منها OpenAI وAnthropic Claude وGoogle Gemini وxAI Grok وDeepSeek وMistral وCohere، إضافة إلى نماذج محلية عبر Ollama وLM Studio وJan AI وأي نقطة نهاية متوافقة مع OpenAI. وتحدد بمفاتيح API الخاصة بك أيها تُضمَّن؛ وتعمل النماذج المحلية دون أن تغادر أي بيانات جهازك.',
+            'ما نماذج الذكاء الاصطناعي التي يستخدمها PromptQuorum للتوافق؟ — أنت من يختار. يدعم PromptQuorum أكثر من 25 خدمة ذكاء اصطناعي سحابية، منها OpenAI وAnthropic Claude وGoogle Gemini وxAI Grok وDeepSeek وMistral وCohere، إضافة إلى نماذج محلية عبر Ollama وLM Studio وJan AI وأي نقطة نهاية متوافقة مع OpenAI. وتحدد بمفاتيح API الخاصة بك أيها تُضمَّن؛ وتعمل النماذج المحلية على جهازك مباشرةً، فلا تصل الأوامر المرسلة إليها إلى أي مزوّد سحابي.',
           ],
         },
       },
@@ -19397,7 +19397,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Das Problem mit dem Vertrauen in ein einzelnes KI-Modell',
           content: [
             'Jedes große Sprachmodell erzeugt Ausgaben auf Grundlage seiner Trainingsdaten, seiner Architektur und seiner Inferenzparameter. Wenn Sie ein Modell befragen und es selbstsicher antwortet, können Sie nicht erkennen, ob die Antwort breites Wissen widerspiegelt oder eine plausibel klingende Erfindung ist.',
-            'Das ist kein Mangel eines einzelnen Modells. Aktuelle große Sprachmodelle können halluzinieren und falsche Aussagen mit derselben Flüssigkeit und Sicherheit formulieren wie richtige. Veröffentlichte Benchmarks zeigen stark schwankende Raten je nach Modell und Aufgabe; kein Modell ist davor gefeit.',
+            'Das ist kein Mangel eines einzelnen Modells. Aktuelle große Sprachmodelle können halluzinieren und falsche Aussagen mit derselben Flüssigkeit und Sicherheit formulieren wie richtige. Halluzinationsraten variieren je nach Modell und Aufgabe; prüfen Sie den Benchmark, dem Sie vertrauen.',
             'Das Einzelmodell-Problem verschärft sich in kritischen Situationen: einer medizinischen Frage, einer Rechtsfrage, einer Finanzberechnung. Liegt ein Modell falsch, erhalten Sie kein Warnsignal. Die Antwort sieht genauso aus wie eine richtige.',
           ],
         },
@@ -19476,7 +19476,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Was ist Konsens-Scoring in der KI? — Eine Technik, die denselben Prompt an mehrere KI-Modelle sendet und das Muster von Übereinstimmung und Abweichung in den Antworten analysiert, um für jede Aussage ein Zuverlässigkeitssignal zu erzeugen.',
             'Wie berechnet PromptQuorum den Konsens? — Nachdem im Quorum-Schritt die Antworten mehrerer Modelle gesammelt wurden, führt Ihr verbundenes LLM Analysen wie Atomic Facts, Overlap Mapping, Confidence Scoring und Halluzinationserkennung aus und zeigt, welche Aussagen geteilt, welche umstritten sind und welche nur in einer Antwort vorkommen. PromptQuorum ruft kein LLM mit eigenen API-Keys auf; die Analyse läuft über das LLM, das Sie verbinden.',
             'Ist ein hoher Konsens-Wert immer korrekt? — Nein. Hoher Konsens ist ein Zuverlässigkeitssignal, keine Garantie. Taucht eine falsche Aussage in den Trainingsdaten mehrerer Modelle auf, können alle sie selbstsicher wiederholen. Konsens-Scoring hilft, das Halluzinationsrisiko zu senken, beseitigt es aber nicht. Nutzen Sie es als Filter, nicht als Ersatz für die Prüfung von Primärquellen bei folgenreichen Entscheidungen.',
-            'Welche KI-Modelle nutzt PromptQuorum für den Konsens? — Sie entscheiden. PromptQuorum unterstützt über 25 Cloud-KI-Dienste, darunter OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral und Cohere, sowie lokale Modelle über Ollama, LM Studio, Jan AI und jeden OpenAI-kompatiblen Endpunkt. Sie legen mit Ihren eigenen API-Keys fest, welche einbezogen werden; lokale Modelle laufen, ohne dass Daten Ihr Gerät verlassen.',
+            'Welche KI-Modelle nutzt PromptQuorum für den Konsens? — Sie entscheiden. PromptQuorum unterstützt über 25 Cloud-KI-Dienste, darunter OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral und Cohere, sowie lokale Modelle über Ollama, LM Studio, Jan AI und jeden OpenAI-kompatiblen Endpunkt. Sie legen mit Ihren eigenen API-Keys fest, welche einbezogen werden; lokale Modelle laufen auf Ihrem eigenen Rechner, so dass Prompts, die an sie gesendet werden, keinen Cloud-Anbieter erreichen.',
           ],
         },
       },
@@ -19504,7 +19504,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Le problème de la confiance dans un seul modèle d’IA',
           content: [
             'Chaque grand modèle de langage produit ses sorties à partir de ses données d’entraînement, de son architecture et de ses paramètres d’inférence. Lorsque vous posez une question à un modèle et qu’il répond avec assurance, vous ne pouvez pas savoir si la réponse reflète un large consensus de connaissances ou une invention plausible.',
-            'Ce n’est pas un défaut propre à un modèle. Les grands modèles de langage actuels peuvent halluciner, en produisant des affirmations fausses avec la même aisance et la même assurance que des affirmations exactes. Les benchmarks publiés montrent des taux très variables selon le modèle et la tâche ; aucun modèle ne peut être supposé à l’abri.',
+            ‘Ce n’est pas un défaut propre à un modèle. Les grands modèles de langage actuels peuvent halluciner, en produisant des affirmations fausses avec la même aisance et la même assurance que des affirmations exactes. Les taux d’hallucination varient selon le modèle et la tâche ; vérifiez le benchmark sur lequel vous vous appuyez.’,
             'Le problème du modèle unique s’aggrave dans les situations à enjeux : une question médicale, une question juridique, un calcul financier. Si un modèle se trompe, rien ne vous le signale. La réponse ressemble exactement à une réponse correcte.',
           ],
         },
@@ -19583,7 +19583,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Qu’est-ce que le score de consensus en IA ? — Une technique qui envoie le même prompt à plusieurs modèles d’IA et analyse le schéma d’accord et de désaccord entre leurs réponses pour produire un signal de fiabilité pour chaque affirmation.',
             'Comment PromptQuorum calcule-t-il le consensus ? — Après avoir collecté les réponses de plusieurs modèles à l’étape Quorum, votre LLM connecté exécute des analyses comme Atomic Facts, Overlap Mapping, Confidence Scoring et détection des hallucinations pour montrer quelles affirmations sont partagées, lesquelles sont contestées et lesquelles n’apparaissent que dans une réponse. PromptQuorum n’appelle jamais un LLM avec ses propres clés API ; l’analyse passe par le LLM que vous connectez.',
             'Un score de consensus élevé est-il toujours correct ? — Non. Un consensus élevé est un signal de fiabilité, pas une garantie. Si une affirmation fausse figure dans les données d’entraînement de plusieurs modèles, tous peuvent la répéter avec assurance. Le score de consensus aide à réduire le risque d’hallucination, sans l’éliminer. Utilisez-le comme filtre, pas comme substitut à la vérification des sources primaires pour les décisions à fort enjeu.',
-            'Quels modèles d’IA PromptQuorum utilise-t-il pour le consensus ? — Vous choisissez. PromptQuorum prend en charge plus de 25 services d’IA cloud, dont OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral et Cohere, ainsi que des modèles locaux via Ollama, LM Studio, Jan AI et tout point d’accès compatible OpenAI. Vous configurez ceux à inclure avec vos propres clés API ; les modèles locaux s’exécutent sans que des données quittent votre appareil.',
+            ‘Quels modèles d’IA PromptQuorum utilise-t-il pour le consensus ? — Vous choisissez. PromptQuorum prend en charge plus de 25 services d’IA cloud, dont OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral et Cohere, ainsi que des modèles locaux via Ollama, LM Studio, Jan AI et tout point d’accès compatible OpenAI. Vous configurez ceux à inclure avec vos propres clés API ; les modèles locaux s’exécutent sur votre propre machine, de sorte que les prompts qui leur sont envoyés ne parviennent pas à un fournisseur cloud.’,
           ],
         },
       },
@@ -19611,7 +19611,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '単一のAIモデルを信頼する問題',
           content: [
             '大規模言語モデルは、学習データ、アーキテクチャ、推論パラメータに基づいて出力を生成します。1つのモデルに質問して自信のある回答が返ってきても、その回答が広い知識の合意を反映しているのか、もっともらしい作り話なのかを知る方法はありません。',
-            'これは特定のモデルに限った欠点ではありません。現在の大規模言語モデルはハルシネーションを起こすことがあり、正確な記述と同じ流暢さと自信で誤った記述を生成します。公開されているベンチマークでは、その割合はモデルやタスクによって大きく異なり、どのモデルも例外とは言えません。',
+            'これは特定のモデルに限った欠点ではありません。現在の大規模言語モデルはハルシネーションを起こすことがあり、正確な記述と同じ流暢さと自信で誤った記述を生成します。ハルシネーション率はモデルとタスクによって異なります。依拠するベンチマークを確認してください。',
             '単一モデルの問題は、医療の質問、法律の質問、金融の計算といった重要な場面で大きくなります。モデルが間違っていても、それを示すシグナルはありません。回答は正しい回答とまったく同じに見えます。',
           ],
         },
@@ -19690,7 +19690,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'AIにおけるコンセンサススコアとは？ — 同じプロンプトを複数のAIモデルに送り、回答間の一致と不一致のパターンを分析して、主張ごとに信頼性のシグナルを生成する手法です。',
             'PromptQuorumはどのようにコンセンサスを計算しますか？ — Quorumステップで複数のモデルの回答を集めた後、接続済みのLLMがAtomic Facts、Overlap Mapping、Confidence Scoring、ハルシネーション検出などの分析を実行し、共通する主張、争点となる主張、1つの回答にしか現れない主張を示します。PromptQuorumは自社のAPIキーでLLMを呼び出すことはなく、分析はユーザーが接続したLLMを通じて実行されます。',
             '高いコンセンサススコアは常に正しいですか？ — いいえ。高いコンセンサスは信頼性のシグナルであり、保証ではありません。誤った主張が複数のモデルの学習データに含まれていれば、すべてのモデルが自信を持ってそれを繰り返す可能性があります。コンセンサススコアはハルシネーションのリスクを減らす助けになりますが、なくすことはできません。重要な判断では、一次情報での検証の代わりではなくフィルターとして使ってください。',
-            'コンセンサスにはどのAIモデルを使いますか？ — 選ぶのはユーザーです。PromptQuorumは、OpenAI、Anthropic Claude、Google Gemini、xAI Grok、DeepSeek、Mistral、Cohereなど25以上のクラウドAIサービスに加え、Ollama、LM Studio、Jan AI、OpenAI互換のエンドポイント経由のローカルモデルに対応しています。含めるモデルは自分のAPIキーで設定します。ローカルモデルはデータがデバイスの外に出ずに動作します。',
+            'コンセンサスにはどのAIモデルを使いますか？ — 選ぶのはユーザーです。PromptQuorumは、OpenAI、Anthropic Claude、Google Gemini、xAI Grok、DeepSeek、Mistral、Cohereなど25以上のクラウドAIサービスに加え、Ollama、LM Studio、Jan AI、OpenAI互換のエンドポイント経由のローカルモデルに対応しています。含めるモデルは自分のAPIキーで設定します。ローカルモデルは自分のマシン上で動作するため、そこに送ったプロンプトがクラウドプロバイダーに届くことはありません。',
           ],
         },
       },
@@ -19718,7 +19718,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'El problema de confiar en un solo modelo de IA',
           content: [
             'Cada modelo de lenguaje grande produce sus resultados a partir de sus datos de entrenamiento, su arquitectura y sus parámetros de inferencia. Cuando preguntas algo a un modelo y responde con seguridad, no tienes forma de saber si la respuesta refleja un amplio consenso de conocimiento o una invención verosímil.',
-            'No es un defecto exclusivo de un modelo. Los modelos de lenguaje grandes actuales pueden alucinar y producir afirmaciones falsas con la misma fluidez y seguridad que las correctas. Los benchmarks publicados muestran tasas que varían mucho según el modelo y la tarea, así que no se puede dar por supuesto que ninguno sea inmune.',
+            'No es un defecto exclusivo de un modelo. Los modelos de lenguaje grandes actuales pueden alucinar y producir afirmaciones falsas con la misma fluidez y seguridad que las correctas. Las tasas de alucinación varían según el modelo y la tarea; consulta el benchmark en el que te apoyas.',
             'El problema del modelo único se agrava en situaciones de alto riesgo: una consulta médica, una cuestión legal, un cálculo financiero. Si un modelo se equivoca, nada te avisa. La respuesta se ve exactamente igual que una correcta.',
           ],
         },
@@ -19797,7 +19797,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '¿Qué es la puntuación de consenso en IA? — Una técnica que envía el mismo prompt a varios modelos de IA y analiza el patrón de acuerdo y desacuerdo entre sus respuestas para producir una señal de fiabilidad para cada afirmación.',
             '¿Cómo calcula PromptQuorum el consenso? — Tras recopilar las respuestas de varios modelos en el paso Quorum, tu LLM conectado ejecuta análisis como Atomic Facts, Overlap Mapping, Confidence Scoring y detección de alucinaciones para mostrar qué afirmaciones son compartidas, cuáles son discutidas y cuáles aparecen en una sola respuesta. PromptQuorum nunca llama a un LLM con sus propias claves API; el análisis se ejecuta a través del LLM que conectas.',
             '¿Una puntuación de consenso alta siempre es correcta? — No. Un consenso alto es una señal de fiabilidad, no una garantía. Si una afirmación falsa aparece en los datos de entrenamiento de varios modelos, todos pueden repetirla con seguridad. La puntuación de consenso ayuda a reducir el riesgo de alucinación, pero no lo elimina. Úsala como filtro, no como sustituto de la verificación en fuentes primarias en decisiones de alto riesgo.',
-            '¿Qué modelos de IA usa PromptQuorum para el consenso? — Tú eliges. PromptQuorum admite más de 25 servicios de IA en la nube, entre ellos OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral y Cohere, además de modelos locales mediante Ollama, LM Studio, Jan AI y cualquier endpoint compatible con OpenAI. Configuras cuáles incluir con tus propias claves API; los modelos locales se ejecutan sin que ningún dato salga de tu dispositivo.',
+            '¿Qué modelos de IA usa PromptQuorum para el consenso? — Tú eliges. PromptQuorum admite más de 25 servicios de IA en la nube, entre ellos OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral y Cohere, además de modelos locales mediante Ollama, LM Studio, Jan AI y cualquier endpoint compatible con OpenAI. Configuras cuáles incluir con tus propias claves API; los modelos locales se ejecutan en tu propia máquina, por lo que los prompts enviados a ellos no llegan a ningún proveedor de nube.',
           ],
         },
       },
@@ -19825,7 +19825,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '只信任单个AI模型的问题',
           content: [
             '每个大语言模型都根据其训练数据、架构和推理参数生成输出。当你向一个模型提问并得到一个自信的回答时，你无从判断这个回答反映的是广泛的知识共识，还是听起来合理的编造。',
-            '这并不是某个模型独有的缺陷。当前的大语言模型都可能产生幻觉，会以与准确陈述同样的流畅度和自信度给出错误陈述。已发布的基准测试显示，幻觉比例因模型和任务差异很大，不能假定任何模型不受影响。',
+            '这并不是某个模型独有的缺陷。当前的大语言模型都可能产生幻觉，会以与准确陈述同样的流畅度和自信度给出错误陈述。幻觉率因模型和任务而异；请查阅你所依据的基准测试。',
             '单模型问题在高风险场景中会被放大：医疗问题、法律问题、财务计算。如果一个模型出错，你得不到任何出错的信号，答案看起来与正确答案毫无二致。',
           ],
         },
@@ -19904,7 +19904,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'AI中的共识评分是什么？ — 一种把同一个提示词发送给多个AI模型，并分析它们回答之间一致与分歧的模式，从而为每条说法生成可靠性信号的技术。',
             'PromptQuorum如何计算共识？ — 在Quorum步骤收集多个模型的回答后，你连接的LLM会运行Atomic Facts、Overlap Mapping、Confidence Scoring和幻觉检测等分析，显示哪些说法是共有的、哪些存在争议、哪些只出现在一个回答中。PromptQuorum从不使用自己的API密钥调用LLM；分析通过你连接的LLM运行。',
             '高共识分数一定正确吗？ — 不一定。高共识是可靠性信号，而不是保证。如果某个错误说法出现在多个模型的训练数据中，所有模型都可能自信地重复它。共识评分有助于降低幻觉风险，但不能消除它。请把它当作过滤器，而不是在高风险决策中替代一手资料核实。',
-            'PromptQuorum使用哪些AI模型来计算共识？ — 由你选择。PromptQuorum支持25个以上云端AI服务，包括OpenAI、Anthropic Claude、Google Gemini、xAI Grok、DeepSeek、Mistral和Cohere，以及通过Ollama、LM Studio、Jan AI和任何兼容OpenAI的端点运行的本地模型。你用自己的API密钥配置要纳入哪些模型；本地模型运行时数据不会离开你的设备。',
+            'PromptQuorum使用哪些AI模型来计算共识？ — 由你选择。PromptQuorum支持25个以上云端AI服务，包括OpenAI、Anthropic Claude、Google Gemini、xAI Grok、DeepSeek、Mistral和Cohere，以及通过Ollama、LM Studio、Jan AI和任何兼容OpenAI的端点运行的本地模型。你用自己的API密钥配置要纳入哪些模型；本地模型在你自己的机器上运行，因此发送给它们的提示词不会到达任何云服务商。',
           ],
         },
       },
@@ -19932,7 +19932,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'O problema de confiar em um único modelo de IA',
           content: [
             'Cada modelo de linguagem grande produz suas saídas com base nos dados de treinamento, na arquitetura e nos parâmetros de inferência. Quando você faz uma pergunta a um modelo e ele responde com confiança, não há como saber se a resposta reflete um amplo consenso de conhecimento ou uma invenção plausível.',
-            'Isso não é uma falha exclusiva de um modelo. Os modelos de linguagem grandes atuais podem alucinar, produzindo afirmações falsas com a mesma fluência e confiança das corretas. Benchmarks publicados mostram taxas que variam muito conforme o modelo e a tarefa, então nenhum modelo pode ser presumido imune.',
+            'Isso não é uma falha exclusiva de um modelo. Os modelos de linguagem grandes atuais podem alucinar, produzindo afirmações falsas com a mesma fluência e confiança das corretas. As taxas de alucinação variam conforme o modelo e a tarefa; verifique o benchmark em que você se baseia.',
             'O problema do modelo único se agrava em situações de alto risco: uma dúvida médica, uma questão jurídica, um cálculo financeiro. Se um modelo erra, nada avisa você. A resposta parece exatamente igual a uma correta.',
           ],
         },
@@ -20011,7 +20011,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'O que é pontuação de consenso em IA? — Uma técnica que envia o mesmo prompt a vários modelos de IA e analisa o padrão de concordância e discordância entre as respostas para produzir um sinal de confiabilidade para cada afirmação.',
             'Como o PromptQuorum calcula o consenso? — Depois de coletar as respostas de vários modelos na etapa Quorum, seu LLM conectado executa análises como Atomic Facts, Overlap Mapping, Confidence Scoring e detecção de alucinações para mostrar quais afirmações são compartilhadas, quais são contestadas e quais aparecem em apenas uma resposta. O PromptQuorum nunca chama um LLM com chaves de API próprias; a análise roda pelo LLM que você conecta.',
             'Uma pontuação de consenso alta está sempre correta? — Não. Consenso alto é um sinal de confiabilidade, não uma garantia. Se uma afirmação falsa aparece nos dados de treinamento de vários modelos, todos podem repeti-la com confiança. A pontuação de consenso ajuda a reduzir o risco de alucinação, mas não o elimina. Use-a como filtro, não como substituto da verificação em fontes primárias em decisões de alto risco.',
-            'Quais modelos de IA o PromptQuorum usa para o consenso? — Você escolhe. O PromptQuorum oferece suporte a mais de 25 serviços de IA em nuvem, incluindo OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral e Cohere, além de modelos locais via Ollama, LM Studio, Jan AI e qualquer endpoint compatível com OpenAI. Você configura quais incluir com suas próprias chaves de API; modelos locais rodam sem que nenhum dado saia do seu dispositivo.',
+            'Quais modelos de IA o PromptQuorum usa para o consenso? — Você escolhe. O PromptQuorum oferece suporte a mais de 25 serviços de IA em nuvem, incluindo OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral e Cohere, além de modelos locais via Ollama, LM Studio, Jan AI e qualquer endpoint compatível com OpenAI. Você configura quais incluir com suas próprias chaves de API; modelos locais rodam na sua própria máquina, de modo que os prompts enviados a eles não chegam a nenhum provedor de nuvem.',
           ],
         },
       },
@@ -20039,7 +20039,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '단일 AI 모델을 신뢰하는 것의 문제',
           content: [
             '모든 대규모 언어 모델은 학습 데이터, 아키텍처, 추론 매개변수를 바탕으로 출력을 생성합니다. 한 모델에 질문하고 자신 있는 답변을 받더라도, 그 답이 폭넓은 지식의 합의를 반영하는지 그럴듯한 지어낸 이야기인지 알 방법이 없습니다.',
-            '이것은 특정 모델만의 결함이 아닙니다. 현재의 대규모 언어 모델은 환각을 일으킬 수 있으며, 정확한 진술과 같은 유창함과 자신감으로 틀린 진술을 만들어 냅니다. 공개된 벤치마크에 따르면 그 비율은 모델과 작업에 따라 크게 달라지므로 어떤 모델도 예외라고 가정할 수 없습니다.',
+            '이것은 특정 모델만의 결함이 아닙니다. 현재의 대규모 언어 모델은 환각을 일으킬 수 있으며, 정확한 진술과 같은 유창함과 자신감으로 틀린 진술을 만들어 냅니다. 환각 발생률은 모델과 작업에 따라 다르므로, 의존하는 벤치마크를 직접 확인하십시오.',
             '단일 모델의 문제는 의료 질문, 법률 질문, 금융 계산 같은 위험이 큰 상황에서 더 커집니다. 모델이 틀려도 그것을 알려 주는 신호가 없습니다. 답변은 올바른 답변과 똑같이 보입니다.',
           ],
         },
@@ -20118,7 +20118,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'AI에서 합의 점수란 무엇입니까? — 같은 프롬프트를 여러 AI 모델에 보내 답변 간 일치와 불일치의 패턴을 분석하여 주장별 신뢰성 신호를 만드는 기법입니다.',
             'PromptQuorum은 합의를 어떻게 계산합니까? — Quorum 단계에서 여러 모델의 답변을 수집한 뒤, 연결된 LLM이 Atomic Facts, Overlap Mapping, Confidence Scoring, 환각 탐지 같은 분석을 실행하여 어떤 주장이 공유되고, 논쟁적이며, 하나의 답변에만 나타나는지 보여 줍니다. PromptQuorum은 자체 API 키로 LLM을 호출하지 않으며, 분석은 사용자가 연결한 LLM을 통해 실행됩니다.',
             '높은 합의 점수는 항상 정확합니까? — 아닙니다. 높은 합의는 신뢰성 신호이지 보장이 아닙니다. 잘못된 주장이 여러 모델의 학습 데이터에 있다면 모든 모델이 자신 있게 그것을 반복할 수 있습니다. 합의 점수는 환각 위험을 줄이는 데 도움이 되지만 없애지는 못합니다. 위험이 큰 결정에서는 1차 자료 검증을 대체하는 것이 아니라 필터로 사용하십시오.',
-            '합의를 위해 PromptQuorum은 어떤 AI 모델을 사용합니까? — 사용자가 선택합니다. PromptQuorum은 OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral, Cohere를 포함한 25개 이상의 클라우드 AI 서비스와, Ollama, LM Studio, Jan AI, OpenAI 호환 엔드포인트를 통한 로컬 모델을 지원합니다. 포함할 모델은 직접 발급받은 API 키로 설정하며, 로컬 모델은 데이터가 기기 밖으로 나가지 않고 실행됩니다.',
+            '합의를 위해 PromptQuorum은 어떤 AI 모델을 사용합니까? — 사용자가 선택합니다. PromptQuorum은 OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral, Cohere를 포함한 25개 이상의 클라우드 AI 서비스와, Ollama, LM Studio, Jan AI, OpenAI 호환 엔드포인트를 통한 로컬 모델을 지원합니다. 포함할 모델은 직접 발급받은 API 키로 설정하며, 로컬 모델은 사용자의 자체 머신에서 실행되므로 로컬 모델에 전송된 프롬프트는 클라우드 제공업체에 전달되지 않습니다.',
           ],
         },
       },
@@ -20178,7 +20178,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         privacy: {
           title: 'Privacy and GDPR',
           content: [
-            'PromptQuorum is built for GDPR-conscious use: API keys are stored locally in your browser, PromptQuorum never calls an LLM with its own keys, no account is required during the beta, and analytics run only after consent via a consent banner. This describes the product design, not a legal guarantee of compliance for your use case.',
+            'PromptQuorum is built for GDPR-conscious use: API keys are stored locally in your browser, and PromptQuorum never calls an LLM with its own keys. This describes the product design, not a legal guarantee of compliance for your use case.',
             'AskQuorum AI’s homepage links to Privacy, Terms, and Security pages and says an NDA is signed before technical discussions; it does not mention GDPR on the pages we reviewed. If you handle personal data, ask the company directly for its data-processing terms.',
           ],
         },
@@ -20200,15 +20200,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Bottom Line',
           content: [
             'PromptQuorum is a privacy-conscious, multi-model prompt tool built in Germany for professionals: it lets you send one prompt to 25+ AI services, including local models, apply prompt engineering frameworks, and compare responses with Quorum analysis.',
-            'AskQuorum AI describes itself as an AI development company in India that builds custom AI applications, automation, and assistants for business clients.',
-            'They are different kinds of offering for different needs: PromptQuorum is software you use yourself, while AskQuorum AI sells development services. Compare them against your own requirements, and confirm AskQuorum AI’s details with the company, since this page relies on its public website at the time of writing.',
+            ‘AskQuorum AI describes itself as an AI development company in India that builds custom AI applications, automation, and assistants for business clients.’,
+            ‘If you need a custom-built assistant or application delivered by a development team, AskQuorum AI\’s service model addresses that and PromptQuorum does not.’,
+            ‘They are different kinds of offering for different needs: PromptQuorum is software you use yourself, while AskQuorum AI sells development services. Compare them against your own requirements, and confirm AskQuorum AI’s details with the company, since this page relies on its public website at the time of writing.’,
           ],
         },
       },
     },
     ar: {
-      category: 'مقارنة',
-      title: 'PromptQuorum مقابل AskQuorum AI — ما الفرق؟',
+      category: ‘مقارنة’,
+      title: ‘PromptQuorum مقابل AskQuorum AI — ما الفرق؟’,
       intro: 'اسمان متشابهان، ونوعان مختلفان من المنتجات. إليك عرضًا واقعيًا لما هو PromptQuorum ولما تقول AskQuorum AI إنها تقدّمه على موقعها الإلكتروني، لتتمكن من التمييز بينهما.',
       publishDate: 'نُشر في 17 مارس 2026',
       seoTitle: 'PromptQuorum مقابل AskQuorum AI: أوجه الاختلاف',
@@ -20258,7 +20259,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         privacy: {
           title: 'الخصوصية وGDPR',
           content: [
-            'صُمم PromptQuorum لاستخدام يراعي GDPR: تُخزَّن مفاتيح API محليًا في متصفحك، ولا يستدعي PromptQuorum أي LLM بمفاتيح خاصة به، ولا يلزم حساب أثناء البيتا، ولا تعمل التحليلات إلا بعد الموافقة عبر لافتة الموافقة. وهذا يصف تصميم المنتج لا ضمانًا قانونيًا للامتثال في حالة استخدامك.',
+            'صُمم PromptQuorum لاستخدام يراعي GDPR: تُخزَّن مفاتيح API محليًا في متصفحك، ولا يستدعي PromptQuorum أي LLM بمفاتيح خاصة به. وهذا يصف تصميم المنتج لا ضمانًا قانونيًا للامتثال في حالة استخدامك.',
             'تربط الصفحة الرئيسية لـ AskQuorum AI بصفحات الخصوصية والشروط والأمان وتذكر توقيع اتفاقية عدم إفصاح قبل المناقشات التقنية؛ ولا تذكر GDPR في الصفحات التي راجعناها. وإذا كنت تعالج بيانات شخصية فاطلب من الشركة مباشرة شروط معالجة البيانات لديها.',
           ],
         },
@@ -20281,6 +20282,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'PromptQuorum أداة أوامر متعددة النماذج تراعي الخصوصية، بُنيت في ألمانيا للمحترفين: تتيح إرسال أمر واحد إلى أكثر من 25 خدمة ذكاء اصطناعي، بما فيها النماذج المحلية، وتطبيق أطر هندسة الأوامر ومقارنة الاستجابات بتحليل Quorum.',
             'تصف AskQuorum AI نفسها بأنها شركة تطوير ذكاء اصطناعي في الهند تبني تطبيقات ذكاء اصطناعي مخصصة وأتمتة ومساعدين لعملاء من الشركات.',
+            'إذا كنت بحاجة إلى مساعد أو تطبيق مخصص تبنيه فريق تطوير، فإن نموذج خدمة AskQuorum AI يلبّي ذلك بينما لا يفعله PromptQuorum.',
             'هما عرضان من نوعين مختلفين لاحتياجات مختلفة: PromptQuorum برنامج تستخدمه بنفسك، بينما تبيع AskQuorum AI خدمات تطوير. قارن بينهما وفق متطلباتك، وتأكد من تفاصيل AskQuorum AI لدى الشركة، لأن هذه الصفحة تعتمد على موقعها العام وقت الكتابة.',
           ],
         },
@@ -20338,7 +20340,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         privacy: {
           title: 'Privacidad y RGPD',
           content: [
-            'PromptQuorum está pensado para un uso atento al RGPD: las claves API se guardan localmente en tu navegador, PromptQuorum nunca llama a un LLM con claves propias, no hace falta cuenta durante la beta y las analíticas solo se ejecutan tras el consentimiento mediante un banner. Esto describe el diseño del producto, no una garantía jurídica de cumplimiento para tu caso de uso.',
+            'PromptQuorum está pensado para un uso atento al RGPD: las claves API se guardan localmente en tu navegador, y PromptQuorum nunca llama a un LLM con claves propias. Esto describe el diseño del producto, no una garantía jurídica de cumplimiento para tu caso de uso.',
             'La página de inicio de AskQuorum AI enlaza páginas de Privacidad, Términos y Seguridad y dice que se firma un NDA antes de las conversaciones técnicas; no menciona el RGPD en las páginas que revisamos. Si tratas datos personales, pide directamente a la empresa sus condiciones de tratamiento de datos.',
           ],
         },
@@ -20361,6 +20363,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'PromptQuorum es una herramienta de prompts multimodelo, atenta a la privacidad, creada en Alemania para profesionales: permite enviar un prompt a más de 25 servicios de IA, incluidos modelos locales, aplicar frameworks de prompt engineering y comparar respuestas con el análisis Quorum.',
             'AskQuorum AI se describe como una empresa de desarrollo de IA en la India que crea aplicaciones de IA a medida, automatización y asistentes para clientes empresariales.',
+            'Si necesitas un asistente o una aplicación a medida que entregue un equipo de desarrollo, el modelo de servicio de AskQuorum AI cubre eso y PromptQuorum no.',
             'Son ofertas de distinta naturaleza para necesidades distintas: PromptQuorum es software que usas tú mismo, mientras que AskQuorum AI vende servicios de desarrollo. Compáralos con tus propios requisitos y confirma con la empresa los detalles de AskQuorum AI, ya que esta página se basa en su sitio público en el momento de redactarla.',
           ],
         },
@@ -20418,7 +20421,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         privacy: {
           title: 'Datenschutz und DSGVO',
           content: [
-            'PromptQuorum ist für einen DSGVO-bewussten Einsatz gebaut: API-Keys werden lokal in Ihrem Browser gespeichert, PromptQuorum ruft kein LLM mit eigenen Keys auf, während der Beta ist kein Konto erforderlich, und Analysen laufen erst nach Einwilligung über ein Einwilligungsbanner. Das beschreibt das Produktdesign, keine rechtliche Garantie der Konformität für Ihren Anwendungsfall.',
+            'PromptQuorum ist für einen DSGVO-bewussten Einsatz gebaut: API-Keys werden lokal in Ihrem Browser gespeichert, und PromptQuorum ruft kein LLM mit eigenen Keys auf. Das beschreibt das Produktdesign, keine rechtliche Garantie der Konformität für Ihren Anwendungsfall.',
             'Die Startseite von AskQuorum AI verlinkt Seiten zu Datenschutz, Nutzungsbedingungen und Sicherheit und nennt eine NDA vor technischen Gesprächen; auf den von uns geprüften Seiten wird die DSGVO nicht erwähnt. Wenn Sie personenbezogene Daten verarbeiten, fragen Sie das Unternehmen direkt nach seinen Auftragsverarbeitungsbedingungen.',
           ],
         },
@@ -20441,6 +20444,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'PromptQuorum ist ein datenschutzbewusstes Multi-Modell-Prompt-Tool aus Deutschland für Fachleute: Sie senden einen Prompt an über 25 KI-Dienste, auch lokale Modelle, nutzen Prompt-Engineering-Frameworks und vergleichen Antworten mit der Quorum-Analyse.',
             'AskQuorum AI beschreibt sich selbst als KI-Entwicklungsunternehmen in Indien, das individuelle KI-Anwendungen, Automatisierung und Assistenten für Geschäftskunden baut.',
+            'Wenn Sie einen maßgeschneiderten Assistenten oder eine Anwendung benötigen, die von einem Entwicklungsteam geliefert wird, deckt das Servicemodell von AskQuorum AI genau das ab — PromptQuorum hingegen nicht.',
             'Es sind verschiedene Angebote für verschiedene Bedürfnisse: PromptQuorum ist Software, die Sie selbst nutzen, AskQuorum AI verkauft Entwicklungsleistungen. Vergleichen Sie beide mit Ihren eigenen Anforderungen und bestätigen Sie die Angaben zu AskQuorum AI beim Unternehmen, da diese Seite auf dessen öffentlicher Website zum Zeitpunkt der Erstellung beruht.',
           ],
         },
@@ -20498,7 +20502,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         privacy: {
           title: 'Confidentialité et RGPD',
           content: [
-            'PromptQuorum est conçu pour un usage attentif au RGPD : les clés API sont stockées localement dans votre navigateur, PromptQuorum n’appelle jamais un LLM avec ses propres clés, aucun compte n’est requis pendant la bêta et les mesures d’audience ne s’exécutent qu’après consentement via un bandeau. Cela décrit la conception du produit, pas une garantie juridique de conformité pour votre cas d’usage.',
+            ‘PromptQuorum est conçu pour un usage attentif au RGPD : les clés API sont stockées localement dans votre navigateur, et PromptQuorum n’appelle jamais un LLM avec ses propres clés. Cela décrit la conception du produit, pas une garantie juridique de conformité pour votre cas d’usage.’,
             'La page d’accueil d’AskQuorum AI renvoie vers des pages Confidentialité, Conditions et Sécurité et indique qu’un accord de confidentialité est signé avant tout échange technique ; elle ne mentionne pas le RGPD sur les pages que nous avons examinées. Si vous traitez des données personnelles, demandez directement à l’entreprise ses conditions de traitement des données.',
           ],
         },
@@ -20520,8 +20524,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'En résumé',
           content: [
             'PromptQuorum est un outil de prompts multi-modèles, attentif à la confidentialité, conçu en Allemagne pour les professionnels : il permet d’envoyer un prompt à plus de 25 services d’IA, y compris des modèles locaux, d’appliquer des frameworks de prompt engineering et de comparer les réponses avec l’analyse Quorum.',
-            'AskQuorum AI se décrit comme une entreprise de développement d’IA en Inde qui conçoit pour des clients professionnels des applications d’IA sur mesure, de l’automatisation et des assistants.',
-            'Ce sont des offres de nature différente pour des besoins différents : PromptQuorum est un logiciel que vous utilisez vous-même, tandis qu’AskQuorum AI vend des services de développement. Comparez-les à vos propres exigences et confirmez auprès de l’entreprise les informations sur AskQuorum AI, car cette page s’appuie sur son site public au moment de la rédaction.',
+            ‘AskQuorum AI se décrit comme une entreprise de développement d’IA en Inde qui conçoit pour des clients professionnels des applications d’IA sur mesure, de l’automatisation et des assistants.’,
+            ‘Si vous avez besoin d’un assistant ou d’une application sur mesure livré par une équipe de développement, le modèle de service d’AskQuorum AI répond à ce besoin — ce que PromptQuorum ne fait pas.’,
+            ‘Ce sont des offres de nature différente pour des besoins différents : PromptQuorum est un logiciel que vous utilisez vous-même, tandis qu’AskQuorum AI vend des services de développement. Comparez-les à vos propres exigences et confirmez auprès de l’entreprise les informations sur AskQuorum AI, car cette page s’appuie sur son site public au moment de la rédaction.’,
           ],
         },
       },
@@ -20578,7 +20583,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         privacy: {
           title: 'プライバシーとGDPR',
           content: [
-            'PromptQuorumはGDPRを意識した利用を前提に作られています。APIキーはブラウザにローカル保存され、PromptQuorumが自社のキーでLLMを呼び出すことはなく、ベータ期間中はアカウントが不要で、分析は同意バナーでの同意後にのみ実行されます。これは製品設計の説明であり、お客様のユースケースでの適合を法的に保証するものではありません。',
+            'PromptQuorumはGDPRを意識した利用を前提に作られています。APIキーはブラウザにローカル保存され、PromptQuorumが自社のキーでLLMを呼び出すことはありません。これは製品設計の説明であり、お客様のユースケースでの適合を法的に保証するものではありません。',
             'AskQuorum AIのトップページには、プライバシー、利用規約、セキュリティのページへのリンクがあり、技術的な議論の前にNDAを締結すると記載されていますが、確認したページにはGDPRへの言及がありません。個人データを扱う場合は、同社にデータ処理条件を直接確認してください。',
           ],
         },
@@ -20601,6 +20606,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'PromptQuorumは、ドイツで開発された、プライバシーに配慮したマルチモデル型のプロンプトツールで、専門家向けです。1つのプロンプトをローカルモデルを含む25以上のAIサービスに送り、プロンプトエンジニアリングのフレームワークを適用し、Quorum分析で回答を比較できます。',
             'AskQuorum AIは、インドのAI開発会社として、法人顧客向けにカスタムAIアプリケーション、自動化、アシスタントを開発していると説明しています。',
+            '開発チームが納品するカスタムアシスタントやアプリケーションが必要な場合、AskQuorum AIのサービスモデルがそれに対応しており、PromptQuorumは対応していません。',
             '両者は異なるニーズに応える異なる種類の提供物です。PromptQuorumは自分で使うソフトウェアで、AskQuorum AIは開発サービスを販売しています。ご自身の要件と照らして比較し、AskQuorum AIの詳細は、このページが執筆時点の同社公開サイトに基づいているため、同社に確認してください。',
           ],
         },
@@ -20658,7 +20664,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         privacy: {
           title: '隐私与GDPR',
           content: [
-            'PromptQuorum为注重GDPR的使用场景而设计：API密钥保存在你的浏览器本地，PromptQuorum从不使用自己的密钥调用LLM，测试期间无需账号，分析仅在通过同意横幅获得同意后运行。这描述的是产品设计，而非对你的具体用例合规的法律保证。',
+            'PromptQuorum为注重GDPR的使用场景而设计：API密钥保存在你的浏览器本地，PromptQuorum从不使用自己的密钥调用LLM。这描述的是产品设计，而非对你的具体用例合规的法律保证。',
             'AskQuorum AI的首页链接到隐私、条款和安全页面，并称在技术讨论之前会签署保密协议；在我们查阅的页面中没有提及GDPR。如果你处理个人数据，请直接向该公司索取其数据处理条款。',
           ],
         },
@@ -20681,6 +20687,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'PromptQuorum是在德国打造的、注重隐私的多模型提示词工具，面向专业人士：可将一个提示词发送给25个以上AI服务（包括本地模型），应用提示工程框架，并通过Quorum分析比较回答。',
             'AskQuorum AI自称是一家印度的AI开发公司，为企业客户构建定制AI应用、自动化和助手。',
+            '如果你需要由开发团队交付的定制助手或应用，AskQuorum AI的服务模式可以满足这一需求，而PromptQuorum不能。',
             '它们是满足不同需求的不同类型的产品：PromptQuorum是你自己使用的软件，而AskQuorum AI销售开发服务。请对照你自己的需求进行比较，并向该公司确认AskQuorum AI的详细信息，因为本文依据的是撰写时其公开网站的内容。',
           ],
         },
@@ -20738,7 +20745,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         privacy: {
           title: 'Privacidade e GDPR',
           content: [
-            'O PromptQuorum foi feito para uso atento ao GDPR: as chaves de API ficam armazenadas localmente no seu navegador, o PromptQuorum nunca chama um LLM com chaves próprias, não é preciso conta durante a beta e as análises só rodam após consentimento por um banner. Isso descreve o projeto do produto, não uma garantia jurídica de conformidade para o seu caso de uso. No Brasil, a LGPD e a ANPD tratam da proteção de dados pessoais, com regime próprio.',
+            'O PromptQuorum foi feito para uso atento ao GDPR: as chaves de API ficam armazenadas localmente no seu navegador, e o PromptQuorum nunca chama um LLM com chaves próprias. Isso descreve o projeto do produto, não uma garantia jurídica de conformidade para o seu caso de uso.',
             'A página inicial da AskQuorum AI tem links para páginas de Privacidade, Termos e Segurança e diz que um NDA é assinado antes das conversas técnicas; ela não menciona o GDPR nas páginas que revisamos. Se você trata dados pessoais, peça diretamente à empresa seus termos de tratamento de dados.',
           ],
         },
@@ -20761,6 +20768,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'O PromptQuorum é uma ferramenta de prompts multimodelo, atenta à privacidade, criada na Alemanha para profissionais: permite enviar um prompt a mais de 25 serviços de IA, incluindo modelos locais, aplicar frameworks de prompt engineering e comparar respostas com a análise Quorum.',
             'A AskQuorum AI se descreve como uma empresa de desenvolvimento de IA na Índia que cria aplicações de IA sob medida, automação e assistentes para clientes empresariais.',
+            'Se você precisa de um assistente ou aplicativo sob medida entregue por uma equipe de desenvolvimento, o modelo de serviço da AskQuorum AI atende a isso e o PromptQuorum não.',
             'São ofertas de natureza diferente para necessidades diferentes: o PromptQuorum é um software que você mesmo usa, enquanto a AskQuorum AI vende serviços de desenvolvimento. Compare-os com os seus próprios requisitos e confirme com a empresa os detalhes da AskQuorum AI, pois esta página se baseia no site público dela no momento da redação.',
           ],
         },
@@ -20818,7 +20826,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         privacy: {
           title: '개인정보 보호와 GDPR',
           content: [
-            'PromptQuorum은 GDPR을 고려한 사용을 염두에 두고 만들어졌습니다. API 키는 브라우저에 로컬로 저장되고, PromptQuorum은 자체 키로 LLM을 호출하지 않으며, 베타 기간에는 계정이 필요 없고, 분석은 동의 배너를 통해 동의한 뒤에만 실행됩니다. 이는 제품 설계에 대한 설명이며, 사용자의 사용 사례에 대한 법적 적합성을 보장하는 것은 아닙니다.',
+            'PromptQuorum은 GDPR을 고려한 사용을 염두에 두고 만들어졌습니다. API 키는 브라우저에 로컬로 저장되고, PromptQuorum은 자체 키로 LLM을 호출하지 않습니다. 이는 제품 설계에 대한 설명이며, 사용자의 사용 사례에 대한 법적 적합성을 보장하는 것은 아닙니다.',
             'AskQuorum AI 홈페이지에는 개인정보, 약관, 보안 페이지 링크가 있고 기술 논의 전에 NDA를 체결한다고 밝히지만, 저희가 검토한 페이지에는 GDPR 언급이 없습니다. 개인정보를 처리한다면 해당 회사에 데이터 처리 조건을 직접 문의하십시오.',
           ],
         },
@@ -20841,6 +20849,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'PromptQuorum은 독일에서 만든, 개인정보 보호를 중시하는 전문가용 다중 모델 프롬프트 도구입니다. 하나의 프롬프트를 로컬 모델을 포함한 25개 이상의 AI 서비스에 보내고, 프롬프트 엔지니어링 프레임워크를 적용하며, Quorum 분석으로 응답을 비교할 수 있습니다.',
             'AskQuorum AI는 스스로를 인도의 AI 개발 회사로 소개하며, 기업 고객을 위한 맞춤형 AI 애플리케이션, 자동화, 어시스턴트를 만든다고 설명합니다.',
+            '개발 팀이 납품하는 맞춤형 어시스턴트나 애플리케이션이 필요하다면 AskQuorum AI의 서비스 모델이 그 역할을 하며, PromptQuorum은 그렇지 않습니다.',
             '둘은 서로 다른 요구에 맞춘 다른 종류의 제공물입니다. PromptQuorum은 직접 사용하는 소프트웨어이고, AskQuorum AI는 개발 서비스를 판매합니다. 자신의 요구 사항에 맞춰 비교하고, 이 페이지는 작성 시점의 공개 웹사이트에 근거하므로 AskQuorum AI의 세부 사항은 해당 회사에 확인하십시오.',
           ],
         },
@@ -29557,7 +29566,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Utah’s HB 340 (signed March 2025, effective 7 May 2025) was first, exempting devices up to 1,200W from utility interconnection rules; the UL 3700 safety standard it relies on was published in December 2025.',
             'California’s SB 868 was signed on 30 September 2026 and takes effect on 1 January 2027; as signed, it caps devices at 1,200W AC per dwelling and its interconnection exemptions expire on 1 January 2030.',
             'Florida and Texas have no plug-in solar bill. Florida’s solar-rights statute excludes patio railings in condos and apartments; in Texas, legality depends on the utility and retail electric provider.',
-            'The first plug-in products earned UL 3700 certification in July 2026 (Hoymiles and APsystems, per solar.com), but only a handful carry the listing, so check each product.',
+            'The first plug-in products were marketed as meeting UL 3700 in July 2026 (Hoymiles HiFlow Pro described by Hoymiles as compliant; InsideEVs corrected an earlier \'certified\' report; APsystems EZ1 \'CSA-certified\' per solar.com), but only a handful carry any listing, so check each product.',
             'The signed laws follow Utah’s template, which excludes plug-in solar from net metering; that removes the main reason utilities might object.',
           ],
         },
@@ -29572,7 +29581,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Why US Balcony Solar Was Effectively Illegal Through 2024',
           content: [
             '**A plug-in solar device pushes power through a standard outlet into a home’s wiring — the opposite of what that outlet was built for.** US utility interconnection rules were written for 5–25 kW rooftop systems, with agreements, fees and inspections that could double the cost of a $500 balcony kit, and through 2024 no state distinguished a 400W panel from a full rooftop installation.',
-            'Germany’s experience catalyzed the US wave. Utah Representative Raymond Ward read a New York Times article about German systems and introduced HB 340, citing Germany’s safety record: "The electricity is the same over there as it is here. All the same rules of physics work and have proved to be safe." ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
+            ‘Germany’s experience catalyzed the US wave. Utah Representative Raymond Ward read a New York Times article about German systems and introduced HB 340, citing Germany’s safety record: "The electricity is the same over [in Europe] as it is over here. All the same rules of physics work and have proved to be safe." ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))’,
           ],
         },
         theTemplate: {
@@ -29629,7 +29638,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**Utah HB 340, the Solar Power Amendments, passed unanimously and was signed by Governor Spencer Cox in March 2025, taking effect on 7 May 2025** ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)). It creates a "small portable solar generation device" category capped at 1,200W, exempts those devices from utility interconnection agreements and fees, and requires no notification to the utility.',
             'Sponsor Raymond Ward framed the bill around consumer choice and cost: "It’s great for anyone who wants a little solar power but does not want to pay $30,000 for a roof install" — a framing other states reused.',
-            '**The catch: the law relied on a certification standard that did not yet exist.** UL Solutions published UL 3700 in December 2025, eight months after the law took effect, and the first products were certified in July 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Check a product’s actual UL 3700 listing before relying on it.',
+            ‘**The catch: the law relied on a certification standard that did not yet exist.** UL Solutions published UL 3700 in December 2025, after the law took effect, and the first products were marketed as meeting UL 3700 in July 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Check a product\’s actual UL 3700 listing before relying on it.’,
           ],
         },
         california: {
@@ -29667,7 +29676,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         ulCertification: {
           title: 'UL 3700: The First Products Are Certified, but Few Carry the Listing',
           content: [
-            '**Enacted laws generally condition legal use on UL 3700 or an equivalent certification.** UL Solutions published the UL 3700 Outline of Investigation in December 2025 and testing opened in January 2026; the first plug-in products earned full certification in July 2026, including the Hoymiles HiFlow Pro and the APsystems EZ1 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Reports in October 2026 describe only a small handful of certified products and no certified whole-system kit, so most kits on the market are still uncertified.',
+            '**Enacted laws generally condition legal use on UL 3700 or an equivalent certification.** UL Solutions published the UL 3700 Outline of Investigation in December 2025 and testing opened in January 2026; the first products were marketed as meeting UL 3700 in July 2026 (Hoymiles HiFlow Pro described by Hoymiles as compliant; InsideEVs corrected an earlier \'certified\' report; APsystems EZ1 \'CSA-certified\' per solar.com). Reports in October 2026 describe only a small handful of products with any listing and no certified whole-system kit, so most kits on the market are still uncertified.',
             'UL 3700 tests three hazards: overcurrent conditions that could overwhelm a circuit breaker, GFCI incompatibility that could silently defeat ground-fault protection, and touch safety on the plug’s exposed prongs; it also requires anti-islanding shutdown during grid outages ([SimplePlugInSolar](https://simplepluginsolar.com/learn/what-is-ul-3700)).',
             'A device marketed as "UL 3700 ready" has not necessarily completed certification. Verify the specific claim with the manufacturer or UL’s certification database before buying.',
           ],
@@ -29675,7 +29684,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         advocacy: {
           title: 'Who Is Driving This: Bright Saver and Representative Ward',
           content: [
-            'The nonprofit [Bright Saver](https://brightsaver.org/), founded in January 2025 with $500,000 in initial grants, provides model legislation and organizing resources to lawmakers state by state.',
+            'The nonprofit [Bright Saver](https://brightsaver.org/) provides model legislation and organizing resources to lawmakers state by state.',
             'Utah’s Representative Ward has consulted with lawmakers in Hawaii, Washington, Minnesota, Colorado and other states, which helps explain the near-identical bill language across very different legislatures.',
           ],
         },
@@ -29715,7 +29724,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'What is UL 3700 and why does it matter for legality?',
-              a: 'UL 3700 is the US safety certification standard for plug-in solar systems, published by UL Solutions in December 2025. Signed state laws generally require it or an equivalent. The first products were certified in July 2026, but only a handful carry the listing, so check a specific product’s status before buying.',
+              a: ‘UL 3700 is the US safety certification standard for plug-in solar systems, published by UL Solutions in December 2025. Signed state laws generally require it or an equivalent. The first products were marketed as meeting UL 3700 in July 2026, but only a handful carry any listing, so check a specific product\’s status before buying.’,
             },
             {
               q: 'Why don’t these laws let me sell excess power back to the grid?',
@@ -29759,7 +29768,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'What is UL 3700 and why does it matter for legality?',
-            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700 is the US safety certification standard for plug-in solar systems, published by UL Solutions in December 2025. Signed state laws generally require it or an equivalent. The first products were certified in July 2026, but only a handful carry the listing, so check a specific product’s status before buying.' },
+            acceptedAnswer: { ‘@type’: ‘Answer’, text: ‘UL 3700 is the US safety certification standard for plug-in solar systems, published by UL Solutions in December 2025. Signed state laws generally require it or an equivalent. The first products were marketed as meeting UL 3700 in July 2026, but only a handful carry any listing, so check a specific product\’s status before buying.’ },
           },
           {
             '@type': 'Question',
@@ -29815,7 +29824,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'لماذا كانت الطاقة الشمسية للشرفات غير قانونية عمليًا في أمريكا حتى 2024',
           content: [
             '**يدفع جهاز الطاقة الشمسية القابل للتوصيل الكهرباء عبر مقبس قياسي إلى أسلاك المنزل — وهو عكس ما صُمّم له المقبس.** كُتبت قواعد الربط الأمريكية للأسطح بقدرة 5 إلى 25 كيلوواط، مع عقود ورسوم وفحوص قد تضاعف تكلفة طقم شرفة بسعر 500 دولار؛ وحتى 2024 لم تميّز أي ولاية بين لوح بقدرة 400 واط ونظام سطح كامل.',
-            'دفعت التجربة الألمانية الموجة الأمريكية. قرأ النائب راي ريموند وورد من يوتا مقالًا في نيويورك تايمز عن الأنظمة الألمانية وقدّم HB 340، مستشهدًا بسجل السلامة في ألمانيا: «الكهرباء هناك هي نفسها هنا. كل قوانين الفيزياء نفسها تعمل وقد ثبتت سلامتها.» ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
+            'دفعت التجربة الألمانية الموجة الأمريكية. قرأ النائب راي ريموند وورد من يوتا مقالًا في نيويورك تايمز عن الأنظمة الألمانية وقدّم HB 340، مستشهدًا بسجل السلامة في ألمانيا: «الكهرباء [في أوروبا] هي نفسها هنا. كل قوانين الفيزياء نفسها تعمل وقد ثبتت سلامتها.» ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
           ],
         },
         theTemplate: {
@@ -29872,7 +29881,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**أُقرّ قانون HB 340 في يوتا، وهو Solar Power Amendments، بالإجماع ووقّعه الحاكم سبنسر كوكس في مارس 2025، وبدأ سريانه في 7 مايو 2025** ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)). وينشئ فئة «أجهزة توليد شمسية محمولة صغيرة» بحد 1,200 واط، ويعفيها من اتفاقيات الربط ورسومه، ولا يشترط إخطار شركة الكهرباء.',
             'قدّم الراعي ريموند وورد المشروع من زاوية حرية الاختيار والتكلفة: «إنه رائع لمن يريد قليلًا من الطاقة الشمسية دون دفع 30,000 دولار لتركيب على السطح»، وهي صياغة أعادت ولايات أخرى استخدامها.',
-            '**المشكلة: اعتمد القانون على معيار شهادة لم يكن موجودًا بعد.** نشرت UL Solutions المعيار UL 3700 في ديسمبر 2025، بعد ثمانية أشهر من سريان القانون، وحصلت أولى المنتجات على الشهادة في يوليو 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). تحقق من إدراج منتج ما فعليًا في UL 3700 قبل الاعتماد عليه.',
+            '**المشكلة: اعتمد القانون على معيار شهادة لم يكن موجودًا بعد.** نشرت UL Solutions المعيار UL 3700 في ديسمبر 2025، بعد سريان القانون، وسُوِّقت أولى المنتجات على أنها تستوفي UL 3700 في يوليو 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). تحقق من إدراج منتج ما فعليًا في UL 3700 قبل الاعتماد عليه.',
           ],
         },
         california: {
@@ -29910,7 +29919,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         ulCertification: {
           title: 'UL 3700: أُولى المنتجات معتمدة، لكن قلة منها مدرجة',
           content: [
-            '**تربط القوانين المُقرّة عادةً الاستخدام القانوني بـ UL 3700 أو بشهادة مكافئة.** نشرت UL Solutions مخطط الفحص UL 3700 في ديسمبر 2025 وفُتح الاختبار في يناير 2026؛ وحصلت أولى المنتجات القابلة للتوصيل على الشهادة الكاملة في يوليو 2026، ومنها Hoymiles HiFlow Pro وAPsystems EZ1 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). وتصف تقارير أكتوبر 2026 حفنة قليلة فقط من المنتجات المعتمدة ولا طقمًا كاملًا معتمدًا، لذا ما زالت معظم الأطقم في السوق غير معتمدة.',
+            '**تربط القوانين المُقرّة عادةً الاستخدام القانوني بـ UL 3700 أو بشهادة مكافئة.** نشرت UL Solutions مخطط الفحص UL 3700 في ديسمبر 2025 وفُتح الاختبار في يناير 2026؛ وسُوِّقت أولى المنتجات على أنها تستوفي UL 3700 في يوليو 2026 (Hoymiles HiFlow Pro وفقًا لـ Hoymiles على أنه متوافق؛ صحّحت InsideEVs تقريرًا سابقًا ورد فيه «معتمد»؛ APsystems EZ1 بـ«شهادة CSA» وفق solar.com). وتصف تقارير أكتوبر 2026 حفنة قليلة فقط من المنتجات المدرجة ولا طقمًا كاملًا معتمدًا، لذا ما زالت معظم الأطقم في السوق غير معتمدة.',
             'يختبر UL 3700 ثلاثة مخاطر: التيار الزائد الذي قد يرهق قاطع الدائرة، وعدم التوافق مع حماية التسرب الأرضي (GFCI) الذي قد يعطّلها بصمت، وسلامة اللمس عند أطراف القابس المكشوفة؛ كما يشترط الفصل التلقائي لمكافحة الجزر عند انقطاع الشبكة ([SimplePlugInSolar](https://simplepluginsolar.com/learn/what-is-ul-3700)).',
             'الجهاز الذي يُسوَّق على أنه «UL 3700 ready» لم يُكمل الشهادة بالضرورة. تحقق من الادعاء المحدد لدى الشركة المصنّعة أو من قاعدة بيانات شهادات UL قبل الشراء.',
           ],
@@ -29918,7 +29927,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         advocacy: {
           title: 'من يقف وراء ذلك: Bright Saver والنائب وورد',
           content: [
-            'تقدّم المنظمة غير الربحية [Bright Saver](https://brightsaver.org/)، التي تأسست في يناير 2025 بمنح أولية قدرها 500,000 دولار، مشاريع قوانين نموذجية وموارد تنظيمية للمشرّعين ولاية تلو أخرى.',
+            'تقدّم المنظمة غير الربحية [Bright Saver](https://brightsaver.org/) مشاريع قوانين نموذجية وموارد تنظيمية للمشرّعين ولاية تلو أخرى.',
             'استشار النائب وورد من يوتا مشرّعين في هاواي وواشنطن ومينيسوتا وكولورادو وولايات أخرى، ما يساعد على تفسير تشابه صياغة المشاريع في مجالس تشريعية مختلفة جدًا.',
           ],
         },
@@ -29958,7 +29967,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'ما UL 3700 ولماذا يهم للشرعية؟',
-              a: 'UL 3700 هو معيار شهادة السلامة الأمريكي لأنظمة الطاقة الشمسية القابلة للتوصيل، نشرته UL Solutions في ديسمبر 2025. وتشترطه قوانين الولايات الموقّعة عادةً أو معيارًا مكافئًا. حصلت أولى المنتجات على الشهادة في يوليو 2026 لكن قلة منها مدرجة؛ تحقق من حالة منتج بعينه قبل الشراء.',
+              a: 'UL 3700 هو معيار شهادة السلامة الأمريكي لأنظمة الطاقة الشمسية القابلة للتوصيل، نشرته UL Solutions في ديسمبر 2025. وتشترطه قوانين الولايات الموقّعة عادةً أو معيارًا مكافئًا. سُوِّقت أولى المنتجات على أنها تستوفي UL 3700 في يوليو 2026 لكن قلة منها مدرجة؛ تحقق من حالة منتج بعينه قبل الشراء.',
             },
             {
               q: 'لماذا لا تسمح هذه القوانين ببيع الفائض إلى الشبكة؟',
@@ -30002,7 +30011,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'ما UL 3700 ولماذا يهم للشرعية؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700 هو معيار شهادة السلامة الأمريكي لأنظمة الطاقة الشمسية القابلة للتوصيل، نشرته UL Solutions في ديسمبر 2025. وتشترطه قوانين الولايات الموقّعة عادةً أو معيارًا مكافئًا. حصلت أولى المنتجات على الشهادة في يوليو 2026 لكن قلة منها مدرجة؛ تحقق من حالة منتج بعينه قبل الشراء.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700 هو معيار شهادة السلامة الأمريكي لأنظمة الطاقة الشمسية القابلة للتوصيل، نشرته UL Solutions في ديسمبر 2025. وتشترطه قوانين الولايات الموقّعة عادةً أو معيارًا مكافئًا. سُوِّقت أولى المنتجات على أنها تستوفي UL 3700 في يوليو 2026 لكن قلة منها مدرجة؛ تحقق من حالة منتج بعينه قبل الشراء.' },
           },
           {
             '@type': 'Question',
@@ -30043,7 +30052,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Utahs HB 340 (unterzeichnet im März 2025, in Kraft seit 7. Mai 2025) war das erste Gesetz und nimmt Geräte bis 1.200 W von den Netzanschlussregeln aus; die zugrunde liegende Sicherheitsnorm UL 3700 erschien erst im Dezember 2025.',
             'Kaliforniens SB 868 wurde am 30. September 2026 unterzeichnet und tritt am 1. Januar 2027 in Kraft; wie unterzeichnet, begrenzt es Geräte auf 1.200 W AC je Wohneinheit, und die Ausnahmen vom Netzanschluss laufen am 1. Januar 2030 aus.',
             'Florida und Texas haben keinen Gesetzentwurf zu Plug-in-Solar. Floridas Solarrechte-Gesetz schließt Balkonbrüstungen in Eigentums- und Mietwohnungen aus; in Texas hängt die Zulässigkeit vom Netzbetreiber und Stromanbieter ab.',
-            'Die ersten Plug-in-Produkte erhielten im Juli 2026 die UL-3700-Zertifizierung (Hoymiles und APsystems laut solar.com), doch nur wenige tragen die Listung; prüfen Sie jedes Produkt einzeln.',
+            'Die ersten Plug-in-Produkte wurden im Juli 2026 als UL-3700-konform vermarktet (Hoymiles HiFlow Pro laut Hoymiles als konform; InsideEVs korrigierte einen früheren Bericht; APsystems EZ1 laut solar.com als „CSA-zertifiziert"), doch nur wenige tragen eine Listung; prüfen Sie jedes Produkt einzeln.',
             'Die unterzeichneten Gesetze folgen der Vorlage Utahs, die Plug-in-Solar von der Nettomessung (Net Metering) ausnimmt; das beseitigt den Hauptgrund für Einwände der Netzbetreiber.',
           ],
         },
@@ -30058,7 +30067,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Warum Balkonsolar in den USA bis 2024 faktisch illegal war',
           content: [
             '**Ein Plug-in-Solargerät speist Strom über eine Standardsteckdose in die Hausverkabelung ein — das Gegenteil dessen, wofür diese Steckdose gebaut wurde.** Die US-Netzanschlussregeln wurden für Dachanlagen von 5–25 kW geschrieben, mit Verträgen, Gebühren und Abnahmen, die ein 500-$-Balkonset verdoppeln konnten; bis 2024 unterschied kein Bundesstaat ein 400-W-Modul von einer vollen Dachanlage.',
-            'Deutschlands Erfahrung löste die US-Welle aus. Der Abgeordnete Raymond Ward aus Utah las einen Artikel der New York Times über deutsche Anlagen und brachte HB 340 ein, wobei er auf Deutschlands Sicherheitsbilanz verwies: „Der Strom ist dort derselbe wie hier. Alle physikalischen Regeln gelten gleich und haben sich als sicher erwiesen.“ ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
+            'Deutschlands Erfahrung löste die US-Welle aus. Der Abgeordnete Raymond Ward aus Utah las einen Artikel der New York Times über deutsche Anlagen und brachte HB 340 ein, wobei er auf Deutschlands Sicherheitsbilanz verwies: „Der Strom ist [in Europa] derselbe wie hier. Alle physikalischen Regeln gelten gleich und haben sich als sicher erwiesen.” ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
           ],
         },
         theTemplate: {
@@ -30115,7 +30124,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**Utahs HB 340, die Solar Power Amendments, wurde einstimmig verabschiedet und im März 2025 von Gouverneur Spencer Cox unterzeichnet; es trat am 7. Mai 2025 in Kraft** ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)). Es schafft die Kategorie „kleine tragbare Solarerzeugungsgeräte“ mit einer Obergrenze von 1.200 W, nimmt sie von Netzanschlussverträgen und Gebühren aus und verlangt keine Meldung an den Netzbetreiber.',
             'Initiator Raymond Ward stellte den Entwurf als Wahlfreiheit und Kostenersparnis dar: „Das ist großartig für alle, die ein bisschen Solarstrom wollen, aber keine 30.000 $ für eine Dachanlage zahlen möchten“ — eine Argumentation, die andere Staaten übernahmen.',
-            '**Der Haken: Das Gesetz stützte sich auf eine Zertifizierungsnorm, die noch nicht existierte.** UL Solutions veröffentlichte UL 3700 im Dezember 2025, acht Monate nach Inkrafttreten, und die ersten Produkte wurden im Juli 2026 zertifiziert ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Prüfen Sie die tatsächliche UL-3700-Listung eines Produkts, bevor Sie sich darauf verlassen.',
+            '**Der Haken: Das Gesetz stützte sich auf eine Zertifizierungsnorm, die noch nicht existierte.** UL Solutions veröffentlichte UL 3700 im Dezember 2025, nach Inkrafttreten des Gesetzes, und die ersten Produkte wurden im Juli 2026 als UL-3700-konform vermarktet ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Prüfen Sie die tatsächliche UL-3700-Listung eines Produkts, bevor Sie sich darauf verlassen.',
           ],
         },
         california: {
@@ -30153,7 +30162,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         ulCertification: {
           title: 'UL 3700: Erste Produkte sind zertifiziert, aber nur wenige tragen die Listung',
           content: [
-            '**Verabschiedete Gesetze knüpfen die legale Nutzung in der Regel an UL 3700 oder eine gleichwertige Zertifizierung.** UL Solutions veröffentlichte die UL-3700-Prüfgrundlage im Dezember 2025, die Prüfungen begannen im Januar 2026; die ersten Plug-in-Produkte erhielten im Juli 2026 die volle Zertifizierung, darunter Hoymiles HiFlow Pro und APsystems EZ1 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Berichte vom Oktober 2026 nennen nur eine kleine Zahl zertifizierter Produkte und kein zertifiziertes Komplettsystem; die meisten Sets am Markt sind also noch unzertifiziert.',
+            '**Verabschiedete Gesetze knüpfen die legale Nutzung in der Regel an UL 3700 oder eine gleichwertige Zertifizierung.** UL Solutions veröffentlichte die UL-3700-Prüfgrundlage im Dezember 2025, die Prüfungen begannen im Januar 2026; die ersten Produkte wurden im Juli 2026 als UL-3700-konform vermarktet (Hoymiles HiFlow Pro laut Hoymiles als konform; InsideEVs korrigierte einen früheren Bericht; APsystems EZ1 laut solar.com als „CSA-zertifiziert"). Berichte vom Oktober 2026 nennen nur eine kleine Zahl von Produkten mit einer Listung und kein zertifiziertes Komplettsystem; die meisten Sets am Markt sind also noch unzertifiziert.',
             'UL 3700 prüft drei Gefahren: Überstrom, der einen Leitungsschutzschalter überfordern könnte, Unverträglichkeit mit Fehlerstromschutz (GFCI), die den Schutz unbemerkt aushebeln könnte, und Berührungsschutz an den freiliegenden Steckerstiften; außerdem verlangt die Norm Inselbetriebsschutz bei Netzausfall ([SimplePlugInSolar](https://simplepluginsolar.com/learn/what-is-ul-3700)).',
             'Ein als „UL 3700 ready“ vermarktetes Gerät hat die Zertifizierung nicht zwingend abgeschlossen. Prüfen Sie die konkrete Aussage beim Hersteller oder in der UL-Zertifizierungsdatenbank, bevor Sie kaufen.',
           ],
@@ -30161,7 +30170,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         advocacy: {
           title: 'Wer das vorantreibt: Bright Saver und der Abgeordnete Ward',
           content: [
-            'Die gemeinnützige Organisation [Bright Saver](https://brightsaver.org/), gegründet im Januar 2025 mit 500.000 $ Anfangsförderung, stellt Abgeordneten Mustergesetze und Organisationshilfen bereit, Bundesstaat für Bundesstaat.',
+            'Die gemeinnützige Organisation [Bright Saver](https://brightsaver.org/) stellt Abgeordneten Mustergesetze und Organisationshilfen bereit, Bundesstaat für Bundesstaat.',
             'Utahs Abgeordneter Ward hat Parlamentarier in Hawaii, Washington, Minnesota, Colorado und weiteren Staaten beraten, was die nahezu identische Gesetzessprache in sehr verschiedenen Parlamenten erklären hilft.',
           ],
         },
@@ -30201,7 +30210,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Was ist UL 3700 und warum ist es für die Legalität wichtig?',
-              a: 'UL 3700 ist die US-Sicherheitsnorm für Plug-in-Solaranlagen, veröffentlicht von UL Solutions im Dezember 2025. Unterzeichnete Landesgesetze verlangen sie oder eine gleichwertige Norm in der Regel. Die ersten Produkte wurden im Juli 2026 zertifiziert, doch nur wenige tragen die Listung; prüfen Sie den Status eines Produkts vor dem Kauf.',
+              a: 'UL 3700 ist die US-Sicherheitsnorm für Plug-in-Solaranlagen, veröffentlicht von UL Solutions im Dezember 2025. Unterzeichnete Landesgesetze verlangen sie oder eine gleichwertige Norm in der Regel. Die ersten Produkte wurden im Juli 2026 als UL-3700-konform vermarktet, doch nur wenige tragen eine Listung; prüfen Sie den Status eines Produkts vor dem Kauf.',
             },
             {
               q: 'Warum darf ich überschüssigen Strom nicht ins Netz verkaufen?',
@@ -30245,7 +30254,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'Was ist UL 3700 und warum ist es für die Legalität wichtig?',
-            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700 ist die US-Sicherheitsnorm für Plug-in-Solaranlagen, veröffentlicht von UL Solutions im Dezember 2025. Unterzeichnete Landesgesetze verlangen sie oder eine gleichwertige Norm in der Regel. Die ersten Produkte wurden im Juli 2026 zertifiziert, doch nur wenige tragen die Listung; prüfen Sie den Status eines Produkts vor dem Kauf.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700 ist die US-Sicherheitsnorm für Plug-in-Solaranlagen, veröffentlicht von UL Solutions im Dezember 2025. Unterzeichnete Landesgesetze verlangen sie oder eine gleichwertige Norm in der Regel. Die ersten Produkte wurden im Juli 2026 als UL-3700-konform vermarktet, doch nur wenige tragen eine Listung; prüfen Sie den Status eines Produkts vor dem Kauf.' },
           },
           {
             '@type': 'Question',
@@ -30286,7 +30295,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'El HB 340 de Utah (firmado en marzo de 2025, vigente desde el 7 de mayo de 2025) fue el primero: exime a los dispositivos de hasta 1,200 W de las normas de interconexión; la norma de seguridad UL 3700 en la que se apoya se publicó en diciembre de 2025.',
             'El SB 868 de California se firmó el 30 de septiembre de 2026 y entra en vigor el 1 de enero de 2027; tal como se firmó, limita los dispositivos a 1,200 W de CA por vivienda y sus exenciones de interconexión vencen el 1 de enero de 2030.',
             'Florida y Texas no tienen ningún proyecto de ley de solar enchufable. La ley floridana de derechos solares excluye las barandillas de patio en condominios y apartamentos; en Texas, la legalidad depende de la distribuidora y del proveedor minorista de electricidad.',
-            'Los primeros productos enchufables obtuvieron la certificación UL 3700 en julio de 2026 (Hoymiles y APsystems, según solar.com), pero solo unos pocos figuran en el listado, así que comprueba cada producto.',
+            'Los primeros productos enchufables se comercializaron como conformes con UL 3700 en julio de 2026 (Hoymiles HiFlow Pro, según Hoymiles; InsideEVs corrigió un informe anterior de «certificado»; APsystems EZ1 «certificado por CSA» según solar.com), pero solo unos pocos figuran en algún listado, así que comprueba cada producto.',
             'Las leyes firmadas siguen la plantilla de Utah, que excluye la solar enchufable de la medición neta (net metering); eso elimina el principal motivo de objeción de las distribuidoras.',
           ],
         },
@@ -30301,7 +30310,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Por qué la solar de balcón fue prácticamente ilegal en EE. UU. hasta 2024',
           content: [
             '**Un dispositivo solar enchufable inyecta energía por un enchufe estándar hacia el cableado de la vivienda, lo contrario de para lo que ese enchufe fue diseñado.** Las normas estadounidenses de interconexión se escribieron para tejados de 5 a 25 kW, con contratos, tarifas e inspecciones que podían duplicar el coste de un kit de balcón de 500 $; hasta 2024 ningún estado distinguía un panel de 400 W de una instalación completa en tejado.',
-            'La experiencia alemana impulsó la ola estadounidense. El representante de Utah Raymond Ward leyó un artículo del New York Times sobre los sistemas alemanes e introdujo el HB 340, citando el historial de seguridad de Alemania: «La electricidad es la misma allí que aquí. Las mismas leyes de la física funcionan y han demostrado ser seguras.» ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
+            'La experiencia alemana impulsó la ola estadounidense. El representante de Utah Raymond Ward leyó un artículo del New York Times sobre los sistemas alemanes e introdujo el HB 340, citando el historial de seguridad de Alemania: «La electricidad es la misma [en Europa] que aquí. Las mismas leyes de la física funcionan y han demostrado ser seguras.» ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
           ],
         },
         theTemplate: {
@@ -30358,7 +30367,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**El HB 340 de Utah, las Solar Power Amendments, se aprobó por unanimidad y lo firmó el gobernador Spencer Cox en marzo de 2025, con entrada en vigor el 7 de mayo de 2025** ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)). Crea la categoría de «pequeños dispositivos portátiles de generación solar» limitados a 1,200 W, los exime de acuerdos y tarifas de interconexión y no exige avisar a la distribuidora.',
             'El patrocinador Raymond Ward planteó el proyecto en torno a la libertad de elección y el ahorro: «Es ideal para quien quiere un poco de energía solar pero no quiere pagar 30,000 $ por una instalación en el tejado», un enfoque que otros estados reutilizaron.',
-            '**La trampa: la ley dependía de una norma de certificación que aún no existía.** UL Solutions publicó UL 3700 en diciembre de 2025, ocho meses después de la entrada en vigor, y los primeros productos se certificaron en julio de 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Comprueba el listado UL 3700 real de un producto antes de confiar en él.',
+            '**La trampa: la ley dependía de una norma de certificación que aún no existía.** UL Solutions publicó UL 3700 en diciembre de 2025, tras la entrada en vigor, y los primeros productos se comercializaron como conformes con UL 3700 en julio de 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Comprueba el listado UL 3700 real de un producto antes de confiar en él.',
           ],
         },
         california: {
@@ -30396,7 +30405,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         ulCertification: {
           title: 'UL 3700: los primeros productos están certificados, pero pocos figuran en el listado',
           content: [
-            '**Las leyes aprobadas suelen condicionar el uso legal a UL 3700 o una certificación equivalente.** UL Solutions publicó el Outline of Investigation de UL 3700 en diciembre de 2025 y las pruebas se abrieron en enero de 2026; los primeros productos enchufables obtuvieron la certificación completa en julio de 2026, entre ellos el Hoymiles HiFlow Pro y el APsystems EZ1 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Informes de octubre de 2026 describen solo un puñado de productos certificados y ningún kit completo certificado, por lo que la mayoría de los kits del mercado siguen sin certificar.',
+            '**Las leyes aprobadas suelen condicionar el uso legal a UL 3700 o una certificación equivalente.** UL Solutions publicó el Outline of Investigation de UL 3700 en diciembre de 2025 y las pruebas se abrieron en enero de 2026; los primeros productos se comercializaron como conformes con UL 3700 en julio de 2026 (Hoymiles HiFlow Pro según Hoymiles; InsideEVs corrigió un informe anterior de «certificado»; APsystems EZ1 «certificado por CSA» según solar.com). Informes de octubre de 2026 describen solo un puñado de productos con algún listado y ningún kit completo certificado, por lo que la mayoría de los kits del mercado siguen sin certificar.',
             'UL 3700 evalúa tres riesgos: sobrecorrientes que podrían desbordar un disyuntor, incompatibilidad con la protección diferencial (GFCI) que podría anularla sin avisar y seguridad al tacto en las clavijas expuestas del enchufe; además exige desconexión anti-isla ante un corte de red ([SimplePlugInSolar](https://simplepluginsolar.com/learn/what-is-ul-3700)).',
             'Un dispositivo vendido como «UL 3700 ready» no necesariamente ha completado la certificación. Verifica la afirmación concreta con el fabricante o en la base de datos de certificación de UL antes de comprar.',
           ],
@@ -30404,7 +30413,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         advocacy: {
           title: 'Quién impulsa esto: Bright Saver y el representante Ward',
           content: [
-            'La organización sin ánimo de lucro [Bright Saver](https://brightsaver.org/), fundada en enero de 2025 con 500,000 $ en subvenciones iniciales, ofrece a los legisladores proyectos de ley modelo y recursos de organización, estado por estado.',
+            'La organización sin ánimo de lucro [Bright Saver](https://brightsaver.org/) ofrece a los legisladores proyectos de ley modelo y recursos de organización, estado por estado.',
             'El representante Ward de Utah ha asesorado a legisladores de Hawái, Washington, Minnesota, Colorado y otros estados, lo que ayuda a explicar el texto casi idéntico en legislaturas muy distintas.',
           ],
         },
@@ -30444,7 +30453,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '¿Qué es UL 3700 y por qué importa para la legalidad?',
-              a: 'UL 3700 es la norma estadounidense de certificación de seguridad para sistemas solares enchufables, publicada por UL Solutions en diciembre de 2025. Las leyes estatales firmadas suelen exigirla o una equivalente. Los primeros productos se certificaron en julio de 2026, pero pocos figuran en el listado; comprueba el estado de un producto antes de comprar.',
+              a: 'UL 3700 es la norma estadounidense de certificación de seguridad para sistemas solares enchufables, publicada por UL Solutions en diciembre de 2025. Las leyes estatales firmadas suelen exigirla o una equivalente. Los primeros productos se comercializaron como conformes en julio de 2026, pero pocos figuran en algún listado; comprueba el estado de un producto antes de comprar.',
             },
             {
               q: '¿Por qué estas leyes no me dejan vender el excedente a la red?',
@@ -30488,7 +30497,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: '¿Qué es UL 3700 y por qué importa para la legalidad?',
-            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700 es la norma estadounidense de certificación de seguridad para sistemas solares enchufables, publicada por UL Solutions en diciembre de 2025. Las leyes estatales firmadas suelen exigirla o una equivalente. Los primeros productos se certificaron en julio de 2026, pero pocos figuran en el listado; comprueba el estado de un producto antes de comprar.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700 es la norma estadounidense de certificación de seguridad para sistemas solares enchufables, publicada por UL Solutions en diciembre de 2025. Las leyes estatales firmadas suelen exigirla o una equivalente. Los primeros productos se comercializaron como conformes en julio de 2026, pero pocos figuran en algún listado; comprueba el estado de un producto antes de comprar.' },
           },
           {
             '@type': 'Question',
@@ -30529,7 +30538,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Le HB 340 de l’Utah (signé en mars 2025, en vigueur le 7 mai 2025) fut le premier : il exempte les appareils jusqu’à 1 200 W des règles de raccordement au réseau ; la norme de sécurité UL 3700 dont il dépend n’a été publiée qu’en décembre 2025.',
             'Le SB 868 de Californie a été signé le 30 septembre 2026 et entre en vigueur le 1er janvier 2027 ; tel que signé, il plafonne les appareils à 1 200 W CA par logement et ses exemptions de raccordement expirent le 1er janvier 2030.',
             'La Floride et le Texas n’ont aucun projet de loi sur le solaire enfichable. La loi floridienne sur les droits solaires exclut les garde-corps de patio des copropriétés et appartements ; au Texas, la légalité dépend du distributeur et du fournisseur d’électricité.',
-            'Les premiers produits enfichables ont obtenu la certification UL 3700 en juillet 2026 (Hoymiles et APsystems, selon solar.com), mais très peu portent cette mention : vérifiez chaque produit.',
+            'Les premiers produits enfichables ont été commercialisés comme conformes à UL 3700 en juillet 2026 (Hoymiles HiFlow Pro selon Hoymiles ; InsideEVs a corrigé un rapport antérieur de « certifié » ; APsystems EZ1 « certifié CSA » selon solar.com), mais très peu portent une mention : vérifiez chaque produit.',
             'Les lois signées suivent le modèle de l’Utah, qui exclut le solaire enfichable de la facturation nette (net metering) ; cela supprime la principale objection possible des distributeurs.',
           ],
         },
@@ -30544,7 +30553,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Pourquoi le solaire de balcon était de fait illégal aux États-Unis jusqu’en 2024',
           content: [
             '**Un appareil solaire enfichable injecte du courant par une prise standard dans le câblage du logement — l’inverse de ce pour quoi cette prise est conçue.** Les règles américaines de raccordement ont été écrites pour des toitures de 5 à 25 kW, avec contrats, frais et inspections pouvant doubler le coût d’un kit de balcon à 500 $ ; jusqu’en 2024, aucun État ne distinguait un panneau de 400 W d’une installation complète sur toit.',
-            'L’expérience allemande a déclenché la vague américaine. Le représentant de l’Utah Raymond Ward a lu un article du New York Times sur les systèmes allemands et déposé le HB 340, en citant le bilan de sécurité allemand : « L’électricité est la même là-bas qu’ici. Toutes les lois de la physique fonctionnent de la même façon et se sont révélées sûres. » ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
+            ‘L’expérience allemande a déclenché la vague américaine. Le représentant de l’Utah Raymond Ward a lu un article du New York Times sur les systèmes allemands et déposé le HB 340, en citant le bilan de sécurité allemand : « L’électricité est la même [en Europe] qu’ici. Toutes les lois de la physique fonctionnent de la même façon et se sont révélées sûres. » ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))’,
           ],
         },
         theTemplate: {
@@ -30601,7 +30610,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**Le HB 340 de l’Utah, les Solar Power Amendments, a été adopté à l’unanimité et signé par le gouverneur Spencer Cox en mars 2025, pour une entrée en vigueur le 7 mai 2025** ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)). Il crée une catégorie d’« appareils de production solaire portables de petite taille » plafonnés à 1 200 W, les exempte des contrats et frais de raccordement et n’exige aucune notification au distributeur.',
             'Le promoteur Raymond Ward a présenté le texte sous l’angle du choix du consommateur et du coût : « C’est idéal pour qui veut un peu de solaire sans payer 30 000 $ pour une installation sur toit » — un cadrage repris par d’autres États.',
-            '**Le piège : la loi reposait sur une norme de certification qui n’existait pas encore.** UL Solutions a publié UL 3700 en décembre 2025, huit mois après l’entrée en vigueur, et les premiers produits ont été certifiés en juillet 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Vérifiez l’inscription UL 3700 réelle d’un produit avant de vous y fier.',
+            ‘**Le piège : la loi reposait sur une norme de certification qui n’existait pas encore.** UL Solutions a publié UL 3700 en décembre 2025, après l’entrée en vigueur, et les premiers produits ont été commercialisés comme conformes à UL 3700 en juillet 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Vérifiez l’inscription UL 3700 réelle d’un produit avant de vous y fier.’,
           ],
         },
         california: {
@@ -30639,7 +30648,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         ulCertification: {
           title: 'UL 3700 : les premiers produits sont certifiés, mais peu portent la mention',
           content: [
-            '**Les lois adoptées conditionnent généralement l’usage légal à UL 3700 ou à une certification équivalente.** UL Solutions a publié l’Outline of Investigation UL 3700 en décembre 2025 et les essais ont ouvert en janvier 2026 ; les premiers produits enfichables ont obtenu la certification complète en juillet 2026, dont le Hoymiles HiFlow Pro et l’APsystems EZ1 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Des articles d’octobre 2026 ne décrivent qu’une poignée de produits certifiés et aucun kit complet certifié : la plupart des kits du marché ne sont donc pas encore certifiés.',
+            ‘**Les lois adoptées conditionnent généralement l’usage légal à UL 3700 ou à une certification équivalente.** UL Solutions a publié l’Outline of Investigation UL 3700 en décembre 2025 et les essais ont ouvert en janvier 2026 ; les premiers produits ont été commercialisés comme conformes à UL 3700 en juillet 2026 (Hoymiles HiFlow Pro selon Hoymiles ; InsideEVs a corrigé un rapport antérieur de « certifié » ; APsystems EZ1 « certifié CSA » selon solar.com). Des articles d’octobre 2026 ne décrivent qu’une poignée de produits avec une mention et aucun kit complet certifié : la plupart des kits du marché ne sont donc pas encore certifiés.’,
             'UL 3700 teste trois risques : les surintensités qui pourraient dépasser un disjoncteur, l’incompatibilité avec la protection différentielle (GFCI) qui pourrait la neutraliser sans signal, et la sécurité au toucher des broches exposées de la fiche ; la norme exige aussi un arrêt anti-îlotage lors d’une panne de réseau ([SimplePlugInSolar](https://simplepluginsolar.com/learn/what-is-ul-3700)).',
             'Un appareil vendu comme « UL 3700 ready » n’a pas forcément achevé la certification. Vérifiez l’affirmation précise auprès du fabricant ou dans la base de certification d’UL avant d’acheter.',
           ],
@@ -30647,7 +30656,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         advocacy: {
           title: 'Qui porte ce mouvement : Bright Saver et le représentant Ward',
           content: [
-            'L’association [Bright Saver](https://brightsaver.org/), fondée en janvier 2025 avec 500 000 $ de subventions initiales, fournit aux élus des projets de loi types et des ressources d’organisation, État par État.',
+            ‘L’association [Bright Saver](https://brightsaver.org/) fournit aux élus des projets de loi types et des ressources d’organisation, État par État.’,
             'Le représentant Ward de l’Utah a conseillé des élus à Hawaï, dans l’État de Washington, au Minnesota, au Colorado et ailleurs, ce qui explique en partie la similitude des textes dans des législatures très différentes.',
           ],
         },
@@ -30687,7 +30696,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Qu’est-ce que UL 3700 et pourquoi est-ce important pour la légalité ?',
-              a: 'UL 3700 est la norme américaine de certification de sécurité des systèmes solaires enfichables, publiée par UL Solutions en décembre 2025. Les lois d’États signées l’exigent généralement, ou une norme équivalente. Les premiers produits ont été certifiés en juillet 2026, mais très peu portent la mention ; vérifiez le statut d’un produit avant d’acheter.',
+              a: ‘UL 3700 est la norme américaine de certification de sécurité des systèmes solaires enfichables, publiée par UL Solutions en décembre 2025. Les lois d’États signées l’exigent généralement, ou une norme équivalente. Les premiers produits ont été commercialisés comme conformes en juillet 2026, mais très peu portent une mention ; vérifiez le statut d’un produit avant d’acheter.’,
             },
             {
               q: 'Pourquoi ces lois ne me permettent-elles pas de revendre l’excédent au réseau ?',
@@ -30731,7 +30740,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'Qu’est-ce que UL 3700 et pourquoi est-ce important pour la légalité ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700 est la norme américaine de certification de sécurité des systèmes solaires enfichables, publiée par UL Solutions en décembre 2025. Les lois d’États signées l’exigent généralement, ou une norme équivalente. Les premiers produits ont été certifiés en juillet 2026, mais très peu portent la mention ; vérifiez le statut d’un produit avant d’acheter.' },
+            acceptedAnswer: { ‘@type’: ‘Answer’, text: ‘UL 3700 est la norme américaine de certification de sécurité des systèmes solaires enfichables, publiée par UL Solutions en décembre 2025. Les lois d’États signées l’exigent généralement, ou une norme équivalente. Les premiers produits ont été commercialisés comme conformes en juillet 2026, mais très peu portent une mention ; vérifiez le statut d’un produit avant d’acheter.’ },
           },
           {
             '@type': 'Question',
@@ -30772,7 +30781,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'ユタ州のHB 340（2025年3月署名、2025年5月7日施行）が最初で、1,200Wまでの機器を系統連系ルールから除外しました。同法が前提とする安全規格UL 3700が公表されたのは2025年12月です。',
             'カリフォルニア州のSB 868は2026年9月30日に署名され、2027年1月1日に施行されます。署名された内容では、機器は1住戸あたり交流1,200Wまでに制限され、連系要件の免除は2030年1月1日に失効します。',
             'フロリダ州とテキサス州にはプラグイン型太陽光の法案がありません。フロリダ州の太陽光権利法はコンドミニアムやアパートのパティオの手すりを除外しており、テキサス州では電力会社と小売電気事業者によって適法性が変わります。',
-            '最初のプラグイン型製品が2026年7月にUL 3700認証を取得しました（solar.comによるとHoymilesとAPsystems）。ただし認証リストに載る製品はごく少数なので、製品ごとに確認してください。',
+            '最初の製品は2026年7月にUL 3700適合品として販売されました（Hoymiles HiFlow ProはHoymilesが適合と説明；InsideEVsは以前の「認証済み」報道を訂正；APsystems EZ1はsolar.comによると「CSA認証済み」）。掲載製品はごく少数なので、製品ごとに確認してください。',
             '署名された法律はユタ州の雛形に沿っており、プラグイン型太陽光をネットメータリングから除外しています。これにより、電力会社が反対する主な理由がなくなります。',
           ],
         },
@@ -30787,7 +30796,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '2024年まで米国でベランダ太陽光が事実上違法だった理由',
           content: [
             '**プラグイン型太陽光機器は、標準コンセントを通じて住宅の配線に電力を送り込みます。これはそのコンセントが想定している使い方の逆です。** 米国の系統連系ルールは5〜25kWの屋根設置型を想定して作られ、契約、手数料、検査によって500ドルのベランダキットの費用が倍になり得ました。2024年まで、400Wのパネルと本格的な屋根設置型を区別する州はありませんでした。',
-            'ドイツの経験が米国の動きを促しました。ユタ州のレイモンド・ウォード議員は、ドイツのシステムを紹介したニューヨーク・タイムズの記事を読んでHB 340を提出し、ドイツの安全実績を挙げました：「電気はあちらでもこちらでも同じです。同じ物理法則が働き、安全だと証明されています。」（[Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)）',
+            'ドイツの経験が米国の動きを促しました。ユタ州のレイモンド・ウォード議員は、ドイツのシステムを紹介したニューヨーク・タイムズの記事を読んでHB 340を提出し、ドイツの安全実績を挙げました：「[ヨーロッパでも]こちらでも電気は同じです。同じ物理法則が働き、安全だと証明されています。」（[Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)）',
           ],
         },
         theTemplate: {
@@ -30844,7 +30853,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**ユタ州のHB 340（Solar Power Amendments）は全会一致で可決され、2025年3月にスペンサー・コックス知事が署名し、2025年5月7日に施行されました**（[Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)）。出力1,200Wまでの「小型ポータブル太陽光発電機器」というカテゴリを設け、系統連系契約と手数料を免除し、電力会社への通知も不要としています。',
             '提案者のレイモンド・ウォード議員は、消費者の選択とコストを軸に法案を説明しました：「屋根工事に3万ドルを払わずに少しだけ太陽光を使いたい人にとって素晴らしい制度です」。この訴え方は他州でも踏襲されました。',
-            '**落とし穴：この法律は、当時まだ存在しない認証規格を前提にしていました。** UL SolutionsがUL 3700を公表したのは法律の施行から8か月後の2025年12月で、最初の製品が認証を受けたのは2026年7月です（[solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)）。製品の実際のUL 3700リスト掲載を確認してから判断してください。',
+            '**落とし穴：この法律は、当時まだ存在しない認証規格を前提にしていました。** UL SolutionsがUL 3700を公表したのは法律の施行後の2025年12月で、最初の製品がUL 3700適合品として販売されたのは2026年7月です（[solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)）。製品の実際のUL 3700リスト掲載を確認してから判断してください。',
           ],
         },
         california: {
@@ -30882,7 +30891,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         ulCertification: {
           title: 'UL 3700：最初の製品は認証済みだが、リスト掲載は少数',
           content: [
-            '**成立した法律は、通常、合法的な使用をUL 3700または同等の認証に結び付けています。** UL Solutionsは2025年12月にUL 3700の調査概要を公表し、試験は2026年1月に始まりました。最初のプラグイン型製品は2026年7月に正式認証を取得し、Hoymilesの HiFlow ProやAPsystemsのEZ1が含まれます（[solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)）。2026年10月の報道では、認証済み製品はごく少数で、システム一式として認証されたキットはなく、市場の大半のキットは未認証のままとされています。',
+            '**成立した法律は、通常、合法的な使用をUL 3700または同等の認証に結び付けています。** UL Solutionsは2025年12月にUL 3700の調査概要を公表し、試験は2026年1月に始まりました。最初の製品は2026年7月にUL 3700適合品として販売されました（Hoymiles HiFlow ProはHoymilesが適合と説明；InsideEVsは以前の「認証済み」報道を訂正；APsystems EZ1はsolar.comによると「CSA認証済み」）。2026年10月の報道では、掲載製品はごく少数で、システム一式として認証されたキットはなく、市場の大半のキットは未認証のままとされています。',
             'UL 3700は3つの危険を試験します。ブレーカーを超過し得る過電流、漏電保護（GFCI）を気付かれずに無効にし得る非互換性、そしてプラグの露出した刃への接触安全性です。停電時の単独運転防止も求められます（[SimplePlugInSolar](https://simplepluginsolar.com/learn/what-is-ul-3700)）。',
             '「UL 3700 ready」と宣伝されている機器が、認証を完了しているとは限りません。購入前に、メーカーまたはULの認証データベースで個別の主張を確認してください。',
           ],
@@ -30890,7 +30899,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         advocacy: {
           title: '推進役：Bright Saverとウォード議員',
           content: [
-            '非営利団体の[Bright Saver](https://brightsaver.org/)は、2025年1月に初期助成金50万ドルで設立され、州ごとにモデル法案と組織化の資料を議員に提供しています。',
+            '非営利団体の[Bright Saver](https://brightsaver.org/)は、州ごとにモデル法案と組織化の資料を議員に提供しています。',
             'ユタ州のウォード議員は、ハワイ、ワシントン、ミネソタ、コロラドなどの議員に助言しており、立場の異なる議会でほぼ同じ文言の法案が出てくる理由の説明になります。',
           ],
         },
@@ -30930,7 +30939,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'UL 3700とは何で、なぜ適法性に関係するのですか？',
-              a: 'UL 3700は、UL Solutionsが2025年12月に公表した、プラグイン型太陽光システムの米国安全認証規格です。署名された州法は通常、これまたは同等の規格を要求します。最初の製品は2026年7月に認証されましたが、リストに載る製品は少数です。購入前に製品の状況を確認してください。',
+              a: 'UL 3700は、UL Solutionsが2025年12月に公表した、プラグイン型太陽光システムの米国安全認証規格です。署名された州法は通常、これまたは同等の規格を要求します。最初の製品は2026年7月にUL 3700適合品として販売されましたが、掲載製品は少数です。購入前に製品の状況を確認してください。',
             },
             {
               q: 'なぜこれらの法律では余剰電力を電力会社に売れないのですか？',
@@ -30974,7 +30983,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'UL 3700とは何で、なぜ適法性に関係するのですか？',
-            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700は、UL Solutionsが2025年12月に公表した、プラグイン型太陽光システムの米国安全認証規格です。署名された州法は通常、これまたは同等の規格を要求します。最初の製品は2026年7月に認証されましたが、リストに載る製品は少数です。購入前に製品の状況を確認してください。' },
+            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700は、UL Solutionsが2025年12月に公表した、プラグイン型太陽光システムの米国安全認証規格です。署名された州法は通常、これまたは同等の規格を要求します。最初の製品は2026年7月にUL 3700適合品として販売されましたが、掲載製品は少数です。購入前に製品の状況を確認してください。' },
           },
           {
             '@type': 'Question',
@@ -31015,7 +31024,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '유타주의 HB 340(2025년 3월 서명, 2025년 5월 7일 시행)이 최초로, 1,200W 이하 기기를 전력망 연계 규칙에서 제외했습니다. 이 법이 전제로 하는 안전 표준 UL 3700은 2025년 12월에야 발표되었습니다.',
             '캘리포니아주의 SB 868은 2026년 9월 30일 서명되어 2027년 1월 1일 시행됩니다. 서명된 내용에 따르면 기기는 주택당 교류 1,200W로 제한되며 연계 면제는 2030년 1월 1일 종료됩니다.',
             '플로리다와 텍사스에는 플러그인 태양광 법안이 없습니다. 플로리다의 태양광 권리 법령은 콘도와 아파트의 파티오 난간을 제외하며, 텍사스에서는 전력회사와 소매 전력 공급업체에 따라 합법 여부가 달라집니다.',
-            '최초의 플러그인 제품이 2026년 7월 UL 3700 인증을 받았지만(solar.com 기준 Hoymiles와 APsystems), 목록에 오른 제품은 소수이므로 제품별로 확인하십시오.',
+            '최초의 제품들이 2026년 7월 UL 3700 적합 제품으로 판매되기 시작했습니다(Hoymiles HiFlow Pro는 Hoymiles가 적합하다고 설명; InsideEVs는 이전 "인증" 보도를 수정; APsystems EZ1은 solar.com 기준 "CSA 인증"). 목록에 오른 제품은 소수이므로 제품별로 확인하십시오.',
             '서명된 법률은 플러그인 태양광을 넷미터링에서 제외하는 유타주의 틀을 따르며, 이는 전력회사가 반대할 주된 이유를 없앱니다.',
           ],
         },
@@ -31030,7 +31039,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '2024년까지 미국에서 발코니 태양광이 사실상 불법이었던 이유',
           content: [
             '**플러그인 태양광 기기는 표준 콘센트를 통해 주택 배선으로 전력을 보내는데, 이는 그 콘센트가 설계된 용도와 정반대입니다.** 미국의 계통 연계 규칙은 5~25 kW 옥상 설비를 기준으로 작성되어, 계약, 수수료, 검사로 500달러짜리 발코니 키트 비용이 두 배가 될 수 있었고, 2024년까지 어떤 주도 400W 패널과 본격적인 옥상 설비를 구분하지 않았습니다.',
-            '독일의 경험이 미국의 흐름을 이끌었습니다. 유타주 레이먼드 워드 의원은 독일 시스템을 소개한 뉴욕 타임스 기사를 읽고 HB 340을 발의하면서 독일의 안전 실적을 인용했습니다. "그곳의 전기는 이곳과 같습니다. 같은 물리 법칙이 작동하며 안전하다는 것이 입증되었습니다." ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
+            '독일의 경험이 미국의 흐름을 이끌었습니다. 유타주 레이먼드 워드 의원은 독일 시스템을 소개한 뉴욕 타임스 기사를 읽고 HB 340을 발의하면서 독일의 안전 실적을 인용했습니다. "[유럽의] 전기도 이곳과 같습니다. 같은 물리 법칙이 작동하며 안전하다는 것이 입증되었습니다." ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
           ],
         },
         theTemplate: {
@@ -31087,7 +31096,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**유타주 HB 340(Solar Power Amendments)은 만장일치로 통과되어 2025년 3월 스펜서 콕스 주지사가 서명했고, 2025년 5월 7일 시행되었습니다**([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)). 출력 1,200W 이하의 "소형 휴대용 태양광 발전 기기" 범주를 만들고, 계통 연계 계약과 수수료를 면제하며, 전력회사에 대한 통지도 요구하지 않습니다.',
             '발의자 레이먼드 워드 의원은 소비자 선택과 비용을 중심으로 법안을 설명했습니다. "지붕 공사에 3만 달러를 쓰지 않고 태양광을 조금 쓰고 싶은 사람에게 훌륭합니다." 이 설명 방식은 다른 주에서도 쓰였습니다.',
-            '**문제는 이 법이 아직 존재하지 않는 인증 표준에 의존했다는 점입니다.** UL Solutions는 법 시행 8개월 뒤인 2025년 12월 UL 3700을 발표했고, 첫 제품은 2026년 7월에 인증을 받았습니다([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). 제품의 실제 UL 3700 등재 여부를 확인한 뒤에 의존하십시오.',
+            '**문제는 이 법이 아직 존재하지 않는 인증 표준에 의존했다는 점입니다.** UL Solutions는 법 시행 이후인 2025년 12월 UL 3700을 발표했고, 첫 제품들은 2026년 7월 UL 3700 적합 제품으로 판매되기 시작했습니다([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). 제품의 실제 UL 3700 등재 여부를 확인한 뒤에 의존하십시오.',
           ],
         },
         california: {
@@ -31125,7 +31134,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         ulCertification: {
           title: 'UL 3700: 첫 제품은 인증받았지만 등재된 제품은 소수',
           content: [
-            '**통과된 법률은 일반적으로 합법적 사용을 UL 3700 또는 동등한 인증에 연결합니다.** UL Solutions는 2025년 12월 UL 3700 조사 개요를 발표했고 시험은 2026년 1월 시작되었습니다. 첫 플러그인 제품들은 2026년 7월 전체 인증을 받았으며, Hoymiles HiFlow Pro와 APsystems EZ1이 포함됩니다([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). 2026년 10월 보도는 인증 제품이 소수에 불과하고 시스템 전체 키트로 인증받은 것은 없다고 전하므로, 시중 키트 대부분은 여전히 미인증입니다.',
+            '**통과된 법률은 일반적으로 합법적 사용을 UL 3700 또는 동등한 인증에 연결합니다.** UL Solutions는 2025년 12월 UL 3700 조사 개요를 발표했고 시험은 2026년 1월 시작되었습니다. 최초의 제품들은 2026년 7월 UL 3700 적합 제품으로 판매되기 시작했습니다(Hoymiles HiFlow Pro는 Hoymiles가 적합하다고 설명; InsideEVs는 이전 "인증" 보도를 수정; APsystems EZ1은 solar.com 기준 "CSA 인증"). 2026년 10월 보도는 목록에 오른 제품이 소수에 불과하고 전체 시스템 키트로 인증받은 것은 없다고 전하므로, 시중 키트 대부분은 여전히 미인증입니다.',
             'UL 3700은 세 가지 위험을 시험합니다. 차단기를 넘길 수 있는 과전류, 누전 보호(GFCI)를 모르는 사이 무력화할 수 있는 비호환성, 플러그의 노출된 핀에 대한 접촉 안전입니다. 또한 정전 시 단독 운전 방지 자동 차단을 요구합니다([SimplePlugInSolar](https://simplepluginsolar.com/learn/what-is-ul-3700)).',
             '"UL 3700 ready"로 판매되는 기기가 반드시 인증을 마친 것은 아닙니다. 구매 전에 제조사나 UL 인증 데이터베이스에서 해당 주장을 확인하십시오.',
           ],
@@ -31133,7 +31142,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         advocacy: {
           title: '추진 세력: Bright Saver와 워드 의원',
           content: [
-            '비영리 단체 [Bright Saver](https://brightsaver.org/)는 2025년 1월 초기 보조금 50만 달러로 설립되어 주별로 의원들에게 모범 법안과 조직화 자료를 제공합니다.',
+            '비영리 단체 [Bright Saver](https://brightsaver.org/)는 주별로 의원들에게 모범 법안과 조직화 자료를 제공합니다.',
             '유타주 워드 의원은 하와이, 워싱턴, 미네소타, 콜로라도 등의 의원들에게 자문해 왔으며, 이는 성향이 매우 다른 의회에서 거의 같은 법안 문구가 나오는 이유를 설명하는 데 도움이 됩니다.',
           ],
         },
@@ -31173,7 +31182,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'UL 3700이란 무엇이며 합법성에 왜 중요합니까?',
-              a: 'UL 3700은 UL Solutions가 2025년 12월 발표한 플러그인 태양광 시스템용 미국 안전 인증 표준입니다. 서명된 주법은 일반적으로 이 표준 또는 동등한 표준을 요구합니다. 첫 제품은 2026년 7월 인증을 받았지만 등재된 제품은 소수이므로, 구매 전에 특정 제품의 상태를 확인하십시오.',
+              a: 'UL 3700은 UL Solutions가 2025년 12월 발표한 플러그인 태양광 시스템용 미국 안전 인증 표준입니다. 서명된 주법은 일반적으로 이 표준 또는 동등한 표준을 요구합니다. 최초의 제품들은 2026년 7월 UL 3700 적합 제품으로 판매되기 시작했지만 등재된 제품은 소수이므로, 구매 전에 특정 제품의 상태를 확인하십시오.',
             },
             {
               q: '이 법들은 왜 잉여 전력을 전력망에 되파는 것을 허용하지 않습니까?',
@@ -31217,7 +31226,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'UL 3700이란 무엇이며 합법성에 왜 중요합니까?',
-            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700은 UL Solutions가 2025년 12월 발표한 플러그인 태양광 시스템용 미국 안전 인증 표준입니다. 서명된 주법은 일반적으로 이 표준 또는 동등한 표준을 요구합니다. 첫 제품은 2026년 7월 인증을 받았지만 등재된 제품은 소수이므로, 구매 전에 특정 제품의 상태를 확인하십시오.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700은 UL Solutions가 2025년 12월 발표한 플러그인 태양광 시스템용 미국 안전 인증 표준입니다. 서명된 주법은 일반적으로 이 표준 또는 동등한 표준을 요구합니다. 최초의 제품들은 2026년 7월 UL 3700 적합 제품으로 판매되기 시작했지만 등재된 제품은 소수이므로, 구매 전에 특정 제품의 상태를 확인하십시오.' },
           },
           {
             '@type': 'Question',
@@ -31258,7 +31267,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'O HB 340 de Utah (assinado em março de 2025, em vigor desde 7 de maio de 2025) foi o primeiro e isenta dispositivos de até 1.200 W das regras de interconexão; a norma de segurança UL 3700 em que ele se apoia só foi publicada em dezembro de 2025.',
             'O SB 868 da Califórnia foi assinado em 30 de setembro de 2026 e entra em vigor em 1º de janeiro de 2027; como assinado, limita os dispositivos a 1.200 W CA por residência e suas isenções de interconexão expiram em 1º de janeiro de 2030.',
             'Flórida e Texas não têm nenhum projeto de lei de solar plug-in. A lei de direitos solares da Flórida exclui as grades de pátio em condomínios e apartamentos; no Texas, a legalidade depende da distribuidora e da fornecedora varejista de energia.',
-            'Os primeiros produtos plug-in obtiveram a certificação UL 3700 em julho de 2026 (Hoymiles e APsystems, segundo o solar.com), mas poucos constam da lista, então verifique cada produto.',
+            'Os primeiros produtos plug-in foram comercializados como conformes à UL 3700 em julho de 2026 (Hoymiles HiFlow Pro, segundo a Hoymiles; a InsideEVs corrigiu um relatório anterior de "certificado"; APsystems EZ1 "certificado pela CSA" segundo o solar.com), mas poucos constam de alguma lista, então verifique cada produto.',
             'As leis assinadas seguem o modelo de Utah, que exclui o solar plug-in da compensação de energia (net metering); isso elimina o principal motivo de objeção das distribuidoras.',
           ],
         },
@@ -31273,7 +31282,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Por que o solar de varanda foi na prática ilegal nos EUA até 2024',
           content: [
             '**Um dispositivo solar plug-in injeta energia por uma tomada padrão na fiação da casa — o oposto do que essa tomada foi projetada para fazer.** As regras americanas de interconexão foram escritas para telhados de 5 a 25 kW, com contratos, taxas e inspeções que podiam dobrar o custo de um kit de varanda de US$ 500; até 2024 nenhum estado distinguia um painel de 400 W de uma instalação completa em telhado.',
-            'A experiência alemã impulsionou a onda americana. O deputado de Utah Raymond Ward leu uma reportagem do New York Times sobre os sistemas alemães e apresentou o HB 340, citando o histórico de segurança da Alemanha: "A eletricidade é a mesma lá e aqui. As mesmas leis da física funcionam e se mostraram seguras." ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
+            'A experiência alemã impulsionou a onda americana. O deputado de Utah Raymond Ward leu uma reportagem do New York Times sobre os sistemas alemães e apresentou o HB 340, citando o histórico de segurança da Alemanha: "A eletricidade é a mesma [na Europa] e aqui. As mesmas leis da física funcionam e se mostraram seguras." ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
           ],
         },
         theTemplate: {
@@ -31330,7 +31339,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**O HB 340 de Utah, as Solar Power Amendments, foi aprovado por unanimidade e assinado pelo governador Spencer Cox em março de 2025, entrando em vigor em 7 de maio de 2025** ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)). Ele cria a categoria de "pequenos dispositivos portáteis de geração solar" limitados a 1.200 W, isenta-os de acordos e taxas de interconexão e não exige notificação à distribuidora.',
             'O autor Raymond Ward apresentou o projeto como liberdade de escolha e economia: "É ótimo para quem quer um pouco de energia solar mas não quer pagar US$ 30.000 por uma instalação no telhado" — um enquadramento que outros estados reaproveitaram.',
-            '**O problema: a lei dependia de uma norma de certificação que ainda não existia.** A UL Solutions publicou a UL 3700 em dezembro de 2025, oito meses após a entrada em vigor, e os primeiros produtos foram certificados em julho de 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Confira a listagem UL 3700 real de um produto antes de confiar nele.',
+            '**O problema: a lei dependia de uma norma de certificação que ainda não existia.** A UL Solutions publicou a UL 3700 em dezembro de 2025, após a entrada em vigor, e os primeiros produtos foram comercializados como conformes à UL 3700 em julho de 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Confira a listagem UL 3700 real de um produto antes de confiar nele.',
           ],
         },
         california: {
@@ -31368,7 +31377,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         ulCertification: {
           title: 'UL 3700: os primeiros produtos estão certificados, mas poucos constam da lista',
           content: [
-            '**As leis aprovadas geralmente condicionam o uso legal à UL 3700 ou a uma certificação equivalente.** A UL Solutions publicou o Outline of Investigation da UL 3700 em dezembro de 2025 e os testes foram abertos em janeiro de 2026; os primeiros produtos plug-in obtiveram a certificação completa em julho de 2026, incluindo o Hoymiles HiFlow Pro e o APsystems EZ1 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Relatos de outubro de 2026 descrevem apenas um punhado de produtos certificados e nenhum kit completo certificado, então a maioria dos kits do mercado ainda não é certificada.',
+            '**As leis aprovadas geralmente condicionam o uso legal à UL 3700 ou a uma certificação equivalente.** A UL Solutions publicou o Outline of Investigation da UL 3700 em dezembro de 2025 e os testes foram abertos em janeiro de 2026; os primeiros produtos foram comercializados como conformes à UL 3700 em julho de 2026 (Hoymiles HiFlow Pro segundo a Hoymiles; a InsideEVs corrigiu um relatório anterior de "certificado"; APsystems EZ1 "certificado pela CSA" segundo o solar.com). Relatos de outubro de 2026 descrevem apenas um punhado de produtos com alguma listagem e nenhum kit completo certificado, então a maioria dos kits do mercado ainda não é certificada.',
             'A UL 3700 testa três riscos: sobrecorrente que poderia sobrecarregar um disjuntor, incompatibilidade com a proteção diferencial (GFCI) que poderia anulá-la silenciosamente e segurança ao toque nos pinos expostos do plugue; a norma também exige desligamento anti-ilhamento em quedas de rede ([SimplePlugInSolar](https://simplepluginsolar.com/learn/what-is-ul-3700)).',
             'Um dispositivo vendido como "UL 3700 ready" não necessariamente concluiu a certificação. Verifique a afirmação específica com o fabricante ou no banco de dados de certificação da UL antes de comprar.',
           ],
@@ -31376,7 +31385,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         advocacy: {
           title: 'Quem está impulsionando isso: Bright Saver e o deputado Ward',
           content: [
-            'A organização sem fins lucrativos [Bright Saver](https://brightsaver.org/), fundada em janeiro de 2025 com US$ 500.000 em subsídios iniciais, oferece a legisladores projetos de lei modelo e recursos de organização, estado por estado.',
+            'A organização sem fins lucrativos [Bright Saver](https://brightsaver.org/) oferece a legisladores projetos de lei modelo e recursos de organização, estado por estado.',
             'O deputado Ward, de Utah, aconselhou legisladores do Havaí, Washington, Minnesota, Colorado e outros estados, o que ajuda a explicar o texto quase idêntico em legislaturas muito diferentes.',
           ],
         },
@@ -31416,7 +31425,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'O que é a UL 3700 e por que importa para a legalidade?',
-              a: 'A UL 3700 é a norma americana de certificação de segurança para sistemas solares plug-in, publicada pela UL Solutions em dezembro de 2025. As leis estaduais assinadas geralmente a exigem ou uma equivalente. Os primeiros produtos foram certificados em julho de 2026, mas poucos constam da lista; verifique o status de um produto antes de comprar.',
+              a: 'A UL 3700 é a norma americana de certificação de segurança para sistemas solares plug-in, publicada pela UL Solutions em dezembro de 2025. As leis estaduais assinadas geralmente a exigem ou uma equivalente. Os primeiros produtos foram comercializados como conformes em julho de 2026, mas poucos constam de alguma lista; verifique o status de um produto antes de comprar.',
             },
             {
               q: 'Por que essas leis não me deixam vender o excedente para a rede?',
@@ -31460,7 +31469,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'O que é a UL 3700 e por que importa para a legalidade?',
-            acceptedAnswer: { '@type': 'Answer', text: 'A UL 3700 é a norma americana de certificação de segurança para sistemas solares plug-in, publicada pela UL Solutions em dezembro de 2025. As leis estaduais assinadas geralmente a exigem ou uma equivalente. Os primeiros produtos foram certificados em julho de 2026, mas poucos constam da lista; verifique o status de um produto antes de comprar.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'A UL 3700 é a norma americana de certificação de segurança para sistemas solares plug-in, publicada pela UL Solutions em dezembro de 2025. As leis estaduais assinadas geralmente a exigem ou uma equivalente. Os primeiros produtos foram comercializados como conformes em julho de 2026, mas poucos constam de alguma lista; verifique o status de um produto antes de comprar.' },
           },
           {
             '@type': 'Question',
@@ -31501,7 +31510,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '犹他州的HB 340（2025年3月签署，2025年5月7日生效）是第一部，将不超过1,200W的设备排除在电网并网规则之外；该法依赖的安全标准UL 3700直到2025年12月才发布。',
             '加州的SB 868于2026年9月30日签署，2027年1月1日生效；按签署版本，每户设备限制为1,200W交流，并网豁免于2030年1月1日失效。',
             '佛罗里达和得克萨斯没有插拔式太阳能法案。佛罗里达的太阳能权利法规排除了共管公寓和公寓的露台栏杆；在得克萨斯，合法性取决于电力公司和零售电力供应商。',
-            '首批插拔式产品于2026年7月获得UL 3700认证（据solar.com为Hoymiles和APsystems），但列入名单的产品很少，请逐一核实。',
+            '首批产品于2026年7月以符合UL 3700标准的名义上市（Hoymiles HiFlow Pro据Hoymiles称符合；InsideEVs更正了此前"已认证"的报道；APsystems EZ1据solar.com称为"CSA认证"），但列入任何名单的产品很少，请逐一核实。',
             '已签署的法律遵循犹他州的模板，将插拔式太阳能排除在净计量之外，这消除了电力公司反对的主要理由。',
           ],
         },
@@ -31516,7 +31525,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '为什么2024年之前美国阳台光伏实际上是非法的',
           content: [
             '**插拔式太阳能设备通过标准插座把电力送入住宅线路，而这与插座的设计用途正好相反。** 美国的并网规则是为5至25 kW的屋顶系统制定的，合同、费用和检查可能让一套500美元的阳台套件成本翻倍；直到2024年，没有一个州把400W的面板与完整的屋顶系统区分开来。',
-            '德国的经验催生了美国的这波立法。犹他州众议员雷蒙德·沃德读到《纽约时报》介绍德国系统的文章后提出了HB 340，并引用德国的安全记录：“那里的电和这里的电是一样的。所有物理规律同样适用，并已被证明是安全的。”（[Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)）',
+            '德国的经验催生了美国的这波立法。犹他州众议员雷蒙德·沃德读到《纽约时报》介绍德国系统的文章后提出了HB 340，并引用德国的安全记录：”[在欧洲]的电和这里的电是一样的。所有物理规律同样适用，并已被证明是安全的。”（[Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)）',
           ],
         },
         theTemplate: {
@@ -31573,7 +31582,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**犹他州HB 340（Solar Power Amendments）一致通过，州长斯潘塞·考克斯于2025年3月签署，2025年5月7日生效**（[Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)）。它设立了功率上限1,200W的“小型便携式太阳能发电设备”类别，免除并网协议和费用，也无需通知电力公司。',
             '提案人雷蒙德·沃德从消费者选择和成本角度阐述该法案：“对于想用一点太阳能、又不想花3万美元装屋顶的人来说，这太好了”，这一说法被其他州沿用。',
-            '**问题在于：该法依赖的认证标准当时还不存在。** UL Solutions在法律生效八个月后的2025年12月发布了UL 3700，首批产品在2026年7月获得认证（[solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)）。在依赖某产品之前，请核实其实际的UL 3700认证名单。',
+            '**问题在于：该法依赖的认证标准当时还不存在。** UL Solutions在法律生效后的2025年12月发布了UL 3700，首批产品在2026年7月以符合UL 3700标准的名义上市（[solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)）。在依赖某产品之前，请核实其实际的UL 3700认证名单。',
           ],
         },
         california: {
@@ -31611,7 +31620,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         ulCertification: {
           title: 'UL 3700：首批产品已获认证，但列入名单的很少',
           content: [
-            '**已通过的法律通常把合法使用与UL 3700或同等认证挂钩。** UL Solutions于2025年12月发布了UL 3700调查大纲，测试于2026年1月开放；首批插拔式产品于2026年7月获得完整认证，包括Hoymiles HiFlow Pro和APsystems EZ1（[solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)）。2026年10月的报道称，获得认证的产品只有寥寥数款，没有整套系统套件获得认证，因此市面上的大多数套件仍未认证。',
+            '**已通过的法律通常把合法使用与UL 3700或同等认证挂钩。** UL Solutions于2025年12月发布了UL 3700调查大纲，测试于2026年1月开放；首批产品于2026年7月以符合UL 3700标准的名义上市（Hoymiles HiFlow Pro据Hoymiles称符合；InsideEVs更正了此前"已认证"的报道；APsystems EZ1据solar.com称为"CSA认证"）。2026年10月的报道称，列入任何名单的产品只有寥寥数款，没有整套系统套件获得认证，因此市面上的大多数套件仍未认证。',
             'UL 3700测试三类风险：可能压垮断路器的过电流、可能悄然使接地故障保护失效的GFCI不兼容，以及插头外露插脚的触电安全；同时要求电网停电时的防孤岛自动断开（[SimplePlugInSolar](https://simplepluginsolar.com/learn/what-is-ul-3700)）。',
             '标榜“UL 3700 ready”的设备不一定已完成认证。购买前请向制造商或UL认证数据库核实具体说法。',
           ],
@@ -31619,7 +31628,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         advocacy: {
           title: '幕后推动者：Bright Saver与议员沃德',
           content: [
-            '非营利组织[Bright Saver](https://brightsaver.org/)于2025年1月成立，初始资助50万美元，逐州向议员提供示范法案和组织资源。',
+            '非营利组织[Bright Saver](https://brightsaver.org/)逐州向议员提供示范法案和组织资源。',
             '犹他州的沃德议员曾向夏威夷、华盛顿、明尼苏达、科罗拉多等州的议员提供咨询，这有助于解释为何立场迥异的议会会出现几乎相同的法案文本。',
           ],
         },
@@ -31659,7 +31668,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'UL 3700是什么，为什么影响合法性？',
-              a: 'UL 3700是美国插拔式太阳能系统的安全认证标准，由UL Solutions于2025年12月发布。已签署的州法律通常要求它或同等标准。首批产品于2026年7月获得认证，但列入名单的很少；购买前请核实具体产品的状态。',
+              a: 'UL 3700是美国插拔式太阳能系统的安全认证标准，由UL Solutions于2025年12月发布。已签署的州法律通常要求它或同等标准。首批产品于2026年7月以符合标准的名义上市，但列入任何名单的很少；购买前请核实具体产品的状态。',
             },
             {
               q: '为什么这些法律不允许我把多余电力卖回电网？',
@@ -31703,7 +31712,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'UL 3700是什么，为什么影响合法性？',
-            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700是美国插拔式太阳能系统的安全认证标准，由UL Solutions于2025年12月发布。已签署的州法律通常要求它或同等标准。首批产品于2026年7月获得认证，但列入名单的很少；购买前请核实具体产品的状态。' },
+            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700是美国插拔式太阳能系统的安全认证标准，由UL Solutions于2025年12月发布。已签署的州法律通常要求它或同等标准。首批产品于2026年7月以符合标准的名义上市，但列入任何名单的很少；购买前请核实具体产品的状态。' },
           },
           {
             '@type': 'Question',
