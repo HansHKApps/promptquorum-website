@@ -26,11 +26,12 @@ export function getBlogPostIsoDate(postId: string): string {
 }
 
 /**
- * JSON-LD dateModified / sitemap lastmod: the EN block's `dateModified` (set only on
- * substantive content updates) if present, otherwise falls back to publishDate — same
- * fallback chain other clusters use (dateModified ?? lastFactChecked ?? publishDate).
+ * JSON-LD dateModified / sitemap lastmod: priority chain matches the freshness
+ * tool and other clusters — last_full_refresh ?? dateModified ?? publishDate.
+ * `last_full_refresh` is set on every substantive content refresh; `dateModified`
+ * is a legacy fallback for posts that predate the last_full_refresh field.
  */
 export function getBlogPostModifiedIsoDate(postId: string): string {
-  const dateModified = blogContent[postId]?.en?.dateModified
-  return dateModified ?? getBlogPostIsoDate(postId)
+  const en = blogContent[postId]?.en
+  return en?.last_full_refresh ?? en?.dateModified ?? getBlogPostIsoDate(postId)
 }
