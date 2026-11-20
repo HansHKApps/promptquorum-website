@@ -7,6 +7,7 @@ import { generateLesson } from '@/lib/academy/lesson'
 import { ACADEMY_TIMEOUT_MS, academyClient, academyFailure, academyGuard, academyJson } from '@/lib/academy/route'
 import { lessonRequestSchema } from '@/lib/academy/schemas'
 import { recordAcademy } from '@/lib/academy/usage'
+import { recordDemand } from '@/lib/academy/demand-store'
 
 export const runtime = 'nodejs'
 export const maxDuration = 60
@@ -18,6 +19,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   try {
     const { sections, furtherReading, followUpQuestions } = await generateLesson(academyClient(), guard.body, AbortSignal.timeout(ACADEMY_TIMEOUT_MS))
     await recordAcademy('lesson')
+    await recordDemand('lesson', { subject: guard.body.subject, language: guard.body.language })
     return academyJson({ sections, furtherReading, followUpQuestions })
   } catch (err) {
     return academyFailure('lesson', err)
