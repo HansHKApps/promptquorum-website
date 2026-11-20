@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'What is Modly and who is it for?',
         answer:
-          'Modly is a desktop 3D generator: you import an image or type a prompt, pick an installed model extension, and Modly produces a mesh you can preview and export. It suits people who want AI-generated 3D assets for Blender, game engines or 3D printing while keeping their inputs on their own machine.',
+          'Modly is a desktop 3D generator: you import an image or type a prompt, pick an installed model extension, and Modly produces a mesh you can preview and export. It suits people who want AI-generated 3D assets for Blender, game engines or 3D printing while, per the maker, keeping their inputs on their own machine.',
         bullets: [
           'Platforms: Windows (.exe installer), Linux (AppImage, .deb) and macOS on Apple Silicon (.dmg).',
           'Price: free, with no account or credits; GitHub Sponsors is optional.',
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content: [
-          '**Modly is worth a look if you want to generate 3D meshes from images or prompts on your own GPU and keep your inputs off the cloud.**',
+          '**Modly is worth a look if you want to generate 3D meshes from images or prompts on your own GPU and, as the maker states, keep your inputs off the cloud.**',
           'On paper it covers a lot: a free MIT-licensed installer app for three operating systems, several open-source 3D models through extensions, four export formats and built-in mesh tools. Development is active, with release 0.5.0 on 18 November 2026 and a push on 19 November 2026.',
           'The trade-offs are a capable GPU, a model download before first use, unstated model licences and a project that is still below version 1.0. PromptQuorum has not tested the app, so try it with a small image and check the licence of your chosen model before you rely on the results.',
         ],
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Was ist Modly, und für wen ist es gedacht?',
         answer:
-          'Modly ist ein 3D-Generator für den Desktop: Sie importieren ein Bild oder tippen einen Prompt, wählen eine installierte Modell-Erweiterung, und Modly erzeugt ein Mesh, das Sie ansehen und exportieren können. Er eignet sich für Menschen, die KI-generierte 3D-Assets für Blender, Spiel-Engines oder den 3D-Druck wollen und ihre Eingaben auf dem eigenen Rechner behalten möchten.',
+          'Modly ist ein 3D-Generator für den Desktop: Sie importieren ein Bild oder tippen einen Prompt, wählen eine installierte Modell-Erweiterung, und Modly erzeugt ein Mesh, das Sie ansehen und exportieren können. Er eignet sich für Menschen, die KI-generierte 3D-Assets für Blender, Spiel-Engines oder den 3D-Druck wollen und ihre Eingaben laut Hersteller auf dem eigenen Rechner behalten möchten.',
         bullets: [
           'Plattformen: Windows (.exe-Installer), Linux (AppImage, .deb) und macOS auf Apple Silicon (.dmg).',
           'Preis: kostenlos, ohne Konto oder Credits; GitHub Sponsors ist optional.',
@@ -479,7 +479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content: [
-          '**Modly ist einen Blick wert, wenn Sie 3D-Meshes aus Bildern oder Prompts auf Ihrer eigenen GPU erzeugen und Ihre Eingaben aus der Cloud heraushalten möchten.**',
+          '**Modly ist einen Blick wert, wenn Sie 3D-Meshes aus Bildern oder Prompts auf Ihrer eigenen GPU erzeugen und Ihre Eingaben, wie der Hersteller angibt, aus der Cloud heraushalten möchten.**',
           'Auf dem Papier deckt es viel ab: eine kostenlose Installer-App unter MIT-Lizenz für drei Betriebssysteme, mehrere Open-Source-3D-Modelle über Erweiterungen, vier Exportformate und eingebaute Mesh-Werkzeuge. Die Entwicklung ist aktiv, mit Version 0.5.0 am 18. November 2026 und einer Aktualisierung am 19. November 2026.',
           'Die Nachteile sind eine leistungsfähige GPU, ein Modell-Download vor der ersten Nutzung, nicht genannte Modelllizenzen und ein Projekt, das noch unter Version 1.0 liegt. PromptQuorum hat die App nicht getestet; probieren Sie sie mit einem kleinen Bild aus und prüfen Sie die Lizenz Ihres gewählten Modells, bevor Sie sich auf die Ergebnisse verlassen.',
         ],
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       es: {
         question: '¿Qué es Modly y para quién es?',
         answer:
-          'Modly es un generador 3D de escritorio: importas una imagen o escribes un prompt, eliges una extensión de modelo instalada y Modly produce una malla que puedes previsualizar y exportar. Sirve para quien quiere activos 3D generados con IA para Blender, motores de juego o impresión 3D y prefiere que sus datos de entrada se queden en su equipo.',
+          'Modly es un generador 3D de escritorio: importas una imagen o escribes un prompt, eliges una extensión de modelo instalada y Modly produce una malla que puedes previsualizar y exportar. Sirve para quien quiere activos 3D generados con IA para Blender, motores de juego o impresión 3D y prefiere que, según el desarrollador, sus datos de entrada se queden en su equipo.',
         bullets: [
           'Plataformas: Windows (instalador .exe), Linux (AppImage, .deb) y macOS con Apple Silicon (.dmg).',
           'Precio: gratis, sin cuenta ni créditos; GitHub Sponsors es opcional.',
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content: [
-          '**Modly merece una mirada si quieres generar mallas 3D a partir de imágenes o prompts en tu propia GPU y mantener tus datos de entrada fuera de la nube.**',
+          '**Modly merece una mirada si quieres generar mallas 3D a partir de imágenes o prompts en tu propia GPU y, según indica el desarrollador, mantener tus datos de entrada fuera de la nube.**',
           'Sobre el papel cubre mucho: una app con instalador, gratuita y con licencia MIT para tres sistemas operativos, varios modelos 3D de código abierto mediante extensiones, cuatro formatos de exportación y herramientas de malla integradas. El desarrollo está activo, con la versión 0.5.0 el 18 de noviembre de 2026 y un push el 19 de noviembre de 2026.',
           'Las contrapartidas son una GPU potente, una descarga de modelo antes del primer uso, licencias de modelo sin indicar y un proyecto que aún está por debajo de la versión 1.0. PromptQuorum no ha probado la app, así que pruébala con una imagen pequeña y comprueba la licencia del modelo elegido antes de fiarte de los resultados.',
         ],
@@ -798,7 +798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Qu’est-ce que Modly et à qui s’adresse-t-il ?',
         answer:
-          'Modly est un générateur 3D de bureau : vous importez une image ou saisissez un prompt, choisissez une extension de modèle installée, et Modly produit un maillage que vous pouvez prévisualiser et exporter. Il convient à ceux qui veulent des assets 3D générés par IA pour Blender, des moteurs de jeu ou l’impression 3D, tout en gardant leurs données d’entrée sur leur machine.',
+          'Modly est un générateur 3D de bureau : vous importez une image ou saisissez un prompt, choisissez une extension de modèle installée, et Modly produit un maillage que vous pouvez prévisualiser et exporter. Il convient à ceux qui veulent des assets 3D générés par IA pour Blender, des moteurs de jeu ou l’impression 3D, tout en gardant, selon l’éditeur, leurs données d’entrée sur leur machine.',
         bullets: [
           'Plateformes : Windows (installateur .exe), Linux (AppImage, .deb) et macOS sur Apple Silicon (.dmg).',
           'Prix : gratuit, sans compte ni crédits ; GitHub Sponsors est facultatif.',
@@ -979,7 +979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content: [
-          '**Modly mérite un coup d’œil si vous voulez générer des maillages 3D à partir d’images ou de prompts sur votre propre GPU et garder vos données d’entrée hors du cloud.**',
+          '**Modly mérite un coup d’œil si vous voulez générer des maillages 3D à partir d’images ou de prompts sur votre propre GPU et, comme l’affirme l’éditeur, garder vos données d’entrée hors du cloud.**',
           'Sur le papier, il couvre beaucoup : une application gratuite sous licence MIT avec installateur pour trois systèmes, plusieurs modèles 3D open source via des extensions, quatre formats d’export et des outils de maillage intégrés. Le développement est actif, avec la version 0.5.0 le 18 novembre 2026 et un push le 19 novembre 2026.',
           'Les compromis : un GPU capable, un téléchargement de modèle avant la première utilisation, des licences de modèles non précisées et un projet encore en dessous de la version 1.0. PromptQuorum n’a pas testé l’application ; essayez-la avec une petite image et vérifiez la licence du modèle choisi avant de vous fier aux résultats.',
         ],
@@ -1048,7 +1048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: 'Modlyとは何で、どんな人向けですか？',
         answer:
-          'Modlyはデスクトップの3D生成アプリです。画像を取り込むかプロンプトを入力し、インストール済みのモデル拡張機能を選ぶと、プレビューと書き出しができるメッシュを生成します。Blender、ゲームエンジン、3Dプリント向けにAI生成の3Dアセットを作りたく、入力データを手元のPCに置いておきたい人に向いています。',
+          'Modlyはデスクトップの3D生成アプリです。画像を取り込むかプロンプトを入力し、インストール済みのモデル拡張機能を選ぶと、プレビューと書き出しができるメッシュを生成します。Blender、ゲームエンジン、3Dプリント向けにAI生成の3Dアセットを作りたく、開発元の説明どおり入力データを手元のPCに置いておきたい人に向いています。',
         bullets: [
           '対応OS：Windows（.exeインストーラー）、Linux（AppImage、.deb）、Apple SiliconのmacOS（.dmg）。',
           '価格：無料。アカウントやクレジットは不要で、GitHub Sponsorsは任意です。',
@@ -1229,7 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総評',
         content: [
-          '**自分のGPUで画像やプロンプトから3Dメッシュを生成し、入力データをクラウドに出したくない人には、試す価値があります。**',
+          '**自分のGPUで画像やプロンプトから3Dメッシュを生成し、開発元の説明どおり入力データをクラウドに出したくない人には、試す価値があります。**',
           '紙の上では多くをカバーしています。3つのOSに対応したMITライセンスの無料インストーラーアプリ、拡張機能で使える複数のオープンソース3Dモデル、4つの書き出し形式、内蔵のメッシュツールです。開発は活発で、2026年11月18日にバージョン0.5.0、2026年11月19日にプッシュがありました。',
           '代わりに、高性能なGPU、初回利用前のモデルダウンロード、記載のないモデルライセンス、まだ1.0に達していないプロジェクトという点があります。PromptQuorumはアプリを試していないため、小さな画像で試し、選んだモデルのライセンスを確認してから結果を当てにしてください。',
         ],
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pt: {
         question: 'O que é o Modly e para quem ele serve?',
         answer:
-          'O Modly é um gerador 3D de desktop: você importa uma imagem ou digita um prompt, escolhe uma extensão de modelo instalada e o Modly produz uma malha que você pode visualizar e exportar. Serve para quem quer ativos 3D gerados por IA para Blender, engines de jogos ou impressão 3D e prefere manter os dados de entrada no próprio computador.',
+          'O Modly é um gerador 3D de desktop: você importa uma imagem ou digita um prompt, escolhe uma extensão de modelo instalada e o Modly produz uma malha que você pode visualizar e exportar. Serve para quem quer ativos 3D gerados por IA para Blender, engines de jogos ou impressão 3D e prefere manter, segundo o desenvolvedor, os dados de entrada no próprio computador.',
         bullets: [
           'Plataformas: Windows (instalador .exe), Linux (AppImage, .deb) e macOS com Apple Silicon (.dmg).',
           'Preço: gratuito, sem conta nem créditos; o GitHub Sponsors é opcional.',
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content: [
-          '**O Modly vale uma olhada se você quer gerar malhas 3D a partir de imagens ou prompts na sua própria GPU e manter seus dados de entrada fora da nuvem.**',
+          '**O Modly vale uma olhada se você quer gerar malhas 3D a partir de imagens ou prompts na sua própria GPU e, como o desenvolvedor afirma, manter seus dados de entrada fora da nuvem.**',
           'No papel, cobre bastante coisa: um app gratuito com instalador e licença MIT para três sistemas operacionais, vários modelos 3D de código aberto por extensões, quatro formatos de exportação e ferramentas de malha integradas. O desenvolvimento está ativo, com a versão 0.5.0 em 18 de novembro de 2026 e um push em 19 de novembro de 2026.',
           'As contrapartidas são uma GPU capaz, o download de um modelo antes do primeiro uso, licenças de modelos não informadas e um projeto ainda abaixo da versão 1.0. A PromptQuorum não testou o app; experimente com uma imagem pequena e confira a licença do modelo escolhido antes de confiar nos resultados.',
         ],
@@ -1548,7 +1548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: 'Modly 是什么，适合谁用？',
         answer:
-          'Modly 是一款桌面 3D 生成工具：导入图片或输入提示词，选择已安装的模型扩展，Modly 就会生成可预览和导出的网格。适合想为 Blender、游戏引擎或 3D 打印制作 AI 生成 3D 素材、又希望输入数据留在自己电脑上的人。',
+          'Modly 是一款桌面 3D 生成工具：导入图片或输入提示词，选择已安装的模型扩展，Modly 就会生成可预览和导出的网格。适合想为 Blender、游戏引擎或 3D 打印制作 AI 生成 3D 素材、又希望按开发者的说法让输入数据留在自己电脑上的人。',
         bullets: [
           '平台：Windows（.exe 安装程序）、Linux（AppImage、.deb）和 Apple Silicon 上的 macOS（.dmg）。',
           '价格：免费，无需账号或积分；GitHub Sponsors 为可选项。',
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content: [
-          '**如果您想在自己的 GPU 上根据图片或提示词生成 3D 网格，并让输入数据不上云，Modly 值得一试。**',
+          '**如果您想在自己的 GPU 上根据图片或提示词生成 3D 网格，并按开发者的说法让输入数据不上云，Modly 值得一试。**',
           '纸面上它覆盖面不小：面向三种操作系统的免费 MIT 许可安装程序应用、通过扩展使用的多个开源 3D 模型、四种导出格式和内置网格工具。开发活跃，2026 年 11 月 18 日发布 0.5.0，11 月 19 日有新推送。',
           '代价是需要性能足够的 GPU、首次使用前要下载模型、模型许可未说明，以及项目仍低于 1.0 版本。PromptQuorum 未测试该应用，建议先用一张小图试用，并在依赖结果之前核对所选模型的许可。',
         ],
@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'ما هو Modly ولمن هو؟',
         answer:
-          'Modly مولّد ثلاثي الأبعاد لسطح المكتب: تستورد صورة أو تكتب وصفًا، وتختار إضافة نموذج مثبّتة، فينتج Modly مجسمًا يمكنك معاينته وتصديره. يناسب من يريد أصولًا ثلاثية الأبعاد مولّدة بالذكاء الاصطناعي لبرنامج Blender أو محركات الألعاب أو الطباعة ثلاثية الأبعاد، مع إبقاء مدخلاته على جهازه.',
+          'Modly مولّد ثلاثي الأبعاد لسطح المكتب: تستورد صورة أو تكتب وصفًا، وتختار إضافة نموذج مثبّتة، فينتج Modly مجسمًا يمكنك معاينته وتصديره. يناسب من يريد أصولًا ثلاثية الأبعاد مولّدة بالذكاء الاصطناعي لبرنامج Blender أو محركات الألعاب أو الطباعة ثلاثية الأبعاد، مع إبقاء مدخلاته على جهازه بحسب قول المطوّر.',
         bullets: [
           'المنصات: Windows (مثبّت .exe)، وLinux (AppImage و.deb)، وmacOS على Apple Silicon (.dmg).',
           'السعر: مجاني، دون حساب أو رصيد؛ ودعم المطوّر عبر GitHub Sponsors اختياري.',
@@ -1979,7 +1979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content: [
-          '**يستحق Modly التجربة إن أردت توليد مجسمات ثلاثية الأبعاد من الصور أو الأوصاف على بطاقتك الرسومية وإبقاء مدخلاتك بعيدًا عن السحابة.**',
+          '**يستحق Modly التجربة إن أردت توليد مجسمات ثلاثية الأبعاد من الصور أو الأوصاف على بطاقتك الرسومية وإبقاء مدخلاتك بعيدًا عن السحابة كما يقول المطوّر.**',
           'على الورق يغطي الكثير: تطبيق مجاني بمثبّت وترخيص MIT لثلاثة أنظمة تشغيل، وعدة نماذج ثلاثية الأبعاد مفتوحة المصدر عبر الإضافات، وأربع صيغ تصدير، وأدوات مجسمات مدمجة. التطوير نشط، مع الإصدار 0.5.0 في 18 نوفمبر 2026 ودفع في 19 نوفمبر 2026.',
           'المقابل هو بطاقة رسومية قوية، وتنزيل نموذج قبل أول استخدام، وتراخيص نماذج غير مذكورة، ومشروع ما زال دون الإصدار 1.0. لم تختبر PromptQuorum التطبيق، فجرّبه بصورة صغيرة وتحقق من ترخيص النموذج الذي تختاره قبل الاعتماد على النتائج.',
         ],
@@ -2048,7 +2048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ko: {
         question: 'Modly는 무엇이며 누구를 위한 도구인가요?',
         answer:
-          'Modly는 데스크톱 3D 생성기입니다. 이미지를 가져오거나 프롬프트를 입력하고 설치된 모델 확장 기능을 고르면, 미리 보고 내보낼 수 있는 메시를 생성합니다. Blender, 게임 엔진, 3D 프린팅용 AI 생성 3D 에셋이 필요하고 입력 데이터를 내 컴퓨터에 두고 싶은 분께 맞습니다.',
+          'Modly는 데스크톱 3D 생성기입니다. 이미지를 가져오거나 프롬프트를 입력하고 설치된 모델 확장 기능을 고르면, 미리 보고 내보낼 수 있는 메시를 생성합니다. Blender, 게임 엔진, 3D 프린팅용 AI 생성 3D 에셋이 필요하고 개발자의 설명대로 입력 데이터를 내 컴퓨터에 두고 싶은 분께 맞습니다.',
         bullets: [
           '플랫폼: Windows(.exe 설치 프로그램), Linux(AppImage, .deb), Apple Silicon의 macOS(.dmg).',
           '가격: 무료이며 계정이나 크레딧이 필요 없고, GitHub Sponsors는 선택 사항입니다.',
@@ -2229,7 +2229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content: [
-          '**내 GPU에서 이미지나 프롬프트로 3D 메시를 생성하고 입력 데이터를 클라우드 밖에 두고 싶다면 Modly는 살펴볼 만합니다.**',
+          '**내 GPU에서 이미지나 프롬프트로 3D 메시를 생성하고 개발자의 설명대로 입력 데이터를 클라우드 밖에 두고 싶다면 Modly는 살펴볼 만합니다.**',
           '문서상으로는 많은 것을 갖추고 있습니다. 세 운영체제를 지원하는 MIT 라이선스의 무료 설치형 앱, 확장 기능으로 쓰는 여러 오픈소스 3D 모델, 네 가지 내보내기 형식, 내장 메시 도구입니다. 개발은 활발하며 2026년 11월 18일에 버전 0.5.0, 2026년 11월 19일에 푸시가 있었습니다.',
           '대신 성능 좋은 GPU, 처음 쓰기 전의 모델 다운로드, 명시되지 않은 모델 라이선스, 아직 1.0 미만인 프로젝트라는 점이 있습니다. PromptQuorum은 앱을 테스트하지 않았으므로 작은 이미지로 먼저 써 보고, 선택한 모델의 라이선스를 확인한 뒤 결과를 신뢰하십시오.',
         ],
