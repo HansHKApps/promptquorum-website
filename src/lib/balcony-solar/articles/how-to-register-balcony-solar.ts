@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Do I need to register my balcony solar system?',
         answer: 'It depends entirely on your country. Portugal exempts systems under 800W with no grid export from any registration. Germany uses a single simplified Marktstammdatenregister registration. The US varies by state with no federal registration. Brazil and Mexico have no small-system exemption at all — full standard interconnection registration applies regardless of system size.',
         bullets: [
-          'Portugal: no registration needed for systems ≤800W with no grid export',
+          'Portugal: no registration needed for systems ≤800W with no grid export (800 W per the government press release)',
           'Germany: single Marktstammdatenregister registration, no separate grid-operator notification needed — verified against primary EEG text, storage-equipped kits excepted',
           'US: varies by state, no federal registration requirement',
           'Brazil and Mexico: no small-system exemption — full standard registration applies to any size',
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Registration requirements range from none (Portugal, ≤800W no-export) to full standard interconnection with no small-system exemption (Brazil, Mexico) — there is no universal default.',
+          'Registration requirements range from none (Portugal, ≤800W no-export) to full standard interconnection with no small-system exemption (Brazil, Mexico) — there is no universal default. (800 W per the government press release)',
           'Germany uses a single Marktstammdatenregister registration with no separate grid-operator notification — confirmed against primary § 8 EEG 2023 text. Storage-equipped balcony systems are the exception: they fall outside this simplified regime entirely and also need grid-operator registration beyond MaStR (a simplified procedure up to 800 W exists under VDE-AR-N 4105, but not every operator accepts it yet).',
           'US registration requirements vary by state with no federal standard — check your specific state.',
           'Spain\'s status is genuinely unresolved: vendor sources claim a simplified exemption for small kits, but a detailed legal source says full formalities still apply — this page does not assert either as settled.',
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'portugal',
         title: 'Portugal',
         content: [
-          '**Portugal has the clearest, most confidently sourced simplified regime of any country covered here: systems up to 800W AC output with no grid export are exempt from prior control entirely, per Decreto-Lei n.º 15/2022.** Systems between 800W and 30kW require only a simplified online notification ("Mera Comunicação Prévia") through DGEG rather than full registration.',
+          '**Portugal has the clearest, most confidently sourced simplified regime of any country covered here: systems up to 800W AC output with no grid export are exempt from prior control entirely, per Decreto-Lei n.º 15/2022 (as amended by Decreto-Lei n.º 130/2026; the 800 W figure is per the Portuguese government press release).** Systems between 800W and 30kW require only a simplified online notification ("Mera Comunicação Prévia") through DGEG rather than full registration.',
         ],
       },
       stepByStep: {
@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Which country has the simplest balcony solar registration?', a: 'Portugal — systems up to 800W AC output with no grid export require no registration at all, per Decreto-Lei n.º 15/2022, one of the most clearly codified exemptions found across the markets covered here.' },
+          { q: 'Which country has the simplest balcony solar registration?', a: 'Portugal — systems up to 800W AC output with no grid export require no registration at all, per Decreto-Lei n.º 15/2022 (as amended by Decreto-Lei n.º 130/2026; the 800 W figure is per the Portuguese government press release), one of the most clearly codified exemptions found across the markets covered here.' },
           { q: 'Do I need to register balcony solar in Germany?', a: 'Yes, via a single Marktstammdatenregister (MaStR) entry — no separate grid-operator notification is required for standard plug-in units. Storage-equipped balcony systems are an exception and still need grid-operator registration in addition to MaStR; a simplified procedure up to 800 W exists, but not every operator accepts it yet.' },
           { q: 'Is there a federal registration requirement in the US?', a: 'No — registration requirements, where they exist at all, are determined entirely at the state level. Most states have no dedicated balcony solar framework yet.' },
           { q: 'Do Brazil and Mexico have a simplified registration path for small systems?', a: 'No — both countries apply their standard full interconnection/registration process regardless of system size, with no documented small-system exemption found.' },
@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '¿Necesito registrar mi sistema de energía solar de balcón?',
         answer: 'Depende por completo de tu país. Portugal exime de cualquier registro a los sistemas de menos de 800W sin exportación a la red. Alemania utiliza un único registro simplificado en el Marktstammdatenregister. En EE. UU. varía según el estado, sin registro federal. Brasil y México no tienen ninguna exención para sistemas pequeños: se aplica el registro de interconexión estándar completo sin importar el tamaño del sistema.',
         bullets: [
-          'Portugal: no se necesita registro para sistemas ≤800W sin exportación a la red',
+          'Portugal: no se necesita registro para sistemas ≤800W sin exportación a la red (800 W según el comunicado del Gobierno)',
           'Alemania: un único registro en el Marktstammdatenregister, sin necesidad de notificación aparte al operador de red — verificado con el texto primario de la EEG, con excepción de los kits con almacenamiento',
           'EE. UU.: varía según el estado, sin requisito de registro federal',
           'Brasil y México: sin exención para sistemas pequeños — se aplica el registro estándar completo sin importar el tamaño',
@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Los requisitos de registro van desde ninguno (Portugal, ≤800W sin exportación) hasta la interconexión estándar completa sin exención para sistemas pequeños (Brasil, México) — no existe un valor por defecto universal.',
+          'Los requisitos de registro van desde ninguno (Portugal, ≤800W sin exportación) hasta la interconexión estándar completa sin exención para sistemas pequeños (Brasil, México) — no existe un valor por defecto universal. (800 W según el comunicado del Gobierno)',
           'Alemania utiliza un único registro en el Marktstammdatenregister sin notificación aparte al operador de red, confirmado con el texto primario del § 8 EEG 2023. Los sistemas de balcón con almacenamiento son la excepción: quedan completamente fuera de este régimen simplificado y necesitan además registro ante el operador de red (existe un procedimiento simplificado de hasta 800 W, pero no todos los operadores lo aceptan aún).',
           'Los requisitos de registro en EE. UU. varían según el estado, sin un estándar federal — consulta tu estado específico.',
           'La situación de España es realmente indeterminada: fuentes de proveedores afirman que existe una exención simplificada para kits pequeños, pero una fuente legal detallada indica que aún se aplican todos los trámites formales — esta página no da por sentado ninguno de los dos como definitivo.',
@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'portugal',
         title: 'Portugal',
         content: [
-          '**Portugal tiene el régimen simplificado con las fuentes más claras y confiables de todos los países cubiertos aquí: los sistemas de hasta 800W de salida de CA sin exportación a la red están completamente exentos de control previo, según el Decreto-Lei n.º 15/2022.** Los sistemas entre 800W y 30kW solo requieren una notificación en línea simplificada ("Mera Comunicação Prévia") a través de la DGEG, en lugar de un registro completo.',
+          '**Portugal tiene el régimen simplificado con las fuentes más claras y confiables de todos los países cubiertos aquí: los sistemas de hasta 800W de salida de CA sin exportación a la red están completamente exentos de control previo, según el Decreto-Lei n.º 15/2022 (modificado por el Decreto-Lei n.º 130/2026; la cifra de 800 W procede del comunicado de prensa del Gobierno portugués).** Los sistemas entre 800W y 30kW solo requieren una notificación en línea simplificada ("Mera Comunicação Prévia") a través de la DGEG, en lugar de un registro completo.',
         ],
       },
       stepByStep: {
@@ -295,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Qué país tiene el registro de energía solar de balcón más sencillo?', a: 'Portugal — los sistemas de hasta 800W de salida de CA sin exportación a la red no requieren ningún registro, según el Decreto-Lei n.º 15/2022, una de las exenciones más claramente codificadas entre los mercados cubiertos aquí.' },
+          { q: '¿Qué país tiene el registro de energía solar de balcón más sencillo?', a: 'Portugal — los sistemas de hasta 800W de salida de CA sin exportación a la red no requieren ningún registro, según el Decreto-Lei n.º 15/2022 (modificado por el Decreto-Lei n.º 130/2026; la cifra de 800 W procede del comunicado de prensa del Gobierno portugués), una de las exenciones más claramente codificadas entre los mercados cubiertos aquí.' },
           { q: '¿Necesito registrar la energía solar de balcón en Alemania?', a: 'Sí, mediante una única entrada en el Marktstammdatenregister (MaStR) — no se requiere una notificación aparte al operador de red para las unidades enchufables estándar. Los sistemas de balcón con almacenamiento son una excepción y aún necesitan registro ante el operador de red además del MaStR; existe un procedimiento simplificado de hasta 800 W, pero no todos los operadores lo aceptan aún.' },
           { q: '¿Existe un requisito de registro federal en EE. UU.?', a: 'No — los requisitos de registro, cuando existen, se determinan por completo a nivel estatal. La mayoría de los estados aún no tienen un marco dedicado a la energía solar de balcón.' },
           { q: '¿Brasil y México tienen una vía de registro simplificada para sistemas pequeños?', a: 'No — ambos países aplican su proceso estándar completo de interconexión/registro sin importar el tamaño del sistema, sin ninguna exención documentada para sistemas pequeños.' },
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Eu preciso registrar meu sistema de energia solar de varanda?',
         answer: 'Depende inteiramente do seu país. Portugal isenta de qualquer registro os sistemas abaixo de 800W sem exportação para a rede. A Alemanha usa um único registro simplificado no Marktstammdatenregister. Nos EUA, isso varia por estado, sem registro federal. Brasil e México não têm nenhuma isenção para sistemas pequenos — o registro de interconexão padrão completo se aplica independentemente do tamanho do sistema.',
         bullets: [
-          'Portugal: nenhum registro necessário para sistemas ≤800W sem exportação para a rede',
+          'Portugal: nenhum registro necessário para sistemas ≤800W sem exportação para a rede (800 W conforme o comunicado do governo)',
           'Alemanha: um único registro no Marktstammdatenregister, sem necessidade de notificação separada à operadora de rede — verificado com o texto primário da EEG, com exceção dos kits equipados com armazenamento',
           'EUA: varia por estado, sem exigência de registro federal',
           'Brasil e México: sem isenção para sistemas pequenos — o registro padrão completo se aplica a qualquer tamanho',
@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Os requisitos de registro variam de nenhum (Portugal, ≤800W sem exportação) a interconexão padrão completa sem isenção para sistemas pequenos (Brasil, México) — não existe um padrão universal.',
+          'Os requisitos de registro variam de nenhum (Portugal, ≤800W sem exportação) a interconexão padrão completa sem isenção para sistemas pequenos (Brasil, México) — não existe um padrão universal. (800 W conforme o comunicado do governo)',
           'A Alemanha usa um único registro no Marktstammdatenregister sem notificação separada à operadora de rede — confirmado com o texto primário do § 8 EEG 2023. Sistemas de varanda equipados com armazenamento são a exceção: ficam totalmente fora desse regime simplificado e precisam também de registro junto à operadora de rede (existe um procedimento simplificado de até 800 W, mas nem todas as operadoras o aceitam ainda).',
           'Os requisitos de registro nos EUA variam por estado, sem um padrão federal — verifique o seu estado específico.',
           'A situação da Espanha é genuinamente indefinida: fontes de fornecedores afirmam que existe uma isenção simplificada para kits pequenos, mas uma fonte jurídica detalhada diz que todas as formalidades completas ainda se aplicam — esta página não afirma nenhuma das duas posições como definitiva.',
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'portugal',
         title: 'Portugal',
         content: [
-          '**Portugal tem o regime simplificado mais claro e mais bem fundamentado entre todos os países cobertos aqui: sistemas de até 800W de saída de CA sem exportação para a rede estão totalmente isentos de controle prévio, conforme o Decreto-Lei n.º 15/2022.** Sistemas entre 800W e 30kW exigem apenas uma notificação online simplificada ("Mera Comunicação Prévia") pela DGEG, em vez de um registro completo.',
+          '**Portugal tem o regime simplificado mais claro e mais bem fundamentado entre todos os países cobertos aqui: sistemas de até 800W de saída de CA sem exportação para a rede estão totalmente isentos de controle prévio, conforme o Decreto-Lei n.º 15/2022 (alterado pelo Decreto-Lei n.º 130/2026; o valor de 800 W vem do comunicado de imprensa do governo português).** Sistemas entre 800W e 30kW exigem apenas uma notificação online simplificada ("Mera Comunicação Prévia") pela DGEG, em vez de um registro completo.',
         ],
       },
       stepByStep: {
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Qual país tem o registro de energia solar de varanda mais simples?', a: 'Portugal — sistemas de até 800W de saída de CA sem exportação para a rede não exigem nenhum registro, conforme o Decreto-Lei n.º 15/2022, uma das isenções mais claramente codificadas entre os mercados cobertos aqui.' },
+          { q: 'Qual país tem o registro de energia solar de varanda mais simples?', a: 'Portugal — sistemas de até 800W de saída de CA sem exportação para a rede não exigem nenhum registro, conforme o Decreto-Lei n.º 15/2022 (alterado pelo Decreto-Lei n.º 130/2026; o valor de 800 W vem do comunicado de imprensa do governo português), uma das isenções mais claramente codificadas entre os mercados cobertos aqui.' },
           { q: 'Eu preciso registrar energia solar de varanda na Alemanha?', a: 'Sim, por meio de uma única entrada no Marktstammdatenregister (MaStR) — nenhuma notificação separada à operadora de rede é necessária para unidades plug-in padrão. Sistemas de varanda equipados com armazenamento são uma exceção e ainda exigem registro junto à operadora de rede além do MaStR; existe um procedimento simplificado de até 800 W, mas nem todas as operadoras o aceitam ainda.' },
           { q: 'Existe uma exigência de registro federal nos EUA?', a: 'Não — as exigências de registro, quando existem, são determinadas inteiramente em nível estadual. A maioria dos estados ainda não tem uma estrutura dedicada para energia solar de varanda.' },
           { q: 'Brasil e México têm um caminho de registro simplificado para sistemas pequenos?', a: 'Não — ambos os países aplicam seu processo padrão completo de interconexão/registro independentemente do tamanho do sistema, sem nenhuma isenção documentada para sistemas pequenos.' },
@@ -513,7 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'هل أحتاج إلى تسجيل نظام الطاقة الشمسية للشرفة الخاص بي؟',
         answer: 'يعتمد الأمر كليًا على دولتك. تُعفي البرتغال الأنظمة أقل من 800W بدون تصدير إلى الشبكة من أي تسجيل. تستخدم ألمانيا تسجيلاً مبسطًا واحدًا في Marktstammdatenregister. تختلف الولايات المتحدة حسب الولاية دون وجود تسجيل فيدرالي. لا تملك البرازيل والمكسيك أي إعفاء للأنظمة الصغيرة على الإطلاق — يُطبَّق تسجيل الربط الشبكي القياسي الكامل بغض النظر عن حجم النظام.',
         bullets: [
-          'البرتغال: لا حاجة إلى تسجيل للأنظمة ≤800W بدون تصدير إلى الشبكة',
+          'البرتغال: لا حاجة إلى تسجيل للأنظمة ≤800W بدون تصدير إلى الشبكة (800 واط وفق البيان الصحفي للحكومة)',
           'ألمانيا: تسجيل واحد في Marktstammdatenregister، دون الحاجة إلى إشعار منفصل لمشغل الشبكة — تم التحقق منه مقابل نص EEG الأساسي، باستثناء الأطقم المزودة بتخزين',
           'الولايات المتحدة: تختلف حسب الولاية، دون وجود متطلب تسجيل فيدرالي',
           'البرازيل والمكسيك: لا يوجد إعفاء للأنظمة الصغيرة — يُطبَّق التسجيل القياسي الكامل على أي حجم',
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'تتراوح متطلبات التسجيل من عدم وجودها (البرتغال، ≤800W بدون تصدير) إلى الربط الشبكي القياسي الكامل بدون إعفاء للأنظمة الصغيرة (البرازيل، المكسيك) — لا يوجد افتراض عالمي موحد.',
+          'تتراوح متطلبات التسجيل من عدم وجودها (البرتغال، ≤800W بدون تصدير) إلى الربط الشبكي القياسي الكامل بدون إعفاء للأنظمة الصغيرة (البرازيل، المكسيك) — لا يوجد افتراض عالمي موحد. (800 واط وفق البيان الصحفي للحكومة)',
           'تستخدم ألمانيا تسجيلاً واحدًا في Marktstammdatenregister دون إشعار منفصل لمشغل الشبكة — تم تأكيد ذلك مقابل نص § 8 EEG 2023 الأساسي. أنظمة الشرفة المزودة بتخزين هي الاستثناء: فهي تقع بالكامل خارج هذا النظام المبسط وتحتاج أيضًا إلى تسجيل لدى مشغل الشبكة (يوجد إجراء مبسّط حتى 800 واط لكن ليس كل المشغّلين يقبلونه بعد).',
           'تختلف متطلبات التسجيل في الولايات المتحدة حسب الولاية دون وجود معيار فيدرالي — تحقق من ولايتك المحددة.',
           'وضع إسبانيا غير محسوم فعليًا: تدّعي مصادر البائعين وجود إعفاء مبسط للأطقم الصغيرة، بينما يشير مصدر قانوني مفصّل إلى أن الإجراءات الرسمية الكاملة لا تزال سارية — لا تُثبت هذه الصفحة أيًا من الموقفين كأمر محسوم.',
@@ -585,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'portugal',
         title: 'البرتغال',
         content: [
-          '**تمتلك البرتغال أوضح وأكثر الأنظمة المبسطة توثيقًا من بين جميع الدول المشمولة هنا: الأنظمة التي تصل إلى 800W من خرج التيار المتردد بدون تصدير إلى الشبكة معفاة تمامًا من أي رقابة مسبقة، وفقًا للمرسوم بقانون رقم Decreto-Lei n.º 15/2022.** تتطلب الأنظمة بين 800W و30kW فقط إشعارًا إلكترونيًا مبسطًا ("Mera Comunicação Prévia") عبر هيئة DGEG بدلاً من التسجيل الكامل.',
+          '**تمتلك البرتغال أوضح وأكثر الأنظمة المبسطة توثيقًا من بين جميع الدول المشمولة هنا: الأنظمة التي تصل إلى 800W من خرج التيار المتردد بدون تصدير إلى الشبكة معفاة تمامًا من أي رقابة مسبقة، وفقًا للمرسوم بقانون رقم Decreto-Lei n.º 15/2022 (بصيغته المعدّلة بموجب Decreto-Lei n.º 130/2026؛ ورقم 800 واط مأخوذ من البيان الصحفي للحكومة البرتغالية).** تتطلب الأنظمة بين 800W و30kW فقط إشعارًا إلكترونيًا مبسطًا ("Mera Comunicação Prévia") عبر هيئة DGEG بدلاً من التسجيل الكامل.',
         ],
       },
       stepByStep: {
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'ما هي الدولة التي تتمتع بأبسط تسجيل للطاقة الشمسية للشرفة؟', a: 'البرتغال — الأنظمة التي تصل إلى 800W من خرج التيار المتردد بدون تصدير إلى الشبكة لا تتطلب أي تسجيل على الإطلاق، وفقًا للمرسوم بقانون Decreto-Lei n.º 15/2022، وهو أحد أوضح الإعفاءات المقننة من بين الأسواق المشمولة هنا.' },
+          { q: 'ما هي الدولة التي تتمتع بأبسط تسجيل للطاقة الشمسية للشرفة؟', a: 'البرتغال — الأنظمة التي تصل إلى 800W من خرج التيار المتردد بدون تصدير إلى الشبكة لا تتطلب أي تسجيل على الإطلاق، وفقًا للمرسوم بقانون Decreto-Lei n.º 15/2022 (بصيغته المعدّلة بموجب Decreto-Lei n.º 130/2026؛ ورقم 800 واط مأخوذ من البيان الصحفي للحكومة البرتغالية)، وهو أحد أوضح الإعفاءات المقننة من بين الأسواق المشمولة هنا.' },
           { q: 'هل أحتاج إلى تسجيل الطاقة الشمسية للشرفة في ألمانيا؟', a: 'نعم، عبر إدخال واحد في Marktstammdatenregister (MaStR) — لا يُشترط إشعار منفصل لمشغل الشبكة بالنسبة للوحدات القياسية القابلة للتوصيل بالمقبس. تُعد أنظمة الشرفة المزودة بتخزين استثناءً وما زالت تتطلب تسجيلاً لدى مشغل الشبكة إضافة إلى MaStR؛ ويوجد إجراء مبسّط حتى 800 واط لكن ليس كل المشغّلين يقبلونه بعد.' },
           { q: 'هل يوجد متطلب تسجيل فيدرالي في الولايات المتحدة؟', a: 'لا — تُحدَّد متطلبات التسجيل، حيثما وُجدت، بالكامل على مستوى الولاية. معظم الولايات ليس لديها بعد إطار عمل مخصص للطاقة الشمسية للشرفة.' },
           { q: 'هل تملك البرازيل والمكسيك مسارًا مبسطًا للتسجيل بالنسبة للأنظمة الصغيرة؟', a: 'لا — يطبّق كلا البلدين عملية التسجيل/الربط الشبكي القياسية الكاملة بغض النظر عن حجم النظام، دون أي إعفاء موثّق للأنظمة الصغيرة.' },
@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'portugal',
         title: 'ポルトガル',
         content: [
-          '**ポルトガルは、ここで扱う国の中で最も明確かつ最も確度の高い簡易制度を持っています。系統への逆潮流がない交流出力800W以下のシステムは、Decreto-Lei n.º 15/2022に基づき事前規制が完全に免除されます。** 800Wから30kWのシステムは、完全な登録ではなく、DGEGを通じた簡易なオンライン通知("Mera Comunicação Prévia")のみが必要です。',
+          '**ポルトガルは、ここで扱う国の中で最も明確かつ最も確度の高い簡易制度を持っています。系統への逆潮流がない交流出力800W以下のシステムは、Decreto-Lei n.º 15/2022（Decreto-Lei n.º 130/2026による改正後。800Wという数値はポルトガル政府の報道発表によるもの）に基づき事前規制が完全に免除されます。** 800Wから30kWのシステムは、完全な登録ではなく、DGEGを通じた簡易なオンライン通知("Mera Comunicação Prévia")のみが必要です。',
         ],
       },
       stepByStep: {
@@ -766,7 +766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'バルコニーソーラーの登録が最も簡単な国はどこですか?', a: 'ポルトガルです。系統への逆潮流がない交流出力800W以下のシステムは、Decreto-Lei n.º 15/2022に基づき一切の登録が不要で、ここで扱う市場の中でも最も明確に法制化された免除の一つです。' },
+          { q: 'バルコニーソーラーの登録が最も簡単な国はどこですか?', a: 'ポルトガルです。系統への逆潮流がない交流出力800W以下のシステムは、Decreto-Lei n.º 15/2022（Decreto-Lei n.º 130/2026による改正後。800Wという数値はポルトガル政府の報道発表によるもの）に基づき一切の登録が不要で、ここで扱う市場の中でも最も明確に法制化された免除の一つです。' },
           { q: 'ドイツでバルコニーソーラーの登録は必要ですか?', a: 'はい、単一のMarktstammdatenregister(MaStR)登録が必要です。標準的なプラグイン式ユニットには別途の系統運用者への通知は不要です。蓄電池付きバルコニーシステムは例外で、依然としてMaStRに加えて系統運用者への登録も必要です(800Wまでの簡易手続きがありますが、まだ受け付けていない事業者もあります)。' },
           { q: '米国に連邦レベルの登録要件はありますか?', a: 'いいえ。登録要件は、存在する場合でもすべて州レベルで決まります。大半の州にはまだバルコニーソーラー専用の制度がありません。' },
           { q: 'ブラジルとメキシコには小規模システム向けの簡易な登録手続きがありますか?', a: 'いいえ。両国とも、システムの規模に関わらず標準的な完全連系・登録プロセスを適用しており、確認できる小規模システムの免除はありません。' },
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'portugal',
         title: '葡萄牙',
         content: [
-          '**在本页涵盖的所有国家中,葡萄牙拥有最清晰、来源最可靠的简化制度:根据Decreto-Lei n.º 15/2022,交流输出800W及以下且不向电网上传电力的系统完全免于事前审批。** 800W至30kW之间的系统只需通过DGEG提交简化的在线通知("Mera Comunicação Prévia"),无需完整注册。',
+          '**在本页涵盖的所有国家中,葡萄牙拥有最清晰、来源最可靠的简化制度:根据Decreto-Lei n.º 15/2022(经Decreto-Lei n.º 130/2026修订;800瓦这一数字来自葡萄牙政府新闻稿),交流输出800W及以下且不向电网上传电力的系统完全免于事前审批。** 800W至30kW之间的系统只需通过DGEG提交简化的在线通知("Mera Comunicação Prévia"),无需完整注册。',
         ],
       },
       stepByStep: {
@@ -923,7 +923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '哪个国家的阳台光伏注册手续最简单?', a: '葡萄牙——根据Decreto-Lei n.º 15/2022,交流输出800W及以下且不向电网上传电力的系统完全无需注册,是本页涵盖市场中规定最明确的豁免之一。' },
+          { q: '哪个国家的阳台光伏注册手续最简单?', a: '葡萄牙——根据Decreto-Lei n.º 15/2022(经Decreto-Lei n.º 130/2026修订;800瓦这一数字来自葡萄牙政府新闻稿),交流输出800W及以下且不向电网上传电力的系统完全无需注册,是本页涵盖市场中规定最明确的豁免之一。' },
           { q: '在德国安装阳台光伏需要注册吗?', a: '需要,通过在Marktstammdatenregister(MaStR)完成一次登记即可——标准插电式设备无需单独通知电网运营商。配储能的阳台系统是例外,依然需要在MaStR之外向电网运营商注册(800瓦以内有简化程序,但并非所有运营商都已受理)。' },
           { q: '美国有联邦层面的注册要求吗?', a: '没有——如果存在注册要求,也完全由州一级决定。大多数州目前还没有专门针对阳台光伏的制度框架。' },
           { q: '巴西和墨西哥对小型系统有简化的注册途径吗?', a: '没有——两国都对系统一律适用完整的标准并网/注册流程,不论规模大小,目前没有发现任何有据可查的小型系统豁免。' },
@@ -984,7 +984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Dois-je enregistrer mon système solaire de balcon ?',
         answer: 'Cela dépend entièrement de votre pays. Le Portugal exempte de tout enregistrement les systèmes de moins de 800 W sans injection sur le réseau. L\'Allemagne utilise un enregistrement simplifié unique dans le Marktstammdatenregister. Aux États-Unis, cela varie selon l\'État, sans enregistrement fédéral. Le Brésil et le Mexique n\'ont aucune exemption pour les petits systèmes — la procédure d\'enregistrement standard complète s\'applique quelle que soit la taille du système.',
         bullets: [
-          'Portugal : aucun enregistrement nécessaire pour les systèmes ≤800 W sans injection sur le réseau',
+          'Portugal : aucun enregistrement nécessaire pour les systèmes ≤800 W sans injection sur le réseau (800 W selon le communiqué du gouvernement)',
           'Allemagne : un enregistrement unique dans le Marktstammdatenregister, aucune notification séparée à l\'opérateur de réseau nécessaire — vérifié auprès du texte primaire de l\'EEG, à l\'exception des kits équipés de stockage',
           'États-Unis : varie selon l\'État, aucune exigence d\'enregistrement fédérale',
           'Brésil et Mexique : aucune exemption pour les petits systèmes — l\'enregistrement standard complet s\'applique quelle que soit la taille',
@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Les exigences d\'enregistrement vont d\'aucune (Portugal, ≤800 W sans injection) à un raccordement standard complet sans exemption pour les petits systèmes (Brésil, Mexique) — il n\'existe pas de valeur par défaut universelle.',
+          'Les exigences d\'enregistrement vont d\'aucune (Portugal, ≤800 W sans injection) à un raccordement standard complet sans exemption pour les petits systèmes (Brésil, Mexique) — il n\'existe pas de valeur par défaut universelle. (800 W selon le communiqué du gouvernement)',
           'L\'Allemagne utilise un enregistrement unique dans le Marktstammdatenregister sans notification séparée à l\'opérateur de réseau — confirmé auprès du texte primaire du § 8 EEG 2023. Les systèmes de balcon équipés de stockage font exception : ils échappent entièrement à ce régime simplifié et nécessitent également un enregistrement auprès de l\'opérateur de réseau (une procédure simplifiée existe jusqu\'à 800 W, mais tous les opérateurs ne l\'acceptent pas encore).',
           'Les exigences d\'enregistrement aux États-Unis varient selon l\'État, sans norme fédérale — vérifiez votre État spécifique.',
           'La situation de l\'Espagne est réellement non résolue : des sources de fournisseurs affirment qu\'une exemption simplifiée existe pour les petits kits, mais une source juridique détaillée indique que les formalités complètes s\'appliquent encore — cette page n\'affirme aucune des deux positions comme établie.',
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'portugal',
         title: 'Portugal',
         content: [
-          '**Le Portugal dispose du régime simplifié le plus clair et le mieux documenté de tous les pays couverts ici : les systèmes jusqu\'à 800 W de sortie AC sans injection sur le réseau sont entièrement exemptés de contrôle préalable, conformément au Decreto-Lei n.º 15/2022.** Les systèmes entre 800 W et 30 kW nécessitent uniquement une notification en ligne simplifiée (« Mera Comunicação Prévia ») via la DGEG plutôt qu\'un enregistrement complet.',
+          '**Le Portugal dispose du régime simplifié le plus clair et le mieux documenté de tous les pays couverts ici : les systèmes jusqu\'à 800 W de sortie AC sans injection sur le réseau sont entièrement exemptés de contrôle préalable, conformément au Decreto-Lei n.º 15/2022 (modifié par le Decreto-Lei n.º 130/2026 ; le chiffre de 800 W provient du communiqué de presse du gouvernement portugais).** Les systèmes entre 800 W et 30 kW nécessitent uniquement une notification en ligne simplifiée (« Mera Comunicação Prévia ») via la DGEG plutôt qu\'un enregistrement complet.',
         ],
       },
       stepByStep: {
@@ -1080,7 +1080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Quel pays a l\'enregistrement de solaire de balcon le plus simple ?', a: 'Le Portugal — les systèmes jusqu\'à 800 W de sortie AC sans injection sur le réseau ne nécessitent aucun enregistrement, conformément au Decreto-Lei n.º 15/2022, l\'une des exemptions les plus clairement codifiées parmi les marchés couverts ici.' },
+          { q: 'Quel pays a l\'enregistrement de solaire de balcon le plus simple ?', a: 'Le Portugal — les systèmes jusqu\'à 800 W de sortie AC sans injection sur le réseau ne nécessitent aucun enregistrement, conformément au Decreto-Lei n.º 15/2022 (modifié par le Decreto-Lei n.º 130/2026 ; le chiffre de 800 W provient du communiqué de presse du gouvernement portugais), l\'une des exemptions les plus clairement codifiées parmi les marchés couverts ici.' },
           { q: 'Dois-je enregistrer mon solaire de balcon en Allemagne ?', a: 'Oui, via une entrée unique dans le Marktstammdatenregister (MaStR) — aucune notification séparée à l\'opérateur de réseau n\'est requise pour les unités enfichables standard. Les systèmes de balcon équipés de stockage font exception et nécessitent toujours également un enregistrement auprès de l\'opérateur de réseau (une procédure simplifiée existe jusqu\'à 800 W, mais tous les opérateurs ne l\'acceptent pas encore).' },
           { q: 'Existe-t-il une exigence d\'enregistrement fédérale aux États-Unis ?', a: 'Non — les exigences d\'enregistrement, lorsqu\'elles existent, sont déterminées entièrement au niveau de l\'État. La plupart des États n\'ont pas encore de cadre dédié au solaire de balcon.' },
           { q: 'Le Brésil et le Mexique ont-ils une voie d\'enregistrement simplifiée pour les petits systèmes ?', a: 'Non — les deux pays appliquent leur processus standard complet d\'interconnexion/enregistrement quelle que soit la taille du système, sans aucune exemption documentée pour les petits systèmes.' },
@@ -1213,7 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'portugal',
         title: '포르투갈',
         content: [
-          '**포르투갈은 여기서 다루는 국가 중 가장 명확하고 근거가 확실한 간소화 제도를 갖추고 있습니다: Decreto-Lei n.º 15/2022에 따라 계통 역송전이 없는 AC 출력 800W 이하 시스템은 사전 규제에서 완전히 면제됩니다.** 800W에서 30kW 사이 시스템은 완전한 등록이 아니라 DGEG를 통한 간소화된 온라인 통지("Mera Comunicação Prévia")만 필요합니다.',
+          '**포르투갈은 여기서 다루는 국가 중 가장 명확하고 근거가 확실한 간소화 제도를 갖추고 있습니다: Decreto-Lei n.º 15/2022(Decreto-Lei n.º 130/2026으로 개정됨; 800W라는 수치는 포르투갈 정부 보도자료에 따름)에 따라 계통 역송전이 없는 AC 출력 800W 이하 시스템은 사전 규제에서 완전히 면제됩니다.** 800W에서 30kW 사이 시스템은 완전한 등록이 아니라 DGEG를 통한 간소화된 온라인 통지("Mera Comunicação Prévia")만 필요합니다.',
         ],
       },
       stepByStep: {
@@ -1237,7 +1237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '어느 나라의 발코니 태양광 등록이 가장 간단한가요?', a: '포르투갈입니다 — Decreto-Lei n.º 15/2022에 따라 계통 역송전이 없는 AC 출력 800W 이하 시스템은 등록이 전혀 필요 없으며, 여기서 다루는 시장 중 가장 명확하게 법제화된 예외 중 하나입니다.' },
+          { q: '어느 나라의 발코니 태양광 등록이 가장 간단한가요?', a: '포르투갈입니다 — Decreto-Lei n.º 15/2022(Decreto-Lei n.º 130/2026으로 개정됨; 800W라는 수치는 포르투갈 정부 보도자료에 따름)에 따라 계통 역송전이 없는 AC 출력 800W 이하 시스템은 등록이 전혀 필요 없으며, 여기서 다루는 시장 중 가장 명확하게 법제화된 예외 중 하나입니다.' },
           { q: '독일에서 발코니 태양광을 등록해야 하나요?', a: '예, Marktstammdatenregister(MaStR) 단일 등록을 통해서만 필요합니다 — 표준 플러그인 유닛은 별도의 계통운영자 통지가 필요하지 않습니다. 저장장치가 포함된 발코니 시스템은 예외로, 여전히 MaStR 외에 계통운영자에 대한 등록도 필요합니다(800W까지는 간소화 절차가 있으나 아직 모든 운영자가 받아주는 것은 아닙니다).' },
           { q: '미국에는 연방 차원의 등록 요건이 있나요?', a: '없습니다 — 등록 요건이 존재하더라도 전적으로 주 단위에서 결정됩니다. 대부분의 주는 아직 발코니 태양광 전용 제도가 없습니다.' },
           { q: '브라질과 멕시코에는 소규모 시스템을 위한 간소화된 등록 경로가 있나요?', a: '없습니다 — 두 나라 모두 시스템 규모와 관계없이 표준 계통연계/등록 절차를 그대로 적용하며, 확인된 소규모 시스템 예외는 없습니다.' },
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Muss ich mein Balkonkraftwerk anmelden?',
         answer: 'Das hängt vollständig von Ihrem Land ab. Portugal befreit Systeme unter 800 W ohne Netzeinspeisung von jeder Anmeldepflicht. Deutschland verwendet eine einzige vereinfachte Marktstammdatenregister-Anmeldung. In den USA variiert die Regelung je nach Bundesstaat, eine bundesweite Anmeldepflicht gibt es nicht. Brasilien und Mexiko kennen keine Kleinanlagenausnahme — unabhängig von der Systemgröße gilt die vollständige Standard-Netzanschlussanmeldung.',
         bullets: [
-          'Portugal: keine Anmeldung für Systeme ≤ 800 W ohne Netzeinspeisung',
+          'Portugal: keine Anmeldung für Systeme ≤ 800 W ohne Netzeinspeisung (800 W laut Pressemitteilung der Regierung)',
           'Deutschland: einzige Marktstammdatenregister-Anmeldung, keine separate Netzbetreiber-Meldung — anhand des primären EEG-Gesetzestexts bestätigt, Balkonspeicher ausgenommen',
           'USA: variiert je nach Bundesstaat, keine bundesweite Anmeldepflicht',
           'Brasilien und Mexiko: keine Kleinanlagenausnahme — vollständige Standard-Anmeldung unabhängig von der Größe',
@@ -1323,7 +1323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Die Anmeldepflicht reicht von keiner Anmeldung (Portugal, ≤ 800 W ohne Einspeisung) bis zum vollständigen Standard-Netzanschluss ohne Kleinanlagenausnahme (Brasilien, Mexiko) — es gibt keine universelle Standardregelung.',
+          'Die Anmeldepflicht reicht von keiner Anmeldung (Portugal, ≤ 800 W ohne Einspeisung) bis zum vollständigen Standard-Netzanschluss ohne Kleinanlagenausnahme (Brasilien, Mexiko) — es gibt keine universelle Standardregelung. (800 W laut Pressemitteilung der Regierung)',
           'Deutschland verwendet eine einzige Marktstammdatenregister-Anmeldung ohne separate Netzbetreiber-Meldung — anhand des primären § 8 EEG 2023-Gesetzestexts bestätigt. Balkonspeicher sind die Ausnahme: Sie fallen vollständig aus dieser vereinfachten Regelung heraus und benötigen zusätzlich eine Anmeldung beim Netzbetreiber (bis 800 W gibt es ein vereinfachtes Verfahren, das aber noch nicht jeder Netzbetreiber akzeptiert).',
           'Die US-amerikanischen Anmeldepflichten variieren je nach Bundesstaat ohne bundesweiten Standard — prüfen Sie Ihren jeweiligen Bundesstaat.',
           'Spaniens Status ist tatsächlich ungeklärt: Händler-Quellen behaupten, eine vereinfachte Ausnahme für kleine Anlagen zu existieren, aber eine detaillierte Rechtsquelle gibt an, dass weiterhin alle Formalitäten gelten — diese Seite bewertet keine der beiden Positionen als gesichert.',
@@ -1370,7 +1370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'portugal',
         title: 'Portugal',
         content: [
-          '**Portugal verfügt über das klarste und am besten belegte vereinfachte Regime aller hier behandelten Länder: Systeme bis 800 W AC-Ausgang ohne Netzeinspeisung sind gemäß Decreto-Lei n.º 15/2022 vollständig von der Vorabkontrolle befreit.** Systeme zwischen 800 W und 30 kW benötigen lediglich eine vereinfachte Online-Meldung (»Mera Comunicação Prévia«) über die DGEG statt einer vollständigen Anmeldung.',
+          '**Portugal verfügt über das klarste und am besten belegte vereinfachte Regime aller hier behandelten Länder: Systeme bis 800 W AC-Ausgang ohne Netzeinspeisung sind gemäß Decreto-Lei n.º 15/2022 (geändert durch Decreto-Lei n.º 130/2026; die 800-W-Angabe stammt aus der Pressemitteilung der portugiesischen Regierung) vollständig von der Vorabkontrolle befreit.** Systeme zwischen 800 W und 30 kW benötigen lediglich eine vereinfachte Online-Meldung (»Mera Comunicação Prévia«) über die DGEG statt einer vollständigen Anmeldung.',
         ],
       },
       stepByStep: {
@@ -1394,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Welches Land hat die einfachste Balkonkraftwerk-Anmeldung?', a: 'Portugal — Systeme bis 800 W AC-Ausgang ohne Netzeinspeisung benötigen gemäß Decreto-Lei n.º 15/2022 gar keine Anmeldung. Das ist eine der klarsten gesetzlich kodifizierten Ausnahmen unter allen hier behandelten Märkten.' },
+          { q: 'Welches Land hat die einfachste Balkonkraftwerk-Anmeldung?', a: 'Portugal — Systeme bis 800 W AC-Ausgang ohne Netzeinspeisung benötigen gemäß Decreto-Lei n.º 15/2022 (geändert durch Decreto-Lei n.º 130/2026; die 800-W-Angabe stammt aus der Pressemitteilung der portugiesischen Regierung) gar keine Anmeldung. Das ist eine der klarsten gesetzlich kodifizierten Ausnahmen unter allen hier behandelten Märkten.' },
           { q: 'Muss ich mein Balkonkraftwerk in Deutschland anmelden?', a: 'Ja, über einen einzigen Marktstammdatenregister-(MaStR-)Eintrag — für Standard-Steckgeräte ist keine separate Netzbetreiber-Meldung erforderlich. Balkonspeicher sind eine Ausnahme und benötigen weiterhin zusätzlich eine Anmeldung beim Netzbetreiber (bis 800 W gibt es ein vereinfachtes Verfahren, das aber noch nicht jeder Netzbetreiber akzeptiert).' },
           { q: 'Gibt es in den USA eine bundesweite Anmeldepflicht?', a: 'Nein — Anmeldepflichten, wo sie überhaupt existieren, werden vollständig auf Bundesstaatsebene bestimmt. Die meisten Bundesstaaten haben noch keinen dedizierten Rahmen für Balkonkraftwerke.' },
           { q: 'Haben Brasilien und Mexiko einen vereinfachten Anmeldepfad für kleine Anlagen?', a: 'Nein — beide Länder wenden ihr vollständiges Standard-Netzanschluss-/Anmeldeverfahren unabhängig von der Anlagengröße an, ohne dokumentierte Kleinanlagenausnahme.' },
