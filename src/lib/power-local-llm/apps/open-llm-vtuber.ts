@@ -53,6 +53,10 @@ export const app: ToolRecord = {
     versionSourceUrl: 'https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/releases',
   },
   verdict: 'Best for tinkerers who can use a terminal and want a self-hosted, voice-driven Live2D companion with swappable local or cloud parts; limited by a developer-style setup, no functional repository change since 2026-02-11 (the maintainers are planning a v2.0 rewrite), no published privacy policy and quality claims PromptQuorum could not check.',
+  // Comparison attributes (realtime-voice-agents): each value verified against the project's official README on 2026-11-20 (github.com/Open-LLM-VTuber/Open-LLM-VTuber, open-llm-vtuber.github.io):
+  // "All functionalities can run completely offline" + "Offline mode support" (fullyLocal), "Voice interruption without headphones" (bargeIn), LLM list incl. Ollama / any OpenAI-compatible API / GGUF / vLLM (customLlm).
+  // A missing key (telephony) = not stated there, never false.
+  compare: { fullyLocal: true, bargeIn: true, customLlm: true },
   lastVerifiedDate: '2026-10-24',
   lastUpstreamUpdate: '2026-02-11', // last functional commit on main (GitHub API, read 2026-10-24); latest release v1.2.1 is 2025-08-26; a 2026-05-15 commit only changed the README
   lastUpstreamUpdateSource: 'https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/commits/main',

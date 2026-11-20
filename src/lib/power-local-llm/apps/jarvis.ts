@@ -41,8 +41,10 @@ export const app: ToolRecord = {
     ko: 'macOS 음성 어시스턴트, 완전 오프라인(Llama, Whisper, Kokoro)',
   },
   reviewSlug: 'jarvis-mac-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, voice: true, toolUse: true },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-11-20; a missing key = not stated there, never false.
+  // Voice-agent keys from github.com/Reezxy/Jarvis---Local-Voice-assistant README and jarvis-mac.lovable.app: "Fully local, fully offline ... No API keys. No cloud." with local Llama + faster-whisper + Kokoro
+  // (fullyLocal; weights download once on first run), `barge_in.enabled` "Let the user interrupt Jarvis mid-sentence" (bargeIn), `llm.repo_id` / `filename` "Which GGUF model to load" in config.json (customLlm). Telephony not stated.
+  compare: { localLlm: true, voice: true, toolUse: true, fullyLocal: true, bargeIn: true, customLlm: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
   lastUpstreamUpdate: '2026-08-27', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
   lastUpstreamUpdateSource: 'https://github.com/Reezxy/Jarvis---Local-Voice-assistant',

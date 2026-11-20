@@ -36,7 +36,8 @@ export const app: ToolRecord = {
     ar: 'منصة ذكاء اصطناعي صوتي مفتوحة المصدر وذاتية الاستضافة — بديل لـVapi وRetell مع إمكانية إحضار نموذجك الخاص',
     ko: '오픈소스 자체 호스팅 음성 AI 플랫폼 — 자체 모델을 사용할 수 있는 Vapi 및 Retell 대안',
   },
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  // Comparison attributes: each value verified against the project's official README/site on 2026-11-20 (github.com/dograh-hq/dograh); a missing key = not stated there, never false.
+  // customLlm: "Bring your own LLM, TTS, STT, and telephony providers"; telephony: Twilio, Vonage, Telnyx, Asterisk ARI. fullyLocal and bargeIn stay unset: self-hostable, but the README does not state a no-cloud STT+LLM+TTS pipeline or interruption handling.
   compare: { customLlm: true, telephony: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   lastUpstreamUpdate: '2026-10-15', // GitHub API (latest release or push, whichever is newer), read 2026-10-16

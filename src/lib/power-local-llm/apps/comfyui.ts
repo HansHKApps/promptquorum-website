@@ -41,8 +41,10 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'comfyui-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-11-02', version: 'v0.43.0', versionSourceUrl: 'https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0' },
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { visualBuilder: true, apiServer: true },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-11-20; a missing key = not stated there, never false.
+  // Source github.com/comfyanonymous/ComfyUI README (read 2026-11-20): "visual node graph" (nodeWorkflow), "custom nodes, installed and updated through ComfyUI-Manager" (extensions),
+  // "Built-in tools for inpainting, outpainting" (inpainting), "Video generation: Wan 2.1 and 2.2, LTX-Video ..." (videoGeneration), "as low as 4GB vram" + "model offloading" (lowVram), "local API" (apiServer).
+  compare: { visualBuilder: true, apiServer: true, nodeWorkflow: true, extensions: true, inpainting: true, videoGeneration: true, lowVram: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
   lastUpstreamUpdate: '2026-11-02', // GitHub API (latest release or push, whichever is newer), read 2026-11-02
   lastUpstreamUpdateSource: 'https://github.com/Comfy-Org/ComfyUI',
