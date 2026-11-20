@@ -739,3 +739,18 @@ For each section of the page, answer:
 
 If any answer is "no" → the update is incomplete. Fix before marking done.
 ```
+
+---
+
+## Lessons Learned Log
+
+Add one-line entries after every batch run. If a lesson can be automated, add a validator instead of or in addition to prose.
+
+| Date | What failed | Rule / validator added |
+|---|---|---|
+| 2026-11-20 | Orchestrator session started inside a worktree it later deleted — all git commands to other worktrees were refused | Rule e in §Batch and Delegated Refresh Runs |
+| 2026-11-20 | freshness.mjs fell back to publishDate for pages with computed dateModified (PAGE_MODIFIED = ternary) — pages showed as 161 days old | Fixed in scripts/freshness.mjs: resolveConstant now handles non-exported consts and expressions |
+| 2026-11-20 | "untraceable" in a data-source note passed all validators and appeared on the live page; post-deploy check caught it | validate-edit-history-phrases.mjs; post-deploy-check.sh |
+| 2026-11-20 | DE locale DSGVO FAQ said "was Datenresidenz-Anforderungen von vornherein erfüllt" (compliance guarantee) — R1 CRITICAL, only caught by independent review | Risk-pattern table in Step 5.7; independent review is mandatory |
+| 2026-11-20 | Brazil/China/US-battery pages had fresh status notes with contradicting stale body — Anti-Pattern 10 | Anti-pattern 10 documented |
+| 2026-11-20 | "an earlier version of this profile cited…" / "untraceable" phrases left in published text | validate-edit-history-phrases.mjs |
