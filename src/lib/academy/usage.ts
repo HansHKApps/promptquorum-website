@@ -112,4 +112,6 @@ async function readTotals(): Promise<AcademyTotals> {
 
 /** Cached like the MCP counter, so statically rendered pages stay static (refreshes once a day). */
 export const getAcademyTotals = unstable_cache(readTotals, ['academy-totals'], { revalidate: 86400, tags: ['academy-usage'] })
+/** Uncached read for the /academy entrance page (like Ask Hans: live counters, never cached). */
+export const getAcademyTotalsLive = readTotals
 export const getAcademyProgrammesTotal = async () => (await getAcademyTotals()).programmes
