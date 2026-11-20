@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 387,
+    "totalCount": 388,
     "capped": true
   },
   "llama.cpp": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 110,
+    "totalCount": 111,
     "capped": true
   },
   "LocalAI": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 194,
+    "totalCount": 195,
     "capped": true
   },
   "Atomic Chat": {
@@ -5364,6 +5364,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "openshorts-review",
+        "title": "OpenShorts Review: Open-Source AI Clip Maker for Vertical Shorts",
+        "url": "/power-local-llm/openshorts-review",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-whisper-metal-benchmark",
         "title": "Whisper on Apple Silicon 2026: Metal Benchmarks, Core ML Setup, M1–M5 Speed Guide",
@@ -5386,17 +5394,9 @@
         "url": "/power-local-llm/macwhisper-review",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "speechbrain-review",
-        "title": "SpeechBrain Review: An Open-Source PyTorch Toolkit for Speech and Text",
-        "url": "/power-local-llm/speechbrain-review",
-        "dateModified": "2026-10-23",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "Piper TTS": {
@@ -11704,7 +11704,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 109,
+    "totalCount": 110,
     "capped": true
   },
   "Sokuji": {
@@ -12659,6 +12659,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "OpenShorts": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "openshorts-review",
+        "title": "OpenShorts Review: Open-Source AI Clip Maker for Vertical Shorts",
+        "url": "/power-local-llm/openshorts-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Lexora": {
@@ -13836,6 +13850,14 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "openshorts-review",
+        "title": "OpenShorts Review: Open-Source AI Clip Maker for Vertical Shorts",
+        "url": "/power-local-llm/openshorts-review",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "chatbox-review",
         "title": "Chatbox Review: Free, Open-Source AI Chat Client for Desktop, Web and Mobile",
@@ -13890,17 +13912,9 @@
         "url": "/power-local-llm/elevenlabs-vs-local-tts-piper-xtts",
         "dateModified": "2026-11-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "humla-review",
-        "title": "Humla Review: Free, Open-Source AI Meeting Notes for Mac",
-        "url": "/power-local-llm/humla-review",
-        "dateModified": "2026-11-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 289,
+    "totalCount": 290,
     "capped": true
   },
   "Qdrant": {

@@ -1383,6 +1383,7 @@ const HUB_THEMES: Array<{
       'openmontage-review',
       'cozyclay-review',
       'fablecut-review',
+      'openshorts-review',
     ],
   },
   {
