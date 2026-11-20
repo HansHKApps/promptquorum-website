@@ -26,7 +26,7 @@ export async function POST(req: NextRequest): Promise<Response> {
       testPlan: {
         finalQuestions: body.testMode === 'none' ? 0 : finalTestSize(body.availableMinutes),
         lessonQuizQuestions: body.testMode === 'per_lesson_and_final' ? LESSON_QUIZ_SIZE : 0,
-        testMinutes: Math.round(testMinutes(body.testMode, body.availableMinutes, programme.lessons.length)),
+        testMinutes: Math.round(testMinutes(body.testMode, body.availableMinutes, programme.lessons.length, body.testFormat)),
       },
     })
   } catch (err) {

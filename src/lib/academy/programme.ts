@@ -6,7 +6,7 @@ import { searchPromptquorum } from '@/lib/mcp/tools'
 import { promptLanguage, siteLangOf } from './language'
 import { generateStructured, type ParseClient } from './generate'
 import { programmeOutputSchema, type ProgrammeOutput, type ProgrammeRequest } from './schemas'
-import type { Level, TestMode } from './types'
+import type { Level, TestFormat, TestMode } from './types'
 
 export const LESSONS_MIN = 3
 export const LESSONS_MAX = 12
@@ -25,22 +25,24 @@ export function finalTestSize(availableMinutes: number): number {
 }
 /** Assumed answering time per question (reading, choosing, reading the explanation). */
 export const MINUTES_PER_QUESTION = 0.75
+/** Written formats take longer than ticking an option: writing, then reading the feedback. [Assumption, tune with real data] */
+export const MINUTES_PER_QUESTION_BY_FORMAT: Record<TestFormat, number> = { choice: MINUTES_PER_QUESTION, free: 1.5, explain: 2.5 }
 /** Tests never take more than half the learner's time; the rest is reading. */
 export const MAX_TEST_SHARE = 0.5
 
-export function testMinutes(testMode: TestMode, availableMinutes: number, lessons: number): number {
+export function testMinutes(testMode: TestMode, availableMinutes: number, lessons: number, format: TestFormat = 'choice'): number {
   if (testMode === 'none') return 0
   const questions = finalTestSize(availableMinutes) + (testMode === 'per_lesson_and_final' ? LESSON_QUIZ_SIZE * lessons : 0)
-  return Math.min(questions * MINUTES_PER_QUESTION, availableMinutes * MAX_TEST_SHARE)
+  return Math.min(questions * MINUTES_PER_QUESTION_BY_FORMAT[format], availableMinutes * MAX_TEST_SHARE)
 }
 
 /** Minutes left for reading lessons. */
-export function contentMinutes(testMode: TestMode, availableMinutes: number, lessons: number): number {
-  return Math.round(availableMinutes - testMinutes(testMode, availableMinutes, lessons))
+export function contentMinutes(testMode: TestMode, availableMinutes: number, lessons: number, format: TestFormat = 'choice'): number {
+  return Math.round(availableMinutes - testMinutes(testMode, availableMinutes, lessons, format))
 }
 
 /** Rule check against SPEC 7.3 (empty = valid). */
-export function programmeProblems(p: ProgrammeOutput, req: Pick<ProgrammeRequest, 'testMode' | 'availableMinutes'>): string[] {
+export function programmeProblems(p: ProgrammeOutput, req: Pick<ProgrammeRequest, 'testMode' | 'availableMinutes' | 'testFormat'>): string[] {
   const problems: string[] = []
   if (p.objectives.length < OBJECTIVES_MIN || p.objectives.length > OBJECTIVES_MAX) problems.push(`objectives: need ${OBJECTIVES_MIN}-${OBJECTIVES_MAX}, got ${p.objectives.length}`)
   if (p.lessons.length < LESSONS_MIN || p.lessons.length > LESSONS_MAX) problems.push(`lessons: need ${LESSONS_MIN}-${LESSONS_MAX}, got ${p.lessons.length}`)
@@ -49,7 +51,7 @@ export function programmeProblems(p: ProgrammeOutput, req: Pick<ProgrammeRequest
     if (!valid.length) problems.push(`lessons.${i}.objectiveIds: must reference at least one objective index 0..${p.objectives.length - 1}`)
     if (!l.title.trim() || !l.topic.trim()) problems.push(`lessons.${i}: title and topic are required`)
   })
-  const target = contentMinutes(req.testMode, req.availableMinutes, p.lessons.length)
+  const target = contentMinutes(req.testMode, req.availableMinutes, p.lessons.length, req.testFormat)
   const sum = p.lessons.reduce((s, l) => s + l.estimatedMinutes, 0)
   if (Math.abs(sum - target) > target * MINUTES_TOLERANCE)
     problems.push(`lesson minutes add up to ${sum}; they must add up to about ${target} (±${Math.round(MINUTES_TOLERANCE * 100)}%)`)
@@ -57,7 +59,7 @@ export function programmeProblems(p: ProgrammeOutput, req: Pick<ProgrammeRequest
 }
 
 /** Last resort after the regeneration: make the programme fit the limits instead of failing the learner. */
-export function clampProgramme(p: ProgrammeOutput, req: Pick<ProgrammeRequest, 'testMode' | 'availableMinutes'>): ProgrammeOutput | null {
+export function clampProgramme(p: ProgrammeOutput, req: Pick<ProgrammeRequest, 'testMode' | 'availableMinutes' | 'testFormat'>): ProgrammeOutput | null {
   const objectives = p.objectives.map((o) => o.trim()).filter(Boolean).slice(0, OBJECTIVES_MAX)
   let lessons = p.lessons.filter((l) => l.title.trim() && l.topic.trim()).slice(0, LESSONS_MAX)
   if (objectives.length < OBJECTIVES_MIN || lessons.length < LESSONS_MIN) return null
@@ -65,7 +67,7 @@ export function clampProgramme(p: ProgrammeOutput, req: Pick<ProgrammeRequest, '
     const ids = [...new Set(l.objectiveIds.filter((id) => id >= 0 && id < objectives.length))]
     return { ...l, objectiveIds: ids.length ? ids : [i % objectives.length] }
   })
-  const target = contentMinutes(req.testMode, req.availableMinutes, lessons.length)
+  const target = contentMinutes(req.testMode, req.availableMinutes, lessons.length, req.testFormat)
   const sum = lessons.reduce((s, l) => s + Math.max(l.estimatedMinutes, 1), 0)
   const scale = target / sum
   lessons = lessons.map((l) => ({ ...l, estimatedMinutes: Math.max(LESSON_MINUTES_MIN, Math.round(Math.max(l.estimatedMinutes, 1) * scale)) }))
@@ -90,7 +92,7 @@ Rules:
 export function programmeUserMessage(req: ProgrammeRequest, material: { title: string; description: string }[]): string {
   // Lesson count is unknown before generation; use the mid-range estimate for the reading time.
   const estimateLessons = Math.min(LESSONS_MAX, Math.max(LESSONS_MIN, Math.round(req.availableMinutes / 15)))
-  const reading = contentMinutes(req.testMode, req.availableMinutes, estimateLessons)
+  const reading = contentMinutes(req.testMode, req.availableMinutes, estimateLessons, req.testFormat)
   return [
     `<subject>${req.subject}</subject>`,
     `Language: ${promptLanguage(req.language)}`,

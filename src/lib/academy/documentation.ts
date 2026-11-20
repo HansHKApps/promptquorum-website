@@ -17,6 +17,15 @@ export interface DocQuestion {
   topic: string
 }
 
+/** A written answer (format free / explain) graded by AI: what was asked, what the learner wrote, the credit (0, 0.5 or 1). */
+export interface DocOpenQuestion {
+  prompt: string
+  topic: string
+  answer: string
+  credit: number
+  modelAnswer: string
+}
+
 export interface DocAttempt {
   /** lesson number (1-based) for a lesson quiz, 0 for the final test */
   lesson: number
@@ -28,6 +37,8 @@ export interface DocAttempt {
   /** this attempt is the one the certificate counts */
   passing: boolean
   questions: DocQuestion[]
+  /** written-format attempt: graded written answers (questions is empty then) */
+  openQuestions: DocOpenQuestion[]
 }
 
 export interface DocModel {
@@ -52,8 +63,12 @@ function toDocQuestions(questions: (Question | QuizQuestion)[], answers: Record<
   })
 }
 
+function toDocOpen(r: QuizResult): DocOpenQuestion[] {
+  return (r.openQuestions ?? []).map((q) => ({ prompt: q.prompt, topic: q.topic, answer: r.openAnswers?.[q.id] ?? '', credit: q.reveal?.credit ?? 0, modelAnswer: q.reveal?.modelAnswer ?? '' }))
+}
+
 function toAttempt(r: QuizResult, lesson: number, lessonTitle: string | undefined, attemptNumber: number, passing: boolean): DocAttempt {
-  return { lesson, lessonTitle, attemptNumber, takenAt: r.takenAt, correct: r.correct, total: r.total, passing, questions: toDocQuestions(r.questions ?? [], r.answers) }
+  return { lesson, lessonTitle, attemptNumber, takenAt: r.takenAt, correct: r.correct, total: r.total, passing, questions: toDocQuestions(r.questions ?? [], r.answers), openQuestions: toDocOpen(r) }
 }
 
 /** `cert` is the model already built for the certificate, so both files carry the same ID and issue date. */

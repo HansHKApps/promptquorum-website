@@ -5,7 +5,7 @@
 import { z } from 'zod'
 import { isValidProgrammeLanguage } from './language'
 import { ACADEMY_MINUTE_OPTIONS, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS } from './config'
-import { LEVELS, TEST_MODES } from './types'
+import { LEVELS, OPEN_FORMATS, TEST_FORMATS, TEST_MODES } from './types'
 
 // ---------------------------------------------------------------------------------------------- model outputs
 
@@ -64,6 +64,8 @@ export const programmeRequestSchema = z.object({
   availableMinutes: minutes,
   selfLevel: z.enum(LEVELS),
   testMode: z.enum(TEST_MODES),
+  /** how tests ask; only used to budget answering time. Absent = multiple choice. */
+  testFormat: z.enum(TEST_FORMATS).optional(),
   language: languageSchema,
   /** Only the per-topic summary of the quick check is sent, never the individual answers. */
   diagnostic: z.object({
@@ -145,3 +147,51 @@ export const answerRequestSchema = z.object({
   choice: z.number().int().min(-1).max(2),
 })
 export type AnswerRequest = z.infer<typeof answerRequestSchema>
+
+// ------------------------------------------------------------------- open formats: free text / explain (new)
+
+/** One open question as the model writes it. keyPoints are the hidden rubric; modelAnswer is shown after grading. */
+export const generatedOpenQuestionSchema = z.object({
+  topic: z.string().describe('Short topic label (2-5 words); copy the exact topic label of the lesson the question is about'),
+  prompt: z.string().describe('The question or task the learner answers in writing'),
+  keyPoints: z.array(z.string()).describe('The hidden rubric: the distinct ideas a correct answer contains, each one short sentence stating a single idea from the source text'),
+  modelAnswer: z.string().describe('A short model answer built only from the key points and the source text'),
+})
+export type GeneratedOpenQuestion = z.infer<typeof generatedOpenQuestionSchema>
+
+export const openQuizOutputSchema = z.object({
+  questions: z.array(generatedOpenQuestionSchema).describe('The requested number of open questions, spread over the requested topics'),
+})
+export type OpenQuizOutput = z.infer<typeof openQuizOutputSchema>
+
+/** The checker's verdict per open question: answerable from the source text, and every key point supported by it. */
+export const openVerifyOutputSchema = z.object({
+  checks: z.array(
+    z.object({
+      n: z.number().int(),
+      answerable: z.boolean().describe('true if the question can be answered from the source texts alone'),
+      supported: z.array(z.boolean()).describe('one entry per key point, in order: true if the source texts state or directly imply it'),
+    }),
+  ),
+})
+export type OpenVerifyOutput = z.infer<typeof openVerifyOutputSchema>
+
+export const openQuizRequestSchema = quizRequestSchema.extend({ format: z.enum(OPEN_FORMATS) })
+export type OpenQuizRequest = z.infer<typeof openQuizRequestSchema>
+
+/** What the grader returns: which key points the answer covers, in rubric order, plus short feedback. */
+export const gradeOutputSchema = z.object({
+  covered: z.array(z.boolean()).describe('one entry per key point, in order: true if the learner answer clearly expresses that idea'),
+  contradicts: z.boolean().describe('true if the learner answer states something that contradicts a key point'),
+  feedback: z.string().describe('1-2 sentences to the learner: what was good and what was missing, without repeating the whole model answer'),
+})
+export type GradeOutput = z.infer<typeof gradeOutputSchema>
+
+export const OPEN_ANSWER_MAX_CHARS: Record<'free' | 'explain', number> = { free: 600, explain: 1500 }
+
+export const gradeRequestSchema = z.object({
+  sealed: z.string().min(20).max(8000),
+  /** the learner's written answer; empty = "not sure" (scores 0 without a model call) */
+  answer: z.string().max(OPEN_ANSWER_MAX_CHARS.explain),
+})
+export type GradeRequest = z.infer<typeof gradeRequestSchema>

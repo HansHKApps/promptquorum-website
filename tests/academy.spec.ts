@@ -214,6 +214,8 @@ test.describe('F6: correct answers stay on the server until answered', () => {
     // openSeededLesson seeds view 'lesson'; go to the quiz via the programme screen button.
     await page.getByRole('button', { name: /back to program/i }).click().catch(() => {})
     await page.getByRole('button', { name: /continue the quiz/i }).click()
+    // A quiz that just opened shows the format picker first; multiple choice is the preselected default.
+    await page.getByRole('button', { name: /start test/i }).click()
     await expect(page.getByText('Final question 1?')).toBeVisible()
     const before = (await stored(page)) ?? ''
     expect(before).not.toContain('correctIndex')
@@ -617,5 +619,111 @@ test.describe('Program language drives the lesson screen labels', () => {
     await expect(page.getByRole('button', { name: 'Tiefer' })).toBeVisible()
     await expect(page.getByRole('button', { name: 'Zusammenfassen' })).toBeVisible()
     await expect(page.getByText('This lesson helps you')).toHaveCount(0)
+  })
+})
+
+
+// ------------------------------------------------------------------------------- written test formats (free / explain)
+
+test.describe('test formats: multiple choice, short written answer, explain the concept', () => {
+  const openQuestions = (format: 'free' | 'explain') =>
+    [1, 2].map((n) => ({ id: `oq${n}`, topic: 'Basics', kind: 'final', format, prompt: `Written question ${n}?`, sealed: `open-sealed-token-${n}-xxxxxxxxxxxxxxxxxxxx` }))
+  const finalProgramme = () =>
+    seededProgramme({
+      testMode: 'final',
+      testPlan: { finalQuestions: 2, lessonQuizQuestions: 0, testMinutes: 3 },
+      lessons: [{ id: 'lesson-1', title: 'L1', topic: 'Basics', estimatedMinutes: 5, objectiveIds: [0], sections: [{ heading: 'h', body: 'b' }], furtherReading: [] }],
+      progress: { currentLesson: 0, lessonStatus: { 'lesson-1': 'done' }, quizResults: [], secondsSpent: 0, startedAt: '2026-11-19T10:00:00.000Z', activeQuiz: { quizId: 'final', questions: [], answers: {} } },
+    }) as ReturnType<typeof seededProgramme>
+  const toQuiz = async (page: Page) => {
+    await openSeededLesson(page, finalProgramme())
+    await page.getByRole('button', { name: /back to program/i }).click().catch(() => {})
+    await page.getByRole('button', { name: /continue the quiz/i }).click()
+  }
+
+  test('setup offers the three formats when tests are on and hides them for "No test"', async ({ page }) => {
+    await preset(page)
+    await openTool(page)
+    const group = page.getByRole('group', { name: /^test format$/i })
+    await expect(group).toBeVisible()
+    await expect(group.getByRole('radio', { name: /multiple choice/i })).toBeChecked()
+    await expect(group.getByRole('radio', { name: /short written answer/i })).toBeAttached()
+    await expect(group.getByRole('radio', { name: /explain the concept/i })).toBeAttached()
+    await page.getByRole('radio', { name: /no test/i }).check({ force: true })
+    await expect(group).toBeHidden()
+  })
+
+  test('short written answer: pick the format when the test opens, answer, get graded; the rubric is not stored before grading', async ({ page }) => {
+    let generated: Record<string, unknown> = {}
+    await page.route('**/api/academy/open-quiz', (r) => {
+      generated = r.request().postDataJSON()
+      return r.fulfill({ json: { questions: openQuestions('free') } })
+    })
+    const graded: Record<string, unknown>[] = []
+    await page.route('**/api/academy/grade', (r) => {
+      graded.push(r.request().postDataJSON())
+      const empty = graded.length === 2
+      return r.fulfill({ json: empty ? { credit: 0, feedback: '', covered: [], missed: ['Idea two'], modelAnswer: 'Second model answer' } : { credit: 0.5, feedback: 'Good start.', covered: ['Idea one'], missed: ['Idea two'], modelAnswer: 'First model answer' } })
+    })
+    await toQuiz(page)
+    await expect(page.getByText(/how do you want to be tested/i)).toBeVisible()
+    await page.locator('label', { hasText: /short written answer/i }).click()
+    await expect(page.getByRole('radio', { name: /short written answer/i })).toBeChecked()
+    await page.getByRole('button', { name: /start test/i }).click()
+    await expect(page.getByText('Written question 1?')).toBeVisible()
+    expect(generated).toMatchObject({ kind: 'final', format: 'free' })
+    const before = (await stored(page)) ?? ''
+    for (const secret of ['keyPoints', 'modelAnswer', 'First model answer']) expect(before).not.toContain(secret)
+    // Submit stays disabled until something is written.
+    await expect(page.getByRole('button', { name: /submit answer/i })).toBeDisabled()
+    await page.getByLabel(/^your answer$/i).fill('My own words about the idea.')
+    await page.getByRole('button', { name: /submit answer/i }).click()
+    await expect(page.getByText('Partial credit (half a point)')).toBeVisible()
+    await expect(page.getByText('Good start.')).toBeVisible()
+    await expect(page.getByText('First model answer')).toBeVisible()
+    expect(graded[0]).toEqual({ sealed: openQuestions('free')[0].sealed, answer: 'My own words about the idea.' })
+    await page.getByRole('button', { name: /next question/i }).click()
+    await expect(page.getByText('Written question 2?')).toBeVisible()
+    await page.getByRole('button', { name: /i am not sure/i }).click()
+    expect(graded[1]).toEqual({ sealed: openQuestions('free')[1].sealed, answer: '' })
+    await expect(page.getByText(/^No credit/)).toBeVisible()
+    await expect(page.getByText('No answer given. Here is what a good answer contains.')).toBeVisible()
+    await page.getByRole('button', { name: /see result/i }).click()
+    // 0.5 + 0 of 2 points, with the AI-grading notice.
+    await expect(page.getByText('0.5 of 2 points')).toBeVisible()
+    await expect(page.getByText(/graded by AI/i)).toBeVisible()
+    await page.getByRole('button', { name: /see results/i }).click()
+    await expect(page.getByText('0.5 of 2 points')).toBeVisible()
+    await expect(page.getByText(/graded by AI/i).first()).toBeVisible()
+    await expect(page.getByText('25%', { exact: true })).toBeVisible()
+  })
+
+  test('explain the concept: the request asks for the explain format and the answer box is labelled as an explanation', async ({ page }) => {
+    let generated: Record<string, unknown> = {}
+    await page.route('**/api/academy/open-quiz', (r) => {
+      generated = r.request().postDataJSON()
+      return r.fulfill({ json: { questions: openQuestions('explain') } })
+    })
+    await toQuiz(page)
+    await page.locator('label', { hasText: /explain the concept/i }).click()
+    await expect(page.getByRole('radio', { name: /explain the concept/i })).toBeChecked()
+    await page.getByRole('button', { name: /start test/i }).click()
+    await expect(page.getByText('Written question 1?')).toBeVisible()
+    expect(generated).toMatchObject({ format: 'explain' })
+    await expect(page.getByLabel(/^your explanation$/i)).toBeVisible()
+    await expect(page.getByLabel(/^your explanation$/i)).toHaveAttribute('maxlength', '1500')
+  })
+
+  test('multiple choice is still the default and unchanged', async ({ page }) => {
+    let choiceCalls = 0
+    await page.route('**/api/academy/quiz', (r) => {
+      choiceCalls++
+      return r.fulfill({ json: { questions: [{ id: 'qq1', topic: 'Basics', kind: 'final', prompt: 'MC question?', options: ['A', 'B', 'C'], sealed: 'sealed-token-1-xxxxxxxxxxxxxxxxxxxx' }] } })
+    })
+    await toQuiz(page)
+    await expect(page.getByRole('radio', { name: /multiple choice/i })).toBeChecked()
+    await page.getByRole('button', { name: /start test/i }).click()
+    await expect(page.getByText('MC question?')).toBeVisible()
+    expect(choiceCalls).toBe(1)
   })
 })

@@ -1,7 +1,7 @@
 // PromptQuorum Academy — the shape of one language's UI texts. en.ts is the source; the other eight are
 // translations of it (docs/geo-translation.md per-language rules). Keys are code-side identifiers: never translate them.
 
-import type { Level, TestMode } from '@/lib/academy/types'
+import type { Level, TestFormat, TestMode } from '@/lib/academy/types'
 import type { AcademyTopicHub } from '@/lib/academy/topics'
 import type { AcademyExtraCopy } from './extra'
 
@@ -30,6 +30,13 @@ export interface AcademyBaseCopy {
   levels: Record<Level, { label: string; hint: string }>
   testsLegend: string
   tests: Record<TestMode, { label: string; hint: string }>
+  /** how tests ask (multiple choice / short written answer / explain the concept) */
+  testFormatLegend: string
+  testFormats: Record<TestFormat, { label: string; hint: string }>
+  /** shown when a quiz or the final test opens, before it starts */
+  formatPickerTitle: string
+  formatPickerHint: string
+  startTest: string
   languageLabel: string
   submit: string
   /** inline button next to the subject field (same action as pressing Enter) */
@@ -123,6 +130,25 @@ export interface AcademyBaseCopy {
   nextQuestion: string
   seeResult: string
   quizScore: (correct: number, total: number) => string
+  /** written formats: points can be halves (0.5) */
+  quizPoints: (points: number, total: number) => string
+  answerLabelFree: string
+  answerLabelExplain: string
+  placeholderFree: string
+  placeholderExplain: string
+  charactersLeft: (n: number) => string
+  submitAnswer: string
+  iAmNotSure: string
+  gradingAnswer: string
+  creditFull: string
+  creditPartial: string
+  creditNone: string
+  keyPointsCovered: string
+  keyPointsMissed: string
+  modelAnswerLabel: string
+  notSureFeedback: string
+  /** legal-style notice: written answers are graded by AI and can be wrong */
+  aiGradedNotice: string
   continueLessons: string
   continueQuiz: string
   startFinalTest: string

@@ -59,6 +59,8 @@ export interface CertificateModel {
   passMark: number
   correct: number
   total: number
+  /** part of the counted score came from written answers graded by AI (formats free / explain): the PDFs must say so */
+  usesWrittenAnswers: boolean
   byTopic: { topic: string; percent: number; correct: number; total: number }[]
 }
 
@@ -83,6 +85,7 @@ export function certificateModel(p: Programme, name: string, now: Date = new Dat
     passMark: PASS_MARK,
     correct: score.correct,
     total: score.total,
+    usesWrittenAnswers: [final, ...(p.testMode === 'per_lesson_and_final' ? p.progress.quizResults : [])].some((r) => (r.openQuestions?.length ?? 0) > 0),
     byTopic: score.byTopic.map(({ topic, percent, correct, total }) => ({ topic, percent, correct, total })),
   }
 }

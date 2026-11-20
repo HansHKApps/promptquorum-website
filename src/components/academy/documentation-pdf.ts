@@ -4,11 +4,12 @@
 // "page x of y", issue date and the AI-generated statement.
 
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
-import type { DocModel, DocQuestion } from '@/lib/academy/documentation'
+import type { DocModel, DocOpenQuestion, DocQuestion } from '@/lib/academy/documentation'
 import { jpegsToPdf } from '@/lib/academy/pdf-pages'
 import { langDirOf, htmlLangOf } from '@/lib/academy/language'
 import type { AcademyLang } from '@/lib/academy/types'
 import type { AcademyCopy } from './copy'
+import { creditLabel } from './credit'
 
 const PX_W = 1240
 const PX_H = 1754
@@ -115,6 +116,14 @@ function questionBlock(d: Doc, c: AcademyCopy['doc'], q: DocQuestion, n: number)
   if (q.explanation) d.para(`${c.explanation}: ${q.explanation}`, { size: 20, color: MUTED, indent: 24, gap: 12 })
 }
 
+function openQuestionBlock(d: Doc, tx: AcademyCopy, c: AcademyCopy['doc'], q: DocOpenQuestion, n: number) {
+  d.keep(260)
+  d.para(`${n}. ${q.prompt}`, { weight: 700, gap: 4 })
+  d.para(`${c.yourAnswer}: ${q.answer || '–'}`, { size: 21, indent: 24, gap: 2 })
+  d.para(creditLabel(tx, q.credit), { size: 21, color: q.credit >= 1 ? GOOD : q.credit > 0 ? MUTED : BAD, indent: 24, gap: 2 })
+  if (q.modelAnswer) d.para(`${tx.modelAnswerLabel}: ${q.modelAnswer}`, { size: 20, color: MUTED, indent: 24, gap: 12 })
+}
+
 export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: AcademyLang, programmeLanguage: string): Promise<HTMLCanvasElement[]> {
   void programmeLanguage
   const c = tx.doc
@@ -153,6 +162,7 @@ export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: Acad
   d.rule()
   d.para(c.notice, { size: 20, color: INK, gap: 8 })
   d.para(c.aiNote, { size: 18, color: MUTED, gap: 8 })
+  if (cert.usesWrittenAnswers) d.para(tx.aiGradedNotice, { size: 18, color: MUTED, gap: 8 })
 
   d.newPage()
   d.heading(c.programme)
@@ -170,6 +180,7 @@ export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: Acad
     d.heading(`${a.lesson ? `${c.lessons} ${a.lesson}: ${a.lessonTitle ?? ''}` : tx.finalTestTitle} — ${c.attempt(a.attemptNumber)}`, 28)
     d.para(`${a.correct}/${a.total}${a.passing ? ` · ${c.passingAttempt}` : ''} · ${formatDisplayDate(a.takenAt, lang)}`, { size: 21, color: a.passing ? GOOD : MUTED })
     a.questions.forEach((q, i) => questionBlock(d, c, q, i + 1))
+    a.openQuestions.forEach((q, i) => openQuestionBlock(d, tx, c, q, i + 1))
   }
 
   d.newPage()

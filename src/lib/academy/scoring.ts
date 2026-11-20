@@ -3,7 +3,7 @@
 // questions never count. Pass = 70% or more. "none": no score. "final": the final test only.
 // "per_lesson_and_final": every lesson quiz plus the final test, pooled.
 
-import type { Programme, Question, QuizQuestion, QuizResult } from './types'
+import type { OpenQuestion, Programme, Question, QuizQuestion, QuizResult } from './types'
 
 export const PASS_MARK = 70
 
@@ -24,6 +24,24 @@ export function scoreQuiz(quizId: string, questions: (Question | QuizQuestion)[]
     }
   }
   return { quizId, answers, correct, total: questions.length, byTopic, takenAt: new Date().toISOString() }
+}
+
+/**
+ * Result of a written-format quiz (free / explain). Every graded answer earns 0, 0.5 or 1 point (grade.ts), so
+ * `correct` can end in .5 and the rest of the scoring (pooling, per-topic, pass mark) works unchanged.
+ * Unanswered or ungraded questions count as 0.
+ */
+export function scoreOpenQuiz(quizId: string, questions: OpenQuestion[], answers: Record<string, string>): QuizResult {
+  const byTopic: QuizResult['byTopic'] = {}
+  let correct = 0
+  for (const q of questions) {
+    const t = (byTopic[q.topic] ??= { correct: 0, total: 0 })
+    t.total++
+    const credit = q.reveal?.credit ?? 0
+    t.correct += credit
+    correct += credit
+  }
+  return { quizId, answers: {}, correct, total: questions.length, byTopic, takenAt: new Date().toISOString(), openQuestions: questions, openAnswers: answers }
 }
 
 export interface ProgrammeScore {
