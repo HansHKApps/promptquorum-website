@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 385,
+    "totalCount": 386,
     "capped": true
   },
   "llama.cpp": {
@@ -11066,6 +11066,20 @@
         "slug": "genoffice-review",
         "title": "GenOffice Review: Open-Source AI Office Suite for Word, Excel and PowerPoint Files",
         "url": "/power-local-llm/genoffice-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Modly": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "modly-review",
+        "title": "Modly Review: Local Open-Source Image-to-3D Generator",
+        "url": "/power-local-llm/modly-review",
         "dateModified": "2026-11-20",
         "tier": "about"
       }

@@ -1366,6 +1366,7 @@ const HUB_THEMES: Array<{
       'genva-review',
       'fooocus-review',
       'invokeai-review',
+      'modly-review',
       'krita-ai-diffusion-review',
       'open-generative-ai-review',
       'real-esrgan-ai-image-upscaler-review',
