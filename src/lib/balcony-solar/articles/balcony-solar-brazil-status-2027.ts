@@ -16,7 +16,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-18',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-en.webp',
     title: 'Balcony Solar in Brazil: Status Report 2027',
@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Brazil has one of the world\'s largest distributed-generation solar markets — but that infrastructure and market culture is not balcony-plug-in-specific. This page is a status report on the specific gap: no dedicated regulation exists yet for direct-to-outlet, plug-and-play balcony solar, even though the general distributed-generation framework it would fall under is well established and heavily used.',
     metaDescription: 'Brazil\'s Lei 14.300/2022 regulates micro- and mini-geração distribuída, building on ANEEL\'s Resolução Normativa 482/2012. But plug-and-play balcony solar specifically has no dedicated regulation, per MIT Technology Review Brasil (May 2026) — despite Brazil adding 5+ GW in distributed generation in early 2025 alone.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 min read',
     educationalLevel: 'Beginner',
     audience: 'Balcony solar buyers and market watchers assessing Brazil beyond the Portugal/Brazil legal comparison',
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Brazil added 5+ GW in micro/mini distributed generation in early 2025 alone, surpassing 42 GW installed and benefiting 5.4M+ consumer units, per ANEEL data — general DG market scale, explicitly not balcony-specific',
           'Frame: Brazil has the infrastructure and market culture for distributed solar broadly; the plug-in-balcony product category specifically has no dedicated rules yet — an emerging/gap story, not a subsidy-program story',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -54,6 +54,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '2026 Update: Distributed-Generation Figures and Regulation',
+        content: '**The latest figure found is 53.65 GW of distributed solar as of 3 October 2026, up from just over 44 GW in February 2026 — general distributed-generation scale, not balcony-specific.** [Click Petróleo e Gás (4 October 2026)](https://clickpetroleoegas.com.br/geracao-distribuida-solar-chega-a-54-gw-e-ja-supera-a-potencia-de-todas-as-termeletricas-do-brasil-49-9-gw-mostram-dados-da-aneel-mhbb01) reports, from the ANEEL registry as of 3 October 2026, about 4.66 million distributed-generation records, about 8.95 million consumer units receiving credits and 53.65 GW of distributed solar; [Canal Solar (13 February 2026)](https://canalsolar.com.br/gd-solar-capacidade-instalada-fevereiro/) reported just over 44 GW, nearly 4 million systems and more than 7 million consumer units. The early-2025 figures elsewhere on this page (5+ GW added, 42 GW, 5.4 million consumer units) are historical snapshots that these newer figures supersede. On regulation, [ANEEL announced a consultation on grid-preparation rules for solar, batteries and electric vehicles on 8 September 2026](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novas-regras-para-preparar-a-rede-eletrica-para-geracao-solar-baterias-e-veiculos-eletricos); this research found no ANEEL measure aimed at plug-in or balcony kits, but the consultation portal should be rechecked. The finding that plug-and-play kits have no specific regulation is attributed to MIT Technology Review Brasil (May 2026) and reaches this page through secondary sites; the original article was not located in this refresh. This is a summary of public information, not legal advice.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -122,7 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Brasilien hat einen der weltweit größten Märkte für dezentrale Solarstromerzeugung (geração distribuída) — doch diese Infrastruktur und Marktkultur ist nicht speziell auf steckerfertige Balkonkraftwerke ausgerichtet. Diese Seite ist ein Statusbericht zu genau dieser Lücke: Für direkt an die Steckdose angeschlossene, steckerfertige Balkonkraftwerke existiert noch keine eigene Regelung, obwohl der allgemeine Rahmen für dezentrale Erzeugung, unter den sie fallen würden, gut etabliert und stark genutzt ist.',
     metaDescription: 'Brasiliens Lei 14.300/2022 regelt die micro- und mini-geração distribuída und baut auf der früheren Resolução Normativa 482/2012 der ANEEL auf.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Käufer von Balkonkraftwerken und Marktbeobachter, die Brasilien über den Portugal/Brasilien-Rechtsvergleich hinaus einschätzen wollen',
@@ -140,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Brasilien hat allein Anfang 2025 über 5 GW an micro-/mini-geração distribuída hinzugefügt, womit die installierte Kapazität 42 GW überschritt und über 5,4 Mio. Verbrauchseinheiten profitierten, laut ANEEL-Daten — Größenordnung des allgemeinen Marktes für dezentrale Erzeugung, ausdrücklich nicht balkonspezifisch',
           'Einordnung: Brasilien verfügt über die Infrastruktur und Marktkultur für dezentrale Solarenergie im Allgemeinen; die spezifische Produktkategorie der steckerfertigen Balkonkraftwerke hat noch keine eigenen Regeln — eine aufkommende Lücken-Geschichte, keine Förderprogramm-Geschichte',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -152,6 +156,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Update 2026: Zahlen zur verteilten Erzeugung und Regulierung',
+        content: '**Die jüngste gefundene Zahl sind 53,65 GW verteilte Solarleistung zum 3. Oktober 2026, nach gut 44 GW im Februar 2026 – das ist die allgemeine Größenordnung der verteilten Erzeugung, nicht Balkon-spezifisch.** [Click Petróleo e Gás (4. Oktober 2026)](https://clickpetroleoegas.com.br/geracao-distribuida-solar-chega-a-54-gw-e-ja-supera-a-potencia-de-todas-as-termeletricas-do-brasil-49-9-gw-mostram-dados-da-aneel-mhbb01) meldet aus dem ANEEL-Register zum 3. Oktober 2026 rund 4,66 Millionen Einträge zur verteilten Erzeugung, rund 8,95 Millionen Verbrauchseinheiten mit Gutschriften und 53,65 GW verteilte Solarleistung; [Canal Solar (13. Februar 2026)](https://canalsolar.com.br/gd-solar-capacidade-instalada-fevereiro/) nannte gut 44 GW, knapp 4 Millionen Anlagen und mehr als 7 Millionen Verbrauchseinheiten. Die Zahlen von Anfang 2025 an anderen Stellen dieser Seite (über 5 GW Zubau, 42 GW, 5,4 Millionen Verbrauchseinheiten) sind historische Momentaufnahmen, die durch die neueren Werte überholt sind. Zur Regulierung: [ANEEL kündigte am 8. September 2026 eine Konsultation zu Netzvorbereitungsregeln für Solar, Batterien und Elektrofahrzeuge an](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novas-regras-para-preparar-a-rede-eletrica-para-geracao-solar-baterias-e-veiculos-eletricos); in dieser Recherche wurde keine ANEEL-Maßnahme für Plug-in- oder Balkon-Sets gefunden, das Konsultationsportal sollte aber erneut geprüft werden. Die Aussage, dass Plug-and-play-Sets keine spezifische Regelung haben, wird MIT Technology Review Brasil (Mai 2026) zugeschrieben und erreicht diese Seite über Sekundärseiten; der Originalartikel wurde in dieser Aktualisierung nicht gefunden. Dies ist eine Zusammenfassung öffentlicher Informationen und keine Rechtsberatung.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -220,7 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Brasil tiene uno de los mercados de generación distribuida solar más grandes del mundo — pero esa infraestructura y cultura de mercado no es específica de la energía solar de balcón enchufable. Esta página es un informe de estado sobre esa brecha específica: todavía no existe una regulación dedicada para los kits solares de balcón enchufables y de instalación directa, aunque el marco general de generación distribuida bajo el que caerían está bien establecido y muy utilizado.',
     metaDescription: 'La Lei 14.300/2022 de Brasil regula la micro- y mini-geração distribuída, sobre la base de la Resolução Normativa 482/2012 de ANEEL. Pero la energía solar de balcón enchufable en concreto no tiene regulación dedicada, según MIT Technology Review Brasil (mayo de 2026) — pese a que Brasil sumó más de 5 GW de generación distribuida solo a principios de 2025.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Compradores de energía solar de balcón y observadores del mercado que evalúan Brasil más allá de la comparación legal Portugal/Brasil',
@@ -238,7 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Brasil sumó más de 5 GW de generación distribuida micro/mini solo a principios de 2025, superando los 42 GW instalados y beneficiando a más de 5.4 millones de unidades consumidoras, según datos de ANEEL — escala del mercado general de generación distribuida, explícitamente no específica de balcón',
           'Marco de referencia: Brasil tiene la infraestructura y la cultura de mercado para la energía solar distribuida en general; la categoría de producto de balcón enchufable en concreto todavía no tiene reglas dedicadas — una historia emergente de brecha, no una historia de programa de subsidios',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -250,6 +258,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Actualización 2026: cifras de generación distribuida y regulación',
+        content: '**La cifra más reciente encontrada es 53.65 GW de solar distribuida a 3 de octubre de 2026, frente a algo más de 44 GW en febrero de 2026: es la escala general de la generación distribuida, no algo específico de balcón.** [Click Petróleo e Gás (4 de octubre de 2026)](https://clickpetroleoegas.com.br/geracao-distribuida-solar-chega-a-54-gw-e-ja-supera-a-potencia-de-todas-as-termeletricas-do-brasil-49-9-gw-mostram-dados-da-aneel-mhbb01) informa, a partir del registro de ANEEL a 3 de octubre de 2026, de unos 4,66 millones de registros de generación distribuida, unos 8,95 millones de unidades consumidoras que reciben créditos y 53.65 GW de solar distribuida; [Canal Solar (13 de febrero de 2026)](https://canalsolar.com.br/gd-solar-capacidade-instalada-fevereiro/) citaba algo más de 44 GW, casi 4 millones de sistemas y más de 7 millones de unidades consumidoras. Las cifras de principios de 2025 que aparecen en otras partes de esta página (más de 5 GW añadidos, 42 GW, 5,4 millones de unidades consumidoras) son instantáneas históricas que estas cifras más recientes superan. En regulación, [ANEEL anunció el 8 de septiembre de 2026 una consulta sobre reglas de preparación de la red para solar, baterías y vehículos eléctricos](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novas-regras-para-preparar-a-rede-eletrica-para-geracao-solar-baterias-e-veiculos-eletricos); esta investigación no encontró ninguna medida de ANEEL dirigida a kits plug-in o de balcón, pero conviene volver a revisar el portal de consultas. La conclusión de que los kits plug-and-play no tienen regulación específica se atribuye a MIT Technology Review Brasil (mayo de 2026) y llega a esta página a través de sitios secundarios; el artículo original no se localizó en esta actualización. Es un resumen de información pública, no asesoramiento jurídico.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -318,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "Le Brésil possède l'un des plus grands marchés de production solaire distribuée au monde — mais cette infrastructure et cette culture de marché ne sont pas spécifiques au solaire de balcon prêt à brancher. Cette page est un rapport de situation sur cette lacune précise : aucune réglementation dédiée n'existe encore pour les kits solaires de balcon prêts à brancher directement sur une prise, même si le cadre général de production distribuée dont ils relèveraient est bien établi et largement utilisé.",
     metaDescription: "La loi brésilienne Lei 14.300/2022 encadre la micro- et la mini-geração distribuída, en s'appuyant sur la Resolução Normativa 482/2012 de l'ANEEL. Mais le solaire de balcon prêt à brancher n'a, lui, aucune réglementation dédiée, selon MIT Technology Review Brasil (mai 2026) — alors que le Brésil a ajouté plus de 5 GW de production distribuée rien qu'au début de 2025.",
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 min de lecture',
     educationalLevel: 'Beginner',
     audience: "Acheteurs de solaire de balcon et observateurs du marché évaluant le Brésil au-delà de la comparaison juridique Portugal/Brésil",
@@ -336,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Le Brésil a ajouté plus de 5 GW en micro/mini production distribuée rien qu'au début de 2025, dépassant les 42 GW installés et bénéficiant à plus de 5.4 millions d'unités de consommation, selon des données de l'ANEEL — l'ampleur du marché général de production distribuée, explicitement non spécifique au balcon",
           "Cadre de référence : le Brésil dispose de l'infrastructure et de la culture de marché pour le solaire distribué en général ; la catégorie de produit spécifique du solaire de balcon prêt à brancher n'a, elle, encore aucune règle dédiée — une histoire de lacune émergente, pas une histoire de programme de subvention",
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -348,6 +360,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Mise à jour 2026 : chiffres de la production distribuée et réglementation',
+        content: '**Le dernier chiffre trouvé est 53.65 GW de solaire distribué au 3 octobre 2026, contre un peu plus de 44 GW en février 2026 — l\'échelle générale de la production distribuée, sans lien spécifique avec le balcon.** [Click Petróleo e Gás (4 octobre 2026)](https://clickpetroleoegas.com.br/geracao-distribuida-solar-chega-a-54-gw-e-ja-supera-a-potencia-de-todas-as-termeletricas-do-brasil-49-9-gw-mostram-dados-da-aneel-mhbb01) rapporte, d\'après le registre de l\'ANEEL au 3 octobre 2026, environ 4,66 millions d\'enregistrements de production distribuée, environ 8,95 millions d\'unités consommatrices recevant des crédits et 53.65 GW de solaire distribué ; [Canal Solar (13 février 2026)](https://canalsolar.com.br/gd-solar-capacidade-instalada-fevereiro/) indiquait un peu plus de 44 GW, près de 4 millions de systèmes et plus de 7 millions d\'unités consommatrices. Les chiffres de début 2025 présentés ailleurs sur cette page (plus de 5 GW ajoutés, 42 GW, 5,4 millions d\'unités consommatrices) sont des instantanés historiques dépassés par ces valeurs récentes. Côté réglementation, [l\'ANEEL a annoncé le 8 septembre 2026 une consultation sur des règles de préparation du réseau pour le solaire, les batteries et les véhicules électriques](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novas-regras-para-preparar-a-rede-eletrica-para-geracao-solar-baterias-e-veiculos-eletricos) ; cette recherche n\'a trouvé aucune mesure de l\'ANEEL visant les kits plug-in ou balcon, mais le portail des consultations doit être revérifié. L\'affirmation selon laquelle les kits plug-and-play n\'ont pas de réglementation spécifique est attribuée à MIT Technology Review Brasil (mai 2026) et parvient à cette page via des sites secondaires ; l\'article original n\'a pas été retrouvé lors de cette mise à jour. Il s\'agit d\'un résumé d\'informations publiques, pas d\'un conseil juridique.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -416,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'تمتلك البرازيل واحدًا من أكبر أسواق التوليد الموزع للطاقة الشمسية في العالم — لكن هذه البنية التحتية والثقافة السوقية ليست خاصة بالطاقة الشمسية للشرفات ذات التوصيل المباشر بالمقبس (plug-and-play). هذه الصفحة هي تقرير حالة حول هذه الفجوة تحديدًا: لا توجد حتى الآن لائحة تنظيمية مخصصة للأنظمة الشمسية القابلة للتوصيل المباشر بالمقبس، رغم أن الإطار العام للتوليد الموزع الذي قد تندرج تحته هذه الأنظمة راسخ جيدًا ومستخدم على نطاق واسع.',
     metaDescription: 'ينظم قانون Lei 14.300/2022 البرازيلي micro-geração distribuída وmini-geração distribuída، بناءً على القرار التنظيمي Resolução Normativa 482/2012 الصادر عن ANEEL. لكن الطاقة الشمسية للشرفات ذات التوصيل المباشر بالمقبس تحديدًا لا تخضع لأي لائحة مخصصة، بحسب MIT Technology Review Brasil (مايو 2026) — رغم أن البرازيل أضافت أكثر من 5 GW من التوليد الموزع في أوائل 2025 وحدها.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'مشترو الطاقة الشمسية للشرفات ومراقبو السوق الذين يقيّمون البرازيل بما يتجاوز المقارنة القانونية بين البرتغال والبرازيل',
@@ -434,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أضافت البرازيل أكثر من 5 GW في التوليد الموزع الصغير/المتوسط في أوائل 2025 وحدها، متجاوزة 42 GW من القدرة المركبة ومستفيدًا منها أكثر من 5.4 مليون وحدة استهلاكية، بحسب بيانات ANEEL — حجم سوق التوليد الموزع العام، وهو صراحة ليس خاصًا بالشرفات',
           'الإطار العام: تمتلك البرازيل البنية التحتية والثقافة السوقية للطاقة الشمسية الموزعة بشكل عام؛ أما فئة المنتج المحددة الخاصة بالشرفات ذات التوصيل المباشر بالمقبس فلا تزال بلا قواعد مخصصة — وهذه قصة فجوة ناشئة، وليست قصة برنامج دعم',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -446,6 +462,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'تحديث 2026: أرقام التوليد الموزع والتنظيم',
+        content: '**أحدث رقم عُثر عليه هو 53.65 GW من الطاقة الشمسية الموزعة حتى 3 أكتوبر 2026، مقابل أكثر من 44 GW بقليل في فبراير 2026 — وهذا حجم التوليد الموزع عموماً وليس خاصاً بالشرفات.** يورد [Click Petróleo e Gás (4 أكتوبر 2026)](https://clickpetroleoegas.com.br/geracao-distribuida-solar-chega-a-54-gw-e-ja-supera-a-potencia-de-todas-as-termeletricas-do-brasil-49-9-gw-mostram-dados-da-aneel-mhbb01) نقلاً عن سجل ANEEL حتى 3 أكتوبر 2026 نحو 4.66 مليون سجل توليد موزع ونحو 8.95 مليون وحدة مستهلكة تتلقى أرصدة و53.65 GW من الطاقة الشمسية الموزعة؛ وكان [Canal Solar (13 فبراير 2026)](https://canalsolar.com.br/gd-solar-capacidade-instalada-fevereiro/) قد ذكر أكثر من 44 GW بقليل وقرابة 4 ملايين منظومة وأكثر من 7 ملايين وحدة مستهلكة. أما أرقام أوائل 2025 الواردة في مواضع أخرى من هذه الصفحة (إضافة أكثر من 5 GW و42 GW و5.4 مليون وحدة مستهلكة) فهي لقطات تاريخية حلّت محلها هذه الأرقام الأحدث. وعلى صعيد التنظيم، [أعلنت ANEEL في 8 سبتمبر 2026 عن مشاورة بشأن قواعد تهيئة الشبكة للطاقة الشمسية والبطاريات والمركبات الكهربائية](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novas-regras-para-preparar-a-rede-eletrica-para-geracao-solar-baterias-e-veiculos-eletricos)؛ ولم يجد هذا البحث أي إجراء من ANEEL موجّه لأطقم التوصيل المباشر أو أطقم الشرفات، لكن ينبغي إعادة فحص بوابة المشاورات. ويُنسب استنتاج أن أطقم التوصيل المباشر ليس لها تنظيم محدد إلى MIT Technology Review Brasil (مايو 2026) ويصل إلى هذه الصفحة عبر مواقع ثانوية؛ ولم يُعثر على المقال الأصلي في هذا التحديث. هذا ملخص لمعلومات علنية وليس استشارة قانونية.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -514,7 +534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'ブラジルは世界最大級の分散型太陽光発電市場を持っていますが、そのインフラと市場文化はバルコニー据え置き型（プラグイン式）ソーラーに特化したものではありません。このページは、その特定のギャップに関する現状レポートです。コンセント直結・プラグアンドプレイ型のバルコニーソーラーには専用の規制がまだ存在しませんが、それが該当するであろう一般的な分散型発電の枠組みは十分に確立され、広く利用されています。',
     metaDescription: 'ブラジルのLei 14.300/2022は、ANEELの旧Resolução Normativa 482/2012を基盤として、micro-geração distribuída（マイクロ分散発電）とmini-geração distribuída（ミニ分散発電）を規制しています。しかし、MIT Technology Review Brasil（2026年5月）によれば、プラグアンドプレイ型バルコニーソーラーには専用の規制が存在しません — ブラジルは2025年初頭だけで5GW超の分散発電を追加したにもかかわらずです。',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6分で読める',
     educationalLevel: 'Beginner',
     audience: 'ポルトガル・ブラジルの法的比較を超えてブラジルを評価するバルコニーソーラー購入者と市場ウォッチャー',
@@ -532,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ANEELのデータによれば、ブラジルは2025年初頭だけでmicro/mini分散発電を5GW以上追加し、導入量は42GWを超え、540万以上の需要家に恩恵をもたらした — これは一般的な分散発電市場の規模であり、バルコニー特化のものではないことが明確にされている',
           '枠組み：ブラジルは分散型太陽光発電全般のインフラと市場文化を備えているが、プラグイン式バルコニーという特定の製品カテゴリーにはまだ専用のルールがない — これは補助金プログラムの話ではなく、新興のギャップの話である',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -544,6 +564,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '2026年の更新:分散型発電の数値と規制',
+        content: '**確認できた最新の数値は、2026年10月3日時点の分散型太陽光53.65 GWで、2026年2月の44 GW強から増加しています。これは分散型発電全般の規模であり、バルコニー専用の数値ではありません。** [Click Petróleo e Gás(2026年10月4日)](https://clickpetroleoegas.com.br/geracao-distribuida-solar-chega-a-54-gw-e-ja-supera-a-potencia-de-todas-as-termeletricas-do-brasil-49-9-gw-mostram-dados-da-aneel-mhbb01)は、ANEELの登録データ(2026年10月3日時点)として、分散型発電の登録約466万件、クレジットを受ける需要家ユニット約895万、分散型太陽光53.65 GWを報じています。[Canal Solar(2026年2月13日)](https://canalsolar.com.br/gd-solar-capacidade-instalada-fevereiro/)は、44 GW強、約400万件弱のシステム、700万超の需要家ユニットと報じていました。本ページの他の箇所にある2025年初めの数値(5 GW超の増設、42 GW、540万需要家ユニット)は過去の時点のもので、上記の新しい数値に置き換わっています。規制面では、[ANEELは2026年9月8日に、太陽光・蓄電池・電気自動車に向けた系統準備ルールに関する意見募集を発表しました](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novas-regras-para-preparar-a-rede-eletrica-para-geracao-solar-baterias-e-veiculos-eletricos)。本調査ではプラグイン型・バルコニー型キットを対象とするANEELの措置は見つかりませんでしたが、意見募集ポータルは再確認が必要です。プラグアンドプレイ型に固有の規制がないという見解はMIT Technology Review Brasil(2026年5月)に帰属し、二次的なサイト経由で本ページに届いています。原記事は今回の更新では見つかりませんでした。本欄は公開情報の要約であり、法的助言ではありません。',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -612,7 +636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '브라질은 세계 최대 규모의 분산형 태양광 발전 시장 중 하나를 보유하고 있지만, 이러한 인프라와 시장 문화가 콘센트 직결형 발코니 태양광에 특화된 것은 아닙니다. 이 페이지는 바로 그 특정한 공백에 관한 현황 보고서입니다. 플러그 앤 플레이 방식으로 콘센트에 직접 연결하는 발코니 태양광에 대한 전용 규정은 아직 존재하지 않지만, 이러한 제품이 해당될 일반적인 분산발전 프레임워크 자체는 잘 확립되어 있고 널리 활용되고 있습니다.',
     metaDescription: '브라질의 Lei 14.300/2022는 ANEEL의 이전 Resolução Normativa 482/2012를 기반으로 마이크로 및 미니 분산발전(micro-/mini-geração distribuída)을 규제합니다. 하지만 MIT Technology Review Brasil(2026년 5월)에 따르면 플러그 앤 플레이 방식의 발코니 태양광 자체에는 전용 규정이 없습니다 — 브라질이 2025년 초에만 5GW 이상의 분산발전을 추가했음에도 그렇습니다.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6분 읽기',
     educationalLevel: 'Beginner',
     audience: '포르투갈/브라질 법적 비교를 넘어 브라질을 평가하는 발코니 태양광 구매자 및 시장 관찰자',
@@ -630,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ANEEL 데이터에 따르면 브라질은 2025년 초에만 마이크로/미니 분산발전을 5GW 이상 추가했고, 설치 용량은 42GW를 넘어섰으며 540만 개 이상의 수요가가 혜택을 받음 — 이는 일반 분산발전 시장의 규모이며, 명시적으로 발코니 특화형이 아님',
           '프레임: 브라질은 분산형 태양광 발전 전반에 대한 인프라와 시장 문화를 갖추고 있지만, 발코니 플러그인이라는 특정 제품 카테고리에는 아직 전용 규정이 없습니다 — 이는 보조금 프로그램에 관한 이야기가 아니라 신흥 공백에 관한 이야기입니다',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -642,6 +666,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '관련 자료', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '2026년 업데이트: 분산형 발전 수치와 규제',
+        content: '**확인된 최신 수치는 2026년 10월 3일 기준 분산형 태양광 53.65 GW로, 2026년 2월의 44 GW 남짓에서 늘어난 것입니다. 이는 분산형 발전 전반의 규모이며 발코니에 한정된 수치가 아닙니다.** [Click Petróleo e Gás(2026년 10월 4일)](https://clickpetroleoegas.com.br/geracao-distribuida-solar-chega-a-54-gw-e-ja-supera-a-potencia-de-todas-as-termeletricas-do-brasil-49-9-gw-mostram-dados-da-aneel-mhbb01)는 ANEEL 등록 데이터(2026년 10월 3일 기준)를 인용해 분산형 발전 등록 약 466만 건, 크레딧을 받는 수요 단위 약 895만 개, 분산형 태양광 53.65 GW를 보도했고, [Canal Solar(2026년 2월 13일)](https://canalsolar.com.br/gd-solar-capacidade-instalada-fevereiro/)는 44 GW 남짓, 약 400만 건에 가까운 시스템, 700만 개 이상의 수요 단위를 보도했습니다. 이 페이지의 다른 곳에 있는 2025년 초 수치(5 GW 넘는 증설, 42 GW, 540만 수요 단위)는 과거 시점 자료이며 위의 최신 수치로 대체됩니다. 규제 측면에서 [ANEEL은 2026년 9월 8일 태양광·배터리·전기차를 위한 계통 준비 규칙에 관한 의견 수렴을 발표했습니다](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novas-regras-para-preparar-a-rede-eletrica-para-geracao-solar-baterias-e-veiculos-eletricos). 이번 조사에서는 플러그인·발코니 키트를 겨냥한 ANEEL 조치를 찾지 못했지만 의견 수렴 포털은 다시 확인해야 합니다. 플러그앤플레이 키트에 별도 규정이 없다는 결론은 MIT Technology Review Brasil(2026년 5월)에 귀속되며 2차 사이트를 통해 이 페이지에 전달된 것입니다. 원문 기사는 이번 갱신에서 찾지 못했습니다. 이는 공개 정보의 요약이며 법률 자문이 아닙니다.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -710,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'O Brasil tem um dos maiores mercados de geração distribuída solar do mundo — mas essa infraestrutura e cultura de mercado não são específicas da energia solar de varanda plug-and-play. Esta página é um relatório de status sobre essa lacuna específica: ainda não existe regulamentação dedicada para kits solares plug-and-play, ligados diretamente à tomada, mesmo que o marco geral de geração distribuída sob o qual eles se enquadrariam esteja bem estabelecido e seja amplamente utilizado.',
     metaDescription: 'A Lei 14.300/2022 do Brasil regula a micro- e mini-geração distribuída, com base na Resolução Normativa 482/2012 da ANEEL. Mas a energia solar de varanda plug-and-play especificamente não tem regulamentação dedicada, segundo a MIT Technology Review Brasil (maio de 2026) — apesar de o Brasil ter adicionado mais de 5 GW em geração distribuída só no início de 2025.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Compradores de energia solar de varanda e observadores de mercado avaliando o Brasil além da comparação legal Portugal/Brasil',
@@ -728,7 +756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Brasil adicionou mais de 5 GW em micro/mini geração distribuída só no início de 2025, ultrapassando 42 GW instalados e beneficiando mais de 5.4 milhões de unidades consumidoras, segundo dados da ANEEL — escala do mercado geral de geração distribuída, explicitamente não específica de varanda',
           'Enquadramento: o Brasil tem a infraestrutura e a cultura de mercado para a energia solar distribuída de forma geral; a categoria de produto de varanda plug-and-play especificamente ainda não tem regras dedicadas — uma história emergente de lacuna, não uma história de programa de subsídio',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -740,6 +768,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Atualização 2026: números da geração distribuída e regulação',
+        content: '**O número mais recente encontrado é 53.65 GW de solar distribuída em 3 de outubro de 2026, ante pouco mais de 44 GW em fevereiro de 2026 — é a escala geral da geração distribuída, não algo específico de varanda.** O [Click Petróleo e Gás (4 de outubro de 2026)](https://clickpetroleoegas.com.br/geracao-distribuida-solar-chega-a-54-gw-e-ja-supera-a-potencia-de-todas-as-termeletricas-do-brasil-49-9-gw-mostram-dados-da-aneel-mhbb01) informa, a partir do registro da ANEEL em 3 de outubro de 2026, cerca de 4,66 milhões de registros de geração distribuída, cerca de 8,95 milhões de unidades consumidoras recebendo créditos e 53.65 GW de solar distribuída; o [Canal Solar (13 de fevereiro de 2026)](https://canalsolar.com.br/gd-solar-capacidade-instalada-fevereiro/) citava pouco mais de 44 GW, quase 4 milhões de sistemas e mais de 7 milhões de unidades consumidoras. Os números do início de 2025 que aparecem em outras partes desta página (mais de 5 GW adicionados, 42 GW, 5,4 milhões de unidades consumidoras) são retratos históricos superados por estes valores mais recentes. Em regulação, a [ANEEL anunciou em 8 de setembro de 2026 uma consulta sobre regras de preparação da rede para solar, baterias e veículos elétricos](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novas-regras-para-preparar-a-rede-eletrica-para-geracao-solar-baterias-e-veiculos-eletricos); esta pesquisa não encontrou nenhuma medida da ANEEL voltada a kits plug-in ou de varanda, mas o portal de consultas deve ser reverificado. A conclusão de que os kits plug-and-play não têm regulação específica é atribuída à MIT Technology Review Brasil (maio de 2026) e chega a esta página por sites secundários; a matéria original não foi localizada nesta atualização. Este é um resumo de informações públicas, não aconselhamento jurídico.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -808,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '巴西拥有全球最大的分布式光伏发电市场之一——但这种基础设施和市场文化并不是专门针对插座直连式阳台光伏的。本页是关于这一具体空白的现状报告:即插即用、直接接入插座的阳台光伏目前还没有专门的监管规定,尽管它可能适用的一般分布式发电框架已经十分成熟并被广泛使用。',
     metaDescription: '巴西的Lei 14.300/2022法规规范了micro-geração distribuída(微型分布式发电)和mini-geração distribuída(小型分布式发电),该法以ANEEL此前的Resolução Normativa 482/2012号决议为基础。但根据《麻省理工科技评论》巴西版(2026年5月)报道,即插即用式阳台光伏并没有专门的监管规定——尽管巴西仅在2025年初就新增了超过5 GW的分布式发电装机。',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '阅读约6分钟',
     educationalLevel: 'Beginner',
     audience: '正在评估葡萄牙/巴西法律对比之外巴西情况的阳台光伏购买者和市场观察者',
@@ -826,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '据ANEEL数据,巴西仅在2025年初就新增了超过5 GW的微型/小型分布式发电装机,累计装机超过42 GW,惠及540万以上用户单元——这是一般分布式发电市场的规模,明确并非阳台专属',
           '定位:巴西在分布式光伏发电方面总体上具备基础设施和市场文化;但插座式阳台这一特定产品品类尚无专门规则——这是一个正在浮现的空白故事,而不是补贴项目的故事',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -838,6 +870,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '2026年更新:分布式发电数据与监管',
+        content: '**目前找到的最新数据是截至2026年10月3日的53.65 GW分布式太阳能,高于2026年2月的44 GW多一点——这是分布式发电的总体规模,并非阳台专属数据。** [Click Petróleo e Gás(2026年10月4日)](https://clickpetroleoegas.com.br/geracao-distribuida-solar-chega-a-54-gw-e-ja-supera-a-potencia-de-todas-as-termeletricas-do-brasil-49-9-gw-mostram-dados-da-aneel-mhbb01)援引ANEEL登记数据(截至2026年10月3日)称,分布式发电登记约466万条,获得电费抵扣的用电单元约895万个,分布式太阳能装机53.65 GW;[Canal Solar(2026年2月13日)](https://canalsolar.com.br/gd-solar-capacidade-instalada-fevereiro/)当时报道为44 GW出头、近400万套系统、超过700万个用电单元。本页其他位置提到的2025年初数据(新增超过5 GW、42 GW、540万用电单元)属于历史快照,已被上述较新数据取代。监管方面,[ANEEL于2026年9月8日宣布就太阳能、电池和电动汽车的电网准备规则开展征求意见](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novas-regras-para-preparar-a-rede-eletrica-para-geracao-solar-baterias-e-veiculos-eletricos);本次调研未发现ANEEL针对插电式或阳台套件的措施,但仍应重新查看其征求意见门户。关于即插即用套件没有专门规定的结论归于MIT Technology Review Brasil(2026年5月),并通过二手网站传到本页;本次更新未能找到原文。本页为公开信息的汇总,不构成法律意见。',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
