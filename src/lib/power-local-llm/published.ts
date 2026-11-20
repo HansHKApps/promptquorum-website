@@ -641,6 +641,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'openhuman-review',
   'dyad-review',
   'genoffice-review',
+  // Modly review (local image/prompt-to-3D generation) — 2026-11-20
+  'modly-review',
   // Open Generative AI review (image/video studio, Muapi API + local engines) — 2026-11-18
   'open-generative-ai-review',
   'labelme-review',

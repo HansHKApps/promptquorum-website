@@ -1119,6 +1119,11 @@
     "urlSlug": "genoffice-review",
     "url": "/power-local-llm/genoffice-review"
   },
+  "modly": {
+    "cluster": "power-local-llm",
+    "urlSlug": "modly-review",
+    "url": "/power-local-llm/modly-review"
+  },
   "open-generative-ai": {
     "cluster": "power-local-llm",
     "urlSlug": "open-generative-ai-review",
