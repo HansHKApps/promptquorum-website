@@ -650,6 +650,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'airi-review',
   'inbox-zero-review',
   'browser-use-review',
+  'nanobrowser-review',
   'cc-switch-review',
   'skales-review',
   'halo-review',

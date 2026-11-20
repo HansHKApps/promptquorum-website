@@ -1079,6 +1079,7 @@ const HUB_THEMES: Array<{
       'tecadrisebot-review',
       'local-operator-review',
       'browser-use-review',
+      'nanobrowser-review',
       'localmcp-review',
       'self-hosted-ai-starter-kit-review',
       'local-deep-research-review',

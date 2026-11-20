@@ -18,6 +18,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "nanobrowser-review",
+        "title": "Nanobrowser Review: Free Open-Source AI Browser Agent for Chrome and Edge",
+        "url": "/power-local-llm/nanobrowser-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
         "title": "AutoDL Pricing 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-11-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "browser-use-review",
-        "title": "Browser Use Review: Open-Source AI Browser Agent for Python",
-        "url": "/power-local-llm/browser-use-review",
-        "dateModified": "2026-11-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 386,
+    "totalCount": 387,
     "capped": true
   },
   "llama.cpp": {
@@ -884,6 +884,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "nanobrowser-review",
+        "title": "Nanobrowser Review: Free Open-Source AI Browser Agent for Chrome and Edge",
+        "url": "/power-local-llm/nanobrowser-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "chatbox-review",
         "title": "Chatbox Review: Free, Open-Source AI Chat Client for Desktop, Web and Mobile",
@@ -938,17 +946,9 @@
         "url": "/power-local-llm/solomd-review",
         "dateModified": "2026-11-18",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-11-17",
-        "tier": "about"
       }
     ],
-    "totalCount": 193,
+    "totalCount": 194,
     "capped": true
   },
   "Atomic Chat": {
@@ -4324,7 +4324,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 42,
+    "totalCount": 43,
     "capped": true
   },
   "CrewAI": {
@@ -11195,6 +11195,20 @@
     "totalCount": 3,
     "capped": false
   },
+  "Nanobrowser": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "nanobrowser-review",
+        "title": "Nanobrowser Review: Free Open-Source AI Browser Agent for Chrome and Edge",
+        "url": "/power-local-llm/nanobrowser-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "CC Switch": {
     "articles": [
       {
@@ -13814,6 +13828,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "nanobrowser-review",
+        "title": "Nanobrowser Review: Free Open-Source AI Browser Agent for Chrome and Edge",
+        "url": "/power-local-llm/nanobrowser-review",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "chatbox-review",
         "title": "Chatbox Review: Free, Open-Source AI Chat Client for Desktop, Web and Mobile",
@@ -13876,17 +13898,9 @@
         "url": "/power-local-llm/humla-review",
         "dateModified": "2026-11-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "kokoro-vs-elevenlabs",
-        "title": "Kokoro vs ElevenLabs: Free Local TTS or Paid Cloud? (2026)",
-        "url": "/power-local-llm/kokoro-vs-elevenlabs",
-        "dateModified": "2026-11-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 288,
+    "totalCount": 289,
     "capped": true
   },
   "Qdrant": {
