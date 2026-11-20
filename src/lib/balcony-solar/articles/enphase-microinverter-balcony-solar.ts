@@ -15,8 +15,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-11-20',
     audience: 'Readers researching Enphase as a microinverter company',
-    intro: 'Enphase, the NASDAQ-listed rooftop-solar giant founded in 2006, entered the balcony-solar market only recently — its IQ Balcony System was announced in Germany on 7 May 2025 and in Belgium on 12 May 2025, and those are the only two countries we found it selling in as of November 2026. Both launch dates come solely from Enphase\'s own press releases, with no independent confirmation found. The company\'s widely cited shipment figures describe its much larger rooftop business, not this balcony-specific product line.',
-    leadAnswerBlock: '**Enphase Energy is a NASDAQ-listed (ENPH) rooftop-solar microinverter incumbent, founded in 2006 and headquartered in Fremont, California, that entered balcony/plug-in solar only recently and on a limited scale through its IQ Balcony System.** Unlike Chinese peers such as Hoymiles, GoodWe, and Deye — listed in Shanghai and built with small-scale plug-in hardware as a central part of their business — Enphase\'s core business is residential rooftop microinverters, and its company-wide shipment figures describe that rooftop business rather than a balcony-specific volume. The base kit contains two IQ8HC microinverters and an IQ Balcony Gateway, with an expansion kit that supports up to seven microinverters and panels (per Enphase\'s Germany launch release). Enphase announced the kit in Germany on 7 May 2025 and in Belgium on 12 May 2025 — the only two countries we found it sold in as of November 2026 — and both dates come from Enphase\'s own press releases; no independent, balcony-specific sales or shipment figures were found.',
+    intro: 'Enphase, the NASDAQ-listed rooftop-solar microinverter maker founded in 2006, entered the balcony-solar market only recently — its IQ Balcony System was announced in Germany on 7 May 2025 and in Belgium on 12 May 2025, and those are the only two countries we found it selling in at the last refresh (see Last updated). Both launch dates come solely from Enphase\'s own press releases, with no independent confirmation found. The company\'s widely cited shipment figures describe its much larger rooftop business, not this balcony-specific product line.',
+    leadAnswerBlock: '**Enphase Energy is a NASDAQ-listed (ENPH) rooftop-solar microinverter incumbent, founded in 2006 and headquartered in Fremont, California, that entered balcony/plug-in solar only recently and on a limited scale through its IQ Balcony System.** Unlike Chinese peers such as Hoymiles, GoodWe, and Deye — listed in Shanghai and built with small-scale plug-in hardware as a central part of their business — Enphase\'s core business is residential rooftop microinverters, and its company-wide shipment figures describe that rooftop business rather than a balcony-specific volume. The base kit contains two IQ8HC microinverters and an IQ Balcony Gateway, with an expansion kit that supports up to seven microinverters and panels (per Enphase\'s Germany launch release). Enphase announced the kit in Germany on 7 May 2025 and in Belgium on 12 May 2025 — the only two countries we found it sold in at the last refresh (see Last updated) — and both dates come from Enphase\'s own press releases; no independent, balcony-specific sales or shipment figures were found.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enphase Energy was founded in 2006, is headquartered in Fremont, California, and is listed on NASDAQ under ticker ENPH — a different venue from Chinese peers such as Hoymiles, GoodWe, and Deye, which are listed in Shanghai.',
           'Enphase\'s core business is residential rooftop microinverters; balcony/plug-in solar is a small, recent extension confirmed through the IQ Balcony System, not a long-standing product line.',
           'The IQ Balcony System ships as a base kit of two IQ8HC microinverters and an IQ Balcony Gateway, with an Enphase expansion kit supporting up to seven microinverters and panels — the same modular-capacity pattern seen in other balcony microinverter and battery lines covered in this cluster.',
-          'Enphase\'s balcony product is sold directly in only two countries we could confirm — Germany (announced 7 May 2025) and Belgium (12 May 2025); we found no confirmed US launch as of November 2026.',
+          'Enphase\'s balcony product is sold directly in only two countries we could confirm — Germany (announced 7 May 2025) and Belgium (12 May 2025); we found no confirmed US launch at the last refresh (see Last updated).',
           'Both confirmed launch dates for Enphase\'s balcony entry — 7 May 2025 (Germany) and 12 May 2025 (Belgium) — come directly from Enphase\'s own press releases.',
           'Enphase publishes company-wide shipment figures, but those numbers describe its overall rooftop microinverter business, not a balcony-specific sales volume — this profile treats them as context only, not a balcony-market claim.',
         ],
@@ -35,10 +35,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Enphase: Company Snapshot',
         image: '/images/enphase-microinverter-balcony-solar-snapshot-en.svg',
         imageCaption: 'Founded 2006 in Fremont, California; NASDAQ-listed (ENPH). A large rooftop-inverter incumbent, not a dedicated balcony-solar company.',
-        content: 'Enphase Energy\'s confirmed corporate history begins in 2006, when the company was founded; it is headquartered in Fremont, California, and publicly listed on NASDAQ under ticker ENPH — a different venue from Chinese peers such as Hoymiles, GoodWe, and Deye, which are listed in Shanghai. Enphase\'s core business is residential rooftop microinverters at large scale, and balcony/plug-in solar is a small, recent extension into a different market segment rather than a founding focus. Unlike GoodWe, which sells balcony hardware under a distinct sub-brand (PVBM), Enphase markets its balcony product directly under its own IQ Balcony System name.',
+        content: 'Enphase Energy\'s confirmed corporate history begins in 2006, when the company was founded; it is headquartered in Fremont, California, and publicly listed on NASDAQ under ticker ENPH — a different venue from Chinese peers such as Hoymiles, GoodWe, and Deye, which are listed in Shanghai. Enphase\'s core business is residential rooftop microinverters at large scale, and balcony/plug-in solar is a small, recent extension into a different market segment rather than a founding focus. Unlike GoodWe, whose site links a separate PV Building Material (PVBM) site that some third-party coverage calls its Suncake brand (not confirmed from a primary source), Enphase markets its balcony product under its own IQ Balcony System name.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Enphase Energy is a NASDAQ-listed (ENPH) rooftop-solar microinverter manufacturer founded in 2006 in Fremont, California, whose plug-in IQ Balcony System is a small, recent extension of its core rooftop business rather than a dedicated balcony-solar product line.' },
-          { type: 'plain-terms', text: 'Enphase is best known for large rooftop solar systems, not balcony solar — its plug-in balcony product exists but is a minor, recent part of the business, confirmed in only two countries so far.' },
+          { type: 'plain-terms', text: 'Enphase is best known for large rooftop solar systems, not balcony solar — its plug-in balcony product exists but is a recent addition to a business that is mostly rooftop, confirmed in only two countries so far.' },
         ],
       },
       timeline: {
@@ -57,7 +57,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Confirmed Markets — Narrow, Recent',
         image: '/images/enphase-microinverter-balcony-solar-markets-en.svg',
         imageCaption: 'Only Germany and Belgium were confirmed in this research — a recent, limited entry, not an established balcony-solar footprint.',
-        content: 'This research confirmed Enphase\'s balcony product is sold directly in only two countries, Germany and Belgium — a narrower and more recent footprint than APsystems\' EZ1, which maintains dedicated localized marketing pages across multiple EMEA countries, and than GoodWe\'s PVBM hardware, which reaches consumers through at least one confirmed kit-reseller partnership. We found no confirmed US launch of an Enphase balcony product and no UL 3700 certification for one as of November 2026; UL 3700, the US plug-in-solar standard published in December 2025, has so far a first certified microinverter from Hoymiles (July 2026, per Electrek).',
+        content: 'This research confirmed Enphase\'s balcony product is sold directly in only two countries, Germany and Belgium — a narrower and more recent footprint than APsystems\' EZ1, which maintains dedicated localized marketing pages across multiple EMEA countries, and than GoodWe\'s Athena batteries, which the German shop priwatt lists. We found no confirmed US launch of an Enphase balcony product and no UL 3700 certification for one at the last refresh (see Last updated). UL 3700, the US plug-in-solar standard published in December 2025, has a first product its maker describes as compliant, the Hoymiles HiFlow Pro (July 2026, per Hoymiles via Electrek); InsideEVs reported it is designed to meet the standard but not certified by UL Solutions.',
+        callouts: [
+          { type: 'note', text: 'Grid-connection, registration and certification rules differ by country, state and utility; this profile is not legal or electrical advice. Check with your utility or a qualified electrician.' },
+        ],
       },
       position: {
         title: 'Where Enphase Sits',
@@ -68,8 +71,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       scaleContext: {
         title: 'Scale Context',
         image: '/images/enphase-microinverter-balcony-solar-scale-context-en.svg',
-        imageCaption: 'Company-wide shipment figures are real but describe Enphase’s rooftop business overall, not a balcony-specific number — shown here for context, not as a balcony-market claim.',
-        content: 'Enphase publishes company-wide shipment figures that are real and independently reportable, but they describe its overall rooftop microinverter business rather than a balcony-specific sales or shipment volume — no balcony-specific unit or revenue figure was confirmed for Enphase in this research. This profile shows the company-wide figure for scale context only, consistent with how it treats other companies\' aggregate figures elsewhere in this comparison set: distinguishing a real, verifiable number from a claim about a specific product segment.',
+        imageCaption: 'Company-wide shipment figures describe Enphase\'s rooftop business overall, not a balcony-specific number — shown here for context, not as a balcony-market claim.',
+        content: 'Enphase publishes company-wide shipment figures, but they describe its overall rooftop microinverter business rather than a balcony-specific sales or shipment volume — no balcony-specific unit or revenue figure was confirmed for Enphase in this research. This profile shows the company-wide figure for scale context only, consistent with how it treats other companies\' aggregate figures elsewhere in this comparison set: separating a company-wide number from a claim about a specific product segment.',
       },
       faqSection: {
         id: 'faq',
@@ -79,11 +82,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Who owns Enphase?', a: 'Enphase Energy is publicly listed on NASDAQ (ENPH), a different venue from Chinese peers such as Hoymiles, GoodWe, and Deye, which are listed in Shanghai.' },
           { q: 'Is Enphase a dedicated balcony-solar company?', a: 'No. Enphase\'s core business is residential rooftop microinverters; balcony/plug-in solar via the IQ Balcony System is a small, recent extension into a different market segment, unlike Hoymiles, Deye, APsystems, and GoodWe, whose product lines are built more centrally around small-scale or balcony-relevant hardware.' },
           { q: 'What is the IQ Balcony System?', a: 'The IQ Balcony System is Enphase\'s plug-in balcony solar product: a base kit of two IQ8HC microinverters and an IQ Balcony Gateway, expandable with an Enphase expansion kit to up to seven microinverters and panels.' },
-          { q: 'Which markets does Enphase\'s balcony product sell in?', a: 'Germany and Belgium: Enphase announced the IQ Balcony System in Germany on 7 May 2025 and in Belgium on 12 May 2025. We found no other confirmed market as of November 2026 — a narrow, recent entry, in contrast with APsystems\' EZ1, which maintains localized marketing pages across multiple EMEA countries.' },
+          { q: 'Which markets does Enphase\'s balcony product sell in?', a: 'Germany and Belgium: Enphase announced the IQ Balcony System in Germany on 7 May 2025 and in Belgium on 12 May 2025. We found no other confirmed market at the last refresh (see Last updated) — a narrow, recent entry, in contrast with APsystems\' EZ1, which maintains localized marketing pages across multiple EMEA countries.' },
           { q: 'When did Enphase launch its balcony product?', a: 'Enphase\'s own press releases give 7 May 2025 (Germany) and 12 May 2025 (Belgium); this research did not find independent third-party confirmation beyond those company sources.' },
           { q: 'How does Enphase compare structurally to Hoymiles, Deye, APsystems, and GoodWe?', a: 'All five sit in the microinverter/battery-maker layer of the balcony solar supply chain, but Enphase differs in scale and origin: it is a much larger, longer-established rooftop-solar company (founded 2006, NASDAQ-listed) for which balcony solar is a minor, recent extension, whereas the other four brands\' product lines are built more centrally around small-scale plug-in hardware.' },
           { q: 'Does Enphase report balcony-specific shipment numbers?', a: 'No. Enphase publishes company-wide shipment figures, but these describe its overall rooftop microinverter business rather than a balcony-specific volume; no balcony-only figure was confirmed in this research.' },
-          { q: 'Is Enphase a balcony-solar-kit brand like Anker SOLIX?', a: 'No. Enphase sits in the microinverter/battery-maker layer of the supply chain, alongside Hoymiles, Deye, APsystems, and GoodWe, rather than the kit-reseller layer occupied by Anker SOLIX, EcoFlow, and Zendure, which manufacture their own battery hardware and sell complete kits directly to consumers under their own brand.' },
+          { q: 'Is Enphase a balcony-solar-kit brand like Anker SOLIX?', a: 'No. Enphase sits in the microinverter/battery-maker layer of the supply chain, alongside Hoymiles, Deye, APsystems, and GoodWe, rather than the kit-reseller layer occupied by Anker SOLIX, EcoFlow, and Zendure, which design their own battery hardware and sell complete kits directly to consumers under their own brand.' },
         ],
       },
     },
@@ -97,8 +100,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-11-20',
     audience: 'Leser, die Enphase als Mikrowechselrichter-Unternehmen recherchieren',
-    intro: 'Enphase, der an der NASDAQ notierte Aufdach-Solarriese, 2006 gegründet, ist erst vor Kurzem in den Balkonkraftwerk-Markt eingestiegen — das IQ Balcony System wurde am 7. Mai 2025 in Deutschland und am 12. Mai 2025 in Belgien angekündigt; nur in diesen beiden Ländern haben wir Stand November 2026 einen Verkauf gefunden. Beide Starttermine stammen ausschließlich aus Pressemitteilungen von Enphase selbst, eine unabhängige Bestätigung wurde nicht gefunden. Die vielzitierten Versandzahlen des Unternehmens beschreiben sein deutlich größeres Aufdach-Geschäft, nicht diese balkonspezifische Produktlinie.',
-    leadAnswerBlock: '**Enphase Energy ist ein an der NASDAQ notierter (ENPH) Platzhirsch bei Aufdach-Mikrowechselrichtern, 2006 gegründet und mit Sitz in Fremont, Kalifornien, der erst vor Kurzem und in begrenztem Umfang über das IQ Balcony System in den Markt für Balkon-/Steckersolar eingestiegen ist.** Anders als die chinesischen Wettbewerber Hoymiles, GoodWe und Deye — in Shanghai börsennotiert und mit Kleinanlagen-Hardware als zentralem Geschäftsfeld — liegt Enphases Kerngeschäft bei Mikrowechselrichtern für Wohnhaus-Aufdachanlagen, und die unternehmensweiten Versandzahlen beschreiben dieses Aufdach-Geschäft statt eines balkonspezifischen Volumens. Das Basis-Kit enthält zwei IQ8HC-Mikrowechselrichter und ein IQ Balcony Gateway; ein Erweiterungs-Kit unterstützt bis zu sieben Mikrowechselrichter und Module (laut Enphases Pressemitteilung zum Deutschland-Start). Enphase kündigte das Kit am 7. Mai 2025 in Deutschland und am 12. Mai 2025 in Belgien an — die einzigen beiden Länder, in denen wir es Stand November 2026 im Verkauf gefunden haben — und beide Daten stammen aus Pressemitteilungen von Enphase selbst; unabhängige, balkonspezifische Absatz- oder Versandzahlen wurden nicht gefunden.',
+    intro: 'Enphase, der an der NASDAQ notierte Hersteller von Aufdach-Solar-Mikrowechselrichtern, 2006 gegründet, ist erst vor Kurzem in den Balkonkraftwerk-Markt eingestiegen — das IQ Balcony System wurde am 7. Mai 2025 in Deutschland und am 12. Mai 2025 in Belgien angekündigt, und das sind die einzigen beiden Länder, in denen wir es bei der letzten Aktualisierung (siehe „Zuletzt aktualisiert“) verkauft gefunden haben. Beide Starttermine stammen ausschließlich aus Enphases eigenen Pressemitteilungen, eine unabhängige Bestätigung wurde nicht gefunden. Die vielzitierten Auslieferungszahlen des Unternehmens beschreiben sein viel größeres Aufdachgeschäft, nicht diese balkonspezifische Produktlinie.',
+    leadAnswerBlock: '**Enphase Energy ist ein an der NASDAQ notierter (ENPH) Platzhirsch bei Aufdach-Solar-Mikrowechselrichtern, 2006 gegründet und mit Hauptsitz in Fremont, Kalifornien, der erst vor Kurzem und in begrenztem Umfang über sein IQ Balcony System in den Markt für Balkon-/Plug-in-Solar eingestiegen ist.** Anders als chinesische Wettbewerber wie Hoymiles, GoodWe und Deye — in Shanghai notiert und mit kleinen Plug-in-Geräten als zentralem Geschäftsbereich — ist Enphases Kerngeschäft der Bereich Aufdach-Mikrowechselrichter für Privathaushalte, und die unternehmensweiten Auslieferungszahlen beschreiben dieses Aufdachgeschäft, nicht ein balkonspezifisches Volumen. Das Basis-Set enthält zwei IQ8HC-Mikrowechselrichter und ein IQ Balcony Gateway, ein Erweiterungs-Set unterstützt bis zu sieben Mikrowechselrichter und Module (laut Enphases Pressemitteilung zum Deutschland-Start). Enphase kündigte das Set am 7. Mai 2025 in Deutschland und am 12. Mai 2025 in Belgien an — die einzigen beiden Länder, in denen wir es bei der letzten Aktualisierung (siehe „Zuletzt aktualisiert“) verkauft gefunden haben —, und beide Termine stammen aus Enphases eigenen Pressemitteilungen; unabhängige, balkonspezifische Verkaufs- oder Auslieferungszahlen wurden nicht gefunden.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -108,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enphase Energy wurde 2006 gegründet, hat seinen Sitz in Fremont, Kalifornien, und ist an der NASDAQ unter dem Kürzel ENPH notiert — ein anderer Handelsplatz als bei den chinesischen Wettbewerbern Hoymiles, GoodWe und Deye, die in Shanghai börsennotiert sind.',
           'Das Kerngeschäft von Enphase sind Mikrowechselrichter für private Dachanlagen; Balkon-/Stecker-Solar ist eine kleine, aktuelle Erweiterung, bestätigt durch das IQ Balcony System, keine langjährig etablierte Produktlinie.',
           'Das IQ Balcony System wird als Basis-Kit aus zwei IQ8HC-Mikrowechselrichtern und einem IQ Balcony Gateway geliefert; ein Enphase-Erweiterungs-Kit unterstützt bis zu sieben Mikrowechselrichter und Module — dasselbe modulare Kapazitätsmuster wie bei anderen in diesem Cluster behandelten Balkon-Mikrowechselrichter- und Batterielinien.',
-          'Das Balkonprodukt von Enphase wird direkt in nur zwei von uns bestätigten Ländern verkauft — Deutschland (angekündigt am 7. Mai 2025) und Belgien (12. Mai 2025); einen bestätigten US-Start haben wir Stand November 2026 nicht gefunden.',
+          'Enphases Balkonprodukt wird direkt in nur zwei von uns bestätigten Ländern verkauft — Deutschland (angekündigt am 7. Mai 2025) und Belgien (12. Mai 2025); einen bestätigten US-Start haben wir bei der letzten Aktualisierung (siehe „Zuletzt aktualisiert“) nicht gefunden.',
           'Beide bestätigten Starttermine des Balkon-Einstiegs von Enphase — 7. Mai 2025 (Deutschland) und 12. Mai 2025 (Belgien) — stammen direkt aus Pressemitteilungen von Enphase selbst.',
           'Enphase veröffentlicht unternehmensweite Auslieferungszahlen, doch diese beschreiben das gesamte Dachanlagen-Geschäft und keine balkonspezifische Verkaufsmenge — dieses Profil behandelt sie nur als Kontext, nicht als Aussage zum Balkonkraftwerk-Markt.',
         ],
@@ -117,10 +120,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Enphase: Unternehmensüberblick',
         image: '/images/enphase-microinverter-balcony-solar-snapshot-en.svg',
         imageCaption: 'Gegründet 2006 in Fremont, Kalifornien; börsennotiert an der NASDAQ (ENPH). Ein großer etablierter Anbieter von Dachwechselrichtern, kein spezialisiertes Balkonkraftwerk-Unternehmen.',
-        content: 'Die bestätigte Unternehmensgeschichte von Enphase Energy beginnt 2006 mit der Gründung; das Unternehmen hat seinen Sitz in Fremont, Kalifornien, und ist an der NASDAQ unter dem Kürzel ENPH börsennotiert — ein anderer Handelsplatz als bei den chinesischen Wettbewerbern Hoymiles, GoodWe und Deye, die in Shanghai notiert sind. Enphases Kerngeschäft sind Mikrowechselrichter für Wohnhaus-Aufdachanlagen im großen Maßstab; Balkon-/Steckersolar ist eine kleine, junge Erweiterung in ein anderes Marktsegment und kein Gründungsschwerpunkt. Anders als GoodWe, das Balkon-Hardware unter einer eigenen Untermarke (PVBM) verkauft, vermarktet Enphase sein Balkonprodukt direkt unter dem eigenen Namen IQ Balcony System.',
+        content: 'Die bestätigte Unternehmensgeschichte von Enphase Energy beginnt 2006 mit der Gründung; das Unternehmen hat seinen Hauptsitz in Fremont, Kalifornien, und ist an der NASDAQ unter dem Kürzel ENPH börsennotiert — an einem anderen Handelsplatz als chinesische Wettbewerber wie Hoymiles, GoodWe und Deye, die in Shanghai notiert sind. Enphases Kerngeschäft sind Aufdach-Mikrowechselrichter für Privathaushalte in großem Maßstab, und Balkon-/Plug-in-Solar ist eine kleine, junge Erweiterung in ein anderes Marktsegment statt eines Gründungsfokus. Anders als GoodWe, dessen Website auf eine separate Seite für PV Building Material (PVBM) verweist, die laut einigen Drittberichten dessen Marke Suncake ist (aus Primärquellen nicht bestätigt), vermarktet Enphase sein Balkonprodukt unter dem eigenen Namen IQ Balcony System.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Enphase Energy ist ein an der NASDAQ notierter (ENPH) Hersteller von Dach-Mikrowechselrichtern, gegründet 2006 in Fremont, Kalifornien, dessen Stecker-Produkt IQ Balcony System eine kleine, aktuelle Erweiterung des Kerngeschäfts Dachanlagen ist und keine eigenständige Balkonkraftwerk-Produktlinie.' },
-          { type: 'plain-terms', text: 'Enphase ist vor allem für große Dach-Solaranlagen bekannt, nicht für Balkonkraftwerke — das Stecker-Balkonprodukt existiert, ist aber ein kleiner, aktueller Teil des Geschäfts, bisher nur in zwei Ländern bestätigt.' },
+          { type: 'plain-terms', text: 'Enphase ist vor allem für große Aufdach-Solaranlagen bekannt, nicht für Balkonkraftwerke — das Plug-in-Balkonprodukt gibt es, es ist aber eine junge Ergänzung eines Geschäfts, das überwiegend aus Aufdachanlagen besteht, und bislang nur in zwei Ländern bestätigt.' },
         ],
       },
       timeline: {
@@ -139,7 +142,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bestätigte Märkte — begrenzt, aktuell',
         image: '/images/enphase-microinverter-balcony-solar-markets-en.svg',
         imageCaption: 'In dieser Recherche wurden nur Deutschland und Belgien bestätigt — ein junger, begrenzter Einstieg, keine etablierte Balkonkraftwerk-Präsenz.',
-        content: 'Diese Recherche hat bestätigt, dass das Balkonprodukt von Enphase direkt in nur zwei Ländern verkauft wird, Deutschland und Belgien — ein schmalerer und jüngerer Fußabdruck als bei der EZ1 von APsystems, die eigene lokalisierte Marketingseiten in mehreren EMEA-Ländern unterhält, und als bei der PVBM-Hardware von GoodWe, die Verbraucher über mindestens eine bestätigte Kit-Händlerpartnerschaft erreicht. Einen bestätigten US-Start eines Enphase-Balkonprodukts und eine UL-3700-Zertifizierung dafür haben wir Stand November 2026 nicht gefunden; UL 3700, der im Dezember 2025 veröffentlichte US-Standard für Steckersolar, hat bisher einen ersten zertifizierten Mikrowechselrichter von Hoymiles (Juli 2026, laut Electrek).',
+        content: 'Diese Recherche hat bestätigt, dass das Balkonprodukt von Enphase direkt in nur zwei Ländern verkauft wird, Deutschland und Belgien — ein engerer und jüngerer Marktauftritt als beim EZ1 von APsystems, das eigene lokalisierte Marketingseiten in mehreren EMEA-Ländern unterhält, und als bei den Athena-Batterien von GoodWe, die der deutsche Shop priwatt listet. Einen bestätigten US-Start eines Enphase-Balkonprodukts und eine UL-3700-Zertifizierung dafür haben wir bei der letzten Aktualisierung (siehe „Zuletzt aktualisiert“) nicht gefunden. Für UL 3700, den im Dezember 2025 veröffentlichten US-Standard für Plug-in-Solar, gibt es ein erstes Produkt, das sein Hersteller als konform beschreibt, den Hoymiles HiFlow Pro (Juli 2026, laut Hoymiles über Electrek); InsideEVs berichtete, er sei darauf ausgelegt, den Standard zu erfüllen, aber nicht von UL Solutions zertifiziert.',
+        callouts: [
+          { type: 'note', text: 'Regeln zu Netzanschluss, Anmeldung und Zertifizierung unterscheiden sich je nach Land, Bundesstaat und Netzbetreiber; dieses Profil ist keine Rechts- oder Elektroberatung. Fragen Sie Ihren Netzbetreiber oder eine Elektrofachkraft.' },
+        ],
       },
       position: {
         title: 'Wo Enphase steht',
@@ -150,8 +156,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       scaleContext: {
         title: 'Größenordnung im Kontext',
         image: '/images/enphase-microinverter-balcony-solar-scale-context-en.svg',
-        imageCaption: 'Die unternehmensweiten Auslieferungszahlen sind real, beschreiben jedoch das gesamte Dachanlagen-Geschäft von Enphase und keine balkonspezifische Zahl — hier zur Einordnung gezeigt, nicht als Aussage zum Balkonkraftwerk-Markt.',
-        content: 'Enphase veröffentlicht unternehmensweite Auslieferungszahlen, die real und unabhängig überprüfbar sind, jedoch das gesamte Dachanlagen-Mikrowechselrichter-Geschäft beschreiben und keine balkonspezifische Verkaufs- oder Auslieferungsmenge — für Enphase wurde in dieser Recherche keine balkonspezifische Stück- oder Umsatzzahl bestätigt. Dieses Profil zeigt die unternehmensweite Zahl ausschließlich zur Einordnung, konsistent damit, wie es an anderer Stelle in diesem Vergleichsset mit Gesamtzahlen anderer Unternehmen umgeht: Es unterscheidet eine reale, überprüfbare Zahl von einer Aussage über ein bestimmtes Produktsegment.',
+        imageCaption: 'Unternehmensweite Auslieferungszahlen beschreiben Enphases Aufdachgeschäft insgesamt, nicht eine balkonspezifische Zahl — hier als Kontext gezeigt, nicht als Aussage über den Balkonmarkt.',
+        content: 'Enphase veröffentlicht unternehmensweite Auslieferungszahlen, die jedoch sein gesamtes Aufdach-Mikrowechselrichter-Geschäft beschreiben und kein balkonspezifisches Verkaufs- oder Auslieferungsvolumen — für Enphase wurde in dieser Recherche keine balkonspezifische Stück- oder Umsatzzahl bestätigt. Dieses Profil zeigt die unternehmensweite Zahl nur als Größenkontext, wie es auch mit den Gesamtzahlen anderer Unternehmen in diesem Vergleich verfährt: Eine unternehmensweite Zahl wird von einer Aussage über ein bestimmtes Produktsegment getrennt.',
       },
       faqSection: {
         id: 'faq',
@@ -161,11 +167,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wem gehört Enphase?', a: 'Enphase Energy ist an der NASDAQ (ENPH) börsennotiert, einem anderen Handelsplatz als bei den chinesischen Wettbewerbern Hoymiles, GoodWe und Deye, die in Shanghai notiert sind.' },
           { q: 'Ist Enphase ein spezialisiertes Balkonkraftwerk-Unternehmen?', a: 'Nein. Das Kerngeschäft von Enphase sind Mikrowechselrichter für private Dachanlagen; Balkon-/Stecker-Solar über das IQ Balcony System ist eine kleine, aktuelle Erweiterung in ein anderes Marktsegment — anders als bei Hoymiles, Deye, APsystems und GoodWe, deren Produktlinien stärker auf kleinformatige oder balkonrelevante Hardware ausgerichtet sind.' },
           { q: 'Was ist das IQ Balcony System?', a: 'Das IQ Balcony System ist Enphases Steckersolar-Balkonprodukt: ein Basis-Kit aus zwei IQ8HC-Mikrowechselrichtern und einem IQ Balcony Gateway, mit einem Enphase-Erweiterungs-Kit auf bis zu sieben Mikrowechselrichter und Module erweiterbar.' },
-          { q: 'In welchen Märkten verkauft Enphases Balkonprodukt?', a: 'Deutschland und Belgien: Enphase kündigte das IQ Balcony System am 7. Mai 2025 in Deutschland und am 12. Mai 2025 in Belgien an. Einen weiteren bestätigten Markt haben wir Stand November 2026 nicht gefunden — ein schmaler, junger Einstieg, im Gegensatz zur EZ1 von APsystems, die lokalisierte Marketingseiten in mehreren EMEA-Ländern unterhält.' },
+          { q: 'In welchen Märkten verkauft Enphases Balkonprodukt?', a: 'Deutschland und Belgien: Enphase kündigte das IQ Balcony System am 7. Mai 2025 in Deutschland und am 12. Mai 2025 in Belgien an. Einen weiteren bestätigten Markt haben wir bei der letzten Aktualisierung (siehe „Zuletzt aktualisiert“) nicht gefunden — ein enger, junger Einstieg, im Gegensatz zum EZ1 von APsystems, das lokalisierte Marketingseiten in mehreren EMEA-Ländern unterhält.' },
           { q: 'Wann hat Enphase sein Balkonprodukt eingeführt?', a: 'Enphases eigene Pressemitteilungen nennen den 7. Mai 2025 (Deutschland) und den 12. Mai 2025 (Belgien); eine unabhängige Bestätigung durch Dritte jenseits dieser Unternehmensquellen wurde in dieser Recherche nicht gefunden.' },
           { q: 'Wie unterscheidet sich Enphase strukturell von Hoymiles, Deye, APsystems und GoodWe?', a: 'Alle fünf sind in der Ebene der Mikrowechselrichter-/Batteriehersteller der Balkonkraftwerk-Lieferkette angesiedelt, doch Enphase unterscheidet sich in Größe und Herkunft: Es ist ein viel größeres, länger etabliertes Dach-Solar-Unternehmen (gegründet 2006, an der NASDAQ notiert), für das Balkonkraftwerke eine kleine, aktuelle Erweiterung darstellen, während die Produktlinien der anderen vier Marken stärker auf kleinformatige Stecker-Hardware ausgerichtet sind.' },
           { q: 'Veröffentlicht Enphase balkonspezifische Auslieferungszahlen?', a: 'Nein. Enphase veröffentlicht unternehmensweite Auslieferungszahlen, doch diese beschreiben das gesamte Dachanlagen-Mikrowechselrichter-Geschäft und keine balkonspezifische Menge; in dieser Recherche wurde keine reine Balkon-Zahl bestätigt.' },
-          { q: 'Ist Enphase eine Balkonkraftwerk-Set-Marke wie Anker SOLIX?', a: 'Nein. Enphase ist in der Ebene der Mikrowechselrichter-/Batteriehersteller der Lieferkette angesiedelt, neben Hoymiles, Deye, APsystems und GoodWe, statt in der Kit-Wiederverkäufer-Ebene von Anker SOLIX, EcoFlow und Zendure, die eigene Batteriehardware fertigen und zusätzlich fertige Sets unter eigener Marke direkt an Verbraucher verkaufen.' },
+          { q: 'Ist Enphase eine Balkonkraftwerk-Set-Marke wie Anker SOLIX?', a: 'Nein. Enphase gehört zur Ebene der Mikrowechselrichter-/Batteriehersteller in der Lieferkette, neben Hoymiles, Deye, APsystems und GoodWe, und nicht zur Kit-Wiederverkäufer-Ebene von Anker SOLIX, EcoFlow und Zendure, die ihre eigene Batteriehardware entwickeln und komplette Sets direkt unter eigener Marke an Verbraucher verkaufen.' },
         ],
       },
     },
@@ -179,8 +185,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-11-20',
     audience: 'Lecteurs recherchant des informations sur Enphase en tant qu\'entreprise de micro-onduleurs',
-    intro: 'Enphase, le géant du solaire en toiture coté au NASDAQ et fondé en 2006, n\'est entré que récemment sur le marché du solaire de balcon — son IQ Balcony System a été annoncé en Allemagne le 7 mai 2025 et en Belgique le 12 mai 2025, et ce sont les deux seuls pays où nous l\'avons trouvé en vente en novembre 2026. Les deux dates de lancement proviennent uniquement des communiqués de presse d\'Enphase, sans confirmation indépendante. Les chiffres d\'expédition souvent cités décrivent son activité en toiture, bien plus vaste, et non cette gamme dédiée au balcon.',
-    leadAnswerBlock: '**Enphase Energy est un acteur historique des micro-onduleurs pour toiture, coté au NASDAQ (ENPH), fondé en 2006 et basé à Fremont (Californie), qui n\'est entré que récemment et à petite échelle dans le solaire de balcon/enfichable avec son IQ Balcony System.** Contrairement à des concurrents chinois comme Hoymiles, GoodWe et Deye — cotés à Shanghai et dont le matériel enfichable de petite taille est un pilier de l\'activité —, le cœur de métier d\'Enphase reste les micro-onduleurs résidentiels pour toiture, et ses chiffres d\'expédition à l\'échelle de l\'entreprise décrivent cette activité plutôt qu\'un volume propre au balcon. Le kit de base comprend deux micro-onduleurs IQ8HC et une IQ Balcony Gateway, avec un kit d\'extension prenant en charge jusqu\'à sept micro-onduleurs et panneaux (selon le communiqué de lancement en Allemagne). Enphase a annoncé le kit en Allemagne le 7 mai 2025 et en Belgique le 12 mai 2025 — les deux seuls pays où nous l\'avons trouvé en vente en novembre 2026 — et les deux dates proviennent des communiqués d\'Enphase ; aucun chiffre de ventes ou d\'expéditions indépendant et propre au balcon n\'a été trouvé.',
+    intro: 'Enphase, fabricant de micro-onduleurs pour le solaire en toiture coté au NASDAQ et fondé en 2006, n\'est entré que récemment sur le marché du solaire de balcon — son IQ Balcony System a été annoncé en Allemagne le 7 mai 2025 et en Belgique le 12 mai 2025, et ce sont les deux seuls pays où nous l\'avons trouvé en vente lors de la dernière actualisation (voir « Dernière mise à jour »). Les deux dates de lancement proviennent uniquement des communiqués de presse d\'Enphase, sans confirmation indépendante. Les chiffres d\'expédition très cités de l\'entreprise décrivent son activité en toiture, bien plus vaste, et non cette gamme balcon.',
+    leadAnswerBlock: '**Enphase Energy est un acteur historique des micro-onduleurs pour le solaire en toiture, coté au NASDAQ (ENPH), fondé en 2006 et dont le siège est à Fremont, en Californie, qui n\'est entré que récemment et à petite échelle dans le solaire de balcon/enfichable avec son IQ Balcony System.** Contrairement à des pairs chinois comme Hoymiles, GoodWe et Deye — cotés à Shanghai et dont le matériel enfichable de petite taille est au cœur de l\'activité — le cœur de métier d\'Enphase reste les micro-onduleurs résidentiels en toiture, et ses chiffres d\'expédition à l\'échelle de l\'entreprise décrivent cette activité en toiture et non un volume propre au balcon. Le kit de base comprend deux micro-onduleurs IQ8HC et une IQ Balcony Gateway, avec un kit d\'extension prenant en charge jusqu\'à sept micro-onduleurs et panneaux (selon le communiqué de lancement d\'Enphase en Allemagne). Enphase a annoncé le kit en Allemagne le 7 mai 2025 et en Belgique le 12 mai 2025 — les deux seuls pays où nous l\'avons trouvé en vente lors de la dernière actualisation (voir « Dernière mise à jour ») — et ces deux dates proviennent des communiqués d\'Enphase ; aucun chiffre indépendant de ventes ou d\'expéditions propre au balcon n\'a été trouvé.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -190,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enphase Energy a été fondée en 2006, a son siège à Fremont (Californie) et est cotée au NASDAQ sous le symbole ENPH — une place différente de celle de concurrents chinois comme Hoymiles, GoodWe et Deye, cotés à Shanghai.',
           'Le cœur de métier d\'Enphase reste les micro-onduleurs résidentiels de toiture ; le solaire de balcon/branchable est une extension récente et modeste confirmée via l\'IQ Balcony System, pas une gamme de longue date.',
           'L\'IQ Balcony System est livré sous forme de kit de base de deux micro-onduleurs IQ8HC et d\'une IQ Balcony Gateway, avec un kit d\'extension Enphase prenant en charge jusqu\'à sept micro-onduleurs et panneaux — le même schéma de capacité modulaire que d\'autres gammes de micro-onduleurs et de batteries pour balcon traitées dans ce cluster.',
-          'Le produit balcon d\'Enphase n\'est vendu directement que dans deux pays que nous avons pu confirmer — l\'Allemagne (annoncé le 7 mai 2025) et la Belgique (12 mai 2025) ; nous n\'avons trouvé aucun lancement confirmé aux États-Unis en novembre 2026.',
+          'Le produit balcon d\'Enphase n\'est vendu directement que dans deux pays que nous avons pu confirmer — l\'Allemagne (annoncé le 7 mai 2025) et la Belgique (12 mai 2025) ; nous n\'avons trouvé aucun lancement confirmé aux États-Unis lors de la dernière actualisation (voir « Dernière mise à jour »).',
           'Les deux dates de lancement confirmées de l\'entrée d\'Enphase sur le balcon — 7 mai 2025 (Allemagne) et 12 mai 2025 (Belgique) — proviennent directement des communiqués de presse d\'Enphase.',
           'Enphase publie des chiffres d\'expédition à l\'échelle de l\'entreprise, mais ces chiffres décrivent l\'ensemble de son activité de micro-onduleurs de toiture, pas un volume de ventes propre au balcon — ce profil les présente uniquement à titre de contexte, pas comme une affirmation sur le marché du balcon.',
         ],
@@ -199,10 +205,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Enphase : aperçu de l\'entreprise',
         image: '/images/enphase-microinverter-balcony-solar-snapshot-en.svg',
         imageCaption: 'Fondée en 2006 à Fremont, en Californie ; cotée au NASDAQ (ENPH). Un acteur historique majeur des onduleurs de toiture, pas une entreprise spécialisée dans le solaire de balcon.',
-        content: 'L\'histoire d\'entreprise confirmée d\'Enphase Energy débute en 2006, année de sa fondation ; la société a son siège à Fremont (Californie) et est cotée au NASDAQ sous le symbole ENPH — une place différente de celle de concurrents chinois comme Hoymiles, GoodWe et Deye, cotés à Shanghai. Le cœur de métier d\'Enphase est celui des micro-onduleurs résidentiels pour toiture à grande échelle ; le solaire de balcon/enfichable est une petite extension récente vers un autre segment de marché, et non une vocation d\'origine. Contrairement à GoodWe, qui vend son matériel de balcon sous une sous-marque distincte (PVBM), Enphase commercialise son produit de balcon directement sous son propre nom, IQ Balcony System.',
+        content: 'L\'histoire d\'entreprise confirmée d\'Enphase Energy débute en 2006, avec sa fondation ; son siège est à Fremont, en Californie, et elle est cotée au NASDAQ sous le symbole ENPH — une place différente de celle de pairs chinois comme Hoymiles, GoodWe et Deye, cotés à Shanghai. Le cœur de métier d\'Enphase, ce sont les micro-onduleurs résidentiels en toiture à grande échelle, et le solaire de balcon/enfichable est une petite extension récente vers un autre segment de marché plutôt qu\'un axe fondateur. Contrairement à GoodWe, dont le site renvoie à un site distinct PV Building Material (PVBM) que certains médias tiers présentent comme sa marque Suncake (non confirmé par une source primaire), Enphase commercialise son produit balcon sous son propre nom IQ Balcony System.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Enphase Energy est un fabricant de micro-onduleurs de toiture coté au NASDAQ (ENPH), fondé en 2006 à Fremont, en Californie, dont le produit branchable IQ Balcony System est une extension récente et modeste de son activité principale de toiture plutôt qu\'une gamme dédiée au solaire de balcon.' },
-          { type: 'plain-terms', text: 'Enphase est surtout connue pour les grandes installations solaires de toiture, pas pour le solaire de balcon — son produit branchable pour balcon existe, mais reste une part mineure et récente de l\'activité, confirmée dans seulement deux pays à ce jour.' },
+          { type: 'plain-terms', text: 'Enphase est surtout connue pour ses grandes installations solaires en toiture, pas pour le solaire de balcon — son produit balcon enfichable existe, mais c\'est un ajout récent à une activité surtout tournée vers la toiture, confirmé dans seulement deux pays à ce jour.' },
         ],
       },
       timeline: {
@@ -221,7 +227,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Marchés confirmés — restreints, récents',
         image: '/images/enphase-microinverter-balcony-solar-markets-en.svg',
         imageCaption: 'Seuls l\'Allemagne et la Belgique ont été confirmées dans cette recherche — une entrée récente et limitée, et non une présence établie dans le solaire de balcon.',
-        content: 'Cette recherche a confirmé que le produit balcon d\'Enphase n\'est vendu directement que dans deux pays, l\'Allemagne et la Belgique — une empreinte plus étroite et plus récente que celle de l\'EZ1 d\'APsystems, qui maintient des pages marketing localisées dans plusieurs pays d\'EMEA, et que celle du matériel PVBM de GoodWe, qui atteint les consommateurs via au moins un partenariat confirmé avec un revendeur de kits. Nous n\'avons trouvé en novembre 2026 ni lancement confirmé aux États-Unis d\'un produit balcon Enphase, ni certification UL 3700 pour un tel produit ; UL 3700, la norme américaine du solaire enfichable publiée en décembre 2025, compte pour l\'instant un premier micro-onduleur certifié, celui de Hoymiles (juillet 2026, selon Electrek).',
+        content: 'Cette recherche a confirmé que le produit balcon d\'Enphase n\'est vendu directement que dans deux pays, l\'Allemagne et la Belgique — une présence plus étroite et plus récente que celle de l\'EZ1 d\'APsystems, qui maintient des pages marketing localisées dans plusieurs pays EMEA, et que celle des batteries Athena de GoodWe, que la boutique allemande priwatt référence. Nous n\'avons trouvé aucun lancement confirmé aux États-Unis d\'un produit balcon Enphase ni de certification UL 3700 pour un tel produit lors de la dernière actualisation (voir « Dernière mise à jour »). Pour UL 3700, la norme américaine du solaire enfichable publiée en décembre 2025, un premier produit que son fabricant décrit comme conforme existe : le Hoymiles HiFlow Pro (juillet 2026, selon Hoymiles via Electrek) ; InsideEVs a indiqué qu\'il est conçu pour satisfaire la norme, sans certification par UL Solutions.',
+        callouts: [
+          { type: 'note', text: 'Les règles de raccordement, d\'enregistrement et de certification varient selon le pays, l\'État et le gestionnaire de réseau ; ce profil ne constitue ni un conseil juridique ni un conseil électrique. Renseignez-vous auprès de votre gestionnaire de réseau ou d\'un électricien qualifié.' },
+        ],
       },
       position: {
         title: 'La place d\'Enphase',
@@ -232,8 +241,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       scaleContext: {
         title: 'Mise en contexte de l\'échelle',
         image: '/images/enphase-microinverter-balcony-solar-scale-context-en.svg',
-        imageCaption: 'Les volumes d\'expédition à l\'échelle de l\'entreprise sont réels, mais décrivent l\'ensemble de l\'activité toiture d\'Enphase, pas un chiffre propre au balcon — présentés ici à titre de contexte, non comme une donnée du marché du balcon.',
-        content: 'Enphase publie des chiffres d\'expédition à l\'échelle de l\'entreprise qui sont réels et vérifiables de manière indépendante, mais qui décrivent l\'ensemble de son activité de micro-onduleurs de toiture plutôt qu\'un volume de ventes ou d\'expédition propre au balcon — aucun chiffre d\'unités ou de revenus propre au balcon n\'a été confirmé pour Enphase dans cette recherche. Ce profil présente le chiffre à l\'échelle de l\'entreprise uniquement à titre de contexte, conformément à la façon dont il traite ailleurs dans cet ensemble comparatif les chiffres agrégés d\'autres entreprises : distinguer un chiffre réel et vérifiable d\'une affirmation sur un segment de produit spécifique.',
+        imageCaption: 'Les chiffres d\'expédition à l\'échelle de l\'entreprise décrivent l\'activité en toiture d\'Enphase dans son ensemble, pas un chiffre propre au balcon — présentés ici à titre de contexte, pas comme une affirmation sur le marché du balcon.',
+        content: 'Enphase publie des chiffres d\'expédition à l\'échelle de l\'entreprise, mais ils décrivent l\'ensemble de son activité de micro-onduleurs en toiture et non un volume de ventes ou d\'expéditions propre au balcon — aucun chiffre d\'unités ou de revenus propre au balcon n\'a été confirmé pour Enphase dans cette recherche. Ce profil présente le chiffre global uniquement comme contexte d\'échelle, comme il traite les chiffres agrégés d\'autres entreprises dans cet ensemble comparatif : distinguer un chiffre global d\'une affirmation sur un segment de produit précis.',
       },
       faqSection: {
         id: 'faq',
@@ -243,11 +252,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qui possède Enphase ?', a: 'Enphase Energy est cotée au NASDAQ (ENPH), une place différente de celle de concurrents chinois comme Hoymiles, GoodWe et Deye, cotés à Shanghai.' },
           { q: 'Enphase est-elle une entreprise dédiée au solaire de balcon ?', a: 'Non. Le cœur de métier d\'Enphase reste les micro-onduleurs résidentiels de toiture ; le solaire de balcon/branchable via l\'IQ Balcony System est une extension récente et modeste vers un autre segment de marché, contrairement à Hoymiles, Deye, APsystems et GoodWe, dont les gammes de produits sont construites plus centralement autour de matériel à petite échelle ou pertinent pour le balcon.' },
           { q: 'Qu\'est-ce que l\'IQ Balcony System ?', a: 'L\'IQ Balcony System est le produit de solaire de balcon enfichable d\'Enphase : un kit de base de deux micro-onduleurs IQ8HC et d\'une IQ Balcony Gateway, extensible avec un kit d\'extension Enphase jusqu\'à sept micro-onduleurs et panneaux.' },
-          { q: 'Dans quels marchés le produit balcon d\'Enphase est-il vendu ?', a: 'Allemagne et Belgique : Enphase a annoncé l\'IQ Balcony System en Allemagne le 7 mai 2025 et en Belgique le 12 mai 2025. Nous n\'avons trouvé aucun autre marché confirmé en novembre 2026 — une entrée étroite et récente, contrairement à l\'EZ1 d\'APsystems, qui maintient des pages marketing localisées dans plusieurs pays d\'EMEA.' },
+          { q: 'Dans quels marchés le produit balcon d\'Enphase est-il vendu ?', a: 'L\'Allemagne et la Belgique : Enphase a annoncé l\'IQ Balcony System en Allemagne le 7 mai 2025 et en Belgique le 12 mai 2025. Nous n\'avons trouvé aucun autre marché confirmé lors de la dernière actualisation (voir « Dernière mise à jour ») — une entrée étroite et récente, contrairement à l\'EZ1 d\'APsystems, qui maintient des pages marketing localisées dans plusieurs pays EMEA.' },
           { q: 'Quand Enphase a-t-elle lancé son produit balcon ?', a: 'Les communiqués de presse d\'Enphase indiquent le 7 mai 2025 (Allemagne) et le 12 mai 2025 (Belgique) ; cette recherche n\'a pas trouvé de confirmation indépendante par des tiers au-delà de ces sources de l\'entreprise.' },
           { q: 'Comment Enphase se compare-t-elle structurellement à Hoymiles, Deye, APsystems et GoodWe ?', a: 'Les cinq se situent dans la couche des fabricants de micro-onduleurs/batteries de la chaîne d\'approvisionnement du solaire de balcon, mais Enphase se distingue par sa taille et son origine : c\'est une entreprise de solaire de toiture bien plus grande et établie de longue date (fondée en 2006, cotée au NASDAQ) pour laquelle le solaire de balcon est une extension mineure et récente, tandis que les gammes de produits des quatre autres marques sont construites plus centralement autour de matériel branchable à petite échelle.' },
           { q: 'Enphase publie-t-elle des chiffres d\'expédition propres au balcon ?', a: 'Non. Enphase publie des chiffres d\'expédition à l\'échelle de l\'entreprise, mais ceux-ci décrivent l\'ensemble de son activité de micro-onduleurs de toiture plutôt qu\'un volume propre au balcon ; aucun chiffre exclusivement lié au balcon n\'a été confirmé dans cette recherche.' },
-          { q: 'Enphase est-elle une marque de kits solaires de balcon comme Anker SOLIX ?', a: 'Non. Enphase se situe dans la couche des fabricants de micro-onduleurs/batteries de la chaîne d\'approvisionnement, aux côtés de Hoymiles, Deye, APsystems et GoodWe, plutôt que dans la couche des revendeurs de kits occupée par Anker SOLIX, EcoFlow et Zendure, qui fabriquent leur propre matériel de batterie et vendent aussi des kits complets directement aux consommateurs sous leur propre marque.' },
+          { q: 'Enphase est-elle une marque de kits solaires de balcon comme Anker SOLIX ?', a: 'Non. Enphase se situe dans la couche des fabricants de micro-onduleurs/batteries de la chaîne d\'approvisionnement, aux côtés de Hoymiles, Deye, APsystems et GoodWe, plutôt que dans la couche des revendeurs de kits occupée par Anker SOLIX, EcoFlow et Zendure, qui conçoivent leur propre matériel de batterie et vendent des kits complets directement aux consommateurs sous leur propre marque.' },
         ],
       },
     },
@@ -261,8 +270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-11-20',
     audience: 'Enphaseをマイクロインバーター企業として調査している読者',
-    intro: '2006年創業でNASDAQに上場する屋根置き太陽光の大手Enphaseは、バルコニー太陽光市場に参入したばかりです。IQ Balcony Systemは2025年5月7日にドイツで、2025年5月12日にベルギーで発表され、2026年11月時点で販売を確認できたのはこの2か国のみです。両方の発売日はEnphase自身のプレスリリースのみに基づき、独立した確認は見つかっていません。よく引用される同社の出荷実績は、はるかに規模の大きい屋根置き事業を指しており、このバルコニー専用製品ラインのものではありません。',
-    leadAnswerBlock: '**Enphase Energyは、NASDAQ上場(ENPH)の屋根置き太陽光マイクロインバーター大手で、2006年に創業し、本社はカリフォルニア州フレモントにあります。バルコニー/プラグイン式太陽光にはIQ Balcony Systemを通じて参入したばかりで、規模も限定的です。** 上海上場で小規模プラグイン機器を事業の中心に据えるHoymiles、GoodWe、Deyeといった中国勢とは異なり、Enphaseの中核事業は住宅用屋根置きマイクロインバーターであり、全社の出荷実績もバルコニー専用の数量ではなくその屋根置き事業を示しています。基本キットはIQ8HCマイクロインバーター2台とIQ Balcony Gatewayで構成され、拡張キットで最大7台のマイクロインバーターとパネルに対応します(Enphaseのドイツ発売リリースによる)。Enphaseはこのキットを2025年5月7日にドイツで、2025年5月12日にベルギーで発表しており、2026年11月時点で販売を確認できたのはこの2か国のみです。両日付はEnphase自身のプレスリリースに基づき、バルコニー専用の独立した販売・出荷実績は見つかっていません。',
+    intro: '2006年創業でNASDAQに上場する屋根置き太陽光用マイクロインバーターメーカーのEnphaseは、バルコニー太陽光市場に参入したばかりです。IQ Balcony Systemは2025年5月7日にドイツで、2025年5月12日にベルギーで発表され、最終更新時点(「最終更新日」参照)で販売を確認できたのはこの2か国のみです。両方の発売日はEnphase自身のプレスリリースのみに基づいており、独立した裏付けは見つかっていません。同社のよく引用される出荷実績は、はるかに規模の大きい屋根置き事業を指しており、このバルコニー製品ラインを指すものではありません。',
+    leadAnswerBlock: '**Enphase Energyは、NASDAQ上場(ENPH)の屋根置き太陽光マイクロインバーター大手で、2006年に創業し、本社はカリフォルニア州フレモントにあります。IQ Balcony Systemを通じて、バルコニー/プラグイン式太陽光市場に参入したのは最近で、規模も限定的です。** Hoymiles、GoodWe、Deyeなどの中国勢は、上海に上場し、小型のプラグイン機器を事業の中心に据えていますが、Enphaseの中核は家庭用屋根置きマイクロインバーターであり、全社の出荷実績もバルコニー専用の数量ではなく屋根置き事業を示しています。基本キットはIQ8HCマイクロインバーター2台とIQ Balcony Gatewayで構成され、拡張キットでは最大7台のマイクロインバーターとパネルに対応します(Enphaseのドイツ発売リリースによる)。Enphaseは2025年5月7日にドイツで、2025年5月12日にベルギーでキットを発表しており、最終更新時点(「最終更新日」参照)で販売を確認できたのはこの2か国のみです。両日付はEnphase自身のプレスリリースによるもので、独立したバルコニー専用の販売・出荷データは見つかっていません。',
     sections: {
       tldr: {
         id: 'tldr',
@@ -272,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enphase Energyは2006年に創業し、本社はカリフォルニア州フレモントにあり、NASDAQにティッカーENPHで上場しています。上海に上場するHoymiles、GoodWe、Deyeなどの中国勢とは上場市場が異なります。',
           'Enphaseの中核事業は住宅用屋根置きマイクロインバーターであり、バルコニー・コンセント式太陽光はIQ Balcony Systemを通じて確認された小規模かつ最近の拡張であり、長年続く製品ラインではない。',
           'IQ Balcony Systemは、IQ8HCマイクロインバーター2台とIQ Balcony Gatewayの基本キットで提供され、Enphaseの拡張キットで最大7台のマイクロインバーターとパネルに対応します。これは本クラスターで扱う他のバルコニー用マイクロインバーターやバッテリー製品に見られるモジュール式の容量構成と同じパターンです。',
-          'Enphaseのバルコニー製品が直接販売されていると確認できたのは、ドイツ(2025年5月7日発表)とベルギー(2025年5月12日)の2か国のみです。2026年11月時点で、米国での発売は確認できませんでした。',
+          'Enphaseのバルコニー製品が直接販売されていると確認できたのは、ドイツ(2025年5月7日発表)とベルギー(2025年5月12日)の2か国のみです。最終更新時点(「最終更新日」参照)で、米国での発売は確認できていません。',
           'Enphaseのバルコニー参入について確認された2つの発売日(2025年5月7日=ドイツ、2025年5月12日=ベルギー)は、いずれもEnphase自身のプレスリリースに直接基づいています。',
           'Enphaseは全社的な出荷台数を公表しているが、これは屋根置きマイクロインバーター事業全体を示す数値であり、バルコニー専用の販売数量ではない——本プロフィールではこれを文脈情報としてのみ扱い、バルコニー市場での実績としては扱わない。',
         ],
@@ -281,10 +290,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Enphase：企業スナップショット',
         image: '/images/enphase-microinverter-balcony-solar-snapshot-en.svg',
         imageCaption: '2006年にカリフォルニア州フリーモントで設立、NASDAQ上場（ENPH）。屋根置き型インバーターの大手であり、バルコニー太陽光発電専門の企業ではありません。',
-        content: 'Enphase Energyの確認済みの企業沿革は2006年の創業に始まります。本社はカリフォルニア州フレモントにあり、NASDAQにティッカーENPHで上場しています。上海に上場するHoymiles、GoodWe、Deyeなどの中国勢とは上場市場が異なります。Enphaseの中核事業は大規模な住宅用屋根置きマイクロインバーターであり、バルコニー/プラグイン式太陽光は創業時の注力分野ではなく、別の市場セグメントへの小規模で最近の拡張です。バルコニー向け機器を別サブブランド(PVBM)で販売するGoodWeとは異なり、Enphaseはバルコニー製品を自社名のIQ Balcony Systemとして直接展開しています。',
+        content: 'Enphase Energyの確認済みの企業沿革は2006年の創業に始まります。本社はカリフォルニア州フレモントにあり、NASDAQにティッカーENPHで上場しています。上海に上場するHoymiles、GoodWe、Deyeなどの中国勢とは上場市場が異なります。Enphaseの中核は大規模な家庭用屋根置きマイクロインバーターで、バルコニー/プラグイン式太陽光は創業時の重点ではなく、別の市場セグメントへの小規模で最近の拡張です。GoodWeはサイトで別のPV Building Material(PVBM)サイトにリンクしており、第三者の報道の一部はそれを同社のSuncakeブランドと呼んでいますが(一次情報では未確認)、これとは異なり、EnphaseはバルコニーキットをIQ Balcony Systemという自社名で展開しています。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Enphase Energyは、2006年にカリフォルニア州フリーモントで設立されたNASDAQ上場（ENPH）の屋根置き型マイクロインバーターメーカーであり、そのコンセント式製品IQ Balcony Systemは、専用のバルコニー太陽光製品ラインというよりも、屋根置き事業の小規模かつ最近の拡張である。' },
-          { type: 'plain-terms', text: 'Enphaseは大規模な屋根置き型太陽光システムで最もよく知られており、バルコニー太陽光発電の企業ではない——コンセント式のバルコニー製品は存在するものの、事業のごく一部かつ最近始まったものであり、現時点で確認されているのは2カ国のみである。' },
+          { type: 'plain-terms', text: 'Enphaseは大規模な屋根置き太陽光システムで知られており、バルコニー太陽光では知られていません。プラグイン式のバルコニー製品はありますが、屋根置きが中心の事業への最近の追加で、これまでに確認できたのは2か国のみです。' },
         ],
       },
       timeline: {
@@ -303,7 +312,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '確認済み市場 — 限定的、最近参入',
         image: '/images/enphase-microinverter-balcony-solar-markets-en.svg',
         imageCaption: '本調査で確認できたのはドイツとベルギーのみです。これは最近の限定的な参入であり、確立されたバルコニー太陽光の展開ではありません。',
-        content: '本調査では、Enphaseのバルコニー製品が直接販売されているのはドイツとベルギーの2か国のみと確認しました。これは、EMEA複数国に現地向けマーケティングページを持つAPsystemsのEZ1や、少なくとも1社のキット再販業者との提携が確認されているGoodWeのPVBMハードウェアより、狭く新しい展開です。2026年11月時点で、Enphaseのバルコニー製品の米国での発売は確認できず、UL 3700認証も見つかっていません。2025年12月に公開された米国のプラグイン太陽光規格UL 3700では、これまでにHoymilesのマイクロインバーターが初の認証製品となっています(2026年7月、Electrekによる)。',
+        content: '本調査では、Enphaseのバルコニー製品が直接販売されているのはドイツとベルギーの2か国のみと確認しました。これは、EMEA複数国に現地向けマーケティングページを持つAPsystemsのEZ1や、ドイツのショップpriwattが掲載しているGoodWeのAthenaバッテリーと比べて、範囲が狭く新しいものです。最終更新時点(「最終更新日」参照)で、Enphaseのバルコニー製品の米国発売およびUL 3700認証は確認できていません。2025年12月に公開された米国のプラグイン式太陽光規格UL 3700では、メーカー自身が適合と説明する最初の製品としてHoymiles HiFlow Proがあります(2026年7月、Hoymiles発表をElectrekが報道)。InsideEVsは、UL Solutionsによる認証ではなく規格に適合するよう設計された製品だと報じています。',
+        callouts: [
+          { type: 'note', text: '系統連系・届出・認証に関するルールは国・州・電力会社によって異なります。本プロファイルは法的助言でも電気工事に関する助言でもありません。電力会社または有資格の電気技術者にご確認ください。' },
+        ],
       },
       position: {
         title: 'Enphaseの位置付け',
@@ -314,8 +326,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       scaleContext: {
         title: '規模の文脈',
         image: '/images/enphase-microinverter-balcony-solar-scale-context-en.svg',
-        imageCaption: '全社的な出荷台数は事実ですが、これはEnphaseの屋根置き事業全体を示すものであり、バルコニー専用の数値ではありません — バルコニー市場での実績としてではなく、文脈情報として示しています。',
-        content: 'Enphaseは、実際かつ独立して検証可能な全社的な出荷台数を公表しているが、これは屋根置きマイクロインバーター事業全体を示すものであり、バルコニー専用の販売・出荷数量ではない——今回の調査ではEnphaseについてバルコニー専用の台数または収益の数値は確認されなかった。本プロフィールはこの全社的な数値を文脈情報としてのみ示しており、これは本比較対象の他企業の合計数値を扱う際の方針とも一致する。すなわち、実際の検証可能な数値と、特定の製品セグメントに関する主張とを区別している。',
+        imageCaption: '全社の出荷実績はEnphaseの屋根置き事業全体を指しており、バルコニー専用の数値ではありません。ここでは背景情報として示すもので、バルコニー市場に関する主張ではありません。',
+        content: 'Enphaseは全社の出荷実績を公表していますが、それは屋根置きマイクロインバーター事業全体を指しており、バルコニー専用の販売・出荷量ではありません。本調査では、Enphaseのバルコニー専用の台数や売上は確認できませんでした。本プロファイルは、この比較セットで他社の合算値を扱うのと同様に、全社の数値を規模の背景としてのみ示し、全社の数値と特定の製品セグメントに関する主張を区別します。',
       },
       faqSection: {
         id: 'faq',
@@ -325,11 +337,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Enphaseの所有者は誰ですか？', a: 'Enphase EnergyはNASDAQ(ENPH)に上場しており、上海に上場するHoymiles、GoodWe、Deyeなどの中国勢とは上場市場が異なります。' },
           { q: 'Enphaseはバルコニー太陽光発電専門の企業ですか？', a: 'いいえ。Enphaseの中核事業は住宅用屋根置きマイクロインバーターであり、IQ Balcony Systemによるバルコニー・コンセント式太陽光は異なる市場セグメントへの小規模かつ最近の拡張です。これは、製品ラインが小規模またはバルコニー関連ハードウェアをより中心に据えて構築されているHoymiles、Deye、APsystems、GoodWeとは異なります。' },
           { q: 'IQ Balcony Systemとは何ですか？', a: 'IQ Balcony Systemは、Enphaseのプラグイン式バルコニー太陽光製品です。IQ8HCマイクロインバーター2台とIQ Balcony Gatewayの基本キットで、Enphaseの拡張キットにより最大7台のマイクロインバーターとパネルまで拡張できます。' },
-          { q: 'Enphaseのバルコニー製品はどの市場で販売されていますか？', a: 'ドイツとベルギーです。EnphaseはIQ Balcony Systemを2025年5月7日にドイツで、2025年5月12日にベルギーで発表しました。2026年11月時点で他の確認済み市場は見つかっていません。EMEA複数国に現地向けマーケティングページを持つAPsystemsのEZ1とは対照的に、狭く最近の参入です。' },
+          { q: 'Enphaseのバルコニー製品はどの市場で販売されていますか？', a: 'ドイツとベルギーです。EnphaseはIQ Balcony Systemを2025年5月7日にドイツで、2025年5月12日にベルギーで発表しました。最終更新時点(「最終更新日」参照)でほかに確認できた市場はなく、EMEA複数国に現地向けマーケティングページを持つAPsystemsのEZ1とは対照的に、範囲が狭く新しい参入です。' },
           { q: 'Enphaseはいつバルコニー製品を発売しましたか？', a: 'Enphase自身のプレスリリースでは2025年5月7日(ドイツ)と2025年5月12日(ベルギー)とされています。本調査では、これらの企業発の情報源以外に第三者による独立した確認は見つかりませんでした。' },
           { q: 'EnphaseはHoymiles、Deye、APsystems、GoodWeと構造的にどう異なりますか？', a: 'この5社はいずれもベランダ太陽光サプライチェーンにおけるマイクロインバーター/バッテリーメーカー層に位置しますが、Enphaseは規模と成り立ちの点で異なります。Enphaseは2006年に設立されNASDAQに上場する、はるかに大規模で長年確立された屋根置き太陽光企業であり、バルコニー太陽光はその中で小規模かつ最近の拡張にすぎません。一方、他の4ブランドの製品ラインは小規模なコンセント式ハードウェアをより中心に据えて構築されています。' },
           { q: 'Enphaseはバルコニー専用の出荷台数を公表していますか？', a: 'いいえ。Enphaseは全社的な出荷台数を公表していますが、これは屋根置きマイクロインバーター事業全体を示すものであり、バルコニー専用の数量ではありません。今回の調査ではバルコニー専用の数値は確認されませんでした。' },
-          { q: 'EnphaseはAnker SOLIXのようなバルコニー太陽光キットブランドですか？', a: 'いいえ。Enphaseは、Hoymiles、Deye、APsystems、GoodWeと並んでサプライチェーンのマイクロインバーター/バッテリーメーカー層に位置し、自社でバッテリーハードウェアを製造し、自社ブランドで完成キットを消費者に直接販売するAnker SOLIX、EcoFlow、Zendureが占めるキット販売業者層には属しません。' },
+          { q: 'EnphaseはAnker SOLIXのようなバルコニー太陽光キットブランドですか？', a: 'いいえ。Enphaseはサプライチェーンのマイクロインバーター/バッテリーメーカーの層に位置し、Hoymiles、Deye、APsystems、GoodWeと同じです。自社のバッテリーハードウェアを設計し、完成キットを自社ブランドで消費者に直接販売するAnker SOLIX、EcoFlow、Zendureが属するキット再販の層ではありません。' },
         ],
       },
     },
@@ -343,8 +355,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-11-20',
     audience: '正在研究Enphase作为微型逆变器企业的读者',
-    intro: 'Enphase是一家2006年创立、在纳斯达克上市的屋顶光伏巨头,进入阳台光伏市场的时间不长——其IQ Balcony System于2025年5月7日在德国发布,2025年5月12日在比利时发布,截至2026年11月,我们只确认这两个国家有售。两个发布日期均仅来自Enphase自己的新闻稿,未找到独立佐证。该公司常被引用的出货数据反映的是其规模大得多的屋顶业务,而非这条阳台专用产品线。',
-    leadAnswerBlock: '**Enphase Energy是纳斯达克上市(ENPH)的屋顶光伏微型逆变器老牌企业,2006年创立,总部位于加利福尼亚州弗里蒙特,通过IQ Balcony System进入阳台/插电式光伏的时间不长,规模有限。** 与在上海上市、以小型插电式硬件为核心业务的中国同行Hoymiles、GoodWe和Deye不同,Enphase的核心业务是住宅屋顶微型逆变器,其全公司出货数据反映的是屋顶业务,而非阳台专属的数量。基础套件包含两台IQ8HC微型逆变器和一台IQ Balcony Gateway,扩展套件最多支持七台微型逆变器和光伏板(据Enphase德国发布新闻稿)。Enphase于2025年5月7日在德国、2025年5月12日在比利时发布该套件——截至2026年11月我们只确认这两个国家有售——两个日期均来自Enphase自己的新闻稿;未找到独立的、阳台专属的销售或出货数据。',
+    intro: 'Enphase是一家2006年创立、在纳斯达克上市的屋顶光伏微型逆变器制造商,进入阳台光伏市场的时间不长——其IQ Balcony System于2025年5月7日在德国发布,2025年5月12日在比利时发布,截至最近一次更新(见“最后更新”),我们发现它仅在这两个国家销售。两个发布日期仅来自Enphase自己的新闻稿,未找到独立证实。该公司被广泛引用的出货量数据描述的是其规模大得多的屋顶业务,而非这条阳台产品线。',
+    leadAnswerBlock: '**Enphase Energy是纳斯达克上市(ENPH)的屋顶光伏微型逆变器老牌企业,2006年创立,总部位于加利福尼亚州弗里蒙特,近期才通过IQ Balcony System小规模进入阳台/插电式光伏领域。** 与Hoymiles、GoodWe和Deye等中国同行——在上海上市,并以小型插电式硬件作为业务核心之一——不同,Enphase的核心业务是户用屋顶微型逆变器,其全公司出货量数据描述的是屋顶业务,而非阳台专属的出货量。基础套件包含两台IQ8HC微型逆变器和一个IQ Balcony Gateway,扩展套件最多支持七台微型逆变器和光伏板(据Enphase德国发布新闻稿)。Enphase于2025年5月7日在德国、2025年5月12日在比利时发布该套件——截至最近一次更新(见“最后更新”),我们发现仅这两个国家有售——两个日期均来自Enphase自己的新闻稿;未找到独立的、阳台专属的销售或出货数据。',
     sections: {
       tldr: {
         id: 'tldr',
@@ -354,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enphase Energy创立于2006年,总部位于加利福尼亚州弗里蒙特,在纳斯达克上市,股票代码ENPH——与在上海上市的中国同行Hoymiles、GoodWe和Deye上市地不同。',
           'Enphase的核心业务是住宅屋顶微型逆变器；阳台/插电式光伏是通过IQ Balcony System确认的一项小规模、近期扩展业务，而非长期存在的产品线。',
           'IQ Balcony System以基础套件形式提供,包含两台IQ8HC微型逆变器和一台IQ Balcony Gateway,Enphase扩展套件最多支持七台微型逆变器和光伏板——与本专题其他阳台微型逆变器和电池产品线相同的模块化容量模式。',
-          'Enphase的阳台产品仅在我们能确认的两个国家直接销售——德国(2025年5月7日发布)和比利时(2025年5月12日);截至2026年11月,我们未找到已确认的美国上市信息。',
+          'Enphase的阳台产品仅在我们能确认的两个国家直接销售——德国(2025年5月7日发布)和比利时(2025年5月12日);截至最近一次更新(见“最后更新”),我们未发现已确认的美国发布。',
           'Enphase进入阳台市场的两个已确认发布日期——2025年5月7日(德国)和2025年5月12日(比利时)——均直接来自Enphase自己的新闻稿。',
           'Enphase公布了公司整体出货量数据，但这些数字反映的是其整体屋顶微型逆变器业务，而非阳台专用销量——本概况仅将其作为背景参考，而非阳台市场业绩说明。',
         ],
@@ -363,10 +375,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Enphase：企业概况',
         image: '/images/enphase-microinverter-balcony-solar-snapshot-en.svg',
         imageCaption: '2006年成立于加利福尼亚州弗里蒙特，在纳斯达克上市（ENPH）。屋顶逆变器领域的大型老牌企业，并非专注于阳台光伏的公司。',
-        content: 'Enphase Energy已确认的公司历史始于2006年创立;总部位于加利福尼亚州弗里蒙特,在纳斯达克上市,股票代码ENPH——与在上海上市的中国同行Hoymiles、GoodWe和Deye上市地不同。Enphase的核心业务是大规模的住宅屋顶微型逆变器,阳台/插电式光伏是进入另一细分市场的小规模、近期的延伸,而非创立之初的重点。与以独立子品牌(PVBM)销售阳台硬件的GoodWe不同,Enphase直接以自己的IQ Balcony System名称销售阳台产品。',
+        content: 'Enphase Energy已确认的公司历史始于2006年创立;总部位于加利福尼亚州弗里蒙特,在纳斯达克上市,股票代码ENPH——与在上海上市的Hoymiles、GoodWe和Deye等中国同行上市地不同。Enphase的核心业务是大规模的户用屋顶微型逆变器,阳台/插电式光伏是向另一细分市场的小规模、近期延伸,而非创立时的重点。GoodWe的网站链接到一个独立的PV Building Material(PVBM)网站,部分第三方报道称其为Suncake品牌(未经一手来源证实);与之不同,Enphase以自己的IQ Balcony System名称销售其阳台产品。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Enphase Energy是一家在纳斯达克上市（ENPH）的屋顶微型逆变器制造商，2006年成立于加利福尼亚州弗里蒙特，其插电式产品IQ Balcony System是其核心屋顶业务的小规模、近期延伸，而非专门的阳台光伏产品线。' },
-          { type: 'plain-terms', text: 'Enphase以大型屋顶光伏系统闻名，而非阳台光伏——其插电式阳台产品确实存在，但只是业务中一个较新、较小的部分，目前仅在两个国家得到确认。' },
+          { type: 'plain-terms', text: 'Enphase以大型屋顶光伏系统闻名,而非阳台光伏——其插电式阳台产品确实存在,但只是以屋顶业务为主的公司近期新增的产品,目前仅确认在两个国家销售。' },
         ],
       },
       timeline: {
@@ -385,7 +397,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '已确认市场 — 范围有限、进入较晚',
         image: '/images/enphase-microinverter-balcony-solar-markets-en.svg',
         imageCaption: '本次研究仅确认了德国和比利时——这是近期的有限进入,而非成熟的阳台光伏布局。',
-        content: '本次研究确认Enphase的阳台产品仅在德国和比利时两个国家直接销售——比在EMEA多个国家设有本地化营销页面的APsystems EZ1的覆盖范围更窄、更新,也比至少通过一家已确认的套件经销商合作触达消费者的GoodWe PVBM硬件更窄。截至2026年11月,我们未找到Enphase阳台产品在美国的已确认上市信息,也未发现其UL 3700认证;美国插电式光伏标准UL 3700于2025年12月发布,目前已有首款通过认证的微型逆变器来自Hoymiles(2026年7月,据Electrek)。',
+        content: '本次研究确认Enphase的阳台产品仅在德国和比利时两个国家直接销售——比在EMEA多个国家设有本地化营销页面的APsystems EZ1,以及德国商店priwatt所列的GoodWe Athena电池,覆盖范围更窄、时间更近。截至最近一次更新(见“最后更新”),我们未发现Enphase阳台产品在美国的已确认发布,也未发现其获得UL 3700认证。对于2025年12月发布的美国插电式光伏标准UL 3700,已有首款其制造商称符合该标准的产品,即Hoymiles HiFlow Pro(2026年7月,据Hoymiles,经Electrek报道);InsideEVs报道称它是按该标准设计,并非UL Solutions认证。',
+        callouts: [
+          { type: 'note', text: '并网、登记和认证规则因国家、州和电力公司而异;本介绍不构成法律或电气方面的建议。请向您的电力公司或有资质的电工咨询。' },
+        ],
       },
       position: {
         title: 'Enphase的市场定位',
@@ -396,8 +411,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       scaleContext: {
         title: '规模背景',
         image: '/images/enphase-microinverter-balcony-solar-scale-context-en.svg',
-        imageCaption: '公司整体出货量数据真实，但反映的是Enphase整体屋顶业务，而非阳台专用数字 — 此处仅作背景参考，不作为阳台市场的业绩说明。',
-        content: 'Enphase公布的公司整体出货量数据真实且可独立核实，但反映的是其整体屋顶微型逆变器业务，而非阳台专用的销售或出货量——本次调研未确认Enphase有任何阳台专属的单位数量或收入数据。本概况仅将该公司整体数字用作规模背景参考，这与本对比集中对其他公司汇总数据的处理方式一致：区分真实、可核实的数字与关于特定产品细分市场的说法。',
+        imageCaption: '全公司出货量数据描述的是Enphase整体屋顶业务,而非阳台专属数字——此处仅作背景展示,不是对阳台市场的断言。',
+        content: 'Enphase公布全公司出货量数据,但这些数据描述的是其整体屋顶微型逆变器业务,而非阳台专属的销售或出货量——本次研究未能确认Enphase任何阳台专属的数量或收入数字。本页仅将全公司数字作为规模背景,与本对比集中处理其他公司汇总数字的方式一致:把全公司数字与针对特定产品细分的断言区分开来。',
       },
       faqSection: {
         id: 'faq',
@@ -407,11 +422,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Enphase的股权归属如何？', a: 'Enphase Energy在纳斯达克上市(ENPH),与在上海上市的中国同行Hoymiles、GoodWe和Deye上市地不同。' },
           { q: 'Enphase是专注于阳台光伏的公司吗？', a: '不是。Enphase的核心业务是住宅屋顶微型逆变器；通过IQ Balcony System开展的阳台/插电式光伏业务是向不同细分市场的小规模、近期延伸，这与Hoymiles、Deye、APsystems和GoodWe不同，后者的产品线更多地围绕小规模或阳台相关硬件构建。' },
           { q: 'IQ Balcony System是什么？', a: 'IQ Balcony System是Enphase的插电式阳台光伏产品:基础套件包含两台IQ8HC微型逆变器和一台IQ Balcony Gateway,可通过Enphase扩展套件扩展至最多七台微型逆变器和光伏板。' },
-          { q: 'Enphase的阳台产品在哪些市场销售？', a: '德国和比利时:Enphase于2025年5月7日在德国、2025年5月12日在比利时发布IQ Balcony System。截至2026年11月,我们未找到其他已确认市场——这是范围狭窄的近期进入,与在EMEA多国设有本地化营销页面的APsystems EZ1形成对比。' },
+          { q: 'Enphase的阳台产品在哪些市场销售？', a: '德国和比利时:Enphase于2025年5月7日在德国、2025年5月12日在比利时发布IQ Balcony System。截至最近一次更新(见“最后更新”),我们未发现其他已确认的市场——这是范围狭窄的近期进入,与在EMEA多个国家设有本地化营销页面的APsystems EZ1形成对比。' },
           { q: 'Enphase何时推出其阳台产品？', a: 'Enphase自己的新闻稿给出的日期为2025年5月7日(德国)和2025年5月12日(比利时);本次研究未找到这些公司来源之外的独立第三方佐证。' },
           { q: 'Enphase与Hoymiles、Deye、APsystems和GoodWe在结构上有何不同？', a: '这五家公司都处于阳台光伏供应链的微型逆变器/电池制造商层级，但Enphase在规模和起源上有所不同：它是一家规模大得多、历史更久的屋顶光伏企业（2006年成立，纳斯达克上市），阳台光伏对其而言只是一项较小、较近期的延伸业务，而其他四个品牌的产品线则更多地围绕小规模插电式硬件构建。' },
           { q: 'Enphase是否公布阳台专用的出货数据？', a: '不会。Enphase公布公司整体出货量数据，但这些数字反映的是其整体屋顶微型逆变器业务，而非阳台专用数量；本次调研未确认任何阳台专属数字。' },
-          { q: 'Enphase是像Anker SOLIX那样的阳台光伏套件品牌吗？', a: '不是。Enphase与Hoymiles、Deye、APsystems和GoodWe一样，处于供应链的微型逆变器/电池制造商层级，而非Anker SOLIX、EcoFlow和Zendure所处的套件经销商层级——后者自行制造电池硬件，并以自有品牌直接向消费者销售成套产品。' },
+          { q: 'Enphase是像Anker SOLIX那样的阳台光伏套件品牌吗？', a: '不是。Enphase处于供应链中的微型逆变器/电池制造商层,与Hoymiles、Deye、APsystems和GoodWe相同,而不是Anker SOLIX、EcoFlow和Zendure所处的套件经销层——后者自行设计电池硬件,并以自有品牌直接向消费者销售完整套件。' },
         ],
       },
     },
@@ -425,8 +440,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-11-20',
     audience: 'Lectores que investigan a Enphase como empresa de microinversores',
-    intro: 'Enphase, el gigante de la energía solar en tejado que cotiza en NASDAQ y fue fundado en 2006, entró en el mercado de solar de balcón hace muy poco: su IQ Balcony System se anunció en Alemania el 7 de mayo de 2025 y en Bélgica el 12 de mayo de 2025, y son los únicos dos países donde lo encontramos a la venta en noviembre de 2026. Ambas fechas de lanzamiento proceden únicamente de los comunicados de prensa de Enphase, sin confirmación independiente. Las cifras de envíos que se citan con frecuencia describen su negocio de tejado, mucho mayor, y no esta línea específica de balcón.',
-    leadAnswerBlock: '**Enphase Energy es un actor consolidado de microinversores para tejado que cotiza en NASDAQ (ENPH), fundado en 2006 y con sede en Fremont, California, que entró en la energía solar de balcón/enchufable hace muy poco y a pequeña escala con su IQ Balcony System.** A diferencia de competidores chinos como Hoymiles, GoodWe y Deye —que cotizan en Shanghái y tienen el hardware enchufable de pequeña escala como parte central de su negocio—, el negocio principal de Enphase son los microinversores residenciales para tejado, y sus cifras de envíos a nivel de empresa describen ese negocio y no un volumen específico de balcón. El kit base incluye dos microinversores IQ8HC y una IQ Balcony Gateway, con un kit de ampliación que admite hasta siete microinversores y paneles (según el comunicado de lanzamiento en Alemania). Enphase anunció el kit en Alemania el 7 de mayo de 2025 y en Bélgica el 12 de mayo de 2025 —los únicos dos países donde lo encontramos a la venta en noviembre de 2026— y ambas fechas proceden de comunicados de Enphase; no se encontraron cifras independientes de ventas o envíos específicas de balcón.',
+    intro: 'Enphase, fabricante de microinversores para solar en tejado que cotiza en NASDAQ y fue fundada en 2006, entró en el mercado del solar de balcón hace poco: su IQ Balcony System se anunció en Alemania el 7 de mayo de 2025 y en Bélgica el 12 de mayo de 2025, y esos son los únicos dos países donde la encontramos a la venta en la última actualización (véase «Última actualización»). Ambas fechas de lanzamiento proceden únicamente de los comunicados de prensa de Enphase, sin confirmación independiente. Las cifras de envíos de la empresa, muy citadas, describen su negocio de tejado, mucho mayor, y no esta línea de balcón.',
+    leadAnswerBlock: '**Enphase Energy es un actor consolidado de microinversores para solar en tejado, cotizado en NASDAQ (ENPH), fundado en 2006 y con sede en Fremont, California, que entró hace poco y a escala limitada en el solar de balcón/enchufable con su IQ Balcony System.** A diferencia de homólogos chinos como Hoymiles, GoodWe y Deye —cotizados en Shanghái y con hardware enchufable de pequeña escala como parte central de su negocio—, el negocio principal de Enphase son los microinversores residenciales para tejado, y sus cifras de envíos a nivel de toda la empresa describen ese negocio de tejado y no un volumen específico de balcón. El kit base incluye dos microinversores IQ8HC y una IQ Balcony Gateway, con un kit de ampliación que admite hasta siete microinversores y paneles (según el comunicado de lanzamiento de Enphase en Alemania). Enphase anunció el kit en Alemania el 7 de mayo de 2025 y en Bélgica el 12 de mayo de 2025 —los únicos dos países donde lo encontramos a la venta en la última actualización (véase «Última actualización»)—, y ambas fechas proceden de comunicados de Enphase; no se encontraron cifras independientes de ventas o envíos específicas de balcón.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -436,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enphase Energy se fundó en 2006, tiene su sede en Fremont, California, y cotiza en NASDAQ con el símbolo ENPH, un mercado distinto del de competidores chinos como Hoymiles, GoodWe y Deye, que cotizan en Shanghái.',
           'El negocio principal de Enphase son los microinversores residenciales de tejado; el solar de balcón/enchufable es una extensión pequeña y reciente confirmada a través del IQ Balcony System, no una línea de producto de larga trayectoria.',
           'El IQ Balcony System se entrega como kit base de dos microinversores IQ8HC y una IQ Balcony Gateway, con un kit de ampliación de Enphase que admite hasta siete microinversores y paneles: el mismo patrón de capacidad modular que otras líneas de microinversores y baterías de balcón tratadas en este clúster.',
-          'El producto de balcón de Enphase se vende directamente en solo dos países que pudimos confirmar: Alemania (anunciado el 7 de mayo de 2025) y Bélgica (12 de mayo de 2025); no encontramos un lanzamiento confirmado en EE. UU. en noviembre de 2026.',
+          'El producto de balcón de Enphase se vende directamente en solo dos países que pudimos confirmar: Alemania (anunciado el 7 de mayo de 2025) y Bélgica (12 de mayo de 2025); no encontramos un lanzamiento confirmado en EE. UU. en la última actualización (véase «Última actualización»).',
           'Las dos fechas de lanzamiento confirmadas de la entrada de Enphase en el balcón —7 de mayo de 2025 (Alemania) y 12 de mayo de 2025 (Bélgica)— proceden directamente de los comunicados de prensa de Enphase.',
           'Enphase publica cifras de envíos a nivel de toda la empresa, pero esos números describen su negocio global de microinversores de tejado, no un volumen de ventas específico de balcón — este perfil las presenta solo como contexto, no como una afirmación sobre el mercado de balcón.',
         ],
@@ -445,10 +460,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Enphase: perfil de la empresa',
         image: '/images/enphase-microinverter-balcony-solar-snapshot-en.svg',
         imageCaption: 'Fundada en 2006 en Fremont, California; cotiza en NASDAQ (ENPH). Un gran actor histórico en microinversores de tejado, no una empresa dedicada al solar de balcón.',
-        content: 'La historia corporativa confirmada de Enphase Energy comienza en 2006, cuando se fundó la empresa; tiene su sede en Fremont, California, y cotiza en NASDAQ con el símbolo ENPH, un mercado distinto del de competidores chinos como Hoymiles, GoodWe y Deye, que cotizan en Shanghái. El negocio principal de Enphase son los microinversores residenciales para tejado a gran escala, y la solar de balcón/enchufable es una extensión pequeña y reciente hacia otro segmento de mercado, no un enfoque fundacional. A diferencia de GoodWe, que vende hardware de balcón bajo una submarca distinta (PVBM), Enphase comercializa su producto de balcón directamente con su propio nombre, IQ Balcony System.',
+        content: 'La historia corporativa confirmada de Enphase Energy comienza en 2006, cuando se fundó la empresa; tiene su sede en Fremont, California, y cotiza en NASDAQ con el símbolo ENPH, un mercado distinto del de homólogos chinos como Hoymiles, GoodWe y Deye, que cotizan en Shanghái. El negocio principal de Enphase son los microinversores residenciales para tejado a gran escala, y el solar de balcón/enchufable es una extensión pequeña y reciente hacia otro segmento de mercado, no un foco fundacional. A diferencia de GoodWe, cuyo sitio enlaza con un sitio aparte de PV Building Material (PVBM) que parte de la cobertura de terceros llama su marca Suncake (no confirmado en una fuente primaria), Enphase comercializa su producto de balcón con su propio nombre, IQ Balcony System.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Enphase Energy es un fabricante de microinversores de tejado que cotiza en NASDAQ (ENPH), fundado en 2006 en Fremont, California, cuyo producto enchufable IQ Balcony System es una extensión pequeña y reciente de su negocio principal de tejado, no una línea de producto dedicada al solar de balcón.' },
-          { type: 'plain-terms', text: 'Enphase es más conocida por los grandes sistemas solares de tejado, no por el solar de balcón — su producto de balcón enchufable existe, pero es una parte menor y reciente del negocio, confirmada hasta ahora en solo dos países.' },
+          { type: 'plain-terms', text: 'Enphase es conocida por los grandes sistemas solares en tejado, no por el solar de balcón: su producto enchufable de balcón existe, pero es una incorporación reciente a un negocio mayoritariamente de tejado, confirmada hasta ahora en solo dos países.' },
         ],
       },
       timeline: {
@@ -467,7 +482,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Mercados confirmados — reducidos, recientes',
         image: '/images/enphase-microinverter-balcony-solar-markets-en.svg',
         imageCaption: 'En esta investigación solo se confirmaron Alemania y Bélgica: una entrada reciente y limitada, no una presencia consolidada en solar de balcón.',
-        content: 'Esta investigación confirmó que el producto de balcón de Enphase se vende directamente en solo dos países, Alemania y Bélgica: una huella más estrecha y reciente que la del EZ1 de APsystems, que mantiene páginas de marketing localizadas en varios países de EMEA, y que la del hardware PVBM de GoodWe, que llega a los consumidores mediante al menos una alianza confirmada con un revendedor de kits. En noviembre de 2026 no encontramos un lanzamiento confirmado en EE. UU. de un producto de balcón de Enphase ni una certificación UL 3700 para uno; UL 3700, la norma estadounidense de solar enchufable publicada en diciembre de 2025, cuenta por ahora con un primer microinversor certificado, el de Hoymiles (julio de 2026, según Electrek).',
+        content: 'Esta investigación confirmó que el producto de balcón de Enphase se vende directamente en solo dos países, Alemania y Bélgica: una presencia más estrecha y reciente que la del EZ1 de APsystems, que mantiene páginas de marketing localizadas en varios países de EMEA, y que la de las baterías Athena de GoodWe, que lista la tienda alemana priwatt. No encontramos un lanzamiento confirmado en EE. UU. de un producto de balcón de Enphase ni certificación UL 3700 para uno en la última actualización (véase «Última actualización»). Para UL 3700, la norma estadounidense de solar enchufable publicada en diciembre de 2025, existe un primer producto que su fabricante describe como conforme: el Hoymiles HiFlow Pro (julio de 2026, según Hoymiles a través de Electrek); InsideEVs informó de que está diseñado para cumplir la norma, sin certificación de UL Solutions.',
+        callouts: [
+          { type: 'note', text: 'Las normas de conexión a la red, registro y certificación varían según el país, el estado y la distribuidora; este perfil no constituye asesoramiento legal ni eléctrico. Consulta con tu distribuidora o con un electricista cualificado.' },
+        ],
       },
       position: {
         title: 'Dónde se sitúa Enphase',
@@ -478,8 +496,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       scaleContext: {
         title: 'Contexto de escala',
         image: '/images/enphase-microinverter-balcony-solar-scale-context-en.svg',
-        imageCaption: 'Las cifras de envíos a nivel de toda la empresa son reales, pero describen el negocio de tejado de Enphase en general, no una cifra específica de balcón — se muestran aquí como contexto, no como una afirmación sobre el mercado de balcón.',
-        content: 'Enphase publica cifras de envíos a nivel de toda la empresa que son reales y verificables de forma independiente, pero describen su negocio global de microinversores de tejado y no un volumen de ventas o envíos específico de balcón — no se confirmó ninguna cifra de unidades o ingresos específica de balcón para Enphase en esta investigación. Este perfil muestra la cifra a nivel de toda la empresa solo como contexto de escala, de forma coherente con cómo trata en otros lugares de este conjunto comparativo las cifras agregadas de otras empresas: distinguiendo una cifra real y verificable de una afirmación sobre un segmento de producto específico.',
+        imageCaption: 'Las cifras de envíos a nivel de toda la empresa describen el negocio de tejado de Enphase en conjunto, no una cifra específica de balcón; se muestran como contexto, no como afirmación sobre el mercado de balcón.',
+        content: 'Enphase publica cifras de envíos a nivel de toda la empresa, pero describen su negocio global de microinversores para tejado y no un volumen de ventas o envíos específico de balcón; en esta investigación no se confirmó ninguna cifra de unidades o ingresos específica de balcón para Enphase. Este perfil muestra la cifra de toda la empresa solo como contexto de escala, de forma coherente con cómo trata las cifras agregadas de otras empresas en este conjunto comparativo: separar una cifra global de una afirmación sobre un segmento de producto concreto.',
       },
       faqSection: {
         id: 'faq',
@@ -489,11 +507,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Quién es el propietario de Enphase?', a: 'Enphase Energy cotiza en NASDAQ (ENPH), un mercado distinto del de competidores chinos como Hoymiles, GoodWe y Deye, que cotizan en Shanghái.' },
           { q: '¿Es Enphase una empresa dedicada al solar de balcón?', a: 'No. El negocio principal de Enphase son los microinversores residenciales de tejado; el solar de balcón/enchufable a través del IQ Balcony System es una extensión pequeña y reciente hacia otro segmento de mercado, a diferencia de Hoymiles, Deye, APsystems y GoodWe, cuyas gamas de productos se construyen de forma más central en torno a hardware de pequeña escala o relevante para el balcón.' },
           { q: '¿Qué es el IQ Balcony System?', a: 'El IQ Balcony System es el producto de solar de balcón enchufable de Enphase: un kit base de dos microinversores IQ8HC y una IQ Balcony Gateway, ampliable con un kit de ampliación de Enphase hasta siete microinversores y paneles.' },
-          { q: '¿En qué mercados se vende el producto de balcón de Enphase?', a: 'Alemania y Bélgica: Enphase anunció el IQ Balcony System en Alemania el 7 de mayo de 2025 y en Bélgica el 12 de mayo de 2025. No encontramos ningún otro mercado confirmado en noviembre de 2026: una entrada estrecha y reciente, en contraste con el EZ1 de APsystems, que mantiene páginas de marketing localizadas en varios países de EMEA.' },
+          { q: '¿En qué mercados se vende el producto de balcón de Enphase?', a: 'Alemania y Bélgica: Enphase anunció el IQ Balcony System en Alemania el 7 de mayo de 2025 y en Bélgica el 12 de mayo de 2025. No encontramos ningún otro mercado confirmado en la última actualización (véase «Última actualización»): una entrada estrecha y reciente, en contraste con el EZ1 de APsystems, que mantiene páginas de marketing localizadas en varios países de EMEA.' },
           { q: '¿Cuándo lanzó Enphase su producto de balcón?', a: 'Los comunicados de prensa de Enphase indican el 7 de mayo de 2025 (Alemania) y el 12 de mayo de 2025 (Bélgica); esta investigación no encontró confirmación independiente de terceros más allá de esas fuentes de la empresa.' },
           { q: '¿Cómo se compara Enphase estructuralmente con Hoymiles, Deye, APsystems y GoodWe?', a: 'Las cinco se sitúan en la capa de fabricantes de microinversores/baterías de la cadena de suministro del solar de balcón, pero Enphase se diferencia en escala y origen: es una empresa de solar de tejado mucho más grande y establecida desde hace más tiempo (fundada en 2006, cotizada en NASDAQ), para la cual el solar de balcón es una extensión menor y reciente, mientras que las gamas de producto de las otras cuatro marcas se construyen de forma más central en torno a hardware enchufable de pequeña escala.' },
           { q: '¿Enphase informa cifras de envíos específicas de balcón?', a: 'No. Enphase publica cifras de envíos a nivel de toda la empresa, pero estas describen su negocio global de microinversores de tejado y no un volumen específico de balcón; no se confirmó ninguna cifra exclusiva de balcón en esta investigación.' },
-          { q: '¿Es Enphase una marca de kits solares de balcón como Anker SOLIX?', a: 'No. Enphase se sitúa en la capa de fabricantes de microinversores/baterías de la cadena de suministro, junto a Hoymiles, Deye, APsystems y GoodWe, en lugar de la capa de revendedores de kits ocupada por Anker SOLIX, EcoFlow y Zendure, que fabrican su propio hardware de batería y también venden kits completos directamente a los consumidores bajo su propia marca.' },
+          { q: '¿Es Enphase una marca de kits solares de balcón como Anker SOLIX?', a: 'No. Enphase se sitúa en la capa de fabricantes de microinversores/baterías de la cadena de suministro, junto a Hoymiles, Deye, APsystems y GoodWe, y no en la capa de revendedores de kits que ocupan Anker SOLIX, EcoFlow y Zendure, que diseñan su propio hardware de baterías y venden kits completos directamente a los consumidores con su propia marca.' },
         ],
       },
     },
@@ -507,8 +525,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-11-20',
     audience: 'Leitores que pesquisam a Enphase como empresa de microinversores',
-    intro: 'A Enphase, gigante de energia solar para telhados listada na NASDAQ e fundada em 2006, entrou no mercado de energia solar de varanda há pouco tempo — seu IQ Balcony System foi anunciado na Alemanha em 7 de maio de 2025 e na Bélgica em 12 de maio de 2025, e esses são os únicos dois países onde o encontramos à venda em novembro de 2026. As duas datas de lançamento vêm exclusivamente de comunicados de imprensa da própria Enphase, sem confirmação independente. Os números de remessas muito citados descrevem seu negócio de telhados, muito maior, e não esta linha específica para varanda.',
-    leadAnswerBlock: '**A Enphase Energy é uma tradicional fabricante de microinversores para telhados listada na NASDAQ (ENPH), fundada em 2006 e sediada em Fremont, Califórnia, que entrou na energia solar de varanda/plug-in há pouco tempo e em escala limitada com o IQ Balcony System.** Diferente de concorrentes chineses como Hoymiles, GoodWe e Deye — listadas em Xangai e com hardware plug-in de pequena escala como parte central do negócio —, o negócio principal da Enphase são microinversores residenciais para telhados, e os números de remessas da empresa como um todo descrevem esse negócio, e não um volume específico de varanda. O kit básico traz dois microinversores IQ8HC e um IQ Balcony Gateway, com um kit de expansão que suporta até sete microinversores e painéis (segundo o comunicado de lançamento na Alemanha). A Enphase anunciou o kit na Alemanha em 7 de maio de 2025 e na Bélgica em 12 de maio de 2025 — os únicos dois países onde o encontramos à venda em novembro de 2026 — e ambas as datas vêm de comunicados da própria Enphase; não foram encontrados números independentes de vendas ou remessas específicos de varanda.',
+    intro: 'A Enphase, fabricante de microinversores para energia solar em telhados listada na NASDAQ e fundada em 2006, entrou no mercado de energia solar de varanda há pouco tempo — seu IQ Balcony System foi anunciado na Alemanha em 7 de maio de 2025 e na Bélgica em 12 de maio de 2025, e esses são os únicos dois países em que o encontramos à venda na última atualização (veja «Última atualização»). As duas datas de lançamento vêm exclusivamente dos comunicados de imprensa da própria Enphase, sem confirmação independente. Os números de despachos da empresa, muito citados, descrevem seu negócio de telhados, bem maior, e não esta linha de varanda.',
+    leadAnswerBlock: '**A Enphase Energy é uma tradicional fabricante de microinversores para energia solar em telhados, listada na NASDAQ (ENPH), fundada em 2006 e sediada em Fremont, Califórnia, que entrou há pouco tempo e em escala limitada na energia solar de varanda/plug-in com seu IQ Balcony System.** Diferente de pares chineses como Hoymiles, GoodWe e Deye — listados em Xangai e com hardware plug-in de pequeno porte como parte central do negócio —, o negócio principal da Enphase são os microinversores residenciais para telhados, e seus números de despachos em toda a empresa descrevem esse negócio de telhados, e não um volume específico de varanda. O kit base contém dois microinversores IQ8HC e um IQ Balcony Gateway, com um kit de expansão que suporta até sete microinversores e painéis (segundo o comunicado de lançamento da Enphase na Alemanha). A Enphase anunciou o kit na Alemanha em 7 de maio de 2025 e na Bélgica em 12 de maio de 2025 — os únicos dois países em que o encontramos à venda na última atualização (veja «Última atualização») —, e ambas as datas vêm de comunicados da própria Enphase; não foram encontrados números independentes de vendas ou despachos específicos de varanda.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -518,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A Enphase Energy foi fundada em 2006, tem sede em Fremont, Califórnia, e é listada na NASDAQ sob o código ENPH — uma bolsa diferente da de concorrentes chineses como Hoymiles, GoodWe e Deye, listadas em Xangai.',
           'O negócio principal da Enphase são os microinversores residenciais de telhado; a energia solar de varanda/plug-in é uma extensão pequena e recente confirmada por meio do IQ Balcony System, não uma linha de produtos consolidada há muito tempo.',
           'O IQ Balcony System vem como kit básico de dois microinversores IQ8HC e um IQ Balcony Gateway, com um kit de expansão da Enphase que suporta até sete microinversores e painéis — o mesmo padrão de capacidade modular de outras linhas de microinversores e baterias para varanda tratadas neste cluster.',
-          'O produto de varanda da Enphase é vendido diretamente em apenas dois países que conseguimos confirmar — Alemanha (anunciado em 7 de maio de 2025) e Bélgica (12 de maio de 2025); não encontramos lançamento confirmado nos EUA em novembro de 2026.',
+          'O produto de varanda da Enphase é vendido diretamente em apenas dois países que conseguimos confirmar — Alemanha (anunciado em 7 de maio de 2025) e Bélgica (12 de maio de 2025); não encontramos lançamento confirmado nos EUA na última atualização (veja «Última atualização»).',
           'As duas datas de lançamento confirmadas da entrada da Enphase no mercado de varanda — 7 de maio de 2025 (Alemanha) e 12 de maio de 2025 (Bélgica) — vêm diretamente de comunicados de imprensa da própria Enphase.',
           'A Enphase publica números de despachos em toda a empresa, mas esses números descrevem seu negócio global de microinversores de telhado, não um volume de vendas específico de varanda — este perfil os apresenta apenas como contexto, não como uma afirmação sobre o mercado de varanda.',
         ],
@@ -527,10 +545,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Enphase: visão geral da empresa',
         image: '/images/enphase-microinverter-balcony-solar-snapshot-en.svg',
         imageCaption: 'Fundada em 2006 em Fremont, Califórnia; listada na NASDAQ (ENPH). Uma grande fornecedora histórica de microinversores de telhado, não uma empresa dedicada à energia solar de varanda.',
-        content: 'A história corporativa confirmada da Enphase Energy começa em 2006, quando a empresa foi fundada; ela tem sede em Fremont, Califórnia, e é listada na NASDAQ sob o código ENPH — uma bolsa diferente da de concorrentes chineses como Hoymiles, GoodWe e Deye, listadas em Xangai. O negócio principal da Enphase são microinversores residenciais para telhados em grande escala, e a energia solar de varanda/plug-in é uma extensão pequena e recente para outro segmento de mercado, e não um foco de fundação. Diferente da GoodWe, que vende hardware de varanda sob uma submarca distinta (PVBM), a Enphase comercializa seu produto de varanda diretamente sob o próprio nome, IQ Balcony System.',
+        content: 'A história corporativa confirmada da Enphase Energy começa em 2006, quando a empresa foi fundada; ela tem sede em Fremont, Califórnia, e é listada na NASDAQ sob o símbolo ENPH — uma bolsa diferente da de pares chineses como Hoymiles, GoodWe e Deye, listados em Xangai. O negócio principal da Enphase são os microinversores residenciais para telhados em grande escala, e a energia solar de varanda/plug-in é uma extensão pequena e recente para outro segmento de mercado, e não um foco de origem. Diferente da GoodWe, cujo site aponta para um site separado de PV Building Material (PVBM) que parte da cobertura de terceiros chama de sua marca Suncake (não confirmado em fonte primária), a Enphase comercializa seu produto de varanda com o próprio nome IQ Balcony System.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'A Enphase Energy é uma fabricante de microinversores de telhado listada na NASDAQ (ENPH), fundada em 2006 em Fremont, Califórnia, cujo produto plug-in IQ Balcony System é uma extensão pequena e recente do seu negócio principal de telhado, não uma linha de produtos dedicada à energia solar de varanda.' },
-          { type: 'plain-terms', text: 'A Enphase é mais conhecida por grandes sistemas solares de telhado, não por energia solar de varanda — seu produto plug-in para varanda existe, mas é uma parte menor e recente do negócio, confirmada até agora em apenas dois países.' },
+          { type: 'plain-terms', text: 'A Enphase é mais conhecida por grandes sistemas solares em telhados, não por energia solar de varanda — seu produto plug-in de varanda existe, mas é uma adição recente a um negócio majoritariamente de telhados, confirmada até agora em apenas dois países.' },
         ],
       },
       timeline: {
@@ -549,7 +567,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Mercados confirmados — restritos, recentes',
         image: '/images/enphase-microinverter-balcony-solar-markets-en.svg',
         imageCaption: 'Nesta pesquisa foram confirmados apenas Alemanha e Bélgica — uma entrada recente e limitada, e não uma presença consolidada em energia solar de varanda.',
-        content: 'Esta pesquisa confirmou que o produto de varanda da Enphase é vendido diretamente em apenas dois países, Alemanha e Bélgica — uma presença mais estreita e recente que a do EZ1 da APsystems, que mantém páginas de marketing localizadas em vários países da EMEA, e que a do hardware PVBM da GoodWe, que chega aos consumidores por meio de pelo menos uma parceria confirmada com revendedor de kits. Em novembro de 2026, não encontramos lançamento confirmado nos EUA de um produto de varanda da Enphase nem certificação UL 3700 para um; a UL 3700, norma americana de energia solar plug-in publicada em dezembro de 2025, tem até agora um primeiro microinversor certificado, o da Hoymiles (julho de 2026, segundo a Electrek).',
+        content: 'Esta pesquisa confirmou que o produto de varanda da Enphase é vendido diretamente em apenas dois países, Alemanha e Bélgica — uma presença mais restrita e mais recente que a do EZ1 da APsystems, que mantém páginas de marketing localizadas em vários países da EMEA, e que a das baterias Athena da GoodWe, que a loja alemã priwatt lista. Não encontramos lançamento confirmado nos EUA de um produto de varanda da Enphase nem certificação UL 3700 para um na última atualização (veja «Última atualização»). Para a UL 3700, a norma americana de energia solar plug-in publicada em dezembro de 2025, existe um primeiro produto que seu fabricante descreve como em conformidade: o Hoymiles HiFlow Pro (julho de 2026, segundo a Hoymiles via Electrek); a InsideEVs informou que ele foi projetado para atender à norma, sem certificação da UL Solutions.',
+        callouts: [
+          { type: 'note', text: 'As regras de conexão à rede, registro e certificação variam conforme o país, o estado e a distribuidora; este perfil não constitui aconselhamento jurídico nem elétrico. Consulte sua distribuidora ou um eletricista qualificado.' },
+        ],
       },
       position: {
         title: 'Onde a Enphase se posiciona',
@@ -560,8 +581,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       scaleContext: {
         title: 'Contexto de escala',
         image: '/images/enphase-microinverter-balcony-solar-scale-context-en.svg',
-        imageCaption: 'Os números de despachos em toda a empresa são reais, mas descrevem o negócio de telhado da Enphase como um todo, não um número específico de varanda — mostrados aqui como contexto, não como uma afirmação sobre o mercado de varanda.',
-        content: 'A Enphase publica números de despachos em toda a empresa que são reais e verificáveis de forma independente, mas que descrevem seu negócio global de microinversores de telhado, e não um volume de vendas ou despachos específico de varanda — nenhum número de unidades ou receita específico de varanda foi confirmado para a Enphase nesta pesquisa. Este perfil apresenta o número em toda a empresa apenas como contexto de escala, de forma consistente com o modo como trata, em outros pontos deste conjunto comparativo, os números agregados de outras empresas: distinguindo um número real e verificável de uma afirmação sobre um segmento de produto específico.',
+        imageCaption: 'Os números de despachos de toda a empresa descrevem o negócio de telhados da Enphase como um todo, não um número específico de varanda — mostrados aqui como contexto, não como afirmação sobre o mercado de varanda.',
+        content: 'A Enphase publica números de despachos de toda a empresa, mas eles descrevem seu negócio geral de microinversores para telhados, e não um volume de vendas ou despachos específico de varanda — nenhum número de unidades ou receita específico de varanda foi confirmado para a Enphase nesta pesquisa. Este perfil mostra o número de toda a empresa apenas como contexto de escala, de forma consistente com o tratamento dado aos números agregados de outras empresas neste conjunto comparativo: separar um número global de uma afirmação sobre um segmento de produto específico.',
       },
       faqSection: {
         id: 'faq',
@@ -571,11 +592,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quem é a proprietária da Enphase?', a: 'A Enphase Energy é listada na NASDAQ (ENPH), uma bolsa diferente da de concorrentes chineses como Hoymiles, GoodWe e Deye, listadas em Xangai.' },
           { q: 'A Enphase é uma empresa dedicada à energia solar de varanda?', a: 'Não. O negócio principal da Enphase são os microinversores residenciais de telhado; a energia solar de varanda/plug-in por meio do IQ Balcony System é uma extensão pequena e recente para um segmento de mercado diferente, diferentemente da Hoymiles, Deye, APsystems e GoodWe, cujas linhas de produtos são construídas de forma mais central em torno de hardware de pequena escala ou relevante para varanda.' },
           { q: 'O que é o IQ Balcony System?', a: 'O IQ Balcony System é o produto de energia solar de varanda plug-in da Enphase: um kit básico de dois microinversores IQ8HC e um IQ Balcony Gateway, expansível com um kit de expansão da Enphase para até sete microinversores e painéis.' },
-          { q: 'Em quais mercados o produto de varanda da Enphase é vendido?', a: 'Alemanha e Bélgica: a Enphase anunciou o IQ Balcony System na Alemanha em 7 de maio de 2025 e na Bélgica em 12 de maio de 2025. Não encontramos nenhum outro mercado confirmado em novembro de 2026 — uma entrada estreita e recente, em contraste com o EZ1 da APsystems, que mantém páginas de marketing localizadas em vários países da EMEA.' },
+          { q: 'Em quais mercados o produto de varanda da Enphase é vendido?', a: 'Alemanha e Bélgica: a Enphase anunciou o IQ Balcony System na Alemanha em 7 de maio de 2025 e na Bélgica em 12 de maio de 2025. Não encontramos nenhum outro mercado confirmado na última atualização (veja «Última atualização») — uma entrada restrita e recente, em contraste com o EZ1 da APsystems, que mantém páginas de marketing localizadas em vários países da EMEA.' },
           { q: 'Quando a Enphase lançou seu produto de varanda?', a: 'Os comunicados de imprensa da própria Enphase indicam 7 de maio de 2025 (Alemanha) e 12 de maio de 2025 (Bélgica); esta pesquisa não encontrou confirmação independente de terceiros além dessas fontes da empresa.' },
           { q: 'Como a Enphase se compara estruturalmente com a Hoymiles, Deye, APsystems e GoodWe?', a: 'As cinco estão na camada de fabricantes de microinversores/baterias da cadeia de suprimentos de energia solar de varanda, mas a Enphase se diferencia em escala e origem: é uma empresa de energia solar de telhado muito maior e estabelecida há muito mais tempo (fundada em 2006, listada na NASDAQ), para a qual a energia solar de varanda é uma extensão menor e recente, enquanto as linhas de produtos das outras quatro marcas são construídas de forma mais central em torno de hardware plug-in de pequena escala.' },
           { q: 'A Enphase divulga números de despachos específicos de varanda?', a: 'Não. A Enphase publica números de despachos em toda a empresa, mas eles descrevem seu negócio global de microinversores de telhado, e não um volume específico de varanda; nenhum número exclusivo de varanda foi confirmado nesta pesquisa.' },
-          { q: 'A Enphase é uma marca de kits de energia solar de varanda como a Anker SOLIX?', a: 'Não. A Enphase está na camada de fabricantes de microinversores/baterias da cadeia de suprimentos, ao lado da Hoymiles, Deye, APsystems e GoodWe, em vez da camada de revendedores de kits ocupada pela Anker SOLIX, EcoFlow e Zendure, que fabricam seu próprio hardware de bateria e também vendem kits completos diretamente aos consumidores sob sua própria marca.' },
+          { q: 'A Enphase é uma marca de kits de energia solar de varanda como a Anker SOLIX?', a: 'Não. A Enphase fica na camada de fabricantes de microinversores/baterias da cadeia de suprimentos, ao lado de Hoymiles, Deye, APsystems e GoodWe, e não na camada de revendedores de kits ocupada por Anker SOLIX, EcoFlow e Zendure, que projetam seu próprio hardware de baterias e vendem kits completos diretamente aos consumidores com marca própria.' },
         ],
       },
     },
@@ -589,8 +610,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-11-20',
     audience: 'القراء الذين يبحثون عن Enphase كشركة متخصصة في الميكرو إنفرتر',
-    intro: 'Enphase، عملاق الطاقة الشمسية للأسطح المدرجة في ناسداك والتي تأسست عام 2006، دخلت سوق الطاقة الشمسية للشرفات حديثًا فقط — فقد أُعلن عن IQ Balcony System في ألمانيا في 7 مايو 2025 وفي بلجيكا في 12 مايو 2025، وهما البلدان الوحيدان اللذان وجدنا أنه يُباع فيهما حتى نوفمبر 2026. يأتي تاريخا الإطلاق من البيانات الصحفية لـ Enphase نفسها فقط، دون العثور على تأكيد مستقل. وتصف أرقام الشحن المتداولة كثيرًا نشاطها الأكبر بكثير في الأسطح، لا خط المنتجات المخصص للشرفات.',
-    leadAnswerBlock: '**Enphase Energy شركة راسخة في المحولات الدقيقة للأسطح، مدرجة في ناسداك (ENPH)، تأسست عام 2006 ويقع مقرها في فريمونت بولاية كاليفورنيا، ودخلت الطاقة الشمسية للشرفات/القابلة للتوصيل حديثًا وعلى نطاق محدود عبر IQ Balcony System.** وعلى عكس المنافسين الصينيين مثل Hoymiles وGoodWe وDeye — المدرجين في شنغهاي والذين تشكل المعدات الصغيرة القابلة للتوصيل جزءًا محوريًا من أعمالهم — فإن نشاط Enphase الأساسي هو المحولات الدقيقة للأسطح السكنية، وتصف أرقام الشحن على مستوى الشركة هذا النشاط لا حجمًا خاصًا بالشرفات. تضم المجموعة الأساسية محولين دقيقين من طراز IQ8HC وبوابة IQ Balcony Gateway، مع مجموعة توسعة تدعم حتى سبعة محولات دقيقة وألواح (وفق بيان إطلاق ألمانيا). أعلنت Enphase عن المجموعة في ألمانيا في 7 مايو 2025 وفي بلجيكا في 12 مايو 2025 — البلدان الوحيدان اللذان وجدنا أنها تُباع فيهما حتى نوفمبر 2026 — وكلا التاريخين من بيانات Enphase الصحفية؛ ولم نجد أرقام مبيعات أو شحن مستقلة خاصة بالشرفات.',
+    intro: 'Enphase، الشركة المصنّعة للمحولات الدقيقة للطاقة الشمسية على الأسطح والمدرجة في ناسداك والتي تأسست عام 2006، دخلت سوق الطاقة الشمسية للشرفات مؤخرًا فقط — فقد أُعلن عن IQ Balcony System في ألمانيا في 7 مايو 2025 وفي بلجيكا في 12 مايو 2025، وهما البلدان الوحيدان اللذان وجدناه يُباع فيهما عند آخر تحديث (انظر «آخر تحديث»). ويأتي تاريخا الإطلاق من البيانات الصحفية لشركة Enphase وحدها، دون العثور على تأكيد مستقل. وتصف أرقام الشحن المتداولة على نطاق واسع للشركة أعمالها الأكبر بكثير في الأسطح، لا خط منتجات الشرفات هذا.',
+    leadAnswerBlock: '**Enphase Energy شركة راسخة في المحولات الدقيقة للطاقة الشمسية على الأسطح، مدرجة في ناسداك (ENPH)، تأسست عام 2006 ومقرها فريمونت بولاية كاليفورنيا، ودخلت الطاقة الشمسية للشرفات/القابلة للتوصيل مؤخرًا فقط وعلى نطاق محدود عبر IQ Balcony System.** وعلى عكس النظراء الصينيين مثل Hoymiles وGoodWe وDeye — المدرجين في شنغهاي ويشكّل العتاد القابل للتوصيل صغير الحجم جزءًا محوريًا من أعمالهم — يتمثل نشاط Enphase الأساسي في المحولات الدقيقة السكنية للأسطح، وتصف أرقام الشحن على مستوى الشركة هذا النشاط لا حجمًا خاصًا بالشرفات. تحتوي الحزمة الأساسية على محولين دقيقين IQ8HC وبوابة IQ Balcony Gateway، مع حزمة توسعة تدعم حتى سبعة محولات دقيقة وألواح (بحسب بيان Enphase لإطلاقها في ألمانيا). وأعلنت Enphase عن الحزمة في ألمانيا في 7 مايو 2025 وفي بلجيكا في 12 مايو 2025 — البلدان الوحيدان اللذان وجدناه يُباع فيهما عند آخر تحديث (انظر «آخر تحديث») — ويأتي التاريخان من بيانات Enphase الصحفية؛ ولم نعثر على أرقام مبيعات أو شحن مستقلة خاصة بالشرفات.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -600,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تأسست Enphase Energy عام 2006، ويقع مقرها في فريمونت بولاية كاليفورنيا، وهي مدرجة في ناسداك تحت الرمز ENPH — وهي بورصة مختلفة عن بورصة المنافسين الصينيين مثل Hoymiles وGoodWe وDeye المدرجين في شنغهاي.',
           'النشاط الأساسي لشركة Enphase هو عاكسات الأسطح الدقيقة السكنية؛ أما الطاقة الشمسية للشرفات/التوصيل المباشر فهي امتداد صغير وحديث تم تأكيده من خلال نظام IQ Balcony System، وليست خط منتجات راسخًا منذ زمن طويل.',
           'يُشحن IQ Balcony System كمجموعة أساسية من محولين دقيقين IQ8HC وبوابة IQ Balcony Gateway، مع مجموعة توسعة من Enphase تدعم حتى سبعة محولات دقيقة وألواح — النمط نفسه للسعة المعيارية في خطوط المحولات الدقيقة والبطاريات الأخرى للشرفات المشمولة في هذه المجموعة.',
-          'يُباع منتج الشرفات من Enphase مباشرة في بلدين فقط استطعنا تأكيدهما — ألمانيا (أُعلن في 7 مايو 2025) وبلجيكا (12 مايو 2025)؛ ولم نجد إطلاقًا مؤكدًا في الولايات المتحدة حتى نوفمبر 2026.',
+          'يُباع منتج الشرفات من Enphase مباشرة في بلدين فقط استطعنا تأكيدهما — ألمانيا (أُعلن عنه في 7 مايو 2025) وبلجيكا (12 مايو 2025)؛ ولم نعثر على إطلاق مؤكد في الولايات المتحدة عند آخر تحديث (انظر «آخر تحديث»).',
           'تاريخا الإطلاق المؤكدان لدخول Enphase سوق الشرفات — 7 مايو 2025 (ألمانيا) و12 مايو 2025 (بلجيكا) — يأتيان مباشرة من البيانات الصحفية لـ Enphase نفسها.',
           'تنشر Enphase أرقام شحنات على مستوى الشركة، لكن هذه الأرقام تصف نشاطها العام في مجال عاكسات الأسطح الدقيقة، وليست حجم مبيعات خاصًا بالشرفات — يعرض هذا الملف هذه الأرقام كسياق فقط، وليس كإدعاء بشأن سوق الشرفات.',
         ],
@@ -609,10 +630,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Enphase: لمحة عن الشركة',
         image: '/images/enphase-microinverter-balcony-solar-snapshot-en.svg',
         imageCaption: 'تأسست عام 2006 في فريمونت، كاليفورنيا؛ مدرجة في بورصة NASDAQ برمز (ENPH). شركة كبيرة وراسخة في مجال عاكسات الأسطح الدقيقة، وليست شركة متخصصة في الطاقة الشمسية للشرفات.',
-        content: 'يبدأ تاريخ شركة Enphase Energy المؤكد عام 2006 حين تأسست؛ ويقع مقرها في فريمونت بولاية كاليفورنيا، وهي مدرجة في ناسداك تحت الرمز ENPH — وهي بورصة مختلفة عن بورصة المنافسين الصينيين مثل Hoymiles وGoodWe وDeye المدرجين في شنغهاي. نشاط Enphase الأساسي هو المحولات الدقيقة للأسطح السكنية على نطاق واسع، والطاقة الشمسية للشرفات/القابلة للتوصيل امتداد صغير وحديث إلى قطاع سوقي مختلف لا محور تأسيس. وعلى عكس GoodWe التي تبيع معدات الشرفات تحت علامة فرعية مستقلة (PVBM)، تسوّق Enphase منتج الشرفات مباشرة تحت اسمها IQ Balcony System.',
+        content: 'يبدأ تاريخ شركة Enphase Energy المؤكد عام 2006 حين تأسست؛ ويقع مقرها في فريمونت بولاية كاليفورنيا، وهي مدرجة في ناسداك برمز ENPH — وهي بورصة مختلفة عن بورصة النظراء الصينيين مثل Hoymiles وGoodWe وDeye المدرجين في شنغهاي. ونشاط Enphase الأساسي هو المحولات الدقيقة السكنية للأسطح على نطاق واسع، أما الطاقة الشمسية للشرفات/القابلة للتوصيل فهي امتداد صغير وحديث إلى شريحة سوق مختلفة وليست محور التأسيس. وعلى عكس GoodWe التي يربط موقعها بموقع منفصل باسم PV Building Material (PVBM) تسميه بعض التغطيات الخارجية علامتها Suncake (غير مؤكد من مصدر أولي)، تسوّق Enphase منتجها للشرفات باسمها الخاص IQ Balcony System.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Enphase Energy هي شركة مصنّعة لعاكسات الأسطح الدقيقة مدرجة في بورصة NASDAQ (ENPH)، تأسست عام 2006 في فريمونت، كاليفورنيا، ومنتجها للتوصيل المباشر IQ Balcony System هو امتداد صغير وحديث لنشاطها الأساسي في مجال الأسطح، وليس خط منتجات مخصصًا للطاقة الشمسية للشرفات.' },
-          { type: 'plain-terms', text: 'تُعرف Enphase في الأساس بأنظمة الطاقة الشمسية الكبيرة على الأسطح، وليس بالطاقة الشمسية للشرفات — منتجها للتوصيل المباشر الخاص بالشرفات موجود، لكنه جزء صغير وحديث من النشاط، ومؤكد حتى الآن في دولتين فقط.' },
+          { type: 'plain-terms', text: 'تُعرف Enphase بأنظمة الطاقة الشمسية الكبيرة على الأسطح لا بالطاقة الشمسية للشرفات — ومنتجها القابل للتوصيل للشرفات موجود لكنه إضافة حديثة إلى نشاط يغلب عليه الأسطح، وتأكد وجوده في بلدين فقط حتى الآن.' },
         ],
       },
       timeline: {
@@ -631,7 +652,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسواق المؤكدة — محدودة وحديثة',
         image: '/images/enphase-microinverter-balcony-solar-markets-en.svg',
         imageCaption: 'لم يؤكد هذا البحث سوى ألمانيا وبلجيكا — دخول حديث ومحدود، لا حضور راسخ في الطاقة الشمسية للشرفات.',
-        content: 'أكد هذا البحث أن منتج الشرفات من Enphase يُباع مباشرة في بلدين فقط، هما ألمانيا وبلجيكا — بصمة أضيق وأحدث من EZ1 لدى APsystems التي تحتفظ بصفحات تسويق محلية في عدة بلدان في أوروبا والشرق الأوسط وإفريقيا، ومن معدات PVBM لدى GoodWe التي تصل إلى المستهلكين عبر شراكة مؤكدة واحدة على الأقل مع بائع مجموعات. لم نجد حتى نوفمبر 2026 إطلاقًا مؤكدًا في الولايات المتحدة لمنتج شرفات من Enphase ولا شهادة UL 3700 له؛ وقد حصل معيار UL 3700 الأمريكي للطاقة الشمسية القابلة للتوصيل، الصادر في ديسمبر 2025، حتى الآن على أول محول دقيق معتمد من Hoymiles (يوليو 2026، وفق Electrek).',
+        content: 'أكد هذا البحث أن منتج الشرفات من Enphase يُباع مباشرة في بلدين فقط هما ألمانيا وبلجيكا — وهو حضور أضيق وأحدث من حضور EZ1 من APsystems الذي يحتفظ بصفحات تسويق محلية في عدة دول من منطقة EMEA، ومن بطاريات Athena من GoodWe التي يدرجها المتجر الألماني priwatt. لم نعثر عند آخر تحديث (انظر «آخر تحديث») على إطلاق مؤكد في الولايات المتحدة لمنتج شرفات من Enphase ولا على اعتماد UL 3700 لأي منها. وبالنسبة إلى UL 3700، معيار الطاقة الشمسية القابلة للتوصيل الأمريكي الذي نُشر في ديسمبر 2025، يوجد منتج أول تصفه الشركة المصنّعة بأنه مطابق هو Hoymiles HiFlow Pro (يوليو 2026، بحسب Hoymiles عبر Electrek)؛ وذكرت InsideEVs أنه مصمم لتلبية المعيار وليس معتمدًا من UL Solutions.',
+        callouts: [
+          { type: 'note', text: 'تختلف قواعد الربط بالشبكة والتسجيل والاعتماد باختلاف الدولة والولاية وشركة الكهرباء؛ ولا يُعد هذا الملف استشارة قانونية أو كهربائية. استشر شركة الكهرباء لديك أو كهربائيًا مؤهلًا.' },
+        ],
       },
       position: {
         title: 'موقع Enphase في السوق',
@@ -642,8 +666,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       scaleContext: {
         title: 'السياق الحجمي',
         image: '/images/enphase-microinverter-balcony-solar-scale-context-en.svg',
-        imageCaption: 'أرقام الشحنات على مستوى الشركة حقيقية، لكنها تصف نشاط Enphase في مجال الأسطح ككل، وليست رقمًا خاصًا بالشرفات — وهي معروضة هنا للسياق فقط، وليست كإدعاء بشأن سوق الشرفات.',
-        content: 'تنشر Enphase أرقام شحنات على مستوى الشركة حقيقية وقابلة للتحقق بشكل مستقل، لكنها تصف نشاطها العام في مجال عاكسات الأسطح الدقيقة وليس حجم مبيعات أو شحنات خاص بالشرفات — ولم يتم تأكيد أي رقم وحدات أو إيرادات خاص بالشرفات لشركة Enphase في هذا البحث. يعرض هذا الملف الرقم على مستوى الشركة كسياق للحجم فقط، بما يتسق مع كيفية تعامله في أماكن أخرى من مجموعة المقارنة هذه مع الأرقام الإجمالية لشركات أخرى: التمييز بين رقم حقيقي وقابل للتحقق وبين ادعاء بشأن قطاع منتج محدد.',
+        imageCaption: 'تصف أرقام الشحن على مستوى الشركة أعمال Enphase في الأسطح عمومًا، لا رقمًا خاصًا بالشرفات — وتُعرض هنا للسياق فقط، لا كادعاء بشأن سوق الشرفات.',
+        content: 'تنشر Enphase أرقام شحن على مستوى الشركة، لكنها تصف أعمالها الإجمالية في المحولات الدقيقة للأسطح لا حجم مبيعات أو شحن خاصًا بالشرفات — ولم يتأكد في هذا البحث أي رقم وحدات أو إيرادات خاص بالشرفات لدى Enphase. يعرض هذا الملف رقم الشركة ككل لأغراض سياق الحجم فقط، بما يتسق مع معاملة الأرقام المجمّعة لشركات أخرى في مجموعة المقارنة هذه: الفصل بين رقم على مستوى الشركة وادعاء بشأن شريحة منتجات محددة.',
       },
       faqSection: {
         id: 'faq',
@@ -653,11 +677,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'من يملك شركة Enphase؟', a: 'Enphase Energy مدرجة في ناسداك (ENPH)، وهي بورصة مختلفة عن بورصة المنافسين الصينيين مثل Hoymiles وGoodWe وDeye المدرجين في شنغهاي.' },
           { q: 'هل Enphase شركة متخصصة في الطاقة الشمسية للشرفات؟', a: 'لا. النشاط الأساسي لشركة Enphase هو عاكسات الأسطح الدقيقة السكنية؛ والطاقة الشمسية للشرفات/التوصيل المباشر عبر نظام IQ Balcony System هي امتداد صغير وحديث نحو قطاع سوق مختلف، على عكس Hoymiles وDeye وAPsystems وGoodWe، التي تُبنى خطوط منتجاتها بشكل أكثر مركزية حول أجهزة صغيرة الحجم أو مرتبطة بالشرفات.' },
           { q: 'ما هو نظام IQ Balcony؟', a: 'IQ Balcony System هو منتج Enphase للطاقة الشمسية القابلة للتوصيل للشرفات: مجموعة أساسية من محولين دقيقين IQ8HC وبوابة IQ Balcony Gateway، قابلة للتوسعة بمجموعة توسعة من Enphase حتى سبعة محولات دقيقة وألواح.' },
-          { q: 'في أي الأسواق يُباع منتج Enphase الخاص بالشرفات؟', a: 'ألمانيا وبلجيكا: أعلنت Enphase عن IQ Balcony System في ألمانيا في 7 مايو 2025 وفي بلجيكا في 12 مايو 2025. لم نجد أي سوق مؤكد آخر حتى نوفمبر 2026 — دخول ضيق وحديث، بخلاف EZ1 لدى APsystems التي تحتفظ بصفحات تسويق محلية في عدة بلدان في أوروبا والشرق الأوسط وإفريقيا.' },
+          { q: 'في أي الأسواق يُباع منتج Enphase الخاص بالشرفات؟', a: 'ألمانيا وبلجيكا: أعلنت Enphase عن IQ Balcony System في ألمانيا في 7 مايو 2025 وفي بلجيكا في 12 مايو 2025. ولم نعثر على أي سوق مؤكد آخر عند آخر تحديث (انظر «آخر تحديث») — دخول ضيق وحديث، على النقيض من EZ1 من APsystems الذي يحتفظ بصفحات تسويق محلية في عدة دول من منطقة EMEA.' },
           { q: 'متى أطلقت Enphase منتجها الخاص بالشرفات؟', a: 'تذكر البيانات الصحفية لـ Enphase نفسها 7 مايو 2025 (ألمانيا) و12 مايو 2025 (بلجيكا)؛ ولم يعثر هذا البحث على تأكيد مستقل من جهات خارجية يتجاوز هذه المصادر الصادرة عن الشركة.' },
           { q: 'كيف تُقارن Enphase من الناحية الهيكلية بشركات Hoymiles وDeye وAPsystems وGoodWe؟', a: 'تقع جميع الشركات الخمس ضمن طبقة مصنّعي الميكرو إنفرتر/البطاريات في سلسلة توريد الطاقة الشمسية للشرفات، لكن Enphase تختلف من حيث الحجم والأصل: فهي شركة طاقة شمسية للأسطح أكبر بكثير وأكثر رسوخًا (تأسست عام 2006، ومدرجة في بورصة NASDAQ)، وتُعد الطاقة الشمسية للشرفات بالنسبة لها امتدادًا صغيرًا وحديثًا، بينما تُبنى خطوط منتجات العلامات التجارية الأربع الأخرى بشكل أكثر مركزية حول أجهزة التوصيل المباشر صغيرة الحجم.' },
           { q: 'هل تنشر Enphase أرقام شحنات خاصة بالشرفات؟', a: 'لا. تنشر Enphase أرقام شحنات على مستوى الشركة، لكنها تصف نشاطها العام في مجال عاكسات الأسطح الدقيقة وليس حجمًا خاصًا بالشرفات؛ ولم يتم تأكيد أي رقم خاص بالشرفات فقط في هذا البحث.' },
-          { q: 'هل Enphase علامة تجارية لعبوات الطاقة الشمسية للشرفات مثل Anker SOLIX؟', a: 'لا. تقع Enphase ضمن طبقة مصنّعي الميكرو إنفرتر/البطاريات في سلسلة التوريد، إلى جانب Hoymiles وDeye وAPsystems وGoodWe، بدلاً من طبقة موزعي العبوات الجاهزة التي تشغلها Anker SOLIX وEcoFlow وZendure، والتي تصنّع أجهزة البطاريات الخاصة بها وتبيع أيضًا عبوات كاملة مباشرة للمستهلكين تحت علامتها التجارية الخاصة.' },
+          { q: 'هل Enphase علامة تجارية لعبوات الطاقة الشمسية للشرفات مثل Anker SOLIX؟', a: 'لا. تقع Enphase في طبقة مصنّعي المحولات الدقيقة/البطاريات من سلسلة التوريد، إلى جانب Hoymiles وDeye وAPsystems وGoodWe، لا في طبقة مُعيدي بيع الحزم التي تشغلها Anker SOLIX وEcoFlow وZendure، التي تصمّم عتاد بطارياتها الخاص وتبيع حزمًا كاملة مباشرة للمستهلكين تحت علامتها.' },
         ],
       },
     },
@@ -671,8 +695,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-11-20',
     audience: 'Enphase를 마이크로인버터 기업으로 조사하는 독자',
-    intro: '2006년에 설립되어 NASDAQ에 상장된 지붕형 태양광 대기업 Enphase는 발코니 태양광 시장에 진출한 지 얼마 되지 않았습니다. IQ Balcony System은 2025년 5월 7일 독일에서, 2025년 5월 12일 벨기에에서 발표되었으며, 2026년 11월 기준으로 판매를 확인한 국가는 이 두 곳뿐입니다. 두 출시일은 모두 Enphase 자체 보도자료에서만 나온 것이며, 독립적인 확인은 찾지 못했습니다. 흔히 인용되는 이 회사의 출하량 수치는 훨씬 큰 지붕형 사업을 설명할 뿐, 이 발코니 전용 제품군에 대한 것이 아닙니다.',
-    leadAnswerBlock: '**Enphase Energy는 NASDAQ 상장(ENPH) 지붕형 태양광 마이크로인버터의 기존 강자로, 2006년에 설립되어 캘리포니아주 프리몬트에 본사를 두고 있으며, IQ Balcony System을 통해 발코니/플러그인 태양광에는 최근에야 제한된 규모로 진입했습니다.** 상하이에 상장되어 소형 플러그인 하드웨어를 사업의 핵심으로 삼는 Hoymiles, GoodWe, Deye 같은 중국 업체와 달리, Enphase의 핵심 사업은 주거용 지붕형 마이크로인버터이며, 전사 출하량 수치는 발코니 전용 물량이 아니라 그 지붕형 사업을 설명합니다. 기본 키트는 IQ8HC 마이크로인버터 2대와 IQ Balcony Gateway로 구성되며, 확장 키트로 최대 7대의 마이크로인버터와 패널을 지원합니다(Enphase 독일 출시 보도자료 기준). Enphase는 이 키트를 2025년 5월 7일 독일에서, 2025년 5월 12일 벨기에에서 발표했으며 — 2026년 11월 기준 판매를 확인한 국가는 이 두 곳뿐입니다 — 두 날짜 모두 Enphase 자체 보도자료에서 나온 것이고, 발코니 전용 독립 판매·출하 수치는 찾지 못했습니다.',
+    intro: '2006년에 설립되어 NASDAQ에 상장된 지붕형 태양광 마이크로인버터 제조사 Enphase는 발코니 태양광 시장에 진출한 지 얼마 되지 않았습니다. IQ Balcony System은 2025년 5월 7일 독일에서, 2025년 5월 12일 벨기에에서 발표되었으며, 마지막 업데이트 시점(‘최종 업데이트’ 참조)에 판매를 확인한 나라는 이 두 곳뿐입니다. 두 출시일은 모두 Enphase 자체 보도자료에서만 나왔으며 독립적인 확인은 찾지 못했습니다. 널리 인용되는 회사 출하 수치는 훨씬 규모가 큰 지붕형 사업을 설명하는 것이며, 이 발코니 제품군을 설명하는 것이 아닙니다.',
+    leadAnswerBlock: '**Enphase Energy는 NASDAQ 상장(ENPH) 지붕형 태양광 마이크로인버터의 기존 강자로, 2006년에 설립되어 캘리포니아주 프리몬트에 본사를 두고 있으며, IQ Balcony System을 통해 발코니/플러그인 태양광에는 최근에야 제한적인 규모로 진출했습니다.** Hoymiles, GoodWe, Deye 같은 중국 업체는 상하이에 상장되어 있고 소형 플러그인 하드웨어가 사업의 핵심이지만, Enphase의 핵심 사업은 주택용 지붕형 마이크로인버터이며 회사 전체 출하 수치도 발코니 전용 물량이 아니라 그 지붕형 사업을 설명합니다. 기본 키트는 IQ8HC 마이크로인버터 2대와 IQ Balcony Gateway로 구성되며, 확장 키트는 최대 7대의 마이크로인버터와 패널을 지원합니다(Enphase의 독일 출시 보도자료 기준). Enphase는 2025년 5월 7일 독일에서, 2025년 5월 12일 벨기에에서 키트를 발표했으며 — 마지막 업데이트 시점(‘최종 업데이트’ 참조)에 판매를 확인한 나라는 이 두 곳뿐입니다 — 두 날짜 모두 Enphase 자체 보도자료에서 나왔습니다. 독립적인 발코니 전용 판매 또는 출하 수치는 찾지 못했습니다.',
     sections: {
       tldr: {
         id: 'tldr',
@@ -682,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enphase Energy는 2006년에 설립되었고 캘리포니아주 프리몬트에 본사를 두고 있으며, NASDAQ에 티커 ENPH로 상장되어 있습니다. 상하이에 상장된 Hoymiles, GoodWe, Deye 같은 중국 업체와는 상장 시장이 다릅니다.',
           'Enphase의 핵심 사업은 주거용 지붕형 마이크로인버터이며, 발코니/플러그인 태양광은 IQ Balcony System을 통해 확인된 소규모의 최근 확장 사업일 뿐, 오래 유지되어 온 제품 라인이 아니다.',
           'IQ Balcony System은 IQ8HC 마이크로인버터 2대와 IQ Balcony Gateway로 구성된 기본 키트로 공급되며, Enphase 확장 키트로 최대 7대의 마이크로인버터와 패널을 지원합니다. 이 클러스터에서 다루는 다른 발코니용 마이크로인버터 및 배터리 제품군에서 보이는 것과 같은 모듈식 용량 구조입니다.',
-          'Enphase의 발코니 제품은 확인 가능한 두 나라에서만 직접 판매됩니다. 독일(2025년 5월 7일 발표)과 벨기에(2025년 5월 12일)입니다. 2026년 11월 기준 미국 출시는 확인하지 못했습니다.',
+          'Enphase의 발코니 제품은 확인 가능한 두 나라에서만 직접 판매됩니다. 독일(2025년 5월 7일 발표)과 벨기에(2025년 5월 12일)입니다. 마지막 업데이트 시점(‘최종 업데이트’ 참조)에 확인된 미국 출시는 찾지 못했습니다.',
           'Enphase의 발코니 시장 진입에 대해 확인된 두 출시일(독일 2025년 5월 7일, 벨기에 2025년 5월 12일)은 모두 Enphase 자체 보도자료에서 직접 나온 것입니다.',
           'Enphase는 전사 출하량 수치를 공개하고 있지만, 이 수치는 전체 지붕형 마이크로인버터 사업을 나타내는 것이지 발코니 전용 판매량이 아니다 — 이 프로필에서는 이를 발코니 시장에 대한 주장이 아니라 맥락 정보로만 다룬다.',
         ],
@@ -691,10 +715,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Enphase: 기업 스냅샷',
         image: '/images/enphase-microinverter-balcony-solar-snapshot-en.svg',
         imageCaption: '2006년 캘리포니아주 프리몬트에서 설립되었으며, 나스닥(NASDAQ)에 상장되어 있습니다(ENPH). 지붕형 인버터 분야의 대형 기존 업체이며, 발코니 태양광 전문 기업은 아닙니다.',
-        content: 'Enphase Energy의 확인된 기업 역사는 2006년 설립에서 시작합니다. 본사는 캘리포니아주 프리몬트에 있으며 NASDAQ에 티커 ENPH로 상장되어 있습니다. 상하이에 상장된 Hoymiles, GoodWe, Deye 같은 중국 업체와는 상장 시장이 다릅니다. Enphase의 핵심 사업은 대규모 주거용 지붕형 마이크로인버터이며, 발코니/플러그인 태양광은 창업 초기의 초점이 아니라 다른 시장 부문으로의 작고 최근의 확장입니다. 발코니용 하드웨어를 별도 서브 브랜드(PVBM)로 판매하는 GoodWe와 달리, Enphase는 발코니 제품을 자사 이름인 IQ Balcony System으로 직접 판매합니다.',
+        content: 'Enphase Energy의 확인된 기업 역사는 2006년 설립에서 시작합니다. 본사는 캘리포니아주 프리몬트에 있으며 NASDAQ에 티커 ENPH로 상장되어 있어, 상하이에 상장된 Hoymiles, GoodWe, Deye 같은 중국 업체와는 상장 시장이 다릅니다. Enphase의 핵심 사업은 대규모 주택용 지붕형 마이크로인버터이며, 발코니/플러그인 태양광은 창업 당시의 초점이 아니라 다른 시장 부문으로의 작고 최근의 확장입니다. GoodWe는 웹사이트에서 별도의 PV Building Material(PVBM) 사이트로 연결되며 일부 제3자 보도는 이를 Suncake 브랜드라고 부르지만(1차 출처로는 확인되지 않음), 이와 달리 Enphase는 발코니 제품을 자체 이름인 IQ Balcony System으로 판매합니다.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Enphase Energy는 나스닥에 상장된(ENPH) 지붕형 마이크로인버터 제조사로, 2006년 캘리포니아주 프리몬트에서 설립되었으며, 플러그인 제품인 IQ Balcony System은 전용 발코니 태양광 제품 라인이라기보다 핵심 지붕형 사업의 소규모이자 최근의 확장이다.' },
-          { type: 'plain-terms', text: 'Enphase는 발코니 태양광이 아니라 대형 지붕형 태양광 시스템으로 가장 잘 알려져 있다 — 플러그인 발코니 제품이 존재하기는 하지만 사업의 작고 최근에 시작된 부분이며, 지금까지 단 두 개 국가에서만 확인되었다.' },
+          { type: 'plain-terms', text: 'Enphase는 발코니 태양광이 아니라 대형 지붕형 태양광 시스템으로 잘 알려져 있습니다. 플러그인 발코니 제품은 존재하지만 지붕형이 중심인 사업에 최근 추가된 것이며, 지금까지 두 나라에서만 확인되었습니다.' },
         ],
       },
       timeline: {
@@ -713,7 +737,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '확인된 시장 — 제한적이며 최근 진입',
         image: '/images/enphase-microinverter-balcony-solar-markets-en.svg',
         imageCaption: '이번 조사에서 확인된 곳은 독일과 벨기에뿐입니다. 이는 최근의 제한적인 진출이며, 확립된 발코니 태양광 입지가 아닙니다.',
-        content: '이번 조사에서는 Enphase의 발코니 제품이 독일과 벨기에 두 나라에서만 직접 판매되는 것으로 확인되었습니다. 이는 EMEA 여러 나라에 현지화된 마케팅 페이지를 운영하는 APsystems의 EZ1이나, 최소 한 곳의 키트 재판매업체와의 제휴가 확인된 GoodWe의 PVBM 하드웨어보다 좁고 최근의 입지입니다. 2026년 11월 기준 Enphase 발코니 제품의 미국 출시는 확인하지 못했고 UL 3700 인증도 찾지 못했습니다. 2025년 12월에 공개된 미국 플러그인 태양광 표준 UL 3700에서는 지금까지 Hoymiles의 마이크로인버터가 첫 인증 제품입니다(2026년 7월, Electrek 보도).',
+        content: '이번 조사에서는 Enphase의 발코니 제품이 독일과 벨기에 두 나라에서만 직접 판매되는 것으로 확인되었습니다. 이는 EMEA 여러 나라에 현지화된 마케팅 페이지를 운영하는 APsystems의 EZ1이나, 독일 쇼핑몰 priwatt가 목록에 올린 GoodWe의 Athena 배터리보다 범위가 좁고 더 최근입니다. 마지막 업데이트 시점(‘최종 업데이트’ 참조)에 Enphase 발코니 제품의 확인된 미국 출시나 UL 3700 인증은 찾지 못했습니다. 2025년 12월 공개된 미국 플러그인 태양광 표준 UL 3700에는 제조사가 적합하다고 설명하는 첫 제품으로 Hoymiles HiFlow Pro가 있습니다(2026년 7월, Hoymiles 발표를 Electrek이 보도). InsideEVs는 UL Solutions 인증이 아니라 표준을 충족하도록 설계된 제품이라고 보도했습니다.',
+        callouts: [
+          { type: 'note', text: '계통 연계, 등록 및 인증 규정은 국가, 주, 전력회사마다 다르며, 이 프로필은 법률 또는 전기 관련 자문이 아닙니다. 전력회사나 자격을 갖춘 전기 기사에게 확인하시기 바랍니다.' },
+        ],
       },
       position: {
         title: 'Enphase의 시장 위치',
@@ -724,8 +751,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       scaleContext: {
         title: '규모 맥락',
         image: '/images/enphase-microinverter-balcony-solar-scale-context-en.svg',
-        imageCaption: '전사 출하량 수치는 실제 데이터이지만, 이는 Enphase의 지붕형 사업 전체를 나타내는 것이며 발코니 전용 수치가 아닙니다 — 여기서는 발코니 시장에 대한 주장이 아니라 맥락 정보로 제시됩니다.',
-        content: 'Enphase는 실제이며 독립적으로 검증 가능한 전사 출하량 수치를 공개하지만, 이는 전체 지붕형 마이크로인버터 사업을 나타내는 것이지 발코니 전용 판매량이나 출하량이 아니다 — 이번 조사에서는 Enphase에 대한 발코니 전용 단위 수 또는 매출 수치가 확인되지 않았다. 이 프로필은 이 전사 수치를 오직 규모 맥락으로만 제시하며, 이는 이 비교 대상군의 다른 곳에서 다른 기업의 종합 수치를 다루는 방식과 일관된다. 즉, 실제로 검증 가능한 수치와 특정 제품 세그먼트에 대한 주장을 구분하는 것이다.',
+        imageCaption: '회사 전체 출하 수치는 Enphase의 지붕형 사업 전체를 설명하는 것이며 발코니 전용 수치가 아닙니다. 맥락을 위해 보여 주는 것일 뿐 발코니 시장에 대한 주장이 아닙니다.',
+        content: 'Enphase는 회사 전체 출하 수치를 공개하지만, 이는 지붕형 마이크로인버터 사업 전체를 설명하는 것이며 발코니 전용 판매 또는 출하량이 아닙니다. 이번 조사에서는 Enphase의 발코니 전용 판매 대수나 매출 수치를 확인하지 못했습니다. 이 프로필은 이 비교 세트에서 다른 회사의 합산 수치를 다루는 방식과 마찬가지로, 회사 전체 수치를 규모 파악을 위한 맥락으로만 제시하며 회사 전체 수치와 특정 제품 부문에 대한 주장을 구분합니다.',
       },
       faqSection: {
         id: 'faq',
@@ -735,11 +762,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Enphase의 소유주는 누구인가요?', a: 'Enphase Energy는 NASDAQ(ENPH)에 상장되어 있으며, 상하이에 상장된 Hoymiles, GoodWe, Deye 같은 중국 업체와는 상장 시장이 다릅니다.' },
           { q: 'Enphase는 발코니 태양광 전문 기업인가요?', a: '아닙니다. Enphase의 핵심 사업은 주거용 지붕형 마이크로인버터이며, IQ Balcony System을 통한 발코니/플러그인 태양광은 다른 시장 세그먼트로의 소규모이자 최근의 확장입니다. 이는 소규모 또는 발코니 관련 하드웨어를 중심으로 제품 라인이 더 중앙에 구축되어 있는 Hoymiles, Deye, APsystems, GoodWe와는 다릅니다.' },
           { q: 'IQ Balcony System이란 무엇인가요?', a: 'IQ Balcony System은 Enphase의 플러그인 발코니 태양광 제품입니다. IQ8HC 마이크로인버터 2대와 IQ Balcony Gateway로 구성된 기본 키트이며, Enphase 확장 키트로 최대 7대의 마이크로인버터와 패널까지 확장할 수 있습니다.' },
-          { q: 'Enphase의 발코니 제품은 어느 시장에서 판매되나요?', a: '독일과 벨기에입니다. Enphase는 IQ Balcony System을 2025년 5월 7일 독일에서, 2025년 5월 12일 벨기에에서 발표했습니다. 2026년 11월 기준 다른 확인된 시장은 찾지 못했습니다. EMEA 여러 나라에 현지화된 마케팅 페이지를 운영하는 APsystems EZ1과 대조되는, 좁고 최근의 진출입니다.' },
+          { q: 'Enphase의 발코니 제품은 어느 시장에서 판매되나요?', a: '독일과 벨기에입니다. Enphase는 IQ Balcony System을 2025년 5월 7일 독일에서, 2025년 5월 12일 벨기에에서 발표했습니다. 마지막 업데이트 시점(‘최종 업데이트’ 참조)에 확인된 다른 시장은 찾지 못했으며, EMEA 여러 나라에 현지화된 마케팅 페이지를 운영하는 APsystems의 EZ1과 대조적으로 범위가 좁고 최근의 진입입니다.' },
           { q: 'Enphase는 언제 발코니 제품을 출시했나요?', a: 'Enphase 자체 보도자료는 2025년 5월 7일(독일)과 2025년 5월 12일(벨기에)을 제시합니다. 이번 조사에서는 이러한 회사 출처 외에 독립적인 제3자 확인을 찾지 못했습니다.' },
           { q: 'Enphase는 Hoymiles, Deye, APsystems, GoodWe와 구조적으로 어떻게 다른가요?', a: '다섯 기업 모두 발코니 태양광 공급망의 마이크로인버터/배터리 제조사 계층에 속하지만, Enphase는 규모와 출발점에서 차이가 있습니다. Enphase는 2006년에 설립되어 나스닥에 상장된, 훨씬 더 크고 오래전부터 확립된 지붕형 태양광 기업이며, 발코니 태양광은 이 회사에게 작고 최근에 시작된 확장 사업일 뿐입니다. 반면 다른 네 브랜드의 제품 라인은 소규모 플러그인 하드웨어를 중심으로 더 중앙에 구축되어 있습니다.' },
           { q: 'Enphase는 발코니 전용 출하량 수치를 발표하나요?', a: '아닙니다. Enphase는 전사 출하량 수치를 공개하지만, 이는 전체 지붕형 마이크로인버터 사업을 나타내는 것이지 발코니 전용 수량이 아닙니다. 이번 조사에서는 발코니 전용 수치가 확인되지 않았습니다.' },
-          { q: 'Enphase는 Anker SOLIX와 같은 발코니 태양광 키트 브랜드인가요?', a: '아닙니다. Enphase는 Hoymiles, Deye, APsystems, GoodWe와 함께 공급망의 마이크로인버터/배터리 제조사 계층에 속하며, 자체 배터리 하드웨어를 제조하고 자사 브랜드로 완제품 키트를 소비자에게 직접 판매하는 Anker SOLIX, EcoFlow, Zendure가 차지하는 키트 판매업체 계층에는 속하지 않습니다.' },
+          { q: 'Enphase는 Anker SOLIX와 같은 발코니 태양광 키트 브랜드인가요?', a: '아닙니다. Enphase는 Hoymiles, Deye, APsystems, GoodWe와 같은 공급망의 마이크로인버터/배터리 제조사 계층에 속하며, 자체 배터리 하드웨어를 설계하고 완제품 키트를 자체 브랜드로 소비자에게 직접 판매하는 Anker SOLIX, EcoFlow, Zendure가 속한 키트 재판매 계층이 아닙니다.' },
         ],
       },
     },
