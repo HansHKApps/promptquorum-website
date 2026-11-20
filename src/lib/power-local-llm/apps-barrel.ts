@@ -371,6 +371,7 @@ import { app as app_dreamserver } from './apps/dreamserver'
 import { app as app_dynamo } from './apps/dynamo'
 import { app as app_farfalle } from './apps/farfalle'
 import { app as app_fablecut } from './apps/fablecut'
+import { app as app_openshorts } from './apps/openshorts'
 import { app as app_lexora } from './apps/lexora'
 import { app as app_alpaca } from './apps/alpaca'
 import { app as app_kition } from './apps/kition'
@@ -717,6 +718,7 @@ export const localAiApps: ToolRecord[] = [
   app_dynamo,
   app_farfalle,
   app_fablecut,
+  app_openshorts,
   app_lexora,
   app_alpaca,
   app_kition,

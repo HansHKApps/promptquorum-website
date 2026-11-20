@@ -518,6 +518,7 @@ import { article as a_openmontage_review } from './articles/openmontage-review'
 import { article as a_ecc_review } from './articles/ecc-review'
 import { article as a_memex_review } from './articles/memex-review'
 import { article as a_fablecut_review } from './articles/fablecut-review'
+import { article as a_openshorts_review } from './articles/openshorts-review'
 import { article as a_lexora_review } from './articles/lexora-review'
 import { article as a_alpaca_review } from './articles/alpaca-review'
 import { article as a_kition_review } from './articles/kition-review'
@@ -1091,6 +1092,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'ecc-review':                                          a_ecc_review,
   'memex-review':                                        a_memex_review,
   'fablecut-review':                                     a_fablecut_review,
+  'openshorts-review':                                   a_openshorts_review,
   'lexora-review':                                       a_lexora_review,
   'alpaca-review':                                       a_alpaca_review,
   'kition-review':                                       a_kition_review,

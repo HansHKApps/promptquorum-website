@@ -329,6 +329,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'newelle':                                'newelle',
   'oleafly':                                'oleafly',
   'fablecut':                               'fablecut',
+  'openshorts':                             'openshorts',
   'rescript':                               'rescript',
   'lexora':                                 'lexora',
   'minutes':                                'minutes',

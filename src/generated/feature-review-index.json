@@ -1414,6 +1414,11 @@
     "urlSlug": "fablecut-review",
     "url": "/power-local-llm/fablecut-review"
   },
+  "openshorts": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openshorts-review",
+    "url": "/power-local-llm/openshorts-review"
+  },
   "lexora": {
     "cluster": "power-local-llm",
     "urlSlug": "lexora-review",
