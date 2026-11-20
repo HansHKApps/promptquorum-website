@@ -17,7 +17,8 @@ export interface SetupDraft {
   availableMinutes: number
   selfLevel: Level
   testMode: TestMode
-  language: AcademyLang
+  /** a site-language code, or a custom language (src/lib/academy/language.ts) */
+  language: string
   /** opt-in "Save my progress in this browser"; false = nothing is written to localStorage (F3) */
   saveProgress: boolean
   updatedAt: string
@@ -66,13 +67,15 @@ export interface Lesson {
   /** empty until the lesson is generated on first open (Phase 3) */
   sections: { heading: string; body: string }[]
   furtherReading: { title: string; url: string; source: 'promptquorum' | 'external' }[]
+  /** three suggested tutor questions, generated with the lesson (tutor function 5) */
+  followUpQuestions?: string[]
   quiz?: Question[]
 }
 
 export interface Programme {
   id: string
   createdAt: string
-  language: AcademyLang
+  language: string
   subject: string
   availableMinutes: number
   selfLevel: Level
@@ -92,13 +95,15 @@ export interface Programme {
     finalAttempts?: QuizResult[]
     /** quiz in progress: id is a lesson id or "final"; answers by question id */
     activeQuiz?: { quizId: string; questions: QuizQuestion[]; answers: Record<string, number> }
+    /** tutor use for the caps (SPEC 8.5): rephrase buttons count 0.5; `perLesson` is keyed by lesson id or "final" */
+    tutor?: { used: number; perLesson: Record<string, number> }
     secondsSpent: number
     /** active seconds per lesson id (capped, SPEC 6.1) */
     lessonSeconds?: Record<string, number>
     startedAt: string
     completedAt?: string
   }
-  certificate?: { id: string; learnerName: string; issuedAt: string }
+  certificate?: { id: string; learnerName: string; issuedAt: string; /** registered for online verification: the sequential number */ number?: number }
 }
 
 /** Screens of the Academy tool. They are views inside /academy, not separate URLs (like the Ask Hans window). */

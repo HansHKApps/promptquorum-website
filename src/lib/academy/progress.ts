@@ -51,6 +51,6 @@ export function lessonsDone(p: Programme): number {
   return p.lessons.filter((l) => p.progress.lessonStatus[l.id] === 'done').length
 }
 
-export function setLessonContent(p: Programme, index: number, content: Pick<Lesson, 'sections' | 'furtherReading'>): Programme {
+export function setLessonContent(p: Programme, index: number, content: Pick<Lesson, 'sections' | 'furtherReading' | 'followUpQuestions'>): Programme {
   return { ...p, lessons: p.lessons.map((l, i) => (i === index ? { ...l, ...content } : l)) }
 }

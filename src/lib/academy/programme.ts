@@ -3,7 +3,7 @@
 // an objective, reading time within ±20% of the time left after tests. Outside the band: one regeneration, then clamp.
 
 import { searchPromptquorum } from '@/lib/mcp/tools'
-import { PROMPT_LANGUAGE } from './diagnostic'
+import { promptLanguage, siteLangOf } from './language'
 import { generateStructured, type ParseClient } from './generate'
 import { programmeOutputSchema, type ProgrammeOutput, type ProgrammeRequest } from './schemas'
 import type { Level, TestMode } from './types'
@@ -93,7 +93,7 @@ export function programmeUserMessage(req: ProgrammeRequest, material: { title: s
   const reading = contentMinutes(req.testMode, req.availableMinutes, estimateLessons)
   return [
     `<subject>${req.subject}</subject>`,
-    `Language: ${PROMPT_LANGUAGE[req.language]}`,
+    `Language: ${promptLanguage(req.language)}`,
     `Total time: ${req.availableMinutes} minutes. Reading time for all lessons: about ${reading} minutes.`,
     `Self-described level: ${LEVEL_TEXT[req.selfLevel]}. Level from the quick check: ${LEVEL_TEXT[req.diagnostic.estimatedLevel]}.`,
     `Quick-check gaps: ${req.diagnostic.gaps.join('; ') || 'none'}`,
@@ -104,7 +104,7 @@ export function programmeUserMessage(req: ProgrammeRequest, material: { title: s
 
 export async function generateProgramme(client: ParseClient, req: ProgrammeRequest, signal?: AbortSignal) {
   // Grounding: the PromptQuorum pages that match the subject, in the programme language (titles + descriptions only).
-  const material = searchPromptquorum({ query: req.subject, lang: req.language, limit: 8 }).map((m) => ({ title: m.title, description: m.description }))
+  const material = searchPromptquorum({ query: req.subject, lang: siteLangOf(req.language), limit: 8 }).map((m) => ({ title: m.title, description: m.description }))
 
   const { value, attempts, salvaged } = await generateStructured({
     client,

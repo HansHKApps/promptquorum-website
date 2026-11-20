@@ -14,6 +14,7 @@ import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import { LEVELS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { TERMS } from '@/lib/terms/content'
+import { isSiteLang, parseCustomLanguage } from '@/lib/academy/language'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
 import { Content } from './Content'
 import { LessonView } from './LessonView'
@@ -47,7 +48,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
       {state.view === 'quiz' && state.programme ? (
         <QuizView tx={tx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(tx, code)} />
       ) : state.view === 'results' && state.programme && programmeScore(state.programme) ? (
-        <ResultsView tx={tx} programme={state.programme} update={update} />
+        <ResultsView tx={tx} lang={lang} programme={state.programme} update={update} />
       ) : state.view === 'lesson' && state.programme ? (
         <LessonView tx={tx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(tx, code)} />
       ) : state.view === 'programme' && state.programme ? (
@@ -107,6 +108,8 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
   )
 }
 
+const OTHER_LANGUAGE = '__other'
+
 function SetupForm({
   tx,
   lang,
@@ -130,10 +133,28 @@ function SetupForm({
   onSubmit: () => void
 }) {
   const [error, setError] = useState(false)
+  const customLang = parseCustomLanguage(draft.language)
+  const [otherMode, setOtherMode] = useState(!!customLang)
+  const [otherText, setOtherText] = useState(customLang?.name ?? '')
+  const [langState, setLangState] = useState<'idle' | 'checking' | 'bad'>('idle')
+  // "Other language": the typed text is checked on the server (a real language: name, code, direction) before it is used.
+  const checkLanguage = async () => {
+    setLangState('checking')
+    const res = await postJson<{ language: string; name: string }>('/api/academy/language', { text: otherText.trim() })
+    if (!res.ok) return setLangState('bad')
+    setOtherText(res.data.name)
+    setLangState('idle')
+    onChange({ language: res.data.language })
+  }
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
     if (draft.subject.trim().length < ACADEMY_SUBJECT_MIN_CHARS) {
       setError(true)
+      return
+    }
+    // "Other language" chosen but not checked yet: check it first, the programme starts with the next press.
+    if (otherMode && !customLang) {
+      if (langState !== 'checking') void checkLanguage()
       return
     }
     onSubmit()
@@ -237,8 +258,16 @@ function SetupForm({
         </label>
         <select
           id="academy-language"
-          value={draft.language}
-          onChange={(e) => change({ language: e.target.value as AcademyLang })}
+          value={otherMode ? OTHER_LANGUAGE : draft.language}
+          onChange={(e) => {
+            if (e.target.value === OTHER_LANGUAGE) {
+              setOtherMode(true)
+              return
+            }
+            setOtherMode(false)
+            setLangState('idle')
+            change({ language: e.target.value as AcademyLang })
+          }}
           className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-base sm:w-auto"
         >
           {ALL_LANGS.map((l) => (
@@ -246,7 +275,42 @@ function SetupForm({
               {ACADEMY_LANGUAGE_NAMES[l]}
             </option>
           ))}
+          <option value={OTHER_LANGUAGE}>{tx.lang.other}</option>
         </select>
+        {otherMode && (
+          <div className="mt-3 space-y-2">
+            <label htmlFor="academy-language-other" className="block text-sm font-medium text-gray-900">
+              {tx.lang.otherLabel}
+            </label>
+            <div className="flex flex-wrap gap-2">
+              <input
+                id="academy-language-other"
+                type="text"
+                value={otherText}
+                maxLength={40}
+                placeholder={tx.lang.otherPlaceholder}
+                onChange={(e) => {
+                  setOtherText(e.target.value)
+                  setLangState('idle')
+                }}
+                autoComplete="off"
+                className="w-full max-w-xs rounded-xl border border-gray-300 px-4 py-2 text-base focus:border-purple-600 focus:outline-none"
+              />
+              <button
+                type="button"
+                disabled={otherText.trim().length < 2 || langState === 'checking'}
+                onClick={() => void checkLanguage()}
+                className="rounded-xl border border-purple-600 px-4 py-2 font-medium text-purple-700 hover:bg-purple-50 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {langState === 'checking' ? tx.lang.checking : tx.lang.check}
+              </button>
+            </div>
+            <p className="text-sm" role="status">
+              {customLang && langState !== 'bad' ? <span className="text-green-800">{tx.lang.ok(customLang.name)}</span> : langState === 'bad' ? <span className="text-red-800">{tx.lang.invalid}</span> : null}
+            </p>
+          </div>
+        )}
+        {(otherMode || !isSiteLang(draft.language)) && <p className="mt-2 max-w-xl text-sm text-gray-600">{tx.lang.note}</p>}
       </div>
 
       <label className="flex cursor-pointer items-start gap-3 text-sm text-gray-800">
@@ -326,7 +390,7 @@ async function postJson<T>(url: string, body: unknown): Promise<ApiResult<T>> {
 function errorText(tx: AcademyCopy, code: AcademyErrorCode | 'network'): string {
   if (code === 'rate') return tx.errorRate
   if (code === 'unsupported_subject') return tx.errorUnsupported
-  if (code === 'disabled' || code === 'unavailable') return tx.errorUnavailable
+  if (code === 'disabled' || code === 'unavailable' || code === 'busy') return tx.errorUnavailable
   return tx.errorGeneric
 }
 

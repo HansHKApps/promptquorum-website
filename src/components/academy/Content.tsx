@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
-import type { AcademyLang } from "@/lib/academy/types";
-import { getLangDir } from "@/lib/i18n/constants";
+import { htmlLangOf, langDirOf } from "@/lib/academy/language";
 
 /**
  * Wraps generated content (lessons, questions, objectives) in its own language and direction. The programme
@@ -12,12 +11,13 @@ export function Content({
   children,
   className,
 }: {
-  lang: AcademyLang;
+  /** a site-language code or a custom programme language */
+  lang: string;
   children: ReactNode;
   className?: string;
 }) {
   return (
-    <div lang={lang} dir={getLangDir(lang)} className={className}>
+    <div lang={htmlLangOf(lang)} dir={langDirOf(lang)} className={className}>
       {children}
     </div>
   );

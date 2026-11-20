@@ -10,6 +10,8 @@ import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { Programme, QuizQuestion, QuizResult } from '@/lib/academy/types'
 import { AiBadge } from './AiBadge'
 import { Content } from './Content'
+import { ReportProblem } from './ReportProblem'
+import { TutorPanel } from './TutorPanel'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -233,6 +235,22 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
           </button>
         </div>
       )}
+      {answered && current.reveal && (
+        <ReportProblem tx={tx} lang={programme.language} context={{ question: { prompt: current.prompt, options: current.options, correctIndex: current.reveal.correctIndex } }} />
+      )}
+      {/* Quiz lock (SPEC 8.6): the tutor is disabled while the question is unanswered; "Why?" exists only after the answer was revealed. */}
+      <TutorPanel
+        tx={tx}
+        programme={programme}
+        update={update}
+        lessonKey={isFinal ? 'final' : active.quizId}
+        lessonTitle={title}
+        lessonText={lessonSource(programme, isFinal ? programme.lessons.map((l) => l.id) : [active.quizId], isFinal ? 900 : 4000)
+          .map((l) => `${l.title}\n${l.text}`)
+          .join('\n\n')}
+        locked={!answered}
+        whyButton={answered && current.reveal ? { prompt: current.prompt, options: current.options, correctIndex: current.reveal.correctIndex, chosenIndex: chosen } : null}
+      />
       <button type="button" onClick={backToProgramme} className="text-sm text-purple-700 underline underline-offset-2">
         {tx.backToProgramme}
       </button>

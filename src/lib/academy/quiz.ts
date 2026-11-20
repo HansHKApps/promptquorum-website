@@ -7,7 +7,7 @@
 // generates replacements if too many were discarded (max 2 generation rounds).
 
 import { generateStructured, type ParseClient } from './generate'
-import { PROMPT_LANGUAGE } from './diagnostic'
+import { promptLanguage } from './language'
 import { finalTestSize, LESSON_QUIZ_SIZE } from './programme'
 import { questionProblems, toQuestion } from './questions'
 import { quizOutputSchema, verifyOutputSchema, type GeneratedQuestion, type QuizRequest } from './schemas'
@@ -72,7 +72,7 @@ async function generateRound(client: ParseClient, req: QuizRequest, plan: Record
     label: `quiz-${req.kind}`,
     system: QUIZ_SYSTEM,
     user: [
-      `Language: ${PROMPT_LANGUAGE[req.language]}`,
+      `Language: ${promptLanguage(req.language)}`,
       `Learner level: ${req.selfLevel}. Subject: <subject>${req.subject}</subject>`,
       `Write ${total} questions with this topic spread: ${Object.entries(plan)
         .filter(([, n]) => n > 0)

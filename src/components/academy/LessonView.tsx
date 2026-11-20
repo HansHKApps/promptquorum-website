@@ -12,6 +12,9 @@ import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { Lesson, Programme } from '@/lib/academy/types'
 import { AiBadge } from './AiBadge'
 import { Content } from './Content'
+import { ReportProblem } from './ReportProblem'
+import { StarRating } from './StarRating'
+import { TutorPanel, type TutorSeed } from './TutorPanel'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -55,6 +58,23 @@ export function LessonView({
   const [error, setError] = useState<AcademyErrorCode | 'network' | null>(null)
   const requested = useRef<string | null>(null)
   const topRef = useRef<HTMLDivElement>(null)
+  const articleRef = useRef<HTMLElement>(null)
+  // Tutor triggers from this screen: rephrase buttons under each section and "Explain this" for selected text.
+  const [seed, setSeed] = useState<TutorSeed | null>(null)
+  const seedId = useRef(0)
+  const ask = useCallback((s: Omit<TutorSeed, 'id'>) => setSeed({ ...s, id: ++seedId.current }), [])
+  const [selection, setSelection] = useState<{ text: string; x: number; y: number } | null>(null)
+  useEffect(() => {
+    const onChange = () => {
+      const sel = window.getSelection()
+      const text = sel?.toString().trim() ?? ''
+      if (!sel || sel.isCollapsed || text.length < 3 || !articleRef.current?.contains(sel.anchorNode)) return setSelection(null)
+      const rect = sel.getRangeAt(0).getBoundingClientRect()
+      setSelection({ text: text.slice(0, 600), x: rect.left + rect.width / 2, y: rect.top })
+    }
+    document.addEventListener('selectionchange', onChange)
+    return () => document.removeEventListener('selectionchange', onChange)
+  }, [])
 
   const updateProgramme = useCallback((fn: (p: Programme) => Programme) => update((s) => (s.programme ? { ...s, programme: fn(s.programme) } : s)), [update])
 
@@ -63,7 +83,7 @@ export function LessonView({
   const load = useCallback(async () => {
     setError(null)
     setLoading(true)
-    const res = await postJson<Pick<Lesson, 'sections' | 'furtherReading'>>('/api/academy/lesson', {
+    const res = await postJson<Pick<Lesson, 'sections' | 'furtherReading' | 'followUpQuestions'>>('/api/academy/lesson', {
       subject: programme.subject.slice(0, 120),
       language: programme.language,
       selfLevel: programme.selfLevel,
@@ -126,7 +146,7 @@ export function LessonView({
         </div>
       </div>
 
-      <article aria-labelledby="academy-lesson" className="space-y-5 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
+      <article ref={articleRef} aria-labelledby="academy-lesson" className="space-y-5 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
         <header>
           <Content lang={programme.language}>
             <h2 id="academy-lesson" className="text-2xl font-semibold text-gray-900">
@@ -169,6 +189,13 @@ export function LessonView({
                   <div className="space-y-3 leading-relaxed text-gray-800">
                     <Markdown text={s.body} />
                   </div>
+                  <div className="flex flex-wrap gap-2 pt-1" role="group" aria-label={tx.tutor.title}>
+                    {(['simpler', 'example', 'deeper', 'summarize'] as const).map((k) => (
+                      <button key={k} type="button" onClick={() => ask({ trigger: k, section: { heading: s.heading, body: s.body } })} className="rounded-full border border-purple-200 bg-white px-3 py-1 text-xs font-medium text-purple-800 hover:bg-purple-50">
+                        {tx.tutor[k]}
+                      </button>
+                    ))}
+                  </div>
                 </section>
               ))}
             </Content>
@@ -192,6 +219,25 @@ export function LessonView({
           </>
         )}
 
+        {ready && (
+          <>
+            <TutorPanel
+              tx={tx}
+              programme={programme}
+              update={update}
+              lessonKey={lesson.id}
+              lessonTitle={lesson.title}
+              lessonText={lesson.sections.map((s) => `${s.heading}\n${s.body}`).join('\n\n')}
+              chips={lesson.followUpQuestions}
+              seed={seed}
+            />
+            <div className="flex flex-wrap items-start justify-between gap-4 border-t border-gray-100 pt-4">
+              <StarRating key={lesson.id} tx={tx} kind="lesson" lang={programme.language} />
+              <ReportProblem tx={tx} lang={programme.language} context={{ lesson: lesson.title }} />
+            </div>
+          </>
+        )}
+
         <div className="flex flex-wrap items-center gap-3 border-t border-gray-100 pt-4">
           <button
             type="button"
@@ -207,6 +253,20 @@ export function LessonView({
           </button>
         </div>
       </article>
+      {selection && (
+        <button
+          type="button"
+          onMouseDown={(e) => e.preventDefault()}
+          onClick={() => {
+            ask({ trigger: 'explain', selected: selection.text })
+            setSelection(null)
+          }}
+          style={{ position: 'fixed', top: Math.max(8, selection.y - 44), left: selection.x, transform: 'translateX(-50%)', zIndex: 60 }}
+          className="rounded-full bg-purple-700 px-3 py-1.5 text-sm font-medium text-white shadow-lg hover:bg-purple-800"
+        >
+          {tx.tutor.explain}
+        </button>
+      )}
     </div>
   )
 }

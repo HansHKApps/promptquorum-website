@@ -8,7 +8,7 @@ import { Ratelimit } from '@upstash/ratelimit'
 import type { NextRequest } from 'next/server'
 import type { z } from 'zod'
 import { redis } from '@/lib/redis'
-import { academyEnabled } from './config'
+import { academyEnabled, ACADEMY_DAILY_GLOBAL, ACADEMY_DAILY_PER_IP } from './config'
 import { AcademyGenerationError } from './generate'
 import type { AcademyErrorCode } from './route-errors'
 
@@ -46,10 +46,13 @@ function ipKey(req: NextRequest): string {
  */
 export async function academyGuard<S extends z.ZodType>(
   req: NextRequest,
-  opts: { name: string; schema: S; requests: number; window: `${number} ${'m' | 'h'}` },
+  opts: { name: string; schema: S; requests: number; window: `${number} ${'m' | 'h'}`; /** counts toward the daily caps (default true; false for counters) */ metered?: boolean },
 ): Promise<{ body: z.infer<S> } | { response: Response }> {
   if (!academyEnabled()) return { response: academyError('disabled', 404) }
   if (!academyApiKey()) return { response: academyError('unavailable', 503) }
+
+  // A browser POST from another site carries a foreign Origin: refuse it (cheap protection against other pages using our API credit).
+  if (!sameOrigin(req)) return { response: academyError('invalid_input', 403) }
 
   let raw: unknown
   try {
@@ -63,11 +66,36 @@ export async function academyGuard<S extends z.ZodType>(
   try {
     const rl = await limiter(opts.name, opts.requests, opts.window).limit(ipKey(req))
     if (!rl.success) return { response: academyError('rate', 429) }
+    if (opts.metered !== false) {
+      const key = ipKey(req)
+      const daily = await limiter('daily', ACADEMY_DAILY_PER_IP, '24 h' as `${number} h`).limit(key)
+      if (!daily.success) return { response: academyError('rate', 429) }
+      if (!(await globalBudgetLeft())) return { response: academyError('busy', 503) }
+    }
   } catch (err) {
     console.error('[academy] rate limiter failed', err instanceof Error ? err.message : err)
     if (process.env.NODE_ENV === 'production') return { response: academyError('unavailable', 503) }
   }
   return { body: parsed.data }
+}
+
+function sameOrigin(req: NextRequest): boolean {
+  const origin = req.headers.get('origin')
+  if (!origin) return true
+  try {
+    const host = req.headers.get('x-forwarded-host') ?? req.headers.get('host')
+    return !host || new URL(origin).host === host
+  } catch {
+    return false
+  }
+}
+
+/** Whole-site daily ceiling of generation calls (UTC day). Counts first, then compares; a Redis error propagates to the guard. */
+async function globalBudgetLeft(): Promise<boolean> {
+  const key = `academy:global:${new Date().toISOString().slice(0, 10)}`
+  const n = await redis.incr(key)
+  if (n === 1) await redis.expire(key, 2 * 86_400)
+  return n <= ACADEMY_DAILY_GLOBAL
 }
 
 /**

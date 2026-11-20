@@ -466,7 +466,7 @@ test.describe('F5: certificate', () => {
       expect(text).toContain('/MediaBox [0 0 841.89 595.28]')
       const id = /PQA-\d{4}-[0-9A-HJKMNP-TV-Z]{10}/.exec(download.suggestedFilename())![0]
       expect(text).toContain(`/Keywords (${id})`)
-      if (lang === 'en') expect(text).toContain('(Learning Certificate')
+      if (lang === 'en') expect(text).toContain('(Certificate of Completion')
       const jpeg = jpegOf(pdf)
       expect(jpeg.length).toBeGreaterThan(50_000) // a drawn page, not a blank one
       fs.writeFileSync(testInfo.outputPath(`certificate-${lang}.jpg`), jpeg)

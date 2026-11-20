@@ -1,6 +1,6 @@
-import type { AcademyCopy } from './types'
+import type { AcademyBaseCopy } from './types'
 
-export const copy: AcademyCopy = {
+export const copy: AcademyBaseCopy = {
   metaTitle: 'PromptQuorum Academy: Free Personalized AI Learning',
   metaDescription:
     'Pick a subject, your time and your level. PromptQuorum Academy builds short lessons that draw on PromptQuorum guides, with an AI tutor, tests and a PDF certificate.',
@@ -144,7 +144,7 @@ export const copy: AcademyCopy = {
   certCreating: 'Creating certificate…',
   certError: 'The certificate could not be created. Please try again.',
   cert: {
-    title: 'Learning Certificate',
+    title: 'Certificate of Completion',
     awardedTo: 'Awarded to',
     nameNote: 'Name as entered by the learner. It has not been verified.',
     forProgramme: 'for completing the programme',
@@ -166,7 +166,7 @@ export const copy: AcademyCopy = {
   },
 
   privacyNote:
-    'No account needed. Your progress is saved in this browser only. To create lessons, questions and tutor answers, your subject, your answers and your tutor messages are sent to our AI provider (Anthropic); please do not type personal data into them. The name for your certificate stays in this browser. To prevent abuse, requests are rate-limited with a short-lived hashed key derived from your IP address. If you leave feedback, we store the rating, the comment and the subject you studied, without your name or any account.',
+    'No account needed. Your progress is saved in this browser only. To create lessons, questions and tutor answers, your subject, your answers and your tutor messages are sent to our AI provider (Anthropic); please do not type personal data into them. The name for your certificate stays in this browser. To prevent abuse, requests are rate-limited with a short-lived hashed key derived from your IP address. Star ratings are counted anonymously (a click is only a number). Written feedback reaches us only if you send it yourself by email; we do not store it on a server. If you register a certificate for online verification, we store the data shown there, never your name.',
   deleteData: 'Delete my data',
   deleteConfirm: 'Delete your Academy progress from this browser? This cannot be undone.',
   dataDeleted: 'Data deleted',

@@ -3,8 +3,9 @@
 
 import type { Level, TestMode } from '@/lib/academy/types'
 import type { AcademyTopicHub } from '@/lib/academy/topics'
+import type { AcademyExtraCopy } from './extra'
 
-export interface AcademyCopy {
+export interface AcademyBaseCopy {
   // Page (server-rendered, indexable)
   metaTitle: string
   metaDescription: string
@@ -180,3 +181,6 @@ export interface AcademyCopy {
   feedbackMailIntro: string
   feedbackMailLanguage: string
 }
+
+/** Everything the components read: the base texts plus the second part in extra.ts. */
+export type AcademyCopy = AcademyBaseCopy & AcademyExtraCopy
