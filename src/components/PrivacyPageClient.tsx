@@ -5,7 +5,7 @@ import { useLang } from '@/hooks/useLang'
 import { translations, type Language } from '@/translations'
 import { LangLinksBar } from '@/components/LangLinksBar'
 
-const EFFECTIVE_DATE = '13 November 2026'
+const EFFECTIVE_DATE = '20 November 2026'
 const CONTROLLER = 'PromptQuorum'
 const CONTROLLER_EMAIL = 'hello@promptquorum.com'
 const SITE_URL = 'https://www.promptquorum.com'
@@ -52,7 +52,7 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
             {t.privacyPageTitle}
           </h1>
           <p className="text-sm font-mono text-text-secondary">
-            {t.privacyEffectiveDate} <time dateTime="2026-11-13">{EFFECTIVE_DATE}</time> &nbsp;·&nbsp; {t.privacyController} {CONTROLLER} &nbsp;·&nbsp; {t.privacyContact} {CONTROLLER_EMAIL}
+            {t.privacyEffectiveDate} <time dateTime="2026-11-20">{EFFECTIVE_DATE}</time> &nbsp;·&nbsp; {t.privacyController} {CONTROLLER} &nbsp;·&nbsp; {t.privacyContact} {CONTROLLER_EMAIL}
           </p>
         </div>
 
@@ -115,6 +115,8 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
             <H3>{t.privacyAskHansTitle}</H3>
             <P>{t.privacyAskHansNote}</P>
             <P>{t.privacyHostingNote}</P>
+            <H3>{t.privacyAcademyTitle}</H3>
+            <P>{t.privacyAcademyNote}</P>
             <P>{t.privacyConsentLogNote}</P>
             <P>{t.privacyS2Closure}</P>
           </section>

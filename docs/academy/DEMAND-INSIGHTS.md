@@ -23,6 +23,12 @@ filter reduce, not eliminate, that. `npm run academy:demand -- --prune` deletes 
 - Owner: `npm run academy:demand` (text) / `-- --json` / `-- --prune`. Shows top subjects, top trained, themes, language/level/time/mode, weekly trend.
 - Marketing: `DEMAND_THEMES` maps each theme to an `AffiliateCategory` where one fits. PromptQuorum has no affiliate programme; the mapping only shows which product categories match.
 
-## Open before this is announced (owner / legal, postponed per DECISIONS.md)
-- Academy privacy text and the site privacy policy must say that the subject is counted anonymously for statistics (Art. 6(1)(f)). Locale copy was NOT changed here (geo-translation gate).
+## Privacy text (done 2026-11-20)
+- Site privacy policy: new "PromptQuorum Academy" block (`privacyAcademyTitle` / `privacyAcademyNote`) in all 9 locales, rendered after the hosting note; effective date set to 20 November 2026. It covers Anthropic processing (same terms as Ask Hans), hashed-IP rate limit (24 h), anonymous counters and subject statistics (5-request threshold, 13-week weekly lists), certificate registry (consent), Upstash, Art. 11 GDPR.
+- Academy in-app `privacyNote`: one sentence added in all 9 locales.
+- geo-translation: APPLIED (docs/geo-translation.md read; facts unchanged across locales, no new claims).
+- Legal bases are the SPEC section 17 assumptions (Art. 6(1)(b), (f), (a)); counsel not consulted.
+
+## Still open
+- Retention: the all-time subject lists have no automatic expiry. The policy says single-use entries are removed when statistics are reviewed: run `npm run academy:demand -- --prune` at each review.
 - Sampling bias: only people who start a programme are counted.
