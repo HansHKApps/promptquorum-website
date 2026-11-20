@@ -324,7 +324,7 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
     license: 'Open weights',
     deployment: 'Both',
     sourceUrl: 'https://huggingface.co/meta-models/Muse-Glimmer-30B',
-    sourceNote: 'Knowledge cutoff January 4, 2026 per the Muse Glimmer 30B model card (checked 2026-11-20); released August 2026. Meta\'s newest open-weight release after Llama 4.',
+    sourceNote: 'Knowledge cutoff January 4, 2026 per the Muse Glimmer 30B model card (checked 2026-11-20); released August 2026. Published on Hugging Face under the "meta-models" organization, which the page labels as Meta.',
   },
   {
     modelName: 'Qwen3.8-27B / Qwen3 14B / Qwen2.5 72B',
