@@ -49,6 +49,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen-Image',
       'Qwen-Image-Edit',
       'HiDream-O1',
+      'FLUX.2 klein 4B',
+      'FLUX 3 Image Klein',
+      'Qwen-Image-2512',
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
@@ -63,7 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '8 GB VRAM → FLUX.1 schnell, Stable Diffusion 3.5, SDXL, or Qwen-Image (GGUF quantized) — most of the local menu already fits.',
           '12–16 GB VRAM → FLUX.1 dev and Kontext (non-commercial license), Qwen-Image at higher precision.',
           'Need commercial use above $1M revenue → check FLUX dev/Kontext\'s non-commercial license and SD 3.5\'s $1M cap before choosing; Qwen-Image and FLUX schnell have no such limits.',
-          'Need readable text inside the image → Qwen-Image locally, or Ideogram in the cloud for one-off jobs.',
+          'Need readable text inside the image → try Qwen-Image locally; its developers report strong text rendering.',
         ],
         updatedDate: '2026-08-21',
       },
@@ -76,6 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Stable Diffusion 3.5 + SDXL (Stability AI)', anchor: '#sd35' },
       { label: 'Qwen-Image (Alibaba)', anchor: '#qwen-image' },
       { label: 'One to Watch: HiDream-O1', anchor: '#one-to-watch' },
+      { label: 'Newer Releases', anchor: '#newer-releases' },
       { label: 'The Hardware Gate', anchor: '#hardware-gate' },
       { label: 'The DIY Reality: What "Free" Asks of You', anchor: '#diy-reality' },
       { label: 'What AI Images Are Actually Good For', anchor: '#use-cases' },
@@ -164,11 +168,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://huggingface.co/HiDream-ai/HiDream-O1-Image', productName: 'HiDream-O1 on Hugging Face', productCategory: 'image-model', label: 'HiDream-O1 on Hugging Face' },
         ],
       },
+      newerReleases: {
+        id: 'newer-releases',
+        title: 'Newer Releases Worth Knowing (FLUX.2 [klein], Qwen-Image-2512)',
+        content: 'Three releases postdate the first version of this comparison. The facts below come from the official Hugging Face model cards and are developer-reported.',
+        items: [
+          '**FLUX.2 [klein] 4B** — Apache 2.0, 4B parameters; Black Forest Labs says it runs in about 13GB of VRAM (RTX 3090/4070-class and above) and can generate in under a second on suitable hardware. The [klein] 9B variants use a non-commercial license. [Model card](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B)',
+          '**FLUX 3 Image Klein** — 5.6B open weights under the FLUX Kommunity License v1.0 (non-commercial use, plus commercial output generation for qualifying users under US$5M gross annualized revenue; other uses need a commercial license). Its card reports 25–31GB of peak GPU memory in its test setup (B200, 1024×1024), so it is not an 8GB option. [Model card](https://huggingface.co/black-forest-labs/flux-3-image-klein)',
+          '**Qwen-Image-2512** — the December 2025 update of Qwen-Image: same 20B size and Apache 2.0 license, with improved human realism, natural detail and text rendering according to its model card. [Model card](https://huggingface.co/Qwen/Qwen-Image-2512)',
+        ],
+        note:
+          'These releases do not change the hardware table or the commercial-use rules above except where stated. Check each license before commercial use; this page is general information, not legal advice.',
+      },
       hardwareGate: {
         id: 'hardware-gate',
         title: 'The Hardware Gate (Lower Than You Think)',
         content: [
-          'If our video article scared you off local AI, this is the good-news table: images are simply a much lighter workload. A used RTX 3060 12GB (~$170–220) covers the first two rows below. Compare that to video generation, where 24GB is the comfortable tier.',
+          'If our video article scared you off local AI, this is the good-news table: images are simply a much lighter workload. A used RTX 3060 12GB (roughly $220–370 in recent eBay asking prices) covers the first two rows below. Compare that to video generation, where 24GB is the comfortable tier.',
           'Not sure where your hardware lands? These guides do the math: [VRAM Calculator](/local-llms/vram-calculator-local-llm) for exact requirements per model, [How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm) for charts across model sizes, [Best GPUs for Local AI](/local-llms/best-gpus-for-local-llms) and [Best Budget GPUs](/local-llms/best-budget-gpus-local-llm) for hardware picks, and [GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) for platform comparisons.',
         ],
         columns: ['Your GPU', 'What you can run'],
@@ -178,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your GPU': '24GB+ VRAM', 'What you can run': 'Everything, including FLUX.2 dev at full quality' },
         ],
         note:
-          'Rough hardware cost as of August 2026: a used RTX 3060 12GB runs about $170–220. GPU prices move — verify current pricing before buying rather than trusting this figure past a few months.',
+          'Rough hardware cost from eBay asking prices seen on 2026-11-20 (secondary data, many listings accept offers): a used RTX 3060 12GB is listed at about $220–370. GPU prices move — verify current pricing before buying.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -235,7 +251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Your situation': 'No GPU, or under 8GB VRAM', 'Recommendation': 'Cloud: getimg.ai (open models, no setup) or Adobe Firefly free trial to test' },
           { 'Your situation': 'Need images occasionally, zero setup tolerance', 'Recommendation': 'Cloud: Adobe Firefly (simplest) or getimg.ai (most model choice)' },
-          { 'Your situation': 'Text inside images (posters, thumbnails)', 'Recommendation': 'Local: Qwen-Image — or Ideogram in the cloud for one-offs' },
+          { 'Your situation': 'Text inside images (posters, thumbnails)', 'Recommendation': 'Local: Qwen-Image' },
           { 'Your situation': 'Commercial product at scale', 'Recommendation': 'Local: Qwen-Image or FLUX schnell (Apache 2.0) — check SD 3.5\'s $1M cap and FLUX dev\'s non-commercial terms first' },
           { 'Your situation': 'Client work where legal safety is questioned', 'Recommendation': 'Cloud: Adobe Firefly (commercially-safe training data)' },
           { 'Your situation': 'Client work, unreleased products, privacy-sensitive', 'Recommendation': 'Local — nothing leaves your machine' },
@@ -275,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can AI models put readable text inside images?',
-            a: 'Yes — this was a major 2025–2026 unlock. Qwen-Image leads locally (multilingual, including English and Chinese); Ideogram is a strong cloud option for text-heavy one-offs.',
+            a: 'Yes — this was a major 2025–2026 unlock. Qwen-Image is the local option its developers highlight for multilingual text (including English and Chinese); cloud services such as Ideogram also target text-in-image work.',
           },
           {
             q: 'Are my cloud-generated images private?',
@@ -314,6 +330,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[HiDream-O1 on Hugging Face](https://huggingface.co/HiDream-ai/HiDream-O1-Image) — official model card and MIT license.',
           '[Adobe Firefly](https://firefly.adobe.com/) — official product and pricing page.',
           '[getimg.ai pricing](https://getimg.ai/pricing) — official plan and pricing details.',
+          '[FLUX.2 [klein] 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) — official model card and Apache 2.0 license.',
+          '[FLUX 3 Image Klein on Hugging Face](https://huggingface.co/black-forest-labs/flux-3-image-klein) — official model card and FLUX Kommunity License terms.',
+          '[Qwen-Image-2512 on Hugging Face](https://huggingface.co/Qwen/Qwen-Image-2512) — official model card.',
+          '[Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) — plan names, prices and the Free plan.',
+          '[Ideogram documentation](https://docs.ideogram.ai/) — free and paid plan overview.',
+          '[eBay: used RTX 3060 12GB listings](https://www.ebay.com/shop/rtx-3060-12gb) — asking prices checked 2026-11-20 (secondary data).',
         ],
       },
       relatedReading: {
@@ -376,6 +398,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen-Image',
       'Qwen-Image-Edit',
       'HiDream-O1',
+      'FLUX.2 klein 4B',
+      'FLUX 3 Image Klein',
+      'Qwen-Image-2512',
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
@@ -390,7 +415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '8 جيجابايت VRAM ← FLUX.1 schnell وStable Diffusion 3.5 وSDXL أو Qwen-Image (بصيغة GGUF مضغوطة) — معظم القائمة المحلية تعمل بالفعل.',
           '12–16 جيجابايت VRAM ← FLUX.1 dev وKontext (ترخيص غير تجاري)، وQwen-Image بدقة أعلى.',
           'إذا كنت بحاجة لاستخدام تجاري بإيرادات تتجاوز مليون دولار ← تحقق من ترخيص FLUX dev/Kontext غير التجاري وسقف مليون دولار في SD 3.5 قبل الاختيار؛ فلا يوجد قيد مماثل في Qwen-Image وFLUX schnell.',
-          'إذا كنت بحاجة إلى نص مقروء داخل الصورة ← Qwen-Image محلياً، أو Ideogram في السحابة للمهام الفردية.',
+          'إذا كنت بحاجة إلى نص مقروء داخل الصورة ← جرّب Qwen-Image محلياً؛ ويفيد مطوّروه بقوة عرض النصوص.',
         ],
         updatedDate: '2026-08-21',
       },
@@ -403,6 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Stable Diffusion 3.5 + SDXL (من Stability AI)', anchor: '#sd35' },
       { label: 'Qwen-Image (من Alibaba)', anchor: '#qwen-image' },
       { label: 'نموذج للمتابعة: HiDream-O1', anchor: '#one-to-watch' },
+      { label: 'إصدارات حديثة', anchor: '#newer-releases' },
       { label: 'حاجز العتاد', anchor: '#hardware-gate' },
       { label: 'واقع الإعداد الذاتي: ما الذي تتطلبه كلمة "مجاني"', anchor: '#diy-reality' },
       { label: 'ما الذي تصلح له صور الذكاء الاصطناعي فعلياً', anchor: '#use-cases' },
@@ -491,11 +517,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://huggingface.co/HiDream-ai/HiDream-O1-Image', productName: 'HiDream-O1 on Hugging Face', productCategory: 'image-model', label: 'HiDream-O1 on Hugging Face' },
         ],
       },
+      newerReleases: {
+        id: 'newer-releases',
+        title: 'إصدارات حديثة تستحق المعرفة (FLUX.2 [klein] وQwen-Image-2512)',
+        content: 'صدرت ثلاثة إصدارات بعد النسخة الأولى من هذه المقارنة. تأتي المعلومات أدناه من بطاقات النماذج الرسمية على Hugging Face وهي إفادات من المطوّرين.',
+        items: [
+          '**FLUX.2 [klein] 4B** — رخصة Apache 2.0، بـ 4B معلمة؛ وتذكر Black Forest Labs أنه يعمل بنحو 13GB من VRAM (فئة RTX 3090/4070 فأعلى) ويمكنه التوليد في أقل من ثانية على عتاد مناسب. وتستخدم إصدارات [klein] 9B رخصة غير تجارية. [بطاقة النموذج](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B)',
+          '**FLUX 3 Image Klein** — أوزان مفتوحة بحجم 5.6B بموجب FLUX Kommunity License v1.0 (استخدام غير تجاري، إضافة إلى توليد المخرجات تجارياً للمستخدمين المؤهلين الذين تقل إيراداتهم الإجمالية السنوية عن 5 ملايين دولار أمريكي؛ وتتطلب الاستخدامات الأخرى رخصة تجارية). وتذكر بطاقته ذروة ذاكرة GPU بين 25 و31GB في بيئة اختبارها (B200، ‏1024×1024)، فليس خياراً بسعة 8GB. [بطاقة النموذج](https://huggingface.co/black-forest-labs/flux-3-image-klein)',
+          '**Qwen-Image-2512** — تحديث ديسمبر 2025 لـ Qwen-Image: الحجم نفسه (20B) ورخصة Apache 2.0، مع واقعية أفضل للأشخاص وتفاصيل طبيعية أكثر وعرض أفضل للنصوص بحسب بطاقته. [بطاقة النموذج](https://huggingface.co/Qwen/Qwen-Image-2512)',
+        ],
+        note:
+          'لا تغيّر هذه الإصدارات جدول العتاد ولا قواعد الاستخدام التجاري أعلاه إلا حيث ذُكر. راجع كل رخصة قبل الاستخدام التجاري؛ هذه الصفحة معلومات عامة وليست استشارة قانونية.',
+      },
       hardwareGate: {
         id: 'hardware-gate',
         title: 'حاجز العتاد (أقل مما تظن)',
         content: [
-          'إن كان مقالنا عن الفيديو قد نفّرك من الذكاء الاصطناعي المحلي، فهذا هو الجدول ذو الخبر السار: الصور ببساطة عبء عمل أخف بكثير. تغطي بطاقة RTX 3060 12GB مستعملة (بسعر يتراوح تقريباً بين 170 و220 دولاراً) الصفين الأولين أدناه. قارن ذلك بتوليد الفيديو، حيث تُعد 24 جيجابايت الفئة المريحة.',
+          'إن كان مقالنا عن الفيديو قد نفّرك من الذكاء الاصطناعي المحلي، فهذا هو الجدول ذو الخبر السار: الصور ببساطة عبء عمل أخف بكثير. تغطي بطاقة RTX 3060 12GB مستعملة (بحسب أسعار العرض الحديثة على eBay نحو 220 إلى 370 دولاراً) الصفين الأولين أدناه. قارن ذلك بتوليد الفيديو، حيث تُعد 24 جيجابايت الفئة المريحة.',
           'لست متأكداً من مستوى عتادك؟ تقوم هذه الأدلة بالحسابات نيابة عنك: [حاسبة VRAM](/ar/local-llms/vram-calculator-local-llm) لمعرفة المتطلبات الدقيقة لكل نموذج، [ما مقدار VRAM الذي تحتاجه؟](/ar/local-llms/how-much-vram-local-llm) لجداول تغطي أحجام النماذج المختلفة، [أفضل معالجات رسوميات للذكاء الاصطناعي المحلي](/ar/local-llms/best-gpus-for-local-llms) و[أفضل معالجات رسوميات اقتصادية](/ar/local-llms/best-budget-gpus-local-llm) لاختيارات العتاد، و[معالج الرسوميات مقابل المعالج المركزي مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon) لمقارنة المنصات.',
         ],
         columns: ['معالج الرسوميات لديك', 'ما يمكنك تشغيله'],
@@ -505,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'معالج الرسوميات لديك': '24 جيجابايت VRAM فأكثر', 'ما يمكنك تشغيله': 'كل شيء، بما في ذلك FLUX.2 dev بجودة كاملة' },
         ],
         note:
-          'تكلفة العتاد التقريبية اعتباراً من أغسطس 2026: بطاقة RTX 3060 12GB مستعملة تكلّف حوالي 170-220 دولاراً. أسعار معالجات الرسوميات تتغير باستمرار — تحقق من الأسعار الحالية قبل الشراء بدلاً من الاعتماد على هذا الرقم بعد مرور بضعة أشهر.',
+          'تكلفة العتاد التقريبية بحسب أسعار العرض على eBay بتاريخ 2026-11-20 (بيانات ثانوية): بطاقة RTX 3060 12GB مستعملة معروضة بنحو 220-370 دولاراً. أسعار معالجات الرسوميات تتغير باستمرار — تحقق من الأسعار الحالية قبل الشراء بدلاً من الاعتماد على هذا الرقم بعد مرور بضعة أشهر.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -562,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'وضعك': 'بلا معالج رسوميات، أو أقل من 8 جيجابايت VRAM', 'التوصية': 'السحابة: getimg.ai (نماذج مفتوحة، بلا إعداد) أو نسخة Adobe Firefly التجريبية المجانية للاختبار' },
           { 'وضعك': 'تحتاج صوراً بين الحين والآخر، ولا تحتمل أي إعداد', 'التوصية': 'السحابة: Adobe Firefly (الأبسط) أو getimg.ai (أكبر تنوع في النماذج)' },
-          { 'وضعك': 'نص داخل الصور (ملصقات، صور مصغرة)', 'التوصية': 'محلياً: Qwen-Image — أو Ideogram في السحابة للمهام الفردية' },
+          { 'وضعك': 'نص داخل الصور (ملصقات، صور مصغرة)', 'التوصية': 'محلياً: Qwen-Image' },
           { 'وضعك': 'منتج تجاري على نطاق واسع', 'التوصية': 'محلياً: Qwen-Image أو FLUX schnell (رخصة Apache 2.0) — تحقق أولاً من سقف مليون دولار في SD 3.5 وشروط FLUX dev غير التجارية' },
           { 'وضعك': 'عمل عملاء تُطرح فيه أسئلة عن الأمان القانوني', 'التوصية': 'السحابة: Adobe Firefly (بيانات تدريب آمنة تجارياً)' },
           { 'وضعك': 'عمل عملاء، منتجات لم تُطلق بعد، حساسية خصوصية', 'التوصية': 'محلياً — لا شيء يغادر جهازك' },
@@ -602,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكن لنماذج الذكاء الاصطناعي وضع نص مقروء داخل الصور؟',
-            a: 'نعم — كان هذا إنجازاً رئيسياً في 2025-2026. يتصدر Qwen-Image محلياً (متعدد اللغات، بما فيها الإنجليزية والصينية)؛ ويُعد Ideogram خياراً سحابياً قوياً للمهام الفردية كثيفة النصوص.',
+            a: 'نعم — كان هذا إنجازاً رئيسياً في 2025-2026. يُعد Qwen-Image الخيار المحلي الذي يبرزه مطوّروه للنصوص متعددة اللغات (بما فيها الإنجليزية والصينية)؛ كما تستهدف خدمات سحابية مثل Ideogram النصوص داخل الصور.',
           },
           {
             q: 'هل صوري المُولّدة عبر السحابة خاصة؟',
@@ -641,6 +679,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[HiDream-O1 على Hugging Face](https://huggingface.co/HiDream-ai/HiDream-O1-Image) — بطاقة النموذج الرسمية وشروط رخصة MIT.',
           '[Adobe Firefly](https://firefly.adobe.com/) — صفحة المنتج والتسعير الرسمية.',
           '[تسعير getimg.ai](https://getimg.ai/pricing) — تفاصيل الخطط والتسعير الرسمية.',
+          '[FLUX.2 [klein] 4B على Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) — بطاقة النموذج الرسمية ورخصة Apache 2.0.',
+          '[FLUX 3 Image Klein على Hugging Face](https://huggingface.co/black-forest-labs/flux-3-image-klein) — بطاقة النموذج الرسمية وشروط FLUX Kommunity License.',
+          '[Qwen-Image-2512 على Hugging Face](https://huggingface.co/Qwen/Qwen-Image-2512) — بطاقة النموذج الرسمية.',
+          '[خطط Adobe Firefly](https://www.adobe.com/products/firefly/plans.html) — أسماء الخطط والأسعار وخطة Free.',
+          '[وثائق Ideogram](https://docs.ideogram.ai/) — نظرة عامة على الخطط المجانية والمدفوعة.',
+          '[eBay: بطاقات RTX 3060 12GB مستعملة](https://www.ebay.com/shop/rtx-3060-12gb) — أسعار معروضة بتاريخ 2026-11-20 (بيانات ثانوية).',
         ],
       },
       relatedReading: {
@@ -703,6 +747,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen-Image',
       'Qwen-Image-Edit',
       'HiDream-O1',
+      'FLUX.2 klein 4B',
+      'FLUX 3 Image Klein',
+      'Qwen-Image-2512',
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
@@ -717,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '8 GB VRAM → FLUX.1 schnell, Stable Diffusion 3.5, SDXL oder Qwen-Image (GGUF-quantisiert) — der Großteil des lokalen Angebots passt bereits.',
           '12–16 GB VRAM → FLUX.1 dev und Kontext (nicht-kommerzielle Lizenz), Qwen-Image in höherer Präzision.',
           'Kommerzielle Nutzung über 1 Million US-Dollar Umsatz nötig → prüfen Sie vor der Wahl die nicht-kommerzielle Lizenz von FLUX dev/Kontext sowie die 1-Mio.-Grenze von SD 3.5; Qwen-Image und FLUX schnell kennen solche Grenzen nicht.',
-          'Lesbarer Text im Bild nötig → lokal Qwen-Image, oder Ideogram in der Cloud für Einzelaufträge.',
+          'Lesbarer Text im Bild nötig → lokal Qwen-Image ausprobieren; laut Entwicklern liefert es eine starke Textwiedergabe.',
         ],
         updatedDate: '2026-08-21',
       },
@@ -730,6 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Stable Diffusion 3.5 + SDXL (Stability AI)', anchor: '#sd35' },
       { label: 'Qwen-Image (Alibaba)', anchor: '#qwen-image' },
       { label: 'Einer zum Beobachten: HiDream-O1', anchor: '#one-to-watch' },
+      { label: 'Neuere Veröffentlichungen', anchor: '#newer-releases' },
       { label: 'Die Hardware-Hürde', anchor: '#hardware-gate' },
       { label: 'Die DIY-Realität: Was „kostenlos" von Ihnen verlangt', anchor: '#diy-reality' },
       { label: 'Wofür KI-Bilder wirklich gut sind', anchor: '#use-cases' },
@@ -818,6 +866,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://huggingface.co/HiDream-ai/HiDream-O1-Image', productName: 'HiDream-O1 on Hugging Face', productCategory: 'image-model', label: 'HiDream-O1 on Hugging Face' },
         ],
       },
+      newerReleases: {
+        id: 'newer-releases',
+        title: 'Neuere Veröffentlichungen, die man kennen sollte (FLUX.2 [klein], Qwen-Image-2512)',
+        content: 'Drei Veröffentlichungen sind nach der ersten Fassung dieses Vergleichs erschienen. Die folgenden Angaben stammen von den offiziellen Hugging-Face-Modellkarten und sind Herstellerangaben.',
+        items: [
+          '**FLUX.2 [klein] 4B** — Apache 2.0, 4B Parameter; Black Forest Labs gibt an, dass es mit etwa 13GB VRAM läuft (Klasse RTX 3090/4070 und darüber) und auf geeigneter Hardware in unter einer Sekunde generieren kann. Die [klein]-9B-Varianten verwenden eine nicht-kommerzielle Lizenz. [Modellkarte](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B)',
+          '**FLUX 3 Image Klein** — 5,6B offene Gewichte unter der FLUX Kommunity License v1.0 (nicht-kommerzielle Nutzung sowie kommerzielle Ausgabegenerierung für berechtigte Nutzer mit weniger als 5 Mio. US$ annualisiertem Bruttoumsatz; andere Nutzungen erfordern eine kommerzielle Lizenz). Laut Modellkarte liegt der Spitzenspeicherbedarf im Testaufbau (B200, 1024×1024) bei 25–31GB, es ist also keine 8GB-Option. [Modellkarte](https://huggingface.co/black-forest-labs/flux-3-image-klein)',
+          '**Qwen-Image-2512** — das Update von Qwen-Image vom Dezember 2025: gleiche Größe (20B) und Apache-2.0-Lizenz, laut Modellkarte mit verbessertem Realismus bei Menschen, natürlicheren Details und besserer Textwiedergabe. [Modellkarte](https://huggingface.co/Qwen/Qwen-Image-2512)',
+        ],
+        note:
+          'Diese Veröffentlichungen ändern die Hardwaretabelle und die obigen Regeln zur kommerziellen Nutzung nur dort, wo es angegeben ist. Prüfen Sie jede Lizenz vor kommerzieller Nutzung; diese Seite ist eine allgemeine Information und keine Rechtsberatung.',
+      },
       hardwareGate: {
         id: 'hardware-gate',
         title: 'Die Hardware-Hürde (niedriger als gedacht)',
@@ -832,7 +892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihre GPU': '24 GB+ VRAM', 'Was Sie ausführen können': 'Alles, einschließlich FLUX.2 dev in voller Qualität' },
         ],
         note:
-          'Grobe Hardwarekosten Stand August 2026: Eine gebrauchte RTX 3060 12GB kostet auf dem deutschen Gebrauchtmarkt (z. B. kleinanzeigen.de, eBay.de) etwa 250–300 €. GPU-Preise ändern sich — prüfen Sie die aktuellen Preise vor dem Kauf, statt sich über mehrere Monate hinweg auf diese Zahl zu verlassen.',
+          'Grobe Grobe Hardwarekosten (ältere Schätzung vom August, nicht neu geprüft; Angebotspreise US-eBay lagen am 20.11.2026 bei etwa $220–370): Eine gebrauchte RTX 3060 12GB kostete auf dem deutschen Gebrauchtmarkt (z. B. kleinanzeigen.de, eBay.de) etwa 250–300 €. GPU-Preise ändern sich — prüfen Sie die aktuellen Preise vor dem Kauf, statt sich über mehrere Monate hinweg auf diese Zahl zu verlassen.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -889,7 +949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Ihre Situation': 'Keine GPU oder unter 8 GB VRAM', 'Empfehlung': 'Cloud: getimg.ai (offene Modelle, kein Setup) oder kostenlose Testphase von Adobe Firefly' },
           { 'Ihre Situation': 'Gelegentlich Bilder nötig, null Toleranz für Setup', 'Empfehlung': 'Cloud: Adobe Firefly (am einfachsten) oder getimg.ai (größte Modellauswahl)' },
-          { 'Ihre Situation': 'Text im Bild (Poster, Thumbnails)', 'Empfehlung': 'Lokal: Qwen-Image — oder Ideogram in der Cloud für Einzelaufträge' },
+          { 'Ihre Situation': 'Text im Bild (Poster, Thumbnails)', 'Empfehlung': 'Lokal: Qwen-Image' },
           { 'Ihre Situation': 'Kommerzielles Produkt im großen Maßstab', 'Empfehlung': 'Lokal: Qwen-Image oder FLUX schnell (Apache 2.0) — vorher die 1-Mio.-Grenze von SD 3.5 und die nicht-kommerziellen Bedingungen von FLUX dev prüfen' },
           { 'Ihre Situation': 'Kundenarbeit, bei der rechtliche Sicherheit infrage steht', 'Empfehlung': 'Cloud: Adobe Firefly (kommerziell sichere Trainingsdaten)' },
           { 'Ihre Situation': 'Kundenarbeit, unveröffentlichte Produkte, datenschutzsensibel', 'Empfehlung': 'Lokal — nichts verlässt Ihre Maschine' },
@@ -929,7 +989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Können KI-Modelle lesbaren Text in Bilder einfügen?',
-            a: 'Ja — das war einer der großen Durchbrüche 2025–2026. Qwen-Image führt lokal (mehrsprachig, unter anderem Englisch und Chinesisch); Ideogram ist eine starke Cloud-Option für textlastige Einzelaufträge.',
+            a: 'Ja — das war ein großer Durchbruch 2025–2026. Qwen-Image ist die lokale Option, die seine Entwickler für mehrsprachigen Text (einschließlich Englisch und Chinesisch) hervorheben; auch Cloud-Dienste wie Ideogram zielen auf Text im Bild.',
           },
           {
             q: 'Sind meine cloud-generierten Bilder privat?',
@@ -976,6 +1036,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[HiDream-O1 auf Hugging Face](https://huggingface.co/HiDream-ai/HiDream-O1-Image) — offizielle Modellkarte und MIT-Lizenz.',
           '[Adobe Firefly](https://firefly.adobe.com/) — offizielle Produkt- und Preisseite.',
           '[getimg.ai Preise](https://getimg.ai/pricing) — offizielle Tarif- und Preisdetails.',
+          '[FLUX.2 [klein] 4B auf Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) — offizielle Modellkarte und Apache-2.0-Lizenz.',
+          '[FLUX 3 Image Klein auf Hugging Face](https://huggingface.co/black-forest-labs/flux-3-image-klein) — offizielle Modellkarte und Bedingungen der FLUX Kommunity License.',
+          '[Qwen-Image-2512 auf Hugging Face](https://huggingface.co/Qwen/Qwen-Image-2512) — offizielle Modellkarte.',
+          '[Adobe Firefly Tarife](https://www.adobe.com/products/firefly/plans.html) — Tarifnamen, Preise und Free-Tarif.',
+          '[Ideogram-Dokumentation](https://docs.ideogram.ai/) — Überblick über kostenlose und kostenpflichtige Tarife.',
+          '[eBay: gebrauchte RTX 3060 12GB](https://www.ebay.com/shop/rtx-3060-12gb) — Angebotspreise, am 20.11.2026 geprüft (Sekundärdaten).',
         ],
       },
       relatedReading: {
@@ -1038,6 +1104,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen-Image',
       'Qwen-Image-Edit',
       'HiDream-O1',
+      'FLUX.2 klein 4B',
+      'FLUX 3 Image Klein',
+      'Qwen-Image-2512',
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
@@ -1052,7 +1121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '8 GB de VRAM → FLUX.1 schnell, Stable Diffusion 3.5, SDXL o Qwen-Image (cuantizado en GGUF) — la mayor parte del menú local ya entra.',
           '12–16 GB de VRAM → FLUX.1 dev y Kontext (licencia no comercial), Qwen-Image a mayor precisión.',
           'Necesitas uso comercial por encima de $1M de ingresos → revisa la licencia no comercial de FLUX dev/Kontext y el límite de $1M de SD 3.5 antes de elegir; Qwen-Image y FLUX schnell no tienen esos límites.',
-          'Necesitas texto legible dentro de la imagen → Qwen-Image localmente, o Ideogram en la nube para trabajos puntuales.',
+          'Necesitas texto legible dentro de la imagen → prueba Qwen-Image localmente; sus desarrolladores informan de un buen renderizado de texto.',
         ],
         updatedDate: '2026-08-21',
       },
@@ -1065,6 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Stable Diffusion 3.5 + SDXL (Stability AI)', anchor: '#sd35' },
       { label: 'Qwen-Image (Alibaba)', anchor: '#qwen-image' },
       { label: 'Uno a seguir: HiDream-O1', anchor: '#one-to-watch' },
+      { label: 'Novedades recientes', anchor: '#newer-releases' },
       { label: 'La barrera del hardware', anchor: '#hardware-gate' },
       { label: 'La realidad del hazlo-tú-mismo: lo que "gratis" te pide', anchor: '#diy-reality' },
       { label: 'Para qué sirven realmente las imágenes con IA', anchor: '#use-cases' },
@@ -1153,11 +1223,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://huggingface.co/HiDream-ai/HiDream-O1-Image', productName: 'HiDream-O1 on Hugging Face', productCategory: 'image-model', label: 'HiDream-O1 on Hugging Face' },
         ],
       },
+      newerReleases: {
+        id: 'newer-releases',
+        title: 'Novedades que conviene conocer (FLUX.2 [klein], Qwen-Image-2512)',
+        content: 'Tres lanzamientos son posteriores a la primera versión de esta comparativa. Los datos siguientes proceden de las fichas oficiales de Hugging Face y son declaraciones de los desarrolladores.',
+        items: [
+          '**FLUX.2 [klein] 4B** — Apache 2.0, 4B parámetros; Black Forest Labs indica que funciona con unos 13GB de VRAM (clase RTX 3090/4070 o superior) y puede generar en menos de un segundo con hardware adecuado. Las variantes [klein] 9B usan una licencia no comercial. [Ficha](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B)',
+          '**FLUX 3 Image Klein** — 5.6B de pesos abiertos bajo la FLUX Kommunity License v1.0 (uso no comercial y generación comercial de salidas para usuarios que califiquen, con menos de 5 M US$ de ingresos brutos anualizados; otros usos requieren licencia comercial). Su ficha indica 25–31GB de memoria GPU pico en su entorno de prueba (B200, 1024×1024), así que no es una opción de 8GB. [Ficha](https://huggingface.co/black-forest-labs/flux-3-image-klein)',
+          '**Qwen-Image-2512** — la actualización de Qwen-Image de diciembre de 2025: mismo tamaño (20B) y licencia Apache 2.0, con mejor realismo humano, más detalle natural y mejor renderizado de texto según su ficha. [Ficha](https://huggingface.co/Qwen/Qwen-Image-2512)',
+        ],
+        note:
+          'Estos lanzamientos no cambian la tabla de hardware ni las reglas de uso comercial anteriores salvo donde se indica. Revisa cada licencia antes de un uso comercial; esta página es información general, no asesoría jurídica.',
+      },
       hardwareGate: {
         id: 'hardware-gate',
         title: 'La barrera del hardware (más baja de lo que crees)',
         content: [
-          'Si nuestro artículo sobre vídeo te asustó y te alejó de la IA local, esta es la tabla de buenas noticias: las imágenes son simplemente una carga de trabajo mucho más ligera. Una RTX 3060 12GB de segunda mano (~$170–220; los precios locales varían según el país y los impuestos) cubre las dos primeras filas de abajo. Compáralo con la generación de vídeo, donde 24GB es el nivel cómodo.',
+          'Si nuestro artículo sobre vídeo te asustó y te alejó de la IA local, esta es la tabla de buenas noticias: las imágenes son simplemente una carga de trabajo mucho más ligera. Una RTX 3060 12GB de segunda mano (unos $220–370 en precios de oferta recientes de eBay; los precios locales varían según el país y los impuestos) cubre las dos primeras filas de abajo. Compáralo con la generación de vídeo, donde 24GB es el nivel cómodo.',
           '¿No sabes dónde se sitúa tu hardware? Estas guías hacen los cálculos: [Calculadora de VRAM](/es/local-llms/vram-calculator-local-llm) para requisitos exactos por modelo, [¿Cuánta VRAM necesitas?](/es/local-llms/how-much-vram-local-llm) para tablas comparativas entre tamaños de modelo, [Mejores GPU para IA local](/es/local-llms/best-gpus-for-local-llms) y [Mejores GPU económicas](/es/local-llms/best-budget-gpus-local-llm) para recomendaciones de hardware, y [GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon) para comparativas de plataformas.',
         ],
         columns: ['Tu GPU', 'Qué puedes ejecutar'],
@@ -1167,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu GPU': '24GB+ de VRAM', 'Qué puedes ejecutar': 'Todo, incluyendo FLUX.2 dev a máxima calidad' },
         ],
         note:
-          'Coste aproximado de hardware a fecha de agosto de 2026: una RTX 3060 12GB de segunda mano cuesta entre $170 y $220. Los precios de las GPU cambian — y varían según el país y los impuestos locales — verifica el precio actual antes de comprar en lugar de confiar en esta cifra pasados unos meses.',
+          'Coste aproximado de hardware a fecha de agosto de 2026: una RTX 3060 12GB de segunda mano aparece en eBay (precios de oferta del 20/11/2026, datos secundarios) entre $220 y $370. Los precios de las GPU cambian — y varían según el país y los impuestos locales — verifica el precio actual antes de comprar en lugar de confiar en esta cifra pasados unos meses.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -1224,7 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Tu situación': 'Sin GPU, o menos de 8GB de VRAM', 'Recomendación': 'Nube: getimg.ai (modelos abiertos, sin configuración) o prueba gratuita de Adobe Firefly para probar' },
           { 'Tu situación': 'Necesitas imágenes ocasionalmente, cero tolerancia a la configuración', 'Recomendación': 'Nube: Adobe Firefly (más sencillo) o getimg.ai (más variedad de modelos)' },
-          { 'Tu situación': 'Texto dentro de las imágenes (carteles, miniaturas)', 'Recomendación': 'Local: Qwen-Image — o Ideogram en la nube para trabajos puntuales' },
+          { 'Tu situación': 'Texto dentro de las imágenes (carteles, miniaturas)', 'Recomendación': 'Local: Qwen-Image' },
           { 'Tu situación': 'Producto comercial a gran escala', 'Recomendación': 'Local: Qwen-Image o FLUX schnell (Apache 2.0) — revisa antes el límite de $1M de SD 3.5 y los términos no comerciales de FLUX dev' },
           { 'Tu situación': 'Trabajo con clientes donde se cuestiona la seguridad legal', 'Recomendación': 'Nube: Adobe Firefly (datos de entrenamiento comercialmente seguros)' },
           { 'Tu situación': 'Trabajo con clientes, productos no lanzados, sensible a la privacidad', 'Recomendación': 'Local — nada sale de tu máquina' },
@@ -1264,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Pueden los modelos de IA poner texto legible dentro de las imágenes?',
-            a: 'Sí — esto fue un gran desbloqueo en 2025–2026. Qwen-Image lidera a nivel local (multilingüe, incluyendo inglés y chino); Ideogram es una sólida opción en la nube para trabajos puntuales con mucho texto.',
+            a: 'Sí — fue un gran avance de 2025–2026. Qwen-Image es la opción local que sus desarrolladores destacan para texto multilingüe (incluidos inglés y chino); servicios en la nube como Ideogram también apuntan al texto dentro de imagen.',
           },
           {
             q: '¿Son privadas mis imágenes generadas en la nube?',
@@ -1303,6 +1385,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[HiDream-O1 en Hugging Face](https://huggingface.co/HiDream-ai/HiDream-O1-Image) — ficha oficial del modelo y licencia MIT.',
           '[Adobe Firefly](https://firefly.adobe.com/) — página oficial de producto y precios.',
           '[Precios de getimg.ai](https://getimg.ai/pricing) — detalles oficiales de planes y precios.',
+          '[FLUX.2 [klein] 4B en Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) — ficha oficial y licencia Apache 2.0.',
+          '[FLUX 3 Image Klein en Hugging Face](https://huggingface.co/black-forest-labs/flux-3-image-klein) — ficha oficial y términos de la FLUX Kommunity License.',
+          '[Qwen-Image-2512 en Hugging Face](https://huggingface.co/Qwen/Qwen-Image-2512) — ficha oficial.',
+          '[Planes de Adobe Firefly](https://www.adobe.com/products/firefly/plans.html) — nombres, precios y plan Free.',
+          '[Documentación de Ideogram](https://docs.ideogram.ai/) — resumen de planes gratuitos y de pago.',
+          '[eBay: RTX 3060 12GB usadas](https://www.ebay.com/shop/rtx-3060-12gb) — precios de oferta consultados el 20/11/2026 (datos secundarios).',
         ],
       },
       relatedReading: {
@@ -1365,6 +1453,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen-Image',
       'Qwen-Image-Edit',
       'HiDream-O1',
+      'FLUX.2 klein 4B',
+      'FLUX 3 Image Klein',
+      'Qwen-Image-2512',
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
@@ -1379,7 +1470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '8 Go de VRAM → FLUX.1 schnell, Stable Diffusion 3.5, SDXL ou Qwen-Image (quantifié GGUF) — l’essentiel du menu local passe déjà.',
           '12-16 Go de VRAM → FLUX.1 dev et Kontext (licence non commerciale), Qwen-Image en précision supérieure.',
           'Usage commercial au-delà de 1 M$ de revenus → vérifiez la licence non commerciale de FLUX dev/Kontext et le plafond de 1 M$ de SD 3.5 avant de choisir ; Qwen-Image et FLUX schnell n’ont aucune limite de ce type.',
-          'Texte lisible dans l’image → Qwen-Image en local, ou Ideogram dans le cloud pour un usage ponctuel.',
+          'Texte lisible dans l’image → essayez Qwen-Image en local ; ses développeurs annoncent un bon rendu de texte.',
         ],
         updatedDate: '2026-08-21',
       },
@@ -1392,6 +1483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Stable Diffusion 3.5 + SDXL (Stability AI)', anchor: '#sd35' },
       { label: 'Qwen-Image (Alibaba)', anchor: '#qwen-image' },
       { label: 'À surveiller : HiDream-O1', anchor: '#one-to-watch' },
+      { label: 'Nouveautés récentes', anchor: '#newer-releases' },
       { label: 'Le seuil matériel', anchor: '#hardware-gate' },
       { label: 'La réalité du DIY : ce que « gratuit » exige de vous', anchor: '#diy-reality' },
       { label: 'À quoi servent vraiment les images IA', anchor: '#use-cases' },
@@ -1480,11 +1572,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://huggingface.co/HiDream-ai/HiDream-O1-Image', productName: 'HiDream-O1 on Hugging Face', productCategory: 'image-model', label: 'HiDream-O1 on Hugging Face' },
         ],
       },
+      newerReleases: {
+        id: 'newer-releases',
+        title: 'Nouveautés à connaître (FLUX.2 [klein], Qwen-Image-2512)',
+        content: 'Trois sorties sont postérieures à la première version de ce comparatif. Les informations ci-dessous proviennent des fiches officielles Hugging Face et sont déclarées par les développeurs.',
+        items: [
+          '**FLUX.2 [klein] 4B** — Apache 2.0, 4 Md de paramètres ; Black Forest Labs indique qu’il fonctionne avec environ 13 Go de VRAM (classe RTX 3090/4070 et au-delà) et peut générer en moins d’une seconde sur du matériel adapté. Les variantes [klein] 9B utilisent une licence non commerciale. [Fiche](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B)',
+          '**FLUX 3 Image Klein** — 5.6B de poids ouverts sous la FLUX Kommunity License v1.0 (usage non commercial, plus génération commerciale de sorties pour les utilisateurs éligibles sous 5 M US$ de revenu brut annualisé ; les autres usages exigent une licence commerciale). Sa fiche indique 25–31 Go de mémoire GPU maximale dans son banc d’essai (B200, 1024×1024) : ce n’est donc pas une option 8 Go. [Fiche](https://huggingface.co/black-forest-labs/flux-3-image-klein)',
+          '**Qwen-Image-2512** — la mise à jour de Qwen-Image de décembre 2025 : même taille (20B) et licence Apache 2.0, avec un meilleur réalisme humain, plus de détails naturels et un meilleur rendu de texte selon sa fiche. [Fiche](https://huggingface.co/Qwen/Qwen-Image-2512)',
+        ],
+        note:
+          'Ces sorties ne modifient ni le tableau matériel ni les règles d’usage commercial ci-dessus, sauf mention contraire. Vérifiez chaque licence avant un usage commercial ; cette page est une information générale, pas un conseil juridique.',
+      },
       hardwareGate: {
         id: 'hardware-gate',
         title: 'Le seuil matériel (plus bas que vous ne le pensez)',
         content: [
-          'Si notre article vidéo vous a effrayé, voici le tableau qui rassure : les images représentent une charge de travail bien plus légère. Une RTX 3060 12 Go d’occasion (~170-220 $, prix US) couvre les deux premières lignes ci-dessous. À comparer à la génération vidéo, où 24 Go est le palier confortable.',
+          'Si notre article vidéo vous a effrayé, voici le tableau qui rassure : les images représentent une charge de travail bien plus légère. Une RTX 3060 12 Go d’occasion (environ 220-370 $ selon les prix demandés récents sur eBay, prix US) couvre les deux premières lignes ci-dessous. À comparer à la génération vidéo, où 24 Go est le palier confortable.',
           'Vous ne savez pas où se situe votre matériel ? Ces guides font le calcul : [Calculateur de VRAM](/fr/local-llms/vram-calculator-local-llm) pour les besoins exacts par modèle, [Combien de VRAM vous faut-il ?](/fr/local-llms/how-much-vram-local-llm) pour des graphiques par taille de modèle, [Meilleurs GPU pour l’IA locale](/fr/local-llms/best-gpus-for-local-llms) et [Meilleurs GPU petit budget](/fr/local-llms/best-budget-gpus-local-llm) pour des choix matériels, et [GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon) pour les comparatifs de plateformes.',
         ],
         columns: ['Votre GPU', 'Ce que vous pouvez exécuter'],
@@ -1494,7 +1598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre GPU': '24 Go+ de VRAM', 'Ce que vous pouvez exécuter': 'Tout, y compris FLUX.2 dev en pleine qualité' },
         ],
         note:
-          'Coût matériel approximatif en août 2026 (prix US) : une RTX 3060 12 Go d’occasion coûte environ 170-220 $. Les prix des GPU évoluent — vérifiez le tarif actuel avant d’acheter plutôt que de vous fier à ce chiffre au-delà de quelques mois.',
+          'Coût matériel approximatif en août 2026 (prix US) : une RTX 3060 12 Go d’occasion est affichée sur eBay (prix demandés au 20/11/2026, données secondaires) autour de 220-370 $. Les prix des GPU évoluent — vérifiez le tarif actuel avant d’acheter plutôt que de vous fier à ce chiffre au-delà de quelques mois.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -1551,7 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Votre situation': 'Aucun GPU, ou moins de 8 Go de VRAM', 'Recommandation': 'Cloud : getimg.ai (modèles ouverts, sans installation) ou l’essai gratuit d’Adobe Firefly pour tester' },
           { 'Votre situation': 'Besoin d’images occasionnel, aucune tolérance à l’installation', 'Recommandation': 'Cloud : Adobe Firefly (le plus simple) ou getimg.ai (le plus grand choix de modèles)' },
-          { 'Votre situation': 'Texte dans les images (affiches, miniatures)', 'Recommandation': 'Local : Qwen-Image — ou Ideogram dans le cloud pour un usage ponctuel' },
+          { 'Votre situation': 'Texte dans les images (affiches, miniatures)', 'Recommandation': 'Local : Qwen-Image' },
           { 'Votre situation': 'Produit commercial à grande échelle', 'Recommandation': 'Local : Qwen-Image ou FLUX schnell (Apache 2.0) — vérifiez d’abord le plafond de 1 M$ de SD 3.5 et les conditions non commerciales de FLUX dev' },
           { 'Votre situation': 'Travail client où la sécurité légale est en question', 'Recommandation': 'Cloud : Adobe Firefly (données d’entraînement sûres commercialement)' },
           { 'Votre situation': 'Travail client, produits non lancés, sensible côté confidentialité', 'Recommandation': 'Local — rien ne quitte votre machine. Pour les données professionnelles sensibles (financières, médicales, juridiques), la CNIL recommande de privilégier un traitement local des données lorsque c’est possible.' },
@@ -1591,7 +1695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Les modèles IA peuvent-ils intégrer du texte lisible dans les images ?',
-            a: 'Oui — c’était une avancée majeure de 2025-2026. Qwen-Image est en tête en local (multilingue, y compris anglais et chinois) ; Ideogram est une bonne option cloud pour des usages ponctuels riches en texte.',
+            a: 'Oui — ce fut une avancée majeure de 2025–2026. Qwen-Image est l’option locale que ses développeurs mettent en avant pour le texte multilingue (dont l’anglais et le chinois) ; des services cloud comme Ideogram visent aussi le texte dans l’image.',
           },
           {
             q: 'Mes images générées dans le cloud sont-elles privées ?',
@@ -1630,6 +1734,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[HiDream-O1 sur Hugging Face](https://huggingface.co/HiDream-ai/HiDream-O1-Image) — fiche modèle officielle et licence MIT.',
           '[Adobe Firefly](https://firefly.adobe.com/) — page officielle produit et tarifs.',
           '[Tarifs getimg.ai](https://getimg.ai/pricing) — détails officiels des forfaits et tarifs.',
+          '[FLUX.2 [klein] 4B sur Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) — fiche officielle et licence Apache 2.0.',
+          '[FLUX 3 Image Klein sur Hugging Face](https://huggingface.co/black-forest-labs/flux-3-image-klein) — fiche officielle et conditions de la FLUX Kommunity License.',
+          '[Qwen-Image-2512 sur Hugging Face](https://huggingface.co/Qwen/Qwen-Image-2512) — fiche officielle.',
+          '[Forfaits Adobe Firefly](https://www.adobe.com/products/firefly/plans.html) — noms, prix et offre Free.',
+          '[Documentation d’Ideogram](https://docs.ideogram.ai/) — aperçu des offres gratuites et payantes.',
+          '[eBay : RTX 3060 12 Go d’occasion](https://www.ebay.com/shop/rtx-3060-12gb) — prix demandés consultés le 20/11/2026 (données secondaires).',
         ],
       },
       relatedReading: {
@@ -1692,6 +1802,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen-Image',
       'Qwen-Image-Edit',
       'HiDream-O1',
+      'FLUX.2 klein 4B',
+      'FLUX 3 Image Klein',
+      'Qwen-Image-2512',
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
@@ -1706,7 +1819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '8 GB VRAM → FLUX.1 schnell、Stable Diffusion 3.5、SDXL、Qwen-Image(GGUF量子化版) — ローカルの選択肢のほとんどがすでに動作します。',
           '12〜16 GB VRAM → FLUX.1 devとKontext(非商用ライセンス)、より高精度なQwen-Image。',
           '年間収益100万ドルを超える商用利用が必要 → 選ぶ前にFLUX dev/Kontextの非商用ライセンスとSD 3.5の100万ドル上限を確認してください。Qwen-ImageとFLUX schnellにはこうした制限はありません。',
-          '画像内に読みやすいテキストが必要 → ローカルならQwen-Image、単発の仕事ならクラウドのIdeogram。',
+          '画像内に読みやすいテキストが必要 → ローカルならまずQwen-Imageを試す(開発元はテキスト描画の強さを報告しています)。',
         ],
         updatedDate: '2026-08-21',
       },
@@ -1719,6 +1832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Stable Diffusion 3.5 + SDXL(Stability AI)', anchor: '#sd35' },
       { label: 'Qwen-Image(Alibaba)', anchor: '#qwen-image' },
       { label: '注目株:HiDream-O1', anchor: '#one-to-watch' },
+      { label: '新しいリリース', anchor: '#newer-releases' },
       { label: 'ハードウェアの壁', anchor: '#hardware-gate' },
       { label: 'DIYの現実:「無料」が求めるもの', anchor: '#diy-reality' },
       { label: 'AI画像が実際に役立つ場面', anchor: '#use-cases' },
@@ -1807,11 +1921,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://huggingface.co/HiDream-ai/HiDream-O1-Image', productName: 'HiDream-O1 on Hugging Face', productCategory: 'image-model', label: 'HiDream-O1 on Hugging Face' },
         ],
       },
+      newerReleases: {
+        id: 'newer-releases',
+        title: '押さえておきたい新しいリリース(FLUX.2 [klein]、Qwen-Image-2512)',
+        content: 'この比較の初版以降に、3つのリリースがありました。以下の情報はHugging Faceの公式モデルカードに基づく開発元の報告です。',
+        items: [
+          '**FLUX.2 [klein] 4B** — Apache 2.0、4Bパラメータ。Black Forest Labsによると、約13GBのVRAM(RTX 3090/4070クラス以上)で動作し、適したハードウェアでは1秒未満で生成できるとのことです。[klein] 9B系は非商用ライセンスです。[モデルカード](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B)',
+          '**FLUX 3 Image Klein** — 5.6Bのオープンウェイト。FLUX Kommunity License v1.0(非商用利用、および年間総収益が500万米ドル未満の対象ユーザーによる出力生成の商用利用。その他の用途は商用ライセンスが必要)。モデルカードでは検証環境(B200、1024×1024)のピークGPUメモリが25〜31GBとされており、8GBで使える選択肢ではありません。[モデルカード](https://huggingface.co/black-forest-labs/flux-3-image-klein)',
+          '**Qwen-Image-2512** — 2025年12月のQwen-Imageアップデート。サイズ(20B)とApache 2.0ライセンスは同じで、モデルカードによると人物のリアリティ、自然なディテール、テキスト描画が改善されています。[モデルカード](https://huggingface.co/Qwen/Qwen-Image-2512)',
+        ],
+        note:
+          'これらのリリースは、特に記載がない限り、上記のハードウェア表や商用利用のルールを変えるものではありません。商用利用の前に各ライセンスをご確認ください。このページは一般的な情報であり、法的助言ではありません。',
+      },
       hardwareGate: {
         id: 'hardware-gate',
         title: 'ハードウェアの壁(思ったより低い)',
         content: [
-          '動画の記事でローカルAIに尻込みしてしまった方には朗報です。画像ははるかに軽いワークロードです。中古のRTX 3060 12GB(米国で約$170〜220)で、下記の表の最初の2行をカバーできます。動画生成では24GBが快適な水準であることと比べてみてください。',
+          '動画の記事でローカルAIに尻込みしてしまった方には朗報です。画像ははるかに軽いワークロードです。中古のRTX 3060 12GB(米国のeBay直近の希望価格で約$220〜370)で、下記の表の最初の2行をカバーできます。動画生成では24GBが快適な水準であることと比べてみてください。',
           '自分のハードウェアがどこに当てはまるか分からない場合は、これらのガイドが計算してくれます:モデルごとの正確な要件は[VRAM計算ツール](/ja/local-llms/vram-calculator-local-llm)、モデルサイズ別のグラフは[必要なVRAMはどれくらい?](/ja/local-llms/how-much-vram-local-llm)、ハードウェア選びは[ローカルAI向けおすすめGPU](/ja/local-llms/best-gpus-for-local-llms)と[おすすめの低予算GPU](/ja/local-llms/best-budget-gpus-local-llm)、プラットフォーム比較は[GPU対CPU対Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon)をご覧ください。',
         ],
         columns: ['お使いのGPU', '実行できるもの'],
@@ -1821,7 +1947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'お使いのGPU': '24GB以上のVRAM', '実行できるもの': 'FLUX.2 devのフル品質を含め、すべて実行可能' },
         ],
         note:
-          '2026年8月時点のおおよそのハードウェア価格(米国市場):中古のRTX 3060 12GBは約$170〜220です。日本国内の実売価格ではなく米国の目安価格のため、GPU価格は変動します。購入前に最新価格を確認し、この数字を数か月以上先まで信用しないでください。',
+          '2026年8月時点のおおよそのハードウェア価格(米国市場):中古のRTX 3060 12GBはeBayの希望価格(2026年11月20日確認、二次データ)で約$220〜370です。日本国内の実売価格ではなく米国の目安価格のため、GPU価格は変動します。購入前に最新価格を確認し、この数字を数か月以上先まで信用しないでください。',
       },
       diyReality: {
         id: 'diy-reality',
@@ -1878,7 +2004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'あなたの状況': 'GPUがない、または8GB未満のVRAM', 'おすすめ': 'クラウド:getimg.ai(オープンモデル、セットアップ不要)またはAdobe Fireflyの無料トライアルで試す' },
           { 'あなたの状況': 'たまに画像が必要、セットアップは一切したくない', 'おすすめ': 'クラウド:Adobe Firefly(最もシンプル)またはgetimg.ai(モデルの選択肢が最多)' },
-          { 'あなたの状況': '画像内テキスト(ポスター、サムネイル)', 'おすすめ': 'ローカル:Qwen-Image — 単発ならクラウドのIdeogramも' },
+          { 'あなたの状況': '画像内テキスト(ポスター、サムネイル)', 'おすすめ': 'ローカル:Qwen-Image' },
           { 'あなたの状況': '大規模な商用製品', 'おすすめ': 'ローカル:Qwen-ImageまたはFLUX schnell(Apache 2.0) — 先にSD 3.5の100万ドル上限とFLUX devの非商用条件を確認' },
           { 'あなたの状況': '法的な安全性が問われるクライアント案件', 'おすすめ': 'クラウド:Adobe Firefly(商用利用に安全な学習データ)' },
           { 'あなたの状況': 'クライアント案件、未発表製品、プライバシー重視', 'おすすめ': 'ローカル — 何もマシンの外に出ません' },
@@ -1918,7 +2044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AIモデルは画像内に読みやすいテキストを入れられますか?',
-            a: 'はい、これは2025〜2026年の大きなブレークスルーです。ローカルではQwen-Imageが先行しています(英語・中国語を含む多言語対応)。テキストが多い単発の作業には、クラウドのIdeogramも有力な選択肢です。',
+            a: 'はい。2025〜2026年の大きな進歩です。Qwen-Imageは、開発元が多言語テキスト(英語・中国語を含む)向けとして挙げているローカルの選択肢です。Ideogramのようなクラウドサービスも画像内テキストを対象にしています。',
           },
           {
             q: 'クラウドで生成した画像はプライベートですか?',
@@ -1957,6 +2083,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[HiDream-O1 on Hugging Face](https://huggingface.co/HiDream-ai/HiDream-O1-Image) — 公式モデルカードとMITライセンス。',
           '[Adobe Firefly](https://firefly.adobe.com/) — 公式の製品・料金ページ。',
           '[getimg.ai pricing](https://getimg.ai/pricing) — 公式のプラン・料金詳細。',
+          '[Hugging FaceのFLUX.2 [klein] 4B](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) — 公式モデルカードとApache 2.0ライセンス。',
+          '[Hugging FaceのFLUX 3 Image Klein](https://huggingface.co/black-forest-labs/flux-3-image-klein) — 公式モデルカードとFLUX Kommunity Licenseの条件。',
+          '[Hugging FaceのQwen-Image-2512](https://huggingface.co/Qwen/Qwen-Image-2512) — 公式モデルカード。',
+          '[Adobe Fireflyのプラン](https://www.adobe.com/products/firefly/plans.html) — プラン名、価格、Freeプラン。',
+          '[Ideogramのドキュメント](https://docs.ideogram.ai/) — 無料・有料プランの概要。',
+          '[eBay:中古RTX 3060 12GB](https://www.ebay.com/shop/rtx-3060-12gb) — 2026年11月20日に確認した希望価格(二次データ)。',
         ],
       },
       relatedReading: {
@@ -2019,6 +2151,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen-Image',
       'Qwen-Image-Edit',
       'HiDream-O1',
+      'FLUX.2 klein 4B',
+      'FLUX 3 Image Klein',
+      'Qwen-Image-2512',
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
@@ -2033,7 +2168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM 8GB → FLUX.1 schnell, Stable Diffusion 3.5, SDXL, Qwen-Image(GGUF 양자화) — 로컬 메뉴 대부분이 이미 이 사양에서 실행됩니다.',
           'VRAM 12–16GB → FLUX.1 dev와 Kontext(비상업적 라이선스), 더 높은 정밀도의 Qwen-Image.',
           '매출 100만 달러 이상에서 상업적 이용이 필요한 경우 → 선택하기 전에 FLUX dev/Kontext의 비상업적 라이선스와 SD 3.5의 100만 달러 상한을 확인하십시오. Qwen-Image와 FLUX schnell에는 이러한 제한이 없습니다.',
-          '이미지 안에 읽을 수 있는 텍스트가 필요한 경우 → 로컬에서는 Qwen-Image, 일회성 작업이라면 클라우드의 Ideogram.',
+          '이미지 안에 읽을 수 있는 텍스트가 필요한 경우 → 로컬에서는 Qwen-Image를 먼저 시도하십시오(개발사는 강한 텍스트 렌더링을 보고합니다).',
         ],
         updatedDate: '2026-08-21',
       },
@@ -2046,6 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Stable Diffusion 3.5 + SDXL(Stability AI)', anchor: '#sd35' },
       { label: 'Qwen-Image(Alibaba)', anchor: '#qwen-image' },
       { label: '주목할 모델: HiDream-O1', anchor: '#one-to-watch' },
+      { label: '새로운 릴리스', anchor: '#newer-releases' },
       { label: '하드웨어 관문', anchor: '#hardware-gate' },
       { label: "DIY의 현실: '무료'가 요구하는 것", anchor: '#diy-reality' },
       { label: 'AI 이미지가 실제로 유용한 분야', anchor: '#use-cases' },
@@ -2134,11 +2270,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://huggingface.co/HiDream-ai/HiDream-O1-Image', productName: 'HiDream-O1 on Hugging Face', productCategory: 'image-model', label: 'HiDream-O1 on Hugging Face' },
         ],
       },
+      newerReleases: {
+        id: 'newer-releases',
+        title: '알아 둘 만한 새로운 릴리스(FLUX.2 [klein], Qwen-Image-2512)',
+        content: '이 비교의 첫 버전 이후 세 가지 릴리스가 나왔습니다. 아래 내용은 Hugging Face 공식 모델 카드에 근거한 개발사 보고입니다.',
+        items: [
+          '**FLUX.2 [klein] 4B** — Apache 2.0, 4B 파라미터. Black Forest Labs는 약 13GB VRAM(RTX 3090/4070급 이상)에서 동작하며 적합한 하드웨어에서 1초 미만에 생성할 수 있다고 밝힙니다. [klein] 9B 변형은 비상업 라이선스를 사용합니다. [모델 카드](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B)',
+          '**FLUX 3 Image Klein** — 5.6B 오픈 웨이트, FLUX Kommunity License v1.0(비상업적 사용, 그리고 연간 총수익 500만 미국 달러 미만인 해당 사용자의 결과물 상업적 생성 허용. 그 밖의 용도는 상업용 라이선스 필요). 모델 카드는 테스트 환경(B200, 1024×1024)의 최대 GPU 메모리를 25–31GB로 보고하므로 8GB로 쓸 수 있는 선택지는 아닙니다. [모델 카드](https://huggingface.co/black-forest-labs/flux-3-image-klein)',
+          '**Qwen-Image-2512** — 2025년 12월 Qwen-Image 업데이트. 크기(20B)와 Apache 2.0 라이선스는 같으며, 모델 카드에 따르면 인물 사실감, 자연스러운 디테일, 텍스트 렌더링이 개선되었습니다. [모델 카드](https://huggingface.co/Qwen/Qwen-Image-2512)',
+        ],
+        note:
+          '이 릴리스들은 별도로 명시한 경우를 제외하고 위의 하드웨어 표나 상업적 사용 규칙을 바꾸지 않습니다. 상업적으로 사용하기 전에 각 라이선스를 확인하십시오. 이 페이지는 일반 정보이며 법률 자문이 아닙니다.',
+      },
       hardwareGate: {
         id: 'hardware-gate',
         title: '하드웨어 관문(생각보다 낮습니다)',
         content: [
-          '영상 관련 글이 로컬 AI를 겁먹게 만들었다면, 이번은 희소식입니다: 이미지는 훨씬 가벼운 작업입니다. 중고 RTX 3060 12GB(약 $170–220)만으로도 아래 표의 첫 두 행을 처리할 수 있습니다. 영상 생성에서는 24GB가 편안한 기준이라는 점과 비교해 보십시오.',
+          '영상 관련 글이 로컬 AI를 겁먹게 만들었다면, 이번은 희소식입니다: 이미지는 훨씬 가벼운 작업입니다. 중고 RTX 3060 12GB(eBay 최근 호가 기준 약 $220–370)만으로도 아래 표의 첫 두 행을 처리할 수 있습니다. 영상 생성에서는 24GB가 편안한 기준이라는 점과 비교해 보십시오.',
           '본인의 하드웨어가 어디에 해당하는지 모르시겠습니까? 다음 가이드가 계산을 대신해 드립니다: 모델별 정확한 요구사항은 [VRAM 계산기](/ko/local-llms/vram-calculator-local-llm), 모델 크기별 차트는 [VRAM은 얼마나 필요할까요?](/ko/local-llms/how-much-vram-local-llm), 하드웨어 선택은 [로컬 AI를 위한 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms)와 [최고의 예산형 GPU](/ko/local-llms/best-budget-gpus-local-llm), 플랫폼 비교는 [GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon)을 참고하십시오.',
         ],
         columns: ['보유 GPU', '실행 가능한 모델'],
@@ -2148,7 +2296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '보유 GPU': 'VRAM 24GB 이상', '실행 가능한 모델': 'FLUX.2 dev 풀 품질을 포함한 모든 모델' },
         ],
         note:
-          '2026년 8월 기준 대략적인 하드웨어 비용: 중고 RTX 3060 12GB는 약 $170–220입니다. GPU 가격은 계속 변동하므로, 몇 개월이 지난 이 수치를 그대로 신뢰하지 말고 구매 전 현재 가격을 확인하십시오.',
+          '2026년 8월 기준 대략적인 하드웨어 비용: 중고 RTX 3060 12GB는 eBay 호가(2026년 11월 20일 확인, 2차 자료) 기준 약 $220–370입니다. GPU 가격은 계속 변동하므로, 몇 개월이 지난 이 수치를 그대로 신뢰하지 말고 구매 전 현재 가격을 확인하십시오.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -2205,7 +2353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '상황': 'GPU가 없거나 VRAM 8GB 미만', '추천': '클라우드: getimg.ai(오픈 모델, 설정 불필요) 또는 테스트용 Adobe Firefly 무료 체험판' },
           { '상황': '가끔 이미지가 필요하며 설정에 대한 인내심이 전혀 없음', '추천': '클라우드: Adobe Firefly(가장 간단함) 또는 getimg.ai(모델 선택지가 가장 많음)' },
-          { '상황': '이미지 안의 텍스트(포스터, 썸네일)', '추천': '로컬: Qwen-Image — 또는 일회성 작업이라면 클라우드의 Ideogram' },
+          { '상황': '이미지 안의 텍스트(포스터, 썸네일)', '추천': '로컬: Qwen-Image' },
           { '상황': '대규모 상업용 제품', '추천': "로컬: Qwen-Image 또는 FLUX schnell(Apache 2.0) — 먼저 SD 3.5의 100만 달러 상한과 FLUX dev의 비상업적 조건을 확인하십시오" },
           { '상황': '법적 안전성이 문제가 되는 클라이언트 작업', '추천': '클라우드: Adobe Firefly(상업적으로 안전한 학습 데이터)' },
           { '상황': '클라이언트 작업, 미출시 제품, 프라이버시에 민감한 경우', '추천': '로컬 — 아무것도 내 컴퓨터를 벗어나지 않습니다' },
@@ -2245,7 +2393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AI 모델이 이미지 안에 읽을 수 있는 텍스트를 넣을 수 있습니까?',
-            a: '예 — 이는 2025~2026년의 주요 성과였습니다. 로컬에서는 Qwen-Image가 선두입니다(영어와 중국어를 포함한 다국어 지원). Ideogram은 텍스트 위주의 일회성 작업에 강력한 클라우드 옵션입니다.',
+            a: '예. 2025–2026년의 큰 진전입니다. Qwen-Image는 개발사가 다국어 텍스트(영어·중국어 포함)용으로 내세우는 로컬 선택지이며, Ideogram 같은 클라우드 서비스도 이미지 내 텍스트를 겨냥합니다.',
           },
           {
             q: '클라우드에서 생성한 이미지는 비공개로 유지됩니까?',
@@ -2284,6 +2432,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Hugging Face의 HiDream-O1](https://huggingface.co/HiDream-ai/HiDream-O1-Image) — 공식 모델 카드 및 MIT 라이선스.',
           '[Adobe Firefly](https://firefly.adobe.com/) — 공식 제품 및 가격 페이지.',
           '[getimg.ai 가격 정보](https://getimg.ai/pricing) — 공식 플랜 및 가격 세부 정보.',
+          '[Hugging Face의 FLUX.2 [klein] 4B](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) — 공식 모델 카드와 Apache 2.0 라이선스.',
+          '[Hugging Face의 FLUX 3 Image Klein](https://huggingface.co/black-forest-labs/flux-3-image-klein) — 공식 모델 카드와 FLUX Kommunity License 조건.',
+          '[Hugging Face의 Qwen-Image-2512](https://huggingface.co/Qwen/Qwen-Image-2512) — 공식 모델 카드.',
+          '[Adobe Firefly 플랜](https://www.adobe.com/products/firefly/plans.html) — 플랜 이름, 가격, Free 플랜.',
+          '[Ideogram 문서](https://docs.ideogram.ai/) — 무료·유료 플랜 개요.',
+          '[eBay: 중고 RTX 3060 12GB](https://www.ebay.com/shop/rtx-3060-12gb) — 2026년 11월 20일 확인한 호가(2차 자료).',
         ],
       },
       relatedReading: {
@@ -2346,6 +2500,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen-Image',
       'Qwen-Image-Edit',
       'HiDream-O1',
+      'FLUX.2 klein 4B',
+      'FLUX 3 Image Klein',
+      'Qwen-Image-2512',
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
@@ -2360,7 +2517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '8 GB de VRAM → FLUX.1 schnell, Stable Diffusion 3.5, SDXL ou Qwen-Image (quantizado em GGUF) — a maior parte do cardápio local já cabe.',
           '12–16 GB de VRAM → FLUX.1 dev e Kontext (licença não comercial), Qwen-Image em precisão mais alta.',
           'Precisa de uso comercial acima de $1 milhão de receita → verifique a licença não comercial do FLUX dev/Kontext e o limite de $1 milhão do SD 3.5 antes de escolher; Qwen-Image e FLUX schnell não têm esses limites.',
-          'Precisa de texto legível dentro da imagem → Qwen-Image localmente, ou Ideogram na nuvem para trabalhos pontuais.',
+          'Precisa de texto legível dentro da imagem → experimente o Qwen-Image localmente; seus desenvolvedores relatam boa renderização de texto.',
         ],
         updatedDate: '2026-08-21',
       },
@@ -2373,6 +2530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Stable Diffusion 3.5 + SDXL (Stability AI)', anchor: '#sd35' },
       { label: 'Qwen-Image (Alibaba)', anchor: '#qwen-image' },
       { label: 'Um Para Observar: HiDream-O1', anchor: '#one-to-watch' },
+      { label: 'Lançamentos recentes', anchor: '#newer-releases' },
       { label: 'A Barreira de Hardware', anchor: '#hardware-gate' },
       { label: 'A Realidade do Faça Você Mesmo: O Que "Gratuito" Pede de Você', anchor: '#diy-reality' },
       { label: 'Para Que Imagens de IA Realmente Servem', anchor: '#use-cases' },
@@ -2461,6 +2619,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://huggingface.co/HiDream-ai/HiDream-O1-Image', productName: 'HiDream-O1 on Hugging Face', productCategory: 'image-model', label: 'HiDream-O1 on Hugging Face' },
         ],
       },
+      newerReleases: {
+        id: 'newer-releases',
+        title: 'Lançamentos recentes que vale conhecer (FLUX.2 [klein], Qwen-Image-2512)',
+        content: 'Três lançamentos são posteriores à primeira versão desta comparação. Os dados abaixo vêm dos model cards oficiais do Hugging Face e são declarações dos desenvolvedores.',
+        items: [
+          '**FLUX.2 [klein] 4B** — Apache 2.0, 4B de parâmetros; a Black Forest Labs informa que roda com cerca de 13GB de VRAM (classe RTX 3090/4070 ou superior) e pode gerar em menos de um segundo em hardware adequado. As variantes [klein] 9B usam licença não comercial. [Model card](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B)',
+          '**FLUX 3 Image Klein** — 5.6B de pesos abertos sob a FLUX Kommunity License v1.0 (uso não comercial e geração comercial de saídas para usuários qualificados com menos de US$ 5 milhões de receita bruta anualizada; outros usos exigem licença comercial). O card informa 25–31GB de memória de GPU no pico em seu ambiente de teste (B200, 1024×1024), então não é uma opção de 8GB. [Model card](https://huggingface.co/black-forest-labs/flux-3-image-klein)',
+          '**Qwen-Image-2512** — a atualização do Qwen-Image de dezembro de 2025: mesmo tamanho (20B) e licença Apache 2.0, com mais realismo humano, mais detalhe natural e melhor renderização de texto segundo o model card. [Model card](https://huggingface.co/Qwen/Qwen-Image-2512)',
+        ],
+        note:
+          'Esses lançamentos não alteram a tabela de hardware nem as regras de uso comercial acima, exceto onde indicado. Confira cada licença antes do uso comercial; esta página é informação geral, não aconselhamento jurídico.',
+      },
       hardwareGate: {
         id: 'hardware-gate',
         title: 'A Barreira de Hardware (Mais Baixa do Que Você Pensa)',
@@ -2475,7 +2645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua GPU': '24GB+ de VRAM', 'O que você consegue rodar': 'Tudo, incluindo o FLUX.2 dev em qualidade total' },
         ],
         note:
-          'Custo aproximado de hardware em agosto de 2026: uma RTX 3060 12GB usada custa entre R$ 1.800 e R$ 2.400 no Brasil, segundo levantamento em plataformas como Mercado Livre — valor bem acima da conversão direta do preço em dólar, por causa dos impostos de importação. Preços de GPU mudam — verifique o valor atual antes de comprar em vez de confiar nesse número depois de alguns meses.',
+          'Custo aproximado de hardware (estimativa mais antiga, de agosto, não reverificada; os preços pedidos no eBay dos EUA em 20/11/2026 ficavam em cerca de US$ 220–370): uma RTX 3060 12GB usada custava entre R$ 1.800 e R$ 2.400 no Brasil, segundo levantamento em plataformas como Mercado Livre — valor bem acima da conversão direta do preço em dólar, por causa dos impostos de importação. Preços de GPU mudam — verifique o valor atual antes de comprar em vez de confiar nesse número depois de alguns meses.',
       },
       diyReality: {
         id: 'diy-reality',
@@ -2532,7 +2702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Sua situação': 'Sem GPU, ou abaixo de 8GB de VRAM', 'Recomendação': 'Nuvem: getimg.ai (modelos abertos, sem configuração) ou avaliação gratuita do Adobe Firefly para testar' },
           { 'Sua situação': 'Precisa de imagens ocasionalmente, zero tolerância para configuração', 'Recomendação': 'Nuvem: Adobe Firefly (mais simples) ou getimg.ai (mais opções de modelo)' },
-          { 'Sua situação': 'Texto dentro das imagens (pôsteres, thumbnails)', 'Recomendação': 'Local: Qwen-Image — ou Ideogram na nuvem para trabalhos pontuais' },
+          { 'Sua situação': 'Texto dentro das imagens (pôsteres, thumbnails)', 'Recomendação': 'Local: Qwen-Image' },
           { 'Sua situação': 'Produto comercial em escala', 'Recomendação': 'Local: Qwen-Image ou FLUX schnell (Apache 2.0) — verifique antes o limite de $1M do SD 3.5 e os termos não comerciais do FLUX dev' },
           { 'Sua situação': 'Trabalho com clientes onde a segurança jurídica é questionada', 'Recomendação': 'Nuvem: Adobe Firefly (dados de treinamento comercialmente seguros)' },
           { 'Sua situação': 'Trabalho com clientes, produtos ainda não lançados, sensível à privacidade', 'Recomendação': 'Local — nada sai da sua máquina' },
@@ -2572,7 +2742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Modelos de IA conseguem colocar texto legível dentro das imagens?',
-            a: 'Sim — este foi um grande avanço em 2025–2026. O Qwen-Image lidera localmente (multilíngue, incluindo inglês e chinês); o Ideogram é uma forte opção em nuvem para trabalhos pontuais com muito texto.',
+            a: 'Sim — foi um grande avanço de 2025–2026. O Qwen-Image é a opção local que seus desenvolvedores destacam para texto multilíngue (incluindo inglês e chinês); serviços em nuvem como o Ideogram também miram texto dentro de imagem.',
           },
           {
             q: 'Minhas imagens geradas na nuvem são privadas?',
@@ -2611,6 +2781,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[HiDream-O1 on Hugging Face](https://huggingface.co/HiDream-ai/HiDream-O1-Image) — ficha oficial do modelo e licença MIT.',
           '[Adobe Firefly](https://firefly.adobe.com/) — página oficial do produto e de preços.',
           '[getimg.ai pricing](https://getimg.ai/pricing) — detalhes oficiais de planos e preços.',
+          '[FLUX.2 [klein] 4B no Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) — model card oficial e licença Apache 2.0.',
+          '[FLUX 3 Image Klein no Hugging Face](https://huggingface.co/black-forest-labs/flux-3-image-klein) — model card oficial e termos da FLUX Kommunity License.',
+          '[Qwen-Image-2512 no Hugging Face](https://huggingface.co/Qwen/Qwen-Image-2512) — model card oficial.',
+          '[Planos do Adobe Firefly](https://www.adobe.com/products/firefly/plans.html) — nomes, preços e plano Free.',
+          '[Documentação do Ideogram](https://docs.ideogram.ai/) — visão geral dos planos gratuitos e pagos.',
+          '[eBay: RTX 3060 12GB usadas](https://www.ebay.com/shop/rtx-3060-12gb) — preços pedidos consultados em 20/11/2026 (dados secundários).',
         ],
       },
       relatedReading: {
@@ -2673,6 +2849,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen-Image',
       'Qwen-Image-Edit',
       'HiDream-O1',
+      'FLUX.2 klein 4B',
+      'FLUX 3 Image Klein',
+      'Qwen-Image-2512',
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
@@ -2687,7 +2866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '8GB显存 → FLUX.1 schnell、Stable Diffusion 3.5、SDXL或Qwen-Image(GGUF量化版)——本地方案的大部分菜单已经能跑。',
           '12–16GB显存 → FLUX.1 dev和Kontext(非商用许可)、更高精度的Qwen-Image。',
           '商用营收超过100万美元 → 选择前请先查看FLUX dev/Kontext的非商用许可和SD 3.5的100万美元上限;Qwen-Image和FLUX schnell没有此类限制。',
-          '需要图像内可读文字 → 本地用Qwen-Image,或者一次性任务用云端的Ideogram。',
+          '需要图像内可读文字 → 本地可先试Qwen-Image;其开发方称文字渲染能力较强。',
         ],
         updatedDate: '2026-08-21',
       },
@@ -2700,6 +2879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Stable Diffusion 3.5 + SDXL(Stability AI)', anchor: '#sd35' },
       { label: 'Qwen-Image(阿里巴巴)', anchor: '#qwen-image' },
       { label: '值得关注:HiDream-O1', anchor: '#one-to-watch' },
+      { label: '新近发布', anchor: '#newer-releases' },
       { label: '硬件门槛', anchor: '#hardware-gate' },
       { label: 'DIY的真相:"免费"需要你付出什么', anchor: '#diy-reality' },
       { label: 'AI图像真正擅长做什么', anchor: '#use-cases' },
@@ -2788,11 +2968,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://huggingface.co/HiDream-ai/HiDream-O1-Image', productName: 'HiDream-O1 on Hugging Face', productCategory: 'image-model', label: 'HiDream-O1 on Hugging Face' },
         ],
       },
+      newerReleases: {
+        id: 'newer-releases',
+        title: '值得了解的新近发布(FLUX.2 [klein]、Qwen-Image-2512)',
+        content: '自本对比初版以来,又有三项发布。以下信息来自Hugging Face官方模型卡,属开发方报告。',
+        items: [
+          '**FLUX.2 [klein] 4B** — Apache 2.0,4B参数;Black Forest Labs称其约需13GB显存(RTX 3090/4070级别及以上),在合适的硬件上可在一秒内出图。[klein] 9B系列使用非商业许可。[模型卡](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B)',
+          '**FLUX 3 Image Klein** — 5.6B开放权重,采用FLUX Kommunity License v1.0(非商业使用,以及年化总收入低于500万美元的合格用户可商业生成输出;其他用途需商业许可)。其模型卡报告测试环境(B200、1024×1024)下峰值GPU显存为25–31GB,因此不是8GB方案。[模型卡](https://huggingface.co/black-forest-labs/flux-3-image-klein)',
+          '**Qwen-Image-2512** — 2025年12月的Qwen-Image更新:同为20B规模和Apache 2.0许可,据其模型卡,人物真实感、自然细节和文字渲染均有改进。[模型卡](https://huggingface.co/Qwen/Qwen-Image-2512)',
+        ],
+        note:
+          '除特别说明外,这些发布不改变上文的硬件表和商用规则。商业使用前请核对各项许可;本页为一般性信息,不构成法律意见。',
+      },
       hardwareGate: {
         id: 'hardware-gate',
         title: '硬件门槛(比你想象的低)',
         content: [
-          '如果我们的视频那篇文章把你吓退了,这张表会是个好消息:图像的工作负载要轻得多。一块二手RTX 3060 12GB(约$170–220)就能覆盖下表的前两档。相比之下,视频生成需要24GB才算舒适。',
+          '如果我们的视频那篇文章把你吓退了,这张表会是个好消息:图像的工作负载要轻得多。一块二手RTX 3060 12GB(按eBay近期标价约$220–370)就能覆盖下表的前两档。相比之下,视频生成需要24GB才算舒适。',
           '不确定自己的硬件处于哪一档?这些指南能帮你算清楚:[显存计算器](/zh/local-llms/vram-calculator-local-llm)提供每个模型的确切需求,[需要多少显存?](/zh/local-llms/how-much-vram-local-llm)提供各模型规模的对照图表,[本地AI最佳GPU](/zh/local-llms/best-gpus-for-local-llms)和[最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm)提供硬件选购建议,[GPU对比CPU对比Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon)提供平台对比。',
         ],
         columns: ['你的GPU', '可以运行什么'],
@@ -2802,7 +2994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '你的GPU': '24GB以上显存', '可以运行什么': '全部模型,包括全质量的FLUX.2 dev' },
         ],
         note:
-          '截至2026年8月的大致硬件成本:一块二手RTX 3060 12GB约为$170–220。GPU价格会波动——购买前请核实最新价格,几个月后这一数字可能已不准确。',
+          '截至2026年8月的大致硬件成本:一块二手RTX 3060 12GB在eBay标价(2026年11月20日查看,二手数据)约为$220–370。GPU价格会波动——购买前请核实最新价格,几个月后这一数字可能已不准确。',
       },
       diyReality: {
         id: 'diy-reality',
@@ -2859,7 +3051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '你的情况': '没有GPU,或显存低于8GB', '建议': '云端:getimg.ai(开放模型,无需配置)或先用Adobe Firefly免费试用测试' },
           { '你的情况': '偶尔需要图像,完全不想配置', '建议': '云端:Adobe Firefly(最简单)或getimg.ai(模型选择最多)' },
-          { '你的情况': '图像内文字(海报、缩略图)', '建议': '本地:Qwen-Image——或一次性任务用云端的Ideogram' },
+          { '你的情况': '图像内文字(海报、缩略图)', '建议': '本地:Qwen-Image' },
           { '你的情况': '大规模商用产品', '建议': '本地:Qwen-Image或FLUX schnell(Apache 2.0)——请先查看SD 3.5的100万美元上限和FLUX dev的非商用条款' },
           { '你的情况': '涉及法律安全性质疑的客户工作', '建议': '云端:Adobe Firefly(商用安全的训练数据)' },
           { '你的情况': '客户工作、未发布产品、对隐私敏感', '建议': '本地——任何内容都不离开你的设备' },
@@ -2899,7 +3091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AI模型能在图像中生成可读文字吗?',
-            a: '可以——这是2025至2026年间的一项重大突破。本地方面Qwen-Image领先(支持多语言,包括英文和中文);Ideogram是文字密集型一次性任务的强力云端选择。',
+            a: '可以——这是2025–2026年的一大突破。Qwen-Image是其开发方重点推荐的多语言文字(含英文和中文)本地方案;Ideogram等云服务同样面向图像内文字。',
           },
           {
             q: '我在云端生成的图像是私密的吗?',
@@ -2938,6 +3130,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[HiDream-O1 on Hugging Face](https://huggingface.co/HiDream-ai/HiDream-O1-Image)——官方模型卡及MIT许可协议。',
           '[Adobe Firefly](https://firefly.adobe.com/)——官方产品及定价页面。',
           '[getimg.ai pricing](https://getimg.ai/pricing)——官方方案及定价详情。',
+          '[Hugging Face上的FLUX.2 [klein] 4B](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) — 官方模型卡和Apache 2.0许可。',
+          '[Hugging Face上的FLUX 3 Image Klein](https://huggingface.co/black-forest-labs/flux-3-image-klein) — 官方模型卡和FLUX Kommunity License条款。',
+          '[Hugging Face上的Qwen-Image-2512](https://huggingface.co/Qwen/Qwen-Image-2512) — 官方模型卡。',
+          '[Adobe Firefly方案](https://www.adobe.com/products/firefly/plans.html) — 方案名称、价格和Free版。',
+          '[Ideogram文档](https://docs.ideogram.ai/) — 免费与付费方案概览。',
+          '[eBay:二手RTX 3060 12GB](https://www.ebay.com/shop/rtx-3060-12gb) — 2026年11月20日查看的标价(二手数据)。',
         ],
       },
       relatedReading: {
