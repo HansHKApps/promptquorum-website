@@ -5,13 +5,13 @@ import { buildOgImageObject } from "@/lib/imageObjectSchema";
 
 const OG_SLUG = 'ai-model-knowledge-cutoff-dates';
 // Date this page's model list was last re-checked against the model registry (differs from the shared table-data date).
-const PAGE_UPDATED = '2026-11-19';
+const PAGE_UPDATED = '2026-11-20';
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2026-12-20',
     is_living_page: true,
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-en.webp',
@@ -25,9 +25,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: PAGE_UPDATED,
     lastUpdated: PAGE_UPDATED,
     current_models_mentioned: [
-      'Claude Opus 5.5', 'ChatGPT', 'GPT-6.2 Astra', 'GPT-6.2 Sol', 'GPT-6 Luna', 'Gemini 4 Argon',
-      'Grok 4.7', 'Mistral Large 4', 'DeepSeek-V4', 'Llama 4 Scout', 'Qwen3 14B',
-      'Gemma 4', 'Phi-4',
+      'Claude Fable 5.2', 'Claude Opus 5.5', 'Claude Sonnet 5.5', 'Claude Haiku 5.5', 'ChatGPT',
+      'GPT-6.2 Astra', 'GPT-6.2 Sol', 'GPT-6.1 Terra', 'GPT-6 Luna',
+      'Gemini 4 Argon', 'Gemini 4 Carbon', 'Gemini 4 Hydrogen', 'Gemini 4 Neon',
+      'Grok 4.7', 'Mistral Large 4', 'DeepSeek-V4', 'Llama 4 Scout', 'Muse Glimmer 30B',
+      'Qwen3.8-27B', 'Gemma 4', 'Phi-4',
     ],
     parentArticle: '/prompt-engineering/knowledge-cutoffs-and-geo',
     siblingBites: ['best-llm-right-now', 'co-star-prompt-framework'],
@@ -35,10 +37,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What are the current AI model knowledge cutoff dates?',
-        answer: 'Verified cutoffs: Claude Opus 5.5 June 2026 (reliable cutoff; supersedes Claude Opus 5, May 2026); GPT-6.2 Astra May 2026 and GPT-6.2 Sol June 2026 (per OpenAI\'s Nov 17, 2026 announcement, reported via independent outlets — recheck once OpenAI\'s own model page is reachable), GPT-6 Luna unchanged at May 2026 (ChatGPT searches Bing by default; GPT-6.2 Astra and GPT-6.2 Sol supersede GPT-6 Astra and GPT-6.1 Sol, April 2026; the GPT-6 family supersedes GPT-5.6, Feb 2026; GPT-4o is a legacy model, Oct 2023); Grok 4.7 May 2026 (searches X by default in the consumer app; supersedes Grok 4.6, Feb 2026). Google, Mistral, and DeepSeek state no cutoff for Gemini 4 Argon, Mistral Large 4, or DeepSeek-V4; the previous Gemini flagship, Gemini 3.1 Pro, lists January 2025 (native Google Search). Local LLMs (Llama, Qwen, Gemma, Phi) have no web search and their cutoff is absolute. Among open-weight models, Meta documents August 2024 for Llama 4 Scout, Google August 2024 for Gemma 3 27B and Microsoft June 2024 for Phi-4; we found no stated cutoff for DeepSeek-V3 and V4, Qwen2.5 and Qwen3, Mistral Small 3 or Gemma 4.',
+        answer: 'Verified cutoffs: Claude Fable 5.2, Opus 5.5, Sonnet 5.5 and Haiku 5.5 June 2026 (reliable cutoff per Anthropic\'s model overview; Claude Opus 5, May 2026, is the previous generation); GPT-6.2 Sol and GPT-6.1 Terra June 2026, GPT-6.2 Astra and GPT-6 Luna May 2026 (per OpenAI\'s model documentation; ChatGPT searches Bing by default; GPT-6.2 Astra and GPT-6.2 Sol supersede GPT-6 Astra and GPT-6.1 Sol, April 2026; the GPT-6 family supersedes GPT-5.6, Feb 2026; GPT-4o is a legacy model, Oct 2023); Gemini 4 Argon, Carbon, Hydrogen and Neon March 2026 (per Google\'s model cards; Google Search grounding; the previous Gemini flagship, Gemini 3.1 Pro, lists January 2025); Grok 4.7 May 2026 (searches X by default in the consumer app; supersedes Grok 4.6, Feb 2026). Mistral and DeepSeek state no cutoff for Mistral Large 4 or DeepSeek-V4. Local LLMs (Llama, Qwen, Gemma, Phi) have no web search and their cutoff is absolute. Among open-weight models, Meta documents January 4, 2026 for Muse Glimmer 30B and August 2024 for Llama 4 Scout, Google January 2025 for Gemma 4 and Microsoft June 2024 for Phi-4; we found no stated cutoff for DeepSeek-V3 and V4, Qwen2.5, Qwen3 and Qwen3.8, or Mistral Small 3.',
         bullets: [
-          'GPT-6 family (ChatGPT): May–June 2026 cutoff for the current Astra/Sol tier, per OpenAI\'s Nov 2026 announcement (GPT-6 Luna stays May 2026) — partially offset by Bing search default',
-          'Claude (Opus 5.5): June 2026 reliable cutoff — web search requires explicit tool activation',
+          'GPT-6 family (ChatGPT): May–June 2026 cutoff for the current Astra/Sol/Terra/Luna tiers, per OpenAI\'s model documentation — partially offset by Bing search default',
+          'Claude (Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5): June 2026 reliable cutoff — web search requires explicit tool activation',
+          'Gemini 4 (Argon, Carbon, Hydrogen, Neon): March 2026 cutoff per Google\'s model cards — Google Search grounding',
           'Grok 4.7: May 2026 cutoff — searches X (Twitter) by default in the consumer app',
           'Local LLMs (Llama, Qwen, Gemma, Phi): no search layer — cutoff is a hard frozen limit',
         ],
@@ -70,7 +73,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'A knowledge cutoff is a hard date — the model has zero training data after it, and will confabulate or say it doesn\'t know about anything after that date',
           'Cloud models (ChatGPT, Gemini, Grok) partially compensate via built-in web search; the search layer can override stale training data for factual queries',
           'Local LLMs (Llama, Qwen, Gemma, Phi, Mistral) have NO search layer — their cutoff is an absolute frozen knowledge limit with no override',
-          'Several major models — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4 and Qwen3 — have not publicly disclosed exact cutoff dates; "Not publicly disclosed" below means we found no primary source stating one',
+          'Several major models — Mistral Large 4, DeepSeek-V4 and Qwen3 — have not publicly disclosed exact cutoff dates; "Not publicly disclosed" below means we found no primary source stating one',
           'For GEO strategy: appearing in cloud AI requires SEO/search optimization; appearing in local AI requires RAG pipelines built by the deployer',
         ],
       },
@@ -238,7 +241,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2026-12-20',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-de.webp',
     title: 'KI-Modell Wissens-Cutoff-Daten 2026: Vollständige Übersicht',
@@ -249,10 +252,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Was sind die aktuellen Wissens-Cutoff-Daten der KI-Modelle?',
-        answer: 'Verifizierte Cutoffs: Claude Opus 5.5 Juni 2026 (zuverlässiger Cutoff; Nachfolger von Claude Opus 5, Mai 2026); GPT-6.2 Astra Mai 2026 und GPT-6.2 Sol Juni 2026 (laut OpenAIs Ankündigung vom 17. November 2026, berichtet von unabhängigen Medien — Überprüfung ausstehend, sobald OpenAIs eigene Modellseite erreichbar ist), GPT-6 Luna unverändert Mai 2026 (ChatGPT durchsucht standardmäßig Bing; GPT-6.2 Astra und GPT-6.2 Sol lösen GPT-6 Astra und GPT-6.1 Sol ab, April 2026; die GPT-6-Familie löst GPT-5.6 ab, Februar 2026; GPT-4o ist ein Legacy-Modell, Okt 2023); Grok 4.7 Mai 2026 (durchsucht X standardmäßig in der Verbraucher-App; Nachfolger von Grok 4.6, Februar 2026). Für Gemini 4 Argon nennt Google keinen Cutoff; das frühere Gemini-Flaggschiff Gemini 3.1 Pro nennt Januar 2025 (native Google Search). Lokale LLMs (Llama, Qwen, Gemma, Phi) haben keine Websuche — ihr Cutoff ist absolut.',
+        answer: 'Verifizierte Cutoffs: Claude Fable 5.2, Opus 5.5, Sonnet 5.5 und Haiku 5.5 Juni 2026 (zuverlässiger Cutoff laut Anthropics Modellübersicht; Claude Opus 5, Mai 2026, ist die Vorgängergeneration); GPT-6.2 Sol und GPT-6.1 Terra Juni 2026, GPT-6.2 Astra und GPT-6 Luna Mai 2026 (laut OpenAIs Modelldokumentation; ChatGPT durchsucht standardmäßig Bing; GPT-6.2 Astra und GPT-6.2 Sol lösen GPT-6 Astra und GPT-6.1 Sol ab, April 2026; die GPT-6-Familie löst GPT-5.6 ab, Februar 2026; GPT-4o ist ein Legacy-Modell, Okt 2023); Gemini 4 Argon, Carbon, Hydrogen und Neon März 2026 (laut Googles Model Cards; Google-Search-Grounding; das frühere Gemini-Flaggschiff Gemini 3.1 Pro nennt Januar 2025); Grok 4.7 Mai 2026 (durchsucht X standardmäßig in der Verbraucher-App; Nachfolger von Grok 4.6, Februar 2026). Mistral und DeepSeek nennen keinen Cutoff für Mistral Large 4 oder DeepSeek-V4. Lokale LLMs (Llama, Qwen, Gemma, Phi) haben keine Websuche — ihr Cutoff ist absolut. Bei Open-Weight-Modellen nennt Meta den 4. Januar 2026 für Muse Glimmer 30B und August 2024 für Llama 4 Scout, Google Januar 2025 für Gemma 4 und Microsoft Juni 2024 für Phi-4; für DeepSeek-V3 und V4, Qwen2.5, Qwen3 und Qwen3.8 sowie Mistral Small 3 haben wir keinen genannten Cutoff gefunden.',
         bullets: [
-          'GPT-6-Familie (ChatGPT): Cutoff Mai–Juni 2026 für die aktuelle Astra/Sol-Generation laut OpenAIs Ankündigung vom November 2026 (GPT-6 Luna bleibt bei Mai 2026) — teilweise durch Bing-Suche ausgeglichen',
-          'Claude (Opus 5.5): Cutoff Juni 2026 (zuverlässig) — Websuche nur als optionales Tool',
+          'GPT-6-Familie (ChatGPT): Cutoff Mai–Juni 2026 für die aktuellen Astra/Sol/Terra/Luna-Stufen laut OpenAIs Modelldokumentation — teilweise durch Bing-Suche ausgeglichen',
+          'Claude (Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5): zuverlässiger Cutoff Juni 2026 — Websuche nur als optionales Tool',
+          'Gemini 4 (Argon, Carbon, Hydrogen, Neon): Cutoff März 2026 laut Googles Model Cards — Google-Search-Grounding',
           'Grok 4.7: Cutoff Mai 2026 — durchsucht X standardmäßig in der Verbraucher-App',
           'Lokale LLMs: keine Suchfunktion — Cutoff ist eine harte Wissensgrenze',
         ],
@@ -267,7 +271,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Ein Wissens-Cutoff ist ein hartes Datum — das Modell hat nach diesem Datum keinerlei Trainingsdaten',
           'Cloud-Modelle (ChatGPT, Gemini, Grok) kompensieren dies teilweise durch eingebaute Websuche',
           'Lokale LLMs (Llama, Qwen, Gemma, Phi, Mistral) haben KEINE Suchfunktion — ihr Cutoff ist eine absolute Wissensgrenze',
-          'Mehrere große Modelle — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Qwen3 — haben keine öffentlichen Cutoff-Daten bekannt gegeben',
+          'Mehrere große Modelle — Mistral Large 4, DeepSeek-V4, Qwen3 — haben keine öffentlichen Cutoff-Daten bekannt gegeben',
         ],
       },
       relatedBites: {
@@ -295,7 +299,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2026-12-20',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-es.webp',
     title: 'Fechas de Corte de Conocimiento de los Modelos de IA 2026: Hoja de Referencia Completa',
@@ -306,10 +310,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Cuáles son las fechas de corte de conocimiento actuales de los modelos de IA?',
-        answer: 'Cortes verificados: Claude Opus 5.5 junio de 2026 (corte confiable; sucede a Claude Opus 5, mayo de 2026); GPT-6.2 Astra mayo de 2026 y GPT-6.2 Sol junio de 2026 (según el anuncio de OpenAI del 17 de noviembre de 2026, reportado por medios independientes — pendiente de verificar cuando la página oficial de OpenAI sea accesible), GPT-6 Luna sin cambios en mayo de 2026 (ChatGPT busca en Bing por defecto; GPT-6.2 Astra y GPT-6.2 Sol suceden a GPT-6 Astra y GPT-6.1 Sol, abril de 2026; la familia GPT-6 sucede a GPT-5.6, febrero de 2026; GPT-4o es un modelo heredado, octubre de 2023); Grok 4.7 mayo de 2026 (busca en X por defecto en la app de consumidor; sucede a Grok 4.6, febrero de 2026). Google no indica un corte para Gemini 4 Argon; el anterior buque insignia, Gemini 3.1 Pro, indica enero de 2025 (Google Search nativo). Los LLM locales (Llama, Qwen, Gemma, Phi) no tienen capa de búsqueda — su corte es un límite absoluto.',
+        answer: 'Cortes verificados: Claude Fable 5.2, Opus 5.5, Sonnet 5.5 y Haiku 5.5 junio de 2026 (corte confiable según la descripción de modelos de Anthropic; Claude Opus 5, mayo de 2026, es la generación anterior); GPT-6.2 Sol y GPT-6.1 Terra junio de 2026, GPT-6.2 Astra y GPT-6 Luna mayo de 2026 (según la documentación de modelos de OpenAI; ChatGPT busca en Bing por defecto; GPT-6.2 Astra y GPT-6.2 Sol sustituyen a GPT-6 Astra y GPT-6.1 Sol, abril de 2026; la familia GPT-6 sustituye a GPT-5.6, febrero de 2026; GPT-4o es un modelo heredado, octubre de 2023); Gemini 4 Argon, Carbon, Hydrogen y Neon marzo de 2026 (según las model cards de Google; grounding con Google Search; el anterior buque insignia, Gemini 3.1 Pro, indica enero de 2025); Grok 4.7 mayo de 2026 (busca en X por defecto en la app de consumo; sustituye a Grok 4.6, febrero de 2026). Mistral y DeepSeek no indican corte para Mistral Large 4 ni DeepSeek-V4. Los LLM locales (Llama, Qwen, Gemma, Phi) no tienen búsqueda web y su corte es absoluto. Entre los modelos open-weight, Meta documenta el 4 de enero de 2026 para Muse Glimmer 30B y agosto de 2024 para Llama 4 Scout, Google enero de 2025 para Gemma 4 y Microsoft junio de 2024 para Phi-4; no encontramos un corte indicado para DeepSeek-V3 y V4, Qwen2.5, Qwen3 y Qwen3.8, ni Mistral Small 3.',
         bullets: [
-          'Familia GPT-6 (ChatGPT): corte may–jun 2026 para la generación actual Astra/Sol, según el anuncio de OpenAI de noviembre de 2026 (GPT-6 Luna se mantiene en mayo de 2026) — parcialmente compensado por la búsqueda de Bing',
-          'Claude (Opus 5.5): corte junio 2026 (confiable) — la búsqueda web requiere activación explícita',
+          'Familia GPT-6 (ChatGPT): corte may–jun 2026 para los niveles actuales Astra/Sol/Terra/Luna, según la documentación de modelos de OpenAI — compensado en parte por la búsqueda Bing por defecto',
+          'Claude (Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5): corte confiable junio 2026 — la búsqueda web requiere activación explícita de la herramienta',
+          'Gemini 4 (Argon, Carbon, Hydrogen, Neon): corte marzo 2026 según las model cards de Google — grounding con Google Search',
           'Grok 4.7: corte mayo 2026 — busca en X por defecto en la app de consumidor',
           'LLM locales: sin capa de búsqueda — el corte es un límite de conocimiento fijo',
         ],
@@ -324,7 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Un corte de conocimiento es una fecha fija — el modelo no tiene ningún dato de entrenamiento después de esa fecha',
           'Los modelos en la nube (ChatGPT, Gemini, Grok) compensan esto parcialmente con búsqueda web integrada',
           'Los LLM locales (Llama, Qwen, Gemma, Phi, Mistral) NO tienen capa de búsqueda — su corte es un límite de conocimiento absoluto',
-          'Varios modelos importantes — incluyendo Gemini 4 Argon, Mistral Large 4, DeepSeek-V4 y Qwen3 — no han revelado fechas de corte exactas',
+          'Varios modelos importantes — incluyendo Mistral Large 4, DeepSeek-V4 y Qwen3 — no han revelado fechas de corte exactas',
         ],
       },
       faq: {
@@ -368,7 +373,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2026-12-20',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-fr.webp',
     title: 'Dates de Coupure des Modèles IA 2026 : Référence Complète',
@@ -379,10 +384,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Quelles sont les dates de coupure des modèles d\'IA en 2026 ?',
-        answer: 'Coupures vérifiées : Claude Opus 5.5 juin 2026 (coupure fiable ; succède à Claude Opus 5, mai 2026) ; GPT-6.2 Astra mai 2026 et GPT-6.2 Sol juin 2026 (selon l\'annonce d\'OpenAI du 17 novembre 2026, rapportée par des médias indépendants — à revérifier dès que la page officielle d\'OpenAI sera accessible), GPT-6 Luna inchangé à mai 2026 (ChatGPT recherche Bing par défaut ; GPT-6.2 Astra et GPT-6.2 Sol succèdent à GPT-6 Astra et GPT-6.1 Sol, avril 2026 ; la famille GPT-6 succède à GPT-5.6, février 2026 ; GPT-4o est un modèle legacy, oct 2023) ; Grok 4.7 mai 2026 (recherche X par défaut dans l\'app grand public ; succède à Grok 4.6, février 2026). Google n\'indique aucune coupure pour Gemini 4 Argon ; l\'ancien modèle phare, Gemini 3.1 Pro, indique janvier 2025 (Google Search natif). Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas de couche de recherche — leur coupure est une limite absolue.',
+        answer: 'Coupures vérifiées : Claude Fable 5.2, Opus 5.5, Sonnet 5.5 et Haiku 5.5 juin 2026 (coupure fiable selon l\'aperçu des modèles d\'Anthropic ; Claude Opus 5, mai 2026, est la génération précédente) ; GPT-6.2 Sol et GPT-6.1 Terra juin 2026, GPT-6.2 Astra et GPT-6 Luna mai 2026 (selon la documentation des modèles d\'OpenAI ; ChatGPT interroge Bing par défaut ; GPT-6.2 Astra et GPT-6.2 Sol remplacent GPT-6 Astra et GPT-6.1 Sol, avril 2026 ; la famille GPT-6 remplace GPT-5.6, février 2026 ; GPT-4o est un modèle hérité, oct. 2023) ; Gemini 4 Argon, Carbon, Hydrogen et Neon mars 2026 (selon les model cards de Google ; grounding Google Search ; l\'ancien modèle phare, Gemini 3.1 Pro, indique janvier 2025) ; Grok 4.7 mai 2026 (interroge X par défaut dans l\'application grand public ; remplace Grok 4.6, février 2026). Mistral et DeepSeek n\'indiquent aucune coupure pour Mistral Large 4 ni DeepSeek-V4. Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas de recherche web et leur coupure est absolue. Parmi les modèles open-weight, Meta documente le 4 janvier 2026 pour Muse Glimmer 30B et août 2024 pour Llama 4 Scout, Google janvier 2025 pour Gemma 4 et Microsoft juin 2024 pour Phi-4 ; nous n\'avons trouvé aucune coupure indiquée pour DeepSeek-V3 et V4, Qwen2.5, Qwen3 et Qwen3.8, ni Mistral Small 3.',
         bullets: [
-          'Famille GPT-6 (ChatGPT) : coupure mai–juin 2026 pour la génération Astra/Sol actuelle, selon l\'annonce d\'OpenAI de novembre 2026 (GPT-6 Luna reste à mai 2026) — partiellement compensée par Bing',
-          'Claude (Opus 5.5) : coupure juin 2026 (fiable) — recherche web opt-in uniquement',
+          'Famille GPT-6 (ChatGPT) : coupure mai–juin 2026 pour les niveaux actuels Astra/Sol/Terra/Luna, selon la documentation des modèles d\'OpenAI — partiellement compensée par la recherche Bing par défaut',
+          'Claude (Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5) : coupure fiable juin 2026 — recherche web uniquement via un outil activé explicitement',
+          'Gemini 4 (Argon, Carbon, Hydrogen, Neon) : coupure mars 2026 selon les model cards de Google — grounding Google Search',
           'Grok 4.7 : coupure mai 2026 — recherche X par défaut dans l\'app grand public',
           'LLM locaux : aucune recherche — la coupure est une limite dure',
         ],
@@ -397,7 +403,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Une date de coupure est fixe — le modèle n\'a aucune donnée d\'entraînement après cette date',
           'Les modèles cloud (ChatGPT, Gemini, Grok) compensent partiellement via la recherche web intégrée',
           'Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont AUCUNE couche de recherche — leur coupure est une limite absolue',
-          'Plusieurs grands modèles — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Qwen3 — n\'ont pas divulgué de dates de coupure exactes',
+          'Plusieurs grands modèles — Mistral Large 4, DeepSeek-V4, Qwen3 — n\'ont pas divulgué de dates de coupure exactes',
         ],
       },
       faq: {
@@ -441,7 +447,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2026-12-20',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-ja.webp',
     title: 'AIモデルの知識カットオフ日2026：完全チートシート',
@@ -452,10 +458,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'AIモデルの知識カットオフ日は2026年現在どうなっていますか？',
-        answer: '確認済みカットオフ：Claude Opus 5.5は2026年6月（信頼性の高いカットオフ；Claude Opus 5（2026年5月）の後継）、GPT-6.2 Astraは2026年5月、GPT-6.2 Solは2026年6月（OpenAIの2026年11月17日の発表に基づく。複数の独立系メディアが報じた内容で、OpenAI公式ページが閲覧可能になった時点で再確認が必要）、GPT-6 Lunaは変更なく2026年5月（ChatGPTはデフォルトでBing検索；GPT-6.2 AstraとGPT-6.2 SolはGPT-6 AstraとGPT-6.1 Sol（2026年4月）の後継；GPT-6ファミリーはGPT-5.6（2026年2月）の後継；GPT-4oはレガシーモデルで2023年10月）、Grok 4.7は2026年5月（コンシューマー向けアプリではデフォルトでX検索；Grok 4.6（2026年2月）の後継）。GoogleはGemini 4 Argonのカットオフを公表していません。前世代のフラッグシップGemini 3.1 Proは2025年1月（Google Search統合）です。ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限。',
+        answer: '確認済みカットオフ：Claude Fable 5.2・Opus 5.5・Sonnet 5.5・Haiku 5.5は2026年6月（Anthropicのモデル概要による信頼性の高いカットオフ。Claude Opus 5（2026年5月）は前世代）、GPT-6.2 SolとGPT-6.1 Terraは2026年6月、GPT-6.2 AstraとGPT-6 Lunaは2026年5月（OpenAIのモデルドキュメントによる。ChatGPTはデフォルトでBing検索。GPT-6.2 AstraとGPT-6.2 SolはGPT-6 AstraとGPT-6.1 Sol（2026年4月）の後継。GPT-6ファミリーはGPT-5.6（2026年2月）の後継。GPT-4oはレガシーモデルで2023年10月）、Gemini 4 Argon・Carbon・Hydrogen・Neonは2026年3月（Googleのモデルカードによる。Google検索グラウンディング。従来のフラッグシップGemini 3.1 Proは2025年1月と記載）、Grok 4.7は2026年5月（コンシューマーアプリではデフォルトでXを検索。Grok 4.6（2026年2月）の後継）。MistralとDeepSeekはMistral Large 4・DeepSeek-V4のカットオフを公表していません。ローカルLLM（Llama、Qwen、Gemma、Phi）にはウェブ検索がなく、カットオフは絶対的です。オープンウェイトモデルでは、MetaがMuse Glimmer 30Bを2026年1月4日、Llama 4 Scoutを2024年8月、GoogleがGemma 4を2025年1月、MicrosoftがPhi-4を2024年6月と記載しています。DeepSeek-V3・V4、Qwen2.5、Qwen3、Qwen3.8、Mistral Small 3については明記されたカットオフを確認できませんでした。',
         bullets: [
-          'GPT-6ファミリー (ChatGPT)：現行のAstra/Solカットオフは2026年5〜6月、OpenAIの2026年11月の発表による（GPT-6 Lunaは2026年5月のまま） — Bing検索で部分補完',
-          'Claude (Opus 5.5)：カットオフ2026年6月（信頼性高）— ウェブ検索はオプトイン',
+          'GPT-6ファミリー (ChatGPT)：現行のAstra/Sol/Terra/Lunaは2026年5〜6月のカットオフ（OpenAIのモデルドキュメントによる） — デフォルトのBing検索で一部補完',
+          'Claude (Fable 5.2、Opus 5.5、Sonnet 5.5、Haiku 5.5)：信頼性の高いカットオフは2026年6月 — ウェブ検索はオプトイン',
+          'Gemini 4 (Argon、Carbon、Hydrogen、Neon)：Googleのモデルカードによるカットオフは2026年3月 — Google検索グラウンディング',
           'Grok 4.7：カットオフ2026年5月 — コンシューマー向けアプリではX検索をデフォルトで使用',
           'ローカルLLM：検索なし — カットオフは固定された絶対的な知識の限界',
         ],
@@ -470,7 +477,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '知識カットオフは固定された日付 — その日以降のデータはモデルに存在しない',
           'クラウドモデル（ChatGPT、Gemini、Grok）は組み込みのウェブ検索で部分的に補完',
           'ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限',
-          'Gemini 4 Argon、Mistral Large 4、DeepSeek-V4、Qwen3など主要モデルのカットオフ日は非公開',
+          'Mistral Large 4、DeepSeek-V4、Qwen3など主要モデルのカットオフ日は非公開',
         ],
       },
       faq: {
@@ -514,7 +521,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2026-12-20',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-zh.webp',
     title: 'AI模型知识截止日期2026：完整参考表',
@@ -525,10 +532,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '2026年AI模型的知识截止日期是什么？',
-        answer: '已验证截止日期：Claude Opus 5.5 2026年6月（可靠截止日期；接替Claude Opus 5，2026年5月）；GPT-6.2 Astra 2026年5月、GPT-6.2 Sol 2026年6月（依据OpenAI 2026年11月17日的公告，由多家独立媒体报道——待OpenAI官方页面可访问后再核实），GPT-6 Luna保持不变仍为2026年5月（ChatGPT默认搜索Bing；GPT-6.2 Astra与GPT-6.2 Sol接替GPT-6 Astra与GPT-6.1 Sol，2026年4月；GPT-6系列接替GPT-5.6，2026年2月；GPT-4o为旧版模型，2023年10月）；Grok 4.7 2026年5月（消费级应用默认搜索X；接替Grok 4.6，2026年2月）。Google未公布Gemini 4 Argon的截止日期；上一代旗舰Gemini 3.1 Pro为2025年1月（原生Google Search集成）。本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对硬限制。',
+        answer: '已验证截止日期：Claude Fable 5.2、Opus 5.5、Sonnet 5.5 和 Haiku 5.5 为2026年6月（依据 Anthropic 模型概览的可靠截止日期；Claude Opus 5，2026年5月，为上一代）；GPT-6.2 Sol 和 GPT-6.1 Terra 为2026年6月，GPT-6.2 Astra 和 GPT-6 Luna 为2026年5月（依据 OpenAI 模型文档；ChatGPT 默认搜索 Bing；GPT-6.2 Astra 和 GPT-6.2 Sol 取代 GPT-6 Astra 和 GPT-6.1 Sol，2026年4月；GPT-6 系列取代 GPT-5.6，2026年2月；GPT-4o 为旧版模型，2023年10月）；Gemini 4 Argon、Carbon、Hydrogen 和 Neon 为2026年3月（依据 Google 模型卡；Google 搜索接地；上一代旗舰 Gemini 3.1 Pro 注明为2025年1月）；Grok 4.7 为2026年5月（消费者应用默认搜索 X；取代 Grok 4.6，2026年2月）。Mistral 和 DeepSeek 未公布 Mistral Large 4 或 DeepSeek-V4 的截止日期。本地 LLM（Llama、Qwen、Gemma、Phi）没有网络搜索，其截止日期是绝对的。开源权重模型方面，Meta 注明 Muse Glimmer 30B 为2026年1月4日、Llama 4 Scout 为2024年8月，Google 注明 Gemma 4 为2025年1月，Microsoft 注明 Phi-4 为2024年6月；DeepSeek-V3 和 V4、Qwen2.5、Qwen3 和 Qwen3.8 以及 Mistral Small 3 我们未找到明确注明的截止日期。',
         bullets: [
-          'GPT-6系列 (ChatGPT)：当前Astra/Sol截止2026年5–6月，依据OpenAI 2026年11月的公告（GPT-6 Luna仍为2026年5月） — 由Bing搜索部分补充',
-          'Claude (Opus 5.5)：截止2026年6月（可靠）— 网络搜索需手动启用',
+          'GPT-6系列 (ChatGPT)：当前 Astra/Sol/Terra/Luna 截止2026年5–6月，依据 OpenAI 模型文档 — 由默认的 Bing 搜索部分补偿',
+          'Claude (Fable 5.2、Opus 5.5、Sonnet 5.5、Haiku 5.5)：可靠截止2026年6月 — 网络搜索需手动启用',
+          'Gemini 4 (Argon、Carbon、Hydrogen、Neon)：依据 Google 模型卡截止2026年3月 — Google 搜索接地',
           'Grok 4.7：截止2026年5月 — 消费级应用默认搜索X',
           '本地LLM：无搜索层 — 截止日期是冻结的绝对知识边界',
         ],
@@ -543,7 +551,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '知识截止日期是固定的——该日期之后的信息对模型不可见',
           '云端模型（ChatGPT、Gemini、Grok）通过内置网络搜索部分弥补这一限制',
           '本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对的知识边界',
-          'Gemini 4 Argon、Mistral Large 4、DeepSeek-V4、Qwen3等多个主要模型未公开具体截止日期',
+          'Mistral Large 4、DeepSeek-V4、Qwen3等多个主要模型未公开具体截止日期',
         ],
       },
       faq: {
@@ -587,7 +595,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ko: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2026-12-20',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-ko.webp',
     title: 'AI 모델 지식 컷오프 날짜 2026: 완전한 치트 시트',
@@ -598,10 +606,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '2026년 현재 AI 모델의 지식 컷오프 날짜는 무엇인가요?',
-        answer: '검증된 컷오프: Claude Opus 5.5는 2026년 6월(신뢰할 수 있는 컷오프; Claude Opus 5(2026년 5월)의 후속), GPT-6.2 Astra는 2026년 5월, GPT-6.2 Sol은 2026년 6월(OpenAI의 2026년 11월 17일 발표에 따른 것으로, 여러 독립 매체가 보도했으며 OpenAI 공식 페이지에 접근 가능해지면 재확인 필요), GPT-6 Luna는 변동 없이 2026년 5월(ChatGPT는 기본적으로 Bing 검색 사용; GPT-6.2 Astra와 GPT-6.2 Sol은 GPT-6 Astra와 GPT-6.1 Sol(2026년 4월)의 후속; GPT-6 제품군은 GPT-5.6(2026년 2월)의 후속; GPT-4o는 레거시 모델로 2023년 10월), Grok 4.7은 2026년 5월(일반 소비자용 앱에서는 기본적으로 X 검색; Grok 4.6(2026년 2월)의 후속). Google은 Gemini 4 Argon의 컷오프를 공개하지 않았으며, 이전 세대 플래그십인 Gemini 3.1 Pro는 2025년 1월(네이티브 Google Search)입니다. 로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없으므로 컷오프가 절대적인 한계입니다.',
+        answer: '검증된 컷오프: Claude Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5는 2026년 6월(Anthropic 모델 개요 기준 신뢰할 수 있는 컷오프; Claude Opus 5(2026년 5월)는 이전 세대), GPT-6.2 Sol과 GPT-6.1 Terra는 2026년 6월, GPT-6.2 Astra와 GPT-6 Luna는 2026년 5월(OpenAI 모델 문서 기준; ChatGPT는 기본적으로 Bing 검색; GPT-6.2 Astra와 GPT-6.2 Sol은 GPT-6 Astra와 GPT-6.1 Sol(2026년 4월)을 대체; GPT-6 제품군은 GPT-5.6(2026년 2월)을 대체; GPT-4o는 레거시 모델로 2023년 10월), Gemini 4 Argon, Carbon, Hydrogen, Neon은 2026년 3월(Google 모델 카드 기준; Google 검색 그라운딩; 이전 플래그십 Gemini 3.1 Pro는 2025년 1월로 명시), Grok 4.7은 2026년 5월(소비자 앱에서 기본적으로 X 검색; Grok 4.6(2026년 2월)을 대체). Mistral과 DeepSeek은 Mistral Large 4나 DeepSeek-V4의 컷오프를 밝히지 않았습니다. 로컬 LLM(Llama, Qwen, Gemma, Phi)에는 웹 검색이 없어 컷오프가 절대적입니다. 오픈웨이트 모델 중 Meta는 Muse Glimmer 30B를 2026년 1월 4일, Llama 4 Scout를 2024년 8월로, Google은 Gemma 4를 2025년 1월로, Microsoft는 Phi-4를 2024년 6월로 명시합니다. DeepSeek-V3와 V4, Qwen2.5, Qwen3와 Qwen3.8, Mistral Small 3은 명시된 컷오프를 찾지 못했습니다.',
         bullets: [
-          'GPT-6 제품군 (ChatGPT): 현재 Astra/Sol 컷오프 2026년 5~6월, OpenAI의 2026년 11월 발표에 따름(GPT-6 Luna는 2026년 5월 유지) — Bing 검색으로 부분 보완',
-          'Claude (Opus 5.5): 컷오프 2026년 6월(신뢰 가능) — 웹 검색은 명시적 도구 활성화 필요',
+          'GPT-6 제품군 (ChatGPT): 현재 Astra/Sol/Terra/Luna 컷오프 2026년 5~6월, OpenAI 모델 문서 기준 — 기본 Bing 검색으로 부분 보완',
+          'Claude (Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5): 신뢰할 수 있는 컷오프 2026년 6월 — 웹 검색은 명시적 도구 활성화 필요',
+          'Gemini 4 (Argon, Carbon, Hydrogen, Neon): Google 모델 카드 기준 컷오프 2026년 3월 — Google 검색 그라운딩',
           'Grok 4.7: 컷오프 2026년 5월 — 일반 소비자용 앱에서는 기본적으로 X 검색',
           '로컬 LLM: 검색 레이어 없음 — 컷오프는 고정된 절대적 한계',
         ],
@@ -616,7 +625,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '지식 컷오프는 고정된 날짜입니다 — 그 날짜 이후의 정보는 모델에 존재하지 않습니다',
           '클라우드 모델(ChatGPT, Gemini, Grok)은 내장된 웹 검색으로 이를 부분적으로 보완합니다',
           '로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없습니다 — 컷오프는 절대적인 지식의 한계입니다',
-          'Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Qwen3 등 여러 주요 모델은 정확한 컷오프 날짜를 공개하지 않았습니다',
+          'Mistral Large 4, DeepSeek-V4, Qwen3 등 여러 주요 모델은 정확한 컷오프 날짜를 공개하지 않았습니다',
         ],
       },
       faq: {
@@ -660,7 +669,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   pt: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2026-12-20',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-pt.webp',
     title: 'Datas de corte de conhecimento dos modelos de IA 2026: guia de referência completo',
@@ -671,10 +680,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Quais são as datas de corte de conhecimento dos modelos de IA em 2026?',
-        answer: 'Datas de corte verificadas: Claude Opus 5.5 junho 2026 (corte confiável; sucede o Claude Opus 5, maio 2026); GPT-6.2 Astra maio 2026 e GPT-6.2 Sol junho 2026 (conforme o anúncio da OpenAI de 17 de novembro de 2026, divulgado por diversos veículos independentes — a confirmar quando a página oficial da OpenAI estiver acessível), GPT-6 Luna sem alteração em maio 2026 (ChatGPT busca no Bing por padrão; GPT-6.2 Astra e GPT-6.2 Sol sucedem o GPT-6 Astra e o GPT-6.1 Sol, abril 2026; a família GPT-6 sucede o GPT-5.6, fevereiro 2026; GPT-4o é um modelo legado, out 2023); Grok 4.7 maio 2026 (busca X por padrão no app para consumidores; sucede o Grok 4.6, fevereiro 2026). O Google não informa data de corte para o Gemini 4 Argon; o carro-chefe anterior, Gemini 3.1 Pro, indica janeiro 2025 (Google Search nativo). LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto.',
+        answer: 'Datas de corte verificadas: Claude Fable 5.2, Opus 5.5, Sonnet 5.5 e Haiku 5.5 junho de 2026 (corte confiável conforme a visão geral de modelos da Anthropic; Claude Opus 5, maio de 2026, é a geração anterior); GPT-6.2 Sol e GPT-6.1 Terra junho de 2026, GPT-6.2 Astra e GPT-6 Luna maio de 2026 (conforme a documentação de modelos da OpenAI; o ChatGPT pesquisa no Bing por padrão; GPT-6.2 Astra e GPT-6.2 Sol substituem GPT-6 Astra e GPT-6.1 Sol, abril de 2026; a família GPT-6 substitui o GPT-5.6, fevereiro de 2026; o GPT-4o é um modelo legado, outubro de 2023); Gemini 4 Argon, Carbon, Hydrogen e Neon março de 2026 (conforme os model cards do Google; grounding com Google Search; o antigo carro-chefe, Gemini 3.1 Pro, informa janeiro de 2025); Grok 4.7 maio de 2026 (pesquisa no X por padrão no app para consumidores; substitui o Grok 4.6, fevereiro de 2026). Mistral e DeepSeek não informam corte para Mistral Large 4 nem DeepSeek-V4. LLMs locais (Llama, Qwen, Gemma, Phi) não têm busca na web e seu corte é absoluto. Entre os modelos open-weight, a Meta documenta 4 de janeiro de 2026 para o Muse Glimmer 30B e agosto de 2024 para o Llama 4 Scout, o Google janeiro de 2025 para o Gemma 4 e a Microsoft junho de 2024 para o Phi-4; não encontramos corte informado para DeepSeek-V3 e V4, Qwen2.5, Qwen3 e Qwen3.8, nem Mistral Small 3.',
         bullets: [
-          'Família GPT-6 (ChatGPT): corte mai–jun 2026 para a geração atual Astra/Sol, conforme o anúncio da OpenAI de novembro de 2026 (GPT-6 Luna permanece em maio 2026) — parcialmente compensado pela busca Bing',
-          'Claude (Opus 5.5): corte junho 2026 (confiável) — busca web requer ativação explícita',
+          'Família GPT-6 (ChatGPT): corte mai–jun 2026 para os níveis atuais Astra/Sol/Terra/Luna, conforme a documentação de modelos da OpenAI — compensado em parte pela busca Bing padrão',
+          'Claude (Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5): corte confiável junho 2026 — busca web requer ativação explícita',
+          'Gemini 4 (Argon, Carbon, Hydrogen, Neon): corte março 2026 conforme os model cards do Google — grounding com Google Search',
           'Grok 4.7: corte maio 2026 — busca X por padrão no app para consumidores',
           'LLMs locais: sem camada de busca — o corte é um limite de conhecimento fixo',
         ],
@@ -689,7 +699,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Datas de corte de conhecimento são fixas — informações após essa data não existem para o modelo',
           'Modelos em nuvem (ChatGPT, Gemini, Grok) compensam parcialmente com busca web integrada',
           'LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto de conhecimento',
-          'Vários modelos principais — incluindo Gemini 4 Argon, Mistral Large 4, DeepSeek-V4 e Qwen3 — não divulgaram datas de corte exatas',
+          'Vários modelos principais — incluindo Mistral Large 4, DeepSeek-V4 e Qwen3 — não divulgaram datas de corte exatas',
         ],
       },
       faq: {
@@ -733,7 +743,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     designSkin: 'hub',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2026-12-20',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-ar.webp',
     title: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي ⁨2026⁩: دليل مرجعي شامل',
@@ -744,10 +754,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'ما هي تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي في 2026؟',
-        answer: 'تواريخ انقطاع موثّقة: Claude Opus 5.5 يونيو 2026 (انقطاع موثوق؛ خلف Claude Opus 5، مايو 2026)؛ GPT-6.2 Astra مايو 2026 وGPT-6.2 Sol يونيو 2026 (وفقًا لإعلان OpenAI في 17 نوفمبر 2026، كما نقلته عدة مصادر إخبارية مستقلة — يحتاج إلى تأكيد عند إمكانية الوصول إلى صفحة OpenAI الرسمية)، وGPT-6 Luna دون تغيير في مايو 2026 (ChatGPT يبحث في Bing افتراضيًا؛ خلف GPT-6.2 Astra وGPT-6.2 Sol كلًا من GPT-6 Astra وGPT-6.1 Sol، أبريل 2026؛ عائلة GPT-6 خلفت GPT-5.6، فبراير 2026؛ GPT-4o نموذج قديم، أكتوبر 2023)؛ Grok 4.7 مايو 2026 (يبحث في X افتراضيًا في تطبيق المستهلكين؛ خلف Grok 4.6، فبراير 2026). لم تنشر Google تاريخ انقطاع لـ Gemini 4 Argon؛ أما الرائد السابق Gemini 3.1 Pro فتاريخه يناير 2025 (Google Search الأصيل). نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد مطلق.',
+        answer: 'تواريخ انقطاع موثّقة: Claude Fable 5.2 وOpus 5.5 وSonnet 5.5 وHaiku 5.5 يونيو 2026 (انقطاع موثوق وفق نظرة Anthropic العامة على النماذج؛ Claude Opus 5، مايو 2026، هو الجيل السابق)؛ GPT-6.2 Sol وGPT-6.1 Terra يونيو 2026، وGPT-6.2 Astra وGPT-6 Luna مايو 2026 (وفق توثيق نماذج OpenAI؛ يبحث ChatGPT في Bing افتراضيًا؛ يحلّ GPT-6.2 Astra وGPT-6.2 Sol محل GPT-6 Astra وGPT-6.1 Sol، أبريل 2026؛ وتحلّ عائلة GPT-6 محل GPT-5.6، فبراير 2026؛ وGPT-4o نموذج قديم، أكتوبر 2023)؛ Gemini 4 Argon وCarbon وHydrogen وNeon مارس 2026 (وفق بطاقات نماذج Google؛ ربط بحث Google؛ ويذكر النموذج الرائد السابق Gemini 3.1 Pro يناير 2025)؛ Grok 4.7 مايو 2026 (يبحث في X افتراضيًا في تطبيق المستهلك؛ يحلّ محل Grok 4.6، فبراير 2026). لا تذكر Mistral وDeepSeek تاريخ انقطاع لـ Mistral Large 4 أو DeepSeek-V4. النماذج المحلية (Llama وQwen وGemma وPhi) بلا بحث ويب، وانقطاعها مطلق. وبين النماذج مفتوحة الأوزان توثّق Meta تاريخ 4 يناير 2026 لـ Muse Glimmer 30B وأغسطس 2024 لـ Llama 4 Scout، وتوثّق Google يناير 2025 لـ Gemma 4، وMicrosoft يونيو 2024 لـ Phi-4؛ ولم نجد تاريخ انقطاع معلنًا لـ DeepSeek-V3 وV4 وQwen2.5 وQwen3 وQwen3.8 وMistral Small 3.',
         bullets: [
-          'عائلة GPT-6 (ChatGPT): انقطاع مايو–يونيو 2026 لفئة Astra/Sol الحالية، وفقًا لإعلان OpenAI في نوفمبر 2026 (يبقى GPT-6 Luna عند مايو 2026) — مُعوَّض جزئيًا ببحث Bing',
-          'Claude (Opus 5.5): انقطاع يونيو 2026 (موثوق) — بحث الويب يتطلب تفعيلًا صريحًا',
+          'عائلة GPT-6 (ChatGPT): انقطاع مايو–يونيو 2026 لفئات Astra/Sol/Terra/Luna الحالية، وفق توثيق نماذج OpenAI — يعوّضه جزئيًا بحث Bing الافتراضي',
+          'Claude (Fable 5.2 وOpus 5.5 وSonnet 5.5 وHaiku 5.5): انقطاع موثوق يونيو 2026 — بحث الويب يتطلب تفعيلًا صريحًا',
+          'Gemini 4 (Argon وCarbon وHydrogen وNeon): انقطاع مارس 2026 وفق بطاقات نماذج Google — ربط بحث Google',
           'Grok 4.7: انقطاع مايو 2026 — يبحث في X افتراضيًا في تطبيق المستهلكين',
           'نماذج LLM المحلية: بلا بحث — الانقطاع حد معرفي مجمّد مطلق',
         ],
@@ -762,7 +773,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'تواريخ انقطاع المعرفة ثابتة — المعلومات بعد هذا التاريخ غير موجودة للنموذج',
           'نماذج السحابة (ChatGPT وGemini وGrok) تعوّض جزئيًا ببحث ويب مدمج',
           'نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد معرفي مطلق',
-          'عدة نماذج رئيسية — بما فيها Gemini 4 Argon وMistral Large 4 وDeepSeek-V4 وQwen3 — لم تُفصح عن تواريخ انقطاع دقيقة',
+          'عدة نماذج رئيسية — بما فيها Mistral Large 4 وDeepSeek-V4 وQwen3 — لم تُفصح عن تواريخ انقطاع دقيقة',
         ],
       },
       faq: {
