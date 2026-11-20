@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Is balcony solar legal where I live?',
         answer: 'It depends entirely on your country, and in the US, your state. Portugal and Germany have the clearest, most established simplified regimes. The US has no federal framework — legality is determined state by state, with ten states having signed dedicated legislation as of 2026-11-20 (several effective only in 2027) and New York\'s bill awaiting the governor. Brazil, Mexico, and the Gulf/MENA region have no small-system exemption; standard interconnection rules apply regardless of size. Spain\'s status is genuinely ambiguous.',
         bullets: [
-          'Portugal: explicitly legal, codified simplified regime for systems ≤800W with no grid export',
+          'Portugal: explicitly legal, codified simplified regime for systems ≤800W with no grid export (800 W per the government press release)',
           'Germany: explicitly legal, established simplified regime (MaStR-only registration, 800W inverter cap)',
           'United States: varies by state, no federal framework — check the dedicated state-by-state guide',
           'Spain: ambiguous — conflicting vendor vs. legal sources on whether a simplified exemption exists',
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer: 'Das hängt vollständig von Ihrem Land ab, in den USA vom Bundesstaat. Deutschland und Portugal haben die klarsten und etabliertesten vereinfachten Regelungen. Deutschland verfügt seit 2023 über eine gesetzliche Grundlage mit 800-W-Wechselrichtergrenze und vereinfachter MaStR-Anmeldung. Die USA haben keinen bundesweiten Rahmen — die Legalität wird staatlich festgelegt, zehn Bundesstaaten hatten Stand 2026-11-20 eigene Gesetze unterzeichnet (mehrere gelten erst ab 2027), der Entwurf aus New York wartet auf die Unterschrift der Gouverneurin. Brasilien, Mexiko und die Golfregion/MENA haben keine Kleinstanlagenausnahme; dort gelten Standardeinspeisungsregeln unabhängig von der Anlagengröße. Spaniens Status ist tatsächlich unklar.',
         bullets: [
           'Deutschland: ausdrücklich legal, etablierte vereinfachte Regelung (nur MaStR-Anmeldung, 800-W-Wechselrichtergrenze)',
-          'Portugal: ausdrücklich legal, kodifizierte vereinfachte Regelung für Anlagen ≤800 W ohne Netzeinspeisung',
+          'Portugal: ausdrücklich legal, kodifizierte vereinfachte Regelung für Anlagen ≤800 W ohne Netzeinspeisung (800 W laut Pressemitteilung der Regierung)',
           'USA: variiert je nach Bundesstaat, kein bundesweiter Rahmen — den speziellen Bundesstaaten-Leitfaden prüfen',
           'Spanien: unklar — widersprüchliche Anbieter- und Rechtsquellen bezüglich einer vereinfachten Ausnahme',
           'Brasilien, Mexiko, Golf/MENA: keine Kleinstanlagenausnahme — Standardeinspeisungsregeln gelten unabhängig von der Größe',
@@ -296,7 +296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '¿Es legal la energía solar de balcón donde vivo?',
         answer: 'Depende por completo de tu país, y en EE. UU., de tu estado. Portugal y Alemania tienen los regímenes simplificados más claros y establecidos. EE. UU. no tiene un marco federal — la legalidad se determina estado por estado, y diez estados habían firmado legislación dedicada a 2026-11-20 (varios con efecto solo en 2027), mientras el proyecto de Nueva York espera la firma de la gobernadora. Brasil, México y la región del Golfo/MENA no tienen exención para sistemas pequeños; se aplican las reglas de interconexión estándar sin importar el tamaño. El estado de España es genuinamente ambiguo.',
         bullets: [
-          'Portugal: explícitamente legal, régimen simplificado codificado para sistemas ≤800W sin exportación a la red',
+          'Portugal: explícitamente legal, régimen simplificado codificado para sistemas ≤800W sin exportación a la red (800 W según el comunicado del Gobierno)',
           'Alemania: explícitamente legal, régimen simplificado establecido (registro único en el MaStR, límite de inversor de 800W)',
           'Estados Unidos: varía según el estado, sin marco federal — consulta la guía dedicada estado por estado',
           'España: ambiguo — fuentes de proveedores y legales en conflicto sobre si existe una exención simplificada',
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'A energia solar de varanda é legal onde eu moro?',
         answer: 'Depende inteiramente do seu país, e nos EUA, do seu estado. Portugal e Alemanha têm os regimes simplificados mais claros e estabelecidos. Os EUA não têm marco federal — a legalidade é determinada estado por estado, com dez estados tendo sancionado legislação dedicada até 2026-11-20 (vários com vigência apenas em 2027) e o projeto de Nova York aguardando a sanção da governadora. Brasil, México e a região do Golfo/MENA não têm isenção para sistemas pequenos; regras de interconexão padrão se aplicam independentemente do tamanho. O status da Espanha é genuinamente ambíguo.',
         bullets: [
-          'Portugal: explicitamente legal, regime simplificado codificado para sistemas ≤800W sem exportação para a rede',
+          'Portugal: explicitamente legal, regime simplificado codificado para sistemas ≤800W sem exportação para a rede (800 W conforme o comunicado do governo)',
           'Alemanha: explicitamente legal, regime simplificado estabelecido (registro único no MaStR, limite de inversor de 800W)',
           'Estados Unidos: varia por estado, sem marco federal — confira o guia dedicado estado por estado',
           'Espanha: ambíguo — fontes de fornecedores e jurídicas em conflito sobre se existe uma isenção simplificada',
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'هل الطاقة الشمسية للشرفة قانونية في مكان إقامتي؟',
         answer: 'يعتمد الأمر كليًا على دولتك، وفي الولايات المتحدة، على ولايتك. تمتلك البرتغال وألمانيا أوضح الأنظمة المبسّطة وأكثرها رسوخًا. لا تملك الولايات المتحدة إطارًا فيدراليًا — تُحدَّد القانونية ولاية بولاية، مع توقيع عشر ولايات على تشريعات مخصصة حتى 2026-11-20 (بعضها يسري في 2027 فقط) وانتظار مشروع نيويورك توقيع الحاكمة. لا تملك البرازيل والمكسيك ومنطقة الخليج وشمال أفريقيا إعفاءً للأنظمة الصغيرة؛ تنطبق قواعد الربط الشبكي القياسية بغض النظر عن الحجم. وضع إسبانيا غامض فعليًا.',
         bullets: [
-          'البرتغال: قانونية صراحةً، نظام مبسّط مقنَّن للأنظمة ≤800W بدون تصدير إلى الشبكة',
+          'البرتغال: قانونية صراحةً، نظام مبسّط مقنَّن للأنظمة ≤800W بدون تصدير إلى الشبكة (800 واط وفق البيان الصحفي للحكومة)',
           'ألمانيا: قانونية صراحةً، نظام مبسّط راسخ (تسجيل واحد في MaStR، حد عاكس 800 واط)',
           'الولايات المتحدة: تختلف حسب الولاية، دون إطار فيدرالي — راجع الدليل المخصص لكل ولاية',
           'إسبانيا: غامضة — تضارب بين مصادر الموردين والمصادر القانونية حول وجود إعفاء مبسّط',
@@ -820,7 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '我所在的地方阳台光伏合法吗?',
         answer: '这完全取决于你所在的国家,在美国则取决于所在州。葡萄牙和德国拥有最清晰、最成熟的简化制度。美国没有联邦框架——合法性由各州自行决定,截至2026-11-20已有10个州签署了专门立法(部分2027年才生效),纽约州法案等待州长签署。巴西、墨西哥和海湾/MENA地区没有小型系统豁免;无论系统大小,都适用标准并网规则。西班牙的状态确实存在争议。',
         bullets: [
-          '葡萄牙:明确合法,针对功率≤800W且不并网上传的系统有成文的简化制度',
+          '葡萄牙:明确合法,针对功率≤800W且不并网上传的系统有成文的简化制度(800瓦依据政府新闻稿)',
           '德国:明确合法,拥有成熟的简化制度(仅需在MaStR注册,逆变器上限800W)',
           '美国:因州而异,没有联邦框架——请查看专门的各州指南',
           '西班牙:状态不明——供应商与法律来源在是否存在简化豁免上说法相互矛盾',
