@@ -51,13 +51,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'STREAM Lineup (AC Output)',
         image: '/images/ecoflow-balcony-solar-lineup-en.svg',
         imageCaption: 'Max AC output as officially listed; battery capacity scales separately by configuration.',
-        content: 'The STREAM lineup is EcoFlow\'s microinverter and battery-storage product family for balcony solar, with maximum AC output listed officially per model and battery capacity scaling separately by configuration. The STREAM Ultra battery is the most-documented model: 1.92 kWh of capacity, expandable to 11.52 kWh, priced at $1,279. EcoFlow\'s STREAM Ultra requires its cloud app for control, and no verified local-API path was found for the product — a contrast with APsystems\' EZ1 microinverter line, which ships with a native local API.',
+        content: 'The STREAM lineup is EcoFlow\'s microinverter and battery-storage product family for balcony solar, with maximum AC output listed officially per model and battery capacity scaling separately by configuration. The STREAM Ultra battery is the most-documented model: 1.92 kWh of capacity, expandable to 11.52 kWh, priced at $1,279 at last refresh (see Last updated). EcoFlow\'s STREAM Ultra requires its cloud app for control, and no verified local-API path was found for the product.',
       },
       markets: {
         title: 'US Legalization, State by State',
         image: '/images/ecoflow-balcony-solar-markets-en.svg',
         imageCaption: 'US states where EcoFlow lists STREAM as available (EcoFlow\'s own tracker, June 2026) and states with enacted plug-in-solar legislation.',
-        content: 'EcoFlow\'s own US state tracker (June 2026) lists the STREAM Microinverter and STREAM Ultra as available for plug-and-play installation in only two states, Utah and Maryland, and says availability will expand as legislation passes. Other states that passed plug-in-solar legislation in 2026 — the tracker names Maine, Virginia and Colorado, with New York and California pending at that date — are not listed there as STREAM markets, and a legislative citation alone does not confirm retail availability. Check EcoFlow\'s site and your utility\'s rules before buying. In EU markets, EcoFlow states VDE-AR-N 4105 grid-connection certification, the same standard confirmed for Anker SOLIX in Germany — though this is EcoFlow\'s own stated claim and has not been independently re-verified against the certifying body in this research.',
+        content: 'EcoFlow\'s own US state tracker (June 2026) lists the STREAM Microinverter and STREAM Ultra as available for plug-and-play installation in only two states, Utah and Maryland, and says availability will expand as legislation passes. Other states that passed plug-in-solar legislation in 2026 — the tracker names Maine, Virginia and Colorado, with New York and California pending at that date — are not listed there as STREAM markets, and a legislative citation alone does not confirm retail availability. Check EcoFlow\'s site and your utility\'s rules before buying. In EU markets, EcoFlow states VDE-AR-N 4105 grid-connection certification — this is EcoFlow\'s own stated claim and has not been independently re-verified against the certifying body in this research.',
       },
       position: {
         title: 'Where EcoFlow Sits',
@@ -70,6 +70,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/ecoflow-balcony-solar-certification-en.svg',
         imageCaption: 'VDE-AR-N 4105 and TÜV Rheinland are EcoFlow’s own stated claims — not independently re-verified against the certifying bodies in this research pass.',
         content: 'EcoFlow states VDE-AR-N 4105 grid-connection certification and TÜV Rheinland certification for its EU-market balcony solar products. Both are EcoFlow\'s own stated claims in this research pass and have not been independently re-verified against the certifying bodies. In the US, UL 3700 — the balcony-solar-specific standard published in December 2025 — has a first product described as compliant, the Hoymiles HiFlow Pro microinverter (July 2026, per Hoymiles; InsideEVs noted it is designed to meet the standard, not certified by UL Solutions). We found no source naming an EcoFlow product as UL 3700 compliant or certified as of November 2026, and state laws differ on whether they require UL 3700 or accept other nationally recognized lab certification.',
+        callouts: [
+          { type: 'note', text: 'Grid-connection, registration and certification rules differ by country, state and utility; this profile is not legal or electrical advice. Check with your utility or a qualified electrician.' },
+        ],
       },
       faqSection: {
         id: 'faq',
@@ -133,13 +136,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'STREAM-Modellreihe (AC-Ausgangsleistung)',
         image: '/images/ecoflow-balcony-solar-lineup-en.svg',
         imageCaption: 'Maximale AC-Ausgangsleistung gemäß offizieller Angabe; die Akkukapazität skaliert je nach Konfiguration separat.',
-        content: 'Die STREAM-Produktpalette ist EcoFlows Mikrowechselrichter- und Batteriespeicher-Produktfamilie für Balkonkraftwerke, mit von EcoFlow offiziell je Modell angegebener maximaler AC-Ausgangsleistung, während die Batteriekapazität separat je Konfiguration skaliert. Die STREAM-Ultra-Batterie ist das am besten dokumentierte Modell: 1,92 kWh Kapazität, erweiterbar auf 11,52 kWh, zum Preis von 1.279 $. Die STREAM-Ultra-Batterie von EcoFlow benötigt für die Steuerung die Cloud-App des Unternehmens; ein verifizierter lokaler API-Zugang wurde für das Produkt nicht gefunden — ein Unterschied zur EZ1-Mikrowechselrichter-Serie von APsystems, die mit einer nativen lokalen API ausgeliefert wird.',
+        content: 'Die STREAM-Produktpalette ist EcoFlows Mikrowechselrichter- und Batteriespeicher-Produktfamilie für Balkonkraftwerke, mit von EcoFlow offiziell je Modell angegebener maximaler AC-Ausgangsleistung, während die Batteriekapazität separat je Konfiguration skaliert. Die STREAM-Ultra-Batterie ist das am besten dokumentierte Modell: 1,92 kWh Kapazität, erweiterbar auf 11,52 kWh, zum Preis von 1.279 $ (zum Zeitpunkt der letzten Aktualisierung; siehe „Zuletzt aktualisiert"). Die STREAM-Ultra-Batterie von EcoFlow benötigt für die Steuerung die Cloud-App des Unternehmens; ein verifizierter lokaler API-Zugang wurde für das Produkt nicht gefunden.',
       },
       markets: {
         title: 'Legalisierung in den USA, Bundesstaat für Bundesstaat',
         image: '/images/ecoflow-balcony-solar-markets-en.svg',
         imageCaption: 'US-Bundesstaaten, in denen EcoFlow STREAM als erhältlich listet (EcoFlows eigene Übersicht, Juni 2026), und Bundesstaaten mit verabschiedeter Steckersolar-Gesetzgebung.',
-        content: 'EcoFlows eigene Bundesstaaten-Übersicht für die USA (Juni 2026) führt den STREAM-Mikrowechselrichter und die STREAM Ultra als für die Plug-and-Play-Installation erhältlich in nur zwei Bundesstaaten auf, Utah und Maryland, und kündigt an, die Verfügbarkeit mit neuen Gesetzen auszuweiten. Weitere Bundesstaaten, die 2026 Steckersolar-Gesetze verabschiedet haben — die Übersicht nennt Maine, Virginia und Colorado, New York und Kalifornien waren zu diesem Zeitpunkt ausstehend —, sind dort nicht als STREAM-Märkte aufgeführt, und eine Nennung im Gesetzgebungsverfahren allein bestätigt keine Verfügbarkeit im Handel. Prüfen Sie vor dem Kauf die Website von EcoFlow und die Regeln Ihres Netzbetreibers. In EU-Märkten gibt EcoFlow eine VDE-AR-N-4105-Netzanschlusszertifizierung an — denselben Standard, der für Anker SOLIX in Deutschland bestätigt ist —, wobei dies eine eigene Angabe von EcoFlow ist und in dieser Recherche nicht unabhängig bei der Zertifizierungsstelle überprüft wurde.',
+        content: 'EcoFlows eigene Bundesstaaten-Übersicht für die USA (Juni 2026) führt den STREAM-Mikrowechselrichter und die STREAM Ultra als für die Plug-and-Play-Installation erhältlich in nur zwei Bundesstaaten auf, Utah und Maryland, und kündigt an, die Verfügbarkeit mit neuen Gesetzen auszuweiten. Weitere Bundesstaaten, die 2026 Steckersolar-Gesetze verabschiedet haben — die Übersicht nennt Maine, Virginia und Colorado, New York und Kalifornien waren zu diesem Zeitpunkt ausstehend —, sind dort nicht als STREAM-Märkte aufgeführt, und eine Nennung im Gesetzgebungsverfahren allein bestätigt keine Verfügbarkeit im Handel. Prüfen Sie vor dem Kauf die Website von EcoFlow und die Regeln Ihres Netzbetreibers. In EU-Märkten gibt EcoFlow eine VDE-AR-N-4105-Netzanschlusszertifizierung an — dies ist eine eigene Angabe von EcoFlow und wurde in dieser Recherche nicht unabhängig bei der Zertifizierungsstelle überprüft.',
       },
       position: {
         title: 'Positionierung von EcoFlow',
@@ -152,6 +155,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/ecoflow-balcony-solar-certification-en.svg',
         imageCaption: 'VDE-AR-N 4105 und TÜV Rheinland sind eigene Angaben von EcoFlow – in dieser Recherche nicht unabhängig bei den Zertifizierungsstellen erneut überprüft.',
         content: 'EcoFlow gibt für seine EU-Balkonkraftwerk-Produkte eine VDE-AR-N-4105-Netzanschlusszertifizierung sowie eine TÜV-Rheinland-Zertifizierung an. Beides sind in dieser Recherche eigene Angaben von EcoFlow und wurden nicht unabhängig bei den Zertifizierungsstellen überprüft. In den USA hat UL 3700 — der im Dezember 2025 veröffentlichte balkonkraftwerkspezifische Standard — ein erstes als konform beschriebenes Produkt, den Mikrowechselrichter Hoymiles HiFlow Pro (Juli 2026, laut Hoymiles; InsideEVs merkte an, er sei darauf ausgelegt, den Standard zu erfüllen, und nicht von UL Solutions zertifiziert). Wir haben keine Quelle gefunden, die ein EcoFlow-Produkt Stand November 2026 als UL-3700-konform oder -zertifiziert nennt; zudem unterscheiden sich die Landesgesetze darin, ob sie UL 3700 verlangen oder andere anerkannte Laborzertifizierungen akzeptieren.',
+        callouts: [
+          { type: 'note', text: 'Netzanschluss-, Anmelde- und Zertifizierungsvorschriften variieren je nach Land, Bundesland und Netzbetreiber. Dieses Profil ist keine Rechts- oder Elektroberatung. Klären Sie Details mit Ihrem Netzbetreiber oder einer Elektrofachkraft.' },
+        ],
       },
       faqSection: {
         id: 'faq',
@@ -215,13 +221,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Gamme STREAM (puissance de sortie CA)',
         image: '/images/ecoflow-balcony-solar-lineup-en.svg',
         imageCaption: 'Puissance de sortie CA maximale selon les données officielles ; la capacité de la batterie varie séparément selon la configuration.',
-        content: 'La gamme STREAM est la famille de produits d\'EcoFlow pour les micro-onduleurs et le stockage par batterie destinée au solaire de balcon, avec une puissance de sortie CA maximale indiquée officiellement par modèle et une capacité de batterie qui varie séparément selon la configuration. La batterie STREAM Ultra est le modèle le mieux documenté : 1,92 kWh de capacité, extensible à 11,52 kWh, au prix de 1 279 $. La batterie STREAM Ultra d\'EcoFlow nécessite son application cloud pour le contrôle, et aucun accès API local vérifié n\'a été trouvé pour ce produit — une différence avec la gamme de micro-onduleurs EZ1 d\'APsystems, livrée avec une API locale native.',
+        content: 'La gamme STREAM est la famille de produits d\'EcoFlow pour les micro-onduleurs et le stockage par batterie destinée au solaire de balcon, avec une puissance de sortie CA maximale indiquée officiellement par modèle et une capacité de batterie qui varie séparément selon la configuration. La batterie STREAM Ultra est le modèle le mieux documenté : 1,92 kWh de capacité, extensible à 11,52 kWh, au prix de 1 279 $ lors de la dernière vérification (voir « Dernière mise à jour »). La batterie STREAM Ultra d\'EcoFlow nécessite son application cloud pour le contrôle, et aucun accès API local vérifié n\'a été trouvé pour ce produit.',
       },
       markets: {
         title: 'Légalisation aux États-Unis, État par État',
         image: '/images/ecoflow-balcony-solar-markets-en.svg',
         imageCaption: 'États américains où EcoFlow indique STREAM comme disponible (suivi d\'EcoFlow, juin 2026) et États dotés d\'une législation sur le solaire enfichable.',
-        content: 'Le suivi par État d\'EcoFlow aux États-Unis (juin 2026) indique le micro-onduleur STREAM et la STREAM Ultra comme disponibles pour une installation plug-and-play dans seulement deux États, l\'Utah et le Maryland, et précise que la disponibilité s\'étendra avec l\'adoption de nouvelles lois. D\'autres États ayant adopté une législation sur le solaire enfichable en 2026 — le suivi cite le Maine, la Virginie et le Colorado, New York et la Californie étant en attente à cette date — n\'y figurent pas comme marchés STREAM, et une simple mention législative ne confirme pas la disponibilité en magasin. Vérifiez le site d\'EcoFlow et les règles de votre gestionnaire de réseau avant d\'acheter. Sur les marchés de l\'UE, EcoFlow indique une certification de raccordement VDE-AR-N 4105, la même norme confirmée pour Anker SOLIX en Allemagne — mais il s\'agit d\'une déclaration d\'EcoFlow, non revérifiée de manière indépendante auprès de l\'organisme certificateur dans cette recherche.',
+        content: 'Le suivi par État d\'EcoFlow aux États-Unis (juin 2026) indique le micro-onduleur STREAM et la STREAM Ultra comme disponibles pour une installation plug-and-play dans seulement deux États, l\'Utah et le Maryland, et précise que la disponibilité s\'étendra avec l\'adoption de nouvelles lois. D\'autres États ayant adopté une législation sur le solaire enfichable en 2026 — le suivi cite le Maine, la Virginie et le Colorado, New York et la Californie étant en attente à cette date — n\'y figurent pas comme marchés STREAM, et une simple mention législative ne confirme pas la disponibilité en magasin. Vérifiez le site d\'EcoFlow et les règles de votre gestionnaire de réseau avant d\'acheter. Sur les marchés de l\'UE, EcoFlow indique une certification de raccordement VDE-AR-N 4105 — il s\'agit d\'une déclaration d\'EcoFlow, non revérifiée de manière indépendante auprès de l\'organisme certificateur dans cette recherche.',
       },
       position: {
         title: 'Positionnement d\'EcoFlow',
@@ -234,6 +240,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/ecoflow-balcony-solar-certification-en.svg',
         imageCaption: 'VDE-AR-N 4105 et TÜV Rheinland sont des déclarations propres à EcoFlow – non revérifiées de manière indépendante auprès des organismes de certification dans le cadre de cette recherche.',
         content: 'EcoFlow indique une certification de raccordement VDE-AR-N 4105 et une certification TÜV Rheinland pour ses produits de solaire de balcon destinés à l\'UE. Ces deux éléments sont des déclarations d\'EcoFlow dans cette recherche et n\'ont pas été revérifiés de manière indépendante auprès des organismes certificateurs. Aux États-Unis, UL 3700 — la norme propre au solaire de balcon publiée en décembre 2025 — a un premier produit décrit comme conforme, le micro-onduleur Hoymiles HiFlow Pro (juillet 2026, selon Hoymiles ; InsideEVs a précisé qu\'il est conçu pour satisfaire la norme, sans certification par UL Solutions). Nous n\'avons trouvé aucune source citant un produit EcoFlow comme conforme ou certifié UL 3700 en novembre 2026, et les lois des États diffèrent sur l\'exigence d\'UL 3700 ou l\'acceptation d\'une autre certification de laboratoire reconnu.',
+        callouts: [
+          { type: 'note', text: 'Les règles de raccordement, d\'enregistrement et de certification varient selon le pays, l\'État et le gestionnaire de réseau. Ce profil ne constitue pas un conseil juridique ou électrique. Vérifiez auprès de votre gestionnaire de réseau ou d\'un électricien qualifié.' },
+        ],
       },
       faqSection: {
         id: 'faq',
@@ -297,13 +306,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'STREAMラインナップ(AC出力)',
         image: '/images/ecoflow-balcony-solar-lineup-en.svg',
         imageCaption: '公式に記載された最大AC出力です。バッテリー容量は構成ごとに個別に変動します。',
-        content: 'STREAMラインナップは、ベランダ太陽光発電向けのEcoFlowのマイクロインバーターおよびバッテリー蓄電製品ファミリーであり、最大AC出力はモデルごとに公式発表されている一方、バッテリー容量は構成ごとに個別に変動します。STREAM Ultraバッテリーは最も詳細な情報が公開されているモデルで、容量1.92kWh、11.52kWhまで拡張可能、価格は1,279ドルです。EcoFlowのSTREAM Ultraは制御にクラウドアプリを必要とし、この製品について検証済みのローカルAPI経路は見つかりませんでした——ネイティブなローカルAPIを搭載するAPsystemsのEZ1マイクロインバーターシリーズとは対照的です。',
+        content: 'STREAMラインナップは、ベランダ太陽光発電向けのEcoFlowのマイクロインバーターおよびバッテリー蓄電製品ファミリーであり、最大AC出力はモデルごとに公式発表されている一方、バッテリー容量は構成ごとに個別に変動します。STREAM Ultraバッテリーは最も詳細な情報が公開されているモデルで、容量1.92kWh、11.52kWhまで拡張可能、価格は1,279ドルです(最終確認時点。「最終更新日」参照)。EcoFlowのSTREAM Ultraは制御にクラウドアプリを必要とし、この製品について検証済みのローカルAPI経路は見つかりませんでした。',
       },
       markets: {
         title: '米国での合法化状況(州別)',
         image: '/images/ecoflow-balcony-solar-markets-en.svg',
         imageCaption: 'EcoFlowがSTREAMの提供州として掲載している米国の州(EcoFlow自身の一覧、2026年6月)と、プラグイン式太陽光の法律が成立した州。',
-        content: 'EcoFlow自身の米国州別一覧(2026年6月)は、STREAMマイクロインバーターとSTREAM Ultraのプラグアンドプレイ設置が可能な州をユタ州とメリーランド州の2州のみとし、法整備に応じて拡大するとしています。2026年にプラグイン式太陽光の法律を成立させた他の州(同一覧はメイン州、バージニア州、コロラド州を挙げ、ニューヨーク州とカリフォルニア州は当時審議中)はSTREAMの提供州として載っておらず、法律での言及だけでは小売での入手可否は確認できません。購入前にEcoFlowのサイトと電力会社の規則をご確認ください。EU市場ではEcoFlowがVDE-AR-N 4105系統連系認証を表明しており、ドイツでAnker SOLIXについて確認されているのと同じ規格ですが、これはEcoFlow自身の主張であり、本調査では認証機関に対する独立した再確認は行っていません。',
+        content: 'EcoFlow自身の米国州別一覧(2026年6月)は、STREAMマイクロインバーターとSTREAM Ultraのプラグアンドプレイ設置が可能な州をユタ州とメリーランド州の2州のみとし、法整備に応じて拡大するとしています。2026年にプラグイン式太陽光の法律を成立させた他の州(同一覧はメイン州、バージニア州、コロラド州を挙げ、ニューヨーク州とカリフォルニア州は当時審議中)はSTREAMの提供州として載っておらず、法律での言及だけでは小売での入手可否は確認できません。購入前にEcoFlowのサイトと電力会社の規則をご確認ください。EU市場ではEcoFlowがVDE-AR-N 4105系統連系認証を表明していますが、これはEcoFlow自身の主張であり、本調査では認証機関に対する独立した再確認は行っていません。',
       },
       position: {
         title: 'EcoFlowの立ち位置',
@@ -316,6 +325,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/ecoflow-balcony-solar-certification-en.svg',
         imageCaption: 'VDE-AR-N 4105およびTÜV Rheinlandは、EcoFlow自身による主張であり、今回の調査では認証機関に対して独自に再検証は行っていません。',
         content: 'EcoFlowは、EU市場向けベランダ太陽光製品についてVDE-AR-N 4105系統連系認証とTÜV Rheinland認証を表明しています。いずれも本調査ではEcoFlow自身の主張であり、認証機関への独立した再確認は行っていません。米国では、2025年12月に公開されたベランダ太陽光専用規格UL 3700について、Hoymiles HiFlow Proマイクロインバーターが最初の適合製品として紹介されています(2026年7月、Hoymiles発表。InsideEVsは、UL Solutionsによる認証ではなく規格への適合を目指した設計であると指摘)。2026年11月時点で、EcoFlow製品をUL 3700適合または認証済みと示す情報源は確認できておらず、州法もUL 3700を要求するか、他の全国的に認められた試験機関の認証を認めるかで異なります。',
+        callouts: [
+          { type: 'note', text: '系統連系・登録・認証のルールは国・州・系統運用者によって異なります。このプロフィールは法的または電気的なアドバイスではありません。系統運用者または有資格の電気技術者にご確認ください。' },
+        ],
       },
       faqSection: {
         id: 'faq',
@@ -379,13 +391,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'STREAM系列(AC输出功率)',
         image: '/images/ecoflow-balcony-solar-lineup-en.svg',
         imageCaption: '最大AC输出功率为官方公布数据;电池容量根据配置不同而单独变化。',
-        content: 'STREAM系列是EcoFlow面向阳台光伏的微型逆变器和电池储能产品家族,各型号的最大AC输出功率均为官方公布数据,而电池容量则根据配置单独变化。STREAM Ultra电池是资料最完整的型号:容量1.92 kWh,可扩展至11.52 kWh,售价1,279美元。EcoFlow的STREAM Ultra需要通过其云端应用进行控制,本次调研未发现该产品有经过验证的本地API途径——这与APsystems的EZ1微型逆变器系列形成对比,后者自带原生本地API。',
+        content: 'STREAM系列是EcoFlow面向阳台光伏的微型逆变器和电池储能产品家族,各型号的最大AC输出功率均为官方公布数据,而电池容量则根据配置单独变化。STREAM Ultra电池是资料最完整的型号:容量1.92 kWh,可扩展至11.52 kWh,售价1,279美元(以最近一次刷新为准,见"最后更新")。EcoFlow的STREAM Ultra需要通过其云端应用进行控制,本次调研未发现该产品有经过验证的本地API途径。',
       },
       markets: {
         title: '美国各州合法化情况',
         image: '/images/ecoflow-balcony-solar-markets-en.svg',
         imageCaption: 'EcoFlow列为STREAM可用的美国各州(EcoFlow自己的一览,2026年6月)以及已颁布插电式光伏立法的州。',
-        content: 'EcoFlow自己的美国各州一览(2026年6月)显示,STREAM微型逆变器和STREAM Ultra仅在犹他州和马里兰州两个州可即插即用安装,并称随着立法推进将扩大供货。2026年通过插电式光伏立法的其他州——该一览列出缅因州、弗吉尼亚州和科罗拉多州,纽约州和加利福尼亚州当时仍待定——并未被列为STREAM市场,仅凭立法中的提及不能确认零售供货。购买前请查看EcoFlow官网及所在地电网运营商的规定。在欧盟市场,EcoFlow声称获得VDE-AR-N 4105并网认证,与德国已确认的Anker SOLIX相同的标准——但这是EcoFlow自身的声明,本次研究未向认证机构独立复核。',
+        content: 'EcoFlow自己的美国各州一览(2026年6月)显示,STREAM微型逆变器和STREAM Ultra仅在犹他州和马里兰州两个州可即插即用安装,并称随着立法推进将扩大供货。2026年通过插电式光伏立法的其他州——该一览列出缅因州、弗吉尼亚州和科罗拉多州,纽约州和加利福尼亚州当时仍待定——并未被列为STREAM市场,仅凭立法中的提及不能确认零售供货。购买前请查看EcoFlow官网及所在地电网运营商的规定。在欧盟市场,EcoFlow声称获得VDE-AR-N 4105并网认证——但这是EcoFlow自身的声明,本次研究未向认证机构独立复核。',
       },
       position: {
         title: 'EcoFlow的市场定位',
@@ -398,6 +410,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/ecoflow-balcony-solar-certification-en.svg',
         imageCaption: 'VDE-AR-N 4105和TÜV Rheinland为EcoFlow自身声明的认证——本次调研未针对认证机构进行独立复核。',
         content: 'EcoFlow声称其面向欧盟市场的阳台光伏产品获得VDE-AR-N 4105并网认证和TÜV Rheinland认证。这两项在本次研究中均为EcoFlow自身的声明,未向认证机构独立复核。在美国,2025年12月发布的阳台光伏专用标准UL 3700已有首款被描述为符合该标准的产品,即Hoymiles HiFlow Pro微型逆变器(2026年7月,据Hoymiles;InsideEVs指出它是按该标准设计,并非UL Solutions认证)。截至2026年11月,我们未找到任何资料将EcoFlow产品列为符合或通过UL 3700认证;各州法律对是否要求UL 3700或接受其他全国认可实验室的认证也不尽相同。',
+        callouts: [
+          { type: 'note', text: '并网连接、注册和认证规则因国家、州/省及电网运营商而异；本资料不构成法律或电气建议。请咨询您的电网运营商或合格电工。' },
+        ],
       },
       faqSection: {
         id: 'faq',
@@ -461,13 +476,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Gama STREAM (salida de CA)',
         image: '/images/ecoflow-balcony-solar-lineup-en.svg',
         imageCaption: 'Salida de CA máxima según lo indicado oficialmente; la capacidad de batería varía por separado según la configuración.',
-        content: 'La gama STREAM es la familia de productos de microinversores y almacenamiento por batería de EcoFlow para energía solar de balcón, con la potencia de salida CA máxima indicada oficialmente por modelo y la capacidad de batería variando por separado según la configuración. La batería STREAM Ultra es el modelo mejor documentado: 1,92 kWh de capacidad, ampliable a 11,52 kWh, a un precio de 1.279 $. La batería STREAM Ultra de EcoFlow requiere su aplicación en la nube para el control, y no se encontró una ruta de API local verificada para el producto, a diferencia de la línea de microinversores EZ1 de APsystems, que se entrega con una API local nativa.',
+        content: 'La gama STREAM es la familia de productos de microinversores y almacenamiento por batería de EcoFlow para energía solar de balcón, con la potencia de salida CA máxima indicada oficialmente por modelo y la capacidad de batería variando por separado según la configuración. La batería STREAM Ultra es el modelo mejor documentado: 1,92 kWh de capacidad, ampliable a 11,52 kWh, a un precio de 1.279 $ en la última actualización (ver «Última actualización»). La batería STREAM Ultra de EcoFlow requiere su aplicación en la nube para el control, y no se encontró una ruta de API local verificada para el producto.',
       },
       markets: {
         title: 'Legalización en EE. UU., estado por estado',
         image: '/images/ecoflow-balcony-solar-markets-en.svg',
         imageCaption: 'Estados de EE. UU. donde EcoFlow indica STREAM como disponible (seguimiento de EcoFlow, junio de 2026) y estados con legislación de solar enchufable.',
-        content: 'El seguimiento por estados de EcoFlow en EE. UU. (junio de 2026) indica el microinversor STREAM y la STREAM Ultra como disponibles para instalación plug-and-play en solo dos estados, Utah y Maryland, y señala que la disponibilidad se ampliará a medida que se aprueben leyes. Otros estados que aprobaron legislación de solar enchufable en 2026 — el seguimiento menciona Maine, Virginia y Colorado, con Nueva York y California pendientes en esa fecha — no figuran allí como mercados STREAM, y una mención legislativa por sí sola no confirma la disponibilidad en tiendas. Consulta el sitio de EcoFlow y las normas de tu distribuidora antes de comprar. En los mercados de la UE, EcoFlow declara certificación de conexión a red VDE-AR-N 4105, la misma norma confirmada para Anker SOLIX en Alemania — aunque es una declaración de la propia EcoFlow y no se ha reverificado de forma independiente con el organismo certificador en esta investigación.',
+        content: 'El seguimiento por estados de EcoFlow en EE. UU. (junio de 2026) indica el microinversor STREAM y la STREAM Ultra como disponibles para instalación plug-and-play en solo dos estados, Utah y Maryland, y señala que la disponibilidad se ampliará a medida que se aprueben leyes. Otros estados que aprobaron legislación de solar enchufable en 2026 — el seguimiento menciona Maine, Virginia y Colorado, con Nueva York y California pendientes en esa fecha — no figuran allí como mercados STREAM, y una mención legislativa por sí sola no confirma la disponibilidad en tiendas. Consulta el sitio de EcoFlow y las normas de tu distribuidora antes de comprar. En los mercados de la UE, EcoFlow declara certificación de conexión a red VDE-AR-N 4105 — aunque es una declaración de la propia EcoFlow y no se ha reverificado de forma independiente con el organismo certificador en esta investigación.',
       },
       position: {
         title: 'Posicionamiento de EcoFlow',
@@ -480,6 +495,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/ecoflow-balcony-solar-certification-en.svg',
         imageCaption: 'VDE-AR-N 4105 y TÜV Rheinland son afirmaciones propias de EcoFlow, no reverificadas de forma independiente ante los organismos certificadores en esta investigación.',
         content: 'EcoFlow declara certificación de conexión a red VDE-AR-N 4105 y certificación TÜV Rheinland para sus productos de solar de balcón destinados a la UE. Ambas son declaraciones de la propia EcoFlow en esta investigación y no se han reverificado de forma independiente con los organismos certificadores. En EE. UU., UL 3700 — la norma específica de solar de balcón publicada en diciembre de 2025 — tiene un primer producto descrito como conforme, el microinversor Hoymiles HiFlow Pro (julio de 2026, según Hoymiles; InsideEVs señaló que está diseñado para cumplir la norma, sin certificación de UL Solutions). No encontramos ninguna fuente que cite un producto de EcoFlow como conforme o certificado UL 3700 en noviembre de 2026, y las leyes estatales difieren en si exigen UL 3700 o aceptan la certificación de otro laboratorio reconocido a nivel nacional.',
+        callouts: [
+          { type: 'note', text: 'Las normas de conexión a la red, registro y certificación varían según el país, el estado y la distribuidora. Este perfil no constituye asesoramiento legal ni eléctrico. Consulte con su distribuidora o un electricista cualificado.' },
+        ],
       },
       faqSection: {
         id: 'faq',
@@ -543,13 +561,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Linha STREAM (saída CA)',
         image: '/images/ecoflow-balcony-solar-lineup-en.svg',
         imageCaption: 'Saída CA máxima conforme informado oficialmente; a capacidade da bateria varia separadamente conforme a configuração.',
-        content: 'A linha STREAM é a família de produtos de microinversores e armazenamento em bateria da EcoFlow para energia solar de varanda, com a potência de saída CA máxima informada oficialmente por modelo e a capacidade da bateria variando separadamente conforme a configuração. A bateria STREAM Ultra é o modelo mais bem documentado: 1,92 kWh de capacidade, expansível para 11,52 kWh, ao preço de US$ 1.279. A bateria STREAM Ultra da EcoFlow exige o aplicativo em nuvem da empresa para controle, e não foi encontrada uma rota de API local verificada para o produto — um contraste com a linha de microinversores EZ1 da APsystems, que vem com uma API local nativa.',
+        content: 'A linha STREAM é a família de produtos de microinversores e armazenamento em bateria da EcoFlow para energia solar de varanda, com a potência de saída CA máxima informada oficialmente por modelo e a capacidade da bateria variando separadamente conforme a configuração. A bateria STREAM Ultra é o modelo mais bem documentado: 1,92 kWh de capacidade, expansível para 11,52 kWh, ao preço de US$ 1.279 na última verificação (ver «Última atualização»). A bateria STREAM Ultra da EcoFlow exige o aplicativo em nuvem da empresa para controle, e não foi encontrada uma rota de API local verificada para o produto.',
       },
       markets: {
         title: 'Legalização nos EUA, estado por estado',
         image: '/images/ecoflow-balcony-solar-markets-en.svg',
         imageCaption: 'Estados dos EUA onde a EcoFlow lista a STREAM como disponível (levantamento da EcoFlow, junho de 2026) e estados com legislação de energia solar plug-in.',
-        content: 'O levantamento por estado da EcoFlow nos EUA (junho de 2026) lista o microinversor STREAM e a STREAM Ultra como disponíveis para instalação plug-and-play em apenas dois estados, Utah e Maryland, e diz que a disponibilidade se expandirá conforme novas leis forem aprovadas. Outros estados que aprovaram legislação de energia solar plug-in em 2026 — o levantamento cita Maine, Virgínia e Colorado, com Nova York e Califórnia pendentes naquela data — não aparecem ali como mercados da STREAM, e uma menção legislativa por si só não confirma disponibilidade no varejo. Consulte o site da EcoFlow e as regras da sua distribuidora antes de comprar. Nos mercados da UE, a EcoFlow declara certificação de conexão à rede VDE-AR-N 4105, a mesma norma confirmada para a Anker SOLIX na Alemanha — mas é uma declaração da própria EcoFlow e não foi reverificada de forma independente junto ao organismo certificador nesta pesquisa.',
+        content: 'O levantamento por estado da EcoFlow nos EUA (junho de 2026) lista o microinversor STREAM e a STREAM Ultra como disponíveis para instalação plug-and-play em apenas dois estados, Utah e Maryland, e diz que a disponibilidade se expandirá conforme novas leis forem aprovadas. Outros estados que aprovaram legislação de energia solar plug-in em 2026 — o levantamento cita Maine, Virgínia e Colorado, com Nova York e Califórnia pendentes naquela data — não aparecem ali como mercados da STREAM, e uma menção legislativa por si só não confirma disponibilidade no varejo. Consulte o site da EcoFlow e as regras da sua distribuidora antes de comprar. Nos mercados da UE, a EcoFlow declara certificação de conexão à rede VDE-AR-N 4105 — mas é uma declaração da própria EcoFlow e não foi reverificada de forma independente junto ao organismo certificador nesta pesquisa.',
       },
       position: {
         title: 'Posicionamento da EcoFlow',
@@ -562,6 +580,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/ecoflow-balcony-solar-certification-en.svg',
         imageCaption: 'VDE-AR-N 4105 e TÜV Rheinland são alegações da própria EcoFlow — não reverificadas de forma independente junto aos órgãos certificadores nesta pesquisa.',
         content: 'A EcoFlow declara certificação de conexão à rede VDE-AR-N 4105 e certificação TÜV Rheinland para seus produtos de energia solar de varanda voltados à UE. Ambas são declarações da própria EcoFlow nesta pesquisa e não foram reverificadas de forma independente junto aos organismos certificadores. Nos EUA, a UL 3700 — norma específica para energia solar de varanda publicada em dezembro de 2025 — tem um primeiro produto descrito como em conformidade, o microinversor Hoymiles HiFlow Pro (julho de 2026, segundo a Hoymiles; a InsideEVs observou que ele foi projetado para atender à norma, sem certificação da UL Solutions). Não encontramos nenhuma fonte que cite um produto da EcoFlow como em conformidade ou certificado UL 3700 em novembro de 2026, e as leis estaduais divergem sobre exigir a UL 3700 ou aceitar a certificação de outro laboratório reconhecido nacionalmente.',
+        callouts: [
+          { type: 'note', text: 'As regras de conexão à rede, registro e certificação variam por país, estado e distribuidora. Este perfil não constitui aconselhamento jurídico ou elétrico. Verifique com a sua distribuidora ou um eletricista qualificado.' },
+        ],
       },
       faqSection: {
         id: 'faq',
@@ -625,13 +646,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'تشكيلة STREAM (خرج التيار المتردد)',
         image: '/images/ecoflow-balcony-solar-lineup-en.svg',
         imageCaption: 'أقصى خرج للتيار المتردد كما هو مُدرج رسمياً؛ سعة البطارية تتغير بشكل منفصل حسب التهيئة.',
-        content: 'تشكيلة STREAM هي عائلة منتجات EcoFlow من العاكسات الدقيقة وتخزين البطاريات للطاقة الشمسية للشرفات، مع خرج تيار متردد أقصى معلن رسمياً لكل طراز، بينما تتغير سعة البطارية بشكل منفصل حسب التهيئة. بطارية STREAM Ultra هي الطراز الأكثر توثيقاً: بسعة 1.92 كيلوواط ساعة، قابلة للتوسع إلى 11.52 كيلوواط ساعة، بسعر 1,279 دولاراً. تتطلب بطارية STREAM Ultra من EcoFlow تطبيق السحابة الخاص بالشركة للتحكم، ولم يُعثر على مسار API محلي موثّق لهذا المنتج — بخلاف تشكيلة عاكسات EZ1 الدقيقة من APsystems التي تأتي مزودة بواجهة API محلية أصلية.',
+        content: 'تشكيلة STREAM هي عائلة منتجات EcoFlow من العاكسات الدقيقة وتخزين البطاريات للطاقة الشمسية للشرفات، مع خرج تيار متردد أقصى معلن رسمياً لكل طراز، بينما تتغير سعة البطارية بشكل منفصل حسب التهيئة. بطارية STREAM Ultra هي الطراز الأكثر توثيقاً: بسعة 1.92 كيلوواط ساعة، قابلة للتوسع إلى 11.52 كيلوواط ساعة، بسعر 1,279 دولاراً عند آخر تحديث (انظر «آخر تحديث»). تتطلب بطارية STREAM Ultra من EcoFlow تطبيق السحابة الخاص بالشركة للتحكم، ولم يُعثر على مسار API محلي موثّق لهذا المنتج.',
       },
       markets: {
         title: 'التقنين في الولايات المتحدة، ولاية بولاية',
         image: '/images/ecoflow-balcony-solar-markets-en.svg',
         imageCaption: 'الولايات الأمريكية التي تدرج فيها EcoFlow منتج STREAM كمتاح (تتبّع EcoFlow نفسها، يونيو 2026) والولايات التي سنّت تشريعات للطاقة الشمسية القابلة للتوصيل.',
-        content: 'يدرج تتبّع الولايات الأمريكية الذي تنشره EcoFlow نفسها (يونيو 2026) العاكس الصغير STREAM وSTREAM Ultra كمتاحين للتركيب الفوري في ولايتين فقط هما يوتا وماريلاند، ويقول إن التوفر سيتوسع مع إقرار التشريعات. أما الولايات الأخرى التي أقرّت تشريعات للطاقة الشمسية القابلة للتوصيل في 2026 — يذكر التتبّع ماين وفيرجينيا وكولورادو، مع بقاء نيويورك وكاليفورنيا قيد النظر في ذلك التاريخ — فلا تظهر هناك كأسواق لـ STREAM، ولا يؤكد مجرد ذكرها في التشريعات توفر المنتج في التجزئة. تحقق من موقع EcoFlow ومن قواعد شركة الكهرباء لديك قبل الشراء. وفي أسواق الاتحاد الأوروبي تذكر EcoFlow شهادة الربط بالشبكة VDE-AR-N 4105، وهو المعيار نفسه المؤكد لـ Anker SOLIX في ألمانيا — لكنه ادعاء من EcoFlow نفسها ولم يُعَد التحقق منه بشكل مستقل لدى جهة الاعتماد في هذا البحث.',
+        content: 'يدرج تتبّع الولايات الأمريكية الذي تنشره EcoFlow نفسها (يونيو 2026) العاكس الصغير STREAM وSTREAM Ultra كمتاحين للتركيب الفوري في ولايتين فقط هما يوتا وماريلاند، ويقول إن التوفر سيتوسع مع إقرار التشريعات. أما الولايات الأخرى التي أقرّت تشريعات للطاقة الشمسية القابلة للتوصيل في 2026 — يذكر التتبّع ماين وفيرجينيا وكولورادو، مع بقاء نيويورك وكاليفورنيا قيد النظر في ذلك التاريخ — فلا تظهر هناك كأسواق لـ STREAM، ولا يؤكد مجرد ذكرها في التشريعات توفر المنتج في التجزئة. تحقق من موقع EcoFlow ومن قواعد شركة الكهرباء لديك قبل الشراء. وفي أسواق الاتحاد الأوروبي تذكر EcoFlow شهادة الربط بالشبكة VDE-AR-N 4105 — لكنه ادعاء من EcoFlow نفسها ولم يُعَد التحقق منه بشكل مستقل لدى جهة الاعتماد في هذا البحث.',
       },
       position: {
         title: 'موقع EcoFlow في السوق',
@@ -644,6 +665,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/ecoflow-balcony-solar-certification-en.svg',
         imageCaption: 'معياري VDE-AR-N 4105 وTÜV Rheinland هما ادعاءان صادران عن EcoFlow نفسها - ولم تتم إعادة التحقق منهما بشكل مستقل لدى جهات إصدار الشهادات في إطار هذا البحث.',
         content: 'تذكر EcoFlow شهادة الربط بالشبكة VDE-AR-N 4105 وشهادة TÜV Rheinland لمنتجاتها للطاقة الشمسية للشرفات في سوق الاتحاد الأوروبي. وكلتاهما ادعاءات من EcoFlow نفسها في هذا البحث ولم يُعَد التحقق منها بشكل مستقل لدى جهات الاعتماد. وفي الولايات المتحدة، للمعيار UL 3700 — المعيار الخاص بالطاقة الشمسية للشرفات الذي نُشر في ديسمبر 2025 — منتج أول وُصف بأنه مطابق هو العاكس الصغير Hoymiles HiFlow Pro (يوليو 2026، بحسب Hoymiles؛ وأشارت InsideEVs إلى أنه مصمم لتلبية المعيار وليس معتمدًا من UL Solutions). لم نجد أي مصدر يصف منتجًا من EcoFlow بأنه مطابق لـ UL 3700 أو معتمد وفقه حتى نوفمبر 2026، كما تختلف قوانين الولايات في اشتراط UL 3700 أو قبول اعتماد مختبر آخر معترف به وطنيًا.',
+        callouts: [
+          { type: 'note', text: 'تختلف قواعد الربط بالشبكة والتسجيل والاعتماد حسب البلد والولاية وشركة الكهرباء؛ لا يُعدّ هذا الملف نصيحة قانونية أو كهربائية. تحقق مع شركة الكهرباء المحلية أو كهربائي مؤهل.' },
+        ],
       },
       faqSection: {
         id: 'faq',
@@ -707,13 +731,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'STREAM 라인업(AC 출력)',
         image: '/images/ecoflow-balcony-solar-lineup-en.svg',
         imageCaption: '공식적으로 명시된 최대 AC 출력이며, 배터리 용량은 구성에 따라 별도로 달라집니다.',
-        content: 'STREAM 라인업은 발코니 태양광을 위한 EcoFlow의 마이크로인버터 및 배터리 저장 제품군으로, 최대 AC 출력은 모델별로 공식 발표되며 배터리 용량은 구성에 따라 별도로 달라집니다. STREAM Ultra 배터리는 가장 자세히 문서화된 모델로, 용량 1.92kWh에 11.52kWh까지 확장 가능하며 가격은 1,279달러입니다. EcoFlow의 STREAM Ultra는 제어를 위해 클라우드 앱이 필요하며, 이 제품에 대해 검증된 로컬 API 경로는 발견되지 않았습니다—이는 자체 로컬 API를 탑재한 APsystems의 EZ1 마이크로인버터 시리즈와 대조됩니다.',
+        content: 'STREAM 라인업은 발코니 태양광을 위한 EcoFlow의 마이크로인버터 및 배터리 저장 제품군으로, 최대 AC 출력은 모델별로 공식 발표되며 배터리 용량은 구성에 따라 별도로 달라집니다. STREAM Ultra 배터리는 가장 자세히 문서화된 모델로, 용량 1.92kWh에 11.52kWh까지 확장 가능하며 가격은 1,279달러입니다(최근 확인 기준, «최종 업데이트» 참조). EcoFlow의 STREAM Ultra는 제어를 위해 클라우드 앱이 필요하며, 이 제품에 대해 검증된 로컬 API 경로는 발견되지 않았습니다.',
       },
       markets: {
         title: '미국 주별 합법화 현황',
         image: '/images/ecoflow-balcony-solar-markets-en.svg',
         imageCaption: 'EcoFlow가 STREAM 판매 가능 주로 표기한 미국 주(EcoFlow 자체 현황, 2026년 6월)와 플러그인 태양광 법안이 제정된 주.',
-        content: 'EcoFlow 자체 미국 주별 현황(2026년 6월)은 STREAM 마이크로인버터와 STREAM Ultra의 플러그앤플레이 설치가 가능한 주를 유타주와 메릴랜드주 두 곳뿐이라고 밝히며, 법안이 통과됨에 따라 확대될 것이라고 설명합니다. 2026년에 플러그인 태양광 법안을 통과시킨 다른 주(현황은 메인주, 버지니아주, 콜로라도주를 언급하며 뉴욕주와 캘리포니아주는 당시 계류 중)는 STREAM 시장으로 표기되어 있지 않으며, 입법 과정에서의 언급만으로는 소매 판매 가능 여부를 확인할 수 없습니다. 구매 전 EcoFlow 웹사이트와 거주 지역 전력회사 규정을 확인하시기 바랍니다. EU 시장에서 EcoFlow는 독일의 Anker SOLIX에서 확인된 것과 동일한 표준인 VDE-AR-N 4105 계통 연계 인증을 표방하지만, 이는 EcoFlow 자체 주장이며 이번 조사에서 인증 기관을 통해 독립적으로 재확인하지 않았습니다.',
+        content: 'EcoFlow 자체 미국 주별 현황(2026년 6월)은 STREAM 마이크로인버터와 STREAM Ultra의 플러그앤플레이 설치가 가능한 주를 유타주와 메릴랜드주 두 곳뿐이라고 밝히며, 법안이 통과됨에 따라 확대될 것이라고 설명합니다. 2026년에 플러그인 태양광 법안을 통과시킨 다른 주(현황은 메인주, 버지니아주, 콜로라도주를 언급하며 뉴욕주와 캘리포니아주는 당시 계류 중)는 STREAM 시장으로 표기되어 있지 않으며, 입법 과정에서의 언급만으로는 소매 판매 가능 여부를 확인할 수 없습니다. 구매 전 EcoFlow 웹사이트와 거주 지역 전력회사 규정을 확인하시기 바랍니다. EU 시장에서 EcoFlow는 VDE-AR-N 4105 계통 연계 인증을 표방하지만, 이는 EcoFlow 자체 주장이며 이번 조사에서 인증 기관을 통해 독립적으로 재확인하지 않았습니다.',
       },
       position: {
         title: 'EcoFlow의 시장 위치',
@@ -726,6 +750,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/ecoflow-balcony-solar-certification-en.svg',
         imageCaption: 'VDE-AR-N 4105 및 TÜV Rheinland는 EcoFlow 자체의 주장이며, 이번 조사에서 인증 기관을 통해 독립적으로 재검증되지 않았습니다.',
         content: 'EcoFlow는 EU 시장용 발코니 태양광 제품에 대해 VDE-AR-N 4105 계통 연계 인증과 TÜV Rheinland 인증을 표방합니다. 두 가지 모두 이번 조사에서는 EcoFlow 자체 주장이며 인증 기관을 통해 독립적으로 재확인하지 않았습니다. 미국에서는 2025년 12월 공개된 발코니 태양광 전용 표준 UL 3700에 대해 Hoymiles HiFlow Pro 마이크로인버터가 첫 적합 제품으로 소개되었습니다(2026년 7월, Hoymiles 발표. InsideEVs는 UL Solutions 인증이 아니라 표준을 충족하도록 설계된 제품이라고 지적). 2026년 11월 기준 EcoFlow 제품을 UL 3700 적합 또는 인증 제품으로 명시한 자료는 찾지 못했으며, 주 법률도 UL 3700을 요구하는지 다른 전국 공인 시험기관의 인증을 인정하는지에 따라 다릅니다.',
+        callouts: [
+          { type: 'note', text: '계통 연계, 등록 및 인증 규정은 국가, 주 및 전력 공급사에 따라 다릅니다. 이 프로필은 법률 또는 전기 관련 조언이 아닙니다. 전력 공급사 또는 자격을 갖춘 전기 기술자에게 확인하십시오.' },
+        ],
       },
       faqSection: {
         id: 'faq',
