@@ -21076,28 +21076,16 @@
       "images": [
         {
           "url": "/images/ai-three-region-framework-en.svg",
-          "title": "EU adopts rights-based legal rules (EU AI Act 2024, €35M fines); US favors innovation with light sectoral oversight (NIST RMF); China enforces state-directed control with CAC approval requirements."
+          "title": "Three regulatory models: the EU AI Act (binding, risk-based), the US (executive action, sector rules and state laws) and China (CAC administrative measures)."
         },
         {
           "url": "/images/ai-risk-tiers-comparison-en.svg",
-          "title": "EU: 4-tier risk classification (prohibited, high-risk, limited, minimal) with strict rules. US: Sectoral (healthcare/finance regulated, tech mostly voluntary). China: Centralized CAC approval for all AI systems."
-        },
-        {
-          "url": "/images/ai-regulation-timeline-en.svg",
-          "title": "2024 marked inflection points: EU AI Act adopted officially, enforcement began in Jan 2025. US still lacks federal AI law (only NIST RMF voluntary). China tightening LLM approval requirements."
-        },
-        {
-          "url": "/images/regional-ai-players-en.svg",
-          "title": "US dominates with OpenAI, Google DeepMind, Anthropic (venture-funded, $billions in compute). EU leads in open-source (Mistral, Hugging Face) but lacks US-scale funding. China relies on state-backed champions (Baidu, Alibaba) with CAC oversight."
-        },
-        {
-          "url": "/images/compliance-burden-comparison-en.svg",
-          "title": "EU: $500K–$2M+ cost, 6–12 months, prescriptive rules. US: $50K–$300K, 2–4 months, voluntary. China: $200K–$1M+, 3–12+ months, CAC approval uncertain."
+          "title": "EU: risk-based classes. US: sector rules and state laws. China: content, security and filing requirements for public-facing services."
         }
       ]
     },
     "euCompaniesLocalQwenGdpr": {
-      "lastmod": "2026-09-25",
+      "lastmod": "2026-11-20",
       "langs": [
         "en",
         "de",
