@@ -15,7 +15,10 @@
  *  - certification.available === false means the standard exists on paper but no product
  *    has actually been certified under it yet — do not let article prose imply otherwise.
  *
- * Last fact-checked: 2026-07-02
+ * Last fact-checked: 2026-07-02 (country rows). Partial re-check 2026-11-20, ONLY: Portugal (800 W tier per Decreto-Lei 130/2026,
+ * figure taken from the government press release; decree text on dre.pt not retrieved), Germany (registration, limits, storage note per ADAC /
+ * Verbraucherzentrale), UL 3700 note, and the US state block (re-verified 2026-10-19). Spain, Brazil, Mexico, Gulf/MENA and the US row are
+ * NOT re-verified since 2026-07-02 (a 2026-11-20 news check found no plug-in rules for Spain/Mexico/Brazil, but sources were not re-read).
  */
 
 export type LegalStatus =
@@ -275,7 +278,7 @@ export const COUNTRY_DATA: CountryEntry[] = [
       'https://www.vde.com/en/press/press-releases/first-product-standard-for-plug-in-solar-devices',
       'https://www.dke.de/de/arbeitsfelder/energy/normenhinweise/faq-zur-dinvdev012695',
     ],
-    lastVerified: '2026-07-02',
+    lastVerified: '2026-11-20',
   },
   {
     country: 'Spain',
@@ -324,7 +327,7 @@ export const COUNTRY_DATA: CountryEntry[] = [
       'https://www.dgeg.gov.pt/pt/areas-setoriais/energia/energia-eletrica/producao-de-energia-eletrica/producao-descentralizada-autoconsumo-e-upp-mp-mn/autoconsumo-e-cer/3-enquadramento-legal/',
       'https://www.dgeg.gov.pt/pt/areas-setoriais/energia/energia-eletrica/producao-de-energia-eletrica/producao-descentralizada-autoconsumo-e-upp-mp-mn/autoconsumo-e-cer/1-pedido-de-inscricao-e-registo/',
     ],
-    lastVerified: '2026-07-02',
+    lastVerified: '2026-11-20',
   },
   {
     country: 'Brazil',
