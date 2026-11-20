@@ -53,10 +53,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
   frameworks: {
     en: {
       category: 'Prompt Engineering',
-      title: '8 Prompt Engineering Frameworks Explained: CRAFT vs CO-STAR vs APE (2026 Guide)',
+      title: '8 Prompt Engineering Frameworks Explained: CRAFT vs CO-STAR vs APE',
       intro: 'Master the top prompt frameworks and learn which one works best for your use case.',
       publishDate: 'Published March 14, 2026',
-      last_full_refresh: '2026-03-14',
+      last_full_refresh: '2026-11-20',
       readTime: '8 min read',
       heroComponent: 'FrameworkWheel',
       sections: {
@@ -97,7 +97,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. CO-STAR Framework',
-          content: 'Best for: Business communication, professional writing, decision-making',
+          content: 'Best for: Business communication, professional writing, decision-making. Credited to GovTech Singapore\'s Data Science & AI team and used to win Singapore\'s first GPT-4 prompt engineering competition ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'The Fields:',
@@ -203,7 +203,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         apeWhy: {
           title: 'Why It Works:',
-          content: 'APE is beautifully simple. Most everyday requests fit into these 3 fields. It\'s a great starting point before graduating to more complex frameworks.',
+          content: 'APE is simple: most everyday requests fit into these 3 fields, so it is a good starting point before moving to more complex frameworks. Definitions of "APE" vary by source; it is also the abbreviation for Automatic Prompt Engineer, an unrelated research method.',
         },
         google: {
           title: '6. Google Prompt Framework',
@@ -219,7 +219,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         googleWhy: {
           title: 'Why It Works:',
-          content: 'Google\'s framework is lightweight and information-focused. Great for research queries and "what if" scenarios.',
+          content: 'PromptQuorum\'s Google Prompt framework uses three fields (Task, Context, Persona) and is lightweight and information-focused, which suits research queries and "what if" scenarios. Google\'s own prompting guide for Gemini in Workspace names four inputs (persona, task, context and format) and says you do not need all four in every prompt ([Google Workspace](https://workspace.google.com/resources/ai/writing-effective-prompts/)).',
         },
         trace: {
           title: '7. TRACE Framework',
@@ -273,22 +273,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         proTip: {
           title: 'Pro Tip: Test Multiple Frameworks',
           content: [
-            'Here\'s the secret: the same prompt written in CRAFT vs SPECS might produce different results from the same AI model. Different frameworks trigger different reasoning patterns in the AI.',
-            'That\'s why PromptQuorum lets you switch between frameworks instantly and see how the same idea gets restructured. Try your prompt in CRAFT, then switch to SPECS, then CO-STAR. Compare the results. You\'ll learn which frameworks work best for your specific use case.',
+            'The same idea written in CRAFT and in SPECS can produce different results from the same AI model, because each framework asks for different details. Comparing frameworks on your own prompts is the quickest way to find what works for your task.',
+            'PromptQuorum includes 9 built-in frameworks (the 8 above plus Single Prompt Line) and 2 custom framework slots, and a Framework Wizard helps you choose one. Try your prompt in CRAFT, then in SPECS or CO-STAR, and compare the results.',
           ],
         },
         nextSteps: {
           title: 'Next Steps',
           content: [
-            'Pick one framework that matches your most common task. Master it. Then experiment with others as your skills grow.',
-            'Ready to put these frameworks into practice? Try them out with PromptQuorum, which includes all 8 frameworks plus automatic optimization and multi-AI comparison.',
+            'Pick one framework that matches your most common task and master it. Then experiment with others as your skills grow.',
+            'To put these frameworks into practice, try them in PromptQuorum, which offers the 9 built-in frameworks, prompt optimization and side-by-side comparison of answers from several AI models.',
           ],
         },
       },
     },
     ar: {
       category: 'Prompt Engineering',
-      title: 'شرح 8 من أطر هندسة الأوامر: CRAFT مقابل CO-STAR مقابل APE (دليل 2026)',
+      title: 'شرح 8 من أطر هندسة الأوامر: CRAFT مقابل CO-STAR مقابل APE',
       intro: 'أتقن أفضل أطر الأوامر وتعرّف على أيّها يناسب حالة استخدامك.',
       publishDate: 'نُشر في 14 مارس 2026',
       readTime: '8 دقائق للقراءة',
@@ -331,7 +331,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. إطار CO-STAR',
-          content: 'الأفضل لـ: التواصل التجاري والكتابة المهنية واتخاذ القرارات',
+          content: 'الأنسب لـ: التواصل التجاري، الكتابة المهنية، اتخاذ القرار. يُنسب إلى فريق علوم البيانات والذكاء الاصطناعي في GovTech Singapore، وقد استُخدم للفوز بأول مسابقة لهندسة الأوامر مع GPT-4 في سنغافورة ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'الحقول:',
@@ -437,7 +437,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         apeWhy: {
           title: 'لماذا ينجح:',
-          content: 'إطار APE بسيط بشكل رائع. تناسب معظم الطلبات اليومية هذه الحقول الثلاثة. وهو نقطة انطلاق ممتازة قبل الانتقال إلى أطر أكثر تعقيداً.',
+          content: 'APE بسيط: تتسع معظم الطلبات اليومية لهذه الحقول الثلاثة، لذا فهو نقطة انطلاق جيدة قبل الانتقال إلى أطر أكثر تعقيدًا. يختلف تعريف «APE» باختلاف المصدر؛ وهو أيضًا اختصار Automatic Prompt Engineer، وهي طريقة بحثية لا علاقة لها بهذا الإطار.',
         },
         google: {
           title: '6. إطار Google للأوامر',
@@ -453,7 +453,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         googleWhy: {
           title: 'لماذا ينجح:',
-          content: 'إطار Google خفيف ومركّز على المعلومات. رائع لاستعلامات البحث وسيناريوهات «ماذا لو».',
+          content: 'يستخدم إطار Google Prompt في PromptQuorum ثلاثة حقول (Task وContext وPersona)، وهو خفيف ويركّز على المعلومات، ما يناسب استفسارات البحث وسيناريوهات «ماذا لو». أما دليل Google الخاص بالأوامر لـ Gemini في Workspace فيذكر أربعة مدخلات (persona وtask وcontext وformat) ويوضح أنك لا تحتاج إلى الأربعة في كل أمر ([Google Workspace](https://workspace.google.com/resources/ai/writing-effective-prompts/)).',
         },
         trace: {
           title: '7. إطار TRACE',
@@ -507,22 +507,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         proTip: {
           title: 'نصيحة احترافية: اختبر أطراً متعددة',
           content: [
-            'إليك السر: الأمر نفسه المكتوب بأسلوب CRAFT مقابل SPECS قد يُنتج نتائج مختلفة من نموذج الذكاء الاصطناعي ذاته. فالأطر المختلفة تُحفّز أنماط تفكير مختلفة في الذكاء الاصطناعي.',
-            'لهذا السبب يتيح لك PromptQuorum التبديل بين الأطر فوراً ورؤية كيف تُعاد هيكلة الفكرة نفسها. جرّب أمرك بأسلوب CRAFT، ثم انتقل إلى SPECS، ثم CO-STAR. قارن النتائج. ستتعلم أي الأطر يعمل بشكل أفضل لحالة استخدامك المحددة.',
+            'قد تعطي الفكرة نفسها نتائج مختلفة من نموذج الذكاء الاصطناعي نفسه إذا كُتبت بإطار CRAFT أو بإطار SPECS، لأن كل إطار يطلب تفاصيل مختلفة. ومقارنة الأطر على أوامرك الخاصة هي أسرع طريقة لمعرفة ما يناسب مهمتك.',
+            'يتضمن PromptQuorum ‏9 أطر مدمجة (الأطر الثمانية أعلاه إضافة إلى Single Prompt Line) وخانتين لإطارين مخصصين، ويساعدك معالج الأطر على الاختيار. جرّب أمرك في CRAFT ثم في SPECS أو CO-STAR وقارن النتائج.',
           ],
         },
         nextSteps: {
           title: 'الخطوات التالية',
           content: [
-            'اختر إطاراً واحداً يناسب مهمتك الأكثر شيوعاً. أتقنه. ثم جرّب غيره مع نمو مهاراتك.',
-            'هل أنت مستعد لوضع هذه الأطر موضع التطبيق؟ جرّبها مع PromptQuorum، الذي يتضمن جميع الأطر الثمانية إضافة إلى التحسين التلقائي والمقارنة بين نماذج ذكاء اصطناعي متعددة.',
+            'اختر إطارًا يناسب مهمتك الأكثر تكرارًا وأتقنه، ثم جرّب أطرًا أخرى مع نمو مهاراتك.',
+            'لتطبيق هذه الأطر عمليًا، جرّب PromptQuorum الذي يوفر 9 أطر مدمجة وتحسين الأوامر ومقارنة إجابات عدة نماذج ذكاء اصطناعي جنبًا إلى جنب.',
           ],
         },
       },
     },
     de: {
       category: 'Prompt Engineering',
-      title: '8 Prompt Engineering Frameworks erklärt: CRAFT vs CO-STAR vs APE (2026 Leitfaden)',
+      title: '8 Prompt Engineering Frameworks erklärt: CRAFT vs CO-STAR vs APE',
       intro: 'Meistern Sie die Top-Prompt-Frameworks und erfahren Sie, welcher für Ihren Anwendungsfall am besten geeignet ist.',
       publishDate: 'Veröffentlicht 14. März 2026',
       readTime: '8 min Lesezeit',
@@ -565,7 +565,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. CO-STAR Framework',
-          content: 'Best für: Geschäftskommunikation, professionelles Schreiben, Entscheidungsfindung',
+          content: 'Am besten für: Geschäftskommunikation, professionelles Schreiben, Entscheidungsfindung. Dem Data-Science-&-AI-Team von GovTech Singapur zugeschrieben und beim ersten GPT-4-Prompt-Engineering-Wettbewerb Singapurs eingesetzt, den es gewann ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'Die Felder:',
@@ -671,7 +671,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         apeWhy: {
           title: 'Warum es funktioniert:',
-          content: 'APE ist wunderschön einfach. Die meisten alltäglichen Anfragen passen in diese 3 Felder. Es ist ein großartiger Ausgangspunkt, bevor Sie sich komplexere Frameworks zuwenden.',
+          content: 'APE ist einfach: Die meisten Alltagsanfragen passen in diese 3 Felder. Es ist ein guter Einstieg, bevor Sie zu komplexeren Frameworks wechseln. Die Bedeutung von „APE" variiert je nach Quelle; das Kürzel steht auch für Automatic Prompt Engineer, ein davon unabhängiges Forschungsverfahren.',
         },
         google: {
           title: '6. Google Prompt Framework',
@@ -687,7 +687,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         googleWhy: {
           title: 'Warum es funktioniert:',
-          content: 'Googles Framework ist leicht und informationsorientiert. Großartig für Recherche-Fragen und „Was wäre wenn"-Szenarien.',
+          content: 'Das Google-Prompt-Framework in PromptQuorum nutzt drei Felder (Task, Context, Persona) und ist schlank und informationsorientiert, was sich für Recherchefragen und „Was wäre, wenn"-Szenarien eignet. Googles eigener Prompting-Leitfaden für Gemini in Workspace nennt vier Eingaben (Persona, Task, Context und Format) und weist darauf hin, dass Sie nicht in jedem Prompt alle vier brauchen ([Google Workspace](https://workspace.google.com/resources/ai/writing-effective-prompts/)).',
         },
         trace: {
           title: '7. TRACE Framework',
@@ -741,22 +741,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         proTip: {
           title: 'Pro-Tipp: Testen Sie mehrere Frameworks',
           content: [
-            'Hier ist das Geheimnis: Der gleiche Prompt in CRAFT vs SPECS könnte unterschiedliche Ergebnisse vom gleichen KI-Modell erzeugen. Unterschiedliche Frameworks lösen unterschiedliche Denkmuster in der KI aus.',
-            'Deshalb lässt Sie PromptQuorum zwischen Frameworks wechseln und sofort sehen, wie dieselbe Idee umstrukturiert wird. Versuchen Sie Ihren Prompt in CRAFT, dann wechseln Sie zu SPECS, dann CO-STAR. Vergleichen Sie die Ergebnisse. Sie werden lernen, welche Frameworks für Ihren spezifischen Anwendungsfall am besten funktionieren.',
+            'Dieselbe Idee, in CRAFT und in SPECS formuliert, kann beim selben KI-Modell unterschiedliche Ergebnisse liefern, weil jedes Framework andere Details abfragt. Frameworks an den eigenen Prompts zu vergleichen ist der schnellste Weg, herauszufinden, was für Ihre Aufgabe funktioniert.',
+            'PromptQuorum enthält 9 integrierte Frameworks (die 8 oben plus Single Prompt Line) und 2 freie Framework-Plätze; ein Framework-Assistent hilft bei der Auswahl. Probieren Sie Ihren Prompt in CRAFT, dann in SPECS oder CO-STAR und vergleichen Sie die Ergebnisse.',
           ],
         },
         nextSteps: {
           title: 'Nächste Schritte',
           content: [
-            'Wählen Sie ein Framework, das zu Ihrer häufigsten Aufgabe passt. Meistern Sie es. Dann experimentieren Sie mit anderen, während Ihre Fähigkeiten wachsen.',
-            'Bereit, diese Frameworks in die Praxis umzusetzen? Probieren Sie sie mit PromptQuorum aus, das alle 8 Frameworks plus automatische Optimierung und Multi-KI-Vergleich enthält.',
+            'Wählen Sie ein Framework, das zu Ihrer häufigsten Aufgabe passt, und beherrschen Sie es. Experimentieren Sie anschließend mit weiteren, wenn Ihre Erfahrung wächst.',
+            'Um die Frameworks in der Praxis auszuprobieren, nutzen Sie PromptQuorum: Dort finden Sie die 9 integrierten Frameworks, Prompt-Optimierung und den direkten Vergleich der Antworten mehrerer KI-Modelle.',
           ],
         },
       },
     },
     fr: {
       category: 'Prompt Engineering',
-      title: '8 frameworks d\'ingénierie des prompts expliqués : CRAFT vs CO-STAR vs APE (Guide 2026)',
+      title: '8 frameworks d\'ingénierie des prompts expliqués : CRAFT vs CO-STAR vs APE',
       intro: 'Maîtrisez les meilleurs frameworks de prompts et apprenez lequel convient le mieux à votre cas d\'utilisation.',
       publishDate: 'Publié le 14 mars 2026',
       readTime: '8 min de lecture',
@@ -799,7 +799,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. Framework CO-STAR',
-          content: 'Meilleur pour : Communication commerciale, rédaction professionnelle, prise de décision',
+          content: 'Idéal pour : communication d\'entreprise, rédaction professionnelle, aide à la décision. Attribué à l\'équipe Data Science & AI de GovTech Singapour et utilisé pour remporter le premier concours de prompt engineering GPT-4 de Singapour ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'Les champs :',
@@ -905,7 +905,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         apeWhy: {
           title: 'Pourquoi cela fonctionne :',
-          content: 'APE est magnifiquement simple. La plupart des demandes quotidiennes rentrent dans ces 3 champs. C\'est un excellent point de départ avant de passer à des frameworks plus complexes.',
+          content: 'APE est simple : la plupart des demandes courantes tiennent dans ces 3 champs, ce qui en fait un bon point de départ avant des frameworks plus complexes. La définition d\'« APE » varie selon les sources ; le sigle désigne aussi Automatic Prompt Engineer, une méthode de recherche sans rapport.',
         },
         google: {
           title: '6. Framework Google Prompt',
@@ -921,7 +921,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         googleWhy: {
           title: 'Pourquoi cela fonctionne :',
-          content: 'Le framework de Google est léger et axé sur l\'information. Excellent pour les requêtes de recherche et les scénarios « et si ».',
+          content: 'Le framework Google Prompt de PromptQuorum compte trois champs (Task, Context, Persona) et reste léger et centré sur l\'information, ce qui convient aux recherches et aux scénarios « et si ». Le guide de prompting de Google pour Gemini dans Workspace cite quatre éléments (persona, task, context et format) et précise qu\'il n\'est pas nécessaire de tous les utiliser dans chaque prompt ([Google Workspace](https://workspace.google.com/resources/ai/writing-effective-prompts/)).',
         },
         trace: {
           title: '7. Framework TRACE',
@@ -975,22 +975,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         proTip: {
           title: 'Conseil pratique : Testez plusieurs frameworks',
           content: [
-            'Voici le secret : le même prompt écrit en CRAFT vs SPECS pourrait produire des résultats différents du même modèle IA. Différents frameworks déclenchent différents modèles de raisonnement dans l\'IA.',
-            'C\'est pourquoi PromptQuorum vous permet de basculer entre les frameworks instantanément et de voir comment la même idée est restructurée. Essayez votre prompt dans CRAFT, puis passez à SPECS, puis CO-STAR. Comparez les résultats. Vous apprendrez quels frameworks fonctionnent le mieux pour votre cas d\'utilisation spécifique.',
+            'Une même idée rédigée en CRAFT puis en SPECS peut donner des résultats différents avec le même modèle d\'IA, car chaque framework demande des détails différents. Comparer les frameworks sur vos propres prompts est le moyen le plus rapide de trouver ce qui convient à votre tâche.',
+            'PromptQuorum intègre 9 frameworks (les 8 ci-dessus plus Single Prompt Line) et 2 emplacements personnalisés, et un assistant de frameworks vous aide à choisir. Essayez votre prompt en CRAFT, puis en SPECS ou CO-STAR, et comparez les résultats.',
           ],
         },
         nextSteps: {
           title: 'Étapes suivantes',
           content: [
-            'Choisissez un framework qui correspond à votre tâche la plus courante. Maîtrisez-le. Puis expérimentez avec d\'autres au fur et à mesure que vos compétences s\'améliorent.',
-            'Prêt à mettre ces frameworks en pratique ? Essayez-les avec PromptQuorum, qui comprend tous les 8 frameworks plus l\'optimisation automatique et la comparaison multi-IA.',
+            'Choisissez un framework adapté à votre tâche la plus fréquente et maîtrisez-le. Expérimentez ensuite d\'autres frameworks à mesure que vos compétences progressent.',
+            'Pour mettre ces frameworks en pratique, essayez PromptQuorum : l\'application propose les 9 frameworks intégrés, l\'optimisation de prompts et la comparaison côte à côte des réponses de plusieurs modèles d\'IA.',
           ],
         },
       },
     },
     ja: {
       category: 'プロンプトエンジニアリング',
-      title: '8つのプロンプトエンジニアリングフレームワーク解説：CRAFT vs CO-STAR vs APE（2026ガイド）',
+      title: '8つのプロンプトエンジニアリングフレームワーク解説：CRAFT vs CO-STAR vs APE',
       intro: '主要なプロンプトフレームワークをマスターし、ユースケースに最適なものを学びましょう。',
       publishDate: '2026年3月14日公開',
       readTime: '8分で読む',
@@ -1033,7 +1033,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. CO-STARフレームワーク',
-          content: '最適：ビジネスコミュニケーション、専門的なライティング、意思決定',
+          content: '向いている用途：ビジネスコミュニケーション、プロフェッショナルな文章作成、意思決定。シンガポール政府テック庁（GovTech Singapore）のData Science & AIチームによるものとされ、シンガポール初のGPT-4プロンプトエンジニアリングコンテストで優勝した際に使われました（[GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)）。',
         },
         costarFields: {
           title: 'フィールド：',
@@ -1139,7 +1139,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         apeWhy: {
           title: 'なぜうまくいくのか：',
-          content: 'APEは美しく単純です。 ほとんどの日常的なリクエストはこれら3つのフィールドに適合します。 より複雑なフレームワークに進む前の優れたスタートポイントです。',
+          content: 'APEはシンプルです。日常的な依頼の多くはこの3つのフィールドに収まるため、より複雑なフレームワークに進む前の出発点として適しています。「APE」の定義は情報源によって異なり、無関係の研究手法であるAutomatic Prompt Engineerの略称でもあります。',
         },
         google: {
           title: '6. Googleプロンプトフレームワーク',
@@ -1155,7 +1155,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         googleWhy: {
           title: 'なぜうまくいくのか：',
-          content: 'Googleのフレームワークは軽量で情報指向です。 研究クエリと「もし～だったら」のシナリオに最適です。',
+          content: 'PromptQuorumのGoogle Promptフレームワークは3つのフィールド（Task、Context、Persona）で構成され、軽量で情報収集向きのため、調べものや「もし〜なら」のシナリオに適しています。GoogleがWorkspace上のGeminiについて公開しているプロンプトガイドは、4つの要素（persona、task、context、format）を挙げており、毎回すべてを使う必要はないとしています（[Google Workspace](https://workspace.google.com/resources/ai/writing-effective-prompts/)）。',
         },
         trace: {
           title: '7. TRACEフレームワーク',
@@ -1209,22 +1209,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         proTip: {
           title: 'プロのコツ：複数のフレームワークをテストする',
           content: [
-            'ここが秘密です：CRAFT vs SPECSで書かれた同じプロンプトは、同じAIモデルから異なる結果を生み出すかもしれません。異なるフレームワークは、AIで異なる推論パターンをトリガーします。',
-            'だからPromptQuorumでは、フレームワーク間でインスタンティエートに切り替えて、同じアイデアがどのように再構成されるかを見ることができます。CRAFTでプロンプトを試してから、SPECSに切り替えて、CO-STARに切り替えます。結果を比較します。特定のユースケースに最適なフレームワークを学びます。',
+            '同じ内容でも、CRAFTで書いた場合とSPECSで書いた場合では、同じAIモデルから異なる結果が返ることがあります。フレームワークごとに求める情報が違うためです。自分のプロンプトでフレームワークを比較するのが、目的に合うものを見つける最短の方法です。',
+            'PromptQuorumには9つの組み込みフレームワーク（上記8つとSingle Prompt Line）と2つのカスタム枠があり、フレームワークウィザードが選択を支援します。CRAFTで試し、次にSPECSやCO-STARで試して、結果を比較してみてください。',
           ],
         },
         nextSteps: {
           title: '次のステップ',
           content: [
-            'あなたの最も一般的なタスクに合致するフレームワークを1つ選択します。 それをマスターしてください。 その後、スキルが成長するにつれて、他のものと実験します。',
-            'これらのフレームワークを実際に使う準備はできていますか？ PromptQuorumで試してください。PromptQuorumには8つすべてのフレームワーク、自動最適化、マルチAI比較が含まれています。',
+            '最もよく行うタスクに合うフレームワークを1つ選び、使いこなしてください。慣れてきたら他のフレームワークも試しましょう。',
+            'これらのフレームワークを実践するには、PromptQuorumをお試しください。9つの組み込みフレームワーク、プロンプトの最適化、複数のAIモデルの回答を並べて比較する機能を備えています。',
           ],
         },
       },
     },
     zh: {
       category: '提示词工程',
-      title: '8个提示词工程框架解释：CRAFT vs CO-STAR vs APE（2026指南）',
+      title: '8个提示词工程框架解释：CRAFT vs CO-STAR vs APE',
       intro: '掌握顶级提示词框架，学习哪一个最适合您的用例。',
       publishDate: '发布于2026年3月14日',
       readTime: '8分钟阅读',
@@ -1267,7 +1267,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. CO-STAR框架',
-          content: '最适合：商业沟通、专业写作、决策',
+          content: '适用场景：商务沟通、专业写作、决策。该框架被认为出自新加坡政府科技局（GovTech Singapore）的数据科学与AI团队，并曾用于赢得新加坡首届GPT-4提示工程竞赛（[GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)）。',
         },
         costarFields: {
           title: '字段：',
@@ -1373,7 +1373,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         apeWhy: {
           title: '为什么有效：',
-          content: 'APE非常简洁。 大多数日常请求都适合这3个字段。 这是在升级到更复杂框架之前的一个很好的起点。',
+          content: 'APE非常简单：大多数日常请求都能放进这3个字段，因此适合作为尝试更复杂框架之前的起点。“APE”的含义因来源而异；它也是与此无关的研究方法Automatic Prompt Engineer的缩写。',
         },
         google: {
           title: '6. Google提示词框架',
@@ -1389,7 +1389,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         googleWhy: {
           title: '为什么有效：',
-          content: 'Google的框架是轻量级的和信息指向的。 非常适合研究查询和"如果...会怎样"的情景。',
+          content: 'PromptQuorum中的Google Prompt框架包含三个字段（Task、Context、Persona），轻量且以信息为导向，适合研究类查询和“如果……会怎样”的情景。Google针对Workspace中Gemini的提示指南列出了四个要素（persona、task、context和format），并说明不必在每个提示中都使用全部四项（[Google Workspace](https://workspace.google.com/resources/ai/writing-effective-prompts/)）。',
         },
         trace: {
           title: '7. TRACE框架',
@@ -1443,22 +1443,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         proTip: {
           title: '专业提示：测试多个框架',
           content: [
-            '这里是秘密：用CRAFT vs SPECS编写的相同提示词可能会从同一个AI模型产生不同的结果。 不同的框架在AI中触发不同的推理模式。',
-            '这就是为什么PromptQuorum让您即时在框架之间切换，并看到相同的想法如何被重新构造。 在CRAFT中尝试您的提示词，然后切换到SPECS，然后CO-STAR。 比较结果。 您将了解哪些框架最适合您的具体用例。',
+            '同一个想法用CRAFT和SPECS来写，在同一个AI模型上可能得到不同结果，因为每个框架要求的细节不同。用自己的提示词对比各个框架，是找到适合任务的框架的最快方法。',
+            'PromptQuorum内置9个框架（上述8个加Single Prompt Line）和2个自定义框架位，并提供框架向导帮助选择。先用CRAFT试一次，再换成SPECS或CO-STAR，并比较结果。',
           ],
         },
         nextSteps: {
           title: '接下来的步骤',
           content: [
-            '选择一个与您最常见任务相匹配的框架。 掌握它。 然后随着您的技能提高而尝试其他的。',
-            '准备好将这些框架投入实践了吗？ 使用PromptQuorum尝试它们，其中包括所有8个框架以及自动优化和多AI比较。',
+            '选择一个与你最常见任务相匹配的框架并熟练掌握，随着经验增长再尝试其他框架。',
+            '想把这些框架付诸实践，可以试试PromptQuorum：它提供9个内置框架、提示词优化，以及多个AI模型回答的并排对比。',
           ],
         },
       },
     },
     es: {
       category: 'Ingeniería de Prompts',
-      title: '8 Marcos de Ingeniería de Prompts Explicados: CRAFT vs CO-STAR vs APE (Guía 2026)',
+      title: '8 Marcos de Ingeniería de Prompts Explicados: CRAFT vs CO-STAR vs APE',
       intro: 'Domina los marcos de prompts principales y aprende cuál funciona mejor para tu caso de uso.',
       publishDate: 'Publicado el 14 de marzo de 2026',
       readTime: '8 min de lectura',
@@ -1501,7 +1501,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. Marco CO-STAR',
-          content: 'Mejor para: Comunicación empresarial, escritura profesional, toma de decisiones',
+          content: 'Ideal para: comunicación empresarial, redacción profesional, toma de decisiones. Se atribuye al equipo de Data Science & AI de GovTech Singapur y se usó para ganar el primer concurso de prompt engineering con GPT-4 de Singapur ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'Los Campos:',
@@ -1607,7 +1607,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         apeWhy: {
           title: 'Por Qué Funciona:',
-          content: 'APE es hermosamente simple. La mayoría de solicitudes cotidianas caben en estos 3 campos. Es un excelente punto de partida antes de pasar a marcos más complejos.',
+          content: 'APE es sencillo: la mayoría de las peticiones cotidianas caben en estos 3 campos, así que es un buen punto de partida antes de pasar a frameworks más complejos. La definición de «APE» varía según la fuente; también es la sigla de Automatic Prompt Engineer, un método de investigación sin relación.',
         },
         google: {
           title: '6. Marco de Prompts de Google',
@@ -1623,7 +1623,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         googleWhy: {
           title: 'Por Qué Funciona:',
-          content: 'El marco de Google es ligero e información-enfocado. Excelente para consultas de investigación y escenarios "¿y si?".',
+          content: 'El framework Google Prompt de PromptQuorum usa tres campos (Task, Context, Persona) y es ligero y centrado en la información, lo que encaja con consultas de investigación y escenarios de «¿qué pasaría si…?». La guía de prompting de Google para Gemini en Workspace menciona cuatro elementos (persona, task, context y format) y indica que no necesitas los cuatro en cada prompt ([Google Workspace](https://workspace.google.com/resources/ai/writing-effective-prompts/)).',
         },
         trace: {
           title: '7. Marco TRACE',
@@ -1677,22 +1677,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         proTip: {
           title: 'Consejo Pro: Prueba Múltiples Marcos',
           content: [
-            'Aquí está el secreto: el mismo prompt escrito en CRAFT vs SPECS podría producir resultados diferentes del mismo modelo de IA. Los diferentes marcos activan diferentes patrones de razonamiento en la IA.',
-            'Por eso PromptQuorum te permite cambiar entre marcos al instante y ver cómo se reestructura la misma idea. Prueba tu prompt en CRAFT, luego cambia a SPECS, luego CO-STAR. Compara los resultados. Aprenderás qué marcos funcionan mejor para tu caso de uso específico.',
+            'La misma idea escrita en CRAFT y en SPECS puede dar resultados distintos con el mismo modelo de IA, porque cada framework pide detalles diferentes. Comparar frameworks con tus propios prompts es la forma más rápida de saber qué funciona para tu tarea.',
+            'PromptQuorum incluye 9 frameworks integrados (los 8 anteriores más Single Prompt Line) y 2 espacios personalizados, y un asistente de frameworks te ayuda a elegir. Prueba tu prompt en CRAFT, luego en SPECS o CO-STAR, y compara los resultados.',
           ],
         },
         nextSteps: {
           title: 'Próximos Pasos',
           content: [
-            'Elige un marco que coincida con tu tarea más común. Dómalo. Luego experimenta con otros mientras tus habilidades crecen.',
-            '¿Listo para poner estos marcos en práctica? Pruébalos con PromptQuorum, que incluye los 8 marcos más optimización automática y comparación multi-IA.',
+            'Elige un framework que encaje con tu tarea más habitual y domínalo. Después prueba otros a medida que ganes experiencia.',
+            'Para llevar estos frameworks a la práctica, prueba PromptQuorum, que ofrece los 9 frameworks integrados, optimización de prompts y la comparación lado a lado de las respuestas de varios modelos de IA.',
           ],
         },
       },
     },
     pt: {
       category: 'Engenharia de Prompts',
-      title: '8 Frameworks de Engenharia de Prompts Explicados: CRAFT vs CO-STAR vs APE (Guia 2026)',
+      title: '8 Frameworks de Engenharia de Prompts Explicados: CRAFT vs CO-STAR vs APE',
       intro: 'Domine os principais frameworks de prompts e descubra qual funciona melhor para o seu caso de uso.',
       publishDate: 'Publicado em 14 de março de 2026',
       readTime: '8 min de leitura',
@@ -1735,7 +1735,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. Framework CO-STAR',
-          content: 'Ideal para: Comunicação empresarial, escrita profissional, tomada de decisão',
+          content: 'Ideal para: comunicação empresarial, redação profissional, tomada de decisões. Atribuído à equipe de Data Science & AI da GovTech Singapura e usado para vencer a primeira competição de prompt engineering com GPT-4 de Singapura ([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: 'Os Campos:',
@@ -1841,7 +1841,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         apeWhy: {
           title: 'Por Que Funciona:',
-          content: 'O APE é elegantemente simples. A maioria das solicitações do dia a dia se encaixa nesses 3 campos. É um ótimo ponto de partida antes de avançar para frameworks mais complexos.',
+          content: 'O APE é simples: a maioria dos pedidos do dia a dia cabe nestes 3 campos, então é um bom ponto de partida antes de frameworks mais complexos. A definição de "APE" varia conforme a fonte; a sigla também designa Automatic Prompt Engineer, um método de pesquisa sem relação.',
         },
         google: {
           title: '6. Framework de Prompts do Google',
@@ -1857,7 +1857,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         googleWhy: {
           title: 'Por Que Funciona:',
-          content: 'O framework do Google é leve e focado em informação. Ótimo para consultas de pesquisa e cenários hipotéticos.',
+          content: 'O framework Google Prompt do PromptQuorum usa três campos (Task, Context, Persona) e é leve e focado em informação, o que combina com consultas de pesquisa e cenários de "e se". O guia de prompting do Google para o Gemini no Workspace cita quatro elementos (persona, task, context e format) e diz que você não precisa dos quatro em todo prompt ([Google Workspace](https://workspace.google.com/resources/ai/writing-effective-prompts/)).',
         },
         trace: {
           title: '7. Framework TRACE',
@@ -1911,24 +1911,24 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         proTip: {
           title: 'Dica Pro: Teste Múltiplos Frameworks',
           content: [
-            'Aqui está o segredo: o mesmo prompt escrito no CRAFT vs SPECS pode produzir resultados diferentes do mesmo modelo de IA. Diferentes frameworks ativam diferentes padrões de raciocínio na IA.',
-            'É por isso que o PromptQuorum permite que você alterne entre frameworks instantaneamente e veja como a mesma ideia é reestruturada. Experimente seu prompt no CRAFT, depois mude para SPECS, depois para CO-STAR. Compare os resultados. Você vai descobrir quais frameworks funcionam melhor para o seu caso de uso específico.',
+            'A mesma ideia escrita em CRAFT e em SPECS pode gerar resultados diferentes no mesmo modelo de IA, porque cada framework pede detalhes diferentes. Comparar frameworks com os seus próprios prompts é o jeito mais rápido de descobrir o que funciona para a sua tarefa.',
+            'O PromptQuorum inclui 9 frameworks integrados (os 8 acima mais Single Prompt Line) e 2 espaços personalizados, e um assistente de frameworks ajuda você a escolher. Teste seu prompt em CRAFT, depois em SPECS ou CO-STAR, e compare os resultados.',
           ],
         },
         nextSteps: {
           title: 'Próximos Passos',
           content: [
-            'Escolha um framework que corresponda à sua tarefa mais comum. Domine-o. Depois experimente outros à medida que suas habilidades crescem.',
-            'Pronto para colocar esses frameworks em prática? Experimente-os com o PromptQuorum, que inclui todos os 8 frameworks mais otimização automática e comparação entre múltiplos modelos de IA.',
+            'Escolha um framework que combine com a sua tarefa mais frequente e domine-o. Depois experimente outros conforme suas habilidades crescerem.',
+            'Para colocar esses frameworks em prática, experimente o PromptQuorum, que oferece os 9 frameworks integrados, otimização de prompts e a comparação lado a lado das respostas de vários modelos de IA.',
           ],
         },
       },
     },
     ko: {
       category: '프롬프트 엔지니어링',
-      title: '8가지 프롬프트 엔지니어링 프레임워크 설명: CRAFT vs CO-STAR vs APE (2026 가이드)',
+      title: '8가지 프롬프트 엔지니어링 프레임워크 설명: CRAFT vs CO-STAR vs APE',
       intro: '상위 프롬프트 프레임워크를 마스터하고 사용 사례에 가장 잘 맞는 것이 무엇인지 알아보세요.',
-      publishDate: 'Published March 14, 2026',
+      publishDate: '게시 2026년 3월 14일',
       readTime: '8분 읽기',
       heroComponent: 'FrameworkWheel',
       sections: {
@@ -1969,7 +1969,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         costar: {
           title: '2. CO-STAR 프레임워크',
-          content: '적합한 경우: 비즈니스 커뮤니케이션, 전문적 글쓰기, 의사결정',
+          content: '적합한 용도: 비즈니스 커뮤니케이션, 전문적인 글쓰기, 의사결정. 싱가포르 GovTech의 Data Science & AI 팀이 만든 것으로 알려져 있으며, 싱가포르 최초의 GPT-4 프롬프트 엔지니어링 대회에서 우승하는 데 사용되었습니다([GovTech Singapore](https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower)).',
         },
         costarFields: {
           title: '필드:',
@@ -2075,7 +2075,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         apeWhy: {
           title: '효과적인 이유:',
-          content: 'APE는 우아하게 단순합니다. 일상적인 요청의 대부분이 이 3개의 필드에 맞습니다. 더 복잡한 프레임워크로 이동하기 전에 훌륭한 시작점입니다.',
+          content: 'APE는 단순합니다. 일상적인 요청 대부분이 이 3개 필드에 들어가므로, 더 복잡한 프레임워크로 넘어가기 전의 출발점으로 적합합니다. \'APE\'의 정의는 출처마다 다르며, 관련 없는 연구 기법인 Automatic Prompt Engineer의 약칭이기도 합니다.',
         },
         google: {
           title: '6. Google 프롬프트 프레임워크',
@@ -2091,7 +2091,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         googleWhy: {
           title: '효과적인 이유:',
-          content: 'Google의 프레임워크는 가볍고 정보 중심입니다. 연구 쿼리와 가상 시나리오에 좋습니다.',
+          content: 'PromptQuorum의 Google Prompt 프레임워크는 3개 필드(Task, Context, Persona)로 구성되며 가볍고 정보 중심이어서 리서치 질의와 \'만약 ~라면\' 시나리오에 적합합니다. Google이 Workspace의 Gemini용으로 공개한 프롬프트 가이드는 4가지 입력(persona, task, context, format)을 제시하며, 매번 네 가지를 모두 쓸 필요는 없다고 설명합니다([Google Workspace](https://workspace.google.com/resources/ai/writing-effective-prompts/)).',
         },
         trace: {
           title: '7. TRACE 프레임워크',
@@ -2145,15 +2145,15 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         proTip: {
           title: '전문가 팁: 여러 프레임워크 테스트',
           content: [
-            '비밀은 이것입니다: CRAFT vs SPECS로 작성된 동일한 프롬프트가 같은 AI 모델에서 다른 결과를 생성할 수 있습니다. 다른 프레임워크는 AI에서 다른 추론 패턴을 활성화합니다.',
-            '그래서 PromptQuorum은 프레임워크 간에 즉시 전환하고 같은 아이디어가 어떻게 재구성되는지 볼 수 있게 합니다. CRAFT로 프롬프트를 시도하고, SPECS로 전환하고, CO-STAR로 전환하세요. 결과를 비교하세요. 특정 사용 사례에 어떤 프레임워크가 가장 잘 작동하는지 발견할 것입니다.',
+            '같은 아이디어라도 CRAFT로 작성할 때와 SPECS로 작성할 때 같은 AI 모델에서 서로 다른 결과가 나올 수 있습니다. 프레임워크마다 요구하는 세부 정보가 다르기 때문입니다. 자신의 프롬프트로 프레임워크를 비교해 보는 것이 작업에 맞는 방식을 찾는 가장 빠른 방법입니다.',
+            'PromptQuorum에는 9개의 기본 제공 프레임워크(위의 8개와 Single Prompt Line)와 2개의 사용자 지정 슬롯이 있으며, 프레임워크 마법사가 선택을 도와줍니다. 프롬프트를 CRAFT로 시도한 뒤 SPECS나 CO-STAR로 바꿔 결과를 비교해 보십시오.',
           ],
         },
         nextSteps: {
           title: '다음 단계',
           content: [
-            '가장 일반적인 작업과 일치하는 프레임워크를 선택하세요. 마스터하세요. 그런 다음 기술이 성장함에 따라 다른 것들을 실험해 보세요.',
-            '이 프레임워크들을 실제로 적용할 준비가 되었습니까? 8가지 프레임워크 전부와 자동 최적화 및 여러 AI 모델 비교가 포함된 PromptQuorum으로 시도해 보세요.',
+            '가장 자주 하는 작업에 맞는 프레임워크를 하나 골라 익히십시오. 숙련도가 높아지면 다른 프레임워크도 시험해 보십시오.',
+            '이 프레임워크들을 실제로 활용하려면 PromptQuorum을 사용해 보십시오. 9개의 기본 제공 프레임워크, 프롬프트 최적화, 여러 AI 모델 답변의 나란히 비교 기능을 제공합니다.',
           ],
         },
       },
