@@ -26,9 +26,18 @@ export function BackLink({ lang }: { lang?: Lang }) {
   const home = l === 'en' ? '/' : `/${l}`
   const onClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return
+    // Was the previous history entry a page of this site? document.referrer is not enough: it never changes for
+    // in-app (soft) navigation, so it is empty after e.g. Academy page -> Terms. The Navigation API sees the real
+    // previous entry; where it is missing (older browsers) the referrer is the fallback.
     let sameSite = false
     try {
-      sameSite = !!document.referrer && new URL(document.referrer).origin === window.location.origin
+      const nav = (window as unknown as { navigation?: { canGoBack?: boolean; currentEntry?: { index: number }; entries: () => { url?: string }[] } }).navigation
+      if (nav?.currentEntry && nav.canGoBack) {
+        const prev = nav.entries()[nav.currentEntry.index - 1]?.url
+        sameSite = !!prev && new URL(prev).origin === window.location.origin
+      } else {
+        sameSite = !!document.referrer && new URL(document.referrer).origin === window.location.origin
+      }
     } catch {
       sameSite = false
     }
