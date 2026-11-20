@@ -1,7 +1,6 @@
 'use client'
 
-// The card that appears once per visit after ASK_HANS_PROMO_AFTER_S seconds with Ask Hans open: the topic picture
-// is replaced by the promo picture, and the visitor is asked to share Ask Hans. Share links only carry a fixed
+// The card that appears once per visit after ASK_HANS_PROMO_AFTER_S seconds with Ask Hans open: the visitor is asked to share Ask Hans. Share links only carry a fixed
 // text plus the /askhans address, never anything from the visitor's conversation.
 
 import { useEffect, useRef, useState } from 'react'
@@ -80,7 +79,7 @@ export function PromoShare() {
   )
 }
 
-/** Text + share buttons under the promo picture (desktop side panel). */
+/** Text + share buttons under the topic picture (desktop side panel). */
 export function PromoCard({ onClose }: { onClose: () => void }) {
   const tx = useAskCopy()
   return (
