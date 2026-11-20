@@ -11,7 +11,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-18',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/balcony-solar-china-2027-overview-hero-en.webp',
     title: 'Balcony Solar in China: The Domestic Market Emerging Behind the Export Boom (2027)',
@@ -19,13 +19,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'China is the world\'s largest exporter of balcony solar hardware — but this page is about a different, newer story: a domestic adoption market taking shape inside China itself, formalized by the country\'s first balcony-solar industry standard in May 2026 and driven by a 2025 policy shift that undercut the economics of traditional grid-subsidized household solar.',
     metaDescription: 'China published its first balcony-solar industry standard (T/GEA 001-2026) in May 2026, drafted with Hoymiles and Trina\'s household brand. Policy driver: Document No. 136 (effective May 31, 2025) pushed household solar toward self-consumption. Single-source estimates put 2024 domestic installs around 1,000 units, projecting toward 100,000+ by 2026.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 min read',
     educationalLevel: 'Beginner',
     audience: 'Balcony solar market watchers and buyers assessing China\'s domestic adoption, distinct from China as a manufacturing hub',
     primaryTerm: 'balcony solar china domestic market',
     targetKeywords: ['balcony solar china', 'china balcony solar standard 2026', 'plug-in solar china market'],
-    leadAnswerBlock: '**China published its first industry standard specifically for balcony solar — T/GEA 001-2026 ("阳台光伏质量与安全评价技术规范," the Balcony PV Quality and Safety Evaluation Technical Standard) — on May 21, 2026, issued by the Shanghai Minhang District Green Energy Industry Development Promotion Association.** The standard was drafted jointly with the China Distributed Solar-Storage Brand Alliance, the Shandong Solar Energy Industry Association, and the New Energy Committee of the Henan Province Industry Development Research Association, with Hoymiles (昱能科技) and Trina Solar\'s residential brand (天合富家, "Trina Household") as core drafting enterprises. The policy backdrop is China\'s "Document No. 136" (国家发改委/国家能源局《关于深化新能源上网电价市场化改革促进新能源高质量发展的通知》), effective May 31, 2025, which requires new renewable energy projects to sell into market-based trading rather than receive guaranteed feed-in pricing — undercutting the traditional "sell excess to the grid for subsidy" economics of household solar and opening a market case for self-consumption-focused balcony systems instead. [VERIFY: single-company estimate, not independently confirmed] Trina\'s household brand estimates roughly 1,000 domestic installs in 2024, projecting toward 10,000 in 2025 and potentially 100,000+ by 2026.',
+    leadAnswerBlock: '**China published its first industry standard specifically for balcony solar — T/GEA 001-2026 ("阳台光伏质量与安全评价技术规范," the Balcony PV Quality and Safety Evaluation Technical Standard) — on May 21, 2026, issued by the Shanghai Minhang District Green Energy Industry Development Promotion Association.** The standard was drafted jointly with the China Distributed Solar-Storage Brand Alliance, the Shandong Solar Energy Industry Association, and the New Energy Committee of the Henan Province Industry Development Research Association, with Hoymiles (昱能科技) and Trina Solar\'s residential brand (天合富家, "Trina Household") as core drafting enterprises. The policy backdrop is China\'s "Document No. 136" (国家发改委/国家能源局《关于深化新能源上网电价市场化改革促进新能源高质量发展的通知》), effective May 31, 2025, which requires new renewable energy projects to sell into market-based trading rather than receive guaranteed feed-in pricing — undercutting the traditional "sell excess to the grid for subsidy" economics of household solar and opening a market case for self-consumption-focused balcony systems instead. Trina\'s household brand estimates roughly 1,000 domestic installs in 2024, projecting toward 10,000 in 2025 and potentially 100,000+ by 2026.',
     quickAnswerTop: {
       en: {
         question: 'Is there a domestic balcony solar market in China, separate from its role as a manufacturing hub?',
@@ -34,10 +34,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'T/GEA 001-2026 ("阳台光伏质量与安全评价技术规范"), China\'s first balcony-solar industry standard, published May 21, 2026 by the Shanghai Minhang District Green Energy Industry Development Promotion Association',
           'Drafted with the China Distributed Solar-Storage Brand Alliance, Shandong Solar Energy Industry Association, and Henan Province Industry Development Research Association\'s New Energy Committee; Hoymiles and Trina Solar\'s household brand (天合富家) were core drafting enterprises',
           'Policy driver: "Document No. 136," effective May 31, 2025, requires new renewable projects to enter market trading instead of guaranteed feed-in pricing — undercutting subsidized household-solar economics and opening a case for self-consumption-focused balcony solar',
-          '[VERIFY: single-source, Trina household brand estimate] ~1,000 domestic units installed in 2024, ~10,000 projected for 2025, potentially 100,000+ for 2026 — not an independently confirmed or official figure',
+          '~1,000 domestic units installed in 2024, ~10,000 projected for 2025, potentially 100,000+ for 2026 — not an independently confirmed or official figure',
           'This is a distinct topic from China\'s role as a manufacturing/export hub (covered elsewhere in this cluster, e.g. export-tax rebate changes and Section 301 tariffs) — this page covers domestic adoption inside China specifically',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -50,6 +50,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Re-Check: Standard, National Plans and Policy Timing',
+        content: '**The standard\'s publication on 21 May 2026 is corroborated, and it is a group (association) standard rather than a binding national rule; this research found no mandatory national balcony-solar regulation in China.** [OFweek (25 May 2026)](https://solar.ofweek.com/2026-05/ART-260008-8120-30688411.html) reports that T/GEA 001-2026 was announced at a Shanghai event on 21 May 2026 with a technical and safety scope covering system design, installation and safety, and that the National Energy Administration\'s 2025 industry-standard revision plan includes a balcony PV standard with completion expected in 2027, with the group standard presented as a forerunner. The same article gives a roughly 1 : 10 : tenfold trajectory for installs in 2024, 2025 and 2026, but the unit was garbled in the text read, so the 1,000 / 10,000 / 100,000+ unit figures on this page stay unverified and single-sourced. The issuer, date and drafting units named on this page (issued by the Shanghai Minhang District Green Energy Industry Development Promotion Association on 21 May 2026; led by the China Distributed Solar-Storage Brand Alliance, the Shandong Solar Energy Industry Association and the New Energy Committee of the Henan Province Industry Development Research Association, with 昱能科技 (Hoymiles) and 天合富家 as core drafting enterprises) are reported by the trade site [OFweek](https://mp.ofweek.com/solar/a656714453647); the standard\'s own text and the issuer\'s announcement were not seen, so treat the drafting-enterprise detail as reported, not verified against the standard. On policy timing, [Carbon Brief](https://www.carbonbrief.org/analysis-only-half-of-chinese-provinces-finalise-key-document-136-renewable-rules/) describes Document No. 136 as a February 2025 notice whose pricing plans apply to projects completed on or after 1 June 2025, so the "effective May 31, 2025" wording elsewhere on this page is best read as that 1 June 2025 cut-over. This is a summary of public information, not legal advice.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -57,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'China published its first balcony-solar industry standard, T/GEA 001-2026, on May 21, 2026 — issued by the Shanghai Minhang District Green Energy Industry Development Promotion Association.',
           'Core drafting enterprises included Hoymiles (昱能科技) and Trina Solar\'s residential brand (天合富家, "Trina Household"), alongside three industry associations spanning distributed solar-storage and regional new-energy committees.',
           '"Document No. 136," effective May 31, 2025, requires new renewable energy projects to sell into market-based trading rather than receive guaranteed feed-in pricing — this undercut traditional subsidized household-solar economics and created a market opening for self-consumption balcony solar.',
-          '[VERIFY: single-source] Trina\'s household brand estimates ~1,000 domestic balcony solar installs in 2024, ~10,000 projected for 2025, and potentially 100,000+ by 2026 — treat as a company projection, not an official or independently confirmed figure.',
+          'Trina\'s household brand estimates ~1,000 domestic balcony solar installs in 2024, ~10,000 projected for 2025, and potentially 100,000+ by 2026 — treat as a company projection, not an official or independently confirmed figure.',
           'WattCycle, a Shenzhen-based manufacturer already covered elsewhere in this cluster for its export products, is a direct link between China\'s manufacturing base and this emerging domestic market.',
           'Chinese trade press explicitly frames this adoption curve as following Germany\'s earlier trajectory (Germany\'s 1M+ registered systems used as the reference benchmark) — an industry framing worth noting, not an independently verified conclusion.',
         ],
@@ -86,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Chinese trade press coverage explicitly frames this trajectory as following Germany\'s earlier balcony-solar adoption curve, using Germany\'s 1M+ registered systems as the reference benchmark for where the category could eventually head in China. This framing should be attributed to the source making the comparison, not treated as this page\'s own independent conclusion — the actual scale and trajectory of China\'s domestic market remains to be confirmed by independent data as it develops.',
         ],
         callouts: [
-          { type: 'warning', text: '[VERIFY: single-company estimate] The 1,000 / 10,000 / 100,000+ installation figures for 2024-2026 come from Trina\'s household brand alone — no independent or official ANEEL-style national statistics agency figure was found to corroborate this.' },
+          { type: 'warning', text: 'The 1,000 / 10,000 / 100,000+ installation figures for 2024-2026 come from Trina\'s household brand alone — no independent or official national statistics-agency figure was found to corroborate this.' },
         ],
       },
       hubVsDomestic: {
@@ -104,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Does China have a balcony solar standard?', a: 'Yes — T/GEA 001-2026, published May 21, 2026 by the Shanghai Minhang District Green Energy Industry Development Promotion Association, is China\'s first industry standard specifically for balcony solar quality and safety evaluation. It is an industry standard, not a national mandatory law with a wattage cap.' },
           { q: 'Who drafted China\'s balcony solar standard?', a: 'The China Distributed Solar-Storage Brand Alliance, the Shandong Solar Energy Industry Association, and the New Energy Committee of the Henan Province Industry Development Research Association, with Hoymiles and Trina Solar\'s household brand (天合富家) as core drafting enterprises.' },
           { q: 'Why is balcony solar growing in China now?', a: '"Document No. 136," effective May 31, 2025, requires new renewable energy projects to sell into market-based trading rather than receive guaranteed feed-in pricing. This undercut the traditional economics of subsidized household solar built around grid export, opening a market case for self-consumption-focused balcony solar instead.' },
-          { q: 'How big is the domestic balcony solar market in China?', a: '[VERIFY: single-source estimate] Trina Solar\'s household brand estimates roughly 1,000 units installed in 2024, ~10,000 projected for 2025, and potentially 100,000+ by 2026 — a company projection, not an independently confirmed or official figure.' },
+          { q: 'How big is the domestic balcony solar market in China?', a: 'Trina Solar\'s household brand estimates roughly 1,000 units installed in 2024, ~10,000 projected for 2025, and potentially 100,000+ by 2026 — a company projection, not an independently confirmed or official figure.' },
           { q: 'Is this the same as China\'s balcony solar export business?', a: 'No. This page covers domestic Chinese adoption; China\'s role as the dominant global manufacturer and exporter of balcony solar hardware (covered elsewhere in this cluster) is a separate, already well-established story.' },
         ],
       },
@@ -127,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'China ist der weltweit größte Exporteur von Balkonkraftwerk-Hardware — doch diese Seite behandelt eine andere, neuere Geschichte: einen heimischen Absatzmarkt, der sich innerhalb Chinas selbst entwickelt, formalisiert durch den ersten Branchenstandard des Landes für Balkonkraftwerke im Mai 2026 und angetrieben durch eine politische Kurskorrektur 2025, die die Wirtschaftlichkeit der traditionellen, netzsubventionierten Haushaltssolaranlagen untergrub.',
     metaDescription: 'China veröffentlichte im Mai 2026 seinen ersten Branchenstandard für Balkonkraftwerke (T/GEA 001-2026), gemeinsam mit Hoymiles und der Haushaltsmarke von Trina erarbeitet. Politischer Treiber: Dokument Nr. 136 (wirksam seit 31. Mai 2025) lenkte Haushaltssolar in Richtung Eigenverbrauch. Schätzungen einer einzelnen Quelle beziffern die heimischen Installationen 2024 auf rund 1.000 Einheiten, mit einer Projektion auf über 100.000 bis 2026.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Beobachter und Käufer des Balkonkraftwerk-Markts, die Chinas heimische Marktentwicklung verfolgen — getrennt von Chinas Rolle als Fertigungsstandort',
@@ -145,7 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ÜBERPRÜFEN: Schätzung einer einzelnen Quelle, Haushaltsmarke von Trina] ~1.000 heimisch installierte Einheiten 2024, ~10.000 Projektion für 2025, potenziell über 100.000 für 2026 — keine unabhängig bestätigte oder offizielle Zahl',
           'Dies ist ein eigenständiges Thema, getrennt von Chinas Rolle als Fertigungs- und Exportstandort (an anderer Stelle in diesem Themencluster behandelt, z. B. Änderungen bei der Exportsteuerrückerstattung und Section-301-Zölle) — diese Seite behandelt speziell die heimische Marktentwicklung innerhalb Chinas',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -158,6 +162,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Erneute Prüfung: Standard, nationale Pläne und Zeitpunkt der Politik',
+        content: '**Die Veröffentlichung des Standards am 21. Mai 2026 ist bestätigt; es handelt sich um einen Verbandsstandard (Group Standard) und nicht um eine verbindliche nationale Regel, und in dieser Recherche wurde keine verbindliche nationale Balkonsolar-Regelung in China gefunden.** [OFweek (25. Mai 2026)](https://solar.ofweek.com/2026-05/ART-260008-8120-30688411.html) berichtet, T/GEA 001-2026 sei am 21. Mai 2026 bei einer Veranstaltung in Shanghai vorgestellt worden, mit technischem und sicherheitstechnischem Geltungsbereich für Systemauslegung, Installation und Sicherheit, und der Revisionsplan der Nationalen Energiebehörde für Branchenstandards 2025 enthalte einen Standard für Balkon-PV mit voraussichtlicher Fertigstellung 2027; der Verbandsstandard werde als Wegbereiter dargestellt. Derselbe Artikel nennt für die Installationen 2024, 2025 und 2026 einen Verlauf von etwa 1 : 10 : zehnfach, doch die Einheit war im gelesenen Text unleserlich; die Zahlen 1.000 / 10.000 / 100.000+ Einheiten auf dieser Seite bleiben daher ungeprüft und stammen aus einer einzigen Quelle. Herausgeber, Datum und die auf dieser Seite genannten Entwurfsbeteiligten (am 21. Mai 2026 herausgegeben vom Shanghai Minhang District Green Energy Industry Development Promotion Association; federführend die China Distributed Solar-Storage Brand Alliance, die Shandong Solar Energy Industry Association und das New Energy Committee der Henan Province Industry Development Research Association, mit 昱能科技 (Hoymiles) und 天合富家 als zentralen Entwurfsunternehmen) werden von der Branchenseite [OFweek](https://mp.ofweek.com/solar/a656714453647) berichtet; der Standardtext selbst und die Ankündigung des Herausgebers lagen nicht vor, die Angabe zu den Entwurfsunternehmen gilt daher als berichtet, nicht am Standard geprüft. Zum Zeitpunkt der Politik: [Carbon Brief](https://www.carbonbrief.org/analysis-only-half-of-chinese-provinces-finalise-key-document-136-renewable-rules/) beschreibt Document No. 136 als Mitteilung vom Februar 2025, deren Preisregeln für ab dem 1. Juni 2025 fertiggestellte Projekte gelten; die Formulierung „in Kraft ab 31. Mai 2025“ an anderer Stelle dieser Seite ist daher als dieser Stichtag 1. Juni 2025 zu lesen. Dies ist eine Zusammenfassung öffentlicher Informationen und keine Rechtsberatung.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -235,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'China es el mayor exportador mundial de hardware de energía solar de balcón — pero esta página trata una historia diferente y más reciente: un mercado de adopción interno que está tomando forma dentro de China, formalizado por el primer estándar de la industria de energía solar de balcón del país en mayo de 2026 e impulsado por un cambio de política en 2025 que socavó la economía de la energía solar doméstica tradicional subsidiada por la red.',
     metaDescription: 'China publicó su primer estándar de la industria para energía solar de balcón (T/GEA 001-2026) en mayo de 2026, elaborado junto con la marca doméstica de Hoymiles y Trina. Motor de la política: el Documento N.º 136 (vigente desde el 31 de mayo de 2025) impulsó la energía solar doméstica hacia el autoconsumo. Estimaciones de una sola fuente sitúan las instalaciones internas de 2024 en torno a 1.000 unidades, con una proyección de más de 100.000 para 2026.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Observadores y compradores del mercado de energía solar de balcón que analizan la adopción interna de China, distinta del papel de China como centro de fabricación',
@@ -253,7 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[VERIFICAR: fuente única, estimación de la marca doméstica de Trina] ~1.000 unidades instaladas internamente en 2024, ~10.000 proyectadas para 2025, potencialmente más de 100.000 para 2026 — no es una cifra oficial o confirmada de forma independiente',
           'Este es un tema distinto del papel de China como centro de fabricación y exportación (cubierto en otra parte de este conjunto de artículos, p. ej. los cambios en el reembolso del impuesto a la exportación y los aranceles de la Sección 301) — esta página cubre específicamente la adopción interna dentro de China',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -266,6 +274,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Reverificación: norma, planes nacionales y calendario de la política',
+        content: '**La publicación de la norma el 21 de mayo de 2026 está corroborada; es una norma de grupo (asociación) y no una regla nacional vinculante, y esta investigación no encontró ninguna regulación nacional obligatoria sobre energía solar de balcón en China.** [OFweek (25 de mayo de 2026)](https://solar.ofweek.com/2026-05/ART-260008-8120-30688411.html) informa de que T/GEA 001-2026 se anunció en un acto en Shanghái el 21 de mayo de 2026, con un alcance técnico y de seguridad que abarca diseño, instalación y seguridad de los sistemas, y de que el plan de revisión de normas sectoriales de 2025 de la Administración Nacional de Energía incluye una norma de FV de balcón con finalización prevista en 2027, presentándose la norma de grupo como precursora. El mismo artículo da una trayectoria de aproximadamente 1 : 10 : diez veces para las instalaciones de 2024, 2025 y 2026, pero la unidad estaba ilegible en el texto leído, por lo que las cifras de 1000 / 10 000 / 100 000+ unidades de esta página siguen sin verificarse y proceden de una sola fuente. El emisor, la fecha y los redactores citados en esta página (publicada el 21 de mayo de 2026 por la Shanghai Minhang District Green Energy Industry Development Promotion Association; liderada por la China Distributed Solar-Storage Brand Alliance, la Shandong Solar Energy Industry Association y el New Energy Committee de la Henan Province Industry Development Research Association, con 昱能科技 (Hoymiles) y 天合富家 como empresas redactoras principales) los recoge el sitio especializado [OFweek](https://mp.ofweek.com/solar/a656714453647); no se vio el texto de la norma ni el anuncio del emisor, así que el dato de las empresas redactoras se considera informado, no verificado frente a la norma. Sobre el calendario de la política, [Carbon Brief](https://www.carbonbrief.org/analysis-only-half-of-chinese-provinces-finalise-key-document-136-renewable-rules/) describe el Documento n.º 136 como un aviso de febrero de 2025 cuyas reglas de precios se aplican a proyectos completados a partir del 1 de junio de 2025; la fórmula «en vigor el 31 de mayo de 2025» en otras partes de esta página debe leerse como ese cambio del 1 de junio de 2025. Es un resumen de información pública, no asesoramiento jurídico.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -343,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "La Chine est le premier exportateur mondial de matériel solaire de balcon — mais cette page traite d'une histoire différente et plus récente : un marché d'adoption intérieur qui se dessine en Chine même, formalisé par la première norme sectorielle chinoise pour le solaire de balcon en mai 2026 et porté par un changement de politique en 2025 qui a fragilisé l'économie du solaire résidentiel traditionnel subventionné par le réseau.",
     metaDescription: "La Chine a publié en mai 2026 sa première norme sectorielle pour le solaire de balcon (T/GEA 001-2026), rédigée avec la marque résidentielle de Hoymiles et Trina. Moteur politique : le Document n° 136 (en vigueur depuis le 31 mai 2025) a orienté le solaire résidentiel vers l'autoconsommation. Des estimations d'une source unique situent les installations intérieures de 2024 autour de 1 000 unités, avec une projection à plus de 100 000 d'ici 2026.",
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 min de lecture',
     educationalLevel: 'Beginner',
     audience: "Observateurs et acheteurs du marché du solaire de balcon suivant l'adoption intérieure en Chine, distincte du rôle de la Chine comme pôle de fabrication",
@@ -361,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[À VÉRIFIER : source unique, estimation de la marque résidentielle de Trina] ~1 000 unités installées en Chine en 2024, ~10 000 projetées pour 2025, potentiellement plus de 100 000 pour 2026 — un chiffre non officiel et non confirmé de manière indépendante",
           "Ce sujet est distinct du rôle de la Chine comme pôle de fabrication et d'exportation (traité ailleurs dans cet ensemble d'articles, par exemple les modifications du remboursement de la taxe à l'exportation et les tarifs douaniers de la Section 301) — cette page traite spécifiquement de l'adoption intérieure en Chine",
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -374,6 +386,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Pour aller plus loin', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Revérification : norme, plans nationaux et calendrier politique',
+        content: '**La publication de la norme le 21 mai 2026 est corroborée ; il s\'agit d\'une norme de groupe (association) et non d\'une règle nationale contraignante, et cette recherche n\'a trouvé aucune réglementation nationale obligatoire sur le solaire de balcon en Chine.** [OFweek (25 mai 2026)](https://solar.ofweek.com/2026-05/ART-260008-8120-30688411.html) rapporte que T/GEA 001-2026 a été annoncée lors d\'un événement à Shanghai le 21 mai 2026, avec un champ technique et de sécurité couvrant conception, installation et sécurité des systèmes, et que le plan de révision 2025 des normes sectorielles de l\'Administration nationale de l\'énergie inclut une norme sur le PV de balcon dont l\'achèvement est attendu en 2027, la norme de groupe étant présentée comme précurseur. Le même article donne une trajectoire d\'environ 1 : 10 : dix fois plus pour les installations de 2024, 2025 et 2026, mais l\'unité était illisible dans le texte lu ; les chiffres de 1 000 / 10 000 / 100 000+ unités de cette page restent donc non vérifiés et issus d\'une source unique. L\'émetteur, la date et les rédacteurs cités sur cette page (publiée le 21 mai 2026 par la Shanghai Minhang District Green Energy Industry Development Promotion Association ; pilotée par la China Distributed Solar-Storage Brand Alliance, la Shandong Solar Energy Industry Association et le New Energy Committee de la Henan Province Industry Development Research Association, avec 昱能科技 (Hoymiles) et 天合富家 comme entreprises rédactrices principales) sont rapportés par le site spécialisé [OFweek](https://mp.ofweek.com/solar/a656714453647) ; le texte de la norme et l\'annonce de l\'émetteur n\'ont pas été consultés : le détail sur les entreprises rédactrices est donc rapporté, non vérifié par rapport à la norme. Sur le calendrier politique, [Carbon Brief](https://www.carbonbrief.org/analysis-only-half-of-chinese-provinces-finalise-key-document-136-renewable-rules/) décrit le Document n° 136 comme un avis de février 2025 dont les règles de prix s\'appliquent aux projets achevés à partir du 1er juin 2025 ; la formule « en vigueur le 31 mai 2025 » ailleurs sur cette page est donc à lire comme ce basculement du 1er juin 2025. Il s\'agit d\'un résumé d\'informations publiques, pas d\'un conseil juridique.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -451,7 +467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'الصين هي أكبر مُصدِّر في العالم لمعدات الطاقة الشمسية للشرفات — لكن هذه الصفحة تتناول قصة مختلفة وأحدث: سوقًا محليًا للتبني آخذًا في التشكل داخل الصين نفسها، تم إضفاء الطابع الرسمي عليه من خلال أول معيار صناعي صيني للطاقة الشمسية للشرفات في مايو 2026، ومدفوعًا بتحول في السياسات عام 2025 قوّض اقتصاديات الطاقة الشمسية المنزلية التقليدية المدعومة من الشبكة.',
     metaDescription: 'نشرت الصين أول معيار صناعي لها للطاقة الشمسية للشرفات (T/GEA 001-2026) في مايو 2026، تمت صياغته مع العلامة المنزلية لكل من Hoymiles وTrina.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'مراقبو ومشترو سوق الطاقة الشمسية للشرفات الذين يتابعون التبني المحلي في الصين، بمعزل عن دور الصين كمركز تصنيع',
@@ -469,7 +485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[للتحقق: مصدر واحد، تقدير العلامة المنزلية لشركة Trina] نحو 1,000 وحدة مُركَّبة محليًا في عام 2024، و~10,000 متوقعة لعام 2025، وربما أكثر من 100,000 لعام 2026 — رقم غير رسمي وغير مؤكد بشكل مستقل',
           'هذا موضوع منفصل عن دور الصين كمركز تصنيع وتصدير (تمت تغطيته في مكان آخر من هذه المجموعة، مثل التغييرات في استرداد ضريبة التصدير وتعرفات القسم 301) — تتناول هذه الصفحة تحديدًا التبني المحلي داخل الصين',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -482,6 +498,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'إعادة تحقق: المعيار والخطط الوطنية وتوقيت السياسة',
+        content: '**نشر المعيار في 21 مايو 2026 مؤكَّد؛ وهو معيار مجموعة (جمعية) وليس قاعدة وطنية ملزمة، ولم يجد هذا البحث أي لائحة وطنية إلزامية للطاقة الشمسية للشرفات في الصين.** يفيد [OFweek (25 مايو 2026)](https://solar.ofweek.com/2026-05/ART-260008-8120-30688411.html) بأن T/GEA 001-2026 أُعلن في فعالية بشنغهاي في 21 مايو 2026 بنطاق تقني وسلامة يشمل تصميم الأنظمة وتركيبها وسلامتها، وبأن خطة مراجعة معايير القطاع لعام 2025 لدى إدارة الطاقة الوطنية تتضمن معياراً للطاقة الكهروضوئية للشرفات يُتوقع إنجازه في 2027، وبأن معيار المجموعة يُقدَّم تمهيداً له. ويعطي المقال نفسه مساراً تقريبياً 1 : 10 : عشرة أضعاف لعمليات التركيب في 2024 و2025 و2026، لكن الوحدة كانت مشوّهة في النص المقروء، لذا تبقى أرقام 1,000 / 10,000 / 100,000+ وحدة في هذه الصفحة غير مؤكدة ومن مصدر واحد. أما الجهة المصدِرة والتاريخ والجهات المعدّة المذكورة في هذه الصفحة (صدر في 21 مايو 2026 عن Shanghai Minhang District Green Energy Industry Development Promotion Association؛ بقيادة China Distributed Solar-Storage Brand Alliance وShandong Solar Energy Industry Association واللجنة الجديدة للطاقة التابعة لـ Henan Province Industry Development Research Association، مع 昱能科技 (Hoymiles) و天合富家 كشركتين رئيسيتين في الإعداد) فيوردها الموقع المتخصص [OFweek](https://mp.ofweek.com/solar/a656714453647)؛ ولم يُطَّلع على نص المعيار ولا على إعلان الجهة المصدِرة، لذا يُعامل تفصيل الشركات المعدّة على أنه مُبلَّغ عنه وغير متحقق منه مقابل المعيار. وبشأن توقيت السياسة، يصف [Carbon Brief](https://www.carbonbrief.org/analysis-only-half-of-chinese-provinces-finalise-key-document-136-renewable-rules/) الوثيقة رقم 136 بأنها إشعار من فبراير 2025 تنطبق قواعد التسعير فيه على المشاريع المكتملة في 1 يونيو 2025 وما بعده؛ لذا يُقرأ تعبير «سارية من 31 مايو 2025» في مواضع أخرى من الصفحة على أنه نقطة التحول هذه في 1 يونيو 2025. هذا ملخص لمعلومات علنية وليس استشارة قانونية.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -559,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '中国はバルコニー太陽光発電機器の世界最大の輸出国です。しかし、このページが取り上げるのは別の、より新しい話です。中国国内で形成されつつある国内導入市場について解説します。この市場は、2026年5月に発表された同国初のバルコニー太陽光発電業界規格によって制度化され、2025年の政策転換によって後押しされました。この政策転換は、従来の系統連系型・補助金依存の家庭用太陽光発電の経済性を弱めるものでした。',
     metaDescription: '中国は2026年5月、初のバルコニー太陽光発電業界規格（T/GEA 001-2026）を発表しました。この規格はHoymilesとTrinaの家庭用ブランドとともに策定されました。政策的な原動力は、2025年5月31日に発効した「136号文件」で、家庭用太陽光発電を自家消費へと転換させました。単一情報源の推計によれば、2024年の国内設置数は約1,000台で、2026年には10万台以上に達すると予測されています。',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6分で読める',
     educationalLevel: 'Beginner',
     audience: '中国の製造拠点としての役割とは別に、中国国内での導入状況を注視するバルコニー太陽光発電市場の観測者・購入検討者',
@@ -577,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[要検証：単一情報源、トリナ住宅用ブランドによる推計] 2024年の国内設置台数は約1,000台、2025年は約1万台、2026年には10万台以上に達する可能性がある——これは公式または独立して確認された数字ではありません。',
           'この話題は、中国の製造・輸出拠点としての役割（本クラスター内の他の記事で扱う輸出税還付の変更やセクション301関税など）とは異なる、独立したテーマです。本ページは中国国内での導入に特化して解説します。',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -590,6 +610,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '再確認:規格、国の計画、政策の時期',
+        content: '**2026年5月21日の規格公表は裏付けが取れました。これは団体規格であり、拘束力のある国の規則ではありません。本調査では、中国でバルコニー太陽光を対象とする強制的な国家規制は見つかりませんでした。** [OFweek(2026年5月25日)](https://solar.ofweek.com/2026-05/ART-260008-8120-30688411.html)によると、T/GEA 001-2026は2026年5月21日に上海のイベントで発表され、システム設計、設置、安全を対象とする技術・安全評価の範囲を持ちます。また国家能源局の2025年業界標準改訂計画にバルコニーPV規格が含まれ、2027年の完成が見込まれており、団体規格はその先駆けと位置づけられています。同記事は2024年、2025年、2026年の設置の推移を約1:10:10倍としていますが、読み取れた本文では単位が文字化けしていたため、本ページの1,000/10,000/100,000超という台数は未検証の単一情報源のままです。本ページに記載した発行者、日付、起草団体(2026年5月21日に上海市閔行区緑色エネルギー産業発展促進会が発行。中国分散型光蓄電ブランド連盟、山東省太陽能業界協会、河南省産業発展研究会新エネルギー専門委員会が共同で主導し、昱能科技(Hoymiles)と天合富家が中核の起草企業)は、業界サイト[OFweek](https://mp.ofweek.com/solar/a656714453647)の報道によるものです。規格本文や発行者の発表は確認できていないため、起草企業に関する記述は「報道に基づく、規格との照合は未実施」として扱ってください。政策の時期については、[Carbon Brief](https://www.carbonbrief.org/analysis-only-half-of-chinese-provinces-finalise-key-document-136-renewable-rules/)がDocument No. 136を2025年2月の通知とし、その価格ルールは2025年6月1日以降に完成したプロジェクトに適用されると説明しています。本ページの他の箇所にある「2025年5月31日施行」という表現は、この2025年6月1日の切り替えと読むのが適切です。本欄は公開情報の要約であり、法的助言ではありません。',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -667,7 +691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '중국은 세계 최대의 발코니 태양광 장비 수출국입니다. 그러나 이 페이지에서는 다른, 더 새로운 이야기를 다룹니다. 바로 중국 내부에서 형성되고 있는 내수 도입 시장입니다. 이 시장은 2026년 5월에 발표된 중국 최초의 발코니 태양광 산업 표준으로 제도화되었으며, 전통적인 계통 보조금 기반 가정용 태양광의 경제성을 약화시킨 2025년 정책 전환에 의해 촉진되었습니다.',
     metaDescription: '중국은 2026년 5월 최초의 발코니 태양광 산업 표준(T/GEA 001-2026)을 발표했습니다. 이 표준은 Hoymiles와 Trina의 가정용 브랜드와 함께 작성되었습니다.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6분 읽기',
     educationalLevel: 'Beginner',
     audience: '중국의 제조 허브로서의 역할과는 별개로, 중국 내수 시장 도입 상황을 주시하는 발코니 태양광 시장 관찰자 및 구매자',
@@ -685,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[검증 필요: 단일 출처, Trina 가정용 브랜드 추정치] 2024년 국내 설치량 약 1,000대, 2025년 전망 약 1만 대, 2026년에는 10만 대 이상 가능성 — 공식적이거나 독립적으로 확인된 수치가 아닙니다.',
           '이는 중국의 제조·수출 허브로서의 역할(이 클러스터 내 다른 문서에서 다루는 수출세 환급 변경 및 301조 관세 등)과는 별개의 주제입니다 — 이 페이지는 중국 내부의 내수 도입에 특화하여 다룹니다.',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -698,6 +722,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '관련 읽을거리', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '재확인: 표준, 국가 계획, 정책 시점',
+        content: '**2026년 5월 21일 표준 발표는 확인되었으며, 이는 단체표준이지 구속력 있는 국가 규정이 아닙니다. 이번 조사에서는 중국에서 발코니 태양광을 대상으로 하는 의무적 국가 규제를 찾지 못했습니다.** [OFweek(2026년 5월 25일)](https://solar.ofweek.com/2026-05/ART-260008-8120-30688411.html)에 따르면 T/GEA 001-2026은 2026년 5월 21일 상하이 행사에서 발표되었고 시스템 설계, 설치, 안전을 포괄하는 기술·안전 평가 범위를 가집니다. 또 국가에너지국의 2025년 에너지 산업 표준 개정 계획에 발코니 PV 표준이 포함되어 있어 2027년 완료가 예상되며, 이 단체표준은 그에 앞선 선도적 시도로 소개됩니다. 같은 기사는 2024·2025·2026년 설치 추이를 약 1 : 10 : 10배로 제시하지만 읽은 본문에서 단위가 깨져 있었으므로, 이 페이지의 1,000 / 10,000 / 100,000+ 대 수치는 계속 미검증의 단일 출처로 남습니다. 이 페이지에 적은 발행처, 날짜, 기안 단체(2026년 5월 21일 Shanghai Minhang District Green Energy Industry Development Promotion Association 발행. China Distributed Solar-Storage Brand Alliance, Shandong Solar Energy Industry Association, Henan Province Industry Development Research Association 신에너지 위원회가 공동 주도하고 昱能科技(Hoymiles)와 天合富家가 핵심 기안 기업)는 업계 사이트 [OFweek](https://mp.ofweek.com/solar/a656714453647)가 보도한 내용입니다. 표준 원문과 발행처의 공지는 확인하지 못했으므로 기안 기업에 관한 세부 내용은 \'보도에 따른 것이며 표준과 대조하지 않음\'으로 취급하십시오. 정책 시점과 관련해 [Carbon Brief](https://www.carbonbrief.org/analysis-only-half-of-chinese-provinces-finalise-key-document-136-renewable-rules/)는 136호 문건을 2025년 2월의 통지로 설명하며 가격 규정은 2025년 6월 1일 이후 완공된 프로젝트에 적용된다고 합니다. 따라서 이 페이지 다른 곳의 "2025년 5월 31일 시행"이라는 표현은 2025년 6월 1일의 전환점으로 읽는 것이 적절합니다. 이는 공개 정보의 요약이며 법률 자문이 아닙니다.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -775,7 +803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'A China é a maior exportadora mundial de equipamentos de energia solar de varanda — mas esta página aborda uma história diferente e mais recente: um mercado de adoção doméstico que está se formando dentro da própria China, formalizado pelo primeiro padrão do setor de energia solar de varanda do país em maio de 2026 e impulsionado por uma mudança de política em 2025 que enfraqueceu a economia da energia solar residencial tradicional subsidiada pela rede.',
     metaDescription: 'A China publicou seu primeiro padrão do setor para energia solar de varanda (T/GEA 001-2026) em maio de 2026, elaborado com a marca residencial da Hoymiles e da Trina. Motor da política: o Documento nº 136 (em vigor desde 31 de maio de 2025) empurrou a energia solar residencial em direção ao autoconsumo. Estimativas de uma única fonte apontam cerca de 1.000 instalações domésticas em 2024, com projeção de mais de 100.000 até 2026.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '6 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Observadores e compradores do mercado de energia solar de varanda que acompanham a adoção doméstica na China, distinta do papel da China como polo de fabricação',
@@ -793,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[VERIFICAR: fonte única, estimativa da marca residencial da Trina] ~1.000 unidades instaladas domesticamente em 2024, ~10.000 projetadas para 2025, potencialmente mais de 100.000 para 2026 — não é um número oficial nem confirmado de forma independente',
           'Este é um tema distinto do papel da China como polo de fabricação e exportação (abordado em outra parte deste conjunto de artigos, por exemplo as mudanças no reembolso do imposto de exportação e as tarifas da Seção 301) — esta página aborda especificamente a adoção doméstica dentro da China',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -806,6 +834,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Leituras Relacionadas', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Reverificação: norma, planos nacionais e cronologia da política',
+        content: '**A publicação da norma em 21 de maio de 2026 está corroborada; é uma norma de grupo (associação) e não uma regra nacional vinculante, e esta pesquisa não encontrou nenhuma regulação nacional obrigatória de energia solar de varanda na China.** A [OFweek (25 de maio de 2026)](https://solar.ofweek.com/2026-05/ART-260008-8120-30688411.html) relata que a T/GEA 001-2026 foi anunciada em um evento em Xangai em 21 de maio de 2026, com escopo técnico e de segurança abrangendo projeto, instalação e segurança dos sistemas, e que o plano de revisão de normas setoriais de 2025 da Administração Nacional de Energia inclui uma norma de FV de varanda com conclusão prevista para 2027, sendo a norma de grupo apresentada como precursora. O mesmo artigo apresenta uma trajetória de cerca de 1 : 10 : dez vezes para as instalações de 2024, 2025 e 2026, mas a unidade estava ilegível no texto lido, então os números de 1.000 / 10.000 / 100.000+ unidades desta página continuam não verificados e de fonte única. O emissor, a data e os redatores citados nesta página (publicada em 21 de maio de 2026 pela Shanghai Minhang District Green Energy Industry Development Promotion Association; liderada pela China Distributed Solar-Storage Brand Alliance, pela Shandong Solar Energy Industry Association e pelo New Energy Committee da Henan Province Industry Development Research Association, com 昱能科技 (Hoymiles) e 天合富家 como empresas redatoras principais) são relatados pelo site especializado [OFweek](https://mp.ofweek.com/solar/a656714453647); o texto da norma e o anúncio do emissor não foram vistos, então o detalhe das empresas redatoras é tratado como relatado, não verificado frente à norma. Sobre a cronologia da política, a [Carbon Brief](https://www.carbonbrief.org/analysis-only-half-of-chinese-provinces-finalise-key-document-136-renewable-rules/) descreve o Documento n.º 136 como um aviso de fevereiro de 2025 cujas regras de preço se aplicam a projetos concluídos a partir de 1º de junho de 2025; a expressão «em vigor em 31 de maio de 2025» em outras partes desta página deve ser lida como essa virada de 1º de junho de 2025. Este é um resumo de informações públicas, não aconselhamento jurídico.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -883,7 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '中国是全球最大的阳台光伏设备出口国——但本页要讲述的是另一个更新的故事：中国国内正在形成的自用市场。这一市场因2026年5月发布的中国首个阳台光伏行业标准而得到规范，并受到2025年一项政策转变的推动，该转变削弱了传统电网补贴型家庭光伏的经济性。',
     metaDescription: '中国于2026年5月发布首个阳台光伏行业标准（T/GEA 001-2026），由昱能科技与天合富家共同起草。政策推动力：136号文件（自2025年5月31日起施行）促使家庭光伏转向自发自用。单一来源的估算显示，2024年国内装机量约为1,000台，预计到2026年将超过10万台。',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '阅读约6分钟',
     educationalLevel: 'Beginner',
     audience: '关注中国阳台光伏国内市场发展的市场观察者和购买者，区别于中国作为制造中心的角色',
@@ -901,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[待核实：单一来源，天合富家估算] 2024年国内装机量约1,000台，2025年预计约1万台，2026年或将超过10万台——并非官方或经独立证实的数据',
           '这一话题不同于中国作为制造/出口中心的角色（本专题其他文章已涉及，如出口退税变化和301条款关税）——本页专门聚焦中国国内的市场发展',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -914,6 +946,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '复核:标准、国家计划与政策时间点',
+        content: '**该标准于2026年5月21日发布已得到印证;它是团体标准,而非具有约束力的国家规则,本次调研也未发现中国有强制性的国家级阳台光伏监管规定。** 据[OFweek(2026年5月25日)](https://solar.ofweek.com/2026-05/ART-260008-8120-30688411.html)报道,T/GEA 001-2026于2026年5月21日在上海的活动上发布,涵盖系统设计、安装和安全的技术与安全评价范围;国家能源局2025年能源行业标准修订计划中包含阳台光伏标准,预计2027年完成,该团体标准被视为先行探路。同一篇文章给出2024、2025、2026年装机约为1:10:十倍的走势,但所读文本中的单位乱码,因此本页的1,000 / 10,000 / 100,000+套数据仍属未经核实的单一来源。本页所述的发布方、日期和起草单位(2026年5月21日由上海市闵行区绿色能源产业发展促进会发布;由中国分布式光储品牌联盟、山东省太阳能行业协会和河南省产业发展研究会新能源专委会联合牵头,昱能科技(Hoymiles)和天合富家为核心起草企业)由行业网站[OFweek](https://mp.ofweek.com/solar/a656714453647)报道;未见到标准原文及发布方的公告,因此起草企业的细节属于“据报道、未对照标准核实”。关于政策时间点,[Carbon Brief](https://www.carbonbrief.org/analysis-only-half-of-chinese-provinces-finalise-key-document-136-renewable-rules/)称136号文是2025年2月的通知,其价格机制适用于2025年6月1日及以后建成的项目,因此本页其他位置“2025年5月31日生效”的表述应理解为2025年6月1日这一切换点。本页为公开信息的汇总,不构成法律意见。',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
