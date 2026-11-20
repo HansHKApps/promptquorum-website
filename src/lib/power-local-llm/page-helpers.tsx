@@ -1253,6 +1253,7 @@ const HUB_THEMES: Array<{
       'libretranslate-review',
       'linguister-review',
       'presenton-review',
+      'genoffice-review',
       'screenpipe-review',
       'reactive-resume-review',
       'labelme-review',

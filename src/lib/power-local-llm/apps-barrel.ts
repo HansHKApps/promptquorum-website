@@ -310,6 +310,7 @@ import { app as app_picoclaw } from './apps/picoclaw'
 import { app as app_scrypted } from './apps/scrypted'
 import { app as app_screenpipe } from './apps/screenpipe'
 import { app as app_dyad } from './apps/dyad'
+import { app as app_genoffice } from './apps/genoffice'
 import { app as app_open_generative_ai } from './apps/open-generative-ai'
 import { app as app_labelme } from './apps/labelme'
 import { app as app_openwork } from './apps/openwork'
@@ -654,6 +655,7 @@ export const localAiApps: ToolRecord[] = [
   app_scrypted,
   app_screenpipe,
   app_dyad,
+  app_genoffice,
   app_open_generative_ai,
   app_labelme,
   app_openwork,
