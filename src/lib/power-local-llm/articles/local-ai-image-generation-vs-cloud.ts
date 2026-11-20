@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Muss ich bei der Verwendung dieser Tools die DSGVO beachten?',
-            a: 'Bei Cloud-Diensten wie Adobe Firefly oder getimg.ai verlassen Ihre Prompts und Eingabebilder Ihr Gerät und werden auf fremden Servern verarbeitet — prüfen Sie vor der Nutzung mit personenbezogenen oder vertraulichen Daten die jeweiligen Datenverarbeitungsbedingungen der Anbieter (Auftragsverarbeitung nach Art. 28 DSGVO). Bei lokaler Generierung mit Qwen-Image, FLUX oder SD 3.5 verlässt nichts Ihre eigene Maschine — es gibt keine Datenübertragung an Dritte zu prüfen, was Datenresidenz-Anforderungen von vornherein erfüllt.',
+            a: 'Bei Cloud-Diensten wie Adobe Firefly oder getimg.ai verlassen Ihre Prompts und Eingabebilder Ihr Gerät und werden auf fremden Servern verarbeitet — prüfen Sie vor der Nutzung mit personenbezogenen oder vertraulichen Daten die jeweiligen Datenverarbeitungsbedingungen der Anbieter (Auftragsverarbeitung nach Art. 28 DSGVO). Bei lokaler Generierung mit Qwen-Image, FLUX oder SD 3.5 verlässt nichts Ihre eigene Maschine — es findet für diese Verarbeitungsschicht keine Datenübertragung an Dritte statt. Ob das Ihre konkreten Datenschutzanforderungen erfüllt, hängt von Ihrem Verarbeitungskontext und Ihrer rechtlichen Bewertung ab; dies ist keine Rechtsberatung.',
           },
           {
             q: 'Eignet sich lokale KI-Bildgenerierung für den deutschen Mittelstand?',
