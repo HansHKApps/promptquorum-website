@@ -1114,6 +1114,11 @@
     "urlSlug": "dyad-review",
     "url": "/power-local-llm/dyad-review"
   },
+  "genoffice": {
+    "cluster": "power-local-llm",
+    "urlSlug": "genoffice-review",
+    "url": "/power-local-llm/genoffice-review"
+  },
   "open-generative-ai": {
     "cluster": "power-local-llm",
     "urlSlug": "open-generative-ai-review",

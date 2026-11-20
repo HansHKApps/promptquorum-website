@@ -132,6 +132,7 @@ import { article as a_picoclaw_review } from './articles/picoclaw-review'
 import { article as a_scrypted_review } from './articles/scrypted-review'
 import { article as a_screenpipe_review } from './articles/screenpipe-review'
 import { article as a_dyad_review } from './articles/dyad-review'
+import { article as a_genoffice_review } from './articles/genoffice-review'
 import { article as a_open_generative_ai_review } from './articles/open-generative-ai-review'
 import { article as a_labelme_review } from './articles/labelme-review'
 import { article as a_openwork_review } from './articles/openwork-review'
@@ -908,6 +909,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'scrypted-review':                               a_scrypted_review,
   'screenpipe-review':                             a_screenpipe_review,
   'dyad-review':                                   a_dyad_review,
+  'genoffice-review':                              a_genoffice_review,
   'open-generative-ai-review':                     a_open_generative_ai_review,
   'labelme-review':                                a_labelme_review,
   'openwork-review':                               a_openwork_review,
