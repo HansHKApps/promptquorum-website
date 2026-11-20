@@ -178,6 +178,7 @@ import { app as app_stirling_pdf } from './apps/stirling-pdf'
 import { app as app_stratosort } from './apps/stratosort'
 import { app as app_sprich } from './apps/sprich'
 import { app as app_weesper_neon_flow } from './apps/weesper-neon-flow'
+import { app as app_whispy } from './apps/whispy'
 import { app as app_sablate } from './apps/sablate'
 import { app as app_cocoindex } from './apps/cocoindex'
 import { app as app_opendataloader_pdf } from './apps/opendataloader-pdf'
@@ -839,6 +840,7 @@ export const localAiApps: ToolRecord[] = [
   app_stratosort,
   app_sprich,
   app_weesper_neon_flow,
+  app_whispy,
   app_sablate,
   app_cocoindex,
   app_opendataloader_pdf,

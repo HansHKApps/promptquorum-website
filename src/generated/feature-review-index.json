@@ -2009,6 +2009,11 @@
     "urlSlug": "weesper-neon-flow-review",
     "url": "/power-local-llm/weesper-neon-flow-review"
   },
+  "whispy": {
+    "cluster": "power-local-llm",
+    "urlSlug": "whispy-review",
+    "url": "/power-local-llm/whispy-review"
+  },
   "sablate": {
     "cluster": "power-local-llm",
     "urlSlug": "sablate-review",

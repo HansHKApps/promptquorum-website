@@ -439,6 +439,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'stratosort-review':                      'stratosort-review',
   'sprich-review':                          'sprich-review',
   'weesper-neon-flow-review':               'weesper-neon-flow-review',
+  'whispy-review':                          'whispy-review',
   'sablate-review':                         'sablate-review',
   'cocoindex-review':                       'cocoindex-review',
   'opendataloader-pdf-review':              'opendataloader-pdf-review',
