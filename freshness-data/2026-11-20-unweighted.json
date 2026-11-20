@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T18:52:46.583Z",
+  "generatedAt": "2026-11-20T19:24:14.034Z",
   "scope": "EN articles: local-llms, prompt-engineering, power-local-llm, smart-home, balcony-solar, blog",
   "unweighted": {
     "n": 1020,
@@ -1180,5 +1180,51 @@
         "localeAgeDays": 242
       }
     ]
-  }
+  },
+  "weighted": {
+    "n": 310,
+    "meanDays": 29.1,
+    "medianDays": 18,
+    "buckets": [
+      {
+        "label": "0-5",
+        "impressions": 192132,
+        "pct": 13.5
+      },
+      {
+        "label": "6-15",
+        "impressions": 512665,
+        "pct": 36.1
+      },
+      {
+        "label": "16-30",
+        "impressions": 234933,
+        "pct": 16.6
+      },
+      {
+        "label": "31-60",
+        "impressions": 190190,
+        "pct": 13.4
+      },
+      {
+        "label": "61-120",
+        "impressions": 289435,
+        "pct": 20.4
+      },
+      {
+        "label": "121+",
+        "impressions": 0,
+        "pct": 0
+      }
+    ],
+    "unmatchedGscRows": 12,
+    "unmatchedArticles": 710
+  },
+  "byproducts": {
+    "enShareOfImpressions": 96.9,
+    "discardedQueryStringRows": 0,
+    "nonEnRows": 5,
+    "nonEnImpressions": 49902
+  },
+  "priorityRefreshList": []
 }

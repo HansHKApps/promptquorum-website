@@ -30405,5 +30405,451 @@
       "t14": "2026-12-03",
       "t28": "2026-12-17"
     }
+  },
+  {
+    "id": "07166cbb-c5bb-4fbb-8dc0-17d8481a432a",
+    "slug": "/balcony-solar/apsystems-microinverter-balcony-solar",
+    "date": "2026-11-20T19:28:41.497Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "apsystems emea alternatives",
+      "apsystems balcony solar"
+    ],
+    "baseline": {
+      "position": 4.64,
+      "impressions": 50,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "783e0636-a36f-437a-acc1-aebfb3e71ffd",
+    "slug": "/balcony-solar/balcony-solar-china-2027",
+    "date": "2026-11-20T19:28:41.595Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "china balcony photovoltaic storage system contact",
+      "china residential balcony energy storage system oem in 2026",
+      "is it available in china"
+    ],
+    "baseline": {
+      "position": 7.45,
+      "impressions": 193,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5f473752-4f7c-42a5-9510-34a0a915c7b6",
+    "slug": "/balcony-solar/balcony-solar-sizing-yield-payback",
+    "date": "2026-11-20T19:28:41.691Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "balcony solar sizing yield payback"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "84eb9b7e-8a70-44aa-82df-26521f9390cb",
+    "slug": "/balcony-solar/best-balcony-solar-home-battery-us-2026",
+    "date": "2026-11-20T19:28:41.789Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "best balcony solar battery us"
+    ],
+    "baseline": {
+      "position": 6.16,
+      "impressions": 160,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f4627d74-0893-48cf-87bd-f8725fb9bd19",
+    "slug": "/prompt-bites/best-local-llm-for-translation",
+    "date": "2026-11-20T19:28:41.886Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "best local ai for translation",
+      "best local llm for translation",
+      "local translation model"
+    ],
+    "baseline": {
+      "position": 7.28,
+      "impressions": 95,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "fcfd0018-80c2-48ac-9ea3-7238d2dea403",
+    "slug": "/prompt-bites/best-structured-json-output-local-llm",
+    "date": "2026-11-20T19:28:41.983Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "best llm for structured output",
+      "best models for structured output"
+    ],
+    "baseline": {
+      "position": 6.08,
+      "impressions": 205,
+      "clicks": 5,
+      "ctr": 0.024390243902439025,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "db0a78a9-b5ac-4232-9af5-401e6ad69fc6",
+    "slug": "/balcony-solar/deye-microinverter-balcony-solar",
+    "date": "2026-11-20T19:28:42.082Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "balcony system deye"
+    ],
+    "baseline": {
+      "position": 10.08,
+      "impressions": 13,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "6be3f735-eb35-4fc0-a512-6644db944dfa",
+    "slug": "/balcony-solar/ecoflow-balcony-solar",
+    "date": "2026-11-20T19:28:42.180Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "ecoflow parent company",
+      "is ecoflow a publicly traded company"
+    ],
+    "baseline": {
+      "position": 6.32,
+      "impressions": 141,
+      "clicks": 3,
+      "ctr": 0.02127659574468085,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "bc29a647-0f27-4b34-957b-ef8758a94068",
+    "slug": "/balcony-solar/goodwe-balcony-solar",
+    "date": "2026-11-20T19:28:42.276Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "goodwe balcony solar"
+    ],
+    "baseline": {
+      "position": 8,
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "172affc3-b4fc-438c-970f-f3d688a54c2a",
+    "slug": "/balcony-solar/growatt-balcony-solar",
+    "date": "2026-11-20T19:28:42.375Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "growatt inverter made in which country",
+      "growatt made in which country",
+      "where is growatt manufactured"
+    ],
+    "baseline": {
+      "position": 7.58,
+      "impressions": 31,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "0e2cd203-1746-46bd-9f2d-4e25b3be5d28",
+    "slug": "/balcony-solar/home-assistant-balcony-solar-no-cloud",
+    "date": "2026-11-20T19:28:42.472Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "home assistant balkonkraftwerk"
+    ],
+    "baseline": {
+      "position": 6.79,
+      "impressions": 72,
+      "clicks": 1,
+      "ctr": 0.013888888888888888,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "df2b81c4-2d42-4a42-b908-0692562ce470",
+    "slug": "/balcony-solar/hoymiles-microinverter-balcony-solar",
+    "date": "2026-11-20T19:28:42.570Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "hoymiles balcony solar"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "956c5e15-9eb1-4306-9b6b-083e54c4d2e6",
+    "slug": "/prompt-bites/is-balcony-solar-legal-maine",
+    "date": "2026-11-20T19:28:42.667Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "balcony solar maine",
+      "maine balcony solar"
+    ],
+    "baseline": {
+      "position": 4.36,
+      "impressions": 22,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "5aefbcd6-de78-4142-baff-ecf80713271c",
+    "slug": "/prompt-bites/is-balcony-solar-legal-utah",
+    "date": "2026-11-20T19:28:42.766Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "utah balcony solar law"
+    ],
+    "baseline": {
+      "position": 9.83,
+      "impressions": 48,
+      "clicks": 1,
+      "ctr": 0.020833333333333332,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "86faa4b8-7463-4ebb-9316-69ad7453449e",
+    "slug": "/power-local-llm/local-ai-image-generation-vs-cloud",
+    "date": "2026-11-20T19:28:42.864Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "local ai image generation vs cloud"
+    ],
+    "baseline": {
+      "position": 7.23,
+      "impressions": 162,
+      "clicks": 1,
+      "ctr": 0.006172839506172839,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "f753e327-6b5d-43ff-8fdd-617d5f22e7e8",
+    "slug": "/power-local-llm/voice-ai-writers-cloud-vs-local",
+    "date": "2026-11-20T19:28:42.961Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "grammarly vs jasper for ai writing",
+      "grammarly business vs jasper for teams",
+      "grammarly vs jasper ai"
+    ],
+    "baseline": {
+      "position": 4.17,
+      "impressions": 138,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "09c04a9a-ef77-4f41-b81e-0044e33c0bf8",
+    "slug": "/balcony-solar/yuma-balcony-solar",
+    "date": "2026-11-20T19:28:43.059Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "yuma balcony solar"
+    ],
+    "baseline": {
+      "position": 2,
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
+  },
+  {
+    "id": "1cb74412-e9af-4109-b8d6-1e014ca1d231",
+    "slug": "/prompt-engineering/prompt-version-control-workflows",
+    "date": "2026-11-20T19:28:43.157Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale content (121+ days old)",
+        "new": "full refresh 2026-11-20"
+      }
+    ],
+    "reason": "Full content refresh 2026-11-20 (freshness cleanup, risk-gated, 9 locales)",
+    "queries": [
+      "prompt version control",
+      "prompt version control tool",
+      "ai prompt version control"
+    ],
+    "baseline": {
+      "position": 9.09,
+      "impressions": 121,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "28d to 2026-11-20"
+    },
+    "deployedAt": null
   }
 ]

@@ -1,0 +1,670 @@
+{
+  "generatedAt": "2026-10-19T13:34:36.193Z",
+  "scope": "EN articles: local-llms, prompt-engineering, power-local-llm, smart-home, balcony-solar, blog",
+  "unweighted": {
+    "n": 845,
+    "meanDays": 43.4,
+    "medianDays": 47,
+    "buckets": [
+      {
+        "label": "0-5",
+        "count": 141,
+        "pct": 16.7
+      },
+      {
+        "label": "6-15",
+        "count": 16,
+        "pct": 1.9
+      },
+      {
+        "label": "16-30",
+        "count": 67,
+        "pct": 7.9
+      },
+      {
+        "label": "31-60",
+        "count": 530,
+        "pct": 62.7
+      },
+      {
+        "label": "61-120",
+        "count": 85,
+        "pct": 10.1
+      },
+      {
+        "label": "121+",
+        "count": 6,
+        "pct": 0.7
+      }
+    ]
+  },
+  "articlesAged90to120": [
+    {
+      "cluster": "blog",
+      "slug": "eu-companies-local-qwen-gdpr-shift",
+      "urlPath": "/blog/eu-companies-local-qwen-gdpr-shift",
+      "ageDays": 113,
+      "dateSource": "last_full_refresh"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-gpu-buying-guide-local-llm-2026",
+      "urlPath": "/power-local-llm/best-gpu-buying-guide-local-llm-2026",
+      "ageDays": 110,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-ai-workstation-build-guide-2026",
+      "urlPath": "/power-local-llm/local-ai-workstation-build-guide-2026",
+      "ageDays": 110,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-laptops-local-llm-2026",
+      "urlPath": "/power-local-llm/best-laptops-local-llm-2026",
+      "ageDays": 110,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "what-is-balcony-solar",
+      "urlPath": "/balcony-solar/what-is-balcony-solar",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "best-balcony-solar-kits-2026",
+      "urlPath": "/balcony-solar/best-balcony-solar-kits-2026",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "best-balcony-solar-batteries-2026",
+      "urlPath": "/balcony-solar/best-balcony-solar-batteries-2026",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "home-assistant-balcony-solar-no-cloud",
+      "urlPath": "/balcony-solar/home-assistant-balcony-solar-no-cloud",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-vs-rooftop-solar",
+      "urlPath": "/balcony-solar/balcony-vs-rooftop-solar",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "how-to-install-balcony-solar",
+      "urlPath": "/balcony-solar/how-to-install-balcony-solar",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "how-to-register-balcony-solar",
+      "urlPath": "/balcony-solar/how-to-register-balcony-solar",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-sizing-yield-payback",
+      "urlPath": "/balcony-solar/balcony-solar-sizing-yield-payback",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-mounting-guide",
+      "urlPath": "/balcony-solar/balcony-solar-mounting-guide",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "is-balcony-solar-legal-country-guide",
+      "urlPath": "/balcony-solar/is-balcony-solar-legal-country-guide",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-spain-latam",
+      "urlPath": "/balcony-solar/balcony-solar-spain-latam",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-portugal-brazil",
+      "urlPath": "/balcony-solar/balcony-solar-portugal-brazil",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-gulf-mena",
+      "urlPath": "/balcony-solar/balcony-solar-gulf-mena",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "ecoflow-vs-anker-vs-zendure-balcony-solar",
+      "urlPath": "/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "do-you-need-a-battery-balcony-solar",
+      "urlPath": "/balcony-solar/do-you-need-a-battery-balcony-solar",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-payback-worth-it-2026",
+      "urlPath": "/balcony-solar/balcony-solar-payback-worth-it-2026",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-not-producing-power-fixes",
+      "urlPath": "/balcony-solar/balcony-solar-not-producing-power-fixes",
+      "ageDays": 109,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "best-balcony-solar-home-battery-us-2026",
+      "urlPath": "/balcony-solar/best-balcony-solar-home-battery-us-2026",
+      "ageDays": 108,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "local-platforms-balcony-solar-home-assistant-alternatives",
+      "urlPath": "/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives",
+      "ageDays": 108,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "connect-balcony-solar-home-assistant-local",
+      "urlPath": "/balcony-solar/connect-balcony-solar-home-assistant-local",
+      "ageDays": 108,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "gdpr-llm-risk-comparison-2026",
+      "urlPath": "/local-llms/gdpr-llm-risk-comparison-2026",
+      "ageDays": 98,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "prompt-review-workflow-for-teams",
+      "urlPath": "/prompt-engineering/prompt-review-workflow-for-teams",
+      "ageDays": 98,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "prompt-version-control-workflows",
+      "urlPath": "/prompt-engineering/prompt-version-control-workflows",
+      "ageDays": 98,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "prompt-engineering-for-developers-workflow",
+      "urlPath": "/prompt-engineering/prompt-engineering-for-developers-workflow",
+      "ageDays": 98,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-prompts-for-fiction-writers",
+      "urlPath": "/power-local-llm/local-llm-prompts-for-fiction-writers",
+      "ageDays": 98,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-screenwriting-and-novel-drafting",
+      "urlPath": "/power-local-llm/local-llm-screenwriting-and-novel-drafting",
+      "ageDays": 98,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "deepseek-r1-vs-distills-explained-2026",
+      "urlPath": "/power-local-llm/deepseek-r1-vs-distills-explained-2026",
+      "ageDays": 98,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "blog",
+      "slug": "what-is-ai-consensus-scoring",
+      "urlPath": "/blog/what-is-ai-consensus-scoring",
+      "ageDays": 98,
+      "dateSource": "last_full_refresh"
+    },
+    {
+      "cluster": "blog",
+      "slug": "promptquorum-desktop-app-beta",
+      "urlPath": "/blog/promptquorum-desktop-app-beta",
+      "ageDays": 98,
+      "dateSource": "last_full_refresh"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "run-ai-on-tablet-ipad-android",
+      "urlPath": "/power-local-llm/run-ai-on-tablet-ipad-android",
+      "ageDays": 97,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "mobile-llm-models-phi4-gemma-smollm",
+      "urlPath": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+      "ageDays": 97,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "replace-grammarly-notion-ai-with-local",
+      "urlPath": "/power-local-llm/replace-grammarly-notion-ai-with-local",
+      "ageDays": 97,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "best-gpu-under-1000-local-llm",
+      "urlPath": "/prompt-bites/best-gpu-under-1000-local-llm",
+      "ageDays": 97,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "best-local-llm-for-translation",
+      "urlPath": "/prompt-bites/best-local-llm-for-translation",
+      "ageDays": 97,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "best-structured-json-output-local-llm",
+      "urlPath": "/prompt-bites/best-structured-json-output-local-llm",
+      "ageDays": 97,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-tts-voice-cloning-piper-coqui-xtts",
+      "urlPath": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
+      "ageDays": 96,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "is-balcony-solar-legal-utah",
+      "urlPath": "/prompt-bites/is-balcony-solar-legal-utah",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "is-balcony-solar-legal-maine",
+      "urlPath": "/prompt-bites/is-balcony-solar-legal-maine",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "is-balcony-solar-legal-virginia",
+      "urlPath": "/prompt-bites/is-balcony-solar-legal-virginia",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "is-balcony-solar-legal-maryland",
+      "urlPath": "/prompt-bites/is-balcony-solar-legal-maryland",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "is-balcony-solar-legal-colorado",
+      "urlPath": "/prompt-bites/is-balcony-solar-legal-colorado",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "is-balcony-solar-legal-vermont",
+      "urlPath": "/prompt-bites/is-balcony-solar-legal-vermont",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "local-ai-trend-2027-cloud-subsidy-collapse",
+      "urlPath": "/prompt-bites/local-ai-trend-2027-cloud-subsidy-collapse",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "local-ai-trend-2027-ai-pc-npu-normalization",
+      "urlPath": "/prompt-bites/local-ai-trend-2027-ai-pc-npu-normalization",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "local-ai-trend-2027-small-language-models",
+      "urlPath": "/prompt-bites/local-ai-trend-2027-small-language-models",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "local-ai-trend-2027-private-rag",
+      "urlPath": "/prompt-bites/local-ai-trend-2027-private-rag",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "local-ai-trend-2027-frontier-desktop-ai",
+      "urlPath": "/prompt-bites/local-ai-trend-2027-frontier-desktop-ai",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "local-ai-trend-2027-hybrid-local-cloud-routing",
+      "urlPath": "/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "local-ai-trend-2027-ai-nas-home-server",
+      "urlPath": "/prompt-bites/local-ai-trend-2027-ai-nas-home-server",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "local-ai-trend-2027-local-agentic-ai",
+      "urlPath": "/prompt-bites/local-ai-trend-2027-local-agentic-ai",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "local-ai-trend-2027-data-sovereignty-compliance",
+      "urlPath": "/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-bites",
+      "slug": "local-ai-trend-2027-no-code-fine-tuning",
+      "urlPath": "/prompt-bites/local-ai-trend-2027-no-code-fine-tuning",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "blog",
+      "slug": "balcony-solar-us-legalization-race-2026",
+      "urlPath": "/blog/balcony-solar-us-legalization-race-2026",
+      "ageDays": 95,
+      "dateSource": "last_full_refresh"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-battery-storage-standard-2027",
+      "urlPath": "/balcony-solar/balcony-solar-battery-storage-standard-2027",
+      "ageDays": 93,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "eu-800w-balcony-solar-standard-2027",
+      "urlPath": "/balcony-solar/eu-800w-balcony-solar-standard-2027",
+      "ageDays": 93,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-housing-associations-b2b-2027",
+      "urlPath": "/balcony-solar/balcony-solar-housing-associations-b2b-2027",
+      "ageDays": 93,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "net-metering-rollback-balcony-solar-2027",
+      "urlPath": "/balcony-solar/net-metering-rollback-balcony-solar-2027",
+      "ageDays": 93,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-japan-status-2027",
+      "urlPath": "/balcony-solar/balcony-solar-japan-status-2027",
+      "ageDays": 93,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-china-2027",
+      "urlPath": "/balcony-solar/balcony-solar-china-2027",
+      "ageDays": 93,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-brazil-status-2027",
+      "urlPath": "/balcony-solar/balcony-solar-brazil-status-2027",
+      "ageDays": 93,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "where-balcony-solar-doesnt-exist-yet-2027",
+      "urlPath": "/balcony-solar/where-balcony-solar-doesnt-exist-yet-2027",
+      "ageDays": 93,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-greece-status-2027",
+      "urlPath": "/balcony-solar/balcony-solar-greece-status-2027",
+      "ageDays": 92,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "priwatt-balcony-solar",
+      "urlPath": "/balcony-solar/priwatt-balcony-solar",
+      "ageDays": 92,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "kleines-kraftwerk-balcony-solar",
+      "urlPath": "/balcony-solar/kleines-kraftwerk-balcony-solar",
+      "ageDays": 92,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balkonstrom-balcony-solar",
+      "urlPath": "/balcony-solar/balkonstrom-balcony-solar",
+      "ageDays": 92,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "green-solar-pluginenergy-balcony-solar",
+      "urlPath": "/balcony-solar/green-solar-pluginenergy-balcony-solar",
+      "ageDays": 92,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "meyer-burger-solarwatt-heckert-balcony-solar",
+      "urlPath": "/balcony-solar/meyer-burger-solarwatt-heckert-balcony-solar",
+      "ageDays": 92,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "balcony-solar-industry-overview",
+      "urlPath": "/balcony-solar/balcony-solar-industry-overview",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "anker-solix-balcony-solar",
+      "urlPath": "/balcony-solar/anker-solix-balcony-solar",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "ecoflow-balcony-solar",
+      "urlPath": "/balcony-solar/ecoflow-balcony-solar",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "zendure-balcony-solar",
+      "urlPath": "/balcony-solar/zendure-balcony-solar",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "growatt-balcony-solar",
+      "urlPath": "/balcony-solar/growatt-balcony-solar",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "hoymiles-microinverter-balcony-solar",
+      "urlPath": "/balcony-solar/hoymiles-microinverter-balcony-solar",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "deye-microinverter-balcony-solar",
+      "urlPath": "/balcony-solar/deye-microinverter-balcony-solar",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "apsystems-microinverter-balcony-solar",
+      "urlPath": "/balcony-solar/apsystems-microinverter-balcony-solar",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "goodwe-balcony-solar",
+      "urlPath": "/balcony-solar/goodwe-balcony-solar",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "enphase-microinverter-balcony-solar",
+      "urlPath": "/balcony-solar/enphase-microinverter-balcony-solar",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "balcony-solar",
+      "slug": "yuma-balcony-solar",
+      "urlPath": "/balcony-solar/yuma-balcony-solar",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    }
+  ],
+  "warnings": [],
+  "weighted": {
+    "n": 311,
+    "meanDays": 34.1,
+    "medianDays": 44,
+    "buckets": [
+      {
+        "label": "0-5",
+        "impressions": 412420,
+        "pct": 28.8
+      },
+      {
+        "label": "6-15",
+        "impressions": 91115,
+        "pct": 6.4
+      },
+      {
+        "label": "16-30",
+        "impressions": 65526,
+        "pct": 4.6
+      },
+      {
+        "label": "31-60",
+        "impressions": 783264,
+        "pct": 54.8
+      },
+      {
+        "label": "61-120",
+        "impressions": 66901,
+        "pct": 4.7
+      },
+      {
+        "label": "121+",
+        "impressions": 11216,
+        "pct": 0.8
+      }
+    ],
+    "unmatchedGscRows": 11,
+    "unmatchedArticles": 534
+  },
+  "byproducts": {
+    "enShareOfImpressions": 96.9,
+    "discardedQueryStringRows": 0,
+    "nonEnRows": 5,
+    "nonEnImpressions": 49902
+  },
+  "priorityRefreshList": [
+    {
+      "urlPath": "/power-local-llm/local-vision-models-llava-ollama-2026",
+      "ageDays": 122,
+      "impressions": 7765
+    }
+  ]
+}
