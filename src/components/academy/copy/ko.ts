@@ -1,6 +1,6 @@
-import type { AcademyCopy } from './types'
+import type { AcademyBaseCopy } from './types'
 
-export const copy: AcademyCopy = {
+export const copy: AcademyBaseCopy = {
   metaTitle: 'PromptQuorum Academy: 무료 맞춤형 AI 학습',
   metaDescription:
     '주제, 시간, 수준을 고르십시오. PromptQuorum Academy는 PromptQuorum 가이드를 참고해 짧은 레슨을 만들고 AI 튜터, 테스트, PDF 수료증을 제공합니다.',
@@ -166,8 +166,14 @@ export const copy: AcademyCopy = {
   },
 
   privacyNote:
-    '계정이 필요 없습니다. 진행 상황은 이 브라우저에만 저장됩니다. 레슨, 문제, 튜터 답변을 만들기 위해 주제, 답변, 튜터에게 보낸 메시지가 AI 제공업체(Anthropic)로 전송되므로 개인정보를 입력하지 마십시오. 수료증에 들어갈 이름은 이 브라우저에만 남습니다. 남용을 막기 위해 IP 주소에서 만든 단기 해시 키로 요청 횟수를 제한합니다. 피드백을 남기시면 이름이나 계정 없이 평점, 댓글, 학습한 주제를 저장합니다.',
+    '계정이 필요 없습니다. 진행 상황은 이 브라우저에만 저장됩니다. 레슨, 문제, 튜터 답변을 만들기 위해 주제, 답변, 튜터에게 보낸 메시지가 AI 제공업체(Anthropic)로 전송되므로 개인정보를 입력하지 마십시오. 수료증에 들어갈 이름은 이 브라우저에만 남습니다. 남용을 막기 위해 IP 주소에서 만든 단기 해시 키로 요청 횟수를 제한합니다. 별점은 익명으로 집계됩니다(클릭은 숫자로만 기록됩니다). 서면 피드백은 직접 이메일로 보내신 경우에만 저희에게 전달되며, 서버에 저장하지 않습니다. 온라인 확인을 위해 수료증을 등록하시면 그곳에 표시되는 데이터를 저장하며, 이름은 저장하지 않습니다.',
   deleteData: '내 데이터 삭제',
   deleteConfirm: '이 브라우저에서 Academy 진행 상황을 삭제하시겠습니까? 되돌릴 수 없습니다.',
   dataDeleted: '삭제되었습니다',
+  feedbackLink: '이메일로 피드백 보내기',
+  feedbackNote:
+    '이메일 프로그램이 열리므로 보내시는 분의 이메일 주소가 저희에게 표시됩니다. 개인 정보는 포함하지 마십시오. 직접 메시지를 보내기 전까지는 아무것도 전송되지 않습니다.',
+  feedbackMailSubject: 'Academy 피드백',
+  feedbackMailIntro: 'Academy에 대한 제 생각:',
+  feedbackMailLanguage: '언어',
 }

@@ -131,6 +131,7 @@ function RatingsCard({ feedback, lang }: { feedback: FeedbackStats; lang: Langua
         </div>
       )}
       <p className="border-t border-border px-4 py-2.5 text-xs leading-relaxed text-text-secondary">{tAsk('ratingNote', lang)}</p>
+      <p className="px-4 pb-2.5 text-xs font-medium leading-relaxed text-text-secondary">{tAsk('ratingOpen', lang)}</p>
     </div>
   )
 }

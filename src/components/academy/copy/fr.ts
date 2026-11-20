@@ -1,9 +1,9 @@
-import type { AcademyCopy } from './types'
+import type { AcademyBaseCopy } from './types'
 
-export const copy: AcademyCopy = {
+export const copy: AcademyBaseCopy = {
   metaTitle: "PromptQuorum Academy : apprendre l'IA, gratuit",
   metaDescription:
-    "Choisissez un sujet, votre temps et votre niveau. PromptQuorum Academy crée de courtes leçons qui s'appuient sur les guides PromptQuorum, avec tuteur IA, tests et certificat PDF.",
+    "Choisissez un sujet, votre temps et votre niveau. PromptQuorum Academy crée de courtes leçons qui s'appuient sur les guides PromptQuorum, avec tuteur IA, tests et attestation PDF.",
   h1: 'PromptQuorum Academy',
   intro: "Apprenez l'IA locale, le prompting et des sujets voisins en courtes leçons adaptées à votre temps et à votre niveau. Gratuit, sans compte.",
   howTitle: 'Comment ça marche',
@@ -14,10 +14,10 @@ export const copy: AcademyCopy = {
     { name: 'Apprendre', text: "De courtes leçons écrites, qui s'appuient sur les guides PromptQuorum." },
     { name: 'Échanger', text: 'Posez vos questions au tuteur IA pendant la lecture.' },
     { name: 'Tester', text: 'Des questions à trois réponses, chacune expliquée.' },
-    { name: 'Certifier', text: 'Atteignez 70 % et téléchargez un certificat PDF.' },
+    { name: 'Attester', text: 'Atteignez 70 % et téléchargez une attestation PDF.' },
   ],
   disclaimer:
-    "Les leçons sont rédigées par une IA et peuvent contenir des erreurs. Le certificat atteste de votre apprentissage ; ce n'est pas un diplôme reconnu.",
+    "Les leçons sont rédigées par une IA et peuvent contenir des erreurs. L’attestation atteste de votre apprentissage ; ce n'est pas un diplôme reconnu.",
   hubs: {
     'local-llms': 'LLM locaux',
     'prompt-engineering': 'Prompt engineering',
@@ -41,8 +41,8 @@ export const copy: AcademyCopy = {
   },
   testsLegend: 'Tests',
   tests: {
-    none: { label: 'Sans test', hint: 'Apprendre seulement. Ni score ni certificat.' },
-    final: { label: 'Test final seul', hint: 'Un test à la fin. Nécessaire pour le certificat.' },
+    none: { label: 'Sans test', hint: 'Apprendre seulement. Ni score ni attestation.' },
+    final: { label: 'Test final seul', hint: 'Un test à la fin. Nécessaire pour l’attestation.' },
     per_lesson_and_final: { label: 'Chaque leçon + test final', hint: 'Un court quiz après chaque leçon, puis le test final.' },
   },
   languageLabel: 'Langue de votre programme',
@@ -65,12 +65,12 @@ export const copy: AcademyCopy = {
   windowRestore: 'Restaurer',
   launcherTitle: 'Ouvrir la PromptQuorum Academy',
   openAcademy: "Ouvrir l'Academy",
-  points: ['Gratuit, sans compte.', 'Des leçons courtes adaptées à votre temps et à votre niveau, fondées sur les guides PromptQuorum et rédigées par une IA.', "Des tests avec explications et un certificat d'apprentissage PDF si vous réussissez."],
+  points: ['Gratuit, sans compte.', 'Des leçons courtes adaptées à votre temps et à votre niveau, fondées sur les guides PromptQuorum et rédigées par une IA.', "Des tests avec explications et une attestation de participation PDF si vous réussissez."],
   statsHeading: "L'Academy en chiffres",
   statProgrammes: 'Parcours créés',
   statLessons: 'Leçons rédigées',
   statTests: 'Tests passés',
-  statCertificates: 'Certificats téléchargés',
+  statCertificates: 'Attestations téléchargées',
   statsSince: 'Compté depuis',
   statsNote: "Totaux anonymes. Aucune donnée personnelle n'est comptée.",
 
@@ -92,7 +92,7 @@ export const copy: AcademyCopy = {
   objectivesTitle: 'Objectifs',
   lessonsTitle: 'Leçons',
   recapBadge: 'Révision',
-  testPlanNone: 'Pas de test : ni note ni certificat.',
+  testPlanNone: 'Pas de test : ni note ni attestation.',
   testPlanFinal: (f) => `Test final : ${f} questions.`,
   testPlanPerLesson: (q, f) => `Un quiz de ${q} questions après chaque leçon, puis un test final de ${f} questions.`,
   totalTime: (d) => `Durée totale : environ ${d}`,
@@ -137,16 +137,16 @@ export const copy: AcademyCopy = {
   correctAnswer: 'Bonne réponse',
   retakeFinal: 'Repasser le test final (nouvelles questions)',
   attemptOf: (n) => `tentative ${n}`,
-  downloadCertificate: 'Télécharger le certificat (PDF)',
-  certNameLabel: 'Votre nom pour le certificat',
-  certNameHint: 'Reste dans ce navigateur. Imprimé sur le certificat tel que vous le saisissez.',
-  certNeedName: 'Saisissez votre nom pour télécharger le certificat.',
+  downloadCertificate: 'Télécharger l’attestation (PDF)',
+  certNameLabel: 'Votre nom pour l’attestation',
+  certNameHint: 'Reste dans ce navigateur. Imprimé sur l’attestation tel que vous le saisissez.',
+  certNeedName: 'Saisissez votre nom pour télécharger l’attestation.',
   certNeedLessons: (d, t) => `Terminez d'abord toutes les leçons : ${d} sur ${t} faites.`,
   certNeedQuizzes: "Faites d'abord chaque quiz de leçon.",
-  certCreating: 'Création du certificat…',
-  certError: "Le certificat n'a pas pu être créé. Veuillez réessayer.",
+  certCreating: 'Création de l’attestation…',
+  certError: "L’attestation n'a pas pu être créée. Veuillez réessayer.",
   cert: {
-    title: "Certificat d'apprentissage",
+    title: 'Attestation de participation',
     awardedTo: 'Décerné à',
     nameNote: "Nom saisi par l'apprenant. Il n'a pas été vérifié.",
     forProgramme: 'pour avoir terminé le parcours',
@@ -159,17 +159,23 @@ export const copy: AcademyCopy = {
     overall: 'Score global',
     topicScores: 'Score par sujet',
     passed: m => `Réussi (seuil de réussite : ${m} %)`,
-    id: 'ID du certificat',
+    id: 'ID de l’attestation',
     issued: 'Délivré le',
-    disclaimer: "Ce certificat d'apprentissage est délivré par l'Academy sur la base des activités et résultats enregistrés par PromptQuorum. Ce n'est pas une qualification académique accréditée par un organisme externe.",
+    disclaimer: "Ce attestation de participation est délivré par l'Academy sur la base des activités et résultats enregistrés par PromptQuorum. Ce n'est pas une qualification académique accréditée par un organisme externe.",
     aiNote: 'Les leçons et les questions des tests sont générées par une IA et peuvent contenir des erreurs.',
     notFor: "Non destiné à des décisions d'admission, de notation ou d'embauche.",
-    idNote: "L'ID est une simple référence. Il ne permet pas de vérifier ce certificat.",
+    idNote: "L'ID est une simple référence. Il ne permet pas de vérifier cette attestation.",
   },
 
   privacyNote:
-    "Aucun compte requis. Votre progression est enregistrée uniquement dans ce navigateur. Pour créer les leçons, les questions et les réponses du tuteur, votre sujet, vos réponses et vos messages au tuteur sont envoyés à notre fournisseur d'IA (Anthropic) ; merci de ne pas y saisir de données personnelles. Le nom figurant sur votre certificat reste dans ce navigateur. Pour éviter les abus, les requêtes sont limitées à l'aide d'une clé hachée et temporaire dérivée de votre adresse IP. Si vous laissez un avis, nous enregistrons la note, le commentaire et le sujet étudié, sans votre nom ni compte.",
+    "Aucun compte requis. Votre progression est enregistrée uniquement dans ce navigateur. Pour créer les leçons, les questions et les réponses du tuteur, votre sujet, vos réponses et vos messages au tuteur sont envoyés à notre fournisseur d'IA (Anthropic) ; merci de ne pas y saisir de données personnelles. Le nom figurant sur votre attestation reste dans ce navigateur. Pour éviter les abus, les requêtes sont limitées à l'aide d'une clé hachée et temporaire dérivée de votre adresse IP. Les notes par étoiles sont comptées de façon anonyme (un clic n'est qu'un nombre). Un retour écrit ne nous parvient que si vous l'envoyez vous-même par e-mail ; nous ne le conservons pas sur un serveur. Si vous enregistrez une attestation pour la vérification en ligne, nous conservons les données affichées, jamais votre nom.",
   deleteData: 'Supprimer mes données',
   deleteConfirm: 'Supprimer votre progression Academy de ce navigateur ? Cette action est irréversible.',
   dataDeleted: 'Données supprimées',
+  feedbackLink: 'Envoyer un retour par e-mail',
+  feedbackNote:
+    'Ouvre votre logiciel de messagerie ; nous verrons donc votre adresse e-mail. N’indiquez pas de données personnelles. Rien n’est envoyé tant que vous n’envoyez pas le message vous-même.',
+  feedbackMailSubject: 'Retour sur Academy',
+  feedbackMailIntro: 'Voici ce que je pense d’Academy :',
+  feedbackMailLanguage: 'Langue',
 }

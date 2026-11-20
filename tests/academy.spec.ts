@@ -466,7 +466,7 @@ test.describe('F5: certificate', () => {
       expect(text).toContain('/MediaBox [0 0 841.89 595.28]')
       const id = /PQA-\d{4}-[0-9A-HJKMNP-TV-Z]{10}/.exec(download.suggestedFilename())![0]
       expect(text).toContain(`/Keywords (${id})`)
-      if (lang === 'en') expect(text).toContain('(Learning Certificate')
+      if (lang === 'en') expect(text).toContain('(Certificate of Completion')
       const jpeg = jpegOf(pdf)
       expect(jpeg.length).toBeGreaterThan(50_000) // a drawn page, not a blank one
       fs.writeFileSync(testInfo.outputPath(`certificate-${lang}.jpg`), jpeg)
@@ -504,5 +504,61 @@ test.describe('F8: Terms page and links', () => {
     await preset(page)
     await openTool(page)
     await expect(page.getByRole('dialog', { name: 'PromptQuorum Academy' }).getByRole('link', { name: 'Terms of Use' })).toHaveAttribute('href', '/terms')
+  })
+})
+
+// ------------------------------------------------------------------------------ master spec v1 (2026-11-20)
+
+test.describe('master spec v1', () => {
+  test('header graduation-cap link leads to /academy', async ({ page }) => {
+    await page.goto('/')
+    const link = page.getByRole('link', { name: /PromptQuorum Academy/ })
+    await expect(link.first()).toHaveAttribute('href', '/academy')
+  })
+
+  test('setup offers "Other language…" with a check button; the feedback mail link is on the screen', async ({ page }) => {
+    await preset(page)
+    await openTool(page)
+    await page.locator('#academy-language').selectOption({ label: 'Other language…' })
+    await expect(page.getByLabel(/which language/i)).toBeVisible()
+    await expect(page.getByRole('button', { name: /^check$/i })).toBeDisabled()
+    await expect(page.getByRole('button', { name: /send feedback by email/i })).toBeVisible()
+  })
+
+  test('verification page: unknown ID says no record found and is noindex', async ({ page }) => {
+    await page.goto('/academy/verify/PQA-2026-ABCDEFGHJK')
+    await expect(page.getByText('No record found for this ID.')).toBeVisible()
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
+  })
+
+  test('opt-in registration: two calls (number, then the documentation fingerprint), number shown, certificate downloads', async ({ page }) => {
+    const calls: Record<string, unknown>[] = []
+    await page.route('**/api/academy/register', async (route) => {
+      calls.push(route.request().postDataJSON())
+      await route.fulfill({ json: { number: 7, existing: false } })
+    })
+    await openResults(page, finishedProgramme('en', 'Local LLMs'))
+    await page.getByLabel(/your name for the certificate/i).fill('Test Person')
+    await page.getByLabel(/register this certificate/i).check()
+    const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: /download certificate/i }).click()])
+    expect(download.suggestedFilename()).toMatch(/^PromptQuorum-Academy-Certificate-/)
+    if (process.env.PQ_SAVE_PDFS) (await import('node:fs')).copyFileSync((await download.path())!, `${process.env.PQ_SAVE_PDFS}/cert-registered.pdf`)
+    await expect(page.getByText('Registered as No. 7.')).toBeVisible()
+    expect(calls.length).toBe(2)
+    expect(calls[0].hash).toBeUndefined()
+    expect(String(calls[1].hash)).toMatch(/^[0-9a-f]{64}$/)
+    expect(calls[0].id).toBe(calls[1].id)
+    expect(JSON.stringify(calls)).not.toContain('Test Person') // the name never reaches the server
+    const [doc] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: /download course documentation/i }).click()])
+    expect(doc.suggestedFilename()).toMatch(/^PromptQuorum-Academy-Course-Documentation-/)
+    if (process.env.PQ_SAVE_PDFS) (await import('node:fs')).copyFileSync((await doc.path())!, `${process.env.PQ_SAVE_PDFS}/doc.pdf`)
+  })
+
+  test('results: certificate language, unticked registry opt-in, documentation button', async ({ page }) => {
+    await openResults(page, finishedProgramme('en', 'Local LLMs'))
+    await expect(page.getByLabel(/language of the certificate/i)).toBeVisible()
+    await expect(page.getByLabel(/register this certificate/i)).not.toBeChecked()
+    await expect(page.getByRole('button', { name: /download course documentation/i })).toBeVisible()
+    await expect(page.getByRole('group', { name: /how was this programme/i })).toBeVisible()
   })
 })

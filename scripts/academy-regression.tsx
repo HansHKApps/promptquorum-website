@@ -84,7 +84,7 @@ async function main() {
       extraAttempts += lesson.attempts - 1
       const foreign = lesson.furtherReading.filter((r) => !lesson.materialUrls.includes(r.url))
       if (foreign.length) ruleBreaks++
-      const words = lessonLength({ sections: lesson.sections, furtherReading: [] }, language)
+      const words = lessonLength({ sections: lesson.sections, furtherReading: [], followUpQuestions: [] }, language)
       // Phase 4: a verified quiz on lesson 1 (SPEC 18: log the verification rejection rate).
       const lessonText = lesson.sections.map((x) => `${x.heading}\n${x.body}`).join('\n\n').slice(0, 4000)
       const quiz = await generateQuiz(client, { kind: 'lesson', subject, language, selfLevel: level, availableMinutes: minutes, objectives: programme.objectives, lessons: [{ title: first.title, topic: first.topic, text: lessonText }] })

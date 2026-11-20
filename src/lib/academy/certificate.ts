@@ -38,6 +38,11 @@ export function certificateBlocker(p: Programme, name: string): CertificateBlock
   return null
 }
 
+/** `PromptQuorum-Academy-Course-Documentation-<subject-slug>-<ID>.pdf` (SPEC 12.1). */
+export function documentationFilename(subject: string, id: string): string {
+  return certificateFilename(subject, id).replace('-Certificate-', '-Course-Documentation-')
+}
+
 export interface CertificateModel {
   id: string
   name: string

@@ -16,9 +16,9 @@ export async function POST(req: NextRequest): Promise<Response> {
   const guard = await academyGuard(req, { name: 'lesson', schema: lessonRequestSchema, requests: 40, window: '1 h' })
   if ('response' in guard) return guard.response
   try {
-    const { sections, furtherReading } = await generateLesson(academyClient(), guard.body, AbortSignal.timeout(ACADEMY_TIMEOUT_MS))
+    const { sections, furtherReading, followUpQuestions } = await generateLesson(academyClient(), guard.body, AbortSignal.timeout(ACADEMY_TIMEOUT_MS))
     await recordAcademy('lesson')
-    return academyJson({ sections, furtherReading })
+    return academyJson({ sections, furtherReading, followUpQuestions })
   } catch (err) {
     return academyFailure('lesson', err)
   }

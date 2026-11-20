@@ -325,6 +325,17 @@ const ASK_UI = {
     en: 'Of those, started an email to me', de: 'Davon haben mir eine E-Mail begonnen', fr: 'Dont ont commencé un e-mail', ja: 'うちメールを書き始めた人数', zh: '其中开始写邮件的人数',
     es: 'De ellas, empezaron un correo', pt: 'Dessas, começaram um e-mail', ar: 'منهم من بدأ رسالة بريد', ko: '그중 이메일 작성을 시작한 수',
   },
+  ratingOpen: {
+    en: 'Open ratings: anyone can submit a rating, we do not check whether the person used the service, and ratings can be manipulated. Treat them as an indication only.',
+    de: 'Offene Bewertungen: Jeder kann eine Bewertung abgeben. Wir prüfen nicht, ob die Person den Dienst genutzt hat, und Bewertungen lassen sich manipulieren. Verstehen Sie sie nur als Anhaltspunkt.',
+    fr: "Évaluations ouvertes : tout le monde peut en soumettre une, nous ne vérifions pas si la personne a utilisé le service, et les évaluations peuvent être manipulées. Elles ne sont qu'une indication.",
+    ja: 'オープン評価：誰でも評価を送信できます。送信者がサービスを利用したかどうかは確認しておらず、評価は操作される可能性があります。あくまで目安としてご覧ください。',
+    zh: '开放评分：任何人都可以提交评分，我们不核实提交者是否使用过该服务，评分也可能被操纵。请仅将其作为参考。',
+    es: 'Valoraciones abiertas: cualquiera puede enviar una, no comprobamos si la persona usó el servicio y las valoraciones pueden manipularse. Tómalas solo como orientación.',
+    pt: 'Avaliações abertas: qualquer pessoa pode enviar uma, não verificamos se a pessoa usou o serviço e as avaliações podem ser manipuladas. Encare-as apenas como uma indicação.',
+    ar: 'تقييمات مفتوحة: يمكن لأي شخص إرسال تقييم، ولا نتحقق مما إذا كان قد استخدم الخدمة، ويمكن التلاعب بالتقييمات. اعتبرها مؤشرًا فقط.',
+    ko: '공개 평가: 누구나 평가를 보낼 수 있으며, 서비스를 실제로 이용했는지는 확인하지 않고, 평가는 조작될 수 있습니다. 참고용으로만 보십시오.',
+  },
   ratingNote: {
     en: 'Anonymous: one star click counts once, no names, no IP addresses, no question text. "Started an email" counts clicks on the write-email button in the pop-up; it cannot see whether the email was sent.',
     de: 'Anonym: Ein Sternklick zählt einmal, keine Namen, keine IP-Adressen, kein Fragetext. „E-Mail begonnen“ zählt Klicks auf die Schaltfläche zum E-Mail-Schreiben im Pop-up; ob die E-Mail abgeschickt wurde, ist nicht erkennbar.',

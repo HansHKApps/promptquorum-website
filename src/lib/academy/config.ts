@@ -13,6 +13,17 @@ export const ACADEMY_SUBJECT_MIN_CHARS = 2
 export const ACADEMY_MAX_CATEGORY_TOPICS = 12
 
 /** window event: the stored state was changed outside the Academy component (e.g. "Delete my data"). */
+/** Address that receives Academy feedback mails (mailto link, same address as Ask Hans). */
+export const ACADEMY_CONTACT_EMAIL = 'hello@promptquorum.com'
+
+/**
+ * Cost and abuse controls (owner decision 2026-11-20: simple for the test phase, tighten when usage grows).
+ * Per visitor (salted IP hash): at most this many generation calls per day, across all Academy routes.
+ * Whole site: at most this many generation calls per UTC day, then "busy" until tomorrow. Both overridable with env vars.
+ */
+export const ACADEMY_DAILY_PER_IP = Number(process.env.ACADEMY_DAILY_PER_IP ?? 150)
+export const ACADEMY_DAILY_GLOBAL = Number(process.env.ACADEMY_DAILY_GLOBAL ?? 4000)
+
 export const ACADEMY_STATE_EVENT = 'academy:state-changed'
 
 /** Path of the tool. Locales are path-prefixed like every other page (/de/academy). */

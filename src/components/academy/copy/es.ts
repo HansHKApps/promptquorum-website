@@ -1,9 +1,9 @@
-import type { AcademyCopy } from './types'
+import type { AcademyBaseCopy } from './types'
 
-export const copy: AcademyCopy = {
+export const copy: AcademyBaseCopy = {
   metaTitle: 'PromptQuorum Academy: aprende IA gratis, a tu medida',
   metaDescription:
-    'Elige un tema, tu tiempo y tu nivel. PromptQuorum Academy crea lecciones cortas que se apoyan en las guías de PromptQuorum, con tutor de IA, tests y certificado PDF.',
+    'Elige un tema, tu tiempo y tu nivel. PromptQuorum Academy crea lecciones cortas que se apoyan en las guías de PromptQuorum, con tutor de IA, tests y constancia PDF.',
   h1: 'PromptQuorum Academy',
   intro: 'Aprende IA local, prompting y temas relacionados en lecciones cortas adaptadas a tu tiempo y tu nivel. Gratis y sin cuenta.',
   howTitle: 'Cómo funciona',
@@ -14,10 +14,10 @@ export const copy: AcademyCopy = {
     { name: 'Aprender', text: 'Lecciones de texto cortas que se apoyan en las guías de PromptQuorum.' },
     { name: 'Preguntar', text: 'Haz preguntas al tutor de IA mientras lees.' },
     { name: 'Evaluar', text: 'Preguntas con tres respuestas y una explicación para cada una.' },
-    { name: 'Certificar', text: 'Llega al 70 % y descarga un certificado PDF.' },
+    { name: 'Constancia', text: 'Llega al 70 % y descarga una constancia PDF.' },
   ],
   disclaimer:
-    'Las lecciones las escribe una IA y pueden contener errores. El certificado registra tu aprendizaje; no es una titulación acreditada.',
+    'Las lecciones las escribe una IA y pueden contener errores. La constancia registra tu aprendizaje; no es una titulación acreditada.',
   hubs: {
     'local-llms': 'LLM locales',
     'prompt-engineering': 'Prompt engineering',
@@ -41,8 +41,8 @@ export const copy: AcademyCopy = {
   },
   testsLegend: 'Tests',
   tests: {
-    none: { label: 'Sin test', hint: 'Solo aprender. Sin nota ni certificado.' },
-    final: { label: 'Solo test final', hint: 'Un test al final. Necesario para el certificado.' },
+    none: { label: 'Sin test', hint: 'Solo aprender. Sin nota ni constancia.' },
+    final: { label: 'Solo test final', hint: 'Un test al final. Necesario para la constancia.' },
     per_lesson_and_final: { label: 'Cada lección + test final', hint: 'Un quiz corto tras cada lección y luego el test final.' },
   },
   languageLabel: 'Idioma de tu programa',
@@ -64,12 +64,12 @@ export const copy: AcademyCopy = {
   windowRestore: 'Restaurar',
   launcherTitle: 'Abrir PromptQuorum Academy',
   openAcademy: 'Abrir la Academy',
-  points: ['Gratis, sin cuenta.', 'Lecciones cortas adaptadas a tu tiempo y nivel, basadas en las guías de PromptQuorum y escritas por una IA.', 'Pruebas con explicaciones y un certificado de aprendizaje en PDF si las superas.'],
+  points: ['Gratis, sin cuenta.', 'Lecciones cortas adaptadas a tu tiempo y nivel, basadas en las guías de PromptQuorum y escritas por una IA.', 'Pruebas con explicaciones y una constancia de finalización en PDF si las superas.'],
   statsHeading: 'La Academy en cifras',
   statProgrammes: 'Programas creados',
   statLessons: 'Lecciones redactadas',
   statTests: 'Pruebas realizadas',
-  statCertificates: 'Certificados descargados',
+  statCertificates: 'Constancias descargadas',
   statsSince: 'Contado desde',
   statsNote: 'Totales anónimos. No se cuentan datos personales.',
 
@@ -91,7 +91,7 @@ export const copy: AcademyCopy = {
   objectivesTitle: 'Objetivos',
   lessonsTitle: 'Lecciones',
   recapBadge: 'Repaso',
-  testPlanNone: 'Sin tests: sin nota y sin certificado.',
+  testPlanNone: 'Sin tests: sin nota y sin constancia.',
   testPlanFinal: (f) => `Test final: ${f} preguntas.`,
   testPlanPerLesson: (q, f) => `Un quiz de ${q} preguntas tras cada lección y luego un test final de ${f} preguntas.`,
   totalTime: (d) => `Tiempo total: unos ${d}`,
@@ -136,16 +136,16 @@ export const copy: AcademyCopy = {
   correctAnswer: 'Respuesta correcta',
   retakeFinal: 'Repetir el test final (preguntas nuevas)',
   attemptOf: (n) => `intento ${n}`,
-  downloadCertificate: 'Descargar certificado (PDF)',
-  certNameLabel: 'Tu nombre para el certificado',
-  certNameHint: 'Se queda en este navegador. Se imprime en el certificado tal como lo escribas.',
-  certNeedName: 'Introduce tu nombre para descargar el certificado.',
+  downloadCertificate: 'Descargar constancia (PDF)',
+  certNameLabel: 'Tu nombre para la constancia',
+  certNameHint: 'Se queda en este navegador. Se imprime en la constancia tal como lo escribas.',
+  certNeedName: 'Introduce tu nombre para descargar la constancia.',
   certNeedLessons: (d, t) => `Termina primero todas las lecciones: ${d} de ${t} hechas.`,
   certNeedQuizzes: 'Haz primero cada cuestionario de lección.',
-  certCreating: 'Creando el certificado…',
-  certError: 'No se pudo crear el certificado. Inténtalo de nuevo.',
+  certCreating: 'Creando la constancia…',
+  certError: 'No se pudo crear la constancia. Inténtalo de nuevo.',
   cert: {
-    title: 'Certificado de aprendizaje',
+    title: 'Constancia de finalización',
     awardedTo: 'Otorgado a',
     nameNote: 'Nombre tal como lo introdujo el estudiante. No ha sido verificado.',
     forProgramme: 'por completar el programa',
@@ -158,17 +158,23 @@ export const copy: AcademyCopy = {
     overall: 'Puntuación global',
     topicScores: 'Puntuación por tema',
     passed: m => `Aprobado (nota mínima ${m} %)`,
-    id: 'ID del certificado',
+    id: 'ID de la constancia',
     issued: 'Emitido el',
-    disclaimer: 'Este es un certificado de aprendizaje emitido por la Academy a partir de las actividades y resultados registrados por PromptQuorum. No es una cualificación académica acreditada externamente.',
+    disclaimer: 'Este es una constancia de finalización emitido por la Academy a partir de las actividades y resultados registrados por PromptQuorum. No es una cualificación académica acreditada externamente.',
     aiNote: 'Las lecciones y las preguntas de las pruebas las genera una IA y pueden contener errores.',
     notFor: 'No está pensado para decisiones de admisión, calificación o contratación.',
-    idNote: 'El ID es una etiqueta de referencia. No permite verificar este certificado.',
+    idNote: 'El ID es una etiqueta de referencia. No permite verificar esta constancia.',
   },
 
   privacyNote:
-    'No necesitas cuenta. Tu progreso se guarda solo en este navegador. Para crear lecciones, preguntas y respuestas del tutor, tu tema, tus respuestas y tus mensajes al tutor se envían a nuestro proveedor de IA (Anthropic); no escribas datos personales en ellos. El nombre de tu certificado se queda en este navegador. Para evitar abusos, limitamos las solicitudes con una clave temporal cifrada (hash) derivada de tu dirección IP. Si dejas tu opinión, guardamos la valoración, el comentario y el tema que estudiaste, sin tu nombre ni cuenta.',
+    'No necesitas cuenta. Tu progreso se guarda solo en este navegador. Para crear lecciones, preguntas y respuestas del tutor, tu tema, tus respuestas y tus mensajes al tutor se envían a nuestro proveedor de IA (Anthropic); no escribas datos personales en ellos. El nombre de tu constancia se queda en este navegador. Para evitar abusos, limitamos las solicitudes con una clave temporal cifrada (hash) derivada de tu dirección IP. Las valoraciones con estrellas se cuentan de forma anónima (un clic es solo un número). Los comentarios escritos solo nos llegan si los envías tú mismo por correo electrónico; no los guardamos en un servidor. Si registras una constancia para la verificación en línea, guardamos los datos que se muestran allí, nunca tu nombre.',
   deleteData: 'Borrar mis datos',
   deleteConfirm: '¿Borrar tu progreso de Academy de este navegador? No se puede deshacer.',
   dataDeleted: 'Datos borrados',
+  feedbackLink: 'Enviar comentarios por correo electrónico',
+  feedbackNote:
+    'Se abre tu programa de correo, así que veremos tu dirección de correo electrónico. No incluyas datos personales. No se envía nada hasta que envíes tú mismo el mensaje.',
+  feedbackMailSubject: 'Comentarios sobre Academy',
+  feedbackMailIntro: 'Esto pienso de Academy:',
+  feedbackMailLanguage: 'Idioma',
 }

@@ -5,21 +5,50 @@
 // questions when not passed. The certificate download arrives in Phase 6.
 
 import { useState } from 'react'
-import { certificateBlocker, certificateFilename, certificateModel, NAME_MAX_CHARS } from '@/lib/academy/certificate'
+import { certificateBlocker, certificateFilename, certificateModel, documentationFilename, NAME_MAX_CHARS } from '@/lib/academy/certificate'
+import { documentationModel } from '@/lib/academy/documentation'
+import { sha256Hex } from '@/lib/academy/hash'
+import { isSiteLang, languageDisplayName } from '@/lib/academy/language'
 import { correctIndexOf, countingFinal, PASS_MARK, programmeScore } from '@/lib/academy/scoring'
-import type { Programme } from '@/lib/academy/types'
+import type { AcademyLang, Programme } from '@/lib/academy/types'
+import { ALL_LANGS } from '@/lib/i18n/constants'
 import { AiBadge } from './AiBadge'
 import { Content } from './Content'
-import { ACADEMY_COPY, type AcademyCopy } from './copy'
+import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
 import { renderCertificatePdf } from './certificate-pdf'
+import { renderDocumentationPdf } from './documentation-pdf'
+import { StarRating } from './StarRating'
 import type { useAcademyState } from './useAcademyState'
 
 type Update = ReturnType<typeof useAcademyState>['update']
 
-export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; programme: Programme; update: Update }) {
+function saveBlob(blob: Blob, filename: string) {
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = filename
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
+  setTimeout(() => URL.revokeObjectURL(url), 10_000)
+}
+
+function postEvent(body: unknown) {
+  void fetch('/api/academy/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).catch(() => {})
+}
+
+export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; lang: AcademyLang; programme: Programme; update: Update }) {
   const [name, setName] = useState(programme.certificate?.learnerName ?? '')
   const [creating, setCreating] = useState(false)
   const [certError, setCertError] = useState(false)
+  // The certificate and the Course Documentation are written in a language chosen here (default: the programme language if the site has it).
+  const [certLang, setCertLang] = useState<AcademyLang>(isSiteLang(programme.language) ? programme.language : lang)
+  // Opt-in registry (unticked by default): only then a record is stored and a QR code is printed.
+  const [register, setRegister] = useState(false)
+  const [regError, setRegError] = useState(false)
+  const [docBlob, setDocBlob] = useState<{ blob: Blob; filename: string } | null>(null)
+  const [docBusy, setDocBusy] = useState(false)
+  const registeredNumber = programme.certificate?.number
   const score = programmeScore(programme)
   const final = countingFinal(programme)
   const attempts = programme.progress.finalAttempts?.length ?? 0
@@ -32,30 +61,65 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
   const blocker = certificateBlocker(programme, name)
   const blockerText =
     !blocker ? '' : blocker.code === 'name' ? tx.certNeedName : blocker.code === 'lessons' ? tx.certNeedLessons(blocker.done, blocker.total) : blocker.code === 'quizzes' ? tx.certNeedQuizzes : ''
-  // The certificate is written in the programme language, like the lessons.
+  const languageName = isSiteLang(programme.language) ? ACADEMY_LANGUAGE_NAMES[programme.language] : languageDisplayName(programme.language)
+  const post = async <T,>(url: string, body: unknown): Promise<T | null> => {
+    try {
+      const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+      return res.ok ? ((await res.json()) as T) : null
+    } catch {
+      return null
+    }
+  }
   const download = async () => {
     if (blocker || creating) return
     setCertError(false)
+    setRegError(false)
     setCreating(true)
     try {
+      const txc = ACADEMY_COPY[certLang]
       const model = certificateModel(programme, name)
-      const blob = await renderCertificatePdf(model, ACADEMY_COPY[programme.language], programme.language)
-      update((st) => (st.programme ? { ...st, programme: { ...st.programme, certificate: { id: model.id, learnerName: model.name, issuedAt: model.issuedAt } } } : st))
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = certificateFilename(model.subject, model.id)
-      document.body.appendChild(a)
-      a.click()
-      a.remove()
-      setTimeout(() => URL.revokeObjectURL(url), 10_000)
+      // Persist ID and issue date first: a retry after a failure must reuse them and never register a second record.
+      if (!programme.certificate) update((st) => (st.programme ? { ...st, programme: { ...st.programme, certificate: { id: model.id, learnerName: model.name, issuedAt: model.issuedAt } } } : st))
+      let number = registeredNumber
+      // Step 1: opt-in registration returns the sequential number (printed on both files).
+      if (register && !number) {
+        const r1 = await post<{ number: number }>('/api/academy/register', { id: model.id, issuedAt: model.issuedAt, percent: model.percent, minutes: model.learningMinutes, subject: model.subject, language: programme.language, testMode: model.testMode })
+        if (r1?.number) number = r1.number
+        else setRegError(true)
+      }
+      const docBytes = await renderDocumentationPdf(documentationModel(programme, model, languageName, number), txc, certLang, programme.language)
+      // Step 2: the fingerprint of exactly this documentation file is stored once, for the check on the verification page.
+      if (number && !registeredNumber) await post('/api/academy/register', { id: model.id, issuedAt: model.issuedAt, percent: model.percent, minutes: model.learningMinutes, subject: model.subject, language: programme.language, testMode: model.testMode, hash: await sha256Hex(docBytes) })
+      setDocBlob({ blob: new Blob([docBytes as BlobPart], { type: 'application/pdf' }), filename: documentationFilename(model.subject, model.id) })
+      const blob = await renderCertificatePdf(model, txc, certLang, { registered: !!number, number })
+      update((st) => (st.programme ? { ...st, programme: { ...st.programme, certificate: { id: model.id, learnerName: model.name, issuedAt: model.issuedAt, number } } } : st))
+      saveBlob(blob, certificateFilename(model.subject, model.id))
       // Anonymous total only (no body beyond the event type); never blocks or fails the download.
-      void fetch('/api/academy/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type: 'certificate' }) }).catch(() => {})
+      postEvent({ type: 'certificate' })
     } catch (err) {
       console.error('[academy] certificate failed', err instanceof Error ? err.message : err)
       setCertError(true)
     } finally {
       setCreating(false)
+    }
+  }
+  // The Course Documentation on its own (after a reload or when the certificate was created earlier).
+  const downloadDocumentation = async () => {
+    if (blocker || docBusy) return
+    if (docBlob) return saveBlob(docBlob.blob, docBlob.filename)
+    setDocBusy(true)
+    try {
+      const model = certificateModel(programme, name)
+      // Keep the ID and issue date stable, so a certificate created later carries the same ones.
+      if (!programme.certificate) update((st) => (st.programme ? { ...st, programme: { ...st.programme, certificate: { id: model.id, learnerName: model.name, issuedAt: model.issuedAt } } } : st))
+      const bytes = await renderDocumentationPdf(documentationModel(programme, model, languageName, registeredNumber), ACADEMY_COPY[certLang], certLang, programme.language)
+      const blob = new Blob([bytes as BlobPart], { type: 'application/pdf' })
+      saveBlob(blob, documentationFilename(model.subject, model.id))
+    } catch (err) {
+      console.error('[academy] documentation failed', err instanceof Error ? err.message : err)
+      setCertError(true)
+    } finally {
+      setDocBusy(false)
     }
   }
   const retake = () =>
@@ -98,6 +162,8 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
         </ul>
       </div>
 
+      <StarRating tx={tx} kind="programme" lang={programme.language} />
+
       <div className="flex flex-wrap items-center gap-3">
         {score.passed ? (
           <div className="w-full space-y-3">
@@ -119,6 +185,36 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
                 {tx.certNameHint}
               </p>
             </div>
+            <div>
+              <label htmlFor="academy-cert-lang" className="block text-sm font-medium text-gray-900">
+                {tx.lang.certLabel}
+              </label>
+              <select id="academy-cert-lang" value={certLang} onChange={(e) => setCertLang(e.target.value as AcademyLang)} className="mt-1 rounded-xl border border-gray-300 bg-white px-4 py-2 text-base">
+                {ALL_LANGS.map((l) => (
+                  <option key={l} value={l}>
+                    {ACADEMY_LANGUAGE_NAMES[l]}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <fieldset className="max-w-2xl rounded-xl border border-gray-200 p-3">
+              <legend className="px-1 text-sm font-medium text-gray-900">{tx.reg.title}</legend>
+              {registeredNumber ? (
+                <p className="text-sm text-green-800">{tx.reg.done(registeredNumber)}</p>
+              ) : (
+                <label className="flex cursor-pointer items-start gap-3 text-sm text-gray-800">
+                  <input type="checkbox" checked={register} onChange={(e) => setRegister(e.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-purple-600" />
+                  <span>{tx.reg.optIn}</span>
+                </label>
+              )}
+              <p className="mt-2 text-xs text-gray-600">{tx.reg.data}</p>
+              <p className="mt-1 text-xs text-gray-600">{tx.reg.deleteNote}</p>
+              {regError && (
+                <p className="mt-2 text-sm text-red-800" role="alert">
+                  {tx.reg.error}
+                </p>
+              )}
+            </fieldset>
             <div className="flex flex-wrap items-center gap-3">
               <button
                 type="button"
@@ -128,6 +224,14 @@ export function ResultsView({ tx, programme, update }: { tx: AcademyCopy; progra
                 className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {creating ? tx.certCreating : tx.downloadCertificate}
+              </button>
+              <button
+                type="button"
+                disabled={!!blocker || docBusy || creating}
+                onClick={() => void downloadDocumentation()}
+                className="rounded-xl border border-purple-600 px-6 py-3 font-semibold text-purple-700 hover:bg-purple-50 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {docBusy ? tx.reg.docCreating : tx.reg.docButton}
               </button>
               <p id="academy-cert-reason" className="text-sm text-gray-700" role="status">
                 {certError ? tx.certError : blocker ? blockerText : ''}

@@ -1,9 +1,9 @@
-import type { AcademyCopy } from './types'
+import type { AcademyBaseCopy } from './types'
 
-export const copy: AcademyCopy = {
+export const copy: AcademyBaseCopy = {
   metaTitle: 'PromptQuorum Academy: kostenlos KI lernen, persönlich',
   metaDescription:
-    'Wählen Sie Thema, Zeit und Niveau. PromptQuorum Academy erstellt kurze Lektionen mit Bezug auf PromptQuorum-Ratgeber, mit KI-Tutor, Tests und PDF-Zertifikat.',
+    'Wählen Sie Thema, Zeit und Niveau. PromptQuorum Academy erstellt kurze Lektionen mit Bezug auf PromptQuorum-Ratgeber, mit KI-Tutor, Tests und PDF-Teilnahmebescheinigung.',
   h1: 'PromptQuorum Academy',
   intro: 'Lernen Sie lokale KI, Prompting und verwandte Themen in kurzen Lektionen, zugeschnitten auf Ihre Zeit und Ihr Niveau. Kostenlos, ohne Konto.',
   howTitle: 'So funktioniert es',
@@ -14,10 +14,10 @@ export const copy: AcademyCopy = {
     { name: 'Lernen', text: 'Kurze Textlektionen, die auf die PromptQuorum-Ratgeber zurückgreifen.' },
     { name: 'Nachfragen', text: 'Stellen Sie dem KI-Tutor beim Lesen Fragen.' },
     { name: 'Testen', text: 'Fragen mit drei Antworten und einer Erklärung zu jeder Antwort.' },
-    { name: 'Zertifikat', text: 'Erreichen Sie 70 % und laden Sie ein PDF-Zertifikat herunter.' },
+    { name: 'Bescheinigung', text: 'Erreichen Sie 70 % und laden Sie eine PDF-Teilnahmebescheinigung herunter.' },
   ],
   disclaimer:
-    'Die Lektionen werden von einer KI geschrieben und können Fehler enthalten. Das Zertifikat dokumentiert Ihr Lernen; es ist kein anerkannter Abschluss.',
+    'Die Lektionen werden von einer KI geschrieben und können Fehler enthalten. Die Teilnahmebescheinigung dokumentiert Ihr Lernen; es ist kein anerkannter Abschluss.',
   hubs: {
     'local-llms': 'Lokale LLMs',
     'prompt-engineering': 'Prompt Engineering',
@@ -41,8 +41,8 @@ export const copy: AcademyCopy = {
   },
   testsLegend: 'Tests',
   tests: {
-    none: { label: 'Kein Test', hint: 'Nur lernen. Keine Bewertung, kein Zertifikat.' },
-    final: { label: 'Nur Abschlusstest', hint: 'Ein Test am Ende. Nötig für ein Zertifikat.' },
+    none: { label: 'Kein Test', hint: 'Nur lernen. Keine Bewertung, keine Teilnahmebescheinigung.' },
+    final: { label: 'Nur Abschlusstest', hint: 'Ein Test am Ende. Nötig für eine Teilnahmebescheinigung.' },
     per_lesson_and_final: { label: 'Jede Lektion + Abschlusstest', hint: 'Ein kurzes Quiz nach jeder Lektion, dann der Abschlusstest.' },
   },
   languageLabel: 'Sprache Ihres Programms',
@@ -65,12 +65,12 @@ export const copy: AcademyCopy = {
   windowRestore: 'Wiederherstellen',
   launcherTitle: 'PromptQuorum Academy öffnen',
   openAcademy: 'Academy öffnen',
-  points: ['Kostenlos, ohne Konto.', 'Kurze Lektionen für Ihre Zeit und Ihr Niveau, auf Basis von PromptQuorum-Leitfäden und von KI geschrieben.', 'Tests mit Erklärungen und ein PDF-Lernzertifikat bei bestandenem Test.'],
+  points: ['Kostenlos, ohne Konto.', 'Kurze Lektionen für Ihre Zeit und Ihr Niveau, auf Basis von PromptQuorum-Leitfäden und von KI geschrieben.', 'Tests mit Erklärungen und eine PDF-Teilnahmebescheinigung bei bestandenem Test.'],
   statsHeading: 'Die Academy in Zahlen',
   statProgrammes: 'Erstellte Lernpläne',
   statLessons: 'Geschriebene Lektionen',
   statTests: 'Absolvierte Tests',
-  statCertificates: 'Heruntergeladene Zertifikate',
+  statCertificates: 'Heruntergeladene Teilnahmebescheinigungen',
   statsSince: 'Gezählt seit',
   statsNote: 'Anonyme Summen. Es werden keine personenbezogenen Daten gezählt.',
 
@@ -92,7 +92,7 @@ export const copy: AcademyCopy = {
   objectivesTitle: 'Lernziele',
   lessonsTitle: 'Lektionen',
   recapBadge: 'Wiederholung',
-  testPlanNone: 'Keine Tests: keine Bewertung und kein Zertifikat.',
+  testPlanNone: 'Keine Tests: keine Bewertung und keine Teilnahmebescheinigung.',
   testPlanFinal: (f) => `Abschlusstest: ${f} Fragen.`,
   testPlanPerLesson: (q, f) => `Ein Quiz mit ${q} Fragen nach jeder Lektion, dann ein Abschlusstest mit ${f} Fragen.`,
   totalTime: (d) => `Gesamtzeit: etwa ${d}`,
@@ -137,16 +137,16 @@ export const copy: AcademyCopy = {
   correctAnswer: 'Richtige Antwort',
   retakeFinal: 'Abschlusstest wiederholen (neue Fragen)',
   attemptOf: (n) => `Versuch ${n}`,
-  downloadCertificate: 'Zertifikat herunterladen (PDF)',
-  certNameLabel: 'Ihr Name für das Zertifikat',
-  certNameHint: 'Bleibt in diesem Browser. Wird so auf das Zertifikat gedruckt, wie Sie ihn eingeben.',
-  certNeedName: 'Geben Sie Ihren Namen ein, um das Zertifikat herunterzuladen.',
+  downloadCertificate: 'Teilnahmebescheinigung herunterladen (PDF)',
+  certNameLabel: 'Ihr Name für die Teilnahmebescheinigung',
+  certNameHint: 'Bleibt in diesem Browser. Wird so auf die Teilnahmebescheinigung gedruckt, wie Sie ihn eingeben.',
+  certNeedName: 'Geben Sie Ihren Namen ein, um die Teilnahmebescheinigung herunterzuladen.',
   certNeedLessons: (d, t) => `Schließen Sie zuerst alle Lektionen ab: ${d} von ${t} erledigt.`,
   certNeedQuizzes: 'Machen Sie zuerst jedes Lektions-Quiz.',
-  certCreating: 'Zertifikat wird erstellt…',
-  certError: 'Das Zertifikat konnte nicht erstellt werden. Bitte versuchen Sie es erneut.',
+  certCreating: 'Teilnahmebescheinigung wird erstellt…',
+  certError: 'Die Teilnahmebescheinigung konnte nicht erstellt werden. Bitte versuchen Sie es erneut.',
   cert: {
-    title: 'Lernzertifikat',
+    title: 'Teilnahmebescheinigung',
     awardedTo: 'Ausgestellt für',
     nameNote: 'Name wie vom Lernenden eingegeben. Er wurde nicht überprüft.',
     forProgramme: 'für den Abschluss des Programms',
@@ -159,17 +159,23 @@ export const copy: AcademyCopy = {
     overall: 'Gesamtergebnis',
     topicScores: 'Ergebnis je Thema',
     passed: m => `Bestanden (Bestehensgrenze ${m} %)`,
-    id: 'Zertifikats-ID',
+    id: 'Bescheinigungs-ID',
     issued: 'Ausgestellt am',
-    disclaimer: 'Dies ist ein von der Academy ausgestelltes Lernzertifikat auf Grundlage der von PromptQuorum erfassten Aktivitäten und Ergebnisse. Es ist keine extern akkreditierte akademische Qualifikation.',
+    disclaimer: 'Dies ist ein von der Academy ausgestelltes Teilnahmebescheinigung auf Grundlage der von PromptQuorum erfassten Aktivitäten und Ergebnisse. Es ist keine extern akkreditierte akademische Qualifikation.',
     aiNote: 'Lektionen und Testfragen werden von KI erstellt und können Fehler enthalten.',
     notFor: 'Nicht für Zulassungs-, Bewertungs- oder Einstellungsentscheidungen gedacht.',
-    idNote: 'Die ID ist eine Referenzbezeichnung. Mit ihr lässt sich dieses Zertifikat nicht überprüfen.',
+    idNote: 'Die ID ist eine Referenzbezeichnung. Mit ihr lässt sich diese Teilnahmebescheinigung nicht überprüfen.',
   },
 
   privacyNote:
-    'Kein Konto nötig. Ihr Fortschritt wird nur in diesem Browser gespeichert. Um Lektionen, Fragen und Tutor-Antworten zu erstellen, werden Ihr Thema, Ihre Antworten und Ihre Nachrichten an den Tutor an unseren KI-Anbieter (Anthropic) übermittelt; bitte geben Sie dort keine personenbezogenen Daten ein. Der Name für Ihr Zertifikat bleibt in diesem Browser. Zum Schutz vor Missbrauch werden Anfragen mit einem kurzlebigen, gehashten Schlüssel aus Ihrer IP-Adresse begrenzt. Wenn Sie Feedback geben, speichern wir die Bewertung, den Kommentar und das gelernte Thema, ohne Ihren Namen und ohne Konto.',
+    'Kein Konto nötig. Ihr Fortschritt wird nur in diesem Browser gespeichert. Um Lektionen, Fragen und Tutor-Antworten zu erstellen, werden Ihr Thema, Ihre Antworten und Ihre Nachrichten an den Tutor an unseren KI-Anbieter (Anthropic) übermittelt; bitte geben Sie dort keine personenbezogenen Daten ein. Der Name für Ihre Teilnahmebescheinigung bleibt in diesem Browser. Zum Schutz vor Missbrauch werden Anfragen mit einem kurzlebigen, gehashten Schlüssel aus Ihrer IP-Adresse begrenzt. Sternebewertungen werden anonym gezählt (ein Klick ist nur eine Zahl). Geschriebenes Feedback erreicht uns nur, wenn Sie es selbst per E-Mail senden; wir speichern es nicht auf einem Server. Wenn Sie eine Bescheinigung für die Online-Überprüfung registrieren, speichern wir die dort gezeigten Daten, niemals Ihren Namen.',
   deleteData: 'Meine Daten löschen',
   deleteConfirm: 'Ihren Academy-Fortschritt aus diesem Browser löschen? Das lässt sich nicht rückgängig machen.',
   dataDeleted: 'Daten gelöscht',
+  feedbackLink: 'Feedback per E-Mail senden',
+  feedbackNote:
+    'Öffnet Ihr E-Mail-Programm; wir sehen dann Ihre E-Mail-Adresse. Bitte geben Sie keine personenbezogenen Daten an. Es wird erst etwas gesendet, wenn Sie die Nachricht selbst abschicken.',
+  feedbackMailSubject: 'Academy-Feedback',
+  feedbackMailIntro: 'Das denke ich über die Academy:',
+  feedbackMailLanguage: 'Sprache',
 }

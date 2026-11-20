@@ -3,7 +3,7 @@
 // cannot express (array lengths, number ranges) are checked again here in code (docs/academy/SPEC.md 7.1).
 
 import { z } from 'zod'
-import { ALL_LANGS } from '@/lib/i18n/constants'
+import { isValidProgrammeLanguage } from './language'
 import { ACADEMY_MINUTE_OPTIONS, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS } from './config'
 import { LEVELS, TEST_MODES } from './types'
 
@@ -47,6 +47,7 @@ export type ProgrammeOutput = z.infer<typeof programmeOutputSchema>
 
 // ------------------------------------------------------------------------------------------- request bodies
 
+const languageSchema = z.string().max(80).refine(isValidProgrammeLanguage)
 const subject = z.string().trim().min(ACADEMY_SUBJECT_MIN_CHARS).max(ACADEMY_SUBJECT_MAX_CHARS)
 const minutes = z.number().int().refine((n) => (ACADEMY_MINUTE_OPTIONS as readonly number[]).includes(n))
 
@@ -54,7 +55,7 @@ export const diagnosticRequestSchema = z.object({
   subject,
   availableMinutes: minutes,
   selfLevel: z.enum(LEVELS),
-  language: z.enum(ALL_LANGS),
+  language: languageSchema,
 })
 export type DiagnosticRequest = z.infer<typeof diagnosticRequestSchema>
 
@@ -63,7 +64,7 @@ export const programmeRequestSchema = z.object({
   availableMinutes: minutes,
   selfLevel: z.enum(LEVELS),
   testMode: z.enum(TEST_MODES),
-  language: z.enum(ALL_LANGS),
+  language: languageSchema,
   /** Only the per-topic summary of the quick check is sent, never the individual answers. */
   diagnostic: z.object({
     estimatedLevel: z.enum(LEVELS),
@@ -82,12 +83,15 @@ export const lessonOutputSchema = z.object({
   furtherReading: z
     .array(z.object({ ref: z.number().int().describe('Number of a PromptQuorum page from <material>') }))
     .describe('0 to 3 pages from <material> that are worth reading next; empty if none fits'),
+  followUpQuestions: z
+    .array(z.string())
+    .describe('Exactly 3 short questions (under 15 words each) a learner might ask the tutor next about this lesson, written as the learner would ask them'),
 })
 export type LessonOutput = z.infer<typeof lessonOutputSchema>
 
 export const lessonRequestSchema = z.object({
   subject,
-  language: z.enum(ALL_LANGS),
+  language: languageSchema,
   selfLevel: z.enum(LEVELS),
   objectives: z.array(z.string().max(300)).min(1).max(8),
   lesson: z.object({
@@ -121,7 +125,7 @@ const sourceText = z.string().max(4000)
 export const quizRequestSchema = z.object({
   kind: z.enum(['lesson', 'final']),
   subject,
-  language: z.enum(ALL_LANGS),
+  language: languageSchema,
   selfLevel: z.enum(LEVELS),
   availableMinutes: minutes,
   /** lesson quiz: one entry (that lesson); final test: every lesson, trimmed text */

@@ -5,6 +5,8 @@
 // the certificate ID, subject and title are also stored as PDF metadata. No server is involved.
 
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { qrMatrix, verifyUrl } from '@/lib/academy/qr'
+import { toOutputLocale } from '@/lib/i18n/constants'
 import type { CertificateModel } from '@/lib/academy/certificate'
 import type { AcademyLang } from '@/lib/academy/types'
 import { getLangDir } from '@/lib/i18n/constants'
@@ -115,12 +117,19 @@ function loadImage(src: string): Promise<HTMLImageElement | null> {
 }
 
 /** Draws the certificate. Exported for tests that want to look at the picture. */
-export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateModel, tx: AcademyCopy, lang: AcademyLang): Promise<void> {
+export interface CertificateExtras {
+  /** registered for online verification: the sequential number and a QR code to the verification page */
+  registered?: boolean
+  number?: number
+}
+
+export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateModel, tx: AcademyCopy, lang: AcademyLang, extras: CertificateExtras = {}): Promise<void> {
   canvas.width = PX_W
   canvas.height = PX_H
   const p = new Page(canvas, lang)
   const { ctx } = p
   const c = tx.cert
+  const x = tx.certX
   const W = p.innerWidthMm
   try {
     await document.fonts?.ready
@@ -145,20 +154,20 @@ export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateM
   p.line('PromptQuorum Academy', p.x(logoMm + 4), 28.5, { size: 6, weight: 700, color: PURPLE })
 
   // title
-  p.line(c.title, PX_W / 2, 47, { size: 12.5, weight: 800, color: PURPLE, align: 'center' })
+  p.line(c.title, PX_W / 2, 47, { size: 9.5, weight: 800, color: INK, align: 'center' })
   p.line(c.awardedTo, PX_W / 2, 57, { size: 4.2, color: MUTED, align: 'center' })
 
   // name (shrinks to fit), underline, note
-  const nameSize = p.fit(m.name, 230, 14, 700)
+  const nameSize = p.fit(m.name, 230, 9, 700, 4)
   p.line(m.name, PX_W / 2, 71.5, { size: nameSize, weight: 700, align: 'center' })
   ctx.fillStyle = LINE
   ctx.fillRect((PX_W - 200 * MM) / 2, 75 * MM, 200 * MM, 0.5 * MM)
   p.line(c.nameNote, PX_W / 2, 80.5, { size: 3, color: MUTED, align: 'center' })
 
   // programme
-  p.line(c.forProgramme, PX_W / 2, 89, { size: 4.2, color: MUTED, align: 'center' })
-  const subjectSize = p.fit(m.subject, 235, 8, 700, 5)
-  p.paragraph(m.subject, 0, 98.5, W, { size: subjectSize, weight: 700, maxLines: 1, align: 'center' })
+  p.line(c.forProgramme, PX_W / 2, 87, { size: 4.2, color: MUTED, align: 'center' })
+  const subjectSize = p.fit(m.subject, 235, 12, 800, 5)
+  p.paragraph(m.subject, 0, 100, W, { size: subjectSize, weight: 800, maxLines: 1, align: 'center', color: PURPLE })
 
   // result tiles
   const tiles: { value: string; label: string; color?: string }[] = [
@@ -187,10 +196,10 @@ export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateM
     p.line(`${label}: ${value}`, p.x(off + 1), 134, { size: 3.5, color: INK })
   })
 
-  // two columns: topic scores | objectives + topics
+  // left: score per topic (at most 5 rows) and the reserved signature area
   const colW = (W - 10) / 2
   p.line(c.topicScores, p.x(0), 144, { size: 4, weight: 700, color: PURPLE })
-  const rows = m.byTopic.slice(0, 6)
+  const rows = m.byTopic.slice(0, 5)
   rows.forEach((r, i) => {
     const y = 151 + i * 5.2
     p.paragraph(r.topic, 0, y, colW * 0.46, { size: 3.2, maxLines: 1 })
@@ -200,22 +209,39 @@ export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateM
     p.rect(barOff, y - 2.5, (barW * r.percent) / 100, 2.5, r.percent >= m.passMark ? GOOD : '#d97706')
     p.line(`${r.percent}%`, p.x(colW), y, { size: 3.2, weight: 700, align: 'end' })
   })
+  p.rect(0, 178.6, 70, 0.4, '#9ca3af')
+  p.line(x.signature, p.x(0), 182.4, { size: 2.6, color: MUTED })
 
+  // right: number, "see Course Documentation", QR code (only when registered) or the "not registered" statement
   const right = colW + 10
-  p.line(c.objectives, p.x(right), 144, { size: 4, weight: 700, color: PURPLE })
-  let y = 150.5
-  for (const o of m.objectives.slice(0, 4)) {
-    p.line('•', p.x(right), y, { size: 3.2, color: PURPLE })
-    y = p.paragraph(o, right + 4, y, colW - 4, { size: 3.1, maxLines: 2, leading: 4.1 }) + 0.6
+  const qrMm = 30
+  const textW = colW - qrMm - 6
+  p.line(`${c.id}: ${m.id}`, p.x(right), 151, { size: 3.6, weight: 700 })
+  if (extras.number) p.line(`${x.number} ${extras.number.toLocaleString(toOutputLocale(lang))}`, p.x(right), 158, { size: 5, weight: 700, color: PURPLE })
+  p.paragraph(x.seeDoc(m.id), right, 165, textW, { size: 3.2, maxLines: 2, leading: 4.2, color: INK })
+  if (extras.registered) {
+    const matrix = qrMatrix(verifyUrl(m.id))
+    const quiet = 3
+    const cell = (qrMm * MM) / (matrix.length + 2 * quiet)
+    const originX = p.boxX(W - qrMm, qrMm)
+    ctx.fillStyle = '#ffffff'
+    ctx.fillRect(originX, 142 * MM, qrMm * MM, qrMm * MM)
+    ctx.fillStyle = '#000000'
+    for (let r = 0; r < matrix.length; r++) for (let col = 0; col < matrix.length; col++) if (matrix[r][col]) ctx.fillRect(originX + (col + quiet) * cell, 142 * MM + (r + quiet) * cell, cell + 0.5, cell + 0.5)
+    ctx.strokeStyle = LINE
+    ctx.lineWidth = 0.3 * MM
+    ctx.strokeRect(originX, 142 * MM, qrMm * MM, qrMm * MM)
+    p.line(x.scan, originX + (qrMm * MM) / 2, 175.2, { size: 2.8, color: MUTED, align: 'center' })
+  } else {
+    p.paragraph(x.notRegistered, right, 173, colW, { size: 3.2, color: MUTED, maxLines: 2, leading: 4 })
   }
-  p.paragraph(`${c.topics}: ${m.topics.join(' · ')}`, right, Math.min(Math.max(y + 1, 172), 177), colW, { size: 3, color: MUTED, maxLines: 2, leading: 4 })
 
-  // footer: ID, statements (inside the frame, which ends at 199 mm)
+  // footer: ID, statements (inside the frame, which ends at 199 mm). Short disclaimer only; the longer notice is on the Course Documentation cover.
   ctx.fillStyle = LINE
-  ctx.fillRect(p.boxX(0, W), 182 * MM, W * MM, 0.4 * MM)
-  p.line(`${c.id}: ${m.id}`, p.x(0), 188, { size: 3.8, weight: 700 })
-  p.line('PromptQuorum Academy · promptquorum.com/academy', p.x(W), 188, { size: 3, color: MUTED, align: 'end' })
-  p.paragraph(`${c.disclaimer} ${c.aiNote} ${c.notFor} ${c.idNote}`, 0, 192.6, W, { size: 2.5, color: MUTED, maxLines: 3, leading: 3.1 })
+  ctx.fillRect(p.boxX(0, W), 184.4 * MM, W * MM, 0.4 * MM)
+  p.line(`${c.id}: ${m.id}`, p.x(0), 189.4, { size: 3.6, weight: 700 })
+  p.line('PromptQuorum Academy · promptquorum.com/academy', p.x(W), 189.4, { size: 3, color: MUTED, align: 'end' })
+  p.paragraph(`${c.disclaimer} ${c.aiNote}`, 0, 193.3, W, { size: 2.5, color: MUTED, maxLines: 2, leading: 3 })
 }
 
 // ------------------------------------------------------------------------------------------------ PDF container
@@ -276,9 +302,9 @@ export function jpegToPdf(jpeg: Uint8Array, px: { w: number; h: number }, info: 
   return out
 }
 
-export async function renderCertificatePdf(m: CertificateModel, tx: AcademyCopy, lang: AcademyLang): Promise<Blob> {
+export async function renderCertificatePdf(m: CertificateModel, tx: AcademyCopy, lang: AcademyLang, extras: CertificateExtras = {}): Promise<Blob> {
   const canvas = document.createElement('canvas')
-  await drawCertificate(canvas, m, tx, lang)
+  await drawCertificate(canvas, m, tx, lang, extras)
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/jpeg', 0.92))
   if (!blob) throw new Error('certificate: could not encode image')
   const pdf = jpegToPdf(new Uint8Array(await blob.arrayBuffer()), { w: PX_W, h: PX_H }, { title: `${tx.cert.title} ${m.id}`, subject: m.subject, keywords: m.id, created: new Date(m.issuedAt) })

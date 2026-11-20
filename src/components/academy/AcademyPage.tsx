@@ -44,6 +44,7 @@ export async function AcademyPage({ lang }: { lang: AcademyLang }) {
     [tx.statLessons, totals.lessons],
     [tx.statTests, totals.tests],
     [tx.statCertificates, totals.certificates],
+    [tx.reg.statRegistered, totals.certificatesRegistered],
   ]
 
   // Same structure as the Ask Hans page (AskHansBlock): hero with explanation + open button next to a card of

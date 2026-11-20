@@ -4,10 +4,11 @@
 // so a URL the model invents can never reach the learner; any link or URL in the lesson text itself is removed.
 
 import { getArticle, searchPromptquorum } from '@/lib/mcp/tools'
-import { PROMPT_LANGUAGE } from './diagnostic'
+import type { Lang } from '@/lib/i18n/constants'
+import { isCjk, promptLanguage, siteLangOf } from './language'
 import { generateStructured, type ParseClient } from './generate'
 import { lessonOutputSchema, type LessonOutput, type LessonRequest } from './schemas'
-import type { AcademyLang, Lesson } from './types'
+import type { Lesson } from './types'
 
 const SITE = 'https://www.promptquorum.com'
 /** Content hubs whose pages can be further reading (site pages and the bare directory link are not lessons). */
@@ -49,8 +50,8 @@ export function toMaterial(results: { title: string; description: string; url: s
 }
 
 export function findMaterial(req: Pick<LessonRequest, 'subject' | 'language' | 'lesson'>): Material[] {
-  const byLesson = searchPromptquorum({ query: `${req.lesson.title} ${req.lesson.topic}`, lang: req.language, limit: 10 })
-  const bySubject = searchPromptquorum({ query: `${req.lesson.topic} ${req.subject}`, lang: req.language, limit: 10 })
+  const byLesson = searchPromptquorum({ query: `${req.lesson.title} ${req.lesson.topic}`, lang: siteLangOf(req.language), limit: 10 })
+  const bySubject = searchPromptquorum({ query: `${req.lesson.topic} ${req.subject}`, lang: siteLangOf(req.language), limit: 10 })
   return toMaterial([...byLesson, ...bySubject])
 }
 
@@ -76,7 +77,8 @@ export function articleText(article: Record<string, unknown>, maxChars: number):
   return parts.join('\n').slice(0, maxChars)
 }
 
-function readGrounding(material: Material[], lang: AcademyLang): string {
+function readGrounding(material: Material[], language: string): string {
+  const lang: Lang = siteLangOf(language)
   const top = material.slice(0, 2)
   const per = Math.floor(GROUNDING_MAX_CHARS / Math.max(top.length, 1))
   return top
@@ -104,11 +106,10 @@ export function stripLinks(md: string): string {
     .replace(/[ \t]+$/gm, '')
 }
 
-const CJK = new Set<AcademyLang>(['ja', 'zh'])
 /** Length in "words" (CJK: characters / 2, a rough reading-time equivalent). */
-export function lessonLength(o: LessonOutput, lang: AcademyLang): number {
+export function lessonLength(o: LessonOutput, lang: string): number {
   const text = o.sections.map((s) => `${s.heading} ${s.body}`).join(' ')
-  return CJK.has(lang) ? Math.round(text.replace(/\s/g, '').length / 2) : text.split(/\s+/).filter(Boolean).length
+  return isCjk(lang) ? Math.round(text.replace(/\s/g, '').length / 2) : text.split(/\s+/).filter(Boolean).length
 }
 /** SPEC 11: about 600-900 words per lesson at most; shorter lessons for fewer minutes, recaps short. */
 export function lessonWordBudget(minutes: number, recap: boolean): number {
@@ -138,13 +139,14 @@ Rules:
 - Plain, friendly teaching tone; short paragraphs; examples welcome. Use **bold** for key terms and simple lists. No links, no URLs, no tables, no code blocks longer than 5 lines.
 - Do not repeat the other lessons of the programme (listed by title); refer to them briefly if needed.
 - furtherReading: choose up to ${READING_MAX} pages from <material> by their number, only ones whose title or description is about THIS lesson's topic or objective. A page on a merely related subject (another app, another use case, a different kind of model) does not qualify. Choose none if none fits; an empty list is better than an off-topic link.
+- followUpQuestions: exactly 3 short questions (under 15 words each) the learner might ask a tutor next about this lesson, phrased as the learner would ask.
 - Write everything in the language named in the request.`
 
 export function lessonUserMessage(req: LessonRequest, material: Material[], grounding: string): string {
   const objectives = req.lesson.objectiveIds.map((i) => req.objectives[i]).filter(Boolean)
   return [
     `<subject>${req.subject}</subject>`,
-    `Language: ${PROMPT_LANGUAGE[req.language]}`,
+    `Language: ${promptLanguage(req.language)}`,
     `Learner level: ${req.selfLevel}`,
     `<lesson number="${req.index + 1}" title="${req.lesson.title}" topic="${req.lesson.topic}">`,
     `Reading time: about ${req.lesson.estimatedMinutes} minutes (at most ${lessonWordBudget(req.lesson.estimatedMinutes, !!req.lesson.recap)} words).`,
@@ -159,7 +161,7 @@ export function lessonUserMessage(req: LessonRequest, material: Material[], grou
     .join('\n')
 }
 
-export type GeneratedLesson = Pick<Lesson, 'sections' | 'furtherReading'>
+export type GeneratedLesson = Pick<Lesson, 'sections' | 'furtherReading' | 'followUpQuestions'>
 
 /** Meaningful words of a text: 4+ letters/digits, or character pairs for scripts written without spaces (ja, zh, ko, ar-safe). */
 export function topicTokens(text: string): Set<string> {
@@ -193,6 +195,10 @@ export function finalizeLesson(o: LessonOutput, material: Material[], focus?: st
       .map((s) => ({ heading: stripLinks(s.heading).trim(), body: stripLinks(s.body).trim() }))
       .filter((s) => s.heading && s.body),
     furtherReading: picked.slice(0, READING_MAX).map((m) => ({ title: m.title, url: m.url, source: 'promptquorum' as const })),
+    followUpQuestions: (o.followUpQuestions ?? [])
+      .map((q) => stripLinks(q).replace(/\s+/g, ' ').trim().slice(0, 140))
+      .filter(Boolean)
+      .slice(0, 3),
   }
 }
 

@@ -1,6 +1,6 @@
-import type { AcademyCopy } from './types'
+import type { AcademyBaseCopy } from './types'
 
-export const copy: AcademyCopy = {
+export const copy: AcademyBaseCopy = {
   metaTitle: 'PromptQuorum Academy：無料で自分に合ったAI学習',
   metaDescription:
     'テーマ・時間・レベルを選ぶだけ。PromptQuorum AcademyはPromptQuorumのガイドを参照して短いレッスンを作成し、AIチューター、テスト、PDF修了証を提供します。',
@@ -144,7 +144,7 @@ export const copy: AcademyCopy = {
   certCreating: '証明書を作成しています…',
   certError: '証明書を作成できませんでした。もう一度お試しください。',
   cert: {
-    title: '学習修了証',
+    title: '修了証',
     awardedTo: '授与対象',
     nameNote: '学習者が入力した氏名です。本人確認は行われていません。',
     forProgramme: 'プログラムを修了しました',
@@ -166,8 +166,14 @@ export const copy: AcademyCopy = {
   },
 
   privacyNote:
-    'アカウントは不要です。進捗はこのブラウザにのみ保存されます。レッスン、問題、チューターの回答を作成するため、テーマ、回答、チューターへのメッセージをAIプロバイダー（Anthropic）に送信します。これらに個人情報を入力しないでください。修了証のお名前はこのブラウザ内にとどまります。不正利用防止のため、IPアドレスから生成した短期間のハッシュキーでリクエスト数を制限しています。フィードバックをいただいた場合は、評価、コメント、学習したテーマを、お名前やアカウントなしで保存します。',
+    'アカウントは不要です。進捗はこのブラウザにのみ保存されます。レッスン、問題、チューターの回答を作成するため、テーマ、回答、チューターへのメッセージをAIプロバイダー（Anthropic）に送信します。これらに個人情報を入力しないでください。修了証のお名前はこのブラウザ内にとどまります。不正利用防止のため、IPアドレスから生成した短期間のハッシュキーでリクエスト数を制限しています。星の評価は匿名で集計されます（クリックは数としてのみ数えられます）。文章でのフィードバックは、ご自身がメールで送信した場合にのみ届き、サーバーには保存しません。オンライン照会のために修了証を登録した場合は、そこに表示されるデータを保存します。お名前は保存しません。',
   deleteData: 'データを削除',
   deleteConfirm: 'このブラウザからAcademyの進捗を削除しますか？元に戻せません。',
   dataDeleted: '削除しました',
+  feedbackLink: 'メールでフィードバックを送る',
+  feedbackNote:
+    'メールソフトが開くため、メールアドレスが当方に表示されます。個人情報は記入しないでください。ご自身で送信するまで、何も送信されません。',
+  feedbackMailSubject: 'Academyへのフィードバック',
+  feedbackMailIntro: 'Academyについての感想：',
+  feedbackMailLanguage: '言語',
 }

@@ -110,6 +110,17 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     ko: '베란다 태양광',
     ar: 'طاقة شمسية للشرفة',
   },
+  academy: {
+    en: 'PromptQuorum Academy – free personalized AI learning programmes',
+    de: 'PromptQuorum Academy – kostenlose, persönliche KI-Lernprogramme',
+    fr: 'PromptQuorum Academy – programmes d’apprentissage de l’IA gratuits et personnalisés',
+    ja: 'PromptQuorum Academy – 無料のパーソナライズAI学習プログラム',
+    zh: 'PromptQuorum Academy – 免费的个性化 AI 学习计划',
+    es: 'PromptQuorum Academy – programas gratuitos y personalizados para aprender IA',
+    pt: 'PromptQuorum Academy – programas gratuitos e personalizados para aprender IA',
+    ko: 'PromptQuorum Academy – 무료 맞춤형 AI 학습 프로그램',
+    ar: 'PromptQuorum Academy – برامج مجانية ومخصّصة لتعلّم الذكاء الاصطناعي',
+  },
   skipToMain: {
     en: 'Skip to main content',
     de: 'Zum Hauptinhalt springen',
@@ -218,6 +229,20 @@ function HeaderInner() {
 
         {/* Search + Language Switcher + Mobile Menu */}
         <div className="flex items-center gap-3">
+          {process.env.NEXT_PUBLIC_ACADEMY_ENABLED !== 'false' && (
+            <Link
+              href={navHref('/academy', lang)}
+              aria-label={t('academy', lang)}
+              title={t('academy', lang)}
+              className="p-2 text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M2 9.5 12 5l10 4.5-10 4.5L2 9.5Z" />
+                <path d="M6 11.6V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.4" />
+                <path d="M22 9.5V15" />
+              </svg>
+            </Link>
+          )}
           <SearchTrigger />
 
           {/* Hide language switcher on screens below sm (640px), show on sm+ */}

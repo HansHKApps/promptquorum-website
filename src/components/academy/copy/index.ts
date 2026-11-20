@@ -11,11 +11,15 @@ import { copy as ja } from './ja'
 import { copy as ko } from './ko'
 import { copy as pt } from './pt'
 import { copy as zh } from './zh'
+import { ACADEMY_EXTRA } from './extra'
 import type { AcademyCopy } from './types'
 
 export type { AcademyCopy } from './types'
 
-export const ACADEMY_COPY: Record<AcademyLang, AcademyCopy> = { en, de, fr, ja, zh, es, pt, ar, ko }
+const BASE = { en, de, fr, ja, zh, es, pt, ar, ko }
+export const ACADEMY_COPY = Object.fromEntries(
+  (Object.keys(BASE) as AcademyLang[]).map((l) => [l, { ...BASE[l], ...ACADEMY_EXTRA[l] }]),
+) as Record<AcademyLang, AcademyCopy>
 
 /** Native names in the language selector; never translated. */
 export const ACADEMY_LANGUAGE_NAMES: Record<AcademyLang, string> = {
