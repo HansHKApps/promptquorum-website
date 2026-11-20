@@ -166,3 +166,15 @@ Storage available: Upstash Redis (+ a separate `MCP_PROFILE_REDIS_*`), `@vercel/
 - Behaviour of rate limiting for server-to-server MCP calls
 - GitHub branch protection (GitHub MCP not connected)
 - Schemas of the remaining MCP tools; the `~/PromptQuorumClaude` and `~/promptquorum-marketing` folders were not inspected (if an "app" repo exists, it is not the website)
+
+
+---
+
+## Addendum 2026-11-20 (master spec Phase 0 follow-up)
+
+Read-only checks, secondary sources unless stated. **FACT** = seen in code or on the live page; **UNVERIFIED** = needs a primary source.
+
+- **Ask Hans shows ratings publicly (FACT, live page https://www.promptquorum.com/askhans, statistics block):** "People who rated", "Average stars (of 5)", "Rated 1 to 3 stars", "Of those, started an email to me" for today / yesterday / 7 / 30 days / all time. Source: `src/components/tools/UsageReportView.tsx` + `ask-hans-block-i18n.ts`. No `AggregateRating` markup found in the served HTML. The block carried the "Anonymous: one star click counts once" note but not the open-ratings notice; **added 2026-11-20** (`ratingOpen`, 9 languages). The "How our ratings work" page is still to be written.
+- **Anthropic API retention (UNVERIFIED, search results from privacy.claude.com):** inputs and outputs are deleted from Anthropic's backend within 30 days by default unless agreed otherwise or needed for policy enforcement or law; content flagged by safety classifiers may be kept longer (up to 2 years, classification scores up to 7 years); zero data retention only by agreement; for designated "covered models" a 30-day retention applies. Pages: privacy.claude.com/en/articles/7996866 (retention) and /8956058 (ZDR). Academy uses `claude-haiku-5-5` (not named as a covered model in the results). Check the live pages before the privacy policy states it.
+- **Data Privacy Framework (UNVERIFIED, sources disagree):** a June 2026 Heuking article and a Sonomos check dated 2026-11-18 say Anthropic is not on the DPF list; a vendor-review site says it is. The Commercial Terms name Anthropic Ireland as contracting entity for EEA customers (secondary) and the DPA relies on Standard Contractual Clauses. Check dataprivacyframework.gov directly.
+- **Code facts:** Academy API routes share `academyGuard` (kill switch, same-origin check, per-route hourly limit, per-visitor daily cap, whole-site daily ceiling, fail-closed in production); the vendored QR encoder is qrcode-generator 1.4.4 (MIT) in `src/lib/academy/vendor/`.

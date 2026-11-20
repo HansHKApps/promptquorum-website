@@ -12,6 +12,19 @@ Newest first. Each entry: date, who decided, what, and what it changes in [SPEC.
 - Open, not asked: diagnostic size (spec 3/6 vs built 5/6/8) and registry storage (Redis vs database) stay as built until decided.
 - Note: the Academy privacy text still says "If you leave feedback, we store the rating, the comment and the subject". That describes the planned ratings feature (not built); the email link stores nothing on our server.
 
+### 2026-11-20 (later the same day): answers to the open-items list, and what was built
+
+- **Quick check:** 3 questions under 60 minutes, 6 from 60 minutes up (SPEC 5.2). Final test (6/10/15) and lesson quiz (3) sizes stay as built.
+- **Registry:** Redis for the test phase (one hash `academy:cert:<ID>`, sequential number via `academy:cert:seq`). QR code, Course Documentation and the public verification page `/academy/verify/<ID>` (9 locales, always noindex) are built. Upgrade to a database once usage grows.
+- **Any language:** the programme language is a site language or any language the learner names ("Other language…", checked by `/api/academy/language`). The interface stays in the page language; the AI writes lessons, questions, explanations and tutor answers in the chosen language. Certificate and Course Documentation: the learner picks one of the 9 site languages before they are created (default: the programme language if the site has it, else the page language).
+- **Names:** "Certificate of Completion" and "Course Documentation"; German "Teilnahmebescheinigung" and "Kursdokumentation"; the other languages use the same restraint (fr attestation, es constancia, pt comprovante, zh 完成证明, ar إفادة). `npm run validate:academy-words` checks all Academy texts against the forbidden-words list (SPEC 18).
+- **Feedback is email-only and nothing written is stored:** this reverses the 2026-11-17 decision to store comments (max 500 characters). Ratings are anonymous counters (one star click = a number), exactly like Ask Hans; a 1-3 star rating offers an email to the owner; "Report a problem" opens an email with the question prefilled; tutor thumbs are counters. Comments are therefore never published or stored. `npm run academy:stats` shows the totals.
+- **Build everything, owner decides order:** built in one run: tutor (functions 1-6, quiz lock, caps 30/8, rephrase half), ratings (lesson and programme separately), report-a-problem, QR registry, Course Documentation, cost controls (per-visitor daily cap 150, whole-site daily ceiling 4000, both env-configurable; cross-site POST refused), header graduation-cap link (F16), open-ratings notice on the Ask Hans statistics block.
+- **Ask Hans ratings are public** (the statistics block on /askhans shows people who rated and average stars). The open-ratings notice was added there in 9 languages; the "How our ratings work" page is part of tomorrow's legal papers.
+- **F14 not done:** removing `unsafe-inline` needs nonces, and nonces need dynamic rendering of every page (Next.js docs, content-security-policy guide). That would end static caching site-wide and repeat the June 2026 outage class. **F15 not done:** needs the `[locale]` refactor (reminder 2026-11-29).
+- **Postponed to the next day (owner):** legal papers (privacy policy, Terms, ratings page, Art. 30 record, DPIA and AI Act notes, launch gate).
+- Processor facts checked 2026-11-20 (secondary sources, see DISCOVERY.md addendum): Anthropic API default retention 30 days; EU-US Data Privacy Framework status of Anthropic is reported inconsistently, verify at dataprivacyframework.gov.
+
 ## 2026-11-19 (QA audit): open items needing an owner decision
 
 - **F2 pre-consent Clarity:** Clarity loads cookieless before consent by design (`ClarityLoader.tsx`, asserted in `tests/consent.spec.ts`), site-wide. Loading it only after consent is a site-wide analytics/legal decision.
