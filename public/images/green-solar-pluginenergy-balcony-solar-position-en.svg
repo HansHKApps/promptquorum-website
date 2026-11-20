@@ -3,7 +3,7 @@
   <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" fill="#1C1B1F" text-anchor="middle">Where Both Sit</text>
   <rect x="50" y="120" width="337" height="150" rx="8" fill="#F7F6F3" stroke="#79747E" stroke-width="1"/>
   <text x="218.5" y="160" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Panel / Hardware Makers</text>
-  <text x="218.5" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">JA Solar, Trina, Anker, Marstek (PluginEnergy)</text>
+  <text x="218.5" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">FoxESS, Marstek, JA Solar, Trina (PluginEnergy)</text>
   <text x="400" y="205" font-family="system-ui, sans-serif" font-size="18" fill="#79747E" text-anchor="middle">→</text>
   <rect x="413" y="120" width="337" height="150" rx="8" fill="#E6F4EA" stroke="#34A853" stroke-width="2.5"/>
   <text x="581.5" y="160" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1E7B37" text-anchor="middle">Kit Resellers / Assemblers</text>
