@@ -233,7 +233,7 @@ test.describe('F15: lang and dir', () => {
     await page.route('**/api/academy/lesson', (r) => r.fulfill({ json: lessonReply }))
     await openSeededLesson(page, seededProgramme({ language: 'de' }))
     // (the UI stays in English here: the seeded page is /academy)
-    await expect(page.locator('[lang="de"][dir="ltr"]', { hasText: 'Body text of the lesson.' })).toBeVisible()
+    await expect(page.locator('[lang="de"][dir="ltr"]', { hasText: 'Body text of the lesson.' }).first()).toBeVisible()
   })
 })
 
@@ -594,5 +594,28 @@ test.describe('Quick check shows right / wrong, and the plan can be shared', () 
     const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Word', exact: true }).click()])
     expect(download.suggestedFilename()).toMatch(/\.docx$/)
     await expect(page.getByRole('button', { name: 'PDF', exact: true })).toBeVisible()
+  })
+})
+
+test.describe('Program language drives the lesson screen labels', () => {
+  test('English page, German program: loading text, objectives label and tutor buttons are German', async ({ page }) => {
+    let release!: () => void
+    const gate = new Promise<void>((r) => (release = r))
+    await page.route('**/api/academy/lesson', async (route) => {
+      await gate
+      await route.fulfill({ json: lessonReply })
+    })
+    await openSeededLesson(page, seededProgramme({ language: 'de' }))
+    await expect(page.getByText(/writing your lesson/i)).toHaveCount(0)
+    await expect(page.getByText(/lektion/i).first()).toBeVisible()
+    release()
+    await expect(page.getByText('Body text of the lesson.')).toBeVisible()
+    await expect(page.getByText('Diese Lektion hilft Ihnen')).toBeVisible()
+    // The four help options are hidden behind a quiet per-section link and open on request.
+    await expect(page.getByRole('button', { name: 'Tiefer' })).toHaveCount(0)
+    await page.getByRole('button', { name: 'Hilfe zu diesem Abschnitt?' }).first().click()
+    await expect(page.getByRole('button', { name: 'Tiefer' })).toBeVisible()
+    await expect(page.getByRole('button', { name: 'Zusammenfassen' })).toBeVisible()
+    await expect(page.getByText('This lesson helps you')).toHaveCount(0)
   })
 })

@@ -35,6 +35,14 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
   }, [ready, state.draft, update, lang])
 
   const draft = state.draft
+  // Once a program exists, its screens (quick check, program overview, lesson, quiz; the results screen has its own certificate-language chooser and stays in the page language) use the program language when the site
+  // has that language, so labels like "Writing the lesson…" or "Deeper" match the lesson text. For a custom
+  // language (e.g. Swahili) the site has no UI texts, so they stay in the page language.
+  const programLang = state.programme?.language ?? draft?.language
+  const learnLang: AcademyLang = programLang && isSiteLang(programLang) ? programLang : lang
+  const ltx = ACADEMY_COPY[learnLang]
+  const learning = ['diagnostic', 'programme', 'lesson', 'quiz'].includes(state.view)
+  const learnProps = learning && learnLang !== lang ? { lang: learnLang, dir: learnLang === 'ar' ? ('rtl' as const) : ('ltr' as const) } : {}
   if (!ready || !draft) {
     return <div className="h-96 animate-pulse rounded-2xl border border-purple-100 bg-white" aria-busy="true" aria-label={tx.loading} />
   }
@@ -46,16 +54,17 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           {tx.storageBlocked}
         </p>
       )}
+      <div {...learnProps}>
       {state.view === 'quiz' && state.programme ? (
-        <QuizView tx={tx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(tx, code)} />
+        <QuizView tx={ltx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(ltx, code)} />
       ) : state.view === 'results' && state.programme && programmeScore(state.programme) ? (
         <ResultsView tx={tx} lang={lang} programme={state.programme} update={update} />
       ) : state.view === 'lesson' && state.programme ? (
-        <LessonView tx={tx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(tx, code)} />
+        <LessonView tx={ltx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(ltx, code)} />
       ) : state.view === 'programme' && state.programme ? (
         <ProgrammeView
-          tx={tx}
-          lang={lang}
+          tx={ltx}
+          lang={learnLang}
           programme={state.programme}
           onOpenLesson={(i) => update((s) => (s.programme ? { ...s, view: 'lesson', programme: openLesson(s.programme, i) } : s))}
           onStartQuiz={(quizId) =>
@@ -77,7 +86,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           onStartOver={() => update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined, draft: s.draft ? { ...s.draft, subject: '' } : s.draft }))}
         />
       ) : state.view === 'diagnostic' ? (
-        <QuickCheckView tx={tx} draft={draft} quickCheck={state.quickCheck} update={update} />
+        <QuickCheckView tx={ltx} draft={draft} quickCheck={state.quickCheck} update={update} />
       ) : (
         <SetupForm
           tx={tx}
@@ -105,6 +114,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           }
         />
       )}
+      </div>
       <PrivacyStrip tx={tx} lang={lang} />
     </div>
   )

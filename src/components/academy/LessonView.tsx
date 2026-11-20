@@ -189,13 +189,12 @@ export function LessonView({
                   <div className="space-y-3 leading-relaxed text-gray-800">
                     <Markdown text={s.body} />
                   </div>
-                  <div className="flex flex-wrap gap-2 pt-1" role="group" aria-label={tx.tutor.title}>
-                    {(['simpler', 'example', 'deeper', 'summarize'] as const).map((k) => (
-                      <button key={k} type="button" onClick={() => ask({ trigger: k, section: { heading: s.heading, body: s.body } })} className="rounded-full border border-purple-200 bg-white px-3 py-1 text-xs font-medium text-purple-800 hover:bg-purple-50">
-                        {tx.tutor[k]}
-                      </button>
-                    ))}
-                  </div>
+                  <SectionHelp
+                    label={tx.tutor.helpSection}
+                    groupLabel={tx.tutor.title}
+                    options={(['simpler', 'example', 'deeper', 'summarize'] as const).map((k) => ({ key: k, label: tx.tutor[k] }))}
+                    onPick={(k) => ask({ trigger: k, section: { heading: s.heading, body: s.body } })}
+                  />
                 </section>
               ))}
             </Content>
@@ -266,6 +265,27 @@ export function LessonView({
         >
           {tx.tutor.explain}
         </button>
+      )}
+    </div>
+  )
+}
+
+/** Quiet "Need help with this part?" link under a lesson section; the four options appear only on request. */
+function SectionHelp({ label, groupLabel, options, onPick }: { label: string; groupLabel: string; options: { key: 'simpler' | 'example' | 'deeper' | 'summarize'; label: string }[]; onPick: (k: 'simpler' | 'example' | 'deeper' | 'summarize') => void }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="pt-1">
+      <button type="button" aria-expanded={open} onClick={() => setOpen((o) => !o)} className="text-sm text-purple-700 underline-offset-2 hover:underline">
+        {label}
+      </button>
+      {open && (
+        <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={groupLabel}>
+          {options.map((o) => (
+            <button key={o.key} type="button" onClick={() => onPick(o.key)} className="rounded-full border border-purple-200 bg-white px-3 py-1 text-xs font-medium text-purple-800 hover:bg-purple-50">
+              {o.label}
+            </button>
+          ))}
+        </div>
       )}
     </div>
   )

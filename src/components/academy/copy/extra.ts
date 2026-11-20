@@ -45,6 +45,8 @@ export interface AcademyExtraCopy {
     example: string
     deeper: string
     summarize: string
+    /** quiet link under each lesson section that reveals the four help options */
+    helpSection: string
     explain: string
     why: string
     suggested: string
@@ -171,6 +173,7 @@ const en: AcademyExtraCopy = {
     example: 'Example',
     deeper: 'Deeper',
     summarize: 'Summarize',
+    helpSection: 'Need help with this part?',
     explain: 'Explain this',
     why: 'Why?',
     suggested: 'Suggested questions',
@@ -315,6 +318,7 @@ const de: AcademyExtraCopy = {
     example: 'Beispiel',
     deeper: 'Tiefer',
     summarize: 'Zusammenfassen',
+    helpSection: 'Hilfe zu diesem Abschnitt?',
     explain: 'Das erklären',
     why: 'Warum?',
     suggested: 'Vorgeschlagene Fragen',
@@ -459,6 +463,7 @@ const fr: AcademyExtraCopy = {
     example: 'Exemple',
     deeper: 'Plus en détail',
     summarize: 'Résumer',
+    helpSection: 'Besoin d’aide sur ce passage ?',
     explain: 'Expliquer ceci',
     why: 'Pourquoi ?',
     suggested: 'Questions suggérées',
@@ -603,6 +608,7 @@ const es: AcademyExtraCopy = {
     example: 'Ejemplo',
     deeper: 'Más a fondo',
     summarize: 'Resumir',
+    helpSection: '¿Necesitas ayuda con este apartado?',
     explain: 'Explicar esto',
     why: '¿Por qué?',
     suggested: 'Preguntas sugeridas',
@@ -747,6 +753,7 @@ const pt: AcademyExtraCopy = {
     example: 'Exemplo',
     deeper: 'Mais a fundo',
     summarize: 'Resumir',
+    helpSection: 'Precisa de ajuda com esta parte?',
     explain: 'Explicar isto',
     why: 'Por quê?',
     suggested: 'Perguntas sugeridas',
@@ -891,6 +898,7 @@ const ja: AcademyExtraCopy = {
     example: '例',
     deeper: 'もっと詳しく',
     summarize: '要約',
+    helpSection: 'この部分についてヘルプが必要ですか？',
     explain: 'これを説明',
     why: 'なぜ？',
     suggested: 'おすすめの質問',
@@ -1035,6 +1043,7 @@ const zh: AcademyExtraCopy = {
     example: '举例',
     deeper: '更深入',
     summarize: '总结',
+    helpSection: '这一部分需要帮助吗？',
     explain: '解释这段',
     why: '为什么？',
     suggested: '推荐问题',
@@ -1179,6 +1188,7 @@ const ar: AcademyExtraCopy = {
     example: 'مثال',
     deeper: 'أعمق',
     summarize: 'لخّص',
+    helpSection: 'هل تحتاج إلى مساعدة في هذا الجزء؟',
     explain: 'اشرح هذا',
     why: 'لماذا؟',
     suggested: 'أسئلة مقترحة',
@@ -1323,6 +1333,7 @@ const ko: AcademyExtraCopy = {
     example: '예시',
     deeper: '더 깊이',
     summarize: '요약',
+    helpSection: '이 부분에 도움이 필요하십니까?',
     explain: '이 부분 설명',
     why: '왜 그런가요?',
     suggested: '추천 질문',
