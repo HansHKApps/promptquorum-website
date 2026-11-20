@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Balcony Solar Sizing, Yield & Payback: What to Expect by Country',
     seoTitle: 'Balcony Solar Sizing & Payback Calculator (2026)',
     intro: 'How much power you need, how much a panel actually produces in your climate, and how long it takes to pay for itself are three separate questions with three separate answers — and all three depend heavily on where you live, not just the hardware you buy.',
-    metaDescription: 'Balcony solar sizing, yield, and payback estimates by country — verified pricing and a Germany/Cyprus yield comparison as a reference point.',
+    metaDescription: 'Balcony solar sizing, yield and payback by country: panel vs. inverter limits, PVGIS-based yield examples and dated kit prices by market.',
     publishDate: '2026-07-02',
     dateModified: '2026-11-20',
     readTime: '10 min read',
@@ -35,13 +35,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Balcony solar buyers estimating system size, expected output, and payback timeline',
     primaryTerm: 'balcony solar payback',
     targetKeywords: ['balcony solar payback', 'balcony solar yield by location', 'how much power does balcony solar produce', 'balcony solar sizing guide'],
-    leadAnswerBlock: '**A sunnier climate can produce meaningfully more solar yield than a northern-European baseline — the reference comparison used in this guide is Germany (Stuttgart) at roughly 1,003 kWh/kWp per year versus Cyprus at roughly 1,646 kWh/kWp, about 64% more.** Payback timelines depend on both that yield difference and local hardware pricing, which varies enough by country that a single global payback number would be misleading — use the country tables below as your starting point.',
+    leadAnswerBlock: '**Local sunshine changes how much a balcony system produces: in the PVGIS reference calculation used in this guide, 1 kWp tilted 35° and facing south yields about 1,130 kWh per year near Stuttgart, Germany, and about 1,630 kWh near Nicosia, Cyprus — roughly 44% more.** Those are PVGIS-SARAH3 estimates from the EU JRC\'s PVGIS tool (14% system losses, horizon shading included, checked 2026-11-20); a vertical railing mount yields less, so use them as a relative comparison, not a forecast. Payback depends on that yield and on local hardware prices, which vary too much for one global number — use the country tables below as your starting point.',
     quickAnswerTop: {
       en: {
         question: 'How much power will my balcony solar system actually produce, and when does it pay for itself?',
-        answer: 'Production depends primarily on your local solar yield (kWh per kWp installed per year) and how well your usage pattern lines up with daylight hours. The reference comparison point used here is Germany at roughly 1,003 kWh/kWp versus Cyprus at roughly 1,646 kWh/kWp — about 64% more in the sunnier market. Payback timeline combines that yield difference with your local hardware price and electricity rate, both of which vary by country.',
+        answer: 'Production depends primarily on your local solar yield (kWh per kWp installed per year) and how well your usage pattern lines up with daylight hours. In the PVGIS reference calculation used here (1 kWp, 35° tilt, facing south, 14% losses), Stuttgart yields about 1,130 kWh/kWp per year and Nicosia, Cyprus about 1,630 — roughly 44% more in the sunnier market. Payback combines that yield with your local hardware price and electricity rate, both of which vary by country.',
         bullets: [
-          'Yield reference: Germany ~1,003 kWh/kWp/year vs. Cyprus ~1,646 kWh/kWp/year',
+          'Yield reference (PVGIS, 1 kWp, 35° south, 14% losses): Stuttgart ~1,130 kWh/kWp/year vs. Nicosia ~1,630 kWh/kWp/year',
           'Most other countries in this guide don\'t yet have an independently verified yield figure — treat unlisted countries\' yield as unknown, not assumed similar',
           'Panel wattage and inverter output limit are two different numbers — check both before buying',
           'A battery affects payback by letting you use more of your own surplus rather than exporting it at low or no credit',
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'The reference yield comparison is Germany (~1,003 kWh/kWp/year) vs. Cyprus (~1,646 kWh/kWp/year) — about 64% more yield in the sunnier market.',
+          'The reference yield comparison is PVGIS-based: Stuttgart (~1,130 kWh/kWp/year) vs. Nicosia, Cyprus (~1,630 kWh/kWp/year) for a 35° south-facing array with 14% losses — about 44% more yield in the sunnier market; a vertical balcony mount yields less.',
           'Most other countries in this cluster do not yet have an independently verified yield figure — this guide does not assert a specific number for them.',
           'Panel wattage (what the panel can generate) and inverter output limit (what the inverter is allowed to push into your outlet) are different numbers — check both.',
           'Hardware pricing is verified with a source for most countries here, but explicitly flagged unverified for Brazil, Mexico, and the Gulf/MENA region — treat those as approximate.',
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Inputs Should You Use for Your Own Payback Estimate?',
         content: [
           '**Payback is system cost divided by the yearly value of the electricity it displaces, so after hardware price the two inputs that matter are your yield and your electricity price.** Two reference points for the price side: Germany\'s household average was [37.3 ct/kWh for the year to date in BDEW\'s latest price analysis](https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/), and the US residential average was [18.16 cents/kWh in EIA\'s latest monthly data (August)](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a). Both move over time, so use your own tariff, and remember that only the share of production your home uses at the moment it is produced displaces purchased power.',
-          'On the yield side, the Germany and Cyprus reference figures above depend on tilt, orientation and loss assumptions, and the Cyprus figure could not be traced to a primary source at the last refresh. As a cross-check, the EU\'s [PVGIS tool](https://re.jrc.ec.europa.eu/pvg_tools/en/) returns roughly 1,630 kWh/kWp per year for Nicosia and 1,130 kWh/kWp for Stuttgart for a south-facing, 35-degree system with 14% losses (calculation run at the refresh; a vertical balcony railing yields less than either figure). Run PVGIS for your own address, tilt and direction before relying on any country average.',
+          'On the yield side, the Stuttgart and Nicosia figures above come from the EU\'s [PVGIS tool](https://re.jrc.ec.europa.eu/pvg_tools/en/) (PVGIS-SARAH3 radiation data, fixed south-facing array at 35° tilt, 14% system losses, horizon shading included; run 2026-11-20 at 48.78° N 9.18° E for Stuttgart and 35.17° N 33.36° E for Nicosia). A vertical balcony railing yields less than either figure, so run PVGIS for your own address, tilt and direction before relying on any country average.',
         ],
       },
       withVsWithoutBattery: {
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'How much more solar yield does a sunny climate produce than Germany?', a: 'The reference comparison is Cyprus at roughly 64% more annual yield per installed kWp than Germany (Stuttgart reference) — 1,646 kWh/kWp versus 1,003 kWh/kWp.' },
+          { q: 'How much more solar yield does a sunny climate produce than Germany?', a: 'In the PVGIS reference calculation used here (1 kWp, 35° tilt, facing south, 14% losses, PVGIS-SARAH3 data, checked 2026-11-20), Nicosia in Cyprus yields about 1,630 kWh/kWp per year versus about 1,130 kWh/kWp near Stuttgart — roughly 44% more. A vertical railing mount yields less at both sites, so treat this as a relative comparison.' },
           { q: 'Do you have yield data for every country in this guide?', a: 'No — only the Germany/Cyprus comparison is used as a reference in this dataset. Other countries\' yield figures were not obtained this research pass and are marked accordingly rather than estimated.' },
           { q: 'What\'s the difference between panel wattage and inverter limit?', a: 'Panel wattage is what the panel can generate under ideal conditions; the inverter limit is what\'s actually allowed to reach your outlet, often capped by local regulation. The inverter limit usually governs real-world output more than the panel\'s peak rating.' },
           { q: 'How long does balcony solar take to pay for itself?', a: 'This depends on your hardware price, local electricity rate, and yield — all three vary by country. Use the price table above alongside your local electricity rate for a realistic estimate rather than relying on a single global figure.' },
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Balcony Solar Sizing, Yield & Payback: What to Expect by Country',
-      description: 'Balcony solar sizing, yield, and payback estimates by country — verified pricing and a Germany/Cyprus yield comparison as a reference point.',
+      description: 'Balcony solar sizing, yield and payback by country: panel vs. inverter limits, PVGIS-based yield examples and dated kit prices by market.',
       datePublished: '2026-07-02',
       dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Dimensionamiento, rendimiento y amortización de la energía solar de balcón: qué esperar según el país',
     seoTitle: 'Calculadora de amortización solar de balcón (2026)',
     intro: 'Cuánta energía necesitas, cuánta produce realmente un panel en tu clima y cuánto tarda en amortizarse son tres preguntas distintas con tres respuestas distintas — y las tres dependen en gran medida de dónde vives, no solo del equipo que compres.',
-    metaDescription: 'Dimensionamiento, rendimiento y estimaciones de amortización de la energía solar de balcón por país — precios verificados y una comparación de rendimiento Alemania/Chipre como punto de referencia.',
+    metaDescription: 'Dimensionamiento, rendimiento y amortización de la energía solar de balcón por país: límites de panel e inversor, ejemplos de rendimiento con PVGIS y precios fechados.',
     publishDate: '2026-07-02',
     dateModified: '2026-11-20',
     readTime: '10 min de lectura',
@@ -172,13 +172,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Compradores de energía solar de balcón que estiman el tamaño del sistema, la producción esperada y el plazo de amortización',
     primaryTerm: 'amortización de la energía solar de balcón',
     targetKeywords: ['amortización de la energía solar de balcón', 'rendimiento de la energía solar de balcón según ubicación', 'cuánta energía produce la energía solar de balcón', 'guía de dimensionamiento de energía solar de balcón'],
-    leadAnswerBlock: '**Un clima más soleado puede producir un rendimiento solar considerablemente mayor que el de referencia del norte de Europa — la comparación de referencia que usa esta guía es Alemania (Stuttgart), con aproximadamente 1,003 kWh/kWp al año, frente a Chipre, con aproximadamente 1,646 kWh/kWp, un 64% más.** El plazo de amortización depende tanto de esa diferencia de rendimiento como del precio local del equipo, que varía lo suficiente según el país como para que una cifra de amortización global única resulte engañosa — usa las tablas por país que aparecen a continuación como punto de partida.',
+    leadAnswerBlock: '**El clima soleado cambia cuánto produce un sistema de balcón: en el cálculo de referencia de PVGIS usado en esta guía, 1 kWp inclinado 35° y orientado al sur rinde unos 1,130 kWh al año cerca de Stuttgart (Alemania) y unos 1,630 kWh cerca de Nicosia (Chipre), aproximadamente un 44% más.** Son estimaciones PVGIS-SARAH3 de la herramienta PVGIS del JRC de la UE (pérdidas del sistema del 14%, sombras del horizonte incluidas, consultadas el 2026-11-20); una barandilla vertical rinde menos, así que úsalas como comparación relativa, no como previsión. La amortización depende de ese rendimiento y de los precios locales del equipo, que varían demasiado para una cifra global — usa las tablas por país como punto de partida.',
     quickAnswerTop: {
       es: {
         question: '¿Cuánta energía producirá realmente mi sistema solar de balcón y cuándo se amortiza?',
-        answer: 'La producción depende principalmente de tu rendimiento solar local (kWh por kWp instalado al año) y de qué tan bien se alinea tu patrón de consumo con las horas de luz solar. El punto de comparación de referencia aquí es Alemania, con aproximadamente 1,003 kWh/kWp, frente a Chipre, con aproximadamente 1,646 kWh/kWp — un 64% más en el mercado más soleado. El plazo de amortización combina esa diferencia de rendimiento con el precio local del equipo y tu tarifa eléctrica, que también varían según el país.',
+        answer: 'La producción depende sobre todo del rendimiento solar local (kWh por kWp instalado al año) y de cuánto coincide tu consumo con las horas de luz. En el cálculo de referencia de PVGIS usado aquí (1 kWp, inclinación de 35°, orientación sur, pérdidas del 14%), Stuttgart rinde unos 1,130 kWh/kWp al año y Nicosia (Chipre) unos 1,630 — aproximadamente un 44% más en el mercado más soleado. La amortización combina ese rendimiento con el precio local del equipo y la tarifa eléctrica, que varían según el país.',
         bullets: [
-          'Referencia de rendimiento: Alemania ~1,003 kWh/kWp/año frente a Chipre ~1,646 kWh/kWp/año',
+          'Rendimiento de referencia (PVGIS, 1 kWp, 35° sur, pérdidas del 14%): Stuttgart ~1,130 kWh/kWp/año frente a Nicosia ~1,630 kWh/kWp/año',
           'La mayoría de los demás países de esta guía todavía no cuentan con una cifra de rendimiento verificada de forma independiente — trata el rendimiento de los países no listados como desconocido, no como similar por suposición',
           'La potencia del panel y el límite de salida del inversor son dos cifras distintas — verifica ambas antes de comprar',
           'Una batería influye en la amortización al permitirte usar más de tu propio excedente en lugar de exportarlo con poco o ningún crédito',
@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'La comparación de rendimiento de referencia es Alemania (~1,003 kWh/kWp/año) frente a Chipre (~1,646 kWh/kWp/año) — aproximadamente un 64% más de rendimiento en el mercado más soleado.',
+          'La comparación de rendimiento de referencia se basa en PVGIS: Stuttgart (~1,130 kWh/kWp/año) frente a Nicosia, Chipre (~1,630 kWh/kWp/año) para una instalación a 35° orientada al sur con pérdidas del 14% — aproximadamente un 44% más en el mercado más soleado; un montaje vertical en balcón rinde menos.',
           'La mayoría de los demás países de este grupo de artículos todavía no cuentan con una cifra de rendimiento verificada de forma independiente — esta guía no afirma una cifra concreta para ellos.',
           'La potencia del panel (lo que el panel puede generar) y el límite de salida del inversor (lo que el inversor puede inyectar en tu toma de corriente) son cifras distintas — verifica ambas.',
           'El precio del equipo está verificado con una fuente para la mayoría de los países aquí incluidos, pero está explícitamente marcado como no verificado para Brasil, México y la región del Golfo/MENA — trátalos como aproximados.',
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué datos deberías usar para tu propio cálculo de amortización?',
         content: [
           '**La amortización es el coste del sistema dividido entre el valor anual de la electricidad que sustituye, así que, después del precio del equipo, los dos datos que importan son tu rendimiento y tu precio de la electricidad.** Dos referencias del lado del precio: el promedio doméstico de Alemania fue de [37.3 ct/kWh en lo que va de año según el último análisis de precios de BDEW](https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/), y el promedio residencial de EE. UU. fue de [18.16 centavos/kWh en los últimos datos mensuales de la EIA (agosto)](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a). Ambos cambian con el tiempo, así que usa tu propia tarifa y recuerda que solo la parte de la producción que tu hogar consume en el momento en que se genera sustituye electricidad comprada.',
-          'Del lado del rendimiento, las cifras de referencia de Alemania y Chipre de arriba dependen de la inclinación, la orientación y las pérdidas supuestas, y la cifra de Chipre no pudo rastrearse hasta una fuente primaria en la última actualización. Como contraste, la [herramienta PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/en/) de la UE da aproximadamente 1,630 kWh/kWp al año para Nicosia y 1,130 kWh/kWp para Stuttgart en un sistema orientado al sur, con 35 grados de inclinación y 14 % de pérdidas (cálculo realizado en la actualización; una barandilla de balcón vertical rinde menos que ambas cifras). Ejecuta PVGIS con tu propia dirección, inclinación y orientación antes de fiarte de un promedio por país.',
+          'En cuanto al rendimiento, las cifras de Stuttgart y Nicosia de arriba proceden de la [herramienta PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/en/) de la UE (datos de radiación PVGIS-SARAH3, instalación fija orientada al sur con 35° de inclinación, pérdidas del sistema del 14%, sombras del horizonte incluidas; calculado el 2026-11-20 en 48.78° N 9.18° E para Stuttgart y 35.17° N 33.36° E para Nicosia). Una barandilla vertical de balcón rinde menos que ambas cifras, así que ejecuta PVGIS con tu dirección, inclinación y orientación antes de fiarte de un promedio por país.',
         ],
       },
       withVsWithoutBattery: {
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Cuánto más rendimiento solar produce un clima soleado que Alemania?', a: 'La comparación de referencia es Chipre, con aproximadamente un 64% más de rendimiento anual por kWp instalado que Alemania (referencia de Stuttgart) — 1,646 kWh/kWp frente a 1,003 kWh/kWp.' },
+          { q: '¿Cuánto más rendimiento solar produce un clima soleado que Alemania?', a: 'En el cálculo de referencia de PVGIS usado aquí (1 kWp, inclinación de 35°, orientación sur, pérdidas del 14%, datos PVGIS-SARAH3, consultado el 2026-11-20), Nicosia (Chipre) rinde unos 1,630 kWh/kWp al año frente a unos 1,130 kWh/kWp cerca de Stuttgart — aproximadamente un 44% más. Un montaje vertical en barandilla rinde menos en ambos lugares, así que trátalo como comparación relativa.' },
           { q: '¿Tienen datos de rendimiento para todos los países de esta guía?', a: 'No — solo la comparación Alemania/Chipre se usa como referencia en este conjunto de datos. Las cifras de rendimiento de otros países no se obtuvieron en esta ronda de investigación y están marcadas como tal en lugar de estimadas.' },
           { q: '¿Cuál es la diferencia entre la potencia del panel y el límite del inversor?', a: 'La potencia del panel es lo que el panel puede generar en condiciones ideales; el límite del inversor es lo que realmente se permite que llegue a tu toma de corriente, a menudo limitado por la normativa local. El límite del inversor suele determinar la producción real más que la potencia máxima del panel.' },
           { q: '¿Cuánto tarda en amortizarse la energía solar de balcón?', a: 'Depende del precio del equipo, la tarifa eléctrica local y el rendimiento — los tres varían según el país. Usa la tabla de precios anterior junto con tu tarifa eléctrica local para obtener una estimación realista, en lugar de basarte en una única cifra global.' },
@@ -283,7 +283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Dimensionamiento, rendimiento y amortización de la energía solar de balcón: qué esperar según el país',
-      description: 'Dimensionamiento, rendimiento y estimaciones de amortización de la energía solar de balcón por país — precios verificados y una comparación de rendimiento Alemania/Chipre como punto de referencia.',
+      description: 'Dimensionamiento, rendimiento y amortización de la energía solar de balcón por país: límites de panel e inversor, ejemplos de rendimiento con PVGIS y precios fechados.',
       datePublished: '2026-07-02',
       dateModified: '2026-11-20',
       inLanguage: 'es',
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Dimensionamento, rendimento e retorno do investimento em energia solar de varanda: o que esperar por país',
     seoTitle: 'Calculadora de retorno de energia solar de varanda (2026)',
     intro: 'Quanta energia você precisa, quanto um painel realmente produz no seu clima e quanto tempo leva para se pagar são três perguntas diferentes com três respostas diferentes — e as três dependem muito de onde você mora, não apenas do equipamento que você compra.',
-    metaDescription: 'Dimensionamento, rendimento e estimativas de retorno do investimento em energia solar de varanda por país — preços verificados e uma comparação de rendimento Alemanha/Chipre como referência.',
+    metaDescription: 'Dimensionamento, rendimento e retorno da energia solar de varanda por país: limites de painel e inversor, exemplos de rendimento do PVGIS e preços datados.',
     publishDate: '2026-07-02',
     dateModified: '2026-11-20',
     readTime: '10 min de leitura',
@@ -310,13 +310,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Compradores de energia solar de varanda que estão estimando o tamanho do sistema, a produção esperada e o prazo de retorno do investimento',
     primaryTerm: 'retorno do investimento em energia solar de varanda',
     targetKeywords: ['retorno do investimento em energia solar de varanda', 'rendimento da energia solar de varanda por localização', 'quanta energia a energia solar de varanda produz', 'guia de dimensionamento de energia solar de varanda'],
-    leadAnswerBlock: '**Um clima mais ensolarado pode produzir um rendimento solar consideravelmente maior do que a referência do norte da Europa — a comparação de referência usada neste guia é a Alemanha (Stuttgart), com aproximadamente 1,003 kWh/kWp por ano, contra o Chipre, com aproximadamente 1,646 kWh/kWp, cerca de 64% a mais.** O prazo de retorno do investimento depende tanto dessa diferença de rendimento quanto do preço local do equipamento, que varia o suficiente entre países para que um único número global de retorno seja enganoso — use as tabelas por país abaixo como ponto de partida.',
+    leadAnswerBlock: '**O clima ensolarado muda quanto um sistema de varanda produz: no cálculo de referência do PVGIS usado neste guia, 1 kWp inclinado 35° e voltado para o sul rende cerca de 1,130 kWh por ano perto de Stuttgart (Alemanha) e cerca de 1,630 kWh perto de Nicósia (Chipre), aproximadamente 44% a mais.** São estimativas PVGIS-SARAH3 da ferramenta PVGIS do JRC da UE (perdas do sistema de 14%, sombreamento do horizonte incluído, consultadas em 2026-11-20); um guarda-corpo vertical rende menos, então use-as como comparação relativa, não como previsão. O retorno depende desse rendimento e dos preços locais do equipamento, que variam demais para um número global — use as tabelas por país como ponto de partida.',
     quickAnswerTop: {
       pt: {
         question: 'Quanta energia meu sistema solar de varanda vai realmente produzir, e quando ele se paga?',
-        answer: 'A produção depende principalmente do seu rendimento solar local (kWh por kWp instalado por ano) e de quão bem seu padrão de consumo se alinha com as horas de luz do dia. O ponto de comparação de referência aqui é a Alemanha, com aproximadamente 1,003 kWh/kWp, contra o Chipre, com aproximadamente 1,646 kWh/kWp — cerca de 64% a mais no mercado mais ensolarado. O prazo de retorno combina essa diferença de rendimento com o preço local do equipamento e sua tarifa de energia, que também variam por país.',
+        answer: 'A produção depende principalmente do rendimento solar local (kWh por kWp instalado ao ano) e de quanto o seu consumo coincide com as horas de sol. No cálculo de referência do PVGIS usado aqui (1 kWp, inclinação de 35°, voltado para o sul, perdas de 14%), Stuttgart rende cerca de 1,130 kWh/kWp por ano e Nicósia (Chipre) cerca de 1,630 — aproximadamente 44% a mais no mercado mais ensolarado. O retorno combina esse rendimento com o preço local do equipamento e a tarifa de energia, que variam por país.',
         bullets: [
-          'Referência de rendimento: Alemanha ~1,003 kWh/kWp/ano vs. Chipre ~1,646 kWh/kWp/ano',
+          'Rendimento de referência (PVGIS, 1 kWp, 35° sul, perdas de 14%): Stuttgart ~1,130 kWh/kWp/ano vs. Nicósia ~1,630 kWh/kWp/ano',
           'A maioria dos outros países deste guia ainda não tem uma cifra de rendimento verificada de forma independente — trate o rendimento de países não listados como desconhecido, não como semelhante por suposição',
           'A potência do painel e o limite de saída do inversor são dois números diferentes — verifique os dois antes de comprar',
           'Uma bateria afeta o retorno do investimento ao permitir que você use mais do seu próprio excedente em vez de exportá-lo com pouco ou nenhum crédito',
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'A comparação de rendimento de referência é Alemanha (~1,003 kWh/kWp/ano) vs. Chipre (~1,646 kWh/kWp/ano) — cerca de 64% mais rendimento no mercado mais ensolarado.',
+          'A comparação de rendimento de referência é baseada no PVGIS: Stuttgart (~1,130 kWh/kWp/ano) vs. Nicósia, Chipre (~1,630 kWh/kWp/ano) para um arranjo a 35° voltado para o sul com perdas de 14% — cerca de 44% a mais no mercado mais ensolarado; uma instalação vertical em varanda rende menos.',
           'A maioria dos outros países deste grupo de artigos ainda não tem uma cifra de rendimento verificada de forma independente — este guia não afirma um número específico para eles.',
           'A potência do painel (o que o painel pode gerar) e o limite de saída do inversor (o que o inversor pode injetar na sua tomada) são números diferentes — verifique os dois.',
           'O preço do equipamento é verificado com uma fonte para a maioria dos países aqui, mas é explicitamente sinalizado como não verificado para Brasil, México e a região do Golfo/MENA — trate-os como aproximados.',
@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quais dados você deve usar na sua própria estimativa de retorno?',
         content: [
           '**O retorno do investimento é o custo do sistema dividido pelo valor anual da eletricidade que ele substitui, então, depois do preço do equipamento, os dois dados que importam são a sua geração e o seu preço de energia.** Duas referências do lado do preço: a média residencial da Alemanha foi de [37.3 ct/kWh no acumulado do ano na análise de preços mais recente da BDEW](https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/), e a média residencial dos EUA foi de [18.16 centavos/kWh nos dados mensais mais recentes da EIA (agosto)](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a). Ambos mudam com o tempo, então use a sua própria tarifa e lembre-se de que só a parcela da produção que a sua casa consome no momento em que é gerada substitui energia comprada.',
-          'Do lado da geração, os valores de referência de Alemanha e Chipre acima dependem de inclinação, orientação e perdas assumidas, e o valor de Chipre não pôde ser rastreado até uma fonte primária na última atualização. Como conferência, a [ferramenta PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/en/) da UE retorna cerca de 1,630 kWh/kWp por ano para Nicósia e 1,130 kWh/kWp para Stuttgart em um sistema voltado para o sul, com 35 graus de inclinação e 14% de perdas (cálculo feito na atualização; um guarda-corpo vertical de varanda rende menos que os dois valores). Rode o PVGIS para o seu próprio endereço, inclinação e orientação antes de confiar em uma média por país.',
+          'Quanto ao rendimento, os valores de Stuttgart e Nicósia acima vêm da [ferramenta PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/en/) da UE (dados de radiação PVGIS-SARAH3, arranjo fixo voltado para o sul com inclinação de 35°, perdas do sistema de 14%, sombreamento do horizonte incluído; calculado em 2026-11-20 em 48.78° N 9.18° E para Stuttgart e 35.17° N 33.36° E para Nicósia). Um guarda-corpo vertical de varanda rende menos que os dois valores, então rode o PVGIS para o seu endereço, inclinação e direção antes de confiar em qualquer média por país.',
         ],
       },
       withVsWithoutBattery: {
@@ -406,7 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Quanto mais rendimento solar um clima ensolarado produz em comparação com a Alemanha?', a: 'A comparação de referência é o Chipre, com cerca de 64% mais rendimento anual por kWp instalado do que a Alemanha (referência de Stuttgart) — 1,646 kWh/kWp contra 1,003 kWh/kWp.' },
+          { q: 'Quanto mais rendimento solar um clima ensolarado produz do que a Alemanha?', a: 'No cálculo de referência do PVGIS usado aqui (1 kWp, inclinação de 35°, voltado para o sul, perdas de 14%, dados PVGIS-SARAH3, consultado em 2026-11-20), Nicósia (Chipre) rende cerca de 1,630 kWh/kWp por ano contra cerca de 1,130 kWh/kWp perto de Stuttgart — aproximadamente 44% a mais. Uma instalação vertical no guarda-corpo rende menos nos dois locais, então trate isso como comparação relativa.' },
           { q: 'Vocês têm dados de rendimento para todos os países deste guia?', a: 'Não — apenas a comparação Alemanha/Chipre é usada como referência neste conjunto de dados. Os números de rendimento de outros países não foram obtidos nesta rodada de pesquisa e estão marcados como tal, em vez de estimados.' },
           { q: 'Qual é a diferença entre a potência do painel e o limite do inversor?', a: 'A potência do painel é o que o painel pode gerar em condições ideais; o limite do inversor é o que realmente pode chegar à sua tomada, muitas vezes limitado pela regulamentação local. O limite do inversor costuma determinar a produção real mais do que a potência máxima do painel.' },
           { q: 'Quanto tempo a energia solar de varanda leva para se pagar?', a: 'Isso depende do preço do equipamento, da tarifa de energia local e do rendimento — os três variam por país. Use a tabela de preços acima junto com sua tarifa de energia local para uma estimativa realista, em vez de confiar em um único número global.' },
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Dimensionamento, rendimento e retorno do investimento em energia solar de varanda: o que esperar por país',
-      description: 'Dimensionamento, rendimento e estimativas de retorno do investimento em energia solar de varanda por país — preços verificados e uma comparação de rendimento Alemanha/Chipre como referência.',
+      description: 'Dimensionamento, rendimento e retorno da energia solar de varanda por país: limites de painel e inversor, exemplos de rendimento do PVGIS e preços datados.',
       datePublished: '2026-07-02',
       dateModified: '2026-11-20',
       inLanguage: 'pt-BR',
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'تحديد حجم الطاقة الشمسية للشرفة، والإنتاجية، ومدة استرداد التكلفة: ما يمكن توقعه حسب الدولة',
     seoTitle: 'حاسبة استرداد تكلفة الطاقة الشمسية للشرفة (2026)',
     intro: 'كمية الطاقة التي تحتاجها، والكمية الفعلية التي ينتجها اللوح الشمسي في مناخك، والمدة التي يستغرقها استرداد تكلفته هي ثلاثة أسئلة منفصلة لها ثلاث إجابات منفصلة — وكلها تعتمد بشكل كبير على مكان إقامتك، وليس فقط على الجهاز الذي تشتريه.',
-    metaDescription: 'تقديرات تحديد الحجم والإنتاجية واسترداد التكلفة للطاقة الشمسية للشرفة حسب الدولة — أسعار موثّقة ومقارنة إنتاجية بين ألمانيا وقبرص كنقطة مرجعية، محدّثة في يوليو 2026.',
+    metaDescription: 'تحديد الحجم والإنتاجية والاسترداد للطاقة الشمسية للشرفة حسب الدولة: حدود اللوح والعاكس، أمثلة إنتاجية من PVGIS، وأسعار مؤرَّخة.',
     publishDate: '2026-07-02',
     dateModified: '2026-11-20',
     readTime: '10 دقائق للقراءة',
@@ -448,13 +448,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'مشترو أنظمة الطاقة الشمسية للشرفة الذين يقدّرون حجم النظام، والإنتاج المتوقع، ومدة استرداد التكلفة',
     primaryTerm: 'استرداد تكلفة الطاقة الشمسية للشرفة',
     targetKeywords: ['استرداد تكلفة الطاقة الشمسية للشرفة', 'إنتاجية الطاقة الشمسية للشرفة حسب الموقع', 'كمية الطاقة التي تنتجها الطاقة الشمسية للشرفة', 'دليل تحديد حجم الطاقة الشمسية للشرفة'],
-    leadAnswerBlock: '**يمكن أن ينتج المناخ الأكثر إشراقًا بالشمس إنتاجية شمسية أعلى بشكل ملحوظ من خط الأساس في شمال أوروبا — والمقارنة المرجعية المستخدمة في هذا الدليل هي ألمانيا (شتوتغارت) بمعدل يقارب 1,003 kWh/kWp سنويًا مقابل قبرص بمعدل يقارب 1,646 kWh/kWp، أي أكثر بنحو 64%.** تعتمد مدة استرداد التكلفة على فارق الإنتاجية هذا وعلى سعر الجهاز محليًا معًا، وهو ما يتفاوت بما يكفي بين الدول بحيث يكون رقم استرداد التكلفة العالمي الواحد مضللاً — استخدم جداول الدول أدناه كنقطة انطلاق.',
+    leadAnswerBlock: '**يغيّر المناخ كمية إنتاج نظام الشرفة: في حساب المرجع بأداة PVGIS المستخدم في هذا الدليل، ينتج 1 kWp بميل 35° ومتجه جنوبًا نحو 1130 kWh سنويًا قرب شتوتغارت (ألمانيا) ونحو 1630 kWh قرب نيقوسيا (قبرص)، أي أكثر بنحو 44%.** هذه تقديرات PVGIS-SARAH3 من أداة PVGIS التابعة لمركز البحوث المشترك للاتحاد الأوروبي (خسائر النظام 14%، مع حساب حجب الأفق، بتاريخ 2026-11-20)؛ والتركيب العمودي على الدرابزين ينتج أقل، فاستخدمها كمقارنة نسبية لا كتوقع. يعتمد الاسترداد على هذا الإنتاج وعلى أسعار المعدات المحلية التي تتباين كثيرًا بحيث لا يصلح رقم عالمي واحد — استخدم جداول الدول أدناه كنقطة انطلاق.',
     quickAnswerTop: {
       ar: {
         question: 'كم من الطاقة سينتجها نظام الطاقة الشمسية للشرفة الخاص بي فعليًا، ومتى يسترد تكلفته؟',
-        answer: 'يعتمد الإنتاج بشكل أساسي على إنتاجية الطاقة الشمسية المحلية لديك (kWh لكل kWp مركّب سنويًا) ومدى توافق نمط استهلاكك مع ساعات ضوء النهار. نقطة المقارنة المرجعية المستخدمة هنا هي ألمانيا بمعدل يقارب 1,003 kWh/kWp مقابل قبرص بمعدل يقارب 1,646 kWh/kWp — أي أكثر بنحو 64% في السوق الأكثر إشراقًا بالشمس. يجمع الجدول الزمني لاسترداد التكلفة بين فارق الإنتاجية هذا وسعر الجهاز المحلي وتعرفة الكهرباء لديك، وكلاهما يتفاوت حسب الدولة.',
+        answer: 'يعتمد الإنتاج أساسًا على إنتاجية الطاقة الشمسية المحلية (kWh لكل kWp مركّب سنويًا) ومدى توافق استهلاكك مع ساعات النهار. في حساب المرجع بأداة PVGIS المستخدم هنا (1 kWp، ميل 35°، اتجاه جنوبي، خسائر 14%) تنتج شتوتغارت نحو 1130 kWh/kWp سنويًا ونيقوسيا (قبرص) نحو 1630 — أي أكثر بنحو 44% في السوق الأكثر شمسًا. يجمع الاسترداد بين هذا الإنتاج وسعر المعدات المحلي وتعرفة الكهرباء، وكلاهما يختلف حسب الدولة.',
         bullets: [
-          'مرجع الإنتاجية: ألمانيا ~1,003 kWh/kWp سنويًا مقابل قبرص ~1,646 kWh/kWp سنويًا',
+          'مرجع الإنتاجية (PVGIS، 1 kWp، ميل 35° جنوبًا، خسائر 14%): شتوتغارت ~1130 kWh/kWp سنويًا مقابل نيقوسيا ~1630 kWh/kWp سنويًا',
           'معظم الدول الأخرى في هذا الدليل ليس لديها بعد رقم إنتاجية موثّق بشكل مستقل — تعامل مع إنتاجية الدول غير المدرجة على أنها غير معروفة، وليست مفترضة كمماثلة',
           'قدرة اللوح بالواط وحد إخراج العاكس رقمان مختلفان — تحقق من كليهما قبل الشراء',
           'تؤثر البطارية على استرداد التكلفة من خلال السماح لك باستخدام المزيد من فائضك الخاص بدلاً من تصديره بائتمان منخفض أو معدوم',
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'مقارنة الإنتاجية المرجعية هي ألمانيا (~1,003 kWh/kWp سنويًا) مقابل قبرص (~1,646 kWh/kWp سنويًا) — أي أكثر بنحو 64% من الإنتاجية في السوق الأكثر إشراقًا بالشمس.',
+          'مقارنة الإنتاجية المرجعية مبنية على PVGIS: شتوتغارت (~1130 kWh/kWp سنويًا) مقابل نيقوسيا، قبرص (~1630 kWh/kWp سنويًا) لمصفوفة بميل 35° متجهة جنوبًا وخسائر 14% — أي أكثر بنحو 44% في السوق الأكثر شمسًا؛ والتركيب العمودي على الشرفة ينتج أقل.',
           'معظم الدول الأخرى في هذه المجموعة من المقالات ليس لديها بعد رقم إنتاجية موثّق بشكل مستقل — لا يذكر هذا الدليل رقمًا محددًا لها.',
           'قدرة اللوح بالواط (ما يمكن أن ينتجه اللوح) وحد إخراج العاكس (ما يُسمح للعاكس بضخه إلى مأخذ التيار الكهربائي لديك) رقمان مختلفان — تحقق من كليهما.',
           'أسعار الأجهزة موثّقة بمصدر لمعظم الدول الواردة هنا، لكنها مُعلَّمة صراحةً كغير موثّقة بالنسبة للبرازيل والمكسيك ومنطقة الخليج/الشرق الأوسط وشمال أفريقيا — تعامل معها كتقديرية.',
@@ -530,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما المدخلات التي ينبغي استخدامها في تقدير فترة الاسترداد الخاص بك؟',
         content: [
           '**فترة الاسترداد هي تكلفة النظام مقسومة على القيمة السنوية للكهرباء التي يحلّ محلها، لذلك بعد سعر المعدات يهمّ مدخلان هما إنتاجك وسعر الكهرباء لديك.** نقطتا مرجع من جانب السعر: بلغ متوسط الأسر في ألمانيا [37.3 ct/kWh منذ بداية العام في أحدث تحليل للأسعار من BDEW](https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/)، وبلغ متوسط السعر السكني في الولايات المتحدة [18.16 سنتاً/kWh في أحدث بيانات شهرية لدى EIA (أغسطس)](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a). كلاهما يتغير مع الوقت، لذا استخدم تعرفتك الخاصة، وتذكر أن الجزء الذي يستهلكه منزلك لحظة الإنتاج هو وحده الذي يحلّ محل الكهرباء المشتراة.',
-          'من جانب الإنتاج، تعتمد أرقام المرجع لألمانيا وقبرص أعلاه على الميل والاتجاه وافتراضات الفاقد، ولم يمكن تتبّع رقم قبرص إلى مصدر أولي عند آخر تحديث. وللتحقق المتقاطع، تعطي [أداة PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/en/) التابعة للاتحاد الأوروبي نحو 1,630 kWh/kWp سنوياً لنيقوسيا و1,130 kWh/kWp لشتوتغارت لنظام موجّه جنوباً بميل 35 درجة وفاقد 14% (حساب أُجري عند التحديث؛ والتركيب على سياج شرفة عمودي ينتج أقل من الرقمين). شغّل PVGIS لعنوانك وميلك واتجاهك قبل الاعتماد على أي متوسط قطري.',
+          'من جانب الإنتاج، تأتي أرقام شتوتغارت ونيقوسيا أعلاه من [أداة PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/en/) التابعة للاتحاد الأوروبي (بيانات إشعاع PVGIS-SARAH3، مصفوفة ثابتة متجهة جنوبًا بميل 35°، خسائر النظام 14%، مع حساب حجب الأفق؛ حُسبت بتاريخ 2026-11-20 عند 48.78° شمالًا و9.18° شرقًا لشتوتغارت و35.17° شمالًا و33.36° شرقًا لنيقوسيا). درابزين الشرفة العمودي ينتج أقل من الرقمين، لذا شغّل PVGIS لعنوانك وميلك واتجاهك قبل الاعتماد على أي متوسط وطني.',
         ],
       },
       withVsWithoutBattery: {
@@ -544,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'كم إنتاجية شمسية إضافية ينتجها المناخ المشمس مقارنة بألمانيا؟', a: 'المقارنة المرجعية هي قبرص، بإنتاجية سنوية أعلى بنحو 64% لكل kWp مركّب مقارنة بألمانيا (مرجع شتوتغارت) — 1,646 kWh/kWp مقابل 1,003 kWh/kWp.' },
+          { q: 'كم إنتاجية شمسية إضافية ينتجها المناخ المشمس مقارنة بألمانيا؟', a: 'في حساب المرجع بأداة PVGIS المستخدم هنا (1 kWp، ميل 35°، اتجاه جنوبي، خسائر 14%، بيانات PVGIS-SARAH3، بتاريخ 2026-11-20) تنتج نيقوسيا في قبرص نحو 1630 kWh/kWp سنويًا مقابل نحو 1130 kWh/kWp قرب شتوتغارت — أي أكثر بنحو 44%. التركيب العمودي على الدرابزين ينتج أقل في الموقعين، لذا اعتبرها مقارنة نسبية.' },
           { q: 'هل لديكم بيانات إنتاجية لكل دولة في هذا الدليل؟', a: 'لا — المقارنة بين ألمانيا وقبرص فقط تُستخدم مرجعًا في هذه البيانات. لم يتم الحصول على أرقام إنتاجية الدول الأخرى في جولة البحث هذه، وهي مُعلَّمة على هذا الأساس بدلاً من تقديرها.' },
           { q: 'ما الفرق بين قدرة اللوح وحد العاكس؟', a: 'قدرة اللوح هي ما يمكن أن ينتجه اللوح في الظروف المثالية؛ أما حد العاكس فهو ما يُسمح له فعليًا بالوصول إلى مأخذ التيار لديك، وغالبًا ما يكون محددًا بموجب اللوائح المحلية. عادةً ما يحدد حد العاكس الإنتاج الفعلي أكثر من التصنيف الأقصى للوح.' },
           { q: 'كم من الوقت تستغرق الطاقة الشمسية للشرفة لاسترداد تكلفتها؟', a: 'يعتمد ذلك على سعر الجهاز، والتعرفة الكهربائية المحلية، والإنتاجية — وتتفاوت الثلاثة حسب الدولة. استخدم جدول الأسعار أعلاه مع تعرفة الكهرباء المحلية لديك للحصول على تقدير واقعي بدلاً من الاعتماد على رقم عالمي واحد.' },
@@ -559,7 +559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'تحديد حجم الطاقة الشمسية للشرفة، والإنتاجية، ومدة استرداد التكلفة: ما يمكن توقعه حسب الدولة',
-      description: 'تقديرات تحديد الحجم والإنتاجية واسترداد التكلفة للطاقة الشمسية للشرفة حسب الدولة — أسعار موثّقة ومقارنة إنتاجية بين ألمانيا وقبرص كنقطة مرجعية، محدّثة في يوليو 2026.',
+      description: 'تحديد الحجم والإنتاجية والاسترداد للطاقة الشمسية للشرفة حسب الدولة: حدود اللوح والعاكس، أمثلة إنتاجية من PVGIS، وأسعار مؤرَّخة.',
       datePublished: '2026-07-02',
       dateModified: '2026-11-20',
       inLanguage: 'ar',
@@ -578,7 +578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'バルコニーソーラーのサイジング・発電量・回収期間：国別に見る目安',
     seoTitle: 'バルコニーソーラー サイジング＆回収期間計算（2026年）',
     intro: '必要な電力量、実際にお住まいの気候でパネルがどれだけ発電するか、そして元が取れるまでの期間 — これらは3つの別々の問いであり、それぞれ別の答えがあります。そしていずれも、購入するハードウェアだけでなく、お住まいの地域に大きく左右されます。',
-    metaDescription: '国別のバルコニーソーラーのサイジング・発電量・回収期間の目安 — 検証済み価格とドイツ／キプロスの発電量比較を参考データとして、。',
+    metaDescription: '国別のバルコニーソーラーのサイジング・発電量・回収期間:パネルとインバーターの上限、PVGISに基づく発電量の例、日付付きの価格。',
     publishDate: '2026-07-02',
     dateModified: '2026-11-20',
     readTime: '約10分',
@@ -586,13 +586,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'システムサイズ、想定発電量、回収期間を見積もっているバルコニーソーラー購入者',
     primaryTerm: 'balcony solar payback',
     targetKeywords: ['balcony solar payback', 'balcony solar yield by location', 'バルコニーソーラー 発電量', '阳台光伏'],
-    leadAnswerBlock: '**日照条件の良い気候では、北欧を基準とした場合よりも意味のある差で発電量が多くなります — 本ガイドで用いる参考比較はドイツ（シュトゥットガルト）の年間約1,003kWh/kWpに対し、キプロスは約1,646kWh/kWp、約64%多い数値です。** 回収期間はこの発電量の差と現地のハードウェア価格の両方に左右され、価格は国によってかなり異なるため、単一のグローバルな回収期間数値は誤解を招きます — 以下の国別表を出発点として使ってください。',
+    leadAnswerBlock: '**気候によってバルコニー用システムの発電量は変わります。本ガイドで使うPVGISの基準計算では、傾斜35°・真南向きの1kWpあたり、ドイツのシュトゥットガルト付近で年間約1,130kWh、キプロスのニコシア付近で年間約1,630kWhで、約44%多くなります。** これはEU共同研究センター(JRC)のPVGISツールのPVGIS-SARAH3による推定値(システム損失14%、地平線の遮蔽を考慮、2026-11-20に取得)です。垂直の手すり設置では発電量が下がるため、予測ではなく相対比較としてお使いください。回収期間はこの発電量と地域ごとの機器価格に左右され、世界共通の一つの数字では誤解を招くため、以下の国別表を出発点にしてください。',
     quickAnswerTop: {
       ja: {
         question: 'バルコニーソーラーは実際どれくらい発電し、いつ元が取れますか？',
-        answer: '発電量は主にお住まいの地域の太陽光発電量（設置kWpあたりの年間kWh）と、使用パターンが日照時間とどれだけ一致するかに左右されます。ここで用いる参考比較データはドイツの約1,003kWh/kWpに対しキプロスの約1,646kWh/kWp — より日照の多い市場で約64%多い数値です。回収期間は、この発電量の差と、現地のハードウェア価格・電気料金を組み合わせて決まり、どちらも国によって異なります。',
+        answer: '発電量は主に地域の太陽光発電量(設置kWpあたりの年間kWh)と、使用パターンが日中とどれだけ重なるかで決まります。ここで使うPVGISの基準計算(1kWp、傾斜35°、真南向き、損失14%)では、シュトゥットガルトが年間約1,130kWh/kWp、キプロスのニコシアが約1,630kWh/kWpで、日照の多い市場のほうが約44%多くなります。回収期間は、この発電量に地域の機器価格と電気料金を組み合わせて決まり、いずれも国によって異なります。',
         bullets: [
-          '発電量の参考値：ドイツ 年間約1,003kWh/kWp vs. キプロス 年間約1,646kWh/kWp',
+          '発電量の参考値(PVGIS、1kWp、傾斜35°南向き、損失14%):シュトゥットガルト 年間約1,130kWh/kWp vs. ニコシア 年間約1,630kWh/kWp',
           '本ガイドの他のほとんどの国では独立検証済みの発電量データがまだない — 未掲載の国の発電量は不明として扱い、似ていると仮定しないこと',
           'パネルのワット数とインバーター出力制限は別の数値 — 購入前に両方を確認すること',
           'バッテリーは、余剰電力を低額または無償で売電する代わりに自家消費できるようにすることで、回収期間に影響する',
@@ -616,7 +616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '参考とする発電量比較は、ドイツ（年間約1,003kWh/kWp）とキプロス（年間約1,646kWh/kWp）— より日照の多い市場で約64%多い発電量。',
+          '参考とする発電量比較はPVGISに基づきます。傾斜35°・南向き・損失14%の場合、シュトゥットガルト(年間約1,130kWh/kWp)とキプロスのニコシア(年間約1,630kWh/kWp)で、日照の多い市場のほうが約44%多くなります。垂直のバルコニー設置では発電量が下がります。',
           '本クラスターの他のほとんどの国には独立検証済みの発電量データがまだない — 本ガイドはそれらの国の具体的な数値を主張していない。',
           'パネルワット数（パネルが発電できる量）とインバーター出力制限（インバーターがコンセントに送り込める量）は別の数値 — 両方を確認すること。',
           'ハードウェア価格はここでのほとんどの国で出典付きで検証されているが、ブラジル、メキシコ、湾岸/MENA地域については明示的に未検証とフラグが立っている — これらは目安として扱うこと。',
@@ -668,7 +668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ご自身の回収期間の試算には、どんな数値を使うべきですか？',
         content: [
           '**回収期間は、システム費用を、置き換えられる電気の年間価値で割ったものです。そのため、機器の価格に次いで重要なのは、発電量と電気料金の2点です。** 料金面の目安として、ドイツの家庭向け平均は[BDEWの最新の電気料金分析で年初来37.3 ct/kWh](https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/)、米国の住宅用平均は[EIAの最新の月次データ（8月）で18.16セント/kWh](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a)でした。どちらも変動しますので、ご自身の契約料金を使ってください。また、買電を置き換えるのは、発電した瞬間に家庭内で使われた分だけである点にもご注意ください。',
-          '発電量の面では、上記のドイツとキプロスの基準値は、傾き、向き、損失の仮定に左右され、キプロスの値は今回の更新時点で一次情報源までたどれませんでした。確認として、EUの[PVGISツール](https://re.jrc.ec.europa.eu/pvg_tools/en/)で、南向き・傾斜35度・損失14%のシステムを計算すると、ニコシアで年間約1,630 kWh/kWp、シュトゥットガルトで約1,130 kWh/kWpとなります（更新時に実施した計算です。垂直のバルコニー手すりへの設置では、どちらの値よりも少なくなります）。国の平均に頼る前に、ご自身の住所・傾き・向きでPVGISを実行してください。',
+          '発電量の面では、上記のシュトゥットガルトとニコシアの値はEUの[PVGISツール](https://re.jrc.ec.europa.eu/pvg_tools/en/)によるものです(PVGIS-SARAH3の日射データ、傾斜35°の南向き固定設置、システム損失14%、地平線の遮蔽を考慮。2026-11-20に北緯48.78°・東経9.18°(シュトゥットガルト)と北緯35.17°・東経33.36°(ニコシア)で計算)。垂直のバルコニー手すりではどちらの値よりも発電量が下がるため、国別平均に頼る前に、ご自身の住所・傾斜・向きでPVGISを実行してください。',
         ],
       },
       withVsWithoutBattery: {
@@ -682,7 +682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: '日照の良い気候はドイツと比べてどれくらい多く発電しますか？', a: '参考とする比較は、キプロスがドイツ（シュトゥットガルト基準）に対して設置kWpあたりの年間発電量が約64%多いというもの — 1,646kWh/kWp対1,003kWh/kWpです。' },
+          { q: '日照の良い気候はドイツと比べてどれくらい多く発電しますか?', a: 'ここで使うPVGISの基準計算(1kWp、傾斜35°、南向き、損失14%、PVGIS-SARAH3データ、2026-11-20取得)では、キプロスのニコシアは年間約1,630kWh/kWpで、シュトゥットガルト付近の約1,130kWh/kWpより約44%多くなります。垂直の手すり設置はどちらの地点でも発電量が下がるため、相対比較としてご覧ください。' },
           { q: 'このガイドのすべての国の発電量データはありますか？', a: 'いいえ — このデータセットで参考として用いているのはドイツ／キプロスの比較のみです。他の国の発電量データは今回の調査では取得されておらず、推定値ではなく該当する表記がされています。' },
           { q: 'パネルワット数とインバーター制限の違いは何ですか？', a: 'パネルワット数は理想的な条件下でパネルが発電できる量、インバーター制限は実際にコンセントに届くことが許容される量で、多くの場合地域の規制で上限が定められています。実世界の出力を左右するのは、通常パネルのピーク定格よりもインバーター制限です。' },
           { q: 'バルコニーソーラーの回収期間はどれくらいですか？', a: 'これはハードウェア価格、地域の電気料金、発電量に左右され、この3つすべてが国によって異なります。単一のグローバルな数値に頼るのではなく、上記の価格表とお住まいの地域の電気料金を組み合わせて現実的な見積もりを出してください。' },
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'バルコニーソーラーのサイジング・発電量・回収期間：国別に見る目安',
-      description: '国別のバルコニーソーラーのサイジング・発電量・回収期間の目安 — 検証済み価格とドイツ／キプロスの発電量比較を参考データとして、。',
+      description: '国別のバルコニーソーラーのサイジング・発電量・回収期間:パネルとインバーターの上限、PVGISに基づく発電量の例、日付付きの価格。',
       datePublished: '2026-07-02',
       dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '阳台光伏的容量选择、发电量与回本周期：各国预期一览',
     seoTitle: '阳台光伏容量与回本计算器（2026）',
     intro: '你需要多少电力、面板在你所在气候条件下实际能发多少电、以及需要多长时间才能收回成本——这是三个各自独立的问题，也有三个各自独立的答案，且三者都在很大程度上取决于你所在的地区，而不仅仅是你购买的硬件。',
-    metaDescription: '按国家划分的阳台光伏容量、发电量与回本周期估算——以核实的价格与德国/塞浦路斯发电量对比作为参考点，。',
+    metaDescription: '按国家划分的阳台光伏容量、发电量与回本周期估算:面板与逆变器上限、基于PVGIS的发电量示例及标注日期的价格。',
     publishDate: '2026-07-02',
     dateModified: '2026-11-20',
     readTime: '约10分钟',
@@ -724,13 +724,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '正在估算系统容量、预期发电量和回本周期的阳台光伏购买者',
     primaryTerm: '阳台光伏',
     targetKeywords: ['阳台光伏', 'balcony solar payback', 'balcony solar yield by location', '阳台光伏发电量'],
-    leadAnswerBlock: '**更晴朗的气候能产生远高于北欧基准的太阳能发电量——本指南采用的参考对比是德国（斯图加特）每年约1,003kWh/kWp，而塞浦路斯约为1,646kWh/kWp，高出约64%。** 回本周期同时取决于这一发电量差异和当地硬件价格，而硬件价格因国家而异，差异之大足以使单一的全球回本周期数字产生误导——请以下方的国家对比表作为你的起点。',
+    leadAnswerBlock: '**气候会改变阳台系统的发电量:在本指南使用的PVGIS基准计算中,倾角35°、朝南的1kWp系统,在德国斯图加特附近年发电约1,130kWh,在塞浦路斯尼科西亚附近约1,630kWh,多约44%。** 这些是欧盟联合研究中心(JRC)PVGIS工具的PVGIS-SARAH3估算值(系统损耗14%,已计入地平线遮挡,于2026-11-20查询);垂直栏杆安装的发电量更低,请将其视为相对比较而非预测。回本周期取决于该发电量和各地硬件价格,二者差异太大,无法给出一个全球统一数字——请以下方各国表格为起点。',
     quickAnswerTop: {
       zh: {
         question: '我的阳台光伏系统实际能发多少电，什么时候能回本？',
-        answer: '发电量主要取决于你所在地区的太阳能发电量（每安装1kWp每年发电的kWh数）以及你的用电习惯与日照时间的匹配程度。这里采用的参考对比数据是德国约1,003kWh/kWp，对比塞浦路斯约1,646kWh/kWp——在光照更充足的市场高出约64%。回本周期则将这一发电量差异与你当地的硬件价格和电价结合起来计算，两者都因国家而异。',
+        answer: '发电量主要取决于你所在地区的太阳能发电量(每安装1kWp每年发电的kWh数),以及用电习惯与白天时段的契合程度。在此处使用的PVGIS基准计算(1kWp,倾角35°,朝南,损耗14%)中,斯图加特约1,130kWh/kWp/年,塞浦路斯尼科西亚约1,630kWh/kWp/年,日照更好的市场多约44%。回本周期结合该发电量与当地硬件价格和电价,而这些因国家而异。',
         bullets: [
-          '发电量参考值：德国约1,003kWh/kWp/年，塞浦路斯约1,646kWh/kWp/年',
+          '发电量参考值(PVGIS,1kWp,倾角35°朝南,损耗14%):斯图加特约1,130kWh/kWp/年,尼科西亚约1,630kWh/kWp/年',
           '本指南中大多数其他国家目前还没有经过独立核实的发电量数据——未列出国家的发电量应视为未知，而非假定与已知数据相似',
           '面板功率和逆变器输出限制是两个不同的数字——购买前请两者都确认',
           '电池会通过让你更多地使用自己的余电，而非以低价或无偿方式并网输出，从而影响回本周期',
@@ -754,7 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '参考发电量对比是德国（约1,003kWh/kWp/年）与塞浦路斯（约1,646kWh/kWp/年）——光照更充足的市场发电量高出约64%。',
+          '参考发电量对比基于PVGIS:倾角35°、朝南、损耗14%时,斯图加特约1,130kWh/kWp/年,塞浦路斯尼科西亚约1,630kWh/kWp/年,日照更好的市场多约44%;垂直阳台安装的发电量更低。',
           '本集群中大多数其他国家目前还没有经过独立核实的发电量数据——本指南不会为它们断言具体数字。',
           '面板功率（面板能产生的电量）和逆变器输出限制（逆变器允许输送到插座的电量）是不同的数字——两者都要确认。',
           '硬件价格在这里的大多数国家都有来源核实，但在巴西、墨西哥和海湾/中东北非地区被明确标记为未核实——请将其视为近似值。',
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '做自己的回本估算时应使用哪些数据？',
         content: [
           '**回本周期等于系统成本除以其所替代电力的年度价值，因此除设备价格外，最重要的两个输入是您的发电量和电价。** 电价方面的两个参考点：德国家庭平均电价为[BDEW最新电价分析中年初至今的37.3 ct/kWh](https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/)，美国居民平均电价为[EIA最新月度数据（8月）中的18.16美分/kWh](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a)。两者都会变动，请使用您自己的电价，并记住只有在发电的同一时刻被家中用掉的那部分电量，才会替代外购电力。',
-          '发电量方面，上文德国和塞浦路斯的参考数值取决于倾角、朝向和损耗假设，而塞浦路斯的数值在最近一次更新时无法追溯到一手来源。作为交叉验证，欧盟的[PVGIS工具](https://re.jrc.ec.europa.eu/pvg_tools/en/)对朝南、倾角35度、损耗14%的系统，给出尼科西亚约1,630 kWh/kWp每年、斯图加特约1,130 kWh/kWp每年（更新时运行的计算；垂直安装在阳台栏杆上的发电量会低于这两个数值）。在依赖任何国家平均值之前，请用您自己的地址、倾角和朝向运行PVGIS。',
+          '发电量方面,上文斯图加特和尼科西亚的数值来自欧盟的[PVGIS工具](https://re.jrc.ec.europa.eu/pvg_tools/en/)(PVGIS-SARAH3辐射数据,倾角35°朝南固定安装,系统损耗14%,已计入地平线遮挡;于2026-11-20在北纬48.78°东经9.18°(斯图加特)和北纬35.17°东经33.36°(尼科西亚)计算)。垂直阳台栏杆的发电量低于这两个数值,因此在采信任何国家平均值之前,请用PVGIS按你自己的地址、倾角和朝向计算。',
         ],
       },
       withVsWithoutBattery: {
@@ -820,7 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '晴朗气候比德国能多发多少电？', a: '参考对比是塞浦路斯每装机1kWp的年发电量比德国（以斯图加特为参照）高出约64%——1,646kWh/kWp对比1,003kWh/kWp。' },
+          { q: '晴朗气候比德国能多发多少电?', a: '在此处使用的PVGIS基准计算(1kWp,倾角35°,朝南,损耗14%,PVGIS-SARAH3数据,2026-11-20查询)中,塞浦路斯尼科西亚约1,630kWh/kWp/年,斯图加特附近约1,130kWh/kWp/年,多约44%。垂直栏杆安装在两地的发电量都更低,因此这只是相对比较。' },
           { q: '你们有这份指南中每个国家的发电量数据吗？', a: '没有——该数据集中仅采用德国/塞浦路斯的对比作为参考。其他国家的发电量数据在本次调研中未获取，因此按实际情况标注，而非进行估算。' },
           { q: '面板功率和逆变器限制有什么区别？', a: '面板功率是面板在理想条件下能产生的电量；逆变器限制是实际允许到达你插座的电量，通常受当地法规限制。实际输出通常由逆变器限制而非面板峰值额定值决定。' },
           { q: '阳台光伏需要多久才能回本？', a: '这取决于你的硬件价格、当地电价和发电量——这三者都因国家而异。请结合上方的价格表和你当地的电价来得出现实的估算，而不要依赖单一的全球数字。' },
@@ -835,7 +835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '阳台光伏的容量选择、发电量与回本周期：各国预期一览',
-      description: '按国家划分的阳台光伏容量、发电量与回本周期估算——以核实的价格与德国/塞浦路斯发电量对比作为参考点，。',
+      description: '按国家划分的阳台光伏容量、发电量与回本周期估算:面板与逆变器上限、基于PVGIS的发电量示例及标注日期的价格。',
       datePublished: '2026-07-02',
       dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -854,7 +854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Dimensionnement, rendement et amortissement du solaire de balcon : à quoi s\'attendre selon le pays',
     seoTitle: 'Calculateur de dimensionnement et amortissement solaire de balcon (2026)',
     intro: 'La puissance dont vous avez besoin, ce qu\'un panneau produit réellement dans votre climat, et le temps nécessaire pour qu\'il s\'autofinance sont trois questions distinctes avec trois réponses distinctes — et toutes trois dépendent fortement de l\'endroit où vous vivez, pas seulement du matériel que vous achetez.',
-    metaDescription: 'Estimations de dimensionnement, rendement et amortissement du solaire de balcon par pays — tarification vérifiée et comparaison de rendement Allemagne/Chypre comme point de référence, mise à jour en juillet 2026.',
+    metaDescription: 'Dimensionnement, rendement et amortissement du solaire de balcon par pays : limites panneau et onduleur, exemples de rendement PVGIS et prix datés.',
     publishDate: '2026-07-02',
     dateModified: '2026-11-20',
     readTime: '10 min de lecture',
@@ -862,13 +862,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Acheteurs de solaire de balcon estimant la taille du système, la production attendue et le délai d\'amortissement',
     primaryTerm: 'balcony solar payback',
     targetKeywords: ['balcony solar payback', 'balcony solar yield by location', 'rendement solaire de balcon', 'guide de dimensionnement solaire de balcon'],
-    leadAnswerBlock: '**Un climat plus ensoleillé peut produire un rendement solaire nettement supérieur à une référence nord-européenne — la comparaison de référence utilisée dans ce guide est l\'Allemagne (Stuttgart) à environ 1 003 kWh/kWp par an contre Chypre à environ 1 646 kWh/kWp, soit environ 64 % de plus.** Les délais d\'amortissement dépendent à la fois de cette différence de rendement et du prix local du matériel, qui varie suffisamment selon les pays pour qu\'un chiffre d\'amortissement global unique soit trompeur — utilisez les tableaux par pays ci-dessous comme point de départ.',
+    leadAnswerBlock: '**L\'ensoleillement change la production d\'un système de balcon : dans le calcul de référence PVGIS utilisé dans ce guide, 1 kWp incliné à 35° et orienté plein sud produit environ 1 130 kWh par an près de Stuttgart (Allemagne) et environ 1 630 kWh près de Nicosie (Chypre), soit environ 44 % de plus.** Ce sont des estimations PVGIS-SARAH3 de l\'outil PVGIS du JRC de l\'UE (pertes système de 14 %, ombrages d\'horizon inclus, consultées le 2026-11-20) ; une fixation verticale sur garde-corps produit moins, à lire donc comme une comparaison relative et non une prévision. L\'amortissement dépend de ce rendement et des prix locaux du matériel, trop variables pour un chiffre mondial — utilisez les tableaux par pays comme point de départ.',
     quickAnswerTop: {
       fr: {
         question: 'Combien mon système solaire de balcon va-t-il réellement produire, et quand s\'autofinancera-t-il ?',
-        answer: 'La production dépend principalement de votre rendement solaire local (kWh par kWp installé et par an) et de la façon dont votre profil de consommation s\'aligne sur les heures d\'ensoleillement. Le point de comparaison de référence ici est l\'Allemagne à environ 1 003 kWh/kWp contre Chypre à environ 1 646 kWh/kWp — soit environ 64 % de plus dans le marché le plus ensoleillé. Le délai d\'amortissement combine cette différence de rendement avec le prix local du matériel et le tarif de l\'électricité, tous deux variables selon le pays.',
+        answer: 'La production dépend surtout du rendement solaire local (kWh par kWp installé et par an) et de la part de votre consommation qui coïncide avec les heures de jour. Dans le calcul de référence PVGIS utilisé ici (1 kWp, inclinaison de 35°, plein sud, pertes de 14 %), Stuttgart produit environ 1 130 kWh/kWp par an et Nicosie (Chypre) environ 1 630 — soit environ 44 % de plus sur le marché le plus ensoleillé. L\'amortissement combine ce rendement avec le prix local du matériel et le tarif d\'électricité, qui varient selon les pays.',
         bullets: [
-          'Référence de rendement : Allemagne ~1 003 kWh/kWp/an contre Chypre ~1 646 kWh/kWp/an',
+          'Rendement de référence (PVGIS, 1 kWp, 35° sud, pertes de 14 %) : Stuttgart ~1 130 kWh/kWp/an contre Nicosie ~1 630 kWh/kWp/an',
           'La plupart des autres pays de ce guide n\'ont pas encore de chiffre de rendement vérifié indépendamment — considérez le rendement des pays non listés comme inconnu, pas présumé similaire',
           'La puissance du panneau et la limite de sortie de l\'onduleur sont deux chiffres différents — vérifiez les deux avant d\'acheter',
           'Une batterie affecte l\'amortissement en vous permettant d\'utiliser davantage votre propre surplus plutôt que de l\'exporter à faible ou nul crédit',
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'La comparaison de rendement de référence est l\'Allemagne (~1 003 kWh/kWp/an) contre Chypre (~1 646 kWh/kWp/an) — environ 64 % de rendement en plus dans le marché le plus ensoleillé.',
+          'La comparaison de rendement de référence repose sur PVGIS : Stuttgart (~1 130 kWh/kWp/an) contre Nicosie, Chypre (~1 630 kWh/kWp/an) pour une installation à 35° plein sud avec 14 % de pertes — environ 44 % de plus sur le marché le plus ensoleillé ; une fixation verticale sur balcon produit moins.',
           'La plupart des autres pays de ce cluster n\'ont pas encore de chiffre de rendement vérifié indépendamment — ce guide n\'affirme pas de chiffre précis pour eux.',
           'La puissance du panneau (ce qu\'il peut générer) et la limite de sortie de l\'onduleur (ce que l\'onduleur est autorisé à injecter dans votre prise) sont des chiffres différents — vérifiez les deux.',
           'La tarification du matériel est vérifiée avec une source pour la plupart des pays ici, mais explicitement signalée comme non vérifiée pour le Brésil, le Mexique et la région du Golfe/MENA — considérez ces chiffres comme approximatifs.',
@@ -944,7 +944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quelles données utiliser pour votre propre estimation d\'amortissement ?',
         content: [
           '**L\'amortissement est le coût du système divisé par la valeur annuelle de l\'électricité qu\'il remplace ; après le prix du matériel, les deux données qui comptent sont donc votre production et votre prix de l\'électricité.** Deux repères côté prix : la moyenne des ménages allemands était de [37,3 ct/kWh depuis le début de l\'année dans la dernière analyse de prix du BDEW](https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/), et la moyenne résidentielle américaine de [18,16 cents/kWh dans les dernières données mensuelles de l\'EIA (août)](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a). Les deux évoluent, utilisez donc votre propre tarif, et rappelez-vous que seule la part de la production que votre foyer consomme au moment où elle est produite remplace de l\'électricité achetée.',
-          'Côté production, les chiffres de référence pour l\'Allemagne et Chypre ci-dessus dépendent de l\'inclinaison, de l\'orientation et des pertes supposées, et le chiffre de Chypre n\'a pas pu être rattaché à une source primaire lors de la dernière actualisation. À titre de recoupement, l\'[outil PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/en/) de l\'UE donne environ 1 630 kWh/kWp par an pour Nicosie et 1 130 kWh/kWp pour Stuttgart pour un système orienté plein sud, incliné à 35 degrés, avec 14 % de pertes (calcul effectué lors de l\'actualisation ; un garde-corps de balcon vertical produit moins que ces deux valeurs). Lancez PVGIS pour votre propre adresse, inclinaison et orientation avant de vous fier à une moyenne par pays.',
+          'Côté rendement, les chiffres de Stuttgart et de Nicosie ci-dessus proviennent de l\'[outil PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/en/) de l\'UE (données de rayonnement PVGIS-SARAH3, installation fixe plein sud inclinée à 35°, pertes système de 14 %, ombrages d\'horizon inclus ; calcul du 2026-11-20 à 48.78° N 9.18° E pour Stuttgart et 35.17° N 33.36° E pour Nicosie). Une fixation verticale sur garde-corps produit moins que ces deux valeurs ; lancez donc PVGIS pour votre adresse, votre inclinaison et votre orientation avant de vous fier à une moyenne par pays.',
         ],
       },
       withVsWithoutBattery: {
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Combien de rendement solaire supplémentaire un climat ensoleillé produit-il par rapport à l\'Allemagne ?', a: 'La comparaison de référence est Chypre, avec environ 64 % de rendement annuel supplémentaire par kWp installé par rapport à l\'Allemagne (référence Stuttgart) — 1 646 kWh/kWp contre 1 003 kWh/kWp.' },
+          { q: 'Combien de rendement solaire supplémentaire un climat ensoleillé produit-il par rapport à l\'Allemagne ?', a: 'Dans le calcul de référence PVGIS utilisé ici (1 kWp, inclinaison de 35°, plein sud, pertes de 14 %, données PVGIS-SARAH3, consulté le 2026-11-20), Nicosie (Chypre) produit environ 1 630 kWh/kWp par an contre environ 1 130 kWh/kWp près de Stuttgart — soit environ 44 % de plus. Une fixation verticale sur garde-corps produit moins aux deux endroits ; il s\'agit donc d\'une comparaison relative.' },
           { q: 'Avez-vous des données de rendement pour tous les pays de ce guide ?', a: 'Non — seule la comparaison Allemagne/Chypre sert de référence dans ce jeu de données. Les chiffres de rendement des autres pays n\'ont pas été obtenus lors de cette phase de recherche et sont marqués en conséquence plutôt qu\'estimés.' },
           { q: 'Quelle est la différence entre la puissance du panneau et la limite de l\'onduleur ?', a: 'La puissance du panneau est ce que le panneau peut générer dans des conditions idéales ; la limite de l\'onduleur est ce qui est réellement autorisé à atteindre votre prise, souvent plafonné par la réglementation locale. La limite de l\'onduleur gouverne généralement la production réelle plus que la puissance de crête du panneau.' },
           { q: 'Combien de temps faut-il au solaire de balcon pour s\'autofinancer ?', a: 'Cela dépend du prix de votre matériel, du tarif électrique local et du rendement — les trois varient selon les pays. Utilisez le tableau de prix ci-dessus avec votre tarif électrique local pour une estimation réaliste plutôt que de vous fier à un chiffre global unique.' },
@@ -973,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Dimensionnement, rendement et amortissement du solaire de balcon : à quoi s\'attendre selon le pays',
-      description: 'Estimations de dimensionnement, rendement et amortissement du solaire de balcon par pays — tarification vérifiée et comparaison de rendement Allemagne/Chypre comme point de référence, mise à jour en juillet 2026.',
+      description: 'Dimensionnement, rendement et amortissement du solaire de balcon par pays : limites panneau et onduleur, exemples de rendement PVGIS et prix datés.',
       datePublished: '2026-07-02',
       dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -992,7 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '발코니 태양광 용량 산정, 발전량, 투자회수 기간: 국가별 예상치',
     seoTitle: '발코니 태양광 용량 및 투자회수 계산 (2026년)',
     intro: '필요한 전력량, 실제 거주 지역의 기후에서 패널이 생산하는 발전량, 그리고 투자금을 회수하는 데 걸리는 기간은 세 가지 별개의 질문이며 각각 다른 답을 가집니다 — 그리고 이 세 가지 모두 구매하는 하드웨어뿐 아니라 거주 지역에 크게 좌우됩니다.',
-    metaDescription: '국가별 발코니 태양광 용량 산정, 발전량, 투자회수 기간 추정치 — 검증된 가격과 독일/키프로스 발전량 비교를 참고 데이터로.',
+    metaDescription: '국가별 발코니 태양광 용량 산정, 발전량, 투자회수 기간: 패널·인버터 한도, PVGIS 기반 발전량 예시, 날짜 표기 가격.',
     publishDate: '2026-07-02',
     dateModified: '2026-11-20',
     readTime: '10분 읽기',
@@ -1000,13 +1000,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '시스템 용량, 예상 발전량, 투자회수 기간을 추정 중인 발코니 태양광 구매자',
     primaryTerm: 'balcony solar payback',
     targetKeywords: ['balcony solar payback', 'balcony solar yield by location', '발코니 태양광 발전량', '발코니 태양광 용량 산정 가이드'],
-    leadAnswerBlock: '**일조량이 풍부한 기후에서는 북유럽 기준선보다 의미 있게 더 많은 태양광 발전량을 낼 수 있습니다 — 이 가이드에서 사용하는 참고 비교 대상은 독일(슈투트가르트) 연간 약 1,003kWh/kWp 대비 키프로스 약 1,646kWh/kWp로, 약 64% 더 많은 수치입니다.** 투자회수 기간은 이 발전량 차이와 현지 하드웨어 가격 모두에 좌우되며, 가격은 국가별로 상당히 다르기 때문에 단일한 전 세계 공통 회수 기간 수치는 오해를 부를 수 있습니다 — 아래 국가별 표를 출발점으로 활용하십시오.',
+    leadAnswerBlock: '**기후에 따라 발코니 시스템의 발전량이 달라집니다. 이 가이드가 쓰는 PVGIS 기준 계산에서 경사 35°, 정남향 1kWp는 독일 슈투트가르트 부근에서 연간 약 1,130kWh, 키프로스 니코시아 부근에서 연간 약 1,630kWh로 약 44% 더 많습니다.** 이는 EU 공동연구센터(JRC) PVGIS 도구의 PVGIS-SARAH3 추정치(시스템 손실 14%, 지평선 차폐 반영, 2026-11-20 조회)입니다. 수직 난간 설치는 발전량이 더 적으므로 예측이 아니라 상대 비교로 활용하십시오. 투자회수 기간은 이 발전량과 지역별 장비 가격에 좌우되며, 가격은 하나의 전 세계 수치로 말하기에는 편차가 큽니다. 아래 국가별 표를 출발점으로 삼으십시오.',
     quickAnswerTop: {
       ko: {
         question: '내 발코니 태양광 시스템은 실제로 얼마나 발전하고, 언제 투자금을 회수할 수 있나요?',
-        answer: '발전량은 주로 거주 지역의 태양광 발전량(설치된 kWp당 연간 kWh)과 사용 패턴이 일조 시간과 얼마나 잘 맞는지에 좌우됩니다. 여기서 사용하는 참고 비교 데이터는 독일 약 1,003kWh/kWp 대비 키프로스 약 1,646kWh/kWp — 일조량이 더 풍부한 시장에서 약 64% 더 많은 수치입니다. 투자회수 기간은 이 발전량 차이와 현지 하드웨어 가격, 전기 요금을 결합하여 산정되며, 둘 다 국가별로 다릅니다.',
+        answer: '발전량은 주로 거주 지역의 태양광 발전량(설치된 kWp당 연간 kWh)과 사용 패턴이 낮 시간대와 얼마나 맞는지에 달려 있습니다. 여기서 쓰는 PVGIS 기준 계산(1kWp, 경사 35°, 정남향, 손실 14%)에서 슈투트가르트는 연간 약 1,130kWh/kWp, 키프로스 니코시아는 약 1,630kWh/kWp로 일조량이 많은 시장이 약 44% 더 많습니다. 투자회수 기간은 이 발전량에 현지 장비 가격과 전기요금을 결합해 정해지며, 둘 다 국가마다 다릅니다.',
         bullets: [
-          '발전량 참고치: 독일 연간 약 1,003kWh/kWp 대 키프로스 연간 약 1,646kWh/kWp',
+          '발전량 기준값(PVGIS, 1kWp, 경사 35° 남향, 손실 14%): 슈투트가르트 연간 약 1,130kWh/kWp 대 니코시아 연간 약 1,630kWh/kWp',
           '이 가이드의 다른 대부분 국가는 아직 독립적으로 검증된 발전량 수치가 없습니다 — 목록에 없는 국가의 발전량은 알 수 없는 것으로 취급하고, 유사할 것이라고 가정하지 마십시오',
           '패널 와트수와 인버터 출력 제한은 서로 다른 두 수치입니다 — 구매 전 둘 다 확인하십시오',
           '배터리는 잉여 전력을 낮은 대가나 무보상으로 수출하는 대신 자체적으로 더 많이 활용할 수 있게 함으로써 투자회수 기간에 영향을 미칩니다',
@@ -1030,7 +1030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '참고용 발전량 비교는 독일(연간 약 1,003kWh/kWp)과 키프로스(연간 약 1,646kWh/kWp)입니다 — 일조량이 더 풍부한 시장에서 약 64% 더 많은 발전량.',
+          '참고용 발전량 비교는 PVGIS에 기반합니다. 경사 35°, 남향, 손실 14% 조건에서 슈투트가르트는 연간 약 1,130kWh/kWp, 키프로스 니코시아는 약 1,630kWh/kWp로 일조량이 많은 시장이 약 44% 더 많습니다. 수직 발코니 설치는 발전량이 더 적습니다.',
           '이 클러스터의 다른 대부분 국가는 아직 독립적으로 검증된 발전량 수치가 없습니다 — 이 가이드는 해당 국가들에 대해 구체적인 수치를 단정하지 않습니다.',
           '패널 와트수(패널이 생산할 수 있는 양)와 인버터 출력 제한(인버터가 콘센트로 내보낼 수 있도록 허용된 양)은 서로 다른 수치입니다 — 둘 다 확인하십시오.',
           '하드웨어 가격은 여기 대부분 국가에서 출처와 함께 검증되었지만, 브라질, 멕시코, 걸프/MENA 지역에서는 명시적으로 미검증으로 표시되어 있습니다 — 이들은 근사치로 취급하십시오.',
@@ -1082,7 +1082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '나만의 투자회수 추정에는 어떤 값을 사용해야 합니까?',
         content: [
           '**투자회수 기간은 시스템 비용을 대체되는 전기의 연간 가치로 나눈 값이므로, 장비 가격 다음으로 중요한 입력값은 발전량과 전기 요금입니다.** 요금 측면의 참고치로, 독일 가정 평균은 [BDEW 최신 요금 분석의 연초 이후 37.3 ct/kWh](https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/)였고, 미국 주거용 평균은 [EIA 최신 월간 데이터(8월)의 18.16센트/kWh](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a)였습니다. 둘 다 시간에 따라 변하므로 본인의 요금제를 사용하시고, 발전하는 순간 집에서 사용된 몫만 구매 전력을 대체한다는 점을 기억하십시오.',
-          '발전량 측면에서, 위의 독일과 키프로스 기준값은 경사각, 방향, 손실 가정에 따라 달라지며, 키프로스 값은 이번 갱신 시점에 1차 출처로 추적하지 못했습니다. 교차 확인으로, EU의 [PVGIS 도구](https://re.jrc.ec.europa.eu/pvg_tools/en/)는 남향, 경사 35도, 손실 14%인 시스템에서 니코시아는 연간 약 1,630 kWh/kWp, 슈투트가르트는 약 1,130 kWh/kWp를 제시합니다(갱신 시 실행한 계산이며, 수직 발코니 난간 설치는 두 값보다 적게 나옵니다). 국가 평균에 의존하기 전에 본인의 주소, 경사각, 방향으로 PVGIS를 실행하십시오.',
+          '발전량 측면에서, 위의 슈투트가르트와 니코시아 값은 EU의 [PVGIS 도구](https://re.jrc.ec.europa.eu/pvg_tools/en/)에서 나온 것입니다(PVGIS-SARAH3 일사 데이터, 경사 35° 남향 고정 설치, 시스템 손실 14%, 지평선 차폐 반영. 2026-11-20에 북위 48.78° 동경 9.18°(슈투트가르트)와 북위 35.17° 동경 33.36°(니코시아)에서 계산). 수직 발코니 난간은 두 값보다 발전량이 적으므로, 국가 평균을 믿기 전에 본인의 주소, 경사, 방향으로 PVGIS를 실행하십시오.',
         ],
       },
       withVsWithoutBattery: {
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '일조량이 풍부한 기후는 독일보다 얼마나 더 많이 발전하나요?', a: '참고용 비교는 키프로스가 독일(슈투트가르트 기준) 대비 설치된 kWp당 연간 발전량이 약 64% 더 많다는 것입니다 — 1,646kWh/kWp 대 1,003kWh/kWp.' },
+          { q: '일조량이 풍부한 기후는 독일보다 얼마나 더 많이 발전하나요?', a: '여기서 쓰는 PVGIS 기준 계산(1kWp, 경사 35°, 남향, 손실 14%, PVGIS-SARAH3 데이터, 2026-11-20 조회)에서 키프로스 니코시아는 연간 약 1,630kWh/kWp로, 슈투트가르트 부근의 약 1,130kWh/kWp보다 약 44% 더 많습니다. 수직 난간 설치는 두 지점 모두 발전량이 더 적으므로 상대 비교로 이해하십시오.' },
           { q: '이 가이드의 모든 국가에 대한 발전량 데이터가 있나요?', a: '아니요 — 이 데이터셋에서 참고용으로 사용하는 것은 독일/키프로스 비교뿐입니다. 다른 국가의 발전량 수치는 이번 조사에서 확보되지 않았으며, 추정하는 대신 그에 맞게 표시되어 있습니다.' },
           { q: '패널 와트수와 인버터 제한의 차이는 무엇인가요?', a: '패널 와트수는 이상적인 조건에서 패널이 생산할 수 있는 양이며, 인버터 제한은 실제로 콘센트에 도달하도록 허용된 양으로, 흔히 현지 규제로 상한이 정해집니다. 실제 출력은 대개 패널의 최대 정격보다 인버터 제한에 의해 좌우됩니다.' },
           { q: '발코니 태양광은 투자금을 회수하는 데 얼마나 걸리나요?', a: '이는 하드웨어 가격, 현지 전기 요금, 발전량에 좌우되며 — 세 가지 모두 국가별로 다릅니다. 단일한 전 세계 공통 수치에 의존하지 말고, 위의 가격표와 거주 지역의 전기 요금을 함께 활용해 현실적인 추정치를 내십시오.' },
@@ -1111,7 +1111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '발코니 태양광 용량 산정, 발전량, 투자회수 기간: 국가별 예상치',
-      description: '국가별 발코니 태양광 용량 산정, 발전량, 투자회수 기간 추정치 — 검증된 가격과 독일/키프로스 발전량 비교를 참고 데이터로.',
+      description: '국가별 발코니 태양광 용량 산정, 발전량, 투자회수 기간: 패널·인버터 한도, PVGIS 기반 발전량 예시, 날짜 표기 가격.',
       datePublished: '2026-07-02',
       dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1130,7 +1130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Balkonkraftwerk: Dimensionierung, Ertrag und Amortisation im Länderüberblick',
     seoTitle: 'Balkonkraftwerk-Rechner für Ertrag und Amortisation (2026)',
     intro: 'Wie viel Leistung Sie benötigen, wie viel ein Panel in Ihrem Klima tatsächlich erzeugt und wie lange die Amortisation dauert, sind drei getrennte Fragen mit drei getrennten Antworten — und alle drei hängen stark davon ab, wo Sie leben, nicht nur von der gekauften Hardware.',
-    metaDescription: 'Dimensionierung, Ertrag und Amortisationsschätzungen für Balkonkraftwerke nach Land — verifizierte Preise und ein Ertragsvergleich Deutschland/Zypern als Referenzpunkt, aktualisiert Juli 2026.',
+    metaDescription: 'Dimensionierung, Ertrag und Amortisation von Balkonkraftwerken nach Land: Modul- und Wechselrichtergrenzen, PVGIS-Ertragsbeispiele und datierte Kit-Preise.',
     publishDate: '2026-07-02',
     dateModified: '2026-11-20',
     readTime: '10 Min. Lesezeit',
@@ -1138,13 +1138,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Käufer von Balkonkraftwerken, die Systemgröße, erwarteten Ertrag und Amortisationsdauer einschätzen',
     primaryTerm: 'Balkonkraftwerk Amortisation',
     targetKeywords: ['Balkonkraftwerk Amortisation', 'Balkonkraftwerk Ertrag nach Standort', 'wie viel Strom erzeugt ein Balkonkraftwerk', 'Balkonkraftwerk Dimensionierung Anleitung'],
-    leadAnswerBlock: '**Ein sonnenreicheres Klima kann deutlich mehr Solarertrag liefern als der nordeuropäische Referenzwert — der in diesem Leitfaden verwendete Vergleichswert ist Deutschland (Stuttgart) mit rund 1.003 kWh/kWp pro Jahr gegenüber Zypern mit rund 1.646 kWh/kWp, also etwa 64 % mehr.** Die Amortisationsdauer hängt sowohl von diesem Ertragsunterschied als auch vom lokalen Hardwarepreis ab, der sich von Land zu Land so stark unterscheidet, dass eine einzige globale Amortisationszahl irreführend wäre — nutzen Sie die Ländertabellen unten als Ausgangspunkt.',
+    leadAnswerBlock: '**Das Klima verändert, wie viel ein Balkonkraftwerk erzeugt: In der in diesem Leitfaden verwendeten PVGIS-Referenzrechnung bringt 1 kWp mit 35° Neigung und Südausrichtung etwa 1.130 kWh pro Jahr bei Stuttgart und etwa 1.630 kWh bei Nikosia (Zypern) — rund 44 % mehr.** Es sind PVGIS-SARAH3-Schätzungen des PVGIS-Tools des JRC der EU (14 % Systemverluste, Horizontverschattung berücksichtigt, abgerufen am 2026-11-20); eine senkrechte Geländermontage liefert weniger, daher als relativen Vergleich und nicht als Prognose verstehen. Die Amortisation hängt von diesem Ertrag und den lokalen Hardwarepreisen ab, die für eine globale Zahl zu stark schwanken — nutzen Sie die Länder-Tabellen als Ausgangspunkt.',
     quickAnswerTop: {
       de: {
         question: 'Wie viel Strom erzeugt mein Balkonkraftwerk tatsächlich, und wann amortisiert es sich?',
-        answer: 'Der Ertrag hängt in erster Linie von Ihrem lokalen Solarertrag (kWh pro installiertem kWp pro Jahr) und davon ab, wie gut Ihr Verbrauchsmuster mit den Tageslichtstunden übereinstimmt. Der hier verwendete Vergleichspunkt ist Deutschland mit rund 1.003 kWh/kWp gegenüber Zypern mit rund 1.646 kWh/kWp — etwa 64 % mehr im sonnenreicheren Markt. Die Amortisationsdauer kombiniert diesen Ertragsunterschied mit Ihrem lokalen Hardwarepreis und Strompreis, die beide je nach Land variieren.',
+        answer: 'Die Erzeugung hängt vor allem vom lokalen Solarertrag (kWh pro installiertem kWp und Jahr) ab und davon, wie gut Ihr Verbrauch zu den Tagesstunden passt. In der hier verwendeten PVGIS-Referenzrechnung (1 kWp, 35° Neigung, Südausrichtung, 14 % Verluste) liefert Stuttgart etwa 1.130 kWh/kWp pro Jahr und Nikosia (Zypern) etwa 1.630 — rund 44 % mehr im sonnigeren Markt. Die Amortisation verbindet diesen Ertrag mit Ihrem lokalen Hardwarepreis und Strompreis, die je nach Land variieren.',
         bullets: [
-          'Verifizierter Ertragsreferenzwert: Deutschland ~1.003 kWh/kWp/Jahr gegenüber Zypern ~1.646 kWh/kWp/Jahr',
+          'Ertragsreferenz (PVGIS, 1 kWp, 35° Süd, 14 % Verluste): Stuttgart ~1.130 kWh/kWp/Jahr vs. Nikosia ~1.630 kWh/kWp/Jahr',
           'Für die meisten anderen Länder in diesem Leitfaden liegt noch kein unabhängig verifizierter Ertragswert vor — behandeln Sie den Ertrag nicht aufgeführter Länder als unbekannt, nicht als vermutlich ähnlich',
           'Panelleistung in Watt und Wechselrichter-Ausgangsgrenze sind zwei unterschiedliche Werte — prüfen Sie vor dem Kauf beide',
           'Eine Batterie beeinflusst die Amortisation, indem sie es ermöglicht, mehr vom eigenen Überschuss selbst zu nutzen, statt ihn zu niedrigem oder keinem Vergütungssatz einzuspeisen',
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Der Referenz-Ertragsvergleich ist Deutschland (~1.003 kWh/kWp/Jahr) gegenüber Zypern (~1.646 kWh/kWp/Jahr) — etwa 64 % mehr Ertrag im sonnenreicheren Markt.',
+          'Der Referenz-Ertragsvergleich basiert auf PVGIS: Stuttgart (~1.130 kWh/kWp/Jahr) vs. Nikosia, Zypern (~1.630 kWh/kWp/Jahr) für eine nach Süden ausgerichtete Anlage mit 35° Neigung und 14 % Verlusten — rund 44 % mehr Ertrag im sonnigeren Markt; eine senkrechte Balkonmontage liefert weniger.',
           'Für die meisten anderen Länder dieser Artikelgruppe liegt noch kein unabhängig verifizierter Ertragswert vor — dieser Leitfaden nennt für sie keine konkrete Zahl.',
           'Panelleistung in Watt (was das Panel erzeugen kann) und Wechselrichter-Ausgangsgrenze (was der Wechselrichter in Ihre Steckdose einspeisen darf) sind unterschiedliche Werte — prüfen Sie beide.',
           'Die Hardwarepreise sind für die meisten hier aufgeführten Länder mit einer Quelle verifiziert, aber für Brasilien, Mexiko und die Golf-/MENA-Region ausdrücklich als unverifiziert gekennzeichnet — behandeln Sie diese als Näherungswerte.',
@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Welche Eingaben sollten Sie für Ihre eigene Amortisationsrechnung verwenden?',
         content: [
           '**Die Amortisation ergibt sich aus den Systemkosten geteilt durch den Jahreswert des verdrängten Stroms; nach dem Gerätepreis zählen daher vor allem Ihr Ertrag und Ihr Strompreis.** Zwei Richtwerte für die Preisseite: Der Haushaltsdurchschnitt in Deutschland lag bei [37,3 ct/kWh im bisherigen Jahresverlauf laut der aktuellen BDEW-Strompreisanalyse](https://www.bdew.de/service/daten-und-grafiken/bdew-strompreisanalyse/), und der durchschnittliche US-Haushaltspreis bei [18,16 Cent/kWh in den aktuellen Monatsdaten der EIA (August)](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a). Beide Werte ändern sich, nutzen Sie also Ihren eigenen Tarif, und bedenken Sie, dass nur der Anteil der Erzeugung, den Ihr Haushalt im Moment der Erzeugung verbraucht, Strombezug ersetzt.',
-          'Auf der Ertragsseite hängen die oben genannten Referenzwerte für Deutschland und Zypern von Neigung, Ausrichtung und Verlustannahmen ab, und der Wert für Zypern ließ sich bei der letzten Aktualisierung nicht auf eine Primärquelle zurückführen. Als Gegenprobe liefert das [PVGIS-Tool](https://re.jrc.ec.europa.eu/pvg_tools/en/) der EU für eine nach Süden ausgerichtete Anlage mit 35 Grad Neigung und 14 % Verlusten rund 1.630 kWh/kWp pro Jahr für Nikosia und 1.130 kWh/kWp für Stuttgart (Berechnung bei der Aktualisierung; ein senkrechtes Balkongeländer erzielt weniger als beide Werte). Rechnen Sie mit PVGIS für Ihre eigene Adresse, Neigung und Ausrichtung, bevor Sie sich auf einen Länderdurchschnitt verlassen.',
+          'Beim Ertrag stammen die oben genannten Werte für Stuttgart und Nikosia aus dem [PVGIS-Tool](https://re.jrc.ec.europa.eu/pvg_tools/en/) der EU (PVGIS-SARAH3-Einstrahlungsdaten, feste Südanlage mit 35° Neigung, 14 % Systemverluste, Horizontverschattung berücksichtigt; berechnet am 2026-11-20 bei 48.78° N 9.18° E für Stuttgart und 35.17° N 33.36° E für Nikosia). Ein senkrechtes Balkongeländer liefert weniger als beide Werte; rechnen Sie daher mit PVGIS für Ihre eigene Adresse, Neigung und Ausrichtung, bevor Sie sich auf einen Länderdurchschnitt verlassen.',
         ],
       },
       withVsWithoutBattery: {
@@ -1234,7 +1234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Wie viel mehr Solarertrag liefert ein sonniges Klima im Vergleich zu Deutschland?', a: 'Der Referenzvergleich ist Zypern mit rund 64 % mehr Jahresertrag pro installiertem kWp als Deutschland (Referenz Stuttgart) — 1.646 kWh/kWp gegenüber 1.003 kWh/kWp.' },
+          { q: 'Wie viel mehr Solarertrag liefert ein sonniges Klima als Deutschland?', a: 'In der hier verwendeten PVGIS-Referenzrechnung (1 kWp, 35° Neigung, Südausrichtung, 14 % Verluste, PVGIS-SARAH3-Daten, abgerufen am 2026-11-20) liefert Nikosia (Zypern) etwa 1.630 kWh/kWp pro Jahr gegenüber etwa 1.130 kWh/kWp bei Stuttgart — rund 44 % mehr. Eine senkrechte Geländermontage liefert an beiden Orten weniger, daher ist das ein relativer Vergleich.' },
           { q: 'Gibt es Ertragsdaten für jedes Land in diesem Leitfaden?', a: 'Nein — nur der Vergleich Deutschland/Zypern dient in diesem Datensatz als Referenz. Ertragswerte für andere Länder wurden in diesem Recherchedurchgang nicht ermittelt und sind entsprechend gekennzeichnet, statt geschätzt.' },
           { q: 'Was ist der Unterschied zwischen Panelleistung und Wechselrichtergrenze?', a: 'Die Panelleistung ist das, was das Panel unter idealen Bedingungen erzeugen kann; die Wechselrichtergrenze ist das, was tatsächlich an Ihrer Steckdose ankommen darf, oft begrenzt durch lokale Vorschriften. Die Wechselrichtergrenze bestimmt die reale Leistung meist stärker als die Spitzenleistung des Panels.' },
           { q: 'Wie lange dauert es, bis sich ein Balkonkraftwerk amortisiert?', a: 'Das hängt vom Hardwarepreis, dem lokalen Strompreis und dem Ertrag ab — alle drei variieren je nach Land. Nutzen Sie die Preistabelle oben zusammen mit Ihrem lokalen Strompreis für eine realistische Schätzung, statt sich auf eine einzige globale Zahl zu verlassen.' },
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Balkonkraftwerk: Dimensionierung, Ertrag und Amortisation im Länderüberblick',
-      description: 'Dimensionierung, Ertrag und Amortisationsschätzungen für Balkonkraftwerke nach Land — verifizierte Preise und ein Ertragsvergleich Deutschland/Zypern als Referenzpunkt, aktualisiert Juli 2026.',
+      description: 'Dimensionierung, Ertrag und Amortisation von Balkonkraftwerken nach Land: Modul- und Wechselrichtergrenzen, PVGIS-Ertragsbeispiele und datierte Kit-Preise.',
       datePublished: '2026-07-02',
       dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
