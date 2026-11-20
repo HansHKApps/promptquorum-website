@@ -165,9 +165,9 @@ export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateM
   p.line(c.nameNote, PX_W / 2, 80.5, { size: 3, color: MUTED, align: 'center' })
 
   // programme
-  p.line(c.forProgramme, PX_W / 2, 89, { size: 4.2, color: MUTED, align: 'center' })
+  p.line(c.forProgramme, PX_W / 2, 87, { size: 4.2, color: MUTED, align: 'center' })
   const subjectSize = p.fit(m.subject, 235, 12, 800, 5)
-  p.paragraph(m.subject, 0, 99, W, { size: subjectSize, weight: 800, maxLines: 1, align: 'center', color: PURPLE })
+  p.paragraph(m.subject, 0, 100, W, { size: subjectSize, weight: 800, maxLines: 1, align: 'center', color: PURPLE })
 
   // result tiles
   const tiles: { value: string; label: string; color?: string }[] = [

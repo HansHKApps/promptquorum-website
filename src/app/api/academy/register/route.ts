@@ -17,7 +17,7 @@ import { CERT_SEQ_KEY } from '@/lib/academy/usage'
 
 export const runtime = 'nodejs'
 
-export const certKey = (id: string) => `academy:cert:${id}`
+const certKey = (id: string) => `academy:cert:${id}`
 
 const requestSchema = z.object({
   id: z.string().regex(CERTIFICATE_ID_PATTERN),
