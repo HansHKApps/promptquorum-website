@@ -20128,71 +20128,80 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     en: {
       category: 'Comparison',
       title: 'PromptQuorum vs AskQuorum AI — What\'s the Difference?',
-      intro: 'Two tools, similar names, very different products. Here\'s a clear breakdown of what PromptQuorum and AskQuorum AI each do, who they\'re built for, and why they\'re not the same thing.',
+      intro: 'Two names that sound alike, two different kinds of product. Here is a factual breakdown of what PromptQuorum is and what AskQuorum AI says it offers on its own website, so you can tell them apart.',
       publishDate: 'Published March 17, 2026',
-      last_full_refresh: '2026-05-02',
-      seoTitle: 'PromptQuorum vs AskQuorum: Honest Comparison & Recommendation',
-      metaDescription: 'PromptQuorum vs AskQuorum: detailed feature comparison, privacy policies, local LLM support, and final recommendation for your workflow.',
+      last_full_refresh: '2026-11-20',
+      seoTitle: 'PromptQuorum vs AskQuorum AI: How They Differ',
+      metaDescription: 'PromptQuorum vs AskQuorum AI: what each says it does, who it is for, local LLM support, privacy and pricing, based on each company’s own website.',
       readTime: '4 min read',
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Quick Answer',
+          items: [
+            'PromptQuorum and AskQuorum AI are unrelated products from different companies that happen to share a word in their names.',
+            'PromptQuorum is a multi-model prompt tool you use yourself, with local LLM support (Ollama, LM Studio), prompt frameworks, and Quorum analysis; it is in free public beta.',
+            'According to its own website, AskQuorum AI is an AI development company in Noida, India, that builds custom AI applications, automation, and assistants such as the WhatsApp-based Kavya ([AskQuorum AI](https://askquorumai.com)).',
+            'AskQuorum AI’s website does not mention pricing, GDPR, bring-your-own-key, or local LLM support on the pages we reviewed; ask the company if those matter to you.',
+          ],
+        },
         overview: {
           title: 'Two Different Products',
           content: [
-            'PromptQuorum and AskQuorum AI share a similar word in their names, but they are built by different teams, for different users, in different markets. This article lays out the key differences factually so you can evaluate both clearly.',
-            'If you landed here because you searched for one and found the other, this comparison will help you decide which — if either — fits your workflow.',
+            'PromptQuorum and AskQuorum AI share a similar word in their names but are unrelated products from different companies. This article describes each factually, based on what each publishes, so you can evaluate them clearly.',
+            'If you searched for one and found the other, this comparison will help you work out which, if either, fits your needs. Information about AskQuorum AI was taken from its public website on 20 November 2026 and may have changed since.',
           ],
         },
         origins: {
           title: 'Company Origins',
           content: [
-            'PromptQuorum is built in Germany by an EU-based team. It was designed from the ground up with European data-privacy norms in mind, including GDPR compliance and local-first data handling. The product targets developers, researchers, and professionals who work with multiple AI models in a structured way.',
-            'AskQuorum AI is an India-first product, built primarily for consumer use via WhatsApp and mobile-first interfaces. Its focus is conversational AI access for everyday questions, not structured prompt engineering or multi-model analysis.',
+            'PromptQuorum is built in Germany (see the [impressum](/impressum)) and designed with European data-privacy norms in mind, including GDPR and local-first data handling. It targets developers, researchers, and professionals who work with multiple AI models in a structured way.',
+            'According to its own website, AskQuorum AI is an AI development company based in Noida, India, offering consulting, custom AI and app development, automation, and cloud and DevOps work for clients in the US, UK, Europe, Australia, and New Zealand ([AskQuorum AI](https://askquorumai.com)). Its Kavya assistant qualifies leads on WhatsApp in nine languages and is built individually for each business.',
           ],
         },
         targetUsers: {
           title: 'Target Users',
           items: [
             'PromptQuorum: developers, AI researchers, power users, and professionals who want to compare AI model responses systematically',
-            'AskQuorum AI: general consumers looking for a conversational AI assistant via familiar apps like WhatsApp',
-            'PromptQuorum supports technical workflows — prompt frameworks, consensus scoring, model dispatch — that are outside the scope of AskQuorum AI',
-            'AskQuorum AI is optimised for accessibility and ease, not for professional multi-model comparison',
+            'AskQuorum AI: businesses that commission custom AI applications, automation, or assistants such as Kavya, according to its website',
+            'PromptQuorum is a tool you use yourself: prompt frameworks, Quorum analysis, and multi-model dispatch',
+            'AskQuorum AI sells development services and custom builds; the pages we reviewed do not describe a self-serve multi-model prompt tool',
           ],
         },
         localLLM: {
           title: 'Local LLM Support',
           content: [
-            'PromptQuorum supports local LLMs via Ollama and LM Studio. You can run models like Llama 3, Mistral, Phi-3, and Gemma entirely on your own hardware, with no data leaving your device. This is a core feature, not an add-on.',
-            'AskQuorum AI does not offer local LLM support. It operates through cloud-hosted infrastructure, which is appropriate for its consumer-facing use case but means your prompts and responses pass through external servers.',
+            'PromptQuorum supports local LLMs through Ollama, LM Studio, Jan AI, and any OpenAI-compatible endpoint, so prompts can stay on your own hardware (see the [PromptQuorum FAQ](/faq)).',
+            'AskQuorum AI’s website does not mention local LLM support; it describes custom builds using LLM APIs, agents, and retrieval. Ask the company if this matters for your project.',
           ],
         },
         privacy: {
           title: 'Privacy and GDPR',
           content: [
-            'PromptQuorum is built for GDPR compliance. API keys are stored locally in your browser and never transmitted to PromptQuorum servers. There is no account required, no email signup, and analytics are opt-in via a consent banner. The product is designed to be used without leaving a data trail.',
-            'AskQuorum AI does not publish a GDPR-specific privacy stance in its documentation. For EU users handling sensitive professional data, this is worth evaluating before use.',
+            'PromptQuorum is built for GDPR-conscious use: API keys are stored locally in your browser, PromptQuorum never calls an LLM with its own keys, no account is required during the beta, and analytics run only after consent via a consent banner. This describes the product design, not a legal guarantee of compliance for your use case.',
+            'AskQuorum AI’s homepage links to Privacy, Terms, and Security pages and says an NDA is signed before technical discussions; it does not mention GDPR on the pages we reviewed. If you handle personal data, ask the company directly for its data-processing terms.',
           ],
         },
         pricing: {
           title: 'Pricing Model',
           content: [
-            'PromptQuorum is currently in free public beta. The pricing model post-launch has not been finalised publicly, but the beta is free with no credit card required.',
-            'AskQuorum AI operates a subscription or usage-based model depending on the plan tier. Pricing targets consumer and small-business segments.',
+            'PromptQuorum is in free public beta with no credit card required. Pricing after the beta has not been announced.',
+            'AskQuorum AI’s website does not list prices; it offers a "Book a call" option and contact details, and describes Kavya as a custom build rather than a self-serve product.',
           ],
         },
         byok: {
           title: 'Bring Your Own Key (BYOK)',
           content: [
-            'Both products support a BYOK model — you supply your own API keys for the AI models you want to use. This keeps inference costs transparent and gives you direct control over which providers you pay.',
-            'In PromptQuorum, BYOK is central to the architecture: keys stay in your browser\'s local storage and are used directly to call provider APIs. No key ever touches PromptQuorum infrastructure.',
-            'AskQuorum AI also supports BYOK for certain providers, though the implementation details differ and the primary flow routes through their platform.',
+            'In PromptQuorum, bringing your own key is central to the architecture: you supply your own API keys, they stay in your browser’s local storage, and calls go directly from your browser to the provider (see the [PromptQuorum FAQ](/faq)). This keeps inference costs transparent and gives you direct control over which providers you pay.',
+            'AskQuorum AI’s website does not mention bring-your-own-key support. If that matters to you, ask the company how a custom build would handle credentials.',
           ],
         },
         conclusion: {
           title: 'Bottom Line',
           content: [
-            'PromptQuorum is an EU-native, privacy-first, multi-model prompt tool built for professionals. It lets you run one prompt across 25+ AI models simultaneously — including local models — apply prompt engineering frameworks, and analyse responses with consensus scoring.',
-            'AskQuorum AI is a consumer-facing conversational AI product designed for mobile and WhatsApp users, primarily in the Indian market.',
-            'They solve different problems for different people. If you need professional-grade multi-model comparison with local LLM support and GDPR compliance, PromptQuorum is built for that. If you want a simple AI assistant on your phone, AskQuorum AI may be what you\'re looking for.',
+            'PromptQuorum is a privacy-conscious, multi-model prompt tool built in Germany for professionals: it lets you send one prompt to 25+ AI services, including local models, apply prompt engineering frameworks, and compare responses with Quorum analysis.',
+            'AskQuorum AI describes itself as an AI development company in India that builds custom AI applications, automation, and assistants for business clients.',
+            'They are different kinds of offering for different needs: PromptQuorum is software you use yourself, while AskQuorum AI sells development services. Compare them against your own requirements, and confirm AskQuorum AI’s details with the company, since this page relies on its public website at the time of writing.',
           ],
         },
       },
@@ -20200,70 +20209,79 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     ar: {
       category: 'مقارنة',
       title: 'PromptQuorum مقابل AskQuorum AI — ما الفرق؟',
-      intro: 'أداتان باسمين متشابهين، لكنهما منتجان مختلفان تماماً. إليك تفصيلاً واضحاً لما تقوم به كل من PromptQuorum و AskQuorum AI، ولمن صُممت كل منهما، ولماذا ليستا الشيء نفسه.',
-      publishDate: 'Published March 17, 2026',
-      seoTitle: 'PromptQuorum مقابل AskQuorum: مقارنة صادقة وتوصية',
-      metaDescription: 'PromptQuorum مقابل AskQuorum: مقارنة تفصيلية للميزات وسياسات الخصوصية ودعم نماذج LLM المحلية وتوصية نهائية لسير عملك.',
+      intro: 'اسمان متشابهان، ونوعان مختلفان من المنتجات. إليك عرضًا واقعيًا لما هو PromptQuorum ولما تقول AskQuorum AI إنها تقدّمه على موقعها الإلكتروني، لتتمكن من التمييز بينهما.',
+      publishDate: 'نُشر في 17 مارس 2026',
+      seoTitle: 'PromptQuorum مقابل AskQuorum AI: أوجه الاختلاف',
+      metaDescription: 'PromptQuorum مقابل AskQuorum AI: ما تقول كل منهما إنها تقدّمه ولمن، ودعم LLM المحلية والخصوصية والأسعار، استنادًا إلى موقع كل شركة.',
       readTime: '4 دقائق للقراءة',
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'النقاط الرئيسية',
+          items: [
+            'PromptQuorum وAskQuorum AI منتجان لا صلة بينهما من شركتين مختلفتين، يشتركان في كلمة واحدة في الاسم فحسب.',
+            'PromptQuorum أداة أوامر متعددة النماذج تستخدمها بنفسك، تدعم نماذج LLM المحلية (Ollama وLM Studio) وأطر الأوامر وتحليل Quorum؛ وهي في مرحلة بيتا عامة مجانية.',
+            'بحسب موقعها الإلكتروني، AskQuorum AI شركة تطوير ذكاء اصطناعي مقرها نويدا في الهند، تبني تطبيقات ذكاء اصطناعي مخصصة وأتمتة ومساعدين مثل Kavya المبني على WhatsApp ([AskQuorum AI](https://askquorumai.com)).',
+            'لا يذكر موقع AskQuorum AI الأسعار أو GDPR أو إحضار المفتاح الخاص (BYOK) أو دعم LLM المحلية في الصفحات التي راجعناها؛ اسأل الشركة إذا كانت هذه الأمور مهمة لك.',
+          ],
+        },
         overview: {
           title: 'منتجان مختلفان',
           content: [
-            'تشترك PromptQuorum و AskQuorum AI في كلمة متشابهة ضمن اسميهما، لكن يبنيهما فريقان مختلفان، لمستخدمين مختلفين، في أسواق مختلفة. يعرض هذا المقال الفروق الجوهرية بموضوعية حتى تتمكن من تقييم كليهما بوضوح.',
-            'إذا وصلت إلى هنا لأنك بحثت عن إحداهما فوجدت الأخرى، فستساعدك هذه المقارنة على تحديد أيّهما — إن وُجدت — تناسب سير عملك.',
+            'يشترك PromptQuorum وAskQuorum AI في كلمة متشابهة ضمن الاسمين، لكنهما منتجان لا صلة بينهما من شركتين مختلفتين. تصف هذه المقالة كلًا منهما بموضوعية استنادًا إلى ما تنشره كل منهما، لتتمكن من تقييمهما بوضوح.',
+            'إذا بحثت عن أحدهما فوجدت الآخر، فستساعدك هذه المقارنة على تحديد أيّهما، إن وُجد، يناسب احتياجاتك. أُخذت المعلومات عن AskQuorum AI من موقعها العام بتاريخ 20 نوفمبر 2026 وقد تكون تغيّرت منذ ذلك الحين.',
           ],
         },
         origins: {
-          title: 'أصول الشركة',
+          title: 'أصول الشركتين',
           content: [
-            'تُبنى PromptQuorum في ألمانيا على يد فريق مقره في الاتحاد الأوروبي. وقد صُممت من الأساس مع مراعاة معايير خصوصية البيانات الأوروبية، بما في ذلك الامتثال لـ GDPR ومعالجة البيانات بأولوية محلية. يستهدف المنتج المطورين والباحثين والمحترفين الذين يعملون مع نماذج ذكاء اصطناعي متعددة بأسلوب منظم.',
-            'أما AskQuorum AI فهو منتج موجّه للهند بالدرجة الأولى، مبنيّ أساساً للاستخدام الاستهلاكي عبر WhatsApp والواجهات التي تُعطي الأولوية للهاتف المحمول. ينصبّ تركيزه على إتاحة ذكاء اصطناعي حواري للأسئلة اليومية، لا على هندسة الأوامر المنظمة أو التحليل متعدد النماذج.',
+            'يُطوَّر PromptQuorum في ألمانيا (راجع [بيانات الشركة](/impressum)) ويُصمَّم مع مراعاة معايير خصوصية البيانات الأوروبية، ومنها GDPR والمعالجة المحلية للبيانات. ويستهدف المطورين والباحثين والمحترفين الذين يعملون بأسلوب منظم مع عدة نماذج ذكاء اصطناعي.',
+            'بحسب موقعها الإلكتروني، AskQuorum AI شركة تطوير ذكاء اصطناعي مقرها نويدا في الهند، تقدّم الاستشارات وتطوير الذكاء الاصطناعي والتطبيقات المخصصة والأتمتة والخدمات السحابية وDevOps لعملاء في الولايات المتحدة والمملكة المتحدة وأوروبا وأستراليا ونيوزيلندا ([AskQuorum AI](https://askquorumai.com)). ويؤهّل مساعدها Kavya العملاء المحتملين على WhatsApp بتسع لغات ويُبنى بشكل فردي لكل نشاط تجاري.',
           ],
         },
         targetUsers: {
           title: 'المستخدمون المستهدفون',
           items: [
             'PromptQuorum: المطورون وباحثو الذكاء الاصطناعي والمستخدمون المتقدمون والمحترفون الذين يريدون مقارنة استجابات نماذج الذكاء الاصطناعي بشكل منهجي',
-            'AskQuorum AI: المستهلكون العامون الباحثون عن مساعد ذكاء اصطناعي حواري عبر تطبيقات مألوفة مثل WhatsApp',
-            'تدعم PromptQuorum سير العمل التقني — أطر عمل الأوامر، وتسجيل التوافق، وتوزيع النماذج — وهي أمور تقع خارج نطاق AskQuorum AI',
-            'AskQuorum AI مُحسَّن لسهولة الوصول والاستخدام، لا للمقارنة المهنية متعددة النماذج',
+            'AskQuorum AI: بحسب موقعها، الشركات التي تطلب تطبيقات ذكاء اصطناعي مخصصة أو أتمتة أو مساعدين مثل Kavya',
+            'PromptQuorum أداة تستخدمها بنفسك: أطر الأوامر وتحليل Quorum والإرسال متعدد النماذج',
+            'تبيع AskQuorum AI خدمات تطوير وحلولًا مخصصة؛ ولا تصف الصفحات التي راجعناها أداة أوامر متعددة النماذج بنظام الخدمة الذاتية',
           ],
         },
         localLLM: {
           title: 'دعم نماذج LLM المحلية',
           content: [
-            'تدعم PromptQuorum نماذج LLM المحلية عبر Ollama و LM Studio. يمكنك تشغيل نماذج مثل Llama 3 و Mistral و Phi-3 و Gemma بالكامل على جهازك الخاص، دون أن تغادر أي بيانات جهازك. هذه ميزة أساسية وليست إضافة اختيارية.',
-            'AskQuorum AI لا يوفر دعماً لنماذج LLM المحلية. فهو يعمل عبر بنية تحتية مستضافة سحابياً، وهو أمر مناسب لحالة استخدامه الموجهة للمستهلك، لكنه يعني أن أوامرك واستجاباتك تمر عبر خوادم خارجية.',
+            'يدعم PromptQuorum نماذج LLM المحلية عبر Ollama وLM Studio وJan AI وأي نقطة نهاية متوافقة مع OpenAI، فيمكن أن تبقى الأوامر على جهازك (راجع [الأسئلة الشائعة لـ PromptQuorum](/ar/faq)).',
+            'لا يذكر موقع AskQuorum AI دعم نماذج LLM المحلية؛ بل يصف حلولًا مخصصة تستخدم واجهات LLM والوكلاء واسترجاع المعلومات. اسأل الشركة إذا كان ذلك مهمًا لمشروعك.',
           ],
         },
         privacy: {
-          title: 'الخصوصية و GDPR',
+          title: 'الخصوصية وGDPR',
           content: [
-            'صُممت PromptQuorum للامتثال لـ GDPR. تُخزَّن مفاتيح API محلياً في متصفحك ولا تُرسَل أبداً إلى خوادم PromptQuorum. لا حاجة إلى حساب، ولا تسجيل بالبريد الإلكتروني، والتحليلات اختيارية عبر لافتة موافقة. صُمم المنتج ليُستخدم دون ترك أثر للبيانات.',
-            'AskQuorum AI لا ينشر موقفاً خاصاً بالخصوصية يتعلق بـ GDPR في وثائقه. وبالنسبة لمستخدمي الاتحاد الأوروبي الذين يتعاملون مع بيانات مهنية حساسة، يستحق هذا التقييم قبل الاستخدام.',
+            'صُمم PromptQuorum لاستخدام يراعي GDPR: تُخزَّن مفاتيح API محليًا في متصفحك، ولا يستدعي PromptQuorum أي LLM بمفاتيح خاصة به، ولا يلزم حساب أثناء البيتا، ولا تعمل التحليلات إلا بعد الموافقة عبر لافتة الموافقة. وهذا يصف تصميم المنتج لا ضمانًا قانونيًا للامتثال في حالة استخدامك.',
+            'تربط الصفحة الرئيسية لـ AskQuorum AI بصفحات الخصوصية والشروط والأمان وتذكر توقيع اتفاقية عدم إفصاح قبل المناقشات التقنية؛ ولا تذكر GDPR في الصفحات التي راجعناها. وإذا كنت تعالج بيانات شخصية فاطلب من الشركة مباشرة شروط معالجة البيانات لديها.',
           ],
         },
         pricing: {
           title: 'نموذج التسعير',
           content: [
-            'PromptQuorum حالياً في نسخة تجريبية مجانية، مع قائمة انتظار للوصول المبكر. لم يُحدَّد نموذج التسعير بعد الإطلاق علناً حتى الآن، لكن النسخة التجريبية مجانية ولا تتطلب بطاقة ائتمان.',
-            'AskQuorum AI يعتمد نموذج اشتراك أو نموذجاً قائماً على الاستخدام بحسب مستوى الخطة. يستهدف التسعير شرائح المستهلكين والشركات الصغيرة.',
+            'PromptQuorum في بيتا عامة مجانية دون الحاجة إلى بطاقة ائتمان. ولم تُعلن أسعار ما بعد البيتا.',
+            'لا يعرض موقع AskQuorum AI أسعارًا؛ بل يقدّم خيار «Book a call» وبيانات اتصال، ويصف Kavya بأنه حل مخصص لا منتج بنظام الخدمة الذاتية.',
           ],
         },
         byok: {
           title: 'أحضر مفتاحك الخاص (BYOK)',
           content: [
-            'يدعم كلا المنتجين نموذج BYOK — إذ تقدّم مفاتيح API الخاصة بك للنماذج التي تريد استخدامها. يبقي هذا تكاليف الاستدلال شفافة ويمنحك تحكماً مباشراً في المزودين الذين تدفع لهم.',
-            'في PromptQuorum، يُعدّ BYOK محورياً في البنية: تبقى المفاتيح في التخزين المحلي لمتصفحك وتُستخدم مباشرة لاستدعاء واجهات API الخاصة بالمزود. ولا يلمس أي مفتاح بنية PromptQuorum التحتية إطلاقاً.',
-            'يدعم AskQuorum AI أيضاً نموذج BYOK لبعض المزودين، رغم اختلاف تفاصيل التنفيذ وكون المسار الأساسي يمر عبر منصته.',
+            'في PromptQuorum يُعدّ استخدام مفتاحك الخاص محورًا في البنية: تزوّد مفاتيح API الخاصة بك، وتبقى في التخزين المحلي لمتصفحك، وتذهب الاستدعاءات مباشرة من متصفحك إلى المزوّد (راجع [الأسئلة الشائعة لـ PromptQuorum](/ar/faq)). وهذا يُبقي تكاليف الاستدلال شفافة ويمنحك تحكمًا مباشرًا في المزوّدين الذين تدفع لهم.',
+            'لا يذكر موقع AskQuorum AI دعم إحضار المفتاح الخاص. وإذا كان ذلك مهمًا لك فاسأل الشركة كيف سيتعامل حل مخصص مع بيانات الاعتماد.',
           ],
         },
         conclusion: {
           title: 'الخلاصة',
           content: [
-            'PromptQuorum أداة أوامر متعددة النماذج، أصيلة في الاتحاد الأوروبي، تعطي الأولوية للخصوصية، ومبنية للمحترفين. تتيح لك تشغيل أمر واحد عبر أكثر من 25 نموذج ذكاء اصطناعي في وقت واحد — بما في ذلك النماذج المحلية — وتطبيق أطر عمل هندسة الأوامر وتحليل الاستجابات عبر تسجيل التوافق.',
-            'AskQuorum AI منتج ذكاء اصطناعي حواري موجّه للمستهلك، مصمم لمستخدمي الهاتف المحمول و WhatsApp، وبشكل أساسي في السوق الهندي.',
-            'كل منهما يحل مشكلة مختلفة لأشخاص مختلفين. إذا كنت بحاجة إلى مقارنة مهنية متعددة النماذج مع دعم لنماذج LLM المحلية والامتثال لـ GDPR، فإن PromptQuorum مبنية لهذا الغرض. وإذا كنت تريد مساعد ذكاء اصطناعي بسيطاً على هاتفك، فقد يكون AskQuorum AI هو ما تبحث عنه.',
+            'PromptQuorum أداة أوامر متعددة النماذج تراعي الخصوصية، بُنيت في ألمانيا للمحترفين: تتيح إرسال أمر واحد إلى أكثر من 25 خدمة ذكاء اصطناعي، بما فيها النماذج المحلية، وتطبيق أطر هندسة الأوامر ومقارنة الاستجابات بتحليل Quorum.',
+            'تصف AskQuorum AI نفسها بأنها شركة تطوير ذكاء اصطناعي في الهند تبني تطبيقات ذكاء اصطناعي مخصصة وأتمتة ومساعدين لعملاء من الشركات.',
+            'هما عرضان من نوعين مختلفين لاحتياجات مختلفة: PromptQuorum برنامج تستخدمه بنفسك، بينما تبيع AskQuorum AI خدمات تطوير. قارن بينهما وفق متطلباتك، وتأكد من تفاصيل AskQuorum AI لدى الشركة، لأن هذه الصفحة تعتمد على موقعها العام وقت الكتابة.',
           ],
         },
       },
@@ -20271,229 +20289,479 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     es: {
       category: 'Comparación',
       title: 'PromptQuorum vs AskQuorum AI — ¿Cuál es la Diferencia?',
-      intro: 'Dos herramientas, nombres similares, productos muy diferentes. Aquí hay un desglose claro de qué hace cada una, para quién fue construida y por qué no son lo mismo.',
-      publishDate: 'Published March 17, 2026',
-      seoTitle: 'PromptQuorum vs AskQuorum: Comparación Honesta y Recomendación',
-      metaDescription: 'PromptQuorum vs AskQuorum: comparación detallada de características, políticas de privacidad, soporte para LLM locales y recomendación final.',
+      intro: 'Dos nombres parecidos, dos tipos de producto distintos. Aquí tienes un resumen factual de qué es PromptQuorum y de lo que AskQuorum AI dice ofrecer en su propio sitio web, para que puedas distinguirlos.',
+      publishDate: 'Publicado el 17 de marzo de 2026',
+      seoTitle: 'PromptQuorum vs AskQuorum AI: en qué se diferencian',
+      metaDescription: 'PromptQuorum vs AskQuorum AI: qué dice hacer cada uno, para quién es, LLM locales, privacidad y precios, según el sitio web de cada empresa.',
       readTime: '4 min de lectura',
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Puntos clave',
+          items: [
+            'PromptQuorum y AskQuorum AI son productos sin relación, de empresas distintas, que solo comparten una palabra en el nombre.',
+            'PromptQuorum es una herramienta de prompts multimodelo que usas tú mismo, con soporte de LLM locales (Ollama, LM Studio), frameworks de prompts y análisis Quorum; está en beta pública gratuita.',
+            'Según su propio sitio web, AskQuorum AI es una empresa de desarrollo de IA con sede en Noida (India) que crea aplicaciones de IA a medida, automatización y asistentes como Kavya en WhatsApp ([AskQuorum AI](https://askquorumai.com)).',
+            'El sitio de AskQuorum AI no menciona precios, RGPD, clave propia (BYOK) ni LLM locales en las páginas que revisamos; pregunta a la empresa si te importa.',
+          ],
+        },
         overview: {
-          title: 'Dos Productos Diferentes',
-          content: ['PromptQuorum y AskQuorum AI comparten una palabra similar en sus nombres, pero son construidas por equipos diferentes, para usuarios diferentes, en mercados diferentes. Este artículo expone las diferencias clave de manera objetiva para que puedas evaluar ambas claramente.', 'Si llegaste aquí porque buscabas una y encontraste la otra, esta comparación te ayudará a decidir cuál — si alguna — se ajusta a tu flujo de trabajo.']
+          title: 'Dos productos distintos',
+          content: [
+            'PromptQuorum y AskQuorum AI comparten una palabra parecida en el nombre, pero son productos sin relación de empresas distintas. Este artículo describe cada uno de forma factual, según lo que cada uno publica, para que puedas evaluarlos con claridad.',
+            'Si buscabas uno y encontraste el otro, esta comparación te ayudará a decidir cuál, si alguno, encaja con tus necesidades. La información sobre AskQuorum AI procede de su sitio público a fecha de 20 de noviembre de 2026 y puede haber cambiado desde entonces.',
+          ],
         },
         origins: {
-          title: 'Orígenes de la Empresa',
-          content: ['PromptQuorum es construida en Alemania por un equipo con base en la UE. Fue diseñada desde cero teniendo en mente las normas europeas de privacidad de datos, incluyendo cumplimiento de RGPD y manejo de datos con prioridad local. El producto está dirigido a desarrolladores, investigadores y profesionales que trabajan con múltiples modelos de IA de manera estructurada.', 'AskQuorum AI es un producto India-first, construido principalmente para uso de consumidores a través de WhatsApp e interfaces mobile-first. Su enfoque es acceso a IA conversacional para preguntas cotidianas, no ingeniería de prompts estructurada ni análisis multi-modelo.']
+          title: 'Origen de las empresas',
+          content: [
+            'PromptQuorum se desarrolla en Alemania (consulta el [aviso legal](/impressum)) y se diseña teniendo en cuenta las normas europeas de privacidad, incluidos el RGPD y el tratamiento local de datos. Está dirigido a desarrolladores, investigadores y profesionales que trabajan de forma estructurada con varios modelos de IA.',
+            'Según su propio sitio web, AskQuorum AI es una empresa de desarrollo de IA con sede en Noida (India) que ofrece consultoría, desarrollo de IA y aplicaciones a medida, automatización y servicios de nube y DevOps para clientes de EE. UU., Reino Unido, Europa, Australia y Nueva Zelanda ([AskQuorum AI](https://askquorumai.com)). Su asistente Kavya califica leads en WhatsApp en nueve idiomas y se construye de forma individual para cada negocio.',
+          ],
         },
         targetUsers: {
-          title: 'Usuarios Objetivo',
-          items: ['PromptQuorum: desarrolladores, investigadores de IA, usuarios avanzados y profesionales que quieren comparar sistemáticamente respuestas de modelos de IA', 'AskQuorum AI: consumidores generales buscando un asistente de IA conversacional a través de apps familiares como WhatsApp', 'PromptQuorum soporta flujos técnicos — frameworks de prompts, puntuación de consenso, despacho de modelos — que están fuera del alcance de AskQuorum AI', 'AskQuorum AI está optimizado para accesibilidad y facilidad, no para comparación profesional multi-modelo']
+          title: 'Usuarios objetivo',
+          items: [
+            'PromptQuorum: desarrolladores, investigadores de IA, usuarios avanzados y profesionales que quieren comparar respuestas de modelos de IA de forma sistemática',
+            'AskQuorum AI: según su sitio, empresas que encargan aplicaciones de IA a medida, automatización o asistentes como Kavya',
+            'PromptQuorum es una herramienta que usas tú mismo: frameworks de prompts, análisis Quorum y envío multimodelo',
+            'AskQuorum AI vende servicios de desarrollo y soluciones a medida; las páginas que revisamos no describen una herramienta de prompts multimodelo de autoservicio',
+          ],
         },
         localLLM: {
-          title: 'Soporte para LLM Locales',
-          content: ['PromptQuorum soporta LLMs locales vía Ollama y LM Studio. Puedes ejecutar modelos como Llama 3, Mistral, Phi-3 y Gemma completamente en tu propio hardware, sin datos dejando tu dispositivo. Esta es una característica principal, no un complemento.', 'AskQuorum AI no ofrece soporte para LLM locales. Opera a través de infraestructura alojada en la nube, que es apropiado para su caso de uso orientado al consumidor pero significa que tus prompts y respuestas pasan a través de servidores externos.']
+          title: 'Soporte de LLM locales',
+          content: [
+            'PromptQuorum admite LLM locales mediante Ollama, LM Studio, Jan AI y cualquier endpoint compatible con OpenAI, de modo que los prompts pueden quedarse en tu propio hardware (consulta las [preguntas frecuentes de PromptQuorum](/es/faq)).',
+            'El sitio de AskQuorum AI no menciona soporte de LLM locales; describe soluciones a medida con APIs de LLM, agentes y recuperación de información. Pregunta a la empresa si te importa para tu proyecto.',
+          ],
         },
         privacy: {
           title: 'Privacidad y RGPD',
-          content: ['PromptQuorum está construida para cumplimiento de RGPD. Las claves API se almacenan localmente en tu navegador y nunca se transmiten a servidores de PromptQuorum. No se requiere cuenta, no hay suscripción por correo y el análisis es opt-in a través de un banner de consentimiento. El producto está diseñado para usarse sin dejar un rastro de datos.', 'AskQuorum AI no publica una postura específica de RGPD en su documentación. Para usuarios de la UE manejando datos profesionales sensibles, esto vale la pena evaluar antes de usar.']
+          content: [
+            'PromptQuorum está pensado para un uso atento al RGPD: las claves API se guardan localmente en tu navegador, PromptQuorum nunca llama a un LLM con claves propias, no hace falta cuenta durante la beta y las analíticas solo se ejecutan tras el consentimiento mediante un banner. Esto describe el diseño del producto, no una garantía jurídica de cumplimiento para tu caso de uso.',
+            'La página de inicio de AskQuorum AI enlaza páginas de Privacidad, Términos y Seguridad y dice que se firma un NDA antes de las conversaciones técnicas; no menciona el RGPD en las páginas que revisamos. Si tratas datos personales, pide directamente a la empresa sus condiciones de tratamiento de datos.',
+          ],
         },
         pricing: {
-          title: 'Modelo de Precios',
-          content: ['PromptQuorum está actualmente en beta gratuita, con una lista de acceso anticipado. El modelo de precios post-lanzamiento no ha sido finalizado públicamente, pero la beta es gratuita sin tarjeta de crédito requerida.', 'AskQuorum AI opera un modelo de suscripción o basado en uso dependiendo del nivel del plan. La fijación de precios está dirigida a segmentos de consumidores y pequeños negocios.']
+          title: 'Modelo de precios',
+          content: [
+            'PromptQuorum está en beta pública gratuita, sin necesidad de tarjeta de crédito. Los precios posteriores a la beta no se han anunciado.',
+            'El sitio de AskQuorum AI no muestra precios; ofrece «Book a call» y datos de contacto, y presenta Kavya como una solución a medida y no como un producto de autoservicio.',
+          ],
         },
         byok: {
-          title: 'Trae Tu Propia Clave (BYOK)',
-          content: ['Ambos productos soportan un modelo BYOK — tú proporcionas tus propias claves API para los modelos de IA que quieres usar. Esto mantiene los costos de inferencia transparentes y te da control directo sobre qué proveedores pagas.', 'En PromptQuorum, BYOK es central a la arquitectura: las claves permanecen en el almacenamiento local de tu navegador y se usan directamente para llamar APIs del proveedor. Ninguna clave jamás toca infraestructura de PromptQuorum.', 'AskQuorum AI también soporta BYOK para ciertos proveedores, aunque los detalles de implementación difieren y el flujo primario se encamina a través de su plataforma.']
+          title: 'Trae tu propia clave (BYOK)',
+          content: [
+            'En PromptQuorum, usar tu propia clave es central en la arquitectura: aportas tus propias claves API, permanecen en el almacenamiento local de tu navegador y las llamadas van directamente de tu navegador al proveedor (consulta las [preguntas frecuentes de PromptQuorum](/es/faq)). Así los costes de inferencia son transparentes y controlas directamente a qué proveedores pagas.',
+            'El sitio de AskQuorum AI no menciona soporte de clave propia. Si te importa, pregunta a la empresa cómo gestionaría las credenciales una solución a medida.',
+          ],
         },
         conclusion: {
           title: 'Conclusión',
-          content: ['PromptQuorum es una herramienta de prompts multi-modelo nativa de la UE, orientada a privacidad, construida para profesionales. Te permite ejecutar un prompt en 25+ modelos de IA simultáneamente — incluyendo modelos locales — aplicar frameworks de ingeniería de prompts y analizar respuestas con puntuación de consenso.', 'AskQuorum AI es un producto de IA conversacional orientado al consumidor diseñado para usuarios de mobile y WhatsApp, principalmente en el mercado indio.', 'Resuelven problemas diferentes para personas diferentes. Si necesitas comparación profesional multi-modelo con soporte para LLM locales y cumplimiento de RGPD, PromptQuorum está construida para eso. Si quieres un simple asistente de IA en tu teléfono, AskQuorum AI puede ser lo que buscas.']
-        }
-      }
+          content: [
+            'PromptQuorum es una herramienta de prompts multimodelo, atenta a la privacidad, creada en Alemania para profesionales: permite enviar un prompt a más de 25 servicios de IA, incluidos modelos locales, aplicar frameworks de prompt engineering y comparar respuestas con el análisis Quorum.',
+            'AskQuorum AI se describe como una empresa de desarrollo de IA en la India que crea aplicaciones de IA a medida, automatización y asistentes para clientes empresariales.',
+            'Son ofertas de distinta naturaleza para necesidades distintas: PromptQuorum es software que usas tú mismo, mientras que AskQuorum AI vende servicios de desarrollo. Compáralos con tus propios requisitos y confirma con la empresa los detalles de AskQuorum AI, ya que esta página se basa en su sitio público en el momento de redactarla.',
+          ],
+        },
+      },
     },
     de: {
+      metaDescription: 'PromptQuorum vs AskQuorum AI: was beide laut eigener Website anbieten, für wen sie gedacht sind, lokale LLMs, Datenschutz und Preise.',
+      seoTitle: 'PromptQuorum vs AskQuorum AI: die Unterschiede',
       category: 'Vergleich',
       title: 'PromptQuorum vs AskQuorum AI — Was ist der Unterschied?',
-      intro: 'Zwei Tools, ähnliche Namen, sehr unterschiedliche Produkte. Hier ist ein klarer Überblick, was PromptQuorum und AskQuorum AI jeweils tun, für wen sie entwickelt wurden und warum sie nicht dasselbe sind.',
+      intro: 'Zwei ähnlich klingende Namen, zwei verschiedene Arten von Produkt. Hier eine sachliche Gegenüberstellung dessen, was PromptQuorum ist und was AskQuorum AI auf der eigenen Website anbietet, damit Sie beide auseinanderhalten können.',
       publishDate: 'Veröffentlicht 17. März 2026',
       readTime: '4 Min. Lesezeit',
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Zusammenfassung',
+          items: [
+            'PromptQuorum und AskQuorum AI sind voneinander unabhängige Produkte verschiedener Unternehmen, die zufällig ein Wort im Namen teilen.',
+            'PromptQuorum ist ein Multi-Modell-Prompt-Tool, das Sie selbst nutzen, mit Unterstützung für lokale LLMs (Ollama, LM Studio), Prompt-Frameworks und Quorum-Analyse; es befindet sich in der kostenlosen öffentlichen Beta.',
+            'Laut eigener Website ist AskQuorum AI ein KI-Entwicklungsunternehmen in Noida, Indien, das individuelle KI-Anwendungen, Automatisierung und Assistenten wie den WhatsApp-basierten Kavya baut ([AskQuorum AI](https://askquorumai.com)).',
+            'Auf den von uns geprüften Seiten nennt AskQuorum AI weder Preise noch DSGVO, Bring-your-own-key oder lokale LLMs; fragen Sie beim Unternehmen nach, wenn das für Sie wichtig ist.',
+          ],
+        },
         overview: {
           title: 'Zwei verschiedene Produkte',
-          content: 'PromptQuorum und AskQuorum AI teilen ein ähnliches Wort in ihren Namen, werden aber von verschiedenen Teams für verschiedene Nutzer in verschiedenen Märkten entwickelt. Dieser Artikel legt die wesentlichen Unterschiede sachlich dar.',
+          content: [
+            'PromptQuorum und AskQuorum AI teilen ein ähnliches Wort im Namen, sind aber voneinander unabhängige Produkte verschiedener Unternehmen. Dieser Artikel beschreibt beide sachlich auf Grundlage dessen, was sie jeweils veröffentlichen, damit Sie sie klar bewerten können.',
+            'Wenn Sie nach dem einen gesucht und das andere gefunden haben, hilft Ihnen dieser Vergleich zu entscheiden, welches davon, wenn überhaupt, zu Ihrem Bedarf passt. Die Angaben zu AskQuorum AI stammen von dessen öffentlicher Website vom 20. November 2026 und können sich seitdem geändert haben.',
+          ],
         },
         origins: {
-          title: 'Ursprung der Unternehmen',
-          content: 'PromptQuorum wird in Deutschland von einem EU-basierten Team entwickelt und von Grund auf für europäische Datenschutzstandards einschließlich DSGVO-Konformität ausgelegt. AskQuorum AI ist ein India-first-Produkt für den Verbrauchermarkt über WhatsApp und mobile Plattformen.',
+          title: 'Herkunft der Unternehmen',
+          content: [
+            'PromptQuorum wird in Deutschland entwickelt (siehe das [Impressum](/impressum)) und unter Berücksichtigung europäischer Datenschutznormen konzipiert, darunter DSGVO und lokale Datenverarbeitung. Es richtet sich an Entwickler, Forschende und Fachleute, die strukturiert mit mehreren KI-Modellen arbeiten.',
+            'Laut eigener Website ist AskQuorum AI ein KI-Entwicklungsunternehmen mit Sitz in Noida, Indien, das Beratung, individuelle KI- und App-Entwicklung, Automatisierung sowie Cloud- und DevOps-Leistungen für Kunden in den USA, Großbritannien, Europa, Australien und Neuseeland anbietet ([AskQuorum AI](https://askquorumai.com)). Der Assistent Kavya qualifiziert Leads auf WhatsApp in neun Sprachen und wird für jedes Unternehmen individuell gebaut.',
+          ],
+        },
+        targetUsers: {
+          title: 'Zielgruppen',
+          items: [
+            'PromptQuorum: Entwickler, KI-Forschende, Power-User und Fachleute, die KI-Modellantworten systematisch vergleichen möchten',
+            'AskQuorum AI: laut Website Unternehmen, die individuelle KI-Anwendungen, Automatisierung oder Assistenten wie Kavya in Auftrag geben',
+            'PromptQuorum ist ein Werkzeug, das Sie selbst nutzen: Prompt-Frameworks, Quorum-Analyse und Multi-Modell-Versand',
+            'AskQuorum AI verkauft Entwicklungsleistungen und Individuallösungen; die von uns geprüften Seiten beschreiben kein Self-Service-Tool für Multi-Modell-Prompts',
+          ],
         },
         localLLM: {
-          title: 'Lokale LLM-Unterstützung',
-          content: 'PromptQuorum unterstützt lokale LLMs über Ollama und LM Studio — Daten verlassen Ihr Gerät nicht. AskQuorum AI bietet keine lokale LLM-Unterstützung.',
+          title: 'Unterstützung lokaler LLMs',
+          content: [
+            'PromptQuorum unterstützt lokale LLMs über Ollama, LM Studio, Jan AI und jeden OpenAI-kompatiblen Endpunkt, sodass Prompts auf Ihrer eigenen Hardware bleiben können (siehe die [PromptQuorum-FAQ](/de/faq)).',
+            'Die Website von AskQuorum AI erwähnt keine Unterstützung lokaler LLMs; sie beschreibt individuelle Lösungen mit LLM-APIs, Agenten und Retrieval. Fragen Sie das Unternehmen, wenn das für Ihr Projekt wichtig ist.',
+          ],
         },
         privacy: {
           title: 'Datenschutz und DSGVO',
-          content: 'PromptQuorum ist DSGVO-konform: API-Schlüssel werden lokal gespeichert, es ist kein Konto erforderlich, und Analytics sind opt-in. AskQuorum AI veröffentlicht keine DSGVO-spezifische Datenschutzerklärung.',
+          content: [
+            'PromptQuorum ist für einen DSGVO-bewussten Einsatz gebaut: API-Keys werden lokal in Ihrem Browser gespeichert, PromptQuorum ruft kein LLM mit eigenen Keys auf, während der Beta ist kein Konto erforderlich, und Analysen laufen erst nach Einwilligung über ein Einwilligungsbanner. Das beschreibt das Produktdesign, keine rechtliche Garantie der Konformität für Ihren Anwendungsfall.',
+            'Die Startseite von AskQuorum AI verlinkt Seiten zu Datenschutz, Nutzungsbedingungen und Sicherheit und nennt eine NDA vor technischen Gesprächen; auf den von uns geprüften Seiten wird die DSGVO nicht erwähnt. Wenn Sie personenbezogene Daten verarbeiten, fragen Sie das Unternehmen direkt nach seinen Auftragsverarbeitungsbedingungen.',
+          ],
+        },
+        pricing: {
+          title: 'Preismodell',
+          content: [
+            'PromptQuorum befindet sich in der kostenlosen öffentlichen Beta, eine Kreditkarte ist nicht erforderlich. Preise nach der Beta wurden nicht bekannt gegeben.',
+            'Die Website von AskQuorum AI nennt keine Preise; sie bietet „Book a call“ und Kontaktdaten an und beschreibt Kavya als Individuallösung statt als Self-Service-Produkt.',
+          ],
+        },
+        byok: {
+          title: 'Eigener Schlüssel (BYOK)',
+          content: [
+            'In PromptQuorum ist der eigene Schlüssel zentral für die Architektur: Sie hinterlegen Ihre eigenen API-Keys, sie bleiben im lokalen Speicher Ihres Browsers, und Aufrufe gehen direkt vom Browser an den Anbieter (siehe die [PromptQuorum-FAQ](/de/faq)). So bleiben die Inferenzkosten transparent, und Sie behalten die direkte Kontrolle darüber, welche Anbieter Sie bezahlen.',
+            'Die Website von AskQuorum AI erwähnt keine Bring-your-own-key-Unterstützung. Wenn das für Sie wichtig ist, fragen Sie das Unternehmen, wie eine Individuallösung mit Zugangsdaten umgehen würde.',
+          ],
         },
         conclusion: {
           title: 'Fazit',
-          content: 'PromptQuorum ist ein EU-natives, datenschutzorientiertes Multi-Modell-Prompt-Tool für Profis. AskQuorum AI ist ein verbraucherorientiertes KI-Produkt für mobile Nutzer, hauptsächlich auf dem indischen Markt.',
+          content: [
+            'PromptQuorum ist ein datenschutzbewusstes Multi-Modell-Prompt-Tool aus Deutschland für Fachleute: Sie senden einen Prompt an über 25 KI-Dienste, auch lokale Modelle, nutzen Prompt-Engineering-Frameworks und vergleichen Antworten mit der Quorum-Analyse.',
+            'AskQuorum AI beschreibt sich selbst als KI-Entwicklungsunternehmen in Indien, das individuelle KI-Anwendungen, Automatisierung und Assistenten für Geschäftskunden baut.',
+            'Es sind verschiedene Angebote für verschiedene Bedürfnisse: PromptQuorum ist Software, die Sie selbst nutzen, AskQuorum AI verkauft Entwicklungsleistungen. Vergleichen Sie beide mit Ihren eigenen Anforderungen und bestätigen Sie die Angaben zu AskQuorum AI beim Unternehmen, da diese Seite auf dessen öffentlicher Website zum Zeitpunkt der Erstellung beruht.',
+          ],
         },
       },
     },
     fr: {
+      metaDescription: 'PromptQuorum vs AskQuorum AI : ce que chacun affirme faire, pour qui, LLM locaux, confidentialité et tarifs, d’après le site de chaque entreprise.',
+      seoTitle: 'PromptQuorum vs AskQuorum AI : les différences',
       category: 'Comparaison',
       title: 'PromptQuorum vs AskQuorum AI — Quelle est la différence?',
-      intro: 'Deux outils, des noms similaires, des produits très différents. Voici une présentation claire de ce que PromptQuorum et AskQuorum AI font respectivement, pour qui ils sont conçus et pourquoi ils ne sont pas la même chose.',
-      publishDate: 'Publié 17 mars 2026',
+      intro: 'Deux noms qui se ressemblent, deux types de produits différents. Voici une description factuelle de ce qu’est PromptQuorum et de ce qu’AskQuorum AI affirme proposer sur son propre site, pour vous permettre de les distinguer.',
+      publishDate: 'Publié le 17 mars 2026',
       readTime: '4 min de lecture',
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Points clés',
+          items: [
+            'PromptQuorum et AskQuorum AI sont des produits sans lien, issus d’entreprises différentes, qui partagent simplement un mot dans leur nom.',
+            'PromptQuorum est un outil de prompts multi-modèles que vous utilisez vous-même, avec prise en charge des LLM locaux (Ollama, LM Studio), des frameworks de prompts et de l’analyse Quorum ; il est en bêta publique gratuite.',
+            'D’après son propre site, AskQuorum AI est une entreprise de développement d’IA basée à Noida, en Inde, qui conçoit des applications d’IA sur mesure, de l’automatisation et des assistants comme Kavya sur WhatsApp ([AskQuorum AI](https://askquorumai.com)).',
+            'Le site d’AskQuorum AI ne mentionne ni tarifs, ni RGPD, ni clé API personnelle (BYOK), ni LLM locaux sur les pages que nous avons examinées ; interrogez l’entreprise si cela compte pour vous.',
+          ],
+        },
         overview: {
           title: 'Deux produits différents',
-          content: 'PromptQuorum et AskQuorum AI partagent un mot similaire dans leurs noms, mais sont développés par des équipes différentes pour des utilisateurs différents sur des marchés différents.',
+          content: [
+            'PromptQuorum et AskQuorum AI partagent un mot proche dans leur nom, mais ce sont des produits sans lien, issus d’entreprises différentes. Cet article décrit chacun de façon factuelle, d’après ce que chacun publie, afin que vous puissiez les évaluer clairement.',
+            'Si vous cherchiez l’un et avez trouvé l’autre, cette comparaison vous aidera à déterminer lequel, le cas échéant, correspond à vos besoins. Les informations sur AskQuorum AI proviennent de son site public au 20 novembre 2026 et ont pu changer depuis.',
+          ],
         },
         origins: {
           title: 'Origines des entreprises',
-          content: 'PromptQuorum est développé en Allemagne par une équipe basée dans l\'UE, conçu dès le départ pour la conformité RGPD. AskQuorum AI est un produit India-first destiné aux consommateurs via WhatsApp.',
+          content: [
+            'PromptQuorum est développé en Allemagne (voir les [mentions légales](/impressum)) et conçu dans le respect des normes européennes de protection des données, dont le RGPD et le traitement local des données. Il s’adresse aux développeurs, chercheurs et professionnels qui travaillent de façon structurée avec plusieurs modèles d’IA.',
+            'D’après son propre site, AskQuorum AI est une entreprise de développement d’IA basée à Noida, en Inde, qui propose conseil, développement d’IA et d’applications sur mesure, automatisation, cloud et DevOps pour des clients aux États-Unis, au Royaume-Uni, en Europe, en Australie et en Nouvelle-Zélande ([AskQuorum AI](https://askquorumai.com)). Son assistant Kavya qualifie des prospects sur WhatsApp en neuf langues et est conçu individuellement pour chaque entreprise.',
+          ],
+        },
+        targetUsers: {
+          title: 'Utilisateurs cibles',
+          items: [
+            'PromptQuorum : développeurs, chercheurs en IA, utilisateurs avancés et professionnels qui veulent comparer systématiquement les réponses de modèles d’IA',
+            'AskQuorum AI : d’après son site, des entreprises qui commandent des applications d’IA sur mesure, de l’automatisation ou des assistants comme Kavya',
+            'PromptQuorum est un outil que vous utilisez vous-même : frameworks de prompts, analyse Quorum et envoi multi-modèles',
+            'AskQuorum AI vend des services de développement et des réalisations sur mesure ; les pages examinées ne décrivent pas d’outil de prompts multi-modèles en libre-service',
+          ],
         },
         localLLM: {
-          title: 'Support LLM local',
-          content: 'PromptQuorum prend en charge les LLM locaux via Ollama et LM Studio — aucune donnée ne quitte votre appareil. AskQuorum AI ne propose pas de support LLM local.',
+          title: 'Prise en charge des LLM locaux',
+          content: [
+            'PromptQuorum prend en charge les LLM locaux via Ollama, LM Studio, Jan AI et tout point d’accès compatible OpenAI, de sorte que les prompts peuvent rester sur votre propre matériel (voir la [FAQ PromptQuorum](/fr/faq)).',
+            'Le site d’AskQuorum AI ne mentionne pas la prise en charge des LLM locaux ; il décrit des réalisations sur mesure utilisant des API de LLM, des agents et de la recherche documentaire. Interrogez l’entreprise si cela compte pour votre projet.',
+          ],
         },
         privacy: {
           title: 'Confidentialité et RGPD',
-          content: 'PromptQuorum est conçu pour la conformité RGPD : clés API stockées localement, aucun compte requis, analytics opt-in. AskQuorum AI ne publie pas de position RGPD spécifique.',
+          content: [
+            'PromptQuorum est conçu pour un usage attentif au RGPD : les clés API sont stockées localement dans votre navigateur, PromptQuorum n’appelle jamais un LLM avec ses propres clés, aucun compte n’est requis pendant la bêta et les mesures d’audience ne s’exécutent qu’après consentement via un bandeau. Cela décrit la conception du produit, pas une garantie juridique de conformité pour votre cas d’usage.',
+            'La page d’accueil d’AskQuorum AI renvoie vers des pages Confidentialité, Conditions et Sécurité et indique qu’un accord de confidentialité est signé avant tout échange technique ; elle ne mentionne pas le RGPD sur les pages que nous avons examinées. Si vous traitez des données personnelles, demandez directement à l’entreprise ses conditions de traitement des données.',
+          ],
+        },
+        pricing: {
+          title: 'Modèle tarifaire',
+          content: [
+            'PromptQuorum est en bêta publique gratuite, sans carte bancaire requise. Les tarifs après la bêta n’ont pas été annoncés.',
+            'Le site d’AskQuorum AI n’affiche pas de tarifs ; il propose « Book a call » et des coordonnées, et présente Kavya comme une réalisation sur mesure plutôt qu’un produit en libre-service.',
+          ],
+        },
+        byok: {
+          title: 'Apportez votre propre clé (BYOK)',
+          content: [
+            'Dans PromptQuorum, l’usage de votre propre clé est central dans l’architecture : vous fournissez vos propres clés API, elles restent dans le stockage local de votre navigateur et les appels vont directement de votre navigateur au fournisseur (voir la [FAQ PromptQuorum](/fr/faq)). Les coûts d’inférence restent ainsi transparents et vous gardez le contrôle direct des fournisseurs que vous payez.',
+            'Le site d’AskQuorum AI ne mentionne pas la prise en charge de BYOK. Si cela compte pour vous, demandez à l’entreprise comment une réalisation sur mesure gérerait les identifiants.',
+          ],
         },
         conclusion: {
-          title: 'Conclusion',
-          content: 'PromptQuorum est un outil multi-modèle natif EU, axé sur la confidentialité, pour les professionnels. AskQuorum AI est un produit IA conversationnel pour les consommateurs mobiles, principalement sur le marché indien.',
+          title: 'En résumé',
+          content: [
+            'PromptQuorum est un outil de prompts multi-modèles, attentif à la confidentialité, conçu en Allemagne pour les professionnels : il permet d’envoyer un prompt à plus de 25 services d’IA, y compris des modèles locaux, d’appliquer des frameworks de prompt engineering et de comparer les réponses avec l’analyse Quorum.',
+            'AskQuorum AI se décrit comme une entreprise de développement d’IA en Inde qui conçoit pour des clients professionnels des applications d’IA sur mesure, de l’automatisation et des assistants.',
+            'Ce sont des offres de nature différente pour des besoins différents : PromptQuorum est un logiciel que vous utilisez vous-même, tandis qu’AskQuorum AI vend des services de développement. Comparez-les à vos propres exigences et confirmez auprès de l’entreprise les informations sur AskQuorum AI, car cette page s’appuie sur son site public au moment de la rédaction.',
+          ],
         },
       },
     },
     ja: {
+      metaDescription: 'PromptQuorumとAskQuorum AIを比較。各社の公式サイトに基づき、提供内容、対象者、ローカルLLM、プライバシー、料金の違いを解説します。',
+      seoTitle: 'PromptQuorumとAskQuorum AIの違い',
       category: '比較',
       title: 'PromptQuorum vs AskQuorum AI — 何が違うのか？',
-      intro: '2つのツール、似たような名前、まったく異なる製品。PromptQuorumとAskQuorum AIがそれぞれ何をするのか、誰のために作られているのか、なぜ同じものではないのかを明確に説明します。',
+      intro: '名前は似ていますが、種類の異なる2つの製品です。PromptQuorumとは何か、AskQuorum AIが自社サイトで提供すると述べている内容を、事実に基づいて整理し、両者を区別できるようにします。',
       publishDate: '2026年3月17日公開',
       readTime: '4分の読み物',
       sections: {
+        tldr: {
+          isTldr: true,
+          title: '重要ポイント',
+          items: [
+            'PromptQuorumとAskQuorum AIは、名前に似た語を含むだけの、別々の企業による無関係な製品です。',
+            'PromptQuorumは、自分で使うマルチモデル型のプロンプトツールで、ローカルLLM（Ollama、LM Studio）、プロンプトフレームワーク、Quorum分析に対応します。無料の公開ベータ中です。',
+            'AskQuorum AIは、自社サイトによると、インドのノイダに拠点を置くAI開発会社で、カスタムAIアプリケーション、自動化、WhatsAppベースのKavyaのようなアシスタントを開発しています（[AskQuorum AI](https://askquorumai.com)）。',
+            '確認したページでは、AskQuorum AIのサイトに料金、GDPR、独自キー持ち込み（BYOK）、ローカルLLMへの言及はありません。重要な場合は同社に問い合わせてください。',
+          ],
+        },
         overview: {
           title: '2つの異なる製品',
-          content: 'PromptQuorumとAskQuorum AIは名前に似た言葉を共有していますが、異なるチームによって、異なるユーザーのために、異なる市場向けに作られています。',
+          content: [
+            'PromptQuorumとAskQuorum AIは名前に似た語を含みますが、別々の企業による無関係な製品です。この記事は、各社が公開している情報に基づいて、それぞれを事実として説明し、明確に比較できるようにします。',
+            '一方を探していて他方にたどり着いた場合、この比較は、どちらが（もしあれば）ニーズに合うかを判断する助けになります。AskQuorum AIに関する情報は2026年11月20日時点の同社公開サイトに基づいており、その後変更されている可能性があります。',
+          ],
         },
         origins: {
-          title: '企業の起源',
-          content: 'PromptQuorumはEUベースのチームによってドイツで開発され、GDPRコンプライアンスを念頭に置いて設計されています。AskQuorum AIはインドファーストの消費者向け製品で、WhatsAppやモバイルプラットフォームを通じて提供されています。',
+          title: '企業の成り立ち',
+          content: [
+            'PromptQuorumはドイツで開発され（[運営者情報](/impressum)を参照）、GDPRやローカル優先のデータ処理を含む欧州のデータ保護の規範を念頭に設計されています。複数のAIモデルを体系的に扱う開発者、研究者、専門家を対象としています。',
+            'AskQuorum AIは、自社サイトによると、インドのノイダに拠点を置くAI開発会社で、米国、英国、欧州、オーストラリア、ニュージーランドの顧客向けに、コンサルティング、カスタムAI・アプリ開発、自動化、クラウドとDevOpsを提供しています（[AskQuorum AI](https://askquorumai.com)）。同社のアシスタントKavyaは、WhatsApp上で9言語でリードを選別し、企業ごとに個別に構築されます。',
+          ],
+        },
+        targetUsers: {
+          title: '対象ユーザー',
+          items: [
+            'PromptQuorum：AIモデルの回答を体系的に比較したい開発者、AI研究者、パワーユーザー、専門家',
+            'AskQuorum AI：同社サイトによると、カスタムAIアプリケーション、自動化、Kavyaのようなアシスタントを依頼する企業',
+            'PromptQuorumは自分で使うツールです：プロンプトフレームワーク、Quorum分析、マルチモデル送信',
+            'AskQuorum AIは開発サービスとカスタム構築を提供しており、確認したページにはセルフサービス型のマルチモデルプロンプトツールの記載はありません',
+          ],
         },
         localLLM: {
-          title: 'ローカルLLMサポート',
-          content: 'PromptQuorumはOllamaとLM Studio経由でローカルLLMをサポートしています。AskQuorum AIはローカルLLMサポートを提供していません。',
+          title: 'ローカルLLMへの対応',
+          content: [
+            'PromptQuorumは、Ollama、LM Studio、Jan AI、OpenAI互換のエンドポイントを通じてローカルLLMに対応しており、プロンプトを自分のハードウェアにとどめられます（[PromptQuorumのFAQ](/ja/faq)を参照）。',
+            'AskQuorum AIのサイトにはローカルLLM対応の記載がなく、LLM API、エージェント、検索拡張を用いたカスタム構築が説明されています。プロジェクトで重要な場合は同社に確認してください。',
+          ],
         },
         privacy: {
           title: 'プライバシーとGDPR',
-          content: 'PromptQuorumはGDPRコンプライアンスに対応しています。APIキーはローカルに保存され、アカウントは不要で、分析はオプトインです。AskQuorum AIはGDPR固有のプライバシー方針を公開していません。',
+          content: [
+            'PromptQuorumはGDPRを意識した利用を前提に作られています。APIキーはブラウザにローカル保存され、PromptQuorumが自社のキーでLLMを呼び出すことはなく、ベータ期間中はアカウントが不要で、分析は同意バナーでの同意後にのみ実行されます。これは製品設計の説明であり、お客様のユースケースでの適合を法的に保証するものではありません。',
+            'AskQuorum AIのトップページには、プライバシー、利用規約、セキュリティのページへのリンクがあり、技術的な議論の前にNDAを締結すると記載されていますが、確認したページにはGDPRへの言及がありません。個人データを扱う場合は、同社にデータ処理条件を直接確認してください。',
+          ],
+        },
+        pricing: {
+          title: '料金体系',
+          content: [
+            'PromptQuorumは無料の公開ベータで、クレジットカードは不要です。ベータ終了後の料金は発表されていません。',
+            'AskQuorum AIのサイトには料金の記載がなく、「Book a call」と連絡先が示され、Kavyaはセルフサービス製品ではなくカスタム構築と説明されています。',
+          ],
+        },
+        byok: {
+          title: '独自キーの持ち込み（BYOK）',
+          content: [
+            'PromptQuorumでは、独自キーの持ち込みがアーキテクチャの中心です。自分のAPIキーを用意し、キーはブラウザのローカルストレージに保存され、呼び出しはブラウザからプロバイダーへ直接行われます（[PromptQuorumのFAQ](/ja/faq)を参照）。これにより推論コストが透明になり、どのプロバイダーに支払うかを自分で管理できます。',
+            'AskQuorum AIのサイトにはBYOK対応の記載がありません。重要な場合は、カスタム構築で認証情報をどのように扱うか、同社に確認してください。',
+          ],
         },
         conclusion: {
           title: 'まとめ',
-          content: 'PromptQuorumはプロフェッショナル向けのEUネイティブなプライバシーファーストのマルチモデルプロンプトツールです。AskQuorum AIは主にインド市場向けのモバイルユーザー向け会話型AI製品です。',
+          content: [
+            'PromptQuorumは、ドイツで開発された、プライバシーに配慮したマルチモデル型のプロンプトツールで、専門家向けです。1つのプロンプトをローカルモデルを含む25以上のAIサービスに送り、プロンプトエンジニアリングのフレームワークを適用し、Quorum分析で回答を比較できます。',
+            'AskQuorum AIは、インドのAI開発会社として、法人顧客向けにカスタムAIアプリケーション、自動化、アシスタントを開発していると説明しています。',
+            '両者は異なるニーズに応える異なる種類の提供物です。PromptQuorumは自分で使うソフトウェアで、AskQuorum AIは開発サービスを販売しています。ご自身の要件と照らして比較し、AskQuorum AIの詳細は、このページが執筆時点の同社公開サイトに基づいているため、同社に確認してください。',
+          ],
         },
       },
     },
     zh: {
+      metaDescription: 'PromptQuorum与AskQuorum AI对比：依据各公司官网，说明二者的功能、目标用户、本地LLM支持、隐私和定价。',
+      seoTitle: 'PromptQuorum与AskQuorum AI有何不同',
       category: '对比',
       title: 'PromptQuorum vs AskQuorum AI — 有什么区别？',
-      intro: '两个工具，相似的名称，截然不同的产品。以下是PromptQuorum和AskQuorum AI各自功能、目标用户以及为何它们不是同一产品的清晰说明。',
-      publishDate: '发布于 2026年3月17日',
+      intro: '名称相近，却是两类不同的产品。本文基于事实，说明PromptQuorum是什么，以及AskQuorum AI在其官网上称自己提供什么，帮助你区分二者。',
+      publishDate: '发布于2026年3月17日',
       readTime: '4分钟阅读',
       sections: {
+        tldr: {
+          isTldr: true,
+          title: '核心要点',
+          items: [
+            'PromptQuorum和AskQuorum AI是不同公司的无关产品，只是名称中碰巧有相近的词。',
+            'PromptQuorum是你自己使用的多模型提示词工具，支持本地LLM（Ollama、LM Studio）、提示词框架和Quorum分析；目前处于免费公开测试阶段。',
+            '据其官网，AskQuorum AI是一家总部位于印度诺伊达的AI开发公司，为客户构建定制AI应用、自动化以及基于WhatsApp的Kavya等助手（[AskQuorum AI](https://askquorumai.com)）。',
+            '在我们查阅的页面中，AskQuorum AI的网站没有提及定价、GDPR、自带密钥（BYOK）或本地LLM支持；如果这些对你很重要，请向该公司询问。',
+          ],
+        },
         overview: {
           title: '两款不同的产品',
-          content: 'PromptQuorum和AskQuorum AI名称中有相似的词，但由不同团队为不同用户在不同市场开发。',
+          content: [
+            'PromptQuorum和AskQuorum AI的名称中有相近的词，但它们是不同公司的无关产品。本文依据双方各自公开的信息，客观地描述两者，帮助你清楚地评估。',
+            '如果你搜索的是其中一个却找到了另一个，这篇对比将帮助你判断哪一个（如果有的话）适合你的需求。关于AskQuorum AI的信息取自其2026年11月20日的公开网站，此后可能已发生变化。',
+          ],
         },
         origins: {
           title: '公司背景',
-          content: 'PromptQuorum由欧盟团队在德国开发，从一开始就以GDPR合规为设计目标。AskQuorum AI是面向印度市场的消费者产品，主要通过WhatsApp和移动平台提供服务。',
+          content: [
+            'PromptQuorum在德国开发（参见[公司信息页](/impressum)），设计时考虑了欧洲的数据隐私规范，包括GDPR和本地优先的数据处理。它面向以结构化方式使用多个AI模型的开发者、研究人员和专业人士。',
+            '据其官网，AskQuorum AI是一家总部位于印度诺伊达的AI开发公司，为美国、英国、欧洲、澳大利亚和新西兰的客户提供咨询、定制AI与应用开发、自动化以及云和DevOps服务（[AskQuorum AI](https://askquorumai.com)）。其Kavya助手在WhatsApp上以九种语言筛选销售线索，并为每家企业单独构建。',
+          ],
+        },
+        targetUsers: {
+          title: '目标用户',
+          items: [
+            'PromptQuorum：希望系统地比较AI模型回答的开发者、AI研究人员、高级用户和专业人士',
+            'AskQuorum AI：据其网站，委托定制AI应用、自动化或Kavya这类助手的企业',
+            'PromptQuorum是你自己使用的工具：提示词框架、Quorum分析和多模型分发',
+            'AskQuorum AI销售开发服务和定制方案；在我们查阅的页面中，没有看到自助式多模型提示词工具的描述',
+          ],
         },
         localLLM: {
           title: '本地LLM支持',
-          content: 'PromptQuorum通过Ollama和LM Studio支持本地LLM，数据不离开您的设备。AskQuorum AI不提供本地LLM支持。',
+          content: [
+            'PromptQuorum通过Ollama、LM Studio、Jan AI以及任何兼容OpenAI的端点支持本地LLM，因此提示词可以留在你自己的硬件上（参见[PromptQuorum常见问题](/zh/faq)）。',
+            'AskQuorum AI的网站没有提及本地LLM支持；它描述的是使用LLM API、智能体和检索的定制方案。如果这对你的项目很重要，请向该公司询问。',
+          ],
         },
         privacy: {
           title: '隐私与GDPR',
-          content: 'PromptQuorum符合GDPR：API密钥本地存储，无需账户，分析为选择性加入。AskQuorum AI未发布特定的GDPR隐私立场。',
+          content: [
+            'PromptQuorum为注重GDPR的使用场景而设计：API密钥保存在你的浏览器本地，PromptQuorum从不使用自己的密钥调用LLM，测试期间无需账号，分析仅在通过同意横幅获得同意后运行。这描述的是产品设计，而非对你的具体用例合规的法律保证。',
+            'AskQuorum AI的首页链接到隐私、条款和安全页面，并称在技术讨论之前会签署保密协议；在我们查阅的页面中没有提及GDPR。如果你处理个人数据，请直接向该公司索取其数据处理条款。',
+          ],
+        },
+        pricing: {
+          title: '定价模式',
+          content: [
+            'PromptQuorum处于免费公开测试阶段，无需信用卡。测试结束后的定价尚未公布。',
+            'AskQuorum AI的网站没有列出价格；它提供“Book a call”和联系方式，并将Kavya描述为定制构建，而不是自助式产品。',
+          ],
+        },
+        byok: {
+          title: '自带密钥（BYOK）',
+          content: [
+            '在PromptQuorum中，自带密钥是架构的核心：你提供自己的API密钥，密钥保存在浏览器的本地存储中，调用直接从浏览器发往服务商（参见[PromptQuorum常见问题](/zh/faq)）。这让推理成本保持透明，并让你直接控制向哪些服务商付费。',
+            'AskQuorum AI的网站没有提及自带密钥支持。如果这对你很重要，请向该公司询问定制方案会如何处理凭据。',
+          ],
         },
         conclusion: {
           title: '总结',
-          content: 'PromptQuorum是面向专业人士的欧盟原生、隐私优先的多模型提示工具。AskQuorum AI是面向移动用户的消费级对话AI产品，主要面向印度市场。',
+          content: [
+            'PromptQuorum是在德国打造的、注重隐私的多模型提示词工具，面向专业人士：可将一个提示词发送给25个以上AI服务（包括本地模型），应用提示工程框架，并通过Quorum分析比较回答。',
+            'AskQuorum AI自称是一家印度的AI开发公司，为企业客户构建定制AI应用、自动化和助手。',
+            '它们是满足不同需求的不同类型的产品：PromptQuorum是你自己使用的软件，而AskQuorum AI销售开发服务。请对照你自己的需求进行比较，并向该公司确认AskQuorum AI的详细信息，因为本文依据的是撰写时其公开网站的内容。',
+          ],
         },
       },
     },
     pt: {
       category: 'Comparação',
       title: 'PromptQuorum vs AskQuorum AI — Qual é a Diferença?',
-      intro: 'Duas ferramentas, nomes similares, produtos muito diferentes. Aqui está uma análise clara do que o PromptQuorum e o AskQuorum AI fazem, para quem foram criados e por que não são a mesma coisa.',
+      intro: 'Dois nomes parecidos, dois tipos de produto diferentes. Aqui está um resumo factual do que é o PromptQuorum e do que a AskQuorum AI diz oferecer em seu próprio site, para que você possa diferenciá-los.',
       publishDate: 'Publicado em 17 de março de 2026',
-      seoTitle: 'PromptQuorum vs AskQuorum: Comparação Honesta e Recomendação',
-      metaDescription: 'PromptQuorum vs AskQuorum: comparação detalhada de funcionalidades, políticas de privacidade, suporte a LLM local e recomendação final para o seu fluxo de trabalho.',
+      seoTitle: 'PromptQuorum vs AskQuorum AI: como se diferenciam',
+      metaDescription: 'PromptQuorum vs AskQuorum AI: o que cada um diz fazer, para quem é, LLMs locais, privacidade e preços, segundo o site de cada empresa.',
       readTime: '4 min de leitura',
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Pontos principais',
+          items: [
+            'PromptQuorum e AskQuorum AI são produtos sem relação, de empresas diferentes, que apenas compartilham uma palavra no nome.',
+            'O PromptQuorum é uma ferramenta de prompts multimodelo que você mesmo usa, com suporte a LLMs locais (Ollama, LM Studio), frameworks de prompts e análise Quorum; está em beta pública gratuita.',
+            'Segundo seu próprio site, a AskQuorum AI é uma empresa de desenvolvimento de IA sediada em Noida, na Índia, que cria aplicações de IA sob medida, automação e assistentes como o Kavya no WhatsApp ([AskQuorum AI](https://askquorumai.com)).',
+            'O site da AskQuorum AI não menciona preços, LGPD/GDPR, chave própria (BYOK) nem LLMs locais nas páginas que revisamos; pergunte à empresa se isso for importante para você.',
+          ],
+        },
         overview: {
-          title: 'Dois Produtos Diferentes',
+          title: 'Dois produtos diferentes',
           content: [
-            'O PromptQuorum e o AskQuorum AI compartilham uma palavra similar em seus nomes, mas são desenvolvidos por equipes diferentes, para usuários diferentes, em mercados diferentes. Este artigo apresenta as principais diferenças de forma objetiva para que você possa avaliar ambos com clareza.',
-            'Se você chegou aqui porque pesquisou um e encontrou o outro, esta comparação vai ajudá-lo a decidir qual — se algum — se encaixa no seu fluxo de trabalho.',
+            'PromptQuorum e AskQuorum AI compartilham uma palavra parecida no nome, mas são produtos sem relação, de empresas diferentes. Este artigo descreve cada um de forma factual, com base no que cada um publica, para que você possa avaliá-los com clareza.',
+            'Se você buscou um e encontrou o outro, esta comparação ajuda a decidir qual deles, se algum, atende às suas necessidades. As informações sobre a AskQuorum AI vêm do seu site público em 20 de novembro de 2026 e podem ter mudado desde então.',
           ],
         },
         origins: {
-          title: 'Origem das Empresas',
+          title: 'Origem das empresas',
           content: [
-            'O PromptQuorum é desenvolvido na Alemanha por uma equipe com sede na UE. Foi projetado desde o início com as normas europeias de privacidade de dados em mente, incluindo conformidade com o RGPD e tratamento de dados com prioridade local. O produto é voltado a desenvolvedores, pesquisadores e profissionais que trabalham com múltiplos modelos de IA de forma estruturada.',
-            'O AskQuorum AI é um produto voltado primariamente à Índia, desenvolvido principalmente para uso por consumidores via WhatsApp e interfaces mobile-first. Seu foco é o acesso à IA conversacional para perguntas cotidianas, não engenharia de prompts estruturada nem análise multi-modelo.',
+            'O PromptQuorum é desenvolvido na Alemanha (veja o [impressum](/impressum)) e projetado levando em conta as normas europeias de privacidade, incluindo o GDPR e o tratamento local de dados. Ele é voltado a desenvolvedores, pesquisadores e profissionais que trabalham de forma estruturada com vários modelos de IA.',
+            'Segundo seu próprio site, a AskQuorum AI é uma empresa de desenvolvimento de IA sediada em Noida, na Índia, que oferece consultoria, desenvolvimento de IA e aplicativos sob medida, automação e serviços de nuvem e DevOps para clientes nos EUA, no Reino Unido, na Europa, na Austrália e na Nova Zelândia ([AskQuorum AI](https://askquorumai.com)). Seu assistente Kavya qualifica leads no WhatsApp em nove idiomas e é construído individualmente para cada negócio.',
           ],
         },
         targetUsers: {
-          title: 'Usuários-Alvo',
+          title: 'Usuários-alvo',
           items: [
-            'PromptQuorum: desenvolvedores, pesquisadores de IA, usuários avançados e profissionais que querem comparar sistematicamente respostas de modelos de IA',
-            'AskQuorum AI: consumidores em geral que buscam um assistente de IA conversacional por meio de aplicativos conhecidos como o WhatsApp',
-            'O PromptQuorum suporta fluxos de trabalho técnicos — frameworks de prompts, pontuação de consenso, despacho de modelos — que estão fora do escopo do AskQuorum AI',
-            'O AskQuorum AI é otimizado para acessibilidade e facilidade de uso, não para comparação profissional multi-modelo',
+            'PromptQuorum: desenvolvedores, pesquisadores de IA, usuários avançados e profissionais que querem comparar respostas de modelos de IA de forma sistemática',
+            'AskQuorum AI: segundo seu site, empresas que encomendam aplicações de IA sob medida, automação ou assistentes como o Kavya',
+            'O PromptQuorum é uma ferramenta que você mesmo usa: frameworks de prompts, análise Quorum e envio multimodelo',
+            'A AskQuorum AI vende serviços de desenvolvimento e soluções sob medida; as páginas que revisamos não descrevem uma ferramenta de prompts multimodelo de autoatendimento',
           ],
         },
         localLLM: {
-          title: 'Suporte a LLM Local',
+          title: 'Suporte a LLMs locais',
           content: [
-            'O PromptQuorum suporta LLMs locais via Ollama e LM Studio. Você pode executar modelos como Llama 3, Mistral, Phi-3 e Gemma inteiramente no seu próprio hardware, sem que nenhum dado saia do seu dispositivo. Este é um recurso central, não um complemento.',
-            'O AskQuorum AI não oferece suporte a LLM local. Ele opera por meio de infraestrutura hospedada na nuvem, o que é adequado para seu caso de uso voltado ao consumidor, mas significa que seus prompts e respostas passam por servidores externos.',
+            'O PromptQuorum oferece suporte a LLMs locais via Ollama, LM Studio, Jan AI e qualquer endpoint compatível com OpenAI, de modo que os prompts podem ficar no seu próprio hardware (veja o [FAQ do PromptQuorum](/pt/faq)).',
+            'O site da AskQuorum AI não menciona suporte a LLMs locais; ele descreve soluções sob medida com APIs de LLM, agentes e recuperação de informação. Pergunte à empresa se isso for importante para o seu projeto.',
           ],
         },
         privacy: {
-          title: 'Privacidade e RGPD',
+          title: 'Privacidade e GDPR',
           content: [
-            'O PromptQuorum foi desenvolvido para conformidade com o RGPD. As chaves de API são armazenadas localmente no navegador e nunca transmitidas aos servidores do PromptQuorum. Não é necessário criar uma conta nem fazer cadastro por e-mail, e o analytics é opt-in via banner de consentimento. O produto foi projetado para ser usado sem deixar rastros de dados.',
-            'O AskQuorum AI não publica uma posição específica sobre o RGPD em sua documentação. Para usuários da UE que lidam com dados profissionais sensíveis, vale a pena avaliar isso antes de usar.',
+            'O PromptQuorum foi feito para uso atento ao GDPR: as chaves de API ficam armazenadas localmente no seu navegador, o PromptQuorum nunca chama um LLM com chaves próprias, não é preciso conta durante a beta e as análises só rodam após consentimento por um banner. Isso descreve o projeto do produto, não uma garantia jurídica de conformidade para o seu caso de uso. No Brasil, a LGPD e a ANPD tratam da proteção de dados pessoais, com regime próprio.',
+            'A página inicial da AskQuorum AI tem links para páginas de Privacidade, Termos e Segurança e diz que um NDA é assinado antes das conversas técnicas; ela não menciona o GDPR nas páginas que revisamos. Se você trata dados pessoais, peça diretamente à empresa seus termos de tratamento de dados.',
           ],
         },
         pricing: {
-          title: 'Modelo de Preços',
+          title: 'Modelo de preços',
           content: [
-            'O PromptQuorum está atualmente em beta gratuito, com uma lista de acesso antecipado. O modelo de preços pós-lançamento ainda não foi finalizado publicamente, mas o beta é gratuito sem necessidade de cartão de crédito.',
-            'O AskQuorum AI opera com um modelo de assinatura ou baseado em uso, dependendo do nível do plano. Os preços visam segmentos de consumidores e pequenas empresas.',
+            'O PromptQuorum está em beta pública gratuita, sem necessidade de cartão de crédito. Os preços após a beta não foram anunciados.',
+            'O site da AskQuorum AI não lista preços; oferece "Book a call" e dados de contato, e descreve o Kavya como uma solução sob medida, não um produto de autoatendimento.',
           ],
         },
         byok: {
-          title: 'Traga Sua Própria Chave (BYOK)',
+          title: 'Traga sua própria chave (BYOK)',
           content: [
-            'Ambos os produtos suportam o modelo BYOK — você fornece suas próprias chaves de API para os modelos de IA que deseja usar. Isso mantém os custos de inferência transparentes e dá a você controle direto sobre quais provedores paga.',
-            'No PromptQuorum, o BYOK é central na arquitetura: as chaves ficam no armazenamento local do seu navegador e são usadas diretamente para chamar as APIs dos provedores. Nenhuma chave chega à infraestrutura do PromptQuorum.',
-            'O AskQuorum AI também suporta BYOK para determinados provedores, embora os detalhes de implementação difiram e o fluxo principal seja roteado pela plataforma.',
+            'No PromptQuorum, usar sua própria chave é central na arquitetura: você fornece suas próprias chaves de API, elas ficam no armazenamento local do navegador e as chamadas vão diretamente do navegador ao provedor (veja o [FAQ do PromptQuorum](/pt/faq)). Assim os custos de inferência ficam transparentes e você controla diretamente quais provedores paga.',
+            'O site da AskQuorum AI não menciona suporte a chave própria. Se isso for importante para você, pergunte à empresa como uma solução sob medida trataria as credenciais.',
           ],
         },
         conclusion: {
           title: 'Conclusão',
           content: [
-            'O PromptQuorum é uma ferramenta de prompts multi-modelo nativa da UE, com prioridade para privacidade, desenvolvida para profissionais. Ele permite executar um prompt em mais de 25 modelos de IA simultaneamente — incluindo modelos locais — aplicar frameworks de engenharia de prompts e analisar respostas com pontuação de consenso.',
-            'O AskQuorum AI é um produto de IA conversacional voltado ao consumidor, projetado para usuários de dispositivos móveis e WhatsApp, principalmente no mercado indiano.',
-            'Eles resolvem problemas diferentes para pessoas diferentes. Se você precisa de comparação profissional multi-modelo com suporte a LLM local e conformidade com o RGPD, o PromptQuorum foi desenvolvido para isso. Se quiser um assistente de IA simples no celular, o AskQuorum AI pode ser o que você procura.',
+            'O PromptQuorum é uma ferramenta de prompts multimodelo, atenta à privacidade, criada na Alemanha para profissionais: permite enviar um prompt a mais de 25 serviços de IA, incluindo modelos locais, aplicar frameworks de prompt engineering e comparar respostas com a análise Quorum.',
+            'A AskQuorum AI se descreve como uma empresa de desenvolvimento de IA na Índia que cria aplicações de IA sob medida, automação e assistentes para clientes empresariais.',
+            'São ofertas de natureza diferente para necessidades diferentes: o PromptQuorum é um software que você mesmo usa, enquanto a AskQuorum AI vende serviços de desenvolvimento. Compare-os com os seus próprios requisitos e confirme com a empresa os detalhes da AskQuorum AI, pois esta página se baseia no site público dela no momento da redação.',
           ],
         },
       },
@@ -20501,70 +20769,79 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     ko: {
       category: '비교',
       title: 'PromptQuorum vs AskQuorum AI — 무엇이 다른가요?',
-      intro: '두 가지 도구, 비슷한 이름, 전혀 다른 제품. PromptQuorum과 AskQuorum AI가 각각 무엇을 하는지, 누구를 위해 만들어졌는지, 왜 같은 것이 아닌지에 대한 명확한 설명입니다.',
-      publishDate: 'Published March 17, 2026',
-      seoTitle: 'PromptQuorum vs AskQuorum: 솔직한 비교 및 추천',
-      metaDescription: 'PromptQuorum vs AskQuorum: 기능, 개인정보 보호 정책, 로컬 LLM 지원 및 워크플로우에 대한 최종 추천의 상세 비교.',
+      intro: '이름은 비슷하지만 종류가 다른 두 제품입니다. PromptQuorum이 무엇인지, AskQuorum AI가 자사 웹사이트에서 무엇을 제공한다고 밝히는지 사실에 근거해 정리하여 둘을 구분할 수 있도록 돕습니다.',
+      publishDate: '2026년 3월 17일 게시',
+      seoTitle: 'PromptQuorum과 AskQuorum AI의 차이',
+      metaDescription: 'PromptQuorum과 AskQuorum AI 비교: 각 회사 웹사이트를 바탕으로 제공 내용, 대상, 로컬 LLM, 개인정보, 가격의 차이를 설명합니다.',
       readTime: '4분 읽기',
       sections: {
+        tldr: {
+          isTldr: true,
+          title: '핵심 내용',
+          items: [
+            'PromptQuorum과 AskQuorum AI는 이름에 비슷한 단어가 들어 있을 뿐, 서로 다른 회사의 관련 없는 제품입니다.',
+            'PromptQuorum은 직접 사용하는 다중 모델 프롬프트 도구로, 로컬 LLM(Ollama, LM Studio), 프롬프트 프레임워크, Quorum 분석을 지원하며 무료 공개 베타 상태입니다.',
+            'AskQuorum AI는 자사 웹사이트에 따르면 인도 노이다에 본사를 둔 AI 개발 회사로, 맞춤형 AI 애플리케이션, 자동화, WhatsApp 기반 Kavya 같은 어시스턴트를 만듭니다([AskQuorum AI](https://askquorumai.com)).',
+            '저희가 검토한 페이지에서 AskQuorum AI 웹사이트는 가격, GDPR, 직접 키 사용(BYOK), 로컬 LLM 지원을 언급하지 않습니다. 이것이 중요하다면 해당 회사에 문의하십시오.',
+          ],
+        },
         overview: {
-          title: '두 가지 다른 제품',
+          title: '서로 다른 두 제품',
           content: [
-            'PromptQuorum과 AskQuorum AI는 이름에 비슷한 단어를 공유하지만, 서로 다른 팀이 서로 다른 사용자를 위해 서로 다른 시장에서 개발했습니다. 이 기사는 두 제품을 명확하게 평가할 수 있도록 주요 차이점을 사실적으로 설명합니다.',
-            '하나를 검색했다가 다른 것을 발견하여 여기 오셨다면, 이 비교가 어느 것이 — 혹은 어느 것도 — 귀하의 워크플로우에 맞는지 결정하는 데 도움이 될 것입니다.',
+            'PromptQuorum과 AskQuorum AI는 이름에 비슷한 단어가 있지만 서로 다른 회사의 관련 없는 제품입니다. 이 글은 각 회사가 공개한 내용을 바탕으로 둘을 사실에 근거해 설명하여 명확하게 평가할 수 있게 합니다.',
+            '하나를 검색했다가 다른 하나를 찾았다면, 이 비교가 둘 중 어느 것이(있다면) 필요에 맞는지 판단하는 데 도움이 됩니다. AskQuorum AI에 관한 정보는 2026년 11월 20일 기준 공개 웹사이트에서 가져왔으며 이후 달라졌을 수 있습니다.',
           ],
         },
         origins: {
-          title: '회사 배경',
+          title: '회사의 배경',
           content: [
-            'PromptQuorum은 EU 기반 팀에 의해 독일에서 개발되었습니다. GDPR 준수 및 로컬 우선 데이터 처리를 포함한 유럽 데이터 개인정보 보호 규범을 염두에 두고 처음부터 설계되었습니다. 이 제품은 구조화된 방식으로 여러 AI 모델로 작업하는 개발자, 연구원 및 전문가를 대상으로 합니다.',
-            'AskQuorum AI는 인도 우선 제품으로, 주로 WhatsApp 및 모바일 우선 인터페이스를 통해 소비자가 사용하도록 개발되었습니다. 구조화된 프롬프트 엔지니어링이나 다중 모델 분석이 아닌 일상적인 질문에 대한 대화형 AI 액세스에 초점을 맞춥니다.',
+            'PromptQuorum은 독일에서 개발되며([회사 정보](/impressum) 참조), GDPR과 로컬 우선 데이터 처리를 포함한 유럽의 개인정보 보호 규범을 염두에 두고 설계되었습니다. 여러 AI 모델을 체계적으로 다루는 개발자, 연구자, 전문가를 대상으로 합니다.',
+            'AskQuorum AI는 자사 웹사이트에 따르면 인도 노이다에 본사를 둔 AI 개발 회사로, 미국, 영국, 유럽, 호주, 뉴질랜드의 고객에게 컨설팅, 맞춤형 AI 및 앱 개발, 자동화, 클라우드와 DevOps를 제공합니다([AskQuorum AI](https://askquorumai.com)). 어시스턴트 Kavya는 WhatsApp에서 9개 언어로 잠재 고객을 선별하며 기업별로 개별 구축됩니다.',
           ],
         },
         targetUsers: {
           title: '대상 사용자',
           items: [
-            'PromptQuorum: AI 모델 응답을 체계적으로 비교하려는 개발자, AI 연구원, 파워 유저 및 전문가',
-            'AskQuorum AI: WhatsApp 같은 친숙한 앱을 통해 대화형 AI 어시스턴트를 찾는 일반 소비자',
-            'PromptQuorum은 AskQuorum AI의 범위를 벗어나는 프롬프트 프레임워크, 합의 점수, 모델 발송 등 기술적 워크플로우를 지원합니다',
-            'AskQuorum AI는 전문 다중 모델 비교가 아닌 접근성과 편의성에 최적화되어 있습니다',
+            'PromptQuorum: AI 모델의 응답을 체계적으로 비교하려는 개발자, AI 연구자, 고급 사용자, 전문가',
+            'AskQuorum AI: 웹사이트에 따르면 맞춤형 AI 애플리케이션, 자동화, Kavya 같은 어시스턴트를 의뢰하는 기업',
+            'PromptQuorum은 직접 사용하는 도구입니다: 프롬프트 프레임워크, Quorum 분석, 다중 모델 전송',
+            'AskQuorum AI는 개발 서비스와 맞춤 구축을 판매하며, 저희가 검토한 페이지에는 셀프서비스형 다중 모델 프롬프트 도구에 대한 설명이 없습니다',
           ],
         },
         localLLM: {
           title: '로컬 LLM 지원',
           content: [
-            'PromptQuorum은 Ollama와 LM Studio를 통해 로컬 LLM을 지원합니다. Llama 3, Mistral, Phi-3, Gemma 같은 모델을 데이터가 기기를 떠나지 않고 자체 하드웨어에서 완전히 실행할 수 있습니다. 이것은 추가 기능이 아닌 핵심 기능입니다.',
-            'AskQuorum AI는 로컬 LLM 지원을 제공하지 않습니다. 소비자 지향 사용 사례에 적합한 클라우드 호스팅 인프라를 통해 운영되지만, 이는 프롬프트와 응답이 외부 서버를 통과한다는 것을 의미합니다.',
+            'PromptQuorum은 Ollama, LM Studio, Jan AI, OpenAI 호환 엔드포인트를 통해 로컬 LLM을 지원하므로 프롬프트가 자신의 하드웨어에 머물 수 있습니다([PromptQuorum FAQ](/ko/faq) 참조).',
+            'AskQuorum AI 웹사이트는 로컬 LLM 지원을 언급하지 않으며, LLM API, 에이전트, 검색을 사용하는 맞춤 구축을 설명합니다. 프로젝트에 중요하다면 해당 회사에 문의하십시오.',
           ],
         },
         privacy: {
-          title: '개인정보 보호 및 GDPR',
+          title: '개인정보 보호와 GDPR',
           content: [
-            'PromptQuorum은 GDPR 준수를 위해 개발되었습니다. API 키는 브라우저에 로컬로 저장되며 PromptQuorum 서버로 전송되지 않습니다. 계정이 필요 없고, 이메일 가입도 없으며, 분석은 동의 배너를 통해 선택적으로 참여합니다. 이 제품은 데이터 흔적을 남기지 않고 사용할 수 있도록 설계되었습니다.',
-            'AskQuorum AI는 문서에 GDPR 특화 개인정보 보호 입장을 공개하지 않습니다. 민감한 전문 데이터를 처리하는 EU 사용자는 사용 전에 이를 평가할 가치가 있습니다.',
+            'PromptQuorum은 GDPR을 고려한 사용을 염두에 두고 만들어졌습니다. API 키는 브라우저에 로컬로 저장되고, PromptQuorum은 자체 키로 LLM을 호출하지 않으며, 베타 기간에는 계정이 필요 없고, 분석은 동의 배너를 통해 동의한 뒤에만 실행됩니다. 이는 제품 설계에 대한 설명이며, 사용자의 사용 사례에 대한 법적 적합성을 보장하는 것은 아닙니다.',
+            'AskQuorum AI 홈페이지에는 개인정보, 약관, 보안 페이지 링크가 있고 기술 논의 전에 NDA를 체결한다고 밝히지만, 저희가 검토한 페이지에는 GDPR 언급이 없습니다. 개인정보를 처리한다면 해당 회사에 데이터 처리 조건을 직접 문의하십시오.',
           ],
         },
         pricing: {
           title: '가격 모델',
           content: [
-            'PromptQuorum은 현재 무료 베타 상태이며 얼리 액세스 대기자 명단이 있습니다. 출시 후 가격 모델은 공개적으로 확정되지 않았지만, 베타는 신용카드 없이 무료입니다.',
-            'AskQuorum AI는 플랜 등급에 따라 구독 또는 사용량 기반 모델로 운영됩니다. 가격은 소비자 및 소기업 세그먼트를 대상으로 합니다.',
+            'PromptQuorum은 무료 공개 베타이며 신용카드가 필요 없습니다. 베타 이후 가격은 발표되지 않았습니다.',
+            'AskQuorum AI 웹사이트에는 가격이 나와 있지 않으며, "Book a call"과 연락처를 제공하고 Kavya를 셀프서비스 제품이 아닌 맞춤 구축으로 설명합니다.',
           ],
         },
         byok: {
-          title: '자체 키 사용(BYOK)',
+          title: '직접 키 사용(BYOK)',
           content: [
-            '두 제품 모두 BYOK(Bring Your Own Key) 모델을 지원합니다 — 사용하려는 AI 모델을 위한 자체 API 키를 제공합니다. 이는 추론 비용을 투명하게 유지하고 어떤 제공업체에 비용을 지불하는지에 대한 직접적인 제어권을 제공합니다.',
-            'PromptQuorum에서 BYOK는 아키텍처의 핵심입니다. 키는 브라우저의 로컬 스토리지에 저장되며 제공업체 API를 직접 호출하는 데 사용됩니다. 어떤 키도 PromptQuorum 인프라에 닿지 않습니다.',
-            'AskQuorum AI도 특정 제공업체에 대해 BYOK를 지원하지만, 구현 세부 사항이 다르며 주요 흐름은 플랫폼을 통해 라우팅됩니다.',
+            'PromptQuorum에서는 직접 키를 사용하는 것이 아키텍처의 핵심입니다. 자신의 API 키를 제공하고, 키는 브라우저의 로컬 스토리지에 머물며, 호출은 브라우저에서 제공업체로 직접 전달됩니다([PromptQuorum FAQ](/ko/faq) 참조). 따라서 추론 비용이 투명하고 어떤 제공업체에 비용을 지불할지 직접 통제할 수 있습니다.',
+            'AskQuorum AI 웹사이트는 BYOK 지원을 언급하지 않습니다. 중요하다면 맞춤 구축에서 자격 증명을 어떻게 다루는지 해당 회사에 문의하십시오.',
           ],
         },
         conclusion: {
           title: '결론',
           content: [
-            'PromptQuorum은 전문가를 위해 개발된 EU 네이티브 개인정보 우선 다중 모델 프롬프트 도구입니다. 로컬 모델을 포함하여 25개 이상의 AI 모델에 동시에 하나의 프롬프트를 실행하고, 프롬프트 엔지니어링 프레임워크를 적용하며, 합의 점수로 응답을 분석할 수 있습니다.',
-            'AskQuorum AI는 주로 인도 시장에서 모바일 및 WhatsApp 사용자를 위해 설계된 소비자 지향 대화형 AI 제품입니다.',
-            '두 제품은 서로 다른 사람들의 서로 다른 문제를 해결합니다. 로컬 LLM 지원과 GDPR 준수를 갖춘 전문급 다중 모델 비교가 필요하다면 PromptQuorum이 이를 위해 개발되었습니다. 휴대폰에서 간단한 AI 어시스턴트를 원한다면 AskQuorum AI가 찾고 있는 것일 수 있습니다.',
+            'PromptQuorum은 독일에서 만든, 개인정보 보호를 중시하는 전문가용 다중 모델 프롬프트 도구입니다. 하나의 프롬프트를 로컬 모델을 포함한 25개 이상의 AI 서비스에 보내고, 프롬프트 엔지니어링 프레임워크를 적용하며, Quorum 분석으로 응답을 비교할 수 있습니다.',
+            'AskQuorum AI는 스스로를 인도의 AI 개발 회사로 소개하며, 기업 고객을 위한 맞춤형 AI 애플리케이션, 자동화, 어시스턴트를 만든다고 설명합니다.',
+            '둘은 서로 다른 요구에 맞춘 다른 종류의 제공물입니다. PromptQuorum은 직접 사용하는 소프트웨어이고, AskQuorum AI는 개발 서비스를 판매합니다. 자신의 요구 사항에 맞춰 비교하고, 이 페이지는 작성 시점의 공개 웹사이트에 근거하므로 AskQuorum AI의 세부 사항은 해당 회사에 확인하십시오.',
           ],
         },
       },
