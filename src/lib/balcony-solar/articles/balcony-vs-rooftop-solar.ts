@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Have Incentives Changed the Balcony vs. Rooftop Math?',
         content: [
           '**Rooftop solar economics depend on incentives that governments revise, while a balcony system mostly sits outside them — so check the current rules before you compare payback figures.** In the US, the [IRS states that the residential clean energy credit is not available for property placed in service after its cutoff date](https://www.irs.gov/credits-deductions/residential-clean-energy-credit), so older payback examples that assume a 30% credit no longer apply to new purchases; ask a tax adviser how leases and other programs are treated.',
-          'In Germany, the cabinet has approved a draft revision of the renewable energy law (EEG) that would end fixed feed-in payments for new small rooftop systems, as [reported by pv magazine](https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/); it is a draft, so confirm its status before relying on it. Plug-in balcony devices receive no feed-in payment in the first place, so changes to those payments mainly affect the rooftop side of the comparison.',
+          'In Germany, the cabinet has approved a draft revision of the renewable energy law (EEG) that would end fixed feed-in payments for new small rooftop systems, as [reported by Clean Energy Wire](https://www.cleanenergywire.org/news/government-agrees-phase-out-germanys-landmark-fixed-feed-tariffs-new-small-solar-pv); it is a draft, so confirm its status before relying on it. Plug-in balcony devices receive no feed-in payment in the first place, so changes to those payments mainly affect the rooftop side of the comparison.',
         ],
       },
       whoShouldPick: {
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Han cambiado los incentivos las cuentas entre solar de balcón y solar en tejado?',
         content: [
           '**La rentabilidad del solar en tejado depende de incentivos que los gobiernos revisan, mientras que un sistema de balcón queda en gran parte fuera de ellos, así que revisa las reglas vigentes antes de comparar cifras de amortización.** En EE. UU., [el IRS indica que el crédito fiscal residencial de energía limpia no está disponible para equipos puestos en servicio después de su fecha límite](https://www.irs.gov/credits-deductions/residential-clean-energy-credit), por lo que los ejemplos antiguos de amortización que suponen un crédito del 30 % ya no valen para compras nuevas; consulta a un asesor fiscal cómo se tratan los arrendamientos y otros programas.',
-          'En Alemania, el gabinete ha aprobado un borrador de reforma de la ley de energías renovables (EEG) que pondría fin a las primas fijas de vertido para los nuevos sistemas pequeños en tejado, según [informa pv magazine](https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/); es un borrador, así que confirma su estado antes de basarte en él. Los dispositivos enchufables de balcón no reciben prima de vertido en ningún caso, por lo que los cambios en esos pagos afectan sobre todo al lado del tejado en la comparación.',
+          'En Alemania, el gabinete ha aprobado un borrador de reforma de la ley de energías renovables (EEG) que pondría fin a las primas fijas de vertido para los nuevos sistemas pequeños en tejado, según [informa Clean Energy Wire](https://www.cleanenergywire.org/news/government-agrees-phase-out-germanys-landmark-fixed-feed-tariffs-new-small-solar-pv); es un borrador, así que confirma su estado antes de basarte en él. Los dispositivos enchufables de balcón no reciben prima de vertido en ningún caso, por lo que los cambios en esos pagos afectan sobre todo al lado del tejado en la comparación.',
         ],
       },
       whoShouldPick: {
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Os incentivos mudaram a conta entre energia solar de varanda e de telhado?',
         content: [
           '**A economia da energia solar de telhado depende de incentivos que os governos revisam, enquanto um sistema de varanda fica em grande parte fora deles, então confira as regras atuais antes de comparar números de retorno do investimento.** Nos EUA, [o IRS informa que o crédito residencial de energia limpa não está disponível para equipamentos colocados em operação após a data-limite](https://www.irs.gov/credits-deductions/residential-clean-energy-credit), portanto exemplos antigos de retorno que supõem um crédito de 30% não valem mais para compras novas; pergunte a um contador como arrendamentos e outros programas são tratados.',
-          'Na Alemanha, o gabinete aprovou um projeto de revisão da lei de energias renováveis (EEG) que encerraria as tarifas fixas de injeção para novos sistemas pequenos de telhado, conforme [noticiado pela pv magazine](https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/); é um projeto, então confirme o status antes de se basear nele. Os dispositivos plug-in de varanda não recebem pagamento por injeção de qualquer forma, então mudanças nesses pagamentos afetam principalmente o lado do telhado na comparação.',
+          'Na Alemanha, o gabinete aprovou um projeto de revisão da lei de energias renováveis (EEG) que encerraria as tarifas fixas de injeção para novos sistemas pequenos de telhado, conforme [noticiado pela Clean Energy Wire](https://www.cleanenergywire.org/news/government-agrees-phase-out-germanys-landmark-fixed-feed-tariffs-new-small-solar-pv); é um projeto, então confirme o status antes de se basear nele. Os dispositivos plug-in de varanda não recebem pagamento por injeção de qualquer forma, então mudanças nesses pagamentos afetam principalmente o lado do telhado na comparação.',
         ],
       },
       whoShouldPick: {
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'هل غيّرت الحوافز حسابات المقارنة بين الطاقة الشمسية للشرفة وللسطح؟',
         content: [
           '**تعتمد جدوى الطاقة الشمسية على السطح على حوافز تراجعها الحكومات، بينما يقع نظام الشرفة في معظمه خارجها، لذا تحقق من القواعد الحالية قبل مقارنة أرقام فترة الاسترداد.** في الولايات المتحدة، [تذكر مصلحة الضرائب IRS أن ائتمان الطاقة النظيفة السكني غير متاح للمعدات التي تبدأ التشغيل بعد تاريخه النهائي](https://www.irs.gov/credits-deductions/residential-clean-energy-credit)، لذلك لم تعد أمثلة الاسترداد القديمة التي تفترض ائتماناً بنسبة 30% صالحة للمشتريات الجديدة؛ اسأل مستشاراً ضريبياً عن معاملة التأجير والبرامج الأخرى.',
-          'في ألمانيا، أقرّ مجلس الوزراء مشروع تعديل لقانون الطاقات المتجددة (EEG) من شأنه إنهاء تعرفة التغذية الثابتة لأنظمة الأسطح الصغيرة الجديدة، [بحسب ما أوردته pv magazine](https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/)؛ وهو مشروع فقط، لذا تأكد من وضعه قبل الاعتماد عليه. أجهزة الشرفة القابلة للتوصيل لا تحصل أصلاً على مدفوعات تغذية، ولذلك تمس هذه التغييرات في المقام الأول جانب السطح في المقارنة.',
+          'في ألمانيا، أقرّ مجلس الوزراء مشروع تعديل لقانون الطاقات المتجددة (EEG) من شأنه إنهاء تعرفة التغذية الثابتة لأنظمة الأسطح الصغيرة الجديدة، [بحسب ما أوردته Clean Energy Wire](https://www.cleanenergywire.org/news/government-agrees-phase-out-germanys-landmark-fixed-feed-tariffs-new-small-solar-pv)؛ وهو مشروع فقط، لذا تأكد من وضعه قبل الاعتماد عليه. أجهزة الشرفة القابلة للتوصيل لا تحصل أصلاً على مدفوعات تغذية، ولذلك تمس هذه التغييرات في المقام الأول جانب السطح في المقارنة.',
         ],
       },
       whoShouldPick: {
@@ -670,7 +670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '優遇制度の変更で、バルコニーソーラーと屋根設置の損得は変わりましたか？',
         content: [
           '**屋根設置の採算は、政府が見直す優遇制度に左右されますが、バルコニーソーラーはほとんどその対象外です。回収期間の数字を比べる前に、最新のルールを確認してください。** 米国では、[IRSは、住宅用クリーンエネルギー税額控除は期限後に運転開始した設備には利用できないと示しています](https://www.irs.gov/credits-deductions/residential-clean-energy-credit)。そのため、30%の控除を前提にした古い回収期間の例は新規購入には当てはまりません。リースなどその他の制度の扱いは税理士にご確認ください。',
-          'ドイツでは、閣議が再生可能エネルギー法（EEG）の改正案を承認しました。[pv magazineの報道](https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/)によると、新設の小規模屋根設置に対する固定の買取価格を終了する内容です。あくまで案ですので、頼る前に現在の状況を確認してください。プラグイン式のバルコニー機器はそもそも買取の対象ではないため、この変更は比較の中では主に屋根設置側に関わります。',
+          'ドイツでは、閣議が再生可能エネルギー法（EEG）の改正案を承認しました。[Clean Energy Wireの報道](https://www.cleanenergywire.org/news/government-agrees-phase-out-germanys-landmark-fixed-feed-tariffs-new-small-solar-pv)によると、新設の小規模屋根設置に対する固定の買取価格を終了する内容です。あくまで案ですので、頼る前に現在の状況を確認してください。プラグイン式のバルコニー機器はそもそも買取の対象ではないため、この変更は比較の中では主に屋根設置側に関わります。',
         ],
       },
       whoShouldPick: {
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '激励政策的变化是否改变了阳台光伏与屋顶光伏的比较？',
         content: [
           '**屋顶光伏的收益取决于政府会调整的激励政策，而阳台光伏基本不在其范围内，因此在比较回收期数据前，请先确认现行规则。** 在美国，[IRS表示，住宅清洁能源税收抵免不适用于在截止日期之后投入使用的设备](https://www.irs.gov/credits-deductions/residential-clean-energy-credit)，因此假设有30%抵免的旧回收期示例不再适用于新购设备；租赁及其他项目如何处理，请咨询税务顾问。',
-          '在德国，内阁已批准《可再生能源法》（EEG）的修订草案，据[pv magazine报道](https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/)，草案将结束对新建小型屋顶系统的固定上网电价；这只是草案，依赖前请先确认其最新状态。插电式阳台设备本来就没有上网电价，因此这些变化主要影响比较中的屋顶一侧。',
+          '在德国，内阁已批准《可再生能源法》（EEG）的修订草案，据[Clean Energy Wire报道](https://www.cleanenergywire.org/news/government-agrees-phase-out-germanys-landmark-fixed-feed-tariffs-new-small-solar-pv)，草案将结束对新建小型屋顶系统的固定上网电价；这只是草案，依赖前请先确认其最新状态。插电式阳台设备本来就没有上网电价，因此这些变化主要影响比较中的屋顶一侧。',
         ],
       },
       whoShouldPick: {
@@ -968,7 +968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Les incitations ont-elles changé le calcul entre solaire de balcon et solaire en toiture ?',
         content: [
           '**La rentabilité du solaire en toiture dépend d\'incitations que les gouvernements révisent, alors qu\'un système de balcon en est en grande partie exclu ; vérifiez donc les règles en vigueur avant de comparer des chiffres de retour sur investissement.** Aux États-Unis, [l\'IRS indique que le crédit d\'impôt résidentiel pour l\'énergie propre n\'est pas disponible pour les équipements mis en service après sa date limite](https://www.irs.gov/credits-deductions/residential-clean-energy-credit), si bien que les anciens exemples de rentabilité qui supposent un crédit de 30 % ne valent plus pour les achats neufs ; demandez à un conseiller fiscal comment sont traités les locations et autres programmes.',
-          'En Allemagne, le cabinet a approuvé un projet de révision de la loi sur les énergies renouvelables (EEG) qui mettrait fin aux tarifs de rachat fixes pour les nouvelles petites installations en toiture, [selon pv magazine](https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/) ; il s\'agit d\'un projet, vérifiez donc son état avant de vous y fier. Les appareils de balcon enfichables ne reçoivent de toute façon aucun tarif de rachat, de sorte que ces changements concernent surtout le côté toiture de la comparaison.',
+          'En Allemagne, le cabinet a approuvé un projet de révision de la loi sur les énergies renouvelables (EEG) qui mettrait fin aux tarifs de rachat fixes pour les nouvelles petites installations en toiture, [selon Clean Energy Wire](https://www.cleanenergywire.org/news/government-agrees-phase-out-germanys-landmark-fixed-feed-tariffs-new-small-solar-pv) ; il s\'agit d\'un projet, vérifiez donc son état avant de vous y fier. Les appareils de balcon enfichables ne reçoivent de toute façon aucun tarif de rachat, de sorte que ces changements concernent surtout le côté toiture de la comparaison.',
         ],
       },
       whoShouldPick: {
@@ -1117,7 +1117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '인센티브 변화로 발코니 태양광과 지붕 태양광의 계산이 달라졌습니까?',
         content: [
           '**지붕 태양광의 경제성은 정부가 수시로 조정하는 인센티브에 좌우되는 반면, 발코니 시스템은 대부분 그 바깥에 있습니다. 회수 기간 수치를 비교하기 전에 현행 규정을 확인하십시오.** 미국에서는 [IRS가 주거용 청정에너지 세액공제는 기한 이후 가동을 시작한 설비에는 적용되지 않는다고 밝히고 있습니다](https://www.irs.gov/credits-deductions/residential-clean-energy-credit). 따라서 30% 공제를 전제로 한 예전의 회수 기간 예시는 신규 구매에는 더 이상 맞지 않으며, 리스와 기타 프로그램의 처리는 세무 전문가에게 문의하십시오.',
-          '독일에서는 내각이 재생에너지법(EEG) 개정안을 승인했으며, [pv magazine 보도](https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/)에 따르면 신규 소형 지붕 시스템에 대한 고정 매입 요금을 폐지하는 내용입니다. 아직 초안이므로 의존하기 전에 현재 상태를 확인하십시오. 플러그인 발코니 기기는 애초에 매입 요금을 받지 않으므로, 이 변화는 비교에서 주로 지붕 설치 쪽에 영향을 줍니다.',
+          '독일에서는 내각이 재생에너지법(EEG) 개정안을 승인했으며, [Clean Energy Wire 보도](https://www.cleanenergywire.org/news/government-agrees-phase-out-germanys-landmark-fixed-feed-tariffs-new-small-solar-pv)에 따르면 신규 소형 지붕 시스템에 대한 고정 매입 요금을 폐지하는 내용입니다. 아직 초안이므로 의존하기 전에 현재 상태를 확인하십시오. 플러그인 발코니 기기는 애초에 매입 요금을 받지 않으므로, 이 변화는 비교에서 주로 지붕 설치 쪽에 영향을 줍니다.',
         ],
       },
       whoShouldPick: {
@@ -1266,7 +1266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Haben Förderungen die Rechnung Balkonkraftwerk gegen Dachanlage verändert?',
         content: [
           '**Die Wirtschaftlichkeit einer Dachanlage hängt von Förderungen ab, die Regierungen anpassen, während ein Balkonkraftwerk weitgehend außerhalb davon liegt — prüfen Sie daher die aktuellen Regeln, bevor Sie Amortisationsangaben vergleichen.** In den USA [weist die Steuerbehörde IRS darauf hin, dass der Residential Clean Energy Credit für Anlagen, die nach seinem Stichtag in Betrieb genommen werden, nicht mehr verfügbar ist](https://www.irs.gov/credits-deductions/residential-clean-energy-credit); ältere Amortisationsbeispiele mit einem 30-%-Steuerkredit gelten daher für Neukäufe nicht mehr. Fragen Sie eine Steuerberatung, wie Leasing und andere Programme behandelt werden.',
-          'In Deutschland hat das Kabinett einen Entwurf zur Änderung des Erneuerbare-Energien-Gesetzes (EEG) beschlossen, der feste Einspeisevergütungen für neue kleine Dachanlagen beenden würde, wie [pv magazine berichtet](https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/); es ist ein Entwurf, prüfen Sie also den Stand, bevor Sie sich darauf verlassen. Steckersolargeräte erhalten ohnehin keine Einspeisevergütung, sodass Änderungen daran vor allem die Dachseite des Vergleichs betreffen.',
+          'In Deutschland hat das Kabinett einen Entwurf zur Änderung des Erneuerbare-Energien-Gesetzes (EEG) beschlossen, der feste Einspeisevergütungen für neue kleine Dachanlagen beenden würde, wie [Clean Energy Wire berichtet](https://www.cleanenergywire.org/news/government-agrees-phase-out-germanys-landmark-fixed-feed-tariffs-new-small-solar-pv); es ist ein Entwurf, prüfen Sie also den Stand, bevor Sie sich darauf verlassen. Steckersolargeräte erhalten ohnehin keine Einspeisevergütung, sodass Änderungen daran vor allem die Dachseite des Vergleichs betreffen.',
         ],
       },
       whoShouldPick: {
