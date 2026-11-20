@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**Cloud models** covered — verified cutoff dates with primary source links; previous-generation models are labeled as such',
       '**Local/open-weight models** covered — all have "None" for search layer',
-      '**Phi-4** has a June 2024 cutoff, **Llama 4 Scout** August 2024 and **Gemma 4** January 2025 (all per their model cards); Meta\'s newest open-weight model, **Muse Glimmer 30B**, states January 4, 2026; DeepSeek-V4 and Qwen3.8 have no publicly disclosed cutoff',
+      '**Phi-4** has a June 2024 cutoff, **Llama 4 Scout** August 2024 and **Gemma 4** January 2025 (all per their model cards); Meta\'s open-weight model **Muse Glimmer 30B** states January 4, 2026; DeepSeek-V4 and Qwen3.8 have no publicly disclosed cutoff',
       '**Claude Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5**, **GPT-6.2 Sol** and **GPT-6.1 Terra** share the most recent verified cutoff in the table: June 2026; the **Gemini 4** family (Argon, Carbon, Hydrogen, Neon) states March 2026',
       'Among the cloud models covered here, **Grok 4.7** is the only one whose default search layer is a social platform (X/Twitter) rather than general web',
       '**GEO implication**: companies that deploy Llama/Qwen internally can only be reached via the RAG pipelines those companies build themselves',
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**클라우드 모델** 포함 — 1차 출처 링크와 함께 검증된 마감 날짜. 이전 세대 모델은 그렇게 표시됨',
       '**로컬/오픈웨이트 모델** 포함 — 모두 검색 레이어 "없음"',
-      '**Phi-4**는 2024년 6월, **Llama 4 Scout**는 2024년 8월, **Gemma 4**는 2025년 1월 마감(모두 모델 카드 기준); Meta의 최신 오픈웨이트 모델 **Muse Glimmer 30B**는 2026년 1월 4일로 명시; DeepSeek-V4와 Qwen3.8은 마감 날짜를 공개하지 않음',
+      '**Phi-4**는 2024년 6월, **Llama 4 Scout**는 2024년 8월, **Gemma 4**는 2025년 1월 마감(모두 모델 카드 기준); Meta의 오픈웨이트 모델 **Muse Glimmer 30B**는 2026년 1월 4일로 명시; DeepSeek-V4와 Qwen3.8은 마감 날짜를 공개하지 않음',
       '**Claude Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5**, **GPT-6.2 Sol**, **GPT-6.1 Terra**가 표에서 검증된 마감 날짜 중 가장 최근을 공유함: 2026년 6월; **Gemini 4** 제품군(Argon, Carbon, Hydrogen, Neon)은 2026년 3월로 명시',
       '**Grok 4.7**은 여기서 다루는 클라우드 모델 중 기본 검색 레이어가 일반 웹이 아닌 소셜 플랫폼(X/Twitter)인 유일한 모델',
       '**GEO 시사점**: Llama/Qwen을 내부적으로 배포하는 기업은 해당 기업이 직접 구축한 RAG 파이프라인을 통해서만 도달할 수 있음',
@@ -846,7 +846,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**Modelos em nuvem** incluídos — datas de corte verificadas com links de fontes primárias; modelos de gerações anteriores são identificados como tais',
       '**Modelos locais/open-weight** incluídos — todos com "nenhuma" camada de busca',
-      '**Phi-4** tem corte em junho de 2024, **Llama 4 Scout** em agosto de 2024 e **Gemma 4** em janeiro de 2025 (todos conforme seus model cards); o modelo open-weight mais recente da Meta, **Muse Glimmer 30B**, informa 4 de janeiro de 2026; DeepSeek-V4 e Qwen3.8 não divulgaram publicamente o corte',
+      '**Phi-4** tem corte em junho de 2024, **Llama 4 Scout** em agosto de 2024 e **Gemma 4** em janeiro de 2025 (todos conforme seus model cards); o modelo open-weight da Meta **Muse Glimmer 30B** informa 4 de janeiro de 2026; DeepSeek-V4 e Qwen3.8 não divulgaram publicamente o corte',
       '**Claude Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5**, **GPT-6.2 Sol** e **GPT-6.1 Terra** compartilham o corte verificado mais recente da tabela: junho de 2026; a família **Gemini 4** (Argon, Carbon, Hydrogen, Neon) informa março de 2026',
       '**Grok 4.7** é, entre os modelos em nuvem tratados aqui, o único cuja camada de busca padrão é uma plataforma social (X/Twitter) em vez da web geral',
       '**Implicação GEO**: empresas que implantam Llama/Qwen internamente só podem ser alcançadas por meio de pipelines RAG que a própria empresa construiu',
@@ -1232,7 +1232,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**クラウドモデル**収録 — 一次情報源リンク付きの検証済みカットオフ日付。旧世代モデルはその旨を明記',
       '**ローカル/オープンウェイトモデル**収録 — すべて検索レイヤー「なし」',
-      '**Phi-4**は2024年6月、**Llama 4 Scout**は2024年8月、**Gemma 4**は2025年1月（いずれもモデルカード記載）。Metaの最新オープンウェイトモデル**Muse Glimmer 30B**は2026年1月4日と明記。DeepSeek-V4とQwen3.8はカットオフを公式に開示していません',
+      '**Phi-4**は2024年6月、**Llama 4 Scout**は2024年8月、**Gemma 4**は2025年1月（いずれもモデルカード記載）。Metaのオープンウェイトモデル**Muse Glimmer 30B**は2026年1月4日と明記。DeepSeek-V4とQwen3.8はカットオフを公式に開示していません',
       '**Claude Fable 5.2・Opus 5.5・Sonnet 5.5・Haiku 5.5**、**GPT-6.2 Sol**、**GPT-6.1 Terra**は表中で検証済みの最新カットオフを共有：2026年6月。**Gemini 4**ファミリー（Argon、Carbon、Hydrogen、Neon）は2026年3月と明記',
       '**Grok 4.7**は、本稿で扱うクラウドモデルの中で、デフォルト検索レイヤーが一般ウェブではなくソーシャルプラットフォーム（X/Twitter）である唯一のモデル',
       '**GEOの示唆**：Llama/Qwenを社内にデプロイしている企業は、その企業が自ら構築したRAGパイプラインを通じてのみアプローチ可能',
@@ -1636,7 +1636,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**النماذج السحابية** متضمنة — تواريخ انقطاع موثّقة بروابط مصادر أولية؛ وتُوسَم نماذج الأجيال السابقة بذلك',
       '**النماذج المحلية / open-weight** متضمنة — جميعها بطبقة بحث "لا شيء"',
-      '**Phi-4** تاريخ انقطاعه يونيو 2024، و**Llama 4 Scout** أغسطس 2024، و**Gemma 4** يناير 2025 (جميعها وفق بطاقات النماذج)؛ ويذكر أحدث نموذج مفتوح الأوزان من Meta، **Muse Glimmer 30B**، تاريخ 4 يناير 2026؛ أما DeepSeek-V4 وQwen3.8 فلم يُعلنا تاريخ انقطاع',
+      '**Phi-4** تاريخ انقطاعه يونيو 2024، و**Llama 4 Scout** أغسطس 2024، و**Gemma 4** يناير 2025 (جميعها وفق بطاقات النماذج)؛ ويذكر نموذج Meta مفتوح الأوزان **Muse Glimmer 30B** تاريخ 4 يناير 2026؛ أما DeepSeek-V4 وQwen3.8 فلم يُعلنا تاريخ انقطاع',
       '**Claude Fable 5.2 وOpus 5.5 وSonnet 5.5 وHaiku 5.5** و**GPT-6.2 Sol** و**GPT-6.1 Terra** تشترك في أحدث تاريخ انقطاع موثّق في الجدول: يونيو 2026؛ وتذكر عائلة **Gemini 4** (Argon وCarbon وHydrogen وNeon) مارس 2026',
       '**Grok 4.7** هو، بين النماذج السحابية المشمولة هنا، الوحيد الذي طبقة بحثه الافتراضية منصة اجتماعية (X/Twitter)',
       '**الأثر على GEO**: الشركات التي تنشر Llama/Qwen داخليًا لا يمكن الوصول إليها إلا عبر خطوط أنابيب RAG',
@@ -2022,7 +2022,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**Modèles cloud** couverts — dates de coupure vérifiées avec liens vers les sources primaires ; les modèles de génération précédente sont signalés comme tels',
       '**Modèles locaux/open-weight** couverts — tous ont "Aucune" pour la couche de recherche',
-      '**Phi-4** a une coupure en juin 2024, **Llama 4 Scout** en août 2024 et **Gemma 4** en janvier 2025 (selon leurs model cards respectives) ; le plus récent modèle open-weight de Meta, **Muse Glimmer 30B**, indique le 4 janvier 2026 ; aucune coupure n\'est publiquement divulguée pour DeepSeek-V4 et Qwen3.8',
+      '**Phi-4** a une coupure en juin 2024, **Llama 4 Scout** en août 2024 et **Gemma 4** en janvier 2025 (selon leurs model cards respectives) ; le modèle open-weight de Meta **Muse Glimmer 30B** indique le 4 janvier 2026 ; aucune coupure n\'est publiquement divulguée pour DeepSeek-V4 et Qwen3.8',
       '**Claude Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5**, **GPT-6.2 Sol** et **GPT-6.1 Terra** partagent la coupure vérifiée la plus récente du tableau : juin 2026 ; la famille **Gemini 4** (Argon, Carbon, Hydrogen, Neon) indique mars 2026',
       '**Grok 4.7** est, parmi les modèles cloud couverts ici, le seul dont la couche de recherche par défaut est une plateforme sociale (X/Twitter) plutôt que le web général',
       '**Implication GEO** : les entreprises qui déploient Llama/Qwen en interne ne peuvent être atteintes que via les pipelines RAG qu\'elles construisent elles-mêmes',
@@ -2426,7 +2426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**Cloud-Modelle** abgedeckt — verifizierte Cutoff-Daten mit Primärquellen-Links; Modelle der Vorgängergeneration sind als solche gekennzeichnet',
       '**Lokale/Open-Weight-Modelle** abgedeckt — alle haben „Keine" für die Suchschicht',
-      '**Phi-4** hat einen Cutoff von Juni 2024, **Llama 4 Scout** August 2024 und **Gemma 4** Januar 2025 (jeweils laut Model Card); Metas neuestes Open-Weight-Modell **Muse Glimmer 30B** nennt den 4. Januar 2026; für DeepSeek-V4 und Qwen3.8 ist kein Cutoff öffentlich bekannt',
+      '**Phi-4** hat einen Cutoff von Juni 2024, **Llama 4 Scout** August 2024 und **Gemma 4** Januar 2025 (jeweils laut Model Card); Metas Open-Weight-Modell **Muse Glimmer 30B** nennt den 4. Januar 2026; für DeepSeek-V4 und Qwen3.8 ist kein Cutoff öffentlich bekannt',
       '**Claude Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5**, **GPT-6.2 Sol** und **GPT-6.1 Terra** teilen sich den aktuellsten verifizierten Cutoff der Tabelle: Juni 2026; die **Gemini-4**-Familie (Argon, Carbon, Hydrogen, Neon) nennt März 2026',
       '**Grok 4.7** ist unter den hier behandelten Cloud-Modellen das einzige, dessen Standard-Suchschicht eine soziale Plattform (X/Twitter) statt des allgemeinen Webs ist',
       '**GEO-Implikation**: Unternehmen, die Llama/Qwen intern einsetzen, sind nur über die RAG-Pipelines erreichbar, die diese Unternehmen selbst aufbauen',
@@ -2830,7 +2830,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**云端模型**收录 — 附一手资料链接的已验证截止日期；上一代模型会如实标注',
       '**本地/开源权重模型**收录 — 全部搜索层为"无"',
-      '**Phi-4** 截止日期为2024年6月，**Llama 4 Scout** 为2024年8月，**Gemma 4** 为2025年1月（均依据各自模型卡）；Meta 最新的开源权重模型 **Muse Glimmer 30B** 注明为2026年1月4日；DeepSeek-V4 和 Qwen3.8 的截止日期未公开披露',
+      '**Phi-4** 截止日期为2024年6月，**Llama 4 Scout** 为2024年8月，**Gemma 4** 为2025年1月（均依据各自模型卡）；Meta 的开源权重模型 **Muse Glimmer 30B** 注明为2026年1月4日；DeepSeek-V4 和 Qwen3.8 的截止日期未公开披露',
       '**Claude Fable 5.2、Opus 5.5、Sonnet 5.5、Haiku 5.5**、**GPT-6.2 Sol** 与 **GPT-6.1 Terra** 共同拥有表中最新的已验证截止日期：2026年6月；**Gemini 4** 系列（Argon、Carbon、Hydrogen、Neon）注明为2026年3月',
       '**Grok 4.7** 是本文涵盖的云端模型中唯一一个默认搜索层为社交平台（X/Twitter）而非通用网络的模型',
       '**GEO启示**：在内部部署Llama/Qwen的企业，只能通过该企业自己构建的RAG管道才能被触达',
@@ -3234,7 +3234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**Modelos en la nube** cubiertos — fechas de corte verificadas con enlaces a fuentes primarias; los modelos de generaciones anteriores se identifican como tales',
       '**Modelos locales/open-weight** cubiertos — todos tienen "Ninguna" para la capa de búsqueda',
-      '**Phi-4** tiene un corte en junio de 2024, **Llama 4 Scout** en agosto de 2024 y **Gemma 4** en enero de 2025 (todos según sus model cards); el modelo open-weight más reciente de Meta, **Muse Glimmer 30B**, indica el 4 de enero de 2026; DeepSeek-V4 y Qwen3.8 no han divulgado públicamente su corte',
+      '**Phi-4** tiene un corte en junio de 2024, **Llama 4 Scout** en agosto de 2024 y **Gemma 4** en enero de 2025 (todos según sus model cards); el modelo open-weight de Meta **Muse Glimmer 30B** indica el 4 de enero de 2026; DeepSeek-V4 y Qwen3.8 no han divulgado públicamente su corte',
       '**Claude Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5**, **GPT-6.2 Sol** y **GPT-6.1 Terra** comparten el corte verificado más reciente de la tabla: junio de 2026; la familia **Gemini 4** (Argon, Carbon, Hydrogen, Neon) indica marzo de 2026',
       '**Grok 4.7** es, entre los modelos en la nube tratados aquí, el único cuya capa de búsqueda predeterminada es una plataforma social (X/Twitter) en lugar de la web general',
       '**Implicación GEO**: las empresas que despliegan Llama/Qwen internamente solo pueden ser alcanzadas a través de los pipelines RAG que esas empresas construyan por sí mismas',
