@@ -27136,14 +27136,15 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
   },
   desktopAppBeta: {
     en: {
+      next_refresh_due: '2026-12-20',
       category: 'Product Updates',
       title: 'PromptQuorum Desktop App: Public Beta Is Now Live',
       seoTitle: 'PromptQuorum Desktop App: Public Beta Is Live',
-      intro: 'PromptQuorum\'s desktop app is out of private testing and available to download for macOS, Windows, and Linux. Here is what it does, which file to pick, and how to verify it before you install.',
+      intro: 'PromptQuorum\'s desktop app is in public beta and available to download for macOS, Windows, and Linux. Here is what it does, which file to pick, and how to open an unsigned beta build.',
       publishDate: 'Published July 13, 2026',
-      last_full_refresh: '2026-07-13',
+      last_full_refresh: '2026-11-20',
       readTime: '6 min read',
-      metaDescription: 'PromptQuorum\'s desktop app (v0.1.0) is downloadable now for macOS, Windows, and Linux — dispatch prompts to multiple AI models locally or via API key.',
+      metaDescription: 'PromptQuorum\'s desktop app (v0.1.0, public beta) is available for macOS, Windows, and Linux — dispatch one prompt to multiple AI models, locally or via API key.',
       educationalLevel: 'Beginner',
       freshness_tier: 'monthly',
       sections: {
@@ -27151,11 +27152,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'Quick Answer',
           items: [
-            'PromptQuorum\'s desktop app left private beta on July 13, 2026 and is downloadable for macOS (Apple Silicon and Intel), Windows 10/11, and Linux (x64 and ARM64).',
-            'The build is unsigned during this beta phase, so macOS and Windows will show a security warning on first launch — that is expected, not a sign of a compromised file.',
+            'PromptQuorum\'s desktop app has been in public beta since July 2026 (current version 0.1.0) and is downloadable for macOS (Apple Silicon and Intel), Windows 10/11, and Linux (x64 and ARM64).',
+            'The build is unsigned during this beta, so macOS and Windows may show a security warning on first launch — that is expected for an unsigned beta build, not a sign of a compromised file.',
             'The app needs an AI backend to run prompts: install Ollama or LM Studio for local models, or bring your own API key (BYOK) for OpenAI, Anthropic, or another provider.',
             'Model agreement is not proof of correctness — verify factual claims independently before relying on multi-model consensus output.',
-            'Get the current build from the download page and send bug reports directly to the team by email.',
+            'Get the build from the download page, where the installers are hosted in one shared folder, and send bug reports directly to the team by email.',
           ],
         },
         whatIsIt: {
@@ -27184,8 +27185,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         verify: {
-          title: 'Verify Your Download (Optional but Recommended)',
-          content: 'Each release ships with a SHA-256 checksum on the download page so you can confirm a file arrived complete and unmodified before you install it.',
+          title: 'Check Your Download (Optional)',
+          content: 'The download page does not list checksums for the beta installers, which are hosted in one shared folder. You can still compute a SHA-256 hash of a downloaded file with the commands below, for example to compare it with a value the team gives you. Only download from the link on the official download page.',
           items: [
             'macOS: open Terminal and run shasum -a 256 ~/Downloads/[filename]',
             'Windows: open PowerShell and run Get-FileHash [filename] -Algorithm SHA256',
@@ -27196,8 +27197,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Set Up a Local AI Engine Before First Launch',
           content: 'PromptQuorum works best with a local LLM engine running on your machine — this keeps prompts private and avoids per-token API costs. Skip this section entirely if you plan to use a cloud provider with your own API key instead.',
           items: [
-            'Ollama (simplest first setup): download it from ollama.com, install it, then pull a model from a terminal, for example ollama pull gemma3:1b. It runs in the background and PromptQuorum detects it automatically.',
-            'LM Studio (more GUI-driven): download it from lmstudio.ai, browse and download a model inside the app, then start the local server from the Developer tab.',
+            'Ollama (simplest first setup): download it from [ollama.com](https://ollama.com), install it, then pull a model from a terminal, for example ollama pull gemma3:1b (an 806 MB download according to the Ollama library). It runs in the background, and PromptQuorum can connect to it as a local provider.',
+            'LM Studio (more GUI-driven): download it from [lmstudio.ai](https://lmstudio.ai), download a model inside the app, then start the local server from the Developer tab (or with the lms server start command).',
             'Cloud only: skip local setup and add an API key for OpenAI, Anthropic, or another provider (bring your own key) during onboarding.',
           ],
         },
@@ -27206,8 +27207,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'macOS: right-click (not double-click) the app in Applications and choose Open, then confirm Open in the dialog warning the app cannot be verified. If macOS still blocks it, go to System Settings, then Privacy & Security, and choose Open Anyway.',
             'Windows: Microsoft Defender SmartScreen shows "Windows protected your PC." Click More info, then Run anyway. Windows remembers this choice for later launches of the same file.',
-            'Both warnings are expected for this beta — the app does not yet have a paid code-signing certificate and will stop showing them once signed builds ship.',
-            'If you installed Ollama or LM Studio, keep it running before opening PromptQuorum — the app checks for it on startup and prompts you to configure an AI provider if none is detected. No account creation is required for this beta.',
+            'Both warnings are expected for this beta because the app is not yet code-signed.',
+            'If you installed Ollama or LM Studio, keep it running before opening PromptQuorum so the app can connect to it. No account creation is required for this beta.',
           ],
         },
         aiOutputWarning: {
@@ -27254,7 +27255,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Is my data private when I use the desktop app?',
-              a: 'If you use a local AI engine, prompts stay on your machine and are not sent to PromptQuorum servers by default. If you use a cloud provider via API key, your prompts go directly to that provider under its own data policy.',
+              a: 'If you use a local AI engine such as Ollama or LM Studio, PromptQuorum works fully offline and your prompts, API keys, and results stay on your device (see the [PromptQuorum FAQ](/faq)). If you use a cloud provider via API key, your prompts go directly to that provider under its own data policy.',
             },
             {
               q: 'How do I report a bug during the beta?',
@@ -27304,7 +27305,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Is my data private when I use the desktop app?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'If you use a local AI engine, prompts stay on your machine and are not sent to PromptQuorum servers by default. If you use a cloud provider via API key, your prompts go directly to that provider under its own data policy.',
+              text: 'If you use a local AI engine such as Ollama or LM Studio, PromptQuorum works fully offline and your prompts, API keys, and results stay on your device (see the PromptQuorum FAQ). If you use a cloud provider via API key, your prompts go directly to that provider under its own data policy.',
             },
           },
           {
@@ -27322,10 +27323,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       category: 'تحديثات المنتج',
       title: 'تطبيق PromptQuorum لسطح المكتب: النسخة التجريبية العامة متاحة الآن',
       seoTitle: 'تطبيق PromptQuorum لسطح المكتب: النسخة التجريبية متاحة الآن',
-      intro: 'خرج تطبيق PromptQuorum لسطح المكتب من مرحلة الاختبار الخاص، وأصبح متاحًا للتنزيل على macOS وWindows وLinux. فيما يلي ما يقوم به التطبيق، والملف الذي يجب اختياره، وكيفية التحقق منه قبل التثبيت.',
+      intro: 'تطبيق سطح المكتب من PromptQuorum في مرحلة البيتا العامة ومتاح للتنزيل على macOS وWindows وLinux. إليك ما يفعله، وأي ملف تختار، وكيف تفتح نسخة بيتا غير موقّعة.',
       publishDate: 'نُشر في 13 يوليو 2026',
       readTime: '6 دقائق للقراءة',
-      metaDescription: 'تطبيق PromptQuorum لسطح المكتب (الإصدار v0.1.0) متاح الآن للتنزيل على macOS وWindows وLinux — أرسل الأوامر (prompts) إلى عدة نماذج ذكاء اصطناعي محليًا أو عبر مفتاح API.',
+      metaDescription: 'تطبيق سطح المكتب من PromptQuorum (v0.1.0، بيتا عامة) متاح على macOS وWindows وLinux — أرسل أمرًا واحدًا إلى عدة نماذج ذكاء اصطناعي، محليًا أو بمفتاح API.',
       educationalLevel: 'Beginner',
       freshness_tier: 'monthly',
       sections: {
@@ -27333,11 +27334,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'النقاط الرئيسية',
           items: [
-            'خرج تطبيق PromptQuorum لسطح المكتب من النسخة التجريبية الخاصة في 13 يوليو 2026، وأصبح متاحًا للتنزيل على macOS (Apple Silicon وIntel)، وWindows 10/11، وLinux (x64 وARM64).',
-            'الإصدار غير موقّع رقميًا خلال هذه المرحلة التجريبية، لذا ستظهر رسالة تحذير أمني من macOS وWindows عند التشغيل الأول — وهذا أمر متوقع، وليس دليلًا على أن الملف تالف أو مُخترق.',
-            'يحتاج التطبيق إلى محرك ذكاء اصطناعي (AI backend) لتشغيل الأوامر: ثبّت Ollama أو LM Studio لاستخدام نماذج محلية، أو استخدم مفتاح API الخاص بك (BYOK) لمزود مثل OpenAI أو Anthropic أو غيرهما.',
-            'اتفاق النماذج ليس دليلًا على صحة الإجابة — تحقق من الادعاءات الواقعية بشكل مستقل قبل الاعتماد على مخرجات التوافق بين عدة نماذج.',
-            'احصل على الإصدار الحالي من صفحة التنزيل، وأرسل تقارير الأخطاء مباشرة إلى الفريق عبر البريد الإلكتروني.',
+            'تطبيق سطح المكتب من PromptQuorum في البيتا العامة منذ يوليو 2026 (الإصدار الحالي 0.1.0) ومتاح للتنزيل على macOS (Apple Silicon وIntel) وWindows 10/11 وLinux (x64 وARM64).',
+            'النسخة غير موقّعة خلال هذه البيتا، لذا قد تعرض macOS وWindows تحذيرًا أمنيًا عند أول تشغيل — وهذا متوقع في نسخة بيتا غير موقّعة وليس دليلًا على أن الملف مخترق.',
+            'يحتاج التطبيق إلى واجهة ذكاء اصطناعي لتشغيل الأوامر: ثبّت Ollama أو LM Studio للنماذج المحلية، أو استخدم مفتاح API الخاص بك (BYOK) مع OpenAI أو Anthropic أو مزوّد آخر.',
+            'اتفاق النماذج ليس دليلًا على الصواب — تحقق من الادعاءات الواقعية بشكل مستقل قبل الاعتماد على نتيجة إجماع متعددة النماذج.',
+            'احصل على النسخة من صفحة التنزيل، حيث توجد برامج التثبيت في مجلد مشترك واحد، وأرسل تقارير الأخطاء مباشرة إلى الفريق عبر البريد الإلكتروني.',
           ],
         },
         whatIsIt: {
@@ -27366,8 +27367,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         verify: {
-          title: 'تحقق من ملف التنزيل (اختياري لكن يُنصح به)',
-          content: 'يتضمن كل إصدار قيمة تجزئة SHA-256 (checksum) على صفحة التنزيل، تتيح لك التأكد من وصول الملف كاملًا وغير معدَّل قبل تثبيته.',
+          title: 'تحقق من التنزيل (اختياري)',
+          content: 'لا تعرض صفحة التنزيل مجاميع تحقق لبرامج تثبيت البيتا الموجودة في مجلد مشترك. ومع ذلك يمكنك حساب بصمة SHA-256 للملف الذي نزّلته بالأوامر أدناه، مثلًا لمقارنتها بقيمة يزوّدك بها الفريق. نزّل فقط عبر الرابط الموجود في صفحة التنزيل الرسمية.',
           items: [
             'macOS: افتح Terminal ونفّذ الأمر shasum -a 256 ~/Downloads/[filename]',
             'Windows: افتح PowerShell ونفّذ الأمر Get-FileHash [filename] -Algorithm SHA256',
@@ -27378,18 +27379,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'إعداد محرك ذكاء اصطناعي محلي قبل التشغيل الأول',
           content: 'يعمل PromptQuorum بأفضل صورة مع محرك LLM محلي يعمل على جهازك — إذ يحافظ ذلك على خصوصية الأوامر ويجنّبك تكاليف API المحسوبة لكل رمز (token). تجاوز هذا القسم بالكامل إذا كنت تخطط لاستخدام مزود سحابي بمفتاح API الخاص بك بدلًا من ذلك.',
           items: [
-            'Ollama (الأبسط للإعداد الأولي): نزّله من ollama.com، ثبّته، ثم اسحب نموذجًا من الطرفية، على سبيل المثال ollama pull gemma3:1b. يعمل في الخلفية ويكتشفه PromptQuorum تلقائيًا.',
-            'LM Studio (يعتمد أكثر على واجهة رسومية): نزّله من lmstudio.ai، تصفح وحمّل نموذجًا داخل التطبيق، ثم شغّل الخادم المحلي من علامة التبويب Developer.',
-            'السحابة فقط: تجاوز الإعداد المحلي وأضف مفتاح API لمزود مثل OpenAI أو Anthropic أو غيرهما (bring your own key) أثناء عملية الإعداد الأولي.',
+            'Ollama (أبسط إعداد أول): نزّله من [ollama.com](https://ollama.com) وثبّته ثم نزّل نموذجًا من الطرفية، مثل ollama pull gemma3:1b (حجم التنزيل 806 MB بحسب مكتبة Ollama). يعمل في الخلفية ويمكن لـ PromptQuorum الاتصال به بوصفه مزوّدًا محليًا.',
+            'LM Studio (أكثر اعتمادًا على الواجهة الرسومية): نزّله من [lmstudio.ai](https://lmstudio.ai) ونزّل نموذجًا داخل التطبيق ثم شغّل الخادم المحلي من تبويب Developer (أو بالأمر lms server start).',
+            'السحابة فقط: تخطَّ الإعداد المحلي وأضف مفتاح API لـ OpenAI أو Anthropic أو مزوّد آخر (مفتاحك الخاص) أثناء التهيئة الأولية.',
           ],
         },
         firstLaunch: {
           title: 'ماذا يحدث عند التشغيل الأول',
           content: [
-            'macOS: انقر بزر الفأرة الأيمن (وليس نقرًا مزدوجًا) على التطبيق في مجلد Applications واختر "فتح" (Open)، ثم أكّد "فتح" في مربع الحوار الذي يحذّر من تعذّر التحقق من التطبيق. إذا استمر macOS في حظره، اذهب إلى "إعدادات النظام" (System Settings)، ثم "الخصوصية والأمان" (Privacy & Security)، واختر "فتح على أي حال" (Open Anyway).',
-            'Windows: تعرض ميزة Microsoft Defender SmartScreen رسالة "Windows protected your PC". انقر على "مزيد من المعلومات" (More info)، ثم "تشغيل على أي حال" (Run anyway). يتذكر Windows هذا الاختيار عند تشغيل الملف نفسه لاحقًا.',
-            'كلا التحذيرين متوقعان في هذه المرحلة التجريبية — إذ لا يملك التطبيق بعد شهادة توقيع برمجي مدفوعة (code-signing)، وستختفي هذه التحذيرات فور إصدار نسخ موقّعة رقميًا.',
-            'إذا ثبّت Ollama أو LM Studio، أبقه قيد التشغيل قبل فتح PromptQuorum — إذ يتحقق التطبيق من وجوده عند بدء التشغيل، ويطلب منك إعداد مزود ذكاء اصطناعي إذا لم يكتشف أيًا منهما. لا حاجة لإنشاء حساب في هذه النسخة التجريبية.',
+            'macOS: انقر بزر الفأرة الأيمن (لا نقرًا مزدوجًا) على التطبيق في Applications واختر Open، ثم أكّد Open في مربع الحوار الذي يحذّر من تعذّر التحقق من التطبيق. وإذا ظلت macOS تحظره فانتقل إلى System Settings ثم Privacy & Security واختر Open Anyway.',
+            'Windows: يعرض Microsoft Defender SmartScreen رسالة «Windows protected your PC». انقر More info ثم Run anyway. يتذكر Windows هذا الاختيار في عمليات التشغيل اللاحقة للملف نفسه.',
+            'كلا التحذيرين متوقعان في هذه البيتا لأن التطبيق لم يُوقَّع رقميًا بعد.',
+            'إذا ثبّتَّ Ollama أو LM Studio فأبقِه قيد التشغيل قبل فتح PromptQuorum ليتمكن التطبيق من الاتصال به. لا يلزم إنشاء حساب في هذه البيتا.',
           ],
         },
         aiOutputWarning: {
@@ -27436,7 +27437,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'هل بياناتي خاصة عند استخدام تطبيق سطح المكتب؟',
-              a: 'إذا استخدمت محرك ذكاء اصطناعي محليًا، تبقى الأوامر على جهازك ولا تُرسل إلى خوادم PromptQuorum افتراضيًا. أما إذا استخدمت مزودًا سحابيًا عبر مفتاح API، فتُرسل أوامرك مباشرة إلى ذلك المزود وفق سياسة البيانات الخاصة به.',
+              a: 'إذا استخدمت محرك ذكاء اصطناعي محليًا مثل Ollama أو LM Studio، يعمل PromptQuorum دون اتصال بالإنترنت بالكامل وتبقى أوامرك ومفاتيح API ونتائجك على جهازك (راجع [الأسئلة الشائعة لـ PromptQuorum](/ar/faq)). وإذا استخدمت مزوّدًا سحابيًا بمفتاح API فستذهب أوامرك مباشرة إلى ذلك المزوّد وفق سياسة بياناته الخاصة.',
             },
             {
               q: 'كيف أبلغ عن خطأ خلال النسخة التجريبية؟',
@@ -27486,7 +27487,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'هل بياناتي خاصة عند استخدام تطبيق سطح المكتب؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'إذا استخدمت محرك ذكاء اصطناعي محليًا، تبقى الأوامر على جهازك ولا تُرسل إلى خوادم PromptQuorum افتراضيًا. أما إذا استخدمت مزودًا سحابيًا عبر مفتاح API، فتُرسل أوامرك مباشرة إلى ذلك المزود وفق سياسة البيانات الخاصة به.',
+              text: 'إذا استخدمت محرك ذكاء اصطناعي محليًا مثل Ollama أو LM Studio، يعمل PromptQuorum دون اتصال بالإنترنت بالكامل وتبقى أوامرك ومفاتيح API ونتائجك على جهازك (راجع الأسئلة الشائعة لـ PromptQuorum). وإذا استخدمت مزوّدًا سحابيًا بمفتاح API فستذهب أوامرك مباشرة إلى ذلك المزوّد وفق سياسة بياناته الخاصة.',
             },
           },
           {
@@ -27504,10 +27505,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       category: 'Produkt-Updates',
       title: 'PromptQuorum Desktop-App: Öffentliche Beta jetzt verfügbar',
       seoTitle: 'PromptQuorum Desktop-App: Öffentliche Beta live',
-      intro: 'Die Desktop-App von PromptQuorum hat die private Testphase verlassen und steht für macOS, Windows und Linux zum Download bereit. Hier erfahren Sie, was sie leistet, welche Datei Sie benötigen und wie Sie den Download vor der Installation überprüfen.',
+      intro: 'Die Desktop-App von PromptQuorum befindet sich in der öffentlichen Beta und steht für macOS, Windows und Linux zum Download bereit. Hier erfahren Sie, was sie leistet, welche Datei Sie benötigen und wie Sie einen nicht signierten Beta-Build öffnen.',
       publishDate: 'Veröffentlicht 13. Juli 2026',
       readTime: '6 Min. Lesezeit',
-      metaDescription: 'Die Desktop-App von PromptQuorum (v0.1.0) ist für macOS, Windows und Linux verfügbar — Prompts an mehrere KI-Modelle senden, lokal oder per API-Key.',
+      metaDescription: 'Die Desktop-App von PromptQuorum (v0.1.0, öffentliche Beta) ist für macOS, Windows und Linux verfügbar — einen Prompt an mehrere KI-Modelle senden, lokal oder per API-Key.',
       educationalLevel: 'Anfänger',
       freshness_tier: 'monthly',
       sections: {
@@ -27515,11 +27516,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'Zusammenfassung',
           items: [
-            'Die Desktop-App von PromptQuorum hat die private Beta-Phase am 13. Juli 2026 verlassen und steht für macOS (Apple Silicon und Intel), Windows 10/11 sowie Linux (x64 und ARM64) zum Download bereit.',
-            'Der Build ist während dieser Beta-Phase nicht signiert. macOS und Windows zeigen daher beim ersten Start eine Sicherheitswarnung — das ist zu erwarten und kein Hinweis auf eine kompromittierte Datei.',
+            'Die Desktop-App von PromptQuorum befindet sich seit Juli 2026 in der öffentlichen Beta (aktuelle Version 0.1.0) und steht für macOS (Apple Silicon und Intel), Windows 10/11 sowie Linux (x64 und ARM64) zum Download bereit.',
+            'Der Build ist während dieser Beta nicht signiert. macOS und Windows zeigen daher beim ersten Start unter Umständen eine Sicherheitswarnung — das ist bei einem nicht signierten Beta-Build zu erwarten und kein Hinweis auf eine kompromittierte Datei.',
             'Die App benötigt ein KI-Backend, um Prompts auszuführen: Installieren Sie Ollama oder LM Studio für lokale Modelle, oder nutzen Sie Ihren eigenen API-Key (BYOK) für OpenAI, Anthropic oder einen anderen Anbieter.',
             'Modellübereinstimmung ist kein Beweis für Richtigkeit — überprüfen Sie sachliche Aussagen unabhängig, bevor Sie sich auf ein Multi-Modell-Konsensergebnis verlassen.',
-            'Laden Sie den aktuellen Build von der Download-Seite herunter und senden Sie Fehlerberichte direkt per E-Mail an das Team.',
+            'Laden Sie den Build von der Download-Seite herunter, auf der die Installer in einem gemeinsamen Ordner liegen, und senden Sie Fehlerberichte direkt per E-Mail an das Team.',
           ],
         },
         whatIsIt: {
@@ -27548,8 +27549,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         verify: {
-          title: 'Download überprüfen (optional, aber empfohlen)',
-          content: 'Jede Version wird auf der Download-Seite mit einer SHA-256-Prüfsumme veröffentlicht, mit der Sie vor der Installation bestätigen können, dass die Datei vollständig und unverändert angekommen ist.',
+          title: 'Download prüfen (optional)',
+          content: 'Die Download-Seite listet für die Beta-Installer, die in einem gemeinsamen Ordner liegen, keine Prüfsummen auf. Sie können mit den folgenden Befehlen dennoch den SHA-256-Hash einer heruntergeladenen Datei berechnen, zum Beispiel um ihn mit einem vom Team genannten Wert zu vergleichen. Laden Sie nur über den Link auf der offiziellen Download-Seite herunter.',
           items: [
             'macOS: Öffnen Sie das Terminal und führen Sie shasum -a 256 ~/Downloads/[filename] aus',
             'Windows: Öffnen Sie PowerShell und führen Sie Get-FileHash [filename] -Algorithm SHA256 aus',
@@ -27560,8 +27561,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Lokale KI-Engine vor dem ersten Start einrichten',
           content: 'PromptQuorum funktioniert am besten mit einer lokalen LLM-Engine auf Ihrem Rechner — das hält Prompts privat und vermeidet API-Kosten pro Token. Überspringen Sie diesen Abschnitt vollständig, wenn Sie stattdessen einen Cloud-Anbieter mit Ihrem eigenen API-Key nutzen möchten.',
           items: [
-            'Ollama (einfachste Ersteinrichtung): Laden Sie es von ollama.com herunter, installieren Sie es und laden Sie dann über ein Terminal ein Modell herunter, zum Beispiel mit ollama pull gemma3:1b. Es läuft im Hintergrund und wird von PromptQuorum automatisch erkannt.',
-            'LM Studio (stärker grafisch geführt): Laden Sie es von lmstudio.ai herunter, durchsuchen und laden Sie ein Modell innerhalb der App herunter und starten Sie anschließend den lokalen Server über den Tab „Developer".',
+            'Ollama (einfachste Ersteinrichtung): Laden Sie es von [ollama.com](https://ollama.com) herunter, installieren Sie es und laden Sie dann über ein Terminal ein Modell herunter, zum Beispiel mit ollama pull gemma3:1b (laut Ollama-Bibliothek ein Download von 806 MB). Es läuft im Hintergrund, und PromptQuorum kann sich als lokaler Anbieter damit verbinden.',
+            'LM Studio (stärker grafisch geführt): Laden Sie es von [lmstudio.ai](https://lmstudio.ai) herunter, laden Sie innerhalb der App ein Modell herunter und starten Sie anschließend den lokalen Server über den Tab „Developer" (oder mit dem Befehl lms server start).',
             'Nur Cloud: Überspringen Sie die lokale Einrichtung und hinterlegen Sie während des Onboardings einen API-Key für OpenAI, Anthropic oder einen anderen Anbieter (eigener Key erforderlich).',
           ],
         },
@@ -27570,8 +27571,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'macOS: Klicken Sie im Anwendungsordner mit der rechten Maustaste (nicht doppelklicken) auf die App und wählen Sie „Öffnen", bestätigen Sie dann im Warndialog, dass die App nicht verifiziert werden kann, ebenfalls mit „Öffnen". Blockiert macOS die App weiterhin, gehen Sie zu Systemeinstellungen, dann Datenschutz & Sicherheit, und wählen Sie Trotzdem öffnen.',
             'Windows: Microsoft Defender SmartScreen zeigt „Der PC wurde durch Windows geschützt". Klicken Sie auf Weitere Informationen und anschließend auf Trotzdem ausführen. Windows merkt sich diese Wahl für spätere Starts derselben Datei.',
-            'Beide Warnungen sind für diese Beta zu erwarten — die App verfügt noch nicht über ein kostenpflichtiges Code-Signing-Zertifikat und wird diese Meldungen nicht mehr anzeigen, sobald signierte Builds verfügbar sind.',
-            'Wenn Sie Ollama oder LM Studio installiert haben, lassen Sie es laufen, bevor Sie PromptQuorum öffnen — die App prüft beim Start, ob es aktiv ist, und fordert Sie zur Konfiguration eines KI-Anbieters auf, falls keiner erkannt wird. Für diese Beta ist keine Kontoerstellung erforderlich.',
+            'Beide Warnungen sind für diese Beta zu erwarten, da die App noch nicht code-signiert ist.',
+            'Wenn Sie Ollama oder LM Studio installiert haben, lassen Sie es laufen, bevor Sie PromptQuorum öffnen, damit sich die App damit verbinden kann. Für diese Beta ist keine Kontoerstellung erforderlich.',
           ],
         },
         aiOutputWarning: {
@@ -27618,7 +27619,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Sind meine Daten privat, wenn ich die Desktop-App nutze?',
-              a: 'Wenn Sie eine lokale KI-Engine nutzen, verbleiben Prompts auf Ihrem Rechner und werden standardmäßig nicht an PromptQuorum-Server gesendet. Nutzen Sie einen Cloud-Anbieter über einen API-Key, gehen Ihre Prompts direkt an diesen Anbieter und unterliegen dessen eigener Datenrichtlinie.',
+              a: 'Wenn Sie eine lokale KI-Engine wie Ollama oder LM Studio nutzen, funktioniert PromptQuorum vollständig offline, und Ihre Prompts, API-Keys und Ergebnisse bleiben auf Ihrem Gerät (siehe die [PromptQuorum-FAQ](/de/faq)). Wenn Sie einen Cloud-Anbieter per API-Key nutzen, gehen Ihre Prompts direkt an diesen Anbieter und unterliegen dessen eigenen Datenschutzbestimmungen.',
             },
             {
               q: 'Wie melde ich einen Fehler während der Beta?',
@@ -27668,7 +27669,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Sind meine Daten privat, wenn ich die Desktop-App nutze?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Wenn Sie eine lokale KI-Engine nutzen, verbleiben Prompts auf Ihrem Rechner und werden standardmäßig nicht an PromptQuorum-Server gesendet. Nutzen Sie einen Cloud-Anbieter über einen API-Key, gehen Ihre Prompts direkt an diesen Anbieter und unterliegen dessen eigener Datenrichtlinie.',
+              text: 'Wenn Sie eine lokale KI-Engine wie Ollama oder LM Studio nutzen, funktioniert PromptQuorum vollständig offline, und Ihre Prompts, API-Keys und Ergebnisse bleiben auf Ihrem Gerät (siehe die PromptQuorum-FAQ). Wenn Sie einen Cloud-Anbieter per API-Key nutzen, gehen Ihre Prompts direkt an diesen Anbieter und unterliegen dessen eigenen Datenschutzbestimmungen.',
             },
           },
           {
@@ -27686,10 +27687,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       category: 'Actualizaciones de producto',
       title: 'App de escritorio de PromptQuorum: la beta pública ya está disponible',
       seoTitle: 'App de escritorio PromptQuorum: beta pública ya disponible',
-      intro: 'La app de escritorio de PromptQuorum salió de las pruebas privadas y ya está disponible para descargar en macOS, Windows y Linux. Esto es lo que hace, qué archivo elegir y cómo verificarlo antes de instalar.',
+      intro: 'La app de escritorio de PromptQuorum está en beta pública y se puede descargar para macOS, Windows y Linux. Aquí tienes qué hace, qué archivo elegir y cómo abrir una versión beta sin firmar.',
       publishDate: 'Publicado 13 de julio de 2026',
       readTime: '6 min de lectura',
-      metaDescription: 'La app de escritorio de PromptQuorum (v0.1.0) ya está disponible para macOS, Windows y Linux: envía prompts a varios modelos de IA en local o vía API key.',
+      metaDescription: 'La app de escritorio de PromptQuorum (v0.1.0, beta pública) está disponible para macOS, Windows y Linux — envía un prompt a varios modelos de IA, en local o con clave API.',
       educationalLevel: 'Beginner',
       freshness_tier: 'monthly',
       sections: {
@@ -27697,11 +27698,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'Puntos clave',
           items: [
-            'La app de escritorio de PromptQuorum salió de la beta privada el 13 de julio de 2026 y ya se puede descargar para macOS (Apple Silicon e Intel), Windows 10/11 y Linux (x64 y ARM64).',
-            'Durante esta fase beta, la compilación no está firmada, así que macOS y Windows mostrarán una advertencia de seguridad en el primer inicio — es lo esperado, no una señal de que el archivo esté comprometido.',
-            'La app necesita un backend de IA para ejecutar prompts: instala Ollama o LM Studio para modelos locales, o usa tu propia API key (BYOK) para OpenAI, Anthropic u otro proveedor.',
-            'Que los modelos coincidan no es prueba de que la respuesta sea correcta — verifica las afirmaciones de forma independiente antes de confiar en el resultado de consenso multi-modelo.',
-            'Descarga la versión actual desde la página de descargas y envía los reportes de errores directamente al equipo por correo electrónico.',
+            'La app de escritorio de PromptQuorum está en beta pública desde julio de 2026 (versión actual 0.1.0) y se puede descargar para macOS (Apple Silicon e Intel), Windows 10/11 y Linux (x64 y ARM64).',
+            'La versión no está firmada durante esta beta, así que macOS y Windows pueden mostrar una advertencia de seguridad en el primer inicio; es lo esperado en una beta sin firmar y no indica un archivo comprometido.',
+            'La app necesita un backend de IA para ejecutar prompts: instala Ollama o LM Studio para modelos locales, o usa tu propia clave API (BYOK) para OpenAI, Anthropic u otro proveedor.',
+            'El acuerdo entre modelos no es prueba de corrección: verifica las afirmaciones factuales de forma independiente antes de fiarte de un consenso multimodelo.',
+            'Descarga la versión desde la página de descargas, donde los instaladores están en una carpeta compartida, y envía los informes de errores directamente al equipo por correo electrónico.',
           ],
         },
         whatIsIt: {
@@ -27730,8 +27731,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         verify: {
-          title: 'Verifica tu Descarga (Opcional pero Recomendado)',
-          content: 'Cada versión incluye un checksum SHA-256 en la página de descargas para que puedas confirmar que el archivo llegó completo y sin modificar antes de instalarlo.',
+          title: 'Comprueba tu descarga (opcional)',
+          content: 'La página de descargas no muestra sumas de comprobación de los instaladores beta, que están alojados en una carpeta compartida. Aun así, puedes calcular el hash SHA-256 de un archivo descargado con los comandos siguientes, por ejemplo para compararlo con un valor que te dé el equipo. Descarga solo desde el enlace de la página oficial de descargas.',
           items: [
             'macOS: abre Terminal y ejecuta shasum -a 256 ~/Downloads/[filename]',
             'Windows: abre PowerShell y ejecuta Get-FileHash [filename] -Algorithm SHA256',
@@ -27742,18 +27743,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Configura un Motor de IA Local Antes del Primer Inicio',
           content: 'PromptQuorum funciona mejor con un motor LLM local ejecutándose en tu máquina — esto mantiene los prompts privados y evita costos de API por token. Omite esta sección por completo si planeas usar un proveedor en la nube con tu propia API key.',
           items: [
-            'Ollama (la configuración inicial más simple): descárgalo desde ollama.com, instálalo y luego descarga un modelo desde una terminal, por ejemplo ollama pull gemma3:1b. Se ejecuta en segundo plano y PromptQuorum lo detecta automáticamente.',
-            'LM Studio (más orientado a interfaz gráfica): descárgalo desde lmstudio.ai, explora y descarga un modelo dentro de la app y luego inicia el servidor local desde la pestaña Developer.',
-            'Solo en la nube: omite la configuración local y añade una API key de OpenAI, Anthropic u otro proveedor (bring your own key) durante el onboarding.',
+            'Ollama (la primera configuración más sencilla): descárgalo desde [ollama.com](https://ollama.com), instálalo y luego descarga un modelo desde una terminal, por ejemplo con ollama pull gemma3:1b (una descarga de 806 MB según la biblioteca de Ollama). Se ejecuta en segundo plano y PromptQuorum puede conectarse a él como proveedor local.',
+            'LM Studio (más orientado a la interfaz gráfica): descárgalo desde [lmstudio.ai](https://lmstudio.ai), descarga un modelo dentro de la app y luego inicia el servidor local desde la pestaña Developer (o con el comando lms server start).',
+            'Solo nube: omite la configuración local y añade una clave API de OpenAI, Anthropic u otro proveedor (tu propia clave) durante la incorporación.',
           ],
         },
         firstLaunch: {
           title: 'Qué Sucede en el Primer Inicio',
           content: [
-            'macOS: haz clic derecho (no doble clic) en la app dentro de Aplicaciones y elige Abrir, luego confirma Abrir en el cuadro de diálogo que advierte que la app no se puede verificar. Si macOS sigue bloqueándola, ve a Ajustes del Sistema, luego a Privacidad y seguridad, y elige Abrir de todas formas.',
-            'Windows: Microsoft Defender SmartScreen muestra "Windows protegió tu PC". Haz clic en Más información y luego en Ejecutar de todas formas. Windows recuerda esta elección para futuros inicios del mismo archivo.',
-            'Ambas advertencias son esperadas durante esta beta — la app todavía no tiene un certificado de firma de código de pago y dejará de mostrarlas cuando se publiquen compilaciones firmadas.',
-            'Si instalaste Ollama o LM Studio, mantenlo en ejecución antes de abrir PromptQuorum — la app lo comprueba al iniciar y te pide configurar un proveedor de IA si no detecta ninguno. No es necesario crear una cuenta durante esta beta.',
+            'macOS: haz clic derecho (no doble clic) sobre la app en Aplicaciones y elige Abrir; luego confirma Abrir en el cuadro de diálogo que avisa de que la app no se puede verificar. Si macOS sigue bloqueándola, ve a Ajustes del Sistema, luego Privacidad y seguridad, y elige Abrir igualmente.',
+            'Windows: Microsoft Defender SmartScreen muestra «Windows protegió su PC». Haz clic en Más información y luego en Ejecutar de todas formas. Windows recuerda esta elección en los siguientes inicios del mismo archivo.',
+            'Ambas advertencias son las esperadas en esta beta porque la app aún no está firmada.',
+            'Si instalaste Ollama o LM Studio, déjalo en ejecución antes de abrir PromptQuorum para que la app pueda conectarse a él. No hace falta crear una cuenta en esta beta.',
           ],
         },
         aiOutputWarning: {
@@ -27800,7 +27801,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '¿Mis datos son privados cuando uso la app de escritorio?',
-              a: 'Si usas un motor de IA local, los prompts permanecen en tu máquina y por defecto no se envían a los servidores de PromptQuorum. Si usas un proveedor en la nube mediante API key, tus prompts van directamente a ese proveedor bajo su propia política de datos.',
+              a: 'Si usas un motor de IA local como Ollama o LM Studio, PromptQuorum funciona completamente sin conexión y tus prompts, claves API y resultados permanecen en tu dispositivo (consulta las [preguntas frecuentes de PromptQuorum](/es/faq)). Si usas un proveedor en la nube con clave API, tus prompts van directamente a ese proveedor bajo su propia política de datos.',
             },
             {
               q: '¿Cómo reporto un error durante la beta?',
@@ -27850,7 +27851,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Mis datos son privados cuando uso la app de escritorio?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Si usas un motor de IA local, los prompts permanecen en tu máquina y por defecto no se envían a los servidores de PromptQuorum. Si usas un proveedor en la nube mediante API key, tus prompts van directamente a ese proveedor bajo su propia política de datos.',
+              text: 'Si usas un motor de IA local como Ollama o LM Studio, PromptQuorum funciona completamente sin conexión y tus prompts, claves API y resultados permanecen en tu dispositivo (consulta las preguntas frecuentes de PromptQuorum). Si usas un proveedor en la nube con clave API, tus prompts van directamente a ese proveedor bajo su propia política de datos.',
             },
           },
           {
@@ -27868,10 +27869,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       category: 'Mises à jour produit',
       title: 'L\'application de bureau PromptQuorum : la bêta publique est disponible',
       seoTitle: 'PromptQuorum Desktop : la bêta publique est disponible',
-      intro: 'L\'application de bureau de PromptQuorum sort de bêta privée et se télécharge pour macOS, Windows et Linux. Voici ce qu\'elle fait, quel fichier choisir, et comment le vérifier avant installation.',
+      intro: 'L\'application de bureau PromptQuorum est en bêta publique et téléchargeable pour macOS, Windows et Linux. Voici ce qu\'elle fait, quel fichier choisir et comment ouvrir une version bêta non signée.',
       publishDate: 'Publié 13 juillet 2026',
       readTime: '6 min de lecture',
-      metaDescription: 'L\'application de bureau PromptQuorum (v0.1.0) est disponible pour macOS, Windows et Linux : envoyez vos prompts à plusieurs modèles IA en local ou via clé API.',
+      metaDescription: 'L\'application de bureau PromptQuorum (v0.1.0, bêta publique) est disponible sur macOS, Windows et Linux — envoyez un prompt à plusieurs modèles d\'IA, en local ou via clé API.',
       educationalLevel: 'Beginner',
       freshness_tier: 'monthly',
       sections: {
@@ -27879,11 +27880,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'Points clés',
           items: [
-            'L\'application de bureau PromptQuorum a quitté la bêta privée le 13 juillet 2026 et se télécharge pour macOS (Apple Silicon et Intel), Windows 10/11, et Linux (x64 et ARM64).',
-            'Le build n\'est pas signé durant cette phase de bêta : macOS et Windows afficheront un avertissement de sécurité au premier lancement — c\'est normal, pas un signe de fichier compromis.',
-            'L\'application nécessite un moteur IA pour exécuter les prompts : installez Ollama ou LM Studio pour des modèles locaux, ou utilisez votre propre clé API (BYOK) pour OpenAI, Anthropic, ou un autre fournisseur.',
-            'L\'accord entre modèles ne prouve pas l\'exactitude — vérifiez indépendamment les affirmations factuelles avant de vous fier au résultat du consensus multi-modèles.',
-            'Récupérez le build actuel sur la page de téléchargement et envoyez vos rapports de bug directement à l\'équipe par e-mail.',
+            'L\'application de bureau PromptQuorum est en bêta publique depuis juillet 2026 (version actuelle 0.1.0) et téléchargeable pour macOS (Apple Silicon et Intel), Windows 10/11 et Linux (x64 et ARM64).',
+            'La version est non signée pendant cette bêta : macOS et Windows peuvent afficher un avertissement de sécurité au premier lancement — c\'est normal pour une bêta non signée et ne signale pas un fichier compromis.',
+            'L\'application a besoin d\'un backend d\'IA pour exécuter des prompts : installez Ollama ou LM Studio pour des modèles locaux, ou utilisez votre propre clé API (BYOK) pour OpenAI, Anthropic ou un autre fournisseur.',
+            'L\'accord entre modèles ne prouve pas l\'exactitude — vérifiez les affirmations factuelles de façon indépendante avant de vous fier à un consensus multi-modèles.',
+            'Récupérez la version sur la page de téléchargement, où les installateurs sont regroupés dans un dossier partagé, et envoyez vos rapports de bogues directement à l\'équipe par e-mail.',
           ],
         },
         whatIsIt: {
@@ -27912,8 +27913,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         verify: {
-          title: 'Vérifiez votre téléchargement (facultatif mais recommandé)',
-          content: 'Chaque version est publiée avec une empreinte SHA-256 sur la page de téléchargement, afin que vous puissiez confirmer qu\'un fichier est arrivé complet et non modifié avant de l\'installer.',
+          title: 'Vérifier votre téléchargement (facultatif)',
+          content: 'La page de téléchargement n\'affiche pas de sommes de contrôle pour les installateurs bêta, hébergés dans un dossier partagé. Vous pouvez toutefois calculer le hachage SHA-256 d\'un fichier téléchargé avec les commandes ci-dessous, par exemple pour le comparer à une valeur communiquée par l\'équipe. Ne téléchargez que depuis le lien de la page de téléchargement officielle.',
           items: [
             'macOS : ouvrez le Terminal et exécutez shasum -a 256 ~/Downloads/[filename]',
             'Windows : ouvrez PowerShell et exécutez Get-FileHash [filename] -Algorithm SHA256',
@@ -27924,18 +27925,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Configurez un moteur IA local avant le premier lancement',
           content: 'PromptQuorum fonctionne mieux avec un moteur LLM local exécuté sur votre machine — cela garde les prompts privés et évite les coûts par token. Ignorez entièrement cette section si vous comptez plutôt utiliser un fournisseur cloud avec votre propre clé API.',
           items: [
-            'Ollama (configuration initiale la plus simple) : téléchargez-le depuis ollama.com, installez-le, puis récupérez un modèle depuis un terminal, par exemple ollama pull gemma3:1b. Il s\'exécute en arrière-plan et PromptQuorum le détecte automatiquement.',
-            'LM Studio (davantage piloté par interface graphique) : téléchargez-le depuis lmstudio.ai, parcourez et téléchargez un modèle dans l\'application, puis démarrez le serveur local depuis l\'onglet Developer.',
-            'Cloud uniquement : ignorez la configuration locale et ajoutez une clé API pour OpenAI, Anthropic, ou un autre fournisseur (apportez votre propre clé) lors de l\'onboarding.',
+            'Ollama (première installation la plus simple) : téléchargez-le sur [ollama.com](https://ollama.com), installez-le, puis récupérez un modèle depuis un terminal, par exemple avec ollama pull gemma3:1b (téléchargement de 806 Mo selon la bibliothèque Ollama). Il s\'exécute en arrière-plan et PromptQuorum peut s\'y connecter comme fournisseur local.',
+            'LM Studio (plus orienté interface graphique) : téléchargez-le sur [lmstudio.ai](https://lmstudio.ai), téléchargez un modèle dans l\'application, puis démarrez le serveur local depuis l\'onglet Developer (ou avec la commande lms server start).',
+            'Cloud uniquement : ignorez la configuration locale et ajoutez une clé API pour OpenAI, Anthropic ou un autre fournisseur (votre propre clé) lors de l\'onboarding.',
           ],
         },
         firstLaunch: {
           title: 'Ce qui se passe au premier lancement',
           content: [
-            'macOS : faites un clic droit (pas un double-clic) sur l\'application dans Applications et choisissez Ouvrir, puis confirmez Ouvrir dans la boîte de dialogue avertissant que l\'application ne peut pas être vérifiée. Si macOS la bloque encore, allez dans Réglages Système, puis Confidentialité et sécurité, et choisissez Ouvrir quand même.',
-            'Windows : Microsoft Defender SmartScreen affiche « Windows a protégé votre ordinateur ». Cliquez sur Informations complémentaires, puis Exécuter quand même. Windows retient ce choix pour les lancements suivants du même fichier.',
-            'Ces deux avertissements sont attendus pour cette bêta — l\'application n\'a pas encore de certificat de signature de code payant et cessera de les afficher une fois les builds signés disponibles.',
-            'Si vous avez installé Ollama ou LM Studio, gardez-le actif avant d\'ouvrir PromptQuorum — l\'application le vérifie au démarrage et vous invite à configurer un fournisseur IA si aucun n\'est détecté. Aucune création de compte n\'est requise pour cette bêta.',
+            'macOS : faites un clic droit (et non un double-clic) sur l\'application dans Applications et choisissez Ouvrir, puis confirmez Ouvrir dans la boîte de dialogue indiquant que l\'application ne peut pas être vérifiée. Si macOS la bloque encore, allez dans Réglages Système, puis Confidentialité et sécurité, et choisissez Ouvrir quand même.',
+            'Windows : Microsoft Defender SmartScreen affiche « Windows a protégé votre ordinateur ». Cliquez sur Informations complémentaires, puis sur Exécuter quand même. Windows mémorise ce choix pour les lancements suivants du même fichier.',
+            'Ces deux avertissements sont normaux pour cette bêta, car l\'application n\'est pas encore signée.',
+            'Si vous avez installé Ollama ou LM Studio, laissez-le actif avant d\'ouvrir PromptQuorum afin que l\'application puisse s\'y connecter. Aucune création de compte n\'est requise pour cette bêta.',
           ],
         },
         aiOutputWarning: {
@@ -27982,7 +27983,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Mes données sont-elles privées quand j\'utilise l\'application de bureau ?',
-              a: 'Si vous utilisez un moteur IA local, les prompts restent sur votre machine et ne sont pas envoyés par défaut aux serveurs de PromptQuorum. Si vous utilisez un fournisseur cloud via une clé API, vos prompts vont directement à ce fournisseur, sous sa propre politique de données.',
+              a: 'Si vous utilisez un moteur d\'IA local comme Ollama ou LM Studio, PromptQuorum fonctionne entièrement hors ligne et vos prompts, clés API et résultats restent sur votre appareil (voir la [FAQ PromptQuorum](/fr/faq)). Si vous utilisez un fournisseur cloud via clé API, vos prompts vont directement à ce fournisseur, selon sa propre politique de données.',
             },
             {
               q: 'Comment signaler un bug durant la bêta ?',
@@ -28032,7 +28033,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Mes données sont-elles privées quand j\'utilise l\'application de bureau ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Si vous utilisez un moteur IA local, les prompts restent sur votre machine et ne sont pas envoyés par défaut aux serveurs de PromptQuorum. Si vous utilisez un fournisseur cloud via une clé API, vos prompts vont directement à ce fournisseur, sous sa propre politique de données.',
+              text: 'Si vous utilisez un moteur d\'IA local comme Ollama ou LM Studio, PromptQuorum fonctionne entièrement hors ligne et vos prompts, clés API et résultats restent sur votre appareil (voir la FAQ PromptQuorum). Si vous utilisez un fournisseur cloud via clé API, vos prompts vont directement à ce fournisseur, selon sa propre politique de données.',
             },
           },
           {
@@ -28050,10 +28051,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       category: 'プロダクトアップデート',
       title: 'PromptQuorumデスクトップアプリ:パブリックベータを公開',
       seoTitle: 'PromptQuorumデスクトップアプリ ベータ公開',
-      intro: 'PromptQuorumのデスクトップアプリがプライベートテストを終え、macOS、Windows、Linux向けにダウンロード可能になりました。何ができるアプリか、どのファイルを選べばよいか、インストール前にどう検証すればよいかをまとめます。',
+      intro: 'PromptQuorumのデスクトップアプリは公開ベータ版で、macOS、Windows、Linux向けにダウンロードできます。機能、選ぶべきファイル、署名なしのベータビルドの開き方を説明します。',
       publishDate: '2026年7月13日公開',
       readTime: '6分の読み物',
-      metaDescription: 'PromptQuorumのデスクトップアプリ(v0.1.0)がmacOS、Windows、Linux向けにダウンロード可能に。ローカルまたはAPIキー経由で複数のAIモデルにプロンプトを送信できます。',
+      metaDescription: 'PromptQuorumのデスクトップアプリ（v0.1.0、公開ベータ）がmacOS・Windows・Linuxで利用可能。1つのプロンプトを複数のAIモデルへ、ローカルまたはAPIキーで送信できます。',
       educationalLevel: 'Beginner',
       freshness_tier: 'monthly',
       sections: {
@@ -28061,11 +28062,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: '重要ポイント',
           items: [
-            'PromptQuorumのデスクトップアプリは2026年7月13日にプライベートベータを終了し、macOS(Apple SiliconおよびIntel)、Windows 10/11、Linux(x64およびARM64)でダウンロード可能になりました。',
-            'このベータ期間中、ビルドは署名されていないため、初回起動時にmacOSとWindowsでセキュリティ警告が表示されます。これは想定内の動作であり、ファイルが改ざんされているサインではありません。',
-            'アプリでプロンプトを実行するにはAIバックエンドが必要です。ローカルモデル用にOllamaまたはLM Studioをインストールするか、OpenAI、Anthropicなど他のプロバイダーの自分のAPIキー(BYOK)を使用してください。',
-            'モデル間の一致は正確さの証明にはなりません。複数モデルの合議(コンセンサス)出力に頼る前に、事実に関する主張は必ず独自に検証してください。',
-            '最新ビルドはダウンロードページから入手できます。バグ報告はメールで直接チームまでお送りください。',
+            'PromptQuorumのデスクトップアプリは2026年7月から公開ベータとなっており（現行バージョン0.1.0）、macOS（Apple SiliconとIntel）、Windows 10/11、Linux（x64とARM64）向けにダウンロードできます。',
+            'このベータ版は署名されていないため、macOSとWindowsでは初回起動時にセキュリティ警告が表示されることがあります。署名なしのベータビルドでは想定内であり、ファイルが改ざんされている印ではありません。',
+            'アプリがプロンプトを実行するにはAIバックエンドが必要です。ローカルモデルにはOllamaまたはLM Studioをインストールするか、OpenAI、Anthropicなどのプロバイダー向けに自分のAPIキー（BYOK）を使用してください。',
+            'モデル間の一致は正しさの証明ではありません。複数モデルの合意結果に頼る前に、事実に関する主張は独自に確認してください。',
+            'ビルドはダウンロードページから入手してください（インストーラーは1つの共有フォルダーにあります）。バグ報告はチームにメールで直接お送りください。',
           ],
         },
         whatIsIt: {
@@ -28094,8 +28095,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         verify: {
-          title: 'ダウンロードファイルを検証する(任意・推奨)',
-          content: '各リリースにはダウンロードページにSHA-256チェックサムが記載されているため、インストール前にファイルが完全かつ改ざんされていないことを確認できます。',
+          title: 'ダウンロードを確認する（任意）',
+          content: 'ダウンロードページには、共有フォルダーにあるベータ版インストーラーのチェックサムは掲載されていません。それでも、下記のコマンドでダウンロードしたファイルのSHA-256ハッシュを計算できます（例えば、チームから伝えられた値と比較する場合）。ダウンロードは公式ダウンロードページのリンクからのみ行ってください。',
           items: [
             'macOS: ターミナルを開き、shasum -a 256 ~/Downloads/[filename] を実行します',
             'Windows: PowerShellを開き、Get-FileHash [filename] -Algorithm SHA256 を実行します',
@@ -28106,18 +28107,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '初回起動前にローカルAIエンジンを設定する',
           content: 'PromptQuorumは、自分のマシン上でローカルLLMエンジンを動かしている状態が最適です。プロンプトを外部に送信せずに済み、トークンごとのAPI費用もかかりません。クラウドプロバイダーを自分のAPIキーで使う予定の場合は、このセクションは読み飛ばして構いません。',
           items: [
-            'Ollama(最も簡単な初期設定):ollama.comからダウンロードしてインストールし、ターミナルからモデルをpullします。例:ollama pull gemma3:1b。バックグラウンドで動作し、PromptQuorumが自動的に検出します。',
-            'LM Studio(よりGUI主体):lmstudio.aiからダウンロードし、アプリ内でモデルを閲覧・ダウンロードした後、Developerタブからローカルサーバーを起動します。',
-            'クラウドのみ:ローカル設定を省略し、オンボーディング中にOpenAI、Anthropicなど他のプロバイダーのAPIキーを追加します(自分のキーを持ち込む)。',
+            'Ollama（最も簡単な初回セットアップ）：[ollama.com](https://ollama.com)からダウンロードしてインストールし、ターミナルでモデルを取得します（例：ollama pull gemma3:1b、Ollamaライブラリによるとダウンロードサイズは806 MB）。バックグラウンドで動作し、PromptQuorumはローカルプロバイダーとして接続できます。',
+            'LM Studio（GUI中心）：[lmstudio.ai](https://lmstudio.ai)からダウンロードし、アプリ内でモデルをダウンロードして、Developerタブからローカルサーバーを起動します（またはlms server startコマンドを使用）。',
+            'クラウドのみ：ローカルのセットアップは省略し、オンボーディング中にOpenAI、Anthropicなどのプロバイダー向けのAPIキー（自分のキー）を追加します。',
           ],
         },
         firstLaunch: {
           title: '初回起動時に起こること',
           content: [
-            'macOS: Applications内のアプリを(ダブルクリックではなく)右クリックし、「開く」を選択します。アプリを確認できない旨の警告ダイアログで「開く」を確定してください。それでもmacOSがブロックする場合は、システム設定からプライバシーとセキュリティに進み、「このまま開く」を選択します。',
-            'Windows: Microsoft Defender SmartScreenが「WindowsによってPCが保護されました」と表示します。「詳細情報」をクリックし、続けて「実行」を選択してください。Windowsは同じファイルの以後の起動についてこの選択を記憶します。',
-            'どちらの警告もこのベータ版では想定内です。アプリはまだ有料のコード署名証明書を取得しておらず、署名済みビルドが提供され次第表示されなくなります。',
-            'OllamaまたはLM Studioをインストールした場合は、PromptQuorumを開く前に起動したままにしておいてください。アプリは起動時にそれを確認し、検出できない場合はAIプロバイダーの設定を促します。このベータ版ではアカウント作成は不要です。',
+            'macOS：アプリケーション内のアプリを右クリック（ダブルクリックではなく）して「開く」を選び、アプリを検証できないという警告ダイアログで再度「開く」を確認します。それでもmacOSがブロックする場合は、システム設定、プライバシーとセキュリティの順に進み、「このまま開く」を選択します。',
+            'Windows：Microsoft Defender SmartScreenに「WindowsによってPCが保護されました」と表示されます。「詳細情報」をクリックし、「実行」を選択します。Windowsは同じファイルの以後の起動でこの選択を記憶します。',
+            'アプリがまだコード署名されていないため、どちらの警告もこのベータ版では想定内です。',
+            'OllamaまたはLM Studioをインストールした場合は、PromptQuorumを開く前に起動したままにして、アプリが接続できるようにしてください。このベータ版ではアカウント作成は不要です。',
           ],
         },
         aiOutputWarning: {
@@ -28164,7 +28165,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'デスクトップアプリを使うとき、データは非公開に保たれますか?',
-              a: 'ローカルAIエンジンを使う場合、プロンプトは自分のマシン内にとどまり、既定ではPromptQuorumのサーバーに送信されません。APIキー経由でクラウドプロバイダーを使う場合、プロンプトはそのプロバイダーの独自のデータポリシーのもとで直接送信されます。',
+              a: 'OllamaやLM Studioなどのローカル AIエンジンを使う場合、PromptQuorumは完全にオフラインで動作し、プロンプト、APIキー、結果はお使いのデバイスにとどまります（[PromptQuorumのFAQ](/ja/faq)を参照）。APIキー経由でクラウドプロバイダーを使う場合、プロンプトはそのプロバイダーに直接送られ、そのプロバイダー自身のデータポリシーが適用されます。',
             },
             {
               q: 'ベータ期間中にバグを報告するにはどうすればよいですか?',
@@ -28214,7 +28215,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'デスクトップアプリを使うとき、データは非公開に保たれますか?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'ローカルAIエンジンを使う場合、プロンプトは自分のマシン内にとどまり、既定ではPromptQuorumのサーバーに送信されません。APIキー経由でクラウドプロバイダーを使う場合、プロンプトはそのプロバイダーの独自のデータポリシーのもとで直接送信されます。',
+              text: 'OllamaやLM Studioなどのローカル AIエンジンを使う場合、PromptQuorumは完全にオフラインで動作し、プロンプト、APIキー、結果はお使いのデバイスにとどまります（PromptQuorumのFAQを参照）。APIキー経由でクラウドプロバイダーを使う場合、プロンプトはそのプロバイダーに直接送られ、そのプロバイダー自身のデータポリシーが適用されます。',
             },
           },
           {
@@ -28232,10 +28233,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       category: '제품 업데이트',
       title: 'PromptQuorum 데스크톱 앱: 퍼블릭 베타 출시',
       seoTitle: 'PromptQuorum 데스크톱 앱 퍼블릭 베타 출시',
-      intro: 'PromptQuorum의 데스크톱 앱이 비공개 테스트를 마치고 macOS, Windows, Linux용으로 다운로드할 수 있게 되었습니다. 이 앱이 무엇을 하는지, 어떤 파일을 선택해야 하는지, 설치 전에 어떻게 검증하는지 안내합니다.',
+      intro: 'PromptQuorum 데스크톱 앱은 공개 베타 상태이며 macOS, Windows, Linux용으로 다운로드할 수 있습니다. 앱의 기능, 선택할 파일, 서명되지 않은 베타 빌드를 여는 방법을 설명합니다.',
       publishDate: '게시 2026년 7월 13일',
       readTime: '6분 읽기',
-      metaDescription: 'PromptQuorum 데스크톱 앱(v0.1.0)을 macOS, Windows, Linux용으로 지금 다운로드할 수 있습니다. 로컬 또는 API 키를 통해 여러 AI 모델에 프롬프트를 동시에 전송합니다.',
+      metaDescription: 'PromptQuorum 데스크톱 앱(v0.1.0, 공개 베타)을 macOS, Windows, Linux에서 사용할 수 있습니다. 하나의 프롬프트를 여러 AI 모델에 로컬 또는 API 키로 보냅니다.',
       educationalLevel: 'Beginner',
       freshness_tier: 'monthly',
       sections: {
@@ -28243,11 +28244,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: '핵심 내용',
           items: [
-            'PromptQuorum 데스크톱 앱은 2026년 7월 13일 비공개 베타를 종료하고, macOS(Apple Silicon 및 Intel), Windows 10/11, Linux(x64 및 ARM64)용으로 다운로드할 수 있습니다.',
-            '이번 베타 단계의 빌드는 서명되지 않았으므로, macOS와 Windows에서 최초 실행 시 보안 경고가 표시됩니다. 이는 예상된 현상이며 파일이 손상되었다는 의미가 아닙니다.',
-            '앱이 프롬프트를 실행하려면 AI 백엔드가 필요합니다. 로컬 모델을 사용하려면 Ollama 또는 LM Studio를 설치하거나, OpenAI, Anthropic 또는 다른 제공업체의 API 키를 직접 준비(BYOK)하십시오.',
-            '모델 간 합의는 정확성의 증거가 아닙니다. 다중 모델 합의 결과에 의존하기 전에 사실 주장을 독립적으로 검증하십시오.',
-            '다운로드 페이지에서 최신 빌드를 받고, 버그 신고는 이메일로 팀에 직접 보내십시오.',
+            'PromptQuorum 데스크톱 앱은 2026년 7월부터 공개 베타 상태이며(현재 버전 0.1.0), macOS(Apple Silicon 및 Intel), Windows 10/11, Linux(x64 및 ARM64)용으로 다운로드할 수 있습니다.',
+            '이 베타 빌드는 서명되지 않았으므로 macOS와 Windows에서 첫 실행 시 보안 경고가 표시될 수 있습니다. 서명되지 않은 베타 빌드에서는 예상되는 현상이며 파일이 손상되었다는 뜻이 아닙니다.',
+            '앱이 프롬프트를 실행하려면 AI 백엔드가 필요합니다. 로컬 모델에는 Ollama 또는 LM Studio를 설치하거나, OpenAI, Anthropic 등 제공업체용으로 직접 발급받은 API 키(BYOK)를 사용하십시오.',
+            '모델 간 일치는 정확성의 증거가 아닙니다. 다중 모델 합의 결과에 의존하기 전에 사실 관계는 독립적으로 확인하십시오.',
+            '빌드는 다운로드 페이지에서 받으십시오(설치 파일은 하나의 공유 폴더에 있습니다). 버그 신고는 팀에 이메일로 직접 보내 주십시오.',
           ],
         },
         whatIsIt: {
@@ -28276,8 +28277,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         verify: {
-          title: '다운로드 파일 검증(선택 사항이지만 권장)',
-          content: '각 릴리스는 다운로드 페이지에 SHA-256 체크섬과 함께 제공되므로, 설치 전에 파일이 손상 없이 완전하게 전달되었는지 확인할 수 있습니다.',
+          title: '다운로드 확인(선택 사항)',
+          content: '다운로드 페이지에는 공유 폴더에 있는 베타 설치 파일의 체크섬이 게시되어 있지 않습니다. 그래도 아래 명령으로 내려받은 파일의 SHA-256 해시를 계산할 수 있으며, 예를 들어 팀이 알려 준 값과 비교할 수 있습니다. 다운로드는 공식 다운로드 페이지의 링크로만 하십시오.',
           items: [
             'macOS: 터미널을 열고 shasum -a 256 ~/Downloads/[filename] 명령을 실행하십시오',
             'Windows: PowerShell을 열고 Get-FileHash [filename] -Algorithm SHA256 명령을 실행하십시오',
@@ -28288,18 +28289,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '최초 실행 전 로컬 AI 엔진 설정하기',
           content: 'PromptQuorum은 사용자의 기기에서 로컬 LLM 엔진이 실행될 때 가장 원활하게 작동합니다. 이렇게 하면 프롬프트가 비공개로 유지되고 토큰당 API 비용이 발생하지 않습니다. 본인의 API 키로 클라우드 제공업체를 사용할 계획이라면 이 섹션은 건너뛰어도 됩니다.',
           items: [
-            'Ollama(가장 간단한 초기 설정): ollama.com에서 다운로드하여 설치한 후, 터미널에서 모델을 내려받으십시오. 예: ollama pull gemma3:1b. 백그라운드에서 실행되며 PromptQuorum이 자동으로 감지합니다.',
-            'LM Studio(GUI 중심): lmstudio.ai에서 다운로드한 후, 앱 내에서 모델을 탐색하여 내려받고 Developer 탭에서 로컬 서버를 시작하십시오.',
-            '클라우드만 사용: 로컬 설정을 건너뛰고, 온보딩 과정에서 OpenAI, Anthropic 또는 다른 제공업체의 API 키를 직접 추가(BYOK)하십시오.',
+            'Ollama(가장 간단한 첫 설정): [ollama.com](https://ollama.com)에서 다운로드해 설치한 뒤 터미널에서 모델을 받습니다. 예: ollama pull gemma3:1b(Ollama 라이브러리 기준 다운로드 크기 806 MB). 백그라운드에서 실행되며 PromptQuorum이 로컬 제공업체로 연결할 수 있습니다.',
+            'LM Studio(GUI 중심): [lmstudio.ai](https://lmstudio.ai)에서 다운로드하고 앱 안에서 모델을 내려받은 뒤 Developer 탭에서 로컬 서버를 시작합니다(또는 lms server start 명령 사용).',
+            '클라우드만 사용: 로컬 설정은 건너뛰고 온보딩 중에 OpenAI, Anthropic 등 제공업체용 API 키(직접 발급받은 키)를 추가합니다.',
           ],
         },
         firstLaunch: {
           title: '최초 실행 시 나타나는 현상',
           content: [
-            'macOS: Applications 폴더에서 앱을 더블클릭하지 말고 마우스 오른쪽 버튼으로 클릭하여 "열기"를 선택한 후, 앱을 확인할 수 없다는 경고 대화 상자에서 "열기"를 다시 확인하십시오. macOS가 계속 차단한다면 "시스템 설정"으로 이동하여 "개인정보 보호 및 보안"에서 "그래도 열기"를 선택하십시오.',
-            'Windows: Microsoft Defender SmartScreen이 "Windows에서 PC를 보호했습니다"라는 메시지를 표시합니다. "추가 정보"를 클릭한 후 "실행"을 선택하십시오. Windows는 동일한 파일을 다시 실행할 때 이 선택을 기억합니다.',
-            '두 경고 모두 이번 베타에서 예상된 현상입니다. 앱이 아직 유료 코드 서명 인증서를 사용하지 않기 때문이며, 서명된 빌드가 제공되면 더 이상 표시되지 않습니다.',
-            'Ollama 또는 LM Studio를 설치했다면 PromptQuorum을 열기 전에 실행 상태로 유지하십시오. 앱은 시작 시 이를 확인하며, 감지되지 않을 경우 AI 제공업체를 설정하라는 메시지를 표시합니다. 이번 베타에서는 계정 생성이 필요하지 않습니다.',
+            'macOS: 응용 프로그램 폴더에서 앱을 더블클릭하지 말고 마우스 오른쪽 버튼으로 클릭해 열기를 선택한 뒤, 앱을 확인할 수 없다는 경고 대화상자에서 열기를 다시 확인합니다. 그래도 macOS가 차단하면 시스템 설정, 개인정보 보호 및 보안으로 이동해 무시하고 열기를 선택합니다.',
+            'Windows: Microsoft Defender SmartScreen이 "Windows에서 PC를 보호했습니다"라고 표시합니다. 추가 정보를 클릭한 뒤 실행을 선택합니다. Windows는 같은 파일을 이후에 실행할 때 이 선택을 기억합니다.',
+            '앱이 아직 코드 서명되지 않았기 때문에 두 경고 모두 이 베타에서는 예상되는 현상입니다.',
+            'Ollama나 LM Studio를 설치했다면 PromptQuorum을 열기 전에 계속 실행해 두어 앱이 연결할 수 있게 하십시오. 이 베타에서는 계정 생성이 필요하지 않습니다.',
           ],
         },
         aiOutputWarning: {
@@ -28346,7 +28347,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '데스크톱 앱을 사용할 때 내 데이터는 비공개로 유지됩니까?',
-              a: '로컬 AI 엔진을 사용하는 경우 프롬프트는 기기에 유지되며 기본적으로 PromptQuorum 서버로 전송되지 않습니다. API 키를 통해 클라우드 제공업체를 사용하는 경우, 프롬프트는 해당 제공업체의 자체 데이터 정책에 따라 그 제공업체로 직접 전송됩니다.',
+              a: 'Ollama나 LM Studio 같은 로컬 AI 엔진을 사용하면 PromptQuorum은 완전히 오프라인으로 동작하며 프롬프트, API 키, 결과가 사용자 기기에 머무릅니다([PromptQuorum FAQ](/ko/faq) 참조). API 키로 클라우드 제공업체를 사용하면 프롬프트는 해당 제공업체로 직접 전송되며 그 제공업체 자체의 데이터 정책이 적용됩니다.',
             },
             {
               q: '베타 기간 동안 버그는 어떻게 신고합니까?',
@@ -28396,7 +28397,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '데스크톱 앱을 사용할 때 내 데이터는 비공개로 유지됩니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '로컬 AI 엔진을 사용하는 경우 프롬프트는 기기에 유지되며 기본적으로 PromptQuorum 서버로 전송되지 않습니다. API 키를 통해 클라우드 제공업체를 사용하는 경우, 프롬프트는 해당 제공업체의 자체 데이터 정책에 따라 그 제공업체로 직접 전송됩니다.',
+              text: 'Ollama나 LM Studio 같은 로컬 AI 엔진을 사용하면 PromptQuorum은 완전히 오프라인으로 동작하며 프롬프트, API 키, 결과가 사용자 기기에 머무릅니다(PromptQuorum FAQ 참조). API 키로 클라우드 제공업체를 사용하면 프롬프트는 해당 제공업체로 직접 전송되며 그 제공업체 자체의 데이터 정책이 적용됩니다.',
             },
           },
           {
@@ -28414,10 +28415,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       category: 'Atualizações de Produto',
       title: 'Aplicativo Desktop do PromptQuorum: Beta Público Já Está Disponível',
       seoTitle: 'Aplicativo Desktop do PromptQuorum: Beta no Ar',
-      intro: 'O aplicativo desktop do PromptQuorum saiu do teste privado e já está disponível para download no macOS, Windows e Linux. Veja o que ele faz, qual arquivo escolher e como verificá-lo antes de instalar.',
+      intro: 'O app de desktop do PromptQuorum está em beta pública e disponível para download para macOS, Windows e Linux. Veja o que ele faz, qual arquivo escolher e como abrir uma versão beta sem assinatura.',
       publishDate: 'Publicado em 13 de julho de 2026',
       readTime: '6 min de leitura',
-      metaDescription: 'O PromptQuorum Desktop (v0.1.0) já pode ser baixado para macOS, Windows e Linux — envie prompts a vários modelos de IA, local ou via chave de API.',
+      metaDescription: 'O app de desktop do PromptQuorum (v0.1.0, beta pública) está disponível para macOS, Windows e Linux — envie um prompt para vários modelos de IA, localmente ou com chave de API.',
       educationalLevel: 'Beginner',
       freshness_tier: 'monthly',
       sections: {
@@ -28425,11 +28426,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: 'Pontos principais',
           items: [
-            'O aplicativo desktop do PromptQuorum saiu do beta privado em 13 de julho de 2026 e já pode ser baixado para macOS (Apple Silicon e Intel), Windows 10/11 e Linux (x64 e ARM64).',
-            'A build não é assinada digitalmente durante esta fase de beta, então o macOS e o Windows vão exibir um aviso de segurança na primeira execução — isso é esperado, não é sinal de um arquivo comprometido.',
-            'O aplicativo precisa de um backend de IA para executar prompts: instale o Ollama ou o LM Studio para modelos locais, ou use sua própria chave de API (BYOK) para OpenAI, Anthropic ou outro provedor.',
-            'A concordância entre modelos não é prova de correção — verifique as afirmações factuais de forma independente antes de confiar no resultado do consenso multimodelo.',
-            'Baixe a versão atual na página de download e envie relatórios de bugs diretamente para a equipe por e-mail.',
+            'O app de desktop do PromptQuorum está em beta pública desde julho de 2026 (versão atual 0.1.0) e pode ser baixado para macOS (Apple Silicon e Intel), Windows 10/11 e Linux (x64 e ARM64).',
+            'A versão não é assinada durante esta beta, então o macOS e o Windows podem exibir um aviso de segurança na primeira abertura — isso é esperado em uma beta sem assinatura e não indica um arquivo comprometido.',
+            'O app precisa de um backend de IA para executar prompts: instale o Ollama ou o LM Studio para modelos locais, ou use sua própria chave de API (BYOK) para OpenAI, Anthropic ou outro provedor.',
+            'A concordância entre modelos não prova que a resposta está correta — verifique afirmações factuais de forma independente antes de confiar em um consenso multimodelo.',
+            'Baixe a versão na página de download, onde os instaladores ficam em uma pasta compartilhada, e envie relatórios de bugs diretamente à equipe por e-mail.',
           ],
         },
         whatIsIt: {
@@ -28458,8 +28459,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         verify: {
-          title: 'Verifique Seu Download (Opcional, mas Recomendado)',
-          content: 'Cada versão é lançada com um checksum SHA-256 na página de download, para que você possa confirmar que um arquivo chegou completo e sem modificações antes de instalá-lo.',
+          title: 'Confira o seu download (opcional)',
+          content: 'A página de download não lista checksums para os instaladores beta, que ficam em uma pasta compartilhada. Ainda assim, você pode calcular o hash SHA-256 de um arquivo baixado com os comandos abaixo, por exemplo para compará-lo com um valor informado pela equipe. Baixe apenas pelo link da página oficial de download.',
           items: [
             'macOS: abra o Terminal e execute shasum -a 256 ~/Downloads/[filename]',
             'Windows: abra o PowerShell e execute Get-FileHash [filename] -Algorithm SHA256',
@@ -28470,18 +28471,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Configure um Mecanismo de IA Local Antes da Primeira Execução',
           content: 'O PromptQuorum funciona melhor com um mecanismo de LLM local rodando na sua máquina — isso mantém os prompts privados e evita custos de API por token. Pule esta seção completamente se você planeja usar um provedor em nuvem com sua própria chave de API.',
           items: [
-            'Ollama (configuração inicial mais simples): baixe em ollama.com, instale e depois baixe um modelo pelo terminal, por exemplo ollama pull gemma3:1b. Ele roda em segundo plano e o PromptQuorum o detecta automaticamente.',
-            'LM Studio (mais orientado por interface gráfica): baixe em lmstudio.ai, procure e baixe um modelo dentro do aplicativo e depois inicie o servidor local na aba Developer.',
-            'Somente nuvem: pule a configuração local e adicione uma chave de API da OpenAI, Anthropic ou outro provedor (leve sua própria chave) durante o onboarding.',
+            'Ollama (primeira configuração mais simples): baixe-o em [ollama.com](https://ollama.com), instale e depois baixe um modelo pelo terminal, por exemplo com ollama pull gemma3:1b (um download de 806 MB segundo a biblioteca do Ollama). Ele roda em segundo plano e o PromptQuorum pode se conectar a ele como provedor local.',
+            'LM Studio (mais voltado à interface gráfica): baixe-o em [lmstudio.ai](https://lmstudio.ai), baixe um modelo dentro do app e depois inicie o servidor local pela aba Developer (ou com o comando lms server start).',
+            'Somente nuvem: pule a configuração local e adicione uma chave de API da OpenAI, Anthropic ou outro provedor (sua própria chave) durante a integração inicial.',
           ],
         },
         firstLaunch: {
           title: 'O Que Acontece na Primeira Execução',
           content: [
-            'macOS: clique com o botão direito (não dê duplo clique) no aplicativo em Applications e escolha Abrir, depois confirme Abrir na caixa de diálogo que avisa que o aplicativo não pode ser verificado. Se o macOS ainda bloquear, vá em Ajustes do Sistema, depois Privacidade e Segurança, e escolha Abrir Assim Mesmo.',
-            'Windows: o Microsoft Defender SmartScreen exibe \'O Windows protegeu seu PC\'. Clique em Mais informações e depois em Executar mesmo assim. O Windows lembra dessa escolha para execuções futuras do mesmo arquivo.',
-            'Os dois avisos são esperados nesta fase de beta — o aplicativo ainda não tem um certificado de assinatura de código pago e deixará de exibi-los assim que builds assinadas forem lançadas.',
-            'Se você instalou o Ollama ou o LM Studio, mantenha-o em execução antes de abrir o PromptQuorum — o aplicativo verifica sua presença na inicialização e pede que você configure um provedor de IA caso nenhum seja detectado. Nenhuma criação de conta é necessária para este beta.',
+            'macOS: clique com o botão direito (não dê duplo clique) no app em Aplicativos e escolha Abrir; depois confirme Abrir na caixa de diálogo que avisa que o app não pode ser verificado. Se o macOS ainda bloquear, vá em Ajustes do Sistema, depois Privacidade e Segurança, e escolha Abrir Mesmo Assim.',
+            'Windows: o Microsoft Defender SmartScreen mostra "O Windows protegeu o computador". Clique em Mais informações e depois em Executar assim mesmo. O Windows lembra dessa escolha nas próximas aberturas do mesmo arquivo.',
+            'Os dois avisos são esperados nesta beta porque o app ainda não tem assinatura de código.',
+            'Se você instalou o Ollama ou o LM Studio, mantenha-o em execução antes de abrir o PromptQuorum para que o app possa se conectar a ele. Não é preciso criar conta nesta beta.',
           ],
         },
         aiOutputWarning: {
@@ -28528,7 +28529,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Meus dados ficam privados quando uso o aplicativo desktop?',
-              a: 'Se você usar um mecanismo de IA local, os prompts permanecem na sua máquina e não são enviados aos servidores do PromptQuorum por padrão. Se você usar um provedor em nuvem via chave de API, seus prompts vão diretamente para esse provedor, sob a política de dados dele.',
+              a: 'Se você usa um mecanismo de IA local como o Ollama ou o LM Studio, o PromptQuorum funciona totalmente offline e seus prompts, chaves de API e resultados ficam no seu dispositivo (veja o [FAQ do PromptQuorum](/pt/faq)). Se você usa um provedor em nuvem com chave de API, seus prompts vão diretamente a esse provedor, sob a política de dados dele.',
             },
             {
               q: 'Como faço para relatar um bug durante o beta?',
@@ -28578,7 +28579,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Meus dados ficam privados quando uso o aplicativo desktop?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Se você usar um mecanismo de IA local, os prompts permanecem na sua máquina e não são enviados aos servidores do PromptQuorum por padrão. Se você usar um provedor em nuvem via chave de API, seus prompts vão diretamente para esse provedor, sob a política de dados dele.',
+              text: 'Se você usa um mecanismo de IA local como o Ollama ou o LM Studio, o PromptQuorum funciona totalmente offline e seus prompts, chaves de API e resultados ficam no seu dispositivo (veja o FAQ do PromptQuorum). Se você usa um provedor em nuvem com chave de API, seus prompts vão diretamente a esse provedor, sob a política de dados dele.',
             },
           },
           {
@@ -28596,10 +28597,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       category: '产品更新',
       title: 'PromptQuorum 桌面应用：公开测试版现已上线',
       seoTitle: 'PromptQuorum 桌面应用：公开测试版已上线',
-      intro: 'PromptQuorum 的桌面应用已结束私测阶段，现可下载至 macOS、Windows 和 Linux。以下是应用的功能、如何选择安装文件，以及安装前如何验证文件完整性。',
+      intro: 'PromptQuorum桌面应用已进入公开测试版，可下载用于macOS、Windows和Linux。本文介绍它的功能、该选哪个文件，以及如何打开未签名的测试版构建。',
       publishDate: '发布于 2026年7月13日',
       readTime: '阅读约6分钟',
-      metaDescription: 'PromptQuorum 桌面应用（v0.1.0）现已开放下载，支持 macOS、Windows 和 Linux —— 可在本地或通过 API 密钥将提示词发送给多个 AI 模型。',
+      metaDescription: 'PromptQuorum桌面应用（v0.1.0，公开测试版）已支持macOS、Windows和Linux——可将一个提示词分发给多个AI模型，本地运行或使用API密钥。',
       educationalLevel: 'Beginner',
       freshness_tier: 'monthly',
       sections: {
@@ -28607,11 +28608,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           title: '核心要点',
           items: [
-            'PromptQuorum 的桌面应用已于2026年7月13日结束私测阶段，现可下载，支持 macOS（Apple Silicon 与 Intel）、Windows 10/11 以及 Linux（x64 和 ARM64）。',
-            '该测试阶段的构建版本未经签名，因此 macOS 和 Windows 在首次启动时会显示安全警告——这是预期现象，并不代表文件已被篡改。',
-            '应用需要一个 AI 后端才能运行提示词：可安装 Ollama 或 LM Studio 以运行本地模型，或使用自己的 API 密钥（BYOK）接入 OpenAI、Anthropic 或其他提供商。',
-            '模型之间意见一致并不代表答案正确——在依赖多模型共识结果之前，请独立核实事实性内容。',
-            '从下载页面获取当前版本，并通过电子邮件将错误报告直接发送给团队。',
+            'PromptQuorum桌面应用自2026年7月起进入公开测试（当前版本0.1.0），可下载用于macOS（Apple Silicon和Intel）、Windows 10/11以及Linux（x64和ARM64）。',
+            '此测试版构建未经签名，因此macOS和Windows在首次启动时可能显示安全警告——这对未签名的测试版是正常现象，并不表示文件已被篡改。',
+            '应用需要AI后端来运行提示词：本地模型请安装Ollama或LM Studio，或使用你自己的API密钥（BYOK）连接OpenAI、Anthropic或其他提供商。',
+            '模型一致并不等于正确——在依赖多模型共识结果之前，请独立核实事实性陈述。',
+            '请从下载页面获取构建版本（安装程序托管在同一个共享文件夹中），并通过电子邮件直接向团队反馈问题。',
           ],
         },
         whatIsIt: {
@@ -28640,8 +28641,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         verify: {
-          title: '验证下载文件（可选，但建议进行）',
-          content: '每个发布版本都会在下载页面提供 SHA-256 校验和，方便你在安装前确认文件已完整下载且未被修改。',
+          title: '核对你的下载文件（可选）',
+          content: '下载页面没有列出托管在共享文件夹中的测试版安装程序的校验和。你仍然可以用下面的命令计算已下载文件的SHA-256哈希，例如与团队提供的值进行比对。请仅通过官方下载页面上的链接下载。',
           items: [
             'macOS：打开终端，运行 shasum -a 256 ~/Downloads/[filename]',
             'Windows：打开 PowerShell，运行 Get-FileHash [filename] -Algorithm SHA256',
@@ -28652,18 +28653,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '首次启动前设置本地 AI 引擎',
           content: 'PromptQuorum 在设备本地运行 LLM 引擎时效果最佳——这样可以保护提示词隐私，并避免按 token 计费的 API 费用。如果你计划改用自己的 API 密钥接入云端提供商，可以完全跳过本节内容。',
           items: [
-            'Ollama（最简单的初始设置）：从 ollama.com 下载并安装，然后在终端中拉取一个模型，例如 ollama pull gemma3:1b。它会在后台运行，PromptQuorum 会自动检测到它。',
-            'LM Studio（图形界面操作更多）：从 lmstudio.ai 下载，在应用内浏览并下载模型，然后在"开发者"标签页中启动本地服务器。',
-            '仅使用云端：跳过本地设置，在引导流程中添加 OpenAI、Anthropic 或其他提供商的 API 密钥（自带密钥）。',
+            'Ollama（最简单的首次设置）：从[ollama.com](https://ollama.com)下载并安装，然后在终端中拉取模型，例如ollama pull gemma3:1b（据Ollama库显示，下载大小为806 MB）。它在后台运行，PromptQuorum可以作为本地提供商连接它。',
+            'LM Studio（更偏图形界面）：从[lmstudio.ai](https://lmstudio.ai)下载，在应用内下载模型，然后在Developer标签页启动本地服务器（或使用lms server start命令）。',
+            '仅使用云端：跳过本地设置，在引导过程中添加OpenAI、Anthropic或其他提供商的API密钥（自带密钥）。',
           ],
         },
         firstLaunch: {
           title: '首次启动时会发生什么',
           content: [
-            'macOS：在"应用程序"中右键点击（而非双击）该应用，选择"打开"，然后在弹出的警告对话框中确认"打开"——该对话框会提示应用无法验证。如果 macOS 仍然阻止运行，请前往"系统设置"，进入"隐私与安全性"，选择"仍要打开"。',
-            'Windows：Microsoft Defender SmartScreen 会显示"Windows 已保护你的电脑"。点击"更多信息"，再点击"仍要运行"。Windows 会为同一文件记住这一选择，后续启动不再提示。',
-            '这两种警告在当前测试阶段均属预期现象——该应用尚未获得付费代码签名证书，一旦发布经过签名的版本，这些警告将不再出现。',
-            '如果你已安装 Ollama 或 LM Studio，请在打开 PromptQuorum 之前保持其运行——应用会在启动时进行检测，若未检测到任何 AI 提供商，会提示你进行配置。测试阶段无需创建账户。',
+            'macOS：在“应用程序”中右键单击（不是双击）该应用并选择“打开”，然后在提示无法验证应用的对话框中再次确认“打开”。如果macOS仍然阻止，请前往“系统设置”，再进入“隐私与安全性”，选择“仍要打开”。',
+            'Windows：Microsoft Defender SmartScreen会显示“Windows已保护你的电脑”。点击“更多信息”，然后点击“仍要运行”。Windows会为同一文件的后续启动记住这一选择。',
+            '由于应用尚未经过代码签名，这两个警告在此测试版中都是正常现象。',
+            '如果你安装了Ollama或LM Studio，请在打开PromptQuorum之前保持其运行，以便应用能够连接。此测试版无需创建账号。',
           ],
         },
         aiOutputWarning: {
@@ -28710,7 +28711,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '使用桌面应用时我的数据是否私密？',
-              a: '如果你使用本地 AI 引擎，提示词会保留在本机，默认不会发送至 PromptQuorum 服务器。如果你通过 API 密钥使用云端提供商，你的提示词会直接发送给该提供商，并遵循其自身的数据政策。',
+              a: '如果你使用Ollama或LM Studio等本地AI引擎，PromptQuorum可完全离线运行，你的提示词、API密钥和结果都保留在你的设备上（参见[PromptQuorum常见问题](/zh/faq)）。如果你通过API密钥使用云服务商，提示词会直接发送给该服务商，适用其自身的数据政策。',
             },
             {
               q: '测试阶段如何报告错误？',
@@ -28760,7 +28761,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '使用桌面应用时我的数据是否私密？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '如果你使用本地 AI 引擎，提示词会保留在本机，默认不会发送至 PromptQuorum 服务器。如果你通过 API 密钥使用云端提供商，你的提示词会直接发送给该提供商，并遵循其自身的数据政策。',
+              text: '如果你使用Ollama或LM Studio等本地AI引擎，PromptQuorum可完全离线运行，你的提示词、API密钥和结果都保留在你的设备上（参见PromptQuorum常见问题）。如果你通过API密钥使用云服务商，提示词会直接发送给该服务商，适用其自身的数据政策。',
             },
           },
           {
