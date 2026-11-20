@@ -11,7 +11,7 @@ import { HUB_TONES } from '@/components/hub-template/palette'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { PATH_PREFIX_LANGS, getLangDir, ogLocale, toOutputLocale } from '@/lib/i18n/constants'
 import { t as tTools } from '@/components/tools/tools-i18n'
-import { getAcademyTotals } from '@/lib/academy/usage'
+import { getAcademyTotalsLive } from '@/lib/academy/usage'
 import { TERMS } from '@/lib/terms/content'
 import { OpenAcademyButton } from './OpenAcademyButton'
 import { ACADEMY_COPY } from './copy'
@@ -34,7 +34,7 @@ export async function AcademyPage({ lang }: { lang: AcademyLang }) {
   if (!academyEnabled()) notFound()
   const tx = ACADEMY_COPY[lang]
   const url = `${SITE}${localizedPath(lang)}`
-  const totals = await getAcademyTotals()
+  const totals = await getAcademyTotalsLive()
   const fmt = (n: number) => n.toLocaleString(toOutputLocale(lang))
   const tone = HUB_TONES.violet
   const homeHref = lang === 'en' ? '/' : `/${lang}`
