@@ -363,6 +363,26 @@ It is read-only, needs no GSC data, and covers all locale blocks in one run (`~/
 
 **Why:** a refresh changes exactly the things that create liability — numbers, model names, recommendations, compliance framing — and Step 5 propagation is where a hedged EN sentence becomes an absolute DE/FR/JA one. The June 2026 legal review (`docs/german-legal-review.md`) found seven Abmahnung-grade sentences that all entered the site through refresh and translation passes. "Updated but not risk-checked" is the same failure class as Anti-Pattern #1.
 
+#### Risk patterns the independent reviews actually found (2026-11-20)
+
+The table below lists patterns that survived writing and translation passes and were only caught by independent review. Use it as a secondary checklist during the risk-checker run and when reviewing each other's work.
+
+| Pattern | Fix |
+|---|---|
+| "certified" vs "compliant" vs "designed-to-meet" for third-party products | Attribute to vendor, name the source URL — never state certification facts as your own finding |
+| Ownership / manufacturing / insolvency / listing claims about named companies | Dated primary source or explicit hedge ("as reported by…"); apply the same hedge on every sibling page (grep the cluster) |
+| Privacy absolutes ("nothing leaves your device", "fully offline", "completely private") | Replace with mechanism wording ("prompts are sent to the model on your own machine, not to a cloud provider") |
+| Unsourced numbers and prices | Add date + source, or remove — never keep a bare number whose provenance is unknown |
+| Circular citations (a PromptQuorum page cited as the source for a claim on another PromptQuorum page) | Use the primary source the page cited, not the page itself |
+| Month-snapshot dates ("as of November 2026", "checked November 2026") in body prose | Use `dateModified` + the "Last updated" badge; remove inline month stamps from body text — `validate-edit-history-phrases.mjs` catches these |
+| Superlatives without source ("first to market", "only solution", "best in class", "market leader") | Attribute to the source that made the claim, with URL — or remove |
+| Quotes altered inside quotation marks | Use verbatim text; use [bracketed interpolations] only, never paraphrase inside `"…"` |
+| Images and SVGs carrying text nobody reviewed | Grep `alt` attributes; for SVG files grep the file for visible `<text>` or `<tspan>` content |
+| Personal email addresses in public copy | Use the Impressum role address (`hello@promptquorum.com`) — never a personal address |
+| Legal or electrical topics without inline disclaimer in every locale | Add `{ type: 'note', text: 'not legal or electrical advice…' }` in all 9 locales; `ar` and `ko` receive no `FactsDisclaimer` automatically — author it manually |
+| Comparison page about a named third party | All comparative statements must be attributed, dated, and neutral; include at least one criterion where the other party is a better fit |
+| Unverified product self-claims (account required, analytics opt-in, checksums, build reproducibility) | Verify against the project's own repo or official site before stating — never rely on the product's marketing copy alone |
+
 ### Step 6: Report What Was Updated
 
 After completing the update, output a section-by-section report:
