@@ -637,7 +637,7 @@ test.describe('test formats: multiple choice, short written answer, explain the 
     }) as ReturnType<typeof seededProgramme>
   const toQuiz = async (page: Page) => {
     await openSeededLesson(page, finalProgramme())
-    await page.getByRole('button', { name: /back to programme/i }).click().catch(() => {})
+    await page.getByRole('button', { name: /back to program/i }).click().catch(() => {})
     await page.getByRole('button', { name: /continue the quiz/i }).click()
   }
 
@@ -667,7 +667,8 @@ test.describe('test formats: multiple choice, short written answer, explain the 
     })
     await toQuiz(page)
     await expect(page.getByText(/how do you want to be tested/i)).toBeVisible()
-    await page.getByRole('radio', { name: /short written answer/i }).check({ force: true })
+    await page.locator('label', { hasText: /short written answer/i }).click()
+    await expect(page.getByRole('radio', { name: /short written answer/i })).toBeChecked()
     await page.getByRole('button', { name: /start test/i }).click()
     await expect(page.getByText('Written question 1?')).toBeVisible()
     expect(generated).toMatchObject({ kind: 'final', format: 'free' })
@@ -704,7 +705,8 @@ test.describe('test formats: multiple choice, short written answer, explain the 
       return r.fulfill({ json: { questions: openQuestions('explain') } })
     })
     await toQuiz(page)
-    await page.getByRole('radio', { name: /explain the concept/i }).check({ force: true })
+    await page.locator('label', { hasText: /explain the concept/i }).click()
+    await expect(page.getByRole('radio', { name: /explain the concept/i })).toBeChecked()
     await page.getByRole('button', { name: /start test/i }).click()
     await expect(page.getByText('Written question 1?')).toBeVisible()
     expect(generated).toMatchObject({ format: 'explain' })
