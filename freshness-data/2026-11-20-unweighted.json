@@ -1,64 +1,50 @@
 {
-  "generatedAt": "2026-11-20T08:30:00.345Z",
+  "generatedAt": "2026-11-20T18:52:46.583Z",
   "scope": "EN articles: local-llms, prompt-engineering, power-local-llm, smart-home, balcony-solar, blog",
   "unweighted": {
-    "n": 1016,
-    "meanDays": 47.3,
-    "medianDays": 34,
+    "n": 1020,
+    "meanDays": 40,
+    "medianDays": 32,
     "buckets": [
       {
         "label": "0-5",
-        "count": 108,
-        "pct": 10.6
-      },
-      {
-        "label": "6-15",
-        "count": 145,
-        "pct": 14.3
-      },
-      {
-        "label": "16-30",
-        "count": 153,
-        "pct": 15.1
-      },
-      {
-        "label": "31-60",
         "count": 174,
         "pct": 17.1
       },
       {
+        "label": "6-15",
+        "count": 142,
+        "pct": 13.9
+      },
+      {
+        "label": "16-30",
+        "count": 151,
+        "pct": 14.8
+      },
+      {
+        "label": "31-60",
+        "count": 171,
+        "pct": 16.8
+      },
+      {
         "label": "61-120",
-        "count": 390,
-        "pct": 38.4
+        "count": 382,
+        "pct": 37.5
       },
       {
         "label": "121+",
-        "count": 46,
-        "pct": 4.5
+        "count": 0,
+        "pct": 0
       }
     ]
   },
   "articlesAged90to120": [
-    {
-      "cluster": "power-local-llm",
-      "slug": "local-ai-image-generation-vs-cloud",
-      "urlPath": "/power-local-llm/local-ai-image-generation-vs-cloud",
-      "ageDays": 91,
-      "dateSource": "dateModified"
-    },
     {
       "cluster": "blog",
       "slug": "ai-consensus-scoring",
       "urlPath": "/blog/ai-consensus-scoring",
       "ageDays": 91,
       "dateSource": "last_full_refresh"
-    },
-    {
-      "cluster": "power-local-llm",
-      "slug": "voice-ai-writers-cloud-vs-local",
-      "urlPath": "/power-local-llm/voice-ai-writers-cloud-vs-local",
-      "ageDays": 90,
-      "dateSource": "dateModified"
     }
   ],
   "warnings": [],
@@ -66,68 +52,68 @@
     "lagThresholdDays": 30,
     "stats": {
       "de": {
-        "withDate": 996,
+        "withDate": 1000,
         "noDate": 17,
-        "missing": 3,
-        "lagging": 21,
-        "meanDays": 48.9,
-        "medianDays": 34
-      },
-      "fr": {
-        "withDate": 993,
-        "noDate": 21,
-        "missing": 2,
-        "lagging": 19,
-        "meanDays": 48.5,
-        "medianDays": 34
-      },
-      "es": {
-        "withDate": 1001,
-        "noDate": 13,
-        "missing": 2,
-        "lagging": 18,
-        "meanDays": 48.5,
-        "medianDays": 34
-      },
-      "ja": {
-        "withDate": 990,
-        "noDate": 22,
-        "missing": 4,
-        "lagging": 22,
-        "meanDays": 49,
-        "medianDays": 34
-      },
-      "zh": {
-        "withDate": 993,
-        "noDate": 20,
         "missing": 3,
         "lagging": 20,
-        "meanDays": 48.5,
-        "medianDays": 34
+        "meanDays": 42.4,
+        "medianDays": 32
       },
-      "pt": {
+      "fr": {
         "withDate": 997,
-        "noDate": 17,
-        "missing": 2,
-        "lagging": 45,
-        "meanDays": 52.6,
-        "medianDays": 34
-      },
-      "ar": {
-        "withDate": 996,
-        "noDate": 18,
+        "noDate": 21,
         "missing": 2,
         "lagging": 17,
-        "meanDays": 48.3,
-        "medianDays": 34
+        "meanDays": 42,
+        "medianDays": 32
+      },
+      "es": {
+        "withDate": 1003,
+        "noDate": 15,
+        "missing": 2,
+        "lagging": 14,
+        "meanDays": 41.6,
+        "medianDays": 32
+      },
+      "ja": {
+        "withDate": 994,
+        "noDate": 22,
+        "missing": 4,
+        "lagging": 20,
+        "meanDays": 42.4,
+        "medianDays": 32
+      },
+      "zh": {
+        "withDate": 997,
+        "noDate": 20,
+        "missing": 3,
+        "lagging": 18,
+        "meanDays": 42,
+        "medianDays": 32
+      },
+      "pt": {
+        "withDate": 1001,
+        "noDate": 17,
+        "missing": 2,
+        "lagging": 43,
+        "meanDays": 46.1,
+        "medianDays": 32
+      },
+      "ar": {
+        "withDate": 999,
+        "noDate": 19,
+        "missing": 2,
+        "lagging": 14,
+        "meanDays": 41.5,
+        "medianDays": 32
       },
       "ko": {
         "withDate": 1009,
-        "noDate": 7,
+        "noDate": 11,
         "missing": 0,
-        "lagging": 35,
-        "meanDays": 52.1,
-        "medianDays": 34
+        "lagging": 31,
+        "meanDays": 44.9,
+        "medianDays": 32
       }
     },
     "lagging": [
@@ -222,12 +208,6 @@
         "localeAgeDays": 202
       },
       {
-        "urlPath": "/power-local-llm/autonomous-local-agents-actually-work",
-        "locale": "de",
-        "lagDays": 46,
-        "localeAgeDays": 129
-      },
-      {
         "urlPath": "/power-local-llm/replace-zapier-with-local-ai-agents",
         "locale": "de",
         "lagDays": 112,
@@ -246,16 +226,16 @@
         "localeAgeDays": 86
       },
       {
-        "urlPath": "/balcony-solar/anker-solix-balcony-solar",
-        "locale": "de",
-        "lagDays": 122,
-        "localeAgeDays": 123
-      },
-      {
         "urlPath": "/blog/research-prompt-optimization-impact",
         "locale": "de",
         "lagDays": 166,
         "localeAgeDays": 251
+      },
+      {
+        "urlPath": "/blog/geopolitics-and-ai",
+        "locale": "de",
+        "lagDays": 224,
+        "localeAgeDays": 225
       },
       {
         "urlPath": "/local-llms/local-llm-limitations",
@@ -336,12 +316,6 @@
         "localeAgeDays": 202
       },
       {
-        "urlPath": "/power-local-llm/autonomous-local-agents-actually-work",
-        "locale": "fr",
-        "lagDays": 46,
-        "localeAgeDays": 129
-      },
-      {
         "urlPath": "/power-local-llm/replace-zapier-with-local-ai-agents",
         "locale": "fr",
         "lagDays": 112,
@@ -358,12 +332,6 @@
         "locale": "fr",
         "lagDays": 85,
         "localeAgeDays": 86
-      },
-      {
-        "urlPath": "/balcony-solar/anker-solix-balcony-solar",
-        "locale": "fr",
-        "lagDays": 122,
-        "localeAgeDays": 123
       },
       {
         "urlPath": "/blog/research-prompt-optimization-impact",
@@ -426,12 +394,6 @@
         "localeAgeDays": 202
       },
       {
-        "urlPath": "/power-local-llm/autonomous-local-agents-actually-work",
-        "locale": "es",
-        "lagDays": 46,
-        "localeAgeDays": 129
-      },
-      {
         "urlPath": "/power-local-llm/replace-zapier-with-local-ai-agents",
         "locale": "es",
         "lagDays": 112,
@@ -450,12 +412,6 @@
         "localeAgeDays": 86
       },
       {
-        "urlPath": "/balcony-solar/anker-solix-balcony-solar",
-        "locale": "es",
-        "lagDays": 122,
-        "localeAgeDays": 123
-      },
-      {
         "urlPath": "/blog/research-prompt-optimization-impact",
         "locale": "es",
         "lagDays": 166,
@@ -466,18 +422,6 @@
         "locale": "es",
         "lagDays": 158,
         "localeAgeDays": 250
-      },
-      {
-        "urlPath": "/blog/promptquorum-vs-askquorum",
-        "locale": "es",
-        "lagDays": 46,
-        "localeAgeDays": 249
-      },
-      {
-        "urlPath": "/blog/what-is-ai-consensus-scoring",
-        "locale": "es",
-        "lagDays": 118,
-        "localeAgeDays": 249
       },
       {
         "urlPath": "/local-llms/local-llm-limitations",
@@ -576,12 +520,6 @@
         "localeAgeDays": 202
       },
       {
-        "urlPath": "/power-local-llm/autonomous-local-agents-actually-work",
-        "locale": "ja",
-        "lagDays": 46,
-        "localeAgeDays": 129
-      },
-      {
         "urlPath": "/power-local-llm/replace-zapier-with-local-ai-agents",
         "locale": "ja",
         "lagDays": 112,
@@ -598,12 +536,6 @@
         "locale": "ja",
         "lagDays": 85,
         "localeAgeDays": 86
-      },
-      {
-        "urlPath": "/balcony-solar/anker-solix-balcony-solar",
-        "locale": "ja",
-        "lagDays": 122,
-        "localeAgeDays": 123
       },
       {
         "urlPath": "/blog/research-prompt-optimization-impact",
@@ -696,12 +628,6 @@
         "localeAgeDays": 202
       },
       {
-        "urlPath": "/power-local-llm/autonomous-local-agents-actually-work",
-        "locale": "zh",
-        "lagDays": 46,
-        "localeAgeDays": 129
-      },
-      {
         "urlPath": "/power-local-llm/replace-zapier-with-local-ai-agents",
         "locale": "zh",
         "lagDays": 112,
@@ -718,12 +644,6 @@
         "locale": "zh",
         "lagDays": 85,
         "localeAgeDays": 86
-      },
-      {
-        "urlPath": "/balcony-solar/anker-solix-balcony-solar",
-        "locale": "zh",
-        "lagDays": 122,
-        "localeAgeDays": 123
       },
       {
         "urlPath": "/blog/research-prompt-optimization-impact",
@@ -972,12 +892,6 @@
         "localeAgeDays": 205
       },
       {
-        "urlPath": "/power-local-llm/autonomous-local-agents-actually-work",
-        "locale": "pt",
-        "lagDays": 46,
-        "localeAgeDays": 129
-      },
-      {
         "urlPath": "/power-local-llm/replace-zapier-with-local-ai-agents",
         "locale": "pt",
         "lagDays": 112,
@@ -994,12 +908,6 @@
         "locale": "pt",
         "lagDays": 85,
         "localeAgeDays": 86
-      },
-      {
-        "urlPath": "/balcony-solar/anker-solix-balcony-solar",
-        "locale": "pt",
-        "lagDays": 122,
-        "localeAgeDays": 123
       },
       {
         "urlPath": "/local-llms/top-open-source-models-ollama",
@@ -1062,12 +970,6 @@
         "localeAgeDays": 202
       },
       {
-        "urlPath": "/power-local-llm/autonomous-local-agents-actually-work",
-        "locale": "ar",
-        "lagDays": 46,
-        "localeAgeDays": 129
-      },
-      {
         "urlPath": "/power-local-llm/replace-zapier-with-local-ai-agents",
         "locale": "ar",
         "lagDays": 112,
@@ -1086,22 +988,10 @@
         "localeAgeDays": 86
       },
       {
-        "urlPath": "/balcony-solar/anker-solix-balcony-solar",
-        "locale": "ar",
-        "lagDays": 122,
-        "localeAgeDays": 123
-      },
-      {
         "urlPath": "/blog/enterprise-data-privacy",
         "locale": "ar",
         "lagDays": 166,
         "localeAgeDays": 251
-      },
-      {
-        "urlPath": "/blog/promptquorum-vs-askquorum",
-        "locale": "ar",
-        "lagDays": 46,
-        "localeAgeDays": 249
       },
       {
         "urlPath": "/local-llms/top-open-source-models-ollama",
@@ -1230,12 +1120,6 @@
         "localeAgeDays": 202
       },
       {
-        "urlPath": "/power-local-llm/autonomous-local-agents-actually-work",
-        "locale": "ko",
-        "lagDays": 46,
-        "localeAgeDays": 129
-      },
-      {
         "urlPath": "/power-local-llm/replace-zapier-with-local-ai-agents",
         "locale": "ko",
         "lagDays": 112,
@@ -1252,12 +1136,6 @@
         "locale": "ko",
         "lagDays": 85,
         "localeAgeDays": 86
-      },
-      {
-        "urlPath": "/balcony-solar/anker-solix-balcony-solar",
-        "locale": "ko",
-        "lagDays": 122,
-        "localeAgeDays": 123
       },
       {
         "urlPath": "/blog/local-ai-vs-cloud",
@@ -1294,18 +1172,6 @@
         "locale": "ko",
         "lagDays": 158,
         "localeAgeDays": 250
-      },
-      {
-        "urlPath": "/blog/promptquorum-vs-askquorum",
-        "locale": "ko",
-        "lagDays": 46,
-        "localeAgeDays": 249
-      },
-      {
-        "urlPath": "/blog/what-is-ai-consensus-scoring",
-        "locale": "ko",
-        "lagDays": 118,
-        "localeAgeDays": 249
       },
       {
         "urlPath": "/blog/frontier-models-prompt-library",
