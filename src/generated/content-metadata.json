@@ -5383,8 +5383,8 @@
       "images": []
     },
     "prompt-version-control": {
-      "dateModified": "2026-07-13",
-      "lastFactChecked": "2026-08-27 — git, semver.org, Braintrust, PromptLayer, LangSmith, Vellum verified",
+      "dateModified": "2026-11-20",
+      "lastFactChecked": "2026-11-20 — git, semver.org, GitHub Actions, Braintrust, PromptLayer, LangSmith re-checked; model names, statistics and legal absolutes removed",
       "publishDate": "2026-04-30",
       "hasSections": true,
       "langs": [
@@ -6732,7 +6732,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 14 categories of a local LLM stack: 422 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
+          "title": "The 14 categories of a local LLM stack: 423 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and eight more groups from Agents & Automation to At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7530,7 +7530,7 @@
       "images": []
     },
     "voice-ai-writers-cloud-vs-local": {
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-08-22",
       "hasSections": true,
@@ -11475,6 +11475,24 @@
       "dateModified": "2026-11-09",
       "lastFactChecked": null,
       "publishDate": "2026-11-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "whispy-review": {
+      "dateModified": "2026-11-20",
+      "lastFactChecked": null,
+      "publishDate": "2026-11-20",
       "hasSections": true,
       "langs": [
         "en",
@@ -17541,7 +17559,7 @@
       "images": []
     },
     "bestLocalLlmForTranslation": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -17613,7 +17631,7 @@
       "images": []
     },
     "bestStructuredJsonOutputLocalLlm": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -17829,7 +17847,7 @@
       "images": []
     },
     "isBalconySolarLegalUtah": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -17847,7 +17865,7 @@
       "images": []
     },
     "isBalconySolarLegalMaine": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -19323,7 +19341,7 @@
   },
   "balcony-solar": {
     "what-is-balcony-solar": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19341,7 +19359,7 @@
       "images": []
     },
     "best-balcony-solar-kits-2026": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19359,7 +19377,7 @@
       "images": []
     },
     "best-balcony-solar-batteries-2026": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19395,7 +19413,7 @@
       "images": []
     },
     "home-assistant-balcony-solar-no-cloud": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19413,7 +19431,7 @@
       "images": []
     },
     "balcony-vs-rooftop-solar": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19431,7 +19449,7 @@
       "images": []
     },
     "how-to-install-balcony-solar": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19449,7 +19467,7 @@
       "images": []
     },
     "how-to-register-balcony-solar": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19467,7 +19485,7 @@
       "images": []
     },
     "balcony-solar-sizing-yield-payback": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19485,7 +19503,7 @@
       "images": []
     },
     "balcony-solar-mounting-guide": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19503,7 +19521,7 @@
       "images": []
     },
     "is-balcony-solar-legal-country-guide": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19557,7 +19575,7 @@
       "images": []
     },
     "balcony-solar-spain-latam": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19575,7 +19593,7 @@
       "images": []
     },
     "balcony-solar-portugal-brazil": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19647,7 +19665,7 @@
       "images": []
     },
     "ecoflow-vs-anker-vs-zendure-balcony-solar": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19665,7 +19683,7 @@
       "images": []
     },
     "do-you-need-a-battery-balcony-solar": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -19719,7 +19737,7 @@
       "images": []
     },
     "best-balcony-solar-home-battery-us-2026": {
-      "dateModified": "2026-07-03",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -19755,7 +19773,7 @@
       "images": []
     },
     "connect-balcony-solar-home-assistant-local": {
-      "dateModified": "2026-07-03",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -19881,7 +19899,7 @@
       "images": []
     },
     "balcony-solar-china-2027": {
-      "dateModified": "2026-07-18",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -19899,7 +19917,7 @@
       "images": []
     },
     "balcony-solar-brazil-status-2027": {
-      "dateModified": "2026-07-18",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -19917,7 +19935,7 @@
       "images": []
     },
     "where-balcony-solar-doesnt-exist-yet-2027": {
-      "dateModified": "2026-07-18",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -20039,7 +20057,7 @@
       ]
     },
     "anker-solix-balcony-solar": {
-      "dateModified": "2026-11-19",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20069,20 +20087,20 @@
         },
         {
           "url": "/images/anker-solix-balcony-solar-markets-en.svg",
-          "title": "Grid-connection certificates confirmed for these markets; US sale is confirmed absent."
+          "title": "Grid-connection certification for Germany as stated by Anker; no US Solarbank sale found."
         },
         {
           "url": "/images/anker-solix-balcony-solar-position-en.svg",
-          "title": "Anker SOLIX is unusual in spanning two layers — it makes its own battery hardware and sells direct."
+          "title": "Anker SOLIX spans two layers — it designs its own battery hardware and sells direct."
         },
         {
           "url": "/images/anker-solix-balcony-solar-certification-en.svg",
-          "title": "VDE-AR-N 4105 grid-connection certificates confirmed for Germany; no UL 1741 listing found for US balcony products."
+          "title": "VDE-AR-N 4105 grid-connection certificate for Germany as stated by Anker, not independently verified; no UL 1741 or UL 3700 listing found for a Solarbank."
         }
       ]
     },
     "ecoflow-balcony-solar": {
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20112,7 +20130,7 @@
         },
         {
           "url": "/images/ecoflow-balcony-solar-markets-en.svg",
-          "title": "States with enacted plug-in-solar legislation (July 2026) where EcoFlow is a named, cited brand."
+          "title": "US states where EcoFlow lists STREAM as available (EcoFlow's own tracker, June 2026) and states with enacted plug-in-solar legislation."
         },
         {
           "url": "/images/ecoflow-balcony-solar-position-en.svg",
@@ -20125,7 +20143,7 @@
       ]
     },
     "zendure-balcony-solar": {
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20147,7 +20165,7 @@
         },
         {
           "url": "/images/zendure-balcony-solar-timeline-en.svg",
-          "title": "Launch and expansion dates from Zendure’s own press releases."
+          "title": "Launch and expansion dates from Zendure's own press releases and trade-press coverage."
         },
         {
           "url": "/images/zendure-balcony-solar-lineup-en.svg",
@@ -20155,11 +20173,11 @@
         },
         {
           "url": "/images/zendure-balcony-solar-markets-en.svg",
-          "title": "Markets confirmed directly in Zendure’s own launch press release."
+          "title": "Markets named in Zendure's own launch press release (22 April 2026)."
         },
         {
           "url": "/images/zendure-balcony-solar-position-en.svg",
-          "title": "Like Anker and EcoFlow, Zendure makes its own battery hardware and publishes an official local-control SDK."
+          "title": "Like Anker and EcoFlow, Zendure designs its own battery hardware and publishes an official local-control SDK."
         },
         {
           "url": "/images/zendure-balcony-solar-local-control-en.svg",
@@ -20168,7 +20186,7 @@
       ]
     },
     "growatt-balcony-solar": {
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20186,11 +20204,11 @@
       "images": [
         {
           "url": "/images/growatt-balcony-solar-snapshot-en.svg",
-          "title": "Founded 2011 in Shenzhen; a 15-year inverter manufacturer, not a balcony-solar startup. Privately held, Sequoia-backed."
+          "title": "Founded 2011 in Shenzhen; a 15-year inverter manufacturer, not a balcony-solar startup. Not listed; third Hong Kong IPO filing in June 2026."
         },
         {
           "url": "/images/growatt-balcony-solar-timeline-en.svg",
-          "title": "NEO microinverter launch and the NEO+NOAH combined solution announcement, per press coverage."
+          "title": "NEO microinverter and NOAH battery launches, per press coverage (pv magazine, April 2024)."
         },
         {
           "url": "/images/growatt-balcony-solar-lineup-en.svg",
@@ -20198,7 +20216,7 @@
         },
         {
           "url": "/images/growatt-balcony-solar-markets-en.svg",
-          "title": "Germany is the only country with confirmed certification (VDE-AR-N 4105) and documented retail availability found in this research."
+          "title": "Germany is the only country where we found Growatt's own balcony-product pages and retailer listings; certificates were not verified."
         },
         {
           "url": "/images/growatt-balcony-solar-position-en.svg",
@@ -20206,12 +20224,12 @@
         },
         {
           "url": "/images/growatt-balcony-solar-position-note-en.svg",
-          "title": "Growatt’s own claim (\"global No. 1 residential PV inverter\") is company-reported; independent coverage frames it differently (\"third largest overall\") — different scopes, shown separately here."
+          "title": "Growatt's own claim (S&P Global, residential PV inverters, 2024) and the Frost & Sullivan figure cited in its 2026 prospectus coverage (residential energy-storage inverters, 2025) measure different categories and years, shown separately here."
         }
       ]
     },
     "hoymiles-microinverter-balcony-solar": {
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20249,12 +20267,12 @@
         },
         {
           "url": "/images/hoymiles-microinverter-balcony-solar-certification-en.svg",
-          "title": "Certifications confirmed on Hoymiles’ own EU product documentation."
+          "title": "Certifications stated on Hoymiles’ own EU product documentation."
         }
       ]
     },
     "deye-microinverter-balcony-solar": {
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20292,12 +20310,12 @@
         },
         {
           "url": "/images/deye-microinverter-balcony-solar-certification-en.svg",
-          "title": "Certifications confirmed per country on Deye's own product pages."
+          "title": "Certifications stated per country on Deye's own product pages."
         }
       ]
     },
     "apsystems-microinverter-balcony-solar": {
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20315,11 +20333,11 @@
       "images": [
         {
           "url": "/images/apsystems-microinverter-balcony-solar-snapshot-en.svg",
-          "title": "Founded 2010 in Silicon Valley as APS, rebranded APsystems in 2015; listed on the Shanghai STAR Market since June 2022."
+          "title": "Founded 2010 in Jiaxing, China; listed on the Shanghai STAR Market in 2022."
         },
         {
           "url": "/images/apsystems-microinverter-balcony-solar-timeline-en.svg",
-          "title": "Founding, rebrand, and stock-exchange listing dates verified via Wikipedia and PV trade press."
+          "title": "Founding and listing year per APsystems' own release; some secondary sources give different origin details that APsystems' release does not confirm."
         },
         {
           "url": "/images/apsystems-microinverter-balcony-solar-lineup-en.svg",
@@ -20335,12 +20353,12 @@
         },
         {
           "url": "/images/apsystems-microinverter-balcony-solar-position-note-en.svg",
-          "title": "Sinovoltaics' 2025 \"most bankable\" ranking was reported via APsystems' own press page — a real third-party ranking, self-published."
+          "title": "Sinovoltaics' 2025 report is a financial-stability ranking (Altman Z-score); APsystems publicized its top placing in a September 2025 press release."
         }
       ]
     },
     "goodwe-balcony-solar": {
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20358,32 +20376,32 @@
       "images": [
         {
           "url": "/images/goodwe-balcony-solar-snapshot-en.svg",
-          "title": "Founded 2010 in Suzhou, China; listed on the Shanghai STAR Market since September 2020. Balcony products sold under a separate consumer brand, PVBM."
+          "title": "Founded 5 November 2010 in Suzhou, China; listed on the Shanghai STAR Market since 4 September 2020."
         },
         {
           "url": "/images/goodwe-balcony-solar-timeline-en.svg",
-          "title": "Founding and listing dates verified; Wood Mackenzie ranking is an independent, non-self-reported source."
+          "title": "Founding and listing dates from the SSE company profile; ranking details from trade press."
         },
         {
           "url": "/images/goodwe-balcony-solar-lineup-en.svg",
-          "title": "Base and expanded capacity as officially listed on the PVBM product page."
+          "title": "Capacity and output as listed by GoodWe and TaiyangNews (June 2026)."
         },
         {
           "url": "/images/goodwe-balcony-solar-position-en.svg",
-          "title": "GoodWe is a large, independently-ranked inverter manufacturer whose PVBM sub-brand serves the balcony-consumer niche."
+          "title": "GoodWe is a large inverter manufacturer whose ESA Athena and Suncake products serve the balcony-consumer niche."
         },
         {
           "url": "/images/goodwe-balcony-solar-ranking-en.svg",
-          "title": "One of the few companies in this set with an independent (Wood Mackenzie) ranking rather than a self-reported figure."
+          "title": "Wood Mackenzie H1 2025 top 10 as reported by trade press; BloombergNEF and S&P Global Tier 1 listings per company press releases."
         },
         {
           "url": "/images/goodwe-balcony-solar-certification-en.svg",
-          "title": "PVBM marketing cites \"VDE 4110\" for an 800W product; VDE-AR-N 4105 is the standard typically associated with balcony-scale feed-in — flagged here rather than stated as settled."
+          "title": "GoodWe's ESA Athena page cited TÜV Rheinland and did not mention VDE-AR-N 4105 at the last refresh; a \"VDE 4110\" reference in some marketing material could not be verified."
         }
       ]
     },
     "enphase-microinverter-balcony-solar": {
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20413,7 +20431,7 @@
         },
         {
           "url": "/images/enphase-microinverter-balcony-solar-markets-en.svg",
-          "title": "Only two countries were confirmed in this research — this is a recent, limited entry, not an established balcony-solar footprint."
+          "title": "Only Germany and Belgium were confirmed in this research — a recent, limited entry, not an established balcony-solar footprint."
         },
         {
           "url": "/images/enphase-microinverter-balcony-solar-position-en.svg",
@@ -20421,12 +20439,12 @@
         },
         {
           "url": "/images/enphase-microinverter-balcony-solar-scale-context-en.svg",
-          "title": "Company-wide shipment figures are real but describe Enphase’s rooftop business overall, not a balcony-specific number — shown here for context, not as a balcony-market claim."
+          "title": "Company-wide shipment figures describe Enphase's rooftop business overall, not a balcony-specific number — shown here for context, not as a balcony-market claim."
         }
       ]
     },
     "yuma-balcony-solar": {
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20444,15 +20462,15 @@
       "images": [
         {
           "url": "/images/yuma-balcony-solar-snapshot-en.svg",
-          "title": "Cologne, Germany; founded 2020 by three co-founders; self-funded, no external investor round found."
+          "title": "Cologne, Germany; founding year 2020 per a company-profile listing; no external investor round found in the sources checked."
         },
         {
           "url": "/images/yuma-balcony-solar-timeline-en.svg",
-          "title": "Founding year and market presence confirmed via Yuma's own About page and a 2022 TechCrunch mention."
+          "title": "Founding year from a company-profile listing; Cologne showroom (March 2024) and RheinEnergie cooperation (August 2024) from Solarserver."
         },
         {
           "url": "/images/yuma-balcony-solar-lineup-en.svg",
-          "title": "Yuma assembles kits from third-party inverters/batteries — its own product is the mounting hardware, varied by installation surface."
+          "title": "Yuma sells complete sets built from third-party inverters and batteries, with mounting systems varied by installation surface."
         },
         {
           "url": "/images/yuma-balcony-solar-markets-en.svg",
@@ -20460,16 +20478,16 @@
         },
         {
           "url": "/images/yuma-balcony-solar-position-en.svg",
-          "title": "Yuma sources components from other companies in this research set (Hoymiles, EcoFlow, Anker SOLIX) rather than manufacturing its own hardware."
+          "title": "Yuma's shop lists components from other companies in this research set (Hoymiles, EcoFlow, Anker SOLIX) rather than offering its own hardware."
         },
         {
           "url": "/images/yuma-balcony-solar-partners-en.svg",
-          "title": "Named directly on Yuma's own product page — components Yuma bundles into kits rather than manufactures itself."
+          "title": "Named directly on Yuma's own product page — brands whose components Yuma bundles into kits."
         }
       ]
     },
     "priwatt-balcony-solar": {
-      "dateModified": "2026-07-19",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20555,7 +20573,7 @@
       ]
     },
     "balkonstrom-balcony-solar": {
-      "dateModified": "2026-07-19",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20573,11 +20591,11 @@
       "images": [
         {
           "url": "/images/balkonstrom-balcony-solar-snapshot-en.svg",
-          "title": "Uettingen, Bavaria, Germany; GmbH registered August 2023, founded by two brothers from the Würzburg district."
+          "title": "Uettingen near Würzburg, Bavaria; GmbH entered in the commercial register on 3 August 2023 (HRB 16881, Amtsgericht Würzburg); managing director Markus Hemrich per the Impressum."
         },
         {
           "url": "/images/balkonstrom-balcony-solar-timeline-en.svg",
-          "title": "GmbH registration date is the only firmly registry-confirmed date; an earlier informal-start claim (2021) is unverified."
+          "title": "The 2023 register entry is the only registry-confirmed date; the company's own pages say 2020 and a December 2023 partner article says 2021."
         },
         {
           "url": "/images/balkonstrom-balcony-solar-lineup-en.svg",
@@ -20585,11 +20603,11 @@
         },
         {
           "url": "/images/balkonstrom-balcony-solar-markets-en.svg",
-          "title": "Germany confirmed with a physical Uettingen showroom; Austria is claimed but not independently confirmed in this research."
+          "title": "Germany and Austria are the delivery countries stated in balkonstrom.com's FAQ; a showroom at the Uettingen address is open by appointment."
         },
         {
           "url": "/images/balkonstrom-balcony-solar-position-en.svg",
-          "title": "Sources TÜV-certified panels and third-party storage; commissions custom \"Made in Germany\" DC cables from a named supplier."
+          "title": "Sells third-party storage (Anker, Hoymiles, Zendure and EcoFlow named); a December 2023 partner article names Jurchen Technology as supplier of its DC extension cables."
         },
         {
           "url": "/images/balkonstrom-balcony-solar-partners-en.svg",
@@ -20598,7 +20616,7 @@
       ]
     },
     "green-solar-pluginenergy-balcony-solar": {
-      "dateModified": "2026-07-19",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20616,11 +20634,11 @@
       "images": [
         {
           "url": "/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg",
-          "title": "Two separate, smaller German-speaking-market resellers — Green Solar (Austria) and PluginEnergy (Germany)."
+          "title": "Two separate, smaller resellers in the German-speaking market: Green Solar (Carinthia, Austria) and PluginEnergy (Glatten, Germany)."
         },
         {
           "url": "/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg",
-          "title": "Both companies are young GmbHs, formally registered within the last five years."
+          "title": "Both are young GmbHs; exact registration dates from earlier research were not re-verified in this refresh."
         },
         {
           "url": "/images/green-solar-pluginenergy-balcony-solar-lineup-en.svg",
@@ -20628,7 +20646,7 @@
         },
         {
           "url": "/images/green-solar-pluginenergy-balcony-solar-markets-en.svg",
-          "title": "Green Solar sells in Austria and Germany (incl. via OBI retail); PluginEnergy is Germany-focused."
+          "title": "Green Solar sells in Austria and Germany; PluginEnergy's storefront lists Germany, Austria, the Benelux countries, Italy and Switzerland. OBI retail sales for Green Solar were not re-confirmed."
         },
         {
           "url": "/images/green-solar-pluginenergy-balcony-solar-position-en.svg",
@@ -20636,12 +20654,12 @@
         },
         {
           "url": "/images/green-solar-pluginenergy-balcony-solar-partners-en.svg",
-          "title": "Named directly in PluginEnergy’s product materials; Green Solar’s specific module suppliers were not confirmed in this research."
+          "title": "FoxESS and Marstek are named on PluginEnergy's storefront; JA Solar and Trina come from earlier research and were not re-confirmed; Green Solar's suppliers differ by set."
         }
       ]
     },
     "meyer-burger-solarwatt-heckert-balcony-solar": {
-      "dateModified": "2026-07-19",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-07-19",
       "hasSections": true,
@@ -20659,15 +20677,15 @@
       "images": [
         {
           "url": "/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg",
-          "title": "Meyer Burger has a real balcony kit but is in active insolvency proceedings — the single most important fact on this page."
+          "title": "Meyer Burger's German subsidiaries are in insolvency and the group has been wound down; Solarwatt (Dresden) and Heckert Solar (Chemnitz) are private companies."
         },
         {
           "url": "/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg",
-          "title": "This is the fact that should govern any purchase advice involving Meyer Burger’s balcony kit."
+          "title": "Dates from solarserver.de, pv magazine and court-docket aggregators; sources are listed in the status note below."
         },
         {
           "url": "/images/meyer-burger-solarwatt-heckert-balcony-solar-lineup-en.svg",
-          "title": "Only Heckert Solar’s balcony line is fully confirmed with named modules; Solarwatt has advisory content but no confirmed SKUs; Meyer Burger’s kit exists but fulfillment is in doubt."
+          "title": "Only Heckert Solar's balcony set is confirmed with named modules; no Solarwatt balcony kit was found; Meyer Burger's kit was sold from 2024, current deliverability is unconfirmed."
         },
         {
           "url": "/images/meyer-burger-solarwatt-heckert-balcony-solar-markets-en.svg",
@@ -20679,7 +20697,7 @@
         },
         {
           "url": "/images/meyer-burger-solarwatt-heckert-balcony-solar-status-note-en.svg",
-          "title": "Meyer Burger’s manufacturing subsidiaries entered insolvency proceedings in 2025; current ability to fulfill balcony-kit orders should be confirmed directly before any buying recommendation."
+          "title": "Meyer Burger's German subsidiaries applied for insolvency in 2025 and key assets were sold in 2026; confirm deliverability and warranty with the seller before any buying recommendation."
         }
       ]
     },
@@ -20876,7 +20894,7 @@
   },
   "blog": {
     "frameworks": {
-      "lastmod": "2026-03-14",
+      "lastmod": "2026-11-20",
       "langs": [
         "en",
         "de",
@@ -20891,7 +20909,7 @@
       "images": []
     },
     "localAI": {
-      "lastmod": "2026-03-14",
+      "lastmod": "2026-08-28",
       "langs": [
         "en",
         "de",
@@ -20906,7 +20924,7 @@
       "images": []
     },
     "comparison": {
-      "lastmod": "2026-03-14",
+      "lastmod": "2026-08-29",
       "langs": [
         "en",
         "de",
@@ -20926,7 +20944,7 @@
       ]
     },
     "quorum": {
-      "lastmod": "2026-03-14",
+      "lastmod": "2026-08-27",
       "langs": [
         "en",
         "de",
@@ -20941,7 +20959,7 @@
       "images": []
     },
     "optimization": {
-      "lastmod": "2026-03-14",
+      "lastmod": "2026-08-29",
       "langs": [
         "en",
         "de",
@@ -20956,7 +20974,7 @@
       "images": []
     },
     "dataPrivacy": {
-      "lastmod": "2026-03-15",
+      "lastmod": "2026-08-28",
       "langs": [
         "en",
         "de",
@@ -20971,7 +20989,7 @@
       "images": []
     },
     "promptImpact": {
-      "lastmod": "2026-03-15",
+      "lastmod": "2026-08-28",
       "langs": [
         "en",
         "de",
@@ -20986,7 +21004,7 @@
       "images": []
     },
     "consensusScoring": {
-      "lastmod": "2026-03-16",
+      "lastmod": "2026-08-21",
       "langs": [
         "en",
         "de",
@@ -21001,7 +21019,7 @@
       "images": []
     },
     "whatIsConsensusScoring": {
-      "lastmod": "2026-03-17",
+      "lastmod": "2026-11-20",
       "langs": [
         "en",
         "de",
@@ -21016,7 +21034,7 @@
       "images": []
     },
     "vsAskQuorum": {
-      "lastmod": "2026-03-17",
+      "lastmod": "2026-11-20",
       "langs": [
         "en",
         "de",
@@ -21046,7 +21064,7 @@
       "images": []
     },
     "frontierModelsPromptLibrary": {
-      "lastmod": "2026-03-24",
+      "lastmod": "2026-08-28",
       "langs": [
         "en",
         "de",
@@ -21061,7 +21079,7 @@
       "images": []
     },
     "geopolitics-and-ai": {
-      "lastmod": "2026-04-10",
+      "lastmod": "2026-11-20",
       "langs": [
         "en",
         "de",
@@ -21073,16 +21091,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/ai-three-region-framework-en.svg",
-          "title": "Three regulatory models: the EU AI Act (binding, risk-based), the US (executive action, sector rules and state laws) and China (CAC administrative measures)."
-        },
-        {
-          "url": "/images/ai-risk-tiers-comparison-en.svg",
-          "title": "EU: risk-based classes. US: sector rules and state laws. China: content, security and filing requirements for public-facing services."
-        }
-      ]
+      "images": []
     },
     "euCompaniesLocalQwenGdpr": {
       "lastmod": "2026-11-20",
@@ -21100,7 +21109,7 @@
       "images": []
     },
     "desktopAppBeta": {
-      "lastmod": "2026-07-13",
+      "lastmod": "2026-11-20",
       "langs": [
         "en",
         "de",
@@ -21115,7 +21124,7 @@
       "images": []
     },
     "balconySolarLegalizationRace": {
-      "lastmod": "2026-07-16",
+      "lastmod": "2026-11-20",
       "langs": [
         "en",
         "de",

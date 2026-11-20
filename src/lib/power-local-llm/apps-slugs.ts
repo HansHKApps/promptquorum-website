@@ -230,6 +230,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'stratosort':                              'stratosort',
   'sprich':                                  'sprich',
   'weesper-neon-flow':                       'weesper-neon-flow',
+  'whispy':                                  'whispy',
   'sablate':                                 'sablate',
   'cocoindex':                               'cocoindex',
   'opendataloader-pdf':                      'opendataloader-pdf',

@@ -10648,6 +10648,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "whispy-review",
+        "title": "Whispy Review: Private Audio Transcription for Mac and Windows",
+        "url": "/power-local-llm/whispy-review",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "chatbox-review",
         "title": "Chatbox Review: Free, Open-Source AI Chat Client for Desktop, Web and Mobile",
@@ -10702,17 +10710,9 @@
         "url": "/power-local-llm/local-ai-on-android-guide",
         "dateModified": "2026-11-13",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "amical-review",
-        "title": "Amical Review: Free Open-Source Dictation for Mac and Windows",
-        "url": "/power-local-llm/amical-review",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 26,
     "capped": true
   },
   "FluidVoice": {
@@ -12301,6 +12301,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "whispy-review",
+        "title": "Whispy Review: Private Audio Transcription for Mac and Windows",
+        "url": "/power-local-llm/whispy-review",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "sablate-review",
         "title": "Sablate Review: Subtitles and Burn-In for Windows and Mac",
         "url": "/power-local-llm/sablate-review",
@@ -12308,7 +12316,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Logseq": {
@@ -14624,7 +14632,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 290,
+    "totalCount": 291,
     "capped": true
   },
   "Qdrant": {
@@ -16994,6 +17002,28 @@
         "url": "/power-local-llm/local-llm-voice-audio-compared",
         "dateModified": "2026-11-20",
         "tier": "about"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Whispy": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "whispy-review",
+        "title": "Whispy Review: Private Audio Transcription for Mac and Windows",
+        "url": "/power-local-llm/whispy-review",
+        "dateModified": "2026-11-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-voice-audio-compared",
+        "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
+        "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
       }
     ],
     "totalCount": 2,
