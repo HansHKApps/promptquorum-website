@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import { useLang } from '@/hooks/useLang'
 import { translations, type Language } from '@/translations'
 import { LangLinksBar } from '@/components/LangLinksBar'
+import { BackLink } from '@/components/BackLink'
 
 const EFFECTIVE_DATE = '20 November 2026'
 const CONTROLLER = 'PromptQuorum'
@@ -40,6 +41,7 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
   return (
     <div className="min-h-screen bg-white pt-28 pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <BackLink lang={lang} />
 
         {/* Header */}
         <div className="mb-12 pb-8 border-b border-gray-100">

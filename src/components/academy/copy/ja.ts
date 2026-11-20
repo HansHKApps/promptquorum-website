@@ -46,6 +46,7 @@ export const copy: AcademyBaseCopy = {
   },
   languageLabel: 'プログラムの言語',
   submit: '診断に進む',
+  sendSubject: '送信',
   startNew: '新しく始める',
   savedFound: (s) => `このブラウザに保存された学習状況が見つかりました：${s}`,
   continueSaved: '続ける',

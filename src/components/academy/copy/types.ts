@@ -32,6 +32,8 @@ export interface AcademyBaseCopy {
   tests: Record<TestMode, { label: string; hint: string }>
   languageLabel: string
   submit: string
+  /** inline button next to the subject field (same action as pressing Enter) */
+  sendSubject: string
   /** saved progress found in this browser; receives the subject */
   savedFound: (subject: string) => string
   continueSaved: string

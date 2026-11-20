@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { BackLink } from '@/components/BackLink'
 
 export const metadata: Metadata = {
   title: 'Impressum | PromptQuorum',
@@ -10,6 +11,7 @@ export default function ImpressumPage() {
   return (
     <div className="min-h-screen bg-white pt-28 pb-24">
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <BackLink lang="de" />
 
         <div className="mb-12 pb-8 border-b border-gray-100">
           <p className="text-xs font-mono text-gray-400 mb-4">

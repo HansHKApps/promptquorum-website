@@ -8,7 +8,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { Rect, UiState } from '@/components/askhans/types'
 import { useLang } from '@/hooks/useLang'
-import { ACADEMY_OPEN_EVENT, ACADEMY_UI_KEY } from '@/lib/academy/config'
+import { ACADEMY_OPEN_EVENT, ACADEMY_UI_KEY, ACADEMY_USED_KEY } from '@/lib/academy/config'
 import type { TopicSuggestion } from '@/lib/academy/types'
 import { AcademyApp } from './AcademyApp'
 import { AcademyLauncher } from './AcademyLauncher'
@@ -37,19 +37,34 @@ export function AcademyRoot() {
   const lang = useLang()
   const [ready, setReady] = useState(false)
   const [ui, setUi] = useState<UiState>(CLOSED)
+  // The study-hat shows only for browsers that have opened Academy before (never for first-time visitors).
+  const [used, setUsed] = useState(false)
   const [topics, setTopics] = useState<TopicSuggestion[]>([])
   const topicsLang = useRef<string | null>(null)
   const launcherRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     setUi(loadUi())
+    try {
+      setUsed(localStorage.getItem(ACADEMY_USED_KEY) === '1')
+    } catch {
+      /* blocked: the hat then follows the session state only */
+    }
     setReady(true)
   }, [])
   useEffect(() => {
     if (ready) saveUi(ui)
   }, [ui, ready])
 
-  const open = useCallback(() => setUi((u) => ({ ...u, open: true })), [])
+  const open = useCallback(() => {
+    setUi((u) => ({ ...u, open: true }))
+    setUsed(true)
+    try {
+      localStorage.setItem(ACADEMY_USED_KEY, '1')
+    } catch {
+      /* blocked: the hat then follows the session state only */
+    }
+  }, [])
   const close = useCallback(() => {
     setUi((u) => ({ ...u, open: false, everClosed: true }))
     setTimeout(() => launcherRef.current?.focus(), 30)
@@ -73,7 +88,7 @@ export function AcademyRoot() {
   if (!ready) return null
   return (
     <>
-      {!ui.open && ui.everClosed && <AcademyLauncher ref={launcherRef} lang={lang} onOpen={open} />}
+      {!ui.open && (ui.everClosed || used) && <AcademyLauncher ref={launcherRef} lang={lang} onOpen={open} />}
       {ui.open && (
         <AcademyWindow
           lang={lang}

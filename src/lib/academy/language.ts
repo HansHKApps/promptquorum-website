@@ -6,7 +6,7 @@ import { ALL_LANGS, getLangDir, type Lang } from '@/lib/i18n/constants'
 
 /** English names for prompts (the model writes in this language). */
 export const PROMPT_LANGUAGE: Record<Lang, string> = {
-  en: 'English',
+  en: 'American English (US spelling, e.g. program, color, license)',
   de: 'German (formal "Sie")',
   fr: 'French (formal "vous")',
   ja: 'Japanese (polite です/ます form)',

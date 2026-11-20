@@ -46,6 +46,7 @@ export const copy: AcademyBaseCopy = {
   },
   languageLabel: 'لغة برنامجك',
   submit: 'تابع إلى التشخيص السريع',
+  sendSubject: 'إرسال',
   startNew: 'ابدأ من جديد',
   savedFound: (s) => `وجدنا تقدمًا محفوظًا في هذا المتصفح: ${s}`,
   continueSaved: 'متابعة',

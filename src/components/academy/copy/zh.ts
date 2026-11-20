@@ -46,6 +46,7 @@ export const copy: AcademyBaseCopy = {
   },
   languageLabel: '课程语言',
   submit: '进入快速诊断',
+  sendSubject: '发送',
   startNew: '重新开始',
   savedFound: (s) => `在此浏览器中找到了已保存的学习进度：${s}`,
   continueSaved: '继续',
