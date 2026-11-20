@@ -172,4 +172,10 @@ export const copy: AcademyCopy = {
   deleteData: 'Supprimer mes données',
   deleteConfirm: 'Supprimer votre progression Academy de ce navigateur ? Cette action est irréversible.',
   dataDeleted: 'Données supprimées',
+  feedbackLink: 'Envoyer un retour par e-mail',
+  feedbackNote:
+    'Ouvre votre logiciel de messagerie ; nous verrons donc votre adresse e-mail. N’indiquez pas de données personnelles. Rien n’est envoyé tant que vous n’envoyez pas le message vous-même.',
+  feedbackMailSubject: 'Retour sur Academy',
+  feedbackMailIntro: 'Voici ce que je pense d’Academy :',
+  feedbackMailLanguage: 'Langue',
 }

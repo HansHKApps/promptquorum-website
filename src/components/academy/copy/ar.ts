@@ -170,4 +170,10 @@ export const copy: AcademyCopy = {
   deleteData: 'احذف بياناتي',
   deleteConfirm: 'هل تريد حذف تقدّمك في Academy من هذا المتصفح؟ لا يمكن التراجع عن ذلك.',
   dataDeleted: 'تم حذف البيانات',
+  feedbackLink: 'إرسال الملاحظات عبر البريد الإلكتروني',
+  feedbackNote:
+    'يفتح هذا برنامج البريد الإلكتروني لديك، لذا سنرى عنوان بريدك الإلكتروني. يُرجى عدم تضمين بيانات شخصية. لا يُرسَل أي شيء إلى أن ترسل الرسالة بنفسك.',
+  feedbackMailSubject: 'ملاحظات حول Academy',
+  feedbackMailIntro: 'رأيي في Academy:',
+  feedbackMailLanguage: 'اللغة',
 }

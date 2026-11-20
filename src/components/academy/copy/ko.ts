@@ -170,4 +170,10 @@ export const copy: AcademyCopy = {
   deleteData: '내 데이터 삭제',
   deleteConfirm: '이 브라우저에서 Academy 진행 상황을 삭제하시겠습니까? 되돌릴 수 없습니다.',
   dataDeleted: '삭제되었습니다',
+  feedbackLink: '이메일로 피드백 보내기',
+  feedbackNote:
+    '이메일 프로그램이 열리므로 보내시는 분의 이메일 주소가 저희에게 표시됩니다. 개인 정보는 포함하지 마십시오. 직접 메시지를 보내기 전까지는 아무것도 전송되지 않습니다.',
+  feedbackMailSubject: 'Academy 피드백',
+  feedbackMailIntro: 'Academy에 대한 제 생각:',
+  feedbackMailLanguage: '언어',
 }

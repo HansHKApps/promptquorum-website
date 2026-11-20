@@ -170,4 +170,10 @@ export const copy: AcademyCopy = {
   deleteData: 'Delete my data',
   deleteConfirm: 'Delete your Academy progress from this browser? This cannot be undone.',
   dataDeleted: 'Data deleted',
+  feedbackLink: 'Send feedback by email',
+  feedbackNote:
+    'Opens your email program, so we will see your email address. Please do not include personal data. Nothing is sent until you send the message yourself.',
+  feedbackMailSubject: 'Academy feedback',
+  feedbackMailIntro: 'What I think about Academy:',
+  feedbackMailLanguage: 'Language',
 }

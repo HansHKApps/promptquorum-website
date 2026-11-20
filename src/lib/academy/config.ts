@@ -13,6 +13,9 @@ export const ACADEMY_SUBJECT_MIN_CHARS = 2
 export const ACADEMY_MAX_CATEGORY_TOPICS = 12
 
 /** window event: the stored state was changed outside the Academy component (e.g. "Delete my data"). */
+/** Address that receives Academy feedback mails (mailto link, same address as Ask Hans). */
+export const ACADEMY_CONTACT_EMAIL = 'hello@promptquorum.com'
+
 export const ACADEMY_STATE_EVENT = 'academy:state-changed'
 
 /** Path of the tool. Locales are path-prefixed like every other page (/de/academy). */

@@ -2,6 +2,16 @@
 
 Newest first. Each entry: date, who decided, what, and what it changes in [SPEC.md](SPEC.md).
 
+## 2026-11-20 (Hans, after the Phase 0 report of the master spec)
+
+- **Architecture stays as built:** Academy lives inside the website repo, same linking as now. The master spec's separate repo, subdomain and Phase 1/8 plans are overridden (note at the top of [SPEC.md](SPEC.md)). Verification page, when built: `/academy/verify/<ID>`.
+- **Consent / Clarity (F2):** Academy does exactly what the general website does. No Academy-specific rule; the master spec's "no analytics before consent" does not apply to Academy separately. Any site-wide change is a separate decision.
+- **Bot protection and spend limit:** wanted, but low priority during development (a bot hit is unlikely; the worst case is the API budget running out and Academy stopping). When done: simple per-day usage cap and global daily ceiling, bot protection optional. Not built yet.
+- **Old replaced by new:** `docs/academy/SPEC.md` is now the 20 Nov master spec (the 17 Nov spec is gone). `DISCOVERY.md` stays as background; the 20 Nov Phase 0 findings are in the report next to the master spec.
+- **Feedback by email (spec 10.1b):** built. A "Send feedback by email" link in the Academy privacy strip (visible on every screen, incl. results) opens the visitor's mail program to hello@promptquorum.com; the mail carries only the language and page, no learner content. The click is counted anonymously (`academy:count:feedback_mail`, via `/api/academy/event`). Texts in 9 locales (`feedbackLink`, `feedbackNote`, `feedbackMail*`); geo-translation rules applied.
+- Open, not asked: diagnostic size (spec 3/6 vs built 5/6/8) and registry storage (Redis vs database) stay as built until decided.
+- Note: the Academy privacy text still says "If you leave feedback, we store the rating, the comment and the subject". That describes the planned ratings feature (not built); the email link stores nothing on our server.
+
 ## 2026-11-19 (QA audit): open items needing an owner decision
 
 - **F2 pre-consent Clarity:** Clarity loads cookieless before consent by design (`ClarityLoader.tsx`, asserted in `tests/consent.spec.ts`), site-wide. Loading it only after consent is a site-wide analytics/legal decision.

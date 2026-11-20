@@ -4,7 +4,7 @@
 import { unstable_cache } from 'next/cache'
 import { redis } from '@/lib/redis'
 
-export const ACADEMY_COUNTERS = ['programme', 'lesson', 'test', 'certificate'] as const
+export const ACADEMY_COUNTERS = ['programme', 'lesson', 'test', 'certificate', 'feedback_mail'] as const
 export type AcademyCounter = (typeof ACADEMY_COUNTERS)[number]
 
 const key = (c: AcademyCounter) => `academy:count:${c}`

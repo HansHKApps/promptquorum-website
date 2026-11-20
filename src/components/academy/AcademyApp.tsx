@@ -5,7 +5,7 @@
 // State lives in localStorage only (see useAcademyState / src/lib/academy/store.ts).
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS } from '@/lib/academy/config'
+import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS } from '@/lib/academy/config'
 import { clearAcademyState, defaultDraft } from '@/lib/academy/store'
 import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
 import { lessonsDone, nextOpenLesson, openLesson } from '@/lib/academy/progress'
@@ -102,7 +102,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           }
         />
       )}
-      <PrivacyStrip tx={tx} />
+      <PrivacyStrip tx={tx} lang={lang} />
     </div>
   )
 }
@@ -665,7 +665,7 @@ function ProgrammeView({
   )
 }
 
-function PrivacyStrip({ tx }: { tx: AcademyCopy }) {
+function PrivacyStrip({ tx, lang }: { tx: AcademyCopy; lang: AcademyLang }) {
   const [deleted, setDeleted] = useState(false)
   return (
     <div className="space-y-2 rounded-2xl bg-gray-50 px-5 py-4 text-sm text-gray-600">
@@ -682,6 +682,26 @@ function PrivacyStrip({ tx }: { tx: AcademyCopy }) {
       >
         {deleted ? tx.dataDeleted : tx.deleteData}
       </button>
+      <FeedbackMail tx={tx} lang={lang} />
+    </div>
+  )
+}
+
+/** "Send feedback by email": a plain mailto link to the site owner, so nothing about the learner touches our server.
+ *  The mail carries only the language and the page; no subject, answers or programme content. The click is counted
+ *  anonymously (a plain total). */
+function FeedbackMail({ tx, lang }: { tx: AcademyCopy; lang: AcademyLang }) {
+  const open = () => {
+    const body = `${tx.feedbackMailIntro}\n\n\n---\n${tx.feedbackMailLanguage}: ${lang}\n${window.location.pathname}`
+    void fetch('/api/academy/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type: 'feedback_mail' }) }).catch(() => {})
+    window.location.href = `mailto:${ACADEMY_CONTACT_EMAIL}?subject=${encodeURIComponent(tx.feedbackMailSubject)}&body=${encodeURIComponent(body)}`
+  }
+  return (
+    <div className="space-y-1 pt-1">
+      <button type="button" className="font-medium text-purple-700 underline underline-offset-2 hover:text-purple-900" onClick={open}>
+        {tx.feedbackLink}
+      </button>
+      <p className="text-xs text-gray-500">{tx.feedbackNote}</p>
     </div>
   )
 }

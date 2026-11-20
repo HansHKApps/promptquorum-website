@@ -173,4 +173,10 @@ export interface AcademyCopy {
   deleteData: string
   deleteConfirm: string
   dataDeleted: string
+  /** "Send feedback by email": mailto link to the site owner (no server round trip, nothing stored) */
+  feedbackLink: string
+  feedbackNote: string
+  feedbackMailSubject: string
+  feedbackMailIntro: string
+  feedbackMailLanguage: string
 }

@@ -1,4 +1,4 @@
-// POST /api/academy/event — anonymous counter for browser-side events (currently only "certificate downloaded").
+// POST /api/academy/event — anonymous counter for browser-side events ("certificate downloaded", "feedback mail opened").
 // The PDF is created in the browser, so the server learns about it only through this call. Body: { type }, nothing
 // else is read or stored; the counter is a plain total.
 
@@ -9,7 +9,7 @@ import { recordAcademy } from '@/lib/academy/usage'
 
 export const runtime = 'nodejs'
 
-const eventSchema = z.object({ type: z.literal('certificate') })
+const eventSchema = z.object({ type: z.enum(['certificate', 'feedback_mail']) })
 
 export async function POST(req: NextRequest): Promise<Response> {
   const guard = await academyGuard(req, { name: 'event', schema: eventSchema, requests: 20, window: '1 h' })

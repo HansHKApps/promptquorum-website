@@ -171,4 +171,10 @@ export const copy: AcademyCopy = {
   deleteData: 'Borrar mis datos',
   deleteConfirm: '¿Borrar tu progreso de Academy de este navegador? No se puede deshacer.',
   dataDeleted: 'Datos borrados',
+  feedbackLink: 'Enviar comentarios por correo electrónico',
+  feedbackNote:
+    'Se abre tu programa de correo, así que veremos tu dirección de correo electrónico. No incluyas datos personales. No se envía nada hasta que envíes tú mismo el mensaje.',
+  feedbackMailSubject: 'Comentarios sobre Academy',
+  feedbackMailIntro: 'Esto pienso de Academy:',
+  feedbackMailLanguage: 'Idioma',
 }

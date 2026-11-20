@@ -172,4 +172,10 @@ export const copy: AcademyCopy = {
   deleteData: 'Meine Daten löschen',
   deleteConfirm: 'Ihren Academy-Fortschritt aus diesem Browser löschen? Das lässt sich nicht rückgängig machen.',
   dataDeleted: 'Daten gelöscht',
+  feedbackLink: 'Feedback per E-Mail senden',
+  feedbackNote:
+    'Öffnet Ihr E-Mail-Programm; wir sehen dann Ihre E-Mail-Adresse. Bitte geben Sie keine personenbezogenen Daten an. Es wird erst etwas gesendet, wenn Sie die Nachricht selbst abschicken.',
+  feedbackMailSubject: 'Academy-Feedback',
+  feedbackMailIntro: 'Das denke ich über die Academy:',
+  feedbackMailLanguage: 'Sprache',
 }

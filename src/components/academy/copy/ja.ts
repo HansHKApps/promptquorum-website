@@ -170,4 +170,10 @@ export const copy: AcademyCopy = {
   deleteData: 'データを削除',
   deleteConfirm: 'このブラウザからAcademyの進捗を削除しますか？元に戻せません。',
   dataDeleted: '削除しました',
+  feedbackLink: 'メールでフィードバックを送る',
+  feedbackNote:
+    'メールソフトが開くため、メールアドレスが当方に表示されます。個人情報は記入しないでください。ご自身で送信するまで、何も送信されません。',
+  feedbackMailSubject: 'Academyへのフィードバック',
+  feedbackMailIntro: 'Academyについての感想：',
+  feedbackMailLanguage: '言語',
 }
