@@ -95,7 +95,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Google Search impressions', value: '3.69 million in 28 days', note: 'About 132,000 per day' },
         { label: 'Average Google position', value: 'About 6', note: 'First page of results' },
         { label: 'Appearances in Google AI answers', value: '1.37 million impressions', note: 'Last 28 days' },
-        { label: 'Average visit duration', value: 'About 4 to 5 minutes', note: 'Umami, 1 to 8 Nov 2026' },
+        { label: 'Average active reading time per visit', value: 'About 45 seconds', note: 'Microsoft Clarity, mid-November 2026 (time spent scrolling, clicking or typing)' },
+        { label: 'Human visits per day (estimate)', value: 'About 4,000 to 4,500', note: 'Microsoft Clarity, 15 and 19 Nov 2026, sessions flagged as bots removed' },
         { label: 'Languages', value: '9', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: 'Pages', value: 'About 9,000', note: 'Site-wide' },
       ],
@@ -106,8 +107,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
       who: [
         'Most visitors use a laptop or desktop; Windows, macOS, iOS, Android and Linux all appear in the device mix.',
         'Readers search for specific tools and setups: LM Studio, Open WebUI, SillyTavern, KoboldCpp, Automatic1111, Home Assistant, DGX Spark, eGPU builds.',
-        'About a quarter of visitors arrive through privacy-focused search engines such as DuckDuckGo, Brave, Ecosia and Qwant.',
-        'About 39% of visitors browse in a language other than English.',
+        'About a quarter of visitors arrive through privacy-focused search engines such as DuckDuckGo, Brave, Ecosia and Qwant (Umami, 1 to 8 and 14 to 20 Nov 2026).',
+        'About 40 to 50% of visitors browse in a language other than English (Umami, 1 to 8 and 14 to 20 Nov 2026).',
       ],
       whatHeading: 'What they read',
       what: [
@@ -118,13 +119,13 @@ export const partnersContent: Record<Language, PartnersContent> = {
       ],
       fromHeading: 'Where the audience comes from',
       from:
-        'Search is the main channel. Google referred about 55% of visitors in the measured window, followed by DuckDuckGo (about 18%), Bing (about 7%) and Brave (about 6%). PromptQuorum pages also appear as cited sources inside Google’s AI answers.',
+        'Search is the main channel. Google referred about 51%, DuckDuckGo about 17%, Bing about 8% and Brave about 6% of visitors (Umami, 1 to 8 and 14 to 20 Nov 2026). PromptQuorum pages also appear as cited sources inside Google’s AI answers.',
       footnote:
-        'Figures are from Google Search Console (28 days to 15 November 2026) and Umami (1 to 8 November 2026). Next update: mid-December 2026.',
+        'Figures are from Google Search Console (28 days to 15 November 2026), Umami (1 to 8 and 14 to 20 November 2026) and Microsoft Clarity (mid-November 2026). Visit and page-view figures include some automated traffic; Microsoft Clarity flags roughly 20 to 35 percent of sessions as bots. Next update: mid-December 2026.',
     },
     stats: {
       heading: 'Live traffic',
-      viewsLabel: 'Page views, last 24 hours',
+      viewsLabel: 'Page views, last 24 hours (Umami, includes some automated traffic)',
       viewsWindow: 'Last {hours} hours until {end} UTC',
       gscLabel: 'Google search clicks on {date}',
       source: 'Source: Umami / Google Search Console',
@@ -173,7 +174,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Google-Suchimpressionen', value: '3,69 Millionen in 28 Tagen', note: 'Etwa 132.000 pro Tag' },
         { label: 'Durchschnittliche Google-Position', value: 'Etwa 6', note: 'Erste Ergebnisseite' },
         { label: 'Erscheinungen in Google-KI-Antworten', value: '1,37 Millionen Impressionen', note: 'Letzte 28 Tage' },
-        { label: 'Durchschnittliche Besuchsdauer', value: 'Etwa 4 bis 5 Minuten', note: 'Umami, 1. bis 8. November 2026' },
+        { label: 'Durchschnittliche aktive Lesezeit pro Besuch', value: 'Etwa 45 Sekunden', note: 'Microsoft Clarity, Mitte November 2026 (Zeit, in der gescrollt, geklickt oder getippt wird)' },
+        { label: 'Menschliche Besuche pro Tag (Schätzung)', value: 'Etwa 4.000 bis 4.500', note: 'Microsoft Clarity, 15. und 19. November 2026, als Bots markierte Sitzungen entfernt' },
         { label: 'Sprachen', value: '9', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: 'Seiten', value: 'Etwa 9.000', note: 'Website-weit' },
       ],
@@ -184,8 +186,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
       who: [
         'Die meisten Besucher nutzen Laptop oder Desktop; Windows, macOS, iOS, Android und Linux sind alle im Geräte-Mix vertreten.',
         'Leser suchen nach konkreten Tools und Setups: LM Studio, Open WebUI, SillyTavern, KoboldCpp, Automatic1111, Home Assistant, DGX Spark, eGPU-Aufbauten.',
-        'Etwa ein Viertel der Besucher kommt über datenschutzorientierte Suchmaschinen wie DuckDuckGo, Brave, Ecosia und Qwant.',
-        'Etwa 39 % der Besucher nutzen die Seite in einer anderen Sprache als Englisch.',
+        'Etwa ein Viertel der Besucher kommt über datenschutzorientierte Suchmaschinen wie DuckDuckGo, Brave, Ecosia und Qwant (Umami, 1. bis 8. und 14. bis 20. November 2026).',
+        'Etwa 40 bis 50 % der Besucher nutzen die Seite in einer anderen Sprache als Englisch (Umami, 1. bis 8. und 14. bis 20. November 2026).',
       ],
       whatHeading: 'Was gelesen wird',
       what: [
@@ -196,13 +198,13 @@ export const partnersContent: Record<Language, PartnersContent> = {
       ],
       fromHeading: 'Woher die Leserschaft kommt',
       from:
-        'Die Suche ist der wichtigste Kanal. Google verwies im gemessenen Zeitraum etwa 55 % der Besucher, gefolgt von DuckDuckGo (etwa 18 %), Bing (etwa 7 %) und Brave (etwa 6 %). PromptQuorum-Seiten erscheinen außerdem als zitierte Quellen in den KI-Antworten von Google.',
+        'Die Suche ist der wichtigste Kanal. Google verwies etwa 51 %, DuckDuckGo etwa 17 %, Bing etwa 8 % und Brave etwa 6 % der Besucher (Umami, 1. bis 8. und 14. bis 20. November 2026). PromptQuorum-Seiten erscheinen außerdem als zitierte Quellen in den KI-Antworten von Google.',
       footnote:
-        'Die Zahlen stammen aus der Google Search Console (28 Tage bis 15. November 2026) und aus Umami (1. bis 8. November 2026). Nächste Aktualisierung: Mitte Dezember 2026.',
+        'Die Zahlen stammen aus der Google Search Console (28 Tage bis 15. November 2026), aus Umami (1. bis 8. und 14. bis 20. November 2026) und aus Microsoft Clarity (Mitte November 2026). Die Zahlen zu Besuchen und Seitenaufrufen enthalten einen Anteil automatisierten Datenverkehrs; Microsoft Clarity stuft etwa 20 bis 35 Prozent der Sitzungen als Bots ein. Nächste Aktualisierung: Mitte Dezember 2026.',
     },
     stats: {
       heading: 'Live-Zugriffszahlen',
-      viewsLabel: 'Seitenaufrufe, letzte 24 Stunden',
+      viewsLabel: 'Seitenaufrufe, letzte 24 Stunden (Umami, enthält einen Teil automatisierten Datenverkehrs)',
       viewsWindow: 'Letzte {hours} Stunden bis {end} UTC',
       gscLabel: 'Google-Suchklicks am {date}',
       source: 'Quelle: Umami / Google Search Console',
@@ -251,7 +253,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Impressions de recherche Google', value: '3,69 millions sur 28 jours', note: 'Environ 132 000 par jour' },
         { label: 'Position moyenne sur Google', value: 'Environ 6', note: 'Première page de résultats' },
         { label: "Apparitions dans les réponses IA de Google", value: '1,37 million d’impressions', note: '28 derniers jours' },
-        { label: 'Durée moyenne de visite', value: 'Environ 4 à 5 minutes', note: 'Umami, du 1er au 8 novembre 2026' },
+        { label: 'Temps de lecture actif moyen par visite', value: 'Environ 45 secondes', note: 'Microsoft Clarity, mi-novembre 2026 (temps passé à faire défiler, cliquer ou saisir)' },
+        { label: 'Visites humaines par jour (estimation)', value: 'Environ 4 000 à 4 500', note: 'Microsoft Clarity, 15 et 19 novembre 2026, sessions signalées comme bots exclues' },
         { label: 'Langues', value: '9', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: 'Pages', value: 'Environ 9 000', note: "Sur l'ensemble du site" },
       ],
@@ -262,8 +265,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
       who: [
         "La plupart des visiteurs utilisent un ordinateur portable ou de bureau ; Windows, macOS, iOS, Android et Linux figurent tous dans le mix d'appareils.",
         'Les lecteurs recherchent des outils et configurations précis : LM Studio, Open WebUI, SillyTavern, KoboldCpp, Automatic1111, Home Assistant, DGX Spark, montages eGPU.',
-        "Environ un quart des visiteurs arrive via des moteurs de recherche axés sur la confidentialité comme DuckDuckGo, Brave, Ecosia et Qwant.",
-        "Environ 39 % des visiteurs naviguent dans une langue autre que l'anglais.",
+        "Environ un quart des visiteurs arrive via des moteurs de recherche axés sur la confidentialité comme DuckDuckGo, Brave, Ecosia et Qwant (Umami, du 1er au 8 et du 14 au 20 novembre 2026).",
+        "Environ 40 à 50 % des visiteurs naviguent dans une langue autre que l'anglais (Umami, du 1er au 8 et du 14 au 20 novembre 2026).",
       ],
       whatHeading: "Ce qu'ils lisent",
       what: [
@@ -274,13 +277,13 @@ export const partnersContent: Record<Language, PartnersContent> = {
       ],
       fromHeading: "D'où vient l'audience",
       from:
-        "La recherche est le canal principal. Google a dirigé environ 55 % des visiteurs sur la période mesurée, suivi de DuckDuckGo (environ 18 %), Bing (environ 7 %) et Brave (environ 6 %). Les pages de PromptQuorum apparaissent aussi comme sources citées dans les réponses IA de Google.",
+        "La recherche est le canal principal. Google a dirigé environ 51 %, DuckDuckGo environ 17 %, Bing environ 8 % et Brave environ 6 % des visiteurs (Umami, du 1er au 8 et du 14 au 20 novembre 2026). Les pages de PromptQuorum apparaissent aussi comme sources citées dans les réponses IA de Google.",
       footnote:
-        "Les chiffres proviennent de Google Search Console (28 jours jusqu'au 15 novembre 2026) et d'Umami (1er au 8 novembre 2026). Prochaine mise à jour : mi-décembre 2026.",
+        "Les chiffres proviennent de Google Search Console (28 jours jusqu'au 15 novembre 2026), d'Umami (du 1er au 8 et du 14 au 20 novembre 2026) et de Microsoft Clarity (mi-novembre 2026). Les chiffres de visites et de pages vues incluent une part de trafic automatisé ; Microsoft Clarity signale environ 20 à 35 % des sessions comme des bots. Prochaine mise à jour : mi-décembre 2026.",
     },
     stats: {
       heading: 'Trafic en direct',
-      viewsLabel: 'Pages vues, dernières 24 heures',
+      viewsLabel: 'Pages vues, dernières 24 heures (Umami, inclut une part de trafic automatisé)',
       viewsWindow: 'Dernières {hours} heures jusqu\'au {end} UTC',
       gscLabel: 'Clics depuis la recherche Google le {date}',
       source: 'Source : Umami / Google Search Console',
@@ -329,7 +332,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Google検索表示回数', value: '28日間で369万回', note: '1日あたり約132,000回' },
         { label: 'Google平均掲載順位', value: '約6位', note: '検索結果の1ページ目' },
         { label: 'Google AI回答への表示', value: '137万インプレッション', note: '直近28日間' },
-        { label: '平均滞在時間', value: '約4〜5分', note: 'Umami、2026年11月1日〜8日' },
+        { label: '1訪問あたりの平均アクティブ閲覧時間', value: '約45秒', note: 'Microsoft Clarity、2026年11月中旬（スクロール、クリック、入力に費やした時間）' },
+        { label: '1日あたりの人間の訪問数（推定）', value: '約4,000〜4,500', note: 'Microsoft Clarity、2026年11月15日と19日、ボットと判定されたセッションを除外' },
         { label: '対応言語数', value: '9言語', note: 'EN、DE、FR、ES、PT、JA、KO、ZH、AR' },
         { label: 'ページ数', value: '約9,000ページ', note: 'サイト全体' },
       ],
@@ -340,8 +344,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
       who: [
         '訪問者の多くはノートPCまたはデスクトップを使用しています。Windows、macOS、iOS、Android、Linuxがいずれもデバイスの内訳に含まれます。',
         '読者はLM Studio、Open WebUI、SillyTavern、KoboldCpp、Automatic1111、Home Assistant、DGX Spark、eGPU構成など、具体的なツールや構成を検索しています。',
-        '訪問者の約4分の1は、DuckDuckGo、Brave、Ecosia、Qwantなどプライバシー重視の検索エンジンから訪れています。',
-        '訪問者の約39%は英語以外の言語で閲覧しています。',
+        '訪問者の約4分の1は、DuckDuckGo、Brave、Ecosia、Qwantなどプライバシー重視の検索エンジンから訪れています（Umami、2026年11月1日〜8日および14日〜20日）。',
+        '訪問者の約40〜50%は英語以外の言語で閲覧しています（Umami、2026年11月1日〜8日および14日〜20日）。',
       ],
       whatHeading: '読まれているコンテンツ',
       what: [
@@ -352,13 +356,13 @@ export const partnersContent: Record<Language, PartnersContent> = {
       ],
       fromHeading: '読者の流入元',
       from:
-        '検索が主要な流入経路です。計測期間中、Googleからの訪問者は約55%、続いてDuckDuckGo（約18%）、Bing（約7%）、Brave（約6%）でした。PromptQuorumのページは、GoogleのAI回答内で引用元としても表示されています。',
+        '検索が主要な流入経路です。訪問者のうちGoogleからが約51%、DuckDuckGoが約17%、Bingが約8%、Braveが約6%でした（Umami、2026年11月1日〜8日および14日〜20日）。PromptQuorumのページは、GoogleのAI回答内で引用元としても表示されています。',
       footnote:
-        'これらの数値はGoogle Search Console（2026年11月15日までの28日間）とUmami（2026年11月1日〜8日）によるものです。次回更新：2026年12月中旬。',
+        'これらの数値はGoogle Search Console（2026年11月15日までの28日間）、Umami（2026年11月1日〜8日および14日〜20日）、Microsoft Clarity（2026年11月中旬）によるものです。訪問数とページビューの数値には一部の自動化されたトラフィックが含まれており、Microsoft Clarityはセッションの約20〜35%をボットと判定しています。次回更新：2026年12月中旬。',
     },
     stats: {
       heading: 'ライブアクセス状況',
-      viewsLabel: 'ページビュー（直近24時間）',
+      viewsLabel: 'ページビュー（直近24時間、Umami、一部の自動化されたトラフィックを含む）',
       viewsWindow: '直近{hours}時間（{end} UTCまで）',
       gscLabel: '{date}のGoogle検索クリック数',
       source: '出典：Umami / Google Search Console',
@@ -406,7 +410,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Google 搜索展示次数', value: '28 天内 369 万次', note: '平均每天约 132,000 次' },
         { label: 'Google 平均排名', value: '约第 6 位', note: '搜索结果首页' },
         { label: '在 Google AI 回答中出现', value: '137 万次展示', note: '过去 28 天' },
-        { label: '平均访问时长', value: '约 4 到 5 分钟', note: 'Umami，2026 年 11 月 1 日至 8 日' },
+        { label: '每次访问的平均有效阅读时间', value: '约 45 秒', note: 'Microsoft Clarity，2026 年 11 月中旬（滚动、点击或输入所花的时间）' },
+        { label: '每日真人访问量（估算）', value: '约 4,000 到 4,500', note: 'Microsoft Clarity，2026 年 11 月 15 日和 19 日，已剔除被标记为机器人的会话' },
         { label: '支持语言数', value: '9 种', note: 'EN、DE、FR、ES、PT、JA、KO、ZH、AR' },
         { label: '页面数', value: '约 9,000 个', note: '覆盖全站' },
       ],
@@ -417,8 +422,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
       who: [
         '大多数访问者使用笔记本电脑或台式机；Windows、macOS、iOS、Android 和 Linux 均出现在设备分布中。',
         '读者会搜索具体的工具和配置：LM Studio、Open WebUI、SillyTavern、KoboldCpp、Automatic1111、Home Assistant、DGX Spark、eGPU 方案。',
-        '约四分之一的访问者通过 DuckDuckGo、Brave、Ecosia、Qwant 等注重隐私的搜索引擎到达。',
-        '约 39% 的访问者使用非英语语言浏览。',
+        '约四分之一的访问者通过 DuckDuckGo、Brave、Ecosia、Qwant 等注重隐私的搜索引擎到达（Umami，2026 年 11 月 1 日至 8 日及 14 日至 20 日）。',
+        '约 40% 至 50% 的访问者使用非英语语言浏览（Umami，2026 年 11 月 1 日至 8 日及 14 日至 20 日）。',
       ],
       whatHeading: '读者阅读的内容',
       what: [
@@ -429,13 +434,13 @@ export const partnersContent: Record<Language, PartnersContent> = {
       ],
       fromHeading: '读者来源',
       from:
-        '搜索是主要渠道。在统计期间，Google 带来约 55% 的访问者，其次是 DuckDuckGo（约 18%）、Bing（约 7%）和 Brave（约 6%）。PromptQuorum 的页面也作为引用来源出现在 Google 的 AI 回答中。',
+        '搜索是主要渠道。Google 带来约 51% 的访问者，DuckDuckGo 约 17%，Bing 约 8%，Brave 约 6%（Umami，2026 年 11 月 1 日至 8 日及 14 日至 20 日）。PromptQuorum 的页面也作为引用来源出现在 Google 的 AI 回答中。',
       footnote:
-        '数据来自 Google Search Console（截至 2026 年 11 月 15 日的 28 天）和 Umami（2026 年 11 月 1 日至 8 日）。下次更新：2026 年 12 月中旬。',
+        '数据来自 Google Search Console（截至 2026 年 11 月 15 日的 28 天）、Umami（2026 年 11 月 1 日至 8 日及 14 日至 20 日）和 Microsoft Clarity（2026 年 11 月中旬）。访问量和页面浏览量数据包含部分自动化流量；Microsoft Clarity 将约 20% 至 35% 的会话标记为机器人。下次更新：2026 年 12 月中旬。',
     },
     stats: {
       heading: '实时访问数据',
-      viewsLabel: '页面浏览量（最近 24 小时）',
+      viewsLabel: '页面浏览量（最近 24 小时，Umami，包含部分自动化流量）',
       viewsWindow: '最近 {hours} 小时，截至 {end} UTC',
       gscLabel: '{date} 的 Google 搜索点击量',
       source: '数据来源：Umami / Google Search Console',
@@ -484,7 +489,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Impresiones de búsqueda de Google', value: '3,69 millones en 28 días', note: 'Unas 132.000 al día' },
         { label: 'Posición media en Google', value: 'Alrededor de 6', note: 'Primera página de resultados' },
         { label: 'Apariciones en respuestas de IA de Google', value: '1,37 millones de impresiones', note: 'Últimos 28 días' },
-        { label: 'Duración media de la visita', value: 'Entre 4 y 5 minutos, aproximadamente', note: 'Umami, del 1 al 8 de noviembre de 2026' },
+        { label: 'Tiempo medio de lectura activa por visita', value: 'Unos 45 segundos', note: 'Microsoft Clarity, mediados de noviembre de 2026 (tiempo dedicado a desplazarse, hacer clic o escribir)' },
+        { label: 'Visitas humanas por día (estimación)', value: 'Entre 4.000 y 4.500, aproximadamente', note: 'Microsoft Clarity, 15 y 19 de noviembre de 2026, sesiones marcadas como bots excluidas' },
         { label: 'Idiomas', value: '9', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: 'Páginas', value: 'Unas 9.000', note: 'En todo el sitio' },
       ],
@@ -495,8 +501,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
       who: [
         'La mayoría de los visitantes usan portátil o escritorio; Windows, macOS, iOS, Android y Linux aparecen todos en la mezcla de dispositivos.',
         'Los lectores buscan herramientas y configuraciones concretas: LM Studio, Open WebUI, SillyTavern, KoboldCpp, Automatic1111, Home Assistant, DGX Spark, montajes con eGPU.',
-        'Alrededor de una cuarta parte de los visitantes llega a través de buscadores centrados en la privacidad como DuckDuckGo, Brave, Ecosia y Qwant.',
-        'Alrededor del 39 % de los visitantes navega en un idioma distinto del inglés.',
+        'Alrededor de una cuarta parte de los visitantes llega a través de buscadores centrados en la privacidad como DuckDuckGo, Brave, Ecosia y Qwant (Umami, del 1 al 8 y del 14 al 20 de noviembre de 2026).',
+        'Entre el 40 % y el 50 % de los visitantes navega en un idioma distinto del inglés (Umami, del 1 al 8 y del 14 al 20 de noviembre de 2026).',
       ],
       whatHeading: 'Qué leen',
       what: [
@@ -507,13 +513,13 @@ export const partnersContent: Record<Language, PartnersContent> = {
       ],
       fromHeading: 'De dónde viene la audiencia',
       from:
-        'La búsqueda es el canal principal. Google dirigió alrededor del 55 % de los visitantes en el periodo medido, seguido de DuckDuckGo (alrededor del 18 %), Bing (alrededor del 7 %) y Brave (alrededor del 6 %). Las páginas de PromptQuorum también aparecen como fuentes citadas dentro de las respuestas de IA de Google.',
+        'La búsqueda es el canal principal. Google dirigió alrededor del 51 %, DuckDuckGo alrededor del 17 %, Bing alrededor del 8 % y Brave alrededor del 6 % de los visitantes (Umami, del 1 al 8 y del 14 al 20 de noviembre de 2026). Las páginas de PromptQuorum también aparecen como fuentes citadas dentro de las respuestas de IA de Google.',
       footnote:
-        'Las cifras provienen de Google Search Console (28 días hasta el 15 de noviembre de 2026) y de Umami (1 al 8 de noviembre de 2026). Próxima actualización: mediados de diciembre de 2026.',
+        'Las cifras provienen de Google Search Console (28 días hasta el 15 de noviembre de 2026), de Umami (del 1 al 8 y del 14 al 20 de noviembre de 2026) y de Microsoft Clarity (mediados de noviembre de 2026). Las cifras de visitas y de páginas vistas incluyen algo de tráfico automatizado; Microsoft Clarity marca como bots aproximadamente entre el 20 % y el 35 % de las sesiones. Próxima actualización: mediados de diciembre de 2026.',
     },
     stats: {
       heading: 'Tráfico en directo',
-      viewsLabel: 'Páginas vistas, últimas 24 horas',
+      viewsLabel: 'Páginas vistas, últimas 24 horas (Umami, incluye algo de tráfico automatizado)',
       viewsWindow: 'Últimas {hours} horas hasta el {end} UTC',
       gscLabel: 'Clics de búsqueda de Google el {date}',
       source: 'Fuente: Umami / Google Search Console',
@@ -562,7 +568,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Impressões de busca do Google', value: '3,69 milhões em 28 dias', note: 'Cerca de 132.000 por dia' },
         { label: 'Posição média no Google', value: 'Cerca de 6', note: 'Primeira página de resultados' },
         { label: 'Aparições nas respostas de IA do Google', value: '1,37 milhões de impressões', note: 'Últimos 28 dias' },
-        { label: 'Duração média da visita', value: 'De 4 a 5 minutos, aproximadamente', note: 'Umami, de 1 a 8 de novembro de 2026' },
+        { label: 'Tempo médio de leitura ativa por visita', value: 'Cerca de 45 segundos', note: 'Microsoft Clarity, meados de novembro de 2026 (tempo gasto rolando a página, clicando ou digitando)' },
+        { label: 'Visitas humanas por dia (estimativa)', value: 'De 4.000 a 4.500, aproximadamente', note: 'Microsoft Clarity, 15 e 19 de novembro de 2026, sessões sinalizadas como bots removidas' },
         { label: 'Idiomas', value: '9', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: 'Páginas', value: 'Cerca de 9.000', note: 'Em todo o site' },
       ],
@@ -573,8 +580,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
       who: [
         'A maioria dos visitantes usa notebook ou desktop; Windows, macOS, iOS, Android e Linux aparecem todos na combinação de dispositivos.',
         'Os leitores buscam ferramentas e configurações específicas: LM Studio, Open WebUI, SillyTavern, KoboldCpp, Automatic1111, Home Assistant, DGX Spark, montagens com eGPU.',
-        'Cerca de um quarto dos visitantes chega por buscadores focados em privacidade, como DuckDuckGo, Brave, Ecosia e Qwant.',
-        'Cerca de 39% dos visitantes navegam em um idioma diferente do inglês.',
+        'Cerca de um quarto dos visitantes chega por buscadores focados em privacidade, como DuckDuckGo, Brave, Ecosia e Qwant (Umami, de 1 a 8 e de 14 a 20 de novembro de 2026).',
+        'Entre 40% e 50% dos visitantes navegam em um idioma diferente do inglês (Umami, de 1 a 8 e de 14 a 20 de novembro de 2026).',
       ],
       whatHeading: 'O que eles leem',
       what: [
@@ -585,13 +592,13 @@ export const partnersContent: Record<Language, PartnersContent> = {
       ],
       fromHeading: 'De onde vem a audiência',
       from:
-        'A busca é o principal canal. O Google encaminhou cerca de 55% dos visitantes no período medido, seguido por DuckDuckGo (cerca de 18%), Bing (cerca de 7%) e Brave (cerca de 6%). As páginas do PromptQuorum também aparecem como fontes citadas nas respostas de IA do Google.',
+        'A busca é o principal canal. O Google encaminhou cerca de 51%, o DuckDuckGo cerca de 17%, o Bing cerca de 8% e o Brave cerca de 6% dos visitantes (Umami, de 1 a 8 e de 14 a 20 de novembro de 2026). As páginas do PromptQuorum também aparecem como fontes citadas nas respostas de IA do Google.',
       footnote:
-        'Os números vêm do Google Search Console (28 dias até 15 de novembro de 2026) e do Umami (1 a 8 de novembro de 2026). Próxima atualização: meados de dezembro de 2026.',
+        'Os números vêm do Google Search Console (28 dias até 15 de novembro de 2026), do Umami (de 1 a 8 e de 14 a 20 de novembro de 2026) e do Microsoft Clarity (meados de novembro de 2026). Os números de visitas e de visualizações de página incluem algum tráfego automatizado; o Microsoft Clarity sinaliza como bots cerca de 20% a 35% das sessões. Próxima atualização: meados de dezembro de 2026.',
     },
     stats: {
       heading: 'Tráfego ao vivo',
-      viewsLabel: 'Visualizações de página, últimas 24 horas',
+      viewsLabel: 'Visualizações de página, últimas 24 horas (Umami, inclui algum tráfego automatizado)',
       viewsWindow: 'Últimas {hours} horas até {end} UTC',
       gscLabel: 'Cliques da busca do Google em {date}',
       source: 'Fonte: Umami / Google Search Console',
@@ -640,7 +647,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'مرات ظهور بحث Google', value: '3.69 مليون خلال 28 يومًا', note: 'حوالي 132,000 يوميًا' },
         { label: 'متوسط ترتيب Google', value: 'حوالي 6', note: 'الصفحة الأولى من النتائج' },
         { label: 'الظهور في إجابات الذكاء الاصطناعي من Google', value: '1.37 مليون ظهور', note: 'آخر 28 يومًا' },
-        { label: 'متوسط مدة الزيارة', value: 'من 4 إلى 5 دقائق تقريبًا', note: 'Umami، من 1 إلى 8 نوفمبر 2026' },
+        { label: 'متوسط وقت القراءة الفعلية لكل زيارة', value: 'نحو 45 ثانية', note: 'Microsoft Clarity، منتصف نوفمبر 2026 (الوقت المستغرق في التمرير أو النقر أو الكتابة)' },
+        { label: 'الزيارات البشرية يوميًا (تقدير)', value: 'من 4,000 إلى 4,500 تقريبًا', note: 'Microsoft Clarity، 15 و19 نوفمبر 2026، مع استبعاد الجلسات المصنّفة كروبوتات' },
         { label: 'اللغات', value: '9', note: 'EN، DE، FR، ES، PT، JA، KO، ZH، AR' },
         { label: 'الصفحات', value: 'حوالي 9,000', note: 'على مستوى الموقع كله' },
       ],
@@ -651,8 +659,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
       who: [
         'يستخدم معظم الزوّار حاسوبًا محمولًا أو مكتبيًا؛ وتظهر أنظمة Windows و macOS و iOS و Android و Linux جميعها في توزيع الأجهزة.',
         'يبحث القرّاء عن أدوات وتهيئات محدّدة: LM Studio، Open WebUI، SillyTavern، KoboldCpp، Automatic1111، Home Assistant، DGX Spark، تجهيزات eGPU.',
-        'يصل نحو ربع الزوّار عبر محركات بحث تُركّز على الخصوصية مثل DuckDuckGo و Brave و Ecosia و Qwant.',
-        'يتصفّح نحو 39% من الزوّار الموقع بلغة غير الإنجليزية.',
+        'يصل نحو ربع الزوّار عبر محركات بحث تُركّز على الخصوصية مثل DuckDuckGo و Brave و Ecosia و Qwant (Umami، من 1 إلى 8 ومن 14 إلى 20 نوفمبر 2026).',
+        'يتصفّح نحو 40 إلى 50% من الزوّار الموقع بلغة غير الإنجليزية (Umami، من 1 إلى 8 ومن 14 إلى 20 نوفمبر 2026).',
       ],
       whatHeading: 'ماذا يقرؤون',
       what: [
@@ -663,13 +671,13 @@ export const partnersContent: Record<Language, PartnersContent> = {
       ],
       fromHeading: 'من أين تأتي هذه الجماهير',
       from:
-        'البحث هو القناة الرئيسية. أحالت Google نحو 55% من الزوّار خلال الفترة المقاسة، تلتها DuckDuckGo (نحو 18%) وBing (نحو 7%) وBrave (نحو 6%). تظهر صفحات PromptQuorum أيضًا كمصادر مُقتبَسة داخل إجابات الذكاء الاصطناعي من Google.',
+        'البحث هو القناة الرئيسية. أحالت Google نحو 51% من الزوّار، وDuckDuckGo نحو 17%، وBing نحو 8%، وBrave نحو 6% (Umami، من 1 إلى 8 ومن 14 إلى 20 نوفمبر 2026). تظهر صفحات PromptQuorum أيضًا كمصادر مُقتبَسة داخل إجابات الذكاء الاصطناعي من Google.',
       footnote:
-        'الأرقام مأخوذة من Google Search Console (28 يومًا حتى 15 نوفمبر 2026) ومن Umami (من 1 إلى 8 نوفمبر 2026). التحديث التالي: منتصف ديسمبر 2026.',
+        'الأرقام مأخوذة من Google Search Console (28 يومًا حتى 15 نوفمبر 2026) ومن Umami (من 1 إلى 8 ومن 14 إلى 20 نوفمبر 2026) ومن Microsoft Clarity (منتصف نوفمبر 2026). تتضمن أرقام الزيارات ومشاهدات الصفحات جزءًا من الزيارات الآلية؛ وتصنّف Microsoft Clarity نحو 20 إلى 35% من الجلسات على أنها روبوتات. التحديث التالي: منتصف ديسمبر 2026.',
     },
     stats: {
       heading: 'حركة الزيارات المباشرة',
-      viewsLabel: 'مشاهدات الصفحات، آخر 24 ساعة',
+      viewsLabel: 'مشاهدات الصفحات، آخر 24 ساعة (Umami، تتضمن جزءًا من الزيارات الآلية)',
       viewsWindow: 'آخر {hours} ساعة حتى {end} UTC',
       gscLabel: 'نقرات بحث Google بتاريخ {date}',
       source: 'المصدر: Umami / Google Search Console',
@@ -718,7 +726,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
         { label: 'Google 검색 노출 수', value: '28일간 369만 회', note: '하루 평균 약 132,000회' },
         { label: 'Google 평균 순위', value: '약 6위', note: '검색 결과 첫 페이지' },
         { label: 'Google AI 답변 내 노출', value: '137만 회 노출', note: '최근 28일' },
-        { label: '평균 방문 시간', value: '약 4~5분', note: 'Umami, 2026년 11월 1일~8일' },
+        { label: '방문당 평균 활성 읽기 시간', value: '약 45초', note: 'Microsoft Clarity, 2026년 11월 중순 (스크롤, 클릭, 입력에 쓴 시간)' },
+        { label: '일일 실제 사람 방문 수(추정)', value: '약 4,000~4,500', note: 'Microsoft Clarity, 2026년 11월 15일과 19일, 봇으로 표시된 세션 제외' },
         { label: '지원 언어', value: '9개', note: 'EN, DE, FR, ES, PT, JA, KO, ZH, AR' },
         { label: '페이지 수', value: '약 9,000개', note: '사이트 전체' },
       ],
@@ -729,8 +738,8 @@ export const partnersContent: Record<Language, PartnersContent> = {
       who: [
         '대부분의 방문자는 노트북이나 데스크톱을 사용합니다. Windows, macOS, iOS, Android, Linux가 모두 기기 구성에 포함되어 있습니다.',
         '독자들은 LM Studio, Open WebUI, SillyTavern, KoboldCpp, Automatic1111, Home Assistant, DGX Spark, eGPU 구성 등 구체적인 도구와 설정을 검색합니다.',
-        '방문자의 약 4분의 1은 DuckDuckGo, Brave, Ecosia, Qwant 등 프라이버시 중심 검색엔진을 통해 유입됩니다.',
-        '방문자의 약 39%는 영어가 아닌 언어로 사이트를 이용합니다.',
+        '방문자의 약 4분의 1은 DuckDuckGo, Brave, Ecosia, Qwant 등 프라이버시 중심 검색엔진을 통해 유입됩니다(Umami, 2026년 11월 1일~8일 및 14일~20일).',
+        '방문자의 약 40~50%는 영어가 아닌 언어로 사이트를 이용합니다(Umami, 2026년 11월 1일~8일 및 14일~20일).',
       ],
       whatHeading: '읽는 콘텐츠',
       what: [
@@ -741,13 +750,13 @@ export const partnersContent: Record<Language, PartnersContent> = {
       ],
       fromHeading: '독자의 유입 경로',
       from:
-        '검색이 주요 유입 경로입니다. 측정 기간 동안 Google이 방문자의 약 55%를 유입시켰으며, DuckDuckGo(약 18%), Bing(약 7%), Brave(약 6%)가 뒤를 이었습니다. PromptQuorum의 페이지는 Google의 AI 답변 안에서 인용 출처로도 나타납니다.',
+        '검색이 주요 유입 경로입니다. 방문자 중 Google이 약 51%, DuckDuckGo가 약 17%, Bing이 약 8%, Brave가 약 6%를 차지했습니다(Umami, 2026년 11월 1일~8일 및 14일~20일). PromptQuorum의 페이지는 Google의 AI 답변 안에서 인용 출처로도 나타납니다.',
       footnote:
-        '수치는 Google Search Console(2026년 11월 15일까지의 28일간)과 Umami(2026년 11월 1일~8일)에서 가져온 것입니다. 다음 업데이트: 2026년 12월 중순.',
+        '수치는 Google Search Console(2026년 11월 15일까지의 28일간), Umami(2026년 11월 1일~8일 및 14일~20일), Microsoft Clarity(2026년 11월 중순)에서 가져온 것입니다. 방문 및 페이지뷰 수치에는 일부 자동화된 트래픽이 포함되어 있으며, Microsoft Clarity는 세션의 약 20~35%를 봇으로 분류합니다. 다음 업데이트: 2026년 12월 중순.',
     },
     stats: {
       heading: '실시간 방문 현황',
-      viewsLabel: '페이지뷰, 최근 24시간',
+      viewsLabel: '페이지뷰, 최근 24시간 (Umami, 일부 자동화된 트래픽 포함)',
       viewsWindow: '최근 {hours}시간({end} UTC까지)',
       gscLabel: '{date} Google 검색 클릭 수',
       source: '출처: Umami / Google Search Console',
