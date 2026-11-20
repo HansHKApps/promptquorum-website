@@ -47,6 +47,7 @@ export const copy: AcademyBaseCopy = {
   },
   languageLabel: 'Langue de votre programme',
   submit: "Passer à l'évaluation rapide",
+  sendSubject: 'Envoyer',
   startNew: 'Recommencer',
   savedFound: (s) => `Nous avons trouvé une progression enregistrée dans ce navigateur : ${s}.`,
   continueSaved: 'Continuer',

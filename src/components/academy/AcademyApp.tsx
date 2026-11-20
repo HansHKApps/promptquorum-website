@@ -184,17 +184,23 @@ function SetupForm({
         <label htmlFor="academy-subject" className="block font-medium text-gray-900">
           {tx.subjectLabel}
         </label>
-        <input
-          id="academy-subject"
-          type="text"
-          value={draft.subject}
-          maxLength={ACADEMY_SUBJECT_MAX_CHARS}
-          onChange={(e) => change({ subject: e.target.value })}
-          placeholder={tx.subjectPlaceholder}
-          className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 text-base focus:border-purple-600 focus:outline-none"
-          aria-invalid={error || undefined}
-          aria-describedby={error ? 'academy-subject-error' : undefined}
-        />
+        <div className="mt-2 flex gap-2">
+          <input
+            id="academy-subject"
+            type="text"
+            value={draft.subject}
+            maxLength={ACADEMY_SUBJECT_MAX_CHARS}
+            onChange={(e) => change({ subject: e.target.value })}
+            placeholder={tx.subjectPlaceholder}
+            className="min-w-0 flex-1 rounded-xl border border-gray-300 px-4 py-3 text-base focus:border-purple-600 focus:outline-none"
+            aria-invalid={error || undefined}
+            aria-describedby={error ? 'academy-subject-error' : undefined}
+          />
+          {/* Same action as pressing Enter in the field (the form's submit handler validates the subject). */}
+          <button type="submit" className="shrink-0 rounded-xl bg-purple-600 px-5 py-3 font-semibold text-white hover:bg-purple-700">
+            {tx.sendSubject}
+          </button>
+        </div>
         {error && (
           <p id="academy-subject-error" className="mt-2 text-sm text-red-700">
             {tx.subjectError}

@@ -46,6 +46,7 @@ export const copy: AcademyBaseCopy = {
   },
   languageLabel: '프로그램 언어',
   submit: '빠른 진단으로 이동',
+  sendSubject: '보내기',
   startNew: '새로 시작',
   savedFound: (s) => `이 브라우저에 저장된 학습 진행 상황을 찾았습니다: ${s}`,
   continueSaved: '이어서 하기',

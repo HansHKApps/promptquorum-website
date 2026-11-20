@@ -47,6 +47,7 @@ export const copy: AcademyBaseCopy = {
   },
   languageLabel: 'Idioma do seu programa',
   submit: 'Continuar para o diagnóstico',
+  sendSubject: 'Enviar',
   startNew: 'Começar de novo',
   savedFound: (s) => `Encontramos um progresso salvo neste navegador: ${s}.`,
   continueSaved: 'Continuar',
