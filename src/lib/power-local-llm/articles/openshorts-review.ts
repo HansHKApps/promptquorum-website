@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**OpenShorts is an MIT-licensed, open-source AI clip maker that finds the strongest moments in a long video and returns captioned 9:16 clips, either self-hosted with Docker or on the hosted OpenShorts Cloud.** It is not fully local by default: the moment picker calls Google Gemini unless you point a self-hosted copy at a local language model.',
+      '**OpenShorts is an open-source AI clip maker with an MIT-licensed core that, according to its README, picks moments from a long video and returns captioned 9:16 clips, either self-hosted with Docker or on the hosted OpenShorts Cloud.** It is not fully local by default: the moment picker calls Google Gemini unless you point a self-hosted copy at a local language model.',
     quickAnswerTop: {
       en: {
         question: 'What is OpenShorts and is it really local?',
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**OpenShorts ist ein quelloffener KI-Clip-Maker unter MIT-Lizenz, der die stärksten Momente eines langen Videos findet und Clips im Format 9:16 mit Untertiteln liefert, entweder selbst mit Docker gehostet oder über den gehosteten Dienst OpenShorts Cloud.** Standardmäßig ist er nicht vollständig lokal: Die Momentauswahl ruft Google Gemini auf, sofern Sie eine selbst gehostete Instanz nicht auf ein lokales Sprachmodell umstellen.',
+      '**OpenShorts ist ein quelloffener KI-Clip-Maker mit einem Kern unter MIT-Lizenz, der laut README Momente aus einem langen Video auswählt und Clips im Format 9:16 mit Untertiteln liefert, entweder selbst mit Docker gehostet oder über den gehosteten Dienst OpenShorts Cloud.** Standardmäßig ist er nicht vollständig lokal: Die Momentauswahl ruft Google Gemini auf, sofern Sie eine selbst gehostete Instanz nicht auf ein lokales Sprachmodell umstellen.',
     quickAnswerTop: {
       de: {
         question: 'Was ist OpenShorts, und läuft es wirklich lokal?',
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**OpenShorts es un generador de clips con IA de código abierto y licencia MIT que encuentra los mejores momentos de un vídeo largo y devuelve clips 9:16 con subtítulos, ya sea autoalojado con Docker o en el servicio alojado OpenShorts Cloud.** Por defecto no es totalmente local: el selector de momentos llama a Google Gemini, salvo que apuntes una copia autoalojada a un modelo de lenguaje local.',
+      '**OpenShorts es un generador de clips con IA de código abierto con un núcleo de licencia MIT que, según su README, elige momentos de un vídeo largo y devuelve clips 9:16 con subtítulos, ya sea autoalojado con Docker o en el servicio alojado OpenShorts Cloud.** Por defecto no es totalmente local: el selector de momentos llama a Google Gemini, salvo que apuntes una copia autoalojada a un modelo de lenguaje local.',
     quickAnswerTop: {
       es: {
         question: '¿Qué es OpenShorts y es de verdad local?',
@@ -896,7 +896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**OpenShorts est un générateur de clips IA open source sous licence MIT qui repère les meilleurs moments d\'une longue vidéo et renvoie des clips 9:16 sous-titrés, auto-hébergé avec Docker ou sur le service hébergé OpenShorts Cloud.** Par défaut, il n\'est pas entièrement local : le sélecteur de moments appelle Google Gemini, sauf si vous pointez une copie auto-hébergée vers un modèle de langage local.',
+      '**OpenShorts est un générateur de clips IA open source dont le cœur est sous licence MIT et qui, selon son README, sélectionne des moments d\'une longue vidéo et renvoie des clips 9:16 sous-titrés, auto-hébergé avec Docker ou sur le service hébergé OpenShorts Cloud.** Par défaut, il n\'est pas entièrement local : le sélecteur de moments appelle Google Gemini, sauf si vous pointez une copie auto-hébergée vers un modèle de langage local.',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce qu\'OpenShorts, et est-il vraiment local ?',
@@ -1180,7 +1180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**OpenShortsは、長い動画から見どころを探し、字幕付きの9:16クリップを返すMITライセンスのオープンソースAIクリップ作成ツールで、Dockerによるセルフホストか、ホスト版のOpenShorts Cloudで使えます。** 既定では完全なローカル動作ではありません。セルフホスト版をローカルの言語モデルに向け直さない限り、見どころの選定でGoogle Geminiを呼び出します。',
+      '**OpenShortsは、コアがMITライセンスのオープンソースAIクリップ作成ツールで、READMEによると、長い動画から場面を選び、字幕付きの9:16クリップを返します。Dockerによるセルフホストか、ホスト版のOpenShorts Cloudで使えます。** 既定では完全なローカル動作ではありません。セルフホスト版をローカルの言語モデルに向け直さない限り、見どころの選定でGoogle Geminiを呼び出します。',
     quickAnswerTop: {
       ja: {
         question: 'OpenShortsとは何で、本当にローカルで動きますか？',
@@ -1464,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**O OpenShorts é um gerador de clipes com IA de código aberto e licença MIT que encontra os melhores momentos de um vídeo longo e devolve clipes 9:16 legendados, hospedado por você com Docker ou no serviço hospedado OpenShorts Cloud.** Por padrão, ele não é totalmente local: o seletor de momentos chama o Google Gemini, a menos que você aponte uma cópia auto-hospedada para um modelo de linguagem local.',
+      '**O OpenShorts é um gerador de clipes com IA de código aberto com um núcleo de licença MIT que, segundo o README, escolhe momentos de um vídeo longo e devolve clipes 9:16 legendados, hospedado por você com Docker ou no serviço hospedado OpenShorts Cloud.** Por padrão, ele não é totalmente local: o seletor de momentos chama o Google Gemini, a menos que você aponte uma cópia auto-hospedada para um modelo de linguagem local.',
     quickAnswerTop: {
       pt: {
         question: 'O que é o OpenShorts e ele é realmente local?',
@@ -1748,7 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**OpenShorts 是一款采用 MIT 许可的开源 AI 剪辑工具，能从长视频中找出最精彩的片段，并返回带字幕的 9:16 片段，可用 Docker 自托管，也可使用托管服务 OpenShorts Cloud。** 它默认并非完全本地：除非把自托管副本指向本地语言模型，否则选取精彩片段的步骤会调用 Google Gemini。',
+      '**OpenShorts 是一款开源 AI 剪辑工具，核心采用 MIT 许可；据 README，它会从长视频中挑选片段，并返回带字幕的 9:16 片段，可用 Docker 自托管，也可使用托管服务 OpenShorts Cloud。** 它默认并非完全本地：除非把自托管副本指向本地语言模型，否则选取精彩片段的步骤会调用 Google Gemini。',
     quickAnswerTop: {
       zh: {
         question: 'OpenShorts 是什么？它真的在本地运行吗？',
@@ -2032,7 +2032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**OpenShorts أداة مفتوحة المصدر بترخيص MIT تعمل بالذكاء الاصطناعي، تجد أقوى اللحظات في فيديو طويل وتعيد مقاطع بنسبة 9:16 مع ترجمة مضمّنة، سواء استضفتها بنفسك عبر Docker أو استخدمت الخدمة المستضافة OpenShorts Cloud.** وهي ليست محلية بالكامل افتراضياً: يستدعي منتقي اللحظات خدمة Google Gemini ما لم توجّه نسخة مستضافة ذاتياً إلى نموذج لغوي محلي.',
+      '**OpenShorts أداة مفتوحة المصدر تعمل بالذكاء الاصطناعي ونواتها بترخيص MIT، وبحسب README تختار لحظات من فيديو طويل وتعيد مقاطع بنسبة 9:16 مع ترجمة مضمّنة، سواء استضفتها بنفسك عبر Docker أو استخدمت الخدمة المستضافة OpenShorts Cloud.** وهي ليست محلية بالكامل افتراضياً: يستدعي منتقي اللحظات خدمة Google Gemini ما لم توجّه نسخة مستضافة ذاتياً إلى نموذج لغوي محلي.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو OpenShorts، وهل يعمل محلياً فعلاً؟',
@@ -2316,7 +2316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     leadAnswerBlock:
-      '**OpenShorts는 긴 영상에서 가장 강한 장면을 찾아 자막이 들어간 9:16 클립을 돌려주는 MIT 라이선스의 오픈소스 AI 클립 제작 도구이며, Docker로 직접 호스팅하거나 호스팅 서비스인 OpenShorts Cloud에서 쓸 수 있습니다.** 기본값으로는 완전한 로컬이 아닙니다. 직접 호스팅한 사본을 로컬 언어 모델로 돌리지 않는 한, 장면 선별 단계에서 Google Gemini를 호출합니다.',
+      '**OpenShorts는 핵심이 MIT 라이선스인 오픈소스 AI 클립 제작 도구로, README에 따르면 긴 영상에서 장면을 골라 자막이 들어간 9:16 클립을 돌려주며, Docker로 직접 호스팅하거나 호스팅 서비스인 OpenShorts Cloud에서 쓸 수 있습니다.** 기본값으로는 완전한 로컬이 아닙니다. 직접 호스팅한 사본을 로컬 언어 모델로 돌리지 않는 한, 장면 선별 단계에서 Google Gemini를 호출합니다.',
     quickAnswerTop: {
       ko: {
         question: 'OpenShorts는 무엇이며 정말 로컬에서 동작하나요?',

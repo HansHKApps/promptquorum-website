@@ -288,6 +288,110 @@ export function buildCategoryCompareData(group: CategoryGroupKey, lang: Language
   }
 }
 
+/**
+ * Number of rows each comparison tab renders, keyed by segment key. Articles interpolate these into their
+ * "N tools compared" copy so the text always equals what the table shows (same rows as buildCategoryCompareData).
+ */
+export function compareSegmentCounts(group: CategoryGroupKey): Record<string, number> {
+  return Object.fromEntries(buildCategoryCompareData(group, 'en').segments.map((s) => [s.key, s.rows.length]))
+}
+
+/**
+ * Price and normalized-license tallies over the rows each comparison tab renders (same rows as the table),
+ * for article prose such as "11 are free, 5 freemium". Keyed by segment key; license keys are the labels
+ * the table shows (normalizeLicenseLabel).
+ */
+export function compareSegmentFacts(
+  group: CategoryGroupKey,
+): Record<string, { count: number; price: { free: number; freemium: number; paid: number }; license: Record<string, number> }> {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const out: Record<string, { count: number; price: { free: number; freemium: number; paid: number }; license: Record<string, number> }> = {}
+  for (const seg of buildCategoryCompareData(group, 'en').segments) {
+    const price = { free: 0, freemium: 0, paid: 0 }
+    const license: Record<string, number> = {}
+    for (const r of seg.rows) {
+      const t = bySlug.get(r.slug)
+      if (!t) continue
+      if (t.price in price) price[t.price as keyof typeof price]++
+      if (t.license && t.license !== 'TODO') {
+        const label = normalizeLicenseLabel(t.license)
+        license[label] = (license[label] ?? 0) + 1
+      }
+    }
+    out[seg.key] = { count: seg.rows.length, price, license }
+  }
+  return out
+}
+
+/**
+ * How many rows of each comparison tab have an attribute documented as true (the "Yes" cells), keyed by segment key
+ * then attribute key. Articles interpolate these into "N document MCP support" copy so it always equals the table.
+ */
+export function compareSegmentAttrCounts(group: CategoryGroupKey): Record<string, Record<string, number>> {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const out: Record<string, Record<string, number>> = {}
+  for (const seg of buildCategoryCompareData(group, 'en').segments) {
+    const counts: Record<string, number> = {}
+    const attrKeys = new Set<string>()
+    for (const r of seg.rows) for (const k of Object.keys(bySlug.get(r.slug)?.compare ?? {})) attrKeys.add(k)
+    for (const k of attrKeys) counts[k] = seg.rows.filter((r) => bySlug.get(r.slug)?.compare?.[k] === true).length
+    out[seg.key] = counts
+  }
+  return out
+}
+
+/**
+ * Tools of one comparison tab (same rows as the table) whose normalized license label is one of `licenses`,
+ * as a localized "A, B and C" markdown list linking each tool's review. Tool names are language-neutral, so the
+ * sentence around the list stays translated while the names can never go stale.
+ */
+export function compareToolsByLicense(group: CategoryGroupKey, segmentKey: string, licenses: string[], lang: Language | string = 'en'): string {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const seg = buildCategoryCompareData(group, 'en').segments.find((s) => s.key === segmentKey)
+  const rows = (seg?.rows ?? []).filter((r) => {
+    const t = bySlug.get(r.slug)
+    return !!t && !!t.license && t.license !== 'TODO' && licenses.includes(normalizeLicenseLabel(t.license))
+  })
+  const prefix = lang === 'en' ? '' : `/${lang}`
+  return formatToolList(rows.map((r) => (r.reviewPath ? `[${r.name}](${prefix}${r.reviewPath})` : r.name)), lang)
+}
+
+/**
+ * Tools of one comparison tab (same rows as the table) that document `attrKey` as true (the "Yes" cells), as a localized
+ * "A, B and C" markdown list linking each tool's review. Same rule as compareSegmentAttrCounts, so a list in article prose
+ * always names exactly as many tools as the matching count states. Callers need at least two matches for the plural verb
+ * in the surrounding sentence to read correctly.
+ */
+export function compareToolsByAttr(group: CategoryGroupKey, segmentKey: string, attrKey: string, lang: Language | string = 'en'): string {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const seg = buildCategoryCompareData(group, 'en').segments.find((s) => s.key === segmentKey)
+  const rows = (seg?.rows ?? []).filter((r) => bySlug.get(r.slug)?.compare?.[attrKey] === true)
+  const prefix = lang === 'en' ? '' : `/${lang}`
+  return formatToolList(rows.map((r) => (r.reviewPath ? `[${r.name}](${prefix}${r.reviewPath})` : r.name)), lang)
+}
+
+function formatToolList(parts: string[], lang: Language | string): string {
+  // en-GB: "A, B and C" without the Oxford comma, matching the rest of the site's copy.
+  const tag = lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en-GB' : String(lang)
+  return new Intl.ListFormat(tag, { style: 'long', type: 'conjunction' }).format(parts)
+}
+
+/**
+ * Names of the tools that appear in both of two tabs of one group's comparison (same rows as the tables), as a localized
+ * "A, B and C" list. For copy such as "X and Y do both text-to-speech and speech-to-text, so they appear in both tables".
+ */
+export function compareToolsInBothSegments(group: CategoryGroupKey, segmentA: string, segmentB: string, lang: Language | string = 'en'): string {
+  const segs = buildCategoryCompareData(group, 'en').segments
+  const a = segs.find((s) => s.key === segmentA)?.rows ?? []
+  const inB = new Set((segs.find((s) => s.key === segmentB)?.rows ?? []).map((r) => r.slug))
+  return formatToolList(a.filter((r) => inB.has(r.slug)).map((r) => r.name), lang)
+}
+
+/** Distinct tools across all tabs of a group's comparison (a tool in two tabs counts once). */
+export function compareGroupTotal(group: CategoryGroupKey): number {
+  return new Set(buildCategoryCompareData(group, 'en').segments.flatMap((s) => s.rows.map((r) => r.slug))).size
+}
+
 /** Groups that have at least one comparison segment defined (the homepage tool only offers these). */
 export function getComparableGroups(lang: Language | string = 'en'): CategoryCompareData[] {
   return (Object.keys(COMPARE_SEGMENTS) as CategoryGroupKey[])

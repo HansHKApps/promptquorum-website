@@ -47,8 +47,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { type: 'plain-terms', text: 'An AI agent is a program that uses an AI model in a loop to complete multi-step tasks. Running that model in the cloud (like GPT or Claude) is fast and pay-per-use; running it locally on your own GPU is slower per step but free once you own the hardware. Most businesses end up using both: cloud for hard reasoning tasks, local for routine, high-volume, or sensitive work.' },
           ],
           items: [
-            '**Cloud agents (GPT-5.6, Claude Sonnet 5):** Fastest (50-200ms/step), most capable, most expensive, no privacy.',
-            '**Local agents (Llama 13B+):** Slower (2-5 sec/step), less capable, cheap at scale, fully private.',
+            '**Cloud agents (GPT-5.6, Claude Sonnet 5):** Fastest (50-200ms/step), most capable, most expensive; prompts go to the vendor\'s servers.',
+            '**Local agents (Llama 13B+):** Slower (2-5 sec/step), less capable, cheap at scale; prompts stay on your machine when the model runs locally.',
             'Break-even: ~50M tokens/month. Beyond that, local is cheaper.',
             '**Best:** Hybrid. Use cloud for complex reasoning, local for routine automation.',
             'Most businesses today use a hybrid approach.',
@@ -90,8 +90,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'privacy',
           title: 'Which Is Better for Privacy and Compliance?',
           content: [
-            '**Local agents win on privacy — no data leaves your machine.** Cloud agents send every prompt and response to vendor servers (OpenAI, Anthropic) subject to their data retention policies.',
-            '**GDPR Article 28** requires a data processing agreement for cloud AI — local agents eliminate this requirement entirely. [HIPAA-regulated healthcare data](/local-llms/private-local-ai-for-business) and financial data under SOC2 are best served by local agents.',
+            '**Local agents keep prompts and responses on your machine when the model runs locally.** Cloud agents send every prompt and response to vendor servers (OpenAI, Anthropic) subject to their data retention policies. Check each tool\'s own telemetry and update-check settings.',
+            '**GDPR Article 28** requires a data processing agreement when a cloud AI provider processes personal data on your behalf; a local model removes that processor relationship for the inference step, but your overall compliance still depends on lawful basis, security measures and, where required, a DPIA. [HIPAA-regulated healthcare data](/local-llms/private-local-ai-for-business) and financial data under SOC2 may be easier to control with local agents. This is general information, not legal advice.',
             '**Cloud compromise:** Anthropic Claude does not train on your data (per their policy). OpenAI offers enterprise plans with data isolation. Neither eliminates the data transfer itself.',
           ],
         },
@@ -135,7 +135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             'Data is sensitive — healthcare, finance, legal, or proprietary business data.',
-            'GDPR, HIPAA, or SOC2 compliance requires data to stay on-premises.',
+            'Regulated data (GDPR, HIPAA, SOC2) is easier to keep under your control on-premises; cloud setups with a signed data processing agreement can also be compliant.',
             'Volume exceeds 50M tokens/month — local is 10–60× cheaper at this scale.',
             'You need full customization of agent behavior, tools, and memory.',
             'You want zero vendor lock-in — switch models anytime without API changes.',
@@ -146,19 +146,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What Is the Hybrid Approach?',
           content: [
             '**Best practice in 2026: Route simple queries to local agents, complex queries to cloud.** This gives you speed + privacy for routine work and accuracy for hard problems.',
-            'Example workflow: A support agent routes FAQ-type questions to local Llama 13B (2 sec, free) and escalates complex issues to GPT-5.6 (200ms, $0.02). Result: 80% cost reduction with no quality loss on complex queries.',
+            'Example workflow: A support agent routes FAQ-type questions to local Llama 13B (2 sec, free) and escalates complex issues to GPT-5.6 (200ms, $0.02). Result: lower cloud spend, because only the hard queries are billed; quality on complex queries stays with the cloud model.',
             'Tools like [PromptQuorum](https://www.promptquorum.com) dispatch to multiple models and compare results — ideal for hybrid setups.',
           ],
           image: '/images/local-vs-cloud-agents-hybrid-flow-en.svg',
-          imageCaption: 'Hybrid approach: route simple queries to local agents (Llama 13B, 2 sec, free) and escalate complex reasoning to cloud (GPT-5.6, 200ms, $0.02). Result: 80% cost reduction with zero quality loss on hard problems.',
+          imageCaption: 'Hybrid approach: route simple queries to local agents (Llama 13B, 2 sec, free) and escalate complex reasoning to cloud (GPT-5.6, 200ms, $0.02). Result: lower cloud spend, with hard problems still handled by the cloud model.',
         },
         regionalContext: {
           id: 'regional-context',
           title: 'Regional Considerations',
           content: [
-            '**EU/DACH:** GDPR Article 28 and BSI-Grundschutz requirements strongly favor local agents for processing EU citizen data. Cloud agents require Standard Contractual Clauses for cross-border transfer to US providers.',
-            '**Japan:** APPI requirements favor local agents for sensitive business data. Japanese enterprises in banking and healthcare increasingly deploy local agents for compliance.',
-            '**China:** Cloud agents from US providers (OpenAI, Anthropic) are not directly available. Local agents running [Qwen3](/local-llms/top-open-source-models-ollama) or DeepSeek comply with China\'s 2021 Data Security Law.',
+            '**EU/DACH:** GDPR Article 28 requires a data processing agreement with any cloud provider that processes personal data for you, and transfers to US providers need a valid transfer mechanism such as Standard Contractual Clauses. A local model removes the processor relationship for the inference step but does not by itself make a deployment compliant; BSI IT-Grundschutz is a voluntary security framework for most private organisations.',
+            '**Japan:** The APPI sets conditions on handling personal data, including transfers abroad. A local model can reduce what is sent to third parties, but whether a deployment meets the APPI depends on your own assessment.',
+            '**China:** Cloud agents from US providers (OpenAI, Anthropic) are not directly available. China\'s 2021 Data Security Law sets data-handling obligations; running a model such as [Qwen3](/local-llms/top-open-source-models-ollama) or DeepSeek locally does not by itself establish compliance, so check with local counsel.',
           ],
         },
         faqSection: {
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'Are local AI agents as good as cloud agents in 2026?',
-              a: 'For routine tasks (Q&A, summarization, simple automation): yes, local Llama 13B+ matches cloud quality. For complex multi-step reasoning, code generation with context, and tool use: cloud agents (GPT-5.6, Claude Sonnet 5) are still significantly better. The gap narrows annually.',
+              a: 'For routine tasks (Q&A, summarization, simple automation): often yes, a local Llama 13B+ model can come close to cloud quality. For complex multi-step reasoning, code generation with context, and tool use: cloud agents (GPT-5.6, Claude Sonnet 5) are still significantly better. The gap narrows annually.',
             },
             {
               q: 'What is the break-even point for local vs cloud?',
@@ -183,7 +183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Is hybrid deployment worth the complexity?',
-              a: 'Yes, for most businesses processing 10M+ tokens/month. The routing logic is simple: classify query difficulty, send easy queries local, hard queries cloud. PromptQuorum handles this automatically.',
+              a: 'Yes, for most businesses processing 10M+ tokens/month. The routing logic is simple: classify query difficulty, send easy queries local, hard queries cloud. PromptQuorum dispatches one prompt to several models and compares the results, but the routing logic between local and cloud models is something you set up yourself.',
             },
             {
               q: 'Which local model is best for agents?',
@@ -249,11 +249,11 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Are local AI agents as good as cloud agents in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For routine tasks (Q&A, summarization): yes, local Llama 13B+ matches cloud quality. For complex multi-step reasoning and tool use: cloud agents (GPT-5.6, Claude Sonnet 5) are still significantly better.' } },
+          { '@type': 'Question', 'name': 'Are local AI agents as good as cloud agents in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For routine tasks (Q&A, summarization): often yes, a local Llama 13B+ model can come close to cloud quality. For complex multi-step reasoning and tool use: cloud agents (GPT-5.6, Claude Sonnet 5) are still significantly better.' } },
           { '@type': 'Question', 'name': 'What is the break-even point for local vs cloud?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Approximately 50M tokens/month. Below that, cloud is cheaper. Above, local saves 60–90% — you pay only electricity after the initial GPU investment ($2,000–$2,600 for RTX 4090 EOL).' } },
           { '@type': 'Question', 'name': 'Can I run a local agent on consumer hardware?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Llama 13B runs on RTX 4090 (24GB VRAM) at 2–3 sec per step. For 7B agents, RTX 4070 Ti (12GB) is sufficient.' } },
           { '@type': 'Question', 'name': 'Do local agents support tool use and function calling?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, via Ollama tool calling API (supported since Ollama 0.4+). LangGraph and LangChain integrate with local models for multi-step tool use.' } },
-          { '@type': 'Question', 'name': 'Is hybrid deployment worth the complexity?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, for businesses processing 10M+ tokens/month. Route easy queries to local agents (free), complex queries to cloud (accurate). 80% cost reduction with no quality loss on complex queries.' } },
+          { '@type': 'Question', 'name': 'Is hybrid deployment worth the complexity?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, for businesses processing 10M+ tokens/month. Route easy queries to local agents (free), complex queries to cloud (accurate). Lower cloud spend, with complex queries still handled by the cloud model.' } },
           { '@type': 'Question', 'name': 'Which local model is best for agents?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B for quality (dual RTX 4090), Qwen3 32B for balanced speed/quality (single RTX 4090), Llama 13B for cost-effective agents on RTX 4070 Ti.' } },
           { '@type': 'Question', 'name': 'How do I handle agent failures locally?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Set OLLAMA_KEEP_ALIVE for persistent model loading, implement health checks, add fallback to cloud API for critical workflows. Production local agents need monitoring (Prometheus, Grafana).' } },
           { '@type': 'Question', 'name': 'Will local agents match cloud quality by 2027?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For 70B models: likely within 90% of GPT-5.6 quality by late 2027. For 13B: not yet. The gap is narrowing but cloud maintains an edge on novel reasoning.' } },
@@ -268,7 +268,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Cloud Agent (GPT-5.6 API)', 'description': '100–200ms per step. $10 per 1M tokens. Best for complex reasoning, tool use, and low-latency applications.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Cloud Agent (Claude Sonnet 5 API)', 'description': '150–300ms per step. $10 per 1M tokens. Strong at long-context tasks and code generation.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Local Agent (Llama 13B)', 'description': '2–3 sec per step. $0 per token after hardware. Best for privacy, routine automation, and high-volume workloads.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Hybrid Approach', 'description': 'Route simple queries local, complex queries cloud. 80% cost reduction. Best practice for production deployments in 2026.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Hybrid Approach', 'description': 'Route simple queries local, complex queries cloud. Lower cloud spend. Best practice for production deployments in 2026.' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-vs-cloud-agents-static.html',
@@ -313,8 +313,8 @@ schema: {
             { type: 'plain-terms', text: 'Un agente de IA es un programa que usa un modelo de IA en bucle para completar tareas de varios pasos. Ejecutar ese modelo en la nube (como GPT o Claude) es rápido y se paga por uso; ejecutarlo localmente en tu propia GPU es más lento por paso pero gratuito una vez que tienes el hardware. La mayoría de las empresas terminan usando ambos: la nube para tareas de razonamiento complejo, lo local para trabajo rutinario, de alto volumen o sensible.' },
           ],
           items: [
-            '**Agentes Cloud (GPT-5.6, Claude Sonnet 5):** Los más rápidos (50–200ms/paso), mayor capacidad, mayor coste, sin privacidad.',
-            '**Agentes locales (Llama 13B+):** Más lentos (2–5 s/paso), menor capacidad, baratos a escala, completamente privados.',
+            '**Agentes Cloud (GPT-5.6, Claude Sonnet 5):** Los más rápidos (50–200ms/paso), mayor capacidad, mayor coste; los prompts van a los servidores del proveedor.',
+            '**Agentes locales (Llama 13B+):** Más lentos (2–5 s/paso), menor capacidad, baratos a escala; los prompts permanecen en tu equipo cuando el modelo se ejecuta en local.',
             'Punto de equilibrio: ~50M tokens/mes. A partir de ahí, el local es más barato.',
             '**Lo mejor:** Híbrido. Cloud para razonamiento complejo, local para automatización rutinaria.',
             'La mayoría de las empresas usa hoy el enfoque híbrido.',
@@ -356,8 +356,8 @@ schema: {
           id: 'privacy',
           title: '¿Cuál es mejor para privacidad y cumplimiento?',
           content: [
-            '**Los agentes locales ganan en privacidad — ningún dato sale de tu máquina.** Los agentes Cloud envían cada prompt y respuesta a los servidores del proveedor (OpenAI, Anthropic), sujetos a sus políticas de retención de datos.',
-            '**El Artículo 28 del RGPD** exige un acuerdo de procesamiento de datos para la IA en la nube — los agentes locales eliminan completamente este requisito. Los [datos sanitarios regulados por HIPAA](/es/local-llms/private-local-ai-for-business) y los datos financieros bajo SOC2 se sirven mejor con agentes locales.',
+            '**Los agentes locales mantienen los prompts y las respuestas en tu equipo cuando el modelo se ejecuta en local.** Los agentes Cloud envían cada prompt y respuesta a los servidores del proveedor (OpenAI, Anthropic), sujetos a sus políticas de retención de datos. Revisa la telemetría y las comprobaciones de actualizaciones de cada herramienta.',
+            '**El Artículo 28 del RGPD** exige un acuerdo de encargo de tratamiento cuando un proveedor de IA en la nube trata datos personales por cuenta tuya; un modelo local elimina esa relación de encargado para el paso de inferencia, pero tu cumplimiento global sigue dependiendo de la base jurídica, las medidas de seguridad y, cuando proceda, una EIPD. Los [datos sanitarios regulados por HIPAA](/es/local-llms/private-local-ai-for-business) y los datos financieros bajo SOC2 pueden ser más fáciles de controlar con agentes locales. Esto es información general, no asesoramiento legal.',
             '**Concesión Cloud:** Anthropic Claude no entrena con tus datos (según su política). OpenAI ofrece planes empresariales con aislamiento de datos. Ninguno elimina la transferencia de datos en sí.',
           ],
         },
@@ -401,7 +401,7 @@ schema: {
           ],
           items: [
             'Los datos son sensibles — sanitarios, financieros, legales o datos empresariales propietarios.',
-            'El cumplimiento de RGPD, HIPAA o SOC2 exige que los datos permanezcan en las instalaciones.',
+            'Los datos regulados (RGPD, HIPAA, SOC2) son más fáciles de mantener bajo tu control en las instalaciones; las configuraciones en la nube con un acuerdo de encargo de tratamiento firmado también pueden cumplir la normativa.',
             'El volumen supera los 50M tokens/mes — local es 10–60× más barato a esta escala.',
             'Necesitas personalización total del comportamiento del agente, herramientas y memoria.',
             'Quieres cero dependencia del proveedor — cambia de modelos en cualquier momento sin cambios de API.',
@@ -412,19 +412,19 @@ schema: {
           title: '¿Qué es el enfoque híbrido?',
           content: [
             '**Mejor práctica en 2026: Enruta las consultas simples a agentes locales, las complejas a Cloud.** Esto te da velocidad + privacidad para el trabajo rutinario y precisión para los problemas difíciles.',
-            'Ejemplo de flujo de trabajo: Un agente de soporte enruta preguntas del tipo FAQ al Llama 13B local (2 s, gratuito) y escala los problemas complejos a GPT-5.6 (200ms, $0,02). Resultado: 80% de reducción de costes sin pérdida de calidad en consultas complejas.',
+            'Ejemplo de flujo de trabajo: Un agente de soporte enruta preguntas del tipo FAQ al Llama 13B local (2 s, gratuito) y escala los problemas complejos a GPT-5.6 (200ms, $0,02). Resultado: menor gasto en la nube, porque solo se facturan las consultas difíciles; la calidad en consultas complejas queda en manos del modelo Cloud.',
             'Herramientas como [PromptQuorum](https://www.promptquorum.com?lang=es) despachan a múltiples modelos y comparan resultados — ideal para configuraciones híbridas.',
           ],
           image: '/images/local-vs-cloud-agents-hybrid-flow-es.svg',
-          imageCaption: 'Enfoque híbrido: enruta las consultas simples a agentes locales (Llama 13B, 2 s, gratuito) y escala el razonamiento complejo a Cloud (GPT-5.6, 200ms, $0,02). Resultado: 80% de reducción de costes sin pérdida de calidad en problemas difíciles.',
+          imageCaption: 'Enfoque híbrido: enruta las consultas simples a agentes locales (Llama 13B, 2 s, gratuito) y escala el razonamiento complejo a Cloud (GPT-5.6, 200ms, $0,02). Resultado: menor gasto en la nube, con los problemas difíciles resueltos por el modelo Cloud.',
         },
         regionalContext: {
           id: 'regional-context',
           title: 'Consideraciones regionales',
           content: [
-            '**UE/España y LATAM:** El Artículo 28 del RGPD y los requisitos de cumplimiento normativo favorecen fuertemente los agentes locales para el procesamiento de datos de ciudadanos de la UE. Los agentes Cloud requieren Cláusulas Contractuales Estándar para la transferencia transfronteriza a proveedores estadounidenses.',
-            '**Japón:** Los requisitos de la APPI favorecen los agentes locales para datos empresariales sensibles. Las empresas japonesas de banca y sanidad despliegan cada vez más agentes locales para el cumplimiento.',
-            '**China:** Los agentes Cloud de proveedores estadounidenses (OpenAI, Anthropic) no están disponibles directamente. Los agentes locales que ejecutan [Qwen3](/es/local-llms/top-open-source-models-ollama) o DeepSeek cumplen con la Ley de Seguridad de Datos de China de 2021.',
+            '**UE/España y LATAM:** El Artículo 28 del RGPD exige un acuerdo de encargo de tratamiento con cualquier proveedor en la nube que trate datos personales por tu cuenta, y las transferencias a proveedores estadounidenses necesitan un mecanismo de transferencia válido, como las Cláusulas Contractuales Estándar. Un modelo local elimina la relación de encargado para el paso de inferencia, pero no hace por sí solo que un despliegue cumpla la normativa.',
+            '**Japón:** La APPI establece condiciones para el tratamiento de datos personales, incluidas las transferencias al extranjero. Un modelo local puede reducir lo que se envía a terceros, pero que un despliegue cumpla la APPI depende de tu propia evaluación.',
+            '**China:** Los agentes Cloud de proveedores estadounidenses (OpenAI, Anthropic) no están disponibles directamente. La Ley de Seguridad de Datos de China de 2021 establece obligaciones de tratamiento de datos; ejecutar en local un modelo como [Qwen3](/es/local-llms/top-open-source-models-ollama) o DeepSeek no establece por sí solo el cumplimiento, así que consulta con asesoría local.',
           ],
         },
         faqSection: {
@@ -433,7 +433,7 @@ schema: {
           faqs: [
             {
               q: '¿Son los agentes de IA locales tan buenos como los agentes Cloud en 2026?',
-              a: 'Para tareas rutinarias (Q&A, resumen, automatización simple): sí, el Llama 13B+ local iguala la calidad Cloud. Para razonamiento multietapa complejo, generación de código con contexto y uso de herramientas: los agentes Cloud (GPT-5.6, Claude Sonnet 5) siguen siendo significativamente mejores. La brecha se reduce cada año.',
+              a: 'Para tareas rutinarias (Q&A, resumen, automatización simple): a menudo sí, un Llama 13B+ local puede acercarse a la calidad Cloud. Para razonamiento multietapa complejo, generación de código con contexto y uso de herramientas: los agentes Cloud (GPT-5.6, Claude Sonnet 5) siguen siendo significativamente mejores. La brecha se reduce cada año.',
             },
             {
               q: '¿Cuál es el punto de equilibrio entre local y Cloud?',
@@ -523,11 +523,11 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '¿Son los agentes de IA locales tan buenos como los agentes Cloud en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para tareas rutinarias (Q&A, resumen): sí, el Llama 13B+ local iguala la calidad Cloud. Para razonamiento multietapa complejo y uso de herramientas: los agentes Cloud (GPT-5.6, Claude Sonnet 5) siguen siendo significativamente mejores.' } },
+          { '@type': 'Question', 'name': '¿Son los agentes de IA locales tan buenos como los agentes Cloud en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para tareas rutinarias (Q&A, resumen): a menudo sí, un Llama 13B+ local puede acercarse a la calidad Cloud. Para razonamiento multietapa complejo y uso de herramientas: los agentes Cloud (GPT-5.6, Claude Sonnet 5) siguen siendo significativamente mejores.' } },
           { '@type': 'Question', 'name': '¿Cuál es el punto de equilibrio entre local y Cloud?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Aproximadamente 50M tokens/mes. Por debajo, Cloud es más barato. Por encima, local ahorra un 60–90% — solo pagas electricidad tras la inversión inicial en GPU ($2.000–$2.600 por RTX 4090 EOL).' } },
           { '@type': 'Question', 'name': '¿Puedo ejecutar un agente local en hardware de consumo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Un agente Llama 13B funciona en una RTX 4090 (24GB VRAM) a 2–3 s por paso. Para agentes de 7B, una RTX 4070 Ti (12GB) es suficiente.' } },
           { '@type': 'Question', 'name': '¿Los agentes locales admiten uso de herramientas y function calling?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, a través de la API de herramientas de Ollama (desde Ollama 0.4+). LangGraph y LangChain se integran con modelos locales para el uso de herramientas multietapa.' } },
-          { '@type': 'Question', 'name': '¿Vale la pena la complejidad del despliegue híbrido?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para empresas que procesan 10M+ tokens/mes. Consultas fáciles a local (gratis), consultas difíciles a Cloud (precisas). Reducción de costes del 80% sin pérdida de calidad.' } },
+          { '@type': 'Question', 'name': '¿Vale la pena la complejidad del despliegue híbrido?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para empresas que procesan 10M+ tokens/mes. Consultas fáciles a local (gratis), consultas difíciles a Cloud (precisas). Menor gasto en la nube, con las consultas complejas resueltas por el modelo Cloud.' } },
           { '@type': 'Question', 'name': '¿Qué modelo local es mejor para agentes?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B para calidad (doble RTX 4090), Qwen3 32B para equilibrio velocidad/calidad (RTX 4090 única), Llama 13B para agentes rentables en RTX 4070 Ti.' } },
           { '@type': 'Question', 'name': '¿Cómo gestiono los fallos de agentes locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Configura OLLAMA_KEEP_ALIVE para la carga persistente del modelo, implementa comprobaciones de salud, añade fallback a Cloud API para flujos críticos. Los agentes en producción necesitan monitorización (Prometheus, Grafana).' } },
           { '@type': 'Question', 'name': '¿Igualarán los agentes locales la calidad Cloud en 2027?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para modelos de 70B: probablemente dentro del 90% de la calidad de GPT-5.6 a finales de 2027. Para modelos de 13B: todavía no. La brecha se está reduciendo, pero Cloud mantiene ventaja en razonamiento novedoso.' } },
@@ -542,7 +542,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Agente Cloud (GPT-5.6 API)', 'description': '100–200ms por paso. $10 por 1M tokens. Mejor para razonamiento complejo, uso de herramientas y aplicaciones de baja latencia.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Agente Cloud (Claude Sonnet 5 API)', 'description': '150–300ms por paso. $10 por 1M tokens. Fuerte en tareas de contexto largo y generación de código.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Agente local (Llama 13B)', 'description': '2–3 s por paso. $0 por token tras el hardware. Mejor para privacidad, automatización rutinaria y cargas de trabajo de alto volumen.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Enfoque híbrido', 'description': 'Enruta consultas simples a local, consultas complejas a Cloud. Reducción de costes del 80%. Mejor práctica para despliegues en producción en 2026.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Enfoque híbrido', 'description': 'Enruta consultas simples a local, consultas complejas a Cloud. Menor gasto en la nube. Mejor práctica para despliegues en producción en 2026.' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-vs-cloud-agents-static.html',
@@ -587,8 +587,8 @@ schema: {
             { type: 'plain-terms', text: 'الوكيل الذكي هو برنامج يستخدم نموذج ذكاء اصطناعي ضمن حلقة لإنجاز مهام متعددة الخطوات. تشغيل هذا النموذج في السحابة (مثل GPT أو Claude) سريع ويُدفع بحسب الاستخدام؛ أما تشغيله محليًا على بطاقة رسومات خاصة بك فأبطأ لكل خطوة لكنه مجاني بمجرد امتلاك العتاد. تنتهي معظم الشركات باستخدام الاثنين معًا: السحابة للمهام الاستدلالية الصعبة، والمحلي للعمل الروتيني وعالي الحجم أو الحساس.' },
           ],
           items: [
-            '**الوكلاء السحابيون (GPT-5.6، Claude Sonnet 5):** الأسرع (50–200 مللي ثانية/خطوة)، أعلى قدرة، أعلى تكلفة، بلا خصوصية.',
-            '**الوكلاء المحليون (Llama 13B+):** أبطأ (2–5 ثوانٍ/خطوة)، قدرة أقل، رخيصون على نطاق واسع، خصوصية كاملة.',
+            '**الوكلاء السحابيون (GPT-5.6، Claude Sonnet 5):** الأسرع (50–200 مللي ثانية/خطوة)، أعلى قدرة، أعلى تكلفة؛ تنتقل المطالبات إلى خوادم المزوّد.',
+            '**الوكلاء المحليون (Llama 13B+):** أبطأ (2–5 ثوانٍ/خطوة)، قدرة أقل، رخيصون على نطاق واسع؛ تبقى المطالبات على جهازك عندما يعمل النموذج محليًا.',
             'نقطة التعادل: ~50 مليون رمز/شهر. بعد ذلك، المحلي أرخص.',
             '**الأفضل:** هجين. السحابة للاستدلال المعقّد، المحلي للأتمتة الروتينية.',
             'تستخدم معظم الشركات اليوم النهج الهجين.',
@@ -630,8 +630,8 @@ schema: {
           id: 'privacy',
           title: 'أيهما أفضل للخصوصية والامتثال؟',
           content: [
-            '**يفوز الوكلاء المحليون في الخصوصية — لا تغادر أي بيانات جهازك.** يُرسل الوكلاء السحابيون كل مطالبة واستجابة إلى خوادم المزوّد (OpenAI، Anthropic)، خاضعة لسياسات الاحتفاظ بالبيانات الخاصة بهم.',
-            '**المادة 28 من GDPR** تتطلب اتفاقية معالجة بيانات للذكاء الاصطناعي السحابي — يلغي الوكلاء المحليون هذا المتطلب تمامًا. [البيانات الصحية الخاضعة لـHIPAA](/ar/local-llms/private-local-ai-for-business) والبيانات المالية بموجب SOC2 تُخدَم على نحو أفضل بوكلاء محليين.',
+            '**يُبقي الوكلاء المحليون المطالبات والاستجابات على جهازك عندما يعمل النموذج محليًا.** يُرسل الوكلاء السحابيون كل مطالبة واستجابة إلى خوادم المزوّد (OpenAI، Anthropic)، خاضعة لسياسات الاحتفاظ بالبيانات الخاصة بهم. راجع إعدادات القياس عن بُعد وفحص التحديثات في كل أداة.',
+            '**المادة 28 من GDPR** تتطلب اتفاقية معالجة بيانات عندما يعالج مزوّد ذكاء اصطناعي سحابي بيانات شخصية نيابةً عنك؛ يزيل النموذج المحلي علاقة المعالِج هذه في خطوة الاستدلال، لكن امتثالك الشامل يظل مرهونًا بالأساس القانوني والتدابير الأمنية وتقييم الأثر عند الاقتضاء. قد يكون التحكم في [البيانات الصحية الخاضعة لـHIPAA](/ar/local-llms/private-local-ai-for-business) والبيانات المالية بموجب SOC2 أسهل مع الوكلاء المحليين. هذه معلومات عامة وليست استشارة قانونية.',
             '**تنازل السحابة:** لا تتدرّب Anthropic Claude على بياناتك (وفقًا لسياستها). تقدّم OpenAI خططًا مؤسسية بعزل بيانات. لا يلغي أيٌّ منهما نقل البيانات نفسه.',
           ],
         },
@@ -675,7 +675,7 @@ schema: {
           ],
           items: [
             'البيانات حساسة — صحية أو مالية أو قانونية أو بيانات مؤسسية خاصة.',
-            'يتطلب الامتثال لـGDPR أو HIPAA أو SOC2 بقاء البيانات داخل المؤسسة.',
+            'قد يكون إبقاء البيانات المنظّمة (GDPR وHIPAA وSOC2) تحت سيطرتك أسهل داخل المؤسسة؛ ويمكن أيضًا أن تستوفي الإعدادات السحابية المتطلبات عند وجود اتفاقية معالجة بيانات موقّعة.',
             'يتجاوز الحجم 50 مليون رمز/شهر — المحلي أرخص بـ10–60 مرة على هذا النطاق.',
             'تحتاج تخصيصًا كاملًا لسلوك الوكيل والأدوات والذاكرة.',
             'تريد صفر اعتماد على المزوّد — بدّل النماذج في أي وقت دون تغييرات API.',
@@ -686,19 +686,19 @@ schema: {
           title: 'ما النهج الهجين؟',
           content: [
             '**أفضل ممارسة في 2026: وجّه الاستعلامات البسيطة إلى الوكلاء المحليين، والمعقّدة إلى السحابة.** هذا يمنحك السرعة + الخصوصية للعمل الروتيني والدقة للمشكلات الصعبة.',
-            'مثال على سير العمل: يوجّه وكيل دعم أسئلة من نوع FAQ إلى Llama 13B المحلي (ثانيتان، مجاني) ويصعّد المشكلات المعقّدة إلى GPT-5.6 (200 مللي ثانية، 0.02$). النتيجة: خفض 80% في التكاليف دون خسارة جودة في الاستعلامات المعقّدة.',
+            'مثال على سير العمل: يوجّه وكيل دعم أسئلة من نوع FAQ إلى Llama 13B المحلي (ثانيتان، مجاني) ويصعّد المشكلات المعقّدة إلى GPT-5.6 (200 مللي ثانية، 0.02$). النتيجة: إنفاق سحابي أقل لأن الاستعلامات الصعبة وحدها تُحتسب، وتبقى جودة الاستعلامات المعقّدة بيد النموذج السحابي.',
             'أدوات مثل [PromptQuorum](https://www.promptquorum.com?lang=ar) تُرسل إلى نماذج متعددة وتقارن النتائج — مثالية للإعدادات الهجينة.',
           ],
           image: '/images/local-vs-cloud-agents-hybrid-flow-es.svg',
-          imageCaption: 'النهج الهجين: وجّه الاستعلامات البسيطة إلى الوكلاء المحليين (Llama 13B، ثانيتان، مجاني) وصعّد الاستدلال المعقّد إلى السحابة (GPT-5.6، 200 مللي ثانية، 0.02$). النتيجة: خفض 80% في التكاليف دون خسارة جودة في المشكلات الصعبة.',
+          imageCaption: 'النهج الهجين: وجّه الاستعلامات البسيطة إلى الوكلاء المحليين (Llama 13B، ثانيتان، مجاني) وصعّد الاستدلال المعقّد إلى السحابة (GPT-5.6، 200 مللي ثانية، 0.02$). النتيجة: إنفاق سحابي أقل، مع بقاء المشكلات الصعبة بيد النموذج السحابي.',
         },
         regionalContext: {
           id: 'regional-context',
           title: 'اعتبارات إقليمية',
           content: [
-            '**دول الخليج:** يفضّل نظام حماية البيانات الشخصية السعودي (PDPL) ولوائح الإمارات الوكلاء المحليين بقوة لمعالجة بيانات المواطنين. تتطلب الوكلاء السحابيون ضمانات للنقل عبر الحدود إلى مزودين أجانب. تُتيح النماذج العربية السيادية (Jais، ALLaM، Falcon) وكلاء عربيين محليين بالكامل بما يتوافق مع مبادرات السيادة على الذكاء الاصطناعي في المنطقة.',
-            '**اليابان:** تفضّل متطلبات APPI الوكلاء المحليين للبيانات المؤسسية الحساسة. تنشر الشركات اليابانية في المصارف والرعاية الصحية وكلاء محليين بشكل متزايد للامتثال.',
-            '**الصين:** الوكلاء السحابيون من المزودين الأمريكيين (OpenAI، Anthropic) غير متاحين مباشرة. الوكلاء المحليون الذين يُشغّلون [Qwen3](/ar/local-llms/top-open-source-models-ollama) أو DeepSeek يمتثلون لقانون أمن البيانات الصيني لعام 2021.',
+            '**دول الخليج:** يضع نظام حماية البيانات الشخصية السعودي (PDPL) ولوائح الإمارات شروطًا على معالجة البيانات الشخصية ونقلها عبر الحدود. قد يقلّل الوكيل المحلي ما يُرسَل إلى مزودين أجانب، لكن استيفاء أي نشر لهذه المتطلبات يعتمد على تقييمك الخاص. وتتيح النماذج العربية السيادية (Jais، ALLaM، Falcon) خيارات محلية تنسجم مع مبادرات السيادة على الذكاء الاصطناعي في المنطقة.',
+            '**اليابان:** يضع قانون APPI شروطًا على معالجة البيانات الشخصية، بما في ذلك النقل إلى الخارج. قد يقلّل النموذج المحلي ما يُرسَل إلى أطراف ثالثة، لكن استيفاء أي نشر لقانون APPI يعتمد على تقييمك الخاص.',
+            '**الصين:** الوكلاء السحابيون من المزودين الأمريكيين (OpenAI، Anthropic) غير متاحين مباشرة. يفرض قانون أمن البيانات الصيني لعام 2021 التزامات في التعامل مع البيانات؛ وتشغيل نموذج مثل [Qwen3](/ar/local-llms/top-open-source-models-ollama) أو DeepSeek محليًا لا يثبت الامتثال بحد ذاته، لذا استشر مستشارًا قانونيًا محليًا.',
           ],
         },
         faqSection: {
@@ -707,7 +707,7 @@ schema: {
           faqs: [
             {
               q: 'هل وكلاء الذكاء الاصطناعي المحليون جيدون مثل الوكلاء السحابيين في 2026؟',
-              a: 'للمهام الروتينية (الأسئلة والأجوبة، التلخيص، الأتمتة البسيطة): نعم، يضاهي Llama 13B+ المحلي جودة السحابة. للاستدلال المعقّد متعدد المراحل، وتوليد الشيفرة بالسياق، واستخدام الأدوات: لا يزال الوكلاء السحابيون (GPT-5.6، Claude Sonnet 5) أفضل بشكل كبير. تتقلّص الفجوة كل سنة.',
+              a: 'للمهام الروتينية (الأسئلة والأجوبة، التلخيص، الأتمتة البسيطة): غالبًا نعم، فقد يقترب Llama 13B+ المحلي من جودة السحابة. للاستدلال المعقّد متعدد المراحل، وتوليد الشيفرة بالسياق، واستخدام الأدوات: لا يزال الوكلاء السحابيون (GPT-5.6، Claude Sonnet 5) أفضل بشكل كبير. تتقلّص الفجوة كل سنة.',
             },
             {
               q: 'ما نقطة التعادل بين المحلي والسحابي؟',
@@ -797,11 +797,11 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'هل وكلاء الذكاء الاصطناعي المحليون جيدون مثل الوكلاء السحابيين في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'للمهام الروتينية (الأسئلة والأجوبة، التلخيص): نعم، يضاهي Llama 13B+ المحلي جودة السحابة. للاستدلال المعقّد متعدد المراحل واستخدام الأدوات: لا يزال الوكلاء السحابيون (GPT-5.6، Claude Sonnet 5) أفضل بشكل كبير.' } },
+          { '@type': 'Question', 'name': 'هل وكلاء الذكاء الاصطناعي المحليون جيدون مثل الوكلاء السحابيين في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'للمهام الروتينية (الأسئلة والأجوبة، التلخيص): غالبًا نعم، فقد يقترب Llama 13B+ المحلي من جودة السحابة. للاستدلال المعقّد متعدد المراحل واستخدام الأدوات: لا يزال الوكلاء السحابيون (GPT-5.6، Claude Sonnet 5) أفضل بشكل كبير.' } },
           { '@type': 'Question', 'name': 'ما نقطة التعادل بين المحلي والسحابي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'قرابة 50 مليون رمز/شهر. دونها، السحابة أرخص. فوقها، يوفّر المحلي 60–90% — تدفع الكهرباء فقط بعد الاستثمار الأولي في GPU (2,000–2,600$ لـRTX 4090 EOL).' } },
           { '@type': 'Question', 'name': 'هل يمكنني تشغيل وكيل محلي على عتاد استهلاكي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. يعمل وكيل Llama 13B على RTX 4090 (24GB VRAM) بـ2–3 ثوانٍ لكل خطوة. لوكلاء 7B، RTX 4070 Ti (12GB) كافية.' } },
           { '@type': 'Question', 'name': 'هل يدعم الوكلاء المحليون استخدام الأدوات وfunction calling؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، عبر واجهة أدوات Ollama (منذ Ollama 0.4+). يتكامل LangGraph وLangChain مع النماذج المحلية لاستخدام الأدوات متعدد المراحل.' } },
-          { '@type': 'Question', 'name': 'هل يستحق تعقيد النشر الهجين العناء؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، للشركات التي تعالج 10 ملايين+ رمز/شهر. الاستعلامات السهلة إلى المحلي (مجاني)، الصعبة إلى السحابة (دقيقة). خفض 80% في التكاليف دون خسارة جودة.' } },
+          { '@type': 'Question', 'name': 'هل يستحق تعقيد النشر الهجين العناء؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، للشركات التي تعالج 10 ملايين+ رمز/شهر. الاستعلامات السهلة إلى المحلي (مجاني)، الصعبة إلى السحابة (دقيقة). إنفاق سحابي أقل، مع بقاء الاستعلامات المعقّدة بيد النموذج السحابي.' } },
           { '@type': 'Question', 'name': 'أي نموذج محلي أفضل للوكلاء؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B للجودة (RTX 4090 مزدوجة)، Qwen3 32B لتوازن السرعة/الجودة (RTX 4090 واحدة)، Llama 13B لوكلاء فعّالين من حيث التكلفة على RTX 4070 Ti.' } },
           { '@type': 'Question', 'name': 'كيف أدير إخفاقات الوكلاء المحليين؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'اضبط OLLAMA_KEEP_ALIVE للتحميل المستمر للنموذج، ونفّذ فحوصات صحة، وأضف حلًا بديلًا لـAPI السحابية لسير العمل الحرج. يحتاج الوكلاء في الإنتاج إلى مراقبة (Prometheus، Grafana).' } },
           { '@type': 'Question', 'name': 'هل سيضاهي الوكلاء المحليون جودة السحابة في 2027؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لنماذج 70B: على الأرجح ضمن 90% من جودة GPT-5.6 بنهاية 2027. لنماذج 13B: ليس بعد. تتقلّص الفجوة، لكن السحابة تحتفظ بميزة في الاستدلال الجديد.' } },
@@ -816,7 +816,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'وكيل سحابي (GPT-5.6 API)', 'description': '100–200 مللي ثانية لكل خطوة. 10$ لكل مليون رمز. الأفضل للاستدلال المعقّد واستخدام الأدوات وتطبيقات زمن الاستجابة المنخفض.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'وكيل سحابي (Claude Sonnet 5 API)', 'description': '150–300 مللي ثانية لكل خطوة. 10$ لكل مليون رمز. قوي في مهام السياق الطويل وتوليد الشيفرة.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'وكيل محلي (Llama 13B)', 'description': '2–3 ثوانٍ لكل خطوة. 0$ لكل رمز بعد العتاد. الأفضل للخصوصية والأتمتة الروتينية وأحمال العمل عالية الحجم.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'النهج الهجين', 'description': 'وجّه الاستعلامات البسيطة إلى المحلي، والمعقّدة إلى السحابة. خفض 80% في التكاليف. أفضل ممارسة لعمليات النشر في الإنتاج في 2026.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'النهج الهجين', 'description': 'وجّه الاستعلامات البسيطة إلى المحلي، والمعقّدة إلى السحابة. إنفاق سحابي أقل. أفضل ممارسة لعمليات النشر في الإنتاج في 2026.' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-vs-cloud-agents-static.html',
@@ -861,8 +861,8 @@ schema: {
             { type: 'plain-terms', text: 'Um agente de IA é um programa que usa um modelo de IA em loop para concluir tarefas de várias etapas. Rodar esse modelo na nuvem (como GPT ou Claude) é rápido e cobrado por uso; rodá-lo localmente na sua própria GPU é mais lento por etapa, mas gratuito depois que você tem o hardware. A maioria das empresas acaba usando os dois: nuvem para tarefas de raciocínio complexo, local para trabalho rotineiro, de alto volume ou sensível.' },
           ],
           items: [
-            '**Agentes na Nuvem (GPT-5.6, Claude Sonnet 5):** Os mais rápidos (50–200ms/etapa), maior capacidade, maior custo, sem privacidade.',
-            '**Agentes locais (Llama 13B+):** Mais lentos (2–5 s/etapa), menor capacidade, baratos em escala, completamente privados.',
+            '**Agentes na Nuvem (GPT-5.6, Claude Sonnet 5):** Os mais rápidos (50–200ms/etapa), maior capacidade, maior custo; os prompts vão para os servidores do provedor.',
+            '**Agentes locais (Llama 13B+):** Mais lentos (2–5 s/etapa), menor capacidade, baratos em escala; os prompts ficam na sua máquina quando o modelo roda localmente.',
             'Ponto de equilíbrio: ~50M tokens/mês. A partir daí, o local é mais barato.',
             '**O melhor:** Híbrido. Nuvem para raciocínio complexo, local para automação rotineira.',
             'A maioria das empresas usa hoje a abordagem híbrida.',
@@ -902,9 +902,9 @@ schema: {
           id: 'privacy',
           title: 'Privacidade e conformidade: qual é melhor?',
           content: [
-            '**Os agentes locais vencem em privacidade — nenhum dado sai da sua máquina.** Os agentes na Nuvem enviam cada prompt e resposta aos servidores do provedor (OpenAI, Anthropic), sujeitos às suas políticas de retenção de dados.',
-            '**LGPD (Brasil):** A Lei nº 13.709/2018 exige base legal para o tratamento de dados pessoais. Usar APIs na nuvem com dados pessoais requer contratos de processamento com os provedores e conformidade com as regras de transferência internacional (art. 33 da LGPD). Os agentes locais eliminam completamente esse requisito — toda a inferência permanece em território nacional sob controle da organização.',
-            '**HIPAA (EUA) / dados regulamentados:** Os dados de saúde regulamentados e dados financeiros sob SOC2 são melhor atendidos por agentes locais. A Anthropic Claude não treina com seus dados (conforme sua política). A OpenAI oferece planos empresariais com isolamento de dados. Nenhum elimina a transferência de dados em si.',
+            '**Os agentes locais mantêm prompts e respostas na sua máquina quando o modelo roda localmente.** Os agentes na Nuvem enviam cada prompt e resposta aos servidores do provedor (OpenAI, Anthropic), sujeitos às suas políticas de retenção de dados. Verifique a telemetria e as verificações de atualização de cada ferramenta.',
+            '**LGPD (Brasil):** A Lei nº 13.709/2018 exige base legal para o tratamento de dados pessoais. Usar APIs na nuvem com dados pessoais requer contratos de processamento com os provedores e atenção às regras de transferência internacional (art. 33 da LGPD). Um modelo local remove essa relação com o operador na etapa de inferência, mas a conformidade geral continua dependendo da base legal, das medidas de segurança e, quando exigido, de um relatório de impacto. Isto é informação geral, não aconselhamento jurídico.',
+            '**HIPAA (EUA) / dados regulamentados:** Dados de saúde regulamentados e dados financeiros sob SOC2 podem ser mais fáceis de controlar com agentes locais. A Anthropic Claude não treina com seus dados (conforme sua política). A OpenAI oferece planos empresariais com isolamento de dados. Nenhum elimina a transferência de dados em si.',
           ],
         },
         capabilities: {
@@ -945,7 +945,7 @@ schema: {
           ],
           items: [
             'Os dados são sensíveis — saúde, financeiros, jurídicos ou dados empresariais proprietários.',
-            'A conformidade com LGPD, HIPAA ou SOC2 exige que os dados permaneçam nas instalações.',
+            'Dados regulamentados (LGPD, HIPAA, SOC2) são mais fáceis de manter sob seu controle nas instalações; configurações na nuvem com contrato de processamento de dados assinado também podem estar em conformidade.',
             'O volume supera 50M tokens/mês — o local é 10–60× mais barato nessa escala.',
             'Você precisa de personalização total do comportamento do agente, ferramentas e memória.',
             'Você quer zero dependência de fornecedor — troque de modelos a qualquer momento sem alterações de API.',
@@ -956,7 +956,7 @@ schema: {
           title: 'O que é a abordagem híbrida?',
           content: [
             '**Melhor prática em 2026: Roteie consultas simples para agentes locais, as complexas para a Nuvem.** Isso oferece velocidade + privacidade para o trabalho rotineiro e precisão para os problemas difíceis.',
-            'Exemplo de fluxo de trabalho: Um agente de suporte roteia perguntas do tipo FAQ para o Llama 13B local (2 s, gratuito) e escala problemas complexos para o GPT-5.6 (200ms, $0,02). Resultado: 80% de redução de custos sem perda de qualidade em consultas complexas.',
+            'Exemplo de fluxo de trabalho: Um agente de suporte roteia perguntas do tipo FAQ para o Llama 13B local (2 s, gratuito) e escala problemas complexos para o GPT-5.6 (200ms, $0,02). Resultado: menor gasto com a nuvem, porque só as consultas difíceis são cobradas; a qualidade nas consultas complexas fica com o modelo na nuvem.',
             'Ferramentas como [PromptQuorum](https://www.promptquorum.com) despacham para múltiplos modelos e comparam resultados — ideal para configurações híbridas.',
           ],
         },
@@ -964,10 +964,10 @@ schema: {
           id: 'regional-context',
           title: 'Considerações regionais',
           content: [
-            '**Brasil / LGPD:** A Lei Geral de Proteção de Dados favorece fortemente os agentes locais para o processamento de dados pessoais de cidadãos brasileiros. Agentes na Nuvem exigem contratos de processamento de dados com provedores estrangeiros e verificação de conformidade com as regras de transferência internacional de dados (art. 33 da LGPD). A ANPD fiscaliza o cumprimento e pode aplicar multas de até 2% do faturamento.',
-            '**UE/Portugal:** O Artigo 28 do RGPD e os requisitos de conformidade normativa favorecem fortemente os agentes locais para o processamento de dados de cidadãos da UE. Agentes na Nuvem requerem Cláusulas Contratuais Padrão para transferência transfronteiriça a provedores americanos.',
-            '**Japão:** Os requisitos da APPI favorecem os agentes locais para dados empresariais sensíveis.',
-            '**China:** Agentes na Nuvem de provedores americanos (OpenAI, Anthropic) não estão disponíveis diretamente. Agentes locais executando Qwen3 ou DeepSeek cumprem a Lei de Segurança de Dados da China de 2021.',
+            '**Brasil / LGPD:** A Lei Geral de Proteção de Dados estabelece condições para o tratamento de dados pessoais. Agentes na Nuvem exigem contratos de processamento de dados com provedores estrangeiros e atenção às regras de transferência internacional (art. 33 da LGPD). Um modelo local pode reduzir o que é enviado a terceiros, mas a conformidade de uma implantação depende da sua própria avaliação.',
+            '**UE/Portugal:** O Artigo 28 do RGPD exige um acordo de tratamento de dados com qualquer provedor na nuvem que trate dados pessoais por sua conta, e transferências para provedores americanos precisam de um mecanismo de transferência válido, como as Cláusulas Contratuais Padrão. Um modelo local remove a relação de subcontratante na etapa de inferência, mas não torna por si só uma implantação conforme.',
+            '**Japão:** A APPI estabelece condições para o tratamento de dados pessoais, incluindo transferências ao exterior. Um modelo local pode reduzir o que é enviado a terceiros, mas o atendimento da APPI por uma implantação depende da sua própria avaliação.',
+            '**China:** Agentes na Nuvem de provedores americanos (OpenAI, Anthropic) não estão disponíveis diretamente. A Lei de Segurança de Dados da China de 2021 estabelece obrigações no tratamento de dados; executar localmente um modelo como Qwen3 ou DeepSeek não estabelece conformidade por si só, então consulte assessoria jurídica local.',
           ],
         },
         faqSection: {
@@ -976,7 +976,7 @@ schema: {
           faqs: [
             {
               q: 'Os agentes de IA locais são tão bons quanto os agentes na Nuvem em 2026?',
-              a: 'Para tarefas rotineiras (Q&A, resumo, automação simples): sim, o Llama 13B+ local iguala a qualidade da Nuvem. Para raciocínio multi-etapa complexo, geração de código com contexto e uso de ferramentas: os agentes na Nuvem (GPT-5.6, Claude Sonnet 5) ainda são significativamente melhores. A diferença diminui a cada ano.',
+              a: 'Para tarefas rotineiras (Q&A, resumo, automação simples): muitas vezes sim, um Llama 13B+ local pode se aproximar da qualidade da Nuvem. Para raciocínio multi-etapa complexo, geração de código com contexto e uso de ferramentas: os agentes na Nuvem (GPT-5.6, Claude Sonnet 5) ainda são significativamente melhores. A diferença diminui a cada ano.',
             },
             {
               q: 'Qual é o ponto de equilíbrio entre local e Nuvem?',
@@ -992,7 +992,7 @@ schema: {
             },
             {
               q: 'Vale a pena a complexidade da implantação híbrida?',
-              a: 'Sim, para a maioria das empresas que processam 10M+ tokens/mês. A lógica de roteamento é simples: classifique a dificuldade da consulta, envie as fáceis para o local, as difíceis para a Nuvem. O PromptQuorum gerencia isso automaticamente.',
+              a: 'Sim, para a maioria das empresas que processam 10M+ tokens/mês. A lógica de roteamento é simples: classifique a dificuldade da consulta, envie as fáceis para o local, as difíceis para a Nuvem. O PromptQuorum envia um prompt a vários modelos e compara os resultados, mas a lógica de roteamento entre modelos locais e na nuvem é algo que você configura.',
             },
             {
               q: 'Qual modelo local é melhor para agentes?',
@@ -1049,7 +1049,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Agente na Nuvem (API GPT-5.6)', 'description': '100–200ms por etapa. $10 por 1M de tokens. Melhor para raciocínio complexo, uso de ferramentas e aplicações de baixa latência.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Agente na Nuvem (API Claude Sonnet 5)', 'description': '150–300ms por etapa. $10 por 1M de tokens. Forte em tarefas de contexto longo e geração de código.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Agente Local (Llama 13B)', 'description': '2–3 s por etapa. $0 por token após o hardware. Melhor para privacidade, automação rotineira e cargas de trabalho de alto volume.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Abordagem Híbrida', 'description': 'Direcione consultas simples para o agente local e consultas complexas para a nuvem. Redução de custo de 80%. Melhor prática para implantações em produção em 2026.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Abordagem Híbrida', 'description': 'Direcione consultas simples para o agente local e consultas complexas para a nuvem. Menor gasto com a nuvem. Melhor prática para implantações em produção em 2026.' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-vs-cloud-agents-static.html',
@@ -1094,8 +1094,8 @@ schema: {
             { type: 'plain-terms', text: 'Ein KI-Agent ist ein Programm, das ein KI-Modell in einer Schleife nutzt, um mehrstufige Aufgaben zu erledigen. Dieses Modell in der Cloud auszuführen (wie GPT oder Claude) ist schnell und nutzungsabhängig abgerechnet; es lokal auf der eigenen GPU auszuführen ist pro Schritt langsamer, aber nach dem Hardwarekauf kostenlos. Die meisten Unternehmen nutzen am Ende beides: Cloud für anspruchsvolle Reasoning-Aufgaben, lokal für Routine-, Hochvolumen- oder sensible Arbeiten.' },
           ],
           items: [
-            '**Cloud-Agenten (GPT-5.6, Claude Sonnet 5):** Schnellste (50–200ms/Schritt), fähigste, teuerste, kein Datenschutz.',
-            '**Local-Agenten (Llama 13B+):** Langsamer (2–5 sec/Schritt), weniger fähig, günstig im großen Maßstab, vollständig privat.',
+            '**Cloud-Agenten (GPT-5.6, Claude Sonnet 5):** Schnellste (50–200ms/Schritt), fähigste, teuerste; Prompts gehen an die Server des Anbieters.',
+            '**Local-Agenten (Llama 13B+):** Langsamer (2–5 sec/Schritt), weniger fähig, günstig im großen Maßstab; Prompts bleiben auf Ihrem Rechner, wenn das Modell lokal läuft.',
             'Break-even: ~50M Token/Monat. Darüber hinaus ist Local günstiger.',
             '**Best Practice:** Hybrid. Cloud für komplexes Reasoning, Local für Routine-Automatisierung.',
             'Die meisten Unternehmen nutzen heute einen Hybrid-Ansatz.',
@@ -1137,8 +1137,8 @@ schema: {
           id: 'privacy',
           title: 'Welcher Ansatz ist besser für Datenschutz und Compliance?',
           content: [
-            '**Local-Agenten gewinnen beim Datenschutz — keine Daten verlassen Ihre Maschine.** Cloud-Agenten senden jeden Prompt und jede Antwort an Vendor-Server (OpenAI, Anthropic), die unter deren Datenschutzrichtlinien unterliegen.',
-            '**DSGVO Artikel 28** erfordert eine Datenverarbeitungsvereinbarung für Cloud-AI — Local-Agenten eliminieren diese Anforderung völlig. [HIPAA-regulierte Gesundheitsdaten](/de/local-llms/private-local-ai-for-business) und Finanzdaten unter SOC2 sind am besten für Local-Agenten geeignet.',
+            '**Local-Agenten behalten Prompts und Antworten auf Ihrem Rechner, wenn das Modell lokal läuft.** Cloud-Agenten senden jeden Prompt und jede Antwort an Vendor-Server (OpenAI, Anthropic), die unter deren Datenschutzrichtlinien unterliegen. Prüfen Sie die Telemetrie- und Update-Check-Einstellungen jedes Tools.',
+            '**DSGVO Artikel 28** erfordert einen Auftragsverarbeitungsvertrag, wenn ein Cloud-KI-Anbieter in Ihrem Auftrag personenbezogene Daten verarbeitet; ein lokales Modell entfernt dieses Auftragsverarbeiter-Verhältnis für den Inferenzschritt, Ihre Gesamt-Compliance hängt aber weiterhin von Rechtsgrundlage, Sicherheitsmaßnahmen und gegebenenfalls einer Datenschutz-Folgenabschätzung ab. [HIPAA-regulierte Gesundheitsdaten](/de/local-llms/private-local-ai-for-business) und Finanzdaten unter SOC2 lassen sich mit Local-Agenten unter Umständen leichter kontrollieren. Dies ist eine allgemeine Information, keine Rechtsberatung.',
             '**Cloud-Kompromiss:** Anthropic Claude trainiert nicht auf Ihren Daten (nach deren Richtlinie). OpenAI bietet Enterprise-Pläne mit Datenisolation an. Beide eliminieren die Datenübertragung selbst nicht.',
           ],
         },
@@ -1184,7 +1184,7 @@ schema: {
           ],
           items: [
             'Daten sind sensibel — Gesundheitswesen, Finanzen, Recht oder proprietäre Geschäftsdaten.',
-            'DSGVO, HIPAA oder SOC2 Compliance erfordert, dass Daten On-Premises bleiben.',
+            'Regulierte Daten (DSGVO, HIPAA, SOC2) lassen sich On-Premises leichter unter Ihrer Kontrolle halten; Cloud-Setups mit unterzeichnetem Auftragsverarbeitungsvertrag können ebenfalls konform sein.',
             'Das Volumen übersteigt 50M Token pro Monat — Local ist bei dieser Größe 10–60× günstiger.',
             'Sie benötigen vollständige Anpassung von Agent-Verhalten, Tools und Speicher.',
             'Sie möchten keine Vendor-Lock-in — wechseln Sie Modelle jederzeit ohne API-Änderungen.',
@@ -1195,36 +1195,36 @@ schema: {
           title: 'Was ist der Hybrid-Ansatz?',
           content: [
             '**Best Practice 2026: Leiten Sie einfache Anfragen zu Local-Agenten, komplexe Anfragen zu Cloud.** Dies gibt Ihnen Geschwindigkeit + Datenschutz für Routinearbeit und Genauigkeit für schwierige Probleme.',
-            'Beispiel-Workflow: Ein Support-Agent leitet FAQ-ähnliche Fragen zu lokalem Llama 13B (2 sec, kostenlos) und eskaliert komplexe Probleme zu GPT-5.6 (200ms, 0,02 €). Ergebnis: 80% Kosteneinsparung ohne Qualitätsverlust bei komplexen Anfragen.',
+            'Beispiel-Workflow: Ein Support-Agent leitet FAQ-ähnliche Fragen zu lokalem Llama 13B (2 sec, kostenlos) und eskaliert komplexe Probleme zu GPT-5.6 (200ms, 0,02 €). Ergebnis: geringere Cloud-Kosten, weil nur die schwierigen Anfragen abgerechnet werden; die Qualität bei komplexen Anfragen bleibt beim Cloud-Modell.',
             'Tools wie [PromptQuorum](https://www.promptquorum.com?lang=de) versenden an mehrere Modelle und vergleichen Ergebnisse — ideal für Hybrid-Setups.',
           ],
           image: '/images/local-vs-cloud-agents-hybrid-flow-de.svg',
-          imageCaption: 'Hybrid-Ansatz: Leiten Sie einfache Anfragen zu lokalen Agenten (Llama 13B, 2 Sekunden, kostenlos) und eskalieren Sie komplexes Reasoning zu Cloud (GPT-5.6, 200ms, 0,02 €). Ergebnis: 80% Kosteneinsparung ohne Qualitätsverlust bei schwierigen Problemen.',
+          imageCaption: 'Hybrid-Ansatz: Leiten Sie einfache Anfragen zu lokalen Agenten (Llama 13B, 2 Sekunden, kostenlos) und eskalieren Sie komplexes Reasoning zu Cloud (GPT-5.6, 200ms, 0,02 €). Ergebnis: geringere Cloud-Kosten, schwierige Probleme bleiben beim Cloud-Modell.',
         },
         regionalContext: {
           id: 'regional-context',
           title: 'Regionale Überlegungen',
           content: [
-            '**EU/DACH:** DSGVO Artikel 28 und BSI-Grundschutz-Anforderungen begünstigen Local-Agenten stark bei der Verarbeitung von EU-Bürgerdaten. Cloud-Agenten erfordern Standardvertragsklauseln für grenzüberschreitende Transfers zu US-Anbietern.',
-            '**Mittelstand & KMU (Deutschland, Österreich, Schweiz):** Kleine und mittlere Unternehmen (KMU) in DACH profitieren von Local-Agenten zur Einhaltung von BSI-Grundschutz-Katalogen und IT-Sicherheitsstandards. Kostenfreie Inference nach Hardware-Investment ist besonders wertvoll für Mittelstand mit begrenztem Cloud-Budget.',
-            '**Japan:** APPI-Anforderungen begünstigen Local-Agenten für sensible Geschäftsdaten. Japanische Unternehmen in Banking und Gesundheitswesen setzen zunehmend Local-Agenten zur Compliance ein.',
-            '**China:** Cloud-Agenten von US-Anbietern (OpenAI, Anthropic) sind nicht direkt verfügbar. Local-Agenten mit [Qwen3](/de/local-llms/top-open-source-models-ollama) oder DeepSeek entsprechen Chinas Datensicherheitsgesetz von 2021.',
+            '**EU/DACH:** DSGVO Artikel 28 erfordert einen Auftragsverarbeitungsvertrag mit jedem Cloud-Anbieter, der in Ihrem Auftrag personenbezogene Daten verarbeitet, und Übermittlungen an US-Anbieter brauchen einen gültigen Übermittlungsmechanismus wie Standardvertragsklauseln. Ein lokales Modell entfernt das Auftragsverarbeiter-Verhältnis für den Inferenzschritt, macht eine Bereitstellung aber nicht allein konform; BSI-Grundschutz ist für die meisten privaten Organisationen ein freiwilliger Sicherheitsrahmen.',
+            '**Mittelstand & KMU (Deutschland, Österreich, Schweiz):** Für kleine und mittlere Unternehmen in DACH kann ein Local-Agent die Umsetzung von IT-Sicherheitskonzepten (etwa nach BSI-Grundschutz) erleichtern, ersetzt sie aber nicht. Kostenfreie Inference nach Hardware-Investition kann für Mittelstand mit begrenztem Cloud-Budget interessant sein.',
+            '**Japan:** Das APPI stellt Bedingungen an den Umgang mit personenbezogenen Daten, einschließlich Übermittlungen ins Ausland. Ein lokales Modell kann reduzieren, was an Dritte gesendet wird; ob eine Bereitstellung das APPI erfüllt, hängt von Ihrer eigenen Bewertung ab.',
+            '**China:** Cloud-Agenten von US-Anbietern (OpenAI, Anthropic) sind nicht direkt verfügbar. Chinas Datensicherheitsgesetz von 2021 legt Pflichten im Umgang mit Daten fest; der lokale Betrieb eines Modells wie [Qwen3](/de/local-llms/top-open-source-models-ollama) oder DeepSeek begründet für sich allein keine Compliance, klären Sie das mit lokaler Rechtsberatung.',
           ],
         },
         faqSection: {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            { q: 'Sind Local AI Agenten 2026 genauso gut wie Cloud-Agenten?', a: 'Bei Routineaufgaben (Q&A, Zusammenfassung, einfache Automatisierung): ja, lokales Llama 13B+ entspricht der Cloud-Qualität. Bei komplexem Multi-Step-Reasoning, Code-Generierung mit Kontext und Tool-Nutzung: Cloud-Agenten (GPT-5.6, Claude Sonnet 5) sind immer noch deutlich besser. Die Lücke schließt sich jährlich.' },
+            { q: 'Sind Local AI Agenten 2026 genauso gut wie Cloud-Agenten?', a: 'Bei Routineaufgaben (Q&A, Zusammenfassung, einfache Automatisierung): oft ja, ein lokales Llama 13B+ kann an die Cloud-Qualität heranreichen. Bei komplexem Multi-Step-Reasoning, Code-Generierung mit Kontext und Tool-Nutzung: Cloud-Agenten (GPT-5.6, Claude Sonnet 5) sind immer noch deutlich besser. Die Lücke schließt sich jährlich.' },
             { q: 'Was ist der Break-Even-Punkt für Local vs Cloud?', a: 'Ungefähr 50M Token pro Monat. Darunter ist Cloud günstiger (keine Hardware-Kosten). Darüber spart Local 60–90% — Sie zahlen nur Strom (~200 €/Jahr) nach der ersten GPU-Investition (ca. 1.599 € für RTX 4090).' },
             { q: 'Kann ich einen Local-Agenten auf Consumer-Hardware ausführen?', a: 'Ja. Ein Llama 13B Agent läuft auf RTX 4090 (24GB VRAM) mit 2–3 sec pro Schritt. Für 7B-Agenten ist RTX 4070 Ti (12GB) ausreichend. Siehe den [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) für exakte Spezifikationen.' },
             { q: 'Unterstützen Local-Agenten Tool-Nutzung und Function Calling?', a: 'Ja, über Ollamas Tool-Calling-API (unterstützt seit Ollama 0.4+). LangGraph und LangChain integrieren sich mit lokalen Modellen für Multi-Step-Tool-Nutzung. Setup ist komplexer als Cloud, aber vollständig funktionsfähig.' },
-            { q: 'Lohnt sich eine Hybrid-Bereitstellung angesichts der Komplexität?', a: 'Ja, für die meisten Unternehmen, die 10M+ Token pro Monat verarbeiten. Die Routing-Logik ist einfach: Klassifizieren Sie Anfrage-Schwierigkeit, senden Sie einfache Anfragen lokal, schwierige Anfragen an Cloud. PromptQuorum übernimmt dies automatisch.' },
+            { q: 'Lohnt sich eine Hybrid-Bereitstellung angesichts der Komplexität?', a: 'Ja, für die meisten Unternehmen, die 10M+ Token pro Monat verarbeiten. Die Routing-Logik ist einfach: Klassifizieren Sie Anfrage-Schwierigkeit, senden Sie einfache Anfragen lokal, schwierige Anfragen an Cloud. PromptQuorum sendet einen Prompt an mehrere Modelle und vergleicht die Ergebnisse; die Routing-Logik zwischen lokalen und Cloud-Modellen richten Sie selbst ein.' },
             { q: 'Welches lokale Modell ist am besten für Agenten?', a: 'Llama 3.3 70B für Qualität (benötigt dual RTX 4090), Qwen3 32B für ausgewogene Geschwindigkeit/Qualität (einzelne RTX 4090), Llama 13B für kostengünstige Agenten auf RTX 4070 Ti. DeepSeek-R1 7B für Reasoning-intensive Aufgaben auf Budget-Hardware.' },
             { q: 'Wie handhabe ich Local-Agent-Ausfälle?', a: 'Local-Agenten können abstürzen oder hängen bleiben, wenn VRAM überläuft. Setzen Sie OLLAMA_KEEP_ALIVE für persistentes Modell-Laden, implementieren Sie Health-Checks und fügen Sie einen Fallback zu Cloud-API für kritische Workflows hinzu. Production Local-Agenten benötigen Monitoring (Prometheus, Grafana).' },
             { q: 'Werden Local-Agenten bis 2027 die Cloud-Qualität erreichen?', a: 'Für 70B-Modelle: wahrscheinlich innerhalb von 90% der GPT-5.6-Qualität bis Ende 2027. Für 13B-Modelle: noch nicht. Die praktische Lücke schließt sich, aber Cloud behält einen Vorteil bei neuem Reasoning und breitem Weltwissen.' },
-            { q: 'Ist eine lokale Bereitstellung für DSGVO und DACH-Compliance notwendig?', a: 'Nicht unbedingt notwendig, aber stark empfohlen. DSGVO Artikel 28 erfordert eine Datenverarbeitungsvereinbarung für Cloud-KI. Local-Agenten eliminieren diese Anforderung völlig. BSI-Grundschutz-Kataloge und KMU-Zertifizierungen bevorzugen stark Local-Deployment für Datenschutz.' },
-            { q: 'Wie wähle ich zwischen Local-Hybrid und reiner Cloud für mein Mittelstand-Unternehmen?', a: 'Wenn Ihr Unternehmen über 10M Token pro Monat verarbeitet oder sensible Kundendaten (DSGVO, Mittelstand-Geheimhaltung) hat: Hybrid oder Local. Andernfalls: Cloud. Local ermöglicht Ihnen volle Kontrolle, Compliance und Kosteneffizienz ohne Vendor-Lock-in.' },
+            { q: 'Ist eine lokale Bereitstellung für DSGVO und DACH-Compliance notwendig?', a: 'Nicht notwendig. DSGVO Artikel 28 erfordert einen Auftragsverarbeitungsvertrag, wenn ein Cloud-KI-Anbieter in Ihrem Auftrag personenbezogene Daten verarbeitet; ein lokales Modell kann dieses Verhältnis für den Inferenzschritt vermeiden. Ob eine Bereitstellung DSGVO-konform ist, hängt von Rechtsgrundlage, Sicherheitsmaßnahmen und Ihrer eigenen Bewertung ab; BSI-Grundschutz ist für die meisten privaten Organisationen ein freiwilliger Rahmen. Keine Rechtsberatung.' },
+            { q: 'Wie wähle ich zwischen Local-Hybrid und reiner Cloud für mein Mittelstand-Unternehmen?', a: 'Wenn Ihr Unternehmen über 10M Token pro Monat verarbeitet oder sensible Kundendaten (DSGVO, Mittelstand-Geheimhaltung) hat: Hybrid oder Local. Andernfalls: Cloud. Local gibt Ihnen mehr Kontrolle und kann bei hohem Volumen kosteneffizient sein, ohne Vendor-Lock-in; Compliance bleibt Ihre eigene Bewertung.' },
           ],
         },
         relatedReading: {
@@ -1281,7 +1281,7 @@ schema: {
             'name': 'Sind Local AI Agenten 2026 genauso gut wie Cloud-Agenten?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Bei Routineaufgaben (Q&A, Zusammenfassung, einfache Automatisierung): ja, lokales Llama 13B+ entspricht der Cloud-Qualität. Bei komplexem Multi-Step-Reasoning, Code-Generierung mit Kontext und Tool-Nutzung: Cloud-Agenten (GPT-5.6, Claude Sonnet 5) sind immer noch deutlich besser. Die Lücke schließt sich jährlich.',
+              'text': 'Bei Routineaufgaben (Q&A, Zusammenfassung, einfache Automatisierung): oft ja, ein lokales Llama 13B+ kann an die Cloud-Qualität heranreichen. Bei komplexem Multi-Step-Reasoning, Code-Generierung mit Kontext und Tool-Nutzung: Cloud-Agenten (GPT-5.6, Claude Sonnet 5) sind immer noch deutlich besser. Die Lücke schließt sich jährlich.',
             },
           },
           {
@@ -1313,7 +1313,7 @@ schema: {
             'name': 'Lohnt sich eine Hybrid-Bereitstellung angesichts der Komplexität?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja, für die meisten Unternehmen, die 10M+ Token pro Monat verarbeiten. Die Routing-Logik ist einfach: Klassifizieren Sie Anfrage-Schwierigkeit, senden Sie einfache Anfragen lokal, schwierige Anfragen an Cloud. PromptQuorum übernimmt dies automatisch.',
+              'text': 'Ja, für die meisten Unternehmen, die 10M+ Token pro Monat verarbeiten. Die Routing-Logik ist einfach: Klassifizieren Sie Anfrage-Schwierigkeit, senden Sie einfache Anfragen lokal, schwierige Anfragen an Cloud. PromptQuorum sendet einen Prompt an mehrere Modelle und vergleicht die Ergebnisse; die Routing-Logik zwischen lokalen und Cloud-Modellen richten Sie selbst ein.',
             },
           },
           {
@@ -1345,7 +1345,7 @@ schema: {
             'name': 'Ist eine lokale Bereitstellung für DSGVO und DACH-Compliance notwendig?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Nicht unbedingt notwendig, aber stark empfohlen. DSGVO Artikel 28 erfordert eine Datenverarbeitungsvereinbarung für Cloud-KI. Local-Agenten eliminieren diese Anforderung völlig. BSI-Grundschutz-Kataloge und KMU-Zertifizierungen bevorzugen stark Local-Deployment für Datenschutz.',
+              'text': 'Nicht notwendig. DSGVO Artikel 28 erfordert einen Auftragsverarbeitungsvertrag, wenn ein Cloud-KI-Anbieter in Ihrem Auftrag personenbezogene Daten verarbeitet; ein lokales Modell kann dieses Verhältnis für den Inferenzschritt vermeiden. Ob eine Bereitstellung DSGVO-konform ist, hängt von Rechtsgrundlage, Sicherheitsmaßnahmen und Ihrer eigenen Bewertung ab; BSI-Grundschutz ist für die meisten privaten Organisationen ein freiwilliger Rahmen. Keine Rechtsberatung.',
             },
           },
           {
@@ -1367,7 +1367,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Cloud-Agent (GPT-5.6 API)', 'description': '100–200ms pro Schritt. 18 € pro 1M Token. Beste für komplexes Reasoning, Tool-Nutzung und Low-Latency-Anwendungen.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Cloud-Agent (Claude Sonnet 5 API)', 'description': '150–300ms pro Schritt. 18 € pro 1M Token. Stark bei Long-Context-Aufgaben und Code-Generierung.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Local-Agent (Llama 13B)', 'description': '2–3 sec pro Schritt. 0 € pro Token nach Hardware. Beste für Datenschutz, Routine-Automatisierung und High-Volume-Workloads.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Hybrid-Ansatz', 'description': 'Leiten Sie einfache Anfragen lokal, komplexe Anfragen an Cloud. 80% Kosteneinsparung. Best Practice für Production-Bereitstellungen 2026.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Hybrid-Ansatz', 'description': 'Leiten Sie einfache Anfragen lokal, komplexe Anfragen an Cloud. Geringere Cloud-Kosten. Best Practice für Production-Bereitstellungen 2026.' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-vs-cloud-agents-static.html',
@@ -1412,8 +1412,8 @@ schema: {
             { type: 'plain-terms', text: "Un agent IA est un programme qui utilise un modèle d'IA en boucle pour accomplir des tâches à plusieurs étapes. Exécuter ce modèle dans le cloud (comme GPT ou Claude) est rapide et facturé à l'usage ; l'exécuter localement sur votre propre GPU est plus lent par étape mais gratuit une fois le matériel acquis. La plupart des entreprises finissent par utiliser les deux : le cloud pour le raisonnement complexe, le local pour les tâches routinières, à fort volume ou sensibles." },
           ],
           items: [
-            '**Agents Cloud (GPT-5.6, Claude Sonnet 5) :** Les plus rapides (50–200ms/étape), les plus capables, les plus chers, pas de confidentialité.',
-            '**Agents locaux (Llama 13B+) :** Plus lents (2–5 sec/étape), moins capables, bon marché à grande échelle, entièrement privés.',
+            '**Agents Cloud (GPT-5.6, Claude Sonnet 5) :** Les plus rapides (50–200ms/étape), les plus capables, les plus chers ; les prompts partent vers les serveurs du fournisseur.',
+            '**Agents locaux (Llama 13B+) :** Plus lents (2–5 sec/étape), moins capables, bon marché à grande échelle ; les prompts restent sur votre machine lorsque le modèle tourne en local.',
             'Point d\'équilibre : ~50M tokens/mois. Au-delà, Local est moins cher.',
             '**Meilleure pratique :** Hybride. Cloud pour le raisonnement complexe, Local pour l\'automatisation routinière.',
             'La plupart des entreprises utilisent aujourd\'hui l\'approche hybride.',
@@ -1455,8 +1455,8 @@ schema: {
           id: 'privacy',
           title: 'Quelle approche convient mieux à la confidentialité et la conformité?',
           content: [
-            '**Les agents locaux gagnent sur la confidentialité — aucune donnée ne quitte votre machine.** Les agents Cloud envoient chaque requête et réponse aux serveurs fournisseurs (OpenAI, Anthropic) soumis à leurs politiques de conservation des données.',
-            '**RGPD Article 28** exige un accord de traitement des données pour l\'IA Cloud — les agents locaux éliminent complètement cette exigence. Les [données de santé réglementées par HIPAA](/fr/local-llms/private-local-ai-for-business) et les données financières sous SOC2 conviennent mieux aux agents locaux.',
+            '**Les agents locaux gardent les prompts et les réponses sur votre machine lorsque le modèle tourne en local.** Les agents Cloud envoient chaque requête et réponse aux serveurs fournisseurs (OpenAI, Anthropic) soumis à leurs politiques de conservation des données. Vérifiez les réglages de télémétrie et de vérification des mises à jour de chaque outil.',
+            '**Article 28 du RGPD** : un accord de sous-traitance est requis lorsqu\'un fournisseur d\'IA cloud traite des données personnelles pour votre compte ; un modèle local supprime cette relation de sous-traitance pour l\'étape d\'inférence, mais votre conformité globale dépend toujours de la base légale, des mesures de sécurité et, le cas échéant, d\'une AIPD. Les [données de santé réglementées par HIPAA](/fr/local-llms/private-local-ai-for-business) et les données financières sous SOC2 peuvent être plus faciles à maîtriser avec des agents locaux. Ces informations sont générales et ne constituent pas un conseil juridique.',
             '**Compromis Cloud :** Anthropic Claude ne s\'entraîne pas sur vos données (selon leur politique). OpenAI offre des plans Enterprise avec isolation des données. Aucun n\'élimine le transfert de données lui-même.',
           ],
         },
@@ -1502,7 +1502,7 @@ schema: {
           ],
           items: [
             'Les données sont sensibles — santé, finance, droit ou données métier propriétaires.',
-            'Conformité RGPD, HIPAA ou SOC2 exige que les données restent on-premises.',
+            'Les données réglementées (RGPD, HIPAA, SOC2) sont plus faciles à garder sous votre contrôle sur site ; les configurations cloud avec un accord de sous-traitance signé peuvent aussi être conformes.',
             'Volume dépasse 50M tokens/mois — Local est 10–60× moins cher à cette échelle.',
             'Vous avez besoin de contrôle total sur le comportement, les outils et la mémoire de l\'agent.',
             'Vous voulez éviter le verrouillage fournisseur — changer de modèles sans modifications API.',
@@ -1513,34 +1513,34 @@ schema: {
           title: 'Qu\'est-ce que l\'approche hybride?',
           content: [
             '**Meilleure pratique 2026 : Dirigez les requêtes simples vers les agents locaux, les requêtes complexes vers le Cloud.** Cela vous donne rapidité + confidentialité pour le travail routinier et précision pour les problèmes difficiles.',
-            'Exemple workflow : Un agent support dirige les questions de type FAQ au Llama 13B local (2 sec, gratuit) et escalade les problèmes complexes à GPT-5.6 (200ms, 0.02 €). Résultat : 80% réduction de coûts sans perte de qualité sur requêtes complexes.',
+            'Exemple workflow : Un agent support dirige les questions de type FAQ au Llama 13B local (2 sec, gratuit) et escalade les problèmes complexes à GPT-5.6 (200ms, 0.02 €). Résultat : dépenses cloud réduites, car seules les requêtes difficiles sont facturées ; la qualité sur les requêtes complexes reste celle du modèle cloud.',
             'Les outils comme [PromptQuorum](https://www.promptquorum.com?lang=fr) envoient à plusieurs modèles et comparent les résultats — idéal pour configurations hybrides.',
           ],
           image: '/images/local-vs-cloud-agents-hybrid-flow-fr.svg',
-          imageCaption: 'Approche hybride: acheminez les requêtes simples vers les agents locaux (Llama 13B, 2 secondes, gratuit), escaladez le raisonnement complexe vers le cloud (GPT-5.6, 200ms, 0.02€). Résultat: 80% réduction coûts sans perte qualité sur problèmes difficiles.',
+          imageCaption: 'Approche hybride: acheminez les requêtes simples vers les agents locaux (Llama 13B, 2 secondes, gratuit), escaladez le raisonnement complexe vers le cloud (GPT-5.6, 200ms, 0.02€). Résultat : dépenses cloud réduites, les problèmes difficiles restant traités par le modèle cloud.',
         },
         regionalContext: {
           id: 'regional-context',
           title: 'Considérations régionales',
           content: [
-            '**UE :** Le RGPD Article 28 et les standards de conformité exigent des accords de traitement pour l\'IA Cloud. Les agents locaux éliminent cette exigence. La CNIL recommande les agents locaux pour le traitement des données sensibles des citoyens de l\'UE.',
-            '**Japon :** Les exigences APPI favorisent les agents locaux pour les données commerciales sensibles. Les entreprises japonaises du secteur bancaire et de la santé déploient de plus en plus d\'agents locaux pour se conformer.',
-            '**Chine :** Les agents Cloud des fournisseurs américains (OpenAI, Anthropic) ne sont pas directement disponibles. Les agents locaux avec [Qwen3](/fr/local-llms/top-open-source-models-ollama) ou DeepSeek se conforment à la Loi sur la sécurité des données 2021 de la Chine.',
+            '**UE :** L\'article 28 du RGPD exige un accord de sous-traitance avec tout fournisseur cloud qui traite des données personnelles pour votre compte, et les transferts vers des fournisseurs américains nécessitent un mécanisme de transfert valide, comme les clauses contractuelles types. Un modèle local supprime la relation de sous-traitance pour l\'étape d\'inférence mais ne rend pas à lui seul un déploiement conforme.',
+            '**Japon :** L\'APPI fixe des conditions au traitement des données personnelles, y compris les transferts à l\'étranger. Un modèle local peut réduire ce qui est envoyé à des tiers, mais la conformité d\'un déploiement à l\'APPI dépend de votre propre évaluation.',
+            '**Chine :** Les agents Cloud des fournisseurs américains (OpenAI, Anthropic) ne sont pas directement disponibles. La loi chinoise sur la sécurité des données de 2021 fixe des obligations de traitement des données ; exécuter en local un modèle comme [Qwen3](/fr/local-llms/top-open-source-models-ollama) ou DeepSeek n\'établit pas à lui seul la conformité, consultez un conseil juridique local.',
           ],
         },
         faqSection: {
           id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
-            { q: 'Les agents IA locaux sont-ils aussi bons que les agents Cloud en 2026?', a: 'Pour les tâches routinières (Q&A, résumé, automatisation simple) : oui, le Llama 13B+ local correspond à la qualité Cloud. Pour le raisonnement multi-étapes complexe et l\'utilisation d\'outils : les agents Cloud (GPT-5.6, Claude Sonnet 5) sont encore nettement meilleurs. L\'écart se réduit chaque année.' },
+            { q: 'Les agents IA locaux sont-ils aussi bons que les agents Cloud en 2026?', a: 'Pour les tâches routinières (Q&A, résumé, automatisation simple) : souvent oui, un Llama 13B+ local peut se rapprocher de la qualité Cloud. Pour le raisonnement multi-étapes complexe et l\'utilisation d\'outils : les agents Cloud (GPT-5.6, Claude Sonnet 5) sont encore nettement meilleurs. L\'écart se réduit chaque année.' },
             { q: 'Quel est le point d\'équilibre Local vs Cloud?', a: 'Environ 50M tokens/mois. En dessous, Cloud est moins cher (pas de coûts matériel). Au-dessus, Local économise 60–90% — vous ne payez que l\'électricité (~200 €/an) après investissement GPU initial (~1.499 € RTX 4090).' },
             { q: 'Puis-je exécuter un agent local sur du matériel grand public?', a: 'Oui. Un agent Llama 13B fonctionne sur RTX 4090 (24GB VRAM) à 2–3 sec par étape. Pour les agents 7B, RTX 4070 Ti (12GB) suffit. Voir le [guide matériel](/fr/local-llms/local-llm-hardware-guide) pour les specs exactes.' },
             { q: 'Les agents locaux supportent-ils l\'utilisation d\'outils et l\'appel de fonction?', a: 'Oui, via l\'API d\'outils Ollama (supportée depuis Ollama 0.4+). LangGraph et LangChain s\'intègrent avec les modèles locaux pour l\'utilisation d\'outils multi-étapes. Configuration plus complexe que Cloud, mais complètement fonctionnelle.' },
-            { q: 'Le déploiement hybride vaut-il la complexité?', a: 'Oui, pour la plupart des entreprises traitant 10M+ tokens/mois. La logique de routage est simple : classifiez la difficulté, envoyez les requêtes faciles en local (gratuit), les requêtes difficiles vers Cloud (exact). 80% réduction coûts sans perte qualité sur requêtes complexes.' },
+            { q: 'Le déploiement hybride vaut-il la complexité?', a: 'Oui, pour la plupart des entreprises traitant 10M+ tokens/mois. La logique de routage est simple : classifiez la difficulté, envoyez les requêtes faciles en local (gratuit), les requêtes difficiles vers Cloud (exact). Dépenses cloud réduites, les requêtes complexes restant traitées par le modèle cloud.' },
             { q: 'Quel modèle local convient le mieux aux agents?', a: 'Llama 3.3 70B pour la qualité (nécessite dual RTX 4090), Qwen3 32B pour vitesse/qualité équilibrée (single RTX 4090), Llama 13B pour agents économiques sur RTX 4070 Ti. DeepSeek-R1 7B pour tâches lourdes en raisonnement sur matériel budget.' },
             { q: 'Comment gérer les défaillances d\'agents locaux?', a: 'Les agents locaux peuvent crasher ou bloquer si VRAM déborde. Définissez OLLAMA_KEEP_ALIVE pour chargement persistant des modèles, implémentez health checks, ajoutez fallback vers API Cloud pour workflows critiques. Les agents locaux en production nécessitent monitoring (Prometheus, Grafana).' },
             { q: 'Les agents locaux égaleront-ils la qualité Cloud en 2027?', a: 'Pour modèles 70B : probablement dans 90% de la qualité GPT-5.6 fin 2027. Pour 13B : pas encore. L\'écart se réduit, mais Cloud maintient un avantage sur raisonnement nouveau et connaissances universelles.' },
-            { q: 'Dois-je déployer localement pour la conformité RGPD?', a: 'Pas obligatoire, mais fortement recommandé. Le RGPD Article 28 exige un accord de traitement pour l\'IA Cloud. Les agents locaux éliminent complètement cette exigence. La CNIL recommande le déploiement local pour les données sensibles des citoyens EU.' },
+            { q: 'Dois-je déployer localement pour la conformité RGPD?', a: 'Pas obligatoire. L\'article 28 du RGPD exige un accord de sous-traitance lorsqu\'un fournisseur d\'IA cloud traite des données personnelles pour votre compte ; un modèle local peut éviter cette relation pour l\'étape d\'inférence. La conformité d\'un déploiement dépend de la base légale, des mesures de sécurité et de votre propre évaluation. Ceci ne constitue pas un conseil juridique.' },
             { q: 'Comment choisir entre Local-Hybride et pure Cloud pour mon entreprise?', a: 'Si votre entreprise traite 10M+ tokens/mois ou possède des données sensibles : Hybride ou Local. Local vous permet contrôle total, conformité et rentabilité sans verrouillage fournisseur.' },
           ],
         },
@@ -1598,7 +1598,7 @@ schema: {
             'name': 'Les agents IA locaux sont-ils aussi bons que les agents Cloud en 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Pour les tâches routinières (Q&A, résumé, automatisation simple) : oui, le Llama 13B+ local correspond à la qualité Cloud. Pour le raisonnement multi-étapes complexe et l\'utilisation d\'outils : les agents Cloud (GPT-5.6, Claude Sonnet 5) sont encore nettement meilleurs. L\'écart se réduit chaque année.',
+              'text': 'Pour les tâches routinières (Q&A, résumé, automatisation simple) : souvent oui, un Llama 13B+ local peut se rapprocher de la qualité Cloud. Pour le raisonnement multi-étapes complexe et l\'utilisation d\'outils : les agents Cloud (GPT-5.6, Claude Sonnet 5) sont encore nettement meilleurs. L\'écart se réduit chaque année.',
             },
           },
           {
@@ -1630,7 +1630,7 @@ schema: {
             'name': 'Le déploiement hybride vaut-il la complexité?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui, pour la plupart des entreprises traitant 10M+ tokens/mois. La logique de routage est simple : classifiez la difficulté, envoyez les requêtes faciles en local (gratuit), les requêtes difficiles vers Cloud (exact). 80% réduction coûts sans perte qualité sur requêtes complexes.',
+              'text': 'Oui, pour la plupart des entreprises traitant 10M+ tokens/mois. La logique de routage est simple : classifiez la difficulté, envoyez les requêtes faciles en local (gratuit), les requêtes difficiles vers Cloud (exact). Dépenses cloud réduites, les requêtes complexes restant traitées par le modèle cloud.',
             },
           },
           {
@@ -1662,7 +1662,7 @@ schema: {
             'name': 'Dois-je déployer localement pour la conformité RGPD?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Pas obligatoire, mais fortement recommandé. Le RGPD Article 28 exige un accord de traitement pour l\'IA Cloud. Les agents locaux éliminent complètement cette exigence. La CNIL recommande le déploiement local pour les données sensibles des citoyens EU.',
+              'text': 'Pas obligatoire. L\'article 28 du RGPD exige un accord de sous-traitance lorsqu\'un fournisseur d\'IA cloud traite des données personnelles pour votre compte ; un modèle local peut éviter cette relation pour l\'étape d\'inférence. La conformité d\'un déploiement dépend de la base légale, des mesures de sécurité et de votre propre évaluation. Ceci ne constitue pas un conseil juridique.',
             },
           },
           {
@@ -1684,7 +1684,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Agent Cloud (API GPT-5.6)', 'description': '100–200ms par étape. 18€ par 1M tokens. Meilleur pour raisonnement complexe, utilisation outils et applications low-latency.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Agent Cloud (API Claude Sonnet 5)', 'description': '150–300ms par étape. 18€ par 1M tokens. Fort pour tâches long-context et génération de code.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Agent Local (Llama 13B)', 'description': '2–3 sec par étape. 0€ par token après matériel. Meilleur pour confidentialité, automatisation routine et workloads haute-volumétrie.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Approche hybride', 'description': 'Dirigez requêtes simples en local, requêtes complexes Cloud. 80% réduction coûts. Meilleure pratique déploiements production 2026.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Approche hybride', 'description': 'Dirigez requêtes simples en local, requêtes complexes Cloud. Dépenses cloud réduites. Meilleure pratique déploiements production 2026.' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-vs-cloud-agents-static.html',
@@ -1729,8 +1729,8 @@ schema: {
             { type: 'plain-terms', text: 'AIエージェントとは、AIモデルをループ内で使用して複数ステップのタスクを完了するプログラムです。そのモデルをクラウド上（GPTやClaudeなど）で実行すると高速で従量課金制ですが、自分のGPUでローカル実行するとステップごとの速度は遅くなるものの、ハードウェアを一度購入すれば無料になります。多くの企業は結局両方を使い分けます：複雑な推論タスクにはクラウド、日常的で大量、または機密性の高い作業にはローカルを使います。' },
           ],
           items: [
-            '**Cloudエージェント(GPT-5.6, Claude Sonnet 5):** 最速(50–200ms/ステップ), 最高性能, 最高コスト, プライバシーなし。',
-            '**Localエージェント(Llama 13B+):** より遅い(2–5秒/ステップ), 性能は劣る, 大規模運用で安価, 完全プライベート。',
+            '**Cloudエージェント(GPT-5.6, Claude Sonnet 5):** 最速(50–200ms/ステップ), 最高性能, 最高コスト。プロンプトはベンダーのサーバーに送られます。',
+            '**Localエージェント(Llama 13B+):** より遅い(2–5秒/ステップ), 性能は劣る, 大規模運用で安価。モデルをローカルで動かす場合、プロンプトは自分のマシン上に残ります。',
             '損益分岐点: ~50M tokens/月。超えるとLocalが安い。',
             '**ベストプラクティス:** ハイブリッド。複雑reasoning用Cloud, 定型タスク用Local。',
             'ほとんどの企業が現在ハイブリッドアプローチを採用しています。',
@@ -1772,8 +1772,8 @@ schema: {
           id: 'privacy',
           title: 'プライバシーとコンプライアンスではどちらが優れている?',
           content: [
-            '**Localエージェントはプライバシーで優位です — データがマシンを離れません。** Cloudエージェントは毎回のプロンプトと応答をベンダーサーバー(OpenAI, Anthropic)に送信します。',
-            'GDPR適合が必要な場合、Cloudエージェントはデータ処理契約が必須です。Localエージェントはこの要件を完全に排除します。 [HIPAA規制データ](/ja/local-llms/private-local-ai-for-business) と SOC2の金融データはLocalエージェントが適しています。',
+            '**Localエージェントは、モデルをローカルで動かす場合、プロンプトと応答を自分のマシン上に留めます。** Cloudエージェントは毎回のプロンプトと応答をベンダーサーバー(OpenAI, Anthropic)に送信します。各ツールのテレメトリとアップデート確認の設定も確認してください。',
+            '**GDPR第28条**は、クラウドAIプロバイダーが自社に代わって個人データを処理する場合にデータ処理契約を求めます。ローカルモデルは推論ステップでの委託関係をなくしますが、全体のコンプライアンスは適法性の根拠、安全管理措置、必要に応じたDPIAに左右されます。 [HIPAA規制データ](/ja/local-llms/private-local-ai-for-business) と SOC2の金融データは、Localエージェントのほうが管理しやすい場合があります。これは一般的な情報であり、法的助言ではありません。',
             '**Cloudの妥協点:** Anthropic Claudeはポリシー上データを学習に使いません。OpenAIはデータ分離のエンタープライズプランを提供。どちらもデータ転送自体は排除できません。',
           ],
         },
@@ -1819,7 +1819,7 @@ schema: {
           ],
           items: [
             'データが機密 — 医療、金融、法務、または企業秘密データ。',
-            'GDPR, HIPAA, SOC2準拠 — データはオンプレミス必須。',
+            '規制対象データ(GDPR, HIPAA, SOC2)はオンプレミスのほうが自社の管理下に置きやすくなります。データ処理契約を締結したクラウド構成でも適合できる場合があります。',
             'ボリューム50M tokens/月超過 — この規模でLocal は10–60倍安い。',
             'エージェント動作、ツール、メモリの完全制御が必要。',
             'ベンダーロックイン回避 — APIなし でモデル切り替え可。',
@@ -1830,19 +1830,19 @@ schema: {
           title: 'ハイブリッドアプローチとは?',
           content: [
             '**2026年のベストプラクティス: シンプルなクエリはLocalエージェント、複雑なクエリはCloudへ。** 定型業務は速度+プライバシー、難題は正確性です。',
-            'ワークフロー例: サポートエージェントはFAQ類をLocal Llama 13B(2秒, 無料)に、複雑な問題をGPT-5.6(200ms, ¥0.03)にエスカレート。結果: 複雑クエリで品質損失なく80%コスト削減。',
+            'ワークフロー例: サポートエージェントはFAQ類をLocal Llama 13B(2秒, 無料)に、複雑な問題をGPT-5.6(200ms, ¥0.03)にエスカレート。結果: 難しいクエリだけが課金されるためクラウド費用が下がり、複雑なクエリの品質はクラウドモデルが担います。',
             '[PromptQuorum](https://www.promptquorum.com?lang=ja) のようなツールは複数モデルに送信して結果を比較します — ハイブリッド構成に最適。',
           ],
           image: '/images/local-vs-cloud-agents-hybrid-flow-ja.svg',
-          imageCaption: 'ハイブリッドアプローチ: シンプルなクエリをローカル エージェントにルーティング(Llama 13B, 2秒、¥0)、複雑な推論をクラウドにエスカレート(GPT-5.6, 200ms、¥0.03)。結果: 難しい問題での品質損失なく80%のコスト削減。',
+          imageCaption: 'ハイブリッドアプローチ: シンプルなクエリをローカル エージェントにルーティング(Llama 13B, 2秒、¥0)、複雑な推論をクラウドにエスカレート(GPT-5.6, 200ms、¥0.03)。結果: クラウド費用が下がり、難しい問題は引き続きクラウドモデルが担います。',
         },
         regionalContext: {
           id: 'regional-context',
           title: '地域別の考慮事項',
           content: [
-            '**日本(METI準拠):** METI AI Governance 2024ガイドラインはエンタープライズ導入でLocalエージェントを推奨。金融・医療セクターのデータはオンプレミス処理が慣例。',
-            '**アジア太平洋(データ越境):** APAC各国のデータ主権法はLocalエージェント導入を加速させています。シンガポール、オーストラリア、インドネシアの金融機関はローカル推論を必須化。',
-            '**エンタープライズ導入(METI準拠企業向け):** 大型金融機関、医療グループ、製造業はLocalエージェント + 監視(Prometheus, Grafana)で本番運用。オンプレミスで完全コンプライアンス確保。',
+            '**日本:** 個人情報保護法(APPI)は、海外移転を含む個人データの取り扱いに条件を定めています。ローカルモデルは第三者に送信される情報を減らせますが、構成がAPPIを満たすかどうかはご自身の評価によります。METI(経済産業省)のAI事業者ガイドラインなども参考になります。',
+            '**アジア太平洋(データ越境):** APAC各国にはデータの越境移転に関する規則があり、ローカルエージェントはクラウドに送るデータを減らす選択肢になります。要件は国と業種によって異なるため、各国の規則を個別に確認してください。',
+            '**エンタープライズ導入:** 大型金融機関、医療グループ、製造業では、Localエージェント + 監視(Prometheus, Grafana)でオンプレミス運用する例があります。コンプライアンスはツールの選択だけでは確保できず、組織としての評価が必要です。',
           ],
         },
         faqSection: {
@@ -1851,7 +1851,7 @@ schema: {
           faqs: [
             {
               q: '2026年、LocalエージェントはCloudエージェント並みの性能?',
-              a: '定型タスク(Q&A, 要約, 単純自動化): はい、Local Llama 13B+はCloud品質に相当。複雑なマルチステップreasoningとツール利用: Cloud(GPT-5.6, Claude Sonnet 5)がまだ優位。毎年ギャップが縮小中。',
+              a: '定型タスク(Q&A, 要約, 単純自動化): 多くの場合はい、Local Llama 13B+はCloud品質に近づけます。複雑なマルチステップreasoningとツール利用: Cloud(GPT-5.6, Claude Sonnet 5)がまだ優位。毎年ギャップが縮小中。',
             },
             {
               q: 'Local vs Cloudの損益分岐点は?',
@@ -1867,7 +1867,7 @@ schema: {
             },
             {
               q: 'ハイブリッド導入は複雑さに見合う?',
-              a: 'はい、10M+ tokens/月処理企業向け。ルーティングロジック単純: 難度分類 → シンプルクエリLocal(無料), 難問題Cloud(正確)。複雑クエリで品質損失なく80%削減。',
+              a: 'はい、10M+ tokens/月処理企業向け。ルーティングロジック単純: 難度分類 → シンプルクエリLocal(無料), 難問題Cloud(正確)。クラウド費用が下がり、複雑なクエリはクラウドモデルが担います。',
             },
             {
               q: 'エージェント向けベストなLocal modelは?',
@@ -1883,11 +1883,11 @@ schema: {
             },
             {
               q: 'GDPR/オンプレミス準拠でLocal導入必須?',
-              a: '必須でなく、強く推奨。GDPR Article 28はCloud AIに処理契約要求。Localエージェント この要件完全排除。金融・医療法人はLocal必須化傾向。',
+              a: '必須ではありません。GDPR第28条は、クラウドAIプロバイダーが自社に代わって個人データを処理する場合に処理契約を求めます。ローカルモデルは推論ステップでこの関係を避けられる場合があります。構成がGDPRに適合するかは、適法性の根拠、安全管理措置、自社の評価によります。法的助言ではありません。',
             },
             {
               q: '企業選択: Local-Hybrid vs 純Cloud?',
-              a: '10M+ tokens/月処理 or 機密データ所有: Hybrid/Local 推奨。Local: 完全制御, コンプライアンス, 費用効率, ベンダーロックイン回避を実現。',
+              a: '10M+ tokens/月処理 or 機密データ所有: Hybrid/Local 推奨。Local: 制御の強化, 費用効率, ベンダーロックインの回避が期待できます。コンプライアンスは自社での評価が必要です。',
             },
           ],
         },
@@ -1940,15 +1940,15 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '2026年、LocalエージェントはCloudエージェント並みの性能?', 'acceptedAnswer': { '@type': 'Answer', 'text': '定型タスク(Q&A, 要約): はい、Local Llama 13B+はCloud品質に相当。複雑なマルチステップreasoningとツール利用: Cloud(GPT-5.6, Claude Sonnet 5)がまだ優位。毎年ギャップが縮小中。' } },
+          { '@type': 'Question', 'name': '2026年、LocalエージェントはCloudエージェント並みの性能?', 'acceptedAnswer': { '@type': 'Answer', 'text': '定型タスク(Q&A, 要約): 多くの場合はい、Local Llama 13B+はCloud品質に近づけます。複雑なマルチステップreasoningとツール利用: Cloud(GPT-5.6, Claude Sonnet 5)がまだ優位。毎年ギャップが縮小中。' } },
           { '@type': 'Question', 'name': 'Local vs Cloudの損益分岐点は?', 'acceptedAnswer': { '@type': 'Answer', 'text': '約50M tokens/月。以下ではCloud安価。超過ではLocal 60–90%節約 — 電気代のみ(~¥24,000/年)後、初期GPU投資(RTX 4090 EOL ~¥300,000–390,000)。' } },
           { '@type': 'Question', 'name': 'コンシューマーハードウェアでLocalエージェント実行可?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Llama 13B エージェントはRTX 4090(24GB VRAM)で2–3秒/ステップ。7B用ならRTX 4070 Ti(12GB)充分。' } },
           { '@type': 'Question', 'name': 'Localエージェントはツール利用と関数呼び出し対応?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、Ollama Tool API経由(Ollama 0.4+)。LangGraphとLangChainはLocal modelsのマルチステップツール利用に統合。' } },
-          { '@type': 'Question', 'name': 'ハイブリッド導入は複雑さに見合う?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、10M+ tokens/月処理企業向け。ルーティングロジック単純: シンプルクエリLocal(無料), 難問題Cloud(正確)。複雑クエリで品質損失なく80%削減。' } },
+          { '@type': 'Question', 'name': 'ハイブリッド導入は複雑さに見合う?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、10M+ tokens/月処理企業向け。ルーティングロジック単純: シンプルクエリLocal(無料), 難問題Cloud(正確)。クラウド費用が下がり、複雑なクエリはクラウドモデルが担います。' } },
           { '@type': 'Question', 'name': 'エージェント向けベストなLocal modelは?', 'acceptedAnswer': { '@type': 'Answer', 'text': '品質: Llama 3.3 70B(dual RTX 4090)。速度/品質バランス: Qwen3 32B(single RTX 4090)。コスト効率: Llama 13B RTX 4070 Ti。' } },
           { '@type': 'Question', 'name': 'Localエージェント障害への対処?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'VRAM超過時クラッシュ/ハング可能。OLLAMA_KEEP_ALIVE 設定、health checks実装、クリティカルワークフローにCloud API fallback。本番は監視(Prometheus, Grafana)必須。' } },
           { '@type': 'Question', 'name': '2027年、LocalエージェントはCloud品質到達?', 'acceptedAnswer': { '@type': 'Answer', 'text': '70B model: 2027年末までにGPT-5.6品質の90%到達可能。13B: 未対応。ギャップ縮小中だがCloud優位保持。' } },
-          { '@type': 'Question', 'name': 'GDPR/オンプレミス準拠でLocal導入必須?', 'acceptedAnswer': { '@type': 'Answer', 'text': '必須でなく、強く推奨。GDPR Article 28はCloud AIに処理契約要求。Localエージェント この要件完全排除。' } },
+          { '@type': 'Question', 'name': 'GDPR/オンプレミス準拠でLocal導入必須?', 'acceptedAnswer': { '@type': 'Answer', 'text': '必須ではありません。GDPR第28条は、クラウドAIプロバイダーが自社に代わって個人データを処理する場合に処理契約を求めます。ローカルモデルは推論ステップでこの関係を避けられる場合があります。構成がGDPRに適合するかは、適法性の根拠、安全管理措置、自社の評価によります。法的助言ではありません。' } },
           { '@type': 'Question', 'name': '企業選択: Local-Hybrid vs 純Cloud?', 'acceptedAnswer': { '@type': 'Answer', 'text': '10M+ tokens/月 or 機密データ: Hybrid/Local推奨。完全制御, コンプライアンス, 費用効率, ベンダーロックイン回避を実現。' } },
         ],
       },
@@ -1961,7 +1961,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': 'Cloud エージェント(GPT-5.6 API)', 'description': '100–200ms/ステップ。1M tokenあたり¥3,300。複雑reasoning, ツール利用, 低遅延アプリに最適。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Cloud エージェント(Claude Sonnet 5 API)', 'description': '150–300ms/ステップ。1M tokenあたり¥3,300。ロングコンテキストタスク・コード生成に優秀。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Local エージェント(Llama 13B)', 'description': '2–3秒/ステップ。hardware後¥0/token。プライバシー, 定型自動化, 高ボリュームワークロードに最適。' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'ハイブリッドアプローチ', 'description': 'シンプルクエリLocal→複雑クエリCloud。80%コスト削減。2026年本番導入ベストプラクティス。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'ハイブリッドアプローチ', 'description': 'シンプルクエリLocal→複雑クエリCloud。クラウド費用の削減。2026年本番導入ベストプラクティス。' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-vs-cloud-agents-static.html',
@@ -2006,8 +2006,8 @@ schema: {
             { type: 'plain-terms', text: 'AI代理是一个在循环中使用AI模型来完成多步骤任务的程序。在云端运行该模型（如GPT或Claude）速度快且按使用量付费；在自己的GPU上本地运行则每步较慢，但一旦拥有硬件即可免费使用。大多数企业最终会两者兼用：云端用于复杂推理任务，本地用于日常、高频或敏感工作。' },
           ],
           items: [
-            '**云端代理(GPT-5.6、Claude Sonnet 5):** 最快(50–200ms/步)、功能最强、成本最高、无隐私保护。',
-            '**本地代理(Llama 13B+):** 较慢(2–5秒/步)、功能较弱、大规模运行成本低、完全隐私。',
+            '**云端代理(GPT-5.6、Claude Sonnet 5):** 最快(50–200ms/步)、功能最强、成本最高；提示词会发送到供应商服务器。',
+            '**本地代理(Llama 13B+):** 较慢(2–5秒/步)、功能较弱、大规模运行成本低；模型在本地运行时，提示词保留在您的机器上。',
             '损益分界点: ~50M令牌/月。超过此点，本地更便宜。',
             '**最佳实践:** 混合。复杂推理用云端，常规任务用本地。',
             '如今大多数企业采用混合方案。',
@@ -2049,8 +2049,8 @@ schema: {
           id: 'privacy',
           title: '隐私和合规性方面哪种更好?',
           content: [
-            '**本地代理在隐私方面胜出 — 数据永不离开您的机器。** 云端代理将每个提示和响应发送给供应商服务器(OpenAI、Anthropic)，受其数据保留政策约束。',
-            '**GDPR第28条**要求云端AI需签订数据处理协议 — 本地代理完全消除此要求。 [HIPAA规管医疗数据](/zh/local-llms/private-local-ai-for-business) 和SOC2金融数据最适合本地代理。',
+            '**模型在本地运行时，本地代理会把提示词和响应保留在您的机器上。** 云端代理将每个提示和响应发送给供应商服务器(OpenAI、Anthropic)，受其数据保留政策约束。请检查各工具自身的遥测和更新检查设置。',
+            '**GDPR第28条**要求云端AI服务商代您处理个人数据时签订数据处理协议；本地模型在推理环节消除了这种处理者关系，但整体合规仍取决于合法性基础、安全措施以及必要时的数据保护影响评估。 [HIPAA规管医疗数据](/zh/local-llms/private-local-ai-for-business) 和SOC2金融数据在本地代理下可能更容易管控。以上为一般性信息，不构成法律建议。',
             '**云端折衷:** Anthropic Claude按其政策不使用您的数据进行训练。OpenAI提供数据隔离的企业计划。两者都无法消除数据传输本身。',
           ],
         },
@@ -2096,7 +2096,7 @@ schema: {
           ],
           items: [
             '数据敏感 — 医疗、金融、法律或专有商业数据。',
-            'GDPR、HIPAA或SOC2合规 — 数据必须保持在本地。',
+            '受监管数据(GDPR、HIPAA、SOC2)在本地部署时更容易保持在您的控制之下；签订了数据处理协议的云端方案同样可能合规。',
             '体量超过50M令牌/月 — 此规模本地便宜10–60倍。',
             '需要完全控制代理行为、工具和内存。',
             '避免供应商锁定 — 随时切换模型而无API改动。',
@@ -2107,19 +2107,19 @@ schema: {
           title: '什么是混合方案?',
           content: [
             '**2026年最佳实践: 将简单查询路由到本地代理，复杂查询路由到云端。** 这为常规工作提供速度+隐私，为难题提供准确性。',
-            '示例工作流: 支持代理将常见问题类型的问题路由到本地Llama 13B(2秒，免费)，将复杂问题上报给GPT-5.6(200ms，$0.02)。结果: 复杂查询无质量损失，成本降低80%。',
+            '示例工作流: 支持代理将常见问题类型的问题路由到本地Llama 13B(2秒，免费)，将复杂问题上报给GPT-5.6(200ms，$0.02)。结果: 只有难查询才计费，云端支出降低；复杂查询的质量仍由云端模型保证。',
             '[PromptQuorum](https://www.promptquorum.com?lang=zh) 等工具将请求分发给多个模型并比较结果 — 非常适合混合配置。',
           ],
           image: '/images/local-vs-cloud-agents-hybrid-flow-zh.svg',
-          imageCaption: '混合方法: 将简单查询路由到本地代理(Llama 13B, 2秒, $0.00), 将复杂推理升级到云端(GPT-5.6, 200ms, $0.02)。结果: 成本节省80%，困难问题上零质量损失。',
+          imageCaption: '混合方法: 将简单查询路由到本地代理(Llama 13B, 2秒, $0.00), 将复杂推理升级到云端(GPT-5.6, 200ms, $0.02)。结果: 云端支出降低，困难问题仍由云端模型处理。',
         },
         regionalContext: {
           id: 'regional-context',
           title: '地区考虑因素',
           content: [
-            '**中国(数据安全法):** 中国2021年《数据安全法》要求个人和企业数据处理保持在境内。美国云端AI供应商(OpenAI、Anthropic)在中国无法直接获取。本地代理运行Qwen3或DeepSeek完全符合数据安全法要求。中国金融机构和科技公司日益部署本地代理以确保法律合规。',
-            '**亚太地区(数据跨境):** 新加坡、日本、澳大利亚和东南亚多国的数据主权法正在加速本地代理采用。ASEAN框架要求敏感数据处理遵守跨境规则。本地代理在东京、新加坡、悉尼部署可完全避免地区外数据转移。',
-            '**企业部署(多地区):** 大型金融机构(银行、保险)、医疗集团和法律事务所跨地区运行本地代理。使用Prometheus/Grafana监控实现完整的数据驻留合规、审计跟踪和安全隔离。成本效益和合规性使本地代理成为亚太地区大企业的首选。',
+            '**中国(数据安全法):** 中国2021年《数据安全法》对数据处理提出了义务。美国云端AI供应商(OpenAI、Anthropic)在中国无法直接获取。在本地运行Qwen3或DeepSeek等模型本身并不等于合规，请咨询当地法律顾问。',
+            '**亚太地区(数据跨境):** 新加坡、日本、澳大利亚和东南亚多国对数据跨境传输有相关规则；本地代理可以减少发送到云端的数据，但各国、各行业要求不同，请逐一核实。',
+            '**企业部署(多地区):** 银行、保险、医疗集团和律师事务所有跨地区使用本地代理并配合Prometheus/Grafana监控的做法。合规不能仅靠工具选择实现，仍需机构自身评估。',
           ],
         },
         faqSection: {
@@ -2128,7 +2128,7 @@ schema: {
           faqs: [
             {
               q: '2026年，本地AI代理和云端代理的性能相当吗?',
-              a: '对于常规任务(Q&A、摘要、简单自动化): 是的，本地Llama 13B+达到云端质量。对于复杂的多步推理、带上下文的代码生成和工具使用: 云端代理(GPT-5.6、Claude Sonnet 5)仍明显更好。差距每年在缩小。',
+              a: '对于常规任务(Q&A、摘要、简单自动化): 通常可以，本地Llama 13B+可以接近云端质量。对于复杂的多步推理、带上下文的代码生成和工具使用: 云端代理(GPT-5.6、Claude Sonnet 5)仍明显更好。差距每年在缩小。',
             },
             {
               q: '本地 vs 云端的损益分界点是什么?',
@@ -2144,7 +2144,7 @@ schema: {
             },
             {
               q: '混合部署的复杂性值得吗?',
-              a: '对于处理10M+令牌/月的大多数企业: 值得。路由逻辑简单: 分类查询难度，简单查询本地(免费)，难查询云端(准确)。复杂查询无质量损失，成本降低80%。',
+              a: '对于处理10M+令牌/月的大多数企业: 值得。路由逻辑简单: 分类查询难度，简单查询本地(免费)，难查询云端(准确)。云端支出降低，复杂查询仍由云端模型处理。',
             },
             {
               q: '最适合代理的本地模型是什么?',
@@ -2160,11 +2160,11 @@ schema: {
             },
             {
               q: '我需要本地部署实现GDPR合规吗?',
-              a: '不是必需，但强烈推荐。GDPR第28条要求云端AI签订数据处理协议。本地代理完全消除此要求。医疗和金融机构趋向于强制本地部署以确保合规。',
+              a: '不是必需的。GDPR第28条要求云端AI服务商代您处理个人数据时签订数据处理协议；本地模型可以在推理环节避免这种关系。部署是否合规取决于合法性基础、安全措施和您自己的评估。不构成法律建议。',
             },
             {
               q: '企业应如何在Local-混合和纯云端之间选择?',
-              a: '若处理10M+令牌/月或拥有敏感数据: 混合或本地。本地提供完全控制、合规性、成本效益和供应商独立性。',
+              a: '若处理10M+令牌/月或拥有敏感数据: 混合或本地。本地提供更强的控制、成本效益和供应商独立性；合规仍需您自己评估。',
             },
           ],
         },
@@ -2217,16 +2217,16 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '2026年，本地AI代理和云端代理的性能相当吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于常规任务(Q&A、摘要): 是的，本地Llama 13B+达到云端质量。对于复杂多步推理和工具使用: 云端代理(GPT-5.6、Claude Sonnet 5)仍明显更好。' } },
+          { '@type': 'Question', 'name': '2026年，本地AI代理和云端代理的性能相当吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于常规任务(Q&A、摘要): 通常可以，本地Llama 13B+可以接近云端质量。对于复杂多步推理和工具使用: 云端代理(GPT-5.6、Claude Sonnet 5)仍明显更好。' } },
           { '@type': 'Question', 'name': '本地 vs 云端的损益分界点是什么?', 'acceptedAnswer': { '@type': 'Answer', 'text': '约为50M令牌/月。以下时云端更便宜。以上时本地节省60–90% — 仅需支付电费后，初期GPU投资($2,000–$2,600 RTX 4090 EOL)。' } },
           { '@type': 'Question', 'name': '我能在消费级硬件上运行本地代理吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。Llama 13B代理在RTX 4090(24GB VRAM)上以2–3秒/步运行。7B代理用RTX 4070 Ti(12GB)足够。' } },
           { '@type': 'Question', 'name': '本地代理支持工具使用和函数调用吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '支持，通过Ollama工具API(Ollama 0.4+)。LangGraph和LangChain与本地模型集成用于多步工具使用。' } },
-          { '@type': 'Question', 'name': '混合部署的复杂性值得吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于处理10M+令牌/月的企业: 值得。简单查询本地(免费)，难查询云端(准确)。复杂查询无质量损失，成本降低80%。' } },
+          { '@type': 'Question', 'name': '混合部署的复杂性值得吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于处理10M+令牌/月的企业: 值得。简单查询本地(免费)，难查询云端(准确)。云端支出降低，复杂查询仍由云端模型处理。' } },
           { '@type': 'Question', 'name': '最适合代理的本地模型是什么?', 'acceptedAnswer': { '@type': 'Answer', 'text': '质量: Llama 3.3 70B(双RTX 4090)。速度/质量: Qwen3 32B(单RTX 4090)。成本效益: Llama 13B RTX 4070 Ti。' } },
           { '@type': 'Question', 'name': '如何处理本地代理故障?', 'acceptedAnswer': { '@type': 'Answer', 'text': '设置OLLAMA_KEEP_ALIVE用于持久模型加载，实施健康检查，为关键工作流添加云API回退。生产需要监控(Prometheus、Grafana)。' } },
           { '@type': 'Question', 'name': '本地代理到2027年会达到云端质量吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '70B模型: 可能在2027年底达到GPT-5.6质量的90%。13B模型: 尚不。差距在缩小但云端保持优势。' } },
-          { '@type': 'Question', 'name': '我需要本地部署实现GDPR合规吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不是必需，但强烈推荐。GDPR第28条要求云端AI签订数据处理协议。本地代理完全消除此要求。' } },
-          { '@type': 'Question', 'name': '企业应如何在Local-混合和纯云端之间选择?', 'acceptedAnswer': { '@type': 'Answer', 'text': '若处理10M+令牌/月或拥有敏感数据: 混合或本地。本地提供完全控制、合规性和成本效益。' } },
+          { '@type': 'Question', 'name': '我需要本地部署实现GDPR合规吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不是必需的。GDPR第28条要求云端AI服务商代您处理个人数据时签订数据处理协议；本地模型可以在推理环节避免这种关系。部署是否合规取决于合法性基础、安全措施和您自己的评估。不构成法律建议。' } },
+          { '@type': 'Question', 'name': '企业应如何在Local-混合和纯云端之间选择?', 'acceptedAnswer': { '@type': 'Answer', 'text': '若处理10M+令牌/月或拥有敏感数据: 混合或本地。本地提供更强的控制和成本效益；合规仍需您自己评估。' } },
         ],
       },
       itemListSchema: {
@@ -2238,7 +2238,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': '云端代理(GPT-5.6 API)', 'description': '每步100–200ms。每百万令牌$10。最适合复杂推理、工具使用和低延迟应用。' },
           { '@type': 'ListItem', 'position': 2, 'name': '云端代理(Claude Sonnet 5 API)', 'description': '每步150–300ms。每百万令牌$10。擅长长上下文任务和代码生成。' },
           { '@type': 'ListItem', 'position': 3, 'name': '本地代理(Llama 13B)', 'description': '每步2–3秒。硬件后每令牌$0。最适合隐私、常规自动化和高容量工作负载。' },
-          { '@type': 'ListItem', 'position': 4, 'name': '混合方案', 'description': '将简单查询路由本地，复杂查询路由云端。成本降低80%。2026生产部署最佳实践。' },
+          { '@type': 'ListItem', 'position': 4, 'name': '混合方案', 'description': '将简单查询路由本地，复杂查询路由云端。云端支出降低。2026生产部署最佳实践。' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-vs-cloud-agents-static.html',
@@ -2283,8 +2283,8 @@ schema: {
             { type: 'plain-terms', text: 'AI 에이전트란 AI 모델을 반복 실행하여 여러 단계의 작업을 완료하는 프로그램입니다. 이 모델을 클라우드(GPT나 Claude 등)에서 실행하면 빠르고 사용량만큼 비용이 발생하며, 자신의 GPU에서 로컬로 실행하면 단계당 속도는 느리지만 하드웨어를 구입한 후에는 무료입니다. 대부분의 기업은 결국 두 가지를 함께 사용합니다: 복잡한 추론 작업에는 클라우드를, 일상적이고 대량이거나 민감한 작업에는 로컬을 사용합니다.' },
           ],
           items: [
-            '**클라우드 에이전트(GPT-5.6, Claude Sonnet 5):** 가장 빠름(단계당 50–200ms), 가장 유능하지만 비용이 가장 높고 개인정보 보호가 되지 않습니다.',
-            '**로컬 에이전트(Llama 13B+):** 느림(단계당 2–5초), 기능이 다소 부족하지만 대규모 사용 시 저렴하고 완전히 비공개입니다.',
+            '**클라우드 에이전트(GPT-5.6, Claude Sonnet 5):** 가장 빠름(단계당 50–200ms), 가장 유능하지만 비용이 가장 높습니다. 프롬프트는 공급업체 서버로 전송됩니다.',
+            '**로컬 에이전트(Llama 13B+):** 느림(단계당 2–5초), 기능이 다소 부족하지만 대규모 사용 시 저렴합니다. 모델을 로컬에서 실행하면 프롬프트가 내 기기에 남습니다.',
             '손익분기점: 월 약 5,000만 토큰. 이를 초과하면 로컬이 더 저렴합니다.',
             '**최선의 선택:** 하이브리드. 복잡한 추론에는 클라우드를, 일상적인 자동화에는 로컬을 사용하십시오.',
             '현재 대부분의 기업이 하이브리드 방식을 사용하고 있습니다.',
@@ -2326,8 +2326,8 @@ schema: {
           id: 'privacy',
           title: '개인정보 보호 및 규정 준수에 어느 쪽이 더 유리합니까?',
           content: [
-            '**로컬 에이전트는 개인정보 보호 측면에서 우위를 가집니다. 데이터가 기기 밖으로 나가지 않습니다.** 클라우드 에이전트는 모든 프롬프트와 응답을 벤더 서버(OpenAI, Anthropic)로 전송하며, 이는 해당 업체의 데이터 보존 정책을 따릅니다.',
-            '**GDPR 제28조**는 클라우드 AI에 대한 데이터 처리 계약을 요구하지만, 로컬 에이전트를 사용하면 이 요건이 완전히 없어집니다. HIPAA 규제를 받는 [의료 데이터](/ko/local-llms/private-local-ai-for-business)와 SOC2 기준의 금융 데이터는 로컬 에이전트를 사용하는 것이 가장 좋습니다.',
+            '**모델을 로컬에서 실행하면 로컬 에이전트는 프롬프트와 응답을 내 기기에 유지합니다.** 클라우드 에이전트는 모든 프롬프트와 응답을 벤더 서버(OpenAI, Anthropic)로 전송하며, 이는 해당 업체의 데이터 보존 정책을 따릅니다. 각 도구의 텔레메트리와 업데이트 확인 설정도 점검하십시오.',
+            '**GDPR 제28조**는 클라우드 AI 제공업체가 사용자를 대신해 개인정보를 처리할 때 데이터 처리 계약을 요구합니다. 로컬 모델은 추론 단계에서 이 처리자 관계를 없애지만, 전체 규정 준수는 여전히 적법 근거, 보안 조치, 필요 시 영향 평가에 좌우됩니다. HIPAA 규제를 받는 [의료 데이터](/ko/local-llms/private-local-ai-for-business)와 SOC2 기준의 금융 데이터는 로컬 에이전트로 통제하기가 더 쉬울 수 있습니다. 이는 일반 정보이며 법률 자문이 아닙니다.',
             '**클라우드의 타협점:** Anthropic Claude는 귀하의 데이터로 학습하지 않습니다(정책에 따름). OpenAI는 데이터 격리 기능이 있는 엔터프라이즈 플랜을 제공합니다. 그러나 어느 쪽도 데이터 전송 자체를 없애지는 못합니다.',
           ],
         },
@@ -2371,7 +2371,7 @@ schema: {
           ],
           items: [
             '의료, 금융, 법률 또는 독점적인 비즈니스 데이터 등 민감한 데이터를 다루는 경우.',
-            'GDPR, HIPAA 또는 SOC2 규정 준수로 인해 데이터가 온프레미스에 보관되어야 하는 경우.',
+            '규제 대상 데이터(GDPR, HIPAA, SOC2)는 온프레미스에서 직접 통제하기가 더 쉽습니다. 데이터 처리 계약을 체결한 클라우드 구성도 규정을 충족할 수 있습니다.',
             '월 사용량이 5,000만 토큰을 초과하는 경우 — 이 규모에서는 로컬이 10–60배 더 저렴합니다.',
             '에이전트 동작, 도구 및 메모리에 대한 완전한 커스터마이징이 필요한 경우.',
             'API 변경 없이 언제든지 모델을 교체할 수 있는 벤더 종속성 없는 환경을 원하는 경우.',
@@ -2382,19 +2382,19 @@ schema: {
           title: '하이브리드 방식이란 무엇입니까?',
           content: [
             '**2026년 모범 사례: 단순한 쿼리는 로컬 에이전트로, 복잡한 쿼리는 클라우드로 라우팅하십시오.** 이를 통해 일상 업무에서는 속도와 개인정보 보호를 확보하고, 어려운 문제에서는 정확성을 유지할 수 있습니다.',
-            '예시 워크플로: 고객 지원 에이전트가 FAQ 유형의 질문은 로컬 Llama 13B(2초, 무료)로 라우팅하고, 복잡한 문제는 GPT-5.6(200ms, $0.02)로 에스컬레이션합니다. 결과: 복잡한 쿼리에서 품질 손실 없이 80%의 비용 절감.',
+            '예시 워크플로: 고객 지원 에이전트가 FAQ 유형의 질문은 로컬 Llama 13B(2초, 무료)로 라우팅하고, 복잡한 문제는 GPT-5.6(200ms, $0.02)로 에스컬레이션합니다. 결과: 어려운 쿼리만 과금되므로 클라우드 비용이 줄고, 복잡한 쿼리의 품질은 클라우드 모델이 맡습니다.',
             '[PromptQuorum](https://www.promptquorum.com)과 같은 도구는 여러 모델에 요청을 분배하고 결과를 비교합니다. 하이브리드 설정에 이상적입니다.',
           ],
           image: '/images/local-vs-cloud-agents-hybrid-flow-en.svg',
-          imageCaption: '하이브리드 방식: 단순한 쿼리는 로컬 에이전트(Llama 13B, 2초, 무료)로 라우팅하고, 복잡한 추론은 클라우드(GPT-5.6, 200ms, $0.02)로 에스컬레이션합니다. 결과: 어려운 문제에서 품질 손실 없이 80%의 비용 절감.',
+          imageCaption: '하이브리드 방식: 단순한 쿼리는 로컬 에이전트(Llama 13B, 2초, 무료)로 라우팅하고, 복잡한 추론은 클라우드(GPT-5.6, 200ms, $0.02)로 에스컬레이션합니다. 결과: 클라우드 비용이 줄고, 어려운 문제는 계속 클라우드 모델이 맡습니다.',
         },
         regionalContext: {
           id: 'regional-context',
           title: '지역별 고려 사항',
           content: [
-            '**EU/DACH:** GDPR 제28조 및 BSI-Grundschutz 요건은 EU 시민 데이터 처리를 위해 로컬 에이전트를 강력히 권장합니다. 클라우드 에이전트는 미국 제공업체로의 국경 간 전송에 표준 계약 조항이 필요합니다.',
-            '**일본:** APPI 요건은 민감한 비즈니스 데이터에 로컬 에이전트를 선호합니다. 일본 금융 및 의료 기업들은 규정 준수를 위해 점점 더 로컬 에이전트를 배포하고 있습니다.',
-            '**중국:** 미국 제공업체(OpenAI, Anthropic)의 클라우드 에이전트는 직접 이용할 수 없습니다. [Qwen3](/ko/local-llms/top-open-source-models-ollama) 또는 DeepSeek를 실행하는 로컬 에이전트는 중국의 2021년 데이터 보안법을 준수합니다.',
+            '**EU/DACH:** GDPR 제28조는 클라우드 제공업체가 사용자를 대신해 개인정보를 처리할 때 데이터 처리 계약을 요구하며, 미국 제공업체로의 전송에는 표준 계약 조항 같은 유효한 전송 수단이 필요합니다. 로컬 모델은 추론 단계의 처리자 관계를 없애지만 그것만으로 배포가 규정을 충족하는 것은 아닙니다. BSI-Grundschutz는 대부분의 민간 조직에 자발적인 보안 프레임워크입니다.',
+            '**일본:** APPI는 해외 이전을 포함한 개인정보 취급에 조건을 둡니다. 로컬 모델은 제3자에게 전송되는 정보를 줄일 수 있지만, 배포가 APPI를 충족하는지는 직접 평가해야 합니다.',
+            '**중국:** 미국 제공업체(OpenAI, Anthropic)의 클라우드 에이전트는 직접 이용할 수 없습니다. 중국의 2021년 데이터 보안법은 데이터 취급 의무를 정하고 있으며, [Qwen3](/ko/local-llms/top-open-source-models-ollama) 또는 DeepSeek 같은 모델을 로컬에서 실행하는 것만으로 규정 준수가 성립하지는 않으므로 현지 법률 자문을 받으십시오.',
           ],
         },
         faqSection: {
@@ -2403,7 +2403,7 @@ schema: {
           faqs: [
             {
               q: '2026년에 로컬 AI 에이전트는 클라우드 에이전트만큼 우수합니까?',
-              a: '일상적인 작업(Q&A, 요약, 단순 자동화)의 경우: 네, 로컬 Llama 13B+ 이상의 모델은 클라우드 품질과 동등합니다. 복잡한 다단계 추론, 컨텍스트를 활용한 코드 생성, 도구 사용의 경우: 클라우드 에이전트(GPT-5.6, Claude Sonnet 5)가 여전히 훨씬 우수합니다. 격차는 매년 좁혀지고 있습니다.',
+              a: '일상적인 작업(Q&A, 요약, 단순 자동화)의 경우: 대체로 그렇습니다. 로컬 Llama 13B+ 이상의 모델은 클라우드 품질에 근접할 수 있습니다. 복잡한 다단계 추론, 컨텍스트를 활용한 코드 생성, 도구 사용의 경우: 클라우드 에이전트(GPT-5.6, Claude Sonnet 5)가 여전히 훨씬 우수합니다. 격차는 매년 좁혀지고 있습니다.',
             },
             {
               q: '로컬 vs 클라우드의 손익분기점은 어디입니까?',
@@ -2469,7 +2469,7 @@ schema: {
           { '@type': 'ListItem', 'position': 1, 'name': '클라우드 에이전트 (GPT-5.6 API)', 'description': '단계당 100–200ms. 100만 토큰당 $10. 복잡한 추론, 도구 사용, 저지연 애플리케이션에 최적.' },
           { '@type': 'ListItem', 'position': 2, 'name': '클라우드 에이전트 (Claude Sonnet 5 API)', 'description': '단계당 150–300ms. 100만 토큰당 $10. 긴 컨텍스트 작업과 코드 생성에 강함.' },
           { '@type': 'ListItem', 'position': 3, 'name': '로컬 에이전트 (Llama 13B)', 'description': '단계당 2–3초. 하드웨어 구매 후 토큰당 $0. 개인정보 보호, 반복 자동화, 대용량 워크로드에 최적.' },
-          { '@type': 'ListItem', 'position': 4, 'name': '하이브리드 접근 방식', 'description': '단순한 쿼리는 로컬로, 복잡한 쿼리는 클라우드로 라우팅. 비용 80% 절감. 2026년 프로덕션 배포를 위한 모범 사례.' },
+          { '@type': 'ListItem', 'position': 4, 'name': '하이브리드 접근 방식', 'description': '단순한 쿼리는 로컬로, 복잡한 쿼리는 클라우드로 라우팅. 클라우드 비용 절감. 2026년 프로덕션 배포를 위한 모범 사례.' },
         ],
       },
     },

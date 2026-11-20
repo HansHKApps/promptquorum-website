@@ -1840,7 +1840,7 @@
         },
         {
           "url": "/images/local-vs-cloud-agents-hybrid-flow-en.svg",
-          "title": "Hybrid approach: route simple queries to local agents (Llama 13B, 2 sec, free) and escalate complex reasoning to cloud (GPT-5.6, 200ms, $0.02). Result: 80% cost reduction with zero quality loss on hard problems."
+          "title": "Hybrid approach: route simple queries to local agents (Llama 13B, 2 sec, free) and escalate complex reasoning to cloud (GPT-5.6, 200ms, $0.02). Result: lower cloud spend, with hard problems still handled by the cloud model."
         }
       ]
     },
@@ -5671,8 +5671,8 @@
       "images": []
     },
     "knowledge-cutoffs-and-geo": {
-      "dateModified": "2026-11-19",
-      "lastFactChecked": "2026-11-19",
+      "dateModified": "2026-11-20",
+      "lastFactChecked": "2026-11-20",
       "publishDate": "2026-06-12",
       "hasSections": true,
       "langs": [
@@ -9726,7 +9726,7 @@
       "images": []
     },
     "local-llm-run-serve-compared": {
-      "dateModified": "2026-10-24",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-20",
       "hasSections": true,
@@ -9744,7 +9744,7 @@
       "images": []
     },
     "local-llm-knowledge-retrieval-compared": {
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-20",
       "hasSections": true,
@@ -9780,7 +9780,7 @@
       "images": []
     },
     "local-llm-chat-assistants-compared": {
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-20",
       "hasSections": true,
@@ -9816,7 +9816,7 @@
       "images": []
     },
     "local-llm-train-operate-compared": {
-      "dateModified": "2026-09-21",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-21",
       "hasSections": true,
@@ -17109,7 +17109,7 @@
       "images": []
     },
     "aiModelKnowledgeCutoffDates": {
-      "dateModified": "2026-11-19",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-06-12",
       "hasSections": true,

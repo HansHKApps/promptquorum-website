@@ -114,13 +114,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**Total VRAM for full stack:** ~15 GB (whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB). Piper runs on CPU.',
-          '**Simplified stack (Qwen3-VL 8B):** ~8 GB VRAM — handles both vision and text reasoning in one model.',
-          '**Voice latency (Whisper small, RTX 4070):** ~200–500 ms STT. 500–1500 ms LLM first token. 100 ms Piper TTS.',
-          '**Image processing latency (Gemma 4 E4B, RTX 4070):** ~2–5 seconds per image depending on resolution and prompt.',
+          '**Total VRAM for full stack (approximate):** ~15 GB (whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB). Piper runs on CPU.',
+          '**Simplified stack (Qwen3-VL 8B, approximate):** ~8 GB VRAM — handles both vision and text reasoning in one model.',
+          '**Voice latency (rough estimate; Whisper small, RTX 4070):** ~200–500 ms STT. 500–1500 ms LLM first token. 100 ms Piper TTS.',
+          '**Image processing latency (rough estimate; Gemma 4 E4B, RTX 4070):** ~2–5 seconds per image depending on resolution and prompt.',
           '**No real-time video:** VLMs process individual frames, not continuous video streams. For video, extract frames at 1 FPS and process each.',
           '**Same Ollama instance for VLM + LLM:** Ollama can serve Qwen3-VL as both the vision model and the text model, saving VRAM.',
-          '**All components MIT, Apache 2.0, or GPL-3.0 licensed** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). The original rhasspy/piper repository was archived in 2025; development continues in OHF-Voice/piper1-gpl (v1.8.0), which is GPL-3.0 licensed — check that licence before shipping Piper in a closed-source product.',
+          '**The main components are MIT, Apache 2.0, or GPL-3.0 licensed (other components named in this guide have their own licences)** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). The original rhasspy/piper repository was archived in 2025; development continues in OHF-Voice/piper1-gpl (v1.8.0), which is GPL-3.0 licensed — check that licence before shipping Piper in a closed-source product.',
         ],
       },
       whatIsMultimodal: {
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       costComparison: {
         id: 'cost-comparison',
-        title: 'Cost: Local Pipeline vs Cloud APIs (Monthly)',
+        title: 'Cost: Local Pipeline vs Cloud APIs (Monthly, Rough Estimates)',
         content:
           'At moderate usage (100+ queries/day), a local multimodal pipeline pays for itself in 3–6 months. At light usage (10 queries/day), break-even extends to 12–18 months.',
         snippetBlocks: [
@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Usage': 'Hardware (one-time)', 'GPT-5.5 API': '$0', 'Google Cloud': '$0', 'Local': '$600–3,500' },
           { 'Usage': 'Break-even', 'GPT-5.5 API': '—', 'Google Cloud': '—', 'Local': '3–18 months' },
         ],
-        note: 'The local pipeline pays for itself in 3–6 months at moderate usage (100+ queries/day). At light usage (10 queries/day), the break-even extends to 12–18 months.',
+        note: 'The local pipeline pays for itself in 3–6 months at moderate usage (100+ queries/day). At light usage (10 queries/day), the break-even extends to 12–18 months. These are rough estimates, not vendor quotes or PromptQuorum measurements; check current vendor pricing before deciding.',
       },
       architecture: {
         id: 'architecture',
@@ -274,15 +274,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Tier': 'Apple High',
             'GPU': 'M5 Max 128 GB',
             'RAM': '128 GB unified',
-            'Can Run': 'Full stack with 70B models — best local quality',
+            'Can Run': 'Full stack with 70B models — high local quality',
             'Latency (voice query + image)': '1–3 sec',
           },
         ],
-        note: 'Latency is measured from end of voice query to start of TTS playback, including image processing if an image is present.',
+        note: 'Latency figures are rough estimates, not PromptQuorum benchmarks; they refer to the time from end of voice query to start of TTS playback, including image processing if an image is present, and vary with hardware, models and settings.',
         callouts: [
           {
             type: 'tip',
-            text: 'The M5 Max with 128 GB unified memory is the ultimate local multimodal platform. It can run Whisper large-v3 (3 GB) + Gemma 4 31B (~20 GB) + Piper TTS simultaneously — a 31B-class vision model leaves ample headroom for context and other models. No discrete GPU setup can match this without multi-GPU configurations costing 2–3× more.',
+            text: 'The M5 Max with 128 GB unified memory is a very capable local multimodal platform. It can run Whisper large-v3 (3 GB) + Gemma 4 31B (~20 GB) + Piper TTS simultaneously — a 31B-class vision model leaves ample headroom for context and other models.',
           },
         ],
       },
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Point a camera at an object or scene, ask a question verbally, and receive a spoken answer.** This use case is the closest local equivalent to Google Lens with voice interaction.',
         items: [
-          '**Applications:** Warehouse inventory (photograph a shelf, ask "How many units of SKU-4429 are present?"), field inspection (photograph machinery damage, ask "Is this safe to operate?"), accessibility (describe objects for visually impaired users).',
+          '**Applications:** Warehouse inventory (photograph a shelf, ask "How many units of SKU-4429 are present?"), field inspection (photograph machinery damage and ask what is visible; an AI answer is not a safety assessment, so have a qualified person decide whether it is safe to operate), accessibility (describe objects for visually impaired users).',
           '**Implementation:** Capture a camera frame (OpenCV `cv2.VideoCapture(0).read()`), save as JPEG, pass to VLM alongside the Whisper transcript.',
           '**Best models:** Gemma 4 E4B or Qwen3-VL 8B for general object/scene understanding.',
           '**Latency:** 3–6 seconds for image capture + VLM processing + LLM + TTS on RTX 4070. Reduce with smaller VLM (Moondream 2 for simple object identification).',
@@ -315,13 +315,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'use-case-3',
         title: 'Use Case 3: Meeting Transcription + Slide Analysis',
         content:
-          '**Run Whisper continuously during a meeting to build a transcript, while periodically capturing slide screenshots for VLM analysis. At the end, combine transcript + slide content for a local summary and action items — zero cloud, zero data exposure.**',
+          '**Run Whisper continuously during a meeting to build a transcript, while periodically capturing slide screenshots for VLM analysis. At the end, combine transcript + slide content for a local summary and action items — with no cloud service involved.**',
         items: [
           '**STT:** Run faster-whisper in streaming mode during the meeting. Accumulate segments into a transcript buffer.',
           '**Vision:** Every time a new slide appears (detect via screen capture diff), capture a screenshot and pass to Gemma 4 E4B for description.',
           '**Combination:** At end of meeting (or on-demand), pass transcript + slide descriptions to Qwen3 8B: "Summarize this meeting and list action items. Here is the transcript: [...]. Here are the slide contents: [...]."',
           '**Output:** Voice-read summary (Piper TTS) + text file saved locally.',
-          '**GDPR value:** Entire meeting processing is local. No audio, transcript, or slides sent to any cloud service. Whether this meets GDPR requirements in legal, medical, or corporate settings still depends on your lawful basis, retention policy, and other controls — consult your compliance team.',
+          '**GDPR value:** Entire meeting processing is local. No audio, transcript, or slides sent to any cloud service. Whether this meets GDPR requirements in legal, medical, or corporate settings still depends on your lawful basis, retention policy, and other controls — consult your compliance team. Recording people in a meeting also requires their consent or another lawful basis under local law.',
         ],
       },
       useCase4: {
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Screen reader:** Capture a screenshot every 2 seconds → Gemma 4 E4B describes what is on screen → Piper reads it aloud. Add voice commands (Whisper) to control what to describe next.',
           '**Voice navigation:** Whisper transcribes voice commands → LLM interprets intent → execute keyboard/mouse actions via pyautogui. No internet required.',
-          '**Privacy benefit:** Users with disabilities often use accessibility tools in sensitive contexts (medical portals, financial accounts). A local tool ensures no screen content is transmitted to third parties.',
+          '**Privacy benefit:** Users with disabilities often use accessibility tools in sensitive contexts (medical portals, financial accounts). A local tool keeps screen content on your machine as long as none of its components make network calls (verify this for your setup).',
           '**Low-connectivity use:** Works in hospitals, government buildings, and areas with restricted internet — important for institutional accessibility deployments.',
           '**Model choice for accessibility:** Moondream 2 for fast screen descriptions (2 GB VRAM, ~1 sec per frame). Gemma 4 E4B for richer descriptions (6 GB VRAM, ~3 sec per frame).',
         ],
@@ -347,9 +347,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Motion detection:** Compute the diff between consecutive frames with `cv2.absdiff()`. Skip frames below the motion threshold — this avoids unnecessary VLM calls on static, empty scenes.',
           '**VLM analysis:** When motion is detected, send the frame to the VLM: "Describe what is happening. Is there a person? What are they doing?"',
           '**Alert output:** If the response indicates a person or anomaly, trigger a local desktop notification and a Piper TTS announcement ("Person detected at front door"). No cloud notification service required.',
-          '**Privacy advantage:** Ring and Nest send video to AWS and Google servers respectively. This setup keeps all footage on your hardware — no subscription, no third-party video storage, no data sharing with external services.',
+          '**Privacy advantage:** Cloud camera services such as Ring and Nest store footage on servers run by their providers by default (see the privacy policy of each provider). This setup keeps footage on your hardware — no subscription and no third-party video storage by default. Filming public spaces, neighbours or employees can be unlawful (the GDPR household exemption generally does not cover it), so check local law and signage rules first.',
           '**Best VLM for speed:** Moondream 2 for fast frame processing (~1 second per frame, ~2 GB VRAM) or Gemma 4 E4B for richer scene descriptions (~3 seconds per frame, ~6 GB VRAM).',
-          '**Hardware note:** A dedicated Mac Mini M5 (~$600) running this stack 24/7 consumes ~15–25W idle — less annually in electricity than a Ring Doorbell Pro subscription.',
+          '**Hardware note:** A dedicated Mac Mini M5 (~$600) running this stack 24/7 is estimated to draw roughly 15–25W at idle.',
         ],
       },
       orchestrator: {
@@ -607,13 +607,13 @@ if __name__ == "__main__":
         id: 'quick-facts',
         title: 'Kurzfakten',
         items: [
-          '**VRAM für den vollständigen Stack:** ~15 GB (Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB). Piper läuft auf der CPU.',
-          '**Vereinfachter Stack (Qwen3-VL 8B):** ~8 GB VRAM — verarbeitet sowohl Vision als auch Textreasoning in einem Modell.',
-          '**Sprach-Latenz (Whisper small, RTX 4070):** ~200–500 ms STT. 500–1500 ms LLM erster Token. 100 ms Piper TTS.',
-          '**Bildverarbeitungs-Latenz (Gemma 4 E4B, RTX 4070):** ~2–5 Sekunden pro Bild je nach Auflösung und Prompt.',
+          '**VRAM für den vollständigen Stack (ungefähr):** ~15 GB (Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB). Piper läuft auf der CPU.',
+          '**Vereinfachter Stack (Qwen3-VL 8B, ungefähr):** ~8 GB VRAM — verarbeitet sowohl Vision als auch Textreasoning in einem Modell.',
+          '**Sprach-Latenz (grobe Schätzung; Whisper small, RTX 4070):** ~200–500 ms STT. 500–1500 ms LLM erster Token. 100 ms Piper TTS.',
+          '**Bildverarbeitungs-Latenz (grobe Schätzung; Gemma 4 E4B, RTX 4070):** ~2–5 Sekunden pro Bild je nach Auflösung und Prompt.',
           '**Kein Echtzeit-Video:** VLMs verarbeiten einzelne Frames, keine kontinuierlichen Videostreams. Für Video: Frames bei 1 FPS extrahieren und einzeln verarbeiten.',
           '**Gleiche Ollama-Instanz für VLM + LLM:** Ollama kann Qwen3-VL sowohl als Vision- als auch als Text-Modell bereitstellen und so VRAM sparen.',
-          '**Alle Komponenten MIT-, Apache-2.0- oder GPL-3.0-lizenziert** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). Das ursprüngliche Repository rhasspy/piper wurde 2025 archiviert; die Entwicklung läuft in OHF-Voice/piper1-gpl (v1.8.0) weiter und steht unter GPL-3.0 – prüfen Sie diese Lizenz, bevor Sie Piper in einem proprietären Produkt ausliefern.',
+          '**Die Hauptkomponenten sind MIT-, Apache-2.0- oder GPL-3.0-lizenziert (weitere in diesem Leitfaden genannte Komponenten haben eigene Lizenzen)** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). Das ursprüngliche Repository rhasspy/piper wurde 2025 archiviert; die Entwicklung läuft in OHF-Voice/piper1-gpl (v1.8.0) weiter und steht unter GPL-3.0 – prüfen Sie diese Lizenz, bevor Sie Piper in einem proprietären Produkt ausliefern.',
         ],
       },
       whatIsMultimodal: {
@@ -629,7 +629,7 @@ if __name__ == "__main__":
       },
       costComparison: {
         id: 'cost-comparison',
-        title: 'Kosten: Lokale Pipeline vs. Cloud-APIs (monatlich)',
+        title: 'Kosten: Lokale Pipeline vs. Cloud-APIs (monatlich, grobe Schätzung)',
         content: 'Bei moderater Nutzung (100+ Abfragen/Tag) amortisiert sich eine lokale multimodale Pipeline in 3–6 Monaten.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Eine lokale multimodale Pipeline kostet nach der einmaligen Hardware-Investition (600–3.500 $) 0 $/Monat an API-Gebühren, mit einem Break-even gegenüber GPT-5.5-API-Kosten (135–225 $/Monat) in 3–18 Monaten je nach Abfragevolumen.' },
@@ -642,7 +642,7 @@ if __name__ == "__main__":
           { 'Nutzung': 'Hardware (einmalig)', 'GPT-5.5 API': '$0', 'Google Cloud': '$0', 'Lokal': '$600–3.500' },
           { 'Nutzung': 'Break-even', 'GPT-5.5 API': '—', 'Google Cloud': '—', 'Lokal': '3–18 Monate' },
         ],
-        note: 'Die lokale Pipeline amortisiert sich in 3–6 Monaten bei moderater Nutzung (100+ Abfragen/Tag). Bei geringer Nutzung (10 Abfragen/Tag) verlängert sich der Break-even auf 12–18 Monate.',
+        note: 'Die lokale Pipeline amortisiert sich in 3–6 Monaten bei moderater Nutzung (100+ Abfragen/Tag). Bei geringer Nutzung (10 Abfragen/Tag) verlängert sich der Break-even auf 12–18 Monate. Dies sind grobe Schätzwerte, keine Anbieterangebote oder Messungen von PromptQuorum; prüfen Sie vor einer Entscheidung die aktuellen Anbieterpreise.',
       },
       architecture: {
         id: 'architecture',
@@ -688,11 +688,11 @@ if __name__ == "__main__":
           { 'Stufe': 'Mittel', 'GPU': 'RTX 4070 12 GB', 'RAM': '32 GB', 'Kann ausführen': 'Vollständiger Stack mit 7B-Modellen (Gemma 4 E4B + Qwen3 8B, knapper Fit)', 'Latenz (Sprach-Abfrage + Bild)': '3–6 Sek.' },
           { 'Stufe': 'Hoch', 'GPU': 'RTX 4090 24 GB', 'RAM': '64 GB', 'Kann ausführen': 'Vollständiger Stack mit 12B-VLM + 8B-LLM simultan', 'Latenz (Sprach-Abfrage + Bild)': '2–4 Sek.' },
           { 'Stufe': 'Apple Mittel', 'GPU': 'M5 Pro 36 GB', 'RAM': '36 GB Unified', 'Kann ausführen': 'Vollständiger Stack mit 8B-Modellen via Metal (empfohlen)', 'Latenz (Sprach-Abfrage + Bild)': '2–4 Sek.' },
-          { 'Stufe': 'Apple Hoch', 'GPU': 'M5 Max 128 GB', 'RAM': '128 GB Unified', 'Kann ausführen': 'Vollständiger Stack mit 70B-Modellen — beste lokale Qualität', 'Latenz (Sprach-Abfrage + Bild)': '1–3 Sek.' },
+          { 'Stufe': 'Apple Hoch', 'GPU': 'M5 Max 128 GB', 'RAM': '128 GB Unified', 'Kann ausführen': 'Vollständiger Stack mit 70B-Modellen — hohe lokale Qualität', 'Latenz (Sprach-Abfrage + Bild)': '1–3 Sek.' },
         ],
-        note: 'Latenz wird vom Ende der Sprachabfrage bis zum Start der TTS-Wiedergabe gemessen, einschließlich Bildverarbeitung, falls ein Bild vorhanden ist.',
+        note: 'Die Latenzangaben sind grobe Schätzwerte und keine Benchmarks von PromptQuorum; sie beziehen sich auf die Zeit vom Ende der Sprachabfrage bis zum Start der TTS-Wiedergabe, einschließlich Bildverarbeitung, falls ein Bild vorhanden ist, und variieren je nach Hardware, Modellen und Einstellungen.',
         callouts: [
-          { type: 'tip', text: 'Der M5 Max mit 128 GB Unified Memory ist die ultimative lokale multimodale Plattform. Er kann Whisper large-v3 (3 GB) + Gemma 4 31B (~20 GB) + Piper TTS simultan ausführen.' },
+          { type: 'tip', text: 'Der M5 Max mit 128 GB Unified Memory ist eine sehr leistungsfähige lokale multimodale Plattform. Er kann Whisper large-v3 (3 GB) + Gemma 4 31B (~20 GB) + Piper TTS simultan ausführen.' },
         ],
       },
       useCase1: {
@@ -721,13 +721,13 @@ if __name__ == "__main__":
       useCase3: {
         id: 'use-case-3',
         title: 'Use Case 3: Meeting-Transkription + Folienanalyse',
-        content: '**Führen Sie Whisper kontinuierlich während eines Meetings aus, um ein Transkript zu erstellen, während periodisch Folien-Screenshots für die VLM-Analyse aufgenommen werden. Am Ende werden Transkript + Folieninhalt für eine lokale Zusammenfassung kombiniert — null Cloud, null Datenexposition.**',
+        content: '**Führen Sie Whisper kontinuierlich während eines Meetings aus, um ein Transkript zu erstellen, während periodisch Folien-Screenshots für die VLM-Analyse aufgenommen werden. Am Ende werden Transkript + Folieninhalt für eine lokale Zusammenfassung kombiniert — ohne Cloud-Dienst.**',
         items: [
           '**STT:** Führen Sie faster-whisper im Streaming-Modus während des Meetings aus.',
           '**Vision:** Jedes Mal, wenn eine neue Folie erscheint, nehmen Sie einen Screenshot auf und übergeben ihn an Gemma 4 E4B zur Beschreibung.',
           '**Kombination:** Am Ende des Meetings übergeben Sie Transkript + Folienbeschreibungen an Qwen3 8B für Zusammenfassung und Aktionspunkte.',
           '**Ausgabe:** Sprachgelesene Zusammenfassung (Piper TTS) + lokal gespeicherte Textdatei.',
-          '**DSGVO-Wert:** Die gesamte Meeting-Verarbeitung ist lokal. Kein Audio, Transkript oder Folien werden an einen Cloud-Dienst gesendet.',
+          '**DSGVO-Wert:** Die gesamte Meeting-Verarbeitung ist lokal. Kein Audio, Transkript oder Folien werden an einen Cloud-Dienst gesendet. Ob dies die DSGVO-Anforderungen erfüllt, hängt weiterhin von Ihrer Rechtsgrundlage, Ihrer Aufbewahrungsrichtlinie und weiteren Maßnahmen ab – sprechen Sie mit Ihrem Compliance-Team. Die Aufnahme von Personen in einer Besprechung erfordert zudem deren Einwilligung oder eine andere Rechtsgrundlage nach geltendem Recht.',
         ],
       },
       useCase4: {
@@ -737,7 +737,7 @@ if __name__ == "__main__":
         items: [
           '**Screenreader:** Screenshot alle 2 Sekunden aufnehmen → Gemma 4 E4B beschreibt den Bildschirminhalt → Piper liest ihn laut vor.',
           '**Sprachnavigation:** Whisper transkribiert Sprachbefehle → LLM interpretiert die Absicht → Tastatur-/Mausaktionen via pyautogui ausführen.',
-          '**Datenschutzvorteil:** Benutzer mit Behinderungen nutzen Zugänglichkeitstools oft in sensiblen Kontexten. Ein lokales Tool stellt sicher, dass kein Bildschirminhalt an Dritte übertragen wird.',
+          '**Datenschutzvorteil:** Benutzer mit Behinderungen nutzen Zugänglichkeitstools oft in sensiblen Kontexten. Ein lokales Tool hält Bildschirminhalte auf Ihrem Rechner, solange keine seiner Komponenten Netzwerkverbindungen aufbaut (prüfen Sie das für Ihr Setup).',
           '**Modellwahl für Zugänglichkeit:** Moondream 2 für schnelle Bildschirmbeschreibungen (2 GB VRAM). Gemma 4 E4B für reichhaltigere Beschreibungen (6 GB VRAM).',
         ],
       },
@@ -750,7 +750,7 @@ if __name__ == "__main__":
           '**Bewegungserkennung:** Differenz zwischen aufeinanderfolgenden Frames berechnen. Frames unterhalb des Bewegungsschwellenwerts überspringen.',
           '**VLM-Analyse:** Bei erkannter Bewegung den Frame an das VLM senden: „Beschreiben Sie, was passiert. Ist eine Person anwesend?"',
           '**Alert-Ausgabe:** Wenn eine Person erkannt wird, eine lokale Desktop-Benachrichtigung und eine Piper-TTS-Ansage auslösen.',
-          '**Datenschutzvorteil:** Ring und Nest senden Video an AWS- bzw. Google-Server. Dieses Setup hält alle Aufnahmen auf Ihrer Hardware.',
+          '**Datenschutzvorteil:** Cloud-Kameradienste wie Ring und Nest speichern Aufnahmen standardmäßig auf Servern ihrer Anbieter (siehe die Datenschutzerklärung des jeweiligen Anbieters). Dieses Setup hält die Aufnahmen auf Ihrer Hardware. Das Filmen öffentlicher Bereiche, von Nachbarn oder Beschäftigten kann rechtswidrig sein (die Haushaltsausnahme der DSGVO greift hier in der Regel nicht); prüfen Sie daher zuerst das geltende Recht und die Kennzeichnungspflichten.',
           '**Bestes VLM für Geschwindigkeit:** Moondream 2 (~1 Sekunde pro Frame, ~2 GB VRAM) oder Gemma 4 E4B (~3 Sekunden, ~6 GB VRAM).',
         ],
       },
@@ -982,13 +982,13 @@ if __name__ == "__main__":
         id: 'quick-facts',
         title: 'Faits rapides',
         items: [
-          '**VRAM totale pour le stack complet :** ~15 Go (Whisper 3 Go + Gemma 4 E4B 6 Go + Qwen3 8B 6 Go). Piper tourne sur CPU.',
-          '**Stack simplifié (Qwen3-VL 8B) :** ~8 Go VRAM — gère vision et raisonnement textuel en un seul modèle.',
-          '**Latence vocale (Whisper small, RTX 4070) :** ~200–500 ms STT. 500–1500 ms premier token LLM. 100 ms Piper TTS.',
-          '**Latence traitement image (Gemma 4 E4B, RTX 4070) :** ~2–5 secondes par image selon résolution et prompt.',
+          '**VRAM totale pour le stack complet (approximative) :** ~15 Go (Whisper 3 Go + Gemma 4 E4B 6 Go + Qwen3 8B 6 Go). Piper tourne sur CPU.',
+          '**Stack simplifié (Qwen3-VL 8B, approximatif) :** ~8 Go VRAM — gère vision et raisonnement textuel en un seul modèle.',
+          '**Latence vocale (estimation approximative ; Whisper small, RTX 4070) :** ~200–500 ms STT. 500–1500 ms premier token LLM. 100 ms Piper TTS.',
+          '**Latence traitement image (estimation approximative ; Gemma 4 E4B, RTX 4070) :** ~2–5 secondes par image selon résolution et prompt.',
           '**Pas de vidéo temps réel :** Les VLMs traitent des images individuelles, pas des flux vidéo continus. Pour la vidéo, extraire des images à 1 FPS et traiter chacune.',
           '**Même instance Ollama pour VLM + LLM :** Ollama peut servir Qwen3-VL comme modèle de vision et modèle textuel, économisant la VRAM.',
-          '**Tous les composants sous licence MIT, Apache 2.0 ou GPL-3.0** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). Le dépôt d\'origine rhasspy/piper a été archivé en 2025 ; le développement se poursuit dans OHF-Voice/piper1-gpl (v1.8.0), sous licence GPL-3.0 — vérifiez cette licence avant d\'intégrer Piper à un produit propriétaire.',
+          '**Les principaux composants sont sous licence MIT, Apache 2.0 ou GPL-3.0 (les autres composants cités dans ce guide ont leurs propres licences)** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). Le dépôt d\'origine rhasspy/piper a été archivé en 2025 ; le développement se poursuit dans OHF-Voice/piper1-gpl (v1.8.0), sous licence GPL-3.0 — vérifiez cette licence avant d\'intégrer Piper à un produit propriétaire.',
         ],
       },
       whatIsMultimodal: {
@@ -1004,7 +1004,7 @@ if __name__ == "__main__":
       },
       costComparison: {
         id: 'cost-comparison',
-        title: 'Coût : Pipeline locale vs APIs cloud (mensuel)',
+        title: 'Coût : Pipeline locale vs APIs cloud (mensuel, estimation approximative)',
         content: 'À usage modéré (100+ requêtes/jour), un pipeline multimodal local s\'amortit en 3–6 mois.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Un pipeline multimodal local coûte 0 $/mois en frais d\'API après l\'investissement matériel unique (600–3 500 $), avec un seuil de rentabilité face aux coûts API GPT-5.5 (135–225 $/mois) en 3–18 mois selon le volume de requêtes.' },
@@ -1017,7 +1017,7 @@ if __name__ == "__main__":
           { 'Usage': 'Matériel (une fois)', 'GPT-5.5 API': '$0', 'Google Cloud': '$0', 'Local': '$600–3 500' },
           { 'Usage': 'Seuil de rentabilité', 'GPT-5.5 API': '—', 'Google Cloud': '—', 'Local': '3–18 mois' },
         ],
-        note: 'Le pipeline local s\'amortit en 3–6 mois à usage modéré (100+ requêtes/jour). À usage léger (10 requêtes/jour), le seuil de rentabilité s\'étend à 12–18 mois.',
+        note: 'Le pipeline local s\'amortit en 3–6 mois à usage modéré (100+ requêtes/jour). À usage léger (10 requêtes/jour), le seuil de rentabilité s\'étend à 12–18 mois. Ces chiffres sont des estimations approximatives, et non des devis de fournisseurs ni des mesures de PromptQuorum ; vérifiez les tarifs actuels des fournisseurs avant de décider.',
       },
       architecture: {
         id: 'architecture',
@@ -1063,11 +1063,11 @@ if __name__ == "__main__":
           { 'Niveau': 'Milieu de gamme', 'GPU': 'RTX 4070 12 Go', 'RAM': '32 Go', 'Peut exécuter': 'Stack complet avec modèles 7B (Gemma 4 E4B + Qwen3 8B, ajustement serré)', 'Latence (requête vocale + image)': '3–6 sec' },
           { 'Niveau': 'Haut de gamme', 'GPU': 'RTX 4090 24 Go', 'RAM': '64 Go', 'Peut exécuter': 'Stack complet avec VLM 12B + LLM 8B simultanément', 'Latence (requête vocale + image)': '2–4 sec' },
           { 'Niveau': 'Apple milieu', 'GPU': 'M5 Pro 36 Go', 'RAM': '36 Go unifié', 'Peut exécuter': 'Stack complet avec modèles 8B via Metal (recommandé)', 'Latence (requête vocale + image)': '2–4 sec' },
-          { 'Niveau': 'Apple haut de gamme', 'GPU': 'M5 Max 128 Go', 'RAM': '128 Go unifié', 'Peut exécuter': 'Stack complet avec modèles 70B — meilleure qualité locale', 'Latence (requête vocale + image)': '1–3 sec' },
+          { 'Niveau': 'Apple haut de gamme', 'GPU': 'M5 Max 128 Go', 'RAM': '128 Go unifié', 'Peut exécuter': 'Stack complet avec modèles 70B — haute qualité locale', 'Latence (requête vocale + image)': '1–3 sec' },
         ],
-        note: 'La latence est mesurée de la fin de la requête vocale au début de la lecture TTS, traitement image inclus si une image est présente.',
+        note: 'Les latences indiquées sont des estimations approximatives, et non des benchmarks de PromptQuorum ; elles correspondent au délai entre la fin de la requête vocale et le début de la lecture TTS, traitement image inclus si une image est présente, et varient selon le matériel, les modèles et les réglages.',
         callouts: [
-          { type: 'tip', text: 'Le M5 Max avec 128 Go de mémoire unifiée est la plateforme multimodale locale ultime. Il peut exécuter Whisper large-v3 (3 Go) + Gemma 4 31B (~20 Go) + Piper TTS simultanément.' },
+          { type: 'tip', text: 'Le M5 Max avec 128 Go de mémoire unifiée est une plateforme multimodale locale très performante. Il peut exécuter Whisper large-v3 (3 Go) + Gemma 4 31B (~20 Go) + Piper TTS simultanément.' },
         ],
       },
       useCase1: {
@@ -1096,13 +1096,13 @@ if __name__ == "__main__":
       useCase3: {
         id: 'use-case-3',
         title: 'Cas d\'usage 3 : Transcription de réunion + Analyse de diapositives',
-        content: '**Exécutez Whisper en continu pendant une réunion pour construire une transcription, tout en capturant périodiquement des captures d\'écran de diapositives pour analyse VLM. À la fin, combinez transcription + contenu des diapositives pour un résumé local — zéro cloud, zéro exposition de données.**',
+        content: '**Exécutez Whisper en continu pendant une réunion pour construire une transcription, tout en capturant périodiquement des captures d\'écran de diapositives pour analyse VLM. À la fin, combinez transcription + contenu des diapositives pour un résumé local — sans aucun service cloud.**',
         items: [
           '**STT :** Exécuter faster-whisper en mode streaming pendant la réunion.',
           '**Vision :** À chaque nouvelle diapositive, capturer un screenshot et le passer à Gemma 4 E4B pour description.',
           '**Combinaison :** En fin de réunion, passer transcription + descriptions de diapositives à Qwen3 8B pour résumé et points d\'action.',
           '**Sortie :** Résumé lu à voix haute (Piper TTS) + fichier texte sauvegardé localement.',
-          '**Valeur RGPD :** Traitement complet de la réunion en local. Aucun audio, transcription ou diapositive envoyé à un service cloud.',
+          '**Valeur RGPD :** Traitement complet de la réunion en local. Aucun audio, transcription ou diapositive envoyé à un service cloud. Le respect du RGPD dépend toujours de votre base légale, de votre politique de conservation et d\'autres mesures — consultez votre équipe conformité. Enregistrer des personnes lors d\'une réunion exige aussi leur consentement ou une autre base légale selon le droit local.',
         ],
       },
       useCase4: {
@@ -1112,7 +1112,7 @@ if __name__ == "__main__":
         items: [
           '**Lecteur d\'écran :** Capturer un screenshot toutes les 2 secondes → Gemma 4 E4B décrit ce qui est à l\'écran → Piper le lit à voix haute.',
           '**Navigation vocale :** Whisper transcrit les commandes vocales → LLM interprète l\'intention → exécuter actions clavier/souris via pyautogui.',
-          '**Bénéfice confidentialité :** Les utilisateurs handicapés utilisent souvent des outils d\'accessibilité dans des contextes sensibles. Un outil local garantit qu\'aucun contenu d\'écran n\'est transmis à des tiers.',
+          '**Bénéfice confidentialité :** Les utilisateurs handicapés utilisent souvent des outils d\'accessibilité dans des contextes sensibles. Un outil local garde le contenu de l\'écran sur votre machine tant qu\'aucun de ses composants n\'établit de connexion réseau (vérifiez-le pour votre configuration).',
           '**Choix de modèle pour l\'accessibilité :** Moondream 2 pour des descriptions d\'écran rapides (2 Go VRAM). Gemma 4 E4B pour des descriptions plus riches (6 Go VRAM).',
         ],
       },
@@ -1125,7 +1125,7 @@ if __name__ == "__main__":
           '**Détection de mouvement :** Calculer la différence entre images consécutives. Ignorer les images sous le seuil de mouvement.',
           '**Analyse VLM :** Quand un mouvement est détecté, envoyer l\'image au VLM : « Décrivez ce qui se passe. Y a-t-il une personne ? »',
           '**Sortie alerte :** Si une personne est détectée, déclencher une notification de bureau locale et une annonce Piper TTS.',
-          '**Avantage confidentialité :** Ring et Nest envoient la vidéo vers AWS et les serveurs Google respectivement. Cette configuration garde toutes les images sur votre matériel.',
+          '**Avantage confidentialité :** Les services de caméras cloud comme Ring et Nest stockent par défaut les images sur des serveurs gérés par leurs fournisseurs (voir la politique de confidentialité de chaque fournisseur). Cette configuration garde les images sur votre matériel. Filmer l\'espace public, des voisins ou des employés peut être illégal (l\'exemption domestique du RGPD ne s\'y applique généralement pas) : vérifiez d\'abord la législation locale et les règles d\'information.',
           '**Meilleur VLM pour la vitesse :** Moondream 2 (~1 seconde par image, ~2 Go VRAM) ou Gemma 4 E4B (~3 secondes, ~6 Go VRAM).',
         ],
       },
@@ -1323,13 +1323,13 @@ if __name__ == "__main__":
         id: 'quick-facts',
         title: 'クイックファクト',
         items: [
-          '**フルスタックの総VRAM：** ~15 GB（Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB）。PiperはCPU上で動作。',
-          '**簡略化スタック（Qwen3-VL 8B）：** ~8 GB VRAM — ビジョンとテキスト推論の両方を1つのモデルで処理。',
+          '**フルスタックの総VRAM（目安）：** ~15 GB（Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB）。PiperはCPU上で動作。',
+          '**簡略化スタック（Qwen3-VL 8B、目安）：** ~8 GB VRAM — ビジョンとテキスト推論の両方を1つのモデルで処理。',
           '**音声レイテンシ（Whisper small、RTX 4070）：** STT ~200〜500 ms。LLM最初のトークン500〜1500 ms。Piper TTS 100 ms。',
           '**画像処理レイテンシ（Gemma 4 E4B、RTX 4070）：** 解像度とプロンプトにより画像1枚あたり~2〜5秒。',
           '**リアルタイムビデオ非対応：** VLMは個別フレームを処理し、継続的なビデオストリームは処理しません。ビデオの場合は1 FPSでフレームを抽出して各フレームを処理。',
           '**VLM + LLMに同じOllamaインスタンス：** OllamaはQwen3-VLをビジョンモデルとテキストモデルの両方として提供でき、VRAMを節約。',
-          '**全コンポーネントがMIT、Apache 2.0、またはGPL-3.0ライセンス**（whisper.cpp MIT、Gemma 4 Apache 2.0、Qwen3 Apache 2.0、Piper GPL-3.0）。元のrhasspy/piperリポジトリは2025年にアーカイブされ、開発はOHF-Voice/piper1-gpl（v1.8.0）で継続されています。ライセンスはGPL-3.0のため、クローズドソース製品に組み込む前にライセンスを確認してください。',
+          '**主要コンポーネントはMIT、Apache 2.0、またはGPL-3.0ライセンス（本ガイドで挙げた他のコンポーネントには独自のライセンスがあります）**（whisper.cpp MIT、Gemma 4 Apache 2.0、Qwen3 Apache 2.0、Piper GPL-3.0）。元のrhasspy/piperリポジトリは2025年にアーカイブされ、開発はOHF-Voice/piper1-gpl（v1.8.0）で継続されています。ライセンスはGPL-3.0のため、クローズドソース製品に組み込む前にライセンスを確認してください。',
         ],
       },
       whatIsMultimodal: {
@@ -1345,7 +1345,7 @@ if __name__ == "__main__":
       },
       costComparison: {
         id: 'cost-comparison',
-        title: 'コスト：ローカルパイプライン vs クラウドAPI（月次）',
+        title: 'コスト：ローカルパイプライン vs クラウドAPI（月次、概算）',
         content: '中程度の使用量（1日100件以上のクエリ）では、ローカルマルチモーダルパイプラインは3〜6ヶ月で元が取れます。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'ローカルマルチモーダルパイプラインは一回限りのハードウェア投資（600〜3,500ドル）後、API費用が0ドル/月となり、GPT-5.5 APIコスト（135〜225ドル/月）に対して3〜18ヶ月（クエリ量により異なる）で損益分岐点に達します。' },
@@ -1404,11 +1404,11 @@ if __name__ == "__main__":
           { 'ティア': 'ミッド', 'GPU': 'RTX 4070 12 GB', 'RAM': '32 GB', '実行可能': '7Bモデルでフルスタック（Gemma 4 E4B + Qwen3 8B、ぎりぎり）', 'レイテンシ（音声クエリ＋画像）': '3〜6秒' },
           { 'ティア': 'ハイ', 'GPU': 'RTX 4090 24 GB', 'RAM': '64 GB', '実行可能': '12B VLM + 8B LLM同時のフルスタック', 'レイテンシ（音声クエリ＋画像）': '2〜4秒' },
           { 'ティア': 'Appleミッド', 'GPU': 'M5 Pro 36 GB', 'RAM': '36 GB統合', '実行可能': 'Metal経由で8Bモデルのフルスタック（推奨）', 'レイテンシ（音声クエリ＋画像）': '2〜4秒' },
-          { 'ティア': 'Appleハイ', 'GPU': 'M5 Max 128 GB', 'RAM': '128 GB統合', '実行可能': '70Bモデルのフルスタック — 最高のローカル品質', 'レイテンシ（音声クエリ＋画像）': '1〜3秒' },
+          { 'ティア': 'Appleハイ', 'GPU': 'M5 Max 128 GB', 'RAM': '128 GB統合', '実行可能': '70Bモデルのフルスタック — 高いローカル品質', 'レイテンシ（音声クエリ＋画像）': '1〜3秒' },
         ],
-        note: 'レイテンシは音声クエリの終了からTTS再生の開始まで測定され、画像が存在する場合は画像処理を含みます。',
+        note: 'レイテンシの数値は大まかな目安であり、PromptQuorumによるベンチマークではありません。音声クエリの終了からTTS再生の開始までの時間（画像がある場合は画像処理を含む）を指し、ハードウェア、モデル、設定によって変わります。',
         callouts: [
-          { type: 'tip', text: '128 GB統合メモリのM5 Maxは究極のローカルマルチモーダルプラットフォームです。Whisper large-v3（3 GB）+ Gemma 4 31B（~20 GB）+ Piper TTSを同時に実行できます。' },
+          { type: 'tip', text: '128 GB統合メモリのM5 Maxは非常に高性能なローカルマルチモーダルプラットフォームです。Whisper large-v3（3 GB）+ Gemma 4 31B（~20 GB）+ Piper TTSを同時に実行できます。' },
         ],
       },
       useCase1: {
@@ -1437,13 +1437,13 @@ if __name__ == "__main__":
       useCase3: {
         id: 'use-case-3',
         title: 'ユースケース3：会議転写 + スライド分析',
-        content: '**会議中継続してWhisperを実行して転写を構築しながら、定期的にスライドのスクリーンショットをVLM分析のために取得します。終了時に転写 + スライドコンテンツを組み合わせてローカルサマリーを作成 — クラウドゼロ、データ露出ゼロ。**',
+        content: '**会議中継続してWhisperを実行して転写を構築しながら、定期的にスライドのスクリーンショットをVLM分析のために取得します。終了時に転写 + スライドコンテンツを組み合わせてローカルサマリーを作成 — クラウドサービスは使いません。**',
         items: [
           '**STT：** 会議中にfaster-whisperをストリーミングモードで実行します。',
           '**ビジョン：** 新しいスライドが表示されるたびにスクリーンショットを取得し、Gemma 4 E4Bに説明を依頼します。',
           '**結合：** 会議終了時に転写 + スライド説明をQwen3 8Bに渡してサマリーとアクションアイテムを作成します。',
           '**出力：** 音声読み上げサマリー（Piper TTS）+ ローカル保存テキストファイル。',
-          '**GDPRの価値：** 会議処理全体がローカル。音声、転写、スライドはいかなるクラウドサービスにも送信されません。',
+          '**GDPRの価値：** 会議処理全体がローカル。音声、転写、スライドはいかなるクラウドサービスにも送信されません。GDPRの要件を満たすかどうかは、適法性の根拠、保存期間の方針、その他の管理策に左右されるため、コンプライアンス部門にご相談ください。会議で人を録音する場合は、現地の法令に基づき本人の同意その他の適法な根拠も必要です。',
         ],
       },
       useCase4: {
@@ -1453,7 +1453,7 @@ if __name__ == "__main__":
         items: [
           '**スクリーンリーダー：** 2秒ごとにスクリーンショットを取得 → Gemma 4 E4Bが画面の内容を説明 → Piperが読み上げます。',
           '**音声ナビゲーション：** Whisperが音声コマンドを転写 → LLMが意図を解釈 → pyautoguiでキーボード/マウスアクションを実行。',
-          '**プライバシーの利点：** 障害のあるユーザーはしばしば敏感なコンテキストでアクセシビリティツールを使用します。ローカルツールは画面コンテンツがサードパーティに送信されないことを保証します。',
+          '**プライバシーの利点：** 障害のあるユーザーはしばしば敏感なコンテキストでアクセシビリティツールを使用します。ローカルツールは、構成要素がネットワーク通信を行わない限り、画面コンテンツを手元のマシン内に留めます（お使いの環境で確認してください）。',
           '**アクセシビリティ向けモデル選択：** 高速な画面説明にはMoondream 2（2 GB VRAM）。より豊かな説明にはGemma 4 E4B（6 GB VRAM）。',
         ],
       },
@@ -1466,7 +1466,7 @@ if __name__ == "__main__":
           '**動作検出：** 連続するフレーム間の差分を計算します。動作しきい値以下のフレームをスキップします。',
           '**VLM分析：** 動きが検出されたら、フレームをVLMに送信します：「何が起きているか説明してください。人はいますか？」',
           '**アラート出力：** 人が検出されたら、ローカルデスクトップ通知とPiper TTS告知をトリガーします。',
-          '**プライバシーの利点：** RingとNestはそれぞれAWSとGoogleサーバーにビデオを送信します。このセットアップはすべての映像をあなたのハードウェアに保持します。',
+          '**プライバシーの利点：** RingやNestなどのクラウド型カメラサービスは、標準ではプロバイダーが運用するサーバーに映像を保存します（各プロバイダーのプライバシーポリシーをご確認ください）。このセットアップは映像をご自身のハードウェアに保持します。公共の場所、近隣住民、従業員を撮影すると違法になる場合があります（GDPRの家庭内例外は通常適用されません）。事前に現地の法令と掲示義務をご確認ください。',
           '**速度向けの最適なVLM：** Moondream 2（フレームあたり~1秒、~2 GB VRAM）またはGemma 4 E4B（~3秒、~6 GB VRAM）。',
         ],
       },
@@ -1664,13 +1664,13 @@ if __name__ == "__main__":
         id: 'quick-facts',
         title: '快速概览',
         items: [
-          '**完整堆栈总VRAM：** ~15 GB（Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB）。Piper在CPU上运行。',
-          '**简化堆栈（Qwen3-VL 8B）：** ~8 GB VRAM — 一个模型同时处理视觉和文本推理。',
+          '**完整堆栈总VRAM（约值）：** ~15 GB（Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB）。Piper在CPU上运行。',
+          '**简化堆栈（Qwen3-VL 8B，约值）：** ~8 GB VRAM — 一个模型同时处理视觉和文本推理。',
           '**语音延迟（Whisper small，RTX 4070）：** STT ~200〜500 ms。LLM首个token 500〜1500 ms。Piper TTS 100 ms。',
           '**图像处理延迟（Gemma 4 E4B，RTX 4070）：** 根据分辨率和提示词，每张图像~2〜5秒。',
           '**不支持实时视频：** VLM处理单个帧，而非连续视频流。对于视频，以1 FPS提取帧并逐帧处理。',
           '**VLM + LLM使用同一Ollama实例：** Ollama可同时将Qwen3-VL作为视觉模型和文本模型提供服务，节省VRAM。',
-          '**所有组件均为MIT、Apache 2.0或GPL-3.0许可**（whisper.cpp MIT、Gemma 4 Apache 2.0、Qwen3 Apache 2.0、Piper GPL-3.0）。原 rhasspy/piper 仓库已于 2025 年归档，开发已转移到 OHF-Voice/piper1-gpl（v1.8.0），采用 GPL-3.0 许可——在闭源产品中集成 Piper 前请先核对该许可。',
+          '**主要组件为MIT、Apache 2.0或GPL-3.0许可（本指南提到的其他组件有各自的许可）**（whisper.cpp MIT、Gemma 4 Apache 2.0、Qwen3 Apache 2.0、Piper GPL-3.0）。原 rhasspy/piper 仓库已于 2025 年归档，开发已转移到 OHF-Voice/piper1-gpl（v1.8.0），采用 GPL-3.0 许可——在闭源产品中集成 Piper 前请先核对该许可。',
         ],
       },
       whatIsMultimodal: {
@@ -1686,7 +1686,7 @@ if __name__ == "__main__":
       },
       costComparison: {
         id: 'cost-comparison',
-        title: '成本：本地流水线 vs 云端API（每月）',
+        title: '成本：本地流水线 vs 云端API（每月，粗略估算）',
         content: '在中等使用量（每天100+次查询）下，本地多模态流水线可在3〜6个月内收回成本。',
         snippetBlocks: [
           { type: 'one-sentence', text: '本地多模态流水线在一次性硬件投资（600〜3,500美元）后，每月API费用为0美元，相对于GPT-5.5 API成本（135〜225美元/月），根据查询量在3〜18个月内达到盈亏平衡。' },
@@ -1745,11 +1745,11 @@ if __name__ == "__main__":
           { '层级': '中端', 'GPU': 'RTX 4070 12 GB', 'RAM': '32 GB', '可运行': '7B模型完整堆栈（Gemma 4 E4B + Qwen3 8B，紧凑配置）', '延迟（语音查询+图像）': '3〜6秒' },
           { '层级': '高端', 'GPU': 'RTX 4090 24 GB', 'RAM': '64 GB', '可运行': '12B VLM + 8B LLM同时运行的完整堆栈', '延迟（语音查询+图像）': '2〜4秒' },
           { '层级': 'Apple中端', 'GPU': 'M5 Pro 36 GB', 'RAM': '36 GB统一内存', '可运行': '通过Metal运行8B模型完整堆栈（推荐）', '延迟（语音查询+图像）': '2〜4秒' },
-          { '层级': 'Apple高端', 'GPU': 'M5 Max 128 GB', 'RAM': '128 GB统一内存', '可运行': '70B模型完整堆栈 — 最佳本地质量', '延迟（语音查询+图像）': '1〜3秒' },
+          { '层级': 'Apple高端', 'GPU': 'M5 Max 128 GB', 'RAM': '128 GB统一内存', '可运行': '70B模型完整堆栈 — 本地质量高', '延迟（语音查询+图像）': '1〜3秒' },
         ],
-        note: '延迟从语音查询结束到TTS播放开始测量，如果有图像则包含图像处理时间。',
+        note: '延迟数值为粗略估计，并非PromptQuorum的基准测试结果；指从语音查询结束到TTS播放开始的时间（如有图像则包含图像处理时间），会因硬件、模型和设置而异。',
         callouts: [
-          { type: 'tip', text: '搭载128 GB统一内存的M5 Max是终极本地多模态平台。它可以同时运行Whisper large-v3（3 GB）+ Gemma 4 31B（~20 GB）+ Piper TTS。' },
+          { type: 'tip', text: '搭载128 GB统一内存的M5 Max是性能非常强的本地多模态平台。它可以同时运行Whisper large-v3（3 GB）+ Gemma 4 31B（~20 GB）+ Piper TTS。' },
         ],
       },
       useCase1: {
@@ -1778,13 +1778,13 @@ if __name__ == "__main__":
       useCase3: {
         id: 'use-case-3',
         title: '用例3：会议转录 + 幻灯片分析',
-        content: '**在会议期间持续运行Whisper以构建转录，同时定期捕获幻灯片截图进行VLM分析。结束时，将转录 + 幻灯片内容组合生成本地摘要 — 零云端，零数据暴露。**',
+        content: '**在会议期间持续运行Whisper以构建转录，同时定期捕获幻灯片截图进行VLM分析。结束时，将转录 + 幻灯片内容组合生成本地摘要 — 不涉及任何云服务。**',
         items: [
           '**STT：** 在会议期间以流式模式运行faster-whisper。',
           '**视觉：** 每当出现新幻灯片时，捕获截图并传递给Gemma 4 E4B进行描述。',
           '**组合：** 会议结束时，将转录 + 幻灯片描述传递给Qwen3 8B生成摘要和行动项。',
           '**输出：** 语音朗读摘要（Piper TTS）+ 本地保存的文本文件。',
-          '**GDPR价值：** 整个会议处理在本地进行。不向任何云服务发送音频、转录或幻灯片。',
+          '**GDPR价值：** 整个会议处理在本地进行。不向任何云服务发送音频、转录或幻灯片。是否满足 GDPR 要求仍取决于您的合法性基础、留存政策及其他管控措施，请咨询合规团队。录制会议中的人员还需依据当地法律取得其同意或具备其他合法依据。',
         ],
       },
       useCase4: {
@@ -1794,7 +1794,7 @@ if __name__ == "__main__":
         items: [
           '**屏幕阅读器：** 每2秒捕获截图 → Gemma 4 E4B描述屏幕内容 → Piper大声朗读。',
           '**语音导航：** Whisper转录语音命令 → LLM解读意图 → 通过pyautogui执行键盘/鼠标操作。',
-          '**隐私优势：** 残障用户通常在敏感场景中使用无障碍工具。本地工具确保屏幕内容不传输给第三方。',
+          '**隐私优势：** 残障用户通常在敏感场景中使用无障碍工具。只要其组件不发起网络连接，本地工具就会将屏幕内容保留在本机（请针对你的环境自行核实）。',
           '**无障碍模型选择：** Moondream 2用于快速屏幕描述（2 GB VRAM）。Gemma 4 E4B用于更丰富的描述（6 GB VRAM）。',
         ],
       },
@@ -1807,7 +1807,7 @@ if __name__ == "__main__":
           '**动作检测：** 计算连续帧之间的差异。跳过低于动作阈值的帧。',
           '**VLM分析：** 检测到动作时，将帧发送给VLM："描述正在发生的事情。有人吗？"',
           '**告警输出：** 如果检测到人，触发本地桌面通知和Piper TTS播报。',
-          '**隐私优势：** Ring和Nest分别将视频发送到AWS和Google服务器。此设置将所有录像保存在您的硬件上。',
+          '**隐私优势：** Ring和Nest等云摄像头服务默认将录像存储在其服务商运营的服务器上（请查看各服务商的隐私政策）。此设置将录像保存在您自己的硬件上。拍摄公共空间、邻居或员工可能违法（GDPR的家庭豁免通常不适用），请先了解当地法律和标识要求。',
           '**速度最佳VLM：** Moondream 2（每帧~1秒，~2 GB VRAM）或Gemma 4 E4B（~3秒，~6 GB VRAM）。',
         ],
       },
@@ -2072,13 +2072,13 @@ if __name__ == "__main__":
         id: 'quick-facts',
         title: 'Datos rápidos',
         items: [
-          '**VRAM total para el stack completo:** ~15 GB (Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB). Piper corre en CPU.',
-          '**Stack simplificado (Qwen3-VL 8B):** ~8 GB VRAM — maneja visión y razonamiento textual en un solo modelo.',
-          '**Latencia de voz (Whisper small, RTX 4070):** STT ~200–500 ms. Primer token LLM 500–1500 ms. Piper TTS 100 ms.',
-          '**Latencia de procesamiento de imagen (Gemma 4 E4B, RTX 4070):** ~2–5 segundos por imagen dependiendo de la resolución y el prompt.',
+          '**VRAM total para el stack completo (aproximada):** ~15 GB (Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB). Piper corre en CPU.',
+          '**Stack simplificado (Qwen3-VL 8B, aproximado):** ~8 GB VRAM — maneja visión y razonamiento textual en un solo modelo.',
+          '**Latencia de voz (estimación aproximada; Whisper small, RTX 4070):** STT ~200–500 ms. Primer token LLM 500–1500 ms. Piper TTS 100 ms.',
+          '**Latencia de procesamiento de imagen (estimación aproximada; Gemma 4 E4B, RTX 4070):** ~2–5 segundos por imagen dependiendo de la resolución y el prompt.',
           '**Sin video en tiempo real:** Los VLM procesan frames individuales, no flujos de video continuos. Para video, extrae frames a 1 FPS y procesa cada uno.',
           '**Misma instancia de Ollama para VLM + LLM:** Ollama puede servir Qwen3-VL como modelo de visión y modelo de texto a la vez, ahorrando VRAM.',
-          '**Todos los componentes con licencia MIT, Apache 2.0 o GPL-3.0** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). El repositorio original rhasspy/piper se archivó en 2025; el desarrollo continúa en OHF-Voice/piper1-gpl (v1.8.0), con licencia GPL-3.0: revisa esa licencia antes de incluir Piper en un producto de código cerrado.',
+          '**Los componentes principales tienen licencia MIT, Apache 2.0 o GPL-3.0 (los demás componentes citados en esta guía tienen sus propias licencias)** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). El repositorio original rhasspy/piper se archivó en 2025; el desarrollo continúa en OHF-Voice/piper1-gpl (v1.8.0), con licencia GPL-3.0: revisa esa licencia antes de incluir Piper en un producto de código cerrado.',
         ],
       },
       whatIsMultimodal: {
@@ -2095,9 +2095,9 @@ if __name__ == "__main__":
       },
       costComparison: {
         id: 'cost-comparison',
-        title: 'Costo: pipeline local vs APIs en la nube (mensual)',
+        title: 'Costo: pipeline local vs APIs en la nube (mensual, estimación aproximada)',
         content:
-          'Con uso moderado (más de 100 consultas al día), un pipeline multimodal local se amortiza en 3–6 meses. Con uso ligero (10 consultas al día), el punto de equilibrio se extiende a 12–18 meses.',
+          'Con uso moderado (más de 100 consultas al día), un pipeline multimodal local se amortiza en 3–6 meses. Con uso ligero (10 consultas al día), el punto de equilibrio se extiende a 12–18 meses. Son estimaciones aproximadas, no presupuestos de proveedores ni mediciones de PromptQuorum; consulta los precios vigentes de cada proveedor antes de decidir.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2112,7 +2112,7 @@ if __name__ == "__main__":
           { 'Uso': 'Hardware (una sola vez)', 'GPT-5.5 API': '$0', 'Google Cloud': '$0', 'Local': '$600–3.500' },
           { 'Uso': 'Punto de equilibrio', 'GPT-5.5 API': '—', 'Google Cloud': '—', 'Local': '3–18 meses' },
         ],
-        note: 'El pipeline local se amortiza en 3–6 meses con uso moderado (más de 100 consultas al día). Con uso ligero (10 consultas al día), el punto de equilibrio se extiende a 12–18 meses.',
+        note: 'El pipeline local se amortiza en 3–6 meses con uso moderado (más de 100 consultas al día). Con uso ligero (10 consultas al día), el punto de equilibrio se extiende a 12–18 meses. Son estimaciones aproximadas, no presupuestos de proveedores ni mediciones de PromptQuorum; consulta los precios vigentes de cada proveedor antes de decidir.',
       },
       architecture: {
         id: 'architecture',
@@ -2232,15 +2232,15 @@ if __name__ == "__main__":
             'Nivel': 'Apple Alto',
             'GPU': 'M5 Max 128 GB',
             'RAM': '128 GB unificada',
-            'Puede ejecutar': 'Stack completo con modelos 70B — mejor calidad local',
+            'Puede ejecutar': 'Stack completo con modelos 70B — alta calidad local',
             'Latencia (consulta de voz + imagen)': '1–3 seg',
           },
         ],
-        note: 'La latencia se mide desde el final de la consulta de voz hasta el inicio de la reproducción TTS, incluyendo el procesamiento de imagen si hay una imagen presente.',
+        note: 'Las cifras de latencia son estimaciones aproximadas, no benchmarks de PromptQuorum; se refieren al tiempo desde el final de la consulta de voz hasta el inicio de la reproducción TTS, incluyendo el procesamiento de imagen si hay una imagen presente, y varían según el hardware, los modelos y la configuración.',
         callouts: [
           {
             type: 'tip',
-            text: 'El M5 Max con 128 GB de memoria unificada es la plataforma multimodal local definitiva. Puede ejecutar Whisper large-v3 (3 GB) + Gemma 4 31B (~20 GB) + Piper TTS simultáneamente — un modelo de visión de clase 31B deja amplio margen para contexto y otros modelos. Ninguna configuración de GPU discreta puede igualar esto sin configuraciones multi-GPU que cuestan 2–3 veces más.',
+            text: 'El M5 Max con 128 GB de memoria unificada es una plataforma multimodal local muy capaz. Puede ejecutar Whisper large-v3 (3 GB) + Gemma 4 31B (~20 GB) + Piper TTS simultáneamente — un modelo de visión de clase 31B deja amplio margen para contexto y otros modelos.',
           },
         ],
       },
@@ -2263,7 +2263,7 @@ if __name__ == "__main__":
         content:
           '**Apunta una cámara a un objeto o escena, haz una pregunta de forma verbal y recibe una respuesta hablada.** Este caso de uso es el equivalente local más cercano a Google Lens con interacción de voz.',
         items: [
-          '**Aplicaciones:** Inventario de almacén (fotografía un estante, pregunta "¿Cuántas unidades de SKU-4429 hay?"), inspección de campo (fotografía daños en maquinaria, pregunta "¿Es seguro operar esto?"), accesibilidad (describe objetos para usuarios con discapacidad visual).',
+          '**Aplicaciones:** Inventario de almacén (fotografía un estante, pregunta "¿Cuántas unidades de SKU-4429 hay?"), inspección de campo (fotografía daños en maquinaria y pregunta qué se ve; una respuesta de IA no es una evaluación de seguridad, así que una persona cualificada debe decidir si es seguro operar), accesibilidad (describe objetos para usuarios con discapacidad visual).',
           '**Implementación:** Captura un frame de cámara (OpenCV `cv2.VideoCapture(0).read()`), guárdalo como JPEG, pásalo al VLM junto con la transcripción de Whisper.',
           '**Mejores modelos:** Gemma 4 E4B o Qwen3-VL 8B para comprensión general de objetos y escenas.',
           '**Latencia:** 3–6 segundos para captura de imagen + procesamiento VLM + LLM + TTS en RTX 4070. Reduce con VLM más pequeño (Moondream 2 para identificación simple de objetos).',
@@ -2273,13 +2273,13 @@ if __name__ == "__main__":
         id: 'use-case-3',
         title: 'Caso de uso 3: Transcripción de reunión + análisis de diapositivas',
         content:
-          '**Ejecuta Whisper continuamente durante una reunión para construir una transcripción, mientras capturas periódicamente capturas de pantalla de diapositivas para análisis con VLM. Al final, combina transcripción + contenido de diapositivas para un resumen local y puntos de acción — cero nube, cero exposición de datos.**',
+          '**Ejecuta Whisper continuamente durante una reunión para construir una transcripción, mientras capturas periódicamente capturas de pantalla de diapositivas para análisis con VLM. Al final, combina transcripción + contenido de diapositivas para un resumen local y puntos de acción — sin ningún servicio en la nube.**',
         items: [
           '**STT:** Ejecuta faster-whisper en modo de streaming durante la reunión. Acumula segmentos en un buffer de transcripción.',
           '**Visión:** Cada vez que aparezca una nueva diapositiva (detectar mediante diff de captura de pantalla), captura una imagen y pásala a Gemma 4 E4B para descripción.',
           '**Combinación:** Al final de la reunión (o bajo demanda), pasa transcripción + descripciones de diapositivas a Qwen3 8B: "Resume esta reunión y lista los puntos de acción. Aquí está la transcripción: [...]. Aquí están los contenidos de las diapositivas: [...]."',
           '**Salida:** Resumen leído en voz alta (Piper TTS) + archivo de texto guardado localmente.',
-          '**Valor GDPR:** Todo el procesamiento de la reunión es local. No se envía audio, transcripción ni diapositivas a ningún servicio en la nube. Si esto cumple el RGPD en contextos legales, médicos o corporativos sigue dependiendo de tu base jurídica, tu política de conservación y otros controles; consulta a tu equipo de cumplimiento.',
+          '**Valor GDPR:** Todo el procesamiento de la reunión es local. No se envía audio, transcripción ni diapositivas a ningún servicio en la nube. Si esto cumple el RGPD en contextos legales, médicos o corporativos sigue dependiendo de tu base jurídica, tu política de conservación y otros controles; consulta a tu equipo de cumplimiento. Grabar a personas en una reunión también exige su consentimiento u otra base jurídica según la legislación local.',
         ],
       },
       useCase4: {
@@ -2290,7 +2290,7 @@ if __name__ == "__main__":
         items: [
           '**Lector de pantalla:** Captura una captura de pantalla cada 2 segundos → Gemma 4 E4B describe lo que hay en pantalla → Piper lo lee en voz alta. Agrega comandos de voz (Whisper) para controlar qué describir a continuación.',
           '**Navegación por voz:** Whisper transcribe comandos de voz → LLM interpreta la intención → ejecuta acciones de teclado/ratón mediante pyautogui. No se requiere internet.',
-          '**Beneficio de privacidad:** Los usuarios con discapacidades suelen usar herramientas de accesibilidad en contextos sensibles (portales médicos, cuentas financieras). Una herramienta local garantiza que ningún contenido de pantalla se transmita a terceros.',
+          '**Beneficio de privacidad:** Los usuarios con discapacidades suelen usar herramientas de accesibilidad en contextos sensibles (portales médicos, cuentas financieras). Una herramienta local mantiene el contenido de la pantalla en tu equipo mientras ninguno de sus componentes haga llamadas de red (compruébalo en tu configuración).',
           '**Uso con conectividad limitada:** Funciona en hospitales, edificios gubernamentales y áreas con internet restringido — importante para implementaciones institucionales de accesibilidad.',
           '**Elección de modelo para accesibilidad:** Moondream 2 para descripciones de pantalla rápidas (2 GB VRAM, ~1 seg por frame). Gemma 4 E4B para descripciones más ricas (6 GB VRAM, ~3 seg por frame).',
         ],
@@ -2305,9 +2305,9 @@ if __name__ == "__main__":
           '**Detección de movimiento:** Calcula la diferencia entre frames consecutivos con `cv2.absdiff()`. Omite frames por debajo del umbral de movimiento — esto evita llamadas VLM innecesarias en escenas estáticas.',
           '**Análisis VLM:** Cuando se detecta movimiento, envía el frame al VLM: "Describe qué está pasando. ¿Hay una persona? ¿Qué están haciendo?"',
           '**Salida de alerta:** Si la respuesta indica una persona o anomalía, activa una notificación de escritorio local y un anuncio de Piper TTS ("Persona detectada en la puerta principal"). No se requiere servicio de notificación en la nube.',
-          '**Ventaja de privacidad:** Ring y Nest envían video a los servidores de AWS y Google respectivamente. Esta configuración mantiene toda la grabación en tu hardware — sin suscripción, sin almacenamiento de video de terceros, sin compartición de datos con servicios externos.',
+          '**Ventaja de privacidad:** Los servicios de cámaras en la nube como Ring y Nest almacenan por defecto las grabaciones en servidores gestionados por sus proveedores (consulta la política de privacidad de cada proveedor). Esta configuración mantiene la grabación en tu hardware — sin suscripción y, por defecto, sin almacenamiento de video de terceros. Grabar espacios públicos, vecinos o empleados puede ser ilegal (la exención doméstica del RGPD normalmente no lo cubre), así que consulta antes la normativa local y las reglas de señalización.',
           '**Mejor VLM para velocidad:** Moondream 2 para procesamiento rápido de frames (~1 segundo por frame, ~2 GB VRAM) o Gemma 4 E4B para descripciones de escena más ricas (~3 segundos por frame, ~6 GB VRAM).',
-          '**Nota de hardware:** Un Mac Mini M5 dedicado (~$600) ejecutando este stack 24/7 consume ~15–25W en reposo — menos electricidad anualmente que una suscripción a Ring Doorbell Pro.',
+          '**Nota de hardware:** Un Mac Mini M5 dedicado (~$600) ejecutando este stack 24/7 se estima que consume aproximadamente 15–25W en reposo.',
         ],
       },
       orchestrator: {
@@ -2645,13 +2645,13 @@ if __name__ == "__main__":
         id: 'quick-facts',
         title: 'Dados rápidos',
         items: [
-          '**VRAM total para o stack completo:** ~15 GB (Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB). O Piper roda na CPU.',
-          '**Stack simplificado (Qwen3-VL 8B):** ~8 GB VRAM — gerencia visão e raciocínio textual em um único modelo.',
-          '**Latência de voz (Whisper small, RTX 4070):** STT ~200–500 ms. Primeiro token do LLM 500–1500 ms. Piper TTS 100 ms.',
-          '**Latência de processamento de imagem (Gemma 4 E4B, RTX 4070):** ~2–5 segundos por imagem dependendo da resolução e do prompt.',
+          '**VRAM total para o stack completo (aproximada):** ~15 GB (Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB). O Piper roda na CPU.',
+          '**Stack simplificado (Qwen3-VL 8B, aproximado):** ~8 GB VRAM — gerencia visão e raciocínio textual em um único modelo.',
+          '**Latência de voz (estimativa aproximada; Whisper small, RTX 4070):** STT ~200–500 ms. Primeiro token do LLM 500–1500 ms. Piper TTS 100 ms.',
+          '**Latência de processamento de imagem (estimativa aproximada; Gemma 4 E4B, RTX 4070):** ~2–5 segundos por imagem dependendo da resolução e do prompt.',
           '**Sem vídeo em tempo real:** Os VLMs processam frames individuais, não fluxos de vídeo contínuos. Para vídeo, extraia frames a 1 FPS e processe cada um.',
           '**Mesma instância do Ollama para VLM + LLM:** O Ollama pode servir o Qwen3-VL como modelo de visão e modelo de texto ao mesmo tempo, economizando VRAM.',
-          '**Todos os componentes com licença MIT, Apache 2.0 ou GPL-3.0** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). O repositório original rhasspy/piper foi arquivado em 2025; o desenvolvimento continua em OHF-Voice/piper1-gpl (v1.8.0), sob licença GPL-3.0 — revise essa licença antes de incluir o Piper em um produto de código fechado.',
+          '**Os componentes principais têm licença MIT, Apache 2.0 ou GPL-3.0 (os demais componentes citados neste guia têm licenças próprias)** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). O repositório original rhasspy/piper foi arquivado em 2025; o desenvolvimento continua em OHF-Voice/piper1-gpl (v1.8.0), sob licença GPL-3.0 — revise essa licença antes de incluir o Piper em um produto de código fechado.',
         ],
       },
       whatIsMultimodal: {
@@ -2668,9 +2668,9 @@ if __name__ == "__main__":
       },
       costComparison: {
         id: 'cost-comparison',
-        title: 'Custo: pipeline local vs APIs na nuvem (mensal)',
+        title: 'Custo: pipeline local vs APIs na nuvem (mensal, estimativa aproximada)',
         content:
-          'Com uso moderado (mais de 100 consultas por dia), um pipeline multimodal local se paga em 3–6 meses. Com uso leve (10 consultas por dia), o ponto de equilíbrio se estende a 12–18 meses.',
+          'Com uso moderado (mais de 100 consultas por dia), um pipeline multimodal local se paga em 3–6 meses. Com uso leve (10 consultas por dia), o ponto de equilíbrio se estende a 12–18 meses. São estimativas aproximadas, não cotações de fornecedores nem medições da PromptQuorum; consulte os preços atuais dos fornecedores antes de decidir.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2685,7 +2685,7 @@ if __name__ == "__main__":
           { 'Uso': 'Hardware (uma única vez)', 'GPT-5.5 API': '$0', 'Google Cloud': '$0', 'Local': '$600–3.500' },
           { 'Uso': 'Ponto de equilíbrio', 'GPT-5.5 API': '—', 'Google Cloud': '—', 'Local': '3–18 meses' },
         ],
-        note: 'O pipeline local se paga em 3–6 meses com uso moderado (mais de 100 consultas por dia). Com uso leve (10 consultas por dia), o ponto de equilíbrio se estende a 12–18 meses.',
+        note: 'O pipeline local se paga em 3–6 meses com uso moderado (mais de 100 consultas por dia). Com uso leve (10 consultas por dia), o ponto de equilíbrio se estende a 12–18 meses. São estimativas aproximadas, não cotações de fornecedores nem medições da PromptQuorum; consulte os preços atuais dos fornecedores antes de decidir.',
       },
       architecture: {
         id: 'architecture',
@@ -2805,15 +2805,15 @@ if __name__ == "__main__":
             'Nível': 'Apple Alto',
             'GPU': 'M5 Max 128 GB',
             'RAM': '128 GB unificada',
-            'Pode rodar': 'Stack completo com modelos 70B — melhor qualidade local',
+            'Pode rodar': 'Stack completo com modelos 70B — alta qualidade local',
             'Latência (consulta de voz + imagem)': '1–3 seg',
           },
         ],
-        note: 'A latência é medida do fim da consulta de voz até o início da reprodução TTS, incluindo o processamento de imagem se houver uma imagem presente.',
+        note: 'Os valores de latência são estimativas aproximadas, não benchmarks da PromptQuorum; referem-se ao tempo do fim da consulta de voz até o início da reprodução TTS, incluindo o processamento de imagem se houver uma imagem presente, e variam conforme hardware, modelos e configurações.',
         callouts: [
           {
             type: 'tip',
-            text: 'O M5 Max com 128 GB de memória unificada é a plataforma multimodal local definitiva. Pode rodar Whisper large-v3 (3 GB) + Gemma 4 31B (~20 GB) + Piper TTS simultaneamente — um modelo de visão da classe 31B deixa ampla folga para contexto e outros modelos. Nenhuma configuração de GPU discreta consegue igualar isso sem configurações multi-GPU que custam 2–3 vezes mais.',
+            text: 'O M5 Max com 128 GB de memória unificada é uma plataforma multimodal local muito capaz. Pode rodar Whisper large-v3 (3 GB) + Gemma 4 31B (~20 GB) + Piper TTS simultaneamente — um modelo de visão da classe 31B deixa ampla folga para contexto e outros modelos.',
           },
         ],
       },
@@ -2836,7 +2836,7 @@ if __name__ == "__main__":
         content:
           '**Aponte uma câmera para um objeto ou cena, faça uma pergunta de forma verbal e receba uma resposta falada.** Este caso de uso é o equivalente local mais próximo do Google Lens com interação de voz.',
         items: [
-          '**Aplicações:** Inventário de almoxarifado (fotografe uma prateleira, pergunte "Quantas unidades de SKU-4429 há?"), inspeção de campo (fotografe danos em máquinas, pergunte "É seguro operar isto?"), acessibilidade (descreva objetos para usuários com deficiência visual).',
+          '**Aplicações:** Inventário de almoxarifado (fotografe uma prateleira, pergunte "Quantas unidades de SKU-4429 há?"), inspeção de campo (fotografe danos em máquinas e pergunte o que está visível; uma resposta de IA não é uma avaliação de segurança, então peça a uma pessoa qualificada que decida se é seguro operar), acessibilidade (descreva objetos para usuários com deficiência visual).',
           '**Implementação:** Capture um frame de câmera (OpenCV `cv2.VideoCapture(0).read()`), salve como JPEG, passe-o ao VLM junto com a transcrição do Whisper.',
           '**Melhores modelos:** Gemma 4 E4B ou Qwen3-VL 8B para compreensão geral de objetos e cenas.',
           '**Latência:** 3–6 segundos para captura de imagem + processamento do VLM + LLM + TTS na RTX 4070. Reduza com um VLM menor (Moondream 2 para identificação simples de objetos).',
@@ -2846,13 +2846,13 @@ if __name__ == "__main__":
         id: 'use-case-3',
         title: 'Caso de uso 3: Transcrição de reunião + análise de slides',
         content:
-          '**Rode o Whisper continuamente durante uma reunião para construir uma transcrição, enquanto captura periodicamente capturas de tela de slides para análise com VLM. Ao final, combine transcrição + conteúdo dos slides para um resumo local e itens de ação — zero nuvem, zero exposição de dados.**',
+          '**Rode o Whisper continuamente durante uma reunião para construir uma transcrição, enquanto captura periodicamente capturas de tela de slides para análise com VLM. Ao final, combine transcrição + conteúdo dos slides para um resumo local e itens de ação — sem nenhum serviço na nuvem.**',
         items: [
           '**STT:** Rode o faster-whisper em modo de streaming durante a reunião. Acumule segmentos em um buffer de transcrição.',
           '**Visão:** Cada vez que aparecer um novo slide (detectar via diff de captura de tela), capture uma imagem e passe-a ao Gemma 4 E4B para descrição.',
           '**Combinação:** Ao final da reunião (ou sob demanda), passe transcrição + descrições de slides ao Qwen3 8B: "Resuma esta reunião e liste os itens de ação. Aqui está a transcrição: [...]. Aqui estão os conteúdos dos slides: [...]."',
           '**Saída:** Resumo lido em voz alta (Piper TTS) + arquivo de texto salvo localmente.',
-          '**Valor GDPR:** Todo o processamento da reunião é local. Nenhum áudio, transcrição ou slide é enviado a qualquer serviço na nuvem. Se isso atende à LGPD/GDPR em contextos jurídicos, médicos ou corporativos ainda depende da sua base legal, da política de retenção e de outros controles; consulte sua equipe de compliance.',
+          '**Valor GDPR:** Todo o processamento da reunião é local. Nenhum áudio, transcrição ou slide é enviado a qualquer serviço na nuvem. Se isso atende à LGPD/GDPR em contextos jurídicos, médicos ou corporativos ainda depende da sua base legal, da política de retenção e de outros controles; consulte sua equipe de compliance. Gravar pessoas em uma reunião também exige o consentimento delas ou outra base legal conforme a legislação local.',
         ],
       },
       useCase4: {
@@ -2863,7 +2863,7 @@ if __name__ == "__main__":
         items: [
           '**Leitor de tela:** Capture uma captura de tela a cada 2 segundos → o Gemma 4 E4B descreve o que há na tela → o Piper lê em voz alta. Adicione comandos de voz (Whisper) para controlar o que descrever em seguida.',
           '**Navegação por voz:** O Whisper transcreve comandos de voz → o LLM interpreta a intenção → executa ações de teclado/mouse via pyautogui. Não requer internet.',
-          '**Benefício de privacidade:** Usuários com deficiências costumam usar ferramentas de acessibilidade em contextos sensíveis (portais médicos, contas financeiras). Uma ferramenta local garante que nenhum conteúdo de tela seja transmitido a terceiros.',
+          '**Benefício de privacidade:** Usuários com deficiências costumam usar ferramentas de acessibilidade em contextos sensíveis (portais médicos, contas financeiras). Uma ferramenta local mantém o conteúdo da tela no seu computador enquanto nenhum de seus componentes fizer chamadas de rede (verifique isso na sua configuração).',
           '**Uso com conectividade limitada:** Funciona em hospitais, prédios governamentais e áreas com internet restrita — importante para implantações institucionais de acessibilidade.',
           '**Escolha de modelo para acessibilidade:** Moondream 2 para descrições de tela rápidas (2 GB VRAM, ~1 seg por frame). Gemma 4 E4B para descrições mais ricas (6 GB VRAM, ~3 seg por frame).',
         ],
@@ -2878,9 +2878,9 @@ if __name__ == "__main__":
           '**Detecção de movimento:** Calcule a diferença entre frames consecutivos com `cv2.absdiff()`. Pule frames abaixo do limiar de movimento — isso evita chamadas VLM desnecessárias em cenas estáticas e vazias.',
           '**Análise VLM:** Quando o movimento for detectado, envie o frame ao VLM: "Descreva o que está acontecendo. Há uma pessoa? O que ela está fazendo?"',
           '**Saída de alerta:** Se a resposta indicar uma pessoa ou anomalia, acione uma notificação de desktop local e um anúncio do Piper TTS ("Pessoa detectada na porta principal"). Não requer serviço de notificação na nuvem.',
-          '**Vantagem de privacidade:** Ring e Nest enviam vídeo para os servidores da AWS e do Google respectivamente. Esta configuração mantém toda a gravação no seu hardware — sem assinatura, sem armazenamento de vídeo de terceiros, sem compartilhamento de dados com serviços externos.',
+          '**Vantagem de privacidade:** Serviços de câmera em nuvem como Ring e Nest armazenam por padrão as gravações em servidores operados por seus provedores (consulte a política de privacidade de cada provedor). Esta configuração mantém a gravação no seu hardware — sem assinatura e, por padrão, sem armazenamento de vídeo de terceiros. Filmar espaços públicos, vizinhos ou funcionários pode ser ilegal (a exceção doméstica da LGPD/GDPR normalmente não se aplica), então verifique antes a legislação local e as regras de sinalização.',
           '**Melhor VLM para velocidade:** Moondream 2 para processamento rápido de frames (~1 segundo por frame, ~2 GB VRAM) ou Gemma 4 E4B para descrições de cena mais ricas (~3 segundos por frame, ~6 GB VRAM).',
-          '**Nota de hardware:** Um Mac Mini M5 dedicado (~$600) rodando este stack 24/7 consome ~15–25W em repouso — menos eletricidade anualmente do que uma assinatura do Ring Doorbell Pro.',
+          '**Nota de hardware:** Um Mac Mini M5 dedicado (~$600) rodando este stack 24/7 deve consumir cerca de 15–25W em repouso (estimativa).',
         ],
       },
       orchestrator: {
@@ -3220,13 +3220,13 @@ if __name__ == "__main__":
         id: 'quick-facts',
         title: 'حقائق سريعة',
         items: [
-          '**إجمالي VRAM للمجموعة الكاملة:** ~15 غيغابايت (Whisper 3 غيغابايت + Gemma 4 E4B 6 غيغابايت + Qwen3 8B 6 غيغابايت). يعمل برنامج Piper على وحدة المعالجة المركزية.',
-          '**المجموعة المبسطة (Qwen3-VL 8B):** ~8 غيغابايت VRAM — يتولى الرؤية والاستدلال النصي معًا في نموذج واحد.',
+          '**إجمالي VRAM للمجموعة الكاملة (تقريبي):** ~15 غيغابايت (Whisper 3 غيغابايت + Gemma 4 E4B 6 غيغابايت + Qwen3 8B 6 غيغابايت). يعمل برنامج Piper على وحدة المعالجة المركزية.',
+          '**المجموعة المبسطة (Qwen3-VL 8B، تقريبي):** ~8 غيغابايت VRAM — يتولى الرؤية والاستدلال النصي معًا في نموذج واحد.',
           '**تأخير الصوت (Whisper small، RTX 4070):** ~200–500 مللي ثانية STT. 500–1500 مللي ثانية أول رمز LLM. 100 مللي ثانية Piper TTS.',
           '**تأخير معالجة الصورة (Gemma 4 E4B، RTX 4070):** ~2–5 ثوانٍ لكل صورة تبعًا للدقة والمطالبة.',
           '**لا فيديو في الوقت الفعلي:** تعالج VLMs الإطارات الفردية، وليس تدفقات الفيديو المستمرة. للفيديو، استخرج الإطارات بمعدل 1 إطار في الثانية وعالج كل منها.',
           '**نفس مثيل Ollama لـ VLM + LLM:** يمكن لـ Ollama تشغيل Qwen3-VL كنموذج رؤية ونموذج نصي في آنٍ واحد، مما يوفر VRAM.',
-          '**جميع المكونات مرخصة بموجب MIT أو Apache 2.0 أو GPL-3.0** (whisper.cpp MIT، Gemma 4 Apache 2.0، Qwen3 Apache 2.0، Piper GPL-3.0). تمت أرشفة المستودع الأصلي rhasspy/piper في 2025؛ ويستمر التطوير في OHF-Voice/piper1-gpl (الإصدار v1.8.0) بترخيص GPL-3.0 — راجع هذا الترخيص قبل تضمين Piper في منتج مغلق المصدر.',
+          '**المكونات الرئيسية مرخصة بموجب MIT أو Apache 2.0 أو GPL-3.0 (وللمكونات الأخرى المذكورة في هذا الدليل تراخيصها الخاصة)** (whisper.cpp MIT، Gemma 4 Apache 2.0، Qwen3 Apache 2.0، Piper GPL-3.0). تمت أرشفة المستودع الأصلي rhasspy/piper في 2025؛ ويستمر التطوير في OHF-Voice/piper1-gpl (الإصدار v1.8.0) بترخيص GPL-3.0 — راجع هذا الترخيص قبل تضمين Piper في منتج مغلق المصدر.',
         ],
       },
       whatIsMultimodal: {
@@ -3243,9 +3243,9 @@ if __name__ == "__main__":
       },
       costComparison: {
         id: 'cost-comparison',
-        title: 'التكلفة: خط الأنابيب المحلي مقابل واجهات برمجة التطبيقات السحابية (شهريًا)',
+        title: 'التكلفة: خط الأنابيب المحلي مقابل واجهات برمجة التطبيقات السحابية (شهريًا، تقديرات تقريبية)',
         content:
-          'عند الاستخدام المعتدل (أكثر من 100 استعلام/يوم)، يستعيد خط الأنابيب متعدد الوسائط المحلي تكلفته في 3–6 أشهر. عند الاستخدام الخفيف (10 استعلامات/يوم)، يمتد نقطة التعادل إلى 12–18 شهرًا.',
+          'عند الاستخدام المعتدل (أكثر من 100 استعلام/يوم)، يستعيد خط الأنابيب متعدد الوسائط المحلي تكلفته في 3–6 أشهر. عند الاستخدام الخفيف (10 استعلامات/يوم)، يمتد نقطة التعادل إلى 12–18 شهرًا. هذه تقديرات تقريبية وليست عروض أسعار من المزوّدين ولا قياسات أجرتها PromptQuorum؛ راجع أسعار المزوّدين الحالية قبل اتخاذ القرار.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3260,7 +3260,7 @@ if __name__ == "__main__":
           { 'الاستخدام': 'الأجهزة (مرة واحدة)', 'GPT-5.5 API': '$0', 'Google Cloud': '$0', 'محلي': '$600–3,500' },
           { 'الاستخدام': 'نقطة التعادل', 'GPT-5.5 API': '—', 'Google Cloud': '—', 'محلي': '3–18 شهرًا' },
         ],
-        note: 'يستعيد خط الأنابيب المحلي تكلفته في 3–6 أشهر عند الاستخدام المعتدل (أكثر من 100 استعلام/يوم). عند الاستخدام الخفيف (10 استعلامات/يوم)، يمتد نقطة التعادل إلى 12–18 شهرًا.',
+        note: 'يستعيد خط الأنابيب المحلي تكلفته في 3–6 أشهر عند الاستخدام المعتدل (أكثر من 100 استعلام/يوم). عند الاستخدام الخفيف (10 استعلامات/يوم)، يمتد نقطة التعادل إلى 12–18 شهرًا. هذه تقديرات تقريبية وليست عروض أسعار من المزوّدين ولا قياسات أجرتها PromptQuorum؛ راجع أسعار المزوّدين الحالية قبل اتخاذ القرار.',
       },
       architecture: {
         id: 'architecture',
@@ -3380,15 +3380,15 @@ if __name__ == "__main__":
             'المستوى': 'Apple عالي',
             'وحدة معالجة الرسومات': 'M5 Max 128 غيغابايت',
             'الذاكرة العشوائية': '128 غيغابايت موحدة',
-            'يمكن تشغيله': 'المجموعة الكاملة مع نماذج 70B — أفضل جودة محلية',
+            'يمكن تشغيله': 'المجموعة الكاملة مع نماذج 70B — جودة محلية عالية',
             'التأخير (استعلام صوتي + صورة)': '1–3 ثوانٍ',
           },
         ],
-        note: 'يُقاس التأخير من نهاية الاستعلام الصوتي حتى بدء تشغيل TTS، بما في ذلك معالجة الصورة إذا كانت موجودة.',
+        note: 'أرقام التأخير تقديرات تقريبية وليست اختبارات أداء أجرتها PromptQuorum؛ وهي تشير إلى الزمن من نهاية الاستعلام الصوتي حتى بدء تشغيل TTS، بما في ذلك معالجة الصورة إذا كانت موجودة، وتختلف باختلاف العتاد والنماذج والإعدادات.',
         callouts: [
           {
             type: 'tip',
-            text: 'يُعدّ M5 Max بذاكرة موحدة 128 غيغابايت المنصة المثلى لمتعدد الوسائط محليًا. يمكنه تشغيل Whisper large-v3 (3 غيغابايت) + Gemma 4 31B (~20 غيغابايت) + Piper TTS في آنٍ واحد — نموذج رؤية من فئة 31B يترك مساحة واسعة للسياق والنماذج الأخرى. لا يمكن لأي إعداد GPU منفصل مجاراة ذلك دون تكوينات متعددة GPU تكلف 2–3 أضعاف أكثر.',
+            text: 'يُعدّ M5 Max بذاكرة موحدة 128 غيغابايت منصة قوية جداً لمتعدد الوسائط محليًا. يمكنه تشغيل Whisper large-v3 (3 غيغابايت) + Gemma 4 31B (~20 غيغابايت) + Piper TTS في آنٍ واحد — نموذج رؤية من فئة 31B يترك مساحة واسعة للسياق والنماذج الأخرى.',
           },
         ],
       },
@@ -3411,7 +3411,7 @@ if __name__ == "__main__":
         content:
           '**وجِّه الكاميرا نحو كائن أو مشهد، اطرح سؤالًا شفهيًا، واستلم إجابة منطوقة.** هذه حالة الاستخدام الأقرب محليًا إلى Google Lens مع التفاعل الصوتي.',
         items: [
-          '**التطبيقات:** جرد المستودعات (التقط صورة لرف، اسأل "كم عدد وحدات SKU-4429 الموجودة؟")، التفتيش الميداني (التقط صورة لتلف الآلات، اسأل "هل هذا آمن للتشغيل؟")، إمكانية الوصول (وصف الأشياء للمستخدمين ضعاف البصر).',
+          '**التطبيقات:** جرد المستودعات (التقط صورة لرف، اسأل "كم عدد وحدات SKU-4429 الموجودة؟")، التفتيش الميداني (التقط صورة لتلف الآلات واسأل عمّا هو ظاهر؛ فإجابة الذكاء الاصطناعي ليست تقييماً للسلامة، لذا اترك لشخص مؤهل تقرير ما إذا كان التشغيل آمناً)، إمكانية الوصول (وصف الأشياء للمستخدمين ضعاف البصر).',
           '**التنفيذ:** التقط إطار كاميرا (OpenCV `cv2.VideoCapture(0).read()`)، احفظه بصيغة JPEG، مرره إلى VLM مع النص المفرَّغ من Whisper.',
           '**أفضل النماذج:** Gemma 4 E4B أو Qwen3-VL 8B لفهم الكائنات والمشاهد العامة.',
           '**التأخير:** 3–6 ثوانٍ لالتقاط الصورة + معالجة VLM + LLM + TTS على RTX 4070. قلله باستخدام VLM أصغر (Moondream 2 لتحديد الكائنات البسيطة).',
@@ -3421,13 +3421,13 @@ if __name__ == "__main__":
         id: 'use-case-3',
         title: 'حالة الاستخدام 3: نسخ الاجتماعات + تحليل الشرائح',
         content:
-          '**شغِّل Whisper باستمرار خلال الاجتماع لبناء نص مفرَّغ، مع التقاط لقطات شاشة للشرائح بصفة دورية لتحليل VLM. في النهاية، ادمج النص المفرَّغ + محتوى الشرائح للحصول على ملخص محلي وبنود عمل — صفر سحابة، صفر تعرض للبيانات.**',
+          '**شغِّل Whisper باستمرار خلال الاجتماع لبناء نص مفرَّغ، مع التقاط لقطات شاشة للشرائح بصفة دورية لتحليل VLM. في النهاية، ادمج النص المفرَّغ + محتوى الشرائح للحصول على ملخص محلي وبنود عمل — دون أي خدمة سحابية.**',
         items: [
           '**STT:** شغِّل faster-whisper في وضع البث خلال الاجتماع. اجمع المقاطع في مخزن مؤقت للنص المفرَّغ.',
           '**الرؤية:** في كل مرة تظهر شريحة جديدة (اكتشف بالتفاضل بين لقطات الشاشة)، التقط لقطة شاشة ومررها إلى Gemma 4 E4B للوصف.',
           '**الدمج:** في نهاية الاجتماع (أو عند الطلب)، مرر النص المفرَّغ + أوصاف الشرائح إلى Qwen3 8B: "لخِّص هذا الاجتماع وسرد بنود العمل. إليك النص المفرَّغ: [...]. إليك محتوى الشرائح: [...]."',
           '**المخرجات:** ملخص يُقرأ بصوت عالٍ (Piper TTS) + ملف نصي محفوظ محليًا.',
-          '**قيمة اللائحة العامة لحماية البيانات:** معالجة الاجتماع بالكامل محلية. لا يُرسَل صوت أو نص مفرَّغ أو شرائح إلى أي خدمة سحابية. أما توافق ذلك مع اللائحة العامة لحماية البيانات في السياقات القانونية والطبية والمؤسسية فيظل معتمدًا على أساسك القانوني وسياسة الاحتفاظ وضوابط أخرى؛ استشر فريق الامتثال لديك.',
+          '**قيمة اللائحة العامة لحماية البيانات:** معالجة الاجتماع بالكامل محلية. لا يُرسَل صوت أو نص مفرَّغ أو شرائح إلى أي خدمة سحابية. أما توافق ذلك مع اللائحة العامة لحماية البيانات في السياقات القانونية والطبية والمؤسسية فيظل معتمدًا على أساسك القانوني وسياسة الاحتفاظ وضوابط أخرى؛ استشر فريق الامتثال لديك. كما أن تسجيل الأشخاص في الاجتماع يتطلب موافقتهم أو أساساً قانونياً آخر بموجب القانون المحلي.',
         ],
       },
       useCase4: {
@@ -3438,7 +3438,7 @@ if __name__ == "__main__":
         items: [
           '**قارئ الشاشة:** التقط لقطة شاشة كل ثانيتين ← يصف Gemma 4 E4B محتوى الشاشة ← يقرؤها Piper بصوت عالٍ. أضف أوامر صوتية (Whisper) للتحكم في ما يُوصَف تاليًا.',
           '**التنقل الصوتي:** يُفرِّغ Whisper الأوامر الصوتية ← يفسر LLM القصد ← ينفذ إجراءات لوحة المفاتيح/الفأرة عبر pyautogui. لا يتطلب إنترنت.',
-          '**ميزة الخصوصية:** يستخدم المستخدمون ذوو الإعاقات أدوات إمكانية الوصول في سياقات حساسة (بوابات طبية، حسابات مالية). تضمن الأداة المحلية عدم إرسال محتوى الشاشة إلى أطراف ثالثة.',
+          '**ميزة الخصوصية:** يستخدم المستخدمون ذوو الإعاقات أدوات إمكانية الوصول في سياقات حساسة (بوابات طبية، حسابات مالية). تُبقي الأداة المحلية محتوى الشاشة على جهازك ما دامت مكوناتها لا تجري اتصالات شبكية (تحقق من ذلك في إعدادك).',
           '**الاستخدام في ظل محدودية الاتصال:** يعمل في المستشفيات والمباني الحكومية والمناطق ذات الإنترنت المقيد — مهم للنشر المؤسسي لإمكانية الوصول.',
           '**اختيار النموذج لإمكانية الوصول:** Moondream 2 لأوصاف الشاشة السريعة (2 غيغابايت VRAM، ~1 ثانية/إطار). Gemma 4 E4B لأوصاف أغنى (6 غيغابايت VRAM، ~3 ثوانٍ/إطار).',
         ],
@@ -3453,9 +3453,9 @@ if __name__ == "__main__":
           '**كشف الحركة:** احسب الفرق بين الإطارات المتتالية باستخدام `cv2.absdiff()`. تجاهل الإطارات التي تقل عن حد الحركة — هذا يتجنب استدعاءات VLM غير الضرورية على المشاهد الساكنة.',
           '**تحليل VLM:** عند اكتشاف الحركة، أرسل الإطار إلى VLM: "صف ما يحدث. هل يوجد شخص؟ ماذا يفعل؟"',
           '**مخرجات التنبيه:** إذا أشارت الاستجابة إلى شخص أو خلل، فعِّل إشعار سطح المكتب المحلي وإعلان Piper TTS ("تم اكتشاف شخص عند الباب الأمامي"). لا تتطلب خدمة إشعارات سحابية.',
-          '**ميزة الخصوصية:** ترسل Ring وNest مقاطع الفيديو إلى خوادم AWS وGoogle على التوالي. يحتفظ هذا الإعداد بجميع اللقطات على أجهزتك — بدون اشتراك، بدون تخزين فيديو تابع لطرف ثالث، بدون مشاركة بيانات مع خدمات خارجية.',
+          '**ميزة الخصوصية:** تخزّن خدمات الكاميرات السحابية مثل Ring وNest اللقطات افتراضياً على خوادم تديرها الجهات المزوِّدة لها (راجع سياسة الخصوصية لكل مزوِّد). يحتفظ هذا الإعداد باللقطات على أجهزتك — بدون اشتراك وبدون تخزين فيديو تابع لطرف ثالث افتراضياً. قد يكون تصوير الأماكن العامة أو الجيران أو الموظفين غير قانوني (ولا يشمله عادةً استثناء الاستخدام المنزلي في اللائحة العامة لحماية البيانات)، لذا تحقق أولاً من القانون المحلي وقواعد الإشعار.',
           '**أفضل VLM للسرعة:** Moondream 2 لمعالجة الإطارات السريعة (~1 ثانية/إطار، ~2 غيغابايت VRAM) أو Gemma 4 E4B لأوصاف مشهد أغنى (~3 ثوانٍ/إطار، ~6 غيغابايت VRAM).',
-          '**ملاحظة الأجهزة:** يستهلك Mac Mini M5 مخصص (~600 دولار) يُشغِّل هذه المجموعة 24/7 ما بين ~15–25 واط في وضع الخمول — أقل كهرباءً سنويًا من اشتراك Ring Doorbell Pro.',
+          '**ملاحظة الأجهزة:** يُقدَّر أن يستهلك Mac Mini M5 مخصص (~600 دولار) يُشغِّل هذه المجموعة 24/7 نحو 15–25 واط في وضع الخمول.',
         ],
       },
       orchestrator: {
@@ -3779,13 +3779,13 @@ if __name__ == "__main__":
         id: 'quick-facts',
         title: '빠른 사실',
         items: [
-          '**전체 스택 총 VRAM:** ~15 GB (Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB). Piper는 CPU에서 실행됩니다.',
-          '**단순화된 스택 (Qwen3-VL 8B):** ~8 GB VRAM — 단일 모델로 비전과 텍스트 추론을 처리합니다.',
-          '**음성 지연 (Whisper small, RTX 4070):** STT ~200–500 ms. LLM 첫 토큰 500–1500 ms. Piper TTS 100 ms.',
-          '**이미지 처리 지연 (Gemma 4 E4B, RTX 4070):** 해상도와 프롬프트에 따라 이미지당 ~2–5초.',
+          '**전체 스택 총 VRAM (대략):** ~15 GB (Whisper 3 GB + Gemma 4 E4B 6 GB + Qwen3 8B 6 GB). Piper는 CPU에서 실행됩니다.',
+          '**단순화된 스택 (Qwen3-VL 8B, 대략):** ~8 GB VRAM — 단일 모델로 비전과 텍스트 추론을 처리합니다.',
+          '**음성 지연 (대략적 추정; Whisper small, RTX 4070):** STT ~200–500 ms. LLM 첫 토큰 500–1500 ms. Piper TTS 100 ms.',
+          '**이미지 처리 지연 (대략적 추정; Gemma 4 E4B, RTX 4070):** 해상도와 프롬프트에 따라 이미지당 ~2–5초.',
           '**실시간 비디오 없음:** 로컬 VLM은 연속 비디오 스트림이 아닌 개별 프레임을 처리합니다. 비디오의 경우 1 FPS로 프레임을 추출하여 각각 처리하십시오.',
           '**VLM + LLM에 동일한 Ollama 인스턴스 사용:** Ollama는 Qwen3-VL을 비전 모델과 텍스트 모델로 동시에 서빙하여 VRAM을 절약할 수 있습니다.',
-          '**모든 컴포넌트는 MIT, Apache 2.0 또는 GPL-3.0 라이선스입니다** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). 원본 rhasspy/piper 저장소는 2025년에 보관(archived) 처리되었고, 개발은 OHF-Voice/piper1-gpl(v1.8.0)에서 계속됩니다. 라이선스는 GPL-3.0이므로 비공개 소스 제품에 Piper를 포함하기 전에 라이선스를 확인하세요.',
+          '**주요 컴포넌트는 MIT, Apache 2.0 또는 GPL-3.0 라이선스입니다(이 가이드에 언급된 다른 컴포넌트는 각자의 라이선스를 따릅니다)** (whisper.cpp MIT, Gemma 4 Apache 2.0, Qwen3 Apache 2.0, Piper GPL-3.0). 원본 rhasspy/piper 저장소는 2025년에 보관(archived) 처리되었고, 개발은 OHF-Voice/piper1-gpl(v1.8.0)에서 계속됩니다. 라이선스는 GPL-3.0이므로 비공개 소스 제품에 Piper를 포함하기 전에 라이선스를 확인하세요.',
         ],
       },
       whatIsMultimodal: {
@@ -3812,9 +3812,9 @@ if __name__ == "__main__":
       },
       costComparison: {
         id: 'cost-comparison',
-        title: '비용: 로컬 파이프라인 vs 클라우드 API (월간)',
+        title: '비용: 로컬 파이프라인 vs 클라우드 API (월간, 대략적 추정)',
         content:
-          '적당한 사용량(하루 100개 이상의 쿼리)으로 로컬 멀티모달 파이프라인은 3–6개월 안에 본전을 찾습니다. 가벼운 사용량(하루 10개 쿼리)으로는 손익분기점이 12–18개월로 늘어납니다.',
+          '적당한 사용량(하루 100개 이상의 쿼리)으로 로컬 멀티모달 파이프라인은 3–6개월 안에 본전을 찾습니다. 가벼운 사용량(하루 10개 쿼리)으로는 손익분기점이 12–18개월로 늘어납니다. 이는 대략적인 추정치이며 공급업체 견적이나 PromptQuorum의 측정값이 아니므로, 결정 전에 최신 공급업체 가격을 확인하십시오.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3829,7 +3829,7 @@ if __name__ == "__main__":
           { '사용량': '하드웨어 (일회성)', 'GPT-5.5 API': '$0', 'Google Cloud': '$0', '로컬': '$600–3,500' },
           { '사용량': '손익분기점', 'GPT-5.5 API': '—', 'Google Cloud': '—', '로컬': '3–18개월' },
         ],
-        note: '적당한 사용량(하루 100개 이상의 쿼리)으로 로컬 파이프라인은 3–6개월 안에 본전을 찾습니다. 가벼운 사용량(하루 10개 쿼리)으로는 손익분기점이 12–18개월로 늘어납니다.',
+        note: '적당한 사용량(하루 100개 이상의 쿼리)으로 로컬 파이프라인은 3–6개월 안에 본전을 찾습니다. 가벼운 사용량(하루 10개 쿼리)으로는 손익분기점이 12–18개월로 늘어납니다. 이는 대략적인 추정치이며 공급업체 견적이나 PromptQuorum의 측정값이 아니므로, 결정 전에 최신 공급업체 가격을 확인하십시오.',
       },
       architecture: {
         id: 'architecture',
@@ -3948,15 +3948,15 @@ if __name__ == "__main__":
             '등급': 'Apple 고급',
             'GPU': 'M5 Max 128 GB',
             'RAM': '128 GB 통합',
-            '실행 가능': '70B 모델로 전체 스택 — 최고 로컬 품질',
+            '실행 가능': '70B 모델로 전체 스택 — 높은 로컬 품질',
             '지연 (음성 + 이미지 쿼리)': '1–3초',
           },
         ],
-        note: '지연은 음성 쿼리 종료 시점부터 TTS 재생 시작까지 측정하며, 이미지가 있는 경우 이미지 처리를 포함합니다.',
+        note: '지연 수치는 대략적인 추정치이며 PromptQuorum의 벤치마크가 아닙니다. 음성 쿼리 종료 시점부터 TTS 재생 시작까지의 시간(이미지가 있으면 이미지 처리 포함)을 뜻하며, 하드웨어·모델·설정에 따라 달라집니다.',
         callouts: [
           {
             type: 'tip',
-            text: '128 GB 통합 메모리를 탑재한 M5 Max는 최고의 로컬 멀티모달 플랫폼입니다. Whisper large-v3(3 GB) + Gemma 4 31B(~20 GB) + Piper TTS를 동시에 실행할 수 있습니다 — 31B급 비전 모델이므로 컨텍스트와 다른 모델을 위한 여유가 충분합니다. 어떤 단일 GPU 구성도 2–3배 더 비싼 다중 GPU 설정 없이는 이를 따라잡을 수 없습니다.',
+            text: '128 GB 통합 메모리를 탑재한 M5 Max는 매우 강력한 로컬 멀티모달 플랫폼입니다. Whisper large-v3(3 GB) + Gemma 4 31B(~20 GB) + Piper TTS를 동시에 실행할 수 있습니다 — 31B급 비전 모델이므로 컨텍스트와 다른 모델을 위한 여유가 충분합니다.',
           },
         ],
       },
@@ -3979,7 +3979,7 @@ if __name__ == "__main__":
         content:
           '**카메라를 물체나 장면에 향하고 음성으로 질문하면 음성 응답을 받습니다.** 이 사용 사례는 음성 상호작용이 가능한 Google Lens에 가장 가까운 로컬 동등물입니다.',
         items: [
-          '**응용 프로그램:** 창고 재고(선반을 촬영하고 "SKU-4429는 몇 개나 있습니까?"라고 질문), 현장 검사(기계 손상을 촬영하고 "이것을 운영하는 것이 안전합니까?"라고 질문), 접근성(시각 장애인 사용자를 위한 물체 설명).',
+          '**응용 프로그램:** 창고 재고(선반을 촬영하고 "SKU-4429는 몇 개나 있습니까?"라고 질문), 현장 검사(기계 손상을 촬영하고 무엇이 보이는지 질문; AI의 답변은 안전성 평가가 아니므로 운영해도 안전한지는 자격을 갖춘 사람이 판단해야 합니다), 접근성(시각 장애인 사용자를 위한 물체 설명).',
           '**구현:** OpenCV `cv2.VideoCapture(0).read()`로 카메라 프레임을 캡처하고, JPEG로 저장하여 Whisper 전사와 함께 VLM에 전달합니다.',
           '**최적 모델:** 일반적인 물체 및 장면 이해를 위한 Gemma 4 E4B 또는 Qwen3-VL 8B.',
           '**지연:** RTX 4070에서 이미지 캡처 + VLM 처리 + LLM + TTS에 3–6초. 더 작은 VLM(단순 물체 식별을 위한 Moondream 2)으로 줄일 수 있습니다.',
@@ -3989,13 +3989,13 @@ if __name__ == "__main__":
         id: 'use-case-3',
         title: '사용 사례 3: 회의 전사 + 슬라이드 분석',
         content:
-          '**회의 중 Whisper를 지속적으로 실행하여 전사를 구축하고, 주기적으로 슬라이드 스크린샷을 캡처하여 VLM으로 분석합니다. 마지막에 전사 + 슬라이드 내용을 결합하여 로컬 요약과 실행 항목을 생성합니다 — 클라우드 없음, 데이터 노출 없음.**',
+          '**회의 중 Whisper를 지속적으로 실행하여 전사를 구축하고, 주기적으로 슬라이드 스크린샷을 캡처하여 VLM으로 분석합니다. 마지막에 전사 + 슬라이드 내용을 결합하여 로컬 요약과 실행 항목을 생성합니다 — 클라우드 서비스를 사용하지 않습니다.**',
         items: [
           '**STT:** 회의 중 faster-whisper를 스트리밍 모드로 실행합니다. 전사 버퍼에 세그먼트를 누적합니다.',
           '**비전:** 새 슬라이드가 나타날 때마다(스크린샷 차이로 감지), 이미지를 캡처하여 설명을 위해 Gemma 4 E4B에 전달합니다.',
           '**결합:** 회의 종료 시(또는 요청 시) 전사 + 슬라이드 설명을 Qwen3 8B에 전달합니다: "이 회의를 요약하고 실행 항목을 나열하십시오. 전사: [...]. 슬라이드 내용: [...]."',
           '**출력:** 소리 내어 읽는 요약(Piper TTS) + 로컬에 저장된 텍스트 파일.',
-          '**GDPR 가치:** 모든 회의 처리가 로컬입니다. 오디오, 전사, 슬라이드가 어떤 클라우드 서비스로도 전송되지 않습니다. 법률·의료·기업 환경에서 GDPR 요건을 충족하는지는 여전히 적법 근거, 보관 정책 및 기타 통제에 달려 있으므로 컴플라이언스 팀과 상담하세요.',
+          '**GDPR 가치:** 모든 회의 처리가 로컬입니다. 오디오, 전사, 슬라이드가 어떤 클라우드 서비스로도 전송되지 않습니다. 법률·의료·기업 환경에서 GDPR 요건을 충족하는지는 여전히 적법 근거, 보관 정책 및 기타 통제에 달려 있으므로 컴플라이언스 팀과 상담하세요. 회의에서 사람을 녹음하려면 현지 법률에 따라 본인의 동의 또는 다른 적법 근거도 필요합니다.',
         ],
       },
       useCase4: {
@@ -4006,7 +4006,7 @@ if __name__ == "__main__":
         items: [
           '**화면 읽기:** 2초마다 스크린샷 캡처 → Gemma 4 E4B가 화면에 있는 내용 설명 → Piper가 소리 내어 읽음. 다음에 설명할 내용을 제어하기 위한 음성 명령(Whisper)을 추가합니다.',
           '**음성 탐색:** Whisper가 음성 명령을 전사 → LLM이 의도를 해석 → pyautogui를 통해 키보드/마우스 동작 실행. 인터넷 불필요.',
-          '**개인 정보 혜택:** 장애가 있는 사용자는 종종 민감한 환경(의료 포털, 금융 계정)에서 접근성 도구를 사용합니다. 로컬 도구는 화면 내용이 제3자에게 전송되지 않도록 보장합니다.',
+          '**개인 정보 혜택:** 장애가 있는 사용자는 종종 민감한 환경(의료 포털, 금융 계정)에서 접근성 도구를 사용합니다. 로컬 도구는 구성 요소가 네트워크 호출을 하지 않는 한 화면 내용을 사용자의 기기 안에 유지합니다(사용 중인 환경에서 직접 확인하십시오).',
           '**제한된 연결에서의 사용:** 병원, 정부 건물, 인터넷이 제한된 지역에서 작동합니다 — 기관 접근성 배포에 중요합니다.',
           '**접근성을 위한 모델 선택:** 빠른 화면 설명을 위한 Moondream 2(2 GB VRAM, 프레임당 ~1초). 더 풍부한 설명을 위한 Gemma 4 E4B(6 GB VRAM, 프레임당 ~3초).',
         ],
@@ -4021,9 +4021,9 @@ if __name__ == "__main__":
           '**움직임 감지:** `cv2.absdiff()`로 연속 프레임 간의 차이를 계산합니다. 움직임 임계값 이하의 프레임은 건너뜁니다 — 이는 정적 장면에서 불필요한 VLM 호출을 방지합니다.',
           '**VLM 분석:** 움직임이 감지되면 프레임을 VLM에 전송합니다: "무슨 일이 일어나고 있는지 설명하십시오. 사람이 있습니까? 무엇을 하고 있습니까?"',
           '**알림 출력:** 응답이 사람이나 이상을 나타내면 로컬 데스크톱 알림과 Piper TTS 공지를 트리거합니다("정문에서 사람 감지됨"). 클라우드 알림 서비스 불필요.',
-          '**개인 정보 보호 장점:** Ring과 Nest는 각각 AWS와 Google 서버로 비디오를 전송합니다. 이 설정은 모든 녹화를 사용자의 하드웨어에 보관합니다 — 구독 없음, 제3자 비디오 저장 없음, 외부 서비스와 데이터 공유 없음.',
+          '**개인 정보 보호 장점:** Ring과 Nest 같은 클라우드 카메라 서비스는 기본적으로 제공업체가 운영하는 서버에 영상을 저장합니다(각 제공업체의 개인정보 처리방침을 확인하십시오). 이 설정은 영상을 사용자의 하드웨어에 보관하며 기본적으로 구독이나 제3자 영상 저장이 없습니다. 공공장소, 이웃, 직원을 촬영하는 것은 위법일 수 있으므로(GDPR의 가정 예외는 일반적으로 적용되지 않습니다) 먼저 현지 법률과 고지 의무를 확인하십시오.',
           '**속도를 위한 최적 VLM:** 빠른 프레임 처리를 위한 Moondream 2(프레임당 ~1초, ~2 GB VRAM) 또는 더 풍부한 장면 설명을 위한 Gemma 4 E4B(프레임당 ~3초, ~6 GB VRAM).',
-          '**하드웨어 참고:** 이 스택을 24/7 실행하는 전용 Mac Mini M5(~$600)는 대기 중 ~15–25W를 소비합니다 — Ring Doorbell Pro 구독보다 연간 전기료가 더 적습니다.',
+          '**하드웨어 참고:** 이 스택을 24/7 실행하는 전용 Mac Mini M5(~$600)는 대기 중 대략 15–25W를 소비하는 것으로 추정됩니다.',
         ],
       },
       orchestrator: {

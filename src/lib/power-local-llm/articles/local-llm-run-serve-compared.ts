@@ -9,28 +9,33 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { compareGroupTotal, compareSegmentAttrCounts, compareSegmentCounts, compareSegmentFacts, compareToolsByAttr, compareToolsInBothSegments } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
-// Live counts from the directory — recomputed at build time so this article never drifts from
-// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
-// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+// Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
+const SEG = compareSegmentCounts('run-serve')
+const ENGINES = compareSegmentFacts('run-serve')['inference-engines']
+const RUNTIMES = compareSegmentFacts('run-serve')['runtimes-managers']
+const RT = compareSegmentFacts('run-serve')['routers-gateways']
+// Live attribute tallies (rows documenting an attribute as true), straight from the table's rows.
+const ATTR = compareSegmentAttrCounts('run-serve')
+const EA = ATTR['inference-engines']
+const RA = ATTR['runtimes-managers']
+
+// Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
+// so this article never drifts from the table as the directory grows.
 const TOTAL_APP_COUNT = localAiApps.length
-const REVIEWED_RUN_SERVE_APPS = localAiApps.filter((a) => a.reviewSlug != null)
-const RUN_SERVE_INFERENCE_ENGINES = REVIEWED_RUN_SERVE_APPS.filter((a) => a.categories.includes('inference-engines')).length
-const RUN_SERVE_RUNTIMES_MANAGERS = REVIEWED_RUN_SERVE_APPS.filter((a) => a.categories.includes('runtimes-managers')).length
-const RUN_SERVE_ROUTERS_GATEWAYS = REVIEWED_RUN_SERVE_APPS.filter((a) => a.categories.includes('routers-gateways')).length
-const RUN_SERVE_TOTAL = new Set(
-  REVIEWED_RUN_SERVE_APPS.filter((a) =>
-    a.categories.some((c) => c === 'inference-engines' || c === 'runtimes-managers' || c === 'routers-gateways'),
-  ).map((a) => a.slug),
-).size
+const RUN_SERVE_INFERENCE_ENGINES = SEG['inference-engines']
+const RUN_SERVE_RUNTIMES_MANAGERS = SEG['runtimes-managers']
+const RUN_SERVE_ROUTERS_GATEWAYS = SEG['routers-gateways']
+const RUN_SERVE_TOTAL = compareGroupTotal('run-serve')
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-10-24',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -58,16 +63,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**The ${RUN_SERVE_TOTAL} local run-and-serve tools in the PromptQuorum directory split into three kinds that should be compared separately: inference engines (${RUN_SERVE_INFERENCE_ENGINES} tools), runtimes and managers (${RUN_SERVE_RUNTIMES_MANAGERS}) and routers and gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Within engines, 15 document NVIDIA GPU support, 17 document Apple Silicon support and 21 document an OpenAI-compatible API; among runtimes, 6 document an OpenAI-compatible API. Use the comparison table below, and read each tool's own review before you install it.`,
+      `**The ${RUN_SERVE_TOTAL} local run-and-serve tools in the PromptQuorum directory split into three kinds that should be compared separately: inference engines (${RUN_SERVE_INFERENCE_ENGINES} tools), runtimes and managers (${RUN_SERVE_RUNTIMES_MANAGERS}) and routers and gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Within engines, ${EA.nvidiaGpu} document NVIDIA GPU support, ${EA.appleSilicon} document Apple Silicon support and ${EA.openaiApi} document an OpenAI-compatible API; among runtimes, ${RA.openaiApi} document an OpenAI-compatible API. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local inference tool should I use?',
         answer:
           'It depends on the kind of tool, so compare within one kind at a time. Pick by the constraint that matters most — the hardware you have (NVIDIA, Apple Silicon, AMD or CPU), an OpenAI-compatible API, multi-GPU scaling, a desktop app or a headless server — and use the table below, which is generated from each tool\'s official documentation.',
         bullets: [
-          'Inference engines: 30 tools compared on hardware support (NVIDIA, Apple Silicon, AMD, CPU), OpenAI-compatible API and multi-GPU or multi-node inference.',
-          'Runtimes and managers: 13 tools compared on API, desktop app, built-in model library and headless mode.',
-          'Routers and gateways: 4 tools compared on OpenAI-compatible endpoint, local models and fallback.',
+          `Inference engines: ${SEG['inference-engines']} tools compared on hardware support (NVIDIA, Apple Silicon, AMD, CPU), OpenAI-compatible API and multi-GPU or multi-node inference.`,
+          `Runtimes and managers: ${SEG['runtimes-managers']} tools compared on API, desktop app, built-in model library and headless mode.`,
+          `Routers and gateways: ${SEG['routers-gateways']} tools compared on OpenAI-compatible endpoint, local models and fallback.`,
           'A dash (—) means the project\'s documentation does not state it, not that the feature is missing.',
         ],
       },
@@ -99,7 +104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${RUN_SERVE_TOTAL} tools, three kinds: inference engines (${RUN_SERVE_INFERENCE_ENGINES}), runtimes and managers (${RUN_SERVE_RUNTIMES_MANAGERS}), routers and gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). Ollama appears in two groups because it is both an engine and a runtime.`,
+          `${RUN_SERVE_TOTAL} tools, three kinds: inference engines (${RUN_SERVE_INFERENCE_ENGINES}), runtimes and managers (${RUN_SERVE_RUNTIMES_MANAGERS}), routers and gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). Tools that are both an engine and a runtime (${compareToolsInBothSegments('run-serve', 'inference-engines', 'runtimes-managers', 'en')}) appear in both groups.`,
           'The table is generated from each tool\'s record and checked against its official README or site; a dash means "not stated in the documentation", never "no". For some well-known tools the documentation quoted here is silent on a given feature, so their cells show a dash.',
           'Every tool name in the table links to its own PromptQuorum review, which is where installation steps and limits are covered.',
         ],
@@ -123,34 +128,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'engine-differences',
         title: 'Inference Engines: What Differs',
         items: [
-          '**OpenAI-compatible API.** [candle-vllm](/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/power-local-llm/dynamo-review), [exo](/power-local-llm/exo-review), [KoboldCpp](/power-local-llm/koboldcpp-review), [KServe](/power-local-llm/kserve-review), [llama.cpp](/power-local-llm/llama-cpp-explained), [LocalAI](/power-local-llm/localai-explained), [LoRAX](/power-local-llm/lorax-review), [Lucebox](/power-local-llm/lucebox-review), [MLC LLM](/power-local-llm/mlc-llm-explained), [mlx-serve](/power-local-llm/mlx-serve-review), [mlxcel](/power-local-llm/mlxcel-review), [OlliteRT](/power-local-llm/ollitert-review), [oMLX](/power-local-llm/omlx-review), [OpenLLM](/power-local-llm/openllm-review), [Rapid-MLX](/power-local-llm/rapid-mlx-review), [Shimmy](/power-local-llm/shimmy-review), [SwiftLM](/power-local-llm/swiftlm-review), [text-generation-webui](/local-llms/text-generation-webui-review), [vllm-mlx](/power-local-llm/vllm-mlx-review) and [vLLM](/power-local-llm/vllm-explained) document an OpenAI-compatible HTTP API, so apps written for the OpenAI API can point at them.',
-          '**NVIDIA GPUs.** [candle-vllm](/power-local-llm/candle-vllm-review), [ExLlamaV2](/power-local-llm/exllamav2-explained), [KoboldCpp](/power-local-llm/koboldcpp-review), [llama.cpp](/power-local-llm/llama-cpp-explained), [LMDeploy](/power-local-llm/lmdeploy-review), [LocalAI](/power-local-llm/localai-explained), [LoRAX](/power-local-llm/lorax-review), [Lucebox](/power-local-llm/lucebox-review), [MLC LLM](/power-local-llm/mlc-llm-explained), [mlxcel](/power-local-llm/mlxcel-review), [SGLang](/power-local-llm/sglang-explained), [Shimmy](/power-local-llm/shimmy-review), [TensorRT-LLM](/power-local-llm/tensorrt-llm-explained), [text-generation-webui](/local-llms/text-generation-webui-review) and [vLLM](/power-local-llm/vllm-explained) document NVIDIA GPU (CUDA) support.',
-          '**Apple Silicon.** [candle-vllm](/power-local-llm/candle-vllm-review), [claude-code-local](/power-local-llm/claude-code-local-review), [exo](/power-local-llm/exo-review), [KoboldCpp](/power-local-llm/koboldcpp-review), [llama.cpp](/power-local-llm/llama-cpp-explained), [LocalAI](/power-local-llm/localai-explained), [MLC LLM](/power-local-llm/mlc-llm-explained), [MLX-LM](/power-local-llm/mlx-lm-explained), [mlx-serve](/power-local-llm/mlx-serve-review), [mlxcel](/power-local-llm/mlxcel-review), [oMLX](/power-local-llm/omlx-review), [Rapid-MLX](/power-local-llm/rapid-mlx-review), [Shimmy](/power-local-llm/shimmy-review), [SwiftLM](/power-local-llm/swiftlm-review), [text-generation-webui](/local-llms/text-generation-webui-review), [TurboFieldfare](/power-local-llm/turbo-fieldfare-review) and [vllm-mlx](/power-local-llm/vllm-mlx-review) document Apple Silicon, Metal or MLX support.',
-          '**AMD GPUs.** [KoboldCpp](/power-local-llm/koboldcpp-review), [llama.cpp](/power-local-llm/llama-cpp-explained), [LocalAI](/power-local-llm/localai-explained), [Lucebox](/power-local-llm/lucebox-review), [MLC LLM](/power-local-llm/mlc-llm-explained), [SGLang](/power-local-llm/sglang-explained), [Shimmy](/power-local-llm/shimmy-review), [text-generation-webui](/local-llms/text-generation-webui-review) and [vLLM](/power-local-llm/vllm-explained) document AMD GPU support.',
-          '**CPU inference.** [exo](/power-local-llm/exo-review), [KoboldCpp](/power-local-llm/koboldcpp-review), [llama.cpp](/power-local-llm/llama-cpp-explained), [LocalAI](/power-local-llm/localai-explained), [OlliteRT](/power-local-llm/ollitert-review), [SGLang](/power-local-llm/sglang-explained), [text-generation-webui](/local-llms/text-generation-webui-review) and [vLLM](/power-local-llm/vllm-explained) document running inference on a CPU.',
-          '**Multi-GPU and multi-node.** [candle-vllm](/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/power-local-llm/dynamo-review), [ExLlamaV2](/power-local-llm/exllamav2-explained), [exo](/power-local-llm/exo-review), [KServe](/power-local-llm/kserve-review), [LMDeploy](/power-local-llm/lmdeploy-review), [LocalAI](/power-local-llm/localai-explained), [LoRAX](/power-local-llm/lorax-review), [Lucebox](/power-local-llm/lucebox-review), [MLX-LM](/power-local-llm/mlx-lm-explained), [mlxcel](/power-local-llm/mlxcel-review), [oMLX](/power-local-llm/omlx-review), [SGLang](/power-local-llm/sglang-explained) and [vLLM](/power-local-llm/vllm-explained) document multi-GPU, tensor-parallel or multi-node inference.',
-          '**License.** Most engines here are Apache-2.0 (19 tools) or MIT (9); KoboldCpp and text-generation-webui are AGPL-3.0. Copyleft licenses attach conditions to distributing modified versions — see [AI Tool Licenses Explained](/power-local-llm/ai-tool-licenses-explained).',
+          `**OpenAI-compatible API.** ${compareToolsByAttr('run-serve', 'inference-engines', 'openaiApi', 'en')} document an OpenAI-compatible HTTP API, so apps written for the OpenAI API can point at them.`,
+          `**NVIDIA GPUs.** ${compareToolsByAttr('run-serve', 'inference-engines', 'nvidiaGpu', 'en')} document NVIDIA GPU (CUDA) support.`,
+          `**Apple Silicon.** ${compareToolsByAttr('run-serve', 'inference-engines', 'appleSilicon', 'en')} document Apple Silicon, Metal or MLX support.`,
+          `**AMD GPUs.** ${compareToolsByAttr('run-serve', 'inference-engines', 'amdGpu', 'en')} document AMD GPU support.`,
+          `**CPU inference.** ${compareToolsByAttr('run-serve', 'inference-engines', 'cpuInference', 'en')} document running inference on a CPU.`,
+          `**Multi-GPU and multi-node.** ${compareToolsByAttr('run-serve', 'inference-engines', 'distributed', 'en')} document multi-GPU, tensor-parallel or multi-node inference.`,
+          `**License.** Most engines here are Apache-2.0 (${ENGINES.license['Apache-2.0'] ?? 0} tools) or MIT (${ENGINES.license['MIT'] ?? 0}); KoboldCpp and text-generation-webui are AGPL-3.0. Copyleft licenses attach conditions to distributing modified versions — see [AI Tool Licenses Explained](/power-local-llm/ai-tool-licenses-explained).`,
         ],
       },
       runtimeDifferences: {
         id: 'runtime-differences',
         title: 'Runtimes and Managers: What Differs',
         items: [
-          '**OpenAI-compatible API.** [Docker Model Runner](/power-local-llm/docker-model-runner-review), [Foundry Local](/power-local-llm/foundry-local-review), [GPUStack](/power-local-llm/gpustack-review), [Jan](/power-local-llm/jan-review), [Lemonade](/power-local-llm/lemonade-review), [Llama](/power-local-llm/llama-app-review) and [Osaurus](/power-local-llm/osaurus-ai-review) document an OpenAI-compatible API.',
-          '**Desktop app.** [GPT4All](/power-local-llm/gpt4all-review), [Jan](/power-local-llm/jan-review), [Llama](/power-local-llm/llama-app-review), [LM Studio](/power-local-llm/lm-studio-review), [Osaurus](/power-local-llm/osaurus-ai-review) and [Ypipe](/power-local-llm/ypipe-review) document an installable desktop app.',
-          '**Built-in model library.** [Foundry Local](/power-local-llm/foundry-local-review), [GPUStack](/power-local-llm/gpustack-review), [Jan](/power-local-llm/jan-review), [Lemonade](/power-local-llm/lemonade-review), [Llama](/power-local-llm/llama-app-review), [LM Studio](/power-local-llm/lm-studio-review) and [Ollama](/power-local-llm/ollama-review) document a built-in way to find and download models.',
-          '**Headless or server mode.** [DreamServer](/power-local-llm/dreamserver-review), [GPUStack](/power-local-llm/gpustack-review), [Lemonade](/power-local-llm/lemonade-review) and [Osaurus](/power-local-llm/osaurus-ai-review) document running as a background service or server without the GUI.',
-          '**License and price.** Four runtimes here are Apache-2.0 and five are MIT. LM Studio and Docker Model Runner are proprietary (LM Studio is free to use; Docker Model Runner is bundled with Docker Desktop), Msty is closed source with a free tier, and RunAnywhere and YPipe use their own or undocumented terms — check each review.',
+          `**OpenAI-compatible API.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'openaiApi', 'en')} document an OpenAI-compatible API.`,
+          `**Desktop app.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'desktopApp', 'en')} document an installable desktop app.`,
+          `**Built-in model library.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'modelLibrary', 'en')} document a built-in way to find and download models.`,
+          `**Headless or server mode.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'headless', 'en')} document running as a background service or server without the GUI.`,
+          `**License and price.** ${RUNTIMES.license['Apache-2.0'] ?? 0} runtimes here are Apache-2.0 and ${RUNTIMES.license['MIT'] ?? 0} are MIT. LM Studio is proprietary (free to use), Docker Model Runner is bundled with Docker Desktop (see its review for the license terms), Msty is closed source with a free tier, and RunAnywhere and YPipe use their own or undocumented terms — check each review.`,
         ],
       },
       gatewayDifferences: {
         id: 'gateway-differences',
         title: 'Routers and Gateways: What Differs',
         items: [
-          '**OpenAI-compatible endpoint.** [AIClient2API](/power-local-llm/aiclient2api-review) and [litellm](/power-local-llm/litellm-review) document an OpenAI-compatible endpoint.',
+          `**OpenAI-compatible endpoint.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'openaiApi', 'en')} document an OpenAI-compatible endpoint.`,
           '**Routing to local models.** [litellm](/power-local-llm/litellm-review) documents local or self-hosted models (such as Ollama) among its supported providers.',
-          '**Fallback and load balancing.** [AIClient2API](/power-local-llm/aiclient2api-review), [ClawRouter](/power-local-llm/clawrouter-review) and [litellm](/power-local-llm/litellm-review) document fallback, retry or load balancing across models or providers.',
-          '**License.** Two of the four are MIT, one is GPL-3.0 and one is Apache-2.0.',
+          `**Fallback and load balancing.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'fallback', 'en')} document fallback, retry or load balancing across models or providers.`,
+          `**License.** ${RT.license['MIT'] ?? 0} of the ${RT.count} are MIT, ${RT.license['GPL-3.0'] ?? 0} is GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0} is AGPL-3.0 and ${RT.license['Apache-2.0'] ?? 0} is Apache-2.0; ${RT.license['Not stated'] ?? 0} does not state a license.`,
         ],
       },
       limitations: {
@@ -217,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'en',
       datePublished: '2026-09-20',
-      dateModified: '2026-10-24',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -250,7 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-10-24',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -278,16 +283,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**Die ${RUN_SERVE_TOTAL} lokalen Run-and-Serve-Werkzeuge im PromptQuorum-Verzeichnis lassen sich in drei Arten einteilen, die getrennt verglichen werden sollten: Inferenz-Engines (${RUN_SERVE_INFERENCE_ENGINES} Werkzeuge), Runtimes und Manager (${RUN_SERVE_RUNTIMES_MANAGERS}) sowie Router und Gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Bei den Engines dokumentieren 15 die Unterstützung von NVIDIA-GPUs, 17 die Unterstützung von Apple Silicon und 21 eine OpenAI-kompatible API; bei den Runtimes dokumentieren 6 eine OpenAI-kompatible API. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Werkzeugs, bevor Sie es installieren.`,
+      `**Die ${RUN_SERVE_TOTAL} lokalen Run-and-Serve-Werkzeuge im PromptQuorum-Verzeichnis lassen sich in drei Arten einteilen, die getrennt verglichen werden sollten: Inferenz-Engines (${RUN_SERVE_INFERENCE_ENGINES} Werkzeuge), Runtimes und Manager (${RUN_SERVE_RUNTIMES_MANAGERS}) sowie Router und Gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Bei den Engines dokumentieren ${EA.nvidiaGpu} die Unterstützung von NVIDIA-GPUs, ${EA.appleSilicon} die Unterstützung von Apple Silicon und ${EA.openaiApi} eine OpenAI-kompatible API; bei den Runtimes dokumentieren ${RA.openaiApi} eine OpenAI-kompatible API. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Werkzeugs, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale Inferenz-Werkzeug sollte ich verwenden?',
         answer:
           'Das hängt von der Art des Werkzeugs ab, vergleichen Sie also jeweils innerhalb einer Art. Wählen Sie nach der Anforderung, die für Sie am wichtigsten ist — die vorhandene Hardware (NVIDIA, Apple Silicon, AMD oder CPU), eine OpenAI-kompatible API, Multi-GPU-Skalierung, eine Desktop-App oder ein Headless-Server — und nutzen Sie die Tabelle unten, die aus der offiziellen Dokumentation des jeweiligen Werkzeugs erzeugt wird.',
         bullets: [
-          'Inferenz-Engines: 30 Werkzeuge im Vergleich nach Hardware-Unterstützung (NVIDIA, Apple Silicon, AMD, CPU), OpenAI-kompatibler API und Multi-GPU- oder Multi-Node-Inferenz.',
-          'Runtimes und Manager: 13 Werkzeuge im Vergleich nach API, Desktop-App, integrierter Modellbibliothek und Headless-Modus.',
-          'Router und Gateways: 4 Werkzeuge im Vergleich nach OpenAI-kompatiblem Endpunkt, lokalen Modellen und Fallback.',
+          `Inferenz-Engines: ${SEG['inference-engines']} Werkzeuge im Vergleich nach Hardware-Unterstützung (NVIDIA, Apple Silicon, AMD, CPU), OpenAI-kompatibler API und Multi-GPU- oder Multi-Node-Inferenz.`,
+          `Runtimes und Manager: ${SEG['runtimes-managers']} Werkzeuge im Vergleich nach API, Desktop-App, integrierter Modellbibliothek und Headless-Modus.`,
+          `Router und Gateways: ${SEG['routers-gateways']} Werkzeuge im Vergleich nach OpenAI-kompatiblem Endpunkt, lokalen Modellen und Fallback.`,
           'Ein Strich (—) bedeutet, dass die Dokumentation des Projekts die Angabe nicht nennt, nicht dass die Funktion fehlt.',
         ],
       },
@@ -319,7 +324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${RUN_SERVE_TOTAL} Werkzeuge, drei Arten: Inferenz-Engines (${RUN_SERVE_INFERENCE_ENGINES}), Runtimes und Manager (${RUN_SERVE_RUNTIMES_MANAGERS}), Router und Gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). Ollama erscheint in zwei Gruppen, weil es sowohl Engine als auch Runtime ist.`,
+          `${RUN_SERVE_TOTAL} Werkzeuge, drei Arten: Inferenz-Engines (${RUN_SERVE_INFERENCE_ENGINES}), Runtimes und Manager (${RUN_SERVE_RUNTIMES_MANAGERS}), Router und Gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). Werkzeuge, die zugleich Engine und Runtime sind (${compareToolsInBothSegments('run-serve', 'inference-engines', 'runtimes-managers', 'de')}), erscheinen in beiden Gruppen.`,
           'Die Tabelle wird aus dem Datensatz jedes Werkzeugs erzeugt und anhand seiner offiziellen README oder Website geprüft; ein Strich bedeutet „in der Dokumentation nicht angegeben“, niemals „nein“. Bei einigen bekannten Werkzeugen schweigt die hier zitierte Dokumentation zu einer bestimmten Funktion, weshalb ihre Zellen einen Strich zeigen.',
           'Jeder Werkzeugname in der Tabelle verlinkt auf den eigenen PromptQuorum-Test, in dem Installationsschritte und Grenzen behandelt werden.',
         ],
@@ -343,34 +348,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'engine-differences',
         title: 'Inferenz-Engines: Die Unterschiede',
         items: [
-          '**OpenAI-kompatible API.** [candle-vllm](/de/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/de/power-local-llm/dynamo-review), [exo](/de/power-local-llm/exo-review), [KoboldCpp](/de/power-local-llm/koboldcpp-review), [KServe](/de/power-local-llm/kserve-review), [llama.cpp](/de/power-local-llm/llama-cpp-explained), [LocalAI](/de/power-local-llm/localai-explained), [LoRAX](/de/power-local-llm/lorax-review), [Lucebox](/de/power-local-llm/lucebox-review), [MLC LLM](/de/power-local-llm/mlc-llm-explained), [mlx-serve](/de/power-local-llm/mlx-serve-review), [mlxcel](/de/power-local-llm/mlxcel-review), [OlliteRT](/de/power-local-llm/ollitert-review), [oMLX](/de/power-local-llm/omlx-review), [OpenLLM](/de/power-local-llm/openllm-review), [Rapid-MLX](/de/power-local-llm/rapid-mlx-review), [Shimmy](/de/power-local-llm/shimmy-review), [SwiftLM](/de/power-local-llm/swiftlm-review), [text-generation-webui](/de/local-llms/text-generation-webui-review), [vllm-mlx](/de/power-local-llm/vllm-mlx-review) und [vLLM](/de/power-local-llm/vllm-explained) dokumentieren eine OpenAI-kompatible HTTP-API, sodass für die OpenAI-API geschriebene Apps auf sie zeigen können.',
-          '**NVIDIA-GPUs.** [candle-vllm](/de/power-local-llm/candle-vllm-review), [ExLlamaV2](/de/power-local-llm/exllamav2-explained), [KoboldCpp](/de/power-local-llm/koboldcpp-review), [llama.cpp](/de/power-local-llm/llama-cpp-explained), [LMDeploy](/de/power-local-llm/lmdeploy-review), [LocalAI](/de/power-local-llm/localai-explained), [LoRAX](/de/power-local-llm/lorax-review), [Lucebox](/de/power-local-llm/lucebox-review), [MLC LLM](/de/power-local-llm/mlc-llm-explained), [mlxcel](/de/power-local-llm/mlxcel-review), [SGLang](/de/power-local-llm/sglang-explained), [Shimmy](/de/power-local-llm/shimmy-review), [TensorRT-LLM](/de/power-local-llm/tensorrt-llm-explained), [text-generation-webui](/de/local-llms/text-generation-webui-review) und [vLLM](/de/power-local-llm/vllm-explained) dokumentieren die Unterstützung von NVIDIA-GPUs (CUDA).',
-          '**Apple Silicon.** [candle-vllm](/de/power-local-llm/candle-vllm-review), [claude-code-local](/de/power-local-llm/claude-code-local-review), [exo](/de/power-local-llm/exo-review), [KoboldCpp](/de/power-local-llm/koboldcpp-review), [llama.cpp](/de/power-local-llm/llama-cpp-explained), [LocalAI](/de/power-local-llm/localai-explained), [MLC LLM](/de/power-local-llm/mlc-llm-explained), [MLX-LM](/de/power-local-llm/mlx-lm-explained), [mlx-serve](/de/power-local-llm/mlx-serve-review), [mlxcel](/de/power-local-llm/mlxcel-review), [oMLX](/de/power-local-llm/omlx-review), [Rapid-MLX](/de/power-local-llm/rapid-mlx-review), [Shimmy](/de/power-local-llm/shimmy-review), [SwiftLM](/de/power-local-llm/swiftlm-review), [text-generation-webui](/de/local-llms/text-generation-webui-review), [TurboFieldfare](/de/power-local-llm/turbo-fieldfare-review) und [vllm-mlx](/de/power-local-llm/vllm-mlx-review) dokumentieren die Unterstützung von Apple Silicon, Metal oder MLX.',
-          '**AMD-GPUs.** [KoboldCpp](/de/power-local-llm/koboldcpp-review), [llama.cpp](/de/power-local-llm/llama-cpp-explained), [LocalAI](/de/power-local-llm/localai-explained), [Lucebox](/de/power-local-llm/lucebox-review), [MLC LLM](/de/power-local-llm/mlc-llm-explained), [SGLang](/de/power-local-llm/sglang-explained), [Shimmy](/de/power-local-llm/shimmy-review), [text-generation-webui](/de/local-llms/text-generation-webui-review) und [vLLM](/de/power-local-llm/vllm-explained) dokumentieren die Unterstützung von AMD-GPUs.',
-          '**CPU-Inferenz.** [exo](/de/power-local-llm/exo-review), [KoboldCpp](/de/power-local-llm/koboldcpp-review), [llama.cpp](/de/power-local-llm/llama-cpp-explained), [LocalAI](/de/power-local-llm/localai-explained), [OlliteRT](/de/power-local-llm/ollitert-review), [SGLang](/de/power-local-llm/sglang-explained), [text-generation-webui](/de/local-llms/text-generation-webui-review) und [vLLM](/de/power-local-llm/vllm-explained) dokumentieren die Ausführung der Inferenz auf einer CPU.',
-          '**Multi-GPU und Multi-Node.** [candle-vllm](/de/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/de/power-local-llm/dynamo-review), [ExLlamaV2](/de/power-local-llm/exllamav2-explained), [exo](/de/power-local-llm/exo-review), [KServe](/de/power-local-llm/kserve-review), [LMDeploy](/de/power-local-llm/lmdeploy-review), [LocalAI](/de/power-local-llm/localai-explained), [LoRAX](/de/power-local-llm/lorax-review), [Lucebox](/de/power-local-llm/lucebox-review), [MLX-LM](/de/power-local-llm/mlx-lm-explained), [mlxcel](/de/power-local-llm/mlxcel-review), [oMLX](/de/power-local-llm/omlx-review), [SGLang](/de/power-local-llm/sglang-explained) und [vLLM](/de/power-local-llm/vllm-explained) dokumentieren Multi-GPU-, Tensor-Parallel- oder Multi-Node-Inferenz.',
-          '**Lizenz.** Die meisten Engines hier stehen unter Apache-2.0 (19 Werkzeuge) oder MIT (9); KoboldCpp und text-generation-webui stehen unter AGPL-3.0. Copyleft-Lizenzen knüpfen Bedingungen an die Weitergabe veränderter Versionen — siehe [KI-Tool-Lizenzen erklärt](/de/power-local-llm/ai-tool-licenses-explained).',
+          `**OpenAI-kompatible API.** ${compareToolsByAttr('run-serve', 'inference-engines', 'openaiApi', 'de')} dokumentieren eine OpenAI-kompatible HTTP-API, sodass für die OpenAI-API geschriebene Apps auf sie zeigen können.`,
+          `**NVIDIA-GPUs.** ${compareToolsByAttr('run-serve', 'inference-engines', 'nvidiaGpu', 'de')} dokumentieren die Unterstützung von NVIDIA-GPUs (CUDA).`,
+          `**Apple Silicon.** ${compareToolsByAttr('run-serve', 'inference-engines', 'appleSilicon', 'de')} dokumentieren die Unterstützung von Apple Silicon, Metal oder MLX.`,
+          `**AMD-GPUs.** ${compareToolsByAttr('run-serve', 'inference-engines', 'amdGpu', 'de')} dokumentieren die Unterstützung von AMD-GPUs.`,
+          `**CPU-Inferenz.** ${compareToolsByAttr('run-serve', 'inference-engines', 'cpuInference', 'de')} dokumentieren die Ausführung der Inferenz auf einer CPU.`,
+          `**Multi-GPU und Multi-Node.** ${compareToolsByAttr('run-serve', 'inference-engines', 'distributed', 'de')} dokumentieren Multi-GPU-, Tensor-Parallel- oder Multi-Node-Inferenz.`,
+          `**Lizenz.** Die meisten Engines hier stehen unter Apache-2.0 (${ENGINES.license['Apache-2.0'] ?? 0} Werkzeuge) oder MIT (${ENGINES.license['MIT'] ?? 0}); KoboldCpp und text-generation-webui stehen unter AGPL-3.0. Copyleft-Lizenzen knüpfen Bedingungen an die Weitergabe veränderter Versionen — siehe [KI-Tool-Lizenzen erklärt](/de/power-local-llm/ai-tool-licenses-explained).`,
         ],
       },
       runtimeDifferences: {
         id: 'runtime-differences',
         title: 'Runtimes und Manager: Die Unterschiede',
         items: [
-          '**OpenAI-kompatible API.** [Docker Model Runner](/de/power-local-llm/docker-model-runner-review), [Foundry Local](/de/power-local-llm/foundry-local-review), [GPUStack](/de/power-local-llm/gpustack-review), [Jan](/de/power-local-llm/jan-review), [Lemonade](/de/power-local-llm/lemonade-review), [Llama](/de/power-local-llm/llama-app-review) und [Osaurus](/de/power-local-llm/osaurus-ai-review) dokumentieren eine OpenAI-kompatible API.',
-          '**Desktop-App.** [GPT4All](/de/power-local-llm/gpt4all-review), [Jan](/de/power-local-llm/jan-review), [Llama](/de/power-local-llm/llama-app-review), [LM Studio](/de/power-local-llm/lm-studio-review), [Osaurus](/de/power-local-llm/osaurus-ai-review) und [Ypipe](/de/power-local-llm/ypipe-review) dokumentieren eine installierbare Desktop-App.',
-          '**Integrierte Modellbibliothek.** [Foundry Local](/de/power-local-llm/foundry-local-review), [GPUStack](/de/power-local-llm/gpustack-review), [Jan](/de/power-local-llm/jan-review), [Lemonade](/de/power-local-llm/lemonade-review), [Llama](/de/power-local-llm/llama-app-review), [LM Studio](/de/power-local-llm/lm-studio-review) und [Ollama](/de/power-local-llm/ollama-review) dokumentieren eine integrierte Möglichkeit, Modelle zu finden und herunterzuladen.',
-          '**Headless- oder Servermodus.** [DreamServer](/de/power-local-llm/dreamserver-review), [GPUStack](/de/power-local-llm/gpustack-review), [Lemonade](/de/power-local-llm/lemonade-review) und [Osaurus](/de/power-local-llm/osaurus-ai-review) dokumentieren den Betrieb als Hintergrunddienst oder Server ohne grafische Oberfläche.',
-          '**Lizenz und Preis.** Vier Runtimes hier stehen unter Apache-2.0 und fünf unter MIT. LM Studio und Docker Model Runner sind proprietär (LM Studio ist kostenlos nutzbar; Docker Model Runner ist in Docker Desktop enthalten), Msty ist Closed Source mit kostenloser Stufe, und RunAnywhere und YPipe verwenden eigene oder nicht dokumentierte Bedingungen — prüfen Sie den jeweiligen Test.',
+          `**OpenAI-kompatible API.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'openaiApi', 'de')} dokumentieren eine OpenAI-kompatible API.`,
+          `**Desktop-App.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'desktopApp', 'de')} dokumentieren eine installierbare Desktop-App.`,
+          `**Integrierte Modellbibliothek.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'modelLibrary', 'de')} dokumentieren eine integrierte Möglichkeit, Modelle zu finden und herunterzuladen.`,
+          `**Headless- oder Servermodus.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'headless', 'de')} dokumentieren den Betrieb als Hintergrunddienst oder Server ohne grafische Oberfläche.`,
+          `**Lizenz und Preis.** ${RUNTIMES.license['Apache-2.0'] ?? 0} Runtimes hier stehen unter Apache-2.0 und ${RUNTIMES.license['MIT'] ?? 0} unter MIT. LM Studio ist proprietär (kostenlos nutzbar), Docker Model Runner ist in Docker Desktop enthalten (die Lizenzbedingungen stehen in dessen Test), Msty ist Closed Source mit kostenloser Stufe, und RunAnywhere und YPipe verwenden eigene oder nicht dokumentierte Bedingungen — prüfen Sie den jeweiligen Test.`,
         ],
       },
       gatewayDifferences: {
         id: 'gateway-differences',
         title: 'Router und Gateways: Die Unterschiede',
         items: [
-          '**OpenAI-kompatibler Endpunkt.** [AIClient2API](/de/power-local-llm/aiclient2api-review) und [litellm](/de/power-local-llm/litellm-review) dokumentieren einen OpenAI-kompatiblen Endpunkt.',
+          `**OpenAI-kompatibler Endpunkt.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'openaiApi', 'de')} dokumentieren einen OpenAI-kompatiblen Endpunkt.`,
           '**Routing zu lokalen Modellen.** [litellm](/de/power-local-llm/litellm-review) dokumentiert lokale oder selbst gehostete Modelle (etwa Ollama) unter seinen unterstützten Anbietern.',
-          '**Fallback und Lastverteilung.** [AIClient2API](/de/power-local-llm/aiclient2api-review), [ClawRouter](/de/power-local-llm/clawrouter-review) und [litellm](/de/power-local-llm/litellm-review) dokumentieren Fallback, Wiederholungsversuche oder Lastverteilung über Modelle oder Anbieter hinweg.',
-          '**Lizenz.** Zwei der vier stehen unter MIT, eines unter GPL-3.0 und eines unter Apache-2.0.',
+          `**Fallback und Lastverteilung.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'fallback', 'de')} dokumentieren Fallback, Wiederholungsversuche oder Lastverteilung über Modelle oder Anbieter hinweg.`,
+          `**Lizenz.** ${RT.license['MIT'] ?? 0} der ${RT.count} stehen unter MIT, ${RT.license['GPL-3.0'] ?? 0} unter GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0} unter AGPL-3.0 und ${RT.license['Apache-2.0'] ?? 0} unter Apache-2.0; ${RT.license['Not stated'] ?? 0} nennt keine Lizenz.`,
         ],
       },
       limitations: {
@@ -437,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'de',
       datePublished: '2026-09-20',
-      dateModified: '2026-10-24',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -470,7 +475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-10-24',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -498,16 +503,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**Les ${RUN_SERVE_TOTAL} outils locaux d'exécution et de service du répertoire PromptQuorum se répartissent en trois types, à comparer séparément : les moteurs d'inférence (${RUN_SERVE_INFERENCE_ENGINES} outils), les runtimes et gestionnaires (${RUN_SERVE_RUNTIMES_MANAGERS}) et les routeurs et passerelles (${RUN_SERVE_ROUTERS_GATEWAYS}).** Parmi les moteurs, 15 documentent la prise en charge des GPU NVIDIA, 17 celle d'Apple Silicon et 21 une API compatible OpenAI ; parmi les runtimes, 6 documentent une API compatible OpenAI. Servez-vous du tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
+      `**Les ${RUN_SERVE_TOTAL} outils locaux d'exécution et de service du répertoire PromptQuorum se répartissent en trois types, à comparer séparément : les moteurs d'inférence (${RUN_SERVE_INFERENCE_ENGINES} outils), les runtimes et gestionnaires (${RUN_SERVE_RUNTIMES_MANAGERS}) et les routeurs et passerelles (${RUN_SERVE_ROUTERS_GATEWAYS}).** Parmi les moteurs, ${EA.nvidiaGpu} documentent la prise en charge des GPU NVIDIA, ${EA.appleSilicon} celle d'Apple Silicon et ${EA.openaiApi} une API compatible OpenAI ; parmi les runtimes, ${RA.openaiApi} documentent une API compatible OpenAI. Servez-vous du tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil d\'inférence local dois-je utiliser ?',
         answer:
           'Cela dépend du type d\'outil : comparez donc un seul type à la fois. Choisissez selon la contrainte qui compte le plus — le matériel dont vous disposez (NVIDIA, Apple Silicon, AMD ou CPU), une API compatible OpenAI, le passage à l\'échelle multi-GPU, une application de bureau ou un serveur sans interface — et appuyez-vous sur le tableau ci-dessous, généré à partir de la documentation officielle de chaque outil.',
         bullets: [
-          'Moteurs d\'inférence : 30 outils comparés sur la prise en charge matérielle (NVIDIA, Apple Silicon, AMD, CPU), l\'API compatible OpenAI et l\'inférence multi-GPU ou multi-nœuds.',
-          'Runtimes et gestionnaires : 13 outils comparés sur l\'API, l\'application de bureau, la bibliothèque de modèles intégrée et le mode sans interface.',
-          'Routeurs et passerelles : 4 outils comparés sur le point d\'accès compatible OpenAI, les modèles locaux et le basculement.',
+          `Moteurs d'inférence : ${SEG['inference-engines']} outils comparés sur la prise en charge matérielle (NVIDIA, Apple Silicon, AMD, CPU), l'API compatible OpenAI et l'inférence multi-GPU ou multi-nœuds.`,
+          `Runtimes et gestionnaires : ${SEG['runtimes-managers']} outils comparés sur l'API, l'application de bureau, la bibliothèque de modèles intégrée et le mode sans interface.`,
+          `Routeurs et passerelles : ${SEG['routers-gateways']} outils comparés sur le point d'accès compatible OpenAI, les modèles locaux et le basculement.`,
           'Un tiret (—) signifie que la documentation du projet ne l\'indique pas, et non que la fonctionnalité est absente.',
         ],
       },
@@ -539,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${RUN_SERVE_TOTAL} outils, trois types : moteurs d'inférence (${RUN_SERVE_INFERENCE_ENGINES}), runtimes et gestionnaires (${RUN_SERVE_RUNTIMES_MANAGERS}), routeurs et passerelles (${RUN_SERVE_ROUTERS_GATEWAYS}). Ollama apparaît dans deux groupes, car il est à la fois un moteur et un runtime.`,
+          `${RUN_SERVE_TOTAL} outils, trois types : moteurs d'inférence (${RUN_SERVE_INFERENCE_ENGINES}), runtimes et gestionnaires (${RUN_SERVE_RUNTIMES_MANAGERS}), routeurs et passerelles (${RUN_SERVE_ROUTERS_GATEWAYS}). Les outils qui sont à la fois un moteur et un runtime (${compareToolsInBothSegments('run-serve', 'inference-engines', 'runtimes-managers', 'fr')}) apparaissent dans les deux groupes.`,
           'Le tableau est généré à partir de la fiche de chaque outil et vérifié par rapport à son README ou à son site officiel ; un tiret signifie « non indiqué dans la documentation », jamais « non ». Pour certains outils très connus, la documentation citée ici est muette sur une fonctionnalité donnée, et leurs cellules affichent donc un tiret.',
           'Chaque nom d\'outil du tableau renvoie vers son propre avis PromptQuorum, où sont traités les étapes d\'installation et les limites.',
         ],
@@ -563,34 +568,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'engine-differences',
         title: 'Moteurs d\'inférence : ce qui les distingue',
         items: [
-          '**API compatible OpenAI.** [candle-vllm](/fr/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/fr/power-local-llm/dynamo-review), [exo](/fr/power-local-llm/exo-review), [KoboldCpp](/fr/power-local-llm/koboldcpp-review), [KServe](/fr/power-local-llm/kserve-review), [llama.cpp](/fr/power-local-llm/llama-cpp-explained), [LocalAI](/fr/power-local-llm/localai-explained), [LoRAX](/fr/power-local-llm/lorax-review), [Lucebox](/fr/power-local-llm/lucebox-review), [MLC LLM](/fr/power-local-llm/mlc-llm-explained), [mlx-serve](/fr/power-local-llm/mlx-serve-review), [mlxcel](/fr/power-local-llm/mlxcel-review), [OlliteRT](/fr/power-local-llm/ollitert-review), [oMLX](/fr/power-local-llm/omlx-review), [OpenLLM](/fr/power-local-llm/openllm-review), [Rapid-MLX](/fr/power-local-llm/rapid-mlx-review), [Shimmy](/fr/power-local-llm/shimmy-review), [SwiftLM](/fr/power-local-llm/swiftlm-review), [text-generation-webui](/fr/local-llms/text-generation-webui-review), [vllm-mlx](/fr/power-local-llm/vllm-mlx-review) et [vLLM](/fr/power-local-llm/vllm-explained) documentent une API HTTP compatible OpenAI, ce qui permet aux applications écrites pour l\'API d\'OpenAI de les utiliser comme cible.',
-          '**GPU NVIDIA.** [candle-vllm](/fr/power-local-llm/candle-vllm-review), [ExLlamaV2](/fr/power-local-llm/exllamav2-explained), [KoboldCpp](/fr/power-local-llm/koboldcpp-review), [llama.cpp](/fr/power-local-llm/llama-cpp-explained), [LMDeploy](/fr/power-local-llm/lmdeploy-review), [LocalAI](/fr/power-local-llm/localai-explained), [LoRAX](/fr/power-local-llm/lorax-review), [Lucebox](/fr/power-local-llm/lucebox-review), [MLC LLM](/fr/power-local-llm/mlc-llm-explained), [mlxcel](/fr/power-local-llm/mlxcel-review), [SGLang](/fr/power-local-llm/sglang-explained), [Shimmy](/fr/power-local-llm/shimmy-review), [TensorRT-LLM](/fr/power-local-llm/tensorrt-llm-explained), [text-generation-webui](/fr/local-llms/text-generation-webui-review) et [vLLM](/fr/power-local-llm/vllm-explained) documentent la prise en charge des GPU NVIDIA (CUDA).',
-          '**Apple Silicon.** [candle-vllm](/fr/power-local-llm/candle-vllm-review), [claude-code-local](/fr/power-local-llm/claude-code-local-review), [exo](/fr/power-local-llm/exo-review), [KoboldCpp](/fr/power-local-llm/koboldcpp-review), [llama.cpp](/fr/power-local-llm/llama-cpp-explained), [LocalAI](/fr/power-local-llm/localai-explained), [MLC LLM](/fr/power-local-llm/mlc-llm-explained), [MLX-LM](/fr/power-local-llm/mlx-lm-explained), [mlx-serve](/fr/power-local-llm/mlx-serve-review), [mlxcel](/fr/power-local-llm/mlxcel-review), [oMLX](/fr/power-local-llm/omlx-review), [Rapid-MLX](/fr/power-local-llm/rapid-mlx-review), [Shimmy](/fr/power-local-llm/shimmy-review), [SwiftLM](/fr/power-local-llm/swiftlm-review), [text-generation-webui](/fr/local-llms/text-generation-webui-review), [TurboFieldfare](/fr/power-local-llm/turbo-fieldfare-review) et [vllm-mlx](/fr/power-local-llm/vllm-mlx-review) documentent la prise en charge d\'Apple Silicon, de Metal ou de MLX.',
-          '**GPU AMD.** [KoboldCpp](/fr/power-local-llm/koboldcpp-review), [llama.cpp](/fr/power-local-llm/llama-cpp-explained), [LocalAI](/fr/power-local-llm/localai-explained), [Lucebox](/fr/power-local-llm/lucebox-review), [MLC LLM](/fr/power-local-llm/mlc-llm-explained), [SGLang](/fr/power-local-llm/sglang-explained), [Shimmy](/fr/power-local-llm/shimmy-review), [text-generation-webui](/fr/local-llms/text-generation-webui-review) et [vLLM](/fr/power-local-llm/vllm-explained) documentent la prise en charge des GPU AMD.',
-          '**Inférence sur CPU.** [exo](/fr/power-local-llm/exo-review), [KoboldCpp](/fr/power-local-llm/koboldcpp-review), [llama.cpp](/fr/power-local-llm/llama-cpp-explained), [LocalAI](/fr/power-local-llm/localai-explained), [OlliteRT](/fr/power-local-llm/ollitert-review), [SGLang](/fr/power-local-llm/sglang-explained), [text-generation-webui](/fr/local-llms/text-generation-webui-review) et [vLLM](/fr/power-local-llm/vllm-explained) documentent l\'exécution de l\'inférence sur un CPU.',
-          '**Multi-GPU et multi-nœuds.** [candle-vllm](/fr/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/fr/power-local-llm/dynamo-review), [ExLlamaV2](/fr/power-local-llm/exllamav2-explained), [exo](/fr/power-local-llm/exo-review), [KServe](/fr/power-local-llm/kserve-review), [LMDeploy](/fr/power-local-llm/lmdeploy-review), [LocalAI](/fr/power-local-llm/localai-explained), [LoRAX](/fr/power-local-llm/lorax-review), [Lucebox](/fr/power-local-llm/lucebox-review), [MLX-LM](/fr/power-local-llm/mlx-lm-explained), [mlxcel](/fr/power-local-llm/mlxcel-review), [oMLX](/fr/power-local-llm/omlx-review), [SGLang](/fr/power-local-llm/sglang-explained) et [vLLM](/fr/power-local-llm/vllm-explained) documentent l\'inférence multi-GPU, en parallélisme tensoriel ou multi-nœuds.',
-          '**Licence.** La plupart des moteurs présentés ici sont sous Apache-2.0 (19 outils) ou MIT (9) ; KoboldCpp et text-generation-webui sont sous AGPL-3.0. Les licences copyleft soumettent la distribution de versions modifiées à des conditions — voir [Les licences des outils d\'IA expliquées](/fr/power-local-llm/ai-tool-licenses-explained).',
+          `**API compatible OpenAI.** ${compareToolsByAttr('run-serve', 'inference-engines', 'openaiApi', 'fr')} documentent une API HTTP compatible OpenAI, ce qui permet aux applications écrites pour l'API d'OpenAI de les utiliser comme cible.`,
+          `**GPU NVIDIA.** ${compareToolsByAttr('run-serve', 'inference-engines', 'nvidiaGpu', 'fr')} documentent la prise en charge des GPU NVIDIA (CUDA).`,
+          `**Apple Silicon.** ${compareToolsByAttr('run-serve', 'inference-engines', 'appleSilicon', 'fr')} documentent la prise en charge d'Apple Silicon, de Metal ou de MLX.`,
+          `**GPU AMD.** ${compareToolsByAttr('run-serve', 'inference-engines', 'amdGpu', 'fr')} documentent la prise en charge des GPU AMD.`,
+          `**Inférence sur CPU.** ${compareToolsByAttr('run-serve', 'inference-engines', 'cpuInference', 'fr')} documentent l'exécution de l'inférence sur un CPU.`,
+          `**Multi-GPU et multi-nœuds.** ${compareToolsByAttr('run-serve', 'inference-engines', 'distributed', 'fr')} documentent l'inférence multi-GPU, en parallélisme tensoriel ou multi-nœuds.`,
+          `**Licence.** La plupart des moteurs présentés ici sont sous Apache-2.0 (${ENGINES.license['Apache-2.0'] ?? 0} outils) ou MIT (${ENGINES.license['MIT'] ?? 0}) ; KoboldCpp et text-generation-webui sont sous AGPL-3.0. Les licences copyleft soumettent la distribution de versions modifiées à des conditions — voir [Les licences des outils d'IA expliquées](/fr/power-local-llm/ai-tool-licenses-explained).`,
         ],
       },
       runtimeDifferences: {
         id: 'runtime-differences',
         title: 'Runtimes et gestionnaires : ce qui les distingue',
         items: [
-          '**API compatible OpenAI.** [Docker Model Runner](/fr/power-local-llm/docker-model-runner-review), [Foundry Local](/fr/power-local-llm/foundry-local-review), [GPUStack](/fr/power-local-llm/gpustack-review), [Jan](/fr/power-local-llm/jan-review), [Lemonade](/fr/power-local-llm/lemonade-review), [Llama](/fr/power-local-llm/llama-app-review) et [Osaurus](/fr/power-local-llm/osaurus-ai-review) documentent une API compatible OpenAI.',
-          '**Application de bureau.** [GPT4All](/fr/power-local-llm/gpt4all-review), [Jan](/fr/power-local-llm/jan-review), [Llama](/fr/power-local-llm/llama-app-review), [LM Studio](/fr/power-local-llm/lm-studio-review), [Osaurus](/fr/power-local-llm/osaurus-ai-review) et [Ypipe](/fr/power-local-llm/ypipe-review) documentent une application de bureau installable.',
-          '**Bibliothèque de modèles intégrée.** [Foundry Local](/fr/power-local-llm/foundry-local-review), [GPUStack](/fr/power-local-llm/gpustack-review), [Jan](/fr/power-local-llm/jan-review), [Lemonade](/fr/power-local-llm/lemonade-review), [Llama](/fr/power-local-llm/llama-app-review), [LM Studio](/fr/power-local-llm/lm-studio-review) et [Ollama](/fr/power-local-llm/ollama-review) documentent un moyen intégré de trouver et de télécharger des modèles.',
-          '**Mode sans interface ou serveur.** [DreamServer](/fr/power-local-llm/dreamserver-review), [GPUStack](/fr/power-local-llm/gpustack-review), [Lemonade](/fr/power-local-llm/lemonade-review) et [Osaurus](/fr/power-local-llm/osaurus-ai-review) documentent un fonctionnement en service d\'arrière-plan ou en serveur, sans interface graphique.',
-          '**Licence et prix.** Quatre des runtimes présentés ici sont sous Apache-2.0 et cinq sous MIT. LM Studio et Docker Model Runner sont propriétaires (LM Studio est gratuit à l\'usage ; Docker Model Runner est fourni avec Docker Desktop), Msty est à code fermé avec une offre gratuite, et RunAnywhere et YPipe appliquent leurs propres conditions ou des conditions non documentées — consultez chaque avis.',
+          `**API compatible OpenAI.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'openaiApi', 'fr')} documentent une API compatible OpenAI.`,
+          `**Application de bureau.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'desktopApp', 'fr')} documentent une application de bureau installable.`,
+          `**Bibliothèque de modèles intégrée.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'modelLibrary', 'fr')} documentent un moyen intégré de trouver et de télécharger des modèles.`,
+          `**Mode sans interface ou serveur.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'headless', 'fr')} documentent un fonctionnement en service d'arrière-plan ou en serveur, sans interface graphique.`,
+          `**Licence et prix.** ${RUNTIMES.license['Apache-2.0'] ?? 0} des runtimes présentés ici sont sous Apache-2.0 et ${RUNTIMES.license['MIT'] ?? 0} sous MIT. LM Studio est propriétaire (gratuit à l'usage), Docker Model Runner est fourni avec Docker Desktop (les conditions de licence figurent dans son avis), Msty est à code fermé avec une offre gratuite, et RunAnywhere et YPipe appliquent leurs propres conditions ou des conditions non documentées — consultez chaque avis.`,
         ],
       },
       gatewayDifferences: {
         id: 'gateway-differences',
         title: 'Routeurs et passerelles : ce qui les distingue',
         items: [
-          '**Point d\'accès compatible OpenAI.** [AIClient2API](/fr/power-local-llm/aiclient2api-review) et [litellm](/fr/power-local-llm/litellm-review) documentent un point d\'accès compatible OpenAI.',
+          `**Point d'accès compatible OpenAI.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'openaiApi', 'fr')} documentent un point d'accès compatible OpenAI.`,
           '**Routage vers des modèles locaux.** [litellm](/fr/power-local-llm/litellm-review) documente les modèles locaux ou auto-hébergés (comme Ollama) parmi les fournisseurs qu\'il prend en charge.',
-          '**Basculement et répartition de charge.** [AIClient2API](/fr/power-local-llm/aiclient2api-review), [ClawRouter](/fr/power-local-llm/clawrouter-review) et [litellm](/fr/power-local-llm/litellm-review) documentent le basculement, les nouvelles tentatives ou la répartition de charge entre modèles ou fournisseurs.',
-          '**Licence.** Deux des quatre sont sous MIT, un sous GPL-3.0 et un sous Apache-2.0.',
+          `**Basculement et répartition de charge.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'fallback', 'fr')} documentent le basculement, les nouvelles tentatives ou la répartition de charge entre modèles ou fournisseurs.`,
+          `**Licence.** ${RT.license['MIT'] ?? 0} des ${RT.count} sont sous MIT, ${RT.license['GPL-3.0'] ?? 0} sous GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0} sous AGPL-3.0 et ${RT.license['Apache-2.0'] ?? 0} sous Apache-2.0 ; ${RT.license['Not stated'] ?? 0} n'indique pas sa licence.`,
         ],
       },
       limitations: {
@@ -657,7 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-20',
-      dateModified: '2026-10-24',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -690,7 +695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-10-24',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -718,16 +723,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**Las ${RUN_SERVE_TOTAL} herramientas locales de ejecución y servicio del directorio de PromptQuorum se dividen en tres tipos que conviene comparar por separado: motores de inferencia (${RUN_SERVE_INFERENCE_ENGINES} herramientas), runtimes y gestores (${RUN_SERVE_RUNTIMES_MANAGERS}) y routers y gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Entre los motores, 15 documentan soporte para GPU NVIDIA, 17 documentan soporte para Apple Silicon y 21 documentan una API compatible con OpenAI; entre los runtimes, 6 documentan una API compatible con OpenAI. Usa la tabla comparativa de más abajo y lee el análisis de cada herramienta antes de instalarla.`,
+      `**Las ${RUN_SERVE_TOTAL} herramientas locales de ejecución y servicio del directorio de PromptQuorum se dividen en tres tipos que conviene comparar por separado: motores de inferencia (${RUN_SERVE_INFERENCE_ENGINES} herramientas), runtimes y gestores (${RUN_SERVE_RUNTIMES_MANAGERS}) y routers y gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Entre los motores, ${EA.nvidiaGpu} documentan soporte para GPU NVIDIA, ${EA.appleSilicon} documentan soporte para Apple Silicon y ${EA.openaiApi} documentan una API compatible con OpenAI; entre los runtimes, ${RA.openaiApi} documentan una API compatible con OpenAI. Usa la tabla comparativa de más abajo y lee el análisis de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta de inferencia local debería usar?',
         answer:
           'Depende del tipo de herramienta, así que compara dentro de un mismo tipo cada vez. Elige según la restricción que más importe — el hardware que tienes (NVIDIA, Apple Silicon, AMD o CPU), una API compatible con OpenAI, el escalado multi-GPU, una aplicación de escritorio o un servidor sin interfaz — y usa la tabla de más abajo, generada a partir de la documentación oficial de cada herramienta.',
         bullets: [
-          'Motores de inferencia: 30 herramientas comparadas por soporte de hardware (NVIDIA, Apple Silicon, AMD, CPU), API compatible con OpenAI e inferencia multi-GPU o multinodo.',
-          'Runtimes y gestores: 13 herramientas comparadas por API, aplicación de escritorio, biblioteca de modelos integrada y modo sin interfaz.',
-          'Routers y gateways: 4 herramientas comparadas por endpoint compatible con OpenAI, modelos locales y respaldo (fallback).',
+          `Motores de inferencia: ${SEG['inference-engines']} herramientas comparadas por soporte de hardware (NVIDIA, Apple Silicon, AMD, CPU), API compatible con OpenAI e inferencia multi-GPU o multinodo.`,
+          `Runtimes y gestores: ${SEG['runtimes-managers']} herramientas comparadas por API, aplicación de escritorio, biblioteca de modelos integrada y modo sin interfaz.`,
+          `Routers y gateways: ${SEG['routers-gateways']} herramientas comparadas por endpoint compatible con OpenAI, modelos locales y respaldo (fallback).`,
           'Un guion (—) significa que la documentación del proyecto no lo indica, no que la función no exista.',
         ],
       },
@@ -759,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${RUN_SERVE_TOTAL} herramientas, tres tipos: motores de inferencia (${RUN_SERVE_INFERENCE_ENGINES}), runtimes y gestores (${RUN_SERVE_RUNTIMES_MANAGERS}), routers y gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). Ollama aparece en dos grupos porque es a la vez un motor y un runtime.`,
+          `${RUN_SERVE_TOTAL} herramientas, tres tipos: motores de inferencia (${RUN_SERVE_INFERENCE_ENGINES}), runtimes y gestores (${RUN_SERVE_RUNTIMES_MANAGERS}), routers y gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). Las herramientas que son a la vez motor y runtime (${compareToolsInBothSegments('run-serve', 'inference-engines', 'runtimes-managers', 'es')}) aparecen en ambos grupos.`,
           'La tabla se genera a partir del registro de cada herramienta y se contrasta con su README o sitio oficial; un guion significa "no indicado en la documentación", nunca "no". En algunas herramientas conocidas, la documentación citada aquí no dice nada sobre una función concreta, por lo que sus celdas muestran un guion.',
           'Cada nombre de herramienta de la tabla enlaza con su propio análisis en PromptQuorum, donde se explican los pasos de instalación y los límites.',
         ],
@@ -783,34 +788,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'engine-differences',
         title: 'Motores de inferencia: en qué se diferencian',
         items: [
-          '**API compatible con OpenAI.** [candle-vllm](/es/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/es/power-local-llm/dynamo-review), [exo](/es/power-local-llm/exo-review), [KoboldCpp](/es/power-local-llm/koboldcpp-review), [KServe](/es/power-local-llm/kserve-review), [llama.cpp](/es/power-local-llm/llama-cpp-explained), [LocalAI](/es/power-local-llm/localai-explained), [LoRAX](/es/power-local-llm/lorax-review), [Lucebox](/es/power-local-llm/lucebox-review), [MLC LLM](/es/power-local-llm/mlc-llm-explained), [mlx-serve](/es/power-local-llm/mlx-serve-review), [mlxcel](/es/power-local-llm/mlxcel-review), [OlliteRT](/es/power-local-llm/ollitert-review), [oMLX](/es/power-local-llm/omlx-review), [OpenLLM](/es/power-local-llm/openllm-review), [Rapid-MLX](/es/power-local-llm/rapid-mlx-review), [Shimmy](/es/power-local-llm/shimmy-review), [SwiftLM](/es/power-local-llm/swiftlm-review), [text-generation-webui](/es/local-llms/text-generation-webui-review), [vllm-mlx](/es/power-local-llm/vllm-mlx-review) y [vLLM](/es/power-local-llm/vllm-explained) documentan una API HTTP compatible con OpenAI, de modo que las aplicaciones escritas para la API de OpenAI pueden apuntar a ellos.',
-          '**GPU NVIDIA.** [candle-vllm](/es/power-local-llm/candle-vllm-review), [ExLlamaV2](/es/power-local-llm/exllamav2-explained), [KoboldCpp](/es/power-local-llm/koboldcpp-review), [llama.cpp](/es/power-local-llm/llama-cpp-explained), [LMDeploy](/es/power-local-llm/lmdeploy-review), [LocalAI](/es/power-local-llm/localai-explained), [LoRAX](/es/power-local-llm/lorax-review), [Lucebox](/es/power-local-llm/lucebox-review), [MLC LLM](/es/power-local-llm/mlc-llm-explained), [mlxcel](/es/power-local-llm/mlxcel-review), [SGLang](/es/power-local-llm/sglang-explained), [Shimmy](/es/power-local-llm/shimmy-review), [TensorRT-LLM](/es/power-local-llm/tensorrt-llm-explained), [text-generation-webui](/es/local-llms/text-generation-webui-review) y [vLLM](/es/power-local-llm/vllm-explained) documentan soporte para GPU NVIDIA (CUDA).',
-          '**Apple Silicon.** [candle-vllm](/es/power-local-llm/candle-vllm-review), [claude-code-local](/es/power-local-llm/claude-code-local-review), [exo](/es/power-local-llm/exo-review), [KoboldCpp](/es/power-local-llm/koboldcpp-review), [llama.cpp](/es/power-local-llm/llama-cpp-explained), [LocalAI](/es/power-local-llm/localai-explained), [MLC LLM](/es/power-local-llm/mlc-llm-explained), [MLX-LM](/es/power-local-llm/mlx-lm-explained), [mlx-serve](/es/power-local-llm/mlx-serve-review), [mlxcel](/es/power-local-llm/mlxcel-review), [oMLX](/es/power-local-llm/omlx-review), [Rapid-MLX](/es/power-local-llm/rapid-mlx-review), [Shimmy](/es/power-local-llm/shimmy-review), [SwiftLM](/es/power-local-llm/swiftlm-review), [text-generation-webui](/es/local-llms/text-generation-webui-review), [TurboFieldfare](/es/power-local-llm/turbo-fieldfare-review) y [vllm-mlx](/es/power-local-llm/vllm-mlx-review) documentan soporte para Apple Silicon, Metal o MLX.',
-          '**GPU AMD.** [KoboldCpp](/es/power-local-llm/koboldcpp-review), [llama.cpp](/es/power-local-llm/llama-cpp-explained), [LocalAI](/es/power-local-llm/localai-explained), [Lucebox](/es/power-local-llm/lucebox-review), [MLC LLM](/es/power-local-llm/mlc-llm-explained), [SGLang](/es/power-local-llm/sglang-explained), [Shimmy](/es/power-local-llm/shimmy-review), [text-generation-webui](/es/local-llms/text-generation-webui-review) y [vLLM](/es/power-local-llm/vllm-explained) documentan soporte para GPU AMD.',
-          '**Inferencia en CPU.** [exo](/es/power-local-llm/exo-review), [KoboldCpp](/es/power-local-llm/koboldcpp-review), [llama.cpp](/es/power-local-llm/llama-cpp-explained), [LocalAI](/es/power-local-llm/localai-explained), [OlliteRT](/es/power-local-llm/ollitert-review), [SGLang](/es/power-local-llm/sglang-explained), [text-generation-webui](/es/local-llms/text-generation-webui-review) y [vLLM](/es/power-local-llm/vllm-explained) documentan la ejecución de inferencia en una CPU.',
-          '**Multi-GPU y multinodo.** [candle-vllm](/es/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/es/power-local-llm/dynamo-review), [ExLlamaV2](/es/power-local-llm/exllamav2-explained), [exo](/es/power-local-llm/exo-review), [KServe](/es/power-local-llm/kserve-review), [LMDeploy](/es/power-local-llm/lmdeploy-review), [LocalAI](/es/power-local-llm/localai-explained), [LoRAX](/es/power-local-llm/lorax-review), [Lucebox](/es/power-local-llm/lucebox-review), [MLX-LM](/es/power-local-llm/mlx-lm-explained), [mlxcel](/es/power-local-llm/mlxcel-review), [oMLX](/es/power-local-llm/omlx-review), [SGLang](/es/power-local-llm/sglang-explained) y [vLLM](/es/power-local-llm/vllm-explained) documentan inferencia multi-GPU, con paralelismo tensorial o multinodo.',
-          '**Licencia.** La mayoría de los motores aquí son Apache-2.0 (19 herramientas) o MIT (9); KoboldCpp y text-generation-webui usan AGPL-3.0. Las licencias copyleft imponen condiciones a la distribución de versiones modificadas — consulta [Licencias de herramientas de IA explicadas](/es/power-local-llm/ai-tool-licenses-explained).',
+          `**API compatible con OpenAI.** ${compareToolsByAttr('run-serve', 'inference-engines', 'openaiApi', 'es')} documentan una API HTTP compatible con OpenAI, de modo que las aplicaciones escritas para la API de OpenAI pueden apuntar a ellos.`,
+          `**GPU NVIDIA.** ${compareToolsByAttr('run-serve', 'inference-engines', 'nvidiaGpu', 'es')} documentan soporte para GPU NVIDIA (CUDA).`,
+          `**Apple Silicon.** ${compareToolsByAttr('run-serve', 'inference-engines', 'appleSilicon', 'es')} documentan soporte para Apple Silicon, Metal o MLX.`,
+          `**GPU AMD.** ${compareToolsByAttr('run-serve', 'inference-engines', 'amdGpu', 'es')} documentan soporte para GPU AMD.`,
+          `**Inferencia en CPU.** ${compareToolsByAttr('run-serve', 'inference-engines', 'cpuInference', 'es')} documentan la ejecución de inferencia en una CPU.`,
+          `**Multi-GPU y multinodo.** ${compareToolsByAttr('run-serve', 'inference-engines', 'distributed', 'es')} documentan inferencia multi-GPU, con paralelismo tensorial o multinodo.`,
+          `**Licencia.** La mayoría de los motores aquí son Apache-2.0 (${ENGINES.license['Apache-2.0'] ?? 0} herramientas) o MIT (${ENGINES.license['MIT'] ?? 0}); KoboldCpp y text-generation-webui usan AGPL-3.0. Las licencias copyleft imponen condiciones a la distribución de versiones modificadas — consulta [Licencias de herramientas de IA explicadas](/es/power-local-llm/ai-tool-licenses-explained).`,
         ],
       },
       runtimeDifferences: {
         id: 'runtime-differences',
         title: 'Runtimes y gestores: en qué se diferencian',
         items: [
-          '**API compatible con OpenAI.** [Docker Model Runner](/es/power-local-llm/docker-model-runner-review), [Foundry Local](/es/power-local-llm/foundry-local-review), [GPUStack](/es/power-local-llm/gpustack-review), [Jan](/es/power-local-llm/jan-review), [Lemonade](/es/power-local-llm/lemonade-review), [Llama](/es/power-local-llm/llama-app-review) y [Osaurus](/es/power-local-llm/osaurus-ai-review) documentan una API compatible con OpenAI.',
-          '**Aplicación de escritorio.** [GPT4All](/es/power-local-llm/gpt4all-review), [Jan](/es/power-local-llm/jan-review), [Llama](/es/power-local-llm/llama-app-review), [LM Studio](/es/power-local-llm/lm-studio-review), [Osaurus](/es/power-local-llm/osaurus-ai-review) y [Ypipe](/es/power-local-llm/ypipe-review) documentan una aplicación de escritorio instalable.',
-          '**Biblioteca de modelos integrada.** [Foundry Local](/es/power-local-llm/foundry-local-review), [GPUStack](/es/power-local-llm/gpustack-review), [Jan](/es/power-local-llm/jan-review), [Lemonade](/es/power-local-llm/lemonade-review), [Llama](/es/power-local-llm/llama-app-review), [LM Studio](/es/power-local-llm/lm-studio-review) y [Ollama](/es/power-local-llm/ollama-review) documentan una forma integrada de buscar y descargar modelos.',
-          '**Modo sin interfaz o servidor.** [DreamServer](/es/power-local-llm/dreamserver-review), [GPUStack](/es/power-local-llm/gpustack-review), [Lemonade](/es/power-local-llm/lemonade-review) y [Osaurus](/es/power-local-llm/osaurus-ai-review) documentan la ejecución como servicio en segundo plano o servidor sin la interfaz gráfica.',
-          '**Licencia y precio.** Cuatro runtimes aquí son Apache-2.0 y cinco son MIT. LM Studio y Docker Model Runner son propietarios (LM Studio es de uso gratuito; Docker Model Runner viene incluido con Docker Desktop), Msty es de código cerrado con un nivel gratuito, y RunAnywhere y YPipe usan términos propios o no documentados — consulta cada análisis.',
+          `**API compatible con OpenAI.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'openaiApi', 'es')} documentan una API compatible con OpenAI.`,
+          `**Aplicación de escritorio.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'desktopApp', 'es')} documentan una aplicación de escritorio instalable.`,
+          `**Biblioteca de modelos integrada.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'modelLibrary', 'es')} documentan una forma integrada de buscar y descargar modelos.`,
+          `**Modo sin interfaz o servidor.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'headless', 'es')} documentan la ejecución como servicio en segundo plano o servidor sin la interfaz gráfica.`,
+          `**Licencia y precio.** ${RUNTIMES.license['Apache-2.0'] ?? 0} runtimes aquí son Apache-2.0 y ${RUNTIMES.license['MIT'] ?? 0} son MIT. LM Studio es propietario (de uso gratuito), Docker Model Runner viene incluido con Docker Desktop (las condiciones de licencia están en su análisis), Msty es de código cerrado con un nivel gratuito, y RunAnywhere y YPipe usan términos propios o no documentados — consulta cada análisis.`,
         ],
       },
       gatewayDifferences: {
         id: 'gateway-differences',
         title: 'Routers y gateways: en qué se diferencian',
         items: [
-          '**Endpoint compatible con OpenAI.** [AIClient2API](/es/power-local-llm/aiclient2api-review) y [litellm](/es/power-local-llm/litellm-review) documentan un endpoint compatible con OpenAI.',
+          `**Endpoint compatible con OpenAI.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'openaiApi', 'es')} documentan un endpoint compatible con OpenAI.`,
           '**Enrutamiento a modelos locales.** [litellm](/es/power-local-llm/litellm-review) documenta modelos locales o autoalojados (como Ollama) entre sus proveedores compatibles.',
-          '**Respaldo (fallback) y balanceo de carga.** [AIClient2API](/es/power-local-llm/aiclient2api-review), [ClawRouter](/es/power-local-llm/clawrouter-review) y [litellm](/es/power-local-llm/litellm-review) documentan respaldo, reintentos o balanceo de carga entre modelos o proveedores.',
-          '**Licencia.** Dos de las cuatro son MIT, una es GPL-3.0 y una es Apache-2.0.',
+          `**Respaldo (fallback) y balanceo de carga.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'fallback', 'es')} documentan respaldo, reintentos o balanceo de carga entre modelos o proveedores.`,
+          `**Licencia.** ${RT.license['MIT'] ?? 0} de las ${RT.count} son MIT, ${RT.license['GPL-3.0'] ?? 0} es GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0} es AGPL-3.0 y ${RT.license['Apache-2.0'] ?? 0} es Apache-2.0; ${RT.license['Not stated'] ?? 0} no indica su licencia.`,
         ],
       },
       limitations: {
@@ -877,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'es',
       datePublished: '2026-09-20',
-      dateModified: '2026-10-24',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -910,7 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-10-24',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -938,16 +943,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**PromptQuorumディレクトリにあるローカル実行・サーブ系の${RUN_SERVE_TOTAL}ツールは、別々に比較すべき3種類に分かれます。推論エンジン(${RUN_SERVE_INFERENCE_ENGINES}ツール)、ランタイム・マネージャー(${RUN_SERVE_RUNTIMES_MANAGERS}ツール)、ルーター・ゲートウェイ(${RUN_SERVE_ROUTERS_GATEWAYS}ツール)です。** エンジンのうち、15ツールがNVIDIA GPU対応を、17ツールがApple Silicon対応を、21ツールがOpenAI互換APIを文書化しています。ランタイムでは6ツールがOpenAI互換APIを文書化しています。下の比較表を使い、インストールする前に各ツールのレビューも読んでください。`,
+      `**PromptQuorumディレクトリにあるローカル実行・サーブ系の${RUN_SERVE_TOTAL}ツールは、別々に比較すべき3種類に分かれます。推論エンジン(${RUN_SERVE_INFERENCE_ENGINES}ツール)、ランタイム・マネージャー(${RUN_SERVE_RUNTIMES_MANAGERS}ツール)、ルーター・ゲートウェイ(${RUN_SERVE_ROUTERS_GATEWAYS}ツール)です。** エンジンのうち、${EA.nvidiaGpu}ツールがNVIDIA GPU対応を、${EA.appleSilicon}ツールがApple Silicon対応を、${EA.openaiApi}ツールがOpenAI互換APIを文書化しています。ランタイムでは${RA.openaiApi}ツールがOpenAI互換APIを文書化しています。下の比較表を使い、インストールする前に各ツールのレビューも読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカル推論ツールを使えばよいですか?',
         answer:
           'ツールの種類によって異なるため、一度に一つの種類の中で比較してください。最も重要な条件(お持ちのハードウェア(NVIDIA、Apple Silicon、AMD、CPU)、OpenAI互換API、マルチGPUへのスケーリング、デスクトップアプリかヘッドレスサーバーか)で選び、各ツールの公式ドキュメントから生成した下の表を使ってください。',
         bullets: [
-          '推論エンジン:30ツールを、ハードウェア対応(NVIDIA、Apple Silicon、AMD、CPU)、OpenAI互換API、マルチGPU・マルチノード推論で比較。',
-          'ランタイム・マネージャー:13ツールを、API、デスクトップアプリ、内蔵モデルライブラリ、ヘッドレスモードで比較。',
-          'ルーター・ゲートウェイ:4ツールを、OpenAI互換エンドポイント、ローカルモデル、フォールバックで比較。',
+          `推論エンジン:${SEG['inference-engines']}ツールを、ハードウェア対応(NVIDIA、Apple Silicon、AMD、CPU)、OpenAI互換API、マルチGPU・マルチノード推論で比較。`,
+          `ランタイム・マネージャー:${SEG['runtimes-managers']}ツールを、API、デスクトップアプリ、内蔵モデルライブラリ、ヘッドレスモードで比較。`,
+          `ルーター・ゲートウェイ:${SEG['routers-gateways']}ツールを、OpenAI互換エンドポイント、ローカルモデル、フォールバックで比較。`,
           'ダッシュ(—)は、プロジェクトのドキュメントに記載がないことを意味し、その機能がないという意味ではありません。',
         ],
       },
@@ -979,7 +984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${RUN_SERVE_TOTAL}ツール、3種類:推論エンジン(${RUN_SERVE_INFERENCE_ENGINES})、ランタイム・マネージャー(${RUN_SERVE_RUNTIMES_MANAGERS})、ルーター・ゲートウェイ(${RUN_SERVE_ROUTERS_GATEWAYS})。Ollamaはエンジンでもありランタイムでもあるため、2つのグループに登場します。`,
+          `${RUN_SERVE_TOTAL}ツール、3種類:推論エンジン(${RUN_SERVE_INFERENCE_ENGINES})、ランタイム・マネージャー(${RUN_SERVE_RUNTIMES_MANAGERS})、ルーター・ゲートウェイ(${RUN_SERVE_ROUTERS_GATEWAYS})。エンジンでもありランタイムでもあるツール(${compareToolsInBothSegments('run-serve', 'inference-engines', 'runtimes-managers', 'ja')})は、両方のグループに登場します。`,
           '表は各ツールのレコードから生成され、公式のREADMEまたはサイトと照合しています。ダッシュは「ドキュメントに記載なし」の意味であり、「非対応」ではありません。よく知られた一部のツールでは、ここで参照したドキュメントが特定の機能に触れていないため、該当セルはダッシュになっています。',
           '表の各ツール名は、そのツール専用のPromptQuorumレビューにリンクしています。インストール手順や制約はそちらで扱っています。',
         ],
@@ -1003,34 +1008,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'engine-differences',
         title: '推論エンジン:違いはどこにあるか',
         items: [
-          '**OpenAI互換API。** [candle-vllm](/ja/power-local-llm/candle-vllm-review)、[NVIDIA Dynamo](/ja/power-local-llm/dynamo-review)、[exo](/ja/power-local-llm/exo-review)、[KoboldCpp](/ja/power-local-llm/koboldcpp-review)、[KServe](/ja/power-local-llm/kserve-review)、[llama.cpp](/ja/power-local-llm/llama-cpp-explained)、[LocalAI](/ja/power-local-llm/localai-explained)、[LoRAX](/ja/power-local-llm/lorax-review)、[Lucebox](/ja/power-local-llm/lucebox-review)、[MLC LLM](/ja/power-local-llm/mlc-llm-explained)、[mlx-serve](/ja/power-local-llm/mlx-serve-review)、[mlxcel](/ja/power-local-llm/mlxcel-review)、[OlliteRT](/ja/power-local-llm/ollitert-review)、[oMLX](/ja/power-local-llm/omlx-review)、[OpenLLM](/ja/power-local-llm/openllm-review)、[Rapid-MLX](/ja/power-local-llm/rapid-mlx-review)、[Shimmy](/ja/power-local-llm/shimmy-review)、[SwiftLM](/ja/power-local-llm/swiftlm-review)、[text-generation-webui](/ja/local-llms/text-generation-webui-review)、[vllm-mlx](/ja/power-local-llm/vllm-mlx-review)、[vLLM](/ja/power-local-llm/vllm-explained)は、OpenAI互換のHTTP APIを文書化しています。そのため、OpenAI API向けに書かれたアプリをこれらに向けることができます。',
-          '**NVIDIA GPU。** [candle-vllm](/ja/power-local-llm/candle-vllm-review)、[ExLlamaV2](/ja/power-local-llm/exllamav2-explained)、[KoboldCpp](/ja/power-local-llm/koboldcpp-review)、[llama.cpp](/ja/power-local-llm/llama-cpp-explained)、[LMDeploy](/ja/power-local-llm/lmdeploy-review)、[LocalAI](/ja/power-local-llm/localai-explained)、[LoRAX](/ja/power-local-llm/lorax-review)、[Lucebox](/ja/power-local-llm/lucebox-review)、[MLC LLM](/ja/power-local-llm/mlc-llm-explained)、[mlxcel](/ja/power-local-llm/mlxcel-review)、[SGLang](/ja/power-local-llm/sglang-explained)、[Shimmy](/ja/power-local-llm/shimmy-review)、[TensorRT-LLM](/ja/power-local-llm/tensorrt-llm-explained)、[text-generation-webui](/ja/local-llms/text-generation-webui-review)、[vLLM](/ja/power-local-llm/vllm-explained)は、NVIDIA GPU(CUDA)対応を文書化しています。',
-          '**Apple Silicon。** [candle-vllm](/ja/power-local-llm/candle-vllm-review)、[claude-code-local](/ja/power-local-llm/claude-code-local-review)、[exo](/ja/power-local-llm/exo-review)、[KoboldCpp](/ja/power-local-llm/koboldcpp-review)、[llama.cpp](/ja/power-local-llm/llama-cpp-explained)、[LocalAI](/ja/power-local-llm/localai-explained)、[MLC LLM](/ja/power-local-llm/mlc-llm-explained)、[MLX-LM](/ja/power-local-llm/mlx-lm-explained)、[mlx-serve](/ja/power-local-llm/mlx-serve-review)、[mlxcel](/ja/power-local-llm/mlxcel-review)、[oMLX](/ja/power-local-llm/omlx-review)、[Rapid-MLX](/ja/power-local-llm/rapid-mlx-review)、[Shimmy](/ja/power-local-llm/shimmy-review)、[SwiftLM](/ja/power-local-llm/swiftlm-review)、[text-generation-webui](/ja/local-llms/text-generation-webui-review)、[TurboFieldfare](/ja/power-local-llm/turbo-fieldfare-review)、[vllm-mlx](/ja/power-local-llm/vllm-mlx-review)は、Apple Silicon、MetalまたはMLXへの対応を文書化しています。',
-          '**AMD GPU。** [KoboldCpp](/ja/power-local-llm/koboldcpp-review)、[llama.cpp](/ja/power-local-llm/llama-cpp-explained)、[LocalAI](/ja/power-local-llm/localai-explained)、[Lucebox](/ja/power-local-llm/lucebox-review)、[MLC LLM](/ja/power-local-llm/mlc-llm-explained)、[SGLang](/ja/power-local-llm/sglang-explained)、[Shimmy](/ja/power-local-llm/shimmy-review)、[text-generation-webui](/ja/local-llms/text-generation-webui-review)、[vLLM](/ja/power-local-llm/vllm-explained)は、AMD GPU対応を文書化しています。',
-          '**CPU推論。** [exo](/ja/power-local-llm/exo-review)、[KoboldCpp](/ja/power-local-llm/koboldcpp-review)、[llama.cpp](/ja/power-local-llm/llama-cpp-explained)、[LocalAI](/ja/power-local-llm/localai-explained)、[OlliteRT](/ja/power-local-llm/ollitert-review)、[SGLang](/ja/power-local-llm/sglang-explained)、[text-generation-webui](/ja/local-llms/text-generation-webui-review)、[vLLM](/ja/power-local-llm/vllm-explained)は、CPUでの推論の実行を文書化しています。',
-          '**マルチGPUとマルチノード。** [candle-vllm](/ja/power-local-llm/candle-vllm-review)、[NVIDIA Dynamo](/ja/power-local-llm/dynamo-review)、[ExLlamaV2](/ja/power-local-llm/exllamav2-explained)、[exo](/ja/power-local-llm/exo-review)、[KServe](/ja/power-local-llm/kserve-review)、[LMDeploy](/ja/power-local-llm/lmdeploy-review)、[LocalAI](/ja/power-local-llm/localai-explained)、[LoRAX](/ja/power-local-llm/lorax-review)、[Lucebox](/ja/power-local-llm/lucebox-review)、[MLX-LM](/ja/power-local-llm/mlx-lm-explained)、[mlxcel](/ja/power-local-llm/mlxcel-review)、[oMLX](/ja/power-local-llm/omlx-review)、[SGLang](/ja/power-local-llm/sglang-explained)、[vLLM](/ja/power-local-llm/vllm-explained)は、マルチGPU、テンソル並列、またはマルチノードでの推論を文書化しています。',
-          '**ライセンス。** ここに挙げたエンジンの多くはApache-2.0(19ツール)またはMIT(9ツール)で、KoboldCppとtext-generation-webuiはAGPL-3.0です。コピーレフトライセンスは、改変版の配布に条件を課します。詳しくは[AI Tool Licenses Explained](/ja/power-local-llm/ai-tool-licenses-explained)を参照してください。',
+          `**OpenAI互換API。** ${compareToolsByAttr('run-serve', 'inference-engines', 'openaiApi', 'ja')}は、OpenAI互換のHTTP APIを文書化しています。そのため、OpenAI API向けに書かれたアプリをこれらに向けることができます。`,
+          `**NVIDIA GPU。** ${compareToolsByAttr('run-serve', 'inference-engines', 'nvidiaGpu', 'ja')}は、NVIDIA GPU(CUDA)対応を文書化しています。`,
+          `**Apple Silicon。** ${compareToolsByAttr('run-serve', 'inference-engines', 'appleSilicon', 'ja')}は、Apple Silicon、MetalまたはMLXへの対応を文書化しています。`,
+          `**AMD GPU。** ${compareToolsByAttr('run-serve', 'inference-engines', 'amdGpu', 'ja')}は、AMD GPU対応を文書化しています。`,
+          `**CPU推論。** ${compareToolsByAttr('run-serve', 'inference-engines', 'cpuInference', 'ja')}は、CPUでの推論の実行を文書化しています。`,
+          `**マルチGPUとマルチノード。** ${compareToolsByAttr('run-serve', 'inference-engines', 'distributed', 'ja')}は、マルチGPU、テンソル並列、またはマルチノードでの推論を文書化しています。`,
+          `**ライセンス。** ここに挙げたエンジンの多くはApache-2.0(${ENGINES.license['Apache-2.0'] ?? 0}ツール)またはMIT(${ENGINES.license['MIT'] ?? 0}ツール)で、KoboldCppとtext-generation-webuiはAGPL-3.0です。コピーレフトライセンスは、改変版の配布に条件を課します。詳しくは[AI Tool Licenses Explained](/ja/power-local-llm/ai-tool-licenses-explained)を参照してください。`,
         ],
       },
       runtimeDifferences: {
         id: 'runtime-differences',
         title: 'ランタイムとマネージャー:違いはどこにあるか',
         items: [
-          '**OpenAI互換API。** [Docker Model Runner](/ja/power-local-llm/docker-model-runner-review)、[Foundry Local](/ja/power-local-llm/foundry-local-review)、[GPUStack](/ja/power-local-llm/gpustack-review)、[Jan](/ja/power-local-llm/jan-review)、[Lemonade](/ja/power-local-llm/lemonade-review)、[Llama](/ja/power-local-llm/llama-app-review)、[Osaurus](/ja/power-local-llm/osaurus-ai-review)は、OpenAI互換APIを文書化しています。',
-          '**デスクトップアプリ。** [GPT4All](/ja/power-local-llm/gpt4all-review)、[Jan](/ja/power-local-llm/jan-review)、[Llama](/ja/power-local-llm/llama-app-review)、[LM Studio](/ja/power-local-llm/lm-studio-review)、[Osaurus](/ja/power-local-llm/osaurus-ai-review)、[Ypipe](/ja/power-local-llm/ypipe-review)は、インストール可能なデスクトップアプリを文書化しています。',
-          '**内蔵モデルライブラリ。** [Foundry Local](/ja/power-local-llm/foundry-local-review)、[GPUStack](/ja/power-local-llm/gpustack-review)、[Jan](/ja/power-local-llm/jan-review)、[Lemonade](/ja/power-local-llm/lemonade-review)、[Llama](/ja/power-local-llm/llama-app-review)、[LM Studio](/ja/power-local-llm/lm-studio-review)、[Ollama](/ja/power-local-llm/ollama-review)は、モデルを探してダウンロードする内蔵の仕組みを文書化しています。',
-          '**ヘッドレス・サーバーモード。** [DreamServer](/ja/power-local-llm/dreamserver-review)、[GPUStack](/ja/power-local-llm/gpustack-review)、[Lemonade](/ja/power-local-llm/lemonade-review)、[Osaurus](/ja/power-local-llm/osaurus-ai-review)は、GUIなしでバックグラウンドサービスまたはサーバーとして動作することを文書化しています。',
-          '**ライセンスと価格。** ここに挙げたランタイムのうち、4つはApache-2.0、5つはMITです。LM StudioとDocker Model Runnerはプロプライエタリです(LM Studioは無料で利用でき、Docker Model RunnerはDocker Desktopに同梱されています)。Mstyはクローズドソースで無料プランがあり、RunAnywhereとYPipeは独自またはドキュメント化されていない条件を採用しています。各レビューで確認してください。',
+          `**OpenAI互換API。** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'openaiApi', 'ja')}は、OpenAI互換APIを文書化しています。`,
+          `**デスクトップアプリ。** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'desktopApp', 'ja')}は、インストール可能なデスクトップアプリを文書化しています。`,
+          `**内蔵モデルライブラリ。** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'modelLibrary', 'ja')}は、モデルを探してダウンロードする内蔵の仕組みを文書化しています。`,
+          `**ヘッドレス・サーバーモード。** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'headless', 'ja')}は、GUIなしでバックグラウンドサービスまたはサーバーとして動作することを文書化しています。`,
+          `**ライセンスと価格。** ここに挙げたランタイムのうち、${RUNTIMES.license['Apache-2.0'] ?? 0}件はApache-2.0、${RUNTIMES.license['MIT'] ?? 0}件はMITです。LM Studioはプロプライエタリです(無料で利用できます)。Docker Model RunnerはDocker Desktopに同梱されています(ライセンス条件はそのレビューを参照してください)。Mstyはクローズドソースで無料プランがあり、RunAnywhereとYPipeは独自またはドキュメント化されていない条件を採用しています。各レビューで確認してください。`,
         ],
       },
       gatewayDifferences: {
         id: 'gateway-differences',
         title: 'ルーターとゲートウェイ:違いはどこにあるか',
         items: [
-          '**OpenAI互換エンドポイント。** [AIClient2API](/ja/power-local-llm/aiclient2api-review)、[litellm](/ja/power-local-llm/litellm-review)は、OpenAI互換エンドポイントを文書化しています。',
+          `**OpenAI互換エンドポイント。** ${compareToolsByAttr('run-serve', 'routers-gateways', 'openaiApi', 'ja')}は、OpenAI互換エンドポイントを文書化しています。`,
           '**ローカルモデルへのルーティング。** [litellm](/ja/power-local-llm/litellm-review)は、対応プロバイダーの中にローカルまたはセルフホストのモデル(Ollamaなど)があることを文書化しています。',
-          '**フォールバックとロードバランシング。** [AIClient2API](/ja/power-local-llm/aiclient2api-review)、[ClawRouter](/ja/power-local-llm/clawrouter-review)、[litellm](/ja/power-local-llm/litellm-review)は、モデルまたはプロバイダー間のフォールバック、リトライ、ロードバランシングを文書化しています。',
-          '**ライセンス。** 4つのうち2つはMIT、1つはGPL-3.0、1つはApache-2.0です。',
+          `**フォールバックとロードバランシング。** ${compareToolsByAttr('run-serve', 'routers-gateways', 'fallback', 'ja')}は、モデルまたはプロバイダー間のフォールバック、リトライ、ロードバランシングを文書化しています。`,
+          `**ライセンス。** ${RT.count}件のうち${RT.license['MIT'] ?? 0}件はMIT、${RT.license['GPL-3.0'] ?? 0}件はGPL-3.0、${RT.license['AGPL-3.0'] ?? 0}件はAGPL-3.0、${RT.license['Apache-2.0'] ?? 0}件はApache-2.0で、${RT.license['Not stated'] ?? 0}件はライセンスを明記していません。`,
         ],
       },
       limitations: {
@@ -1097,7 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-20',
-      dateModified: '2026-10-24',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1130,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-10-24',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1158,16 +1163,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**PromptQuorum目录中的${RUN_SERVE_TOTAL}款本地运行与部署工具分为三类,应分别比较:推理引擎(${RUN_SERVE_INFERENCE_ENGINES}款)、运行时与管理器(${RUN_SERVE_RUNTIMES_MANAGERS}款)以及路由器与网关(${RUN_SERVE_ROUTERS_GATEWAYS}款)。** 在引擎中,15款在文档中说明支持NVIDIA GPU,17款说明支持Apple Silicon,21款说明提供OpenAI兼容API;在运行时中,6款说明提供OpenAI兼容API。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
+      `**PromptQuorum目录中的${RUN_SERVE_TOTAL}款本地运行与部署工具分为三类,应分别比较:推理引擎(${RUN_SERVE_INFERENCE_ENGINES}款)、运行时与管理器(${RUN_SERVE_RUNTIMES_MANAGERS}款)以及路由器与网关(${RUN_SERVE_ROUTERS_GATEWAYS}款)。** 在引擎中,${EA.nvidiaGpu}款在文档中说明支持NVIDIA GPU,${EA.appleSilicon}款说明支持Apple Silicon,${EA.openaiApi}款说明提供OpenAI兼容API;在运行时中,${RA.openaiApi}款说明提供OpenAI兼容API。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地推理工具?',
         answer:
           '这取决于工具的类别,因此请一次只在同一类别内比较。根据对你最重要的限制条件来选择——你拥有的硬件(NVIDIA、Apple Silicon、AMD或CPU)、OpenAI兼容API、多GPU扩展、桌面应用或无界面服务器——并使用下方由各工具官方文档生成的对比表。',
         bullets: [
-          '推理引擎:30款工具,按硬件支持(NVIDIA、Apple Silicon、AMD、CPU)、OpenAI兼容API以及多GPU或多节点推理进行对比。',
-          '运行时与管理器:13款工具,按API、桌面应用、内置模型库和无界面模式进行对比。',
-          '路由器与网关:4款工具,按OpenAI兼容端点、本地模型和故障回退进行对比。',
+          `推理引擎:${SEG['inference-engines']}款工具,按硬件支持(NVIDIA、Apple Silicon、AMD、CPU)、OpenAI兼容API以及多GPU或多节点推理进行对比。`,
+          `运行时与管理器:${SEG['runtimes-managers']}款工具,按API、桌面应用、内置模型库和无界面模式进行对比。`,
+          `路由器与网关:${SEG['routers-gateways']}款工具,按OpenAI兼容端点、本地模型和故障回退进行对比。`,
           '短横线(—)表示该项目的文档没有说明,并不表示缺少该功能。',
         ],
       },
@@ -1199,7 +1204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${RUN_SERVE_TOTAL}款工具,三个类别:推理引擎(${RUN_SERVE_INFERENCE_ENGINES}款)、运行时与管理器(${RUN_SERVE_RUNTIMES_MANAGERS}款)、路由器与网关(${RUN_SERVE_ROUTERS_GATEWAYS}款)。Ollama同时出现在两个分组中,因为它既是引擎也是运行时。`,
+          `${RUN_SERVE_TOTAL}款工具,三个类别:推理引擎(${RUN_SERVE_INFERENCE_ENGINES}款)、运行时与管理器(${RUN_SERVE_RUNTIMES_MANAGERS}款)、路由器与网关(${RUN_SERVE_ROUTERS_GATEWAYS}款)。既是引擎又是运行时的工具(${compareToolsInBothSegments('run-serve', 'inference-engines', 'runtimes-managers', 'zh')})会同时出现在两个分组中。`,
           '对比表由各工具的记录生成,并对照其官方README或网站核实;短横线表示“文档中未说明”,绝不表示“没有”。对于一些知名工具,此处引用的文档对某项功能没有提及,因此它们的单元格显示为短横线。',
           '表中的每个工具名称都链接到它自己的PromptQuorum评测,安装步骤和局限都在评测中介绍。',
         ],
@@ -1223,34 +1228,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'engine-differences',
         title: '推理引擎:差异所在',
         items: [
-          '**OpenAI兼容API。**[candle-vllm](/zh/power-local-llm/candle-vllm-review)、[NVIDIA Dynamo](/zh/power-local-llm/dynamo-review)、[exo](/zh/power-local-llm/exo-review)、[KoboldCpp](/zh/power-local-llm/koboldcpp-review)、[KServe](/zh/power-local-llm/kserve-review)、[llama.cpp](/zh/power-local-llm/llama-cpp-explained)、[LocalAI](/zh/power-local-llm/localai-explained)、[LoRAX](/zh/power-local-llm/lorax-review)、[Lucebox](/zh/power-local-llm/lucebox-review)、[MLC LLM](/zh/power-local-llm/mlc-llm-explained)、[mlx-serve](/zh/power-local-llm/mlx-serve-review)、[mlxcel](/zh/power-local-llm/mlxcel-review)、[OlliteRT](/zh/power-local-llm/ollitert-review)、[oMLX](/zh/power-local-llm/omlx-review)、[OpenLLM](/zh/power-local-llm/openllm-review)、[Rapid-MLX](/zh/power-local-llm/rapid-mlx-review)、[Shimmy](/zh/power-local-llm/shimmy-review)、[SwiftLM](/zh/power-local-llm/swiftlm-review)、[text-generation-webui](/zh/local-llms/text-generation-webui-review)、[vllm-mlx](/zh/power-local-llm/vllm-mlx-review)和[vLLM](/zh/power-local-llm/vllm-explained)在文档中说明提供OpenAI兼容的HTTP API,因此为OpenAI API编写的应用可以直接指向它们。',
-          '**NVIDIA GPU。**[candle-vllm](/zh/power-local-llm/candle-vllm-review)、[ExLlamaV2](/zh/power-local-llm/exllamav2-explained)、[KoboldCpp](/zh/power-local-llm/koboldcpp-review)、[llama.cpp](/zh/power-local-llm/llama-cpp-explained)、[LMDeploy](/zh/power-local-llm/lmdeploy-review)、[LocalAI](/zh/power-local-llm/localai-explained)、[LoRAX](/zh/power-local-llm/lorax-review)、[Lucebox](/zh/power-local-llm/lucebox-review)、[MLC LLM](/zh/power-local-llm/mlc-llm-explained)、[mlxcel](/zh/power-local-llm/mlxcel-review)、[SGLang](/zh/power-local-llm/sglang-explained)、[Shimmy](/zh/power-local-llm/shimmy-review)、[TensorRT-LLM](/zh/power-local-llm/tensorrt-llm-explained)、[text-generation-webui](/zh/local-llms/text-generation-webui-review)和[vLLM](/zh/power-local-llm/vllm-explained)在文档中说明支持NVIDIA GPU(CUDA)。',
-          '**Apple Silicon。**[candle-vllm](/zh/power-local-llm/candle-vllm-review)、[claude-code-local](/zh/power-local-llm/claude-code-local-review)、[exo](/zh/power-local-llm/exo-review)、[KoboldCpp](/zh/power-local-llm/koboldcpp-review)、[llama.cpp](/zh/power-local-llm/llama-cpp-explained)、[LocalAI](/zh/power-local-llm/localai-explained)、[MLC LLM](/zh/power-local-llm/mlc-llm-explained)、[MLX-LM](/zh/power-local-llm/mlx-lm-explained)、[mlx-serve](/zh/power-local-llm/mlx-serve-review)、[mlxcel](/zh/power-local-llm/mlxcel-review)、[oMLX](/zh/power-local-llm/omlx-review)、[Rapid-MLX](/zh/power-local-llm/rapid-mlx-review)、[Shimmy](/zh/power-local-llm/shimmy-review)、[SwiftLM](/zh/power-local-llm/swiftlm-review)、[text-generation-webui](/zh/local-llms/text-generation-webui-review)、[TurboFieldfare](/zh/power-local-llm/turbo-fieldfare-review)和[vllm-mlx](/zh/power-local-llm/vllm-mlx-review)在文档中说明支持Apple Silicon、Metal或MLX。',
-          '**AMD GPU。**[KoboldCpp](/zh/power-local-llm/koboldcpp-review)、[llama.cpp](/zh/power-local-llm/llama-cpp-explained)、[LocalAI](/zh/power-local-llm/localai-explained)、[Lucebox](/zh/power-local-llm/lucebox-review)、[MLC LLM](/zh/power-local-llm/mlc-llm-explained)、[SGLang](/zh/power-local-llm/sglang-explained)、[Shimmy](/zh/power-local-llm/shimmy-review)、[text-generation-webui](/zh/local-llms/text-generation-webui-review)和[vLLM](/zh/power-local-llm/vllm-explained)在文档中说明支持AMD GPU。',
-          '**CPU推理。**[exo](/zh/power-local-llm/exo-review)、[KoboldCpp](/zh/power-local-llm/koboldcpp-review)、[llama.cpp](/zh/power-local-llm/llama-cpp-explained)、[LocalAI](/zh/power-local-llm/localai-explained)、[OlliteRT](/zh/power-local-llm/ollitert-review)、[SGLang](/zh/power-local-llm/sglang-explained)、[text-generation-webui](/zh/local-llms/text-generation-webui-review)和[vLLM](/zh/power-local-llm/vllm-explained)在文档中说明支持在CPU上运行推理。',
-          '**多GPU与多节点。**[candle-vllm](/zh/power-local-llm/candle-vllm-review)、[NVIDIA Dynamo](/zh/power-local-llm/dynamo-review)、[ExLlamaV2](/zh/power-local-llm/exllamav2-explained)、[exo](/zh/power-local-llm/exo-review)、[KServe](/zh/power-local-llm/kserve-review)、[LMDeploy](/zh/power-local-llm/lmdeploy-review)、[LocalAI](/zh/power-local-llm/localai-explained)、[LoRAX](/zh/power-local-llm/lorax-review)、[Lucebox](/zh/power-local-llm/lucebox-review)、[MLX-LM](/zh/power-local-llm/mlx-lm-explained)、[mlxcel](/zh/power-local-llm/mlxcel-review)、[oMLX](/zh/power-local-llm/omlx-review)、[SGLang](/zh/power-local-llm/sglang-explained)和[vLLM](/zh/power-local-llm/vllm-explained)在文档中说明支持多GPU、张量并行或多节点推理。',
-          '**许可证。** 这里的大多数引擎采用Apache-2.0(19款)或MIT(9款);KoboldCpp和text-generation-webui采用AGPL-3.0。Copyleft许可证会对分发修改后的版本附加条件——参见[AI工具许可证详解](/zh/power-local-llm/ai-tool-licenses-explained)。',
+          `**OpenAI兼容API。**${compareToolsByAttr('run-serve', 'inference-engines', 'openaiApi', 'zh')}在文档中说明提供OpenAI兼容的HTTP API,因此为OpenAI API编写的应用可以直接指向它们。`,
+          `**NVIDIA GPU。**${compareToolsByAttr('run-serve', 'inference-engines', 'nvidiaGpu', 'zh')}在文档中说明支持NVIDIA GPU(CUDA)。`,
+          `**Apple Silicon。**${compareToolsByAttr('run-serve', 'inference-engines', 'appleSilicon', 'zh')}在文档中说明支持Apple Silicon、Metal或MLX。`,
+          `**AMD GPU。**${compareToolsByAttr('run-serve', 'inference-engines', 'amdGpu', 'zh')}在文档中说明支持AMD GPU。`,
+          `**CPU推理。**${compareToolsByAttr('run-serve', 'inference-engines', 'cpuInference', 'zh')}在文档中说明支持在CPU上运行推理。`,
+          `**多GPU与多节点。**${compareToolsByAttr('run-serve', 'inference-engines', 'distributed', 'zh')}在文档中说明支持多GPU、张量并行或多节点推理。`,
+          `**许可证。** 这里的大多数引擎采用Apache-2.0(${ENGINES.license['Apache-2.0'] ?? 0}款)或MIT(${ENGINES.license['MIT'] ?? 0}款);KoboldCpp和text-generation-webui采用AGPL-3.0。Copyleft许可证会对分发修改后的版本附加条件——参见[AI工具许可证详解](/zh/power-local-llm/ai-tool-licenses-explained)。`,
         ],
       },
       runtimeDifferences: {
         id: 'runtime-differences',
         title: '运行时与管理器:差异所在',
         items: [
-          '**OpenAI兼容API。**[Docker Model Runner](/zh/power-local-llm/docker-model-runner-review)、[Foundry Local](/zh/power-local-llm/foundry-local-review)、[GPUStack](/zh/power-local-llm/gpustack-review)、[Jan](/zh/power-local-llm/jan-review)、[Lemonade](/zh/power-local-llm/lemonade-review)、[Llama](/zh/power-local-llm/llama-app-review)和[Osaurus](/zh/power-local-llm/osaurus-ai-review)在文档中说明提供OpenAI兼容的API。',
-          '**桌面应用。**[GPT4All](/zh/power-local-llm/gpt4all-review)、[Jan](/zh/power-local-llm/jan-review)、[Llama](/zh/power-local-llm/llama-app-review)、[LM Studio](/zh/power-local-llm/lm-studio-review)、[Osaurus](/zh/power-local-llm/osaurus-ai-review)和[Ypipe](/zh/power-local-llm/ypipe-review)在文档中说明提供可安装的桌面应用。',
-          '**内置模型库。**[Foundry Local](/zh/power-local-llm/foundry-local-review)、[GPUStack](/zh/power-local-llm/gpustack-review)、[Jan](/zh/power-local-llm/jan-review)、[Lemonade](/zh/power-local-llm/lemonade-review)、[Llama](/zh/power-local-llm/llama-app-review)、[LM Studio](/zh/power-local-llm/lm-studio-review)和[Ollama](/zh/power-local-llm/ollama-review)在文档中说明内置了查找和下载模型的方式。',
-          '**无界面或服务器模式。**[DreamServer](/zh/power-local-llm/dreamserver-review)、[GPUStack](/zh/power-local-llm/gpustack-review)、[Lemonade](/zh/power-local-llm/lemonade-review)和[Osaurus](/zh/power-local-llm/osaurus-ai-review)在文档中说明可作为后台服务或不带GUI的服务器运行。',
-          '**许可证与价格。** 这里有四款运行时采用Apache-2.0,五款采用MIT。LM Studio和Docker Model Runner是专有软件(LM Studio可免费使用;Docker Model Runner随Docker Desktop捆绑提供),Msty是闭源软件并提供免费层,RunAnywhere和YPipe使用自己的条款或未公开的条款——请查看各自的评测。',
+          `**OpenAI兼容API。**${compareToolsByAttr('run-serve', 'runtimes-managers', 'openaiApi', 'zh')}在文档中说明提供OpenAI兼容的API。`,
+          `**桌面应用。**${compareToolsByAttr('run-serve', 'runtimes-managers', 'desktopApp', 'zh')}在文档中说明提供可安装的桌面应用。`,
+          `**内置模型库。**${compareToolsByAttr('run-serve', 'runtimes-managers', 'modelLibrary', 'zh')}在文档中说明内置了查找和下载模型的方式。`,
+          `**无界面或服务器模式。**${compareToolsByAttr('run-serve', 'runtimes-managers', 'headless', 'zh')}在文档中说明可作为后台服务或不带GUI的服务器运行。`,
+          `**许可证与价格。** 这里有${RUNTIMES.license['Apache-2.0'] ?? 0}款运行时采用Apache-2.0,${RUNTIMES.license['MIT'] ?? 0}款采用MIT。LM Studio是专有软件(可免费使用),Docker Model Runner随Docker Desktop捆绑提供(许可条款请见其评测),Msty是闭源软件并提供免费层,RunAnywhere和YPipe使用自己的条款或未公开的条款——请查看各自的评测。`,
         ],
       },
       gatewayDifferences: {
         id: 'gateway-differences',
         title: '路由器与网关:差异所在',
         items: [
-          '**OpenAI兼容端点。**[AIClient2API](/zh/power-local-llm/aiclient2api-review)和[litellm](/zh/power-local-llm/litellm-review)在文档中说明提供OpenAI兼容的端点。',
+          `**OpenAI兼容端点。**${compareToolsByAttr('run-serve', 'routers-gateways', 'openaiApi', 'zh')}在文档中说明提供OpenAI兼容的端点。`,
           '**路由到本地模型。**[litellm](/zh/power-local-llm/litellm-review)在文档中说明其支持的提供商包括本地或自托管模型(例如Ollama)。',
-          '**故障回退与负载均衡。**[AIClient2API](/zh/power-local-llm/aiclient2api-review)、[ClawRouter](/zh/power-local-llm/clawrouter-review)和[litellm](/zh/power-local-llm/litellm-review)在文档中说明支持在模型或提供商之间进行回退、重试或负载均衡。',
-          '**许可证。** 四款中有两款采用MIT,一款采用GPL-3.0,一款采用Apache-2.0。',
+          `**故障回退与负载均衡。**${compareToolsByAttr('run-serve', 'routers-gateways', 'fallback', 'zh')}在文档中说明支持在模型或提供商之间进行回退、重试或负载均衡。`,
+          `**许可证。** ${RT.count}款中有${RT.license['MIT'] ?? 0}款采用MIT,${RT.license['GPL-3.0'] ?? 0}款采用GPL-3.0,${RT.license['AGPL-3.0'] ?? 0}款采用AGPL-3.0,${RT.license['Apache-2.0'] ?? 0}款采用Apache-2.0,另有${RT.license['Not stated'] ?? 0}款未标明许可证。`,
         ],
       },
       limitations: {
@@ -1317,7 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-20',
-      dateModified: '2026-10-24',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1350,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-10-24',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1378,16 +1383,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**As ${RUN_SERVE_TOTAL} ferramentas locais de execução e serviço do diretório PromptQuorum se dividem em três tipos que devem ser comparados separadamente: mecanismos de inferência (${RUN_SERVE_INFERENCE_ENGINES} ferramentas), runtimes e gerenciadores (${RUN_SERVE_RUNTIMES_MANAGERS}) e roteadores e gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Entre os mecanismos, 15 documentam suporte a GPU NVIDIA, 17 documentam suporte a Apple Silicon e 21 documentam uma API compatível com OpenAI; entre os runtimes, 6 documentam uma API compatível com OpenAI. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
+      `**As ${RUN_SERVE_TOTAL} ferramentas locais de execução e serviço do diretório PromptQuorum se dividem em três tipos que devem ser comparados separadamente: mecanismos de inferência (${RUN_SERVE_INFERENCE_ENGINES} ferramentas), runtimes e gerenciadores (${RUN_SERVE_RUNTIMES_MANAGERS}) e roteadores e gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Entre os mecanismos, ${EA.nvidiaGpu} documentam suporte a GPU NVIDIA, ${EA.appleSilicon} documentam suporte a Apple Silicon e ${EA.openaiApi} documentam uma API compatível com OpenAI; entre os runtimes, ${RA.openaiApi} documentam uma API compatível com OpenAI. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta de inferência local devo usar?',
         answer:
           'Depende do tipo de ferramenta, então compare dentro de um tipo por vez. Escolha pela restrição que mais importa — o hardware que você tem (NVIDIA, Apple Silicon, AMD ou CPU), uma API compatível com OpenAI, escalabilidade multi-GPU, um app de desktop ou um servidor headless — e use a tabela abaixo, gerada a partir da documentação oficial de cada ferramenta.',
         bullets: [
-          'Mecanismos de inferência: 30 ferramentas comparadas por suporte de hardware (NVIDIA, Apple Silicon, AMD, CPU), API compatível com OpenAI e inferência multi-GPU ou multinó.',
-          'Runtimes e gerenciadores: 13 ferramentas comparadas por API, app de desktop, biblioteca de modelos integrada e modo headless.',
-          'Roteadores e gateways: 4 ferramentas comparadas por endpoint compatível com OpenAI, modelos locais e fallback.',
+          `Mecanismos de inferência: ${SEG['inference-engines']} ferramentas comparadas por suporte de hardware (NVIDIA, Apple Silicon, AMD, CPU), API compatível com OpenAI e inferência multi-GPU ou multinó.`,
+          `Runtimes e gerenciadores: ${SEG['runtimes-managers']} ferramentas comparadas por API, app de desktop, biblioteca de modelos integrada e modo headless.`,
+          `Roteadores e gateways: ${SEG['routers-gateways']} ferramentas comparadas por endpoint compatível com OpenAI, modelos locais e fallback.`,
           'Um traço (—) significa que a documentação do projeto não informa isso, e não que o recurso não exista.',
         ],
       },
@@ -1419,7 +1424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${RUN_SERVE_TOTAL} ferramentas, três tipos: mecanismos de inferência (${RUN_SERVE_INFERENCE_ENGINES}), runtimes e gerenciadores (${RUN_SERVE_RUNTIMES_MANAGERS}), roteadores e gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). O Ollama aparece em dois grupos porque é ao mesmo tempo um mecanismo e um runtime.`,
+          `${RUN_SERVE_TOTAL} ferramentas, três tipos: mecanismos de inferência (${RUN_SERVE_INFERENCE_ENGINES}), runtimes e gerenciadores (${RUN_SERVE_RUNTIMES_MANAGERS}), roteadores e gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). As ferramentas que são ao mesmo tempo mecanismo e runtime (${compareToolsInBothSegments('run-serve', 'inference-engines', 'runtimes-managers', 'pt')}) aparecem nos dois grupos.`,
           'A tabela é gerada a partir do registro de cada ferramenta e conferida com o README ou o site oficial; um traço significa "não informado na documentação", nunca "não". Para algumas ferramentas conhecidas, a documentação citada aqui não menciona determinado recurso, então suas células mostram um traço.',
           'Cada nome de ferramenta na tabela leva à sua própria análise no PromptQuorum, onde estão as etapas de instalação e os limites.',
         ],
@@ -1443,34 +1448,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'engine-differences',
         title: 'Mecanismos de inferência: o que muda',
         items: [
-          '**API compatível com OpenAI.** [candle-vllm](/pt/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/pt/power-local-llm/dynamo-review), [exo](/pt/power-local-llm/exo-review), [KoboldCpp](/pt/power-local-llm/koboldcpp-review), [KServe](/pt/power-local-llm/kserve-review), [llama.cpp](/pt/power-local-llm/llama-cpp-explained), [LocalAI](/pt/power-local-llm/localai-explained), [LoRAX](/pt/power-local-llm/lorax-review), [Lucebox](/pt/power-local-llm/lucebox-review), [MLC LLM](/pt/power-local-llm/mlc-llm-explained), [mlx-serve](/pt/power-local-llm/mlx-serve-review), [mlxcel](/pt/power-local-llm/mlxcel-review), [OlliteRT](/pt/power-local-llm/ollitert-review), [oMLX](/pt/power-local-llm/omlx-review), [OpenLLM](/pt/power-local-llm/openllm-review), [Rapid-MLX](/pt/power-local-llm/rapid-mlx-review), [Shimmy](/pt/power-local-llm/shimmy-review), [SwiftLM](/pt/power-local-llm/swiftlm-review), [text-generation-webui](/pt/local-llms/text-generation-webui-review), [vllm-mlx](/pt/power-local-llm/vllm-mlx-review) e [vLLM](/pt/power-local-llm/vllm-explained) documentam uma API HTTP compatível com OpenAI, então apps escritos para a API da OpenAI podem apontar para eles.',
-          '**GPUs NVIDIA.** [candle-vllm](/pt/power-local-llm/candle-vllm-review), [ExLlamaV2](/pt/power-local-llm/exllamav2-explained), [KoboldCpp](/pt/power-local-llm/koboldcpp-review), [llama.cpp](/pt/power-local-llm/llama-cpp-explained), [LMDeploy](/pt/power-local-llm/lmdeploy-review), [LocalAI](/pt/power-local-llm/localai-explained), [LoRAX](/pt/power-local-llm/lorax-review), [Lucebox](/pt/power-local-llm/lucebox-review), [MLC LLM](/pt/power-local-llm/mlc-llm-explained), [mlxcel](/pt/power-local-llm/mlxcel-review), [SGLang](/pt/power-local-llm/sglang-explained), [Shimmy](/pt/power-local-llm/shimmy-review), [TensorRT-LLM](/pt/power-local-llm/tensorrt-llm-explained), [text-generation-webui](/pt/local-llms/text-generation-webui-review) e [vLLM](/pt/power-local-llm/vllm-explained) document NVIDIA GPU (CUDA) documentam suporte a GPU NVIDIA (CUDA).',
-          '**Apple Silicon.** [candle-vllm](/pt/power-local-llm/candle-vllm-review), [claude-code-local](/pt/power-local-llm/claude-code-local-review), [exo](/pt/power-local-llm/exo-review), [KoboldCpp](/pt/power-local-llm/koboldcpp-review), [llama.cpp](/pt/power-local-llm/llama-cpp-explained), [LocalAI](/pt/power-local-llm/localai-explained), [MLC LLM](/pt/power-local-llm/mlc-llm-explained), [MLX-LM](/pt/power-local-llm/mlx-lm-explained), [mlx-serve](/pt/power-local-llm/mlx-serve-review), [mlxcel](/pt/power-local-llm/mlxcel-review), [oMLX](/pt/power-local-llm/omlx-review), [Rapid-MLX](/pt/power-local-llm/rapid-mlx-review), [Shimmy](/pt/power-local-llm/shimmy-review), [SwiftLM](/pt/power-local-llm/swiftlm-review), [text-generation-webui](/pt/local-llms/text-generation-webui-review), [TurboFieldfare](/pt/power-local-llm/turbo-fieldfare-review) e [vllm-mlx](/pt/power-local-llm/vllm-mlx-review) documentam suporte a Apple Silicon, Metal ou MLX.',
-          '**GPUs AMD.** [KoboldCpp](/pt/power-local-llm/koboldcpp-review), [llama.cpp](/pt/power-local-llm/llama-cpp-explained), [LocalAI](/pt/power-local-llm/localai-explained), [Lucebox](/pt/power-local-llm/lucebox-review), [MLC LLM](/pt/power-local-llm/mlc-llm-explained), [SGLang](/pt/power-local-llm/sglang-explained), [Shimmy](/pt/power-local-llm/shimmy-review), [text-generation-webui](/pt/local-llms/text-generation-webui-review) e [vLLM](/pt/power-local-llm/vllm-explained) documentam suporte a GPU AMD.',
-          '**Inferência em CPU.** [exo](/pt/power-local-llm/exo-review), [KoboldCpp](/pt/power-local-llm/koboldcpp-review), [llama.cpp](/pt/power-local-llm/llama-cpp-explained), [LocalAI](/pt/power-local-llm/localai-explained), [OlliteRT](/pt/power-local-llm/ollitert-review), [SGLang](/pt/power-local-llm/sglang-explained), [text-generation-webui](/pt/local-llms/text-generation-webui-review) e [vLLM](/pt/power-local-llm/vllm-explained) documentam a execução de inferência em CPU.',
-          '**Multi-GPU e multinó.** [candle-vllm](/pt/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/pt/power-local-llm/dynamo-review), [ExLlamaV2](/pt/power-local-llm/exllamav2-explained), [exo](/pt/power-local-llm/exo-review), [KServe](/pt/power-local-llm/kserve-review), [LMDeploy](/pt/power-local-llm/lmdeploy-review), [LocalAI](/pt/power-local-llm/localai-explained), [LoRAX](/pt/power-local-llm/lorax-review), [Lucebox](/pt/power-local-llm/lucebox-review), [MLX-LM](/pt/power-local-llm/mlx-lm-explained), [mlxcel](/pt/power-local-llm/mlxcel-review), [oMLX](/pt/power-local-llm/omlx-review), [SGLang](/pt/power-local-llm/sglang-explained) e [vLLM](/pt/power-local-llm/vllm-explained) documentam inferência multi-GPU, tensor-paralela ou multinó.',
-          '**Licença.** A maioria dos mecanismos aqui é Apache-2.0 (19 ferramentas) ou MIT (9); KoboldCpp e text-generation-webui são AGPL-3.0. Licenças copyleft impõem condições à distribuição de versões modificadas — veja [Licenças de ferramentas de IA explicadas](/pt/power-local-llm/ai-tool-licenses-explained).',
+          `**API compatível com OpenAI.** ${compareToolsByAttr('run-serve', 'inference-engines', 'openaiApi', 'pt')} documentam uma API HTTP compatível com OpenAI, então apps escritos para a API da OpenAI podem apontar para eles.`,
+          `**GPUs NVIDIA.** ${compareToolsByAttr('run-serve', 'inference-engines', 'nvidiaGpu', 'pt')} documentam suporte a GPU NVIDIA (CUDA).`,
+          `**Apple Silicon.** ${compareToolsByAttr('run-serve', 'inference-engines', 'appleSilicon', 'pt')} documentam suporte a Apple Silicon, Metal ou MLX.`,
+          `**GPUs AMD.** ${compareToolsByAttr('run-serve', 'inference-engines', 'amdGpu', 'pt')} documentam suporte a GPU AMD.`,
+          `**Inferência em CPU.** ${compareToolsByAttr('run-serve', 'inference-engines', 'cpuInference', 'pt')} documentam a execução de inferência em CPU.`,
+          `**Multi-GPU e multinó.** ${compareToolsByAttr('run-serve', 'inference-engines', 'distributed', 'pt')} documentam inferência multi-GPU, tensor-paralela ou multinó.`,
+          `**Licença.** A maioria dos mecanismos aqui é Apache-2.0 (${ENGINES.license['Apache-2.0'] ?? 0} ferramentas) ou MIT (${ENGINES.license['MIT'] ?? 0}); KoboldCpp e text-generation-webui são AGPL-3.0. Licenças copyleft impõem condições à distribuição de versões modificadas — veja [Licenças de ferramentas de IA explicadas](/pt/power-local-llm/ai-tool-licenses-explained).`,
         ],
       },
       runtimeDifferences: {
         id: 'runtime-differences',
         title: 'Runtimes e gerenciadores: o que muda',
         items: [
-          '**API compatível com OpenAI.** [Docker Model Runner](/pt/power-local-llm/docker-model-runner-review), [Foundry Local](/pt/power-local-llm/foundry-local-review), [GPUStack](/pt/power-local-llm/gpustack-review), [Jan](/pt/power-local-llm/jan-review), [Lemonade](/pt/power-local-llm/lemonade-review), [Llama](/pt/power-local-llm/llama-app-review) e [Osaurus](/pt/power-local-llm/osaurus-ai-review) documentam uma API compatível com OpenAI.',
-          '**App de desktop.** [GPT4All](/pt/power-local-llm/gpt4all-review), [Jan](/pt/power-local-llm/jan-review), [Llama](/pt/power-local-llm/llama-app-review), [LM Studio](/pt/power-local-llm/lm-studio-review), [Osaurus](/pt/power-local-llm/osaurus-ai-review) e [Ypipe](/pt/power-local-llm/ypipe-review) documentam um app de desktop instalável.',
-          '**Biblioteca de modelos integrada.** [Foundry Local](/pt/power-local-llm/foundry-local-review), [GPUStack](/pt/power-local-llm/gpustack-review), [Jan](/pt/power-local-llm/jan-review), [Lemonade](/pt/power-local-llm/lemonade-review), [Llama](/pt/power-local-llm/llama-app-review), [LM Studio](/pt/power-local-llm/lm-studio-review) e [Ollama](/pt/power-local-llm/ollama-review) documentam uma forma integrada de encontrar e baixar modelos.',
-          '**Modo headless ou servidor.** [DreamServer](/pt/power-local-llm/dreamserver-review), [GPUStack](/pt/power-local-llm/gpustack-review), [Lemonade](/pt/power-local-llm/lemonade-review) e [Osaurus](/pt/power-local-llm/osaurus-ai-review) documentam a execução como serviço em segundo plano ou servidor sem a interface gráfica.',
-          '**Licença e preço.** Quatro runtimes aqui são Apache-2.0 e cinco são MIT. O LM Studio e o Docker Model Runner são proprietários (o LM Studio é gratuito para uso; o Docker Model Runner vem incluído no Docker Desktop), o Msty é de código fechado com um plano gratuito, e o RunAnywhere e o YPipe usam termos próprios ou não documentados — confira cada análise.',
+          `**API compatível com OpenAI.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'openaiApi', 'pt')} documentam uma API compatível com OpenAI.`,
+          `**App de desktop.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'desktopApp', 'pt')} documentam um app de desktop instalável.`,
+          `**Biblioteca de modelos integrada.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'modelLibrary', 'pt')} documentam uma forma integrada de encontrar e baixar modelos.`,
+          `**Modo headless ou servidor.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'headless', 'pt')} documentam a execução como serviço em segundo plano ou servidor sem a interface gráfica.`,
+          `**Licença e preço.** ${RUNTIMES.license['Apache-2.0'] ?? 0} runtimes aqui são Apache-2.0 e ${RUNTIMES.license['MIT'] ?? 0} são MIT. O LM Studio é proprietário (gratuito para uso), o Docker Model Runner vem incluído no Docker Desktop (os termos de licença estão na análise dele), o Msty é de código fechado com um plano gratuito, e o RunAnywhere e o YPipe usam termos próprios ou não documentados — confira cada análise.`,
         ],
       },
       gatewayDifferences: {
         id: 'gateway-differences',
         title: 'Roteadores e gateways: o que muda',
         items: [
-          '**Endpoint compatível com OpenAI.** [AIClient2API](/pt/power-local-llm/aiclient2api-review) e [litellm](/pt/power-local-llm/litellm-review) documentam um endpoint compatível com OpenAI.',
-          '**Roteamento para modelos locais.** [litellm](/pt/power-local-llm/litellm-review) documents local or self-hosted models (such as Ollama) documenta modelos locais ou auto-hospedados (como o Ollama) entre os provedores compatíveis.',
-          '**Fallback e balanceamento de carga.** [AIClient2API](/pt/power-local-llm/aiclient2api-review), [ClawRouter](/pt/power-local-llm/clawrouter-review) e [litellm](/pt/power-local-llm/litellm-review) documentam fallback, novas tentativas ou balanceamento de carga entre modelos ou provedores.',
-          '**Licença.** Dois dos quatro são MIT, um é GPL-3.0 e um é Apache-2.0.',
+          `**Endpoint compatível com OpenAI.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'openaiApi', 'pt')} documentam um endpoint compatível com OpenAI.`,
+          '**Roteamento para modelos locais.** [litellm](/pt/power-local-llm/litellm-review) documenta modelos locais ou auto-hospedados (como o Ollama) entre os provedores compatíveis.',
+          `**Fallback e balanceamento de carga.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'fallback', 'pt')} documentam fallback, novas tentativas ou balanceamento de carga entre modelos ou provedores.`,
+          `**Licença.** ${RT.license['MIT'] ?? 0} dos ${RT.count} são MIT, ${RT.license['GPL-3.0'] ?? 0} é GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0} é AGPL-3.0 e ${RT.license['Apache-2.0'] ?? 0} é Apache-2.0; ${RT.license['Not stated'] ?? 0} não informa a licença.`,
         ],
       },
       limitations: {
@@ -1537,7 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-20',
-      dateModified: '2026-10-24',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1570,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-10-24',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1598,16 +1603,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**تنقسم أدوات التشغيل والتقديم المحلية الـ${RUN_SERVE_TOTAL} في دليل PromptQuorum إلى ثلاثة أنواع ينبغي مقارنتها كلًّا على حدة: محركات استدلال (${RUN_SERVE_INFERENCE_ENGINES} أداة)، وبيئات تشغيل ومديرون (${RUN_SERVE_RUNTIMES_MANAGERS})، ومسيّرات وبوابات (${RUN_SERVE_ROUTERS_GATEWAYS}).** ضمن المحركات، توثّق 15 أداة دعم NVIDIA GPU، وتوثّق 17 دعم Apple Silicon، وتوثّق 21 واجهة برمجة متوافقة مع OpenAI؛ وضمن بيئات التشغيل، توثّق 6 أدوات واجهة برمجة متوافقة مع OpenAI. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
+      `**تنقسم أدوات التشغيل والتقديم المحلية الـ${RUN_SERVE_TOTAL} في دليل PromptQuorum إلى ثلاثة أنواع ينبغي مقارنتها كلًّا على حدة: محركات استدلال (${RUN_SERVE_INFERENCE_ENGINES} أداة)، وبيئات تشغيل ومديرون (${RUN_SERVE_RUNTIMES_MANAGERS})، ومسيّرات وبوابات (${RUN_SERVE_ROUTERS_GATEWAYS}).** ضمن المحركات، توثّق ${EA.nvidiaGpu} أداة دعم NVIDIA GPU، وتوثّق ${EA.appleSilicon} دعم Apple Silicon، وتوثّق ${EA.openaiApi} واجهة برمجة متوافقة مع OpenAI؛ وضمن بيئات التشغيل، توثّق ${RA.openaiApi} أدوات واجهة برمجة متوافقة مع OpenAI. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي أداة استدلال محلية ينبغي أن أستخدم؟',
         answer:
           'يعتمد ذلك على نوع الأداة، لذا قارن ضمن نوع واحد في كل مرة. اختر بحسب القيد الأهم لديك — العتاد المتوفر (NVIDIA أو Apple Silicon أو AMD أو CPU)، أو واجهة برمجة متوافقة مع OpenAI، أو التوسع على عدة وحدات GPU، أو تطبيق سطح مكتب، أو خادم بلا واجهة — واستعن بالجدول أدناه المُنشأ من التوثيق الرسمي لكل أداة.',
         bullets: [
-          'محركات الاستدلال: 30 أداة تُقارَن بحسب دعم العتاد (NVIDIA وApple Silicon وAMD وCPU) والواجهة المتوافقة مع OpenAI والاستدلال على عدة وحدات GPU أو عدة عقد.',
-          'بيئات التشغيل والمديرون: 13 أداة تُقارَن بحسب الواجهة البرمجية وتطبيق سطح المكتب ومكتبة النماذج المدمجة والوضع بلا واجهة.',
-          'المسيّرات والبوابات: 4 أدوات تُقارَن بحسب نقطة النهاية المتوافقة مع OpenAI والنماذج المحلية والبديل الاحتياطي.',
+          `محركات الاستدلال: ${SEG['inference-engines']} أداة تُقارَن بحسب دعم العتاد (NVIDIA وApple Silicon وAMD وCPU) والواجهة المتوافقة مع OpenAI والاستدلال على عدة وحدات GPU أو عدة عقد.`,
+          `بيئات التشغيل والمديرون: ${SEG['runtimes-managers']} أداة تُقارَن بحسب الواجهة البرمجية وتطبيق سطح المكتب ومكتبة النماذج المدمجة والوضع بلا واجهة.`,
+          `المسيّرات والبوابات: ${SEG['routers-gateways']} أدوات تُقارَن بحسب نقطة النهاية المتوافقة مع OpenAI والنماذج المحلية والبديل الاحتياطي.`,
           'الشرطة (—) تعني أن توثيق المشروع لا يذكر الميزة، وليس أن الميزة غير موجودة.',
         ],
       },
@@ -1639,7 +1644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${RUN_SERVE_TOTAL} أداة في ثلاثة أنواع: محركات استدلال (${RUN_SERVE_INFERENCE_ENGINES})، وبيئات تشغيل ومديرون (${RUN_SERVE_RUNTIMES_MANAGERS})، ومسيّرات وبوابات (${RUN_SERVE_ROUTERS_GATEWAYS}). يظهر Ollama في مجموعتين لأنه محرك وبيئة تشغيل معًا.`,
+          `${RUN_SERVE_TOTAL} أداة في ثلاثة أنواع: محركات استدلال (${RUN_SERVE_INFERENCE_ENGINES})، وبيئات تشغيل ومديرون (${RUN_SERVE_RUNTIMES_MANAGERS})، ومسيّرات وبوابات (${RUN_SERVE_ROUTERS_GATEWAYS}). الأدوات التي تعمل محركًا وبيئة تشغيل معًا (${compareToolsInBothSegments('run-serve', 'inference-engines', 'runtimes-managers', 'ar')}) تظهر في المجموعتين.`,
           'يُنشأ الجدول من سجل كل أداة ويُدقَّق مقابل ملف README الرسمي أو موقعها؛ والشرطة تعني «غير مذكور في التوثيق» وليس «لا» أبدًا. وبالنسبة إلى بعض الأدوات المعروفة، يسكت التوثيق المقتبس هنا عن ميزة معينة، فتظهر خلاياها بشرطة.',
           'يرتبط اسم كل أداة في الجدول بمراجعتها الخاصة في PromptQuorum، حيث تُغطّى خطوات التثبيت والحدود.',
         ],
@@ -1663,34 +1668,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'engine-differences',
         title: 'محركات الاستدلال: ما الذي يختلف',
         items: [
-          '**واجهة برمجة متوافقة مع OpenAI.** [candle-vllm](/ar/power-local-llm/candle-vllm-review)، [NVIDIA Dynamo](/ar/power-local-llm/dynamo-review)، [exo](/ar/power-local-llm/exo-review)، [KoboldCpp](/ar/power-local-llm/koboldcpp-review)، [KServe](/ar/power-local-llm/kserve-review)، [llama.cpp](/ar/power-local-llm/llama-cpp-explained)، [LocalAI](/ar/power-local-llm/localai-explained)، [LoRAX](/ar/power-local-llm/lorax-review)، [Lucebox](/ar/power-local-llm/lucebox-review)، [MLC LLM](/ar/power-local-llm/mlc-llm-explained)، [mlx-serve](/ar/power-local-llm/mlx-serve-review)، [mlxcel](/ar/power-local-llm/mlxcel-review)، [OlliteRT](/ar/power-local-llm/ollitert-review)، [oMLX](/ar/power-local-llm/omlx-review)، [OpenLLM](/ar/power-local-llm/openllm-review)، [Rapid-MLX](/ar/power-local-llm/rapid-mlx-review)، [Shimmy](/ar/power-local-llm/shimmy-review)، [SwiftLM](/ar/power-local-llm/swiftlm-review)، [text-generation-webui](/ar/local-llms/text-generation-webui-review)، [vllm-mlx](/ar/power-local-llm/vllm-mlx-review)، و[vLLM](/ar/power-local-llm/vllm-explained) توثّق واجهة HTTP متوافقة مع OpenAI، لذا يمكن للتطبيقات المكتوبة لواجهة OpenAI أن تشير إليها.',
-          '**وحدات NVIDIA GPU.** [candle-vllm](/ar/power-local-llm/candle-vllm-review)، [ExLlamaV2](/ar/power-local-llm/exllamav2-explained)، [KoboldCpp](/ar/power-local-llm/koboldcpp-review)، [llama.cpp](/ar/power-local-llm/llama-cpp-explained)، [LMDeploy](/ar/power-local-llm/lmdeploy-review)، [LocalAI](/ar/power-local-llm/localai-explained)، [LoRAX](/ar/power-local-llm/lorax-review)، [Lucebox](/ar/power-local-llm/lucebox-review)، [MLC LLM](/ar/power-local-llm/mlc-llm-explained)، [mlxcel](/ar/power-local-llm/mlxcel-review)، [SGLang](/ar/power-local-llm/sglang-explained)، [Shimmy](/ar/power-local-llm/shimmy-review)، [TensorRT-LLM](/ar/power-local-llm/tensorrt-llm-explained)، [text-generation-webui](/ar/local-llms/text-generation-webui-review)، و[vLLM](/ar/power-local-llm/vllm-explained) توثّق دعم NVIDIA GPU (CUDA).',
-          '**Apple Silicon.** [candle-vllm](/ar/power-local-llm/candle-vllm-review)، [claude-code-local](/ar/power-local-llm/claude-code-local-review)، [exo](/ar/power-local-llm/exo-review)، [KoboldCpp](/ar/power-local-llm/koboldcpp-review)، [llama.cpp](/ar/power-local-llm/llama-cpp-explained)، [LocalAI](/ar/power-local-llm/localai-explained)، [MLC LLM](/ar/power-local-llm/mlc-llm-explained)، [MLX-LM](/ar/power-local-llm/mlx-lm-explained)، [mlx-serve](/ar/power-local-llm/mlx-serve-review)، [mlxcel](/ar/power-local-llm/mlxcel-review)، [oMLX](/ar/power-local-llm/omlx-review)، [Rapid-MLX](/ar/power-local-llm/rapid-mlx-review)، [Shimmy](/ar/power-local-llm/shimmy-review)، [SwiftLM](/ar/power-local-llm/swiftlm-review)، [text-generation-webui](/ar/local-llms/text-generation-webui-review)، [TurboFieldfare](/ar/power-local-llm/turbo-fieldfare-review)، و[vllm-mlx](/ar/power-local-llm/vllm-mlx-review) توثّق دعم Apple Silicon أو Metal أو MLX.',
-          '**وحدات AMD GPU.** [KoboldCpp](/ar/power-local-llm/koboldcpp-review)، [llama.cpp](/ar/power-local-llm/llama-cpp-explained)، [LocalAI](/ar/power-local-llm/localai-explained)، [Lucebox](/ar/power-local-llm/lucebox-review)، [MLC LLM](/ar/power-local-llm/mlc-llm-explained)، [SGLang](/ar/power-local-llm/sglang-explained)، [Shimmy](/ar/power-local-llm/shimmy-review)، [text-generation-webui](/ar/local-llms/text-generation-webui-review)، و[vLLM](/ar/power-local-llm/vllm-explained) توثّق دعم AMD GPU.',
-          '**الاستدلال على CPU.** [exo](/ar/power-local-llm/exo-review)، [KoboldCpp](/ar/power-local-llm/koboldcpp-review)، [llama.cpp](/ar/power-local-llm/llama-cpp-explained)، [LocalAI](/ar/power-local-llm/localai-explained)، [OlliteRT](/ar/power-local-llm/ollitert-review)، [SGLang](/ar/power-local-llm/sglang-explained)، [text-generation-webui](/ar/local-llms/text-generation-webui-review)، و[vLLM](/ar/power-local-llm/vllm-explained) توثّق تشغيل الاستدلال على CPU.',
-          '**عدة وحدات GPU وعدة عقد.** [candle-vllm](/ar/power-local-llm/candle-vllm-review)، [NVIDIA Dynamo](/ar/power-local-llm/dynamo-review)، [ExLlamaV2](/ar/power-local-llm/exllamav2-explained)، [exo](/ar/power-local-llm/exo-review)، [KServe](/ar/power-local-llm/kserve-review)، [LMDeploy](/ar/power-local-llm/lmdeploy-review)، [LocalAI](/ar/power-local-llm/localai-explained)، [LoRAX](/ar/power-local-llm/lorax-review)، [Lucebox](/ar/power-local-llm/lucebox-review)، [MLX-LM](/ar/power-local-llm/mlx-lm-explained)، [mlxcel](/ar/power-local-llm/mlxcel-review)، [oMLX](/ar/power-local-llm/omlx-review)، [SGLang](/ar/power-local-llm/sglang-explained)، و[vLLM](/ar/power-local-llm/vllm-explained) توثّق الاستدلال على عدة وحدات GPU أو بالتوازي الموتري (tensor-parallel) أو على عدة عقد.',
-          '**الرخصة.** معظم المحركات هنا بترخيص Apache-2.0 (19 أداة) أو MIT (9)؛ أما KoboldCpp وtext-generation-webui فبترخيص AGPL-3.0. تفرض رخص copyleft شروطًا على توزيع النسخ المعدّلة — راجع [شرح رخص أدوات الذكاء الاصطناعي](/ar/power-local-llm/ai-tool-licenses-explained).',
+          `**واجهة برمجة متوافقة مع OpenAI.** ${compareToolsByAttr('run-serve', 'inference-engines', 'openaiApi', 'ar')} توثّق واجهة HTTP متوافقة مع OpenAI، لذا يمكن للتطبيقات المكتوبة لواجهة OpenAI أن تشير إليها.`,
+          `**وحدات NVIDIA GPU.** ${compareToolsByAttr('run-serve', 'inference-engines', 'nvidiaGpu', 'ar')} توثّق دعم NVIDIA GPU (CUDA).`,
+          `**Apple Silicon.** ${compareToolsByAttr('run-serve', 'inference-engines', 'appleSilicon', 'ar')} توثّق دعم Apple Silicon أو Metal أو MLX.`,
+          `**وحدات AMD GPU.** ${compareToolsByAttr('run-serve', 'inference-engines', 'amdGpu', 'ar')} توثّق دعم AMD GPU.`,
+          `**الاستدلال على CPU.** ${compareToolsByAttr('run-serve', 'inference-engines', 'cpuInference', 'ar')} توثّق تشغيل الاستدلال على CPU.`,
+          `**عدة وحدات GPU وعدة عقد.** ${compareToolsByAttr('run-serve', 'inference-engines', 'distributed', 'ar')} توثّق الاستدلال على عدة وحدات GPU أو بالتوازي الموتري (tensor-parallel) أو على عدة عقد.`,
+          `**الرخصة.** معظم المحركات هنا بترخيص Apache-2.0 (${ENGINES.license['Apache-2.0'] ?? 0} أداة) أو MIT (${ENGINES.license['MIT'] ?? 0})؛ أما KoboldCpp وtext-generation-webui فبترخيص AGPL-3.0. تفرض رخص copyleft شروطًا على توزيع النسخ المعدّلة — راجع [شرح رخص أدوات الذكاء الاصطناعي](/ar/power-local-llm/ai-tool-licenses-explained).`,
         ],
       },
       runtimeDifferences: {
         id: 'runtime-differences',
         title: 'بيئات التشغيل والمديرون: ما الذي يختلف',
         items: [
-          '**واجهة برمجة متوافقة مع OpenAI.** [Docker Model Runner](/ar/power-local-llm/docker-model-runner-review)، [Foundry Local](/ar/power-local-llm/foundry-local-review)، [GPUStack](/ar/power-local-llm/gpustack-review)، [Jan](/ar/power-local-llm/jan-review)، [Lemonade](/ar/power-local-llm/lemonade-review)، [Llama](/ar/power-local-llm/llama-app-review)، و[Osaurus](/ar/power-local-llm/osaurus-ai-review) توثّق واجهة برمجة متوافقة مع OpenAI.',
-          '**تطبيق سطح المكتب.** [GPT4All](/ar/power-local-llm/gpt4all-review)، [Jan](/ar/power-local-llm/jan-review)، [Llama](/ar/power-local-llm/llama-app-review)، [LM Studio](/ar/power-local-llm/lm-studio-review)، [Osaurus](/ar/power-local-llm/osaurus-ai-review)، و[Ypipe](/ar/power-local-llm/ypipe-review) توثّق تطبيق سطح مكتب قابلًا للتثبيت.',
-          '**مكتبة نماذج مدمجة.** [Foundry Local](/ar/power-local-llm/foundry-local-review)، [GPUStack](/ar/power-local-llm/gpustack-review)، [Jan](/ar/power-local-llm/jan-review)، [Lemonade](/ar/power-local-llm/lemonade-review)، [Llama](/ar/power-local-llm/llama-app-review)، [LM Studio](/ar/power-local-llm/lm-studio-review)، و[Ollama](/ar/power-local-llm/ollama-review) توثّق وسيلة مدمجة للعثور على النماذج وتنزيلها.',
-          '**الوضع بلا واجهة أو وضع الخادم.** [DreamServer](/ar/power-local-llm/dreamserver-review)، [GPUStack](/ar/power-local-llm/gpustack-review)، [Lemonade](/ar/power-local-llm/lemonade-review)، و[Osaurus](/ar/power-local-llm/osaurus-ai-review) توثّق التشغيل كخدمة في الخلفية أو كخادم دون واجهة رسومية.',
-          '**الرخصة والسعر.** أربع من بيئات التشغيل هنا بترخيص Apache-2.0 وخمس بترخيص MIT. أما LM Studio وDocker Model Runner فمملوكتان (LM Studio مجاني الاستخدام؛ وDocker Model Runner مضمَّن مع Docker Desktop)، وMsty مغلق المصدر مع خطة مجانية، وتستخدم RunAnywhere وYPipe شروطها الخاصة أو غير موثّقة — راجع كل مراجعة.',
+          `**واجهة برمجة متوافقة مع OpenAI.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'openaiApi', 'ar')} توثّق واجهة برمجة متوافقة مع OpenAI.`,
+          `**تطبيق سطح المكتب.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'desktopApp', 'ar')} توثّق تطبيق سطح مكتب قابلًا للتثبيت.`,
+          `**مكتبة نماذج مدمجة.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'modelLibrary', 'ar')} توثّق وسيلة مدمجة للعثور على النماذج وتنزيلها.`,
+          `**الوضع بلا واجهة أو وضع الخادم.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'headless', 'ar')} توثّق التشغيل كخدمة في الخلفية أو كخادم دون واجهة رسومية.`,
+          `**الرخصة والسعر.** ${RUNTIMES.license['Apache-2.0'] ?? 0} من بيئات التشغيل هنا بترخيص Apache-2.0 و${RUNTIMES.license['MIT'] ?? 0} بترخيص MIT. أما LM Studio فمملوك (ومجاني الاستخدام)، وDocker Model Runner مضمَّن مع Docker Desktop (شروط الترخيص في مراجعته)، وMsty مغلق المصدر مع خطة مجانية، وتستخدم RunAnywhere وYPipe شروطها الخاصة أو غير موثّقة — راجع كل مراجعة.`,
         ],
       },
       gatewayDifferences: {
         id: 'gateway-differences',
         title: 'المسيّرات والبوابات: ما الذي يختلف',
         items: [
-          '**نقطة نهاية متوافقة مع OpenAI.** [AIClient2API](/ar/power-local-llm/aiclient2api-review) و[litellm](/ar/power-local-llm/litellm-review) توثّق نقطة نهاية متوافقة مع OpenAI.',
+          `**نقطة نهاية متوافقة مع OpenAI.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'openaiApi', 'ar')} توثّق نقطة نهاية متوافقة مع OpenAI.`,
           '**التوجيه إلى النماذج المحلية.** [litellm](/ar/power-local-llm/litellm-review) يوثّق النماذج المحلية أو المستضافة ذاتيًا (مثل Ollama) ضمن المزوّدين المدعومين.',
-          '**البديل الاحتياطي وموازنة الحمل.** [AIClient2API](/ar/power-local-llm/aiclient2api-review)، [ClawRouter](/ar/power-local-llm/clawrouter-review)، و[litellm](/ar/power-local-llm/litellm-review) توثّق البديل الاحتياطي أو إعادة المحاولة أو موازنة الحمل عبر النماذج أو المزوّدين.',
-          '**الرخصة.** اثنتان من الأربع بترخيص MIT، وواحدة بترخيص GPL-3.0، وواحدة بترخيص Apache-2.0.',
+          `**البديل الاحتياطي وموازنة الحمل.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'fallback', 'ar')} توثّق البديل الاحتياطي أو إعادة المحاولة أو موازنة الحمل عبر النماذج أو المزوّدين.`,
+          `**الرخصة.** ${RT.license['MIT'] ?? 0} من ${RT.count} بترخيص MIT، و${RT.license['GPL-3.0'] ?? 0} بترخيص GPL-3.0، و${RT.license['AGPL-3.0'] ?? 0} بترخيص AGPL-3.0، و${RT.license['Apache-2.0'] ?? 0} بترخيص Apache-2.0، و${RT.license['Not stated'] ?? 0} منها لم تذكر ترخيصها.`,
         ],
       },
       limitations: {
@@ -1757,7 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-20',
-      dateModified: '2026-10-24',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1790,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-10-24',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1818,16 +1823,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**PromptQuorum 디렉터리에 있는 로컬 실행·서빙 도구 ${RUN_SERVE_TOTAL}개는 서로 따로 비교해야 하는 세 종류로 나뉩니다. 추론 엔진(${RUN_SERVE_INFERENCE_ENGINES}개), 런타임과 매니저(${RUN_SERVE_RUNTIMES_MANAGERS}개), 라우터와 게이트웨이(${RUN_SERVE_ROUTERS_GATEWAYS}개)입니다.** 엔진 중 15개는 NVIDIA GPU 지원을, 17개는 Apple Silicon 지원을, 21개는 OpenAI 호환 API를 문서화하고 있으며, 런타임 중 6개는 OpenAI 호환 API를 문서화하고 있습니다. 아래 비교표를 활용하되, 설치하기 전에 각 도구의 리뷰를 읽어 보세요.`,
+      `**PromptQuorum 디렉터리에 있는 로컬 실행·서빙 도구 ${RUN_SERVE_TOTAL}개는 서로 따로 비교해야 하는 세 종류로 나뉩니다. 추론 엔진(${RUN_SERVE_INFERENCE_ENGINES}개), 런타임과 매니저(${RUN_SERVE_RUNTIMES_MANAGERS}개), 라우터와 게이트웨이(${RUN_SERVE_ROUTERS_GATEWAYS}개)입니다.** 엔진 중 ${EA.nvidiaGpu}개는 NVIDIA GPU 지원을, ${EA.appleSilicon}개는 Apple Silicon 지원을, ${EA.openaiApi}개는 OpenAI 호환 API를 문서화하고 있으며, 런타임 중 ${RA.openaiApi}개는 OpenAI 호환 API를 문서화하고 있습니다. 아래 비교표를 활용하되, 설치하기 전에 각 도구의 리뷰를 읽어 보세요.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 추론 도구를 써야 하나요?',
         answer:
           '도구의 종류에 따라 다르므로, 한 번에 한 종류 안에서 비교하세요. 가장 중요한 조건, 즉 보유한 하드웨어(NVIDIA, Apple Silicon, AMD 또는 CPU), OpenAI 호환 API, 멀티 GPU 확장, 데스크톱 앱 또는 헤드리스 서버 중 무엇이 핵심인지에 따라 고르고, 각 도구의 공식 문서를 바탕으로 생성한 아래 표를 활용하세요.',
         bullets: [
-          '추론 엔진: 하드웨어 지원(NVIDIA, Apple Silicon, AMD, CPU), OpenAI 호환 API, 멀티 GPU 또는 멀티 노드 추론을 기준으로 30개 도구를 비교.',
-          '런타임과 매니저: API, 데스크톱 앱, 내장 모델 라이브러리, 헤드리스 모드를 기준으로 13개 도구를 비교.',
-          '라우터와 게이트웨이: OpenAI 호환 엔드포인트, 로컬 모델, 폴백을 기준으로 4개 도구를 비교.',
+          `추론 엔진: 하드웨어 지원(NVIDIA, Apple Silicon, AMD, CPU), OpenAI 호환 API, 멀티 GPU 또는 멀티 노드 추론을 기준으로 ${SEG['inference-engines']}개 도구를 비교.`,
+          `런타임과 매니저: API, 데스크톱 앱, 내장 모델 라이브러리, 헤드리스 모드를 기준으로 ${SEG['runtimes-managers']}개 도구를 비교.`,
+          `라우터와 게이트웨이: OpenAI 호환 엔드포인트, 로컬 모델, 폴백을 기준으로 ${SEG['routers-gateways']}개 도구를 비교.`,
           '대시(—)는 프로젝트 문서에 해당 내용이 명시되어 있지 않다는 뜻이며, 기능이 없다는 뜻이 아닙니다.',
         ],
       },
@@ -1859,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `도구 ${RUN_SERVE_TOTAL}개, 세 종류: 추론 엔진(${RUN_SERVE_INFERENCE_ENGINES}개), 런타임과 매니저(${RUN_SERVE_RUNTIMES_MANAGERS}개), 라우터와 게이트웨이(${RUN_SERVE_ROUTERS_GATEWAYS}개). Ollama는 엔진이자 런타임이므로 두 그룹에 모두 나타납니다.`,
+          `도구 ${RUN_SERVE_TOTAL}개, 세 종류: 추론 엔진(${RUN_SERVE_INFERENCE_ENGINES}개), 런타임과 매니저(${RUN_SERVE_RUNTIMES_MANAGERS}개), 라우터와 게이트웨이(${RUN_SERVE_ROUTERS_GATEWAYS}개). 엔진이자 런타임인 도구(${compareToolsInBothSegments('run-serve', 'inference-engines', 'runtimes-managers', 'ko')})는 두 그룹에 모두 나타납니다.`,
           '표는 각 도구의 레코드로 생성되고 공식 README 또는 사이트와 대조해 확인했습니다. 대시는 "문서에 명시되지 않음"을 뜻하며 "아니오"를 뜻하지 않습니다. 잘 알려진 일부 도구는 여기서 인용한 문서에 특정 기능에 대한 언급이 없어 해당 셀이 대시로 표시됩니다.',
           '표의 모든 도구 이름은 해당 도구의 PromptQuorum 리뷰로 연결되며, 설치 단계와 한계는 그 리뷰에서 다룹니다.',
         ],
@@ -1883,34 +1888,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'engine-differences',
         title: '추론 엔진: 무엇이 다른가',
         items: [
-          '**OpenAI 호환 API.** [candle-vllm](/ko/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/ko/power-local-llm/dynamo-review), [exo](/ko/power-local-llm/exo-review), [KoboldCpp](/ko/power-local-llm/koboldcpp-review), [KServe](/ko/power-local-llm/kserve-review), [llama.cpp](/ko/power-local-llm/llama-cpp-explained), [LocalAI](/ko/power-local-llm/localai-explained), [LoRAX](/ko/power-local-llm/lorax-review), [Lucebox](/ko/power-local-llm/lucebox-review), [MLC LLM](/ko/power-local-llm/mlc-llm-explained), [mlx-serve](/ko/power-local-llm/mlx-serve-review), [mlxcel](/ko/power-local-llm/mlxcel-review), [OlliteRT](/ko/power-local-llm/ollitert-review), [oMLX](/ko/power-local-llm/omlx-review), [OpenLLM](/ko/power-local-llm/openllm-review), [Rapid-MLX](/ko/power-local-llm/rapid-mlx-review), [Shimmy](/ko/power-local-llm/shimmy-review), [SwiftLM](/ko/power-local-llm/swiftlm-review), [text-generation-webui](/ko/local-llms/text-generation-webui-review), [vllm-mlx](/ko/power-local-llm/vllm-mlx-review), [vLLM](/ko/power-local-llm/vllm-explained)은 OpenAI 호환 HTTP API를 문서화하고 있어, OpenAI API용으로 만든 앱이 이들을 가리키도록 설정할 수 있습니다.',
-          '**NVIDIA GPU.** [candle-vllm](/ko/power-local-llm/candle-vllm-review), [ExLlamaV2](/ko/power-local-llm/exllamav2-explained), [KoboldCpp](/ko/power-local-llm/koboldcpp-review), [llama.cpp](/ko/power-local-llm/llama-cpp-explained), [LMDeploy](/ko/power-local-llm/lmdeploy-review), [LocalAI](/ko/power-local-llm/localai-explained), [LoRAX](/ko/power-local-llm/lorax-review), [Lucebox](/ko/power-local-llm/lucebox-review), [MLC LLM](/ko/power-local-llm/mlc-llm-explained), [mlxcel](/ko/power-local-llm/mlxcel-review), [SGLang](/ko/power-local-llm/sglang-explained), [Shimmy](/ko/power-local-llm/shimmy-review), [TensorRT-LLM](/ko/power-local-llm/tensorrt-llm-explained), [text-generation-webui](/ko/local-llms/text-generation-webui-review), [vLLM](/ko/power-local-llm/vllm-explained)은 NVIDIA GPU(CUDA) 지원을 문서화하고 있습니다.',
-          '**Apple Silicon.** [candle-vllm](/ko/power-local-llm/candle-vllm-review), [claude-code-local](/ko/power-local-llm/claude-code-local-review), [exo](/ko/power-local-llm/exo-review), [KoboldCpp](/ko/power-local-llm/koboldcpp-review), [llama.cpp](/ko/power-local-llm/llama-cpp-explained), [LocalAI](/ko/power-local-llm/localai-explained), [MLC LLM](/ko/power-local-llm/mlc-llm-explained), [MLX-LM](/ko/power-local-llm/mlx-lm-explained), [mlx-serve](/ko/power-local-llm/mlx-serve-review), [mlxcel](/ko/power-local-llm/mlxcel-review), [oMLX](/ko/power-local-llm/omlx-review), [Rapid-MLX](/ko/power-local-llm/rapid-mlx-review), [Shimmy](/ko/power-local-llm/shimmy-review), [SwiftLM](/ko/power-local-llm/swiftlm-review), [text-generation-webui](/ko/local-llms/text-generation-webui-review), [TurboFieldfare](/ko/power-local-llm/turbo-fieldfare-review), [vllm-mlx](/ko/power-local-llm/vllm-mlx-review)는 Apple Silicon, Metal 또는 MLX 지원을 문서화하고 있습니다.',
-          '**AMD GPU.** [KoboldCpp](/ko/power-local-llm/koboldcpp-review), [llama.cpp](/ko/power-local-llm/llama-cpp-explained), [LocalAI](/ko/power-local-llm/localai-explained), [Lucebox](/ko/power-local-llm/lucebox-review), [MLC LLM](/ko/power-local-llm/mlc-llm-explained), [SGLang](/ko/power-local-llm/sglang-explained), [Shimmy](/ko/power-local-llm/shimmy-review), [text-generation-webui](/ko/local-llms/text-generation-webui-review), [vLLM](/ko/power-local-llm/vllm-explained)은 AMD GPU 지원을 문서화하고 있습니다.',
-          '**CPU 추론.** [exo](/ko/power-local-llm/exo-review), [KoboldCpp](/ko/power-local-llm/koboldcpp-review), [llama.cpp](/ko/power-local-llm/llama-cpp-explained), [LocalAI](/ko/power-local-llm/localai-explained), [OlliteRT](/ko/power-local-llm/ollitert-review), [SGLang](/ko/power-local-llm/sglang-explained), [text-generation-webui](/ko/local-llms/text-generation-webui-review), [vLLM](/ko/power-local-llm/vllm-explained)은 CPU에서 추론을 실행하는 방법을 문서화하고 있습니다.',
-          '**멀티 GPU 및 멀티 노드.** [candle-vllm](/ko/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/ko/power-local-llm/dynamo-review), [ExLlamaV2](/ko/power-local-llm/exllamav2-explained), [exo](/ko/power-local-llm/exo-review), [KServe](/ko/power-local-llm/kserve-review), [LMDeploy](/ko/power-local-llm/lmdeploy-review), [LocalAI](/ko/power-local-llm/localai-explained), [LoRAX](/ko/power-local-llm/lorax-review), [Lucebox](/ko/power-local-llm/lucebox-review), [MLX-LM](/ko/power-local-llm/mlx-lm-explained), [mlxcel](/ko/power-local-llm/mlxcel-review), [oMLX](/ko/power-local-llm/omlx-review), [SGLang](/ko/power-local-llm/sglang-explained), [vLLM](/ko/power-local-llm/vllm-explained)은 멀티 GPU, 텐서 병렬 또는 멀티 노드 추론을 문서화하고 있습니다.',
-          '**라이선스.** 여기 있는 엔진 대부분은 Apache-2.0(19개) 또는 MIT(9개)이며, KoboldCpp와 text-generation-webui는 AGPL-3.0입니다. 카피레프트 라이선스는 수정본을 배포할 때 조건을 붙입니다. [AI 도구 라이선스 설명](/ko/power-local-llm/ai-tool-licenses-explained)을 참고하세요.',
+          `**OpenAI 호환 API.** ${compareToolsByAttr('run-serve', 'inference-engines', 'openaiApi', 'ko')}은 OpenAI 호환 HTTP API를 문서화하고 있어, OpenAI API용으로 만든 앱이 이들을 가리키도록 설정할 수 있습니다.`,
+          `**NVIDIA GPU.** ${compareToolsByAttr('run-serve', 'inference-engines', 'nvidiaGpu', 'ko')}은 NVIDIA GPU(CUDA) 지원을 문서화하고 있습니다.`,
+          `**Apple Silicon.** ${compareToolsByAttr('run-serve', 'inference-engines', 'appleSilicon', 'ko')}는 Apple Silicon, Metal 또는 MLX 지원을 문서화하고 있습니다.`,
+          `**AMD GPU.** ${compareToolsByAttr('run-serve', 'inference-engines', 'amdGpu', 'ko')}은 AMD GPU 지원을 문서화하고 있습니다.`,
+          `**CPU 추론.** ${compareToolsByAttr('run-serve', 'inference-engines', 'cpuInference', 'ko')}은 CPU에서 추론을 실행하는 방법을 문서화하고 있습니다.`,
+          `**멀티 GPU 및 멀티 노드.** ${compareToolsByAttr('run-serve', 'inference-engines', 'distributed', 'ko')}은 멀티 GPU, 텐서 병렬 또는 멀티 노드 추론을 문서화하고 있습니다.`,
+          `**라이선스.** 여기 있는 엔진 대부분은 Apache-2.0(${ENGINES.license['Apache-2.0'] ?? 0}개) 또는 MIT(${ENGINES.license['MIT'] ?? 0}개)이며, KoboldCpp와 text-generation-webui는 AGPL-3.0입니다. 카피레프트 라이선스는 수정본을 배포할 때 조건을 붙입니다. [AI 도구 라이선스 설명](/ko/power-local-llm/ai-tool-licenses-explained)을 참고하세요.`,
         ],
       },
       runtimeDifferences: {
         id: 'runtime-differences',
         title: '런타임과 매니저: 무엇이 다른가',
         items: [
-          '**OpenAI 호환 API.** [Docker Model Runner](/ko/power-local-llm/docker-model-runner-review), [Foundry Local](/ko/power-local-llm/foundry-local-review), [GPUStack](/ko/power-local-llm/gpustack-review), [Jan](/ko/power-local-llm/jan-review), [Lemonade](/ko/power-local-llm/lemonade-review), [Llama](/ko/power-local-llm/llama-app-review), [Osaurus](/ko/power-local-llm/osaurus-ai-review)는 OpenAI 호환 API를 문서화하고 있습니다.',
-          '**데스크톱 앱.** [GPT4All](/ko/power-local-llm/gpt4all-review), [Jan](/ko/power-local-llm/jan-review), [Llama](/ko/power-local-llm/llama-app-review), [LM Studio](/ko/power-local-llm/lm-studio-review), [Osaurus](/ko/power-local-llm/osaurus-ai-review), [Ypipe](/ko/power-local-llm/ypipe-review)는 설치형 데스크톱 앱을 문서화하고 있습니다.',
-          '**내장 모델 라이브러리.** [Foundry Local](/ko/power-local-llm/foundry-local-review), [GPUStack](/ko/power-local-llm/gpustack-review), [Jan](/ko/power-local-llm/jan-review), [Lemonade](/ko/power-local-llm/lemonade-review), [Llama](/ko/power-local-llm/llama-app-review), [LM Studio](/ko/power-local-llm/lm-studio-review), [Ollama](/ko/power-local-llm/ollama-review)는 모델을 찾고 내려받는 내장 기능을 문서화하고 있습니다.',
-          '**헤드리스 또는 서버 모드.** [DreamServer](/ko/power-local-llm/dreamserver-review), [GPUStack](/ko/power-local-llm/gpustack-review), [Lemonade](/ko/power-local-llm/lemonade-review), [Osaurus](/ko/power-local-llm/osaurus-ai-review)는 GUI 없이 백그라운드 서비스 또는 서버로 실행하는 방법을 문서화하고 있습니다.',
-          '**라이선스와 가격.** 여기 있는 런타임 중 네 개는 Apache-2.0이고 다섯 개는 MIT입니다. LM Studio와 Docker Model Runner는 독점 소프트웨어이며(LM Studio는 무료로 사용할 수 있고, Docker Model Runner는 Docker Desktop에 포함되어 있습니다), Msty는 무료 티어가 있는 비공개 소스이고, RunAnywhere와 YPipe는 자체 약관을 사용하거나 약관이 문서화되어 있지 않습니다. 각 리뷰에서 확인하세요.',
+          `**OpenAI 호환 API.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'openaiApi', 'ko')}는 OpenAI 호환 API를 문서화하고 있습니다.`,
+          `**데스크톱 앱.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'desktopApp', 'ko')}는 설치형 데스크톱 앱을 문서화하고 있습니다.`,
+          `**내장 모델 라이브러리.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'modelLibrary', 'ko')}는 모델을 찾고 내려받는 내장 기능을 문서화하고 있습니다.`,
+          `**헤드리스 또는 서버 모드.** ${compareToolsByAttr('run-serve', 'runtimes-managers', 'headless', 'ko')}는 GUI 없이 백그라운드 서비스 또는 서버로 실행하는 방법을 문서화하고 있습니다.`,
+          `**라이선스와 가격.** 여기 있는 런타임 중 ${RUNTIMES.license['Apache-2.0'] ?? 0}개는 Apache-2.0이고 ${RUNTIMES.license['MIT'] ?? 0}개는 MIT입니다. LM Studio는 독점 소프트웨어이며(무료로 사용할 수 있습니다), Docker Model Runner는 Docker Desktop에 포함되어 있고(라이선스 조건은 해당 리뷰를 참고하세요), Msty는 무료 티어가 있는 비공개 소스이고, RunAnywhere와 YPipe는 자체 약관을 사용하거나 약관이 문서화되어 있지 않습니다. 각 리뷰에서 확인하세요.`,
         ],
       },
       gatewayDifferences: {
         id: 'gateway-differences',
         title: '라우터와 게이트웨이: 무엇이 다른가',
         items: [
-          '**OpenAI 호환 엔드포인트.** [AIClient2API](/ko/power-local-llm/aiclient2api-review)와 [litellm](/ko/power-local-llm/litellm-review)은 OpenAI 호환 엔드포인트를 문서화하고 있습니다.',
+          `**OpenAI 호환 엔드포인트.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'openaiApi', 'ko')}은 OpenAI 호환 엔드포인트를 문서화하고 있습니다.`,
           '**로컬 모델로의 라우팅.** [litellm](/ko/power-local-llm/litellm-review)은 지원하는 프로바이더 중에 로컬 또는 셀프 호스팅 모델(예: Ollama)이 있다고 문서화하고 있습니다.',
-          '**폴백과 로드 밸런싱.** [AIClient2API](/ko/power-local-llm/aiclient2api-review), [ClawRouter](/ko/power-local-llm/clawrouter-review), [litellm](/ko/power-local-llm/litellm-review)은 모델 또는 프로바이더 간의 폴백, 재시도 또는 로드 밸런싱을 문서화하고 있습니다.',
-          '**라이선스.** 4개 중 2개는 MIT, 1개는 GPL-3.0, 1개는 Apache-2.0입니다.',
+          `**폴백과 로드 밸런싱.** ${compareToolsByAttr('run-serve', 'routers-gateways', 'fallback', 'ko')}은 모델 또는 프로바이더 간의 폴백, 재시도 또는 로드 밸런싱을 문서화하고 있습니다.`,
+          `**라이선스.** ${RT.count}개 중 ${RT.license['MIT'] ?? 0}개는 MIT, ${RT.license['GPL-3.0'] ?? 0}개는 GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0}개는 AGPL-3.0, ${RT.license['Apache-2.0'] ?? 0}개는 Apache-2.0이며, ${RT.license['Not stated'] ?? 0}개는 라이선스를 명시하지 않았습니다.`,
         ],
       },
       limitations: {
@@ -1977,7 +1982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-20',
-      dateModified: '2026-10-24',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -2006,3 +2011,4 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 }
+

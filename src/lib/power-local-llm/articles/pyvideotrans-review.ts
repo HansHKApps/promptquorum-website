@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Platform': '[Privacy policy](https://en.pyvideotrans.com/yinsizhengce)', 'How to get it': 'Covers the documentation website, not the app' },
           { 'Platform': '[Source code](https://github.com/jianchang512/pyvideotrans)', 'How to get it': 'GitHub repository (GPL-3.0)' },
         ],
-        note: 'macOS and Linux need a terminal and developer-style setup; the Windows archive is the only no-terminal path.',
+        note: 'Per the guide, macOS and Linux need a terminal and developer-style setup, and the Windows archive is the only path without a terminal. That archive is unsigned and hosted outside GitHub release files, so download it only from the links on the official website or in the release notes, scan it before running it, and treat a security-software warning as a reason to check the file, not to switch protection off.',
       },
       requirements: {
         id: 'requirements',
@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plattform': '[Datenschutzerklärung](https://en.pyvideotrans.com/yinsizhengce)', 'So bekommen Sie es': 'Gilt für die Dokumentations-Website, nicht für die App' },
           { 'Plattform': '[Quellcode](https://github.com/jianchang512/pyvideotrans)', 'So bekommen Sie es': 'GitHub-Repository (GPL-3.0)' },
         ],
-        note: 'macOS und Linux brauchen ein Terminal und eine entwicklerartige Einrichtung; das Windows-Archiv ist der einzige Weg ohne Terminal.',
+        note: 'Laut Handbuch brauchen macOS und Linux ein Terminal und eine entwicklerartige Einrichtung, und das Windows-Archiv ist der einzige Weg ohne Terminal. Dieses Archiv ist unsigniert und außerhalb der GitHub-Release-Dateien gehostet; laden Sie es daher nur über die Links auf der offiziellen Website oder in den Release-Notizen herunter, prüfen Sie es vor dem Start mit einem Virenscanner und werten Sie eine Warnung der Sicherheitssoftware als Anlass, die Datei zu prüfen, nicht als Grund, den Schutz abzuschalten.',
       },
       requirements: {
         id: 'requirements',
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': '[Política de privacidad](https://en.pyvideotrans.com/yinsizhengce)', 'Cómo conseguirla': 'Cubre el sitio de documentación, no la app' },
           { 'Plataforma': '[Código fuente](https://github.com/jianchang512/pyvideotrans)', 'Cómo conseguirla': 'Repositorio de GitHub (GPL-3.0)' },
         ],
-        note: 'macOS y Linux necesitan una terminal y una instalación de tipo desarrollador; el archivo de Windows es la única vía sin terminal.',
+        note: 'Según la guía, macOS y Linux necesitan una terminal y una instalación de tipo desarrollador, y el archivo de Windows es la única vía sin terminal. Ese archivo no tiene firma y se aloja fuera de los archivos de la versión en GitHub, así que descárgalo solo desde los enlaces del sitio web oficial o de las notas de la versión, analízalo antes de ejecutarlo y trata un aviso del software de seguridad como motivo para revisar el archivo, no para desactivar la protección.',
       },
       requirements: {
         id: 'requirements',
@@ -944,7 +944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plateforme': '[Politique de confidentialité](https://en.pyvideotrans.com/yinsizhengce)', "Comment l'obtenir": "Concerne le site de documentation, pas l'application" },
           { 'Plateforme': '[Code source](https://github.com/jianchang512/pyvideotrans)', "Comment l'obtenir": 'Dépôt GitHub (GPL-3.0)' },
         ],
-        note: "macOS et Linux demandent un terminal et une installation de type développeur ; l'archive Windows est la seule voie sans terminal.",
+        note: "Selon le guide, macOS et Linux demandent un terminal et une installation de type développeur, et l'archive Windows est la seule voie sans terminal. Cette archive n'est pas signée et elle est hébergée en dehors des fichiers de la version GitHub : téléchargez-la uniquement depuis les liens du site officiel ou des notes de version, analysez-la avant de l'exécuter et considérez un avertissement du logiciel de sécurité comme une raison de vérifier le fichier, pas de désactiver la protection.",
       },
       requirements: {
         id: 'requirements',
@@ -1215,7 +1215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'プラットフォーム': '[プライバシーポリシー](https://en.pyvideotrans.com/yinsizhengce)', '入手方法': 'ドキュメントサイトが対象で、アプリは対象外' },
           { 'プラットフォーム': '[ソースコード](https://github.com/jianchang512/pyvideotrans)', '入手方法': 'GitHubリポジトリ（GPL-3.0）' },
         ],
-        note: 'macOSとLinuxはターミナルと開発者向けの導入が必要です。ターミナルなしで使えるのはWindows版のアーカイブだけです。',
+        note: 'ガイドによると、macOSとLinuxはターミナルと開発者向けの導入が必要で、ターミナルなしで使えるのはWindows版のアーカイブだけです。このアーカイブは署名がなく、GitHubのリリースファイルの外に置かれているため、公式サイトまたはリリースノートのリンクからのみダウンロードし、実行前にウイルススキャンを行ってください。セキュリティソフトの警告は、保護を切る理由ではなく、ファイルを確認する理由として扱ってください。',
       },
       requirements: {
         id: 'requirements',
@@ -1486,7 +1486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': '[Política de privacidade](https://en.pyvideotrans.com/yinsizhengce)', 'Como obter': 'Cobre o site de documentação, não o app' },
           { 'Plataforma': '[Código-fonte](https://github.com/jianchang512/pyvideotrans)', 'Como obter': 'Repositório do GitHub (GPL-3.0)' },
         ],
-        note: 'macOS e Linux exigem um terminal e uma instalação de nível desenvolvedor; o arquivo do Windows é o único caminho sem terminal.',
+        note: 'Segundo o guia, macOS e Linux exigem um terminal e uma instalação de nível desenvolvedor, e o arquivo do Windows é o único caminho sem terminal. Esse arquivo não tem assinatura e fica hospedado fora dos arquivos da versão no GitHub; por isso, baixe-o apenas pelos links do site oficial ou das notas da versão, analise-o antes de executar e trate um alerta do antivírus como motivo para verificar o arquivo, não para desativar a proteção.',
       },
       requirements: {
         id: 'requirements',
@@ -1757,7 +1757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '平台': '[隐私政策](https://en.pyvideotrans.com/yinsizhengce)', '获取方式': '适用于文档网站，不适用于应用本身' },
           { '平台': '[源代码](https://github.com/jianchang512/pyvideotrans)', '获取方式': 'GitHub 仓库（GPL-3.0）' },
         ],
-        note: 'macOS 和 Linux 需要终端和开发者式的安装；Windows 压缩包是唯一无需终端的方式。',
+        note: '据指南，macOS 和 Linux 需要终端和开发者式的安装，Windows 压缩包是唯一无需终端的方式。该压缩包没有签名，托管在 GitHub 发布文件之外，因此请只通过官方网站或发布说明中的链接下载，运行前先用安全软件扫描，并把安全软件的警告当作检查文件的理由，而不是关闭防护的理由。',
       },
       requirements: {
         id: 'requirements',
@@ -2028,7 +2028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المنصة': '[سياسة الخصوصية](https://en.pyvideotrans.com/yinsizhengce)', 'كيفية الحصول عليه': 'تخص موقع التوثيق وليس التطبيق' },
           { 'المنصة': '[الشيفرة المصدرية](https://github.com/jianchang512/pyvideotrans)', 'كيفية الحصول عليه': 'مستودع GitHub (GPL-3.0)' },
         ],
-        note: 'يحتاج macOS وLinux إلى طرفية وتثبيت بأسلوب المطوّرين؛ وأرشيف Windows هو المسار الوحيد دون طرفية.',
+        note: 'بحسب الدليل، يحتاج macOS وLinux إلى طرفية وتثبيت بأسلوب المطوّرين، وأرشيف Windows هو المسار الوحيد دون طرفية. هذا الأرشيف بلا توقيع ومستضاف خارج ملفات الإصدار على GitHub، لذا نزّله فقط من الروابط الواردة في الموقع الرسمي أو في ملاحظات الإصدار، وافحصه قبل تشغيله، واعتبر تحذير برنامج الحماية سببًا لفحص الملف لا لإيقاف الحماية.',
       },
       requirements: {
         id: 'requirements',
@@ -2299,7 +2299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '플랫폼': '[개인정보 처리방침](https://en.pyvideotrans.com/yinsizhengce)', '받는 방법': '문서 사이트 대상이며 앱은 해당하지 않음' },
           { '플랫폼': '[소스 코드](https://github.com/jianchang512/pyvideotrans)', '받는 방법': 'GitHub 저장소(GPL-3.0)' },
         ],
-        note: 'macOS와 Linux는 터미널과 개발자 방식의 설치가 필요하며, 터미널 없이 쓸 수 있는 방법은 Windows 압축 파일뿐입니다.',
+        note: '가이드에 따르면 macOS와 Linux는 터미널과 개발자 방식의 설치가 필요하며, 터미널 없이 쓸 수 있는 방법은 Windows 압축 파일뿐입니다. 이 압축 파일은 서명이 없고 GitHub 릴리스 파일 밖에 호스팅되므로, 공식 웹사이트나 릴리스 노트의 링크에서만 내려받고 실행 전에 검사하십시오. 보안 소프트웨어의 경고는 보호 기능을 끄는 이유가 아니라 파일을 확인하는 이유로 받아들이십시오.',
       },
       requirements: {
         id: 'requirements',

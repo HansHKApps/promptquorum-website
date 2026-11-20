@@ -9,36 +9,49 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { buildCategoryCompareData, compareGroupTotal, compareSegmentAttrCounts, compareSegmentCounts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
-// Live counts from the directory — recomputed at build time so this article never drifts from
-// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
-// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+// Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
+const SEG = compareSegmentCounts('knowledge-retrieval')
+// Tools of one comparison tab (same rows as the table) whose record documents an attribute (true), as a localized "A, B and C" list that links each review.
+// The "What differs" lists use this so they always equal the table's "Yes" cells; pass links = false for a plain list of names.
+const WITH = (segment: string, attr: string, lang: string, links = true): string => {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const rows = buildCategoryCompareData('knowledge-retrieval', 'en').segments.find((s) => s.key === segment)?.rows ?? []
+  const parts = rows
+    .filter((r) => bySlug.get(r.slug)?.compare?.[attr] === true)
+    .map((r) => (links && r.reviewPath ? `[${r.name}](${lang === 'en' ? '' : `/${lang}`}${r.reviewPath})` : r.name))
+  return new Intl.ListFormat(lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en-GB' : lang, { style: 'long', type: 'conjunction' }).format(parts)
+}
+// Live attribute tallies (rows documenting an attribute as true), straight from the table's rows.
+const ATTR = compareSegmentAttrCounts('knowledge-retrieval')
+const VEC = ATTR['vector-databases']
+const RAGF = ATTR['rag-frameworks']
+
+// Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
+// so this article never drifts from the table as the directory grows.
 const TOTAL_APP_COUNT = localAiApps.length
-const REVIEWED_KR_APPS = localAiApps.filter((a) => a.reviewSlug != null)
-const KR_RAG_FRAMEWORKS = REVIEWED_KR_APPS.filter((a) => a.categories.includes('rag-frameworks')).length
-const KR_DOCUMENT_PDF_CHAT = REVIEWED_KR_APPS.filter((a) => a.categories.includes('document-pdf-chat')).length
-const KR_NOTES_INTEGRATIONS = REVIEWED_KR_APPS.filter((a) => a.categories.includes('notes-integrations')).length
-const KR_LOCAL_SEARCH = REVIEWED_KR_APPS.filter((a) => a.categories.includes('local-search')).length
-const KR_VECTOR_DATABASES = REVIEWED_KR_APPS.filter((a) => a.categories.includes('vector-databases')).length
-const KR_CATEGORIES = ['rag-frameworks', 'document-pdf-chat', 'notes-integrations', 'local-search', 'vector-databases']
-const KR_TOTAL = new Set(
-  REVIEWED_KR_APPS.filter((a) => a.categories.some((c) => KR_CATEGORIES.includes(c))).map((a) => a.slug),
-).size
+const KR_RAG_FRAMEWORKS = SEG['rag-frameworks']
+const KR_DOCUMENT_PDF_CHAT = SEG['document-chat']
+const KR_NOTES_INTEGRATIONS = SEG['notes-integrations']
+const KR_LOCAL_SEARCH = SEG['local-search']
+const KR_VECTOR_DATABASES = SEG['vector-databases']
+const KR_TOTAL = compareGroupTotal('knowledge-retrieval')
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search',
     seoTitle: 'Local RAG, Document Chat & Vector DBs Compared 2026',
     intro:
-      `Tools that let a local model work with your own documents fall into five different kinds — RAG frameworks and pipelines, document and PDF chat apps, vector databases, notes-app integrations, and local search and research tools — and no single feature list compares them fairly. This guide compares ${KR_TOTAL} free and freemium tools, one kind at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
+      `Tools that let a local model work with your own documents fall into five different kinds — RAG frameworks and pipelines, document and PDF chat apps, vector databases, notes-app integrations, and local search and research tools — and no single feature list compares them fairly. This guide compares ${KR_TOTAL} free, freemium and paid tools, one kind at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
     metaDescription:
       `Compare ${KR_TOTAL} local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.`,
     twitterDescription:
@@ -59,18 +72,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**The ${KR_TOTAL} local knowledge and retrieval tools in the PromptQuorum directory split into five kinds that should be compared separately: RAG frameworks and pipelines (${KR_RAG_FRAMEWORKS} tools), document and PDF chat apps (${KR_DOCUMENT_PDF_CHAT}), notes-app integrations (${KR_NOTES_INTEGRATIONS}), local search and research tools (${KR_LOCAL_SEARCH}) and vector databases (${KR_VECTOR_DATABASES}).** Among the vector databases, 3 of 4 document hybrid search and 4 of 4 document metadata filtering; among RAG frameworks, 4 document a visual builder and 9 document local-LLM support. Use the comparison table below, and read each tool's own review before you install it.`,
+      `**The ${KR_TOTAL} local knowledge and retrieval tools in the PromptQuorum directory split into five kinds that should be compared separately: RAG frameworks and pipelines (${KR_RAG_FRAMEWORKS} tools), document and PDF chat apps (${KR_DOCUMENT_PDF_CHAT}), notes-app integrations (${KR_NOTES_INTEGRATIONS}), local search and research tools (${KR_LOCAL_SEARCH}) and vector databases (${KR_VECTOR_DATABASES}).** Among the vector databases, ${VEC.hybridSearch} of ${KR_VECTOR_DATABASES} document hybrid search and ${VEC.metadataFilter} of ${KR_VECTOR_DATABASES} document metadata filtering; among RAG frameworks, ${RAGF.visualBuilder} document a visual builder and ${RAGF.localLlm} document local-LLM support. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local RAG or document-chat tool should I use?',
         answer:
           'It depends on the kind of tool, so compare within one kind at a time. Pick by the constraint that matters most — working with local LLMs, Docker or self-hosting, an API, hybrid search, a visual builder, or which notes app you already use — and use the table below, which is generated from each tool\'s official documentation.',
         bullets: [
-          'RAG frameworks: 13 tools compared on visual builder, local LLMs, agents, vector stores, Docker and API.',
-          'Document and PDF chat: 12 tools compared on local LLMs, document formats, citations, desktop app, Docker and API.',
-          'Vector databases: 4 tools compared on hybrid search, metadata filtering, clustering, Docker and managed cloud.',
-          'Notes integrations: 10 tools compared on which notes app, local LLMs, semantic search and chat with notes.',
-          'Local search and research: 7 tools compared on local LLMs, web search, your own files and citations.',
+          `RAG frameworks: ${SEG['rag-frameworks']} tools compared on visual builder, local LLMs, agents, vector stores, Docker and API.`,
+          `Document and PDF chat: ${SEG['document-chat']} tools compared on local LLMs, document formats, citations, desktop app, Docker and API.`,
+          `Vector databases: ${SEG['vector-databases']} tools compared on hybrid search, metadata filtering, clustering, Docker and managed cloud.`,
+          `Notes integrations: ${SEG['notes-integrations']} tools compared on which notes app, local LLMs, semantic search and chat with notes.`,
+          `Local search and research: ${SEG['local-search']} tools compared on local LLMs, web search, your own files and citations.`,
           'A dash (—) means the project\'s documentation does not state it, not that the feature is missing.',
         ],
       },
@@ -129,35 +142,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-differences',
         title: 'RAG Frameworks: What Differs',
         items: [
-          '**Visual builder.** [Dify](/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review) and [Self-hosted AI Starter Kit](/power-local-llm/self-hosted-ai-starter-kit-review) document a visual or drag-and-drop workflow builder.',
-          '**Local LLMs.** [cognee](/power-local-llm/cognee-review), [Haystack](/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/power-local-llm/langchain-chatchat-review), [LlamaIndex](/power-local-llm/llamaindex-rag-framework-review), [MaxKB](/power-local-llm/maxkb-review), [Onyx](/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/power-local-llm/txtai-embedded-vector-database-review) and [Vane (formerly Perplexica)](/power-local-llm/vane-review) document working with local LLMs.',
-          '**Agents.** [Dify](/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/power-local-llm/langchain-chatchat-review), [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review), [LlamaIndex](/power-local-llm/llamaindex-rag-framework-review), [LongMemory](/power-local-llm/longmemory-review), [MaxKB](/power-local-llm/maxkb-review), [Onyx](/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/power-local-llm/self-hosted-ai-starter-kit-review) and [txtai](/power-local-llm/txtai-embedded-vector-database-review) document agent support.',
-          '**Several vector stores.** [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/power-local-llm/langchain-chatchat-review), [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review) and [LlamaIndex](/power-local-llm/llamaindex-rag-framework-review) document integrations with several vector stores.',
-          '**Docker and self-hosting.** [cognee](/power-local-llm/cognee-review), [Dify](/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/power-local-llm/langchain-chatchat-review), [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/power-local-llm/longmemory-review), [MaxKB](/power-local-llm/maxkb-review), [Onyx](/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/power-local-llm/txtai-embedded-vector-database-review) and [Vane (formerly Perplexica)](/power-local-llm/vane-review) document Docker or self-hosted deployment.',
-          '**API.** [cognee](/power-local-llm/cognee-review), [Dify](/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/power-local-llm/langchain-chatchat-review), [Langflow](/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/power-local-llm/longmemory-review), [Onyx](/power-local-llm/onyx-review), [txtai](/power-local-llm/txtai-embedded-vector-database-review) and [Vane (formerly Perplexica)](/power-local-llm/vane-review) document an HTTP or REST API.',
+          `**Visual builder.** ${WITH('rag-frameworks', 'visualBuilder', 'en')} document a visual or drag-and-drop workflow builder.`,
+          `**Local LLMs.** ${WITH('rag-frameworks', 'localLlm', 'en')} document working with local LLMs.`,
+          `**Agents.** ${WITH('rag-frameworks', 'agents', 'en')} document agent support.`,
+          `**Several vector stores.** ${WITH('rag-frameworks', 'multiVector', 'en')} document integrations with several vector stores.`,
+          `**Docker and self-hosting.** ${WITH('rag-frameworks', 'dockerDeploy', 'en')} document Docker or self-hosted deployment.`,
+          `**API.** ${WITH('rag-frameworks', 'apiServer', 'en')} document an HTTP or REST API.`,
         ],
       },
       docDifferences: {
         id: 'doc-differences',
         title: 'Document and PDF Chat: What Differs',
         items: [
-          '**Local LLMs.** [AnythingLLM](/power-local-llm/anythingllm-review), [h2oGPT](/power-local-llm/h2ogpt-review), [Khoj](/power-local-llm/khoj-ai-second-brain-review), [Langchain-Chatchat](/power-local-llm/langchain-chatchat-review), [PrivateGPT](/power-local-llm/privategpt-review), [Quivr](/power-local-llm/quivr-self-hosted-knowledge-assistant-review), [Sidekick](/power-local-llm/sidekick-review) and [Surf](/power-local-llm/surf-review) document working with local LLMs.',
-          '**Document formats.** [AnythingLLM](/power-local-llm/anythingllm-review), [h2oGPT](/power-local-llm/h2ogpt-review), [Khoj](/power-local-llm/khoj-ai-second-brain-review), [PrivateGPT](/power-local-llm/privategpt-review), [Quivr](/power-local-llm/quivr-self-hosted-knowledge-assistant-review) and [RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review) document several supported file formats.',
-          '**Citations.** [AnythingLLM](/power-local-llm/anythingllm-review), [PrivateGPT](/power-local-llm/privategpt-review), [RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review), [Sidekick](/power-local-llm/sidekick-review) and [Surf](/power-local-llm/surf-review) document citing sources in answers.',
-          '**Desktop app.** [AnythingLLM](/power-local-llm/anythingllm-review), [Khoj](/power-local-llm/khoj-ai-second-brain-review) and [Surf](/power-local-llm/surf-review) document an installable desktop app.',
-          '**Docker and self-hosting.** [AnythingLLM](/power-local-llm/anythingllm-review), [h2oGPT](/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/power-local-llm/langchain-chatchat-review), [PrivateGPT](/power-local-llm/privategpt-review) and [RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review) document Docker or self-hosted deployment.',
-          '**API.** [AnythingLLM](/power-local-llm/anythingllm-review), [h2oGPT](/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/power-local-llm/langchain-chatchat-review), [PrivateGPT](/power-local-llm/privategpt-review), [RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review) and [ToolNeuron](/power-local-llm/toolneuron-review) document an API.',
+          `**Local LLMs.** ${WITH('document-chat', 'localLlm', 'en')} document working with local LLMs.`,
+          `**Document formats.** ${WITH('document-chat', 'multiFormat', 'en')} document several supported file formats.`,
+          `**Citations.** ${WITH('document-chat', 'citations', 'en')} document citing sources in answers.`,
+          `**Desktop app.** ${WITH('document-chat', 'desktopApp', 'en')} document an installable desktop app.`,
+          `**Docker and self-hosting.** ${WITH('document-chat', 'dockerDeploy', 'en')} document Docker or self-hosted deployment.`,
+          `**API.** ${WITH('document-chat', 'apiServer', 'en')} document an API.`,
         ],
       },
       vectorDifferences: {
         id: 'vector-differences',
         title: 'Vector Databases: What Differs',
         items: [
-          '**Hybrid search.** [Milvus](/power-local-llm/milvus-review), [Qdrant](/power-local-llm/qdrant-review) and [Weaviate](/power-local-llm/weaviate-review) document hybrid keyword and vector search.',
-          '**Metadata filtering.** [Chroma](/power-local-llm/chroma-review), [Milvus](/power-local-llm/milvus-review), [Qdrant](/power-local-llm/qdrant-review) and [Weaviate](/power-local-llm/weaviate-review) document filtering by metadata.',
-          '**Distributed deployment.** [Milvus](/power-local-llm/milvus-review), [Qdrant](/power-local-llm/qdrant-review) and [Weaviate](/power-local-llm/weaviate-review) document distributed or clustered deployment.',
-          '**Docker and self-hosting.** [Milvus](/power-local-llm/milvus-review), [Qdrant](/power-local-llm/qdrant-review) and [Weaviate](/power-local-llm/weaviate-review) document Docker or self-hosted deployment.',
-          '**Managed cloud.** [Chroma](/power-local-llm/chroma-review), [Milvus](/power-local-llm/milvus-review), [Qdrant](/power-local-llm/qdrant-review) and [Weaviate](/power-local-llm/weaviate-review) document a hosted cloud offering as well as self-hosting.',
+          `**Hybrid search.** ${WITH('vector-databases', 'hybridSearch', 'en')} document hybrid keyword and vector search.`,
+          `**Metadata filtering.** ${WITH('vector-databases', 'metadataFilter', 'en')} document filtering by metadata.`,
+          `**Distributed deployment.** ${WITH('vector-databases', 'clustered', 'en')} document distributed or clustered deployment.`,
+          `**Docker and self-hosting.** ${WITH('vector-databases', 'dockerDeploy', 'en')} document Docker or self-hosted deployment.`,
+          `**Managed cloud.** ${WITH('vector-databases', 'managedCloud', 'en')} document a hosted cloud offering as well as self-hosting.`,
           '**License.** Chroma, Milvus and Qdrant are Apache-2.0 and Weaviate\'s core is BSD-3-Clause, with some gated features under its own Weaviate License — see each tool\'s review for the details.',
         ],
       },
@@ -166,19 +179,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Notes Integrations: What Differs',
         items: [
           '**Which notes app.** [BMO Chatbot](/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/power-local-llm/copilot-for-obsidian-review), [Smart Connections](/power-local-llm/smart-connections-review) and [Text Generator](/power-local-llm/text-generator-review) for Obsidian; [logseq-copilot](/power-local-llm/logseq-copilot-review) for Logseq; [Joplin AI](/power-local-llm/joplin-ai-agent-review) for Joplin; [Blinko](/power-local-llm/blinko-review), [SiYuan](/power-local-llm/siyuan-review) and [Surf](/power-local-llm/surf-review) are standalone notes apps with AI built in.',
-          '**Local LLMs.** [BMO Chatbot](/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/power-local-llm/copilot-for-obsidian-review), [Joplin AI](/power-local-llm/joplin-ai-agent-review), [Karakeep](/power-local-llm/karakeep-review), [logseq-copilot](/power-local-llm/logseq-copilot-review) and [Surf](/power-local-llm/surf-review) document working with local LLMs.',
-          '**Semantic search.** [Karakeep](/power-local-llm/karakeep-review) and [Smart Connections](/power-local-llm/smart-connections-review) document semantic search over notes.',
-          '**Chat with your notes.** [BMO Chatbot](/power-local-llm/bmo-chatbot-review) and [Joplin AI](/power-local-llm/joplin-ai-agent-review) document chatting with your notes.',
+          `**Local LLMs.** ${WITH('notes-integrations', 'localLlm', 'en')} document working with local LLMs.`,
+          `**Semantic search.** ${WITH('notes-integrations', 'semanticSearch', 'en')} document semantic search over notes.`,
+          `**Chat with your notes.** ${WITH('notes-integrations', 'chatNotes', 'en')} document chatting with your notes.`,
         ],
       },
       searchDifferences: {
         id: 'search-differences',
         title: 'Local Search and Research: What Differs',
         items: [
-          '**Local LLMs.** [Farfalle](/power-local-llm/farfalle-review), [Karakeep](/power-local-llm/karakeep-review), [Local Deep Research](/power-local-llm/local-deep-research-review), [Onyx](/power-local-llm/onyx-review) and [Vane (formerly Perplexica)](/power-local-llm/vane-review) document working with local LLMs.',
-          '**Web search.** [Farfalle](/power-local-llm/farfalle-review), [Local Deep Research](/power-local-llm/local-deep-research-review), [Onyx](/power-local-llm/onyx-review) and [Vane (formerly Perplexica)](/power-local-llm/vane-review) document searching the web.',
-          '**Your own files.** [Local Deep Research](/power-local-llm/local-deep-research-review), [Onyx](/power-local-llm/onyx-review) and [Smart Connections](/power-local-llm/smart-connections-review) document searching your own files or notes.',
-          '**Citations.** [Local Deep Research](/power-local-llm/local-deep-research-review) and [Vane (formerly Perplexica)](/power-local-llm/vane-review) document citing sources.',
+          `**Local LLMs.** ${WITH('local-search', 'localLlm', 'en')} document working with local LLMs.`,
+          `**Web search.** ${WITH('local-search', 'webSearch', 'en')} document searching the web.`,
+          `**Your own files.** ${WITH('local-search', 'privateDocs', 'en')} document searching your own files or notes.`,
+          `**Citations.** ${WITH('local-search', 'citations', 'en')} document citing sources.`,
         ],
       },
       limitations: {
@@ -245,7 +258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'en',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -278,14 +291,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche',
     seoTitle: 'Lokale RAG-, Dokumenten-Chat- & Vektor-DB-Tools 2026',
     intro:
-      `Tools, mit denen ein lokales Modell mit den eigenen Dokumenten arbeitet, lassen sich in fünf verschiedene Arten einteilen — RAG-Frameworks und -Pipelines, Dokumenten- und PDF-Chat-Apps, Vektordatenbanken, Notiz-App-Integrationen sowie lokale Such- und Recherche-Tools — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${KR_TOTAL} kostenlose und Freemium-Tools, jeweils innerhalb einer Art, anhand einer Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools — Tabelle und Tests können sich also nicht widersprechen.`,
+      `Tools, mit denen ein lokales Modell mit den eigenen Dokumenten arbeitet, lassen sich in fünf verschiedene Arten einteilen — RAG-Frameworks und -Pipelines, Dokumenten- und PDF-Chat-Apps, Vektordatenbanken, Notiz-App-Integrationen sowie lokale Such- und Recherche-Tools — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${KR_TOTAL} kostenlose, Freemium- und kostenpflichtige Tools, jeweils innerhalb einer Art, anhand einer Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools — Tabelle und Tests können sich also nicht widersprechen.`,
     metaDescription:
       `${KR_TOTAL} lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.`,
     twitterDescription:
@@ -306,18 +319,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Die ${KR_TOTAL} lokalen Wissens- und Retrieval-Tools im PromptQuorum-Verzeichnis lassen sich in fünf Arten einteilen, die getrennt verglichen werden sollten: RAG-Frameworks und -Pipelines (${KR_RAG_FRAMEWORKS} Tools), Dokumenten- und PDF-Chat-Apps (${KR_DOCUMENT_PDF_CHAT}), Notiz-App-Integrationen (${KR_NOTES_INTEGRATIONS}), lokale Such- und Recherche-Tools (${KR_LOCAL_SEARCH}) und Vektordatenbanken (${KR_VECTOR_DATABASES}).** Unter den Vektordatenbanken dokumentieren 3 von 4 die Hybridsuche und 4 von 4 die Metadatenfilterung; unter den RAG-Frameworks dokumentieren 4 einen visuellen Builder und 9 die Unterstützung lokaler LLMs. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Tools, bevor Sie es installieren.`,
+      `**Die ${KR_TOTAL} lokalen Wissens- und Retrieval-Tools im PromptQuorum-Verzeichnis lassen sich in fünf Arten einteilen, die getrennt verglichen werden sollten: RAG-Frameworks und -Pipelines (${KR_RAG_FRAMEWORKS} Tools), Dokumenten- und PDF-Chat-Apps (${KR_DOCUMENT_PDF_CHAT}), Notiz-App-Integrationen (${KR_NOTES_INTEGRATIONS}), lokale Such- und Recherche-Tools (${KR_LOCAL_SEARCH}) und Vektordatenbanken (${KR_VECTOR_DATABASES}).** Unter den Vektordatenbanken dokumentieren ${VEC.hybridSearch} von ${KR_VECTOR_DATABASES} die Hybridsuche und ${VEC.metadataFilter} von ${KR_VECTOR_DATABASES} die Metadatenfilterung; unter den RAG-Frameworks dokumentieren ${RAGF.visualBuilder} einen visuellen Builder und ${RAGF.localLlm} die Unterstützung lokaler LLMs. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Tools, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale RAG- oder Dokumenten-Chat-Tool sollte ich verwenden?',
         answer:
           'Das hängt von der Art des Tools ab, vergleichen Sie also jeweils innerhalb einer Art. Wählen Sie nach der Anforderung, die Ihnen am wichtigsten ist — Arbeit mit lokalen LLMs, Docker oder Self-Hosting, eine API, Hybridsuche, ein visueller Builder oder die Notiz-App, die Sie ohnehin nutzen — und verwenden Sie die Tabelle unten, die aus der offiziellen Dokumentation der einzelnen Tools erzeugt wird.',
         bullets: [
-          'RAG-Frameworks: 13 Tools verglichen nach visuellem Builder, lokalen LLMs, Agenten, Vektorspeichern, Docker und API.',
-          'Dokumenten- und PDF-Chat: 12 Tools verglichen nach lokalen LLMs, Dokumentformaten, Quellenangaben, Desktop-App, Docker und API.',
-          'Vektordatenbanken: 4 Tools verglichen nach Hybridsuche, Metadatenfilterung, Clustering, Docker und verwalteter Cloud.',
-          'Notiz-Integrationen: 10 Tools verglichen nach Notiz-App, lokalen LLMs, semantischer Suche und Chat mit Notizen.',
-          'Lokale Suche und Recherche: 7 Tools verglichen nach lokalen LLMs, Websuche, eigenen Dateien und Quellenangaben.',
+          `RAG-Frameworks: ${SEG['rag-frameworks']} Tools verglichen nach visuellem Builder, lokalen LLMs, Agenten, Vektorspeichern, Docker und API.`,
+          `Dokumenten- und PDF-Chat: ${SEG['document-chat']} Tools verglichen nach lokalen LLMs, Dokumentformaten, Quellenangaben, Desktop-App, Docker und API.`,
+          `Vektordatenbanken: ${SEG['vector-databases']} Tools verglichen nach Hybridsuche, Metadatenfilterung, Clustering, Docker und verwalteter Cloud.`,
+          `Notiz-Integrationen: ${SEG['notes-integrations']} Tools verglichen nach Notiz-App, lokalen LLMs, semantischer Suche und Chat mit Notizen.`,
+          `Lokale Suche und Recherche: ${SEG['local-search']} Tools verglichen nach lokalen LLMs, Websuche, eigenen Dateien und Quellenangaben.`,
           'Ein Strich (—) bedeutet, dass die Dokumentation des Projekts die Angabe nicht nennt — nicht, dass die Funktion fehlt.',
         ],
       },
@@ -376,35 +389,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-differences',
         title: 'RAG-Frameworks: Die Unterschiede',
         items: [
-          '**Visueller Builder.** [Dify](/de/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/de/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langflow](/de/power-local-llm/langflow-visual-ai-orchestration-review) und [Self-hosted AI Starter Kit](/de/power-local-llm/self-hosted-ai-starter-kit-review) dokumentieren einen visuellen oder Drag-and-drop-Workflow-Builder.',
-          '**Lokale LLMs.** [cognee](/de/power-local-llm/cognee-review), [Haystack](/de/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/de/power-local-llm/langchain-chatchat-review), [LlamaIndex](/de/power-local-llm/llamaindex-rag-framework-review), [MaxKB](/de/power-local-llm/maxkb-review), [Onyx](/de/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/de/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/de/power-local-llm/txtai-embedded-vector-database-review) und [Vane (formerly Perplexica)](/de/power-local-llm/vane-review) dokumentieren die Arbeit mit lokalen LLMs.',
-          '**Agenten.** [Dify](/de/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/de/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/de/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/de/power-local-llm/langchain-chatchat-review), [Langflow](/de/power-local-llm/langflow-visual-ai-orchestration-review), [LlamaIndex](/de/power-local-llm/llamaindex-rag-framework-review), [LongMemory](/de/power-local-llm/longmemory-review), [MaxKB](/de/power-local-llm/maxkb-review), [Onyx](/de/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/de/power-local-llm/self-hosted-ai-starter-kit-review) und [txtai](/de/power-local-llm/txtai-embedded-vector-database-review) dokumentieren Agenten-Unterstützung.',
-          '**Mehrere Vektorspeicher.** [Flowise](/de/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/de/power-local-llm/langchain-chatchat-review), [Langflow](/de/power-local-llm/langflow-visual-ai-orchestration-review) und [LlamaIndex](/de/power-local-llm/llamaindex-rag-framework-review) dokumentieren Integrationen mit mehreren Vektorspeichern.',
-          '**Docker und Self-Hosting.** [cognee](/de/power-local-llm/cognee-review), [Dify](/de/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/de/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/de/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/de/power-local-llm/langchain-chatchat-review), [Langflow](/de/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/de/power-local-llm/longmemory-review), [MaxKB](/de/power-local-llm/maxkb-review), [Onyx](/de/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/de/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/de/power-local-llm/txtai-embedded-vector-database-review) und [Vane (formerly Perplexica)](/de/power-local-llm/vane-review) dokumentieren die Bereitstellung per Docker oder Self-Hosting.',
-          '**API.** [cognee](/de/power-local-llm/cognee-review), [Dify](/de/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/de/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/de/power-local-llm/langchain-chatchat-review), [Langflow](/de/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/de/power-local-llm/longmemory-review), [Onyx](/de/power-local-llm/onyx-review), [txtai](/de/power-local-llm/txtai-embedded-vector-database-review) und [Vane (formerly Perplexica)](/de/power-local-llm/vane-review) dokumentieren eine HTTP- oder REST-API.',
+          `**Visueller Builder.** ${WITH('rag-frameworks', 'visualBuilder', 'de')} dokumentieren einen visuellen oder Drag-and-drop-Workflow-Builder.`,
+          `**Lokale LLMs.** ${WITH('rag-frameworks', 'localLlm', 'de')} dokumentieren die Arbeit mit lokalen LLMs.`,
+          `**Agenten.** ${WITH('rag-frameworks', 'agents', 'de')} dokumentieren Agenten-Unterstützung.`,
+          `**Mehrere Vektorspeicher.** ${WITH('rag-frameworks', 'multiVector', 'de')} dokumentieren Integrationen mit mehreren Vektorspeichern.`,
+          `**Docker und Self-Hosting.** ${WITH('rag-frameworks', 'dockerDeploy', 'de')} dokumentieren die Bereitstellung per Docker oder Self-Hosting.`,
+          `**API.** ${WITH('rag-frameworks', 'apiServer', 'de')} dokumentieren eine HTTP- oder REST-API.`,
         ],
       },
       docDifferences: {
         id: 'doc-differences',
         title: 'Dokumenten- und PDF-Chat: Die Unterschiede',
         items: [
-          '**Lokale LLMs.** [AnythingLLM](/de/power-local-llm/anythingllm-review), [h2oGPT](/de/power-local-llm/h2ogpt-review), [Khoj](/de/power-local-llm/khoj-ai-second-brain-review), [Langchain-Chatchat](/de/power-local-llm/langchain-chatchat-review), [PrivateGPT](/de/power-local-llm/privategpt-review), [Quivr](/de/power-local-llm/quivr-self-hosted-knowledge-assistant-review), [Sidekick](/de/power-local-llm/sidekick-review) und [Surf](/de/power-local-llm/surf-review) dokumentieren die Arbeit mit lokalen LLMs.',
-          '**Dokumentformate.** [AnythingLLM](/de/power-local-llm/anythingllm-review), [h2oGPT](/de/power-local-llm/h2ogpt-review), [Khoj](/de/power-local-llm/khoj-ai-second-brain-review), [PrivateGPT](/de/power-local-llm/privategpt-review), [Quivr](/de/power-local-llm/quivr-self-hosted-knowledge-assistant-review) und [RAGFlow](/de/power-local-llm/ragflow-document-understanding-rag-review) dokumentieren mehrere unterstützte Dateiformate.',
-          '**Quellenangaben.** [AnythingLLM](/de/power-local-llm/anythingllm-review), [PrivateGPT](/de/power-local-llm/privategpt-review), [RAGFlow](/de/power-local-llm/ragflow-document-understanding-rag-review), [Sidekick](/de/power-local-llm/sidekick-review) und [Surf](/de/power-local-llm/surf-review) dokumentieren Quellenangaben in den Antworten.',
-          '**Desktop-App.** [AnythingLLM](/de/power-local-llm/anythingllm-review), [Khoj](/de/power-local-llm/khoj-ai-second-brain-review) und [Surf](/de/power-local-llm/surf-review) dokumentieren eine installierbare Desktop-App.',
-          '**Docker und Self-Hosting.** [AnythingLLM](/de/power-local-llm/anythingllm-review), [h2oGPT](/de/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/de/power-local-llm/langchain-chatchat-review), [PrivateGPT](/de/power-local-llm/privategpt-review) und [RAGFlow](/de/power-local-llm/ragflow-document-understanding-rag-review) dokumentieren die Bereitstellung per Docker oder Self-Hosting.',
-          '**API.** [AnythingLLM](/de/power-local-llm/anythingllm-review), [h2oGPT](/de/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/de/power-local-llm/langchain-chatchat-review), [PrivateGPT](/de/power-local-llm/privategpt-review), [RAGFlow](/de/power-local-llm/ragflow-document-understanding-rag-review) und [ToolNeuron](/de/power-local-llm/toolneuron-review) dokumentieren eine API.',
+          `**Lokale LLMs.** ${WITH('document-chat', 'localLlm', 'de')} dokumentieren die Arbeit mit lokalen LLMs.`,
+          `**Dokumentformate.** ${WITH('document-chat', 'multiFormat', 'de')} dokumentieren mehrere unterstützte Dateiformate.`,
+          `**Quellenangaben.** ${WITH('document-chat', 'citations', 'de')} dokumentieren Quellenangaben in den Antworten.`,
+          `**Desktop-App.** ${WITH('document-chat', 'desktopApp', 'de')} dokumentieren eine installierbare Desktop-App.`,
+          `**Docker und Self-Hosting.** ${WITH('document-chat', 'dockerDeploy', 'de')} dokumentieren die Bereitstellung per Docker oder Self-Hosting.`,
+          `**API.** ${WITH('document-chat', 'apiServer', 'de')} dokumentieren eine API.`,
         ],
       },
       vectorDifferences: {
         id: 'vector-differences',
         title: 'Vektordatenbanken: Die Unterschiede',
         items: [
-          '**Hybridsuche.** [Milvus](/de/power-local-llm/milvus-review), [Qdrant](/de/power-local-llm/qdrant-review) und [Weaviate](/de/power-local-llm/weaviate-review) dokumentieren die hybride Schlüsselwort- und Vektorsuche.',
-          '**Metadatenfilterung.** [Chroma](/de/power-local-llm/chroma-review), [Milvus](/de/power-local-llm/milvus-review), [Qdrant](/de/power-local-llm/qdrant-review) und [Weaviate](/de/power-local-llm/weaviate-review) dokumentieren das Filtern nach Metadaten.',
-          '**Verteilter Betrieb.** [Milvus](/de/power-local-llm/milvus-review), [Qdrant](/de/power-local-llm/qdrant-review) und [Weaviate](/de/power-local-llm/weaviate-review) dokumentieren verteilte oder geclusterte Bereitstellung.',
-          '**Docker und Self-Hosting.** [Milvus](/de/power-local-llm/milvus-review), [Qdrant](/de/power-local-llm/qdrant-review) und [Weaviate](/de/power-local-llm/weaviate-review) dokumentieren die Bereitstellung per Docker oder Self-Hosting.',
-          '**Verwaltete Cloud.** [Chroma](/de/power-local-llm/chroma-review), [Milvus](/de/power-local-llm/milvus-review), [Qdrant](/de/power-local-llm/qdrant-review) und [Weaviate](/de/power-local-llm/weaviate-review) dokumentieren neben dem Self-Hosting ein gehostetes Cloud-Angebot.',
+          `**Hybridsuche.** ${WITH('vector-databases', 'hybridSearch', 'de')} dokumentieren die hybride Schlüsselwort- und Vektorsuche.`,
+          `**Metadatenfilterung.** ${WITH('vector-databases', 'metadataFilter', 'de')} dokumentieren das Filtern nach Metadaten.`,
+          `**Verteilter Betrieb.** ${WITH('vector-databases', 'clustered', 'de')} dokumentieren verteilte oder geclusterte Bereitstellung.`,
+          `**Docker und Self-Hosting.** ${WITH('vector-databases', 'dockerDeploy', 'de')} dokumentieren die Bereitstellung per Docker oder Self-Hosting.`,
+          `**Verwaltete Cloud.** ${WITH('vector-databases', 'managedCloud', 'de')} dokumentieren neben dem Self-Hosting ein gehostetes Cloud-Angebot.`,
           '**Lizenz.** Chroma, Milvus und Qdrant stehen unter Apache-2.0, der Kern von Weaviate unter BSD-3-Clause, wobei einige eingeschränkte Funktionen unter der eigenen Weaviate License stehen — Details finden Sie im Test des jeweiligen Tools.',
         ],
       },
@@ -413,19 +426,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Notiz-Integrationen: Die Unterschiede',
         items: [
           '**Welche Notiz-App.** [BMO Chatbot](/de/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/de/power-local-llm/copilot-for-obsidian-review), [Smart Connections](/de/power-local-llm/smart-connections-review) und [Text Generator](/de/power-local-llm/text-generator-review) für Obsidian; [logseq-copilot](/de/power-local-llm/logseq-copilot-review) für Logseq; [Joplin AI](/de/power-local-llm/joplin-ai-agent-review) für Joplin; [Blinko](/de/power-local-llm/blinko-review), [SiYuan](/de/power-local-llm/siyuan-review) und [Surf](/de/power-local-llm/surf-review) sind eigenständige Notiz-Apps mit integrierter KI.',
-          '**Lokale LLMs.** [BMO Chatbot](/de/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/de/power-local-llm/copilot-for-obsidian-review), [Joplin AI](/de/power-local-llm/joplin-ai-agent-review), [Karakeep](/de/power-local-llm/karakeep-review), [logseq-copilot](/de/power-local-llm/logseq-copilot-review) und [Surf](/de/power-local-llm/surf-review) dokumentieren die Arbeit mit lokalen LLMs.',
-          '**Semantische Suche.** [Karakeep](/de/power-local-llm/karakeep-review) und [Smart Connections](/de/power-local-llm/smart-connections-review) dokumentieren semantische Suche über Notizen.',
-          '**Chat mit den eigenen Notizen.** [BMO Chatbot](/de/power-local-llm/bmo-chatbot-review) und [Joplin AI](/de/power-local-llm/joplin-ai-agent-review) dokumentieren das Chatten mit den eigenen Notizen.',
+          `**Lokale LLMs.** ${WITH('notes-integrations', 'localLlm', 'de')} dokumentieren die Arbeit mit lokalen LLMs.`,
+          `**Semantische Suche.** ${WITH('notes-integrations', 'semanticSearch', 'de')} dokumentieren semantische Suche über Notizen.`,
+          `**Chat mit den eigenen Notizen.** ${WITH('notes-integrations', 'chatNotes', 'de')} dokumentieren das Chatten mit den eigenen Notizen.`,
         ],
       },
       searchDifferences: {
         id: 'search-differences',
         title: 'Lokale Suche und Recherche: Die Unterschiede',
         items: [
-          '**Lokale LLMs.** [Farfalle](/de/power-local-llm/farfalle-review), [Karakeep](/de/power-local-llm/karakeep-review), [Local Deep Research](/de/power-local-llm/local-deep-research-review), [Onyx](/de/power-local-llm/onyx-review) und [Vane (formerly Perplexica)](/de/power-local-llm/vane-review) dokumentieren die Arbeit mit lokalen LLMs.',
-          '**Websuche.** [Farfalle](/de/power-local-llm/farfalle-review), [Local Deep Research](/de/power-local-llm/local-deep-research-review), [Onyx](/de/power-local-llm/onyx-review) und [Vane (formerly Perplexica)](/de/power-local-llm/vane-review) dokumentieren die Suche im Web.',
-          '**Eigene Dateien.** [Local Deep Research](/de/power-local-llm/local-deep-research-review), [Onyx](/de/power-local-llm/onyx-review) und [Smart Connections](/de/power-local-llm/smart-connections-review) dokumentieren die Suche in den eigenen Dateien oder Notizen.',
-          '**Quellenangaben.** [Local Deep Research](/de/power-local-llm/local-deep-research-review) und [Vane (formerly Perplexica)](/de/power-local-llm/vane-review) dokumentieren Quellenangaben.',
+          `**Lokale LLMs.** ${WITH('local-search', 'localLlm', 'de')} dokumentieren die Arbeit mit lokalen LLMs.`,
+          `**Websuche.** ${WITH('local-search', 'webSearch', 'de')} dokumentieren die Suche im Web.`,
+          `**Eigene Dateien.** ${WITH('local-search', 'privateDocs', 'de')} dokumentieren die Suche in den eigenen Dateien oder Notizen.`,
+          `**Quellenangaben.** ${WITH('local-search', 'citations', 'de')} dokumentieren Quellenangaben.`,
         ],
       },
       limitations: {
@@ -492,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'de',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -525,14 +538,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche',
     seoTitle: 'RAG local, chat de documents et bases vectorielles 2026',
     intro:
-      `Les outils qui permettent à un modèle local de travailler avec vos propres documents se répartissent en cinq types différents — frameworks et pipelines RAG, applications de chat avec documents et PDF, bases de données vectorielles, intégrations aux applications de notes, et outils de recherche locale — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare ${KR_TOTAL} outils gratuits et freemium, un type à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil, de sorte que le tableau et les avis ne peuvent pas se contredire.`,
+      `Les outils qui permettent à un modèle local de travailler avec vos propres documents se répartissent en cinq types différents — frameworks et pipelines RAG, applications de chat avec documents et PDF, bases de données vectorielles, intégrations aux applications de notes, et outils de recherche locale — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare ${KR_TOTAL} outils gratuits, freemium et payants, un type à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil, de sorte que le tableau et les avis ne peuvent pas se contredire.`,
     metaDescription:
       `Comparez ${KR_TOTAL} outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.`,
     twitterDescription:
@@ -553,18 +566,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Les ${KR_TOTAL} outils locaux de connaissance et de recherche de l'annuaire PromptQuorum se répartissent en cinq types qu'il faut comparer séparément : frameworks et pipelines RAG (${KR_RAG_FRAMEWORKS} outils), applications de chat avec documents et PDF (${KR_DOCUMENT_PDF_CHAT}), intégrations aux applications de notes (${KR_NOTES_INTEGRATIONS}), outils de recherche locale (${KR_LOCAL_SEARCH}) et bases de données vectorielles (${KR_VECTOR_DATABASES}).** Parmi les bases vectorielles, 3 sur 4 documentent la recherche hybride et 4 sur 4 documentent le filtrage par métadonnées ; parmi les frameworks RAG, 4 documentent un constructeur visuel et 9 documentent la prise en charge des LLM locaux. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
+      `**Les ${KR_TOTAL} outils locaux de connaissance et de recherche de l'annuaire PromptQuorum se répartissent en cinq types qu'il faut comparer séparément : frameworks et pipelines RAG (${KR_RAG_FRAMEWORKS} outils), applications de chat avec documents et PDF (${KR_DOCUMENT_PDF_CHAT}), intégrations aux applications de notes (${KR_NOTES_INTEGRATIONS}), outils de recherche locale (${KR_LOCAL_SEARCH}) et bases de données vectorielles (${KR_VECTOR_DATABASES}).** Parmi les bases vectorielles, ${VEC.hybridSearch} sur ${KR_VECTOR_DATABASES} documentent la recherche hybride et ${VEC.metadataFilter} sur ${KR_VECTOR_DATABASES} documentent le filtrage par métadonnées ; parmi les frameworks RAG, ${RAGF.visualBuilder} documentent un constructeur visuel et ${RAGF.localLlm} documentent la prise en charge des LLM locaux. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil de RAG local ou de chat avec documents dois-je utiliser ?',
         answer:
           'Cela dépend du type d\'outil : comparez donc un seul type à la fois. Choisissez selon la contrainte qui compte le plus — fonctionner avec des LLM locaux, Docker ou l\'auto-hébergement, une API, la recherche hybride, un constructeur visuel, ou l\'application de notes que vous utilisez déjà — et appuyez-vous sur le tableau ci-dessous, généré à partir de la documentation officielle de chaque outil.',
         bullets: [
-          'Frameworks RAG : 13 outils comparés sur le constructeur visuel, les LLM locaux, les agents, les bases vectorielles, Docker et l\'API.',
-          'Chat avec documents et PDF : 12 outils comparés sur les LLM locaux, les formats de documents, les citations, l\'application de bureau, Docker et l\'API.',
-          'Bases de données vectorielles : 4 outils comparés sur la recherche hybride, le filtrage par métadonnées, le déploiement en cluster, Docker et le cloud géré.',
-          'Intégrations de notes : 10 outils comparés sur l\'application de notes concernée, les LLM locaux, la recherche sémantique et le chat avec vos notes.',
-          'Recherche et veille locales : 7 outils comparés sur les LLM locaux, la recherche web, vos propres fichiers et les citations.',
+          `Frameworks RAG : ${SEG['rag-frameworks']} outils comparés sur le constructeur visuel, les LLM locaux, les agents, les bases vectorielles, Docker et l'API.`,
+          `Chat avec documents et PDF : ${SEG['document-chat']} outils comparés sur les LLM locaux, les formats de documents, les citations, l'application de bureau, Docker et l'API.`,
+          `Bases de données vectorielles : ${SEG['vector-databases']} outils comparés sur la recherche hybride, le filtrage par métadonnées, le déploiement en cluster, Docker et le cloud géré.`,
+          `Intégrations de notes : ${SEG['notes-integrations']} outils comparés sur l'application de notes concernée, les LLM locaux, la recherche sémantique et le chat avec vos notes.`,
+          `Recherche et veille locales : ${SEG['local-search']} outils comparés sur les LLM locaux, la recherche web, vos propres fichiers et les citations.`,
           'Un tiret (—) signifie que la documentation du projet ne le mentionne pas, et non que la fonctionnalité est absente.',
         ],
       },
@@ -623,35 +636,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-differences',
         title: 'Frameworks RAG : ce qui les distingue',
         items: [
-          '**Constructeur visuel.** [Dify](/fr/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/fr/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langflow](/fr/power-local-llm/langflow-visual-ai-orchestration-review) et [Self-hosted AI Starter Kit](/fr/power-local-llm/self-hosted-ai-starter-kit-review) documentent un constructeur de workflows visuel ou par glisser-déposer.',
-          '**LLM locaux.** [cognee](/fr/power-local-llm/cognee-review), [Haystack](/fr/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/fr/power-local-llm/langchain-chatchat-review), [LlamaIndex](/fr/power-local-llm/llamaindex-rag-framework-review), [MaxKB](/fr/power-local-llm/maxkb-review), [Onyx](/fr/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/fr/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/fr/power-local-llm/txtai-embedded-vector-database-review) et [Vane (formerly Perplexica)](/fr/power-local-llm/vane-review) documentent le fonctionnement avec des LLM locaux.',
-          '**Agents.** [Dify](/fr/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/fr/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/fr/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/fr/power-local-llm/langchain-chatchat-review), [Langflow](/fr/power-local-llm/langflow-visual-ai-orchestration-review), [LlamaIndex](/fr/power-local-llm/llamaindex-rag-framework-review), [LongMemory](/fr/power-local-llm/longmemory-review), [MaxKB](/fr/power-local-llm/maxkb-review), [Onyx](/fr/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/fr/power-local-llm/self-hosted-ai-starter-kit-review) et [txtai](/fr/power-local-llm/txtai-embedded-vector-database-review) documentent la prise en charge des agents.',
-          '**Plusieurs bases vectorielles.** [Flowise](/fr/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/fr/power-local-llm/langchain-chatchat-review), [Langflow](/fr/power-local-llm/langflow-visual-ai-orchestration-review) et [LlamaIndex](/fr/power-local-llm/llamaindex-rag-framework-review) documentent des intégrations avec plusieurs bases vectorielles.',
-          '**Docker et auto-hébergement.** [cognee](/fr/power-local-llm/cognee-review), [Dify](/fr/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/fr/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/fr/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/fr/power-local-llm/langchain-chatchat-review), [Langflow](/fr/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/fr/power-local-llm/longmemory-review), [MaxKB](/fr/power-local-llm/maxkb-review), [Onyx](/fr/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/fr/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/fr/power-local-llm/txtai-embedded-vector-database-review) et [Vane (formerly Perplexica)](/fr/power-local-llm/vane-review) documentent un déploiement Docker ou auto-hébergé.',
-          '**API.** [cognee](/fr/power-local-llm/cognee-review), [Dify](/fr/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/fr/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/fr/power-local-llm/langchain-chatchat-review), [Langflow](/fr/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/fr/power-local-llm/longmemory-review), [Onyx](/fr/power-local-llm/onyx-review), [txtai](/fr/power-local-llm/txtai-embedded-vector-database-review) et [Vane (formerly Perplexica)](/fr/power-local-llm/vane-review) documentent une API HTTP ou REST.',
+          `**Constructeur visuel.** ${WITH('rag-frameworks', 'visualBuilder', 'fr')} documentent un constructeur de workflows visuel ou par glisser-déposer.`,
+          `**LLM locaux.** ${WITH('rag-frameworks', 'localLlm', 'fr')} documentent le fonctionnement avec des LLM locaux.`,
+          `**Agents.** ${WITH('rag-frameworks', 'agents', 'fr')} documentent la prise en charge des agents.`,
+          `**Plusieurs bases vectorielles.** ${WITH('rag-frameworks', 'multiVector', 'fr')} documentent des intégrations avec plusieurs bases vectorielles.`,
+          `**Docker et auto-hébergement.** ${WITH('rag-frameworks', 'dockerDeploy', 'fr')} documentent un déploiement Docker ou auto-hébergé.`,
+          `**API.** ${WITH('rag-frameworks', 'apiServer', 'fr')} documentent une API HTTP ou REST.`,
         ],
       },
       docDifferences: {
         id: 'doc-differences',
         title: 'Chat avec documents et PDF : ce qui les distingue',
         items: [
-          '**LLM locaux.** [AnythingLLM](/fr/power-local-llm/anythingllm-review), [h2oGPT](/fr/power-local-llm/h2ogpt-review), [Khoj](/fr/power-local-llm/khoj-ai-second-brain-review), [Langchain-Chatchat](/fr/power-local-llm/langchain-chatchat-review), [PrivateGPT](/fr/power-local-llm/privategpt-review), [Quivr](/fr/power-local-llm/quivr-self-hosted-knowledge-assistant-review), [Sidekick](/fr/power-local-llm/sidekick-review) et [Surf](/fr/power-local-llm/surf-review) documentent le fonctionnement avec des LLM locaux.',
-          '**Formats de documents.** [AnythingLLM](/fr/power-local-llm/anythingllm-review), [h2oGPT](/fr/power-local-llm/h2ogpt-review), [Khoj](/fr/power-local-llm/khoj-ai-second-brain-review), [PrivateGPT](/fr/power-local-llm/privategpt-review), [Quivr](/fr/power-local-llm/quivr-self-hosted-knowledge-assistant-review) et [RAGFlow](/fr/power-local-llm/ragflow-document-understanding-rag-review) documentent plusieurs formats de fichiers pris en charge.',
-          '**Citations.** [AnythingLLM](/fr/power-local-llm/anythingllm-review), [PrivateGPT](/fr/power-local-llm/privategpt-review), [RAGFlow](/fr/power-local-llm/ragflow-document-understanding-rag-review), [Sidekick](/fr/power-local-llm/sidekick-review) et [Surf](/fr/power-local-llm/surf-review) documentent la citation des sources dans les réponses.',
-          '**Application de bureau.** [AnythingLLM](/fr/power-local-llm/anythingllm-review), [Khoj](/fr/power-local-llm/khoj-ai-second-brain-review) et [Surf](/fr/power-local-llm/surf-review) documentent une application de bureau installable.',
-          '**Docker et auto-hébergement.** [AnythingLLM](/fr/power-local-llm/anythingllm-review), [h2oGPT](/fr/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/fr/power-local-llm/langchain-chatchat-review), [PrivateGPT](/fr/power-local-llm/privategpt-review) et [RAGFlow](/fr/power-local-llm/ragflow-document-understanding-rag-review) documentent un déploiement Docker ou auto-hébergé.',
-          '**API.** [AnythingLLM](/fr/power-local-llm/anythingllm-review), [h2oGPT](/fr/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/fr/power-local-llm/langchain-chatchat-review), [PrivateGPT](/fr/power-local-llm/privategpt-review), [RAGFlow](/fr/power-local-llm/ragflow-document-understanding-rag-review) et [ToolNeuron](/fr/power-local-llm/toolneuron-review) documentent une API.',
+          `**LLM locaux.** ${WITH('document-chat', 'localLlm', 'fr')} documentent le fonctionnement avec des LLM locaux.`,
+          `**Formats de documents.** ${WITH('document-chat', 'multiFormat', 'fr')} documentent plusieurs formats de fichiers pris en charge.`,
+          `**Citations.** ${WITH('document-chat', 'citations', 'fr')} documentent la citation des sources dans les réponses.`,
+          `**Application de bureau.** ${WITH('document-chat', 'desktopApp', 'fr')} documentent une application de bureau installable.`,
+          `**Docker et auto-hébergement.** ${WITH('document-chat', 'dockerDeploy', 'fr')} documentent un déploiement Docker ou auto-hébergé.`,
+          `**API.** ${WITH('document-chat', 'apiServer', 'fr')} documentent une API.`,
         ],
       },
       vectorDifferences: {
         id: 'vector-differences',
         title: 'Bases vectorielles : ce qui les distingue',
         items: [
-          '**Recherche hybride.** [Milvus](/fr/power-local-llm/milvus-review), [Qdrant](/fr/power-local-llm/qdrant-review) et [Weaviate](/fr/power-local-llm/weaviate-review) documentent la recherche hybride par mots-clés et par vecteurs.',
-          '**Filtrage par métadonnées.** [Chroma](/fr/power-local-llm/chroma-review), [Milvus](/fr/power-local-llm/milvus-review), [Qdrant](/fr/power-local-llm/qdrant-review) et [Weaviate](/fr/power-local-llm/weaviate-review) documentent le filtrage par métadonnées.',
-          '**Déploiement distribué.** [Milvus](/fr/power-local-llm/milvus-review), [Qdrant](/fr/power-local-llm/qdrant-review) et [Weaviate](/fr/power-local-llm/weaviate-review) documentent un déploiement distribué ou en cluster.',
-          '**Docker et auto-hébergement.** [Milvus](/fr/power-local-llm/milvus-review), [Qdrant](/fr/power-local-llm/qdrant-review) et [Weaviate](/fr/power-local-llm/weaviate-review) documentent un déploiement Docker ou auto-hébergé.',
-          '**Cloud géré.** [Chroma](/fr/power-local-llm/chroma-review), [Milvus](/fr/power-local-llm/milvus-review), [Qdrant](/fr/power-local-llm/qdrant-review) et [Weaviate](/fr/power-local-llm/weaviate-review) documentent une offre cloud hébergée en plus de l\'auto-hébergement.',
+          `**Recherche hybride.** ${WITH('vector-databases', 'hybridSearch', 'fr')} documentent la recherche hybride par mots-clés et par vecteurs.`,
+          `**Filtrage par métadonnées.** ${WITH('vector-databases', 'metadataFilter', 'fr')} documentent le filtrage par métadonnées.`,
+          `**Déploiement distribué.** ${WITH('vector-databases', 'clustered', 'fr')} documentent un déploiement distribué ou en cluster.`,
+          `**Docker et auto-hébergement.** ${WITH('vector-databases', 'dockerDeploy', 'fr')} documentent un déploiement Docker ou auto-hébergé.`,
+          `**Cloud géré.** ${WITH('vector-databases', 'managedCloud', 'fr')} documentent une offre cloud hébergée en plus de l'auto-hébergement.`,
           '**Licence.** Chroma, Milvus et Qdrant sont sous Apache-2.0 et le cœur de Weaviate est sous BSD-3-Clause, certaines fonctionnalités restreintes relevant de sa propre licence Weaviate License — consultez l\'avis de chaque outil pour le détail.',
         ],
       },
@@ -660,19 +673,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Intégrations de notes : ce qui les distingue',
         items: [
           '**Application de notes concernée.** [BMO Chatbot](/fr/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/fr/power-local-llm/copilot-for-obsidian-review), [Smart Connections](/fr/power-local-llm/smart-connections-review) et [Text Generator](/fr/power-local-llm/text-generator-review) pour Obsidian ; [logseq-copilot](/fr/power-local-llm/logseq-copilot-review) pour Logseq ; [Joplin AI](/fr/power-local-llm/joplin-ai-agent-review) pour Joplin ; [Blinko](/fr/power-local-llm/blinko-review), [SiYuan](/fr/power-local-llm/siyuan-review) et [Surf](/fr/power-local-llm/surf-review) sont des applications de notes autonomes avec IA intégrée.',
-          '**LLM locaux.** [BMO Chatbot](/fr/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/fr/power-local-llm/copilot-for-obsidian-review), [Joplin AI](/fr/power-local-llm/joplin-ai-agent-review), [Karakeep](/fr/power-local-llm/karakeep-review), [logseq-copilot](/fr/power-local-llm/logseq-copilot-review) et [Surf](/fr/power-local-llm/surf-review) documentent le fonctionnement avec des LLM locaux.',
-          '**Recherche sémantique.** [Karakeep](/fr/power-local-llm/karakeep-review) et [Smart Connections](/fr/power-local-llm/smart-connections-review) documentent la recherche sémantique dans les notes.',
-          '**Discuter avec vos notes.** [BMO Chatbot](/fr/power-local-llm/bmo-chatbot-review) et [Joplin AI](/fr/power-local-llm/joplin-ai-agent-review) documentent la possibilité de discuter avec vos notes.',
+          `**LLM locaux.** ${WITH('notes-integrations', 'localLlm', 'fr')} documentent le fonctionnement avec des LLM locaux.`,
+          `**Recherche sémantique.** ${WITH('notes-integrations', 'semanticSearch', 'fr')} documentent la recherche sémantique dans les notes.`,
+          `**Discuter avec vos notes.** ${WITH('notes-integrations', 'chatNotes', 'fr')} documentent la possibilité de discuter avec vos notes.`,
         ],
       },
       searchDifferences: {
         id: 'search-differences',
         title: 'Recherche et veille locales : ce qui les distingue',
         items: [
-          '**LLM locaux.** [Farfalle](/fr/power-local-llm/farfalle-review), [Karakeep](/fr/power-local-llm/karakeep-review), [Local Deep Research](/fr/power-local-llm/local-deep-research-review), [Onyx](/fr/power-local-llm/onyx-review) et [Vane (formerly Perplexica)](/fr/power-local-llm/vane-review) documentent le fonctionnement avec des LLM locaux.',
-          '**Recherche web.** [Farfalle](/fr/power-local-llm/farfalle-review), [Local Deep Research](/fr/power-local-llm/local-deep-research-review), [Onyx](/fr/power-local-llm/onyx-review) et [Vane (formerly Perplexica)](/fr/power-local-llm/vane-review) documentent la recherche sur le web.',
-          '**Vos propres fichiers.** [Local Deep Research](/fr/power-local-llm/local-deep-research-review), [Onyx](/fr/power-local-llm/onyx-review) et [Smart Connections](/fr/power-local-llm/smart-connections-review) documentent la recherche dans vos propres fichiers ou notes.',
-          '**Citations.** [Local Deep Research](/fr/power-local-llm/local-deep-research-review) et [Vane (formerly Perplexica)](/fr/power-local-llm/vane-review) documentent la citation des sources.',
+          `**LLM locaux.** ${WITH('local-search', 'localLlm', 'fr')} documentent le fonctionnement avec des LLM locaux.`,
+          `**Recherche web.** ${WITH('local-search', 'webSearch', 'fr')} documentent la recherche sur le web.`,
+          `**Vos propres fichiers.** ${WITH('local-search', 'privateDocs', 'fr')} documentent la recherche dans vos propres fichiers ou notes.`,
+          `**Citations.** ${WITH('local-search', 'citations', 'fr')} documentent la citation des sources.`,
         ],
       },
       limitations: {
@@ -739,7 +752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -772,14 +785,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda',
     seoTitle: 'RAG local, chat con documentos y BD vectoriales 2026',
     intro:
-      `Las herramientas que permiten a un modelo local trabajar con tus propios documentos son de cinco tipos distintos — frameworks y pipelines RAG, apps de chat con documentos y PDF, bases de datos vectoriales, integraciones con apps de notas y herramientas locales de búsqueda e investigación — y ninguna lista de funciones única las compara de forma justa. Esta guía compara ${KR_TOTAL} herramientas gratuitas y freemium, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.`,
+      `Las herramientas que permiten a un modelo local trabajar con tus propios documentos son de cinco tipos distintos — frameworks y pipelines RAG, apps de chat con documentos y PDF, bases de datos vectoriales, integraciones con apps de notas y herramientas locales de búsqueda e investigación — y ninguna lista de funciones única las compara de forma justa. Esta guía compara ${KR_TOTAL} herramientas gratuitas, freemium y de pago, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.`,
     metaDescription:
       `Compara ${KR_TOTAL} herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.`,
     twitterDescription:
@@ -800,18 +813,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Las ${KR_TOTAL} herramientas locales de conocimiento y recuperación del directorio de PromptQuorum se dividen en cinco tipos que conviene comparar por separado: frameworks y pipelines RAG (${KR_RAG_FRAMEWORKS} herramientas), apps de chat con documentos y PDF (${KR_DOCUMENT_PDF_CHAT}), integraciones con apps de notas (${KR_NOTES_INTEGRATIONS}), herramientas locales de búsqueda e investigación (${KR_LOCAL_SEARCH}) y bases de datos vectoriales (${KR_VECTOR_DATABASES}).** Entre las bases de datos vectoriales, 3 de 4 documentan búsqueda híbrida y 4 de 4 documentan filtrado por metadatos; entre los frameworks RAG, 4 documentan un constructor visual y 9 documentan compatibilidad con LLM locales. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
+      `**Las ${KR_TOTAL} herramientas locales de conocimiento y recuperación del directorio de PromptQuorum se dividen en cinco tipos que conviene comparar por separado: frameworks y pipelines RAG (${KR_RAG_FRAMEWORKS} herramientas), apps de chat con documentos y PDF (${KR_DOCUMENT_PDF_CHAT}), integraciones con apps de notas (${KR_NOTES_INTEGRATIONS}), herramientas locales de búsqueda e investigación (${KR_LOCAL_SEARCH}) y bases de datos vectoriales (${KR_VECTOR_DATABASES}).** Entre las bases de datos vectoriales, ${VEC.hybridSearch} de ${KR_VECTOR_DATABASES} documentan búsqueda híbrida y ${VEC.metadataFilter} de ${KR_VECTOR_DATABASES} documentan filtrado por metadatos; entre los frameworks RAG, ${RAGF.visualBuilder} documentan un constructor visual y ${RAGF.localLlm} documentan compatibilidad con LLM locales. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta local de RAG o de chat con documentos debería usar?',
         answer:
           'Depende del tipo de herramienta, así que compara dentro de un mismo tipo. Elige según la restricción que más te importe — trabajar con LLM locales, Docker o autoalojamiento, una API, búsqueda híbrida, un constructor visual o la app de notas que ya usas — y apóyate en la tabla de abajo, generada a partir de la documentación oficial de cada herramienta.',
         bullets: [
-          'Frameworks RAG: 13 herramientas comparadas en constructor visual, LLM locales, agentes, almacenes vectoriales, Docker y API.',
-          'Chat con documentos y PDF: 12 herramientas comparadas en LLM locales, formatos de documento, citas, app de escritorio, Docker y API.',
-          'Bases de datos vectoriales: 4 herramientas comparadas en búsqueda híbrida, filtrado por metadatos, clústeres, Docker y nube gestionada.',
-          'Integraciones con notas: 10 herramientas comparadas en app de notas, LLM locales, búsqueda semántica y chat con las notas.',
-          'Búsqueda e investigación locales: 7 herramientas comparadas en LLM locales, búsqueda web, tus propios archivos y citas.',
+          `Frameworks RAG: ${SEG['rag-frameworks']} herramientas comparadas en constructor visual, LLM locales, agentes, almacenes vectoriales, Docker y API.`,
+          `Chat con documentos y PDF: ${SEG['document-chat']} herramientas comparadas en LLM locales, formatos de documento, citas, app de escritorio, Docker y API.`,
+          `Bases de datos vectoriales: ${SEG['vector-databases']} herramientas comparadas en búsqueda híbrida, filtrado por metadatos, clústeres, Docker y nube gestionada.`,
+          `Integraciones con notas: ${SEG['notes-integrations']} herramientas comparadas en app de notas, LLM locales, búsqueda semántica y chat con las notas.`,
+          `Búsqueda e investigación locales: ${SEG['local-search']} herramientas comparadas en LLM locales, búsqueda web, tus propios archivos y citas.`,
           'Un guion (—) significa que la documentación del proyecto no lo indica, no que la función no exista.',
         ],
       },
@@ -870,35 +883,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-differences',
         title: 'Frameworks RAG: en qué se diferencian',
         items: [
-          '**Constructor visual.** [Dify](/es/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/es/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langflow](/es/power-local-llm/langflow-visual-ai-orchestration-review) y [Self-hosted AI Starter Kit](/es/power-local-llm/self-hosted-ai-starter-kit-review) documentan un constructor de flujos visual o de arrastrar y soltar.',
-          '**LLM locales.** [cognee](/es/power-local-llm/cognee-review), [Haystack](/es/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/es/power-local-llm/langchain-chatchat-review), [LlamaIndex](/es/power-local-llm/llamaindex-rag-framework-review), [MaxKB](/es/power-local-llm/maxkb-review), [Onyx](/es/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/es/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/es/power-local-llm/txtai-embedded-vector-database-review) y [Vane (antes Perplexica)](/es/power-local-llm/vane-review) documentan el trabajo con LLM locales.',
-          '**Agentes.** [Dify](/es/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/es/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/es/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/es/power-local-llm/langchain-chatchat-review), [Langflow](/es/power-local-llm/langflow-visual-ai-orchestration-review), [LlamaIndex](/es/power-local-llm/llamaindex-rag-framework-review), [LongMemory](/es/power-local-llm/longmemory-review), [MaxKB](/es/power-local-llm/maxkb-review), [Onyx](/es/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/es/power-local-llm/self-hosted-ai-starter-kit-review) y [txtai](/es/power-local-llm/txtai-embedded-vector-database-review) documentan compatibilidad con agentes.',
-          '**Varios almacenes vectoriales.** [Flowise](/es/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/es/power-local-llm/langchain-chatchat-review), [Langflow](/es/power-local-llm/langflow-visual-ai-orchestration-review) y [LlamaIndex](/es/power-local-llm/llamaindex-rag-framework-review) documentan integraciones con varios almacenes vectoriales.',
-          '**Docker y autoalojamiento.** [cognee](/es/power-local-llm/cognee-review), [Dify](/es/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/es/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/es/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/es/power-local-llm/langchain-chatchat-review), [Langflow](/es/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/es/power-local-llm/longmemory-review), [MaxKB](/es/power-local-llm/maxkb-review), [Onyx](/es/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/es/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/es/power-local-llm/txtai-embedded-vector-database-review) y [Vane (antes Perplexica)](/es/power-local-llm/vane-review) documentan el despliegue con Docker o autoalojado.',
-          '**API.** [cognee](/es/power-local-llm/cognee-review), [Dify](/es/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/es/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/es/power-local-llm/langchain-chatchat-review), [Langflow](/es/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/es/power-local-llm/longmemory-review), [Onyx](/es/power-local-llm/onyx-review), [txtai](/es/power-local-llm/txtai-embedded-vector-database-review) y [Vane (antes Perplexica)](/es/power-local-llm/vane-review) documentan una API HTTP o REST.',
+          `**Constructor visual.** ${WITH('rag-frameworks', 'visualBuilder', 'es')} documentan un constructor de flujos visual o de arrastrar y soltar.`,
+          `**LLM locales.** ${WITH('rag-frameworks', 'localLlm', 'es')} documentan el trabajo con LLM locales.`,
+          `**Agentes.** ${WITH('rag-frameworks', 'agents', 'es')} documentan compatibilidad con agentes.`,
+          `**Varios almacenes vectoriales.** ${WITH('rag-frameworks', 'multiVector', 'es')} documentan integraciones con varios almacenes vectoriales.`,
+          `**Docker y autoalojamiento.** ${WITH('rag-frameworks', 'dockerDeploy', 'es')} documentan el despliegue con Docker o autoalojado.`,
+          `**API.** ${WITH('rag-frameworks', 'apiServer', 'es')} documentan una API HTTP o REST.`,
         ],
       },
       docDifferences: {
         id: 'doc-differences',
         title: 'Chat con documentos y PDF: en qué se diferencian',
         items: [
-          '**LLM locales.** [AnythingLLM](/es/power-local-llm/anythingllm-review), [h2oGPT](/es/power-local-llm/h2ogpt-review), [Khoj](/es/power-local-llm/khoj-ai-second-brain-review), [Langchain-Chatchat](/es/power-local-llm/langchain-chatchat-review), [PrivateGPT](/es/power-local-llm/privategpt-review), [Quivr](/es/power-local-llm/quivr-self-hosted-knowledge-assistant-review), [Sidekick](/es/power-local-llm/sidekick-review) y [Surf](/es/power-local-llm/surf-review) documentan el trabajo con LLM locales.',
-          '**Formatos de documento.** [AnythingLLM](/es/power-local-llm/anythingllm-review), [h2oGPT](/es/power-local-llm/h2ogpt-review), [Khoj](/es/power-local-llm/khoj-ai-second-brain-review), [PrivateGPT](/es/power-local-llm/privategpt-review), [Quivr](/es/power-local-llm/quivr-self-hosted-knowledge-assistant-review) y [RAGFlow](/es/power-local-llm/ragflow-document-understanding-rag-review) documentan varios formatos de archivo compatibles.',
-          '**Citas.** [AnythingLLM](/es/power-local-llm/anythingllm-review), [PrivateGPT](/es/power-local-llm/privategpt-review), [RAGFlow](/es/power-local-llm/ragflow-document-understanding-rag-review), [Sidekick](/es/power-local-llm/sidekick-review) y [Surf](/es/power-local-llm/surf-review) documentan la cita de fuentes en las respuestas.',
-          '**App de escritorio.** [AnythingLLM](/es/power-local-llm/anythingllm-review), [Khoj](/es/power-local-llm/khoj-ai-second-brain-review) y [Surf](/es/power-local-llm/surf-review) documentan una app de escritorio instalable.',
-          '**Docker y autoalojamiento.** [AnythingLLM](/es/power-local-llm/anythingllm-review), [h2oGPT](/es/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/es/power-local-llm/langchain-chatchat-review), [PrivateGPT](/es/power-local-llm/privategpt-review) y [RAGFlow](/es/power-local-llm/ragflow-document-understanding-rag-review) documentan el despliegue con Docker o autoalojado.',
-          '**API.** [AnythingLLM](/es/power-local-llm/anythingllm-review), [h2oGPT](/es/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/es/power-local-llm/langchain-chatchat-review), [PrivateGPT](/es/power-local-llm/privategpt-review), [RAGFlow](/es/power-local-llm/ragflow-document-understanding-rag-review) y [ToolNeuron](/es/power-local-llm/toolneuron-review) documentan una API.',
+          `**LLM locales.** ${WITH('document-chat', 'localLlm', 'es')} documentan el trabajo con LLM locales.`,
+          `**Formatos de documento.** ${WITH('document-chat', 'multiFormat', 'es')} documentan varios formatos de archivo compatibles.`,
+          `**Citas.** ${WITH('document-chat', 'citations', 'es')} documentan la cita de fuentes en las respuestas.`,
+          `**App de escritorio.** ${WITH('document-chat', 'desktopApp', 'es')} documentan una app de escritorio instalable.`,
+          `**Docker y autoalojamiento.** ${WITH('document-chat', 'dockerDeploy', 'es')} documentan el despliegue con Docker o autoalojado.`,
+          `**API.** ${WITH('document-chat', 'apiServer', 'es')} documentan una API.`,
         ],
       },
       vectorDifferences: {
         id: 'vector-differences',
         title: 'Bases de datos vectoriales: en qué se diferencian',
         items: [
-          '**Búsqueda híbrida.** [Milvus](/es/power-local-llm/milvus-review), [Qdrant](/es/power-local-llm/qdrant-review) y [Weaviate](/es/power-local-llm/weaviate-review) documentan la búsqueda híbrida por palabras clave y vectores.',
-          '**Filtrado por metadatos.** [Chroma](/es/power-local-llm/chroma-review), [Milvus](/es/power-local-llm/milvus-review), [Qdrant](/es/power-local-llm/qdrant-review) y [Weaviate](/es/power-local-llm/weaviate-review) documentan el filtrado por metadatos.',
-          '**Despliegue distribuido.** [Milvus](/es/power-local-llm/milvus-review), [Qdrant](/es/power-local-llm/qdrant-review) y [Weaviate](/es/power-local-llm/weaviate-review) documentan el despliegue distribuido o en clúster.',
-          '**Docker y autoalojamiento.** [Milvus](/es/power-local-llm/milvus-review), [Qdrant](/es/power-local-llm/qdrant-review) y [Weaviate](/es/power-local-llm/weaviate-review) documentan el despliegue con Docker o autoalojado.',
-          '**Nube gestionada.** [Chroma](/es/power-local-llm/chroma-review), [Milvus](/es/power-local-llm/milvus-review), [Qdrant](/es/power-local-llm/qdrant-review) y [Weaviate](/es/power-local-llm/weaviate-review) documentan una oferta alojada en la nube además del autoalojamiento.',
+          `**Búsqueda híbrida.** ${WITH('vector-databases', 'hybridSearch', 'es')} documentan la búsqueda híbrida por palabras clave y vectores.`,
+          `**Filtrado por metadatos.** ${WITH('vector-databases', 'metadataFilter', 'es')} documentan el filtrado por metadatos.`,
+          `**Despliegue distribuido.** ${WITH('vector-databases', 'clustered', 'es')} documentan el despliegue distribuido o en clúster.`,
+          `**Docker y autoalojamiento.** ${WITH('vector-databases', 'dockerDeploy', 'es')} documentan el despliegue con Docker o autoalojado.`,
+          `**Nube gestionada.** ${WITH('vector-databases', 'managedCloud', 'es')} documentan una oferta alojada en la nube además del autoalojamiento.`,
           '**Licencia.** Chroma, Milvus y Qdrant son Apache-2.0 y el núcleo de Weaviate es BSD-3-Clause, con algunas funciones restringidas bajo su propia Weaviate License — consulta el análisis de cada herramienta para los detalles.',
         ],
       },
@@ -907,19 +920,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Integraciones con notas: en qué se diferencian',
         items: [
           '**App de notas.** [BMO Chatbot](/es/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/es/power-local-llm/copilot-for-obsidian-review), [Smart Connections](/es/power-local-llm/smart-connections-review) y [Text Generator](/es/power-local-llm/text-generator-review) para Obsidian; [logseq-copilot](/es/power-local-llm/logseq-copilot-review) para Logseq; [Joplin AI](/es/power-local-llm/joplin-ai-agent-review) para Joplin; [Blinko](/es/power-local-llm/blinko-review), [SiYuan](/es/power-local-llm/siyuan-review) y [Surf](/es/power-local-llm/surf-review) son apps de notas independientes con IA integrada.',
-          '**LLM locales.** [BMO Chatbot](/es/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/es/power-local-llm/copilot-for-obsidian-review), [Joplin AI](/es/power-local-llm/joplin-ai-agent-review), [Karakeep](/es/power-local-llm/karakeep-review), [logseq-copilot](/es/power-local-llm/logseq-copilot-review) y [Surf](/es/power-local-llm/surf-review) documentan el trabajo con LLM locales.',
-          '**Búsqueda semántica.** [Karakeep](/es/power-local-llm/karakeep-review) y [Smart Connections](/es/power-local-llm/smart-connections-review) documentan la búsqueda semántica en las notas.',
-          '**Chat con tus notas.** [BMO Chatbot](/es/power-local-llm/bmo-chatbot-review) y [Joplin AI](/es/power-local-llm/joplin-ai-agent-review) documentan el chat con tus notas.',
+          `**LLM locales.** ${WITH('notes-integrations', 'localLlm', 'es')} documentan el trabajo con LLM locales.`,
+          `**Búsqueda semántica.** ${WITH('notes-integrations', 'semanticSearch', 'es')} documentan la búsqueda semántica en las notas.`,
+          `**Chat con tus notas.** ${WITH('notes-integrations', 'chatNotes', 'es')} documentan el chat con tus notas.`,
         ],
       },
       searchDifferences: {
         id: 'search-differences',
         title: 'Búsqueda e investigación locales: en qué se diferencian',
         items: [
-          '**LLM locales.** [Farfalle](/es/power-local-llm/farfalle-review), [Karakeep](/es/power-local-llm/karakeep-review), [Local Deep Research](/es/power-local-llm/local-deep-research-review), [Onyx](/es/power-local-llm/onyx-review) y [Vane (antes Perplexica)](/es/power-local-llm/vane-review) documentan el trabajo con LLM locales.',
-          '**Búsqueda web.** [Farfalle](/es/power-local-llm/farfalle-review), [Local Deep Research](/es/power-local-llm/local-deep-research-review), [Onyx](/es/power-local-llm/onyx-review) y [Vane (antes Perplexica)](/es/power-local-llm/vane-review) documentan la búsqueda en la web.',
-          '**Tus propios archivos.** [Local Deep Research](/es/power-local-llm/local-deep-research-review), [Onyx](/es/power-local-llm/onyx-review) y [Smart Connections](/es/power-local-llm/smart-connections-review) documentan la búsqueda en tus propios archivos o notas.',
-          '**Citas.** [Local Deep Research](/es/power-local-llm/local-deep-research-review) y [Vane (antes Perplexica)](/es/power-local-llm/vane-review) documentan la cita de fuentes.',
+          `**LLM locales.** ${WITH('local-search', 'localLlm', 'es')} documentan el trabajo con LLM locales.`,
+          `**Búsqueda web.** ${WITH('local-search', 'webSearch', 'es')} documentan la búsqueda en la web.`,
+          `**Tus propios archivos.** ${WITH('local-search', 'privateDocs', 'es')} documentan la búsqueda en tus propios archivos o notas.`,
+          `**Citas.** ${WITH('local-search', 'citations', 'es')} documentan la cita de fuentes.`,
         ],
       },
       limitations: {
@@ -986,7 +999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'es',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1019,14 +1032,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索',
     seoTitle: 'ローカルRAG・ドキュメントチャット・ベクトルDB比較2026',
     intro:
-      `ローカルモデルに自分のドキュメントを扱わせるツールは、RAGフレームワーク・パイプライン、ドキュメント/PDFチャットアプリ、ベクトルデータベース、ノートアプリ連携、ローカル検索・リサーチツールという5つの異なる種類に分かれ、単一の機能一覧ではどれも公平に比較できません。このガイドでは、無料・フリーミアムの${KR_TOTAL}ツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されるため、表とレビューの内容が食い違うことはありません。`,
+      `ローカルモデルに自分のドキュメントを扱わせるツールは、RAGフレームワーク・パイプライン、ドキュメント/PDFチャットアプリ、ベクトルデータベース、ノートアプリ連携、ローカル検索・リサーチツールという5つの異なる種類に分かれ、単一の機能一覧ではどれも公平に比較できません。このガイドでは、無料・フリーミアム・有料の${KR_TOTAL}ツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されるため、表とレビューの内容が食い違うことはありません。`,
     metaDescription:
       `ローカルの知識・検索ツール${KR_TOTAL}種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。`,
     twitterDescription:
@@ -1047,18 +1060,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorumディレクトリにある${KR_TOTAL}のローカル知識・検索ツールは、別々に比較すべき5つの種類に分かれます。RAGフレームワーク・パイプライン(${KR_RAG_FRAMEWORKS}ツール)、ドキュメント/PDFチャットアプリ(${KR_DOCUMENT_PDF_CHAT})、ノートアプリ連携(${KR_NOTES_INTEGRATIONS})、ローカル検索・リサーチツール(${KR_LOCAL_SEARCH})、ベクトルデータベース(${KR_VECTOR_DATABASES})です。** ベクトルデータベースでは4つのうち3つがハイブリッド検索を、4つすべてがメタデータフィルタリングをドキュメントに記載しています。RAGフレームワークでは4つがビジュアルビルダーを、9つがローカルLLM対応をドキュメントに記載しています。下の比較表を使い、インストールする前に各ツール自身のレビューを読んでください。`,
+      `**PromptQuorumディレクトリにある${KR_TOTAL}のローカル知識・検索ツールは、別々に比較すべき5つの種類に分かれます。RAGフレームワーク・パイプライン(${KR_RAG_FRAMEWORKS}ツール)、ドキュメント/PDFチャットアプリ(${KR_DOCUMENT_PDF_CHAT})、ノートアプリ連携(${KR_NOTES_INTEGRATIONS})、ローカル検索・リサーチツール(${KR_LOCAL_SEARCH})、ベクトルデータベース(${KR_VECTOR_DATABASES})です。** ベクトルデータベースでは${KR_VECTOR_DATABASES}件のうち${VEC.hybridSearch}件がハイブリッド検索を、${VEC.metadataFilter}件がメタデータフィルタリングをドキュメントに記載しています。RAGフレームワークでは${RAGF.visualBuilder}件がビジュアルビルダーを、${RAGF.localLlm}件がローカルLLM対応をドキュメントに記載しています。下の比較表を使い、インストールする前に各ツール自身のレビューを読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカルRAGまたはドキュメントチャットツールを使うべきか',
         answer:
           'ツールの種類によって異なるため、一度に1つの種類の中で比較してください。ローカルLLMでの利用、Dockerやセルフホスト、API、ハイブリッド検索、ビジュアルビルダー、すでに使っているノートアプリなど、最も重要な条件で選び、各ツールの公式ドキュメントから生成された下の表を活用してください。',
         bullets: [
-          'RAGフレームワーク:13ツールを、ビジュアルビルダー、ローカルLLM、エージェント、ベクトルストア、Docker、APIで比較。',
-          'ドキュメント/PDFチャット:12ツールを、ローカルLLM、ドキュメント形式、引用、デスクトップアプリ、Docker、APIで比較。',
-          'ベクトルデータベース:4ツールを、ハイブリッド検索、メタデータフィルタリング、クラスタリング、Docker、マネージドクラウドで比較。',
-          'ノート連携:10ツールを、対応ノートアプリ、ローカルLLM、セマンティック検索、ノートとのチャットで比較。',
-          'ローカル検索・リサーチ:7ツールを、ローカルLLM、Web検索、自分のファイル、引用で比較。',
+          `RAGフレームワーク:${SEG['rag-frameworks']}ツールを、ビジュアルビルダー、ローカルLLM、エージェント、ベクトルストア、Docker、APIで比較。`,
+          `ドキュメント/PDFチャット:${SEG['document-chat']}ツールを、ローカルLLM、ドキュメント形式、引用、デスクトップアプリ、Docker、APIで比較。`,
+          `ベクトルデータベース:${SEG['vector-databases']}ツールを、ハイブリッド検索、メタデータフィルタリング、クラスタリング、Docker、マネージドクラウドで比較。`,
+          `ノート連携:${SEG['notes-integrations']}ツールを、対応ノートアプリ、ローカルLLM、セマンティック検索、ノートとのチャットで比較。`,
+          `ローカル検索・リサーチ:${SEG['local-search']}ツールを、ローカルLLM、Web検索、自分のファイル、引用で比較。`,
           'ダッシュ(—)は、プロジェクトのドキュメントに記載がないという意味であり、機能がないという意味ではありません。',
         ],
       },
@@ -1117,35 +1130,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-differences',
         title: 'RAGフレームワーク:違い',
         items: [
-          '**ビジュアルビルダー。** [Dify](/ja/power-local-llm/dify-ai-workflow-builder-review)、[Flowise](/ja/power-local-llm/flowise-ai-visual-workflow-builder-review)、[Langflow](/ja/power-local-llm/langflow-visual-ai-orchestration-review)および[Self-hosted AI Starter Kit](/ja/power-local-llm/self-hosted-ai-starter-kit-review)は、ビジュアルまたはドラッグ&ドロップ式のワークフロービルダーをドキュメントに記載しています。',
-          '**ローカルLLM。** [cognee](/ja/power-local-llm/cognee-review)、[Haystack](/ja/power-local-llm/haystack-deepset-rag-framework-review)、[Langchain-Chatchat](/ja/power-local-llm/langchain-chatchat-review)、[LlamaIndex](/ja/power-local-llm/llamaindex-rag-framework-review)、[MaxKB](/ja/power-local-llm/maxkb-review)、[Onyx](/ja/power-local-llm/onyx-review)、[Self-hosted AI Starter Kit](/ja/power-local-llm/self-hosted-ai-starter-kit-review)、[txtai](/ja/power-local-llm/txtai-embedded-vector-database-review)および[Vane (formerly Perplexica)](/ja/power-local-llm/vane-review)は、ローカルLLMでの利用をドキュメントに記載しています。',
-          '**エージェント。** [Dify](/ja/power-local-llm/dify-ai-workflow-builder-review)、[Flowise](/ja/power-local-llm/flowise-ai-visual-workflow-builder-review)、[Haystack](/ja/power-local-llm/haystack-deepset-rag-framework-review)、[Langchain-Chatchat](/ja/power-local-llm/langchain-chatchat-review)、[Langflow](/ja/power-local-llm/langflow-visual-ai-orchestration-review)、[LlamaIndex](/ja/power-local-llm/llamaindex-rag-framework-review)、[LongMemory](/ja/power-local-llm/longmemory-review)、[MaxKB](/ja/power-local-llm/maxkb-review)、[Onyx](/ja/power-local-llm/onyx-review)、[Self-hosted AI Starter Kit](/ja/power-local-llm/self-hosted-ai-starter-kit-review)および[txtai](/ja/power-local-llm/txtai-embedded-vector-database-review)は、エージェント対応をドキュメントに記載しています。',
-          '**複数のベクトルストア。** [Flowise](/ja/power-local-llm/flowise-ai-visual-workflow-builder-review)、[Langchain-Chatchat](/ja/power-local-llm/langchain-chatchat-review)、[Langflow](/ja/power-local-llm/langflow-visual-ai-orchestration-review)および[LlamaIndex](/ja/power-local-llm/llamaindex-rag-framework-review)は、複数のベクトルストアとの連携をドキュメントに記載しています。',
-          '**Dockerとセルフホスト。** [cognee](/ja/power-local-llm/cognee-review)、[Dify](/ja/power-local-llm/dify-ai-workflow-builder-review)、[Flowise](/ja/power-local-llm/flowise-ai-visual-workflow-builder-review)、[Haystack](/ja/power-local-llm/haystack-deepset-rag-framework-review)、[Langchain-Chatchat](/ja/power-local-llm/langchain-chatchat-review)、[Langflow](/ja/power-local-llm/langflow-visual-ai-orchestration-review)、[LongMemory](/ja/power-local-llm/longmemory-review)、[MaxKB](/ja/power-local-llm/maxkb-review)、[Onyx](/ja/power-local-llm/onyx-review)、[Self-hosted AI Starter Kit](/ja/power-local-llm/self-hosted-ai-starter-kit-review)、[txtai](/ja/power-local-llm/txtai-embedded-vector-database-review)および[Vane (formerly Perplexica)](/ja/power-local-llm/vane-review)は、Dockerまたはセルフホストでのデプロイをドキュメントに記載しています。',
-          '**API。** [cognee](/ja/power-local-llm/cognee-review)、[Dify](/ja/power-local-llm/dify-ai-workflow-builder-review)、[Flowise](/ja/power-local-llm/flowise-ai-visual-workflow-builder-review)、[Langchain-Chatchat](/ja/power-local-llm/langchain-chatchat-review)、[Langflow](/ja/power-local-llm/langflow-visual-ai-orchestration-review)、[LongMemory](/ja/power-local-llm/longmemory-review)、[Onyx](/ja/power-local-llm/onyx-review)、[txtai](/ja/power-local-llm/txtai-embedded-vector-database-review)および[Vane (formerly Perplexica)](/ja/power-local-llm/vane-review)は、HTTPまたはREST APIをドキュメントに記載しています。',
+          `**ビジュアルビルダー。** ${WITH('rag-frameworks', 'visualBuilder', 'ja')}は、ビジュアルまたはドラッグ&ドロップ式のワークフロービルダーをドキュメントに記載しています。`,
+          `**ローカルLLM。** ${WITH('rag-frameworks', 'localLlm', 'ja')}は、ローカルLLMでの利用をドキュメントに記載しています。`,
+          `**エージェント。** ${WITH('rag-frameworks', 'agents', 'ja')}は、エージェント対応をドキュメントに記載しています。`,
+          `**複数のベクトルストア。** ${WITH('rag-frameworks', 'multiVector', 'ja')}は、複数のベクトルストアとの連携をドキュメントに記載しています。`,
+          `**Dockerとセルフホスト。** ${WITH('rag-frameworks', 'dockerDeploy', 'ja')}は、Dockerまたはセルフホストでのデプロイをドキュメントに記載しています。`,
+          `**API。** ${WITH('rag-frameworks', 'apiServer', 'ja')}は、HTTPまたはREST APIをドキュメントに記載しています。`,
         ],
       },
       docDifferences: {
         id: 'doc-differences',
         title: 'ドキュメント/PDFチャット:違い',
         items: [
-          '**ローカルLLM。** [AnythingLLM](/ja/power-local-llm/anythingllm-review)、[h2oGPT](/ja/power-local-llm/h2ogpt-review)、[Khoj](/ja/power-local-llm/khoj-ai-second-brain-review)、[Langchain-Chatchat](/ja/power-local-llm/langchain-chatchat-review)、[PrivateGPT](/ja/power-local-llm/privategpt-review)、[Quivr](/ja/power-local-llm/quivr-self-hosted-knowledge-assistant-review)、[Sidekick](/ja/power-local-llm/sidekick-review)および[Surf](/ja/power-local-llm/surf-review)は、ローカルLLMでの利用をドキュメントに記載しています。',
-          '**ドキュメント形式。** [AnythingLLM](/ja/power-local-llm/anythingllm-review)、[h2oGPT](/ja/power-local-llm/h2ogpt-review)、[Khoj](/ja/power-local-llm/khoj-ai-second-brain-review)、[PrivateGPT](/ja/power-local-llm/privategpt-review)、[Quivr](/ja/power-local-llm/quivr-self-hosted-knowledge-assistant-review)および[RAGFlow](/ja/power-local-llm/ragflow-document-understanding-rag-review)は、複数の対応ファイル形式をドキュメントに記載しています。',
-          '**引用。** [AnythingLLM](/ja/power-local-llm/anythingllm-review)、[PrivateGPT](/ja/power-local-llm/privategpt-review)、[RAGFlow](/ja/power-local-llm/ragflow-document-understanding-rag-review)、[Sidekick](/ja/power-local-llm/sidekick-review)および[Surf](/ja/power-local-llm/surf-review)は、回答での情報源の引用をドキュメントに記載しています。',
-          '**デスクトップアプリ。** [AnythingLLM](/ja/power-local-llm/anythingllm-review)、[Khoj](/ja/power-local-llm/khoj-ai-second-brain-review)および[Surf](/ja/power-local-llm/surf-review)は、インストール型のデスクトップアプリをドキュメントに記載しています。',
-          '**Dockerとセルフホスト。** [AnythingLLM](/ja/power-local-llm/anythingllm-review)、[h2oGPT](/ja/power-local-llm/h2ogpt-review)、[Langchain-Chatchat](/ja/power-local-llm/langchain-chatchat-review)、[PrivateGPT](/ja/power-local-llm/privategpt-review)および[RAGFlow](/ja/power-local-llm/ragflow-document-understanding-rag-review)は、Dockerまたはセルフホストでのデプロイをドキュメントに記載しています。',
-          '**API。** [AnythingLLM](/ja/power-local-llm/anythingllm-review)、[h2oGPT](/ja/power-local-llm/h2ogpt-review)、[Langchain-Chatchat](/ja/power-local-llm/langchain-chatchat-review)、[PrivateGPT](/ja/power-local-llm/privategpt-review)、[RAGFlow](/ja/power-local-llm/ragflow-document-understanding-rag-review)および[ToolNeuron](/ja/power-local-llm/toolneuron-review)は、APIをドキュメントに記載しています。',
+          `**ローカルLLM。** ${WITH('document-chat', 'localLlm', 'ja')}は、ローカルLLMでの利用をドキュメントに記載しています。`,
+          `**ドキュメント形式。** ${WITH('document-chat', 'multiFormat', 'ja')}は、複数の対応ファイル形式をドキュメントに記載しています。`,
+          `**引用。** ${WITH('document-chat', 'citations', 'ja')}は、回答での情報源の引用をドキュメントに記載しています。`,
+          `**デスクトップアプリ。** ${WITH('document-chat', 'desktopApp', 'ja')}は、インストール型のデスクトップアプリをドキュメントに記載しています。`,
+          `**Dockerとセルフホスト。** ${WITH('document-chat', 'dockerDeploy', 'ja')}は、Dockerまたはセルフホストでのデプロイをドキュメントに記載しています。`,
+          `**API。** ${WITH('document-chat', 'apiServer', 'ja')}は、APIをドキュメントに記載しています。`,
         ],
       },
       vectorDifferences: {
         id: 'vector-differences',
         title: 'ベクトルデータベース:違い',
         items: [
-          '**ハイブリッド検索。** [Milvus](/ja/power-local-llm/milvus-review)、[Qdrant](/ja/power-local-llm/qdrant-review)および[Weaviate](/ja/power-local-llm/weaviate-review)は、キーワード検索とベクトル検索を組み合わせたハイブリッド検索をドキュメントに記載しています。',
-          '**メタデータフィルタリング。** [Chroma](/ja/power-local-llm/chroma-review)、[Milvus](/ja/power-local-llm/milvus-review)、[Qdrant](/ja/power-local-llm/qdrant-review)および[Weaviate](/ja/power-local-llm/weaviate-review)は、メタデータによる絞り込みをドキュメントに記載しています。',
-          '**分散デプロイ。** [Milvus](/ja/power-local-llm/milvus-review)、[Qdrant](/ja/power-local-llm/qdrant-review)および[Weaviate](/ja/power-local-llm/weaviate-review)は、分散またはクラスタ構成でのデプロイをドキュメントに記載しています。',
-          '**Dockerとセルフホスト。** [Milvus](/ja/power-local-llm/milvus-review)、[Qdrant](/ja/power-local-llm/qdrant-review)および[Weaviate](/ja/power-local-llm/weaviate-review)は、Dockerまたはセルフホストでのデプロイをドキュメントに記載しています。',
-          '**マネージドクラウド。** [Chroma](/ja/power-local-llm/chroma-review)、[Milvus](/ja/power-local-llm/milvus-review)、[Qdrant](/ja/power-local-llm/qdrant-review)および[Weaviate](/ja/power-local-llm/weaviate-review)は、セルフホストに加えて、ホスト型のクラウド提供をドキュメントに記載しています。',
+          `**ハイブリッド検索。** ${WITH('vector-databases', 'hybridSearch', 'ja')}は、キーワード検索とベクトル検索を組み合わせたハイブリッド検索をドキュメントに記載しています。`,
+          `**メタデータフィルタリング。** ${WITH('vector-databases', 'metadataFilter', 'ja')}は、メタデータによる絞り込みをドキュメントに記載しています。`,
+          `**分散デプロイ。** ${WITH('vector-databases', 'clustered', 'ja')}は、分散またはクラスタ構成でのデプロイをドキュメントに記載しています。`,
+          `**Dockerとセルフホスト。** ${WITH('vector-databases', 'dockerDeploy', 'ja')}は、Dockerまたはセルフホストでのデプロイをドキュメントに記載しています。`,
+          `**マネージドクラウド。** ${WITH('vector-databases', 'managedCloud', 'ja')}は、セルフホストに加えて、ホスト型のクラウド提供をドキュメントに記載しています。`,
           '**ライセンス。** Chroma、Milvus、QdrantはApache-2.0で、WeaviateのコアはBSD-3-Clauseです。一部の制限付き機能は独自のWeaviate Licenseの下にあります。詳細は各ツールのレビューを参照してください。',
         ],
       },
@@ -1154,19 +1167,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ノート連携:違い',
         items: [
           '**対応ノートアプリ。** Obsidian向けは[BMO Chatbot](/ja/power-local-llm/bmo-chatbot-review)、[Copilot for Obsidian](/ja/power-local-llm/copilot-for-obsidian-review)、[Smart Connections](/ja/power-local-llm/smart-connections-review)および[Text Generator](/ja/power-local-llm/text-generator-review)、Logseq向けは[logseq-copilot](/ja/power-local-llm/logseq-copilot-review)、Joplin向けは[Joplin AI](/ja/power-local-llm/joplin-ai-agent-review)です。[Blinko](/ja/power-local-llm/blinko-review)、[SiYuan](/ja/power-local-llm/siyuan-review)および[Surf](/ja/power-local-llm/surf-review)は、AIを内蔵した独立型のノートアプリです。',
-          '**ローカルLLM。** [BMO Chatbot](/ja/power-local-llm/bmo-chatbot-review)、[Copilot for Obsidian](/ja/power-local-llm/copilot-for-obsidian-review)、[Joplin AI](/ja/power-local-llm/joplin-ai-agent-review)、[Karakeep](/ja/power-local-llm/karakeep-review)、[logseq-copilot](/ja/power-local-llm/logseq-copilot-review)および[Surf](/ja/power-local-llm/surf-review)は、ローカルLLMでの利用をドキュメントに記載しています。',
-          '**セマンティック検索。** [Karakeep](/ja/power-local-llm/karakeep-review)および[Smart Connections](/ja/power-local-llm/smart-connections-review)は、ノートに対するセマンティック検索をドキュメントに記載しています。',
-          '**ノートとのチャット。** [BMO Chatbot](/ja/power-local-llm/bmo-chatbot-review)および[Joplin AI](/ja/power-local-llm/joplin-ai-agent-review)は、ノートとのチャットをドキュメントに記載しています。',
+          `**ローカルLLM。** ${WITH('notes-integrations', 'localLlm', 'ja')}は、ローカルLLMでの利用をドキュメントに記載しています。`,
+          `**セマンティック検索。** ${WITH('notes-integrations', 'semanticSearch', 'ja')}は、ノートに対するセマンティック検索をドキュメントに記載しています。`,
+          `**ノートとのチャット。** ${WITH('notes-integrations', 'chatNotes', 'ja')}は、ノートとのチャットをドキュメントに記載しています。`,
         ],
       },
       searchDifferences: {
         id: 'search-differences',
         title: 'ローカル検索・リサーチ:違い',
         items: [
-          '**ローカルLLM。** [Farfalle](/ja/power-local-llm/farfalle-review)、[Karakeep](/ja/power-local-llm/karakeep-review)、[Local Deep Research](/ja/power-local-llm/local-deep-research-review)、[Onyx](/ja/power-local-llm/onyx-review)および[Vane (formerly Perplexica)](/ja/power-local-llm/vane-review)は、ローカルLLMでの利用をドキュメントに記載しています。',
-          '**Web検索。** [Farfalle](/ja/power-local-llm/farfalle-review)、[Local Deep Research](/ja/power-local-llm/local-deep-research-review)、[Onyx](/ja/power-local-llm/onyx-review)および[Vane (formerly Perplexica)](/ja/power-local-llm/vane-review)は、Web検索をドキュメントに記載しています。',
-          '**自分のファイル。** [Local Deep Research](/ja/power-local-llm/local-deep-research-review)、[Onyx](/ja/power-local-llm/onyx-review)および[Smart Connections](/ja/power-local-llm/smart-connections-review)は、自分のファイルやノートの検索をドキュメントに記載しています。',
-          '**引用。** [Local Deep Research](/ja/power-local-llm/local-deep-research-review)および[Vane (formerly Perplexica)](/ja/power-local-llm/vane-review)は、情報源の引用をドキュメントに記載しています。',
+          `**ローカルLLM。** ${WITH('local-search', 'localLlm', 'ja')}は、ローカルLLMでの利用をドキュメントに記載しています。`,
+          `**Web検索。** ${WITH('local-search', 'webSearch', 'ja')}は、Web検索をドキュメントに記載しています。`,
+          `**自分のファイル。** ${WITH('local-search', 'privateDocs', 'ja')}は、自分のファイルやノートの検索をドキュメントに記載しています。`,
+          `**引用。** ${WITH('local-search', 'citations', 'ja')}は、情報源の引用をドキュメントに記載しています。`,
         ],
       },
       limitations: {
@@ -1233,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1266,14 +1279,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: '本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索',
     seoTitle: '本地RAG、文档对话与向量数据库对比2026',
     intro:
-      `让本地模型处理你自己文档的工具分为五种不同类型——RAG框架与流水线、文档与PDF对话应用、向量数据库、笔记应用集成,以及本地搜索与研究工具——没有任何单一的功能清单能公平地比较它们。本指南逐类对比${KR_TOTAL}款免费及免费增值工具,所用对比表与每款工具各自的PromptQuorum评测生成自同一份数据,因此表格与评测不会相互矛盾。`,
+      `让本地模型处理你自己文档的工具分为五种不同类型——RAG框架与流水线、文档与PDF对话应用、向量数据库、笔记应用集成,以及本地搜索与研究工具——没有任何单一的功能清单能公平地比较它们。本指南逐类对比${KR_TOTAL}款免费、免费增值及付费工具,所用对比表与每款工具各自的PromptQuorum评测生成自同一份数据,因此表格与评测不会相互矛盾。`,
     metaDescription:
       `并排对比${KR_TOTAL}款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。`,
     twitterDescription:
@@ -1294,18 +1307,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorum目录中的${KR_TOTAL}款本地知识与检索工具分为五类,应当分别比较:RAG框架与流水线(${KR_RAG_FRAMEWORKS}款)、文档与PDF对话应用(${KR_DOCUMENT_PDF_CHAT}款)、笔记应用集成(${KR_NOTES_INTEGRATIONS}款)、本地搜索与研究工具(${KR_LOCAL_SEARCH}款)以及向量数据库(${KR_VECTOR_DATABASES}款)。** 在向量数据库中,4款里有3款记载了混合搜索,4款全部记载了元数据过滤;在RAG框架中,4款记载了可视化构建器,9款记载了本地LLM支持。请使用下方的对比表,并在安装前阅读每款工具各自的评测。`,
+      `**PromptQuorum目录中的${KR_TOTAL}款本地知识与检索工具分为五类,应当分别比较:RAG框架与流水线(${KR_RAG_FRAMEWORKS}款)、文档与PDF对话应用(${KR_DOCUMENT_PDF_CHAT}款)、笔记应用集成(${KR_NOTES_INTEGRATIONS}款)、本地搜索与研究工具(${KR_LOCAL_SEARCH}款)以及向量数据库(${KR_VECTOR_DATABASES}款)。** 在向量数据库中,${KR_VECTOR_DATABASES}款里有${VEC.hybridSearch}款记载了混合搜索,${VEC.metadataFilter}款记载了元数据过滤;在RAG框架中,${RAGF.visualBuilder}款记载了可视化构建器,${RAGF.localLlm}款记载了本地LLM支持。请使用下方的对比表,并在安装前阅读每款工具各自的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地RAG或文档对话工具?',
         answer:
           '这取决于工具的类型,因此请一次只在同一类型内比较。按对你最重要的限制条件来选择——是否支持本地LLM、Docker或自托管、API、混合搜索、可视化构建器,或者你已在使用的笔记应用——并使用下方由各工具官方文档生成的表格。',
         bullets: [
-          'RAG框架:对13款工具在可视化构建器、本地LLM、智能体、向量存储、Docker和API方面进行对比。',
-          '文档与PDF对话:对12款工具在本地LLM、文档格式、引用来源、桌面应用、Docker和API方面进行对比。',
-          '向量数据库:对4款工具在混合搜索、元数据过滤、集群部署、Docker和托管云方面进行对比。',
-          '笔记集成:对10款工具在所支持的笔记应用、本地LLM、语义搜索和与笔记对话方面进行对比。',
-          '本地搜索与研究:对7款工具在本地LLM、网络搜索、你自己的文件和引用来源方面进行对比。',
+          `RAG框架:对${SEG['rag-frameworks']}款工具在可视化构建器、本地LLM、智能体、向量存储、Docker和API方面进行对比。`,
+          `文档与PDF对话:对${SEG['document-chat']}款工具在本地LLM、文档格式、引用来源、桌面应用、Docker和API方面进行对比。`,
+          `向量数据库:对${SEG['vector-databases']}款工具在混合搜索、元数据过滤、集群部署、Docker和托管云方面进行对比。`,
+          `笔记集成:对${SEG['notes-integrations']}款工具在所支持的笔记应用、本地LLM、语义搜索和与笔记对话方面进行对比。`,
+          `本地搜索与研究:对${SEG['local-search']}款工具在本地LLM、网络搜索、你自己的文件和引用来源方面进行对比。`,
           '破折号(—)表示项目文档未说明该项,而不是表示缺少该功能。',
         ],
       },
@@ -1364,35 +1377,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-differences',
         title: 'RAG框架:差异所在',
         items: [
-          '**可视化构建器。**[Dify](/zh/power-local-llm/dify-ai-workflow-builder-review)、[Flowise](/zh/power-local-llm/flowise-ai-visual-workflow-builder-review)、[Langflow](/zh/power-local-llm/langflow-visual-ai-orchestration-review)和[Self-hosted AI Starter Kit](/zh/power-local-llm/self-hosted-ai-starter-kit-review)记载了可视化或拖拽式工作流构建器。',
-          '**本地LLM。**[cognee](/zh/power-local-llm/cognee-review)、[Haystack](/zh/power-local-llm/haystack-deepset-rag-framework-review)、[Langchain-Chatchat](/zh/power-local-llm/langchain-chatchat-review)、[LlamaIndex](/zh/power-local-llm/llamaindex-rag-framework-review)、[MaxKB](/zh/power-local-llm/maxkb-review)、[Onyx](/zh/power-local-llm/onyx-review)、[Self-hosted AI Starter Kit](/zh/power-local-llm/self-hosted-ai-starter-kit-review)、[txtai](/zh/power-local-llm/txtai-embedded-vector-database-review)和[Vane(原名Perplexica)](/zh/power-local-llm/vane-review)记载了对本地LLM的支持。',
-          '**智能体。**[Dify](/zh/power-local-llm/dify-ai-workflow-builder-review)、[Flowise](/zh/power-local-llm/flowise-ai-visual-workflow-builder-review)、[Haystack](/zh/power-local-llm/haystack-deepset-rag-framework-review)、[Langchain-Chatchat](/zh/power-local-llm/langchain-chatchat-review)、[Langflow](/zh/power-local-llm/langflow-visual-ai-orchestration-review)、[LlamaIndex](/zh/power-local-llm/llamaindex-rag-framework-review)、[LongMemory](/zh/power-local-llm/longmemory-review)、[MaxKB](/zh/power-local-llm/maxkb-review)、[Onyx](/zh/power-local-llm/onyx-review)、[Self-hosted AI Starter Kit](/zh/power-local-llm/self-hosted-ai-starter-kit-review)和[txtai](/zh/power-local-llm/txtai-embedded-vector-database-review)记载了对智能体的支持。',
-          '**多种向量存储。**[Flowise](/zh/power-local-llm/flowise-ai-visual-workflow-builder-review)、[Langchain-Chatchat](/zh/power-local-llm/langchain-chatchat-review)、[Langflow](/zh/power-local-llm/langflow-visual-ai-orchestration-review)和[LlamaIndex](/zh/power-local-llm/llamaindex-rag-framework-review)记载了与多种向量存储的集成。',
-          '**Docker与自托管。**[cognee](/zh/power-local-llm/cognee-review)、[Dify](/zh/power-local-llm/dify-ai-workflow-builder-review)、[Flowise](/zh/power-local-llm/flowise-ai-visual-workflow-builder-review)、[Haystack](/zh/power-local-llm/haystack-deepset-rag-framework-review)、[Langchain-Chatchat](/zh/power-local-llm/langchain-chatchat-review)、[Langflow](/zh/power-local-llm/langflow-visual-ai-orchestration-review)、[LongMemory](/zh/power-local-llm/longmemory-review)、[MaxKB](/zh/power-local-llm/maxkb-review)、[Onyx](/zh/power-local-llm/onyx-review)、[Self-hosted AI Starter Kit](/zh/power-local-llm/self-hosted-ai-starter-kit-review)、[txtai](/zh/power-local-llm/txtai-embedded-vector-database-review)和[Vane(原名Perplexica)](/zh/power-local-llm/vane-review)记载了Docker或自托管部署。',
-          '**API。**[cognee](/zh/power-local-llm/cognee-review)、[Dify](/zh/power-local-llm/dify-ai-workflow-builder-review)、[Flowise](/zh/power-local-llm/flowise-ai-visual-workflow-builder-review)、[Langchain-Chatchat](/zh/power-local-llm/langchain-chatchat-review)、[Langflow](/zh/power-local-llm/langflow-visual-ai-orchestration-review)、[LongMemory](/zh/power-local-llm/longmemory-review)、[Onyx](/zh/power-local-llm/onyx-review)、[txtai](/zh/power-local-llm/txtai-embedded-vector-database-review)和[Vane(原名Perplexica)](/zh/power-local-llm/vane-review)记载了HTTP或REST API。',
+          `**可视化构建器。**${WITH('rag-frameworks', 'visualBuilder', 'zh')}记载了可视化或拖拽式工作流构建器。`,
+          `**本地LLM。**${WITH('rag-frameworks', 'localLlm', 'zh')}记载了对本地LLM的支持。`,
+          `**智能体。**${WITH('rag-frameworks', 'agents', 'zh')}记载了对智能体的支持。`,
+          `**多种向量存储。**${WITH('rag-frameworks', 'multiVector', 'zh')}记载了与多种向量存储的集成。`,
+          `**Docker与自托管。**${WITH('rag-frameworks', 'dockerDeploy', 'zh')}记载了Docker或自托管部署。`,
+          `**API。**${WITH('rag-frameworks', 'apiServer', 'zh')}记载了HTTP或REST API。`,
         ],
       },
       docDifferences: {
         id: 'doc-differences',
         title: '文档与PDF对话:差异所在',
         items: [
-          '**本地LLM。**[AnythingLLM](/zh/power-local-llm/anythingllm-review)、[h2oGPT](/zh/power-local-llm/h2ogpt-review)、[Khoj](/zh/power-local-llm/khoj-ai-second-brain-review)、[Langchain-Chatchat](/zh/power-local-llm/langchain-chatchat-review)、[PrivateGPT](/zh/power-local-llm/privategpt-review)、[Quivr](/zh/power-local-llm/quivr-self-hosted-knowledge-assistant-review)、[Sidekick](/zh/power-local-llm/sidekick-review)和[Surf](/zh/power-local-llm/surf-review)记载了对本地LLM的支持。',
-          '**文档格式。**[AnythingLLM](/zh/power-local-llm/anythingllm-review)、[h2oGPT](/zh/power-local-llm/h2ogpt-review)、[Khoj](/zh/power-local-llm/khoj-ai-second-brain-review)、[PrivateGPT](/zh/power-local-llm/privategpt-review)、[Quivr](/zh/power-local-llm/quivr-self-hosted-knowledge-assistant-review)和[RAGFlow](/zh/power-local-llm/ragflow-document-understanding-rag-review)记载了对多种文件格式的支持。',
-          '**引用来源。**[AnythingLLM](/zh/power-local-llm/anythingllm-review)、[PrivateGPT](/zh/power-local-llm/privategpt-review)、[RAGFlow](/zh/power-local-llm/ragflow-document-understanding-rag-review)、[Sidekick](/zh/power-local-llm/sidekick-review)和[Surf](/zh/power-local-llm/surf-review)记载了在回答中引用来源。',
-          '**桌面应用。**[AnythingLLM](/zh/power-local-llm/anythingllm-review)、[Khoj](/zh/power-local-llm/khoj-ai-second-brain-review)和[Surf](/zh/power-local-llm/surf-review)记载了可安装的桌面应用。',
-          '**Docker与自托管。**[AnythingLLM](/zh/power-local-llm/anythingllm-review)、[h2oGPT](/zh/power-local-llm/h2ogpt-review)、[Langchain-Chatchat](/zh/power-local-llm/langchain-chatchat-review)、[PrivateGPT](/zh/power-local-llm/privategpt-review)和[RAGFlow](/zh/power-local-llm/ragflow-document-understanding-rag-review)记载了Docker或自托管部署。',
-          '**API。**[AnythingLLM](/zh/power-local-llm/anythingllm-review)、[h2oGPT](/zh/power-local-llm/h2ogpt-review)、[Langchain-Chatchat](/zh/power-local-llm/langchain-chatchat-review)、[PrivateGPT](/zh/power-local-llm/privategpt-review)、[RAGFlow](/zh/power-local-llm/ragflow-document-understanding-rag-review)和[ToolNeuron](/zh/power-local-llm/toolneuron-review)记载了API。',
+          `**本地LLM。**${WITH('document-chat', 'localLlm', 'zh')}记载了对本地LLM的支持。`,
+          `**文档格式。**${WITH('document-chat', 'multiFormat', 'zh')}记载了对多种文件格式的支持。`,
+          `**引用来源。**${WITH('document-chat', 'citations', 'zh')}记载了在回答中引用来源。`,
+          `**桌面应用。**${WITH('document-chat', 'desktopApp', 'zh')}记载了可安装的桌面应用。`,
+          `**Docker与自托管。**${WITH('document-chat', 'dockerDeploy', 'zh')}记载了Docker或自托管部署。`,
+          `**API。**${WITH('document-chat', 'apiServer', 'zh')}记载了API。`,
         ],
       },
       vectorDifferences: {
         id: 'vector-differences',
         title: '向量数据库:差异所在',
         items: [
-          '**混合搜索。**[Milvus](/zh/power-local-llm/milvus-review)、[Qdrant](/zh/power-local-llm/qdrant-review)和[Weaviate](/zh/power-local-llm/weaviate-review)记载了关键词与向量的混合搜索。',
-          '**元数据过滤。**[Chroma](/zh/power-local-llm/chroma-review)、[Milvus](/zh/power-local-llm/milvus-review)、[Qdrant](/zh/power-local-llm/qdrant-review)和[Weaviate](/zh/power-local-llm/weaviate-review)记载了按元数据过滤。',
-          '**分布式部署。**[Milvus](/zh/power-local-llm/milvus-review)、[Qdrant](/zh/power-local-llm/qdrant-review)和[Weaviate](/zh/power-local-llm/weaviate-review)记载了分布式或集群部署。',
-          '**Docker与自托管。**[Milvus](/zh/power-local-llm/milvus-review)、[Qdrant](/zh/power-local-llm/qdrant-review)和[Weaviate](/zh/power-local-llm/weaviate-review)记载了Docker或自托管部署。',
-          '**托管云。**[Chroma](/zh/power-local-llm/chroma-review)、[Milvus](/zh/power-local-llm/milvus-review)、[Qdrant](/zh/power-local-llm/qdrant-review)和[Weaviate](/zh/power-local-llm/weaviate-review)除自托管外还记载了托管云服务。',
+          `**混合搜索。**${WITH('vector-databases', 'hybridSearch', 'zh')}记载了关键词与向量的混合搜索。`,
+          `**元数据过滤。**${WITH('vector-databases', 'metadataFilter', 'zh')}记载了按元数据过滤。`,
+          `**分布式部署。**${WITH('vector-databases', 'clustered', 'zh')}记载了分布式或集群部署。`,
+          `**Docker与自托管。**${WITH('vector-databases', 'dockerDeploy', 'zh')}记载了Docker或自托管部署。`,
+          `**托管云。**${WITH('vector-databases', 'managedCloud', 'zh')}除自托管外还记载了托管云服务。`,
           '**许可证。**Chroma、Milvus和Qdrant采用Apache-2.0,Weaviate的核心采用BSD-3-Clause,部分受限功能采用其自有的Weaviate License——详情请参阅各工具的评测。',
         ],
       },
@@ -1401,19 +1414,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '笔记集成:差异所在',
         items: [
           '**所支持的笔记应用。**[BMO Chatbot](/zh/power-local-llm/bmo-chatbot-review)、[Copilot for Obsidian](/zh/power-local-llm/copilot-for-obsidian-review)、[Smart Connections](/zh/power-local-llm/smart-connections-review)和[Text Generator](/zh/power-local-llm/text-generator-review)适用于Obsidian;[logseq-copilot](/zh/power-local-llm/logseq-copilot-review)适用于Logseq;[Joplin AI](/zh/power-local-llm/joplin-ai-agent-review)适用于Joplin;[Blinko](/zh/power-local-llm/blinko-review)、[SiYuan](/zh/power-local-llm/siyuan-review)和[Surf](/zh/power-local-llm/surf-review)是内置AI的独立笔记应用。',
-          '**本地LLM。**[BMO Chatbot](/zh/power-local-llm/bmo-chatbot-review)、[Copilot for Obsidian](/zh/power-local-llm/copilot-for-obsidian-review)、[Joplin AI](/zh/power-local-llm/joplin-ai-agent-review)、[Karakeep](/zh/power-local-llm/karakeep-review)、[logseq-copilot](/zh/power-local-llm/logseq-copilot-review)和[Surf](/zh/power-local-llm/surf-review)记载了对本地LLM的支持。',
-          '**语义搜索。**[Karakeep](/zh/power-local-llm/karakeep-review)和[Smart Connections](/zh/power-local-llm/smart-connections-review)记载了对笔记的语义搜索。',
-          '**与你的笔记对话。**[BMO Chatbot](/zh/power-local-llm/bmo-chatbot-review)和[Joplin AI](/zh/power-local-llm/joplin-ai-agent-review)记载了与你的笔记对话。',
+          `**本地LLM。**${WITH('notes-integrations', 'localLlm', 'zh')}记载了对本地LLM的支持。`,
+          `**语义搜索。**${WITH('notes-integrations', 'semanticSearch', 'zh')}记载了对笔记的语义搜索。`,
+          `**与你的笔记对话。**${WITH('notes-integrations', 'chatNotes', 'zh')}记载了与你的笔记对话。`,
         ],
       },
       searchDifferences: {
         id: 'search-differences',
         title: '本地搜索与研究:差异所在',
         items: [
-          '**本地LLM。**[Farfalle](/zh/power-local-llm/farfalle-review)、[Karakeep](/zh/power-local-llm/karakeep-review)、[Local Deep Research](/zh/power-local-llm/local-deep-research-review)、[Onyx](/zh/power-local-llm/onyx-review)和[Vane(原名Perplexica)](/zh/power-local-llm/vane-review)记载了对本地LLM的支持。',
-          '**网络搜索。**[Farfalle](/zh/power-local-llm/farfalle-review)、[Local Deep Research](/zh/power-local-llm/local-deep-research-review)、[Onyx](/zh/power-local-llm/onyx-review)和[Vane(原名Perplexica)](/zh/power-local-llm/vane-review)记载了搜索网络。',
-          '**你自己的文件。**[Local Deep Research](/zh/power-local-llm/local-deep-research-review)、[Onyx](/zh/power-local-llm/onyx-review)和[Smart Connections](/zh/power-local-llm/smart-connections-review)记载了搜索你自己的文件或笔记。',
-          '**引用来源。**[Local Deep Research](/zh/power-local-llm/local-deep-research-review)和[Vane(原名Perplexica)](/zh/power-local-llm/vane-review)记载了引用来源。',
+          `**本地LLM。**${WITH('local-search', 'localLlm', 'zh')}记载了对本地LLM的支持。`,
+          `**网络搜索。**${WITH('local-search', 'webSearch', 'zh')}记载了搜索网络。`,
+          `**你自己的文件。**${WITH('local-search', 'privateDocs', 'zh')}记载了搜索你自己的文件或笔记。`,
+          `**引用来源。**${WITH('local-search', 'citations', 'zh')}记载了引用来源。`,
         ],
       },
       limitations: {
@@ -1480,7 +1493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1513,14 +1526,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca',
     seoTitle: 'RAG local, chat com documentos e bancos vetoriais 2026',
     intro:
-      `As ferramentas que permitem a um modelo local trabalhar com os seus próprios documentos se dividem em cinco tipos diferentes — frameworks e pipelines de RAG, apps de chat com documentos e PDFs, bancos de dados vetoriais, integrações com apps de notas e ferramentas locais de busca e pesquisa — e nenhuma lista única de recursos compara todas de forma justa. Este guia compara ${KR_TOTAL} ferramentas gratuitas e freemium, um tipo de cada vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.`,
+      `As ferramentas que permitem a um modelo local trabalhar com os seus próprios documentos se dividem em cinco tipos diferentes — frameworks e pipelines de RAG, apps de chat com documentos e PDFs, bancos de dados vetoriais, integrações com apps de notas e ferramentas locais de busca e pesquisa — e nenhuma lista única de recursos compara todas de forma justa. Este guia compara ${KR_TOTAL} ferramentas gratuitas, freemium e pagas, um tipo de cada vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.`,
     metaDescription:
       `Compare ${KR_TOTAL} ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.`,
     twitterDescription:
@@ -1541,18 +1554,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**As ${KR_TOTAL} ferramentas locais de conhecimento e recuperação do diretório PromptQuorum se dividem em cinco tipos que devem ser comparados separadamente: frameworks e pipelines de RAG (${KR_RAG_FRAMEWORKS} ferramentas), apps de chat com documentos e PDFs (${KR_DOCUMENT_PDF_CHAT}), integrações com apps de notas (${KR_NOTES_INTEGRATIONS}), ferramentas locais de busca e pesquisa (${KR_LOCAL_SEARCH}) e bancos de dados vetoriais (${KR_VECTOR_DATABASES}).** Entre os bancos vetoriais, 3 de 4 documentam busca híbrida e 4 de 4 documentam filtragem por metadados; entre os frameworks RAG, 4 documentam um construtor visual e 9 documentam suporte a LLMs locais. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
+      `**As ${KR_TOTAL} ferramentas locais de conhecimento e recuperação do diretório PromptQuorum se dividem em cinco tipos que devem ser comparados separadamente: frameworks e pipelines de RAG (${KR_RAG_FRAMEWORKS} ferramentas), apps de chat com documentos e PDFs (${KR_DOCUMENT_PDF_CHAT}), integrações com apps de notas (${KR_NOTES_INTEGRATIONS}), ferramentas locais de busca e pesquisa (${KR_LOCAL_SEARCH}) e bancos de dados vetoriais (${KR_VECTOR_DATABASES}).** Entre os bancos vetoriais, ${VEC.hybridSearch} de ${KR_VECTOR_DATABASES} documentam busca híbrida e ${VEC.metadataFilter} de ${KR_VECTOR_DATABASES} documentam filtragem por metadados; entre os frameworks RAG, ${RAGF.visualBuilder} documentam um construtor visual e ${RAGF.localLlm} documentam suporte a LLMs locais. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta local de RAG ou chat com documentos devo usar?',
         answer:
           'Depende do tipo de ferramenta, então compare um tipo de cada vez. Escolha pela restrição que mais importa — trabalhar com LLMs locais, Docker ou auto-hospedagem, uma API, busca híbrida, um construtor visual ou qual app de notas você já usa — e use a tabela abaixo, gerada a partir da documentação oficial de cada ferramenta.',
         bullets: [
-          'Frameworks RAG: 13 ferramentas comparadas em construtor visual, LLMs locais, agentes, bancos vetoriais, Docker e API.',
-          'Chat com documentos e PDFs: 12 ferramentas comparadas em LLMs locais, formatos de documento, citações, app de desktop, Docker e API.',
-          'Bancos de dados vetoriais: 4 ferramentas comparadas em busca híbrida, filtragem por metadados, clusterização, Docker e nuvem gerenciada.',
-          'Integrações com notas: 10 ferramentas comparadas em qual app de notas, LLMs locais, busca semântica e chat com as notas.',
-          'Busca e pesquisa locais: 7 ferramentas comparadas em LLMs locais, busca na web, seus próprios arquivos e citações.',
+          `Frameworks RAG: ${SEG['rag-frameworks']} ferramentas comparadas em construtor visual, LLMs locais, agentes, bancos vetoriais, Docker e API.`,
+          `Chat com documentos e PDFs: ${SEG['document-chat']} ferramentas comparadas em LLMs locais, formatos de documento, citações, app de desktop, Docker e API.`,
+          `Bancos de dados vetoriais: ${SEG['vector-databases']} ferramentas comparadas em busca híbrida, filtragem por metadados, clusterização, Docker e nuvem gerenciada.`,
+          `Integrações com notas: ${SEG['notes-integrations']} ferramentas comparadas em qual app de notas, LLMs locais, busca semântica e chat com as notas.`,
+          `Busca e pesquisa locais: ${SEG['local-search']} ferramentas comparadas em LLMs locais, busca na web, seus próprios arquivos e citações.`,
           'Um traço (—) significa que a documentação do projeto não informa esse item, e não que o recurso não exista.',
         ],
       },
@@ -1611,35 +1624,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-differences',
         title: 'Frameworks RAG: o que muda',
         items: [
-          '**Construtor visual.** [Dify](/pt/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/pt/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langflow](/pt/power-local-llm/langflow-visual-ai-orchestration-review) e [Self-hosted AI Starter Kit](/pt/power-local-llm/self-hosted-ai-starter-kit-review) documentam um construtor de fluxos visual ou de arrastar e soltar.',
-          '**LLMs locais.** [cognee](/pt/power-local-llm/cognee-review), [Haystack](/pt/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/pt/power-local-llm/langchain-chatchat-review), [LlamaIndex](/pt/power-local-llm/llamaindex-rag-framework-review), [MaxKB](/pt/power-local-llm/maxkb-review), [Onyx](/pt/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/pt/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/pt/power-local-llm/txtai-embedded-vector-database-review) e [Vane (antigo Perplexica)](/pt/power-local-llm/vane-review) documentam o trabalho com LLMs locais.',
-          '**Agentes.** [Dify](/pt/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/pt/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/pt/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/pt/power-local-llm/langchain-chatchat-review), [Langflow](/pt/power-local-llm/langflow-visual-ai-orchestration-review), [LlamaIndex](/pt/power-local-llm/llamaindex-rag-framework-review), [LongMemory](/pt/power-local-llm/longmemory-review), [MaxKB](/pt/power-local-llm/maxkb-review), [Onyx](/pt/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/pt/power-local-llm/self-hosted-ai-starter-kit-review) e [txtai](/pt/power-local-llm/txtai-embedded-vector-database-review) documentam suporte a agentes.',
-          '**Vários bancos vetoriais.** [Flowise](/pt/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/pt/power-local-llm/langchain-chatchat-review), [Langflow](/pt/power-local-llm/langflow-visual-ai-orchestration-review) e [LlamaIndex](/pt/power-local-llm/llamaindex-rag-framework-review) documentam integrações com vários bancos vetoriais.',
-          '**Docker e auto-hospedagem.** [cognee](/pt/power-local-llm/cognee-review), [Dify](/pt/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/pt/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/pt/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/pt/power-local-llm/langchain-chatchat-review), [Langflow](/pt/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/pt/power-local-llm/longmemory-review), [MaxKB](/pt/power-local-llm/maxkb-review), [Onyx](/pt/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/pt/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/pt/power-local-llm/txtai-embedded-vector-database-review) e [Vane (antigo Perplexica)](/pt/power-local-llm/vane-review) documentam implantação com Docker ou auto-hospedada.',
-          '**API.** [cognee](/pt/power-local-llm/cognee-review), [Dify](/pt/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/pt/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/pt/power-local-llm/langchain-chatchat-review), [Langflow](/pt/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/pt/power-local-llm/longmemory-review), [Onyx](/pt/power-local-llm/onyx-review), [txtai](/pt/power-local-llm/txtai-embedded-vector-database-review) e [Vane (antigo Perplexica)](/pt/power-local-llm/vane-review) documentam uma API HTTP ou REST.',
+          `**Construtor visual.** ${WITH('rag-frameworks', 'visualBuilder', 'pt')} documentam um construtor de fluxos visual ou de arrastar e soltar.`,
+          `**LLMs locais.** ${WITH('rag-frameworks', 'localLlm', 'pt')} documentam o trabalho com LLMs locais.`,
+          `**Agentes.** ${WITH('rag-frameworks', 'agents', 'pt')} documentam suporte a agentes.`,
+          `**Vários bancos vetoriais.** ${WITH('rag-frameworks', 'multiVector', 'pt')} documentam integrações com vários bancos vetoriais.`,
+          `**Docker e auto-hospedagem.** ${WITH('rag-frameworks', 'dockerDeploy', 'pt')} documentam implantação com Docker ou auto-hospedada.`,
+          `**API.** ${WITH('rag-frameworks', 'apiServer', 'pt')} documentam uma API HTTP ou REST.`,
         ],
       },
       docDifferences: {
         id: 'doc-differences',
         title: 'Chat com documentos e PDFs: o que muda',
         items: [
-          '**LLMs locais.** [AnythingLLM](/pt/power-local-llm/anythingllm-review), [h2oGPT](/pt/power-local-llm/h2ogpt-review), [Khoj](/pt/power-local-llm/khoj-ai-second-brain-review), [Langchain-Chatchat](/pt/power-local-llm/langchain-chatchat-review), [PrivateGPT](/pt/power-local-llm/privategpt-review), [Quivr](/pt/power-local-llm/quivr-self-hosted-knowledge-assistant-review), [Sidekick](/pt/power-local-llm/sidekick-review) e [Surf](/pt/power-local-llm/surf-review) documentam o trabalho com LLMs locais.',
-          '**Formatos de documento.** [AnythingLLM](/pt/power-local-llm/anythingllm-review), [h2oGPT](/pt/power-local-llm/h2ogpt-review), [Khoj](/pt/power-local-llm/khoj-ai-second-brain-review), [PrivateGPT](/pt/power-local-llm/privategpt-review), [Quivr](/pt/power-local-llm/quivr-self-hosted-knowledge-assistant-review) e [RAGFlow](/pt/power-local-llm/ragflow-document-understanding-rag-review) documentam vários formatos de arquivo compatíveis.',
-          '**Citações.** [AnythingLLM](/pt/power-local-llm/anythingllm-review), [PrivateGPT](/pt/power-local-llm/privategpt-review), [RAGFlow](/pt/power-local-llm/ragflow-document-understanding-rag-review), [Sidekick](/pt/power-local-llm/sidekick-review) e [Surf](/pt/power-local-llm/surf-review) documentam a citação de fontes nas respostas.',
-          '**App de desktop.** [AnythingLLM](/pt/power-local-llm/anythingllm-review), [Khoj](/pt/power-local-llm/khoj-ai-second-brain-review) e [Surf](/pt/power-local-llm/surf-review) documentam um app de desktop instalável.',
-          '**Docker e auto-hospedagem.** [AnythingLLM](/pt/power-local-llm/anythingllm-review), [h2oGPT](/pt/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/pt/power-local-llm/langchain-chatchat-review), [PrivateGPT](/pt/power-local-llm/privategpt-review) e [RAGFlow](/pt/power-local-llm/ragflow-document-understanding-rag-review) documentam implantação com Docker ou auto-hospedada.',
-          '**API.** [AnythingLLM](/pt/power-local-llm/anythingllm-review), [h2oGPT](/pt/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/pt/power-local-llm/langchain-chatchat-review), [PrivateGPT](/pt/power-local-llm/privategpt-review), [RAGFlow](/pt/power-local-llm/ragflow-document-understanding-rag-review) e [ToolNeuron](/pt/power-local-llm/toolneuron-review) documentam uma API.',
+          `**LLMs locais.** ${WITH('document-chat', 'localLlm', 'pt')} documentam o trabalho com LLMs locais.`,
+          `**Formatos de documento.** ${WITH('document-chat', 'multiFormat', 'pt')} documentam vários formatos de arquivo compatíveis.`,
+          `**Citações.** ${WITH('document-chat', 'citations', 'pt')} documentam a citação de fontes nas respostas.`,
+          `**App de desktop.** ${WITH('document-chat', 'desktopApp', 'pt')} documentam um app de desktop instalável.`,
+          `**Docker e auto-hospedagem.** ${WITH('document-chat', 'dockerDeploy', 'pt')} documentam implantação com Docker ou auto-hospedada.`,
+          `**API.** ${WITH('document-chat', 'apiServer', 'pt')} documentam uma API.`,
         ],
       },
       vectorDifferences: {
         id: 'vector-differences',
         title: 'Bancos de dados vetoriais: o que muda',
         items: [
-          '**Busca híbrida.** [Milvus](/pt/power-local-llm/milvus-review), [Qdrant](/pt/power-local-llm/qdrant-review) e [Weaviate](/pt/power-local-llm/weaviate-review) documentam busca híbrida por palavras-chave e vetores.',
-          '**Filtragem por metadados.** [Chroma](/pt/power-local-llm/chroma-review), [Milvus](/pt/power-local-llm/milvus-review), [Qdrant](/pt/power-local-llm/qdrant-review) e [Weaviate](/pt/power-local-llm/weaviate-review) documentam a filtragem por metadados.',
-          '**Implantação distribuída.** [Milvus](/pt/power-local-llm/milvus-review), [Qdrant](/pt/power-local-llm/qdrant-review) e [Weaviate](/pt/power-local-llm/weaviate-review) documentam implantação distribuída ou em cluster.',
-          '**Docker e auto-hospedagem.** [Milvus](/pt/power-local-llm/milvus-review), [Qdrant](/pt/power-local-llm/qdrant-review) e [Weaviate](/pt/power-local-llm/weaviate-review) documentam implantação com Docker ou auto-hospedada.',
-          '**Nuvem gerenciada.** [Chroma](/pt/power-local-llm/chroma-review), [Milvus](/pt/power-local-llm/milvus-review), [Qdrant](/pt/power-local-llm/qdrant-review) e [Weaviate](/pt/power-local-llm/weaviate-review) documentam uma oferta de nuvem hospedada além da auto-hospedagem.',
+          `**Busca híbrida.** ${WITH('vector-databases', 'hybridSearch', 'pt')} documentam busca híbrida por palavras-chave e vetores.`,
+          `**Filtragem por metadados.** ${WITH('vector-databases', 'metadataFilter', 'pt')} documentam a filtragem por metadados.`,
+          `**Implantação distribuída.** ${WITH('vector-databases', 'clustered', 'pt')} documentam implantação distribuída ou em cluster.`,
+          `**Docker e auto-hospedagem.** ${WITH('vector-databases', 'dockerDeploy', 'pt')} documentam implantação com Docker ou auto-hospedada.`,
+          `**Nuvem gerenciada.** ${WITH('vector-databases', 'managedCloud', 'pt')} documentam uma oferta de nuvem hospedada além da auto-hospedagem.`,
           '**Licença.** Chroma, Milvus e Qdrant são Apache-2.0 e o núcleo do Weaviate é BSD-3-Clause, com alguns recursos restritos sob a própria Weaviate License — veja os detalhes na análise de cada ferramenta.',
         ],
       },
@@ -1648,19 +1661,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Integrações com notas: o que muda',
         items: [
           '**Qual app de notas.** [BMO Chatbot](/pt/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/pt/power-local-llm/copilot-for-obsidian-review), [Smart Connections](/pt/power-local-llm/smart-connections-review) e [Text Generator](/pt/power-local-llm/text-generator-review) para o Obsidian; [logseq-copilot](/pt/power-local-llm/logseq-copilot-review) para o Logseq; [Joplin AI](/pt/power-local-llm/joplin-ai-agent-review) para o Joplin; [Blinko](/pt/power-local-llm/blinko-review), [SiYuan](/pt/power-local-llm/siyuan-review) e [Surf](/pt/power-local-llm/surf-review) são apps de notas independentes com IA integrada.',
-          '**LLMs locais.** [BMO Chatbot](/pt/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/pt/power-local-llm/copilot-for-obsidian-review), [Joplin AI](/pt/power-local-llm/joplin-ai-agent-review), [Karakeep](/pt/power-local-llm/karakeep-review), [logseq-copilot](/pt/power-local-llm/logseq-copilot-review) e [Surf](/pt/power-local-llm/surf-review) documentam o trabalho com LLMs locais.',
-          '**Busca semântica.** [Karakeep](/pt/power-local-llm/karakeep-review) e [Smart Connections](/pt/power-local-llm/smart-connections-review) documentam busca semântica nas notas.',
-          '**Chat com as suas notas.** [BMO Chatbot](/pt/power-local-llm/bmo-chatbot-review) e [Joplin AI](/pt/power-local-llm/joplin-ai-agent-review) documentam a conversa com as suas notas.',
+          `**LLMs locais.** ${WITH('notes-integrations', 'localLlm', 'pt')} documentam o trabalho com LLMs locais.`,
+          `**Busca semântica.** ${WITH('notes-integrations', 'semanticSearch', 'pt')} documentam busca semântica nas notas.`,
+          `**Chat com as suas notas.** ${WITH('notes-integrations', 'chatNotes', 'pt')} documentam a conversa com as suas notas.`,
         ],
       },
       searchDifferences: {
         id: 'search-differences',
         title: 'Busca e pesquisa locais: o que muda',
         items: [
-          '**LLMs locais.** [Farfalle](/pt/power-local-llm/farfalle-review), [Karakeep](/pt/power-local-llm/karakeep-review), [Local Deep Research](/pt/power-local-llm/local-deep-research-review), [Onyx](/pt/power-local-llm/onyx-review) e [Vane (antigo Perplexica)](/pt/power-local-llm/vane-review) documentam o trabalho com LLMs locais.',
-          '**Busca na web.** [Farfalle](/pt/power-local-llm/farfalle-review), [Local Deep Research](/pt/power-local-llm/local-deep-research-review), [Onyx](/pt/power-local-llm/onyx-review) e [Vane (antigo Perplexica)](/pt/power-local-llm/vane-review) documentam a busca na web.',
-          '**Seus próprios arquivos.** [Local Deep Research](/pt/power-local-llm/local-deep-research-review), [Onyx](/pt/power-local-llm/onyx-review) e [Smart Connections](/pt/power-local-llm/smart-connections-review) documentam a busca nos seus próprios arquivos ou notas.',
-          '**Citações.** [Local Deep Research](/pt/power-local-llm/local-deep-research-review) e [Vane (antigo Perplexica)](/pt/power-local-llm/vane-review) documentam a citação de fontes.',
+          `**LLMs locais.** ${WITH('local-search', 'localLlm', 'pt')} documentam o trabalho com LLMs locais.`,
+          `**Busca na web.** ${WITH('local-search', 'webSearch', 'pt')} documentam a busca na web.`,
+          `**Seus próprios arquivos.** ${WITH('local-search', 'privateDocs', 'pt')} documentam a busca nos seus próprios arquivos ou notas.`,
+          `**Citações.** ${WITH('local-search', 'citations', 'pt')} documentam a citação de fontes.`,
         ],
       },
       limitations: {
@@ -1727,7 +1740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1760,14 +1773,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: 'مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث',
     seoTitle: 'مقارنة أدوات RAG ومحادثة المستندات المحلية 2026',
     intro:
-      `تنقسم الأدوات التي تتيح لنموذج محلي العمل مع مستنداتك الخاصة إلى خمسة أنواع مختلفة — أطر RAG وخطوط المعالجة، وتطبيقات محادثة المستندات وملفات PDF، وقواعد البيانات المتجهية، وتكاملات تطبيقات الملاحظات، وأدوات البحث المحلي والاستقصاء — ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل ${KR_TOTAL} أداة مجانية أو بنموذج freemium، نوعًا بعد نوع، باستخدام جدول مقارنة مُولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، ولذلك لا يمكن أن يتعارض الجدول مع المراجعات.`,
+      `تنقسم الأدوات التي تتيح لنموذج محلي العمل مع مستنداتك الخاصة إلى خمسة أنواع مختلفة — أطر RAG وخطوط المعالجة، وتطبيقات محادثة المستندات وملفات PDF، وقواعد البيانات المتجهية، وتكاملات تطبيقات الملاحظات، وأدوات البحث المحلي والاستقصاء — ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل ${KR_TOTAL} أداة مجانية أو بنموذج freemium أو مدفوعة، نوعًا بعد نوع، باستخدام جدول مقارنة مُولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، ولذلك لا يمكن أن يتعارض الجدول مع المراجعات.`,
     metaDescription:
       `قارن ${KR_TOTAL} أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.`,
     twitterDescription:
@@ -1788,18 +1801,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**تنقسم أدوات المعرفة والاسترجاع المحلية الأربعون في دليل PromptQuorum إلى خمسة أنواع ينبغي مقارنتها كلًّا على حدة: أطر RAG وخطوط المعالجة (13 أداة)، وتطبيقات محادثة المستندات وملفات PDF (12)، وتكاملات تطبيقات الملاحظات (10)، وأدوات البحث المحلي والاستقصاء (7)، وقواعد البيانات المتجهية (4).** ومن بين قواعد البيانات المتجهية، توثّق 3 من 4 البحث الهجين وتوثّق 4 من 4 التصفية حسب البيانات الوصفية؛ ومن بين أطر RAG، توثّق 4 أدوات منشئًا مرئيًا وتوثّق 9 دعم النماذج المحلية. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.',
+      `**تنقسم أدوات المعرفة والاسترجاع المحلية الـ${KR_TOTAL} في دليل PromptQuorum إلى خمسة أنواع ينبغي مقارنتها كلًّا على حدة: أطر RAG وخطوط المعالجة (${KR_RAG_FRAMEWORKS} أداة)، وتطبيقات محادثة المستندات وملفات PDF (${KR_DOCUMENT_PDF_CHAT})، وتكاملات تطبيقات الملاحظات (${KR_NOTES_INTEGRATIONS})، وأدوات البحث المحلي والاستقصاء (${KR_LOCAL_SEARCH})، وقواعد البيانات المتجهية (${KR_VECTOR_DATABASES}).** ومن بين قواعد البيانات المتجهية، توثّق ${VEC.hybridSearch} من ${KR_VECTOR_DATABASES} البحث الهجين وتوثّق ${VEC.metadataFilter} من ${KR_VECTOR_DATABASES} التصفية حسب البيانات الوصفية؛ ومن بين أطر RAG، توثّق ${RAGF.visualBuilder} ${RAGF.visualBuilder > 10 ? 'أداة' : 'أدوات'} منشئًا مرئيًا وتوثّق ${RAGF.localLlm} دعم النماذج المحلية. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي أداة RAG أو محادثة مستندات محلية ينبغي أن أستخدم؟',
         answer:
           'يعتمد ذلك على نوع الأداة، لذا قارن داخل نوع واحد في كل مرة. اختر بحسب القيد الأهم لديك — العمل مع نماذج LLM محلية، أو Docker والاستضافة الذاتية، أو واجهة API، أو البحث الهجين، أو المنشئ المرئي، أو تطبيق الملاحظات الذي تستخدمه أصلًا — واستعن بالجدول أدناه، وهو مُولَّد من الوثائق الرسمية لكل أداة.',
         bullets: [
-          'أطر RAG: مقارنة 13 أداة من حيث المنشئ المرئي ونماذج LLM المحلية والوكلاء ومخازن المتجهات وDocker وAPI.',
-          'محادثة المستندات وملفات PDF: مقارنة 12 أداة من حيث نماذج LLM المحلية وصيغ المستندات والاستشهادات وتطبيق سطح المكتب وDocker وAPI.',
-          'قواعد البيانات المتجهية: مقارنة 4 أدوات من حيث البحث الهجين والتصفية حسب البيانات الوصفية والتجميع في عنقود وDocker والسحابة المُدارة.',
-          'تكاملات الملاحظات: مقارنة 10 أدوات من حيث تطبيق الملاحظات المدعوم ونماذج LLM المحلية والبحث الدلالي والمحادثة مع الملاحظات.',
-          'البحث المحلي والاستقصاء: مقارنة 7 أدوات من حيث نماذج LLM المحلية والبحث على الويب وملفاتك الخاصة والاستشهادات.',
+          `أطر RAG: مقارنة ${SEG['rag-frameworks']} أداة من حيث المنشئ المرئي ونماذج LLM المحلية والوكلاء ومخازن المتجهات وDocker وAPI.`,
+          `محادثة المستندات وملفات PDF: مقارنة ${SEG['document-chat']} أداة من حيث نماذج LLM المحلية وصيغ المستندات والاستشهادات وتطبيق سطح المكتب وDocker وAPI.`,
+          `قواعد البيانات المتجهية: مقارنة ${SEG['vector-databases']} ${SEG['vector-databases'] > 10 ? 'أداة' : 'أدوات'} من حيث البحث الهجين والتصفية حسب البيانات الوصفية والتجميع في عنقود وDocker والسحابة المُدارة.`,
+          `تكاملات الملاحظات: مقارنة ${SEG['notes-integrations']} ${SEG['notes-integrations'] > 10 ? 'أداة' : 'أدوات'} من حيث تطبيق الملاحظات المدعوم ونماذج LLM المحلية والبحث الدلالي والمحادثة مع الملاحظات.`,
+          `البحث المحلي والاستقصاء: مقارنة ${SEG['local-search']} ${SEG['local-search'] > 10 ? 'أداة' : 'أدوات'} من حيث نماذج LLM المحلية والبحث على الويب وملفاتك الخاصة والاستشهادات.`,
           'الشرطة (—) تعني أن وثائق المشروع لا تذكر هذه الخاصية، وليس أن الميزة غير موجودة.',
         ],
       },
@@ -1825,7 +1838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'الأدوات التي تتيح لنموذج محلي العمل مع مستنداتك الخاصة خمسة أنواع مختلفة — أطر RAG، وتطبيقات محادثة المستندات، وقواعد البيانات المتجهية، وتكاملات الملاحظات، وأدوات البحث المحلي — ولذلك تُقارَن الأدوات الأربعون في دليل PromptQuorum داخل كل نوع على حدة، باستخدام جدول مُولَّد من بيانات الأدوات نفسها التي تعتمد عليها مراجعة كل أداة.',
+            text: `الأدوات التي تتيح لنموذج محلي العمل مع مستنداتك الخاصة خمسة أنواع مختلفة — أطر RAG، وتطبيقات محادثة المستندات، وقواعد البيانات المتجهية، وتكاملات الملاحظات، وأدوات البحث المحلي — ولذلك تُقارَن الأدوات الـ${KR_TOTAL} في دليل PromptQuorum داخل كل نوع على حدة، باستخدام جدول مُولَّد من بيانات الأدوات نفسها التي تعتمد عليها مراجعة كل أداة.`,
           },
           {
             type: 'plain-terms',
@@ -1858,35 +1871,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-differences',
         title: 'أطر RAG: ما الذي يختلف',
         items: [
-          '**المنشئ المرئي.** توثّق [Dify](/ar/power-local-llm/dify-ai-workflow-builder-review)، [Flowise](/ar/power-local-llm/flowise-ai-visual-workflow-builder-review)، [Langflow](/ar/power-local-llm/langflow-visual-ai-orchestration-review) و[Self-hosted AI Starter Kit](/ar/power-local-llm/self-hosted-ai-starter-kit-review) منشئ سير عمل مرئيًا أو بالسحب والإفلات.',
-          '**نماذج LLM المحلية.** توثّق [cognee](/ar/power-local-llm/cognee-review)، [Haystack](/ar/power-local-llm/haystack-deepset-rag-framework-review)، [Langchain-Chatchat](/ar/power-local-llm/langchain-chatchat-review)، [LlamaIndex](/ar/power-local-llm/llamaindex-rag-framework-review)، [MaxKB](/ar/power-local-llm/maxkb-review)، [Onyx](/ar/power-local-llm/onyx-review)، [Self-hosted AI Starter Kit](/ar/power-local-llm/self-hosted-ai-starter-kit-review)، [txtai](/ar/power-local-llm/txtai-embedded-vector-database-review) و[Vane (المعروف سابقًا باسم Perplexica)](/ar/power-local-llm/vane-review) العمل مع نماذج LLM محلية.',
-          '**الوكلاء.** توثّق [Dify](/ar/power-local-llm/dify-ai-workflow-builder-review)، [Flowise](/ar/power-local-llm/flowise-ai-visual-workflow-builder-review)، [Haystack](/ar/power-local-llm/haystack-deepset-rag-framework-review)، [Langchain-Chatchat](/ar/power-local-llm/langchain-chatchat-review)، [Langflow](/ar/power-local-llm/langflow-visual-ai-orchestration-review)، [LlamaIndex](/ar/power-local-llm/llamaindex-rag-framework-review)، [LongMemory](/ar/power-local-llm/longmemory-review)، [MaxKB](/ar/power-local-llm/maxkb-review)، [Onyx](/ar/power-local-llm/onyx-review)، [Self-hosted AI Starter Kit](/ar/power-local-llm/self-hosted-ai-starter-kit-review) و[txtai](/ar/power-local-llm/txtai-embedded-vector-database-review) دعم الوكلاء.',
-          '**مخازن متجهات متعددة.** توثّق [Flowise](/ar/power-local-llm/flowise-ai-visual-workflow-builder-review)، [Langchain-Chatchat](/ar/power-local-llm/langchain-chatchat-review)، [Langflow](/ar/power-local-llm/langflow-visual-ai-orchestration-review) و[LlamaIndex](/ar/power-local-llm/llamaindex-rag-framework-review) التكامل مع عدة مخازن متجهات.',
-          '**Docker والاستضافة الذاتية.** توثّق [cognee](/ar/power-local-llm/cognee-review)، [Dify](/ar/power-local-llm/dify-ai-workflow-builder-review)، [Flowise](/ar/power-local-llm/flowise-ai-visual-workflow-builder-review)، [Haystack](/ar/power-local-llm/haystack-deepset-rag-framework-review)، [Langchain-Chatchat](/ar/power-local-llm/langchain-chatchat-review)، [Langflow](/ar/power-local-llm/langflow-visual-ai-orchestration-review)، [LongMemory](/ar/power-local-llm/longmemory-review)، [MaxKB](/ar/power-local-llm/maxkb-review)، [Onyx](/ar/power-local-llm/onyx-review)، [Self-hosted AI Starter Kit](/ar/power-local-llm/self-hosted-ai-starter-kit-review)، [txtai](/ar/power-local-llm/txtai-embedded-vector-database-review) و[Vane (المعروف سابقًا باسم Perplexica)](/ar/power-local-llm/vane-review) النشر عبر Docker أو الاستضافة الذاتية.',
-          '**API.** توثّق [cognee](/ar/power-local-llm/cognee-review)، [Dify](/ar/power-local-llm/dify-ai-workflow-builder-review)، [Flowise](/ar/power-local-llm/flowise-ai-visual-workflow-builder-review)، [Langchain-Chatchat](/ar/power-local-llm/langchain-chatchat-review)، [Langflow](/ar/power-local-llm/langflow-visual-ai-orchestration-review)، [LongMemory](/ar/power-local-llm/longmemory-review)، [Onyx](/ar/power-local-llm/onyx-review)، [txtai](/ar/power-local-llm/txtai-embedded-vector-database-review) و[Vane (المعروف سابقًا باسم Perplexica)](/ar/power-local-llm/vane-review) واجهة HTTP أو REST API.',
+          `**المنشئ المرئي.** توثّق ${WITH('rag-frameworks', 'visualBuilder', 'ar')} منشئ سير عمل مرئيًا أو بالسحب والإفلات.`,
+          `**نماذج LLM المحلية.** توثّق ${WITH('rag-frameworks', 'localLlm', 'ar')} العمل مع نماذج LLM محلية.`,
+          `**الوكلاء.** توثّق ${WITH('rag-frameworks', 'agents', 'ar')} دعم الوكلاء.`,
+          `**مخازن متجهات متعددة.** توثّق ${WITH('rag-frameworks', 'multiVector', 'ar')} التكامل مع عدة مخازن متجهات.`,
+          `**Docker والاستضافة الذاتية.** توثّق ${WITH('rag-frameworks', 'dockerDeploy', 'ar')} النشر عبر Docker أو الاستضافة الذاتية.`,
+          `**API.** توثّق ${WITH('rag-frameworks', 'apiServer', 'ar')} واجهة HTTP أو REST API.`,
         ],
       },
       docDifferences: {
         id: 'doc-differences',
         title: 'محادثة المستندات وملفات PDF: ما الذي يختلف',
         items: [
-          '**نماذج LLM المحلية.** توثّق [AnythingLLM](/ar/power-local-llm/anythingllm-review)، [h2oGPT](/ar/power-local-llm/h2ogpt-review)، [Khoj](/ar/power-local-llm/khoj-ai-second-brain-review)، [Langchain-Chatchat](/ar/power-local-llm/langchain-chatchat-review)، [PrivateGPT](/ar/power-local-llm/privategpt-review)، [Quivr](/ar/power-local-llm/quivr-self-hosted-knowledge-assistant-review)، [Sidekick](/ar/power-local-llm/sidekick-review) و[Surf](/ar/power-local-llm/surf-review) العمل مع نماذج LLM محلية.',
-          '**صيغ المستندات.** توثّق [AnythingLLM](/ar/power-local-llm/anythingllm-review)، [h2oGPT](/ar/power-local-llm/h2ogpt-review)، [Khoj](/ar/power-local-llm/khoj-ai-second-brain-review)، [PrivateGPT](/ar/power-local-llm/privategpt-review)، [Quivr](/ar/power-local-llm/quivr-self-hosted-knowledge-assistant-review) و[RAGFlow](/ar/power-local-llm/ragflow-document-understanding-rag-review) عدة صيغ ملفات مدعومة.',
-          '**الاستشهادات.** توثّق [AnythingLLM](/ar/power-local-llm/anythingllm-review)، [PrivateGPT](/ar/power-local-llm/privategpt-review)، [RAGFlow](/ar/power-local-llm/ragflow-document-understanding-rag-review)، [Sidekick](/ar/power-local-llm/sidekick-review) و[Surf](/ar/power-local-llm/surf-review) الاستشهاد بالمصادر في الإجابات.',
-          '**تطبيق سطح المكتب.** توثّق [AnythingLLM](/ar/power-local-llm/anythingllm-review)، [Khoj](/ar/power-local-llm/khoj-ai-second-brain-review) و[Surf](/ar/power-local-llm/surf-review) تطبيق سطح مكتب قابلًا للتثبيت.',
-          '**Docker والاستضافة الذاتية.** توثّق [AnythingLLM](/ar/power-local-llm/anythingllm-review)، [h2oGPT](/ar/power-local-llm/h2ogpt-review)، [Langchain-Chatchat](/ar/power-local-llm/langchain-chatchat-review)، [PrivateGPT](/ar/power-local-llm/privategpt-review) و[RAGFlow](/ar/power-local-llm/ragflow-document-understanding-rag-review) النشر عبر Docker أو الاستضافة الذاتية.',
-          '**API.** توثّق [AnythingLLM](/ar/power-local-llm/anythingllm-review)، [h2oGPT](/ar/power-local-llm/h2ogpt-review)، [Langchain-Chatchat](/ar/power-local-llm/langchain-chatchat-review)، [PrivateGPT](/ar/power-local-llm/privategpt-review)، [RAGFlow](/ar/power-local-llm/ragflow-document-understanding-rag-review) و[ToolNeuron](/ar/power-local-llm/toolneuron-review) واجهة API.',
+          `**نماذج LLM المحلية.** توثّق ${WITH('document-chat', 'localLlm', 'ar')} العمل مع نماذج LLM محلية.`,
+          `**صيغ المستندات.** توثّق ${WITH('document-chat', 'multiFormat', 'ar')} عدة صيغ ملفات مدعومة.`,
+          `**الاستشهادات.** توثّق ${WITH('document-chat', 'citations', 'ar')} الاستشهاد بالمصادر في الإجابات.`,
+          `**تطبيق سطح المكتب.** توثّق ${WITH('document-chat', 'desktopApp', 'ar')} تطبيق سطح مكتب قابلًا للتثبيت.`,
+          `**Docker والاستضافة الذاتية.** توثّق ${WITH('document-chat', 'dockerDeploy', 'ar')} النشر عبر Docker أو الاستضافة الذاتية.`,
+          `**API.** توثّق ${WITH('document-chat', 'apiServer', 'ar')} واجهة API.`,
         ],
       },
       vectorDifferences: {
         id: 'vector-differences',
         title: 'قواعد البيانات المتجهية: ما الذي يختلف',
         items: [
-          '**البحث الهجين.** توثّق [Milvus](/ar/power-local-llm/milvus-review)، [Qdrant](/ar/power-local-llm/qdrant-review) و[Weaviate](/ar/power-local-llm/weaviate-review) البحث الهجين بالكلمات المفتاحية والمتجهات.',
-          '**التصفية حسب البيانات الوصفية.** توثّق [Chroma](/ar/power-local-llm/chroma-review)، [Milvus](/ar/power-local-llm/milvus-review)، [Qdrant](/ar/power-local-llm/qdrant-review) و[Weaviate](/ar/power-local-llm/weaviate-review) التصفية حسب البيانات الوصفية.',
-          '**النشر الموزَّع.** توثّق [Milvus](/ar/power-local-llm/milvus-review)، [Qdrant](/ar/power-local-llm/qdrant-review) و[Weaviate](/ar/power-local-llm/weaviate-review) النشر الموزَّع أو في عنقود.',
-          '**Docker والاستضافة الذاتية.** توثّق [Milvus](/ar/power-local-llm/milvus-review)، [Qdrant](/ar/power-local-llm/qdrant-review) و[Weaviate](/ar/power-local-llm/weaviate-review) النشر عبر Docker أو الاستضافة الذاتية.',
-          '**السحابة المُدارة.** توثّق [Chroma](/ar/power-local-llm/chroma-review)، [Milvus](/ar/power-local-llm/milvus-review)، [Qdrant](/ar/power-local-llm/qdrant-review) و[Weaviate](/ar/power-local-llm/weaviate-review) عرضًا سحابيًا مستضافًا إلى جانب الاستضافة الذاتية.',
+          `**البحث الهجين.** توثّق ${WITH('vector-databases', 'hybridSearch', 'ar')} البحث الهجين بالكلمات المفتاحية والمتجهات.`,
+          `**التصفية حسب البيانات الوصفية.** توثّق ${WITH('vector-databases', 'metadataFilter', 'ar')} التصفية حسب البيانات الوصفية.`,
+          `**النشر الموزَّع.** توثّق ${WITH('vector-databases', 'clustered', 'ar')} النشر الموزَّع أو في عنقود.`,
+          `**Docker والاستضافة الذاتية.** توثّق ${WITH('vector-databases', 'dockerDeploy', 'ar')} النشر عبر Docker أو الاستضافة الذاتية.`,
+          `**السحابة المُدارة.** توثّق ${WITH('vector-databases', 'managedCloud', 'ar')} عرضًا سحابيًا مستضافًا إلى جانب الاستضافة الذاتية.`,
           '**الرخصة.** Chroma وMilvus وQdrant بترخيص Apache-2.0، ونواة Weaviate بترخيص BSD-3-Clause مع بعض الميزات المقيَّدة تحت رخصة Weaviate الخاصة بها — راجع مراجعة كل أداة للتفاصيل.',
         ],
       },
@@ -1895,19 +1908,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'تكاملات الملاحظات: ما الذي يختلف',
         items: [
           '**تطبيق الملاحظات.** [BMO Chatbot](/ar/power-local-llm/bmo-chatbot-review)، [Copilot for Obsidian](/ar/power-local-llm/copilot-for-obsidian-review)، [Smart Connections](/ar/power-local-llm/smart-connections-review) و[Text Generator](/ar/power-local-llm/text-generator-review) لتطبيق Obsidian؛ و[logseq-copilot](/ar/power-local-llm/logseq-copilot-review) لتطبيق Logseq؛ و[Joplin AI](/ar/power-local-llm/joplin-ai-agent-review) لتطبيق Joplin؛ أما [Blinko](/ar/power-local-llm/blinko-review)، [SiYuan](/ar/power-local-llm/siyuan-review) و[Surf](/ar/power-local-llm/surf-review) فهي تطبيقات ملاحظات مستقلة تتضمن ذكاءً اصطناعيًا مدمجًا.',
-          '**نماذج LLM المحلية.** توثّق [BMO Chatbot](/ar/power-local-llm/bmo-chatbot-review)، [Copilot for Obsidian](/ar/power-local-llm/copilot-for-obsidian-review)، [Joplin AI](/ar/power-local-llm/joplin-ai-agent-review)، [Karakeep](/ar/power-local-llm/karakeep-review)، [logseq-copilot](/ar/power-local-llm/logseq-copilot-review) و[Surf](/ar/power-local-llm/surf-review) العمل مع نماذج LLM محلية.',
-          '**البحث الدلالي.** توثّق [Karakeep](/ar/power-local-llm/karakeep-review) و[Smart Connections](/ar/power-local-llm/smart-connections-review) البحث الدلالي في الملاحظات.',
-          '**المحادثة مع ملاحظاتك.** توثّق [BMO Chatbot](/ar/power-local-llm/bmo-chatbot-review) و[Joplin AI](/ar/power-local-llm/joplin-ai-agent-review) المحادثة مع ملاحظاتك.',
+          `**نماذج LLM المحلية.** توثّق ${WITH('notes-integrations', 'localLlm', 'ar')} العمل مع نماذج LLM محلية.`,
+          `**البحث الدلالي.** توثّق ${WITH('notes-integrations', 'semanticSearch', 'ar')} البحث الدلالي في الملاحظات.`,
+          `**المحادثة مع ملاحظاتك.** توثّق ${WITH('notes-integrations', 'chatNotes', 'ar')} المحادثة مع ملاحظاتك.`,
         ],
       },
       searchDifferences: {
         id: 'search-differences',
         title: 'البحث المحلي والاستقصاء: ما الذي يختلف',
         items: [
-          '**نماذج LLM المحلية.** توثّق [Farfalle](/ar/power-local-llm/farfalle-review)، [Karakeep](/ar/power-local-llm/karakeep-review)، [Local Deep Research](/ar/power-local-llm/local-deep-research-review)، [Onyx](/ar/power-local-llm/onyx-review) و[Vane (المعروف سابقًا باسم Perplexica)](/ar/power-local-llm/vane-review) العمل مع نماذج LLM محلية.',
-          '**البحث على الويب.** توثّق [Farfalle](/ar/power-local-llm/farfalle-review)، [Local Deep Research](/ar/power-local-llm/local-deep-research-review)، [Onyx](/ar/power-local-llm/onyx-review) و[Vane (المعروف سابقًا باسم Perplexica)](/ar/power-local-llm/vane-review) البحث على الويب.',
-          '**ملفاتك الخاصة.** توثّق [Local Deep Research](/ar/power-local-llm/local-deep-research-review)، [Onyx](/ar/power-local-llm/onyx-review) و[Smart Connections](/ar/power-local-llm/smart-connections-review) البحث في ملفاتك أو ملاحظاتك الخاصة.',
-          '**الاستشهادات.** توثّق [Local Deep Research](/ar/power-local-llm/local-deep-research-review) و[Vane (المعروف سابقًا باسم Perplexica)](/ar/power-local-llm/vane-review) الاستشهاد بالمصادر.',
+          `**نماذج LLM المحلية.** توثّق ${WITH('local-search', 'localLlm', 'ar')} العمل مع نماذج LLM محلية.`,
+          `**البحث على الويب.** توثّق ${WITH('local-search', 'webSearch', 'ar')} البحث على الويب.`,
+          `**ملفاتك الخاصة.** توثّق ${WITH('local-search', 'privateDocs', 'ar')} البحث في ملفاتك أو ملاحظاتك الخاصة.`,
+          `**الاستشهادات.** توثّق ${WITH('local-search', 'citations', 'ar')} الاستشهاد بالمصادر.`,
         ],
       },
       limitations: {
@@ -1974,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -2007,14 +2020,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
     title: '로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색',
     seoTitle: '로컬 RAG·문서 채팅·벡터 DB 비교 2026',
     intro:
-      `로컬 모델이 내 문서를 다루게 해 주는 도구는 RAG 프레임워크와 파이프라인, 문서·PDF 채팅 앱, 벡터 데이터베이스, 노트 앱 통합, 로컬 검색·리서치 도구의 다섯 가지 종류로 나뉘며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 프리미엄 도구 ${KR_TOTAL}개를 종류별로 하나씩 비교하며, 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터로 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.`,
+      `로컬 모델이 내 문서를 다루게 해 주는 도구는 RAG 프레임워크와 파이프라인, 문서·PDF 채팅 앱, 벡터 데이터베이스, 노트 앱 통합, 로컬 검색·리서치 도구의 다섯 가지 종류로 나뉘며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 무료, 프리미엄 및 유료 도구 ${KR_TOTAL}개를 종류별로 하나씩 비교하며, 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터로 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.`,
     metaDescription:
       `로컬 지식·검색 도구 ${KR_TOTAL}개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.`,
     twitterDescription:
@@ -2035,18 +2048,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorum 디렉터리의 로컬 지식·검색 도구 ${KR_TOTAL}개는 따로 비교해야 하는 다섯 종류로 나뉩니다: RAG 프레임워크와 파이프라인(${KR_RAG_FRAMEWORKS}개), 문서·PDF 채팅 앱(${KR_DOCUMENT_PDF_CHAT}개), 노트 앱 통합(${KR_NOTES_INTEGRATIONS}개), 로컬 검색·리서치 도구(${KR_LOCAL_SEARCH}개), 벡터 데이터베이스(${KR_VECTOR_DATABASES}개).** 벡터 데이터베이스 4개 중 3개가 하이브리드 검색을, 4개 모두가 메타데이터 필터링을 문서에 명시하고 있으며, RAG 프레임워크 중에서는 4개가 시각적 빌더를, 9개가 로컬 LLM 지원을 문서에 명시하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
+      `**PromptQuorum 디렉터리의 로컬 지식·검색 도구 ${KR_TOTAL}개는 따로 비교해야 하는 다섯 종류로 나뉩니다: RAG 프레임워크와 파이프라인(${KR_RAG_FRAMEWORKS}개), 문서·PDF 채팅 앱(${KR_DOCUMENT_PDF_CHAT}개), 노트 앱 통합(${KR_NOTES_INTEGRATIONS}개), 로컬 검색·리서치 도구(${KR_LOCAL_SEARCH}개), 벡터 데이터베이스(${KR_VECTOR_DATABASES}개).** 벡터 데이터베이스 ${KR_VECTOR_DATABASES}개 중 ${VEC.hybridSearch}개가 하이브리드 검색을, ${VEC.metadataFilter}개가 메타데이터 필터링을 문서에 명시하고 있으며, RAG 프레임워크 중에서는 ${RAGF.visualBuilder}개가 시각적 빌더를, ${RAGF.localLlm}개가 로컬 LLM 지원을 문서에 명시하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 RAG 또는 문서 채팅 도구를 써야 합니까?',
         answer:
           '도구의 종류에 따라 다르므로 한 번에 한 종류 안에서 비교하십시오. 로컬 LLM 사용, Docker 또는 셀프 호스팅, API, 하이브리드 검색, 시각적 빌더, 이미 쓰고 있는 노트 앱 등 가장 중요한 조건을 기준으로 고르고, 각 도구의 공식 문서를 바탕으로 생성한 아래 표를 활용하십시오.',
         bullets: [
-          'RAG 프레임워크: 시각적 빌더, 로컬 LLM, 에이전트, 벡터 저장소, Docker, API를 기준으로 13개 도구를 비교했습니다.',
-          '문서·PDF 채팅: 로컬 LLM, 문서 형식, 출처 인용, 데스크톱 앱, Docker, API를 기준으로 12개 도구를 비교했습니다.',
-          '벡터 데이터베이스: 하이브리드 검색, 메타데이터 필터링, 클러스터링, Docker, 관리형 클라우드를 기준으로 4개 도구를 비교했습니다.',
-          '노트 통합: 지원하는 노트 앱, 로컬 LLM, 시맨틱 검색, 노트와의 대화를 기준으로 10개 도구를 비교했습니다.',
-          '로컬 검색·리서치: 로컬 LLM, 웹 검색, 내 파일, 출처 인용을 기준으로 7개 도구를 비교했습니다.',
+          `RAG 프레임워크: 시각적 빌더, 로컬 LLM, 에이전트, 벡터 저장소, Docker, API를 기준으로 ${SEG['rag-frameworks']}개 도구를 비교했습니다.`,
+          `문서·PDF 채팅: 로컬 LLM, 문서 형식, 출처 인용, 데스크톱 앱, Docker, API를 기준으로 ${SEG['document-chat']}개 도구를 비교했습니다.`,
+          `벡터 데이터베이스: 하이브리드 검색, 메타데이터 필터링, 클러스터링, Docker, 관리형 클라우드를 기준으로 ${SEG['vector-databases']}개 도구를 비교했습니다.`,
+          `노트 통합: 지원하는 노트 앱, 로컬 LLM, 시맨틱 검색, 노트와의 대화를 기준으로 ${SEG['notes-integrations']}개 도구를 비교했습니다.`,
+          `로컬 검색·리서치: 로컬 LLM, 웹 검색, 내 파일, 출처 인용을 기준으로 ${SEG['local-search']}개 도구를 비교했습니다.`,
           '대시(—)는 프로젝트 문서에 해당 내용이 명시되어 있지 않다는 뜻이며, 기능이 없다는 뜻이 아닙니다.',
         ],
       },
@@ -2105,35 +2118,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'rag-differences',
         title: 'RAG 프레임워크: 차이점',
         items: [
-          '**시각적 빌더.** 시각적 또는 드래그 앤 드롭 워크플로 빌더를 문서에 명시한 도구: [Dify](/ko/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/ko/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langflow](/ko/power-local-llm/langflow-visual-ai-orchestration-review) 및 [Self-hosted AI Starter Kit](/ko/power-local-llm/self-hosted-ai-starter-kit-review).',
-          '**로컬 LLM.** 로컬 LLM 사용을 문서에 명시한 도구: [cognee](/ko/power-local-llm/cognee-review), [Haystack](/ko/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/ko/power-local-llm/langchain-chatchat-review), [LlamaIndex](/ko/power-local-llm/llamaindex-rag-framework-review), [MaxKB](/ko/power-local-llm/maxkb-review), [Onyx](/ko/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/ko/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/ko/power-local-llm/txtai-embedded-vector-database-review) 및 [Vane (formerly Perplexica)](/ko/power-local-llm/vane-review).',
-          '**에이전트.** 에이전트 지원을 문서에 명시한 도구: [Dify](/ko/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/ko/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/ko/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/ko/power-local-llm/langchain-chatchat-review), [Langflow](/ko/power-local-llm/langflow-visual-ai-orchestration-review), [LlamaIndex](/ko/power-local-llm/llamaindex-rag-framework-review), [LongMemory](/ko/power-local-llm/longmemory-review), [MaxKB](/ko/power-local-llm/maxkb-review), [Onyx](/ko/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/ko/power-local-llm/self-hosted-ai-starter-kit-review) 및 [txtai](/ko/power-local-llm/txtai-embedded-vector-database-review).',
-          '**여러 벡터 저장소.** 여러 벡터 저장소와의 통합을 문서에 명시한 도구: [Flowise](/ko/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/ko/power-local-llm/langchain-chatchat-review), [Langflow](/ko/power-local-llm/langflow-visual-ai-orchestration-review) 및 [LlamaIndex](/ko/power-local-llm/llamaindex-rag-framework-review).',
-          '**Docker 및 셀프 호스팅.** Docker 또는 셀프 호스팅 배포를 문서에 명시한 도구: [cognee](/ko/power-local-llm/cognee-review), [Dify](/ko/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/ko/power-local-llm/flowise-ai-visual-workflow-builder-review), [Haystack](/ko/power-local-llm/haystack-deepset-rag-framework-review), [Langchain-Chatchat](/ko/power-local-llm/langchain-chatchat-review), [Langflow](/ko/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/ko/power-local-llm/longmemory-review), [MaxKB](/ko/power-local-llm/maxkb-review), [Onyx](/ko/power-local-llm/onyx-review), [Self-hosted AI Starter Kit](/ko/power-local-llm/self-hosted-ai-starter-kit-review), [txtai](/ko/power-local-llm/txtai-embedded-vector-database-review) 및 [Vane (formerly Perplexica)](/ko/power-local-llm/vane-review).',
-          '**API.** HTTP 또는 REST API를 문서에 명시한 도구: [cognee](/ko/power-local-llm/cognee-review), [Dify](/ko/power-local-llm/dify-ai-workflow-builder-review), [Flowise](/ko/power-local-llm/flowise-ai-visual-workflow-builder-review), [Langchain-Chatchat](/ko/power-local-llm/langchain-chatchat-review), [Langflow](/ko/power-local-llm/langflow-visual-ai-orchestration-review), [LongMemory](/ko/power-local-llm/longmemory-review), [Onyx](/ko/power-local-llm/onyx-review), [txtai](/ko/power-local-llm/txtai-embedded-vector-database-review) 및 [Vane (formerly Perplexica)](/ko/power-local-llm/vane-review).',
+          `**시각적 빌더.** 시각적 또는 드래그 앤 드롭 워크플로 빌더를 문서에 명시한 도구: ${WITH('rag-frameworks', 'visualBuilder', 'ko')}.`,
+          `**로컬 LLM.** 로컬 LLM 사용을 문서에 명시한 도구: ${WITH('rag-frameworks', 'localLlm', 'ko')}.`,
+          `**에이전트.** 에이전트 지원을 문서에 명시한 도구: ${WITH('rag-frameworks', 'agents', 'ko')}.`,
+          `**여러 벡터 저장소.** 여러 벡터 저장소와의 통합을 문서에 명시한 도구: ${WITH('rag-frameworks', 'multiVector', 'ko')}.`,
+          `**Docker 및 셀프 호스팅.** Docker 또는 셀프 호스팅 배포를 문서에 명시한 도구: ${WITH('rag-frameworks', 'dockerDeploy', 'ko')}.`,
+          `**API.** HTTP 또는 REST API를 문서에 명시한 도구: ${WITH('rag-frameworks', 'apiServer', 'ko')}.`,
         ],
       },
       docDifferences: {
         id: 'doc-differences',
         title: '문서 및 PDF 채팅: 차이점',
         items: [
-          '**로컬 LLM.** 로컬 LLM 사용을 문서에 명시한 도구: [AnythingLLM](/ko/power-local-llm/anythingllm-review), [h2oGPT](/ko/power-local-llm/h2ogpt-review), [Khoj](/ko/power-local-llm/khoj-ai-second-brain-review), [Langchain-Chatchat](/ko/power-local-llm/langchain-chatchat-review), [PrivateGPT](/ko/power-local-llm/privategpt-review), [Quivr](/ko/power-local-llm/quivr-self-hosted-knowledge-assistant-review), [Sidekick](/ko/power-local-llm/sidekick-review) 및 [Surf](/ko/power-local-llm/surf-review).',
-          '**문서 형식.** 여러 지원 파일 형식을 문서에 명시한 도구: [AnythingLLM](/ko/power-local-llm/anythingllm-review), [h2oGPT](/ko/power-local-llm/h2ogpt-review), [Khoj](/ko/power-local-llm/khoj-ai-second-brain-review), [PrivateGPT](/ko/power-local-llm/privategpt-review), [Quivr](/ko/power-local-llm/quivr-self-hosted-knowledge-assistant-review) 및 [RAGFlow](/ko/power-local-llm/ragflow-document-understanding-rag-review).',
-          '**출처 인용.** 답변에 출처를 인용한다고 문서에 명시한 도구: [AnythingLLM](/ko/power-local-llm/anythingllm-review), [PrivateGPT](/ko/power-local-llm/privategpt-review), [RAGFlow](/ko/power-local-llm/ragflow-document-understanding-rag-review), [Sidekick](/ko/power-local-llm/sidekick-review) 및 [Surf](/ko/power-local-llm/surf-review).',
-          '**데스크톱 앱.** 설치형 데스크톱 앱을 문서에 명시한 도구: [AnythingLLM](/ko/power-local-llm/anythingllm-review), [Khoj](/ko/power-local-llm/khoj-ai-second-brain-review) 및 [Surf](/ko/power-local-llm/surf-review).',
-          '**Docker 및 셀프 호스팅.** Docker 또는 셀프 호스팅 배포를 문서에 명시한 도구: [AnythingLLM](/ko/power-local-llm/anythingllm-review), [h2oGPT](/ko/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/ko/power-local-llm/langchain-chatchat-review), [PrivateGPT](/ko/power-local-llm/privategpt-review) 및 [RAGFlow](/ko/power-local-llm/ragflow-document-understanding-rag-review).',
-          '**API.** API를 문서에 명시한 도구: [AnythingLLM](/ko/power-local-llm/anythingllm-review), [h2oGPT](/ko/power-local-llm/h2ogpt-review), [Langchain-Chatchat](/ko/power-local-llm/langchain-chatchat-review), [PrivateGPT](/ko/power-local-llm/privategpt-review), [RAGFlow](/ko/power-local-llm/ragflow-document-understanding-rag-review) 및 [ToolNeuron](/ko/power-local-llm/toolneuron-review).',
+          `**로컬 LLM.** 로컬 LLM 사용을 문서에 명시한 도구: ${WITH('document-chat', 'localLlm', 'ko')}.`,
+          `**문서 형식.** 여러 지원 파일 형식을 문서에 명시한 도구: ${WITH('document-chat', 'multiFormat', 'ko')}.`,
+          `**출처 인용.** 답변에 출처를 인용한다고 문서에 명시한 도구: ${WITH('document-chat', 'citations', 'ko')}.`,
+          `**데스크톱 앱.** 설치형 데스크톱 앱을 문서에 명시한 도구: ${WITH('document-chat', 'desktopApp', 'ko')}.`,
+          `**Docker 및 셀프 호스팅.** Docker 또는 셀프 호스팅 배포를 문서에 명시한 도구: ${WITH('document-chat', 'dockerDeploy', 'ko')}.`,
+          `**API.** API를 문서에 명시한 도구: ${WITH('document-chat', 'apiServer', 'ko')}.`,
         ],
       },
       vectorDifferences: {
         id: 'vector-differences',
         title: '벡터 데이터베이스: 차이점',
         items: [
-          '**하이브리드 검색.** 키워드와 벡터를 결합한 하이브리드 검색을 문서에 명시한 도구: [Milvus](/ko/power-local-llm/milvus-review), [Qdrant](/ko/power-local-llm/qdrant-review) 및 [Weaviate](/ko/power-local-llm/weaviate-review).',
-          '**메타데이터 필터링.** 메타데이터 기준 필터링을 문서에 명시한 도구: [Chroma](/ko/power-local-llm/chroma-review), [Milvus](/ko/power-local-llm/milvus-review), [Qdrant](/ko/power-local-llm/qdrant-review) 및 [Weaviate](/ko/power-local-llm/weaviate-review).',
-          '**분산 배포.** 분산 또는 클러스터 배포를 문서에 명시한 도구: [Milvus](/ko/power-local-llm/milvus-review), [Qdrant](/ko/power-local-llm/qdrant-review) 및 [Weaviate](/ko/power-local-llm/weaviate-review).',
-          '**Docker 및 셀프 호스팅.** Docker 또는 셀프 호스팅 배포를 문서에 명시한 도구: [Milvus](/ko/power-local-llm/milvus-review), [Qdrant](/ko/power-local-llm/qdrant-review) 및 [Weaviate](/ko/power-local-llm/weaviate-review).',
-          '**관리형 클라우드.** 셀프 호스팅과 함께 호스팅 클라우드 서비스도 문서에 명시한 도구: [Chroma](/ko/power-local-llm/chroma-review), [Milvus](/ko/power-local-llm/milvus-review), [Qdrant](/ko/power-local-llm/qdrant-review) 및 [Weaviate](/ko/power-local-llm/weaviate-review).',
+          `**하이브리드 검색.** 키워드와 벡터를 결합한 하이브리드 검색을 문서에 명시한 도구: ${WITH('vector-databases', 'hybridSearch', 'ko')}.`,
+          `**메타데이터 필터링.** 메타데이터 기준 필터링을 문서에 명시한 도구: ${WITH('vector-databases', 'metadataFilter', 'ko')}.`,
+          `**분산 배포.** 분산 또는 클러스터 배포를 문서에 명시한 도구: ${WITH('vector-databases', 'clustered', 'ko')}.`,
+          `**Docker 및 셀프 호스팅.** Docker 또는 셀프 호스팅 배포를 문서에 명시한 도구: ${WITH('vector-databases', 'dockerDeploy', 'ko')}.`,
+          `**관리형 클라우드.** 셀프 호스팅과 함께 호스팅 클라우드 서비스도 문서에 명시한 도구: ${WITH('vector-databases', 'managedCloud', 'ko')}.`,
           '**라이선스.** Chroma, Milvus, Qdrant는 Apache-2.0이며 Weaviate의 코어는 BSD-3-Clause이고, 일부 제한 기능은 자체 Weaviate License를 따릅니다. 자세한 내용은 각 도구의 리뷰를 참고하십시오.',
         ],
       },
@@ -2142,19 +2155,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '노트 통합: 차이점',
         items: [
           '**노트 앱.** Obsidian용: [BMO Chatbot](/ko/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/ko/power-local-llm/copilot-for-obsidian-review), [Smart Connections](/ko/power-local-llm/smart-connections-review) 및 [Text Generator](/ko/power-local-llm/text-generator-review); Logseq용: [logseq-copilot](/ko/power-local-llm/logseq-copilot-review); Joplin용: [Joplin AI](/ko/power-local-llm/joplin-ai-agent-review); [Blinko](/ko/power-local-llm/blinko-review), [SiYuan](/ko/power-local-llm/siyuan-review) 및 [Surf](/ko/power-local-llm/surf-review)는 AI가 내장된 독립형 노트 앱입니다.',
-          '**로컬 LLM.** 로컬 LLM 사용을 문서에 명시한 도구: [BMO Chatbot](/ko/power-local-llm/bmo-chatbot-review), [Copilot for Obsidian](/ko/power-local-llm/copilot-for-obsidian-review), [Joplin AI](/ko/power-local-llm/joplin-ai-agent-review), [Karakeep](/ko/power-local-llm/karakeep-review), [logseq-copilot](/ko/power-local-llm/logseq-copilot-review) 및 [Surf](/ko/power-local-llm/surf-review).',
-          '**시맨틱 검색.** 노트에 대한 시맨틱 검색을 문서에 명시한 도구: [Karakeep](/ko/power-local-llm/karakeep-review) 및 [Smart Connections](/ko/power-local-llm/smart-connections-review).',
-          '**노트와 대화.** 노트와의 대화를 문서에 명시한 도구: [BMO Chatbot](/ko/power-local-llm/bmo-chatbot-review) 및 [Joplin AI](/ko/power-local-llm/joplin-ai-agent-review).',
+          `**로컬 LLM.** 로컬 LLM 사용을 문서에 명시한 도구: ${WITH('notes-integrations', 'localLlm', 'ko')}.`,
+          `**시맨틱 검색.** 노트에 대한 시맨틱 검색을 문서에 명시한 도구: ${WITH('notes-integrations', 'semanticSearch', 'ko')}.`,
+          `**노트와 대화.** 노트와의 대화를 문서에 명시한 도구: ${WITH('notes-integrations', 'chatNotes', 'ko')}.`,
         ],
       },
       searchDifferences: {
         id: 'search-differences',
         title: '로컬 검색 및 리서치: 차이점',
         items: [
-          '**로컬 LLM.** 로컬 LLM 사용을 문서에 명시한 도구: [Farfalle](/ko/power-local-llm/farfalle-review), [Karakeep](/ko/power-local-llm/karakeep-review), [Local Deep Research](/ko/power-local-llm/local-deep-research-review), [Onyx](/ko/power-local-llm/onyx-review) 및 [Vane (formerly Perplexica)](/ko/power-local-llm/vane-review).',
-          '**웹 검색.** 웹 검색을 문서에 명시한 도구: [Farfalle](/ko/power-local-llm/farfalle-review), [Local Deep Research](/ko/power-local-llm/local-deep-research-review), [Onyx](/ko/power-local-llm/onyx-review) 및 [Vane (formerly Perplexica)](/ko/power-local-llm/vane-review).',
-          '**내 파일.** 내 파일이나 노트 검색을 문서에 명시한 도구: [Local Deep Research](/ko/power-local-llm/local-deep-research-review), [Onyx](/ko/power-local-llm/onyx-review) 및 [Smart Connections](/ko/power-local-llm/smart-connections-review).',
-          '**출처 인용.** 출처 인용을 문서에 명시한 도구: [Local Deep Research](/ko/power-local-llm/local-deep-research-review) 및 [Vane (formerly Perplexica)](/ko/power-local-llm/vane-review).',
+          `**로컬 LLM.** 로컬 LLM 사용을 문서에 명시한 도구: ${WITH('local-search', 'localLlm', 'ko')}.`,
+          `**웹 검색.** 웹 검색을 문서에 명시한 도구: ${WITH('local-search', 'webSearch', 'ko')}.`,
+          `**내 파일.** 내 파일이나 노트 검색을 문서에 명시한 도구: ${WITH('local-search', 'privateDocs', 'ko')}.`,
+          `**출처 인용.** 출처 인용을 문서에 명시한 도구: ${WITH('local-search', 'citations', 'ko')}.`,
         ],
       },
       limitations: {
@@ -2221,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -2250,3 +2263,4 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 }
+

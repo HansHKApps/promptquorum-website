@@ -51,12 +51,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**For most people with an 8GB+ GPU, Qwen-Image is the safest local starting point** — Apache 2.0, no revenue caps, no territory restrictions, and the strongest in-image text rendering of any open model. **FLUX.1 schnell is the fastest and lightest (also Apache 2.0), while FLUX.1/2 dev and Kontext require a paid Black Forest Labs license for commercial use** — open weights does not mean commercially free for those variants. **Stable Diffusion 3.5 has the deepest LoRA and style ecosystem but caps free commercial use at $1M annual revenue.** If you have no GPU, or need commercially-safe training data guarantees for client work, a cloud service like Adobe Firefly is the more practical choice.',
+      '**For most people with an 8GB+ GPU, Qwen-Image is a strong local starting point** — Apache 2.0, no revenue caps, no territory restrictions, and strong in-image text rendering. **FLUX.1 schnell is the fastest and lightest (also Apache 2.0), while FLUX.1/2 dev and Kontext require a paid Black Forest Labs license to use the model commercially** — open weights does not mean commercially free for those variants. **Stable Diffusion 3.5 has the deepest LoRA and style ecosystem but caps free commercial use at $1M annual revenue.** If you have no GPU, or need commercially-safe training data guarantees for client work, a cloud service like Adobe Firefly is the more practical choice.',
     quickAnswerTop: {
       en: {
         question: 'Should I generate AI images locally or use a cloud service?',
         answer:
-          'Generate locally if you have an 8GB+ GPU and want unlimited $0 generations — Qwen-Image (Apache 2.0, no restrictions, best text rendering) or FLUX.1 schnell (Apache 2.0, fastest) are the safest starting points. Use a cloud service if you have no GPU, need commercially-safe training data for client work, or want results in the next five minutes without any setup.',
+          'Generate locally if you have an 8GB+ GPU and want unlimited $0 generations — Qwen-Image (Apache 2.0, strong text rendering) or FLUX.1 schnell (Apache 2.0, fast) are sensible starting points. Use a cloud service if you have no GPU, need commercially-safe training data for client work, or want results in the next five minutes without any setup.',
         bullets: [
           'Under 8 GB VRAM → a cloud service is the practical choice, though images need far less hardware than video.',
           '8 GB VRAM → FLUX.1 schnell, Stable Diffusion 3.5, SDXL, or Qwen-Image (GGUF quantized) — most of the local menu already fits.',
@@ -93,19 +93,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Qwen-Image is the only top-tier local image model with zero license restrictions and the best text rendering.** Apache 2.0, no revenue caps, no territory exclusions — and the local leader for readable, correctly-spelled text inside images.',
-          '**FLUX\'s license is split by variant.** FLUX.1 schnell is Apache 2.0 (unrestricted commercial use); FLUX.1/2 dev and Kontext use Black Forest Labs\' non-commercial license — a paid license is required to use them commercially.',
+          '**Qwen-Image is a top-tier local image model under the permissive Apache 2.0 license, with strong text rendering.** No revenue caps, no territory exclusions — and a leading local option for readable, correctly-spelled text inside images.',
+          '**FLUX\'s license is split by variant.** FLUX.1 schnell is Apache 2.0 (unrestricted commercial use); FLUX.1/2 dev and Kontext use Black Forest Labs\' non-commercial license — using the model itself commercially needs a paid license, while the FLUX.1 [dev] license text allows commercial use of generated outputs under conditions.',
           '**Stable Diffusion 3.5 has the deepest local ecosystem** (LoRAs, ControlNets, tutorials) but its Community License caps free commercial use at $1M annual revenue.',
           '**8GB VRAM covers most of the local menu.** Images need far less hardware than video — a GPU that struggles with video generation handles most image models comfortably.',
-          '**Adobe Firefly and getimg.ai are the two cloud services with active affiliate programs**; Midjourney and ChatGPT run none, so this article can\'t earn anything from recommending them regardless of merit.',
-          '**There is no free lunch on privacy.** Ideogram\'s free tier publishes images to a public gallery; local generation is private by default.',
+          '**PromptQuorum has no affiliate relationship with any service in this article.** All links are plain reference links that earn no commission, whatever the merit of the service.',
+          '**There is no free lunch on privacy.** Some free tiers, such as Ideogram\'s, may publish images publicly (check current terms); local generation is private by default.',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'Why 2026 Is the Year Local Images Got Serious',
         content:
-          'Open image models have caught up — and in some categories, pulled ahead. HiDream-O1, an 8B model released under the MIT license in May 2026, ranked among the top open-weight entries on the Artificial Analysis text-to-image arena at a fraction of the size of larger rivals. Alibaba\'s Qwen-Image renders readable text inside images better than most cloud tools. And the editing models — Qwen-Image-Edit, FLUX Kontext — now change objects, backgrounds, and text inside existing photos from a plain-language instruction, locally, for free.\n\nThe cloud side has its own 2026 story: the market consolidated around a few serious players, entry prices dropped to the $8-10/month range, and commercially-safe training data became a real differentiator for business users. Both doors are genuinely good. The question is which one fits you — and unlike video, the hardware bar for images is low enough that the local door is realistic for far more people.',
+          'Open image models have caught up — and in some categories, pulled ahead. HiDream-O1, an 8B model released under the MIT license in May 2026, ranked among the top open-weight entries on the Artificial Analysis text-to-image arena at a fraction of the size of larger rivals. Alibaba\'s Qwen-Image renders readable text inside images well. And the editing models — Qwen-Image-Edit, FLUX Kontext — now change objects, backgrounds, and text inside existing photos from a plain-language instruction, locally, for free.\n\nThe cloud side has its own 2026 story: the market consolidated around a few serious players, entry prices dropped to the $8-10/month range, and commercially-safe training data became a real differentiator for business users. Both doors are genuinely good. The question is which one fits you — and unlike video, the hardware bar for images is low enough that the local door is realistic for far more people.',
       },
       localModels: {
         id: 'local-models',
@@ -113,14 +113,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           'All three run through ComfyUI (or a similar local interface) on your own machine. As with video generation: these are diffusion models, not LLMs — they don\'t run in Ollama.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen-Image is the safest all-around local image model in 2026 — Apache 2.0, best text rendering, no restrictions — while FLUX wins on photorealism (with license caveats by variant) and Stable Diffusion 3.5 wins on ecosystem depth.' },
-          { type: 'plain-terms', text: 'If you just want one answer: get an 8GB+ GPU and run Qwen-Image. It has zero license fine print and the best text rendering of any open model.' },
+          { type: 'one-sentence', text: 'Qwen-Image is a strong all-around local image model in 2026 — Apache 2.0, strong text rendering — while FLUX wins on photorealism (with license caveats by variant) and Stable Diffusion 3.5 wins on ecosystem depth.' },
+          { type: 'plain-terms', text: 'If you just want one answer: get an 8GB+ GPU and run Qwen-Image. It uses the permissive Apache 2.0 license and has strong text rendering.' },
         ],
         columns: ['Family', 'License', 'VRAM', 'Standout feature'],
         rows: [
           { 'Family': 'FLUX (Black Forest Labs)', 'License': 'Split — schnell is Apache 2.0, dev/Kontext are non-commercial without a paid license', 'VRAM': '8GB (schnell) to 24GB (FLUX.2 dev)', 'Standout feature': 'Photorealism benchmark; Kontext leads local editing' },
           { 'Family': 'Stable Diffusion 3.5 + SDXL (Stability AI)', 'License': 'Stability Community License — free under $1M revenue', 'VRAM': '8–12GB', 'Standout feature': 'Deepest local LoRA/ControlNet ecosystem' },
-          { 'Family': 'Qwen-Image (Alibaba)', 'License': 'Apache 2.0 — unrestricted', 'VRAM': '8GB (GGUF) to 24GB (full precision)', 'Standout feature': 'Best-in-class readable text inside images' },
+          { 'Family': 'Qwen-Image (Alibaba)', 'License': 'Apache 2.0 — permissive', 'VRAM': '8GB (GGUF) to 24GB (full precision)', 'Standout feature': 'Strong readable text inside images' },
         ],
         note:
           'Only download any of these models from the official repositories linked below — third-party "free download" sites repackage models with who-knows-what inside.',
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'flux',
         title: 'FLUX (Black Forest Labs) — the photorealism benchmark, with license tiers',
         content:
-          'The FLUX family is the default for serious local image work. FLUX.2 [dev] (32B) leads on photorealism and high resolution, combining up to 10 reference images while keeping character, product, and style consistent. FLUX.1 [schnell] generates quality images in 1–4 steps on just 8GB of VRAM. FLUX.1 Kontext is the local leader for editing existing images.\n\n**License — read this part carefully: the family is split.** FLUX.1 [schnell] is Apache 2.0 — unrestricted, commercial use included. FLUX.1/2 [dev] and Kontext use Black Forest Labs\' non-commercial license — running them in a commercial product requires a paid license from BFL. "Open weights" does not mean "commercially OK" here.\n\nHardware: 8GB (schnell), 12–16GB (dev/Kontext), 24GB (FLUX.2 dev, GGUF Q4).',
+          'The FLUX family is the default for serious local image work. FLUX.2 [dev] (32B) leads on photorealism and high resolution, combining up to 10 reference images while keeping character, product, and style consistent. FLUX.1 [schnell] generates quality images in 1–4 steps on just 8GB of VRAM. FLUX.1 Kontext is the local leader for editing existing images.\n\n**License — read this part carefully: the family is split.** FLUX.1 [schnell] is Apache 2.0 — unrestricted, commercial use included. FLUX.1/2 [dev] and Kontext use Black Forest Labs\' non-commercial license — using the model itself in a commercial product or service requires a paid license from BFL. For FLUX.1 [dev], the license text (v1.1.1) separately allows generated outputs to be used for any purpose, including commercial, if you meet its conditions (content filtering or review, AI disclosure where the law requires it); read the FLUX.2 [dev] and Kontext licenses yourself. "Open weights" does not mean "commercially OK" here.\n\nHardware: 8GB (schnell), 12–16GB (dev/Kontext), 24GB (FLUX.2 dev, GGUF Q4).',
         affiliateLinks: [
           { url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell', productName: 'FLUX.1 schnell on Hugging Face', productCategory: 'image-model', label: 'FLUX.1 schnell on Hugging Face' },
           { url: 'https://huggingface.co/black-forest-labs/FLUX.2-dev', productName: 'FLUX.2 dev on Hugging Face', productCategory: 'image-model', label: 'FLUX.2 dev on Hugging Face' },
@@ -146,9 +146,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwenImage: {
         id: 'qwen-image',
-        title: 'Qwen-Image (Alibaba) — truly free, and the text-rendering king',
+        title: 'Qwen-Image (Alibaba) — Apache 2.0, strong at text rendering',
         content:
-          'Alibaba open-sourced Qwen-Image (20B) in August 2025 under Apache 2.0 — no revenue thresholds, no non-commercial clauses, no territory games. Its specialty is something most models still fail at: readable, correctly-spelled text inside the image, in multiple languages. Posters, signs, infographics, thumbnails with headlines — this is the model.\n\nBonus: Qwen-Image-Edit performs precise, prompt-based edits on existing photos — change an object\'s color, swap a background, fix text — while preserving everything else.\n\nHardware: 8GB (GGUF quantized) to 24GB (full precision). License: Apache 2.0 — the only top-tier image model with zero fine print.',
+          'Alibaba open-sourced Qwen-Image (20B) in August 2025 under Apache 2.0 — no revenue thresholds, no non-commercial clauses, no territory games. Its specialty is something most models still fail at: readable, correctly-spelled text inside the image, in multiple languages. Posters, signs, infographics, thumbnails with headlines — this is the model.\n\nBonus: Qwen-Image-Edit performs precise, prompt-based edits on existing photos — change an object\'s color, swap a background, fix text — while preserving everything else.\n\nHardware: 8GB (GGUF quantized) to 24GB (full precision). License: Apache 2.0 — permissive; still read the license text before commercial use.',
         affiliateLinks: [
           { url: 'https://huggingface.co/Qwen/Qwen-Image', productName: 'Qwen-Image on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image on Hugging Face' },
           { url: 'https://huggingface.co/Qwen/Qwen-Image-Edit', productName: 'Qwen-Image-Edit on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image-Edit on Hugging Face' },
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'adobe-firefly',
         title: 'Adobe Firefly — the commercially safe pick',
         content:
-          'Firefly is trained on Adobe Stock and openly licensed content — meaning Adobe designed it so business users don\'t inherit copyright risk — and it integrates directly with Photoshop and the rest of Creative Cloud. If client work or brand safety is your concern, this is the cloud door. A free trial exists to test it before paying; paid plans start at $9.99/month for 2,000 generative credits (Standard tier). Best for: professionals, agencies, anyone whose clients ask "is this legally safe?"',
+          'Firefly is trained on Adobe Stock and openly licensed content — which, per Adobe, is meant to reduce copyright risk for business users — and it integrates directly with Photoshop and the rest of Creative Cloud. If client work or brand safety is your concern, this is the cloud door. A free trial exists to test it before paying; paid plans start at $9.99/month for 2,000 generative credits (Standard tier). Best for: professionals, agencies, anyone whose clients ask "is this legally safe?"',
         blockquote:
           '**Want to try the commercially-safe cloud option?** If you don\'t have a GPU or don\'t want to manage local models, try Adobe Firefly before committing to a local setup. [Try Adobe Firefly →](https://firefly.adobe.com/)',
         affiliateLinks: [
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'getimg-ai',
         title: 'getimg.ai — the cloud version of the local models',
         content:
-          'Here\'s the twist most comparisons miss: getimg.ai runs the same open models you\'d install locally — FLUX and friends, 20+ models in one interface — on their GPUs instead of yours. No setup, no VRAM math, commercial rights included on every plan. If the local door appeals to you but your hardware says no, this is the bridge. Pricing is paid-only since early 2026 (the free tier was retired) — Entry from $8/month billed annually ($10/month billed monthly) for 3,000 credits; higher tiers scale up from there. Best for: local-curious users without the GPU, and anyone who wants open-model variety without the ComfyUI learning curve.\n\n(Honorable mention: Ideogram — a cloud leader for text-in-image, with a limited free tier that publishes images to a public gallery, and paid plans starting around $20/month.)',
+          'Here\'s the twist most comparisons miss: getimg.ai runs the same open models you\'d install locally — FLUX and friends, 20+ models in one interface — on their GPUs instead of yours. No setup, no VRAM math, commercial rights included on every plan. If the local door appeals to you but your hardware says no, this is the bridge. Pricing is paid-only since early 2026 (the free tier was retired) — Entry from $8/month billed annually ($10/month billed monthly) for 3,000 credits; higher tiers scale up from there. Best for: local-curious users without the GPU, and anyone who wants open-model variety without the ComfyUI learning curve.\n\n(Honorable mention: Ideogram — a cloud leader for text-in-image, with a limited free tier whose images may be public (check its current terms), and paid plans starting around $20/month.)',
         blockquote:
           '**Want local models without owning the GPU?** getimg.ai gives you access to open models such as FLUX through the cloud, without a ComfyUI installation or VRAM requirements. [Try getimg.ai →](https://getimg.ai/)',
         affiliateLinks: [
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which cloud image tools have a free tier?',
-            a: 'Adobe Firefly offers a free trial (exact credit allowance varies — check firefly.adobe.com for the current figure). Ideogram offers a limited free tier with images published to a public gallery. getimg.ai retired its free tier in early 2026 — it\'s paid-only from $8/month annual billing.',
+            a: 'Adobe Firefly offers a free trial (exact credit allowance varies — check firefly.adobe.com for the current figure). Ideogram offers a limited free tier; check its current terms on whether images are public. getimg.ai retired its free tier in early 2026 — it\'s paid-only from $8/month annual billing.',
           },
           {
             q: 'Can AI models put readable text inside images?',
@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Are my cloud-generated images private?',
-            a: 'Depends on the service. Some free tiers (Ideogram\'s among them) publish generations to a public gallery by default. Check each service\'s current privacy terms before generating anything sensitive — local generation is private by default, since nothing leaves your machine.',
+            a: 'Depends on the service. Some free tiers (Ideogram\'s among them) may publish generations publicly by default. Check each service\'s current privacy terms before generating anything sensitive — local generation is private by default, since nothing leaves your machine.',
           },
           {
             q: 'Can I edit my own photos with these tools?',
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Local or cloud for a small business?',
-            a: 'If you generate under roughly 200 images a month and own no GPU: cloud — Adobe Firefly if legal safety matters, getimg.ai if you want model variety. Above that volume, or if client confidentiality matters, a $200 used GPU and Qwen-Image can pay for themselves within months.',
+            a: 'If you generate under roughly 200 images a month and own no GPU: cloud — Adobe Firefly if legal safety matters, getimg.ai if you want model variety. Above that volume, or if client confidentiality matters, a used GPU and Qwen-Image can be worth considering; compare the total cost for your own volume.',
           },
         ],
       },
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'The Verdict',
         content:
-          'Go local if you have (or will buy) an 8GB+ GPU, generate images regularly, and want privacy, zero marginal cost, and full creative control. Qwen-Image is the safest foundation — Apache 2.0, best-in-class text rendering — with FLUX for photorealism (mind the license split by variant) and SD 3.5 for its unmatched style ecosystem.\n\nGo cloud if you want results in the next five minutes, generate occasionally, or have no GPU. Adobe Firefly is the safe, professional pick with commercially-safe training data; getimg.ai is the bridge for anyone who likes the idea of open models but not the idea of installing them.\n\nAnd if video is next on your list — that\'s a different hardware conversation. Read the companion piece: [Local AI Video Generation vs. Cloud](/power-local-llm/local-ai-video-generation-vs-cloud).',
+          'Go local if you have (or will buy) an 8GB+ GPU, generate images regularly, and want privacy, zero marginal cost, and full creative control. Qwen-Image is a solid foundation — Apache 2.0, strong text rendering — with FLUX for photorealism (mind the license split by variant) and SD 3.5 for its deep style ecosystem.\n\nGo cloud if you want results in the next five minutes, generate occasionally, or have no GPU. Adobe Firefly is the safe, professional pick with commercially-safe training data; getimg.ai is the bridge for anyone who likes the idea of open models but not the idea of installing them.\n\nAnd if video is next on your list — that\'s a different hardware conversation. Read the companion piece: [Local AI Video Generation vs. Cloud](/power-local-llm/local-ai-video-generation-vs-cloud).',
       },
       sources: {
         id: 'sources',
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — platform comparison for local inference.',
           '[System Prompts vs. User Prompts](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — prompt structuring fundamentals that transfer to image prompting.',
           '[Prompt Engineering for Local Models](/local-llms/prompt-engineering-for-local-models) — structured prompting techniques.',
-          '[Modly Review](/power-local-llm/modly-review) — a desktop app that turns an image or a text prompt into a 3D mesh with open-source models on your own GPU, a step beyond 2D image generation.',
+          '[Modly Review](/power-local-llm/modly-review) — a desktop app that turns an image or a text prompt into a 3D mesh with downloadable AI models (licences vary by model) on your own GPU, a step beyond 2D image generation.',
         ],
       },
     },
@@ -377,12 +377,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**بالنسبة لمعظم الأشخاص الذين يملكون معالج رسوميات (GPU) بذاكرة 8 جيجابايت فأكثر، يُعد Qwen-Image نقطة البداية المحلية الأكثر أماناً** — رخصة Apache 2.0، بلا سقف إيرادات، وبلا قيود إقليمية، وأقوى تقنية لعرض النصوص داخل الصور بين جميع النماذج المفتوحة. **يُعد FLUX.1 schnell الأسرع والأخف (وهو أيضاً برخصة Apache 2.0)، بينما يتطلّب FLUX.1/2 dev وKontext ترخيصاً مدفوعاً من Black Forest Labs للاستخدام التجاري** — فالأوزان المفتوحة لا تعني بالضرورة أن الاستخدام التجاري مجاني لهذه الإصدارات. **يمتلك Stable Diffusion 3.5 أعمق منظومة من إضافات LoRA والأنماط، لكنه يحدّ الاستخدام التجاري المجاني بسقف إيرادات سنوية قدره مليون دولار.** إذا لم يكن لديك معالج رسوميات، أو كنت بحاجة إلى ضمانات بيانات تدريب آمنة تجارياً لأعمال العملاء، فإن خدمة سحابية مثل Adobe Firefly هي الخيار الأكثر عملية.',
+      '**بالنسبة لمعظم الأشخاص الذين يملكون معالج رسوميات (GPU) بذاكرة 8 جيجابايت فأكثر، يُعد Qwen-Image نقطة بداية محلية جيدة** — رخصة Apache 2.0، بلا سقف إيرادات، وبلا قيود إقليمية، وعرضاً قوياً للنصوص داخل الصور. **يُعد FLUX.1 schnell الأسرع والأخف (وهو أيضاً برخصة Apache 2.0)، بينما يتطلّب FLUX.1/2 dev وKontext ترخيصاً مدفوعاً من Black Forest Labs لاستخدام النموذج تجارياً** — فالأوزان المفتوحة لا تعني بالضرورة أن الاستخدام التجاري مجاني لهذه الإصدارات. **يمتلك Stable Diffusion 3.5 أعمق منظومة من إضافات LoRA والأنماط، لكنه يحدّ الاستخدام التجاري المجاني بسقف إيرادات سنوية قدره مليون دولار.** إذا لم يكن لديك معالج رسوميات، أو كنت بحاجة إلى ضمانات بيانات تدريب آمنة تجارياً لأعمال العملاء، فإن خدمة سحابية مثل Adobe Firefly هي الخيار الأكثر عملية.',
     quickAnswerTop: {
       ar: {
         question: 'هل يجب أن أولّد صور الذكاء الاصطناعي محلياً أم أستخدم خدمة سحابية؟',
         answer:
-          'ولّد الصور محلياً إذا كنت تملك معالج رسوميات (GPU) بذاكرة 8 جيجابايت فأكثر وتريد توليداً غير محدود بتكلفة صفر — يُعد Qwen-Image (رخصة Apache 2.0، بلا قيود، وأفضل عرض للنصوص) أو FLUX.1 schnell (رخصة Apache 2.0، الأسرع) نقطتي البداية الأكثر أماناً. استخدم خدمة سحابية إذا لم يكن لديك معالج رسوميات، أو كنت بحاجة إلى بيانات تدريب آمنة تجارياً لأعمال العملاء، أو تريد نتائج خلال الدقائق الخمس القادمة دون أي إعداد.',
+          'ولّد الصور محلياً إذا كنت تملك معالج رسوميات (GPU) بذاكرة 8 جيجابايت فأكثر وتريد توليداً غير محدود بتكلفة صفر — يُعد Qwen-Image (رخصة Apache 2.0، وعرض قوي للنصوص) أو FLUX.1 schnell (رخصة Apache 2.0، سريع) نقطتي بداية معقولتين. استخدم خدمة سحابية إذا لم يكن لديك معالج رسوميات، أو كنت بحاجة إلى بيانات تدريب آمنة تجارياً لأعمال العملاء، أو تريد نتائج خلال الدقائق الخمس القادمة دون أي إعداد.',
         bullets: [
           'أقل من 8 جيجابايت VRAM ← الخدمة السحابية هي الخيار العملي، رغم أن الصور تتطلب عتاداً أقل بكثير من الفيديو.',
           '8 جيجابايت VRAM ← FLUX.1 schnell وStable Diffusion 3.5 وSDXL أو Qwen-Image (بصيغة GGUF مضغوطة) — معظم القائمة المحلية تعمل بالفعل.',
@@ -419,19 +419,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Qwen-Image هو النموذج المحلي الوحيد من الفئة العليا الخالي تماماً من قيود الترخيص وصاحب أفضل عرض للنصوص.** رخصة Apache 2.0، بلا سقف إيرادات، بلا استثناءات إقليمية — والرائد المحلي في عرض نصوص مقروءة وصحيحة الإملاء داخل الصور.',
-          '**ترخيص FLUX منقسم حسب الإصدار.** FLUX.1 schnell برخصة Apache 2.0 (استخدام تجاري بلا قيود)؛ أما FLUX.1/2 dev وKontext فيستخدمان ترخيص Black Forest Labs غير التجاري — ويتطلب استخدامهما تجارياً ترخيصاً مدفوعاً.',
+          '**يُعد Qwen-Image نموذجاً محلياً من الفئة العليا برخصة Apache 2.0 المتساهلة، مع عرض قوي للنصوص.** بلا سقف إيرادات، بلا استثناءات إقليمية — وخيار محلي رائد لعرض نصوص مقروءة وصحيحة الإملاء داخل الصور.',
+          '**ترخيص FLUX منقسم حسب الإصدار.** FLUX.1 schnell برخصة Apache 2.0 (استخدام تجاري بلا قيود)؛ أما FLUX.1/2 dev وKontext فيستخدمان ترخيص Black Forest Labs غير التجاري — ويتطلب استخدام النموذج نفسه تجارياً ترخيصاً مدفوعاً، بينما يسمح نص ترخيص FLUX.1 [dev] باستخدام المخرجات المولَّدة تجارياً بشروط.',
           '**يمتلك Stable Diffusion 3.5 أعمق منظومة محلية** (LoRA وControlNet ودروس تعليمية) لكن رخصته المجتمعية تحدّ الاستخدام التجاري المجاني بسقف إيرادات سنوية قدره مليون دولار.',
           '**ذاكرة 8 جيجابايت VRAM تغطي معظم القائمة المحلية.** تحتاج الصور عتاداً أقل بكثير من الفيديو — فمعالج الرسوميات الذي يعاني مع توليد الفيديو يتعامل مع معظم نماذج الصور بسلاسة.',
-          '**تُعد Adobe Firefly وgetimg.ai الخدمتين السحابيتين الوحيدتين ببرامج شراكة نشطة (affiliate)**؛ أما Midjourney وChatGPT فلا تديران أي برنامج من هذا النوع، لذا لا يمكن لهذا المقال أن يجني شيئاً من التوصية بهما بغض النظر عن جودتهما.',
-          '**لا وجبة مجانية على صعيد الخصوصية.** تنشر الفئة المجانية من Ideogram الصور في معرض عام؛ أما التوليد المحلي فخاص بشكل افتراضي.',
+          '**ليست لدى PromptQuorum أي علاقة تسويق بالعمولة مع أي خدمة واردة في هذا المقال.** جميع الروابط روابط مرجعية عادية لا تدرّ أي عمولة، بغض النظر عن جودة الخدمة.',
+          '**لا وجبة مجانية على صعيد الخصوصية.** قد تجعل بعض الفئات المجانية، مثل فئة Ideogram، الصور عامة (راجع الشروط الحالية)؛ أما التوليد المحلي فخاص بشكل افتراضي.',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'لماذا أصبح عام 2026 عام الصور المحلية الجاد',
         content:
-          'لحقت نماذج الصور المفتوحة بالركب — بل تجاوزته في بعض الفئات. صدر HiDream-O1، وهو نموذج بحجم 8 مليار معامل برخصة MIT في مايو 2026، وتصدّر قائمة أفضل النماذج مفتوحة الأوزان في ساحة Artificial Analysis لتحويل النص إلى صورة، وذلك بحجم أصغر بكثير من منافسيه الأكبر. ويعرض Qwen-Image من Alibaba نصوصاً مقروءة داخل الصور بجودة تفوق معظم الأدوات السحابية. أما نماذج التحرير — Qwen-Image-Edit وFLUX Kontext — فتغيّر الآن الكائنات والخلفيات والنصوص داخل صور موجودة مسبقاً بناءً على تعليمات بلغة عادية، محلياً ومجاناً.\n\nللسحابة قصتها الخاصة في 2026: توحّد السوق حول عدد قليل من اللاعبين الجادين، وانخفضت أسعار الدخول إلى نطاق 8-10 دولارات شهرياً، وأصبحت بيانات التدريب الآمنة تجارياً عاملاً حقيقياً يميّز الخدمات لمستخدمي الأعمال. كلا البابين جيدان فعلاً. والسؤال هو أيهما يناسبك — وعلى عكس الفيديو، فإن حاجز العتاد للصور منخفض بما يكفي ليجعل الباب المحلي واقعياً لعدد أكبر بكثير من الأشخاص.',
+          'لحقت نماذج الصور المفتوحة بالركب — بل تجاوزته في بعض الفئات. صدر HiDream-O1، وهو نموذج بحجم 8 مليار معامل برخصة MIT في مايو 2026، وتصدّر قائمة أفضل النماذج مفتوحة الأوزان في ساحة Artificial Analysis لتحويل النص إلى صورة، وذلك بحجم أصغر بكثير من منافسيه الأكبر. ويعرض Qwen-Image من Alibaba نصوصاً مقروءة داخل الصور بجودة جيدة. أما نماذج التحرير — Qwen-Image-Edit وFLUX Kontext — فتغيّر الآن الكائنات والخلفيات والنصوص داخل صور موجودة مسبقاً بناءً على تعليمات بلغة عادية، محلياً ومجاناً.\n\nللسحابة قصتها الخاصة في 2026: توحّد السوق حول عدد قليل من اللاعبين الجادين، وانخفضت أسعار الدخول إلى نطاق 8-10 دولارات شهرياً، وأصبحت بيانات التدريب الآمنة تجارياً عاملاً حقيقياً يميّز الخدمات لمستخدمي الأعمال. كلا البابين جيدان فعلاً. والسؤال هو أيهما يناسبك — وعلى عكس الفيديو، فإن حاجز العتاد للصور منخفض بما يكفي ليجعل الباب المحلي واقعياً لعدد أكبر بكثير من الأشخاص.',
       },
       localModels: {
         id: 'local-models',
@@ -439,14 +439,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           'تعمل النماذج الثلاثة جميعها عبر ComfyUI (أو واجهة محلية مشابهة) على جهازك الخاص. وكما هو الحال مع توليد الفيديو: هذه نماذج انتشار (diffusion)، وليست نماذج لغوية كبيرة (LLM) — فهي لا تعمل عبر Ollama.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'يُعد Qwen-Image أكثر نموذج صور محلي أماناً بشكل عام في 2026 — رخصة Apache 2.0، أفضل عرض للنصوص، بلا قيود — بينما يتفوق FLUX في الواقعية الفوتوغرافية (مع تحفظات على الترخيص حسب الإصدار)، ويتفوق Stable Diffusion 3.5 في عمق المنظومة.' },
-          { type: 'plain-terms', text: 'إن أردت إجابة واحدة فقط: احصل على معالج رسوميات (GPU) بذاكرة 8 جيجابايت فأكثر وشغّل Qwen-Image. فهو خالٍ تماماً من تفاصيل الترخيص الدقيقة، ويملك أفضل عرض للنصوص بين جميع النماذج المفتوحة.' },
+          { type: 'one-sentence', text: 'يُعد Qwen-Image نموذج صور محلياً قوياً ومتعدد الاستخدامات في 2026 — رخصة Apache 2.0، وعرض قوي للنصوص — بينما يتفوق FLUX في الواقعية الفوتوغرافية (مع تحفظات على الترخيص حسب الإصدار)، ويتفوق Stable Diffusion 3.5 في عمق المنظومة.' },
+          { type: 'plain-terms', text: 'إن أردت إجابة واحدة فقط: احصل على معالج رسوميات (GPU) بذاكرة 8 جيجابايت فأكثر وشغّل Qwen-Image. فهو يعتمد رخصة Apache 2.0 المتساهلة، ويملك عرضاً قوياً للنصوص.' },
         ],
         columns: ['العائلة', 'الترخيص', 'VRAM', 'الميزة البارزة'],
         rows: [
           { 'العائلة': 'FLUX (من Black Forest Labs)', 'الترخيص': 'منقسم — schnell برخصة Apache 2.0، وdev/Kontext غير تجاريين دون ترخيص مدفوع', 'VRAM': '8 جيجابايت (schnell) إلى 24 جيجابايت (FLUX.2 dev)', 'الميزة البارزة': 'معيار في الواقعية الفوتوغرافية؛ Kontext يتصدر التحرير المحلي' },
           { 'العائلة': 'Stable Diffusion 3.5 + SDXL (من Stability AI)', 'الترخيص': 'رخصة Stability المجتمعية — مجانية تحت سقف مليون دولار من الإيرادات', 'VRAM': '8–12 جيجابايت', 'الميزة البارزة': 'أعمق منظومة محلية لـ LoRA وControlNet' },
-          { 'العائلة': 'Qwen-Image (من Alibaba)', 'الترخيص': 'رخصة Apache 2.0 — بلا قيود', 'VRAM': '8 جيجابايت (GGUF) إلى 24 جيجابايت (دقة كاملة)', 'الميزة البارزة': 'أفضل عرض للنصوص المقروءة داخل الصور في فئته' },
+          { 'العائلة': 'Qwen-Image (من Alibaba)', 'الترخيص': 'رخصة Apache 2.0 — متساهلة', 'VRAM': '8 جيجابايت (GGUF) إلى 24 جيجابايت (دقة كاملة)', 'الميزة البارزة': 'عرض قوي للنصوص المقروءة داخل الصور' },
         ],
         note:
           'حمّل هذه النماذج فقط من المستودعات الرسمية المرتبطة أدناه — فمواقع "التحميل المجاني" التابعة لجهات خارجية تعيد تعبئة النماذج بمحتوى مجهول.',
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'flux',
         title: 'FLUX (من Black Forest Labs) — معيار الواقعية الفوتوغرافية، بمستويات ترخيص متعددة',
         content:
-          'تُعد عائلة FLUX الخيار الافتراضي لأعمال الصور المحلية الجادة. يتصدر FLUX.2 [dev] (بحجم 32 مليار معامل) في الواقعية الفوتوغرافية والدقة العالية، إذ يجمع حتى 10 صور مرجعية مع الحفاظ على اتساق الشخصية والمنتج والنمط. يولّد FLUX.1 [schnell] صوراً عالية الجودة خلال 1-4 خطوات فقط باستخدام 8 جيجابايت من VRAM. أما FLUX.1 Kontext فهو الرائد المحلي في تحرير الصور الموجودة مسبقاً.\n\n**الترخيص — اقرأ هذا الجزء بعناية: العائلة منقسمة.** FLUX.1 [schnell] برخصة Apache 2.0 — بلا قيود، بما في ذلك الاستخدام التجاري. أما FLUX.1/2 [dev] وKontext فيستخدمان ترخيص Black Forest Labs غير التجاري — ويتطلب تشغيلهما في منتج تجاري ترخيصاً مدفوعاً من BFL. "الأوزان المفتوحة" لا تعني هنا "مسموح تجارياً".\n\nالعتاد: 8 جيجابايت (schnell)، 12-16 جيجابايت (dev/Kontext)، 24 جيجابايت (FLUX.2 dev، بصيغة GGUF Q4).',
+          'تُعد عائلة FLUX الخيار الافتراضي لأعمال الصور المحلية الجادة. يتصدر FLUX.2 [dev] (بحجم 32 مليار معامل) في الواقعية الفوتوغرافية والدقة العالية، إذ يجمع حتى 10 صور مرجعية مع الحفاظ على اتساق الشخصية والمنتج والنمط. يولّد FLUX.1 [schnell] صوراً عالية الجودة خلال 1-4 خطوات فقط باستخدام 8 جيجابايت من VRAM. أما FLUX.1 Kontext فهو الرائد المحلي في تحرير الصور الموجودة مسبقاً.\n\n**الترخيص — اقرأ هذا الجزء بعناية: العائلة منقسمة.** FLUX.1 [schnell] برخصة Apache 2.0 — بلا قيود، بما في ذلك الاستخدام التجاري. أما FLUX.1/2 [dev] وKontext فيستخدمان ترخيص Black Forest Labs غير التجاري — ويتطلب استخدام النموذج نفسه في منتج أو خدمة تجارية ترخيصاً مدفوعاً من BFL. أما بالنسبة إلى FLUX.1 [dev] فيسمح نص الترخيص (v1.1.1) على حدة باستخدام المخرجات المولَّدة لأي غرض، بما في ذلك التجاري، إذا استوفيت شروطه (ترشيح المحتوى أو مراجعته، والإفصاح عن استخدام الذكاء الاصطناعي حيث يقتضي القانون ذلك)؛ اقرأ ترخيصي FLUX.2 [dev] وKontext بنفسك. "الأوزان المفتوحة" لا تعني هنا "مسموح تجارياً".\n\nالعتاد: 8 جيجابايت (schnell)، 12-16 جيجابايت (dev/Kontext)، 24 جيجابايت (FLUX.2 dev، بصيغة GGUF Q4).',
         affiliateLinks: [
           { url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell', productName: 'FLUX.1 schnell on Hugging Face', productCategory: 'image-model', label: 'FLUX.1 schnell on Hugging Face' },
           { url: 'https://huggingface.co/black-forest-labs/FLUX.2-dev', productName: 'FLUX.2 dev on Hugging Face', productCategory: 'image-model', label: 'FLUX.2 dev on Hugging Face' },
@@ -472,9 +472,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwenImage: {
         id: 'qwen-image',
-        title: 'Qwen-Image (من Alibaba) — مجاني فعلاً، وملك عرض النصوص',
+        title: 'Qwen-Image (من Alibaba) — برخصة Apache 2.0 وعرض قوي للنصوص',
         content:
-          'أطلقت Alibaba نموذج Qwen-Image (بحجم 20 مليار معامل) كمفتوح المصدر في أغسطس 2025 برخصة Apache 2.0 — بلا حدود إيرادات، بلا بنود غير تجارية، بلا ألعاب إقليمية. وتكمن ميزته الخاصة في أمر ما زالت معظم النماذج تفشل فيه: عرض نصوص مقروءة وصحيحة الإملاء داخل الصورة، وبلغات متعددة. الملصقات، اللافتات، الرسوم البيانية التوضيحية، الصور المصغرة ذات العناوين — هذا هو النموذج المناسب.\n\nإضافة إلى ذلك: يقوم Qwen-Image-Edit بإجراء تعديلات دقيقة قائمة على التعليمات النصية لصور موجودة مسبقاً — تغيير لون كائن، استبدال خلفية، تصحيح نص — مع الحفاظ على كل شيء آخر كما هو.\n\nالعتاد: 8 جيجابايت (بصيغة GGUF مضغوطة) إلى 24 جيجابايت (دقة كاملة). الترخيص: Apache 2.0 — النموذج الوحيد من الفئة العليا الخالي تماماً من التفاصيل الدقيقة.',
+          'أطلقت Alibaba نموذج Qwen-Image (بحجم 20 مليار معامل) كمفتوح المصدر في أغسطس 2025 برخصة Apache 2.0 — بلا حدود إيرادات، بلا بنود غير تجارية، بلا ألعاب إقليمية. وتكمن ميزته الخاصة في أمر ما زالت معظم النماذج تفشل فيه: عرض نصوص مقروءة وصحيحة الإملاء داخل الصورة، وبلغات متعددة. الملصقات، اللافتات، الرسوم البيانية التوضيحية، الصور المصغرة ذات العناوين — هذا هو النموذج المناسب.\n\nإضافة إلى ذلك: يقوم Qwen-Image-Edit بإجراء تعديلات دقيقة قائمة على التعليمات النصية لصور موجودة مسبقاً — تغيير لون كائن، استبدال خلفية، تصحيح نص — مع الحفاظ على كل شيء آخر كما هو.\n\nالعتاد: 8 جيجابايت (بصيغة GGUF مضغوطة) إلى 24 جيجابايت (دقة كاملة). الترخيص: Apache 2.0 — متساهل؛ ومع ذلك اقرأ نص الترخيص قبل الاستخدام التجاري.',
         affiliateLinks: [
           { url: 'https://huggingface.co/Qwen/Qwen-Image', productName: 'Qwen-Image on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image on Hugging Face' },
           { url: 'https://huggingface.co/Qwen/Qwen-Image-Edit', productName: 'Qwen-Image-Edit on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image-Edit on Hugging Face' },
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'adobe-firefly',
         title: 'Adobe Firefly — الخيار الآمن تجارياً',
         content:
-          'تم تدريب Firefly على Adobe Stock ومحتوى مرخّص علناً — بمعنى أن Adobe صممته بحيث لا يتحمل مستخدمو الأعمال مخاطر حقوق النشر — ويتكامل مباشرة مع Photoshop وبقية منتجات Creative Cloud. إذا كان أمان العملاء أو العلامة التجارية شاغلك، فهذا هو الباب السحابي المناسب. تتوفر نسخة تجريبية مجانية لاختباره قبل الدفع؛ تبدأ الخطط المدفوعة من 9.99 دولاراً شهرياً مقابل 2000 نقطة إنشاء (الفئة القياسية). الأنسب لـ: المحترفين والوكالات، وكل من يسأله عملاؤه "هل هذا آمن قانونياً؟"',
+          'تم تدريب Firefly على Adobe Stock ومحتوى مرخّص علناً — وهو ما تقول Adobe إنه يهدف إلى تقليل مخاطر حقوق النشر على مستخدمي الأعمال — ويتكامل مباشرة مع Photoshop وبقية منتجات Creative Cloud. إذا كان أمان العملاء أو العلامة التجارية شاغلك، فهذا هو الباب السحابي المناسب. تتوفر نسخة تجريبية مجانية لاختباره قبل الدفع؛ تبدأ الخطط المدفوعة من 9.99 دولاراً شهرياً مقابل 2000 نقطة إنشاء (الفئة القياسية). الأنسب لـ: المحترفين والوكالات، وكل من يسأله عملاؤه "هل هذا آمن قانونياً؟"',
         blockquote:
           '**تريد تجربة الخيار السحابي الآمن تجارياً؟** إذا لم يكن لديك معالج رسوميات أو لا تريد إدارة نماذج محلية، جرّب Adobe Firefly قبل الالتزام بإعداد محلي. [جرّب Adobe Firefly ←](https://firefly.adobe.com/)',
         affiliateLinks: [
@@ -544,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'getimg-ai',
         title: 'getimg.ai — النسخة السحابية من النماذج المحلية',
         content:
-          'وإليك المفاجأة التي تغفل عنها معظم المقارنات: يشغّل getimg.ai نفس النماذج المفتوحة التي كنت ستثبّتها محلياً — FLUX وأمثاله، أكثر من 20 نموذجاً في واجهة واحدة — لكن على معالجاتهم لا معالجك. لا إعداد، لا حسابات VRAM، وحقوق تجارية مضمّنة في كل خطة. إذا كان الباب المحلي يجذبك لكن عتادك يرفض، فهذا هو الجسر. أصبح التسعير مدفوعاً بالكامل منذ أوائل 2026 (تم إلغاء الفئة المجانية) — يبدأ الاشتراك الأساسي من 8 دولارات شهرياً بفوترة سنوية (10 دولارات شهرياً بفوترة شهرية) مقابل 3000 نقطة؛ وترتفع الفئات الأعلى من هناك. الأنسب لـ: الفضوليين حيال الحل المحلي دون امتلاك معالج رسوميات، وكل من يريد تنوع النماذج المفتوحة دون منحنى تعلّم ComfyUI.\n\n(إشارة تستحق الذكر: Ideogram — رائد سحابي في عرض النصوص داخل الصور، مع فئة مجانية محدودة تنشر الصور في معرض عام، وخطط مدفوعة تبدأ من حوالي 20 دولاراً شهرياً.)',
+          'وإليك المفاجأة التي تغفل عنها معظم المقارنات: يشغّل getimg.ai نفس النماذج المفتوحة التي كنت ستثبّتها محلياً — FLUX وأمثاله، أكثر من 20 نموذجاً في واجهة واحدة — لكن على معالجاتهم لا معالجك. لا إعداد، لا حسابات VRAM، وحقوق تجارية مضمّنة في كل خطة. إذا كان الباب المحلي يجذبك لكن عتادك يرفض، فهذا هو الجسر. أصبح التسعير مدفوعاً بالكامل منذ أوائل 2026 (تم إلغاء الفئة المجانية) — يبدأ الاشتراك الأساسي من 8 دولارات شهرياً بفوترة سنوية (10 دولارات شهرياً بفوترة شهرية) مقابل 3000 نقطة؛ وترتفع الفئات الأعلى من هناك. الأنسب لـ: الفضوليين حيال الحل المحلي دون امتلاك معالج رسوميات، وكل من يريد تنوع النماذج المفتوحة دون منحنى تعلّم ComfyUI.\n\n(إشارة تستحق الذكر: Ideogram — رائد سحابي في عرض النصوص داخل الصور، مع فئة مجانية محدودة قد تكون صورها عامة (راجع شروطها الحالية)، وخطط مدفوعة تبدأ من حوالي 20 دولاراً شهرياً.)',
         blockquote:
           '**تريد النماذج المحلية دون امتلاك معالج رسوميات؟** يمنحك getimg.ai الوصول إلى نماذج مفتوحة مثل FLUX عبر السحابة، دون تثبيت ComfyUI أو متطلبات VRAM. [جرّب getimg.ai ←](https://getimg.ai/)',
         affiliateLinks: [
@@ -596,7 +596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما هي أدوات الصور السحابية التي تملك فئة مجانية؟',
-            a: 'يقدّم Adobe Firefly نسخة تجريبية مجانية (كمية النقاط المسموحة تتغير — تحقق من firefly.adobe.com للحصول على الرقم الحالي). يقدّم Ideogram فئة مجانية محدودة مع نشر الصور في معرض عام. ألغى getimg.ai فئته المجانية في أوائل 2026 — أصبح مدفوعاً بالكامل بدءاً من 8 دولارات شهرياً بفوترة سنوية.',
+            a: 'يقدّم Adobe Firefly نسخة تجريبية مجانية (كمية النقاط المسموحة تتغير — تحقق من firefly.adobe.com للحصول على الرقم الحالي). يقدّم Ideogram فئة مجانية محدودة؛ راجع شروطه الحالية لمعرفة ما إذا كانت الصور عامة. ألغى getimg.ai فئته المجانية في أوائل 2026 — أصبح مدفوعاً بالكامل بدءاً من 8 دولارات شهرياً بفوترة سنوية.',
           },
           {
             q: 'هل يمكن لنماذج الذكاء الاصطناعي وضع نص مقروء داخل الصور؟',
@@ -604,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل صوري المُولّدة عبر السحابة خاصة؟',
-            a: 'يعتمد على الخدمة. تنشر بعض الفئات المجانية (ومنها فئة Ideogram) المخرجات في معرض عام افتراضياً. تحقق من شروط الخصوصية الحالية لكل خدمة قبل توليد أي شيء حساس — التوليد المحلي خاص بشكل افتراضي، إذ لا يغادر شيء جهازك.',
+            a: 'يعتمد على الخدمة. قد تنشر بعض الفئات المجانية (ومنها فئة Ideogram) المخرجات علناً افتراضياً. تحقق من شروط الخصوصية الحالية لكل خدمة قبل توليد أي شيء حساس — التوليد المحلي خاص بشكل افتراضي، إذ لا يغادر شيء جهازك.',
           },
           {
             q: 'هل يمكنني تحرير صوري الخاصة بهذه الأدوات؟',
@@ -616,7 +616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'محلي أم سحابي لشركة صغيرة؟',
-            a: 'إذا كنت تولّد أقل من 200 صورة تقريباً شهرياً ولا تملك معالج رسوميات: السحابة — Adobe Firefly إذا كان الأمان القانوني مهماً، أو getimg.ai إذا كنت تريد تنوعاً في النماذج. فوق هذا الحجم، أو إذا كانت سرية بيانات العملاء مهمة، يمكن لمعالج رسوميات مستعمل بسعر 200 دولار وQwen-Image أن يعوّضا تكلفتهما خلال أشهر قليلة.',
+            a: 'إذا كنت تولّد أقل من 200 صورة تقريباً شهرياً ولا تملك معالج رسوميات: السحابة — Adobe Firefly إذا كان الأمان القانوني مهماً، أو getimg.ai إذا كنت تريد تنوعاً في النماذج. فوق هذا الحجم، أو إذا كانت سرية بيانات العملاء مهمة، قد يكون معالج رسوميات مستعمل مع Qwen-Image خياراً يستحق النظر؛ قارن التكلفة الإجمالية وفق حجم استخدامك.',
           },
         ],
       },
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'اختر المحلي إذا كنت تملك (أو ستشتري) معالج رسوميات بذاكرة 8 جيجابايت فأكثر، وتولّد الصور بانتظام، وتريد الخصوصية وتكلفة هامشية صفر وتحكماً إبداعياً كاملاً. Qwen-Image هو الأساس الأكثر أماناً — رخصة Apache 2.0، وأفضل عرض للنصوص في فئته — مع FLUX للواقعية الفوتوغرافية (انتبه لانقسام الترخيص حسب الإصدار) وSD 3.5 لمنظومة الأنماط التي لا مثيل لها.\n\nاختر السحابة إذا كنت تريد نتائج خلال الدقائق الخمس القادمة، أو تولّد الصور بين الحين والآخر، أو لا تملك معالج رسوميات. يُعد Adobe Firefly الخيار الآمن والاحترافي ببيانات تدريب آمنة تجارياً؛ ويُعد getimg.ai الجسر المناسب لكل من يعجبه فكرة النماذج المفتوحة لكن لا يعجبه فكرة تثبيتها.\n\nوإذا كان الفيديو هو التالي على قائمتك — فتلك محادثة عتاد مختلفة تماماً. اقرأ المقال المرافق: [توليد الفيديو بالذكاء الاصطناعي محلياً مقابل السحابة](/ar/power-local-llm/local-ai-video-generation-vs-cloud).',
+          'اختر المحلي إذا كنت تملك (أو ستشتري) معالج رسوميات بذاكرة 8 جيجابايت فأكثر، وتولّد الصور بانتظام، وتريد الخصوصية وتكلفة هامشية صفر وتحكماً إبداعياً كاملاً. Qwen-Image أساس متين — رخصة Apache 2.0، وعرض قوي للنصوص — مع FLUX للواقعية الفوتوغرافية (انتبه لانقسام الترخيص حسب الإصدار) وSD 3.5 لمنظومة الأنماط العميقة.\n\nاختر السحابة إذا كنت تريد نتائج خلال الدقائق الخمس القادمة، أو تولّد الصور بين الحين والآخر، أو لا تملك معالج رسوميات. يُعد Adobe Firefly الخيار الآمن والاحترافي ببيانات تدريب آمنة تجارياً؛ ويُعد getimg.ai الجسر المناسب لكل من يعجبه فكرة النماذج المفتوحة لكن لا يعجبه فكرة تثبيتها.\n\nوإذا كان الفيديو هو التالي على قائمتك — فتلك محادثة عتاد مختلفة تماماً. اقرأ المقال المرافق: [توليد الفيديو بالذكاء الاصطناعي محلياً مقابل السحابة](/ar/power-local-llm/local-ai-video-generation-vs-cloud).',
       },
       sources: {
         id: 'sources',
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[معالج الرسوميات مقابل المعالج المركزي مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon) — مقارنة المنصات للاستنتاج المحلي.',
           '[تعليمات النظام مقابل تعليمات المستخدم](/ar/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — أساسيات بناء التعليمات التي تنتقل إلى هندسة تعليمات الصور.',
           '[هندسة التعليمات للنماذج المحلية](/ar/local-llms/prompt-engineering-for-local-models) — تقنيات بناء التعليمات المنظمة.',
-          '[مراجعة Modly](/ar/power-local-llm/modly-review) — تطبيق سطح مكتب يحوّل صورة أو وصفًا نصيًا إلى مجسم ثلاثي الأبعاد (Mesh) بنماذج مفتوحة المصدر على بطاقتك الرسومية، خطوة تتجاوز توليد الصور ثنائية الأبعاد.',
+          '[مراجعة Modly](/ar/power-local-llm/modly-review) — تطبيق سطح مكتب يحوّل صورة أو وصفًا نصيًا إلى مجسم ثلاثي الأبعاد (Mesh) بنماذج ذكاء اصطناعي قابلة للتنزيل (تختلف تراخيصها حسب النموذج) على بطاقتك الرسومية، خطوة تتجاوز توليد الصور ثنائية الأبعاد.',
         ],
       },
     },
@@ -703,12 +703,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**Für die meisten Menschen mit einer GPU ab 8 GB ist Qwen-Image der sicherste lokale Einstieg** — Apache 2.0, keine Umsatzgrenzen, keine Gebietsbeschränkungen und die stärkste Textwiedergabe innerhalb von Bildern unter allen offenen Modellen. **FLUX.1 schnell ist am schnellsten und leichtesten (ebenfalls Apache 2.0), während FLUX.1/2 dev und Kontext für die kommerzielle Nutzung eine kostenpflichtige Lizenz von Black Forest Labs benötigen** — offene Gewichte bedeuten bei diesen Varianten nicht automatisch kommerziell kostenlos. **Stable Diffusion 3.5 hat das umfangreichste LoRA- und Style-Ökosystem, deckelt die kostenlose kommerzielle Nutzung aber bei 1 Million US-Dollar Jahresumsatz.** Wenn Sie keine GPU besitzen oder für Kundenarbeit kommerziell sichere Garantien zu den Trainingsdaten benötigen, ist ein Cloud-Dienst wie Adobe Firefly die praktischere Wahl.',
+      '**Für die meisten Menschen mit einer GPU ab 8 GB ist Qwen-Image ein guter lokaler Einstieg** — Apache 2.0, keine Umsatzgrenzen, keine Gebietsbeschränkungen und eine starke Textwiedergabe innerhalb von Bildern. **FLUX.1 schnell ist am schnellsten und leichtesten (ebenfalls Apache 2.0), während FLUX.1/2 dev und Kontext für die kommerzielle Nutzung des Modells eine kostenpflichtige Lizenz von Black Forest Labs benötigen** — offene Gewichte bedeuten bei diesen Varianten nicht automatisch kommerziell kostenlos. **Stable Diffusion 3.5 hat das umfangreichste LoRA- und Style-Ökosystem, deckelt die kostenlose kommerzielle Nutzung aber bei 1 Million US-Dollar Jahresumsatz.** Wenn Sie keine GPU besitzen oder für Kundenarbeit kommerziell sichere Garantien zu den Trainingsdaten benötigen, ist ein Cloud-Dienst wie Adobe Firefly die praktischere Wahl.',
     quickAnswerTop: {
       de: {
         question: 'Sollte ich KI-Bilder lokal generieren oder einen Cloud-Dienst nutzen?',
         answer:
-          'Generieren Sie lokal, wenn Sie eine GPU ab 8 GB besitzen und unbegrenzte Generierungen zu 0 € wollen — Qwen-Image (Apache 2.0, keine Einschränkungen, beste Textwiedergabe) oder FLUX.1 schnell (Apache 2.0, am schnellsten) sind der sicherste Einstieg. Nutzen Sie einen Cloud-Dienst, wenn Sie keine GPU besitzen, für Kundenarbeit kommerziell sichere Trainingsdaten benötigen oder in den nächsten fünf Minuten ein Ergebnis ohne jede Einrichtung wollen.',
+          'Generieren Sie lokal, wenn Sie eine GPU ab 8 GB besitzen und unbegrenzte Generierungen zu 0 € wollen — Qwen-Image (Apache 2.0, starke Textwiedergabe) oder FLUX.1 schnell (Apache 2.0, schnell) sind sinnvolle Einstiegspunkte. Nutzen Sie einen Cloud-Dienst, wenn Sie keine GPU besitzen, für Kundenarbeit kommerziell sichere Trainingsdaten benötigen oder in den nächsten fünf Minuten ein Ergebnis ohne jede Einrichtung wollen.',
         bullets: [
           'Unter 8 GB VRAM → ein Cloud-Dienst ist die praktische Wahl, auch wenn Bilder deutlich weniger Hardware brauchen als Video.',
           '8 GB VRAM → FLUX.1 schnell, Stable Diffusion 3.5, SDXL oder Qwen-Image (GGUF-quantisiert) — der Großteil des lokalen Angebots passt bereits.',
@@ -745,19 +745,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Qwen-Image ist das einzige lokale Spitzenmodell für Bilder ohne jede Lizenzeinschränkung und mit der besten Textwiedergabe.** Apache 2.0, keine Umsatzgrenzen, keine Gebietsausschlüsse — und lokal führend bei lesbarem, korrekt geschriebenem Text innerhalb von Bildern.',
-          '**Die Lizenz von FLUX ist je nach Variante unterschiedlich.** FLUX.1 schnell steht unter Apache 2.0 (uneingeschränkte kommerzielle Nutzung); FLUX.1/2 dev und Kontext nutzen die nicht-kommerzielle Lizenz von Black Forest Labs — für die kommerzielle Nutzung ist eine kostenpflichtige Lizenz erforderlich.',
+          '**Qwen-Image ist ein lokales Spitzenmodell für Bilder unter der freizügigen Apache-2.0-Lizenz, mit starker Textwiedergabe.** Keine Umsatzgrenzen, keine Gebietsausschlüsse — und eine führende lokale Option für lesbaren, korrekt geschriebenen Text innerhalb von Bildern.',
+          '**Die Lizenz von FLUX ist je nach Variante unterschiedlich.** FLUX.1 schnell steht unter Apache 2.0 (uneingeschränkte kommerzielle Nutzung); FLUX.1/2 dev und Kontext nutzen die nicht-kommerzielle Lizenz von Black Forest Labs — für die kommerzielle Nutzung des Modells selbst ist eine kostenpflichtige Lizenz erforderlich, während der Lizenztext von FLUX.1 [dev] die kommerzielle Nutzung erzeugter Ausgaben unter Bedingungen erlaubt.',
           '**Stable Diffusion 3.5 hat das umfangreichste lokale Ökosystem** (LoRAs, ControlNets, Tutorials), deckelt die kostenlose kommerzielle Nutzung mit seiner Community License aber bei 1 Million US-Dollar Jahresumsatz.',
           '**8 GB VRAM decken den Großteil des lokalen Angebots ab.** Bilder brauchen deutlich weniger Hardware als Video — eine GPU, die bei der Videogenerierung an ihre Grenzen kommt, bewältigt die meisten Bildmodelle problemlos.',
-          '**Adobe Firefly und getimg.ai sind die beiden Cloud-Dienste mit aktivem Partnerprogramm**; Midjourney und ChatGPT betreiben keines — dieser Artikel kann durch ihre Empfehlung also nichts verdienen, unabhängig von ihrer Qualität.',
-          '**Bei der Privatsphäre gibt es kein Gratis-Mittagessen.** Der kostenlose Tarif von Ideogram veröffentlicht Bilder in einer öffentlichen Galerie; lokale Generierung ist standardmäßig privat.',
+          '**PromptQuorum hat keine Partnerprogramm-Beziehung zu einem der in diesem Artikel genannten Dienste.** Alle Links sind reine Referenzlinks, die keine Provision einbringen, unabhängig von der Qualität des Dienstes.',
+          '**Bei der Privatsphäre gibt es kein Gratis-Mittagessen.** Manche kostenlosen Tarife, etwa der von Ideogram, können Bilder öffentlich zugänglich machen (aktuelle Bedingungen prüfen); lokale Generierung ist standardmäßig privat.',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'Warum 2026 das Jahr ist, in dem lokale Bilder erwachsen wurden',
         content:
-          'Offene Bildmodelle haben aufgeholt — und in manchen Kategorien überholt. HiDream-O1, ein 8B-Modell, das im Mai 2026 unter der MIT-Lizenz veröffentlicht wurde, rangierte kurz nach Veröffentlichung unter den besten Open-Weight-Einträgen der Text-to-Image-Arena von Artificial Analysis — bei einem Bruchteil der Größe größerer Konkurrenten. Alibabas Qwen-Image gibt lesbaren Text innerhalb von Bildern besser wieder als die meisten Cloud-Tools. Und die Editing-Modelle — Qwen-Image-Edit, FLUX Kontext — ändern mittlerweile Objekte, Hintergründe und Text in bestehenden Fotos anhand einer einfachen Sprachanweisung, lokal und kostenlos.\n\nAuch die Cloud-Seite hat ihre eigene 2026er-Geschichte: Der Markt konsolidierte sich auf wenige ernsthafte Anbieter, die Einstiegspreise fielen auf den Bereich von 8-10 $/Monat, und kommerziell sichere Trainingsdaten wurden für Geschäftskunden zu einem echten Unterscheidungsmerkmal. Beide Türen sind wirklich gut. Die Frage ist, welche zu Ihnen passt — und anders als bei Video ist die Hardware-Hürde bei Bildern niedrig genug, dass die lokale Tür für deutlich mehr Menschen realistisch ist.',
+          'Offene Bildmodelle haben aufgeholt — und in manchen Kategorien überholt. HiDream-O1, ein 8B-Modell, das im Mai 2026 unter der MIT-Lizenz veröffentlicht wurde, rangierte kurz nach Veröffentlichung unter den besten Open-Weight-Einträgen der Text-to-Image-Arena von Artificial Analysis — bei einem Bruchteil der Größe größerer Konkurrenten. Alibabas Qwen-Image gibt lesbaren Text innerhalb von Bildern gut wieder. Und die Editing-Modelle — Qwen-Image-Edit, FLUX Kontext — ändern mittlerweile Objekte, Hintergründe und Text in bestehenden Fotos anhand einer einfachen Sprachanweisung, lokal und kostenlos.\n\nAuch die Cloud-Seite hat ihre eigene 2026er-Geschichte: Der Markt konsolidierte sich auf wenige ernsthafte Anbieter, die Einstiegspreise fielen auf den Bereich von 8-10 $/Monat, und kommerziell sichere Trainingsdaten wurden für Geschäftskunden zu einem echten Unterscheidungsmerkmal. Beide Türen sind wirklich gut. Die Frage ist, welche zu Ihnen passt — und anders als bei Video ist die Hardware-Hürde bei Bildern niedrig genug, dass die lokale Tür für deutlich mehr Menschen realistisch ist.',
       },
       localModels: {
         id: 'local-models',
@@ -765,14 +765,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           'Alle drei laufen über ComfyUI (oder eine ähnliche lokale Oberfläche) auf Ihrer eigenen Maschine. Wie bei der Videogenerierung gilt: Dies sind Diffusionsmodelle, keine LLMs — sie laufen nicht in Ollama.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen-Image ist 2026 das sicherste lokale Allround-Bildmodell — Apache 2.0, beste Textwiedergabe, keine Einschränkungen —, während FLUX bei Fotorealismus vorn liegt (mit Lizenz-Einschränkungen je nach Variante) und Stable Diffusion 3.5 bei der Ökosystemtiefe gewinnt.' },
-          { type: 'plain-terms', text: 'Wenn Sie nur eine Antwort wollen: Besorgen Sie sich eine GPU ab 8 GB und nutzen Sie Qwen-Image. Es hat kein Lizenz-Kleingedrucktes und die beste Textwiedergabe unter allen offenen Modellen.' },
+          { type: 'one-sentence', text: 'Qwen-Image ist 2026 ein starkes lokales Allround-Bildmodell — Apache 2.0, starke Textwiedergabe —, während FLUX bei Fotorealismus vorn liegt (mit Lizenz-Einschränkungen je nach Variante) und Stable Diffusion 3.5 bei der Ökosystemtiefe gewinnt.' },
+          { type: 'plain-terms', text: 'Wenn Sie nur eine Antwort wollen: Besorgen Sie sich eine GPU ab 8 GB und nutzen Sie Qwen-Image. Es nutzt die freizügige Apache-2.0-Lizenz und hat eine starke Textwiedergabe.' },
         ],
         columns: ['Familie', 'Lizenz', 'VRAM', 'Herausragendes Merkmal'],
         rows: [
           { 'Familie': 'FLUX (Black Forest Labs)', 'Lizenz': 'Gespalten — schnell ist Apache 2.0, dev/Kontext sind ohne kostenpflichtige Lizenz nicht-kommerziell', 'VRAM': '8 GB (schnell) bis 24 GB (FLUX.2 dev)', 'Herausragendes Merkmal': 'Fotorealismus-Benchmark; Kontext führt beim lokalen Editing' },
           { 'Familie': 'Stable Diffusion 3.5 + SDXL (Stability AI)', 'Lizenz': 'Stability Community License — kostenlos unter 1 Mio. US-Dollar Umsatz', 'VRAM': '8–12 GB', 'Herausragendes Merkmal': 'Umfangreichstes lokales LoRA-/ControlNet-Ökosystem' },
-          { 'Familie': 'Qwen-Image (Alibaba)', 'Lizenz': 'Apache 2.0 — uneingeschränkt', 'VRAM': '8 GB (GGUF) bis 24 GB (volle Präzision)', 'Herausragendes Merkmal': 'Klassenbeste lesbare Textwiedergabe im Bild' },
+          { 'Familie': 'Qwen-Image (Alibaba)', 'Lizenz': 'Apache 2.0 — freizügig', 'VRAM': '8 GB (GGUF) bis 24 GB (volle Präzision)', 'Herausragendes Merkmal': 'Starke lesbare Textwiedergabe im Bild' },
         ],
         note:
           'Laden Sie diese Modelle nur aus den unten verlinkten offiziellen Repositories herunter — Drittanbieter-Seiten mit „kostenlosem Download" verpacken Modelle mit wer-weiß-was darin neu.',
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'flux',
         title: 'FLUX (Black Forest Labs) — der Fotorealismus-Benchmark, mit Lizenzstufen',
         content:
-          'Die FLUX-Familie ist der Standard für ernsthafte lokale Bildarbeit. FLUX.2 [dev] (32B) führt bei Fotorealismus und hoher Auflösung und kombiniert bis zu 10 Referenzbilder, während Charakter, Produkt und Stil konsistent bleiben. FLUX.1 [schnell] erzeugt Bilder in Qualität in 1–4 Schritten mit nur 8 GB VRAM. FLUX.1 Kontext ist lokal führend beim Bearbeiten bestehender Bilder.\n\n**Lizenz — lesen Sie diesen Teil sorgfältig: Die Familie ist gespalten.** FLUX.1 [schnell] steht unter Apache 2.0 — uneingeschränkt, kommerzielle Nutzung eingeschlossen. FLUX.1/2 [dev] und Kontext nutzen die nicht-kommerzielle Lizenz von Black Forest Labs — der Einsatz in einem kommerziellen Produkt erfordert eine kostenpflichtige Lizenz von BFL. „Offene Gewichte" bedeutet hier nicht „kommerziell okay".\n\nHardware: 8 GB (schnell), 12–16 GB (dev/Kontext), 24 GB (FLUX.2 dev, GGUF Q4).',
+          'Die FLUX-Familie ist der Standard für ernsthafte lokale Bildarbeit. FLUX.2 [dev] (32B) führt bei Fotorealismus und hoher Auflösung und kombiniert bis zu 10 Referenzbilder, während Charakter, Produkt und Stil konsistent bleiben. FLUX.1 [schnell] erzeugt Bilder in Qualität in 1–4 Schritten mit nur 8 GB VRAM. FLUX.1 Kontext ist lokal führend beim Bearbeiten bestehender Bilder.\n\n**Lizenz — lesen Sie diesen Teil sorgfältig: Die Familie ist gespalten.** FLUX.1 [schnell] steht unter Apache 2.0 — uneingeschränkt, kommerzielle Nutzung eingeschlossen. FLUX.1/2 [dev] und Kontext nutzen die nicht-kommerzielle Lizenz von Black Forest Labs — der Einsatz des Modells selbst in einem kommerziellen Produkt oder Dienst erfordert eine kostenpflichtige Lizenz von BFL. Bei FLUX.1 [dev] erlaubt der Lizenztext (v1.1.1) zudem, erzeugte Ausgaben für jeden Zweck einschließlich kommerzieller Zwecke zu nutzen, sofern Sie seine Bedingungen erfüllen (Inhaltsfilter oder Prüfung, KI-Kennzeichnung, soweit gesetzlich vorgeschrieben); lesen Sie die Lizenzen von FLUX.2 [dev] und Kontext selbst. „Offene Gewichte" bedeutet hier nicht „kommerziell okay".\n\nHardware: 8 GB (schnell), 12–16 GB (dev/Kontext), 24 GB (FLUX.2 dev, GGUF Q4).',
         affiliateLinks: [
           { url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell', productName: 'FLUX.1 schnell on Hugging Face', productCategory: 'image-model', label: 'FLUX.1 schnell on Hugging Face' },
           { url: 'https://huggingface.co/black-forest-labs/FLUX.2-dev', productName: 'FLUX.2 dev on Hugging Face', productCategory: 'image-model', label: 'FLUX.2 dev on Hugging Face' },
@@ -798,9 +798,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwenImage: {
         id: 'qwen-image',
-        title: 'Qwen-Image (Alibaba) — wirklich kostenlos und König der Textwiedergabe',
+        title: 'Qwen-Image (Alibaba) — Apache 2.0 und stark bei der Textwiedergabe',
         content:
-          'Alibaba veröffentlichte Qwen-Image (20B) im August 2025 als Open Source unter Apache 2.0 — keine Umsatzschwellen, keine nicht-kommerziellen Klauseln, keine Gebietsspielchen. Seine Spezialität ist etwas, an dem die meisten Modelle noch scheitern: lesbarer, korrekt geschriebener Text innerhalb des Bildes, in mehreren Sprachen. Poster, Schilder, Infografiken, Thumbnails mit Überschriften — dafür ist dieses Modell gemacht.\n\nBonus: Qwen-Image-Edit führt präzise, promptbasierte Bearbeitungen an bestehenden Fotos durch — die Farbe eines Objekts ändern, einen Hintergrund austauschen, Text korrigieren — während alles andere erhalten bleibt.\n\nHardware: 8 GB (GGUF-quantisiert) bis 24 GB (volle Präzision). Lizenz: Apache 2.0 — das einzige Spitzenmodell für Bilder ohne jedes Kleingedruckte.',
+          'Alibaba veröffentlichte Qwen-Image (20B) im August 2025 als Open Source unter Apache 2.0 — keine Umsatzschwellen, keine nicht-kommerziellen Klauseln, keine Gebietsspielchen. Seine Spezialität ist etwas, an dem die meisten Modelle noch scheitern: lesbarer, korrekt geschriebener Text innerhalb des Bildes, in mehreren Sprachen. Poster, Schilder, Infografiken, Thumbnails mit Überschriften — dafür ist dieses Modell gemacht.\n\nBonus: Qwen-Image-Edit führt präzise, promptbasierte Bearbeitungen an bestehenden Fotos durch — die Farbe eines Objekts ändern, einen Hintergrund austauschen, Text korrigieren — während alles andere erhalten bleibt.\n\nHardware: 8 GB (GGUF-quantisiert) bis 24 GB (volle Präzision). Lizenz: Apache 2.0 — freizügig; lesen Sie vor kommerzieller Nutzung trotzdem den Lizenztext.',
         affiliateLinks: [
           { url: 'https://huggingface.co/Qwen/Qwen-Image', productName: 'Qwen-Image on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image on Hugging Face' },
           { url: 'https://huggingface.co/Qwen/Qwen-Image-Edit', productName: 'Qwen-Image-Edit on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image-Edit on Hugging Face' },
@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'adobe-firefly',
         title: 'Adobe Firefly — die kommerziell sichere Wahl',
         content:
-          'Firefly wurde auf Adobe Stock und offen lizenzierten Inhalten trainiert — das heißt, Adobe hat es so konzipiert, dass Geschäftskunden kein Urheberrechtsrisiko erben — und integriert sich direkt in Photoshop und die übrige Creative Cloud. Wenn Kundenarbeit oder Markensicherheit Ihre Sorge ist, ist dies die Cloud-Tür. Eine kostenlose Testphase existiert, um es vor dem Kauf zu testen; kostenpflichtige Pläne starten bei $9.99/Monat für 2.000 generative Credits (Standard-Tarif). Am besten geeignet für: Profis, Agenturen und alle, deren Kunden fragen „ist das rechtlich sicher?"',
+          'Firefly wurde auf Adobe Stock und offen lizenzierten Inhalten trainiert — was laut Adobe das Urheberrechtsrisiko für Geschäftskunden verringern soll — und integriert sich direkt in Photoshop und die übrige Creative Cloud. Wenn Kundenarbeit oder Markensicherheit Ihre Sorge ist, ist dies die Cloud-Tür. Eine kostenlose Testphase existiert, um es vor dem Kauf zu testen; kostenpflichtige Pläne starten bei $9.99/Monat für 2.000 generative Credits (Standard-Tarif). Am besten geeignet für: Profis, Agenturen und alle, deren Kunden fragen „ist das rechtlich sicher?"',
         blockquote:
           '**Wollen Sie die kommerziell sichere Cloud-Option ausprobieren?** Wenn Sie keine GPU haben oder keine lokalen Modelle verwalten wollen, probieren Sie Adobe Firefly, bevor Sie sich auf ein lokales Setup festlegen. [Adobe Firefly ausprobieren →](https://firefly.adobe.com/)',
         affiliateLinks: [
@@ -870,7 +870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'getimg-ai',
         title: 'getimg.ai — die Cloud-Version der lokalen Modelle',
         content:
-          'Hier die Wendung, die die meisten Vergleiche übersehen: getimg.ai betreibt dieselben offenen Modelle, die Sie lokal installieren würden — FLUX und Verwandte, über 20 Modelle in einer Oberfläche — nur eben auf deren GPUs statt auf Ihrer. Kein Setup, keine VRAM-Rechnerei, kommerzielle Rechte in jedem Tarif inbegriffen. Wenn Ihnen die lokale Tür gefällt, Ihre Hardware aber nicht mitspielt, ist dies die Brücke. Die Preisgestaltung ist seit Anfang 2026 ausschließlich kostenpflichtig (der kostenlose Tarif wurde eingestellt) — Einstieg ab $8/Monat bei jährlicher Abrechnung ($10/Monat bei monatlicher Abrechnung) für 3.000 Credits; höhere Tarife skalieren von dort aus weiter. Am besten geeignet für: lokal-interessierte Nutzer ohne GPU und alle, die Vielfalt bei offenen Modellen ohne die ComfyUI-Lernkurve wollen.\n\n(Ehrenvolle Erwähnung: Ideogram — ein Cloud-Marktführer für Text im Bild, mit einem begrenzten kostenlosen Tarif, der Bilder in einer öffentlichen Galerie veröffentlicht, und kostenpflichtigen Plänen ab etwa $20/Monat.)',
+          'Hier die Wendung, die die meisten Vergleiche übersehen: getimg.ai betreibt dieselben offenen Modelle, die Sie lokal installieren würden — FLUX und Verwandte, über 20 Modelle in einer Oberfläche — nur eben auf deren GPUs statt auf Ihrer. Kein Setup, keine VRAM-Rechnerei, kommerzielle Rechte in jedem Tarif inbegriffen. Wenn Ihnen die lokale Tür gefällt, Ihre Hardware aber nicht mitspielt, ist dies die Brücke. Die Preisgestaltung ist seit Anfang 2026 ausschließlich kostenpflichtig (der kostenlose Tarif wurde eingestellt) — Einstieg ab $8/Monat bei jährlicher Abrechnung ($10/Monat bei monatlicher Abrechnung) für 3.000 Credits; höhere Tarife skalieren von dort aus weiter. Am besten geeignet für: lokal-interessierte Nutzer ohne GPU und alle, die Vielfalt bei offenen Modellen ohne die ComfyUI-Lernkurve wollen.\n\n(Ehrenvolle Erwähnung: Ideogram — ein Cloud-Marktführer für Text im Bild, mit einem begrenzten kostenlosen Tarif, dessen Bilder öffentlich sein können (aktuelle Bedingungen prüfen), und kostenpflichtigen Plänen ab etwa $20/Monat.)',
         blockquote:
           '**Wollen Sie lokale Modelle nutzen, ohne die GPU zu besitzen?** getimg.ai gibt Ihnen über die Cloud Zugriff auf offene Modelle wie FLUX — ohne ComfyUI-Installation oder VRAM-Anforderungen. [getimg.ai ausprobieren →](https://getimg.ai/)',
         affiliateLinks: [
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Cloud-Bildtools haben einen kostenlosen Tarif?',
-            a: 'Adobe Firefly bietet eine kostenlose Testphase (das genaue Credit-Kontingent variiert — prüfen Sie firefly.adobe.com für die aktuelle Zahl). Ideogram bietet einen begrenzten kostenlosen Tarif, bei dem Bilder in einer öffentlichen Galerie veröffentlicht werden. getimg.ai hat seinen kostenlosen Tarif Anfang 2026 eingestellt — es ist ausschließlich kostenpflichtig, ab $8/Monat bei jährlicher Abrechnung.',
+            a: 'Adobe Firefly bietet eine kostenlose Testphase (das genaue Credit-Kontingent variiert — prüfen Sie firefly.adobe.com für die aktuelle Zahl). Ideogram bietet einen begrenzten kostenlosen Tarif; ob Bilder öffentlich sind, entnehmen Sie den aktuellen Bedingungen. getimg.ai hat seinen kostenlosen Tarif Anfang 2026 eingestellt — es ist ausschließlich kostenpflichtig, ab $8/Monat bei jährlicher Abrechnung.',
           },
           {
             q: 'Können KI-Modelle lesbaren Text in Bilder einfügen?',
@@ -930,7 +930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sind meine cloud-generierten Bilder privat?',
-            a: 'Kommt auf den Dienst an. Manche kostenlosen Tarife (darunter der von Ideogram) veröffentlichen Generierungen standardmäßig in einer öffentlichen Galerie. Prüfen Sie vor der Generierung sensibler Inhalte die aktuellen Datenschutzbedingungen jedes Dienstes — lokale Generierung ist standardmäßig privat, da nichts Ihre Maschine verlässt.',
+            a: 'Kommt auf den Dienst an. Manche kostenlosen Tarife (darunter der von Ideogram) können Generierungen standardmäßig öffentlich zugänglich machen. Prüfen Sie vor der Generierung sensibler Inhalte die aktuellen Datenschutzbedingungen jedes Dienstes — lokale Generierung ist standardmäßig privat, da nichts Ihre Maschine verlässt.',
           },
           {
             q: 'Kann ich meine eigenen Fotos mit diesen Tools bearbeiten?',
@@ -942,7 +942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Lokal oder Cloud für ein kleines Unternehmen?',
-            a: 'Wenn Sie unter etwa 200 Bilder im Monat generieren und keine GPU besitzen: Cloud — Adobe Firefly, wenn rechtliche Sicherheit zählt, getimg.ai für Modellvielfalt. Über diesem Volumen oder wenn Kundenvertraulichkeit eine Rolle spielt, kann sich eine gebrauchte GPU für rund 250-300 € zusammen mit Qwen-Image innerhalb weniger Monate amortisieren.',
+            a: 'Wenn Sie unter etwa 200 Bilder im Monat generieren und keine GPU besitzen: Cloud — Adobe Firefly, wenn rechtliche Sicherheit zählt, getimg.ai für Modellvielfalt. Über diesem Volumen oder wenn Kundenvertraulichkeit eine Rolle spielt, kann eine gebrauchte GPU zusammen mit Qwen-Image eine Überlegung wert sein; vergleichen Sie die Gesamtkosten für Ihr eigenes Volumen.',
           },
           {
             q: 'Muss ich bei der Verwendung dieser Tools die DSGVO beachten?',
@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Eignet sich lokale KI-Bildgenerierung für den deutschen Mittelstand?',
-            a: 'Ja, besonders für Kundenarbeit, unveröffentlichte Produkte oder datenschutzsensible Projekte, wie im Abschnitt zu Anwendungsfällen beschrieben. Eine gebrauchte GPU im Bereich von 250-300 € plus Qwen-Image (Apache 2.0, keine Umsatzgrenzen) deckt die meisten Anforderungen kleiner und mittlerer Unternehmen ab, ohne laufende Abo-Kosten oder die Notwendigkeit, Bilder zur Verarbeitung an einen Cloud-Anbieter zu senden.',
+            a: 'Ja, besonders für Kundenarbeit, unveröffentlichte Produkte oder datenschutzsensible Projekte, wie im Abschnitt zu Anwendungsfällen beschrieben. Eine gebrauchte GPU im Bereich von 250-300 € plus Qwen-Image (Apache 2.0, keine Umsatzgrenzen) kann viele Anforderungen kleiner und mittlerer Unternehmen abdecken, ohne laufende Abo-Kosten oder die Notwendigkeit, Bilder zur Verarbeitung an einen Cloud-Anbieter zu senden.',
           },
         ],
       },
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Das Fazit',
         content:
-          'Gehen Sie den lokalen Weg, wenn Sie eine GPU ab 8 GB besitzen (oder kaufen werden), regelmäßig Bilder generieren und Wert auf Privatsphäre, keine Grenzkosten und volle kreative Kontrolle legen. Qwen-Image ist die sicherste Grundlage — Apache 2.0, klassenbeste Textwiedergabe — mit FLUX für Fotorealismus (auf die je nach Variante unterschiedliche Lizenz achten) und SD 3.5 für sein unerreichtes Style-Ökosystem.\n\nGehen Sie den Cloud-Weg, wenn Sie in den nächsten fünf Minuten ein Ergebnis wollen, nur gelegentlich generieren oder keine GPU besitzen. Adobe Firefly ist die sichere, professionelle Wahl mit kommerziell sicheren Trainingsdaten; getimg.ai ist die Brücke für alle, die die Idee offener Modelle mögen, aber nicht die Idee, sie selbst zu installieren.\n\nUnd wenn Video als Nächstes auf Ihrer Liste steht — das ist ein anderes Hardware-Gespräch. Lesen Sie den begleitenden Artikel: [Lokale KI-Videogenerierung vs. Cloud](/de/power-local-llm/local-ai-video-generation-vs-cloud).',
+          'Gehen Sie den lokalen Weg, wenn Sie eine GPU ab 8 GB besitzen (oder kaufen werden), regelmäßig Bilder generieren und Wert auf Privatsphäre, keine Grenzkosten und volle kreative Kontrolle legen. Qwen-Image ist eine solide Grundlage — Apache 2.0, starke Textwiedergabe — mit FLUX für Fotorealismus (auf die je nach Variante unterschiedliche Lizenz achten) und SD 3.5 für sein umfangreiches Style-Ökosystem.\n\nGehen Sie den Cloud-Weg, wenn Sie in den nächsten fünf Minuten ein Ergebnis wollen, nur gelegentlich generieren oder keine GPU besitzen. Adobe Firefly ist die sichere, professionelle Wahl mit kommerziell sicheren Trainingsdaten; getimg.ai ist die Brücke für alle, die die Idee offener Modelle mögen, aber nicht die Idee, sie selbst zu installieren.\n\nUnd wenn Video als Nächstes auf Ihrer Liste steht — das ist ein anderes Hardware-Gespräch. Lesen Sie den begleitenden Artikel: [Lokale KI-Videogenerierung vs. Cloud](/de/power-local-llm/local-ai-video-generation-vs-cloud).',
       },
       sources: {
         id: 'sources',
@@ -988,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs. CPU vs. Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon) — Plattformvergleich für lokale Inferenz.',
           '[System-Prompts vs. User-Prompts](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Grundlagen der Prompt-Strukturierung, die sich auf Bild-Prompts übertragen lassen.',
           '[Prompt Engineering für lokale Modelle](/de/local-llms/prompt-engineering-for-local-models) — strukturierte Prompting-Techniken.',
-          '[Modly Rezension](/de/power-local-llm/modly-review) — eine Desktop-App, die aus einem Bild oder Text-Prompt mit Open-Source-Modellen auf Ihrer eigenen GPU ein 3D-Mesh erzeugt, ein Schritt über die 2D-Bildgenerierung hinaus.',
+          '[Modly Rezension](/de/power-local-llm/modly-review) — eine Desktop-App, die aus einem Bild oder Text-Prompt mit herunterladbaren KI-Modellen (Lizenzen je Modell verschieden) auf Ihrer eigenen GPU ein 3D-Mesh erzeugt, ein Schritt über die 2D-Bildgenerierung hinaus.',
         ],
       },
     },
@@ -1037,12 +1037,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**Para la mayoría de las personas con una GPU de 8GB o más, Qwen-Image es el punto de partida local más seguro** — Apache 2.0, sin límites de ingresos, sin restricciones de territorio, y el mejor renderizado de texto dentro de la imagen de cualquier modelo abierto. **FLUX.1 schnell es el más rápido y ligero (también Apache 2.0), mientras que FLUX.1/2 dev y Kontext requieren una licencia de pago de Black Forest Labs para uso comercial** — pesos abiertos no significa comercialmente gratis para esas variantes. **Stable Diffusion 3.5 tiene el ecosistema de LoRA y estilos más profundo, pero limita el uso comercial gratuito a $1M de ingresos anuales.** Si no tienes GPU, o necesitas garantías de datos de entrenamiento comercialmente seguros para trabajo con clientes, un servicio en la nube como Adobe Firefly es la opción más práctica.',
+      '**Para la mayoría de las personas con una GPU de 8GB o más, Qwen-Image es un buen punto de partida local** — Apache 2.0, sin límites de ingresos, sin restricciones de territorio, y un renderizado de texto sólido dentro de la imagen. **FLUX.1 schnell es el más rápido y ligero (también Apache 2.0), mientras que FLUX.1/2 dev y Kontext requieren una licencia de pago de Black Forest Labs para usar el modelo comercialmente** — pesos abiertos no significa comercialmente gratis para esas variantes. **Stable Diffusion 3.5 tiene el ecosistema de LoRA y estilos más profundo, pero limita el uso comercial gratuito a $1M de ingresos anuales.** Si no tienes GPU, o necesitas garantías de datos de entrenamiento comercialmente seguros para trabajo con clientes, un servicio en la nube como Adobe Firefly es la opción más práctica.',
     quickAnswerTop: {
       es: {
         question: '¿Debo generar imágenes con IA localmente o usar un servicio en la nube?',
         answer:
-          'Genera localmente si tienes una GPU de 8GB o más y quieres generaciones ilimitadas a $0 — Qwen-Image (Apache 2.0, sin restricciones, el mejor renderizado de texto) o FLUX.1 schnell (Apache 2.0, el más rápido) son los puntos de partida más seguros. Usa un servicio en la nube si no tienes GPU, necesitas datos de entrenamiento comercialmente seguros para trabajo con clientes, o quieres resultados en los próximos cinco minutos sin ninguna configuración.',
+          'Genera localmente si tienes una GPU de 8GB o más y quieres generaciones ilimitadas a $0 — Qwen-Image (Apache 2.0, renderizado de texto sólido) o FLUX.1 schnell (Apache 2.0, rápido) son puntos de partida razonables. Usa un servicio en la nube si no tienes GPU, necesitas datos de entrenamiento comercialmente seguros para trabajo con clientes, o quieres resultados en los próximos cinco minutos sin ninguna configuración.',
         bullets: [
           'Menos de 8 GB de VRAM → un servicio en la nube es la opción práctica, aunque las imágenes necesitan mucho menos hardware que el vídeo.',
           '8 GB de VRAM → FLUX.1 schnell, Stable Diffusion 3.5, SDXL o Qwen-Image (cuantizado en GGUF) — la mayor parte del menú local ya entra.',
@@ -1079,19 +1079,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Qwen-Image es el único modelo de imagen local de primer nivel sin restricciones de licencia y con el mejor renderizado de texto.** Apache 2.0, sin límites de ingresos, sin exclusiones de territorio — y el líder local en texto legible y correctamente escrito dentro de las imágenes.',
-          '**La licencia de FLUX está dividida por variante.** FLUX.1 schnell es Apache 2.0 (uso comercial sin restricciones); FLUX.1/2 dev y Kontext usan la licencia no comercial de Black Forest Labs — se necesita una licencia de pago para usarlos comercialmente.',
+          '**Qwen-Image es un modelo de imagen local de primer nivel bajo la licencia permisiva Apache 2.0, con un renderizado de texto sólido.** Sin límites de ingresos, sin exclusiones de territorio — y una opción local destacada para texto legible y correctamente escrito dentro de las imágenes.',
+          '**La licencia de FLUX está dividida por variante.** FLUX.1 schnell es Apache 2.0 (uso comercial sin restricciones); FLUX.1/2 dev y Kontext usan la licencia no comercial de Black Forest Labs — usar el modelo en sí comercialmente requiere una licencia de pago, mientras que el texto de la licencia de FLUX.1 [dev] permite el uso comercial de los resultados generados bajo ciertas condiciones.',
           '**Stable Diffusion 3.5 tiene el ecosistema local más profundo** (LoRAs, ControlNets, tutoriales), pero su Licencia Comunitaria limita el uso comercial gratuito a $1M de ingresos anuales.',
           '**8GB de VRAM cubre la mayor parte del menú local.** Las imágenes necesitan mucho menos hardware que el vídeo — una GPU que tiene problemas con la generación de vídeo maneja la mayoría de los modelos de imagen sin dificultad.',
-          '**Adobe Firefly y getimg.ai son los dos servicios en la nube con programas de afiliados activos**; Midjourney y ChatGPT no tienen ninguno, así que este artículo no puede ganar nada recomendándolos, independientemente de sus méritos.',
-          '**No hay almuerzo gratis en cuanto a privacidad.** El nivel gratuito de Ideogram publica las imágenes en una galería pública; la generación local es privada por defecto.',
+          '**PromptQuorum no tiene ninguna relación de afiliación con ningún servicio de este artículo.** Todos los enlaces son enlaces de referencia sin comisión, independientemente de los méritos del servicio.',
+          '**No hay almuerzo gratis en cuanto a privacidad.** Algunos niveles gratuitos, como el de Ideogram, pueden publicar las imágenes de forma pública (consulta los términos actuales); la generación local es privada por defecto.',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'Por qué 2026 es el año en que las imágenes locales se pusieron serias',
         content:
-          'Los modelos de imagen abiertos se han puesto al día — y en algunas categorías, se han adelantado. HiDream-O1, un modelo de 8B lanzado bajo licencia MIT en mayo de 2026, se situó entre las mejores entradas de pesos abiertos en la arena de texto a imagen de Artificial Analysis, con una fracción del tamaño de rivales más grandes. Qwen-Image de Alibaba renderiza texto legible dentro de las imágenes mejor que la mayoría de las herramientas en la nube. Y los modelos de edición — Qwen-Image-Edit, FLUX Kontext — ahora cambian objetos, fondos y texto dentro de fotos existentes a partir de una instrucción en lenguaje sencillo, localmente y sin coste.\n\nEl lado de la nube tiene su propia historia en 2026: el mercado se consolidó en torno a unos pocos actores serios, los precios de entrada bajaron al rango de $8-10/mes, y los datos de entrenamiento comercialmente seguros se convirtieron en un diferenciador real para usuarios empresariales. Ambas puertas son genuinamente buenas. La pregunta es cuál se ajusta a ti — y a diferencia del vídeo, la barrera de hardware para imágenes es lo bastante baja como para que la puerta local sea realista para muchas más personas.',
+          'Los modelos de imagen abiertos se han puesto al día — y en algunas categorías, se han adelantado. HiDream-O1, un modelo de 8B lanzado bajo licencia MIT en mayo de 2026, se situó entre las mejores entradas de pesos abiertos en la arena de texto a imagen de Artificial Analysis, con una fracción del tamaño de rivales más grandes. Qwen-Image de Alibaba renderiza bien texto legible dentro de las imágenes. Y los modelos de edición — Qwen-Image-Edit, FLUX Kontext — ahora cambian objetos, fondos y texto dentro de fotos existentes a partir de una instrucción en lenguaje sencillo, localmente y sin coste.\n\nEl lado de la nube tiene su propia historia en 2026: el mercado se consolidó en torno a unos pocos actores serios, los precios de entrada bajaron al rango de $8-10/mes, y los datos de entrenamiento comercialmente seguros se convirtieron en un diferenciador real para usuarios empresariales. Ambas puertas son genuinamente buenas. La pregunta es cuál se ajusta a ti — y a diferencia del vídeo, la barrera de hardware para imágenes es lo bastante baja como para que la puerta local sea realista para muchas más personas.',
       },
       localModels: {
         id: 'local-models',
@@ -1099,14 +1099,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           'Las tres funcionan a través de ComfyUI (o una interfaz local similar) en tu propia máquina. Igual que con la generación de vídeo: son modelos de difusión, no LLM — no funcionan en Ollama.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen-Image es el modelo de imagen local más seguro y versátil en 2026 — Apache 2.0, el mejor renderizado de texto, sin restricciones — mientras que FLUX gana en fotorrealismo (con matices de licencia según la variante) y Stable Diffusion 3.5 gana en profundidad de ecosistema.' },
-          { type: 'plain-terms', text: 'Si solo quieres una respuesta: consigue una GPU de 8GB o más y ejecuta Qwen-Image. No tiene letra pequeña en la licencia y tiene el mejor renderizado de texto de cualquier modelo abierto.' },
+          { type: 'one-sentence', text: 'Qwen-Image es un modelo de imagen local sólido y versátil en 2026 — Apache 2.0, renderizado de texto sólido — mientras que FLUX gana en fotorrealismo (con matices de licencia según la variante) y Stable Diffusion 3.5 gana en profundidad de ecosistema.' },
+          { type: 'plain-terms', text: 'Si solo quieres una respuesta: consigue una GPU de 8GB o más y ejecuta Qwen-Image. Usa la licencia permisiva Apache 2.0 y tiene un renderizado de texto sólido.' },
         ],
         columns: ['Familia', 'Licencia', 'VRAM', 'Característica destacada'],
         rows: [
           { 'Familia': 'FLUX (Black Forest Labs)', 'Licencia': 'Dividida — schnell es Apache 2.0, dev/Kontext son no comerciales sin una licencia de pago', 'VRAM': '8GB (schnell) hasta 24GB (FLUX.2 dev)', 'Característica destacada': 'Referencia en fotorrealismo; Kontext lidera la edición local' },
           { 'Familia': 'Stable Diffusion 3.5 + SDXL (Stability AI)', 'Licencia': 'Licencia Comunitaria de Stability — gratis por debajo de $1M de ingresos', 'VRAM': '8–12GB', 'Característica destacada': 'El ecosistema local de LoRA/ControlNet más profundo' },
-          { 'Familia': 'Qwen-Image (Alibaba)', 'Licencia': 'Apache 2.0 — sin restricciones', 'VRAM': '8GB (GGUF) hasta 24GB (precisión completa)', 'Característica destacada': 'El mejor renderizado de texto legible dentro de las imágenes' },
+          { 'Familia': 'Qwen-Image (Alibaba)', 'Licencia': 'Apache 2.0 — permisiva', 'VRAM': '8GB (GGUF) hasta 24GB (precisión completa)', 'Característica destacada': 'Renderizado sólido de texto legible dentro de las imágenes' },
         ],
         note:
           'Descarga cualquiera de estos modelos únicamente desde los repositorios oficiales enlazados abajo — los sitios de terceros con "descarga gratis" reempaquetan modelos con quién sabe qué dentro.',
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'flux',
         title: 'FLUX (Black Forest Labs) — la referencia en fotorrealismo, con niveles de licencia',
         content:
-          'La familia FLUX es la opción por defecto para trabajo de imagen local serio. FLUX.2 [dev] (32B) lidera en fotorrealismo y alta resolución, combinando hasta 10 imágenes de referencia manteniendo la consistencia del personaje, producto y estilo. FLUX.1 [schnell] genera imágenes de calidad en 1–4 pasos con solo 8GB de VRAM. FLUX.1 Kontext es el líder local en edición de imágenes existentes.\n\n**Licencia — lee esta parte con atención: la familia está dividida.** FLUX.1 [schnell] es Apache 2.0 — sin restricciones, uso comercial incluido. FLUX.1/2 [dev] y Kontext usan la licencia no comercial de Black Forest Labs — usarlos en un producto comercial requiere una licencia de pago de BFL. "Pesos abiertos" no significa "apto para uso comercial" en este caso.\n\nHardware: 8GB (schnell), 12–16GB (dev/Kontext), 24GB (FLUX.2 dev, GGUF Q4).',
+          'La familia FLUX es la opción por defecto para trabajo de imagen local serio. FLUX.2 [dev] (32B) lidera en fotorrealismo y alta resolución, combinando hasta 10 imágenes de referencia manteniendo la consistencia del personaje, producto y estilo. FLUX.1 [schnell] genera imágenes de calidad en 1–4 pasos con solo 8GB de VRAM. FLUX.1 Kontext es el líder local en edición de imágenes existentes.\n\n**Licencia — lee esta parte con atención: la familia está dividida.** FLUX.1 [schnell] es Apache 2.0 — sin restricciones, uso comercial incluido. FLUX.1/2 [dev] y Kontext usan la licencia no comercial de Black Forest Labs — usar el modelo en sí en un producto o servicio comercial requiere una licencia de pago de BFL. Para FLUX.1 [dev], el texto de la licencia (v1.1.1) permite además usar los resultados generados para cualquier fin, incluido el comercial, si cumples sus condiciones (filtrado o revisión de contenido, divulgación del uso de IA cuando la ley lo exija); lee tú mismo las licencias de FLUX.2 [dev] y Kontext. "Pesos abiertos" no significa "apto para uso comercial" en este caso.\n\nHardware: 8GB (schnell), 12–16GB (dev/Kontext), 24GB (FLUX.2 dev, GGUF Q4).',
         affiliateLinks: [
           { url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell', productName: 'FLUX.1 schnell on Hugging Face', productCategory: 'image-model', label: 'FLUX.1 schnell on Hugging Face' },
           { url: 'https://huggingface.co/black-forest-labs/FLUX.2-dev', productName: 'FLUX.2 dev on Hugging Face', productCategory: 'image-model', label: 'FLUX.2 dev on Hugging Face' },
@@ -1132,9 +1132,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwenImage: {
         id: 'qwen-image',
-        title: 'Qwen-Image (Alibaba) — verdaderamente gratis, y el rey del renderizado de texto',
+        title: 'Qwen-Image (Alibaba) — Apache 2.0 y sólido en renderizado de texto',
         content:
-          'Alibaba liberó el código de Qwen-Image (20B) en agosto de 2025 bajo Apache 2.0 — sin umbrales de ingresos, sin cláusulas no comerciales, sin juegos de territorio. Su especialidad es algo en lo que la mayoría de los modelos todavía fallan: texto legible y correctamente escrito dentro de la imagen, en varios idiomas. Carteles, letreros, infografías, miniaturas con titulares — este es el modelo.\n\nExtra: Qwen-Image-Edit realiza ediciones precisas, basadas en instrucciones, sobre fotos existentes — cambia el color de un objeto, sustituye un fondo, corrige texto — preservando todo lo demás.\n\nHardware: 8GB (cuantizado en GGUF) hasta 24GB (precisión completa). Licencia: Apache 2.0 — el único modelo de imagen de primer nivel sin letra pequeña.',
+          'Alibaba liberó el código de Qwen-Image (20B) en agosto de 2025 bajo Apache 2.0 — sin umbrales de ingresos, sin cláusulas no comerciales, sin juegos de territorio. Su especialidad es algo en lo que la mayoría de los modelos todavía fallan: texto legible y correctamente escrito dentro de la imagen, en varios idiomas. Carteles, letreros, infografías, miniaturas con titulares — este es el modelo.\n\nExtra: Qwen-Image-Edit realiza ediciones precisas, basadas en instrucciones, sobre fotos existentes — cambia el color de un objeto, sustituye un fondo, corrige texto — preservando todo lo demás.\n\nHardware: 8GB (cuantizado en GGUF) hasta 24GB (precisión completa). Licencia: Apache 2.0 — permisiva; aun así, lee el texto de la licencia antes de un uso comercial.',
         affiliateLinks: [
           { url: 'https://huggingface.co/Qwen/Qwen-Image', productName: 'Qwen-Image on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image on Hugging Face' },
           { url: 'https://huggingface.co/Qwen/Qwen-Image-Edit', productName: 'Qwen-Image-Edit on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image-Edit on Hugging Face' },
@@ -1193,7 +1193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'adobe-firefly',
         title: 'Adobe Firefly — la opción comercialmente segura',
         content:
-          'Firefly está entrenado con contenido de Adobe Stock y contenido con licencia abierta — lo que significa que Adobe lo diseñó para que los usuarios empresariales no hereden riesgo de derechos de autor — y se integra directamente con Photoshop y el resto de Creative Cloud. Si el trabajo con clientes o la seguridad de marca es tu preocupación, esta es la puerta de la nube. Existe una prueba gratuita para probarlo antes de pagar; los planes de pago empiezan en $9.99/mes por 2.000 créditos generativos (nivel Standard). Ideal para: profesionales, agencias, cualquiera cuyos clientes pregunten "¿esto es legalmente seguro?".',
+          'Firefly está entrenado con contenido de Adobe Stock y contenido con licencia abierta — lo que, según Adobe, busca reducir el riesgo de derechos de autor para los usuarios empresariales — y se integra directamente con Photoshop y el resto de Creative Cloud. Si el trabajo con clientes o la seguridad de marca es tu preocupación, esta es la puerta de la nube. Existe una prueba gratuita para probarlo antes de pagar; los planes de pago empiezan en $9.99/mes por 2.000 créditos generativos (nivel Standard). Ideal para: profesionales, agencias, cualquiera cuyos clientes pregunten "¿esto es legalmente seguro?".',
         blockquote:
           '**¿Quieres probar la opción de nube comercialmente segura?** Si no tienes GPU o no quieres gestionar modelos locales, prueba Adobe Firefly antes de comprometerte con una configuración local. [Probar Adobe Firefly →](https://firefly.adobe.com/)',
         affiliateLinks: [
@@ -1204,7 +1204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'getimg-ai',
         title: 'getimg.ai — la versión en la nube de los modelos locales',
         content:
-          'Aquí está el giro que la mayoría de las comparativas se pierden: getimg.ai ejecuta los mismos modelos abiertos que instalarías localmente — FLUX y compañía, más de 20 modelos en una sola interfaz — pero en sus GPU en lugar de la tuya. Sin configuración, sin cálculos de VRAM, derechos comerciales incluidos en todos los planes. Si la puerta local te atrae pero tu hardware dice que no, este es el puente. Los precios son de pago exclusivamente desde principios de 2026 (el nivel gratuito se retiró) — el plan Entry desde $8/mes con facturación anual ($10/mes con facturación mensual) por 3.000 créditos; los niveles superiores escalan a partir de ahí. Ideal para: usuarios curiosos por lo local pero sin la GPU, y cualquiera que quiera variedad de modelos abiertos sin la curva de aprendizaje de ComfyUI.\n\n(Mención honorífica: Ideogram — un líder en la nube para texto dentro de imagen, con un nivel gratuito limitado que publica las imágenes en una galería pública, y planes de pago que empiezan alrededor de $20/mes.)',
+          'Aquí está el giro que la mayoría de las comparativas se pierden: getimg.ai ejecuta los mismos modelos abiertos que instalarías localmente — FLUX y compañía, más de 20 modelos en una sola interfaz — pero en sus GPU en lugar de la tuya. Sin configuración, sin cálculos de VRAM, derechos comerciales incluidos en todos los planes. Si la puerta local te atrae pero tu hardware dice que no, este es el puente. Los precios son de pago exclusivamente desde principios de 2026 (el nivel gratuito se retiró) — el plan Entry desde $8/mes con facturación anual ($10/mes con facturación mensual) por 3.000 créditos; los niveles superiores escalan a partir de ahí. Ideal para: usuarios curiosos por lo local pero sin la GPU, y cualquiera que quiera variedad de modelos abiertos sin la curva de aprendizaje de ComfyUI.\n\n(Mención honorífica: Ideogram — un líder en la nube para texto dentro de imagen, con un nivel gratuito limitado cuyas imágenes pueden ser públicas (consulta sus términos actuales), y planes de pago que empiezan alrededor de $20/mes.)',
         blockquote:
           '**¿Quieres modelos locales sin tener la GPU?** getimg.ai te da acceso a modelos abiertos como FLUX a través de la nube, sin instalar ComfyUI ni requisitos de VRAM. [Probar getimg.ai →](https://getimg.ai/)',
         affiliateLinks: [
@@ -1256,7 +1256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué herramientas de imagen en la nube tienen un nivel gratuito?',
-            a: 'Adobe Firefly ofrece una prueba gratuita (la asignación exacta de créditos varía — consulta firefly.adobe.com para la cifra actual). Ideogram ofrece un nivel gratuito limitado con las imágenes publicadas en una galería pública. getimg.ai retiró su nivel gratuito a principios de 2026 — es de pago exclusivamente desde $8/mes con facturación anual.',
+            a: 'Adobe Firefly ofrece una prueba gratuita (la asignación exacta de créditos varía — consulta firefly.adobe.com para la cifra actual). Ideogram ofrece un nivel gratuito limitado; consulta sus términos actuales para saber si las imágenes son públicas. getimg.ai retiró su nivel gratuito a principios de 2026 — es de pago exclusivamente desde $8/mes con facturación anual.',
           },
           {
             q: '¿Pueden los modelos de IA poner texto legible dentro de las imágenes?',
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Son privadas mis imágenes generadas en la nube?',
-            a: 'Depende del servicio. Algunos niveles gratuitos (entre ellos el de Ideogram) publican las generaciones en una galería pública por defecto. Revisa los términos de privacidad actuales de cada servicio antes de generar algo sensible — la generación local es privada por defecto, ya que nada sale de tu máquina.',
+            a: 'Depende del servicio. Algunos niveles gratuitos (entre ellos el de Ideogram) pueden publicar las generaciones de forma pública por defecto. Revisa los términos de privacidad actuales de cada servicio antes de generar algo sensible — la generación local es privada por defecto, ya que nada sale de tu máquina.',
           },
           {
             q: '¿Puedo editar mis propias fotos con estas herramientas?',
@@ -1276,7 +1276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Local o nube para una pequeña empresa?',
-            a: 'Si generas menos de unas 200 imágenes al mes y no tienes GPU: nube — Adobe Firefly si la seguridad legal importa, getimg.ai si quieres variedad de modelos. Por encima de ese volumen, o si la confidencialidad con el cliente importa, una GPU de segunda mano de $200 y Qwen-Image pueden amortizarse en pocos meses.',
+            a: 'Si generas menos de unas 200 imágenes al mes y no tienes GPU: nube — Adobe Firefly si la seguridad legal importa, getimg.ai si quieres variedad de modelos. Por encima de ese volumen, o si la confidencialidad con el cliente importa, una GPU de segunda mano y Qwen-Image pueden merecer la pena; compara el coste total según tu volumen.',
           },
         ],
       },
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'El veredicto',
         content:
-          'Ve a lo local si tienes (o vas a comprar) una GPU de 8GB o más, generas imágenes regularmente, y quieres privacidad, coste marginal cero y control creativo total. Qwen-Image es la base más segura — Apache 2.0, el mejor renderizado de texto de su categoría — con FLUX para fotorrealismo (ten en cuenta la división de licencia por variante) y SD 3.5 por su ecosistema de estilos inigualable.\n\nVe a la nube si quieres resultados en los próximos cinco minutos, generas ocasionalmente, o no tienes GPU. Adobe Firefly es la opción segura y profesional con datos de entrenamiento comercialmente seguros; getimg.ai es el puente para cualquiera al que le guste la idea de los modelos abiertos pero no la idea de instalarlos.\n\nY si el vídeo es lo siguiente en tu lista — esa es otra conversación de hardware distinta. Lee el artículo complementario: [Generación de vídeo con IA local vs. la nube](/es/power-local-llm/local-ai-video-generation-vs-cloud).',
+          'Ve a lo local si tienes (o vas a comprar) una GPU de 8GB o más, generas imágenes regularmente, y quieres privacidad, coste marginal cero y control creativo total. Qwen-Image es una base sólida — Apache 2.0, renderizado de texto sólido — con FLUX para fotorrealismo (ten en cuenta la división de licencia por variante) y SD 3.5 por su amplio ecosistema de estilos.\n\nVe a la nube si quieres resultados en los próximos cinco minutos, generas ocasionalmente, o no tienes GPU. Adobe Firefly es la opción segura y profesional con datos de entrenamiento comercialmente seguros; getimg.ai es el puente para cualquiera al que le guste la idea de los modelos abiertos pero no la idea de instalarlos.\n\nY si el vídeo es lo siguiente en tu lista — esa es otra conversación de hardware distinta. Lee el artículo complementario: [Generación de vídeo con IA local vs. la nube](/es/power-local-llm/local-ai-video-generation-vs-cloud).',
       },
       sources: {
         id: 'sources',
@@ -1314,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon) — comparativa de plataformas para inferencia local.',
           '[Prompts de sistema vs. prompts de usuario](/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — fundamentos de estructuración de prompts que se aplican también a los prompts de imagen.',
           '[Prompt engineering para modelos locales](/es/local-llms/prompt-engineering-for-local-models) — técnicas de prompts estructurados.',
-          '[Reseña de Modly](/es/power-local-llm/modly-review) — una app de escritorio que convierte una imagen o un prompt de texto en una malla 3D con modelos de código abierto en tu propia GPU, un paso más allá de la generación de imágenes en 2D.',
+          '[Reseña de Modly](/es/power-local-llm/modly-review) — una app de escritorio que convierte una imagen o un prompt de texto en una malla 3D con modelos de IA descargables (las licencias varían según el modelo) en tu propia GPU, un paso más allá de la generación de imágenes en 2D.',
         ],
       },
     },
@@ -1363,12 +1363,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**Pour la plupart des utilisateurs avec un GPU de 8 Go+, Qwen-Image est le point de départ local le plus sûr** — Apache 2.0, aucun plafond de revenus, aucune restriction territoriale, et le meilleur rendu de texte dans l’image parmi les modèles ouverts. **FLUX.1 schnell est le plus rapide et le plus léger (également Apache 2.0), tandis que FLUX.1/2 dev et Kontext exigent une licence payante Black Forest Labs pour un usage commercial** — poids ouverts ne signifie pas gratuit commercialement pour ces variantes. **Stable Diffusion 3.5 a l’écosystème LoRA et styles le plus riche, mais plafonne l’usage commercial gratuit à 1 M$ de revenus annuels.** Sans GPU, ou pour des garanties de données d’entraînement sûres commercialement sur des projets clients, un service cloud comme Adobe Firefly est le choix le plus pratique.',
+      '**Pour la plupart des utilisateurs avec un GPU de 8 Go+, Qwen-Image est un bon point de départ local** — Apache 2.0, aucun plafond de revenus, aucune restriction territoriale, et un rendu de texte solide dans l’image. **FLUX.1 schnell est le plus rapide et le plus léger (également Apache 2.0), tandis que FLUX.1/2 dev et Kontext exigent une licence payante Black Forest Labs pour utiliser le modèle commercialement** — poids ouverts ne signifie pas gratuit commercialement pour ces variantes. **Stable Diffusion 3.5 a l’écosystème LoRA et styles le plus riche, mais plafonne l’usage commercial gratuit à 1 M$ de revenus annuels.** Sans GPU, ou pour des garanties de données d’entraînement sûres commercialement sur des projets clients, un service cloud comme Adobe Firefly est le choix le plus pratique.',
     quickAnswerTop: {
       fr: {
         question: 'Faut-il générer des images IA en local ou utiliser un service cloud ?',
         answer:
-          'Générez en local si vous avez un GPU de 8 Go+ et voulez des générations illimitées à 0 $ — Qwen-Image (Apache 2.0, sans restriction, meilleur rendu de texte) ou FLUX.1 schnell (Apache 2.0, le plus rapide) sont les points de départ les plus sûrs. Utilisez un service cloud sans GPU, pour des données d’entraînement sûres commercialement sur des projets clients, ou pour un résultat en cinq minutes sans aucune installation.',
+          'Générez en local si vous avez un GPU de 8 Go+ et voulez des générations illimitées à 0 $ — Qwen-Image (Apache 2.0, rendu de texte solide) ou FLUX.1 schnell (Apache 2.0, rapide) sont des points de départ raisonnables. Utilisez un service cloud sans GPU, pour des données d’entraînement sûres commercialement sur des projets clients, ou pour un résultat en cinq minutes sans aucune installation.',
         bullets: [
           'Moins de 8 Go de VRAM → un service cloud est le choix pratique, même si les images demandent bien moins de matériel que la vidéo.',
           '8 Go de VRAM → FLUX.1 schnell, Stable Diffusion 3.5, SDXL ou Qwen-Image (quantifié GGUF) — l’essentiel du menu local passe déjà.',
@@ -1405,19 +1405,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Qwen-Image est le seul modèle d’image local haut de gamme sans aucune restriction de licence et avec le meilleur rendu de texte.** Apache 2.0, aucun plafond de revenus, aucune exclusion territoriale — et le leader local pour du texte lisible et correctement orthographié dans les images.',
-          '**La licence de FLUX varie selon la variante.** FLUX.1 schnell est Apache 2.0 (usage commercial sans restriction) ; FLUX.1/2 dev et Kontext utilisent la licence non commerciale de Black Forest Labs — une licence payante est requise pour un usage commercial.',
+          '**Qwen-Image est un modèle d’image local haut de gamme sous licence permissive Apache 2.0, avec un rendu de texte solide.** Aucun plafond de revenus, aucune exclusion territoriale — et une option locale de premier plan pour du texte lisible et correctement orthographié dans les images.',
+          '**La licence de FLUX varie selon la variante.** FLUX.1 schnell est Apache 2.0 (usage commercial sans restriction) ; FLUX.1/2 dev et Kontext utilisent la licence non commerciale de Black Forest Labs — l’usage commercial du modèle lui-même exige une licence payante, tandis que le texte de la licence FLUX.1 [dev] autorise sous conditions l’usage commercial des sorties générées.',
           '**Stable Diffusion 3.5 dispose de l’écosystème local le plus riche** (LoRAs, ControlNets, tutoriels), mais sa Community License plafonne l’usage commercial gratuit à 1 M$ de revenus annuels.',
           '**8 Go de VRAM couvrent l’essentiel du menu local.** Les images demandent bien moins de matériel que la vidéo — un GPU qui peine sur la génération vidéo gère la plupart des modèles d’image sans difficulté.',
-          '**Adobe Firefly et getimg.ai sont les deux services cloud dotés d’un programme d’affiliation actif** ; Midjourney et ChatGPT n’en ont aucun, donc cet article ne touche rien à les recommander, indépendamment de leur mérite.',
-          '**Rien n’est gratuit côté confidentialité.** L’offre gratuite d’Ideogram publie les images dans une galerie publique ; la génération locale reste privée par défaut.',
+          '**PromptQuorum n’a aucune relation d’affiliation avec les services cités dans cet article.** Tous les liens sont de simples liens de référence qui ne rapportent aucune commission, quel que soit le mérite du service.',
+          '**Rien n’est gratuit côté confidentialité.** Certaines offres gratuites, comme celle d’Ideogram, peuvent rendre les images publiques (vérifiez les conditions actuelles) ; la génération locale reste privée par défaut.',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'Pourquoi 2026 est l’année où l’image locale est devenue sérieuse',
         content:
-          'Les modèles d’image ouverts ont rattrapé leur retard — et dans certaines catégories, pris de l’avance. HiDream-O1, un modèle (8B) publié sous licence MIT en mai 2026, s’est classé parmi les meilleures entrées à poids ouverts de l’arène text-to-image d’Artificial Analysis, pour une fraction de la taille de ses rivaux plus lourds. Qwen-Image d’Alibaba rend le texte lisible dans les images mieux que la plupart des outils cloud. Et les modèles d’édition — Qwen-Image-Edit, FLUX Kontext — modifient désormais objets, arrière-plans et texte dans des photos existantes à partir d’une simple instruction en langage naturel, en local et gratuitement.\n\nLe cloud a aussi son histoire 2026 : le marché s’est consolidé autour de quelques acteurs sérieux, les prix d’entrée sont tombés autour de 8-10 $/mois, et des données d’entraînement sûres commercialement sont devenues un vrai argument pour les entreprises. Les deux voies sont réellement bonnes. La question est de savoir laquelle vous convient — et contrairement à la vidéo, le seuil matériel pour l’image est assez bas pour rendre la voie locale réaliste pour bien plus de monde.',
+          'Les modèles d’image ouverts ont rattrapé leur retard — et dans certaines catégories, pris de l’avance. HiDream-O1, un modèle (8B) publié sous licence MIT en mai 2026, s’est classé parmi les meilleures entrées à poids ouverts de l’arène text-to-image d’Artificial Analysis, pour une fraction de la taille de ses rivaux plus lourds. Qwen-Image d’Alibaba rend bien le texte lisible dans les images. Et les modèles d’édition — Qwen-Image-Edit, FLUX Kontext — modifient désormais objets, arrière-plans et texte dans des photos existantes à partir d’une simple instruction en langage naturel, en local et gratuitement.\n\nLe cloud a aussi son histoire 2026 : le marché s’est consolidé autour de quelques acteurs sérieux, les prix d’entrée sont tombés autour de 8-10 $/mois, et des données d’entraînement sûres commercialement sont devenues un vrai argument pour les entreprises. Les deux voies sont réellement bonnes. La question est de savoir laquelle vous convient — et contrairement à la vidéo, le seuil matériel pour l’image est assez bas pour rendre la voie locale réaliste pour bien plus de monde.',
       },
       localModels: {
         id: 'local-models',
@@ -1425,14 +1425,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           'Les trois tournent via ComfyUI (ou une interface locale similaire) sur votre propre machine. Comme pour la génération vidéo : ce sont des modèles de diffusion, pas des LLM — ils ne fonctionnent pas dans Ollama.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen-Image est le modèle d’image local le plus sûr et le plus polyvalent en 2026 — Apache 2.0, meilleur rendu de texte, aucune restriction — tandis que FLUX l’emporte sur le photoréalisme (avec des réserves de licence selon la variante) et Stable Diffusion 3.5 sur la richesse de l’écosystème.' },
-          { type: 'plain-terms', text: 'Pour une seule réponse : prenez un GPU de 8 Go+ et lancez Qwen-Image. Aucune clause de licence cachée, et le meilleur rendu de texte parmi les modèles ouverts.' },
+          { type: 'one-sentence', text: 'Qwen-Image est un modèle d’image local solide et polyvalent en 2026 — Apache 2.0, rendu de texte solide — tandis que FLUX l’emporte sur le photoréalisme (avec des réserves de licence selon la variante) et Stable Diffusion 3.5 sur la richesse de l’écosystème.' },
+          { type: 'plain-terms', text: 'Pour une seule réponse : prenez un GPU de 8 Go+ et lancez Qwen-Image. Il utilise la licence permissive Apache 2.0 et offre un rendu de texte solide.' },
         ],
         columns: ['Famille', 'Licence', 'VRAM', 'Point fort'],
         rows: [
           { 'Famille': 'FLUX (Black Forest Labs)', 'Licence': 'Variable — schnell est Apache 2.0, dev/Kontext sont non commerciaux sans licence payante', 'VRAM': '8 Go (schnell) à 24 Go (FLUX.2 dev)', 'Point fort': 'Référence en photoréalisme ; Kontext en tête pour l’édition locale' },
           { 'Famille': 'Stable Diffusion 3.5 + SDXL (Stability AI)', 'Licence': 'Stability Community License — gratuite sous 1 M$ de revenus', 'VRAM': '8-12 Go', 'Point fort': 'Écosystème LoRA/ControlNet local le plus riche' },
-          { 'Famille': 'Qwen-Image (Alibaba)', 'Licence': 'Apache 2.0 — sans restriction', 'VRAM': '8 Go (GGUF) à 24 Go (pleine précision)', 'Point fort': 'Meilleur rendu de texte lisible dans l’image de sa catégorie' },
+          { 'Famille': 'Qwen-Image (Alibaba)', 'Licence': 'Apache 2.0 — permissive', 'VRAM': '8 Go (GGUF) à 24 Go (pleine précision)', 'Point fort': 'Rendu solide du texte lisible dans l’image' },
         ],
         note:
           'Téléchargez ces modèles uniquement depuis les dépôts officiels liés ci-dessous — les sites tiers de « téléchargement gratuit » reconditionnent les modèles avec on ne sait quoi à l’intérieur.',
@@ -1441,7 +1441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'flux',
         title: 'FLUX (Black Forest Labs) — la référence photoréalisme, avec des niveaux de licence',
         content:
-          'La famille FLUX est la référence par défaut pour le travail d’image local sérieux. FLUX.2 [dev] (32B) domine sur le photoréalisme et la haute résolution, combinant jusqu’à 10 images de référence tout en gardant personnage, produit et style cohérents. FLUX.1 [schnell] génère des images de qualité en 1 à 4 étapes avec seulement 8 Go de VRAM. FLUX.1 Kontext est le leader local pour l’édition d’images existantes.\n\n**Licence — lisez bien ce point : la famille se divise en plusieurs licences.** FLUX.1 [schnell] est Apache 2.0 — sans restriction, usage commercial inclus. FLUX.1/2 [dev] et Kontext utilisent la licence non commerciale de Black Forest Labs — les exploiter dans un produit commercial exige une licence payante auprès de BFL. « Poids ouverts » ne signifie pas « autorisé commercialement » ici.\n\nMatériel : 8 Go (schnell), 12-16 Go (dev/Kontext), 24 Go (FLUX.2 dev, GGUF Q4).',
+          'La famille FLUX est la référence par défaut pour le travail d’image local sérieux. FLUX.2 [dev] (32B) domine sur le photoréalisme et la haute résolution, combinant jusqu’à 10 images de référence tout en gardant personnage, produit et style cohérents. FLUX.1 [schnell] génère des images de qualité en 1 à 4 étapes avec seulement 8 Go de VRAM. FLUX.1 Kontext est le leader local pour l’édition d’images existantes.\n\n**Licence — lisez bien ce point : la famille se divise en plusieurs licences.** FLUX.1 [schnell] est Apache 2.0 — sans restriction, usage commercial inclus. FLUX.1/2 [dev] et Kontext utilisent la licence non commerciale de Black Forest Labs — exploiter le modèle lui-même dans un produit ou service commercial exige une licence payante auprès de BFL. Pour FLUX.1 [dev], le texte de la licence (v1.1.1) autorise par ailleurs l’usage des sorties générées à toute fin, y compris commerciale, si vous respectez ses conditions (filtrage ou revue du contenu, mention de l’usage de l’IA lorsque la loi l’exige) ; lisez vous-même les licences de FLUX.2 [dev] et Kontext. « Poids ouverts » ne signifie pas « autorisé commercialement » ici.\n\nMatériel : 8 Go (schnell), 12-16 Go (dev/Kontext), 24 Go (FLUX.2 dev, GGUF Q4).',
         affiliateLinks: [
           { url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell', productName: 'FLUX.1 schnell on Hugging Face', productCategory: 'image-model', label: 'FLUX.1 schnell on Hugging Face' },
           { url: 'https://huggingface.co/black-forest-labs/FLUX.2-dev', productName: 'FLUX.2 dev on Hugging Face', productCategory: 'image-model', label: 'FLUX.2 dev on Hugging Face' },
@@ -1458,9 +1458,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwenImage: {
         id: 'qwen-image',
-        title: 'Qwen-Image (Alibaba) — vraiment gratuit, roi du rendu de texte',
+        title: 'Qwen-Image (Alibaba) — Apache 2.0 et solide en rendu de texte',
         content:
-          'Alibaba a ouvert Qwen-Image (20B) en open source en août 2025 sous Apache 2.0 — aucun seuil de revenus, aucune clause non commerciale, aucun jeu territorial. Sa spécialité est un point où la plupart des modèles échouent encore : du texte lisible et correctement orthographié dans l’image, en plusieurs langues. Affiches, panneaux, infographies, miniatures avec titres — c’est le modèle pour ça.\n\nBonus : Qwen-Image-Edit effectue des retouches précises, guidées par prompt, sur des photos existantes — changer la couleur d’un objet, remplacer un arrière-plan, corriger du texte — en préservant tout le reste.\n\nMatériel : 8 Go (quantifié GGUF) à 24 Go (pleine précision). Licence : Apache 2.0 — le seul modèle d’image haut de gamme sans aucune clause cachée.',
+          'Alibaba a ouvert Qwen-Image (20B) en open source en août 2025 sous Apache 2.0 — aucun seuil de revenus, aucune clause non commerciale, aucun jeu territorial. Sa spécialité est un point où la plupart des modèles échouent encore : du texte lisible et correctement orthographié dans l’image, en plusieurs langues. Affiches, panneaux, infographies, miniatures avec titres — c’est le modèle pour ça.\n\nBonus : Qwen-Image-Edit effectue des retouches précises, guidées par prompt, sur des photos existantes — changer la couleur d’un objet, remplacer un arrière-plan, corriger du texte — en préservant tout le reste.\n\nMatériel : 8 Go (quantifié GGUF) à 24 Go (pleine précision). Licence : Apache 2.0 — permissive ; lisez tout de même le texte de la licence avant un usage commercial.',
         affiliateLinks: [
           { url: 'https://huggingface.co/Qwen/Qwen-Image', productName: 'Qwen-Image on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image on Hugging Face' },
           { url: 'https://huggingface.co/Qwen/Qwen-Image-Edit', productName: 'Qwen-Image-Edit on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image-Edit on Hugging Face' },
@@ -1519,7 +1519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'adobe-firefly',
         title: 'Adobe Firefly — le choix sûr commercialement',
         content:
-          'Firefly est entraîné sur Adobe Stock et du contenu sous licence ouverte — Adobe l’a conçu pour que les entreprises n’héritent d’aucun risque de droits d’auteur — et s’intègre directement à Photoshop et au reste de Creative Cloud. Si le travail client ou la sécurité de marque est votre priorité, c’est la voie cloud à choisir. Un essai gratuit permet de le tester avant de payer ; les forfaits payants démarrent à 9,99 $/mois pour 2 000 crédits génératifs (niveau Standard). Idéal pour : les professionnels, les agences, et quiconque a des clients qui demandent « est-ce légalement sûr ? »',
+          'Firefly est entraîné sur Adobe Stock et du contenu sous licence ouverte — ce qui, selon Adobe, vise à réduire le risque de droits d’auteur pour les entreprises — et s’intègre directement à Photoshop et au reste de Creative Cloud. Si le travail client ou la sécurité de marque est votre priorité, c’est la voie cloud à choisir. Un essai gratuit permet de le tester avant de payer ; les forfaits payants démarrent à 9,99 $/mois pour 2 000 crédits génératifs (niveau Standard). Idéal pour : les professionnels, les agences, et quiconque a des clients qui demandent « est-ce légalement sûr ? »',
         blockquote:
           '**Envie d’essayer l’option cloud sûre commercialement ?** Sans GPU, ou pour éviter de gérer des modèles locaux, essayez Adobe Firefly avant de vous lancer dans une installation locale. [Essayer Adobe Firefly →](https://firefly.adobe.com/)',
         affiliateLinks: [
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'getimg-ai',
         title: 'getimg.ai — la version cloud des modèles locaux',
         content:
-          'Voici la nuance que la plupart des comparatifs manquent : getimg.ai fait tourner les mêmes modèles ouverts que vous installeriez en local — FLUX et consorts, plus de 20 modèles dans une seule interface — mais sur leurs GPU, pas les vôtres. Aucune installation, aucun calcul de VRAM, droits commerciaux inclus sur tous les forfaits. Si la voie locale vous tente mais que votre matériel dit non, voici le pont. La tarification est payante uniquement depuis début 2026 (l’offre gratuite a été retirée) — à partir de 8 $/mois facturés annuellement (10 $/mois facturés mensuellement) pour 3 000 crédits ; les niveaux supérieurs montent en gamme à partir de là. Idéal pour : les curieux du local sans GPU, et quiconque veut la variété des modèles ouverts sans la courbe d’apprentissage de ComfyUI.\n\n(Mention honorable : Ideogram — un leader cloud pour le texte dans l’image, avec une offre gratuite limitée qui publie les images dans une galerie publique, et des forfaits payants à partir d’environ 20 $/mois.)',
+          'Voici la nuance que la plupart des comparatifs manquent : getimg.ai fait tourner les mêmes modèles ouverts que vous installeriez en local — FLUX et consorts, plus de 20 modèles dans une seule interface — mais sur leurs GPU, pas les vôtres. Aucune installation, aucun calcul de VRAM, droits commerciaux inclus sur tous les forfaits. Si la voie locale vous tente mais que votre matériel dit non, voici le pont. La tarification est payante uniquement depuis début 2026 (l’offre gratuite a été retirée) — à partir de 8 $/mois facturés annuellement (10 $/mois facturés mensuellement) pour 3 000 crédits ; les niveaux supérieurs montent en gamme à partir de là. Idéal pour : les curieux du local sans GPU, et quiconque veut la variété des modèles ouverts sans la courbe d’apprentissage de ComfyUI.\n\n(Mention honorable : Ideogram — un leader cloud pour le texte dans l’image, avec une offre gratuite limitée dont les images peuvent être publiques (vérifiez ses conditions actuelles), et des forfaits payants à partir d’environ 20 $/mois.)',
         blockquote:
           '**Envie des modèles locaux sans posséder de GPU ?** getimg.ai vous donne accès à des modèles ouverts comme FLUX via le cloud, sans installation ComfyUI ni exigence de VRAM. [Essayer getimg.ai →](https://getimg.ai/)',
         affiliateLinks: [
@@ -1582,7 +1582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quels outils cloud d’image ont une offre gratuite ?',
-            a: 'Adobe Firefly propose un essai gratuit (le nombre exact de crédits varie — consultez firefly.adobe.com pour le chiffre actuel). Ideogram propose une offre gratuite limitée, avec des images publiées dans une galerie publique. getimg.ai a retiré son offre gratuite début 2026 — c’est désormais payant uniquement, à partir de 8 $/mois en facturation annuelle.',
+            a: 'Adobe Firefly propose un essai gratuit (le nombre exact de crédits varie — consultez firefly.adobe.com pour le chiffre actuel). Ideogram propose une offre gratuite limitée ; vérifiez ses conditions actuelles pour savoir si les images sont publiques. getimg.ai a retiré son offre gratuite début 2026 — c’est désormais payant uniquement, à partir de 8 $/mois en facturation annuelle.',
           },
           {
             q: 'Les modèles IA peuvent-ils intégrer du texte lisible dans les images ?',
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mes images générées dans le cloud sont-elles privées ?',
-            a: 'Cela dépend du service. Certaines offres gratuites (dont celle d’Ideogram) publient les générations dans une galerie publique par défaut. Vérifiez les conditions de confidentialité actuelles de chaque service avant de générer quoi que ce soit de sensible — la génération locale reste privée par défaut, puisque rien ne quitte votre machine. Pour les données professionnelles sensibles (financières, médicales, juridiques), la CNIL recommande de privilégier un traitement local lorsque c’est possible.',
+            a: 'Cela dépend du service. Certaines offres gratuites (dont celle d’Ideogram) peuvent publier les générations publiquement par défaut. Vérifiez les conditions de confidentialité actuelles de chaque service avant de générer quoi que ce soit de sensible — la génération locale reste privée par défaut, puisque rien ne quitte votre machine. Pour les données professionnelles sensibles (financières, médicales, juridiques), la CNIL recommande de privilégier un traitement local lorsque c’est possible.',
           },
           {
             q: 'Puis-je éditer mes propres photos avec ces outils ?',
@@ -1602,7 +1602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Local ou cloud pour une petite entreprise ?',
-            a: 'Si vous générez moins de 200 images par mois et n’avez pas de GPU : le cloud — Adobe Firefly si la sécurité légale compte, getimg.ai pour la variété de modèles. Au-delà de ce volume, ou si la confidentialité client compte, un GPU d’occasion à 200 $ et Qwen-Image peuvent être rentabilisés en quelques mois.',
+            a: 'Si vous générez moins de 200 images par mois et n’avez pas de GPU : le cloud — Adobe Firefly si la sécurité légale compte, getimg.ai pour la variété de modèles. Au-delà de ce volume, ou si la confidentialité client compte, un GPU d’occasion et Qwen-Image peuvent valoir la peine ; comparez le coût total selon votre volume.',
           },
         ],
       },
@@ -1610,7 +1610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Le verdict',
         content:
-          'Optez pour le local si vous avez (ou comptez acheter) un GPU de 8 Go+, générez des images régulièrement, et voulez confidentialité, coût marginal nul et contrôle créatif total. Qwen-Image est la base la plus sûre — Apache 2.0, meilleur rendu de texte de sa catégorie — avec FLUX pour le photoréalisme (attention à la licence selon la variante) et SD 3.5 pour son écosystème de styles inégalé.\n\nOptez pour le cloud si vous voulez un résultat dans les cinq minutes, générez occasionnellement, ou n’avez pas de GPU. Adobe Firefly est le choix sûr et professionnel avec des données d’entraînement sûres commercialement ; getimg.ai est le pont pour ceux qui aiment l’idée des modèles ouverts sans vouloir les installer.\n\nEt si la vidéo est la prochaine étape — c’est une autre conversation matérielle. Lisez l’article compagnon : [Génération vidéo IA locale vs cloud](/fr/power-local-llm/local-ai-video-generation-vs-cloud).',
+          'Optez pour le local si vous avez (ou comptez acheter) un GPU de 8 Go+, générez des images régulièrement, et voulez confidentialité, coût marginal nul et contrôle créatif total. Qwen-Image est une base solide — Apache 2.0, rendu de texte solide — avec FLUX pour le photoréalisme (attention à la licence selon la variante) et SD 3.5 pour son riche écosystème de styles.\n\nOptez pour le cloud si vous voulez un résultat dans les cinq minutes, générez occasionnellement, ou n’avez pas de GPU. Adobe Firefly est le choix sûr et professionnel avec des données d’entraînement sûres commercialement ; getimg.ai est le pont pour ceux qui aiment l’idée des modèles ouverts sans vouloir les installer.\n\nEt si la vidéo est la prochaine étape — c’est une autre conversation matérielle. Lisez l’article compagnon : [Génération vidéo IA locale vs cloud](/fr/power-local-llm/local-ai-video-generation-vs-cloud).',
       },
       sources: {
         id: 'sources',
@@ -1640,7 +1640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon) — comparatif de plateformes pour l’inférence locale.',
           '[Prompts système vs prompts utilisateur](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — fondamentaux de structuration de prompts transposables au prompting d’image.',
           '[Le prompt engineering pour les modèles locaux](/fr/local-llms/prompt-engineering-for-local-models) — techniques de prompting structuré.',
-          '[Test de Modly](/fr/power-local-llm/modly-review) — une application de bureau qui transforme une image ou un prompt texte en maillage 3D avec des modèles open source sur votre propre GPU, un pas au-delà de la génération d\'images 2D.',
+          '[Test de Modly](/fr/power-local-llm/modly-review) — une application de bureau qui transforme une image ou un prompt texte en maillage 3D avec des modèles IA téléchargeables (licences variables selon le modèle) sur votre propre GPU, un pas au-delà de la génération d\'images 2D.',
         ],
       },
     },
@@ -1689,12 +1689,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**8GB以上のGPUを持つほとんどの人にとって、Qwen-Imageが最も安全なローカル入門モデルです** — Apache 2.0、収益上限なし、地域制限なし、そしてオープンモデルの中で最も強力な画像内テキスト描画性能を持ちます。**FLUX.1 schnellは最速かつ軽量(同じくApache 2.0)ですが、FLUX.1/2 devとKontextは商用利用にBlack Forest Labsの有料ライセンスが必要です** — オープンウェイトだからといって、これらのバリアントが商用無料というわけではありません。**Stable Diffusion 3.5はLoRAとスタイルのエコシステムが最も豊富ですが、年間収益100万ドルまでという商用無料の上限があります。** GPUを持っていない場合や、クライアント案件で商用利用が安全な学習データの保証が必要な場合は、Adobe Fireflyのようなクラウドサービスの方が実用的です。',
+      '**8GB以上のGPUを持つほとんどの人にとって、Qwen-Imageは有力なローカル入門モデルです** — Apache 2.0、収益上限なし、地域制限なし、そして優れた画像内テキスト描画性能を持ちます。**FLUX.1 schnellは最速かつ軽量(同じくApache 2.0)ですが、FLUX.1/2 devとKontextはモデルを商用で利用するにはBlack Forest Labsの有料ライセンスが必要です** — オープンウェイトだからといって、これらのバリアントが商用無料というわけではありません。**Stable Diffusion 3.5はLoRAとスタイルのエコシステムが最も豊富ですが、年間収益100万ドルまでという商用無料の上限があります。** GPUを持っていない場合や、クライアント案件で商用利用が安全な学習データの保証が必要な場合は、Adobe Fireflyのようなクラウドサービスの方が実用的です。',
     quickAnswerTop: {
       ja: {
         question: 'AI画像はローカルとクラウドのどちらで生成すべきですか?',
         answer:
-          '8GB以上のGPUがあり、無制限で$0の生成を望むならローカル生成がおすすめです — Qwen-Image(Apache 2.0、制限なし、最高のテキスト描画)またはFLUX.1 schnell(Apache 2.0、最速)が最も安全な入門選択肢です。GPUがない場合、クライアント案件で商用利用が安全な学習データが必要な場合、あるいはセットアップなしで5分以内に結果が欲しい場合はクラウドサービスを使いましょう。',
+          '8GB以上のGPUがあり、無制限で$0の生成を望むならローカル生成がおすすめです — Qwen-Image(Apache 2.0、優れたテキスト描画)またはFLUX.1 schnell(Apache 2.0、高速)が無難な入門選択肢です。GPUがない場合、クライアント案件で商用利用が安全な学習データが必要な場合、あるいはセットアップなしで5分以内に結果が欲しい場合はクラウドサービスを使いましょう。',
         bullets: [
           '8 GB未満のVRAM → クラウドサービスが現実的な選択です。ただし画像は動画よりはるかに少ないハードウェアで済みます。',
           '8 GB VRAM → FLUX.1 schnell、Stable Diffusion 3.5、SDXL、Qwen-Image(GGUF量子化版) — ローカルの選択肢のほとんどがすでに動作します。',
@@ -1731,19 +1731,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Qwen-Imageはライセンス制限が一切なく、テキスト描画も最高水準の、唯一のトップクラスのローカル画像モデルです。** Apache 2.0、収益上限なし、地域除外なし — 画像内の読みやすく正しいスペルのテキスト描画ではローカル最強です。',
-          '**FLUXのライセンスはバリアントごとに異なります。** FLUX.1 schnellはApache 2.0(商用利用に制限なし)。FLUX.1/2 devとKontextはBlack Forest Labsの非商用ライセンスを採用しており、商用利用には有料ライセンスが必要です。',
+          '**Qwen-Imageは、寛容なApache 2.0ライセンスで提供される、テキスト描画にも優れたトップクラスのローカル画像モデルです。** 収益上限なし、地域除外なし — 画像内の読みやすく正しいスペルのテキスト描画に強い、有力なローカルの選択肢です。',
+          '**FLUXのライセンスはバリアントごとに異なります。** FLUX.1 schnellはApache 2.0(商用利用に制限なし)。FLUX.1/2 devとKontextはBlack Forest Labsの非商用ライセンスを採用しており、モデル自体の商用利用には有料ライセンスが必要ですが、FLUX.1 [dev]のライセンス本文では、生成した出力の商用利用は条件付きで認められています。',
           '**Stable Diffusion 3.5はローカルのエコシステムが最も深い**(LoRA、ControlNet、チュートリアル)ものの、コミュニティライセンスにより商用無料利用は年間収益100万ドルまでという上限があります。',
           '**8GBのVRAMでローカルの選択肢のほとんどがカバーできます。** 画像は動画よりはるかに少ないハードウェアで済みます — 動画生成に苦戦するGPUでも、多くの画像モデルは快適に動きます。',
-          '**Adobe Fireflyとgetimg.aiは、アフィリエイトプログラムが実際に存在する2つのクラウドサービスです。** MidjourneyとChatGPTにはプログラムがないため、価値に関係なくこの記事はそれらを推奨しても収益を得られません。',
-          '**プライバシーにタダ飯はありません。** Ideogramの無料プランは画像を公開ギャラリーに掲載します。ローカル生成はデフォルトでプライベートです。',
+          '**PromptQuorumは、この記事に登場するいずれのサービスともアフィリエイト関係はありません。** すべてのリンクは報酬を生まない通常の参照リンクで、サービスの価値とは無関係です。',
+          '**プライバシーにタダ飯はありません。** Ideogramなど一部の無料プランでは画像が公開される場合があります（最新の規約を確認してください）。ローカル生成はデフォルトでプライベートです。',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: '2026年がローカル画像の本命年になった理由',
         content:
-          'オープンな画像モデルは追いつき、一部のカテゴリではむしろ先行しています。HiDream-O1は、2026年5月にMITライセンスで公開された8Bモデルで、Artificial Analysisのtext-to-imageアリーナにおいて、はるかに大きい競合モデルのごく一部のサイズでトップクラスのオープンウェイトモデルにランクインしました。AlibabaのQwen-Imageは、多くのクラウドツールよりも読みやすいテキストを画像内に描画します。そして編集モデル — Qwen-Image-EditやFLUX Kontext — は、既存の写真の中のオブジェクト、背景、テキストを平易な言葉の指示だけで、ローカルで無料に変更できるようになりました。\n\nクラウド側にも2026年ならではの動きがあります。市場は数社の本格的なプレイヤーに集約され、入門価格は月額$8〜10の水準まで下がり、商用利用に安全な学習データはビジネスユーザーにとって実際の差別化要因になりました。どちらの扉も本当に良い選択肢です。問題はどちらが自分に合うかです — そして動画とは違い、画像のハードウェアのハードルは十分に低く、ローカルの扉ははるかに多くの人にとって現実的です。',
+          'オープンな画像モデルは追いつき、一部のカテゴリではむしろ先行しています。HiDream-O1は、2026年5月にMITライセンスで公開された8Bモデルで、Artificial Analysisのtext-to-imageアリーナにおいて、はるかに大きい競合モデルのごく一部のサイズでトップクラスのオープンウェイトモデルにランクインしました。AlibabaのQwen-Imageは、読みやすいテキストを画像内にうまく描画します。そして編集モデル — Qwen-Image-EditやFLUX Kontext — は、既存の写真の中のオブジェクト、背景、テキストを平易な言葉の指示だけで、ローカルで無料に変更できるようになりました。\n\nクラウド側にも2026年ならではの動きがあります。市場は数社の本格的なプレイヤーに集約され、入門価格は月額$8〜10の水準まで下がり、商用利用に安全な学習データはビジネスユーザーにとって実際の差別化要因になりました。どちらの扉も本当に良い選択肢です。問題はどちらが自分に合うかです — そして動画とは違い、画像のハードウェアのハードルは十分に低く、ローカルの扉ははるかに多くの人にとって現実的です。',
       },
       localModels: {
         id: 'local-models',
@@ -1751,14 +1751,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '3つとも、自分のマシン上でComfyUI(または類似のローカルインターフェース)を通じて動作します。動画生成の記事と同様に、これらは拡散モデルであってLLMではないため、Ollamaでは動作しません。',
         snippetBlocks: [
-          { type: 'one-sentence', text: '2026年に最も安全で万能なローカル画像モデルはQwen-Imageです — Apache 2.0、最高のテキスト描画、制限なし。一方FLUXは写実性で勝り(バリアントによるライセンスの注意点あり)、Stable Diffusion 3.5はエコシステムの深さで勝ります。' },
-          { type: 'plain-terms', text: 'ひとつだけ答えが欲しいなら:8GB以上のGPUを用意してQwen-Imageを動かしましょう。ライセンスの細則はゼロで、オープンモデルの中で最高のテキスト描画性能を持ちます。' },
+          { type: 'one-sentence', text: '2026年の有力で万能なローカル画像モデルのひとつがQwen-Imageです — Apache 2.0、優れたテキスト描画。一方FLUXは写実性で勝り(バリアントによるライセンスの注意点あり)、Stable Diffusion 3.5はエコシステムの深さで勝ります。' },
+          { type: 'plain-terms', text: 'ひとつだけ答えが欲しいなら:8GB以上のGPUを用意してQwen-Imageを動かしましょう。寛容なApache 2.0ライセンスで、テキスト描画性能にも優れています。' },
         ],
         columns: ['ファミリー', 'ライセンス', 'VRAM', '際立った特徴'],
         rows: [
           { 'ファミリー': 'FLUX(Black Forest Labs)', 'ライセンス': '分割型 — schnellはApache 2.0、dev/Kontextは有料ライセンスなしでは非商用', 'VRAM': '8GB(schnell)〜24GB(FLUX.2 dev)', '際立った特徴': '写実性のベンチマーク。Kontextはローカル編集の首位' },
           { 'ファミリー': 'Stable Diffusion 3.5 + SDXL(Stability AI)', 'ライセンス': 'Stability コミュニティライセンス — 収益100万ドル未満なら無料', 'VRAM': '8〜12GB', '際立った特徴': 'ローカルLoRA/ControlNetエコシステムが最も深い' },
-          { 'ファミリー': 'Qwen-Image(Alibaba)', 'ライセンス': 'Apache 2.0 — 制限なし', 'VRAM': '8GB(GGUF)〜24GB(フル精度)', '際立った特徴': '画像内の読みやすいテキスト描画でクラス最高' },
+          { 'ファミリー': 'Qwen-Image(Alibaba)', 'ライセンス': 'Apache 2.0 — 寛容', 'VRAM': '8GB(GGUF)〜24GB(フル精度)', '際立った特徴': '画像内の読みやすいテキスト描画に強い' },
         ],
         note:
           'これらのモデルは必ず下記の公式リポジトリからダウンロードしてください — サードパーティの「無料ダウンロード」サイトは、何が仕込まれているか分からない状態でモデルを再パッケージしています。',
@@ -1767,7 +1767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'flux',
         title: 'FLUX(Black Forest Labs) — 写実性のベンチマーク、ただしライセンスは階層式',
         content:
-          'FLUXファミリーは、本格的なローカル画像制作のデフォルトです。FLUX.2 [dev](32B)は写実性と高解像度で先行し、最大10枚の参照画像を組み合わせながらキャラクター・製品・スタイルの一貫性を保ちます。FLUX.1 [schnell]はわずか8GBのVRAMで1〜4ステップの高品質画像を生成します。FLUX.1 Kontextは既存画像の編集でローカル首位です。\n\n**ライセンス — ここは注意深く読んでください。ファミリー内でライセンスが分かれています。** FLUX.1 [schnell]はApache 2.0で、商用利用を含め制限がありません。FLUX.1/2 [dev]とKontextはBlack Forest Labsの非商用ライセンスを採用しており、商用製品での実行にはBFLからの有料ライセンスが必要です。ここでは「オープンウェイト」は「商用OK」を意味しません。\n\nハードウェア:8GB(schnell)、12〜16GB(dev/Kontext)、24GB(FLUX.2 dev、GGUF Q4)。',
+          'FLUXファミリーは、本格的なローカル画像制作のデフォルトです。FLUX.2 [dev](32B)は写実性と高解像度で先行し、最大10枚の参照画像を組み合わせながらキャラクター・製品・スタイルの一貫性を保ちます。FLUX.1 [schnell]はわずか8GBのVRAMで1〜4ステップの高品質画像を生成します。FLUX.1 Kontextは既存画像の編集でローカル首位です。\n\n**ライセンス — ここは注意深く読んでください。ファミリー内でライセンスが分かれています。** FLUX.1 [schnell]はApache 2.0で、商用利用を含め制限がありません。FLUX.1/2 [dev]とKontextはBlack Forest Labsの非商用ライセンスを採用しており、モデル自体を商用製品やサービスで使うにはBFLからの有料ライセンスが必要です。FLUX.1 [dev]については、ライセンス本文（v1.1.1）が、条件（コンテンツフィルタリングまたは確認、法令で求められる場合のAI利用の表示）を満たせば、生成した出力を商用を含むあらゆる目的に使えると別途定めています。FLUX.2 [dev]とKontextのライセンスはご自身でお読みください。ここでは「オープンウェイト」は「商用OK」を意味しません。\n\nハードウェア:8GB(schnell)、12〜16GB(dev/Kontext)、24GB(FLUX.2 dev、GGUF Q4)。',
         affiliateLinks: [
           { url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell', productName: 'FLUX.1 schnell on Hugging Face', productCategory: 'image-model', label: 'FLUX.1 schnell on Hugging Face' },
           { url: 'https://huggingface.co/black-forest-labs/FLUX.2-dev', productName: 'FLUX.2 dev on Hugging Face', productCategory: 'image-model', label: 'FLUX.2 dev on Hugging Face' },
@@ -1784,9 +1784,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwenImage: {
         id: 'qwen-image',
-        title: 'Qwen-Image(Alibaba) — 本当に無料で、テキスト描画の王者',
+        title: 'Qwen-Image(Alibaba) — Apache 2.0でテキスト描画に強い',
         content:
-          'AlibabaはQwen-Image(20B)を2025年8月にApache 2.0でオープンソース化しました — 収益しきい値なし、非商用条項なし、地域による制限もありません。その得意分野は、ほとんどのモデルがいまだ苦手とするもの — 複数言語での、読みやすく正しいスペルの画像内テキストです。ポスター、看板、インフォグラフィック、見出し付きのサムネイル、これらにうってつけのモデルです。\n\nおまけ:Qwen-Image-Editは既存写真に対して、プロンプトベースの精密な編集を行えます — オブジェクトの色を変える、背景を差し替える、テキストを直す — その他はそのまま保持しながらです。\n\nハードウェア:8GB(GGUF量子化)〜24GB(フル精度)。ライセンス:Apache 2.0 — 細則が一切ない唯一のトップクラス画像モデルです。',
+          'AlibabaはQwen-Image(20B)を2025年8月にApache 2.0でオープンソース化しました — 収益しきい値なし、非商用条項なし、地域による制限もありません。その得意分野は、ほとんどのモデルがいまだ苦手とするもの — 複数言語での、読みやすく正しいスペルの画像内テキストです。ポスター、看板、インフォグラフィック、見出し付きのサムネイル、これらにうってつけのモデルです。\n\nおまけ:Qwen-Image-Editは既存写真に対して、プロンプトベースの精密な編集を行えます — オブジェクトの色を変える、背景を差し替える、テキストを直す — その他はそのまま保持しながらです。\n\nハードウェア:8GB(GGUF量子化)〜24GB(フル精度)。ライセンス:Apache 2.0 — 寛容ですが、商用利用の前にライセンス本文をお読みください。',
         affiliateLinks: [
           { url: 'https://huggingface.co/Qwen/Qwen-Image', productName: 'Qwen-Image on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image on Hugging Face' },
           { url: 'https://huggingface.co/Qwen/Qwen-Image-Edit', productName: 'Qwen-Image-Edit on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image-Edit on Hugging Face' },
@@ -1845,7 +1845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'adobe-firefly',
         title: 'Adobe Firefly — 商用利用で安全な選択肢',
         content:
-          'FireflyはAdobe Stockとオープンにライセンスされたコンテンツで学習されています — つまりAdobeは、ビジネスユーザーが著作権リスクを引き継がないよう設計しました — そしてPhotoshopをはじめとするCreative Cloudと直接統合されています。クライアント案件やブランドの安全性が気になるなら、これがクラウドの扉です。無料トライアルがあり、支払い前に試せます。有料プランはStandardティアで月額$9.99から、2,000のジェネレーティブクレジットが付きます。向いている人:プロフェッショナル、代理店、クライアントから「これは法的に安全か?」と聞かれる立場の人。',
+          'FireflyはAdobe Stockとオープンにライセンスされたコンテンツで学習されています — Adobeによれば、これはビジネスユーザーの著作権リスクを減らすことを意図しています — そしてPhotoshopをはじめとするCreative Cloudと直接統合されています。クライアント案件やブランドの安全性が気になるなら、これがクラウドの扉です。無料トライアルがあり、支払い前に試せます。有料プランはStandardティアで月額$9.99から、2,000のジェネレーティブクレジットが付きます。向いている人:プロフェッショナル、代理店、クライアントから「これは法的に安全か?」と聞かれる立場の人。',
         blockquote:
           '**商用利用で安全なクラウドの選択肢を試したいですか?** GPUがない、あるいはローカルモデルを管理したくない場合は、ローカル環境の構築に踏み切る前にAdobe Fireflyを試してみてください。[Adobe Fireflyを試す →](https://firefly.adobe.com/)',
         affiliateLinks: [
@@ -1856,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'getimg-ai',
         title: 'getimg.ai — ローカルモデルのクラウド版',
         content:
-          'ここが、ほとんどの比較記事が見落としているひねりです。getimg.aiは、ローカルにインストールするのと同じオープンモデル — FLUXなど、1つのインターフェースに20以上のモデル — を、あなたのGPUではなく彼らのGPUで動かします。セットアップ不要、VRAMの計算不要、すべてのプランに商用利用権が含まれます。ローカルの扉に魅力を感じつつ、自分のハードウェアがそれを許さないなら、これが橋渡しになります。料金は2026年初頭以降は有料のみです(無料プランは廃止されました) — 年払いで月額$8から(月払いなら月額$10)、3,000クレジット付き。上位ティアはそこからスケールアップします。向いている人:ローカルに興味はあるがGPUがないユーザー、そしてComfyUIの学習曲線なしにオープンモデルの多様性を求める人。\n\n(番外編:Ideogram — 画像内テキストのクラウドリーダーで、公開ギャラリーに画像が掲載される限定的な無料プランがあり、有料プランは月額約$20からです。)',
+          'ここが、ほとんどの比較記事が見落としているひねりです。getimg.aiは、ローカルにインストールするのと同じオープンモデル — FLUXなど、1つのインターフェースに20以上のモデル — を、あなたのGPUではなく彼らのGPUで動かします。セットアップ不要、VRAMの計算不要、すべてのプランに商用利用権が含まれます。ローカルの扉に魅力を感じつつ、自分のハードウェアがそれを許さないなら、これが橋渡しになります。料金は2026年初頭以降は有料のみです(無料プランは廃止されました) — 年払いで月額$8から(月払いなら月額$10)、3,000クレジット付き。上位ティアはそこからスケールアップします。向いている人:ローカルに興味はあるがGPUがないユーザー、そしてComfyUIの学習曲線なしにオープンモデルの多様性を求める人。\n\n(番外編:Ideogram — 画像内テキストのクラウドリーダーで、生成画像が公開される場合がある（最新の規約をご確認ください）限定的な無料プランがあり、有料プランは月額約$20からです。)',
         blockquote:
           '**GPUを持たずにローカルモデルを使いたいですか?** getimg.aiなら、ComfyUIのインストールもVRAM要件もなしに、FLUXなどのオープンモデルをクラウド経由で利用できます。[getimg.aiを試す →](https://getimg.ai/)',
         affiliateLinks: [
@@ -1908,7 +1908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '無料プランがあるクラウド画像ツールはどれですか?',
-            a: 'Adobe Fireflyは無料トライアルを提供しています(正確なクレジット付与量は変動するため、最新情報はfirefly.adobe.comで確認してください)。Ideogramは、画像が公開ギャラリーに掲載される限定的な無料プランを提供しています。getimg.aiは2026年初頭に無料プランを廃止し、現在は年払いで月額$8からの有料のみです。',
+            a: 'Adobe Fireflyは無料トライアルを提供しています(正確なクレジット付与量は変動するため、最新情報はfirefly.adobe.comで確認してください)。Ideogramは限定的な無料プランを提供しています。画像が公開されるかどうかは最新の規約をご確認ください。getimg.aiは2026年初頭に無料プランを廃止し、現在は年払いで月額$8からの有料のみです。',
           },
           {
             q: 'AIモデルは画像内に読みやすいテキストを入れられますか?',
@@ -1916,7 +1916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'クラウドで生成した画像はプライベートですか?',
-            a: 'サービスによります。一部の無料プラン(Ideogramを含む)は、デフォルトで生成物を公開ギャラリーに掲載します。機密性の高いものを生成する前に、各サービスの最新のプライバシー規約を確認してください。ローカル生成は何もマシンの外に出ないため、デフォルトでプライベートです。',
+            a: 'サービスによります。一部の無料プラン(Ideogramを含む)は、デフォルトで生成物を公開する場合があります。機密性の高いものを生成する前に、各サービスの最新のプライバシー規約を確認してください。ローカル生成は何もマシンの外に出ないため、デフォルトでプライベートです。',
           },
           {
             q: 'これらのツールで自分の写真を編集できますか?',
@@ -1928,7 +1928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '中小企業にはローカルとクラウドのどちらが向いていますか?',
-            a: '月に約200枚未満の画像しか生成せず、GPUも持っていないなら:クラウドがおすすめです。法的な安全性が重要ならAdobe Firefly、モデルの多様性が欲しいならgetimg.ai。それ以上の量、あるいはクライアントの機密性が重要な場合は、$200程度の中古GPUとQwen-Imageが数か月で元を取れる可能性があります。',
+            a: '月に約200枚未満の画像しか生成せず、GPUも持っていないなら:クラウドがおすすめです。法的な安全性が重要ならAdobe Firefly、モデルの多様性が欲しいならgetimg.ai。それ以上の量、あるいはクライアントの機密性が重要な場合は、中古GPUとQwen-Imageを検討する価値があります。ご自身の生成量に合わせて総コストを比較してください。',
           },
         ],
       },
@@ -1936,7 +1936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          '8GB以上のGPUを持っている(または購入予定)、定期的に画像を生成する、プライバシー・限界費用$0・完全なクリエイティブコントロールを求めるなら、ローカルへ。Qwen-Imageが最も安全な土台です — Apache 2.0、クラス最高のテキスト描画 — 写実性ならFLUX(バリアントごとのライセンスの違いに注意)、比類のないスタイルエコシステムならSD 3.5です。\n\n5分以内に結果が欲しい、たまにしか生成しない、あるいはGPUがないなら、クラウドへ。Adobe Fireflyは商用利用に安全な学習データを備えた、安全でプロフェッショナルな選択肢です。getimg.aiは、オープンモデルという発想は好きだがインストールはしたくない人のための橋渡しです。\n\nそして次に動画を検討しているなら、それはまったく別のハードウェアの話です。姉妹記事もあわせてお読みください:[ローカルAI動画生成 対 クラウド](/ja/power-local-llm/local-ai-video-generation-vs-cloud)。',
+          '8GB以上のGPUを持っている(または購入予定)、定期的に画像を生成する、プライバシー・限界費用$0・完全なクリエイティブコントロールを求めるなら、ローカルへ。Qwen-Imageは堅実な土台です — Apache 2.0、優れたテキスト描画 — 写実性ならFLUX(バリアントごとのライセンスの違いに注意)、豊富なスタイルエコシステムならSD 3.5です。\n\n5分以内に結果が欲しい、たまにしか生成しない、あるいはGPUがないなら、クラウドへ。Adobe Fireflyは商用利用に安全な学習データを備えた、安全でプロフェッショナルな選択肢です。getimg.aiは、オープンモデルという発想は好きだがインストールはしたくない人のための橋渡しです。\n\nそして次に動画を検討しているなら、それはまったく別のハードウェアの話です。姉妹記事もあわせてお読みください:[ローカルAI動画生成 対 クラウド](/ja/power-local-llm/local-ai-video-generation-vs-cloud)。',
       },
       sources: {
         id: 'sources',
@@ -1966,7 +1966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU対CPU対Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon) — ローカル推論のプラットフォーム比較。',
           '[システムプロンプト対ユーザープロンプト](/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 画像プロンプトにもそのまま応用できるプロンプト構造化の基礎。',
           '[ローカルモデル向けプロンプトエンジニアリング](/ja/local-llms/prompt-engineering-for-local-models) — 構造化されたプロンプト技法。',
-          '[Modlyレビュー](/ja/power-local-llm/modly-review) — 画像またはテキストプロンプトから、ご自身のGPU上のオープンソースモデルで3Dメッシュを生成するデスクトップアプリ。2D画像生成の先にあるステップです。',
+          '[Modlyレビュー](/ja/power-local-llm/modly-review) — 画像またはテキストプロンプトから、ご自身のGPU上でダウンロード可能なAIモデル（ライセンスはモデルごとに異なります）で3Dメッシュを生成するデスクトップアプリ。2D画像生成の先にあるステップです。',
         ],
       },
     },
@@ -2015,12 +2015,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**GPU가 8GB 이상인 대부분의 사용자에게는 Qwen-Image가 가장 안전한 로컬 시작점입니다** — Apache 2.0 라이선스이며, 매출 상한이나 지역 제한이 없고, 오픈 모델 중 이미지 내 텍스트 렌더링 성능이 가장 뛰어납니다. **FLUX.1 schnell은 가장 빠르고 가벼우며(역시 Apache 2.0), FLUX.1/2 dev와 Kontext는 상업적 용도로 사용하려면 Black Forest Labs의 유료 라이선스가 필요합니다** — 이러한 변형 모델에서는 오픈 웨이트가 곧 상업적으로 무료라는 의미는 아닙니다. **Stable Diffusion 3.5는 LoRA 및 스타일 생태계가 가장 방대하지만, 무료 상업적 이용은 연간 매출 100만 달러까지로 제한됩니다.** GPU가 없거나 클라이언트 작업에 상업적으로 안전한 학습 데이터 보장이 필요하다면, Adobe Firefly와 같은 클라우드 서비스가 더 실용적인 선택입니다.',
+      '**GPU가 8GB 이상인 대부분의 사용자에게는 Qwen-Image가 좋은 로컬 시작점입니다** — Apache 2.0 라이선스이며, 매출 상한이나 지역 제한이 없고, 이미지 내 텍스트 렌더링 성능이 뛰어납니다. **FLUX.1 schnell은 가장 빠르고 가벼우며(역시 Apache 2.0), FLUX.1/2 dev와 Kontext는 모델을 상업적으로 사용하려면 Black Forest Labs의 유료 라이선스가 필요합니다** — 이러한 변형 모델에서는 오픈 웨이트가 곧 상업적으로 무료라는 의미는 아닙니다. **Stable Diffusion 3.5는 LoRA 및 스타일 생태계가 가장 방대하지만, 무료 상업적 이용은 연간 매출 100만 달러까지로 제한됩니다.** GPU가 없거나 클라이언트 작업에 상업적으로 안전한 학습 데이터 보장이 필요하다면, Adobe Firefly와 같은 클라우드 서비스가 더 실용적인 선택입니다.',
     quickAnswerTop: {
       ko: {
         question: 'AI 이미지를 로컬에서 생성해야 할까요, 클라우드 서비스를 이용해야 할까요?',
         answer:
-          'GPU가 8GB 이상이고 무제한으로 $0 비용의 이미지 생성을 원한다면 로컬에서 생성하십시오 — Qwen-Image(Apache 2.0, 제한 없음, 최고의 텍스트 렌더링)나 FLUX.1 schnell(Apache 2.0, 가장 빠름)이 가장 안전한 시작점입니다. GPU가 없거나, 클라이언트 작업을 위한 상업적으로 안전한 학습 데이터가 필요하거나, 설정 없이 5분 안에 결과물을 원한다면 클라우드 서비스를 이용하십시오.',
+          'GPU가 8GB 이상이고 무제한으로 $0 비용의 이미지 생성을 원한다면 로컬에서 생성하십시오 — Qwen-Image(Apache 2.0, 뛰어난 텍스트 렌더링)나 FLUX.1 schnell(Apache 2.0, 빠름)이 무난한 시작점입니다. GPU가 없거나, 클라이언트 작업을 위한 상업적으로 안전한 학습 데이터가 필요하거나, 설정 없이 5분 안에 결과물을 원한다면 클라우드 서비스를 이용하십시오.',
         bullets: [
           'VRAM 8GB 미만 → 클라우드 서비스가 실용적인 선택입니다. 다만 이미지는 영상보다 훨씬 적은 하드웨어를 필요로 합니다.',
           'VRAM 8GB → FLUX.1 schnell, Stable Diffusion 3.5, SDXL, Qwen-Image(GGUF 양자화) — 로컬 메뉴 대부분이 이미 이 사양에서 실행됩니다.',
@@ -2057,19 +2057,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Qwen-Image는 라이선스 제한이 전혀 없으면서 최고의 텍스트 렌더링을 갖춘 유일한 최상위 로컬 이미지 모델입니다.** Apache 2.0 라이선스로 매출 상한도, 지역 제외도 없습니다 — 이미지 안에서 읽을 수 있고 철자가 정확한 텍스트를 렌더링하는 데 있어 로컬 모델 중 선두주자입니다.',
-          "**FLUX의 라이선스는 변형 모델별로 다릅니다.** FLUX.1 schnell은 Apache 2.0(상업적 이용 제한 없음)이며, FLUX.1/2 dev와 Kontext는 Black Forest Labs의 비상업적 라이선스를 사용합니다 — 상업적으로 이용하려면 유료 라이선스가 필요합니다.",
+          '**Qwen-Image는 관대한 Apache 2.0 라이선스로 제공되며 텍스트 렌더링이 뛰어난 최상위 로컬 이미지 모델입니다.** 매출 상한도, 지역 제외도 없습니다 — 이미지 안에서 읽을 수 있고 철자가 정확한 텍스트를 렌더링하는 데 있어 유력한 로컬 선택지입니다.',
+          "**FLUX의 라이선스는 변형 모델별로 다릅니다.** FLUX.1 schnell은 Apache 2.0(상업적 이용 제한 없음)이며, FLUX.1/2 dev와 Kontext는 Black Forest Labs의 비상업적 라이선스를 사용합니다 — 모델 자체를 상업적으로 이용하려면 유료 라이선스가 필요하지만, FLUX.1 [dev] 라이선스 본문은 조건부로 생성 결과물의 상업적 이용을 허용합니다.",
           '**Stable Diffusion 3.5는 가장 방대한 로컬 생태계**(LoRA, ControlNet, 튜토리얼)를 갖추고 있지만, Community License는 무료 상업적 이용을 연간 매출 100만 달러까지로 제한합니다.',
           '**VRAM 8GB로 로컬 메뉴 대부분을 실행할 수 있습니다.** 이미지는 영상보다 훨씬 적은 하드웨어를 필요로 합니다 — 영상 생성에서 버거워하는 GPU도 대부분의 이미지 모델은 무리 없이 처리합니다.',
-          '**Adobe Firefly와 getimg.ai는 현재 제휴 프로그램을 운영하는 두 클라우드 서비스입니다.** Midjourney와 ChatGPT는 제휴 프로그램이 없으므로, 이 글은 두 서비스의 우수성과 무관하게 이들을 추천해도 수익을 얻을 수 없습니다.',
-          '**프라이버시에는 공짜가 없습니다.** Ideogram의 무료 티어는 생성한 이미지를 공개 갤러리에 게시합니다. 반면 로컬 생성은 기본적으로 비공개입니다.',
+          '**PromptQuorum은 이 글에 나오는 어떤 서비스와도 제휴 관계가 없습니다.** 모든 링크는 수수료를 발생시키지 않는 일반 참고 링크이며, 서비스의 우수성과는 무관합니다.',
+          '**프라이버시에는 공짜가 없습니다.** Ideogram 같은 일부 무료 티어는 생성한 이미지를 공개할 수 있습니다(최신 약관을 확인하십시오). 반면 로컬 생성은 기본적으로 비공개입니다.',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: '2026년이 로컬 이미지의 전환점이 된 이유',
         content:
-          '오픈 이미지 모델은 격차를 좁혔을 뿐 아니라, 일부 영역에서는 앞서 나가고 있습니다. 2026년 5월 MIT 라이선스로 공개된 80억 파라미터 모델 HiDream-O1은 Artificial Analysis의 text-to-image 아레나에서 자신보다 훨씬 큰 경쟁 모델들을 상대로 최상위 오픈 웨이트 모델 반열에 올랐습니다. Alibaba의 Qwen-Image는 대부분의 클라우드 도구보다 이미지 안의 텍스트를 더 정확하게 읽을 수 있게 렌더링합니다. 그리고 Qwen-Image-Edit, FLUX Kontext와 같은 편집 모델은 이제 평범한 언어로 된 지시만으로 기존 사진 속 객체, 배경, 텍스트를 로컬에서 무료로 바꿀 수 있습니다.\n\n클라우드 쪽에도 2026년 나름의 이야기가 있습니다. 시장은 소수의 진지한 경쟁자들 중심으로 재편되었고, 진입 가격은 월 $8-10 수준까지 낮아졌으며, 상업적으로 안전한 학습 데이터는 비즈니스 사용자에게 실질적인 차별화 요소가 되었습니다. 두 선택지 모두 실제로 훌륭합니다. 문제는 어느 쪽이 당신에게 맞느냐입니다 — 그리고 영상과 달리, 이미지의 하드웨어 기준은 훨씬 낮아서 로컬이라는 선택지가 훨씬 더 많은 사람에게 현실적입니다.',
+          '오픈 이미지 모델은 격차를 좁혔을 뿐 아니라, 일부 영역에서는 앞서 나가고 있습니다. 2026년 5월 MIT 라이선스로 공개된 80억 파라미터 모델 HiDream-O1은 Artificial Analysis의 text-to-image 아레나에서 자신보다 훨씬 큰 경쟁 모델들을 상대로 최상위 오픈 웨이트 모델 반열에 올랐습니다. Alibaba의 Qwen-Image는 이미지 안의 텍스트를 읽기 쉽게 잘 렌더링합니다. 그리고 Qwen-Image-Edit, FLUX Kontext와 같은 편집 모델은 이제 평범한 언어로 된 지시만으로 기존 사진 속 객체, 배경, 텍스트를 로컬에서 무료로 바꿀 수 있습니다.\n\n클라우드 쪽에도 2026년 나름의 이야기가 있습니다. 시장은 소수의 진지한 경쟁자들 중심으로 재편되었고, 진입 가격은 월 $8-10 수준까지 낮아졌으며, 상업적으로 안전한 학습 데이터는 비즈니스 사용자에게 실질적인 차별화 요소가 되었습니다. 두 선택지 모두 실제로 훌륭합니다. 문제는 어느 쪽이 당신에게 맞느냐입니다 — 그리고 영상과 달리, 이미지의 하드웨어 기준은 훨씬 낮아서 로컬이라는 선택지가 훨씬 더 많은 사람에게 현실적입니다.',
       },
       localModels: {
         id: 'local-models',
@@ -2077,14 +2077,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '세 모델 모두 ComfyUI(또는 유사한 로컬 인터페이스)를 통해 자신의 컴퓨터에서 실행됩니다. 영상 생성과 마찬가지로, 이들은 LLM이 아니라 디퓨전 모델입니다 — Ollama에서는 실행되지 않습니다.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen-Image는 2026년 가장 안전한 전천후 로컬 이미지 모델입니다 — Apache 2.0, 최고의 텍스트 렌더링, 제한 없음 — 반면 FLUX는 (변형별 라이선스 유의 사항이 있지만) 사실적 이미지 품질에서, Stable Diffusion 3.5는 생태계의 깊이에서 앞섭니다.' },
-          { type: 'plain-terms', text: '한 가지 답만 원한다면: GPU 8GB 이상을 확보하고 Qwen-Image를 실행하십시오. 라이선스 세부 조항이 전혀 없고, 오픈 모델 중 텍스트 렌더링이 가장 뛰어납니다.' },
+          { type: 'one-sentence', text: 'Qwen-Image는 2026년 유력한 전천후 로컬 이미지 모델입니다 — Apache 2.0, 뛰어난 텍스트 렌더링 — 반면 FLUX는 (변형별 라이선스 유의 사항이 있지만) 사실적 이미지 품질에서, Stable Diffusion 3.5는 생태계의 깊이에서 앞섭니다.' },
+          { type: 'plain-terms', text: '한 가지 답만 원한다면: GPU 8GB 이상을 확보하고 Qwen-Image를 실행하십시오. 관대한 Apache 2.0 라이선스를 사용하며 텍스트 렌더링이 뛰어납니다.' },
         ],
         columns: ['계열', '라이선스', 'VRAM', '주요 특징'],
         rows: [
           { '계열': 'FLUX(Black Forest Labs)', '라이선스': '분리형 — schnell은 Apache 2.0, dev/Kontext는 유료 라이선스 없이는 비상업적', 'VRAM': '8GB(schnell)~24GB(FLUX.2 dev)', '주요 특징': '사실적 이미지 품질의 기준; Kontext는 로컬 편집을 선도' },
           { '계열': 'Stable Diffusion 3.5 + SDXL(Stability AI)', '라이선스': 'Stability Community License — 매출 100만 달러 미만은 무료', 'VRAM': '8–12GB', '주요 특징': '가장 방대한 로컬 LoRA/ControlNet 생태계' },
-          { '계열': 'Qwen-Image(Alibaba)', '라이선스': 'Apache 2.0 — 제한 없음', 'VRAM': '8GB(GGUF)~24GB(풀 정밀도)', '주요 특징': '이미지 내 텍스트 렌더링 최상급' },
+          { '계열': 'Qwen-Image(Alibaba)', '라이선스': 'Apache 2.0 — 관대함', 'VRAM': '8GB(GGUF)~24GB(풀 정밀도)', '주요 특징': '이미지 내 텍스트 렌더링에 강점' },
         ],
         note:
           "이러한 모델은 반드시 아래에 링크된 공식 저장소에서만 다운로드하십시오 — 서드파티 '무료 다운로드' 사이트는 무엇이 들어 있는지 알 수 없는 방식으로 모델을 재포장해서 배포합니다.",
@@ -2093,7 +2093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'flux',
         title: 'FLUX(Black Forest Labs) — 사실적 이미지 품질의 기준, 등급별 라이선스',
         content:
-          "FLUX 계열은 진지한 로컬 이미지 작업의 기본 선택지입니다. FLUX.2 [dev](320억 파라미터)는 최대 10장의 참조 이미지를 결합하면서도 캐릭터, 제품, 스타일의 일관성을 유지해, 사실적 이미지 품질과 고해상도에서 선두를 달립니다. FLUX.1 [schnell]은 VRAM 8GB만으로도 1–4단계 만에 고품질 이미지를 생성합니다. FLUX.1 Kontext는 기존 이미지를 편집하는 로컬 모델 중 선두주자입니다.\n\n**라이선스 — 이 부분은 주의 깊게 읽으십시오: 계열 전체가 나뉘어 있습니다.** FLUX.1 [schnell]은 Apache 2.0으로, 상업적 이용을 포함해 제한이 없습니다. FLUX.1/2 [dev]와 Kontext는 Black Forest Labs의 비상업적 라이선스를 사용합니다 — 이를 상업용 제품에 적용하려면 BFL로부터 유료 라이선스를 취득해야 합니다. 여기서 '오픈 웨이트'는 '상업적으로 문제없음'을 의미하지 않습니다.\n\n하드웨어: 8GB(schnell), 12–16GB(dev/Kontext), 24GB(FLUX.2 dev, GGUF Q4).",
+          "FLUX 계열은 진지한 로컬 이미지 작업의 기본 선택지입니다. FLUX.2 [dev](320억 파라미터)는 최대 10장의 참조 이미지를 결합하면서도 캐릭터, 제품, 스타일의 일관성을 유지해, 사실적 이미지 품질과 고해상도에서 선두를 달립니다. FLUX.1 [schnell]은 VRAM 8GB만으로도 1–4단계 만에 고품질 이미지를 생성합니다. FLUX.1 Kontext는 기존 이미지를 편집하는 로컬 모델 중 선두주자입니다.\n\n**라이선스 — 이 부분은 주의 깊게 읽으십시오: 계열 전체가 나뉘어 있습니다.** FLUX.1 [schnell]은 Apache 2.0으로, 상업적 이용을 포함해 제한이 없습니다. FLUX.1/2 [dev]와 Kontext는 Black Forest Labs의 비상업적 라이선스를 사용합니다 — 모델 자체를 상업용 제품이나 서비스에 사용하려면 BFL로부터 유료 라이선스를 취득해야 합니다. FLUX.1 [dev]의 경우 라이선스 본문(v1.1.1)은 조건(콘텐츠 필터링 또는 검토, 법적으로 요구되는 경우 AI 사용 표시)을 충족하면 생성 결과물을 상업적 목적을 포함해 어떤 목적으로든 사용할 수 있다고 별도로 규정합니다. FLUX.2 [dev]와 Kontext의 라이선스는 직접 확인하십시오. 여기서 '오픈 웨이트'는 '상업적으로 문제없음'을 의미하지 않습니다.\n\n하드웨어: 8GB(schnell), 12–16GB(dev/Kontext), 24GB(FLUX.2 dev, GGUF Q4).",
         affiliateLinks: [
           { url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell', productName: 'FLUX.1 schnell on Hugging Face', productCategory: 'image-model', label: 'FLUX.1 schnell on Hugging Face' },
           { url: 'https://huggingface.co/black-forest-labs/FLUX.2-dev', productName: 'FLUX.2 dev on Hugging Face', productCategory: 'image-model', label: 'FLUX.2 dev on Hugging Face' },
@@ -2110,9 +2110,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwenImage: {
         id: 'qwen-image',
-        title: 'Qwen-Image(Alibaba) — 진짜 무료이며 텍스트 렌더링의 왕',
+        title: 'Qwen-Image(Alibaba) — Apache 2.0 라이선스에 텍스트 렌더링이 강점',
         content:
-          'Alibaba는 2025년 8월 Qwen-Image(200억 파라미터)를 Apache 2.0 라이선스로 오픈소스화했습니다 — 매출 기준도, 비상업적 조항도, 지역 제한 장치도 없습니다. 이 모델의 특기는 대부분의 모델이 여전히 어려워하는 부분입니다: 이미지 안에서 여러 언어로 읽을 수 있고 철자가 정확한 텍스트입니다. 포스터, 표지판, 인포그래픽, 헤드라인이 들어간 썸네일 — 바로 이 모델이 적합합니다.\n\n보너스: Qwen-Image-Edit은 기존 사진에 정밀한 프롬프트 기반 편집을 수행합니다 — 객체의 색상을 바꾸거나, 배경을 교체하거나, 텍스트를 수정하면서도 나머지는 그대로 보존합니다.\n\n하드웨어: 8GB(GGUF 양자화)~24GB(풀 정밀도). 라이선스: Apache 2.0 — 세부 조항이 전혀 없는 유일한 최상위 이미지 모델입니다.',
+          'Alibaba는 2025년 8월 Qwen-Image(200억 파라미터)를 Apache 2.0 라이선스로 오픈소스화했습니다 — 매출 기준도, 비상업적 조항도, 지역 제한 장치도 없습니다. 이 모델의 특기는 대부분의 모델이 여전히 어려워하는 부분입니다: 이미지 안에서 여러 언어로 읽을 수 있고 철자가 정확한 텍스트입니다. 포스터, 표지판, 인포그래픽, 헤드라인이 들어간 썸네일 — 바로 이 모델이 적합합니다.\n\n보너스: Qwen-Image-Edit은 기존 사진에 정밀한 프롬프트 기반 편집을 수행합니다 — 객체의 색상을 바꾸거나, 배경을 교체하거나, 텍스트를 수정하면서도 나머지는 그대로 보존합니다.\n\n하드웨어: 8GB(GGUF 양자화)~24GB(풀 정밀도). 라이선스: Apache 2.0 — 관대하지만 상업적 이용 전에 라이선스 본문을 확인하십시오.',
         affiliateLinks: [
           { url: 'https://huggingface.co/Qwen/Qwen-Image', productName: 'Qwen-Image on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image on Hugging Face' },
           { url: 'https://huggingface.co/Qwen/Qwen-Image-Edit', productName: 'Qwen-Image-Edit on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image-Edit on Hugging Face' },
@@ -2171,7 +2171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'adobe-firefly',
         title: 'Adobe Firefly — 상업적으로 안전한 선택',
         content:
-          "Firefly는 Adobe Stock과 공개적으로 라이선스된 콘텐츠로 학습되었습니다 — 즉 Adobe는 비즈니스 사용자가 저작권 위험을 떠안지 않도록 설계했습니다 — 그리고 Photoshop을 비롯한 Creative Cloud 전반과 직접 통합됩니다. 클라이언트 작업이나 브랜드 안전성이 걱정이라면, 이것이 클라우드의 문입니다. 결제 전 테스트할 수 있는 무료 체험판이 있으며, 유료 플랜은 월 $9.99부터 시작해 2,000 생성 크레딧(Standard 등급)을 제공합니다. 적합한 대상: 전문가, 에이전시, 클라이언트로부터 '이거 법적으로 안전한가요?'라는 질문을 받는 모든 사람.",
+          "Firefly는 Adobe Stock과 공개적으로 라이선스된 콘텐츠로 학습되었습니다 — Adobe에 따르면 이는 비즈니스 사용자의 저작권 위험을 줄이기 위한 것입니다 — 그리고 Photoshop을 비롯한 Creative Cloud 전반과 직접 통합됩니다. 클라이언트 작업이나 브랜드 안전성이 걱정이라면, 이것이 클라우드의 문입니다. 결제 전 테스트할 수 있는 무료 체험판이 있으며, 유료 플랜은 월 $9.99부터 시작해 2,000 생성 크레딧(Standard 등급)을 제공합니다. 적합한 대상: 전문가, 에이전시, 클라이언트로부터 '이거 법적으로 안전한가요?'라는 질문을 받는 모든 사람.",
         blockquote:
           '**상업적으로 안전한 클라우드 옵션을 시도해 보고 싶으십니까?** GPU가 없거나 로컬 모델 관리를 원하지 않는다면, 로컬 설정을 시작하기 전에 Adobe Firefly를 먼저 사용해 보십시오. [Adobe Firefly 사용해 보기 →](https://firefly.adobe.com/)',
         affiliateLinks: [
@@ -2182,7 +2182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'getimg-ai',
         title: 'getimg.ai — 로컬 모델의 클라우드 버전',
         content:
-          '대부분의 비교 글이 놓치는 반전은 이것입니다: getimg.ai는 로컬에 설치할 법한 것과 동일한 오픈 모델 — FLUX를 비롯해 하나의 인터페이스에서 20개 이상의 모델 — 을 사용자의 GPU가 아니라 자체 GPU에서 실행합니다. 설정도, VRAM 계산도 필요 없으며, 모든 플랜에 상업적 이용 권한이 포함됩니다. 로컬이라는 문이 끌리지만 하드웨어가 뒷받침되지 않는다면, 이것이 그 다리입니다. 요금제는 2026년 초부터 유료 전용입니다(무료 티어는 종료되었습니다) — Entry 등급은 연간 결제 시 월 $8(월간 결제 시 월 $10)로 3,000 크레딧을 제공하며, 상위 등급은 그 이상으로 확장됩니다. 적합한 대상: GPU 없이 로컬을 궁금해하는 사용자, ComfyUI 학습 곡선 없이 다양한 오픈 모델을 원하는 모든 사람.\n\n(추가로 언급할 만한 서비스: Ideogram — 이미지 내 텍스트 분야의 클라우드 선두주자로, 생성 이미지를 공개 갤러리에 게시하는 제한적인 무료 티어와 월 약 $20부터 시작하는 유료 플랜을 제공합니다.)',
+          '대부분의 비교 글이 놓치는 반전은 이것입니다: getimg.ai는 로컬에 설치할 법한 것과 동일한 오픈 모델 — FLUX를 비롯해 하나의 인터페이스에서 20개 이상의 모델 — 을 사용자의 GPU가 아니라 자체 GPU에서 실행합니다. 설정도, VRAM 계산도 필요 없으며, 모든 플랜에 상업적 이용 권한이 포함됩니다. 로컬이라는 문이 끌리지만 하드웨어가 뒷받침되지 않는다면, 이것이 그 다리입니다. 요금제는 2026년 초부터 유료 전용입니다(무료 티어는 종료되었습니다) — Entry 등급은 연간 결제 시 월 $8(월간 결제 시 월 $10)로 3,000 크레딧을 제공하며, 상위 등급은 그 이상으로 확장됩니다. 적합한 대상: GPU 없이 로컬을 궁금해하는 사용자, ComfyUI 학습 곡선 없이 다양한 오픈 모델을 원하는 모든 사람.\n\n(추가로 언급할 만한 서비스: Ideogram — 이미지 내 텍스트 분야의 클라우드 선두주자로, 생성 이미지가 공개될 수 있는(최신 약관 확인 필요) 제한적인 무료 티어와 월 약 $20부터 시작하는 유료 플랜을 제공합니다.)',
         blockquote:
           '**GPU 없이 로컬 모델을 이용하고 싶으십니까?** getimg.ai는 ComfyUI 설치나 VRAM 요구사항 없이 클라우드를 통해 FLUX와 같은 오픈 모델에 접근할 수 있게 해줍니다. [getimg.ai 사용해 보기 →](https://getimg.ai/)',
         affiliateLinks: [
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '무료 티어를 제공하는 클라우드 이미지 도구는 무엇입니까?',
-            a: 'Adobe Firefly는 무료 체험판을 제공합니다(정확한 크레딧 한도는 달라지므로 최신 수치는 firefly.adobe.com에서 확인하십시오). Ideogram은 생성 이미지를 공개 갤러리에 게시하는 제한적인 무료 티어를 제공합니다. getimg.ai는 2026년 초 무료 티어를 종료했습니다 — 현재는 연간 결제 기준 월 $8부터 시작하는 유료 전용입니다.',
+            a: 'Adobe Firefly는 무료 체험판을 제공합니다(정확한 크레딧 한도는 달라지므로 최신 수치는 firefly.adobe.com에서 확인하십시오). Ideogram은 제한적인 무료 티어를 제공합니다. 이미지가 공개되는지는 최신 약관을 확인하십시오. getimg.ai는 2026년 초 무료 티어를 종료했습니다 — 현재는 연간 결제 기준 월 $8부터 시작하는 유료 전용입니다.',
           },
           {
             q: 'AI 모델이 이미지 안에 읽을 수 있는 텍스트를 넣을 수 있습니까?',
@@ -2242,7 +2242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '클라우드에서 생성한 이미지는 비공개로 유지됩니까?',
-            a: '서비스에 따라 다릅니다. 일부 무료 티어(Ideogram 포함)는 기본적으로 생성 결과물을 공개 갤러리에 게시합니다. 민감한 이미지를 생성하기 전에 각 서비스의 최신 프라이버시 약관을 반드시 확인하십시오 — 로컬 생성은 아무것도 내 컴퓨터를 벗어나지 않으므로 기본적으로 비공개입니다.',
+            a: '서비스에 따라 다릅니다. 일부 무료 티어(Ideogram 포함)는 기본적으로 생성 결과물을 공개할 수 있습니다. 민감한 이미지를 생성하기 전에 각 서비스의 최신 프라이버시 약관을 반드시 확인하십시오 — 로컬 생성은 아무것도 내 컴퓨터를 벗어나지 않으므로 기본적으로 비공개입니다.',
           },
           {
             q: '이 도구들로 제 사진을 직접 편집할 수 있습니까?',
@@ -2254,7 +2254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '소규모 사업체에는 로컬과 클라우드 중 무엇이 적합합니까?',
-            a: '한 달에 대략 200장 미만의 이미지를 생성하고 GPU가 없다면: 클라우드를 이용하십시오 — 법적 안전성이 중요하다면 Adobe Firefly, 모델 선택의 폭을 원한다면 getimg.ai. 그 이상의 물량이거나 클라이언트 기밀성이 중요하다면, $200짜리 중고 GPU와 Qwen-Image가 몇 달 안에 비용을 회수해 줄 수 있습니다.',
+            a: '한 달에 대략 200장 미만의 이미지를 생성하고 GPU가 없다면: 클라우드를 이용하십시오 — 법적 안전성이 중요하다면 Adobe Firefly, 모델 선택의 폭을 원한다면 getimg.ai. 그 이상의 물량이거나 클라이언트 기밀성이 중요하다면, 중고 GPU와 Qwen-Image를 검토할 만합니다. 자신의 생성량을 기준으로 총비용을 비교하십시오.',
           },
         ],
       },
@@ -2262,7 +2262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'GPU가 8GB 이상이거나(혹은 구매할 예정이거나), 이미지를 정기적으로 생성하며, 프라이버시와 한계 비용 $0, 완전한 창작 통제권을 원한다면 로컬을 선택하십시오. Qwen-Image가 가장 안전한 기반입니다 — Apache 2.0, 최상급 텍스트 렌더링 — 사실적 이미지 품질은 FLUX(변형별 라이선스 차이에 유의), 타의 추종을 불허하는 스타일 생태계는 SD 3.5가 담당합니다.\n\n5분 안에 결과물을 원하거나, 가끔씩만 생성하거나, GPU가 없다면 클라우드를 선택하십시오. Adobe Firefly는 상업적으로 안전한 학습 데이터를 갖춘 안전하고 전문적인 선택지이며, getimg.ai는 오픈 모델이라는 개념은 마음에 들지만 직접 설치하고 싶지는 않은 사람을 위한 다리입니다.\n\n다음으로 영상 생성이 궁금하시다면 — 그것은 전혀 다른 하드웨어 이야기입니다. 짝을 이루는 글을 읽어 보십시오: [로컬 AI 영상 생성 vs. 클라우드](/ko/power-local-llm/local-ai-video-generation-vs-cloud).',
+          'GPU가 8GB 이상이거나(혹은 구매할 예정이거나), 이미지를 정기적으로 생성하며, 프라이버시와 한계 비용 $0, 완전한 창작 통제권을 원한다면 로컬을 선택하십시오. Qwen-Image가 탄탄한 기반입니다 — Apache 2.0, 뛰어난 텍스트 렌더링 — 사실적 이미지 품질은 FLUX(변형별 라이선스 차이에 유의), 방대한 스타일 생태계는 SD 3.5가 담당합니다.\n\n5분 안에 결과물을 원하거나, 가끔씩만 생성하거나, GPU가 없다면 클라우드를 선택하십시오. Adobe Firefly는 상업적으로 안전한 학습 데이터를 갖춘 안전하고 전문적인 선택지이며, getimg.ai는 오픈 모델이라는 개념은 마음에 들지만 직접 설치하고 싶지는 않은 사람을 위한 다리입니다.\n\n다음으로 영상 생성이 궁금하시다면 — 그것은 전혀 다른 하드웨어 이야기입니다. 짝을 이루는 글을 읽어 보십시오: [로컬 AI 영상 생성 vs. 클라우드](/ko/power-local-llm/local-ai-video-generation-vs-cloud).',
       },
       sources: {
         id: 'sources',
@@ -2292,7 +2292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon) — 로컬 추론을 위한 플랫폼 비교.',
           '[시스템 프롬프트 vs. 사용자 프롬프트](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 이미지 프롬프트 작성에도 그대로 적용되는 프롬프트 구조화 기본 원리.',
           '[로컬 모델을 위한 프롬프트 엔지니어링](/ko/local-llms/prompt-engineering-for-local-models) — 구조화된 프롬프트 작성 기법.',
-          '[Modly 리뷰](/ko/power-local-llm/modly-review) — 이미지나 텍스트 프롬프트를 내 GPU의 오픈소스 모델로 3D 메시로 바꾸는 데스크톱 앱으로, 2D 이미지 생성 다음 단계입니다.',
+          '[Modly 리뷰](/ko/power-local-llm/modly-review) — 이미지나 텍스트 프롬프트를 내 GPU에서 내려받은 AI 모델(라이선스는 모델마다 다름)로 3D 메시로 바꾸는 데스크톱 앱으로, 2D 이미지 생성 다음 단계입니다.',
         ],
       },
     },
@@ -2341,12 +2341,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**Para a maioria das pessoas com uma GPU de 8GB+, o Qwen-Image é o ponto de partida local mais seguro** — Apache 2.0, sem limite de receita, sem restrições territoriais, e a melhor renderização de texto dentro da imagem entre os modelos abertos. **O FLUX.1 schnell é o mais rápido e leve (também Apache 2.0), enquanto o FLUX.1/2 dev e o Kontext exigem uma licença paga da Black Forest Labs para uso comercial** — pesos abertos não significa uso comercial gratuito para essas variantes. **O Stable Diffusion 3.5 tem o ecossistema de LoRA e estilos mais profundo, mas limita o uso comercial gratuito a $1 milhão de receita anual.** Se você não tem GPU, ou precisa de garantias de dados de treinamento comercialmente seguros para trabalho com clientes, um serviço em nuvem como o Adobe Firefly é a escolha mais prática.',
+      '**Para a maioria das pessoas com uma GPU de 8GB+, o Qwen-Image é um bom ponto de partida local** — Apache 2.0, sem limite de receita, sem restrições territoriais, e uma renderização de texto sólida dentro da imagem. **O FLUX.1 schnell é o mais rápido e leve (também Apache 2.0), enquanto o FLUX.1/2 dev e o Kontext exigem uma licença paga da Black Forest Labs para usar o modelo comercialmente** — pesos abertos não significa uso comercial gratuito para essas variantes. **O Stable Diffusion 3.5 tem o ecossistema de LoRA e estilos mais profundo, mas limita o uso comercial gratuito a $1 milhão de receita anual.** Se você não tem GPU, ou precisa de garantias de dados de treinamento comercialmente seguros para trabalho com clientes, um serviço em nuvem como o Adobe Firefly é a escolha mais prática.',
     quickAnswerTop: {
       pt: {
         question: 'Devo gerar imagens de IA localmente ou usar um serviço em nuvem?',
         answer:
-          'Gere localmente se você tem uma GPU de 8GB+ e quer gerações ilimitadas a $0 — Qwen-Image (Apache 2.0, sem restrições, melhor renderização de texto) ou FLUX.1 schnell (Apache 2.0, mais rápido) são os pontos de partida mais seguros. Use um serviço em nuvem se você não tem GPU, precisa de dados de treinamento comercialmente seguros para trabalho com clientes, ou quer resultados nos próximos cinco minutos sem nenhuma configuração.',
+          'Gere localmente se você tem uma GPU de 8GB+ e quer gerações ilimitadas a $0 — Qwen-Image (Apache 2.0, renderização de texto sólida) ou FLUX.1 schnell (Apache 2.0, rápido) são pontos de partida razoáveis. Use um serviço em nuvem se você não tem GPU, precisa de dados de treinamento comercialmente seguros para trabalho com clientes, ou quer resultados nos próximos cinco minutos sem nenhuma configuração.',
         bullets: [
           'Menos de 8 GB de VRAM → um serviço em nuvem é a escolha prática, embora imagens precisem de muito menos hardware que vídeo.',
           '8 GB de VRAM → FLUX.1 schnell, Stable Diffusion 3.5, SDXL ou Qwen-Image (quantizado em GGUF) — a maior parte do cardápio local já cabe.',
@@ -2383,19 +2383,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**O Qwen-Image é o único modelo local de imagem de ponta sem nenhuma restrição de licença e com a melhor renderização de texto.** Apache 2.0, sem limite de receita, sem exclusões territoriais — e o líder local em texto legível e corretamente escrito dentro das imagens.',
-          '**A licença do FLUX é dividida por variante.** O FLUX.1 schnell é Apache 2.0 (uso comercial irrestrito); o FLUX.1/2 dev e o Kontext usam a licença não comercial da Black Forest Labs — é necessária uma licença paga para usá-los comercialmente.',
+          '**O Qwen-Image é um modelo local de imagem de ponta sob a licença permissiva Apache 2.0, com renderização de texto sólida.** Sem limite de receita, sem exclusões territoriais — e uma opção local de destaque para texto legível e corretamente escrito dentro das imagens.',
+          '**A licença do FLUX é dividida por variante.** O FLUX.1 schnell é Apache 2.0 (uso comercial irrestrito); o FLUX.1/2 dev e o Kontext usam a licença não comercial da Black Forest Labs — usar o próprio modelo comercialmente exige uma licença paga, enquanto o texto da licença do FLUX.1 [dev] permite, sob condições, o uso comercial das saídas geradas.',
           '**O Stable Diffusion 3.5 tem o ecossistema local mais profundo** (LoRAs, ControlNets, tutoriais), mas sua Community License limita o uso comercial gratuito a $1 milhão de receita anual.',
           '**8GB de VRAM cobre a maior parte do cardápio local.** Imagens precisam de muito menos hardware que vídeo — uma GPU que sofre com geração de vídeo lida com a maioria dos modelos de imagem sem dificuldade.',
-          '**Adobe Firefly e getimg.ai são os dois serviços em nuvem com programas de afiliados ativos**; Midjourney e ChatGPT não têm nenhum, então este artigo não pode ganhar nada ao recomendá-los, independentemente do mérito.',
-          '**Não existe almoço grátis quando o assunto é privacidade.** O plano gratuito do Ideogram publica imagens em uma galeria pública; a geração local é privada por padrão.',
+          '**A PromptQuorum não tem nenhuma relação de afiliado com qualquer serviço deste artigo.** Todos os links são links de referência simples que não geram comissão, independentemente do mérito do serviço.',
+          '**Não existe almoço grátis quando o assunto é privacidade.** Alguns planos gratuitos, como o do Ideogram, podem tornar as imagens públicas (confira os termos atuais); a geração local é privada por padrão.',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: 'Por Que 2026 É o Ano em Que Imagens Locais Ficaram Sérias',
         content:
-          'Os modelos de imagem abertos alcançaram o mercado — e em algumas categorias, ultrapassaram. O HiDream-O1, um modelo de 8B lançado sob licença MIT em maio de 2026, ficou entre as principais entradas de pesos abertos na arena de texto-para-imagem da Artificial Analysis, com uma fração do tamanho de rivais maiores. O Qwen-Image, da Alibaba, renderiza texto legível dentro de imagens melhor do que a maioria das ferramentas em nuvem. E os modelos de edição — Qwen-Image-Edit, FLUX Kontext — agora alteram objetos, fundos e texto dentro de fotos existentes a partir de uma instrução em linguagem simples, localmente e de graça.\n\nO lado da nuvem tem sua própria história em 2026: o mercado se consolidou em torno de alguns players sérios, os preços de entrada caíram para a faixa de $8-10/mês, e dados de treinamento comercialmente seguros se tornaram um diferencial real para usuários corporativos. As duas portas são genuinamente boas. A questão é qual delas combina com você — e, diferente do vídeo, a barreira de hardware para imagens é baixa o suficiente para que a porta local seja realista para muito mais gente.',
+          'Os modelos de imagem abertos alcançaram o mercado — e em algumas categorias, ultrapassaram. O HiDream-O1, um modelo de 8B lançado sob licença MIT em maio de 2026, ficou entre as principais entradas de pesos abertos na arena de texto-para-imagem da Artificial Analysis, com uma fração do tamanho de rivais maiores. O Qwen-Image, da Alibaba, renderiza bem texto legível dentro de imagens. E os modelos de edição — Qwen-Image-Edit, FLUX Kontext — agora alteram objetos, fundos e texto dentro de fotos existentes a partir de uma instrução em linguagem simples, localmente e de graça.\n\nO lado da nuvem tem sua própria história em 2026: o mercado se consolidou em torno de alguns players sérios, os preços de entrada caíram para a faixa de $8-10/mês, e dados de treinamento comercialmente seguros se tornaram um diferencial real para usuários corporativos. As duas portas são genuinamente boas. A questão é qual delas combina com você — e, diferente do vídeo, a barreira de hardware para imagens é baixa o suficiente para que a porta local seja realista para muito mais gente.',
       },
       localModels: {
         id: 'local-models',
@@ -2403,14 +2403,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           'Os três rodam via ComfyUI (ou uma interface local similar) na sua própria máquina. Assim como na geração de vídeo: estes são modelos de difusão, não LLMs — eles não rodam no Ollama.',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'O Qwen-Image é o modelo local de imagem mais seguro em 2026 no geral — Apache 2.0, melhor renderização de texto, sem restrições — enquanto o FLUX vence em fotorrealismo (com ressalvas de licença por variante) e o Stable Diffusion 3.5 vence em profundidade de ecossistema.' },
-          { type: 'plain-terms', text: 'Se você só quer uma resposta: consiga uma GPU de 8GB+ e rode o Qwen-Image. Ele não tem letras miúdas de licença e tem a melhor renderização de texto entre os modelos abertos.' },
+          { type: 'one-sentence', text: 'O Qwen-Image é um modelo local de imagem sólido e versátil em 2026 — Apache 2.0, renderização de texto sólida — enquanto o FLUX vence em fotorrealismo (com ressalvas de licença por variante) e o Stable Diffusion 3.5 vence em profundidade de ecossistema.' },
+          { type: 'plain-terms', text: 'Se você só quer uma resposta: consiga uma GPU de 8GB+ e rode o Qwen-Image. Ele usa a licença permissiva Apache 2.0 e tem renderização de texto sólida.' },
         ],
         columns: ['Família', 'Licença', 'VRAM', 'Destaque'],
         rows: [
           { 'Família': 'FLUX (Black Forest Labs)', 'Licença': 'Dividida — schnell é Apache 2.0, dev/Kontext são não comerciais sem licença paga', 'VRAM': '8GB (schnell) a 24GB (FLUX.2 dev)', 'Destaque': 'Referência em fotorrealismo; Kontext lidera edição local' },
           { 'Família': 'Stable Diffusion 3.5 + SDXL (Stability AI)', 'Licença': 'Stability Community License — gratuita abaixo de $1M de receita', 'VRAM': '8–12GB', 'Destaque': 'Ecossistema local de LoRA/ControlNet mais profundo' },
-          { 'Família': 'Qwen-Image (Alibaba)', 'Licença': 'Apache 2.0 — irrestrita', 'VRAM': '8GB (GGUF) a 24GB (precisão total)', 'Destaque': 'Melhor da categoria em texto legível dentro das imagens' },
+          { 'Família': 'Qwen-Image (Alibaba)', 'Licença': 'Apache 2.0 — permissiva', 'VRAM': '8GB (GGUF) a 24GB (precisão total)', 'Destaque': 'Renderização sólida de texto legível dentro das imagens' },
         ],
         note:
           'Baixe qualquer um desses modelos apenas dos repositórios oficiais linkados abaixo — sites de "download grátis" de terceiros reempacotam modelos com sabe-se lá o quê dentro.',
@@ -2419,7 +2419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'flux',
         title: 'FLUX (Black Forest Labs) — a referência em fotorrealismo, com camadas de licença',
         content:
-          'A família FLUX é o padrão para trabalho local sério com imagens. O FLUX.2 [dev] (32B) lidera em fotorrealismo e alta resolução, combinando até 10 imagens de referência mantendo consistência de personagem, produto e estilo. O FLUX.1 [schnell] gera imagens de qualidade em 1–4 passos com apenas 8GB de VRAM. O FLUX.1 Kontext é o líder local em edição de imagens existentes.\n\n**Licença — leia esta parte com atenção: a família é dividida.** O FLUX.1 [schnell] é Apache 2.0 — irrestrito, incluindo uso comercial. O FLUX.1/2 [dev] e o Kontext usam a licença não comercial da Black Forest Labs — usá-los em um produto comercial exige uma licença paga da BFL. "Pesos abertos" não significa "uso comercial permitido" aqui.\n\nHardware: 8GB (schnell), 12–16GB (dev/Kontext), 24GB (FLUX.2 dev, GGUF Q4).',
+          'A família FLUX é o padrão para trabalho local sério com imagens. O FLUX.2 [dev] (32B) lidera em fotorrealismo e alta resolução, combinando até 10 imagens de referência mantendo consistência de personagem, produto e estilo. O FLUX.1 [schnell] gera imagens de qualidade em 1–4 passos com apenas 8GB de VRAM. O FLUX.1 Kontext é o líder local em edição de imagens existentes.\n\n**Licença — leia esta parte com atenção: a família é dividida.** O FLUX.1 [schnell] é Apache 2.0 — irrestrito, incluindo uso comercial. O FLUX.1/2 [dev] e o Kontext usam a licença não comercial da Black Forest Labs — usar o próprio modelo em um produto ou serviço comercial exige uma licença paga da BFL. Para o FLUX.1 [dev], o texto da licença (v1.1.1) permite ainda usar as saídas geradas para qualquer finalidade, inclusive comercial, se você cumprir suas condições (filtragem ou revisão de conteúdo, divulgação do uso de IA quando a lei exigir); leia você mesmo as licenças do FLUX.2 [dev] e do Kontext. "Pesos abertos" não significa "uso comercial permitido" aqui.\n\nHardware: 8GB (schnell), 12–16GB (dev/Kontext), 24GB (FLUX.2 dev, GGUF Q4).',
         affiliateLinks: [
           { url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell', productName: 'FLUX.1 schnell on Hugging Face', productCategory: 'image-model', label: 'FLUX.1 schnell on Hugging Face' },
           { url: 'https://huggingface.co/black-forest-labs/FLUX.2-dev', productName: 'FLUX.2 dev on Hugging Face', productCategory: 'image-model', label: 'FLUX.2 dev on Hugging Face' },
@@ -2436,9 +2436,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwenImage: {
         id: 'qwen-image',
-        title: 'Qwen-Image (Alibaba) — verdadeiramente gratuito, e o rei da renderização de texto',
+        title: 'Qwen-Image (Alibaba) — Apache 2.0 e forte em renderização de texto',
         content:
-          'A Alibaba abriu o código do Qwen-Image (20B) em agosto de 2025 sob Apache 2.0 — sem limites de receita, sem cláusulas não comerciais, sem jogos territoriais. Sua especialidade é algo em que a maioria dos modelos ainda falha: texto legível e corretamente escrito dentro da imagem, em vários idiomas. Pôsteres, placas, infográficos, thumbnails com títulos — este é o modelo.\n\nBônus: o Qwen-Image-Edit faz edições precisas e baseadas em prompt em fotos existentes — muda a cor de um objeto, troca um fundo, corrige texto — preservando tudo o mais.\n\nHardware: 8GB (quantizado em GGUF) a 24GB (precisão total). Licença: Apache 2.0 — o único modelo de imagem de ponta sem nenhuma letra miúda.',
+          'A Alibaba abriu o código do Qwen-Image (20B) em agosto de 2025 sob Apache 2.0 — sem limites de receita, sem cláusulas não comerciais, sem jogos territoriais. Sua especialidade é algo em que a maioria dos modelos ainda falha: texto legível e corretamente escrito dentro da imagem, em vários idiomas. Pôsteres, placas, infográficos, thumbnails com títulos — este é o modelo.\n\nBônus: o Qwen-Image-Edit faz edições precisas e baseadas em prompt em fotos existentes — muda a cor de um objeto, troca um fundo, corrige texto — preservando tudo o mais.\n\nHardware: 8GB (quantizado em GGUF) a 24GB (precisão total). Licença: Apache 2.0 — permissiva; ainda assim, leia o texto da licença antes do uso comercial.',
         affiliateLinks: [
           { url: 'https://huggingface.co/Qwen/Qwen-Image', productName: 'Qwen-Image on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image on Hugging Face' },
           { url: 'https://huggingface.co/Qwen/Qwen-Image-Edit', productName: 'Qwen-Image-Edit on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image-Edit on Hugging Face' },
@@ -2497,7 +2497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'adobe-firefly',
         title: 'Adobe Firefly — a escolha comercialmente segura',
         content:
-          'O Firefly é treinado com conteúdo do Adobe Stock e conteúdo licenciado abertamente — o que significa que a Adobe o projetou para que usuários corporativos não herdem risco de direitos autorais — e ele se integra diretamente com o Photoshop e o restante do Creative Cloud. Se trabalho com clientes ou segurança de marca é sua preocupação, esta é a porta da nuvem. Existe uma avaliação gratuita para testar antes de pagar; os planos pagos começam em $9,99/mês por 2.000 créditos generativos (plano Standard). Melhor para: profissionais, agências, qualquer um cujos clientes perguntem "isso é juridicamente seguro?"',
+          'O Firefly é treinado com conteúdo do Adobe Stock e conteúdo licenciado abertamente — o que, segundo a Adobe, visa reduzir o risco de direitos autorais para usuários corporativos — e ele se integra diretamente com o Photoshop e o restante do Creative Cloud. Se trabalho com clientes ou segurança de marca é sua preocupação, esta é a porta da nuvem. Existe uma avaliação gratuita para testar antes de pagar; os planos pagos começam em $9,99/mês por 2.000 créditos generativos (plano Standard). Melhor para: profissionais, agências, qualquer um cujos clientes perguntem "isso é juridicamente seguro?"',
         blockquote:
           '**Quer experimentar a opção de nuvem comercialmente segura?** Se você não tem uma GPU ou não quer gerenciar modelos locais, experimente o Adobe Firefly antes de se comprometer com uma configuração local. [Experimente o Adobe Firefly →](https://firefly.adobe.com/)',
         affiliateLinks: [
@@ -2508,7 +2508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'getimg-ai',
         title: 'getimg.ai — a versão em nuvem dos modelos locais',
         content:
-          'Aqui está a reviravolta que a maioria das comparações não percebe: o getimg.ai roda os mesmos modelos abertos que você instalaria localmente — FLUX e companhia, mais de 20 modelos em uma única interface — nas GPUs deles em vez das suas. Sem configuração, sem contas de VRAM, direitos comerciais incluídos em todos os planos. Se a porta local te atrai mas seu hardware diz não, esta é a ponte. Os preços são apenas pagos desde o início de 2026 (o plano gratuito foi descontinuado) — a partir de $8/mês na cobrança anual ($10/mês na cobrança mensal) por 3.000 créditos; planos superiores escalam a partir daí. Melhor para: usuários curiosos sobre o local mas sem GPU, e qualquer um que queira variedade de modelos abertos sem a curva de aprendizado do ComfyUI.\n\n(Menção honrosa: Ideogram — líder de nuvem em texto-em-imagem, com um plano gratuito limitado que publica imagens em uma galeria pública, e planos pagos a partir de cerca de $20/mês.)',
+          'Aqui está a reviravolta que a maioria das comparações não percebe: o getimg.ai roda os mesmos modelos abertos que você instalaria localmente — FLUX e companhia, mais de 20 modelos em uma única interface — nas GPUs deles em vez das suas. Sem configuração, sem contas de VRAM, direitos comerciais incluídos em todos os planos. Se a porta local te atrai mas seu hardware diz não, esta é a ponte. Os preços são apenas pagos desde o início de 2026 (o plano gratuito foi descontinuado) — a partir de $8/mês na cobrança anual ($10/mês na cobrança mensal) por 3.000 créditos; planos superiores escalam a partir daí. Melhor para: usuários curiosos sobre o local mas sem GPU, e qualquer um que queira variedade de modelos abertos sem a curva de aprendizado do ComfyUI.\n\n(Menção honrosa: Ideogram — líder de nuvem em texto-em-imagem, com um plano gratuito limitado cujas imagens podem ser públicas (confira os termos atuais), e planos pagos a partir de cerca de $20/mês.)',
         blockquote:
           '**Quer modelos locais sem ter a GPU?** O getimg.ai te dá acesso a modelos abertos como o FLUX pela nuvem, sem instalação do ComfyUI ou requisitos de VRAM. [Experimente o getimg.ai →](https://getimg.ai/)',
         affiliateLinks: [
@@ -2560,7 +2560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais ferramentas de imagem em nuvem têm plano gratuito?',
-            a: 'O Adobe Firefly oferece uma avaliação gratuita (o valor exato de créditos varia — confira em firefly.adobe.com o número atual). O Ideogram oferece um plano gratuito limitado, com imagens publicadas em uma galeria pública. O getimg.ai descontinuou seu plano gratuito no início de 2026 — é pago desde $8/mês na cobrança anual.',
+            a: 'O Adobe Firefly oferece uma avaliação gratuita (o valor exato de créditos varia — confira em firefly.adobe.com o número atual). O Ideogram oferece um plano gratuito limitado; confira os termos atuais para saber se as imagens são públicas. O getimg.ai descontinuou seu plano gratuito no início de 2026 — é pago desde $8/mês na cobrança anual.',
           },
           {
             q: 'Modelos de IA conseguem colocar texto legível dentro das imagens?',
@@ -2568,7 +2568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Minhas imagens geradas na nuvem são privadas?',
-            a: 'Depende do serviço. Alguns planos gratuitos (entre eles o do Ideogram) publicam as gerações em uma galeria pública por padrão. Verifique os termos de privacidade atuais de cada serviço antes de gerar qualquer coisa sensível — a geração local é privada por padrão, já que nada sai da sua máquina.',
+            a: 'Depende do serviço. Alguns planos gratuitos (entre eles o do Ideogram) podem publicar as gerações publicamente por padrão. Verifique os termos de privacidade atuais de cada serviço antes de gerar qualquer coisa sensível — a geração local é privada por padrão, já que nada sai da sua máquina.',
           },
           {
             q: 'Consigo editar minhas próprias fotos com essas ferramentas?',
@@ -2580,7 +2580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Local ou nuvem para uma pequena empresa?',
-            a: 'Se você gera menos de cerca de 200 imagens por mês e não tem GPU: nuvem — Adobe Firefly se a segurança jurídica importa, getimg.ai se você quer variedade de modelos. Acima desse volume, ou se a confidencialidade do cliente importa, uma GPU usada de cerca de $200 e o Qwen-Image podem se pagar em poucos meses.',
+            a: 'Se você gera menos de cerca de 200 imagens por mês e não tem GPU: nuvem — Adobe Firefly se a segurança jurídica importa, getimg.ai se você quer variedade de modelos. Acima desse volume, ou se a confidencialidade do cliente importa, uma GPU usada e o Qwen-Image podem valer a pena; compare o custo total para o seu volume.',
           },
         ],
       },
@@ -2588,7 +2588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'O Veredito',
         content:
-          'Vá para o local se você tem (ou vai comprar) uma GPU de 8GB+, gera imagens regularmente, e quer privacidade, custo marginal zero e controle criativo total. O Qwen-Image é a base mais segura — Apache 2.0, renderização de texto de ponta — com o FLUX para fotorrealismo (atenção à divisão de licença por variante) e o SD 3.5 pelo seu ecossistema de estilos incomparável.\n\nVá para a nuvem se você quer resultados nos próximos cinco minutos, gera ocasionalmente, ou não tem GPU. O Adobe Firefly é a escolha segura e profissional, com dados de treinamento comercialmente seguros; o getimg.ai é a ponte para quem gosta da ideia de modelos abertos, mas não da ideia de instalá-los.\n\nE se vídeo for o próximo item da sua lista — essa é uma conversa de hardware diferente. Leia o artigo complementar: [Geração Local de Vídeo com IA vs. Nuvem](/pt/power-local-llm/local-ai-video-generation-vs-cloud).',
+          'Vá para o local se você tem (ou vai comprar) uma GPU de 8GB+, gera imagens regularmente, e quer privacidade, custo marginal zero e controle criativo total. O Qwen-Image é uma base sólida — Apache 2.0, renderização de texto sólida — com o FLUX para fotorrealismo (atenção à divisão de licença por variante) e o SD 3.5 pelo seu amplo ecossistema de estilos.\n\nVá para a nuvem se você quer resultados nos próximos cinco minutos, gera ocasionalmente, ou não tem GPU. O Adobe Firefly é a escolha segura e profissional, com dados de treinamento comercialmente seguros; o getimg.ai é a ponte para quem gosta da ideia de modelos abertos, mas não da ideia de instalá-los.\n\nE se vídeo for o próximo item da sua lista — essa é uma conversa de hardware diferente. Leia o artigo complementar: [Geração Local de Vídeo com IA vs. Nuvem](/pt/power-local-llm/local-ai-video-generation-vs-cloud).',
       },
       sources: {
         id: 'sources',
@@ -2618,7 +2618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs CPU vs Apple Silicon](/pt/local-llms/gpu-vs-cpu-vs-apple-silicon) — comparação de plataformas para inferência local.',
           '[Prompts de Sistema vs. Prompts de Usuário](/pt/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — fundamentos de estruturação de prompt que se aplicam a prompts de imagem.',
           '[Engenharia de Prompt para Modelos Locais](/pt/local-llms/prompt-engineering-for-local-models) — técnicas de prompting estruturado.',
-          '[Análise do Modly](/pt/power-local-llm/modly-review) — um app de desktop que transforma uma imagem ou um prompt de texto em uma malha 3D com modelos de código aberto na sua própria GPU, um passo além da geração de imagens 2D.',
+          '[Análise do Modly](/pt/power-local-llm/modly-review) — um app de desktop que transforma uma imagem ou um prompt de texto em uma malha 3D com modelos de IA baixáveis (as licenças variam conforme o modelo) na sua própria GPU, um passo além da geração de imagens 2D.',
         ],
       },
     },
@@ -2667,12 +2667,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', '24 GB VRAM', 'RTX 3060', 'RTX 3090', 'RTX 4090'],
     leadAnswerBlock:
-      '**对大多数拥有8GB以上显存GPU的用户来说,Qwen-Image是最安全的本地入门选择**——Apache 2.0协议,没有营收上限,没有地区限制,而且是开放模型中图内文字渲染能力最强的。**FLUX.1 schnell速度最快、体积最轻(同样是Apache 2.0协议),而FLUX.1/2 dev和Kontext商用需要Black Forest Labs的付费许可**——开放权重不代表这些版本可以免费商用。**Stable Diffusion 3.5拥有最深厚的LoRA和风格生态,但免费商用的年营收上限为100万美元。**如果你没有GPU,或者客户工作需要商用安全的训练数据保证,Adobe Firefly这类云端服务是更实际的选择。',
+      '**对大多数拥有8GB以上显存GPU的用户来说,Qwen-Image是不错的本地入门选择**——Apache 2.0协议,没有营收上限,没有地区限制,而且图内文字渲染能力出色。**FLUX.1 schnell速度最快、体积最轻(同样是Apache 2.0协议),而FLUX.1/2 dev和Kontext商用该模型需要Black Forest Labs的付费许可**——开放权重不代表这些版本可以免费商用。**Stable Diffusion 3.5拥有最深厚的LoRA和风格生态,但免费商用的年营收上限为100万美元。**如果你没有GPU,或者客户工作需要商用安全的训练数据保证,Adobe Firefly这类云端服务是更实际的选择。',
     quickAnswerTop: {
       zh: {
         question: '我应该在本地生成AI图像,还是使用云端服务?',
         answer:
-          '如果你有8GB以上显存的GPU,并想要无限次的$0生成,就在本地生成——Qwen-Image(Apache 2.0协议,无限制,文字渲染最佳)或FLUX.1 schnell(Apache 2.0协议,速度最快)是最安全的入门选择。如果你没有GPU、客户工作需要商用安全的训练数据,或者希望五分钟内看到结果且无需任何配置,就使用云端服务。',
+          '如果你有8GB以上显存的GPU,并想要无限次的$0生成,就在本地生成——Qwen-Image(Apache 2.0协议,文字渲染出色)或FLUX.1 schnell(Apache 2.0协议,速度快)是合理的入门选择。如果你没有GPU、客户工作需要商用安全的训练数据,或者希望五分钟内看到结果且无需任何配置,就使用云端服务。',
         bullets: [
           '显存低于8GB → 云端服务是更实际的选择,不过图像所需的硬件远低于视频。',
           '8GB显存 → FLUX.1 schnell、Stable Diffusion 3.5、SDXL或Qwen-Image(GGUF量化版)——本地方案的大部分菜单已经能跑。',
@@ -2709,19 +2709,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Qwen-Image是唯一零许可限制且文字渲染最佳的顶级本地图像模型。**Apache 2.0协议,没有营收上限,没有地区限制——同时是图像内可读、拼写正确文字渲染方面的本地领先者。',
-          '**FLUX的许可因版本而异。**FLUX.1 schnell采用Apache 2.0协议(商用不受限制);FLUX.1/2 dev和Kontext采用Black Forest Labs的非商用许可——商用需要付费许可。',
+          '**Qwen-Image是采用宽松的Apache 2.0协议、文字渲染出色的顶级本地图像模型。**没有营收上限,没有地区限制——同时是图像内可读、拼写正确文字渲染方面的有力本地选择。',
+          '**FLUX的许可因版本而异。**FLUX.1 schnell采用Apache 2.0协议(商用不受限制);FLUX.1/2 dev和Kontext采用Black Forest Labs的非商用许可——商用模型本身需要付费许可,而FLUX.1 [dev]的许可文本在满足条件时允许商用生成的输出内容。',
           '**Stable Diffusion 3.5拥有最深厚的本地生态**(LoRA、ControlNet、教程),但其社区许可将免费商用的年营收上限设为100万美元。',
           '**8GB显存可覆盖本地方案的大部分菜单。**图像所需的硬件远低于视频——一块在视频生成上吃力的GPU,跑大多数图像模型完全没问题。',
-          '**Adobe Firefly和getimg.ai是两款拥有活跃联盟计划的云端服务**;Midjourney和ChatGPT都没有这类计划,因此无论产品优劣,本文都无法从推荐它们中获得任何收益。',
-          '**隐私上没有免费的午餐。**Ideogram的免费版会将图像发布到公开图库;本地生成默认是私密的。',
+          '**PromptQuorum与本文提到的任何服务都没有联盟推广关系。**所有链接均为不产生佣金的普通参考链接,与服务本身的优劣无关。',
+          '**隐私上没有免费的午餐。**Ideogram等部分免费版可能会公开图像(请查看当前条款);本地生成默认是私密的。',
         ],
       },
       marketContext: {
         id: 'market-context',
         title: '为什么2026年是本地图像认真崛起的一年',
         content:
-          '开放图像模型已经迎头赶上——在某些方面甚至反超。HiDream-O1是一款于2026年5月以MIT协议发布的80亿参数模型,在Artificial Analysis文生图竞技场中跻身顶尖开放权重模型之列,而体积仅为许多更大竞品的一小部分。阿里巴巴的Qwen-Image在图像内渲染可读文字方面优于大多数云端工具。而编辑类模型——Qwen-Image-Edit、FLUX Kontext——现在可以根据一句纯文本指令,在本地免费修改现有照片中的物体、背景和文字。\n\n云端这边也有自己的2026年故事:市场向少数几家实力玩家集中,入门价格降到每月$8-10区间,商用安全的训练数据成为面向企业用户的真实差异化优势。两条路都很不错。问题在于哪条路适合你——而且和视频不同,图像的硬件门槛低到让本地方案对更多人来说都切实可行。',
+          '开放图像模型已经迎头赶上——在某些方面甚至反超。HiDream-O1是一款于2026年5月以MIT协议发布的80亿参数模型,在Artificial Analysis文生图竞技场中跻身顶尖开放权重模型之列,而体积仅为许多更大竞品的一小部分。阿里巴巴的Qwen-Image在图像内渲染可读文字方面表现出色。而编辑类模型——Qwen-Image-Edit、FLUX Kontext——现在可以根据一句纯文本指令,在本地免费修改现有照片中的物体、背景和文字。\n\n云端这边也有自己的2026年故事:市场向少数几家实力玩家集中,入门价格降到每月$8-10区间,商用安全的训练数据成为面向企业用户的真实差异化优势。两条路都很不错。问题在于哪条路适合你——而且和视频不同,图像的硬件门槛低到让本地方案对更多人来说都切实可行。',
       },
       localModels: {
         id: 'local-models',
@@ -2729,14 +2729,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '这三大系列都通过ComfyUI(或类似的本地界面)在你自己的机器上运行。和视频生成一样:这些是扩散模型,不是LLM——它们不在Ollama中运行。',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen-Image是2026年最安全的全能本地图像模型——Apache 2.0协议、文字渲染最佳、无限制——而FLUX在写实度上领先(不同版本许可有别),Stable Diffusion 3.5则在生态深度上领先。' },
-          { type: 'plain-terms', text: '如果你只想要一个答案:准备一块8GB以上显存的GPU,运行Qwen-Image。它没有任何许可细则,且拥有开放模型中最好的文字渲染能力。' },
+          { type: 'one-sentence', text: 'Qwen-Image是2026年出色的全能本地图像模型——Apache 2.0协议、文字渲染出色——而FLUX在写实度上领先(不同版本许可有别),Stable Diffusion 3.5则在生态深度上领先。' },
+          { type: 'plain-terms', text: '如果你只想要一个答案:准备一块8GB以上显存的GPU,运行Qwen-Image。它采用宽松的Apache 2.0协议,文字渲染能力出色。' },
         ],
         columns: ['系列', '许可', '显存', '突出特点'],
         rows: [
           { '系列': 'FLUX(Black Forest Labs)', '许可': '因版本而异——schnell为Apache 2.0,dev/Kontext未获付费许可则为非商用', '显存': '8GB(schnell)至24GB(FLUX.2 dev)', '突出特点': '写实度基准领先;Kontext在本地编辑方面领先' },
           { '系列': 'Stable Diffusion 3.5 + SDXL(Stability AI)', '许可': 'Stability社区许可——年营收100万美元以下免费', '显存': '8–12GB', '突出特点': '最深厚的本地LoRA/ControlNet生态' },
-          { '系列': 'Qwen-Image(阿里巴巴)', '许可': 'Apache 2.0——无限制', '显存': '8GB(GGUF)至24GB(全精度)', '突出特点': '图像内可读文字业界领先' },
+          { '系列': 'Qwen-Image(阿里巴巴)', '许可': 'Apache 2.0——宽松', '显存': '8GB(GGUF)至24GB(全精度)', '突出特点': '图像内可读文字表现出色' },
         ],
         note:
           '请仅从下方链接的官方仓库下载这些模型——第三方"免费下载"网站可能会在模型中打包不明来源的内容。',
@@ -2745,7 +2745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'flux',
         title: 'FLUX(Black Forest Labs)——写实度基准,分层许可',
         content:
-          'FLUX系列是严肃本地图像创作的默认选择。FLUX.2 [dev](320亿参数)在写实度和高分辨率上领先,最多可结合10张参考图像,同时保持角色、产品和风格的一致性。FLUX.1 [schnell]仅需8GB显存,1–4步即可生成高质量图像。FLUX.1 Kontext是本地编辑现有图像的领先方案。\n\n**许可——请仔细阅读这部分:该系列的许可是分裂的。**FLUX.1 [schnell]采用Apache 2.0协议——不受限制,包含商用。FLUX.1/2 [dev]和Kontext采用Black Forest Labs的非商用许可——在商业产品中使用它们需要向BFL购买付费许可。在这里,"开放权重"不等于"可以商用"。\n\n硬件需求:8GB(schnell)、12–16GB(dev/Kontext)、24GB(FLUX.2 dev,GGUF Q4)。',
+          'FLUX系列是严肃本地图像创作的默认选择。FLUX.2 [dev](320亿参数)在写实度和高分辨率上领先,最多可结合10张参考图像,同时保持角色、产品和风格的一致性。FLUX.1 [schnell]仅需8GB显存,1–4步即可生成高质量图像。FLUX.1 Kontext是本地编辑现有图像的领先方案。\n\n**许可——请仔细阅读这部分:该系列的许可是分裂的。**FLUX.1 [schnell]采用Apache 2.0协议——不受限制,包含商用。FLUX.1/2 [dev]和Kontext采用Black Forest Labs的非商用许可——在商业产品或服务中使用模型本身需要向BFL购买付费许可。对于FLUX.1 [dev],许可文本(v1.1.1)另行规定:只要满足其条件(内容过滤或审核、在法律要求时标明AI生成),生成的输出内容可用于包括商用在内的任何目的。FLUX.2 [dev]和Kontext的许可请自行阅读。在这里,"开放权重"不等于"可以商用"。\n\n硬件需求:8GB(schnell)、12–16GB(dev/Kontext)、24GB(FLUX.2 dev,GGUF Q4)。',
         affiliateLinks: [
           { url: 'https://huggingface.co/black-forest-labs/FLUX.1-schnell', productName: 'FLUX.1 schnell on Hugging Face', productCategory: 'image-model', label: 'FLUX.1 schnell on Hugging Face' },
           { url: 'https://huggingface.co/black-forest-labs/FLUX.2-dev', productName: 'FLUX.2 dev on Hugging Face', productCategory: 'image-model', label: 'FLUX.2 dev on Hugging Face' },
@@ -2762,9 +2762,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwenImage: {
         id: 'qwen-image',
-        title: 'Qwen-Image(阿里巴巴)——真正免费,文字渲染之王',
+        title: 'Qwen-Image(阿里巴巴)——Apache 2.0协议,文字渲染出色',
         content:
-          '阿里巴巴于2025年8月以Apache 2.0协议开源了Qwen-Image(200亿参数)——没有营收门槛,没有非商用条款,没有地区限制的花招。它的专长是大多数模型仍然做不好的事:在图像中生成可读、拼写正确的多语言文字。海报、招牌、信息图、带标题的缩略图——都是它的强项。\n\n附加能力:Qwen-Image-Edit可对现有照片进行精确的、基于提示词的编辑——更改物体颜色、替换背景、修正文字——同时保留其余部分不变。\n\n硬件需求:8GB(GGUF量化版)至24GB(全精度)。许可:Apache 2.0——唯一没有任何细则条款的顶级图像模型。',
+          '阿里巴巴于2025年8月以Apache 2.0协议开源了Qwen-Image(200亿参数)——没有营收门槛,没有非商用条款,没有地区限制的花招。它的专长是大多数模型仍然做不好的事:在图像中生成可读、拼写正确的多语言文字。海报、招牌、信息图、带标题的缩略图——都是它的强项。\n\n附加能力:Qwen-Image-Edit可对现有照片进行精确的、基于提示词的编辑——更改物体颜色、替换背景、修正文字——同时保留其余部分不变。\n\n硬件需求:8GB(GGUF量化版)至24GB(全精度)。许可:Apache 2.0——宽松;商用前仍请阅读许可文本。',
         affiliateLinks: [
           { url: 'https://huggingface.co/Qwen/Qwen-Image', productName: 'Qwen-Image on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image on Hugging Face' },
           { url: 'https://huggingface.co/Qwen/Qwen-Image-Edit', productName: 'Qwen-Image-Edit on Hugging Face', productCategory: 'image-model', label: 'Qwen-Image-Edit on Hugging Face' },
@@ -2823,7 +2823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'adobe-firefly',
         title: 'Adobe Firefly——商用安全之选',
         content:
-          'Firefly基于Adobe Stock和公开授权内容训练——也就是说Adobe在设计上让商业用户不必承担版权风险——并且直接与Photoshop及Creative Cloud其余产品集成。如果你关心客户工作或品牌安全,这就是你的云端方案。付费前可先用免费试用测试;付费方案从每月$9.99起,提供2,000个生成积分(标准档)。适合对象:专业人士、代理机构,以及任何客户会问"这在法律上安全吗?"的人。',
+          'Firefly基于Adobe Stock和公开授权内容训练——据Adobe称,这旨在降低商业用户的版权风险——并且直接与Photoshop及Creative Cloud其余产品集成。如果你关心客户工作或品牌安全,这就是你的云端方案。付费前可先用免费试用测试;付费方案从每月$9.99起,提供2,000个生成积分(标准档)。适合对象:专业人士、代理机构,以及任何客户会问"这在法律上安全吗?"的人。',
         blockquote:
           '**想尝试商用安全的云端方案?**如果你没有GPU,或者不想管理本地模型,可以在投入本地配置之前先试试Adobe Firefly。[试用Adobe Firefly →](https://firefly.adobe.com/)',
         affiliateLinks: [
@@ -2834,7 +2834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'getimg-ai',
         title: 'getimg.ai——本地模型的云端版本',
         content:
-          '这是大多数对比文章都忽略的转折点:getimg.ai运行的正是你本可以在本地安装的那些开放模型——FLUX及其他,一个界面内20多个模型——只不过用的是他们的GPU,而不是你的。无需配置,无需计算显存,每个方案都包含商用权利。如果本地方案吸引你,但你的硬件说不行,这就是那座桥梁。自2026年初起定价为纯付费制(免费版已下线)——入门档年付每月$8起(月付为每月$10),提供3,000积分;更高档位随之扩展。适合对象:对本地方案感兴趣但没有GPU的用户,以及任何想要开放模型多样性又不想学ComfyUI的人。\n\n(荣誉提及:Ideogram——图像内文字生成方面的云端领先者,提供有限的免费版(会将图像发布到公开图库),付费方案约从每月$20起。)',
+          '这是大多数对比文章都忽略的转折点:getimg.ai运行的正是你本可以在本地安装的那些开放模型——FLUX及其他,一个界面内20多个模型——只不过用的是他们的GPU,而不是你的。无需配置,无需计算显存,每个方案都包含商用权利。如果本地方案吸引你,但你的硬件说不行,这就是那座桥梁。自2026年初起定价为纯付费制(免费版已下线)——入门档年付每月$8起(月付为每月$10),提供3,000积分;更高档位随之扩展。适合对象:对本地方案感兴趣但没有GPU的用户,以及任何想要开放模型多样性又不想学ComfyUI的人。\n\n(荣誉提及:Ideogram——图像内文字生成方面的云端领先者,提供有限的免费版(图像可能公开,请查看其当前条款),付费方案约从每月$20起。)',
         blockquote:
           '**想用本地模型又不想自己买GPU?**getimg.ai让你通过云端访问FLUX等开放模型,无需安装ComfyUI,也没有显存要求。[试用getimg.ai →](https://getimg.ai/)',
         affiliateLinks: [
@@ -2886,7 +2886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪些云端图像工具提供免费版?',
-            a: 'Adobe Firefly提供免费试用(具体积分额度会变动——请到firefly.adobe.com查看当前数字)。Ideogram提供有限的免费版,生成的图像会发布到公开图库。getimg.ai已于2026年初下线免费版——现为纯付费制,年付起价为每月$8。',
+            a: 'Adobe Firefly提供免费试用(具体积分额度会变动——请到firefly.adobe.com查看当前数字)。Ideogram提供有限的免费版;图像是否公开请查看其当前条款。getimg.ai已于2026年初下线免费版——现为纯付费制,年付起价为每月$8。',
           },
           {
             q: 'AI模型能在图像中生成可读文字吗?',
@@ -2894,7 +2894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我在云端生成的图像是私密的吗?',
-            a: '取决于所用服务。部分免费版(包括Ideogram)默认会将生成结果发布到公开图库。在生成任何敏感内容前,请查看各服务当前的隐私条款——本地生成默认是私密的,因为没有任何内容离开你的设备。',
+            a: '取决于所用服务。部分免费版(包括Ideogram)默认可能会公开生成结果。在生成任何敏感内容前,请查看各服务当前的隐私条款——本地生成默认是私密的,因为没有任何内容离开你的设备。',
           },
           {
             q: '我能用这些工具编辑自己的照片吗?',
@@ -2906,7 +2906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '小企业该选本地还是云端?',
-            a: '如果你每月生成图像不到约200张且没有GPU:选云端——在意法律安全就选Adobe Firefly,想要模型多样性就选getimg.ai。超过这个量,或客户保密性很重要时,一块$200的二手GPU加上Qwen-Image可能几个月内就能回本。',
+            a: '如果你每月生成图像不到约200张且没有GPU:选云端——在意法律安全就选Adobe Firefly,想要模型多样性就选getimg.ai。超过这个量,或客户保密性很重要时,二手GPU加上Qwen-Image值得考虑;请按你自己的生成量比较总成本。',
           },
         ],
       },
@@ -2914,7 +2914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          '如果你有(或打算购买)8GB以上显存的GPU,经常生成图像,并且看重隐私、零边际成本和完全的创作控制权,那就选本地。Qwen-Image是最安全的基础——Apache 2.0协议、业界领先的文字渲染——搭配FLUX追求写实(注意不同版本的许可差异),以及SD 3.5那无可匹敌的风格生态。\n\n如果你想在五分钟内看到结果、偶尔才生成图像,或者没有GPU,那就选云端。Adobe Firefly是安全、专业的选择,拥有商用安全的训练数据;getimg.ai则是那些喜欢开放模型理念、却不想自己安装它们的人的桥梁。\n\n如果视频是你的下一个目标——那是一场完全不同的硬件对话。阅读姊妹篇:[本地AI视频生成对比云端](/zh/power-local-llm/local-ai-video-generation-vs-cloud)。',
+          '如果你有(或打算购买)8GB以上显存的GPU,经常生成图像,并且看重隐私、零边际成本和完全的创作控制权,那就选本地。Qwen-Image是稳妥的基础——Apache 2.0协议、出色的文字渲染——搭配FLUX追求写实(注意不同版本的许可差异),以及SD 3.5那深厚的风格生态。\n\n如果你想在五分钟内看到结果、偶尔才生成图像,或者没有GPU,那就选云端。Adobe Firefly是安全、专业的选择,拥有商用安全的训练数据;getimg.ai则是那些喜欢开放模型理念、却不想自己安装它们的人的桥梁。\n\n如果视频是你的下一个目标——那是一场完全不同的硬件对话。阅读姊妹篇:[本地AI视频生成对比云端](/zh/power-local-llm/local-ai-video-generation-vs-cloud)。',
       },
       sources: {
         id: 'sources',
@@ -2944,7 +2944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU对比CPU对比Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon)——本地推理平台对比。',
           '[系统提示词对比用户提示词](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)——可迁移到图像提示词的结构化基础知识。',
           '[本地模型提示词工程](/zh/local-llms/prompt-engineering-for-local-models)——结构化提示词技巧。',
-          '[Modly评测](/zh/power-local-llm/modly-review) — 桌面应用，使用在您自己 GPU 上运行的开源模型，把图片或文本提示词变成 3D 网格，是 2D 图像生成之后的下一步。',
+          '[Modly评测](/zh/power-local-llm/modly-review) — 桌面应用，使用在您自己 GPU 上运行的可下载 AI 模型（许可证因模型而异），把图片或文本提示词变成 3D 网格，是 2D 图像生成之后的下一步。',
         ],
       },
     },

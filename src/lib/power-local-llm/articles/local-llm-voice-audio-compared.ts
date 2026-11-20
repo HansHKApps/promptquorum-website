@@ -8,21 +8,31 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { buildCategoryCompareData, compareGroupTotal, compareSegmentCounts, compareToolsInBothSegments } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
-// Live counts from the directory — recomputed at build time so this article never drifts from
-// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
-// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+// Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
+const SEG = compareSegmentCounts('voice-audio')
+// Tools of one comparison tab (same rows as the table) whose record documents an attribute (true), as a localized "A, B and C" list that links each review.
+// The "What differs" lists use this so they always equal the table's "Yes" cells; pass links = false for a plain list of names.
+const WITH = (segment: string, attr: string, lang: string, links = true): string => {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const rows = buildCategoryCompareData('voice-audio', 'en').segments.find((s) => s.key === segment)?.rows ?? []
+  const parts = rows
+    .filter((r) => bySlug.get(r.slug)?.compare?.[attr] === true)
+    .map((r) => (links && r.reviewPath ? `[${r.name}](${lang === 'en' ? '' : `/${lang}`}${r.reviewPath})` : r.name))
+  return new Intl.ListFormat(lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en-GB' : lang, { style: 'long', type: 'conjunction' }).format(parts)
+}
+// Tools that appear in both the text-to-speech and the speech-to-text tab, as a localized list (names are language-neutral).
+const BOTH = (lang: string) => compareToolsInBothSegments('voice-audio', 'text-to-speech', 'speech-to-text', lang)
+
+// Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
+// so this article never drifts from the table as the directory grows.
 const TOTAL_APP_COUNT = localAiApps.length
-const REVIEWED_VA_APPS = localAiApps.filter((a) => a.reviewSlug != null)
-const VA_TEXT_TO_SPEECH = REVIEWED_VA_APPS.filter((a) => a.categories.includes('text-to-speech')).length
-const VA_SPEECH_TO_TEXT = REVIEWED_VA_APPS.filter((a) => a.categories.includes('speech-to-text')).length
-const VA_REALTIME_VOICE_AGENTS = REVIEWED_VA_APPS.filter((a) => a.categories.includes('realtime-voice-agents')).length
-const VA_TOTAL = new Set(
-  REVIEWED_VA_APPS.filter(
-    (a) => a.categories.includes('text-to-speech') || a.categories.includes('speech-to-text') || a.categories.includes('realtime-voice-agents'),
-  ).map((a) => a.slug),
-).size
+const VA_TEXT_TO_SPEECH = SEG['text-to-speech']
+const VA_SPEECH_TO_TEXT = SEG['speech-to-text']
+const VA_REALTIME_VOICE_AGENTS = SEG['voice-agents']
+const VA_TOTAL = compareGroupTotal('voice-audio')
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -36,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents',
     seoTitle: 'Local Voice & Speech Tools Compared 2026',
     intro:
-      `Local voice tools fall into three different jobs — turning text into speech, turning speech into text, and running a spoken conversation with an AI — and no single feature list compares them fairly. This guide compares ${VA_TOTAL} free and freemium tools that run on your own hardware, one job at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
+      `Local voice tools fall into three different jobs — turning text into speech, turning speech into text, and running a spoken conversation with an AI — and no single feature list compares them fairly. This guide compares ${VA_TOTAL} free, freemium and paid tools that run on your own hardware, one job at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
     metaDescription:
       `Compare ${VA_TOTAL} local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.`,
     twitterDescription:
@@ -57,16 +67,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      `**The ${VA_TOTAL} local voice tools in the PromptQuorum directory split into three jobs that should be compared separately: text-to-speech (${VA_TEXT_TO_SPEECH} tools), speech-to-text (${VA_SPEECH_TO_TEXT}) and real-time voice agents (${VA_REALTIME_VOICE_AGENTS}).** Within text-to-speech, voice cloning is stated in the official documentation of Coqui TTS, XTTS-v2, Izwi and Willow Inference Server; for speech-to-text, whisper.cpp and Willow Inference Server document real-time transcription; and Dograh, Jarvis, Parlor and Voxa are the voice agents. Use the comparison table below, and read each tool's own review before you install it.`,
+      `**The ${VA_TOTAL} local voice tools in the PromptQuorum directory split into three jobs that should be compared separately: text-to-speech (${VA_TEXT_TO_SPEECH} tools), speech-to-text (${VA_SPEECH_TO_TEXT}) and real-time voice agents (${VA_REALTIME_VOICE_AGENTS}).** Within text-to-speech, voice cloning is stated in the official documentation of ${WITH('text-to-speech', 'voiceCloning', 'en', false)}; for speech-to-text, ${WITH('speech-to-text', 'realtime', 'en', false)} document real-time transcription. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local voice tool should I use?',
         answer:
           'It depends on the job, so compare within one job at a time. Pick by the constraint that matters most — license, platform, CPU-only use, a local API server, voice cloning, real-time transcription — and use the table below, which is generated from each tool\'s official documentation.',
         bullets: [
-          'Text-to-speech: 8 tools compared on languages, voice cloning, streaming, CPU use and API server.',
-          'Speech-to-text: 7 tools compared on real-time use, speaker labels, CPU use and API server.',
-          'Voice agents: 4 tools compared on fully-local operation, interruption, bring-your-own LLM and telephony.',
+          `Text-to-speech: ${SEG['text-to-speech']} tools compared on languages, voice cloning, streaming, CPU use and API server.`,
+          `Speech-to-text: ${SEG['speech-to-text']} tools compared on real-time use, speaker labels, CPU use and API server.`,
+          `Voice agents: ${SEG['voice-agents']} tools compared on fully-local operation, interruption, bring-your-own LLM and telephony.`,
           'A dash (—) means the project\'s documentation does not state it, not that the feature is missing.',
         ],
       },
@@ -98,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${VA_TOTAL} tools, three jobs: text-to-speech (${VA_TEXT_TO_SPEECH}), speech-to-text (${VA_SPEECH_TO_TEXT}), real-time voice agents (${VA_REALTIME_VOICE_AGENTS}). Izwi and Willow Inference Server do both text-to-speech and speech-to-text, so they appear in both tables.`,
+          `${VA_TOTAL} tools, three jobs: text-to-speech (${VA_TEXT_TO_SPEECH}), speech-to-text (${VA_SPEECH_TO_TEXT}), real-time voice agents (${VA_REALTIME_VOICE_AGENTS}). ${BOTH('en')} do both text-to-speech and speech-to-text, so they appear in both tables.`,
           'The table is generated from each tool\'s record and checked against its official README or site; a dash means "not stated in the documentation", never "no".',
           'Licenses differ in ways that matter: for example Piper and OpenAI Edge TTS are GPL-3.0, Coqui TTS is MPL-2.0, XTTS-v2 uses the Coqui Public Model License, and Bark, StyleTTS 2, whisper.cpp and faster-whisper are MIT.',
           'Every tool name in the table links to its own PromptQuorum review, which is where installation steps and limits are covered.',
@@ -125,8 +135,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Text-to-Speech: What Differs',
         items: [
           '**License.** Bark and StyleTTS 2 are MIT-licensed. Coqui TTS is MPL-2.0. XTTS-v2 uses the Coqui Public Model License (CPML), a custom license with its own terms rather than a standard open-source one — read it before any commercial use. Piper and OpenAI Edge TTS are GPL-3.0, which places conditions on distributing modified versions. Check the license before building a product on any of them — see [Piper TTS](/power-local-llm/piper-tts-review) and [XTTS v2](/power-local-llm/xtts-v2-review).',
-          '**Voice cloning.** Coqui TTS ([review](/power-local-llm/coqui-tts-review)), XTTS-v2 ([review](/power-local-llm/xtts-v2-review)), Izwi ([review](/power-local-llm/izwi-review)) and Willow Inference Server ([review](/power-local-llm/willow-inference-server-review)) document voice cloning or custom voices. [Bark](/power-local-llm/bark-tts-review) states that it does not support custom voice cloning.',
-          '**Local API server.** Coqui TTS, Izwi, OpenAI Edge TTS, Piper and Willow Inference Server document a server component, so other apps can call them over HTTP; [OpenAI Edge TTS](/power-local-llm/openai-edge-tts-review) is built around that.',
+          `**Voice cloning.** ${WITH('text-to-speech', 'voiceCloning', 'en')} document voice cloning or custom voices. [Bark](/power-local-llm/bark-tts-review) states that it does not support custom voice cloning.`,
+          `**Local API server.** ${WITH('text-to-speech', 'apiServer', 'en')} document a server component, so other apps can call them over HTTP; [OpenAI Edge TTS](/power-local-llm/openai-edge-tts-review) is built around that.`,
           '**Languages.** Bark documents 13 languages and XTTS-v2 documents 17. The other tools do not state a comparable count, so the table shows a dash rather than a number.',
         ],
       },
@@ -134,12 +144,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'stt-differences',
         title: 'Speech-to-Text: What Differs',
         items: [
-          '**Real-time transcription.** [whisper.cpp](/power-local-llm/whisper-cpp-review) documents a real-time streaming example, and Izwi and Willow Inference Server document real-time use. [faster-whisper](/power-local-llm/faster-whisper-review) is a transcription library; its own README does not document a real-time mode.',
-          '**Speaker labels.** Izwi and FunClip document speaker labelling. [Meetily](/power-local-llm/meetily-review) offers speaker diarization only in its paid Pro tier. whisper.cpp\'s speaker-turn marking is experimental and is covered in its review rather than in the table.',
-          '**Price and platform.** [MacWhisper](/power-local-llm/macwhisper-review) is a proprietary macOS app with a free tier and a paid upgrade; most other tools here are free and open source. Meetily\'s Community Edition is free and MIT-licensed, with a paid Pro tier.',
+          `**Real-time transcription.** ${WITH('speech-to-text', 'realtime', 'en')} document real-time use. [faster-whisper](/power-local-llm/faster-whisper-review) is a transcription library; its own README does not document a real-time mode.`,
+          `**Speaker labels.** ${WITH('speech-to-text', 'speakerLabels', 'en')} document speaker labelling. [Meetily](/power-local-llm/meetily-review) offers speaker diarization only in its paid Pro tier. whisper.cpp's speaker-turn marking is experimental and is covered in its review rather than in the table.`,
+          '**Price and platform.** [MacWhisper](/power-local-llm/macwhisper-review) is a proprietary macOS app with a free tier and a paid upgrade. Meetily\'s Community Edition is free and MIT-licensed, with a paid Pro tier.',
           '**Subtitles and burn-in.** [Sablate](/power-local-llm/sablate-review) is a closed-source Windows and Mac app that combines Whisper transcription, offline translation and caption burn-in; its site lists speaker diarization as not supported.',
           '**Meetings and interviews.** [Meetini](/power-local-llm/meetini-review) is a paid, closed-source app for Apple Silicon Macs with live captions, notes and interview practice; its privacy notice says live audio is processed by OpenAI, so it is not a fully local tool.',
-          '**Local API server.** whisper.cpp ships a server, and Izwi and Willow Inference Server document HTTP APIs.',
+          `**Local API server.** ${WITH('speech-to-text', 'apiServer', 'en')} document a server component or HTTP API.`,
           '**Dictation apps.** [Amical](/power-local-llm/amical-review) is MIT-licensed for Mac and Windows, with local Whisper and an optional cloud tier. [Weesper Neon Flow](/power-local-llm/weesper-neon-flow-review) is a push-to-talk app for Mac and Windows that is paid after a free trial. [Sprich](/power-local-llm/sprich-review) runs on Apple Silicon Macs only, has a free plan, is German-first and has a site in German only. [Univocal](/power-local-llm/univocal-review) is a paid Mac app for Apple silicon only that both dictates and reads selected text aloud, for a one-time price. Per their makers, all four can process speech on your computer; PromptQuorum has not tested them.',
           '**Video translation and dubbing.** [pyVideoTrans](/power-local-llm/pyvideotrans-review) is a free GPL-3.0 tool for Windows, macOS and Linux that transcribes a video, translates the subtitles, dubs them with a synthetic voice and rebuilds the video. Per its project pages it runs with or without an NVIDIA GPU and supports speaker diarization; its default translation and voice channels are online services, and PromptQuorum has not tested the app.',
         ],
@@ -256,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale Sprach- und Audio-Werkzeuge im Vergleich (2026): Text-zu-Sprache, Sprache-zu-Text und Sprachagenten',
     seoTitle: 'Lokale Sprach-Werkzeuge im Vergleich 2026',
     intro:
-      `Lokale Sprach-Werkzeuge erledigen drei verschiedene Aufgaben — Text in Sprache umwandeln, Sprache in Text umwandeln und ein gesprochenes Gespräch mit einer KI führen —, und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${VA_TOTAL} kostenlose und Freemium-Werkzeuge, die auf Ihrer eigenen Hardware laufen, Aufgabe für Aufgabe. Die Vergleichstabelle wird aus denselben Daten erzeugt wie der jeweilige PromptQuorum-Test des Werkzeugs, sodass sich Tabelle und Tests nicht widersprechen können.`,
+      `Lokale Sprach-Werkzeuge erledigen drei verschiedene Aufgaben — Text in Sprache umwandeln, Sprache in Text umwandeln und ein gesprochenes Gespräch mit einer KI führen —, und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${VA_TOTAL} kostenlose, Freemium- und kostenpflichtige Werkzeuge, die auf Ihrer eigenen Hardware laufen, Aufgabe für Aufgabe. Die Vergleichstabelle wird aus denselben Daten erzeugt wie der jeweilige PromptQuorum-Test des Werkzeugs, sodass sich Tabelle und Tests nicht widersprechen können.`,
     metaDescription:
       `Vergleich von ${VA_TOTAL} lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.`,
     twitterDescription:
@@ -277,16 +287,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      `**Die ${VA_TOTAL} lokalen Sprach-Werkzeuge im PromptQuorum-Verzeichnis teilen sich in drei Aufgaben, die getrennt verglichen werden sollten: Text-zu-Sprache (${VA_TEXT_TO_SPEECH} Werkzeuge), Sprache-zu-Text (${VA_SPEECH_TO_TEXT}) und Echtzeit-Sprachagenten (${VA_REALTIME_VOICE_AGENTS}).** Bei Text-zu-Sprache wird Stimmklonen in der offiziellen Dokumentation von Coqui TTS, XTTS-v2, Izwi und Willow Inference Server genannt; bei Sprache-zu-Text dokumentieren whisper.cpp und Willow Inference Server Echtzeit-Transkription; Dograh, Jarvis, Parlor und Voxa sind die Sprachagenten. Nutzen Sie die Vergleichstabelle unten und lesen Sie den Test des jeweiligen Werkzeugs, bevor Sie es installieren.`,
+      `**Die ${VA_TOTAL} lokalen Sprach-Werkzeuge im PromptQuorum-Verzeichnis teilen sich in drei Aufgaben, die getrennt verglichen werden sollten: Text-zu-Sprache (${VA_TEXT_TO_SPEECH} Werkzeuge), Sprache-zu-Text (${VA_SPEECH_TO_TEXT}) und Echtzeit-Sprachagenten (${VA_REALTIME_VOICE_AGENTS}).** Bei Text-zu-Sprache wird Stimmklonen in der offiziellen Dokumentation von ${WITH('text-to-speech', 'voiceCloning', 'de', false)} genannt; bei Sprache-zu-Text dokumentieren ${WITH('speech-to-text', 'realtime', 'de', false)} Echtzeit-Transkription. Nutzen Sie die Vergleichstabelle unten und lesen Sie den Test des jeweiligen Werkzeugs, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale Sprach-Werkzeug sollte ich verwenden?',
         answer:
           'Das hängt von der Aufgabe ab, vergleichen Sie also immer innerhalb einer Aufgabe. Wählen Sie nach der Anforderung, die Ihnen am wichtigsten ist — Lizenz, Plattform, reine CPU-Nutzung, lokaler API-Server, Stimmklonen, Echtzeit-Transkription — und nutzen Sie die Tabelle unten, die aus der offiziellen Dokumentation des jeweiligen Werkzeugs erzeugt wird.',
         bullets: [
-          'Text-zu-Sprache: 8 Werkzeuge im Vergleich nach Sprachen, Stimmklonen, Streaming, CPU-Nutzung und API-Server.',
-          'Sprache-zu-Text: 7 Werkzeuge im Vergleich nach Echtzeit-Nutzung, Sprecherkennzeichnung, CPU-Nutzung und API-Server.',
-          'Sprachagenten: 4 Werkzeuge im Vergleich nach vollständig lokalem Betrieb, Unterbrechung, eigenem LLM und Telefonie.',
+          `Text-zu-Sprache: ${SEG['text-to-speech']} Werkzeuge im Vergleich nach Sprachen, Stimmklonen, Streaming, CPU-Nutzung und API-Server.`,
+          `Sprache-zu-Text: ${SEG['speech-to-text']} Werkzeuge im Vergleich nach Echtzeit-Nutzung, Sprecherkennzeichnung, CPU-Nutzung und API-Server.`,
+          `Sprachagenten: ${SEG['voice-agents']} Werkzeuge im Vergleich nach vollständig lokalem Betrieb, Unterbrechung, eigenem LLM und Telefonie.`,
           'Ein Strich (—) bedeutet, dass die Dokumentation des Projekts es nicht angibt, nicht dass die Funktion fehlt.',
         ],
       },
@@ -318,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${VA_TOTAL} Werkzeuge, drei Aufgaben: Text-zu-Sprache (${VA_TEXT_TO_SPEECH}), Sprache-zu-Text (${VA_SPEECH_TO_TEXT}), Echtzeit-Sprachagenten (${VA_REALTIME_VOICE_AGENTS}). Izwi und Willow Inference Server leisten sowohl Text-zu-Sprache als auch Sprache-zu-Text und erscheinen daher in beiden Tabellen.`,
+          `${VA_TOTAL} Werkzeuge, drei Aufgaben: Text-zu-Sprache (${VA_TEXT_TO_SPEECH}), Sprache-zu-Text (${VA_SPEECH_TO_TEXT}), Echtzeit-Sprachagenten (${VA_REALTIME_VOICE_AGENTS}). ${BOTH('de')} leisten sowohl Text-zu-Sprache als auch Sprache-zu-Text und erscheinen daher in beiden Tabellen.`,
           'Die Tabelle wird aus dem Datensatz jedes Werkzeugs erzeugt und mit dessen offizieller README oder Website abgeglichen; ein Strich bedeutet „in der Dokumentation nicht angegeben“, niemals „nein“.',
           'Lizenzen unterscheiden sich auf relevante Weise: Piper und OpenAI Edge TTS stehen zum Beispiel unter GPL-3.0, Coqui TTS unter MPL-2.0, XTTS-v2 nutzt die Coqui Public Model License, und Bark, StyleTTS 2, whisper.cpp und faster-whisper stehen unter MIT.',
           'Jeder Werkzeugname in der Tabelle verlinkt auf den eigenen PromptQuorum-Test, in dem Installationsschritte und Grenzen behandelt werden.',
@@ -345,8 +355,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Text-zu-Sprache: Was sich unterscheidet',
         items: [
           '**Lizenz.** Bark und StyleTTS 2 stehen unter MIT. Coqui TTS steht unter MPL-2.0. XTTS-v2 nutzt die Coqui Public Model License (CPML), eine eigene Lizenz mit eigenen Bedingungen statt einer Standard-Open-Source-Lizenz — lesen Sie sie vor jeder kommerziellen Nutzung. Piper und OpenAI Edge TTS stehen unter GPL-3.0, die Bedingungen für die Weitergabe veränderter Versionen stellt. Prüfen Sie die Lizenz, bevor Sie ein Produkt auf einem davon aufbauen — siehe [Piper TTS](/de/power-local-llm/piper-tts-review) und [XTTS v2](/de/power-local-llm/xtts-v2-review).',
-          '**Stimmklonen.** Coqui TTS ([Test](/de/power-local-llm/coqui-tts-review)), XTTS-v2 ([Test](/de/power-local-llm/xtts-v2-review)), Izwi ([Test](/de/power-local-llm/izwi-review)) und Willow Inference Server ([Test](/de/power-local-llm/willow-inference-server-review)) dokumentieren Stimmklonen oder eigene Stimmen. [Bark](/de/power-local-llm/bark-tts-review) gibt an, dass es kein eigenes Stimmklonen unterstützt.',
-          '**Lokaler API-Server.** Coqui TTS, Izwi, OpenAI Edge TTS, Piper und Willow Inference Server dokumentieren eine Serverkomponente, sodass andere Apps sie über HTTP aufrufen können; [OpenAI Edge TTS](/de/power-local-llm/openai-edge-tts-review) ist darauf ausgelegt.',
+          `**Stimmklonen.** ${WITH('text-to-speech', 'voiceCloning', 'de')} dokumentieren Stimmklonen oder eigene Stimmen. [Bark](/de/power-local-llm/bark-tts-review) gibt an, dass es kein eigenes Stimmklonen unterstützt.`,
+          `**Lokaler API-Server.** ${WITH('text-to-speech', 'apiServer', 'de')} dokumentieren eine Serverkomponente, sodass andere Apps sie über HTTP aufrufen können; [OpenAI Edge TTS](/de/power-local-llm/openai-edge-tts-review) ist darauf ausgelegt.`,
           '**Sprachen.** Bark dokumentiert 13 Sprachen und XTTS-v2 dokumentiert 17. Die anderen Werkzeuge geben keine vergleichbare Anzahl an, daher zeigt die Tabelle einen Strich statt einer Zahl.',
         ],
       },
@@ -354,12 +364,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'stt-differences',
         title: 'Sprache-zu-Text: Was sich unterscheidet',
         items: [
-          '**Echtzeit-Transkription.** [whisper.cpp](/de/power-local-llm/whisper-cpp-review) dokumentiert ein Echtzeit-Streaming-Beispiel, und Izwi und Willow Inference Server dokumentieren Echtzeit-Nutzung. [faster-whisper](/de/power-local-llm/faster-whisper-review) ist eine Transkriptionsbibliothek; ihre eigene README dokumentiert keinen Echtzeitmodus.',
-          '**Sprecherkennzeichnung.** Izwi und FunClip dokumentieren Sprecherkennzeichnung. [Meetily](/de/power-local-llm/meetily-review) bietet Sprechertrennung (Diarisierung) nur im bezahlten Pro-Tarif. Die Sprecherwechsel-Markierung von whisper.cpp ist experimentell und wird im zugehörigen Test statt in der Tabelle behandelt.',
-          '**Preis und Plattform.** [MacWhisper](/de/power-local-llm/macwhisper-review) ist eine proprietäre macOS-App mit kostenlosem Tarif und kostenpflichtigem Upgrade; die meisten anderen Werkzeuge hier sind kostenlos und Open Source. Meetilys Community Edition ist kostenlos und steht unter MIT, mit einem bezahlten Pro-Tarif.',
+          `**Echtzeit-Transkription.** ${WITH('speech-to-text', 'realtime', 'de')} dokumentieren Echtzeit-Nutzung. [faster-whisper](/de/power-local-llm/faster-whisper-review) ist eine Transkriptionsbibliothek; ihre eigene README dokumentiert keinen Echtzeitmodus.`,
+          `**Sprecherkennzeichnung.** ${WITH('speech-to-text', 'speakerLabels', 'de')} dokumentieren Sprecherkennzeichnung. [Meetily](/de/power-local-llm/meetily-review) bietet Sprechertrennung (Diarisierung) nur im bezahlten Pro-Tarif. Die Sprecherwechsel-Markierung von whisper.cpp ist experimentell und wird im zugehörigen Test statt in der Tabelle behandelt.`,
+          '**Preis und Plattform.** [MacWhisper](/de/power-local-llm/macwhisper-review) ist eine proprietäre macOS-App mit kostenlosem Tarif und kostenpflichtigem Upgrade. Meetilys Community Edition ist kostenlos und steht unter MIT, mit einem bezahlten Pro-Tarif.',
           '**Untertitel und Einbrennen.** [Sablate](/de/power-local-llm/sablate-review) ist eine nicht quelloffene Windows- und Mac-App, die Whisper-Transkription, Offline-Übersetzung und das Einbrennen von Untertiteln vereint; laut Website wird Sprechererkennung nicht unterstützt.',
           '**Meetings und Interviews.** [Meetini](/de/power-local-llm/meetini-review) ist eine kostenpflichtige, nicht quelloffene App für Macs mit Apple Silicon mit Live-Untertiteln, Notizen und Interviewtraining; laut Datenschutzerklärung wird Live-Audio von OpenAI verarbeitet, es ist also kein vollständig lokales Werkzeug.',
-          '**Lokaler API-Server.** whisper.cpp liefert einen Server mit, und Izwi und Willow Inference Server dokumentieren HTTP-APIs.',
+          `**Lokaler API-Server.** ${WITH('speech-to-text', 'apiServer', 'de')} dokumentieren eine Serverkomponente oder HTTP-API.`,
           '**Diktier-Apps.** [Amical](/de/power-local-llm/amical-review) steht unter MIT-Lizenz, läuft auf Mac und Windows und nutzt lokales Whisper mit optionaler Cloud-Stufe. [Weesper Neon Flow](/de/power-local-llm/weesper-neon-flow-review) ist eine Push-to-talk-App für Mac und Windows, die nach einer kostenlosen Testphase kostenpflichtig ist. [Sprich](/de/power-local-llm/sprich-review) läuft nur auf Macs mit Apple Silicon, hat einen Gratis-Tarif, ist auf Deutsch ausgerichtet und hat eine Website nur auf Deutsch. [Univocal](/de/power-local-llm/univocal-review) ist eine kostenpflichtige App nur für Macs mit Apple Silicon, die diktiert und markierten Text vorliest, zum Einmalpreis. Laut ihren Herstellern können alle vier Sprache auf Ihrem Rechner verarbeiten; PromptQuorum hat sie nicht getestet.',
           '**Videoübersetzung und Vertonung.** [pyVideoTrans](/de/power-local-llm/pyvideotrans-review) ist ein kostenloses GPL-3.0-Werkzeug für Windows, macOS und Linux, das ein Video transkribiert, die Untertitel übersetzt, sie mit einer synthetischen Stimme vertont und das Video neu zusammensetzt. Laut den Projektseiten läuft es mit oder ohne NVIDIA-GPU und unterstützt Sprechertrennung; die Standardkanäle für Übersetzung und Stimme sind Online-Dienste, und PromptQuorum hat die App nicht getestet.',
         ],
@@ -476,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Outils vocaux locaux comparés (2026) : synthèse vocale, transcription et agents vocaux',
     seoTitle: 'Outils vocaux locaux comparés 2026',
     intro:
-      `Les outils vocaux locaux relèvent de trois tâches différentes — transformer du texte en parole, transformer la parole en texte, et mener une conversation orale avec une IA — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare ${VA_TOTAL} outils gratuits et freemium qui fonctionnent sur votre propre matériel, une tâche à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.`,
+      `Les outils vocaux locaux relèvent de trois tâches différentes — transformer du texte en parole, transformer la parole en texte, et mener une conversation orale avec une IA — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare ${VA_TOTAL} outils gratuits, freemium et payants qui fonctionnent sur votre propre matériel, une tâche à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.`,
     metaDescription:
       `Comparez ${VA_TOTAL} outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.`,
     twitterDescription:
@@ -497,16 +507,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      `**Les ${VA_TOTAL} outils vocaux locaux de l'annuaire PromptQuorum se répartissent en trois tâches à comparer séparément : la synthèse vocale (${VA_TEXT_TO_SPEECH} outils), la transcription (${VA_SPEECH_TO_TEXT}) et les agents vocaux en temps réel (${VA_REALTIME_VOICE_AGENTS}).** En synthèse vocale, le clonage de voix est indiqué dans la documentation officielle de Coqui TTS, XTTS-v2, Izwi et Willow Inference Server ; en transcription, whisper.cpp et Willow Inference Server documentent la transcription en temps réel ; et Dograh, Jarvis, Parlor et Voxa sont les agents vocaux. Utilisez le tableau comparatif ci-dessous, et lisez l'avis de chaque outil avant de l'installer.`,
+      `**Les ${VA_TOTAL} outils vocaux locaux de l'annuaire PromptQuorum se répartissent en trois tâches à comparer séparément : la synthèse vocale (${VA_TEXT_TO_SPEECH} outils), la transcription (${VA_SPEECH_TO_TEXT}) et les agents vocaux en temps réel (${VA_REALTIME_VOICE_AGENTS}).** En synthèse vocale, le clonage de voix est indiqué dans la documentation officielle de ${WITH('text-to-speech', 'voiceCloning', 'fr', false)} ; en transcription, ${WITH('speech-to-text', 'realtime', 'fr', false)} documentent la transcription en temps réel. Utilisez le tableau comparatif ci-dessous, et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil vocal local dois-je utiliser ?',
         answer:
           'Cela dépend de la tâche : comparez donc une tâche à la fois. Choisissez selon la contrainte qui compte le plus — licence, plateforme, usage CPU seul, serveur API local, clonage de voix, transcription en temps réel — et appuyez-vous sur le tableau ci-dessous, généré à partir de la documentation officielle de chaque outil.',
         bullets: [
-          'Synthèse vocale : 8 outils comparés sur les langues, le clonage de voix, le streaming, l\'usage CPU et le serveur API.',
-          'Transcription : 7 outils comparés sur l\'usage en temps réel, les étiquettes de locuteurs, l\'usage CPU et le serveur API.',
-          'Agents vocaux : 4 outils comparés sur le fonctionnement entièrement local, l\'interruption, l\'usage de votre propre LLM et la téléphonie.',
+          `Synthèse vocale : ${SEG['text-to-speech']} outils comparés sur les langues, le clonage de voix, le streaming, l'usage CPU et le serveur API.`,
+          `Transcription : ${SEG['speech-to-text']} outils comparés sur l'usage en temps réel, les étiquettes de locuteurs, l'usage CPU et le serveur API.`,
+          `Agents vocaux : ${SEG['voice-agents']} outils comparés sur le fonctionnement entièrement local, l'interruption, l'usage de votre propre LLM et la téléphonie.`,
           'Un tiret (—) signifie que la documentation du projet ne le précise pas, et non que la fonctionnalité est absente.',
         ],
       },
@@ -538,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${VA_TOTAL} outils, trois tâches : synthèse vocale (${VA_TEXT_TO_SPEECH}), transcription (${VA_SPEECH_TO_TEXT}), agents vocaux en temps réel (${VA_REALTIME_VOICE_AGENTS}). Izwi et Willow Inference Server font à la fois de la synthèse vocale et de la transcription, et apparaissent donc dans les deux tableaux.`,
+          `${VA_TOTAL} outils, trois tâches : synthèse vocale (${VA_TEXT_TO_SPEECH}), transcription (${VA_SPEECH_TO_TEXT}), agents vocaux en temps réel (${VA_REALTIME_VOICE_AGENTS}). ${BOTH('fr')} font à la fois de la synthèse vocale et de la transcription, et apparaissent donc dans les deux tableaux.`,
           'Le tableau est généré à partir de la fiche de chaque outil et vérifié d\'après son README ou son site officiel ; un tiret signifie « non précisé dans la documentation », jamais « non ».',
           'Les licences diffèrent de façon significative : par exemple, Piper et OpenAI Edge TTS sont sous GPL-3.0, Coqui TTS sous MPL-2.0, XTTS-v2 utilise la Coqui Public Model License, et Bark, StyleTTS 2, whisper.cpp et faster-whisper sont sous MIT.',
           'Chaque nom d\'outil du tableau renvoie vers son propre avis PromptQuorum, où sont détaillés l\'installation et les limites.',
@@ -565,8 +575,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Synthèse vocale : ce qui diffère',
         items: [
           '**Licence.** Bark et StyleTTS 2 sont sous licence MIT. Coqui TTS est sous MPL-2.0. XTTS-v2 utilise la Coqui Public Model License (CPML), une licence personnalisée avec ses propres conditions plutôt qu\'une licence open source standard — lisez-la avant tout usage commercial. Piper et OpenAI Edge TTS sont sous GPL-3.0, qui impose des conditions à la distribution de versions modifiées. Vérifiez la licence avant de construire un produit sur l\'un d\'eux — voir [Piper TTS](/fr/power-local-llm/piper-tts-review) et [XTTS v2](/fr/power-local-llm/xtts-v2-review).',
-          '**Clonage de voix.** Coqui TTS ([avis](/fr/power-local-llm/coqui-tts-review)), XTTS-v2 ([avis](/fr/power-local-llm/xtts-v2-review)), Izwi ([avis](/fr/power-local-llm/izwi-review)) et Willow Inference Server ([avis](/fr/power-local-llm/willow-inference-server-review)) documentent le clonage de voix ou les voix personnalisées. [Bark](/fr/power-local-llm/bark-tts-review) indique qu\'il ne prend pas en charge le clonage de voix personnalisé.',
-          '**Serveur API local.** Coqui TTS, Izwi, OpenAI Edge TTS, Piper et Willow Inference Server documentent un composant serveur, ce qui permet à d\'autres applications de les appeler via HTTP ; [OpenAI Edge TTS](/fr/power-local-llm/openai-edge-tts-review) est conçu autour de cette approche.',
+          `**Clonage de voix.** ${WITH('text-to-speech', 'voiceCloning', 'fr')} documentent le clonage de voix ou les voix personnalisées. [Bark](/fr/power-local-llm/bark-tts-review) indique qu'il ne prend pas en charge le clonage de voix personnalisé.`,
+          `**Serveur API local.** ${WITH('text-to-speech', 'apiServer', 'fr')} documentent un composant serveur, ce qui permet à d'autres applications de les appeler via HTTP ; [OpenAI Edge TTS](/fr/power-local-llm/openai-edge-tts-review) est conçu autour de cette approche.`,
           '**Langues.** Bark documente 13 langues et XTTS-v2 en documente 17. Les autres outils n\'indiquent pas de nombre comparable : le tableau affiche donc un tiret plutôt qu\'un chiffre.',
         ],
       },
@@ -574,12 +584,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'stt-differences',
         title: 'Transcription : ce qui diffère',
         items: [
-          '**Transcription en temps réel.** [whisper.cpp](/fr/power-local-llm/whisper-cpp-review) documente un exemple de streaming en temps réel, et Izwi et Willow Inference Server documentent un usage en temps réel. [faster-whisper](/fr/power-local-llm/faster-whisper-review) est une bibliothèque de transcription ; son README ne documente pas de mode temps réel.',
-          '**Étiquettes de locuteurs.** Izwi et FunClip documentent l\'étiquetage des locuteurs. [Meetily](/fr/power-local-llm/meetily-review) ne propose la diarisation des locuteurs que dans son offre Pro payante. Le marquage des tours de parole de whisper.cpp est expérimental et est traité dans son avis plutôt que dans le tableau.',
-          '**Prix et plateforme.** [MacWhisper](/fr/power-local-llm/macwhisper-review) est une application macOS propriétaire avec une offre gratuite et une mise à niveau payante ; la plupart des autres outils présentés ici sont gratuits et open source. L\'édition Community de Meetily est gratuite et sous licence MIT, avec une offre Pro payante.',
+          `**Transcription en temps réel.** ${WITH('speech-to-text', 'realtime', 'fr')} documentent un usage en temps réel. [faster-whisper](/fr/power-local-llm/faster-whisper-review) est une bibliothèque de transcription ; son README ne documente pas de mode temps réel.`,
+          `**Étiquettes de locuteurs.** ${WITH('speech-to-text', 'speakerLabels', 'fr')} documentent l'étiquetage des locuteurs. [Meetily](/fr/power-local-llm/meetily-review) ne propose la diarisation des locuteurs que dans son offre Pro payante. Le marquage des tours de parole de whisper.cpp est expérimental et est traité dans son avis plutôt que dans le tableau.`,
+          '**Prix et plateforme.** [MacWhisper](/fr/power-local-llm/macwhisper-review) est une application macOS propriétaire avec une offre gratuite et une mise à niveau payante. L\'édition Community de Meetily est gratuite et sous licence MIT, avec une offre Pro payante.',
           '**Sous-titres et incrustation.** [Sablate](/fr/power-local-llm/sablate-review) est une application Windows et Mac à code fermé qui réunit transcription Whisper, traduction hors ligne et incrustation des sous-titres ; son site indique que la diarisation des locuteurs n’est pas prise en charge.',
           '**Réunions et entretiens.** [Meetini](/fr/power-local-llm/meetini-review) est une application payante à code fermé pour Mac Apple Silicon, avec sous-titres en direct, notes et entraînement aux entretiens ; sa politique de confidentialité indique que l\'audio en direct est traité par OpenAI, ce n\'est donc pas un outil entièrement local.',
-          '**Serveur API local.** whisper.cpp fournit un serveur, et Izwi et Willow Inference Server documentent des API HTTP.',
+          `**Serveur API local.** ${WITH('speech-to-text', 'apiServer', 'fr')} documentent un composant serveur ou une API HTTP.`,
           '**Applications de dictée.** [Amical](/fr/power-local-llm/amical-review) est sous licence MIT pour Mac et Windows, avec Whisper en local et une offre cloud optionnelle. [Weesper Neon Flow](/fr/power-local-llm/weesper-neon-flow-review) est une application push-to-talk pour Mac et Windows, payante après un essai gratuit. [Sprich](/fr/power-local-llm/sprich-review) ne fonctionne que sur les Mac Apple Silicon, propose une offre gratuite, est pensée d’abord pour l’allemand et son site n’existe qu’en allemand. [Univocal](/fr/power-local-llm/univocal-review) est une application payante réservée aux Mac Apple Silicon, qui dicte et lit à voix haute le texte sélectionné, à prix unique. Selon leurs éditeurs, les quatre peuvent traiter la parole sur votre ordinateur ; PromptQuorum ne les a pas testées.',
           '**Traduction et doublage de vidéos.** [pyVideoTrans](/fr/power-local-llm/pyvideotrans-review) est un outil gratuit sous GPL-3.0 pour Windows, macOS et Linux qui transcrit une vidéo, traduit les sous-titres, les double avec une voix synthétique et reconstruit la vidéo. D\'après les pages du projet, il fonctionne avec ou sans GPU NVIDIA et prend en charge la séparation des locuteurs ; ses canaux de traduction et de voix par défaut sont des services en ligne, et PromptQuorum n\'a pas testé l\'application.',
         ],
@@ -696,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Herramientas locales de voz y habla comparadas (2026): texto a voz, voz a texto y agentes de voz',
     seoTitle: 'Herramientas locales de voz comparadas 2026',
     intro:
-      `Las herramientas de voz locales se dividen en tres tareas distintas —convertir texto en voz, convertir voz en texto y mantener una conversación hablada con una IA—, y ninguna lista única de funciones las compara con justicia. Esta guía compara ${VA_TOTAL} herramientas gratuitas y freemium que se ejecutan en tu propio hardware, una tarea cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.`,
+      `Las herramientas de voz locales se dividen en tres tareas distintas —convertir texto en voz, convertir voz en texto y mantener una conversación hablada con una IA—, y ninguna lista única de funciones las compara con justicia. Esta guía compara ${VA_TOTAL} herramientas gratuitas, freemium y de pago que se ejecutan en tu propio hardware, una tarea cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.`,
     metaDescription:
       `Compara ${VA_TOTAL} herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.`,
     twitterDescription:
@@ -717,16 +727,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      `**Las ${VA_TOTAL} herramientas de voz locales del directorio de PromptQuorum se dividen en tres tareas que conviene comparar por separado: texto a voz (${VA_TEXT_TO_SPEECH} herramientas), voz a texto (${VA_SPEECH_TO_TEXT}) y agentes de voz en tiempo real (${VA_REALTIME_VOICE_AGENTS}).** En texto a voz, la clonación de voz figura en la documentación oficial de Coqui TTS, XTTS-v2, Izwi y Willow Inference Server; en voz a texto, whisper.cpp y Willow Inference Server documentan la transcripción en tiempo real; y Dograh, Jarvis, Parlor y Voxa son los agentes de voz. Usa la tabla comparativa de abajo y lee el análisis propio de cada herramienta antes de instalarla.`,
+      `**Las ${VA_TOTAL} herramientas de voz locales del directorio de PromptQuorum se dividen en tres tareas que conviene comparar por separado: texto a voz (${VA_TEXT_TO_SPEECH} herramientas), voz a texto (${VA_SPEECH_TO_TEXT}) y agentes de voz en tiempo real (${VA_REALTIME_VOICE_AGENTS}).** En texto a voz, la clonación de voz figura en la documentación oficial de ${WITH('text-to-speech', 'voiceCloning', 'es', false)}; en voz a texto, ${WITH('speech-to-text', 'realtime', 'es', false)} documentan la transcripción en tiempo real. Usa la tabla comparativa de abajo y lee el análisis propio de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta de voz local debería usar?',
         answer:
           'Depende de la tarea, así que compara dentro de una sola tarea cada vez. Elige según la restricción que más te importe —licencia, plataforma, uso solo con CPU, un servidor API local, clonación de voz, transcripción en tiempo real— y usa la tabla de abajo, generada a partir de la documentación oficial de cada herramienta.',
         bullets: [
-          'Texto a voz: 8 herramientas comparadas en idiomas, clonación de voz, streaming, uso de CPU y servidor API.',
-          'Voz a texto: 7 herramientas comparadas en uso en tiempo real, etiquetas de hablante, uso de CPU y servidor API.',
-          'Agentes de voz: 4 herramientas comparadas en funcionamiento totalmente local, interrupción, uso de tu propio LLM y telefonía.',
+          `Texto a voz: ${SEG['text-to-speech']} herramientas comparadas en idiomas, clonación de voz, streaming, uso de CPU y servidor API.`,
+          `Voz a texto: ${SEG['speech-to-text']} herramientas comparadas en uso en tiempo real, etiquetas de hablante, uso de CPU y servidor API.`,
+          `Agentes de voz: ${SEG['voice-agents']} herramientas comparadas en funcionamiento totalmente local, interrupción, uso de tu propio LLM y telefonía.`,
           'Un guion (—) significa que la documentación del proyecto no lo indica, no que la función no exista.',
         ],
       },
@@ -758,7 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${VA_TOTAL} herramientas, tres tareas: texto a voz (${VA_TEXT_TO_SPEECH}), voz a texto (${VA_SPEECH_TO_TEXT}), agentes de voz en tiempo real (${VA_REALTIME_VOICE_AGENTS}). Izwi y Willow Inference Server hacen tanto texto a voz como voz a texto, por lo que aparecen en ambas tablas.`,
+          `${VA_TOTAL} herramientas, tres tareas: texto a voz (${VA_TEXT_TO_SPEECH}), voz a texto (${VA_SPEECH_TO_TEXT}), agentes de voz en tiempo real (${VA_REALTIME_VOICE_AGENTS}). ${BOTH('es')} hacen tanto texto a voz como voz a texto, por lo que aparecen en ambas tablas.`,
           'La tabla se genera a partir del registro de cada herramienta y se contrasta con su README o sitio oficial; un guion significa «no indicado en la documentación», nunca «no».',
           'Las licencias difieren de formas que importan: por ejemplo, Piper y OpenAI Edge TTS son GPL-3.0, Coqui TTS es MPL-2.0, XTTS-v2 usa la Coqui Public Model License, y Bark, StyleTTS 2, whisper.cpp y faster-whisper son MIT.',
           'Cada nombre de herramienta de la tabla enlaza a su propio análisis de PromptQuorum, donde se explican los pasos de instalación y los límites.',
@@ -785,8 +795,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Texto a voz: en qué se diferencian',
         items: [
           '**Licencia.** Bark y StyleTTS 2 tienen licencia MIT. Coqui TTS es MPL-2.0. XTTS-v2 usa la Coqui Public Model License (CPML), una licencia personalizada con sus propios términos, no una licencia de código abierto estándar: léela antes de cualquier uso comercial. Piper y OpenAI Edge TTS son GPL-3.0, que impone condiciones a la distribución de versiones modificadas. Revisa la licencia antes de construir un producto con cualquiera de ellas; consulta [Piper TTS](/es/power-local-llm/piper-tts-review) y [XTTS v2](/es/power-local-llm/xtts-v2-review).',
-          '**Clonación de voz.** Coqui TTS ([análisis](/es/power-local-llm/coqui-tts-review)), XTTS-v2 ([análisis](/es/power-local-llm/xtts-v2-review)), Izwi ([análisis](/es/power-local-llm/izwi-review)) y Willow Inference Server ([análisis](/es/power-local-llm/willow-inference-server-review)) documentan la clonación de voz o las voces personalizadas. [Bark](/es/power-local-llm/bark-tts-review) indica que no admite la clonación de voz personalizada.',
-          '**Servidor API local.** Coqui TTS, Izwi, OpenAI Edge TTS, Piper y Willow Inference Server documentan un componente de servidor, de modo que otras apps pueden llamarlos por HTTP; [OpenAI Edge TTS](/es/power-local-llm/openai-edge-tts-review) está construido en torno a eso.',
+          `**Clonación de voz.** ${WITH('text-to-speech', 'voiceCloning', 'es')} documentan la clonación de voz o las voces personalizadas. [Bark](/es/power-local-llm/bark-tts-review) indica que no admite la clonación de voz personalizada.`,
+          `**Servidor API local.** ${WITH('text-to-speech', 'apiServer', 'es')} documentan un componente de servidor, de modo que otras apps pueden llamarlos por HTTP; [OpenAI Edge TTS](/es/power-local-llm/openai-edge-tts-review) está construido en torno a eso.`,
           '**Idiomas.** Bark documenta 13 idiomas y XTTS-v2 documenta 17. Las demás herramientas no indican una cifra comparable, por lo que la tabla muestra un guion en lugar de un número.',
         ],
       },
@@ -794,12 +804,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'stt-differences',
         title: 'Voz a texto: en qué se diferencian',
         items: [
-          '**Transcripción en tiempo real.** [whisper.cpp](/es/power-local-llm/whisper-cpp-review) documenta un ejemplo de streaming en tiempo real, e Izwi y Willow Inference Server documentan el uso en tiempo real. [faster-whisper](/es/power-local-llm/faster-whisper-review) es una biblioteca de transcripción; su propio README no documenta un modo en tiempo real.',
-          '**Etiquetas de hablante.** Izwi y FunClip documentan el etiquetado de hablantes. [Meetily](/es/power-local-llm/meetily-review) ofrece la diarización de hablantes solo en su nivel Pro de pago. El marcado de cambios de hablante de whisper.cpp es experimental y se trata en su análisis, no en la tabla.',
-          '**Precio y plataforma.** [MacWhisper](/es/power-local-llm/macwhisper-review) es una app propietaria para macOS con un nivel gratuito y una mejora de pago; la mayoría de las demás herramientas de aquí son gratuitas y de código abierto. La Community Edition de Meetily es gratuita y con licencia MIT, con un nivel Pro de pago.',
+          `**Transcripción en tiempo real.** ${WITH('speech-to-text', 'realtime', 'es')} documentan el uso en tiempo real. [faster-whisper](/es/power-local-llm/faster-whisper-review) es una biblioteca de transcripción; su propio README no documenta un modo en tiempo real.`,
+          `**Etiquetas de hablante.** ${WITH('speech-to-text', 'speakerLabels', 'es')} documentan el etiquetado de hablantes. [Meetily](/es/power-local-llm/meetily-review) ofrece la diarización de hablantes solo en su nivel Pro de pago. El marcado de cambios de hablante de whisper.cpp es experimental y se trata en su análisis, no en la tabla.`,
+          '**Precio y plataforma.** [MacWhisper](/es/power-local-llm/macwhisper-review) es una app propietaria para macOS con un nivel gratuito y una mejora de pago. La Community Edition de Meetily es gratuita y con licencia MIT, con un nivel Pro de pago.',
           '**Subtítulos e incrustación.** [Sablate](/es/power-local-llm/sablate-review) es una app de código cerrado para Windows y Mac que combina transcripción Whisper, traducción sin conexión e incrustación de subtítulos; su sitio indica que no admite la identificación de hablantes.',
           '**Reuniones y entrevistas.** [Meetini](/es/power-local-llm/meetini-review) es una app de pago y código cerrado para Mac con Apple Silicon, con subtítulos en directo, notas y práctica de entrevistas; su aviso de privacidad indica que OpenAI procesa el audio en directo, así que no es una herramienta totalmente local.',
-          '**Servidor API local.** whisper.cpp incluye un servidor, e Izwi y Willow Inference Server documentan API HTTP.',
+          `**Servidor API local.** ${WITH('speech-to-text', 'apiServer', 'es')} documentan un componente de servidor o una API HTTP.`,
           '**Apps de dictado.** [Amical](/es/power-local-llm/amical-review) tiene licencia MIT para Mac y Windows, con Whisper en local y un nivel en la nube opcional. [Weesper Neon Flow](/es/power-local-llm/weesper-neon-flow-review) es una app de pulsar para hablar para Mac y Windows, de pago tras una prueba gratuita. [Sprich](/es/power-local-llm/sprich-review) funciona solo en Mac con Apple Silicon, tiene un plan gratuito, está orientada primero al alemán y su web solo está en alemán. [Univocal](/es/power-local-llm/univocal-review) es una app de pago solo para Mac con Apple Silicon que dicta y lee en voz alta el texto seleccionado, con precio único. Según sus desarrolladores, las cuatro pueden procesar la voz en tu ordenador; PromptQuorum no las ha probado.',
           '**Traducción y doblaje de vídeo.** [pyVideoTrans](/es/power-local-llm/pyvideotrans-review) es una herramienta gratuita con licencia GPL-3.0 para Windows, macOS y Linux que transcribe un vídeo, traduce los subtítulos, los dobla con una voz sintética y reconstruye el vídeo. Según las páginas del proyecto, funciona con o sin GPU NVIDIA y admite la separación de hablantes; sus canales de traducción y de voz por defecto son servicios en línea, y PromptQuorum no ha probado la app.',
         ],
@@ -916,7 +926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカル音声・スピーチツール比較(2026):音声合成・音声認識・ボイスエージェント',
     seoTitle: 'ローカル音声・スピーチツール比較2026',
     intro:
-      `ローカルの音声ツールには、テキストを音声にする、音声をテキストにする、AIと音声で会話する、という3つの異なる役割があり、単一の機能一覧では公平に比較できません。このガイドでは、自分のハードウェア上で動く無料・フリーミアムの${VA_TOTAL}ツールを、役割ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成しているため、表とレビューの内容が食い違うことはありません。`,
+      `ローカルの音声ツールには、テキストを音声にする、音声をテキストにする、AIと音声で会話する、という3つの異なる役割があり、単一の機能一覧では公平に比較できません。このガイドでは、自分のハードウェア上で動く無料・フリーミアム・有料の${VA_TOTAL}ツールを、役割ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成しているため、表とレビューの内容が食い違うことはありません。`,
     metaDescription:
       `ローカル音声ツール${VA_TOTAL}種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。`,
     twitterDescription:
@@ -937,16 +947,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      `**PromptQuorumディレクトリにあるローカル音声ツール${VA_TOTAL}種は、別々に比較すべき3つの役割に分かれます。音声合成(${VA_TEXT_TO_SPEECH}ツール)、音声認識(${VA_SPEECH_TO_TEXT}ツール)、リアルタイム・ボイスエージェント(${VA_REALTIME_VOICE_AGENTS}ツール)です。** 音声合成のうち、ボイスクローンを公式ドキュメントに記載しているのはCoqui TTS、XTTS-v2、Izwi、Willow Inference Serverです。音声認識では、whisper.cppとWillow Inference Serverがリアルタイム文字起こしを記載しています。ボイスエージェントはDograh、Jarvis、Parlor、Voxaです。下の比較表を使い、インストール前に各ツールのレビューを読んでください。`,
+      `**PromptQuorumディレクトリにあるローカル音声ツール${VA_TOTAL}種は、別々に比較すべき3つの役割に分かれます。音声合成(${VA_TEXT_TO_SPEECH}ツール)、音声認識(${VA_SPEECH_TO_TEXT}ツール)、リアルタイム・ボイスエージェント(${VA_REALTIME_VOICE_AGENTS}ツール)です。** 音声合成のうち、ボイスクローンを公式ドキュメントに記載しているのは${WITH('text-to-speech', 'voiceCloning', 'ja', false)}です。音声認識では、${WITH('speech-to-text', 'realtime', 'ja', false)}がリアルタイム文字起こしを記載しています。下の比較表を使い、インストール前に各ツールのレビューを読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカル音声ツールを使えばよいか',
         answer:
           '用途によって異なるため、1つの役割の中で比較してください。ライセンス、プラットフォーム、CPUのみでの利用、ローカルAPIサーバー、ボイスクローン、リアルタイム文字起こしなど、最も重視する条件で選び、各ツールの公式ドキュメントから生成した下の表を使ってください。',
         bullets: [
-          '音声合成:8ツールを、対応言語、ボイスクローン、ストリーミング、CPU利用、APIサーバーで比較。',
-          '音声認識:7ツールを、リアルタイム利用、話者ラベル、CPU利用、APIサーバーで比較。',
-          'ボイスエージェント:4ツールを、完全ローカル動作、割り込み、独自LLMの利用、電話連携で比較。',
+          `音声合成:${SEG['text-to-speech']}ツールを、対応言語、ボイスクローン、ストリーミング、CPU利用、APIサーバーで比較。`,
+          `音声認識:${SEG['speech-to-text']}ツールを、リアルタイム利用、話者ラベル、CPU利用、APIサーバーで比較。`,
+          `ボイスエージェント:${SEG['voice-agents']}ツールを、完全ローカル動作、割り込み、独自LLMの利用、電話連携で比較。`,
           'ダッシュ(—)は、そのプロジェクトのドキュメントに記載がないことを示すもので、機能がないという意味ではありません。',
         ],
       },
@@ -978,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${VA_TOTAL}ツール、3つの役割:音声合成(${VA_TEXT_TO_SPEECH})、音声認識(${VA_SPEECH_TO_TEXT})、リアルタイム・ボイスエージェント(${VA_REALTIME_VOICE_AGENTS})。IzwiとWillow Inference Serverは音声合成と音声認識の両方に対応するため、両方の表に登場します。`,
+          `${VA_TOTAL}ツール、3つの役割:音声合成(${VA_TEXT_TO_SPEECH})、音声認識(${VA_SPEECH_TO_TEXT})、リアルタイム・ボイスエージェント(${VA_REALTIME_VOICE_AGENTS})。${BOTH('ja')}は音声合成と音声認識の両方に対応するため、両方の表に登場します。`,
           '表は各ツールのレコードから生成し、公式のREADMEまたはサイトと照合しています。ダッシュは「ドキュメントに記載なし」を意味し、「なし」を意味することはありません。',
           'ライセンスには重要な違いがあります。たとえばPiperとOpenAI Edge TTSはGPL-3.0、Coqui TTSはMPL-2.0、XTTS-v2はCoqui Public Model License、Bark、StyleTTS 2、whisper.cpp、faster-whisperはMITです。',
           '表内のツール名はすべて、そのツール自身のPromptQuorumレビューにリンクしています。インストール手順や制限事項はそこで扱っています。',
@@ -1005,8 +1015,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '音声合成:違いのポイント',
         items: [
           '**ライセンス。** BarkとStyleTTS 2はMITライセンスです。Coqui TTSはMPL-2.0です。XTTS-v2はCoqui Public Model License(CPML)を使用しており、これは標準的なオープンソースライセンスではなく、独自の条件を持つカスタムライセンスです。商用利用の前に必ず確認してください。PiperとOpenAI Edge TTSはGPL-3.0で、改変版を配布する際に条件が課されます。いずれかを使って製品を作る前にライセンスを確認してください。詳しくは[Piper TTS](/ja/power-local-llm/piper-tts-review)と[XTTS v2](/ja/power-local-llm/xtts-v2-review)をご覧ください。',
-          '**ボイスクローン。** Coqui TTS([レビュー](/ja/power-local-llm/coqui-tts-review))、XTTS-v2([レビュー](/ja/power-local-llm/xtts-v2-review))、Izwi([レビュー](/ja/power-local-llm/izwi-review))、Willow Inference Server([レビュー](/ja/power-local-llm/willow-inference-server-review))は、ボイスクローンまたはカスタムボイスを記載しています。[Bark](/ja/power-local-llm/bark-tts-review)は、カスタムのボイスクローンに対応していないと明記しています。',
-          '**ローカルAPIサーバー。** Coqui TTS、Izwi、OpenAI Edge TTS、Piper、Willow Inference Serverはサーバーコンポーネントを記載しており、他のアプリからHTTP経由で呼び出せます。[OpenAI Edge TTS](/ja/power-local-llm/openai-edge-tts-review)はその用途を中心に作られています。',
+          `**ボイスクローン。** ${WITH('text-to-speech', 'voiceCloning', 'ja')}は、ボイスクローンまたはカスタムボイスを記載しています。[Bark](/ja/power-local-llm/bark-tts-review)は、カスタムのボイスクローンに対応していないと明記しています。`,
+          `**ローカルAPIサーバー。** ${WITH('text-to-speech', 'apiServer', 'ja')}はサーバーコンポーネントを記載しており、他のアプリからHTTP経由で呼び出せます。[OpenAI Edge TTS](/ja/power-local-llm/openai-edge-tts-review)はその用途を中心に作られています。`,
           '**対応言語。** Barkは13言語、XTTS-v2は17言語を記載しています。他のツールは比較可能な言語数を記載していないため、表には数字ではなくダッシュを表示しています。',
         ],
       },
@@ -1014,12 +1024,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'stt-differences',
         title: '音声認識:違いのポイント',
         items: [
-          '**リアルタイム文字起こし。** [whisper.cpp](/ja/power-local-llm/whisper-cpp-review)はリアルタイムのストリーミング例を記載しており、IzwiとWillow Inference Serverはリアルタイム利用を記載しています。[faster-whisper](/ja/power-local-llm/faster-whisper-review)は文字起こしライブラリで、そのREADMEにはリアルタイムモードの記載がありません。',
-          '**話者ラベル。** IzwiとFunClipは話者ラベル付けを記載しています。[Meetily](/ja/power-local-llm/meetily-review)は話者分離(ダイアライゼーション)を有料のProプランでのみ提供します。whisper.cppの話者交代マーキングは実験的であり、表ではなくレビューで扱っています。',
-          '**価格とプラットフォーム。** [MacWhisper](/ja/power-local-llm/macwhisper-review)は無料プランと有料アップグレードを備えたプロプライエタリなmacOSアプリです。ここにある他のツールの大半は無料のオープンソースです。MeetilyのCommunity Editionは無料でMITライセンスであり、有料のProプランもあります。',
+          `**リアルタイム文字起こし。** ${WITH('speech-to-text', 'realtime', 'ja')}は、リアルタイム利用を記載しています。[faster-whisper](/ja/power-local-llm/faster-whisper-review)は文字起こしライブラリで、そのREADMEにはリアルタイムモードの記載がありません。`,
+          `**話者ラベル。** ${WITH('speech-to-text', 'speakerLabels', 'ja')}は話者ラベル付けを記載しています。[Meetily](/ja/power-local-llm/meetily-review)は話者分離(ダイアライゼーション)を有料のProプランでのみ提供します。whisper.cppの話者交代マーキングは実験的であり、表ではなくレビューで扱っています。`,
+          '**価格とプラットフォーム。** [MacWhisper](/ja/power-local-llm/macwhisper-review)は無料プランと有料アップグレードを備えたプロプライエタリなmacOSアプリです。MeetilyのCommunity Editionは無料でMITライセンスであり、有料のProプランもあります。',
           '**字幕と焼き込み。** [Sablate](/ja/power-local-llm/sablate-review)は、Whisperによる文字起こし、オフライン翻訳、字幕の焼き込みを1つにまとめたクローズドソースのWindows・Mac向けアプリです。公式サイトでは話者分離は非対応とされています。',
           '**会議と面接。** [Meetini](/ja/power-local-llm/meetini-review)は、ライブ字幕、メモ、面接練習を備えたApple Silicon Mac向けの有料クローズドソースアプリです。プライバシー通知ではライブ音声はOpenAIが処理するとされており、完全にローカルのツールではありません。',
-          '**ローカルAPIサーバー。** whisper.cppはサーバーを同梱しており、IzwiとWillow Inference ServerはHTTP APIを記載しています。',
+          `**ローカルAPIサーバー。** ${WITH('speech-to-text', 'apiServer', 'ja')}は、サーバーコンポーネントまたはHTTP APIを記載しています。`,
           '**音声入力アプリ。** [Amical](/ja/power-local-llm/amical-review)はMacとWindows向けのMITライセンスのアプリで、ローカルのWhisperと任意のクラウド層を備えます。[Weesper Neon Flow](/ja/power-local-llm/weesper-neon-flow-review)はMacとWindows向けのプッシュトゥトーク式アプリで、無料トライアルの後は有料です。[Sprich](/ja/power-local-llm/sprich-review)はApple SiliconのMac専用で、無料プランがあり、ドイツ語優先で、サイトはドイツ語のみです。[Univocal](/ja/power-local-llm/univocal-review)はApple SiliconのMac専用の有料アプリで、音声入力と選択テキストの読み上げの両方に対応し、買い切り価格です。いずれも開発元によればお使いのコンピューター上で音声を処理できます。PromptQuorumはこれらをテストしていません。',
           '**動画の翻訳と吹き替え。**[pyVideoTrans](/ja/power-local-llm/pyvideotrans-review)は、Windows・macOS・Linux向けのGPL-3.0の無料ツールで、動画を文字起こしし、字幕を翻訳して合成音声で吹き替え、動画を再構成します。プロジェクトのページによると、NVIDIA GPUの有無にかかわらず動作し、話者分離に対応しています。既定の翻訳と音声のチャネルはオンラインサービスで、PromptQuorumはこのアプリをテストしていません。',
         ],
@@ -1136,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地语音工具对比(2026):语音合成、语音转文字与语音助手',
     seoTitle: '本地语音工具对比2026',
     intro:
-      `本地语音工具分属三类不同的任务——把文字变成语音、把语音变成文字,以及与AI进行口语对话——没有哪一份统一的功能清单能公平地比较它们。本指南按任务逐类对比${VA_TOTAL}款可在你自己设备上运行的免费和免费增值工具,所用对比表与每款工具在PromptQuorum上的评测出自同一份数据生成,因此表格与评测不会互相矛盾。`,
+      `本地语音工具分属三类不同的任务——把文字变成语音、把语音变成文字,以及与AI进行口语对话——没有哪一份统一的功能清单能公平地比较它们。本指南按任务逐类对比${VA_TOTAL}款可在你自己设备上运行的免费、免费增值和付费工具,所用对比表与每款工具在PromptQuorum上的评测出自同一份数据生成,因此表格与评测不会互相矛盾。`,
     metaDescription:
       `并排对比${VA_TOTAL}款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。`,
     twitterDescription:
@@ -1157,16 +1167,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      `**PromptQuorum目录中的${VA_TOTAL}款本地语音工具分为三类任务,应分别对比:语音合成(${VA_TEXT_TO_SPEECH}款)、语音转文字(${VA_SPEECH_TO_TEXT}款)和实时语音助手(${VA_REALTIME_VOICE_AGENTS}款)。** 在语音合成中,Coqui TTS、XTTS-v2、Izwi和Willow Inference Server的官方文档提到了声音克隆;在语音转文字中,whisper.cpp和Willow Inference Server的文档提到了实时转录;Dograh、Jarvis、Parlor和Voxa则是语音助手。请使用下方的对比表,并在安装前阅读每款工具自己的评测。`,
+      `**PromptQuorum目录中的${VA_TOTAL}款本地语音工具分为三类任务,应分别对比:语音合成(${VA_TEXT_TO_SPEECH}款)、语音转文字(${VA_SPEECH_TO_TEXT}款)和实时语音助手(${VA_REALTIME_VOICE_AGENTS}款)。** 在语音合成中,${WITH('text-to-speech', 'voiceCloning', 'zh', false)}的官方文档提到了声音克隆;在语音转文字中,${WITH('speech-to-text', 'realtime', 'zh', false)}的文档提到了实时转录。请使用下方的对比表,并在安装前阅读每款工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地语音工具?',
         answer:
           '这取决于具体任务,因此请一次只在一类任务内做对比。按对你最重要的限制条件来选——许可证、平台、仅用CPU运行、本地API服务器、声音克隆、实时转录——并使用下方由各工具官方文档生成的表格。',
         bullets: [
-          '语音合成:8款工具,按语言、声音克隆、流式输出、CPU运行和API服务器进行对比。',
-          '语音转文字:7款工具,按实时使用、说话人标注、CPU运行和API服务器进行对比。',
-          '语音助手:4款工具,按完全本地运行、打断、自带LLM和电话集成进行对比。',
+          `语音合成:${SEG['text-to-speech']}款工具,按语言、声音克隆、流式输出、CPU运行和API服务器进行对比。`,
+          `语音转文字:${SEG['speech-to-text']}款工具,按实时使用、说话人标注、CPU运行和API服务器进行对比。`,
+          `语音助手:${SEG['voice-agents']}款工具,按完全本地运行、打断、自带LLM和电话集成进行对比。`,
           '短横线(—)表示该项目的文档未说明,并不代表该功能不存在。',
         ],
       },
@@ -1198,7 +1208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${VA_TOTAL}款工具,三类任务:语音合成(${VA_TEXT_TO_SPEECH}款)、语音转文字(${VA_SPEECH_TO_TEXT}款)、实时语音助手(${VA_REALTIME_VOICE_AGENTS}款)。Izwi和Willow Inference Server既做语音合成也做语音转文字,因此出现在两张表中。`,
+          `${VA_TOTAL}款工具,三类任务:语音合成(${VA_TEXT_TO_SPEECH}款)、语音转文字(${VA_SPEECH_TO_TEXT}款)、实时语音助手(${VA_REALTIME_VOICE_AGENTS}款)。${BOTH('zh')}既做语音合成也做语音转文字,因此出现在两张表中。`,
           '表格由每款工具的记录生成,并对照其官方README或网站核对;短横线表示“文档中未说明”,绝不表示“没有”。',
           '许可证的差异很重要:例如Piper和OpenAI Edge TTS采用GPL-3.0,Coqui TTS采用MPL-2.0,XTTS-v2采用Coqui Public Model License,而Bark、StyleTTS 2、whisper.cpp和faster-whisper采用MIT。',
           '表中每个工具名称都链接到它自己的PromptQuorum评测,安装步骤和局限都在评测中介绍。',
@@ -1225,8 +1235,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '语音合成:差异在哪里',
         items: [
           '**许可证。** Bark和StyleTTS 2采用MIT许可证。Coqui TTS采用MPL-2.0。XTTS-v2采用Coqui Public Model License(CPML),这是一份有自身条款的自定义许可证,而非标准的开源许可证——商业使用前请先阅读。Piper和OpenAI Edge TTS采用GPL-3.0,对分发修改后的版本附有条件。在基于其中任何一款构建产品之前,请先核实许可证——参见[Piper TTS](/zh/power-local-llm/piper-tts-review)和[XTTS v2](/zh/power-local-llm/xtts-v2-review)。',
-          '**声音克隆。** Coqui TTS([评测](/zh/power-local-llm/coqui-tts-review))、XTTS-v2([评测](/zh/power-local-llm/xtts-v2-review))、Izwi([评测](/zh/power-local-llm/izwi-review))和Willow Inference Server([评测](/zh/power-local-llm/willow-inference-server-review))的文档提到了声音克隆或自定义声音。[Bark](/zh/power-local-llm/bark-tts-review)则说明它不支持自定义声音克隆。',
-          '**本地API服务器。** Coqui TTS、Izwi、OpenAI Edge TTS、Piper和Willow Inference Server的文档提到了服务器组件,因此其他应用可以通过HTTP调用它们;[OpenAI Edge TTS](/zh/power-local-llm/openai-edge-tts-review)就是围绕这一点构建的。',
+          `**声音克隆。** ${WITH('text-to-speech', 'voiceCloning', 'zh')}的文档提到了声音克隆或自定义声音。[Bark](/zh/power-local-llm/bark-tts-review)则说明它不支持自定义声音克隆。`,
+          `**本地API服务器。** ${WITH('text-to-speech', 'apiServer', 'zh')}的文档提到了服务器组件,因此其他应用可以通过HTTP调用它们;[OpenAI Edge TTS](/zh/power-local-llm/openai-edge-tts-review)就是围绕这一点构建的。`,
           '**语言。** Bark的文档提到13种语言,XTTS-v2的文档提到17种。其他工具没有给出可比的数量,因此表格显示短横线而不是数字。',
         ],
       },
@@ -1234,12 +1244,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'stt-differences',
         title: '语音转文字:差异在哪里',
         items: [
-          '**实时转录。** [whisper.cpp](/zh/power-local-llm/whisper-cpp-review)的文档提到了实时流式示例,Izwi和Willow Inference Server的文档提到了实时使用。[faster-whisper](/zh/power-local-llm/faster-whisper-review)是一个转录库;其自身的README没有提到实时模式。',
-          '**说话人标注。** Izwi和FunClip的文档提到了说话人标注。[Meetily](/zh/power-local-llm/meetily-review)仅在其付费Pro方案中提供说话人分离。whisper.cpp的说话人轮换标记属于实验性功能,在其评测中介绍,而不列入表格。',
-          '**价格与平台。** [MacWhisper](/zh/power-local-llm/macwhisper-review)是一款专有的macOS应用,有免费方案和付费升级;这里的其他大多数工具都是免费且开源的。Meetily的社区版免费并采用MIT许可证,另有付费Pro方案。',
+          `**实时转录。** ${WITH('speech-to-text', 'realtime', 'zh')}的文档提到了实时使用。[faster-whisper](/zh/power-local-llm/faster-whisper-review)是一个转录库;其自身的README没有提到实时模式。`,
+          `**说话人标注。** ${WITH('speech-to-text', 'speakerLabels', 'zh')}的文档提到了说话人标注。[Meetily](/zh/power-local-llm/meetily-review)仅在其付费Pro方案中提供说话人分离。whisper.cpp的说话人轮换标记属于实验性功能,在其评测中介绍,而不列入表格。`,
+          '**价格与平台。** [MacWhisper](/zh/power-local-llm/macwhisper-review)是一款专有的macOS应用,有免费方案和付费升级。Meetily的社区版免费并采用MIT许可证,另有付费Pro方案。',
           '**字幕与烧录。** [Sablate](/zh/power-local-llm/sablate-review)是一款闭源的Windows和Mac应用，集成了Whisper转录、离线翻译和字幕烧录；其官网列明不支持说话人区分。',
           '**会议与面试。** [Meetini](/zh/power-local-llm/meetini-review)是一款面向 Apple Silicon Mac 的付费闭源应用，提供实时字幕、笔记和面试练习；其隐私声明称实时音频由 OpenAI 处理，因此并非完全本地的工具。',
-          '**本地API服务器。** whisper.cpp附带一个服务器,Izwi和Willow Inference Server的文档提到了HTTP API。',
+          `**本地API服务器。** ${WITH('speech-to-text', 'apiServer', 'zh')}的文档提到了服务器组件或HTTP API。`,
           '**听写应用。** [Amical](/zh/power-local-llm/amical-review)采用 MIT 许可证，支持 Mac 和 Windows，使用本地 Whisper，并提供可选的云端层。[Weesper Neon Flow](/zh/power-local-llm/weesper-neon-flow-review)是适用于 Mac 和 Windows 的按键说话式应用，免费试用后需付费。[Sprich](/zh/power-local-llm/sprich-review)仅支持 Apple Silicon Mac，有免费套餐，以德语为先，网站仅有德语版。[Univocal](/zh/power-local-llm/univocal-review)是仅支持 Apple Silicon Mac 的付费应用，同时支持听写和朗读选中文字，一次性付费。据各自开发者称，四者都可以在你的电脑上处理语音；PromptQuorum 未对它们进行测试。',
           '**视频翻译与配音。** [pyVideoTrans](/zh/power-local-llm/pyvideotrans-review) 是适用于 Windows、macOS 和 Linux 的免费 GPL-3.0 工具，可转录视频、翻译字幕、用合成语音配音并重新合成视频。据项目页面介绍，它无论有无 NVIDIA GPU 都能运行，并支持说话人分离；默认的翻译和语音渠道是在线服务，PromptQuorum 没有测试过该应用。',
         ],
@@ -1356,7 +1366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Ferramentas locais de voz e fala comparadas (2026): síntese de voz, transcrição e agentes de voz',
     seoTitle: 'Ferramentas locais de voz e fala comparadas 2026',
     intro:
-      `As ferramentas locais de voz cumprem três funções diferentes — transformar texto em fala, transformar fala em texto e conduzir uma conversa falada com uma IA — e nenhuma lista única de recursos compara as três de forma justa. Este guia compara ${VA_TOTAL} ferramentas gratuitas e freemium que rodam no seu próprio hardware, uma função por vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.`,
+      `As ferramentas locais de voz cumprem três funções diferentes — transformar texto em fala, transformar fala em texto e conduzir uma conversa falada com uma IA — e nenhuma lista única de recursos compara as três de forma justa. Este guia compara ${VA_TOTAL} ferramentas gratuitas, freemium e pagas que rodam no seu próprio hardware, uma função por vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.`,
     metaDescription:
       `Compare ${VA_TOTAL} ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.`,
     twitterDescription:
@@ -1377,16 +1387,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      `**As ${VA_TOTAL} ferramentas locais de voz do diretório PromptQuorum se dividem em três funções que devem ser comparadas separadamente: síntese de voz (${VA_TEXT_TO_SPEECH} ferramentas), transcrição de fala (${VA_SPEECH_TO_TEXT}) e agentes de voz em tempo real (${VA_REALTIME_VOICE_AGENTS}).** Na síntese de voz, a clonagem de voz consta na documentação oficial do Coqui TTS, do XTTS-v2, do Izwi e do Willow Inference Server; na transcrição, o whisper.cpp e o Willow Inference Server documentam transcrição em tempo real; e Dograh, Jarvis, Parlor e Voxa são os agentes de voz. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
+      `**As ${VA_TOTAL} ferramentas locais de voz do diretório PromptQuorum se dividem em três funções que devem ser comparadas separadamente: síntese de voz (${VA_TEXT_TO_SPEECH} ferramentas), transcrição de fala (${VA_SPEECH_TO_TEXT}) e agentes de voz em tempo real (${VA_REALTIME_VOICE_AGENTS}).** Na síntese de voz, a clonagem de voz consta na documentação oficial de ${WITH('text-to-speech', 'voiceCloning', 'pt', false)}; na transcrição, ${WITH('speech-to-text', 'realtime', 'pt', false)} documentam transcrição em tempo real. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta local de voz devo usar?',
         answer:
           'Depende da função, então compare dentro de uma função por vez. Escolha pela restrição que mais importa — licença, plataforma, uso somente com CPU, servidor de API local, clonagem de voz, transcrição em tempo real — e use a tabela abaixo, gerada a partir da documentação oficial de cada ferramenta.',
         bullets: [
-          'Síntese de voz: 8 ferramentas comparadas por idiomas, clonagem de voz, streaming, uso de CPU e servidor de API.',
-          'Transcrição de fala: 7 ferramentas comparadas por uso em tempo real, identificação de falantes, uso de CPU e servidor de API.',
-          'Agentes de voz: 4 ferramentas comparadas por operação totalmente local, interrupção, uso do seu próprio LLM e telefonia.',
+          `Síntese de voz: ${SEG['text-to-speech']} ferramentas comparadas por idiomas, clonagem de voz, streaming, uso de CPU e servidor de API.`,
+          `Transcrição de fala: ${SEG['speech-to-text']} ferramentas comparadas por uso em tempo real, identificação de falantes, uso de CPU e servidor de API.`,
+          `Agentes de voz: ${SEG['voice-agents']} ferramentas comparadas por operação totalmente local, interrupção, uso do seu próprio LLM e telefonia.`,
           'Um traço (—) significa que a documentação do projeto não informa o dado, não que o recurso não exista.',
         ],
       },
@@ -1418,7 +1428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${VA_TOTAL} ferramentas, três funções: síntese de voz (${VA_TEXT_TO_SPEECH}), transcrição de fala (${VA_SPEECH_TO_TEXT}), agentes de voz em tempo real (${VA_REALTIME_VOICE_AGENTS}). O Izwi e o Willow Inference Server fazem tanto síntese de voz quanto transcrição, por isso aparecem nas duas tabelas.`,
+          `${VA_TOTAL} ferramentas, três funções: síntese de voz (${VA_TEXT_TO_SPEECH}), transcrição de fala (${VA_SPEECH_TO_TEXT}), agentes de voz em tempo real (${VA_REALTIME_VOICE_AGENTS}). ${BOTH('pt')} fazem tanto síntese de voz quanto transcrição, por isso aparecem nas duas tabelas.`,
           'A tabela é gerada a partir do registro de cada ferramenta e conferida com o README ou o site oficial; um traço significa "não informado na documentação", nunca "não".',
           'As licenças diferem de maneiras que importam: por exemplo, Piper e OpenAI Edge TTS são GPL-3.0, o Coqui TTS é MPL-2.0, o XTTS-v2 usa a Coqui Public Model License, e Bark, StyleTTS 2, whisper.cpp e faster-whisper são MIT.',
           'Cada nome de ferramenta na tabela leva à sua própria análise no PromptQuorum, onde estão os passos de instalação e os limites.',
@@ -1445,8 +1455,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Síntese de voz: o que muda',
         items: [
           '**Licença.** Bark e StyleTTS 2 têm licença MIT. O Coqui TTS é MPL-2.0. O XTTS-v2 usa a Coqui Public Model License (CPML), uma licença personalizada com termos próprios, e não uma licença de código aberto padrão — leia-a antes de qualquer uso comercial. Piper e OpenAI Edge TTS são GPL-3.0, que impõe condições à distribuição de versões modificadas. Verifique a licença antes de construir um produto sobre qualquer uma delas — veja [Piper TTS](/pt/power-local-llm/piper-tts-review) e [XTTS v2](/pt/power-local-llm/xtts-v2-review).',
-          '**Clonagem de voz.** Coqui TTS ([análise](/pt/power-local-llm/coqui-tts-review)), XTTS-v2 ([análise](/pt/power-local-llm/xtts-v2-review)), Izwi ([análise](/pt/power-local-llm/izwi-review)) e Willow Inference Server ([análise](/pt/power-local-llm/willow-inference-server-review)) documentam clonagem de voz ou vozes personalizadas. O [Bark](/pt/power-local-llm/bark-tts-review) informa que não oferece suporte à clonagem de voz personalizada.',
-          '**Servidor de API local.** Coqui TTS, Izwi, OpenAI Edge TTS, Piper e Willow Inference Server documentam um componente de servidor, para que outros aplicativos possam chamá-los por HTTP; o [OpenAI Edge TTS](/pt/power-local-llm/openai-edge-tts-review) é construído em torno disso.',
+          `**Clonagem de voz.** ${WITH('text-to-speech', 'voiceCloning', 'pt')} documentam clonagem de voz ou vozes personalizadas. O [Bark](/pt/power-local-llm/bark-tts-review) informa que não oferece suporte à clonagem de voz personalizada.`,
+          `**Servidor de API local.** ${WITH('text-to-speech', 'apiServer', 'pt')} documentam um componente de servidor, para que outros aplicativos possam chamá-los por HTTP; o [OpenAI Edge TTS](/pt/power-local-llm/openai-edge-tts-review) é construído em torno disso.`,
           '**Idiomas.** O Bark documenta 13 idiomas e o XTTS-v2 documenta 17. As demais ferramentas não informam uma contagem comparável, por isso a tabela mostra um traço em vez de um número.',
         ],
       },
@@ -1454,12 +1464,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'stt-differences',
         title: 'Transcrição de fala: o que muda',
         items: [
-          '**Transcrição em tempo real.** O [whisper.cpp](/pt/power-local-llm/whisper-cpp-review) documenta um exemplo de streaming em tempo real, e o Izwi e o Willow Inference Server documentam uso em tempo real. O [faster-whisper](/pt/power-local-llm/faster-whisper-review) é uma biblioteca de transcrição; seu próprio README não documenta um modo em tempo real.',
-          '**Identificação de falantes.** Izwi e FunClip documentam a identificação de falantes. O [Meetily](/pt/power-local-llm/meetily-review) oferece diarização de falantes apenas no plano Pro pago. A marcação de troca de falantes do whisper.cpp é experimental e é tratada na análise dele, não na tabela.',
-          '**Preço e plataforma.** O [MacWhisper](/pt/power-local-llm/macwhisper-review) é um aplicativo proprietário para macOS com um plano gratuito e uma atualização paga; a maioria das outras ferramentas aqui é gratuita e de código aberto. A Community Edition do Meetily é gratuita e sob licença MIT, com um plano Pro pago.',
+          `**Transcrição em tempo real.** ${WITH('speech-to-text', 'realtime', 'pt')} documentam uso em tempo real. O [faster-whisper](/pt/power-local-llm/faster-whisper-review) é uma biblioteca de transcrição; seu próprio README não documenta um modo em tempo real.`,
+          `**Identificação de falantes.** ${WITH('speech-to-text', 'speakerLabels', 'pt')} documentam a identificação de falantes. O [Meetily](/pt/power-local-llm/meetily-review) oferece diarização de falantes apenas no plano Pro pago. A marcação de troca de falantes do whisper.cpp é experimental e é tratada na análise dele, não na tabela.`,
+          '**Preço e plataforma.** O [MacWhisper](/pt/power-local-llm/macwhisper-review) é um aplicativo proprietário para macOS com um plano gratuito e uma atualização paga. A Community Edition do Meetily é gratuita e sob licença MIT, com um plano Pro pago.',
           '**Legendas e gravação no vídeo.** O [Sablate](/pt/power-local-llm/sablate-review) é um aplicativo de código fechado para Windows e Mac que reúne transcrição Whisper, tradução offline e gravação de legendas no vídeo; o site informa que não oferece identificação de falantes.',
           '**Reuniões e entrevistas.** O [Meetini](/pt/power-local-llm/meetini-review) é um aplicativo pago e de código fechado para Macs com Apple Silicon, com legendas ao vivo, notas e treino de entrevistas; o aviso de privacidade diz que a OpenAI processa o áudio ao vivo, então não é uma ferramenta totalmente local.',
-          '**Servidor de API local.** O whisper.cpp inclui um servidor, e o Izwi e o Willow Inference Server documentam APIs HTTP.',
+          `**Servidor de API local.** ${WITH('speech-to-text', 'apiServer', 'pt')} documentam um componente de servidor ou uma API HTTP.`,
           '**Apps de ditado.** O [Amical](/pt/power-local-llm/amical-review) tem licença MIT para Mac e Windows, com Whisper local e um nível em nuvem opcional. O [Weesper Neon Flow](/pt/power-local-llm/weesper-neon-flow-review) é um app de apertar para falar para Mac e Windows, pago após um teste gratuito. O [Sprich](/pt/power-local-llm/sprich-review) funciona só em Macs com Apple Silicon, tem plano gratuito, é voltado primeiro ao alemão e tem site só em alemão. [Univocal](/pt/power-local-llm/univocal-review) é um app pago só para Macs com Apple Silicon que dita e lê em voz alta o texto selecionado, com preço único. Segundo os desenvolvedores, os quatro podem processar a fala no seu computador; o PromptQuorum não os testou.',
           '**Tradução e dublagem de vídeo.** [pyVideoTrans](/pt/power-local-llm/pyvideotrans-review) é uma ferramenta gratuita com licença GPL-3.0 para Windows, macOS e Linux que transcreve um vídeo, traduz as legendas, dubla com uma voz sintética e remonta o vídeo. Segundo as páginas do projeto, funciona com ou sem GPU NVIDIA e oferece separação de falantes; os canais padrão de tradução e de voz são serviços online, e a PromptQuorum não testou o app.',
         ],
@@ -1576,7 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مقارنة أدوات الصوت والكلام المحلية (2026): تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون',
     seoTitle: 'مقارنة أدوات الصوت والكلام المحلية 2026',
     intro:
-      `تنقسم أدوات الصوت المحلية إلى ثلاث مهام مختلفة — تحويل النص إلى كلام، وتحويل الكلام إلى نص، وإجراء محادثة منطوقة مع الذكاء الاصطناعي — ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل ${VA_TOTAL} أداة مجانية وفريميوم تعمل على جهازك الخاص، مهمةً تلو الأخرى، باستخدام جدول مقارنة مولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.`,
+      `تنقسم أدوات الصوت المحلية إلى ثلاث مهام مختلفة — تحويل النص إلى كلام، وتحويل الكلام إلى نص، وإجراء محادثة منطوقة مع الذكاء الاصطناعي — ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل ${VA_TOTAL} أداة مجانية وفريميوم ومدفوعة تعمل على جهازك الخاص، مهمةً تلو الأخرى، باستخدام جدول مقارنة مولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.`,
     metaDescription:
       `قارن ${VA_TOTAL} أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.`,
     twitterDescription:
@@ -1597,16 +1607,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      `**تنقسم أدوات الصوت المحلية الـ${VA_TOTAL} في دليل PromptQuorum إلى ثلاث مهام ينبغي مقارنتها كلٌّ على حدة: تحويل النص إلى كلام (${VA_TEXT_TO_SPEECH} أدوات)، وتحويل الكلام إلى نص (${VA_SPEECH_TO_TEXT})، والوكلاء الصوتيون الفوريون (${VA_REALTIME_VOICE_AGENTS}).** ففي تحويل النص إلى كلام، يُذكر استنساخ الصوت في الوثائق الرسمية لـ Coqui TTS وXTTS-v2 وIzwi وWillow Inference Server؛ وفي تحويل الكلام إلى نص، توثّق whisper.cpp وWillow Inference Server النسخ الفوري؛ أما Dograh وJarvis وParlor وVoxa فهي الوكلاء الصوتيون. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
+      `**تنقسم أدوات الصوت المحلية الـ${VA_TOTAL} في دليل PromptQuorum إلى ثلاث مهام ينبغي مقارنتها كلٌّ على حدة: تحويل النص إلى كلام (${VA_TEXT_TO_SPEECH} ${VA_TEXT_TO_SPEECH > 10 ? 'أداة' : 'أدوات'})، وتحويل الكلام إلى نص (${VA_SPEECH_TO_TEXT})، والوكلاء الصوتيون الفوريون (${VA_REALTIME_VOICE_AGENTS}).** ففي تحويل النص إلى كلام، يُذكر استنساخ الصوت في الوثائق الرسمية لـ ${WITH('text-to-speech', 'voiceCloning', 'ar', false)}؛ وفي تحويل الكلام إلى نص، توثّق ${WITH('speech-to-text', 'realtime', 'ar', false)} النسخ الفوري. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'ما أداة الصوت المحلية التي ينبغي أن أستخدمها؟',
         answer:
           'الأمر يعتمد على المهمة، لذا قارن داخل مهمة واحدة في كل مرة. اختر بحسب القيد الأهم لديك — الرخصة، أو المنصة، أو الاستخدام على CPU فقط، أو خادم API محلي، أو استنساخ الصوت، أو النسخ الفوري — واستعن بالجدول أدناه المولَّد من الوثائق الرسمية لكل أداة.',
         bullets: [
-          'تحويل النص إلى كلام: 8 أدوات تُقارَن من حيث اللغات واستنساخ الصوت والبث المتدفق واستخدام CPU وخادم API.',
-          'تحويل الكلام إلى نص: 7 أدوات تُقارَن من حيث الاستخدام الفوري وتمييز المتحدثين واستخدام CPU وخادم API.',
-          'الوكلاء الصوتيون: 4 أدوات تُقارَن من حيث التشغيل المحلي بالكامل والمقاطعة واستخدام نموذج LLM من اختيارك والاتصال الهاتفي.',
+          `تحويل النص إلى كلام: ${SEG['text-to-speech']} ${SEG['text-to-speech'] > 10 ? 'أداة' : 'أدوات'} تُقارَن من حيث اللغات واستنساخ الصوت والبث المتدفق واستخدام CPU وخادم API.`,
+          `تحويل الكلام إلى نص: ${SEG['speech-to-text']} ${SEG['speech-to-text'] > 10 ? 'أداة' : 'أدوات'} تُقارَن من حيث الاستخدام الفوري وتمييز المتحدثين واستخدام CPU وخادم API.`,
+          `الوكلاء الصوتيون: ${SEG['voice-agents']} ${SEG['voice-agents'] > 10 ? 'أداة' : 'أدوات'} تُقارَن من حيث التشغيل المحلي بالكامل والمقاطعة واستخدام نموذج LLM من اختيارك والاتصال الهاتفي.`,
           'الشرطة (—) تعني أن وثائق المشروع لا تذكر هذه الميزة، ولا تعني أنها غير موجودة.',
         ],
       },
@@ -1638,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `${VA_TOTAL} أداة وثلاث مهام: تحويل النص إلى كلام (${VA_TEXT_TO_SPEECH})، وتحويل الكلام إلى نص (${VA_SPEECH_TO_TEXT})، والوكلاء الصوتيون الفوريون (${VA_REALTIME_VOICE_AGENTS}). تجمع Izwi وWillow Inference Server بين تحويل النص إلى كلام وتحويل الكلام إلى نص، لذلك تظهران في الجدولين.`,
+          `${VA_TOTAL} أداة وثلاث مهام: تحويل النص إلى كلام (${VA_TEXT_TO_SPEECH})، وتحويل الكلام إلى نص (${VA_SPEECH_TO_TEXT})، والوكلاء الصوتيون الفوريون (${VA_REALTIME_VOICE_AGENTS}). تجمع ${BOTH('ar')} بين تحويل النص إلى كلام وتحويل الكلام إلى نص، لذلك تظهر في الجدولين.`,
           'يُولَّد الجدول من سجل كل أداة ويُدقَّق مقابل ملف README الرسمي أو الموقع الرسمي لها؛ والشرطة تعني «غير مذكور في الوثائق»، ولا تعني «لا» أبدًا.',
           'تختلف التراخيص بطرق مهمة: فمثلًا Piper وOpenAI Edge TTS بترخيص GPL-3.0، وCoqui TTS بترخيص MPL-2.0، وXTTS-v2 يستخدم رخصة Coqui Public Model License، وBark وStyleTTS 2 وwhisper.cpp وfaster-whisper بترخيص MIT.',
           'يرتبط اسم كل أداة في الجدول بمراجعتها الخاصة في PromptQuorum، حيث تُغطى خطوات التثبيت والحدود.',
@@ -1665,8 +1675,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'تحويل النص إلى كلام: ما الذي يختلف',
         items: [
           '**الرخصة.** Bark وStyleTTS 2 بترخيص MIT. وCoqui TTS بترخيص MPL-2.0. أما XTTS-v2 فيستخدم رخصة Coqui Public Model License (CPML)، وهي رخصة مخصصة بشروطها الخاصة وليست رخصة مفتوحة المصدر قياسية — اقرأها قبل أي استخدام تجاري. وPiper وOpenAI Edge TTS بترخيص GPL-3.0، الذي يفرض شروطًا على توزيع النسخ المعدّلة. تحقّق من الرخصة قبل بناء منتج على أي منها — انظر [Piper TTS](/ar/power-local-llm/piper-tts-review) و[XTTS v2](/ar/power-local-llm/xtts-v2-review).',
-          '**استنساخ الصوت.** توثّق Coqui TTS ([مراجعة](/ar/power-local-llm/coqui-tts-review)) وXTTS-v2 ([مراجعة](/ar/power-local-llm/xtts-v2-review)) وIzwi ([مراجعة](/ar/power-local-llm/izwi-review)) وWillow Inference Server ([مراجعة](/ar/power-local-llm/willow-inference-server-review)) استنساخ الصوت أو الأصوات المخصصة. أما [Bark](/ar/power-local-llm/bark-tts-review) فتنص على أنها لا تدعم استنساخ الأصوات المخصصة.',
-          '**خادم API محلي.** توثّق Coqui TTS وIzwi وOpenAI Edge TTS وPiper وWillow Inference Server مكوّن خادم، بحيث تستطيع تطبيقات أخرى استدعاءها عبر HTTP؛ و[OpenAI Edge TTS](/ar/power-local-llm/openai-edge-tts-review) مبنية حول ذلك.',
+          `**استنساخ الصوت.** توثّق ${WITH('text-to-speech', 'voiceCloning', 'ar')} استنساخ الصوت أو الأصوات المخصصة. أما [Bark](/ar/power-local-llm/bark-tts-review) فتنص على أنها لا تدعم استنساخ الأصوات المخصصة.`,
+          `**خادم API محلي.** توثّق ${WITH('text-to-speech', 'apiServer', 'ar')} مكوّن خادم، بحيث تستطيع تطبيقات أخرى استدعاءها عبر HTTP؛ و[OpenAI Edge TTS](/ar/power-local-llm/openai-edge-tts-review) مبنية حول ذلك.`,
           '**اللغات.** توثّق Bark دعم 13 لغة وتوثّق XTTS-v2 دعم 17. أما الأدوات الأخرى فلا تذكر عددًا قابلًا للمقارنة، لذلك يعرض الجدول شرطة بدل رقم.',
         ],
       },
@@ -1674,12 +1684,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'stt-differences',
         title: 'تحويل الكلام إلى نص: ما الذي يختلف',
         items: [
-          '**النسخ الفوري.** توثّق [whisper.cpp](/ar/power-local-llm/whisper-cpp-review) مثالًا للبث الفوري، وتوثّق Izwi وWillow Inference Server الاستخدام الفوري. أما [faster-whisper](/ar/power-local-llm/faster-whisper-review) فهي مكتبة نسخ؛ ولا يوثّق ملف README الخاص بها وضعًا فوريًا.',
-          '**تمييز المتحدثين.** توثّق Izwi وFunClip تمييز المتحدثين. وتقدّم [Meetily](/ar/power-local-llm/meetily-review) تمييز المتحدثين (speaker diarization) في خطة Pro المدفوعة فقط. أما وسم تغيّر المتحدثين في whisper.cpp فتجريبي، ويُغطى في مراجعتها لا في الجدول.',
-          '**السعر والمنصة.** [MacWhisper](/ar/power-local-llm/macwhisper-review) تطبيق macOS مملوك بمستوى مجاني وترقية مدفوعة؛ ومعظم الأدوات الأخرى هنا مجانية ومفتوحة المصدر. ونسخة Meetily المجتمعية (Community Edition) مجانية وبترخيص MIT، مع خطة Pro مدفوعة.',
+          `**النسخ الفوري.** توثّق ${WITH('speech-to-text', 'realtime', 'ar')} الاستخدام الفوري. أما [faster-whisper](/ar/power-local-llm/faster-whisper-review) فهي مكتبة نسخ؛ ولا يوثّق ملف README الخاص بها وضعًا فوريًا.`,
+          `**تمييز المتحدثين.** توثّق ${WITH('speech-to-text', 'speakerLabels', 'ar')} تمييز المتحدثين. وتقدّم [Meetily](/ar/power-local-llm/meetily-review) تمييز المتحدثين (speaker diarization) في خطة Pro المدفوعة فقط. أما وسم تغيّر المتحدثين في whisper.cpp فتجريبي، ويُغطى في مراجعتها لا في الجدول.`,
+          '**السعر والمنصة.** [MacWhisper](/ar/power-local-llm/macwhisper-review) تطبيق macOS مملوك بمستوى مجاني وترقية مدفوعة. ونسخة Meetily المجتمعية (Community Edition) مجانية وبترخيص MIT، مع خطة Pro مدفوعة.',
           '**الترجمة النصية ودمجها في الفيديو.** [Sablate](/ar/power-local-llm/sablate-review) تطبيق مغلق المصدر لأجهزة Windows وMac يجمع بين النسخ الصوتي عبر Whisper والترجمة دون اتصال ودمج الترجمات في الفيديو؛ ويذكر موقعه أن تمييز المتحدثين غير مدعوم.',
           '**الاجتماعات والمقابلات.** [Meetini](/ar/power-local-llm/meetini-review) تطبيق مدفوع ومغلق المصدر لأجهزة Mac بمعالج Apple Silicon يوفّر تسميات توضيحية مباشرة وملاحظات وتدريبًا على المقابلات؛ ويذكر إشعار الخصوصية أن OpenAI تعالج الصوت المباشر، فليس أداة محلية بالكامل.',
-          '**خادم API محلي.** تأتي whisper.cpp بخادم، وتوثّق Izwi وWillow Inference Server واجهات HTTP API.',
+          `**خادم API محلي.** توثّق ${WITH('speech-to-text', 'apiServer', 'ar')} مكوّن خادم أو واجهة HTTP API.`,
           '**تطبيقات الإملاء.** [Amical](/ar/power-local-llm/amical-review) برخصة MIT لنظامي Mac وWindows، مع Whisper محلي وطبقة سحابية اختيارية. [Weesper Neon Flow](/ar/power-local-llm/weesper-neon-flow-review) تطبيق للتحدث بالضغط على زر لنظامي Mac وWindows، وهو مدفوع بعد فترة تجريبية مجانية. [Sprich](/ar/power-local-llm/sprich-review) يعمل فقط على أجهزة Mac بمعالج Apple Silicon، وله خطة مجانية، ويركّز أولًا على الألمانية، وموقعه بالألمانية فقط. [Univocal](/ar/power-local-llm/univocal-review) تطبيق مدفوع لأجهزة Mac بمعالج Apple Silicon فقط، يُملي ويقرأ النص المحدد بصوت عالٍ، بسعر لمرة واحدة. بحسب مطوّريها يمكن للأربعة معالجة الكلام على جهازك؛ ولم يختبرها PromptQuorum.',
           '**ترجمة الفيديو والدبلجة.** [pyVideoTrans](/ar/power-local-llm/pyvideotrans-review) أداة مجانية بترخيص GPL-3.0 لأنظمة Windows وmacOS وLinux تنسخ الفيديو صوتيًا وتترجم الترجمات وتدبلجها بصوت اصطناعي ثم تعيد تركيب الفيديو. بحسب صفحات المشروع، يعمل مع بطاقة NVIDIA أو بدونها ويدعم تمييز المتحدثين؛ وقنوات الترجمة والصوت الافتراضية خدمات عبر الإنترنت، ولم تختبر PromptQuorum التطبيق.',
         ],
@@ -1796,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 음성·음성 인식 도구 비교(2026): 음성 합성, 음성 인식, 음성 에이전트',
     seoTitle: '로컬 음성 도구 비교 2026: TTS·STT·에이전트',
     intro:
-      `로컬 음성 도구는 텍스트를 음성으로 바꾸기, 음성을 텍스트로 바꾸기, AI와 음성으로 대화하기라는 세 가지 서로 다른 작업으로 나뉘며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 자신의 하드웨어에서 실행되는 무료 및 프리미엄 도구 ${VA_TOTAL}개를 작업별로 하나씩 비교합니다. 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터로 생성되므로, 표와 리뷰의 내용이 서로 어긋날 수 없습니다.`,
+      `로컬 음성 도구는 텍스트를 음성으로 바꾸기, 음성을 텍스트로 바꾸기, AI와 음성으로 대화하기라는 세 가지 서로 다른 작업으로 나뉘며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 자신의 하드웨어에서 실행되는 무료, 프리미엄 및 유료 도구 ${VA_TOTAL}개를 작업별로 하나씩 비교합니다. 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터로 생성되므로, 표와 리뷰의 내용이 서로 어긋날 수 없습니다.`,
     metaDescription:
       `로컬 음성 도구 ${VA_TOTAL}개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.`,
     twitterDescription:
@@ -1817,16 +1827,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      `**PromptQuorum 디렉터리의 로컬 음성 도구 ${VA_TOTAL}개는 따로 비교해야 하는 세 가지 작업으로 나뉩니다: 음성 합성(${VA_TEXT_TO_SPEECH}개), 음성 인식(${VA_SPEECH_TO_TEXT}개), 실시간 음성 에이전트(${VA_REALTIME_VOICE_AGENTS}개).** 음성 합성 중에서는 Coqui TTS, XTTS-v2, Izwi, Willow Inference Server의 공식 문서가 음성 복제를 명시하고 있으며, 음성 인식에서는 whisper.cpp와 Willow Inference Server가 실시간 받아쓰기를 문서화하고 있습니다. Dograh, Jarvis, Parlor, Voxa는 음성 에이전트입니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
+      `**PromptQuorum 디렉터리의 로컬 음성 도구 ${VA_TOTAL}개는 따로 비교해야 하는 세 가지 작업으로 나뉩니다: 음성 합성(${VA_TEXT_TO_SPEECH}개), 음성 인식(${VA_SPEECH_TO_TEXT}개), 실시간 음성 에이전트(${VA_REALTIME_VOICE_AGENTS}개).** 음성 합성 중에서는 ${WITH('text-to-speech', 'voiceCloning', 'ko', false)}의 공식 문서가 음성 복제를 명시하고 있으며, 음성 인식에서는 ${WITH('speech-to-text', 'realtime', 'ko', false)}이(가) 실시간 받아쓰기를 문서화하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 음성 도구를 써야 합니까?',
         answer:
           '작업에 따라 다르므로, 한 번에 하나의 작업 안에서 비교하십시오. 라이선스, 플랫폼, CPU 전용 사용, 로컬 API 서버, 음성 복제, 실시간 받아쓰기 중 가장 중요한 조건을 기준으로 고르고, 각 도구의 공식 문서를 바탕으로 생성된 아래 표를 활용하십시오.',
         bullets: [
-          '음성 합성: 도구 8개를 언어, 음성 복제, 스트리밍, CPU 사용, API 서버 기준으로 비교.',
-          '음성 인식: 도구 7개를 실시간 사용, 화자 구분, CPU 사용, API 서버 기준으로 비교.',
-          '음성 에이전트: 도구 4개를 완전 로컬 동작, 끼어들기, 자체 LLM 연결, 전화 연동 기준으로 비교.',
+          `음성 합성: 도구 ${SEG['text-to-speech']}개를 언어, 음성 복제, 스트리밍, CPU 사용, API 서버 기준으로 비교.`,
+          `음성 인식: 도구 ${SEG['speech-to-text']}개를 실시간 사용, 화자 구분, CPU 사용, API 서버 기준으로 비교.`,
+          `음성 에이전트: 도구 ${SEG['voice-agents']}개를 완전 로컬 동작, 끼어들기, 자체 LLM 연결, 전화 연동 기준으로 비교.`,
           '대시(—)는 프로젝트 문서에 해당 내용이 명시되어 있지 않다는 뜻이며, 기능이 없다는 뜻이 아닙니다.',
         ],
       },
@@ -1858,7 +1868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          `도구 ${VA_TOTAL}개, 작업 3가지: 음성 합성(${VA_TEXT_TO_SPEECH}), 음성 인식(${VA_SPEECH_TO_TEXT}), 실시간 음성 에이전트(${VA_REALTIME_VOICE_AGENTS}). Izwi와 Willow Inference Server는 음성 합성과 음성 인식을 모두 하므로 두 표에 모두 나타납니다.`,
+          `도구 ${VA_TOTAL}개, 작업 3가지: 음성 합성(${VA_TEXT_TO_SPEECH}), 음성 인식(${VA_SPEECH_TO_TEXT}), 실시간 음성 에이전트(${VA_REALTIME_VOICE_AGENTS}). ${BOTH('ko')}는 음성 합성과 음성 인식을 모두 하므로 두 표에 모두 나타납니다.`,
           '표는 각 도구의 레코드로 생성되며 공식 README 또는 사이트와 대조해 확인합니다. 대시는 "문서에 명시되지 않음"을 뜻하며, "아니오"를 뜻하지 않습니다.',
           '라이선스는 중요한 방식으로 서로 다릅니다. 예를 들어 Piper와 OpenAI Edge TTS는 GPL-3.0, Coqui TTS는 MPL-2.0, XTTS-v2는 Coqui Public Model License를 사용하고, Bark, StyleTTS 2, whisper.cpp, faster-whisper는 MIT입니다.',
           '표의 모든 도구 이름은 해당 도구의 PromptQuorum 리뷰로 연결되며, 설치 단계와 한계는 그곳에서 다룹니다.',
@@ -1885,8 +1895,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '음성 합성: 무엇이 다른가',
         items: [
           '**라이선스.** Bark와 StyleTTS 2는 MIT 라이선스입니다. Coqui TTS는 MPL-2.0입니다. XTTS-v2는 Coqui Public Model License(CPML)를 사용하는데, 이는 표준 오픈소스 라이선스가 아니라 고유한 조건을 가진 맞춤 라이선스이므로 상업적으로 사용하기 전에 반드시 읽어 보십시오. Piper와 OpenAI Edge TTS는 GPL-3.0이며, 수정본을 배포할 때 조건이 붙습니다. 이 중 어떤 것으로든 제품을 만들기 전에 라이선스를 확인하십시오 — [Piper TTS](/ko/power-local-llm/piper-tts-review)와 [XTTS v2](/ko/power-local-llm/xtts-v2-review)를 참고하십시오.',
-          '**음성 복제.** Coqui TTS([리뷰](/ko/power-local-llm/coqui-tts-review)), XTTS-v2([리뷰](/ko/power-local-llm/xtts-v2-review)), Izwi([리뷰](/ko/power-local-llm/izwi-review)), Willow Inference Server([리뷰](/ko/power-local-llm/willow-inference-server-review))는 음성 복제 또는 사용자 지정 음성을 문서화하고 있습니다. [Bark](/ko/power-local-llm/bark-tts-review)는 사용자 지정 음성 복제를 지원하지 않는다고 명시합니다.',
-          '**로컬 API 서버.** Coqui TTS, Izwi, OpenAI Edge TTS, Piper, Willow Inference Server는 서버 구성 요소를 문서화하고 있어 다른 앱이 HTTP로 호출할 수 있습니다. [OpenAI Edge TTS](/ko/power-local-llm/openai-edge-tts-review)는 이를 중심으로 만들어졌습니다.',
+          `**음성 복제.** ${WITH('text-to-speech', 'voiceCloning', 'ko')}은(는) 음성 복제 또는 사용자 지정 음성을 문서화하고 있습니다. [Bark](/ko/power-local-llm/bark-tts-review)는 사용자 지정 음성 복제를 지원하지 않는다고 명시합니다.`,
+          `**로컬 API 서버.** ${WITH('text-to-speech', 'apiServer', 'ko')}은(는) 서버 구성 요소를 문서화하고 있어 다른 앱이 HTTP로 호출할 수 있습니다. [OpenAI Edge TTS](/ko/power-local-llm/openai-edge-tts-review)는 이를 중심으로 만들어졌습니다.`,
           '**언어.** Bark는 13개 언어, XTTS-v2는 17개 언어를 문서화하고 있습니다. 다른 도구는 비교 가능한 수치를 명시하지 않으므로 표에는 숫자 대신 대시가 표시됩니다.',
         ],
       },
@@ -1894,12 +1904,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'stt-differences',
         title: '음성 인식: 무엇이 다른가',
         items: [
-          '**실시간 받아쓰기.** [whisper.cpp](/ko/power-local-llm/whisper-cpp-review)는 실시간 스트리밍 예제를 문서화하고 있으며, Izwi와 Willow Inference Server는 실시간 사용을 문서화하고 있습니다. [faster-whisper](/ko/power-local-llm/faster-whisper-review)는 받아쓰기 라이브러리이며, 자체 README에는 실시간 모드가 문서화되어 있지 않습니다.',
-          '**화자 구분.** Izwi와 FunClip은 화자 구분을 문서화하고 있습니다. [Meetily](/ko/power-local-llm/meetily-review)는 유료 Pro 플랜에서만 화자 분리(diarization)를 제공합니다. whisper.cpp의 화자 전환 표시는 실험적이며 표가 아니라 해당 리뷰에서 다룹니다.',
-          '**가격과 플랫폼.** [MacWhisper](/ko/power-local-llm/macwhisper-review)는 무료 플랜과 유료 업그레이드가 있는 독점 macOS 앱이며, 여기 있는 대부분의 다른 도구는 무료 오픈소스입니다. Meetily의 커뮤니티 에디션은 무료이며 MIT 라이선스이고, 유료 Pro 플랜이 있습니다.',
+          `**실시간 받아쓰기.** ${WITH('speech-to-text', 'realtime', 'ko')}은(는) 실시간 사용을 문서화하고 있습니다. [faster-whisper](/ko/power-local-llm/faster-whisper-review)는 받아쓰기 라이브러리이며, 자체 README에는 실시간 모드가 문서화되어 있지 않습니다.`,
+          `**화자 구분.** ${WITH('speech-to-text', 'speakerLabels', 'ko')}은(는) 화자 구분을 문서화하고 있습니다. [Meetily](/ko/power-local-llm/meetily-review)는 유료 Pro 플랜에서만 화자 분리(diarization)를 제공합니다. whisper.cpp의 화자 전환 표시는 실험적이며 표가 아니라 해당 리뷰에서 다룹니다.`,
+          '**가격과 플랫폼.** [MacWhisper](/ko/power-local-llm/macwhisper-review)는 무료 플랜과 유료 업그레이드가 있는 독점 macOS 앱입니다. Meetily의 커뮤니티 에디션은 무료이며 MIT 라이선스이고, 유료 Pro 플랜이 있습니다.',
           '**자막과 영상 삽입.** [Sablate](/ko/power-local-llm/sablate-review)는 Whisper 전사, 오프라인 번역, 자막 삽입을 하나로 묶은 비공개 소스 Windows·Mac 앱이며, 공식 사이트에는 화자 구분이 지원되지 않는다고 나와 있습니다.',
           '**회의와 면접.** [Meetini](/ko/power-local-llm/meetini-review)는 실시간 자막, 노트, 면접 연습을 제공하는 Apple Silicon Mac용 유료 비공개 소스 앱이며, 개인정보 처리 안내문에는 실시간 오디오를 OpenAI가 처리한다고 되어 있어 완전한 로컬 도구는 아닙니다.',
-          '**로컬 API 서버.** whisper.cpp는 서버를 제공하며, Izwi와 Willow Inference Server는 HTTP API를 문서화하고 있습니다.',
+          `**로컬 API 서버.** ${WITH('speech-to-text', 'apiServer', 'ko')}은(는) 서버 구성 요소 또는 HTTP API를 문서화하고 있습니다.`,
           '**받아쓰기 앱.** [Amical](/ko/power-local-llm/amical-review)은 Mac과 Windows용 MIT 라이선스 앱으로, 로컬 Whisper와 선택형 클라우드 요금제를 제공합니다. [Weesper Neon Flow](/ko/power-local-llm/weesper-neon-flow-review)는 Mac과 Windows용 푸시투토크 앱으로, 무료 체험 후 유료입니다. [Sprich](/ko/power-local-llm/sprich-review)는 Apple Silicon Mac 전용이며 무료 요금제가 있고, 독일어 우선이며 웹사이트는 독일어만 제공합니다. [Univocal](/ko/power-local-llm/univocal-review)은 Apple Silicon Mac 전용 유료 앱으로, 받아쓰기와 선택한 텍스트 읽어 주기를 모두 지원하며 한 번만 결제합니다. 각 개발사에 따르면 넷 모두 사용자의 컴퓨터에서 음성을 처리할 수 있으며, PromptQuorum은 이들을 테스트하지 않았습니다.',
           '**영상 번역과 더빙.** [pyVideoTrans](/ko/power-local-llm/pyvideotrans-review)는 Windows, macOS, Linux용 무료 GPL-3.0 도구로, 영상을 전사하고 자막을 번역한 뒤 합성 음성으로 더빙하여 영상을 다시 만듭니다. 프로젝트 페이지에 따르면 NVIDIA GPU 유무와 관계없이 실행되며 화자 구분을 지원합니다. 기본 번역 및 음성 채널은 온라인 서비스이며, PromptQuorum은 이 앱을 테스트하지 않았습니다.',
         ],
@@ -2005,3 +2015,4 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 }
+
