@@ -47,13 +47,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Which home battery or power station should a US buyer choose for solar backup in 2026?',
-        answer: 'EcoFlow\'s Delta Pro is the best all-round pick for home backup with solar pairing: LFP chemistry, 3.6 kWh base capacity, strong solar input, and the widest accessory ecosystem. Bluetti\'s AC300+B300 stack is better for buyers who want modular expansion. Jackery Explorer series leads on portability and Amazon availability. Anker SOLIX F3800 is worth checking for large-capacity LFP at competitive pricing. Avoid assuming the EU Anker Solarbank is available — it is not sold or certified in the US.',
+        answer: 'EcoFlow\'s Delta Pro is the best all-round pick for home backup with solar pairing: LFP chemistry, 3.6 kWh base capacity, strong solar input, and the widest accessory ecosystem. Bluetti\'s AC300+B300 stack is better for buyers who want modular expansion. Jackery Explorer series leads on portability and Amazon availability. Anker SOLIX F3800 is worth checking for large-capacity LFP at competitive pricing. Anker SOLIX Solarbank was not listed on Anker’s US storefront when checked on 20 November 2026, so do not assume the EU Solarbank is available in the US.',
         bullets: [
           'EcoFlow Delta Pro: LFP, ~3.6 kWh, strong solar input — best all-round home backup with solar pairing (verify current specs)',
           'Bluetti AC300+B300: modular LFP stacking, up to ~12 kWh — best for buyers prioritizing expandability (verify current specs)',
           'Jackery Explorer 2000 Pro: NMC chemistry, camping/portable crossover — best portability, widest Amazon presence (verify current specs)',
           'Anker SOLIX F3800: large-capacity LFP portable home battery — strong alternative, verify US availability and specs',
-          'Anker SOLIX Solarbank is NOT sold in the US — confirm you\'re looking at their portable power station line, not Solarbank',
+          'Anker SOLIX Solarbank: not listed on Anker’s US storefront (checked 2026-11-20) — confirm you are looking at the portable power station line, not Solarbank',
           'All four brands are China-manufactured; US retail prices are subject to Section 301 tariffs — check prices at time of purchase',
         ],
         updatedDate: '2026-11-20',
@@ -83,8 +83,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     sections: {
       statusNote: {
-        title: '2026 Update: US State Laws and Product Checks',
-        content: '**The US legal picture has moved beyond a pure patchwork: according to a plug-in solar roundup updated 4 October 2026, ten states have enacted plug-in solar laws, most capping devices at 1,200 W.** The vendor-run roundup ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)) lists Utah (HB 340, signed March 2025), Maine (LD 1730, signed 6 April 2026), Virginia (HB 395, 22 April 2026), Colorado (HB 26-1007, 7 May 2026, up to 1,920 W), Maryland (HB 1532, 12 May 2026), Connecticut (HB 5340, 20 May 2026), New Hampshire (SB 540-FN, June 2026), Vermont (S. 202, 16 June 2026), New Jersey (S 2368 / A 4836, 1 September 2026) and California (SB 868, signed 30 September 2026). It flags inconsistencies in its own figures, and other sources disagree on which laws name UL 3700 and on effective dates, so read the enacted bill text on each legislature\'s site; the bills were not verified against primary texts in this refresh. No federal plug-in framework was found, so the page\'s "patchwork" framing still holds, but it understates how many states now have dedicated laws. The same roundup says the federal 30% solar tax credit expired on 31 December 2025, which matters for any cost comparison here. The models, specs and prices below were not re-verified: newer generations such as the EcoFlow Delta Pro 3 and Anker SOLIX F3800 Plus appear in 2026 press, and a [Bob Vila roundup dated April 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) listed the F3800 Plus at $799.99 on sale, so treat prices on this page as undated. The statement that Anker Solarbank is not sold in the US was not re-confirmed either: search results showed an Amazon.com listing for the Solarbank 2 E1600 that could not be opened, so check Anker\'s US store. This is a summary of public information, not legal, tax or electrical-safety advice.',
+        title: 'Re-Check: US State Laws, Product Specs and Availability',
+        content: '**Checked on 20 November 2026: the US legal picture and some product generations have changed since this guide was written, and the sections below are updated or labelled accordingly.** Law: ten US states have signed plug-in solar laws (Utah, Maine, Virginia, Maryland, Colorado, Connecticut, New Hampshire, Vermont, New Jersey and California). California\'s SB 868 was signed on 30 September 2026 and takes effect on 1 January 2027, with its interconnection exemptions reported to sunset on 1 January 2030 ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/); not verified against the chaptered bill). Six states are in effect; Virginia, California and New Hampshire follow on 1 January 2027 and New Jersey on 1 March 2027, and effective dates differ between trackers, so confirm them with the state. There is no federal plug-in law. Per-state detail lives in [How Balcony Solar Went From Illegal to Law in 10 US States](/balcony-solar/how-balcony-solar-became-legal-in-the-us) and [Is Balcony Solar Legal in My State?](/balcony-solar/balcony-solar-legal-us-states), and is not duplicated here. Products: two current models were checked on 20 November 2026 and added to the table, EcoFlow DELTA Pro 3 (4,096 Wh LFP, 4,000 W continuous and 8,000 W surge with X-Boost, expandable to 12 kWh with two Smart Extra Batteries per the [EcoFlow blog](https://www.ecoflow.com/us/blog/ecoflow-portable-power-station-specs) and retailer listings) and Anker SOLIX F3800 Plus (3,840 Wh LFP, 3,000+ cycles, 6,000 W, up to 3,200 W solar input per the [Anker SOLIX US page](https://www.ankersolix.com/us/products/f3800-plus)). All other rows were last checked on 2026-07-03 and not re-checked: EcoFlow DELTA Pro (the predecessor of the Pro 3), Bluetti AC300 + B300 (a US store labels the AC300 inverter module discontinued), Bluetti AC200MAX (availability varies by retailer), Jackery Explorer 2000 Pro and 3000 Pro (Jackery\'s site does not state the 3000 Pro\'s chemistry and a retailer lists lithium-ion; Jackery\'s [Explorer 2000 Plus](https://www.jackery.com/collections/3000-pro-or-2000-plus) is listed as LiFePO4) and Anker SOLIX F2000. Prices are not stated on this page because promotional prices move quickly. Anker Solarbank: no Solarbank product appeared in the navigation of Anker\'s US storefront on 20 November 2026 and no US UL listing was found, so it is described as not listed in the US rather than banned. This is a summary of public information, not legal, tax or electrical-safety advice.',
       },
       tldr: {
         id: 'key-takeaways',
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The US revenue path for balcony solar brands is portable power stations and expandable home batteries — EcoFlow, Bluetti, Jackery, and Anker SOLIX portable units — which pair cleanly with panels without grid interconnection.',
           'LFP (lithium iron phosphate) battery chemistry is strongly preferred over NMC for home backup: longer cycle life (~3,000–6,000 cycles vs. ~500–1,000), safer at high temperatures, and less degradation at partial charge — EcoFlow Delta Pro, Bluetti AC300+B300, and Anker SOLIX F3800 all use LFP.',
           'Jackery\'s Explorer Pro series historically used NMC — useful for portable applications but less ideal for a unit that will cycle daily at home (verify current chemistry per model before buying).',
-          'Anker SOLIX Solarbank is not sold or certified for the US market — the Anker units relevant to US buyers are their portable power station line (F2000, F3800, etc.).',
+          'Anker SOLIX Solarbank was not listed on Anker’s US storefront when checked on 20 November 2026 and no US UL listing was found — the Anker units relevant to US buyers are the portable power stations (F2000, F3800 Plus) and the E10 whole-home system.',
           'All four brands are China-manufactured; US retail prices are exposed to Section 301 tariffs on lithium-ion batteries and solar components — never rely on a hardcoded price figure.',
         ],
       },
@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'us-market-reality',
         title: 'Why US Buyers Choose Batteries, Not Kits',
         content: [
-          '**The EU balcony solar market (Germany\'s Balkonkraftwerk) operates under a federal plug-in standard that lets renters and apartment owners safely plug a 800W panel kit into a household socket and legally export to the grid.** No equivalent framework exists in the US as of write-time (July 2026). US plug-in solar is governed by state utility regulations, NEC Article 705 interconnection rules, and UL 1741 certification requirements that vary by state and utility — creating a patchwork where what\'s legal in California may be restricted or require permits in Texas or Florida. See [Is Balcony Solar Legal in Your US State?](/balcony-solar/balcony-solar-legal-us-states) for a per-state breakdown.',
+          '**Germany\'s Balkonkraftwerk operates under a national plug-in standard that lets renters and apartment owners plug an 800W panel kit into a household socket; the US has no federal equivalent, but ten states have now signed their own plug-in solar laws, Utah first in 2025 and California most recently on 30 September 2026.** Most cap devices at 1,200 W; Virginia, California and New Hampshire take effect on 1 January 2027 and New Jersey on 1 March 2027, and California\'s exemptions are reported to sunset on 1 January 2030 ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/)). In states without a law, utility interconnection rules (NEC Article 705, UL 1741 equipment) still apply, so check your state and utility. See [How Balcony Solar Went From Illegal to Law in 10 US States](/balcony-solar/how-balcony-solar-became-legal-in-the-us) and [Is Balcony Solar Legal in My State?](/balcony-solar/balcony-solar-legal-us-states) for the per-state breakdown.',
           'This legal fragmentation has a practical consequence that we\'re stating explicitly as an assumption (not a measured market fact): US consumer demand appears to concentrate on **standalone power stations and batteries paired with portable or roof-mounted panels**, which don\'t require grid interconnection at all — avoiding the regulatory question entirely. Evidence for this comes from the US click patterns on this site (Amazon-channel products dominate; EU-style kit brand sites do not) and from the fact that brands like EcoFlow and Jackery generate the majority of their US revenue from portable power stations rather than grid-tied balcony kits. If you\'re looking for a balcony-kit comparison, see [Best Balcony Solar Kits 2026](/balcony-solar/best-balcony-solar-kits-2026) for what\'s available where it is legal.',
           '**For renters, apartment dwellers, and homeowners who want partial solar or outage protection without a full rooftop install, this standalone-battery approach has a genuine advantage beyond legal simplicity:** it\'s portable. A 3.6 kWh LFP battery that powers your fridge during a grid outage today can be moved, sold, or repurposed when you move — unlike a grid-tied system. Contrast this with Germany, where the Balkonkraftwerk is typically a permanent installation and the battery is an add-on storage unit. For context on how the German setup works, see [Balkonkraftwerk Germany Rules](/balcony-solar/balkonkraftwerk-germany-rules).',
         ],
@@ -211,10 +211,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             usPrice: 'Check current price — premium LFP tier',
             bestFor: 'Large-capacity LFP home backup; high AC output for heavy loads',
           },
+          {
+            product: 'EcoFlow DELTA Pro 3',
+            capacity: '4,096 Wh (EcoFlow blog, retailer listings)',
+            chemistry: 'LFP',
+            acOutput: '4,000W continuous, 8,000W surge with X-Boost',
+            solarInput: 'Not confirmed here — check EcoFlow US spec page',
+            expandable: 'Yes — 12 kWh with two Smart Extra Batteries (EcoFlow blog)',
+            localControl: 'See local-control section — verify per firmware',
+            usPrice: 'Check current price — tariff-sensitive',
+            bestFor: 'Current-generation EcoFlow home backup; successor to Delta Pro',
+          },
+          {
+            product: 'Anker SOLIX F3800 Plus',
+            capacity: '3,840 Wh (Anker US page)',
+            chemistry: 'LFP, 3,000+ cycles',
+            acOutput: '6,000W max (120/240V L14-30R port)',
+            solarInput: 'Up to 3,200W (two ports, 1,600W each)',
+            expandable: 'Yes — Anker expansion batteries',
+            localControl: 'Primarily app-based — verify local-API support',
+            usPrice: 'Check current price — frequent promotions',
+            bestFor: 'Large-capacity LFP home backup; current Anker portable flagship',
+          },
         ],
         columns: ['product', 'capacity', 'chemistry', 'acOutput', 'solarInput', 'expandable', 'localControl', 'usPrice', 'bestFor'],
         tableFormat: true,
-        tableNote: 'Specs are approximate based on known product lines — all capacity, output, and price figures should be verified against current manufacturer pages before purchase. Prices are intentionally omitted because US retail prices for China-manufactured lithium batteries are Section 301 tariff-sensitive and can change significantly. Verify at amazon.com or the brand\'s US direct storefront at time of purchase (checked 2026-07-03).',
+        tableNote: 'Specs are approximate based on known product lines — all capacity, output, and price figures should be verified against current manufacturer pages before purchase. Prices are intentionally omitted because US retail prices for China-manufactured lithium batteries are Section 301 tariff-sensitive and can change significantly. Verify at amazon.com or the brand\'s US direct storefront at time of purchase (checked 2026-07-03). Rows for EcoFlow DELTA Pro 3 and Anker SOLIX F3800 Plus were checked on 2026-11-20; all other rows were last checked on 2026-07-03 and not re-checked.',
       },
       useCaseRecs: {
         id: 'use-case-recs',
@@ -223,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Renter or apartment dweller — backup power through a grid outage (fridge + electronics + internet).** A mid-size LFP power station in the 2–3 kWh range is enough to power a fridge for 12–18 hours, keep phones/laptops charged, and run a router through a typical outage. Bluetti AC200MAX or Anker SOLIX F2000 are reasonable starting points — both LFP, both under 3 kWh, both Amazon-available. Pair with a 200–400W portable solar panel to extend run time if you have a balcony or rooftop access. No permits or grid interconnection needed; just plug the panel into the unit\'s solar input port.',
           '**Homeowner, partial solar + backup — wants to offset evening consumption without a full rooftop install.** This is the use case closest to the EU Balkonkraftwerk concept but without the grid-export angle. The EcoFlow Delta Pro (LFP, ~3.6 kWh, strong MPPT input — verify current specs) paired with two or three 400W panels is a reasonable setup: charge during the day from panels, draw down in the evening for lighting and appliances. Expandable with extra battery modules if load requirements grow. The key constraint is that you\'re using your own stored solar power, not exporting — which sidesteps the interconnection question entirely.',
           '**Off-grid / camping crossover — needs to move between locations.** Jackery Explorer series wins on weight, portability, and Amazon ecosystem. The NMC chemistry matters less if the unit is used on weekends rather than cycling daily at home. The Explorer 2000 Pro gives enough capacity for a camping weekend with a portable panel and keeps the unit light enough to carry. If you want the portability of Jackery with LFP durability, Anker SOLIX F2000 is worth a direct comparison.',
-          '**Smart-home / local-control user — wants Home Assistant integration without cloud dependency.** This is the hardest requirement to satisfy and the least well-supported across all four brands. EcoFlow has the most active community integration ecosystem (a HACS-based integration exists for Delta Pro series), but it\'s community-maintained rather than officially supported — verify its current status before relying on it. Bluetti and Anker SOLIX lack well-documented local APIs as of write-time. If local control is a hard requirement rather than a preference, see the [No-Cloud Balcony Solar guide](/balcony-solar/home-assistant-balcony-solar-no-cloud) for the current state of local-API hardware and whether any of these units have changed since publication.',
+          '**Smart-home / local-control user — wants Home Assistant integration without cloud dependency.** This is the hardest requirement to satisfy and the least well-supported across all four brands. EcoFlow has the most active community integration ecosystem (a HACS-based integration exists for Delta Pro series), but it\'s community-maintained rather than officially supported — verify its current status before relying on it. Bluetti and Anker SOLIX lack well-documented local APIs as of 2026-07-03 (not re-checked). If local control is a hard requirement rather than a preference, see the [No-Cloud Balcony Solar guide](/balcony-solar/home-assistant-balcony-solar-no-cloud) for the current state of local-API hardware and whether any of these units have changed since publication.',
           '**Whole-home backup — wants to power heavy loads (HVAC, electric stove, heat pump) during extended outages.** This goes beyond the scope of portable power stations into the territory of dedicated home battery systems. At this scale, EcoFlow Delta Pro Ultra (expandable to ~25+ kWh — verify) and dedicated home battery installs (which may require permits and electrician involvement) are the relevant comparison. This is a different product category from the portable units above and should be evaluated separately.',
         ],
       },
@@ -231,12 +253,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-control',
         title: 'Local Control & Smart Home Integration',
         content: [
-          '**None of the four major brands covered here provides an official, documented local API for Home Assistant as a standard feature — they all default to cloud-based app monitoring.** This is the single biggest gap between the US portable power station market and the EU balcony-solar-storage market, where brands like Zendure have built mature local-control ecosystems. If local control matters to you, verify the current state before purchasing, since this is the fastest-moving dimension in the product space.',
+          '**Few of the major brands covered here provide an official, documented local API for Home Assistant as a standard feature — most still default to cloud-based app monitoring.** EcoFlow STREAM now includes a documented local API (verify current scope at [ecoflow.com](https://www.ecoflow.com)); Bluetti, Jackery, and Anker SOLIX still rely primarily on cloud-based monitoring. This is the fastest-moving dimension in the product space — verify current status before purchasing. The gap between the US portable power station market and the EU balcony-solar-storage market (where brands like Zendure have built mature local-control ecosystems) is narrowing but not closed.',
           'EcoFlow\'s Delta Pro series has the most active community integration — a Home Assistant integration via HACS exists and is maintained by the community (not EcoFlow officially). It relies on EcoFlow\'s cloud API rather than a true local endpoint, which means it still routes monitoring data through EcoFlow\'s servers. Cross-reference the [No-Cloud Balcony Solar guide](/balcony-solar/home-assistant-balcony-solar-no-cloud) for details on what "local" actually means in this context and which hardware genuinely supports it.',
           'For users who want a true local-API battery system that pairs with solar and doesn\'t need a cloud account, the EU market currently has better options (particularly Zendure SolarFlow — see [EcoFlow vs. Anker vs. Zendure](/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar)), though most of those products are not sold or certified for the US market.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'As of 2026, no major US-sold portable power station brand (EcoFlow, Bluetti, Jackery, Anker SOLIX) provides an officially documented local API for Home Assistant — community integrations exist for EcoFlow but route through their cloud.' },
+          { type: 'one-sentence', text: 'As of late 2026, EcoFlow STREAM provides a documented local API; Bluetti, Jackery, and Anker SOLIX still rely on cloud-based monitoring — verify current status before purchasing.' },
           { type: 'plain-terms', text: 'If you want a battery that works with Home Assistant without sending data to the manufacturer\'s servers, the US options are limited — EcoFlow has the best community workaround, but it\'s not a true local setup.' },
         ],
       },
@@ -257,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://us.ecoflow.com', title: 'EcoFlow US storefront', description: 'Delta Pro, Delta Pro Ultra specs and pricing — verify current figures at time of purchase' },
           { url: 'https://www.bluettipower.com', title: 'Bluetti US storefront', description: 'AC300, B300, AC200MAX specs — verify current figures' },
           { url: 'https://www.jackery.com', title: 'Jackery US storefront', description: 'Explorer series specs — verify current chemistry and output per model' },
-          { url: 'https://ankersolix.com', title: 'Anker SOLIX US storefront', description: 'F2000, F3800 specs; confirms Solarbank is not in US catalog' },
+          { url: 'https://ankersolix.com', title: 'Anker SOLIX US storefront', description: 'F2000, F3800 Plus specs; no Solarbank in the storefront navigation checked 2026-11-20' },
         ],
       },
       relatedReading: {
@@ -271,13 +293,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-            { q: 'Is balcony solar legal in the US?', a: 'There\'s no single US answer — legality varies by state and utility. Some states have enacted plug-in solar rules similar to Germany\'s Balkonkraftwerk; others require permits, utility approval under NEC Article 705, and UL 1741-certified equipment for any grid-connected solar. For a per-state breakdown, see the dedicated US states legality guide. The safest approach in any state is a standalone battery + panel system with no grid connection.' },
+            { q: 'Is balcony solar legal in the US?', a: 'Increasingly yes, but not everywhere: ten states have signed plug-in solar laws (Utah, Maine, Virginia, Maryland, Colorado, Connecticut, New Hampshire, Vermont, New Jersey and California, whose SB 868 was signed on 30 September 2026). Six are in effect, Virginia, California and New Hampshire follow on 1 January 2027 and New Jersey on 1 March 2027. There is no federal plug-in law, and where no state law exists, utility interconnection (NEC Article 705, UL 1741 equipment) still applies. See the US states legality guide for details. The safest approach anywhere remains a standalone battery plus panels with no grid connection.' },
             { q: 'EcoFlow vs. Bluetti — which is better for US home backup in 2026?', a: 'EcoFlow Delta Pro has the stronger MPPT solar input, making it the better choice if fast panel-based recharging is a priority. Bluetti\'s AC300+B300 is better if modular expansion (adding battery capacity in increments) is the priority. Both use LFP chemistry. Prices change frequently due to tariff exposure — compare current prices at time of purchase, since the price gap fluctuates.' },
             { q: 'What\'s the difference between LFP and NMC battery chemistry?', a: 'LFP (lithium iron phosphate) provides ~3,000–6,000 charge cycles at 80% retention, better thermal stability, and longer calendar life — preferred for home backup units that cycle daily. NMC (nickel manganese cobalt) provides higher energy density for a given weight, which is why it dominates portable/camping-focused units like older Jackery Explorer models. For a unit sitting in your home cycling daily from solar, LFP chemistry is meaningfully better over a 5–10 year horizon.' },
             { q: 'Can I run my refrigerator during a grid outage with one of these?', a: 'Yes, with the right sizing. A typical US refrigerator draws 100–400W continuous (150W average) and has a startup surge of 600–1,200W. A 2 kWh LFP unit with 2,000W+ AC output can power a standard fridge for 8–12 hours. Add a 200–400W solar panel and you can extend that indefinitely in decent sunlight. Verify the AC output and surge rating of any unit you\'re considering — some affordable power stations have surge ratings too low for fridge compressors.' },
             { q: 'Do I need permits or grid interconnection for a power station paired with solar panels?', a: 'If you\'re not connecting to the grid — just charging the power station from panels and using it to power your home — you generally do not need interconnection permits or utility approval. The panels connect only to the power station\'s solar input, not to your home\'s electrical panel. This is the key legal simplicity of the standalone-battery approach versus balcony solar kits that export to the grid. Verify with your local AHJ (authority having jurisdiction) if you\'re uncertain.' },
             { q: 'Can I use these with Home Assistant for local monitoring?', a: 'Partially. EcoFlow has a community-maintained Home Assistant integration (via HACS) for the Delta series, but it routes through EcoFlow\'s cloud API rather than a true local endpoint. Bluetti, Jackery, and Anker SOLIX lack well-documented local APIs. If local control with no cloud dependency is a hard requirement, see the No-Cloud Balcony Solar guide for a current summary of which hardware genuinely supports local-only operation.' },
-            { q: 'Is Anker SOLIX available in the US?', a: 'Anker SOLIX portable power stations (F2000, F3800, and similar units) are available in the US at ankersolix.com and on Amazon. Anker SOLIX Solarbank models — designed for grid-connected balcony solar storage — are not sold or certified for the US market and should not be recommended to US buyers. This is a common point of confusion since the Solarbank gets significant coverage in EU solar reviews.' },
+            { q: 'Is Anker SOLIX available in the US?', a: 'Anker SOLIX portable power stations (F2000, F3800, and similar units) are available in the US at ankersolix.com and on Amazon. Anker SOLIX Solarbank — designed for grid-connected balcony solar storage — was not listed on Anker’s US storefront when checked on 20 November 2026 and no US UL listing was found, so this guide does not recommend it to US buyers; check Anker’s US store for any change.' },
             { q: 'Why are prices for these products so volatile?', a: 'EcoFlow, Bluetti, Jackery, and Anker SOLIX are all manufactured in China. US retail prices are subject to Section 301 tariffs on lithium-ion batteries and solar components, which have been rising through 2024–2026 and can shift retail prices by 10–25% or more. Brands also run frequent promotions that can move prices $200–500 in either direction. Always check the current price on Amazon or the brand\'s US storefront at time of purchase.' },
             { q: 'What\'s the best portable power station for camping that also works for home backup?', a: 'Jackery Explorer 2000 Pro or 3000 Pro for portability-first users (lighter, Amazon-friendly, but NMC — verify current chemistry). Anker SOLIX F2000 for buyers who want LFP with similar portability to Jackery. EcoFlow Delta Pro if you\'re willing to compromise on portability for LFP chemistry and a stronger solar input. The "camping crossover" use case is well-served by all four brands — the differentiator is chemistry and long-term cycle life for buyers who plan to use the unit heavily at home between trips.' },
             { q: 'Can I use a portable power station to run my fridge during a grid outage?', a: 'Yes. A typical US refrigerator draws 100–400W (150W average) with a startup surge of 600–1,200W. A 2 kWh LFP unit with 2,000W+ AC output can power a standard fridge for 8–12 hours; add a 200–400W solar panel to extend run time. Verify the AC surge rating of any unit before purchase.' },
@@ -290,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best Home Battery & Portable Power Stations for US Solar (2026): EcoFlow, Bluetti & More',
       description: 'Best home batteries and portable power stations for US solar buyers in 2026: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP vs NMC, local control, verified US availability.',
       datePublished: '2026-07-03',
-      dateModified: '2026-07-03',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -359,7 +381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Is balcony solar legal in the US?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'There\'s no single US answer — legality varies by state and utility. Some states have enacted plug-in solar rules similar to Germany\'s Balkonkraftwerk; others require permits, utility approval under NEC Article 705, and UL 1741-certified equipment for any grid-connected solar. For a per-state breakdown, see the dedicated US states legality guide. The safest approach in any state is a standalone battery + panel system with no grid connection.',
+              'text': 'Increasingly yes, but not everywhere: ten states have signed plug-in solar laws (Utah, Maine, Virginia, Maryland, Colorado, Connecticut, New Hampshire, Vermont, New Jersey and California, whose SB 868 was signed on 30 September 2026). Six are in effect, Virginia, California and New Hampshire follow on 1 January 2027 and New Jersey on 1 March 2027. There is no federal plug-in law, and where no state law exists, utility interconnection (NEC Article 705, UL 1741 equipment) still applies. See the US states legality guide for details. The safest approach anywhere remains a standalone battery plus panels with no grid connection.',
             },
           },
           {
@@ -407,7 +429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Is Anker SOLIX available in the US?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Anker SOLIX portable power stations (F2000, F3800, and similar units) are available in the US at ankersolix.com and on Amazon. Anker SOLIX Solarbank models — designed for grid-connected balcony solar storage — are not sold or certified for the US market and should not be recommended to US buyers. This is a common point of confusion since the Solarbank gets significant coverage in EU solar reviews.',
+              'text': 'Anker SOLIX portable power stations (F2000, F3800, and similar units) are available in the US at ankersolix.com and on Amazon. Anker SOLIX Solarbank — designed for grid-connected balcony solar storage — was not listed on Anker’s US storefront when checked on 20 November 2026 and no US UL listing was found, so this guide does not recommend it to US buyers; check Anker’s US store for any change.',
             },
           },
           {
@@ -478,13 +500,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Welchen Heimspeicher oder welche Powerstation sollte ein US-Käufer 2026 für die solare Notstromversorgung wählen?',
-        answer: 'EcoFlows Delta Pro ist die beste Allround-Wahl für die Heim-Notstromversorgung mit Solaranbindung: LFP-Chemie, 3.6 kWh Grundkapazität, starker Solareingang und das breiteste Zubehör-Ökosystem. Bluettis AC300+B300-Stack ist besser für Käufer, die eine modulare Erweiterung wünschen. Die Jackery-Explorer-Serie führt bei Portabilität und Amazon-Verfügbarkeit. Die Anker SOLIX F3800 ist einen Blick wert für große LFP-Kapazität zu wettbewerbsfähigen Preisen. Gehen Sie nicht davon aus, dass die EU-Anker-Solarbank verfügbar ist — sie wird in den USA nicht verkauft oder zertifiziert.',
+        answer: 'EcoFlows Delta Pro ist die beste Allround-Wahl für die Heim-Notstromversorgung mit Solaranbindung: LFP-Chemie, 3.6 kWh Grundkapazität, starker Solareingang und das breiteste Zubehör-Ökosystem. Bluettis AC300+B300-Stack ist besser für Käufer, die eine modulare Erweiterung wünschen. Die Jackery-Explorer-Serie führt bei Portabilität und Amazon-Verfügbarkeit. Die Anker SOLIX F3800 ist einen Blick wert für große LFP-Kapazität zu wettbewerbsfähigen Preisen. Anker SOLIX Solarbank war bei der Prüfung am 20. November 2026 im US-Shop von Anker nicht gelistet; gehen Sie also nicht davon aus, dass die EU-Solarbank in den USA erhältlich ist.',
         bullets: [
           'EcoFlow Delta Pro: LFP, ~3.6 kWh, starker Solareingang — beste Allround-Heim-Notstromversorgung mit Solaranbindung (aktuelle Spezifikationen prüfen)',
           'Bluetti AC300+B300: modulares LFP-Stacking, bis zu ~12 kWh — am besten für Käufer, die Erweiterbarkeit priorisieren (aktuelle Spezifikationen prüfen)',
           'Jackery Explorer 2000 Pro: NMC-Chemie, Camping-/Portabilitäts-Crossover — beste Portabilität, breiteste Amazon-Präsenz (aktuelle Spezifikationen prüfen)',
           'Anker SOLIX F3800: tragbarer Heimspeicher mit großer LFP-Kapazität — starke Alternative, US-Verfügbarkeit und Spezifikationen prüfen',
-          'Die Anker SOLIX Solarbank wird in den USA NICHT verkauft — vergewissern Sie sich, dass Sie die tragbare Powerstation-Reihe betrachten, nicht die Solarbank',
+          'Anker SOLIX Solarbank: im US-Shop von Anker nicht gelistet (geprüft 2026-11-20) — prüfen Sie, dass Sie die Powerstation-Linie ansehen und nicht Solarbank',
           'Alle vier Marken werden in China gefertigt; die US-Einzelhandelspreise unterliegen Section-301-Zöllen — prüfen Sie die Preise zum Kaufzeitpunkt',
         ],
         updatedDate: '2026-11-20',
@@ -514,8 +536,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     sections: {
       statusNote: {
-        title: 'Update 2026: US-Bundesstaatengesetze und Produktprüfung',
-        content: '**Das US-Rechtsbild ist über einen reinen Flickenteppich hinaus: Laut einer am 4. Oktober 2026 aktualisierten Übersicht zu Plug-in-Solar haben zehn Bundesstaaten Plug-in-Solargesetze verabschiedet, die Geräte meist auf 1.200 W begrenzen.** Die von einem Anbieter betriebene Übersicht ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)) nennt Utah (HB 340, unterzeichnet März 2025), Maine (LD 1730, unterzeichnet 6. April 2026), Virginia (HB 395, 22. April 2026), Colorado (HB 26-1007, 7. Mai 2026, bis 1.920 W), Maryland (HB 1532, 12. Mai 2026), Connecticut (HB 5340, 20. Mai 2026), New Hampshire (SB 540-FN, Juni 2026), Vermont (S. 202, 16. Juni 2026), New Jersey (S 2368 / A 4836, 1. September 2026) und Kalifornien (SB 868, unterzeichnet 30. September 2026). Sie weist selbst auf Unstimmigkeiten bei ihren Angaben hin, und andere Quellen widersprechen sich dabei, welche Gesetze UL 3700 nennen und wann sie in Kraft treten; bitte den verabschiedeten Gesetzestext auf der Website des jeweiligen Parlaments lesen – die Gesetze wurden in dieser Aktualisierung nicht an Primärtexten geprüft. Ein bundesweiter Plug-in-Rahmen wurde nicht gefunden, die Darstellung als „Flickenteppich“ bleibt also gültig, unterschätzt aber, wie viele Bundesstaaten inzwischen eigene Gesetze haben. Laut derselben Übersicht lief die bundesweite Solar-Steuergutschrift von 30 % am 31. Dezember 2025 aus, was für jeden Kostenvergleich hier relevant ist. Die unten genannten Modelle, Daten und Preise wurden nicht erneut geprüft: Neuere Generationen wie EcoFlow Delta Pro 3 und Anker SOLIX F3800 Plus tauchen in der Presse 2026 auf, und eine [Bob-Vila-Übersicht vom April 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) nannte den F3800 Plus im Angebot für 799,99 $ – Preise auf dieser Seite sind daher als undatiert zu behandeln. Auch die Aussage, Anker Solarbank werde in den USA nicht verkauft, wurde nicht erneut bestätigt: Suchergebnisse zeigten ein Amazon.com-Angebot für die Solarbank 2 E1600, das sich nicht öffnen ließ; bitte den US-Shop von Anker prüfen. Dies ist eine Zusammenfassung öffentlicher Informationen und keine Rechts-, Steuer- oder Elektrosicherheitsberatung.',
+        title: 'Erneute Prüfung: US-Landesgesetze, Produktdaten und Verfügbarkeit',
+        content: '**Geprüft am 20. November 2026: Die US-Rechtslage und einige Produktgenerationen haben sich seit der Erstellung dieses Leitfadens geändert; die folgenden Abschnitte sind entsprechend aktualisiert oder gekennzeichnet.** Recht: Zehn US-Bundesstaaten haben Plug-in-Solargesetze unterzeichnet (Utah, Maine, Virginia, Maryland, Colorado, Connecticut, New Hampshire, Vermont, New Jersey und Kalifornien). Kaliforniens SB 868 wurde am 30. September 2026 unterzeichnet und tritt am 1. Januar 2027 in Kraft; die Ausnahmen bei der Netzanbindung sollen laut Berichten am 1. Januar 2030 auslaufen ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/); nicht am verabschiedeten Gesetzestext geprüft). Sechs Staaten haben das Gesetz in Kraft; Virginia, Kalifornien und New Hampshire folgen am 1. Januar 2027, New Jersey am 1. März 2027, und die Inkrafttretensdaten weichen zwischen Trackern ab – bitte beim Bundesstaat bestätigen. Ein bundesweites Plug-in-Gesetz gibt es nicht. Details je Bundesstaat stehen in [So wurde Balkonsolar in 10 US-Bundesstaaten legal](/de/balcony-solar/how-balcony-solar-became-legal-in-the-us) und [Ist Balkonsolar in meinem Bundesstaat legal?](/de/balcony-solar/balcony-solar-legal-us-states) und werden hier nicht wiederholt. Produkte: Zwei aktuelle Modelle wurden am 20. November 2026 geprüft und in die Tabelle aufgenommen, EcoFlow DELTA Pro 3 (4.096 Wh LFP, 4.000 W Dauerleistung und 8.000 W Spitze mit X-Boost, erweiterbar auf 12 kWh mit zwei Smart Extra Batteries laut [EcoFlow-Blog](https://www.ecoflow.com/us/blog/ecoflow-portable-power-station-specs) und Händlerlistungen) und Anker SOLIX F3800 Plus (3.840 Wh LFP, über 3.000 Zyklen, 6.000 W, bis zu 3.200 W Solareingang laut [Anker-SOLIX-US-Seite](https://www.ankersolix.com/us/products/f3800-plus)). Alle übrigen Zeilen wurden zuletzt am 2026-07-03 geprüft und nicht neu geprüft: EcoFlow DELTA Pro (Vorgänger des Pro 3), Bluetti AC300 + B300 (ein US-Shop kennzeichnet das AC300-Wechselrichtermodul als eingestellt), Bluetti AC200MAX (Verfügbarkeit je Händler unterschiedlich), Jackery Explorer 2000 Pro und 3000 Pro (Jackerys Website nennt die Chemie des 3000 Pro nicht, ein Händler führt Lithium-Ionen; die [Explorer 2000 Plus](https://www.jackery.com/collections/3000-pro-or-2000-plus) wird als LiFePO4 geführt) und Anker SOLIX F2000. Preise werden auf dieser Seite nicht genannt, weil Aktionspreise schnell schwanken. Anker Solarbank: In der Navigation des US-Shops von Anker erschien am 20. November 2026 kein Solarbank-Produkt, und eine US-UL-Listung wurde nicht gefunden; es wird daher als in den USA nicht gelistet beschrieben, nicht als verboten. Dies ist eine Zusammenfassung öffentlicher Informationen und keine Rechts-, Steuer- oder Elektrosicherheitsberatung.',
       },
       tldr: {
         id: 'key-takeaways',
@@ -525,7 +547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Der US-Umsatzweg für Balkon-Solar-Marken sind tragbare Powerstations und erweiterbare Heimspeicher — tragbare Einheiten von EcoFlow, Bluetti, Jackery und Anker SOLIX —, die sich sauber mit Panels kombinieren lassen, ohne Netzeinbindung.',
           'Die LFP-Batteriechemie (Lithium-Eisenphosphat) wird für die Heim-Notstromversorgung gegenüber NMC deutlich bevorzugt: längere Zyklenlebensdauer (~3,000–6,000 Zyklen vs. ~500–1,000), sicherer bei hohen Temperaturen und weniger Degradation bei Teilladung — EcoFlow Delta Pro, Bluetti AC300+B300 und Anker SOLIX F3800 verwenden alle LFP.',
           'Jackerys Explorer-Pro-Serie nutzte historisch NMC — nützlich für tragbare Anwendungen, aber weniger ideal für eine Einheit, die zu Hause täglich zyklisiert wird (prüfen Sie vor dem Kauf die aktuelle Chemie je Modell).',
-          'Die Anker SOLIX Solarbank wird für den US-Markt nicht verkauft oder zertifiziert — die für US-Käufer relevanten Anker-Einheiten sind die tragbare Powerstation-Reihe (F2000, F3800 usw.).',
+          'Anker SOLIX Solarbank war bei der Prüfung am 20. November 2026 im US-Shop von Anker nicht gelistet, und eine US-UL-Listung wurde nicht gefunden — für US-Käufer relevant sind die Powerstations (F2000, F3800 Plus) und das E10-Ganzhaus-System von Anker.',
           'Alle vier Marken werden in China gefertigt; die US-Einzelhandelspreise sind Section-301-Zöllen auf Lithium-Ionen-Akkus und Solarkomponenten ausgesetzt — verlassen Sie sich niemals auf eine fest eingetragene Preisangabe.',
         ],
       },
@@ -533,7 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'us-market-reality',
         title: 'Warum US-Käufer Akkus wählen, keine Kits',
         content: [
-          '**Der EU-Balkon-Solar-Markt (das deutsche Balkonkraftwerk) arbeitet unter einem bundesweiten Plug-in-Standard, der Mietern und Wohnungseigentümern erlaubt, ein 800-W-Panel-Kit sicher in eine Haushaltssteckdose zu stecken und legal ins Netz einzuspeisen.** In den USA existiert zum Redaktionszeitpunkt (Juli 2026) kein vergleichbares Rahmenwerk. US-Plug-in-Solar unterliegt einzelstaatlichen Versorgervorschriften, den Netzeinbindungsregeln nach NEC Article 705 und UL-1741-Zertifizierungsanforderungen, die je nach Bundesstaat und Versorger variieren — daraus entsteht ein Flickenteppich, in dem das, was in Kalifornien legal ist, in Texas oder Florida eingeschränkt sein oder eine Genehmigung erfordern kann. Eine Aufschlüsselung nach Bundesstaat finden Sie unter [Ist Balkon-Solar in Ihrem US-Bundesstaat legal?](/de/balcony-solar/balcony-solar-legal-us-states).',
+          '**Deutschlands Balkonkraftwerk beruht auf einem nationalen Plug-in-Standard, der Mietern und Wohnungseigentümern erlaubt, ein 800-W-Panelset in eine Haushaltssteckdose zu stecken; die USA haben kein bundesweites Pendant, doch zehn Bundesstaaten haben inzwischen eigene Plug-in-Solargesetze unterzeichnet, Utah als erster 2025, Kalifornien zuletzt am 30. September 2026.** Die meisten begrenzen Geräte auf 1.200 W; Virginia, Kalifornien und New Hampshire treten am 1. Januar 2027 in Kraft, New Jersey am 1. März 2027, und Kaliforniens Ausnahmen sollen laut Berichten am 1. Januar 2030 auslaufen ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/)). In Staaten ohne Gesetz gelten weiterhin die Netzanschlussregeln der Versorger (NEC Article 705, UL-1741-Geräte); prüfen Sie daher Ihren Bundesstaat und Ihren Versorger. Die Aufschlüsselung je Bundesstaat finden Sie in [So wurde Balkonsolar in 10 US-Bundesstaaten legal](/de/balcony-solar/how-balcony-solar-became-legal-in-the-us) und [Ist Balkonsolar in meinem Bundesstaat legal?](/de/balcony-solar/balcony-solar-legal-us-states).',
           'Diese rechtliche Zersplitterung hat eine praktische Konsequenz, die wir ausdrücklich als Annahme (nicht als gemessene Marktrealität) formulieren: Die US-Verbrauchernachfrage scheint sich auf **eigenständige Powerstations und Akkus zu konzentrieren, die mit tragbaren oder dachmontierten Panels kombiniert werden** und die überhaupt keine Netzeinbindung erfordern — womit die regulatorische Frage vollständig umgangen wird. Ein Beleg dafür sind die US-Klickmuster auf dieser Website (Amazon-Kanal-Produkte dominieren; Markenseiten von EU-Kits tun dies nicht) sowie die Tatsache, dass Marken wie EcoFlow und Jackery den Großteil ihres US-Umsatzes mit tragbaren Powerstations statt mit netzgekoppelten Balkon-Kits erzielen. Wenn Sie einen Balkon-Kit-Vergleich suchen, finden Sie unter [Beste Balkon-Solar-Kits 2026](/de/balcony-solar/best-balcony-solar-kits-2026), was dort verfügbar ist, wo es legal ist.',
           '**Für Mieter, Wohnungsbewohner und Hausbesitzer, die teilweise Solarnutzung oder Ausfallschutz ohne vollständige Dachinstallation wünschen, hat dieser Ansatz mit eigenständigem Akku einen echten Vorteil über die rechtliche Einfachheit hinaus:** Er ist tragbar. Ein 3.6-kWh-LFP-Akku, der heute Ihren Kühlschrank während eines Netzausfalls versorgt, lässt sich beim Umzug mitnehmen, verkaufen oder umnutzen — anders als ein netzgekoppeltes System. Das steht im Gegensatz zu Deutschland, wo das Balkonkraftwerk typischerweise eine dauerhafte Installation ist und der Akku eine ergänzende Speichereinheit. Für Kontext dazu, wie der deutsche Aufbau funktioniert, siehe [Balkonkraftwerk-Regeln in Deutschland](/de/balcony-solar/balkonkraftwerk-germany-rules).',
         ],
@@ -642,10 +664,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             usPrice: 'Aktuellen Preis prüfen — Premium-LFP-Segment',
             bestFor: 'Heim-Notstrom mit großer LFP-Kapazität; hohe AC-Leistung für schwere Lasten',
           },
+          {
+            product: 'EcoFlow DELTA Pro 3',
+            capacity: '4,096 Wh (EcoFlow-Blog, Händlerlistungen)',
+            chemistry: 'LFP',
+            acOutput: '4,000W Dauerleistung, 8,000W Spitze mit X-Boost',
+            solarInput: 'Hier nicht bestätigt — EcoFlow-US-Datenblatt prüfen',
+            expandable: 'Ja — 12 kWh mit zwei Smart Extra Batteries (EcoFlow-Blog)',
+            localControl: 'Siehe Abschnitt Lokale Steuerung — je Firmware prüfen',
+            usPrice: 'Aktuellen Preis prüfen — zollabhängig',
+            bestFor: 'Aktuelle EcoFlow-Heimnotstromgeneration; Nachfolger des Delta Pro',
+          },
+          {
+            product: 'Anker SOLIX F3800 Plus',
+            capacity: '3,840 Wh (Anker-US-Seite)',
+            chemistry: 'LFP, über 3,000 Zyklen',
+            acOutput: 'Max. 6,000W (120/240V-Anschluss L14-30R)',
+            solarInput: 'Bis zu 3,200W (zwei Anschlüsse, je 1,600W)',
+            expandable: 'Ja — Anker-Erweiterungsbatterien',
+            localControl: 'Überwiegend App-basiert — Local-API-Unterstützung prüfen',
+            usPrice: 'Aktuellen Preis prüfen — häufige Aktionen',
+            bestFor: 'LFP-Heimnotstrom mit großer Kapazität; aktuelles Anker-Flaggschiff',
+          },
         ],
         columns: ['product', 'capacity', 'chemistry', 'acOutput', 'solarInput', 'expandable', 'localControl', 'usPrice', 'bestFor'],
         tableFormat: true,
-        tableNote: 'Die Spezifikationen sind auf Basis bekannter Produktreihen ungefähre Angaben — alle Werte zu Kapazität, Leistung und Preis sollten vor dem Kauf gegen die aktuellen Herstellerseiten geprüft werden. Preise sind bewusst weggelassen, da die US-Einzelhandelspreise für in China gefertigte Lithium-Akkus Section-301-zollabhängig sind und sich erheblich ändern können. Prüfen Sie zum Kaufzeitpunkt auf amazon.com oder im US-Direktshop der Marke (geprüft 2026-07-03).',
+        tableNote: 'Die Spezifikationen sind auf Basis bekannter Produktreihen ungefähre Angaben — alle Werte zu Kapazität, Leistung und Preis sollten vor dem Kauf gegen die aktuellen Herstellerseiten geprüft werden. Preise sind bewusst weggelassen, da die US-Einzelhandelspreise für in China gefertigte Lithium-Akkus Section-301-zollabhängig sind und sich erheblich ändern können. Prüfen Sie zum Kaufzeitpunkt auf amazon.com oder im US-Direktshop der Marke (geprüft 2026-07-03). Die Zeilen zu EcoFlow DELTA Pro 3 und Anker SOLIX F3800 Plus wurden am 2026-11-20 geprüft; alle übrigen Zeilen wurden zuletzt am 2026-07-03 geprüft und nicht neu geprüft.',
       },
       useCaseRecs: {
         id: 'use-case-recs',
@@ -662,12 +706,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-control',
         title: 'Lokale Steuerung & Smart-Home-Integration',
         content: [
-          '**Keine der vier hier behandelten großen Marken bietet als Standardfunktion eine offizielle, dokumentierte lokale API für Home Assistant — sie alle setzen standardmäßig auf cloudbasierte App-Überwachung.** Dies ist die einzige größte Lücke zwischen dem US-Markt für tragbare Powerstations und dem EU-Markt für Balkon-Solar-Speicher, wo Marken wie Zendure ausgereifte Local-Control-Ökosysteme aufgebaut haben. Wenn Ihnen lokale Steuerung wichtig ist, prüfen Sie den aktuellen Stand vor dem Kauf, da dies die sich am schnellsten bewegende Dimension in diesem Produktbereich ist.',
+          '**Nur wenige der hier behandelten großen Marken bieten als Standardfunktion eine offizielle, dokumentierte lokale API für Home Assistant — die meisten setzen weiterhin standardmäßig auf cloudbasierte App-Überwachung.** EcoFlow STREAM bietet jetzt eine dokumentierte lokale API (aktuellen Umfang unter [ecoflow.com](https://www.ecoflow.com) prüfen); Bluetti, Jackery und Anker SOLIX setzen weiterhin primär auf Cloud-Monitoring. Dies ist die sich am schnellsten bewegende Dimension in diesem Produktbereich — prüfen Sie den aktuellen Stand vor dem Kauf. Die Lücke zwischen dem US-Markt für tragbare Powerstations und dem EU-Markt für Balkon-Solar-Speicher (wo Marken wie Zendure ausgereifte Local-Control-Ökosysteme aufgebaut haben) schließt sich, ist aber noch nicht geschlossen.',
           'EcoFlows Delta-Pro-Serie hat die aktivste Community-Integration — eine Home-Assistant-Integration über HACS existiert und wird von der Community gepflegt (nicht offiziell von EcoFlow). Sie stützt sich auf EcoFlows Cloud-API statt auf einen echten lokalen Endpunkt, was bedeutet, dass die Überwachungsdaten weiterhin über EcoFlows Server laufen. Ziehen Sie den [Leitfaden zu Balkon-Solar ohne Cloud](/de/balcony-solar/home-assistant-balcony-solar-no-cloud) heran für Details dazu, was „lokal“ in diesem Kontext tatsächlich bedeutet und welche Hardware es wirklich unterstützt.',
           'Für Nutzer, die ein echtes Local-API-Akkusystem wünschen, das sich mit Solar kombinieren lässt und kein Cloud-Konto benötigt, bietet der EU-Markt derzeit die besseren Optionen (insbesondere Zendure SolarFlow — siehe [EcoFlow vs. Anker vs. Zendure](/de/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar)), auch wenn die meisten dieser Produkte für den US-Markt nicht verkauft oder zertifiziert sind.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Stand 2026 bietet keine große in den USA verkaufte Powerstation-Marke (EcoFlow, Bluetti, Jackery, Anker SOLIX) eine offiziell dokumentierte lokale API für Home Assistant — für EcoFlow existieren Community-Integrationen, die jedoch über deren Cloud laufen.' },
+          { type: 'one-sentence', text: 'Stand Ende 2026 bietet EcoFlow STREAM eine dokumentierte lokale API; Bluetti, Jackery und Anker SOLIX setzen weiterhin auf Cloud-Monitoring — aktuellen Status vor dem Kauf prüfen.' },
           { type: 'plain-terms', text: 'Wenn Sie einen Akku wünschen, der mit Home Assistant funktioniert, ohne Daten an die Server des Herstellers zu senden, sind die US-Optionen begrenzt — EcoFlow hat den besten Community-Workaround, aber es ist kein echter lokaler Aufbau.' },
         ],
       },
@@ -688,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://us.ecoflow.com', title: 'EcoFlow US-Shop', description: 'Spezifikationen und Preise zu Delta Pro, Delta Pro Ultra — aktuelle Zahlen zum Kaufzeitpunkt prüfen' },
           { url: 'https://www.bluettipower.com', title: 'Bluetti US-Shop', description: 'Spezifikationen zu AC300, B300, AC200MAX — aktuelle Zahlen prüfen' },
           { url: 'https://www.jackery.com', title: 'Jackery US-Shop', description: 'Spezifikationen der Explorer-Serie — aktuelle Chemie und Leistung je Modell prüfen' },
-          { url: 'https://ankersolix.com', title: 'Anker SOLIX US-Shop', description: 'Spezifikationen zu F2000, F3800; bestätigt, dass die Solarbank nicht im US-Katalog ist' },
+          { url: 'https://ankersolix.com', title: 'Anker SOLIX US-Shop', description: 'F2000- und F3800-Plus-Daten; keine Solarbank in der am 2026-11-20 geprüften Shop-Navigation' },
         ],
       },
       relatedReading: {
@@ -702,13 +746,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-            { q: 'Ist Balkon-Solar in den USA legal?', a: 'Es gibt keine einheitliche US-Antwort — die Legalität variiert je nach Bundesstaat und Versorger. Einige Bundesstaaten haben Plug-in-Solar-Regeln ähnlich dem deutschen Balkonkraftwerk erlassen; andere verlangen für netzgekoppeltes Solar Genehmigungen, die Zustimmung des Versorgers nach NEC Article 705 und UL-1741-zertifizierte Ausrüstung. Eine Aufschlüsselung nach Bundesstaat finden Sie im eigenen Leitfaden zur Legalität in den US-Bundesstaaten. Der sicherste Ansatz in jedem Bundesstaat ist ein eigenständiges Akku-plus-Panel-System ohne Netzverbindung.' },
+            { q: 'Ist Balkon-Solar in den USA legal?', a: 'Zunehmend ja, aber nicht überall: Zehn Bundesstaaten haben Plug-in-Solargesetze unterzeichnet (Utah, Maine, Virginia, Maryland, Colorado, Connecticut, New Hampshire, Vermont, New Jersey und Kalifornien, dessen SB 868 am 30. September 2026 unterzeichnet wurde). Sechs sind in Kraft, Virginia, Kalifornien und New Hampshire folgen am 1. Januar 2027, New Jersey am 1. März 2027. Ein bundesweites Plug-in-Gesetz gibt es nicht, und wo kein Landesgesetz besteht, gelten weiterhin die Netzanschlussregeln der Versorger (NEC Article 705, UL-1741-Geräte). Details im Leitfaden zur Rechtslage nach Bundesstaaten. Am sichersten bleibt überall eine eigenständige Batterie mit Panels ohne Netzanbindung.' },
             { q: 'EcoFlow vs. Bluetti — was ist 2026 besser für die US-Heim-Notstromversorgung?', a: 'Die EcoFlow Delta Pro hat den stärkeren MPPT-Solareingang und ist damit die bessere Wahl, wenn schnelles panelbasiertes Nachladen Priorität hat. Bluettis AC300+B300 ist besser, wenn modulare Erweiterung (Akkukapazität in Schritten hinzufügen) Priorität hat. Beide verwenden LFP-Chemie. Die Preise ändern sich häufig durch die Zollbelastung — vergleichen Sie die aktuellen Preise zum Kaufzeitpunkt, da der Preisabstand schwankt.' },
             { q: 'Was ist der Unterschied zwischen LFP- und NMC-Batteriechemie?', a: 'LFP (Lithium-Eisenphosphat) liefert ~3,000–6,000 Ladezyklen bei 80 % Erhalt, bessere thermische Stabilität und längere Kalenderlebensdauer — bevorzugt für Heim-Notstromeinheiten, die täglich zyklisieren. NMC (Nickel-Mangan-Kobalt) bietet höhere Energiedichte pro Gewicht, weshalb es tragbare/campingorientierte Einheiten wie ältere Jackery-Explorer-Modelle dominiert. Für eine Einheit, die zu Hause täglich aus Solar zyklisiert, ist die LFP-Chemie über einen Horizont von 5–10 Jahren deutlich besser.' },
             { q: 'Kann ich damit meinen Kühlschrank während eines Netzausfalls betreiben?', a: 'Ja, bei richtiger Dimensionierung. Ein typischer US-Kühlschrank zieht 100–400 W kontinuierlich (150 W im Mittel) und hat eine Anlaufspitze von 600–1,200 W. Eine 2-kWh-LFP-Einheit mit 2,000 W+ AC-Ausgang kann einen Standardkühlschrank 8–12 Stunden versorgen. Fügen Sie ein 200–400-W-Solarpanel hinzu, und Sie können das bei ordentlichem Sonnenlicht unbegrenzt verlängern. Prüfen Sie die AC-Ausgangs- und Spitzenleistung jeder Einheit, die Sie in Betracht ziehen — einige günstige Powerstations haben eine für Kühlschrankkompressoren zu niedrige Spitzenleistung.' },
             { q: 'Brauche ich Genehmigungen oder Netzeinbindung für eine mit Solarpanels kombinierte Powerstation?', a: 'Wenn Sie sich nicht mit dem Netz verbinden — die Powerstation also nur aus Panels laden und damit Ihr Zuhause versorgen —, benötigen Sie in der Regel keine Netzeinbindungsgenehmigungen oder die Zustimmung des Versorgers. Die Panels verbinden sich nur mit dem Solareingang der Powerstation, nicht mit dem elektrischen Verteiler Ihres Hauses. Dies ist die zentrale rechtliche Einfachheit des Ansatzes mit eigenständigem Akku gegenüber Balkon-Solar-Kits, die ins Netz einspeisen. Klären Sie es bei Unsicherheit mit Ihrer örtlichen AHJ (zuständige Behörde).' },
             { q: 'Kann ich diese mit Home Assistant zur lokalen Überwachung nutzen?', a: 'Teilweise. EcoFlow hat eine community-gepflegte Home-Assistant-Integration (über HACS) für die Delta-Serie, aber sie läuft über EcoFlows Cloud-API statt über einen echten lokalen Endpunkt. Bluetti, Jackery und Anker SOLIX bieten keine gut dokumentierten lokalen APIs. Wenn lokale Steuerung ohne Cloud-Abhängigkeit eine harte Anforderung ist, siehe den Leitfaden zu Balkon-Solar ohne Cloud für eine aktuelle Zusammenfassung, welche Hardware wirklich einen reinen Lokalbetrieb unterstützt.' },
-            { q: 'Ist Anker SOLIX in den USA verfügbar?', a: 'Tragbare Anker-SOLIX-Powerstations (F2000, F3800 und ähnliche Einheiten) sind in den USA auf ankersolix.com und bei Amazon verfügbar. Anker-SOLIX-Solarbank-Modelle — konzipiert für netzgekoppelten Balkon-Solar-Speicher — werden für den US-Markt nicht verkauft oder zertifiziert und sollten US-Käufern nicht empfohlen werden. Dies ist ein häufiger Verwechslungspunkt, da die Solarbank in EU-Solar-Tests erhebliche Beachtung findet.' },
+            { q: 'Ist Anker SOLIX in den USA verfügbar?', a: 'Tragbare Anker-SOLIX-Powerstations (F2000, F3800 und ähnliche Einheiten) sind in den USA auf ankersolix.com und bei Amazon verfügbar. Anker SOLIX Solarbank – für netzgekoppelte Balkonsolar-Speicherung entwickelt – war bei der Prüfung am 20. November 2026 im US-Shop von Anker nicht gelistet, und eine US-UL-Listung wurde nicht gefunden; dieser Leitfaden empfiehlt sie US-Käufern daher nicht. Prüfen Sie den US-Shop von Anker auf Änderungen.' },
             { q: 'Warum sind die Preise für diese Produkte so volatil?', a: 'EcoFlow, Bluetti, Jackery und Anker SOLIX werden alle in China gefertigt. Die US-Einzelhandelspreise unterliegen Section-301-Zöllen auf Lithium-Ionen-Akkus und Solarkomponenten, die über 2024–2026 gestiegen sind und die Einzelhandelspreise um 10–25 % oder mehr verschieben können. Die Marken führen zudem häufig Aktionen durch, die die Preise um 200–500 $ in beide Richtungen bewegen können. Prüfen Sie stets den aktuellen Preis auf Amazon oder im US-Shop der Marke zum Kaufzeitpunkt.' },
             { q: 'Was ist die beste tragbare Powerstation fürs Camping, die auch als Heim-Notstrom funktioniert?', a: 'Jackery Explorer 2000 Pro oder 3000 Pro für portabilitätsorientierte Nutzer (leichter, Amazon-freundlich, aber NMC — aktuelle Chemie prüfen). Anker SOLIX F2000 für Käufer, die LFP mit ähnlicher Portabilität wie Jackery wollen. EcoFlow Delta Pro, wenn Sie bereit sind, bei der Portabilität Kompromisse für LFP-Chemie und einen stärkeren Solareingang einzugehen. Der Anwendungsfall „Camping-Crossover“ wird von allen vier Marken gut bedient — das Unterscheidungsmerkmal ist die Chemie und die langfristige Zyklenlebensdauer für Käufer, die die Einheit zwischen den Touren zu Hause intensiv nutzen wollen.' },
           ],
@@ -720,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Beste Heimspeicher & tragbare Powerstations für US-Solar (2026): EcoFlow, Bluetti & mehr',
       description: 'Beste Heimspeicher und tragbare Powerstations für US-Solarkäufer 2026: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP vs. NMC, lokale Steuerung, geprüfte US-Verfügbarkeit.',
       datePublished: '2026-07-03',
-      dateModified: '2026-07-03',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -789,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Ist Balkon-Solar in den USA legal?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Es gibt keine einheitliche US-Antwort — die Legalität variiert je nach Bundesstaat und Versorger. Einige Bundesstaaten haben Plug-in-Solar-Regeln ähnlich dem deutschen Balkonkraftwerk erlassen; andere verlangen für netzgekoppeltes Solar Genehmigungen, die Zustimmung des Versorgers nach NEC Article 705 und UL-1741-zertifizierte Ausrüstung. Eine Aufschlüsselung nach Bundesstaat finden Sie im eigenen Leitfaden zur Legalität in den US-Bundesstaaten. Der sicherste Ansatz in jedem Bundesstaat ist ein eigenständiges Akku-plus-Panel-System ohne Netzverbindung.',
+              'text': 'Zunehmend ja, aber nicht überall: Zehn Bundesstaaten haben Plug-in-Solargesetze unterzeichnet (Utah, Maine, Virginia, Maryland, Colorado, Connecticut, New Hampshire, Vermont, New Jersey und Kalifornien, dessen SB 868 am 30. September 2026 unterzeichnet wurde). Sechs sind in Kraft, Virginia, Kalifornien und New Hampshire folgen am 1. Januar 2027, New Jersey am 1. März 2027. Ein bundesweites Plug-in-Gesetz gibt es nicht, und wo kein Landesgesetz besteht, gelten weiterhin die Netzanschlussregeln der Versorger (NEC Article 705, UL-1741-Geräte). Details im Leitfaden zur Rechtslage nach Bundesstaaten. Am sichersten bleibt überall eine eigenständige Batterie mit Panels ohne Netzanbindung.',
             },
           },
           {
@@ -837,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Ist Anker SOLIX in den USA verfügbar?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Tragbare Anker-SOLIX-Powerstations (F2000, F3800 und ähnliche Einheiten) sind in den USA auf ankersolix.com und bei Amazon verfügbar. Anker-SOLIX-Solarbank-Modelle — konzipiert für netzgekoppelten Balkon-Solar-Speicher — werden für den US-Markt nicht verkauft oder zertifiziert und sollten US-Käufern nicht empfohlen werden. Dies ist ein häufiger Verwechslungspunkt, da die Solarbank in EU-Solar-Tests erhebliche Beachtung findet.',
+              'text': 'Tragbare Anker-SOLIX-Powerstations (F2000, F3800 und ähnliche Einheiten) sind in den USA auf ankersolix.com und bei Amazon verfügbar. Anker SOLIX Solarbank – für netzgekoppelte Balkonsolar-Speicherung entwickelt – war bei der Prüfung am 20. November 2026 im US-Shop von Anker nicht gelistet, und eine US-UL-Listung wurde nicht gefunden; dieser Leitfaden empfiehlt sie US-Käufern daher nicht. Prüfen Sie den US-Shop von Anker auf Änderungen.',
             },
           },
           {
@@ -900,13 +944,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Quelle batterie domestique ou station électrique un acheteur américain devrait-il choisir pour le secours solaire en 2026 ?',
-        answer: 'La Delta Pro d\'EcoFlow est le meilleur choix polyvalent pour le secours domestique avec appairage solaire : chimie LFP, 3.6 kWh de capacité de base, forte entrée solaire et l\'écosystème d\'accessoires le plus large. La combinaison AC300+B300 de Bluetti convient mieux aux acheteurs qui veulent une extension modulaire. La série Jackery Explorer se distingue par sa portabilité et sa disponibilité sur Amazon. L\'Anker SOLIX F3800 mérite d\'être examinée pour du LFP grande capacité à un prix compétitif. Ne supposez pas que l\'Anker Solarbank européen est disponible — il n\'est ni vendu ni certifié aux États-Unis.',
+        answer: 'La Delta Pro d\'EcoFlow est le meilleur choix polyvalent pour le secours domestique avec appairage solaire : chimie LFP, 3.6 kWh de capacité de base, forte entrée solaire et l\'écosystème d\'accessoires le plus large. La combinaison AC300+B300 de Bluetti convient mieux aux acheteurs qui veulent une extension modulaire. La série Jackery Explorer se distingue par sa portabilité et sa disponibilité sur Amazon. L\'Anker SOLIX F3800 mérite d\'être examinée pour du LFP grande capacité à un prix compétitif. Anker SOLIX Solarbank n’était pas référencé dans la boutique américaine d’Anker lors de la vérification du 20 novembre 2026 : ne supposez pas que la Solarbank européenne est disponible aux États-Unis.',
         bullets: [
           'EcoFlow Delta Pro : LFP, ~3.6 kWh, forte entrée solaire — meilleur secours domestique polyvalent avec appairage solaire (vérifiez les specs actuelles)',
           'Bluetti AC300+B300 : empilage LFP modulaire, jusqu\'à ~12 kWh — idéal pour les acheteurs qui privilégient l\'extensibilité (vérifiez les specs actuelles)',
           'Jackery Explorer 2000 Pro : chimie NMC, polyvalence camping/portable — meilleure portabilité, présence Amazon la plus large (vérifiez les specs actuelles)',
           'Anker SOLIX F3800 : batterie domestique portable LFP grande capacité — solide alternative, vérifiez la disponibilité US et les specs',
-          'L\'Anker SOLIX Solarbank n\'est PAS vendue aux États-Unis — assurez-vous de bien regarder leur gamme de stations électriques portables, pas la Solarbank',
+          'Anker SOLIX Solarbank : non référencé dans la boutique américaine d’Anker (vérifié le 2026-11-20) — assurez-vous de regarder la gamme de stations d’énergie portables, pas Solarbank',
           'Les quatre marques sont fabriquées en Chine ; les prix de détail américains sont soumis aux droits de douane de la Section 301 — vérifiez les prix au moment de l\'achat',
         ],
         updatedDate: '2026-11-20',
@@ -936,8 +980,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     sections: {
       statusNote: {
-        title: 'Mise à jour 2026 : lois des États américains et vérifications produits',
-        content: '**Le paysage juridique américain dépasse désormais la simple mosaïque : selon un panorama du solaire plug-in mis à jour le 4 octobre 2026, dix États ont adopté des lois sur le solaire plug-in, la plupart plafonnant les appareils à 1 200 W.** Ce panorama tenu par un vendeur ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)) cite l\'Utah (HB 340, signée en mars 2025), le Maine (LD 1730, signée le 6 avril 2026), la Virginie (HB 395, 22 avril 2026), le Colorado (HB 26-1007, 7 mai 2026, jusqu\'à 1 920 W), le Maryland (HB 1532, 12 mai 2026), le Connecticut (HB 5340, 20 mai 2026), le New Hampshire (SB 540-FN, juin 2026), le Vermont (S. 202, 16 juin 2026), le New Jersey (S 2368 / A 4836, 1er septembre 2026) et la Californie (SB 868, signée le 30 septembre 2026). Il signale lui-même des incohérences dans ses chiffres, et d\'autres sources divergent sur les lois qui citent UL 3700 et sur les dates d\'entrée en vigueur : lisez le texte promulgué sur le site de chaque législature ; les textes n\'ont pas été vérifiés dans leurs sources primaires lors de cette mise à jour. Aucun cadre fédéral plug-in n\'a été trouvé, la formulation « mosaïque » de cette page reste donc valable, mais elle sous-estime le nombre d\'États dotés de lois dédiées. Selon le même panorama, le crédit d\'impôt fédéral de 30 % pour le solaire a expiré le 31 décembre 2025, ce qui compte pour toute comparaison de coûts ici. Les modèles, caractéristiques et prix ci-dessous n\'ont pas été revérifiés : des générations plus récentes comme l\'EcoFlow Delta Pro 3 et l\'Anker SOLIX F3800 Plus apparaissent dans la presse de 2026, et un [panorama Bob Vila d\'avril 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) affichait le F3800 Plus à 799,99 $ en promotion ; les prix de cette page doivent donc être considérés comme non datés. L\'affirmation selon laquelle Anker Solarbank n\'est pas vendu aux États-Unis n\'a pas non plus été reconfirmée : les résultats de recherche montraient une fiche Amazon.com pour le Solarbank 2 E1600 qui n\'a pas pu être ouverte ; vérifiez la boutique américaine d\'Anker. Il s\'agit d\'un résumé d\'informations publiques, pas d\'un conseil juridique, fiscal ni de sécurité électrique.',
+        title: 'Revérification : lois des États américains, caractéristiques produits et disponibilité',
+        content: '**Vérifié le 20 novembre 2026 : le paysage juridique américain et certaines générations de produits ont changé depuis la rédaction de ce guide, et les sections ci-dessous sont mises à jour ou signalées en conséquence.** Droit : dix États américains ont signé des lois sur le solaire plug-in (Utah, Maine, Virginie, Maryland, Colorado, Connecticut, New Hampshire, Vermont, New Jersey et Californie). Le SB 868 californien a été signé le 30 septembre 2026 et entre en vigueur le 1er janvier 2027, ses exemptions de raccordement devant, selon les informations disponibles, expirer le 1er janvier 2030 ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/) ; non vérifié par rapport au texte promulgué). Six États sont en vigueur ; la Virginie, la Californie et le New Hampshire suivent le 1er janvier 2027 et le New Jersey le 1er mars 2027, et les dates d’entrée en vigueur diffèrent selon les suivis : confirmez-les auprès de l’État. Il n’existe pas de loi fédérale sur le plug-in. Le détail par État figure dans [Comment le solaire de balcon est devenu légal dans 10 États américains](/fr/balcony-solar/how-balcony-solar-became-legal-in-the-us) et [Le solaire de balcon est-il légal dans mon État ?](/fr/balcony-solar/balcony-solar-legal-us-states) et n’est pas répété ici. Produits : deux modèles actuels ont été vérifiés le 20 novembre 2026 et ajoutés au tableau, l’EcoFlow DELTA Pro 3 (4 096 Wh LFP, 4 000 W continus et 8 000 W en pointe avec X-Boost, extensible à 12 kWh avec deux Smart Extra Batteries selon le [blog EcoFlow](https://www.ecoflow.com/us/blog/ecoflow-portable-power-station-specs) et les fiches de revendeurs) et l’Anker SOLIX F3800 Plus (3 840 Wh LFP, plus de 3 000 cycles, 6 000 W, jusqu’à 3 200 W d’entrée solaire selon la [page US d’Anker SOLIX](https://www.ankersolix.com/us/products/f3800-plus)). Toutes les autres lignes ont été vérifiées pour la dernière fois le 2026-07-03 et non revérifiées : EcoFlow DELTA Pro (prédécesseur du Pro 3), Bluetti AC300 + B300 (une boutique américaine indique le module onduleur AC300 comme arrêté), Bluetti AC200MAX (disponibilité variable selon les revendeurs), Jackery Explorer 2000 Pro et 3000 Pro (le site de Jackery n’indique pas la chimie du 3000 Pro et un revendeur indique lithium-ion ; l’[Explorer 2000 Plus](https://www.jackery.com/collections/3000-pro-or-2000-plus) est indiqué LiFePO4) et Anker SOLIX F2000. Les prix ne figurent pas sur cette page car les prix promotionnels varient vite. Anker Solarbank : aucun produit Solarbank n’apparaissait dans la navigation de la boutique américaine d’Anker le 20 novembre 2026 et aucune certification UL américaine n’a été trouvée ; il est donc décrit comme non référencé aux États-Unis, et non comme interdit. Il s’agit d’un résumé d’informations publiques, pas d’un conseil juridique, fiscal ni de sécurité électrique.',
       },
       tldr: {
         id: 'key-takeaways',
@@ -947,7 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aux États-Unis, la source de revenus des marques de solaire de balcon, ce sont les stations électriques portables et les batteries domestiques extensibles — les unités portables EcoFlow, Bluetti, Jackery et Anker SOLIX — qui s\'appairent proprement avec des panneaux sans interconnexion au réseau.',
           'La chimie LFP (lithium fer phosphate) est nettement préférée à la NMC pour le secours domestique : durée de vie en cycles plus longue (~3 000–6 000 cycles contre ~500–1 000), plus sûre à haute température et moins de dégradation à charge partielle — l\'EcoFlow Delta Pro, la Bluetti AC300+B300 et l\'Anker SOLIX F3800 utilisent toutes du LFP.',
           'La série Explorer Pro de Jackery utilisait historiquement de la NMC — utile pour les applications portables mais moins idéale pour une unité qui va cycler quotidiennement à la maison (vérifiez la chimie actuelle de chaque modèle avant l\'achat).',
-          'L\'Anker SOLIX Solarbank n\'est ni vendue ni certifiée pour le marché américain — les unités Anker pertinentes pour les acheteurs américains sont leur gamme de stations électriques portables (F2000, F3800, etc.).',
+          'Anker SOLIX Solarbank n’était pas référencé dans la boutique américaine d’Anker lors de la vérification du 20 novembre 2026 et aucune certification UL américaine n’a été trouvée — les produits Anker pertinents pour les acheteurs américains sont les stations d’énergie portables (F2000, F3800 Plus) et le système de secours E10 pour toute la maison.',
           'Les quatre marques sont fabriquées en Chine ; les prix de détail américains sont exposés aux droits de douane de la Section 301 sur les batteries lithium-ion et les composants solaires — ne vous fiez jamais à un chiffre de prix figé.',
         ],
       },
@@ -955,7 +999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'us-market-reality',
         title: 'Pourquoi les acheteurs américains choisissent des batteries, pas des kits',
         content: [
-          '**Le marché européen du solaire de balcon (le Balkonkraftwerk allemand) fonctionne selon une norme fédérale de plug-in qui permet aux locataires et aux propriétaires d\'appartement de brancher en toute sécurité un kit de panneaux de 800 W sur une prise domestique et d\'exporter légalement vers le réseau.** Aucun cadre équivalent n\'existe aux États-Unis à l\'heure où nous écrivons (juillet 2026). Le solaire plug-in américain est régi par les réglementations des fournisseurs d\'électricité de chaque État, les règles d\'interconnexion de l\'article 705 du NEC et les exigences de certification UL 1741, qui varient selon l\'État et le fournisseur — créant un patchwork où ce qui est légal en Californie peut être restreint ou nécessiter des permis au Texas ou en Floride. Voir [Le solaire de balcon est-il légal dans votre État américain ?](/fr/balcony-solar/balcony-solar-legal-us-states) pour un détail État par État.',
+          '**Le Balkonkraftwerk allemand repose sur une norme nationale plug-in qui permet aux locataires et aux copropriétaires de brancher un kit de panneaux de 800 W sur une prise domestique ; les États-Unis n’ont pas d’équivalent fédéral, mais dix États ont désormais signé leurs propres lois sur le solaire plug-in, l’Utah en premier en 2025 et la Californie le plus récemment, le 30 septembre 2026.** La plupart plafonnent les appareils à 1 200 W ; la Virginie, la Californie et le New Hampshire entrent en vigueur le 1er janvier 2027 et le New Jersey le 1er mars 2027, et les exemptions californiennes devraient expirer le 1er janvier 2030 selon les informations disponibles ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/)). Dans les États sans loi, les règles de raccordement des distributeurs (NEC Article 705, équipements UL 1741) continuent de s’appliquer : vérifiez votre État et votre distributeur. Voir [Comment le solaire de balcon est devenu légal dans 10 États américains](/fr/balcony-solar/how-balcony-solar-became-legal-in-the-us) et [Le solaire de balcon est-il légal dans mon État ?](/fr/balcony-solar/balcony-solar-legal-us-states) pour le détail par État.',
           'Cette fragmentation juridique a une conséquence pratique que nous énonçons explicitement comme une hypothèse (et non un fait de marché mesuré) : la demande des consommateurs américains semble se concentrer sur les **stations électriques et batteries autonomes appairées à des panneaux portables ou montés en toiture**, qui ne nécessitent aucune interconnexion au réseau — évitant entièrement la question réglementaire. Cet indice provient des schémas de clics américains sur ce site (les produits du canal Amazon dominent ; les sites de marques de kits à l\'européenne, non) et du fait que des marques comme EcoFlow et Jackery tirent l\'essentiel de leurs revenus américains de stations électriques portables plutôt que de kits de balcon raccordés au réseau. Si vous cherchez une comparaison de kits de balcon, voir [Meilleurs kits solaires de balcon 2026](/fr/balcony-solar/best-balcony-solar-kits-2026) pour ce qui est disponible là où c\'est légal.',
           '**Pour les locataires, les habitants d\'appartement et les propriétaires qui veulent du solaire partiel ou une protection contre les coupures sans installation complète en toiture, cette approche batterie autonome présente un avantage réel au-delà de la simplicité juridique :** elle est portable. Une batterie LFP de 3.6 kWh qui alimente votre réfrigérateur pendant une coupure de réseau aujourd\'hui peut être déplacée, revendue ou réaffectée lors d\'un déménagement — contrairement à un système raccordé au réseau. Comparez cela à l\'Allemagne, où le Balkonkraftwerk est généralement une installation permanente et la batterie une unité de stockage ajoutée. Pour comprendre le fonctionnement de la configuration allemande, voir [Règles du Balkonkraftwerk en Allemagne](/fr/balcony-solar/balkonkraftwerk-germany-rules).',
         ],
@@ -1064,10 +1108,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             usPrice: 'Vérifiez le prix actuel — gamme LFP premium',
             bestFor: 'Secours domestique LFP grande capacité ; forte sortie CA pour charges lourdes',
           },
+          {
+            product: 'EcoFlow DELTA Pro 3',
+            capacity: '4 096 Wh (blog EcoFlow, fiches revendeurs)',
+            chemistry: 'LFP',
+            acOutput: '4 000W continus, 8 000W en pointe avec X-Boost',
+            solarInput: 'Non confirmé ici — voir la fiche US d’EcoFlow',
+            expandable: 'Oui — 12 kWh avec deux Smart Extra Batteries (blog EcoFlow)',
+            localControl: 'Voir la section contrôle local — à vérifier selon le firmware',
+            usPrice: 'Vérifier le prix actuel — sensible aux droits de douane',
+            bestFor: 'Génération actuelle EcoFlow pour secours domestique ; successeur du Delta Pro',
+          },
+          {
+            product: 'Anker SOLIX F3800 Plus',
+            capacity: '3 840 Wh (page US d’Anker)',
+            chemistry: 'LFP, plus de 3 000 cycles',
+            acOutput: '6 000W max (prise 120/240V L14-30R)',
+            solarInput: 'Jusqu’à 3 200W (deux ports, 1 600W chacun)',
+            expandable: 'Oui — batteries d’extension Anker',
+            localControl: 'Surtout via l’app — vérifier la prise en charge d’une API locale',
+            usPrice: 'Vérifier le prix actuel — promotions fréquentes',
+            bestFor: 'Secours domestique LFP grande capacité ; modèle phare portable actuel d’Anker',
+          },
         ],
         columns: ['product', 'capacity', 'chemistry', 'acOutput', 'solarInput', 'expandable', 'localControl', 'usPrice', 'bestFor'],
         tableFormat: true,
-        tableNote: 'Les specs sont approximatives, basées sur des gammes de produits connues — tous les chiffres de capacité, de sortie et de prix doivent être vérifiés sur les pages actuelles du fabricant avant l\'achat. Les prix sont volontairement omis car les prix de détail américains des batteries lithium fabriquées en Chine sont sensibles aux droits de douane de la Section 301 et peuvent changer significativement. Vérifiez sur amazon.com ou la boutique directe américaine de la marque au moment de l\'achat (vérifié le 2026-07-03).',
+        tableNote: 'Les specs sont approximatives, basées sur des gammes de produits connues — tous les chiffres de capacité, de sortie et de prix doivent être vérifiés sur les pages actuelles du fabricant avant l\'achat. Les prix sont volontairement omis car les prix de détail américains des batteries lithium fabriquées en Chine sont sensibles aux droits de douane de la Section 301 et peuvent changer significativement. Vérifiez sur amazon.com ou la boutique directe américaine de la marque au moment de l\'achat (vérifié le 2026-07-03). Les lignes EcoFlow DELTA Pro 3 et Anker SOLIX F3800 Plus ont été vérifiées le 2026-11-20 ; toutes les autres lignes ont été vérifiées pour la dernière fois le 2026-07-03 et non revérifiées.',
       },
       useCaseRecs: {
         id: 'use-case-recs',
@@ -1084,12 +1150,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-control',
         title: 'Contrôle local et intégration maison connectée',
         content: [
-          '**Aucune des quatre grandes marques couvertes ici ne fournit d\'API locale officielle et documentée pour Home Assistant en fonctionnalité standard — elles se rabattent toutes par défaut sur la surveillance via une application cloud.** C\'est le plus grand écart entre le marché américain des stations électriques portables et le marché européen du stockage solaire de balcon, où des marques comme Zendure ont bâti des écosystèmes de contrôle local matures. Si le contrôle local compte pour vous, vérifiez l\'état actuel avant d\'acheter, car c\'est la dimension qui évolue le plus vite dans cet espace produit.',
+          '**Peu des grandes marques couvertes ici fournissent une API locale officielle et documentée pour Home Assistant en fonctionnalité standard — la plupart se rabattent encore par défaut sur la surveillance via une application cloud.** EcoFlow STREAM dispose désormais d\'une API locale documentée (vérifiez la portée actuelle sur [ecoflow.com](https://www.ecoflow.com)) ; Bluetti, Jackery et Anker SOLIX s\'appuient encore principalement sur un monitoring cloud. C\'est la dimension qui évolue le plus vite dans cet espace produit — vérifiez l\'état actuel avant d\'acheter. L\'écart entre le marché américain des stations électriques portables et le marché européen du stockage solaire de balcon (où des marques comme Zendure ont bâti des écosystèmes de contrôle local matures) se réduit.',
           'La série Delta Pro d\'EcoFlow bénéficie de l\'intégration communautaire la plus active — une intégration Home Assistant via HACS existe et est maintenue par la communauté (pas officiellement par EcoFlow). Elle s\'appuie sur l\'API cloud d\'EcoFlow plutôt que sur un véritable point de terminaison local, ce qui signifie qu\'elle achemine toujours les données de surveillance via les serveurs d\'EcoFlow. Recoupez avec le [guide du solaire de balcon sans cloud](/fr/balcony-solar/home-assistant-balcony-solar-no-cloud) pour comprendre ce que « local » signifie réellement dans ce contexte et quel matériel le prend véritablement en charge.',
           'Pour les utilisateurs qui veulent un véritable système de batterie à API locale s\'appairant au solaire et ne nécessitant pas de compte cloud, le marché européen offre actuellement de meilleures options (en particulier Zendure SolarFlow — voir [EcoFlow vs Anker vs Zendure](/fr/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar)), bien que la plupart de ces produits ne soient ni vendus ni certifiés pour le marché américain.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'En 2026, aucune grande marque de station électrique portable vendue aux États-Unis (EcoFlow, Bluetti, Jackery, Anker SOLIX) ne fournit d\'API locale officiellement documentée pour Home Assistant — des intégrations communautaires existent pour EcoFlow mais transitent par leur cloud.' },
+          { type: 'one-sentence', text: 'Fin 2026, EcoFlow STREAM dispose d\'une API locale documentée ; Bluetti, Jackery et Anker SOLIX s\'appuient encore sur un monitoring cloud — vérifiez l\'état actuel avant d\'acheter.' },
           { type: 'plain-terms', text: 'Si vous voulez une batterie qui fonctionne avec Home Assistant sans envoyer de données aux serveurs du fabricant, les options américaines sont limitées — EcoFlow offre le meilleur contournement communautaire, mais ce n\'est pas une vraie configuration locale.' },
         ],
       },
@@ -1110,7 +1176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://us.ecoflow.com', title: 'Boutique américaine EcoFlow', description: 'Specs et prix des Delta Pro, Delta Pro Ultra — vérifiez les chiffres actuels au moment de l\'achat' },
           { url: 'https://www.bluettipower.com', title: 'Boutique américaine Bluetti', description: 'Specs des AC300, B300, AC200MAX — vérifiez les chiffres actuels' },
           { url: 'https://www.jackery.com', title: 'Boutique américaine Jackery', description: 'Specs de la série Explorer — vérifiez la chimie et la sortie actuelles par modèle' },
-          { url: 'https://ankersolix.com', title: 'Boutique américaine Anker SOLIX', description: 'Specs des F2000, F3800 ; confirme que la Solarbank ne figure pas au catalogue américain' },
+          { url: 'https://ankersolix.com', title: 'Boutique américaine Anker SOLIX', description: 'Caractéristiques F2000 et F3800 Plus ; aucune Solarbank dans la navigation de la boutique vérifiée le 2026-11-20' },
         ],
       },
       relatedReading: {
@@ -1124,13 +1190,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Foire aux questions',
         faqs: [
-            { q: 'Le solaire de balcon est-il légal aux États-Unis ?', a: 'Il n\'y a pas de réponse américaine unique — la légalité varie selon l\'État et le fournisseur d\'électricité. Certains États ont adopté des règles de solaire plug-in similaires au Balkonkraftwerk allemand ; d\'autres exigent des permis, l\'approbation du fournisseur au titre de l\'article 705 du NEC et des équipements certifiés UL 1741 pour tout solaire raccordé au réseau. Pour un détail État par État, voir le guide dédié à la légalité par État américain. L\'approche la plus sûre dans n\'importe quel État est un système batterie + panneau autonome sans aucune connexion au réseau.' },
+            { q: 'Le solaire de balcon est-il légal aux États-Unis ?', a: 'De plus en plus, mais pas partout : dix États ont signé des lois sur le solaire plug-in (Utah, Maine, Virginie, Maryland, Colorado, Connecticut, New Hampshire, Vermont, New Jersey et Californie, dont le SB 868 a été signé le 30 septembre 2026). Six sont en vigueur, la Virginie, la Californie et le New Hampshire suivent le 1er janvier 2027 et le New Jersey le 1er mars 2027. Il n’existe pas de loi fédérale sur le plug-in et, sans loi d’État, le raccordement au distributeur (NEC Article 705, équipements UL 1741) reste applicable. Voir le guide de la légalité par État. L’approche la plus sûre reste partout une batterie autonome avec panneaux, sans raccordement au réseau.' },
             { q: 'EcoFlow vs Bluetti — laquelle est la meilleure pour le secours domestique américain en 2026 ?', a: 'L\'EcoFlow Delta Pro a l\'entrée solaire MPPT la plus forte, ce qui en fait le meilleur choix si la recharge rapide par panneaux est une priorité. La Bluetti AC300+B300 est préférable si l\'extension modulaire (ajout de capacité de batterie par paliers) est la priorité. Les deux utilisent la chimie LFP. Les prix changent souvent en raison de l\'exposition aux droits de douane — comparez les prix actuels au moment de l\'achat, car l\'écart de prix fluctue.' },
             { q: 'Quelle est la différence entre la chimie de batterie LFP et NMC ?', a: 'Le LFP (lithium fer phosphate) offre ~3 000–6 000 cycles de charge à 80 % de rétention, une meilleure stabilité thermique et une durée de vie calendaire plus longue — préféré pour les unités de secours domestique qui cyclent quotidiennement. La NMC (nickel manganèse cobalt) offre une densité énergétique plus élevée pour un poids donné, ce qui explique sa domination dans les unités portables/camping comme les anciens modèles Jackery Explorer. Pour une unité qui reste chez vous et cycle quotidiennement à partir du solaire, la chimie LFP est nettement meilleure sur un horizon de 5–10 ans.' },
             { q: 'Puis-je faire fonctionner mon réfrigérateur pendant une coupure de réseau avec l\'une de ces unités ?', a: 'Oui, avec le bon dimensionnement. Un réfrigérateur américain typique tire 100–400 W en continu (150 W en moyenne) et présente une pointe de démarrage de 600–1 200 W. Une unité LFP de 2 kWh avec 2 000 W+ de sortie CA peut alimenter un réfrigérateur standard pendant 8–12 heures. Ajoutez un panneau solaire de 200–400 W et vous pouvez prolonger cela indéfiniment par ensoleillement correct. Vérifiez la sortie CA et la puissance de pointe de toute unité que vous envisagez — certaines stations électriques abordables ont des puissances de pointe trop faibles pour les compresseurs de réfrigérateur.' },
             { q: 'Ai-je besoin de permis ou d\'interconnexion au réseau pour une station électrique appairée à des panneaux solaires ?', a: 'Si vous ne vous connectez pas au réseau — que vous chargez simplement la station électrique depuis des panneaux et l\'utilisez pour alimenter votre maison — vous n\'avez généralement pas besoin de permis d\'interconnexion ni d\'approbation du fournisseur. Les panneaux se connectent uniquement à l\'entrée solaire de la station électrique, pas au tableau électrique de votre maison. C\'est la simplicité juridique clé de l\'approche batterie autonome par rapport aux kits de solaire de balcon qui exportent vers le réseau. Vérifiez auprès de votre AHJ local (autorité compétente) en cas de doute.' },
             { q: 'Puis-je les utiliser avec Home Assistant pour une surveillance locale ?', a: 'Partiellement. EcoFlow dispose d\'une intégration Home Assistant maintenue par la communauté (via HACS) pour la série Delta, mais elle transite par l\'API cloud d\'EcoFlow plutôt que par un véritable point de terminaison local. Bluetti, Jackery et Anker SOLIX manquent d\'API locales bien documentées. Si le contrôle local sans dépendance au cloud est une exigence stricte, voir le guide du solaire de balcon sans cloud pour un résumé actuel du matériel qui prend véritablement en charge un fonctionnement local uniquement.' },
-            { q: 'Anker SOLIX est-elle disponible aux États-Unis ?', a: 'Les stations électriques portables Anker SOLIX (F2000, F3800 et unités similaires) sont disponibles aux États-Unis sur ankersolix.com et sur Amazon. Les modèles Anker SOLIX Solarbank — conçus pour le stockage solaire de balcon raccordé au réseau — ne sont ni vendus ni certifiés pour le marché américain et ne doivent pas être recommandés aux acheteurs américains. C\'est un point de confusion fréquent, la Solarbank recevant une couverture importante dans les tests solaires européens.' },
+            { q: 'Anker SOLIX est-elle disponible aux États-Unis ?', a: 'Les stations électriques portables Anker SOLIX (F2000, F3800 et unités similaires) sont disponibles aux États-Unis sur ankersolix.com et sur Amazon. Anker SOLIX Solarbank — conçue pour le stockage de solaire de balcon raccordé au réseau — n’était pas référencée dans la boutique américaine d’Anker lors de la vérification du 20 novembre 2026 et aucune certification UL américaine n’a été trouvée ; ce guide ne la recommande donc pas aux acheteurs américains. Vérifiez la boutique américaine d’Anker pour tout changement.' },
             { q: 'Pourquoi les prix de ces produits sont-ils si volatils ?', a: 'EcoFlow, Bluetti, Jackery et Anker SOLIX sont toutes fabriquées en Chine. Les prix de détail américains sont soumis aux droits de douane de la Section 301 sur les batteries lithium-ion et les composants solaires, qui n\'ont cessé d\'augmenter entre 2024 et 2026 et peuvent faire varier les prix de détail de 10–25 % ou plus. Les marques mènent aussi des promotions fréquentes qui peuvent faire bouger les prix de 200–500 $ dans un sens ou dans l\'autre. Vérifiez toujours le prix actuel sur Amazon ou la boutique américaine de la marque au moment de l\'achat.' },
             { q: 'Quelle est la meilleure station électrique portable pour le camping qui fonctionne aussi pour le secours domestique ?', a: 'La Jackery Explorer 2000 Pro ou 3000 Pro pour les utilisateurs qui privilégient la portabilité (plus légère, adaptée à Amazon, mais NMC — vérifiez la chimie actuelle). L\'Anker SOLIX F2000 pour les acheteurs qui veulent du LFP avec une portabilité similaire à Jackery. L\'EcoFlow Delta Pro si vous êtes prêt à faire un compromis sur la portabilité pour la chimie LFP et une entrée solaire plus forte. Le cas d\'usage « polyvalence camping » est bien servi par les quatre marques — le facteur différenciant est la chimie et la durée de vie en cycles à long terme pour les acheteurs qui prévoient d\'utiliser l\'unité intensivement à la maison entre les voyages.' },
             { q: 'Puis-je utiliser une station électrique portable pour faire fonctionner mon réfrigérateur pendant une coupure de réseau ?', a: 'Oui. Un réfrigérateur américain typique tire 100–400 W (150 W en moyenne) avec une pointe de démarrage de 600–1 200 W. Une unité LFP de 2 kWh avec 2 000 W+ de sortie CA peut alimenter un réfrigérateur standard pendant 8–12 heures ; ajoutez un panneau solaire de 200–400 W pour prolonger l\'autonomie. Vérifiez la puissance de pointe CA de toute unité avant l\'achat.' },
@@ -1143,7 +1209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Meilleures batteries domestiques et stations électriques portables pour le solaire aux États-Unis (2026) : EcoFlow, Bluetti et plus',
       description: 'Meilleures batteries domestiques et stations électriques portables pour les acheteurs solaires aux États-Unis en 2026 : EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP vs NMC, contrôle local, disponibilité US vérifiée.',
       datePublished: '2026-07-03',
-      dateModified: '2026-07-03',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -1215,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Le solaire de balcon est-il légal aux États-Unis ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Il n\'y a pas de réponse américaine unique — la légalité varie selon l\'État et le fournisseur d\'électricité. Certains États ont adopté des règles de solaire plug-in similaires au Balkonkraftwerk allemand ; d\'autres exigent des permis, l\'approbation du fournisseur au titre de l\'article 705 du NEC et des équipements certifiés UL 1741 pour tout solaire raccordé au réseau. Pour un détail État par État, voir le guide dédié à la légalité par État américain. L\'approche la plus sûre dans n\'importe quel État est un système batterie + panneau autonome sans aucune connexion au réseau.',
+              'text': 'De plus en plus, mais pas partout : dix États ont signé des lois sur le solaire plug-in (Utah, Maine, Virginie, Maryland, Colorado, Connecticut, New Hampshire, Vermont, New Jersey et Californie, dont le SB 868 a été signé le 30 septembre 2026). Six sont en vigueur, la Virginie, la Californie et le New Hampshire suivent le 1er janvier 2027 et le New Jersey le 1er mars 2027. Il n’existe pas de loi fédérale sur le plug-in et, sans loi d’État, le raccordement au distributeur (NEC Article 705, équipements UL 1741) reste applicable. Voir le guide de la légalité par État. L’approche la plus sûre reste partout une batterie autonome avec panneaux, sans raccordement au réseau.',
             },
           },
           {
@@ -1263,7 +1329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Anker SOLIX est-elle disponible aux États-Unis ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Les stations électriques portables Anker SOLIX (F2000, F3800 et unités similaires) sont disponibles aux États-Unis sur ankersolix.com et sur Amazon. Les modèles Anker SOLIX Solarbank — conçus pour le stockage solaire de balcon raccordé au réseau — ne sont ni vendus ni certifiés pour le marché américain et ne doivent pas être recommandés aux acheteurs américains. C\'est un point de confusion fréquent, la Solarbank recevant une couverture importante dans les tests solaires européens.',
+              'text': 'Les stations électriques portables Anker SOLIX (F2000, F3800 et unités similaires) sont disponibles aux États-Unis sur ankersolix.com et sur Amazon. Anker SOLIX Solarbank — conçue pour le stockage de solaire de balcon raccordé au réseau — n’était pas référencée dans la boutique américaine d’Anker lors de la vérification du 20 novembre 2026 et aucune certification UL américaine n’a été trouvée ; ce guide ne la recommande donc pas aux acheteurs américains. Vérifiez la boutique américaine d’Anker pour tout changement.',
             },
           },
           {
@@ -1334,13 +1400,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: '2026年に米国の購入者がソーラー用の非常用電源として選ぶべき家庭用バッテリーやポータブル電源はどれですか？',
-        answer: 'EcoFlow の Delta Pro は、ソーラーとの組み合わせによる家庭用バックアップとして最もバランスの取れた選択肢です。LFP 化学、3.6 kWh のベース容量、強力なソーラー入力、そして最も充実したアクセサリー・エコシステムを備えます。Bluetti の AC300＋B300 構成は、モジュール式の拡張を望む購入者に向いています。Jackery Explorer シリーズは携帯性と Amazon での入手性でリードします。Anker SOLIX F3800 は、競争力ある価格の大容量 LFP として検討する価値があります。EU の Anker Solarbank が入手できると思い込まないでください。米国では販売も認証もされていません。',
+        answer: 'EcoFlow の Delta Pro は、ソーラーとの組み合わせによる家庭用バックアップとして最もバランスの取れた選択肢です。LFP 化学、3.6 kWh のベース容量、強力なソーラー入力、そして最も充実したアクセサリー・エコシステムを備えます。Bluetti の AC300＋B300 構成は、モジュール式の拡張を望む購入者に向いています。Jackery Explorer シリーズは携帯性と Amazon での入手性でリードします。Anker SOLIX F3800 は、競争力ある価格の大容量 LFP として検討する価値があります。Anker SOLIX Solarbankは2026年11月20日の確認時点でAnkerの米国ストアに掲載がなかったため、欧州向けのSolarbankが米国で入手できると想定しないでください。',
         bullets: [
           'EcoFlow Delta Pro：LFP、約3.6 kWh、強力なソーラー入力。ソーラー連携の家庭用バックアップとして最もバランスが良い（現行スペックは要確認）',
           'Bluetti AC300＋B300：モジュール式 LFP スタッキング、最大約12 kWh。拡張性を最優先する購入者に最適（現行スペックは要確認）',
           'Jackery Explorer 2000 Pro：NMC 化学、キャンプ／ポータブル兼用。携帯性が最も高く Amazon での存在感も最大（現行スペックは要確認）',
           'Anker SOLIX F3800：大容量 LFP のポータブル家庭用バッテリー。有力な代替肢、米国での入手性とスペックは要確認',
-          'Anker SOLIX Solarbank は米国では販売されていません。Solarbank ではなくポータブル電源のラインを見ているか確認してください',
+          'Anker SOLIX Solarbank:Ankerの米国ストアに掲載なし(2026-11-20確認)— 見ているのがポータブル電源のラインであり、Solarbankではないことを確認してください',
           '4ブランドはいずれも中国製造で、米国小売価格は Section 301 関税の対象です。購入時点の価格を確認してください',
         ],
         updatedDate: '2026-11-20',
@@ -1370,8 +1436,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     sections: {
       statusNote: {
-        title: '2026年の更新:米国の州法と製品の確認',
-        content: '**米国の法的状況は単なる寄せ集めを超えて進んでいます。2026年10月4日に更新されたプラグイン型太陽光のまとめによると、10の州がプラグイン型太陽光の法律を制定しており、多くは機器を1,200 Wまでに制限しています。** 事業者が運営するこのまとめ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026))は、ユタ州(HB 340、2025年3月署名)、メイン州(LD 1730、2026年4月6日署名)、バージニア州(HB 395、4月22日)、コロラド州(HB 26-1007、5月7日、1,920 Wまで)、メリーランド州(HB 1532、5月12日)、コネチカット州(HB 5340、5月20日)、ニューハンプシャー州(SB 540-FN、6月)、バーモント州(S. 202、6月16日)、ニュージャージー州(S 2368 / A 4836、9月1日)、カリフォルニア州(SB 868、2026年9月30日署名)を挙げています。同まとめは自身の数値の不整合も指摘しており、UL 3700を明記する法律や施行日については他の情報源と食い違うため、各州議会のサイトで成立した法案本文を確認してください。今回の更新では法案を一次資料で検証していません。連邦レベルのプラグイン向け枠組みは見つからなかったため、このページの「寄せ集め」という表現は引き続き妥当ですが、専用の法律を持つ州の数は過小に伝えています。同まとめによれば、連邦の太陽光30%税額控除は2025年12月31日に終了しており、ここでの費用比較に影響します。以下の機種、仕様、価格は再確認していません。EcoFlow Delta Pro 3やAnker SOLIX F3800 Plusなどの新世代機が2026年の報道に登場しており、[2026年4月付のBob Vilaのまとめ](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/)はF3800 Plusをセール価格799.99ドルで掲載していたため、このページの価格は日付不明として扱ってください。Anker Solarbankが米国で販売されていないという記述も再確認できていません。検索結果にはSolarbank 2 E1600のAmazon.comの掲載が表示されましたが開けなかったため、Ankerの米国ストアで確認してください。本欄は公開情報の要約であり、法的・税務・電気安全上の助言ではありません。',
+        title: '再確認:米国の州法、製品仕様、入手可否',
+        content: '**2026年11月20日に確認:このガイドの作成後に米国の法的状況と一部製品の世代が変わったため、以下のセクションは更新または注記しています。** 法律:10の米国の州がプラグイン型太陽光の法律に署名しています(ユタ、メイン、バージニア、メリーランド、コロラド、コネチカット、ニューハンプシャー、バーモント、ニュージャージー、カリフォルニア)。カリフォルニアのSB 868は2026年9月30日に署名され、2027年1月1日に発効し、系統連系の免除は2030年1月1日に失効すると報じられています([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/)、成立した条文との照合は未実施)。6州は発効済みで、バージニア、カリフォルニア、ニューハンプシャーは2027年1月1日、ニュージャージーは2027年3月1日に続きます。発効日は追跡サイトによって異なるため、州で確認してください。連邦のプラグイン法はありません。州ごとの詳細は[米国10州でバルコニー太陽光が違法から合法になるまで](/ja/balcony-solar/how-balcony-solar-became-legal-in-the-us)と[自分の州でバルコニー太陽光は合法か](/ja/balcony-solar/balcony-solar-legal-us-states)にあり、ここでは繰り返しません。製品:現行の2機種を2026年11月20日に確認して表に追加しました。EcoFlow DELTA Pro 3([EcoFlowブログ](https://www.ecoflow.com/us/blog/ecoflow-portable-power-station-specs)と小売店掲載によると、4,096 Wh LFP、連続4,000 W・X-Boostで瞬間8,000 W、Smart Extra Battery 2台で12 kWhまで拡張可能)とAnker SOLIX F3800 Plus([Anker SOLIX米国ページ](https://www.ankersolix.com/us/products/f3800-plus)によると、3,840 Wh LFP、3,000回以上のサイクル、6,000 W、太陽光入力は最大3,200 W)です。その他の行は最後に2026-07-03に確認したもので再確認していません:EcoFlow DELTA Pro(Pro 3の前世代)、Bluetti AC300 + B300(米国の販売店がAC300のインバーターモジュールを販売終了と表示)、Bluetti AC200MAX(入手可否は販売店により異なる)、Jackery Explorer 2000 Pro・3000 Pro(Jackeryのサイトは3000 Proの化学組成を記載しておらず、小売店はリチウムイオンと表示。[Explorer 2000 Plus](https://www.jackery.com/collections/3000-pro-or-2000-plus)はLiFePO4と記載)、Anker SOLIX F2000。販促価格は変動が速いため、このページでは価格を記載していません。Anker Solarbank:2026年11月20日時点でAnkerの米国ストアのナビゲーションにSolarbank製品はなく、米国のUL登録も見つからなかったため、禁止ではなく「米国では掲載なし」と記述しています。本欄は公開情報の要約であり、法的・税務・電気安全上の助言ではありません。',
       },
       tldr: {
         id: 'key-takeaways',
@@ -1381,7 +1447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '米国におけるベランダ発電ブランドの収益経路は、ポータブル電源と拡張可能な家庭用バッテリーです。EcoFlow、Bluetti、Jackery、Anker SOLIX のポータブル機は、系統連系なしにパネルと素直に組み合わせられます。',
           'LFP（リン酸鉄リチウム）電池は家庭用バックアップにおいて NMC より強く好まれます。サイクル寿命が長く（約3,000〜6,000サイクル対約500〜1,000）、高温でも安全性が高く、部分充電での劣化が少ないためです。EcoFlow Delta Pro、Bluetti AC300＋B300、Anker SOLIX F3800 はいずれも LFP を採用しています。',
           'Jackery の Explorer Pro シリーズは従来 NMC を採用してきました。ポータブル用途には有用ですが、自宅で毎日充放電する機器には理想的とは言えません（購入前にモデルごとの現行化学組成を確認してください）。',
-          'Anker SOLIX Solarbank は米国市場向けに販売も認証もされていません。米国の購入者に関係する Anker 製品は、ポータブル電源のライン（F2000、F3800 など）です。',
+          'Anker SOLIX Solarbankは2026年11月20日の確認時点でAnkerの米国ストアに掲載がなく、米国のUL登録も見つかりませんでした。米国の購入者に関係するAnker製品は、ポータブル電源(F2000、F3800 Plus)とE10全館バックアップシステムです。',
           '4ブランドはいずれも中国製造で、米国小売価格はリチウムイオン電池とソーラー部品への Section 301 関税の影響を受けます。ハードコードされた価格数値を当てにしないでください。',
         ],
       },
@@ -1389,7 +1455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'us-market-reality',
         title: '米国の購入者がキットではなくバッテリーを選ぶ理由',
         content: [
-          '**EU のベランダ発電市場（ドイツの Balkonkraftwerk）は、賃貸居住者やマンション所有者が800Wのパネルキットを家庭用コンセントに安全に挿し込み、系統へ合法的に送電できる連邦プラグイン規格の下で運用されています。** 執筆時点（2026年7月）で米国にはこれに相当する仕組みが存在しません。米国のプラグイン・ソーラーは、州の電力規制、NEC Article 705 の連系ルール、そして州や電力会社によって異なる UL 1741 認証要件によって規律されます。その結果、カリフォルニアで合法なことがテキサスやフロリダでは制限されたり許認可が必要になったりする、まだら模様が生まれています。州ごとの内訳は [米国のあなたの州でベランダ発電は合法ですか？](/ja/balcony-solar/balcony-solar-legal-us-states) を参照してください。',
+          '**ドイツのBalkonkraftwerkは、賃借人やマンション所有者が800 Wのパネルセットを家庭用コンセントに差し込める全国的なプラグイン規格の下で運用されています。米国に連邦レベルの同等制度はありませんが、10の州が独自のプラグイン型太陽光の法律に署名しており、最初は2025年のユタ、直近は2026年9月30日のカリフォルニアです。** 多くは機器を1,200 Wまでに制限し、バージニア、カリフォルニア、ニューハンプシャーは2027年1月1日、ニュージャージーは2027年3月1日に発効します。カリフォルニアの免除は2030年1月1日に失効すると報じられています([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/))。法律のない州では、電力会社の系統連系ルール(NEC Article 705、UL 1741機器)が引き続き適用されるため、州と電力会社を確認してください。州ごとの内訳は[米国10州でバルコニー太陽光が違法から合法になるまで](/ja/balcony-solar/how-balcony-solar-became-legal-in-the-us)と[自分の州でバルコニー太陽光は合法か](/ja/balcony-solar/balcony-solar-legal-us-states)をご覧ください。',
           'この法制度の分断には、私たちが前提（実測された市場事実ではありません）として明示的に述べる実務上の帰結があります。米国の消費者需要は、系統連系をまったく必要としない**単独のポータブル電源やバッテリーを、ポータブルまたは屋根設置のパネルと組み合わせる形**に集中しているように見え、規制上の問題を丸ごと回避しています。その根拠は、本サイトにおける米国のクリック傾向（Amazon チャネルの製品が優勢で、EU型キットのブランドサイトは伸びません）と、EcoFlow や Jackery のようなブランドが米国収益の大半を系統連系型のベランダ発電キットではなくポータブル電源から得ているという事実です。ベランダ発電キットの比較をお探しなら、合法な地域で入手できるものについて [2026年ベスト・ベランダ発電キット](/ja/balcony-solar/best-balcony-solar-kits-2026) を参照してください。',
           '**本格的な屋根設置なしに部分的なソーラーや停電対策を望む賃貸居住者、マンション住まい、持ち家所有者にとって、この単独バッテリー方式には法的な簡便さを超えた本質的な利点があります。** それは携帯性です。今日の停電時に冷蔵庫を動かす3.6 kWh の LFP バッテリーは、引っ越しの際に移動・売却・転用できます。系統連系システムとは対照的です。ドイツと比べてみてください。そこでは Balkonkraftwerk は通常は恒久設置で、バッテリーは追加の蓄電ユニットです。ドイツ方式の仕組みについては [ドイツの Balkonkraftwerk ルール](/ja/balcony-solar/balkonkraftwerk-germany-rules) を参照してください。',
         ],
@@ -1498,10 +1564,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             usPrice: '現在価格を確認（プレミアム LFP 帯）',
             bestFor: '大容量 LFP の家庭用バックアップ。重い負荷向けの高 AC 出力',
           },
+          {
+            product: 'EcoFlow DELTA Pro 3',
+            capacity: '4,096 Wh(EcoFlowブログ、小売店掲載)',
+            chemistry: 'LFP',
+            acOutput: '連続4,000W、X-Boostで瞬間8,000W',
+            solarInput: 'ここでは未確認 — EcoFlow米国の仕様ページを確認',
+            expandable: 'あり — Smart Extra Battery 2台で12 kWh(EcoFlowブログ)',
+            localControl: 'ローカル制御の節を参照 — ファームウェアごとに確認',
+            usPrice: '現在の価格を確認 — 関税の影響を受ける',
+            bestFor: 'EcoFlowの現行世代の家庭用バックアップ。Delta Proの後継',
+          },
+          {
+            product: 'Anker SOLIX F3800 Plus',
+            capacity: '3,840 Wh(Anker米国ページ)',
+            chemistry: 'LFP、3,000回以上のサイクル',
+            acOutput: '最大6,000W(120/240V L14-30Rポート)',
+            solarInput: '最大3,200W(2ポート、各1,600W)',
+            expandable: 'あり — Anker拡張バッテリー',
+            localControl: '主にアプリ経由 — ローカルAPI対応を確認',
+            usPrice: '現在の価格を確認 — セールが頻繁',
+            bestFor: '大容量LFPの家庭用バックアップ。Ankerの現行ポータブル主力機',
+          },
         ],
         columns: ['product', 'capacity', 'chemistry', 'acOutput', 'solarInput', 'expandable', 'localControl', 'usPrice', 'bestFor'],
         tableFormat: true,
-        tableNote: 'スペックは既知の製品ラインに基づく概算です。容量・出力・価格の数値はいずれも、購入前に現行のメーカーページで確認してください。価格を意図的に省略しているのは、中国製リチウム電池の米国小売価格が Section 301 関税の影響を受けやすく、大きく変動しうるためです。購入時点で amazon.com またはブランドの米国直販ストア（2026-07-03 時点で確認）で確認してください。',
+        tableNote: 'スペックは既知の製品ラインに基づく概算です。容量・出力・価格の数値はいずれも、購入前に現行のメーカーページで確認してください。価格を意図的に省略しているのは、中国製リチウム電池の米国小売価格が Section 301 関税の影響を受けやすく、大きく変動しうるためです。購入時点で amazon.com またはブランドの米国直販ストア（2026-07-03 時点で確認）で確認してください。 EcoFlow DELTA Pro 3とAnker SOLIX F3800 Plusの行は2026-11-20に確認しました。その他の行は最後に2026-07-03に確認したもので、再確認していません。',
       },
       useCaseRecs: {
         id: 'use-case-recs',
@@ -1518,12 +1606,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-control',
         title: 'ローカル制御とスマートホーム連携',
         content: [
-          '**ここで取り上げた主要4ブランドはいずれも、Home Assistant 向けの公式で文書化されたローカル API を標準機能として提供しておらず、すべて既定でクラウド型のアプリ監視になります。** これは米国のポータブル電源市場と、Zendure のようなブランドが成熟したローカル制御エコシステムを構築した EU のベランダ発電蓄電市場との、最大の隔たりです。ローカル制御が重要なら、この製品分野で最も動きの速い側面であるため、購入前に現状を確認してください。',
+          '**ここで取り上げた主要ブランドのうち、Home Assistant 向けの公式で文書化されたローカル API を標準機能として提供するブランドはごく少数です。EcoFlow STREAM は文書化されたローカル API を提供しています（現在の範囲は [ecoflow.com](https://www.ecoflow.com) で確認）。Bluetti、Jackery、Anker SOLIX は依然としてクラウド型のアプリ監視が主体です。** これは米国のポータブル電源市場と、Zendure のようなブランドが成熟したローカル制御エコシステムを構築した EU のベランダ発電蓄電市場との差を縮めつつある側面です。ローカル制御が重要なら、この製品分野で最も動きの速い側面であるため、購入前に現状を確認してください。',
           'EcoFlow の Delta Pro シリーズは最も活発なコミュニティ連携を持ちます。HACS 経由の Home Assistant 連携が存在し、コミュニティによって保守されています（EcoFlow の公式ではありません）。これは真のローカルエンドポイントではなく EcoFlow のクラウド API に依存するため、監視データは依然として EcoFlow のサーバーを経由します。この文脈で「ローカル」が実際に何を意味するのか、そしてどのハードウェアが本当にそれをサポートするのかの詳細は [クラウド不要のベランダ発電ガイド](/ja/balcony-solar/home-assistant-balcony-solar-no-cloud) を相互参照してください。',
           'ソーラーと組み合わせられ、クラウドアカウントを必要としない真のローカル API バッテリーシステムを望むユーザーには、現状 EU 市場のほうが良い選択肢があります（特に Zendure SolarFlow。[EcoFlow 対 Anker 対 Zendure](/ja/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar) を参照）。ただしそれらの製品の多くは米国市場向けに販売も認証もされていません。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: '2026年時点で、米国で販売される主要なポータブル電源ブランド（EcoFlow、Bluetti、Jackery、Anker SOLIX）はいずれも、Home Assistant 向けの公式に文書化されたローカル API を提供していません。EcoFlow にはコミュニティ連携がありますが、クラウドを経由します。' },
+          { type: 'one-sentence', text: '2026年末時点で、EcoFlow STREAM は文書化されたローカル API を提供しています。Bluetti、Jackery、Anker SOLIX は依然としてクラウド型監視に依存しています — 購入前に現行状況を確認してください。' },
           { type: 'plain-terms', text: 'メーカーのサーバーにデータを送らずに Home Assistant で動くバッテリーが欲しい場合、米国の選択肢は限られます。EcoFlow が最良のコミュニティ回避策を持ちますが、真のローカル構成ではありません。' },
         ],
       },
@@ -1544,7 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://us.ecoflow.com', title: 'EcoFlow 米国ストア', description: 'Delta Pro、Delta Pro Ultra のスペックと価格。購入時点で現行の数値を確認' },
           { url: 'https://www.bluettipower.com', title: 'Bluetti 米国ストア', description: 'AC300、B300、AC200MAX のスペック。現行の数値を確認' },
           { url: 'https://www.jackery.com', title: 'Jackery 米国ストア', description: 'Explorer シリーズのスペック。モデルごとの現行化学組成と出力を確認' },
-          { url: 'https://ankersolix.com', title: 'Anker SOLIX 米国ストア', description: 'F2000、F3800 のスペック。Solarbank が米国カタログにないことを確認' },
+          { url: 'https://ankersolix.com', title: 'Anker SOLIX 米国ストア', description: 'F2000とF3800 Plusの仕様。2026-11-20に確認したストアのナビゲーションにSolarbankなし' },
         ],
       },
       relatedReading: {
@@ -1558,13 +1646,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-            { q: '米国でベランダ発電は合法ですか？', a: '米国全体で一律の答えはなく、合法性は州と電力会社によって異なります。ドイツの Balkonkraftwerk に似たプラグイン・ソーラーのルールを制定した州もあれば、系統連系するソーラーには許認可、NEC Article 705 に基づく電力会社の承認、UL 1741 認証機器を求める州もあります。州ごとの内訳は、専用の米国州別合法性ガイドを参照してください。どの州でも最も安全な方法は、系統に接続しない単独のバッテリー＋パネルシステムです。' },
+            { q: '米国でベランダ発電は合法ですか？', a: '合法化は進んでいますが、どこでもではありません。10の州がプラグイン型太陽光の法律に署名しています(ユタ、メイン、バージニア、メリーランド、コロラド、コネチカット、ニューハンプシャー、バーモント、ニュージャージー、そして2026年9月30日にSB 868が署名されたカリフォルニア)。6州は発効済みで、バージニア、カリフォルニア、ニューハンプシャーは2027年1月1日、ニュージャージーは2027年3月1日に続きます。連邦のプラグイン法はなく、州法のない州では電力会社との系統連系(NEC Article 705、UL 1741機器)が引き続き適用されます。詳しくは州別の合法性ガイドをご覧ください。どこでも最も安全なのは、系統に接続しない独立型のバッテリーとパネルの組み合わせです。' },
             { q: 'EcoFlow 対 Bluetti — 2026年の米国の家庭用バックアップにはどちらが良いですか？', a: 'EcoFlow Delta Pro は MPPT ソーラー入力が強く、パネルからの高速再充電を優先するなら良い選択です。Bluetti の AC300＋B300 は、モジュール式の拡張（バッテリー容量を段階的に追加する）を優先するなら良い選択です。どちらも LFP 化学です。関税の影響で価格は頻繁に変わるため、価格差も変動します。購入時点の現在価格を比較してください。' },
             { q: 'LFP と NMC の電池化学の違いは何ですか？', a: 'LFP（リン酸鉄リチウム）は80%保持で約3,000〜6,000回の充電サイクル、優れた熱安定性、長いカレンダー寿命を提供し、毎日充放電する家庭用バックアップ機に好まれます。NMC（ニッケルマンガンコバルト）は所定の重量あたりのエネルギー密度が高く、これが旧型 Jackery Explorer のようなポータブル／キャンプ向け機器を席巻する理由です。自宅に据えてソーラーから毎日充放電する機器には、5〜10年の時間軸で LFP 化学が明確に優れています。' },
             { q: 'これらの1台で停電時に冷蔵庫を動かせますか？', a: 'はい、適切なサイジングなら可能です。一般的な米国の冷蔵庫は100〜400W 連続（平均150W）を消費し、起動サージは600〜1,200W です。2,000W 以上の AC 出力を持つ2 kWh の LFP 機なら、標準的な冷蔵庫を8〜12時間動かせます。200〜400W のソーラーパネルを追加すれば、十分な日照下で無期限に延長できます。検討中の機器の AC 出力とサージ定格を確認してください。手頃なポータブル電源の中には、冷蔵庫のコンプレッサーにはサージ定格が低すぎるものがあります。' },
             { q: 'ソーラーパネルと組み合わせたポータブル電源に許認可や系統連系は必要ですか？', a: '系統に接続せず、パネルからポータブル電源を充電して家に給電するだけなら、一般に連系の許認可や電力会社の承認は不要です。パネルはポータブル電源のソーラー入力にのみ接続し、家の分電盤には接続しません。これが、系統へ送電するベランダ発電キットに対する単独バッテリー方式の法的な簡便さの要点です。不確かなら、地域の AHJ（管轄権を持つ当局）に確認してください。' },
             { q: 'これらを Home Assistant でローカル監視に使えますか？', a: '部分的に可能です。EcoFlow には Delta シリーズ向けのコミュニティ保守の Home Assistant 連携（HACS 経由）がありますが、真のローカルエンドポイントではなく EcoFlow のクラウド API を経由します。Bluetti、Jackery、Anker SOLIX は十分に文書化されたローカル API を欠いています。クラウド依存のないローカル制御が必須要件なら、どのハードウェアが本当にローカル専用運用をサポートするかの現行のまとめについて、クラウド不要のベランダ発電ガイドを参照してください。' },
-            { q: 'Anker SOLIX は米国で入手できますか？', a: 'Anker SOLIX のポータブル電源（F2000、F3800 などの機器）は、米国では ankersolix.com と Amazon で入手できます。系統連系型のベランダ発電蓄電向けに設計された Anker SOLIX Solarbank モデルは、米国市場向けに販売も認証もされておらず、米国の購入者に推奨すべきではありません。Solarbank は EU のソーラーレビューで大きく取り上げられるため、これはよくある混同の原因です。' },
+            { q: 'Anker SOLIX は米国で入手できますか？', a: 'Anker SOLIX のポータブル電源（F2000、F3800 などの機器）は、米国では ankersolix.com と Amazon で入手できます。Anker SOLIX Solarbank(系統連系型のバルコニー太陽光向け蓄電池)は、2026年11月20日の確認時点でAnkerの米国ストアに掲載がなく、米国のUL登録も見つからなかったため、本ガイドは米国の購入者に推奨しません。変更がないかAnkerの米国ストアをご確認ください。' },
             { q: 'なぜこれらの製品の価格はこれほど変動しやすいのですか？', a: 'EcoFlow、Bluetti、Jackery、Anker SOLIX はいずれも中国で製造されています。米国小売価格はリチウムイオン電池とソーラー部品への Section 301 関税の対象で、2024〜2026年にかけて上昇しており、小売価格を10〜25%以上動かしうります。各ブランドは頻繁なプロモーションも実施し、価格を200〜500ドルどちらの方向にも動かしえます。購入時点で常に Amazon やブランドの米国ストアで現在価格を確認してください。' },
             { q: '家庭用バックアップにも使えるキャンプ向けのベストなポータブル電源はどれですか？', a: '携帯性を最優先するユーザーには Jackery Explorer 2000 Pro か 3000 Pro（軽量で Amazon 向き、ただし NMC。現行化学組成は要確認）。Jackery と同等の携帯性で LFP が欲しい購入者には Anker SOLIX F2000。携帯性を妥協してでも LFP 化学と強力なソーラー入力が欲しいなら EcoFlow Delta Pro。「キャンプ兼用」の用途は4ブランドすべてでよく満たされます。差別化要素は、旅行の合間に自宅で機器をよく使う購入者にとっての化学組成と長期サイクル寿命です。' },
             { q: '停電時に冷蔵庫を動かすのにポータブル電源を使えますか？', a: 'はい。一般的な米国の冷蔵庫は100〜400W（平均150W）を消費し、起動サージは600〜1,200W です。2,000W 以上の AC 出力を持つ2 kWh の LFP 機なら標準的な冷蔵庫を8〜12時間動かせます。200〜400W のソーラーパネルを追加すれば稼働時間を延ばせます。購入前に機器の AC サージ定格を確認してください。' },
@@ -1577,7 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '米国ソーラー向けベスト家庭用バッテリー＆ポータブル電源（2026年）：EcoFlow・Bluetti ほか',
       description: '2026年の米国ソーラー購入者向けベスト家庭用バッテリー＆ポータブル電源：EcoFlow Delta Pro、Bluetti AC300、Jackery Explorer、Anker SOLIX。LFP対NMC、ローカル制御、米国での入手性を検証。',
       datePublished: '2026-07-03',
-      dateModified: '2026-07-03',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -1649,7 +1737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '米国でベランダ発電は合法ですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '米国全体で一律の答えはなく、合法性は州と電力会社によって異なります。ドイツの Balkonkraftwerk に似たプラグイン・ソーラーのルールを制定した州もあれば、系統連系するソーラーには許認可、NEC Article 705 に基づく電力会社の承認、UL 1741 認証機器を求める州もあります。州ごとの内訳は、専用の米国州別合法性ガイドを参照してください。どの州でも最も安全な方法は、系統に接続しない単独のバッテリー＋パネルシステムです。',
+              'text': '合法化は進んでいますが、どこでもではありません。10の州がプラグイン型太陽光の法律に署名しています(ユタ、メイン、バージニア、メリーランド、コロラド、コネチカット、ニューハンプシャー、バーモント、ニュージャージー、そして2026年9月30日にSB 868が署名されたカリフォルニア)。6州は発効済みで、バージニア、カリフォルニア、ニューハンプシャーは2027年1月1日、ニュージャージーは2027年3月1日に続きます。連邦のプラグイン法はなく、州法のない州では電力会社との系統連系(NEC Article 705、UL 1741機器)が引き続き適用されます。詳しくは州別の合法性ガイドをご覧ください。どこでも最も安全なのは、系統に接続しない独立型のバッテリーとパネルの組み合わせです。',
             },
           },
           {
@@ -1697,7 +1785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Anker SOLIX は米国で入手できますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Anker SOLIX のポータブル電源（F2000、F3800 などの機器）は、米国では ankersolix.com と Amazon で入手できます。系統連系型のベランダ発電蓄電向けに設計された Anker SOLIX Solarbank モデルは、米国市場向けに販売も認証もされておらず、米国の購入者に推奨すべきではありません。Solarbank は EU のソーラーレビューで大きく取り上げられるため、これはよくある混同の原因です。',
+              'text': 'Anker SOLIX のポータブル電源（F2000、F3800 などの機器）は、米国では ankersolix.com と Amazon で入手できます。Anker SOLIX Solarbank(系統連系型のバルコニー太陽光向け蓄電池)は、2026年11月20日の確認時点でAnkerの米国ストアに掲載がなく、米国のUL登録も見つからなかったため、本ガイドは米国の購入者に推奨しません。変更がないかAnkerの米国ストアをご確認ください。',
             },
           },
           {
@@ -1768,13 +1856,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '2026 年美国买家该选哪款家用电池或电源做太阳能备电？',
-        answer: 'EcoFlow 的 Delta Pro 是搭配太阳能做家庭备电的最佳全能之选：LFP 电芯、3.6 kWh 基础容量、强劲的太阳能输入，以及最广泛的配件生态。Bluetti 的 AC300+B300 组合更适合想要模块化扩展的买家。Jackery Explorer 系列在便携性和亚马逊可购性上领先。Anker SOLIX F3800 值得一看，它以有竞争力的价格提供大容量 LFP。不要想当然地以为欧版 Anker Solarbank 有售——它在美国不销售也未获认证。',
+        answer: 'EcoFlow 的 Delta Pro 是搭配太阳能做家庭备电的最佳全能之选：LFP 电芯、3.6 kWh 基础容量、强劲的太阳能输入，以及最广泛的配件生态。Bluetti 的 AC300+B300 组合更适合想要模块化扩展的买家。Jackery Explorer 系列在便携性和亚马逊可购性上领先。Anker SOLIX F3800 值得一看，它以有竞争力的价格提供大容量 LFP。2026年11月20日核查时,Anker SOLIX Solarbank未在Anker美国商店上架,因此不要假定欧洲版Solarbank在美国可买到。',
         bullets: [
           'EcoFlow Delta Pro：LFP，约 3.6 kWh，太阳能输入强劲——搭配太阳能做家庭备电的最佳全能之选（请核实当前规格）',
           'Bluetti AC300+B300：模块化 LFP 堆叠，最高约 12 kWh——最适合看重可扩展性的买家（请核实当前规格）',
           'Jackery Explorer 2000 Pro：NMC 电芯，兼顾露营/便携——便携性最佳，亚马逊铺货最广（请核实当前规格）',
           'Anker SOLIX F3800：大容量 LFP 便携式家用电池——强劲的替代选择，请核实美国可购性与规格',
-          'Anker SOLIX Solarbank 在美国不销售——请确认你看的是其便携式电源产品线，而非 Solarbank',
+          'Anker SOLIX Solarbank:Anker美国商店未上架(2026-11-20核查)——请确认您看的是便携电源产品线,而不是Solarbank',
           '这四家品牌均为中国制造；美国零售价受 Section 301 关税影响——请在购买时查询实时价格',
         ],
         updatedDate: '2026-11-20',
@@ -1804,8 +1892,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     sections: {
       statusNote: {
-        title: '2026年更新:美国各州法律与产品核查',
-        content: '**美国的法律格局已不止是零散拼凑:据2026年10月4日更新的插电式太阳能汇总,已有十个州通过了插电式太阳能法律,多数将设备限制在1,200 W以内。** 这份由商家运营的汇总([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026))列出:犹他州(HB 340,2025年3月签署)、缅因州(LD 1730,2026年4月6日签署)、弗吉尼亚州(HB 395,4月22日)、科罗拉多州(HB 26-1007,5月7日,最高1,920 W)、马里兰州(HB 1532,5月12日)、康涅狄格州(HB 5340,5月20日)、新罕布什尔州(SB 540-FN,6月)、佛蒙特州(S. 202,6月16日)、新泽西州(S 2368 / A 4836,9月1日)和加利福尼亚州(SB 868,2026年9月30日签署)。该汇总自己也指出了数据不一致之处,其他来源在哪些法律点名UL 3700以及生效日期上也有分歧,请阅读各州议会网站上的已颁布法案文本;本次更新未对照一手文本核实这些法案。未发现联邦层面的插电式框架,因此本页“零散拼凑”的说法仍然成立,但低估了已有专门立法的州的数量。同一汇总称,联邦30%太阳能税收抵免已于2025年12月31日到期,这会影响此处的成本比较。下文的型号、规格和价格未重新核实:EcoFlow Delta Pro 3和Anker SOLIX F3800 Plus等新一代产品出现在2026年的媒体报道中,[2026年4月的Bob Vila汇总](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/)曾列出F3800 Plus促销价799.99美元,因此本页价格应视为未标注日期。关于Anker Solarbank不在美国销售的说法也未重新确认:搜索结果显示Amazon.com上有Solarbank 2 E1600的页面但无法打开,请查看Anker美国商店。本页为公开信息的汇总,不构成法律、税务或电气安全建议。',
+        title: '复核:美国各州法律、产品规格与可购性',
+        content: '**2026年11月20日核查:本指南撰写之后,美国的法律格局和部分产品世代已有变化,下列章节已相应更新或标注。** 法律:十个美国州已签署插电式太阳能法律(犹他、缅因、弗吉尼亚、马里兰、科罗拉多、康涅狄格、新罕布什尔、佛蒙特、新泽西和加利福尼亚)。加州SB 868于2026年9月30日签署,2027年1月1日生效,据报道其并网豁免将于2030年1月1日失效([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/);未对照已颁布的法案文本核实)。六个州已生效;弗吉尼亚、加利福尼亚和新罕布什尔将于2027年1月1日生效,新泽西于2027年3月1日生效,各追踪来源的生效日期不一,请向所在州确认。美国没有联邦层面的插电式法律。各州详情见[美国10个州的阳台光伏如何从非法走向合法](/zh/balcony-solar/how-balcony-solar-became-legal-in-the-us)和[我所在的州阳台光伏合法吗](/zh/balcony-solar/balcony-solar-legal-us-states),此处不再重复。产品:2026年11月20日核查了两款现行型号并加入表格,分别是EcoFlow DELTA Pro 3(据[EcoFlow博客](https://www.ecoflow.com/us/blog/ecoflow-portable-power-station-specs)和零售商列表,4,096 Wh LFP,持续4,000 W、X-Boost峰值8,000 W,配两块Smart Extra Battery可扩展至12 kWh)和Anker SOLIX F3800 Plus(据[Anker SOLIX美国页面](https://www.ankersolix.com/us/products/f3800-plus),3,840 Wh LFP,3,000次以上循环,6,000 W,光伏输入最高3,200 W)。其余各行最后核查于2026-07-03,未重新核查:EcoFlow DELTA Pro(Pro 3的前代)、Bluetti AC300 + B300(一家美国商店将AC300逆变器模块标为停产)、Bluetti AC200MAX(各零售商供货不一)、Jackery Explorer 2000 Pro和3000 Pro(Jackery官网未写明3000 Pro的电芯类型,一家零售商标注为锂离子;[Explorer 2000 Plus](https://www.jackery.com/collections/3000-pro-or-2000-plus)标注为LiFePO4)以及Anker SOLIX F2000。由于促销价格变动很快,本页不标注价格。Anker Solarbank:2026年11月20日Anker美国商店导航中没有Solarbank产品,也未找到美国UL认证记录,因此表述为“美国未上架”而非“禁售”。本页为公开信息的汇总,不构成法律、税务或电气安全建议。',
       },
       tldr: {
         id: 'key-takeaways',
@@ -1815,7 +1903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '在美国，阳台太阳能品牌的营收路径是便携式电源和可扩展家用电池——EcoFlow、Bluetti、Jackery 和 Anker SOLIX 的便携机型——它们能与太阳能板顺畅配对，无需并网。',
           '对家庭备电而言，LFP（磷酸铁锂）电芯明显优于 NMC：循环寿命更长（约 3,000–6,000 次循环 vs. 约 500–1,000 次）、高温下更安全、部分充电状态下衰减更小——EcoFlow Delta Pro、Bluetti AC300+B300 和 Anker SOLIX F3800 都采用 LFP。',
           'Jackery 的 Explorer Pro 系列历来采用 NMC——适合便携应用，但对于会在家中每日循环的机型不太理想（购买前请按型号核实当前电芯化学）。',
-          'Anker SOLIX Solarbank 在美国不销售、也未获认证——与美国买家相关的 Anker 机型是其便携式电源产品线（F2000、F3800 等）。',
+          '2026年11月20日核查时,Anker SOLIX Solarbank未在Anker美国商店上架,也未找到美国UL认证记录——与美国买家相关的Anker产品是便携储能电源(F2000、F3800 Plus)和E10全屋备电系统。',
           '这四家品牌均为中国制造；美国零售价受锂离子电池及太阳能组件 Section 301 关税影响——切勿依赖任何写死的价格数字。',
         ],
       },
@@ -1823,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'us-market-reality',
         title: '为何美国买家选电池而非套件',
         content: [
-          '**欧盟的阳台太阳能市场（德国的 Balkonkraftwerk）在联邦即插即用标准下运作，允许租户和公寓业主安全地把 800W 太阳能板套件插入家用插座，并合法向电网输电。** 截至撰稿时（2026 年 7 月），美国没有对等的框架。美国的即插式太阳能受各州公用事业法规、NEC Article 705 并网规则以及 UL 1741 认证要求约束，而这些因州和公用事业公司而异——形成一张拼盘：在加州合法的东西，在德州或佛州可能受限或需要许可。按州逐项梳理请见 [阳台太阳能在你所在的美国州合法吗？](/zh/balcony-solar/balcony-solar-legal-us-states)。',
+          '**德国的Balkonkraftwerk依据全国性的插电式标准运行,租户和公寓业主可以把800 W的光伏套件插入家用插座;美国没有联邦层面的对应制度,但已有十个州签署了各自的插电式太阳能法律,犹他州于2025年率先,加利福尼亚州最近一次是2026年9月30日。** 多数州将设备限制在1,200 W以内;弗吉尼亚、加利福尼亚和新罕布什尔于2027年1月1日生效,新泽西于2027年3月1日生效,据报道加州的豁免将于2030年1月1日失效([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/))。在没有立法的州,电力公司的并网规则(NEC Article 705、UL 1741设备)依然适用,请核查您所在的州和电力公司。各州明细见[美国10个州的阳台光伏如何从非法走向合法](/zh/balcony-solar/how-balcony-solar-became-legal-in-the-us)和[我所在的州阳台光伏合法吗](/zh/balcony-solar/balcony-solar-legal-us-states)。',
           '这种法律碎片化带来一个实际后果，我们明确将其表述为一个假设（并非实测的市场事实）：美国消费者需求似乎集中在**独立电源和电池搭配便携式或屋顶安装太阳能板**上，这类方案完全不需要并网——从而彻底绕开了监管问题。这一点的依据来自本站的美国点击模式（亚马逊渠道产品占主导；欧式套件品牌网站并不占主导），也来自这样一个事实：EcoFlow 和 Jackery 等品牌的大部分美国营收来自便携式电源，而非并网阳台套件。如果你在找阳台套件对比，请见 [2026 年最佳阳台太阳能套件](/zh/balcony-solar/best-balcony-solar-kits-2026)，了解在合法地区有哪些可选。',
           '**对于想要部分太阳能供电或停电保护、又不做整套屋顶安装的租户、公寓居民和房主来说，这种独立电池方案除了法律上的简单之外，还有一个真正的优势：** 它可移动。今天一块在停电时给冰箱供电的 3.6 kWh LFP 电池，等你搬家时可以搬走、卖掉或另作他用——这与并网系统不同。与之对照的是德国，那里的 Balkonkraftwerk 通常是永久性安装，电池只是一个附加储能单元。想了解德国的方案如何运作，请见 [德国 Balkonkraftwerk 规则](/zh/balcony-solar/balkonkraftwerk-germany-rules)。',
         ],
@@ -1932,10 +2020,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             usPrice: '查询实时价格——高端 LFP 档',
             bestFor: '大容量 LFP 家庭备电；高交流输出应对大负载',
           },
+          {
+            product: 'EcoFlow DELTA Pro 3',
+            capacity: '4,096 Wh(EcoFlow博客、零售商列表)',
+            chemistry: 'LFP',
+            acOutput: '持续4,000W,X-Boost峰值8,000W',
+            solarInput: '此处未确认——请查EcoFlow美国规格页',
+            expandable: '是——配两块Smart Extra Battery可达12 kWh(EcoFlow博客)',
+            localControl: '见本地控制一节——按固件核实',
+            usPrice: '请查当前价格——受关税影响',
+            bestFor: 'EcoFlow现行一代家用备电;Delta Pro的后继型号',
+          },
+          {
+            product: 'Anker SOLIX F3800 Plus',
+            capacity: '3,840 Wh(Anker美国页面)',
+            chemistry: 'LFP,3,000次以上循环',
+            acOutput: '最大6,000W(120/240V L14-30R接口)',
+            solarInput: '最高3,200W(两个接口,各1,600W)',
+            expandable: '是——Anker扩展电池',
+            localControl: '主要靠App——请核实本地API支持',
+            usPrice: '请查当前价格——促销频繁',
+            bestFor: '大容量LFP家用备电;Anker现行便携旗舰',
+          },
         ],
         columns: ['product', 'capacity', 'chemistry', 'acOutput', 'solarInput', 'expandable', 'localControl', 'usPrice', 'bestFor'],
         tableFormat: true,
-        tableNote: '规格基于已知产品线为近似值——所有容量、输出和价格数字在购买前都应对照当前厂商页面核实。价格特意省略，因为中国制造的锂电池在美国的零售价对 Section 301 关税敏感，可能大幅变动。请在购买时到 amazon.com 或品牌的美国官方门店核实（核对于 2026-07-03）。',
+        tableNote: '规格基于已知产品线为近似值——所有容量、输出和价格数字在购买前都应对照当前厂商页面核实。价格特意省略，因为中国制造的锂电池在美国的零售价对 Section 301 关税敏感，可能大幅变动。请在购买时到 amazon.com 或品牌的美国官方门店核实（核对于 2026-07-03）。 EcoFlow DELTA Pro 3和Anker SOLIX F3800 Plus两行已于2026-11-20核查;其余各行最后核查于2026-07-03,未重新核查。',
       },
       useCaseRecs: {
         id: 'use-case-recs',
@@ -1952,12 +2062,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-control',
         title: '本地控制与智能家居集成',
         content: [
-          '**本文所涵盖的四大品牌，均未把面向 Home Assistant 的官方、有文档的本地 API 作为标准功能提供——它们都默认采用基于云的 App 监控。** 这是美国便携式电源市场与欧盟阳台太阳能储能市场之间最大的差距，后者有 Zendure 等品牌打造了成熟的本地控制生态。如果本地控制对你很重要，请在购买前核实当前状态，因为这是该产品领域中变化最快的一个维度。',
+          '**本文所涵盖的主要品牌中，仅少数品牌将面向 Home Assistant 的官方有文档本地 API 作为标准功能提供。EcoFlow STREAM 现已提供文档化本地 API（请在 [ecoflow.com](https://www.ecoflow.com) 核实当前范围）；Bluetti、Jackery 和 Anker SOLIX 目前仍以云端 App 监控为主。** 美国便携式电源市场与欧盟阳台太阳能储能市场（Zendure 等品牌已打造成熟的本地控制生态）之间的差距正在缩小。如果本地控制对你很重要，请在购买前核实当前状态，因为这是该产品领域中变化最快的一个维度。',
           'EcoFlow 的 Delta Pro 系列拥有最活跃的社区集成——存在一个通过 HACS 提供、由社区维护（非 EcoFlow 官方）的 Home Assistant 集成。它依赖 EcoFlow 的云 API，而非真正的本地端点，这意味着监控数据仍会经由 EcoFlow 的服务器中转。关于在此语境下"本地"究竟意味着什么、以及哪些硬件真正支持它，请交叉参阅 [无云阳台太阳能指南](/zh/balcony-solar/home-assistant-balcony-solar-no-cloud)。',
           '对于想要一套能与太阳能配对、且无需云账户的真正本地 API 电池系统的用户，目前欧盟市场有更好的选择（尤其是 Zendure SolarFlow——见 [EcoFlow 对比 Anker 对比 Zendure](/zh/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar)），不过其中大多数产品在美国不销售、也未获认证。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: '截至 2026 年，在美国销售的主要便携式电源品牌（EcoFlow、Bluetti、Jackery、Anker SOLIX）均未提供面向 Home Assistant 的官方文档化本地 API——EcoFlow 有社区集成，但会经由其云端中转。' },
+          { type: 'one-sentence', text: '2026 年末，EcoFlow STREAM 已提供文档化本地 API；Bluetti、Jackery 和 Anker SOLIX 仍依赖云端监控——购买前请核实当前状态。' },
           { type: 'plain-terms', text: '如果你想要一块能配合 Home Assistant、又不向厂商服务器发送数据的电池，美国的选择有限——EcoFlow 的社区变通方案最好，但它不是真正的本地方案。' },
         ],
       },
@@ -1978,7 +2088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://us.ecoflow.com', title: 'EcoFlow 美国门店', description: 'Delta Pro、Delta Pro Ultra 规格与定价——请在购买时核实当前数字' },
           { url: 'https://www.bluettipower.com', title: 'Bluetti 美国门店', description: 'AC300、B300、AC200MAX 规格——请核实当前数字' },
           { url: 'https://www.jackery.com', title: 'Jackery 美国门店', description: 'Explorer 系列规格——请按型号核实当前电芯化学与输出' },
-          { url: 'https://ankersolix.com', title: 'Anker SOLIX 美国门店', description: 'F2000、F3800 规格；确认 Solarbank 不在美国目录中' },
+          { url: 'https://ankersolix.com', title: 'Anker SOLIX 美国门店', description: 'F2000和F3800 Plus规格;2026-11-20核查的商店导航中没有Solarbank' },
         ],
       },
       relatedReading: {
@@ -1992,13 +2102,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-            { q: '阳台太阳能在美国合法吗？', a: '美国没有统一答案——合法性因州和公用事业公司而异。一些州已出台类似德国 Balkonkraftwerk 的即插式太阳能规则；另一些州则要求许可、依 NEC Article 705 获得公用事业批准，并对任何并网太阳能要求 UL 1741 认证设备。按州逐项梳理请见专门的美国各州合法性指南。在任何州，最稳妥的做法都是采用不接入电网的独立电池 + 太阳能板系统。' },
+            { q: '阳台太阳能在美国合法吗？', a: '越来越合法,但并非处处如此:十个州已签署插电式太阳能法律(犹他、缅因、弗吉尼亚、马里兰、科罗拉多、康涅狄格、新罕布什尔、佛蒙特、新泽西,以及于2026年9月30日签署SB 868的加利福尼亚)。六个州已生效,弗吉尼亚、加利福尼亚和新罕布什尔将于2027年1月1日生效,新泽西于2027年3月1日生效。美国没有联邦插电式法律,没有州法的地方仍适用电力公司的并网要求(NEC Article 705、UL 1741设备)。详见各州合法性指南。任何地方最稳妥的做法仍是不并网的独立电池加光伏板。' },
             { q: 'EcoFlow 对比 Bluetti——2026 年美国家庭备电哪个更好？', a: 'EcoFlow Delta Pro 的 MPPT 太阳能输入更强，如果基于太阳能板的快速充电是重点，它是更好的选择。如果模块化扩展（按增量增加电池容量）是重点，Bluetti 的 AC300+B300 更好。两者都采用 LFP 电芯。由于关税影响，价格频繁变动——请在购买时对比实时价格，因为两者的价格差会波动。' },
             { q: 'LFP 与 NMC 电芯化学有什么区别？', a: 'LFP（磷酸铁锂）在保持 80% 容量的前提下可提供约 3,000–6,000 次充电循环，热稳定性更好、日历寿命更长——更适合每日循环的家庭备电机型。NMC（镍锰钴）在给定重量下能量密度更高，这正是它在旧款 Jackery Explorer 等便携/露营机型中占主导的原因。对于放在家里每日用太阳能循环的机型，在 5–10 年的时间跨度上，LFP 电芯明显更好。' },
             { q: '停电时我能用其中一台带动冰箱吗？', a: '可以，只要选型合适。一台典型的美国冰箱持续耗电 100–400W（平均 150W），启动浪涌为 600–1,200W。一台 2 kWh、交流输出 2,000W 以上的 LFP 机型可以给标准冰箱供电 8–12 小时。加一块 200–400W 太阳能板，在光照尚可时就能无限延长。请核实你考虑的任何机型的交流输出和浪涌功率——有些平价电源的浪涌功率过低，带不动冰箱压缩机。' },
             { q: '电源搭配太阳能板需要许可或并网吗？', a: '如果你不接入电网——只是用太阳能板给电源充电，再用它给家里供电——一般不需要并网许可或公用事业批准。太阳能板只连到电源的太阳能输入口，而不接到你家的配电盘。这正是独立电池方案相比向电网输电的阳台太阳能套件的关键法律简单性。如有不确定，请向当地 AHJ（有管辖权的主管机关）核实。' },
             { q: '我能用它们配合 Home Assistant 做本地监控吗？', a: '部分可以。EcoFlow 为 Delta 系列提供了一个社区维护的 Home Assistant 集成（通过 HACS），但它经由 EcoFlow 的云 API 中转，而非真正的本地端点。Bluetti、Jackery 和 Anker SOLIX 缺乏有良好文档的本地 API。如果不依赖云端的本地控制是硬性要求，请见无云阳台太阳能指南，了解哪些硬件真正支持纯本地运行的当前汇总。' },
-            { q: 'Anker SOLIX 在美国有售吗？', a: 'Anker SOLIX 便携式电源（F2000、F3800 及类似机型）在美国的 ankersolix.com 和亚马逊上有售。而 Anker SOLIX Solarbank 系列——为并网阳台太阳能储能设计——在美国不销售、也未获认证，不应向美国买家推荐。由于 Solarbank 在欧盟太阳能评测中被大量报道，这是一个常见的混淆点。' },
+            { q: 'Anker SOLIX 在美国有售吗？', a: 'Anker SOLIX 便携式电源（F2000、F3800 及类似机型）在美国的 ankersolix.com 和亚马逊上有售。Anker SOLIX Solarbank(为并网式阳台光伏储能设计)在2026年11月20日核查时未在Anker美国商店上架,也未找到美国UL认证记录,因此本指南不向美国买家推荐。请查看Anker美国商店是否有变化。' },
             { q: '为什么这些产品的价格波动这么大？', a: 'EcoFlow、Bluetti、Jackery 和 Anker SOLIX 都在中国制造。美国零售价受锂离子电池及太阳能组件的 Section 301 关税影响，这些关税在 2024–2026 年间持续上涨，可使零售价变动 10–25% 甚至更多。品牌也经常做促销，价格可在任一方向浮动 200–500 美元。请始终在购买时到亚马逊或品牌的美国门店查询实时价格。' },
             { q: '兼顾露营又能做家庭备电的最佳便携式电源是哪款？', a: '对便携优先的用户，选 Jackery Explorer 2000 Pro 或 3000 Pro（更轻、亚马逊友好，但为 NMC——请核实当前电芯化学）。想要与 Jackery 相近便携性又要 LFP 的买家，选 Anker SOLIX F2000。如果你愿意为 LFP 电芯和更强的太阳能输入而在便携性上妥协，就选 EcoFlow Delta Pro。"兼顾露营"这一场景四家品牌都能很好满足——差异点在于电芯化学，以及对计划在旅行间隙在家频繁使用的买家而言的长期循环寿命。' },
           ],
@@ -2010,7 +2120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026 年美国太阳能最佳家用电池与便携式电源：EcoFlow、Bluetti 等品牌解析',
       description: '2026 年面向美国太阳能买家的最佳家用电池与便携式电源：EcoFlow Delta Pro、Bluetti AC300、Jackery Explorer、Anker SOLIX——LFP 与 NMC 对比、本地控制、经核实的美国可购性。',
       datePublished: '2026-07-03',
-      dateModified: '2026-07-03',
+      dateModified: '2026-11-20',
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
@@ -2082,7 +2192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '阳台太阳能在美国合法吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '美国没有统一答案——合法性因州和公用事业公司而异。一些州已出台类似德国 Balkonkraftwerk 的即插式太阳能规则；另一些州则要求许可、依 NEC Article 705 获得公用事业批准，并对任何并网太阳能要求 UL 1741 认证设备。按州逐项梳理请见专门的美国各州合法性指南。在任何州，最稳妥的做法都是采用不接入电网的独立电池 + 太阳能板系统。',
+              'text': '越来越合法,但并非处处如此:十个州已签署插电式太阳能法律(犹他、缅因、弗吉尼亚、马里兰、科罗拉多、康涅狄格、新罕布什尔、佛蒙特、新泽西,以及于2026年9月30日签署SB 868的加利福尼亚)。六个州已生效,弗吉尼亚、加利福尼亚和新罕布什尔将于2027年1月1日生效,新泽西于2027年3月1日生效。美国没有联邦插电式法律,没有州法的地方仍适用电力公司的并网要求(NEC Article 705、UL 1741设备)。详见各州合法性指南。任何地方最稳妥的做法仍是不并网的独立电池加光伏板。',
             },
           },
           {
@@ -2130,7 +2240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Anker SOLIX 在美国有售吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Anker SOLIX 便携式电源（F2000、F3800 及类似机型）在美国的 ankersolix.com 和亚马逊上有售。而 Anker SOLIX Solarbank 系列——为并网阳台太阳能储能设计——在美国不销售、也未获认证，不应向美国买家推荐。由于 Solarbank 在欧盟太阳能评测中被大量报道，这是一个常见的混淆点。',
+              'text': 'Anker SOLIX 便携式电源（F2000、F3800 及类似机型）在美国的 ankersolix.com 和亚马逊上有售。Anker SOLIX Solarbank(为并网式阳台光伏储能设计)在2026年11月20日核查时未在Anker美国商店上架,也未找到美国UL认证记录,因此本指南不向美国买家推荐。请查看Anker美国商店是否有变化。',
             },
           },
           {
@@ -2193,13 +2303,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Qué batería doméstica o estación de energía debería elegir un comprador de EE. UU. para respaldo solar en 2026?',
-        answer: 'El Delta Pro de EcoFlow es la mejor opción integral para respaldo doméstico con emparejamiento solar: química LFP, 3.6 kWh de capacidad base, fuerte entrada solar y el ecosistema de accesorios más amplio. El conjunto AC300+B300 de Bluetti es mejor para compradores que quieren expansión modular. La serie Jackery Explorer lidera en portabilidad y disponibilidad en Amazon. Vale la pena revisar el Anker SOLIX F3800 por su LFP de gran capacidad a precios competitivos. No des por hecho que el Anker Solarbank europeo está disponible: no se vende ni está certificado en EE. UU.',
+        answer: 'El Delta Pro de EcoFlow es la mejor opción integral para respaldo doméstico con emparejamiento solar: química LFP, 3.6 kWh de capacidad base, fuerte entrada solar y el ecosistema de accesorios más amplio. El conjunto AC300+B300 de Bluetti es mejor para compradores que quieren expansión modular. La serie Jackery Explorer lidera en portabilidad y disponibilidad en Amazon. Vale la pena revisar el Anker SOLIX F3800 por su LFP de gran capacidad a precios competitivos. Anker SOLIX Solarbank no figuraba en la tienda de Anker en EE. UU. al comprobarlo el 20 de noviembre de 2026, así que no des por hecho que la Solarbank europea está disponible en EE. UU.',
         bullets: [
           'EcoFlow Delta Pro: LFP, ~3.6 kWh, fuerte entrada solar — mejor respaldo doméstico integral con emparejamiento solar (verifica las especificaciones actuales)',
           'Bluetti AC300+B300: apilamiento LFP modular, hasta ~12 kWh — mejor para compradores que priorizan la expandibilidad (verifica las especificaciones actuales)',
           'Jackery Explorer 2000 Pro: química NMC, cruce camping/portátil — mejor portabilidad, mayor presencia en Amazon (verifica las especificaciones actuales)',
           'Anker SOLIX F3800: batería doméstica portátil LFP de gran capacidad — alternativa sólida, verifica la disponibilidad y las especificaciones en EE. UU.',
-          'El Anker SOLIX Solarbank NO se vende en EE. UU. — confirma que estás mirando su línea de estaciones de energía portátiles, no el Solarbank',
+          'Anker SOLIX Solarbank: no figura en la tienda de Anker en EE. UU. (comprobado el 2026-11-20) — confirma que miras la línea de estaciones de energía portátiles, no Solarbank',
           'Las cuatro marcas se fabrican en China; los precios de venta en EE. UU. están sujetos a los aranceles de la Sección 301 — consulta los precios en el momento de la compra',
         ],
         updatedDate: '2026-11-20',
@@ -2229,8 +2339,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     sections: {
       statusNote: {
-        title: 'Actualización 2026: leyes estatales de EE. UU. y comprobaciones de producto',
-        content: '**El panorama legal de EE. UU. ha ido más allá de un simple mosaico: según un resumen sobre energía solar plug-in actualizado el 4 de octubre de 2026, diez estados han aprobado leyes de solar plug-in, la mayoría con un límite de 1200 W por dispositivo.** El resumen, gestionado por un vendedor ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)), cita Utah (HB 340, firmada en marzo de 2025), Maine (LD 1730, firmada el 6 de abril de 2026), Virginia (HB 395, 22 de abril de 2026), Colorado (HB 26-1007, 7 de mayo de 2026, hasta 1920 W), Maryland (HB 1532, 12 de mayo de 2026), Connecticut (HB 5340, 20 de mayo de 2026), Nuevo Hampshire (SB 540-FN, junio de 2026), Vermont (S. 202, 16 de junio de 2026), Nueva Jersey (S 2368 / A 4836, 1 de septiembre de 2026) y California (SB 868, firmada el 30 de septiembre de 2026). El propio resumen señala incoherencias en sus cifras, y otras fuentes discrepan sobre qué leyes nombran UL 3700 y sobre las fechas de entrada en vigor; lee el texto promulgado en el sitio de cada legislatura, ya que en esta actualización no se verificaron los proyectos frente a textos primarios. No se encontró un marco federal para plug-in, así que el enfoque de «mosaico» de esta página sigue siendo válido, pero subestima cuántos estados tienen ya leyes específicas. Según el mismo resumen, el crédito fiscal federal del 30 % para energía solar venció el 31 de diciembre de 2025, lo que importa para cualquier comparación de costes aquí. Los modelos, especificaciones y precios que siguen no se reverificaron: generaciones más recientes como la EcoFlow Delta Pro 3 y la Anker SOLIX F3800 Plus aparecen en la prensa de 2026, y un [resumen de Bob Vila de abril de 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) listaba la F3800 Plus a 799,99 $ en oferta, por lo que los precios de esta página deben tratarse como sin fecha. Tampoco se reconfirmó que Anker Solarbank no se venda en EE. UU.: los resultados de búsqueda mostraron una ficha en Amazon.com del Solarbank 2 E1600 que no pudo abrirse, así que consulta la tienda de Anker en EE. UU. Es un resumen de información pública, no asesoramiento jurídico, fiscal ni de seguridad eléctrica.',
+        title: 'Reverificación: leyes estatales de EE. UU., especificaciones y disponibilidad',
+        content: '**Comprobado el 20 de noviembre de 2026: el panorama legal de EE. UU. y algunas generaciones de producto han cambiado desde que se escribió esta guía, y las secciones siguientes están actualizadas o etiquetadas en consecuencia.** Ley: diez estados de EE. UU. han firmado leyes de energía solar plug-in (Utah, Maine, Virginia, Maryland, Colorado, Connecticut, Nuevo Hampshire, Vermont, Nueva Jersey y California). El SB 868 de California se firmó el 30 de septiembre de 2026 y entra en vigor el 1 de enero de 2027, y se informa de que sus exenciones de interconexión expirarán el 1 de enero de 2030 ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/); no verificado frente al texto promulgado). Seis estados están en vigor; Virginia, California y Nuevo Hampshire siguen el 1 de enero de 2027 y Nueva Jersey el 1 de marzo de 2027, y las fechas de entrada en vigor difieren entre seguimientos, así que confírmalas con el estado. No existe una ley federal plug-in. El detalle por estado está en [Cómo la energía solar de balcón pasó de ilegal a ley en 10 estados de EE. UU.](/es/balcony-solar/how-balcony-solar-became-legal-in-the-us) y [¿Es legal la energía solar de balcón en mi estado?](/es/balcony-solar/balcony-solar-legal-us-states) y no se repite aquí. Productos: se comprobaron dos modelos actuales el 20 de noviembre de 2026 y se añadieron a la tabla, el EcoFlow DELTA Pro 3 (4096 Wh LFP, 4000 W continuos y 8000 W de pico con X-Boost, ampliable a 12 kWh con dos Smart Extra Batteries según el [blog de EcoFlow](https://www.ecoflow.com/us/blog/ecoflow-portable-power-station-specs) y fichas de minoristas) y el Anker SOLIX F3800 Plus (3840 Wh LFP, más de 3000 ciclos, 6000 W, hasta 3200 W de entrada solar según la [página de EE. UU. de Anker SOLIX](https://www.ankersolix.com/us/products/f3800-plus)). Las demás filas se comprobaron por última vez el 2026-07-03 y no se reverificaron: EcoFlow DELTA Pro (predecesor del Pro 3), Bluetti AC300 + B300 (una tienda de EE. UU. marca el módulo inversor AC300 como descontinuado), Bluetti AC200MAX (la disponibilidad varía según el minorista), Jackery Explorer 2000 Pro y 3000 Pro (el sitio de Jackery no indica la química del 3000 Pro y un minorista indica ion de litio; el [Explorer 2000 Plus](https://www.jackery.com/collections/3000-pro-or-2000-plus) figura como LiFePO4) y Anker SOLIX F2000. Esta página no indica precios porque los precios promocionales cambian rápido. Anker Solarbank: ningún producto Solarbank aparecía en la navegación de la tienda de Anker en EE. UU. el 20 de noviembre de 2026 y no se halló ningún listado UL estadounidense, por lo que se describe como no listado en EE. UU., no como prohibido. Es un resumen de información pública, no asesoramiento jurídico, fiscal ni de seguridad eléctrica.',
       },
       tldr: {
         id: 'key-takeaways',
@@ -2240,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La vía de ingresos en EE. UU. para las marcas de solar de balcón son las estaciones de energía portátiles y las baterías domésticas expandibles — EcoFlow, Bluetti, Jackery y las unidades portátiles Anker SOLIX — que se emparejan limpiamente con paneles sin interconexión a la red.',
           'La química de batería LFP (fosfato de hierro y litio) es muy preferida sobre la NMC para respaldo doméstico: mayor vida útil de ciclos (~3,000–6,000 ciclos frente a ~500–1,000), más segura a altas temperaturas y menor degradación con carga parcial — el EcoFlow Delta Pro, el Bluetti AC300+B300 y el Anker SOLIX F3800 usan todos LFP.',
           'La serie Explorer Pro de Jackery ha usado históricamente NMC — útil para aplicaciones portátiles pero menos ideal para una unidad que ciclará a diario en casa (verifica la química actual por modelo antes de comprar).',
-          'El Anker SOLIX Solarbank no se vende ni está certificado para el mercado de EE. UU. — las unidades de Anker relevantes para los compradores estadounidenses son su línea de estaciones de energía portátiles (F2000, F3800, etc.).',
+          'Anker SOLIX Solarbank no figuraba en la tienda de Anker en EE. UU. al comprobarlo el 20 de noviembre de 2026 y no se halló ningún listado UL estadounidense — los productos de Anker relevantes para compradores de EE. UU. son las estaciones de energía portátiles (F2000, F3800 Plus) y el sistema de respaldo E10 para toda la casa.',
           'Las cuatro marcas se fabrican en China; los precios de venta en EE. UU. están expuestos a los aranceles de la Sección 301 sobre baterías de iones de litio y componentes solares — nunca te fíes de una cifra de precio fija.',
         ],
       },
@@ -2248,7 +2358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'us-market-reality',
         title: 'Por qué los compradores de EE. UU. eligen baterías, no kits',
         content: [
-          '**El mercado de solar de balcón de la UE (el Balkonkraftwerk de Alemania) opera bajo un estándar federal para sistemas enchufables que permite a inquilinos y propietarios de apartamentos enchufar de forma segura un kit de panel de 800W a un enchufe doméstico y exportar legalmente a la red.** No existe un marco equivalente en EE. UU. al momento de escribir esto (julio de 2026). La solar enchufable en EE. UU. se rige por las regulaciones estatales de las compañías eléctricas, las normas de interconexión del Artículo 705 del NEC y los requisitos de certificación UL 1741 que varían según el estado y la compañía eléctrica — creando un mosaico donde lo que es legal en California puede estar restringido o requerir permisos en Texas o Florida. Consulta [¿Es legal la solar de balcón en tu estado de EE. UU.?](/es/balcony-solar/balcony-solar-legal-us-states) para un desglose por estado.',
+          '**El Balkonkraftwerk alemán funciona bajo un estándar nacional plug-in que permite a inquilinos y propietarios de apartamentos enchufar un kit de paneles de 800 W en una toma doméstica; EE. UU. no tiene un equivalente federal, pero diez estados han firmado ya sus propias leyes de energía solar plug-in, Utah el primero en 2025 y California el más reciente, el 30 de septiembre de 2026.** La mayoría limita los dispositivos a 1200 W; Virginia, California y Nuevo Hampshire entran en vigor el 1 de enero de 2027 y Nueva Jersey el 1 de marzo de 2027, y las exenciones de California expirarían el 1 de enero de 2030 según lo informado ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/)). En los estados sin ley siguen aplicándose las reglas de interconexión de las compañías (NEC Article 705, equipos UL 1741), así que comprueba tu estado y tu compañía. Consulta [Cómo la energía solar de balcón pasó de ilegal a ley en 10 estados de EE. UU.](/es/balcony-solar/how-balcony-solar-became-legal-in-the-us) y [¿Es legal la energía solar de balcón en mi estado?](/es/balcony-solar/balcony-solar-legal-us-states) para el desglose por estado.',
           'Esta fragmentación legal tiene una consecuencia práctica que declaramos explícitamente como un supuesto (no un hecho de mercado medido): la demanda de los consumidores de EE. UU. parece concentrarse en **estaciones de energía y baterías independientes emparejadas con paneles portátiles o montados en el tejado**, que no requieren ninguna interconexión a la red — evitando por completo la cuestión regulatoria. La evidencia de esto proviene de los patrones de clics de EE. UU. en este sitio (los productos de canal de Amazon dominan; los sitios de marcas de kits al estilo europeo no lo hacen) y del hecho de que marcas como EcoFlow y Jackery generan la mayoría de sus ingresos en EE. UU. con estaciones de energía portátiles en lugar de kits de balcón conectados a la red. Si buscas una comparativa de kits de balcón, consulta [Mejores kits de solar de balcón 2026](/es/balcony-solar/best-balcony-solar-kits-2026) para ver lo que hay disponible allí donde es legal.',
           '**Para inquilinos, habitantes de apartamentos y propietarios que quieren solar parcial o protección ante cortes sin una instalación completa en el tejado, este enfoque de batería independiente tiene una ventaja genuina más allá de la simplicidad legal:** es portátil. Una batería LFP de 3.6 kWh que hoy alimenta tu nevera durante un corte de red puede moverse, venderse o reutilizarse cuando te mudes — a diferencia de un sistema conectado a la red. Contrasta esto con Alemania, donde el Balkonkraftwerk es típicamente una instalación permanente y la batería es una unidad de almacenamiento adicional. Para contexto sobre cómo funciona la configuración alemana, consulta [Normas del Balkonkraftwerk en Alemania](/es/balcony-solar/balkonkraftwerk-germany-rules).',
         ],
@@ -2357,10 +2467,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             usPrice: 'Consulta el precio actual — gama LFP premium',
             bestFor: 'Respaldo doméstico LFP de gran capacidad; alta salida de CA para cargas pesadas',
           },
+          {
+            product: 'EcoFlow DELTA Pro 3',
+            capacity: '4096 Wh (blog de EcoFlow, fichas de minoristas)',
+            chemistry: 'LFP',
+            acOutput: '4000W continuos, 8000W de pico con X-Boost',
+            solarInput: 'No confirmado aquí — ver la ficha de EE. UU. de EcoFlow',
+            expandable: 'Sí — 12 kWh con dos Smart Extra Batteries (blog de EcoFlow)',
+            localControl: 'Ver la sección de control local — verificar según firmware',
+            usPrice: 'Consultar precio actual — sensible a aranceles',
+            bestFor: 'Generación actual de EcoFlow para respaldo doméstico; sucesor del Delta Pro',
+          },
+          {
+            product: 'Anker SOLIX F3800 Plus',
+            capacity: '3840 Wh (página de EE. UU. de Anker)',
+            chemistry: 'LFP, más de 3000 ciclos',
+            acOutput: '6000W máx. (puerto 120/240V L14-30R)',
+            solarInput: 'Hasta 3200W (dos puertos, 1600W cada uno)',
+            expandable: 'Sí — baterías de expansión de Anker',
+            localControl: 'Principalmente por app — verificar soporte de API local',
+            usPrice: 'Consultar precio actual — promociones frecuentes',
+            bestFor: 'Respaldo doméstico LFP de gran capacidad; modelo portátil estrella actual de Anker',
+          },
         ],
         columns: ['product', 'capacity', 'chemistry', 'acOutput', 'solarInput', 'expandable', 'localControl', 'usPrice', 'bestFor'],
         tableFormat: true,
-        tableNote: 'Las especificaciones son aproximadas según las líneas de producto conocidas — todas las cifras de capacidad, salida y precio deben verificarse frente a las páginas actuales del fabricante antes de comprar. Los precios se omiten intencionadamente porque los precios de venta en EE. UU. de las baterías de litio fabricadas en China son sensibles a los aranceles de la Sección 301 y pueden cambiar significativamente. Verifica en amazon.com o en la tienda directa de la marca en EE. UU. en el momento de la compra (consultado el 2026-07-03).',
+        tableNote: 'Las especificaciones son aproximadas según las líneas de producto conocidas — todas las cifras de capacidad, salida y precio deben verificarse frente a las páginas actuales del fabricante antes de comprar. Los precios se omiten intencionadamente porque los precios de venta en EE. UU. de las baterías de litio fabricadas en China son sensibles a los aranceles de la Sección 301 y pueden cambiar significativamente. Verifica en amazon.com o en la tienda directa de la marca en EE. UU. en el momento de la compra (consultado el 2026-07-03). Las filas de EcoFlow DELTA Pro 3 y Anker SOLIX F3800 Plus se comprobaron el 2026-11-20; las demás filas se comprobaron por última vez el 2026-07-03 y no se reverificaron.',
       },
       useCaseRecs: {
         id: 'use-case-recs',
@@ -2377,12 +2509,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-control',
         title: 'Control local e integración con el hogar inteligente',
         content: [
-          '**Ninguna de las cuatro grandes marcas cubiertas aquí ofrece una API local oficial y documentada para Home Assistant como característica estándar — todas monitorizan por defecto a través de una app en la nube.** Esta es la mayor brecha entre el mercado de estaciones de energía portátiles de EE. UU. y el mercado de almacenamiento solar de balcón de la UE, donde marcas como Zendure han construido ecosistemas maduros de control local. Si el control local te importa, verifica el estado actual antes de comprar, ya que esta es la dimensión que evoluciona más rápido en el espacio del producto.',
+          '**Pocas de las grandes marcas cubiertas aquí ofrecen una API local oficial y documentada para Home Assistant como característica estándar. EcoFlow STREAM ahora incluye una API local documentada (verifica el alcance actual en [ecoflow.com](https://www.ecoflow.com)); Bluetti, Jackery y Anker SOLIX siguen dependiendo principalmente de la monitorización en la nube.** La brecha entre el mercado de estaciones de energía portátiles de EE. UU. y el mercado de almacenamiento solar de balcón de la UE, donde marcas como Zendure han construido ecosistemas maduros de control local, se está reduciendo. Si el control local te importa, verifica el estado actual antes de comprar, ya que esta es la dimensión que evoluciona más rápido en el espacio del producto.',
           'La serie Delta Pro de EcoFlow tiene la integración comunitaria más activa — existe una integración con Home Assistant vía HACS y la mantiene la comunidad (no EcoFlow oficialmente). Se apoya en la API en la nube de EcoFlow en lugar de un endpoint local verdadero, lo que significa que aún enruta los datos de monitorización a través de los servidores de EcoFlow. Consulta la [guía de solar de balcón sin nube](/es/balcony-solar/home-assistant-balcony-solar-no-cloud) para detalles sobre qué significa realmente "local" en este contexto y qué hardware lo soporta genuinamente.',
           'Para usuarios que quieren un sistema de batería con API local verdadera que se empareje con solar y no necesite una cuenta en la nube, el mercado de la UE actualmente tiene mejores opciones (en particular Zendure SolarFlow — consulta [EcoFlow vs. Anker vs. Zendure](/es/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar)), aunque la mayoría de esos productos no se venden ni están certificados para el mercado de EE. UU.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'A fecha de 2026, ninguna gran marca de estaciones de energía portátiles vendida en EE. UU. (EcoFlow, Bluetti, Jackery, Anker SOLIX) ofrece una API local oficialmente documentada para Home Assistant — existen integraciones comunitarias para EcoFlow pero enrutan a través de su nube.' },
+          { type: 'one-sentence', text: 'A finales de 2026, EcoFlow STREAM ofrece una API local documentada; Bluetti, Jackery y Anker SOLIX siguen dependiendo de la monitorización en la nube — verifica el estado actual antes de comprar.' },
           { type: 'plain-terms', text: 'Si quieres una batería que funcione con Home Assistant sin enviar datos a los servidores del fabricante, las opciones en EE. UU. son limitadas — EcoFlow tiene la mejor solución comunitaria, pero no es una configuración local verdadera.' },
         ],
       },
@@ -2403,7 +2535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://us.ecoflow.com', title: 'Tienda de EcoFlow en EE. UU.', description: 'Especificaciones y precios del Delta Pro, Delta Pro Ultra — verifica las cifras actuales en el momento de la compra' },
           { url: 'https://www.bluettipower.com', title: 'Tienda de Bluetti en EE. UU.', description: 'Especificaciones del AC300, B300, AC200MAX — verifica las cifras actuales' },
           { url: 'https://www.jackery.com', title: 'Tienda de Jackery en EE. UU.', description: 'Especificaciones de la serie Explorer — verifica la química y la salida actuales por modelo' },
-          { url: 'https://ankersolix.com', title: 'Tienda de Anker SOLIX en EE. UU.', description: 'Especificaciones del F2000, F3800; confirma que el Solarbank no está en el catálogo de EE. UU.' },
+          { url: 'https://ankersolix.com', title: 'Tienda de Anker SOLIX en EE. UU.', description: 'Especificaciones F2000 y F3800 Plus; ninguna Solarbank en la navegación de la tienda comprobada el 2026-11-20' },
         ],
       },
       relatedReading: {
@@ -2417,13 +2549,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-            { q: '¿Es legal la solar de balcón en EE. UU.?', a: 'No hay una única respuesta para EE. UU. — la legalidad varía según el estado y la compañía eléctrica. Algunos estados han promulgado normas de solar enchufable similares al Balkonkraftwerk de Alemania; otros exigen permisos, aprobación de la compañía eléctrica según el Artículo 705 del NEC y equipos certificados UL 1741 para cualquier solar conectada a la red. Para un desglose por estado, consulta la guía de legalidad por estados de EE. UU. dedicada. El enfoque más seguro en cualquier estado es un sistema independiente de batería + panel sin conexión a la red.' },
+            { q: '¿Es legal la solar de balcón en EE. UU.?', a: 'Cada vez más, pero no en todas partes: diez estados han firmado leyes de energía solar plug-in (Utah, Maine, Virginia, Maryland, Colorado, Connecticut, Nuevo Hampshire, Vermont, Nueva Jersey y California, cuyo SB 868 se firmó el 30 de septiembre de 2026). Seis están en vigor, Virginia, California y Nuevo Hampshire siguen el 1 de enero de 2027 y Nueva Jersey el 1 de marzo de 2027. No hay ley federal plug-in y, donde no hay ley estatal, sigue aplicándose la interconexión con la compañía (NEC Article 705, equipos UL 1741). Consulta la guía de legalidad por estados. El enfoque más seguro en cualquier lugar sigue siendo una batería independiente con paneles sin conexión a la red.' },
             { q: 'EcoFlow vs. Bluetti — ¿cuál es mejor para respaldo doméstico en EE. UU. en 2026?', a: 'El EcoFlow Delta Pro tiene la entrada solar MPPT más potente, lo que lo convierte en la mejor opción si la recarga rápida basada en paneles es una prioridad. El AC300+B300 de Bluetti es mejor si la prioridad es la expansión modular (añadir capacidad de batería por incrementos). Ambos usan química LFP. Los precios cambian con frecuencia debido a la exposición a los aranceles — compara los precios actuales en el momento de la compra, ya que la diferencia de precio fluctúa.' },
             { q: '¿Cuál es la diferencia entre la química de batería LFP y NMC?', a: 'La LFP (fosfato de hierro y litio) ofrece ~3,000–6,000 ciclos de carga con un 80% de retención, mejor estabilidad térmica y mayor vida útil de calendario — preferida para unidades de respaldo doméstico que ciclan a diario. La NMC (níquel manganeso cobalto) ofrece mayor densidad de energía para un peso dado, razón por la que domina las unidades portátiles/enfocadas al camping como los modelos Jackery Explorer más antiguos. Para una unidad que está en tu hogar ciclando a diario desde la solar, la química LFP es significativamente mejor en un horizonte de 5–10 años.' },
             { q: '¿Puedo hacer funcionar mi nevera durante un corte de red con una de estas?', a: 'Sí, con el dimensionamiento correcto. Una nevera estadounidense típica consume 100–400W continuos (150W de media) y tiene un pico de arranque de 600–1,200W. Una unidad LFP de 2 kWh con salida de CA de más de 2,000W puede alimentar una nevera estándar durante 8–12 horas. Añade un panel solar de 200–400W y podrás ampliar eso indefinidamente con luz solar decente. Verifica la salida de CA y la potencia de pico de cualquier unidad que estés considerando — algunas estaciones de energía asequibles tienen potencias de pico demasiado bajas para los compresores de las neveras.' },
             { q: '¿Necesito permisos o interconexión a la red para una estación de energía emparejada con paneles solares?', a: 'Si no te conectas a la red — solo cargando la estación de energía desde los paneles y usándola para alimentar tu hogar — por lo general no necesitas permisos de interconexión ni aprobación de la compañía eléctrica. Los paneles se conectan únicamente a la entrada solar de la estación de energía, no al cuadro eléctrico de tu casa. Esta es la clave de la simplicidad legal del enfoque de batería independiente frente a los kits de solar de balcón que exportan a la red. Verifica con tu AHJ local (autoridad con jurisdicción) si tienes dudas.' },
             { q: '¿Puedo usar estas con Home Assistant para monitorización local?', a: 'Parcialmente. EcoFlow tiene una integración con Home Assistant mantenida por la comunidad (vía HACS) para la serie Delta, pero enruta a través de la API en la nube de EcoFlow en lugar de un endpoint local verdadero. Bluetti, Jackery y Anker SOLIX carecen de API locales bien documentadas. Si el control local sin dependencia de la nube es un requisito estricto, consulta la guía de solar de balcón sin nube para un resumen actual de qué hardware soporta genuinamente la operación solo local.' },
-            { q: '¿Está disponible Anker SOLIX en EE. UU.?', a: 'Las estaciones de energía portátiles Anker SOLIX (F2000, F3800 y unidades similares) están disponibles en EE. UU. en ankersolix.com y en Amazon. Los modelos Anker SOLIX Solarbank — diseñados para el almacenamiento solar de balcón conectado a la red — no se venden ni están certificados para el mercado de EE. UU. y no deberían recomendarse a compradores estadounidenses. Este es un punto de confusión habitual, ya que el Solarbank recibe una cobertura significativa en las reseñas europeas de solar.' },
+            { q: '¿Está disponible Anker SOLIX en EE. UU.?', a: 'Las estaciones de energía portátiles Anker SOLIX (F2000, F3800 y unidades similares) están disponibles en EE. UU. en ankersolix.com y en Amazon. Anker SOLIX Solarbank — diseñada para el almacenamiento de energía solar de balcón conectada a la red — no figuraba en la tienda de Anker en EE. UU. al comprobarlo el 20 de noviembre de 2026 y no se halló ningún listado UL estadounidense, por lo que esta guía no la recomienda a compradores de EE. UU. Consulta la tienda de Anker en EE. UU. por si cambia.' },
             { q: '¿Por qué son tan volátiles los precios de estos productos?', a: 'EcoFlow, Bluetti, Jackery y Anker SOLIX se fabrican todos en China. Los precios de venta en EE. UU. están sujetos a los aranceles de la Sección 301 sobre baterías de iones de litio y componentes solares, que han ido subiendo a lo largo de 2024–2026 y pueden mover los precios de venta un 10–25% o más. Las marcas también realizan promociones frecuentes que pueden mover los precios entre 200 y 500 dólares en cualquier dirección. Consulta siempre el precio actual en Amazon o en la tienda estadounidense de la marca en el momento de la compra.' },
             { q: '¿Cuál es la mejor estación de energía portátil para camping que también sirva para respaldo doméstico?', a: 'El Jackery Explorer 2000 Pro o 3000 Pro para usuarios que priorizan la portabilidad (más ligeros, amigables con Amazon, pero NMC — verifica la química actual). El Anker SOLIX F2000 para compradores que quieren LFP con una portabilidad similar a Jackery. El EcoFlow Delta Pro si estás dispuesto a ceder en portabilidad a cambio de la química LFP y una entrada solar más potente. El caso de uso de "cruce con camping" está bien servido por las cuatro marcas — el diferenciador es la química y la vida útil de ciclos a largo plazo para los compradores que planean usar la unidad intensamente en casa entre viajes.' },
             { q: '¿Puedo usar una estación de energía portátil para hacer funcionar mi nevera durante un corte de red?', a: 'Sí. Una nevera estadounidense típica consume 100–400W (150W de media) con un pico de arranque de 600–1,200W. Una unidad LFP de 2 kWh con salida de CA de más de 2,000W puede alimentar una nevera estándar durante 8–12 horas; añade un panel solar de 200–400W para ampliar el tiempo de funcionamiento. Verifica la potencia de pico de CA de cualquier unidad antes de comprar.' },
@@ -2436,7 +2568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejor batería doméstica y estaciones de energía portátiles para solar en EE. UU. (2026): EcoFlow, Bluetti y más',
       description: 'Las mejores baterías domésticas y estaciones de energía portátiles para compradores de solar en EE. UU. en 2026: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP vs NMC, control local, disponibilidad verificada en EE. UU.',
       datePublished: '2026-07-03',
-      dateModified: '2026-07-03',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -2508,7 +2640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Es legal la solar de balcón en EE. UU.?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No hay una única respuesta para EE. UU. — la legalidad varía según el estado y la compañía eléctrica. Algunos estados han promulgado normas de solar enchufable similares al Balkonkraftwerk de Alemania; otros exigen permisos, aprobación de la compañía eléctrica según el Artículo 705 del NEC y equipos certificados UL 1741 para cualquier solar conectada a la red. Para un desglose por estado, consulta la guía de legalidad por estados de EE. UU. dedicada. El enfoque más seguro en cualquier estado es un sistema independiente de batería + panel sin conexión a la red.',
+              'text': 'Cada vez más, pero no en todas partes: diez estados han firmado leyes de energía solar plug-in (Utah, Maine, Virginia, Maryland, Colorado, Connecticut, Nuevo Hampshire, Vermont, Nueva Jersey y California, cuyo SB 868 se firmó el 30 de septiembre de 2026). Seis están en vigor, Virginia, California y Nuevo Hampshire siguen el 1 de enero de 2027 y Nueva Jersey el 1 de marzo de 2027. No hay ley federal plug-in y, donde no hay ley estatal, sigue aplicándose la interconexión con la compañía (NEC Article 705, equipos UL 1741). Consulta la guía de legalidad por estados. El enfoque más seguro en cualquier lugar sigue siendo una batería independiente con paneles sin conexión a la red.',
             },
           },
           {
@@ -2556,7 +2688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Está disponible Anker SOLIX en EE. UU.?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Las estaciones de energía portátiles Anker SOLIX (F2000, F3800 y unidades similares) están disponibles en EE. UU. en ankersolix.com y en Amazon. Los modelos Anker SOLIX Solarbank — diseñados para el almacenamiento solar de balcón conectado a la red — no se venden ni están certificados para el mercado de EE. UU. y no deberían recomendarse a compradores estadounidenses. Este es un punto de confusión habitual, ya que el Solarbank recibe una cobertura significativa en las reseñas europeas de solar.',
+              'text': 'Las estaciones de energía portátiles Anker SOLIX (F2000, F3800 y unidades similares) están disponibles en EE. UU. en ankersolix.com y en Amazon. Anker SOLIX Solarbank — diseñada para el almacenamiento de energía solar de balcón conectada a la red — no figuraba en la tienda de Anker en EE. UU. al comprobarlo el 20 de noviembre de 2026 y no se halló ningún listado UL estadounidense, por lo que esta guía no la recomienda a compradores de EE. UU. Consulta la tienda de Anker en EE. UU. por si cambia.',
             },
           },
           {
@@ -2627,13 +2759,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Qual bateria doméstica ou estação de energia um comprador nos EUA deve escolher para backup solar em 2026?',
-        answer: 'O Delta Pro da EcoFlow é a melhor escolha geral para backup doméstico com painéis solares: química LFP, 3,6 kWh de capacidade base, forte entrada solar e o ecossistema de acessórios mais amplo. O conjunto AC300+B300 da Bluetti é melhor para compradores que querem expansão modular. A série Jackery Explorer lidera em portabilidade e disponibilidade na Amazon. Vale conferir o Anker SOLIX F3800 para LFP de grande capacidade com preço competitivo. Evite presumir que o Anker Solarbank da UE está disponível — ele não é vendido nem certificado nos EUA.',
+        answer: 'O Delta Pro da EcoFlow é a melhor escolha geral para backup doméstico com painéis solares: química LFP, 3,6 kWh de capacidade base, forte entrada solar e o ecossistema de acessórios mais amplo. O conjunto AC300+B300 da Bluetti é melhor para compradores que querem expansão modular. A série Jackery Explorer lidera em portabilidade e disponibilidade na Amazon. Vale conferir o Anker SOLIX F3800 para LFP de grande capacidade com preço competitivo. A Anker SOLIX Solarbank não estava listada na loja da Anker nos EUA na checagem de 20 de novembro de 2026, então não presuma que a Solarbank europeia está disponível nos EUA.',
         bullets: [
           'EcoFlow Delta Pro: LFP, ~3,6 kWh, forte entrada solar — melhor backup doméstico geral com painéis solares (verifique as especificações atuais)',
           'Bluetti AC300+B300: empilhamento LFP modular, até ~12 kWh — melhor para compradores que priorizam expansibilidade (verifique as especificações atuais)',
           'Jackery Explorer 2000 Pro: química NMC, crossover camping/portátil — melhor portabilidade, presença mais ampla na Amazon (verifique as especificações atuais)',
           'Anker SOLIX F3800: bateria doméstica portátil LFP de grande capacidade — alternativa forte, verifique a disponibilidade e as especificações nos EUA',
-          'O Anker SOLIX Solarbank NÃO é vendido nos EUA — confirme que você está olhando a linha de estações portáteis de energia da marca, e não o Solarbank',
+          'Anker SOLIX Solarbank: não listada na loja da Anker nos EUA (checado em 2026-11-20) — confirme que você está olhando a linha de estações de energia portáteis, não a Solarbank',
           'As quatro marcas são fabricadas na China; os preços de varejo nos EUA estão sujeitos às tarifas da Seção 301 — verifique os preços no momento da compra',
         ],
         updatedDate: '2026-11-20',
@@ -2663,8 +2795,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     sections: {
       statusNote: {
-        title: 'Atualização 2026: leis estaduais dos EUA e checagem de produtos',
-        content: '**O quadro legal dos EUA foi além de um simples mosaico: segundo um resumo sobre energia solar plug-in atualizado em 4 de outubro de 2026, dez estados aprovaram leis de solar plug-in, a maioria limitando os dispositivos a 1.200 W.** O resumo, mantido por um vendedor ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)), cita Utah (HB 340, sancionada em março de 2025), Maine (LD 1730, sancionada em 6 de abril de 2026), Virgínia (HB 395, 22 de abril de 2026), Colorado (HB 26-1007, 7 de maio de 2026, até 1.920 W), Maryland (HB 1532, 12 de maio de 2026), Connecticut (HB 5340, 20 de maio de 2026), Nova Hampshire (SB 540-FN, junho de 2026), Vermont (S. 202, 16 de junho de 2026), Nova Jersey (S 2368 / A 4836, 1º de setembro de 2026) e Califórnia (SB 868, sancionada em 30 de setembro de 2026). O próprio resumo aponta inconsistências em seus números, e outras fontes divergem sobre quais leis citam a UL 3700 e sobre as datas de vigência; leia o texto promulgado no site de cada legislatura, pois os projetos não foram verificados em textos primários nesta atualização. Nenhum marco federal para plug-in foi encontrado, então o enquadramento de «mosaico» desta página continua válido, mas subestima quantos estados já têm leis específicas. Segundo o mesmo resumo, o crédito fiscal federal de 30% para solar expirou em 31 de dezembro de 2025, o que importa para qualquer comparação de custos aqui. Os modelos, especificações e preços abaixo não foram reverificados: gerações mais novas, como a EcoFlow Delta Pro 3 e a Anker SOLIX F3800 Plus, aparecem na imprensa de 2026, e um [resumo da Bob Vila de abril de 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) listava a F3800 Plus a US$ 799,99 em promoção, então os preços desta página devem ser tratados como sem data. Também não foi reconfirmado que a Anker Solarbank não é vendida nos EUA: os resultados de busca mostraram um anúncio na Amazon.com do Solarbank 2 E1600 que não pôde ser aberto; confira a loja da Anker nos EUA. Este é um resumo de informações públicas, não aconselhamento jurídico, fiscal nem de segurança elétrica.',
+        title: 'Reverificação: leis estaduais dos EUA, especificações e disponibilidade',
+        content: '**Checado em 20 de novembro de 2026: o quadro legal dos EUA e algumas gerações de produtos mudaram desde que este guia foi escrito, e as seções abaixo estão atualizadas ou sinalizadas de acordo.** Lei: dez estados dos EUA assinaram leis de energia solar plug-in (Utah, Maine, Virgínia, Maryland, Colorado, Connecticut, Nova Hampshire, Vermont, Nova Jersey e Califórnia). O SB 868 da Califórnia foi assinado em 30 de setembro de 2026 e entra em vigor em 1º de janeiro de 2027, e relata-se que suas isenções de interconexão expirarão em 1º de janeiro de 2030 ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/); não verificado no texto promulgado). Seis estados estão em vigor; Virgínia, Califórnia e Nova Hampshire seguem em 1º de janeiro de 2027 e Nova Jersey em 1º de março de 2027, e as datas de vigência diferem entre acompanhamentos, então confirme com o estado. Não existe lei federal plug-in. O detalhe por estado está em [Como a energia solar de varanda passou de ilegal a lei em 10 estados dos EUA](/pt/balcony-solar/how-balcony-solar-became-legal-in-the-us) e [A energia solar de varanda é legal no meu estado?](/pt/balcony-solar/balcony-solar-legal-us-states) e não é repetido aqui. Produtos: dois modelos atuais foram checados em 20 de novembro de 2026 e adicionados à tabela, o EcoFlow DELTA Pro 3 (4.096 Wh LFP, 4.000 W contínuos e 8.000 W de pico com X-Boost, expansível a 12 kWh com duas Smart Extra Batteries segundo o [blog da EcoFlow](https://www.ecoflow.com/us/blog/ecoflow-portable-power-station-specs) e anúncios de varejistas) e o Anker SOLIX F3800 Plus (3.840 Wh LFP, mais de 3.000 ciclos, 6.000 W, até 3.200 W de entrada solar segundo a [página dos EUA da Anker SOLIX](https://www.ankersolix.com/us/products/f3800-plus)). As demais linhas foram checadas pela última vez em 2026-07-03 e não foram reverificadas: EcoFlow DELTA Pro (antecessor do Pro 3), Bluetti AC300 + B300 (uma loja dos EUA marca o módulo inversor do AC300 como descontinuado), Bluetti AC200MAX (disponibilidade varia por varejista), Jackery Explorer 2000 Pro e 3000 Pro (o site da Jackery não informa a química do 3000 Pro e um varejista indica íon de lítio; o [Explorer 2000 Plus](https://www.jackery.com/collections/3000-pro-or-2000-plus) consta como LiFePO4) e Anker SOLIX F2000. Esta página não informa preços porque preços promocionais mudam rápido. Anker Solarbank: nenhum produto Solarbank apareceu na navegação da loja da Anker nos EUA em 20 de novembro de 2026 e nenhuma listagem UL americana foi encontrada, por isso ele é descrito como não listado nos EUA, não como proibido. Este é um resumo de informações públicas, não aconselhamento jurídico, fiscal nem de segurança elétrica.',
       },
       tldr: {
         id: 'key-takeaways',
@@ -2674,7 +2806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O caminho de receita nos EUA para as marcas de solar de sacada são as estações portáteis de energia e as baterias domésticas expansíveis — unidades portáteis EcoFlow, Bluetti, Jackery e Anker SOLIX — que combinam de forma limpa com painéis sem interconexão com a rede.',
           'A química de bateria LFP (fosfato de ferro-lítio) é fortemente preferida em relação à NMC para backup doméstico: maior vida útil em ciclos (~3.000–6.000 ciclos vs. ~500–1.000), mais segura em altas temperaturas e menor degradação em carga parcial — EcoFlow Delta Pro, Bluetti AC300+B300 e Anker SOLIX F3800 usam LFP.',
           'A série Explorer Pro da Jackery historicamente usou NMC — útil para aplicações portáteis, mas menos ideal para uma unidade que fará ciclos diariamente em casa (verifique a química atual de cada modelo antes de comprar).',
-          'O Anker SOLIX Solarbank não é vendido nem certificado para o mercado dos EUA — as unidades Anker relevantes para compradores americanos são a linha de estações portáteis de energia (F2000, F3800, etc.).',
+          'A Anker SOLIX Solarbank não estava listada na loja da Anker nos EUA na checagem de 20 de novembro de 2026 e nenhuma listagem UL americana foi encontrada — os produtos da Anker relevantes para compradores dos EUA são as estações de energia portáteis (F2000, F3800 Plus) e o sistema de backup E10 para a casa toda.',
           'As quatro marcas são fabricadas na China; os preços de varejo nos EUA estão expostos às tarifas da Seção 301 sobre baterias de íon-lítio e componentes solares — nunca confie em um valor de preço fixo.',
         ],
       },
@@ -2682,7 +2814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'us-market-reality',
         title: 'Por que Compradores nos EUA Escolhem Baterias, Não Kits',
         content: [
-          '**O mercado europeu de solar de sacada (o Balkonkraftwerk da Alemanha) opera sob um padrão federal plug-and-play que permite a inquilinos e proprietários de apartamentos plugar com segurança um kit de painel de 800W em uma tomada doméstica e exportar legalmente para a rede.** Nenhum marco equivalente existe nos EUA até o momento da redação (julho de 2026). O solar plug-and-play nos EUA é regido por regulamentações estaduais das concessionárias, pelas regras de interconexão do Artigo 705 do NEC e por requisitos de certificação UL 1741 que variam por estado e por concessionária — criando um mosaico em que o que é legal na Califórnia pode ser restrito ou exigir licenças no Texas ou na Flórida. Veja [A Energia Solar de Sacada é Legal no Seu Estado dos EUA?](/pt/balcony-solar/balcony-solar-legal-us-states) para uma análise estado a estado.',
+          '**O Balkonkraftwerk alemão funciona sob um padrão nacional plug-in que permite a inquilinos e proprietários de apartamentos ligar um kit de painéis de 800 W em uma tomada doméstica; os EUA não têm equivalente federal, mas dez estados já assinaram suas próprias leis de energia solar plug-in, Utah primeiro em 2025 e a Califórnia mais recentemente, em 30 de setembro de 2026.** A maioria limita os dispositivos a 1.200 W; Virgínia, Califórnia e Nova Hampshire entram em vigor em 1º de janeiro de 2027 e Nova Jersey em 1º de março de 2027, e as isenções da Califórnia expirariam em 1º de janeiro de 2030 conforme relatado ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/)). Em estados sem lei continuam valendo as regras de interconexão das concessionárias (NEC Article 705, equipamentos UL 1741), então confira seu estado e sua concessionária. Veja [Como a energia solar de varanda passou de ilegal a lei em 10 estados dos EUA](/pt/balcony-solar/how-balcony-solar-became-legal-in-the-us) e [A energia solar de varanda é legal no meu estado?](/pt/balcony-solar/balcony-solar-legal-us-states) para o detalhamento por estado.',
           'Essa fragmentação legal tem uma consequência prática que estamos declarando explicitamente como uma suposição (não como um fato de mercado medido): a demanda dos consumidores nos EUA parece se concentrar em **estações e baterias autônomas combinadas com painéis portáteis ou instalados no telhado**, que não exigem nenhuma interconexão com a rede — evitando por completo a questão regulatória. A evidência disso vem dos padrões de cliques nos EUA neste site (os produtos do canal Amazon dominam; os sites de marcas de kits no estilo europeu não) e do fato de que marcas como EcoFlow e Jackery geram a maior parte de sua receita nos EUA com estações portáteis de energia, e não com kits de sacada conectados à rede. Se você procura uma comparação de kits de sacada, veja [Melhores Kits de Solar de Sacada 2026](/pt/balcony-solar/best-balcony-solar-kits-2026) para o que está disponível onde é legal.',
           '**Para inquilinos, moradores de apartamentos e proprietários que querem solar parcial ou proteção contra quedas de energia sem uma instalação completa no telhado, essa abordagem de bateria autônoma tem uma vantagem genuína além da simplicidade legal:** ela é portátil. Uma bateria LFP de 3,6 kWh que alimenta sua geladeira durante uma queda de energia hoje pode ser movida, vendida ou reaproveitada quando você se mudar — diferente de um sistema conectado à rede. Compare isso com a Alemanha, onde o Balkonkraftwerk é tipicamente uma instalação permanente e a bateria é uma unidade de armazenamento adicional. Para contexto sobre como o modelo alemão funciona, veja [Regras do Balkonkraftwerk na Alemanha](/pt/balcony-solar/balkonkraftwerk-germany-rules).',
         ],
@@ -2791,10 +2923,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             usPrice: 'Verifique o preço atual — categoria LFP premium',
             bestFor: 'Backup doméstico LFP de grande capacidade; alta saída CA para cargas pesadas',
           },
+          {
+            product: 'EcoFlow DELTA Pro 3',
+            capacity: '4.096 Wh (blog da EcoFlow, anúncios de varejistas)',
+            chemistry: 'LFP',
+            acOutput: '4.000W contínuos, 8.000W de pico com X-Boost',
+            solarInput: 'Não confirmado aqui — ver a ficha dos EUA da EcoFlow',
+            expandable: 'Sim — 12 kWh com duas Smart Extra Batteries (blog da EcoFlow)',
+            localControl: 'Ver a seção de controle local — verificar por firmware',
+            usPrice: 'Conferir preço atual — sensível a tarifas',
+            bestFor: 'Geração atual da EcoFlow para backup residencial; sucessor do Delta Pro',
+          },
+          {
+            product: 'Anker SOLIX F3800 Plus',
+            capacity: '3.840 Wh (página dos EUA da Anker)',
+            chemistry: 'LFP, mais de 3.000 ciclos',
+            acOutput: '6.000W máx. (porta 120/240V L14-30R)',
+            solarInput: 'Até 3.200W (duas portas, 1.600W cada)',
+            expandable: 'Sim — baterias de expansão da Anker',
+            localControl: 'Principalmente via app — verificar suporte a API local',
+            usPrice: 'Conferir preço atual — promoções frequentes',
+            bestFor: 'Backup residencial LFP de grande capacidade; modelo portátil principal atual da Anker',
+          },
         ],
         columns: ['product', 'capacity', 'chemistry', 'acOutput', 'solarInput', 'expandable', 'localControl', 'usPrice', 'bestFor'],
         tableFormat: true,
-        tableNote: 'As especificações são aproximadas com base nas linhas de produtos conhecidas — todos os valores de capacidade, saída e preço devem ser verificados nas páginas atuais dos fabricantes antes da compra. Os preços foram intencionalmente omitidos porque os preços de varejo nos EUA para baterias de lítio fabricadas na China são sensíveis às tarifas da Seção 301 e podem mudar significativamente. Verifique em amazon.com ou na loja direta da marca nos EUA no momento da compra (verificado em 2026-07-03).',
+        tableNote: 'As especificações são aproximadas com base nas linhas de produtos conhecidas — todos os valores de capacidade, saída e preço devem ser verificados nas páginas atuais dos fabricantes antes da compra. Os preços foram intencionalmente omitidos porque os preços de varejo nos EUA para baterias de lítio fabricadas na China são sensíveis às tarifas da Seção 301 e podem mudar significativamente. Verifique em amazon.com ou na loja direta da marca nos EUA no momento da compra (verificado em 2026-07-03). As linhas EcoFlow DELTA Pro 3 e Anker SOLIX F3800 Plus foram checadas em 2026-11-20; as demais linhas foram checadas pela última vez em 2026-07-03 e não foram reverificadas.',
       },
       useCaseRecs: {
         id: 'use-case-recs',
@@ -2811,12 +2965,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-control',
         title: 'Controle Local e Integração com Casa Inteligente',
         content: [
-          '**Nenhuma das quatro principais marcas cobertas aqui fornece uma API local oficial e documentada para o Home Assistant como recurso padrão — todas usam por padrão o monitoramento por app baseado em nuvem.** Essa é a maior diferença entre o mercado americano de estações portáteis de energia e o mercado europeu de armazenamento solar de sacada, onde marcas como a Zendure construíram ecossistemas maduros de controle local. Se o controle local importa para você, verifique o estado atual antes de comprar, já que essa é a dimensão que muda mais rápido nesse espaço de produtos.',
+          '**Poucas das principais marcas cobertas aqui fornecem uma API local oficial e documentada para o Home Assistant como recurso padrão. A EcoFlow STREAM agora inclui uma API local documentada (verifique o escopo atual em [ecoflow.com](https://www.ecoflow.com)); Bluetti, Jackery e Anker SOLIX ainda dependem principalmente do monitoramento em nuvem.** A diferença entre o mercado americano de estações portáteis de energia e o mercado europeu de armazenamento solar de sacada, onde marcas como a Zendure construíram ecossistemas maduros de controle local, está diminuindo. Se o controle local importa para você, verifique o estado atual antes de comprar, já que essa é a dimensão que muda mais rápido nesse espaço de produtos.',
           'A série Delta Pro da EcoFlow tem a integração comunitária mais ativa — existe uma integração com o Home Assistant via HACS mantida pela comunidade (não pela EcoFlow oficialmente). Ela depende da API em nuvem da EcoFlow em vez de um endpoint local verdadeiro, o que significa que ainda roteia os dados de monitoramento pelos servidores da EcoFlow. Cruze com o [guia de Solar de Sacada Sem Nuvem](/pt/balcony-solar/home-assistant-balcony-solar-no-cloud) para detalhes sobre o que "local" realmente significa nesse contexto e qual hardware o suporta de fato.',
           'Para usuários que querem um sistema de bateria com API local verdadeira que combine com painéis solares e não precise de conta em nuvem, o mercado europeu atualmente tem opções melhores (em particular a Zendure SolarFlow — veja [EcoFlow vs. Anker vs. Zendure](/pt/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar)), embora a maioria desses produtos não seja vendida nem certificada para o mercado dos EUA.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Em 2026, nenhuma grande marca de estação portátil de energia vendida nos EUA (EcoFlow, Bluetti, Jackery, Anker SOLIX) fornece uma API local oficialmente documentada para o Home Assistant — existem integrações comunitárias para a EcoFlow, mas elas roteiam pela nuvem da marca.' },
+          { type: 'one-sentence', text: 'No final de 2026, a EcoFlow STREAM oferece uma API local documentada; Bluetti, Jackery e Anker SOLIX ainda dependem do monitoramento em nuvem — verifique o estado atual antes de comprar.' },
           { type: 'plain-terms', text: 'Se você quer uma bateria que funcione com o Home Assistant sem enviar dados aos servidores do fabricante, as opções nos EUA são limitadas — a EcoFlow tem a melhor solução comunitária, mas não é uma configuração verdadeiramente local.' },
         ],
       },
@@ -2837,7 +2991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://us.ecoflow.com', title: 'Loja da EcoFlow nos EUA', description: 'Especificações e preços do Delta Pro e Delta Pro Ultra — verifique os valores atuais no momento da compra' },
           { url: 'https://www.bluettipower.com', title: 'Loja da Bluetti nos EUA', description: 'Especificações do AC300, B300, AC200MAX — verifique os valores atuais' },
           { url: 'https://www.jackery.com', title: 'Loja da Jackery nos EUA', description: 'Especificações da série Explorer — verifique a química e a saída atuais de cada modelo' },
-          { url: 'https://ankersolix.com', title: 'Loja da Anker SOLIX nos EUA', description: 'Especificações do F2000 e F3800; confirma que o Solarbank não está no catálogo dos EUA' },
+          { url: 'https://ankersolix.com', title: 'Loja da Anker SOLIX nos EUA', description: 'Especificações F2000 e F3800 Plus; nenhuma Solarbank na navegação da loja checada em 2026-11-20' },
         ],
       },
       relatedReading: {
@@ -2851,13 +3005,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas Frequentes',
         faqs: [
-            { q: 'A energia solar de sacada é legal nos EUA?', a: 'Não há uma única resposta para os EUA — a legalidade varia por estado e por concessionária. Alguns estados adotaram regras de solar plug-and-play semelhantes ao Balkonkraftwerk da Alemanha; outros exigem licenças, aprovação da concessionária sob o Artigo 705 do NEC e equipamentos certificados UL 1741 para qualquer solar conectado à rede. Para uma análise estado a estado, veja o guia dedicado de legalidade nos estados dos EUA. A abordagem mais segura em qualquer estado é um sistema autônomo de bateria + painel sem conexão com a rede.' },
+            { q: 'A energia solar de sacada é legal nos EUA?', a: 'Cada vez mais, mas não em todo lugar: dez estados assinaram leis de energia solar plug-in (Utah, Maine, Virgínia, Maryland, Colorado, Connecticut, Nova Hampshire, Vermont, Nova Jersey e Califórnia, cujo SB 868 foi assinado em 30 de setembro de 2026). Seis estão em vigor, Virgínia, Califórnia e Nova Hampshire seguem em 1º de janeiro de 2027 e Nova Jersey em 1º de março de 2027. Não há lei federal plug-in e, onde não há lei estadual, continua valendo a interconexão com a concessionária (NEC Article 705, equipamentos UL 1741). Veja o guia de legalidade por estado. A abordagem mais segura em qualquer lugar continua sendo uma bateria independente com painéis, sem conexão à rede.' },
             { q: 'EcoFlow vs. Bluetti — qual é melhor para backup doméstico nos EUA em 2026?', a: 'O EcoFlow Delta Pro tem a entrada solar MPPT mais forte, o que o torna a melhor escolha se a recarga rápida por painéis for uma prioridade. O AC300+B300 da Bluetti é melhor se a expansão modular (adicionar capacidade de bateria em incrementos) for a prioridade. Ambos usam química LFP. Os preços mudam com frequência devido à exposição às tarifas — compare os preços atuais no momento da compra, já que a diferença de preço flutua.' },
             { q: 'Qual é a diferença entre as químicas de bateria LFP e NMC?', a: 'A LFP (fosfato de ferro-lítio) oferece ~3.000–6.000 ciclos de carga com 80% de retenção, melhor estabilidade térmica e maior vida útil de calendário — preferida para unidades de backup doméstico que fazem ciclos diariamente. A NMC (níquel-manganês-cobalto) oferece maior densidade de energia para um dado peso, e é por isso que domina as unidades portáteis/voltadas a camping como os modelos Jackery Explorer mais antigos. Para uma unidade que fica em casa fazendo ciclos diários a partir dos painéis solares, a química LFP é significativamente melhor num horizonte de 5–10 anos.' },
             { q: 'Consigo alimentar minha geladeira durante uma queda de energia com uma dessas?', a: 'Sim, com o dimensionamento certo. Uma geladeira americana típica consome 100–400W contínuos (150W em média) e tem um pico de partida de 600–1.200W. Uma unidade LFP de 2 kWh com saída CA de 2.000W+ pode alimentar uma geladeira padrão por 8–12 horas. Adicione um painel solar de 200–400W e você pode estender isso indefinidamente com luz solar decente. Verifique a saída CA e a potência de pico de qualquer unidade que esteja considerando — algumas estações de energia mais baratas têm potência de pico baixa demais para os compressores de geladeira.' },
             { q: 'Preciso de licenças ou interconexão com a rede para uma estação de energia combinada com painéis solares?', a: 'Se você não está se conectando à rede — apenas carregando a estação de energia a partir dos painéis e usando-a para alimentar sua casa — em geral você não precisa de licenças de interconexão nem de aprovação da concessionária. Os painéis se conectam apenas à entrada solar da estação de energia, não ao quadro elétrico da sua casa. Essa é a principal simplicidade legal da abordagem de bateria autônoma em comparação com os kits de solar de sacada que exportam para a rede. Verifique com a sua autoridade local competente (AHJ) se estiver em dúvida.' },
             { q: 'Posso usar essas unidades com o Home Assistant para monitoramento local?', a: 'Parcialmente. A EcoFlow tem uma integração com o Home Assistant mantida pela comunidade (via HACS) para a série Delta, mas ela roteia pela API em nuvem da EcoFlow em vez de um endpoint local verdadeiro. Bluetti, Jackery e Anker SOLIX carecem de APIs locais bem documentadas. Se o controle local sem dependência de nuvem for um requisito rígido, veja o guia de Solar de Sacada Sem Nuvem para um resumo atual de qual hardware realmente suporta operação apenas local.' },
-            { q: 'A Anker SOLIX está disponível nos EUA?', a: 'As estações portáteis de energia Anker SOLIX (F2000, F3800 e unidades semelhantes) estão disponíveis nos EUA em ankersolix.com e na Amazon. Os modelos Anker SOLIX Solarbank — projetados para armazenamento solar de sacada conectado à rede — não são vendidos nem certificados para o mercado dos EUA e não devem ser recomendados a compradores americanos. Esse é um ponto comum de confusão, já que o Solarbank recebe cobertura significativa nas análises europeias de energia solar.' },
+            { q: 'A Anker SOLIX está disponível nos EUA?', a: 'As estações portáteis de energia Anker SOLIX (F2000, F3800 e unidades semelhantes) estão disponíveis nos EUA em ankersolix.com e na Amazon. A Anker SOLIX Solarbank — projetada para armazenamento de energia solar de varanda conectada à rede — não estava listada na loja da Anker nos EUA na checagem de 20 de novembro de 2026 e nenhuma listagem UL americana foi encontrada, por isso este guia não a recomenda a compradores dos EUA. Confira a loja da Anker nos EUA para qualquer mudança.' },
             { q: 'Por que os preços desses produtos são tão voláteis?', a: 'EcoFlow, Bluetti, Jackery e Anker SOLIX são todas fabricadas na China. Os preços de varejo nos EUA estão sujeitos às tarifas da Seção 301 sobre baterias de íon-lítio e componentes solares, que vêm subindo ao longo de 2024–2026 e podem alterar os preços de varejo em 10–25% ou mais. As marcas também fazem promoções frequentes que podem mover os preços em $200–500 para qualquer direção. Sempre verifique o preço atual na Amazon ou na loja da marca nos EUA no momento da compra.' },
             { q: 'Qual é a melhor estação portátil de energia para camping que também sirva para backup doméstico?', a: 'Jackery Explorer 2000 Pro ou 3000 Pro para usuários que priorizam portabilidade (mais leves, amigáveis à Amazon, mas NMC — verifique a química atual). Anker SOLIX F2000 para compradores que querem LFP com portabilidade semelhante à da Jackery. EcoFlow Delta Pro se você estiver disposto a abrir mão de portabilidade em troca de química LFP e uma entrada solar mais forte. O caso de uso de "crossover para camping" é bem atendido pelas quatro marcas — o diferencial é a química e a vida útil em ciclos a longo prazo para compradores que planejam usar a unidade intensamente em casa entre as viagens.' },
             { q: 'Posso usar uma estação portátil de energia para alimentar minha geladeira durante uma queda de energia?', a: 'Sim. Uma geladeira americana típica consome 100–400W (150W em média) com um pico de partida de 600–1.200W. Uma unidade LFP de 2 kWh com saída CA de 2.000W+ pode alimentar uma geladeira padrão por 8–12 horas; adicione um painel solar de 200–400W para estender o tempo de operação. Verifique a potência de pico CA de qualquer unidade antes da compra.' },
@@ -2870,7 +3024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhores Baterias Domésticas e Estações Portáteis de Energia para Solar nos EUA (2026): EcoFlow, Bluetti e Outras',
       description: 'Melhores baterias domésticas e estações portáteis de energia para compradores de solar nos EUA em 2026: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP vs NMC, controle local, disponibilidade verificada nos EUA.',
       datePublished: '2026-07-03',
-      dateModified: '2026-07-03',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -2942,7 +3096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'A energia solar de sacada é legal nos EUA?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Não há uma única resposta para os EUA — a legalidade varia por estado e por concessionária. Alguns estados adotaram regras de solar plug-and-play semelhantes ao Balkonkraftwerk da Alemanha; outros exigem licenças, aprovação da concessionária sob o Artigo 705 do NEC e equipamentos certificados UL 1741 para qualquer solar conectado à rede. Para uma análise estado a estado, veja o guia dedicado de legalidade nos estados dos EUA. A abordagem mais segura em qualquer estado é um sistema autônomo de bateria + painel sem conexão com a rede.',
+              'text': 'Cada vez mais, mas não em todo lugar: dez estados assinaram leis de energia solar plug-in (Utah, Maine, Virgínia, Maryland, Colorado, Connecticut, Nova Hampshire, Vermont, Nova Jersey e Califórnia, cujo SB 868 foi assinado em 30 de setembro de 2026). Seis estão em vigor, Virgínia, Califórnia e Nova Hampshire seguem em 1º de janeiro de 2027 e Nova Jersey em 1º de março de 2027. Não há lei federal plug-in e, onde não há lei estadual, continua valendo a interconexão com a concessionária (NEC Article 705, equipamentos UL 1741). Veja o guia de legalidade por estado. A abordagem mais segura em qualquer lugar continua sendo uma bateria independente com painéis, sem conexão à rede.',
             },
           },
           {
@@ -2990,7 +3144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'A Anker SOLIX está disponível nos EUA?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'As estações portáteis de energia Anker SOLIX (F2000, F3800 e unidades semelhantes) estão disponíveis nos EUA em ankersolix.com e na Amazon. Os modelos Anker SOLIX Solarbank — projetados para armazenamento solar de sacada conectado à rede — não são vendidos nem certificados para o mercado dos EUA e não devem ser recomendados a compradores americanos. Esse é um ponto comum de confusão, já que o Solarbank recebe cobertura significativa nas análises europeias de energia solar.',
+              'text': 'As estações portáteis de energia Anker SOLIX (F2000, F3800 e unidades semelhantes) estão disponíveis nos EUA em ankersolix.com e na Amazon. A Anker SOLIX Solarbank — projetada para armazenamento de energia solar de varanda conectada à rede — não estava listada na loja da Anker nos EUA na checagem de 20 de novembro de 2026 e nenhuma listagem UL americana foi encontrada, por isso este guia não a recomenda a compradores dos EUA. Confira a loja da Anker nos EUA para qualquer mudança.',
             },
           },
           {
@@ -3061,13 +3215,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'ما البطارية المنزلية أو محطة الطاقة التي ينبغي أن يختارها المشتري الأمريكي للطاقة الاحتياطية الشمسية في 2026؟',
-        answer: 'يُعدّ EcoFlow Delta Pro الخيار الأفضل الشامل للطاقة الاحتياطية المنزلية مع الاقتران بالطاقة الشمسية: كيمياء LFP، وسعة أساسية 3.6 kWh، وإدخال شمسي قوي، وأوسع منظومة ملحقات. ومكدس Bluetti AC300+B300 أفضل للمشترين الراغبين في التوسعة المعيارية. وتتصدر سلسلة Jackery Explorer من حيث قابلية النقل والتوافر على Amazon. ويستحق Anker SOLIX F3800 النظر للحصول على LFP عالي السعة بسعر تنافسي. تجنّب افتراض توفر Anker Solarbank الأوروبي — فهو غير مُباع أو معتمد في الولايات المتحدة.',
+        answer: 'يُعدّ EcoFlow Delta Pro الخيار الأفضل الشامل للطاقة الاحتياطية المنزلية مع الاقتران بالطاقة الشمسية: كيمياء LFP، وسعة أساسية 3.6 kWh، وإدخال شمسي قوي، وأوسع منظومة ملحقات. ومكدس Bluetti AC300+B300 أفضل للمشترين الراغبين في التوسعة المعيارية. وتتصدر سلسلة Jackery Explorer من حيث قابلية النقل والتوافر على Amazon. ويستحق Anker SOLIX F3800 النظر للحصول على LFP عالي السعة بسعر تنافسي. لم تكن Anker SOLIX Solarbank مدرجة في متجر Anker الأمريكي عند الفحص في 20 نوفمبر 2026، فلا تفترض أن Solarbank الأوروبية متاحة في الولايات المتحدة.',
         bullets: [
           'EcoFlow Delta Pro: LFP، ~3.6 kWh، إدخال شمسي قوي — أفضل خيار شامل للطاقة الاحتياطية المنزلية مع الاقتران بالطاقة الشمسية (تحقق من المواصفات الحالية)',
           'Bluetti AC300+B300: تكديس LFP معياري، حتى ~12 kWh — أفضل للمشترين الذين يعطون الأولوية لقابلية التوسعة (تحقق من المواصفات الحالية)',
           'Jackery Explorer 2000 Pro: كيمياء NMC، صالح للتخييم/الاستخدام المحمول — أفضل من حيث قابلية النقل، وأوسع حضور على Amazon (تحقق من المواصفات الحالية)',
           'Anker SOLIX F3800: بطارية منزلية محمولة LFP عالية السعة — بديل قوي، تحقق من التوافر والمواصفات في الولايات المتحدة',
-          'Anker SOLIX Solarbank غير مُباع في الولايات المتحدة — تأكد من أنك تنظر إلى خط محطات الطاقة المحمولة، وليس Solarbank',
+          'Anker SOLIX Solarbank: غير مدرجة في متجر Anker الأمريكي (فُحص في 2026-11-20) — تأكد أنك تنظر إلى خط محطات الطاقة المحمولة لا Solarbank',
           'الماركات الأربع جميعها مصنوعة في الصين؛ وأسعار التجزئة الأمريكية خاضعة لرسوم القسم 301 الجمركية — تحقق من الأسعار عند الشراء',
         ],
         updatedDate: '2026-11-20',
@@ -3097,8 +3251,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     sections: {
       statusNote: {
-        title: 'تحديث 2026: قوانين الولايات الأمريكية وفحص المنتجات',
-        content: '**تجاوز المشهد القانوني الأمريكي مجرد فسيفساء متفرقة: فوفق ملخص عن الطاقة الشمسية بالتوصيل المباشر جرى تحديثه في 4 أكتوبر 2026، أقرّت عشر ولايات قوانين لهذا النوع، ويحدّ معظمها قدرة الأجهزة عند 1,200 واط.** يذكر الملخص الذي يديره بائع ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)) ولاية يوتا (HB 340، وُقّع في مارس 2025) وماين (LD 1730، وُقّع في 6 أبريل 2026) وفرجينيا (HB 395، 22 أبريل 2026) وكولورادو (HB 26-1007، 7 مايو 2026، حتى 1,920 واط) وماريلاند (HB 1532، 12 مايو 2026) وكونيتيكت (HB 5340، 20 مايو 2026) ونيو هامبشير (SB 540-FN، يونيو 2026) وفيرمونت (S. 202، 16 يونيو 2026) ونيوجيرسي (S 2368 / A 4836، 1 سبتمبر 2026) وكاليفورنيا (SB 868، وُقّع في 30 سبتمبر 2026). وينبّه الملخص نفسه إلى تناقضات في أرقامه، وتختلف مصادر أخرى حول القوانين التي تذكر UL 3700 وحول تواريخ السريان، فاقرأ نص القانون الصادر على موقع كل هيئة تشريعية؛ ولم تُراجَع مشاريع القوانين على نصوص أولية في هذا التحديث. ولم يُعثر على إطار اتحادي للتوصيل المباشر، فتظل صياغة «الفسيفساء» في هذه الصفحة صحيحة، لكنها تقلل من عدد الولايات التي لديها قوانين مخصصة الآن. ووفق الملخص نفسه انتهى الائتمان الضريبي الاتحادي للطاقة الشمسية بنسبة 30% في 31 ديسمبر 2025، وهذا يهم أي مقارنة للتكلفة هنا. ولم يُعَد التحقق من الطرز والمواصفات والأسعار أدناه: فأجيال أحدث مثل EcoFlow Delta Pro 3 وAnker SOLIX F3800 Plus تظهر في صحافة 2026، وأورد [ملخص Bob Vila في أبريل 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) سعر F3800 Plus بـ799.99 دولاراً في عرض، لذا تُعامل الأسعار في هذه الصفحة على أنها غير مؤرخة. كما لم يُعَد تأكيد أن Anker Solarbank لا تُباع في الولايات المتحدة: فقد أظهرت نتائج البحث إعلاناً على Amazon.com لـSolarbank 2 E1600 تعذّر فتحه، فتحقق من متجر Anker الأمريكي. هذا ملخص لمعلومات علنية وليس استشارة قانونية أو ضريبية أو في السلامة الكهربائية.',
+        title: 'إعادة تحقق: قوانين الولايات الأمريكية والمواصفات والتوافر',
+        content: '**جرى الفحص في 20 نوفمبر 2026: تغيّر المشهد القانوني الأمريكي وبعض أجيال المنتجات منذ كتابة هذا الدليل، وقد جرى تحديث الأقسام التالية أو وسمها وفق ذلك.** القانون: وقّعت عشر ولايات أمريكية قوانين للطاقة الشمسية بالتوصيل المباشر (يوتا وماين وفرجينيا وماريلاند وكولورادو وكونيتيكت ونيو هامبشير وفيرمونت ونيوجيرسي وكاليفورنيا). وقّع القانون SB 868 في كاليفورنيا في 30 سبتمبر 2026 ويبدأ سريانه في 1 يناير 2027، ويُفاد بأن استثناءاته المتعلقة بالربط ستنتهي في 1 يناير 2030 ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/)؛ دون التحقق من النص الصادر). ست ولايات سارية؛ وتتبعها فرجينيا وكاليفورنيا ونيو هامبشير في 1 يناير 2027 ونيوجيرسي في 1 مارس 2027، وتختلف تواريخ السريان بين المتتبّعين فتحقق منها لدى الولاية. لا يوجد قانون اتحادي للتوصيل المباشر. التفصيل لكل ولاية في [كيف أصبحت الطاقة الشمسية للشرفات قانونية في 10 ولايات أمريكية](/ar/balcony-solar/how-balcony-solar-became-legal-in-the-us) و[هل الطاقة الشمسية للشرفات قانونية في ولايتي؟](/ar/balcony-solar/balcony-solar-legal-us-states) ولا يُكرَّر هنا. المنتجات: جرى فحص طرازين حاليين في 20 نوفمبر 2026 وإضافتهما إلى الجدول، هما EcoFlow DELTA Pro 3 (4,096 Wh من نوع LFP، وقدرة مستمرة 4,000 W وذروة 8,000 W مع X-Boost، وقابل للتوسعة إلى 12 kWh ببطاريتين Smart Extra Batteries وفق [مدونة EcoFlow](https://www.ecoflow.com/us/blog/ecoflow-portable-power-station-specs) وقوائم التجار) وAnker SOLIX F3800 Plus (3,840 Wh من نوع LFP، وأكثر من 3,000 دورة، و6,000 W، ومدخل شمسي حتى 3,200 W وفق [صفحة Anker SOLIX الأمريكية](https://www.ankersolix.com/us/products/f3800-plus)). أما بقية الصفوف فقد فُحصت آخر مرة في 2026-07-03 ولم يُعَد فحصها: EcoFlow DELTA Pro (سلف Pro 3)، وBluetti AC300 + B300 (يصنّف متجر أمريكي وحدة العاكس AC300 على أنها متوقفة)، وBluetti AC200MAX (يختلف التوافر حسب التاجر)، وJackery Explorer 2000 Pro و3000 Pro (لا يذكر موقع Jackery كيمياء 3000 Pro ويذكر تاجر أنها ليثيوم أيون؛ أما [Explorer 2000 Plus](https://www.jackery.com/collections/3000-pro-or-2000-plus) فمدرج بنوع LiFePO4) وAnker SOLIX F2000. لا تذكر هذه الصفحة أسعاراً لأن أسعار العروض تتغير بسرعة. Anker Solarbank: لم يظهر أي منتج Solarbank في قائمة متجر Anker الأمريكي في 20 نوفمبر 2026 ولم يُعثر على إدراج UL أمريكي، لذا يوصف بأنه غير مدرج في الولايات المتحدة لا بأنه محظور. هذا ملخص لمعلومات علنية وليس استشارة قانونية أو ضريبية أو في السلامة الكهربائية.',
       },
       tldr: {
         id: 'key-takeaways',
@@ -3108,7 +3262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مسار الإيرادات الأمريكي لعلامات الطاقة الشمسية للشرفات هو محطات الطاقة المحمولة وبطاريات المنازل القابلة للتوسعة — وحدات EcoFlow وBluetti وJackery وAnker SOLIX المحمولة — التي تقترن بسلاسة مع الألواح دون ربط بالشبكة.',
           'يُفضَّل بقوة استخدام كيمياء بطارية LFP (فوسفات حديد الليثيوم) على NMC للطاقة الاحتياطية المنزلية: عمر دورات أطول (~3,000–6,000 دورة مقابل ~500–1,000)، وأمان أعلى في درجات الحرارة المرتفعة، وتدهور أقل عند الشحن الجزئي — وتستخدم EcoFlow Delta Pro وBluetti AC300+B300 وAnker SOLIX F3800 جميعها كيمياء LFP.',
           'استخدمت سلسلة Jackery Explorer Pro تاريخياً كيمياء NMC — وهي مفيدة للتطبيقات المحمولة لكنها أقل مثالية لوحدة ستعمل بشكل يومي في المنزل (تحقق من الكيمياء الحالية لكل طراز قبل الشراء).',
-          'Anker SOLIX Solarbank غير مُباع أو معتمد للسوق الأمريكية — وحدات Anker المناسبة للمشترين الأمريكيين هي خط محطات الطاقة المحمولة (F2000 وF3800 وغيرها).',
+          'لم تكن Anker SOLIX Solarbank مدرجة في متجر Anker الأمريكي عند الفحص في 20 نوفمبر 2026 ولم يُعثر على إدراج UL أمريكي — والمنتجات ذات الصلة بالمشترين الأمريكيين هي محطات الطاقة المحمولة (F2000 وF3800 Plus) ونظام E10 للنسخ الاحتياطي للمنزل بالكامل.',
           'الماركات الأربع جميعها مصنوعة في الصين؛ وأسعار التجزئة الأمريكية معرّضة لرسوم القسم 301 الجمركية على بطاريات أيونات الليثيوم ومكونات الطاقة الشمسية — لا تعتمد أبداً على رقم سعري ثابت.',
         ],
       },
@@ -3116,7 +3270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'us-market-reality',
         title: 'لماذا يختار المشترون الأمريكيون البطاريات لا الأطقم',
         content: [
-          '**تعمل سوق الطاقة الشمسية للشرفات في الاتحاد الأوروبي (الـ Balkonkraftwerk الألماني) وفق معيار اتحادي للتوصيل المباشر يتيح للمستأجرين وأصحاب الشقق توصيل طقم لوحي بقدرة 800W بأمان في مقبس منزلي والتصدير القانوني إلى الشبكة.** لا يوجد إطار مماثل في الولايات المتحدة حتى وقت كتابة هذا الدليل (يوليو 2026). فالطاقة الشمسية للتوصيل المباشر في الولايات المتحدة تحكمها لوائح المرافق في كل ولاية، وقواعد الربط بالشبكة في المادة 705 من NEC، ومتطلبات اعتماد UL 1741 التي تختلف حسب الولاية وشركة المرافق — مما يخلق تبايناً حيث قد يكون الأمر قانونياً في كاليفورنيا لكنه مقيّد أو يتطلب تصاريح في تكساس أو فلوريدا. راجع [هل الطاقة الشمسية للشرفات قانونية في ولايتك الأمريكية؟](/ar/balcony-solar/balcony-solar-legal-us-states) للحصول على تفصيل لكل ولاية.',
+          '**يعمل Balkonkraftwerk الألماني بموجب معيار وطني للتوصيل المباشر يتيح للمستأجرين وملاك الشقق توصيل طقم ألواح بقدرة 800 واط بمقبس منزلي؛ ولا يوجد نظير اتحادي في الولايات المتحدة، لكن عشر ولايات وقّعت الآن قوانينها الخاصة بالطاقة الشمسية بالتوصيل المباشر، بدءاً بيوتا عام 2025 وآخرها كاليفورنيا في 30 سبتمبر 2026.** يحدّ معظمها قدرة الأجهزة عند 1,200 واط؛ وتبدأ فرجينيا وكاليفورنيا ونيو هامبشير في 1 يناير 2027 ونيوجيرسي في 1 مارس 2027، ويُفاد بأن استثناءات كاليفورنيا ستنتهي في 1 يناير 2030 ([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/)). وفي الولايات التي لا قانون فيها تظل قواعد الربط لدى المرافق سارية (NEC Article 705 ومعدات UL 1741)، فتحقق من ولايتك ومرفقك. راجع [كيف أصبحت الطاقة الشمسية للشرفات قانونية في 10 ولايات أمريكية](/ar/balcony-solar/how-balcony-solar-became-legal-in-the-us) و[هل الطاقة الشمسية للشرفات قانونية في ولايتي؟](/ar/balcony-solar/balcony-solar-legal-us-states) للتفصيل حسب الولاية.',
           'لهذا التجزؤ القانوني نتيجة عملية نصرّح بها هنا صراحةً كافتراض (لا كواقع سوقي مقاس): يبدو أن طلب المستهلك الأمريكي يتركز على **المحطات والبطاريات المستقلة المقترنة بألواح محمولة أو مثبّتة على السطح**، وهي لا تتطلب أي ربط بالشبكة على الإطلاق — مما يتجنّب المسألة التنظيمية بالكامل. والدليل على ذلك يأتي من أنماط النقر الأمريكية على هذا الموقع (منتجات قناة Amazon هي المهيمنة؛ ومواقع علامات الأطقم الأوروبية ليست كذلك) ومن حقيقة أن علامات مثل EcoFlow وJackery تحقق غالبية إيراداتها الأمريكية من محطات الطاقة المحمولة لا من أطقم الشرفات الموصولة بالشبكة. إن كنت تبحث عن مقارنة أطقم الشرفات، راجع [أفضل أطقم الطاقة الشمسية للشرفات 2026](/ar/balcony-solar/best-balcony-solar-kits-2026) لمعرفة المتاح حيثما تكون قانونية.',
           '**بالنسبة للمستأجرين وسكان الشقق وأصحاب المنازل الذين يريدون طاقة شمسية جزئية أو حماية من انقطاع التيار دون تركيب كامل على السطح، فإن نهج البطارية المستقلة هذا يتمتع بميزة حقيقية تتجاوز البساطة القانونية:** إنه قابل للنقل. فبطارية LFP بسعة 3.6 kWh تُشغّل ثلاجتك أثناء انقطاع التيار اليوم يمكن نقلها أو بيعها أو إعادة استخدامها عند انتقالك — على عكس النظام الموصول بالشبكة. قارن هذا بألمانيا، حيث يكون الـ Balkonkraftwerk عادةً تركيباً دائماً وتكون البطارية وحدة تخزين إضافية. للاطلاع على كيفية عمل الإعداد الألماني، راجع [قواعد Balkonkraftwerk في ألمانيا](/ar/balcony-solar/balkonkraftwerk-germany-rules).',
         ],
@@ -3225,10 +3379,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             usPrice: 'تحقق من السعر الحالي — فئة LFP المتميزة',
             bestFor: 'طاقة احتياطية منزلية LFP عالية السعة؛ خرج تيار متردد عالٍ للأحمال الثقيلة',
           },
+          {
+            product: 'EcoFlow DELTA Pro 3',
+            capacity: '4,096 Wh (مدونة EcoFlow، قوائم التجار)',
+            chemistry: 'LFP',
+            acOutput: '4,000W مستمرة، 8,000W ذروة مع X-Boost',
+            solarInput: 'غير مؤكد هنا — راجع ورقة مواصفات EcoFlow الأمريكية',
+            expandable: 'نعم — 12 kWh ببطاريتين Smart Extra Batteries (مدونة EcoFlow)',
+            localControl: 'راجع قسم التحكم المحلي — تحقق حسب البرنامج الثابت',
+            usPrice: 'راجع السعر الحالي — يتأثر بالرسوم الجمركية',
+            bestFor: 'جيل EcoFlow الحالي للطاقة الاحتياطية المنزلية؛ خليفة Delta Pro',
+          },
+          {
+            product: 'Anker SOLIX F3800 Plus',
+            capacity: '3,840 Wh (صفحة Anker الأمريكية)',
+            chemistry: 'LFP، أكثر من 3,000 دورة',
+            acOutput: 'حتى 6,000W (منفذ 120/240V L14-30R)',
+            solarInput: 'حتى 3,200W (منفذان، 1,600W لكل منهما)',
+            expandable: 'نعم — بطاريات توسعة من Anker',
+            localControl: 'يعتمد غالباً على التطبيق — تحقق من دعم API محلي',
+            usPrice: 'راجع السعر الحالي — عروض متكررة',
+            bestFor: 'طاقة احتياطية منزلية LFP كبيرة السعة؛ الرائد المحمول الحالي من Anker',
+          },
         ],
         columns: ['product', 'capacity', 'chemistry', 'acOutput', 'solarInput', 'expandable', 'localControl', 'usPrice', 'bestFor'],
         tableFormat: true,
-        tableNote: 'المواصفات تقريبية بناءً على خطوط المنتجات المعروفة — ينبغي التحقق من جميع أرقام السعة والخرج والسعر مقابل صفحات الشركة المصنّعة الحالية قبل الشراء. حُذفت الأسعار عمداً لأن أسعار التجزئة الأمريكية لبطاريات الليثيوم المصنوعة في الصين حساسة لرسوم القسم 301 الجمركية ويمكن أن تتغير بشكل كبير. تحقق على amazon.com أو المتجر الأمريكي المباشر للعلامة التجارية عند الشراء (تم التحقق في 2026-07-03).',
+        tableNote: 'المواصفات تقريبية بناءً على خطوط المنتجات المعروفة — ينبغي التحقق من جميع أرقام السعة والخرج والسعر مقابل صفحات الشركة المصنّعة الحالية قبل الشراء. حُذفت الأسعار عمداً لأن أسعار التجزئة الأمريكية لبطاريات الليثيوم المصنوعة في الصين حساسة لرسوم القسم 301 الجمركية ويمكن أن تتغير بشكل كبير. تحقق على amazon.com أو المتجر الأمريكي المباشر للعلامة التجارية عند الشراء (تم التحقق في 2026-07-03). فُحصت صفوف EcoFlow DELTA Pro 3 وAnker SOLIX F3800 Plus في 2026-11-20؛ أما بقية الصفوف فقد فُحصت آخر مرة في 2026-07-03 ولم يُعَد فحصها.',
       },
       useCaseRecs: {
         id: 'use-case-recs',
@@ -3245,12 +3421,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-control',
         title: 'التحكم المحلي وتكامل المنزل الذكي',
         content: [
-          '**لا تقدّم أيٌّ من الماركات الرئيسية الأربع المذكورة هنا واجهة API محلية رسمية موثّقة لـ Home Assistant كميزة قياسية — فجميعها تعتمد افتراضياً على مراقبة سحابية عبر التطبيق.** هذه هي الفجوة الأكبر منفردةً بين سوق محطات الطاقة المحمولة الأمريكية وسوق تخزين الطاقة الشمسية للشرفات الأوروبية، حيث بنت علامات مثل Zendure منظومات ناضجة للتحكم المحلي. إن كان التحكم المحلي يهمك، تحقق من الحالة الراهنة قبل الشراء، إذ إن هذا هو البُعد الأسرع تغيّراً في هذه الفئة من المنتجات.',
+          '**قليل من الماركات الرئيسية المذكورة هنا تقدّم واجهة API محلية رسمية موثّقة لـ Home Assistant كميزة قياسية. EcoFlow STREAM تقدّم الآن واجهة API محلية موثّقة (تحقق من النطاق الحالي على [ecoflow.com](https://www.ecoflow.com))؛ بينما تعتمد Bluetti وJackery وAnker SOLIX بشكل رئيسي على المراقبة السحابية.** الفجوة بين سوق محطات الطاقة المحمولة الأمريكية وسوق تخزين الطاقة الشمسية للشرفات الأوروبية، حيث بنت علامات مثل Zendure منظومات ناضجة للتحكم المحلي، آخذة في التضيّق. إن كان التحكم المحلي يهمك، تحقق من الحالة الراهنة قبل الشراء، إذ إن هذا هو البُعد الأسرع تغيّراً في هذه الفئة من المنتجات.',
           'تمتلك سلسلة EcoFlow Delta Pro أنشط تكامل مجتمعي — يوجد تكامل مع Home Assistant عبر HACS يُصان من المجتمع (لا من EcoFlow رسمياً). وهو يعتمد على API السحابي لـ EcoFlow لا على نقطة نهاية محلية حقيقية، ما يعني أنه لا يزال يوجّه بيانات المراقبة عبر خوادم EcoFlow. راجع [دليل الطاقة الشمسية للشرفات بلا سحابة](/ar/balcony-solar/home-assistant-balcony-solar-no-cloud) لمعرفة ما يعنيه "المحلي" فعلياً في هذا السياق وأي الأجهزة يدعمه حقاً.',
           'بالنسبة للمستخدمين الذين يريدون نظام بطارية بواجهة API محلية حقيقية يقترن بالطاقة الشمسية ولا يحتاج إلى حساب سحابي، تمتلك السوق الأوروبية حالياً خيارات أفضل (خصوصاً Zendure SolarFlow — راجع [EcoFlow مقابل Anker مقابل Zendure](/ar/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar))، رغم أن معظم تلك المنتجات غير مُباعة أو معتمدة للسوق الأمريكية.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'اعتباراً من 2026، لا توفر أي علامة رئيسية لمحطات الطاقة المحمولة تُباع في الولايات المتحدة (EcoFlow، Bluetti، Jackery، Anker SOLIX) واجهة API محلية موثّقة رسمياً لـ Home Assistant — توجد تكاملات مجتمعية لـ EcoFlow لكنها توجّه عبر سحابتها.' },
+          { type: 'one-sentence', text: 'في نهاية 2026، تقدّم EcoFlow STREAM واجهة API محلية موثّقة؛ بينما تعتمد Bluetti وJackery وAnker SOLIX على المراقبة السحابية — تحقق من الحالة الراهنة قبل الشراء.' },
           { type: 'plain-terms', text: 'إن أردت بطارية تعمل مع Home Assistant دون إرسال البيانات إلى خوادم الشركة المصنّعة، فالخيارات الأمريكية محدودة — تمتلك EcoFlow أفضل حل مجتمعي بديل، لكنه ليس إعداداً محلياً حقيقياً.' },
         ],
       },
@@ -3271,7 +3447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://us.ecoflow.com', title: 'المتجر الأمريكي لـ EcoFlow', description: 'مواصفات وأسعار Delta Pro وDelta Pro Ultra — تحقق من الأرقام الحالية عند الشراء' },
           { url: 'https://www.bluettipower.com', title: 'المتجر الأمريكي لـ Bluetti', description: 'مواصفات AC300 وB300 وAC200MAX — تحقق من الأرقام الحالية' },
           { url: 'https://www.jackery.com', title: 'المتجر الأمريكي لـ Jackery', description: 'مواصفات سلسلة Explorer — تحقق من الكيمياء والخرج الحاليين لكل طراز' },
-          { url: 'https://ankersolix.com', title: 'المتجر الأمريكي لـ Anker SOLIX', description: 'مواصفات F2000 وF3800؛ يؤكد أن Solarbank ليس ضمن الكتالوج الأمريكي' },
+          { url: 'https://ankersolix.com', title: 'المتجر الأمريكي لـ Anker SOLIX', description: 'مواصفات F2000 وF3800 Plus؛ لا Solarbank في قائمة المتجر التي فُحصت في 2026-11-20' },
         ],
       },
       relatedReading: {
@@ -3285,13 +3461,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-            { q: 'هل الطاقة الشمسية للشرفات قانونية في الولايات المتحدة؟', a: 'لا توجد إجابة أمريكية واحدة — إذ تختلف القانونية حسب الولاية وشركة المرافق. أقرّت بعض الولايات قواعد للطاقة الشمسية للتوصيل المباشر مشابهة للـ Balkonkraftwerk الألماني؛ بينما تشترط ولايات أخرى تصاريح، وموافقة شركة المرافق وفق المادة 705 من NEC، ومعدات معتمدة من UL 1741 لأي طاقة شمسية موصولة بالشبكة. للحصول على تفصيل لكل ولاية، راجع دليل القانونية المخصص لكل ولاية أمريكية. النهج الأكثر أماناً في أي ولاية هو نظام بطارية + ألواح مستقل بلا اتصال بالشبكة.' },
+            { q: 'هل الطاقة الشمسية للشرفات قانونية في الولايات المتحدة؟', a: 'بصورة متزايدة نعم، لكن ليس في كل مكان: وقّعت عشر ولايات قوانين للطاقة الشمسية بالتوصيل المباشر (يوتا وماين وفرجينيا وماريلاند وكولورادو وكونيتيكت ونيو هامبشير وفيرمونت ونيوجيرسي وكاليفورنيا التي وُقّع فيها SB 868 في 30 سبتمبر 2026). ست منها سارية، وتتبعها فرجينيا وكاليفورنيا ونيو هامبشير في 1 يناير 2027 ونيوجيرسي في 1 مارس 2027. لا يوجد قانون اتحادي للتوصيل المباشر، وحيث لا يوجد قانون ولائي يظل الربط لدى المرفق سارياً (NEC Article 705 ومعدات UL 1741). راجع دليل الشرعية حسب الولاية. وتبقى الطريقة الأكثر أماناً في أي مكان هي بطارية مستقلة مع ألواح دون ربط بالشبكة.' },
             { q: 'EcoFlow مقابل Bluetti — أيهما أفضل للطاقة الاحتياطية المنزلية الأمريكية في 2026؟', a: 'يمتلك EcoFlow Delta Pro إدخالاً شمسياً MPPT أقوى، مما يجعله الخيار الأفضل إن كانت سرعة إعادة الشحن من الألواح أولوية. أما Bluetti AC300+B300 فأفضل إذا كانت التوسعة المعيارية (إضافة سعة بطارية على مراحل) هي الأولوية. كلاهما يستخدم كيمياء LFP. تتغير الأسعار كثيراً بسبب التعرض للرسوم الجمركية — قارن الأسعار الحالية عند الشراء، إذ تتذبذب فجوة السعر.' },
             { q: 'ما الفرق بين كيمياء البطارية LFP وNMC؟', a: 'تقدّم LFP (فوسفات حديد الليثيوم) ~3,000–6,000 دورة شحن مع الاحتفاظ بـ 80%، واستقراراً حرارياً أفضل، وعمراً زمنياً أطول — وهي مُفضَّلة لوحدات الطاقة الاحتياطية المنزلية التي تعمل بدورات يومية. أما NMC (نيكل منغنيز كوبالت) فتقدّم كثافة طاقة أعلى لوزن معين، ولهذا تهيمن على الوحدات المحمولة/الموجّهة للتخييم مثل طرازات Jackery Explorer الأقدم. لوحدة موضوعة في منزلك تعمل بدورات يومية من الطاقة الشمسية، تُعدّ كيمياء LFP أفضل بشكل ملموس على مدى 5–10 سنوات.' },
             { q: 'هل يمكنني تشغيل ثلاجتي أثناء انقطاع الشبكة بإحدى هذه الوحدات؟', a: 'نعم، مع التحجيم الصحيح. تسحب الثلاجة الأمريكية النموذجية 100–400W مستمر (150W في المتوسط) ولها اندفاع بدء تشغيل بقدرة 600–1,200W. يمكن لوحدة LFP بسعة 2 kWh وخرج تيار متردد 2,000W+ تشغيل ثلاجة قياسية لمدة 8–12 ساعة. أضف لوحاً شمسياً بقدرة 200–400W ويمكنك تمديد ذلك إلى ما لا نهاية في ضوء شمس جيد. تحقق من خرج التيار المتردد وتصنيف الاندفاع لأي وحدة تفكر فيها — فبعض محطات الطاقة الميسورة لها تصنيفات اندفاع منخفضة جداً لضواغط الثلاجات.' },
             { q: 'هل أحتاج إلى تصاريح أو ربط بالشبكة لمحطة طاقة مقترنة بألواح شمسية؟', a: 'إن كنت لا تتصل بالشبكة — بل تشحن محطة الطاقة من الألواح فقط وتستخدمها لتغذية منزلك — فأنت عموماً لا تحتاج إلى تصاريح ربط أو موافقة المرافق. فالألواح تتصل بمنفذ الإدخال الشمسي لمحطة الطاقة فقط، لا بلوحة منزلك الكهربائية. هذه هي البساطة القانونية الأساسية لنهج البطارية المستقلة مقابل أطقم الطاقة الشمسية للشرفات التي تصدّر إلى الشبكة. تحقق من سلطة الاختصاص المحلية (AHJ) إن كنت غير متأكد.' },
             { q: 'هل يمكنني استخدام هذه الوحدات مع Home Assistant للمراقبة المحلية؟', a: 'جزئياً. تمتلك EcoFlow تكاملاً مع Home Assistant يُصان من المجتمع (عبر HACS) لسلسلة Delta، لكنه يوجّه عبر API السحابي لـ EcoFlow لا عبر نقطة نهاية محلية حقيقية. وتفتقر Bluetti وJackery وAnker SOLIX إلى واجهات API محلية موثّقة جيداً. إن كان التحكم المحلي دون اعتماد على السحابة متطلباً صارماً، راجع دليل الطاقة الشمسية للشرفات بلا سحابة للحصول على ملخص محدّث لأي الأجهزة يدعم التشغيل المحلي فقط حقاً.' },
-            { q: 'هل Anker SOLIX متوفر في الولايات المتحدة؟', a: 'محطات الطاقة المحمولة Anker SOLIX (F2000 وF3800 ووحدات مماثلة) متوفرة في الولايات المتحدة على ankersolix.com وعلى Amazon. أما طرازات Anker SOLIX Solarbank — المصممة لتخزين الطاقة الشمسية للشرفات الموصولة بالشبكة — فغير مُباعة أو معتمدة للسوق الأمريكية وينبغي ألا يُوصى بها للمشترين الأمريكيين. وهذه نقطة التباس شائعة إذ يحظى الـ Solarbank بتغطية كبيرة في مراجعات الطاقة الشمسية الأوروبية.' },
+            { q: 'هل Anker SOLIX متوفر في الولايات المتحدة؟', a: 'محطات الطاقة المحمولة Anker SOLIX (F2000 وF3800 ووحدات مماثلة) متوفرة في الولايات المتحدة على ankersolix.com وعلى Amazon. لم تكن Anker SOLIX Solarbank — المصممة لتخزين الطاقة الشمسية للشرفات المتصلة بالشبكة — مدرجة في متجر Anker الأمريكي عند الفحص في 20 نوفمبر 2026 ولم يُعثر على إدراج UL أمريكي، لذا لا يوصي هذا الدليل بها للمشترين الأمريكيين. تحقق من متجر Anker الأمريكي لأي تغيير.' },
             { q: 'لماذا أسعار هذه المنتجات متقلبة إلى هذا الحد؟', a: 'EcoFlow وBluetti وJackery وAnker SOLIX جميعها مصنوعة في الصين. وأسعار التجزئة الأمريكية خاضعة لرسوم القسم 301 الجمركية على بطاريات أيونات الليثيوم ومكونات الطاقة الشمسية، والتي ارتفعت خلال 2024–2026 ويمكن أن تغيّر أسعار التجزئة بنسبة 10–25% أو أكثر. كما تُجري العلامات عروضاً متكررة يمكن أن تحرّك الأسعار بمقدار 200–500 دولار في أي من الاتجاهين. تحقق دائماً من السعر الحالي على Amazon أو المتجر الأمريكي للعلامة عند الشراء.' },
             { q: 'ما أفضل محطة طاقة محمولة للتخييم تصلح أيضاً للطاقة الاحتياطية المنزلية؟', a: 'Jackery Explorer 2000 Pro أو 3000 Pro للمستخدمين الذين يفضّلون قابلية النقل أولاً (أخف، وملائم لـ Amazon، لكنه NMC — تحقق من الكيمياء الحالية). Anker SOLIX F2000 للمشترين الراغبين في LFP بقابلية نقل مماثلة لـ Jackery. EcoFlow Delta Pro إن كنت مستعداً للتنازل عن قابلية النقل مقابل كيمياء LFP وإدخال شمسي أقوى. حالة الاستخدام "الصالحة للتخييم" تخدمها الماركات الأربع جميعها جيداً — والفارق هو الكيمياء وعمر الدورات على المدى الطويل للمشترين الذين يخططون لاستخدام الوحدة بكثافة في المنزل بين الرحلات.' },
             { q: 'هل يمكنني استخدام محطة طاقة محمولة لتشغيل ثلاجتي أثناء انقطاع الشبكة؟', a: 'نعم. تسحب الثلاجة الأمريكية النموذجية 100–400W (150W في المتوسط) مع اندفاع بدء تشغيل بقدرة 600–1,200W. يمكن لوحدة LFP بسعة 2 kWh وخرج تيار متردد 2,000W+ تشغيل ثلاجة قياسية لمدة 8–12 ساعة؛ أضف لوحاً شمسياً بقدرة 200–400W لتمديد وقت التشغيل. تحقق من تصنيف اندفاع التيار المتردد لأي وحدة قبل الشراء.' },
@@ -3304,7 +3480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'أفضل بطاريات المنازل ومحطات الطاقة المحمولة للطاقة الشمسية في الولايات المتحدة (2026): EcoFlow وBluetti والمزيد',
       description: 'أفضل بطاريات المنازل ومحطات الطاقة المحمولة لمشتري الطاقة الشمسية في الولايات المتحدة 2026: EcoFlow Delta Pro، Bluetti AC300، Jackery Explorer، Anker SOLIX — مقارنة LFP مقابل NMC، التحكم المحلي، والتوافر المؤكد في الولايات المتحدة.',
       datePublished: '2026-07-03',
-      dateModified: '2026-07-03',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -3373,7 +3549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'هل الطاقة الشمسية للشرفات قانونية في الولايات المتحدة؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لا توجد إجابة أمريكية واحدة — إذ تختلف القانونية حسب الولاية وشركة المرافق. أقرّت بعض الولايات قواعد للطاقة الشمسية للتوصيل المباشر مشابهة للـ Balkonkraftwerk الألماني؛ بينما تشترط ولايات أخرى تصاريح، وموافقة شركة المرافق وفق المادة 705 من NEC، ومعدات معتمدة من UL 1741 لأي طاقة شمسية موصولة بالشبكة. للحصول على تفصيل لكل ولاية، راجع دليل القانونية المخصص لكل ولاية أمريكية. النهج الأكثر أماناً في أي ولاية هو نظام بطارية + ألواح مستقل بلا اتصال بالشبكة.',
+              'text': 'بصورة متزايدة نعم، لكن ليس في كل مكان: وقّعت عشر ولايات قوانين للطاقة الشمسية بالتوصيل المباشر (يوتا وماين وفرجينيا وماريلاند وكولورادو وكونيتيكت ونيو هامبشير وفيرمونت ونيوجيرسي وكاليفورنيا التي وُقّع فيها SB 868 في 30 سبتمبر 2026). ست منها سارية، وتتبعها فرجينيا وكاليفورنيا ونيو هامبشير في 1 يناير 2027 ونيوجيرسي في 1 مارس 2027. لا يوجد قانون اتحادي للتوصيل المباشر، وحيث لا يوجد قانون ولائي يظل الربط لدى المرفق سارياً (NEC Article 705 ومعدات UL 1741). راجع دليل الشرعية حسب الولاية. وتبقى الطريقة الأكثر أماناً في أي مكان هي بطارية مستقلة مع ألواح دون ربط بالشبكة.',
             },
           },
           {
@@ -3421,7 +3597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'هل Anker SOLIX متوفر في الولايات المتحدة؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'محطات الطاقة المحمولة Anker SOLIX (F2000 وF3800 ووحدات مماثلة) متوفرة في الولايات المتحدة على ankersolix.com وعلى Amazon. أما طرازات Anker SOLIX Solarbank — المصممة لتخزين الطاقة الشمسية للشرفات الموصولة بالشبكة — فغير مُباعة أو معتمدة للسوق الأمريكية وينبغي ألا يُوصى بها للمشترين الأمريكيين. وهذه نقطة التباس شائعة إذ يحظى الـ Solarbank بتغطية كبيرة في مراجعات الطاقة الشمسية الأوروبية.',
+              'text': 'محطات الطاقة المحمولة Anker SOLIX (F2000 وF3800 ووحدات مماثلة) متوفرة في الولايات المتحدة على ankersolix.com وعلى Amazon. لم تكن Anker SOLIX Solarbank — المصممة لتخزين الطاقة الشمسية للشرفات المتصلة بالشبكة — مدرجة في متجر Anker الأمريكي عند الفحص في 20 نوفمبر 2026 ولم يُعثر على إدراج UL أمريكي، لذا لا يوصي هذا الدليل بها للمشترين الأمريكيين. تحقق من متجر Anker الأمريكي لأي تغيير.',
             },
           },
           {
@@ -3492,13 +3668,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '2026년 태양광 백업을 위해 미국 구매자는 어떤 홈 배터리 또는 파워 스테이션을 선택해야 합니까?',
-        answer: 'EcoFlow의 Delta Pro는 태양광 결합 홈 백업에 가장 무난한 올라운드 선택입니다. LFP 화학 방식, 3.6 kWh 기본 용량, 강력한 태양광 입력, 가장 폭넓은 액세서리 생태계를 갖췄습니다. Bluetti의 AC300+B300 조합은 모듈식 확장을 원하는 구매자에게 더 낫습니다. Jackery Explorer 시리즈는 휴대성과 Amazon 판매 가용성에서 앞섭니다. Anker SOLIX F3800은 경쟁력 있는 가격의 대용량 LFP로 확인해 볼 가치가 있습니다. EU용 Anker Solarbank가 판매된다고 가정하지 마십시오. 미국에서는 판매되거나 인증되지 않았습니다.',
+        answer: 'EcoFlow의 Delta Pro는 태양광 결합 홈 백업에 가장 무난한 올라운드 선택입니다. LFP 화학 방식, 3.6 kWh 기본 용량, 강력한 태양광 입력, 가장 폭넓은 액세서리 생태계를 갖췄습니다. Bluetti의 AC300+B300 조합은 모듈식 확장을 원하는 구매자에게 더 낫습니다. Jackery Explorer 시리즈는 휴대성과 Amazon 판매 가용성에서 앞섭니다. Anker SOLIX F3800은 경쟁력 있는 가격의 대용량 LFP로 확인해 볼 가치가 있습니다. Anker SOLIX Solarbank는 2026년 11월 20일 확인 시 Anker 미국 스토어에 목록이 없었으므로 유럽용 Solarbank를 미국에서 구할 수 있다고 가정하지 마십시오.',
         bullets: [
           'EcoFlow Delta Pro: LFP, 약 3.6 kWh, 강력한 태양광 입력 — 태양광 결합 홈 백업에 가장 무난한 올라운드 선택 (현재 사양 확인)',
           'Bluetti AC300+B300: 모듈식 LFP 스태킹, 최대 약 12 kWh — 확장성을 우선하는 구매자에게 최적 (현재 사양 확인)',
           'Jackery Explorer 2000 Pro: NMC 화학 방식, 캠핑/포터블 겸용 — 휴대성 최고, Amazon 존재감 가장 넓음 (현재 사양 확인)',
           'Anker SOLIX F3800: 대용량 LFP 포터블 홈 배터리 — 강력한 대안, 미국 판매 여부와 사양 확인',
-          'Anker SOLIX Solarbank는 미국에서 판매되지 않습니다 — Solarbank가 아니라 포터블 파워 스테이션 라인을 보고 있는지 확인하십시오',
+          'Anker SOLIX Solarbank: Anker 미국 스토어에 목록 없음(2026-11-20 확인) — 포터블 파워스테이션 라인을 보고 있는지, Solarbank가 아닌지 확인하십시오',
           '네 브랜드 모두 중국 제조 제품입니다. 미국 소매가는 Section 301 관세 대상이므로 구매 시점에 가격을 확인하십시오',
         ],
         updatedDate: '2026-11-20',
@@ -3528,8 +3704,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     sections: {
       statusNote: {
-        title: '2026년 업데이트: 미국 주 법률과 제품 점검',
-        content: '**미국의 법적 상황은 단순한 짜깁기를 넘어섰습니다. 2026년 10월 4일 업데이트된 플러그인 태양광 정리에 따르면 10개 주가 플러그인 태양광 법을 제정했으며 대부분 기기를 1,200 W로 제한합니다.** 판매업체가 운영하는 이 정리([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026))는 유타(HB 340, 2025년 3월 서명), 메인(LD 1730, 2026년 4월 6일 서명), 버지니아(HB 395, 4월 22일), 콜로라도(HB 26-1007, 5월 7일, 최대 1,920 W), 메릴랜드(HB 1532, 5월 12일), 코네티컷(HB 5340, 5월 20일), 뉴햄프셔(SB 540-FN, 6월), 버몬트(S. 202, 6월 16일), 뉴저지(S 2368 / A 4836, 9월 1일), 캘리포니아(SB 868, 2026년 9월 30일 서명)를 나열합니다. 이 정리 스스로도 수치의 불일치를 지적하고 있고, 어느 법이 UL 3700을 명시하는지와 시행일에 대해서는 다른 출처와 엇갈리므로 각 주 의회 사이트에서 제정된 법안 원문을 확인하십시오. 이번 갱신에서는 법안을 1차 자료로 검증하지 않았습니다. 연방 차원의 플러그인 체계는 찾지 못했으므로 이 페이지의 "짜깁기"라는 표현은 여전히 유효하지만, 전용 법을 가진 주의 수를 과소평가합니다. 같은 정리에 따르면 연방 태양광 30% 세액공제는 2025년 12월 31일에 종료되었으며, 이는 이 페이지의 비용 비교에 영향을 줍니다. 아래의 모델, 사양, 가격은 재확인하지 않았습니다. EcoFlow Delta Pro 3와 Anker SOLIX F3800 Plus 같은 신세대 제품이 2026년 보도에 등장하며, [2026년 4월자 Bob Vila 정리](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/)는 F3800 Plus를 할인가 799.99달러로 게재했으므로 이 페이지의 가격은 날짜가 없는 것으로 취급하십시오. Anker Solarbank가 미국에서 판매되지 않는다는 서술도 재확인하지 못했습니다. 검색 결과에 Solarbank 2 E1600의 Amazon.com 게시물이 나타났으나 열 수 없었으므로 Anker 미국 스토어에서 확인하십시오. 이는 공개 정보의 요약이며 법률·세무·전기 안전 자문이 아닙니다.',
+        title: '재확인: 미국 주 법률, 제품 사양, 구매 가능 여부',
+        content: '**2026년 11월 20일 확인: 이 가이드를 쓴 이후 미국의 법적 상황과 일부 제품 세대가 바뀌어, 아래 섹션을 그에 맞게 갱신하거나 표시했습니다.** 법률: 10개 미국 주가 플러그인 태양광 법에 서명했습니다(유타, 메인, 버지니아, 메릴랜드, 콜로라도, 코네티컷, 뉴햄프셔, 버몬트, 뉴저지, 캘리포니아). 캘리포니아 SB 868은 2026년 9월 30일 서명되어 2027년 1월 1일 발효하며, 계통 연계 면제는 2030년 1월 1일 종료되는 것으로 보도되었습니다([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/); 제정된 조문과는 대조하지 않았습니다). 6개 주는 발효 중이고, 버지니아·캘리포니아·뉴햄프셔는 2027년 1월 1일, 뉴저지는 2027년 3월 1일에 뒤따르며, 발효일은 추적 자료마다 다르므로 해당 주에 확인하십시오. 연방 플러그인 법은 없습니다. 주별 세부 내용은 [미국 10개 주에서 발코니 태양광이 불법에서 합법이 된 과정](/ko/balcony-solar/how-balcony-solar-became-legal-in-the-us)과 [내 주에서 발코니 태양광은 합법인가](/ko/balcony-solar/balcony-solar-legal-us-states)에 있으며 여기서는 반복하지 않습니다. 제품: 현행 두 모델을 2026년 11월 20일에 확인해 표에 추가했습니다. EcoFlow DELTA Pro 3([EcoFlow 블로그](https://www.ecoflow.com/us/blog/ecoflow-portable-power-station-specs)와 소매점 목록에 따르면 4,096 Wh LFP, 연속 4,000 W·X-Boost 순간 8,000 W, Smart Extra Battery 2개로 12 kWh까지 확장)와 Anker SOLIX F3800 Plus([Anker SOLIX 미국 페이지](https://www.ankersolix.com/us/products/f3800-plus)에 따르면 3,840 Wh LFP, 3,000회 이상 사이클, 6,000 W, 태양광 입력 최대 3,200 W)입니다. 나머지 행은 마지막으로 2026-07-03에 확인했으며 재확인하지 않았습니다: EcoFlow DELTA Pro(Pro 3의 전 세대), Bluetti AC300 + B300(미국 한 매장이 AC300 인버터 모듈을 단종으로 표시), Bluetti AC200MAX(소매점별 재고 상이), Jackery Explorer 2000 Pro·3000 Pro(Jackery 사이트는 3000 Pro의 화학 조성을 밝히지 않고 한 소매점은 리튬이온으로 표기; [Explorer 2000 Plus](https://www.jackery.com/collections/3000-pro-or-2000-plus)는 LiFePO4로 표기), Anker SOLIX F2000. 프로모션 가격은 빠르게 바뀌므로 이 페이지에는 가격을 싣지 않았습니다. Anker Solarbank: 2026년 11월 20일 Anker 미국 스토어 탐색 메뉴에 Solarbank 제품이 없었고 미국 UL 등재도 찾지 못했으므로, 금지가 아니라 \'미국에서 판매 목록에 없음\'으로 서술합니다. 이는 공개 정보의 요약이며 법률·세무·전기 안전 자문이 아닙니다.',
       },
       tldr: {
         id: 'key-takeaways',
@@ -3539,7 +3715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '발코니 태양광 브랜드의 미국 매출 경로는 포터블 파워 스테이션과 확장 가능한 홈 배터리입니다. EcoFlow, Bluetti, Jackery, Anker SOLIX 포터블 유닛은 그리드 계통 연계 없이 패널과 깔끔하게 결합됩니다.',
           'LFP(리튬인산철) 배터리 화학 방식은 홈 백업에서 NMC보다 크게 선호됩니다. 사이클 수명이 더 길고(약 3,000–6,000 사이클 대 약 500–1,000), 고온에서 더 안전하며, 부분 충전 상태에서 열화가 덜합니다. EcoFlow Delta Pro, Bluetti AC300+B300, Anker SOLIX F3800 모두 LFP를 사용합니다.',
           'Jackery의 Explorer Pro 시리즈는 역사적으로 NMC를 사용했습니다. 포터블 용도에는 유용하지만 집에서 매일 사이클을 도는 유닛에는 덜 이상적입니다(구매 전 모델별 현재 화학 방식을 확인하십시오).',
-          'Anker SOLIX Solarbank는 미국 시장에서 판매되거나 인증되지 않았습니다. 미국 구매자에게 관련된 Anker 유닛은 포터블 파워 스테이션 라인(F2000, F3800 등)입니다.',
+          'Anker SOLIX Solarbank는 2026년 11월 20일 확인 시 Anker 미국 스토어에 목록이 없었고 미국 UL 등재도 찾지 못했습니다. 미국 구매자에게 관련된 Anker 제품은 포터블 파워스테이션(F2000, F3800 Plus)과 E10 전체 가정용 백업 시스템입니다.',
           '네 브랜드 모두 중국 제조 제품입니다. 미국 소매가는 리튬이온 배터리와 태양광 부품에 대한 Section 301 관세에 노출되므로, 하드코딩된 가격 수치에 절대 의존하지 마십시오.',
         ],
       },
@@ -3547,7 +3723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'us-market-reality',
         title: '미국 구매자가 키트가 아닌 배터리를 선택하는 이유',
         content: [
-          '**EU 발코니 태양광 시장(독일의 Balkonkraftwerk)은 세입자와 아파트 소유자가 800W 패널 키트를 가정용 콘센트에 안전하게 꽂고 합법적으로 그리드에 전력을 내보낼 수 있게 하는 연방 플러그인 표준 아래에서 운영됩니다.** 작성 시점(2026년 7월) 기준으로 미국에는 이에 상응하는 제도가 없습니다. 미국의 플러그인 태양광은 주 유틸리티 규정, NEC Article 705 계통 연계 규칙, 그리고 주와 유틸리티마다 다른 UL 1741 인증 요건의 적용을 받습니다. 그 결과 캘리포니아에서 합법인 것이 텍사스나 플로리다에서는 제한되거나 허가가 필요할 수 있는 제각각의 환경이 만들어집니다. 주별 세부 내용은 [당신의 미국 주에서 발코니 태양광은 합법인가?](/ko/balcony-solar/balcony-solar-legal-us-states)를 참조하십시오.',
+          '**독일의 Balkonkraftwerk는 세입자와 아파트 소유자가 800 W 패널 세트를 가정용 콘센트에 꽂을 수 있게 하는 전국 플러그인 표준 아래에서 운영됩니다. 미국에는 연방 차원의 대응 제도가 없지만 10개 주가 자체 플러그인 태양광 법에 서명했으며, 2025년 유타가 처음, 가장 최근은 2026년 9월 30일 캘리포니아입니다.** 대부분 기기를 1,200 W로 제한하고, 버지니아·캘리포니아·뉴햄프셔는 2027년 1월 1일, 뉴저지는 2027년 3월 1일에 발효하며, 캘리포니아의 면제는 2030년 1월 1일 종료되는 것으로 보도되었습니다([pv magazine](https://www.pv-magazine.com/2026/10/02/newsom-signs-california-plug-in-solar-bill-establishing-the-nations-largest-balcony-solar-market/)). 법이 없는 주에서는 전력회사의 계통 연계 규칙(NEC Article 705, UL 1741 장비)이 계속 적용되므로 거주 주와 전력회사를 확인하십시오. 주별 세부 내용은 [미국 10개 주에서 발코니 태양광이 불법에서 합법이 된 과정](/ko/balcony-solar/how-balcony-solar-became-legal-in-the-us)과 [내 주에서 발코니 태양광은 합법인가](/ko/balcony-solar/balcony-solar-legal-us-states)를 참고하십시오.',
           '이러한 법적 분열은 우리가 (측정된 시장 사실이 아니라) 가정으로서 명시적으로 밝히는 실질적 결과를 낳습니다. 미국 소비자 수요는 그리드 계통 연계가 전혀 필요 없어 규제 문제를 완전히 회피하는 **포터블 또는 지붕 장착 패널과 결합된 독립형 파워 스테이션과 배터리**에 집중되는 것으로 보입니다. 이에 대한 증거는 이 사이트의 미국 클릭 패턴(Amazon 채널 제품이 지배적이고 EU식 키트 브랜드 사이트는 그렇지 않음)과, EcoFlow와 Jackery 같은 브랜드가 미국 매출의 대부분을 그리드 연결형 발코니 키트가 아니라 포터블 파워 스테이션에서 창출한다는 사실에서 나옵니다. 발코니 키트 비교를 찾고 있다면, 합법인 곳에서 무엇을 이용할 수 있는지 [2026년 최고의 발코니 태양광 키트](/ko/balcony-solar/best-balcony-solar-kits-2026)를 참조하십시오.',
           '**전체 지붕 설치 없이 부분 태양광이나 정전 대비를 원하는 세입자, 아파트 거주자, 주택 소유자에게 이 독립형 배터리 접근법은 법적 단순함을 넘어서는 진정한 장점이 있습니다.** 바로 휴대성입니다. 오늘 그리드 정전 중에 냉장고에 전력을 공급하는 3.6 kWh LFP 배터리는 이사할 때 옮기거나 팔거나 다른 용도로 쓸 수 있습니다. 그리드 연결형 시스템과 달리 말입니다. 이를 독일과 대조해 보십시오. 독일에서 Balkonkraftwerk는 대개 영구 설치물이고 배터리는 추가 저장 유닛입니다. 독일식 구성이 어떻게 작동하는지에 대한 배경은 [독일 Balkonkraftwerk 규정](/ko/balcony-solar/balkonkraftwerk-germany-rules)을 참조하십시오.',
         ],
@@ -3656,10 +3832,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             usPrice: '현재 가격 확인 — 프리미엄 LFP 등급',
             bestFor: '대용량 LFP 홈 백업; 고부하용 높은 AC 출력',
           },
+          {
+            product: 'EcoFlow DELTA Pro 3',
+            capacity: '4,096 Wh(EcoFlow 블로그, 소매점 목록)',
+            chemistry: 'LFP',
+            acOutput: '연속 4,000W, X-Boost 순간 8,000W',
+            solarInput: '여기서는 미확인 — EcoFlow 미국 사양 페이지 확인',
+            expandable: '예 — Smart Extra Battery 2개로 12 kWh(EcoFlow 블로그)',
+            localControl: '로컬 제어 절 참조 — 펌웨어별 확인',
+            usPrice: '현재 가격 확인 — 관세 영향',
+            bestFor: 'EcoFlow 현행 세대 가정용 백업, Delta Pro 후속',
+          },
+          {
+            product: 'Anker SOLIX F3800 Plus',
+            capacity: '3,840 Wh(Anker 미국 페이지)',
+            chemistry: 'LFP, 3,000회 이상 사이클',
+            acOutput: '최대 6,000W(120/240V L14-30R 포트)',
+            solarInput: '최대 3,200W(2포트, 각 1,600W)',
+            expandable: '예 — Anker 확장 배터리',
+            localControl: '주로 앱 기반 — 로컬 API 지원 확인',
+            usPrice: '현재 가격 확인 — 프로모션 잦음',
+            bestFor: '대용량 LFP 가정용 백업, Anker 현행 포터블 주력 모델',
+          },
         ],
         columns: ['product', 'capacity', 'chemistry', 'acOutput', 'solarInput', 'expandable', 'localControl', 'usPrice', 'bestFor'],
         tableFormat: true,
-        tableNote: '사양은 알려진 제품 라인을 기준으로 한 근사치입니다. 모든 용량, 출력, 가격 수치는 구매 전 현재 제조사 페이지와 대조해 확인해야 합니다. 가격은 의도적으로 생략했습니다. 중국 제조 리튬 배터리에 대한 미국 소매가는 Section 301 관세에 민감하여 크게 변할 수 있기 때문입니다. 구매 시점에 amazon.com 또는 브랜드의 미국 직판 스토어에서 확인하십시오(2026-07-03 확인).',
+        tableNote: '사양은 알려진 제품 라인을 기준으로 한 근사치입니다. 모든 용량, 출력, 가격 수치는 구매 전 현재 제조사 페이지와 대조해 확인해야 합니다. 가격은 의도적으로 생략했습니다. 중국 제조 리튬 배터리에 대한 미국 소매가는 Section 301 관세에 민감하여 크게 변할 수 있기 때문입니다. 구매 시점에 amazon.com 또는 브랜드의 미국 직판 스토어에서 확인하십시오(2026-07-03 확인). EcoFlow DELTA Pro 3와 Anker SOLIX F3800 Plus 행은 2026-11-20에 확인했으며, 나머지 행은 마지막으로 2026-07-03에 확인했고 재확인하지 않았습니다.',
       },
       useCaseRecs: {
         id: 'use-case-recs',
@@ -3676,12 +3874,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-control',
         title: '로컬 제어 및 스마트홈 통합',
         content: [
-          '**여기서 다룬 4대 주요 브랜드 중 어느 것도 표준 기능으로 Home Assistant용 공식적이고 문서화된 로컬 API를 제공하지 않습니다. 모두 기본적으로 클라우드 기반 앱 모니터링을 사용합니다.** 이것이 미국 포터블 파워 스테이션 시장과, Zendure 같은 브랜드가 성숙한 로컬 제어 생태계를 구축한 EU 발코니 태양광 저장 시장 사이의 가장 큰 격차입니다. 로컬 제어가 중요하다면 구매 전 현재 상태를 확인하십시오. 이 제품 영역에서 가장 빠르게 변하는 차원이기 때문입니다.',
+          '**여기서 다룬 주요 브랜드 중 표준 기능으로 Home Assistant용 공식 문서화된 로컬 API를 제공하는 브랜드는 소수입니다. EcoFlow STREAM은 이제 문서화된 로컬 API를 제공합니다([ecoflow.com](https://www.ecoflow.com)에서 현재 범위 확인); Bluetti, Jackery, Anker SOLIX는 여전히 주로 클라우드 기반 모니터링에 의존합니다.** 미국 포터블 파워 스테이션 시장과, Zendure 같은 브랜드가 성숙한 로컬 제어 생태계를 구축한 EU 발코니 태양광 저장 시장 사이의 격차는 좁아지고 있습니다. 로컬 제어가 중요하다면 구매 전 현재 상태를 확인하십시오. 이 제품 영역에서 가장 빠르게 변하는 차원이기 때문입니다.',
           'EcoFlow의 Delta Pro 시리즈가 가장 활발한 커뮤니티 통합을 갖추고 있습니다. HACS를 통한 Home Assistant 통합이 존재하며 (EcoFlow 공식이 아니라) 커뮤니티가 유지 관리합니다. 이것은 진정한 로컬 엔드포인트가 아니라 EcoFlow의 클라우드 API에 의존하므로, 여전히 모니터링 데이터를 EcoFlow의 서버를 통해 라우팅합니다. 이 맥락에서 "로컬"이 실제로 무엇을 의미하는지, 그리고 어떤 하드웨어가 진정으로 이를 지원하는지에 대한 세부 내용은 [노클라우드 발코니 태양광 가이드](/ko/balcony-solar/home-assistant-balcony-solar-no-cloud)를 교차 참조하십시오.',
           '태양광과 결합되면서 클라우드 계정이 필요 없는 진정한 로컬 API 배터리 시스템을 원하는 사용자에게는, 현재 EU 시장에 더 나은 옵션이 있습니다(특히 Zendure SolarFlow — [EcoFlow 대 Anker 대 Zendure](/ko/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar) 참조). 다만 그 제품 대부분은 미국 시장에서 판매되거나 인증되지 않았습니다.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: '2026년 기준으로 미국에서 판매되는 주요 포터블 파워 스테이션 브랜드(EcoFlow, Bluetti, Jackery, Anker SOLIX) 중 어느 것도 Home Assistant용 공식 문서화된 로컬 API를 제공하지 않습니다. EcoFlow용 커뮤니티 통합이 존재하지만 클라우드를 통해 라우팅됩니다.' },
+          { type: 'one-sentence', text: '2026년 말 기준으로 EcoFlow STREAM은 문서화된 로컬 API를 제공합니다; Bluetti, Jackery, Anker SOLIX는 여전히 클라우드 모니터링에 의존합니다 — 구매 전 현재 상태를 확인하십시오.' },
           { type: 'plain-terms', text: '제조사 서버로 데이터를 보내지 않고 Home Assistant와 작동하는 배터리를 원한다면 미국 옵션은 제한적입니다. EcoFlow가 최고의 커뮤니티 우회책을 갖췄지만 진정한 로컬 구성은 아닙니다.' },
         ],
       },
@@ -3702,7 +3900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://us.ecoflow.com', title: 'EcoFlow 미국 스토어', description: 'Delta Pro, Delta Pro Ultra 사양 및 가격 — 구매 시점에 현재 수치 확인' },
           { url: 'https://www.bluettipower.com', title: 'Bluetti 미국 스토어', description: 'AC300, B300, AC200MAX 사양 — 현재 수치 확인' },
           { url: 'https://www.jackery.com', title: 'Jackery 미국 스토어', description: 'Explorer 시리즈 사양 — 모델별 현재 화학 방식과 출력 확인' },
-          { url: 'https://ankersolix.com', title: 'Anker SOLIX 미국 스토어', description: 'F2000, F3800 사양; Solarbank가 미국 카탈로그에 없음을 확인' },
+          { url: 'https://ankersolix.com', title: 'Anker SOLIX 미국 스토어', description: 'F2000·F3800 Plus 사양; 2026-11-20 확인한 스토어 탐색 메뉴에 Solarbank 없음' },
         ],
       },
       relatedReading: {
@@ -3716,13 +3914,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-            { q: '미국에서 발코니 태양광은 합법인가요?', a: '단일한 미국식 답은 없습니다. 합법 여부는 주와 유틸리티마다 다릅니다. 일부 주는 독일의 Balkonkraftwerk와 유사한 플러그인 태양광 규정을 제정했고, 다른 주는 그리드에 연결된 모든 태양광에 대해 허가, NEC Article 705에 따른 유틸리티 승인, UL 1741 인증 장비를 요구합니다. 주별 세부 내용은 별도의 미국 주 합법성 가이드를 참조하십시오. 어느 주에서든 가장 안전한 방법은 그리드에 연결하지 않는 독립형 배터리 + 패널 시스템입니다.' },
+            { q: '미국에서 발코니 태양광은 합법인가요?', a: '점점 합법이 되고 있지만 모든 곳에서는 아닙니다. 10개 주가 플러그인 태양광 법에 서명했습니다(유타, 메인, 버지니아, 메릴랜드, 콜로라도, 코네티컷, 뉴햄프셔, 버몬트, 뉴저지, 그리고 2026년 9월 30일 SB 868이 서명된 캘리포니아). 6개 주는 발효 중이고 버지니아·캘리포니아·뉴햄프셔는 2027년 1월 1일, 뉴저지는 2027년 3월 1일에 뒤따릅니다. 연방 플러그인 법은 없으며, 주법이 없는 곳에서는 전력회사 계통 연계(NEC Article 705, UL 1741 장비)가 계속 적용됩니다. 자세한 내용은 주별 합법성 가이드를 참고하십시오. 어디서나 가장 안전한 방법은 계통에 연결하지 않는 독립형 배터리와 패널 조합입니다.' },
             { q: 'EcoFlow 대 Bluetti — 2026년 미국 홈 백업에는 어느 것이 더 나은가요?', a: 'EcoFlow Delta Pro가 MPPT 태양광 입력이 더 강력해서 패널 기반 빠른 재충전이 우선이라면 더 나은 선택입니다. Bluetti의 AC300+B300은 (배터리 용량을 단계적으로 추가하는) 모듈식 확장이 우선이라면 더 낫습니다. 둘 다 LFP 화학 방식을 사용합니다. 관세 노출로 가격이 자주 변하므로, 가격 차이가 변동하는 만큼 구매 시점에 현재 가격을 비교하십시오.' },
             { q: 'LFP와 NMC 배터리 화학 방식의 차이는 무엇인가요?', a: 'LFP(리튬인산철)는 80% 유지 기준으로 약 3,000–6,000 충전 사이클, 더 나은 열 안정성, 더 긴 달력 수명을 제공하여 매일 사이클을 도는 홈 백업 유닛에 선호됩니다. NMC(니켈망간코발트)는 주어진 무게당 더 높은 에너지 밀도를 제공하며, 그래서 구형 Jackery Explorer 모델 같은 포터블/캠핑 중심 유닛을 지배합니다. 태양광으로 집에서 매일 사이클을 도는 유닛에는 5–10년 기간에 걸쳐 LFP 화학 방식이 의미 있게 더 낫습니다.' },
             { q: '이 제품들로 그리드 정전 중에 냉장고를 구동할 수 있나요?', a: '적절한 사이징이라면 가능합니다. 일반적인 미국 냉장고는 100–400W 연속(평균 150W)을 소비하고 600–1,200W의 시동 서지가 있습니다. 2,000W 이상 AC 출력을 갖춘 2 kWh LFP 유닛이면 표준 냉장고를 8–12시간 구동할 수 있습니다. 200–400W 태양광 패널을 추가하면 적당한 햇빛에서 무기한 연장할 수 있습니다. 고려 중인 유닛의 AC 출력과 서지 정격을 확인하십시오. 일부 저렴한 파워 스테이션은 냉장고 압축기에 서지 정격이 너무 낮습니다.' },
             { q: '태양광 패널과 결합된 파워 스테이션에 허가나 그리드 계통 연계가 필요한가요?', a: '그리드에 연결하지 않고 — 단지 패널로 파워 스테이션을 충전하고 이를 사용해 가정에 전력을 공급한다면 — 일반적으로 계통 연계 허가나 유틸리티 승인이 필요 없습니다. 패널은 가정 배전반이 아니라 파워 스테이션의 태양광 입력에만 연결됩니다. 이것이 그리드로 전력을 내보내는 발코니 태양광 키트 대비 독립형 배터리 접근법의 핵심적인 법적 단순함입니다. 확실하지 않다면 현지 AHJ(관할 당국)에 확인하십시오.' },
             { q: '이 제품들을 Home Assistant와 함께 로컬 모니터링에 사용할 수 있나요?', a: '부분적으로 가능합니다. EcoFlow는 Delta 시리즈용으로 커뮤니티가 유지 관리하는 Home Assistant 통합(HACS 경유)이 있지만, 진정한 로컬 엔드포인트가 아니라 EcoFlow의 클라우드 API를 통해 라우팅됩니다. Bluetti, Jackery, Anker SOLIX는 잘 문서화된 로컬 API가 없습니다. 클라우드 의존 없는 로컬 제어가 필수 요건이라면, 어떤 하드웨어가 진정으로 로컬 전용 운영을 지원하는지에 대한 현재 요약은 노클라우드 발코니 태양광 가이드를 참조하십시오.' },
-            { q: 'Anker SOLIX는 미국에서 판매되나요?', a: 'Anker SOLIX 포터블 파워 스테이션(F2000, F3800 및 유사 유닛)은 미국에서 ankersolix.com과 Amazon에서 판매됩니다. 그리드 연결형 발코니 태양광 저장용으로 설계된 Anker SOLIX Solarbank 모델은 미국 시장에서 판매되거나 인증되지 않았으며 미국 구매자에게 추천해서는 안 됩니다. Solarbank가 EU 태양광 리뷰에서 상당한 조명을 받기 때문에 흔히 혼동되는 지점입니다.' },
+            { q: 'Anker SOLIX는 미국에서 판매되나요?', a: 'Anker SOLIX 포터블 파워 스테이션(F2000, F3800 및 유사 유닛)은 미국에서 ankersolix.com과 Amazon에서 판매됩니다. 계통 연계형 발코니 태양광 저장용으로 설계된 Anker SOLIX Solarbank는 2026년 11월 20일 확인 시 Anker 미국 스토어에 목록이 없었고 미국 UL 등재도 찾지 못했으므로, 이 가이드는 미국 구매자에게 권하지 않습니다. 변경 여부는 Anker 미국 스토어에서 확인하십시오.' },
             { q: '이 제품들의 가격은 왜 이렇게 변동이 심한가요?', a: 'EcoFlow, Bluetti, Jackery, Anker SOLIX는 모두 중국에서 제조됩니다. 미국 소매가는 리튬이온 배터리와 태양광 부품에 대한 Section 301 관세의 대상이며, 이 관세는 2024–2026년에 걸쳐 상승해 소매가를 10–25% 이상 움직일 수 있습니다. 브랜드는 또한 가격을 어느 방향으로든 $200–500 움직일 수 있는 잦은 프로모션을 진행합니다. 구매 시점에 항상 Amazon이나 브랜드의 미국 스토어에서 현재 가격을 확인하십시오.' },
             { q: '홈 백업에도 쓸 수 있는 캠핑용 최고의 포터블 파워 스테이션은 무엇인가요?', a: '휴대성 우선 사용자에게는 Jackery Explorer 2000 Pro 또는 3000 Pro(더 가볍고 Amazon 친화적이지만 NMC — 현재 화학 방식 확인)입니다. Jackery와 비슷한 휴대성으로 LFP를 원하는 구매자에게는 Anker SOLIX F2000입니다. LFP 화학 방식과 더 강력한 태양광 입력을 위해 휴대성을 타협할 의향이 있다면 EcoFlow Delta Pro입니다. "캠핑 겸용" 용도는 네 브랜드 모두 잘 충족하며, 차별화 요소는 여행 사이에 집에서 유닛을 많이 사용할 계획인 구매자를 위한 화학 방식과 장기 사이클 수명입니다.' },
           ],
@@ -3734,7 +3932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '미국 태양광용 최고의 홈 배터리 및 포터블 파워 스테이션 (2026): EcoFlow, Bluetti 외',
       description: '2026년 미국 태양광 구매자를 위한 최고의 홈 배터리 및 포터블 파워 스테이션: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP 대 NMC, 로컬 제어, 검증된 미국 판매 여부.',
       datePublished: '2026-07-03',
-      dateModified: '2026-07-03',
+      dateModified: '2026-11-20',
       inLanguage: 'ko',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: {
@@ -3806,7 +4004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '미국에서 발코니 태양광은 합법인가요?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '단일한 미국식 답은 없습니다. 합법 여부는 주와 유틸리티마다 다릅니다. 일부 주는 독일의 Balkonkraftwerk와 유사한 플러그인 태양광 규정을 제정했고, 다른 주는 그리드에 연결된 모든 태양광에 대해 허가, NEC Article 705에 따른 유틸리티 승인, UL 1741 인증 장비를 요구합니다. 주별 세부 내용은 별도의 미국 주 합법성 가이드를 참조하십시오. 어느 주에서든 가장 안전한 방법은 그리드에 연결하지 않는 독립형 배터리 + 패널 시스템입니다.',
+              'text': '점점 합법이 되고 있지만 모든 곳에서는 아닙니다. 10개 주가 플러그인 태양광 법에 서명했습니다(유타, 메인, 버지니아, 메릴랜드, 콜로라도, 코네티컷, 뉴햄프셔, 버몬트, 뉴저지, 그리고 2026년 9월 30일 SB 868이 서명된 캘리포니아). 6개 주는 발효 중이고 버지니아·캘리포니아·뉴햄프셔는 2027년 1월 1일, 뉴저지는 2027년 3월 1일에 뒤따릅니다. 연방 플러그인 법은 없으며, 주법이 없는 곳에서는 전력회사 계통 연계(NEC Article 705, UL 1741 장비)가 계속 적용됩니다. 자세한 내용은 주별 합법성 가이드를 참고하십시오. 어디서나 가장 안전한 방법은 계통에 연결하지 않는 독립형 배터리와 패널 조합입니다.',
             },
           },
           {
@@ -3854,7 +4052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Anker SOLIX는 미국에서 판매되나요?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Anker SOLIX 포터블 파워 스테이션(F2000, F3800 및 유사 유닛)은 미국에서 ankersolix.com과 Amazon에서 판매됩니다. 그리드 연결형 발코니 태양광 저장용으로 설계된 Anker SOLIX Solarbank 모델은 미국 시장에서 판매되거나 인증되지 않았으며 미국 구매자에게 추천해서는 안 됩니다. Solarbank가 EU 태양광 리뷰에서 상당한 조명을 받기 때문에 흔히 혼동되는 지점입니다.',
+              'text': 'Anker SOLIX 포터블 파워 스테이션(F2000, F3800 및 유사 유닛)은 미국에서 ankersolix.com과 Amazon에서 판매됩니다. 계통 연계형 발코니 태양광 저장용으로 설계된 Anker SOLIX Solarbank는 2026년 11월 20일 확인 시 Anker 미국 스토어에 목록이 없었고 미국 UL 등재도 찾지 못했으므로, 이 가이드는 미국 구매자에게 권하지 않습니다. 변경 여부는 Anker 미국 스토어에서 확인하십시오.',
             },
           },
           {
