@@ -34,8 +34,10 @@ export const app: ToolRecord = {
     ko: '로컬 우선 데스크톱 음성 어시스턴트, 클라우드 음성 선택 가능',
   },
   reviewSlug: 'voxa-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { voice: true, memory: true, toolUse: true },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-11-20; a missing key = not stated there, never false.
+  // github.com/przemekzur/voxa README and askvoxa.dev: "Realtime voice ... barge-in" (bargeIn), "bring-your-own model", Gemini Live / OpenAI Realtime / "local daemon (bring your own)" (customLlm).
+  // fullyLocal stays unset: no local voice model is shipped, realtime voice needs a cloud provider or a daemon the user supplies. Telephony not stated.
+  compare: { voice: true, memory: true, toolUse: true, bargeIn: true, customLlm: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
   lastUpstreamUpdate: '2026-09-18', // GitHub release v1.5.0, read 2026-10-16
   lastUpstreamUpdateSource: 'https://github.com/przemekzur/voxa/releases',
