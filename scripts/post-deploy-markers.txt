@@ -1,0 +1,23 @@
+# post-deploy-markers.txt — spot-check markers for scripts/post-deploy-check.sh
+#
+# Format: has|lacks <path> <text>
+#   has   — the page at <path> must contain <text> in its response body
+#   lacks — the page at <path> must NOT contain <text>
+#
+# Paths are relative to https://www.promptquorum.com (no trailing slash).
+# Text is literal (no regex). Keep entries focused on verifiable claims
+# that were added, changed, or removed in the most recent refresh batch.
+# Add an entry in the same commit that makes the claim live.
+#
+# 2026-11-20 batch markers — knowledge-cutoffs, hoymiles disclaimer,
+# blog post email fix, Brazil yield, sizing payback, edit-history phrase removal
+
+has /prompt-engineering/knowledge-cutoffs-and-geo GPT-6.2
+has /prompt-engineering/knowledge-cutoffs-and-geo Muse Glimmer
+has /balcony-solar/hoymiles-microinverter-balcony-solar not legal or electrical advice
+lacks /balcony-solar/hoymiles-microinverter-balcony-solar T/GEA
+has /blog/promptquorum-desktop-app-beta hello@promptquorum.com
+lacks /blog/promptquorum-desktop-app-beta hanskuepper@
+has /balcony-solar/balcony-solar-brazil-status-2027 53.65
+has /balcony-solar/balcony-solar-sizing-yield-payback 1130
+lacks /balcony-solar/balcony-solar-sizing-yield-payback untraceable

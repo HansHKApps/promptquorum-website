@@ -55,6 +55,14 @@ anything already published.**
   Flagged during STEP 3 spot-check, 2026-07-02 — logged, not fixed at flag time per
   operator instruction (non-blocking).
 
+- **Balcony solar cluster full refresh — COMPLETED 2026-11-20.** The batch
+  refresh originally deferred to Q1 2027 was run on 2026-11-20. Status pages
+  (Brazil, China, US-battery), the Hoymiles microinverter guide, the sizing
+  and yield payback article, and the blog post were all refreshed in this run.
+  Open items remaining (not part of this run): BSOL-04 affiliate disclosure,
+  BSOL-17 Anker SKU recount, AR native-term verification. Next scheduled
+  refresh for the full cluster: Q1 2027 as originally planned.
+
 - **ES/PT/AR native-term verification (STEP 4 translation batch, 2026-07-02)**:
   Spot-checked via WebSearch (no GSC/keyword-tool access available this session).
   Results:
