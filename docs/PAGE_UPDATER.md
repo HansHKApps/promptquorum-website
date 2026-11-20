@@ -699,6 +699,7 @@ npm run test:article-skin           # same-DOM guard for the hub skin
 - **Every 3rd page-updater run** (count them in the update report: "Run N since last sweep") also run the full sweep: `npm run check:page-updater -- --all`. It checks `designSkin` parity (all 9 locales or none) across every article in a skin-supporting cluster.
 - **No risk-checker report, no completion:** the Update Report must contain the risk-checker skill's gate line and score for every changed article file (Step 5.7). Missing or "manual" = INCOMPLETE.
 - Put both outputs in the Update Report under "Completion check".
+- **After every deploy:** run `scripts/post-deploy-check.sh`. It prints PASS/FAIL lines for git state, freshness, live content spot-checks, sitemap `<lastmod>` counts, and HTTP 200 status for all balcony-solar cluster URLs. Expected markers are read from `scripts/post-deploy-markers.txt` — add an entry there whenever a page refresh includes a verifiable claim that should be confirmed live.
 
 ## Slide Decks and PDF Reference Cards
 
