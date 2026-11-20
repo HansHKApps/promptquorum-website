@@ -827,6 +827,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'ultimate-vocal-remover-review',
   'oriveo-review',
   'open-paper-review',
+  'pyvideotrans-review',
   'myagents-review',
   'libretranslate-review',
   't3-code-review',

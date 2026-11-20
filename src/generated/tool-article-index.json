@@ -5372,6 +5372,14 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "pyvideotrans-review",
+        "title": "pyVideoTrans Review: Free Video Translation and AI Dubbing",
+        "url": "/power-local-llm/pyvideotrans-review",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-whisper-metal-benchmark",
         "title": "Whisper on Apple Silicon 2026: Metal Benchmarks, Core ML Setup, M1–M5 Speed Guide",
@@ -5386,17 +5394,9 @@
         "url": "/power-local-llm/build-local-voice-assistant-2026",
         "dateModified": "2026-11-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "macwhisper-review",
-        "title": "MacWhisper Review: Local Speech-to-Text for Mac",
-        "url": "/power-local-llm/macwhisper-review",
-        "dateModified": "2026-11-09",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "Piper TTS": {
@@ -16559,6 +16559,20 @@
         "title": "Open Paper Review: AI Workspace for Reading Research Papers",
         "url": "/power-local-llm/open-paper-review",
         "dateModified": "2026-11-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "pyVideoTrans": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pyvideotrans-review",
+        "title": "pyVideoTrans Review: Free Video Translation and AI Dubbing",
+        "url": "/power-local-llm/pyvideotrans-review",
+        "dateModified": "2026-11-20",
         "tier": "about"
       }
     ],
