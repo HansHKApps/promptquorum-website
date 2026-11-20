@@ -268,7 +268,7 @@ export function OpenQuizView({ tx, programme, update, postJson, errorText }: { t
         </div>
       )}
       {reveal && <ReportProblem tx={tx} lang={programme.language} context={{ question: { prompt: current.prompt, options: [] } }} />}
-      {/* Quiz lock (SPEC 8.6): the tutor stays disabled until this question is graded. "Why?" is not offered for written answers. */}
+      {/* Quiz lock (SPEC 8.6): the tutor stays disabled until this question is graded; then "Why?" explains the grading. */}
       <TutorPanel
         tx={tx}
         programme={programme}
@@ -280,6 +280,7 @@ export function OpenQuizView({ tx, programme, update, postJson, errorText }: { t
           .join('\n\n')}
         locked={!graded}
         whyButton={null}
+        whyOpenButton={reveal ? { prompt: current.prompt, answer: answers[current.id] ?? '', covered: reveal.covered, missed: reveal.missed, modelAnswer: reveal.modelAnswer } : null}
       />
       <button type="button" onClick={backToProgramme} className="text-sm text-purple-700 underline underline-offset-2">
         {tx.backToProgramme}

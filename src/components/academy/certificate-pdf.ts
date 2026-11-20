@@ -11,6 +11,7 @@ import type { CertificateModel } from '@/lib/academy/certificate'
 import type { AcademyLang } from '@/lib/academy/types'
 import { getLangDir } from '@/lib/i18n/constants'
 import type { AcademyCopy } from './copy'
+import { formatPoints } from '@/lib/academy/format-points'
 
 const PX_W = 3508
 const PX_H = 2480
@@ -171,7 +172,7 @@ export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateM
 
   // result tiles
   const tiles: { value: string; label: string; color?: string }[] = [
-    { value: `${m.percent}%`, label: `${c.overall} · ${m.correct}/${m.total}`, color: GOOD },
+    { value: `${m.percent}%`, label: `${c.overall} · ${formatPoints(m.correct, lang)}/${m.total}`, color: GOOD },
     { value: c.passed(m.passMark), label: c.tests + ': ' + tx.tests[m.testMode].label },
     { value: tx.minutes(m.learningMinutes), label: c.learningTime },
   ]

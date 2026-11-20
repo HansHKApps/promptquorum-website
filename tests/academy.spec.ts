@@ -698,6 +698,31 @@ test.describe('test formats: multiple choice, short written answer, explain the 
     await expect(page.getByText('25%', { exact: true })).toBeVisible()
   })
 
+  test('written answer: "Why?" is offered only after grading and sends the graded answer to the tutor', async ({ page }) => {
+    await page.route('**/api/academy/open-quiz', (r) => r.fulfill({ json: { questions: openQuestions('free') } }))
+    await page.route('**/api/academy/grade', (r) => r.fulfill({ json: { credit: 0.5, feedback: 'Good start.', covered: ['Idea one'], missed: ['Idea two'], modelAnswer: 'First model answer' } }))
+    let tutorBody: Record<string, unknown> = {}
+    await page.route('**/api/academy/tutor', (r) => {
+      tutorBody = r.request().postDataJSON()
+      return r.fulfill({ status: 200, contentType: 'text/plain', body: 'Idea two was missing because it limits quality.' })
+    })
+    await toQuiz(page)
+    await page.locator('label', { hasText: /short written answer/i }).click()
+    await page.getByRole('button', { name: /start test/i }).click()
+    await expect(page.getByText('Written question 1?')).toBeVisible()
+    await expect(page.getByRole('button', { name: /^why\?$/i })).toHaveCount(0)
+    await page.getByLabel(/^your answer$/i).fill('My own words about the idea.')
+    await page.getByRole('button', { name: /submit answer/i }).click()
+    await expect(page.getByText('Good start.')).toBeVisible()
+    await page.getByRole('button', { name: /ai tutor/i }).click()
+    await page.getByRole('button', { name: /i understand/i }).click()
+    const why = page.getByRole('button', { name: /^why\?$/i })
+    await expect(why).toBeVisible()
+    await why.click()
+    await expect(page.getByText('Idea two was missing because it limits quality.')).toBeVisible()
+    expect(tutorBody).toMatchObject({ trigger: 'why', whyOpen: { prompt: 'Written question 1?', answer: 'My own words about the idea.', covered: ['Idea one'], missed: ['Idea two'], modelAnswer: 'First model answer' } })
+  })
+
   test('explain the concept: the request asks for the explain format and the answer box is labelled as an explanation', async ({ page }) => {
     let generated: Record<string, unknown> = {}
     await page.route('**/api/academy/open-quiz', (r) => {

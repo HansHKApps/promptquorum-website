@@ -24,6 +24,8 @@ export interface TutorSeed {
   section?: { heading: string; body: string }
   selected?: string
   why?: { prompt: string; options: [string, string, string]; correctIndex: number; chosenIndex: number }
+  /** written formats: the graded answer, sent only after grading */
+  whyOpen?: { prompt: string; answer: string; covered: string[]; missed: string[]; modelAnswer: string }
 }
 
 interface Turn {
@@ -47,6 +49,7 @@ export function TutorPanel({
   locked,
   seed,
   whyButton,
+  whyOpenButton,
 }: {
   tx: AcademyCopy
   programme: Programme
@@ -61,6 +64,8 @@ export function TutorPanel({
   seed?: TutorSeed | null
   /** quiz: the "Why?" payload of the question just answered (null = nothing to ask about) */
   whyButton?: TutorSeed['why'] | null
+  /** written quiz: the "Why?" payload of the answer just graded (null = nothing to ask about) */
+  whyOpenButton?: TutorSeed['whyOpen'] | null
 }) {
   const t = tx.tutor
   const [open, setOpen] = useState(false)
@@ -117,6 +122,7 @@ export function TutorPanel({
             section: s.section ? { heading: s.section.heading.slice(0, 200), body: s.section.body.slice(0, 3000) } : undefined,
             selected: s.selected,
             why: s.why,
+            whyOpen: s.whyOpen,
           }),
         })
         if (!res.ok || !res.body) throw new Error('tutor')
@@ -248,12 +254,17 @@ export function TutorPanel({
                   {error}
                 </p>
               )}
+              {whyOpenButton && (
+                <button type="button" disabled={disabled} onClick={() => void run({ trigger: 'why', whyOpen: whyOpenButton })} className="rounded-xl border border-purple-600 px-4 py-2 font-medium text-purple-700 hover:bg-purple-50 disabled:cursor-not-allowed disabled:opacity-50">
+                  {t.why}
+                </button>
+              )}
               {whyButton && (
                 <button type="button" disabled={disabled} onClick={() => void run({ trigger: 'why', why: whyButton })} className="rounded-xl border border-purple-600 px-4 py-2 font-medium text-purple-700 hover:bg-purple-50 disabled:cursor-not-allowed disabled:opacity-50">
                   {t.why}
                 </button>
               )}
-              {chips && chips.length > 0 && !whyButton && (
+              {chips && chips.length > 0 && !whyButton && !whyOpenButton && (
                 <div>
                   <p className="text-xs font-medium text-gray-600">{t.suggested}</p>
                   <div className="mt-1 flex flex-wrap gap-2">
