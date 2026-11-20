@@ -19504,7 +19504,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Le problème de la confiance dans un seul modèle d’IA',
           content: [
             'Chaque grand modèle de langage produit ses sorties à partir de ses données d’entraînement, de son architecture et de ses paramètres d’inférence. Lorsque vous posez une question à un modèle et qu’il répond avec assurance, vous ne pouvez pas savoir si la réponse reflète un large consensus de connaissances ou une invention plausible.',
-            ‘Ce n’est pas un défaut propre à un modèle. Les grands modèles de langage actuels peuvent halluciner, en produisant des affirmations fausses avec la même aisance et la même assurance que des affirmations exactes. Les taux d’hallucination varient selon le modèle et la tâche ; vérifiez le benchmark sur lequel vous vous appuyez.’,
+            'Ce n\u2019est pas un défaut propre à un modèle. Les grands modèles de langage actuels peuvent halluciner, en produisant des affirmations fausses avec la même aisance et la même assurance que des affirmations exactes. Les taux d\u2019hallucination varient selon le modèle et la tâche\u00a0; vérifiez le benchmark sur lequel vous vous appuyez.',
             'Le problème du modèle unique s’aggrave dans les situations à enjeux : une question médicale, une question juridique, un calcul financier. Si un modèle se trompe, rien ne vous le signale. La réponse ressemble exactement à une réponse correcte.',
           ],
         },
@@ -19583,7 +19583,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Qu’est-ce que le score de consensus en IA ? — Une technique qui envoie le même prompt à plusieurs modèles d’IA et analyse le schéma d’accord et de désaccord entre leurs réponses pour produire un signal de fiabilité pour chaque affirmation.',
             'Comment PromptQuorum calcule-t-il le consensus ? — Après avoir collecté les réponses de plusieurs modèles à l’étape Quorum, votre LLM connecté exécute des analyses comme Atomic Facts, Overlap Mapping, Confidence Scoring et détection des hallucinations pour montrer quelles affirmations sont partagées, lesquelles sont contestées et lesquelles n’apparaissent que dans une réponse. PromptQuorum n’appelle jamais un LLM avec ses propres clés API ; l’analyse passe par le LLM que vous connectez.',
             'Un score de consensus élevé est-il toujours correct ? — Non. Un consensus élevé est un signal de fiabilité, pas une garantie. Si une affirmation fausse figure dans les données d’entraînement de plusieurs modèles, tous peuvent la répéter avec assurance. Le score de consensus aide à réduire le risque d’hallucination, sans l’éliminer. Utilisez-le comme filtre, pas comme substitut à la vérification des sources primaires pour les décisions à fort enjeu.',
-            ‘Quels modèles d’IA PromptQuorum utilise-t-il pour le consensus ? — Vous choisissez. PromptQuorum prend en charge plus de 25 services d’IA cloud, dont OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral et Cohere, ainsi que des modèles locaux via Ollama, LM Studio, Jan AI et tout point d’accès compatible OpenAI. Vous configurez ceux à inclure avec vos propres clés API ; les modèles locaux s’exécutent sur votre propre machine, de sorte que les prompts qui leur sont envoyés ne parviennent pas à un fournisseur cloud.’,
+            'Quels modèles d’IA PromptQuorum utilise-t-il pour le consensus ? — Vous choisissez. PromptQuorum prend en charge plus de 25 services d’IA cloud, dont OpenAI, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral et Cohere, ainsi que des modèles locaux via Ollama, LM Studio, Jan AI et tout point d’accès compatible OpenAI. Vous configurez ceux à inclure avec vos propres clés API ; les modèles locaux s’exécutent sur votre propre machine, de sorte que les prompts qui leur sont envoyés ne parviennent pas à un fournisseur cloud.',
           ],
         },
       },
@@ -20200,16 +20200,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Bottom Line',
           content: [
             'PromptQuorum is a privacy-conscious, multi-model prompt tool built in Germany for professionals: it lets you send one prompt to 25+ AI services, including local models, apply prompt engineering frameworks, and compare responses with Quorum analysis.',
-            ‘AskQuorum AI describes itself as an AI development company in India that builds custom AI applications, automation, and assistants for business clients.’,
-            ‘If you need a custom-built assistant or application delivered by a development team, AskQuorum AI\’s service model addresses that and PromptQuorum does not.’,
-            ‘They are different kinds of offering for different needs: PromptQuorum is software you use yourself, while AskQuorum AI sells development services. Compare them against your own requirements, and confirm AskQuorum AI’s details with the company, since this page relies on its public website at the time of writing.’,
+            'AskQuorum AI describes itself as an AI development company in India that builds custom AI applications, automation, and assistants for business clients.',
+            'If you need a custom-built assistant or application delivered by a development team, AskQuorum AI\’s service model addresses that and PromptQuorum does not.',
+            'They are different kinds of offering for different needs: PromptQuorum is software you use yourself, while AskQuorum AI sells development services. Compare them against your own requirements, and confirm AskQuorum AI’s details with the company, since this page relies on its public website at the time of writing.',
           ],
         },
       },
     },
     ar: {
-      category: ‘مقارنة’,
-      title: ‘PromptQuorum مقابل AskQuorum AI — ما الفرق؟’,
+      category: 'مقارنة',
+      title: 'PromptQuorum مقابل AskQuorum AI — ما الفرق؟',
       intro: 'اسمان متشابهان، ونوعان مختلفان من المنتجات. إليك عرضًا واقعيًا لما هو PromptQuorum ولما تقول AskQuorum AI إنها تقدّمه على موقعها الإلكتروني، لتتمكن من التمييز بينهما.',
       publishDate: 'نُشر في 17 مارس 2026',
       seoTitle: 'PromptQuorum مقابل AskQuorum AI: أوجه الاختلاف',
@@ -20502,7 +20502,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         privacy: {
           title: 'Confidentialité et RGPD',
           content: [
-            ‘PromptQuorum est conçu pour un usage attentif au RGPD : les clés API sont stockées localement dans votre navigateur, et PromptQuorum n’appelle jamais un LLM avec ses propres clés. Cela décrit la conception du produit, pas une garantie juridique de conformité pour votre cas d’usage.’,
+            'PromptQuorum est conçu pour un usage attentif au RGPD : les clés API sont stockées localement dans votre navigateur, et PromptQuorum n’appelle jamais un LLM avec ses propres clés. Cela décrit la conception du produit, pas une garantie juridique de conformité pour votre cas d’usage.',
             'La page d’accueil d’AskQuorum AI renvoie vers des pages Confidentialité, Conditions et Sécurité et indique qu’un accord de confidentialité est signé avant tout échange technique ; elle ne mentionne pas le RGPD sur les pages que nous avons examinées. Si vous traitez des données personnelles, demandez directement à l’entreprise ses conditions de traitement des données.',
           ],
         },
@@ -20524,9 +20524,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'En résumé',
           content: [
             'PromptQuorum est un outil de prompts multi-modèles, attentif à la confidentialité, conçu en Allemagne pour les professionnels : il permet d’envoyer un prompt à plus de 25 services d’IA, y compris des modèles locaux, d’appliquer des frameworks de prompt engineering et de comparer les réponses avec l’analyse Quorum.',
-            ‘AskQuorum AI se décrit comme une entreprise de développement d’IA en Inde qui conçoit pour des clients professionnels des applications d’IA sur mesure, de l’automatisation et des assistants.’,
-            ‘Si vous avez besoin d’un assistant ou d’une application sur mesure livré par une équipe de développement, le modèle de service d’AskQuorum AI répond à ce besoin — ce que PromptQuorum ne fait pas.’,
-            ‘Ce sont des offres de nature différente pour des besoins différents : PromptQuorum est un logiciel que vous utilisez vous-même, tandis qu’AskQuorum AI vend des services de développement. Comparez-les à vos propres exigences et confirmez auprès de l’entreprise les informations sur AskQuorum AI, car cette page s’appuie sur son site public au moment de la rédaction.’,
+            'AskQuorum AI se décrit comme une entreprise de développement d’IA en Inde qui conçoit pour des clients professionnels des applications d’IA sur mesure, de l’automatisation et des assistants.',
+            'Si vous avez besoin d’un assistant ou d’une application sur mesure livré par une équipe de développement, le modèle de service d’AskQuorum AI répond à ce besoin — ce que PromptQuorum ne fait pas.',
+            'Ce sont des offres de nature différente pour des besoins différents : PromptQuorum est un logiciel que vous utilisez vous-même, tandis qu’AskQuorum AI vend des services de développement. Comparez-les à vos propres exigences et confirmez auprès de l’entreprise les informations sur AskQuorum AI, car cette page s’appuie sur son site public au moment de la rédaction.',
           ],
         },
       },
@@ -29581,7 +29581,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Why US Balcony Solar Was Effectively Illegal Through 2024',
           content: [
             '**A plug-in solar device pushes power through a standard outlet into a home’s wiring — the opposite of what that outlet was built for.** US utility interconnection rules were written for 5–25 kW rooftop systems, with agreements, fees and inspections that could double the cost of a $500 balcony kit, and through 2024 no state distinguished a 400W panel from a full rooftop installation.',
-            ‘Germany’s experience catalyzed the US wave. Utah Representative Raymond Ward read a New York Times article about German systems and introduced HB 340, citing Germany’s safety record: "The electricity is the same over [in Europe] as it is over here. All the same rules of physics work and have proved to be safe." ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))’,
+            'Germany’s experience catalyzed the US wave. Utah Representative Raymond Ward read a New York Times article about German systems and introduced HB 340, citing Germany’s safety record: "The electricity is the same over [in Europe] as it is over here. All the same rules of physics work and have proved to be safe." ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
           ],
         },
         theTemplate: {
@@ -29638,7 +29638,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**Utah HB 340, the Solar Power Amendments, passed unanimously and was signed by Governor Spencer Cox in March 2025, taking effect on 7 May 2025** ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)). It creates a "small portable solar generation device" category capped at 1,200W, exempts those devices from utility interconnection agreements and fees, and requires no notification to the utility.',
             'Sponsor Raymond Ward framed the bill around consumer choice and cost: "It’s great for anyone who wants a little solar power but does not want to pay $30,000 for a roof install" — a framing other states reused.',
-            ‘**The catch: the law relied on a certification standard that did not yet exist.** UL Solutions published UL 3700 in December 2025, after the law took effect, and the first products were marketed as meeting UL 3700 in July 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Check a product\’s actual UL 3700 listing before relying on it.’,
+            '**The catch: the law relied on a certification standard that did not yet exist.** UL Solutions published UL 3700 in December 2025, after the law took effect, and the first products were marketed as meeting UL 3700 in July 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Check a product\’s actual UL 3700 listing before relying on it.',
           ],
         },
         california: {
@@ -29724,7 +29724,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'What is UL 3700 and why does it matter for legality?',
-              a: ‘UL 3700 is the US safety certification standard for plug-in solar systems, published by UL Solutions in December 2025. Signed state laws generally require it or an equivalent. The first products were marketed as meeting UL 3700 in July 2026, but only a handful carry any listing, so check a specific product\’s status before buying.’,
+              a: 'UL 3700 is the US safety certification standard for plug-in solar systems, published by UL Solutions in December 2025. Signed state laws generally require it or an equivalent. The first products were marketed as meeting UL 3700 in July 2026, but only a handful carry any listing, so check a specific product\’s status before buying.',
             },
             {
               q: 'Why don’t these laws let me sell excess power back to the grid?',
@@ -29768,7 +29768,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'What is UL 3700 and why does it matter for legality?',
-            acceptedAnswer: { ‘@type’: ‘Answer’, text: ‘UL 3700 is the US safety certification standard for plug-in solar systems, published by UL Solutions in December 2025. Signed state laws generally require it or an equivalent. The first products were marketed as meeting UL 3700 in July 2026, but only a handful carry any listing, so check a specific product\’s status before buying.’ },
+            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700 is the US safety certification standard for plug-in solar systems, published by UL Solutions in December 2025. Signed state laws generally require it or an equivalent. The first products were marketed as meeting UL 3700 in July 2026, but only a handful carry any listing, so check a specific product\’s status before buying.' },
           },
           {
             '@type': 'Question',
@@ -30553,7 +30553,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Pourquoi le solaire de balcon était de fait illégal aux États-Unis jusqu’en 2024',
           content: [
             '**Un appareil solaire enfichable injecte du courant par une prise standard dans le câblage du logement — l’inverse de ce pour quoi cette prise est conçue.** Les règles américaines de raccordement ont été écrites pour des toitures de 5 à 25 kW, avec contrats, frais et inspections pouvant doubler le coût d’un kit de balcon à 500 $ ; jusqu’en 2024, aucun État ne distinguait un panneau de 400 W d’une installation complète sur toit.',
-            ‘L’expérience allemande a déclenché la vague américaine. Le représentant de l’Utah Raymond Ward a lu un article du New York Times sur les systèmes allemands et déposé le HB 340, en citant le bilan de sécurité allemand : « L’électricité est la même [en Europe] qu’ici. Toutes les lois de la physique fonctionnent de la même façon et se sont révélées sûres. » ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))’,
+            'L’expérience allemande a déclenché la vague américaine. Le représentant de l’Utah Raymond Ward a lu un article du New York Times sur les systèmes allemands et déposé le HB 340, en citant le bilan de sécurité allemand : « L’électricité est la même [en Europe] qu’ici. Toutes les lois de la physique fonctionnent de la même façon et se sont révélées sûres. » ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/))',
           ],
         },
         theTemplate: {
@@ -30610,7 +30610,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '**Le HB 340 de l’Utah, les Solar Power Amendments, a été adopté à l’unanimité et signé par le gouverneur Spencer Cox en mars 2025, pour une entrée en vigueur le 7 mai 2025** ([Grist](https://grist.org/energy/utah-portable-plug-in-solar-law/)). Il crée une catégorie d’« appareils de production solaire portables de petite taille » plafonnés à 1 200 W, les exempte des contrats et frais de raccordement et n’exige aucune notification au distributeur.',
             'Le promoteur Raymond Ward a présenté le texte sous l’angle du choix du consommateur et du coût : « C’est idéal pour qui veut un peu de solaire sans payer 30 000 $ pour une installation sur toit » — un cadrage repris par d’autres États.',
-            ‘**Le piège : la loi reposait sur une norme de certification qui n’existait pas encore.** UL Solutions a publié UL 3700 en décembre 2025, après l’entrée en vigueur, et les premiers produits ont été commercialisés comme conformes à UL 3700 en juillet 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Vérifiez l’inscription UL 3700 réelle d’un produit avant de vous y fier.’,
+            '**Le piège : la loi reposait sur une norme de certification qui n’existait pas encore.** UL Solutions a publié UL 3700 en décembre 2025, après l’entrée en vigueur, et les premiers produits ont été commercialisés comme conformes à UL 3700 en juillet 2026 ([solar.com](https://www.solar.com/learn/ul-3700-certification-which-plug-in-solar-products-have-this-safety-stamp/)). Vérifiez l’inscription UL 3700 réelle d’un produit avant de vous y fier.',
           ],
         },
         california: {
@@ -30648,7 +30648,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         ulCertification: {
           title: 'UL 3700 : les premiers produits sont certifiés, mais peu portent la mention',
           content: [
-            ‘**Les lois adoptées conditionnent généralement l’usage légal à UL 3700 ou à une certification équivalente.** UL Solutions a publié l’Outline of Investigation UL 3700 en décembre 2025 et les essais ont ouvert en janvier 2026 ; les premiers produits ont été commercialisés comme conformes à UL 3700 en juillet 2026 (Hoymiles HiFlow Pro selon Hoymiles ; InsideEVs a corrigé un rapport antérieur de « certifié » ; APsystems EZ1 « certifié CSA » selon solar.com). Des articles d’octobre 2026 ne décrivent qu’une poignée de produits avec une mention et aucun kit complet certifié : la plupart des kits du marché ne sont donc pas encore certifiés.’,
+            '**Les lois adoptées conditionnent généralement l’usage légal à UL 3700 ou à une certification équivalente.** UL Solutions a publié l’Outline of Investigation UL 3700 en décembre 2025 et les essais ont ouvert en janvier 2026 ; les premiers produits ont été commercialisés comme conformes à UL 3700 en juillet 2026 (Hoymiles HiFlow Pro selon Hoymiles ; InsideEVs a corrigé un rapport antérieur de « certifié » ; APsystems EZ1 « certifié CSA » selon solar.com). Des articles d’octobre 2026 ne décrivent qu’une poignée de produits avec une mention et aucun kit complet certifié : la plupart des kits du marché ne sont donc pas encore certifiés.',
             'UL 3700 teste trois risques : les surintensités qui pourraient dépasser un disjoncteur, l’incompatibilité avec la protection différentielle (GFCI) qui pourrait la neutraliser sans signal, et la sécurité au toucher des broches exposées de la fiche ; la norme exige aussi un arrêt anti-îlotage lors d’une panne de réseau ([SimplePlugInSolar](https://simplepluginsolar.com/learn/what-is-ul-3700)).',
             'Un appareil vendu comme « UL 3700 ready » n’a pas forcément achevé la certification. Vérifiez l’affirmation précise auprès du fabricant ou dans la base de certification d’UL avant d’acheter.',
           ],
@@ -30656,7 +30656,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         advocacy: {
           title: 'Qui porte ce mouvement : Bright Saver et le représentant Ward',
           content: [
-            ‘L’association [Bright Saver](https://brightsaver.org/) fournit aux élus des projets de loi types et des ressources d’organisation, État par État.’,
+            'L’association [Bright Saver](https://brightsaver.org/) fournit aux élus des projets de loi types et des ressources d’organisation, État par État.',
             'Le représentant Ward de l’Utah a conseillé des élus à Hawaï, dans l’État de Washington, au Minnesota, au Colorado et ailleurs, ce qui explique en partie la similitude des textes dans des législatures très différentes.',
           ],
         },
@@ -30696,7 +30696,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Qu’est-ce que UL 3700 et pourquoi est-ce important pour la légalité ?',
-              a: ‘UL 3700 est la norme américaine de certification de sécurité des systèmes solaires enfichables, publiée par UL Solutions en décembre 2025. Les lois d’États signées l’exigent généralement, ou une norme équivalente. Les premiers produits ont été commercialisés comme conformes en juillet 2026, mais très peu portent une mention ; vérifiez le statut d’un produit avant d’acheter.’,
+              a: 'UL 3700 est la norme américaine de certification de sécurité des systèmes solaires enfichables, publiée par UL Solutions en décembre 2025. Les lois d’États signées l’exigent généralement, ou une norme équivalente. Les premiers produits ont été commercialisés comme conformes en juillet 2026, mais très peu portent une mention ; vérifiez le statut d’un produit avant d’acheter.',
             },
             {
               q: 'Pourquoi ces lois ne me permettent-elles pas de revendre l’excédent au réseau ?',
@@ -30740,7 +30740,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'Qu’est-ce que UL 3700 et pourquoi est-ce important pour la légalité ?',
-            acceptedAnswer: { ‘@type’: ‘Answer’, text: ‘UL 3700 est la norme américaine de certification de sécurité des systèmes solaires enfichables, publiée par UL Solutions en décembre 2025. Les lois d’États signées l’exigent généralement, ou une norme équivalente. Les premiers produits ont été commercialisés comme conformes en juillet 2026, mais très peu portent une mention ; vérifiez le statut d’un produit avant d’acheter.’ },
+            acceptedAnswer: { '@type': 'Answer', text: 'UL 3700 est la norme américaine de certification de sécurité des systèmes solaires enfichables, publiée par UL Solutions en décembre 2025. Les lois d’États signées l’exigent généralement, ou une norme équivalente. Les premiers produits ont été commercialisés comme conformes en juillet 2026, mais très peu portent une mention ; vérifiez le statut d’un produit avant d’acheter.' },
           },
           {
             '@type': 'Question',
