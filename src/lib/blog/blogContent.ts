@@ -20155,7 +20155,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         origins: {
           title: 'Company Origins',
           content: [
-            'PromptQuorum is built in Germany (see the [impressum](/impressum)) and designed with European data-privacy norms in mind, including GDPR and local-first data handling. It targets developers, researchers, and professionals who work with multiple AI models in a structured way.',
+            'PromptQuorum is built in Germany (see the impressum) and designed with European data-privacy norms in mind, including GDPR and local-first data handling. It targets developers, researchers, and professionals who work with multiple AI models in a structured way.',
             'According to its own website, AskQuorum AI is an AI development company based in Noida, India, offering consulting, custom AI and app development, automation, and cloud and DevOps work for clients in the US, UK, Europe, Australia, and New Zealand ([AskQuorum AI](https://askquorumai.com)). Its Kavya assistant qualifies leads on WhatsApp in nine languages and is built individually for each business.',
           ],
         },
@@ -20235,7 +20235,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         origins: {
           title: 'أصول الشركتين',
           content: [
-            'يُطوَّر PromptQuorum في ألمانيا (راجع [بيانات الشركة](/impressum)) ويُصمَّم مع مراعاة معايير خصوصية البيانات الأوروبية، ومنها GDPR والمعالجة المحلية للبيانات. ويستهدف المطورين والباحثين والمحترفين الذين يعملون بأسلوب منظم مع عدة نماذج ذكاء اصطناعي.',
+            'يُطوَّر PromptQuorum في ألمانيا (راجع بيانات الشركة) ويُصمَّم مع مراعاة معايير خصوصية البيانات الأوروبية، ومنها GDPR والمعالجة المحلية للبيانات. ويستهدف المطورين والباحثين والمحترفين الذين يعملون بأسلوب منظم مع عدة نماذج ذكاء اصطناعي.',
             'بحسب موقعها الإلكتروني، AskQuorum AI شركة تطوير ذكاء اصطناعي مقرها نويدا في الهند، تقدّم الاستشارات وتطوير الذكاء الاصطناعي والتطبيقات المخصصة والأتمتة والخدمات السحابية وDevOps لعملاء في الولايات المتحدة والمملكة المتحدة وأوروبا وأستراليا ونيوزيلندا ([AskQuorum AI](https://askquorumai.com)). ويؤهّل مساعدها Kavya العملاء المحتملين على WhatsApp بتسع لغات ويُبنى بشكل فردي لكل نشاط تجاري.',
           ],
         },
@@ -20315,7 +20315,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         origins: {
           title: 'Origen de las empresas',
           content: [
-            'PromptQuorum se desarrolla en Alemania (consulta el [aviso legal](/impressum)) y se diseña teniendo en cuenta las normas europeas de privacidad, incluidos el RGPD y el tratamiento local de datos. Está dirigido a desarrolladores, investigadores y profesionales que trabajan de forma estructurada con varios modelos de IA.',
+            'PromptQuorum se desarrolla en Alemania (consulta el aviso legal) y se diseña teniendo en cuenta las normas europeas de privacidad, incluidos el RGPD y el tratamiento local de datos. Está dirigido a desarrolladores, investigadores y profesionales que trabajan de forma estructurada con varios modelos de IA.',
             'Según su propio sitio web, AskQuorum AI es una empresa de desarrollo de IA con sede en Noida (India) que ofrece consultoría, desarrollo de IA y aplicaciones a medida, automatización y servicios de nube y DevOps para clientes de EE. UU., Reino Unido, Europa, Australia y Nueva Zelanda ([AskQuorum AI](https://askquorumai.com)). Su asistente Kavya califica leads en WhatsApp en nueve idiomas y se construye de forma individual para cada negocio.',
           ],
         },
@@ -20395,7 +20395,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         origins: {
           title: 'Herkunft der Unternehmen',
           content: [
-            'PromptQuorum wird in Deutschland entwickelt (siehe das [Impressum](/impressum)) und unter Berücksichtigung europäischer Datenschutznormen konzipiert, darunter DSGVO und lokale Datenverarbeitung. Es richtet sich an Entwickler, Forschende und Fachleute, die strukturiert mit mehreren KI-Modellen arbeiten.',
+            'PromptQuorum wird in Deutschland entwickelt (siehe das Impressum) und unter Berücksichtigung europäischer Datenschutznormen konzipiert, darunter DSGVO und lokale Datenverarbeitung. Es richtet sich an Entwickler, Forschende und Fachleute, die strukturiert mit mehreren KI-Modellen arbeiten.',
             'Laut eigener Website ist AskQuorum AI ein KI-Entwicklungsunternehmen mit Sitz in Noida, Indien, das Beratung, individuelle KI- und App-Entwicklung, Automatisierung sowie Cloud- und DevOps-Leistungen für Kunden in den USA, Großbritannien, Europa, Australien und Neuseeland anbietet ([AskQuorum AI](https://askquorumai.com)). Der Assistent Kavya qualifiziert Leads auf WhatsApp in neun Sprachen und wird für jedes Unternehmen individuell gebaut.',
           ],
         },
@@ -20475,7 +20475,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         origins: {
           title: 'Origines des entreprises',
           content: [
-            'PromptQuorum est développé en Allemagne (voir les [mentions légales](/impressum)) et conçu dans le respect des normes européennes de protection des données, dont le RGPD et le traitement local des données. Il s’adresse aux développeurs, chercheurs et professionnels qui travaillent de façon structurée avec plusieurs modèles d’IA.',
+            'PromptQuorum est développé en Allemagne (voir les mentions légales) et conçu dans le respect des normes européennes de protection des données, dont le RGPD et le traitement local des données. Il s’adresse aux développeurs, chercheurs et professionnels qui travaillent de façon structurée avec plusieurs modèles d’IA.',
             'D’après son propre site, AskQuorum AI est une entreprise de développement d’IA basée à Noida, en Inde, qui propose conseil, développement d’IA et d’applications sur mesure, automatisation, cloud et DevOps pour des clients aux États-Unis, au Royaume-Uni, en Europe, en Australie et en Nouvelle-Zélande ([AskQuorum AI](https://askquorumai.com)). Son assistant Kavya qualifie des prospects sur WhatsApp en neuf langues et est conçu individuellement pour chaque entreprise.',
           ],
         },
@@ -20555,7 +20555,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         origins: {
           title: '企業の成り立ち',
           content: [
-            'PromptQuorumはドイツで開発され（[運営者情報](/impressum)を参照）、GDPRやローカル優先のデータ処理を含む欧州のデータ保護の規範を念頭に設計されています。複数のAIモデルを体系的に扱う開発者、研究者、専門家を対象としています。',
+            'PromptQuorumはドイツで開発され（運営者情報を参照）、GDPRやローカル優先のデータ処理を含む欧州のデータ保護の規範を念頭に設計されています。複数のAIモデルを体系的に扱う開発者、研究者、専門家を対象としています。',
             'AskQuorum AIは、自社サイトによると、インドのノイダに拠点を置くAI開発会社で、米国、英国、欧州、オーストラリア、ニュージーランドの顧客向けに、コンサルティング、カスタムAI・アプリ開発、自動化、クラウドとDevOpsを提供しています（[AskQuorum AI](https://askquorumai.com)）。同社のアシスタントKavyaは、WhatsApp上で9言語でリードを選別し、企業ごとに個別に構築されます。',
           ],
         },
@@ -20635,7 +20635,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         origins: {
           title: '公司背景',
           content: [
-            'PromptQuorum在德国开发（参见[公司信息页](/impressum)），设计时考虑了欧洲的数据隐私规范，包括GDPR和本地优先的数据处理。它面向以结构化方式使用多个AI模型的开发者、研究人员和专业人士。',
+            'PromptQuorum在德国开发（参见公司信息页），设计时考虑了欧洲的数据隐私规范，包括GDPR和本地优先的数据处理。它面向以结构化方式使用多个AI模型的开发者、研究人员和专业人士。',
             '据其官网，AskQuorum AI是一家总部位于印度诺伊达的AI开发公司，为美国、英国、欧洲、澳大利亚和新西兰的客户提供咨询、定制AI与应用开发、自动化以及云和DevOps服务（[AskQuorum AI](https://askquorumai.com)）。其Kavya助手在WhatsApp上以九种语言筛选销售线索，并为每家企业单独构建。',
           ],
         },
@@ -20715,7 +20715,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         origins: {
           title: 'Origem das empresas',
           content: [
-            'O PromptQuorum é desenvolvido na Alemanha (veja o [impressum](/impressum)) e projetado levando em conta as normas europeias de privacidade, incluindo o GDPR e o tratamento local de dados. Ele é voltado a desenvolvedores, pesquisadores e profissionais que trabalham de forma estruturada com vários modelos de IA.',
+            'O PromptQuorum é desenvolvido na Alemanha (veja o impressum) e projetado levando em conta as normas europeias de privacidade, incluindo o GDPR e o tratamento local de dados. Ele é voltado a desenvolvedores, pesquisadores e profissionais que trabalham de forma estruturada com vários modelos de IA.',
             'Segundo seu próprio site, a AskQuorum AI é uma empresa de desenvolvimento de IA sediada em Noida, na Índia, que oferece consultoria, desenvolvimento de IA e aplicativos sob medida, automação e serviços de nuvem e DevOps para clientes nos EUA, no Reino Unido, na Europa, na Austrália e na Nova Zelândia ([AskQuorum AI](https://askquorumai.com)). Seu assistente Kavya qualifica leads no WhatsApp em nove idiomas e é construído individualmente para cada negócio.',
           ],
         },
@@ -20795,7 +20795,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         origins: {
           title: '회사의 배경',
           content: [
-            'PromptQuorum은 독일에서 개발되며([회사 정보](/impressum) 참조), GDPR과 로컬 우선 데이터 처리를 포함한 유럽의 개인정보 보호 규범을 염두에 두고 설계되었습니다. 여러 AI 모델을 체계적으로 다루는 개발자, 연구자, 전문가를 대상으로 합니다.',
+            'PromptQuorum은 독일에서 개발되며(회사 정보 참조), GDPR과 로컬 우선 데이터 처리를 포함한 유럽의 개인정보 보호 규범을 염두에 두고 설계되었습니다. 여러 AI 모델을 체계적으로 다루는 개발자, 연구자, 전문가를 대상으로 합니다.',
             'AskQuorum AI는 자사 웹사이트에 따르면 인도 노이다에 본사를 둔 AI 개발 회사로, 미국, 영국, 유럽, 호주, 뉴질랜드의 고객에게 컨설팅, 맞춤형 AI 및 앱 개발, 자동화, 클라우드와 DevOps를 제공합니다([AskQuorum AI](https://askquorumai.com)). 어시스턴트 Kavya는 WhatsApp에서 9개 언어로 잠재 고객을 선별하며 기업별로 개별 구축됩니다.',
           ],
         },
