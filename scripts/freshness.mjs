@@ -14,6 +14,10 @@
  * first published, not since it was last edited, so it can overstate staleness;
  * flagged per-post in the warnings list when this fallback is used.
  *
+ * Per-locale scoring (v3): each of the 8 non-EN locales is read from the same file and compared
+ * with the EN date of the page; `--locale-details` lists missing/undated blocks and the most
+ * lagging translations. Quoted JSON-style keys ("dateModified") are parsed like bare ones.
+ *
  * GSC weighting is optional: paste a Search Console "Pages" export into
  * freshness-data/input.txt (gitignored) before running. Without it, only the
  * unweighted section is produced.
@@ -209,19 +213,44 @@ function parseFlexibleDate(raw) {
   return null
 }
 
+// Splits an article file into its locale blocks, whatever the indent (2 or 4 spaces) and
+// whether keys are bare or quoted.
+const LOCALES = ['de', 'fr', 'es', 'ja', 'zh', 'pt', 'ar', 'ko']
+const _blockCache = new Map()
+function splitLocaleBlocks(src) {
+  if (_blockCache.has(src)) return _blockCache.get(src)
+  const re = /\n( {2,4})["']?(en|de|fr|es|ja|zh|pt|ar|ko)["']?:\s*\{/g
+  const hits = []
+  let m
+  while ((m = re.exec(src))) hits.push({ indent: m[1].length, loc: m[2], start: m.index, end: m.index + m[0].length })
+  // Files are not uniformly indented (a later-added `ko:` block may sit at 2 spaces while the
+  // rest sit at 4), so accept every locale key at 2-4 spaces; first occurrence per locale wins.
+  // A block ends at the next locale key of any kind — dates sit at the top of each block.
+  const blocks = {}
+  hits.forEach((h, i) => {
+    if (!(h.loc in blocks)) blocks[h.loc] = src.slice(h.end, i + 1 < hits.length ? hits[i + 1].start : src.length)
+  })
+  _blockCache.clear()
+  _blockCache.set(src, blocks)
+  return blocks
+}
+
 function extractEnBlock(src) {
-  const m = src.match(/\n {2}en:\s*\{([\s\S]*?)\n {2}(?:de|fr|es|ja|zh|pt|ar|ko):\s*\{/)
-  return m ? m[1] : src
+  return splitLocaleBlocks(src).en ?? src
+}
+
+function extractLocaleBlock(src, loc) {
+  return splitLocaleBlocks(src)[loc] ?? null
 }
 
 function extractField(block, field) {
   // Quoted values first — matched by same-quote-char, not by stopping at the first
   // comma, since date values like 'Published March 14, 2026' contain one.
-  const quotedRe = new RegExp(`\\n\\s*${field}:\\s*(['"])((?:\\\\.|(?!\\1)[\\s\\S])*)\\1`)
+  const quotedRe = new RegExp(`\\n\\s*["']?${field}["']?:\\s*(['"])((?:\\\\.|(?!\\1)[\\s\\S])*)\\1`)
   const qm = quotedRe.exec(block)
   if (qm) return qm[2]
   // bare identifier referencing a shared constant
-  const identRe = new RegExp(`\\n\\s*${field}:\\s*([A-Z_][A-Z0-9_]*)\\s*,?`)
+  const identRe = new RegExp(`\\n\\s*["']?${field}["']?:\\s*([A-Z_][A-Z0-9_]*)\\s*,?`)
   const im = identRe.exec(block)
   if (im) return resolveConstant(im[1])
   return null
@@ -300,12 +329,21 @@ function loadBlogArticles() {
       warnings.push(`blog/${slug}: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)`)
     }
 
+    const locales = {}
+    for (const loc of LOCALES) {
+      const lb = extractNamedBlock(postBlock, loc, 4)
+      const raw = lb ? extractField(lb, 'last_full_refresh') || extractField(lb, 'publishDate') : null
+      const lp = raw ? parseFlexibleDate(raw) : null
+      locales[loc] = lb ? (lp ? lp.date : 'nodate') : 'missing'
+    }
+
     articles.push({
       cluster: 'blog',
       slug,
       urlPath: '/blog/' + slug,
       date: parsed.date,
       dateSource: usedField,
+      locales,
     })
   }
   return { articles, warnings }
@@ -345,12 +383,21 @@ function loadArticles() {
         warnings.push(`${cluster.name}/${slug}: ${usedField} is not ISO 8601 ("${usedField === 'dateModified' ? dateModifiedRaw : publishDateRaw}") — parsed leniently, fix at source`)
       }
 
+      const locales = {}
+      for (const loc of LOCALES) {
+        const lb = extractLocaleBlock(src, loc)
+        const raw = lb ? extractField(lb, 'dateModified') || extractField(lb, 'publishDate') : null
+        const lp = raw ? parseFlexibleDate(raw) : null
+        locales[loc] = lb ? (lp ? lp.date : 'nodate') : 'missing'
+      }
+
       articles.push({
         cluster: cluster.name,
         slug,
         urlPath: cluster.urlPrefix + slug,
         date: parsed.date,
         dateSource: usedField,
+        locales,
       })
     }
   }
@@ -517,6 +564,52 @@ function main() {
     console.log(`  ${b.label.padEnd(7)} ${String(b.count).padStart(4)} pages (${b.pct}%)`)
   }
 
+  // Per-locale freshness: compare each translation's own date to the EN date of the same page.
+  // lag = EN date minus locale date (days); > LOCALE_LAG_DAYS means the translation trails EN.
+  const LOCALE_LAG_DAYS = 30
+  const localeStats = {}
+  const localeLagging = []
+  for (const loc of LOCALES) {
+    let withDate = 0, noDate = 0, missing = 0, lagging = 0
+    const ageList = []
+    for (const a of articles) {
+      const v = a.locales?.[loc]
+      if (v === 'missing') { missing++; continue }
+      if (v === 'nodate') { noDate++; continue }
+      withDate++
+      ageList.push(daysSince(v, now))
+      const lag = Math.round((a.date - v) / 86400000)
+      if (lag > LOCALE_LAG_DAYS) {
+        lagging++
+        localeLagging.push({ urlPath: a.urlPath, locale: loc, lagDays: lag, localeAgeDays: daysSince(v, now) })
+      }
+    }
+    localeStats[loc] = {
+      withDate, noDate, missing, lagging,
+      meanDays: ageList.length ? +mean(ageList).toFixed(1) : null,
+      medianDays: ageList.length ? median(ageList) : null,
+    }
+  }
+  console.log(`\nPER-LOCALE FRESHNESS (own dateModified; lagging = trails the EN date by > ${LOCALE_LAG_DAYS}d)`)
+  console.log(`  loc   dated  nodate  missing  lagging  mean  median`)
+  for (const loc of LOCALES) {
+    const t = localeStats[loc]
+    console.log(`  ${loc.padEnd(4)} ${String(t.withDate).padStart(6)} ${String(t.noDate).padStart(7)} ${String(t.missing).padStart(8)} ${String(t.lagging).padStart(8)} ${String(t.meanDays ?? '-').padStart(5)} ${String(t.medianDays ?? '-').padStart(7)}`)
+  }
+
+  if (process.argv.includes('--locale-details')) {
+    console.log(`\nLOCALE DETAILS (--locale-details): pages whose locale block is missing / has no date, and lagging translations`)
+    for (const loc of LOCALES) {
+      const miss = articles.filter((a) => a.locales?.[loc] === 'missing').map((a) => a.urlPath)
+      const nod = articles.filter((a) => a.locales?.[loc] === 'nodate').map((a) => a.urlPath)
+      console.log(`  [${loc}] missing block: ${miss.length}${miss.length ? ' → ' + miss.slice(0, 40).join(', ') : ''}`)
+      console.log(`  [${loc}] block without date: ${nod.length}${nod.length ? ' → ' + nod.join(', ') : ''}`)
+    }
+    const top = [...localeLagging].sort((a, b) => b.lagDays - a.lagDays).slice(0, 60)
+    console.log(`  Most-lagging translations (top ${top.length} of ${localeLagging.length}):`)
+    for (const l of top) console.log(`    ${l.locale} ${l.urlPath}  trails EN by ${l.lagDays}d (own age ${l.localeAgeDays}d)`)
+  }
+
   const aged90to120 = articles
     .map((a) => ({ ...a, age: daysSince(a.date, now) }))
     .filter((a) => a.age >= 90 && a.age <= 120)
@@ -539,6 +632,7 @@ function main() {
       dateSource: a.dateSource,
     })),
     warnings,
+    locales: { lagThresholdDays: LOCALE_LAG_DAYS, stats: localeStats, lagging: localeLagging },
   }
 
   let weightedSection = null
