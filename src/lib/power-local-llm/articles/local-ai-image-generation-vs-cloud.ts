@@ -12,7 +12,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-08-21',
     dateModified: '2026-11-20',
-    next_refresh_due: '2027-02-21',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-image-generation-vs-cloud-hero-en.webp',
@@ -21,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Open image models now run comfortably on consumer GPUs — FLUX, Stable Diffusion 3.5, and Qwen-Image generate images locally with no subscription and no per-image cost. Cloud services trade that setup for a browser-based workflow with commercial-safety guarantees and zero hardware requirements. This guide compares the leading local model families on license terms, VRAM requirements, and real use cases, then walks through two cloud services worth paying for — with the license fine print and pricing most comparisons skip.',
     metaDescription:
-      'FLUX, Stable Diffusion 3.5 and Qwen-Image run free on your own GPU. Adobe Firefly and getimg.ai do it all in the cloud from $8-10/mo. Honest comparison: VRAM, licenses, fine print, use cases.',
+      'Run FLUX, SD 3.5 and Qwen-Image free on your own GPU, or use Adobe Firefly and getimg.ai in the cloud. VRAM, licenses and fine print compared.',
     twitterDescription:
       'Local AI image generation 2026: FLUX, SD 3.5, Qwen-Image compared on license, VRAM, and quality — plus when a cloud service like Adobe Firefly is the better call.',
     audience:
@@ -338,16 +339,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-08-21',
     dateModified: '2026-11-20',
-    next_refresh_due: '2027-02-21',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-image-generation-vs-cloud-hero-ar.webp',
     title: 'الصور بالذكاء الاصطناعي المحلي مجانية. الصور بالذكاء الاصطناعي السحابي فورية. معالج الرسوميات (GPU) لديك هو من يقرر.',
-    seoTitle: 'توليد الصور بالذكاء الاصطناعي محلياً 2026: FLUX مقابل SD 3.5 مقابل السحابة',
+    seoTitle: 'الصور بالذكاء الاصطناعي محلياً 2026: FLUX والسحابة',
     intro:
       'أصبحت نماذج الصور مفتوحة الأوزان تعمل الآن بسلاسة على معالجات الرسوميات (GPU) الاستهلاكية — FLUX وStable Diffusion 3.5 وQwen-Image تولّد الصور محلياً دون اشتراك ودون تكلفة لكل صورة. أما الخدمات السحابية فتستبدل هذا الإعداد بسير عمل يعتمد على المتصفح مع ضمانات أمان تجاري وبلا أي متطلبات عتاد. يقارن هذا الدليل عائلات النماذج المحلية الرائدة من حيث شروط الترخيص ومتطلبات VRAM وحالات الاستخدام الفعلية، ثم يستعرض خدمتين سحابيتين تستحقان الدفع — مع تفاصيل الترخيص والتسعير الدقيقة التي تتجاهلها معظم المقارنات.',
     metaDescription:
-      'تعمل FLUX وStable Diffusion 3.5 وQwen-Image مجاناً على معالج الرسوميات (GPU) الخاص بك. تقدّم Adobe Firefly وgetimg.ai كل ذلك عبر السحابة بدءاً من 8-10 دولارات شهرياً. مقارنة صريحة: VRAM، التراخيص، التفاصيل الدقيقة، حالات الاستخدام.',
+      'يعمل FLUX وSD 3.5 وQwen-Image مجاناً على معالجك الرسومي، أو استخدم Adobe Firefly وgetimg.ai سحابياً. مقارنة VRAM والتراخيص والتفاصيل الدقيقة.',
     twitterDescription:
       'توليد الصور بالذكاء الاصطناعي محلياً 2026: مقارنة FLUX وSD 3.5 وQwen-Image من حيث الترخيص وVRAM والجودة — ومتى تكون خدمة سحابية مثل Adobe Firefly هي الخيار الأفضل.',
     audience:
@@ -664,7 +666,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-08-21',
     dateModified: '2026-11-20',
-    next_refresh_due: '2027-02-21',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-image-generation-vs-cloud-hero-de.webp',
@@ -673,7 +676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Offene Bildmodelle laufen mittlerweile problemlos auf handelsüblichen Consumer-GPUs — FLUX, Stable Diffusion 3.5 und Qwen-Image erzeugen Bilder lokal, ohne Abonnement und ohne Kosten pro Bild. Cloud-Dienste tauschen diesen Aufwand gegen einen browserbasierten Workflow mit kommerziellen Sicherheitsgarantien und ganz ohne Hardware-Anforderungen. Dieser Leitfaden vergleicht die führenden lokalen Modellfamilien nach Lizenzbedingungen, VRAM-Anforderungen und realen Anwendungsfällen und stellt anschließend zwei Cloud-Dienste vor, die ihr Geld wert sind — inklusive des Kleingedruckten zu Lizenzen und Preisen, das die meisten Vergleiche auslassen.',
     metaDescription:
-      'FLUX, Stable Diffusion 3.5 und Qwen-Image laufen kostenlos auf Ihrer eigenen GPU. Adobe Firefly und getimg.ai erledigen alles in der Cloud ab 8-10 $/Monat. Ehrlicher Vergleich: VRAM, Lizenzen, Kleingedrucktes, Anwendungsfälle.',
+      'FLUX, SD 3.5 und Qwen-Image laufen gratis auf Ihrer GPU, Adobe Firefly und getimg.ai in der Cloud. VRAM, Lizenzen und Kleingedrucktes im Vergleich.',
     twitterDescription:
       'Lokale KI-Bildgenerierung 2026: FLUX, SD 3.5 und Qwen-Image im Vergleich nach Lizenz, VRAM und Qualität — plus wann ein Cloud-Dienst wie Adobe Firefly die bessere Wahl ist.',
     audience:
@@ -998,16 +1001,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-08-21',
     dateModified: '2026-11-20',
-    next_refresh_due: '2027-02-21',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-image-generation-vs-cloud-hero-es.webp',
     title: 'Las imágenes con IA local son gratis. Las de la nube son instantáneas. Tu GPU decide.',
-    seoTitle: 'Generación de imágenes con IA local 2026: FLUX vs SD 3.5 vs la nube',
+    seoTitle: 'IA de imágenes local 2026: FLUX vs SD 3.5 vs nube',
     intro:
       'Los modelos de imagen abiertos ya funcionan cómodamente en GPU de consumo — FLUX, Stable Diffusion 3.5 y Qwen-Image generan imágenes localmente sin suscripción y sin coste por imagen. Los servicios en la nube cambian esa configuración por un flujo de trabajo desde el navegador, con garantías de seguridad comercial y sin requisitos de hardware. Esta guía compara las principales familias de modelos locales en términos de licencia, requisitos de VRAM y casos de uso reales, y luego repasa dos servicios en la nube que vale la pena pagar — con la letra pequeña de las licencias y los precios que la mayoría de comparativas se saltan.',
     metaDescription:
-      'FLUX, Stable Diffusion 3.5 y Qwen-Image funcionan gratis en tu propia GPU. Adobe Firefly y getimg.ai lo hacen todo en la nube desde $8-10/mes. Comparativa honesta: VRAM, licencias, letra pequeña, casos de uso.',
+      'FLUX, SD 3.5 y Qwen-Image gratis en tu GPU, o Adobe Firefly y getimg.ai en la nube. Comparamos VRAM, licencias y letra pequeña, con casos de uso.',
     twitterDescription:
       'Generación de imágenes con IA local 2026: FLUX, SD 3.5 y Qwen-Image comparados en licencia, VRAM y calidad — y cuándo un servicio en la nube como Adobe Firefly es la mejor opción.',
     audience:
@@ -1324,16 +1328,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-08-21',
     dateModified: '2026-11-20',
-    next_refresh_due: '2027-02-21',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-image-generation-vs-cloud-hero-fr.webp',
     title: 'Les images IA locales sont gratuites. Les images IA cloud sont instantanées. Votre GPU décide.',
-    seoTitle: 'Génération d’images IA locale 2026 : FLUX vs SD 3.5 vs Cloud',
+    seoTitle: 'IA d’images locale 2026 : FLUX vs SD 3.5 vs cloud',
     intro:
       'Les modèles d’images ouverts tournent désormais confortablement sur des GPU grand public — FLUX, Stable Diffusion 3.5 et Qwen-Image génèrent des images en local, sans abonnement ni coût par image. Les services cloud offrent en échange un flux de travail dans le navigateur, des garanties de sécurité commerciale et aucune exigence matérielle. Ce guide compare les principales familles de modèles locaux sur les conditions de licence, les besoins en VRAM et les cas d’usage réels, puis examine deux services cloud qui valent leur prix — avec les clauses de licence et les tarifs que la plupart des comparatifs omettent.',
     metaDescription:
-      'FLUX, Stable Diffusion 3.5 et Qwen-Image tournent gratuitement sur votre GPU. Adobe Firefly et getimg.ai font tout dans le cloud dès 8-10 $/mois. Comparatif honnête : VRAM, licences, clauses, cas d’usage.',
+      'FLUX, SD 3.5 et Qwen-Image gratuits sur votre GPU, ou Adobe Firefly et getimg.ai dans le cloud. VRAM, licences et clauses comparées, avec cas d’usage.',
     twitterDescription:
       'Génération d’images IA locale 2026 : FLUX, SD 3.5, Qwen-Image comparés sur licence, VRAM et qualité — et quand un service cloud comme Adobe Firefly est le meilleur choix.',
     audience:
@@ -1650,7 +1655,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-08-21',
     dateModified: '2026-11-20',
-    next_refresh_due: '2027-02-21',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-image-generation-vs-cloud-hero-ja.webp',
@@ -1659,7 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'オープンな画像モデルが、一般向けGPUで快適に動く時代になりました。FLUX、Stable Diffusion 3.5、Qwen-Imageは、サブスクリプションも1枚あたりのコストもかけずにローカルで画像を生成します。クラウドサービスは、その手間をブラウザベースのワークフローと商用利用の安全性保証、ハードウェア不要という形に置き換えます。本ガイドでは、主要なローカルモデルファミリーをライセンス条件・VRAM要件・実際のユースケースで比較し、他の比較記事が見落としがちなライセンスの細則と料金まで踏み込んで、有料に値するクラウドサービス2つを解説します。',
     metaDescription:
-      'FLUX、Stable Diffusion 3.5、Qwen-Imageは自分のGPUで無料実行可能。Adobe Fireflyとgetimg.aiは月額$8〜10でクラウド完結。VRAM・ライセンス・細則・ユースケースを正直に比較。',
+      'FLUX・SD 3.5・Qwen-Imageは自分のGPUで無料実行、Adobe Fireflyとgetimg.aiはクラウドで利用可能。VRAM・ライセンス・細則を比較します。',
     twitterDescription:
       'ローカルAI画像生成2026:FLUX、SD 3.5、Qwen-Imageをライセンス・VRAM・品質で比較。Adobe Fireflyのようなクラウドサービスが有利な場面も解説します。',
     audience:
@@ -1976,16 +1982,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-08-21',
     dateModified: '2026-11-20',
-    next_refresh_due: '2027-02-21',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-image-generation-vs-cloud-hero-ko.webp',
     title: '로컬 AI 이미지는 무료입니다. 클라우드 AI 이미지는 즉각적입니다. 선택은 GPU가 결정합니다.',
-    seoTitle: '2026년 로컬 AI 이미지 생성: FLUX vs SD 3.5 vs 클라우드',
+    seoTitle: '로컬 AI 이미지 2026: FLUX vs SD 3.5',
     intro:
       '오픈 이미지 모델은 이제 소비자용 GPU에서도 무리 없이 실행됩니다. FLUX, Stable Diffusion 3.5, Qwen-Image는 구독료나 이미지당 비용 없이 로컬에서 이미지를 생성합니다. 클라우드 서비스는 이러한 설정 과정 대신 브라우저 기반 워크플로우와 상업적 안전성 보장, 하드웨어 요구사항 없음을 제공합니다. 이 가이드는 주요 로컬 모델 계열을 라이선스 조건, VRAM 요구사항, 실제 사용 사례를 기준으로 비교한 후, 대부분의 비교 글에서 생략하는 라이선스 세부 조항과 가격 정보를 포함해 비용을 지불할 가치가 있는 두 가지 클라우드 서비스를 살펴봅니다.',
     metaDescription:
-      'FLUX, Stable Diffusion 3.5, Qwen-Image는 내 GPU에서 무료로 실행됩니다. Adobe Firefly와 getimg.ai는 월 $8-10부터 클라우드에서 모든 것을 처리합니다. VRAM, 라이선스, 세부 조항, 사용 사례를 다루는 솔직한 비교.',
+      'FLUX, SD 3.5, Qwen-Image는 내 GPU에서 무료로 실행하고, Adobe Firefly와 getimg.ai는 클라우드에서 씁니다. VRAM, 라이선스, 세부 조항을 비교합니다.',
     twitterDescription:
       '2026년 로컬 AI 이미지 생성: FLUX, SD 3.5, Qwen-Image를 라이선스, VRAM, 품질 기준으로 비교하고, Adobe Firefly 같은 클라우드 서비스가 더 나은 선택이 되는 경우도 살펴봅니다.',
     audience:
@@ -2302,16 +2309,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-08-21',
     dateModified: '2026-11-20',
-    next_refresh_due: '2027-02-21',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-image-generation-vs-cloud-hero-pt.webp',
     title: 'Imagens de IA Local São Gratuitas. Imagens de IA na Nuvem São Instantâneas. Sua GPU Decide.',
-    seoTitle: 'Geração Local de Imagens com IA 2026: FLUX vs SD 3.5 vs Nuvem',
+    seoTitle: 'IA de imagens local 2026: FLUX vs SD 3.5 vs nuvem',
     intro:
       'Modelos de imagem abertos agora rodam com folga em GPUs de consumo — FLUX, Stable Diffusion 3.5 e Qwen-Image geram imagens localmente sem assinatura e sem custo por imagem. Serviços em nuvem trocam essa configuração por um fluxo de trabalho baseado em navegador com garantias de segurança comercial e nenhum requisito de hardware. Este guia compara as principais famílias de modelos locais em termos de licença, requisitos de VRAM e casos de uso reais, e depois passa por dois serviços de nuvem que valem o investimento — com as letras miúdas de licença e preços que a maioria das comparações ignora.',
     metaDescription:
-      'FLUX, Stable Diffusion 3.5 e Qwen-Image rodam de graça na sua própria GPU. Adobe Firefly e getimg.ai fazem tudo na nuvem a partir de $8-10/mês. Comparação honesta: VRAM, licenças, letras miúdas, casos de uso.',
+      'FLUX, SD 3.5 e Qwen-Image grátis na sua GPU, ou Adobe Firefly e getimg.ai na nuvem. Comparação de VRAM, licenças e letras miúdas, com casos de uso.',
     twitterDescription:
       'Geração local de imagens com IA em 2026: FLUX, SD 3.5 e Qwen-Image comparados em licença, VRAM e qualidade — e quando um serviço em nuvem como o Adobe Firefly é a melhor escolha.',
     audience:
@@ -2628,7 +2636,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-08-21',
     dateModified: '2026-11-20',
-    next_refresh_due: '2027-02-21',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
     heroImage: '/images/local-ai-image-generation-vs-cloud-hero-zh.webp',
@@ -2637,7 +2646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '开源图像模型现已能在消费级GPU上流畅运行——FLUX、Stable Diffusion 3.5和Qwen-Image可在本地生成图像,无需订阅,也没有单张图片的费用。云端服务则用这种自建流程换来基于浏览器的工作方式,附带商用安全保证,且不需要任何硬件。本指南比较几大主流本地模型系列的许可条款、显存需求和实际应用场景,并介绍两款值得付费的云端服务——包括大多数对比文章都会忽略的许可细则和定价信息。',
     metaDescription:
-      'FLUX、Stable Diffusion 3.5和Qwen-Image可在自己的GPU上免费运行。Adobe Firefly和getimg.ai则从每月$8-10起提供全云端方案。诚实对比:显存、许可、细则条款、应用场景。',
+      'FLUX、SD 3.5和Qwen-Image可在自己的GPU上免费运行，也可用Adobe Firefly和getimg.ai云端方案。对比显存、许可与细则条款及适用场景。',
     twitterDescription:
       '2026本地AI图像生成:对比FLUX、SD 3.5、Qwen-Image的许可、显存和质量——以及何时Adobe Firefly这类云端服务才是更好的选择。',
     audience:
