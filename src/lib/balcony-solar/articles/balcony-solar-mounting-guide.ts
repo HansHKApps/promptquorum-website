@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Not every balcony solar setup actually mounts on a railing — walls, ground stands, and flat roofs all work too, and each has different wind-load, angle, and safety considerations. Picking the right mounting method for your specific surface matters more than most buyers expect.',
     metaDescription: 'Railing, wall, ground or flat roof? Compare the 4 balcony solar mounting methods: drilling needs, tilt-angle limits and wind-load safety for each.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'Balcony solar buyers choosing a mounting method for their specific surface',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Flat-roof/ballast mount: uses weighted stands rather than drilling, common for terraces',
           'Wind load rating matters more than mounting method choice — check it regardless of which surface you use',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -62,6 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Railing Mount',
         content: [
           '**Railing mounting is the fastest and most common method for standard apartment balconies — brackets clamp onto the railing without drilling, and most kits include railing-compatible hardware by default.** Check your railing\'s material and thickness against your bracket\'s compatible range before buying, since not all brackets fit every railing type.',
+          'In Germany, the DIBt has stated that the modules of plug-in solar devices are not construction products, so special technical requirements for them fell away; the [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740) still recommends considering standard modules and notes that lighter plastic modules can suit a high balcony. Before you fit a clamp bracket, check the manual for the railing materials and thicknesses it is approved for, and take extra care with a solid parapet or a glass balustrade, which can act as fall protection.',
         ],
       },
       wallMount: {
@@ -69,6 +70,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wall Mount',
         content: [
           '**Wall mounting suits balconies without a usable railing, or situations where angling the panel toward better sun exposure matters more than mounting convenience.** This method typically requires drilling into the wall surface, so confirm you have permission to do so — particularly in rented properties or buildings with HOA rules.',
+          'Where a landlord or owners\' association has to agree, German law gives tenants and condominium owners a claim to consent for plug-in solar — refusal is allowed only if the installation would be unreasonable for them ([§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)) — but drilling into a facade is a structural change, so ask before you drill. In the US, whether a lease or HOA can refuse depends on your state\'s law.',
+          'This is a general overview, not legal or electrical advice — confirm the rules that apply to you with your grid operator, your landlord or a qualified professional.',
         ],
       },
       flatRoofMount: {
@@ -114,6 +117,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Is ballast mounting as secure as drilled mounting?', a: 'It can be, provided the ballast weight is sized correctly for local wind conditions — underweighting a ballast mount is the primary failure risk with this method.' },
           { q: 'Do I need landlord or HOA permission for wall mounting?', a: 'Often yes, particularly since wall mounting typically involves drilling — confirm permission before proceeding, especially in rented properties.' },
           { q: 'Does mounting method affect how much power my panel produces?', a: 'Indirectly, through the tilt angle and orientation each method allows — a method that lets you achieve a better angle and orientation for your latitude will generally support better yield than one that constrains you to a suboptimal angle.' },
+          { q: 'Can my landlord forbid a panel on the railing?', a: 'In Germany, a landlord can refuse plug-in solar only if it is unreasonable for them under [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html), and the Verbraucherzentrale still advises asking before you install. In the US it depends on your state\'s law and your lease; a few state laws, such as New Jersey\'s, address landlord and HOA bans directly.' },
+          { q: 'Can lightweight plastic panels be used on a high balcony?', a: 'The Verbraucherzentrale notes that plastic modules are lighter and can suit a high balcony, while still recommending that you consider standard modules. Either way, the bracket\'s rated wind load and the railing\'s own capacity decide what is safe — check both with the manufacturers.' },
         ],
       },
     },
@@ -123,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Balcony Solar Mounting Guide: Railing, Wall, Ground & Flat Roof',
       description: 'Railing, wall, ground or flat roof? Compare the 4 balcony solar mounting methods: drilling needs, tilt-angle limits and wind-load safety for each.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/balcony-solar/balcony-solar-mounting-guide',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
@@ -152,7 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'No todas las instalaciones solares de balcón se montan realmente en una barandilla — las paredes, los soportes de suelo y los techos planos también funcionan, y cada uno tiene consideraciones distintas de carga de viento, ángulo y seguridad. Elegir el método de montaje adecuado para tu superficie específica importa más de lo que la mayoría de los compradores espera.',
     metaDescription: '¿Barandilla, pared, suelo o techo plano? Compara los 4 métodos de montaje de solar de balcón: taladrado, ángulo de inclinación y seguridad ante el viento.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores de solar de balcón que eligen un método de montaje para su superficie específica',
@@ -170,7 +175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Montaje en techo plano/lastre: usa soportes con peso en lugar de taladrar, común en terrazas',
           'La clasificación de carga de viento importa más que la elección del método de montaje — compruébala sin importar qué superficie uses',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -201,6 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Montaje en barandilla',
         content: [
           '**El montaje en barandilla es el método más rápido y común para balcones de apartamento estándar — los soportes se sujetan a la barandilla sin necesidad de taladrar, y la mayoría de los kits incluyen herrajes compatibles con barandilla por defecto.** Comprueba el material y el grosor de tu barandilla frente al rango compatible de tu soporte antes de comprar, ya que no todos los soportes encajan en todos los tipos de barandilla.',
+          'En Alemania, el DIBt ha señalado que los módulos de los dispositivos solares plug-in no son productos de construcción, por lo que dejaron de aplicarse requisitos técnicos especiales; la [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740) sigue recomendando valorar módulos estándar y señala que los módulos de plástico, más ligeros, pueden servir para un balcón alto. Antes de colocar un soporte de abrazadera, comprueba en el manual los materiales y grosores de barandilla para los que está homologado, y extrema el cuidado con un antepecho macizo o una barandilla de vidrio, que puede actuar como protección contra caídas.',
         ],
       },
       wallMount: {
@@ -208,6 +214,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Montaje en pared',
         content: [
           '**El montaje en pared es adecuado para balcones sin barandilla utilizable, o en situaciones donde orientar el panel hacia mejor exposición solar importa más que la comodidad de montaje.** Este método normalmente requiere taladrar la superficie de la pared, así que confirma que tienes permiso para hacerlo — especialmente en propiedades de alquiler o edificios con normas de comunidad de propietarios.',
+          'Cuando el propietario o la comunidad de vecinos deben dar su conformidad, la ley alemana otorga a inquilinos y propietarios un derecho a reclamar el consentimiento para la energía solar plug-in — solo se puede rechazar si la instalación les resulta inexigible ([§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)) —, pero taladrar la fachada es una modificación estructural, así que pregunta antes de taladrar. En EE. UU., que un contrato de alquiler o una HOA pueda negarse depende de la ley de tu estado.',
+          'Esto es una visión general, no asesoramiento legal ni eléctrico: confirma las normas que te afectan con tu operador de red, tu arrendador o un profesional cualificado.',
         ],
       },
       flatRoofMount: {
@@ -253,6 +261,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Es el montaje con lastre tan seguro como el montaje taladrado?', a: 'Puede serlo, siempre que el peso del lastre esté dimensionado correctamente según las condiciones de viento locales — un lastre con peso insuficiente es el principal riesgo de fallo con este método.' },
           { q: '¿Necesito permiso del propietario o de la comunidad para el montaje en pared?', a: 'A menudo sí, especialmente porque el montaje en pared normalmente implica taladrar — confirma el permiso antes de proceder, sobre todo en propiedades de alquiler.' },
           { q: '¿El método de montaje afecta a la cantidad de energía que produce mi panel?', a: 'Indirectamente, a través del ángulo de inclinación y la orientación que permite cada método — un método que te permite lograr un mejor ángulo y orientación para tu latitud generalmente favorecerá un mejor rendimiento que uno que te limita a un ángulo subóptimo.' },
+          { q: '¿Puede mi arrendador prohibir un panel en la barandilla?', a: 'En Alemania, un arrendador solo puede negarse a la energía solar plug-in si le resulta inexigible según el [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html), y la Verbraucherzentrale aun así aconseja preguntar antes de instalar. En EE. UU. depende de la ley de tu estado y de tu contrato; algunas leyes estatales, como la de Nueva Jersey, abordan directamente las prohibiciones de arrendadores y HOA.' },
+          { q: '¿Se pueden usar paneles de plástico ligeros en un balcón alto?', a: 'La Verbraucherzentrale señala que los módulos de plástico son más ligeros y pueden servir para un balcón alto, aunque sigue recomendando valorar módulos estándar. En cualquier caso, la carga de viento nominal del soporte y la capacidad de la propia barandilla determinan lo que es seguro: consulta ambas cosas con los fabricantes.' },
         ],
       },
     },
@@ -262,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Guía de montaje de solar de balcón: barandilla, pared, suelo y techo plano',
       description: '¿Barandilla, pared, suelo o techo plano? Compara los 4 métodos de montaje de solar de balcón: taladrado, ángulo de inclinación y seguridad ante el viento.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/es/balcony-solar/balcony-solar-mounting-guide',
@@ -292,7 +302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Nem toda instalação de energia solar de varanda é realmente fixada em uma grade — paredes, suportes de solo e telhados planos também funcionam, e cada um tem considerações diferentes de carga de vento, ângulo e segurança. Escolher o método de fixação certo para sua superfície específica importa mais do que a maioria dos compradores espera.',
     metaDescription: 'Grade, parede, solo ou telhado plano? Compare os 4 métodos de fixação de energia solar de varanda: furos, ângulo de inclinação e segurança contra vento.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores de energia solar de varanda escolhendo um método de fixação para sua superfície específica',
@@ -310,7 +320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fixação em telhado plano/lastro: usa suportes com peso em vez de perfuração, comum em terraços',
           'A classificação de carga de vento importa mais do que a escolha do método de fixação — verifique-a independentemente da superfície que você usar',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -341,6 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fixação em grade',
         content: [
           '**A fixação em grade é o método mais rápido e comum para varandas de apartamento padrão — os suportes se prendem à grade sem necessidade de perfuração, e a maioria dos kits já inclui ferragens compatíveis com grade por padrão.** Verifique o material e a espessura da sua grade em relação à faixa compatível do seu suporte antes de comprar, já que nem todo suporte se encaixa em todo tipo de grade.',
+          'Na Alemanha, o DIBt afirmou que os módulos de dispositivos solares plug-in não são produtos de construção, de modo que deixaram de valer exigências técnicas especiais; a [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740) ainda recomenda avaliar módulos padrão e observa que módulos de plástico, mais leves, podem servir para uma varanda alta. Antes de instalar um suporte de braçadeira, confira no manual os materiais e espessuras de guarda-corpo para os quais ele é aprovado, e redobre o cuidado com um parapeito maciço ou um guarda-corpo de vidro, que pode funcionar como proteção contra quedas.',
         ],
       },
       wallMount: {
@@ -348,6 +359,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fixação na parede',
         content: [
           '**A fixação na parede é indicada para varandas sem uma grade utilizável, ou em situações em que angular o painel para melhor exposição ao sol importa mais do que a conveniência de fixação.** Esse método geralmente exige perfurar a superfície da parede, então confirme se você tem permissão para isso — principalmente em imóveis alugados ou prédios com regras de condomínio.',
+          'Quando o proprietário ou o condomínio precisa concordar, a lei alemã dá a inquilinos e condôminos o direito de reivindicar o consentimento para a energia solar plug-in — a recusa só é permitida se a instalação for inexigível para eles ([§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)) —, mas furar a fachada é uma alteração estrutural, então pergunte antes de furar. Nos EUA, se um contrato de locação ou uma HOA pode recusar depende da lei do seu estado.',
+          'Esta é uma visão geral, não aconselhamento jurídico nem elétrico: confirme as regras que valem para você com sua operadora de rede, seu locador ou um profissional qualificado.',
         ],
       },
       flatRoofMount: {
@@ -393,6 +406,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'A fixação com lastro é tão segura quanto a fixação perfurada?', a: 'Pode ser, desde que o peso do lastro seja dimensionado corretamente para as condições de vento locais — um lastro com peso insuficiente é o principal risco de falha desse método.' },
           { q: 'Preciso de permissão do proprietário ou do condomínio para a fixação na parede?', a: 'Geralmente sim, principalmente porque a fixação na parede costuma envolver perfuração — confirme a permissão antes de prosseguir, especialmente em imóveis alugados.' },
           { q: 'O método de fixação afeta a quantidade de energia que meu painel produz?', a: 'Indiretamente, por meio do ângulo de inclinação e da orientação que cada método permite — um método que permite alcançar um ângulo e orientação melhores para sua latitude geralmente favorece uma geração melhor do que um que limita você a um ângulo abaixo do ideal.' },
+          { q: 'Meu locador pode proibir um painel no guarda-corpo?', a: 'Na Alemanha, um locador só pode recusar a energia solar plug-in se ela for inexigível para ele, conforme o [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html), e a Verbraucherzentrale ainda recomenda perguntar antes de instalar. Nos EUA, depende da lei do seu estado e do seu contrato; algumas leis estaduais, como a de Nova Jersey, tratam diretamente das proibições de locadores e HOAs.' },
+          { q: 'Painéis leves de plástico podem ser usados em uma varanda alta?', a: 'A Verbraucherzentrale observa que os módulos de plástico são mais leves e podem servir para uma varanda alta, mas continua recomendando avaliar módulos padrão. De qualquer forma, a carga de vento nominal do suporte e a capacidade do próprio guarda-corpo determinam o que é seguro: confirme ambas com os fabricantes.' },
         ],
       },
     },
@@ -402,7 +417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Guia de fixação de energia solar de varanda: grade, parede, solo e telhado plano',
       description: 'Grade, parede, solo ou telhado plano? Compare os 4 métodos de fixação de energia solar de varanda: furos, ângulo de inclinação e segurança contra vento.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/pt/balcony-solar/balcony-solar-mounting-guide',
@@ -432,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'ليست كل أنظمة الطاقة الشمسية للشرفة تُركَّب فعليًا على الدرابزين — فالحوائط وحوامل الأرض والأسطح المستوية تعمل جميعها أيضًا، ولكل منها اعتبارات مختلفة من حيث تحمل الرياح والزاوية والسلامة. اختيار طريقة التركيب المناسبة لسطحك المحدد أهم مما يتوقعه معظم المشترين.',
     metaDescription: 'درابزين أم حائط أم أرض أم سطح مستوٍ؟ قارن بين 4 طرق لتركيب الطاقة الشمسية على الشرفة: الحفر وزاوية الميل والسلامة من الرياح لكل نوع من الأسطح.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مشترو الطاقة الشمسية للشرفة الذين يختارون طريقة تركيب مناسبة لسطحهم المحدد',
@@ -450,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التركيب على السطح المستوي بالصفائح الموازنة (بالاست): يستخدم حوامل موزونة بدلًا من الحفر، وهو شائع في التراسات',
           'تصنيف تحمل الرياح أهم من اختيار طريقة التركيب — تحقق منه بغض النظر عن السطح الذي تستخدمه',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -481,6 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'التركيب على الدرابزين',
         content: [
           '**التركيب على الدرابزين هو الطريقة الأسرع والأكثر شيوعًا لشرفات الشقق القياسية — إذ تُثبَّت الحوامل على الدرابزين دون الحاجة إلى الحفر، وتتضمن معظم الأطقم عناصر تركيب متوافقة مع الدرابزين بشكل افتراضي.** تحقق من مادة درابزينك وسُمكه مقارنةً بالنطاق المتوافق مع حاملك قبل الشراء، لأن ليست كل الحوامل تناسب كل أنواع الدرابزين.',
+          'في ألمانيا، أوضح معهد DIBt أن ألواح أجهزة الطاقة الشمسية القابلة للتوصيل المباشر ليست منتجات بناء، ولذلك سقطت عنها المتطلبات التقنية الخاصة؛ ومع ذلك توصي [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740) بالنظر في الألواح القياسية، وتشير إلى أن الألواح البلاستيكية الأخف وزنًا قد تناسب الشرفات المرتفعة. قبل تركيب حامل بمشبك، راجع الدليل لمعرفة مواد السياج وسماكاته المعتمدة له، وكن أكثر حذرًا مع الجدار الصلب أو الدرابزين الزجاجي الذي قد يعمل كحماية من السقوط.',
         ],
       },
       wallMount: {
@@ -488,6 +504,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'التركيب على الحائط',
         content: [
           '**التركيب على الحائط مناسب للشرفات التي لا تحتوي على درابزين قابل للاستخدام، أو في الحالات التي يكون فيها توجيه اللوح نحو تعرض أفضل لأشعة الشمس أهم من سهولة التركيب.** تتطلب هذه الطريقة عادةً الحفر في سطح الحائط، لذا تأكد من حصولك على الإذن للقيام بذلك — خاصة في العقارات المستأجرة أو المباني التي تخضع لقواعد اتحاد الملاك (HOA).',
+          'حيثما يلزم موافقة المالك أو اتحاد الملاك، يمنح القانون الألماني المستأجرين وملاك الشقق حقًا في طلب الموافقة على الطاقة الشمسية القابلة للتوصيل المباشر — ولا يجوز الرفض إلا إذا كان التركيب غير معقول بالنسبة لهم ([§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)) — لكن الثقب في الواجهة تغيير إنشائي، لذا اسأل قبل أن تثقب. وفي الولايات المتحدة يعتمد جواز رفض عقد الإيجار أو اتحاد الملاك (HOA) على قانون ولايتك.',
+          'هذه نظرة عامة وليست استشارة قانونية أو كهربائية — تأكد من القواعد التي تنطبق عليك لدى مشغل الشبكة أو المؤجر أو مختص مؤهل.',
         ],
       },
       flatRoofMount: {
@@ -533,6 +551,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل التركيب بالصفائح الموازنة آمن بقدر التركيب بالحفر؟', a: 'يمكن أن يكون كذلك، شريطة تحديد وزن الصفائح الموازنة بشكل صحيح بما يتناسب مع ظروف الرياح المحلية — يُعد نقص وزن الصفائح الموازنة السبب الرئيسي لخطر الفشل في هذه الطريقة.' },
           { q: 'هل أحتاج إلى إذن من المالك أو اتحاد الملاك (HOA) للتركيب على الحائط؟', a: 'غالبًا نعم، خاصة أن التركيب على الحائط يتضمن عادةً الحفر — تأكد من الحصول على الإذن قبل المتابعة، لا سيما في العقارات المستأجرة.' },
           { q: 'هل تؤثر طريقة التركيب على كمية الطاقة التي ينتجها لوحي؟', a: 'بشكل غير مباشر، من خلال زاوية الميل والتوجيه اللذين تسمح بهما كل طريقة — الطريقة التي تتيح لك تحقيق زاوية وتوجيه أفضل يناسبان خط عرضك ستدعم عمومًا إنتاجية أفضل من طريقة تحصرك في زاوية غير مثالية.' },
+          { q: 'هل يستطيع المؤجر منعي من تركيب لوح على السياج؟', a: 'في ألمانيا لا يجوز للمؤجر رفض الطاقة الشمسية القابلة للتوصيل المباشر إلا إذا كانت غير معقولة بالنسبة له بموجب [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)، ومع ذلك تنصح Verbraucherzentrale بالسؤال قبل التركيب. وفي الولايات المتحدة يعتمد الأمر على قانون ولايتك وعقدك؛ وبعض قوانين الولايات، مثل قانون نيوجيرسي، تتناول حظر المؤجرين واتحادات الملاك (HOA) بشكل مباشر.' },
+          { q: 'هل يمكن استخدام ألواح بلاستيكية خفيفة على شرفة مرتفعة؟', a: 'تشير Verbraucherzentrale إلى أن الألواح البلاستيكية أخف وزنًا وقد تناسب الشرفات المرتفعة، مع استمرارها في التوصية بالنظر في الألواح القياسية. وفي كل الأحوال، فإن حمل الرياح المقرر للحامل وقدرة السياج نفسه هما ما يحدد مستوى الأمان — تحقق من الأمرين مع الشركات المصنِّعة.' },
         ],
       },
     },
@@ -542,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'دليل تركيب الطاقة الشمسية على الشرفة: الدرابزين والحائط والأرض والسطح المستوي',
       description: 'درابزين أم حائط أم أرض أم سطح مستوٍ؟ قارن بين 4 طرق لتركيب الطاقة الشمسية على الشرفة: الحفر وزاوية الميل والسلامة من الرياح لكل نوع من الأسطح.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'ar',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ar/balcony-solar/balcony-solar-mounting-guide',
@@ -572,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Nicht jedes Balkonkraftwerk wird tatsächlich am Geländer befestigt – auch Wände, Bodenständer und Flachdächer sind mögliche Montageflächen, und jede hat andere Anforderungen an Windlast, Neigungswinkel und Sicherheit. Die richtige Montagemethode für Ihre spezifische Fläche zu wählen ist wichtiger, als die meisten Käufer erwarten.',
     metaDescription: 'Geländer, Wand, Boden oder Flachdach? Die 4 Montagearten fürs Balkonkraftwerk im Vergleich: Bohren, Neigungswinkel und Windsicherheit je Fläche.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer eines Balkonkraftwerks, die eine Montagemethode für ihre spezifische Fläche wählen',
@@ -590,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Flachdach-/Ballastmontage: verwendet Beschwerungsständer statt Bohrungen, häufig auf Terrassen',
           'Die Windlast-Einstufung ist wichtiger als die Wahl der Montagemethode – prüfen Sie sie unabhängig von der verwendeten Fläche',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -621,6 +641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Geländermontage',
         content: [
           '**Die Geländermontage ist bei Standard-Wohnungsbalkonien die schnellste und häufigste Methode – Halterungen werden ohne Bohren am Geländer befestigt, und die meisten Sets enthalten standardmäßig geländerkompatible Hardware.** Prüfen Sie vor dem Kauf das Material und die Stärke Ihres Geländers gegenüber dem kompatiblen Bereich Ihrer Halterung, da nicht alle Halterungen zu jedem Geländertyp passen.',
+          'In Deutschland hat das DIBt festgestellt, dass die Module von Steckersolargeräten keine Bauprodukte sind, sodass besondere technische Vorgaben dafür entfallen sind; die [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740) empfiehlt dennoch, Standardmodule in Betracht zu ziehen, und weist darauf hin, dass leichtere Kunststoffmodule für einen hohen Balkon geeignet sein können. Prüfen Sie vor der Montage einer Klemmhalterung in der Anleitung, für welche Geländermaterialien und -stärken sie zugelassen ist, und gehen Sie bei einer massiven Brüstung oder einer Glasbrüstung, die als Absturzsicherung dienen kann, besonders sorgfältig vor.',
         ],
       },
       wallMount: {
@@ -628,6 +649,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wandmontage',
         content: [
           '**Die Wandmontage eignet sich für Balkone ohne nutzbares Geländer oder für Situationen, in denen eine bessere Ausrichtung des Moduls zur Sonne wichtiger ist als Montagekomfort.** Diese Methode erfordert in der Regel das Bohren in die Wandfläche – bestätigen Sie, dass Sie dazu berechtigt sind, insbesondere bei Mietwohnungen oder Gebäuden mit WEG-Hausordnung.',
+          'Wo Vermieter oder Eigentümergemeinschaft zustimmen müssen, räumt das deutsche Recht Mietern und Wohnungseigentümern einen Anspruch auf Zustimmung zu Steckersolar ein — eine Ablehnung ist nur zulässig, wenn die Installation für sie unzumutbar wäre ([§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)) —, doch das Bohren in die Fassade ist eine bauliche Veränderung, fragen Sie also vor dem Bohren. In den USA hängt es vom Recht Ihres Bundesstaats ab, ob ein Mietvertrag oder eine HOA ablehnen darf.',
+          'Dies ist ein allgemeiner Überblick und keine Rechts- oder Elektroberatung — klären Sie die für Sie geltenden Regeln mit Ihrem Netzbetreiber, Ihrem Vermieter oder einer Fachperson ab.',
         ],
       },
       flatRoofMount: {
@@ -673,6 +696,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ist die Ballastmontage genauso sicher wie gebohrte Montage?', a: 'Das kann sie sein, sofern das Ballastgewicht korrekt auf die lokalen Windverhältnisse abgestimmt ist – unzureichendes Ballastgewicht ist das Hauptausfallrisiko bei dieser Methode.' },
           { q: 'Brauche ich Genehmigungen vom Vermieter oder der WEG für die Wandmontage?', a: 'Oft ja, insbesondere da die Wandmontage üblicherweise Bohren erfordert – bestätigen Sie die Genehmigung vor Beginn der Arbeiten, besonders bei Mietobjekten.' },
           { q: 'Beeinflusst die Montagemethode, wie viel Strom mein Modul erzeugt?', a: 'Indirekt, durch den Neigungswinkel und die Ausrichtung, die jede Methode ermöglicht – eine Methode, mit der Sie für Ihren Breitengrad einen besseren Winkel und eine bessere Ausrichtung erzielen, erzeugt in der Regel einen besseren Ertrag als eine, die Sie auf einen suboptimalen Winkel beschränkt.' },
+          { q: 'Kann mein Vermieter ein Modul am Geländer verbieten?', a: 'In Deutschland darf ein Vermieter Steckersolar nach [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html) nur ablehnen, wenn es für ihn unzumutbar ist; die Verbraucherzentrale rät dennoch, vor der Installation zu fragen. In den USA hängt es vom Recht Ihres Bundesstaats und Ihrem Mietvertrag ab; einige Landesgesetze, etwa das von New Jersey, regeln Verbote durch Vermieter und HOA ausdrücklich.' },
+          { q: 'Eignen sich leichte Kunststoffmodule für einen hohen Balkon?', a: 'Die Verbraucherzentrale weist darauf hin, dass Kunststoffmodule leichter sind und für einen hohen Balkon geeignet sein können, empfiehlt aber weiterhin, Standardmodule in Betracht zu ziehen. In jedem Fall entscheiden die zulässige Windlast der Halterung und die Tragfähigkeit des Geländers über die Sicherheit — klären Sie beides mit den Herstellern.' },
         ],
       },
     },
@@ -682,7 +707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Balkonkraftwerk montieren: Geländer, Wand, Boden und Flachdach',
       description: 'Geländer, Wand, Boden oder Flachdach? Die 4 Montagearten fürs Balkonkraftwerk im Vergleich: Bohren, Neigungswinkel und Windsicherheit je Fläche.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/de/balcony-solar/balcony-solar-mounting-guide',
@@ -712,7 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'バルコニーソーラーのすべてが手すりに取り付けられるわけではありません — 壁、地面スタンド、陸屋根もすべて有効な選択肢であり、それぞれ風荷重、角度、安全性の考慮点が異なります。自分の設置面に合った取り付け方法を選ぶことは、多くの購入者が思う以上に重要です。',
     metaDescription: '手すり・壁・地面・陸屋根のどれに付ける？バルコニーソーラーの4つの取り付け方法を、穴あけの要否・傾斜角・耐風安全性で比較します。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '約9分',
     educationalLevel: 'Intermediate',
     audience: '自分の設置面に合った取り付け方法を選ぶバルコニーソーラーの購入者',
@@ -730,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '陸屋根／バラスト取り付け：穴あけの代わりに重り付きスタンドを使用し、テラスで一般的',
           '風荷重の等級は取り付け方法の選択よりも重要 — どの設置面を使う場合でも必ず確認する',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -761,6 +786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '手すり取り付け',
         content: [
           '**手すり取り付けは、標準的なアパートのバルコニーにおいて最も速く最も一般的な方法です — ブラケットは穴あけなしで手すりに固定でき、ほとんどのキットにはデフォルトで手すり対応の金具が含まれています。** 購入前に、手すりの素材と厚さがブラケットの対応範囲に合っているか確認してください。すべてのブラケットがすべての手すりのタイプに適合するわけではありません。',
+          'ドイツでは、DIBtがプラグイン型ソーラー機器のモジュールは建築製品ではないと示したため、そのモジュールに対する特別な技術要件はなくなりました。[Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)は、それでも標準モジュールの利用を検討するよう勧めており、軽量なプラスチック製モジュールは高層階のバルコニーに適する場合があると述べています。クランプ式ブラケットを取り付ける前に、対応する手すりの材質と太さをマニュアルで確認し、落下防止の役割を果たすことがある腰壁（コンクリート等の立ち上がり）やガラス手すりでは特に慎重に作業してください。',
         ],
       },
       wallMount: {
@@ -768,6 +794,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '壁取り付け',
         content: [
           '**壁取り付けは、利用可能な手すりがないバルコニーや、取り付けの利便性よりも日照を得やすい角度にすることが重要な状況に適しています。** この方法は通常、壁面への穴あけが必要になるため、事前に許可があることを確認してください — 特に賃貸物件やHOA（管理組合）規則のある建物では注意が必要です。',
+          '大家さんや管理組合の同意が必要な場合、ドイツの法律は賃借人とマンション区分所有者にプラグイン型ソーラーへの同意を求める権利を認めており、拒否できるのは設置が相手にとって不合理な場合に限られます（[§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)）。ただし外壁への穴あけは構造上の変更にあたるため、穴を開ける前に確認してください。米国では、賃貸契約やHOAが拒否できるかどうかは州法によります。',
+          'これは一般的な概要であり、法的助言や電気工事上の助言ではありません。お客様に適用される規則は、系統事業者、大家さん、または有資格の専門家に確認してください。',
         ],
       },
       flatRoofMount: {
@@ -813,6 +841,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'バラスト取り付けは穴あけ取り付けと同じくらい安全ですか？', a: 'バラストの重量が現地の風条件に合わせて正しく設定されていれば、同等に安全になり得ます — バラストの重量不足が、この方法における主な故障リスクです。' },
           { q: '壁取り付けには大家やHOAの許可が必要ですか？', a: '多くの場合必要です。特に壁取り付けは通常穴あけを伴うため、実施前に許可を確認してください。特に賃貸物件では注意が必要です。' },
           { q: '取り付け方法はパネルの発電量に影響しますか？', a: '間接的には影響します。各方法で得られる傾斜角度と向きを通じてです — 自分の緯度により良い角度と向きを実現できる方法は、一般的に、最適でない角度に制約される方法よりも発電量の面で有利です。' },
+          { q: '大家さんは手すりへのパネル設置を禁止できますか？', a: 'ドイツでは、[§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)により、賃貸人がプラグイン型ソーラーを拒否できるのは賃貸人にとって不合理な場合に限られます。それでもVerbraucherzentraleは、設置前に確認するよう勧めています。米国では州法と賃貸契約によります。ニュージャージー州法のように、賃貸人やHOAによる禁止を直接扱う州法もあります。' },
+          { q: '軽量なプラスチック製パネルは高層階のバルコニーで使えますか？', a: 'Verbraucherzentraleは、プラスチック製モジュールは軽く、高層階のバルコニーに適する場合があるとしつつ、標準モジュールも検討するよう勧めています。いずれにせよ、ブラケットの定格風荷重と手すり自体の耐荷重が安全性を左右するため、両方をメーカーに確認してください。' },
         ],
       },
     },
@@ -822,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'バルコニーソーラー取り付けガイド：手すり・壁・地面・陸屋根',
       description: '手すり・壁・地面・陸屋根のどれに付ける？バルコニーソーラーの4つの取り付け方法を、穴あけの要否・傾斜角・耐風安全性で比較します。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ja/balcony-solar/balcony-solar-mounting-guide',
@@ -852,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '并非所有阳台光伏系统都安装在栏杆上——墙面、地面支架和平屋顶同样适用，而且每种方式在风荷载、倾角和安全性方面的考量各不相同。为你的具体安装面选择合适的安装方式，比大多数购买者想象的更重要。',
     metaDescription: '栏杆、墙面、地面还是平屋顶？对比阳台光伏的4种安装方式：是否需要打孔、倾角限制与抗风安全性，帮你选对安装面。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '约9分钟',
     educationalLevel: 'Intermediate',
     audience: '正在为自己的安装面选择安装方式的阳台光伏购买者',
@@ -870,7 +900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '平屋顶/压重块安装：使用配重支架而非打孔固定，常见于露台',
           '风荷载等级比安装方式的选择更重要——无论使用哪种安装面都应加以核实',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -901,6 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '栏杆安装',
         content: [
           '**栏杆安装是标准公寓阳台中速度最快、最常见的方式——支架无需打孔即可夹装在栏杆上，且大多数套件默认包含适配栏杆的五金件。** 购买前请核对你的栏杆材质和厚度是否在支架的适配范围内，因为并非所有支架都适配所有类型的栏杆。',
+          '在德国，DIBt 表示插拔式光伏设备的组件不属于建筑产品，因此针对它们的特殊技术要求已不再适用；[Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740) 仍建议考虑标准组件，并指出较轻的塑料组件可能适合高层阳台。安装夹具式支架前，请在说明书中确认其认可的栏杆材质和厚度；对于实心护墙或可能起防坠作用的玻璃栏板，要格外谨慎。',
         ],
       },
       wallMount: {
@@ -908,6 +939,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '墙面安装',
         content: [
           '**墙面安装适用于没有可用栏杆的阳台，或让光伏板朝向更好日照角度比安装便利性更重要的情况。** 这种方式通常需要在墙面上打孔，因此请事先确认你有相应许可——尤其是在租赁房产或有业主委员会（HOA）规定的建筑中。',
+          '需要房东或业主共同体同意时，德国法律赋予租户和公寓业主要求同意安装插拔式光伏的权利——只有当安装对他们不合理时才可拒绝（[§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)）——但在外墙上钻孔属于结构性改动，因此钻孔前请先询问。在美国，租约或业主协会（HOA）能否拒绝取决于你所在州的法律。',
+          '以上仅为一般性概述，不构成法律或电气方面的建议——请向电网运营商、房东或合格专业人士确认适用于你的规定。',
         ],
       },
       flatRoofMount: {
@@ -953,6 +986,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '压重块安装和打孔安装一样牢固吗？', a: '如果压重块的重量根据当地风况正确配置，可以做到同样牢固——压重不足是这种方式的主要失效风险。' },
           { q: '墙面安装需要征得房东或业主委员会（HOA）同意吗？', a: '通常需要，尤其是墙面安装通常涉及打孔——在施工前请确认已获得许可，租赁房产尤其需要注意。' },
           { q: '安装方式会影响光伏板的发电量吗？', a: '会有间接影响，主要通过每种方式所能实现的倾角和朝向——能让你在所在纬度获得更佳角度和朝向的方式，通常比限制你只能采用次优角度的方式发电量更高。' },
+          { q: '房东可以禁止在栏杆上安装面板吗？', a: '在德国，根据 [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)，只有当对房东不合理时才可拒绝插拔式光伏，Verbraucherzentrale 仍建议安装前先询问。在美国，取决于你所在州的法律和租约；一些州法（例如新泽西州）直接处理房东和业主协会（HOA）的禁令。' },
+          { q: '轻质塑料面板可以用在高层阳台吗？', a: 'Verbraucherzentrale 指出，塑料组件更轻，可能适合高层阳台，同时仍建议考虑标准组件。无论如何，支架的额定风荷载和栏杆本身的承载能力决定了是否安全——请向两者的制造商确认。' },
         ],
       },
     },
@@ -962,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '阳台光伏安装指南：栏杆、墙面、地面与平屋顶',
       description: '栏杆、墙面、地面还是平屋顶？对比阳台光伏的4种安装方式：是否需要打孔、倾角限制与抗风安全性，帮你选对安装面。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/zh/balcony-solar/balcony-solar-mounting-guide',
@@ -992,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Toutes les installations solaires de balcon ne se fixent pas forcément sur une rambarde — les murs, les supports au sol et les toits plats fonctionnent également, et chacun présente des considérations différentes en matière de charge de vent, d\'angle et de sécurité. Choisir la méthode de fixation adaptée à votre surface spécifique compte plus que ce à quoi la plupart des acheteurs s\'attendent.',
     metaDescription: 'Rambarde, mur, sol ou toit plat ? Comparez les 4 méthodes de fixation du solaire de balcon : perçage, inclinaison et sécurité face au vent pour chaque surface.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Acheteurs de solaire de balcon choisissant une méthode de fixation adaptée à leur surface spécifique',
@@ -1010,7 +1045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fixation sur toit plat/par lestage : utilise des supports lestés plutôt que le perçage, courant sur les terrasses',
           'Le classement de charge de vent compte plus que le choix de la méthode de fixation — vérifiez-le quelle que soit la surface utilisée',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1041,6 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fixation sur rambarde',
         content: [
           '**La fixation sur rambarde est la méthode la plus rapide et la plus courante pour les balcons d\'appartement standard — les supports se fixent sur la rambarde sans perçage, et la plupart des kits incluent par défaut une quincaillerie compatible avec les rambardes.** Vérifiez le matériau et l\'épaisseur de votre rambarde par rapport à la plage de compatibilité de votre support avant d\'acheter, car tous les supports ne conviennent pas à tous les types de rambarde.',
+          'En Allemagne, le DIBt a indiqué que les modules des appareils solaires enfichables ne sont pas des produits de construction, de sorte que des exigences techniques spéciales ont disparu ; la [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740) recommande toutefois d\'envisager des modules standard et note que des modules en plastique, plus légers, peuvent convenir à un balcon élevé. Avant de poser un support à pince, vérifiez dans la notice les matériaux et épaisseurs de garde-corps pour lesquels il est homologué, et redoublez de prudence avec un parapet plein ou un garde-corps en verre, qui peut servir de protection contre les chutes.',
         ],
       },
       wallMount: {
@@ -1048,6 +1084,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fixation murale',
         content: [
           '**La fixation murale convient aux balcons sans rambarde utilisable, ou aux situations où orienter le panneau vers une meilleure exposition solaire compte plus que la commodité de fixation.** Cette méthode nécessite généralement de percer le mur, alors confirmez que vous avez l\'autorisation de le faire — en particulier dans les logements loués ou les immeubles soumis à un règlement de copropriété.',
+          'Lorsqu\'un bailleur ou une copropriété doit donner son accord, le droit allemand reconnaît aux locataires et aux copropriétaires un droit à obtenir le consentement pour le solaire enfichable — le refus n\'est permis que si l\'installation leur est inexigible ([§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)) —, mais percer une façade est une modification structurelle : demandez avant de percer. Aux États-Unis, la possibilité pour un bail ou une HOA de refuser dépend de la loi de votre État.',
+          'Ceci est un aperçu général, pas un conseil juridique ni électrique : confirmez les règles qui vous concernent auprès de votre gestionnaire de réseau, de votre bailleur ou d\'un professionnel qualifié.',
         ],
       },
       flatRoofMount: {
@@ -1093,6 +1131,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'La fixation par lestage est-elle aussi sûre que la fixation percée ?', a: 'Elle peut l\'être, à condition que le poids du lest soit correctement dimensionné en fonction des conditions de vent locales — un lest sous-dimensionné constitue le principal risque de défaillance de cette méthode.' },
           { q: 'Ai-je besoin de l\'autorisation du propriétaire ou de la copropriété pour la fixation murale ?', a: 'Souvent oui, en particulier parce que la fixation murale implique généralement un perçage — confirmez l\'autorisation avant de procéder, surtout dans les logements loués.' },
           { q: 'La méthode de fixation affecte-t-elle la quantité d\'énergie produite par mon panneau ?', a: 'Indirectement, via l\'angle d\'inclinaison et l\'orientation que chaque méthode permet — une méthode qui vous permet d\'obtenir un meilleur angle et une meilleure orientation pour votre latitude favorisera généralement un meilleur rendement qu\'une méthode qui vous limite à un angle sous-optimal.' },
+          { q: 'Mon bailleur peut-il interdire un panneau sur le garde-corps ?', a: 'En Allemagne, un bailleur ne peut refuser le solaire enfichable que s\'il lui est inexigible selon le [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html), et la Verbraucherzentrale conseille malgré tout de demander avant d\'installer. Aux États-Unis, cela dépend de la loi de votre État et de votre bail ; certaines lois d\'État, comme celle du New Jersey, traitent directement des interdictions des bailleurs et des HOA.' },
+          { q: 'Peut-on utiliser des panneaux en plastique légers sur un balcon élevé ?', a: 'La Verbraucherzentrale note que les modules en plastique sont plus légers et peuvent convenir à un balcon élevé, tout en recommandant d\'envisager des modules standard. Dans tous les cas, la charge de vent nominale du support et la capacité du garde-corps lui-même déterminent ce qui est sûr : vérifiez les deux auprès des fabricants.' },
         ],
       },
     },
@@ -1102,7 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Guide de fixation du solaire de balcon : rambarde, mur, sol et toit plat',
       description: 'Rambarde, mur, sol ou toit plat ? Comparez les 4 méthodes de fixation du solaire de balcon : perçage, inclinaison et sécurité face au vent pour chaque surface.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/fr/balcony-solar/balcony-solar-mounting-guide',
@@ -1132,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '모든 발코니 태양광 시스템이 난간에 설치되는 것은 아닙니다 — 벽면, 지면 스탠드, 평지붕도 모두 가능하며, 각각 풍하중, 각도, 안전성 측면에서 고려사항이 다릅니다. 자신의 설치면에 맞는 설치 방법을 선택하는 것은 대부분의 구매자가 예상하는 것보다 더 중요합니다.',
     metaDescription: '난간, 벽면, 지면, 평지붕 중 어디에? 발코니 태양광 4가지 설치 방법을 타공 여부, 경사각 한계, 바람 안전성으로 비교합니다.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9분 읽기',
     educationalLevel: 'Intermediate',
     audience: '자신의 설치면에 맞는 설치 방법을 선택하는 발코니 태양광 구매자',
@@ -1150,7 +1190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '평지붕/밸러스트 설치: 천공 대신 무게추가 있는 스탠드를 사용하며, 테라스에서 일반적',
           '풍하중 등급은 설치 방법 선택보다 중요합니다 — 어떤 설치면을 사용하든 반드시 확인하세요',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1181,6 +1221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '난간 설치',
         content: [
           '**난간 설치는 표준 아파트 발코니에서 가장 빠르고 일반적인 방법입니다 — 브래킷은 천공 없이 난간에 고정되며, 대부분의 키트에는 기본적으로 난간 호환 하드웨어가 포함되어 있습니다.** 구매 전에 난간의 재질과 두께가 브래킷의 호환 범위에 맞는지 확인하세요. 모든 브래킷이 모든 난간 유형에 맞는 것은 아닙니다.',
+          '독일에서는 DIBt가 플러그인 태양광 장치의 모듈은 건축 제품이 아니라고 밝혀, 이에 대한 특별한 기술 요건이 없어졌습니다. [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)는 그래도 표준 모듈을 검토할 것을 권하며, 더 가벼운 플라스틱 모듈이 높은 발코니에 적합할 수 있다고 설명합니다. 클램프형 브래킷을 설치하기 전에 설명서에서 승인된 난간 재질과 두께를 확인하고, 추락 방지 역할을 할 수 있는 견고한 난간벽이나 유리 난간에서는 특히 주의하십시오.',
         ],
       },
       wallMount: {
@@ -1188,6 +1229,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '벽면 설치',
         content: [
           '**벽면 설치는 사용 가능한 난간이 없는 발코니, 또는 설치 편의성보다 더 나은 일조 노출 각도가 중요한 상황에 적합합니다.** 이 방법은 일반적으로 벽면 천공이 필요하므로, 사전에 허가가 있는지 확인하세요 — 특히 임대 주택이나 입주자 대표회의(HOA) 규정이 있는 건물에서는 주의가 필요합니다.',
+          '집주인이나 관리단의 동의가 필요한 경우, 독일 법은 임차인과 공동주택 소유자에게 플러그인 태양광에 대한 동의를 요구할 권리를 인정하며, 설치가 상대방에게 기대하기 어려운 경우에만 거부할 수 있습니다([§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)). 다만 외벽에 구멍을 뚫는 것은 구조 변경이므로 뚫기 전에 먼저 문의하십시오. 미국에서는 임대차 계약이나 HOA가 거부할 수 있는지가 주법에 따라 다릅니다.',
+          '이는 일반적인 개요이며 법률 또는 전기 관련 자문이 아닙니다. 적용되는 규정은 배전사업자, 집주인 또는 자격을 갖춘 전문가에게 확인하십시오.',
         ],
       },
       flatRoofMount: {
@@ -1233,6 +1276,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '밸러스트 설치가 천공 설치만큼 안전한가요?', a: '밸러스트 무게가 현지 바람 조건에 맞게 올바르게 설정되어 있다면 그럴 수 있습니다 — 밸러스트 무게 부족이 이 방법의 주된 실패 위험입니다.' },
           { q: '벽면 설치에 집주인이나 입주자 대표회의(HOA)의 허가가 필요한가요?', a: '대개 필요합니다. 특히 벽면 설치는 일반적으로 천공을 수반하므로, 진행하기 전에 허가를 확인하세요. 임대 주택에서는 특히 주의가 필요합니다.' },
           { q: '설치 방법이 패널의 발전량에 영향을 미치나요?', a: '각 방법이 허용하는 경사각과 방향을 통해 간접적으로 영향을 미칩니다 — 자신의 위도에 더 나은 각도와 방향을 얻을 수 있는 방법이 일반적으로 준최적 각도로 제한하는 방법보다 더 나은 발전량을 지원합니다.' },
+          { q: '집주인이 난간에 패널을 설치하는 것을 금지할 수 있습니까?', a: '독일에서는 [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)에 따라 임대인이 플러그인 태양광을 거부할 수 있는 것은 자신에게 기대하기 어려운 경우뿐이며, Verbraucherzentrale는 그래도 설치 전에 문의할 것을 권합니다. 미국에서는 주법과 임대차 계약에 따라 다르며, 뉴저지주 법처럼 임대인과 HOA의 금지를 직접 다루는 주법도 있습니다.' },
+          { q: '가벼운 플라스틱 패널을 높은 발코니에 사용할 수 있습니까?', a: 'Verbraucherzentrale는 플라스틱 모듈이 더 가볍고 높은 발코니에 적합할 수 있다고 설명하면서도 표준 모듈을 검토할 것을 권합니다. 어느 경우든 브래킷의 정격 풍하중과 난간 자체의 하중 지지력이 안전 여부를 좌우하므로 두 가지를 제조사에 확인하십시오.' },
         ],
       },
     },
@@ -1242,7 +1287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '발코니 태양광 설치 가이드: 난간, 벽면, 지면, 평지붕',
       description: '난간, 벽면, 지면, 평지붕 중 어디에? 발코니 태양광 4가지 설치 방법을 타공 여부, 경사각 한계, 바람 안전성으로 비교합니다.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'ko',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ko/balcony-solar/balcony-solar-mounting-guide',

@@ -13,17 +13,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Most balcony solar kits ship with a vendor app that routes your production data through the manufacturer\'s cloud. That works, but it means a company you\'ve never met can see how much power your home generates and uses — and if their servers go down, so does your monitoring. Local-control hardware and Home Assistant remove that dependency entirely.',
     metaDescription: 'Keep balcony solar monitoring local: which hardware exposes a local API, how to integrate with Home Assistant, and why cloud-bound inverters are a privacy and reliability risk.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 min read',
     educationalLevel: 'Advanced',
     audience: 'Home Assistant users and privacy-conscious buyers evaluating balcony solar hardware',
     primaryTerm: 'no-cloud balcony solar',
     targetKeywords: ['balcony solar home assistant', 'no cloud solar monitoring', 'local balcony solar api', 'balcony solar mqtt', 'evcc balcony solar'],
-    leadAnswerBlock: '**Cloud-bound balcony solar inverters send your production and consumption data to the manufacturer\'s servers by default, and stop reporting locally if that connection is required for monitoring to work at all.** Hardware that exposes a local API — reachable directly on your home network — lets you monitor and automate around your balcony solar system through Home Assistant without any data leaving your house, and keeps working even if the vendor\'s cloud goes down.',
+    leadAnswerBlock: '**Cloud-bound balcony solar inverters send your production and consumption data to the manufacturer\'s servers by default, and stop reporting locally if that connection is required for monitoring to work at all.** Hardware that exposes a local API — reachable directly on your home network — lets Home Assistant read your balcony solar system\'s data over your home network instead of through the vendor\'s cloud, so monitoring and automations can keep working even if the vendor\'s cloud goes down — although the vendor\'s own app or cloud features may still send data unless you disable them.',
     quickAnswerTop: {
       en: {
         question: 'Can I monitor balcony solar without sending data to the cloud?',
-        answer: 'Yes, if you choose hardware that exposes a local API or local web dashboard rather than requiring the vendor\'s app and cloud account. Home Assistant can then pull production and consumption data directly from the device over your local network, with no external server involved.',
+        answer: 'Yes, if you choose hardware that exposes a local API or local web dashboard rather than requiring the vendor\'s app and cloud account. Home Assistant can then pull production and consumption data directly from the device over your local network instead of through a vendor server; the vendor\'s app or cloud features may still connect to the internet unless you disable them.',
         bullets: [
           'Look for "local API," "local mode," or explicit Home Assistant integration in the spec sheet before buying',
           'Some vendors offer local access as a toggle; others require the cloud app permanently',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MQTT is the common protocol bridging local-API devices into Home Assistant and other automation platforms',
           'EVCC (open-source EV charging controller) can also consume local balcony solar data for solar-aware charging',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -39,6 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Why Is Cloud-Bound Solar Monitoring a Problem?', anchor: '#why-cloud-is-a-problem' },
       { label: 'Which Hardware Exposes a Local API?', anchor: '#local-api-hardware' },
       { label: 'How Do You Integrate Balcony Solar With Home Assistant?', anchor: '#ha-integration' },
+      { label: 'Which Home Assistant Integrations Exist Today?', anchor: '#local-integrations' },
       { label: 'What About EVCC and MQTT?', anchor: '#evcc-mqtt' },
       { label: 'Building a Recommended No-Cloud Stack', anchor: '#recommended-stack' },
       { label: 'FAQ', anchor: '#faq' },
@@ -50,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Cloud-bound balcony solar monitoring sends production/consumption data to the manufacturer and stops working if their servers are unreachable — even though the panel keeps generating power.',
-          'Local-API hardware lets Home Assistant, EVCC, or any home-network tool read your system\'s data directly, with nothing leaving your network.',
+          'Local-API hardware lets Home Assistant, EVCC, or any home-network tool read your system\'s data directly over your home network; whether anything still leaves your network depends on the vendor app and cloud features you leave enabled.',
           'Not all vendors expose local access equally — some offer it as a documented feature, others block it entirely, and some only unlock it after a firmware update or account workaround.',
           'MQTT is the most common bridge protocol between local-API balcony solar hardware and Home Assistant.',
           'EVCC can use local balcony solar production data to time EV charging or other loads to daylight hours, extending the no-cloud thesis beyond just monitoring.',
@@ -94,6 +95,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Build automations around real-time production data', whyItMatters: 'Once data flows into Home Assistant, you can trigger high-draw appliances during peak production or log historical output for your own records.' },
         ],
       },
+      localIntegrations: {
+        id: 'local-integrations',
+        title: 'Which Home Assistant Integrations Exist for Balcony Solar Hardware?',
+        content: [
+          '**Three integration styles are in use: a built-in Home Assistant integration (APsystems EZ-series Wi-Fi microinverters, local polling), a vendor-maintained local integration (Anker SOLIX, over Modbus TCP, selected products only), and community integrations installed through HACS (for example Zendure) that may rely on an app token or on the vendor\'s cloud.** Which one applies depends on the exact product, so check the integration\'s own documentation before you buy.',
+        ],
+        items: [
+          'APsystems: the [built-in Home Assistant integration](https://www.home-assistant.io/integrations/apsystems/) reads EZ-series Wi-Fi microinverters over your local network ("local polling"). The local API must be enabled and set to run continuously in the APsystems app first.',
+          'Anker SOLIX: Anker maintains an [official integration](https://github.com/anker-charging/ha-anker-solix-official) that talks to supported products over Modbus TCP on your home network, with no cloud servers involved. Modbus TCP must be switched on in the Anker app, and only the products on its supported list work; a separate community integration uses the Anker cloud instead.',
+          'Zendure: the [community integration](https://github.com/Zendure/Zendure-HA) installs through HACS and needs a Zendure app token during setup; older devices have a separate local MQTT route described in its wiki.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Support lists change with firmware and new releases. Confirm your exact model on the integration\'s page before buying, and treat a vendor app token or cloud login as a sign that data may leave your network.' },
+        ],
+      },
       evccMqtt: {
         id: 'evcc-mqtt',
         title: 'What About EVCC and MQTT?',
@@ -125,6 +141,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Does choosing local-control hardware limit my product options?', a: 'It narrows them, since not every balcony solar brand supports local access. See the linked microinverter and kit buyer\'s guides for verified per-model status rather than assuming any specific brand.' },
           { q: 'Is local monitoring less accurate than the vendor\'s cloud app?', a: 'No — local monitoring reads the same underlying data the device produces. The difference is where that data is processed and displayed, not its accuracy.' },
           { q: 'Will a firmware update break my local API access?', a: 'It can. Some vendors have removed or restricted local access in firmware updates after launch, which is another reason to check community reports rather than relying solely on the original spec sheet.' },
+          { q: 'Is there a built-in Home Assistant integration for balcony solar inverters?', a: 'For some, yes. APsystems EZ-series Wi-Fi microinverters have one that polls the inverter locally once local mode is enabled in the vendor\'s app. Other brands rely on a vendor-maintained or community integration, so check each project\'s page for your exact model.' },
+          { q: 'Does a Home Assistant integration always mean no cloud?', a: 'No. Some community integrations sign in with a vendor token or use the vendor\'s cloud API. Only integrations described as local, such as local polling or Modbus TCP on your network, keep the traffic between the device and Home Assistant on your local network, although other parts of the setup, such as the vendor app, can still connect to the internet; read the integration\'s documentation to see which applies.' },
         ],
       },
       relatedReading: {
@@ -142,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'No-Cloud Balcony Solar: Monitor Your System With Home Assistant',
       description: 'Keep balcony solar monitoring local: which hardware exposes a local API, how to integrate with Home Assistant, and why cloud-bound inverters are a privacy and reliability risk.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -164,17 +182,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Die meisten Balkonkraftwerk-Sets werden mit einer Hersteller-App geliefert, die Ihre Erzeugungsdaten über die Hersteller-Cloud überträgt. Das funktioniert zwar, bedeutet aber, dass ein Unternehmen, das Sie nie kennengelernt haben, sehen kann, wie viel Strom Ihr Haushalt erzeugt und verbraucht — und wenn deren Server ausfallen, fällt auch Ihr Monitoring aus. Local-Control-Hardware und Home Assistant beseitigen diese Abhängigkeit vollständig.',
     metaDescription: 'Balkonkraftwerk-Monitoring lokal halten: Welche Hardware bietet eine lokale API, wie Sie Home Assistant integrieren und warum Cloud-gebundene Wechselrichter ein Datenschutz- und Zuverlässigkeitsrisiko darstellen.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Advanced',
     audience: 'Home-Assistant-Nutzer und datenschutzbewusste Käufer, die Balkonkraftwerk-Hardware evaluieren',
     primaryTerm: 'Balkonkraftwerk Home Assistant',
     targetKeywords: ['Balkonkraftwerk Home Assistant', 'Solar Monitoring ohne Cloud', 'Balkonkraftwerk lokale API', 'Balkonkraftwerk MQTT', 'EVCC Balkonkraftwerk'],
-    leadAnswerBlock: '**Cloud-gebundene Balkonkraftwerk-Wechselrichter senden Ihre Erzeugungs- und Verbrauchsdaten standardmäßig an die Server des Herstellers und stellen die lokale Datenmeldung ein, wenn diese Verbindung für das Monitoring zwingend erforderlich ist.** Hardware mit einer lokalen API — direkt im Heimnetzwerk erreichbar — ermöglicht es Ihnen, Ihr Balkonkraftwerk über Home Assistant zu überwachen und zu automatisieren, ohne dass Daten Ihr Zuhause verlassen, und funktioniert auch dann weiter, wenn die Hersteller-Cloud ausfällt.',
+    leadAnswerBlock: '**Cloud-gebundene Balkonkraftwerk-Wechselrichter senden Ihre Erzeugungs- und Verbrauchsdaten standardmäßig an die Server des Herstellers und stellen die lokale Datenmeldung ein, wenn diese Verbindung für das Monitoring zwingend erforderlich ist.** Hardware mit einer lokalen API — direkt im Heimnetzwerk erreichbar — ermöglicht es Home Assistant, die Daten Ihres Balkonkraftwerks über Ihr Heimnetzwerk statt über die Hersteller-Cloud auszulesen, sodass Überwachung und Automatisierung auch dann weiterlaufen können, wenn die Hersteller-Cloud ausfällt — allerdings können die Hersteller-App oder Cloud-Funktionen weiterhin Daten senden, solange Sie sie nicht deaktivieren.',
     quickAnswerTop: {
       de: {
         question: 'Kann ich mein Balkonkraftwerk überwachen, ohne Daten in die Cloud zu senden?',
-        answer: 'Ja, wenn Sie Hardware wählen, die eine lokale API oder ein lokales Web-Dashboard bereitstellt, anstatt die Hersteller-App und ein Cloud-Konto zu erfordern. Home Assistant kann dann Erzeugungs- und Verbrauchsdaten direkt vom Gerät über Ihr Heimnetzwerk abrufen, ohne dass ein externer Server beteiligt ist.',
+        answer: 'Ja, wenn Sie Hardware wählen, die eine lokale API oder ein lokales Web-Dashboard bereitstellt, anstatt die Hersteller-App und ein Cloud-Konto zu erfordern. Home Assistant kann dann Erzeugungs- und Verbrauchsdaten direkt vom Gerät über Ihr Heimnetzwerk abrufen, statt über einen Hersteller-Server zu gehen; die Hersteller-App oder Cloud-Funktionen können jedoch weiter mit dem Internet verbunden bleiben, solange Sie sie nicht deaktivieren.',
         bullets: [
           'Suchen Sie vor dem Kauf im Datenblatt nach „lokale API", „lokaler Modus" oder expliziter Home-Assistant-Integration',
           'Manche Hersteller bieten lokalen Zugriff als umschaltbare Option an; andere erfordern dauerhaft die Cloud-App',
@@ -182,7 +200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MQTT ist das gängige Protokoll, das Local-API-Geräte mit Home Assistant und anderen Automatisierungsplattformen verbindet',
           'EVCC (quelloffener EV-Ladungsregler) kann lokale Balkonkraftwerk-Daten ebenfalls nutzen, um das Laden solarstromabhängig zu steuern',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -190,6 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Warum ist Cloud-abhängiges Solar-Monitoring problematisch?', anchor: '#why-cloud-is-a-problem' },
       { label: 'Welche Hardware bietet eine lokale API?', anchor: '#local-api-hardware' },
       { label: 'Wie integrieren Sie das Balkonkraftwerk in Home Assistant?', anchor: '#ha-integration' },
+      { label: 'Welche Home-Assistant-Integrationen gibt es heute?', anchor: '#local-integrations' },
       { label: 'Was ist mit EVCC und MQTT?', anchor: '#evcc-mqtt' },
       { label: 'Einen empfohlenen Cloud-freien Stack aufbauen', anchor: '#recommended-stack' },
       { label: 'Häufige Fragen', anchor: '#faq' },
@@ -201,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Cloud-abhängiges Balkonkraftwerk-Monitoring sendet Erzeugungs-/Verbrauchsdaten an den Hersteller und hört auf zu funktionieren, wenn dessen Server nicht erreichbar sind — auch wenn das Modul weiter Strom erzeugt.',
-          'Local-API-Hardware ermöglicht es Home Assistant, EVCC oder jedem anderen Heimnetzwerk-Tool, die Systemdaten direkt auszulesen, ohne dass etwas das Netzwerk verlässt.',
+          'Local-API-Hardware ermöglicht es Home Assistant, EVCC oder jedem anderen Heimnetzwerk-Tool, die Systemdaten direkt über das Heimnetzwerk auszulesen; ob dennoch Daten Ihr Netzwerk verlassen, hängt von der Hersteller-App und den Cloud-Funktionen ab, die Sie aktiviert lassen.',
           'Nicht alle Hersteller bieten lokalen Zugriff im gleichen Umfang an — manche als dokumentierte Funktion, andere sperren ihn vollständig, und einige geben ihn erst nach einem Firmware-Update oder einem Konto-Workaround frei.',
           'MQTT ist das häufigste Brückenprotokoll zwischen Local-API-Balkonkraftwerk-Hardware und Home Assistant.',
           'EVCC kann lokale Balkonkraftwerk-Erzeugungsdaten nutzen, um das EV-Laden oder andere Lasten auf Tageslicht-Stunden zu legen und die Cloud-freie These über reines Monitoring hinaus zu erweitern.',
@@ -245,6 +264,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Automatisierungen rund um Echtzeit-Erzeugungsdaten aufbauen', whyItMatters: 'Sobald Daten in Home Assistant einfließen, können Sie stromintensive Geräte bei Erzeugungsspitzen einschalten oder historische Einspeisung für eigene Aufzeichnungen protokollieren.' },
         ],
       },
+      localIntegrations: {
+        id: 'local-integrations',
+        title: 'Welche Home-Assistant-Integrationen gibt es für Balkonkraftwerk-Hardware?',
+        content: [
+          '**Es sind drei Integrationsarten im Einsatz: eine in Home Assistant eingebaute Integration (WLAN-Mikrowechselrichter der APsystems-EZ-Serie, lokales Polling), eine vom Hersteller gepflegte lokale Integration (Anker SOLIX, über Modbus TCP, nur ausgewählte Produkte) und Community-Integrationen über HACS (zum Beispiel Zendure), die auf ein App-Token oder die Hersteller-Cloud angewiesen sein können.** Welche Art zutrifft, hängt vom genauen Produkt ab; prüfen Sie daher vor dem Kauf die Dokumentation der jeweiligen Integration.',
+        ],
+        items: [
+          'APsystems: Die [in Home Assistant eingebaute Integration](https://www.home-assistant.io/integrations/apsystems/) liest WLAN-Mikrowechselrichter der EZ-Serie über Ihr lokales Netzwerk aus („Local Polling"). Zuvor muss die lokale API in der APsystems-App aktiviert und auf Dauerbetrieb gestellt werden.',
+          'Anker SOLIX: Anker pflegt eine [offizielle Integration](https://github.com/anker-charging/ha-anker-solix-official), die unterstützte Produkte über Modbus TCP in Ihrem Heimnetz anspricht, ohne Cloud-Server. Modbus TCP muss in der Anker-App eingeschaltet sein, und es funktionieren nur die Produkte der Support-Liste; eine separate Community-Integration nutzt stattdessen die Anker-Cloud.',
+          'Zendure: Die [Community-Integration](https://github.com/Zendure/Zendure-HA) wird über HACS installiert und benötigt bei der Einrichtung ein Zendure-App-Token; für ältere Geräte beschreibt das Wiki einen separaten lokalen MQTT-Weg.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Support-Listen ändern sich mit Firmware-Updates und neuen Produkten. Prüfen Sie Ihr genaues Modell vor dem Kauf auf der Seite der Integration und werten Sie ein App-Token oder einen Cloud-Login als Hinweis darauf, dass Daten Ihr Netzwerk verlassen können.' },
+        ],
+      },
       evccMqtt: {
         id: 'evcc-mqtt',
         title: 'Was ist mit EVCC und MQTT?',
@@ -276,6 +310,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Schränkt die Wahl von Local-Control-Hardware meine Produktoptionen ein?', a: 'Sie schränkt sie ein, da nicht jede Balkonkraftwerk-Marke lokalen Zugriff unterstützt. Schauen Sie in die verlinkten Mikrowechselrichter- und Set-Kaufratgeber für verifizierten Status je Modell, statt dies von einer bestimmten Marke anzunehmen.' },
           { q: 'Ist lokales Monitoring weniger genau als die Cloud-App des Herstellers?', a: 'Nein — lokales Monitoring liest dieselben Basisdaten, die das Gerät erzeugt. Der Unterschied liegt darin, wo diese Daten verarbeitet und angezeigt werden, nicht in ihrer Genauigkeit.' },
           { q: 'Kann ein Firmware-Update meinen lokalen API-Zugriff unterbrechen?', a: 'Das kann passieren. Manche Hersteller haben lokalen Zugriff in nachträglichen Firmware-Updates entfernt oder eingeschränkt, was ein weiterer Grund ist, Community-Berichte zu prüfen, statt sich allein auf das ursprüngliche Datenblatt zu verlassen.' },
+          { q: 'Gibt es eine eingebaute Home-Assistant-Integration für Balkonkraftwerk-Wechselrichter?', a: 'Für manche ja. Für WLAN-Mikrowechselrichter der APsystems-EZ-Serie gibt es eine, die den Wechselrichter lokal abfragt, sobald der lokale Modus in der Hersteller-App aktiviert ist. Andere Marken setzen auf eine vom Hersteller gepflegte oder eine Community-Integration; prüfen Sie daher die Projektseite für Ihr genaues Modell.' },
+          { q: 'Bedeutet eine Home-Assistant-Integration immer „ohne Cloud"?', a: 'Nein. Manche Community-Integrationen melden sich mit einem Hersteller-Token an oder nutzen die Cloud-API des Herstellers. Nur Integrationen, die als lokal beschrieben sind, etwa lokales Polling oder Modbus TCP in Ihrem Netzwerk, halten den Datenverkehr zwischen Gerät und Home Assistant in Ihrem Netzwerk, wobei andere Teile des Aufbaus, etwa die Hersteller-App, weiterhin ins Internet verbinden können; lesen Sie die Dokumentation der Integration, um zu sehen, was zutrifft.' },
         ],
       },
       relatedReading: {
@@ -293,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Balkonkraftwerk ohne Cloud: System mit Home Assistant überwachen',
       description: 'Balkonkraftwerk-Monitoring lokal halten: Welche Hardware bietet eine lokale API, wie Sie Home Assistant integrieren und warum Cloud-gebundene Wechselrichter ein Datenschutz- und Zuverlässigkeitsrisiko darstellen.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'de',
       author: {
         '@type': 'Person',
@@ -316,17 +352,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'La mayoría de los kits de energía solar de balcón vienen con una app del fabricante que enruta los datos de tu producción a través de la nube del fabricante. Eso funciona, pero significa que una empresa que nunca has conocido puede ver cuánta energía genera y consume tu hogar — y si sus servidores caen, tu monitoreo también deja de funcionar. El hardware de control local y Home Assistant eliminan esa dependencia por completo.',
     metaDescription: 'Mantén el monitoreo de tu solar de balcón en local: qué hardware expone una API local, cómo integrarlo con Home Assistant y por qué los inversores dependientes de la nube son un riesgo de privacidad y fiabilidad.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 min de lectura',
     educationalLevel: 'Advanced',
     audience: 'Usuarios de Home Assistant y compradores preocupados por la privacidad que evalúan hardware de solar de balcón',
     primaryTerm: 'solar de balcón sin nube',
     targetKeywords: ['solar de balcón home assistant', 'monitoreo solar sin nube', 'api local solar de balcón', 'solar de balcón mqtt', 'evcc solar de balcón'],
-    leadAnswerBlock: '**Los inversores de solar de balcón dependientes de la nube envían tus datos de producción y consumo a los servidores del fabricante de forma predeterminada, y dejan de reportar en local si esa conexión es necesaria para que el monitoreo funcione en absoluto.** El hardware que expone una API local — accesible directamente en tu red doméstica — te permite monitorear y automatizar tu sistema solar de balcón a través de Home Assistant sin que ningún dato salga de tu casa, y sigue funcionando incluso si la nube del fabricante deja de estar disponible.',
+    leadAnswerBlock: '**Los inversores de solar de balcón dependientes de la nube envían tus datos de producción y consumo a los servidores del fabricante de forma predeterminada, y dejan de reportar en local si esa conexión es necesaria para que el monitoreo funcione en absoluto.** El hardware que expone una API local — accesible directamente en tu red doméstica — permite que Home Assistant lea los datos de tu sistema solar de balcón a través de tu red doméstica en lugar de la nube del fabricante, de modo que el monitoreo y las automatizaciones pueden seguir funcionando aunque la nube del fabricante deje de estar disponible — aunque la app o las funciones en la nube del fabricante pueden seguir enviando datos si no las desactivas.',
     quickAnswerTop: {
       es: {
         question: '¿Puedo monitorear mi solar de balcón sin enviar datos a la nube?',
-        answer: 'Sí, si eliges hardware que exponga una API local o un panel web local en lugar de requerir la app y la cuenta en la nube del fabricante. Home Assistant puede entonces extraer datos de producción y consumo directamente del dispositivo a través de tu red local, sin ningún servidor externo involucrado.',
+        answer: 'Sí, si eliges hardware que exponga una API local o un panel web local en lugar de requerir la app y la cuenta en la nube del fabricante. Home Assistant puede entonces extraer datos de producción y consumo directamente del dispositivo a través de tu red local, en lugar de pasar por un servidor del fabricante; la app o las funciones en la nube del fabricante pueden seguir conectándose a internet si no las desactivas.',
         bullets: [
           'Busca "API local," "modo local" o integración explícita con Home Assistant en la hoja de especificaciones antes de comprar',
           'Algunos fabricantes ofrecen el acceso local como una opción activable; otros requieren la app en la nube de forma permanente',
@@ -334,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MQTT es el protocolo común que conecta los dispositivos con API local a Home Assistant y otras plataformas de automatización',
           'EVCC (controlador de carga de vehículos eléctricos de código abierto) también puede usar datos locales de solar de balcón para cargar de forma consciente de la producción solar',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -342,6 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '¿Por qué es un problema el monitoreo solar dependiente de la nube?', anchor: '#why-cloud-is-a-problem' },
       { label: '¿Qué hardware expone una API local?', anchor: '#local-api-hardware' },
       { label: '¿Cómo integras el solar de balcón con Home Assistant?', anchor: '#ha-integration' },
+      { label: '¿Qué integraciones de Home Assistant existen hoy?', anchor: '#local-integrations' },
       { label: '¿Qué pasa con EVCC y MQTT?', anchor: '#evcc-mqtt' },
       { label: 'Cómo construir una pila recomendada sin nube', anchor: '#recommended-stack' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
@@ -353,7 +390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'El monitoreo solar de balcón dependiente de la nube envía datos de producción y consumo al fabricante, y deja de funcionar si sus servidores no están disponibles — incluso aunque el panel siga generando energía.',
-          'El hardware con API local permite que Home Assistant, EVCC o cualquier herramienta de red doméstica lea los datos de tu sistema directamente, sin que nada salga de tu red.',
+          'El hardware con API local permite que Home Assistant, EVCC o cualquier herramienta de red doméstica lea los datos de tu sistema directamente a través de tu red doméstica; que algo siga saliendo de tu red depende de la app y las funciones en la nube del fabricante que dejes activadas.',
           'No todos los fabricantes exponen el acceso local por igual — algunos lo ofrecen como una función documentada, otros lo bloquean por completo, y algunos solo lo habilitan tras una actualización de firmware o una solución alternativa de cuenta.',
           'MQTT es el protocolo puente más común entre el hardware de solar de balcón con API local y Home Assistant.',
           'EVCC puede usar los datos locales de producción solar de balcón para programar la carga de tu vehículo eléctrico u otras cargas según las horas de luz diurna, extendiendo la tesis sin nube más allá del simple monitoreo.',
@@ -397,6 +434,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Construye automatizaciones en torno a datos de producción en tiempo real', whyItMatters: 'Una vez que los datos fluyen hacia Home Assistant, puedes activar electrodomésticos de alto consumo durante los picos de producción o registrar el historial de generación para tus propios registros.' },
         ],
       },
+      localIntegrations: {
+        id: 'local-integrations',
+        title: '¿Qué integraciones de Home Assistant existen para el hardware de solar de balcón?',
+        content: [
+          '**Hay tres tipos de integración en uso: una integración incluida en Home Assistant (microinversores Wi-Fi de la serie EZ de APsystems, sondeo local), una integración local mantenida por el fabricante (Anker SOLIX, por Modbus TCP, solo productos seleccionados) e integraciones de la comunidad instaladas con HACS (por ejemplo Zendure) que pueden depender de un token de la app o de la nube del fabricante.** Cuál se aplica depende del producto exacto, así que revisa la documentación de la integración antes de comprar.',
+        ],
+        items: [
+          'APsystems: la [integración incluida en Home Assistant](https://www.home-assistant.io/integrations/apsystems/) lee los microinversores Wi-Fi de la serie EZ a través de tu red local («local polling»). Antes hay que activar la API local en la app de APsystems y configurarla para que funcione de forma continua.',
+          'Anker SOLIX: Anker mantiene una [integración oficial](https://github.com/anker-charging/ha-anker-solix-official) que se comunica con los productos compatibles por Modbus TCP en tu red doméstica, sin servidores en la nube. Modbus TCP debe estar activado en la app de Anker y solo funcionan los productos de su lista de compatibilidad; una integración independiente de la comunidad usa en cambio la nube de Anker.',
+          'Zendure: la [integración de la comunidad](https://github.com/Zendure/Zendure-HA) se instala con HACS y requiere un token de la app de Zendure durante la configuración; para los dispositivos más antiguos, su wiki describe una vía local por MQTT.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Las listas de compatibilidad cambian con el firmware y los nuevos lanzamientos. Confirma tu modelo exacto en la página de la integración antes de comprar, y considera que un token de la app o un inicio de sesión en la nube indica que los datos pueden salir de tu red.' },
+        ],
+      },
       evccMqtt: {
         id: 'evcc-mqtt',
         title: '¿Qué pasa con EVCC y MQTT?',
@@ -428,6 +480,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Elegir hardware de control local limita mis opciones de producto?', a: 'Las reduce, ya que no todas las marcas de solar de balcón soportan acceso local. Consulta las guías de compra de microinversores y kits enlazadas para conocer el estado verificado por modelo en lugar de asumirlo de una marca específica.' },
           { q: '¿Es el monitoreo local menos preciso que la app en la nube del fabricante?', a: 'No — el monitoreo local lee los mismos datos subyacentes que produce el dispositivo. La diferencia está en dónde se procesan y muestran esos datos, no en su precisión.' },
           { q: '¿Una actualización de firmware puede romper mi acceso a la API local?', a: 'Puede pasar. Algunos fabricantes han eliminado o restringido el acceso local en actualizaciones de firmware posteriores al lanzamiento, lo cual es otra razón para revisar los reportes de la comunidad en lugar de confiar únicamente en la hoja de especificaciones original.' },
+          { q: '¿Existe una integración incluida en Home Assistant para inversores de solar de balcón?', a: 'Para algunos, sí. Los microinversores Wi-Fi de la serie EZ de APsystems tienen una que consulta el inversor de forma local una vez activado el modo local en la app del fabricante. Otras marcas dependen de una integración mantenida por el fabricante o por la comunidad, así que revisa la página de cada proyecto para tu modelo exacto.' },
+          { q: '¿Una integración de Home Assistant siempre significa «sin nube»?', a: 'No. Algunas integraciones de la comunidad inician sesión con un token del fabricante o usan la API en la nube del fabricante. Solo las integraciones descritas como locales, como el sondeo local o Modbus TCP en tu red, mantienen el tráfico entre el dispositivo y Home Assistant en tu red local, aunque otras partes de la instalación, como la app del fabricante, aún pueden conectarse a internet; lee la documentación de la integración para saber cuál es el caso.' },
         ],
       },
       relatedReading: {
@@ -445,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Solar de balcón sin nube: monitorea tu sistema con Home Assistant',
       description: 'Mantén el monitoreo de tu solar de balcón en local: qué hardware expone una API local, cómo integrarlo con Home Assistant y por qué los inversores dependientes de la nube son un riesgo de privacidad y fiabilidad.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'es',
       author: {
         '@type': 'Person',
@@ -468,17 +522,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'A maioria dos kits de energia solar de varanda vem com um aplicativo do fabricante que direciona os dados de produção para a nuvem do fabricante. Isso funciona, mas significa que uma empresa que você nunca conheceu pode ver quanta energia sua casa gera e consome — e, se os servidores dela ficarem fora do ar, seu monitoramento também para. Hardware de controle local e o Home Assistant eliminam essa dependência por completo.',
     metaDescription: 'Mantenha o monitoramento da sua solar de varanda local: qual hardware expõe uma API local, como integrar com o Home Assistant e por que inversores dependentes de nuvem são um risco de privacidade e confiabilidade.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 min de leitura',
     educationalLevel: 'Advanced',
     audience: 'Usuários do Home Assistant e compradores preocupados com privacidade avaliando hardware de solar de varanda',
     primaryTerm: 'solar de varanda sem nuvem',
     targetKeywords: ['solar de varanda home assistant', 'monitoramento solar sem nuvem', 'api local solar de varanda', 'solar de varanda mqtt', 'evcc solar de varanda'],
-    leadAnswerBlock: '**Inversores de solar de varanda dependentes de nuvem enviam seus dados de produção e consumo para os servidores do fabricante por padrão, e param de reportar localmente se essa conexão for necessária para o monitoramento funcionar.** Hardware que expõe uma API local — acessível diretamente na sua rede doméstica — permite monitorar e automatizar seu sistema solar de varanda pelo Home Assistant sem que nenhum dado saia de casa, e continua funcionando mesmo se a nuvem do fabricante ficar fora do ar.',
+    leadAnswerBlock: '**Inversores de solar de varanda dependentes de nuvem enviam seus dados de produção e consumo para os servidores do fabricante por padrão, e param de reportar localmente se essa conexão for necessária para o monitoramento funcionar.** Hardware que expõe uma API local — acessível diretamente na sua rede doméstica — permite que o Home Assistant leia os dados do seu sistema solar de varanda pela sua rede doméstica em vez de pela nuvem do fabricante, de modo que o monitoramento e as automações podem continuar funcionando mesmo se a nuvem do fabricante ficar fora do ar — embora o aplicativo ou os recursos em nuvem do fabricante ainda possam enviar dados se você não os desativar.',
     quickAnswerTop: {
       pt: {
         question: 'Posso monitorar minha solar de varanda sem enviar dados para a nuvem?',
-        answer: 'Sim, se você escolher hardware que exponha uma API local ou um painel web local em vez de exigir o aplicativo e a conta na nuvem do fabricante. O Home Assistant pode então extrair dados de produção e consumo diretamente do dispositivo pela sua rede local, sem envolver nenhum servidor externo.',
+        answer: 'Sim, se você escolher hardware que exponha uma API local ou um painel web local em vez de exigir o aplicativo e a conta na nuvem do fabricante. O Home Assistant pode então extrair dados de produção e consumo diretamente do dispositivo pela sua rede local, em vez de passar por um servidor do fabricante; o aplicativo ou os recursos em nuvem do fabricante ainda podem se conectar à internet se você não os desativar.',
         bullets: [
           'Procure "API local," "modo local" ou integração explícita com o Home Assistant na ficha técnica antes de comprar',
           'Alguns fabricantes oferecem o acesso local como uma opção ativável; outros exigem o aplicativo de nuvem permanentemente',
@@ -486,7 +540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MQTT é o protocolo comum que conecta dispositivos com API local ao Home Assistant e a outras plataformas de automação',
           'O EVCC (controlador de carregamento de veículos elétricos de código aberto) também pode consumir dados locais de solar de varanda para um carregamento consciente da produção solar',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -494,6 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Por que o monitoramento solar dependente de nuvem é um problema?', anchor: '#why-cloud-is-a-problem' },
       { label: 'Qual hardware expõe uma API local?', anchor: '#local-api-hardware' },
       { label: 'Como integrar a solar de varanda com o Home Assistant?', anchor: '#ha-integration' },
+      { label: 'Quais integrações do Home Assistant existem hoje?', anchor: '#local-integrations' },
       { label: 'E o EVCC e o MQTT?', anchor: '#evcc-mqtt' },
       { label: 'Montando uma pilha recomendada sem nuvem', anchor: '#recommended-stack' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
@@ -505,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'O monitoramento solar de varanda dependente de nuvem envia dados de produção/consumo para o fabricante e para de funcionar se os servidores dele ficarem inacessíveis — mesmo que o painel continue gerando energia.',
-          'Hardware com API local permite que o Home Assistant, o EVCC ou qualquer ferramenta da rede doméstica leiam os dados do seu sistema diretamente, sem que nada saia da sua rede.',
+          'Hardware com API local permite que o Home Assistant, o EVCC ou qualquer ferramenta da rede doméstica leiam os dados do seu sistema diretamente pela rede doméstica; se algo ainda sai da sua rede depende do aplicativo e dos recursos em nuvem do fabricante que você deixar ativados.',
           'Nem todos os fabricantes expõem o acesso local da mesma forma — alguns oferecem como um recurso documentado, outros bloqueiam completamente, e alguns só liberam após uma atualização de firmware ou uma solução alternativa de conta.',
           'O MQTT é o protocolo de ponte mais comum entre hardware de solar de varanda com API local e o Home Assistant.',
           'O EVCC pode usar dados locais de produção solar de varanda para programar o carregamento do veículo elétrico ou outras cargas de acordo com as horas de luz do dia, estendendo a tese sem nuvem além do simples monitoramento.',
@@ -549,6 +604,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Construa automações em torno de dados de produção em tempo real', whyItMatters: 'Depois que os dados fluem para o Home Assistant, você pode acionar eletrodomésticos de alto consumo durante os picos de produção ou registrar o histórico de geração para seus próprios registros.' },
         ],
       },
+      localIntegrations: {
+        id: 'local-integrations',
+        title: 'Quais integrações do Home Assistant existem para o hardware de energia solar de varanda?',
+        content: [
+          '**Há três tipos de integração em uso: uma integração incluída no Home Assistant (microinversores Wi-Fi da série EZ da APsystems, polling local), uma integração local mantida pelo fabricante (Anker SOLIX, via Modbus TCP, apenas produtos selecionados) e integrações da comunidade instaladas pelo HACS (por exemplo, Zendure) que podem depender de um token do app ou da nuvem do fabricante.** Qual delas vale depende do produto exato, então confira a documentação da integração antes de comprar.',
+        ],
+        items: [
+          'APsystems: a [integração incluída no Home Assistant](https://www.home-assistant.io/integrations/apsystems/) lê os microinversores Wi-Fi da série EZ pela sua rede local ("local polling"). Antes, a API local precisa ser ativada no app da APsystems e configurada para funcionar continuamente.',
+          'Anker SOLIX: a Anker mantém uma [integração oficial](https://github.com/anker-charging/ha-anker-solix-official) que se comunica com os produtos compatíveis via Modbus TCP na sua rede doméstica, sem servidores na nuvem. O Modbus TCP precisa estar ligado no app da Anker, e só funcionam os produtos da lista de compatibilidade; uma integração separada da comunidade usa a nuvem da Anker.',
+          'Zendure: a [integração da comunidade](https://github.com/Zendure/Zendure-HA) é instalada pelo HACS e exige um token do app da Zendure durante a configuração; para dispositivos mais antigos, o wiki descreve um caminho local via MQTT.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'As listas de compatibilidade mudam com o firmware e com novos lançamentos. Confirme o seu modelo exato na página da integração antes de comprar e trate um token de app ou um login na nuvem como sinal de que os dados podem sair da sua rede.' },
+        ],
+      },
       evccMqtt: {
         id: 'evcc-mqtt',
         title: 'E o EVCC e o MQTT?',
@@ -580,6 +650,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Escolher hardware de controle local limita minhas opções de produto?', a: 'Reduz, já que nem toda marca de solar de varanda suporta acesso local. Veja os guias de compra de microinversores e kits linkados para o status verificado por modelo em vez de presumir isso de uma marca específica.' },
           { q: 'O monitoramento local é menos preciso que o aplicativo de nuvem do fabricante?', a: 'Não — o monitoramento local lê os mesmos dados subjacentes que o dispositivo produz. A diferença está em onde esses dados são processados e exibidos, não na precisão deles.' },
           { q: 'Uma atualização de firmware pode quebrar meu acesso à API local?', a: 'Pode. Alguns fabricantes já removeram ou restringiram o acesso local em atualizações de firmware após o lançamento, o que é mais um motivo para checar relatos da comunidade em vez de confiar apenas na ficha técnica original.' },
+          { q: 'Existe uma integração incluída no Home Assistant para inversores de energia solar de varanda?', a: 'Para alguns, sim. Os microinversores Wi-Fi da série EZ da APsystems têm uma que consulta o inversor localmente depois que o modo local é ativado no app do fabricante. Outras marcas dependem de uma integração mantida pelo fabricante ou pela comunidade, então confira a página de cada projeto para o seu modelo exato.' },
+          { q: 'Uma integração do Home Assistant sempre significa "sem nuvem"?', a: 'Não. Algumas integrações da comunidade fazem login com um token do fabricante ou usam a API em nuvem do fabricante. Somente integrações descritas como locais, como polling local ou Modbus TCP na sua rede, mantêm o tráfego entre o dispositivo e o Home Assistant na sua rede local, embora outras partes da instalação, como o app do fabricante, ainda possam se conectar à internet; leia a documentação da integração para saber qual é o caso.' },
         ],
       },
       relatedReading: {
@@ -597,7 +669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Solar de varanda sem nuvem: monitore seu sistema com o Home Assistant',
       description: 'Mantenha o monitoramento da sua solar de varanda local: qual hardware expõe uma API local, como integrar com o Home Assistant e por que inversores dependentes de nuvem são um risco de privacidade e confiabilidade.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'pt-BR',
       author: {
         '@type': 'Person',
@@ -620,17 +692,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'تأتي معظم أطقم الطاقة الشمسية للشرفة مع تطبيق من الشركة المصنعة يوجّه بيانات الإنتاج عبر سحابة الشركة المصنعة. هذا يعمل، لكنه يعني أن شركة لم تتعامل معها من قبل يمكنها رؤية مقدار الطاقة التي يولدها منزلك ويستهلكها — وإذا تعطلت خوادمها، يتوقف المراقبة أيضًا. أجهزة التحكم المحلي و Home Assistant تزيلان هذا الاعتماد تمامًا.',
     metaDescription: 'حافظ على مراقبة الطاقة الشمسية للشرفة محليًا: ما هي الأجهزة التي توفر local API، وكيفية الدمج مع Home Assistant، ولماذا تُعد العاكسات المعتمدة على السحابة خطرًا على الخصوصية والموثوقية.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 دقائق للقراءة',
     educationalLevel: 'Advanced',
     audience: 'مستخدمو Home Assistant والمشترون المهتمون بالخصوصية الذين يقيّمون أجهزة الطاقة الشمسية للشرفة',
     primaryTerm: 'طاقة شمسية للشرفة بدون سحابة',
     targetKeywords: ['طاقة شمسية للشرفة Home Assistant', 'مراقبة شمسية بدون سحابة', 'local API طاقة شمسية للشرفة', 'طاقة شمسية للشرفة MQTT', 'EVCC طاقة شمسية للشرفة'],
-    leadAnswerBlock: '**ترسل عاكسات الطاقة الشمسية للشرفة المعتمدة على السحابة بيانات الإنتاج والاستهلاك الخاصة بك إلى خوادم الشركة المصنعة بشكل افتراضي، وتتوقف عن التقرير محليًا إذا كان ذلك الاتصال ضروريًا لعمل المراقبة على الإطلاق.** الأجهزة التي توفر local API — يمكن الوصول إليها مباشرة على شبكة منزلك — تتيح لك مراقبة نظام الطاقة الشمسية للشرفة الخاص بك وأتمتته عبر Home Assistant دون خروج أي بيانات من منزلك، وتستمر في العمل حتى إذا تعطلت سحابة الشركة المصنعة.',
+    leadAnswerBlock: '**ترسل عاكسات الطاقة الشمسية للشرفة المعتمدة على السحابة بيانات الإنتاج والاستهلاك الخاصة بك إلى خوادم الشركة المصنعة بشكل افتراضي، وتتوقف عن التقرير محليًا إذا كان ذلك الاتصال ضروريًا لعمل المراقبة على الإطلاق.** الأجهزة التي توفر local API — يمكن الوصول إليها مباشرة على شبكة منزلك — تتيح لـ Home Assistant قراءة بيانات نظام الطاقة الشمسية للشرفة الخاص بك عبر شبكة منزلك بدلًا من سحابة الشركة المصنعة، فيمكن أن تستمر المراقبة والأتمتة في العمل حتى إذا تعطلت سحابة الشركة المصنعة — مع أن تطبيق الشركة أو ميزاتها السحابية قد تواصل إرسال البيانات ما لم تعطّلها.',
     quickAnswerTop: {
       ar: {
         question: 'هل يمكنني مراقبة الطاقة الشمسية للشرفة دون إرسال بيانات إلى السحابة؟',
-        answer: 'نعم، إذا اخترت أجهزة توفر local API أو لوحة ويب محلية بدلاً من طلب تطبيق وحساب سحابة الشركة المصنعة. يمكن لـ Home Assistant حينها سحب بيانات الإنتاج والاستهلاك مباشرة من الجهاز عبر شبكتك المحلية، دون تدخل أي خادم خارجي.',
+        answer: 'نعم، إذا اخترت أجهزة توفر local API أو لوحة ويب محلية بدلاً من طلب تطبيق وحساب سحابة الشركة المصنعة. يمكن لـ Home Assistant حينها سحب بيانات الإنتاج والاستهلاك مباشرة من الجهاز عبر شبكتك المحلية بدلًا من المرور بخادم الشركة المصنعة؛ وقد يظل تطبيق الشركة أو ميزاتها السحابية متصلة بالإنترنت ما لم تعطّلها.',
         bullets: [
           'ابحث عن "local API" أو "local mode" أو دمج صريح مع Home Assistant في ورقة المواصفات قبل الشراء',
           'يوفر بعض الشركات المصنعة الوصول المحلي كخيار قابل للتفعيل؛ بينما تتطلب شركات أخرى تطبيق السحابة بشكل دائم',
@@ -638,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُعد MQTT البروتوكول الشائع الذي يربط الأجهزة ذات local API بـ Home Assistant ومنصات الأتمتة الأخرى',
           'يمكن لـ EVCC (وحدة تحكم شحن سيارات كهربائية مفتوحة المصدر) أيضًا استخدام بيانات الطاقة الشمسية للشرفة المحلية للشحن المتوافق مع الإنتاج الشمسي',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -646,6 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'لماذا تُعد مراقبة الطاقة الشمسية المعتمدة على السحابة مشكلة؟', anchor: '#why-cloud-is-a-problem' },
       { label: 'ما هي الأجهزة التي توفر local API؟', anchor: '#local-api-hardware' },
       { label: 'كيف تدمج الطاقة الشمسية للشرفة مع Home Assistant؟', anchor: '#ha-integration' },
+      { label: 'ما التكاملات المتاحة اليوم مع Home Assistant؟', anchor: '#local-integrations' },
       { label: 'ماذا عن EVCC و MQTT؟', anchor: '#evcc-mqtt' },
       { label: 'بناء حزمة موصى بها بدون سحابة', anchor: '#recommended-stack' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
@@ -657,7 +730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'تُرسل مراقبة الطاقة الشمسية للشرفة المعتمدة على السحابة بيانات الإنتاج والاستهلاك إلى الشركة المصنعة، وتتوقف عن العمل إذا تعذّر الوصول إلى خوادمها — حتى لو استمر اللوح في توليد الطاقة.',
-          'تتيح الأجهزة ذات local API لتطبيق Home Assistant أو EVCC أو أي أداة على الشبكة المنزلية قراءة بيانات نظامك مباشرة، دون خروج أي شيء من شبكتك.',
+          'تتيح الأجهزة ذات local API لتطبيق Home Assistant أو EVCC أو أي أداة على الشبكة المنزلية قراءة بيانات نظامك مباشرة عبر شبكتك المنزلية؛ ويعتمد خروج أي بيانات من شبكتك بعد ذلك على تطبيق الشركة والميزات السحابية التي تبقيها مفعّلة.',
           'لا توفر جميع الشركات المصنعة الوصول المحلي بالتساوي — يوفره بعضها كميزة موثقة، بينما يحظره البعض الآخر تمامًا، ولا يتيحه البعض إلا بعد تحديث firmware أو حل بديل للحساب.',
           'يُعد MQTT بروتوكول الجسر الأكثر شيوعًا بين أجهزة الطاقة الشمسية للشرفة ذات local API و Home Assistant.',
           'يمكن لـ EVCC استخدام بيانات إنتاج الطاقة الشمسية للشرفة المحلية لتوقيت شحن السيارة الكهربائية أو أحمال أخرى وفقًا لساعات ضوء النهار، مما يوسّع فكرة عدم الاعتماد على السحابة إلى ما هو أبعد من مجرد المراقبة.',
@@ -701,6 +774,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'ابنِ الأتمتة حول بيانات الإنتاج في الوقت الفعلي', whyItMatters: 'بمجرد تدفق البيانات إلى Home Assistant، يمكنك تشغيل الأجهزة عالية الاستهلاك خلال ذروة الإنتاج أو تسجيل الإنتاج التاريخي لسجلاتك الخاصة.' },
         ],
       },
+      localIntegrations: {
+        id: 'local-integrations',
+        title: 'ما تكاملات Home Assistant المتاحة لأجهزة الطاقة الشمسية للشرفة؟',
+        content: [
+          '**هناك ثلاثة أنواع من التكامل قيد الاستخدام: تكامل مدمج في Home Assistant (عاكسات APsystems الصغيرة من سلسلة EZ عبر Wi-Fi مع الاستعلام المحلي)، وتكامل محلي يتولى الصانع صيانته (Anker SOLIX عبر Modbus TCP لمنتجات محددة فقط)، وتكاملات المجتمع المثبّتة عبر HACS (مثل Zendure) وقد تعتمد على رمز التطبيق أو على سحابة الصانع.** يعتمد النوع المنطبق على المنتج المحدد، لذا راجع وثائق التكامل نفسه قبل الشراء.',
+        ],
+        items: [
+          'APsystems: [التكامل المدمج في Home Assistant](https://www.home-assistant.io/integrations/apsystems/) يقرأ عاكسات EZ الصغيرة عبر Wi-Fi من خلال شبكتك المحلية ("local polling"). يجب أولاً تفعيل واجهة API المحلية في تطبيق APsystems وضبطها على العمل المستمر.',
+          'Anker SOLIX: تصون Anker [تكاملاً رسمياً](https://github.com/anker-charging/ha-anker-solix-official) يتواصل مع المنتجات المدعومة عبر Modbus TCP داخل شبكتك المنزلية دون خوادم سحابية. يجب تفعيل Modbus TCP في تطبيق Anker، ولا تعمل إلا المنتجات الواردة في قائمة الدعم؛ أما التكامل المجتمعي المنفصل فيستخدم سحابة Anker.',
+          'Zendure: يُثبَّت [التكامل المجتمعي](https://github.com/Zendure/Zendure-HA) عبر HACS ويتطلب رمزاً من تطبيق Zendure أثناء الإعداد؛ وللأجهزة الأقدم يصف الـ wiki طريقاً محلياً منفصلاً عبر MQTT.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'تتغير قوائم الدعم مع تحديثات البرنامج الثابت والإصدارات الجديدة. تأكد من طرازك المحدد في صفحة التكامل قبل الشراء، واعتبر رمز التطبيق أو تسجيل الدخول إلى السحابة إشارة إلى أن البيانات قد تغادر شبكتك.' },
+        ],
+      },
       evccMqtt: {
         id: 'evcc-mqtt',
         title: 'ماذا عن EVCC و MQTT؟',
@@ -732,6 +820,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يحد اختيار أجهزة التحكم المحلي من خياراتي للمنتجات؟', a: 'يقلّصها، لأنه ليست كل علامة تجارية للطاقة الشمسية للشرفة تدعم الوصول المحلي. راجع أدلة شراء المحولات الدقيقة والأطقم المرتبطة لمعرفة الحالة المُتحقق منها لكل طراز بدلاً من افتراضها من علامة تجارية معينة.' },
           { q: 'هل المراقبة المحلية أقل دقة من تطبيق سحابة الشركة المصنعة؟', a: 'لا — تقرأ المراقبة المحلية نفس البيانات الأساسية التي ينتجها الجهاز. الفرق يكمن في مكان معالجة هذه البيانات وعرضها، وليس في دقتها.' },
           { q: 'هل يمكن لتحديث firmware أن يعطل وصولي إلى local API؟', a: 'نعم، يمكن ذلك. أزالت بعض الشركات المصنعة أو قيّدت الوصول المحلي في تحديثات firmware بعد الإطلاق، وهذا سبب إضافي لمراجعة تقارير المجتمع بدلاً من الاعتماد فقط على ورقة المواصفات الأصلية.' },
+          { q: 'هل يوجد تكامل مدمج في Home Assistant لعاكسات الطاقة الشمسية للشرفة؟', a: 'لبعضها نعم. لعاكسات APsystems الصغيرة من سلسلة EZ عبر Wi-Fi تكامل يستعلم عن العاكس محلياً بعد تفعيل الوضع المحلي في تطبيق الصانع. أما العلامات الأخرى فتعتمد على تكامل يصونه الصانع أو المجتمع، لذا راجع صفحة كل مشروع لطرازك المحدد.' },
+          { q: 'هل يعني تكامل Home Assistant دائماً "بلا سحابة"؟', a: 'لا. بعض تكاملات المجتمع تسجّل الدخول برمز من الصانع أو تستخدم واجهة API السحابية للصانع. فقط التكاملات الموصوفة بأنها محلية، مثل الاستعلام المحلي أو Modbus TCP داخل شبكتك، تُبقي الحركة بين الجهاز وHome Assistant داخل شبكتك المحلية، مع أن أجزاء أخرى من الإعداد، مثل تطبيق الصانع، قد تظل متصلة بالإنترنت؛ اقرأ وثائق التكامل لمعرفة الحالة المنطبقة.' },
         ],
       },
       relatedReading: {
@@ -749,7 +839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'الطاقة الشمسية للشرفة بدون سحابة: راقب نظامك باستخدام Home Assistant',
       description: 'حافظ على مراقبة الطاقة الشمسية للشرفة محليًا: ما هي الأجهزة التي توفر local API، وكيفية الدمج مع Home Assistant، ولماذا تُعد العاكسات المعتمدة على السحابة خطرًا على الخصوصية والموثوقية.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'ar',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ar/balcony-solar/home-assistant-balcony-solar-no-cloud',
@@ -768,17 +858,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'ほとんどのバルコニーソーラーキットには、発電データをメーカーのクラウドに送信するベンダーアプリが付属しています。それでも動作はしますが、面識のない企業があなたの家庭の発電量と消費量を把握できることを意味し、メーカーのサーバーがダウンすれば監視自体も止まってしまいます。ローカル制御に対応したハードウェアとHome Assistantを使えば、この依存関係を完全になくせます。',
     metaDescription: 'バルコニーソーラーの監視をローカルに保つ方法：ローカルAPIを公開するハードウェア、Home Assistantとの連携方法、そしてクラウド依存のインバーターがプライバシーと信頼性のリスクになる理由を解説。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '約9分',
     educationalLevel: 'Advanced',
     audience: 'Home Assistantユーザーおよびバルコニーソーラー機器を検討中のプライバシー重視の購入者',
     primaryTerm: 'クラウド不要のバルコニーソーラー',
     targetKeywords: ['バルコニーソーラー home assistant', 'クラウド不要 太陽光監視', 'バルコニーソーラー local api', 'バルコニーソーラー mqtt', 'evcc バルコニーソーラー'],
-    leadAnswerBlock: '**クラウド依存のバルコニーソーラーインバーターは、デフォルトで発電・消費データをメーカーのサーバーに送信し、監視が機能するためにその接続が必須である場合はローカルでのデータ報告を一切行いません。** ホームネットワーク上で直接アクセスできるローカルAPIを公開するハードウェアを使えば、データを家の外に出すことなくHome Assistant経由でバルコニーソーラーシステムを監視・自動化でき、ベンダーのクラウドがダウンしても動作し続けます。',
+    leadAnswerBlock: '**クラウド依存のバルコニーソーラーインバーターは、デフォルトで発電・消費データをメーカーのサーバーに送信し、監視が機能するためにその接続が必須である場合はローカルでのデータ報告を一切行いません。** ホームネットワーク上で直接アクセスできるローカルAPIを公開するハードウェアを使えば、Home Assistantがホームネットワーク経由でバルコニーソーラーシステムのデータを読み取れるため(ベンダーのクラウドを介しません)、ベンダーのクラウドがダウンしても監視と自動化は動作し続けられます。ただし、ベンダーのアプリやクラウド機能を無効にしない限り、データが送信され続ける場合があります。',
     quickAnswerTop: {
       ja: {
         question: 'データをクラウドに送信せずにバルコニーソーラーを監視できますか？',
-        answer: 'はい。ベンダーのアプリとクラウドアカウントを必須とするのではなく、ローカルAPIまたはローカルWebダッシュボードを公開するハードウェアを選べば可能です。Home Assistantは外部サーバーを一切介さずに、ホームネットワーク経由でデバイスから直接発電・消費データを取得できます。',
+        answer: 'はい。ベンダーのアプリとクラウドアカウントを必須とするのではなく、ローカルAPIまたはローカルWebダッシュボードを公開するハードウェアを選べば可能です。Home Assistantはベンダーのサーバーを介さず、ホームネットワーク経由でデバイスから直接発電・消費データを取得できます。ただし、ベンダーのアプリやクラウド機能は、無効にしない限りインターネットに接続し続ける場合があります。',
         bullets: [
           '購入前に仕様書で「local API」「local mode」または明示的なHome Assistant連携の記載を確認する',
           'ローカルアクセスを切り替えオプションとして提供するベンダーもあれば、常時クラウドアプリを必須とするベンダーもある',
@@ -786,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MQTTはローカルAPI対応デバイスをHome Assistantや他の自動化プラットフォームに接続する一般的なプロトコルである',
           'EVCC（オープンソースのEV充電コントローラー）もローカルのバルコニーソーラーデータを利用して太陽光発電に合わせた充電を行える',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -794,6 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'クラウド依存の太陽光監視はなぜ問題なのか？', anchor: '#why-cloud-is-a-problem' },
       { label: 'ローカルAPIを公開するハードウェアとは？', anchor: '#local-api-hardware' },
       { label: 'バルコニーソーラーをHome Assistantと連携する方法は？', anchor: '#ha-integration' },
+      { label: '現在、どんなHome Assistant連携がありますか？', anchor: '#local-integrations' },
       { label: 'EVCCとMQTTについて', anchor: '#evcc-mqtt' },
       { label: '推奨されるクラウド不要スタックの構築', anchor: '#recommended-stack' },
       { label: 'よくある質問', anchor: '#faq' },
@@ -805,7 +896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'クラウド依存のバルコニーソーラー監視は発電・消費データをメーカーに送信し、パネルが発電を続けていてもメーカーのサーバーに到達できなければ機能が停止する。',
-          'ローカルAPI対応のハードウェアなら、Home Assistant、EVCC、その他のホームネットワークツールがシステムのデータを直接読み取れ、何もネットワーク外に出ない。',
+          'ローカルAPI対応のハードウェアなら、Home Assistant、EVCC、その他のホームネットワークツールがシステムのデータを直接読み取れ、データがネットワーク外へ出るかどうかは、有効のままにしたベンダーアプリやクラウド機能次第である。',
           'すべてのベンダーが同じようにローカルアクセスを提供しているわけではない。文書化された機能として提供するベンダーもあれば、完全にブロックするベンダーもあり、ファームウェア更新やアカウントの回避策を経て初めて解放されるケースもある。',
           'MQTTは、ローカルAPI対応のバルコニーソーラー機器とHome Assistantをつなぐ最も一般的な橋渡しプロトコルである。',
           'EVCCはローカルのバルコニーソーラー発電データを使い、EV充電やその他の負荷を日照時間に合わせてタイミング制御でき、クラウド不要の考え方を単なる監視の枠を超えて広げられる。',
@@ -849,6 +940,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'リアルタイム発電データを基にした自動化を構築する', whyItMatters: 'データがHome Assistantに流れ込めば、発電がピークのときに高消費家電を動かしたり、自分の記録用に発電履歴をログしたりできる。' },
         ],
       },
+      localIntegrations: {
+        id: 'local-integrations',
+        title: 'バルコニーソーラー機器向けにどんなHome Assistant連携がありますか？',
+        content: [
+          '**連携の形は3種類です。Home Assistantに組み込まれた連携（APsystems EZシリーズのWi-Fiマイクロインバーター、ローカルポーリング）、メーカーが保守するローカル連携（Anker SOLIX、Modbus TCP経由、一部の製品のみ）、そしてHACS経由で導入するコミュニティ連携（例：Zendure）で、後者はアプリのトークンやメーカーのクラウドに依存する場合があります。** どれに当てはまるかは製品ごとに異なるため、購入前に各連携のドキュメントを確認してください。',
+        ],
+        items: [
+          'APsystems：[Home Assistant組み込みの連携](https://www.home-assistant.io/integrations/apsystems/)は、EZシリーズのWi-Fiマイクロインバーターをローカルネットワーク経由で読み取ります（「local polling」）。事前にAPsystemsアプリでローカルAPIを有効にし、常時動作に設定する必要があります。',
+          'Anker SOLIX：Ankerは[公式の連携](https://github.com/anker-charging/ha-anker-solix-official)を保守しており、対応製品とホームネットワーク上のModbus TCPで通信します。クラウドサーバーは使いません。AnkerアプリでModbus TCPをオンにする必要があり、動作するのは対応リストにある製品のみです。別のコミュニティ連携はAnkerのクラウドを使います。',
+          'Zendure：[コミュニティ連携](https://github.com/Zendure/Zendure-HA)はHACS経由でインストールし、セットアップ時にZendureアプリのトークンが必要です。古い機器向けには、ローカルMQTTの別ルートがWikiに記載されています。',
+        ],
+        callouts: [
+          { type: 'warning', text: '対応リストはファームウェアの更新や新製品で変わります。購入前に、お使いの正確なモデルを連携のページで確認してください。アプリのトークンやクラウドへのログインが必要な場合は、データがネットワークの外に出る可能性があると考えてください。' },
+        ],
+      },
       evccMqtt: {
         id: 'evcc-mqtt',
         title: 'EVCCとMQTTについて',
@@ -880,6 +986,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ローカル制御対応のハードウェアを選ぶと製品の選択肢は狭まりますか？', a: 'すべてのバルコニーソーラーブランドがローカルアクセスに対応しているわけではないため、選択肢は狭まります。特定のブランドを前提にするのではなく、リンク先のマイクロインバーターとキットの購入ガイドでモデルごとの検証済みステータスを確認してください。' },
           { q: 'ローカル監視はベンダーのクラウドアプリより精度が低いですか？', a: 'いいえ — ローカル監視はデバイスが生成するのと同じ基礎データを読み取ります。違いはそのデータがどこで処理・表示されるかであり、精度ではありません。' },
           { q: 'ファームウェア更新でローカルAPIアクセスが壊れることはありますか？', a: 'あり得ます。一部のベンダーは発売後のファームウェア更新でローカルアクセスを削除または制限したことがあり、これも当初の仕様書だけに頼らずコミュニティの報告を確認すべき理由の一つです。' },
+          { q: 'バルコニーソーラーのインバーター向けにHome Assistant組み込みの連携はありますか？', a: '一部にはあります。APsystems EZシリーズのWi-Fiマイクロインバーターには、メーカーのアプリでローカルモードを有効にするとインバーターをローカルで取得する連携があります。他のブランドはメーカー保守またはコミュニティの連携に頼るため、お使いの正確なモデルについて各プロジェクトのページを確認してください。' },
+          { q: 'Home Assistant連携は常に「クラウドなし」を意味しますか？', a: 'いいえ。コミュニティ連携の中には、メーカーのトークンでサインインしたり、メーカーのクラウドAPIを使ったりするものがあります。ローカルポーリングやネットワーク内のModbus TCPなど、ローカルと記載された連携だけが機器とHome Assistant間の通信をローカルネットワーク内にとどめます（メーカーアプリなど、構成の他の部分はインターネットに接続する場合があります）。どれに当たるかは連携のドキュメントで確認してください。' },
         ],
       },
       relatedReading: {
@@ -897,7 +1005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'クラウド不要のバルコニーソーラー：Home Assistantでシステムを監視する',
       description: 'バルコニーソーラーの監視をローカルに保つ方法：ローカルAPIを公開するハードウェア、Home Assistantとの連携方法、そしてクラウド依存のインバーターがプライバシーと信頼性のリスクになる理由を解説。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ja/balcony-solar/home-assistant-balcony-solar-no-cloud',
@@ -916,17 +1024,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '大多数阳台光伏套件都自带一个厂商App，会把你的发电数据通过厂商云端转发。这样确实能用，但也意味着一家你素未谋面的公司能看到你家发了多少电、用了多少电——一旦对方服务器宕机，你的监控也会跟着失效。本地控制硬件加上Home Assistant，可以彻底摆脱这种依赖。',
     metaDescription: '让阳台光伏监控保持本地化：哪些硬件开放本地API、如何与Home Assistant集成，以及为什么依赖云端的逆变器会带来隐私和可靠性风险。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '约9分钟',
     educationalLevel: 'Advanced',
     audience: 'Home Assistant用户，以及正在评估阳台光伏硬件的隐私敏感型买家',
     primaryTerm: '无云阳台光伏',
     targetKeywords: ['阳台光伏 home assistant', '无云太阳能监控', '阳台光伏 本地api', '阳台光伏 mqtt', 'evcc 阳台光伏'],
-    leadAnswerBlock: '**依赖云端的阳台光伏逆变器默认会把你的发电和用电数据发送到厂商服务器，而如果监控功能本身就依赖这条连接，它就完全不会在本地上报数据。** 开放本地API的硬件——可以在你的家庭网络内直接访问——能让你通过Home Assistant监控和自动化你的阳台光伏系统，数据完全不出家门，而且即使厂商云端宕机也能继续工作。',
+    leadAnswerBlock: '**依赖云端的阳台光伏逆变器默认会把你的发电和用电数据发送到厂商服务器，而如果监控功能本身就依赖这条连接，它就完全不会在本地上报数据。** 开放本地API的硬件——可以在你的家庭网络内直接访问——能让Home Assistant通过你的家庭网络读取阳台光伏系统的数据，而不经过厂商云端，因此即使厂商云端宕机，监控和自动化也能继续工作——不过厂商自己的App或云功能如果不关闭，仍可能继续发送数据。',
     quickAnswerTop: {
       zh: {
         question: '我能在不把数据发送到云端的情况下监控阳台光伏吗？',
-        answer: '可以，前提是选择开放本地API或本地网页仪表盘的硬件，而不是必须依赖厂商App和云端账户的硬件。这样Home Assistant就能通过你的本地网络直接从设备读取发电和用电数据，完全不经过任何外部服务器。',
+        answer: '可以，前提是选择开放本地API或本地网页仪表盘的硬件，而不是必须依赖厂商App和云端账户的硬件。这样Home Assistant就能通过你的本地网络直接从设备读取发电和用电数据，而不经过厂商服务器；厂商App或云功能如果不关闭，仍可能继续联网。',
         bullets: [
           '购买前先在规格表里查找"local API"、"本地模式"或明确的Home Assistant集成说明',
           '有些厂商把本地访问做成一个可切换的选项，另一些则始终要求使用云端App',
@@ -934,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MQTT是把开放本地API的设备接入Home Assistant及其他自动化平台最常见的协议',
           'EVCC（开源电动车充电控制器）也可以使用本地阳台光伏数据，实现按光伏发电情况智能充电',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -942,6 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '为什么依赖云端的光伏监控是个问题？', anchor: '#why-cloud-is-a-problem' },
       { label: '哪些硬件开放本地API？', anchor: '#local-api-hardware' },
       { label: '如何把阳台光伏接入Home Assistant？', anchor: '#ha-integration' },
+      { label: '目前有哪些Home Assistant集成？', anchor: '#local-integrations' },
       { label: 'EVCC和MQTT是怎么回事？', anchor: '#evcc-mqtt' },
       { label: '搭建推荐的无云技术栈', anchor: '#recommended-stack' },
       { label: '常见问题', anchor: '#faq' },
@@ -953,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '依赖云端的阳台光伏监控会把发电/用电数据发送给厂商，一旦无法连接厂商服务器就会停止工作——即使面板仍在正常发电。',
-          '开放本地API的硬件能让Home Assistant、EVCC或任何家庭网络工具直接读取你系统的数据，数据完全不离开你的网络。',
+          '开放本地API的硬件能让Home Assistant、EVCC或任何家庭网络工具直接读取你系统的数据，数据通过家庭网络读取；是否仍有数据离开你的网络，取决于你保持开启的厂商App和云功能。',
           '并非所有厂商都同等程度地开放本地访问——有些将其作为有文档说明的功能提供，有些则完全屏蔽，还有些只有在固件更新或账户变通方案之后才会解锁。',
           'MQTT是连接开放本地API的阳台光伏硬件与Home Assistant之间最常见的桥接协议。',
           'EVCC可以利用本地阳台光伏发电数据，把电动车充电或其他负载安排在白天有光照的时段，把无云理念从单纯监控扩展到主动自动化。',
@@ -997,6 +1106,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: '基于实时发电数据搭建自动化', whyItMatters: '一旦数据接入Home Assistant，你就可以在发电高峰时触发高耗电电器，或者记录历史发电量用于自己留存。' },
         ],
       },
+      localIntegrations: {
+        id: 'local-integrations',
+        title: '阳台光伏设备有哪些Home Assistant集成？',
+        content: [
+          '**目前有三种集成方式：Home Assistant内置集成（APsystems EZ系列Wi-Fi微型逆变器，本地轮询）、厂商维护的本地集成（Anker SOLIX，通过Modbus TCP，仅限部分产品），以及通过HACS安装的社区集成（例如Zendure），后者可能依赖应用令牌或厂商云。** 具体属于哪一种取决于产品型号，购买前请先查阅对应集成的文档。',
+        ],
+        items: [
+          'APsystems：[Home Assistant内置集成](https://www.home-assistant.io/integrations/apsystems/)通过本地网络读取EZ系列Wi-Fi微型逆变器（“local polling”）。需先在APsystems应用中启用本地API，并设为持续运行。',
+          'Anker SOLIX：Anker维护一个[官方集成](https://github.com/anker-charging/ha-anker-solix-official)，通过家庭网络中的Modbus TCP与受支持的产品通信，不经过云服务器。需要在Anker应用中开启Modbus TCP，且只有其支持列表中的产品可用；另有一个社区集成改为使用Anker云。',
+          'Zendure：[社区集成](https://github.com/Zendure/Zendure-HA)通过HACS安装，设置时需要Zendure应用令牌；对于较旧的设备，其Wiki介绍了另一条本地MQTT途径。',
+        ],
+        callouts: [
+          { type: 'warning', text: '支持列表会随固件和新品发布而变化。购买前请在集成页面确认您的具体型号；如果需要应用令牌或云端登录，就说明数据可能离开您的网络。' },
+        ],
+      },
       evccMqtt: {
         id: 'evcc-mqtt',
         title: 'EVCC和MQTT是怎么回事？',
@@ -1028,6 +1152,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '选择本地控制硬件会限制我的产品选择吗？', a: '会有所限制,因为并非每个阳台光伏品牌都支持本地访问。请参考文中链接的微逆变器和套件购买指南,查看按型号核实过的支持状态,而不是想当然地认为某个品牌一定支持。' },
           { q: '本地监控会不会比厂商云端App的数据不准？', a: '不会——本地监控读取的是设备产生的同一份底层数据。区别只在于这些数据在哪里被处理和展示,而不在于准确性。' },
           { q: '固件更新会不会破坏我的本地API访问？', a: '有可能。有些厂商曾在发布后的固件更新中移除或限制了本地访问,这也是为什么应该多参考社区反馈,而不是只依赖最初的规格表。' },
+          { q: '阳台光伏逆变器有Home Assistant内置集成吗？', a: '部分有。APsystems EZ系列Wi-Fi微型逆变器有内置集成，在厂商应用中启用本地模式后，即可在本地读取逆变器数据。其他品牌依赖厂商维护或社区集成，请针对您的具体型号查看各项目页面。' },
+          { q: 'Home Assistant集成是否一定意味着“不走云”？', a: '不一定。部分社区集成使用厂商令牌登录，或调用厂商的云API。只有标明为本地的集成（例如本地轮询或网络内的Modbus TCP）才会把设备与Home Assistant之间的通信保留在本地网络内（厂商应用等其他部分仍可能连接互联网）；请阅读集成文档确认属于哪种情况。' },
         ],
       },
       relatedReading: {
@@ -1045,7 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '无云阳台光伏：用Home Assistant监控你的系统',
       description: '让阳台光伏监控保持本地化：哪些硬件开放本地API、如何与Home Assistant集成，以及为什么依赖云端的逆变器会带来隐私和可靠性风险。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/zh/balcony-solar/home-assistant-balcony-solar-no-cloud',
@@ -1064,17 +1190,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'La plupart des kits solaires de balcon sont livrés avec une application du fabricant qui achemine vos données de production vers le cloud du fabricant. Cela fonctionne, mais cela signifie qu\'une entreprise que vous n\'avez jamais rencontrée peut voir combien d\'énergie votre logement produit et consomme — et si ses serveurs tombent en panne, votre surveillance s\'arrête aussi. Le matériel à contrôle local et Home Assistant suppriment entièrement cette dépendance.',
     metaDescription: 'Gardez la surveillance de votre solaire de balcon en local : quel matériel expose une API locale, comment l\'intégrer à Home Assistant, et pourquoi les onduleurs dépendants du cloud représentent un risque pour la confidentialité et la fiabilité.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9 min de lecture',
     educationalLevel: 'Advanced',
     audience: 'Utilisateurs de Home Assistant et acheteurs soucieux de la confidentialité évaluant du matériel solaire de balcon',
     primaryTerm: 'solaire de balcon sans cloud',
     targetKeywords: ['solaire de balcon home assistant', 'surveillance solaire sans cloud', 'api locale solaire de balcon', 'solaire de balcon mqtt', 'evcc solaire de balcon'],
-    leadAnswerBlock: '**Les onduleurs solaires de balcon dépendants du cloud envoient par défaut vos données de production et de consommation aux serveurs du fabricant, et cessent totalement de remonter des données en local si cette connexion est nécessaire au bon fonctionnement de la surveillance.** Le matériel qui expose une API locale — accessible directement sur votre réseau domestique — vous permet de surveiller et d\'automatiser votre système solaire de balcon via Home Assistant sans qu\'aucune donnée ne quitte votre domicile, et continue de fonctionner même si le cloud du fabricant tombe en panne.',
+    leadAnswerBlock: '**Les onduleurs solaires de balcon dépendants du cloud envoient par défaut vos données de production et de consommation aux serveurs du fabricant, et cessent totalement de remonter des données en local si cette connexion est nécessaire au bon fonctionnement de la surveillance.** Le matériel qui expose une API locale — accessible directement sur votre réseau domestique — permet à Home Assistant de lire les données de votre système solaire de balcon via votre réseau domestique plutôt que via le cloud du fabricant, de sorte que la surveillance et les automatisations peuvent continuer de fonctionner même si le cloud du fabricant tombe en panne — même si l\'application ou les fonctions cloud du fabricant peuvent continuer d\'envoyer des données tant que vous ne les désactivez pas.',
     quickAnswerTop: {
       fr: {
         question: 'Puis-je surveiller mon solaire de balcon sans envoyer de données vers le cloud ?',
-        answer: 'Oui, si vous choisissez du matériel qui expose une API locale ou un tableau de bord web local plutôt que d\'exiger l\'application et le compte cloud du fabricant. Home Assistant peut alors récupérer les données de production et de consommation directement depuis l\'appareil via votre réseau local, sans qu\'aucun serveur externe n\'intervienne.',
+        answer: 'Oui, si vous choisissez du matériel qui expose une API locale ou un tableau de bord web local plutôt que d\'exiger l\'application et le compte cloud du fabricant. Home Assistant peut alors récupérer les données de production et de consommation directement depuis l\'appareil via votre réseau local, sans passer par un serveur du fabricant ; l\'application ou les fonctions cloud du fabricant peuvent toutefois rester connectées à Internet tant que vous ne les désactivez pas.',
         bullets: [
           'Avant d\'acheter, recherchez « API locale », « mode local » ou une intégration Home Assistant explicite dans la fiche technique',
           'Certains fabricants proposent l\'accès local comme une option activable ; d\'autres exigent en permanence l\'application cloud',
@@ -1082,7 +1208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MQTT est le protocole courant qui relie les appareils à API locale à Home Assistant et à d\'autres plateformes d\'automatisation',
           'EVCC (contrôleur de charge de véhicule électrique open source) peut lui aussi exploiter les données locales du solaire de balcon pour piloter la charge en fonction de la production solaire',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1090,6 +1216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Pourquoi la surveillance solaire dépendante du cloud pose-t-elle problème ?', anchor: '#why-cloud-is-a-problem' },
       { label: 'Quel matériel expose une API locale ?', anchor: '#local-api-hardware' },
       { label: 'Comment intégrer le solaire de balcon à Home Assistant ?', anchor: '#ha-integration' },
+      { label: 'Quelles intégrations Home Assistant existent aujourd\'hui ?', anchor: '#local-integrations' },
       { label: 'Qu\'en est-il d\'EVCC et de MQTT ?', anchor: '#evcc-mqtt' },
       { label: 'Construire une pile recommandée sans cloud', anchor: '#recommended-stack' },
       { label: 'Questions fréquentes', anchor: '#faq' },
@@ -1101,7 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'La surveillance solaire de balcon dépendante du cloud envoie les données de production/consommation au fabricant et cesse de fonctionner si ses serveurs sont inaccessibles — même si le panneau continue de produire de l\'électricité.',
-          'Le matériel à API locale permet à Home Assistant, EVCC ou tout autre outil du réseau domestique de lire directement les données de votre système, sans que rien ne quitte votre réseau.',
+          'Le matériel à API locale permet à Home Assistant, EVCC ou tout autre outil du réseau domestique de lire directement les données de votre système via le réseau domestique ; que des données quittent encore votre réseau dépend de l\'application et des fonctions cloud du fabricant que vous laissez activées.',
           'Tous les fabricants n\'exposent pas l\'accès local de la même façon — certains en font une fonctionnalité documentée, d\'autres le bloquent entièrement, et certains ne le débloquent qu\'après une mise à jour du firmware ou un contournement de compte.',
           'MQTT est le protocole de pont le plus courant entre le matériel solaire de balcon à API locale et Home Assistant.',
           'EVCC peut utiliser les données locales de production solaire de balcon pour programmer la charge d\'un véhicule électrique ou d\'autres charges pendant les heures d\'ensoleillement, étendant ainsi la logique sans cloud au-delà de la simple surveillance.',
@@ -1145,6 +1272,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Construire des automatisations autour des données de production en temps réel', whyItMatters: 'Une fois que les données circulent vers Home Assistant, vous pouvez déclencher des appareils gourmands en énergie pendant les pics de production ou enregistrer l\'historique de production pour vos propres besoins.' },
         ],
       },
+      localIntegrations: {
+        id: 'local-integrations',
+        title: 'Quelles intégrations Home Assistant existent pour le matériel de solaire de balcon ?',
+        content: [
+          '**Trois types d\'intégration sont utilisés : une intégration native de Home Assistant (micro-onduleurs Wi-Fi de la série EZ d\'APsystems, interrogation locale), une intégration locale maintenue par le fabricant (Anker SOLIX, via Modbus TCP, produits sélectionnés uniquement) et des intégrations communautaires installées via HACS (par exemple Zendure) qui peuvent dépendre d\'un jeton d\'application ou du cloud du fabricant.** Le cas applicable dépend du produit exact ; consultez donc la documentation de l\'intégration avant d\'acheter.',
+        ],
+        items: [
+          'APsystems : l\'[intégration native de Home Assistant](https://www.home-assistant.io/integrations/apsystems/) lit les micro-onduleurs Wi-Fi de la série EZ via votre réseau local (« local polling »). L\'API locale doit d\'abord être activée dans l\'application APsystems et réglée en fonctionnement continu.',
+          'Anker SOLIX : Anker maintient une [intégration officielle](https://github.com/anker-charging/ha-anker-solix-official) qui dialogue avec les produits pris en charge via Modbus TCP sur votre réseau domestique, sans serveur cloud. Modbus TCP doit être activé dans l\'application Anker, et seuls les produits de sa liste fonctionnent ; une intégration communautaire distincte utilise le cloud d\'Anker.',
+          'Zendure : l\'[intégration communautaire](https://github.com/Zendure/Zendure-HA) s\'installe via HACS et exige un jeton de l\'application Zendure lors de la configuration ; pour les appareils plus anciens, son wiki décrit une voie locale par MQTT.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Les listes de compatibilité évoluent avec les firmwares et les nouveaux produits. Vérifiez votre modèle exact sur la page de l\'intégration avant d\'acheter, et considérez un jeton d\'application ou une connexion cloud comme le signe que des données peuvent quitter votre réseau.' },
+        ],
+      },
       evccMqtt: {
         id: 'evcc-mqtt',
         title: 'Qu\'en est-il d\'EVCC et de MQTT ?',
@@ -1176,6 +1318,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Choisir du matériel à contrôle local limite-t-il mes options de produits ?', a: 'Cela les réduit, car toutes les marques de solaire de balcon ne prennent pas en charge l\'accès local. Consultez les guides d\'achat de micro-onduleurs et de kits liés pour connaître le statut vérifié par modèle plutôt que de vous fier à une marque en particulier.' },
           { q: 'La surveillance locale est-elle moins précise que l\'application cloud du fabricant ?', a: 'Non — la surveillance locale lit les mêmes données sous-jacentes produites par l\'appareil. La différence réside dans l\'endroit où ces données sont traitées et affichées, pas dans leur précision.' },
           { q: 'Une mise à jour du firmware peut-elle casser mon accès à l\'API locale ?', a: 'Cela peut arriver. Certains fabricants ont supprimé ou restreint l\'accès local dans des mises à jour de firmware postérieures au lancement, ce qui est une raison de plus de vérifier les retours de la communauté plutôt que de se fier uniquement à la fiche technique d\'origine.' },
+          { q: 'Existe-t-il une intégration native de Home Assistant pour les onduleurs de solaire de balcon ?', a: 'Pour certains, oui. Les micro-onduleurs Wi-Fi de la série EZ d\'APsystems en disposent d\'une, qui interroge l\'onduleur localement une fois le mode local activé dans l\'application du fabricant. Les autres marques reposent sur une intégration maintenue par le fabricant ou par la communauté ; consultez donc la page de chaque projet pour votre modèle exact.' },
+          { q: 'Une intégration Home Assistant signifie-t-elle toujours « sans cloud » ?', a: 'Non. Certaines intégrations communautaires se connectent avec un jeton du fabricant ou utilisent l\'API cloud du fabricant. Seules les intégrations décrites comme locales, comme l\'interrogation locale ou Modbus TCP sur votre réseau, gardent le trafic entre l\'appareil et Home Assistant sur votre réseau local, même si d\'autres éléments de l\'installation, comme l\'application du fabricant, peuvent encore se connecter à internet ; lisez la documentation de l\'intégration pour savoir ce qui s\'applique.' },
         ],
       },
       relatedReading: {
@@ -1193,7 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Solaire de balcon sans cloud : surveillez votre système avec Home Assistant',
       description: 'Gardez la surveillance de votre solaire de balcon en local : quel matériel expose une API locale, comment l\'intégrer à Home Assistant, et pourquoi les onduleurs dépendants du cloud représentent un risque pour la confidentialité et la fiabilité.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'fr',
       author: {
         '@type': 'Person',
@@ -1216,17 +1360,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '대부분의 발코니 태양광 키트는 발전 데이터를 제조사 클라우드로 전송하는 벤더 앱과 함께 제공됩니다. 이 방식도 작동은 하지만, 한 번도 만난 적 없는 회사가 우리 집의 발전량과 소비량을 볼 수 있다는 뜻이며, 그 회사의 서버가 다운되면 모니터링도 함께 멈춥니다. 로컬 제어가 가능한 하드웨어와 Home Assistant를 사용하면 이런 의존성을 완전히 없앨 수 있습니다.',
     metaDescription: '발코니 태양광 모니터링을 로컬로 유지하는 방법: 로컬 API를 제공하는 하드웨어, Home Assistant와의 연동 방법, 그리고 클라우드 의존형 인버터가 프라이버시와 안정성 측면에서 위험한 이유를 설명합니다.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '9분 읽기',
     educationalLevel: 'Advanced',
     audience: 'Home Assistant 사용자 및 발코니 태양광 하드웨어를 검토 중인 프라이버시 중시 구매자',
     primaryTerm: '클라우드 없는 발코니 태양광',
     targetKeywords: ['발코니 태양광 home assistant', '클라우드 없는 태양광 모니터링', '발코니 태양광 로컬 api', '발코니 태양광 mqtt', 'evcc 발코니 태양광'],
-    leadAnswerBlock: '**클라우드 의존형 발코니 태양광 인버터는 기본적으로 발전량과 소비량 데이터를 제조사 서버로 전송하며, 모니터링 기능 자체가 그 연결에 의존한다면 로컬로는 아무런 데이터도 보고하지 않습니다.** 가정 네트워크에서 직접 접근 가능한 로컬 API를 제공하는 하드웨어를 사용하면, 어떤 데이터도 집 밖으로 나가지 않은 채 Home Assistant를 통해 발코니 태양광 시스템을 모니터링하고 자동화할 수 있으며, 제조사 클라우드가 다운되어도 계속 작동합니다.',
+    leadAnswerBlock: '**클라우드 의존형 발코니 태양광 인버터는 기본적으로 발전량과 소비량 데이터를 제조사 서버로 전송하며, 모니터링 기능 자체가 그 연결에 의존한다면 로컬로는 아무런 데이터도 보고하지 않습니다.** 가정 네트워크에서 직접 접근 가능한 로컬 API를 제공하는 하드웨어를 사용하면, Home Assistant가 제조사 클라우드가 아닌 가정 네트워크를 통해 발코니 태양광 시스템의 데이터를 읽을 수 있으므로 제조사 클라우드가 다운되어도 모니터링과 자동화가 계속 작동할 수 있습니다. 다만 제조사 앱이나 클라우드 기능은 비활성화하지 않으면 계속 데이터를 보낼 수 있습니다.',
     quickAnswerTop: {
       ko: {
         question: '데이터를 클라우드로 보내지 않고도 발코니 태양광을 모니터링할 수 있나요?',
-        answer: '네, 가능합니다. 제조사 앱과 클라우드 계정을 반드시 요구하는 대신 로컬 API나 로컬 웹 대시보드를 제공하는 하드웨어를 선택하면 됩니다. 그러면 Home Assistant가 외부 서버를 전혀 거치지 않고 가정 네트워크를 통해 기기에서 직접 발전 및 소비 데이터를 가져올 수 있습니다.',
+        answer: '네, 가능합니다. 제조사 앱과 클라우드 계정을 반드시 요구하는 대신 로컬 API나 로컬 웹 대시보드를 제공하는 하드웨어를 선택하면 됩니다. 그러면 Home Assistant가 제조사 서버를 거치지 않고 가정 네트워크를 통해 기기에서 직접 발전 및 소비 데이터를 가져올 수 있습니다. 다만 제조사 앱이나 클라우드 기능은 비활성화하지 않으면 계속 인터넷에 연결될 수 있습니다.',
         bullets: [
           '구매 전 사양표에서 "local API", "local mode" 또는 명시적인 Home Assistant 연동 여부를 확인할 것',
           '일부 제조사는 로컬 접근을 켜고 끌 수 있는 옵션으로 제공하지만, 일부는 클라우드 앱을 항상 필수로 요구함',
@@ -1234,7 +1378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MQTT는 로컬 API 기기를 Home Assistant 및 기타 자동화 플랫폼에 연결하는 데 흔히 쓰이는 프로토콜임',
           'EVCC(오픈소스 전기차 충전 컨트롤러)도 로컬 발코니 태양광 데이터를 활용해 태양광 발전량에 맞춘 충전을 할 수 있음',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1242,6 +1386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '클라우드 의존형 태양광 모니터링은 왜 문제인가?', anchor: '#why-cloud-is-a-problem' },
       { label: '어떤 하드웨어가 로컬 API를 제공하는가?', anchor: '#local-api-hardware' },
       { label: '발코니 태양광을 Home Assistant와 연동하는 방법은?', anchor: '#ha-integration' },
+      { label: '현재 어떤 Home Assistant 연동이 있습니까?', anchor: '#local-integrations' },
       { label: 'EVCC와 MQTT는 무엇인가?', anchor: '#evcc-mqtt' },
       { label: '권장 무클라우드 스택 구축하기', anchor: '#recommended-stack' },
       { label: '자주 묻는 질문', anchor: '#faq' },
@@ -1253,7 +1398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '클라우드 의존형 발코니 태양광 모니터링은 발전/소비 데이터를 제조사에 전송하며, 패널이 계속 발전하고 있어도 제조사 서버에 접근할 수 없으면 작동이 멈춘다.',
-          '로컬 API를 지원하는 하드웨어는 Home Assistant, EVCC 또는 다른 홈 네트워크 도구가 시스템 데이터를 직접 읽을 수 있게 해주며, 어떤 데이터도 네트워크 밖으로 나가지 않는다.',
+          '로컬 API를 지원하는 하드웨어는 Home Assistant, EVCC 또는 다른 홈 네트워크 도구가 시스템 데이터를 직접 읽을 수 있게 해주며, 네트워크 밖으로 데이터가 나가는지는 켜 둔 제조사 앱과 클라우드 기능에 달려 있다.',
           '모든 제조사가 로컬 접근을 동일하게 제공하는 것은 아니다 — 일부는 공식 문서화된 기능으로 제공하고, 일부는 완전히 차단하며, 일부는 펌웨어 업데이트나 계정 우회를 거쳐야만 열린다.',
           'MQTT는 로컬 API를 지원하는 발코니 태양광 하드웨어와 Home Assistant를 연결하는 가장 일반적인 브리지 프로토콜이다.',
           'EVCC는 로컬 발코니 태양광 발전 데이터를 이용해 전기차 충전이나 다른 부하를 낮 시간대에 맞춰 조정할 수 있으며, 무클라우드 원칙을 단순 모니터링을 넘어 확장한다.',
@@ -1297,6 +1442,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: '실시간 발전 데이터를 기반으로 자동화 구축하기', whyItMatters: '데이터가 Home Assistant로 들어오기 시작하면, 발전량이 높을 때 고전력 가전을 작동시키거나 자신의 기록을 위해 발전 이력을 로그로 남길 수 있다.' },
         ],
       },
+      localIntegrations: {
+        id: 'local-integrations',
+        title: '발코니 태양광 장비에는 어떤 Home Assistant 연동이 있습니까?',
+        content: [
+          '**현재 사용되는 연동 방식은 세 가지입니다. Home Assistant에 내장된 연동(APsystems EZ 시리즈 Wi-Fi 마이크로인버터, 로컬 폴링), 제조사가 유지보수하는 로컬 연동(Anker SOLIX, Modbus TCP 방식, 일부 제품만 해당), 그리고 HACS로 설치하는 커뮤니티 연동(예: Zendure)이며, 마지막 방식은 앱 토큰이나 제조사 클라우드에 의존할 수 있습니다.** 어느 방식에 해당하는지는 제품마다 다르므로 구매 전에 해당 연동의 문서를 확인하십시오.',
+        ],
+        items: [
+          'APsystems: [Home Assistant 내장 연동](https://www.home-assistant.io/integrations/apsystems/)은 EZ 시리즈 Wi-Fi 마이크로인버터를 로컬 네트워크로 읽어 옵니다("local polling"). 먼저 APsystems 앱에서 로컬 API를 활성화하고 지속 동작으로 설정해야 합니다.',
+          'Anker SOLIX: Anker는 지원 제품과 가정 내 네트워크의 Modbus TCP로 통신하는 [공식 연동](https://github.com/anker-charging/ha-anker-solix-official)을 유지보수하며, 클라우드 서버는 사용하지 않습니다. Anker 앱에서 Modbus TCP를 켜야 하고, 지원 목록에 있는 제품만 동작합니다. 별도의 커뮤니티 연동은 Anker 클라우드를 사용합니다.',
+          'Zendure: [커뮤니티 연동](https://github.com/Zendure/Zendure-HA)은 HACS로 설치하며 설정 시 Zendure 앱 토큰이 필요합니다. 오래된 기기를 위한 별도의 로컬 MQTT 경로는 위키에 설명되어 있습니다.',
+        ],
+        callouts: [
+          { type: 'warning', text: '지원 목록은 펌웨어 업데이트와 신제품 출시에 따라 바뀝니다. 구매 전에 연동 페이지에서 정확한 모델을 확인하고, 앱 토큰이나 클라우드 로그인이 필요하다면 데이터가 네트워크 밖으로 나갈 수 있다고 보십시오.' },
+        ],
+      },
       evccMqtt: {
         id: 'evcc-mqtt',
         title: 'EVCC와 MQTT는 무엇인가?',
@@ -1328,6 +1488,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '로컬 제어 하드웨어를 선택하면 제품 선택의 폭이 좁아지나요?', a: '좁아집니다. 모든 발코니 태양광 브랜드가 로컬 접근을 지원하는 것은 아니기 때문입니다. 특정 브랜드를 그냥 가정하기보다는, 연결된 마이크로인버터 및 키트 구매 가이드에서 모델별로 검증된 상태를 확인하세요.' },
           { q: '로컬 모니터링이 제조사의 클라우드 앱보다 정확도가 낮은가요?', a: '아닙니다 — 로컬 모니터링은 기기가 생성하는 동일한 기본 데이터를 읽습니다. 차이는 그 데이터가 어디에서 처리되고 표시되는지에 있을 뿐, 정확도에 있지 않습니다.' },
           { q: '펌웨어 업데이트가 로컬 API 접근을 망가뜨릴 수 있나요?', a: '그럴 수 있습니다. 일부 제조사는 출시 이후 펌웨어 업데이트에서 로컬 접근을 제거하거나 제한한 적이 있으며, 이는 최초 사양표만 믿지 말고 커뮤니티 보고를 확인해야 하는 또 다른 이유입니다.' },
+          { q: '발코니 태양광 인버터용 Home Assistant 내장 연동이 있습니까?', a: '일부 제품에는 있습니다. APsystems EZ 시리즈 Wi-Fi 마이크로인버터는 제조사 앱에서 로컬 모드를 활성화하면 인버터를 로컬에서 조회하는 연동이 있습니다. 다른 브랜드는 제조사 또는 커뮤니티 연동에 의존하므로, 정확한 모델에 대해 각 프로젝트 페이지를 확인하십시오.' },
+          { q: 'Home Assistant 연동이라고 해서 항상 "클라우드 없음"을 뜻합니까?', a: '그렇지 않습니다. 일부 커뮤니티 연동은 제조사 토큰으로 로그인하거나 제조사의 클라우드 API를 사용합니다. 로컬 폴링이나 네트워크 내 Modbus TCP처럼 로컬로 명시된 연동만 기기와 Home Assistant 사이의 통신을 로컬 네트워크 안에 둡니다(제조사 앱 등 구성의 다른 부분은 여전히 인터넷에 연결될 수 있습니다). 어느 쪽인지는 연동 문서에서 확인하십시오.' },
         ],
       },
       relatedReading: {
@@ -1345,7 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '클라우드 없는 발코니 태양광: Home Assistant로 시스템을 모니터링하기',
       description: '발코니 태양광 모니터링을 로컬로 유지하는 방법: 로컬 API를 제공하는 하드웨어, Home Assistant와의 연동 방법, 그리고 클라우드 의존형 인버터가 프라이버시와 안정성 측면에서 위험한 이유를 설명합니다.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'ko',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ko/balcony-solar/home-assistant-balcony-solar-no-cloud',

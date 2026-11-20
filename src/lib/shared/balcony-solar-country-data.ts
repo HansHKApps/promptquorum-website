@@ -15,7 +15,10 @@
  *  - certification.available === false means the standard exists on paper but no product
  *    has actually been certified under it yet — do not let article prose imply otherwise.
  *
- * Last fact-checked: 2026-07-02
+ * Last fact-checked: 2026-07-02 (country rows). Partial re-check 2026-11-20, ONLY: Portugal (800 W tier per Decreto-Lei 130/2026,
+ * figure taken from the government press release; decree text on dre.pt not retrieved), Germany (registration, limits, storage note per ADAC /
+ * Verbraucherzentrale), UL 3700 note, and the US state block (re-verified 2026-10-19). Spain, Brazil, Mexico, Gulf/MENA and the US row are
+ * NOT re-verified since 2026-07-02 (a 2026-11-20 news check found no plug-in rules for Spain/Mexico/Brazil, but sources were not re-read).
  */
 
 export type LegalStatus =
@@ -74,7 +77,7 @@ export const US_FEDERAL_CERTIFICATION: CertificationInfo = {
   standard: 'UL 3700',
   available: false,
   note:
-    'Standard published Dec 2025; certification program launched Jan 8 2026. As of the most recent status check (Apr 2026, re-confirmed no contrary evidence 2026-07-02), no complete balcony solar system has yet earned UL 3700 certification — testing is still in progress. Do not describe any specific product as "UL 3700-certified" in article prose; describe the standard as available/launched but not yet yielding certified products.',
+    'Standard published Dec 2025; certification program launched Jan 8 2026. As of 2026-11-20 the picture is mixed: Hoymiles HiFlow Pro (announced 2026-07-15) is marketed as UL 3700-compliant but InsideEVs/pv magazine USA report it is not UL-Solutions-certified, while APsystems states on its US page that the EZ1 is "CSA certified to UL 3700 standards" (vendor claim, not checked against a certification database). Attribute any "UL 3700-certified" statement to its source; do not state it as independently verified.',
 };
 
 export const CHINA_PV_EXPORT_POLICY = {
@@ -247,7 +250,7 @@ export const COUNTRY_DATA: CountryEntry[] = [
     code: 'de',
     legalStatus: 'Explicitly legal — dedicated simplified regime',
     legalStatusNote:
-      'Independently re-verified 2026-07-02 against primary legal text (superseding the earlier reference-market flag). § 8 EEG 2023 (gesetze-im-internet.de) is the governing statute for "Steckersolargeräte." Standard plug-in units (no integrated battery) qualify for the full simplified regime described below; storage-equipped balcony systems remain OUTSIDE this simplified regime and still require full grid-operator (Netzbetreiber) registration and a licensed electrician — a material caveat for any BSOL-08/09 content that discusses battery-equipped kits in a German context.',
+      'Independently re-verified 2026-07-02 against primary legal text (superseding the earlier reference-market flag). § 8 EEG 2023 (gesetze-im-internet.de) is the governing statute for "Steckersolargeräte." Standard plug-in units (no integrated battery) qualify for the full simplified regime described below; storage-equipped balcony systems remain OUTSIDE this simplified regime and are registered with the grid operator (Netzbetreiber) as well as in MaStR; per the Verbraucherzentrale (checked 2026-11-20) VDE-AR-N 4105 offers a simplified self-filed procedure (form F.1.2) up to 800W, but not every operator accepts it yet and operators may keep the earlier rule version until 1 March 2027 — a material caveat for any BSOL-08/09 content that discusses battery-equipped kits in a German context.',
     powerLimitW: 800,
     powerLimitNote:
       '800 VA inverter AC output cap, unchanged since the May 2024 Solarpaket I reform. Now dually anchored in two sources: § 8 EEG 2023 (legal ceiling) and DIN VDE V 0126-95 (technical/safety product standard, effective 2025-12-01 — the first dedicated EU product standard for plug-in solar devices). Confirmed current, no further change since 2024.',
@@ -264,8 +267,8 @@ export const COUNTRY_DATA: CountryEntry[] = [
       note:
         'DIN VDE V 0126-95 mandates pre-assembled connection cables, clear install/warning instructions, and rapid voltage shutoff for shock protection. It explicitly EXCLUDES systems with integrated storage/batteries — a follow-up standard part for storage-equipped devices is in development but not yet published as of write-time.',
     },
-    avgYieldKwhPerKwp: 1003,
-    avgYieldNote: 'Stuttgart reference figure.',
+    avgYieldKwhPerKwp: 1130,
+    avgYieldNote: 'EU JRC PVGIS (PVGIS-SARAH3), Stuttgart 48.78 N 9.18 E, fixed south-facing 35 degree tilt, 14% system losses, horizon shading included; calculated 2026-11-20 (https://re.jrc.ec.europa.eu/pvg_tools/). Replaces the earlier untraceable 1,003 figure. A vertical balcony railing yields less.',
     typicalPrice: '€250–€500 for a standard 800W kit; €600–€1,500 with battery storage',
     typicalPriceVerified: true,
     sourceUrls: [
@@ -275,7 +278,7 @@ export const COUNTRY_DATA: CountryEntry[] = [
       'https://www.vde.com/en/press/press-releases/first-product-standard-for-plug-in-solar-devices',
       'https://www.dke.de/de/arbeitsfelder/energy/normenhinweise/faq-zur-dinvdev012695',
     ],
-    lastVerified: '2026-07-02',
+    lastVerified: '2026-11-20',
   },
   {
     country: 'Spain',
@@ -284,7 +287,7 @@ export const COUNTRY_DATA: CountryEntry[] = [
     legalStatusNote:
       'RD 244/2019 legalized self-consumption broadly and "vertido cero" (zero-export) self-consumption is exempt from access/connection permits, but sources conflict on whether small plug-in kits get a genuine simplified exemption. Vendor/press sources claim ≤800W plug-in kits need no project/installer certificate/registration; a detailed legal-focused source says Spain has NOT adopted a dedicated balcony-solar regime like Germany/Austria/NL and full formalities (CIE certificate, REBT compliance, Comunidad Autónoma registry, distributor notification) still apply. Do not assert a codified 800W exemption as settled fact.',
     powerLimitW: 800,
-    powerLimitNote: 'Commonly cited but UNCERTAIN — appears EU/marketing-derived rather than a codified Spanish statutory threshold (unlike Portugal\'s codified 700W).',
+    powerLimitNote: 'Commonly cited but UNCERTAIN — appears EU/marketing-derived rather than a codified Spanish statutory threshold (unlike Portugal\'s codified 800W tier).',
     registrationRequired: 'UNCERTAIN — conflicting sources; treat as "may require full RD 244/2019 formalities" until confirmed otherwise per installation.',
     certification: {
       standard: 'VDE-AR-N 4105-certified microinverter + CE marking (no distinct Spanish-specific standard found)',
@@ -306,12 +309,12 @@ export const COUNTRY_DATA: CountryEntry[] = [
     code: 'pt',
     legalStatus: 'Explicitly legal — dedicated simplified regime',
     legalStatusNote:
-      'Decreto-Lei n.º 15/2022 (14 Jan 2022) governs UPAC self-consumption units; plug-in kits are treated as UPAC but the law\'s lowest power tier functions as a de facto simplified regime for them. This is the strongest-sourced (primary statutory text) finding among the 5 newly researched regions — safe to state with confidence.',
-    powerLimitW: 700,
-    powerLimitNote: '≤700W installed AC capacity (microinverter nameplate AC output, not panel Wp) is exempt from prior control, provided no grid export. 700W–30kW requires simplified "Mera Comunicação Prévia" notification; 30kW–1MW needs full registration.',
-    registrationRequired: 'None for ≤700W with no grid injection. Simplified online notification (Mera Comunicação Prévia) via DGEG portal for 700W–30kW.',
+      'Decreto-Lei n.º 15/2022 (14 Jan 2022) governs UPAC self-consumption units; plug-in kits are treated as UPAC but the law\'s lowest power tier functions as a de facto simplified regime for them. Updated 2026-11-20: Decreto-Lei n.º 130/2026 (published 29 Jun 2026, in force 60 days later, i.e. 28 Aug 2026) raises that tier from 700W to 800W for systems with no grid injection (Portuguese government announcement 24 Jun 2026; CMS Portugal note for publication/entry-into-force dates). The 800W figure is taken from the government press release, not from the decree text itself.',
+    powerLimitW: 800,
+    powerLimitNote: '≤800W installed capacity (raised from 700W by Decreto-Lei n.º 130/2026, in force 28 Aug 2026; before that date 700W applied) is exempt from prior control, provided no grid export. Above that, up to 30kW, a simplified "Mera Comunicação Prévia" notification applies (30kW threshold not re-checked against the 2026 amendment); 30kW–1MW needs full registration.',
+    registrationRequired: 'None for ≤800W with no grid injection (700W before 28 Aug 2026). Simplified online notification (Mera Comunicação Prévia) via DGEG portal above that, up to 30kW.',
     certification: {
-      standard: 'Certified injection limiter for grid-tied units; DGEG-recognized technician required above 700W',
+      standard: 'Certified injection limiter for grid-tied units; DGEG-recognized technician required above the exempt tier (800W since 28 Aug 2026; 700W before)',
       available: true,
       note: 'No PT-specific product standard (VDE-equivalent) found — flagged uncertain.',
     },
@@ -324,7 +327,7 @@ export const COUNTRY_DATA: CountryEntry[] = [
       'https://www.dgeg.gov.pt/pt/areas-setoriais/energia/energia-eletrica/producao-de-energia-eletrica/producao-descentralizada-autoconsumo-e-upp-mp-mn/autoconsumo-e-cer/3-enquadramento-legal/',
       'https://www.dgeg.gov.pt/pt/areas-setoriais/energia/energia-eletrica/producao-de-energia-eletrica/producao-descentralizada-autoconsumo-e-upp-mp-mn/autoconsumo-e-cer/1-pedido-de-inscricao-e-registo/',
     ],
-    lastVerified: '2026-07-02',
+    lastVerified: '2026-11-20',
   },
   {
     country: 'Brazil',

@@ -6,36 +6,36 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-02',
-    last_full_refresh: '2026-07-02',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     current_hardware_mentioned: ['APsystems EZ1-LV-NA', 'APsystems EZ1', 'EcoFlow STREAM Ultra', 'BigBlue POWAFREE H1'],
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-en.webp',
     affiliateDisclosure: true,
     title: 'Best Balcony Solar Kits (2026): Complete Plug-In Solar Systems Compared',
-    seoTitle: 'Best Balcony Solar Kits 2026: Tested & Compared',
+    seoTitle: 'Best Balcony Solar Kits 2026: Compared',
     intro: 'A complete balcony solar kit bundles the panel(s) and micro-inverter so you don\'t have to source components separately. State-by-state legality currently limits which kits actually ship where in the US — availability, not just price, is the first filter that matters.',
-    metaDescription: 'The best balcony solar kits for 2026, compared on price, local-control support, and current US state availability — verified pricing and legal restrictions.',
+    metaDescription: 'The best balcony solar kits for 2026, compared on price, local-control support, and current US state availability — dated pricing and legal restrictions.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '10 min read',
     educationalLevel: 'Intermediate',
     audience: 'US buyers shopping for a complete balcony solar kit',
     primaryTerm: 'best balcony solar kits',
     targetKeywords: ['best balcony solar kits 2026', 'plug in solar kit', 'apsystems ez1 kit', 'ecoflow stream ultra', 'balcony solar kit with battery'],
-    leadAnswerBlock: '**The APsystems EZ1-LV-NA 1080W kit ($869) is the best overall balcony solar kit for most US buyers — the vendor ships it nationally with no purchase restriction, but that\'s separate from whether connecting it is confirmed legal in your specific state, since most US states haven\'t addressed balcony solar either way yet (check the state-by-state guide before buying).** Its EZ1 micro-inverter is also the only one in the category with a native local API. Buyers wanting battery storage face a harder constraint: the strongest storage kit, EcoFlow\'s STREAM Ultra, is currently sold and installable only in Utah under that state\'s specific legislation.',
+    leadAnswerBlock: '**The APsystems EZ1-LV-NA 1080W kit ($869 at last check, 2026-07-02) is our top overall pick among the balcony solar kits we compared, for most US buyers — the vendor ships it nationally, but that is separate from whether connecting it is confirmed legal in your state: 10 US states had signed plug-in solar laws as of our 2026-10-19 tracker check, several of them not yet in effect (check the state-by-state guide before buying).** Its EZ1 micro-inverter has a native local API, and APsystems states it is CSA-certified to UL 3700. Buyers wanting battery storage face a harder constraint: EcoFlow\'s STREAM Ultra is the strongest storage kit, but EcoFlow\'s own US page lists it as out of stock (restock listed as March 2027) and names only a few states for plug-in installation.',
     quickAnswerTop: {
       en: {
         question: 'What is the best balcony solar kit to buy right now?',
-        answer: 'For most US buyers, the APsystems EZ1-LV-NA 1080W kit ($869, ussolarsupplier.com) is the strongest overall pick — nationally shippable, and its EZ1 micro-inverter has the category\'s only native local API. If you want battery storage, EcoFlow\'s STREAM Ultra is the standout hardware but is currently restricted to Utah installation. No sub-$400 kit was verifiably found to include a fully certified micro-inverter — treat very cheap complete kits with caution.',
+        answer: 'For most US buyers, the APsystems EZ1-LV-NA 1080W kit ($869 at last check on ussolarsupplier.com, 2026-07-02) is the strongest overall pick — nationally shippable, and its EZ1 micro-inverter has a native local API. If you want battery storage, EcoFlow\'s STREAM Ultra is the standout hardware, but EcoFlow\'s US page currently lists it as out of stock and names only a few states for plug-in installation. No sub-$400 kit was verifiably found to include a fully certified micro-inverter — treat very cheap complete kits with caution.',
         bullets: [
           'Best overall: APsystems EZ1-LV-NA 1080W kit — $869, ships nationally with no purchase restriction (separate from whether your state confirms it legal to connect — check first)',
           'Best local-control: APsystems EZ1 micro-inverter — native local API and official-style Home Assistant integration',
           'Best budget: APsystems EZ1 standalone micro-inverter ($325, pair with your own panels) — no verifiably certified sub-$400 complete kit exists',
-          'Best with storage: EcoFlow STREAM Ultra — 1.92 kWh (expandable to 11.52 kWh), $1,279, currently Utah-only',
-          'No product from any brand has UL 3700 certification yet as of write-time',
+          'Best with storage: EcoFlow STREAM Ultra — 1.92 kWh (expandable to 11.52 kWh), $1,399 listed (checked 2026-11-20), out of stock, restock listed as March 2027',
+          'UL 3700: APsystems states its EZ1 is CSA-certified; Hoymiles\' HiFlow Pro is marketed as UL 3700-compliant, but press reports say UL Solutions has not certified it',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -56,11 +56,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Best overall: APsystems EZ1-LV-NA 1080W kit, $869 — the vendor ships it nationally with no purchase restriction, but that\'s not the same as your state confirming it legal to connect; check the state-by-state guide first.',
-          'Best local-control: the APsystems EZ1 micro-inverter is the only one in this category confirmed to ship with a native local API and an official-style Home Assistant integration — verify the local-mode toggle at purchase, since one firmware version (1.1.2_b) reportedly removed it on some units.',
+          'Best local-control: the APsystems EZ1 micro-inverter is among the few in this category confirmed to ship with a native local API and an official-style Home Assistant integration — verify the local-mode toggle at purchase, since one firmware version (1.1.2_b) reportedly removed it on some units.',
           'Best budget: no sub-$400 complete kit was verifiably found to include a certified micro-inverter — the APsystems EZ1 standalone unit ($325, pair with your own panels) is the more defensible budget route.',
-          'Best with storage: EcoFlow STREAM Ultra (1.92 kWh, expandable to 11.52 kWh, $1,279) is the strongest storage-inclusive hardware, but is currently sold and installable only in Utah.',
+          'Best with storage: EcoFlow STREAM Ultra (1.92 kWh, expandable to 11.52 kWh, $1,399 listed on 2026-11-20) is the strongest storage-inclusive hardware, but EcoFlow\'s US page shows it out of stock until a listed March 2027 restock, and lists its plug-in installation states inconsistently (Utah only in one place; Utah, Maryland, Connecticut and Colorado in another).',
           'State legality is the first filter, not price — confirm your state allows balcony solar before shopping by price or spec (see the country/state legal guide).',
-          'No product from Hoymiles, Deye, EcoFlow, or APsystems has achieved UL 3700 certification yet — the standard launched January 2026 but certification testing is still pending industry-wide.',
+          'Certification: UL 3700 was published as a standard in December 2025 and UL Solutions\' certification program launched in January 2026. APsystems\' US page states its EZ1 is "CSA Certified to UL3700 standards" (a vendor claim we could not check against a certification database); Hoymiles\' HiFlow Pro, announced in July 2026, is described as UL 3700-compliant, but press reports note UL Solutions has not certified it.',
         ],
       },
       howWeChose: {
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-overall',
         title: 'Best Overall: APsystems EZ1-LV-NA 1080W Kit',
         content: [
-          '**The APsystems EZ1-LV-NA kit pairs two 540W Talesun bifacial panels with the EZ1-LV micro-inverter for $869 (down from $1,199 MSRP), sold and shipped from a US warehouse.** Because it uses the standalone microinverter route rather than a battery-storage unit, it isn\'t subject to the state-by-state storage restrictions that limit EcoFlow\'s comparable kit — a meaningful practical advantage while state legislation is still catching up across the country.',
+          '**The APsystems EZ1-LV-NA kit pairs two 540W Talesun bifacial panels with the EZ1-LV micro-inverter for $869 (down from $1,199 MSRP), sold and shipped from a US warehouse.** Because it uses the standalone microinverter route rather than a battery-storage unit, it isn\'t subject to the state-by-state storage restrictions that limit EcoFlow\'s comparable kit — a meaningful practical advantage while state legislation is still catching up across the country. The $869 price was checked on 2026-07-02 and could not be re-verified on 2026-11-20 because the retailer page was unreachable.',
         ],
         affiliateLinks: [
           { url: 'https://ussolarsupplier.com/products/1080w-plug-in-solar-kit-with-apsystems-ez1-microinverter-plug-in-home-solar-kit', productName: 'APsystems EZ1-LV-NA 1080W Kit', productCategory: 'Complete balcony solar kit', priceRange: '$869', label: 'Check current price' },
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-local-control',
         title: 'Best No-Cloud / Local-Control Pick',
         content: [
-          '**The APsystems EZ1 micro-inverter — sold both in the kit above and standalone — is the category\'s only confirmed native local API, with an official-style open-source Home Assistant integration that needs no cloud account.** One caveat worth verifying before you buy: a reported firmware version (1.1.2_b) removed local-API functionality on some units, so confirm the local-mode toggle is present on the unit you receive rather than assuming it from the spec sheet alone.',
+          '**The APsystems EZ1 micro-inverter — sold both in the kit above and standalone — has one of the few confirmed native local APIs in this category, with an official-style open-source Home Assistant integration that needs no cloud account.** One caveat worth verifying before you buy: a reported firmware version (1.1.2_b) removed local-API functionality on some units, so confirm the local-mode toggle is present on the unit you receive rather than assuming it from the spec sheet alone.',
           'Hoymiles hardware can also reach a genuinely no-cloud setup, but only via third-party OpenDTU firmware on separate ESP32-based hardware (roughly €55) plus a community Python integration — a real DIY project, not an out-of-box feature. See the [dedicated micro-inverter comparison](/balcony-solar/best-balcony-solar-microinverters) for the full breakdown.',
         ],
       },
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Best Budget',
         content: [
           '**We could not verify any complete kit under $400 that includes a certified micro-inverter — multiple current buying guides explicitly warn that sub-$400 listings "may not include a certified microinverter."** The more defensible budget route is the APsystems EZ1 standalone micro-inverter at $325 (with free lower-48 shipping direct from APsystems), which you pair with your own compatible panels.',
-          'EcoFlow also sells a standalone STREAM Microinverter at $369 on sale, but its own product page states it is sold "only... within the state of Utah" under that state\'s specific legislation — not a nationally viable budget pick despite the attractive price.',
+          'EcoFlow also sells a standalone STREAM Microinverter at $369 on sale, but its own product page states it is sold "only... within the state of Utah" under that state\'s specific legislation — not a nationally viable budget pick despite the attractive price. That price and restriction were checked on 2026-07-02 and have not been re-verified.',
         ],
         affiliateLinks: [
           { url: 'https://usa.apsystems.com/product/ez1-microinverter/', productName: 'APsystems EZ1 Micro-Inverter (standalone)', productCategory: 'Micro-inverter', priceRange: '$325', label: 'Check current price' },
@@ -103,14 +103,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-with-storage',
         title: 'Best With Storage',
         content: [
-          '**EcoFlow\'s STREAM Ultra is the strongest storage-inclusive balcony solar hardware on the market — 1.92 kWh base capacity (expandable to 11.52 kWh), a built-in grid-tied micro-inverter, 1,200W AC output, and a 10-year warranty on LFP cells rated for 6,000 cycles at 70% capacity retention.** The significant limitation: EcoFlow\'s own product page confirms plug-and-play installation is currently sold and installable only in Utah, reflecting how few US states currently permit permit-free plug-in storage systems.',
-          'If you\'re outside Utah, BigBlue\'s POWAFREE H1 (2,560 Wh battery, integrated R800 micro-inverter, roughly IP67-rated) is legal in a wider — though still limited — set of states (Utah, Maryland, Maine, Virginia, and one more as of mid-2026). Its cited $699.99 sale price could not be independently confirmed on a BigBlue-owned page, so treat that figure as unverified pending direct confirmation.',
+          '**EcoFlow\'s STREAM Ultra is the strongest storage-inclusive balcony solar hardware: 1.92 kWh base capacity (expandable to 11.52 kWh), a built-in grid-tied micro-inverter, 1,200W AC output, and a 10-year warranty on LFP cells rated for 6,000 cycles at 70% capacity retention.** The significant limitation is availability: EcoFlow\'s US product page (checked 2026-11-20) lists it at $1,399, shows it as out of stock with a restock date of March 2027, and states the plug-in installation states inconsistently — one note names Utah, Maryland, Connecticut and Colorado, while a footnote says sale and plug-and-play installation are Utah only.',
+          'BigBlue\'s POWAFREE H1 (2,560 Wh battery, 800W solar input and an integrated micro-inverter, IP67 per retailer listings) is another storage option, but we could not verify its current US price or the states where it can be installed on a BigBlue-owned page — treat both as unverified and confirm with the vendor and your state\'s law before buying.',
         ],
         callouts: [
           { type: 'warning', text: 'State legality for storage-inclusive balcony solar kits is currently far more restrictive than for panel-plus-microinverter-only kits. Confirm your state\'s status before buying a storage kit specifically.' },
         ],
         affiliateLinks: [
-          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Balcony solar kit with battery', priceRange: '$1,279', label: 'Check current price' },
+          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Balcony solar kit with battery', priceRange: '$1,399', label: 'Check current price' },
         ],
       },
       comparisonTable: {
@@ -119,8 +119,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { kit: 'APsystems EZ1-LV-NA 1080W', price: '$869', storage: 'None', control: 'Native local API', availability: 'Ships nationally' },
           { kit: 'APsystems EZ1 (standalone)', price: '$325', storage: 'None', control: 'Native local API', availability: 'Ships nationally' },
-          { kit: 'EcoFlow STREAM Ultra', price: '$1,279', storage: '1.92–11.52 kWh', control: 'Cloud app (no verified local API)', availability: 'Utah only' },
-          { kit: 'BigBlue POWAFREE H1', price: '~$699.99 (unverified)', storage: '2,560 Wh', control: 'Unverified', availability: '~5 states (UT/MD/ME/VA + 1)' },
+          { kit: 'EcoFlow STREAM Ultra', price: '$1,399', storage: '1.92–11.52 kWh', control: 'Cloud app (no verified local API)', availability: 'Out of stock (restock March 2027)' },
+          { kit: 'BigBlue POWAFREE H1', price: 'Unverified', storage: '2,560 Wh', control: 'Unverified', availability: 'Unverified' },
         ],
         columns: ['kit', 'price', 'storage', 'control', 'availability'],
         tableFormat: true,
@@ -133,16 +133,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'State legality and any state-specific wattage cap — confirm before comparing kits',
-          'Certification status (UL 1741/IEEE 1547 today; UL 3700 not yet available from any brand)',
+          'Certification status (UL 1741/IEEE 1547 today; UL 3700: APsystems states CSA certification for its EZ1, other brands unconfirmed)',
           'Local vs. cloud monitoring, if that matters to you',
           'Whether storage is included, and whether that specific storage hardware is legal in your state',
+        ],
+        callouts: [
+          { type: 'info', text: 'This guide is general information, not legal, tax or electrical advice. Plug-in solar rules and product safety requirements differ by state, utility and landlord or HOA; confirm them with your state regulator, your utility and, where needed, a licensed electrician before you buy or connect anything.' },
         ],
       },
       chinaPriceNote: {
         id: 'china-price-note',
         title: 'China Hardware & Price Note',
         content: [
-          '**Nearly all balcony solar hardware — panels and micro-inverters alike — is China-manufactured, and a China PV export-tax rebate removal effective April 1, 2026 is pushing module and kit prices up an estimated 10–15% into the second half of 2026.** If you\'re price-sensitive, buying sooner rather than later may matter more for this category than for most consumer electronics, since the underlying component cost trend is upward, not downward, for the foreseeable near term.',
+          '**Nearly all balcony solar hardware — panels and micro-inverters alike — is China-manufactured. China removed its PV-component export VAT rebate on April 1, 2026 and module prices jumped beforehand, but wholesale prices have since eased: the OPIS benchmark for Chinese TOPCon modules fell from about $0.119/W on April 7 to $0.108/W on September 22.** These are wholesale module prices only — retail kit prices were not verified market by market, so we no longer forecast a retail price rise for the second half of 2026.',
         ],
       },
       faqSection: {
@@ -150,13 +153,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is the best balcony solar kit overall?', a: 'The APsystems EZ1-LV-NA 1080W kit ($869) is the strongest overall pick for most US buyers — it ships nationally without the state-storage restrictions that limit battery-inclusive kits, and its micro-inverter has native local-control support.' },
-          { q: 'Is there a balcony solar kit with battery storage that ships nationwide?', a: 'Not currently verified. EcoFlow\'s STREAM Ultra, the strongest storage-inclusive option, is sold and installable only in Utah per the manufacturer\'s own product page. BigBlue\'s POWAFREE H1 has somewhat wider (but still limited) state availability.' },
-          { q: 'Do any balcony solar kits have UL 3700 certification?', a: 'No. As of write-time, no product from any brand has completed UL 3700 certification — the standard launched in January 2026 and certification testing is still pending industry-wide.' },
+          { q: 'Is there a balcony solar kit with battery storage that ships nationwide?', a: 'Not currently verified. EcoFlow\'s STREAM Ultra, the strongest storage-inclusive option, was listed as out of stock (restock March 2027) on EcoFlow\'s US page on 2026-11-20, and that page names either Utah only or Utah, Maryland, Connecticut and Colorado for plug-in installation, depending on the note. We could not verify BigBlue\'s POWAFREE H1 availability.' },
+          { q: 'Do any balcony solar kits have UL 3700 certification?', a: 'Not conclusively. APsystems states on its US page that its EZ1 is "CSA Certified to UL3700 standards" — a vendor claim we could not check against a certification database. Hoymiles\' HiFlow Pro, announced in July 2026, is marketed as UL 3700-compliant, but press reports say UL Solutions has not certified it. The standard itself was published in December 2025.' },
           { q: 'What is the cheapest reliable balcony solar option?', a: 'The APsystems EZ1 standalone micro-inverter at $325 (paired with your own compatible panels) is the most defensible budget route we could verify — no complete kit under $400 was confirmed to include a certified micro-inverter.' },
           { q: 'Which balcony solar kit works best with Home Assistant?', a: 'Kits built around the APsystems EZ1 micro-inverter, which has a native local API and an official-style open-source Home Assistant integration requiring no cloud account.' },
-          { q: 'Why are balcony solar kit prices rising?', a: 'China removed a PV-component export VAT rebate effective April 1, 2026, raising exporter costs and pushing module and kit prices up an estimated 10–15% into the second half of 2026.' },
+          { q: 'Are balcony solar kit prices rising?', a: 'Not clearly. China removed a PV-component export VAT rebate effective April 1, 2026 and wholesale module prices jumped beforehand, but the OPIS benchmark for Chinese TOPCon modules eased from about $0.119/W to $0.108/W between April 7 and September 22. Retail kit prices were not verified market by market.' },
           { q: 'Can I add a battery to a panel-only kit later?', a: 'This depends on your micro-inverter and battery compatibility — check the specific product\'s expansion options before assuming a panel-only kit can be upgraded with storage later.' },
-          { q: 'Are these kits legal in every US state?', a: 'No — legality and wattage limits vary significantly by state. Confirm current status for your state before purchasing; see the state-by-state legal guide linked above.' },
+          { q: 'Are these kits legal in every US state?', a: 'No — legality and wattage limits vary by state. As of our 2026-10-19 tracker check, 10 states had signed plug-in solar laws (Utah, Maine, Maryland, Colorado, Vermont and Connecticut in effect; Virginia, California, New Hampshire and New Jersey signed but taking effect in 2027) and New York\'s bill was awaiting the governor. Confirm your state\'s current status before purchasing; see the state-by-state legal guide.' },
         ],
       },
     },
@@ -164,9 +167,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Best Balcony Solar Kits (2026): Complete Plug-In Solar Systems Compared',
-      description: 'The best balcony solar kits for 2026, compared on price, local-control support, and current US state availability — verified pricing and legal restrictions.',
+      description: 'The best balcony solar kits for 2026, compared on price, local-control support, and current US state availability — dated pricing and legal restrictions.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -186,8 +189,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'APsystems EZ1-LV-NA 1080W Kit', description: 'Best overall — $869, ships nationally, native local API.' },
         { '@type': 'ListItem', position: 2, name: 'APsystems EZ1 (standalone)', description: 'Best local-control and budget pick — $325, native local API.' },
-        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'Best with storage — $1,279, 1.92–11.52 kWh, Utah-only currently.' },
-        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'Alternative storage pick with wider (but still limited) state availability.' },
+        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'Best with storage — $1,399 listed, 1.92–11.52 kWh, out of stock per EcoFlow\'s US page (2026-11-20).' },
+        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'Alternative storage pick; price and state availability unverified.' },
       ],
     },
   },
@@ -200,25 +203,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Un kit solar de balcón completo incluye el panel (o paneles) y el microinversor, así que no tienes que buscar los componentes por separado. En Estados Unidos, la legalidad varía según el estado y actualmente limita qué kits realmente se pueden enviar a cada lugar — la disponibilidad, no solo el precio, es el primer filtro que importa.',
     metaDescription: 'Los mejores kits solares de balcón para 2026 en EE. UU., comparados por precio, soporte de control local y disponibilidad actual por estado — precios y restricciones legales.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '10 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores en EE. UU. que buscan un kit solar de balcón completo',
     primaryTerm: 'best balcony solar kits',
     targetKeywords: ['mejores kits solares de balcón 2026', 'kit solar enchufable', 'kit apsystems ez1', 'ecoflow stream ultra', 'kit solar de balcón con batería'],
-    leadAnswerBlock: '**El kit APsystems EZ1-LV-NA de 1080W ($869) es el mejor kit solar de balcón en general para la mayoría de los compradores en EE. UU. — el fabricante lo envía a nivel nacional sin restricción de compra, pero eso es distinto de si conectarlo está confirmado como legal en tu estado específico, ya que la mayoría de los estados de EE. UU. todavía no se han pronunciado al respecto (consulta la guía estado por estado antes de comprar).** Su microinversor EZ1 también es el único de la categoría con una API local nativa. Los compradores que quieren almacenamiento con batería enfrentan una limitación mayor: el kit de almacenamiento más potente, el STREAM Ultra de EcoFlow, actualmente solo se vende e instala en Utah bajo la legislación específica de ese estado.',
+    leadAnswerBlock: '**El kit APsystems EZ1-LV-NA de 1080W ($869 en la última comprobación, 2026-07-02) es nuestra primera opción general entre los kits solares de balcón que comparamos, para la mayoría de los compradores de EE. UU. — el vendedor lo envía a todo el país, pero eso es independiente de que conectarlo esté confirmado como legal en tu estado: 10 estados de EE. UU. habían firmado leyes de solar enchufable en nuestra comprobación del 2026-10-19, varios todavía sin entrar en vigor (consulta la guía por estados antes de comprar).** Su microinversor EZ1 tiene una API local nativa, y APsystems indica que está certificado por CSA según UL 3700. Quienes quieren almacenamiento con batería se enfrentan a una restricción mayor: el STREAM Ultra de EcoFlow es el kit de almacenamiento más potente, pero la propia página de EcoFlow en EE. UU. lo muestra agotado (reposición indicada para marzo de 2027) y nombra solo unos pocos estados para la instalación enchufable.',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor kit solar de balcón para comprar ahora mismo?',
-        answer: 'Para la mayoría de los compradores en EE. UU., el kit APsystems EZ1-LV-NA de 1080W ($869, ussolarsupplier.com) es la mejor opción en general — se envía a nivel nacional, y su microinversor EZ1 tiene la única API local nativa de la categoría. Si quieres almacenamiento con batería, el STREAM Ultra de EcoFlow es el hardware más destacado, pero actualmente está restringido a instalación en Utah. No se encontró de forma verificable ningún kit completo por debajo de $400 que incluya un microinversor totalmente certificado — trata con precaución los kits completos muy económicos.',
+        answer: 'Para la mayoría de los compradores de EE. UU., el kit APsystems EZ1-LV-NA de 1080W ($869 en la última comprobación en ussolarsupplier.com, 2026-07-02) es la mejor opción general — se envía a todo el país, y su microinversor EZ1 tiene una API local nativa. Si quieres almacenamiento con batería, el STREAM Ultra de EcoFlow es el hardware más destacado, pero la página de EcoFlow en EE. UU. lo muestra ahora agotado y nombra solo unos pocos estados para la instalación enchufable. No se pudo verificar ningún kit de menos de $400 que incluya un microinversor plenamente certificado — ten cuidado con los kits completos muy baratos.',
         bullets: [
           'Mejor en general: kit APsystems EZ1-LV-NA de 1080W — $869, se envía a nivel nacional sin restricción de compra (distinto de si tu estado confirma que es legal conectarlo — verifica primero)',
           'Mejor control local: microinversor APsystems EZ1 — API local nativa e integración con Home Assistant de estilo oficial',
           'Mejor opción económica: microinversor independiente APsystems EZ1 ($325, se combina con tus propios paneles) — no existe ningún kit completo por debajo de $400 verificablemente certificado',
-          'Mejor con almacenamiento: EcoFlow STREAM Ultra — 1.92 kWh (ampliable a 11.52 kWh), $1,279, actualmente solo en Utah',
-          'Ningún producto de ninguna marca tiene certificación UL 3700 todavía, hasta el momento de escribir esto',
+          'Mejor con almacenamiento: EcoFlow STREAM Ultra — 1.92 kWh (ampliable a 11.52 kWh), $1,399 publicado (comprobado el 2026-11-20), agotado, reposición indicada para marzo de 2027',
+          'UL 3700: APsystems indica que su EZ1 está certificado por CSA; el HiFlow Pro de Hoymiles se comercializa como conforme con UL 3700, pero según la prensa UL Solutions no lo ha certificado',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -239,11 +242,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Mejor en general: el kit APsystems EZ1-LV-NA de 1080W, $869 — el fabricante lo envía a nivel nacional sin restricción de compra, pero eso no es lo mismo que tu estado confirme que es legal conectarlo; consulta primero la guía estado por estado.',
-          'Mejor control local: el microinversor APsystems EZ1 es el único de esta categoría confirmado que incluye una API local nativa y una integración con Home Assistant de estilo oficial — verifica el interruptor de modo local al comprar, ya que una versión de firmware (1.1.2_b) reportadamente lo eliminó en algunas unidades.',
+          'Mejor control local: el microinversor APsystems EZ1 es uno de los pocos de esta categoría confirmados que incluyen una API local nativa y una integración con Home Assistant de estilo oficial — verifica el interruptor de modo local al comprar, ya que una versión de firmware (1.1.2_b) reportadamente lo eliminó en algunas unidades.',
           'Mejor opción económica: no se encontró de forma verificable ningún kit completo por debajo de $400 que incluya un microinversor certificado — el microinversor independiente APsystems EZ1 ($325, se combina con tus propios paneles) es la opción económica más defendible.',
-          'Mejor con almacenamiento: el EcoFlow STREAM Ultra (1.92 kWh, ampliable a 11.52 kWh, $1,279) es el hardware con almacenamiento incluido más potente, pero actualmente solo se vende e instala en Utah.',
+          'Mejor con almacenamiento: el EcoFlow STREAM Ultra (1.92 kWh, ampliable a 11.52 kWh, $1,399 publicado el 2026-11-20) es el hardware con almacenamiento más potente, pero la página de EcoFlow en EE. UU. lo muestra agotado hasta una reposición indicada para marzo de 2027 y enumera de forma incoherente los estados de instalación enchufable (solo Utah en un lugar; Utah, Maryland, Connecticut y Colorado en otro).',
           'La legalidad estatal es el primer filtro, no el precio — confirma que tu estado permite la energía solar de balcón antes de comprar por precio o especificaciones (consulta la guía legal por país/estado).',
-          'Ningún producto de Hoymiles, Deye, EcoFlow o APsystems ha logrado la certificación UL 3700 todavía — el estándar se lanzó en enero de 2026, pero las pruebas de certificación siguen pendientes en toda la industria.',
+          'Certificación: UL 3700 se publicó como norma en diciembre de 2025 y el programa de certificación de UL Solutions arrancó en enero de 2026. La página de APsystems en EE. UU. indica que el EZ1 es «CSA Certified to UL3700 standards» (declaración del fabricante que no pudimos contrastar con una base de datos de certificación); el HiFlow Pro de Hoymiles, anunciado en julio de 2026, se describe como conforme con UL 3700, pero la prensa señala que UL Solutions no lo ha certificado.',
         ],
       },
       howWeChose: {
@@ -257,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-overall',
         title: 'El Mejor en General: Kit APsystems EZ1-LV-NA de 1080W',
         content: [
-          '**El kit APsystems EZ1-LV-NA combina dos paneles bifaciales Talesun de 540W con el microinversor EZ1-LV por $869 (rebajado desde $1,199 de PVP), vendido y enviado desde un almacén en EE. UU.** Como usa la ruta del microinversor independiente en lugar de una unidad de almacenamiento con batería, no está sujeto a las restricciones estado por estado sobre almacenamiento que limitan al kit comparable de EcoFlow — una ventaja práctica importante mientras la legislación estatal todavía se pone al día en todo el país.',
+          '**El kit APsystems EZ1-LV-NA combina dos paneles bifaciales Talesun de 540W con el microinversor EZ1-LV por $869 (rebajado desde $1,199 de PVP), vendido y enviado desde un almacén en EE. UU.** Como usa la ruta del microinversor independiente en lugar de una unidad de almacenamiento con batería, no está sujeto a las restricciones estado por estado sobre almacenamiento que limitan al kit comparable de EcoFlow — una ventaja práctica importante mientras la legislación estatal todavía se pone al día en todo el país. El precio de $869 se comprobó el 2026-07-02 y no pudo volver a verificarse el 2026-11-20 porque la página del minorista no estaba accesible.',
         ],
         affiliateLinks: [
           { url: 'https://ussolarsupplier.com/products/1080w-plug-in-solar-kit-with-apsystems-ez1-microinverter-plug-in-home-solar-kit', productName: 'APsystems EZ1-LV-NA 1080W Kit', productCategory: 'Kit solar de balcón completo', priceRange: '$869', label: 'Ver precio actual' },
@@ -267,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-local-control',
         title: 'Mejor Opción Sin Nube / Control Local',
         content: [
-          '**El microinversor APsystems EZ1 — vendido tanto en el kit anterior como por separado — es la única API local nativa confirmada en esta categoría, con una integración de Home Assistant de código abierto y estilo oficial que no requiere cuenta en la nube.** Una advertencia que vale la pena verificar antes de comprar: una versión de firmware reportada (1.1.2_b) eliminó la funcionalidad de la API local en algunas unidades, así que confirma que el interruptor de modo local está presente en la unidad que recibes en lugar de asumirlo solo por la hoja de especificaciones.',
+          '**El microinversor APsystems EZ1 — vendido tanto en el kit anterior como por separado — ofrece una de las pocas API locales nativas confirmadas en esta categoría, con una integración de Home Assistant de código abierto y estilo oficial que no requiere cuenta en la nube.** Una advertencia que vale la pena verificar antes de comprar: una versión de firmware reportada (1.1.2_b) eliminó la funcionalidad de la API local en algunas unidades, así que confirma que el interruptor de modo local está presente en la unidad que recibes en lugar de asumirlo solo por la hoja de especificaciones.',
           'El hardware de Hoymiles también puede lograr una configuración genuinamente sin nube, pero solo mediante el firmware de terceros OpenDTU en hardware separado basado en ESP32 (aproximadamente €55) más una integración comunitaria en Python — un proyecto DIY real, no una función lista para usar. Consulta la [comparativa dedicada de microinversores](/es/balcony-solar/best-balcony-solar-microinverters) para el desglose completo.',
         ],
       },
@@ -276,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Mejor Opción Económica',
         content: [
           '**No pudimos verificar ningún kit completo por debajo de $400 que incluya un microinversor certificado — varias guías de compra actuales advierten explícitamente que los anuncios por debajo de $400 "pueden no incluir un microinversor certificado".** La ruta económica más defendible es el microinversor independiente APsystems EZ1 a $325 (con envío gratuito a los 48 estados continentales directamente desde APsystems), que se combina con tus propios paneles compatibles.',
-          'EcoFlow también vende un microinversor STREAM independiente a $369 en oferta, pero la propia página del producto indica que se vende "solo... dentro del estado de Utah" bajo la legislación específica de ese estado — no es una opción económica viable a nivel nacional a pesar del precio atractivo.',
+          'EcoFlow también vende un microinversor STREAM independiente a $369 en oferta, pero la propia página del producto indica que se vende "solo... dentro del estado de Utah" bajo la legislación específica de ese estado — no es una opción económica viable a nivel nacional a pesar del precio atractivo. Ese precio y esa restricción se comprobaron el 2026-07-02 y no se han vuelto a verificar.',
         ],
         affiliateLinks: [
           { url: 'https://usa.apsystems.com/product/ez1-microinverter/', productName: 'APsystems EZ1 Micro-Inverter (standalone)', productCategory: 'Microinversor', priceRange: '$325', label: 'Ver precio actual' },
@@ -286,14 +289,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-with-storage',
         title: 'Mejor Opción Con Almacenamiento',
         content: [
-          '**El STREAM Ultra de EcoFlow es el hardware solar de balcón con almacenamiento incluido más potente del mercado — 1.92 kWh de capacidad base (ampliable a 11.52 kWh), un microinversor conectado a la red incorporado, salida de CA de 1,200W y una garantía de 10 años en celdas LFP con capacidad para 6,000 ciclos manteniendo el 70% de la capacidad.** La limitación importante: la propia página del producto de EcoFlow confirma que la instalación plug-and-play actualmente solo se vende e instala en Utah, lo que refleja cuán pocos estados de EE. UU. permiten actualmente sistemas de almacenamiento enchufables sin permiso.',
-          'Si estás fuera de Utah, el POWAFREE H1 de BigBlue (batería de 2,560 Wh, microinversor R800 integrado, con clasificación aproximada IP67) es legal en un conjunto más amplio — aunque todavía limitado — de estados (Utah, Maryland, Maine, Virginia y uno más a mediados de 2026). Su precio de oferta citado de $699.99 no se pudo confirmar de forma independiente en una página propiedad de BigBlue, así que trata esa cifra como no verificada hasta que se confirme directamente.',
+          '**El STREAM Ultra de EcoFlow es el hardware solar de balcón con almacenamiento incluido más potente: 1.92 kWh de capacidad base (ampliable a 11.52 kWh), un microinversor conectado a la red incorporado, salida de CA de 1,200W y una garantía de 10 años en celdas LFP con capacidad para 6,000 ciclos manteniendo el 70% de la capacidad.** La limitación importante es la disponibilidad: la página de producto de EcoFlow en EE. UU. (comprobada el 2026-11-20) lo muestra a $1,399, agotado con reposición en marzo de 2027, y enumera de forma incoherente los estados de instalación enchufable — una nota nombra Utah, Maryland, Connecticut y Colorado, mientras que una nota al pie indica que la venta y la instalación plug-and-play son solo en Utah.',
+          'El POWAFREE H1 de BigBlue (batería de 2,560 Wh, entrada solar de 800W y microinversor integrado, IP67 según los listados de minoristas) es otra opción de almacenamiento, pero no pudimos verificar su precio actual en EE. UU. ni los estados donde puede instalarse en una página propiedad de BigBlue — trata ambos datos como no verificados y confírmalos con el fabricante y con la ley de tu estado antes de comprar.',
         ],
         callouts: [
           { type: 'warning', text: 'La legalidad estatal para los kits solares de balcón con almacenamiento incluido es actualmente mucho más restrictiva que para los kits que solo incluyen panel más microinversor. Confirma el estado de tu jurisdicción antes de comprar específicamente un kit con almacenamiento.' },
         ],
         affiliateLinks: [
-          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Kit solar de balcón con batería', priceRange: '$1,279', label: 'Ver precio actual' },
+          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Kit solar de balcón con batería', priceRange: '$1,399', label: 'Ver precio actual' },
         ],
       },
       comparisonTable: {
@@ -302,8 +305,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Kit: 'APsystems EZ1-LV-NA 1080W', Precio: '$869', Almacenamiento: 'Ninguno', Control: 'API local nativa', Disponibilidad: 'Envío a nivel nacional' },
           { Kit: 'APsystems EZ1 (independiente)', Precio: '$325', Almacenamiento: 'Ninguno', Control: 'API local nativa', Disponibilidad: 'Envío a nivel nacional' },
-          { Kit: 'EcoFlow STREAM Ultra', Precio: '$1,279', Almacenamiento: '1.92–11.52 kWh', Control: 'App en la nube (sin API local verificada)', Disponibilidad: 'Solo Utah' },
-          { Kit: 'BigBlue POWAFREE H1', Precio: '~$699.99 (no verificado)', Almacenamiento: '2,560 Wh', Control: 'No verificado', Disponibilidad: '~5 estados (UT/MD/ME/VA + 1)' },
+          { Kit: 'EcoFlow STREAM Ultra', Precio: '$1,399', Almacenamiento: '1.92–11.52 kWh', Control: 'App en la nube (sin API local verificada)', Disponibilidad: 'Agotado (reposición marzo de 2027)' },
+          { Kit: 'BigBlue POWAFREE H1', Precio: 'Sin verificar', Almacenamiento: '2,560 Wh', Control: 'No verificado', Disponibilidad: 'Sin verificar' },
         ],
         columns: ['Kit', 'Precio', 'Almacenamiento', 'Control', 'Disponibilidad'],
         tableFormat: true,
@@ -316,16 +319,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Legalidad estatal y cualquier límite de vataje específico del estado — confirma antes de comparar kits',
-          'Estado de certificación (hoy UL 1741/IEEE 1547; UL 3700 todavía no está disponible de ninguna marca)',
+          'Estado de certificación (hoy UL 1741/IEEE 1547; UL 3700: APsystems indica certificación CSA para su EZ1, otras marcas sin confirmar)',
           'Monitoreo local frente a monitoreo en la nube, si eso te importa',
           'Si el almacenamiento está incluido, y si ese hardware de almacenamiento específico es legal en tu estado',
+        ],
+        callouts: [
+          { type: 'info', text: 'Esta guía es información general y no constituye asesoramiento legal, fiscal ni eléctrico. Las normas del solar enchufable y los requisitos de seguridad de los productos varían según el estado, la compañía eléctrica y el propietario o la comunidad; confírmalos con el regulador de tu estado, tu compañía eléctrica y, si hace falta, un electricista autorizado antes de comprar o conectar nada.' },
         ],
       },
       chinaPriceNote: {
         id: 'china-price-note',
         title: 'Nota Sobre Hardware y Precios de China',
         content: [
-          '**Casi todo el hardware solar de balcón — tanto paneles como microinversores — se fabrica en China, y la eliminación de un reembolso de impuesto de exportación fotovoltaica de China vigente desde el 1 de abril de 2026 está elevando los precios de módulos y kits en un estimado 10–15% hacia la segunda mitad de 2026.** Si eres sensible al precio, comprar antes que después podría importar más en esta categoría que en la mayoría de la electrónica de consumo, ya que la tendencia de costos de los componentes subyacentes es al alza, no a la baja, en el futuro cercano previsible.',
+          '**Casi todo el hardware solar de balcón — paneles y microinversores — se fabrica en China. China eliminó el reembolso del IVA de exportación de componentes fotovoltaicos el 1 de abril de 2026 y los precios de los módulos subieron antes, pero los precios mayoristas han bajado desde entonces: el índice OPIS de módulos TOPCon chinos pasó de unos $0.119/W el 7 de abril a $0.108/W el 22 de septiembre.** Son solo precios mayoristas de módulos — los precios minoristas de los kits no se verificaron mercado por mercado, así que ya no pronosticamos una subida del precio minorista para el segundo semestre de 2026.',
         ],
       },
       faqSection: {
@@ -333,13 +339,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas Frecuentes',
         faqs: [
           { q: '¿Cuál es el mejor kit solar de balcón en general?', a: 'El kit APsystems EZ1-LV-NA de 1080W ($869) es la mejor opción en general para la mayoría de los compradores en EE. UU. — se envía a nivel nacional sin las restricciones estatales de almacenamiento que limitan a los kits con batería incluida, y su microinversor tiene soporte de control local nativo.' },
-          { q: '¿Existe un kit solar de balcón con almacenamiento de batería que se envíe a todo el país?', a: 'Actualmente no está verificado. El STREAM Ultra de EcoFlow, la opción con almacenamiento más potente, solo se vende e instala en Utah según la propia página del producto del fabricante. El POWAFREE H1 de BigBlue tiene una disponibilidad estatal algo más amplia (pero todavía limitada).' },
-          { q: '¿Algún kit solar de balcón tiene certificación UL 3700?', a: 'No. Hasta el momento de escribir esto, ningún producto de ninguna marca ha completado la certificación UL 3700 — el estándar se lanzó en enero de 2026 y las pruebas de certificación siguen pendientes en toda la industria.' },
+          { q: '¿Existe un kit solar de balcón con almacenamiento de batería que se envíe a todo el país?', a: 'Actualmente no verificado. El STREAM Ultra de EcoFlow, la opción con almacenamiento más potente, figuraba agotado (reposición marzo de 2027) en la página de EcoFlow en EE. UU. el 2026-11-20, y esa página nombra, según la nota, solo Utah o bien Utah, Maryland, Connecticut y Colorado para la instalación enchufable. No pudimos verificar la disponibilidad del POWAFREE H1 de BigBlue.' },
+          { q: '¿Algún kit solar de balcón tiene certificación UL 3700?', a: 'No de forma concluyente. APsystems indica en su página de EE. UU. que el EZ1 es «CSA Certified to UL3700 standards» — una declaración del fabricante que no pudimos contrastar con una base de datos de certificación. El HiFlow Pro de Hoymiles, anunciado en julio de 2026, se comercializa como conforme con UL 3700, pero la prensa informa de que UL Solutions no lo ha certificado. La propia norma se publicó en diciembre de 2025.' },
           { q: '¿Cuál es la opción solar de balcón confiable más económica?', a: 'El microinversor independiente APsystems EZ1 a $325 (combinado con tus propios paneles compatibles) es la ruta económica más defendible que pudimos verificar — ningún kit completo por debajo de $400 se confirmó que incluyera un microinversor certificado.' },
           { q: '¿Qué kit solar de balcón funciona mejor con Home Assistant?', a: 'Los kits construidos alrededor del microinversor APsystems EZ1, que tiene una API local nativa y una integración de Home Assistant de código abierto y estilo oficial que no requiere cuenta en la nube.' },
-          { q: '¿Por qué están subiendo los precios de los kits solares de balcón?', a: 'China eliminó un reembolso del IVA de exportación de componentes fotovoltaicos vigente desde el 1 de abril de 2026, lo que aumenta los costos de los exportadores y eleva los precios de módulos y kits en un estimado 10–15% hacia la segunda mitad de 2026.' },
+          { q: '¿Están subiendo los precios de los kits solares de balcón?', a: 'No está claro. China eliminó el reembolso del IVA de exportación de componentes fotovoltaicos el 1 de abril de 2026 y los precios mayoristas de los módulos subieron antes, pero el índice OPIS de módulos TOPCon chinos bajó de unos $0.119/W a $0.108/W entre el 7 de abril y el 22 de septiembre. Los precios minoristas de los kits no se verificaron mercado por mercado.' },
           { q: '¿Puedo añadir una batería a un kit de solo paneles más adelante?', a: 'Esto depende de la compatibilidad de tu microinversor y batería — verifica las opciones de expansión del producto específico antes de asumir que un kit de solo paneles se puede actualizar con almacenamiento más adelante.' },
-          { q: '¿Son legales estos kits en todos los estados de EE. UU.?', a: 'No — la legalidad y los límites de vataje varían significativamente según el estado. Confirma el estado actual para tu estado antes de comprar; consulta la guía legal estado por estado enlazada arriba.' },
+          { q: '¿Son legales estos kits en todos los estados de EE. UU.?', a: 'No — la legalidad y los límites de potencia varían según el estado. En nuestra comprobación del 2026-10-19, 10 estados habían firmado leyes de solar enchufable (Utah, Maine, Maryland, Colorado, Vermont y Connecticut en vigor; Virginia, California, New Hampshire y Nueva Jersey firmadas pero con efecto en 2027) y el proyecto de Nueva York esperaba a la gobernadora. Confirma el estado actual de tu estado antes de comprar; consulta la guía legal por estados.' },
         ],
       },
     },
@@ -349,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Los Mejores Kits Solares de Balcón (2026): Sistemas Solares Enchufables Completos Comparados',
       description: 'Los mejores kits solares de balcón para 2026 en EE. UU., comparados por precio, soporte de control local y disponibilidad actual por estado — precios y restricciones legales.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -377,8 +383,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'APsystems EZ1-LV-NA 1080W Kit', description: 'El mejor en general — $869, envío a nivel nacional, API local nativa.' },
         { '@type': 'ListItem', position: 2, name: 'APsystems EZ1 (standalone)', description: 'Mejor control local y opción económica — $325, API local nativa.' },
-        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'Mejor con almacenamiento — $1,279, 1.92–11.52 kWh, actualmente solo Utah.' },
-        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'Opción alternativa de almacenamiento con disponibilidad estatal más amplia (pero todavía limitada).' },
+        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'Mejor con almacenamiento — $1,399 publicado, 1.92–11.52 kWh, agotado según la página de EcoFlow en EE. UU. (2026-11-20).' },
+        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'Opción alternativa de almacenamiento; precio y disponibilidad por estado sin verificar.' },
       ],
     },
   },
@@ -391,25 +397,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Um kit de energia solar para varanda completo já vem com o(s) painel(is) e o microinversor, então você não precisa buscar os componentes separadamente. A legalidade varia por estado nos EUA e atualmente limita quais kits realmente podem ser enviados para cada lugar — a disponibilidade, não só o preço, é o primeiro filtro que importa.',
     metaDescription: 'Os melhores kits de energia solar para varanda em 2026 nos EUA, comparados por preço, suporte a controle local e disponibilidade atual por estado — preços e restrições legais.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '10 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores nos EUA em busca de um kit de energia solar para varanda completo',
     primaryTerm: 'best balcony solar kits',
     targetKeywords: ['melhores kits de energia solar para varanda 2026', 'kit solar plug-and-play', 'kit apsystems ez1', 'ecoflow stream ultra', 'kit solar de varanda com bateria'],
-    leadAnswerBlock: '**O kit APsystems EZ1-LV-NA de 1080W ($869) é o melhor kit de energia solar para varanda em geral para a maioria dos compradores nos EUA — o fabricante o envia nacionalmente sem restrição de compra, mas isso é diferente de conectá-lo ser confirmadamente legal no seu estado específico, já que a maioria dos estados americanos ainda não se posicionou sobre energia solar de varanda (confira o guia estado por estado antes de comprar).** Seu microinversor EZ1 também é o único da categoria com API local nativa. Compradores que querem armazenamento em bateria enfrentam uma restrição maior: o kit de armazenamento mais forte, o STREAM Ultra da EcoFlow, atualmente só é vendido e instalável em Utah, sob a legislação específica daquele estado.',
+    leadAnswerBlock: '**O kit APsystems EZ1-LV-NA de 1080W ($869 na última verificação, 2026-07-02) é a nossa principal escolha geral entre os kits solares de varanda que comparamos, para a maioria dos compradores dos EUA — o vendedor o envia para todo o país, mas isso é independente de a conexão estar confirmada como legal no seu estado: 10 estados americanos tinham assinado leis de solar plug-in na nossa verificação de 2026-10-19, vários ainda sem vigência (consulte o guia por estados antes de comprar).** O microinversor EZ1 tem API local nativa, e a APsystems informa que ele é certificado pela CSA conforme a UL 3700. Quem quer armazenamento em bateria enfrenta uma restrição maior: o STREAM Ultra da EcoFlow é o kit de armazenamento mais forte, mas a própria página da EcoFlow nos EUA o mostra esgotado (reposição indicada para março de 2027) e cita apenas poucos estados para a instalação plug-in.',
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor kit de energia solar para varanda para comprar agora?',
-        answer: 'Para a maioria dos compradores nos EUA, o kit APsystems EZ1-LV-NA de 1080W ($869, ussolarsupplier.com) é a escolha mais forte em geral — é enviado nacionalmente, e seu microinversor EZ1 tem a única API local nativa da categoria. Se você quer armazenamento com bateria, o STREAM Ultra da EcoFlow é o destaque em hardware, mas atualmente é restrito à instalação em Utah. Nenhum kit completo abaixo de $400 foi comprovadamente encontrado com microinversor totalmente certificado — tenha cautela com kits completos muito baratos.',
+        answer: 'Para a maioria dos compradores dos EUA, o kit APsystems EZ1-LV-NA de 1080W ($869 na última verificação em ussolarsupplier.com, 2026-07-02) é a melhor escolha geral — enviado para todo o país, e seu microinversor EZ1 tem API local nativa. Se você quer armazenamento em bateria, o STREAM Ultra da EcoFlow é o hardware de destaque, mas a página da EcoFlow nos EUA o mostra atualmente esgotado e cita apenas poucos estados para a instalação plug-in. Nenhum kit abaixo de $400 pôde ser verificado como incluindo um microinversor totalmente certificado — tenha cuidado com kits completos muito baratos.',
         bullets: [
           'Melhor opção geral: kit APsystems EZ1-LV-NA de 1080W — $869, enviado nacionalmente sem restrição de compra (diferente de seu estado confirmar que é legal conectá-lo — confira antes)',
           'Melhor controle local: microinversor APsystems EZ1 — API local nativa e integração com o Home Assistant em estilo oficial',
           'Melhor opção econômica: microinversor avulso APsystems EZ1 ($325, combinado com seus próprios painéis) — nenhum kit completo abaixo de $400 comprovadamente certificado existe',
-          'Melhor com armazenamento: EcoFlow STREAM Ultra — 1.92 kWh (expansível a 11.52 kWh), $1,279, atualmente só em Utah',
-          'Nenhum produto de nenhuma marca tem certificação UL 3700 ainda, até o momento desta publicação',
+          'Melhor com armazenamento: EcoFlow STREAM Ultra — 1.92 kWh (expansível a 11.52 kWh), $1,399 listado (verificado em 2026-11-20), esgotado, reposição indicada para março de 2027',
+          'UL 3700: a APsystems informa que seu EZ1 é certificado pela CSA; o HiFlow Pro da Hoymiles é divulgado como compatível com a UL 3700, mas, segundo a imprensa, a UL Solutions não o certificou',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -430,11 +436,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Melhor opção geral: o kit APsystems EZ1-LV-NA de 1080W, $869 — o fabricante o envia nacionalmente sem restrição de compra, mas isso não é o mesmo que seu estado confirmar que é legal conectá-lo; confira primeiro o guia estado por estado.',
-          'Melhor controle local: o microinversor APsystems EZ1 é o único desta categoria confirmado com API local nativa e integração com o Home Assistant em estilo oficial — verifique a opção de modo local na compra, já que uma versão de firmware (1.1.2_b) supostamente a removeu em algumas unidades.',
+          'Melhor controle local: o microinversor APsystems EZ1 é um dos poucos desta categoria confirmados com API local nativa e integração com o Home Assistant em estilo oficial — verifique a opção de modo local na compra, já que uma versão de firmware (1.1.2_b) supostamente a removeu em algumas unidades.',
           'Melhor opção econômica: nenhum kit completo abaixo de $400 foi comprovadamente encontrado com microinversor certificado — o microinversor avulso APsystems EZ1 ($325, combinado com seus próprios painéis) é a rota econômica mais defensável.',
-          'Melhor com armazenamento: o EcoFlow STREAM Ultra (1.92 kWh, expansível a 11.52 kWh, $1,279) é o hardware com armazenamento incluído mais forte, mas atualmente só é vendido e instalável em Utah.',
+          'Melhor com armazenamento: o EcoFlow STREAM Ultra (1.92 kWh, expansível a 11.52 kWh, $1,399 listado em 2026-11-20) é o hardware com armazenamento mais forte, mas a página da EcoFlow nos EUA o mostra esgotado até uma reposição indicada para março de 2027 e lista de forma inconsistente os estados de instalação plug-in (só Utah em um ponto; Utah, Maryland, Connecticut e Colorado em outro).',
           'A legalidade estadual é o primeiro filtro, não o preço — confirme se seu estado permite energia solar de varanda antes de comprar por preço ou especificações (veja o guia legal por país/estado).',
-          'Nenhum produto da Hoymiles, Deye, EcoFlow ou APsystems obteve certificação UL 3700 ainda — o padrão foi lançado em janeiro de 2026, mas os testes de certificação ainda estão pendentes em toda a indústria.',
+          'Certificação: a UL 3700 foi publicada como norma em dezembro de 2025 e o programa de certificação da UL Solutions começou em janeiro de 2026. A página da APsystems nos EUA informa que o EZ1 é "CSA Certified to UL3700 standards" (declaração do fabricante que não conseguimos confrontar com um banco de dados de certificação); o HiFlow Pro da Hoymiles, anunciado em julho de 2026, é descrito como compatível com a UL 3700, mas a imprensa observa que a UL Solutions não o certificou.',
         ],
       },
       howWeChose: {
@@ -448,7 +454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-overall',
         title: 'Melhor Opção Geral: Kit APsystems EZ1-LV-NA de 1080W',
         content: [
-          '**O kit APsystems EZ1-LV-NA combina dois painéis bifaciais Talesun de 540W com o microinversor EZ1-LV por $869 (reduzido de $1.199 de preço sugerido), vendido e enviado a partir de um armazém nos EUA.** Como usa a rota do microinversor avulso em vez de uma unidade de armazenamento em bateria, não está sujeito às restrições estaduais de armazenamento que limitam o kit equivalente da EcoFlow — uma vantagem prática relevante enquanto a legislação estadual ainda está se atualizando pelo país.',
+          '**O kit APsystems EZ1-LV-NA combina dois painéis bifaciais Talesun de 540W com o microinversor EZ1-LV por $869 (reduzido de $1.199 de preço sugerido), vendido e enviado a partir de um armazém nos EUA.** Como usa a rota do microinversor avulso em vez de uma unidade de armazenamento em bateria, não está sujeito às restrições estaduais de armazenamento que limitam o kit equivalente da EcoFlow — uma vantagem prática relevante enquanto a legislação estadual ainda está se atualizando pelo país. O preço de $869 foi verificado em 2026-07-02 e não pôde ser reverificado em 2026-11-20 porque a página do varejista estava inacessível.',
         ],
         affiliateLinks: [
           { url: 'https://ussolarsupplier.com/products/1080w-plug-in-solar-kit-with-apsystems-ez1-microinverter-plug-in-home-solar-kit', productName: 'APsystems EZ1-LV-NA 1080W Kit', productCategory: 'Kit solar de varanda completo', priceRange: '$869', label: 'Ver preço atual' },
@@ -458,7 +464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-local-control',
         title: 'Melhor Opção Sem Nuvem / Controle Local',
         content: [
-          '**O microinversor APsystems EZ1 — vendido tanto no kit acima quanto separadamente — é a única API local nativa confirmada da categoria, com uma integração de código aberto para Home Assistant em estilo oficial que não precisa de conta na nuvem.** Um alerta que vale a pena verificar antes de comprar: uma versão de firmware relatada (1.1.2_b) removeu a funcionalidade da API local em algumas unidades, então confirme se a opção de modo local está presente na unidade que você recebe, em vez de presumir isso só pela ficha técnica.',
+          '**O microinversor APsystems EZ1 — vendido tanto no kit acima quanto separadamente — oferece uma das poucas APIs locais nativas confirmadas da categoria, com uma integração de código aberto para Home Assistant em estilo oficial que não precisa de conta na nuvem.** Um alerta que vale a pena verificar antes de comprar: uma versão de firmware relatada (1.1.2_b) removeu a funcionalidade da API local em algumas unidades, então confirme se a opção de modo local está presente na unidade que você recebe, em vez de presumir isso só pela ficha técnica.',
           'O hardware da Hoymiles também pode chegar a uma configuração genuinamente sem nuvem, mas só via firmware de terceiros OpenDTU em hardware separado baseado em ESP32 (cerca de €55) mais uma integração comunitária em Python — um projeto DIY de verdade, não um recurso pronto de fábrica. Veja a [comparação dedicada de microinversores](/pt/balcony-solar/best-balcony-solar-microinverters) para o detalhamento completo.',
         ],
       },
@@ -467,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Melhor Opção Econômica',
         content: [
           '**Não conseguimos verificar nenhum kit completo abaixo de $400 que inclua um microinversor certificado — vários guias de compra atuais alertam explicitamente que anúncios abaixo de $400 "podem não incluir um microinversor certificado".** A rota econômica mais defensável é o microinversor avulso APsystems EZ1 por $325 (com frete grátis para os 48 estados contíguos direto da APsystems), que você combina com seus próprios painéis compatíveis.',
-          'A EcoFlow também vende um microinversor STREAM avulso por $369 em promoção, mas a própria página do produto informa que ele é vendido "somente... dentro do estado de Utah", sob a legislação específica daquele estado — não é uma opção econômica viável nacionalmente, apesar do preço atrativo.',
+          'A EcoFlow também vende um microinversor STREAM avulso por $369 em promoção, mas a própria página do produto informa que ele é vendido "somente... dentro do estado de Utah", sob a legislação específica daquele estado — não é uma opção econômica viável nacionalmente, apesar do preço atrativo. Esse preço e essa restrição foram verificados em 2026-07-02 e não foram reverificados.',
         ],
         affiliateLinks: [
           { url: 'https://usa.apsystems.com/product/ez1-microinverter/', productName: 'APsystems EZ1 Micro-Inverter (standalone)', productCategory: 'Microinversor', priceRange: '$325', label: 'Ver preço atual' },
@@ -477,14 +483,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-with-storage',
         title: 'Melhor Opção Com Armazenamento',
         content: [
-          '**O STREAM Ultra da EcoFlow é o hardware solar de varanda com armazenamento incluído mais forte do mercado — 1.92 kWh de capacidade base (expansível a 11.52 kWh), microinversor conectado à rede embutido, saída CA de 1.200W e garantia de 10 anos em células LFP com classificação de 6.000 ciclos mantendo 70% da capacidade.** A limitação relevante: a própria página do produto da EcoFlow confirma que a instalação plug-and-play atualmente só é vendida e instalável em Utah, refletindo quão poucos estados americanos hoje permitem sistemas de armazenamento plug-in sem necessidade de licença.',
-          'Se você estiver fora de Utah, o POWAFREE H1 da BigBlue (bateria de 2.560 Wh, microinversor R800 integrado, com classificação aproximada IP67) é legal em um conjunto mais amplo — ainda que limitado — de estados (Utah, Maryland, Maine, Virgínia e mais um em meados de 2026). O preço promocional citado de $699.99 não pôde ser confirmado de forma independente em uma página da própria BigBlue, então trate esse valor como não verificado até confirmação direta.',
+          '**O STREAM Ultra da EcoFlow é o hardware solar de varanda com armazenamento incluído mais forte: 1.92 kWh de capacidade base (expansível a 11.52 kWh), microinversor conectado à rede embutido, saída CA de 1.200W e garantia de 10 anos em células LFP com classificação de 6.000 ciclos mantendo 70% da capacidade.** A limitação relevante é a disponibilidade: a página de produto da EcoFlow nos EUA (verificada em 2026-11-20) o lista a $1,399, mostra-o esgotado com reposição em março de 2027 e indica de forma inconsistente os estados de instalação plug-in — uma nota cita Utah, Maryland, Connecticut e Colorado, enquanto uma nota de rodapé diz que a venda e a instalação plug-and-play são só em Utah.',
+          'O POWAFREE H1 da BigBlue (bateria de 2.560 Wh, entrada solar de 800W e microinversor integrado, IP67 segundo anúncios de varejistas) é outra opção de armazenamento, mas não conseguimos verificar seu preço atual nos EUA nem os estados em que pode ser instalado em uma página da própria BigBlue — trate ambos como não verificados e confirme com o fabricante e com a lei do seu estado antes de comprar.',
         ],
         callouts: [
           { type: 'warning', text: 'A legalidade estadual para kits solares de varanda com armazenamento incluído hoje é bem mais restritiva do que para kits apenas com painel e microinversor. Confirme a situação do seu estado antes de comprar especificamente um kit com armazenamento.' },
         ],
         affiliateLinks: [
-          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Kit solar de varanda com bateria', priceRange: '$1,279', label: 'Ver preço atual' },
+          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Kit solar de varanda com bateria', priceRange: '$1,399', label: 'Ver preço atual' },
         ],
       },
       comparisonTable: {
@@ -493,8 +499,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Kit: 'APsystems EZ1-LV-NA 1080W', Preço: '$869', Armazenamento: 'Nenhum', Controle: 'API local nativa', Disponibilidade: 'Envio nacional' },
           { Kit: 'APsystems EZ1 (avulso)', Preço: '$325', Armazenamento: 'Nenhum', Controle: 'API local nativa', Disponibilidade: 'Envio nacional' },
-          { Kit: 'EcoFlow STREAM Ultra', Preço: '$1,279', Armazenamento: '1.92–11.52 kWh', Controle: 'App na nuvem (sem API local verificada)', Disponibilidade: 'Somente Utah' },
-          { Kit: 'BigBlue POWAFREE H1', Preço: '~$699.99 (não verificado)', Armazenamento: '2,560 Wh', Controle: 'Não verificado', Disponibilidade: '~5 estados (UT/MD/ME/VA + 1)' },
+          { Kit: 'EcoFlow STREAM Ultra', Preço: '$1,399', Armazenamento: '1.92–11.52 kWh', Controle: 'App na nuvem (sem API local verificada)', Disponibilidade: 'Esgotado (reposição março de 2027)' },
+          { Kit: 'BigBlue POWAFREE H1', Preço: 'Não verificado', Armazenamento: '2,560 Wh', Controle: 'Não verificado', Disponibilidade: 'Não verificado' },
         ],
         columns: ['Kit', 'Preço', 'Armazenamento', 'Controle', 'Disponibilidade'],
         tableFormat: true,
@@ -507,16 +513,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Legalidade estadual e qualquer limite de potência específico do estado — confirme antes de comparar kits',
-          'Status de certificação (hoje UL 1741/IEEE 1547; UL 3700 ainda não disponível em nenhuma marca)',
+          'Status de certificação (hoje UL 1741/IEEE 1547; UL 3700: a APsystems informa certificação CSA para o EZ1, outras marcas não confirmadas)',
           'Monitoramento local versus na nuvem, se isso importa para você',
           'Se o armazenamento está incluído, e se esse hardware de armazenamento específico é legal no seu estado',
+        ],
+        callouts: [
+          { type: 'info', text: 'Este guia traz informações gerais e não constitui aconselhamento jurídico, tributário nem elétrico. As regras de solar plug-in e os requisitos de segurança dos produtos variam conforme o estado, a concessionária e o proprietário ou condomínio; confirme-os com o órgão regulador do seu estado, com a sua concessionária e, se necessário, com um eletricista habilitado antes de comprar ou conectar qualquer coisa.' },
         ],
       },
       chinaPriceNote: {
         id: 'china-price-note',
         title: 'Nota Sobre Hardware e Preços da China',
         content: [
-          '**Praticamente todo o hardware solar de varanda — painéis e microinversores — é fabricado na China, e a remoção de um reembolso de imposto de exportação fotovoltaica chinês, em vigor desde 1º de abril de 2026, está elevando os preços de módulos e kits em uma estimativa de 10–15% ao longo do segundo semestre de 2026.** Se você é sensível a preço, comprar mais cedo do que mais tarde pode importar mais nessa categoria do que na maioria dos eletrônicos de consumo, já que a tendência de custo dos componentes subjacentes é de alta, não de queda, no curto prazo previsível.',
+          '**Praticamente todo o hardware solar de varanda — painéis e microinversores — é fabricado na China. A China eliminou o reembolso do imposto de exportação de componentes fotovoltaicos em 1º de abril de 2026 e os preços dos módulos subiram antes, mas os preços no atacado recuaram desde então: o índice OPIS de módulos TOPCon chineses caiu de cerca de $0.119/W em 7 de abril para $0.108/W em 22 de setembro.** São apenas preços de módulos no atacado — os preços de varejo dos kits não foram verificados mercado a mercado, por isso não projetamos mais uma alta de preços no varejo para o segundo semestre de 2026.',
         ],
       },
       faqSection: {
@@ -524,13 +533,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas Frequentes',
         faqs: [
           { q: 'Qual é o melhor kit de energia solar para varanda em geral?', a: 'O kit APsystems EZ1-LV-NA de 1080W ($869) é a melhor opção geral para a maioria dos compradores nos EUA — é enviado nacionalmente sem as restrições estaduais de armazenamento que limitam kits com bateria incluída, e seu microinversor tem suporte nativo a controle local.' },
-          { q: 'Existe um kit de energia solar para varanda com armazenamento em bateria que seja enviado para todo o país?', a: 'Atualmente não confirmado. O STREAM Ultra da EcoFlow, a opção com armazenamento mais forte, só é vendido e instalável em Utah, segundo a própria página do produto do fabricante. O POWAFREE H1 da BigBlue tem disponibilidade estadual um pouco maior (mas ainda limitada).' },
-          { q: 'Algum kit de energia solar para varanda tem certificação UL 3700?', a: 'Não. Até o momento desta publicação, nenhum produto de nenhuma marca concluiu a certificação UL 3700 — o padrão foi lançado em janeiro de 2026 e os testes de certificação ainda estão pendentes em toda a indústria.' },
+          { q: 'Existe um kit de energia solar para varanda com armazenamento em bateria que seja enviado para todo o país?', a: 'Atualmente não verificado. O STREAM Ultra da EcoFlow, a opção com armazenamento mais forte, estava esgotado (reposição em março de 2027) na página da EcoFlow nos EUA em 2026-11-20, e essa página cita, conforme a nota, só Utah ou então Utah, Maryland, Connecticut e Colorado para a instalação plug-in. Não conseguimos verificar a disponibilidade do POWAFREE H1 da BigBlue.' },
+          { q: 'Algum kit de energia solar para varanda tem certificação UL 3700?', a: 'Não de forma conclusiva. A APsystems informa em sua página dos EUA que o EZ1 é "CSA Certified to UL3700 standards" — uma declaração do fabricante que não conseguimos confrontar com um banco de dados de certificação. O HiFlow Pro da Hoymiles, anunciado em julho de 2026, é divulgado como compatível com a UL 3700, mas a imprensa informa que a UL Solutions não o certificou. A norma em si foi publicada em dezembro de 2025.' },
           { q: 'Qual é a opção solar de varanda confiável mais barata?', a: 'O microinversor avulso APsystems EZ1 por $325 (combinado com seus próprios painéis compatíveis) é a rota econômica mais defensável que conseguimos verificar — nenhum kit completo abaixo de $400 foi confirmado com microinversor certificado.' },
           { q: 'Qual kit de energia solar para varanda funciona melhor com o Home Assistant?', a: 'Kits construídos em torno do microinversor APsystems EZ1, que tem API local nativa e uma integração de código aberto para Home Assistant em estilo oficial que não exige conta na nuvem.' },
-          { q: 'Por que os preços dos kits de energia solar para varanda estão subindo?', a: 'A China removeu um reembolso de imposto de exportação de componentes fotovoltaicos em vigor desde 1º de abril de 2026, elevando os custos dos exportadores e os preços de módulos e kits em uma estimativa de 10–15% ao longo do segundo semestre de 2026.' },
+          { q: 'Os preços dos kits de energia solar para varanda estão subindo?', a: 'Não está claro. A China eliminou o reembolso do imposto de exportação de componentes fotovoltaicos em 1º de abril de 2026 e os preços de módulos no atacado subiram antes, mas o índice OPIS de módulos TOPCon chineses caiu de cerca de $0.119/W para $0.108/W entre 7 de abril e 22 de setembro. Os preços de varejo dos kits não foram verificados mercado a mercado.' },
           { q: 'Posso adicionar uma bateria a um kit apenas com painel depois?', a: 'Isso depende da compatibilidade do seu microinversor e da bateria — verifique as opções de expansão do produto específico antes de presumir que um kit apenas com painel pode ser atualizado com armazenamento depois.' },
-          { q: 'Esses kits são legais em todos os estados dos EUA?', a: 'Não — a legalidade e os limites de potência variam bastante por estado. Confirme a situação atual do seu estado antes de comprar; veja o guia legal estado por estado linkado acima.' },
+          { q: 'Esses kits são legais em todos os estados dos EUA?', a: 'Não — a legalidade e os limites de potência variam por estado. Na nossa verificação de 2026-10-19, 10 estados tinham assinado leis de solar plug-in (Utah, Maine, Maryland, Colorado, Vermont e Connecticut em vigor; Virgínia, Califórnia, New Hampshire e Nova Jersey assinadas, mas com efeito em 2027) e o projeto de Nova York aguardava a governadora. Confirme o status atual do seu estado antes de comprar; veja o guia jurídico por estados.' },
         ],
       },
     },
@@ -540,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Os Melhores Kits de Energia Solar para Varanda (2026): Sistemas Solares Plug-and-Play Completos Comparados',
       description: 'Os melhores kits de energia solar para varanda em 2026 nos EUA, comparados por preço, suporte a controle local e disponibilidade atual por estado — preços e restrições legais.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -568,8 +577,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'APsystems EZ1-LV-NA 1080W Kit', description: 'Melhor opção geral — $869, envio nacional, API local nativa.' },
         { '@type': 'ListItem', position: 2, name: 'APsystems EZ1 (standalone)', description: 'Melhor controle local e opção econômica — $325, API local nativa.' },
-        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'Melhor com armazenamento — $1,279, 1.92–11.52 kWh, atualmente somente Utah.' },
-        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'Opção alternativa de armazenamento com disponibilidade estadual mais ampla (mas ainda limitada).' },
+        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'Melhor com armazenamento — $1,399 listado, 1.92–11.52 kWh, esgotado segundo a página da EcoFlow nos EUA (2026-11-20).' },
+        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'Opção alternativa de armazenamento; preço e disponibilidade por estado não verificados.' },
       ],
     },
   },
@@ -580,27 +589,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'أفضل أطقم الطاقة الشمسية للشرفة (2026): مقارنة كاملة لأنظمة الطاقة الشمسية الجاهزة للتوصيل',
     seoTitle: 'أفضل أطقم الطاقة الشمسية للشرفة 2026 في أمريكا',
     intro: 'يجمع طقم الطاقة الشمسية الكامل للشرفة بين اللوح (أو الألواح) والعاكس الصغير (microinverter) بحيث لا تحتاج إلى شراء المكونات بشكل منفصل. تختلف القوانين حاليًا من ولاية إلى أخرى في الولايات المتحدة، وهذا يحدّ من الأطقم التي يمكن شحنها فعليًا إلى كل مكان — التوفر، وليس السعر فقط، هو أول معيار مهم.',
-    metaDescription: 'أفضل أطقم الطاقة الشمسية للشرفة لعام 2026 في الولايات المتحدة، مقارنة من حيث السعر ودعم التحكم المحلي والتوفر الحالي حسب الولاية — الأسعار والقيود القانونية مُتحقق منها حتى يوليو 2026.',
+    metaDescription: 'أفضل أطقم الطاقة الشمسية للشرفة لعام 2026 في الولايات المتحدة، مقارنة من حيث السعر ودعم التحكم المحلي والتوفر الحالي حسب الولاية — الأسعار والقيود القانونية مع تواريخ التحقق.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '10 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مشترون في الولايات المتحدة يبحثون عن طقم طاقة شمسية كامل للشرفة',
     primaryTerm: 'best balcony solar kits',
     targetKeywords: ['أفضل أطقم الطاقة الشمسية للشرفة 2026', 'طقم طاقة شمسية جاهز للتوصيل', 'طقم APsystems EZ1', 'EcoFlow STREAM Ultra', 'طقم طاقة شمسية للشرفة مع بطارية'],
-    leadAnswerBlock: '**طقم APsystems EZ1-LV-NA بقدرة 1080W (بسعر $869) هو أفضل طقم طاقة شمسية للشرفة بشكل عام لمعظم المشترين في الولايات المتحدة — يقوم البائع بشحنه على مستوى البلاد دون قيود على الشراء، لكن هذا يختلف عن كون توصيله مؤكَّدًا قانونيًا في ولايتك تحديدًا، إذ إن معظم الولايات الأمريكية لم تُصدر بعد موقفًا واضحًا بشأن الطاقة الشمسية للشرفة (راجع الدليل الخاص بكل ولاية قبل الشراء).** كما أن عاكسه الصغير EZ1 هو الوحيد في هذه الفئة الذي يتوفر بواجهة برمجة تطبيقات (API) محلية أصلية. أما المشترون الراغبون في تخزين الطاقة بالبطارية فيواجهون قيدًا أكبر: أقوى طقم تخزين، وهو STREAM Ultra من EcoFlow، يُباع ويُركَّب حاليًا فقط في ولاية يوتاه بموجب تشريعات تلك الولاية تحديدًا.',
+    leadAnswerBlock: '**يُعد طقم APsystems EZ1-LV-NA بقدرة 1080W (سعره $869 عند آخر فحص بتاريخ 2026-07-02) خيارنا الأول بشكل عام بين أطقم الطاقة الشمسية للشرفة التي قارنّاها لمعظم المشترين في الولايات المتحدة — يشحنه البائع إلى جميع أنحاء البلاد، لكن هذا منفصل عمّا إذا كان توصيله مؤكدًا قانونيًا في ولايتك: ففي فحص المتتبّع لدينا بتاريخ 2026-10-19 كانت 10 ولايات أمريكية قد وقّعت قوانين للطاقة الشمسية القابلة للتوصيل، وبعضها لم يدخل حيز التنفيذ بعد (راجع الدليل حسب الولايات قبل الشراء).** يمتلك عاكسه الصغير EZ1 واجهة برمجة تطبيقات محلية أصلية، وتذكر APsystems أنه حاصل على اعتماد CSA وفق UL 3700. يواجه من يريدون تخزين البطارية قيدًا أشد: STREAM Ultra من EcoFlow هو أقوى طقم تخزين، لكن صفحة EcoFlow الأمريكية نفسها تعرضه نافدًا من المخزون (إعادة التوفير مذكورة لشهر مارس 2027) ولا تذكر سوى عدد قليل من الولايات للتركيب القابل للتوصيل.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو أفضل طقم طاقة شمسية للشرفة يمكن شراؤه الآن؟',
-        answer: 'بالنسبة لمعظم المشترين في الولايات المتحدة، يُعد طقم APsystems EZ1-LV-NA بقدرة 1080W ($869 من ussolarsupplier.com) الخيار الأقوى بشكل عام — يُشحن على مستوى البلاد، وعاكسه الصغير EZ1 يتوفر بواجهة برمجة تطبيقات محلية أصلية وهي الوحيدة في هذه الفئة. إذا كنت ترغب في تخزين الطاقة بالبطارية، فإن STREAM Ultra من EcoFlow هو الجهاز الأبرز، لكنه حاليًا مقيَّد بالتركيب في ولاية يوتاه فقط. لم يتم العثور بشكل موثَّق على أي طقم كامل بسعر أقل من $400 يتضمن عاكسًا صغيرًا معتمدًا بالكامل — تعامل بحذر مع الأطقم الكاملة الرخيصة جدًا.',
+        answer: 'بالنسبة لمعظم المشترين في الولايات المتحدة، يُعد طقم APsystems EZ1-LV-NA بقدرة 1080W (سعره $869 عند آخر فحص على ussolarsupplier.com بتاريخ 2026-07-02) الخيار الأقوى بشكل عام — قابل للشحن إلى جميع أنحاء البلاد، ويمتلك عاكسه الصغير EZ1 واجهة برمجة تطبيقات محلية أصلية. وإذا أردت تخزين البطارية، فإن STREAM Ultra من EcoFlow هو الجهاز البارز، لكن صفحة EcoFlow الأمريكية تعرضه حاليًا نافدًا من المخزون ولا تذكر سوى عدد قليل من الولايات للتركيب القابل للتوصيل. لم نتمكن من التحقق من وجود أي طقم بأقل من $400 يتضمن عاكسًا صغيرًا معتمدًا بالكامل — تعامل بحذر مع الأطقم الكاملة الرخيصة جدًا.',
         bullets: [
           'الأفضل بشكل عام: طقم APsystems EZ1-LV-NA بقدرة 1080W — $869، يُشحن على مستوى البلاد دون قيود على الشراء (يختلف عن تأكيد ولايتك أنه قانوني لتوصيله — تحقق أولًا)',
           'أفضل تحكم محلي: عاكس APsystems EZ1 الصغير — واجهة برمجة تطبيقات محلية أصلية وتكامل شبه رسمي مع Home Assistant',
           'الأفضل من حيث السعر: عاكس APsystems EZ1 المستقل ($325، يُستخدم مع ألواحك الخاصة) — لا يوجد طقم كامل بسعر أقل من $400 معتمد بشكل موثَّق',
-          'الأفضل مع التخزين: EcoFlow STREAM Ultra — بسعة 1.92 kWh (قابلة للتوسيع إلى 11.52 kWh)، بسعر $1,279، وحاليًا في يوتاه فقط',
-          'لا يوجد أي منتج من أي علامة تجارية يحمل شهادة UL 3700 حتى وقت كتابة هذا المقال',
+          'الأفضل مع التخزين: EcoFlow STREAM Ultra — 1.92 kWh (قابل للتوسيع إلى 11.52 kWh)، السعر المعروض $1,399 (تم التحقق في 2026-11-20)، نافد من المخزون، وإعادة التوفير مذكورة لشهر مارس 2027',
+          'UL 3700: تذكر APsystems أن جهاز EZ1 لديها حاصل على اعتماد CSA؛ ويُسوَّق HiFlow Pro من Hoymiles على أنه متوافق مع UL 3700، لكن تقارير صحفية تفيد بأن UL Solutions لم تعتمده',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -621,11 +630,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'الأفضل بشكل عام: طقم APsystems EZ1-LV-NA بقدرة 1080W بسعر $869 — يقوم البائع بشحنه على مستوى البلاد دون قيود على الشراء، لكن هذا لا يعني أن ولايتك تؤكد أنه قانوني لتوصيله؛ راجع أولًا الدليل الخاص بكل ولاية.',
-          'أفضل تحكم محلي: عاكس APsystems EZ1 الصغير هو الوحيد في هذه الفئة المؤكَّد أنه يأتي بواجهة برمجة تطبيقات محلية أصلية وتكامل شبه رسمي مع Home Assistant — تحقق من وجود خيار الوضع المحلي عند الشراء، إذ تشير التقارير إلى أن إصدار البرنامج الثابت (1.1.2_b) أزاله من بعض الوحدات.',
+          'أفضل تحكم محلي: عاكس APsystems EZ1 الصغير هو من القلائل في هذه الفئة المؤكَّد أنها تأتي بواجهة برمجة تطبيقات محلية أصلية وتكامل شبه رسمي مع Home Assistant — تحقق من وجود خيار الوضع المحلي عند الشراء، إذ تشير التقارير إلى أن إصدار البرنامج الثابت (1.1.2_b) أزاله من بعض الوحدات.',
           'الأفضل من حيث السعر: لم نتمكن من التحقق من وجود أي طقم كامل بسعر أقل من $400 يتضمن عاكسًا صغيرًا معتمدًا — عاكس APsystems EZ1 المستقل بسعر $325 (يُستخدم مع ألواحك الخاصة) هو الخيار الاقتصادي الأكثر منطقية.',
-          'الأفضل مع التخزين: EcoFlow STREAM Ultra (بسعة 1.92 kWh قابلة للتوسيع إلى 11.52 kWh، وبسعر $1,279) هو أقوى جهاز يتضمن التخزين، لكنه حاليًا يُباع ويُركَّب فقط في ولاية يوتاه.',
+          'الأفضل مع التخزين: يُعد EcoFlow STREAM Ultra (1.92 kWh، قابل للتوسيع إلى 11.52 kWh، السعر المعروض $1,399 في 2026-11-20) أقوى جهاز يتضمن تخزينًا، لكن صفحة EcoFlow الأمريكية تعرضه نافدًا من المخزون حتى إعادة توفير مذكورة لشهر مارس 2027، وتذكر الولايات المسموح فيها بالتركيب القابل للتوصيل بصورة غير متسقة (ولاية يوتاه فقط في موضع؛ ويوتاه وميريلاند وكونيتيكت وكولورادو في موضع آخر).',
           'قانونية الولاية هي المعيار الأول، وليس السعر — تأكد من أن ولايتك تسمح بالطاقة الشمسية للشرفة قبل الشراء بناءً على السعر أو المواصفات (راجع الدليل القانوني حسب الدولة/الولاية).',
-          'لم يحصل أي منتج من Hoymiles أو Deye أو EcoFlow أو APsystems على شهادة UL 3700 حتى الآن — أُطلق المعيار في يناير 2026، لكن اختبارات الاعتماد ما زالت معلّقة على مستوى الصناعة بأكملها.',
+          'الاعتماد: صدر معيار UL 3700 في ديسمبر 2025 وبدأ برنامج الاعتماد لدى UL Solutions في يناير 2026. تذكر صفحة APsystems الأمريكية أن EZ1 "CSA Certified to UL3700 standards" (ادعاء من الشركة المصنِّعة لم نتمكن من مطابقته مع قاعدة بيانات اعتماد)؛ أما HiFlow Pro من Hoymiles الذي أُعلن عنه في يوليو 2026 فيُوصف بأنه متوافق مع UL 3700، لكن تقارير صحفية تشير إلى أن UL Solutions لم تعتمده.',
         ],
       },
       howWeChose: {
@@ -639,7 +648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-overall',
         title: 'الأفضل بشكل عام: طقم APsystems EZ1-LV-NA بقدرة 1080W',
         content: [
-          '**يجمع طقم APsystems EZ1-LV-NA بين لوحين ثنائيي الوجه من Talesun بقدرة 540W لكل منهما مع العاكس الصغير EZ1-LV بسعر $869 (بعد خصم من السعر المقترح $1,199)، ويُباع ويُشحن من مستودع في الولايات المتحدة.** ولأنه يعتمد مسار العاكس الصغير المستقل بدلًا من وحدة تخزين بالبطارية، فهو لا يخضع لقيود التخزين المختلفة من ولاية إلى أخرى التي تحدّ من الطقم المماثل من EcoFlow — وهي ميزة عملية مهمة في ظل استمرار التشريعات الولائية في اللحاق بالركب في جميع أنحاء البلاد.',
+          '**يجمع طقم APsystems EZ1-LV-NA بين لوحين ثنائيي الوجه من Talesun بقدرة 540W لكل منهما مع العاكس الصغير EZ1-LV بسعر $869 (بعد خصم من السعر المقترح $1,199)، ويُباع ويُشحن من مستودع في الولايات المتحدة.** ولأنه يعتمد مسار العاكس الصغير المستقل بدلًا من وحدة تخزين بالبطارية، فهو لا يخضع لقيود التخزين المختلفة من ولاية إلى أخرى التي تحدّ من الطقم المماثل من EcoFlow — وهي ميزة عملية مهمة في ظل استمرار التشريعات الولائية في اللحاق بالركب في جميع أنحاء البلاد. تم التحقق من سعر $869 في 2026-07-02 ولم نتمكن من إعادة التحقق منه في 2026-11-20 لأن صفحة المتجر كانت غير متاحة.',
         ],
         affiliateLinks: [
           { url: 'https://ussolarsupplier.com/products/1080w-plug-in-solar-kit-with-apsystems-ez1-microinverter-plug-in-home-solar-kit', productName: 'APsystems EZ1-LV-NA 1080W Kit', productCategory: 'طقم طاقة شمسية كامل للشرفة', priceRange: '$869', label: 'تحقق من السعر الحالي' },
@@ -649,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-local-control',
         title: 'أفضل خيار بلا سحابة / بتحكم محلي',
         content: [
-          '**عاكس APsystems EZ1 الصغير — الذي يُباع ضمن الطقم أعلاه وبشكل مستقل أيضًا — هو الوحيد المؤكَّد في هذه الفئة الذي يتوفر بواجهة برمجة تطبيقات محلية أصلية، إلى جانب تكامل مفتوح المصدر شبه رسمي مع Home Assistant لا يتطلب حساب سحابة.** تحذير يستحق التحقق منه قبل الشراء: أشارت التقارير إلى أن إصدارًا للبرنامج الثابت (1.1.2_b) أزال وظيفة واجهة برمجة التطبيقات المحلية من بعض الوحدات، لذا تأكد من وجود خيار الوضع المحلي في الوحدة التي تستلمها بدلًا من افتراض ذلك من ورقة المواصفات فقط.',
+          '**عاكس APsystems EZ1 الصغير — الذي يُباع ضمن الطقم أعلاه وبشكل مستقل أيضًا — هو من القلائل المؤكَّد في هذه الفئة أنها تتوفر بواجهة برمجة تطبيقات محلية أصلية، إلى جانب تكامل مفتوح المصدر شبه رسمي مع Home Assistant لا يتطلب حساب سحابة.** تحذير يستحق التحقق منه قبل الشراء: أشارت التقارير إلى أن إصدارًا للبرنامج الثابت (1.1.2_b) أزال وظيفة واجهة برمجة التطبيقات المحلية من بعض الوحدات، لذا تأكد من وجود خيار الوضع المحلي في الوحدة التي تستلمها بدلًا من افتراض ذلك من ورقة المواصفات فقط.',
           'يمكن لأجهزة Hoymiles أيضًا الوصول إلى إعداد بلا سحابة فعليًا، لكن فقط عبر البرنامج الثابت من طرف ثالث OpenDTU على أجهزة منفصلة تعتمد على ESP32 (بسعر يقارب €55) بالإضافة إلى تكامل مجتمعي بلغة Python — وهو مشروع DIY حقيقي وليس ميزة جاهزة. راجع [مقارنة العاكسات الصغيرة المخصصة](/ar/balcony-solar/best-balcony-solar-microinverters) للاطلاع على التفاصيل الكاملة.',
         ],
       },
@@ -658,7 +667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأفضل من حيث السعر',
         content: [
           '**لم نتمكن من التحقق من وجود أي طقم كامل بسعر أقل من $400 يتضمن عاكسًا صغيرًا معتمدًا — تحذر عدة أدلة شراء حالية صراحةً من أن العروض التي تقل عن $400 "قد لا تتضمن عاكسًا صغيرًا معتمدًا".** الخيار الاقتصادي الأكثر منطقية هو عاكس APsystems EZ1 المستقل بسعر $325 (مع شحن مجاني إلى الولايات الـ48 المتجاورة مباشرة من APsystems)، والذي تستخدمه مع ألواحك المتوافقة الخاصة.',
-          'تبيع EcoFlow أيضًا عاكسًا صغيرًا مستقلًا من طراز STREAM بسعر $369 ضمن عرض، لكن صفحة المنتج نفسها تذكر أنه يُباع "فقط... داخل ولاية يوتاه" بموجب تشريعات تلك الولاية تحديدًا — وهو ليس خيارًا اقتصاديًا قابلًا للتطبيق على مستوى البلاد رغم سعره الجذاب.',
+          'تبيع EcoFlow أيضًا عاكسًا صغيرًا مستقلًا من طراز STREAM بسعر $369 ضمن عرض، لكن صفحة المنتج نفسها تذكر أنه يُباع "فقط... داخل ولاية يوتاه" بموجب تشريعات تلك الولاية تحديدًا — وهو ليس خيارًا اقتصاديًا قابلًا للتطبيق على مستوى البلاد رغم سعره الجذاب. تم التحقق من هذا السعر وهذا القيد في 2026-07-02 ولم تتم إعادة التحقق منهما.',
         ],
         affiliateLinks: [
           { url: 'https://usa.apsystems.com/product/ez1-microinverter/', productName: 'APsystems EZ1 Micro-Inverter (standalone)', productCategory: 'عاكس صغير (Micro-inverter)', priceRange: '$325', label: 'تحقق من السعر الحالي' },
@@ -668,14 +677,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-with-storage',
         title: 'الأفضل مع التخزين',
         content: [
-          '**يُعد STREAM Ultra من EcoFlow أقوى جهاز طاقة شمسية للشرفة يتضمن تخزينًا في السوق — بسعة أساسية 1.92 kWh (قابلة للتوسيع إلى 11.52 kWh)، وعاكس صغير مدمج متصل بالشبكة، وإخراج تيار متردد بقدرة 1,200W، وضمان 10 سنوات على خلايا LFP المصنَّفة لتحمل 6,000 دورة شحن مع الحفاظ على 70% من السعة.** القيد الأهم: تؤكد صفحة منتج EcoFlow نفسها أن التركيب الجاهز للتوصيل (plug-and-play) يُباع ويُركَّب حاليًا فقط في ولاية يوتاه، وهو ما يعكس قلة عدد الولايات الأمريكية التي تسمح حاليًا بأنظمة تخزين قابلة للتوصيل دون تصريح.',
-          'إذا كنت خارج يوتاه، فإن POWAFREE H1 من BigBlue (بطارية بسعة 2,560 Wh، وعاكس صغير مدمج طراز R800، وتصنيف يقارب IP67) قانوني في مجموعة أوسع — وإن كانت لا تزال محدودة — من الولايات (يوتاه، ماريلاند، مين، فيرجينيا، وولاية إضافية اعتبارًا من منتصف 2026). لم يتم التحقق بشكل مستقل من سعر العرض المذكور البالغ $699.99 على صفحة تابعة لشركة BigBlue، لذا يجب التعامل مع هذا الرقم كرقم غير مؤكَّد إلى حين التأكيد المباشر.',
+          '**يُعد STREAM Ultra من EcoFlow أقوى جهاز طاقة شمسية للشرفة يتضمن تخزينًا — بسعة أساسية 1.92 kWh (قابلة للتوسيع إلى 11.52 kWh)، وعاكس صغير مدمج متصل بالشبكة، وإخراج تيار متردد بقدرة 1,200W، وضمان 10 سنوات على خلايا LFP المصنَّفة لتحمل 6,000 دورة شحن مع الحفاظ على 70% من السعة.** القيد الأهم هو التوفر: تعرض صفحة منتج EcoFlow الأمريكية (تم التحقق في 2026-11-20) سعره $1,399، وتُظهره نافدًا من المخزون مع إعادة توفير في مارس 2027، وتذكر الولايات المسموح فيها بالتركيب القابل للتوصيل بصورة غير متسقة — إذ تذكر ملاحظة يوتاه وميريلاند وكونيتيكت وكولورادو، بينما تفيد حاشية بأن البيع والتركيب الجاهز للتوصيل في يوتاه فقط.',
+          'يُعد BigBlue POWAFREE H1 (بطارية 2,560 Wh، ومدخل شمسي 800W وعاكس صغير مدمج، ومقاوم للماء بدرجة IP67 وفق قوائم تجار التجزئة) خيار تخزين آخر، لكننا لم نتمكن من التحقق من سعره الحالي في الولايات المتحدة ولا من الولايات التي يمكن تركيبه فيها عبر صفحة تابعة لـ BigBlue — تعامل مع الأمرين على أنهما غير مؤكدين وتأكد منهما لدى الشركة المصنِّعة ومن قانون ولايتك قبل الشراء.',
         ],
         callouts: [
           { type: 'warning', text: 'قانونية استخدام أطقم الطاقة الشمسية للشرفة التي تتضمن تخزينًا أكثر تقييدًا حاليًا بكثير من أطقم اللوح مع العاكس الصغير فقط. تأكد من وضع ولايتك قبل شراء طقم يتضمن تخزينًا تحديدًا.' },
         ],
         affiliateLinks: [
-          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'طقم طاقة شمسية للشرفة مع بطارية', priceRange: '$1,279', label: 'تحقق من السعر الحالي' },
+          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'طقم طاقة شمسية للشرفة مع بطارية', priceRange: '$1,399', label: 'تحقق من السعر الحالي' },
         ],
       },
       comparisonTable: {
@@ -684,8 +693,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الطقم': 'APsystems EZ1-LV-NA 1080W', 'السعر': '$869', 'التخزين': 'لا يوجد', 'التحكم': 'واجهة برمجة تطبيقات محلية أصلية', 'التوفر': 'شحن على مستوى البلاد' },
           { 'الطقم': 'APsystems EZ1 (مستقل)', 'السعر': '$325', 'التخزين': 'لا يوجد', 'التحكم': 'واجهة برمجة تطبيقات محلية أصلية', 'التوفر': 'شحن على مستوى البلاد' },
-          { 'الطقم': 'EcoFlow STREAM Ultra', 'السعر': '$1,279', 'التخزين': '1.92–11.52 kWh', 'التحكم': 'تطبيق سحابي (بدون واجهة برمجة تطبيقات محلية مؤكدة)', 'التوفر': 'يوتاه فقط' },
-          { 'الطقم': 'BigBlue POWAFREE H1', 'السعر': '~$699.99 (غير مؤكَّد)', 'التخزين': '2,560 Wh', 'التحكم': 'غير مؤكَّد', 'التوفر': '~5 ولايات (UT/MD/ME/VA + 1)' },
+          { 'الطقم': 'EcoFlow STREAM Ultra', 'السعر': '$1,399', 'التخزين': '1.92–11.52 kWh', 'التحكم': 'تطبيق سحابي (بدون واجهة برمجة تطبيقات محلية مؤكدة)', 'التوفر': 'نافد (إعادة التوفير مارس 2027)' },
+          { 'الطقم': 'BigBlue POWAFREE H1', 'السعر': 'غير مؤكد', 'التخزين': '2,560 Wh', 'التحكم': 'غير مؤكَّد', 'التوفر': 'غير مؤكد' },
         ],
         columns: ['الطقم', 'السعر', 'التخزين', 'التحكم', 'التوفر'],
         tableFormat: true,
@@ -698,16 +707,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'قانونية الولاية وأي حد أقصى للقدرة الكهربائية خاص بالولاية — تأكد قبل مقارنة الأطقم',
-          'حالة الاعتماد (اليوم UL 1741/IEEE 1547؛ UL 3700 غير متاح بعد من أي علامة تجارية)',
+          'حالة الاعتماد (اليوم UL 1741/IEEE 1547؛ UL 3700: تذكر APsystems اعتماد CSA لجهاز EZ1، والعلامات الأخرى غير مؤكدة)',
           'المراقبة المحلية مقابل المراقبة السحابية، إن كان ذلك مهمًا لك',
           'ما إذا كان التخزين مشمولًا، وما إذا كان جهاز التخزين هذا تحديدًا قانونيًا في ولايتك',
+        ],
+        callouts: [
+          { type: 'info', text: 'هذا الدليل معلومات عامة وليس استشارة قانونية أو ضريبية أو كهربائية. تختلف قواعد الطاقة الشمسية القابلة للتوصيل ومتطلبات سلامة المنتجات حسب الولاية وشركة الكهرباء والمالك أو اتحاد الملاك؛ تأكد منها لدى الجهة التنظيمية في ولايتك وشركة الكهرباء، ومن كهربائي مرخّص عند الحاجة، قبل شراء أي جهاز أو توصيله.' },
         ],
       },
       chinaPriceNote: {
         id: 'china-price-note',
         title: 'ملاحظة حول أجهزة وأسعار الصين',
         content: [
-          '**يتم تصنيع جميع أجهزة الطاقة الشمسية للشرفة تقريبًا — الألواح والعاكسات الصغيرة على حد سواء — في الصين، وإلغاء استرداد ضريبة تصدير الخلايا الشمسية الصينية اعتبارًا من 1 أبريل 2026 يدفع أسعار الوحدات والأطقم للارتفاع بنسبة تقديرية تتراوح بين 10-15% خلال النصف الثاني من عام 2026.** إذا كنت حساسًا للسعر، فقد يكون الشراء عاجلًا أكثر أهمية في هذه الفئة مقارنة بمعظم الإلكترونيات الاستهلاكية، إذ إن اتجاه تكلفة المكونات الأساسية آخذ في الارتفاع وليس الانخفاض في المستقبل القريب المنظور.',
+          '**يتم تصنيع جميع أجهزة الطاقة الشمسية للشرفة تقريبًا — الألواح والعاكسات الصغيرة على حد سواء — في الصين. ألغت الصين استرداد ضريبة القيمة المضافة على تصدير مكونات الخلايا الشمسية في 1 أبريل 2026 وقفزت أسعار الوحدات قبل ذلك، لكن الأسعار بالجملة تراجعت منذئذٍ: فقد انخفض مؤشر OPIS لوحدات TOPCon الصينية من نحو $0.119/W في 7 أبريل إلى $0.108/W في 22 سبتمبر.** هذه أسعار وحدات بالجملة فقط — ولم يتم التحقق من أسعار الأطقم بالتجزئة سوقًا بسوق، لذا لم نعد نتوقع ارتفاعًا في أسعار التجزئة للنصف الثاني من 2026.',
         ],
       },
       faqSection: {
@@ -715,13 +727,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هو أفضل طقم طاقة شمسية للشرفة بشكل عام؟', a: 'طقم APsystems EZ1-LV-NA بقدرة 1080W (بسعر $869) هو الخيار الأقوى بشكل عام لمعظم المشترين في الولايات المتحدة — يُشحن على مستوى البلاد دون قيود التخزين الخاصة بالولايات التي تحدّ من الأطقم التي تتضمن بطارية، ويتمتع عاكسه الصغير بدعم تحكم محلي أصلي.' },
-          { q: 'هل يوجد طقم طاقة شمسية للشرفة يتضمن تخزينًا بالبطارية ويُشحن على مستوى البلاد؟', a: 'غير مؤكَّد حاليًا. STREAM Ultra من EcoFlow، وهو أقوى خيار يتضمن تخزينًا، يُباع ويُركَّب فقط في ولاية يوتاه بحسب صفحة منتج الشركة المصنّعة نفسها. أما POWAFREE H1 من BigBlue فتوفره أوسع نسبيًا بين الولايات (لكنه لا يزال محدودًا).' },
-          { q: 'هل يحمل أي طقم طاقة شمسية للشرفة شهادة UL 3700؟', a: 'لا. حتى وقت كتابة هذا المقال، لم يُكمل أي منتج من أي علامة تجارية اعتماد UL 3700 — أُطلق المعيار في يناير 2026، ولا تزال اختبارات الاعتماد معلّقة على مستوى الصناعة بأكملها.' },
+          { q: 'هل يوجد طقم طاقة شمسية للشرفة يتضمن تخزينًا بالبطارية ويُشحن على مستوى البلاد؟', a: 'غير مؤكد حاليًا. كان STREAM Ultra من EcoFlow، وهو أقوى خيار يتضمن تخزينًا، معروضًا نافدًا من المخزون (إعادة التوفير مارس 2027) في صفحة EcoFlow الأمريكية بتاريخ 2026-11-20، وتذكر تلك الصفحة، بحسب الملاحظة، إما يوتاه فقط أو يوتاه وميريلاند وكونيتيكت وكولورادو للتركيب القابل للتوصيل. لم نتمكن من التحقق من توفر BigBlue POWAFREE H1.' },
+          { q: 'هل يحمل أي طقم طاقة شمسية للشرفة شهادة UL 3700؟', a: 'ليس بشكل قاطع. تذكر APsystems في صفحتها الأمريكية أن EZ1 "CSA Certified to UL3700 standards" — وهو ادعاء من الشركة المصنِّعة لم نتمكن من مطابقته مع قاعدة بيانات اعتماد. أما HiFlow Pro من Hoymiles الذي أُعلن عنه في يوليو 2026 فيُسوَّق على أنه متوافق مع UL 3700، لكن تقارير صحفية تفيد بأن UL Solutions لم تعتمده. وقد صدر المعيار نفسه في ديسمبر 2025.' },
           { q: 'ما هو أرخص خيار موثوق للطاقة الشمسية للشرفة؟', a: 'عاكس APsystems EZ1 الصغير المستقل بسعر $325 (مع ألواحك المتوافقة الخاصة) هو الخيار الاقتصادي الأكثر منطقية الذي تمكّنا من التحقق منه — لم يتم تأكيد أي طقم كامل بسعر أقل من $400 يتضمن عاكسًا صغيرًا معتمدًا.' },
           { q: 'أي طقم طاقة شمسية للشرفة يعمل بشكل أفضل مع Home Assistant؟', a: 'الأطقم المبنية حول عاكس APsystems EZ1 الصغير، الذي يتوفر بواجهة برمجة تطبيقات محلية أصلية وتكامل مفتوح المصدر شبه رسمي مع Home Assistant لا يتطلب حساب سحابة.' },
-          { q: 'لماذا ترتفع أسعار أطقم الطاقة الشمسية للشرفة؟', a: 'ألغت الصين استرداد ضريبة القيمة المضافة على تصدير مكونات الخلايا الشمسية اعتبارًا من 1 أبريل 2026، ما يرفع تكاليف المصدّرين ويدفع أسعار الوحدات والأطقم للارتفاع بنسبة تقديرية تتراوح بين 10-15% خلال النصف الثاني من عام 2026.' },
+          { q: 'هل ترتفع أسعار أطقم الطاقة الشمسية للشرفة؟', a: 'ليس بوضوح. ألغت الصين استرداد ضريبة القيمة المضافة على تصدير مكونات الخلايا الشمسية اعتبارًا من 1 أبريل 2026 وقفزت أسعار الوحدات بالجملة قبل ذلك، لكن مؤشر OPIS لوحدات TOPCon الصينية انخفض من نحو $0.119/W إلى $0.108/W بين 7 أبريل و22 سبتمبر. ولم يتم التحقق من أسعار الأطقم بالتجزئة سوقًا بسوق.' },
           { q: 'هل يمكنني إضافة بطارية إلى طقم يحتوي على لوح فقط لاحقًا؟', a: 'يعتمد هذا على توافق العاكس الصغير الخاص بك مع البطارية — تحقق من خيارات التوسعة الخاصة بالمنتج قبل افتراض أن طقمًا يحتوي على لوح فقط يمكن ترقيته بإضافة تخزين لاحقًا.' },
-          { q: 'هل هذه الأطقم قانونية في جميع الولايات الأمريكية؟', a: 'لا — تختلف القانونية وحدود القدرة الكهربائية بشكل كبير حسب الولاية. تأكد من الوضع الحالي لولايتك قبل الشراء؛ راجع الدليل القانوني حسب الولاية المرتبط أعلاه.' },
+          { q: 'هل هذه الأطقم قانونية في جميع الولايات الأمريكية؟', a: 'لا — تختلف الشرعية وحدود القدرة من ولاية لأخرى. في فحص المتتبّع لدينا بتاريخ 2026-10-19 كانت 10 ولايات قد وقّعت قوانين للطاقة الشمسية القابلة للتوصيل (يوتاه ومين وميريلاند وكولورادو وفيرمونت وكونيتيكت سارية؛ وفيرجينيا وكاليفورنيا ونيوهامبشير ونيوجيرسي موقَّعة لكن تسري في 2027)، وكان مشروع قانون نيويورك بانتظار الحاكمة. تأكد من الوضع الحالي لولايتك قبل الشراء؛ وراجع الدليل القانوني حسب الولايات.' },
         ],
       },
     },
@@ -729,9 +741,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'أفضل أطقم الطاقة الشمسية للشرفة (2026): مقارنة كاملة لأنظمة الطاقة الشمسية الجاهزة للتوصيل',
-      description: 'أفضل أطقم الطاقة الشمسية للشرفة لعام 2026 في الولايات المتحدة، مقارنة من حيث السعر ودعم التحكم المحلي والتوفر الحالي حسب الولاية — الأسعار والقيود القانونية مُتحقق منها حتى يوليو 2026.',
+      description: 'أفضل أطقم الطاقة الشمسية للشرفة لعام 2026 في الولايات المتحدة، مقارنة من حيث السعر ودعم التحكم المحلي والتوفر الحالي حسب الولاية — الأسعار والقيود القانونية مع تواريخ التحقق.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -758,8 +770,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'APsystems EZ1-LV-NA 1080W Kit', description: 'الأفضل بشكل عام — $869، شحن على مستوى البلاد، واجهة برمجة تطبيقات محلية أصلية.' },
         { '@type': 'ListItem', position: 2, name: 'APsystems EZ1 (standalone)', description: 'أفضل تحكم محلي وخيار اقتصادي — $325، واجهة برمجة تطبيقات محلية أصلية.' },
-        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'الأفضل مع التخزين — $1,279، 1.92–11.52 kWh، حاليًا يوتاه فقط.' },
-        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'خيار تخزين بديل بتوفر أوسع بين الولايات (لكنه لا يزال محدودًا).' },
+        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'الأفضل مع التخزين — السعر المعروض $1,399، 1.92–11.52 kWh، نافد من المخزون وفق صفحة EcoFlow الأمريكية (2026-11-20).' },
+        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'خيار تخزين بديل؛ السعر والتوفر حسب الولاية غير مؤكدين.' },
       ],
     },
   },
@@ -770,27 +782,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '【2026年】おすすめバルコニーソーラーキット完全比較:プラグイン式太陽光発電システム',
     seoTitle: '2026年版 ベストバルコニーソーラーキット比較',
     intro: '完全なバルコニーソーラーキットには、パネルとマイクロインバーターがセットになっているため、部品を個別に探す必要がありません。米国では州ごとに合法性が異なり、現在どのキットが実際にどこへ発送できるかを左右しています——価格だけでなく入手可能性こそが最初に確認すべき条件です。',
-    metaDescription: '2026年におすすめのバルコニーソーラーキットを、価格・ローカル制御対応・現在の米国州別入手可能性で比較。価格と法的制限は一次情報で検証済みです。',
+    metaDescription: '2026年におすすめのバルコニーソーラーキットを、価格・ローカル制御対応・現在の米国州別入手可能性で比較。価格と法的制限は確認日付きで掲載しています。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '約10分',
     educationalLevel: 'Intermediate',
     audience: 'バルコニーソーラーの完全キットを探している米国の購入者',
     primaryTerm: 'best balcony solar kits',
     targetKeywords: ['2026年 おすすめバルコニーソーラーキット', 'プラグイン式ソーラーキット', 'apsystems ez1 キット', 'ecoflow stream ultra', 'バッテリー付きバルコニーソーラーキット'],
-    leadAnswerBlock: '**APsystems EZ1-LV-NA 1080Wキット($869)は、ほとんどの米国購入者にとって総合的に最良のバルコニーソーラーキットです——メーカーは購入制限なく全米へ発送していますが、これは接続することがあなたの州で合法だと確認されていることとは別問題です。ほとんどの米国の州はバルコニーソーラーについてまだ明確な方針を示していないため(購入前に州別ガイドを確認してください)。**そのEZ1マイクロインバーターは、このカテゴリーで唯一ネイティブなローカルAPIを備えています。バッテリー蓄電を求める購入者はより厳しい制約に直面します。最強の蓄電キットであるEcoFlowのSTREAM Ultraは、現在その州固有の法律のもとユタ州でのみ販売・設置が可能です。',
+    leadAnswerBlock: '**APsystems EZ1-LV-NA 1080Wキット(前回確認時の価格は$869、2026-07-02)は、比較したバルコニーソーラーキットの中で、ほとんどの米国の購入者にとって当サイトの総合的な第一候補です——販売元は全米に出荷しますが、それはお住まいの州で接続が合法と確認されているかどうかとは別問題です。2026-10-19時点の当サイトの確認では、10の州がプラグイン型太陽光に関する法律に署名済みで、その一部はまだ施行されていません(購入前に州別ガイドをご確認ください)。** EZ1マイクロインバーターにはネイティブのローカルAPIがあり、APsystemsはUL 3700に関するCSA認証を取得していると表明しています。蓄電池を望む購入者にはより厳しい制約があります。EcoFlowのSTREAM Ultraは最も強力な蓄電キットですが、EcoFlow自身の米国ページでは在庫切れ(再入荷は2027年3月と表示)で、プラグイン設置が可能な州も少数しか記載されていません。',
     quickAnswerTop: {
       ja: {
         question: '今すぐ買うべきベストなバルコニーソーラーキットは?',
-        answer: 'ほとんどの米国購入者にとって、APsystems EZ1-LV-NA 1080Wキット($869、ussolarsupplier.com)が総合的に最も強力な選択肢です——全米発送可能で、そのEZ1マイクロインバーターはこのカテゴリー唯一のネイティブローカルAPIを備えています。バッテリー蓄電が欲しい場合、EcoFlowのSTREAM Ultraが際立ったハードウェアですが、現在ユタ州での設置に限定されています。認証済みマイクロインバーターを含む400ドル未満の完全キットは検証可能な形では見つかっていません——非常に安価な完全キットには注意してください。',
+        answer: 'ほとんどの米国の購入者には、APsystems EZ1-LV-NA 1080Wキット(前回確認時の価格は$869、ussolarsupplier.com、2026-07-02)が総合的に最も有力な選択肢です——全米に出荷可能で、EZ1マイクロインバーターにはネイティブのローカルAPIがあります。蓄電池が必要な場合、EcoFlowのSTREAM Ultraは際立ったハードウェアですが、EcoFlowの米国ページでは現在在庫切れで、プラグイン設置が可能な州も少数しか記載されていません。完全に認証されたマイクロインバーターを含む$400未満のキットは確認できませんでした——非常に安価なフルキットには注意してください。',
         bullets: [
           '総合ベスト:APsystems EZ1-LV-NA 1080Wキット——$869、購入制限なく全米発送(あなたの州で接続が合法と確認されているかは別問題——まず確認を)',
           'ベストなローカル制御:APsystems EZ1マイクロインバーター——ネイティブローカルAPIと公式スタイルのHome Assistant連携',
           'ベストな予算:APsystems EZ1単体マイクロインバーター($325、手持ちのパネルと組み合わせ)——検証可能な形で認証済みの400ドル未満の完全キットは存在しない',
-          '蓄電付きベスト:EcoFlow STREAM Ultra——1.92kWh(11.52kWhまで拡張可能)、$1,279、現在ユタ州限定',
-          '執筆時点で、いずれのブランドの製品もUL 3700認証を取得していません',
+          '蓄電込みで最適:EcoFlow STREAM Ultra——1.92kWh(11.52kWhまで拡張可能)、表示価格$1,399(2026-11-20確認)、在庫切れ、再入荷は2027年3月と表示',
+          'UL 3700:APsystemsはEZ1がCSA認証済みと表明。HoymilesのHiFlow ProはUL 3700準拠として販売されているが、報道によればUL Solutionsは認証していない',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -811,11 +823,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '総合ベスト:APsystems EZ1-LV-NA 1080Wキット、$869——メーカーは購入制限なく全米へ発送していますが、これはあなたの州が接続を合法と確認していることと同じではありません。まず州別ガイドを確認してください。',
-          'ベストなローカル制御:APsystems EZ1マイクロインバーターは、このカテゴリーでネイティブローカルAPIと公式スタイルのHome Assistant連携が確認されている唯一の製品です——あるファームウェアバージョン(1.1.2_b)が一部のユニットでこの機能を削除したと報告されているため、購入時にローカルモードの切り替えがあるか確認してください。',
+          'ベストなローカル制御:APsystems EZ1マイクロインバーターは、このカテゴリーでネイティブローカルAPIと公式スタイルのHome Assistant連携が確認されている数少ない製品の一つです——あるファームウェアバージョン(1.1.2_b)が一部のユニットでこの機能を削除したと報告されているため、購入時にローカルモードの切り替えがあるか確認してください。',
           'ベストな予算:認証済みマイクロインバーターを含む400ドル未満の完全キットは検証可能な形では見つかっていません——APsystems EZ1単体ユニット($325、手持ちのパネルと組み合わせ)がより堅実な予算ルートです。',
-          '蓄電付きベスト:EcoFlow STREAM Ultra(1.92kWh、11.52kWhまで拡張可能、$1,279)は最も強力な蓄電込みハードウェアですが、現在ユタ州でのみ販売・設置が可能です。',
+          '蓄電込みで最適:EcoFlow STREAM Ultra(1.92kWh、11.52kWhまで拡張可能、2026-11-20時点の表示価格$1,399)は最も強力な蓄電込みハードウェアですが、EcoFlowの米国ページでは2027年3月と表示された再入荷まで在庫切れで、プラグイン設置が可能な州の記載も一貫していません(ある箇所ではユタ州のみ、別の箇所ではユタ州・メリーランド州・コネチカット州・コロラド州)。',
           '州の合法性は価格より先に確認すべき最初のフィルターです——価格やスペックで比較する前に、あなたの州がバルコニーソーラーを許可しているか確認してください(国・州別の法的ガイドを参照)。',
-          'Hoymiles、Deye、EcoFlow、APsystemsのいずれの製品も、まだUL 3700認証を取得していません——この規格は2026年1月に開始されましたが、業界全体で認証試験はまだ保留中です。',
+          '認証:UL 3700は2025年12月に規格として公開され、UL Solutionsの認証プログラムは2026年1月に開始されました。APsystemsの米国ページはEZ1が「CSA Certified to UL3700 standards」であると記載しています(認証データベースでは確認できなかったメーカーの主張)。2026年7月に発表されたHoymilesのHiFlow ProはUL 3700準拠と説明されていますが、報道ではUL Solutionsは認証していないとされています。',
         ],
       },
       howWeChose: {
@@ -829,7 +841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-overall',
         title: '総合ベスト:APsystems EZ1-LV-NA 1080Wキット',
         content: [
-          '**APsystems EZ1-LV-NAキットは、540WのTalesunバイフェイシャルパネル2枚とEZ1-LVマイクロインバーターを$869(MSRP $1,199から値下げ)で組み合わせ、米国内の倉庫から販売・発送されます。**バッテリー蓄電ユニットではなく単体マイクロインバーター方式を採用しているため、EcoFlowの同等キットを制限している州ごとの蓄電規制の対象外です——各州の法整備が全国的に追いついていない現状において、実用面での重要な優位性です。',
+          '**APsystems EZ1-LV-NAキットは、540WのTalesunバイフェイシャルパネル2枚とEZ1-LVマイクロインバーターを$869(MSRP $1,199から値下げ)で組み合わせ、米国内の倉庫から販売・発送されます。**バッテリー蓄電ユニットではなく単体マイクロインバーター方式を採用しているため、EcoFlowの同等キットを制限している州ごとの蓄電規制の対象外です——各州の法整備が全国的に追いついていない現状において、実用面での重要な優位性です。$869の価格は2026-07-02に確認したもので、販売店のページにアクセスできなかったため2026-11-20には再確認できませんでした。',
         ],
         affiliateLinks: [
           { url: 'https://ussolarsupplier.com/products/1080w-plug-in-solar-kit-with-apsystems-ez1-microinverter-plug-in-home-solar-kit', productName: 'APsystems EZ1-LV-NA 1080W Kit', productCategory: '完全バルコニーソーラーキット', priceRange: '$869', label: '現在の価格を確認' },
@@ -839,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-local-control',
         title: 'ノークラウド/ローカル制御ベスト',
         content: [
-          '**上記キットにも単体でも販売されているAPsystems EZ1マイクロインバーターは、このカテゴリーで唯一確認されているネイティブローカルAPIを備え、クラウドアカウント不要の公式スタイルのオープンソースHome Assistant連携も提供します。**購入前に確認する価値のある注意点として、あるファームウェアバージョン(1.1.2_b)が一部のユニットでローカルAPI機能を削除したと報告されています。スペックシートだけで判断せず、受け取ったユニットにローカルモードの切り替えが実際にあるか確認してください。',
+          '**上記キットにも単体でも販売されているAPsystems EZ1マイクロインバーターは、このカテゴリーで確認されている数少ないネイティブローカルAPIを備え、クラウドアカウント不要の公式スタイルのオープンソースHome Assistant連携も提供します。**購入前に確認する価値のある注意点として、あるファームウェアバージョン(1.1.2_b)が一部のユニットでローカルAPI機能を削除したと報告されています。スペックシートだけで判断せず、受け取ったユニットにローカルモードの切り替えが実際にあるか確認してください。',
           'Hoymilesのハードウェアも、サードパーティ製ファームウェアOpenDTUを別売りのESP32ベースのハードウェア(約55ユーロ)にインストールし、さらにコミュニティ製のPython連携を加えることで、真にノークラウドな構成にできます——ただしこれは既製の機能ではなく、本格的なDIYプロジェクトです。詳細な内訳は[マイクロインバーター専門比較記事](/ja/balcony-solar/best-balcony-solar-microinverters)をご覧ください。',
         ],
       },
@@ -848,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '予算ベスト',
         content: [
           '**認証済みマイクロインバーターを含む400ドル未満の完全キットは検証できませんでした——現行の複数の購入ガイドは、400ドル未満の商品は「認証済みマイクロインバーターを含まない場合がある」と明示的に警告しています。**より堅実な予算ルートは、APsystems EZ1単体マイクロインバーター($325、APsystemsから米国本土48州への送料無料)で、手持ちの互換パネルと組み合わせて使用します。',
-          'EcoFlowもセール価格$369でSTREAM単体マイクロインバーターを販売していますが、同社の製品ページ自体に、その州固有の法律のもと「ユタ州内でのみ」販売されると記載されています——魅力的な価格にもかかわらず、全米で実用的な予算向け選択肢ではありません。',
+          'EcoFlowもセール価格$369でSTREAM単体マイクロインバーターを販売していますが、同社の製品ページ自体に、その州固有の法律のもと「ユタ州内でのみ」販売されると記載されています——魅力的な価格にもかかわらず、全米で実用的な予算向け選択肢ではありません。この価格と制限は2026-07-02に確認したもので、再確認していません。',
         ],
         affiliateLinks: [
           { url: 'https://usa.apsystems.com/product/ez1-microinverter/', productName: 'APsystems EZ1 Micro-Inverter (standalone)', productCategory: 'マイクロインバーター', priceRange: '$325', label: '現在の価格を確認' },
@@ -858,14 +870,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-with-storage',
         title: '蓄電付きベスト',
         content: [
-          '**EcoFlowのSTREAM Ultraは、市場で最も強力な蓄電込みバルコニーソーラーハードウェアです——基本容量1.92kWh(11.52kWhまで拡張可能)、内蔵の系統連系マイクロインバーター、1,200WのAC出力、そして70%の容量維持率で6,000サイクルに対応するLFPセルに対する10年保証を備えています。**重要な制約として、EcoFlow自身の製品ページはプラグアンドプレイ設置が現在ユタ州でのみ販売・設置可能であると確認しており、無許可のプラグイン型蓄電システムを許可している米国の州がいかに少ないかを反映しています。',
-          'ユタ州以外にお住まいの場合、BigBlueのPOWAFREE H1(2,560Whバッテリー、統合R800マイクロインバーター、おおよそIP67相当)は、より広い——とはいえまだ限られた——州の範囲(ユタ州、メリーランド州、メイン州、バージニア州、そして2026年半ば時点でもう1州)で合法です。表示されている$699.99のセール価格は、BigBlue自身のページで独立して確認できなかったため、直接確認されるまでは未検証の数値として扱ってください。',
+          '**EcoFlowのSTREAM Ultraは、最も強力な蓄電込みバルコニーソーラーハードウェアです——基本容量1.92kWh(11.52kWhまで拡張可能)、内蔵の系統連系マイクロインバーター、1,200WのAC出力、そして70%の容量維持率で6,000サイクルに対応するLFPセルに対する10年保証を備えています。**重要な制約は入手可能性です。EcoFlowの米国製品ページ(2026-11-20確認)は$1,399と表示し、在庫切れで再入荷は2027年3月と示し、プラグイン設置が可能な州の記載も一貫していません——ある注記はユタ州・メリーランド州・コネチカット州・コロラド州を挙げる一方、脚注は販売とプラグアンドプレイ設置がユタ州のみとしています。',
+          'BigBlueのPOWAFREE H1(2,560Whバッテリー、800Wのソーラー入力と内蔵マイクロインバーター、販売店掲載情報ではIP67)も蓄電の選択肢ですが、BigBlue自身のページで現在の米国価格も設置可能な州も確認できませんでした——どちらも未確認として扱い、購入前にメーカーとお住まいの州の法律で確認してください。',
         ],
         callouts: [
           { type: 'warning', text: '蓄電込みバルコニーソーラーキットの州別合法性は、現在パネル+マイクロインバーターのみのキットよりもはるかに制限が厳しくなっています。蓄電キットを購入する前に、必ずあなたの州の状況を確認してください。' },
         ],
         affiliateLinks: [
-          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'バッテリー付きバルコニーソーラーキット', priceRange: '$1,279', label: '現在の価格を確認' },
+          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'バッテリー付きバルコニーソーラーキット', priceRange: '$1,399', label: '現在の価格を確認' },
         ],
       },
       comparisonTable: {
@@ -874,8 +886,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'キット': 'APsystems EZ1-LV-NA 1080W', '価格': '$869', '蓄電容量': 'なし', '制御': 'ネイティブローカルAPI', '入手可能性': '全米発送' },
           { 'キット': 'APsystems EZ1(単体)', '価格': '$325', '蓄電容量': 'なし', '制御': 'ネイティブローカルAPI', '入手可能性': '全米発送' },
-          { 'キット': 'EcoFlow STREAM Ultra', '価格': '$1,279', '蓄電容量': '1.92〜11.52kWh', '制御': 'クラウドアプリ(検証済みローカルAPIなし)', '入手可能性': 'ユタ州限定' },
-          { 'キット': 'BigBlue POWAFREE H1', '価格': '約$699.99(未検証)', '蓄電容量': '2,560Wh', '制御': '未検証', '入手可能性': '約5州(UT/MD/ME/VA+1)' },
+          { 'キット': 'EcoFlow STREAM Ultra', '価格': '$1,399', '蓄電容量': '1.92〜11.52kWh', '制御': 'クラウドアプリ(検証済みローカルAPIなし)', '入手可能性': '在庫切れ(再入荷2027年3月)' },
+          { 'キット': 'BigBlue POWAFREE H1', '価格': '未確認', '蓄電容量': '2,560Wh', '制御': '未検証', '入手可能性': '未確認' },
         ],
         columns: ['キット', '価格', '蓄電容量', '制御', '入手可能性'],
         tableFormat: true,
@@ -888,16 +900,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '州の合法性と州固有の出力上限——キットを比較する前に確認する',
-          '認証状況(現時点ではUL 1741/IEEE 1547。UL 3700はまだどのブランドからも取得されていない)',
+          '認証状況(現時点ではUL 1741/IEEE 1547。UL 3700:APsystemsはEZ1のCSA認証を表明、他ブランドは未確認)',
           'ローカルモニタリングかクラウドモニタリングか、重要であれば確認する',
           '蓄電が含まれているか、そしてその特定の蓄電ハードウェアがあなたの州で合法かどうか',
+        ],
+        callouts: [
+          { type: 'info', text: '本ガイドは一般的な情報であり、法律・税務・電気工事に関する助言ではありません。プラグイン型太陽光の規則や製品の安全要件は、州、電力会社、家主やHOAによって異なります。購入や接続の前に、州の規制当局、電力会社、必要に応じて有資格の電気技術者に確認してください。' },
         ],
       },
       chinaPriceNote: {
         id: 'china-price-note',
         title: '中国製ハードウェアと価格に関する注記',
         content: [
-          '**バルコニーソーラー用ハードウェアのほぼすべて——パネルもマイクロインバーターも——が中国で製造されており、2026年4月1日発効の中国の太陽光発電輸出税還付の撤廃により、モジュールとキットの価格が2026年後半にかけて推定10〜15%上昇しています。**価格に敏感な方にとっては、このカテゴリーではほとんどの家電製品よりも早めの購入が重要になる可能性があります。基礎となる部品コストの傾向は、予見可能な近い将来において下落ではなく上昇だからです。',
+          '**バルコニーソーラー用ハードウェアのほぼすべて——パネルもマイクロインバーターも——が中国で製造されています。中国は2026年4月1日に太陽光発電部品の輸出VAT還付を撤廃し、その前にモジュール価格が急騰しましたが、その後卸売価格は下落しました。中国製TOPConモジュールのOPISベンチマークは、4月7日の約$0.119/Wから9月22日には$0.108/Wに低下しています。**これはモジュールの卸売価格のみで、キットの小売価格は市場ごとには確認していないため、2026年後半の小売価格上昇の予測は行わないことにしました。',
         ],
       },
       faqSection: {
@@ -905,13 +920,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: '総合的に最も優れたバルコニーソーラーキットは?', a: 'APsystems EZ1-LV-NA 1080Wキット($869)は、ほとんどの米国購入者にとって総合的に最も強力な選択肢です——バッテリー内蔵キットを制限する州の蓄電規制なしに全米発送されており、そのマイクロインバーターはネイティブのローカル制御に対応しています。' },
-          { q: '全米発送のバッテリー蓄電付きバルコニーソーラーキットはありますか?', a: '現時点では確認されていません。最も強力な蓄電込みの選択肢であるEcoFlowのSTREAM Ultraは、メーカー自身の製品ページによればユタ州でのみ販売・設置が可能です。BigBlueのPOWAFREE H1はやや広い(ただし依然として限られた)州で入手可能です。' },
-          { q: 'UL 3700認証を取得しているバルコニーソーラーキットはありますか?', a: 'ありません。執筆時点で、いずれのブランドの製品もUL 3700認証を完了していません——この規格は2026年1月に開始されましたが、業界全体で認証試験はまだ保留中です。' },
+          { q: '全米発送のバッテリー蓄電付きバルコニーソーラーキットはありますか?', a: '現時点では確認できていません。最も強力な蓄電込みの選択肢であるEcoFlowのSTREAM Ultraは、2026-11-20時点でEcoFlowの米国ページに在庫切れ(再入荷2027年3月)と表示され、同ページは注記によってユタ州のみ、またはユタ州・メリーランド州・コネチカット州・コロラド州をプラグイン設置の対象として挙げています。BigBlueのPOWAFREE H1の入手可能性は確認できませんでした。' },
+          { q: 'UL 3700認証を取得しているバルコニーソーラーキットはありますか?', a: '確定的にはいえません。APsystemsは米国ページでEZ1が「CSA Certified to UL3700 standards」であると記載しています——認証データベースでは確認できなかったメーカーの主張です。2026年7月に発表されたHoymilesのHiFlow ProはUL 3700準拠として販売されていますが、報道ではUL Solutionsは認証していないとされています。規格自体は2025年12月に公開されました。' },
           { q: '最も安価で信頼できるバルコニーソーラーの選択肢は?', a: 'APsystems EZ1単体マイクロインバーター($325、手持ちの互換パネルと組み合わせ)が、検証可能な最も堅実な予算ルートです——認証済みマイクロインバーターを含む400ドル未満の完全キットは確認されていません。' },
           { q: 'Home Assistantと最も相性の良いバルコニーソーラーキットは?', a: 'ネイティブローカルAPIとクラウドアカウント不要の公式スタイルのオープンソースHome Assistant連携を備えたAPsystems EZ1マイクロインバーターを中心に構成されたキットです。' },
-          { q: 'バルコニーソーラーキットの価格が上昇しているのはなぜですか?', a: '中国が2026年4月1日発効で太陽光発電部品の輸出VAT還付を撤廃し、輸出業者のコストが上昇したため、モジュールとキットの価格は2026年後半にかけて推定10〜15%上昇しています。' },
+          { q: 'バルコニーソーラーキットの価格は上昇していますか?', a: '明確ではありません。中国は2026年4月1日付で太陽光発電部品の輸出VAT還付を撤廃し、その前にモジュールの卸売価格が急騰しましたが、中国製TOPConモジュールのOPISベンチマークは4月7日から9月22日の間に約$0.119/Wから$0.108/Wに低下しました。キットの小売価格は市場ごとには確認していません。' },
           { q: 'パネルのみのキットに後からバッテリーを追加できますか?', a: 'これはお使いのマイクロインバーターとバッテリーの互換性によります——パネルのみのキットに後から蓄電を追加できると想定する前に、特定の製品の拡張オプションを確認してください。' },
-          { q: 'これらのキットはすべての米国の州で合法ですか?', a: 'いいえ——合法性と出力上限は州によって大きく異なります。購入前にお住まいの州の現在の状況を確認してください。上記の州別法的ガイドを参照してください。' },
+          { q: 'これらのキットはすべての米国の州で合法ですか?', a: 'いいえ——合法性と出力上限は州によって異なります。2026-10-19時点の当サイトの確認では、10の州がプラグイン型太陽光の法律に署名していました(ユタ州、メイン州、メリーランド州、コロラド州、バーモント州、コネチカット州は施行済み。バージニア州、カリフォルニア州、ニューハンプシャー州、ニュージャージー州は署名済みで2027年に発効)。ニューヨーク州の法案は知事の判断待ちでした。購入前にお住まいの州の最新状況をご確認ください。州別の法的ガイドもご覧ください。' },
         ],
       },
     },
@@ -919,9 +934,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '【2026年】おすすめバルコニーソーラーキット完全比較:プラグイン式太陽光発電システム',
-      description: '2026年におすすめのバルコニーソーラーキットを、価格・ローカル制御対応・現在の米国州別入手可能性で比較。価格と法的制限は一次情報で検証済みです。',
+      description: '2026年におすすめのバルコニーソーラーキットを、価格・ローカル制御対応・現在の米国州別入手可能性で比較。価格と法的制限は確認日付きで掲載しています。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -948,8 +963,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'APsystems EZ1-LV-NA 1080W Kit', description: '総合ベスト——$869、全米発送、ネイティブローカルAPI。' },
         { '@type': 'ListItem', position: 2, name: 'APsystems EZ1 (standalone)', description: 'ベストなローカル制御と予算選択——$325、ネイティブローカルAPI。' },
-        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: '蓄電付きベスト——$1,279、1.92〜11.52kWh、現在ユタ州限定。' },
-        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'より広い(ただし依然として限られた)州の入手可能性を持つ代替蓄電選択肢。' },
+        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: '蓄電込みで最適——表示価格$1,399、1.92〜11.52kWh、EcoFlowの米国ページでは在庫切れ(2026-11-20)。' },
+        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: '代替の蓄電オプション。価格と州ごとの入手可能性は未確認。' },
       ],
     },
   },
@@ -960,27 +975,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026年最佳阳台光伏套装:插电式太阳能系统完整对比',
     seoTitle: '2026年最佳阳台光伏套装对比',
     intro: '一套完整的阳台光伏套装会把面板和微型逆变器打包在一起,这样你就不用单独采购各个部件。目前美国各州的合法性存在差异,这直接决定了哪些套装实际能发货到你所在的地方——可购买性,而不仅仅是价格,才是首先要考虑的筛选条件。',
-    metaDescription: '2026年最佳阳台光伏套装对比,涵盖价格、本地控制支持以及当前美国各州的可购买情况——价格与法律限制信息均经核实。',
+    metaDescription: '2026年最佳阳台光伏套装对比,涵盖价格、本地控制支持以及当前美国各州的可购买情况——价格与法律限制均标注核查日期。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '约10分钟',
     educationalLevel: 'Intermediate',
     audience: '正在寻找完整阳台光伏套装的美国买家',
     primaryTerm: '阳台光伏',
     targetKeywords: ['2026年最佳阳台光伏套装', '插电式太阳能套装', 'apsystems ez1 套装', 'ecoflow stream ultra', '带电池的阳台光伏套装'],
-    leadAnswerBlock: '**对大多数美国买家来说,APsystems EZ1-LV-NA 1080W套装($869)是综合表现最好的阳台光伏套装——厂商在全美范围内发货且不设购买限制,但这与在你所在州连接该设备是否已被确认合法是两回事,因为大多数美国州目前都还没有就阳台光伏明确表态(购买前请先查阅各州法规指南)。**其EZ1微型逆变器也是该品类中唯一具备原生本地API的产品。想要电池储能的买家会面临更严格的限制:储能能力最强的套装——EcoFlow STREAM Ultra——目前仅根据犹他州的专门立法在该州销售和安装。',
+    leadAnswerBlock: '**APsystems EZ1-LV-NA 1080W套装(上次核查价格$869,2026-07-02)是我们比较的阳台光伏套装中,对大多数美国买家的首选推荐——商家可发货至全美,但这与您所在州是否已确认允许并网是两回事:截至我们2026-10-19的追踪核查,美国已有10个州签署了插电式光伏法案,其中数个尚未生效(购买前请查看分州指南)。**其EZ1微型逆变器带有原生本地API,APsystems声称其已获得CSA的UL 3700认证。需要电池储能的买家面临更严格的限制:EcoFlow STREAM Ultra是最强的储能套装,但EcoFlow美国官网页面显示其缺货(补货时间标注为2027年3月),并且仅列出少数几个允许插电式安装的州。',
     quickAnswerTop: {
       zh: {
         question: '现在应该买哪款最好的阳台光伏套装?',
-        answer: '对大多数美国买家来说,APsystems EZ1-LV-NA 1080W套装($869,ussolarsupplier.com)是综合最强的选择——可全美发货,其EZ1微型逆变器拥有该品类中唯一的原生本地API。如果你想要电池储能,EcoFlow STREAM Ultra是最出色的硬件,但目前仅限在犹他州安装。我们未能在验证过程中找到任何一款低于400美元、且带有完全认证微型逆变器的完整套装——对价格极低的完整套装应保持谨慎。',
+        answer: '对大多数美国买家而言,APsystems EZ1-LV-NA 1080W套装(上次在ussolarsupplier.com核查价格$869,2026-07-02)是综合最强的选择——可发货至全美,其EZ1微型逆变器带有原生本地API。如果您需要电池储能,EcoFlow STREAM Ultra是突出的硬件,但EcoFlow美国页面目前显示其缺货,且仅列出少数几个允许插电式安装的州。我们未能核实任何低于$400且包含完整认证微型逆变器的套装——请谨慎对待价格极低的完整套装。',
         bullets: [
           '综合最佳:APsystems EZ1-LV-NA 1080W套装——$869,全美发货且无购买限制(这与你所在州是否确认接入合法是两回事——请先自行核实)',
           '本地控制最佳:APsystems EZ1微型逆变器——原生本地API,并提供官方风格的Home Assistant集成',
           '预算最佳:APsystems EZ1独立微型逆变器($325,可搭配自有面板使用)——目前不存在经验证认证、售价低于400美元的完整套装',
-          '储能最佳:EcoFlow STREAM Ultra——基础容量1.92 kWh(可扩展至11.52 kWh),售价$1,279,目前仅限犹他州',
-          '截至撰稿时,任何品牌都尚未取得UL 3700认证',
+          '储能最佳:EcoFlow STREAM Ultra——1.92 kWh(可扩展至11.52 kWh),标价$1,399(2026-11-20核查),缺货,补货标注为2027年3月',
+          'UL 3700:APsystems声称其EZ1已获CSA认证;Hoymiles HiFlow Pro被宣传为符合UL 3700,但据媒体报道UL Solutions并未对其认证',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1001,11 +1016,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '综合最佳:APsystems EZ1-LV-NA 1080W套装,$869——厂商全美发货且不设购买限制,但这不等于你所在州已确认接入合法;请先查阅各州法规指南。',
-          '本地控制最佳:APsystems EZ1微型逆变器是该品类中唯一被确认自带原生本地API和官方风格Home Assistant集成的产品——购买时请核实本地模式开关是否存在,因为据报道某个固件版本(1.1.2_b)在部分设备上移除了该功能。',
+          '本地控制最佳:APsystems EZ1微型逆变器是该品类中少数被确认自带原生本地API和官方风格Home Assistant集成的产品——购买时请核实本地模式开关是否存在,因为据报道某个固件版本(1.1.2_b)在部分设备上移除了该功能。',
           '预算最佳:我们未能在验证过程中找到任何一款低于400美元、且带认证微型逆变器的完整套装——APsystems EZ1独立单元($325,搭配自有面板)是更稳妥的预算路线。',
-          '储能最佳:EcoFlow STREAM Ultra(1.92 kWh,可扩展至11.52 kWh,$1,279)是储能硬件中最强的一款,但目前仅在犹他州销售和安装。',
+          '储能最佳:EcoFlow STREAM Ultra(1.92 kWh,可扩展至11.52 kWh,2026-11-20标价$1,399)是最强的含储能硬件,但EcoFlow美国页面显示其缺货,标注2027年3月补货,且对可插电式安装的州的表述前后不一(一处仅犹他州;另一处为犹他州、马里兰州、康涅狄格州和科罗拉多州)。',
           '州法合规性是首要筛选条件,而不是价格——在按价格或规格比较之前,请先确认你所在州是否允许阳台光伏(参见各国/各州法规指南)。',
-          'Hoymiles、Deye、EcoFlow和APsystems的任何产品都尚未取得UL 3700认证——该标准于2026年1月推出,但全行业的认证测试目前仍在进行中。',
+          '认证:UL 3700于2025年12月作为标准发布,UL Solutions的认证项目于2026年1月启动。APsystems美国页面称其EZ1为“CSA Certified to UL3700 standards”(厂商声明,我们无法在认证数据库中核实);Hoymiles于2026年7月发布的HiFlow Pro被描述为符合UL 3700,但媒体报道称UL Solutions并未对其认证。',
         ],
       },
       howWeChose: {
@@ -1019,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-overall',
         title: '综合最佳:APsystems EZ1-LV-NA 1080W套装',
         content: [
-          '**APsystems EZ1-LV-NA套装将两块540W的Talesun双面面板与EZ1-LV微型逆变器组合在一起,售价$869(建议零售价为$1,199),由美国仓库销售并发货。**由于该套装采用独立微型逆变器方案而非电池储能单元,它不受限制EcoFlow同类套装的各州储能法规约束——在各州立法仍在全国范围内逐步跟进的当下,这是一个具有实际意义的优势。',
+          '**APsystems EZ1-LV-NA套装将两块540W的Talesun双面面板与EZ1-LV微型逆变器组合在一起,售价$869(建议零售价为$1,199),由美国仓库销售并发货。**由于该套装采用独立微型逆变器方案而非电池储能单元,它不受限制EcoFlow同类套装的各州储能法规约束——在各州立法仍在全国范围内逐步跟进的当下,这是一个具有实际意义的优势。$869的价格核查于2026-07-02,由于零售商页面无法访问,2026-11-20未能再次核实。',
         ],
         affiliateLinks: [
           { url: 'https://ussolarsupplier.com/products/1080w-plug-in-solar-kit-with-apsystems-ez1-microinverter-plug-in-home-solar-kit', productName: 'APsystems EZ1-LV-NA 1080W Kit', productCategory: '完整阳台光伏套装', priceRange: '$869', label: '查看当前价格' },
@@ -1029,7 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-local-control',
         title: '无云端/本地控制最佳',
         content: [
-          '**APsystems EZ1微型逆变器——既在上述套装中出售,也可单独购买——是该品类中唯一被确认具备原生本地API的产品,并提供无需云端账号的官方风格开源Home Assistant集成。**购买前值得核实的一点:据报道某个固件版本(1.1.2_b)在部分设备上移除了本地API功能,因此请确认你收到的设备确实带有本地模式开关,而不要仅凭参数表假设它存在。',
+          '**APsystems EZ1微型逆变器——既在上述套装中出售,也可单独购买——是该品类中少数被确认具备原生本地API的产品,并提供无需云端账号的官方风格开源Home Assistant集成。**购买前值得核实的一点:据报道某个固件版本(1.1.2_b)在部分设备上移除了本地API功能,因此请确认你收到的设备确实带有本地模式开关,而不要仅凭参数表假设它存在。',
           'Hoymiles的硬件也可以实现真正的无云端方案,但需要在独立的ESP32硬件(约55欧元)上刷入第三方固件OpenDTU,并搭配社区维护的Python集成——这是一个真正的DIY项目,而非开箱即用的功能。完整对比请参见[微型逆变器专题对比文章](/zh/balcony-solar/best-balcony-solar-microinverters)。',
         ],
       },
@@ -1038,7 +1053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '预算最佳',
         content: [
           '**我们未能验证任何一款低于400美元、且带认证微型逆变器的完整套装——多份现行购买指南明确警告,低于400美元的产品"可能不含经认证的微型逆变器"。**更稳妥的预算路线是APsystems EZ1独立微型逆变器,售价$325(APsystems直发,美国本土48州免运费),搭配你自己的兼容面板使用。',
-          'EcoFlow也以促销价$369出售独立的STREAM微型逆变器,但其产品页面本身注明该产品"仅在犹他州境内"根据该州专门立法销售——尽管价格颇具吸引力,但并非全国范围内可行的预算选择。',
+          'EcoFlow也以促销价$369出售独立的STREAM微型逆变器,但其产品页面本身注明该产品"仅在犹他州境内"根据该州专门立法销售——尽管价格颇具吸引力,但并非全国范围内可行的预算选择。该价格和限制核查于2026-07-02,尚未再次核实。',
         ],
         affiliateLinks: [
           { url: 'https://usa.apsystems.com/product/ez1-microinverter/', productName: 'APsystems EZ1 Micro-Inverter (standalone)', productCategory: '微型逆变器', priceRange: '$325', label: '查看当前价格' },
@@ -1048,14 +1063,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-with-storage',
         title: '储能最佳',
         content: [
-          '**EcoFlow STREAM Ultra是市面上储能能力最强的阳台光伏硬件——基础容量1.92 kWh(可扩展至11.52 kWh)、内置并网微型逆变器、1,200W交流输出,以及在70%容量保持率下可循环6,000次的LFP电芯十年质保。**其主要限制在于:EcoFlow自家产品页面确认,即插即用安装目前仅在犹他州销售和安装,这反映出目前允许免许可插电式储能系统的美国州数量非常有限。',
-          '如果你不在犹他州,BigBlue的POWAFREE H1(2,560 Wh电池、集成R800微型逆变器、约IP67防护等级)在更多——但仍然有限——的州属于合法产品(截至2026年年中为犹他州、马里兰州、缅因州、弗吉尼亚州,以及另外一个州)。其宣传的$699.99促销价无法在BigBlue自有页面上独立核实,因此在获得直接确认之前,应将该价格视为未经验证的数字。',
+          '**EcoFlow STREAM Ultra是最强的含储能阳台光伏硬件:基础容量1.92 kWh(可扩展至11.52 kWh)、内置并网微型逆变器、1,200W交流输出,以及在70%容量保持率下可循环6,000次的LFP电芯十年质保。**其主要限制在于可购买性:EcoFlow美国产品页面(2026-11-20核查)标价$1,399,显示缺货并标注2027年3月补货,且对可插电式安装的州表述不一致——一处备注列出犹他州、马里兰州、康涅狄格州和科罗拉多州,而脚注称销售和即插即用安装仅限犹他州。',
+          'BigBlue POWAFREE H1(2,560 Wh电池、800W光伏输入和集成微型逆变器,据零售商信息为IP67)是另一种储能选择,但我们未能在BigBlue自有页面上核实其当前美国价格或可安装的州——请将两者视为未经核实,购买前向厂商确认并核对您所在州的法律。',
         ],
         callouts: [
           { type: 'warning', text: '目前,带储能功能的阳台光伏套装在各州的合法性远比仅含面板加微型逆变器的套装更受限。购买储能套装前,请务必先确认你所在州的具体规定。' },
         ],
         affiliateLinks: [
-          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: '带电池的阳台光伏套装', priceRange: '$1,279', label: '查看当前价格' },
+          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: '带电池的阳台光伏套装', priceRange: '$1,399', label: '查看当前价格' },
         ],
       },
       comparisonTable: {
@@ -1064,8 +1079,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '套装': 'APsystems EZ1-LV-NA 1080W', '价格': '$869', '储能': '无', '控制方式': '原生本地API', '可购买性': '全美发货' },
           { '套装': 'APsystems EZ1(独立款)', '价格': '$325', '储能': '无', '控制方式': '原生本地API', '可购买性': '全美发货' },
-          { '套装': 'EcoFlow STREAM Ultra', '价格': '$1,279', '储能': '1.92–11.52 kWh', '控制方式': '云端App(无经验证的本地API)', '可购买性': '仅限犹他州' },
-          { '套装': 'BigBlue POWAFREE H1', '价格': '约$699.99(未验证)', '储能': '2,560 Wh', '控制方式': '未验证', '可购买性': '约5个州(UT/MD/ME/VA+1)' },
+          { '套装': 'EcoFlow STREAM Ultra', '价格': '$1,399', '储能': '1.92–11.52 kWh', '控制方式': '云端App(无经验证的本地API)', '可购买性': '缺货(2027年3月补货)' },
+          { '套装': 'BigBlue POWAFREE H1', '价格': '未核实', '储能': '2,560 Wh', '控制方式': '未验证', '可购买性': '未核实' },
         ],
         columns: ['套装', '价格', '储能', '控制方式', '可购买性'],
         tableFormat: true,
@@ -1078,16 +1093,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '州法合规性以及任何州特定的功率上限——在比较套装之前先确认',
-          '认证状态(目前为UL 1741/IEEE 1547;UL 3700目前尚无任何品牌获得)',
+          '认证状态(目前为UL 1741/IEEE 1547;UL 3700:APsystems称其EZ1已获CSA认证,其他品牌未经证实)',
           '本地监控还是云端监控,如果这对你重要的话',
           '是否含有储能,以及该特定储能硬件在你所在州是否合法',
+        ],
+        callouts: [
+          { type: 'info', text: '本指南为一般性信息,不构成法律、税务或电气方面的建议。插电式光伏的规则和产品安全要求因州、电力公司以及房东或业主委员会而异;购买或接入任何设备之前,请向所在州的监管机构、电力公司确认,必要时咨询持证电工。' },
         ],
       },
       chinaPriceNote: {
         id: 'china-price-note',
         title: '中国制造硬件与价格说明',
         content: [
-          '**几乎所有阳台光伏硬件——无论是面板还是微型逆变器——都产自中国,而自2026年4月1日起生效的中国光伏出口退税取消政策,正推动模组和套装价格在2026年下半年上涨约10%至15%。**如果你对价格敏感,尽早购买在这个品类中可能比大多数消费电子产品更重要,因为在可预见的近期,底层部件成本的走势是上涨而非下跌。',
+          '**几乎所有阳台光伏硬件——无论组件还是微型逆变器——都在中国制造。中国于2026年4月1日取消了光伏组件出口增值税退税,此前组件价格曾大幅上涨,但此后批发价格已回落:中国TOPCon组件的OPIS基准价从4月7日的约$0.119/W降至9月22日的$0.108/W。**这些仅为组件批发价格,套装零售价格未逐个市场核实,因此我们不再预测2026年下半年零售价格上涨。',
         ],
       },
       faqSection: {
@@ -1095,13 +1113,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: '综合来看最好的阳台光伏套装是哪一款?', a: 'APsystems EZ1-LV-NA 1080W套装($869)是大多数美国买家综合最强的选择——它可全美发货,不受限制含电池套装的各州储能法规约束,其微型逆变器也支持原生本地控制。' },
-          { q: '是否有可全美发货且带电池储能的阳台光伏套装?', a: '目前尚未得到确认。储能能力最强的EcoFlow STREAM Ultra,根据厂商自己的产品页面,目前仅在犹他州销售和安装。BigBlue的POWAFREE H1的州级覆盖范围略广一些(但仍然有限)。' },
-          { q: '有没有阳台光伏套装取得了UL 3700认证?', a: '没有。截至撰稿时,任何品牌都尚未完成UL 3700认证——该标准于2026年1月推出,但全行业的认证测试目前仍在进行中。' },
+          { q: '是否有可全美发货且带电池储能的阳台光伏套装?', a: '目前未能确认。最强的含储能选项EcoFlow STREAM Ultra在2026-11-20的EcoFlow美国页面上显示缺货(2027年3月补货),该页面依备注不同,列出的插电式安装州要么仅为犹他州,要么为犹他州、马里兰州、康涅狄格州和科罗拉多州。我们未能核实BigBlue POWAFREE H1的供货情况。' },
+          { q: '有没有阳台光伏套装取得了UL 3700认证?', a: '尚无定论。APsystems在其美国页面称EZ1为“CSA Certified to UL3700 standards”——这是厂商声明,我们无法在认证数据库中核实。Hoymiles于2026年7月发布的HiFlow Pro被宣传为符合UL 3700,但媒体报道称UL Solutions并未对其认证。该标准本身于2025年12月发布。' },
           { q: '最便宜且可靠的阳台光伏选择是什么?', a: 'APsystems EZ1独立微型逆变器,售价$325(搭配你自己的兼容面板),是我们能够验证的最稳妥预算路线——没有任何低于400美元的完整套装被确认带有经认证的微型逆变器。' },
           { q: '哪款阳台光伏套装与Home Assistant配合最好?', a: '围绕APsystems EZ1微型逆变器搭建的套装,该逆变器具备原生本地API,并提供无需云端账号的官方风格开源Home Assistant集成。' },
-          { q: '为什么阳台光伏套装的价格在上涨?', a: '中国自2026年4月1日起取消了光伏部件出口的增值税退税,提高了出口商的成本,推动模组和套装价格在2026年下半年上涨约10%至15%。' },
+          { q: '阳台光伏套装价格在上涨吗?', a: '并不明确。中国于2026年4月1日取消光伏组件出口增值税退税,此前组件批发价格曾大幅上涨,但中国TOPCon组件的OPIS基准价在4月7日至9月22日期间从约$0.119/W降至$0.108/W。套装零售价格未逐个市场核实。' },
           { q: '以后能给纯面板套装加装电池吗?', a: '这取决于你的微型逆变器与电池的兼容性——在假设纯面板套装以后可以升级加装储能之前,请先核实具体产品的扩展选项。' },
-          { q: '这些套装在美国所有州都合法吗?', a: '不是——合法性和功率上限因州而异,差异很大。购买前请确认你所在州的最新规定;参见上文链接的各州法规指南。' },
+          { q: '这些套装在美国所有州都合法吗?', a: '不是——合法性和功率上限因州而异。截至我们2026-10-19的追踪核查,已有10个州签署了插电式光伏法案(犹他州、缅因州、马里兰州、科罗拉多州、佛蒙特州和康涅狄格州已生效;弗吉尼亚州、加利福尼亚州、新罕布什尔州和新泽西州已签署但2027年生效),纽约州的法案正等待州长处理。购买前请确认您所在州的最新状态;参见分州法律指南。' },
         ],
       },
     },
@@ -1109,9 +1127,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026年最佳阳台光伏套装:插电式太阳能系统完整对比',
-      description: '2026年最佳阳台光伏套装对比,涵盖价格、本地控制支持以及当前美国各州的可购买情况——价格与法律限制信息均经核实。',
+      description: '2026年最佳阳台光伏套装对比,涵盖价格、本地控制支持以及当前美国各州的可购买情况——价格与法律限制均标注核查日期。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1138,8 +1156,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'APsystems EZ1-LV-NA 1080W Kit', description: '综合最佳——$869,全美发货,原生本地API。' },
         { '@type': 'ListItem', position: 2, name: 'APsystems EZ1 (standalone)', description: '本地控制与预算双重最佳——$325,原生本地API。' },
-        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: '储能最佳——$1,279,1.92–11.52 kWh,目前仅限犹他州。' },
-        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: '州级覆盖范围更广(但仍然有限)的替代储能选择。' },
+        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: '储能最佳——标价$1,399,1.92–11.52 kWh,EcoFlow美国页面显示缺货(2026-11-20)。' },
+        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: '备选储能方案;价格及各州供货情况未经核实。' },
       ],
     },
   },
@@ -1152,25 +1170,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: "Un kit solaire de balcon complet regroupe le ou les panneaux et le micro-onduleur, ce qui évite d'avoir à chercher les composants séparément. Aux États-Unis, la légalité varie actuellement d'un État à l'autre et détermine quels kits peuvent réellement être expédiés à un endroit donné — la disponibilité, et pas seulement le prix, est le premier critère qui compte.",
     metaDescription: "Les meilleurs kits solaires de balcon pour 2026 aux États-Unis, comparés selon le prix, la prise en charge du contrôle local et la disponibilité actuelle par État — prix et restrictions légales.",
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '10 min de lecture',
     educationalLevel: 'Intermediate',
     audience: "Acheteurs américains à la recherche d'un kit solaire de balcon complet",
     primaryTerm: 'best balcony solar kits',
     targetKeywords: ['meilleurs kits solaires de balcon 2026', 'kit solaire prêt à brancher', 'kit apsystems ez1', 'ecoflow stream ultra', 'kit solaire de balcon avec batterie'],
-    leadAnswerBlock: "**Le kit APsystems EZ1-LV-NA 1080W (869 $) est le meilleur kit solaire de balcon dans l'ensemble pour la plupart des acheteurs américains — le fabricant l'expédie dans tout le pays sans restriction d'achat, mais cela est distinct du fait que son branchement soit confirmé légal dans votre État précis, car la plupart des États américains ne se sont pas encore prononcés sur la question du solaire de balcon (consultez le guide État par État avant d'acheter).** Son micro-onduleur EZ1 est aussi le seul de la catégorie à proposer une API locale native. Les acheteurs qui souhaitent du stockage par batterie font face à une contrainte plus forte : le kit de stockage le plus performant, le STREAM Ultra d'EcoFlow, n'est actuellement vendu et installable que dans l'Utah, en vertu de la législation spécifique de cet État.",
+    leadAnswerBlock: "**Le kit APsystems EZ1-LV-NA 1080 W (869 $ lors de la dernière vérification, le 2026-07-02) est notre premier choix global parmi les kits solaires de balcon comparés, pour la plupart des acheteurs américains — le vendeur le livre dans tout le pays, mais cela ne dit pas si son raccordement est confirmé légal dans votre État : 10 États américains avaient signé des lois sur le solaire enfichable à la date de notre vérification du 2026-10-19, certaines pas encore en vigueur (consultez le guide État par État avant d'acheter).** Son micro-onduleur EZ1 dispose d'une API locale native, et APsystems indique qu'il est certifié CSA selon UL 3700. Les acheteurs qui veulent du stockage sur batterie se heurtent à une contrainte plus forte : le STREAM Ultra d'EcoFlow est le kit de stockage le plus performant, mais la page américaine d'EcoFlow le signale en rupture de stock (réassort indiqué pour mars 2027) et ne cite que quelques États pour l'installation enfichable.",
     quickAnswerTop: {
       fr: {
         question: "Quel est le meilleur kit solaire de balcon à acheter en ce moment ?",
-        answer: "Pour la plupart des acheteurs américains, le kit APsystems EZ1-LV-NA 1080W (869 $, ussolarsupplier.com) est le choix le plus solide dans l'ensemble — expédiable dans tout le pays, et son micro-onduleur EZ1 dispose de la seule API locale native de la catégorie. Si vous souhaitez du stockage par batterie, le STREAM Ultra d'EcoFlow est le matériel le plus remarquable, mais son installation est actuellement limitée à l'Utah. Aucun kit complet à moins de 400 $ n'a pu être vérifié comme incluant un micro-onduleur pleinement certifié — soyez prudent avec les kits complets très bon marché.",
+        answer: "Pour la plupart des acheteurs américains, le kit APsystems EZ1-LV-NA 1080 W (869 $ lors de la dernière vérification sur ussolarsupplier.com, le 2026-07-02) est le meilleur choix global — livrable dans tout le pays, et son micro-onduleur EZ1 dispose d'une API locale native. Si vous voulez du stockage sur batterie, le STREAM Ultra d'EcoFlow est le matériel le plus remarquable, mais la page américaine d'EcoFlow le signale actuellement en rupture de stock et ne cite que quelques États pour l'installation enfichable. Aucun kit à moins de 400 $ n'a pu être vérifié comme incluant un micro-onduleur pleinement certifié — méfiez-vous des kits complets très bon marché.",
         bullets: [
           "Meilleur choix global : kit APsystems EZ1-LV-NA 1080W — 869 $, expédié dans tout le pays sans restriction d'achat (ce qui est distinct du fait que votre État confirme la légalité du branchement — vérifiez d'abord)",
           "Meilleur contrôle local : micro-onduleur APsystems EZ1 — API locale native et intégration Home Assistant de style officiel",
           "Meilleur choix économique : micro-onduleur autonome APsystems EZ1 (325 $, à associer à vos propres panneaux) — aucun kit complet vérifiablement certifié à moins de 400 $ n'existe",
-          "Meilleur choix avec stockage : EcoFlow STREAM Ultra — 1,92 kWh (extensible à 11,52 kWh), 1 279 $, actuellement réservé à l'Utah",
-          "Aucun produit d'aucune marque ne dispose encore de la certification UL 3700 à l'heure de la rédaction",
+          "Meilleur avec stockage : EcoFlow STREAM Ultra — 1,92 kWh (extensible à 11,52 kWh), 1 399 $ affiché (vérifié le 2026-11-20), en rupture de stock, réassort indiqué pour mars 2027",
+          "UL 3700 : APsystems indique que son EZ1 est certifié CSA ; le HiFlow Pro de Hoymiles est présenté comme conforme à UL 3700, mais d'après la presse, UL Solutions ne l'a pas certifié",
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1191,11 +1209,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           "Meilleur choix global : le kit APsystems EZ1-LV-NA 1080W, 869 $ — le fabricant l'expédie dans tout le pays sans restriction d'achat, mais cela ne signifie pas que votre État confirme la légalité du branchement ; consultez d'abord le guide État par État.",
-          "Meilleur contrôle local : le micro-onduleur APsystems EZ1 est le seul de cette catégorie confirmé pour intégrer une API locale native et une intégration Home Assistant de style officiel — vérifiez la présence du mode local à l'achat, car une version de firmware (1.1.2_b) l'aurait retirée sur certaines unités.",
+          "Meilleur contrôle local : le micro-onduleur APsystems EZ1 est l'un des rares de cette catégorie confirmés pour intégrer une API locale native et une intégration Home Assistant de style officiel — vérifiez la présence du mode local à l'achat, car une version de firmware (1.1.2_b) l'aurait retirée sur certaines unités.",
           "Meilleur choix économique : aucun kit complet à moins de 400 $ n'a pu être vérifié comme incluant un micro-onduleur certifié — le micro-onduleur autonome APsystems EZ1 (325 $, à associer à vos propres panneaux) est la route économique la plus défendable.",
-          "Meilleur choix avec stockage : le STREAM Ultra d'EcoFlow (1,92 kWh, extensible à 11,52 kWh, 1 279 $) est le matériel avec stockage intégré le plus performant, mais il n'est actuellement vendu et installable que dans l'Utah.",
+          "Meilleur avec stockage : l'EcoFlow STREAM Ultra (1,92 kWh, extensible à 11,52 kWh, 1 399 $ affiché le 2026-11-20) est le matériel de stockage le plus performant, mais la page américaine d'EcoFlow le signale en rupture de stock jusqu'à un réassort indiqué pour mars 2027 et cite de façon contradictoire les États où l'installation enfichable est possible (Utah seul à un endroit ; Utah, Maryland, Connecticut et Colorado à un autre).",
           "La légalité selon l'État est le premier filtre, pas le prix — vérifiez que votre État autorise le solaire de balcon avant de comparer par prix ou par caractéristiques techniques (voir le guide légal par pays/État).",
-          "Aucun produit de Hoymiles, Deye, EcoFlow ou APsystems n'a encore obtenu la certification UL 3700 — la norme a été lancée en janvier 2026, mais les tests de certification sont encore en cours dans l'ensemble du secteur.",
+          "Certification : UL 3700 a été publiée comme norme en décembre 2025 et le programme de certification d'UL Solutions a démarré en janvier 2026. La page américaine d'APsystems indique que l'EZ1 est « CSA Certified to UL3700 standards » (déclaration du fabricant que nous n'avons pas pu recouper avec une base de certification) ; le HiFlow Pro de Hoymiles, annoncé en juillet 2026, est décrit comme conforme à UL 3700, mais la presse précise qu'UL Solutions ne l'a pas certifié.",
         ],
       },
       howWeChose: {
@@ -1209,7 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-overall',
         title: 'Meilleur choix global : kit APsystems EZ1-LV-NA 1080W',
         content: [
-          "**Le kit APsystems EZ1-LV-NA associe deux panneaux bifaciaux Talesun de 540 W au micro-onduleur EZ1-LV pour 869 $ (contre un PDSF de 1 199 $), vendu et expédié depuis un entrepôt américain.** Comme il repose sur un micro-onduleur autonome plutôt que sur une unité de stockage par batterie, il n'est pas soumis aux restrictions de stockage variables selon les États qui limitent le kit comparable d'EcoFlow — un avantage pratique important tant que la législation des États continue de se mettre à jour dans tout le pays.",
+          "**Le kit APsystems EZ1-LV-NA associe deux panneaux bifaciaux Talesun de 540 W au micro-onduleur EZ1-LV pour 869 $ (contre un PDSF de 1 199 $), vendu et expédié depuis un entrepôt américain.** Comme il repose sur un micro-onduleur autonome plutôt que sur une unité de stockage par batterie, il n'est pas soumis aux restrictions de stockage variables selon les États qui limitent le kit comparable d'EcoFlow — un avantage pratique important tant que la législation des États continue de se mettre à jour dans tout le pays. Le prix de 869 $ a été vérifié le 2026-07-02 et n'a pas pu l'être à nouveau le 2026-11-20, la page du revendeur étant inaccessible.",
         ],
         affiliateLinks: [
           { url: 'https://ussolarsupplier.com/products/1080w-plug-in-solar-kit-with-apsystems-ez1-microinverter-plug-in-home-solar-kit', productName: 'APsystems EZ1-LV-NA 1080W Kit', productCategory: 'Kit solaire de balcon complet', priceRange: '869 $', label: 'Voir le prix actuel' },
@@ -1219,7 +1237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-local-control',
         title: 'Meilleur choix sans cloud / contrôle local',
         content: [
-          "**Le micro-onduleur APsystems EZ1 — vendu à la fois dans le kit ci-dessus et séparément — est la seule API locale native confirmée de la catégorie, avec une intégration Home Assistant open source de style officiel qui ne nécessite aucun compte cloud.** Un point à vérifier avant l'achat : une version de firmware signalée (1.1.2_b) aurait supprimé la fonctionnalité d'API locale sur certaines unités, alors confirmez la présence du mode local sur l'unité que vous recevez plutôt que de vous fier uniquement à la fiche technique.",
+          "**Le micro-onduleur APsystems EZ1 — vendu à la fois dans le kit ci-dessus et séparément — offre l'une des rares API locales natives confirmées de la catégorie, avec une intégration Home Assistant open source de style officiel qui ne nécessite aucun compte cloud.** Un point à vérifier avant l'achat : une version de firmware signalée (1.1.2_b) aurait supprimé la fonctionnalité d'API locale sur certaines unités, alors confirmez la présence du mode local sur l'unité que vous recevez plutôt que de vous fier uniquement à la fiche technique.",
           "Le matériel Hoymiles peut lui aussi atteindre une configuration réellement sans cloud, mais uniquement via le firmware tiers OpenDTU installé sur un matériel séparé à base d'ESP32 (environ 55 €), associé à une intégration Python communautaire — un véritable projet DIY, pas une fonctionnalité prête à l'emploi. Voir le [comparatif dédié aux micro-onduleurs](/fr/balcony-solar/best-balcony-solar-microinverters) pour le détail complet.",
         ],
       },
@@ -1228,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Meilleur choix économique',
         content: [
           "**Nous n'avons pu vérifier aucun kit complet à moins de 400 $ incluant un micro-onduleur certifié — plusieurs guides d'achat actuels avertissent explicitement que les annonces à moins de 400 $ « peuvent ne pas inclure de micro-onduleur certifié ».** La route économique la plus défendable est le micro-onduleur autonome APsystems EZ1 à 325 $ (livraison gratuite dans les 48 États contigus directement depuis APsystems), à associer à vos propres panneaux compatibles.",
-          "EcoFlow vend également un micro-onduleur STREAM autonome à 369 $ en promotion, mais sa propre page produit indique qu'il est vendu « uniquement... dans l'État de l'Utah » en vertu de la législation spécifique de cet État — ce n'est donc pas une option économique viable à l'échelle nationale malgré son prix attractif.",
+          "EcoFlow vend également un micro-onduleur STREAM autonome à 369 $ en promotion, mais sa propre page produit indique qu'il est vendu « uniquement... dans l'État de l'Utah » en vertu de la législation spécifique de cet État — ce n'est donc pas une option économique viable à l'échelle nationale malgré son prix attractif. Ce prix et cette restriction ont été vérifiés le 2026-07-02 et n'ont pas été revérifiés.",
         ],
         affiliateLinks: [
           { url: 'https://usa.apsystems.com/product/ez1-microinverter/', productName: 'APsystems EZ1 Micro-Inverter (standalone)', productCategory: 'Micro-onduleur', priceRange: '325 $', label: 'Voir le prix actuel' },
@@ -1238,14 +1256,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-with-storage',
         title: 'Meilleur choix avec stockage',
         content: [
-          "**Le STREAM Ultra d'EcoFlow est le matériel solaire de balcon avec stockage intégré le plus performant du marché — une capacité de base de 1,92 kWh (extensible à 11,52 kWh), un micro-onduleur raccordé au réseau intégré, une sortie CA de 1 200 W et une garantie de 10 ans sur des cellules LFP conçues pour 6 000 cycles avec une rétention de 70 % de la capacité.** Limite importante : la propre page produit d'EcoFlow confirme que l'installation prête à brancher n'est actuellement vendue et installable que dans l'Utah, ce qui reflète le petit nombre d'États américains autorisant aujourd'hui les systèmes de stockage enfichables sans permis.",
-          "Si vous êtes en dehors de l'Utah, le POWAFREE H1 de BigBlue (batterie de 2 560 Wh, micro-onduleur R800 intégré, indice de protection approximatif IP67) est légal dans un ensemble plus large — mais encore limité — d'États (Utah, Maryland, Maine, Virginie, et un État supplémentaire à la mi-2026). Son prix promotionnel annoncé de 699,99 $ n'a pas pu être confirmé de manière indépendante sur une page appartenant à BigBlue ; traitez donc ce chiffre comme non vérifié en attendant une confirmation directe.",
+          "**Le STREAM Ultra d'EcoFlow est le matériel solaire de balcon avec stockage intégré le plus performant : une capacité de base de 1,92 kWh (extensible à 11,52 kWh), un micro-onduleur raccordé au réseau intégré, une sortie CA de 1 200 W et une garantie de 10 ans sur des cellules LFP conçues pour 6 000 cycles avec une rétention de 70 % de la capacité.** La limite importante est la disponibilité : la page produit américaine d'EcoFlow (vérifiée le 2026-11-20) l'affiche à 1 399 $, le signale en rupture de stock avec un réassort en mars 2027 et cite de façon contradictoire les États d'installation enfichable — une note mentionne l'Utah, le Maryland, le Connecticut et le Colorado, une note de bas de page indique que la vente et l'installation prête à brancher sont limitées à l'Utah.",
+          "Le POWAFREE H1 de BigBlue (batterie de 2 560 Wh, entrée solaire de 800 W et micro-onduleur intégré, IP67 selon les fiches de revendeurs) est une autre option de stockage, mais nous n'avons pu vérifier ni son prix américain actuel ni les États où il peut être installé sur une page appartenant à BigBlue — considérez les deux comme non vérifiés et confirmez-les auprès du fabricant et dans la loi de votre État avant d'acheter.",
         ],
         callouts: [
           { type: 'warning', text: "La légalité selon l'État des kits solaires de balcon avec stockage intégré est actuellement bien plus restrictive que pour les kits comportant uniquement panneau et micro-onduleur. Vérifiez la situation de votre État avant d'acheter spécifiquement un kit avec stockage." },
         ],
         affiliateLinks: [
-          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Kit solaire de balcon avec batterie', priceRange: '1 279 $', label: 'Voir le prix actuel' },
+          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Kit solaire de balcon avec batterie', priceRange: '1 399 $', label: 'Voir le prix actuel' },
         ],
       },
       comparisonTable: {
@@ -1254,8 +1272,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Kit: 'APsystems EZ1-LV-NA 1080W', Prix: '869 $', Stockage: 'Aucun', Contrôle: 'API locale native', Disponibilité: 'Expédition nationale' },
           { Kit: 'APsystems EZ1 (autonome)', Prix: '325 $', Stockage: 'Aucun', Contrôle: 'API locale native', Disponibilité: 'Expédition nationale' },
-          { Kit: 'EcoFlow STREAM Ultra', Prix: '1 279 $', Stockage: '1,92–11,52 kWh', Contrôle: 'Application cloud (pas d\'API locale vérifiée)', Disponibilité: 'Utah uniquement' },
-          { Kit: 'BigBlue POWAFREE H1', Prix: '~699,99 $ (non vérifié)', Stockage: '2 560 Wh', Contrôle: 'Non vérifié', Disponibilité: '~5 États (UT/MD/ME/VA + 1)' },
+          { Kit: 'EcoFlow STREAM Ultra', Prix: '1 399 $', Stockage: '1,92–11,52 kWh', Contrôle: 'Application cloud (pas d\'API locale vérifiée)', Disponibilité: 'En rupture (réassort mars 2027)' },
+          { Kit: 'BigBlue POWAFREE H1', Prix: 'Non vérifié', Stockage: '2 560 Wh', Contrôle: 'Non vérifié', Disponibilité: 'Non vérifié' },
         ],
         columns: ['Kit', 'Prix', 'Stockage', 'Contrôle', 'Disponibilité'],
         tableFormat: true,
@@ -1268,16 +1286,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           "La légalité selon l'État et toute limite de puissance spécifique à l'État — à vérifier avant de comparer les kits",
-          "Le statut de certification (aujourd'hui UL 1741/IEEE 1547 ; UL 3700 pas encore disponible chez aucune marque)",
+          "Statut de certification (UL 1741/IEEE 1547 aujourd'hui ; UL 3700 : APsystems indique une certification CSA pour son EZ1, autres marques non confirmées)",
           "Le suivi local ou cloud, si cela compte pour vous",
           "Si le stockage est inclus, et si ce matériel de stockage précis est légal dans votre État",
+        ],
+        callouts: [
+          { type: 'info', text: 'Ce guide fournit des informations générales et ne constitue pas un conseil juridique, fiscal ou électrique. Les règles du solaire enfichable et les exigences de sécurité des produits varient selon l\'État, le fournisseur d\'électricité et le propriétaire ou la copropriété ; vérifiez-les auprès du régulateur de votre État, de votre fournisseur et, si nécessaire, d\'un électricien agréé avant d\'acheter ou de raccorder quoi que ce soit.' },
         ],
       },
       chinaPriceNote: {
         id: 'china-price-note',
         title: 'Note sur le matériel et les prix chinois',
         content: [
-          "**Presque tout le matériel solaire de balcon — panneaux comme micro-onduleurs — est fabriqué en Chine, et la suppression d'un remboursement de taxe à l'exportation sur le photovoltaïque chinois, effective depuis le 1er avril 2026, fait grimper les prix des modules et des kits d'environ 10 à 15 % au cours du second semestre 2026.** Si vous êtes sensible au prix, acheter plus tôt que tard pourrait compter davantage dans cette catégorie que pour la plupart des produits électroniques grand public, car la tendance des coûts des composants sous-jacents est à la hausse, et non à la baisse, dans un avenir proche prévisible.",
+          "**La quasi-totalité du matériel solaire de balcon — panneaux et micro-onduleurs — est fabriquée en Chine. La Chine a supprimé le remboursement de la TVA à l'exportation des composants photovoltaïques le 1er avril 2026 et les prix des modules ont bondi auparavant, mais les prix de gros ont depuis reflué : l'indice OPIS des modules TOPCon chinois est passé d'environ 0,119 $/W le 7 avril à 0,108 $/W le 22 septembre.** Il s'agit uniquement de prix de gros de modules — les prix de détail des kits n'ont pas été vérifiés marché par marché ; nous ne prévoyons donc plus de hausse des prix de détail pour le second semestre 2026.",
         ],
       },
       faqSection: {
@@ -1285,13 +1306,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           { q: "Quel est le meilleur kit solaire de balcon dans l'ensemble ?", a: "Le kit APsystems EZ1-LV-NA 1080W (869 $) est le choix le plus solide dans l'ensemble pour la plupart des acheteurs américains — il est expédié dans tout le pays sans les restrictions de stockage propres à certains États qui limitent les kits avec batterie intégrée, et son micro-onduleur prend en charge le contrôle local natif." },
-          { q: "Existe-t-il un kit solaire de balcon avec stockage par batterie expédié dans tout le pays ?", a: "Ce n'est actuellement pas confirmé. Le STREAM Ultra d'EcoFlow, l'option avec stockage la plus performante, n'est vendu et installable que dans l'Utah selon la propre page produit du fabricant. Le POWAFREE H1 de BigBlue offre une disponibilité un peu plus large par État (mais encore limitée)." },
-          { q: "Un kit solaire de balcon dispose-t-il de la certification UL 3700 ?", a: "Non. À l'heure de la rédaction, aucun produit d'aucune marque n'a achevé la certification UL 3700 — la norme a été lancée en janvier 2026 et les tests de certification sont encore en cours dans l'ensemble du secteur." },
+          { q: "Existe-t-il un kit solaire de balcon avec stockage par batterie expédié dans tout le pays ?", a: "Non confirmé actuellement. Le STREAM Ultra d'EcoFlow, l'option de stockage la plus performante, était signalé en rupture de stock (réassort mars 2027) sur la page américaine d'EcoFlow le 2026-11-20, et cette page cite, selon la note, soit l'Utah seul, soit l'Utah, le Maryland, le Connecticut et le Colorado pour l'installation enfichable. Nous n'avons pas pu vérifier la disponibilité du POWAFREE H1 de BigBlue." },
+          { q: "Un kit solaire de balcon dispose-t-il de la certification UL 3700 ?", a: "Pas de façon concluante. APsystems indique sur sa page américaine que l'EZ1 est « CSA Certified to UL3700 standards » — une déclaration du fabricant que nous n'avons pas pu recouper avec une base de certification. Le HiFlow Pro de Hoymiles, annoncé en juillet 2026, est présenté comme conforme à UL 3700, mais la presse indique qu'UL Solutions ne l'a pas certifié. La norme elle-même a été publiée en décembre 2025." },
           { q: "Quelle est l'option solaire de balcon fiable la moins chère ?", a: "Le micro-onduleur autonome APsystems EZ1 à 325 $ (associé à vos propres panneaux compatibles) est la route économique la plus défendable que nous ayons pu vérifier — aucun kit complet à moins de 400 $ n'a été confirmé comme incluant un micro-onduleur certifié." },
           { q: "Quel kit solaire de balcon fonctionne le mieux avec Home Assistant ?", a: "Les kits construits autour du micro-onduleur APsystems EZ1, qui dispose d'une API locale native et d'une intégration Home Assistant open source de style officiel ne nécessitant aucun compte cloud." },
-          { q: "Pourquoi les prix des kits solaires de balcon augmentent-ils ?", a: "La Chine a supprimé un remboursement de TVA à l'exportation sur les composants photovoltaïques à compter du 1er avril 2026, ce qui augmente les coûts des exportateurs et fait grimper les prix des modules et des kits d'environ 10 à 15 % au cours du second semestre 2026." },
+          { q: "Les prix des kits solaires de balcon augmentent-ils ?", a: "Pas clairement. La Chine a supprimé le remboursement de TVA à l'exportation des composants photovoltaïques au 1er avril 2026 et les prix de gros des modules ont bondi auparavant, mais l'indice OPIS des modules TOPCon chinois est passé d'environ 0,119 $/W à 0,108 $/W entre le 7 avril et le 22 septembre. Les prix de détail des kits n'ont pas été vérifiés marché par marché." },
           { q: "Puis-je ajouter une batterie à un kit uniquement composé de panneaux plus tard ?", a: "Cela dépend de la compatibilité de votre micro-onduleur avec la batterie — vérifiez les options d'extension du produit spécifique avant de supposer qu'un kit uniquement composé de panneaux pourra être mis à niveau avec du stockage plus tard." },
-          { q: "Ces kits sont-ils légaux dans tous les États américains ?", a: "Non — la légalité et les limites de puissance varient considérablement selon l'État. Vérifiez le statut actuel de votre État avant d'acheter ; voir le guide légal État par État lié ci-dessus." },
+          { q: "Ces kits sont-ils légaux dans tous les États américains ?", a: "Non — la légalité et les limites de puissance varient selon l'État. À la date de notre vérification du 2026-10-19, 10 États avaient signé des lois sur le solaire enfichable (Utah, Maine, Maryland, Colorado, Vermont et Connecticut en vigueur ; Virginie, Californie, New Hampshire et New Jersey signées mais applicables en 2027) et le projet de loi de New York attendait la gouverneure. Confirmez le statut actuel de votre État avant d'acheter ; consultez le guide juridique État par État." },
         ],
       },
     },
@@ -1301,7 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: "Meilleurs kits solaires de balcon (2026) : comparatif complet des systèmes solaires prêts à brancher",
       description: "Les meilleurs kits solaires de balcon pour 2026 aux États-Unis, comparés selon le prix, la prise en charge du contrôle local et la disponibilité actuelle par État — prix et restrictions légales.",
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1329,8 +1350,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'APsystems EZ1-LV-NA 1080W Kit', description: "Meilleur choix global — 869 $, expédition nationale, API locale native." },
         { '@type': 'ListItem', position: 2, name: 'APsystems EZ1 (standalone)', description: "Meilleur contrôle local et choix économique — 325 $, API locale native." },
-        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: "Meilleur choix avec stockage — 1 279 $, 1,92–11,52 kWh, actuellement Utah uniquement." },
-        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: "Option de stockage alternative avec une disponibilité par État plus large (mais encore limitée)." },
+        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: "Meilleur avec stockage — 1 399 $ affiché, 1,92–11,52 kWh, en rupture selon la page américaine d'EcoFlow (2026-11-20)." },
+        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: "Autre option de stockage ; prix et disponibilité par État non vérifiés." },
       ],
     },
   },
@@ -1341,27 +1362,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026년 최고의 발코니 태양광 키트: 완전한 플러그인 태양광 시스템 비교',
     seoTitle: '2026년 최고의 발코니 태양광 키트 비교',
     intro: '완전한 발코니 태양광 키트에는 패널과 마이크로인버터가 함께 포함되어 있어 부품을 따로 찾을 필요가 없습니다. 미국에서는 주(state)마다 합법성이 달라 현재 어떤 키트가 실제로 어디로 배송 가능한지가 결정됩니다——가격뿐 아니라 구매 가능 여부가 가장 먼저 확인해야 할 기준입니다.',
-    metaDescription: '2026년 최고의 발코니 태양광 키트를 가격, 로컬 제어 지원, 현재 미국 주별 구매 가능 여부를 기준으로 비교했습니다——가격 및 법적 제한은 확인을 거쳤습니다.',
+    metaDescription: '2026년 최고의 발코니 태양광 키트를 가격, 로컬 제어 지원, 현재 미국 주별 구매 가능 여부를 기준으로 비교했습니다——가격 및 법적 제한은 확인 날짜와 함께 제시합니다.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '10분 읽기',
     educationalLevel: 'Intermediate',
     audience: '완전한 발코니 태양광 키트를 찾는 미국 구매자',
     primaryTerm: 'best balcony solar kits',
     targetKeywords: ['2026년 최고의 발코니 태양광 키트', '플러그인 태양광 키트', 'apsystems ez1 키트', 'ecoflow stream ultra', '배터리 포함 발코니 태양광 키트'],
-    leadAnswerBlock: '**APsystems EZ1-LV-NA 1080W 키트($869)는 대부분의 미국 구매자에게 종합적으로 가장 좋은 발코니 태양광 키트입니다——제조사는 구매 제한 없이 전국에 배송하지만, 이는 특정 주에서 연결이 합법적으로 확인되었는지와는 별개의 문제입니다. 대부분의 미국 주는 아직 발코니 태양광에 대해 명확한 입장을 밝히지 않았기 때문입니다(구매 전 주별 가이드를 확인하세요).** 이 제품의 EZ1 마이크로인버터는 이 카테고리에서 유일하게 네이티브 로컬 API를 갖추고 있습니다. 배터리 저장을 원하는 구매자는 더 큰 제약에 직면합니다. 가장 강력한 저장형 키트인 EcoFlow의 STREAM Ultra는 현재 해당 주의 특별 법률에 따라 유타주에서만 판매 및 설치가 가능합니다.',
+    leadAnswerBlock: '**APsystems EZ1-LV-NA 1080W 키트(마지막 확인 시 가격 $869, 2026-07-02)는 비교한 발코니 태양광 키트 중 대부분의 미국 구매자에게 당사의 종합 1순위 추천입니다——판매처는 전국에 배송하지만, 이는 거주 주에서 연결이 합법으로 확인되었는지와는 별개입니다. 2026-10-19 기준 당사 확인에서 미국 10개 주가 플러그인 태양광 법안에 서명했으며 일부는 아직 시행 전입니다(구매 전 주별 가이드를 확인하십시오).** EZ1 마이크로인버터에는 네이티브 로컬 API가 있으며, APsystems는 UL 3700과 관련해 CSA 인증을 받았다고 밝히고 있습니다. 배터리 저장을 원하는 구매자는 더 까다로운 제약에 직면합니다. EcoFlow STREAM Ultra는 가장 강력한 저장 키트이지만 EcoFlow 미국 공식 페이지에는 품절(재입고 2027년 3월로 표기)로 표시되어 있으며 플러그인 설치 가능 주도 소수만 언급되어 있습니다.',
     quickAnswerTop: {
       ko: {
         question: '지금 구매하기 가장 좋은 발코니 태양광 키트는 무엇인가요?',
-        answer: '대부분의 미국 구매자에게는 APsystems EZ1-LV-NA 1080W 키트($869, ussolarsupplier.com)가 종합적으로 가장 강력한 선택입니다——전국 배송이 가능하며, EZ1 마이크로인버터는 이 카테고리에서 유일한 네이티브 로컬 API를 갖추고 있습니다. 배터리 저장을 원한다면 EcoFlow STREAM Ultra가 가장 돋보이는 하드웨어지만, 현재 설치는 유타주로 제한됩니다. 완전히 인증된 마이크로인버터를 포함한 400달러 미만의 완전한 키트는 검증된 바가 없습니다——매우 저렴한 완전 키트는 주의해서 다루세요.',
+        answer: '대부분의 미국 구매자에게는 APsystems EZ1-LV-NA 1080W 키트(마지막 확인 시 ussolarsupplier.com 가격 $869, 2026-07-02)가 종합적으로 가장 강력한 선택입니다——전국 배송이 가능하며 EZ1 마이크로인버터에는 네이티브 로컬 API가 있습니다. 배터리 저장을 원한다면 EcoFlow STREAM Ultra가 돋보이는 하드웨어이지만, EcoFlow 미국 페이지에는 현재 품절로 표시되어 있고 플러그인 설치 가능 주도 소수만 언급되어 있습니다. 완전히 인증된 마이크로인버터를 포함한 $400 미만 키트는 확인하지 못했습니다——매우 저렴한 완제품 키트는 신중하게 접근하십시오.',
         bullets: [
           '종합 최고: APsystems EZ1-LV-NA 1080W 키트——$869, 구매 제한 없이 전국 배송(해당 주에서 연결이 합법으로 확인되는지는 별개——먼저 확인하세요)',
           '최고의 로컬 제어: APsystems EZ1 마이크로인버터——네이티브 로컬 API와 공식 스타일의 Home Assistant 연동',
           '최고의 예산형: APsystems EZ1 단독 마이크로인버터($325, 자체 패널과 조합)——검증된 400달러 미만의 인증된 완전 키트는 존재하지 않음',
-          '저장형 최고: EcoFlow STREAM Ultra——1.92kWh(11.52kWh까지 확장 가능), $1,279, 현재 유타주 전용',
-          '작성 시점 기준 어떤 브랜드의 제품도 아직 UL 3700 인증을 받지 못했습니다',
+          '저장 포함 최고: EcoFlow STREAM Ultra——1.92kWh(11.52kWh까지 확장 가능), 표기 가격 $1,399(2026-11-20 확인), 품절, 재입고 2027년 3월로 표기',
+          'UL 3700: APsystems는 EZ1이 CSA 인증을 받았다고 밝힘. Hoymiles HiFlow Pro는 UL 3700 준수 제품으로 홍보되지만, 보도에 따르면 UL Solutions는 인증하지 않음',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1382,11 +1403,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '종합 최고: APsystems EZ1-LV-NA 1080W 키트, $869——제조사는 구매 제한 없이 전국 배송하지만, 이는 해당 주가 연결을 합법으로 확인했다는 것과는 다릅니다. 먼저 주별 가이드를 확인하세요.',
-          '최고의 로컬 제어: APsystems EZ1 마이크로인버터는 이 카테고리에서 네이티브 로컬 API와 공식 스타일의 Home Assistant 연동이 확인된 유일한 제품입니다——일부 유닛에서 특정 펌웨어 버전(1.1.2_b)이 이 기능을 제거했다는 보고가 있으므로, 구매 시 로컬 모드 전환 옵션이 있는지 확인하세요.',
+          '최고의 로컬 제어: APsystems EZ1 마이크로인버터는 이 카테고리에서 네이티브 로컬 API와 공식 스타일의 Home Assistant 연동이 확인된 몇 안 되는 제품 중 하나입니다——일부 유닛에서 특정 펌웨어 버전(1.1.2_b)이 이 기능을 제거했다는 보고가 있으므로, 구매 시 로컬 모드 전환 옵션이 있는지 확인하세요.',
           '최고의 예산형: 인증된 마이크로인버터를 포함한 400달러 미만의 완전한 키트는 검증된 바가 없습니다——APsystems EZ1 단독 유닛($325, 자체 패널과 조합)이 더 안정적인 예산형 선택지입니다.',
-          '저장형 최고: EcoFlow STREAM Ultra(1.92kWh, 11.52kWh까지 확장 가능, $1,279)는 가장 강력한 저장 포함형 하드웨어지만, 현재 유타주에서만 판매 및 설치가 가능합니다.',
+          '저장 포함 최고: EcoFlow STREAM Ultra(1.92kWh, 11.52kWh까지 확장 가능, 2026-11-20 기준 표기 가격 $1,399)는 가장 강력한 저장 포함 하드웨어이지만, EcoFlow 미국 페이지에는 2027년 3월로 표기된 재입고 시점까지 품절로 나와 있고 플러그인 설치 가능 주에 대한 기재도 일관되지 않습니다(한 곳에서는 유타주만, 다른 곳에서는 유타주·메릴랜드주·코네티컷주·콜로라도주).',
           '주 법률 합법성이 가격보다 먼저 확인해야 할 첫 번째 필터입니다——가격이나 사양으로 비교하기 전에 해당 주가 발코니 태양광을 허용하는지 확인하세요(국가/주별 법률 가이드 참고).',
-          'Hoymiles, Deye, EcoFlow, APsystems 어느 브랜드의 제품도 아직 UL 3700 인증을 획득하지 못했습니다——이 표준은 2026년 1월에 도입되었지만 업계 전반의 인증 시험은 여전히 진행 중입니다.',
+          '인증: UL 3700은 2025년 12월 표준으로 발행되었고 UL Solutions의 인증 프로그램은 2026년 1월에 시작되었습니다. APsystems 미국 페이지는 EZ1이 "CSA Certified to UL3700 standards"라고 밝히고 있습니다(인증 데이터베이스로 확인하지 못한 제조사 주장). 2026년 7월 발표된 Hoymiles HiFlow Pro는 UL 3700 준수로 설명되지만, 보도에 따르면 UL Solutions는 인증하지 않았습니다.',
         ],
       },
       howWeChose: {
@@ -1400,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-overall',
         title: '종합 최고: APsystems EZ1-LV-NA 1080W 키트',
         content: [
-          '**APsystems EZ1-LV-NA 키트는 540W Talesun 양면형 패널 2개와 EZ1-LV 마이크로인버터를 $869(MSRP $1,199에서 할인)에 결합하며, 미국 창고에서 판매 및 배송됩니다.** 배터리 저장 장치가 아닌 단독 마이크로인버터 방식을 사용하기 때문에, EcoFlow의 유사 키트를 제한하는 주별 저장 규제의 대상이 아닙니다——전국적으로 주 법률이 아직 따라잡는 중인 상황에서 실질적으로 중요한 장점입니다.',
+          '**APsystems EZ1-LV-NA 키트는 540W Talesun 양면형 패널 2개와 EZ1-LV 마이크로인버터를 $869(MSRP $1,199에서 할인)에 결합하며, 미국 창고에서 판매 및 배송됩니다.** 배터리 저장 장치가 아닌 단독 마이크로인버터 방식을 사용하기 때문에, EcoFlow의 유사 키트를 제한하는 주별 저장 규제의 대상이 아닙니다——전국적으로 주 법률이 아직 따라잡는 중인 상황에서 실질적으로 중요한 장점입니다. $869 가격은 2026-07-02에 확인한 것이며, 판매처 페이지에 접속할 수 없어 2026-11-20에는 다시 확인하지 못했습니다.',
         ],
         affiliateLinks: [
           { url: 'https://ussolarsupplier.com/products/1080w-plug-in-solar-kit-with-apsystems-ez1-microinverter-plug-in-home-solar-kit', productName: 'APsystems EZ1-LV-NA 1080W Kit', productCategory: '완전한 발코니 태양광 키트', priceRange: '$869', label: '현재 가격 확인' },
@@ -1410,7 +1431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-local-control',
         title: '클라우드 없는 / 로컬 제어 최고',
         content: [
-          '**위 키트에도 포함되고 단독으로도 판매되는 APsystems EZ1 마이크로인버터는 이 카테고리에서 유일하게 확인된 네이티브 로컬 API를 갖추고 있으며, 클라우드 계정이 필요 없는 공식 스타일의 오픈소스 Home Assistant 연동도 제공합니다.** 구매 전 확인할 가치가 있는 주의점: 특정 펌웨어 버전(1.1.2_b)이 일부 유닛에서 로컬 API 기능을 제거했다는 보고가 있으므로, 사양표만 믿지 말고 실제로 받은 유닛에 로컬 모드 전환 옵션이 있는지 확인하세요.',
+          '**위 키트에도 포함되고 단독으로도 판매되는 APsystems EZ1 마이크로인버터는 이 카테고리에서 확인된 몇 안 되는 네이티브 로컬 API를 갖추고 있으며, 클라우드 계정이 필요 없는 공식 스타일의 오픈소스 Home Assistant 연동도 제공합니다.** 구매 전 확인할 가치가 있는 주의점: 특정 펌웨어 버전(1.1.2_b)이 일부 유닛에서 로컬 API 기능을 제거했다는 보고가 있으므로, 사양표만 믿지 말고 실제로 받은 유닛에 로컬 모드 전환 옵션이 있는지 확인하세요.',
           'Hoymiles 하드웨어도 진정한 클라우드 없는 구성에 도달할 수 있지만, 별도의 ESP32 기반 하드웨어(약 55유로)에 서드파티 펌웨어인 OpenDTU를 설치하고 커뮤니티에서 만든 Python 연동을 추가하는 방식으로만 가능합니다——이는 즉시 사용 가능한 기능이 아니라 실제 DIY 프로젝트입니다. 전체 내용은 [마이크로인버터 전문 비교 글](/ko/balcony-solar/best-balcony-solar-microinverters)을 참고하세요.',
         ],
       },
@@ -1419,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '예산형 최고',
         content: [
           '**인증된 마이크로인버터를 포함한 400달러 미만의 완전한 키트는 검증할 수 없었습니다——현재 여러 구매 가이드는 400달러 미만 제품이 "인증된 마이크로인버터를 포함하지 않을 수 있다"고 명시적으로 경고합니다.** 더 안정적인 예산형 선택지는 APsystems EZ1 단독 마이크로인버터($325, APsystems에서 미국 본토 48개 주로 무료 배송)이며, 자체 호환 패널과 조합해 사용합니다.',
-          'EcoFlow도 세일가 $369에 STREAM 단독 마이크로인버터를 판매하지만, 자사 제품 페이지에서 해당 주의 특별 법률에 따라 "유타주 내에서만" 판매된다고 명시하고 있습니다——가격이 매력적이더라도 전국적으로 실용적인 예산형 선택지는 아닙니다.',
+          'EcoFlow도 세일가 $369에 STREAM 단독 마이크로인버터를 판매하지만, 자사 제품 페이지에서 해당 주의 특별 법률에 따라 "유타주 내에서만" 판매된다고 명시하고 있습니다——가격이 매력적이더라도 전국적으로 실용적인 예산형 선택지는 아닙니다. 이 가격과 제한은 2026-07-02에 확인한 것이며 다시 확인하지 않았습니다.',
         ],
         affiliateLinks: [
           { url: 'https://usa.apsystems.com/product/ez1-microinverter/', productName: 'APsystems EZ1 Micro-Inverter (standalone)', productCategory: '마이크로인버터', priceRange: '$325', label: '현재 가격 확인' },
@@ -1429,14 +1450,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-with-storage',
         title: '저장형 최고',
         content: [
-          '**EcoFlow STREAM Ultra는 시장에서 가장 강력한 저장 포함형 발코니 태양광 하드웨어입니다——기본 용량 1.92kWh(11.52kWh까지 확장 가능), 내장 계통 연계형 마이크로인버터, 1,200W AC 출력, 그리고 70% 용량 유지율 기준 6,000사이클을 견디는 LFP 셀에 대한 10년 보증을 갖추고 있습니다.** 중요한 제약은, EcoFlow 자체 제품 페이지가 플러그 앤 플레이 설치가 현재 유타주에서만 판매 및 설치 가능하다고 확인한다는 점입니다. 이는 허가 없는 플러그인 저장 시스템을 현재 허용하는 미국 주가 얼마나 적은지를 보여줍니다.',
-          '유타주 외 지역에 거주한다면, BigBlue의 POWAFREE H1(2,560Wh 배터리, 통합 R800 마이크로인버터, 대략 IP67 등급)이 더 넓은——그러나 여전히 제한적인——범위의 주(2026년 중반 기준 유타주, 메릴랜드주, 메인주, 버지니아주, 그리고 추가로 한 개 주)에서 합법입니다. 표시된 $699.99 세일가는 BigBlue 자체 페이지에서 독립적으로 확인할 수 없었으므로, 직접 확인되기 전까지는 검증되지 않은 수치로 취급해야 합니다.',
+          '**EcoFlow STREAM Ultra는 가장 강력한 저장 포함형 발코니 태양광 하드웨어입니다——기본 용량 1.92kWh(11.52kWh까지 확장 가능), 내장 계통 연계형 마이크로인버터, 1,200W AC 출력, 그리고 70% 용량 유지율 기준 6,000사이클을 견디는 LFP 셀에 대한 10년 보증을 갖추고 있습니다.** 중요한 제약은 구매 가능 여부입니다. EcoFlow 미국 제품 페이지(2026-11-20 확인)는 $1,399로 표기하고, 품절 및 2027년 3월 재입고로 안내하며, 플러그인 설치 가능 주를 일관되지 않게 기재합니다——한 주석은 유타주·메릴랜드주·코네티컷주·콜로라도주를 언급하지만, 각주는 판매와 플러그 앤 플레이 설치가 유타주에서만 가능하다고 명시합니다.',
+          'BigBlue POWAFREE H1(2,560Wh 배터리, 800W 태양광 입력 및 내장 마이크로인버터, 판매처 목록 기준 IP67)도 저장 옵션이지만, BigBlue 자체 페이지에서 현재 미국 가격과 설치 가능한 주를 확인하지 못했습니다——둘 다 미확인으로 취급하고 구매 전 제조사와 거주 주의 법률로 확인하십시오.',
         ],
         callouts: [
           { type: 'warning', text: '저장 기능이 포함된 발코니 태양광 키트의 주별 합법성은 현재 패널과 마이크로인버터만 있는 키트보다 훨씬 제한적입니다. 저장형 키트를 구매하기 전에 반드시 해당 주의 상황을 확인하세요.' },
         ],
         affiliateLinks: [
-          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: '배터리 포함 발코니 태양광 키트', priceRange: '$1,279', label: '현재 가격 확인' },
+          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: '배터리 포함 발코니 태양광 키트', priceRange: '$1,399', label: '현재 가격 확인' },
         ],
       },
       comparisonTable: {
@@ -1445,8 +1466,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '키트': 'APsystems EZ1-LV-NA 1080W', '가격': '$869', '저장 용량': '없음', '제어 방식': '네이티브 로컬 API', '구매 가능 여부': '전국 배송' },
           { '키트': 'APsystems EZ1(단독형)', '가격': '$325', '저장 용량': '없음', '제어 방식': '네이티브 로컬 API', '구매 가능 여부': '전국 배송' },
-          { '키트': 'EcoFlow STREAM Ultra', '가격': '$1,279', '저장 용량': '1.92–11.52kWh', '제어 방식': '클라우드 앱(검증된 로컬 API 없음)', '구매 가능 여부': '유타주 전용' },
-          { '키트': 'BigBlue POWAFREE H1', '가격': '약 $699.99(미검증)', '저장 용량': '2,560Wh', '제어 방식': '미검증', '구매 가능 여부': '약 5개 주(UT/MD/ME/VA+1)' },
+          { '키트': 'EcoFlow STREAM Ultra', '가격': '$1,399', '저장 용량': '1.92–11.52kWh', '제어 방식': '클라우드 앱(검증된 로컬 API 없음)', '구매 가능 여부': '품절(재입고 2027년 3월)' },
+          { '키트': 'BigBlue POWAFREE H1', '가격': '미확인', '저장 용량': '2,560Wh', '제어 방식': '미검증', '구매 가능 여부': '미확인' },
         ],
         columns: ['키트', '가격', '저장 용량', '제어 방식', '구매 가능 여부'],
         tableFormat: true,
@@ -1459,16 +1480,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '주 법률상 합법성과 해당 주 고유의 출력 상한——키트를 비교하기 전에 확인',
-          '인증 상태(현재는 UL 1741/IEEE 1547이며, UL 3700은 어느 브랜드도 아직 취득하지 못함)',
+          '인증 상태(현재 UL 1741/IEEE 1547. UL 3700: APsystems는 EZ1의 CSA 인증을 주장, 다른 브랜드는 미확인)',
           '중요하다면 로컬 모니터링인지 클라우드 모니터링인지',
           '저장 기능 포함 여부, 그리고 해당 저장 하드웨어가 거주 주에서 합법인지 여부',
+        ],
+        callouts: [
+          { type: 'info', text: '이 가이드는 일반 정보이며 법률·세무·전기 관련 자문이 아닙니다. 플러그인 태양광 규정과 제품 안전 요건은 주, 전력회사, 임대인 또는 HOA에 따라 다릅니다. 구매하거나 연결하기 전에 거주 주의 규제 기관, 전력회사, 필요한 경우 자격을 갖춘 전기 기술자에게 확인하십시오.' },
         ],
       },
       chinaPriceNote: {
         id: 'china-price-note',
         title: '중국산 하드웨어 및 가격 참고사항',
         content: [
-          '**발코니 태양광용 하드웨어는 패널과 마이크로인버터를 막론하고 거의 모두 중국에서 제조되며, 2026년 4월 1일부로 시행된 중국의 태양광 수출 세금 환급 폐지로 인해 모듈 및 키트 가격이 2026년 하반기까지 약 10~15% 상승할 것으로 추정됩니다.** 가격에 민감하다면, 대부분의 가전제품보다 이 카테고리에서 더 일찍 구매하는 것이 중요할 수 있습니다. 예측 가능한 가까운 미래에 기초 부품 비용 추세가 하락이 아니라 상승이기 때문입니다.',
+          '**발코니 태양광 하드웨어는 패널과 마이크로인버터를 포함해 거의 전부 중국에서 제조됩니다. 중국은 2026년 4월 1일 태양광 부품 수출 부가세 환급을 폐지했고 그 전에 모듈 가격이 급등했지만, 이후 도매 가격은 내려갔습니다. 중국산 TOPCon 모듈의 OPIS 벤치마크는 4월 7일 약 $0.119/W에서 9월 22일 $0.108/W로 하락했습니다.** 이는 모듈 도매 가격일 뿐이며 키트 소매 가격은 시장별로 확인하지 않았으므로, 2026년 하반기 소매 가격 상승 전망은 더 이상 제시하지 않습니다.',
         ],
       },
       faqSection: {
@@ -1476,13 +1500,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: '종합적으로 가장 좋은 발코니 태양광 키트는 무엇인가요?', a: 'APsystems EZ1-LV-NA 1080W 키트($869)는 대부분의 미국 구매자에게 종합적으로 가장 강력한 선택입니다——배터리 포함 키트를 제한하는 주별 저장 규제 없이 전국 배송되며, 마이크로인버터는 네이티브 로컬 제어를 지원합니다.' },
-          { q: '전국 배송이 가능한 배터리 저장형 발코니 태양광 키트가 있나요?', a: '현재 확인된 바 없습니다. 가장 강력한 저장 포함형 옵션인 EcoFlow STREAM Ultra는 제조사 자체 제품 페이지에 따르면 유타주에서만 판매 및 설치가 가능합니다. BigBlue의 POWAFREE H1은 약간 더 넓은(그러나 여전히 제한적인) 주 범위에서 이용 가능합니다.' },
-          { q: 'UL 3700 인증을 받은 발코니 태양광 키트가 있나요?', a: '없습니다. 작성 시점 기준 어떤 브랜드의 제품도 UL 3700 인증을 완료하지 못했습니다——이 표준은 2026년 1월에 도입되었지만 업계 전반의 인증 시험은 여전히 진행 중입니다.' },
+          { q: '전국 배송이 가능한 배터리 저장형 발코니 태양광 키트가 있나요?', a: '현재 확인되지 않았습니다. 가장 강력한 저장 포함 옵션인 EcoFlow STREAM Ultra는 2026-11-20 EcoFlow 미국 페이지에서 품절(재입고 2027년 3월)로 표시되었으며, 해당 페이지는 주석에 따라 유타주만, 또는 유타주·메릴랜드주·코네티컷주·콜로라도주를 플러그인 설치 대상으로 언급합니다. BigBlue POWAFREE H1의 공급 여부는 확인하지 못했습니다.' },
+          { q: 'UL 3700 인증을 받은 발코니 태양광 키트가 있나요?', a: '확정적으로 말할 수 없습니다. APsystems는 미국 페이지에서 EZ1이 "CSA Certified to UL3700 standards"라고 밝히고 있으며, 이는 인증 데이터베이스로 확인하지 못한 제조사 주장입니다. 2026년 7월 발표된 Hoymiles HiFlow Pro는 UL 3700 준수로 홍보되지만 보도에 따르면 UL Solutions는 인증하지 않았습니다. 표준 자체는 2025년 12월에 발행되었습니다.' },
           { q: '가장 저렴하면서 신뢰할 수 있는 발코니 태양광 선택지는 무엇인가요?', a: 'APsystems EZ1 단독 마이크로인버터($325, 자체 호환 패널과 조합)가 검증할 수 있었던 가장 안정적인 예산형 선택지입니다——인증된 마이크로인버터를 포함한 400달러 미만의 완전한 키트는 확인되지 않았습니다.' },
           { q: 'Home Assistant와 가장 잘 작동하는 발코니 태양광 키트는 무엇인가요?', a: '네이티브 로컬 API와 클라우드 계정이 필요 없는 공식 스타일의 오픈소스 Home Assistant 연동을 갖춘 APsystems EZ1 마이크로인버터를 중심으로 구성된 키트입니다.' },
-          { q: '발코니 태양광 키트 가격이 왜 오르고 있나요?', a: '중국이 2026년 4월 1일부로 태양광 부품 수출 부가가치세 환급을 폐지하면서 수출업체의 비용이 상승했고, 이로 인해 모듈 및 키트 가격이 2026년 하반기까지 약 10~15% 오를 것으로 추정됩니다.' },
+          { q: '발코니 태양광 키트 가격이 오르고 있습니까?', a: '명확하지 않습니다. 중국은 2026년 4월 1일부로 태양광 부품 수출 부가세 환급을 폐지했고 그 전에 모듈 도매 가격이 급등했지만, 중국산 TOPCon 모듈의 OPIS 벤치마크는 4월 7일부터 9월 22일 사이 약 $0.119/W에서 $0.108/W로 하락했습니다. 키트 소매 가격은 시장별로 확인하지 않았습니다.' },
           { q: '패널만 있는 키트에 나중에 배터리를 추가할 수 있나요?', a: '이는 마이크로인버터와 배터리의 호환성에 따라 다릅니다——패널만 있는 키트에 나중에 저장 기능을 추가할 수 있다고 가정하기 전에 해당 제품의 확장 옵션을 확인하세요.' },
-          { q: '이 키트들은 모든 미국 주에서 합법인가요?', a: '아닙니다——합법성과 출력 제한은 주마다 크게 다릅니다. 구매 전 거주 주의 현재 상황을 확인하세요. 위에 링크된 주별 법률 가이드를 참고하세요.' },
+          { q: '이 키트들은 모든 미국 주에서 합법인가요?', a: '아니요——합법성과 출력 한도는 주마다 다릅니다. 2026-10-19 기준 당사 확인에서 10개 주가 플러그인 태양광 법안에 서명했으며(유타주, 메인주, 메릴랜드주, 콜로라도주, 버몬트주, 코네티컷주는 시행 중. 버지니아주, 캘리포니아주, 뉴햄프셔주, 뉴저지주는 서명했으나 2027년 발효), 뉴욕주 법안은 주지사의 결정을 기다리고 있었습니다. 구매 전 거주 주의 최신 상태를 확인하십시오. 주별 법률 가이드도 참고하십시오.' },
         ],
       },
     },
@@ -1490,9 +1514,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026년 최고의 발코니 태양광 키트: 완전한 플러그인 태양광 시스템 비교',
-      description: '2026년 최고의 발코니 태양광 키트를 가격, 로컬 제어 지원, 현재 미국 주별 구매 가능 여부를 기준으로 비교했습니다——가격 및 법적 제한은 확인을 거쳤습니다.',
+      description: '2026년 최고의 발코니 태양광 키트를 가격, 로컬 제어 지원, 현재 미국 주별 구매 가능 여부를 기준으로 비교했습니다——가격 및 법적 제한은 확인 날짜와 함께 제시합니다.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1519,8 +1543,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'APsystems EZ1-LV-NA 1080W Kit', description: '종합 최고——$869, 전국 배송, 네이티브 로컬 API.' },
         { '@type': 'ListItem', position: 2, name: 'APsystems EZ1 (standalone)', description: '최고의 로컬 제어와 예산형 선택——$325, 네이티브 로컬 API.' },
-        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: '저장형 최고——$1,279, 1.92–11.52kWh, 현재 유타주 전용.' },
-        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: '더 넓은(그러나 여전히 제한적인) 주별 구매 가능 범위를 가진 대체 저장형 선택지.' },
+        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: '저장 포함 최고——표기 가격 $1,399, 1.92–11.52kWh, EcoFlow 미국 페이지 기준 품절(2026-11-20).' },
+        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: '대안 저장 옵션. 가격과 주별 공급 여부는 미확인.' },
       ],
     },
   },
@@ -1529,29 +1553,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-de.webp',
     affiliateDisclosure: true,
     title: 'Beste Balkonkraftwerk Sets (2026): Komplette Steckersolar-Systeme im Vergleich',
-    seoTitle: 'Beste Balkonkraftwerk Sets 2026: Getestet & Verglichen',
+    seoTitle: 'Beste Balkonkraftwerk Sets 2026: Im Vergleich',
     intro: 'Ein komplettes Balkonkraftwerk Set bündelt Panel(s) und Wechselrichter, sodass Sie keine Komponenten separat beschaffen müssen. Die Rechtslage in den USA variiert derzeit von Staat zu Staat und bestimmt, welche Sets tatsächlich wohin geliefert werden können — Verfügbarkeit, nicht nur der Preis, ist das erste wichtige Kriterium.',
-    metaDescription: 'Die besten Balkonkraftwerk Sets für 2026 in den USA, verglichen nach Preis, Local-Control-Unterstützung und aktueller Verfügbarkeit je Bundesstaat — geprüfte Preise und rechtliche Einschränkungen.',
+    metaDescription: 'Die besten Balkonkraftwerk Sets für 2026 in den USA, verglichen nach Preis, Local-Control-Unterstützung und aktueller Verfügbarkeit je Bundesstaat — Preise mit Prüfdatum und rechtliche Einschränkungen.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'US-Käufer auf der Suche nach einem kompletten Balkonkraftwerk Set',
     primaryTerm: 'Balkonkraftwerk Set',
     targetKeywords: ['beste Balkonkraftwerk Sets 2026', 'Steckersolar Kit', 'APsystems EZ1 Kit', 'EcoFlow STREAM Ultra', 'Balkonkraftwerk Set mit Speicher'],
-    leadAnswerBlock: '**Das APsystems EZ1-LV-NA 1080-W-Kit (869 $) ist für die meisten US-Käufer das beste Balkonkraftwerk Set insgesamt — der Händler liefert es ohne Kaufbeschränkung bundesweit, was jedoch unabhängig davon ist, ob der Anschluss in Ihrem konkreten Bundesstaat rechtlich bestätigt ist, da die meisten US-Bundesstaaten Balkonkraftwerke noch nicht reguliert haben (lesen Sie den staatenbezogenen Leitfaden vor dem Kauf).** Sein EZ1-Mikrowechselrichter ist zudem der einzige in dieser Kategorie mit einer nativen lokalen API. Käufer, die Batteriespeicher möchten, stoßen auf eine härtere Einschränkung: Das leistungsstärkste Speicher-Kit, EcoFlows STREAM Ultra, wird aktuell ausschließlich in Utah unter der dortigen spezifischen Gesetzgebung verkauft und installiert.',
+    leadAnswerBlock: '**Das APsystems EZ1-LV-NA 1080-W-Kit (869 $ bei der letzten Prüfung am 2026-07-02) ist für die meisten US-Käufer unsere Gesamtempfehlung unter den verglichenen Balkonkraftwerk Sets — der Händler liefert es bundesweit, was jedoch unabhängig davon ist, ob der Anschluss in Ihrem Bundesstaat rechtlich bestätigt ist: Bei unserer Tracker-Prüfung am 2026-10-19 hatten 10 US-Bundesstaaten Steckersolar-Gesetze unterzeichnet, einige davon noch nicht in Kraft (lesen Sie vor dem Kauf den staatenbezogenen Leitfaden).** Sein EZ1-Mikrowechselrichter hat eine native lokale API, und APsystems gibt an, dass er nach UL 3700 CSA-zertifiziert ist. Käufer, die Batteriespeicher möchten, stoßen auf eine härtere Einschränkung: EcoFlows STREAM Ultra ist das leistungsstärkste Speicher-Kit, wird aber auf EcoFlows eigener US-Seite als nicht lieferbar geführt (Wiederverfügbarkeit mit März 2027 angegeben) und nennt nur wenige Bundesstaaten für die Plug-in-Installation.',
     quickAnswerTop: {
       de: {
         question: 'Welches Balkonkraftwerk Set ist derzeit die beste Wahl?',
-        answer: 'Für die meisten US-Käufer ist das APsystems EZ1-LV-NA 1080-W-Kit (869 $, ussolarsupplier.com) die stärkste Gesamtempfehlung — bundesweit lieferbar, und sein EZ1-Mikrowechselrichter hat die einzige native lokale API in dieser Kategorie. Wer Batteriespeicher möchte, findet im EcoFlow STREAM Ultra die beste Hardware, die jedoch derzeit nur in Utah installiert werden darf. Kein vollständiges Kit unter 400 $ konnte verifiziert als zertifizierten Mikrowechselrichter enthaltend nachgewiesen werden — sehr günstige Komplettkits sollten mit Vorsicht betrachtet werden.',
+        answer: 'Für die meisten US-Käufer ist das APsystems EZ1-LV-NA 1080-W-Kit (869 $ bei der letzten Prüfung auf ussolarsupplier.com am 2026-07-02) die stärkste Gesamtempfehlung — bundesweit lieferbar, und sein EZ1-Mikrowechselrichter hat eine native lokale API. Wer Batteriespeicher möchte, findet im EcoFlow STREAM Ultra die beste Hardware, doch EcoFlows US-Seite führt ihn derzeit als nicht lieferbar und nennt nur wenige Bundesstaaten für die Plug-in-Installation. Kein vollständiges Kit unter 400 $ konnte verifiziert mit einem zertifizierten Mikrowechselrichter nachgewiesen werden — sehr günstige Komplettkits sollten mit Vorsicht betrachtet werden.',
         bullets: [
           'Insgesamt bestes Set: APsystems EZ1-LV-NA 1080-W-Kit — 869 $, bundesweit ohne Kaufbeschränkung lieferbar (unabhängig davon, ob Ihr Bundesstaat den Anschluss rechtlich bestätigt — vorher prüfen)',
           'Bestes Local-Control-Gerät: APsystems EZ1-Mikrowechselrichter — native lokale API und offiziell anmutende Home Assistant-Integration',
           'Bestes Budget-Set: APsystems EZ1 als Einzelkomponente (325 $, mit eigenen Panels kombinieren) — kein überprüfbar zertifiziertes Komplettkit unter 400 $ existiert',
-          'Bestes Set mit Speicher: EcoFlow STREAM Ultra — 1,92 kWh (erweiterbar auf 11,52 kWh), 1.279 $, derzeit nur in Utah',
-          'Kein Produkt irgendeiner Marke hat bisher eine UL-3700-Zertifizierung erhalten',
+          'Bestes Set mit Speicher: EcoFlow STREAM Ultra — 1,92 kWh (erweiterbar auf 11,52 kWh), 1.399 $ gelistet (geprüft am 2026-11-20), nicht lieferbar, Wiederverfügbarkeit mit März 2027 angegeben',
+          'UL 3700: APsystems gibt an, dass sein EZ1 CSA-zertifiziert ist; Hoymiles\' HiFlow Pro wird als UL-3700-konform vermarktet, laut Presseberichten hat UL Solutions es jedoch nicht zertifiziert',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1572,11 +1596,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Bestes Set insgesamt: APsystems EZ1-LV-NA 1080-W-Kit, 869 $ — der Händler liefert bundesweit ohne Kaufbeschränkung, aber das ist nicht dasselbe wie eine rechtliche Bestätigung Ihres Bundesstaats für den Anschluss; lesen Sie zuerst den staatenbezogenen Leitfaden.',
-          'Bestes Local Control: Der APsystems EZ1-Mikrowechselrichter ist der einzige in dieser Kategorie mit nachgewiesener nativer lokaler API und offiziell anmutender Home Assistant-Integration — prüfen Sie den Local-Mode-Schalter beim Kauf, da eine Firmware-Version (1.1.2_b) ihn bei einigen Geräten angeblich entfernt hat.',
+          'Bestes Local Control: Der APsystems EZ1-Mikrowechselrichter ist einer der wenigen in dieser Kategorie mit nachgewiesener nativer lokaler API und offiziell anmutender Home Assistant-Integration — prüfen Sie den Local-Mode-Schalter beim Kauf, da eine Firmware-Version (1.1.2_b) ihn bei einigen Geräten angeblich entfernt hat.',
           'Bestes Budget-Set: Kein Komplettkit unter 400 $ konnte mit verifiziertem Zertifizierungsstatus gefunden werden — der APsystems EZ1 als Einzelkomponente (325 $, mit eigenen Panels kombinieren) ist der defensiblere Budget-Weg.',
-          'Bestes Set mit Speicher: EcoFlow STREAM Ultra (1,92 kWh, erweiterbar auf 11,52 kWh, 1.279 $) ist die stärkste Speicher-Hardware, wird und installiert aber derzeit nur in Utah.',
+          'Bestes Set mit Speicher: EcoFlow STREAM Ultra (1,92 kWh, erweiterbar auf 11,52 kWh, am 2026-11-20 mit 1.399 $ gelistet) ist die stärkste Speicher-Hardware, aber EcoFlows US-Seite führt ihn bis zu einer angegebenen Wiederverfügbarkeit im März 2027 als nicht lieferbar und nennt die Bundesstaaten für die Plug-in-Installation uneinheitlich (an einer Stelle nur Utah, an anderer Utah, Maryland, Connecticut und Colorado).',
           'Die Rechtslage im jeweiligen Bundesstaat ist das erste Kriterium, nicht der Preis — stellen Sie sicher, dass Ihr Bundesstaat Balkonkraftwerke erlaubt, bevor Sie nach Preis oder Spezifikation kaufen.',
-          'Kein Produkt von Hoymiles, Deye, EcoFlow oder APsystems hat bisher die UL-3700-Zertifizierung erhalten — der Standard startete im Januar 2026, aber die Zertifizierungstests sind branchenweit noch ausstehend.',
+          'Zertifizierung: UL 3700 wurde im Dezember 2025 als Standard veröffentlicht, das Zertifizierungsprogramm von UL Solutions startete im Januar 2026. Die US-Seite von APsystems gibt an, dass der EZ1 "CSA Certified to UL3700 standards" ist (eine Herstellerangabe, die wir nicht anhand einer Zertifizierungsdatenbank prüfen konnten); Hoymiles\' HiFlow Pro, im Juli 2026 vorgestellt, wird als UL-3700-konform beschrieben, doch laut Presseberichten hat UL Solutions es nicht zertifiziert.',
         ],
       },
       howWeChose: {
@@ -1590,7 +1614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-overall',
         title: 'Bestes Set insgesamt: APsystems EZ1-LV-NA 1080-W-Kit',
         content: [
-          '**Das APsystems EZ1-LV-NA-Kit kombiniert zwei bifaziale 540-W-Talesun-Module mit dem EZ1-LV-Mikrowechselrichter für 869 $ (reduziert vom UVP 1.199 $), verkauft und versandt aus einem US-Lager.** Da es die Einzelmikrowechselrichter-Route nutzt statt einer Batteriespeichereinheit, unterliegt es nicht den staatenbezogenen Speicherbeschränkungen, die EcoFlows vergleichbares Kit limitieren — ein erheblicher praktischer Vorteil, solange die staatliche Gesetzgebung noch nachzieht.',
+          '**Das APsystems EZ1-LV-NA-Kit kombiniert zwei bifaziale 540-W-Talesun-Module mit dem EZ1-LV-Mikrowechselrichter für 869 $ (reduziert vom UVP 1.199 $), verkauft und versandt aus einem US-Lager.** Da es die Einzelmikrowechselrichter-Route nutzt statt einer Batteriespeichereinheit, unterliegt es nicht den staatenbezogenen Speicherbeschränkungen, die EcoFlows vergleichbares Kit limitieren — ein erheblicher praktischer Vorteil, solange die staatliche Gesetzgebung noch nachzieht. Der Preis von 869 $ wurde am 2026-07-02 geprüft und konnte am 2026-11-20 nicht erneut verifiziert werden, da die Händlerseite nicht erreichbar war.',
         ],
         affiliateLinks: [
           { url: 'https://ussolarsupplier.com/products/1080w-plug-in-solar-kit-with-apsystems-ez1-microinverter-plug-in-home-solar-kit', productName: 'APsystems EZ1-LV-NA 1080W Kit', productCategory: 'Komplettes Balkonkraftwerk Set', priceRange: '869 $', label: 'Aktuellen Preis prüfen' },
@@ -1600,7 +1624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-local-control',
         title: 'Bestes No-Cloud / Local-Control-Set',
         content: [
-          '**Der APsystems EZ1-Mikrowechselrichter — sowohl im obigen Kit als auch einzeln erhältlich — ist der einzige in dieser Kategorie mit nachgewiesener nativer lokaler HTTP-API und einer offiziell anmutenden Open-Source-Home-Assistant-Integration, die kein Cloud-Konto benötigt.** Ein Vorbehalt, der vor dem Kauf geprüft werden sollte: Eine gemeldete Firmware-Version (1.1.2_b) hat die lokale API-Funktionalität bei einigen Geräten entfernt — prüfen Sie daher, ob der Local-Mode-Schalter bei dem Gerät, das Sie erhalten, vorhanden ist, statt es nur aus dem Datenblatt vorauszusetzen.',
+          '**Der APsystems EZ1-Mikrowechselrichter — sowohl im obigen Kit als auch einzeln erhältlich — ist einer der wenigen in dieser Kategorie mit nachgewiesener nativer lokaler HTTP-API und einer offiziell anmutenden Open-Source-Home-Assistant-Integration, die kein Cloud-Konto benötigt.** Ein Vorbehalt, der vor dem Kauf geprüft werden sollte: Eine gemeldete Firmware-Version (1.1.2_b) hat die lokale API-Funktionalität bei einigen Geräten entfernt — prüfen Sie daher, ob der Local-Mode-Schalter bei dem Gerät, das Sie erhalten, vorhanden ist, statt es nur aus dem Datenblatt vorauszusetzen.',
           'Hoymiles-Hardware kann ebenfalls ein echtes Cloud-freies Setup erreichen, aber nur über die OpenDTU-Drittanbieter-Firmware auf separater ESP32-basierter Hardware (ca. 55 €) plus einer Community-Python-Integration — ein echtes DIY-Projekt, kein Out-of-the-Box-Feature. Siehe den [dedizierten Mikrowechselrichter-Vergleich](/balcony-solar/best-balcony-solar-microinverters) für die vollständige Aufschlüsselung.',
         ],
       },
@@ -1609,7 +1633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bestes Budget-Set',
         content: [
           '**Kein Komplettkit unter 400 $ mit einem zertifizierten Mikrowechselrichter konnte verifiziert werden — mehrere aktuelle Kaufratgeber warnen ausdrücklich, dass Angebote unter 400 $ "möglicherweise keinen zertifizierten Mikrowechselrichter enthalten".** Der defensiblere Budget-Weg ist der APsystems EZ1 als Einzelkomponente für 325 $ (mit kostenlosem Versand in die 48 zusammenhängenden Bundesstaaten direkt von APsystems), den Sie mit kompatiblen eigenen Panels kombinieren.',
-          'EcoFlow verkauft auch einen eigenständigen STREAM-Mikrowechselrichter für 369 $ im Angebot, aber die eigene Produktseite gibt an, dass er "nur... innerhalb des Bundesstaats Utah" unter der dortigen spezifischen Gesetzgebung verkauft wird — kein bundesweit nutzbares Budget-Produkt trotz des attraktiven Preises.',
+          'EcoFlow verkauft auch einen eigenständigen STREAM-Mikrowechselrichter für 369 $ im Angebot, aber die eigene Produktseite gibt an, dass er "nur... innerhalb des Bundesstaats Utah" unter der dortigen spezifischen Gesetzgebung verkauft wird — kein bundesweit nutzbares Budget-Produkt trotz des attraktiven Preises. Dieser Preis und diese Einschränkung wurden am 2026-07-02 geprüft und nicht erneut verifiziert.',
         ],
         affiliateLinks: [
           { url: 'https://usa.apsystems.com/product/ez1-microinverter/', productName: 'APsystems EZ1 Micro-Inverter (Einzelkomponente)', productCategory: 'Mikrowechselrichter', priceRange: '325 $', label: 'Aktuellen Preis prüfen' },
@@ -1619,14 +1643,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'best-with-storage',
         title: 'Bestes Set mit Speicher',
         content: [
-          '**EcoFlows STREAM Ultra ist die leistungsstärkste speicherintegrierte Balkonkraftwerk-Hardware auf dem Markt — 1,92 kWh Basiskapazität (erweiterbar auf 11,52 kWh), eingebauter netzgekoppelter Mikrowechselrichter, 1.200-W-Wechselstromausgang und 10 Jahre Garantie auf LFP-Zellen mit 6.000 Zyklen bei 70 % Kapazitätserhalts.** Die erhebliche Einschränkung: EcoFlows eigene Produktseite bestätigt, dass die Plug-and-Play-Installation derzeit nur in Utah verkauft und installierbar ist, was widerspiegelt, wie wenige US-Bundesstaaten steckerfertige Speichersysteme ohne Genehmigung aktuell erlauben.',
-          'Falls Sie außerhalb von Utah sind, ist BigBlues POWAFREE H1 (2.560-Wh-Akku, integrierter R800-Mikrowechselrichter, ca. IP67) in einer etwas breiteren — wenn auch noch begrenzten — Gruppe von Bundesstaaten legal (Utah, Maryland, Maine, Virginia und einem weiteren Stand Mitte 2026). Der genannte Verkaufspreis von 699,99 $ konnte auf keiner BigBlue-eigenen Seite unabhängig bestätigt werden — behandeln Sie diesen Wert als unverified bis zur direkten Bestätigung.',
+          '**EcoFlows STREAM Ultra ist die leistungsstärkste speicherintegrierte Balkonkraftwerk-Hardware: 1,92 kWh Basiskapazität (erweiterbar auf 11,52 kWh), eingebauter netzgekoppelter Mikrowechselrichter, 1.200-W-Wechselstromausgang und 10 Jahre Garantie auf LFP-Zellen mit 6.000 Zyklen bei 70 % Kapazitätserhalt.** Die erhebliche Einschränkung ist die Verfügbarkeit: EcoFlows US-Produktseite (geprüft am 2026-11-20) listet ihn mit 1.399 $, zeigt ihn als nicht lieferbar mit Wiederverfügbarkeit im März 2027 und gibt die Bundesstaaten für die Plug-in-Installation uneinheitlich an — ein Hinweis nennt Utah, Maryland, Connecticut und Colorado, eine Fußnote besagt, Verkauf und Plug-and-Play-Installation seien nur in Utah möglich.',
+          'BigBlues POWAFREE H1 (2.560-Wh-Akku, 800 W Solareingang und integrierter Mikrowechselrichter, laut Händlerlisten IP67) ist eine weitere Speicheroption, doch wir konnten weder den aktuellen US-Preis noch die Bundesstaaten, in denen sie installiert werden darf, auf einer BigBlue-eigenen Seite verifizieren — behandeln Sie beides als ungeprüft und klären Sie es vor dem Kauf mit dem Hersteller und der Rechtslage Ihres Bundesstaats.',
         ],
         callouts: [
           { type: 'warning', text: 'Die Rechtslage für speicherintegrierte Balkonkraftwerk-Sets ist derzeit wesentlich restriktiver als für Panel-plus-Mikrowechselrichter-Sets. Prüfen Sie den Status Ihres Bundesstaats, bevor Sie gezielt ein Set mit Speicher kaufen.' },
         ],
         affiliateLinks: [
-          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Balkonkraftwerk Set mit Akku', priceRange: '1.279 $', label: 'Aktuellen Preis prüfen' },
+          { url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Balkonkraftwerk Set mit Akku', priceRange: '1.399 $', label: 'Aktuellen Preis prüfen' },
         ],
       },
       comparisonTable: {
@@ -1635,8 +1659,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Kit: 'APsystems EZ1-LV-NA 1080 W', Preis: '869 $', Speicher: 'Keiner', Steuerung: 'Native lokale API', Verfügbarkeit: 'Bundesweit lieferbar' },
           { Kit: 'APsystems EZ1 (Einzelkomponente)', Preis: '325 $', Speicher: 'Keiner', Steuerung: 'Native lokale API', Verfügbarkeit: 'Bundesweit lieferbar' },
-          { Kit: 'EcoFlow STREAM Ultra', Preis: '1.279 $', Speicher: '1,92–11,52 kWh', Steuerung: 'Cloud-App (keine verifizierte lokale API)', Verfügbarkeit: 'Nur Utah' },
-          { Kit: 'BigBlue POWAFREE H1', Preis: '~699,99 $ (ungeprüft)', Speicher: '2.560 Wh', Steuerung: 'Ungeprüft', Verfügbarkeit: '~5 Bundesstaaten (UT/MD/ME/VA + 1)' },
+          { Kit: 'EcoFlow STREAM Ultra', Preis: '1.399 $', Speicher: '1,92–11,52 kWh', Steuerung: 'Cloud-App (keine verifizierte lokale API)', Verfügbarkeit: 'Nicht lieferbar (Nachlieferung März 2027)' },
+          { Kit: 'BigBlue POWAFREE H1', Preis: 'Ungeprüft', Speicher: '2.560 Wh', Steuerung: 'Ungeprüft', Verfügbarkeit: 'Ungeprüft' },
         ],
         columns: ['Kit', 'Preis', 'Speicher', 'Steuerung', 'Verfügbarkeit'],
         tableFormat: true,
@@ -1649,16 +1673,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Rechtslage im Bundesstaat und ein eventueller staatsspezifischer Watt-Grenzwert — vor dem Vergleich von Kits bestätigen',
-          'Zertifizierungsstatus (heute UL 1741/IEEE 1547; UL 3700 noch nicht von einer Marke erhältlich)',
+          'Zertifizierungsstatus (heute UL 1741/IEEE 1547; UL 3700: APsystems gibt eine CSA-Zertifizierung für den EZ1 an, andere Marken unbestätigt)',
           'Lokales vs. Cloud-Monitoring, falls relevant für Sie',
           'Ob Speicher enthalten ist und ob diese spezifische Speicher-Hardware in Ihrem Bundesstaat legal ist',
+        ],
+        callouts: [
+          { type: 'info', text: 'Dieser Leitfaden bietet allgemeine Informationen und ersetzt keine Rechts-, Steuer- oder Elektrofachberatung. Regeln für Steckersolar und Produktsicherheitsanforderungen unterscheiden sich je nach Bundesstaat, Netzbetreiber sowie Vermieter oder Eigentümergemeinschaft; klären Sie diese vor dem Kauf oder Anschluss mit der Aufsichtsbehörde Ihres Bundesstaats, Ihrem Netzbetreiber und bei Bedarf mit einer Elektrofachkraft.' },
         ],
       },
       chinaPriceNote: {
         id: 'china-price-note',
         title: 'Hinweis zu chinesischer Hardware & Preisen',
         content: [
-          '**Nahezu alle Balkonkraftwerk-Hardware — Panels und Mikrowechselrichter gleichermaßen — wird in China hergestellt, und die Abschaffung der chinesischen PV-Exportsteuererstattung ab 1. April 2026 treibt Modul- und Kit-Preise voraussichtlich um 10–15 % in der zweiten Hälfte 2026 in die Höhe.** Wer preissensibel ist, für den könnte ein früher Kauf in dieser Kategorie wichtiger sein als bei den meisten Consumer Electronics, da der zugrundeliegende Komponentenpreistrend für die absehbare Zukunft aufwärtsgerichtet ist.',
+          '**Nahezu alle Balkonkraftwerk-Hardware — Panels und Mikrowechselrichter gleichermaßen — wird in China hergestellt. China hat die Exportumsatzsteuer-Erstattung für PV-Komponenten zum 1. April 2026 gestrichen, und die Modulpreise sprangen zuvor an, doch die Großhandelspreise sind seither gesunken: Der OPIS-Richtwert für chinesische TOPCon-Module fiel von etwa 0,119 $/W am 7. April auf 0,108 $/W am 22. September.** Das sind ausschließlich Großhandelspreise für Module — Endkundenpreise für Kits wurden nicht Markt für Markt überprüft, daher prognostizieren wir keinen Endkundenpreisanstieg für die zweite Jahreshälfte 2026 mehr.',
         ],
       },
       faqSection: {
@@ -1666,13 +1693,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufige Fragen',
         faqs: [
           { q: 'Welches Balkonkraftwerk Set ist insgesamt am besten?', a: 'Das APsystems EZ1-LV-NA 1080-W-Kit (869 $) ist für die meisten US-Käufer die stärkste Gesamtempfehlung — bundesweit lieferbar ohne die staatlichen Speicherbeschränkungen, die akkubasierte Kits limitieren, und sein Mikrowechselrichter unterstützt nativen Local Control.' },
-          { q: 'Gibt es ein Balkonkraftwerk Set mit Batteriespeicher, das bundesweit lieferbar ist?', a: 'Aktuell nicht bestätigt. EcoFlows STREAM Ultra, die stärkste Speicheroption, wird und installiert laut eigener Produktseite des Herstellers nur in Utah. BigBlues POWAFREE H1 hat eine etwas breitere (aber noch begrenzte) Verfügbarkeit.' },
-          { q: 'Hat ein Balkonkraftwerk Set bereits die UL-3700-Zertifizierung?', a: 'Nein. Zum Zeitpunkt der Erstellung hatte kein Produkt irgendeiner Marke die UL-3700-Zertifizierung abgeschlossen — der Standard startete im Januar 2026 und die Zertifizierungstests sind branchenweit noch ausstehend.' },
+          { q: 'Gibt es ein Balkonkraftwerk Set mit Batteriespeicher, das bundesweit lieferbar ist?', a: 'Aktuell nicht bestätigt. EcoFlows STREAM Ultra, die stärkste speicherintegrierte Option, wurde am 2026-11-20 auf EcoFlows US-Seite als nicht lieferbar geführt (Wiederverfügbarkeit März 2027), und diese Seite nennt je nach Hinweis entweder nur Utah oder Utah, Maryland, Connecticut und Colorado für die Plug-in-Installation. Die Verfügbarkeit von BigBlues POWAFREE H1 konnten wir nicht verifizieren.' },
+          { q: 'Hat ein Balkonkraftwerk Set bereits die UL-3700-Zertifizierung?', a: 'Nicht abschließend geklärt. APsystems gibt auf seiner US-Seite an, dass der EZ1 "CSA Certified to UL3700 standards" ist — eine Herstellerangabe, die wir nicht anhand einer Zertifizierungsdatenbank prüfen konnten. Hoymiles\' HiFlow Pro, im Juli 2026 vorgestellt, wird als UL-3700-konform vermarktet, doch laut Presseberichten hat UL Solutions es nicht zertifiziert. Der Standard selbst wurde im Dezember 2025 veröffentlicht.' },
           { q: 'Was ist die günstigste zuverlässige Balkonkraftwerk-Option?', a: 'Der APsystems EZ1 als Einzelkomponente für 325 $ (kombiniert mit eigenen kompatiblen Panels) ist der defensibleste Budget-Weg, den wir verifizieren konnten — kein Komplettkit unter 400 $ wurde mit zertifiziertem Mikrowechselrichter bestätigt.' },
           { q: 'Welches Balkonkraftwerk Set funktioniert am besten mit Home Assistant?', a: 'Kits, die auf dem APsystems EZ1-Mikrowechselrichter aufbauen, der eine native lokale API und eine offiziell anmutende Open-Source-Home-Assistant-Integration besitzt, die kein Cloud-Konto benötigt.' },
-          { q: 'Warum steigen die Preise für Balkonkraftwerk Sets?', a: 'China hat eine PV-Komponentenexport-Umsatzsteuererstattung ab dem 1. April 2026 gestrichen, was die Exportkosten erhöht und Modul- und Kit-Preise voraussichtlich um 10–15 % in der zweiten Hälfte 2026 anhebt.' },
+          { q: 'Steigen die Preise für Balkonkraftwerk Sets?', a: 'Nicht eindeutig. China hat die Umsatzsteuererstattung für PV-Komponentenexporte zum 1. April 2026 gestrichen, und die Großhandelspreise für Module sprangen zuvor an, doch der OPIS-Richtwert für chinesische TOPCon-Module sank zwischen dem 7. April und dem 22. September von etwa 0,119 $/W auf 0,108 $/W. Endkundenpreise für Kits wurden nicht Markt für Markt überprüft.' },
           { q: 'Kann ich einem reinen Panel-Kit später einen Akku hinzufügen?', a: 'Das hängt von der Kompatibilität Ihres Mikrowechselrichters und des Akkus ab — prüfen Sie die Erweiterungsoptionen des jeweiligen Produkts, bevor Sie davon ausgehen, dass ein reines Panel-Kit später mit Speicher aufgerüstet werden kann.' },
-          { q: 'Sind diese Sets in allen US-Bundesstaaten legal?', a: 'Nein — Rechtslage und Watt-Grenzen variieren erheblich je nach Bundesstaat. Prüfen Sie den aktuellen Status für Ihren Bundesstaat vor dem Kauf; lesen Sie den oben verlinkten staatenbezogenen Rechtsleitfaden.' },
+          { q: 'Sind diese Sets in allen US-Bundesstaaten legal?', a: 'Nein — Rechtslage und Watt-Grenzen variieren je nach Bundesstaat. Bei unserer Tracker-Prüfung am 2026-10-19 hatten 10 Bundesstaaten Steckersolar-Gesetze unterzeichnet (Utah, Maine, Maryland, Colorado, Vermont und Connecticut in Kraft; Virginia, Kalifornien, New Hampshire und New Jersey unterzeichnet, aber erst 2027 wirksam), und der Gesetzentwurf von New York wartete auf die Gouverneurin. Prüfen Sie den aktuellen Status Ihres Bundesstaats vor dem Kauf; lesen Sie den staatenbezogenen Rechtsleitfaden.' },
         ],
       },
     },
@@ -1680,9 +1707,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Beste Balkonkraftwerk Sets (2026): Komplette Steckersolar-Systeme im Vergleich',
-      description: 'Die besten Balkonkraftwerk Sets für 2026 in den USA, verglichen nach Preis, Local-Control-Unterstützung und aktueller Verfügbarkeit je Bundesstaat — geprüfte Preise und rechtliche Einschränkungen.',
+      description: 'Die besten Balkonkraftwerk Sets für 2026 in den USA, verglichen nach Preis, Local-Control-Unterstützung und aktueller Verfügbarkeit je Bundesstaat — Preise mit Prüfdatum und rechtliche Einschränkungen.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1710,8 +1737,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'APsystems EZ1-LV-NA 1080W Kit', description: 'Insgesamt am besten — 869 $, bundesweiter Versand, native lokale API.' },
         { '@type': 'ListItem', position: 2, name: 'APsystems EZ1 (Einzelkomponente)', description: 'Beste lokale Steuerung und Budgetoption — 325 $, native lokale API.' },
-        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'Beste Option mit Speicher — 1.279 $, 1,92–11,52 kWh, aktuell nur Utah.' },
-        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'Alternative Speicheroption mit breiterer (aber noch begrenzter) Verfügbarkeit je Bundesstaat.' },
+        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'Beste Option mit Speicher — 1.399 $ gelistet, 1,92–11,52 kWh, laut EcoFlows US-Seite nicht lieferbar (2026-11-20).' },
+        { '@type': 'ListItem', position: 4, name: 'BigBlue POWAFREE H1', description: 'Alternative Speicheroption; Preis und Verfügbarkeit je Bundesstaat ungeprüft.' },
       ],
     },
   },

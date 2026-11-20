@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Balcony solar — also called plug-in solar or "Balkonkraftwerk" in its origin market of Germany — lets renters and apartment owners generate their own electricity without a rooftop installation. A small panel-and-inverter kit plugs directly into a standard wall outlet and feeds power into your home\'s existing wiring.',
     metaDescription: 'Balcony solar plugs a small panel and micro-inverter into a wall outlet to offset home electricity use — no roof, no electrician, no long-term contract required.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '8 min read',
     educationalLevel: 'Beginner',
     audience: 'Renters and apartment owners exploring solar options without a rooftop installation',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Owned outright and portable — take it with you when you move',
           'Originated in Germany ("Balkonkraftwerk") and has since spread to other markets',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -126,6 +126,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Legality, power limits, and registration requirements vary substantially by country — and within the US, by state.** Some markets have a dedicated simplified regime for small plug-in systems; others fold balcony solar into the same rules as full rooftop installations, with no lighter-touch path.',
           'Because these rules change as legislatures and regulators act, always check verified status for your specific location before buying rather than relying on a general assumption either way.',
         ],
+        callouts: [
+          { type: 'info', text: 'General information only, not legal advice. Rules change and local details differ; confirm with the competent authority, grid operator or a qualified professional before buying or connecting a system.' },
+        ],
         links: [
           { url: '/balcony-solar/is-balcony-solar-legal-country-guide', title: 'Is Balcony Solar Legal? Country-by-Country Guide', description: 'Full legal status tracker across every major market' },
           { url: '/balcony-solar/how-balcony-solar-became-legal-in-the-us', title: 'How Balcony Solar Became Legal in the US', description: 'The Utah-to-New-York story of why US legalization took so long' },
@@ -155,6 +158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'How long does a balcony solar system last?', a: 'Panels are typically rated for 20-25 years of production, similar to rooftop panels, though real-world lifespan depends on build quality and weather exposure. Micro-inverters generally carry shorter warranty periods than panels.' },
           { q: 'Can I take my balcony solar system with me when I move?', a: 'Yes — this is one of balcony solar\'s core advantages over rooftop solar. Because it\'s plugged in rather than hardwired or structurally mounted, the entire kit can be unmounted and reinstalled at a new home.' },
           { q: 'Does balcony solar work if I don\'t have a balcony?', a: 'Yes. Despite the name, balcony solar kits also mount on exterior walls, railings, ground stands, or flat roofs — a true balcony is common but not required.' },
+          { q: 'Is balcony solar legal where I live right now?', a: 'It depends on your country and, in the US, on your state. Germany lets plug-in devices with an inverter output of up to 800 VA connect after a single online registration in the Marktstammdatenregister, and a growing number of US states have signed dedicated plug-in solar laws, some of which are not yet in effect. Details change, so check the legal and registration guides linked above and confirm with your grid operator.' },
         ],
       },
     },
@@ -164,7 +168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'What Is Balcony Solar? Plug-In Solar Panels Explained',
       description: 'Balcony solar plugs a small panel and micro-inverter into a wall outlet to offset home electricity use — no roof, no electrician, no long-term contract required.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -186,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'La energía solar de balcón — también llamada solar enchufable o "Balkonkraftwerk" en su mercado de origen, Alemania — permite a inquilinos y propietarios de pisos generar su propia electricidad sin necesidad de una instalación en el tejado. Un pequeño kit de panel e inversor se conecta directamente a un enchufe de pared estándar y envía energía al cableado eléctrico existente de tu hogar.',
     metaDescription: 'La energía solar de balcón conecta un pequeño panel y un microinversor a un enchufe de pared para reducir el consumo eléctrico del hogar — sin tejado, sin electricista, sin contrato a largo plazo.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '8 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Inquilinos y propietarios de pisos que exploran opciones solares sin instalación en el tejado',
@@ -204,7 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Es de tu propiedad total y portátil — te lo llevas cuando te mudas',
           'Nació en Alemania ("Balkonkraftwerk") y desde entonces se ha extendido a otros mercados',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -299,6 +303,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La legalidad, los límites de potencia y los requisitos de registro varían considerablemente según el país — y, dentro de EE. UU., según el estado.** Algunos mercados cuentan con un régimen simplificado específico para sistemas enchufables pequeños; otros incluyen la energía solar de balcón dentro de las mismas normas que las instalaciones completas en tejado, sin una vía más sencilla.',
           'Como estas normas cambian a medida que legisladores y reguladores actúan, comprueba siempre el estado verificado para tu ubicación concreta antes de comprar, en lugar de basarte en una suposición general en cualquier sentido.',
         ],
+        callouts: [
+          { type: 'info', text: 'Información general, no constituye asesoramiento legal. Las normas cambian y los detalles locales varían; confirma con la autoridad competente, la distribuidora o un profesional cualificado antes de comprar o conectar un sistema.' },
+        ],
         links: [
           { url: '/es/balcony-solar/is-balcony-solar-legal-country-guide', title: '¿Es legal la energía solar de balcón? Guía país por país', description: 'Seguimiento completo del estado legal en todos los mercados principales' },
         ],
@@ -327,6 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Cuánto dura un sistema solar de balcón?', a: 'Los paneles suelen tener una vida útil estimada de 20 a 25 años de producción, similar a los paneles de tejado, aunque la vida útil real depende de la calidad de fabricación y la exposición al clima. Los microinversores suelen tener periodos de garantía más cortos que los paneles.' },
           { q: '¿Puedo llevarme mi sistema solar de balcón cuando me mude?', a: 'Sí — es una de las principales ventajas de la energía solar de balcón frente a la solar en tejado. Al estar enchufado en lugar de cableado de forma fija o montado estructuralmente, todo el kit se puede desmontar e instalar de nuevo en un hogar nuevo.' },
           { q: '¿Funciona la energía solar de balcón si no tengo balcón?', a: 'Sí. A pesar de su nombre, los kits de energía solar de balcón también se montan en paredes exteriores, barandillas, soportes de suelo o tejados planos — un balcón propiamente dicho es habitual, pero no obligatorio.' },
+          { q: '¿Es legal la energía solar de balcón donde vivo ahora mismo?', a: 'Depende de tu país y, en EE. UU., de tu estado. Alemania permite conectar equipos enchufables con una potencia de inversor de hasta 800 VA tras un único registro en línea en el Marktstammdatenregister, y un número creciente de estados de EE. UU. ha firmado leyes específicas de energía solar enchufable, algunas aún sin entrar en vigor. Los detalles cambian, así que consulta las guías legal y de registro enlazadas arriba y confirma con tu distribuidora.' },
         ],
       },
     },
@@ -336,7 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '¿Qué es la energía solar de balcón? Paneles solares enchufables explicados',
       description: 'La energía solar de balcón conecta un pequeño panel y un microinversor a un enchufe de pared para reducir el consumo eléctrico del hogar — sin tejado, sin electricista, sin contrato a largo plazo.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -358,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'A energia solar de varanda — também chamada de solar plug-in ou "Balkonkraftwerk" em seu mercado de origem, a Alemanha — permite que inquilinos e proprietários de apartamentos gerem sua própria eletricidade sem precisar de uma instalação no telhado. Um pequeno kit de painel e inversor se conecta diretamente a uma tomada de parede padrão e envia energia para a fiação elétrica já existente da sua casa.',
     metaDescription: 'A energia solar de varanda conecta um pequeno painel e um microinversor a uma tomada de parede para reduzir o consumo de eletricidade da casa — sem telhado, sem eletricista, sem contrato de longo prazo.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '8 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Inquilinos e proprietários de apartamentos que buscam opções de energia solar sem instalação no telhado',
@@ -376,7 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'É de sua propriedade e portátil — você leva com você quando se muda',
           'Surgiu na Alemanha ("Balkonkraftwerk") e desde então se espalhou para outros mercados',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -471,6 +479,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A legalidade, os limites de potência e as exigências de registro variam bastante por país — e, dentro dos EUA, por estado.** Alguns mercados têm um regime simplificado dedicado a pequenos sistemas plugáveis; outros incluem a energia solar de varanda nas mesmas regras de instalações completas de telhado, sem um caminho mais simples.',
           'Como essas regras mudam conforme legisladores e reguladores agem, sempre verifique o status confirmado para o seu local específico antes de comprar, em vez de confiar em uma suposição geral em qualquer sentido.',
         ],
+        callouts: [
+          { type: 'info', text: 'Informações gerais, não constituem aconselhamento jurídico. As regras mudam e os detalhes locais variam; confirme com a autoridade competente, a distribuidora ou um profissional qualificado antes de comprar ou conectar um sistema.' },
+        ],
         links: [
           { url: '/pt/balcony-solar/is-balcony-solar-legal-country-guide', title: 'A Energia Solar de Varanda É Legal? Guia País a País', description: 'Rastreador completo do status legal em todos os principais mercados' },
         ],
@@ -499,6 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quanto tempo dura um sistema de energia solar de varanda?', a: 'Os painéis normalmente têm vida útil estimada de 20 a 25 anos de produção, semelhante aos painéis de telhado, embora a vida útil real dependa da qualidade de fabricação e da exposição ao clima. Os microinversores geralmente têm períodos de garantia mais curtos que os painéis.' },
           { q: 'Posso levar meu sistema de energia solar de varanda quando eu me mudar?', a: 'Sim — essa é uma das principais vantagens da energia solar de varanda em relação à solar de telhado. Por ser plugado em vez de instalado de forma fixa ou montado estruturalmente, o kit inteiro pode ser desmontado e reinstalado em uma nova casa.' },
           { q: 'A energia solar de varanda funciona se eu não tiver varanda?', a: 'Sim. Apesar do nome, os kits de energia solar de varanda também se instalam em paredes externas, grades, suportes de chão ou telhados planos — uma varanda de verdade é comum, mas não obrigatória.' },
+          { q: 'A energia solar de varanda é legal onde moro agora?', a: 'Depende do seu país e, nos EUA, do seu estado. A Alemanha permite conectar equipamentos plug-in com inversor de até 800 VA após um único registro on-line no Marktstammdatenregister, e um número crescente de estados dos EUA sancionou leis específicas de energia solar plug-in, algumas ainda sem vigência. Os detalhes mudam, então consulte os guias jurídico e de registro linkados acima e confirme com a sua distribuidora.' },
         ],
       },
     },
@@ -508,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'O Que É Energia Solar de Varanda? Painéis Solares Plug-and-Play Explicados',
       description: 'A energia solar de varanda conecta um pequeno painel e um microinversor a uma tomada de parede para reduzir o consumo de eletricidade da casa — sem telhado, sem eletricista, sem contrato de longo prazo.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -530,7 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'الطاقة الشمسية للشرفة — التي تُعرف أيضًا بالطاقة الشمسية القابلة للتوصيل أو Balkonkraftwerk في سوقها الأصلي، ألمانيا — تتيح للمستأجرين وأصحاب الشقق توليد كهربائهم الخاص دون الحاجة إلى تركيب على السطح. تُوصَل مجموعة صغيرة من الألواح والعاكس مباشرة بمقبس كهربائي قياسي في الحائط وتغذي الكهرباء في الأسلاك الموجودة أصلًا في المنزل.',
     metaDescription: 'الطاقة الشمسية للشرفة توصل لوحًا صغيرًا وعاكسًا دقيقًا (micro-inverter) بمقبس حائط لتقليل استهلاك الكهرباء في المنزل — دون سطح، ودون كهربائي، ودون عقد طويل الأجل.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '8 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'المستأجرون وأصحاب الشقق الذين يستكشفون خيارات الطاقة الشمسية دون تركيب على السطح',
@@ -548,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مملوك بالكامل وقابل للنقل — يمكنك أخذه معك عند الانتقال',
           'نشأ في ألمانيا (Balkonkraftwerk) وانتشر منذ ذلك الحين إلى أسواق أخرى',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -643,6 +655,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تختلف القانونية وحدود الطاقة ومتطلبات التسجيل اختلافًا كبيرًا حسب الدولة — وداخل الولايات المتحدة، حسب الولاية.** تمتلك بعض الأسواق نظامًا مبسطًا مخصصًا للأنظمة القابلة للتوصيل الصغيرة؛ بينما تُدرج أسواق أخرى الطاقة الشمسية للشرفة ضمن القواعد نفسها الخاصة بتركيبات السطح الكاملة، دون مسار أخف.',
           'ولأن هذه القواعد تتغير مع تحرك المشرّعين والجهات التنظيمية، تحقق دائمًا من الوضع الموثَّق لموقعك المحدد قبل الشراء بدلًا من الاعتماد على افتراض عام في أي من الاتجاهين.',
         ],
+        callouts: [
+          { type: 'info', text: 'معلومات عامة وليست استشارة قانونية. القواعد تتغيّر والتفاصيل المحلية تختلف؛ تأكد من الجهة المختصة أو مشغّل الشبكة أو مختص مؤهل قبل شراء أي نظام أو توصيله.' },
+        ],
         links: [
           { url: '/ar/balcony-solar/is-balcony-solar-legal-country-guide', title: 'هل الطاقة الشمسية للشرفة قانونية؟ دليل حسب كل دولة', description: 'متتبّع كامل للوضع القانوني في كل الأسواق الرئيسية' },
         ],
@@ -671,6 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'كم تدوم صلاحية نظام الطاقة الشمسية للشرفة؟', a: 'عادةً ما تُصنَّف الألواح لعمر إنتاجي يتراوح بين 20 و25 عامًا، مشابه لألواح السطح، رغم أن العمر الفعلي يعتمد على جودة التصنيع والتعرض للطقس. عادةً ما تحمل العواكس الدقيقة فترات ضمان أقصر من الألواح.' },
           { q: 'هل يمكنني أخذ نظام الطاقة الشمسية للشرفة معي عند الانتقال؟', a: 'نعم — وهذه واحدة من أهم مزايا الطاقة الشمسية للشرفة مقارنة بالطاقة الشمسية على السطح. ولأنها مُوصَّلة بمقبس بدلًا من التركيب الثابت أو التثبيت الإنشائي، يمكن فك الطقم بالكامل وإعادة تركيبه في منزل جديد.' },
           { q: 'هل تعمل الطاقة الشمسية للشرفة إن لم يكن لدي شرفة؟', a: 'نعم. رغم اسمها، تُركَّب أطقم الطاقة الشمسية للشرفة أيضًا على الحوائط الخارجية، أو الدرابزين، أو الحوامل الأرضية، أو الأسطح المسطحة — الشرفة الحقيقية شائعة لكنها ليست ضرورية.' },
+          { q: 'هل الطاقة الشمسية للشرفة قانونية في مكان إقامتي الآن؟', a: 'يعتمد ذلك على بلدك، وفي الولايات المتحدة على ولايتك. تسمح ألمانيا بتوصيل الأجهزة القابلة للتوصيل بقدرة عاكس تصل إلى 800 VA بعد تسجيل إلكتروني واحد في Marktstammdatenregister، وقد وقّع عدد متزايد من الولايات الأمريكية قوانين مخصصة للطاقة الشمسية القابلة للتوصيل، وبعضها لم يدخل حيّز التنفيذ بعد. التفاصيل تتغيّر، فراجع الدليلين القانوني والتسجيلي المرتبطين أعلاه وتأكد من مشغّل الشبكة.' },
         ],
       },
     },
@@ -680,7 +696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'ما هي الطاقة الشمسية للشرفة؟ شرح الألواح الشمسية القابلة للتوصيل',
       description: 'الطاقة الشمسية للشرفة توصل لوحًا صغيرًا وعاكسًا دقيقًا (micro-inverter) بمقبس حائط لتقليل استهلاك الكهرباء في المنزل — دون سطح، ودون كهربائي، ودون عقد طويل الأجل.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -702,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'バルコニーソーラー——発祥地ドイツでは「Balkonkraftwerk」とも呼ばれ、差し込み式ソーラーとも言われる——は、賃貸住まいやマンション所有者が屋根への設置なしに自分で電力を作れる仕組みです。小型のパネルとインバーターのキットを標準的な壁のコンセントに直接差し込むだけで、家庭の既存配線に電力を供給します。',
     metaDescription: 'バルコニーソーラーは小型パネルとマイクロインバーターを壁のコンセントに差し込み、家庭の電力使用量を削減します——屋根工事も電気工事士も長期契約も不要です。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '約8分',
     educationalLevel: 'Beginner',
     audience: '屋根への設置なしにソーラー電力の選択肢を検討している賃貸居住者やマンション所有者',
@@ -720,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '完全に所有でき、持ち運び可能——引っ越しの際も持って行ける',
           'ドイツ発祥(「Balkonkraftwerk」)で、以降他の市場にも広がった',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -815,6 +831,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**合法性、出力制限、登録要件は国によって大きく異なり、米国内では州によっても異なります。**一部の市場には小型の差し込み式システム向けに簡素化された専用制度がありますが、他の市場ではバルコニーソーラーを屋根置きの本格的な設置と同じ規則の中に組み込んでおり、簡易な手続きが用意されていません。',
           'こうした規則は立法機関や規制当局の動きに応じて変化するため、一般的な思い込みに頼らず、購入前に必ずお住まいの地域の最新の状況を確認してください。',
         ],
+        callouts: [
+          { type: 'info', text: '一般的な情報であり、法的助言ではありません。ルールは変わり、地域ごとに細部も異なります。システムの購入や接続の前に、所管機関、系統事業者、または資格のある専門家に確認してください。' },
+        ],
         links: [
           { url: '/ja/balcony-solar/is-balcony-solar-legal-country-guide', title: 'バルコニーソーラーは合法か?国別ガイド', description: '主要市場すべての法的状況を網羅した完全トラッカー' },
         ],
@@ -843,6 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'バルコニーソーラーシステムはどのくらい長持ちしますか?', a: 'パネルは屋根置きパネルと同様、一般的に20~25年の発電寿命を想定して設計されていますが、実際の寿命は製造品質や気象条件への曝露によって変わります。マイクロインバーターの保証期間は通常パネルより短めです。' },
           { q: '引っ越しの際にバルコニーソーラーシステムを持って行けますか?', a: 'はい——これは屋根置きソーラーに対するバルコニーソーラーの大きな利点の一つです。配線工事や構造的な取り付けではなく差し込み式のため、キット一式を取り外して新しい住まいに再設置できます。' },
           { q: 'バルコニーがなくてもバルコニーソーラーは使えますか?', a: 'はい。名前とは異なり、バルコニーソーラーキットは外壁、手すり、地面用スタンド、陸屋根にも設置できます——実際のバルコニーがあることは一般的ですが必須ではありません。' },
+          { q: '今お住まいの地域でバルコニーソーラーは合法ですか?', a: '国によって、アメリカでは州によって異なります。ドイツでは、インバーター出力800 VAまでのプラグイン式機器は、Marktstammdatenregisterでの1回のオンライン登録後に接続できます。アメリカでは、プラグイン式ソーラー専用の法律に署名する州が増えていますが、まだ施行されていないものもあります。細部は変わるため、上にリンクした法的ガイドと登録ガイドを確認し、系統事業者にも問い合わせてください。' },
         ],
       },
     },
@@ -852,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'バルコニーソーラーとは?差し込み式ソーラーパネルを解説',
       description: 'バルコニーソーラーは小型パネルとマイクロインバーターを壁のコンセントに差し込み、家庭の電力使用量を削減します——屋根工事も電気工事士も長期契約も不要です。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -873,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '阳台光伏——也称插电式太阳能,在其发源地德国被称为"Balkonkraftwerk"——让租房者和公寓业主无需在屋顶安装系统即可自行发电。一套小型太阳能板加逆变器套件可直接插入标准墙壁插座,将电力输送到家中已有的电路中。',
     metaDescription: '阳台光伏将小型太阳能板和微型逆变器插入墙壁插座,从而降低家庭用电量——无需屋顶施工、无需电工、无需长期合同。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '约8分钟',
     educationalLevel: 'Beginner',
     audience: '正在寻找无需屋顶安装的太阳能方案的租房者和公寓业主',
@@ -891,7 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '完全归自己所有且可携带——搬家时可以带走',
           '起源于德国("Balkonkraftwerk"),此后推广到其他市场',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -986,6 +1006,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**合法性、功率限制和登记要求因国家而异——在美国境内还因州而异。**部分市场为小型插电式系统设有专门的简化制度;另一些市场则将阳台光伏纳入与完整屋顶安装相同的规则体系,并没有更简便的路径。',
           '由于这些规定会随着立法机构和监管部门的行动而变化,购买前务必核实你所在具体地区的最新状态,而不要凭一般性假设行事——无论是认为合法还是认为不合法。',
         ],
+        callouts: [
+          { type: 'info', text: '本文为一般性信息,不构成法律建议。规则会变化,各地细节也不同;购买或接入系统之前,请向主管部门、电网运营商或具备资质的专业人士确认。' },
+        ],
         links: [
           { url: '/zh/balcony-solar/is-balcony-solar-legal-country-guide', title: '阳台光伏合法吗?各国指南', description: '覆盖各主要市场的完整法律状态追踪' },
         ],
@@ -1014,6 +1037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '阳台光伏系统能用多久?', a: '太阳能板通常按20到25年的发电寿命设计,与屋顶太阳能板相近,但实际使用寿命取决于制造质量和天气暴露程度。微型逆变器的质保期通常比太阳能板短。' },
           { q: '搬家时我能带走阳台光伏系统吗?', a: '可以——这是阳台光伏相对屋顶光伏的核心优势之一。由于它是插电式而非硬接线或结构固定安装,整套设备都可以拆下,并在新住所重新安装。' },
           { q: '没有阳台也能用阳台光伏吗?', a: '可以。尽管名称如此,阳台光伏套件同样可以安装在外墙、栏杆、地面支架或平屋顶上——真正的阳台很常见,但并非必需条件。' },
+          { q: '我所在的地方现在可以合法使用阳台光伏吗?', a: '这取决于所在国家,在美国则取决于所在州。德国允许输出功率不超过800 VA逆变器的插电式设备,在Marktstammdatenregister完成一次在线登记后即可并网;美国越来越多的州已签署专门的插电式光伏法律,其中部分尚未生效。细节会变化,请查看上方链接的法律与登记指南,并向电网运营商确认。' },
         ],
       },
     },
@@ -1023,7 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '什么是阳台光伏?插电式太阳能板详解',
       description: '阳台光伏将小型太阳能板和微型逆变器插入墙壁插座,从而降低家庭用电量——无需屋顶施工、无需电工、无需长期合同。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1044,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Le solaire de balcon — aussi appelé solaire enfichable ou « Balkonkraftwerk » dans son marché d\'origine, l\'Allemagne — permet aux locataires et aux propriétaires d\'appartements de produire leur propre électricité sans installation sur le toit. Un petit kit composé d\'un panneau et d\'un micro-onduleur se branche directement sur une prise murale standard et injecte de l\'électricité dans le câblage existant du logement.',
     metaDescription: 'Le solaire de balcon branche un petit panneau et un micro-onduleur sur une prise murale pour réduire la consommation électrique du foyer — sans toit, sans électricien, sans contrat de longue durée.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '8 min de lecture',
     educationalLevel: 'Beginner',
     audience: 'Locataires et propriétaires d\'appartements explorant des solutions solaires sans installation sur le toit',
@@ -1062,7 +1086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Propriété pleine et entière, et transportable — on l\'emporte lors d\'un déménagement',
           'Né en Allemagne (« Balkonkraftwerk ») et depuis répandu sur d\'autres marchés',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1157,6 +1181,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La légalité, les limites de puissance et les exigences d\'enregistrement varient considérablement selon le pays — et, aux États-Unis, selon l\'état.** Certains marchés disposent d\'un régime simplifié dédié aux petits systèmes enfichables ; d\'autres intègrent le solaire de balcon dans les mêmes règles que les installations complètes de toiture, sans voie allégée.',
           'Ces règles évoluant au gré des actions des législateurs et des régulateurs, vérifiez toujours le statut confirmé pour votre lieu précis avant d\'acheter, plutôt que de vous fier à une hypothèse générale dans un sens ou dans l\'autre.',
         ],
+        callouts: [
+          { type: 'info', text: 'Informations générales, ne constituant pas un conseil juridique. Les règles évoluent et les détails locaux varient ; vérifiez auprès de l\'autorité compétente, du gestionnaire de réseau ou d\'un professionnel qualifié avant d\'acheter ou de raccorder un système.' },
+        ],
         links: [
           { url: '/fr/balcony-solar/is-balcony-solar-legal-country-guide', title: 'Le solaire de balcon est-il légal ? Guide pays par pays', description: 'Suivi complet du statut légal sur tous les principaux marchés' },
         ],
@@ -1185,6 +1212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Combien de temps dure un système solaire de balcon ?', a: 'Les panneaux sont généralement conçus pour une durée de production de 20 à 25 ans, comme les panneaux de toiture, bien que la durée de vie réelle dépende de la qualité de fabrication et de l\'exposition aux intempéries. Les micro-onduleurs ont généralement des garanties plus courtes que les panneaux.' },
           { q: 'Puis-je emporter mon système solaire de balcon en cas de déménagement ?', a: 'Oui — c\'est l\'un des principaux avantages du solaire de balcon par rapport au solaire de toiture. Étant branché plutôt que câblé de façon fixe ou fixé structurellement, l\'ensemble du kit peut être démonté et réinstallé dans un nouveau logement.' },
           { q: 'Le solaire de balcon fonctionne-t-il si je n\'ai pas de balcon ?', a: 'Oui. Malgré son nom, les kits solaires de balcon se fixent aussi sur des murs extérieurs, des rambardes, des supports au sol ou des toits plats — un véritable balcon est courant mais pas requis.' },
+          { q: 'L\'énergie solaire de balcon est-elle légale là où j\'habite actuellement ?', a: 'Cela dépend de votre pays et, aux États-Unis, de votre État. L\'Allemagne autorise le raccordement d\'appareils enfichables dont l\'onduleur délivre jusqu\'à 800 VA après un unique enregistrement en ligne dans le Marktstammdatenregister, et un nombre croissant d\'États américains ont signé des lois dédiées au solaire enfichable, dont certaines ne sont pas encore en vigueur. Les détails évoluent ; consultez les guides juridique et d\'enregistrement liés ci-dessus et vérifiez auprès de votre gestionnaire de réseau.' },
         ],
       },
     },
@@ -1194,7 +1222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Qu\'est-ce que le solaire de balcon ? Les panneaux solaires enfichables expliqués',
       description: 'Le solaire de balcon branche un petit panneau et un micro-onduleur sur une prise murale pour réduire la consommation électrique du foyer — sans toit, sans électricien, sans contrat de longue durée.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1216,7 +1244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '베란다 태양광(발코니 태양광)은 원산지 독일에서 "Balkonkraftwerk"라고도 불리며 플러그인 태양광이라고도 하는데, 세입자와 아파트 소유자가 지붕 설치 없이도 직접 전기를 생산할 수 있게 해줍니다. 소형 패널과 인버터로 구성된 키트를 표준 벽면 콘센트에 바로 꽂으면 가정의 기존 배선으로 전력이 공급됩니다.',
     metaDescription: '베란다 태양광은 소형 패널과 마이크로인버터를 벽면 콘센트에 꽂아 가정 전력 사용량을 줄여줍니다 — 지붕 공사도, 전기 기사도, 장기 계약도 필요 없습니다.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '8분 읽기',
     educationalLevel: 'Beginner',
     audience: '지붕 설치 없이 태양광 옵션을 찾는 세입자와 아파트 소유자',
@@ -1234,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '완전히 소유하며 이동 가능 — 이사할 때 가져갈 수 있음',
           '독일에서 시작("Balkonkraftwerk")되어 이후 다른 시장으로 확산됨',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1329,6 +1357,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**합법성, 출력 제한, 등록 요건은 국가마다 크게 다르며 — 미국 내에서는 주(州)마다도 다릅니다.** 일부 시장은 소형 플러그인 시스템을 위한 간소화된 전용 제도를 갖추고 있는 반면, 다른 시장은 베란다 태양광을 완전한 지붕형 설치와 동일한 규정 안에 포함시켜 더 간단한 절차를 두지 않기도 합니다.',
           '이러한 규정은 입법기관과 규제 당국의 조치에 따라 계속 바뀌므로, 일반적인 가정에 의존하지 말고 구매 전 반드시 거주 지역의 확인된 최신 상태를 확인하세요.',
         ],
+        callouts: [
+          { type: 'info', text: '일반적인 정보이며 법률 자문이 아닙니다. 규정은 바뀌고 지역별 세부 사항도 다릅니다. 시스템을 구매하거나 연결하기 전에 관할 기관, 계통 운영자 또는 자격을 갖춘 전문가에게 확인하십시오.' },
+        ],
         links: [
           { url: '/ko/balcony-solar/is-balcony-solar-legal-country-guide', title: '베란다 태양광은 합법인가? 국가별 가이드', description: '주요 시장 전체의 법적 상태를 추적하는 완전한 가이드' },
         ],
@@ -1357,6 +1388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '베란다 태양광 시스템은 얼마나 오래 사용할 수 있나요?', a: '패널은 지붕형 패널과 비슷하게 보통 20~25년의 발전 수명으로 설계되지만, 실제 수명은 제조 품질과 기상 노출 정도에 따라 달라집니다. 마이크로인버터의 보증 기간은 대개 패널보다 짧습니다.' },
           { q: '이사할 때 베란다 태양광 시스템을 가져갈 수 있나요?', a: '네 — 이는 지붕형 태양광 대비 베란다 태양광의 핵심 장점 중 하나입니다. 배선으로 고정하거나 구조적으로 부착하는 대신 플러그를 꽂는 방식이므로, 전체 키트를 분리해 새 집에 다시 설치할 수 있습니다.' },
           { q: '베란다가 없어도 베란다 태양광을 사용할 수 있나요?', a: '네. 이름과 달리 베란다 태양광 키트는 외벽, 난간, 지면 거치대, 평지붕에도 설치할 수 있습니다 — 실제 베란다가 있으면 흔하지만 필수는 아닙니다.' },
+          { q: '지금 제가 사는 곳에서 베란다 태양광은 합법인가요?', a: '국가에 따라, 미국에서는 주에 따라 다릅니다. 독일에서는 인버터 출력 800 VA 이하의 플러그인 장치를 Marktstammdatenregister에 온라인으로 한 번 등록한 뒤 연결할 수 있으며, 미국에서는 플러그인 태양광 전용 법률에 서명한 주가 늘고 있으나 일부는 아직 시행 전입니다. 세부 사항은 바뀌므로 위에 링크한 법률 가이드와 등록 가이드를 확인하고 계통 운영자에게도 문의하십시오.' },
         ],
       },
     },
@@ -1366,7 +1398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '베란다 태양광이란? 플러그인 태양광 패널 완벽 설명',
       description: '베란다 태양광은 소형 패널과 마이크로인버터를 벽면 콘센트에 꽂아 가정 전력 사용량을 줄여줍니다 — 지붕 공사도, 전기 기사도, 장기 계약도 필요 없습니다.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1387,7 +1419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Ein Balkonkraftwerk — auch Steckersolar oder Plug-in-Solar genannt — ermöglicht Mietern und Wohnungseigentümern, eigenen Strom zu erzeugen, ohne eine Dachanlage zu benötigen. Ein kompaktes Set aus Panel und Wechselrichter wird direkt in eine Haushaltssteckdose eingesteckt und speist Strom in das bestehende Hausnetz ein.',
     metaDescription: 'Ein Balkonkraftwerk verbindet ein kleines Panel und einen Mikrowechselrichter mit der Steckdose, um den Strombezug aus dem Netz zu senken — kein Dach, kein Elektriker, kein Langzeitvertrag nötig.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Mieter und Wohnungseigentümer, die Solarmöglichkeiten ohne Dachmontage erkunden',
@@ -1405,7 +1437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gehört Ihnen vollständig und ist mobil — beim Umzug einfach mitnehmen',
           'In Deutschland als Balkonkraftwerk bekannt, maximal 800 W Einspeiseleistung (Solarpaketgesetz I)',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1500,6 +1532,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Rechtslage, Leistungsgrenzen und Anmeldepflichten unterscheiden sich erheblich je nach Land — in Deutschland gilt durch das Solarpaketgesetz I eine vereinfachte Regelung: bis zu 800 W Einspeiseleistung, vereinfachte Anmeldung im Marktstammdatenregister (MaStR) über die Bundesnetzagentur und Empfehlung einer Wieland-Schutzkontaktsteckdose statt normaler Schuko-Dose.** In anderen Ländern fallen Steckersolaranlagen oft unter die allgemeinen Regeln für Dachanlagen ohne eigenen, erleichterten Weg.',
           'Da sich die Vorschriften laufend ändern, sollten Sie den aktuellen Stand für Ihren Standort immer direkt prüfen, bevor Sie kaufen.',
         ],
+        callouts: [
+          { type: 'info', text: 'Allgemeine Informationen, keine Rechtsberatung. Regeln ändern sich und lokale Details unterscheiden sich; klären Sie vor Kauf oder Anschluss einer Anlage die Lage mit der zuständigen Behörde, dem Netzbetreiber oder einer qualifizierten Fachperson.' },
+        ],
         links: [
           { url: '/balcony-solar/is-balcony-solar-legal-country-guide', title: 'Ist ein Balkonkraftwerk erlaubt? Länderübersicht', description: 'Vollständiger Rechtsstatus-Überblick für alle wichtigen Märkte' },
         ],
@@ -1528,6 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wie lange hält ein Balkonkraftwerk?', a: 'Panels sind in der Regel für 20–25 Jahre Produktion ausgelegt, ähnlich wie Dachpanels — die tatsächliche Lebensdauer hängt von Qualität und Witterungsbelastung ab. Mikrowechselrichter haben typischerweise kürzere Garantiezeiten als die Panels.' },
           { q: 'Kann ich mein Balkonkraftwerk beim Umzug mitnehmen?', a: 'Ja — das ist einer der Hauptvorteile gegenüber einer Dachanlage. Da die Anlage eingesteckt statt fest verdrahtet oder strukturell montiert ist, können Sie das gesamte Set abbauen und in der neuen Wohnung wieder aufbauen.' },
           { q: 'Funktioniert ein Balkonkraftwerk auch ohne Balkon?', a: 'Ja. Trotz des Namens lassen sich Balkonkraftwerk-Sets auch an Außenwänden, Geländern, Bodenständern oder Flachdächern montieren — ein echter Balkon ist häufig, aber nicht zwingend erforderlich.' },
+          { q: 'Ist ein Balkonkraftwerk bei mir aktuell legal?', a: 'Das hängt von Ihrem Land und in den USA vom Bundesstaat ab. In Deutschland dürfen Steckersolargeräte mit bis zu 800 VA Wechselrichterleistung nach einer einzigen Online-Anmeldung im Marktstammdatenregister betrieben werden, und eine wachsende Zahl von US-Bundesstaaten hat eigene Steckersolar-Gesetze unterzeichnet, von denen einige noch nicht in Kraft sind. Details ändern sich; prüfen Sie daher die oben verlinkten Rechts- und Anmelde-Leitfäden und klären Sie die Lage mit Ihrem Netzbetreiber.' },
         ],
       },
     },
@@ -1537,7 +1573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Was ist ein Balkonkraftwerk? Steckersolar-Anlagen erklärt',
       description: 'Ein Balkonkraftwerk verbindet ein kleines Panel und einen Mikrowechselrichter mit der Steckdose, um den Strombezug aus dem Netz zu senken — kein Dach, kein Elektriker, kein Langzeitvertrag nötig.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       inLanguage: 'de',
       author: {
         '@type': 'Person',

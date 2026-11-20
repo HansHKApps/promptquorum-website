@@ -13,17 +13,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'A battery is the single most common add-on question balcony solar buyers ask, and the honest answer is: usually not required, and not always worth it even when it\'s available. The decision comes down to one number you can actually check.',
     metaDescription: 'Do you need a battery for balcony solar? Usually not — the honest answer depends on one number: the gap between your utility\'s export credit and import rate.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '7 min read',
     educationalLevel: 'Beginner',
     audience: 'Balcony solar buyers deciding whether to add battery storage',
     primaryTerm: 'do I need a balcony solar battery',
     targetKeywords: ['do i need a battery for balcony solar', 'balcony solar without battery', 'is a balcony solar battery worth it', 'balcony solar battery necessary'],
-    leadAnswerBlock: '**No, a battery is not required for balcony solar to work — the system functions perfectly well without one, simply exporting unused surplus to the grid at whatever your utility\'s rate is.** Whether adding one is *worth it* is a separate, narrower question: current guides suggest a battery pays off specifically when your utility credits exported power significantly less than it charges for imported power, roughly a $0.15/kWh gap or more.',
+    leadAnswerBlock: '**No, a battery is not required for balcony solar to work — the system functions perfectly well without one, simply exporting unused surplus to the grid, typically at a low rate or none at all.** Whether adding one is *worth it* is a separate, narrower question: a battery pays off specifically when your utility credits exported power significantly less than it charges for imported power; the wider that gap, the more a battery can capture, and no single threshold fits every tariff.',
     quickAnswerTop: {
       en: {
         question: 'Do I need a battery for balcony solar?',
-        answer: 'No — balcony solar works fine without one. A battery is an optional add-on that lets you store daytime surplus for evening use instead of exporting it to the grid. Whether it\'s worth the extra cost depends on your specific utility\'s export credit relative to your import rate: guides suggest it becomes worthwhile around a $0.15/kWh gap or more.',
+        answer: 'No — balcony solar works fine without one. A battery is an optional add-on that lets you store daytime surplus for evening use instead of exporting it to the grid. Whether it\'s worth the extra cost depends on your specific utility\'s export credit relative to your import rate: the wider that gap, the more a battery can capture, and no single threshold fits every tariff.',
         bullets: [
           'Balcony solar functions completely without a battery — it\'s an optional add-on, not a requirement',
           'Without a battery, unused surplus exports to the grid, typically at low or no compensation',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'If your utility credits exports close to full retail rate, a battery adds cost without adding much value',
           'Battery-equipped kits often face additional legal/registration restrictions a panel-only kit doesn\'t — check this before assuming a battery is a simple add-on',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'A battery is not required — balcony solar works completely fine without one.',
           'Without a battery, surplus power beyond your active usage exports to the grid, typically at low or no compensation.',
-          'A battery pays off specifically when your utility\'s export credit is meaningfully lower than your import rate — guides suggest roughly a $0.15/kWh gap or more.',
+          'A battery pays off specifically when your utility\'s export credit is meaningfully lower than your import rate — the wider that gap, the more a battery can capture.',
           'If your utility credits exports close to the full retail rate, a battery adds cost without meaningfully improving your economics.',
           'Battery-equipped kits often face additional legal or registration restrictions that a panel-only kit doesn\'t — this is a real factor beyond the pure economics question.',
           'The decision is genuinely about your specific utility\'s rate structure, not a universal yes or no.',
@@ -67,7 +67,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-one-number',
         title: 'The One Number That Actually Matters',
         content: [
-          '**Check the gap between what your utility pays you for exported solar power and what it charges you for imported power — current guides suggest a battery becomes worthwhile around a $0.15/kWh gap or more.** If your utility credits exports close to the full retail import rate, there\'s little for a battery to capture, since you\'re already getting most of the value from surplus power without one.',
+          '**Check the gap between what your utility pays you for exported solar power and what it charges you for imported power — the wider that gap, the more a battery can capture, and no single threshold fits every tariff.** If your utility credits exports close to the full retail import rate, there\'s little for a battery to capture, since you\'re already getting most of the value from surplus power without one.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'A balcony solar battery is worth adding only when your utility pays significantly less for exported power than it charges for imported power.' },
@@ -79,13 +79,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What a Battery Actually Adds',
         content: [
           '**A battery lets you shift daytime surplus to evening use, which matters most if your household draws more power after sunset than during the day — a common pattern for people who work outside the home.** See the [battery buyer\'s guide](/balcony-solar/best-balcony-solar-batteries-2026) for current hardware options and sizing guidance if you\'ve confirmed the economics work for your situation.',
+          'The value of stored energy depends on your tariff. In Germany, surplus from a plug-in device is generally unpaid, so each stored kilowatt-hour replaces one you would otherwise buy; even so, the [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) advises against pairing a plug-in device with a battery for economic reasons, so run the numbers for your own prices before buying.',
         ],
       },
       whatItDoesntSolve: {
         id: 'what-it-doesnt-solve',
         title: 'What a Battery Doesn\'t Solve',
         content: [
-          '**A battery doesn\'t turn balcony solar into a whole-home power source — it still only stores and redistributes the relatively small amount of surplus a one-or-two-panel system generates, not enough to meaningfully cover high-draw appliances or extended outages.** It also often adds legal complexity: in some markets, including Germany, storage-equipped balcony systems fall outside the simplified regime that covers standard plug-in units and require full grid-operator registration instead.',
+          '**A battery doesn\'t turn balcony solar into a whole-home power source — it still only stores and redistributes the relatively small amount of surplus a one-or-two-panel system generates, not enough to meaningfully cover high-draw appliances or extended outages.** It also often adds legal complexity: in Germany, a battery means the system no longer counts as a plug-in device under the simplified rules: it must also be registered with the grid operator, and although a simplified procedure for up to 800 W exists under VDE-AR-N 4105, not every grid operator accepts it yet ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)).',
+          'This is a general overview, not legal or electrical advice — confirm the rules that apply to you with your grid operator, your landlord or a qualified professional.',
         ],
         callouts: [
           { type: 'warning', text: 'Check your country\'s specific rules for storage-equipped systems before assuming a battery is a simple drop-in addition — the legal picture can be meaningfully different from a panel-only kit.' },
@@ -97,12 +99,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Will my balcony solar system work without a battery?', a: 'Yes, completely — the panel and micro-inverter function normally without one. A battery only changes what happens to surplus power beyond your active usage.' },
           { q: 'What happens to extra power if I don\'t have a battery?', a: 'It typically exports to the grid at whatever rate your utility offers for exported solar, which is often low or zero compensation depending on your specific utility.' },
-          { q: 'How do I know if a battery is worth it for me?', a: 'Compare your utility\'s export credit rate to your import rate. Current guides suggest a battery becomes worthwhile around a $0.15/kWh gap or more — check your specific utility\'s rate structure rather than assuming.' },
-          { q: 'Does adding a battery make balcony solar illegal in some places?', a: 'Not illegal, but it can add legal complexity — some markets, including Germany, exclude storage-equipped balcony systems from the simplified regime that covers standard plug-in units.' },
+          { q: 'How do I know if a battery is worth it for me?', a: 'Compare your utility\'s export credit rate to your import rate. The wider that gap, the more a battery can capture, and no single threshold fits every tariff — check your specific utility\'s rate structure rather than assuming.' },
+          { q: 'Does adding a battery make balcony solar illegal in some places?', a: 'Not illegal, but it can add legal complexity — in Germany, a battery takes the system out of the simplified regime for standard plug-in units: it must also be registered with the grid operator, with a simplified procedure for up to 800 W that not every operator accepts yet.' },
           { q: 'Can a battery power my home during an outage?', a: 'Not meaningfully for most balcony solar setups — the storage capacity is sized around daily surplus from a one-or-two-panel system, not backup power for extended outages.' },
           { q: 'Is a battery a good first purchase for balcony solar?', a: 'Usually not — most guides recommend starting with a panel-only kit, confirming your actual usage pattern and utility rate structure, and adding a battery later if the economics support it.' },
           { q: 'Do all balcony solar batteries work the same way?', a: 'No — capacity, cloud vs. local monitoring, and legal status can all vary significantly by brand and model. See the dedicated battery buyer\'s guide for a verified per-brand comparison.' },
           { q: 'What\'s a typical battery size for a balcony solar setup?', a: 'Sizing depends on your panel wattage and daily surplus generation rather than a fixed number — no vendor publishes a formal sizing formula. See the [sizing and payback guide](/balcony-solar/balcony-solar-sizing-yield-payback) for verified capacity guidance by system size.' },
+          { q: 'Does a battery change the registration in Germany?', a: 'Yes. Storage must be registered with the grid operator in addition to the Marktstammdatenregister, and the device no longer counts as a plug-in solar device under the simplified rules. A simplified procedure for up to 800 W exists under VDE-AR-N 4105, but grid operators may keep applying the older procedure for an interim period ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)). The [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) also advises against combining a plug-in device with a battery for economic reasons.' },
         ],
       },
       relatedReading: {
@@ -122,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Do You Need a Battery for Balcony Solar?',
       description: 'Do you need a battery for balcony solar? Usually not — the honest answer depends on one number: the gap between your utility\'s export credit and import rate.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/balcony-solar/do-you-need-a-battery-balcony-solar',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
@@ -140,17 +143,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Una batería es la pregunta de complemento más común que hacen los compradores de energía solar de balcón, y la respuesta honesta es: generalmente no es necesaria, y no siempre vale la pena incluso cuando está disponible. La decisión se reduce a un número que puedes verificar.',
     metaDescription: '¿Necesitas una batería para energía solar de balcón? Generalmente no — la respuesta honesta depende de un número: la diferencia entre el crédito de exportación de tu compañía eléctrica y su tarifa de importación.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '7 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Compradores de energía solar de balcón decidiendo si añadir almacenamiento con batería',
     primaryTerm: 'do I need a balcony solar battery',
     targetKeywords: ['necesito batería para solar de balcón', 'solar de balcón sin batería', 'vale la pena batería solar de balcón', 'batería solar de balcón necesaria'],
-    leadAnswerBlock: '**No, no se necesita una batería para que la energía solar de balcón funcione — el sistema funciona perfectamente bien sin una, simplemente exportando el excedente no utilizado a la red a la tarifa que ofrezca tu compañía eléctrica.** Si vale la pena añadir una es una pregunta separada y más específica: las guías actuales sugieren que una batería se amortiza específicamente cuando tu compañía eléctrica acredita la energía exportada significativamente menos de lo que cobra por la energía importada, aproximadamente una diferencia de $0.15/kWh o más.',
+    leadAnswerBlock: '**No, no se necesita una batería para que la energía solar de balcón funcione — el sistema funciona perfectamente bien sin una, simplemente exportando el excedente no utilizado a la red, normalmente a una tarifa baja o sin compensación.** Si vale la pena añadir una es una pregunta separada y más específica: una batería se amortiza específicamente cuando tu compañía eléctrica acredita la energía exportada significativamente menos de lo que cobra por la energía importada; cuanto mayor sea esa diferencia, más puede aprovechar una batería, y ningún umbral único sirve para todas las tarifas.',
     quickAnswerTop: {
       es: {
         question: '¿Necesito una batería para energía solar de balcón?',
-        answer: 'No — la energía solar de balcón funciona bien sin una. Una batería es un complemento opcional que te permite almacenar el excedente diurno para uso nocturno en lugar de exportarlo a la red. Si vale la pena el costo adicional depende de tu tarifa específica de crédito de exportación en relación con tu tarifa de importación: las guías sugieren que se vuelve rentable con una diferencia de alrededor de $0.15/kWh o más.',
+        answer: 'No — la energía solar de balcón funciona bien sin una. Una batería es un complemento opcional que te permite almacenar el excedente diurno para uso nocturno en lugar de exportarlo a la red. Si vale la pena el costo adicional depende de tu tarifa específica de crédito de exportación en relación con tu tarifa de importación: cuanto mayor sea esa diferencia, más puede aprovechar una batería, y ningún umbral único sirve para todas las tarifas.',
         bullets: [
           'La energía solar de balcón funciona completamente sin batería — es un complemento opcional, no un requisito',
           'Sin batería, el excedente no utilizado se exporta a la red, típicamente con baja o ninguna compensación',
@@ -158,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Si tu compañía eléctrica acredita las exportaciones cerca de la tarifa minorista completa, una batería añade costo sin añadir mucho valor',
           'Los kits equipados con batería a menudo enfrentan restricciones legales/de registro adicionales que un kit de solo paneles no tiene — verifica esto antes de asumir que una batería es un complemento simple',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -177,7 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'No se requiere una batería — la energía solar de balcón funciona completamente bien sin una.',
           'Sin batería, el excedente de energía más allá de tu uso activo se exporta a la red, típicamente con baja o ninguna compensación.',
-          'Una batería se amortiza específicamente cuando el crédito de exportación de tu compañía eléctrica es significativamente menor que tu tarifa de importación — las guías sugieren aproximadamente una diferencia de $0.15/kWh o más.',
+          'Una batería se amortiza específicamente cuando el crédito de exportación de tu compañía eléctrica es significativamente menor que tu tarifa de importación — cuanto mayor sea esa diferencia, más puede aprovechar una batería.',
           'Si tu compañía eléctrica acredita las exportaciones cerca de la tarifa minorista completa, una batería añade costo sin mejorar significativamente tu economía.',
           'Los kits equipados con batería a menudo enfrentan restricciones legales o de registro adicionales que un kit de solo paneles no tiene — este es un factor real más allá de la pura cuestión económica.',
           'La decisión es genuinamente sobre la estructura de tarifas de tu compañía eléctrica específica, no un sí o no universal.',
@@ -194,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-one-number',
         title: 'El único número que realmente importa',
         content: [
-          '**Verifica la diferencia entre lo que tu compañía eléctrica te paga por la energía solar exportada y lo que te cobra por la energía importada — las guías actuales sugieren que una batería se vuelve rentable con una diferencia de alrededor de $0.15/kWh o más.** Si tu compañía eléctrica acredita las exportaciones cerca de la tarifa minorista de importación completa, hay poco que una batería pueda capturar, ya que ya estás obteniendo la mayor parte del valor del excedente sin una.',
+          '**Verifica la diferencia entre lo que tu compañía eléctrica te paga por la energía solar exportada y lo que te cobra por la energía importada — cuanto mayor sea esa diferencia, más puede aprovechar una batería, y ningún umbral único sirve para todas las tarifas.** Si tu compañía eléctrica acredita las exportaciones cerca de la tarifa minorista de importación completa, hay poco que una batería pueda capturar, ya que ya estás obteniendo la mayor parte del valor del excedente sin una.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Una batería solar de balcón vale la pena añadirla solo cuando tu compañía eléctrica paga significativamente menos por la energía exportada de lo que cobra por la energía importada.' },
@@ -206,13 +209,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qué añade realmente una batería',
         content: [
           '**Una batería te permite desplazar el excedente diurno al uso nocturno, lo cual importa más si tu hogar consume más energía después del atardecer que durante el día — un patrón común para quienes trabajan fuera de casa.** Consulta la [guía de compra de baterías](/es/balcony-solar/best-balcony-solar-batteries-2026) para opciones de hardware actuales y orientación de dimensionamiento si ya confirmaste que la economía funciona para tu situación.',
+          'El valor de la energía almacenada depende de tu tarifa. En Alemania, el excedente de un dispositivo plug-in por lo general no se remunera, de modo que cada kilovatio hora almacenado sustituye a uno que de otro modo comprarías; aun así, la [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) desaconseja combinar un dispositivo plug-in con una batería por motivos económicos, así que haz las cuentas con tus propios precios antes de comprar.',
         ],
       },
       whatItDoesntSolve: {
         id: 'what-it-doesnt-solve',
         title: 'Lo que una batería no resuelve',
         content: [
-          '**Una batería no convierte la energía solar de balcón en una fuente de energía para todo el hogar — sigue almacenando y redistribuyendo solo la cantidad relativamente pequeña de excedente que genera un sistema de uno o dos paneles, no suficiente para cubrir de forma significativa electrodomésticos de alto consumo o cortes prolongados.** También suele añadir complejidad legal: en algunos mercados, incluida Alemania, los sistemas de balcón equipados con almacenamiento quedan fuera del régimen simplificado que cubre las unidades plug-in estándar y requieren en su lugar el registro completo ante el operador de red.',
+          '**Una batería no convierte la energía solar de balcón en una fuente de energía para todo el hogar — sigue almacenando y redistribuyendo solo la cantidad relativamente pequeña de excedente que genera un sistema de uno o dos paneles, no suficiente para cubrir de forma significativa electrodomésticos de alto consumo o cortes prolongados.** También suele añadir complejidad legal: en Alemania, un sistema con batería deja de contar como dispositivo plug-in según las reglas simplificadas: debe registrarse además ante el operador de red y, aunque existe un procedimiento simplificado para hasta 800 W según la VDE-AR-N 4105, no todos los operadores lo aceptan todavía ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)).',
+          'Esto es una visión general, no asesoramiento legal ni eléctrico: confirma las normas que te afectan con tu operador de red, tu arrendador o un profesional cualificado.',
         ],
         callouts: [
           { type: 'warning', text: 'Verifica las reglas específicas de tu país para sistemas equipados con almacenamiento antes de asumir que una batería es un complemento simple — el panorama legal puede ser significativamente diferente al de un kit de solo paneles.' },
@@ -224,12 +229,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '¿Funcionará mi sistema solar de balcón sin batería?', a: 'Sí, completamente — el panel y el micro-inversor funcionan normalmente sin una. Una batería solo cambia lo que sucede con el excedente de energía más allá de tu uso activo.' },
           { q: '¿Qué sucede con la energía extra si no tengo batería?', a: 'Típicamente se exporta a la red a la tarifa que ofrezca tu compañía eléctrica por la energía solar exportada, que a menudo es baja o nula dependiendo de tu compañía eléctrica específica.' },
-          { q: '¿Cómo sé si una batería vale la pena para mí?', a: 'Compara la tarifa de crédito de exportación de tu compañía eléctrica con tu tarifa de importación. Las guías actuales sugieren que una batería se vuelve rentable con una diferencia de alrededor de $0.15/kWh o más — verifica la estructura de tarifas de tu compañía eléctrica específica en lugar de asumir.' },
-          { q: '¿Añadir una batería hace ilegal la energía solar de balcón en algunos lugares?', a: 'No es ilegal, pero puede añadir complejidad legal — algunos mercados, incluida Alemania, excluyen los sistemas de balcón equipados con almacenamiento del régimen simplificado que cubre las unidades plug-in estándar.' },
+          { q: '¿Cómo sé si una batería vale la pena para mí?', a: 'Compara la tarifa de crédito de exportación de tu compañía eléctrica con tu tarifa de importación. Cuanto mayor sea esa diferencia, más puede aprovechar una batería, y ningún umbral único sirve para todas las tarifas — verifica la estructura de tarifas de tu compañía eléctrica específica en lugar de asumir.' },
+          { q: '¿Añadir una batería hace ilegal la energía solar de balcón en algunos lugares?', a: 'No es ilegal, pero puede añadir complejidad legal — en Alemania, una batería saca al sistema del régimen simplificado de las unidades plug-in estándar: debe registrarse además ante el operador de red, con un procedimiento simplificado para hasta 800 W que no todos los operadores aceptan.' },
           { q: '¿Puede una batería alimentar mi hogar durante un corte de energía?', a: 'No de forma significativa para la mayoría de las configuraciones de solar de balcón — la capacidad de almacenamiento está dimensionada en torno al excedente diario de un sistema de uno o dos paneles, no para respaldo de energía durante cortes prolongados.' },
           { q: '¿Es una batería una buena primera compra para solar de balcón?', a: 'Generalmente no — la mayoría de las guías recomiendan comenzar con un kit de solo paneles, confirmar tu patrón de uso real y la estructura de tarifas de tu compañía eléctrica, y añadir una batería más tarde si la economía lo respalda.' },
           { q: '¿Todas las baterías solares de balcón funcionan igual?', a: 'No — la capacidad, el monitoreo en la nube vs. local, y el estatus legal pueden variar significativamente según la marca y el modelo. Consulta la guía de compra de baterías dedicada para una comparación verificada por marca.' },
           { q: '¿Cuál es un tamaño típico de batería para una configuración solar de balcón?', a: 'El dimensionamiento depende de la potencia de tu panel y la generación diaria de excedente en lugar de un número fijo — ningún fabricante publica una fórmula de dimensionamiento formal. Consulta la [guía de dimensionamiento y amortización](/es/balcony-solar/balcony-solar-sizing-yield-payback) para orientación de capacidad verificada según el tamaño del sistema.' },
+          { q: '¿Una batería cambia el registro en Alemania?', a: 'Sí. Un almacenamiento debe registrarse ante el operador de red además de en el Marktstammdatenregister, y el dispositivo deja de contar como dispositivo solar plug-in según las reglas simplificadas. Existe un procedimiento simplificado para hasta 800 W según la VDE-AR-N 4105, pero los operadores pueden seguir aplicando el procedimiento anterior durante un periodo transitorio ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)). Además, la [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) desaconseja por motivos económicos combinar un dispositivo plug-in con una batería.' },
         ],
       },
       relatedReading: {
@@ -249,7 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '¿Necesitas una batería para la energía solar de balcón?',
       description: '¿Necesitas una batería para energía solar de balcón? Generalmente no — la respuesta honesta depende de un número: la diferencia entre el crédito de exportación de tu compañía eléctrica y su tarifa de importación.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/es/balcony-solar/do-you-need-a-battery-balcony-solar',
       inLanguage: 'es',
@@ -268,17 +274,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Uma bateria é a pergunta de complemento mais comum que os compradores de energia solar de varanda fazem, e a resposta honesta é: geralmente não é necessária, e nem sempre vale a pena mesmo quando está disponível. A decisão se resume a um número que você pode verificar.',
     metaDescription: 'Você precisa de uma bateria para energia solar de varanda? Geralmente não — a resposta honesta depende de um número: a diferença entre o crédito de exportação da sua concessionária e sua tarifa de importação.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '7 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Compradores de energia solar de varanda decidindo se devem adicionar armazenamento em bateria',
     primaryTerm: 'do I need a balcony solar battery',
     targetKeywords: ['preciso de bateria para solar de varanda', 'solar de varanda sem bateria', 'vale a pena bateria solar de varanda', 'bateria solar de varanda necessária'],
-    leadAnswerBlock: '**Não, uma bateria não é necessária para que a energia solar de varanda funcione — o sistema funciona perfeitamente bem sem uma, simplesmente exportando o excedente não utilizado para a rede pela tarifa que sua concessionária oferecer.** Se vale a pena adicionar uma é uma questão separada e mais específica: guias atuais sugerem que uma bateria se paga especificamente quando sua concessionária credita a energia exportada significativamente menos do que cobra pela energia importada, aproximadamente uma diferença de $0.15/kWh ou mais.',
+    leadAnswerBlock: '**Não, uma bateria não é necessária para que a energia solar de varanda funcione — o sistema funciona perfeitamente bem sem uma, simplesmente exportando o excedente não utilizado para a rede, normalmente com remuneração baixa ou nenhuma.** Se vale a pena adicionar uma é uma questão separada e mais específica: uma bateria se paga especificamente quando sua concessionária credita a energia exportada significativamente menos do que cobra pela energia importada; quanto maior essa diferença, mais uma bateria consegue aproveitar, e nenhum limite único serve para todas as tarifas.',
     quickAnswerTop: {
       pt: {
         question: 'Eu preciso de uma bateria para energia solar de varanda?',
-        answer: 'Não — a energia solar de varanda funciona bem sem uma. Uma bateria é um complemento opcional que permite armazenar o excedente diurno para uso noturno em vez de exportá-lo para a rede. Se vale a pena o custo extra depende da sua tarifa específica de crédito de exportação em relação à sua tarifa de importação: guias sugerem que se torna vantajoso com uma diferença de cerca de $0.15/kWh ou mais.',
+        answer: 'Não — a energia solar de varanda funciona bem sem uma. Uma bateria é um complemento opcional que permite armazenar o excedente diurno para uso noturno em vez de exportá-lo para a rede. Se vale a pena o custo extra depende da sua tarifa específica de crédito de exportação em relação à sua tarifa de importação: quanto maior essa diferença, mais uma bateria consegue aproveitar, e nenhum limite único serve para todas as tarifas.',
         bullets: [
           'A energia solar de varanda funciona completamente sem bateria — é um complemento opcional, não um requisito',
           'Sem bateria, o excedente não utilizado é exportado para a rede, tipicamente com baixa ou nenhuma compensação',
@@ -286,7 +292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se sua concessionária credita as exportações perto da tarifa varejista completa, uma bateria adiciona custo sem adicionar muito valor',
           'Kits equipados com bateria frequentemente enfrentam restrições legais/de registro adicionais que um kit apenas com painéis não tem — verifique isso antes de assumir que uma bateria é um complemento simples',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -305,7 +311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Uma bateria não é necessária — a energia solar de varanda funciona completamente bem sem uma.',
           'Sem bateria, o excedente de energia além do seu uso ativo é exportado para a rede, tipicamente com baixa ou nenhuma compensação.',
-          'Uma bateria se paga especificamente quando o crédito de exportação da sua concessionária é significativamente menor que sua tarifa de importação — guias sugerem aproximadamente uma diferença de $0.15/kWh ou mais.',
+          'Uma bateria se paga especificamente quando o crédito de exportação da sua concessionária é significativamente menor que sua tarifa de importação — quanto maior essa diferença, mais uma bateria consegue aproveitar.',
           'Se sua concessionária credita as exportações perto da tarifa varejista completa, uma bateria adiciona custo sem melhorar significativamente sua economia.',
           'Kits equipados com bateria frequentemente enfrentam restrições legais ou de registro adicionais que um kit apenas com painéis não tem — este é um fator real além da pura questão econômica.',
           'A decisão é genuinamente sobre a estrutura de tarifas da sua concessionária específica, não um sim ou não universal.',
@@ -322,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-one-number',
         title: 'O único número que realmente importa',
         content: [
-          '**Verifique a diferença entre o que sua concessionária paga por energia solar exportada e o que cobra por energia importada — guias atuais sugerem que uma bateria se torna vantajosa com uma diferença de cerca de $0.15/kWh ou mais.** Se sua concessionária credita as exportações perto da tarifa varejista de importação completa, há pouco para uma bateria capturar, já que você já está obtendo a maior parte do valor do excedente sem uma.',
+          '**Verifique a diferença entre o que sua concessionária paga por energia solar exportada e o que cobra por energia importada — quanto maior essa diferença, mais uma bateria consegue aproveitar, e nenhum limite único serve para todas as tarifas.** Se sua concessionária credita as exportações perto da tarifa varejista de importação completa, há pouco para uma bateria capturar, já que você já está obtendo a maior parte do valor do excedente sem uma.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Uma bateria solar de varanda só vale a pena adicionar quando sua concessionária paga significativamente menos pela energia exportada do que cobra pela energia importada.' },
@@ -334,13 +340,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que uma bateria realmente adiciona',
         content: [
           '**Uma bateria permite deslocar o excedente diurno para uso noturno, o que importa mais se sua casa consome mais energia depois do pôr do sol do que durante o dia — um padrão comum para quem trabalha fora de casa.** Veja o [guia de compra de baterias](/pt/balcony-solar/best-balcony-solar-batteries-2026) para opções de hardware atuais e orientação de dimensionamento se você já confirmou que a economia funciona para sua situação.',
+          'O valor da energia armazenada depende da sua tarifa. Na Alemanha, o excedente de um dispositivo plug-in geralmente não é remunerado, de modo que cada quilowatt-hora armazenado substitui um que você compraria de outra forma; mesmo assim, a [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) desaconselha combinar um dispositivo plug-in com uma bateria por razões econômicas, então faça as contas com os seus próprios preços antes de comprar.',
         ],
       },
       whatItDoesntSolve: {
         id: 'what-it-doesnt-solve',
         title: 'O que uma bateria não resolve',
         content: [
-          '**Uma bateria não transforma a energia solar de varanda em uma fonte de energia para a casa inteira — ela ainda apenas armazena e redistribui a quantidade relativamente pequena de excedente que um sistema de um ou dois painéis gera, insuficiente para cobrir de forma significativa eletrodomésticos de alto consumo ou quedas de energia prolongadas.** Também frequentemente adiciona complexidade legal: em alguns mercados, incluindo a Alemanha, sistemas de varanda equipados com armazenamento ficam fora do regime simplificado que cobre unidades plug-in padrão e exigem em vez disso o registro completo junto à operadora de rede.',
+          '**Uma bateria não transforma a energia solar de varanda em uma fonte de energia para a casa inteira — ela ainda apenas armazena e redistribui a quantidade relativamente pequena de excedente que um sistema de um ou dois painéis gera, insuficiente para cobrir de forma significativa eletrodomésticos de alto consumo ou quedas de energia prolongadas.** Também frequentemente adiciona complexidade legal: na Alemanha, um sistema com bateria deixa de contar como dispositivo plug-in pelas regras simplificadas: ele precisa ser registrado também junto à operadora de rede e, embora exista um procedimento simplificado para até 800 W pela VDE-AR-N 4105, nem todas as operadoras o aceitam ainda ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)).',
+          'Esta é uma visão geral, não aconselhamento jurídico nem elétrico: confirme as regras que valem para você com sua operadora de rede, seu locador ou um profissional qualificado.',
         ],
         callouts: [
           { type: 'warning', text: 'Verifique as regras específicas do seu país para sistemas equipados com armazenamento antes de assumir que uma bateria é um complemento simples — o panorama legal pode ser significativamente diferente do de um kit apenas com painéis.' },
@@ -352,12 +360,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Meu sistema solar de varanda funcionará sem bateria?', a: 'Sim, completamente — o painel e o micro-inversor funcionam normalmente sem uma. Uma bateria só muda o que acontece com o excedente de energia além do seu uso ativo.' },
           { q: 'O que acontece com a energia extra se eu não tiver bateria?', a: 'Tipicamente é exportada para a rede pela tarifa que sua concessionária oferecer para energia solar exportada, que muitas vezes é baixa ou nula dependendo da sua concessionária específica.' },
-          { q: 'Como sei se uma bateria vale a pena para mim?', a: 'Compare a tarifa de crédito de exportação da sua concessionária com sua tarifa de importação. Guias atuais sugerem que uma bateria se torna vantajosa com uma diferença de cerca de $0.15/kWh ou mais — verifique a estrutura de tarifas da sua concessionária específica em vez de assumir.' },
-          { q: 'Adicionar uma bateria torna a energia solar de varanda ilegal em alguns lugares?', a: 'Não é ilegal, mas pode adicionar complexidade legal — alguns mercados, incluindo a Alemanha, excluem sistemas de varanda equipados com armazenamento do regime simplificado que cobre unidades plug-in padrão.' },
+          { q: 'Como sei se uma bateria vale a pena para mim?', a: 'Compare a tarifa de crédito de exportação da sua concessionária com sua tarifa de importação. Quanto maior essa diferença, mais uma bateria consegue aproveitar, e nenhum limite único serve para todas as tarifas — verifique a estrutura de tarifas da sua concessionária específica em vez de assumir.' },
+          { q: 'Adicionar uma bateria torna a energia solar de varanda ilegal em alguns lugares?', a: 'Não é ilegal, mas pode adicionar complexidade legal — na Alemanha, uma bateria tira o sistema do regime simplificado das unidades plug-in padrão: ele precisa ser registrado também junto à operadora de rede, com um procedimento simplificado para até 800 W que nem todas as operadoras aceitam.' },
           { q: 'Uma bateria pode alimentar minha casa durante uma queda de energia?', a: 'Não de forma significativa para a maioria das configurações de solar de varanda — a capacidade de armazenamento é dimensionada em torno do excedente diário de um sistema de um ou dois painéis, não para energia de backup durante quedas prolongadas.' },
           { q: 'Uma bateria é uma boa primeira compra para solar de varanda?', a: 'Geralmente não — a maioria dos guias recomenda começar com um kit apenas com painéis, confirmar seu padrão real de uso e a estrutura de tarifas da sua concessionária, e adicionar uma bateria depois se a economia justificar.' },
           { q: 'Todas as baterias solares de varanda funcionam da mesma forma?', a: 'Não — capacidade, monitoramento na nuvem vs. local, e status legal podem variar significativamente por marca e modelo. Veja o guia de compra de baterias dedicado para uma comparação verificada por marca.' },
           { q: 'Qual é um tamanho típico de bateria para uma configuração solar de varanda?', a: 'O dimensionamento depende da potência do seu painel e da geração diária de excedente em vez de um número fixo — nenhum fabricante publica uma fórmula de dimensionamento formal. Veja o [guia de dimensionamento e retorno](/pt/balcony-solar/balcony-solar-sizing-yield-payback) para orientação de capacidade verificada por tamanho de sistema.' },
+          { q: 'Uma bateria muda o registro na Alemanha?', a: 'Sim. Um armazenamento precisa ser registrado junto à operadora de rede além do Marktstammdatenregister, e o dispositivo deixa de contar como dispositivo solar plug-in pelas regras simplificadas. Existe um procedimento simplificado para até 800 W pela VDE-AR-N 4105, mas as operadoras podem continuar aplicando o procedimento anterior por um período de transição ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)). Além disso, a [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) desaconselha, por razões econômicas, combinar um dispositivo plug-in com uma bateria.' },
         ],
       },
       relatedReading: {
@@ -377,7 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Você precisa de uma bateria para energia solar de varanda?',
       description: 'Você precisa de uma bateria para energia solar de varanda? Geralmente não — a resposta honesta depende de um número: a diferença entre o crédito de exportação da sua concessionária e sua tarifa de importação.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/pt/balcony-solar/do-you-need-a-battery-balcony-solar',
       inLanguage: 'pt-BR',
@@ -396,17 +405,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'البطارية هي السؤال الأكثر شيوعًا حول الإضافات الذي يطرحه مشترو الطاقة الشمسية للشرفة، والإجابة الصادقة هي: عادةً غير مطلوبة، وليست دائمًا تستحق العناء حتى عندما تكون متاحة. يعتمد القرار على رقم واحد يمكنك التحقق منه فعليًا.',
     metaDescription: 'هل تحتاج إلى بطارية للطاقة الشمسية للشرفة؟ عادةً لا — تعتمد الإجابة الصادقة على رقم واحد: الفجوة بين رصيد التصدير لدى شركة الكهرباء الخاصة بك وتعرفة الاستيراد.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '7 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'مشترو الطاقة الشمسية للشرفة الذين يقررون ما إذا كانوا سيضيفون تخزين البطارية',
     primaryTerm: 'do I need a balcony solar battery',
     targetKeywords: ['هل أحتاج بطارية للطاقة الشمسية للشرفة', 'الطاقة الشمسية للشرفة بدون بطارية', 'هل تستحق بطارية الطاقة الشمسية للشرفة العناء', 'بطارية الطاقة الشمسية للشرفة ضرورية'],
-    leadAnswerBlock: '**لا، البطارية ليست مطلوبة لكي تعمل الطاقة الشمسية للشرفة — يعمل النظام بشكل جيد تمامًا دونها، حيث يقوم ببساطة بتصدير الفائض غير المستخدم إلى الشبكة بأي تعرفة تقدمها شركة الكهرباء الخاصة بك.** أما ما إذا كانت إضافة واحدة *تستحق العناء* فهو سؤال منفصل وأضيق نطاقًا: تشير الأدلة الحالية إلى أن البطارية تُسدِّد تكلفتها تحديدًا عندما تمنح شركة الكهرباء الخاصة بك رصيدًا للطاقة المصدَّرة أقل بكثير مما تتقاضاه مقابل الطاقة المستوردة، بفجوة تبلغ تقريبًا 0.15 دولار/كيلوواط ساعة أو أكثر.',
+    leadAnswerBlock: '**لا، البطارية ليست مطلوبة لكي تعمل الطاقة الشمسية للشرفة — يعمل النظام بشكل جيد تمامًا دونها، حيث يقوم ببساطة بتصدير الفائض غير المستخدم إلى الشبكة، عادةً بمقابل منخفض أو دون مقابل.** أما ما إذا كانت إضافة واحدة *تستحق العناء* فهو سؤال منفصل وأضيق نطاقًا: تُسدِّد البطارية تكلفتها تحديدًا عندما تمنح شركة الكهرباء الخاصة بك رصيدًا للطاقة المصدَّرة أقل بكثير مما تتقاضاه مقابل الطاقة المستوردة؛ وكلما اتسعت هذه الفجوة زادت الفائدة التي تلتقطها البطارية، ولا يوجد حدٌّ واحد يناسب كل التعرفات.',
     quickAnswerTop: {
       ar: {
         question: 'هل أحتاج إلى بطارية للطاقة الشمسية للشرفة؟',
-        answer: 'لا — تعمل الطاقة الشمسية للشرفة بشكل جيد دونها. البطارية إضافة اختيارية تتيح لك تخزين الفائض النهاري لاستخدامه مساءً بدلًا من تصديره إلى الشبكة. أما إذا كانت تستحق التكلفة الإضافية فيعتمد على تعرفة رصيد التصدير الخاصة بشركتك الكهربائية مقارنة بتعرفة الاستيراد لديك: تشير الأدلة إلى أنها تصبح مجدية عند فجوة تبلغ حوالي 0.15 دولار/كيلوواط ساعة أو أكثر.',
+        answer: 'لا — تعمل الطاقة الشمسية للشرفة بشكل جيد دونها. البطارية إضافة اختيارية تتيح لك تخزين الفائض النهاري لاستخدامه مساءً بدلًا من تصديره إلى الشبكة. أما إذا كانت تستحق التكلفة الإضافية فيعتمد على تعرفة رصيد التصدير الخاصة بشركتك الكهربائية مقارنة بتعرفة الاستيراد لديك: وكلما اتسعت هذه الفجوة زادت الفائدة التي تلتقطها البطارية، ولا يوجد حدٌّ واحد يناسب كل التعرفات.',
         bullets: [
           'تعمل الطاقة الشمسية للشرفة بشكل كامل دون بطارية — إنها إضافة اختيارية، وليست شرطًا',
           'دون بطارية، يُصدَّر الفائض غير المستخدم إلى الشبكة، عادةً بتعويض منخفض أو معدوم',
@@ -414,7 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'إذا كانت شركة الكهرباء الخاصة بك تمنح رصيدًا للصادرات قريبًا من سعر التجزئة الكامل، فإن البطارية تضيف تكلفة دون إضافة قيمة تُذكر',
           'غالبًا ما تواجه الأطقم المزودة ببطارية قيودًا قانونية/تسجيلية إضافية لا يواجهها طقم الألواح فقط — تحقق من ذلك قبل افتراض أن البطارية إضافة بسيطة',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -433,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'البطارية ليست مطلوبة — تعمل الطاقة الشمسية للشرفة بشكل جيد تمامًا دونها.',
           'دون بطارية، يُصدَّر فائض الطاقة الذي يتجاوز استخدامك النشط إلى الشبكة، عادةً بتعويض منخفض أو معدوم.',
-          'تُسدِّد البطارية تكلفتها تحديدًا عندما يكون رصيد التصدير لدى شركة الكهرباء الخاصة بك أقل بكثير من تعرفة الاستيراد لديك — تشير الأدلة إلى فجوة تبلغ تقريبًا 0.15 دولار/كيلوواط ساعة أو أكثر.',
+          'تُسدِّد البطارية تكلفتها تحديدًا عندما يكون رصيد التصدير لدى شركة الكهرباء الخاصة بك أقل بكثير من تعرفة الاستيراد لديك — وكلما اتسعت هذه الفجوة زادت الفائدة التي تلتقطها البطارية.',
           'إذا كانت شركة الكهرباء الخاصة بك تمنح رصيدًا للصادرات قريبًا من سعر التجزئة الكامل، فإن البطارية تضيف تكلفة دون تحسين اقتصادياتك بشكل ملموس.',
           'غالبًا ما تواجه الأطقم المزودة ببطارية قيودًا قانونية أو تسجيلية إضافية لا يواجهها طقم الألواح فقط — هذا عامل حقيقي يتجاوز مسألة الاقتصاد البحتة.',
           'القرار يتعلق فعليًا بهيكل تعرفة شركة الكهرباء الخاصة بك تحديدًا، وليس إجابة نعم أو لا عامة.',
@@ -450,7 +459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-one-number',
         title: 'الرقم الوحيد المهم فعليًا',
         content: [
-          '**تحقق من الفجوة بين ما تدفعه لك شركة الكهرباء مقابل الطاقة الشمسية المصدَّرة وما تتقاضاه مقابل الطاقة المستوردة — تشير الأدلة الحالية إلى أن البطارية تصبح مجدية عند فجوة تبلغ حوالي 0.15 دولار/كيلوواط ساعة أو أكثر.** إذا كانت شركة الكهرباء الخاصة بك تمنح رصيدًا للصادرات قريبًا من سعر تجزئة الاستيراد الكامل، فهناك القليل الذي يمكن للبطارية التقاطه، لأنك بالفعل تحصل على معظم قيمة الفائض دونها.',
+          '**تحقق من الفجوة بين ما تدفعه لك شركة الكهرباء مقابل الطاقة الشمسية المصدَّرة وما تتقاضاه مقابل الطاقة المستوردة — وكلما اتسعت هذه الفجوة زادت الفائدة التي تلتقطها البطارية، ولا يوجد حدٌّ واحد يناسب كل التعرفات.** إذا كانت شركة الكهرباء الخاصة بك تمنح رصيدًا للصادرات قريبًا من سعر تجزئة الاستيراد الكامل، فهناك القليل الذي يمكن للبطارية التقاطه، لأنك بالفعل تحصل على معظم قيمة الفائض دونها.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'تستحق بطارية الطاقة الشمسية للشرفة الإضافة فقط عندما تدفع شركة الكهرباء الخاصة بك أقل بكثير مقابل الطاقة المصدَّرة مما تتقاضاه مقابل الطاقة المستوردة.' },
@@ -462,13 +471,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما الذي تضيفه البطارية فعليًا',
         content: [
           '**تتيح لك البطارية نقل الفائض النهاري إلى الاستخدام المسائي، وهو أمر مهم بشكل خاص إذا كان منزلك يستهلك طاقة أكثر بعد غروب الشمس مما يستهلكه خلال النهار — نمط شائع لمن يعملون خارج المنزل.** راجع [دليل شراء البطاريات](/ar/balcony-solar/best-balcony-solar-batteries-2026) للاطلاع على خيارات الأجهزة الحالية وإرشادات التحجيم إذا كنت قد تأكدت من أن الاقتصاديات تناسب وضعك.',
+          'تعتمد قيمة الطاقة المخزَّنة على تعرفتك. ففي ألمانيا لا يُدفع عادةً مقابل فائض جهاز الطاقة الشمسية القابل للتوصيل المباشر، فتحلّ كل كيلوواط ساعة مخزّنة محل كيلوواط ساعة كنت ستشتريها؛ ومع ذلك تنصح [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) بعدم الجمع بين جهاز قابل للتوصيل المباشر وبطارية لأسباب اقتصادية، فاحسب الأرقام بأسعارك أنت قبل الشراء.',
         ],
       },
       whatItDoesntSolve: {
         id: 'what-it-doesnt-solve',
         title: 'ما لا تحله البطارية',
         content: [
-          '**لا تحوّل البطارية الطاقة الشمسية للشرفة إلى مصدر طاقة للمنزل بأكمله — فهي لا تزال تخزّن وتعيد توزيع الكمية الصغيرة نسبيًا من الفائض التي يولّدها نظام مكوّن من لوح أو لوحين، وهي غير كافية لتغطية الأجهزة عالية الاستهلاك أو انقطاعات الطاقة الممتدة بشكل ملموس.** كما أنها غالبًا ما تضيف تعقيدًا قانونيًا: في بعض الأسواق، بما في ذلك ألمانيا، تقع أنظمة الشرفة المزودة بالتخزين خارج النظام المبسّط الذي يغطي الوحدات القياسية القابلة للتوصيل المباشر، وتتطلب بدلًا من ذلك التسجيل الكامل لدى مشغل الشبكة.',
+          '**لا تحوّل البطارية الطاقة الشمسية للشرفة إلى مصدر طاقة للمنزل بأكمله — فهي لا تزال تخزّن وتعيد توزيع الكمية الصغيرة نسبيًا من الفائض التي يولّدها نظام مكوّن من لوح أو لوحين، وهي غير كافية لتغطية الأجهزة عالية الاستهلاك أو انقطاعات الطاقة الممتدة بشكل ملموس.** كما أنها غالبًا ما تضيف تعقيدًا قانونيًا: في ألمانيا، لا يُعدّ النظام المزوَّد ببطارية جهازًا قابلًا للتوصيل المباشر بموجب القواعد المبسّطة: إذ يجب تسجيله أيضًا لدى مشغل الشبكة، ورغم وجود إجراء مبسّط لما يصل إلى 800 واط بموجب VDE-AR-N 4105 فإن كل مشغلي الشبكات لا يقبلونه بعد ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)).',
+          'هذه نظرة عامة وليست استشارة قانونية أو كهربائية — تأكد من القواعد التي تنطبق عليك لدى مشغل الشبكة أو المؤجر أو مختص مؤهل.',
         ],
         callouts: [
           { type: 'warning', text: 'تحقق من القواعد المحددة لبلدك بشأن الأنظمة المزودة بالتخزين قبل افتراض أن البطارية إضافة بسيطة قابلة للتركيب مباشرة — قد تكون الصورة القانونية مختلفة بشكل ملموس عن طقم الألواح فقط.' },
@@ -480,12 +491,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'هل سيعمل نظام الطاقة الشمسية للشرفة الخاص بي دون بطارية؟', a: 'نعم، بشكل كامل — يعمل اللوح والمُحوّل الدقيق بشكل طبيعي دونها. البطارية فقط تغيّر ما يحدث للطاقة الفائضة عن استخدامك النشط.' },
           { q: 'ماذا يحدث للطاقة الزائدة إذا لم يكن لدي بطارية؟', a: 'عادةً ما تُصدَّر إلى الشبكة بأي تعرفة تقدمها شركة الكهرباء الخاصة بك مقابل الطاقة الشمسية المصدَّرة، وغالبًا ما تكون منخفضة أو معدومة اعتمادًا على شركة الكهرباء الخاصة بك تحديدًا.' },
-          { q: 'كيف أعرف ما إذا كانت البطارية تستحق العناء بالنسبة لي؟', a: 'قارن تعرفة رصيد التصدير لدى شركة الكهرباء الخاصة بك بتعرفة الاستيراد لديك. تشير الأدلة الحالية إلى أن البطارية تصبح مجدية عند فجوة تبلغ حوالي 0.15 دولار/كيلوواط ساعة أو أكثر — تحقق من هيكل تعرفة شركتك الكهربائية تحديدًا بدلًا من الافتراض.' },
-          { q: 'هل إضافة بطارية تجعل الطاقة الشمسية للشرفة غير قانونية في بعض الأماكن؟', a: 'ليست غير قانونية، لكنها قد تضيف تعقيدًا قانونيًا — بعض الأسواق، بما في ذلك ألمانيا، تستبعد أنظمة الشرفة المزودة بالتخزين من النظام المبسّط الذي يغطي الوحدات القياسية القابلة للتوصيل المباشر.' },
+          { q: 'كيف أعرف ما إذا كانت البطارية تستحق العناء بالنسبة لي؟', a: 'قارن تعرفة رصيد التصدير لدى شركة الكهرباء الخاصة بك بتعرفة الاستيراد لديك. وكلما اتسعت هذه الفجوة زادت الفائدة التي تلتقطها البطارية، ولا يوجد حدٌّ واحد يناسب كل التعرفات — تحقق من هيكل تعرفة شركتك الكهربائية تحديدًا بدلًا من الافتراض.' },
+          { q: 'هل إضافة بطارية تجعل الطاقة الشمسية للشرفة غير قانونية في بعض الأماكن؟', a: 'ليست غير قانونية، لكنها قد تضيف تعقيدًا قانونيًا — في ألمانيا تُخرج البطارية النظام من النظام المبسّط للوحدات القياسية القابلة للتوصيل المباشر: إذ يجب تسجيله أيضًا لدى مشغل الشبكة، مع إجراء مبسّط لما يصل إلى 800 واط لا يقبله كل المشغلين.' },
           { q: 'هل يمكن للبطارية تشغيل منزلي أثناء انقطاع الطاقة؟', a: 'ليس بشكل ملموس لمعظم إعدادات الطاقة الشمسية للشرفة — سعة التخزين مُحجَّمة حول الفائض اليومي لنظام مكوّن من لوح أو لوحين، وليست طاقة احتياطية لانقطاعات ممتدة.' },
           { q: 'هل البطارية شراء أول جيد للطاقة الشمسية للشرفة؟', a: 'عادةً لا — توصي معظم الأدلة بالبدء بطقم ألواح فقط، وتأكيد نمط استخدامك الفعلي وهيكل تعرفة شركتك الكهربائية، وإضافة بطارية لاحقًا إذا كانت الاقتصاديات تدعم ذلك.' },
           { q: 'هل تعمل جميع بطاريات الطاقة الشمسية للشرفة بنفس الطريقة؟', a: 'لا — يمكن أن تختلف السعة والمراقبة السحابية مقابل المحلية والوضع القانوني بشكل كبير حسب العلامة التجارية والطراز. راجع دليل شراء البطاريات المخصص لمقارنة موثّقة لكل علامة تجارية.' },
           { q: 'ما هو الحجم النموذجي للبطارية لإعداد الطاقة الشمسية للشرفة؟', a: 'يعتمد التحجيم على قدرة لوحك ومعدل توليد الفائض اليومي بدلاً من رقم ثابت — لا يوجد بائع ينشر معادلة تحجيم رسمية. راجع [دليل التحجيم والعائد](/ar/balcony-solar/balcony-solar-sizing-yield-payback) لإرشادات سعة موثّقة حسب حجم النظام.' },
+          { q: 'هل تغيّر البطارية إجراءات التسجيل في ألمانيا؟', a: 'نعم. يجب تسجيل التخزين لدى مشغل الشبكة بالإضافة إلى Marktstammdatenregister، ولا يُعدّ الجهاز جهازًا قابلًا للتوصيل المباشر بموجب القواعد المبسّطة. يوجد إجراء مبسّط لما يصل إلى 800 واط بموجب VDE-AR-N 4105، لكن يجوز للمشغلين مواصلة تطبيق الإجراء الأقدم خلال فترة انتقالية ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)). كما تنصح [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) لأسباب اقتصادية بعدم الجمع بين جهاز قابل للتوصيل المباشر وبطارية.' },
         ],
       },
       relatedReading: {
@@ -505,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'هل تحتاج إلى بطارية للطاقة الشمسية للشرفة؟',
       description: 'هل تحتاج إلى بطارية للطاقة الشمسية للشرفة؟ عادةً لا — تعتمد الإجابة الصادقة على رقم واحد: الفجوة بين رصيد التصدير لدى شركة الكهرباء الخاصة بك وتعرفة الاستيراد.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ar/balcony-solar/do-you-need-a-battery-balcony-solar',
       inLanguage: 'ar',
@@ -524,17 +536,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'バッテリーは、バルコニーソーラー購入者が尋ねる最も一般的なアドオンに関する質問であり、正直な答えは：通常は不要で、入手可能な場合でも常に価値があるわけではない、というものです。判断は実際に確認できる1つの数字にかかっています。',
     metaDescription: 'バルコニーソーラーにバッテリーは必要？通常は不要 — 正直な答えは1つの数字次第：電力会社の輸出クレジットと輸入料金の差。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '約7分',
     educationalLevel: 'Beginner',
     audience: 'バッテリーストレージを追加するかどうか検討中のバルコニーソーラー購入者',
     primaryTerm: 'do I need a balcony solar battery',
     targetKeywords: ['バルコニーソーラー バッテリー 必要', 'バルコニーソーラー バッテリーなし', 'バルコニーソーラー バッテリー 価値', '阳台光伏'],
-    leadAnswerBlock: '**いいえ、バルコニーソーラーが機能するためにバッテリーは必要ありません — システムはバッテリーなしでも完璧に機能し、単に未使用の余剰電力を電力会社のレートで系統に輸出するだけです。** バッテリーを追加する*価値がある*かどうかは、別の、より狭い問題です：現行のガイドによると、バッテリーは、電力会社が輸出電力に対して輸入電力より大幅に低いクレジットを支払う場合、おおよそ0.15ドル/kWh以上の差がある場合に特に元が取れるとされています。',
+    leadAnswerBlock: '**いいえ、バルコニーソーラーが機能するためにバッテリーは必要ありません — システムはバッテリーなしでも完璧に機能し、単に未使用の余剰電力を系統に輸出するだけで、通常は低い単価か無償です。** バッテリーを追加する*価値がある*かどうかは、別の、より狭い問題です：バッテリーは、電力会社が輸出電力に対して輸入電力より大幅に低いクレジットしか支払わない場合に特に元が取れます。その差が大きいほどバッテリーが取り込める価値は増え、すべての料金体系に当てはまる単一の基準はありません。',
     quickAnswerTop: {
       ja: {
         question: 'バルコニーソーラーにバッテリーは必要ですか？',
-        answer: 'いいえ — バルコニーソーラーはバッテリーなしでも問題なく機能します。バッテリーは、日中の余剰電力を系統に輸出する代わりに夕方の使用のために蓄えることができるオプションのアドオンです。追加費用に見合う価値があるかどうかは、あなたの電力会社の輸出クレジットが輸入料金と比較してどうかによります：ガイドによると、約0.15ドル/kWh以上の差があれば価値が出てくるとされています。',
+        answer: 'いいえ — バルコニーソーラーはバッテリーなしでも問題なく機能します。バッテリーは、日中の余剰電力を系統に輸出する代わりに夕方の使用のために蓄えることができるオプションのアドオンです。追加費用に見合う価値があるかどうかは、あなたの電力会社の輸出クレジットが輸入料金と比較してどうかによります：その差が大きいほどバッテリーが取り込める価値は増え、すべての料金体系に当てはまる単一の基準はありません。',
         bullets: [
           'バルコニーソーラーはバッテリーなしでも完全に機能します — これはオプションのアドオンであり、必須ではありません',
           'バッテリーがない場合、未使用の余剰電力は系統に輸出され、通常は低額または無償の対価となります',
@@ -542,7 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '電力会社が輸出分を小売価格に近いレートでクレジットする場合、バッテリーはコストを追加するだけであまり価値を追加しません',
           'バッテリー搭載キットは、パネルのみのキットにはない追加の法的/登録上の制約に直面することが多い — バッテリーを単純なアドオンと想定する前にこれを確認してください',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -561,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'バッテリーは必須ではありません — バルコニーソーラーはバッテリーなしでも完全に問題なく機能します。',
           'バッテリーがない場合、実使用量を超える余剰電力は系統に輸出され、通常は低額または無償の対価となります。',
-          'バッテリーは、電力会社の輸出クレジットが輸入料金より意味のある形で低い場合に特に元が取れます — ガイドによると約0.15ドル/kWh以上の差があるとされています。',
+          'バッテリーは、電力会社の輸出クレジットが輸入料金より意味のある形で低い場合に特に元が取れます — その差が大きいほど、バッテリーが取り込める価値は増えます。',
           '電力会社が輸出分を小売価格に近いレートでクレジットする場合、バッテリーはコストを追加するだけで経済性を意味のある形で改善しません。',
           'バッテリー搭載キットは、パネルのみのキットにはない追加の法的または登録上の制約に直面することが多い — これは純粋な経済性の問題を超えた実際の要因です。',
           'この判断は本質的にあなたの特定の電力会社の料金体系に関するものであり、普遍的な「はい」「いいえ」ではありません。',
@@ -578,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-one-number',
         title: '実際に重要な1つの数字',
         content: [
-          '**電力会社が輸出された太陽光発電に対して支払う金額と、輸入電力に対して請求する金額の差を確認してください — 現行のガイドによると、バッテリーは約0.15ドル/kWh以上の差があれば価値が出てくるとされています。** 電力会社が輸出分を輸入時の小売価格に近いレートでクレジットする場合、バッテリーが捉えられる価値はほとんどありません。バッテリーなしでも既に余剰電力からほとんどの価値を得ているためです。',
+          '**電力会社が輸出された太陽光発電に対して支払う金額と、輸入電力に対して請求する金額の差を確認してください — その差が大きいほどバッテリーが取り込める価値は増え、すべての料金体系に当てはまる単一の基準はありません。** 電力会社が輸出分を輸入時の小売価格に近いレートでクレジットする場合、バッテリーが捉えられる価値はほとんどありません。バッテリーなしでも既に余剰電力からほとんどの価値を得ているためです。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'バルコニーソーラー用バッテリーは、電力会社が輸出電力に対して輸入電力より大幅に低い金額しか支払わない場合にのみ追加する価値があります。' },
@@ -590,13 +602,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'バッテリーが実際に追加するもの',
         content: [
           '**バッテリーは、日中の余剰電力を夕方の使用にシフトできるようにし、日没後に日中よりも多くの電力を消費する家庭にとって最も重要です — これは外で働く人々によく見られるパターンです。** あなたの状況で経済性が成り立つことを確認済みであれば、現行のハードウェアの選択肢とサイジングガイダンスについて[バッテリー購入ガイド](/ja/balcony-solar/best-balcony-solar-batteries-2026)をご覧ください。',
+          '蓄えたエネルギーの価値は料金体系によって決まります。ドイツでは、プラグイン型機器の余剰電力は通常買い取られないため、蓄えた1kWhは本来購入するはずの1kWhを置き換えます。それでも[DGS](https://www.dgs.de/service/pvlotse/steckersolar/)は、経済的な理由からプラグイン型機器と蓄電池の組み合わせを勧めていません。購入前に、ご自身の電気料金で試算してください。',
         ],
       },
       whatItDoesntSolve: {
         id: 'what-it-doesnt-solve',
         title: 'バッテリーが解決しないもの',
         content: [
-          '**バッテリーはバルコニーソーラーを家全体の電源に変えるわけではありません — 1〜2枚のパネルシステムが生み出す比較的少量の余剰電力を蓄積・再分配するだけで、高消費電力の家電や長期の停電を意味のある形でカバーするには十分ではありません。** また、しばしば法的な複雑さを追加します：ドイツを含む一部の市場では、蓄電池搭載のバルコニーシステムは標準的なプラグイン機器をカバーする簡素化された制度の対象外となり、代わりに完全な配電事業者登録が必要になります。',
+          '**バッテリーはバルコニーソーラーを家全体の電源に変えるわけではありません — 1〜2枚のパネルシステムが生み出す比較的少量の余剰電力を蓄積・再分配するだけで、高消費電力の家電や長期の停電を意味のある形でカバーするには十分ではありません。** また、しばしば法的な複雑さを追加します：ドイツでは、蓄電池を加えるとシステムは簡素化された規則上のプラグイン型機器として扱われなくなり、系統事業者への登録も必要になります。VDE-AR-N 4105 に基づく800Wまでの簡素化された手続きはありますが、すべての系統事業者がまだ受け付けているわけではありません（[Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)）。',
+          'これは一般的な概要であり、法的助言や電気工事上の助言ではありません。お客様に適用される規則は、系統事業者、大家さん、または有資格の専門家に確認してください。',
         ],
         callouts: [
           { type: 'warning', text: 'バッテリーが単純な追加機能だと想定する前に、蓄電池搭載システムに関するあなたの国固有のルールを確認してください — 法的な状況はパネルのみのキットとは意味のある形で異なる可能性があります。' },
@@ -608,12 +622,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'バルコニーソーラーシステムはバッテリーなしで機能しますか？', a: 'はい、完全に機能します — パネルとマイクロインバーターはバッテリーなしでも正常に動作します。バッテリーは実使用量を超える余剰電力に何が起こるかだけを変えます。' },
           { q: 'バッテリーがない場合、余分な電力はどうなりますか？', a: '通常は、あなたの電力会社が輸出された太陽光に対して提供するレートで系統に輸出されます。これは、あなたの特定の電力会社によっては、しばしば低額または無償の対価となります。' },
-          { q: 'バッテリーが自分にとって価値があるかどうかはどうすれば分かりますか？', a: 'あなたの電力会社の輸出クレジットレートと輸入料金を比較してください。現行のガイドによると、バッテリーは約0.15ドル/kWh以上の差があれば価値が出てくるとされています — 想定するのではなく、あなたの特定の電力会社の料金体系を確認してください。' },
-          { q: 'バッテリーを追加すると、一部の場所ではバルコニーソーラーが違法になりますか？', a: '違法にはなりませんが、法的な複雑さが加わる可能性があります — ドイツを含む一部の市場では、蓄電池搭載のバルコニーシステムを標準的なプラグイン機器をカバーする簡素化された制度から除外しています。' },
+          { q: 'バッテリーが自分にとって価値があるかどうかはどうすれば分かりますか？', a: 'あなたの電力会社の輸出クレジットレートと輸入料金を比較してください。その差が大きいほどバッテリーが取り込める価値は増え、すべての料金体系に当てはまる単一の基準はありません — 想定するのではなく、あなたの特定の電力会社の料金体系を確認してください。' },
+          { q: 'バッテリーを追加すると、一部の場所ではバルコニーソーラーが違法になりますか？', a: '違法にはなりませんが、法的な複雑さが加わる可能性があります — ドイツでは、蓄電池を加えるとシステムは標準的なプラグイン機器向けの簡素化された制度から外れ、系統事業者への登録も必要になります。800Wまでの簡素化された手続きはありますが、すべての事業者が受け付けているわけではありません。' },
           { q: 'バッテリーは停電時に家に電力を供給できますか？', a: 'ほとんどのバルコニーソーラー設備では意味のある形ではできません — 蓄電容量は1〜2枚のパネルシステムからの日々の余剰電力を基準にサイズ設計されており、長期の停電に対するバックアップ電源ではありません。' },
           { q: 'バッテリーはバルコニーソーラーの最初の購入として良い選択ですか？', a: '通常はそうではありません — ほとんどのガイドは、パネルのみのキットから始め、実際の使用パターンと電力会社の料金体系を確認し、経済性が支持する場合に後でバッテリーを追加することを推奨しています。' },
           { q: 'すべてのバルコニーソーラーバッテリーは同じように機能しますか？', a: 'いいえ — 容量、クラウド対ローカル監視、法的状況はすべてブランドとモデルによって大きく異なる可能性があります。検証済みのブランド別比較については専用のバッテリー購入ガイドをご覧ください。' },
           { q: 'バルコニーソーラー設備の一般的なバッテリーサイズはどのくらいですか？', a: 'サイジングは固定の数字ではなく、あなたのパネルワット数と日々の余剰発電量に依存します — どのベンダーも正式なサイジング公式を公開していません。システムサイズ別の検証済み容量ガイダンスについては[サイジングと回収期間ガイド](/ja/balcony-solar/balcony-solar-sizing-yield-payback)をご覧ください。' },
+          { q: 'ドイツでは蓄電池を加えると登録は変わりますか？', a: 'はい。蓄電池はMarktstammdatenregisterに加えて系統事業者にも登録する必要があり、簡素化された規則ではプラグイン型ソーラー機器として扱われなくなります。VDE-AR-N 4105 に基づく800Wまでの簡素化された手続きがありますが、系統事業者は移行期間中は従来の手続きを引き続き適用できます（[Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)）。また[DGS](https://www.dgs.de/service/pvlotse/steckersolar/)は、経済的な理由からプラグイン型機器と蓄電池の組み合わせを勧めていません。' },
         ],
       },
       relatedReading: {
@@ -633,7 +648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'バルコニーソーラーにバッテリーは必要？',
       description: 'バルコニーソーラーにバッテリーは必要？通常は不要 — 正直な答えは1つの数字次第：電力会社の輸出クレジットと輸入料金の差。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ja/balcony-solar/do-you-need-a-battery-balcony-solar',
       inLanguage: 'ja',
@@ -652,17 +667,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '电池是阳台光伏购买者最常问的附加配件问题，诚实的答案是：通常不需要，即使有条件购买也不总是值得。这个决定取决于一个你实际可以核实的数字。',
     metaDescription: '阳台光伏需要电池吗？通常不需要——诚实的答案取决于一个数字：你所在电力公司的并网补偿与购电价格之间的差距。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '约7分钟',
     educationalLevel: 'Beginner',
     audience: '正在决定是否加装电池储能的阳台光伏购买者',
     primaryTerm: 'do I need a balcony solar battery',
     targetKeywords: ['阳台光伏', '阳台光伏需要电池吗', '阳台光伏无电池', '阳台光伏电池值得吗'],
-    leadAnswerBlock: '**不需要，阳台光伏运行并不需要电池——即使没有电池，系统也能正常运作，只是将未使用的余电按你所在电力公司的电价并网输出。** 加装电池是否*值得*是一个独立且更具体的问题：现行指南建议，当你所在的电力公司对并网发电的补偿明显低于其收取的购电价格（大约每千瓦时0.15美元或更多的差距）时，电池才会真正划算。',
+    leadAnswerBlock: '**不需要，阳台光伏运行并不需要电池——即使没有电池，系统也能正常运作，只是将未使用的余电并网输出，通常补偿很低或没有补偿。** 加装电池是否*值得*是一个独立且更具体的问题：当你所在的电力公司对并网发电的补偿明显低于其收取的购电价格时，电池才会真正划算；差距越大，电池能捕获的价值越多，且没有适用于所有电价的统一门槛。',
     quickAnswerTop: {
       zh: {
         question: '阳台光伏需要电池吗？',
-        answer: '不需要——阳台光伏没有电池也能正常工作。电池是一种可选的附加配件，可以让你把白天的余电储存起来供晚上使用，而不是直接并网输出。是否值得多花这笔钱，取决于你所在电力公司的并网补偿相对于购电价格的高低：指南建议，当差距达到大约每千瓦时0.15美元或更多时就开始划算。',
+        answer: '不需要——阳台光伏没有电池也能正常工作。电池是一种可选的附加配件，可以让你把白天的余电储存起来供晚上使用，而不是直接并网输出。是否值得多花这笔钱，取决于你所在电力公司的并网补偿相对于购电价格的高低：差距越大，电池能捕获的价值越多，且没有适用于所有电价的统一门槛。',
         bullets: [
           '阳台光伏完全可以在没有电池的情况下运行——电池是可选配件，而非必需品',
           '没有电池时，未使用的余电会并网输出，通常补偿很低甚至没有补偿',
@@ -670,7 +685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '如果你的电力公司给并网发电的补偿接近零售电价，加装电池只会增加成本而收益不大',
           '配备电池的套件往往面临纯面板套件没有的额外法律/注册限制——在假设电池只是简单附加件之前请先核实这一点',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -689,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '电池不是必需品——阳台光伏没有电池也完全可以正常运行。',
           '没有电池时，超出实际使用量的余电会并网输出，通常补偿很低甚至没有补偿。',
-          '当你所在电力公司的并网补偿明显低于购电价格时，电池才真正划算——指南建议差距大约在每千瓦时0.15美元或以上。',
+          '当你所在电力公司的并网补偿明显低于购电价格时，电池才真正划算——差距越大，电池能捕获的价值越多。',
           '如果你的电力公司对并网发电的补偿接近零售电价，电池只会增加成本，而不会有意义地改善你的经济效益。',
           '配备电池的套件往往面临纯面板套件没有的额外法律或注册限制——这是纯经济考量之外的一个真实因素。',
           '这个决定实际上取决于你所在电力公司具体的电价结构，而不是一个放之四海皆准的是或否。',
@@ -706,7 +721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-one-number',
         title: '真正重要的一个数字',
         content: [
-          '**请核实你所在电力公司为并网太阳能支付给你的价格，与其收取的购电价格之间的差距——现行指南建议，差距达到大约每千瓦时0.15美元或以上时，电池就开始划算。** 如果你的电力公司对并网发电的补偿接近零售购电价格，电池能捕获的价值就很有限，因为即使没有电池，你也已经从余电中获得了大部分价值。',
+          '**请核实你所在电力公司为并网太阳能支付给你的价格，与其收取的购电价格之间的差距——差距越大，电池能捕获的价值越多，且没有适用于所有电价的统一门槛。** 如果你的电力公司对并网发电的补偿接近零售购电价格，电池能捕获的价值就很有限，因为即使没有电池，你也已经从余电中获得了大部分价值。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: '只有当你所在的电力公司对并网发电的支付明显低于其收取的购电价格时，加装阳台光伏电池才值得。' },
@@ -718,13 +733,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '电池实际能带来什么',
         content: [
           '**电池可以让你把白天的余电转移到晚上使用，如果你家在日落后比白天用电更多——这是在外工作人群的常见用电模式——这一点尤为重要。** 如果你已经确认经济效益适合你的情况，请参阅[电池购买指南](/zh/balcony-solar/best-balcony-solar-batteries-2026)了解当前的硬件选项和容量选择建议。',
+          '储存电能的价值取决于你的电价。在德国，插拔式设备的余电通常没有收益，因此每储存一千瓦时就替代了一千瓦时本来要购买的电；即便如此，[DGS](https://www.dgs.de/service/pvlotse/steckersolar/) 出于经济原因仍不建议将插拔式设备与电池搭配，所以购买前请用你自己的电价算一算。',
         ],
       },
       whatItDoesntSolve: {
         id: 'what-it-doesnt-solve',
         title: '电池解决不了什么',
         content: [
-          '**电池并不能把阳台光伏变成全屋电源——它仍然只能储存和重新分配一两块面板系统所产生的相对少量余电，不足以有意义地覆盖高耗电电器或长时间停电。** 它还常常增加法律上的复杂性：在包括德国在内的一些市场，配备储能的阳台系统不在覆盖标准插拔式设备的简化制度范围内，而是需要完整的配电运营商注册。',
+          '**电池并不能把阳台光伏变成全屋电源——它仍然只能储存和重新分配一两块面板系统所产生的相对少量余电，不足以有意义地覆盖高耗电电器或长时间停电。** 它还常常增加法律上的复杂性：在德国，加装电池后系统不再属于简化规则下的插拔式设备：还必须向电网运营商登记，虽然 VDE-AR-N 4105 规定了 800 W 以内的简化流程，但并非所有电网运营商都已接受（[Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)）。',
+          '以上仅为一般性概述，不构成法律或电气方面的建议——请向电网运营商、房东或合格专业人士确认适用于你的规定。',
         ],
         callouts: [
           { type: 'warning', text: '在假设电池只是简单的附加配件之前，请核实你所在国家针对配备储能系统的具体规定——法律情况可能与纯面板套件有实质性差异。' },
@@ -736,12 +753,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '我的阳台光伏系统没有电池也能工作吗？', a: '可以，完全没问题——面板和微型逆变器在没有电池的情况下也能正常运行。电池只会改变超出你实际使用量的余电的去向。' },
           { q: '如果我没有电池，多余的电力会怎样？', a: '通常会按你所在电力公司为并网太阳能提供的价格输出到电网，具体取决于你的电力公司，这通常是较低甚至零补偿。' },
-          { q: '我怎么知道电池对我来说是否值得？', a: '比较你所在电力公司的并网补偿价格与购电价格。现行指南建议，差距达到大约每千瓦时0.15美元或以上时电池就开始划算——请核实你所在电力公司具体的电价结构，而不要凭假设判断。' },
-          { q: '加装电池会让阳台光伏在某些地方变得不合法吗？', a: '不会不合法，但可能增加法律复杂性——包括德国在内的一些市场，将配备储能的阳台系统排除在覆盖标准插拔式设备的简化制度之外。' },
+          { q: '我怎么知道电池对我来说是否值得？', a: '比较你所在电力公司的并网补偿价格与购电价格。差距越大，电池能捕获的价值越多，且没有适用于所有电价的统一门槛——请核实你所在电力公司具体的电价结构，而不要凭假设判断。' },
+          { q: '加装电池会让阳台光伏在某些地方变得不合法吗？', a: '不会不合法，但可能增加法律复杂性——在德国，加装电池会使系统脱离标准插拔式设备的简化制度：还必须向电网运营商登记，800 W 以内虽有简化流程，但并非所有运营商都接受。' },
           { q: '电池能在停电时为我的家供电吗？', a: '对于大多数阳台光伏配置来说，作用不大——储能容量是按一两块面板系统的日常余电来设计的，而不是用于长时间停电的备用电源。' },
           { q: '电池是阳台光伏系统的良好首选购买项吗？', a: '通常不是——大多数指南建议先从纯面板套件开始，确认你实际的用电模式和电力公司的电价结构，如果经济效益支持的话，再在之后加装电池。' },
           { q: '所有阳台光伏电池的工作方式都一样吗？', a: '不一样——容量、云端与本地监控方式、法律状态都可能因品牌和型号而有很大差异。请参阅专门的电池购买指南，查看经核实的各品牌对比。' },
           { q: '阳台光伏配置的典型电池容量是多少？', a: '容量选择取决于你的面板功率和每日余电发电量，而不是一个固定数字——没有厂商公布正式的容量计算公式。请参阅[容量与回本指南](/zh/balcony-solar/balcony-solar-sizing-yield-payback)，按系统规模查看经核实的容量建议。' },
+          { q: '在德国，加装电池会改变登记要求吗？', a: '会。储能除了在 Marktstammdatenregister 登记外，还须向电网运营商登记，且该设备在简化规则下不再属于插拔式光伏设备。VDE-AR-N 4105 规定了 800 W 以内的简化流程，但电网运营商在过渡期内可继续适用旧流程（[Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)）。此外，[DGS](https://www.dgs.de/service/pvlotse/steckersolar/) 出于经济原因不建议将插拔式设备与电池搭配。' },
         ],
       },
       relatedReading: {
@@ -761,7 +779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '阳台光伏需要电池吗？',
       description: '阳台光伏需要电池吗？通常不需要——诚实的答案取决于一个数字：你所在电力公司的并网补偿与购电价格之间的差距。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/zh/balcony-solar/do-you-need-a-battery-balcony-solar',
       inLanguage: 'zh',
@@ -780,17 +798,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Une batterie est la question d\'accessoire la plus fréquente posée par les acheteurs de solaire de balcon, et la réponse honnête est : généralement pas nécessaire, et pas toujours rentable même lorsqu\'elle est disponible. La décision se résume à un chiffre que vous pouvez réellement vérifier.',
     metaDescription: 'Avez-vous besoin d\'une batterie pour le solaire de balcon ? Généralement pas — la réponse honnête dépend d\'un chiffre : l\'écart entre le crédit d\'exportation de votre fournisseur et son tarif d\'importation.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '7 min de lecture',
     educationalLevel: 'Beginner',
     audience: 'Acheteurs de solaire de balcon décidant s\'il faut ajouter du stockage par batterie',
     primaryTerm: 'do I need a balcony solar battery',
     targetKeywords: ['ai-je besoin d\'une batterie pour le solaire de balcon', 'solaire de balcon sans batterie', 'une batterie solaire de balcon en vaut-elle la peine', 'batterie solaire de balcon nécessaire'],
-    leadAnswerBlock: '**Non, une batterie n\'est pas nécessaire pour que le solaire de balcon fonctionne — le système fonctionne parfaitement bien sans elle, exportant simplement le surplus inutilisé vers le réseau au tarif de votre fournisseur.** Savoir si en ajouter une *en vaut la peine* est une question distincte et plus précise : les guides actuels suggèrent qu\'une batterie devient rentable spécifiquement lorsque votre fournisseur crédite l\'énergie exportée nettement moins qu\'il ne facture l\'énergie importée, soit un écart d\'environ 0,15 $/kWh ou plus.',
+    leadAnswerBlock: '**Non, une batterie n\'est pas nécessaire pour que le solaire de balcon fonctionne — le système fonctionne parfaitement bien sans elle, exportant simplement le surplus inutilisé vers le réseau, en général à un tarif faible ou sans rémunération.** Savoir si en ajouter une *en vaut la peine* est une question distincte et plus précise : une batterie devient rentable spécifiquement lorsque votre fournisseur crédite l\'énergie exportée nettement moins qu\'il ne facture l\'énergie importée; plus cet écart est grand, plus une batterie peut en tirer parti, et aucun seuil unique ne convient à tous les tarifs.',
     quickAnswerTop: {
       fr: {
         question: 'Ai-je besoin d\'une batterie pour le solaire de balcon ?',
-        answer: 'Non — le solaire de balcon fonctionne bien sans elle. Une batterie est un accessoire optionnel qui vous permet de stocker le surplus diurne pour une utilisation en soirée au lieu de l\'exporter vers le réseau. Savoir si cela vaut le coût supplémentaire dépend du crédit d\'exportation spécifique de votre fournisseur par rapport à votre tarif d\'importation : les guides suggèrent que cela devient rentable à partir d\'un écart d\'environ 0,15 $/kWh ou plus.',
+        answer: 'Non — le solaire de balcon fonctionne bien sans elle. Une batterie est un accessoire optionnel qui vous permet de stocker le surplus diurne pour une utilisation en soirée au lieu de l\'exporter vers le réseau. Savoir si cela vaut le coût supplémentaire dépend du crédit d\'exportation spécifique de votre fournisseur par rapport à votre tarif d\'importation : plus cet écart est grand, plus une batterie peut en tirer parti, et aucun seuil unique ne convient à tous les tarifs.',
         bullets: [
           'Le solaire de balcon fonctionne complètement sans batterie — c\'est un accessoire optionnel, pas une exigence',
           'Sans batterie, le surplus inutilisé est exporté vers le réseau, généralement avec une compensation faible ou nulle',
@@ -798,7 +816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Si votre fournisseur crédite les exportations proche du tarif de détail complet, une batterie ajoute un coût sans ajouter beaucoup de valeur',
           'Les kits équipés de batteries font souvent face à des restrictions légales/d\'enregistrement supplémentaires qu\'un kit à panneaux uniquement n\'a pas — vérifiez cela avant de présumer qu\'une batterie est un simple ajout',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -817,7 +835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Une batterie n\'est pas nécessaire — le solaire de balcon fonctionne parfaitement bien sans elle.',
           'Sans batterie, l\'énergie excédentaire au-delà de votre consommation active est exportée vers le réseau, généralement avec une compensation faible ou nulle.',
-          'Une batterie devient rentable spécifiquement lorsque le crédit d\'exportation de votre fournisseur est nettement inférieur à votre tarif d\'importation — les guides suggèrent un écart d\'environ 0,15 $/kWh ou plus.',
+          'Une batterie devient rentable spécifiquement lorsque le crédit d\'exportation de votre fournisseur est nettement inférieur à votre tarif d\'importation — plus cet écart est grand, plus une batterie peut en tirer parti.',
           'Si votre fournisseur crédite les exportations proche du tarif de détail complet, une batterie ajoute un coût sans améliorer significativement votre situation économique.',
           'Les kits équipés de batteries font souvent face à des restrictions légales ou d\'enregistrement supplémentaires qu\'un kit à panneaux uniquement n\'a pas — c\'est un facteur réel au-delà de la simple question économique.',
           'La décision porte véritablement sur la structure tarifaire spécifique de votre fournisseur, pas sur un oui ou non universel.',
@@ -834,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-one-number',
         title: 'Le seul chiffre qui compte vraiment',
         content: [
-          '**Vérifiez l\'écart entre ce que votre fournisseur vous paie pour l\'énergie solaire exportée et ce qu\'il vous facture pour l\'énergie importée — les guides actuels suggèrent qu\'une batterie devient rentable à partir d\'un écart d\'environ 0,15 $/kWh ou plus.** Si votre fournisseur crédite les exportations proche du tarif de détail d\'importation complet, il y a peu de chose qu\'une batterie puisse capturer, puisque vous obtenez déjà l\'essentiel de la valeur du surplus sans elle.',
+          '**Vérifiez l\'écart entre ce que votre fournisseur vous paie pour l\'énergie solaire exportée et ce qu\'il vous facture pour l\'énergie importée — plus cet écart est grand, plus une batterie peut en tirer parti, et aucun seuil unique ne convient à tous les tarifs.** Si votre fournisseur crédite les exportations proche du tarif de détail d\'importation complet, il y a peu de chose qu\'une batterie puisse capturer, puisque vous obtenez déjà l\'essentiel de la valeur du surplus sans elle.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Une batterie solaire de balcon ne vaut la peine que lorsque votre fournisseur paie nettement moins pour l\'énergie exportée qu\'il ne facture pour l\'énergie importée.' },
@@ -846,13 +864,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ce qu\'une batterie ajoute réellement',
         content: [
           '**Une batterie vous permet de déplacer le surplus diurne vers une utilisation en soirée, ce qui compte le plus si votre foyer consomme plus d\'énergie après le coucher du soleil que pendant la journée — un schéma courant pour les personnes travaillant à l\'extérieur.** Consultez le [guide d\'achat de batteries](/fr/balcony-solar/best-balcony-solar-batteries-2026) pour les options matérielles actuelles et les conseils de dimensionnement si vous avez confirmé que l\'économie fonctionne pour votre situation.',
+          'La valeur de l\'énergie stockée dépend de votre tarif. En Allemagne, le surplus d\'un appareil enfichable n\'est en général pas rémunéré, de sorte que chaque kilowattheure stocké remplace un kilowattheure que vous achèteriez sinon ; malgré cela, la [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) déconseille d\'associer un appareil enfichable à une batterie pour des raisons économiques : faites donc le calcul avec vos propres prix avant d\'acheter.',
         ],
       },
       whatItDoesntSolve: {
         id: 'what-it-doesnt-solve',
         title: 'Ce qu\'une batterie ne résout pas',
         content: [
-          '**Une batterie ne transforme pas le solaire de balcon en source d\'énergie pour tout le logement — elle ne fait que stocker et redistribuer la quantité relativement faible de surplus qu\'un système d\'un ou deux panneaux génère, pas assez pour couvrir significativement des appareils très gourmands en énergie ou des pannes prolongées.** Elle ajoute aussi souvent une complexité légale : dans certains marchés, dont l\'Allemagne, les systèmes de balcon équipés de stockage sortent du régime simplifié qui couvre les unités plug-in standard et nécessitent à la place un enregistrement complet auprès de l\'opérateur de réseau.',
+          '**Une batterie ne transforme pas le solaire de balcon en source d\'énergie pour tout le logement — elle ne fait que stocker et redistribuer la quantité relativement faible de surplus qu\'un système d\'un ou deux panneaux génère, pas assez pour couvrir significativement des appareils très gourmands en énergie ou des pannes prolongées.** Elle ajoute aussi souvent une complexité légale : en Allemagne, un système avec batterie n\'est plus considéré comme un appareil enfichable selon les règles simplifiées : il doit aussi être enregistré auprès du gestionnaire de réseau, et bien qu\'une procédure simplifiée jusqu\'à 800 W existe selon la VDE-AR-N 4105, tous les gestionnaires ne l\'acceptent pas encore ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)).',
+          'Ceci est un aperçu général, pas un conseil juridique ni électrique : confirmez les règles qui vous concernent auprès de votre gestionnaire de réseau, de votre bailleur ou d\'un professionnel qualifié.',
         ],
         callouts: [
           { type: 'warning', text: 'Vérifiez les règles spécifiques de votre pays pour les systèmes équipés de stockage avant de présumer qu\'une batterie est un simple ajout — le tableau juridique peut être sensiblement différent d\'un kit à panneaux uniquement.' },
@@ -864,12 +884,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Mon système solaire de balcon fonctionnera-t-il sans batterie ?', a: 'Oui, complètement — le panneau et le micro-onduleur fonctionnent normalement sans elle. Une batterie ne change que ce qui arrive à l\'énergie excédentaire au-delà de votre consommation active.' },
           { q: 'Qu\'advient-il de l\'énergie supplémentaire si je n\'ai pas de batterie ?', a: 'Elle est généralement exportée vers le réseau au tarif que votre fournisseur offre pour l\'énergie solaire exportée, ce qui est souvent une compensation faible ou nulle selon votre fournisseur spécifique.' },
-          { q: 'Comment savoir si une batterie en vaut la peine pour moi ?', a: 'Comparez le taux de crédit d\'exportation de votre fournisseur à votre tarif d\'importation. Les guides actuels suggèrent qu\'une batterie devient rentable à partir d\'un écart d\'environ 0,15 $/kWh ou plus — vérifiez la structure tarifaire de votre fournisseur spécifique plutôt que de présumer.' },
-          { q: 'L\'ajout d\'une batterie rend-il le solaire de balcon illégal dans certains endroits ?', a: 'Pas illégal, mais cela peut ajouter une complexité légale — certains marchés, dont l\'Allemagne, excluent les systèmes de balcon équipés de stockage du régime simplifié qui couvre les unités plug-in standard.' },
+          { q: 'Comment savoir si une batterie en vaut la peine pour moi ?', a: 'Comparez le taux de crédit d\'exportation de votre fournisseur à votre tarif d\'importation. Plus cet écart est grand, plus une batterie peut en tirer parti, et aucun seuil unique ne convient à tous les tarifs — vérifiez la structure tarifaire de votre fournisseur spécifique plutôt que de présumer.' },
+          { q: 'L\'ajout d\'une batterie rend-il le solaire de balcon illégal dans certains endroits ?', a: 'Pas illégal, mais cela peut ajouter une complexité légale — en Allemagne, une batterie fait sortir le système du régime simplifié des appareils enfichables standard : il doit aussi être enregistré auprès du gestionnaire de réseau, avec une procédure simplifiée jusqu\'à 800 W que tous les gestionnaires n\'acceptent pas.' },
           { q: 'Une batterie peut-elle alimenter mon logement pendant une panne ?', a: 'Pas de manière significative pour la plupart des installations solaires de balcon — la capacité de stockage est dimensionnée pour le surplus quotidien d\'un système d\'un ou deux panneaux, pas pour une alimentation de secours en cas de panne prolongée.' },
           { q: 'Une batterie est-elle un bon premier achat pour le solaire de balcon ?', a: 'Généralement pas — la plupart des guides recommandent de commencer avec un kit à panneaux uniquement, de confirmer votre profil de consommation réel et la structure tarifaire de votre fournisseur, et d\'ajouter une batterie plus tard si l\'économie le justifie.' },
           { q: 'Toutes les batteries solaires de balcon fonctionnent-elles de la même manière ?', a: 'Non — la capacité, la surveillance cloud vs. locale, et le statut légal peuvent tous varier considérablement selon la marque et le modèle. Consultez le guide d\'achat de batteries dédié pour une comparaison vérifiée par marque.' },
           { q: 'Quelle est la taille de batterie typique pour une installation solaire de balcon ?', a: 'Le dimensionnement dépend de la puissance de votre panneau et de la production quotidienne de surplus plutôt que d\'un chiffre fixe — aucun fournisseur ne publie de formule de dimensionnement formelle. Consultez le [guide de dimensionnement et d\'amortissement](/fr/balcony-solar/balcony-solar-sizing-yield-payback) pour des conseils de capacité vérifiés par taille de système.' },
+          { q: 'Une batterie change-t-elle l\'enregistrement en Allemagne ?', a: 'Oui. Un stockage doit être enregistré auprès du gestionnaire de réseau en plus du Marktstammdatenregister, et l\'appareil n\'est plus considéré comme un appareil solaire enfichable selon les règles simplifiées. Une procédure simplifiée jusqu\'à 800 W existe selon la VDE-AR-N 4105, mais les gestionnaires peuvent continuer à appliquer l\'ancienne procédure pendant une période transitoire ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)). Par ailleurs, la [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) déconseille, pour des raisons économiques, d\'associer un appareil enfichable à une batterie.' },
         ],
       },
       relatedReading: {
@@ -889,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Avez-vous besoin d\'une batterie pour le solaire de balcon ?',
       description: 'Avez-vous besoin d\'une batterie pour le solaire de balcon ? Généralement pas — la réponse honnête dépend d\'un chiffre : l\'écart entre le crédit d\'exportation de votre fournisseur et son tarif d\'importation.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/fr/balcony-solar/do-you-need-a-battery-balcony-solar',
       inLanguage: 'fr',
@@ -908,17 +929,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '배터리는 발코니 태양광 구매자가 가장 흔히 묻는 추가 장비 질문이며, 솔직한 답은: 대개 필요하지 않으며, 구매 가능한 경우에도 항상 가치가 있는 것은 아니라는 것입니다. 결정은 실제로 확인할 수 있는 한 가지 수치에 달려 있습니다.',
     metaDescription: '발코니 태양광에 배터리가 필요한가요? 대개 필요하지 않습니다 — 솔직한 답은 한 가지 수치에 달려 있습니다: 전력회사의 수출 크레딧과 수입 요금 간의 차이.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '7분 읽기',
     educationalLevel: 'Beginner',
     audience: '배터리 저장장치 추가 여부를 결정 중인 발코니 태양광 구매자',
     primaryTerm: 'do I need a balcony solar battery',
     targetKeywords: ['발코니 태양광 배터리 필요', '발코니 태양광 배터리 없이', '발코니 태양광 배터리 가치', '발코니 태양광 배터리 필수'],
-    leadAnswerBlock: '**아니요, 발코니 태양광이 작동하는 데 배터리는 필요하지 않습니다 — 시스템은 배터리 없이도 완벽하게 작동하며, 사용하지 않은 잉여 전력을 전력회사의 요금으로 계통에 수출할 뿐입니다.** 배터리를 추가하는 것이 *가치가 있는지*는 별개의, 더 좁은 질문입니다: 현행 가이드에 따르면 배터리는 전력회사가 수출 전력에 대해 수입 전력보다 현저히 낮은 대가를 지불하는 경우, 대략 킬로와트시당 0.15달러 이상의 차이가 있을 때 특히 수익성이 있습니다.',
+    leadAnswerBlock: '**아니요, 발코니 태양광이 작동하는 데 배터리는 필요하지 않습니다 — 시스템은 배터리 없이도 완벽하게 작동하며, 사용하지 않은 잉여 전력을 계통에 수출할 뿐이며, 보상은 보통 낮거나 없습니다.** 배터리를 추가하는 것이 *가치가 있는지*는 별개의, 더 좁은 질문입니다: 배터리는 전력회사가 수출 전력에 대해 수입 전력보다 현저히 낮은 대가를 지불하는 경우에 특히 수익성이 있습니다. 그 차이가 클수록 배터리가 활용할 수 있는 가치가 커지며, 모든 요금제에 맞는 단일 기준은 없습니다.',
     quickAnswerTop: {
       ko: {
         question: '발코니 태양광에 배터리가 필요한가요?',
-        answer: '아니요 — 발코니 태양광은 배터리 없이도 잘 작동합니다. 배터리는 낮 동안의 잉여 전력을 계통에 수출하는 대신 저녁 사용을 위해 저장할 수 있게 해주는 선택적 추가 장비입니다. 추가 비용이 가치가 있는지는 귀하의 특정 전력회사의 수출 크레딧이 수입 요금에 비해 어느 정도인지에 달려 있습니다: 가이드에 따르면 약 킬로와트시당 0.15달러 이상의 차이가 있으면 가치가 생긴다고 합니다.',
+        answer: '아니요 — 발코니 태양광은 배터리 없이도 잘 작동합니다. 배터리는 낮 동안의 잉여 전력을 계통에 수출하는 대신 저녁 사용을 위해 저장할 수 있게 해주는 선택적 추가 장비입니다. 추가 비용이 가치가 있는지는 귀하의 특정 전력회사의 수출 크레딧이 수입 요금에 비해 어느 정도인지에 달려 있습니다: 그 차이가 클수록 배터리가 활용할 수 있는 가치가 커지며, 모든 요금제에 맞는 단일 기준은 없습니다.',
         bullets: [
           '발코니 태양광은 배터리 없이도 완전히 작동합니다 — 이는 선택적 추가 장비이며 필수 요건이 아닙니다',
           '배터리가 없으면 사용하지 않은 잉여 전력은 계통에 수출되며, 일반적으로 낮은 대가나 무보상입니다',
@@ -926,7 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '전력회사가 수출분을 전체 소매 요금에 가깝게 크레딧해준다면, 배터리는 비용만 추가할 뿐 큰 가치를 더하지 않습니다',
           '배터리가 장착된 키트는 패널 전용 키트에는 없는 추가적인 법적/등록 제약에 직면하는 경우가 많습니다 — 배터리를 단순한 추가 장비로 가정하기 전에 이를 확인하십시오',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -945,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '배터리는 필수가 아닙니다 — 발코니 태양광은 배터리 없이도 완전히 잘 작동합니다.',
           '배터리가 없으면 실제 사용량을 초과하는 잉여 전력은 계통에 수출되며, 일반적으로 낮은 대가나 무보상입니다.',
-          '배터리는 전력회사의 수출 크레딧이 수입 요금보다 의미 있게 낮은 경우에 특히 수익성이 있습니다 — 가이드에 따르면 약 킬로와트시당 0.15달러 이상의 차이가 제안됩니다.',
+          '배터리는 전력회사의 수출 크레딧이 수입 요금보다 의미 있게 낮은 경우에 특히 수익성이 있습니다 — 그 차이가 클수록 배터리가 활용할 수 있는 가치가 커집니다.',
           '전력회사가 수출분을 전체 소매 요금에 가깝게 크레딧해준다면, 배터리는 비용만 추가할 뿐 경제성을 의미 있게 개선하지 못합니다.',
           '배터리가 장착된 키트는 패널 전용 키트에는 없는 추가적인 법적 또는 등록 제약에 직면하는 경우가 많습니다 — 이는 순수한 경제성 문제를 넘어서는 실제 요인입니다.',
           '이 결정은 실제로 귀하의 특정 전력회사의 요금 체계에 관한 것이며, 보편적인 예/아니오가 아닙니다.',
@@ -962,7 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-one-number',
         title: '실제로 중요한 한 가지 수치',
         content: [
-          '**귀하의 전력회사가 수출된 태양광 전력에 대해 지불하는 금액과 수입 전력에 대해 청구하는 금액 사이의 차이를 확인하십시오 — 현행 가이드에 따르면 배터리는 약 킬로와트시당 0.15달러 이상의 차이가 있을 때 가치가 생긴다고 제안합니다.** 전력회사가 수출분을 전체 소매 수입 요금에 가깝게 크레딧해준다면, 배터리가 포착할 수 있는 가치는 거의 없습니다. 배터리 없이도 이미 잉여 전력의 대부분의 가치를 얻고 있기 때문입니다.',
+          '**귀하의 전력회사가 수출된 태양광 전력에 대해 지불하는 금액과 수입 전력에 대해 청구하는 금액 사이의 차이를 확인하십시오 — 그 차이가 클수록 배터리가 활용할 수 있는 가치가 커지며, 모든 요금제에 맞는 단일 기준은 없습니다.** 전력회사가 수출분을 전체 소매 수입 요금에 가깝게 크레딧해준다면, 배터리가 포착할 수 있는 가치는 거의 없습니다. 배터리 없이도 이미 잉여 전력의 대부분의 가치를 얻고 있기 때문입니다.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: '발코니 태양광 배터리는 전력회사가 수출 전력에 대해 수입 전력보다 현저히 낮은 금액을 지불하는 경우에만 추가할 가치가 있습니다.' },
@@ -974,13 +995,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '배터리가 실제로 추가하는 것',
         content: [
           '**배터리는 낮 동안의 잉여 전력을 저녁 사용으로 전환할 수 있게 해주며, 이는 귀하의 가정이 낮보다 일몰 후에 더 많은 전력을 소비하는 경우 — 집 밖에서 일하는 사람들에게 흔한 패턴 — 가장 중요합니다.** 귀하의 상황에 경제성이 맞는지 확인했다면, 현행 하드웨어 옵션과 용량 산정 안내는 [배터리 구매 가이드](/ko/balcony-solar/best-balcony-solar-batteries-2026)를 참고하십시오.',
+          '저장한 에너지의 가치는 요금제에 달려 있습니다. 독일에서는 플러그인 장치의 잉여 전력이 보통 보상되지 않으므로 저장한 1kWh는 원래 구매했을 1kWh를 대체합니다. 그럼에도 [DGS](https://www.dgs.de/service/pvlotse/steckersolar/)는 경제적 이유로 플러그인 장치와 배터리의 조합을 권하지 않으므로, 구매 전에 본인의 요금으로 계산해 보십시오.',
         ],
       },
       whatItDoesntSolve: {
         id: 'what-it-doesnt-solve',
         title: '배터리가 해결하지 못하는 것',
         content: [
-          '**배터리는 발코니 태양광을 가구 전체의 전력원으로 바꾸지 못합니다 — 여전히 한두 개의 패널 시스템이 생산하는 비교적 적은 양의 잉여 전력만을 저장하고 재분배하며, 이는 고전력 소비 가전이나 장시간 정전을 의미 있게 감당하기에 충분하지 않습니다.** 또한 종종 법적 복잡성을 추가합니다: 독일을 포함한 일부 시장에서는 저장장치가 장착된 발코니 시스템이 표준 플러그인 장치를 다루는 간소화된 제도의 적용 범위에서 벗어나며, 대신 완전한 배전사업자 등록이 필요합니다.',
+          '**배터리는 발코니 태양광을 가구 전체의 전력원으로 바꾸지 못합니다 — 여전히 한두 개의 패널 시스템이 생산하는 비교적 적은 양의 잉여 전력만을 저장하고 재분배하며, 이는 고전력 소비 가전이나 장시간 정전을 의미 있게 감당하기에 충분하지 않습니다.** 또한 종종 법적 복잡성을 추가합니다: 독일에서는 배터리를 추가하면 시스템이 간소화된 규정상의 플러그인 장치로 취급되지 않으며 배전사업자에도 추가로 등록해야 합니다. VDE-AR-N 4105에 따른 800W 이하 간소화 절차가 있지만 모든 배전사업자가 아직 받아들이는 것은 아닙니다([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)).',
+          '이는 일반적인 개요이며 법률 또는 전기 관련 자문이 아닙니다. 적용되는 규정은 배전사업자, 집주인 또는 자격을 갖춘 전문가에게 확인하십시오.',
         ],
         callouts: [
           { type: 'warning', text: '배터리가 단순한 추가 장비라고 가정하기 전에, 저장장치가 장착된 시스템에 대한 귀하 국가의 구체적인 규칙을 확인하십시오 — 법적 상황이 패널 전용 키트와 의미 있게 다를 수 있습니다.' },
@@ -992,12 +1015,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '내 발코니 태양광 시스템은 배터리 없이 작동하나요?', a: '네, 완전히 작동합니다 — 패널과 마이크로인버터는 배터리 없이도 정상적으로 작동합니다. 배터리는 실제 사용량을 초과하는 잉여 전력에 일어나는 일만 바꿀 뿐입니다.' },
           { q: '배터리가 없으면 여분의 전력은 어떻게 되나요?', a: '일반적으로 귀하의 전력회사가 수출된 태양광 전력에 대해 제공하는 요금으로 계통에 수출되며, 이는 귀하의 특정 전력회사에 따라 흔히 낮은 대가나 무보상입니다.' },
-          { q: '배터리가 저에게 가치가 있는지 어떻게 알 수 있나요?', a: '귀하의 전력회사의 수출 크레딧 요금을 수입 요금과 비교하십시오. 현행 가이드에 따르면 배터리는 약 킬로와트시당 0.15달러 이상의 차이에서 가치가 생긴다고 제안합니다 — 가정하지 말고 귀하의 특정 전력회사의 요금 체계를 확인하십시오.' },
-          { q: '배터리를 추가하면 일부 지역에서 발코니 태양광이 불법이 되나요?', a: '불법은 아니지만 법적 복잡성을 추가할 수 있습니다 — 독일을 포함한 일부 시장에서는 저장장치가 장착된 발코니 시스템을 표준 플러그인 장치를 다루는 간소화된 제도에서 제외합니다.' },
+          { q: '배터리가 저에게 가치가 있는지 어떻게 알 수 있나요?', a: '귀하의 전력회사의 수출 크레딧 요금을 수입 요금과 비교하십시오. 그 차이가 클수록 배터리가 활용할 수 있는 가치가 커지며, 모든 요금제에 맞는 단일 기준은 없습니다 — 가정하지 말고 귀하의 특정 전력회사의 요금 체계를 확인하십시오.' },
+          { q: '배터리를 추가하면 일부 지역에서 발코니 태양광이 불법이 되나요?', a: '불법은 아니지만 법적 복잡성을 추가할 수 있습니다 — 독일에서는 배터리를 추가하면 시스템이 표준 플러그인 장치의 간소화된 제도에서 벗어나 배전사업자에도 추가로 등록해야 하며, 800W 이하 간소화 절차를 모든 사업자가 받아들이는 것은 아닙니다.' },
           { q: '배터리는 정전 시 제 집에 전력을 공급할 수 있나요?', a: '대부분의 발코니 태양광 설치에서는 의미 있는 수준은 아닙니다 — 저장 용량은 한두 개의 패널 시스템에서 나오는 일일 잉여 전력을 기준으로 산정되며, 장시간 정전에 대한 백업 전원이 아닙니다.' },
           { q: '배터리는 발코니 태양광의 좋은 첫 구매 항목인가요?', a: '대개 그렇지 않습니다 — 대부분의 가이드는 패널 전용 키트로 시작하여 실제 사용 패턴과 전력회사의 요금 체계를 확인한 후, 경제성이 뒷받침될 경우 나중에 배터리를 추가할 것을 권장합니다.' },
           { q: '모든 발코니 태양광 배터리는 같은 방식으로 작동하나요?', a: '아니요 — 용량, 클라우드 대 로컬 모니터링, 법적 상태는 모두 브랜드와 모델에 따라 크게 다를 수 있습니다. 검증된 브랜드별 비교는 전용 배터리 구매 가이드를 참고하십시오.' },
           { q: '발코니 태양광 설치의 일반적인 배터리 크기는 얼마인가요?', a: '용량 산정은 고정된 수치가 아니라 귀하의 패널 와트수와 일일 잉여 발전량에 달려 있습니다 — 어떤 제조사도 공식적인 용량 산정 공식을 공개하지 않습니다. 시스템 규모별 검증된 용량 안내는 [용량 산정 및 투자회수 가이드](/ko/balcony-solar/balcony-solar-sizing-yield-payback)를 참고하십시오.' },
+          { q: '독일에서 배터리를 추가하면 등록이 달라집니까?', a: '그렇습니다. 저장장치는 Marktstammdatenregister 외에 배전사업자에도 등록해야 하며, 간소화된 규정에서는 더 이상 플러그인 태양광 장치로 취급되지 않습니다. VDE-AR-N 4105에 따른 800W 이하 간소화 절차가 있지만, 배전사업자는 전환 기간 동안 기존 절차를 계속 적용할 수 있습니다([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)). 또한 [DGS](https://www.dgs.de/service/pvlotse/steckersolar/)는 경제적 이유로 플러그인 장치와 배터리의 조합을 권하지 않습니다.' },
         ],
       },
       relatedReading: {
@@ -1017,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '발코니 태양광에 배터리가 필요한가요?',
       description: '발코니 태양광에 배터리가 필요한가요? 대개 필요하지 않습니다 — 솔직한 답은 한 가지 수치에 달려 있습니다: 전력회사의 수출 크레딧과 수입 요금 간의 차이.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ko/balcony-solar/do-you-need-a-battery-balcony-solar',
       inLanguage: 'ko',
@@ -1036,17 +1060,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Ein Speicher ist die häufigste Zusatzfrage, die Käufer von Balkonsolaranlagen stellen, und die ehrliche Antwort lautet: meist nicht erforderlich, und nicht immer lohnenswert, selbst wenn einer verfügbar ist. Die Entscheidung läuft auf eine einzige Zahl hinaus, die Sie tatsächlich selbst prüfen können.',
     metaDescription: 'Brauchen Sie einen Speicher für Balkonsolar? Meist nicht — die ehrliche Antwort hängt von einer Zahl ab: der Differenz zwischen der Einspeisevergütung Ihres Versorgers und dem Strombezugspreis.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '7 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Käufer von Balkonsolaranlagen, die überlegen, ob sie einen Speicher hinzufügen sollen',
     primaryTerm: 'do I need a balcony solar battery',
     targetKeywords: ['brauche ich einen Speicher für Balkonsolar', 'Balkonsolar ohne Speicher', 'lohnt sich ein Balkonsolar-Speicher', 'Balkonsolar-Speicher notwendig'],
-    leadAnswerBlock: '**Nein, ein Speicher ist nicht erforderlich, damit Balkonsolar funktioniert — das System arbeitet auch ohne einen einwandfrei und speist ungenutzten Überschuss einfach zu der Vergütung Ihres Versorgers ins Netz ein.** Ob sich das Hinzufügen eines Speichers *lohnt*, ist eine separate, engere Frage: Aktuelle Ratgeber deuten darauf hin, dass sich ein Speicher speziell dann rechnet, wenn Ihr Versorger für eingespeisten Strom deutlich weniger vergütet, als er für bezogenen Strom berechnet — etwa eine Differenz von 0,15 $/kWh oder mehr.',
+    leadAnswerBlock: '**Nein, ein Speicher ist nicht erforderlich, damit Balkonsolar funktioniert — das System arbeitet auch ohne einen einwandfrei und speist ungenutzten Überschuss einfach ins Netz ein, in der Regel ohne oder mit nur geringer Vergütung.** Ob sich das Hinzufügen eines Speichers *lohnt*, ist eine separate, engere Frage: Ein Speicher rechnet sich speziell dann, wenn Ihr Versorger für eingespeisten Strom deutlich weniger vergütet, als er für bezogenen Strom berechnet; je größer diese Differenz, desto mehr kann ein Speicher abschöpfen, und eine einheitliche Schwelle für alle Tarife gibt es nicht.',
     quickAnswerTop: {
       de: {
         question: 'Brauche ich einen Speicher für Balkonsolar?',
-        answer: 'Nein — Balkonsolar funktioniert auch ohne Speicher einwandfrei. Ein Speicher ist eine optionale Erweiterung, mit der Sie den Tagesüberschuss für den Abend speichern können, statt ihn ins Netz einzuspeisen. Ob sich die zusätzlichen Kosten lohnen, hängt von der Einspeisevergütung Ihres konkreten Versorgers im Verhältnis zu Ihrem Strombezugspreis ab: Ratgeber deuten darauf hin, dass es sich ab einer Differenz von etwa 0,15 $/kWh oder mehr lohnt.',
+        answer: 'Nein — Balkonsolar funktioniert auch ohne Speicher einwandfrei. Ein Speicher ist eine optionale Erweiterung, mit der Sie den Tagesüberschuss für den Abend speichern können, statt ihn ins Netz einzuspeisen. Ob sich die zusätzlichen Kosten lohnen, hängt von der Einspeisevergütung Ihres konkreten Versorgers im Verhältnis zu Ihrem Strombezugspreis ab: je größer diese Differenz, desto mehr kann ein Speicher abschöpfen, und eine einheitliche Schwelle für alle Tarife gibt es nicht.',
         bullets: [
           'Balkonsolar funktioniert vollständig ohne Speicher — er ist eine optionale Erweiterung, kein Erfordernis',
           'Ohne Speicher wird ungenutzter Überschuss ins Netz eingespeist, typischerweise mit geringer oder keiner Vergütung',
@@ -1054,7 +1078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vergütet Ihr Versorger Einspeisung nahe am vollen Endkundenpreis, erhöht ein Speicher die Kosten, ohne viel Wert hinzuzufügen',
           'Kits mit Speicher unterliegen häufig zusätzlichen rechtlichen oder Anmeldepflichten, die ein reines Paneel-Kit nicht hat — prüfen Sie dies, bevor Sie annehmen, ein Speicher sei eine einfache Erweiterung',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1073,7 +1097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Ein Speicher ist nicht erforderlich — Balkonsolar funktioniert auch vollständig ohne einen.',
           'Ohne Speicher wird Überschussstrom über Ihren aktiven Verbrauch hinaus ins Netz eingespeist, typischerweise mit geringer oder keiner Vergütung.',
-          'Ein Speicher rechnet sich speziell dann, wenn die Einspeisevergütung Ihres Versorgers deutlich unter Ihrem Strombezugspreis liegt — Ratgeber deuten auf eine Differenz von etwa 0,15 $/kWh oder mehr hin.',
+          'Ein Speicher rechnet sich speziell dann, wenn die Einspeisevergütung Ihres Versorgers deutlich unter Ihrem Strombezugspreis liegt — je größer diese Differenz, desto mehr kann ein Speicher abschöpfen.',
           'Vergütet Ihr Versorger Einspeisung nahe am vollen Endkundenpreis, erhöht ein Speicher die Kosten, ohne Ihre Wirtschaftlichkeit spürbar zu verbessern.',
           'Kits mit Speicher unterliegen häufig zusätzlichen rechtlichen oder Anmeldepflichten, die ein reines Paneel-Kit nicht hat — ein realer Faktor jenseits der reinen Wirtschaftlichkeitsfrage.',
           'Die Entscheidung hängt tatsächlich von der Tarifstruktur Ihres konkreten Versorgers ab, nicht von einem universellen Ja oder Nein.',
@@ -1090,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-one-number',
         title: 'Die eine Zahl, die wirklich zählt',
         content: [
-          '**Prüfen Sie die Differenz zwischen dem, was Ihr Versorger Ihnen für eingespeisten Solarstrom zahlt, und dem, was er für bezogenen Strom berechnet — aktuelle Ratgeber deuten darauf hin, dass sich ein Speicher ab einer Differenz von etwa 0,15 $/kWh oder mehr lohnt.** Vergütet Ihr Versorger Einspeisung nahe am vollen Endkundenpreis für Strombezug, gibt es wenig, was ein Speicher noch einfangen könnte, da Sie bereits ohne einen den größten Teil des Werts aus dem Überschuss ziehen.',
+          '**Prüfen Sie die Differenz zwischen dem, was Ihr Versorger Ihnen für eingespeisten Solarstrom zahlt, und dem, was er für bezogenen Strom berechnet — je größer diese Differenz, desto mehr kann ein Speicher abschöpfen, und eine einheitliche Schwelle für alle Tarife gibt es nicht.** Vergütet Ihr Versorger Einspeisung nahe am vollen Endkundenpreis für Strombezug, gibt es wenig, was ein Speicher noch einfangen könnte, da Sie bereits ohne einen den größten Teil des Werts aus dem Überschuss ziehen.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Ein Balkonsolar-Speicher lohnt sich nur dann, wenn Ihr Versorger für eingespeisten Strom deutlich weniger zahlt, als er für bezogenen Strom berechnet.' },
@@ -1102,13 +1126,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was ein Speicher tatsächlich bringt',
         content: [
           '**Ein Speicher ermöglicht es, den Tagesüberschuss für die abendliche Nutzung zu verschieben — das zählt am meisten, wenn Ihr Haushalt nach Sonnenuntergang mehr Strom verbraucht als tagsüber, ein verbreitetes Muster bei Menschen, die außer Haus arbeiten.** Den aktuellen Hardware-Vergleich und Hinweise zur Kapazitätswahl finden Sie im [Speicher-Ratgeber](/de/balcony-solar/best-balcony-solar-batteries-2026), sofern Sie bereits geprüft haben, dass sich die Wirtschaftlichkeit für Ihre Situation ergibt.',
+          'Der Wert gespeicherter Energie hängt von Ihrem Tarif ab. In Deutschland wird Überschuss aus einem Steckersolargerät in der Regel nicht vergütet, sodass jede gespeicherte Kilowattstunde eine ersetzt, die Sie sonst kaufen würden; dennoch rät die [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) aus wirtschaftlichen Gründen davon ab, ein Steckersolargerät mit einem Speicher zu kombinieren — rechnen Sie daher vor dem Kauf mit Ihren eigenen Preisen nach.',
         ],
       },
       whatItDoesntSolve: {
         id: 'what-it-doesnt-solve',
         title: 'Was ein Speicher nicht löst',
         content: [
-          '**Ein Speicher macht Balkonsolar nicht zur Stromquelle für das gesamte Haus — er speichert und verteilt weiterhin nur die vergleichsweise geringe Überschussmenge, die ein Ein- oder Zwei-Paneel-System erzeugt, nicht genug, um stromintensive Geräte oder längere Stromausfälle spürbar abzudecken.** Zudem erhöht er häufig die rechtliche Komplexität: In manchen Märkten, darunter Deutschland, fallen Balkonanlagen mit Speicher aus der vereinfachten Regelung für Standard-Steckersolargeräte heraus und benötigen stattdessen eine vollständige Anmeldung beim Netzbetreiber.',
+          '**Ein Speicher macht Balkonsolar nicht zur Stromquelle für das gesamte Haus — er speichert und verteilt weiterhin nur die vergleichsweise geringe Überschussmenge, die ein Ein- oder Zwei-Paneel-System erzeugt, nicht genug, um stromintensive Geräte oder längere Stromausfälle spürbar abzudecken.** Zudem erhöht er häufig die rechtliche Komplexität: In Deutschland gilt ein System mit Speicher nicht mehr als Steckersolargerät im Sinne der vereinfachten Regeln: Es muss zusätzlich beim Netzbetreiber angemeldet werden, und obwohl es nach VDE-AR-N 4105 ein vereinfachtes Verfahren für bis zu 800 W gibt, akzeptiert es noch nicht jeder Netzbetreiber ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)).',
+          'Dies ist ein allgemeiner Überblick und keine Rechts- oder Elektroberatung — klären Sie die für Sie geltenden Regeln mit Ihrem Netzbetreiber, Ihrem Vermieter oder einer Fachperson ab.',
         ],
         callouts: [
           { type: 'warning', text: 'Prüfen Sie die spezifischen Vorschriften Ihres Landes für Systeme mit Speicher, bevor Sie annehmen, ein Speicher sei eine einfache, direkt einsetzbare Erweiterung — die rechtliche Lage kann sich spürbar von der eines reinen Paneel-Kits unterscheiden.' },
@@ -1120,12 +1146,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Funktioniert meine Balkonsolaranlage ohne Speicher?', a: 'Ja, vollständig — Panel und Mikro-Wechselrichter funktionieren auch ohne einen normal. Ein Speicher verändert nur, was mit Überschussstrom über Ihren aktiven Verbrauch hinaus passiert.' },
           { q: 'Was passiert mit überschüssigem Strom, wenn ich keinen Speicher habe?', a: 'Er wird typischerweise zu der Vergütung, die Ihr Versorger für eingespeisten Solarstrom bietet, ins Netz eingespeist — je nach Versorger oft eine geringe oder gar keine Vergütung.' },
-          { q: 'Wie erkenne ich, ob sich ein Speicher für mich lohnt?', a: 'Vergleichen Sie die Einspeisevergütung Ihres Versorgers mit Ihrem Strombezugspreis. Aktuelle Ratgeber deuten darauf hin, dass sich ein Speicher ab einer Differenz von etwa 0,15 $/kWh oder mehr lohnt — prüfen Sie die Tarifstruktur Ihres konkreten Versorgers, statt es anzunehmen.' },
-          { q: 'Macht das Hinzufügen eines Speichers Balkonsolar irgendwo illegal?', a: 'Nicht illegal, aber es kann die rechtliche Komplexität erhöhen — manche Märkte, darunter Deutschland, schließen Balkonanlagen mit Speicher aus der vereinfachten Regelung für Standard-Steckersolargeräte aus.' },
+          { q: 'Wie erkenne ich, ob sich ein Speicher für mich lohnt?', a: 'Vergleichen Sie die Einspeisevergütung Ihres Versorgers mit Ihrem Strombezugspreis. Je größer diese Differenz, desto mehr kann ein Speicher abschöpfen, und eine einheitliche Schwelle für alle Tarife gibt es nicht — prüfen Sie die Tarifstruktur Ihres konkreten Versorgers, statt es anzunehmen.' },
+          { q: 'Macht das Hinzufügen eines Speichers Balkonsolar irgendwo illegal?', a: 'Nicht illegal, aber es kann die rechtliche Komplexität erhöhen — in Deutschland nimmt ein Speicher das System aus der vereinfachten Regelung für Standard-Steckersolargeräte heraus: Es muss zusätzlich beim Netzbetreiber angemeldet werden, mit einem vereinfachten Verfahren für bis zu 800 W, das nicht jeder Netzbetreiber akzeptiert.' },
           { q: 'Kann ein Speicher mein Haus bei einem Stromausfall versorgen?', a: 'Bei den meisten Balkonsolar-Setups nicht spürbar — die Speicherkapazität ist auf den täglichen Überschuss eines Ein- oder Zwei-Paneel-Systems ausgelegt, nicht auf Notstrom für längere Ausfälle.' },
           { q: 'Ist ein Speicher eine gute erste Anschaffung für Balkonsolar?', a: 'Meist nicht — die meisten Ratgeber empfehlen, zunächst mit einem reinen Paneel-Kit zu starten, das tatsächliche Verbrauchsmuster und die Tarifstruktur Ihres Versorgers zu prüfen und erst später einen Speicher hinzuzufügen, falls sich die Wirtschaftlichkeit dafür ausspricht.' },
           { q: 'Funktionieren alle Balkonsolar-Speicher gleich?', a: 'Nein — Kapazität, Cloud- gegenüber lokaler Überwachung und rechtlicher Status können je nach Marke und Modell erheblich variieren. Den verifizierten Markenvergleich finden Sie im dedizierten Speicher-Ratgeber.' },
           { q: 'Welche Speichergröße ist für ein Balkonsolar-Setup typisch?', a: 'Die Dimensionierung hängt von der Panel-Leistung und der täglichen Überschusserzeugung ab, nicht von einer festen Zahl — kein Hersteller veröffentlicht eine formale Dimensionierungsformel. Verifizierte Kapazitätshinweise nach Systemgröße finden Sie im [Ratgeber zu Dimensionierung, Ertrag und Amortisation](/de/balcony-solar/balcony-solar-sizing-yield-payback).' },
+          { q: 'Ändert ein Speicher die Anmeldung in Deutschland?', a: 'Ja. Ein Speicher muss zusätzlich zum Marktstammdatenregister beim Netzbetreiber angemeldet werden, und das Gerät gilt nach den vereinfachten Regeln nicht mehr als Steckersolargerät. Nach VDE-AR-N 4105 gibt es ein vereinfachtes Verfahren für bis zu 800 W, doch Netzbetreiber dürfen für eine Übergangszeit das ältere Verfahren weiter anwenden ([Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)). Die [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) rät außerdem aus wirtschaftlichen Gründen davon ab, ein Steckersolargerät mit einem Speicher zu kombinieren.' },
         ],
       },
       relatedReading: {
@@ -1145,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Brauchen Sie einen Speicher für Balkonsolar?',
       description: 'Brauchen Sie einen Speicher für Balkonsolar? Meist nicht — die ehrliche Antwort hängt von einer Zahl ab: der Differenz zwischen der Einspeisevergütung Ihres Versorgers und dem Strombezugspreis.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/de/balcony-solar/do-you-need-a-battery-balcony-solar',
       inLanguage: 'de',

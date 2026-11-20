@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Balcony solar is designed for self-installation, but "plug-in" doesn\'t mean "no risk." This guide covers the mounting and electrical steps in order, with the safety warnings placed where they matter — before you start, not buried at the end.',
     metaDescription: 'How to install balcony solar step by step, with the electrical safety warnings and what-not-to-do guidance placed before you start, not as an afterthought.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     readTime: '10 min read',
     educationalLevel: 'Intermediate',
     audience: 'First-time balcony solar buyers preparing to self-install their system',
@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Never open, modify, or attempt to repair the micro-inverter yourself',
           'If anything about the outlet, wiring, or mounting surface seems abnormal, stop and consult a licensed electrician',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -63,6 +63,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Before You Start',
         content: [
           '**Confirm two things before you buy anything: whether balcony solar is legal where you live, and whether any registration is required.** Both vary significantly by country and, in the US, by state — check the [legal status guide](/balcony-solar/is-balcony-solar-legal-country-guide) and the [registration how-to](/balcony-solar/how-to-register-balcony-solar) first, since installing before confirming either can mean undoing work later or running afoul of local rules.',
+          'Installation-side rules differ too. In Germany, a plug-in device must be entered in the Marktstammdatenregister within one month of commissioning; [ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/) notes that missing the deadline is an administrative offence with fines of up to €50,000 under § 95 EnWG, and that an older meter that still runs backwards is tolerated only until the grid operator replaces it. In the US, state laws set their own certification and wattage tiers — Maine, for example, lets a homeowner or renter connect a single device of 420 W or less, while up to 1,200 W requires a certified electrician (pv magazine USA) — so read your own state\'s rule, not a general guide.',
+          'This is a general overview, not legal or electrical advice — confirm the rules that apply to you with your grid operator, your landlord or a qualified professional.',
         ],
       },
       whatYouNeed: {
@@ -113,6 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Plug Types, Simplified',
         content: [
           '**Plug types vary by country — Schuko in much of continental Europe, NEMA in the US, and other standards elsewhere — and your kit needs to match your local standard.** For the specific plug type, per-country pricing, and hardware cost context for your market, see the [registration guide](/balcony-solar/how-to-register-balcony-solar), which covers this country-by-country detail directly rather than duplicating it here.',
+          'In Germany, the product standard for plug-in solar devices (DIN VDE V 0126-95) allows a standard Schuko plug up to 960 Wp of module power and calls for a dedicated feed-in plug above that, according to the [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740); some local subsidy programmes require the Wieland feed-in plug, so check the conditions before buying. Whatever the plug, connect each device to its own fixed socket: the [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) states that a multi-socket strip is prohibited for safety reasons.',
         ],
       },
       troubleshooting: {
@@ -134,6 +137,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Is it safe to install balcony solar on a windy balcony?', a: 'Only if your mounting hardware is rated for the wind conditions at your location — check the manufacturer\'s wind load rating and consider that a hard requirement, not a suggestion, before mounting in an exposed location.' },
           { q: 'Can I repair or open the micro-inverter myself if something seems wrong?', a: 'No — treat it as a sealed, non-serviceable unit. Opening or modifying it yourself is a safety risk and will likely void any warranty.' },
           { q: 'What plug type does my balcony solar kit need?', a: 'This depends on your country\'s electrical standard — Schuko in much of continental Europe, NEMA in the US, and other standards elsewhere. See the registration guide for country-specific detail.' },
+          { q: 'Do I need my landlord\'s or owners\' association\'s permission to install balcony solar?', a: 'It depends on where you live. In Germany, tenants and condominium owners have a legal claim to consent: under [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html) a landlord can refuse only if the change is unreasonable for them, and the Verbraucherzentrale applies the same "unreasonable" test to owners\' associations. It still advises asking first. In the US, state laws differ — some, such as New Jersey\'s and Colorado\'s, address HOA or landlord restrictions, many do not — so check your state\'s law, your lease and your building rules.' },
+          { q: 'Do I have to register balcony solar before plugging it in?', a: 'Not necessarily before — it depends on the country. In Germany, the Verbraucherzentrale says the device can go into operation right after purchase, with registration in the Marktstammdatenregister due within one month of commissioning ([ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)). Other countries and US states differ; the [registration guide](/balcony-solar/how-to-register-balcony-solar) covers them by market.' },
         ],
       },
     },
@@ -143,7 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'How to Install Balcony Solar: A Safety-First Step-by-Step Guide',
       description: 'How to install balcony solar step by step, with the electrical safety warnings and what-not-to-do guidance placed before you start, not as an afterthought.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/balcony-solar/how-to-install-balcony-solar',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
@@ -189,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nunca abras, modifiques ni intentes reparar el microinversor tú mismo',
           'Si algo en la toma, el cableado o la superficie de montaje parece anómalo, detente y consulta a un electricista con licencia',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -220,6 +225,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Antes de empezar',
         content: [
           '**Confirma dos cosas antes de comprar nada: si la energía solar de balcón es legal donde vives y si necesita registro.** Ambas cosas varían mucho según el país y, en EE. UU., según el estado — revisa primero la [guía de estado legal](/es/balcony-solar/is-balcony-solar-legal-country-guide) y la [guía de registro](/es/balcony-solar/how-to-register-balcony-solar), ya que instalar antes de confirmar cualquiera de las dos puede significar deshacer el trabajo después o incumplir la normativa local.',
+          'Las reglas también difieren en la instalación. En Alemania, un dispositivo plug-in debe inscribirse en el Marktstammdatenregister en el plazo de un mes desde su puesta en marcha; según [ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/), no hacerlo a tiempo es una infracción administrativa con multas de hasta 50 000 euros conforme al § 95 EnWG, y un contador antiguo que gira hacia atrás solo se tolera hasta que el operador de red lo sustituya. En EE. UU., las leyes estatales fijan sus propios niveles de certificación y potencia: Maine, por ejemplo, permite que un propietario o inquilino conecte un único dispositivo de 420 W o menos, mientras que hasta 1,200 W exige un electricista certificado (pv magazine USA). Por eso conviene leer la norma de tu propio estado y no una guía general.',
+          'Esto es una visión general, no asesoramiento legal ni eléctrico: confirma las normas que te afectan con tu operador de red, tu arrendador o un profesional cualificado.',
         ],
       },
       whatYouNeed: {
@@ -270,6 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tipos de enchufe, simplificado',
         content: [
           '**Los tipos de enchufe varían según el país — Schuko en gran parte de la Europa continental, NEMA en EE. UU., y otros estándares en otras regiones — y tu kit debe coincidir con el estándar local.** Para el tipo de enchufe específico, los precios por país y el contexto de coste del hardware para tu mercado, consulta la [guía de registro](/es/balcony-solar/how-to-register-balcony-solar), que cubre este detalle país por país directamente en lugar de repetirlo aquí.',
+          'En Alemania, la norma de producto para dispositivos solares plug-in (DIN VDE V 0126-95) permite, según la [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740), el enchufe Schuko estándar hasta 960 Wp de potencia de módulos y exige un conector de inyección específico por encima de esa cifra; algunos programas locales de ayudas exigen el conector de inyección Wieland, así que revisa las condiciones antes de comprar. Sea cual sea el enchufe, conecta cada dispositivo a su propia toma fija: la [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) indica que una regleta está prohibida por motivos de seguridad.',
         ],
       },
       troubleshooting: {
@@ -291,6 +299,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Es seguro instalar energía solar de balcón en un balcón con mucho viento?', a: 'Solo si tu hardware de montaje está clasificado para las condiciones de viento de tu ubicación — comprueba la clasificación de carga de viento del fabricante y considérala un requisito estricto, no una sugerencia, antes de montar en una ubicación expuesta.' },
           { q: '¿Puedo reparar o abrir el microinversor yo mismo si algo parece ir mal?', a: 'No — trátalo como una unidad sellada y no reparable. Abrirlo o modificarlo tú mismo es un riesgo de seguridad y probablemente anulará cualquier garantía.' },
           { q: '¿Qué tipo de enchufe necesita mi kit de energía solar de balcón?', a: 'Depende del estándar eléctrico de tu país — Schuko en gran parte de la Europa continental, NEMA en EE. UU., y otros estándares en otras regiones. Consulta la guía de registro para el detalle específico por país.' },
+          { q: '¿Necesito el permiso del propietario o de la comunidad de vecinos para instalar energía solar de balcón?', a: 'Depende de dónde vivas. En Alemania, inquilinos y propietarios de viviendas tienen derecho a reclamar el consentimiento: según el [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html), el arrendador solo puede negarse si el cambio le resulta inexigible, y la Verbraucherzentrale aplica el mismo criterio a las comunidades de propietarios. Aun así, aconseja preguntar antes. En EE. UU. las leyes estatales difieren: algunas, como las de Nueva Jersey y Colorado, abordan las restricciones de las asociaciones de propietarios (HOA) o de los arrendadores, y muchas no; revisa la ley de tu estado, tu contrato de alquiler y las normas del edificio.' },
+          { q: '¿Tengo que registrar la energía solar de balcón antes de enchufarla?', a: 'No necesariamente antes: depende del país. En Alemania, según la Verbraucherzentrale, el dispositivo puede ponerse en marcha justo después de la compra, y el registro en el Marktstammdatenregister vence un mes después de la puesta en marcha ([ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)). Otros países y estados de EE. UU. difieren; la [guía de registro](/es/balcony-solar/how-to-register-balcony-solar) los cubre por mercado.' },
         ],
       },
     },
@@ -300,7 +310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Cómo instalar energía solar de balcón: guía de seguridad paso a paso',
       description: 'Cómo instalar energía solar de balcón paso a paso, con las advertencias de seguridad eléctrica y las indicaciones de qué NO hacer explicadas antes de empezar, no como una nota al final.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/es/balcony-solar/how-to-install-balcony-solar',
       inLanguage: 'es',
@@ -348,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nunca abra, modifique ou tente consertar o microinversor você mesmo',
           'Se algo na tomada, na fiação ou na superfície de montagem parecer fora do normal, pare e procure um eletricista licenciado',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -379,6 +389,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Antes de começar',
         content: [
           '**Confirme duas coisas antes de comprar qualquer coisa: se a energia solar de varanda é legal onde você mora e se é preciso registro.** As duas coisas variam bastante de país para país e, nos EUA, de estado para estado — confira primeiro o [guia de status legal](/pt/balcony-solar/is-balcony-solar-legal-country-guide) e o [guia de registro](/pt/balcony-solar/how-to-register-balcony-solar), já que instalar antes de confirmar qualquer um dos dois pode significar desfazer o trabalho depois ou infringir regras locais.',
+          'As regras também variam na instalação. Na Alemanha, um dispositivo plug-in precisa ser registrado no Marktstammdatenregister em até um mês após o início da operação; segundo o [ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/), não cumprir o prazo é infração administrativa, com multas de até 50 000 euros conforme o § 95 EnWG, e um medidor antigo que gira ao contrário só é tolerado até a operadora de rede substituí-lo. Nos EUA, as leis estaduais definem suas próprias faixas de certificação e potência: o Maine, por exemplo, permite que um proprietário ou inquilino conecte um único dispositivo de 420 W ou menos, enquanto até 1,200 W exige um eletricista certificado (pv magazine USA). Por isso, leia a regra do seu próprio estado, não um guia genérico.',
+          'Esta é uma visão geral, não aconselhamento jurídico nem elétrico: confirme as regras que valem para você com sua operadora de rede, seu locador ou um profissional qualificado.',
         ],
       },
       whatYouNeed: {
@@ -429,6 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tipos de tomada, simplificado',
         content: [
           '**Os tipos de tomada variam por país — Schuko em boa parte da Europa continental, NEMA nos EUA, e outros padrões em outros lugares — e o seu kit precisa ser compatível com o padrão local.** Para o tipo de tomada específico, preços por país e o contexto de custo de hardware do seu mercado, veja o [guia de registro](/pt/balcony-solar/how-to-register-balcony-solar), que cobre esse detalhe país a país diretamente em vez de repeti-lo aqui.',
+          'Na Alemanha, a norma de produto para dispositivos solares plug-in (DIN VDE V 0126-95) permite, segundo a [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740), o plugue Schuko padrão até 960 Wp de potência dos módulos e exige um conector de injeção específico acima disso; alguns programas locais de incentivo exigem o conector de injeção Wieland, então confira as condições antes de comprar. Seja qual for o plugue, conecte cada dispositivo à sua própria tomada fixa: a [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) afirma que o uso de régua de tomadas é proibido por motivos de segurança.',
         ],
       },
       troubleshooting: {
@@ -450,6 +463,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'É seguro instalar energia solar de varanda em uma varanda com muito vento?', a: 'Só se o seu hardware de montagem for classificado para as condições de vento do seu local — verifique a classificação de carga de vento do fabricante e trate isso como uma exigência rígida, não uma sugestão, antes de montar em um local exposto.' },
           { q: 'Posso consertar ou abrir o microinversor sozinho se algo parecer errado?', a: 'Não — trate-o como uma unidade lacrada e não reparável. Abri-lo ou modificá-lo por conta própria é um risco de segurança e provavelmente vai anular qualquer garantia.' },
           { q: 'Que tipo de tomada meu kit de energia solar de varanda precisa?', a: 'Isso depende do padrão elétrico do seu país — Schuko em boa parte da Europa continental, NEMA nos EUA, e outros padrões em outros lugares. Veja o guia de registro para o detalhe específico por país.' },
+          { q: 'Preciso da permissão do proprietário ou do condomínio para instalar energia solar de varanda?', a: 'Depende de onde você mora. Na Alemanha, inquilinos e condôminos têm direito a reivindicar o consentimento: segundo o [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html), o locador só pode recusar se a mudança for inexigível para ele, e a Verbraucherzentrale aplica o mesmo critério às comunidades de proprietários. Ainda assim, recomenda perguntar antes. Nos EUA, as leis estaduais variam: algumas, como as de Nova Jersey e do Colorado, tratam das restrições de associações de moradores (HOA) ou de locadores, e muitas não; confira a lei do seu estado, seu contrato de locação e as regras do prédio.' },
+          { q: 'Preciso registrar a energia solar de varanda antes de ligá-la?', a: 'Não necessariamente antes: depende do país. Na Alemanha, segundo a Verbraucherzentrale, o dispositivo pode entrar em operação logo após a compra, e o registro no Marktstammdatenregister vence em um mês após o início da operação ([ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)). Outros países e estados dos EUA diferem; o [guia de registro](/pt/balcony-solar/how-to-register-balcony-solar) os cobre por mercado.' },
         ],
       },
     },
@@ -459,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Como instalar energia solar de varanda: guia de segurança passo a passo',
       description: 'Como instalar energia solar de varanda passo a passo, com os avisos de segurança elétrica e as orientações do que NÃO fazer apresentados antes de você começar, não como nota de rodapé.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/pt/balcony-solar/how-to-install-balcony-solar',
       inLanguage: 'pt-BR',
@@ -507,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُمنع منعًا باتًا فتح الـ micro-inverter أو تعديله أو محاولة إصلاحه بنفسك',
           'إذا بدا أي شيء في المقبس أو الأسلاك أو سطح التثبيت غير طبيعي، توقف واستشر كهربائيًا مرخصًا',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -538,6 +553,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قبل أن تبدأ',
         content: [
           '**تأكد من أمرين قبل شراء أي شيء: ما إذا كانت الطاقة الشمسية للشرفة قانونية في مكان إقامتك، وما إذا كانت تتطلب تسجيلًا.** يختلف كلا الأمرين بشكل كبير حسب الدولة، وفي الولايات المتحدة حسب الولاية — راجع أولًا [دليل الوضع القانوني](/ar/balcony-solar/is-balcony-solar-legal-country-guide) و[دليل التسجيل](/ar/balcony-solar/how-to-register-balcony-solar)، لأن التركيب قبل التأكد من أي منهما قد يعني التراجع عن العمل لاحقًا أو مخالفة القواعد المحلية.',
+          'تختلف القواعد المتعلقة بالتركيب أيضًا. ففي ألمانيا يجب تسجيل جهاز الطاقة الشمسية القابل للتوصيل المباشر في سجل Marktstammdatenregister خلال شهر واحد من بدء التشغيل؛ وبحسب [ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/) فإن تجاوز المهلة مخالفة إدارية بغرامة تصل إلى 50,000 يورو بموجب المادة 95 من قانون EnWG، ولا يُتسامح مع العداد القديم الذي يدور عكسيًا إلا إلى حين يستبدله مشغل الشبكة. وفي الولايات المتحدة تضع قوانين الولايات مستويات اعتماد وقدرة خاصة بها — فولاية Maine مثلًا تسمح لمالك المنزل أو المستأجر بتوصيل جهاز واحد بقدرة 420 واط أو أقل، بينما يتطلب ما يصل إلى 1,200 واط كهربائيًا معتمدًا (pv magazine USA) — لذا اقرأ قاعدة ولايتك بدلًا من دليل عام.',
+          'هذه نظرة عامة وليست استشارة قانونية أو كهربائية — تأكد من القواعد التي تنطبق عليك لدى مشغل الشبكة أو المؤجر أو مختص مؤهل.',
         ],
       },
       whatYouNeed: {
@@ -588,6 +605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'أنواع القوابس، ببساطة',
         content: [
           '**تختلف أنواع القوابس حسب الدولة — Schuko في معظم أوروبا القارية، وNEMA في الولايات المتحدة، ومعايير أخرى في أماكن أخرى — ويجب أن تتطابق مجموعتك مع المعيار المحلي لديك.** للاطلاع على نوع القابس المحدد، والأسعار الخاصة بكل دولة، وسياق تكلفة الأجهزة في سوقك، راجع [دليل التسجيل](/ar/balcony-solar/how-to-register-balcony-solar)، الذي يغطي هذا التفصيل حسب كل دولة مباشرةً بدلًا من تكراره هنا.',
+          'في ألمانيا، يسمح معيار المنتج الخاص بأجهزة الطاقة الشمسية القابلة للتوصيل المباشر (DIN VDE V 0126-95)، بحسب [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)، بقابس Schuko القياسي حتى 960 Wp من قدرة الألواح، ويشترط قابس تغذية مخصصًا فوق ذلك؛ وتشترط بعض برامج الدعم المحلية قابس التغذية Wieland، فتحقق من الشروط قبل الشراء. وأيًّا كان القابس، صِل كل جهاز بمقبس ثابت خاص به: فبحسب [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) يُحظر استخدام مشترك المقابس المتعددة لأسباب تتعلق بالسلامة.',
         ],
       },
       troubleshooting: {
@@ -609,6 +627,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل التركيب آمن في شرفة معرضة للرياح؟', a: 'فقط إذا كان عتاد التثبيت لديك مصنَّفًا لظروف الرياح في موقعك — تحقق من تصنيف حمل الرياح الصادر عن الشركة المصنِّعة واعتبره شرطًا صارمًا، لا مجرد اقتراح، قبل التثبيت في موقع مكشوف.' },
           { q: 'هل يمكنني إصلاح أو فتح الـ micro-inverter بنفسي إذا بدا شيء غير طبيعي؟', a: 'لا — تعامل معه كوحدة مغلقة غير قابلة للصيانة. فتحه أو تعديله بنفسك يمثل خطرًا على السلامة، ومن المرجح أن يُبطل أي ضمان.' },
           { q: 'ما نوع القابس الذي تحتاجه مجموعة الطاقة الشمسية للشرفة الخاصة بي؟', a: 'يعتمد ذلك على المعيار الكهربائي في دولتك — Schuko في معظم أوروبا القارية، وNEMA في الولايات المتحدة، ومعايير أخرى في أماكن أخرى. راجع دليل التسجيل للاطلاع على التفاصيل الخاصة بكل دولة.' },
+          { q: 'هل أحتاج إلى إذن المالك أو اتحاد الملاك لتركيب الطاقة الشمسية للشرفة؟', a: 'يعتمد ذلك على مكان إقامتك. ففي ألمانيا يملك المستأجرون وملاك الشقق حقًا قانونيًا في طلب الموافقة: فبموجب [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html) لا يجوز للمؤجر الرفض إلا إذا كان التغيير غير معقول بالنسبة له، وتطبق Verbraucherzentrale معيار "عدم المعقولية" نفسه على اتحادات الملاك. ومع ذلك تنصح بالسؤال أولًا. وفي الولايات المتحدة تختلف قوانين الولايات — بعضها، مثل قوانين نيوجيرسي وكولورادو، يتناول قيود اتحادات الملاك أو المؤجرين، وكثير منها لا يتناولها — لذا راجع قانون ولايتك وعقد الإيجار وقواعد المبنى.' },
+          { q: 'هل يجب تسجيل الطاقة الشمسية للشرفة قبل توصيلها؟', a: 'ليس بالضرورة قبل ذلك — فالأمر يختلف حسب البلد. ففي ألمانيا، بحسب Verbraucherzentrale، يمكن تشغيل الجهاز مباشرة بعد الشراء، على أن يتم التسجيل في Marktstammdatenregister خلال شهر من بدء التشغيل ([ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)). وتختلف الدول والولايات الأمريكية الأخرى؛ ويغطيها [دليل التسجيل](/ar/balcony-solar/how-to-register-balcony-solar) حسب كل سوق.' },
         ],
       },
     },
@@ -618,7 +638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'كيفية تركيب الطاقة الشمسية للشرفة: دليل خطوة بخطوة يركز على السلامة',
       description: 'كيفية تركيب الطاقة الشمسية للشرفة خطوة بخطوة، مع تحذيرات السلامة الكهربائية وإرشادات ما يجب عدم فعله موضوعة قبل البدء، وليست فكرة لاحقة.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ar/balcony-solar/how-to-install-balcony-solar',
       inLanguage: 'ar',
@@ -655,7 +675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['Balkonkraftwerk installieren', 'Balkonkraftwerk Installationsschritte', 'Balkonkraftwerk sicher installieren', 'Balkonkraftwerk elektrische Sicherheit'],
     leadAnswerBlock: '**Ein Balkonkraftwerk zu installieren bedeutet, das Solarmodul sicher zu befestigen, es mit dem Mikrowechselrichter zu verbinden und den Mikrowechselrichter in eine dedizierte Steckdose – empfohlen: Wieland RST20i3 – einzustecken. Klären Sie aber vor dem Kauf die Legalität und die Anmeldepflicht in Ihrer Region, und stecken Sie das System niemals in eine Steckdose, die bereits mit anderen Verbrauchern geteilt wird, oder in eine Steckerleiste bzw. ein Verlängerungskabel.** Die Montage ist der einfache Teil; der Elektroanschluss ist der Punkt, an dem Fehler echte Sicherheitsfolgen haben.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-11-20',
     quickAnswerTop: {
       de: {
         question: 'Ist es sicher, ein Balkonkraftwerk selbst zu installieren?',
@@ -667,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Den Mikrowechselrichter niemals selbst öffnen, modifizieren oder versuchen zu reparieren',
           'Wenn irgendetwas an der Steckdose, der Verkabelung oder der Montagefläche ungewöhnlich erscheint, die Arbeit einstellen und einen Elektrofachmann hinzuziehen',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -698,6 +718,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Vor dem Start',
         content: [
           '**Klären Sie zwei Dinge, bevor Sie irgendetwas kaufen: ob Balkonkraftwerke in Ihrer Gemeinde legal sind, und ob eine Anmeldung erforderlich ist.** In Deutschland ist die Registrierung im Marktstammdatenregister (MaStR) vor Inbetriebnahme gesetzlich vorgeschrieben – prüfen Sie zunächst den [Legalitätsleitfaden](/de/balcony-solar/is-balcony-solar-legal-country-guide) und den [Anmeldungsguide](/de/balcony-solar/how-to-register-balcony-solar), denn das Installieren, ohne beides geprüft zu haben, kann nachträgliche Rückbauarbeit oder Verstöße gegen örtliche Vorschriften bedeuten.',
+          'Auch auf der Installationsseite unterscheiden sich die Regeln. In Deutschland muss ein Steckersolargerät innerhalb eines Monats nach Inbetriebnahme im Marktstammdatenregister eingetragen werden; laut [ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/) ist eine verspätete Meldung eine Ordnungswidrigkeit nach § 95 EnWG mit einem Bußgeld von bis zu 50 000 €, und ein älterer, rückwärts laufender Zähler wird nur so lange geduldet, bis der Netzbetreiber ihn austauscht. In den USA legen die Bundesstaaten eigene Zertifizierungs- und Leistungsstufen fest — Maine erlaubt etwa Hausbesitzern oder Mietern den Anschluss eines einzelnen Geräts mit bis zu 420 W, für bis zu 1 200 W ist ein zertifizierter Elektriker nötig (pv magazine USA) — lesen Sie also die Regel Ihres eigenen Bundesstaats statt eines allgemeinen Ratgebers.',
+          'Dies ist ein allgemeiner Überblick und keine Rechts- oder Elektroberatung — klären Sie die für Sie geltenden Regeln mit Ihrem Netzbetreiber, Ihrem Vermieter oder einer Fachperson ab.',
         ],
       },
       whatYouNeed: {
@@ -748,6 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Steckertypen vereinfacht',
         content: [
           '**Steckertypen variieren nach Land – Schuko (CEE 7 / Typ F) im Großteil Kontinentaleuropas, NEMA in den USA, andere Standards anderswo. In Deutschland ist für den Anschluss von Mikrowechselrichtern nach VDE der Wieland-Steckverbinder (RST20i3) empfohlen; eine gewöhnliche Schuko-Steckdose ist zwar weit verbreitet, der Wieland-Anschluss gilt jedoch als Best Practice.** Für den spezifischen Steckertyp, länderbezogene Preise und Hardware-Kosten in Ihrem Markt lesen Sie den [Anmeldungsguide](/de/balcony-solar/how-to-register-balcony-solar), der diese Einzelheiten direkt je Land behandelt.',
+          'In Deutschland erlaubt die Produktnorm für Steckersolargeräte (DIN VDE V 0126-95) laut [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740) den üblichen Schuko-Stecker bis 960 Wp Modulleistung und verlangt darüber einen speziellen Einspeisestecker; einige regionale Förderprogramme schreiben den Wieland-Einspeisestecker vor, prüfen Sie die Bedingungen also vor dem Kauf. Schließen Sie jedes Gerät unabhängig vom Steckertyp an eine eigene fest installierte Steckdose an: Die [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) bezeichnet Steckdosenleisten aus Sicherheitsgründen als verboten.',
         ],
       },
       troubleshooting: {
@@ -769,6 +792,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ist die Installation auf einem windigen Balkon sicher?', a: 'Nur wenn Ihre Montagehardware für die Windlast an Ihrem Standort ausgelegt ist – prüfen Sie die Windlast-Einstufung des Herstellers und betrachten Sie sie als verbindliche Anforderung, nicht als Empfehlung, bevor Sie an einem exponierten Standort montieren.' },
           { q: 'Darf ich den Mikrowechselrichter selbst reparieren oder öffnen, wenn etwas nicht stimmt?', a: 'Nein – behandeln Sie ihn als versiegeltes, nicht selbst wartbares Gerät. Das selbstständige Öffnen oder Modifizieren ist ein Sicherheitsrisiko und macht wahrscheinlich jede Garantie nichtig.' },
           { q: 'Muss ich das Balkonkraftwerk in Deutschland anmelden?', a: 'Ja. In Deutschland ist die Registrierung im Marktstammdatenregister (MaStR) vor Inbetriebnahme verpflichtend – die Anmeldung sollte abgeschlossen sein, bevor Sie das System ans Netz bringen. Details dazu im Anmeldungsguide.' },
+          { q: 'Brauche ich die Erlaubnis meines Vermieters oder der Eigentümergemeinschaft für Balkonsolar?', a: 'Das hängt vom Wohnort ab. In Deutschland haben Mieter und Wohnungseigentümer einen Anspruch auf Zustimmung: Nach [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html) darf ein Vermieter nur ablehnen, wenn ihm die Veränderung unzumutbar ist, und die Verbraucherzentrale wendet denselben Maßstab der Unzumutbarkeit auf Eigentümergemeinschaften an. Sie rät trotzdem, vorher zu fragen. In den USA unterscheiden sich die Gesetze der Bundesstaaten — manche, etwa die von New Jersey und Colorado, regeln Beschränkungen durch Eigentümergemeinschaften oder Vermieter, viele nicht —, prüfen Sie daher das Recht Ihres Bundesstaats, Ihren Mietvertrag und die Hausregeln.' },
+          { q: 'Muss ich Balkonsolar anmelden, bevor ich es einstecke?', a: 'Nicht unbedingt davor — das hängt vom Land ab. In Deutschland darf das Gerät laut Verbraucherzentrale direkt nach dem Kauf in Betrieb gehen; die Anmeldung im Marktstammdatenregister ist innerhalb eines Monats nach Inbetriebnahme fällig ([ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)). In anderen Ländern und US-Bundesstaaten gelten andere Regeln; die [Anmeldeanleitung](/de/balcony-solar/how-to-register-balcony-solar) behandelt sie nach Markt.' },
         ],
       },
     },
@@ -778,7 +803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Balkonkraftwerk installieren: Sicherheits-Schritt-für-Schritt-Anleitung',
       description: 'Balkonkraftwerk Schritt für Schritt installieren – mit Sicherheitshinweisen zur Elektrik und Verbotsliste, die vor dem Start erklärt werden, nicht als Nachgedanke.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/de/balcony-solar/how-to-install-balcony-solar',
       inLanguage: 'de',
@@ -826,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'マイクロインバーターを自分で開けたり、改造したり、修理しようとしたりしない',
           'コンセント、配線、設置面のいずれかに異常が見られる場合は、作業を中止し、有資格の電気技師に相談する',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -857,6 +882,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '始める前に',
         content: [
           '**何かを購入する前に、2つのことを確認してください:お住まいの地域でバルコニーソーラーが合法かどうか、そして登録が必要かどうかです。** これらは国によって、そして米国では州によって大きく異なります。まず[法的状況ガイド](/ja/balcony-solar/is-balcony-solar-legal-country-guide)と[登録方法ガイド](/ja/balcony-solar/how-to-register-balcony-solar)を確認してください。どちらかを確認せずに設置してしまうと、後で作業をやり直したり、地域の規則に違反したりする可能性があります。',
+          '設置に関するルールも国や地域で異なります。ドイツでは、プラグイン型ソーラー機器は運転開始から1か月以内にMarktstammdatenregister（マスター登録簿）への登録が必要です。[ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)によると、期限を過ぎると § 95 EnWG に基づく秩序違反となり、最大5万ユーロの過料が科される可能性があります。また、逆回転する古いメーターは、系統事業者が交換するまでの間だけ容認されます。米国では州法が独自の認証・出力区分を定めており、たとえばメイン州では、住宅所有者や賃借人が接続できるのは420W以下の機器1台までで、最大1,200Wの機器には認定電気技師が必要です（pv magazine USA）。一般的なガイドではなく、お住まいの州の規則を確認してください。',
+          'これは一般的な概要であり、法的助言や電気工事上の助言ではありません。お客様に適用される規則は、系統事業者、大家さん、または有資格の専門家に確認してください。',
         ],
       },
       whatYouNeed: {
@@ -907,6 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'プラグの種類をわかりやすく',
         content: [
           '**プラグの種類は国によって異なります — 大陸ヨーロッパの多くではシュコ(Schuko)、米国ではNEMA、その他の地域では別の規格が使われています — お使いのキットは現地の規格に対応している必要があります。** 具体的なプラグの種類、国別の価格、お使いの市場でのハードウェア費用については、[登録ガイド](/ja/balcony-solar/how-to-register-balcony-solar)をご覧ください。このガイドでは国別の詳細をここで繰り返すのではなく、直接解説しています。',
+          'ドイツでは、[Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)によると、プラグイン型ソーラー機器の製品規格（DIN VDE V 0126-95）は、モジュール出力960Wpまで一般的なSchukoプラグを認め、それを超える場合は専用の給電プラグを求めています。地域の補助金プログラムの中にはWielandの給電プラグを必須とするものもあるため、購入前に条件を確認してください。プラグの種類にかかわらず、各機器は専用の固定コンセントに接続してください。[DGS](https://www.dgs.de/service/pvlotse/steckersolar/)は、安全上の理由からテーブルタップの使用は禁止されていると述べています。',
         ],
       },
       troubleshooting: {
@@ -928,6 +956,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '風の強いバルコニーにバルコニーソーラーを設置しても安全ですか?', a: 'お使いの取り付け金具が設置場所の風条件に対応した定格を持っている場合に限ります — 露出した場所に設置する前に、メーカーの風荷重定格を確認し、それを提案ではなく厳格な要件として扱ってください。' },
           { q: '異常を感じた場合、マイクロインバーターを自分で修理したり開けたりできますか?', a: 'いいえ — 密閉された修理不可能なユニットとして扱ってください。自分で開けたり改造したりすることは安全上のリスクであり、保証が無効になる可能性が高いです。' },
           { q: 'バルコニーソーラーキットにはどのプラグの種類が必要ですか?', a: 'これはお住まいの国の電気規格によって異なります — 大陸ヨーロッパの多くではシュコ、米国ではNEMA、その他の地域では別の規格です。国別の詳細については登録ガイドをご覧ください。' },
+          { q: 'バルコニーソーラーの設置に、大家さんや管理組合の許可は必要ですか？', a: 'お住まいの地域によります。ドイツでは、賃借人とマンション区分所有者に同意を求める法的な権利があります。[§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)により、賃貸人が拒否できるのは変更が賃貸人にとって不合理な場合に限られ、Verbraucherzentraleは区分所有者の管理組合にも同じ「不合理」の基準が当てはまるとしています。それでも事前に相談することを勧めています。米国では州法が異なり、ニュージャージー州やコロラド州のようにHOAや賃貸人による制限に触れている州もあれば、触れていない州も多くあります。州の法律、賃貸契約、建物の規則を確認してください。' },
+          { q: 'バルコニーソーラーは差し込む前に登録が必要ですか？', a: '必ずしも事前ではなく、国によって異なります。ドイツでは、Verbraucherzentraleによると機器は購入後すぐに運転でき、Marktstammdatenregisterへの登録は運転開始から1か月以内に行います（[ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)）。他の国や米国の州では異なります。市場別の内容は[登録ガイド](/ja/balcony-solar/how-to-register-balcony-solar)をご覧ください。' },
         ],
       },
     },
@@ -937,7 +967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'バルコニーソーラーの設置方法:安全第一のステップバイステップガイド',
       description: 'バルコニーソーラーの設置手順をステップバイステップで解説。電気安全に関する注意点と「やってはいけないこと」は後付けではなく、始める前に説明します。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ja/balcony-solar/how-to-install-balcony-solar',
       inLanguage: 'ja',
@@ -985,7 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '切勿自行打开、改装或尝试维修微型逆变器',
           '如果插座、线路或安装表面出现任何异常,请立即停止并咨询持证电工',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1016,6 +1046,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '开始之前',
         content: [
           '**在购买任何物品之前,先确认两件事:阳台光伏在您所在地是否合法,以及是否需要登记。** 这两点因国家而异,在美国还因州而异——请先查阅[合法性指南](/zh/balcony-solar/is-balcony-solar-legal-country-guide)和[登记指南](/zh/balcony-solar/how-to-register-balcony-solar),因为在未确认这两点之前就安装,可能意味着日后需要拆除,或违反当地规定。',
+          '安装方面的规则同样因地而异。在德国，插拔式光伏设备须在投运后一个月内登记到 Marktstammdatenregister；据 [ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)，逾期属于违反秩序的行为，依据 EnWG 第 95 条最高可罚 5 万欧元，而仍会反转的旧电表只在电网运营商更换之前被容忍。在美国，各州法律自行规定认证和功率分级——例如缅因州允许房主或租户连接单台 420 瓦及以下的设备，最高 1,200 瓦则需要持证电工（pv magazine USA）——因此请查阅你所在州的规定，而不要只看通用指南。',
+          '以上仅为一般性概述，不构成法律或电气方面的建议——请向电网运营商、房东或合格专业人士确认适用于你的规定。',
         ],
       },
       whatYouNeed: {
@@ -1066,6 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '插头类型简介',
         content: [
           '**插头类型因国家而异——欧洲大陆大部分地区使用Schuko插头,美国使用NEMA插头,其他地区则采用不同标准——您的套件必须与当地标准匹配。** 有关具体插头类型、各国价格以及您所在市场的硬件费用背景,请参阅[登记指南](/zh/balcony-solar/how-to-register-balcony-solar),该指南直接按国家逐一介绍这些细节,此处不再重复。',
+          '在德国，据 [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)，插拔式光伏设备的产品标准（DIN VDE V 0126-95）允许在组件功率不超过 960 Wp 时使用普通 Schuko 插头，超过后则要求使用专用并网插头；一些地方补贴项目要求使用 Wieland 并网插头，购买前请先核对条件。无论使用哪种插头，都应让每台设备接入各自固定的插座：[DGS](https://www.dgs.de/service/pvlotse/steckersolar/) 指出，出于安全原因禁止使用插线板。',
         ],
       },
       troubleshooting: {
@@ -1087,6 +1120,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '在风大的阳台上安装阳台光伏系统安全吗?', a: '只有当您的安装五金的额定风荷载与当地风况相匹配时才安全——在暴露的位置安装前,请核实厂商的风荷载额定值,并将其视为硬性要求,而非建议。' },
           { q: '如果觉得有问题,我可以自行维修或打开微型逆变器吗?', a: '不可以——应将其视为密封、不可自行维修的部件。自行打开或改装存在安全隐患,并很可能使保修失效。' },
           { q: '我的阳台光伏套件需要哪种插头类型?', a: '这取决于您所在国家的电气标准——欧洲大陆大部分地区为Schuko插头,美国为NEMA插头,其他地区则采用不同标准。具体国家的详情请参阅登记指南。' },
+          { q: '安装阳台光伏需要房东或业主委员会的许可吗？', a: '这取决于你所在的地方。在德国，租户和公寓业主享有要求同意的法定权利：根据 [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)，只有当变更对房东不合理时才可拒绝，Verbraucherzentrale 对业主共同体适用同样的“不合理”标准，但仍建议先询问。在美国，各州法律不同——新泽西州和科罗拉多州等的法律涉及业主协会（HOA）或房东的限制，许多州则没有——请查阅你所在州的法律、租约和楼宇规定。' },
+          { q: '插上电之前必须先登记阳台光伏吗？', a: '不一定要在之前——这取决于国家。在德国，据 Verbraucherzentrale，设备购买后即可投入运行，投运后一个月内在 Marktstammdatenregister 登记即可（[ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)）。其他国家和美国各州规定不同；[登记指南](/zh/balcony-solar/how-to-register-balcony-solar)按市场逐一说明。' },
         ],
       },
     },
@@ -1096,7 +1131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '如何安装阳台光伏:安全优先的分步指南',
       description: '如何分步安装阳台光伏系统,电气安全警告和禁止事项在开始前就已说明,而不是事后补充。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/zh/balcony-solar/how-to-install-balcony-solar',
       inLanguage: 'zh',
@@ -1144,7 +1179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'N\'ouvrez, ne modifiez et n\'essayez jamais de réparer le micro-onduleur vous-même',
           'Si quelque chose semble anormal au niveau de la prise, du câblage ou de la surface de fixation, arrêtez-vous et consultez un électricien agréé',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1175,6 +1210,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Avant de commencer',
         content: [
           '**Vérifiez deux choses avant d\'acheter quoi que ce soit : si le solaire de balcon est légal là où vous vivez, et s\'il nécessite un enregistrement.** Ces deux points varient considérablement selon le pays et, aux États-Unis, selon l\'État — consultez d\'abord le [guide du statut légal](/fr/balcony-solar/is-balcony-solar-legal-country-guide) et le [guide d\'enregistrement](/fr/balcony-solar/how-to-register-balcony-solar), car installer avant d\'avoir vérifié l\'un ou l\'autre peut signifier devoir défaire le travail plus tard ou enfreindre la réglementation locale.',
+          'Les règles diffèrent aussi côté installation. En Allemagne, un appareil solaire enfichable doit être inscrit au Marktstammdatenregister dans le mois suivant sa mise en service ; selon l\'[ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/), un retard est une infraction administrative passible d\'une amende pouvant atteindre 50 000 € (§ 95 EnWG), et un ancien compteur qui tourne à l\'envers n\'est toléré que jusqu\'à son remplacement par le gestionnaire de réseau. Aux États-Unis, les lois des États fixent leurs propres niveaux de certification et de puissance : le Maine, par exemple, autorise un propriétaire ou un locataire à raccorder un seul appareil de 420 W ou moins, tandis que jusqu\'à 1 200 W il faut un électricien certifié (pv magazine USA). Lisez donc la règle de votre propre État plutôt qu\'un guide général.',
+          'Ceci est un aperçu général, pas un conseil juridique ni électrique : confirmez les règles qui vous concernent auprès de votre gestionnaire de réseau, de votre bailleur ou d\'un professionnel qualifié.',
         ],
       },
       whatYouNeed: {
@@ -1225,6 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Types de prises, simplifiés',
         content: [
           '**Les types de prises varient selon le pays — Schuko dans une grande partie de l\'Europe continentale, NEMA aux États-Unis, et d\'autres normes ailleurs — et votre kit doit correspondre à la norme locale.** Pour le type de prise spécifique, les prix par pays et le contexte de coût du matériel pour votre marché, consultez le [guide d\'enregistrement](/fr/balcony-solar/how-to-register-balcony-solar), qui traite directement ce détail pays par pays plutôt que de le répéter ici.',
+          'En Allemagne, la norme produit pour les appareils solaires enfichables (DIN VDE V 0126-95) autorise, selon la [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740), la fiche Schuko standard jusqu\'à 960 Wp de puissance de modules et exige une fiche d\'injection dédiée au-delà ; certains programmes d\'aides locaux imposent la fiche d\'injection Wieland, vérifiez donc les conditions avant d\'acheter. Quelle que soit la fiche, raccordez chaque appareil à sa propre prise fixe : la [DGS](https://www.dgs.de/service/pvlotse/steckersolar/) indique que la multiprise est interdite pour des raisons de sécurité.',
         ],
       },
       troubleshooting: {
@@ -1246,6 +1284,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Est-il sûr d\'installer un panneau solaire de balcon sur un balcon venteux ?', a: 'Seulement si votre quincaillerie de fixation est conçue pour les conditions de vent de votre localité — vérifiez la charge de vent nominale du fabricant et considérez-la comme une exigence stricte, pas une suggestion, avant de fixer dans un emplacement exposé.' },
           { q: 'Puis-je réparer ou ouvrir le micro-onduleur moi-même si quelque chose semble anormal ?', a: 'Non — traitez-le comme une unité scellée et non réparable. L\'ouvrir ou le modifier vous-même est un risque pour la sécurité et annulera probablement toute garantie.' },
           { q: 'De quel type de prise mon kit solaire de balcon a-t-il besoin ?', a: 'Cela dépend de la norme électrique de votre pays — Schuko dans une grande partie de l\'Europe continentale, NEMA aux États-Unis, et d\'autres normes ailleurs. Consultez le guide d\'enregistrement pour le détail spécifique à chaque pays.' },
+          { q: 'Ai-je besoin de l\'accord de mon propriétaire ou de la copropriété pour installer du solaire de balcon ?', a: 'Cela dépend de l\'endroit où vous vivez. En Allemagne, locataires et copropriétaires disposent d\'un droit à obtenir l\'accord : selon le [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html), un bailleur ne peut refuser que si la modification lui est inexigible, et la Verbraucherzentrale applique le même critère aux copropriétés. Elle conseille néanmoins de demander avant. Aux États-Unis, les lois des États diffèrent — certaines, comme celles du New Jersey et du Colorado, traitent des restrictions des associations de propriétaires (HOA) ou des bailleurs, beaucoup non — vérifiez donc la loi de votre État, votre bail et le règlement de l\'immeuble.' },
+          { q: 'Dois-je déclarer le solaire de balcon avant de le brancher ?', a: 'Pas forcément avant : cela dépend du pays. En Allemagne, selon la Verbraucherzentrale, l\'appareil peut être mis en service dès l\'achat, l\'inscription au Marktstammdatenregister étant due dans le mois suivant la mise en service ([ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)). Les autres pays et les États américains diffèrent ; le [guide d\'enregistrement](/fr/balcony-solar/how-to-register-balcony-solar) les couvre par marché.' },
         ],
       },
     },
@@ -1255,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Comment installer un panneau solaire de balcon : guide de sécurité étape par étape',
       description: 'Comment installer un panneau solaire de balcon étape par étape, avec les avertissements de sécurité électrique et les précautions à prendre présentés avant de commencer, pas comme un ajout de dernière minute.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/fr/balcony-solar/how-to-install-balcony-solar',
       inLanguage: 'fr',
@@ -1303,7 +1343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '마이크로인버터를 직접 열거나 개조하거나 수리하려고 하지 마세요',
           '콘센트, 배선, 거치 표면 중 어느 하나라도 이상해 보이면 즉시 작업을 중단하고 자격을 갖춘 전기 기술자에게 문의하세요',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1334,6 +1374,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '시작하기 전에',
         content: [
           '**무엇이든 구매하기 전에 두 가지를 확인하세요: 거주 지역에서 발코니 태양광이 합법인지, 그리고 등록이 필요한지입니다.** 이 두 가지는 국가별로, 미국의 경우 주별로 크게 다릅니다 — 먼저 [법적 상태 가이드](/ko/balcony-solar/is-balcony-solar-legal-country-guide)와 [등록 방법 가이드](/ko/balcony-solar/how-to-register-balcony-solar)를 확인하세요. 둘 중 하나라도 확인하지 않고 설치하면 나중에 작업을 되돌리거나 지역 규정을 위반하게 될 수 있습니다.',
+          '설치와 관련한 규정도 국가마다 다릅니다. 독일에서는 플러그인 태양광 장치를 가동 후 1개월 이내에 Marktstammdatenregister에 등록해야 하며, [ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)에 따르면 기한을 넘기면 EnWG § 95에 따른 질서위반으로 최대 5만 유로의 과태료가 부과될 수 있습니다. 또한 역회전하는 구형 계량기는 배전사업자가 교체할 때까지만 용인됩니다. 미국에서는 주법이 인증과 출력 구간을 각자 정하며, 예를 들어 메인주는 주택 소유자나 임차인이 420W 이하 장치 1대를 연결할 수 있게 하고 최대 1,200W는 공인 전기기술자가 필요합니다(pv magazine USA). 일반 가이드가 아니라 거주 주의 규정을 확인하십시오.',
+          '이는 일반적인 개요이며 법률 또는 전기 관련 자문이 아닙니다. 적용되는 규정은 배전사업자, 집주인 또는 자격을 갖춘 전문가에게 확인하십시오.',
         ],
       },
       whatYouNeed: {
@@ -1384,6 +1426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '플러그 유형 한눈에 보기',
         content: [
           '**플러그 유형은 국가마다 다릅니다 — 유럽 대륙 대부분은 슈코(Schuko), 미국은 NEMA, 그 외 지역은 또 다른 규격을 사용합니다 — 사용하는 키트는 현지 규격에 맞아야 합니다.** 구체적인 플러그 유형, 국가별 가격, 해당 시장의 하드웨어 비용에 대한 맥락은 [등록 가이드](/ko/balcony-solar/how-to-register-balcony-solar)를 참고하세요. 이 가이드는 국가별 세부 사항을 여기서 반복하지 않고 직접 다룹니다.',
+          '독일에서는 [Verbraucherzentrale](https://www.verbraucherzentrale.de/wissen/energie/erneuerbare-energien/gesetze-und-normen-fuer-steckersolar-was-gilt-was-gilt-noch-nicht-90740)에 따르면 플러그인 태양광 장치의 제품 표준(DIN VDE V 0126-95)이 모듈 출력 960Wp까지는 일반 Schuko 플러그를 허용하고, 그 이상에서는 전용 계통연계 플러그를 요구합니다. 일부 지역 보조금 프로그램은 Wieland 계통연계 플러그를 의무화하므로 구매 전에 조건을 확인하십시오. 플러그 종류와 관계없이 각 장치는 자체 고정 콘센트에 연결해야 합니다. [DGS](https://www.dgs.de/service/pvlotse/steckersolar/)는 안전상의 이유로 멀티탭 사용이 금지되어 있다고 밝히고 있습니다.',
         ],
       },
       troubleshooting: {
@@ -1405,6 +1448,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '바람이 강한 발코니에 태양광을 설치해도 안전한가요?', a: '거치 하드웨어가 해당 지역의 풍속 조건에 맞는 정격을 갖춘 경우에만 안전합니다 — 노출된 위치에 거치하기 전에 제조사의 풍하중 정격을 확인하고, 이를 권장 사항이 아니라 엄격한 요건으로 취급하세요.' },
           { q: '이상이 느껴지면 마이크로인버터를 직접 수리하거나 열어봐도 되나요?', a: '아니요 — 밀폐된, 수리 불가능한 부품으로 취급하세요. 직접 열거나 개조하는 것은 안전 위험이며 보증이 무효화될 가능성이 높습니다.' },
           { q: '발코니 태양광 키트에는 어떤 플러그 유형이 필요한가요?', a: '이는 거주 국가의 전기 규격에 따라 다릅니다 — 유럽 대륙 대부분은 슈코, 미국은 NEMA, 그 외 지역은 또 다른 규격입니다. 국가별 세부 사항은 등록 가이드를 참고하세요.' },
+          { q: '발코니 태양광을 설치하려면 집주인이나 관리단의 허락이 필요합니까?', a: '거주 지역에 따라 다릅니다. 독일에서는 임차인과 공동주택 소유자에게 동의를 요구할 법적 권리가 있습니다. [§ 554 BGB](https://www.gesetze-im-internet.de/bgb/__554.html)에 따라 임대인은 변경이 자신에게 기대하기 어려운 경우에만 거부할 수 있으며, Verbraucherzentrale는 소유자 단체에도 같은 "기대 불가능" 기준을 적용한다고 설명합니다. 그래도 먼저 문의할 것을 권합니다. 미국에서는 주법이 다르며, 뉴저지와 콜로라도처럼 HOA나 임대인의 제한을 다루는 주도 있고 그렇지 않은 주도 많습니다. 거주 주의 법률, 임대차 계약, 건물 규정을 확인하십시오.' },
+          { q: '발코니 태양광은 연결하기 전에 등록해야 합니까?', a: '반드시 사전은 아니며 국가마다 다릅니다. 독일에서는 Verbraucherzentrale에 따르면 구매 직후 바로 가동할 수 있고, Marktstammdatenregister 등록은 가동 후 1개월 이내에 해야 합니다([ADAC](https://www.adac.de/rund-ums-haus/energie/versorgung/balkonkraftwerk-anmelden/)). 다른 국가와 미국의 주는 다르며, [등록 가이드](/ko/balcony-solar/how-to-register-balcony-solar)에서 시장별로 다룹니다.' },
         ],
       },
     },
@@ -1414,7 +1459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '발코니 태양광 설치 방법: 안전 우선 단계별 가이드',
       description: '발코니 태양광을 단계별로 설치하는 방법. 전기 안전 경고와 하지 말아야 할 사항을 나중에 덧붙이지 않고 시작하기 전에 안내합니다.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-11-20',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ko/balcony-solar/how-to-install-balcony-solar',
       inLanguage: 'ko',
