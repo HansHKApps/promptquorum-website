@@ -183,19 +183,79 @@ function parsePublishedSet(publishedFile) {
   return set
 }
 
-// Resolves `export const NAME = 'value'` from anywhere under src/lib, for the
-// rare case where dateModified references a shared constant instead of a literal.
+// Extracts the latest ISO date literal ('YYYY-MM-DD') from an arbitrary JS
+// expression string — covers ternaries, template literals, comparisons, etc.
+function extractIsoFromExpression(expr) {
+  const hits = []
+  const re = /'(\d{4}-\d{2}-\d{2})'/g
+  let m
+  while ((m = re.exec(expr))) hits.push(m[1])
+  return hits.length ? hits.sort().pop() : null
+}
+
+// Resolves a constant name to an ISO date string.
+//
+// Resolution order:
+//   1. If filePath is given, search that file for `(export )? const NAME = …`.
+//      a. Simple literal  → use it directly.
+//      b. Expression      → take the latest ISO date literal inside it, then also
+//         resolve any UPPER_SNAKE_CASE identifiers it references (one level deep,
+//         via the src/lib export-grep below), and return the latest date overall.
+//   2. Fallback: grep src/lib for `export const NAME = 'literal'` (original behaviour).
+//
+// Falls back gracefully at every step; never throws.
 const constantCache = new Map()
-function resolveConstant(name) {
-  if (constantCache.has(name)) return constantCache.get(name)
-  const out = execSync(
-    `grep -rhoE "export const ${name}\\s*=\\s*'[^']*'" ${path.join(ROOT, 'src/lib')} || true`,
-    { encoding: 'utf-8' }
-  ).trim()
-  const m = /=\s*'([^']*)'/.exec(out.split('\n')[0] || '')
-  const value = m ? m[1] : null
-  constantCache.set(name, value)
-  return value
+function resolveConstant(name, filePath = null) {
+  const cacheKey = filePath ? `${filePath}::${name}` : name
+  if (constantCache.has(cacheKey)) return constantCache.get(cacheKey)
+
+  let result = null
+
+  // Step 1: file-local search (non-exported and exported consts in the same file)
+  if (filePath) {
+    try {
+      const src = fs.readFileSync(filePath, 'utf-8')
+      const localRe = new RegExp(`(?:export )?const ${name}\\s*=\\s*([^;\\n]+)`)
+      const lm = localRe.exec(src)
+      if (lm) {
+        const rhs = lm[1].trim()
+        // a. Direct ISO literal: const NAME = 'YYYY-MM-DD'
+        const directIso = /^['"](\d{4}-\d{2}-\d{2})['"]/.exec(rhs)
+        if (directIso) {
+          result = directIso[1]
+        } else {
+          // b. Expression — gather ISO dates from literals and from referenced consts
+          const candidates = []
+          const litDate = extractIsoFromExpression(rhs)
+          if (litDate) candidates.push(litDate)
+          // Resolve every UPPER_SNAKE_CASE identifier found in the expression
+          const refRe = /\b([A-Z_][A-Z0-9_]{2,})\b/g
+          let rm
+          while ((rm = refRe.exec(rhs))) {
+            if (rm[1] === name) continue // avoid self-reference
+            const refVal = resolveConstant(rm[1]) // exported-only search, no filePath
+            if (refVal && /^\d{4}-\d{2}-\d{2}$/.test(refVal)) candidates.push(refVal)
+          }
+          if (candidates.length) result = candidates.sort().pop()
+        }
+      }
+    } catch {
+      // unreadable file — fall through to Step 2
+    }
+  }
+
+  // Step 2: grep src/lib for `export const NAME = 'literal'` (original behaviour)
+  if (!result) {
+    const out = execSync(
+      `grep -rhoE "export const ${name}\\s*=\\s*'[^']*'" ${path.join(ROOT, 'src/lib')} || true`,
+      { encoding: 'utf-8' }
+    ).trim()
+    const m = /=\s*'([^']*)'/.exec(out.split('\n')[0] || '')
+    if (m) result = m[1]
+  }
+
+  constantCache.set(cacheKey, result)
+  return result
 }
 
 // Accepts ISO 'YYYY-MM-DD' or loose 'Month D, YYYY' (with optional leading words,
@@ -243,16 +303,22 @@ function extractLocaleBlock(src, loc) {
   return splitLocaleBlocks(src)[loc] ?? null
 }
 
-function extractField(block, field) {
+// Returns true if the field key exists in the block at all (regardless of value type).
+// Used to emit a data-quality warning when the key is present but its value cannot be resolved.
+function hasField(block, field) {
+  return new RegExp(`\\n\\s*["']?${field}["']?:\\s*`).test(block)
+}
+
+function extractField(block, field, filePath = null) {
   // Quoted values first — matched by same-quote-char, not by stopping at the first
   // comma, since date values like 'Published March 14, 2026' contain one.
   const quotedRe = new RegExp(`\\n\\s*["']?${field}["']?:\\s*(['"])((?:\\\\.|(?!\\1)[\\s\\S])*)\\1`)
   const qm = quotedRe.exec(block)
   if (qm) return qm[2]
-  // bare identifier referencing a shared constant
+  // bare identifier — resolve via file-local search first, then src/lib export grep
   const identRe = new RegExp(`\\n\\s*["']?${field}["']?:\\s*([A-Z_][A-Z0-9_]*)\\s*,?`)
   const im = identRe.exec(block)
-  if (im) return resolveConstant(im[1])
+  if (im) return resolveConstant(im[1], filePath)
   return null
 }
 
@@ -366,14 +432,19 @@ function loadArticles() {
       }
       const src = fs.readFileSync(filePath, 'utf-8')
       const enBlock = extractEnBlock(src)
-      const dateModifiedRaw = extractField(enBlock, 'dateModified')
-      const publishDateRaw = extractField(enBlock, 'publishDate')
+      const dateModifiedRaw = extractField(enBlock, 'dateModified', filePath)
+      const publishDateRaw = extractField(enBlock, 'publishDate', filePath)
 
       let parsed = dateModifiedRaw ? parseFlexibleDate(dateModifiedRaw) : null
       let usedField = 'dateModified'
       if (!parsed && publishDateRaw) {
         parsed = parseFlexibleDate(publishDateRaw)
         usedField = 'publishDate'
+        // Warn when the dateModified key exists but its value could not be resolved —
+        // that means the resolver needs to be extended, not that the data is missing.
+        if (hasField(enBlock, 'dateModified')) {
+          warnings.push(`${cluster.name}/${slug}: dateModified key present but value could not be resolved (bare identifier?) — falling back to publishDate; fix resolveConstant or use a literal`)
+        }
       }
       if (!parsed) {
         warnings.push(`${cluster.name}/${slug}: no parseable date (dateModified=${dateModifiedRaw}, publishDate=${publishDateRaw}) — excluded from stats`)
@@ -386,7 +457,7 @@ function loadArticles() {
       const locales = {}
       for (const loc of LOCALES) {
         const lb = extractLocaleBlock(src, loc)
-        const raw = lb ? extractField(lb, 'dateModified') || extractField(lb, 'publishDate') : null
+        const raw = lb ? extractField(lb, 'dateModified', filePath) || extractField(lb, 'publishDate', filePath) : null
         const lp = raw ? parseFlexibleDate(raw) : null
         locales[loc] = lb ? (lp ? lp.date : 'nodate') : 'missing'
       }
