@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
   engine: 'external',
-  license: 'Proprietary (bundled with Docker Desktop)',
+  license: 'Apache-2.0 (model-runner repo; also bundled with Docker Desktop)', // repo license verified 2026-11-20: https://github.com/docker/model-runner (GitHub API spdx Apache-2.0); Docker Desktop itself has its own terms
   price: 'freemium',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // docs.docker.com/ai/model-runner: default llama.cpp engine "works on all platforms" including CPU; no fixed minimum RAM/VRAM published (GPU requirements only listed per-driver for optional GPU acceleration), verified 2026-09-13
   stars: null,
