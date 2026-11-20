@@ -28,14 +28,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Balcony solar buyers in Portugal and Brazil researching legal status',
     primaryTerm: 'energia solar de varanda',
     targetKeywords: ['energia solar de varanda legal portugal', 'placas solares plug and play portugal', 'energia solar de tomada brasil', 'balcony solar legal portugal'],
-    leadAnswerBlock: '**Portugal explicitly permits balcony solar under a codified simplified regime: systems up to 800W AC output with no grid export need no registration at all, per Decreto-Lei n.º 15/2022.** Brazil has no comparable framework — small plug-in kits are not banned, but ANEEL\'s formal micro-geração process technically applies uniformly up to 75kW with no documented wattage carve-out, and press coverage explicitly confirms plug-in kits still have no specific regulation, existing in an informally tolerated gray zone rather than a legal exemption.',
+    leadAnswerBlock: '**Portugal explicitly permits balcony solar under a codified simplified regime: systems up to 800W AC output with no grid export need no registration at all, per Decreto-Lei n.º 15/2022 (as amended by Decreto-Lei n.º 130/2026; the 800 W figure is per the Portuguese government press release).** Brazil has no comparable framework — small plug-in kits are not banned, but ANEEL\'s formal micro-geração process technically applies uniformly up to 75kW with no documented wattage carve-out, and press coverage explicitly confirms plug-in kits still have no specific regulation, existing in an informally tolerated gray zone rather than a legal exemption.',
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in Portugal and Brazil?',
         answer: 'Portugal: yes, explicitly, with one of the clearest simplified regimes covered in this guide — systems up to 800W AC output with no grid export need no registration at all. Brazil: not banned, but no dedicated framework exists either — small plug-in kits operate in an informally tolerated gray zone under ANEEL\'s general rules, which technically apply the same formal process regardless of system size.',
         bullets: [
-          'Portugal: ≤800W AC, no grid export → no registration needed at all, per Decreto-Lei n.º 15/2022',
-          'Portugal 800W–30kW: simplified online notification (Mera Comunicação Prévia) via DGEG',
+          'Portugal: ≤800W AC, no grid export → no registration needed at all, per Decreto-Lei n.º 15/2022 (as amended by Decreto-Lei n.º 130/2026; the 800 W figure is per the Portuguese government press release)',
+          'Portugal 800W–30kW: simplified online notification (Mera Comunicação Prévia) via DGEG (800 W per the government press release)',
           'Brazil: no dedicated plug-in-solar law — ANEEL\'s REN 1.059/2023 micro-geração rules technically apply uniformly, with no wattage carve-out',
           'Brazil: press explicitly confirms plug-in kits "ainda não conta[m] com uma regulamentação específica" (still have no specific regulation)',
           'When Brazilian Portuguese content is authored for this cluster, it must be pt-BR specifically — não português europeu',
@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Portugal has one of the clearest, most confidently sourced simplified regimes in this guide — statutory text (Decreto-Lei n.º 15/2022), not just vendor claims.',
-          'Systems up to 800W AC output with no grid export need no registration in Portugal at all; 800W–30kW needs only a simplified online notification.',
+          'Systems up to 800W AC output with no grid export need no registration in Portugal at all; 800W–30kW needs only a simplified online notification. (800 W per the government press release)',
           'Brazil has no dedicated plug-in-solar law — press coverage explicitly confirms this rather than leaving it as an inference.',
           'Brazil\'s ANEEL REN 1.059/2023 micro-geração process technically applies uniformly regardless of system size, with no documented small-system exemption — small kits exist in informal tolerance, not codified permission.',
           'This is a genuinely different risk profile than Portugal\'s codified exemption, even though neither country bans balcony solar outright.',
@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Do I need to register balcony solar in Portugal?', a: 'Not if your system is 800W AC output or less with no grid export — that tier is exempt from prior control entirely under Decreto-Lei n.º 15/2022. Systems between 800W and 30kW need only a simplified online notification.' },
+          { q: 'Do I need to register balcony solar in Portugal?', a: 'Not if your system is 800W AC output or less with no grid export — that tier is exempt from prior control entirely under Decreto-Lei n.º 15/2022 (as amended by Decreto-Lei n.º 130/2026; the 800 W figure is per the Portuguese government press release). Systems between 800W and 30kW need only a simplified online notification.' },
           { q: 'Is balcony solar illegal in Brazil?', a: 'No, it\'s not banned — but there\'s also no dedicated law permitting it with a simplified process. Small kits currently exist in an informally tolerated gray zone under ANEEL\'s general rules, which is a different situation from Portugal\'s codified exemption.' },
           { q: 'What certification do I need in Brazil for a balcony solar system?', a: 'INMETRO certification for the inverter and ABNT technical compliance, per the general ANEEL framework — the same requirements that apply to any grid-tied solar system regardless of size.' },
           { q: 'Which is safer to buy into: Portugal or Brazil?', a: 'Portugal offers clearer legal certainty due to its codified exemption. Brazil\'s situation carries more regulatory ambiguity since no dedicated small-system framework exists, even though enforcement against tiny plug-in kits is not currently reported as active.' },
@@ -151,14 +151,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Compradores de energía solar de balcón en Portugal y Brasil que investigan su estatus legal',
     primaryTerm: 'energia solar de varanda',
     targetKeywords: ['energía solar de balcón legal portugal', 'placas solares plug and play portugal', 'energía solar de enchufe brasil', 'balcony solar legal portugal'],
-    leadAnswerBlock: '**Portugal permite explícitamente la energía solar de balcón bajo un régimen simplificado codificado: los sistemas de hasta 800W de salida CA sin inyección a la red no necesitan ningún registro, según el Decreto-Lei n.º 15/2022.** Brasil no tiene un marco comparable — los kits plug-in pequeños no están prohibidos, pero el proceso formal de micro-geração de ANEEL técnicamente se aplica de manera uniforme hasta 75kW sin ninguna exención de potencia documentada, y la prensa confirma explícitamente que los kits plug-in todavía no tienen una regulación específica, existiendo en una zona gris tolerada informalmente en lugar de una exención legal.',
+    leadAnswerBlock: '**Portugal permite explícitamente la energía solar de balcón bajo un régimen simplificado codificado: los sistemas de hasta 800W de salida CA sin inyección a la red no necesitan ningún registro, según el Decreto-Lei n.º 15/2022 (modificado por el Decreto-Lei n.º 130/2026; la cifra de 800 W procede del comunicado de prensa del Gobierno portugués).** Brasil no tiene un marco comparable — los kits plug-in pequeños no están prohibidos, pero el proceso formal de micro-geração de ANEEL técnicamente se aplica de manera uniforme hasta 75kW sin ninguna exención de potencia documentada, y la prensa confirma explícitamente que los kits plug-in todavía no tienen una regulación específica, existiendo en una zona gris tolerada informalmente en lugar de una exención legal.',
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en Portugal y Brasil?',
         answer: 'Portugal: sí, explícitamente, con uno de los regímenes simplificados más claros de esta guía — los sistemas de hasta 800W de salida CA sin inyección a la red no necesitan ningún registro. Brasil: no está prohibida, pero tampoco existe un marco dedicado — los kits plug-in pequeños operan en una zona gris tolerada informalmente bajo las reglas generales de ANEEL, que técnicamente aplican el mismo proceso formal sin importar el tamaño del sistema.',
         bullets: [
-          'Portugal: ≤800W CA, sin inyección a la red → no se necesita ningún registro, según el Decreto-Lei n.º 15/2022',
-          'Portugal 800W–30kW: notificación simplificada en línea (Mera Comunicação Prévia) a través de DGEG',
+          'Portugal: ≤800W CA, sin inyección a la red → no se necesita ningún registro, según el Decreto-Lei n.º 15/2022 (modificado por el Decreto-Lei n.º 130/2026; la cifra de 800 W procede del comunicado de prensa del Gobierno portugués)',
+          'Portugal 800W–30kW: notificación simplificada en línea (Mera Comunicação Prévia) a través de DGEG (800 W según el comunicado del Gobierno)',
           'Brasil: no existe una ley dedicada a la energía solar plug-in — las reglas de micro-geração de ANEEL (REN 1.059/2023) técnicamente se aplican de forma uniforme, sin exención de potencia',
           'Brasil: la prensa confirma explícitamente que los kits plug-in "ainda não conta[m] com uma regulamentação específica" (todavía no cuentan con una regulación específica)',
           'Cuando se publique contenido en portugués brasileño para este cluster, debe ser específicamente pt-BR — não português europeu',
@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Portugal tiene uno de los regímenes simplificados más claros y mejor documentados de esta guía — texto estatutario (Decreto-Lei n.º 15/2022), no solo afirmaciones de proveedores.',
-          'Los sistemas de hasta 800W de salida CA sin inyección a la red no necesitan ningún registro en Portugal; entre 800W y 30kW solo se requiere una notificación simplificada en línea.',
+          'Los sistemas de hasta 800W de salida CA sin inyección a la red no necesitan ningún registro en Portugal; entre 800W y 30kW solo se requiere una notificación simplificada en línea. (800 W según el comunicado del Gobierno)',
           'Brasil no tiene una ley dedicada a la energía solar plug-in — la cobertura de prensa lo confirma explícitamente, no es solo una inferencia.',
           'El proceso de micro-geração de ANEEL (REN 1.059/2023) en Brasil técnicamente se aplica de forma uniforme sin importar el tamaño del sistema, sin ninguna exención documentada para sistemas pequeños — los kits pequeños existen en tolerancia informal, no en un permiso codificado.',
           'Este es un perfil de riesgo genuinamente distinto al de la exención codificada de Portugal, aunque ninguno de los dos países prohíbe la energía solar de balcón de forma directa.',
@@ -223,7 +223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Necesito registrar la energía solar de balcón en Portugal?', a: 'No, si tu sistema tiene una salida de 800W CA o menos y no inyecta a la red — ese nivel está completamente exento de control previo según el Decreto-Lei n.º 15/2022. Los sistemas entre 800W y 30kW solo necesitan una notificación simplificada en línea.' },
+          { q: '¿Necesito registrar la energía solar de balcón en Portugal?', a: 'No, si tu sistema tiene una salida de 800W CA o menos y no inyecta a la red — ese nivel está completamente exento de control previo según el Decreto-Lei n.º 15/2022 (modificado por el Decreto-Lei n.º 130/2026; la cifra de 800 W procede del comunicado de prensa del Gobierno portugués). Los sistemas entre 800W y 30kW solo necesitan una notificación simplificada en línea.' },
           { q: '¿Es ilegal la energía solar de balcón en Brasil?', a: 'No, no está prohibida — pero tampoco existe una ley dedicada que la permita con un proceso simplificado. Los kits pequeños existen actualmente en una zona gris tolerada informalmente bajo las reglas generales de ANEEL, una situación distinta a la exención codificada de Portugal.' },
           { q: '¿Qué certificación necesito en Brasil para un sistema de energía solar de balcón?', a: 'Certificación INMETRO para el inversor y cumplimiento técnico ABNT, según el marco general de ANEEL — los mismos requisitos que aplican a cualquier sistema solar conectado a la red, sin importar el tamaño.' },
           { q: '¿Dónde es más seguro comprar: Portugal o Brasil?', a: 'Portugal ofrece mayor certeza legal gracias a su exención codificada. La situación de Brasil conlleva más ambigüedad regulatoria porque no existe un marco dedicado para sistemas pequeños, aunque actualmente no se reporta una aplicación activa contra los kits plug-in muy pequeños.' },
@@ -266,14 +266,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Compradores de energia solar de varanda em Portugal e no Brasil pesquisando o status legal',
     primaryTerm: 'energia solar de varanda',
     targetKeywords: ['energia solar de tomada legal brasil', 'energia solar de varanda portugal', 'placas solares plug and play portugal', 'balcony solar legal portugal'],
-    leadAnswerBlock: '**Portugal permite explicitamente a energia solar de varanda sob um regime simplificado e codificado: sistemas de até 800W de saída CA sem injeção na rede não precisam de nenhum registro, conforme o Decreto-Lei n.º 15/2022.** O Brasil não tem um marco regulatório comparável — os kits plug-in pequenos não são proibidos, mas o processo formal de micro-geração da ANEEL tecnicamente se aplica de forma uniforme até 75kW, sem nenhuma faixa de isenção de potência documentada, e a imprensa confirma explicitamente que os kits plug-in ainda não têm uma regulamentação específica, existindo numa zona cinzenta tolerada informalmente em vez de uma isenção legal.',
+    leadAnswerBlock: '**Portugal permite explicitamente a energia solar de varanda sob um regime simplificado e codificado: sistemas de até 800W de saída CA sem injeção na rede não precisam de nenhum registro, conforme o Decreto-Lei n.º 15/2022 (alterado pelo Decreto-Lei n.º 130/2026; o valor de 800 W vem do comunicado de imprensa do governo português).** O Brasil não tem um marco regulatório comparável — os kits plug-in pequenos não são proibidos, mas o processo formal de micro-geração da ANEEL tecnicamente se aplica de forma uniforme até 75kW, sem nenhuma faixa de isenção de potência documentada, e a imprensa confirma explicitamente que os kits plug-in ainda não têm uma regulamentação específica, existindo numa zona cinzenta tolerada informalmente em vez de uma isenção legal.',
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal em Portugal e no Brasil?',
         answer: 'Portugal: sim, explicitamente, com um dos regimes simplificados mais claros desta análise — sistemas de até 800W de saída CA sem injeção na rede não precisam de nenhum registro. Brasil: não é proibida, mas também não existe uma legislação dedicada — os kits plug-in pequenos operam numa zona cinzenta tolerada informalmente sob as regras gerais da ANEEL, que tecnicamente aplicam o mesmo processo formal independente do tamanho do sistema.',
         bullets: [
-          'Portugal: ≤800W CA, sem injeção na rede → nenhum registro é necessário, conforme o Decreto-Lei n.º 15/2022',
-          'Portugal 800W–30kW: notificação simplificada online (Mera Comunicação Prévia) pela DGEG',
+          'Portugal: ≤800W CA, sem injeção na rede → nenhum registro é necessário, conforme o Decreto-Lei n.º 15/2022 (alterado pelo Decreto-Lei n.º 130/2026; o valor de 800 W vem do comunicado de imprensa do governo português)',
+          'Portugal 800W–30kW: notificação simplificada online (Mera Comunicação Prévia) pela DGEG (800 W conforme o comunicado do governo)',
           'Brasil: não existe lei dedicada à energia solar plug-in — as regras de micro-geração da ANEEL (REN 1.059/2023) tecnicamente se aplicam de forma uniforme, sem faixa de isenção por potência',
           'Brasil: a imprensa confirma explicitamente que os kits plug-in "ainda não contam com uma regulamentação específica"',
           'Quando conteúdo em português brasileiro for publicado para este cluster, deve ser especificamente pt-BR — nunca português europeu',
@@ -294,7 +294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Portugal tem um dos regimes simplificados mais claros e bem documentados desta análise — texto estatutário (Decreto-Lei n.º 15/2022), não apenas afirmações de fornecedores.',
-          'Sistemas de até 800W de saída CA sem injeção na rede não precisam de nenhum registro em Portugal; entre 800W e 30kW é necessária apenas uma notificação simplificada online.',
+          'Sistemas de até 800W de saída CA sem injeção na rede não precisam de nenhum registro em Portugal; entre 800W e 30kW é necessária apenas uma notificação simplificada online. (800 W conforme o comunicado do governo)',
           'O Brasil não tem uma lei dedicada à energia solar plug-in — a cobertura da imprensa confirma isso explicitamente, não é apenas uma inferência.',
           'O processo de micro-geração da ANEEL (REN 1.059/2023) no Brasil tecnicamente se aplica de forma uniforme independente do tamanho do sistema, sem nenhuma isenção documentada para sistemas pequenos — os kits pequenos existem em tolerância informal, não em uma permissão codificada.',
           'Este é um perfil de risco genuinamente diferente do da isenção codificada de Portugal, ainda que nenhum dos dois países proíba diretamente a energia solar de varanda.',
@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Preciso registrar a energia solar de varanda em Portugal?', a: 'Não, se seu sistema tiver uma saída de 800W CA ou menos e não injetar na rede — esse nível está totalmente isento de controle prévio conforme o Decreto-Lei n.º 15/2022. Sistemas entre 800W e 30kW precisam apenas de uma notificação simplificada online.' },
+          { q: 'Preciso registrar a energia solar de varanda em Portugal?', a: 'Não, se seu sistema tiver uma saída de 800W CA ou menos e não injetar na rede — esse nível está totalmente isento de controle prévio conforme o Decreto-Lei n.º 15/2022 (alterado pelo Decreto-Lei n.º 130/2026; o valor de 800 W vem do comunicado de imprensa do governo português). Sistemas entre 800W e 30kW precisam apenas de uma notificação simplificada online.' },
           { q: 'A energia solar de varanda é ilegal no Brasil?', a: 'Não, não é proibida — mas também não existe uma lei dedicada que a permita com um processo simplificado. Os kits pequenos existem atualmente numa zona cinzenta tolerada informalmente sob as regras gerais da ANEEL, uma situação diferente da isenção codificada de Portugal.' },
           { q: 'Que certificação preciso no Brasil para um sistema de energia solar de varanda?', a: 'Certificação INMETRO para o inversor e conformidade técnica ABNT, conforme o marco geral da ANEEL — as mesmas exigências que se aplicam a qualquer sistema solar conectado à rede, independente do tamanho.' },
           { q: 'Onde é mais seguro comprar: Portugal ou Brasil?', a: 'Portugal oferece maior certeza legal graças à sua isenção codificada. A situação do Brasil carrega mais ambiguidade regulatória porque não existe um marco dedicado para sistemas pequenos, embora atualmente não haja relatos de fiscalização ativa contra kits plug-in muito pequenos.' },
@@ -381,13 +381,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'مشترو أنظمة الطاقة الشمسية للشرفات في البرتغال والبرازيل الباحثون عن الوضع القانوني',
     primaryTerm: 'energia solar de varanda',
     targetKeywords: ['الطاقة الشمسية للشرفة القانونية في البرتغال', 'ألواح شمسية قابلة للتوصيل المباشر البرتغال', 'الطاقة الشمسية للشرفة البرازيل', 'balcony solar legal portugal'],
-    leadAnswerBlock: '**تسمح البرتغال صراحةً بالطاقة الشمسية للشرفة بموجب نظام مبسّط ومقنَّن: الأنظمة التي تصل حتى 800 واط من الخرج بالتيار المتردد دون تصدير للشبكة لا تحتاج إلى أي تسجيل، وفقًا لـ Decreto-Lei n.º 15/2022.** لا تملك البرازيل إطارًا مماثلًا — الأطقم الصغيرة القابلة للتوصيل المباشر ليست محظورة، لكن عملية micro-geração الرسمية التابعة لـ ANEEL تنطبق من الناحية الفنية بشكل موحد حتى 75 كيلوواط دون أي إعفاء موثَّق حسب القدرة، وتؤكد الصحافة صراحةً أن الأطقم القابلة للتوصيل المباشر لا تزال بلا تنظيم محدد، وتوجد في منطقة رمادية يُتغاضى عنها بشكل غير رسمي بدلًا من إعفاء قانوني.',
+    leadAnswerBlock: '**تسمح البرتغال صراحةً بالطاقة الشمسية للشرفة بموجب نظام مبسّط ومقنَّن: الأنظمة التي تصل حتى 800 واط من الخرج بالتيار المتردد دون تصدير للشبكة لا تحتاج إلى أي تسجيل، وفقًا لـ Decreto-Lei n.º 15/2022 (بصيغته المعدّلة بموجب Decreto-Lei n.º 130/2026؛ ورقم 800 واط مأخوذ من البيان الصحفي للحكومة البرتغالية).** لا تملك البرازيل إطارًا مماثلًا — الأطقم الصغيرة القابلة للتوصيل المباشر ليست محظورة، لكن عملية micro-geração الرسمية التابعة لـ ANEEL تنطبق من الناحية الفنية بشكل موحد حتى 75 كيلوواط دون أي إعفاء موثَّق حسب القدرة، وتؤكد الصحافة صراحةً أن الأطقم القابلة للتوصيل المباشر لا تزال بلا تنظيم محدد، وتوجد في منطقة رمادية يُتغاضى عنها بشكل غير رسمي بدلًا من إعفاء قانوني.',
     quickAnswerTop: {
       ar: {
         question: 'هل الطاقة الشمسية للشرفة قانونية في البرتغال والبرازيل؟',
         answer: 'البرتغال: نعم، بشكل صريح، وبأحد أوضح الأنظمة المبسّطة في هذا الدليل — الأنظمة التي تصل حتى 800 واط من الخرج بالتيار المتردد دون تصدير للشبكة لا تحتاج إلى أي تسجيل. البرازيل: غير محظورة، لكن لا يوجد أيضًا إطار تنظيمي مخصص — تعمل الأطقم الصغيرة القابلة للتوصيل المباشر في منطقة رمادية يُتغاضى عنها بشكل غير رسمي بموجب قواعد ANEEL العامة، والتي تطبّق من الناحية الفنية نفس العملية الرسمية بغض النظر عن حجم النظام.',
         bullets: [
-          'البرتغال: ≤800 واط تيار متردد، بدون تصدير للشبكة → لا حاجة لأي تسجيل، وفقًا لـ Decreto-Lei n.º 15/2022',
+          'البرتغال: ≤800 واط تيار متردد، بدون تصدير للشبكة → لا حاجة لأي تسجيل، وفقًا لـ Decreto-Lei n.º 15/2022 (بصيغته المعدّلة بموجب Decreto-Lei n.º 130/2026؛ ورقم 800 واط مأخوذ من البيان الصحفي للحكومة البرتغالية)',
           'البرتغال 800–30000 واط: إخطار إلكتروني مبسط (Mera Comunicação Prévia) عبر DGEG',
           'البرازيل: لا يوجد قانون مخصص للطاقة الشمسية القابلة للتوصيل المباشر — تنطبق قواعد micro-geração الخاصة بـ ANEEL (REN 1.059/2023) من الناحية الفنية بشكل موحد، دون أي إعفاء حسب القدرة',
           'البرازيل: تؤكد الصحافة صراحةً أن الأطقم القابلة للتوصيل المباشر "ainda não conta[m] com uma regulamentação específica" (لا تزال بلا تنظيم محدد)',
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'هل أحتاج إلى تسجيل الطاقة الشمسية للشرفة في البرتغال؟', a: 'لا، إذا كان نظامك بخرج 800 واط تيار متردد أو أقل ودون تصدير للشبكة — هذه الفئة معفاة تمامًا من الموافقة المسبقة بموجب Decreto-Lei n.º 15/2022. تحتاج الأنظمة بين 800 و30000 واط فقط إلى إخطار إلكتروني مبسط.' },
+          { q: 'هل أحتاج إلى تسجيل الطاقة الشمسية للشرفة في البرتغال؟', a: 'لا، إذا كان نظامك بخرج 800 واط تيار متردد أو أقل ودون تصدير للشبكة — هذه الفئة معفاة تمامًا من الموافقة المسبقة بموجب Decreto-Lei n.º 15/2022 (بصيغته المعدّلة بموجب Decreto-Lei n.º 130/2026؛ ورقم 800 واط مأخوذ من البيان الصحفي للحكومة البرتغالية). تحتاج الأنظمة بين 800 و30000 واط فقط إلى إخطار إلكتروني مبسط.' },
           { q: 'هل الطاقة الشمسية للشرفة غير قانونية في البرازيل؟', a: 'لا، ليست محظورة — لكن لا يوجد أيضًا قانون مخصص يسمح بها عبر عملية مبسطة. توجد الأطقم الصغيرة حاليًا في منطقة رمادية يُتغاضى عنها بشكل غير رسمي بموجب قواعد ANEEL العامة، وهو وضع مختلف عن الإعفاء المقنَّن في البرتغال.' },
           { q: 'ما الشهادة التي أحتاجها في البرازيل لنظام طاقة شمسية للشرفة؟', a: 'شهادة INMETRO للعاكس والتوافق الفني مع ABNT، وفقًا للإطار العام لـ ANEEL — نفس المتطلبات التي تنطبق على أي نظام شمسي متصل بالشبكة بغض النظر عن الحجم.' },
           { q: 'أين الشراء أكثر أمانًا: البرتغال أم البرازيل؟', a: 'توفر البرتغال يقينًا قانونيًا أوضح بفضل إعفائها المقنَّن. يحمل وضع البرازيل غموضًا تنظيميًا أكبر لعدم وجود إطار مخصص للأنظمة الصغيرة، رغم أنه لا يُبلَّغ حاليًا عن تطبيق نشط ضد الأطقم الصغيرة جدًا القابلة للتوصيل المباشر.' },
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'ポルトガルとブラジルでバルコニーソーラーは合法か？',
         answer: 'ポルトガル：合法。明示的に許可されており、このガイドの中でも最も明確な簡易制度の一つを持つ——系統への逆潮流がなく交流出力800Wまでのシステムは登録が一切不要。ブラジル：禁止されてはいないが、専用の法的枠組みも存在しない——小型プラグイン式キットは、システム規模にかかわらず技術的には同じ正式手続きを適用するANEELの一般規則のもとで、非公式に黙認されたグレーゾーンの中で運用されている。',
         bullets: [
-          'ポルトガル：交流800W以下、系統への逆潮流なし→Decreto-Lei n.º 15/2022により登録は一切不要',
+          'ポルトガル：交流800W以下、系統への逆潮流なし→Decreto-Lei n.º 15/2022（Decreto-Lei n.º 130/2026による改正後。800Wという数値はポルトガル政府の報道発表によるもの）により登録は一切不要',
           'ポルトガル 800W〜30kW：DGEGを通じた簡易オンライン届出（Mera Comunicação Prévia）のみで足りる',
           'ブラジル：プラグイン式ソーラーに特化した法律は存在しない——ANEELのmicro-geração規則（REN 1.059/2023）は技術的には一律に適用され、出力による適用除外はない',
           'ブラジル：報道はプラグイン式キットが「ainda não conta[m] com uma regulamentação específica」（依然として専用の規制がない）と明確に確認している',
@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'ポルトガルでバルコニーソーラーの登録は必要か？', a: '交流出力800W以下で系統への逆潮流がないシステムであれば不要。この区分はDecreto-Lei n.º 15/2022により事前手続きが全面的に免除されている。800W〜30kWのシステムは簡易オンライン届出のみで足りる。' },
+          { q: 'ポルトガルでバルコニーソーラーの登録は必要か？', a: '交流出力800W以下で系統への逆潮流がないシステムであれば不要。この区分はDecreto-Lei n.º 15/2022（Decreto-Lei n.º 130/2026による改正後。800Wという数値はポルトガル政府の報道発表によるもの）により事前手続きが全面的に免除されている。800W〜30kWのシステムは簡易オンライン届出のみで足りる。' },
           { q: 'ブラジルでバルコニーソーラーは違法か？', a: '禁止されてはいない。しかし簡易手続きでそれを認める専用の法律も存在しない。小型キットは現在、ANEELの一般規則のもとで非公式に黙認されたグレーゾーンの中に存在しており、ポルトガルの成文化された適用除外とは異なる状況だ。' },
           { q: 'ブラジルでバルコニーソーラーシステムに必要な認証は？', a: 'ANEELの一般枠組みに基づき、インバーターのINMETRO認証とABNTの技術適合が必要——これは規模にかかわらず、系統連系型ソーラーシステム全般に適用される要件と同じである。' },
           { q: 'ポルトガルとブラジルのどちらが購入するうえで安全か？', a: 'ポルトガルは成文化された適用除外により、より明確な法的確実性を提供する。ブラジルの状況は、小規模システム向けの専用枠組みが存在しないため、より大きな規制上の不確実性を伴う。ただし、極小型プラグイン式キットに対する積極的な取り締まりは現時点で報告されていない。' },
@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '阳台光伏在葡萄牙和巴西合法吗？',
         answer: '葡萄牙：合法，且明确合法，拥有本指南中最清晰的简化制度之一——交流输出功率不超过800瓦且不并网馈电的系统完全无需登记。巴西：没有被禁止，但也没有专门的法律框架——小型插电式套件在ANEEL的一般规则下以非正式默许的灰色地带方式运行，而这些规则在技术上无论系统大小都统一适用同一套正式流程。',
         bullets: [
-          '葡萄牙：交流功率≤800瓦，不并网馈电→根据第15/2022号法令完全无需登记',
+          '葡萄牙：交流功率≤800瓦，不并网馈电→根据第15/2022号法令完全无需登记(800瓦依据政府新闻稿)',
           '葡萄牙800瓦至30千瓦：仅需通过DGEG（葡萄牙能源和地质总局）进行简化在线申报（Mera Comunicação Prévia）',
           '巴西：没有专门针对插电式光伏的法律——ANEEL的微型发电规则（REN 1.059/2023）在技术上统一适用，没有功率豁免',
           '巴西：媒体明确证实插电式套件"ainda não conta[m] com uma regulamentação específica"（仍无专门监管规定）',
@@ -732,8 +732,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Le solaire de balcon est-il légal au Portugal et au Brésil ?',
         answer: 'Portugal : oui, explicitement, avec l\'un des régimes simplifiés les plus clairs de ce guide — les systèmes jusqu\'à 800 W de puissance CA sans injection sur le réseau ne nécessitent aucune démarche d\'enregistrement. Brésil : ce n\'est pas interdit, mais il n\'existe pas non plus de cadre dédié — les petits kits plug-and-play fonctionnent dans une zone grise tolérée de manière informelle sous les règles générales de l\'ANEEL, qui appliquent techniquement la même procédure formelle quelle que soit la taille du système.',
         bullets: [
-          'Portugal : ≤800 W CA, sans injection sur le réseau → aucune démarche d\'enregistrement requise, conformément au Decreto-Lei n.º 15/2022',
-          'Portugal 800 W–30 kW : notification en ligne simplifiée (Mera Comunicação Prévia) via la DGEG',
+          'Portugal : ≤800 W CA, sans injection sur le réseau → aucune démarche d\'enregistrement requise, conformément au Decreto-Lei n.º 15/2022 (modifié par le Decreto-Lei n.º 130/2026 ; le chiffre de 800 W provient du communiqué de presse du gouvernement portugais)',
+          'Portugal 800 W–30 kW : notification en ligne simplifiée (Mera Comunicação Prévia) via la DGEG (800 W selon le communiqué du gouvernement)',
           'Brésil : aucune loi dédiée au solaire plug-and-play — les règles de micro-geração de l\'ANEEL (REN 1.059/2023) s\'appliquent techniquement de manière uniforme, sans exemption de puissance',
           'Brésil : la presse confirme explicitement que les kits plug-and-play « ainda não conta[m] com uma regulamentação específica » (ne disposent toujours d\'aucune réglementation spécifique)',
           'Lorsque du contenu en portugais brésilien est rédigé pour ce cluster, il doit spécifiquement être en pt-BR — não português europeu',
@@ -754,7 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Le Portugal dispose de l\'un des régimes simplifiés les plus clairs et les mieux documentés de ce guide — un texte de loi (Decreto-Lei n.º 15/2022), et non de simples affirmations de fournisseurs.',
-          'Au Portugal, les systèmes jusqu\'à 800 W de puissance CA sans injection sur le réseau ne nécessitent aucune démarche d\'enregistrement ; entre 800 W et 30 kW, seule une notification en ligne simplifiée est requise.',
+          'Au Portugal, les systèmes jusqu\'à 800 W de puissance CA sans injection sur le réseau ne nécessitent aucune démarche d\'enregistrement ; entre 800 W et 30 kW, seule une notification en ligne simplifiée est requise. (800 W selon le communiqué du gouvernement)',
           'Le Brésil ne dispose d\'aucune loi dédiée au solaire plug-and-play — la presse le confirme explicitement, ce n\'est pas une simple déduction.',
           'Au Brésil, la procédure de micro-geração de l\'ANEEL (REN 1.059/2023) s\'applique techniquement de manière uniforme quelle que soit la taille du système, sans aucune exemption documentée pour les petits systèmes — les petits kits existent dans une tolérance informelle, non dans une autorisation codifiée.',
           'Il s\'agit d\'un profil de risque véritablement différent de l\'exemption codifiée du Portugal, même si aucun des deux pays n\'interdit purement et simplement le solaire de balcon.',
@@ -798,7 +798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Foire aux questions',
         faqs: [
-          { q: 'Dois-je enregistrer une installation solaire de balcon au Portugal ?', a: 'Pas si votre système a une puissance CA de 800 W ou moins sans injection sur le réseau — ce palier est entièrement exempté de contrôle préalable en vertu du Decreto-Lei n.º 15/2022. Les systèmes entre 800 W et 30 kW ne nécessitent qu\'une notification en ligne simplifiée.' },
+          { q: 'Dois-je enregistrer une installation solaire de balcon au Portugal ?', a: 'Pas si votre système a une puissance CA de 800 W ou moins sans injection sur le réseau — ce palier est entièrement exempté de contrôle préalable en vertu du Decreto-Lei n.º 15/2022 (modifié par le Decreto-Lei n.º 130/2026 ; le chiffre de 800 W provient du communiqué de presse du gouvernement portugais). Les systèmes entre 800 W et 30 kW ne nécessitent qu\'une notification en ligne simplifiée.' },
           { q: 'Le solaire de balcon est-il illégal au Brésil ?', a: 'Non, ce n\'est pas interdit — mais il n\'existe pas non plus de loi dédiée qui l\'autorise via une procédure simplifiée. Les petits kits existent actuellement dans une zone grise tolérée de manière informelle sous les règles générales de l\'ANEEL, une situation différente de l\'exemption codifiée du Portugal.' },
           { q: 'Quelle certification est nécessaire au Brésil pour un système solaire de balcon ?', a: 'La certification INMETRO pour l\'onduleur et la conformité technique ABNT, conformément au cadre général de l\'ANEEL — les mêmes exigences qui s\'appliquent à tout système solaire raccordé au réseau, quelle que soit sa taille.' },
           { q: 'Où est-il plus sûr d\'acheter : au Portugal ou au Brésil ?', a: 'Le Portugal offre une sécurité juridique plus claire grâce à son exemption codifiée. La situation du Brésil comporte davantage d\'ambiguïté réglementaire puisqu\'aucun cadre dédié aux petits systèmes n\'existe, même si aucune application active contre les très petits kits plug-and-play n\'est actuellement signalée.' },
@@ -841,14 +841,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Käufer von Balkonkraftwerken in Portugal und Brasilien, die die Rechtslage recherchieren – einschließlich deutschsprachiger Auswanderer in Portugal und Personen mit Bezug zur deutsch-brasilianischen Gemeinschaft',
     primaryTerm: 'Balkonkraftwerk Portugal',
     targetKeywords: ['Balkonkraftwerk Portugal legal', 'Steckersolar Portugal Anmeldung', 'Balkonkraftwerk Brasilien Regelung', 'Solar Balkon Portugal 800 Watt'],
-    leadAnswerBlock: '**Portugal erlaubt Balkonkraftwerke ausdrücklich im Rahmen eines kodifizierten vereinfachten Regimes: Anlagen bis 800 W Wechselstromleistung ohne Netzeinspeisung benötigen keinerlei Anmeldung, gemäß Decreto-Lei n.º 15/2022.** Brasilien verfügt über keinen vergleichbaren Rahmen – kleine Plug-in-Geräte sind nicht verboten, aber das formale Micro-geração-Verfahren der ANEEL gilt technisch einheitlich bis 75 kW ohne dokumentierte Leistungsausnahme, und die Presse bestätigt ausdrücklich, dass Plug-in-Geräte nach wie vor keine spezifische Regulierung haben und in einer informell geduldeten Grauzone existieren statt unter einer rechtlichen Ausnahme.',
+    leadAnswerBlock: '**Portugal erlaubt Balkonkraftwerke ausdrücklich im Rahmen eines kodifizierten vereinfachten Regimes: Anlagen bis 800 W Wechselstromleistung ohne Netzeinspeisung benötigen keinerlei Anmeldung, gemäß Decreto-Lei n.º 15/2022 (geändert durch Decreto-Lei n.º 130/2026; die 800-W-Angabe stammt aus der Pressemitteilung der portugiesischen Regierung).** Brasilien verfügt über keinen vergleichbaren Rahmen – kleine Plug-in-Geräte sind nicht verboten, aber das formale Micro-geração-Verfahren der ANEEL gilt technisch einheitlich bis 75 kW ohne dokumentierte Leistungsausnahme, und die Presse bestätigt ausdrücklich, dass Plug-in-Geräte nach wie vor keine spezifische Regulierung haben und in einer informell geduldeten Grauzone existieren statt unter einer rechtlichen Ausnahme.',
     quickAnswerTop: {
       de: {
         question: 'Ist ein Balkonkraftwerk in Portugal und Brasilien legal?',
         answer: 'Portugal: ja, ausdrücklich, mit einem der klarsten vereinfachten Regime dieses Leitfadens – Anlagen bis 800 W Wechselstromleistung ohne Netzeinspeisung benötigen keinerlei Anmeldung. Brasilien: nicht verboten, aber es gibt auch keinen dedizierten Rahmen – kleine Plug-in-Geräte operieren in einer informell geduldeten Grauzone unter den allgemeinen ANEEL-Regeln, die technisch dasselbe formale Verfahren unabhängig von der Anlagengröße anwenden.',
         bullets: [
-          'Portugal: ≤800 W Wechselstrom, keine Netzeinspeisung → keinerlei Anmeldung erforderlich, gemäß Decreto-Lei n.º 15/2022',
-          'Portugal 800 W–30 kW: vereinfachte Online-Meldung (Mera Comunicação Prévia) über die DGEG',
+          'Portugal: ≤800 W Wechselstrom, keine Netzeinspeisung → keinerlei Anmeldung erforderlich, gemäß Decreto-Lei n.º 15/2022 (geändert durch Decreto-Lei n.º 130/2026; die 800-W-Angabe stammt aus der Pressemitteilung der portugiesischen Regierung)',
+          'Portugal 800 W–30 kW: vereinfachte Online-Meldung (Mera Comunicação Prévia) über die DGEG (800 W laut Pressemitteilung der Regierung)',
           'Brasilien: kein dediziertes Gesetz für Plug-in-Solar – die Micro-geração-Regeln der ANEEL (REN 1.059/2023) gelten technisch einheitlich, ohne Leistungsausnahme',
           'Brasilien: Die Presse bestätigt ausdrücklich, dass Plug-in-Geräte „ainda não conta[m] com uma regulamentação específica" (nach wie vor keine spezifische Regulierung haben)',
           'Wenn brasilianisch-portugiesische Inhalte für diesen Cluster erstellt werden, muss es spezifisch pt-BR sein – não português europeu',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Portugal hat eines der klarsten und am zuverlässigsten belegten vereinfachten Regime in diesem Leitfaden – gesetzlicher Text (Decreto-Lei n.º 15/2022), nicht nur Anbieteraussagen.',
-          'Anlagen bis 800 W Wechselstromleistung ohne Netzeinspeisung benötigen in Portugal keinerlei Anmeldung; 800 W–30 kW benötigen nur eine vereinfachte Online-Meldung.',
+          'Anlagen bis 800 W Wechselstromleistung ohne Netzeinspeisung benötigen in Portugal keinerlei Anmeldung; 800 W–30 kW benötigen nur eine vereinfachte Online-Meldung. (800 W laut Pressemitteilung der Regierung)',
           'Brasilien hat kein dediziertes Gesetz für Plug-in-Solar – die Presseberichterstattung bestätigt das ausdrücklich, es ist keine bloße Schlussfolgerung.',
           'Das Micro-geração-Verfahren der ANEEL (REN 1.059/2023) in Brasilien gilt technisch einheitlich unabhängig von der Anlagengröße, ohne dokumentierte Ausnahme für Kleinanlagen – kleine Geräte existieren in informeller Duldung, nicht in kodifizierter Genehmigung.',
           'Das ist ein grundlegend anderes Risikoprofil als Portugals kodifizierte Ausnahme, auch wenn keines der beiden Länder Balkonkraftwerke direkt verbietet.',
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufige Fragen',
         faqs: [
-          { q: 'Muss ich ein Balkonkraftwerk in Portugal anmelden?', a: 'Nicht, wenn Ihre Anlage 800 W Wechselstromleistung oder weniger hat und keine Netzeinspeisung erfolgt – diese Kategorie ist nach Decreto-Lei n.º 15/2022 vollständig von der Vorabgenehmigung befreit. Anlagen zwischen 800 W und 30 kW benötigen nur eine vereinfachte Online-Meldung.' },
+          { q: 'Muss ich ein Balkonkraftwerk in Portugal anmelden?', a: 'Nicht, wenn Ihre Anlage 800 W Wechselstromleistung oder weniger hat und keine Netzeinspeisung erfolgt – diese Kategorie ist nach Decreto-Lei n.º 15/2022 (geändert durch Decreto-Lei n.º 130/2026; die 800-W-Angabe stammt aus der Pressemitteilung der portugiesischen Regierung) vollständig von der Vorabgenehmigung befreit. Anlagen zwischen 800 W und 30 kW benötigen nur eine vereinfachte Online-Meldung.' },
           { q: 'Ist ein Balkonkraftwerk in Brasilien illegal?', a: 'Nein, es ist nicht verboten – aber es gibt auch kein dediziertes Gesetz, das es mit einem vereinfachten Verfahren genehmigt. Kleine Geräte existieren derzeit in einer informell geduldeten Grauzone unter den allgemeinen ANEEL-Regeln, was sich von Portugals kodifizierter Ausnahme unterscheidet.' },
           { q: 'Welche Zertifizierung benötige ich in Brasilien für ein Balkonkraftwerk?', a: 'INMETRO-Zertifizierung für den Wechselrichter und technische ABNT-Konformität, gemäß dem allgemeinen ANEEL-Rahmen – dieselben Anforderungen, die für jede netzgekoppelte Solaranlage unabhängig von der Größe gelten.' },
           { q: 'Wo ist der Kauf sicherer: Portugal oder Brasilien?', a: 'Portugal bietet durch seine kodifizierte Ausnahme mehr Rechtssicherheit. Brasiliens Situation birgt mehr regulatorische Unklarheit, da kein dedizierter Rahmen für Kleinanlagen existiert, auch wenn derzeit keine aktive Durchsetzung gegen sehr kleine Plug-in-Geräte gemeldet wird.' },
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '포르투갈과 브라질에서 베란다 태양광은 합법인가?',
         answer: '포르투갈: 그렇다, 명시적으로 합법이며 이 가이드에서 가장 명확한 간소화 제도 중 하나를 갖추고 있다 — 계통 역송전이 없고 교류 출력 800W 이하인 시스템은 등록이 전혀 필요 없다. 브라질: 금지되지는 않았지만 전용 체계도 존재하지 않는다 — 소형 플러그인 키트는 시스템 규모와 무관하게 기술적으로 동일한 정식 절차를 적용하는 ANEEL의 일반 규정 아래, 비공식적으로 묵인되는 회색지대에서 운영되고 있다.',
         bullets: [
-          '포르투갈: 교류 800W 이하, 계통 역송전 없음 → Decreto-Lei n.º 15/2022에 따라 등록이 전혀 필요 없음',
+          '포르투갈: 교류 800W 이하, 계통 역송전 없음 → Decreto-Lei n.º 15/2022(Decreto-Lei n.º 130/2026으로 개정됨; 800W라는 수치는 포르투갈 정부 보도자료에 따름)에 따라 등록이 전혀 필요 없음',
           '포르투갈 800W~30kW: DGEG(포르투갈 에너지지질총국)를 통한 간소화 온라인 신고(Mera Comunicação Prévia)만 필요',
           '브라질: 플러그인 태양광에 특화된 법률이 없음 — ANEEL의 마이크로발전 규정(REN 1.059/2023)은 기술적으로 일률 적용되며 출력 면제 구간이 없음',
           '브라질: 언론은 플러그인 키트가 "ainda não conta[m] com uma regulamentação específica"(여전히 별도 규정이 없다)고 명확히 확인함',
@@ -1028,7 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '포르투갈에서 베란다 태양광을 등록해야 하나요?', a: '시스템의 교류 출력이 800W 이하이고 계통 역송전이 없다면 필요 없습니다 — 이 구간은 Decreto-Lei n.º 15/2022에 따라 사전 통제가 전면 면제됩니다. 800W~30kW 사이의 시스템은 간소화 온라인 신고만 하면 됩니다.' },
+          { q: '포르투갈에서 베란다 태양광을 등록해야 하나요?', a: '시스템의 교류 출력이 800W 이하이고 계통 역송전이 없다면 필요 없습니다 — 이 구간은 Decreto-Lei n.º 15/2022(Decreto-Lei n.º 130/2026으로 개정됨; 800W라는 수치는 포르투갈 정부 보도자료에 따름)에 따라 사전 통제가 전면 면제됩니다. 800W~30kW 사이의 시스템은 간소화 온라인 신고만 하면 됩니다.' },
           { q: '브라질에서 베란다 태양광은 불법인가요?', a: '아니요, 금지되지는 않았습니다 — 하지만 간소화된 절차로 이를 허용하는 전용 법률도 없습니다. 소형 키트는 현재 ANEEL의 일반 규정 아래 비공식적으로 묵인되는 회색지대에 존재하며, 이는 포르투갈의 성문화된 면제와는 다른 상황입니다.' },
           { q: '브라질에서 베란다 태양광 시스템에 어떤 인증이 필요한가요?', a: 'ANEEL의 일반 체계에 따라 인버터에 대한 INMETRO 인증과 ABNT(브라질 기술표준협회) 기술 적합성이 필요합니다 — 이는 규모와 무관하게 모든 계통연계 태양광 시스템에 적용되는 것과 동일한 요건입니다.' },
           { q: '포르투갈과 브라질 중 어디에서 구매하는 것이 더 안전한가요?', a: '포르투갈은 성문화된 면제 덕분에 더 명확한 법적 확실성을 제공합니다. 브라질의 상황은 소형 시스템을 위한 전용 체계가 없기 때문에 더 큰 규제상의 모호함을 안고 있지만, 현재 극소형 플러그인 키트에 대한 적극적인 단속은 보고되지 않고 있습니다.' },
