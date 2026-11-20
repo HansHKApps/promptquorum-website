@@ -27948,7 +27948,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Quick Answer',
           items: [
             'PromptQuorum\'s desktop app has been in public beta since July 2026 (current version 0.1.0) and is downloadable for macOS (Apple Silicon and Intel), Windows 10/11, and Linux (x64 and ARM64).',
-            'The build is unsigned during this beta, so macOS and Windows may show a security warning on first launch — that is expected for an unsigned beta build, not a sign of a compromised file.',
+            'The build is unsigned during this beta, so macOS and Windows may show a security warning on first launch. Unsigned builds always trigger this warning, so it tells you nothing either way about the file. Only download the installer from the link on the official download page, and open it only if you accept the risk of running an unsigned beta.',
             'The app needs an AI backend to run prompts: install Ollama or LM Studio for local models, or bring your own API key (BYOK) for OpenAI, Anthropic, or another provider.',
             'Model agreement is not proof of correctness — verify factual claims independently before relying on multi-model consensus output.',
             'Get the build from the download page, where the installers are hosted in one shared folder, and send bug reports directly to the team by email.',
@@ -27976,7 +27976,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         platformsNote: {
           content: [
             'Not sure which Mac you have? Open the Apple menu, choose About This Mac, and check the "Chip" or "Processor" field.',
-            'Linux support is newer than macOS and Windows support and has seen less real-world testing. If the app is blocked on Ubuntu, try launching it from a terminal with the --no-sandbox flag and report what you see.',
+            'Linux support is newer than macOS and Windows support and has seen less real-world testing. If the app is blocked on Ubuntu, you can try launching it from a terminal with the --no-sandbox flag and report what you see. This disables a security protection, so use it only as a temporary workaround.',
           ],
         },
         verify: {
@@ -27990,7 +27990,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         localAiSetup: {
           title: 'Set Up a Local AI Engine Before First Launch',
-          content: 'PromptQuorum works best with a local LLM engine running on your machine — this keeps prompts private and avoids per-token API costs. Skip this section entirely if you plan to use a cloud provider with your own API key instead.',
+          content: 'PromptQuorum works best with a local LLM engine running on your machine — this keeps prompt processing on your machine and avoids per-token API costs. Skip this section entirely if you plan to use a cloud provider with your own API key instead.',
           items: [
             'Ollama (simplest first setup): download it from [ollama.com](https://ollama.com), install it, then pull a model from a terminal, for example ollama pull gemma3:1b (an 806 MB download according to the Ollama library). It runs in the background, and PromptQuorum can connect to it as a local provider.',
             'LM Studio (more GUI-driven): download it from [lmstudio.ai](https://lmstudio.ai), download a model inside the app, then start the local server from the Developer tab (or with the lms server start command).',
@@ -28015,7 +28015,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         feedback: {
           title: 'Report Bugs Directly to the Team',
-          content: 'Send feedback to hanskuepper@promptquorum.com with what you were trying to do, what happened versus what you expected, your operating system and app version, and a screenshot if possible. Bugs, confusing UI, crashes, and features that do not work as described are all useful reports.',
+          content: 'Send feedback to hello@promptquorum.com with what you were trying to do, what happened versus what you expected, your operating system and app version, and a screenshot if possible. Bugs, confusing UI, crashes, and features that do not work as described are all useful reports.',
         },
         ecosystem: {
           title: 'The Desktop App Is Half the Picture',
@@ -28026,7 +28026,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'Go to the Download Page',
             href: '/download',
-            description: 'Pick your platform, verify the checksum, and install — public beta, unsigned build, free to use.',
+            description: 'Pick your platform and install (public beta, unsigned build, free to use).',
           },
         },
         faq: {
@@ -28050,11 +28050,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Is my data private when I use the desktop app?',
-              a: 'If you use a local AI engine such as Ollama or LM Studio, PromptQuorum works fully offline and your prompts, API keys, and results stay on your device (see the [PromptQuorum FAQ](/faq)). If you use a cloud provider via API key, your prompts go directly to that provider under its own data policy.',
+              a: 'If you use a local AI engine such as Ollama or LM Studio, PromptQuorum sends your prompts to that engine on your own machine rather than to a PromptQuorum server, and API keys and results are kept locally on your device (see the [PromptQuorum FAQ](/faq)). Other network requests, such as the check for a newer app version when the app starts (a request to promptquorum.com), also occur; see the [privacy policy](/privacy). If you use a cloud provider via API key, your prompts go directly to that provider under its own data policy.',
             },
             {
               q: 'How do I report a bug during the beta?',
-              a: 'Email hanskuepper@promptquorum.com with what you were trying to do, what happened, your OS and app version, and a screenshot if possible.',
+              a: 'Email hello@promptquorum.com with what you were trying to do, what happened, your OS and app version, and a screenshot if possible.',
             },
           ],
         },
@@ -28100,7 +28100,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Is my data private when I use the desktop app?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'If you use a local AI engine such as Ollama or LM Studio, PromptQuorum works fully offline and your prompts, API keys, and results stay on your device (see the PromptQuorum FAQ). If you use a cloud provider via API key, your prompts go directly to that provider under its own data policy.',
+              text: 'If you use a local AI engine such as Ollama or LM Studio, PromptQuorum sends your prompts to that engine on your own machine rather than to a PromptQuorum server, and API keys and results are kept locally on your device (see the PromptQuorum FAQ). Other network requests, such as the check for a newer app version when the app starts (a request to promptquorum.com), also occur; see the privacy policy. If you use a cloud provider via API key, your prompts go directly to that provider under its own data policy.',
             },
           },
           {
@@ -28108,7 +28108,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'How do I report a bug during the beta?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Email hanskuepper@promptquorum.com with what you were trying to do, what happened, your OS and app version, and a screenshot if possible.',
+              text: 'Email hello@promptquorum.com with what you were trying to do, what happened, your OS and app version, and a screenshot if possible.',
             },
           },
         ],
@@ -28130,7 +28130,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'النقاط الرئيسية',
           items: [
             'تطبيق سطح المكتب من PromptQuorum في البيتا العامة منذ يوليو 2026 (الإصدار الحالي 0.1.0) ومتاح للتنزيل على macOS (Apple Silicon وIntel) وWindows 10/11 وLinux (x64 وARM64).',
-            'النسخة غير موقّعة خلال هذه البيتا، لذا قد تعرض macOS وWindows تحذيرًا أمنيًا عند أول تشغيل — وهذا متوقع في نسخة بيتا غير موقّعة وليس دليلًا على أن الملف مخترق.',
+            'النسخة غير موقّعة خلال هذه البيتا، لذا قد تعرض macOS وWindows تحذيرًا أمنيًا عند أول تشغيل. النسخ غير الموقّعة تُظهر هذا التحذير دائمًا، فهو لا يخبرك شيئًا عن الملف في أي اتجاه. نزّل برنامج التثبيت فقط عبر الرابط الموجود في صفحة التنزيل الرسمية، ولا تفتحه إلا إذا قبلت مخاطر تشغيل نسخة بيتا غير موقّعة.',
             'يحتاج التطبيق إلى واجهة ذكاء اصطناعي لتشغيل الأوامر: ثبّت Ollama أو LM Studio للنماذج المحلية، أو استخدم مفتاح API الخاص بك (BYOK) مع OpenAI أو Anthropic أو مزوّد آخر.',
             'اتفاق النماذج ليس دليلًا على الصواب — تحقق من الادعاءات الواقعية بشكل مستقل قبل الاعتماد على نتيجة إجماع متعددة النماذج.',
             'احصل على النسخة من صفحة التنزيل، حيث توجد برامج التثبيت في مجلد مشترك واحد، وأرسل تقارير الأخطاء مباشرة إلى الفريق عبر البريد الإلكتروني.',
@@ -28157,8 +28157,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         platformsNote: {
           content: [
-            'غير متأكد من طراز جهاز Mac الذي تملكه؟ افتح قائمة Apple، واختر "About This Mac"، وتحقق من حقل "Chip" أو "Processor".',
-            'دعم Linux أحدث من دعم macOS وWindows، وخضع لاختبار أقل في بيئات الاستخدام الفعلي. إذا تم حظر التطبيق على Ubuntu، جرّب تشغيله من الطرفية (terminal) باستخدام العلامة --no-sandbox، وأبلغنا بما تلاحظه.',
+            'لست متأكدًا من نوع جهاز Mac لديك؟ افتح قائمة Apple واختر About This Mac وتحقق من حقل Chip أو Processor.',
+            'دعم Linux أحدث من دعم macOS وWindows وقد خضع لاختبار أقل في الاستخدام الفعلي. إذا حُظر التطبيق على Ubuntu فيمكنك محاولة تشغيله من الطرفية بالخيار --no-sandbox وإخبارنا بما تراه. يعطّل ذلك حماية أمنية، فاستخدمه كحل مؤقت فقط.',
           ],
         },
         verify: {
@@ -28172,7 +28172,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         localAiSetup: {
           title: 'إعداد محرك ذكاء اصطناعي محلي قبل التشغيل الأول',
-          content: 'يعمل PromptQuorum بأفضل صورة مع محرك LLM محلي يعمل على جهازك — إذ يحافظ ذلك على خصوصية الأوامر ويجنّبك تكاليف API المحسوبة لكل رمز (token). تجاوز هذا القسم بالكامل إذا كنت تخطط لاستخدام مزود سحابي بمفتاح API الخاص بك بدلًا من ذلك.',
+          content: 'يعمل PromptQuorum على أفضل وجه مع محرك LLM محلي يعمل على جهازك — فتبقى معالجة أوامرك على جهازك وتتجنب تكاليف API لكل رمز. تخطَّ هذا القسم كليًا إذا كنت تنوي استخدام مزوّد سحابي بمفتاح API الخاص بك.',
           items: [
             'Ollama (أبسط إعداد أول): نزّله من [ollama.com](https://ollama.com) وثبّته ثم نزّل نموذجًا من الطرفية، مثل ollama pull gemma3:1b (حجم التنزيل 806 MB بحسب مكتبة Ollama). يعمل في الخلفية ويمكن لـ PromptQuorum الاتصال به بوصفه مزوّدًا محليًا.',
             'LM Studio (أكثر اعتمادًا على الواجهة الرسومية): نزّله من [lmstudio.ai](https://lmstudio.ai) ونزّل نموذجًا داخل التطبيق ثم شغّل الخادم المحلي من تبويب Developer (أو بالأمر lms server start).',
@@ -28197,7 +28197,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         feedback: {
           title: 'أبلغ عن الأخطاء مباشرة إلى الفريق',
-          content: 'أرسل ملاحظاتك إلى hanskuepper@promptquorum.com موضحًا ما كنت تحاول القيام به، وما حدث مقارنة بما توقعته، ونظام التشغيل وإصدار التطبيق لديك، ولقطة شاشة إن أمكن. الأخطاء، وواجهة الاستخدام غير الواضحة، وحالات التعطل، والميزات التي لا تعمل كما هو موصوف، كلها تقارير مفيدة.',
+          content: 'أرسل ملاحظاتك إلى hello@promptquorum.com موضحًا ما كنت تحاول القيام به، وما حدث مقارنة بما توقعته، ونظام التشغيل وإصدار التطبيق لديك، ولقطة شاشة إن أمكن. الأخطاء، وواجهة الاستخدام غير الواضحة، وحالات التعطل، والميزات التي لا تعمل كما هو موصوف، كلها تقارير مفيدة.',
         },
         ecosystem: {
           title: 'تطبيق سطح المكتب نصف الصورة فقط',
@@ -28208,7 +28208,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'اذهب إلى صفحة التنزيل',
             href: '/download',
-            description: 'اختر النظام الأساسي، تحقق من قيمة التجزئة (checksum)، وثبّت التطبيق — نسخة تجريبية خاصة، وإصدار غير موقّع، ومجاني للاستخدام.',
+            description: 'اختر منصتك وثبّت (بيتا عامة، نسخة غير موقّعة، مجانية الاستخدام).',
           },
         },
         faq: {
@@ -28232,11 +28232,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'هل بياناتي خاصة عند استخدام تطبيق سطح المكتب؟',
-              a: 'إذا استخدمت محرك ذكاء اصطناعي محليًا مثل Ollama أو LM Studio، يعمل PromptQuorum دون اتصال بالإنترنت بالكامل وتبقى أوامرك ومفاتيح API ونتائجك على جهازك (راجع [الأسئلة الشائعة لـ PromptQuorum](/ar/faq)). وإذا استخدمت مزوّدًا سحابيًا بمفتاح API فستذهب أوامرك مباشرة إلى ذلك المزوّد وفق سياسة بياناته الخاصة.',
+              a: 'إذا استخدمت محرك ذكاء اصطناعي محليًا مثل Ollama أو LM Studio، يرسل PromptQuorum أوامرك إلى ذلك المحرك على جهازك بدلًا من خادم PromptQuorum، وتُحفظ مفاتيح API والنتائج محليًا على جهازك (راجع [الأسئلة الشائعة لـ PromptQuorum](/ar/faq)). وتحدث أيضًا طلبات شبكة أخرى، مثل التحقق من وجود إصدار أحدث عند بدء التطبيق (طلب إلى promptquorum.com)؛ راجع [سياسة الخصوصية](/ar/privacy). وإذا استخدمت مزوّدًا سحابيًا بمفتاح API فستذهب أوامرك مباشرة إلى ذلك المزوّد وفق سياسة بياناته الخاصة.',
             },
             {
               q: 'كيف أبلغ عن خطأ خلال النسخة التجريبية؟',
-              a: 'أرسل بريدًا إلكترونيًا إلى hanskuepper@promptquorum.com موضحًا ما كنت تحاول القيام به، وما حدث، ونظام التشغيل وإصدار التطبيق لديك، ولقطة شاشة إن أمكن.',
+              a: 'أرسل بريدًا إلكترونيًا إلى hello@promptquorum.com موضحًا ما كنت تحاول القيام به، وما حدث، ونظام التشغيل وإصدار التطبيق لديك، ولقطة شاشة إن أمكن.',
             },
           ],
         },
@@ -28282,7 +28282,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'هل بياناتي خاصة عند استخدام تطبيق سطح المكتب؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'إذا استخدمت محرك ذكاء اصطناعي محليًا مثل Ollama أو LM Studio، يعمل PromptQuorum دون اتصال بالإنترنت بالكامل وتبقى أوامرك ومفاتيح API ونتائجك على جهازك (راجع الأسئلة الشائعة لـ PromptQuorum). وإذا استخدمت مزوّدًا سحابيًا بمفتاح API فستذهب أوامرك مباشرة إلى ذلك المزوّد وفق سياسة بياناته الخاصة.',
+              text: 'إذا استخدمت محرك ذكاء اصطناعي محليًا مثل Ollama أو LM Studio، يرسل PromptQuorum أوامرك إلى ذلك المحرك على جهازك بدلًا من خادم PromptQuorum، وتُحفظ مفاتيح API والنتائج محليًا على جهازك (راجع الأسئلة الشائعة لـ PromptQuorum). وتحدث أيضًا طلبات شبكة أخرى، مثل التحقق من وجود إصدار أحدث عند بدء التطبيق (طلب إلى promptquorum.com)؛ راجع سياسة الخصوصية. وإذا استخدمت مزوّدًا سحابيًا بمفتاح API فستذهب أوامرك مباشرة إلى ذلك المزوّد وفق سياسة بياناته الخاصة.',
             },
           },
           {
@@ -28290,7 +28290,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'كيف أبلغ عن خطأ خلال النسخة التجريبية؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'أرسل بريدًا إلكترونيًا إلى hanskuepper@promptquorum.com موضحًا ما كنت تحاول القيام به، وما حدث، ونظام التشغيل وإصدار التطبيق لديك، ولقطة شاشة إن أمكن.',
+              text: 'أرسل بريدًا إلكترونيًا إلى hello@promptquorum.com موضحًا ما كنت تحاول القيام به، وما حدث، ونظام التشغيل وإصدار التطبيق لديك، ولقطة شاشة إن أمكن.',
             },
           },
         ],
@@ -28312,7 +28312,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Zusammenfassung',
           items: [
             'Die Desktop-App von PromptQuorum befindet sich seit Juli 2026 in der öffentlichen Beta (aktuelle Version 0.1.0) und steht für macOS (Apple Silicon und Intel), Windows 10/11 sowie Linux (x64 und ARM64) zum Download bereit.',
-            'Der Build ist während dieser Beta nicht signiert. macOS und Windows zeigen daher beim ersten Start unter Umständen eine Sicherheitswarnung — das ist bei einem nicht signierten Beta-Build zu erwarten und kein Hinweis auf eine kompromittierte Datei.',
+            'Der Build ist während dieser Beta nicht signiert, daher zeigen macOS und Windows beim ersten Start möglicherweise eine Sicherheitswarnung. Nicht signierte Builds lösen diese Warnung immer aus; sie sagt also weder in die eine noch in die andere Richtung etwas über die Datei aus. Laden Sie den Installer nur über den Link auf der offiziellen Download-Seite herunter und öffnen Sie ihn nur, wenn Sie das Risiko einer nicht signierten Beta akzeptieren.',
             'Die App benötigt ein KI-Backend, um Prompts auszuführen: Installieren Sie Ollama oder LM Studio für lokale Modelle, oder nutzen Sie Ihren eigenen API-Key (BYOK) für OpenAI, Anthropic oder einen anderen Anbieter.',
             'Modellübereinstimmung ist kein Beweis für Richtigkeit — überprüfen Sie sachliche Aussagen unabhängig, bevor Sie sich auf ein Multi-Modell-Konsensergebnis verlassen.',
             'Laden Sie den Build von der Download-Seite herunter, auf der die Installer in einem gemeinsamen Ordner liegen, und senden Sie Fehlerberichte direkt per E-Mail an das Team.',
@@ -28339,8 +28339,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         platformsNote: {
           content: [
-            'Nicht sicher, welchen Mac Sie haben? Öffnen Sie das Apple-Menü, wählen Sie „Über diesen Mac" und prüfen Sie das Feld „Chip" oder „Prozessor".',
-            'Die Linux-Unterstützung ist neuer als die für macOS und Windows und wurde bisher weniger in der Praxis getestet. Wird die App unter Ubuntu blockiert, starten Sie sie versuchsweise über ein Terminal mit dem Flag --no-sandbox und teilen Sie uns mit, was passiert.',
+            'Nicht sicher, welchen Mac Sie haben? Öffnen Sie das Apple-Menü, wählen Sie „Über diesen Mac“ und prüfen Sie das Feld „Chip“ oder „Prozessor“.',
+            'Die Linux-Unterstützung ist neuer als die für macOS und Windows und wurde bisher weniger in der Praxis getestet. Wird die App unter Ubuntu blockiert, können Sie versuchsweise über ein Terminal mit dem Flag --no-sandbox starten und uns mitteilen, was passiert. Das deaktiviert einen Sicherheitsschutz; nutzen Sie es nur als vorübergehende Notlösung.',
           ],
         },
         verify: {
@@ -28354,7 +28354,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         localAiSetup: {
           title: 'Lokale KI-Engine vor dem ersten Start einrichten',
-          content: 'PromptQuorum funktioniert am besten mit einer lokalen LLM-Engine auf Ihrem Rechner — das hält Prompts privat und vermeidet API-Kosten pro Token. Überspringen Sie diesen Abschnitt vollständig, wenn Sie stattdessen einen Cloud-Anbieter mit Ihrem eigenen API-Key nutzen möchten.',
+          content: 'PromptQuorum funktioniert am besten mit einer lokalen LLM-Engine auf Ihrem Rechner — so bleibt die Verarbeitung Ihrer Prompts auf Ihrem Rechner, und es fallen keine API-Kosten pro Token an. Überspringen Sie diesen Abschnitt vollständig, wenn Sie stattdessen einen Cloud-Anbieter mit Ihrem eigenen API-Key nutzen möchten.',
           items: [
             'Ollama (einfachste Ersteinrichtung): Laden Sie es von [ollama.com](https://ollama.com) herunter, installieren Sie es und laden Sie dann über ein Terminal ein Modell herunter, zum Beispiel mit ollama pull gemma3:1b (laut Ollama-Bibliothek ein Download von 806 MB). Es läuft im Hintergrund, und PromptQuorum kann sich als lokaler Anbieter damit verbinden.',
             'LM Studio (stärker grafisch geführt): Laden Sie es von [lmstudio.ai](https://lmstudio.ai) herunter, laden Sie innerhalb der App ein Modell herunter und starten Sie anschließend den lokalen Server über den Tab „Developer" (oder mit dem Befehl lms server start).',
@@ -28379,7 +28379,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         feedback: {
           title: 'Fehler direkt an das Team melden',
-          content: 'Senden Sie Ihr Feedback an hanskuepper@promptquorum.com mit einer Beschreibung, was Sie tun wollten, was tatsächlich passiert ist im Vergleich zu Ihrer Erwartung, Ihrem Betriebssystem und der App-Version sowie nach Möglichkeit einem Screenshot. Fehler, verwirrende Bedienelemente, Abstürze und Funktionen, die nicht wie beschrieben funktionieren, sind allesamt hilfreiche Rückmeldungen.',
+          content: 'Senden Sie Ihr Feedback an hello@promptquorum.com mit einer Beschreibung, was Sie tun wollten, was tatsächlich passiert ist im Vergleich zu Ihrer Erwartung, Ihrem Betriebssystem und der App-Version sowie nach Möglichkeit einem Screenshot. Fehler, verwirrende Bedienelemente, Abstürze und Funktionen, die nicht wie beschrieben funktionieren, sind allesamt hilfreiche Rückmeldungen.',
         },
         ecosystem: {
           title: 'Die Desktop-App ist nur die halbe Wahrheit',
@@ -28390,7 +28390,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'Zur Download-Seite',
             href: '/download',
-            description: 'Plattform auswählen, Prüfsumme überprüfen und installieren — öffentliche Beta, nicht signierter Build, kostenlos nutzbar.',
+            description: 'Wählen Sie Ihre Plattform und installieren Sie (öffentliche Beta, nicht signierter Build, kostenlos nutzbar).',
           },
         },
         faq: {
@@ -28414,11 +28414,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Sind meine Daten privat, wenn ich die Desktop-App nutze?',
-              a: 'Wenn Sie eine lokale KI-Engine wie Ollama oder LM Studio nutzen, funktioniert PromptQuorum vollständig offline, und Ihre Prompts, API-Keys und Ergebnisse bleiben auf Ihrem Gerät (siehe die [PromptQuorum-FAQ](/de/faq)). Wenn Sie einen Cloud-Anbieter per API-Key nutzen, gehen Ihre Prompts direkt an diesen Anbieter und unterliegen dessen eigenen Datenschutzbestimmungen.',
+              a: 'Wenn Sie eine lokale KI-Engine wie Ollama oder LM Studio nutzen, sendet PromptQuorum Ihre Prompts an diese Engine auf Ihrem eigenen Rechner statt an einen PromptQuorum-Server, und API-Keys sowie Ergebnisse werden lokal auf Ihrem Gerät gespeichert (siehe die [PromptQuorum-FAQ](/de/faq)). Weitere Netzwerkanfragen, etwa die Prüfung auf eine neuere App-Version beim Start (eine Anfrage an promptquorum.com), finden ebenfalls statt; siehe die [Datenschutzerklärung](/de/privacy). Wenn Sie einen Cloud-Anbieter per API-Key nutzen, gehen Ihre Prompts direkt an diesen Anbieter und unterliegen dessen eigenen Datenschutzbestimmungen.',
             },
             {
               q: 'Wie melde ich einen Fehler während der Beta?',
-              a: 'Senden Sie eine E-Mail an hanskuepper@promptquorum.com mit einer Beschreibung, was Sie tun wollten, was passiert ist, Ihrem Betriebssystem sowie der App-Version und nach Möglichkeit einem Screenshot.',
+              a: 'Senden Sie eine E-Mail an hello@promptquorum.com mit einer Beschreibung, was Sie tun wollten, was passiert ist, Ihrem Betriebssystem sowie der App-Version und nach Möglichkeit einem Screenshot.',
             },
           ],
         },
@@ -28464,7 +28464,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Sind meine Daten privat, wenn ich die Desktop-App nutze?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Wenn Sie eine lokale KI-Engine wie Ollama oder LM Studio nutzen, funktioniert PromptQuorum vollständig offline, und Ihre Prompts, API-Keys und Ergebnisse bleiben auf Ihrem Gerät (siehe die PromptQuorum-FAQ). Wenn Sie einen Cloud-Anbieter per API-Key nutzen, gehen Ihre Prompts direkt an diesen Anbieter und unterliegen dessen eigenen Datenschutzbestimmungen.',
+              text: 'Wenn Sie eine lokale KI-Engine wie Ollama oder LM Studio nutzen, sendet PromptQuorum Ihre Prompts an diese Engine auf Ihrem eigenen Rechner statt an einen PromptQuorum-Server, und API-Keys sowie Ergebnisse werden lokal auf Ihrem Gerät gespeichert (siehe die PromptQuorum-FAQ). Weitere Netzwerkanfragen, etwa die Prüfung auf eine neuere App-Version beim Start (eine Anfrage an promptquorum.com), finden ebenfalls statt; siehe die Datenschutzerklärung. Wenn Sie einen Cloud-Anbieter per API-Key nutzen, gehen Ihre Prompts direkt an diesen Anbieter und unterliegen dessen eigenen Datenschutzbestimmungen.',
             },
           },
           {
@@ -28472,7 +28472,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Wie melde ich einen Fehler während der Beta?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Senden Sie eine E-Mail an hanskuepper@promptquorum.com mit einer Beschreibung, was Sie tun wollten, was passiert ist, Ihrem Betriebssystem sowie der App-Version und nach Möglichkeit einem Screenshot.',
+              text: 'Senden Sie eine E-Mail an hello@promptquorum.com mit einer Beschreibung, was Sie tun wollten, was passiert ist, Ihrem Betriebssystem sowie der App-Version und nach Möglichkeit einem Screenshot.',
             },
           },
         ],
@@ -28494,7 +28494,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Puntos clave',
           items: [
             'La app de escritorio de PromptQuorum está en beta pública desde julio de 2026 (versión actual 0.1.0) y se puede descargar para macOS (Apple Silicon e Intel), Windows 10/11 y Linux (x64 y ARM64).',
-            'La versión no está firmada durante esta beta, así que macOS y Windows pueden mostrar una advertencia de seguridad en el primer inicio; es lo esperado en una beta sin firmar y no indica un archivo comprometido.',
+            'La versión no está firmada durante esta beta, así que macOS y Windows pueden mostrar una advertencia de seguridad en el primer inicio. Las versiones sin firmar siempre activan esta advertencia, por lo que no dice nada sobre el archivo en ningún sentido. Descarga el instalador solo desde el enlace de la página oficial de descargas y ábrelo solo si aceptas el riesgo de ejecutar una beta sin firmar.',
             'La app necesita un backend de IA para ejecutar prompts: instala Ollama o LM Studio para modelos locales, o usa tu propia clave API (BYOK) para OpenAI, Anthropic u otro proveedor.',
             'El acuerdo entre modelos no es prueba de corrección: verifica las afirmaciones factuales de forma independiente antes de fiarte de un consenso multimodelo.',
             'Descarga la versión desde la página de descargas, donde los instaladores están en una carpeta compartida, y envía los informes de errores directamente al equipo por correo electrónico.',
@@ -28521,8 +28521,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         platformsNote: {
           content: [
-            '¿No sabes qué Mac tienes? Abre el menú Apple, elige Acerca de este Mac y revisa el campo "Chip" o "Procesador".',
-            'El soporte para Linux es más reciente que el de macOS y Windows, y ha recibido menos pruebas en uso real. Si la app queda bloqueada en Ubuntu, intenta abrirla desde una terminal con el flag --no-sandbox y reporta lo que veas.',
+            '¿No sabes qué Mac tienes? Abre el menú Apple, elige «Acerca de este Mac» y revisa el campo «Chip» o «Procesador».',
+            'El soporte de Linux es más reciente que el de macOS y Windows y se ha probado menos en la práctica. Si la app se bloquea en Ubuntu, puedes intentar iniciarla desde una terminal con la opción --no-sandbox e informarnos de lo que ves. Esto desactiva una protección de seguridad, así que úsalo solo como solución temporal.',
           ],
         },
         verify: {
@@ -28536,7 +28536,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         localAiSetup: {
           title: 'Configura un Motor de IA Local Antes del Primer Inicio',
-          content: 'PromptQuorum funciona mejor con un motor LLM local ejecutándose en tu máquina — esto mantiene los prompts privados y evita costos de API por token. Omite esta sección por completo si planeas usar un proveedor en la nube con tu propia API key.',
+          content: 'PromptQuorum funciona mejor con un motor LLM local en tu equipo: así el procesamiento de tus prompts se queda en tu equipo y evitas los costes de API por token. Omite esta sección por completo si piensas usar un proveedor en la nube con tu propia clave API.',
           items: [
             'Ollama (la primera configuración más sencilla): descárgalo desde [ollama.com](https://ollama.com), instálalo y luego descarga un modelo desde una terminal, por ejemplo con ollama pull gemma3:1b (una descarga de 806 MB según la biblioteca de Ollama). Se ejecuta en segundo plano y PromptQuorum puede conectarse a él como proveedor local.',
             'LM Studio (más orientado a la interfaz gráfica): descárgalo desde [lmstudio.ai](https://lmstudio.ai), descarga un modelo dentro de la app y luego inicia el servidor local desde la pestaña Developer (o con el comando lms server start).',
@@ -28561,7 +28561,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         feedback: {
           title: 'Reporta Errores Directamente al Equipo',
-          content: 'Envía tu feedback a hanskuepper@promptquorum.com indicando qué estabas intentando hacer, qué ocurrió frente a lo que esperabas, tu sistema operativo y la versión de la app, y una captura de pantalla si es posible. Los errores, la interfaz confusa, los cierres inesperados y las funciones que no funcionan como se describe son todos reportes útiles.',
+          content: 'Envía tu feedback a hello@promptquorum.com indicando qué estabas intentando hacer, qué ocurrió frente a lo que esperabas, tu sistema operativo y la versión de la app, y una captura de pantalla si es posible. Los errores, la interfaz confusa, los cierres inesperados y las funciones que no funcionan como se describe son todos reportes útiles.',
         },
         ecosystem: {
           title: 'La App de Escritorio Es Solo la Mitad del Panorama',
@@ -28572,7 +28572,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'Ir a la Página de Descargas',
             href: '/download',
-            description: 'Elige tu plataforma, verifica el checksum e instala — beta pública, compilación sin firmar, gratis.',
+            description: 'Elige tu plataforma e instala (beta pública, versión sin firmar, uso gratuito).',
           },
         },
         faq: {
@@ -28596,11 +28596,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '¿Mis datos son privados cuando uso la app de escritorio?',
-              a: 'Si usas un motor de IA local como Ollama o LM Studio, PromptQuorum funciona completamente sin conexión y tus prompts, claves API y resultados permanecen en tu dispositivo (consulta las [preguntas frecuentes de PromptQuorum](/es/faq)). Si usas un proveedor en la nube con clave API, tus prompts van directamente a ese proveedor bajo su propia política de datos.',
+              a: 'Si usas un motor de IA local como Ollama o LM Studio, PromptQuorum envía tus prompts a ese motor en tu propio equipo en lugar de a un servidor de PromptQuorum, y las claves API y los resultados se guardan localmente en tu dispositivo (consulta las [preguntas frecuentes de PromptQuorum](/es/faq)). También se producen otras solicitudes de red, como la comprobación de una versión más reciente al iniciar la app (una solicitud a promptquorum.com); consulta la [política de privacidad](/es/privacy). Si usas un proveedor en la nube con clave API, tus prompts van directamente a ese proveedor bajo su propia política de datos.',
             },
             {
               q: '¿Cómo reporto un error durante la beta?',
-              a: 'Envía un correo a hanskuepper@promptquorum.com indicando qué estabas intentando hacer, qué ocurrió, tu sistema operativo y la versión de la app, y una captura de pantalla si es posible.',
+              a: 'Envía un correo a hello@promptquorum.com indicando qué estabas intentando hacer, qué ocurrió, tu sistema operativo y la versión de la app, y una captura de pantalla si es posible.',
             },
           ],
         },
@@ -28646,7 +28646,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Mis datos son privados cuando uso la app de escritorio?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Si usas un motor de IA local como Ollama o LM Studio, PromptQuorum funciona completamente sin conexión y tus prompts, claves API y resultados permanecen en tu dispositivo (consulta las preguntas frecuentes de PromptQuorum). Si usas un proveedor en la nube con clave API, tus prompts van directamente a ese proveedor bajo su propia política de datos.',
+              text: 'Si usas un motor de IA local como Ollama o LM Studio, PromptQuorum envía tus prompts a ese motor en tu propio equipo en lugar de a un servidor de PromptQuorum, y las claves API y los resultados se guardan localmente en tu dispositivo (consulta las preguntas frecuentes de PromptQuorum). También se producen otras solicitudes de red, como la comprobación de una versión más reciente al iniciar la app (una solicitud a promptquorum.com); consulta la política de privacidad. Si usas un proveedor en la nube con clave API, tus prompts van directamente a ese proveedor bajo su propia política de datos.',
             },
           },
           {
@@ -28654,7 +28654,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Cómo reporto un error durante la beta?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Envía un correo a hanskuepper@promptquorum.com indicando qué estabas intentando hacer, qué ocurrió, tu sistema operativo y la versión de la app, y una captura de pantalla si es posible.',
+              text: 'Envía un correo a hello@promptquorum.com indicando qué estabas intentando hacer, qué ocurrió, tu sistema operativo y la versión de la app, y una captura de pantalla si es posible.',
             },
           },
         ],
@@ -28676,7 +28676,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Points clés',
           items: [
             'L\'application de bureau PromptQuorum est en bêta publique depuis juillet 2026 (version actuelle 0.1.0) et téléchargeable pour macOS (Apple Silicon et Intel), Windows 10/11 et Linux (x64 et ARM64).',
-            'La version est non signée pendant cette bêta : macOS et Windows peuvent afficher un avertissement de sécurité au premier lancement — c\'est normal pour une bêta non signée et ne signale pas un fichier compromis.',
+            'La version est non signée pendant cette bêta : macOS et Windows peuvent afficher un avertissement de sécurité au premier lancement. Les versions non signées déclenchent toujours cet avertissement, qui ne dit donc rien du fichier, ni dans un sens ni dans l’autre. Ne téléchargez l’installateur que depuis le lien de la page de téléchargement officielle et ne l’ouvrez que si vous acceptez le risque d’exécuter une bêta non signée.',
             'L\'application a besoin d\'un backend d\'IA pour exécuter des prompts : installez Ollama ou LM Studio pour des modèles locaux, ou utilisez votre propre clé API (BYOK) pour OpenAI, Anthropic ou un autre fournisseur.',
             'L\'accord entre modèles ne prouve pas l\'exactitude — vérifiez les affirmations factuelles de façon indépendante avant de vous fier à un consensus multi-modèles.',
             'Récupérez la version sur la page de téléchargement, où les installateurs sont regroupés dans un dossier partagé, et envoyez vos rapports de bogues directement à l\'équipe par e-mail.',
@@ -28703,8 +28703,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         platformsNote: {
           content: [
-            'Vous ne savez pas quel Mac vous avez ? Ouvrez le menu Apple, choisissez « À propos de ce Mac », et vérifiez le champ « Puce » ou « Processeur ».',
-            'Le support Linux est plus récent que celui de macOS et Windows, et a été moins testé en conditions réelles. Si l\'application est bloquée sur Ubuntu, essayez de la lancer depuis un terminal avec l\'option --no-sandbox et signalez ce que vous observez.',
+            'Vous ne savez pas quel Mac vous avez ? Ouvrez le menu Pomme, choisissez « À propos de ce Mac » et vérifiez le champ « Puce » ou « Processeur ».',
+            'La prise en charge de Linux est plus récente que celle de macOS et Windows et a été moins testée en conditions réelles. Si l’application est bloquée sous Ubuntu, vous pouvez essayer de la lancer depuis un terminal avec l’option --no-sandbox et nous dire ce que vous constatez. Cela désactive une protection de sécurité : n’y recourez que comme solution de contournement temporaire.',
           ],
         },
         verify: {
@@ -28718,7 +28718,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         localAiSetup: {
           title: 'Configurez un moteur IA local avant le premier lancement',
-          content: 'PromptQuorum fonctionne mieux avec un moteur LLM local exécuté sur votre machine — cela garde les prompts privés et évite les coûts par token. Ignorez entièrement cette section si vous comptez plutôt utiliser un fournisseur cloud avec votre propre clé API.',
+          content: 'PromptQuorum fonctionne mieux avec un moteur LLM local sur votre machine : le traitement de vos prompts reste alors sur votre machine et vous évitez les coûts d’API par token. Ignorez entièrement cette section si vous prévoyez d’utiliser un fournisseur cloud avec votre propre clé API.',
           items: [
             'Ollama (première installation la plus simple) : téléchargez-le sur [ollama.com](https://ollama.com), installez-le, puis récupérez un modèle depuis un terminal, par exemple avec ollama pull gemma3:1b (téléchargement de 806 Mo selon la bibliothèque Ollama). Il s\'exécute en arrière-plan et PromptQuorum peut s\'y connecter comme fournisseur local.',
             'LM Studio (plus orienté interface graphique) : téléchargez-le sur [lmstudio.ai](https://lmstudio.ai), téléchargez un modèle dans l\'application, puis démarrez le serveur local depuis l\'onglet Developer (ou avec la commande lms server start).',
@@ -28743,7 +28743,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         feedback: {
           title: 'Signalez les bugs directement à l\'équipe',
-          content: 'Envoyez vos retours à hanskuepper@promptquorum.com en précisant ce que vous essayiez de faire, ce qui s\'est passé par rapport à ce que vous attendiez, votre système d\'exploitation et la version de l\'application, et une capture d\'écran si possible. Bugs, interface confuse, plantages et fonctionnalités qui ne fonctionnent pas comme décrit sont tous des rapports utiles.',
+          content: 'Envoyez vos retours à hello@promptquorum.com en précisant ce que vous essayiez de faire, ce qui s\'est passé par rapport à ce que vous attendiez, votre système d\'exploitation et la version de l\'application, et une capture d\'écran si possible. Bugs, interface confuse, plantages et fonctionnalités qui ne fonctionnent pas comme décrit sont tous des rapports utiles.',
         },
         ecosystem: {
           title: 'L\'application de bureau n\'est qu\'une partie de l\'ensemble',
@@ -28754,7 +28754,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'Accéder à la page de téléchargement',
             href: '/download',
-            description: 'Choisissez votre plateforme, vérifiez l\'empreinte, et installez — bêta publique, build non signé, utilisation gratuite.',
+            description: 'Choisissez votre plateforme et installez (bêta publique, version non signée, utilisation gratuite).',
           },
         },
         faq: {
@@ -28778,11 +28778,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Mes données sont-elles privées quand j\'utilise l\'application de bureau ?',
-              a: 'Si vous utilisez un moteur d\'IA local comme Ollama ou LM Studio, PromptQuorum fonctionne entièrement hors ligne et vos prompts, clés API et résultats restent sur votre appareil (voir la [FAQ PromptQuorum](/fr/faq)). Si vous utilisez un fournisseur cloud via clé API, vos prompts vont directement à ce fournisseur, selon sa propre politique de données.',
+              a: 'Si vous utilisez un moteur d’IA local comme Ollama ou LM Studio, PromptQuorum envoie vos prompts à ce moteur sur votre propre machine plutôt qu’à un serveur PromptQuorum, et les clés API et résultats sont conservés localement sur votre appareil (voir la [FAQ PromptQuorum](/fr/faq)). D’autres requêtes réseau, comme la vérification d’une version plus récente au démarrage (une requête vers promptquorum.com), ont également lieu ; voir la [politique de confidentialité](/fr/privacy). Si vous utilisez un fournisseur cloud via clé API, vos prompts vont directement à ce fournisseur, selon sa propre politique de données.',
             },
             {
               q: 'Comment signaler un bug durant la bêta ?',
-              a: 'Envoyez un e-mail à hanskuepper@promptquorum.com en précisant ce que vous essayiez de faire, ce qui s\'est passé, votre système d\'exploitation et la version de l\'application, et une capture d\'écran si possible.',
+              a: 'Envoyez un e-mail à hello@promptquorum.com en précisant ce que vous essayiez de faire, ce qui s\'est passé, votre système d\'exploitation et la version de l\'application, et une capture d\'écran si possible.',
             },
           ],
         },
@@ -28828,7 +28828,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Mes données sont-elles privées quand j\'utilise l\'application de bureau ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Si vous utilisez un moteur d\'IA local comme Ollama ou LM Studio, PromptQuorum fonctionne entièrement hors ligne et vos prompts, clés API et résultats restent sur votre appareil (voir la FAQ PromptQuorum). Si vous utilisez un fournisseur cloud via clé API, vos prompts vont directement à ce fournisseur, selon sa propre politique de données.',
+              text: 'Si vous utilisez un moteur d’IA local comme Ollama ou LM Studio, PromptQuorum envoie vos prompts à ce moteur sur votre propre machine plutôt qu’à un serveur PromptQuorum, et les clés API et résultats sont conservés localement sur votre appareil (voir la FAQ PromptQuorum). D’autres requêtes réseau, comme la vérification d’une version plus récente au démarrage (une requête vers promptquorum.com), ont également lieu ; voir la politique de confidentialité. Si vous utilisez un fournisseur cloud via clé API, vos prompts vont directement à ce fournisseur, selon sa propre politique de données.',
             },
           },
           {
@@ -28836,7 +28836,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Comment signaler un bug durant la bêta ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Envoyez un e-mail à hanskuepper@promptquorum.com en précisant ce que vous essayiez de faire, ce qui s\'est passé, votre système d\'exploitation et la version de l\'application, et une capture d\'écran si possible.',
+              text: 'Envoyez un e-mail à hello@promptquorum.com en précisant ce que vous essayiez de faire, ce qui s\'est passé, votre système d\'exploitation et la version de l\'application, et une capture d\'écran si possible.',
             },
           },
         ],
@@ -28858,7 +28858,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '重要ポイント',
           items: [
             'PromptQuorumのデスクトップアプリは2026年7月から公開ベータとなっており（現行バージョン0.1.0）、macOS（Apple SiliconとIntel）、Windows 10/11、Linux（x64とARM64）向けにダウンロードできます。',
-            'このベータ版は署名されていないため、macOSとWindowsでは初回起動時にセキュリティ警告が表示されることがあります。署名なしのベータビルドでは想定内であり、ファイルが改ざんされている印ではありません。',
+            'このベータ版は署名されていないため、macOSとWindowsでは初回起動時にセキュリティ警告が表示されることがあります。署名なしのビルドでは必ずこの警告が出るため、警告の有無はファイルの安全性について何も示しません。インストーラーは公式ダウンロードページのリンクからのみ入手し、署名なしのベータ版を実行するリスクを受け入れる場合にのみ開いてください。',
             'アプリがプロンプトを実行するにはAIバックエンドが必要です。ローカルモデルにはOllamaまたはLM Studioをインストールするか、OpenAI、Anthropicなどのプロバイダー向けに自分のAPIキー（BYOK）を使用してください。',
             'モデル間の一致は正しさの証明ではありません。複数モデルの合意結果に頼る前に、事実に関する主張は独自に確認してください。',
             'ビルドはダウンロードページから入手してください（インストーラーは1つの共有フォルダーにあります）。バグ報告はチームにメールで直接お送りください。',
@@ -28885,8 +28885,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         platformsNote: {
           content: [
-            'お使いのMacの機種がわからない場合は、Appleメニューから「このMacについて」を選び、「チップ」または「プロセッサ」の項目を確認してください。',
-            'LinuxサポートはmacOSやWindowsのサポートよりも新しく、実環境でのテストはまだ十分ではありません。Ubuntuでアプリがブロックされる場合は、ターミナルから--no-sandboxフラグを付けて起動し、状況を報告してください。',
+            'お使いのMacがどれか分からない場合は、Appleメニューから「このMacについて」を開き、「チップ」または「プロセッサ」の欄を確認してください。',
+            'LinuxのサポートはmacOSやWindowsより新しく、実環境でのテストも少なめです。Ubuntuでアプリがブロックされる場合は、ターミナルから--no-sandboxオプション付きで起動を試し、結果をお知らせください。これはセキュリティ保護を無効にするため、一時的な回避策としてのみ使用してください。',
           ],
         },
         verify: {
@@ -28900,7 +28900,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         localAiSetup: {
           title: '初回起動前にローカルAIエンジンを設定する',
-          content: 'PromptQuorumは、自分のマシン上でローカルLLMエンジンを動かしている状態が最適です。プロンプトを外部に送信せずに済み、トークンごとのAPI費用もかかりません。クラウドプロバイダーを自分のAPIキーで使う予定の場合は、このセクションは読み飛ばして構いません。',
+          content: 'PromptQuorumは、お使いのマシン上で動作するローカルLLMエンジンと組み合わせると最も効果的です。プロンプトの処理が自分のマシン上にとどまり、トークン単位のAPI費用もかかりません。自分のAPIキーでクラウドプロバイダーを使う場合は、このセクション全体を省略してください。',
           items: [
             'Ollama（最も簡単な初回セットアップ）：[ollama.com](https://ollama.com)からダウンロードしてインストールし、ターミナルでモデルを取得します（例：ollama pull gemma3:1b、Ollamaライブラリによるとダウンロードサイズは806 MB）。バックグラウンドで動作し、PromptQuorumはローカルプロバイダーとして接続できます。',
             'LM Studio（GUI中心）：[lmstudio.ai](https://lmstudio.ai)からダウンロードし、アプリ内でモデルをダウンロードして、Developerタブからローカルサーバーを起動します（またはlms server startコマンドを使用）。',
@@ -28925,7 +28925,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         feedback: {
           title: 'バグはチームに直接報告してください',
-          content: 'hanskuepper@promptquorum.com宛てに、何をしようとしていたか、期待した動作と実際の動作の違い、OSとアプリのバージョン、可能であればスクリーンショットを添えてフィードバックを送ってください。バグ、わかりにくいUI、クラッシュ、説明通りに動作しない機能はすべて有用な報告です。',
+          content: 'hello@promptquorum.com宛てに、何をしようとしていたか、期待した動作と実際の動作の違い、OSとアプリのバージョン、可能であればスクリーンショットを添えてフィードバックを送ってください。バグ、わかりにくいUI、クラッシュ、説明通りに動作しない機能はすべて有用な報告です。',
         },
         ecosystem: {
           title: 'デスクトップアプリはあくまで半分',
@@ -28936,7 +28936,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'ダウンロードページへ',
             href: '/download',
-            description: 'お使いのプラットフォームを選び、チェックサムを検証してインストールしてください。プライベートベータ、未署名ビルド、無料でご利用いただけます。',
+            description: 'プラットフォームを選んでインストールしてください（公開ベータ、署名なしビルド、無料）。',
           },
         },
         faq: {
@@ -28960,11 +28960,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'デスクトップアプリを使うとき、データは非公開に保たれますか?',
-              a: 'OllamaやLM Studioなどのローカル AIエンジンを使う場合、PromptQuorumは完全にオフラインで動作し、プロンプト、APIキー、結果はお使いのデバイスにとどまります（[PromptQuorumのFAQ](/ja/faq)を参照）。APIキー経由でクラウドプロバイダーを使う場合、プロンプトはそのプロバイダーに直接送られ、そのプロバイダー自身のデータポリシーが適用されます。',
+              a: 'OllamaやLM Studioなどのローカル AIエンジンを使う場合、PromptQuorumはプロンプトをPromptQuorumのサーバーではなく、お使いのマシン上のそのエンジンに送信し、APIキーと結果はデバイス上にローカル保存されます（[PromptQuorumのFAQ](/ja/faq)を参照）。アプリ起動時の新バージョン確認（promptquorum.comへのリクエスト）など、その他のネットワークリクエストも発生します。[プライバシーポリシー](/ja/privacy)をご覧ください。APIキー経由でクラウドプロバイダーを使う場合、プロンプトはそのプロバイダーに直接送られ、そのプロバイダー自身のデータポリシーが適用されます。',
             },
             {
               q: 'ベータ期間中にバグを報告するにはどうすればよいですか?',
-              a: 'hanskuepper@promptquorum.com宛てに、何をしようとしていたか、実際に起きたこと、OSとアプリのバージョン、可能であればスクリーンショットを添えてメールしてください。',
+              a: 'hello@promptquorum.com宛てに、何をしようとしていたか、実際に起きたこと、OSとアプリのバージョン、可能であればスクリーンショットを添えてメールしてください。',
             },
           ],
         },
@@ -29010,7 +29010,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'デスクトップアプリを使うとき、データは非公開に保たれますか?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'OllamaやLM Studioなどのローカル AIエンジンを使う場合、PromptQuorumは完全にオフラインで動作し、プロンプト、APIキー、結果はお使いのデバイスにとどまります（PromptQuorumのFAQを参照）。APIキー経由でクラウドプロバイダーを使う場合、プロンプトはそのプロバイダーに直接送られ、そのプロバイダー自身のデータポリシーが適用されます。',
+              text: 'OllamaやLM Studioなどのローカル AIエンジンを使う場合、PromptQuorumはプロンプトをPromptQuorumのサーバーではなく、お使いのマシン上のそのエンジンに送信し、APIキーと結果はデバイス上にローカル保存されます（PromptQuorumのFAQを参照）。アプリ起動時の新バージョン確認（promptquorum.comへのリクエスト）など、その他のネットワークリクエストも発生します。プライバシーポリシーをご覧ください。APIキー経由でクラウドプロバイダーを使う場合、プロンプトはそのプロバイダーに直接送られ、そのプロバイダー自身のデータポリシーが適用されます。',
             },
           },
           {
@@ -29018,7 +29018,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'ベータ期間中にバグを報告するにはどうすればよいですか?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'hanskuepper@promptquorum.com宛てに、何をしようとしていたか、実際に起きたこと、OSとアプリのバージョン、可能であればスクリーンショットを添えてメールしてください。',
+              text: 'hello@promptquorum.com宛てに、何をしようとしていたか、実際に起きたこと、OSとアプリのバージョン、可能であればスクリーンショットを添えてメールしてください。',
             },
           },
         ],
@@ -29040,7 +29040,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '핵심 내용',
           items: [
             'PromptQuorum 데스크톱 앱은 2026년 7월부터 공개 베타 상태이며(현재 버전 0.1.0), macOS(Apple Silicon 및 Intel), Windows 10/11, Linux(x64 및 ARM64)용으로 다운로드할 수 있습니다.',
-            '이 베타 빌드는 서명되지 않았으므로 macOS와 Windows에서 첫 실행 시 보안 경고가 표시될 수 있습니다. 서명되지 않은 베타 빌드에서는 예상되는 현상이며 파일이 손상되었다는 뜻이 아닙니다.',
+            '이 베타 빌드는 서명되지 않았으므로 macOS와 Windows에서 첫 실행 시 보안 경고가 표시될 수 있습니다. 서명되지 않은 빌드는 항상 이 경고를 띄우므로, 경고 여부는 파일에 대해 아무것도 알려 주지 않습니다. 설치 파일은 공식 다운로드 페이지의 링크로만 받으시고, 서명되지 않은 베타를 실행하는 위험을 감수할 경우에만 여십시오.',
             '앱이 프롬프트를 실행하려면 AI 백엔드가 필요합니다. 로컬 모델에는 Ollama 또는 LM Studio를 설치하거나, OpenAI, Anthropic 등 제공업체용으로 직접 발급받은 API 키(BYOK)를 사용하십시오.',
             '모델 간 일치는 정확성의 증거가 아닙니다. 다중 모델 합의 결과에 의존하기 전에 사실 관계는 독립적으로 확인하십시오.',
             '빌드는 다운로드 페이지에서 받으십시오(설치 파일은 하나의 공유 폴더에 있습니다). 버그 신고는 팀에 이메일로 직접 보내 주십시오.',
@@ -29067,8 +29067,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         platformsNote: {
           content: [
-            '사용 중인 Mac 모델을 잘 모르십니까? Apple 메뉴를 열고 "이 Mac에 관하여"를 선택한 후 "칩" 또는 "프로세서" 항목을 확인하십시오.',
-            'Linux 지원은 macOS 및 Windows 지원보다 최근에 추가되어 실제 환경에서의 테스트가 상대적으로 적습니다. Ubuntu에서 앱이 차단되는 경우, 터미널에서 --no-sandbox 플래그를 사용해 실행해 보고 결과를 신고해 주십시오.',
+            '어떤 Mac을 사용하는지 모르겠다면 Apple 메뉴에서 "이 Mac에 관하여"를 열고 "칩" 또는 "프로세서" 항목을 확인하십시오.',
+            'Linux 지원은 macOS와 Windows보다 새롭고 실제 환경에서의 테스트가 적었습니다. Ubuntu에서 앱이 차단되면 터미널에서 --no-sandbox 옵션으로 실행해 보고 어떤 결과가 나오는지 알려 주십시오. 이는 보안 보호를 해제하므로 임시 우회책으로만 사용하십시오.',
           ],
         },
         verify: {
@@ -29082,7 +29082,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         localAiSetup: {
           title: '최초 실행 전 로컬 AI 엔진 설정하기',
-          content: 'PromptQuorum은 사용자의 기기에서 로컬 LLM 엔진이 실행될 때 가장 원활하게 작동합니다. 이렇게 하면 프롬프트가 비공개로 유지되고 토큰당 API 비용이 발생하지 않습니다. 본인의 API 키로 클라우드 제공업체를 사용할 계획이라면 이 섹션은 건너뛰어도 됩니다.',
+          content: 'PromptQuorum은 내 컴퓨터에서 실행되는 로컬 LLM 엔진과 함께 사용할 때 가장 잘 작동합니다. 프롬프트 처리가 내 컴퓨터에 머물고 토큰당 API 비용도 들지 않습니다. 직접 발급받은 API 키로 클라우드 제공업체를 사용할 계획이라면 이 섹션은 건너뛰십시오.',
           items: [
             'Ollama(가장 간단한 첫 설정): [ollama.com](https://ollama.com)에서 다운로드해 설치한 뒤 터미널에서 모델을 받습니다. 예: ollama pull gemma3:1b(Ollama 라이브러리 기준 다운로드 크기 806 MB). 백그라운드에서 실행되며 PromptQuorum이 로컬 제공업체로 연결할 수 있습니다.',
             'LM Studio(GUI 중심): [lmstudio.ai](https://lmstudio.ai)에서 다운로드하고 앱 안에서 모델을 내려받은 뒤 Developer 탭에서 로컬 서버를 시작합니다(또는 lms server start 명령 사용).',
@@ -29107,7 +29107,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         feedback: {
           title: '팀에 버그 직접 신고하기',
-          content: 'hanskuepper@promptquorum.com으로 피드백을 보내주십시오. 무엇을 하려 했는지, 예상과 실제로 어떤 차이가 있었는지, 운영체제와 앱 버전, 가능하다면 스크린샷을 함께 보내주십시오. 버그, 혼란스러운 UI, 충돌, 설명대로 작동하지 않는 기능 등 모든 신고가 도움이 됩니다.',
+          content: 'hello@promptquorum.com으로 피드백을 보내주십시오. 무엇을 하려 했는지, 예상과 실제로 어떤 차이가 있었는지, 운영체제와 앱 버전, 가능하다면 스크린샷을 함께 보내주십시오. 버그, 혼란스러운 UI, 충돌, 설명대로 작동하지 않는 기능 등 모든 신고가 도움이 됩니다.',
         },
         ecosystem: {
           title: '데스크톱 앱은 전체 그림의 절반입니다',
@@ -29118,7 +29118,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: '다운로드 페이지로 이동',
             href: '/download',
-            description: '플랫폼을 선택하고 체크섬을 검증한 후 설치하십시오 — 공개 베타, 미서명 빌드, 무료로 사용할 수 있습니다.',
+            description: '플랫폼을 선택해 설치하십시오(공개 베타, 서명되지 않은 빌드, 무료 사용).',
           },
         },
         faq: {
@@ -29142,11 +29142,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '데스크톱 앱을 사용할 때 내 데이터는 비공개로 유지됩니까?',
-              a: 'Ollama나 LM Studio 같은 로컬 AI 엔진을 사용하면 PromptQuorum은 완전히 오프라인으로 동작하며 프롬프트, API 키, 결과가 사용자 기기에 머무릅니다([PromptQuorum FAQ](/ko/faq) 참조). API 키로 클라우드 제공업체를 사용하면 프롬프트는 해당 제공업체로 직접 전송되며 그 제공업체 자체의 데이터 정책이 적용됩니다.',
+              a: 'Ollama나 LM Studio 같은 로컬 AI 엔진을 사용하면 PromptQuorum은 프롬프트를 PromptQuorum 서버가 아니라 사용자 컴퓨터의 해당 엔진으로 보내며, API 키와 결과는 기기에 로컬로 저장됩니다([PromptQuorum FAQ](/ko/faq) 참조). 앱 시작 시 새 버전 확인(promptquorum.com에 대한 요청) 같은 다른 네트워크 요청도 발생합니다. [개인정보 처리방침](/ko/privacy)을 참조하십시오. API 키로 클라우드 제공업체를 사용하면 프롬프트는 해당 제공업체로 직접 전송되며 그 제공업체 자체의 데이터 정책이 적용됩니다.',
             },
             {
               q: '베타 기간 동안 버그는 어떻게 신고합니까?',
-              a: 'hanskuepper@promptquorum.com으로 이메일을 보내 무엇을 하려 했는지, 어떤 일이 발생했는지, 운영체제와 앱 버전, 가능하다면 스크린샷을 함께 알려주십시오.',
+              a: 'hello@promptquorum.com으로 이메일을 보내 무엇을 하려 했는지, 어떤 일이 발생했는지, 운영체제와 앱 버전, 가능하다면 스크린샷을 함께 알려주십시오.',
             },
           ],
         },
@@ -29192,7 +29192,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '데스크톱 앱을 사용할 때 내 데이터는 비공개로 유지됩니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Ollama나 LM Studio 같은 로컬 AI 엔진을 사용하면 PromptQuorum은 완전히 오프라인으로 동작하며 프롬프트, API 키, 결과가 사용자 기기에 머무릅니다(PromptQuorum FAQ 참조). API 키로 클라우드 제공업체를 사용하면 프롬프트는 해당 제공업체로 직접 전송되며 그 제공업체 자체의 데이터 정책이 적용됩니다.',
+              text: 'Ollama나 LM Studio 같은 로컬 AI 엔진을 사용하면 PromptQuorum은 프롬프트를 PromptQuorum 서버가 아니라 사용자 컴퓨터의 해당 엔진으로 보내며, API 키와 결과는 기기에 로컬로 저장됩니다(PromptQuorum FAQ 참조). 앱 시작 시 새 버전 확인(promptquorum.com에 대한 요청) 같은 다른 네트워크 요청도 발생합니다. 개인정보 처리방침을 참조하십시오. API 키로 클라우드 제공업체를 사용하면 프롬프트는 해당 제공업체로 직접 전송되며 그 제공업체 자체의 데이터 정책이 적용됩니다.',
             },
           },
           {
@@ -29200,7 +29200,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '베타 기간 동안 버그는 어떻게 신고합니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'hanskuepper@promptquorum.com으로 이메일을 보내 무엇을 하려 했는지, 어떤 일이 발생했는지, 운영체제와 앱 버전, 가능하다면 스크린샷을 함께 알려주십시오.',
+              text: 'hello@promptquorum.com으로 이메일을 보내 무엇을 하려 했는지, 어떤 일이 발생했는지, 운영체제와 앱 버전, 가능하다면 스크린샷을 함께 알려주십시오.',
             },
           },
         ],
@@ -29222,7 +29222,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Pontos principais',
           items: [
             'O app de desktop do PromptQuorum está em beta pública desde julho de 2026 (versão atual 0.1.0) e pode ser baixado para macOS (Apple Silicon e Intel), Windows 10/11 e Linux (x64 e ARM64).',
-            'A versão não é assinada durante esta beta, então o macOS e o Windows podem exibir um aviso de segurança na primeira abertura — isso é esperado em uma beta sem assinatura e não indica um arquivo comprometido.',
+            'A versão não é assinada durante esta beta, então o macOS e o Windows podem exibir um aviso de segurança na primeira abertura. Versões sem assinatura sempre disparam esse aviso, que portanto não diz nada sobre o arquivo, nem num sentido nem noutro. Baixe o instalador apenas pelo link da página oficial de download e só o abra se aceitar o risco de executar uma beta sem assinatura.',
             'O app precisa de um backend de IA para executar prompts: instale o Ollama ou o LM Studio para modelos locais, ou use sua própria chave de API (BYOK) para OpenAI, Anthropic ou outro provedor.',
             'A concordância entre modelos não prova que a resposta está correta — verifique afirmações factuais de forma independente antes de confiar em um consenso multimodelo.',
             'Baixe a versão na página de download, onde os instaladores ficam em uma pasta compartilhada, e envie relatórios de bugs diretamente à equipe por e-mail.',
@@ -29249,8 +29249,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         platformsNote: {
           content: [
-            'Não tem certeza de qual Mac você tem? Abra o menu Apple, escolha Sobre Este Mac e confira o campo \'Chip\' ou \'Processador\'.',
-            'O suporte a Linux é mais recente que o suporte a macOS e Windows e passou por menos testes no mundo real. Se o aplicativo for bloqueado no Ubuntu, tente abri-lo pelo terminal com a flag --no-sandbox e relate o que acontecer.',
+            'Não sabe qual Mac você tem? Abra o menu Apple, escolha "Sobre Este Mac" e confira o campo "Chip" ou "Processador".',
+            'O suporte a Linux é mais recente que o de macOS e Windows e foi menos testado na prática. Se o app for bloqueado no Ubuntu, você pode tentar iniciá-lo pelo terminal com a opção --no-sandbox e nos contar o que acontece. Isso desativa uma proteção de segurança, então use apenas como solução temporária.',
           ],
         },
         verify: {
@@ -29264,7 +29264,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         localAiSetup: {
           title: 'Configure um Mecanismo de IA Local Antes da Primeira Execução',
-          content: 'O PromptQuorum funciona melhor com um mecanismo de LLM local rodando na sua máquina — isso mantém os prompts privados e evita custos de API por token. Pule esta seção completamente se você planeja usar um provedor em nuvem com sua própria chave de API.',
+          content: 'O PromptQuorum funciona melhor com um mecanismo LLM local na sua máquina — assim o processamento dos seus prompts fica na sua máquina e você evita custos de API por token. Pule esta seção por completo se pretende usar um provedor em nuvem com sua própria chave de API.',
           items: [
             'Ollama (primeira configuração mais simples): baixe-o em [ollama.com](https://ollama.com), instale e depois baixe um modelo pelo terminal, por exemplo com ollama pull gemma3:1b (um download de 806 MB segundo a biblioteca do Ollama). Ele roda em segundo plano e o PromptQuorum pode se conectar a ele como provedor local.',
             'LM Studio (mais voltado à interface gráfica): baixe-o em [lmstudio.ai](https://lmstudio.ai), baixe um modelo dentro do app e depois inicie o servidor local pela aba Developer (ou com o comando lms server start).',
@@ -29289,7 +29289,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         feedback: {
           title: 'Relate Bugs Diretamente para a Equipe',
-          content: 'Envie um e-mail para hanskuepper@promptquorum.com descrevendo o que você estava tentando fazer, o que aconteceu em comparação com o esperado, seu sistema operacional e a versão do aplicativo, e uma captura de tela se possível. Bugs, interface confusa, falhas e recursos que não funcionam como descrito são todos relatos úteis.',
+          content: 'Envie um e-mail para hello@promptquorum.com descrevendo o que você estava tentando fazer, o que aconteceu em comparação com o esperado, seu sistema operacional e a versão do aplicativo, e uma captura de tela se possível. Bugs, interface confusa, falhas e recursos que não funcionam como descrito são todos relatos úteis.',
         },
         ecosystem: {
           title: 'O Aplicativo Desktop É Metade da História',
@@ -29300,7 +29300,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'Ir para a Página de Download',
             href: '/download',
-            description: 'Escolha sua plataforma, verifique o checksum e instale — beta pública, build não assinada, gratuito para usar.',
+            description: 'Escolha sua plataforma e instale (beta pública, versão sem assinatura, uso gratuito).',
           },
         },
         faq: {
@@ -29324,11 +29324,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Meus dados ficam privados quando uso o aplicativo desktop?',
-              a: 'Se você usa um mecanismo de IA local como o Ollama ou o LM Studio, o PromptQuorum funciona totalmente offline e seus prompts, chaves de API e resultados ficam no seu dispositivo (veja o [FAQ do PromptQuorum](/pt/faq)). Se você usa um provedor em nuvem com chave de API, seus prompts vão diretamente a esse provedor, sob a política de dados dele.',
+              a: 'Se você usa um mecanismo de IA local como o Ollama ou o LM Studio, o PromptQuorum envia seus prompts a esse mecanismo na sua própria máquina, e não a um servidor do PromptQuorum, e as chaves de API e os resultados ficam armazenados localmente no seu dispositivo (veja o [FAQ do PromptQuorum](/pt/faq)). Outras solicitações de rede, como a verificação de uma versão mais nova ao iniciar o app (uma solicitação a promptquorum.com), também ocorrem; veja a [política de privacidade](/pt/privacy). Se você usa um provedor em nuvem com chave de API, seus prompts vão diretamente a esse provedor, sob a política de dados dele.',
             },
             {
               q: 'Como faço para relatar um bug durante o beta?',
-              a: 'Envie um e-mail para hanskuepper@promptquorum.com com o que você estava tentando fazer, o que aconteceu, seu sistema operacional e versão do aplicativo, e uma captura de tela se possível.',
+              a: 'Envie um e-mail para hello@promptquorum.com com o que você estava tentando fazer, o que aconteceu, seu sistema operacional e versão do aplicativo, e uma captura de tela se possível.',
             },
           ],
         },
@@ -29374,7 +29374,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Meus dados ficam privados quando uso o aplicativo desktop?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Se você usa um mecanismo de IA local como o Ollama ou o LM Studio, o PromptQuorum funciona totalmente offline e seus prompts, chaves de API e resultados ficam no seu dispositivo (veja o FAQ do PromptQuorum). Se você usa um provedor em nuvem com chave de API, seus prompts vão diretamente a esse provedor, sob a política de dados dele.',
+              text: 'Se você usa um mecanismo de IA local como o Ollama ou o LM Studio, o PromptQuorum envia seus prompts a esse mecanismo na sua própria máquina, e não a um servidor do PromptQuorum, e as chaves de API e os resultados ficam armazenados localmente no seu dispositivo (veja o FAQ do PromptQuorum). Outras solicitações de rede, como a verificação de uma versão mais nova ao iniciar o app (uma solicitação a promptquorum.com), também ocorrem; veja a política de privacidade. Se você usa um provedor em nuvem com chave de API, seus prompts vão diretamente a esse provedor, sob a política de dados dele.',
             },
           },
           {
@@ -29382,7 +29382,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Como faço para relatar um bug durante o beta?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Envie um e-mail para hanskuepper@promptquorum.com com o que você estava tentando fazer, o que aconteceu, seu sistema operacional e versão do aplicativo, e uma captura de tela se possível.',
+              text: 'Envie um e-mail para hello@promptquorum.com com o que você estava tentando fazer, o que aconteceu, seu sistema operacional e versão do aplicativo, e uma captura de tela se possível.',
             },
           },
         ],
@@ -29404,7 +29404,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '核心要点',
           items: [
             'PromptQuorum桌面应用自2026年7月起进入公开测试（当前版本0.1.0），可下载用于macOS（Apple Silicon和Intel）、Windows 10/11以及Linux（x64和ARM64）。',
-            '此测试版构建未经签名，因此macOS和Windows在首次启动时可能显示安全警告——这对未签名的测试版是正常现象，并不表示文件已被篡改。',
+            '此测试版构建未经签名，因此macOS和Windows在首次启动时可能显示安全警告。未签名的构建总会触发这一警告，所以它对文件本身无论好坏都说明不了什么。请仅通过官方下载页面上的链接下载安装程序，并且仅在你接受运行未签名测试版的风险时才打开它。',
             '应用需要AI后端来运行提示词：本地模型请安装Ollama或LM Studio，或使用你自己的API密钥（BYOK）连接OpenAI、Anthropic或其他提供商。',
             '模型一致并不等于正确——在依赖多模型共识结果之前，请独立核实事实性陈述。',
             '请从下载页面获取构建版本（安装程序托管在同一个共享文件夹中），并通过电子邮件直接向团队反馈问题。',
@@ -29431,8 +29431,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         platformsNote: {
           content: [
-            '不确定自己使用的是哪款 Mac？打开苹果菜单，选择"关于本机"，查看"芯片"或"处理器"一栏。',
-            'Linux 支持相较 macOS 和 Windows 更新，实际测试较少。如果应用在 Ubuntu 上被阻止运行，请尝试在终端中加上 --no-sandbox 参数启动，并反馈你看到的情况。',
+            '不确定自己用的是哪种Mac？打开苹果菜单，选择“关于本机”，查看“芯片”或“处理器”一栏。',
+            'Linux的支持比macOS和Windows更新，实际测试也较少。如果应用在Ubuntu上被阻止，可以尝试在终端中使用--no-sandbox参数启动，并告诉我们你看到的情况。这会关闭一项安全保护，因此仅应作为临时的变通办法。',
           ],
         },
         verify: {
@@ -29446,7 +29446,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         localAiSetup: {
           title: '首次启动前设置本地 AI 引擎',
-          content: 'PromptQuorum 在设备本地运行 LLM 引擎时效果最佳——这样可以保护提示词隐私，并避免按 token 计费的 API 费用。如果你计划改用自己的 API 密钥接入云端提供商，可以完全跳过本节内容。',
+          content: 'PromptQuorum配合运行在你本机上的本地LLM引擎效果最佳——这样提示词的处理保留在你的机器上，也避免按token计费的API成本。如果你打算使用自带API密钥的云服务商，可以完全跳过本节。',
           items: [
             'Ollama（最简单的首次设置）：从[ollama.com](https://ollama.com)下载并安装，然后在终端中拉取模型，例如ollama pull gemma3:1b（据Ollama库显示，下载大小为806 MB）。它在后台运行，PromptQuorum可以作为本地提供商连接它。',
             'LM Studio（更偏图形界面）：从[lmstudio.ai](https://lmstudio.ai)下载，在应用内下载模型，然后在Developer标签页启动本地服务器（或使用lms server start命令）。',
@@ -29471,7 +29471,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         feedback: {
           title: '直接向团队报告问题',
-          content: '请将反馈发送至 hanskuepper@promptquorum.com，说明你当时想做什么、实际发生了什么与预期有何不同、你的操作系统和应用版本，并尽量附上截图。无论是错误、令人困惑的界面、崩溃，还是与描述不符的功能，都是有用的反馈。',
+          content: '请将反馈发送至 hello@promptquorum.com，说明你当时想做什么、实际发生了什么与预期有何不同、你的操作系统和应用版本，并尽量附上截图。无论是错误、令人困惑的界面、崩溃，还是与描述不符的功能，都是有用的反馈。',
         },
         ecosystem: {
           title: '桌面应用只是完整体验的一半',
@@ -29482,7 +29482,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: '前往下载页面',
             href: '/download',
-            description: '选择你的平台，验证校验和，然后安装——私测阶段，未签名构建，免费使用。',
+            description: '选择你的平台并安装（公开测试版、未签名构建、免费使用）。',
           },
         },
         faq: {
@@ -29506,11 +29506,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '使用桌面应用时我的数据是否私密？',
-              a: '如果你使用Ollama或LM Studio等本地AI引擎，PromptQuorum可完全离线运行，你的提示词、API密钥和结果都保留在你的设备上（参见[PromptQuorum常见问题](/zh/faq)）。如果你通过API密钥使用云服务商，提示词会直接发送给该服务商，适用其自身的数据政策。',
+              a: '如果你使用Ollama或LM Studio等本地AI引擎，PromptQuorum会把你的提示词发送给你本机上的该引擎，而不是PromptQuorum服务器，API密钥和结果则保存在你设备本地（参见[PromptQuorum常见问题](/zh/faq)）。应用还会发出其他网络请求，例如启动时检查是否有新版本（向promptquorum.com发出请求）；详见[隐私政策](/zh/privacy)。如果你通过API密钥使用云服务商，提示词会直接发送给该服务商，适用其自身的数据政策。',
             },
             {
               q: '测试阶段如何报告错误？',
-              a: '请发送邮件至 hanskuepper@promptquorum.com，说明你当时想做什么、实际发生了什么、你的操作系统和应用版本，并尽量附上截图。',
+              a: '请发送邮件至 hello@promptquorum.com，说明你当时想做什么、实际发生了什么、你的操作系统和应用版本，并尽量附上截图。',
             },
           ],
         },
@@ -29556,7 +29556,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '使用桌面应用时我的数据是否私密？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '如果你使用Ollama或LM Studio等本地AI引擎，PromptQuorum可完全离线运行，你的提示词、API密钥和结果都保留在你的设备上（参见PromptQuorum常见问题）。如果你通过API密钥使用云服务商，提示词会直接发送给该服务商，适用其自身的数据政策。',
+              text: '如果你使用Ollama或LM Studio等本地AI引擎，PromptQuorum会把你的提示词发送给你本机上的该引擎，而不是PromptQuorum服务器，API密钥和结果则保存在你设备本地（参见PromptQuorum常见问题）。应用还会发出其他网络请求，例如启动时检查是否有新版本（向promptquorum.com发出请求）；详见隐私政策。如果你通过API密钥使用云服务商，提示词会直接发送给该服务商，适用其自身的数据政策。',
             },
           },
           {
@@ -29564,7 +29564,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '测试阶段如何报告错误？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '请发送邮件至 hanskuepper@promptquorum.com，说明你当时想做什么、实际发生了什么、你的操作系统和应用版本，并尽量附上截图。',
+              text: '请发送邮件至 hello@promptquorum.com，说明你当时想做什么、实际发生了什么、你的操作系统和应用版本，并尽量附上截图。',
             },
           },
         ],
