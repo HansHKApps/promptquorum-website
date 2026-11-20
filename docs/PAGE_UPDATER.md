@@ -444,6 +444,105 @@ This report serves as the audit trail for the update and prevents the "I think I
 
 ---
 
+## Batch and Delegated Refresh Runs
+
+This section governs any run where more than one page is refreshed, or where a writing agent (sub-Claude session or parallel worktree) is briefed to run the page-updater protocol on the owner's behalf. Every rule in this section complements — not replaces — the per-page steps above.
+
+### a. Premise check before any refresh
+
+The freshness tool can misread a page. `scripts/freshness.mjs` resolves `dateModified` from the source file, but quoted JSON keys, computed constants (`PAGE_MODIFIED = condition ? date1 : date2`), and shared data files can cause it to fall back to `publishDate`, making a recently refreshed page appear 100+ days overdue. Before spending a full refresh on a page:
+
+1. Open the article file and confirm the real `dateModified` value in the EN block.
+2. Cross-check with the live page's "Last updated" badge at `https://www.promptquorum.com/<cluster>/<slug>`.
+3. If a shared data file (e.g. `src/lib/shared/cutoff-data.ts`) was already updated this week, treat any page that imports it as refreshed for that data point; audit only what is not covered by the shared file.
+
+A premise-check finding that saves a full refresh is a good outcome — log it in the report as "skipped (freshness tool misread; real dateModified confirmed)".
+
+### b. The agent brief carries the gates
+
+Every brief for a writing agent must include, in full:
+
+- The risk-pattern table (§Step 5.7 — Risk patterns the independent reviews actually found)
+- The translation gate reminder (`docs/geo-translation.md` must be opened and applied; `geo-translation: APPLIED` must appear in the report)
+- The freshness tier decision tree (evergreen / semi_annual / annual; workflow pages are evergreen, model/price/ranking pages are not)
+- The commit rules (see §d below)
+
+Use `docs/REFRESH_BRIEF_TEMPLATE.md` as the canonical starting point for every brief. Do not send a brief that omits any of these four elements — an agent that does not receive the gates will not apply them.
+
+### c. Independent review (mandatory for every batch)
+
+After each batch completes, an independent read-only reviewer (a fresh agent that did not write any of the pages, with no memory of the writing pass) must:
+
+1. Execute the risk-checker procedure on the final file for each changed article (Skill tool, skill: "risk-checker", argument = the article path). The skill only prints its own procedure; a writer saying "PASS (manual)" or "I applied the rubric" does not count. See Step 5.7 — the owner rule is HARD.
+2. Grep-confirm every finding with the verbatim text from the file before reporting it.
+3. Return findings to the writer. The writer fixes, re-commits, and the reviewer re-runs (one cycle is enough for HIGH; CRITICAL findings require a full re-run).
+
+This review is not optional for small batches. The 2026-11-20 batch found a CRITICAL finding (a compliance guarantee in the DE locale) that survived the writing pass and was only caught by independent review.
+
+### d. Size and cadence
+
+- **Max 7 pages per agent.** Longer lists cause shallow updates (Anti-Pattern #1) and missed risk findings.
+- **Max 3 agents active simultaneously.** Stagger starts to avoid the 5-hour rate limit cutting off agents mid-batch.
+- **Commit after every page** — not after the whole batch. If an agent is cut off, work is not lost.
+- **Run validators before every commit:** `npm run check:page-updater`, `node scripts/validate-month-drift.mjs`, `node scripts/validate-freshness-tier.mjs`, `node scripts/validate-edit-history-phrases.mjs`.
+- **One full build only** — at the very end of the whole batch, after all independent reviews pass, before `session.sh finish`.
+
+### e. Orchestrator session
+
+The session that creates worktrees, monitors agents, and runs `scripts/session.sh finish` must be started in the **main repo checkout** (`/Users/hanskuepper/promptquorum-website`), never inside a worktree it will later finish or delete.
+
+**Why this matters (incident 2026-11-20):** an orchestrator session started inside a worktree that was later deleted. The session's git working directory was pinned to the deleted path, and every subsequent `git` command to other worktrees was refused ("not a git repository"). All agents were blocked until the orchestrator was restarted from the main repo.
+
+**Rules:**
+- Use the absolute path `scripts/session.sh` from the main repo: `/Users/hanskuepper/promptquorum-website/scripts/session.sh start <name>`.
+- If agents are cut off or unreachable, read each worktree's progress from `.git/worktrees/<name>/logs/HEAD` before deciding whether to retry or drop.
+- Never `cd` into a worktree inside the orchestrator session. Invoke `session.sh finish <name>` from the main repo path.
+
+### f. Shared files
+
+No two parallel worktrees may edit the same shared data file (e.g. `src/lib/shared/balcony-solar-country-data.ts`, `src/lib/blog/blogContent.ts`). Before distributing a batch:
+
+1. List every shared file that will need changes.
+2. Assign one worktree as the owner for each shared file.
+3. All other worktrees that need data from that file must report the needed change to the owner — they do not edit the shared file themselves.
+
+Conflicts in shared files are the most common cause of merge failures at `session.sh finish`.
+
+### g. Order
+
+The correct order for a completed page update to reach production is:
+
+1. **Write** (agent, in worktree) → validator pass → commit after each page
+2. **Independent review** (fresh agent, read-only) → findings returned to writer
+3. **Fix** (writer, same worktree) → re-commit → reviewer confirms
+4. **`session.sh finish`** (orchestrator, from main repo) → merge to main
+5. **One build** (`scripts/with-build-lock.sh npm run build`) — only after all worktrees are merged
+6. **One deploy** (only on the owner's explicit word: `scripts/deploy.sh`) — never automatic, never implied by finishing a batch
+7. **Post-deploy check** (`scripts/post-deploy-check.sh`) — run immediately after the deploy commit lands
+8. **`seo:log mark-deployed`** (`npm run seo:log -- --mark-deployed --all-pending --date <today>`) — in the same step as the deploy, starts T+14/T+28 measurement clocks
+
+### h. Refresh depth
+
+Adding a new dated status note at the top while leaving contradicting statements in the body is a failure (see Anti-Pattern 10). Every refresh pass must cover the full relevant body, not just the first visible section. For large pages (100 KB+ source file), this means:
+
+- Explicitly reading every section heading in the file and deciding whether it needs an update.
+- For status pages (country regulations, product availability), checking the body for any claim that the new note contradicts or supersedes.
+- Running the Verification Command (end of this document) against the whole page, not just the updated section.
+
+The fact that a page is "mostly evergreen" does not excuse a partial pass on the sections that do change.
+
+### i. Freshness tier
+
+Before any refresh run, the tier must be re-decided honestly for the specific page, not inherited from the last run:
+
+- **Workflow, checklist, and process pages** → `evergreen`, even if they mention specific tools as examples.
+- **Model ranking, pricing, benchmark, and "best-of" pages** → `semi_annual` (year in title, `next_refresh_due` 6 months out).
+- **Year-specific event or timeline pages** → `annual` (`specific_year` set, year in title only — never in the slug).
+
+A common mistake: a page starts as a workflow article (evergreen) and gains specific model names over time, drifting into `semi_annual` territory. The re-tier is part of every refresh pass, not just the first.
+
+---
+
 ## Monthly Refresh Workflow (for `monthly` tier pages)
 
 ### Week 1 of Each Month
