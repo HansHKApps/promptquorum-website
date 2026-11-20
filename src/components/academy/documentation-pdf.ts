@@ -10,6 +10,7 @@ import { langDirOf, htmlLangOf } from '@/lib/academy/language'
 import type { AcademyLang } from '@/lib/academy/types'
 import type { AcademyCopy } from './copy'
 import { creditLabel } from './credit'
+import { formatPoints } from '@/lib/academy/format-points'
 
 const PX_W = 1240
 const PX_H = 1754
@@ -148,7 +149,7 @@ export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: Acad
     [c.activeTime, tx.minutes(cert.learningMinutes)],
     [c.testMode, tx.tests[cert.testMode].label],
     [c.attempts, String(m.attemptsCount)],
-    [c.overall, `${cert.percent}% (${cert.correct}/${cert.total})`],
+    [c.overall, `${cert.percent}% (${formatPoints(cert.correct, lang)}/${cert.total})`],
     [c.status, cert.percent >= cert.passMark ? c.passed : c.notPassed],
   ]
   for (const [k, v] of rows) {
@@ -156,7 +157,7 @@ export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: Acad
     d.para(v, { size: 24, weight: 600, gap: 7 })
   }
   d.para(c.perTopic, { size: 21, weight: 700, color: PURPLE, gap: 4 })
-  for (const t of cert.byTopic) d.para(`${t.topic}: ${t.percent}% (${t.correct}/${t.total})`, { size: 21, indent: 16, gap: 2 })
+  for (const t of cert.byTopic) d.para(`${t.topic}: ${t.percent}% (${formatPoints(t.correct, lang)}/${t.total})`, { size: 21, indent: 16, gap: 2 })
   d.y += 12
   d.keep(240)
   d.rule()
@@ -178,7 +179,7 @@ export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: Acad
   }
   for (const a of m.attempts) {
     d.heading(`${a.lesson ? `${c.lessons} ${a.lesson}: ${a.lessonTitle ?? ''}` : tx.finalTestTitle} — ${c.attempt(a.attemptNumber)}`, 28)
-    d.para(`${a.correct}/${a.total}${a.passing ? ` · ${c.passingAttempt}` : ''} · ${formatDisplayDate(a.takenAt, lang)}`, { size: 21, color: a.passing ? GOOD : MUTED })
+    d.para(`${formatPoints(a.correct, lang)}/${a.total}${a.passing ? ` · ${c.passingAttempt}` : ''} · ${formatDisplayDate(a.takenAt, lang)}`, { size: 21, color: a.passing ? GOOD : MUTED })
     a.questions.forEach((q, i) => questionBlock(d, c, q, i + 1))
     a.openQuestions.forEach((q, i) => openQuestionBlock(d, tx, c, q, i + 1))
   }

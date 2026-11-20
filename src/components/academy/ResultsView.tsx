@@ -14,6 +14,7 @@ import type { AcademyLang, Programme } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { AiBadge } from './AiBadge'
 import { creditLabel } from './credit'
+import { formatPoints } from '@/lib/academy/format-points'
 import { Content } from './Content'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
 import { renderCertificatePdf } from './certificate-pdf'
@@ -157,7 +158,7 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
                   {t.weak && <span className="ms-2 rounded-full bg-amber-50 px-2 py-0.5 text-xs text-amber-800">{tx.weakTopic}</span>}
                 </span>
                 <span className="shrink-0 tabular-nums text-gray-600">
-                  {t.percent}% ({t.correct}/{t.total})
+                  {t.percent}% ({formatPoints(t.correct, lang)}/{t.total})
                 </span>
               </div>
               <div className="mt-1 h-2 overflow-hidden rounded-full bg-gray-100" role="img" aria-label={`${t.topic}: ${t.percent}%`}>
