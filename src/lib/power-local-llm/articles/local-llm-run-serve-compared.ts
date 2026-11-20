@@ -9,12 +9,18 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
-import { compareGroupTotal, compareSegmentCounts, compareSegmentFacts } from '@/lib/power-local-llm/compare-data'
+import { compareGroupTotal, compareSegmentAttrCounts, compareSegmentCounts, compareSegmentFacts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
 // Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
 const SEG = compareSegmentCounts('run-serve')
 const ENGINES = compareSegmentFacts('run-serve')['inference-engines']
+const RUNTIMES = compareSegmentFacts('run-serve')['runtimes-managers']
+const RT = compareSegmentFacts('run-serve')['routers-gateways']
+// Live attribute tallies (rows documenting an attribute as true), straight from the table's rows.
+const ATTR = compareSegmentAttrCounts('run-serve')
+const EA = ATTR['inference-engines']
+const RA = ATTR['runtimes-managers']
 
 // Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
 // so this article never drifts from the table as the directory grows.
@@ -57,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**The ${RUN_SERVE_TOTAL} local run-and-serve tools in the PromptQuorum directory split into three kinds that should be compared separately: inference engines (${RUN_SERVE_INFERENCE_ENGINES} tools), runtimes and managers (${RUN_SERVE_RUNTIMES_MANAGERS}) and routers and gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Within engines, 15 document NVIDIA GPU support, 17 document Apple Silicon support and 21 document an OpenAI-compatible API; among runtimes, 6 document an OpenAI-compatible API. Use the comparison table below, and read each tool's own review before you install it.`,
+      `**The ${RUN_SERVE_TOTAL} local run-and-serve tools in the PromptQuorum directory split into three kinds that should be compared separately: inference engines (${RUN_SERVE_INFERENCE_ENGINES} tools), runtimes and managers (${RUN_SERVE_RUNTIMES_MANAGERS}) and routers and gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Within engines, ${EA.nvidiaGpu} document NVIDIA GPU support, ${EA.appleSilicon} document Apple Silicon support and ${EA.openaiApi} document an OpenAI-compatible API; among runtimes, ${RA.openaiApi} document an OpenAI-compatible API. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local inference tool should I use?',
@@ -139,7 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Desktop app.** [GPT4All](/power-local-llm/gpt4all-review), [Jan](/power-local-llm/jan-review), [Llama](/power-local-llm/llama-app-review), [LM Studio](/power-local-llm/lm-studio-review), [Osaurus](/power-local-llm/osaurus-ai-review) and [Ypipe](/power-local-llm/ypipe-review) document an installable desktop app.',
           '**Built-in model library.** [Foundry Local](/power-local-llm/foundry-local-review), [GPUStack](/power-local-llm/gpustack-review), [Jan](/power-local-llm/jan-review), [Lemonade](/power-local-llm/lemonade-review), [Llama](/power-local-llm/llama-app-review), [LM Studio](/power-local-llm/lm-studio-review) and [Ollama](/power-local-llm/ollama-review) document a built-in way to find and download models.',
           '**Headless or server mode.** [DreamServer](/power-local-llm/dreamserver-review), [GPUStack](/power-local-llm/gpustack-review), [Lemonade](/power-local-llm/lemonade-review) and [Osaurus](/power-local-llm/osaurus-ai-review) document running as a background service or server without the GUI.',
-          '**License and price.** Four runtimes here are Apache-2.0 and five are MIT. LM Studio and Docker Model Runner are proprietary (LM Studio is free to use; Docker Model Runner is bundled with Docker Desktop), Msty is closed source with a free tier, and RunAnywhere and YPipe use their own or undocumented terms — check each review.',
+          `**License and price.** ${RUNTIMES.license['Apache-2.0'] ?? 0} runtimes here are Apache-2.0 and ${RUNTIMES.license['MIT'] ?? 0} are MIT. LM Studio and Docker Model Runner are proprietary (LM Studio is free to use; Docker Model Runner is bundled with Docker Desktop), Msty is closed source with a free tier, and RunAnywhere and YPipe use their own or undocumented terms — check each review.`,
         ],
       },
       gatewayDifferences: {
@@ -149,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**OpenAI-compatible endpoint.** [AIClient2API](/power-local-llm/aiclient2api-review) and [litellm](/power-local-llm/litellm-review) document an OpenAI-compatible endpoint.',
           '**Routing to local models.** [litellm](/power-local-llm/litellm-review) documents local or self-hosted models (such as Ollama) among its supported providers.',
           '**Fallback and load balancing.** [AIClient2API](/power-local-llm/aiclient2api-review), [ClawRouter](/power-local-llm/clawrouter-review) and [litellm](/power-local-llm/litellm-review) document fallback, retry or load balancing across models or providers.',
-          '**License.** Two of the four are MIT, one is GPL-3.0 and one is Apache-2.0.',
+          `**License.** ${RT.license['MIT'] ?? 0} of the ${RT.count} are MIT, ${RT.license['GPL-3.0'] ?? 0} is GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0} is AGPL-3.0 and ${RT.license['Apache-2.0'] ?? 0} is Apache-2.0; ${RT.license['Not stated'] ?? 0} does not state a license.`,
         ],
       },
       limitations: {
@@ -277,7 +283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**Die ${RUN_SERVE_TOTAL} lokalen Run-and-Serve-Werkzeuge im PromptQuorum-Verzeichnis lassen sich in drei Arten einteilen, die getrennt verglichen werden sollten: Inferenz-Engines (${RUN_SERVE_INFERENCE_ENGINES} Werkzeuge), Runtimes und Manager (${RUN_SERVE_RUNTIMES_MANAGERS}) sowie Router und Gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Bei den Engines dokumentieren 15 die Unterstützung von NVIDIA-GPUs, 17 die Unterstützung von Apple Silicon und 21 eine OpenAI-kompatible API; bei den Runtimes dokumentieren 6 eine OpenAI-kompatible API. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Werkzeugs, bevor Sie es installieren.`,
+      `**Die ${RUN_SERVE_TOTAL} lokalen Run-and-Serve-Werkzeuge im PromptQuorum-Verzeichnis lassen sich in drei Arten einteilen, die getrennt verglichen werden sollten: Inferenz-Engines (${RUN_SERVE_INFERENCE_ENGINES} Werkzeuge), Runtimes und Manager (${RUN_SERVE_RUNTIMES_MANAGERS}) sowie Router und Gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Bei den Engines dokumentieren ${EA.nvidiaGpu} die Unterstützung von NVIDIA-GPUs, ${EA.appleSilicon} die Unterstützung von Apple Silicon und ${EA.openaiApi} eine OpenAI-kompatible API; bei den Runtimes dokumentieren ${RA.openaiApi} eine OpenAI-kompatible API. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Werkzeugs, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale Inferenz-Werkzeug sollte ich verwenden?',
@@ -359,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Desktop-App.** [GPT4All](/de/power-local-llm/gpt4all-review), [Jan](/de/power-local-llm/jan-review), [Llama](/de/power-local-llm/llama-app-review), [LM Studio](/de/power-local-llm/lm-studio-review), [Osaurus](/de/power-local-llm/osaurus-ai-review) und [Ypipe](/de/power-local-llm/ypipe-review) dokumentieren eine installierbare Desktop-App.',
           '**Integrierte Modellbibliothek.** [Foundry Local](/de/power-local-llm/foundry-local-review), [GPUStack](/de/power-local-llm/gpustack-review), [Jan](/de/power-local-llm/jan-review), [Lemonade](/de/power-local-llm/lemonade-review), [Llama](/de/power-local-llm/llama-app-review), [LM Studio](/de/power-local-llm/lm-studio-review) und [Ollama](/de/power-local-llm/ollama-review) dokumentieren eine integrierte Möglichkeit, Modelle zu finden und herunterzuladen.',
           '**Headless- oder Servermodus.** [DreamServer](/de/power-local-llm/dreamserver-review), [GPUStack](/de/power-local-llm/gpustack-review), [Lemonade](/de/power-local-llm/lemonade-review) und [Osaurus](/de/power-local-llm/osaurus-ai-review) dokumentieren den Betrieb als Hintergrunddienst oder Server ohne grafische Oberfläche.',
-          '**Lizenz und Preis.** Vier Runtimes hier stehen unter Apache-2.0 und fünf unter MIT. LM Studio und Docker Model Runner sind proprietär (LM Studio ist kostenlos nutzbar; Docker Model Runner ist in Docker Desktop enthalten), Msty ist Closed Source mit kostenloser Stufe, und RunAnywhere und YPipe verwenden eigene oder nicht dokumentierte Bedingungen — prüfen Sie den jeweiligen Test.',
+          `**Lizenz und Preis.** ${RUNTIMES.license['Apache-2.0'] ?? 0} Runtimes hier stehen unter Apache-2.0 und ${RUNTIMES.license['MIT'] ?? 0} unter MIT. LM Studio und Docker Model Runner sind proprietär (LM Studio ist kostenlos nutzbar; Docker Model Runner ist in Docker Desktop enthalten), Msty ist Closed Source mit kostenloser Stufe, und RunAnywhere und YPipe verwenden eigene oder nicht dokumentierte Bedingungen — prüfen Sie den jeweiligen Test.`,
         ],
       },
       gatewayDifferences: {
@@ -369,7 +375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**OpenAI-kompatibler Endpunkt.** [AIClient2API](/de/power-local-llm/aiclient2api-review) und [litellm](/de/power-local-llm/litellm-review) dokumentieren einen OpenAI-kompatiblen Endpunkt.',
           '**Routing zu lokalen Modellen.** [litellm](/de/power-local-llm/litellm-review) dokumentiert lokale oder selbst gehostete Modelle (etwa Ollama) unter seinen unterstützten Anbietern.',
           '**Fallback und Lastverteilung.** [AIClient2API](/de/power-local-llm/aiclient2api-review), [ClawRouter](/de/power-local-llm/clawrouter-review) und [litellm](/de/power-local-llm/litellm-review) dokumentieren Fallback, Wiederholungsversuche oder Lastverteilung über Modelle oder Anbieter hinweg.',
-          '**Lizenz.** Zwei der vier stehen unter MIT, eines unter GPL-3.0 und eines unter Apache-2.0.',
+          `**Lizenz.** ${RT.license['MIT'] ?? 0} der ${RT.count} stehen unter MIT, ${RT.license['GPL-3.0'] ?? 0} unter GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0} unter AGPL-3.0 und ${RT.license['Apache-2.0'] ?? 0} unter Apache-2.0; ${RT.license['Not stated'] ?? 0} nennt keine Lizenz.`,
         ],
       },
       limitations: {
@@ -497,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**Les ${RUN_SERVE_TOTAL} outils locaux d'exécution et de service du répertoire PromptQuorum se répartissent en trois types, à comparer séparément : les moteurs d'inférence (${RUN_SERVE_INFERENCE_ENGINES} outils), les runtimes et gestionnaires (${RUN_SERVE_RUNTIMES_MANAGERS}) et les routeurs et passerelles (${RUN_SERVE_ROUTERS_GATEWAYS}).** Parmi les moteurs, 15 documentent la prise en charge des GPU NVIDIA, 17 celle d'Apple Silicon et 21 une API compatible OpenAI ; parmi les runtimes, 6 documentent une API compatible OpenAI. Servez-vous du tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
+      `**Les ${RUN_SERVE_TOTAL} outils locaux d'exécution et de service du répertoire PromptQuorum se répartissent en trois types, à comparer séparément : les moteurs d'inférence (${RUN_SERVE_INFERENCE_ENGINES} outils), les runtimes et gestionnaires (${RUN_SERVE_RUNTIMES_MANAGERS}) et les routeurs et passerelles (${RUN_SERVE_ROUTERS_GATEWAYS}).** Parmi les moteurs, ${EA.nvidiaGpu} documentent la prise en charge des GPU NVIDIA, ${EA.appleSilicon} celle d'Apple Silicon et ${EA.openaiApi} une API compatible OpenAI ; parmi les runtimes, ${RA.openaiApi} documentent une API compatible OpenAI. Servez-vous du tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil d\'inférence local dois-je utiliser ?',
@@ -579,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Application de bureau.** [GPT4All](/fr/power-local-llm/gpt4all-review), [Jan](/fr/power-local-llm/jan-review), [Llama](/fr/power-local-llm/llama-app-review), [LM Studio](/fr/power-local-llm/lm-studio-review), [Osaurus](/fr/power-local-llm/osaurus-ai-review) et [Ypipe](/fr/power-local-llm/ypipe-review) documentent une application de bureau installable.',
           '**Bibliothèque de modèles intégrée.** [Foundry Local](/fr/power-local-llm/foundry-local-review), [GPUStack](/fr/power-local-llm/gpustack-review), [Jan](/fr/power-local-llm/jan-review), [Lemonade](/fr/power-local-llm/lemonade-review), [Llama](/fr/power-local-llm/llama-app-review), [LM Studio](/fr/power-local-llm/lm-studio-review) et [Ollama](/fr/power-local-llm/ollama-review) documentent un moyen intégré de trouver et de télécharger des modèles.',
           '**Mode sans interface ou serveur.** [DreamServer](/fr/power-local-llm/dreamserver-review), [GPUStack](/fr/power-local-llm/gpustack-review), [Lemonade](/fr/power-local-llm/lemonade-review) et [Osaurus](/fr/power-local-llm/osaurus-ai-review) documentent un fonctionnement en service d\'arrière-plan ou en serveur, sans interface graphique.',
-          '**Licence et prix.** Quatre des runtimes présentés ici sont sous Apache-2.0 et cinq sous MIT. LM Studio et Docker Model Runner sont propriétaires (LM Studio est gratuit à l\'usage ; Docker Model Runner est fourni avec Docker Desktop), Msty est à code fermé avec une offre gratuite, et RunAnywhere et YPipe appliquent leurs propres conditions ou des conditions non documentées — consultez chaque avis.',
+          `**Licence et prix.** ${RUNTIMES.license['Apache-2.0'] ?? 0} des runtimes présentés ici sont sous Apache-2.0 et ${RUNTIMES.license['MIT'] ?? 0} sous MIT. LM Studio et Docker Model Runner sont propriétaires (LM Studio est gratuit à l'usage ; Docker Model Runner est fourni avec Docker Desktop), Msty est à code fermé avec une offre gratuite, et RunAnywhere et YPipe appliquent leurs propres conditions ou des conditions non documentées — consultez chaque avis.`,
         ],
       },
       gatewayDifferences: {
@@ -589,7 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Point d\'accès compatible OpenAI.** [AIClient2API](/fr/power-local-llm/aiclient2api-review) et [litellm](/fr/power-local-llm/litellm-review) documentent un point d\'accès compatible OpenAI.',
           '**Routage vers des modèles locaux.** [litellm](/fr/power-local-llm/litellm-review) documente les modèles locaux ou auto-hébergés (comme Ollama) parmi les fournisseurs qu\'il prend en charge.',
           '**Basculement et répartition de charge.** [AIClient2API](/fr/power-local-llm/aiclient2api-review), [ClawRouter](/fr/power-local-llm/clawrouter-review) et [litellm](/fr/power-local-llm/litellm-review) documentent le basculement, les nouvelles tentatives ou la répartition de charge entre modèles ou fournisseurs.',
-          '**Licence.** Deux des quatre sont sous MIT, un sous GPL-3.0 et un sous Apache-2.0.',
+          `**Licence.** ${RT.license['MIT'] ?? 0} des ${RT.count} sont sous MIT, ${RT.license['GPL-3.0'] ?? 0} sous GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0} sous AGPL-3.0 et ${RT.license['Apache-2.0'] ?? 0} sous Apache-2.0 ; ${RT.license['Not stated'] ?? 0} n'indique pas sa licence.`,
         ],
       },
       limitations: {
@@ -717,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**Las ${RUN_SERVE_TOTAL} herramientas locales de ejecución y servicio del directorio de PromptQuorum se dividen en tres tipos que conviene comparar por separado: motores de inferencia (${RUN_SERVE_INFERENCE_ENGINES} herramientas), runtimes y gestores (${RUN_SERVE_RUNTIMES_MANAGERS}) y routers y gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Entre los motores, 15 documentan soporte para GPU NVIDIA, 17 documentan soporte para Apple Silicon y 21 documentan una API compatible con OpenAI; entre los runtimes, 6 documentan una API compatible con OpenAI. Usa la tabla comparativa de más abajo y lee el análisis de cada herramienta antes de instalarla.`,
+      `**Las ${RUN_SERVE_TOTAL} herramientas locales de ejecución y servicio del directorio de PromptQuorum se dividen en tres tipos que conviene comparar por separado: motores de inferencia (${RUN_SERVE_INFERENCE_ENGINES} herramientas), runtimes y gestores (${RUN_SERVE_RUNTIMES_MANAGERS}) y routers y gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Entre los motores, ${EA.nvidiaGpu} documentan soporte para GPU NVIDIA, ${EA.appleSilicon} documentan soporte para Apple Silicon y ${EA.openaiApi} documentan una API compatible con OpenAI; entre los runtimes, ${RA.openaiApi} documentan una API compatible con OpenAI. Usa la tabla comparativa de más abajo y lee el análisis de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta de inferencia local debería usar?',
@@ -799,7 +805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Aplicación de escritorio.** [GPT4All](/es/power-local-llm/gpt4all-review), [Jan](/es/power-local-llm/jan-review), [Llama](/es/power-local-llm/llama-app-review), [LM Studio](/es/power-local-llm/lm-studio-review), [Osaurus](/es/power-local-llm/osaurus-ai-review) y [Ypipe](/es/power-local-llm/ypipe-review) documentan una aplicación de escritorio instalable.',
           '**Biblioteca de modelos integrada.** [Foundry Local](/es/power-local-llm/foundry-local-review), [GPUStack](/es/power-local-llm/gpustack-review), [Jan](/es/power-local-llm/jan-review), [Lemonade](/es/power-local-llm/lemonade-review), [Llama](/es/power-local-llm/llama-app-review), [LM Studio](/es/power-local-llm/lm-studio-review) y [Ollama](/es/power-local-llm/ollama-review) documentan una forma integrada de buscar y descargar modelos.',
           '**Modo sin interfaz o servidor.** [DreamServer](/es/power-local-llm/dreamserver-review), [GPUStack](/es/power-local-llm/gpustack-review), [Lemonade](/es/power-local-llm/lemonade-review) y [Osaurus](/es/power-local-llm/osaurus-ai-review) documentan la ejecución como servicio en segundo plano o servidor sin la interfaz gráfica.',
-          '**Licencia y precio.** Cuatro runtimes aquí son Apache-2.0 y cinco son MIT. LM Studio y Docker Model Runner son propietarios (LM Studio es de uso gratuito; Docker Model Runner viene incluido con Docker Desktop), Msty es de código cerrado con un nivel gratuito, y RunAnywhere y YPipe usan términos propios o no documentados — consulta cada análisis.',
+          `**Licencia y precio.** ${RUNTIMES.license['Apache-2.0'] ?? 0} runtimes aquí son Apache-2.0 y ${RUNTIMES.license['MIT'] ?? 0} son MIT. LM Studio y Docker Model Runner son propietarios (LM Studio es de uso gratuito; Docker Model Runner viene incluido con Docker Desktop), Msty es de código cerrado con un nivel gratuito, y RunAnywhere y YPipe usan términos propios o no documentados — consulta cada análisis.`,
         ],
       },
       gatewayDifferences: {
@@ -809,7 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Endpoint compatible con OpenAI.** [AIClient2API](/es/power-local-llm/aiclient2api-review) y [litellm](/es/power-local-llm/litellm-review) documentan un endpoint compatible con OpenAI.',
           '**Enrutamiento a modelos locales.** [litellm](/es/power-local-llm/litellm-review) documenta modelos locales o autoalojados (como Ollama) entre sus proveedores compatibles.',
           '**Respaldo (fallback) y balanceo de carga.** [AIClient2API](/es/power-local-llm/aiclient2api-review), [ClawRouter](/es/power-local-llm/clawrouter-review) y [litellm](/es/power-local-llm/litellm-review) documentan respaldo, reintentos o balanceo de carga entre modelos o proveedores.',
-          '**Licencia.** Dos de las cuatro son MIT, una es GPL-3.0 y una es Apache-2.0.',
+          `**Licencia.** ${RT.license['MIT'] ?? 0} de las ${RT.count} son MIT, ${RT.license['GPL-3.0'] ?? 0} es GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0} es AGPL-3.0 y ${RT.license['Apache-2.0'] ?? 0} es Apache-2.0; ${RT.license['Not stated'] ?? 0} no indica su licencia.`,
         ],
       },
       limitations: {
@@ -937,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**PromptQuorumディレクトリにあるローカル実行・サーブ系の${RUN_SERVE_TOTAL}ツールは、別々に比較すべき3種類に分かれます。推論エンジン(${RUN_SERVE_INFERENCE_ENGINES}ツール)、ランタイム・マネージャー(${RUN_SERVE_RUNTIMES_MANAGERS}ツール)、ルーター・ゲートウェイ(${RUN_SERVE_ROUTERS_GATEWAYS}ツール)です。** エンジンのうち、15ツールがNVIDIA GPU対応を、17ツールがApple Silicon対応を、21ツールがOpenAI互換APIを文書化しています。ランタイムでは6ツールがOpenAI互換APIを文書化しています。下の比較表を使い、インストールする前に各ツールのレビューも読んでください。`,
+      `**PromptQuorumディレクトリにあるローカル実行・サーブ系の${RUN_SERVE_TOTAL}ツールは、別々に比較すべき3種類に分かれます。推論エンジン(${RUN_SERVE_INFERENCE_ENGINES}ツール)、ランタイム・マネージャー(${RUN_SERVE_RUNTIMES_MANAGERS}ツール)、ルーター・ゲートウェイ(${RUN_SERVE_ROUTERS_GATEWAYS}ツール)です。** エンジンのうち、${EA.nvidiaGpu}ツールがNVIDIA GPU対応を、${EA.appleSilicon}ツールがApple Silicon対応を、${EA.openaiApi}ツールがOpenAI互換APIを文書化しています。ランタイムでは${RA.openaiApi}ツールがOpenAI互換APIを文書化しています。下の比較表を使い、インストールする前に各ツールのレビューも読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカル推論ツールを使えばよいですか?',
@@ -1019,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**デスクトップアプリ。** [GPT4All](/ja/power-local-llm/gpt4all-review)、[Jan](/ja/power-local-llm/jan-review)、[Llama](/ja/power-local-llm/llama-app-review)、[LM Studio](/ja/power-local-llm/lm-studio-review)、[Osaurus](/ja/power-local-llm/osaurus-ai-review)、[Ypipe](/ja/power-local-llm/ypipe-review)は、インストール可能なデスクトップアプリを文書化しています。',
           '**内蔵モデルライブラリ。** [Foundry Local](/ja/power-local-llm/foundry-local-review)、[GPUStack](/ja/power-local-llm/gpustack-review)、[Jan](/ja/power-local-llm/jan-review)、[Lemonade](/ja/power-local-llm/lemonade-review)、[Llama](/ja/power-local-llm/llama-app-review)、[LM Studio](/ja/power-local-llm/lm-studio-review)、[Ollama](/ja/power-local-llm/ollama-review)は、モデルを探してダウンロードする内蔵の仕組みを文書化しています。',
           '**ヘッドレス・サーバーモード。** [DreamServer](/ja/power-local-llm/dreamserver-review)、[GPUStack](/ja/power-local-llm/gpustack-review)、[Lemonade](/ja/power-local-llm/lemonade-review)、[Osaurus](/ja/power-local-llm/osaurus-ai-review)は、GUIなしでバックグラウンドサービスまたはサーバーとして動作することを文書化しています。',
-          '**ライセンスと価格。** ここに挙げたランタイムのうち、4つはApache-2.0、5つはMITです。LM StudioとDocker Model Runnerはプロプライエタリです(LM Studioは無料で利用でき、Docker Model RunnerはDocker Desktopに同梱されています)。Mstyはクローズドソースで無料プランがあり、RunAnywhereとYPipeは独自またはドキュメント化されていない条件を採用しています。各レビューで確認してください。',
+          `**ライセンスと価格。** ここに挙げたランタイムのうち、${RUNTIMES.license['Apache-2.0'] ?? 0}件はApache-2.0、${RUNTIMES.license['MIT'] ?? 0}件はMITです。LM StudioとDocker Model Runnerはプロプライエタリです(LM Studioは無料で利用でき、Docker Model RunnerはDocker Desktopに同梱されています)。Mstyはクローズドソースで無料プランがあり、RunAnywhereとYPipeは独自またはドキュメント化されていない条件を採用しています。各レビューで確認してください。`,
         ],
       },
       gatewayDifferences: {
@@ -1029,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**OpenAI互換エンドポイント。** [AIClient2API](/ja/power-local-llm/aiclient2api-review)、[litellm](/ja/power-local-llm/litellm-review)は、OpenAI互換エンドポイントを文書化しています。',
           '**ローカルモデルへのルーティング。** [litellm](/ja/power-local-llm/litellm-review)は、対応プロバイダーの中にローカルまたはセルフホストのモデル(Ollamaなど)があることを文書化しています。',
           '**フォールバックとロードバランシング。** [AIClient2API](/ja/power-local-llm/aiclient2api-review)、[ClawRouter](/ja/power-local-llm/clawrouter-review)、[litellm](/ja/power-local-llm/litellm-review)は、モデルまたはプロバイダー間のフォールバック、リトライ、ロードバランシングを文書化しています。',
-          '**ライセンス。** 4つのうち2つはMIT、1つはGPL-3.0、1つはApache-2.0です。',
+          `**ライセンス。** ${RT.count}件のうち${RT.license['MIT'] ?? 0}件はMIT、${RT.license['GPL-3.0'] ?? 0}件はGPL-3.0、${RT.license['AGPL-3.0'] ?? 0}件はAGPL-3.0、${RT.license['Apache-2.0'] ?? 0}件はApache-2.0で、${RT.license['Not stated'] ?? 0}件はライセンスを明記していません。`,
         ],
       },
       limitations: {
@@ -1157,7 +1163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**PromptQuorum目录中的${RUN_SERVE_TOTAL}款本地运行与部署工具分为三类,应分别比较:推理引擎(${RUN_SERVE_INFERENCE_ENGINES}款)、运行时与管理器(${RUN_SERVE_RUNTIMES_MANAGERS}款)以及路由器与网关(${RUN_SERVE_ROUTERS_GATEWAYS}款)。** 在引擎中,15款在文档中说明支持NVIDIA GPU,17款说明支持Apple Silicon,21款说明提供OpenAI兼容API;在运行时中,6款说明提供OpenAI兼容API。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
+      `**PromptQuorum目录中的${RUN_SERVE_TOTAL}款本地运行与部署工具分为三类,应分别比较:推理引擎(${RUN_SERVE_INFERENCE_ENGINES}款)、运行时与管理器(${RUN_SERVE_RUNTIMES_MANAGERS}款)以及路由器与网关(${RUN_SERVE_ROUTERS_GATEWAYS}款)。** 在引擎中,${EA.nvidiaGpu}款在文档中说明支持NVIDIA GPU,${EA.appleSilicon}款说明支持Apple Silicon,${EA.openaiApi}款说明提供OpenAI兼容API;在运行时中,${RA.openaiApi}款说明提供OpenAI兼容API。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地推理工具?',
@@ -1239,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**桌面应用。**[GPT4All](/zh/power-local-llm/gpt4all-review)、[Jan](/zh/power-local-llm/jan-review)、[Llama](/zh/power-local-llm/llama-app-review)、[LM Studio](/zh/power-local-llm/lm-studio-review)、[Osaurus](/zh/power-local-llm/osaurus-ai-review)和[Ypipe](/zh/power-local-llm/ypipe-review)在文档中说明提供可安装的桌面应用。',
           '**内置模型库。**[Foundry Local](/zh/power-local-llm/foundry-local-review)、[GPUStack](/zh/power-local-llm/gpustack-review)、[Jan](/zh/power-local-llm/jan-review)、[Lemonade](/zh/power-local-llm/lemonade-review)、[Llama](/zh/power-local-llm/llama-app-review)、[LM Studio](/zh/power-local-llm/lm-studio-review)和[Ollama](/zh/power-local-llm/ollama-review)在文档中说明内置了查找和下载模型的方式。',
           '**无界面或服务器模式。**[DreamServer](/zh/power-local-llm/dreamserver-review)、[GPUStack](/zh/power-local-llm/gpustack-review)、[Lemonade](/zh/power-local-llm/lemonade-review)和[Osaurus](/zh/power-local-llm/osaurus-ai-review)在文档中说明可作为后台服务或不带GUI的服务器运行。',
-          '**许可证与价格。** 这里有四款运行时采用Apache-2.0,五款采用MIT。LM Studio和Docker Model Runner是专有软件(LM Studio可免费使用;Docker Model Runner随Docker Desktop捆绑提供),Msty是闭源软件并提供免费层,RunAnywhere和YPipe使用自己的条款或未公开的条款——请查看各自的评测。',
+          `**许可证与价格。** 这里有${RUNTIMES.license['Apache-2.0'] ?? 0}款运行时采用Apache-2.0,${RUNTIMES.license['MIT'] ?? 0}款采用MIT。LM Studio和Docker Model Runner是专有软件(LM Studio可免费使用;Docker Model Runner随Docker Desktop捆绑提供),Msty是闭源软件并提供免费层,RunAnywhere和YPipe使用自己的条款或未公开的条款——请查看各自的评测。`,
         ],
       },
       gatewayDifferences: {
@@ -1249,7 +1255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**OpenAI兼容端点。**[AIClient2API](/zh/power-local-llm/aiclient2api-review)和[litellm](/zh/power-local-llm/litellm-review)在文档中说明提供OpenAI兼容的端点。',
           '**路由到本地模型。**[litellm](/zh/power-local-llm/litellm-review)在文档中说明其支持的提供商包括本地或自托管模型(例如Ollama)。',
           '**故障回退与负载均衡。**[AIClient2API](/zh/power-local-llm/aiclient2api-review)、[ClawRouter](/zh/power-local-llm/clawrouter-review)和[litellm](/zh/power-local-llm/litellm-review)在文档中说明支持在模型或提供商之间进行回退、重试或负载均衡。',
-          '**许可证。** 四款中有两款采用MIT,一款采用GPL-3.0,一款采用Apache-2.0。',
+          `**许可证。** ${RT.count}款中有${RT.license['MIT'] ?? 0}款采用MIT,${RT.license['GPL-3.0'] ?? 0}款采用GPL-3.0,${RT.license['AGPL-3.0'] ?? 0}款采用AGPL-3.0,${RT.license['Apache-2.0'] ?? 0}款采用Apache-2.0,另有${RT.license['Not stated'] ?? 0}款未标明许可证。`,
         ],
       },
       limitations: {
@@ -1377,7 +1383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**As ${RUN_SERVE_TOTAL} ferramentas locais de execução e serviço do diretório PromptQuorum se dividem em três tipos que devem ser comparados separadamente: mecanismos de inferência (${RUN_SERVE_INFERENCE_ENGINES} ferramentas), runtimes e gerenciadores (${RUN_SERVE_RUNTIMES_MANAGERS}) e roteadores e gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Entre os mecanismos, 15 documentam suporte a GPU NVIDIA, 17 documentam suporte a Apple Silicon e 21 documentam uma API compatível com OpenAI; entre os runtimes, 6 documentam uma API compatível com OpenAI. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
+      `**As ${RUN_SERVE_TOTAL} ferramentas locais de execução e serviço do diretório PromptQuorum se dividem em três tipos que devem ser comparados separadamente: mecanismos de inferência (${RUN_SERVE_INFERENCE_ENGINES} ferramentas), runtimes e gerenciadores (${RUN_SERVE_RUNTIMES_MANAGERS}) e roteadores e gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Entre os mecanismos, ${EA.nvidiaGpu} documentam suporte a GPU NVIDIA, ${EA.appleSilicon} documentam suporte a Apple Silicon e ${EA.openaiApi} documentam uma API compatível com OpenAI; entre os runtimes, ${RA.openaiApi} documentam uma API compatível com OpenAI. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta de inferência local devo usar?',
@@ -1459,7 +1465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**App de desktop.** [GPT4All](/pt/power-local-llm/gpt4all-review), [Jan](/pt/power-local-llm/jan-review), [Llama](/pt/power-local-llm/llama-app-review), [LM Studio](/pt/power-local-llm/lm-studio-review), [Osaurus](/pt/power-local-llm/osaurus-ai-review) e [Ypipe](/pt/power-local-llm/ypipe-review) documentam um app de desktop instalável.',
           '**Biblioteca de modelos integrada.** [Foundry Local](/pt/power-local-llm/foundry-local-review), [GPUStack](/pt/power-local-llm/gpustack-review), [Jan](/pt/power-local-llm/jan-review), [Lemonade](/pt/power-local-llm/lemonade-review), [Llama](/pt/power-local-llm/llama-app-review), [LM Studio](/pt/power-local-llm/lm-studio-review) e [Ollama](/pt/power-local-llm/ollama-review) documentam uma forma integrada de encontrar e baixar modelos.',
           '**Modo headless ou servidor.** [DreamServer](/pt/power-local-llm/dreamserver-review), [GPUStack](/pt/power-local-llm/gpustack-review), [Lemonade](/pt/power-local-llm/lemonade-review) e [Osaurus](/pt/power-local-llm/osaurus-ai-review) documentam a execução como serviço em segundo plano ou servidor sem a interface gráfica.',
-          '**Licença e preço.** Quatro runtimes aqui são Apache-2.0 e cinco são MIT. O LM Studio e o Docker Model Runner são proprietários (o LM Studio é gratuito para uso; o Docker Model Runner vem incluído no Docker Desktop), o Msty é de código fechado com um plano gratuito, e o RunAnywhere e o YPipe usam termos próprios ou não documentados — confira cada análise.',
+          `**Licença e preço.** ${RUNTIMES.license['Apache-2.0'] ?? 0} runtimes aqui são Apache-2.0 e ${RUNTIMES.license['MIT'] ?? 0} são MIT. O LM Studio e o Docker Model Runner são proprietários (o LM Studio é gratuito para uso; o Docker Model Runner vem incluído no Docker Desktop), o Msty é de código fechado com um plano gratuito, e o RunAnywhere e o YPipe usam termos próprios ou não documentados — confira cada análise.`,
         ],
       },
       gatewayDifferences: {
@@ -1469,7 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Endpoint compatível com OpenAI.** [AIClient2API](/pt/power-local-llm/aiclient2api-review) e [litellm](/pt/power-local-llm/litellm-review) documentam um endpoint compatível com OpenAI.',
           '**Roteamento para modelos locais.** [litellm](/pt/power-local-llm/litellm-review) documents local or self-hosted models (such as Ollama) documenta modelos locais ou auto-hospedados (como o Ollama) entre os provedores compatíveis.',
           '**Fallback e balanceamento de carga.** [AIClient2API](/pt/power-local-llm/aiclient2api-review), [ClawRouter](/pt/power-local-llm/clawrouter-review) e [litellm](/pt/power-local-llm/litellm-review) documentam fallback, novas tentativas ou balanceamento de carga entre modelos ou provedores.',
-          '**Licença.** Dois dos quatro são MIT, um é GPL-3.0 e um é Apache-2.0.',
+          `**Licença.** ${RT.license['MIT'] ?? 0} dos ${RT.count} são MIT, ${RT.license['GPL-3.0'] ?? 0} é GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0} é AGPL-3.0 e ${RT.license['Apache-2.0'] ?? 0} é Apache-2.0; ${RT.license['Not stated'] ?? 0} não informa a licença.`,
         ],
       },
       limitations: {
@@ -1597,7 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**تنقسم أدوات التشغيل والتقديم المحلية الـ${RUN_SERVE_TOTAL} في دليل PromptQuorum إلى ثلاثة أنواع ينبغي مقارنتها كلًّا على حدة: محركات استدلال (${RUN_SERVE_INFERENCE_ENGINES} أداة)، وبيئات تشغيل ومديرون (${RUN_SERVE_RUNTIMES_MANAGERS})، ومسيّرات وبوابات (${RUN_SERVE_ROUTERS_GATEWAYS}).** ضمن المحركات، توثّق 15 أداة دعم NVIDIA GPU، وتوثّق 17 دعم Apple Silicon، وتوثّق 21 واجهة برمجة متوافقة مع OpenAI؛ وضمن بيئات التشغيل، توثّق 6 أدوات واجهة برمجة متوافقة مع OpenAI. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
+      `**تنقسم أدوات التشغيل والتقديم المحلية الـ${RUN_SERVE_TOTAL} في دليل PromptQuorum إلى ثلاثة أنواع ينبغي مقارنتها كلًّا على حدة: محركات استدلال (${RUN_SERVE_INFERENCE_ENGINES} أداة)، وبيئات تشغيل ومديرون (${RUN_SERVE_RUNTIMES_MANAGERS})، ومسيّرات وبوابات (${RUN_SERVE_ROUTERS_GATEWAYS}).** ضمن المحركات، توثّق ${EA.nvidiaGpu} أداة دعم NVIDIA GPU، وتوثّق ${EA.appleSilicon} دعم Apple Silicon، وتوثّق ${EA.openaiApi} واجهة برمجة متوافقة مع OpenAI؛ وضمن بيئات التشغيل، توثّق ${RA.openaiApi} أدوات واجهة برمجة متوافقة مع OpenAI. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي أداة استدلال محلية ينبغي أن أستخدم؟',
@@ -1679,7 +1685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تطبيق سطح المكتب.** [GPT4All](/ar/power-local-llm/gpt4all-review)، [Jan](/ar/power-local-llm/jan-review)، [Llama](/ar/power-local-llm/llama-app-review)، [LM Studio](/ar/power-local-llm/lm-studio-review)، [Osaurus](/ar/power-local-llm/osaurus-ai-review)، و[Ypipe](/ar/power-local-llm/ypipe-review) توثّق تطبيق سطح مكتب قابلًا للتثبيت.',
           '**مكتبة نماذج مدمجة.** [Foundry Local](/ar/power-local-llm/foundry-local-review)، [GPUStack](/ar/power-local-llm/gpustack-review)، [Jan](/ar/power-local-llm/jan-review)، [Lemonade](/ar/power-local-llm/lemonade-review)، [Llama](/ar/power-local-llm/llama-app-review)، [LM Studio](/ar/power-local-llm/lm-studio-review)، و[Ollama](/ar/power-local-llm/ollama-review) توثّق وسيلة مدمجة للعثور على النماذج وتنزيلها.',
           '**الوضع بلا واجهة أو وضع الخادم.** [DreamServer](/ar/power-local-llm/dreamserver-review)، [GPUStack](/ar/power-local-llm/gpustack-review)، [Lemonade](/ar/power-local-llm/lemonade-review)، و[Osaurus](/ar/power-local-llm/osaurus-ai-review) توثّق التشغيل كخدمة في الخلفية أو كخادم دون واجهة رسومية.',
-          '**الرخصة والسعر.** أربع من بيئات التشغيل هنا بترخيص Apache-2.0 وخمس بترخيص MIT. أما LM Studio وDocker Model Runner فمملوكتان (LM Studio مجاني الاستخدام؛ وDocker Model Runner مضمَّن مع Docker Desktop)، وMsty مغلق المصدر مع خطة مجانية، وتستخدم RunAnywhere وYPipe شروطها الخاصة أو غير موثّقة — راجع كل مراجعة.',
+          `**الرخصة والسعر.** ${RUNTIMES.license['Apache-2.0'] ?? 0} من بيئات التشغيل هنا بترخيص Apache-2.0 و${RUNTIMES.license['MIT'] ?? 0} بترخيص MIT. أما LM Studio وDocker Model Runner فمملوكتان (LM Studio مجاني الاستخدام؛ وDocker Model Runner مضمَّن مع Docker Desktop)، وMsty مغلق المصدر مع خطة مجانية، وتستخدم RunAnywhere وYPipe شروطها الخاصة أو غير موثّقة — راجع كل مراجعة.`,
         ],
       },
       gatewayDifferences: {
@@ -1689,7 +1695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**نقطة نهاية متوافقة مع OpenAI.** [AIClient2API](/ar/power-local-llm/aiclient2api-review) و[litellm](/ar/power-local-llm/litellm-review) توثّق نقطة نهاية متوافقة مع OpenAI.',
           '**التوجيه إلى النماذج المحلية.** [litellm](/ar/power-local-llm/litellm-review) يوثّق النماذج المحلية أو المستضافة ذاتيًا (مثل Ollama) ضمن المزوّدين المدعومين.',
           '**البديل الاحتياطي وموازنة الحمل.** [AIClient2API](/ar/power-local-llm/aiclient2api-review)، [ClawRouter](/ar/power-local-llm/clawrouter-review)، و[litellm](/ar/power-local-llm/litellm-review) توثّق البديل الاحتياطي أو إعادة المحاولة أو موازنة الحمل عبر النماذج أو المزوّدين.',
-          '**الرخصة.** اثنتان من الأربع بترخيص MIT، وواحدة بترخيص GPL-3.0، وواحدة بترخيص Apache-2.0.',
+          `**الرخصة.** ${RT.license['MIT'] ?? 0} من ${RT.count} بترخيص MIT، و${RT.license['GPL-3.0'] ?? 0} بترخيص GPL-3.0، و${RT.license['AGPL-3.0'] ?? 0} بترخيص AGPL-3.0، و${RT.license['Apache-2.0'] ?? 0} بترخيص Apache-2.0، و${RT.license['Not stated'] ?? 0} منها لم تذكر ترخيصها.`,
         ],
       },
       limitations: {
@@ -1817,7 +1823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      `**PromptQuorum 디렉터리에 있는 로컬 실행·서빙 도구 ${RUN_SERVE_TOTAL}개는 서로 따로 비교해야 하는 세 종류로 나뉩니다. 추론 엔진(${RUN_SERVE_INFERENCE_ENGINES}개), 런타임과 매니저(${RUN_SERVE_RUNTIMES_MANAGERS}개), 라우터와 게이트웨이(${RUN_SERVE_ROUTERS_GATEWAYS}개)입니다.** 엔진 중 15개는 NVIDIA GPU 지원을, 17개는 Apple Silicon 지원을, 21개는 OpenAI 호환 API를 문서화하고 있으며, 런타임 중 6개는 OpenAI 호환 API를 문서화하고 있습니다. 아래 비교표를 활용하되, 설치하기 전에 각 도구의 리뷰를 읽어 보세요.`,
+      `**PromptQuorum 디렉터리에 있는 로컬 실행·서빙 도구 ${RUN_SERVE_TOTAL}개는 서로 따로 비교해야 하는 세 종류로 나뉩니다. 추론 엔진(${RUN_SERVE_INFERENCE_ENGINES}개), 런타임과 매니저(${RUN_SERVE_RUNTIMES_MANAGERS}개), 라우터와 게이트웨이(${RUN_SERVE_ROUTERS_GATEWAYS}개)입니다.** 엔진 중 ${EA.nvidiaGpu}개는 NVIDIA GPU 지원을, ${EA.appleSilicon}개는 Apple Silicon 지원을, ${EA.openaiApi}개는 OpenAI 호환 API를 문서화하고 있으며, 런타임 중 ${RA.openaiApi}개는 OpenAI 호환 API를 문서화하고 있습니다. 아래 비교표를 활용하되, 설치하기 전에 각 도구의 리뷰를 읽어 보세요.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 추론 도구를 써야 하나요?',
@@ -1888,7 +1894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AMD GPU.** [KoboldCpp](/ko/power-local-llm/koboldcpp-review), [llama.cpp](/ko/power-local-llm/llama-cpp-explained), [LocalAI](/ko/power-local-llm/localai-explained), [Lucebox](/ko/power-local-llm/lucebox-review), [MLC LLM](/ko/power-local-llm/mlc-llm-explained), [SGLang](/ko/power-local-llm/sglang-explained), [Shimmy](/ko/power-local-llm/shimmy-review), [text-generation-webui](/ko/local-llms/text-generation-webui-review), [vLLM](/ko/power-local-llm/vllm-explained)은 AMD GPU 지원을 문서화하고 있습니다.',
           '**CPU 추론.** [exo](/ko/power-local-llm/exo-review), [KoboldCpp](/ko/power-local-llm/koboldcpp-review), [llama.cpp](/ko/power-local-llm/llama-cpp-explained), [LocalAI](/ko/power-local-llm/localai-explained), [OlliteRT](/ko/power-local-llm/ollitert-review), [SGLang](/ko/power-local-llm/sglang-explained), [text-generation-webui](/ko/local-llms/text-generation-webui-review), [vLLM](/ko/power-local-llm/vllm-explained)은 CPU에서 추론을 실행하는 방법을 문서화하고 있습니다.',
           '**멀티 GPU 및 멀티 노드.** [candle-vllm](/ko/power-local-llm/candle-vllm-review), [NVIDIA Dynamo](/ko/power-local-llm/dynamo-review), [ExLlamaV2](/ko/power-local-llm/exllamav2-explained), [exo](/ko/power-local-llm/exo-review), [KServe](/ko/power-local-llm/kserve-review), [LMDeploy](/ko/power-local-llm/lmdeploy-review), [LocalAI](/ko/power-local-llm/localai-explained), [LoRAX](/ko/power-local-llm/lorax-review), [Lucebox](/ko/power-local-llm/lucebox-review), [MLX-LM](/ko/power-local-llm/mlx-lm-explained), [mlxcel](/ko/power-local-llm/mlxcel-review), [oMLX](/ko/power-local-llm/omlx-review), [SGLang](/ko/power-local-llm/sglang-explained), [vLLM](/ko/power-local-llm/vllm-explained)은 멀티 GPU, 텐서 병렬 또는 멀티 노드 추론을 문서화하고 있습니다.',
-          '**라이선스.** 여기 있는 엔진 대부분은 Apache-2.0(19개) 또는 MIT(9개)이며, KoboldCpp와 text-generation-webui는 AGPL-3.0입니다. 카피레프트 라이선스는 수정본을 배포할 때 조건을 붙입니다. [AI 도구 라이선스 설명](/ko/power-local-llm/ai-tool-licenses-explained)을 참고하세요.',
+          `**라이선스.** 여기 있는 엔진 대부분은 Apache-2.0(${ENGINES.license['Apache-2.0'] ?? 0}개) 또는 MIT(${ENGINES.license['MIT'] ?? 0}개)이며, KoboldCpp와 text-generation-webui는 AGPL-3.0입니다. 카피레프트 라이선스는 수정본을 배포할 때 조건을 붙입니다. [AI 도구 라이선스 설명](/ko/power-local-llm/ai-tool-licenses-explained)을 참고하세요.`,
         ],
       },
       runtimeDifferences: {
@@ -1899,7 +1905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**데스크톱 앱.** [GPT4All](/ko/power-local-llm/gpt4all-review), [Jan](/ko/power-local-llm/jan-review), [Llama](/ko/power-local-llm/llama-app-review), [LM Studio](/ko/power-local-llm/lm-studio-review), [Osaurus](/ko/power-local-llm/osaurus-ai-review), [Ypipe](/ko/power-local-llm/ypipe-review)는 설치형 데스크톱 앱을 문서화하고 있습니다.',
           '**내장 모델 라이브러리.** [Foundry Local](/ko/power-local-llm/foundry-local-review), [GPUStack](/ko/power-local-llm/gpustack-review), [Jan](/ko/power-local-llm/jan-review), [Lemonade](/ko/power-local-llm/lemonade-review), [Llama](/ko/power-local-llm/llama-app-review), [LM Studio](/ko/power-local-llm/lm-studio-review), [Ollama](/ko/power-local-llm/ollama-review)는 모델을 찾고 내려받는 내장 기능을 문서화하고 있습니다.',
           '**헤드리스 또는 서버 모드.** [DreamServer](/ko/power-local-llm/dreamserver-review), [GPUStack](/ko/power-local-llm/gpustack-review), [Lemonade](/ko/power-local-llm/lemonade-review), [Osaurus](/ko/power-local-llm/osaurus-ai-review)는 GUI 없이 백그라운드 서비스 또는 서버로 실행하는 방법을 문서화하고 있습니다.',
-          '**라이선스와 가격.** 여기 있는 런타임 중 네 개는 Apache-2.0이고 다섯 개는 MIT입니다. LM Studio와 Docker Model Runner는 독점 소프트웨어이며(LM Studio는 무료로 사용할 수 있고, Docker Model Runner는 Docker Desktop에 포함되어 있습니다), Msty는 무료 티어가 있는 비공개 소스이고, RunAnywhere와 YPipe는 자체 약관을 사용하거나 약관이 문서화되어 있지 않습니다. 각 리뷰에서 확인하세요.',
+          `**라이선스와 가격.** 여기 있는 런타임 중 ${RUNTIMES.license['Apache-2.0'] ?? 0}개는 Apache-2.0이고 ${RUNTIMES.license['MIT'] ?? 0}개는 MIT입니다. LM Studio와 Docker Model Runner는 독점 소프트웨어이며(LM Studio는 무료로 사용할 수 있고, Docker Model Runner는 Docker Desktop에 포함되어 있습니다), Msty는 무료 티어가 있는 비공개 소스이고, RunAnywhere와 YPipe는 자체 약관을 사용하거나 약관이 문서화되어 있지 않습니다. 각 리뷰에서 확인하세요.`,
         ],
       },
       gatewayDifferences: {
@@ -1909,7 +1915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**OpenAI 호환 엔드포인트.** [AIClient2API](/ko/power-local-llm/aiclient2api-review)와 [litellm](/ko/power-local-llm/litellm-review)은 OpenAI 호환 엔드포인트를 문서화하고 있습니다.',
           '**로컬 모델로의 라우팅.** [litellm](/ko/power-local-llm/litellm-review)은 지원하는 프로바이더 중에 로컬 또는 셀프 호스팅 모델(예: Ollama)이 있다고 문서화하고 있습니다.',
           '**폴백과 로드 밸런싱.** [AIClient2API](/ko/power-local-llm/aiclient2api-review), [ClawRouter](/ko/power-local-llm/clawrouter-review), [litellm](/ko/power-local-llm/litellm-review)은 모델 또는 프로바이더 간의 폴백, 재시도 또는 로드 밸런싱을 문서화하고 있습니다.',
-          '**라이선스.** 4개 중 2개는 MIT, 1개는 GPL-3.0, 1개는 Apache-2.0입니다.',
+          `**라이선스.** ${RT.count}개 중 ${RT.license['MIT'] ?? 0}개는 MIT, ${RT.license['GPL-3.0'] ?? 0}개는 GPL-3.0, ${RT.license['AGPL-3.0'] ?? 0}개는 AGPL-3.0, ${RT.license['Apache-2.0'] ?? 0}개는 Apache-2.0이며, ${RT.license['Not stated'] ?? 0}개는 라이선스를 명시하지 않았습니다.`,
         ],
       },
       limitations: {

@@ -9,11 +9,15 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
-import { compareGroupTotal, compareSegmentCounts } from '@/lib/power-local-llm/compare-data'
+import { compareGroupTotal, compareSegmentAttrCounts, compareSegmentCounts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
 // Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
 const SEG = compareSegmentCounts('knowledge-retrieval')
+// Live attribute tallies (rows documenting an attribute as true), straight from the table's rows.
+const ATTR = compareSegmentAttrCounts('knowledge-retrieval')
+const VEC = ATTR['vector-databases']
+const RAGF = ATTR['rag-frameworks']
 
 // Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
 // so this article never drifts from the table as the directory grows.
@@ -58,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**The ${KR_TOTAL} local knowledge and retrieval tools in the PromptQuorum directory split into five kinds that should be compared separately: RAG frameworks and pipelines (${KR_RAG_FRAMEWORKS} tools), document and PDF chat apps (${KR_DOCUMENT_PDF_CHAT}), notes-app integrations (${KR_NOTES_INTEGRATIONS}), local search and research tools (${KR_LOCAL_SEARCH}) and vector databases (${KR_VECTOR_DATABASES}).** Among the vector databases, 3 of 4 document hybrid search and 4 of 4 document metadata filtering; among RAG frameworks, 4 document a visual builder and 9 document local-LLM support. Use the comparison table below, and read each tool's own review before you install it.`,
+      `**The ${KR_TOTAL} local knowledge and retrieval tools in the PromptQuorum directory split into five kinds that should be compared separately: RAG frameworks and pipelines (${KR_RAG_FRAMEWORKS} tools), document and PDF chat apps (${KR_DOCUMENT_PDF_CHAT}), notes-app integrations (${KR_NOTES_INTEGRATIONS}), local search and research tools (${KR_LOCAL_SEARCH}) and vector databases (${KR_VECTOR_DATABASES}).** Among the vector databases, ${VEC.hybridSearch} of ${KR_VECTOR_DATABASES} document hybrid search and ${VEC.metadataFilter} of ${KR_VECTOR_DATABASES} document metadata filtering; among RAG frameworks, ${RAGF.visualBuilder} document a visual builder and ${RAGF.localLlm} document local-LLM support. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local RAG or document-chat tool should I use?',
@@ -305,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Die ${KR_TOTAL} lokalen Wissens- und Retrieval-Tools im PromptQuorum-Verzeichnis lassen sich in fünf Arten einteilen, die getrennt verglichen werden sollten: RAG-Frameworks und -Pipelines (${KR_RAG_FRAMEWORKS} Tools), Dokumenten- und PDF-Chat-Apps (${KR_DOCUMENT_PDF_CHAT}), Notiz-App-Integrationen (${KR_NOTES_INTEGRATIONS}), lokale Such- und Recherche-Tools (${KR_LOCAL_SEARCH}) und Vektordatenbanken (${KR_VECTOR_DATABASES}).** Unter den Vektordatenbanken dokumentieren 3 von 4 die Hybridsuche und 4 von 4 die Metadatenfilterung; unter den RAG-Frameworks dokumentieren 4 einen visuellen Builder und 9 die Unterstützung lokaler LLMs. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Tools, bevor Sie es installieren.`,
+      `**Die ${KR_TOTAL} lokalen Wissens- und Retrieval-Tools im PromptQuorum-Verzeichnis lassen sich in fünf Arten einteilen, die getrennt verglichen werden sollten: RAG-Frameworks und -Pipelines (${KR_RAG_FRAMEWORKS} Tools), Dokumenten- und PDF-Chat-Apps (${KR_DOCUMENT_PDF_CHAT}), Notiz-App-Integrationen (${KR_NOTES_INTEGRATIONS}), lokale Such- und Recherche-Tools (${KR_LOCAL_SEARCH}) und Vektordatenbanken (${KR_VECTOR_DATABASES}).** Unter den Vektordatenbanken dokumentieren ${VEC.hybridSearch} von ${KR_VECTOR_DATABASES} die Hybridsuche und ${VEC.metadataFilter} von ${KR_VECTOR_DATABASES} die Metadatenfilterung; unter den RAG-Frameworks dokumentieren ${RAGF.visualBuilder} einen visuellen Builder und ${RAGF.localLlm} die Unterstützung lokaler LLMs. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Tools, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale RAG- oder Dokumenten-Chat-Tool sollte ich verwenden?',
@@ -552,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Les ${KR_TOTAL} outils locaux de connaissance et de recherche de l'annuaire PromptQuorum se répartissent en cinq types qu'il faut comparer séparément : frameworks et pipelines RAG (${KR_RAG_FRAMEWORKS} outils), applications de chat avec documents et PDF (${KR_DOCUMENT_PDF_CHAT}), intégrations aux applications de notes (${KR_NOTES_INTEGRATIONS}), outils de recherche locale (${KR_LOCAL_SEARCH}) et bases de données vectorielles (${KR_VECTOR_DATABASES}).** Parmi les bases vectorielles, 3 sur 4 documentent la recherche hybride et 4 sur 4 documentent le filtrage par métadonnées ; parmi les frameworks RAG, 4 documentent un constructeur visuel et 9 documentent la prise en charge des LLM locaux. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
+      `**Les ${KR_TOTAL} outils locaux de connaissance et de recherche de l'annuaire PromptQuorum se répartissent en cinq types qu'il faut comparer séparément : frameworks et pipelines RAG (${KR_RAG_FRAMEWORKS} outils), applications de chat avec documents et PDF (${KR_DOCUMENT_PDF_CHAT}), intégrations aux applications de notes (${KR_NOTES_INTEGRATIONS}), outils de recherche locale (${KR_LOCAL_SEARCH}) et bases de données vectorielles (${KR_VECTOR_DATABASES}).** Parmi les bases vectorielles, ${VEC.hybridSearch} sur ${KR_VECTOR_DATABASES} documentent la recherche hybride et ${VEC.metadataFilter} sur ${KR_VECTOR_DATABASES} documentent le filtrage par métadonnées ; parmi les frameworks RAG, ${RAGF.visualBuilder} documentent un constructeur visuel et ${RAGF.localLlm} documentent la prise en charge des LLM locaux. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil de RAG local ou de chat avec documents dois-je utiliser ?',
@@ -799,7 +803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Las ${KR_TOTAL} herramientas locales de conocimiento y recuperación del directorio de PromptQuorum se dividen en cinco tipos que conviene comparar por separado: frameworks y pipelines RAG (${KR_RAG_FRAMEWORKS} herramientas), apps de chat con documentos y PDF (${KR_DOCUMENT_PDF_CHAT}), integraciones con apps de notas (${KR_NOTES_INTEGRATIONS}), herramientas locales de búsqueda e investigación (${KR_LOCAL_SEARCH}) y bases de datos vectoriales (${KR_VECTOR_DATABASES}).** Entre las bases de datos vectoriales, 3 de 4 documentan búsqueda híbrida y 4 de 4 documentan filtrado por metadatos; entre los frameworks RAG, 4 documentan un constructor visual y 9 documentan compatibilidad con LLM locales. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
+      `**Las ${KR_TOTAL} herramientas locales de conocimiento y recuperación del directorio de PromptQuorum se dividen en cinco tipos que conviene comparar por separado: frameworks y pipelines RAG (${KR_RAG_FRAMEWORKS} herramientas), apps de chat con documentos y PDF (${KR_DOCUMENT_PDF_CHAT}), integraciones con apps de notas (${KR_NOTES_INTEGRATIONS}), herramientas locales de búsqueda e investigación (${KR_LOCAL_SEARCH}) y bases de datos vectoriales (${KR_VECTOR_DATABASES}).** Entre las bases de datos vectoriales, ${VEC.hybridSearch} de ${KR_VECTOR_DATABASES} documentan búsqueda híbrida y ${VEC.metadataFilter} de ${KR_VECTOR_DATABASES} documentan filtrado por metadatos; entre los frameworks RAG, ${RAGF.visualBuilder} documentan un constructor visual y ${RAGF.localLlm} documentan compatibilidad con LLM locales. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta local de RAG o de chat con documentos debería usar?',
@@ -1046,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorumディレクトリにある${KR_TOTAL}のローカル知識・検索ツールは、別々に比較すべき5つの種類に分かれます。RAGフレームワーク・パイプライン(${KR_RAG_FRAMEWORKS}ツール)、ドキュメント/PDFチャットアプリ(${KR_DOCUMENT_PDF_CHAT})、ノートアプリ連携(${KR_NOTES_INTEGRATIONS})、ローカル検索・リサーチツール(${KR_LOCAL_SEARCH})、ベクトルデータベース(${KR_VECTOR_DATABASES})です。** ベクトルデータベースでは4つのうち3つがハイブリッド検索を、4つすべてがメタデータフィルタリングをドキュメントに記載しています。RAGフレームワークでは4つがビジュアルビルダーを、9つがローカルLLM対応をドキュメントに記載しています。下の比較表を使い、インストールする前に各ツール自身のレビューを読んでください。`,
+      `**PromptQuorumディレクトリにある${KR_TOTAL}のローカル知識・検索ツールは、別々に比較すべき5つの種類に分かれます。RAGフレームワーク・パイプライン(${KR_RAG_FRAMEWORKS}ツール)、ドキュメント/PDFチャットアプリ(${KR_DOCUMENT_PDF_CHAT})、ノートアプリ連携(${KR_NOTES_INTEGRATIONS})、ローカル検索・リサーチツール(${KR_LOCAL_SEARCH})、ベクトルデータベース(${KR_VECTOR_DATABASES})です。** ベクトルデータベースでは${KR_VECTOR_DATABASES}件のうち${VEC.hybridSearch}件がハイブリッド検索を、${VEC.metadataFilter}件がメタデータフィルタリングをドキュメントに記載しています。RAGフレームワークでは${RAGF.visualBuilder}件がビジュアルビルダーを、${RAGF.localLlm}件がローカルLLM対応をドキュメントに記載しています。下の比較表を使い、インストールする前に各ツール自身のレビューを読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカルRAGまたはドキュメントチャットツールを使うべきか',
@@ -1293,7 +1297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorum目录中的${KR_TOTAL}款本地知识与检索工具分为五类,应当分别比较:RAG框架与流水线(${KR_RAG_FRAMEWORKS}款)、文档与PDF对话应用(${KR_DOCUMENT_PDF_CHAT}款)、笔记应用集成(${KR_NOTES_INTEGRATIONS}款)、本地搜索与研究工具(${KR_LOCAL_SEARCH}款)以及向量数据库(${KR_VECTOR_DATABASES}款)。** 在向量数据库中,4款里有3款记载了混合搜索,4款全部记载了元数据过滤;在RAG框架中,4款记载了可视化构建器,9款记载了本地LLM支持。请使用下方的对比表,并在安装前阅读每款工具各自的评测。`,
+      `**PromptQuorum目录中的${KR_TOTAL}款本地知识与检索工具分为五类,应当分别比较:RAG框架与流水线(${KR_RAG_FRAMEWORKS}款)、文档与PDF对话应用(${KR_DOCUMENT_PDF_CHAT}款)、笔记应用集成(${KR_NOTES_INTEGRATIONS}款)、本地搜索与研究工具(${KR_LOCAL_SEARCH}款)以及向量数据库(${KR_VECTOR_DATABASES}款)。** 在向量数据库中,${KR_VECTOR_DATABASES}款里有${VEC.hybridSearch}款记载了混合搜索,${VEC.metadataFilter}款记载了元数据过滤;在RAG框架中,${RAGF.visualBuilder}款记载了可视化构建器,${RAGF.localLlm}款记载了本地LLM支持。请使用下方的对比表,并在安装前阅读每款工具各自的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地RAG或文档对话工具?',
@@ -1540,7 +1544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**As ${KR_TOTAL} ferramentas locais de conhecimento e recuperação do diretório PromptQuorum se dividem em cinco tipos que devem ser comparados separadamente: frameworks e pipelines de RAG (${KR_RAG_FRAMEWORKS} ferramentas), apps de chat com documentos e PDFs (${KR_DOCUMENT_PDF_CHAT}), integrações com apps de notas (${KR_NOTES_INTEGRATIONS}), ferramentas locais de busca e pesquisa (${KR_LOCAL_SEARCH}) e bancos de dados vetoriais (${KR_VECTOR_DATABASES}).** Entre os bancos vetoriais, 3 de 4 documentam busca híbrida e 4 de 4 documentam filtragem por metadados; entre os frameworks RAG, 4 documentam um construtor visual e 9 documentam suporte a LLMs locais. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
+      `**As ${KR_TOTAL} ferramentas locais de conhecimento e recuperação do diretório PromptQuorum se dividem em cinco tipos que devem ser comparados separadamente: frameworks e pipelines de RAG (${KR_RAG_FRAMEWORKS} ferramentas), apps de chat com documentos e PDFs (${KR_DOCUMENT_PDF_CHAT}), integrações com apps de notas (${KR_NOTES_INTEGRATIONS}), ferramentas locais de busca e pesquisa (${KR_LOCAL_SEARCH}) e bancos de dados vetoriais (${KR_VECTOR_DATABASES}).** Entre os bancos vetoriais, ${VEC.hybridSearch} de ${KR_VECTOR_DATABASES} documentam busca híbrida e ${VEC.metadataFilter} de ${KR_VECTOR_DATABASES} documentam filtragem por metadados; entre os frameworks RAG, ${RAGF.visualBuilder} documentam um construtor visual e ${RAGF.localLlm} documentam suporte a LLMs locais. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta local de RAG ou chat com documentos devo usar?',
@@ -1787,7 +1791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**تنقسم أدوات المعرفة والاسترجاع المحلية الأربعون في دليل PromptQuorum إلى خمسة أنواع ينبغي مقارنتها كلًّا على حدة: أطر RAG وخطوط المعالجة (13 أداة)، وتطبيقات محادثة المستندات وملفات PDF (12)، وتكاملات تطبيقات الملاحظات (10)، وأدوات البحث المحلي والاستقصاء (7)، وقواعد البيانات المتجهية (4).** ومن بين قواعد البيانات المتجهية، توثّق 3 من 4 البحث الهجين وتوثّق 4 من 4 التصفية حسب البيانات الوصفية؛ ومن بين أطر RAG، توثّق 4 أدوات منشئًا مرئيًا وتوثّق 9 دعم النماذج المحلية. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.',
+      `**تنقسم أدوات المعرفة والاسترجاع المحلية الـ${KR_TOTAL} في دليل PromptQuorum إلى خمسة أنواع ينبغي مقارنتها كلًّا على حدة: أطر RAG وخطوط المعالجة (${KR_RAG_FRAMEWORKS} أداة)، وتطبيقات محادثة المستندات وملفات PDF (${KR_DOCUMENT_PDF_CHAT})، وتكاملات تطبيقات الملاحظات (${KR_NOTES_INTEGRATIONS})، وأدوات البحث المحلي والاستقصاء (${KR_LOCAL_SEARCH})، وقواعد البيانات المتجهية (${KR_VECTOR_DATABASES}).** ومن بين قواعد البيانات المتجهية، توثّق ${VEC.hybridSearch} من ${KR_VECTOR_DATABASES} البحث الهجين وتوثّق ${VEC.metadataFilter} من ${KR_VECTOR_DATABASES} التصفية حسب البيانات الوصفية؛ ومن بين أطر RAG، توثّق ${RAGF.visualBuilder} أدوات منشئًا مرئيًا وتوثّق ${RAGF.localLlm} دعم النماذج المحلية. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي أداة RAG أو محادثة مستندات محلية ينبغي أن أستخدم؟',
@@ -1824,7 +1828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'الأدوات التي تتيح لنموذج محلي العمل مع مستنداتك الخاصة خمسة أنواع مختلفة — أطر RAG، وتطبيقات محادثة المستندات، وقواعد البيانات المتجهية، وتكاملات الملاحظات، وأدوات البحث المحلي — ولذلك تُقارَن الأدوات الأربعون في دليل PromptQuorum داخل كل نوع على حدة، باستخدام جدول مُولَّد من بيانات الأدوات نفسها التي تعتمد عليها مراجعة كل أداة.',
+            text: `الأدوات التي تتيح لنموذج محلي العمل مع مستنداتك الخاصة خمسة أنواع مختلفة — أطر RAG، وتطبيقات محادثة المستندات، وقواعد البيانات المتجهية، وتكاملات الملاحظات، وأدوات البحث المحلي — ولذلك تُقارَن الأدوات الـ${KR_TOTAL} في دليل PromptQuorum داخل كل نوع على حدة، باستخدام جدول مُولَّد من بيانات الأدوات نفسها التي تعتمد عليها مراجعة كل أداة.`,
           },
           {
             type: 'plain-terms',
@@ -2034,7 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorum 디렉터리의 로컬 지식·검색 도구 ${KR_TOTAL}개는 따로 비교해야 하는 다섯 종류로 나뉩니다: RAG 프레임워크와 파이프라인(${KR_RAG_FRAMEWORKS}개), 문서·PDF 채팅 앱(${KR_DOCUMENT_PDF_CHAT}개), 노트 앱 통합(${KR_NOTES_INTEGRATIONS}개), 로컬 검색·리서치 도구(${KR_LOCAL_SEARCH}개), 벡터 데이터베이스(${KR_VECTOR_DATABASES}개).** 벡터 데이터베이스 4개 중 3개가 하이브리드 검색을, 4개 모두가 메타데이터 필터링을 문서에 명시하고 있으며, RAG 프레임워크 중에서는 4개가 시각적 빌더를, 9개가 로컬 LLM 지원을 문서에 명시하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
+      `**PromptQuorum 디렉터리의 로컬 지식·검색 도구 ${KR_TOTAL}개는 따로 비교해야 하는 다섯 종류로 나뉩니다: RAG 프레임워크와 파이프라인(${KR_RAG_FRAMEWORKS}개), 문서·PDF 채팅 앱(${KR_DOCUMENT_PDF_CHAT}개), 노트 앱 통합(${KR_NOTES_INTEGRATIONS}개), 로컬 검색·리서치 도구(${KR_LOCAL_SEARCH}개), 벡터 데이터베이스(${KR_VECTOR_DATABASES}개).** 벡터 데이터베이스 ${KR_VECTOR_DATABASES}개 중 ${VEC.hybridSearch}개가 하이브리드 검색을, ${VEC.metadataFilter}개가 메타데이터 필터링을 문서에 명시하고 있으며, RAG 프레임워크 중에서는 ${RAGF.visualBuilder}개가 시각적 빌더를, ${RAGF.localLlm}개가 로컬 LLM 지원을 문서에 명시하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 RAG 또는 문서 채팅 도구를 써야 합니까?',

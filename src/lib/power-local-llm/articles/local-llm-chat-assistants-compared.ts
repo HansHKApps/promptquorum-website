@@ -9,12 +9,14 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
-import { compareGroupTotal, compareSegmentCounts, compareSegmentFacts } from '@/lib/power-local-llm/compare-data'
+import { compareGroupTotal, compareSegmentAttrCounts, compareSegmentCounts, compareSegmentFacts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
 // Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
 const SEG = compareSegmentCounts('chat-assistants')
 const CHAT_FACTS = compareSegmentFacts('chat-assistants')
+// Live attribute tallies (rows documenting an attribute as true), straight from the table's rows.
+const CATA = compareSegmentAttrCounts('chat-assistants')
 const DESK = CHAT_FACTS['desktop-chat']
 const MOBILE = CHAT_FACTS['mobile-chat']
 
@@ -64,7 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**The ${CA_TOTAL} local chat apps and assistants in the PromptQuorum directory split into five kinds that should be compared separately: desktop chat apps (${CA_DESKTOP}), mobile chat apps (${CA_MOBILE}), web and CLI chat clients (${CA_WEB_CLI}), personal assistants (${CA_PERSONAL_ASSISTANTS}) and roleplay and companion apps (${CA_ROLEPLAY}).** Among desktop apps, 7 document MCP support and 9 document Ollama; among phone apps, 15 document fully offline use; among web clients, 8 document Docker deployment. Use the comparison table below, and read each tool's own review before you install it.`,
+      `**The ${CA_TOTAL} local chat apps and assistants in the PromptQuorum directory split into five kinds that should be compared separately: desktop chat apps (${CA_DESKTOP}), mobile chat apps (${CA_MOBILE}), web and CLI chat clients (${CA_WEB_CLI}), personal assistants (${CA_PERSONAL_ASSISTANTS}) and roleplay and companion apps (${CA_ROLEPLAY}).** Among desktop apps, ${CATA['desktop-chat'].mcp} document MCP support and ${CATA['desktop-chat'].ollama} document Ollama; among phone apps, ${CATA['mobile-chat'].offline} document fully offline use; among web clients, ${CATA['web-chat'].dockerDeploy} document Docker deployment. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local chat app should I use?',
@@ -182,7 +184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Lorebooks.** [Agnai](/power-local-llm/agnai-review), [Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay) and [RisuAI](/power-local-llm/risuai-review) document lorebook or world-info support.',
           '**Group chats.** [Agnai](/power-local-llm/agnai-review) and [RisuAI](/power-local-llm/risuai-review) document group chats.',
-          '**Coverage.** Only four tools are in this group, and several roleplay features (such as character cards) are described in ways that differ between projects, so they are covered in each tool\'s review and not in the table.',
+          `**Coverage.** ${CA_ROLEPLAY} tools are in this group, and several roleplay features (such as character cards) are described in ways that differ between projects, so they are covered in each tool's review and not in the table.`,
         ],
       },
       limitations: {
@@ -309,7 +311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Die ${CA_TOTAL} lokalen Chat-Apps und Assistenten im PromptQuorum-Verzeichnis lassen sich in fünf Arten einteilen, die getrennt verglichen werden sollten: Desktop-Chat-Apps (${CA_DESKTOP}), mobile Chat-Apps (${CA_MOBILE}), Web- und CLI-Chat-Clients (${CA_WEB_CLI}), persönliche Assistenten (${CA_PERSONAL_ASSISTANTS}) sowie Rollenspiel- und Companion-Apps (${CA_ROLEPLAY}).** Bei den Desktop-Apps dokumentieren 7 MCP-Unterstützung und 9 Ollama; bei den Smartphone-Apps dokumentieren 15 die vollständige Offline-Nutzung; bei den Web-Clients dokumentieren 8 den Docker-Betrieb. Nutzen Sie die Vergleichstabelle unten und lesen Sie den Test des jeweiligen Tools, bevor Sie es installieren.`,
+      `**Die ${CA_TOTAL} lokalen Chat-Apps und Assistenten im PromptQuorum-Verzeichnis lassen sich in fünf Arten einteilen, die getrennt verglichen werden sollten: Desktop-Chat-Apps (${CA_DESKTOP}), mobile Chat-Apps (${CA_MOBILE}), Web- und CLI-Chat-Clients (${CA_WEB_CLI}), persönliche Assistenten (${CA_PERSONAL_ASSISTANTS}) sowie Rollenspiel- und Companion-Apps (${CA_ROLEPLAY}).** Bei den Desktop-Apps dokumentieren ${CATA['desktop-chat'].mcp} MCP-Unterstützung und ${CATA['desktop-chat'].ollama} Ollama; bei den Smartphone-Apps dokumentieren ${CATA['mobile-chat'].offline} die vollständige Offline-Nutzung; bei den Web-Clients dokumentieren ${CATA['web-chat'].dockerDeploy} den Docker-Betrieb. Nutzen Sie die Vergleichstabelle unten und lesen Sie den Test des jeweiligen Tools, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welche lokale Chat-App sollte ich verwenden?',
@@ -427,7 +429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Lorebooks.** [Agnai](/de/power-local-llm/agnai-review), [Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay) und [RisuAI](/de/power-local-llm/risuai-review) dokumentieren Unterstützung für Lorebooks bzw. World Info.',
           '**Gruppenchats.** [Agnai](/de/power-local-llm/agnai-review) und [RisuAI](/de/power-local-llm/risuai-review) dokumentieren Gruppenchats.',
-          '**Abdeckung.** In dieser Gruppe sind nur vier Tools, und mehrere Rollenspiel-Funktionen (etwa Charakterkarten) werden von Projekt zu Projekt unterschiedlich beschrieben; sie werden daher im Test des jeweiligen Tools behandelt und nicht in der Tabelle.',
+          `**Abdeckung.** In dieser Gruppe sind ${CA_ROLEPLAY} Tools, und mehrere Rollenspiel-Funktionen (etwa Charakterkarten) werden von Projekt zu Projekt unterschiedlich beschrieben; sie werden daher im Test des jeweiligen Tools behandelt und nicht in der Tabelle.`,
         ],
       },
       limitations: {
@@ -554,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Les ${CA_TOTAL} applications de chat locales et assistants du répertoire PromptQuorum se répartissent en cinq types qu'il faut comparer séparément : applications de chat de bureau (${CA_DESKTOP}), applications de chat mobiles (${CA_MOBILE}), clients de chat web et en ligne de commande (${CA_WEB_CLI}), assistants personnels (${CA_PERSONAL_ASSISTANTS}) et applications de jeu de rôle et de compagnie (${CA_ROLEPLAY}).** Parmi les applications de bureau, 7 documentent la prise en charge de MCP et 9 celle d'Ollama ; parmi les applications pour téléphone, 15 documentent un fonctionnement entièrement hors ligne ; parmi les clients web, 8 documentent un déploiement Docker. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
+      `**Les ${CA_TOTAL} applications de chat locales et assistants du répertoire PromptQuorum se répartissent en cinq types qu'il faut comparer séparément : applications de chat de bureau (${CA_DESKTOP}), applications de chat mobiles (${CA_MOBILE}), clients de chat web et en ligne de commande (${CA_WEB_CLI}), assistants personnels (${CA_PERSONAL_ASSISTANTS}) et applications de jeu de rôle et de compagnie (${CA_ROLEPLAY}).** Parmi les applications de bureau, ${CATA['desktop-chat'].mcp} documentent la prise en charge de MCP et ${CATA['desktop-chat'].ollama} celle d'Ollama ; parmi les applications pour téléphone, ${CATA['mobile-chat'].offline} documentent un fonctionnement entièrement hors ligne ; parmi les clients web, ${CATA['web-chat'].dockerDeploy} documentent un déploiement Docker. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quelle application de chat locale dois-je utiliser ?',
@@ -672,7 +674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Lorebooks.** [Agnai](/fr/power-local-llm/agnai-review), [Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay) et [RisuAI](/fr/power-local-llm/risuai-review) documentent la prise en charge des lorebooks ou du world info.',
           '**Discussions de groupe.** [Agnai](/fr/power-local-llm/agnai-review) et [RisuAI](/fr/power-local-llm/risuai-review) documentent les discussions de groupe.',
-          '**Couverture.** Seuls quatre outils figurent dans ce groupe, et plusieurs fonctionnalités de jeu de rôle (comme les cartes de personnage) sont décrites différemment d\'un projet à l\'autre ; elles sont donc traitées dans l\'avis de chaque outil et non dans le tableau.',
+          `**Couverture.** ${CA_ROLEPLAY} outils figurent dans ce groupe, et plusieurs fonctionnalités de jeu de rôle (comme les cartes de personnage) sont décrites différemment d'un projet à l'autre ; elles sont donc traitées dans l'avis de chaque outil et non dans le tableau.`,
         ],
       },
       limitations: {
@@ -799,7 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Las ${CA_TOTAL} apps de chat y asistentes locales del directorio de PromptQuorum se dividen en cinco tipos que conviene comparar por separado: apps de chat de escritorio (${CA_DESKTOP}), apps de chat para móvil (${CA_MOBILE}), clientes de chat web y de línea de comandos (${CA_WEB_CLI}), asistentes personales (${CA_PERSONAL_ASSISTANTS}) y apps de rol y compañía (${CA_ROLEPLAY}).** Entre las apps de escritorio, 7 documentan compatibilidad con MCP y 9 documentan Ollama; entre las apps de móvil, 15 documentan el uso totalmente offline; entre los clientes web, 8 documentan el despliegue con Docker. Usa la tabla comparativa de abajo y lee el análisis propio de cada herramienta antes de instalarla.`,
+      `**Las ${CA_TOTAL} apps de chat y asistentes locales del directorio de PromptQuorum se dividen en cinco tipos que conviene comparar por separado: apps de chat de escritorio (${CA_DESKTOP}), apps de chat para móvil (${CA_MOBILE}), clientes de chat web y de línea de comandos (${CA_WEB_CLI}), asistentes personales (${CA_PERSONAL_ASSISTANTS}) y apps de rol y compañía (${CA_ROLEPLAY}).** Entre las apps de escritorio, ${CATA['desktop-chat'].mcp} documentan compatibilidad con MCP y ${CATA['desktop-chat'].ollama} documentan Ollama; entre las apps de móvil, ${CATA['mobile-chat'].offline} documentan el uso totalmente offline; entre los clientes web, ${CATA['web-chat'].dockerDeploy} documentan el despliegue con Docker. Usa la tabla comparativa de abajo y lee el análisis propio de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué app de chat local debería usar?',
@@ -917,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Lorebooks.** [Agnai](/es/power-local-llm/agnai-review), [Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay) y [RisuAI](/es/power-local-llm/risuai-review) documentan compatibilidad con lorebooks o world info.',
           '**Chats grupales.** [Agnai](/es/power-local-llm/agnai-review) y [RisuAI](/es/power-local-llm/risuai-review) documentan los chats grupales.',
-          '**Cobertura.** Solo hay cuatro herramientas en este grupo y varias funciones de rol (como las tarjetas de personaje) se describen de forma distinta según el proyecto, por lo que se tratan en el análisis de cada herramienta y no en la tabla.',
+          `**Cobertura.** Hay ${CA_ROLEPLAY} herramientas en este grupo y varias funciones de rol (como las tarjetas de personaje) se describen de forma distinta según el proyecto, por lo que se tratan en el análisis de cada herramienta y no en la tabla.`,
         ],
       },
       limitations: {
@@ -1044,7 +1046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorumディレクトリにあるローカルチャットアプリとアシスタント${CA_TOTAL}種は、別々に比較すべき5種類に分かれます:デスクトップチャットアプリ(${CA_DESKTOP})、モバイルチャットアプリ(${CA_MOBILE})、WebおよびCLIチャットクライアント(${CA_WEB_CLI})、パーソナルアシスタント(${CA_PERSONAL_ASSISTANTS})、ロールプレイ・コンパニオンアプリ(${CA_ROLEPLAY})です。** デスクトップアプリのうち7つがMCP対応、9つがOllama対応を公式ドキュメントに記載しています。スマートフォンアプリでは15が完全オフライン動作、Webクライアントでは8がDockerでのデプロイを記載しています。下の比較表を使い、インストール前に各ツールのレビューも読んでください。`,
+      `**PromptQuorumディレクトリにあるローカルチャットアプリとアシスタント${CA_TOTAL}種は、別々に比較すべき5種類に分かれます:デスクトップチャットアプリ(${CA_DESKTOP})、モバイルチャットアプリ(${CA_MOBILE})、WebおよびCLIチャットクライアント(${CA_WEB_CLI})、パーソナルアシスタント(${CA_PERSONAL_ASSISTANTS})、ロールプレイ・コンパニオンアプリ(${CA_ROLEPLAY})です。** デスクトップアプリのうち${CATA['desktop-chat'].mcp}つがMCP対応、${CATA['desktop-chat'].ollama}つがOllama対応を公式ドキュメントに記載しています。スマートフォンアプリでは${CATA['mobile-chat'].offline}が完全オフライン動作、Webクライアントでは${CATA['web-chat'].dockerDeploy}がDockerでのデプロイを記載しています。下の比較表を使い、インストール前に各ツールのレビューも読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカルチャットアプリを使えばよいか',
@@ -1162,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**ロアブック。**[Agnai](/ja/power-local-llm/agnai-review)、[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay)と[RisuAI](/ja/power-local-llm/risuai-review)は、ロアブックまたはワールドインフォのサポートを記載しています。',
           '**グループチャット。**[Agnai](/ja/power-local-llm/agnai-review)と[RisuAI](/ja/power-local-llm/risuai-review)は、グループチャットを記載しています。',
-          '**対象範囲。**このグループに含まれるのは4ツールのみで、ロールプレイ関連の機能(キャラクターカードなど)はプロジェクトごとに説明のされ方が異なるため、表ではなく各ツールのレビューで扱っています。',
+          `**対象範囲。**このグループに含まれるのは${CA_ROLEPLAY}ツールで、ロールプレイ関連の機能(キャラクターカードなど)はプロジェクトごとに説明のされ方が異なるため、表ではなく各ツールのレビューで扱っています。`,
         ],
       },
       limitations: {
@@ -1289,7 +1291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorum目录中的${CA_TOTAL}款本地聊天应用与助手分为五种类型,应分别比较:桌面聊天应用(${CA_DESKTOP}款)、手机聊天应用(${CA_MOBILE}款)、网页与CLI聊天客户端(${CA_WEB_CLI}款)、个人助手(${CA_PERSONAL_ASSISTANTS}款)以及角色扮演与陪伴应用(${CA_ROLEPLAY}款)。** 在桌面应用中,7款在文档中说明支持MCP,9款在文档中说明支持Ollama;在手机应用中,15款在文档中说明可完全离线使用;在网页客户端中,8款在文档中说明支持Docker部署。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
+      `**PromptQuorum目录中的${CA_TOTAL}款本地聊天应用与助手分为五种类型,应分别比较:桌面聊天应用(${CA_DESKTOP}款)、手机聊天应用(${CA_MOBILE}款)、网页与CLI聊天客户端(${CA_WEB_CLI}款)、个人助手(${CA_PERSONAL_ASSISTANTS}款)以及角色扮演与陪伴应用(${CA_ROLEPLAY}款)。** 在桌面应用中,${CATA['desktop-chat'].mcp}款在文档中说明支持MCP,${CATA['desktop-chat'].ollama}款在文档中说明支持Ollama;在手机应用中,${CATA['mobile-chat'].offline}款在文档中说明可完全离线使用;在网页客户端中,${CATA['web-chat'].dockerDeploy}款在文档中说明支持Docker部署。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地聊天应用?',
@@ -1407,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Lorebook。** [Agnai](/zh/power-local-llm/agnai-review)、[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay)和[RisuAI](/zh/power-local-llm/risuai-review)均在文档中说明支持lorebook或世界设定(world info)。',
           '**群聊。** [Agnai](/zh/power-local-llm/agnai-review)和[RisuAI](/zh/power-local-llm/risuai-review)均在文档中说明支持群聊。',
-          '**覆盖范围。** 这一组只有四款工具,而且若干角色扮演功能(例如角色卡)在不同项目中的描述方式各不相同,因此这些内容放在各工具的评测中介绍,而不放入表格。',
+          `**覆盖范围。** 这一组有${CA_ROLEPLAY}款工具,而且若干角色扮演功能(例如角色卡)在不同项目中的描述方式各不相同,因此这些内容放在各工具的评测中介绍,而不放入表格。`,
         ],
       },
       limitations: {
@@ -1534,7 +1536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Os ${CA_TOTAL} apps de chat locais e assistentes do diretório da PromptQuorum se dividem em cinco tipos que devem ser comparados separadamente: apps de chat para desktop (${CA_DESKTOP}), apps de chat para celular (${CA_MOBILE}), clientes de chat web e CLI (${CA_WEB_CLI}), assistentes pessoais (${CA_PERSONAL_ASSISTANTS}) e apps de roleplay e companhia (${CA_ROLEPLAY}).** Entre os apps de desktop, 7 documentam suporte a MCP e 9 documentam Ollama; entre os apps de celular, 15 documentam uso totalmente offline; entre os clientes web, 8 documentam implantação com Docker. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
+      `**Os ${CA_TOTAL} apps de chat locais e assistentes do diretório da PromptQuorum se dividem em cinco tipos que devem ser comparados separadamente: apps de chat para desktop (${CA_DESKTOP}), apps de chat para celular (${CA_MOBILE}), clientes de chat web e CLI (${CA_WEB_CLI}), assistentes pessoais (${CA_PERSONAL_ASSISTANTS}) e apps de roleplay e companhia (${CA_ROLEPLAY}).** Entre os apps de desktop, ${CATA['desktop-chat'].mcp} documentam suporte a MCP e ${CATA['desktop-chat'].ollama} documentam Ollama; entre os apps de celular, ${CATA['mobile-chat'].offline} documentam uso totalmente offline; entre os clientes web, ${CATA['web-chat'].dockerDeploy} documentam implantação com Docker. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual app de chat local devo usar?',
@@ -1652,7 +1654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Lorebooks.** [Agnai](/pt/power-local-llm/agnai-review), [Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay) e [RisuAI](/pt/power-local-llm/risuai-review) documentam suporte a lorebook ou world-info.',
           '**Chats em grupo.** [Agnai](/pt/power-local-llm/agnai-review) e [RisuAI](/pt/power-local-llm/risuai-review) documentam chats em grupo.',
-          '**Cobertura.** Apenas quatro ferramentas estão neste grupo, e vários recursos de roleplay (como cartões de personagem) são descritos de formas diferentes entre os projetos, por isso são tratados na análise de cada ferramenta e não na tabela.',
+          `**Cobertura.** ${CA_ROLEPLAY} ferramentas estão neste grupo, e vários recursos de roleplay (como cartões de personagem) são descritos de formas diferentes entre os projetos, por isso são tratados na análise de cada ferramenta e não na tabela.`,
         ],
       },
       limitations: {
@@ -1779,7 +1781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**تنقسم تطبيقات الدردشة والمساعدات المحلية الـ${CA_TOTAL} في دليل PromptQuorum إلى خمسة أنواع ينبغي مقارنتها كل على حدة: تطبيقات دردشة سطح المكتب (${CA_DESKTOP})، وتطبيقات دردشة الجوال (${CA_MOBILE})، وعملاء الدردشة عبر الويب وسطر الأوامر (${CA_WEB_CLI})، والمساعدات الشخصية (${CA_PERSONAL_ASSISTANTS})، وتطبيقات لعب الأدوار والرفقة (${CA_ROLEPLAY}).** من بين تطبيقات سطح المكتب، يوثّق 7 منها دعم MCP ويوثّق 9 دعم Ollama؛ ومن بين تطبيقات الهاتف، يوثّق 15 العمل دون اتصال بالكامل؛ ومن بين عملاء الويب، يوثّق 8 النشر عبر Docker. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
+      `**تنقسم تطبيقات الدردشة والمساعدات المحلية الـ${CA_TOTAL} في دليل PromptQuorum إلى خمسة أنواع ينبغي مقارنتها كل على حدة: تطبيقات دردشة سطح المكتب (${CA_DESKTOP})، وتطبيقات دردشة الجوال (${CA_MOBILE})، وعملاء الدردشة عبر الويب وسطر الأوامر (${CA_WEB_CLI})، والمساعدات الشخصية (${CA_PERSONAL_ASSISTANTS})، وتطبيقات لعب الأدوار والرفقة (${CA_ROLEPLAY}).** من بين تطبيقات سطح المكتب، يوثّق ${CATA['desktop-chat'].mcp} منها دعم MCP ويوثّق ${CATA['desktop-chat'].ollama} دعم Ollama؛ ومن بين تطبيقات الهاتف، يوثّق ${CATA['mobile-chat'].offline} العمل دون اتصال بالكامل؛ ومن بين عملاء الويب، يوثّق ${CATA['web-chat'].dockerDeploy} النشر عبر Docker. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي تطبيق دردشة محلي ينبغي أن أستخدم؟',
@@ -1897,7 +1899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**دفاتر المعرفة (Lorebooks).** [Agnai](/ar/power-local-llm/agnai-review)، [Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay) و[RisuAI](/ar/power-local-llm/risuai-review) توثّق دعم دفاتر المعرفة أو معلومات العالم (world-info).',
           '**المحادثات الجماعية.** [Agnai](/ar/power-local-llm/agnai-review) و[RisuAI](/ar/power-local-llm/risuai-review) توثّقان المحادثات الجماعية.',
-          '**التغطية.** لا توجد في هذه المجموعة إلا أربع أدوات، وتُوصف عدة ميزات في لعب الأدوار (مثل بطاقات الشخصيات) بطرق تختلف بين المشاريع، لذا تُعالَج في مراجعة كل أداة لا في الجدول.',
+          `**التغطية.** توجد في هذه المجموعة ${CA_ROLEPLAY} أداة، وتُوصف عدة ميزات في لعب الأدوار (مثل بطاقات الشخصيات) بطرق تختلف بين المشاريع، لذا تُعالَج في مراجعة كل أداة لا في الجدول.`,
         ],
       },
       limitations: {
@@ -2024,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorum 디렉터리의 로컬 채팅 앱과 어시스턴트 ${CA_TOTAL}개는 따로 비교해야 하는 다섯 종류로 나뉩니다. 데스크톱 채팅 앱(${CA_DESKTOP}개), 모바일 채팅 앱(${CA_MOBILE}개), 웹 및 CLI 채팅 클라이언트(${CA_WEB_CLI}개), 개인 어시스턴트(${CA_PERSONAL_ASSISTANTS}개), 롤플레이 및 컴패니언 앱(${CA_ROLEPLAY}개)입니다.** 데스크톱 앱 중 7개가 MCP 지원을, 9개가 Ollama를 문서화하고 있고, 휴대폰 앱 중 15개가 완전 오프라인 사용을, 웹 클라이언트 중 8개가 Docker 배포를 문서화하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
+      `**PromptQuorum 디렉터리의 로컬 채팅 앱과 어시스턴트 ${CA_TOTAL}개는 따로 비교해야 하는 다섯 종류로 나뉩니다. 데스크톱 채팅 앱(${CA_DESKTOP}개), 모바일 채팅 앱(${CA_MOBILE}개), 웹 및 CLI 채팅 클라이언트(${CA_WEB_CLI}개), 개인 어시스턴트(${CA_PERSONAL_ASSISTANTS}개), 롤플레이 및 컴패니언 앱(${CA_ROLEPLAY}개)입니다.** 데스크톱 앱 중 ${CATA['desktop-chat'].mcp}개가 MCP 지원을, ${CATA['desktop-chat'].ollama}개가 Ollama를 문서화하고 있고, 휴대폰 앱 중 ${CATA['mobile-chat'].offline}개가 완전 오프라인 사용을, 웹 클라이언트 중 ${CATA['web-chat'].dockerDeploy}개가 Docker 배포를 문서화하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 채팅 앱을 사용해야 합니까?',
@@ -2142,7 +2144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**로어북.** [Agnai](/ko/power-local-llm/agnai-review), [Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay) 및 [RisuAI](/ko/power-local-llm/risuai-review)는 로어북 또는 월드 인포 지원을 문서화하고 있습니다.',
           '**그룹 채팅.** [Agnai](/ko/power-local-llm/agnai-review) 및 [RisuAI](/ko/power-local-llm/risuai-review)는 그룹 채팅을 문서화하고 있습니다.',
-          '**범위.** 이 그룹에는 도구가 네 개뿐이고, 캐릭터 카드 같은 여러 롤플레이 기능은 프로젝트마다 다르게 설명되어 있으므로 표에 넣지 않고 각 도구의 리뷰에서 다룹니다.',
+          `**범위.** 이 그룹에는 도구가 ${CA_ROLEPLAY}개이고, 캐릭터 카드 같은 여러 롤플레이 기능은 프로젝트마다 다르게 설명되어 있으므로 표에 넣지 않고 각 도구의 리뷰에서 다룹니다.`,
         ],
       },
       limitations: {

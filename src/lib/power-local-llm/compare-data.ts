@@ -323,6 +323,56 @@ export function compareSegmentFacts(
   return out
 }
 
+/**
+ * How many rows of each comparison tab have an attribute documented as true (the "Yes" cells), keyed by segment key
+ * then attribute key. Articles interpolate these into "N document MCP support" copy so it always equals the table.
+ */
+export function compareSegmentAttrCounts(group: CategoryGroupKey): Record<string, Record<string, number>> {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const out: Record<string, Record<string, number>> = {}
+  for (const seg of buildCategoryCompareData(group, 'en').segments) {
+    const counts: Record<string, number> = {}
+    const attrKeys = new Set<string>()
+    for (const r of seg.rows) for (const k of Object.keys(bySlug.get(r.slug)?.compare ?? {})) attrKeys.add(k)
+    for (const k of attrKeys) counts[k] = seg.rows.filter((r) => bySlug.get(r.slug)?.compare?.[k] === true).length
+    out[seg.key] = counts
+  }
+  return out
+}
+
+/**
+ * Tools of one comparison tab (same rows as the table) whose normalized license label is one of `licenses`,
+ * as a localized "A, B and C" markdown list linking each tool's review. Tool names are language-neutral, so the
+ * sentence around the list stays translated while the names can never go stale.
+ */
+export function compareToolsByLicense(group: CategoryGroupKey, segmentKey: string, licenses: string[], lang: Language | string = 'en'): string {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const seg = buildCategoryCompareData(group, 'en').segments.find((s) => s.key === segmentKey)
+  const rows = (seg?.rows ?? []).filter((r) => {
+    const t = bySlug.get(r.slug)
+    return !!t && !!t.license && t.license !== 'TODO' && licenses.includes(normalizeLicenseLabel(t.license))
+  })
+  const prefix = lang === 'en' ? '' : `/${lang}`
+  return formatToolList(rows.map((r) => (r.reviewPath ? `[${r.name}](${prefix}${r.reviewPath})` : r.name)), lang)
+}
+
+function formatToolList(parts: string[], lang: Language | string): string {
+  // en-GB: "A, B and C" without the Oxford comma, matching the rest of the site's copy.
+  const tag = lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en-GB' : String(lang)
+  return new Intl.ListFormat(tag, { style: 'long', type: 'conjunction' }).format(parts)
+}
+
+/**
+ * Names of the tools that appear in both of two tabs of one group's comparison (same rows as the tables), as a localized
+ * "A, B and C" list. For copy such as "X and Y do both text-to-speech and speech-to-text, so they appear in both tables".
+ */
+export function compareToolsInBothSegments(group: CategoryGroupKey, segmentA: string, segmentB: string, lang: Language | string = 'en'): string {
+  const segs = buildCategoryCompareData(group, 'en').segments
+  const a = segs.find((s) => s.key === segmentA)?.rows ?? []
+  const inB = new Set((segs.find((s) => s.key === segmentB)?.rows ?? []).map((r) => r.slug))
+  return formatToolList(a.filter((r) => inB.has(r.slug)).map((r) => r.name), lang)
+}
+
 /** Distinct tools across all tabs of a group's comparison (a tool in two tabs counts once). */
 export function compareGroupTotal(group: CategoryGroupKey): number {
   return new Set(buildCategoryCompareData(group, 'en').segments.flatMap((s) => s.rows.map((r) => r.slug))).size

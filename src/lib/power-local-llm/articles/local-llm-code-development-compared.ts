@@ -9,11 +9,14 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
-import { compareGroupTotal, compareSegmentCounts } from '@/lib/power-local-llm/compare-data'
+import { compareGroupTotal, compareSegmentAttrCounts, compareSegmentCounts, compareSegmentFacts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
 // Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
 const SEG = compareSegmentCounts('code-development')
+// Live attribute tallies (rows documenting an attribute as true) and price tallies for the coding-assistants tab, straight from the table's rows.
+const ATTR = compareSegmentAttrCounts('code-development')
+const CODE = compareSegmentFacts('code-development')['coding-assistants']
 
 // Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
 // so this article never drifts from the table as the directory grows.
@@ -57,7 +60,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**The ${CD_TOTAL} local coding and agent tools in the PromptQuorum directory split into four kinds that should be compared separately: coding assistants and IDE plugins (${CD_CODE_ASSISTANTS} tools), agent frameworks and SDKs (${CD_AGENT_FRAMEWORKS}), autonomous agents (${CD_AUTONOMOUS_AGENTS}) and workflow builders (${CD_WORKFLOW_BUILDERS}).** Among coding assistants, 6 document a VS Code extension and 10 an agent mode; among agent frameworks, 14 document MCP support; among workflow builders, 6 of 7 document a visual editor. Use the comparison table below, and read each tool's own review before you install it.`,
+      `**The ${CD_TOTAL} local coding and agent tools in the PromptQuorum directory split into four kinds that should be compared separately: coding assistants and IDE plugins (${CD_CODE_ASSISTANTS} tools), agent frameworks and SDKs (${CD_AGENT_FRAMEWORKS}), autonomous agents (${CD_AUTONOMOUS_AGENTS}) and workflow builders (${CD_WORKFLOW_BUILDERS}).** Among coding assistants, ${ATTR['coding-assistants'].vscode} document a VS Code extension and ${ATTR['coding-assistants'].agentMode} an agent mode; among agent frameworks, ${ATTR['agent-frameworks'].mcp} document MCP support; among workflow builders, ${ATTR['workflow-builders'].visualBuilder} of ${CD_WORKFLOW_BUILDERS} document a visual editor. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local coding or agent tool should I use?',
@@ -132,7 +135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent mode.** [Blackbox AI (CLI)](/power-local-llm/blackbox-ai-cli-review), [Bodega One Code](/power-local-llm/bodega-one-code-review), [Cline](/power-local-llm/cline-review), [CodeGPT](/power-local-llm/codegpt-review), [Cursor (local mode)](/power-local-llm/cursor-local-mode-review), [Kilo Code](/power-local-llm/kilo-code-review), [little-coder](/power-local-llm/little-coder-review), [OpenCode](/power-local-llm/opencode-review), [Windsurf](/power-local-llm/windsurf-review) and [Zed](/power-local-llm/zed-review) document an agent mode for multi-step edits.',
           '**Inline completion.** [Kilo Code](/power-local-llm/kilo-code-review), [Tabby](/power-local-llm/tabby-review), [Twinny](/power-local-llm/twinny-review), [Windsurf](/power-local-llm/windsurf-review) and [Zed](/power-local-llm/zed-review) document inline code completion.',
           '**MCP.** [Blackbox AI (CLI)](/power-local-llm/blackbox-ai-cli-review), [Cline](/power-local-llm/cline-review), [CodeGPT](/power-local-llm/codegpt-review), [Cursor (local mode)](/power-local-llm/cursor-local-mode-review), [Kilo Code](/power-local-llm/kilo-code-review), [Windsurf](/power-local-llm/windsurf-review) and [Zed](/power-local-llm/zed-review) document MCP support.',
-          '**Price.** Of the 20 coding assistants, 11 are free, 9 freemium and 0 paid. Check each review for what a paid tier adds.',
+          `**Price.** Of the ${CODE.count} coding assistants, ${CODE.price.free} are free, ${CODE.price.freemium} freemium and ${CODE.price.paid} paid. Check each review for what a paid tier adds.`,
         ],
       },
       frameworkDifferences: {
@@ -296,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Die ${CD_TOTAL} lokalen Coding- und Agenten-Tools im PromptQuorum-Verzeichnis lassen sich in vier Arten einteilen, die getrennt verglichen werden sollten: Coding-Assistenten und IDE-Plugins (${CD_CODE_ASSISTANTS} Tools), Agent-Frameworks und SDKs (${CD_AGENT_FRAMEWORKS}), autonome Agenten (${CD_AUTONOMOUS_AGENTS}) und Workflow-Builder (${CD_WORKFLOW_BUILDERS}).** Unter den Coding-Assistenten dokumentieren 6 eine VS-Code-Erweiterung und 10 einen Agentenmodus; unter den Agent-Frameworks dokumentieren 14 MCP-Unterstützung; unter den Workflow-Buildern dokumentieren 6 von 7 einen visuellen Editor. Nutzen Sie die Vergleichstabelle unten und lesen Sie die Rezension des jeweiligen Tools, bevor Sie es installieren.`,
+      `**Die ${CD_TOTAL} lokalen Coding- und Agenten-Tools im PromptQuorum-Verzeichnis lassen sich in vier Arten einteilen, die getrennt verglichen werden sollten: Coding-Assistenten und IDE-Plugins (${CD_CODE_ASSISTANTS} Tools), Agent-Frameworks und SDKs (${CD_AGENT_FRAMEWORKS}), autonome Agenten (${CD_AUTONOMOUS_AGENTS}) und Workflow-Builder (${CD_WORKFLOW_BUILDERS}).** Unter den Coding-Assistenten dokumentieren ${ATTR['coding-assistants'].vscode} eine VS-Code-Erweiterung und ${ATTR['coding-assistants'].agentMode} einen Agentenmodus; unter den Agent-Frameworks dokumentieren ${ATTR['agent-frameworks'].mcp} MCP-Unterstützung; unter den Workflow-Buildern dokumentieren ${ATTR['workflow-builders'].visualBuilder} von ${CD_WORKFLOW_BUILDERS} einen visuellen Editor. Nutzen Sie die Vergleichstabelle unten und lesen Sie die Rezension des jeweiligen Tools, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale Coding- oder Agenten-Tool sollte ich verwenden?',
@@ -371,7 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agentenmodus.** [Blackbox AI (CLI)](/de/power-local-llm/blackbox-ai-cli-review), [Bodega One Code](/de/power-local-llm/bodega-one-code-review), [Cline](/de/power-local-llm/cline-review), [CodeGPT](/de/power-local-llm/codegpt-review), [Cursor (lokaler Modus)](/de/power-local-llm/cursor-local-mode-review), [Kilo Code](/de/power-local-llm/kilo-code-review), [little-coder](/de/power-local-llm/little-coder-review), [OpenCode](/de/power-local-llm/opencode-review), [Windsurf](/de/power-local-llm/windsurf-review) und [Zed](/de/power-local-llm/zed-review) dokumentieren einen Agentenmodus für mehrstufige Änderungen.',
           '**Inline-Vervollständigung.** [Kilo Code](/de/power-local-llm/kilo-code-review), [Tabby](/de/power-local-llm/tabby-review), [Twinny](/de/power-local-llm/twinny-review), [Windsurf](/de/power-local-llm/windsurf-review) und [Zed](/de/power-local-llm/zed-review) dokumentieren Inline-Code-Vervollständigung.',
           '**MCP.** [Blackbox AI (CLI)](/de/power-local-llm/blackbox-ai-cli-review), [Cline](/de/power-local-llm/cline-review), [CodeGPT](/de/power-local-llm/codegpt-review), [Cursor (lokaler Modus)](/de/power-local-llm/cursor-local-mode-review), [Kilo Code](/de/power-local-llm/kilo-code-review), [Windsurf](/de/power-local-llm/windsurf-review) und [Zed](/de/power-local-llm/zed-review) dokumentieren MCP-Unterstützung.',
-          '**Preis.** Von den 20 Coding-Assistenten sind 11 kostenlos, 9 Freemium und 0 kostenpflichtig. Was eine Bezahlstufe ergänzt, steht in der jeweiligen Rezension.',
+          `**Preis.** Von den ${CODE.count} Coding-Assistenten sind ${CODE.price.free} kostenlos, ${CODE.price.freemium} Freemium und ${CODE.price.paid} kostenpflichtig. Was eine Bezahlstufe ergänzt, steht in der jeweiligen Rezension.`,
         ],
       },
       frameworkDifferences: {
@@ -535,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Les ${CD_TOTAL} outils locaux de code et d'agents du répertoire PromptQuorum se répartissent en quatre types à comparer séparément : assistants de code et plugins IDE (${CD_CODE_ASSISTANTS} outils), frameworks et SDK d'agents (${CD_AGENT_FRAMEWORKS}), agents autonomes (${CD_AUTONOMOUS_AGENTS}) et constructeurs de workflows (${CD_WORKFLOW_BUILDERS}).** Parmi les assistants de code, 6 documentent une extension VS Code et 10 un mode agent ; parmi les frameworks d'agents, 14 documentent la prise en charge de MCP ; parmi les constructeurs de workflows, 6 sur 7 documentent un éditeur visuel. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
+      `**Les ${CD_TOTAL} outils locaux de code et d'agents du répertoire PromptQuorum se répartissent en quatre types à comparer séparément : assistants de code et plugins IDE (${CD_CODE_ASSISTANTS} outils), frameworks et SDK d'agents (${CD_AGENT_FRAMEWORKS}), agents autonomes (${CD_AUTONOMOUS_AGENTS}) et constructeurs de workflows (${CD_WORKFLOW_BUILDERS}).** Parmi les assistants de code, ${ATTR['coding-assistants'].vscode} documentent une extension VS Code et ${ATTR['coding-assistants'].agentMode} un mode agent ; parmi les frameworks d'agents, ${ATTR['agent-frameworks'].mcp} documentent la prise en charge de MCP ; parmi les constructeurs de workflows, ${ATTR['workflow-builders'].visualBuilder} sur ${CD_WORKFLOW_BUILDERS} documentent un éditeur visuel. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil local de code ou d\'agents choisir ?',
@@ -610,7 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mode agent.** [Blackbox AI (CLI)](/fr/power-local-llm/blackbox-ai-cli-review), [Bodega One Code](/fr/power-local-llm/bodega-one-code-review), [Cline](/fr/power-local-llm/cline-review), [CodeGPT](/fr/power-local-llm/codegpt-review), [Cursor (local mode)](/fr/power-local-llm/cursor-local-mode-review), [Kilo Code](/fr/power-local-llm/kilo-code-review), [little-coder](/fr/power-local-llm/little-coder-review), [OpenCode](/fr/power-local-llm/opencode-review), [Windsurf](/fr/power-local-llm/windsurf-review) et [Zed](/fr/power-local-llm/zed-review) documentent un mode agent pour des modifications en plusieurs étapes.',
           '**Complétion en ligne.** [Kilo Code](/fr/power-local-llm/kilo-code-review), [Tabby](/fr/power-local-llm/tabby-review), [Twinny](/fr/power-local-llm/twinny-review), [Windsurf](/fr/power-local-llm/windsurf-review) et [Zed](/fr/power-local-llm/zed-review) documentent la complétion de code en ligne.',
           '**MCP.** [Blackbox AI (CLI)](/fr/power-local-llm/blackbox-ai-cli-review), [Cline](/fr/power-local-llm/cline-review), [CodeGPT](/fr/power-local-llm/codegpt-review), [Cursor (local mode)](/fr/power-local-llm/cursor-local-mode-review), [Kilo Code](/fr/power-local-llm/kilo-code-review), [Windsurf](/fr/power-local-llm/windsurf-review) et [Zed](/fr/power-local-llm/zed-review) documentent la prise en charge de MCP.',
-          '**Prix.** Sur les 20 assistants de code, 11 sont gratuits, 9 freemium et 0 payant. Consultez chaque avis pour savoir ce qu\'apporte une offre payante.',
+          `**Prix.** Sur les ${CODE.count} assistants de code, ${CODE.price.free} sont gratuits, ${CODE.price.freemium} freemium et ${CODE.price.paid} payant. Consultez chaque avis pour savoir ce qu'apporte une offre payante.`,
         ],
       },
       frameworkDifferences: {
@@ -774,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**Las ${CD_TOTAL} herramientas locales de código y agentes del directorio de PromptQuorum se dividen en cuatro tipos que conviene comparar por separado: asistentes de código y plugins de IDE (${CD_CODE_ASSISTANTS} herramientas), frameworks y SDK de agentes (${CD_AGENT_FRAMEWORKS}), agentes autónomos (${CD_AUTONOMOUS_AGENTS}) y constructores de flujos (${CD_WORKFLOW_BUILDERS}).** Entre los asistentes de código, 6 documentan una extensión para VS Code y 10 un modo agente; entre los frameworks de agentes, 14 documentan compatibilidad con MCP; entre los constructores de flujos, 6 de 7 documentan un editor visual. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
+      `**Las ${CD_TOTAL} herramientas locales de código y agentes del directorio de PromptQuorum se dividen en cuatro tipos que conviene comparar por separado: asistentes de código y plugins de IDE (${CD_CODE_ASSISTANTS} herramientas), frameworks y SDK de agentes (${CD_AGENT_FRAMEWORKS}), agentes autónomos (${CD_AUTONOMOUS_AGENTS}) y constructores de flujos (${CD_WORKFLOW_BUILDERS}).** Entre los asistentes de código, ${ATTR['coding-assistants'].vscode} documentan una extensión para VS Code y ${ATTR['coding-assistants'].agentMode} un modo agente; entre los frameworks de agentes, ${ATTR['agent-frameworks'].mcp} documentan compatibilidad con MCP; entre los constructores de flujos, ${ATTR['workflow-builders'].visualBuilder} de ${CD_WORKFLOW_BUILDERS} documentan un editor visual. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta local de código o de agentes debería usar?',
@@ -849,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modo agente.** [Blackbox AI (CLI)](/es/power-local-llm/blackbox-ai-cli-review), [Bodega One Code](/es/power-local-llm/bodega-one-code-review), [Cline](/es/power-local-llm/cline-review), [CodeGPT](/es/power-local-llm/codegpt-review), [Cursor (local mode)](/es/power-local-llm/cursor-local-mode-review), [Kilo Code](/es/power-local-llm/kilo-code-review), [little-coder](/es/power-local-llm/little-coder-review), [OpenCode](/es/power-local-llm/opencode-review), [Windsurf](/es/power-local-llm/windsurf-review) y [Zed](/es/power-local-llm/zed-review) documentan un modo agente para ediciones de varios pasos.',
           '**Autocompletado en línea.** [Kilo Code](/es/power-local-llm/kilo-code-review), [Tabby](/es/power-local-llm/tabby-review), [Twinny](/es/power-local-llm/twinny-review), [Windsurf](/es/power-local-llm/windsurf-review) y [Zed](/es/power-local-llm/zed-review) documentan el autocompletado de código en línea.',
           '**MCP.** [Blackbox AI (CLI)](/es/power-local-llm/blackbox-ai-cli-review), [Cline](/es/power-local-llm/cline-review), [CodeGPT](/es/power-local-llm/codegpt-review), [Cursor (local mode)](/es/power-local-llm/cursor-local-mode-review), [Kilo Code](/es/power-local-llm/kilo-code-review), [Windsurf](/es/power-local-llm/windsurf-review) y [Zed](/es/power-local-llm/zed-review) documentan compatibilidad con MCP.',
-          '**Precio.** De los 20 asistentes de código, 11 son gratuitos, 9 freemium y 0 de pago. Consulta en cada análisis qué aporta un nivel de pago.',
+          `**Precio.** De los ${CODE.count} asistentes de código, ${CODE.price.free} son gratuitos, ${CODE.price.freemium} freemium y ${CODE.price.paid} de pago. Consulta en cada análisis qué aporta un nivel de pago.`,
         ],
       },
       frameworkDifferences: {
@@ -1013,7 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorumディレクトリにある${CD_TOTAL}のローカルコーディング/エージェントツールは、別々に比較すべき4種類に分かれます。コーディングアシスタントとIDEプラグイン(${CD_CODE_ASSISTANTS}件)、エージェントフレームワークとSDK(${CD_AGENT_FRAMEWORKS}件)、自律型エージェント(${CD_AUTONOMOUS_AGENTS}件)、ワークフロービルダー(${CD_WORKFLOW_BUILDERS}件)です。** コーディングアシスタントのうち6件がVS Code拡張機能を、10件がエージェントモードを記載しています。エージェントフレームワークのうち14件がMCPサポートを記載し、ワークフロービルダーは7件中6件がビジュアルエディタを記載しています。以下の比較表を使い、インストールする前に各ツールのレビューをお読みください。`,
+      `**PromptQuorumディレクトリにある${CD_TOTAL}のローカルコーディング/エージェントツールは、別々に比較すべき4種類に分かれます。コーディングアシスタントとIDEプラグイン(${CD_CODE_ASSISTANTS}件)、エージェントフレームワークとSDK(${CD_AGENT_FRAMEWORKS}件)、自律型エージェント(${CD_AUTONOMOUS_AGENTS}件)、ワークフロービルダー(${CD_WORKFLOW_BUILDERS}件)です。** コーディングアシスタントのうち${ATTR['coding-assistants'].vscode}件がVS Code拡張機能を、${ATTR['coding-assistants'].agentMode}件がエージェントモードを記載しています。エージェントフレームワークのうち${ATTR['agent-frameworks'].mcp}件がMCPサポートを記載し、ワークフロービルダーは${CD_WORKFLOW_BUILDERS}件中${ATTR['workflow-builders'].visualBuilder}件がビジュアルエディタを記載しています。以下の比較表を使い、インストールする前に各ツールのレビューをお読みください。`,
     quickAnswerTop: {
       en: {
         question: 'ローカルのコーディング/エージェントツールはどれを使うべきか',
@@ -1088,7 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**エージェントモード。**[Blackbox AI (CLI)](/ja/power-local-llm/blackbox-ai-cli-review)、[Bodega One Code](/ja/power-local-llm/bodega-one-code-review)、[Cline](/ja/power-local-llm/cline-review)、[CodeGPT](/ja/power-local-llm/codegpt-review)、[Cursor (local mode)](/ja/power-local-llm/cursor-local-mode-review)、[Kilo Code](/ja/power-local-llm/kilo-code-review)、[little-coder](/ja/power-local-llm/little-coder-review)、[OpenCode](/ja/power-local-llm/opencode-review)、[Windsurf](/ja/power-local-llm/windsurf-review)および[Zed](/ja/power-local-llm/zed-review)が、複数ステップの編集を行うエージェントモードを記載しています。',
           '**インライン補完。**[Kilo Code](/ja/power-local-llm/kilo-code-review)、[Tabby](/ja/power-local-llm/tabby-review)、[Twinny](/ja/power-local-llm/twinny-review)、[Windsurf](/ja/power-local-llm/windsurf-review)および[Zed](/ja/power-local-llm/zed-review)が、インラインのコード補完を記載しています。',
           '**MCP。**[Blackbox AI (CLI)](/ja/power-local-llm/blackbox-ai-cli-review)、[Cline](/ja/power-local-llm/cline-review)、[CodeGPT](/ja/power-local-llm/codegpt-review)、[Cursor (local mode)](/ja/power-local-llm/cursor-local-mode-review)、[Kilo Code](/ja/power-local-llm/kilo-code-review)、[Windsurf](/ja/power-local-llm/windsurf-review)および[Zed](/ja/power-local-llm/zed-review)が、MCPサポートを記載しています。',
-          '**価格。**コーディングアシスタント20件のうち、無料は11件、フリーミアムは9件、有料のみは0件です。有料プランで何が追加されるかは、各レビューで確認してください。',
+          `**価格。**コーディングアシスタント${CODE.count}件のうち、無料は${CODE.price.free}件、フリーミアムは${CODE.price.freemium}件、有料のみは${CODE.price.paid}件です。有料プランで何が追加されるかは、各レビューで確認してください。`,
         ],
       },
       frameworkDifferences: {
@@ -1252,7 +1255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorum目录中的${CD_TOTAL}款本地编程与智能体工具分为四种应分开比较的类型:编程助手与IDE插件(${CD_CODE_ASSISTANTS}款)、智能体框架与SDK(${CD_AGENT_FRAMEWORKS}款)、自主智能体(${CD_AUTONOMOUS_AGENTS}款)和工作流构建器(${CD_WORKFLOW_BUILDERS}款)。** 在编程助手中,6款在文档中说明提供VS Code扩展,10款提供智能体模式;在智能体框架中,14款在文档中说明支持MCP;在工作流构建器中,7款里有6款在文档中说明提供可视化编辑器。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
+      `**PromptQuorum目录中的${CD_TOTAL}款本地编程与智能体工具分为四种应分开比较的类型:编程助手与IDE插件(${CD_CODE_ASSISTANTS}款)、智能体框架与SDK(${CD_AGENT_FRAMEWORKS}款)、自主智能体(${CD_AUTONOMOUS_AGENTS}款)和工作流构建器(${CD_WORKFLOW_BUILDERS}款)。** 在编程助手中,${ATTR['coding-assistants'].vscode}款在文档中说明提供VS Code扩展,${ATTR['coding-assistants'].agentMode}款提供智能体模式;在智能体框架中,${ATTR['agent-frameworks'].mcp}款在文档中说明支持MCP;在工作流构建器中,${CD_WORKFLOW_BUILDERS}款里有${ATTR['workflow-builders'].visualBuilder}款在文档中说明提供可视化编辑器。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地编程或智能体工具?',
@@ -1327,7 +1330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**智能体模式。** [Blackbox AI (CLI)](/zh/power-local-llm/blackbox-ai-cli-review)、[Bodega One Code](/zh/power-local-llm/bodega-one-code-review)、[Cline](/zh/power-local-llm/cline-review)、[CodeGPT](/zh/power-local-llm/codegpt-review)、[Cursor (local mode)](/zh/power-local-llm/cursor-local-mode-review)、[Kilo Code](/zh/power-local-llm/kilo-code-review)、[little-coder](/zh/power-local-llm/little-coder-review)、[OpenCode](/zh/power-local-llm/opencode-review)、[Windsurf](/zh/power-local-llm/windsurf-review)和[Zed](/zh/power-local-llm/zed-review)在文档中说明提供用于多步骤编辑的智能体模式。',
           '**行内补全。** [Kilo Code](/zh/power-local-llm/kilo-code-review)、[Tabby](/zh/power-local-llm/tabby-review)、[Twinny](/zh/power-local-llm/twinny-review)、[Windsurf](/zh/power-local-llm/windsurf-review)和[Zed](/zh/power-local-llm/zed-review)在文档中说明支持行内代码补全。',
           '**MCP。** [Blackbox AI (CLI)](/zh/power-local-llm/blackbox-ai-cli-review)、[Cline](/zh/power-local-llm/cline-review)、[CodeGPT](/zh/power-local-llm/codegpt-review)、[Cursor (local mode)](/zh/power-local-llm/cursor-local-mode-review)、[Kilo Code](/zh/power-local-llm/kilo-code-review)、[Windsurf](/zh/power-local-llm/windsurf-review)和[Zed](/zh/power-local-llm/zed-review)在文档中说明支持MCP。',
-          '**价格。** 在20款编程助手中,11款免费、9款免费增值、0款付费。请查看各评测,了解付费方案增加了哪些内容。',
+          `**价格。** 在${CODE.count}款编程助手中,${CODE.price.free}款免费、${CODE.price.freemium}款免费增值、${CODE.price.paid}款付费。请查看各评测,了解付费方案增加了哪些内容。`,
         ],
       },
       frameworkDifferences: {
@@ -1491,7 +1494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**As ${CD_TOTAL} ferramentas locais de código e agentes do diretório da PromptQuorum se dividem em quatro tipos que devem ser comparados separadamente: assistentes de código e plugins de IDE (${CD_CODE_ASSISTANTS} ferramentas), frameworks e SDKs de agentes (${CD_AGENT_FRAMEWORKS}), agentes autônomos (${CD_AUTONOMOUS_AGENTS}) e construtores de fluxo de trabalho (${CD_WORKFLOW_BUILDERS}).** Entre os assistentes de código, 6 documentam uma extensão para o VS Code e 10 um modo agente; entre os frameworks de agentes, 14 documentam suporte a MCP; entre os construtores de fluxo de trabalho, 6 de 7 documentam um editor visual. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
+      `**As ${CD_TOTAL} ferramentas locais de código e agentes do diretório da PromptQuorum se dividem em quatro tipos que devem ser comparados separadamente: assistentes de código e plugins de IDE (${CD_CODE_ASSISTANTS} ferramentas), frameworks e SDKs de agentes (${CD_AGENT_FRAMEWORKS}), agentes autônomos (${CD_AUTONOMOUS_AGENTS}) e construtores de fluxo de trabalho (${CD_WORKFLOW_BUILDERS}).** Entre os assistentes de código, ${ATTR['coding-assistants'].vscode} documentam uma extensão para o VS Code e ${ATTR['coding-assistants'].agentMode} um modo agente; entre os frameworks de agentes, ${ATTR['agent-frameworks'].mcp} documentam suporte a MCP; entre os construtores de fluxo de trabalho, ${ATTR['workflow-builders'].visualBuilder} de ${CD_WORKFLOW_BUILDERS} documentam um editor visual. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta local de código ou de agentes devo usar?',
@@ -1566,7 +1569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modo agente.** [Blackbox AI (CLI)](/pt/power-local-llm/blackbox-ai-cli-review), [Bodega One Code](/pt/power-local-llm/bodega-one-code-review), [Cline](/pt/power-local-llm/cline-review), [CodeGPT](/pt/power-local-llm/codegpt-review), [Cursor (local mode)](/pt/power-local-llm/cursor-local-mode-review), [Kilo Code](/pt/power-local-llm/kilo-code-review), [little-coder](/pt/power-local-llm/little-coder-review), [OpenCode](/pt/power-local-llm/opencode-review), [Windsurf](/pt/power-local-llm/windsurf-review) e [Zed](/pt/power-local-llm/zed-review) documentam um modo agente para edições em várias etapas.',
           '**Autocompletar em linha.** [Kilo Code](/pt/power-local-llm/kilo-code-review), [Tabby](/pt/power-local-llm/tabby-review), [Twinny](/pt/power-local-llm/twinny-review), [Windsurf](/pt/power-local-llm/windsurf-review) e [Zed](/pt/power-local-llm/zed-review) documentam autocompletar de código em linha.',
           '**MCP.** [Blackbox AI (CLI)](/pt/power-local-llm/blackbox-ai-cli-review), [Cline](/pt/power-local-llm/cline-review), [CodeGPT](/pt/power-local-llm/codegpt-review), [Cursor (local mode)](/pt/power-local-llm/cursor-local-mode-review), [Kilo Code](/pt/power-local-llm/kilo-code-review), [Windsurf](/pt/power-local-llm/windsurf-review) e [Zed](/pt/power-local-llm/zed-review) documentam suporte a MCP.',
-          '**Preço.** Dos 20 assistentes de código, 11 são gratuitos, 9 freemium e 0 pagos. Consulte cada análise para saber o que um plano pago acrescenta.',
+          `**Preço.** Dos ${CODE.count} assistentes de código, ${CODE.price.free} são gratuitos, ${CODE.price.freemium} freemium e ${CODE.price.paid} pagos. Consulte cada análise para saber o que um plano pago acrescenta.`,
         ],
       },
       frameworkDifferences: {
@@ -1730,7 +1733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**تنقسم أدوات البرمجة والوكلاء المحلية الـ${CD_TOTAL} في دليل PromptQuorum إلى أربعة أنواع ينبغي مقارنتها كلًّا على حدة: مساعدات البرمجة وإضافات IDE (${CD_CODE_ASSISTANTS} أداة)، وأطر الوكلاء ومجموعات SDK (${CD_AGENT_FRAMEWORKS})، والوكلاء المستقلة (${CD_AUTONOMOUS_AGENTS})، وأدوات بناء سير العمل (${CD_WORKFLOW_BUILDERS}).** من بين مساعدات البرمجة، توثّق 6 إضافة لـ VS Code و10 وضع وكيل؛ ومن بين أطر الوكلاء، توثّق 14 دعم MCP؛ ومن بين أدوات سير العمل، توثّق 6 من 7 محررًا مرئيًا. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
+      `**تنقسم أدوات البرمجة والوكلاء المحلية الـ${CD_TOTAL} في دليل PromptQuorum إلى أربعة أنواع ينبغي مقارنتها كلًّا على حدة: مساعدات البرمجة وإضافات IDE (${CD_CODE_ASSISTANTS} أداة)، وأطر الوكلاء ومجموعات SDK (${CD_AGENT_FRAMEWORKS})، والوكلاء المستقلة (${CD_AUTONOMOUS_AGENTS})، وأدوات بناء سير العمل (${CD_WORKFLOW_BUILDERS}).** من بين مساعدات البرمجة، توثّق ${ATTR['coding-assistants'].vscode} إضافة لـ VS Code و${ATTR['coding-assistants'].agentMode} وضع وكيل؛ ومن بين أطر الوكلاء، توثّق ${ATTR['agent-frameworks'].mcp} دعم MCP؛ ومن بين أدوات سير العمل، توثّق ${ATTR['workflow-builders'].visualBuilder} من ${CD_WORKFLOW_BUILDERS} محررًا مرئيًا. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي أداة برمجة أو وكلاء محلية ينبغي أن أستخدم؟',
@@ -1805,7 +1808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**وضع الوكيل.** [Blackbox AI (CLI)](/ar/power-local-llm/blackbox-ai-cli-review)، [Bodega One Code](/ar/power-local-llm/bodega-one-code-review)، [Cline](/ar/power-local-llm/cline-review)، [CodeGPT](/ar/power-local-llm/codegpt-review)، [Cursor (local mode)](/ar/power-local-llm/cursor-local-mode-review)، [Kilo Code](/ar/power-local-llm/kilo-code-review)، [little-coder](/ar/power-local-llm/little-coder-review)، [OpenCode](/ar/power-local-llm/opencode-review)، [Windsurf](/ar/power-local-llm/windsurf-review) و[Zed](/ar/power-local-llm/zed-review) توثّق وضع وكيل للتعديلات متعددة الخطوات.',
           '**الإكمال المضمّن.** [Kilo Code](/ar/power-local-llm/kilo-code-review)، [Tabby](/ar/power-local-llm/tabby-review)، [Twinny](/ar/power-local-llm/twinny-review)، [Windsurf](/ar/power-local-llm/windsurf-review) و[Zed](/ar/power-local-llm/zed-review) توثّق الإكمال المضمّن للشيفرة.',
           '**MCP.** [Blackbox AI (CLI)](/ar/power-local-llm/blackbox-ai-cli-review)، [Cline](/ar/power-local-llm/cline-review)، [CodeGPT](/ar/power-local-llm/codegpt-review)، [Cursor (local mode)](/ar/power-local-llm/cursor-local-mode-review)، [Kilo Code](/ar/power-local-llm/kilo-code-review)، [Windsurf](/ar/power-local-llm/windsurf-review) و[Zed](/ar/power-local-llm/zed-review) توثّق دعم MCP.',
-          '**السعر.** من بين 20 مساعد برمجة، 11 مجانية و9 بنموذج freemium و0 مدفوعة. راجع مراجعة كل أداة لمعرفة ما تضيفه الخطة المدفوعة.',
+          `**السعر.** من بين ${CODE.count} مساعد برمجة، ${CODE.price.free} مجانية و${CODE.price.freemium} بنموذج freemium و${CODE.price.paid} مدفوعة. راجع مراجعة كل أداة لمعرفة ما تضيفه الخطة المدفوعة.`,
         ],
       },
       frameworkDifferences: {
@@ -1969,7 +1972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      `**PromptQuorum 디렉터리의 로컬 코딩·에이전트 도구 ${CD_TOTAL}개는 따로 비교해야 하는 네 종류로 나뉩니다: 코딩 어시스턴트와 IDE 플러그인(${CD_CODE_ASSISTANTS}개), 에이전트 프레임워크와 SDK(${CD_AGENT_FRAMEWORKS}개), 자율 에이전트(${CD_AUTONOMOUS_AGENTS}개), 워크플로 빌더(${CD_WORKFLOW_BUILDERS}개).** 코딩 어시스턴트 중 6개는 VS Code 확장을, 10개는 에이전트 모드를 문서화하고 있습니다. 에이전트 프레임워크 중 14개는 MCP 지원을 문서화하고 있으며, 워크플로 빌더 7개 중 6개는 시각적 편집기를 문서화하고 있습니다. 아래 비교표를 활용하되, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
+      `**PromptQuorum 디렉터리의 로컬 코딩·에이전트 도구 ${CD_TOTAL}개는 따로 비교해야 하는 네 종류로 나뉩니다: 코딩 어시스턴트와 IDE 플러그인(${CD_CODE_ASSISTANTS}개), 에이전트 프레임워크와 SDK(${CD_AGENT_FRAMEWORKS}개), 자율 에이전트(${CD_AUTONOMOUS_AGENTS}개), 워크플로 빌더(${CD_WORKFLOW_BUILDERS}개).** 코딩 어시스턴트 중 ${ATTR['coding-assistants'].vscode}개는 VS Code 확장을, ${ATTR['coding-assistants'].agentMode}개는 에이전트 모드를 문서화하고 있습니다. 에이전트 프레임워크 중 ${ATTR['agent-frameworks'].mcp}개는 MCP 지원을 문서화하고 있으며, 워크플로 빌더 ${CD_WORKFLOW_BUILDERS}개 중 ${ATTR['workflow-builders'].visualBuilder}개는 시각적 편집기를 문서화하고 있습니다. 아래 비교표를 활용하되, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 코딩 또는 에이전트 도구를 써야 합니까?',
@@ -2044,7 +2047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**에이전트 모드.** [Blackbox AI (CLI)](/ko/power-local-llm/blackbox-ai-cli-review), [Bodega One Code](/ko/power-local-llm/bodega-one-code-review), [Cline](/ko/power-local-llm/cline-review), [CodeGPT](/ko/power-local-llm/codegpt-review), [Cursor (local mode)](/ko/power-local-llm/cursor-local-mode-review), [Kilo Code](/ko/power-local-llm/kilo-code-review), [little-coder](/ko/power-local-llm/little-coder-review), [OpenCode](/ko/power-local-llm/opencode-review), [Windsurf](/ko/power-local-llm/windsurf-review) 및 [Zed](/ko/power-local-llm/zed-review) 은(는) 여러 단계 편집을 위한 에이전트 모드를 문서화하고 있습니다.',
           '**인라인 자동 완성.** [Kilo Code](/ko/power-local-llm/kilo-code-review), [Tabby](/ko/power-local-llm/tabby-review), [Twinny](/ko/power-local-llm/twinny-review), [Windsurf](/ko/power-local-llm/windsurf-review) 및 [Zed](/ko/power-local-llm/zed-review) 은(는) 인라인 코드 자동 완성을 문서화하고 있습니다.',
           '**MCP.** [Blackbox AI (CLI)](/ko/power-local-llm/blackbox-ai-cli-review), [Cline](/ko/power-local-llm/cline-review), [CodeGPT](/ko/power-local-llm/codegpt-review), [Cursor (local mode)](/ko/power-local-llm/cursor-local-mode-review), [Kilo Code](/ko/power-local-llm/kilo-code-review), [Windsurf](/ko/power-local-llm/windsurf-review) 및 [Zed](/ko/power-local-llm/zed-review) 은(는) MCP 지원을 문서화하고 있습니다.',
-          '**가격.** 코딩 어시스턴트 20개 중 11개는 무료, 9개는 프리미엄(freemium), 0개는 유료입니다. 유료 플랜이 무엇을 추가하는지는 각 리뷰에서 확인하십시오.',
+          `**가격.** 코딩 어시스턴트 ${CODE.count}개 중 ${CODE.price.free}개는 무료, ${CODE.price.freemium}개는 프리미엄(freemium), ${CODE.price.paid}개는 유료입니다. 유료 플랜이 무엇을 추가하는지는 각 리뷰에서 확인하십시오.`,
         ],
       },
       frameworkDifferences: {
