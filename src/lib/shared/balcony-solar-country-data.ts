@@ -268,7 +268,7 @@ export const COUNTRY_DATA: CountryEntry[] = [
         'DIN VDE V 0126-95 mandates pre-assembled connection cables, clear install/warning instructions, and rapid voltage shutoff for shock protection. It explicitly EXCLUDES systems with integrated storage/batteries — a follow-up standard part for storage-equipped devices is in development but not yet published as of write-time.',
     },
     avgYieldKwhPerKwp: 1130,
-    avgYieldNote: 'EU JRC PVGIS (PVGIS-SARAH3), Stuttgart 48.78 N 9.18 E, fixed south-facing 35 degree tilt, 14% system losses, horizon shading included; calculated 2026-11-20 (https://re.jrc.ec.europa.eu/pvg_tools/). Replaces the earlier untraceable 1,003 figure. A vertical balcony railing yields less.',
+    avgYieldNote: 'EU JRC PVGIS (PVGIS-SARAH3), Stuttgart 48.78 N 9.18 E, fixed south-facing 35 degree tilt, 14% system losses, horizon shading included; calculated 2026-11-20 (https://re.jrc.ec.europa.eu/pvg_tools/). Supersedes the earlier 1,003 figure whose primary source was not found. A vertical balcony railing yields less.',
     typicalPrice: '€250–€500 for a standard 800W kit; €600–€1,500 with battery storage',
     typicalPriceVerified: true,
     sourceUrls: [
