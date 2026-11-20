@@ -1,18 +1,30 @@
 <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <rect width="800" height="450" fill="#FFFFFF"/>
   <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" fill="#1C1B1F" text-anchor="middle">Meyer Burger: Insolvency Timeline</text>
-  <line x1="90" y1="230" x2="730" y2="230" stroke="#79747E" stroke-width="2"/>
-  <circle cx="90" cy="230" r="7" fill="#34A853"/>
-  <text x="90" y="200" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">May 2025</text>
-  <text x="90" y="218" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Swiss debt restructur…</text>
-  <circle cx="303.33333333333337" cy="230" r="7" fill="#6750A4"/>
-  <text x="303.33333333333337" y="256" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jun 2025</text>
-  <text x="303.33333333333337" y="274" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">German subsidiaries i…</text>
-  <circle cx="516.6666666666667" cy="230" r="7" fill="#F4B400"/>
-  <text x="516.6666666666667" y="200" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jun 2025</text>
-  <text x="516.6666666666667" y="218" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">US Chapter 11 filed</text>
-  <circle cx="730" cy="230" r="7" fill="#34A853"/>
-  <text x="730" y="256" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jun 2026</text>
-  <text x="730" y="274" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Chapter 11 closed</text>
-  <text x="400" y="425" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">This is the fact that should govern any purchase advice involving Meyer Burger’s balcony kit.</text>
+  <line x1="80" y1="230" x2="720" y2="230" stroke="#79747E" stroke-width="2"/>
+  <circle cx="80.0" cy="230" r="7" fill="#6750A4"/>
+  <text x="80.0" y="190" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">May–Jun 2025</text>
+  <text x="80.0" y="208" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">German subsidiaries</text>
+  <text x="80.0" y="224" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">apply for insolvency</text>
+  <circle cx="208.0" cy="230" r="7" fill="#F4B400"/>
+  <text x="208.0" y="262" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jun 2025</text>
+  <text x="208.0" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">US Chapter 11</text>
+  <text x="208.0" y="296" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">filed</text>
+  <circle cx="336.0" cy="230" r="7" fill="#6750A4"/>
+  <text x="336.0" y="190" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Sep 2025</text>
+  <text x="336.0" y="208" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Board: no realistic</text>
+  <text x="336.0" y="224" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">group rescue</text>
+  <circle cx="464.0" cy="230" r="7" fill="#79747E"/>
+  <text x="464.0" y="262" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jan 2026</text>
+  <text x="464.0" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Shares delisted</text>
+  <text x="464.0" y="296" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">from SIX</text>
+  <circle cx="592.0" cy="230" r="7" fill="#34A853"/>
+  <text x="592.0" y="190" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Mar 2026</text>
+  <text x="592.0" y="208" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Swift Solar buys</text>
+  <text x="592.0" y="224" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">German cell line + IP</text>
+  <circle cx="720.0" cy="230" r="7" fill="#34A853"/>
+  <text x="720.0" y="262" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jun 2026</text>
+  <text x="720.0" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">US subsidiary cases</text>
+  <text x="720.0" y="296" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">closed (lead case open)</text>
+  <text x="400" y="400" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Sources: solarserver.de, pv magazine, court-docket aggregators (see status note).</text>
 <text x="792" y="445" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
