@@ -7,16 +7,15 @@ const OG_SLUG = keyToSlug('prompt-version-control');
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-27',
+    freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
     designSkin: 'hub',
     heroImage: '/images/prompt-version-control-overview-hero-en.webp',
     title: 'Prompt Version Control: Tracking, Rollback & Team Workflows',
     intro: 'Unversioned prompts fail silently — without a change history, there is no rollback path when a prompt update degrades output quality or breaks downstream parsers. Semantic versioning (MAJOR.MINOR.PATCH), git branch workflows, automated regression tests, and structured changelogs apply the same discipline to prompt management that software teams already use for code.',
     publishDate: '2026-04-30',
-    dateModified: '2026-07-13',
-    lastFactChecked: '2026-08-27 — git, semver.org, Braintrust, PromptLayer, LangSmith, Vellum verified',
+    dateModified: '2026-11-20',
+    lastFactChecked: '2026-11-20 — git, semver.org, GitHub Actions, Braintrust, PromptLayer, LangSmith re-checked; model names, statistics and legal absolutes removed',
     educationalLevel: 'Advanced',
     audience: 'Developers managing LLM prompts in production, prompt engineers, engineering team leads',
     primaryTerm: 'Prompt Version Control',
@@ -51,7 +50,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Prompt Version Control: Tracking, Rollback & Team Workflows',
       description: 'Unversioned prompts fail silently — no history means no rollback. Apply MAJOR.MINOR.PATCH versioning, git branch workflows, and automated regression tests to every prompt change.',
       datePublished: '2026-04-30',
-      dateModified: '2026-07-13',
+      dateModified: '2026-11-20',
       inLanguage: 'en',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -141,13 +140,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         columns: ['Change Type', 'When to Bump', 'Example', 'Backwards-Compatible?'],
         rows: [
-          { 'Change Type': 'MAJOR', 'When to Bump': 'Output format changes — JSON to markdown, new required fields, field removal', 'Example': 'v1.2.0 → v2.0.0', 'Backwards-Compatible?': 'No — update all callers' },
-          { 'Change Type': 'MINOR', 'When to Bump': 'Quality improvement, latency optimization, better instruction following', 'Example': 'v1.2.0 → v1.3.0', 'Backwards-Compatible?': 'Yes — safe to adopt' },
-          { 'Change Type': 'PATCH', 'When to Bump': 'Typo fix, clarification, minor wording that does not alter model behavior', 'Example': 'v1.2.0 → v1.2.1', 'Backwards-Compatible?': 'Yes — no behavior change expected' },
+          { 'Change Type': 'MAJOR', 'When to Bump': 'Output format changes — JSON to markdown, new required fields, field removal', 'Example': 'vX.Y.Z → v(X+1).0.0', 'Backwards-Compatible?': 'No — update all callers' },
+          { 'Change Type': 'MINOR', 'When to Bump': 'Quality improvement, latency optimization, better instruction following', 'Example': 'vX.Y.Z → vX.(Y+1).0', 'Backwards-Compatible?': 'Yes — safe to adopt' },
+          { 'Change Type': 'PATCH', 'When to Bump': 'Typo fix, clarification, minor wording that does not alter model behavior', 'Example': 'vX.Y.Z → vX.Y.(Z+1)', 'Backwards-Compatible?': 'Yes — no behavior change expected' },
         ],
         callouts: [
           { type: 'Key Point', label: 'MAJOR trigger', text: 'Bump MAJOR whenever downstream code that parses your prompt\'s output would break. If your output changes from a JSON array to a markdown list, that is a MAJOR bump even if the content is identical.' },
-          { type: 'Pro Tip', label: 'Tag in git', text: 'Tag every version after merging: `git tag v2.1.0 -m "Improved date reasoning in extraction prompt"`. This creates a permanent reference for rollback.' },
+          { type: 'Pro Tip', label: 'Tag in git', text: 'Tag every version after merging: `git tag vX.Y.Z -m "Improved date reasoning in extraction prompt"`. This creates a permanent reference for rollback.' },
         ],
       },
 
@@ -159,10 +158,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         numberedItems: [
           'Create a feature branch: `git checkout -b feature/add-json-output`. Use prefixes `feature/` (new capability), `fix/` (regression fix), or `experiment/` (A/B test).',
-          'Edit the prompt file at `/prompts/[name].txt`. Update the version comment at the top: `# version: 2.0.0 | changed: JSON output format | author: jane`.',
+          'Edit the prompt file at `/prompts/[name].txt`. Update the version comment at the top: `# version: X.Y.Z | changed: JSON output format | author: jane`.',
           'Run the automated regression suite against your golden test set (minimum 10 cases). Tests must cover: format validation, output comparison against golden answers, hallucination flag, and latency. All tests must pass before opening a PR.',
           'Open a PR with a description covering: what changed, why, which version bump (MAJOR/MINOR/PATCH), and expected output delta. Reviewer checks: clarity, hallucination risk, output format, and security.',
-          'After approval, merge to main and tag the release: `git tag v2.0.0 -m "JSON output format — MAJOR"` then `git push origin v2.0.0`.',
+          'After approval, merge to main and tag the release: `git tag vX.Y.Z -m "JSON output format — MAJOR"` then `git push origin vX.Y.Z`.',
         ],
         codeBlock: `# .github/workflows/prompt-regression.yml
 name: Prompt Regression Tests
@@ -173,9 +172,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run prompt regression tests
         run: npm run test:prompts
         env:
@@ -195,13 +194,13 @@ jobs:
         ],
         columns: ['Field', 'Required', 'Example'],
         rows: [
-          { 'Field': 'version', 'Required': 'Yes', 'Example': '`v2.1.0`' },
-          { 'Field': 'date', 'Required': 'Yes', 'Example': '`2026-04-30`' },
+          { 'Field': 'version', 'Required': 'Yes', 'Example': '`vX.Y.Z`' },
+          { 'Field': 'date', 'Required': 'Yes', 'Example': '`YYYY-MM-DD`' },
           { 'Field': 'author', 'Required': 'Yes', 'Example': '`jane.smith@company.com`' },
           { 'Field': 'change type', 'Required': 'Yes', 'Example': '`MINOR — improved date extraction reasoning`' },
           { 'Field': 'expected output delta', 'Required': 'Yes', 'Example': '`Date fields now consistently use ISO 8601 (YYYY-MM-DD). Previous: MM/DD/YYYY in ~30% of edge cases.`' },
         ],
-        codeBlock: `## [v2.1.0] — 2026-04-30
+        codeBlock: `## [vX.Y.Z] — YYYY-MM-DD
 
 **Author:** jane.smith@company.com
 **Change type:** MINOR — improved date extraction reasoning
@@ -251,7 +250,7 @@ jobs:
         title: 'What Automated Tests Catch Before a Prompt Change Ships',
         content: [
           '**Regression tests catch format breaks; LLM-as-judge catches quality drops.** Four test types cover the main failure modes before a prompt change reaches production.',
-          'The four test types: (1) Format validation — assert the output matches the expected schema (JSON structure, required fields, data types). Runs in milliseconds, catches 60–70% of breaking changes. (2) Golden set comparison — compare output against manually verified correct answers on 10–20 representative inputs. LLM-as-judge or string similarity metrics score the comparison. (3) Hallucination flag — detect factual claims in the output not grounded in the provided context. Flag any response that asserts facts not present in the input. (4) Latency check — assert that median response time stays within an acceptable range (e.g., p95 ≤ 3s). Catches prompts that cause excessive model computation.',
+          'The four test types: (1) Format validation — assert the output matches the expected schema (JSON structure, required fields, data types). Runs in milliseconds and catches the most common breaking changes. (2) Golden set comparison — compare output against manually verified correct answers on 10–20 representative inputs. LLM-as-judge or string similarity metrics score the comparison. (3) Hallucination flag — detect factual claims in the output not grounded in the provided context. Flag any response that asserts facts not present in the input. (4) Latency check — assert that median response time stays within an acceptable range (e.g., p95 ≤ 3s). Catches prompts that cause excessive model computation.',
         ],
         callouts: [
           { type: 'Key Point', label: 'Minimum test set', text: 'A golden test set of 10–20 representative inputs is the minimum for any production prompt. Cover: happy path, edge cases (empty/very long input), adversarial inputs, and known failure modes.' },
@@ -294,8 +293,8 @@ jobs:
         id: 'regional-considerations',
         title: 'Compliance and Audit Requirements for Prompt Changes',
         content: [
-          'The EU AI Act, which applies to high-risk systems in healthcare, finance, HR, and critical infrastructure, requires traceability for AI outputs in regulated domains. A version-controlled prompt history with author, date, change type, and approval records satisfies the traceability requirement without additional tooling.',
-          'GDPR Article 22 applies to prompts that make or support automated decisions affecting individuals. Version control and audit logs demonstrate human oversight — a git log with signed commits provides this evidence. Healthcare and finance teams operating under sector-specific regulations (MiFID II, HIPAA, MDR) typically require 12+ months of prompt version history with tamper-evident storage.',
+          'Regulations such as the EU AI Act place documentation and record-keeping duties on providers and deployers of high-risk AI systems, and their application dates and details have been adjusted before, so check the official EU timeline for your use case. A version-controlled prompt history with author, date, change type, and approval record can support those duties, but it does not by itself make a system compliant.',
+          'GDPR Article 22 concerns decisions based solely on automated processing that significantly affect individuals. Version control and audit logs can serve as evidence of human oversight of prompt changes. Teams in healthcare or finance often face sector-specific retention and tamper-evidence expectations (for example under MiFID II, HIPAA, or MDR); retention periods differ by rule and jurisdiction, so confirm them with your compliance or legal advisor. This section is general information, not legal advice.',
         ],
       },
 
@@ -313,7 +312,7 @@ jobs:
           },
           {
             q: 'How is prompt versioning different from model versioning?',
-            a: 'Prompt versioning tracks changes to the text instructions you send to a model. Model versioning tracks which AI version (GPT-5.6, Claude Sonnet 5, Llama 4) your application calls. Both require separate version control. When you change the target model, treat it as a MAJOR prompt version bump even if the prompt text is identical — different models respond differently to the same prompt.',
+            a: 'Prompt versioning tracks changes to the text instructions you send to a model. Model versioning tracks which AI model and release your application calls. Both require separate version control. When you change the target model, treat it as a MAJOR prompt version bump even if the prompt text is identical — different models respond differently to the same prompt.',
           },
           {
             q: 'What is a good minimum test suite size for a production prompt?',
@@ -321,7 +320,7 @@ jobs:
           },
           {
             q: 'How do I handle versioning when the same prompt is used across different models?',
-            a: 'Maintain a separate version history per prompt+model combination. Use a metadata header in your prompt file: `# version: 2.1.0 | model: gpt-4o`. When deploying to a new model, create a new variant file rather than overwriting the existing one. Run your full golden test suite against every model variant before promoting.',
+            a: 'Maintain a separate version history per prompt+model combination. Use a metadata header in your prompt file: `# version: X.Y.Z | model: model-a`. When deploying to a new model, create a new variant file rather than overwriting the existing one. Run your full golden test suite against every model variant before promoting.',
           },
           {
             q: 'Should every wording change bump the version?',
@@ -329,11 +328,11 @@ jobs:
           },
           {
             q: 'What tools support prompt version control natively?',
-            a: 'Braintrust, PromptLayer, and Vellum provide native prompt versioning with UI dashboards for comparing versions, running evaluations, and viewing diff history. LangSmith has prompt version tracking in its hub. [PromptQuorum](/how-it-works) adds multi-model validation — run a versioned prompt across 25+ providers to confirm it works consistently before deployment. For simpler setups, plain git with a /prompts/ directory works well — prompts are text files, and git handles diff, history, and rollback natively.',
+            a: 'Braintrust and PromptLayer provide native prompt versioning with UI dashboards for comparing versions, running evaluations, and viewing diff history. LangSmith has prompt version tracking in its hub. [PromptQuorum](/how-it-works) adds multi-model validation — run a versioned prompt across 25+ providers to confirm it works consistently before deployment. For simpler setups, plain git with a /prompts/ directory works well — prompts are text files, and git handles diff, history, and rollback natively.',
           },
           {
             q: 'How do I roll back a prompt if I don\'t use git?',
-            a: 'If you use a prompt management platform (Braintrust, Vellum, PromptLayer), use the built-in version history to revert to the previous approved version. If you store prompts in environment variables, keep a backup before every change and restore via your deployment pipeline. Going forward, add at minimum a CHANGELOG.md file — even without git, this gives you a rollback reference.',
+            a: 'If you use a prompt management platform (Braintrust, PromptLayer), use the built-in version history to revert to the previous approved version. If you store prompts in environment variables, keep a backup before every change and restore via your deployment pipeline. Going forward, add at minimum a CHANGELOG.md file — even without git, this gives you a rollback reference.',
           },
         ],
       },
@@ -363,15 +362,14 @@ jobs:
   },
 
   de: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-27',
+    freshness_tier: 'evergreen',
     theme: 'Team-Betrieb & Governance',
     designSkin: 'hub',
     heroImage: '/images/prompt-version-control-overview-hero-de.webp',
     title: 'Prompt-Versionskontrolle: Tracking, Rollback & Team-Workflows',
     intro: 'Unversionierte Prompts schlagen lautlos fehl — ohne Änderungshistorie gibt es keinen Rollback-Pfad, wenn ein Prompt-Update die Ausgabequalität verschlechtert oder nachgelagerte Parser beschädigt. Semantisches Versioning (MAJOR.MINOR.PATCH), Git-Branch-Workflows, automatisierte Regressionstests und strukturierte Changelogs wenden dieselbe Disziplin auf das Prompt-Management an, die Software-Teams bereits für Code einsetzen.',
     publishDate: '2026-04-30',
-    dateModified: '2026-07-13',
+    dateModified: '2026-11-20',
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die LLM-Prompts in der Produktion verwalten, Prompt-Engineers, Engineering-Team-Leads',
     primaryTerm: 'Prompt-Versionskontrolle',
@@ -406,7 +404,7 @@ jobs:
       headline: 'Prompt-Versionskontrolle: Tracking, Rollback & Team-Workflows',
       description: 'Unversionierte Prompts schlagen lautlos fehl. MAJOR.MINOR.PATCH-Versioning und Git-Workflows auf jeden Prompt-Change anwenden – Rollback in Sekunden.',
       datePublished: '2026-04-30',
-      dateModified: '2026-07-13',
+      dateModified: '2026-11-20',
       inLanguage: 'de',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -491,13 +489,13 @@ jobs:
         ],
         columns: ['Änderungstyp', 'Wann inkrementieren', 'Beispiel', 'Rückwärtskompatibel?'],
         rows: [
-          { 'Änderungstyp': 'MAJOR', 'Wann inkrementieren': 'Ausgabeformat ändert sich — JSON zu Markdown, neue Pflichtfelder, Felder entfernt', 'Beispiel': 'v1.2.0 → v2.0.0', 'Rückwärtskompatibel?': 'Nein — alle Aufrufer aktualisieren' },
-          { 'Änderungstyp': 'MINOR', 'Wann inkrementieren': 'Qualitätsverbesserung, Latenzoptimierung, bessere Instruktionsbefolgung', 'Beispiel': 'v1.2.0 → v1.3.0', 'Rückwärtskompatibel?': 'Ja — sicher zu übernehmen' },
-          { 'Änderungstyp': 'PATCH', 'Wann inkrementieren': 'Tippfehler, Klärung, kleinere Formulierungsänderung ohne Verhaltensauswirkung', 'Beispiel': 'v1.2.0 → v1.2.1', 'Rückwärtskompatibel?': 'Ja — keine Verhaltensänderung zu erwarten' },
+          { 'Änderungstyp': 'MAJOR', 'Wann inkrementieren': 'Ausgabeformat ändert sich — JSON zu Markdown, neue Pflichtfelder, Felder entfernt', 'Beispiel': 'vX.Y.Z → v(X+1).0.0', 'Rückwärtskompatibel?': 'Nein — alle Aufrufer aktualisieren' },
+          { 'Änderungstyp': 'MINOR', 'Wann inkrementieren': 'Qualitätsverbesserung, Latenzoptimierung, bessere Instruktionsbefolgung', 'Beispiel': 'vX.Y.Z → vX.(Y+1).0', 'Rückwärtskompatibel?': 'Ja — sicher zu übernehmen' },
+          { 'Änderungstyp': 'PATCH', 'Wann inkrementieren': 'Tippfehler, Klärung, kleinere Formulierungsänderung ohne Verhaltensauswirkung', 'Beispiel': 'vX.Y.Z → vX.Y.(Z+1)', 'Rückwärtskompatibel?': 'Ja — keine Verhaltensänderung zu erwarten' },
         ],
         callouts: [
           { type: 'Key Point', label: 'MAJOR-Auslöser', text: 'Inkrementieren Sie MAJOR immer dann, wenn nachgelagerter Code, der die Ausgabe Ihres Prompts verarbeitet, brechen würde. Wenn sich die Ausgabe von einem JSON-Array zu einer Markdown-Liste ändert, ist das ein MAJOR-Bump, auch wenn der Inhalt identisch ist.' },
-          { type: 'Pro Tip', label: 'In Git taggen', text: 'Taggen Sie jede Version nach dem Merge: `git tag v2.1.0 -m "Verbesserte Datumsextraktion in Extraktions-Prompt"`. Das schafft eine permanente Referenz für den Rollback.' },
+          { type: 'Pro Tip', label: 'In Git taggen', text: 'Taggen Sie jede Version nach dem Merge: `git tag vX.Y.Z -m "Verbesserte Datumsextraktion in Extraktions-Prompt"`. Das schafft eine permanente Referenz für den Rollback.' },
         ],
       },
 
@@ -509,10 +507,10 @@ jobs:
         ],
         numberedItems: [
           'Feature-Branch erstellen: `git checkout -b feature/add-json-output`. Präfixe verwenden: `feature/` (neue Funktion), `fix/` (Regressionsbehebung) oder `experiment/` (A/B-Test).',
-          'Prompt-Datei unter `/prompts/[name].txt` bearbeiten. Den Versionskommentar am Anfang aktualisieren: `# version: 2.0.0 | changed: JSON output format | author: jane`.',
+          'Prompt-Datei unter `/prompts/[name].txt` bearbeiten. Den Versionskommentar am Anfang aktualisieren: `# version: X.Y.Z | changed: JSON output format | author: jane`.',
           'Automatisierte Regressionssuite gegen das goldene Testset ausführen (mindestens 10 Testfälle). Tests müssen abdecken: Formatvalidierung, Ausgabevergleich mit goldenen Antworten, Halluzinations-Flag und Latenz. Alle Tests müssen bestehen, bevor ein PR geöffnet wird.',
           'PR öffnen mit einer Beschreibung, die enthält: Was wurde geändert, warum, welcher Versions-Bump (MAJOR/MINOR/PATCH) und erwartetes Ausgabedelta. Reviewer prüft: Klarheit, Halluzinationsrisiko, Ausgabeformat und Sicherheit.',
-          'Nach Genehmigung in main mergen und Release taggen: `git tag v2.0.0 -m "JSON output format — MAJOR"` dann `git push origin v2.0.0`.',
+          'Nach Genehmigung in main mergen und Release taggen: `git tag vX.Y.Z -m "JSON output format — MAJOR"` dann `git push origin vX.Y.Z`.',
         ],
         codeBlock: `# .github/workflows/prompt-regression.yml
 name: Prompt Regression Tests
@@ -523,9 +521,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run prompt regression tests
         run: npm run test:prompts
         env:
@@ -545,13 +543,13 @@ jobs:
         ],
         columns: ['Feld', 'Pflichtfeld', 'Beispiel'],
         rows: [
-          { 'Feld': 'version', 'Pflichtfeld': 'Ja', 'Beispiel': '`v2.1.0`' },
-          { 'Feld': 'date', 'Pflichtfeld': 'Ja', 'Beispiel': '`2026-04-30`' },
+          { 'Feld': 'version', 'Pflichtfeld': 'Ja', 'Beispiel': '`vX.Y.Z`' },
+          { 'Feld': 'date', 'Pflichtfeld': 'Ja', 'Beispiel': '`YYYY-MM-DD`' },
           { 'Feld': 'author', 'Pflichtfeld': 'Ja', 'Beispiel': '`jane.smith@company.com`' },
           { 'Feld': 'change type', 'Pflichtfeld': 'Ja', 'Beispiel': '`MINOR — verbesserte Datumsextraktion`' },
           { 'Feld': 'expected output delta', 'Pflichtfeld': 'Ja', 'Beispiel': '`Datumsfelder verwenden jetzt konsistent ISO 8601 (JJJJ-MM-TT). Zuvor: MM.TT.JJJJ in ~30 % der Randfälle.`' },
         ],
-        codeBlock: `## [v2.1.0] — 2026-04-30
+        codeBlock: `## [vX.Y.Z] — YYYY-MM-DD
 
 **Author:** jane.smith@company.com
 **Change type:** MINOR — improved date extraction reasoning
@@ -601,7 +599,7 @@ jobs:
         title: 'Was automatisierte Tests vor dem Release einer Prompt-Änderung prüfen',
         content: [
           '**Regressionstests erkennen Format-Brüche; LLM-als-Richter erkennt Qualitätseinbrüche.** Vier Testtypen decken die wichtigsten Fehlermuster ab, bevor eine Prompt-Änderung die Produktion erreicht.',
-          'Die vier Testtypen: (1) Formatvalidierung — prüft, ob die Ausgabe dem erwarteten Schema entspricht (JSON-Struktur, Pflichtfelder, Datentypen). Läuft in Millisekunden, erkennt 60–70 % der brechenden Änderungen. (2) Goldener-Satz-Vergleich — vergleicht Ausgabe mit manuell verifizierten korrekten Antworten für 10–20 repräsentative Eingaben. LLM-als-Richter oder Zeichenkettenähnlichkeitsmetriken bewerten den Vergleich. (3) Halluzinations-Flag — erkennt sachliche Behauptungen in der Ausgabe, die nicht im bereitgestellten Kontext verankert sind. Markiert jede Antwort, die Fakten behauptet, die nicht in der Eingabe vorhanden sind. (4) Latenzprüfung — prüft, ob die mediane Antwortzeit in einem akzeptablen Bereich bleibt (z. B. p95 ≤ 3 s). Erkennt Prompts, die übermäßige Modellberechnungen verursachen.',
+          'Die vier Testtypen: (1) Formatvalidierung — prüft, ob die Ausgabe dem erwarteten Schema entspricht (JSON-Struktur, Pflichtfelder, Datentypen). Läuft in Millisekunden und erkennt die häufigsten brechenden Änderungen. (2) Goldener-Satz-Vergleich — vergleicht Ausgabe mit manuell verifizierten korrekten Antworten für 10–20 repräsentative Eingaben. LLM-als-Richter oder Zeichenkettenähnlichkeitsmetriken bewerten den Vergleich. (3) Halluzinations-Flag — erkennt sachliche Behauptungen in der Ausgabe, die nicht im bereitgestellten Kontext verankert sind. Markiert jede Antwort, die Fakten behauptet, die nicht in der Eingabe vorhanden sind. (4) Latenzprüfung — prüft, ob die mediane Antwortzeit in einem akzeptablen Bereich bleibt (z. B. p95 ≤ 3 s). Erkennt Prompts, die übermäßige Modellberechnungen verursachen.',
         ],
         callouts: [
           { type: 'Key Point', label: 'Minimales Testset', text: 'Ein goldenes Testset mit 10–20 repräsentativen Eingaben ist das Minimum für jeden Produktions-Prompt. Abdecken: Happy Path, Randfälle (leere/sehr lange Eingabe), adversarielle Eingaben und bekannte Fehlermuster.' },
@@ -644,9 +642,9 @@ jobs:
         id: 'regional-considerations',
         title: 'Compliance- und Audit-Anforderungen für Prompt-Änderungen',
         content: [
-          'Der EU AI Act, der für Hochrisikosysteme in regulierten Bereichen wie Gesundheitswesen, Finanzen, HR und kritische Infrastruktur gilt, schreibt Rückverfolgbarkeit für KI-Ausgaben vor. Eine versionskontrollierte Prompt-Historie mit Autor, Datum, Änderungstyp und Genehmigungsnachweis erfüllt diese Anforderung ohne zusätzliches Tooling.',
-          'Die DSGVO Art. 22 gilt für Prompts, die automatisierte Entscheidungen treffen oder unterstützen, die Personen betreffen. Versionskontrolle und Audit-Logs belegen menschliche Aufsicht — ein Git-Log mit signierten Commits liefert diesen Nachweis. Unternehmen in Deutschland, Österreich und der Schweiz (DACH) sollten zusätzlich DSGVO Art. 28 (Auftragsverarbeitungsverträge) beachten, wenn Prompts personenbezogene Daten enthalten und über Cloud-APIs an externe Anbieter gesendet werden: Die Prompt-Versionshistorie dokumentiert, welche Instruktionen zu welchem Zeitpunkt übermittelt wurden.',
-          'BSI-Grundschutz-Kataloge: Für Unternehmen, die nach BSI IT-Grundschutz zertifiziert sind oder es anstreben, bildet die Git-basierte Prompt-Versionskontrolle eine direkte Maßnahme zur Umsetzung der Anforderungen aus Baustein OPS.1.1.2 (Ordnungsgemäße IT-Administration) — Änderungsnachverfolgung, Rollback und Genehmigungsworkflows sind explizit gefordert. Teams in Finanzdienstleistung und Gesundheitswesen, die unter sektorspezifischen Vorschriften (MiFID II, HIPAA, MDR) operieren, benötigen typischerweise eine Prompt-Versionshistorie von 12+ Monaten mit manipulationssicherer Speicherung.',
+          'Regelwerke wie der EU AI Act sehen Dokumentations- und Aufbewahrungspflichten für Anbieter und Betreiber von Hochrisiko-KI-Systemen vor; Anwendungstermine und Details wurden bereits angepasst, prüfen Sie daher den offiziellen EU-Zeitplan für Ihren Anwendungsfall. Eine versionskontrollierte Prompt-Historie mit Autor, Datum, Änderungstyp und Genehmigungsnachweis kann solche Pflichten unterstützen, macht ein System aber nicht von selbst konform.',
+          'Art. 22 DSGVO betrifft Entscheidungen, die ausschließlich auf automatisierter Verarbeitung beruhen und Personen erheblich beeinträchtigen. Versionskontrolle und Audit-Logs können als Nachweis menschlicher Aufsicht über Prompt-Änderungen dienen. Werden Prompts mit personenbezogenen Daten über Cloud-APIs an externe Anbieter gesendet, sind zusätzlich die Regeln zur Auftragsverarbeitung (Art. 28 DSGVO) zu prüfen; die Prompt-Versionshistorie dokumentiert, welche Instruktionen zu welchem Zeitpunkt übermittelt wurden.',
+          'Unternehmen in Deutschland, Österreich und der Schweiz (DACH), die nach BSI IT-Grundschutz arbeiten, können Git-basierte Prompt-Versionskontrolle als Baustein für Änderungsnachverfolgung, Rollback und Freigabeprozesse nutzen; welche Anforderungen des Grundschutz-Kompendiums damit abgedeckt sind, klären Sie am besten mit Ihrer IT-Sicherheitsberatung. Für sektorspezifische Vorschriften (z. B. MiFID II, HIPAA, MDR) gelten eigene Aufbewahrungs- und Nachweisanforderungen, die je nach Regelwerk und Rechtsraum variieren. Dieser Abschnitt ist eine allgemeine Information und keine Rechtsberatung.',
         ],
       },
 
@@ -656,14 +654,14 @@ jobs:
         faqs: [
           { q: 'Was ist Prompt-Versionskontrolle?', a: 'Prompt-Versionskontrolle ist ein System, das jede Änderung an einem KI-Prompt verfolgt, einen Rollback auf jede frühere Version ermöglicht und Autor sowie Grund jeder Änderung festhält. Es wendet semantisches Versioning (MAJOR.MINOR.PATCH) auf Prompts an: MAJOR für brechende Ausgabeformat-Änderungen, MINOR für Qualitätsverbesserungen, PATCH für Tippfehler-/Wortlautkorrekturen. Prompts werden als Textdateien in Git gespeichert, Änderungen durchlaufen PR-Reviews, und Releases werden getaggt.' },
           { q: 'Benötige ich ein separates Git-Repository für Prompts oder kann ich mein bestehendes App-Repo nutzen?', a: 'Für Teams unter 5 Entwicklern oder weniger als 20 Prompts: Verwenden Sie ein /prompts/-Verzeichnis im bestehenden App-Repo. Für größere Teams oder wenn Prompts über mehrere Dienste geteilt werden: Ein dediziertes Prompt-Repo bietet sauberere Eigentümerschaft, unabhängige Versionierung und Zugriffssteuerung. Nutzen Sie das App-Repo, wenn Prompts eng mit der App-Logik gekoppelt sind; ein separates Repo, wenn Prompts mehreren Diensten oder Teams dienen.' },
-          { q: 'Wie unterscheidet sich Prompt-Versionierung von Modell-Versionierung?', a: 'Prompt-Versionierung verfolgt Änderungen an den Textinstruktionen, die Sie an ein Modell senden. Modell-Versionierung verfolgt, welche KI-Version (GPT-5.6, Claude Sonnet 5, Llama 4) Ihre Anwendung aufruft. Beide erfordern separate Versionskontrolle. Wenn Sie das Zielmodell wechseln, behandeln Sie es als MAJOR-Prompt-Versions-Bump, auch wenn der Prompt-Text identisch ist — verschiedene Modelle antworten unterschiedlich auf denselben Prompt.' },
+          { q: 'Wie unterscheidet sich Prompt-Versionierung von Modell-Versionierung?', a: 'Prompt-Versionierung verfolgt Änderungen an den Textinstruktionen, die Sie an ein Modell senden. Modell-Versionierung verfolgt, welches KI-Modell in welcher Version Ihre Anwendung aufruft. Beide erfordern separate Versionskontrolle. Wenn Sie das Zielmodell wechseln, behandeln Sie es als MAJOR-Prompt-Versions-Bump, auch wenn der Prompt-Text identisch ist — verschiedene Modelle antworten unterschiedlich auf denselben Prompt.' },
           { q: 'Wie groß sollte ein Testset für einen Produktions-Prompt mindestens sein?', a: '10–20 goldene Testfälle sind das Minimum. Abdecken: Happy Path, Randfälle (leere Eingabe, sehr lange Eingabe), adversarielle Eingaben (Versuche, Instruktionen zu überschreiben) und bekannte Fehlermuster. Unter 10 Fällen werden zu viele Randfälle übersehen; über 50 Fälle sind kostspielig zu pflegen ohne proportionalen Nutzen.' },
-          { q: 'Wie gehe ich mit Versionierung um, wenn derselbe Prompt über verschiedene Modelle verwendet wird?', a: 'Pflegen Sie eine separate Versionshistorie pro Prompt+Modell-Kombination. Verwenden Sie einen Metadaten-Header: `# version: 2.1.0 | model: gpt-4o`. Beim Deployen auf ein neues Modell erstellen Sie eine neue Variantendatei statt die bestehende zu überschreiben. Führen Sie Ihre vollständige goldene Test-Suite gegen jede Modellvariante aus, bevor Sie sie in die Produktion überführen.' },
+          { q: 'Wie gehe ich mit Versionierung um, wenn derselbe Prompt über verschiedene Modelle verwendet wird?', a: 'Pflegen Sie eine separate Versionshistorie pro Prompt+Modell-Kombination. Verwenden Sie einen Metadaten-Header: `# version: X.Y.Z | model: model-a`. Beim Deployen auf ein neues Modell erstellen Sie eine neue Variantendatei statt die bestehende zu überschreiben. Führen Sie Ihre vollständige goldene Test-Suite gegen jede Modellvariante aus, bevor Sie sie in die Produktion überführen.' },
           { q: 'Muss jede Formulierungsänderung die Version inkrementieren?', a: 'Ja — jede Änderung inkrementiert die Version auf irgendeiner Ebene. Tippfehler-Korrekturen: PATCH. Qualitätsverbesserungen ohne Formatänderungen: MINOR. Format-/Strukturänderungen, die nachgelagerte Parser brechen: MAJOR. Den Versions-Bump niemals überspringen — selbst kleine Formulierungsänderungen können das Modellverhalten unerwartet beeinflussen, und eine unveersionierte Änderung kann nicht zurückgerollt werden.' },
-          { q: 'Welche Tools unterstützen Prompt-Versionskontrolle nativ?', a: 'Braintrust, PromptLayer und Vellum bieten native Prompt-Versionierung mit UI-Dashboards zum Vergleich von Versionen, zur Ausführung von Evaluierungen und zur Anzeige der Diff-Historie. LangSmith verfügt über integrierte Prompt-Versionsverfolgung in seinem Hub. Für einfachere Setups funktioniert reines Git mit einem /prompts/-Verzeichnis gut — Prompts sind Textdateien, und Git handhabt Diff, Historie und Rollback nativ.' },
-          { q: 'Wie rolle ich einen Prompt zurück, wenn ich Git nicht nutze?', a: 'Wenn Sie eine Prompt-Management-Plattform (Braintrust, Vellum, PromptLayer) verwenden, nutzen Sie die eingebaute Versionshistorie, um auf die vorherige genehmigte Version zurückzusetzen. Wenn Sie Prompts in Umgebungsvariablen speichern, erstellen Sie vor jeder Änderung ein Backup und stellen Sie es über Ihre Deployment-Pipeline wieder her. Für die Zukunft: Fügen Sie mindestens eine CHANGELOG.md-Datei hinzu — auch ohne Git gibt Ihnen das eine Rollback-Referenz.' },
-          { q: 'Muss ich bei der Versionskontrolle von Prompts die DSGVO beachten?', a: 'Ja, in zwei Hinsichten. Erstens verpflichtet DSGVO Art. 22 zur Nachweisbarkeit menschlicher Aufsicht bei automatisierten Entscheidungen — ein Git-Log mit signierten Commits und PR-Genehmigungen liefert diesen Nachweis lückenlos. Zweitens greift DSGVO Art. 28, wenn Prompts personenbezogene Daten enthalten und über Cloud-APIs an externe Anbieter gesendet werden: Die Prompt-Versionshistorie dokumentiert, welche Verarbeitungslogik zu welchem Zeitpunkt eingesetzt wurde. BSI-Grundschutz-zertifizierte Organisationen erfüllen mit Git-basierter Prompt-Versionskontrolle die Anforderungen aus Baustein OPS.1.1.2 direkt.' },
-          { q: 'Ist Git-basierte Prompt-Versionskontrolle für den deutschen Mittelstand geeignet?', a: 'Ja — Git ist kostenfrei, weit verbreitet und in der deutschen IT-Landschaft bestens etabliert. Mittelständische Unternehmen ohne dedizierten MLOps-Stack können mit einem einfachen /prompts/-Verzeichnis im bestehenden Anwendungsrepository starten, ohne zusätzliche Lizenz- oder Infrastrukturkosten. Für Unternehmen mit BSI-IT-Grundschutz-Anforderungen erfüllt dieser Ansatz die Änderungsnachverfolgungspflichten direkt. Wer eine vollständigere Lösung benötigt, kann auf Braintrust oder PromptLayer aufsetzen — beide bieten EU-Hosting-Optionen, die DSGVO-Anforderungen erfüllen.' },
+          { q: 'Welche Tools unterstützen Prompt-Versionskontrolle nativ?', a: 'Braintrust und PromptLayer bieten native Prompt-Versionierung mit UI-Dashboards zum Vergleich von Versionen, zur Ausführung von Evaluierungen und zur Anzeige der Diff-Historie. LangSmith verfügt über integrierte Prompt-Versionsverfolgung in seinem Hub. Für einfachere Setups funktioniert reines Git mit einem /prompts/-Verzeichnis gut — Prompts sind Textdateien, und Git handhabt Diff, Historie und Rollback nativ.' },
+          { q: 'Wie rolle ich einen Prompt zurück, wenn ich Git nicht nutze?', a: 'Wenn Sie eine Prompt-Management-Plattform (Braintrust, PromptLayer) verwenden, nutzen Sie die eingebaute Versionshistorie, um auf die vorherige genehmigte Version zurückzusetzen. Wenn Sie Prompts in Umgebungsvariablen speichern, erstellen Sie vor jeder Änderung ein Backup und stellen Sie es über Ihre Deployment-Pipeline wieder her. Für die Zukunft: Fügen Sie mindestens eine CHANGELOG.md-Datei hinzu — auch ohne Git gibt Ihnen das eine Rollback-Referenz.' },
+          { q: 'Muss ich bei der Versionskontrolle von Prompts die DSGVO beachten?', a: 'In zwei Hinsichten kann sie relevant sein. Erstens betrifft Art. 22 DSGVO Entscheidungen, die ausschließlich auf automatisierter Verarbeitung beruhen; ein Git-Log mit signierten Commits und PR-Genehmigungen kann als Nachweis menschlicher Aufsicht über Prompt-Änderungen dienen. Zweitens ist Art. 28 DSGVO zu prüfen, wenn Prompts personenbezogene Daten enthalten und über Cloud-APIs an externe Anbieter gesendet werden: Die Prompt-Versionshistorie dokumentiert, welche Verarbeitungslogik zu welchem Zeitpunkt eingesetzt wurde. Ob eine Maßnahme konkrete Anforderungen des BSI IT-Grundschutzes abdeckt, klären Sie mit Ihrer Datenschutz- bzw. IT-Sicherheitsberatung; dies ist keine Rechtsberatung.' },
+          { q: 'Ist Git-basierte Prompt-Versionskontrolle für den deutschen Mittelstand geeignet?', a: 'In vielen Fällen ja. Git ist kostenfrei, weit verbreitet und in der deutschen IT-Landschaft etabliert. Mittelständische Unternehmen ohne dedizierten MLOps-Stack können mit einem einfachen /prompts/-Verzeichnis im bestehenden Anwendungsrepository starten, ohne zusätzliche Lizenz- oder Infrastrukturkosten. Für Unternehmen mit BSI-IT-Grundschutz-Anforderungen kann dieser Ansatz die Änderungsnachverfolgung unterstützen. Wer eine vollständigere Lösung benötigt, kann Braintrust oder PromptLayer prüfen; Hosting-Optionen (z. B. in der EU) und Datenschutzdetails sollten Sie in der Dokumentation des jeweiligen Anbieters verifizieren.' },
         ],
       },
 
@@ -692,15 +690,14 @@ jobs:
   },
 
   es: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-27',
+    freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
     designSkin: 'hub',
     heroImage: '/images/prompt-version-control-overview-hero-es.webp',
     title: 'Control de versiones de prompts: seguimiento, rollback y flujos de trabajo en equipo',
     intro: 'Los prompts sin versionar fallan silenciosamente — sin un historial de cambios, no hay ruta de rollback cuando una actualización del prompt degrada la calidad de salida o rompe los parsers posteriores. El versionado semántico (MAJOR.MINOR.PATCH), los flujos de trabajo de branches de Git, las pruebas de regresión automatizadas y los changelogs estructurados aplican a la gestión de prompts la misma disciplina que los equipos de software ya usan para el código.',
     publishDate: '2026-04-30',
-    dateModified: '2026-07-13',
+    dateModified: '2026-11-20',
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores que gestionan prompts LLM en producción, prompt engineers, líderes de equipos de ingeniería',
     primaryTerm: 'Prompt Version Control',
@@ -735,7 +732,7 @@ jobs:
       headline: 'Control de versiones de prompts: seguimiento, rollback y flujos de trabajo en equipo',
       description: 'Los prompts sin versionar fallan silenciosamente — sin historial no hay rollback. Aplica el versionado MAJOR.MINOR.PATCH, flujos de trabajo de Git y pruebas de regresión automatizadas a cada cambio de prompt.',
       datePublished: '2026-04-30',
-      dateModified: '2026-07-13',
+      dateModified: '2026-11-20',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -822,13 +819,13 @@ jobs:
         ],
         columns: ['Tipo de cambio', 'Cuándo incrementar', 'Ejemplo', '¿Compatible hacia atrás?'],
         rows: [
-          { 'Tipo de cambio': 'MAJOR', 'Cuándo incrementar': 'El formato de salida cambia — de JSON a markdown, nuevos campos requeridos, eliminación de campos', 'Ejemplo': 'v1.2.0 → v2.0.0', '¿Compatible hacia atrás?': 'No — actualiza todos los llamadores' },
-          { 'Tipo de cambio': 'MINOR', 'Cuándo incrementar': 'Mejora de calidad, optimización de latencia, mejor seguimiento de instrucciones', 'Ejemplo': 'v1.2.0 → v1.3.0', '¿Compatible hacia atrás?': 'Sí — seguro de adoptar' },
-          { 'Tipo de cambio': 'PATCH', 'Cuándo incrementar': 'Corrección de error tipográfico, clarificación, redacción menor que no altera el comportamiento del modelo', 'Ejemplo': 'v1.2.0 → v1.2.1', '¿Compatible hacia atrás?': 'Sí — sin cambio de comportamiento esperado' },
+          { 'Tipo de cambio': 'MAJOR', 'Cuándo incrementar': 'El formato de salida cambia — de JSON a markdown, nuevos campos requeridos, eliminación de campos', 'Ejemplo': 'vX.Y.Z → v(X+1).0.0', '¿Compatible hacia atrás?': 'No — actualiza todos los llamadores' },
+          { 'Tipo de cambio': 'MINOR', 'Cuándo incrementar': 'Mejora de calidad, optimización de latencia, mejor seguimiento de instrucciones', 'Ejemplo': 'vX.Y.Z → vX.(Y+1).0', '¿Compatible hacia atrás?': 'Sí — seguro de adoptar' },
+          { 'Tipo de cambio': 'PATCH', 'Cuándo incrementar': 'Corrección de error tipográfico, clarificación, redacción menor que no altera el comportamiento del modelo', 'Ejemplo': 'vX.Y.Z → vX.Y.(Z+1)', '¿Compatible hacia atrás?': 'Sí — sin cambio de comportamiento esperado' },
         ],
         callouts: [
           { type: 'Key Point', label: 'Detonador MAJOR', text: 'Incrementa MAJOR cada vez que el código posterior que analiza la salida de tu prompt se rompería. Si la salida cambia de un array JSON a una lista markdown, eso es un incremento MAJOR aunque el contenido sea idéntico.' },
-          { type: 'Pro Tip', label: 'Etiqueta en Git', text: 'Etiqueta cada versión tras el merge: `git tag v2.1.0 -m "Razonamiento de extracción de fechas mejorado"`. Esto crea una referencia permanente para el rollback.' },
+          { type: 'Pro Tip', label: 'Etiqueta en Git', text: 'Etiqueta cada versión tras el merge: `git tag vX.Y.Z -m "Razonamiento de extracción de fechas mejorado"`. Esto crea una referencia permanente para el rollback.' },
         ],
       },
 
@@ -840,10 +837,10 @@ jobs:
         ],
         numberedItems: [
           'Crea un feature branch: `git checkout -b feature/add-json-output`. Usa prefijos `feature/` (nueva capacidad), `fix/` (corrección de regresión) o `experiment/` (prueba A/B).',
-          'Edita el archivo del prompt en `/prompts/[name].txt`. Actualiza el comentario de versión al principio: `# version: 2.0.0 | changed: JSON output format | author: jane`.',
+          'Edita el archivo del prompt en `/prompts/[name].txt`. Actualiza el comentario de versión al principio: `# version: X.Y.Z | changed: JSON output format | author: jane`.',
           'Ejecuta la suite de regresión automatizada contra tu golden test set (mínimo 10 casos). Las pruebas deben cubrir: validación de formato, comparación de salida contra respuestas golden, flag de alucinación y latencia. Todas las pruebas deben pasar antes de abrir un PR.',
           'Abre un PR con una descripción que cubra: qué cambió, por qué, qué incremento de versión (MAJOR/MINOR/PATCH) y el delta de salida esperado. El revisor comprueba: claridad, riesgo de alucinación, formato de salida y seguridad.',
-          'Tras la aprobación, hace merge a main y etiqueta la versión: `git tag v2.0.0 -m "JSON output format — MAJOR"` luego `git push origin v2.0.0`.',
+          'Tras la aprobación, hace merge a main y etiqueta la versión: `git tag vX.Y.Z -m "JSON output format — MAJOR"` luego `git push origin vX.Y.Z`.',
         ],
         codeBlock: `# .github/workflows/prompt-regression.yml
 name: Prompt Regression Tests
@@ -854,9 +851,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run prompt regression tests
         run: npm run test:prompts
         env:
@@ -876,13 +873,13 @@ jobs:
         ],
         columns: ['Campo', 'Requerido', 'Ejemplo'],
         rows: [
-          { 'Campo': 'version', 'Requerido': 'Sí', 'Ejemplo': '`v2.1.0`' },
-          { 'Campo': 'date', 'Requerido': 'Sí', 'Ejemplo': '`2026-04-30`' },
+          { 'Campo': 'version', 'Requerido': 'Sí', 'Ejemplo': '`vX.Y.Z`' },
+          { 'Campo': 'date', 'Requerido': 'Sí', 'Ejemplo': '`YYYY-MM-DD`' },
           { 'Campo': 'author', 'Requerido': 'Sí', 'Ejemplo': '`jane.smith@empresa.com`' },
           { 'Campo': 'change type', 'Requerido': 'Sí', 'Ejemplo': '`MINOR — razonamiento de extracción de fechas mejorado`' },
           { 'Campo': 'expected output delta', 'Requerido': 'Sí', 'Ejemplo': '`Los campos de fecha ahora usan consistentemente ISO 8601 (YYYY-MM-DD). Anterior: MM/DD/YYYY en ~30% de casos límite.`' },
         ],
-        codeBlock: `## [v2.1.0] — 2026-04-30
+        codeBlock: `## [vX.Y.Z] — YYYY-MM-DD
 
 **Author:** jane.smith@empresa.com
 **Change type:** MINOR — improved date extraction reasoning
@@ -932,7 +929,7 @@ jobs:
         title: 'Qué detectan las pruebas automatizadas antes de que se despliegue un cambio de prompt',
         content: [
           '**Las pruebas de regresión detectan roturas de formato; el LLM-as-judge detecta caídas de calidad.** Cuatro tipos de prueba cubren los principales modos de fallo antes de que un cambio de prompt llegue a producción.',
-          'Los cuatro tipos de prueba: (1) Validación de formato — verifica que la salida coincide con el esquema esperado (estructura JSON, campos requeridos, tipos de datos). Se ejecuta en milisegundos, detecta el 60–70% de los cambios problemáticos. (2) Comparación de golden set — compara la salida contra respuestas correctas verificadas manualmente en 10–20 entradas representativas. LLM-as-judge o métricas de similitud de cadenas puntúan la comparación. (3) Flag de alucinación — detecta afirmaciones factuales en la salida no basadas en el contexto proporcionado. Marca cualquier respuesta que afirme hechos no presentes en la entrada. (4) Comprobación de latencia — verifica que el tiempo de respuesta mediano se mantiene dentro de un rango aceptable (por ejemplo, p95 ≤ 3s). Detecta prompts que causan cómputo excesivo del modelo.',
+          'Los cuatro tipos de prueba: (1) Validación de formato — verifica que la salida coincide con el esquema esperado (estructura JSON, campos requeridos, tipos de datos). Se ejecuta en milisegundos y detecta los cambios problemáticos más comunes. (2) Comparación de golden set — compara la salida contra respuestas correctas verificadas manualmente en 10–20 entradas representativas. LLM-as-judge o métricas de similitud de cadenas puntúan la comparación. (3) Flag de alucinación — detecta afirmaciones factuales en la salida no basadas en el contexto proporcionado. Marca cualquier respuesta que afirme hechos no presentes en la entrada. (4) Comprobación de latencia — verifica que el tiempo de respuesta mediano se mantiene dentro de un rango aceptable (por ejemplo, p95 ≤ 3s). Detecta prompts que causan cómputo excesivo del modelo.',
         ],
         callouts: [
           { type: 'Key Point', label: 'Conjunto de pruebas mínimo', text: 'Un golden test set de 10–20 entradas representativas es el mínimo para cualquier prompt de producción. Cubre: happy path, casos límite (entrada vacía/muy larga), entradas adversariales y modos de fallo conocidos.' },
@@ -975,8 +972,8 @@ jobs:
         id: 'regional-considerations',
         title: 'Requisitos de cumplimiento y auditoría para cambios de prompts',
         content: [
-          'El EU AI Act, que se aplica a sistemas de alto riesgo en salud, finanzas, RRHH e infraestructuras críticas, requiere trazabilidad para las salidas de IA en dominios regulados. Un historial de versiones de prompts controlado con autor, fecha, tipo de cambio y registros de aprobación satisface el requisito de trazabilidad sin herramientas adicionales.',
-          'El RGPD Artículo 22 se aplica a prompts que toman o soportan decisiones automatizadas que afectan a individuos. El control de versiones y los logs de auditoría demuestran supervisión humana — un git log con commits firmados proporciona esta evidencia. Los equipos de salud y finanzas que operan bajo regulaciones sectoriales específicas (MiFID II, HIPAA, MDR) típicamente requieren más de 12 meses de historial de versiones de prompts con almacenamiento a prueba de manipulaciones. En Latinoamérica, el Conpes 3975 de Colombia establece directrices voluntarias de gobernanza de IA que recomiendan la trazabilidad de los sistemas de IA como práctica de gestión responsable.',
+          'Normativas como el EU AI Act establecen obligaciones de documentación y conservación de registros para proveedores y responsables del despliegue de sistemas de IA de alto riesgo, y sus fechas de aplicación y detalles ya se han ajustado antes, así que consulta el calendario oficial de la UE para tu caso. Un historial de versiones de prompts con autor, fecha, tipo de cambio y registro de aprobación puede apoyar esas obligaciones, pero no hace que un sistema cumpla la norma por sí solo.',
+          'El artículo 22 del RGPD se refiere a decisiones basadas únicamente en tratamiento automatizado que afectan significativamente a las personas. El control de versiones y los registros de auditoría pueden servir como evidencia de supervisión humana sobre los cambios de prompts. Los equipos de salud y finanzas suelen enfrentar expectativas sectoriales de conservación y resistencia a manipulaciones (por ejemplo MiFID II, HIPAA o MDR); los plazos varían según la norma y la jurisdicción, así que confírmalos con tu asesoría legal o de cumplimiento. Si operas en Latinoamérica, revisa además la normativa local de protección de datos. Esta sección es información general, no asesoría jurídica.',
         ],
       },
 
@@ -994,7 +991,7 @@ jobs:
           },
           {
             q: '¿En qué se diferencia el versionado de prompts del versionado de modelos?',
-            a: 'El versionado de prompts rastrea los cambios en las instrucciones de texto que envías a un modelo. El versionado de modelos rastrea qué versión de IA (GPT-5.6, Claude Sonnet 5, Llama 4) llama tu aplicación. Ambos requieren control de versiones separado. Cuando cambias el modelo objetivo, trátalo como un incremento MAJOR de la versión del prompt aunque el texto del prompt sea idéntico — los diferentes modelos responden de forma diferente al mismo prompt.',
+            a: 'El versionado de prompts rastrea los cambios en las instrucciones de texto que envías a un modelo. El versionado de modelos rastrea qué modelo de IA y qué versión llama tu aplicación. Ambos requieren control de versiones separado. Cuando cambias el modelo objetivo, trátalo como un incremento MAJOR de la versión del prompt aunque el texto del prompt sea idéntico — los diferentes modelos responden de forma diferente al mismo prompt.',
           },
           {
             q: '¿Cuál es el tamaño mínimo recomendado de un conjunto de pruebas para un prompt de producción?',
@@ -1002,7 +999,7 @@ jobs:
           },
           {
             q: '¿Cómo gestiono el versionado cuando el mismo prompt se usa en diferentes modelos?',
-            a: 'Mantén un historial de versiones separado por combinación prompt+modelo. Usa un encabezado de metadatos en tu archivo de prompt: `# version: 2.1.0 | model: gpt-4o`. Al desplegarlo en un nuevo modelo, crea un nuevo archivo variante en lugar de sobreescribir el existente. Ejecuta tu golden test set completo contra cada variante del modelo antes de promoverla.',
+            a: 'Mantén un historial de versiones separado por combinación prompt+modelo. Usa un encabezado de metadatos en tu archivo de prompt: `# version: X.Y.Z | model: model-a`. Al desplegarlo en un nuevo modelo, crea un nuevo archivo variante en lugar de sobreescribir el existente. Ejecuta tu golden test set completo contra cada variante del modelo antes de promoverla.',
           },
           {
             q: '¿Debe cada cambio de redacción incrementar la versión?',
@@ -1010,11 +1007,11 @@ jobs:
           },
           {
             q: '¿Qué herramientas soportan el control de versiones de prompts de forma nativa?',
-            a: 'Braintrust, PromptLayer y Vellum proporcionan versionado nativo de prompts con dashboards de interfaz para comparar versiones, ejecutar evaluaciones y ver el historial de diffs. LangSmith tiene seguimiento de versiones de prompts en su hub. [PromptQuorum](/how-it-works) añade validación multi-modelo — ejecuta un prompt versionado en más de 25 proveedores para confirmar que funciona de forma consistente antes del despliegue. Para configuraciones más simples, el Git puro con un directorio /prompts/ funciona bien — los prompts son archivos de texto y Git gestiona diff, historial y rollback de forma nativa.',
+            a: 'Braintrust y PromptLayer proporcionan versionado nativo de prompts con dashboards de interfaz para comparar versiones, ejecutar evaluaciones y ver el historial de diffs. LangSmith tiene seguimiento de versiones de prompts en su hub. [PromptQuorum](/how-it-works) añade validación multi-modelo — ejecuta un prompt versionado en más de 25 proveedores para confirmar que funciona de forma consistente antes del despliegue. Para configuraciones más simples, el Git puro con un directorio /prompts/ funciona bien — los prompts son archivos de texto y Git gestiona diff, historial y rollback de forma nativa.',
           },
           {
             q: '¿Cómo hago rollback de un prompt si no uso Git?',
-            a: 'Si usas una plataforma de gestión de prompts (Braintrust, Vellum, PromptLayer), usa el historial de versiones incorporado para revertir a la versión aprobada anterior. Si almacenas los prompts en variables de entorno, guarda una copia de seguridad antes de cada cambio y restáurala a través de tu pipeline de despliegue. En adelante, añade como mínimo un archivo CHANGELOG.md — incluso sin Git, esto te da una referencia de rollback.',
+            a: 'Si usas una plataforma de gestión de prompts (Braintrust, PromptLayer), usa el historial de versiones incorporado para revertir a la versión aprobada anterior. Si almacenas los prompts en variables de entorno, guarda una copia de seguridad antes de cada cambio y restáurala a través de tu pipeline de despliegue. En adelante, añade como mínimo un archivo CHANGELOG.md — incluso sin Git, esto te da una referencia de rollback.',
           },
         ],
       },
@@ -1044,15 +1041,14 @@ jobs:
   },
 
   ar: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-27',
+    freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
     designSkin: 'hub',
     heroImage: '/images/prompt-version-control-overview-hero-ar.webp',
     title: 'التحكم في إصدارات الموجّهات: التتبع والتراجع وسير عمل الفريق',
     intro: 'الموجّهات غير الخاضعة للتحكم في الإصدارات تفشل بصمت — بدون سجل تغييرات، لا توجد مسار للتراجع عندما يُدهور تحديث الموجّه جودة المخرجات أو يُعطل المُحلِّلات اللاحقة. الإصدار الدلالي (MAJOR.MINOR.PATCH) وسير عمل فروع Git واختبارات الانحدار الآلية وسجلات التغييرات المهيكلة تطبّق على إدارة الموجّهات نفس الانضباط الذي تستخدمه فرق البرمجيات بالفعل للكود.',
     publishDate: '2026-04-30',
-    dateModified: '2026-07-13',
+    dateModified: '2026-11-20',
     educationalLevel: 'Advanced',
     audience: 'المطورون الذين يديرون موجّهات LLM في الإنتاج، ومهندسو الموجّهات، وقادة فرق الهندسة',
     primaryTerm: 'Prompt Version Control',
@@ -1087,7 +1083,7 @@ jobs:
       headline: 'التحكم في إصدارات الموجّهات: التتبع والتراجع وسير عمل الفريق',
       description: 'الموجّهات غير الخاضعة للتحكم في الإصدارات تفشل بصمت — بدون سجل لا يوجد تراجع. طبّق الإصدار MAJOR.MINOR.PATCH وسير عمل Git واختبارات الانحدار الآلية على كل تغيير في الموجّه.',
       datePublished: '2026-04-30',
-      dateModified: '2026-07-13',
+      dateModified: '2026-11-20',
       inLanguage: 'ar',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1174,13 +1170,13 @@ jobs:
         ],
         columns: ['نوع التغيير', 'متى ترفع الرقم', 'مثال', 'متوافق للخلف؟'],
         rows: [
-          { 'Tipo de cambio': 'MAJOR', 'Cuándo incrementar': 'تنسيق المخرجات يتغيّر — من JSON إلى markdown، حقول مطلوبة جديدة، حذف حقول', 'Ejemplo': 'v1.2.0 → v2.0.0', '¿Compatible hacia atrás?': 'لا — حدّث جميع المستدعين' },
-          { 'Tipo de cambio': 'MINOR', 'Cuándo incrementar': 'تحسين الجودة، تحسين زمن الاستجابة، اتباع أفضل للتعليمات', 'Ejemplo': 'v1.2.0 → v1.3.0', '¿Compatible hacia atrás?': 'نعم — آمن للتبني' },
-          { 'Tipo de cambio': 'PATCH', 'Cuándo incrementar': 'تصحيح خطأ إملائي، توضيح، صياغة طفيفة لا تُغيّر سلوك النموذج', 'Ejemplo': 'v1.2.0 → v1.2.1', '¿Compatible hacia atrás?': 'نعم — لا تغيير في السلوك المتوقع' },
+          { 'Tipo de cambio': 'MAJOR', 'Cuándo incrementar': 'تنسيق المخرجات يتغيّر — من JSON إلى markdown، حقول مطلوبة جديدة، حذف حقول', 'Ejemplo': 'vX.Y.Z → v(X+1).0.0', '¿Compatible hacia atrás?': 'لا — حدّث جميع المستدعين' },
+          { 'Tipo de cambio': 'MINOR', 'Cuándo incrementar': 'تحسين الجودة، تحسين زمن الاستجابة، اتباع أفضل للتعليمات', 'Ejemplo': 'vX.Y.Z → vX.(Y+1).0', '¿Compatible hacia atrás?': 'نعم — آمن للتبني' },
+          { 'Tipo de cambio': 'PATCH', 'Cuándo incrementar': 'تصحيح خطأ إملائي، توضيح، صياغة طفيفة لا تُغيّر سلوك النموذج', 'Ejemplo': 'vX.Y.Z → vX.Y.(Z+1)', '¿Compatible hacia atrás?': 'نعم — لا تغيير في السلوك المتوقع' },
         ],
         callouts: [
           { type: 'Key Point', label: 'مُشغّل MAJOR', text: 'ارفع MAJOR في كل مرة ينكسر فيها الكود اللاحق الذي يُحلّل مخرجات موجّهك. إذا تغيّرت المخرجات من مصفوفة JSON إلى قائمة markdown، فهذا رفع MAJOR حتى لو كان المحتوى متطابقاً.' },
-          { type: 'Pro Tip', label: 'وسم في Git', text: 'وسّم كل إصدار بعد الدمج: `git tag v2.1.0 -m "تحسين استنتاج استخراج التواريخ"`. هذا ينشئ مرجعاً دائماً للتراجع.' },
+          { type: 'Pro Tip', label: 'وسم في Git', text: 'وسّم كل إصدار بعد الدمج: `git tag vX.Y.Z -m "تحسين استنتاج استخراج التواريخ"`. هذا ينشئ مرجعاً دائماً للتراجع.' },
         ],
       },
 
@@ -1192,10 +1188,10 @@ jobs:
         ],
         numberedItems: [
           'أنشئ فرع feature: `git checkout -b feature/add-json-output`. استخدم بوادئ `feature/` (قدرة جديدة)، `fix/` (تصحيح انحدار)، أو `experiment/` (اختبار A/B).',
-          'عدّل ملف الموجّه في `/prompts/[name].txt`. حدّث تعليق الإصدار في البداية: `# version: 2.0.0 | changed: JSON output format | author: jane`.',
+          'عدّل ملف الموجّه في `/prompts/[name].txt`. حدّث تعليق الإصدار في البداية: `# version: X.Y.Z | changed: JSON output format | author: jane`.',
           'شغّل مجموعة الانحدار الآلية مقابل مجموعة الاختبار الذهبية (10 حالات على الأقل). يجب أن تشمل الاختبارات: التحقق من التنسيق، ومقارنة المخرجات مقابل الردود الذهبية، وعلم الهلوسة، والكمون. يجب أن تنجح جميع الاختبارات قبل فتح PR.',
           'افتح PR بوصف يغطي: ما الذي تغيّر، ولماذا، وأي رفع للإصدار (MAJOR/MINOR/PATCH) والتغيير المتوقع في المخرجات. المراجع يتحقق من: الوضوح، مخاطر الهلوسة، تنسيق المخرجات، والأمان.',
-          'بعد الموافقة، ادمج في main وسّم الإصدار: `git tag v2.0.0 -m "JSON output format — MAJOR"` ثم `git push origin v2.0.0`.',
+          'بعد الموافقة، ادمج في main وسّم الإصدار: `git tag vX.Y.Z -m "JSON output format — MAJOR"` ثم `git push origin vX.Y.Z`.',
         ],
         codeBlock: `# .github/workflows/prompt-regression.yml
 name: Prompt Regression Tests
@@ -1206,9 +1202,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run prompt regression tests
         run: npm run test:prompts
         env:
@@ -1228,13 +1224,13 @@ jobs:
         ],
         columns: ['الحقل', 'مطلوب', 'مثال'],
         rows: [
-          { 'Campo': 'version', 'Requerido': 'نعم', 'Ejemplo': '`v2.1.0`' },
-          { 'Campo': 'date', 'Requerido': 'نعم', 'Ejemplo': '`2026-04-30`' },
+          { 'Campo': 'version', 'Requerido': 'نعم', 'Ejemplo': '`vX.Y.Z`' },
+          { 'Campo': 'date', 'Requerido': 'نعم', 'Ejemplo': '`YYYY-MM-DD`' },
           { 'Campo': 'author', 'Requerido': 'نعم', 'Ejemplo': '`jane.smith@company.com`' },
           { 'Campo': 'change type', 'Requerido': 'نعم', 'Ejemplo': '`MINOR — تحسين استنتاج استخراج التواريخ`' },
           { 'Campo': 'expected output delta', 'Requerido': 'نعم', 'Ejemplo': '`حقول التاريخ تستخدم الآن ISO 8601 باستمرار (YYYY-MM-DD). السابق: MM/DD/YYYY في ~30% من الحالات الحدية.`' },
         ],
-        codeBlock: `## [v2.1.0] — 2026-04-30
+        codeBlock: `## [vX.Y.Z] — YYYY-MM-DD
 
 **Author:** jane.smith@empresa.com
 **Change type:** MINOR — improved date extraction reasoning
@@ -1284,7 +1280,7 @@ jobs:
         title: 'ما تكتشفه الاختبارات الآلية قبل نشر تغيير الموجّه',
         content: [
           '**اختبارات الانحدار تكتشف كسر التنسيق؛ LLM-as-judge يكتشف انخفاضات الجودة.** أربعة أنواع من الاختبارات تغطي أنماط الفشل الرئيسية قبل أن يصل تغيير الموجّه إلى الإنتاج.',
-          'الأنواع الأربعة من الاختبارات: (1) التحقق من التنسيق — يتحقق أن المخرجات تتطابق مع المخطط المتوقع (هيكل JSON، الحقول المطلوبة، أنواع البيانات). يُشغَّل في ميلي ثانية، يكتشف 60–70% من التغييرات الإشكالية. (2) مقارنة المجموعة الذهبية — يقارن المخرجات مقابل ردود صحيحة تحقق منها يدوياً البشر على 10–20 مدخلاً تمثيلياً. LLM-as-judge أو مقاييس تشابه السلاسل تُقيّم المقارنة. (3) علم الهلوسة — يكتشف الادعاءات الواقعية في المخرجات غير المستندة إلى السياق المُقدَّم. يُعلّم أي رد يدّعي حقائق غير موجودة في المدخل. (4) فحص الكمون — يتحقق أن متوسط وقت الاستجابة يبقى ضمن نطاق مقبول (مثلاً p95 ≤ 3s). يكتشف الموجّهات التي تُسبّب حوسبة مفرطة للنموذج.',
+          'الأنواع الأربعة من الاختبارات: (1) التحقق من التنسيق — يتحقق أن المخرجات تتطابق مع المخطط المتوقع (هيكل JSON، الحقول المطلوبة، أنواع البيانات). يُشغَّل في ميلي ثانية ويكتشف أكثر التغييرات الإشكالية شيوعاً. (2) مقارنة المجموعة الذهبية — يقارن المخرجات مقابل ردود صحيحة تحقق منها يدوياً البشر على 10–20 مدخلاً تمثيلياً. LLM-as-judge أو مقاييس تشابه السلاسل تُقيّم المقارنة. (3) علم الهلوسة — يكتشف الادعاءات الواقعية في المخرجات غير المستندة إلى السياق المُقدَّم. يُعلّم أي رد يدّعي حقائق غير موجودة في المدخل. (4) فحص الكمون — يتحقق أن متوسط وقت الاستجابة يبقى ضمن نطاق مقبول (مثلاً p95 ≤ 3s). يكتشف الموجّهات التي تُسبّب حوسبة مفرطة للنموذج.',
         ],
         callouts: [
           { type: 'Key Point', label: 'مجموعة الاختبار الدنيا', text: 'مجموعة اختبار ذهبية من 10–20 مدخلاً تمثيلياً هي الحد الأدنى لأي موجّه إنتاجي. تغطي: المسار الطبيعي، الحالات الحدية (مدخل فارغ/طويل جداً)، المدخلات التعارضية وأنماط الفشل المعروفة.' },
@@ -1327,8 +1323,8 @@ jobs:
         id: 'regional-considerations',
         title: 'متطلبات الامتثال والتدقيق لتغييرات الموجّهات',
         content: [
-          'EU AI Act، المطبَّق على الأنظمة عالية المخاطر في الصحة والمالية والموارد البشرية والبنية التحتية الحيوية، يتطلب قابلية التتبع لمخرجات الذكاء الاصطناعي في المجالات المنظّمة. سجل إصدارات الموجّهات المُتحكَّم فيه مع المؤلف والتاريخ ونوع التغيير وسجلات الموافقة يُلبّي متطلب قابلية التتبع بدون أدوات إضافية.',
-          'GDPR المادة 22 تنطبق على الموجّهات التي تتخذ أو تدعم قرارات آلية تؤثر على الأفراد. التحكم في الإصدارات وسجلات التدقيق تُثبت الإشراف البشري — git log مع commits موقّعة يوفر هذه الأدلة. فرق الصحة والمالية العاملة تحت أنظمة قطاعية محددة (MiFID II، HIPAA) عادةً ما تتطلب أكثر من 12 شهراً من سجل إصدارات الموجّهات مع تخزين مقاوم للتلاعب. في منطقة الشرق الأوسط وشمال أفريقيا، تُوجّه هيئة الاتصالات وتقنية المعلومات (CITC) في المملكة العربية السعودية والجهات التنظيمية في الإمارات العربية المتحدة نحو معايير حوكمة الذكاء الاصطناعي التي تُوصي بقابلية تتبع أنظمة الذكاء الاصطناعي كممارسة إدارة مسؤولة. CAC في الصين تفرض متطلبات سجل كاملة لأنظمة الذكاء الاصطناعي في التطبيقات المنظّمة.',
+          'تفرض لوائح مثل EU AI Act التزامات توثيق وحفظ سجلات على مزوّدي ومشغّلي أنظمة الذكاء الاصطناعي عالية المخاطر، وقد جرى تعديل مواعيد تطبيقها وتفاصيلها سابقاً، لذا راجع الجدول الزمني الرسمي للاتحاد الأوروبي لحالتك. سجل إصدارات الموجّهات مع المؤلف والتاريخ ونوع التغيير وسجل الموافقة قد يدعم هذه الالتزامات، لكنه لا يجعل النظام ممتثلاً بمفرده.',
+          'تتعلق المادة 22 من GDPR بالقرارات المبنية على معالجة آلية بحتة وتؤثر في الأفراد تأثيراً كبيراً. يمكن أن تكون سجلات التحكم في الإصدارات والتدقيق دليلاً على الإشراف البشري على تغييرات الموجّهات. كثيراً ما تواجه فرق الصحة والمالية توقعات قطاعية لحفظ السجلات ومنع التلاعب بها (مثل MiFID II وHIPAA)، وتختلف مدد الحفظ حسب النظام والولاية القضائية، فتأكد منها مع مستشارك القانوني أو فريق الامتثال. في دول الخليج، راجع كذلك أنظمة حماية البيانات الوطنية مثل PDPL في السعودية. هذا القسم معلومات عامة وليس استشارة قانونية.',
         ],
       },
 
@@ -1354,7 +1350,7 @@ jobs:
           },
           {
             q: 'كيف أدير الإصدار عندما يُستخدم نفس الموجّه على نماذج مختلفة؟',
-            a: 'احتفظ بسجل إصدارات منفصل لكل مجموعة موجّه+نموذج. استخدم رأس بيانات وصفية في ملف موجّهك: `# version: 2.1.0 | model: gpt-4o`. عند نشره على نموذج جديد، أنشئ ملف متغير جديد بدلاً من الكتابة فوق الموجود. شغّل مجموعة اختبارك الذهبية الكاملة مقابل كل متغير نموذج قبل ترقيته.',
+            a: 'احتفظ بسجل إصدارات منفصل لكل مجموعة موجّه+نموذج. استخدم رأس بيانات وصفية في ملف موجّهك: `# version: X.Y.Z | model: model-a`. عند نشره على نموذج جديد، أنشئ ملف متغير جديد بدلاً من الكتابة فوق الموجود. شغّل مجموعة اختبارك الذهبية الكاملة مقابل كل متغير نموذج قبل ترقيته.',
           },
           {
             q: 'هل يجب أن يرفع كل تغيير في الصياغة الإصدار؟',
@@ -1362,11 +1358,11 @@ jobs:
           },
           {
             q: 'ما الأدوات التي تدعم التحكم في إصدارات الموجّهات بشكل أصلي؟',
-            a: 'Braintrust وPromptLayer وVellum توفر إصداراً أصلياً للموجّهات مع لوحات تحكم للمقارنة بين الإصدارات وتشغيل التقييمات وعرض سجل الفروق. LangSmith لديه تتبع إصدارات الموجّهات في محوره. [PromptQuorum](/how-it-works) يضيف التحقق متعدد النماذج — يُشغّل موجّهاً مُصدَراً على أكثر من 25 مزوداً للتأكد من أنه يعمل باتساق قبل النشر. للإعدادات الأبسط، Git النقي مع مجلد /prompts/ يعمل جيداً — الموجّهات ملفات نصية وGit يدير الفروق والسجل والتراجع بشكل أصلي.',
+            a: 'Braintrust وPromptLayer توفران إصداراً أصلياً للموجّهات مع لوحات تحكم للمقارنة بين الإصدارات وتشغيل التقييمات وعرض سجل الفروق. LangSmith لديه تتبع إصدارات الموجّهات في محوره. [PromptQuorum](/how-it-works) يضيف التحقق متعدد النماذج — يُشغّل موجّهاً مُصدَراً على أكثر من 25 مزوداً للتأكد من أنه يعمل باتساق قبل النشر. للإعدادات الأبسط، Git النقي مع مجلد /prompts/ يعمل جيداً — الموجّهات ملفات نصية وGit يدير الفروق والسجل والتراجع بشكل أصلي.',
           },
           {
             q: 'كيف أتراجع عن موجّه إذا كنت لا أستخدم Git؟',
-            a: 'إذا كنت تستخدم منصة إدارة موجّهات (Braintrust، Vellum، PromptLayer)، استخدم سجل الإصدارات المدمج للرجوع إلى الإصدار المعتمد السابق. إذا كنت تخزّن الموجّهات في متغيرات البيئة، احتفظ بنسخة احتياطية قبل كل تغيير واستعدها عبر pipeline النشر. مستقبلاً، أضف على الأقل ملف CHANGELOG.md — حتى بدون Git، هذا يمنحك مرجعاً للتراجع.',
+            a: 'إذا كنت تستخدم منصة إدارة موجّهات (Braintrust، PromptLayer)، استخدم سجل الإصدارات المدمج للرجوع إلى الإصدار المعتمد السابق. إذا كنت تخزّن الموجّهات في متغيرات البيئة، احتفظ بنسخة احتياطية قبل كل تغيير واستعدها عبر pipeline النشر. مستقبلاً، أضف على الأقل ملف CHANGELOG.md — حتى بدون Git، هذا يمنحك مرجعاً للتراجع.',
           },
         ],
       },
@@ -1396,15 +1392,14 @@ jobs:
   },
 
   pt: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-27',
+    freshness_tier: 'evergreen',
     theme: 'Operações e Governança de Equipe',
     designSkin: 'hub',
     heroImage: '/images/prompt-version-control-overview-hero-pt.webp',
     title: 'Controle de versão de prompts: rastreamento, rollback e fluxos de trabalho em equipe',
     intro: 'Prompts sem controle de versão falham silenciosamente — sem histórico de alterações, não há caminho de rollback quando uma atualização de prompt degrada a qualidade da saída ou quebra os parsers posteriores. O versionamento semântico (MAJOR.MINOR.PATCH), fluxos de trabalho de branches do Git, testes de regressão automatizados e changelogs estruturados aplicam aos prompts a mesma disciplina que as equipes de software já usam para o código.',
     publishDate: '2026-04-30',
-    dateModified: '2026-07-13',
+    dateModified: '2026-11-20',
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores que gerenciam prompts LLM em produção, engenheiros de prompts, líderes de equipes de engenharia',
     primaryTerm: 'Controle de Versão de Prompts',
@@ -1439,7 +1434,7 @@ jobs:
       headline: 'Controle de versão de prompts: rastreamento, rollback e fluxos de trabalho em equipe',
       description: 'Prompts sem controle de versão falham silenciosamente — sem histórico não há rollback. Aplique o versionamento MAJOR.MINOR.PATCH, fluxos de trabalho do Git e testes de regressão automatizados a cada alteração de prompt.',
       datePublished: '2026-04-30',
-      dateModified: '2026-07-13',
+      dateModified: '2026-11-20',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1523,13 +1518,13 @@ jobs:
         ],
         columns: ['Tipo de alteração', 'Quando incrementar', 'Exemplo', 'Retrocompatível?'],
         rows: [
-          { 'Tipo de alteração': 'MAJOR', 'Quando incrementar': 'O formato de saída muda — de JSON para markdown, novos campos obrigatórios, remoção de campos', 'Exemplo': 'v1.2.0 → v2.0.0', 'Retrocompatível?': 'Não — atualize todos os chamadores' },
-          { 'Tipo de alteração': 'MINOR', 'Quando incrementar': 'Melhoria de qualidade, otimização de latência, melhor seguimento de instruções', 'Exemplo': 'v1.2.0 → v1.3.0', 'Retrocompatível?': 'Sim — seguro de adotar' },
-          { 'Tipo de alteração': 'PATCH', 'Quando incrementar': 'Correção de erro tipográfico, esclarecimento, redação menor que não altera o comportamento do modelo', 'Exemplo': 'v1.2.0 → v1.2.1', 'Retrocompatível?': 'Sim — sem alteração de comportamento esperada' },
+          { 'Tipo de alteração': 'MAJOR', 'Quando incrementar': 'O formato de saída muda — de JSON para markdown, novos campos obrigatórios, remoção de campos', 'Exemplo': 'vX.Y.Z → v(X+1).0.0', 'Retrocompatível?': 'Não — atualize todos os chamadores' },
+          { 'Tipo de alteração': 'MINOR', 'Quando incrementar': 'Melhoria de qualidade, otimização de latência, melhor seguimento de instruções', 'Exemplo': 'vX.Y.Z → vX.(Y+1).0', 'Retrocompatível?': 'Sim — seguro de adotar' },
+          { 'Tipo de alteração': 'PATCH', 'Quando incrementar': 'Correção de erro tipográfico, esclarecimento, redação menor que não altera o comportamento do modelo', 'Exemplo': 'vX.Y.Z → vX.Y.(Z+1)', 'Retrocompatível?': 'Sim — sem alteração de comportamento esperada' },
         ],
         callouts: [
           { type: 'Key Point', label: 'Gatilho MAJOR', text: 'Incremente MAJOR toda vez que o código posterior que analisa a saída do seu prompt quebraria. Se a saída muda de um array JSON para uma lista markdown, isso é um incremento MAJOR, mesmo que o conteúdo seja idêntico.' },
-          { type: 'Pro Tip', label: 'Tag no Git', text: 'Marque cada versão após o merge: `git tag v2.1.0 -m "Raciocínio de extração de datas melhorado"`. Isso cria uma referência permanente para rollback.' },
+          { type: 'Pro Tip', label: 'Tag no Git', text: 'Marque cada versão após o merge: `git tag vX.Y.Z -m "Raciocínio de extração de datas melhorado"`. Isso cria uma referência permanente para rollback.' },
         ],
       },
       gitWorkflow: {
@@ -1540,10 +1535,10 @@ jobs:
         ],
         numberedItems: [
           'Crie um feature branch: `git checkout -b feature/add-json-output`. Use prefixos `feature/` (nova capacidade), `fix/` (correção de regressão) ou `experiment/` (teste A/B).',
-          'Edite o arquivo de prompt em `/prompts/[nome].txt`. Atualize o comentário de versão no início: `# version: 2.0.0 | changed: JSON output format | author: joao`.',
+          'Edite o arquivo de prompt em `/prompts/[nome].txt`. Atualize o comentário de versão no início: `# version: X.Y.Z | changed: JSON output format | author: joao`.',
           'Execute o conjunto de regressão automatizado contra seu golden test set (mínimo 10 casos). Os testes devem cobrir: validação de formato, comparação de saída contra respostas golden, flag de alucinação e latência. Todos os testes devem passar antes de abrir um PR.',
           'Abra um PR com uma descrição que cubra: o que mudou, por quê, qual incremento de versão (MAJOR/MINOR/PATCH) e o delta de saída esperado. O revisor verifica: clareza, risco de alucinação, formato de saída e segurança.',
-          'Após aprovação, faça merge para main e marque a versão: `git tag v2.0.0 -m "JSON output format — MAJOR"` e depois `git push origin v2.0.0`.',
+          'Após aprovação, faça merge para main e marque a versão: `git tag vX.Y.Z -m "JSON output format — MAJOR"` e depois `git push origin vX.Y.Z`.',
         ],
         codeBlock: `# .github/workflows/prompt-regression.yml
 name: Prompt Regression Tests
@@ -1554,9 +1549,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run prompt regression tests
         run: npm run test:prompts
         env:
@@ -1575,13 +1570,13 @@ jobs:
         ],
         columns: ['Campo', 'Obrigatório', 'Exemplo'],
         rows: [
-          { 'Campo': 'version', 'Obrigatório': 'Sim', 'Exemplo': '`v2.1.0`' },
-          { 'Campo': 'date', 'Obrigatório': 'Sim', 'Exemplo': '`2026-04-30`' },
+          { 'Campo': 'version', 'Obrigatório': 'Sim', 'Exemplo': '`vX.Y.Z`' },
+          { 'Campo': 'date', 'Obrigatório': 'Sim', 'Exemplo': '`YYYY-MM-DD`' },
           { 'Campo': 'author', 'Obrigatório': 'Sim', 'Exemplo': '`joao.silva@empresa.com.br`' },
           { 'Campo': 'change type', 'Obrigatório': 'Sim', 'Exemplo': '`MINOR — raciocínio de extração de datas melhorado`' },
           { 'Campo': 'expected output delta', 'Obrigatório': 'Sim', 'Exemplo': '`Os campos de data agora usam consistentemente ISO 8601 (YYYY-MM-DD). Anterior: MM/DD/YYYY em ~30% dos casos limite.`' },
         ],
-        codeBlock: `## [v2.1.0] — 2026-04-30
+        codeBlock: `## [vX.Y.Z] — YYYY-MM-DD
 
 **Author:** joao.silva@empresa.com.br
 **Change type:** MINOR — improved date extraction reasoning
@@ -1628,7 +1623,7 @@ jobs:
         title: 'O que os testes automatizados detectam antes que uma alteração de prompt seja implantada',
         content: [
           '**Os testes de regressão detectam quebras de formato; o LLM-as-judge detecta quedas de qualidade.** Quatro tipos de teste cobrem os principais modos de falha antes que uma alteração de prompt chegue à produção.',
-          'Os quatro tipos de teste: (1) Validação de formato — verifica se a saída corresponde ao schema esperado. Executa em milissegundos, detecta 60–70% das alterações problemáticas. (2) Comparação de golden set — compara a saída com respostas corretas verificadas manualmente em 10–20 entradas representativas. (3) Flag de alucinação — detecta afirmações factuais na saída não baseadas no contexto fornecido. (4) Verificação de latência — verifica se o tempo de resposta mediano permanece dentro de um intervalo aceitável (por exemplo, p95 ≤ 3s).',
+          'Os quatro tipos de teste: (1) Validação de formato — verifica se a saída corresponde ao schema esperado. Executa em milissegundos e detecta as alterações problemáticas mais comuns. (2) Comparação de golden set — compara a saída com respostas corretas verificadas manualmente em 10–20 entradas representativas. (3) Flag de alucinação — detecta afirmações factuais na saída não baseadas no contexto fornecido. (4) Verificação de latência — verifica se o tempo de resposta mediano permanece dentro de um intervalo aceitável (por exemplo, p95 ≤ 3s).',
         ],
         callouts: [
           { type: 'Key Point', label: 'Conjunto de testes mínimo', text: 'Um golden test set de 10–20 entradas representativas é o mínimo para qualquer prompt de produção. Cubra: caminho feliz, casos limite (entrada vazia/muito longa), entradas adversariais e modos de falha conhecidos.' },
@@ -1649,8 +1644,8 @@ jobs:
         id: 'regional-considerations',
         title: 'Requisitos de conformidade e auditoria para alterações de prompts',
         content: [
-          'A LGPD (Lei Geral de Proteção de Dados, Lei nº 13.709/2018) e as diretrizes da ANPD exigem transparência e responsabilização nos processos automatizados que afetam indivíduos. Um histórico de versões de prompts controlado com autor, data, tipo de alteração e registros de aprovação satisfaz o requisito de rastreabilidade sem ferramentas adicionais.',
-          'O EU AI Act, aplicável a sistemas de alto risco em saúde, finanças, RH e infraestruturas críticas, exige rastreabilidade para saídas de IA em domínios regulados. Equipes de saúde e finanças que operam sob regulações setoriais específicas tipicamente requerem mais de 12 meses de histórico de versões de prompts com armazenamento à prova de adulteração.',
+          'A LGPD (Lei Geral de Proteção de Dados) e as orientações da ANPD tratam de transparência e responsabilização no tratamento de dados pessoais, inclusive em decisões automatizadas que afetam indivíduos (art. 20). Um histórico de versões de prompts com autor, data, tipo de alteração e registros de aprovação pode ajudar a demonstrar rastreabilidade, mas não garante conformidade por si só.',
+          'Normas como o EU AI Act preveem obrigações de documentação e registro para sistemas de IA de alto risco, e seus prazos e detalhes já foram ajustados antes; consulte o calendário oficial da UE se você atende o mercado europeu. Equipes de saúde e finanças costumam ter expectativas setoriais de retenção e proteção contra adulteração dos registros; os prazos variam conforme a norma e a jurisdição, então confirme com seu jurídico ou compliance. Esta seção é informação geral, não aconselhamento jurídico.',
         ],
       },
       faq: {
@@ -1661,10 +1656,10 @@ jobs:
           { q: 'Preciso de um repositório Git separado para prompts ou posso usar meu repositório de aplicação existente?', a: 'Para equipes de menos de 5 engenheiros ou menos de 20 prompts: use um diretório /prompts/ no seu repositório de aplicação existente. Para equipes maiores ou quando os prompts são compartilhados entre múltiplos serviços: um repositório de prompts dedicado oferece propriedade mais clara, versionamento independente e controle de acesso.' },
           { q: 'Em que o versionamento de prompts difere do versionamento de modelos?', a: 'O versionamento de prompts rastreia as alterações nas instruções de texto que você envia a um modelo. O versionamento de modelos rastreia qual versão de IA sua aplicação chama. Ambos requerem controle de versão separado. Quando você muda o modelo de destino, trate-o como um incremento MAJOR da versão do prompt.' },
           { q: 'Qual é o tamanho mínimo recomendado de um conjunto de testes para um prompt de produção?', a: '10–20 casos de teste golden é o mínimo. Cubra: caminho feliz, casos limite (entrada vazia, entrada muito longa), entradas adversariais e modos de falha conhecidos.' },
-          { q: 'Como gerencio o versionamento quando o mesmo prompt é usado em diferentes modelos?', a: 'Mantenha um histórico de versões separado por combinação prompt+modelo. Use um cabeçalho de metadados no arquivo de prompt: `# version: 2.1.0 | model: gpt-4o`. Ao implantar em um novo modelo, crie um novo arquivo variante em vez de sobrescrever o existente.' },
+          { q: 'Como gerencio o versionamento quando o mesmo prompt é usado em diferentes modelos?', a: 'Mantenha um histórico de versões separado por combinação prompt+modelo. Use um cabeçalho de metadados no arquivo de prompt: `# version: X.Y.Z | model: model-a`. Ao implantar em um novo modelo, crie um novo arquivo variante em vez de sobrescrever o existente.' },
           { q: 'Cada alteração de redação deve incrementar a versão?', a: 'Sim — cada alteração incrementa a versão em algum nível. Correções de erros tipográficos: PATCH. Melhorias de qualidade sem alterações de formato: MINOR. Alterações de formato/estrutura que quebram os parsers posteriores: MAJOR. Nunca omita o incremento de versão.' },
-          { q: 'Quais ferramentas suportam o controle de versão de prompts de forma nativa?', a: 'Braintrust, PromptLayer e Vellum fornecem versionamento nativo de prompts. PromptQuorum adiciona validação multi-modelo — execute um prompt versionado em mais de 25 provedores para confirmar consistência antes da implantação.' },
-          { q: 'Como faço rollback de um prompt se não uso Git?', a: 'Se você usa uma plataforma de gerenciamento de prompts (Braintrust, Vellum, PromptLayer), use o histórico de versões integrado para reverter para a versão aprovada anterior. No futuro, adicione pelo menos um arquivo CHANGELOG.md — mesmo sem Git, isso dá a você uma referência de rollback.' },
+          { q: 'Quais ferramentas suportam o controle de versão de prompts de forma nativa?', a: 'Braintrust e PromptLayer fornecem versionamento nativo de prompts. PromptQuorum adiciona validação multi-modelo — execute um prompt versionado em mais de 25 provedores para confirmar consistência antes da implantação.' },
+          { q: 'Como faço rollback de um prompt se não uso Git?', a: 'Se você usa uma plataforma de gerenciamento de prompts (Braintrust, PromptLayer), use o histórico de versões integrado para reverter para a versão aprovada anterior. No futuro, adicione pelo menos um arquivo CHANGELOG.md — mesmo sem Git, isso dá a você uma referência de rollback.' },
         ],
       },
       relatedReading: {
@@ -1691,15 +1686,14 @@ jobs:
   },
 
   fr: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-27',
+    freshness_tier: 'evergreen',
     theme: 'Opérations d\'équipe & Gouvernance',
     designSkin: 'hub',
     heroImage: '/images/prompt-version-control-overview-hero-fr.webp',
     title: 'Gestion de versions des prompts : Suivi, Rollback & Workflows d\'équipe',
     intro: 'Les prompts non versionnés échouent silencieusement — sans historique des changements, il n\'existe pas de chemin de rollback quand une mise à jour dégrade la qualité des sorties ou brise les parseurs en aval. Le versioning sémantique (MAJOR.MINOR.PATCH), les workflows git, les tests de régression automatisés et les changelogs structurés appliquent aux prompts la même discipline que les équipes logicielles utilisent déjà pour le code.',
     publishDate: '2026-04-30',
-    dateModified: '2026-07-13',
+    dateModified: '2026-11-20',
     educationalLevel: 'Advanced',
     audience: 'Développeurs qui gèrent des prompts LLM en production, ingénieurs prompt, responsables d\'équipes techniques',
     primaryTerm: 'Gestion de versions des prompts',
@@ -1734,7 +1728,7 @@ jobs:
       headline: 'Gestion de versions des prompts : Suivi, Rollback & Workflows d\'équipe',
       description: 'Prompts non versionnés : aucun rollback possible sans historique. Appliquez MAJOR.MINOR.PATCH et des workflows git à chaque modification de prompt.',
       datePublished: '2026-04-30',
-      dateModified: '2026-07-13',
+      dateModified: '2026-11-20',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1818,13 +1812,13 @@ jobs:
         ],
         columns: ['Type de changement', 'Quand incrémenter', 'Exemple', 'Rétrocompatible ?'],
         rows: [
-          { 'Type de changement': 'MAJOR', 'Quand incrémenter': 'Le format de sortie change — JSON vers markdown, nouveaux champs obligatoires, suppression de champs', 'Exemple': 'v1.2.0 → v2.0.0', 'Rétrocompatible ?': 'Non — mettre à jour tous les appelants' },
-          { 'Type de changement': 'MINOR', 'Quand incrémenter': 'Amélioration de qualité, optimisation de latence, meilleure conformité aux instructions', 'Exemple': 'v1.2.0 → v1.3.0', 'Rétrocompatible ?': 'Oui — adoption sans risque' },
-          { 'Type de changement': 'PATCH', 'Quand incrémenter': 'Correction de faute, clarification, légère reformulation sans impact comportemental', 'Exemple': 'v1.2.0 → v1.2.1', 'Rétrocompatible ?': 'Oui — aucun changement de comportement attendu' },
+          { 'Type de changement': 'MAJOR', 'Quand incrémenter': 'Le format de sortie change — JSON vers markdown, nouveaux champs obligatoires, suppression de champs', 'Exemple': 'vX.Y.Z → v(X+1).0.0', 'Rétrocompatible ?': 'Non — mettre à jour tous les appelants' },
+          { 'Type de changement': 'MINOR', 'Quand incrémenter': 'Amélioration de qualité, optimisation de latence, meilleure conformité aux instructions', 'Exemple': 'vX.Y.Z → vX.(Y+1).0', 'Rétrocompatible ?': 'Oui — adoption sans risque' },
+          { 'Type de changement': 'PATCH', 'Quand incrémenter': 'Correction de faute, clarification, légère reformulation sans impact comportemental', 'Exemple': 'vX.Y.Z → vX.Y.(Z+1)', 'Rétrocompatible ?': 'Oui — aucun changement de comportement attendu' },
         ],
         callouts: [
           { type: 'Key Point', label: 'Déclencheur MAJOR', text: 'Incrémentez MAJOR chaque fois que le code en aval qui analyse la sortie de votre prompt se briserait. Si la sortie passe d\'un tableau JSON à une liste markdown, c\'est un bump MAJOR même si le contenu est identique.' },
-          { type: 'Pro Tip', label: 'Tagger dans git', text: 'Taguez chaque version après la fusion : `git tag v2.1.0 -m "Amélioration de l\'extraction de dates"`. Cela crée une référence permanente pour le rollback.' },
+          { type: 'Pro Tip', label: 'Tagger dans git', text: 'Taguez chaque version après la fusion : `git tag vX.Y.Z -m "Amélioration de l\'extraction de dates"`. Cela crée une référence permanente pour le rollback.' },
         ],
       },
 
@@ -1836,10 +1830,10 @@ jobs:
         ],
         numberedItems: [
           'Créer une branche feature : `git checkout -b feature/add-json-output`. Utiliser les préfixes `feature/` (nouvelle fonctionnalité), `fix/` (correction de régression) ou `experiment/` (test A/B).',
-          'Modifier le fichier prompt dans `/prompts/[name].txt`. Mettre à jour le commentaire de version en début de fichier : `# version: 2.0.0 | changed: JSON output format | author: jane`.',
+          'Modifier le fichier prompt dans `/prompts/[name].txt`. Mettre à jour le commentaire de version en début de fichier : `# version: X.Y.Z | changed: JSON output format | author: jane`.',
           'Lancer la suite de tests de régression sur le jeu de référence (minimum 10 cas). Les tests doivent couvrir : validation de format, comparaison de sorties avec les réponses de référence, détection d\'hallucinations et latence. Tous les tests doivent passer avant d\'ouvrir une PR.',
           'Ouvrir une PR avec une description indiquant : ce qui a changé, pourquoi, quel bump de version (MAJOR/MINOR/PATCH) et le delta de sortie attendu. Le relecteur vérifie : clarté, risque d\'hallucinations, format de sortie et sécurité.',
-          'Après approbation, fusionner vers main et taguer la version : `git tag v2.0.0 -m "JSON output format — MAJOR"` puis `git push origin v2.0.0`.',
+          'Après approbation, fusionner vers main et taguer la version : `git tag vX.Y.Z -m "JSON output format — MAJOR"` puis `git push origin vX.Y.Z`.',
         ],
         codeBlock: `# .github/workflows/prompt-regression.yml
 name: Prompt Regression Tests
@@ -1850,9 +1844,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run prompt regression tests
         run: npm run test:prompts
         env:
@@ -1872,13 +1866,13 @@ jobs:
         ],
         columns: ['Champ', 'Obligatoire', 'Exemple'],
         rows: [
-          { 'Champ': 'version', 'Obligatoire': 'Oui', 'Exemple': '`v2.1.0`' },
-          { 'Champ': 'date', 'Obligatoire': 'Oui', 'Exemple': '`2026-04-30`' },
+          { 'Champ': 'version', 'Obligatoire': 'Oui', 'Exemple': '`vX.Y.Z`' },
+          { 'Champ': 'date', 'Obligatoire': 'Oui', 'Exemple': '`YYYY-MM-DD`' },
           { 'Champ': 'author', 'Obligatoire': 'Oui', 'Exemple': '`jane.smith@company.com`' },
           { 'Champ': 'change type', 'Obligatoire': 'Oui', 'Exemple': '`MINOR — amélioration de l\'extraction de dates`' },
           { 'Champ': 'expected output delta', 'Obligatoire': 'Oui', 'Exemple': '`Les champs de date utilisent désormais systématiquement l\'ISO 8601 (YYYY-MM-DD). Précédemment : MM/DD/YYYY dans ~30 % des cas limites.`' },
         ],
-        codeBlock: `## [v2.1.0] — 2026-04-30
+        codeBlock: `## [vX.Y.Z] — YYYY-MM-DD
 
 **Author:** jane.smith@company.com
 **Change type:** MINOR — improved date extraction reasoning
@@ -1928,7 +1922,7 @@ jobs:
         title: 'Ce que les tests automatisés détectent avant la mise en production d\'un changement de prompt',
         content: [
           '**Les tests de régression détectent les ruptures de format ; le LLM-évaluateur détecte les baisses de qualité.** Quatre types de tests couvrent les principaux modes de défaillance avant qu\'un changement de prompt atteigne la production.',
-          'Les quatre types de tests : (1) Validation de format — vérifie que la sortie correspond au schéma attendu (structure JSON, champs obligatoires, types de données). S\'exécute en millisecondes, détecte 60–70 % des changements problématiques. (2) Comparaison de référence — compare la sortie à des réponses correctes vérifiées manuellement sur 10 à 20 entrées représentatives. Un LLM-évaluateur ou des métriques de similarité textuelle notent la comparaison. (3) Détection d\'hallucinations — identifie les affirmations factuelles dans la sortie qui ne sont pas ancrées dans le contexte fourni. Signale toute réponse qui affirme des faits absents de l\'entrée. (4) Vérification de latence — vérifie que le temps de réponse médian reste dans une plage acceptable (ex. : p95 ≤ 3 s). Détecte les prompts qui induisent un calcul excessif.',
+          'Les quatre types de tests : (1) Validation de format — vérifie que la sortie correspond au schéma attendu (structure JSON, champs obligatoires, types de données). S\'exécute en millisecondes et détecte les changements problématiques les plus courants. (2) Comparaison de référence — compare la sortie à des réponses correctes vérifiées manuellement sur 10 à 20 entrées représentatives. Un LLM-évaluateur ou des métriques de similarité textuelle notent la comparaison. (3) Détection d\'hallucinations — identifie les affirmations factuelles dans la sortie qui ne sont pas ancrées dans le contexte fourni. Signale toute réponse qui affirme des faits absents de l\'entrée. (4) Vérification de latence — vérifie que le temps de réponse médian reste dans une plage acceptable (ex. : p95 ≤ 3 s). Détecte les prompts qui induisent un calcul excessif.',
         ],
         callouts: [
           { type: 'Key Point', label: 'Jeu de tests minimal', text: 'Un jeu de tests de référence de 10 à 20 entrées représentatives est le minimum pour tout prompt en production. Couvrir : le chemin nominal, les cas limites (entrée vide ou très longue), les entrées adversariales et les modes de défaillance connus.' },
@@ -1971,8 +1965,8 @@ jobs:
         id: 'regional-considerations',
         title: 'Exigences de conformité et d\'audit pour les modifications de prompts',
         content: [
-          'L\'IA Act européen, qui s\'applique aux systèmes à haut risque dans les secteurs de la santé, la finance, les RH et les infrastructures critiques, exige la traçabilité pour les sorties IA dans les domaines réglementés. Un historique de versions de prompts contrôlé, avec auteur, date, type de changement et preuves d\'approbation, satisfait cette exigence sans outillage supplémentaire.',
-          'Le RGPD Article 22 s\'applique aux prompts qui prennent ou soutiennent des décisions automatisées affectant des individus. Le contrôle de version et les journaux d\'audit attestent de la supervision humaine — un git log avec commits signés fournit cette preuve. La CNIL recommande l\'inférence locale pour le traitement de données professionnelles sensibles (financières, médicales, juridiques) — la gestion de versions des prompts reste applicable quel que soit le mode d\'exécution choisi. Les équipes des secteurs de la finance et de la santé soumises à des réglementations sectorielles (MiFID II, HDS, MDR) nécessitent généralement un historique de versions de prompts d\'au moins 12 mois avec stockage infalsifiable.',
+          'Des textes comme l\'AI Act européen prévoient des obligations de documentation et de conservation des traces pour les fournisseurs et déployeurs de systèmes d\'IA à haut risque ; leurs dates d\'application et leurs détails ont déjà été ajustés, consultez donc le calendrier officiel de l\'UE pour votre cas d\'usage. Un historique de versions de prompts avec auteur, date, type de changement et preuve d\'approbation peut appuyer ces obligations, mais ne rend pas à lui seul un système conforme.',
+          'L\'article 22 du RGPD concerne les décisions fondées exclusivement sur un traitement automatisé qui affectent significativement les personnes. Le contrôle de version et les journaux d\'audit peuvent servir de preuve de supervision humaine des modifications de prompts. La CNIL a publié des recommandations sur l\'IA et les données personnelles ; la gestion de versions des prompts reste utile quel que soit le mode d\'exécution choisi. Les équipes de la finance et de la santé sont souvent soumises à des attentes sectorielles de conservation et d\'inviolabilité (par exemple MiFID II, HDS, MDR) ; les durées varient selon le texte et la juridiction, à confirmer avec votre conseil juridique ou conformité. Cette section est une information générale, pas un conseil juridique.',
         ],
       },
 
@@ -1982,12 +1976,12 @@ jobs:
         faqs: [
           { q: 'Qu\'est-ce que la gestion de versions des prompts ?', a: 'La gestion de versions des prompts est un système qui trace chaque modification d\'un prompt IA, permet de revenir à toute version précédente et enregistre l\'auteur et la raison de chaque changement. Elle applique le versioning sémantique (MAJOR.MINOR.PATCH) aux prompts : MAJOR pour les changements de format de sortie, MINOR pour les améliorations de qualité, PATCH pour les corrections de fautes. Les prompts sont stockés en tant que fichiers texte dans git, les changements passent par une pull request, et les versions sont taguées.' },
           { q: 'Faut-il un dépôt git séparé pour les prompts ou peut-on utiliser le dépôt applicatif existant ?', a: 'Pour les équipes de moins de 5 personnes ou avec moins de 20 prompts : un répertoire /prompts/ dans le dépôt existant suffit. Pour les équipes plus grandes ou quand les prompts sont partagés entre plusieurs services : un dépôt dédié offre une propriété plus claire, un versioning indépendant et un contrôle d\'accès. Utilisez le dépôt applicatif si les prompts sont étroitement couplés à la logique métier ; un dépôt séparé s\'ils servent plusieurs services ou équipes.' },
-          { q: 'Quelle est la différence entre le versioning des prompts et le versioning des modèles ?', a: 'Le versioning des prompts trace les changements dans les instructions textuelles envoyées à un modèle. Le versioning des modèles trace quelle version IA (GPT-5.6, Claude Sonnet 5, Llama 4) votre application appelle. Les deux nécessitent un contrôle de version distinct. Quand vous changez de modèle cible, traitez-le comme un bump MAJOR du prompt, même si le texte est identique — des modèles différents répondent différemment au même prompt.' },
+          { q: 'Quelle est la différence entre le versioning des prompts et le versioning des modèles ?', a: 'Le versioning des prompts trace les changements dans les instructions textuelles envoyées à un modèle. Le versioning des modèles trace quel modèle d\'IA et quelle version votre application appelle. Les deux nécessitent un contrôle de version distinct. Quand vous changez de modèle cible, traitez-le comme un bump MAJOR du prompt, même si le texte est identique — des modèles différents répondent différemment au même prompt.' },
           { q: 'Quelle est la taille minimale recommandée d\'un jeu de tests pour un prompt en production ?', a: '10 à 20 cas de tests de référence est le minimum. Couvrir : le chemin nominal, les cas limites (entrée vide, entrée très longue), les entrées adversariales (tentatives de contourner les instructions) et les modes de défaillance connus. Moins de 10 cas passe à côté de trop nombreux cas limites ; plus de 50 est coûteux à maintenir sans bénéfice proportionnel.' },
-          { q: 'Comment gérer le versioning quand le même prompt est utilisé sur plusieurs modèles ?', a: 'Maintenez un historique de versions distinct par combinaison prompt+modèle. Utilisez un en-tête de métadonnées dans votre fichier de prompt : `# version: 2.1.0 | model: gpt-4o`. Lors du déploiement sur un nouveau modèle, créez un nouveau fichier de variante plutôt que d\'écraser l\'existant. Exécutez votre jeu de tests de référence complet sur chaque variante de modèle avant de la promouvoir en production.' },
+          { q: 'Comment gérer le versioning quand le même prompt est utilisé sur plusieurs modèles ?', a: 'Maintenez un historique de versions distinct par combinaison prompt+modèle. Utilisez un en-tête de métadonnées dans votre fichier de prompt : `# version: X.Y.Z | model: model-a`. Lors du déploiement sur un nouveau modèle, créez un nouveau fichier de variante plutôt que d\'écraser l\'existant. Exécutez votre jeu de tests de référence complet sur chaque variante de modèle avant de la promouvoir en production.' },
           { q: 'Faut-il incrémenter la version pour chaque modification de formulation ?', a: 'Oui — chaque changement incrémente la version à un niveau quelconque. Corrections de fautes : PATCH. Améliorations de qualité sans changement de format : MINOR. Changements de format ou de structure qui brisent les parseurs en aval : MAJOR. Ne jamais sauter l\'incrément — même un petit changement de formulation peut modifier le comportement du modèle de façon inattendue, et un changement non versionné ne peut pas être annulé.' },
-          { q: 'Quels outils supportent nativement la gestion de versions des prompts ?', a: 'Braintrust, PromptLayer et Vellum proposent un versioning natif des prompts avec des tableaux de bord permettant de comparer les versions, d\'exécuter des évaluations et de consulter l\'historique des diffs. LangSmith intègre le suivi de versions dans son hub. Pour des configurations plus simples, git avec un répertoire /prompts/ fonctionne bien — les prompts sont des fichiers texte, et git gère nativement le diff, l\'historique et le rollback.' },
-          { q: 'Comment faire un rollback de prompt sans git ?', a: 'Si vous utilisez une plateforme de gestion de prompts (Braintrust, Vellum, PromptLayer), utilisez l\'historique de versions intégré pour revenir à la version précédente approuvée. Si vos prompts sont stockés dans des variables d\'environnement, conservez une sauvegarde avant chaque changement et restaurez-la via votre pipeline de déploiement. Pour la suite, ajoutez au minimum un fichier CHANGELOG.md — même sans git, il vous donnera une référence de rollback.' },
+          { q: 'Quels outils supportent nativement la gestion de versions des prompts ?', a: 'Braintrust et PromptLayer proposent un versioning natif des prompts avec des tableaux de bord permettant de comparer les versions, d\'exécuter des évaluations et de consulter l\'historique des diffs. LangSmith intègre le suivi de versions dans son hub. Pour des configurations plus simples, git avec un répertoire /prompts/ fonctionne bien — les prompts sont des fichiers texte, et git gère nativement le diff, l\'historique et le rollback.' },
+          { q: 'Comment faire un rollback de prompt sans git ?', a: 'Si vous utilisez une plateforme de gestion de prompts (Braintrust, PromptLayer), utilisez l\'historique de versions intégré pour revenir à la version précédente approuvée. Si vos prompts sont stockés dans des variables d\'environnement, conservez une sauvegarde avant chaque changement et restaurez-la via votre pipeline de déploiement. Pour la suite, ajoutez au minimum un fichier CHANGELOG.md — même sans git, il vous donnera une référence de rollback.' },
         ],
       },
 
@@ -2016,20 +2010,19 @@ jobs:
   },
 
   ja: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-27',
+    freshness_tier: 'evergreen',
     theme: 'チーム運用 & ガバナンス',
     designSkin: 'hub',
     heroImage: '/images/prompt-version-control-overview-hero-ja.webp',
     title: 'プロンプトのバージョン管理：追跡・ロールバック・チームワークフロー',
     intro: 'バージョン管理のないプロンプトはサイレントに失敗します。変更履歴がなければ、プロンプト更新で出力品質が低下した際のロールバック手段がありません。セマンティックバージョニング（MAJOR.MINOR.PATCH）・Gitブランチワークフロー・自動回帰テストにより、ソフトウェア開発チームがコードに適用する規律をプロンプト管理にも実現できます。',
     publishDate: '2026-04-30',
-    dateModified: '2026-07-13',
+    dateModified: '2026-11-20',
     educationalLevel: 'Advanced',
     audience: 'プロダクション環境でLLMプロンプトを管理する開発者、プロンプトエンジニア、エンジニアリングチームリード',
     primaryTerm: 'プロンプトのバージョン管理',
     readTime: '10分で読める',
-    seoTitle: 'プロンプトのバージョン管理：Gitワークフロー・ロールバック・自動テストの実践ガイド',
+    seoTitle: 'プロンプトのバージョン管理：Git・ロールバック実践ガイド',
     metaDescription: 'バージョン管理なしのプロンプトはサイレントに失敗します。MAJOR.MINOR.PATCH方式・Gitブランチワークフロー・自動回帰テストをすべてのプロンプト変更に適用し、品質低下を即座に検出・ロールバックしてください。',
     leadAnswerBlock: '**プロンプトのバージョン管理は、セマンティックバージョニング（MAJOR.MINOR.PATCH）とGitワークフローを使い、AIプロンプトへのすべての変更を追跡します。即時ロールバック・チーム協業・回帰検出を可能にし、コードに適用されてきた規律をプロンプトにも実現します。**',
     quickFacts: [
@@ -2059,7 +2052,7 @@ jobs:
       headline: 'プロンプトのバージョン管理：追跡・ロールバック・チームワークフロー',
       description: 'バージョン管理なしのプロンプトはサイレントに失敗します。MAJOR.MINOR.PATCH方式・Gitブランチワークフロー・自動回帰テストをすべてのプロンプト変更に適用し、品質低下を即座に検出・ロールバックしてください。',
       datePublished: '2026-04-30',
-      dateModified: '2026-07-13',
+      dateModified: '2026-11-20',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -2149,13 +2142,13 @@ jobs:
         ],
         columns: ['変更タイプ', 'バンプのタイミング', '例', '後方互換性'],
         rows: [
-          { '変更タイプ': 'MAJOR', 'バンプのタイミング': '出力フォーマット変更——JSONからmarkdown、新規必須フィールド、フィールド削除', '例': 'v1.2.0 → v2.0.0', '後方互換性': 'なし——すべての呼び出し元を更新する必要がある' },
-          { '変更タイプ': 'MINOR', 'バンプのタイミング': '品質改善・レイテンシ最適化・指示遵守の向上', '例': 'v1.2.0 → v1.3.0', '後方互換性': 'あり——安全に採用可能' },
-          { '変更タイプ': 'PATCH', 'バンプのタイミング': '誤字修正・明確化・モデルの動作を変えない軽微な文言変更', '例': 'v1.2.0 → v1.2.1', '後方互換性': 'あり——動作変更なし' },
+          { '変更タイプ': 'MAJOR', 'バンプのタイミング': '出力フォーマット変更——JSONからmarkdown、新規必須フィールド、フィールド削除', '例': 'vX.Y.Z → v(X+1).0.0', '後方互換性': 'なし——すべての呼び出し元を更新する必要がある' },
+          { '変更タイプ': 'MINOR', 'バンプのタイミング': '品質改善・レイテンシ最適化・指示遵守の向上', '例': 'vX.Y.Z → vX.(Y+1).0', '後方互換性': 'あり——安全に採用可能' },
+          { '変更タイプ': 'PATCH', 'バンプのタイミング': '誤字修正・明確化・モデルの動作を変えない軽微な文言変更', '例': 'vX.Y.Z → vX.Y.(Z+1)', '後方互換性': 'あり——動作変更なし' },
         ],
         callouts: [
           { type: 'Key Point', label: 'MAJORのトリガー', text: 'プロンプトの出力を解析する下流コードが壊れる場合は常にMAJORをバンプします。出力がJSON配列からmarkdownリストに変わった場合、内容が同一でもMAJORバンプです。' },
-          { type: 'Pro Tip', label: 'gitでタグ付け', text: 'マージ後に毎回バージョンをタグ付けします：`git tag v2.1.0 -m "抽出プロンプトの日付推論を改善"` 。ロールバック用の永続的な参照が作成されます。' },
+          { type: 'Pro Tip', label: 'gitでタグ付け', text: 'マージ後に毎回バージョンをタグ付けします：`git tag vX.Y.Z -m "抽出プロンプトの日付推論を改善"` 。ロールバック用の永続的な参照が作成されます。' },
         ],
       },
 
@@ -2167,10 +2160,10 @@ jobs:
         ],
         numberedItems: [
           'featureブランチを作成：`git checkout -b feature/add-json-output`。`feature/`（新機能）・`fix/`（回帰修正）・`experiment/`（A/Bテスト）のプレフィックスを使用。',
-          '`/prompts/[name].txt` のプロンプトファイルを編集。先頭のバージョンコメントを更新：`# version: 2.0.0 | changed: JSON出力形式 | author: jane`。',
+          '`/prompts/[name].txt` のプロンプトファイルを編集。先頭のバージョンコメントを更新：`# version: X.Y.Z | changed: JSON出力形式 | author: jane`。',
           'ゴールデンテストセットに対して自動回帰スイートを実行（最低10件）。フォーマット検証・ゴールデン回答との出力比較・ハルシネーションフラグ・レイテンシをカバーします。PR作成前にすべてのテストがパスする必要があります。',
           '変更内容・理由・バージョンバンプ（MAJOR/MINOR/PATCH）・期待される出力デルタを記載したPRを作成。レビュアーが確認する項目：明確さ・ハルシネーションリスク・出力フォーマット・セキュリティ。',
-          '承認後、mainにマージしてリリースをタグ付け：`git tag v2.0.0 -m "JSON出力形式 — MAJOR"` 、続けて `git push origin v2.0.0`。',
+          '承認後、mainにマージしてリリースをタグ付け：`git tag vX.Y.Z -m "JSON出力形式 — MAJOR"` 、続けて `git push origin vX.Y.Z`。',
         ],
         codeBlock: `# .github/workflows/prompt-regression.yml
 name: Prompt Regression Tests
@@ -2181,9 +2174,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run prompt regression tests
         run: npm run test:prompts
         env:
@@ -2203,13 +2196,13 @@ jobs:
         ],
         columns: ['フィールド', '必須', '例'],
         rows: [
-          { 'フィールド': 'version', '必須': 'はい', '例': '`v2.1.0`' },
-          { 'フィールド': 'date', '必須': 'はい', '例': '`2026-04-30`' },
+          { 'フィールド': 'version', '必須': 'はい', '例': '`vX.Y.Z`' },
+          { 'フィールド': 'date', '必須': 'はい', '例': '`YYYY-MM-DD`' },
           { 'フィールド': 'author', '必須': 'はい', '例': '`jane.smith@company.com`' },
           { 'フィールド': 'change type', '必須': 'はい', '例': '`MINOR — 日付抽出の推論を改善`' },
           { 'フィールド': 'expected output delta', '必須': 'はい', '例': '`日付フィールドがISO 8601（YYYY-MM-DD）で一貫して出力されるようになります。以前：エッジケースの約30%でMM/DD/YYYYが返される。`' },
         ],
-        codeBlock: `## [v2.1.0] — 2026-04-30
+        codeBlock: `## [vX.Y.Z] — YYYY-MM-DD
 
 **Author:** jane.smith@company.com
 **Change type:** MINOR — improved date extraction reasoning
@@ -2259,7 +2252,7 @@ jobs:
         title: 'プロンプト変更リリース前に自動テストが検出する問題',
         content: [
           '**回帰テストはフォーマット崩れを検出し、LLM-as-judgeは品質低下を検出します。** 4種類のテストで、プロンプト変更がプロダクションに到達する前の主要な失敗モードをカバーします。',
-          '4種類のテスト：（1）フォーマット検証——出力が期待されるスキーマ（JSON構造・必須フィールド・データ型）に一致することをアサート。ミリ秒で実行され、破壊的変更の60〜70%を検出。（2）ゴールデンセット比較——10〜20件の代表的な入力に対してマニュアル検証済みの正解と出力を比較。LLM-as-judgeまたは文字列類似度指標でスコアリング。（3）ハルシネーションフラグ——提供されたコンテキストに基づかない出力内の事実主張を検出。入力にない事実を断言した応答にフラグを立てる。（4）レイテンシチェック——中央値のレスポンス時間が許容範囲内（例：p95 ≤ 3秒）であることをアサート。過剰なモデル計算を引き起こすプロンプトを検出。',
+          '4種類のテスト：（1）フォーマット検証——出力が期待されるスキーマ（JSON構造・必須フィールド・データ型）に一致することをアサート。ミリ秒で実行され、最も一般的な破壊的変更を検出。（2）ゴールデンセット比較——10〜20件の代表的な入力に対してマニュアル検証済みの正解と出力を比較。LLM-as-judgeまたは文字列類似度指標でスコアリング。（3）ハルシネーションフラグ——提供されたコンテキストに基づかない出力内の事実主張を検出。入力にない事実を断言した応答にフラグを立てる。（4）レイテンシチェック——中央値のレスポンス時間が許容範囲内（例：p95 ≤ 3秒）であることをアサート。過剰なモデル計算を引き起こすプロンプトを検出。',
         ],
         callouts: [
           { type: 'Key Point', label: '最小テストセット', text: 'プロダクション用プロンプトの最小ゴールデンテストセットは10〜20件です。ハッピーパス・エッジケース（空または非常に長い入力）・敵対的入力・既知の失敗パターンをカバーしてください。' },
@@ -2302,9 +2295,9 @@ jobs:
         id: 'regional-considerations',
         title: 'プロンプト変更のコンプライアンスと監査要件',
         content: [
-          '**日本（METI AIガバナンス）：** 経済産業省（METI）の「AI事業者ガイドライン」（2024年3月）は、高リスクAIシステムに対してAI利用の記録・変更履歴の管理を推奨しています。プロンプトバージョン管理の作成者記録・変更タイプ・承認ログはこのガイドラインのトレーサビリティ要件を満たします。医療・金融・重要インフラ分野では、12ヶ月以上のプロンプトバージョン履歴と改ざん防止ストレージが求められる場合があります。',
-          '**東アジア・アジア太平洋地域（データ主権）：** 日本（改正個人情報保護法）・韓国（PIPA）・シンガポール（PDPA）・マレーシア（PDPA）はデータの越境転送に関する規制を強化しています。プロンプトが個人データを処理する場合、バージョン管理済みのプロンプトリポジトリをオンプレミスまたはローカルクラウドリージョンに保持することで越境転送リスクを軽減できます。',
-          '**グローバル展開する企業向け（EU AI法）：** EU AI法は医療・金融・HR・重要インフラの高リスクシステムに対してAI出力のトレーサビリティを要求します。バージョン管理済みプロンプト履歴（作成者・日付・変更タイプ・承認記録）は追加ツールなしでこのトレーサビリティ要件を満たします。',
+          '**日本（AI事業者ガイドライン）：** 経済産業省・総務省の「AI事業者ガイドライン」は、AIの開発者・提供者・利用者に対し、利用に関する記録や変更履歴の管理を含むガバナンスの整備を促しています（法的拘束力のない指針）。プロンプトのバージョン管理で残す作成者・変更タイプ・承認ログは、こうした記録管理を支える材料になりますが、それだけでガイドラインへの適合が保証されるわけではありません。',
+          '**東アジア・アジア太平洋地域（データ主権）：** 日本（個人情報保護法）・韓国（PIPA）・シンガポール（PDPA）・マレーシア（PDPA）などは、個人データの越境転送について規定を設けています。プロンプトが個人データを処理する場合、バージョン管理済みのプロンプトリポジトリをオンプレミスまたはローカルクラウドリージョンに保持することで、越境転送リスクを軽減できる場合があります。',
+          '**グローバル展開する企業向け（EU AI法）：** EU AI法は高リスクAIシステムの提供者・利用者に文書化と記録保持の義務を定めており、適用時期や詳細は過去に調整されているため、EU向けに展開する場合は公式スケジュールを確認してください。バージョン管理済みプロンプト履歴は記録保持を支えますが、それだけで適合が保証されるものではありません。医療・金融分野の業界規制では保存期間などの要件が別途定められる場合があるため、法務・コンプライアンス担当に確認してください。本節は一般的な情報であり、法的助言ではありません。',
         ],
       },
 
@@ -2322,7 +2315,7 @@ jobs:
           },
           {
             q: 'プロンプトのバージョン管理とモデルのバージョン管理の違いは何ですか？',
-            a: 'プロンプトのバージョン管理は、モデルに送信するテキスト指示への変更を追跡します。モデルのバージョン管理は、アプリケーションが呼び出すAIのバージョン（GPT-5.6・Claude Sonnet 5・Llama 4）を追跡します。両方に別個のバージョン管理が必要です。対象モデルを変更する場合、プロンプトテキストが同一でもMAJORバンプとして扱ってください。異なるモデルは同じプロンプトに対して異なる応答を返します。',
+            a: 'プロンプトのバージョン管理は、モデルに送信するテキスト指示への変更を追跡します。モデルのバージョン管理は、アプリケーションが呼び出すAIモデルとそのバージョンを追跡します。両方に別個のバージョン管理が必要です。対象モデルを変更する場合、プロンプトテキストが同一でもMAJORバンプとして扱ってください。異なるモデルは同じプロンプトに対して異なる応答を返します。',
           },
           {
             q: 'プロダクション用プロンプトの最小テストスイートサイズは？',
@@ -2330,7 +2323,7 @@ jobs:
           },
           {
             q: '同じプロンプトを複数のモデルで使用する場合のバージョン管理は？',
-            a: 'プロンプト＋モデルの組み合わせごとに別個のバージョン履歴を管理してください。プロンプトファイルにメタデータヘッダーを使用します：`# version: 2.1.0 | model: gpt-4o`。新しいモデルにデプロイする際は既存ファイルを上書きせず、新しいバリアントファイルを作成します。昇格前にすべてのモデルバリアントに対してゴールデンテストスイートを実行してください。',
+            a: 'プロンプト＋モデルの組み合わせごとに別個のバージョン履歴を管理してください。プロンプトファイルにメタデータヘッダーを使用します：`# version: X.Y.Z | model: model-a`。新しいモデルにデプロイする際は既存ファイルを上書きせず、新しいバリアントファイルを作成します。昇格前にすべてのモデルバリアントに対してゴールデンテストスイートを実行してください。',
           },
           {
             q: '文言の変更ごとにバージョンを上げる必要がありますか？',
@@ -2338,19 +2331,19 @@ jobs:
           },
           {
             q: 'プロンプトのバージョン管理をネイティブにサポートするツールは？',
-            a: 'Braintrust・PromptLayer・Vellumは、バージョン比較・評価実行・差分履歴表示のUIダッシュボードを持つネイティブのプロンプトバージョニングを提供します。LangSmithはそのハブにプロンプトバージョン追跡機能を内蔵しています。よりシンプルな設定には、/prompts/ディレクトリを使ったgitが有効です。プロンプトはテキストファイルであり、gitが差分・履歴・ロールバックをネイティブに処理します。',
+            a: 'Braintrust・PromptLayerは、バージョン比較・評価実行・差分履歴表示のUIダッシュボードを持つネイティブのプロンプトバージョニングを提供します。LangSmithはそのハブにプロンプトバージョン追跡機能を内蔵しています。よりシンプルな設定には、/prompts/ディレクトリを使ったgitが有効です。プロンプトはテキストファイルであり、gitが差分・履歴・ロールバックをネイティブに処理します。',
           },
           {
             q: 'gitを使用していない場合のプロンプトのロールバック方法は？',
-            a: 'プロンプト管理プラットフォーム（Braintrust・Vellum・PromptLayer）を使用している場合は、組み込みのバージョン履歴を使って以前の承認済みバージョンに戻します。環境変数でプロンプトを保存している場合は、変更前にバックアップを保持し、デプロイパイプライン経由で復元します。今後のためにCHANGELOG.mdファイルを最低限追加してください——gitがなくてもロールバックの参照になります。',
+            a: 'プロンプト管理プラットフォーム（Braintrust・PromptLayer）を使用している場合は、組み込みのバージョン履歴を使って以前の承認済みバージョンに戻します。環境変数でプロンプトを保存している場合は、変更前にバックアップを保持し、デプロイパイプライン経由で復元します。今後のためにCHANGELOG.mdファイルを最低限追加してください——gitがなくてもロールバックの参照になります。',
           },
           {
             q: 'プロンプトのバージョン管理にMETI AIガバナンスガイドラインはどう関係しますか？',
-            a: '経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、AI利用事業者に対してAI利用の記録・変更履歴の管理を推奨しています。プロンプトバージョン管理の変更履歴・作成者記録・承認ログは、このガイドラインが求めるトレーサビリティを満たします。医療・金融・インフラ分野では、さらに厳密な記録保持（12ヶ月以上）が求められる場合があります。',
+            a: '経済産業省・総務省の「AI事業者ガイドライン」は、AI事業者に対してAI利用の記録・変更履歴の管理を含むガバナンスの整備を促しています（法的拘束力のない指針）。プロンプトバージョン管理の変更履歴・作成者記録・承認ログは、こうした記録管理を支える材料になります。医療・金融・インフラ分野では、業界規制により保存期間などの要件が別途定められる場合があるため、法務・コンプライアンス担当に確認してください。',
           },
           {
             q: '日本のエンタープライズ環境でプロンプト管理を導入するポイントは？',
-            a: '日本の大企業では、プロンプト変更に対するドキュメント化・承認プロセスが重要視されます。具体的な導入ポイント：（1）プロンプトリポジトリをGitHub Enterpriseなど社内システムで管理、（2）変更はすべてPRレビュー必須で承認者を明記、（3）変更ログにビジネス要件との関連付けを記録、（4）四半期ごとのプロンプト監査を実施。セキュリティ要件が厳しい場合はBraintrust・VellumのオンプレミスオプションでGDPR相当のデータ管理を確保してください。',
+            a: '日本の大企業では、プロンプト変更に対するドキュメント化・承認プロセスが重要視されます。具体的な導入ポイント：（1）プロンプトリポジトリをGitHub Enterpriseなど社内システムで管理、（2）変更はすべてPRレビュー必須で承認者を明記、（3）変更ログにビジネス要件との関連付けを記録、（4）四半期ごとのプロンプト監査を実施。セキュリティ要件が厳しい場合は、各ベンダーの公式ドキュメントでデータの処理・保管場所を確認し、必要に応じて自社管理のGitリポジトリで運用してください。',
           },
         ],
       },
@@ -2380,21 +2373,20 @@ jobs:
   },
 
   zh: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-27',
+    freshness_tier: 'evergreen',
     theme: '团队运营与治理',
     designSkin: 'hub',
     heroImage: '/images/prompt-version-control-overview-hero-zh.webp',
     title: 'Prompt 版本控制：追踪、回滚与团队工作流',
     intro: '未版本化的 Prompt 会静默失败——没有变更历史，当 Prompt 更新降低输出质量或破坏下游解析器时，就无法回滚。语义化版本控制（MAJOR.MINOR.PATCH）、Git 分支工作流、自动化回归测试，将软件团队管理代码的规范同等应用于 Prompt 管理。',
     publishDate: '2026-04-30',
-    dateModified: '2026-07-13',
+    dateModified: '2026-11-20',
     educationalLevel: 'Advanced',
     audience: '管理生产环境 LLM Prompt 的开发者、Prompt 工程师、工程团队负责人',
     primaryTerm: 'Prompt 版本控制',
     readTime: '阅读约10分钟',
-    seoTitle: 'Prompt 版本控制：用 Git 工作流与语义化版本防止静默失败',
-    metaDescription: '未版本化的 Prompt 会静默失败——无变更历史，质量下降无法回滚。对每次 Prompt 变更应用 MAJOR.MINOR.PATCH 语义化版本控制和 Git 分支工作流，每个 PR 自动回归测试，每次合并打版本标签，回滚只需 git revert。',
+    seoTitle: 'Prompt 版本控制：Git 工作流、语义化版本与回滚指南',
+    metaDescription: '未版本化的 Prompt 会静默失败，没有历史就无法回滚。对每次 Prompt 变更应用 MAJOR.MINOR.PATCH 版本控制、Git 分支工作流和自动回归测试。',
     leadAnswerBlock: '**Prompt 版本控制使用语义化版本控制（MAJOR.MINOR.PATCH）和 Git 工作流追踪每次 AI Prompt 的变更。它实现即时回滚、团队协作和回归检测——将代码管理的规范同等应用于 Prompt 管理。**',
     quickFacts: [
       'Prompt 语义化版本控制：输出格式变更升级 MAJOR，质量改善升级 MINOR，修复错别字升级 PATCH',
@@ -2423,7 +2415,7 @@ jobs:
       headline: 'Prompt 版本控制：追踪、回滚与团队工作流',
       description: '未版本化的 Prompt 会静默失败。运用 MAJOR.MINOR.PATCH 语义化版本控制、Git 分支工作流和自动化回归测试，管理每一次 Prompt 变更，实现快速回滚。',
       datePublished: '2026-04-30',
-      dateModified: '2026-07-13',
+      dateModified: '2026-11-20',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -2513,13 +2505,13 @@ jobs:
         ],
         columns: ['变更类型', '何时升级', '示例', '向后兼容？'],
         rows: [
-          { '变更类型': 'MAJOR', '何时升级': '输出格式变更——JSON 转 Markdown、新增必填字段、删除字段', '示例': 'v1.2.0 → v2.0.0', '向后兼容？': '否——需更新所有调用方' },
-          { '变更类型': 'MINOR', '何时升级': '质量改善、延迟优化、指令遵循改善', '示例': 'v1.2.0 → v1.3.0', '向后兼容？': '是——可安全采用' },
-          { '变更类型': 'PATCH', '何时升级': '修复错别字、补充说明、不影响模型行为的微小措辞调整', '示例': 'v1.2.0 → v1.2.1', '向后兼容？': '是——预期无行为变化' },
+          { '变更类型': 'MAJOR', '何时升级': '输出格式变更——JSON 转 Markdown、新增必填字段、删除字段', '示例': 'vX.Y.Z → v(X+1).0.0', '向后兼容？': '否——需更新所有调用方' },
+          { '变更类型': 'MINOR', '何时升级': '质量改善、延迟优化、指令遵循改善', '示例': 'vX.Y.Z → vX.(Y+1).0', '向后兼容？': '是——可安全采用' },
+          { '变更类型': 'PATCH', '何时升级': '修复错别字、补充说明、不影响模型行为的微小措辞调整', '示例': 'vX.Y.Z → vX.Y.(Z+1)', '向后兼容？': '是——预期无行为变化' },
         ],
         callouts: [
           { type: 'Key Point', label: 'MAJOR 触发条件', text: '任何时候解析 Prompt 输出的下游代码会崩溃，就需要升级 MAJOR。如果输出从 JSON 数组变为 Markdown 列表，即使内容相同，这也是 MAJOR 升级。' },
-          { type: 'Pro Tip', label: '在 git 中打标签', text: '每次合并后打版本标签：`git tag v2.1.0 -m "改善提取 Prompt 中的日期推理"`。这创建了用于回滚的永久引用。' },
+          { type: 'Pro Tip', label: '在 git 中打标签', text: '每次合并后打版本标签：`git tag vX.Y.Z -m "改善提取 Prompt 中的日期推理"`。这创建了用于回滚的永久引用。' },
         ],
       },
 
@@ -2531,10 +2523,10 @@ jobs:
         ],
         numberedItems: [
           '创建功能分支：`git checkout -b feature/add-json-output`。使用前缀 `feature/`（新功能）、`fix/`（回归修复）或 `experiment/`（A/B 测试）。',
-          '编辑 `/prompts/[name].txt` 中的 Prompt 文件。更新顶部版本注释：`# version: 2.0.0 | changed: JSON 输出格式 | author: jane`。',
+          '编辑 `/prompts/[name].txt` 中的 Prompt 文件。更新顶部版本注释：`# version: X.Y.Z | changed: JSON 输出格式 | author: jane`。',
           '对黄金测试集运行自动化回归套件（最少 10 个用例）。测试需涵盖：格式验证、与黄金答案的输出对比、幻觉标记和延迟检查。开启 PR 前所有测试必须通过。',
           '开启 PR，描述包含：变更内容、原因、版本升级类型（MAJOR/MINOR/PATCH）和预期输出差异。审核人检查：清晰度、幻觉风险、输出格式和安全性。',
-          '审批通过后合并至 main 并打发布标签：`git tag v2.0.0 -m "JSON 输出格式 — MAJOR"`，然后 `git push origin v2.0.0`。',
+          '审批通过后合并至 main 并打发布标签：`git tag vX.Y.Z -m "JSON 输出格式 — MAJOR"`，然后 `git push origin vX.Y.Z`。',
         ],
         codeBlock: `# .github/workflows/prompt-regression.yml
 name: Prompt Regression Tests
@@ -2545,9 +2537,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run prompt regression tests
         run: npm run test:prompts
         env:
@@ -2567,13 +2559,13 @@ jobs:
         ],
         columns: ['字段', '必填', '示例'],
         rows: [
-          { '字段': 'version', '必填': '是', '示例': '`v2.1.0`' },
-          { '字段': 'date', '必填': '是', '示例': '`2026-04-30`' },
+          { '字段': 'version', '必填': '是', '示例': '`vX.Y.Z`' },
+          { '字段': 'date', '必填': '是', '示例': '`YYYY-MM-DD`' },
           { '字段': 'author', '必填': '是', '示例': '`jane.smith@company.com`' },
           { '字段': 'change type', '必填': '是', '示例': '`MINOR — 改善日期提取推理`' },
           { '字段': 'expected output delta', '必填': '是', '示例': '`日期字段现在始终使用 ISO 8601（YYYY-MM-DD）格式。之前：约 30% 的边界情况返回 MM/DD/YYYY。`' },
         ],
-        codeBlock: `## [v2.1.0] — 2026-04-30
+        codeBlock: `## [vX.Y.Z] — YYYY-MM-DD
 
 **Author:** jane.smith@company.com
 **Change type:** MINOR — improved date extraction reasoning
@@ -2623,7 +2615,7 @@ jobs:
         title: '自动化测试在 Prompt 变更发布前能发现什么',
         content: [
           '**回归测试检测格式崩溃；LLM 评判检测质量下降。** 四种测试类型覆盖 Prompt 变更进入生产前的主要失败模式。',
-          '四种测试类型：（1）格式验证——断言输出符合预期 schema（JSON 结构、必填字段、数据类型）。毫秒级运行，捕捉 60–70% 的破坏性变更。（2）黄金集对比——将输出与 10–20 个代表性输入的人工验证正确答案进行比较。LLM 评判或字符串相似度指标评分。（3）幻觉标记——检测输出中不基于提供上下文的事实断言。标记任何断言输入中不存在事实的响应。（4）延迟检查——断言中位响应时间在可接受范围内（如 p95 ≤ 3s）。捕捉导致过多模型计算的 Prompt。',
+          '四种测试类型：（1）格式验证——断言输出符合预期 schema（JSON 结构、必填字段、数据类型）。毫秒级运行，可捕捉最常见的破坏性变更。（2）黄金集对比——将输出与 10–20 个代表性输入的人工验证正确答案进行比较。LLM 评判或字符串相似度指标评分。（3）幻觉标记——检测输出中不基于提供上下文的事实断言。标记任何断言输入中不存在事实的响应。（4）延迟检查——断言中位响应时间在可接受范围内（如 p95 ≤ 3s）。捕捉导致过多模型计算的 Prompt。',
         ],
         callouts: [
           { type: 'Key Point', label: '最小测试集', text: '任何生产 Prompt 的最低标准是 10–20 个代表性输入的黄金测试集。需覆盖：正常路径、边界情况（空输入/超长输入）、对抗性输入以及已知失败模式。' },
@@ -2666,9 +2658,9 @@ jobs:
         id: 'regional-considerations',
         title: 'Prompt 版本控制的合规与审计要求',
         content: [
-          '**中国（数据安全法）** 中国 2021 年《数据安全法》要求对重要数据处理活动建立数据分类分级制度和安全审查机制。对于使用 AI 系统处理重要数据或核心数据的企业，Prompt 版本历史（包含版本号、变更时间、操作人及审批记录）可作为数据处理活动记录的技术证据。使用 Qwen3 等本地部署模型可满足数据本地化处理要求，规避 Prompt 内容跨境传输的合规风险。',
-          '**亚太地区（数据跨境）** 亚太各经济体对 AI 系统数据跨境流动有差异化要求。新加坡 PDPA、日本 APPI 及 ASEAN 跨境数据流动框架均要求企业能够追溯 AI 输出的生成过程。版本化的 Prompt 历史结合 Git 签名提交，可提供 AI 决策过程的完整证据链，满足各地数据治理合规要求。',
-          '**企业部署** 金融、医疗、法律等受严格监管的行业对 AI 系统的可追溯性要求最高。银行监管机构要求金融机构能够解释 AI 辅助决策的依据；医疗机构需保留 AI 输出的完整变更历史以满足医疗质量管理规范；律师事务所需证明 AI 生成内容经过人工审查和版本管控。建议此类机构保留至少 12 个月的 Prompt 版本历史，并采用防篡改存储方案。',
+          '**中国（数据安全法）** 《数据安全法》要求开展数据处理活动的组织建立数据安全管理制度，并对重要数据实行分类分级保护。Prompt 版本历史（包含版本号、变更时间、操作人及审批记录）可作为内部数据处理活动记录的辅助材料，但不能单独证明合规。若 Prompt 含个人信息或重要数据，请结合《个人信息保护法》及跨境传输规则，并咨询法务或合规顾问。',
+          '**亚太地区（数据跨境）** 亚太各经济体对数据跨境流动的要求不尽相同（例如新加坡 PDPA、日本 APPI）。若 Prompt 中包含个人数据，应先确认数据存放地点与跨境传输规则；版本化的 Prompt 历史配合 Git 签名提交，可帮助记录“何时发送了哪些指令”，但具体合规要求以各地法规为准。',
+          '**企业部署** 金融、医疗、法律等受严格监管的行业通常对 AI 系统的可追溯性有更高期望。版本化的 Prompt 历史有助于说明变更依据、审批人和变更时间；具体保存期限和存储要求因监管规则而异，请与法务或合规部门确认。本节为一般性信息，不构成法律意见。',
         ],
       },
 
@@ -2686,7 +2678,7 @@ jobs:
           },
           {
             q: 'Prompt 版本控制与模型版本控制有何区别？',
-            a: 'Prompt 版本控制追踪发送给模型的文本指令的变更。模型版本控制追踪应用程序调用的 AI 版本（GPT-5.6、Claude Sonnet 5、Llama 4）。两者都需要独立的版本控制。切换目标模型时，即使 Prompt 文本相同，也应视为 MAJOR 版本升级——不同模型对相同 Prompt 的响应可能不同。',
+            a: 'Prompt 版本控制追踪发送给模型的文本指令的变更。模型版本控制追踪应用程序调用的 AI 模型及其版本。两者都需要独立的版本控制。切换目标模型时，即使 Prompt 文本相同，也应视为 MAJOR 版本升级——不同模型对相同 Prompt 的响应可能不同。',
           },
           {
             q: '生产 Prompt 的最小测试集规模是多少？',
@@ -2694,7 +2686,7 @@ jobs:
           },
           {
             q: '同一 Prompt 在不同模型上使用时如何版本控制？',
-            a: '为每个 Prompt+模型组合维护独立的版本历史。在 Prompt 文件中使用元数据头：`# version: 2.1.0 | model: gpt-4o`。部署到新模型时，创建新的变体文件而非覆盖已有文件。晋升前对每个模型变体运行完整的黄金测试集。',
+            a: '为每个 Prompt+模型组合维护独立的版本历史。在 Prompt 文件中使用元数据头：`# version: X.Y.Z | model: model-a`。部署到新模型时，创建新的变体文件而非覆盖已有文件。晋升前对每个模型变体运行完整的黄金测试集。',
           },
           {
             q: '每次措辞变更都需要升级版本吗？',
@@ -2702,19 +2694,19 @@ jobs:
           },
           {
             q: '哪些工具原生支持 Prompt 版本控制？',
-            a: 'Braintrust、PromptLayer 和 Vellum 提供原生 Prompt 版本控制，具备版本比较、评估运行和差异历史查看的 UI 面板。LangSmith 在其 Hub 中内置了 Prompt 版本追踪。对于简单场景，使用 /prompts/ 目录的纯 git 方案效果很好——Prompt 是文本文件，git 原生处理差异、历史和回滚。',
+            a: 'Braintrust 和 PromptLayer 提供原生 Prompt 版本控制，具备版本比较、评估运行和差异历史查看的 UI 面板。LangSmith 在其 Hub 中内置了 Prompt 版本追踪。对于简单场景，使用 /prompts/ 目录的纯 git 方案效果很好——Prompt 是文本文件，git 原生处理差异、历史和回滚。',
           },
           {
             q: '不使用 git 时如何回滚 Prompt？',
-            a: '使用 Prompt 管理平台（Braintrust、Vellum、PromptLayer）时，通过内置版本历史回滚到之前的已批准版本。在环境变量中存储 Prompt 时，每次变更前保留备份，通过部署管道恢复。今后至少添加一个 CHANGELOG.md 文件——即使没有 git，这也能提供回滚参考。',
+            a: '使用 Prompt 管理平台（Braintrust、PromptLayer）时，通过内置版本历史回滚到之前的已批准版本。在环境变量中存储 Prompt 时，每次变更前保留备份，通过部署管道恢复。今后至少添加一个 CHANGELOG.md 文件——即使没有 git，这也能提供回滚参考。',
           },
           {
             q: '中国《数据安全法》对 Prompt 版本控制有哪些要求？',
-            a: '中国 2021 年《数据安全法》要求处理重要数据的企业建立数据安全管理制度，包括数据处理活动的记录和审计机制。对于 AI 系统，Prompt 的每次变更记录（版本号、变更时间、操作人及变更原因）可满足数据处理活动记录要求。金融、医疗等行业还需遵守行业特定规范，建议保留至少 12 个月的 Prompt 版本历史，并确保审计日志不可篡改。',
+            a: '《数据安全法》要求开展数据处理活动的组织建立数据安全管理制度。对于 AI 系统，Prompt 的变更记录（版本号、变更时间、操作人及变更原因）可作为内部记录的辅助材料，但不能单独证明合规。金融、医疗等行业还需关注行业规范，具体的保存期限和防篡改要求请与法务或合规部门确认。',
           },
           {
             q: '中国大型企业（银行、医院、律所）如何落地 Prompt 版本管理？',
-            a: '大型企业建议采用专用 Prompt 仓库，配合分支权限控制和双人审核制度。具体措施：（1）建立 Prompt 分类分级制度，区分高风险（直接影响决策）和低风险 Prompt；（2）所有生产环境 Prompt 变更须经业务和技术双重审批；（3）使用签名提交（git commit --gpg-sign）确保变更记录不可抵赖；（4）将 Prompt 版本历史归档至企业合规系统，满足监管检查要求。Braintrust 和 PromptLayer 均提供可在私有环境部署的企业版方案。',
+            a: '大型企业建议采用专用 Prompt 仓库，配合分支权限控制和双人审核制度。具体措施：（1）建立 Prompt 分类分级制度，区分高风险（直接影响决策）和低风险 Prompt；（2）所有生产环境 Prompt 变更须经业务和技术双重审批；（3）使用签名提交（git commit --gpg-sign）有助于提高变更记录的可追溯性；（4）将 Prompt 版本历史归档至企业合规系统，辅助应对监管检查。若需在私有环境部署相关工具，请以各厂商官方文档为准。',
           },
         ],
       },
@@ -2744,20 +2736,19 @@ jobs:
   },
 
   ko: {
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-27',
+    freshness_tier: 'evergreen',
     theme: 'Team Operations & Governance',
     designSkin: 'hub',
     heroImage: '/images/prompt-version-control-overview-hero-ko.webp',
     title: '프롬프트 버전 관리: 추적·롤백·팀 워크플로',
     intro: '버전 관리되지 않은 프롬프트는 조용히 실패합니다 — 변경 기록 없이는 프롬프트 업데이트가 출력 품질을 저하시키거나 다운스트림 파서를 깨뜨릴 때 롤백 경로가 없습니다. 시맨틱 버전 관리(MAJOR.MINOR.PATCH), Git 브랜치 워크플로, 자동화 회귀 테스트, 구조화된 체인지로그는 소프트웨어 팀이 이미 코드에 사용하는 동일한 규율을 프롬프트 관리에 적용합니다.',
     publishDate: '2026-04-30',
-    dateModified: '2026-07-13',
+    dateModified: '2026-11-20',
     educationalLevel: 'Advanced',
     audience: '프로덕션에서 LLM 프롬프트를 관리하는 개발자, 프롬프트 엔지니어, 엔지니어링 팀 리더',
     primaryTerm: 'Prompt Version Control',
     readTime: '10분 분량',
-    seoTitle: '프롬프트 버전 관리: Git, Semver, 롤백',
+    seoTitle: '프롬프트 버전 관리: Git, 시맨틱 버저닝, 롤백 가이드',
     metaDescription: '버전 관리되지 않은 프롬프트는 조용히 실패합니다: 롤백도 기록도 없습니다. 각 프롬프트 변경에 MAJOR.MINOR.PATCH 버전 관리와 Git을 적용하십시오.',
     leadAnswerBlock: '**프롬프트 버전 관리는 시맨틱 버전 관리(MAJOR.MINOR.PATCH)와 Git 워크플로를 사용하여 AI 프롬프트의 모든 변경을 추적합니다. 즉각적인 롤백, 팀 협업, 회귀 탐지를 가능하게 합니다 — 코드에 적용되는 동일한 규율을 프롬프트에 적용합니다.**',
     quickFacts: [
@@ -2787,7 +2778,7 @@ jobs:
       headline: '프롬프트 버전 관리: 추적·롤백·팀 워크플로',
       description: '버전 관리되지 않은 프롬프트는 조용히 실패합니다 — 기록 없이는 롤백이 없습니다. 각 프롬프트 변경에 MAJOR.MINOR.PATCH 버전 관리, Git 워크플로, 자동화 회귀 테스트를 적용하십시오.',
       datePublished: '2026-04-30',
-      dateModified: '2026-07-13',
+      dateModified: '2026-11-20',
       inLanguage: 'ko',
       proficiencyLevel: 'Advanced',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2874,13 +2865,13 @@ jobs:
         ],
         columns: ['변경 유형', '증가 시점', '예시', '하위 호환성?'],
         rows: [
-          { '변경 유형': 'MAJOR', '증가 시점': '출력 형식 변경 — JSON에서 마크다운으로, 새 필수 필드, 필드 삭제', '예시': 'v1.2.0 → v2.0.0', '하위 호환성?': '아니오 — 모든 호출자 업데이트' },
-          { '변경 유형': 'MINOR', '증가 시점': '품질 향상, 지연 시간 최적화, 향상된 지침 따르기', '예시': 'v1.2.0 → v1.3.0', '하위 호환성?': '예 — 채택 안전' },
-          { '변경 유형': 'PATCH', '증가 시점': '오타 수정, 명확화, 모델 동작을 변경하지 않는 사소한 문구', '예시': 'v1.2.0 → v1.2.1', '하위 호환성?': '예 — 예상 동작 변경 없음' },
+          { '변경 유형': 'MAJOR', '증가 시점': '출력 형식 변경 — JSON에서 마크다운으로, 새 필수 필드, 필드 삭제', '예시': 'vX.Y.Z → v(X+1).0.0', '하위 호환성?': '아니오 — 모든 호출자 업데이트' },
+          { '변경 유형': 'MINOR', '증가 시점': '품질 향상, 지연 시간 최적화, 향상된 지침 따르기', '예시': 'vX.Y.Z → vX.(Y+1).0', '하위 호환성?': '예 — 채택 안전' },
+          { '변경 유형': 'PATCH', '증가 시점': '오타 수정, 명확화, 모델 동작을 변경하지 않는 사소한 문구', '예시': 'vX.Y.Z → vX.Y.(Z+1)', '하위 호환성?': '예 — 예상 동작 변경 없음' },
         ],
         callouts: [
           { type: 'Key Point', label: 'MAJOR 트리거', text: '프롬프트 출력을 파싱하는 다운스트림 코드가 중단될 때마다 MAJOR를 증가시키십시오. 출력이 JSON 배열에서 마크다운 목록으로 변경되면 내용이 동일하더라도 MAJOR 증가입니다.' },
-          { type: 'Pro Tip', label: 'Git에 태그', text: '병합 후 각 버전을 태그하십시오: `git tag v2.1.0 -m "날짜 추출 추론 향상"`. 이렇게 하면 롤백을 위한 영구 참조가 생성됩니다.' },
+          { type: 'Pro Tip', label: 'Git에 태그', text: '병합 후 각 버전을 태그하십시오: `git tag vX.Y.Z -m "날짜 추출 추론 향상"`. 이렇게 하면 롤백을 위한 영구 참조가 생성됩니다.' },
         ],
       },
 
@@ -2892,10 +2883,10 @@ jobs:
         ],
         numberedItems: [
           '기능 브랜치를 만드십시오: `git checkout -b feature/add-json-output`. 프리픽스 `feature/`(새 기능), `fix/`(회귀 수정) 또는 `experiment/`(A/B 테스트)를 사용하십시오.',
-          '`/prompts/[name].txt`의 프롬프트 파일을 편집하십시오. 상단의 버전 주석을 업데이트하십시오: `# version: 2.0.0 | changed: JSON output format | author: jane`.',
+          '`/prompts/[name].txt`의 프롬프트 파일을 편집하십시오. 상단의 버전 주석을 업데이트하십시오: `# version: X.Y.Z | changed: JSON output format | author: jane`.',
           '골든 테스트 세트(최소 10개 케이스)에 대해 자동화 회귀 스위트를 실행하십시오. 테스트는 형식 검증, 골든 응답과의 출력 비교, 환각 플래그, 지연 시간을 포함해야 합니다. PR을 열기 전에 모든 테스트가 통과해야 합니다.',
           '변경된 내용, 이유, 버전 증가(MAJOR/MINOR/PATCH), 예상 출력 변화를 포함하는 설명으로 PR을 여십시오. 검토자가 확인합니다: 명확성, 환각 위험, 출력 형식, 보안.',
-          '승인 후 main에 병합하고 버전을 태그하십시오: `git tag v2.0.0 -m "JSON output format — MAJOR"` 그런 다음 `git push origin v2.0.0`.',
+          '승인 후 main에 병합하고 버전을 태그하십시오: `git tag vX.Y.Z -m "JSON output format — MAJOR"` 그런 다음 `git push origin vX.Y.Z`.',
         ],
         codeBlock: `# .github/workflows/prompt-regression.yml
 name: Prompt Regression Tests
@@ -2906,9 +2897,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run prompt regression tests
         run: npm run test:prompts
         env:
@@ -2928,13 +2919,13 @@ jobs:
         ],
         columns: ['필드', '필수', '예시'],
         rows: [
-          { '필드': 'version', '필수': '예', '예시': '`v2.1.0`' },
-          { '필드': 'date', '필수': '예', '예시': '`2026-04-30`' },
+          { '필드': 'version', '필수': '예', '예시': '`vX.Y.Z`' },
+          { '필드': 'date', '필수': '예', '예시': '`YYYY-MM-DD`' },
           { '필드': 'author', '필수': '예', '예시': '`jane.smith@company.com`' },
           { '필드': 'change type', '필수': '예', '예시': '`MINOR — 날짜 추출 추론 향상`' },
           { '필드': 'expected output delta', '필수': '예', '예시': '`날짜 필드가 이제 일관되게 ISO 8601(YYYY-MM-DD)을 사용합니다. 이전: ~30%의 엣지 케이스에서 MM/DD/YYYY.`' },
         ],
-        codeBlock: `## [v2.1.0] — 2026-04-30
+        codeBlock: `## [vX.Y.Z] — YYYY-MM-DD
 
 **Author:** jane.smith@company.com
 **Change type:** MINOR — improved date extraction reasoning
@@ -2984,7 +2975,7 @@ jobs:
         title: '자동화 테스트가 프롬프트 변경 배포 전에 탐지하는 내용',
         content: [
           '**회귀 테스트는 형식 파손을 탐지하고; LLM-as-judge는 품질 저하를 탐지합니다.** 네 가지 테스트 유형이 프롬프트 변경이 프로덕션에 도달하기 전에 주요 실패 모드를 커버합니다.',
-          '네 가지 테스트 유형: (1) 형식 검증 — 출력이 예상 스키마와 일치하는지 확인합니다(JSON 구조, 필수 필드, 데이터 유형). 밀리초 단위로 실행되며 문제 있는 변경의 60–70%를 탐지합니다. (2) 골든 세트 비교 — 10–20개의 대표 입력에서 수동으로 검증된 올바른 응답과 출력을 비교합니다. LLM-as-judge 또는 문자열 유사성 메트릭이 비교를 채점합니다. (3) 환각 플래그 — 제공된 컨텍스트를 기반으로 하지 않은 출력의 사실적 주장을 탐지합니다. 입력에 없는 사실을 주장하는 응답을 플래그합니다. (4) 지연 시간 확인 — 중간 응답 시간이 허용 가능한 범위 내에 유지되는지 확인합니다(예: p95 ≤ 3s). 과도한 모델 계산을 일으키는 프롬프트를 탐지합니다.',
+          '네 가지 테스트 유형: (1) 형식 검증 — 출력이 예상 스키마와 일치하는지 확인합니다(JSON 구조, 필수 필드, 데이터 유형). 밀리초 단위로 실행되며 가장 흔한 문제 있는 변경을 탐지합니다. (2) 골든 세트 비교 — 10–20개의 대표 입력에서 수동으로 검증된 올바른 응답과 출력을 비교합니다. LLM-as-judge 또는 문자열 유사성 메트릭이 비교를 채점합니다. (3) 환각 플래그 — 제공된 컨텍스트를 기반으로 하지 않은 출력의 사실적 주장을 탐지합니다. 입력에 없는 사실을 주장하는 응답을 플래그합니다. (4) 지연 시간 확인 — 중간 응답 시간이 허용 가능한 범위 내에 유지되는지 확인합니다(예: p95 ≤ 3s). 과도한 모델 계산을 일으키는 프롬프트를 탐지합니다.',
         ],
         callouts: [
           { type: 'Key Point', label: '최소 테스트 세트', text: '10–20개의 대표 입력의 골든 테스트 세트는 모든 프로덕션 프롬프트의 최소 요구사항입니다. 커버하십시오: 정상 경로, 엣지 케이스(빈 입력/매우 긴 입력), 적대적 입력, 알려진 실패 모드.' },
@@ -3027,8 +3018,8 @@ jobs:
         id: 'regional-considerations',
         title: '프롬프트 변경에 대한 준수 및 감사 요구사항',
         content: [
-          'EU AI Act는 헬스케어, 금융, HR, 중요 인프라의 고위험 시스템에 적용되며, 규제 도메인의 AI 출력에 대한 추적 가능성을 요구합니다. 작성자, 날짜, 변경 유형, 승인 기록이 있는 제어된 프롬프트 버전 기록이 추가 도구 없이 추적 가능성 요구사항을 충족합니다.',
-          'GDPR 제22조는 개인에게 영향을 미치는 자동화된 결정을 내리거나 지원하는 프롬프트에 적용됩니다. 버전 관리와 감사 로그는 인간 감독을 증명합니다 — 서명된 커밋이 있는 git 로그가 이 증거를 제공합니다. MiFID II, HIPAA, MDR과 같은 부문별 규정 하에서 운영되는 헬스케어 및 금융 팀은 일반적으로 변조 방지 저장소와 함께 12개월 이상의 프롬프트 버전 기록이 필요합니다.',
+          'EU AI Act와 같은 규정은 고위험 AI 시스템의 제공자와 배포자에게 문서화 및 기록 보관 의무를 부과하며, 적용 시점과 세부 내용은 이전에 조정된 바 있으므로 사용 사례에 맞는 EU 공식 일정을 확인하십시오. 작성자, 날짜, 변경 유형, 승인 기록이 있는 프롬프트 버전 기록은 이러한 의무를 뒷받침할 수 있지만, 그것만으로 시스템이 규정을 준수하게 되는 것은 아닙니다.',
+          'GDPR 제22조는 전적으로 자동화된 처리에 기반하여 개인에게 중대한 영향을 미치는 결정에 관한 조항입니다. 버전 관리와 감사 로그는 프롬프트 변경에 대한 사람의 감독을 보여주는 근거가 될 수 있습니다. 헬스케어 및 금융 팀은 부문별 규정(예: MiFID II, HIPAA, MDR)에 따라 기록 보관과 변조 방지 기대치가 있는 경우가 많으며, 보관 기간은 규정과 관할권에 따라 다르므로 법무 또는 컴플라이언스 담당자에게 확인하십시오. 이 섹션은 일반 정보이며 법률 자문이 아닙니다.',
         ],
       },
 
@@ -3046,7 +3037,7 @@ jobs:
           },
           {
             q: '프롬프트 버전 관리는 모델 버전 관리와 어떻게 다릅니까?',
-            a: '프롬프트 버전 관리는 모델에 보내는 텍스트 지침의 변경을 추적합니다. 모델 버전 관리는 애플리케이션이 호출하는 AI 버전(GPT-5.6, Claude Sonnet 5, Llama 4)을 추적합니다. 둘 다 별도의 버전 관리가 필요합니다. 대상 모델을 변경할 때 프롬프트 텍스트가 동일하더라도 MAJOR 버전 증가로 취급하십시오 — 다른 모델은 동일한 프롬프트에 다르게 반응합니다.',
+            a: '프롬프트 버전 관리는 모델에 보내는 텍스트 지침의 변경을 추적합니다. 모델 버전 관리는 애플리케이션이 호출하는 AI 모델과 그 버전을 추적합니다. 둘 다 별도의 버전 관리가 필요합니다. 대상 모델을 변경할 때 프롬프트 텍스트가 동일하더라도 MAJOR 버전 증가로 취급하십시오 — 다른 모델은 동일한 프롬프트에 다르게 반응합니다.',
           },
           {
             q: '프로덕션 프롬프트를 위한 최소 권장 테스트 세트 크기는 무엇입니까?',
@@ -3054,7 +3045,7 @@ jobs:
           },
           {
             q: '동일한 프롬프트가 다른 모델에서 사용될 때 버전 관리를 어떻게 관리합니까?',
-            a: '프롬프트+모델 조합별로 별도의 버전 기록을 유지하십시오. 프롬프트 파일에 메타데이터 헤더를 사용하십시오: `# version: 2.1.0 | model: gpt-4o`. 새 모델에 배포할 때 기존 파일을 덮어쓰는 대신 새 변형 파일을 만드십시오. 프로모션하기 전에 각 모델 변형에 대해 전체 골든 테스트 세트를 실행하십시오.',
+            a: '프롬프트+모델 조합별로 별도의 버전 기록을 유지하십시오. 프롬프트 파일에 메타데이터 헤더를 사용하십시오: `# version: X.Y.Z | model: model-a`. 새 모델에 배포할 때 기존 파일을 덮어쓰는 대신 새 변형 파일을 만드십시오. 프로모션하기 전에 각 모델 변형에 대해 전체 골든 테스트 세트를 실행하십시오.',
           },
           {
             q: '모든 문구 변경이 버전을 증가시켜야 합니까?',
@@ -3062,11 +3053,11 @@ jobs:
           },
           {
             q: '기본적으로 프롬프트 버전 관리를 지원하는 도구는 무엇입니까?',
-            a: 'Braintrust, PromptLayer, Vellum은 버전 비교, 평가 실행, 차이 기록 보기를 위한 UI 대시보드와 함께 네이티브 프롬프트 버전 관리를 제공합니다. LangSmith는 허브에서 프롬프트 버전 추적을 제공합니다. [PromptQuorum](/how-it-works)은 다중 모델 검증을 추가합니다 — 배포 전에 일관되게 작동하는지 확인하기 위해 25개 이상의 공급자에서 버전 관리된 프롬프트를 실행합니다. 더 간단한 설정의 경우 /prompts/ 디렉토리가 있는 순수 Git이 잘 작동합니다 — 프롬프트는 텍스트 파일이고 Git은 차이, 기록, 롤백을 기본적으로 처리합니다.',
+            a: 'Braintrust와 PromptLayer는 버전 비교, 평가 실행, 차이 기록 보기를 위한 UI 대시보드와 함께 네이티브 프롬프트 버전 관리를 제공합니다. LangSmith는 허브에서 프롬프트 버전 추적을 제공합니다. [PromptQuorum](/how-it-works)은 다중 모델 검증을 추가합니다 — 배포 전에 일관되게 작동하는지 확인하기 위해 25개 이상의 공급자에서 버전 관리된 프롬프트를 실행합니다. 더 간단한 설정의 경우 /prompts/ 디렉토리가 있는 순수 Git이 잘 작동합니다 — 프롬프트는 텍스트 파일이고 Git은 차이, 기록, 롤백을 기본적으로 처리합니다.',
           },
           {
             q: 'Git을 사용하지 않는 경우 프롬프트를 어떻게 롤백합니까?',
-            a: '프롬프트 관리 플랫폼(Braintrust, Vellum, PromptLayer)을 사용하는 경우 내장 버전 기록을 사용하여 이전 승인된 버전으로 되돌리십시오. 환경 변수에 프롬프트를 저장하는 경우 각 변경 전에 백업을 저장하고 배포 파이프라인을 통해 복원하십시오. 앞으로는 최소한 CHANGELOG.md 파일을 추가하십시오 — Git 없이도 롤백 참조를 제공합니다.',
+            a: '프롬프트 관리 플랫폼(Braintrust, PromptLayer)을 사용하는 경우 내장 버전 기록을 사용하여 이전 승인된 버전으로 되돌리십시오. 환경 변수에 프롬프트를 저장하는 경우 각 변경 전에 백업을 저장하고 배포 파이프라인을 통해 복원하십시오. 앞으로는 최소한 CHANGELOG.md 파일을 추가하십시오 — Git 없이도 롤백 참조를 제공합니다.',
           },
         ],
       },
