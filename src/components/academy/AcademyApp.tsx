@@ -11,14 +11,14 @@ import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
 import { lessonsDone, nextOpenLesson, openLesson } from '@/lib/academy/progress'
 import { programmeScore } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
-import { LEVELS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
+import { LEVELS, TEST_FORMATS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestFormat, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { TERMS } from '@/lib/terms/content'
 import { isSiteLang, parseCustomLanguage } from '@/lib/academy/language'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
 import { Content } from './Content'
 import { LessonView } from './LessonView'
-import { QuizView } from './QuizView'
+import { QuizRouter } from './QuizRouter'
 import { ResultsView } from './ResultsView'
 import { ShareBar } from './ShareBar'
 import { useAcademyState } from './useAcademyState'
@@ -56,7 +56,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
       )}
       <div {...learnProps}>
       {state.view === 'quiz' && state.programme ? (
-        <QuizView tx={ltx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(ltx, code)} />
+        <QuizRouter tx={ltx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(ltx, code)} />
       ) : state.view === 'results' && state.programme && programmeScore(state.programme) ? (
         <ResultsView tx={tx} lang={lang} programme={state.programme} update={update} />
       ) : state.view === 'lesson' && state.programme ? (
@@ -269,6 +269,9 @@ function SetupForm({
 
       <ChoiceGroup<Level> legend={tx.levelLegend} name="academy-level" values={LEVELS} labels={tx.levels} value={draft.selfLevel} onChange={(v) => change({ selfLevel: v })} />
       <ChoiceGroup<TestMode> legend={tx.testsLegend} name="academy-tests" values={TEST_MODES} labels={tx.tests} value={draft.testMode} onChange={(v) => change({ testMode: v })} />
+      {draft.testMode !== 'none' && (
+        <ChoiceGroup<TestFormat> legend={tx.testFormatLegend} name="academy-test-format" values={TEST_FORMATS} labels={tx.testFormats} value={draft.testFormat ?? 'choice'} onChange={(v) => change({ testFormat: v })} />
+      )}
 
       <div>
         <label htmlFor="academy-language" className="block font-medium text-gray-900">
@@ -417,8 +420,9 @@ export function quickCheckKey(d: Pick<SetupDraft, 'subject' | 'availableMinutes'
   return JSON.stringify([d.subject, d.availableMinutes, d.selfLevel, d.language])
 }
 /** The setup fields a programme depends on (the quick check's plus the test mode). */
-export function programmeKey(d: Pick<SetupDraft, 'subject' | 'availableMinutes' | 'selfLevel' | 'language' | 'testMode'>): string {
-  return JSON.stringify([d.subject, d.availableMinutes, d.selfLevel, d.language, d.testMode])
+export function programmeKey(d: Pick<SetupDraft, 'subject' | 'availableMinutes' | 'selfLevel' | 'language' | 'testMode'> & { testFormat?: TestFormat }): string {
+  // The format only changes the time budget (written answers take longer), but a changed budget needs a new programme.
+  return JSON.stringify([d.subject, d.availableMinutes, d.selfLevel, d.language, d.testMode, d.testMode === 'none' ? 'choice' : (d.testFormat ?? 'choice')])
 }
 
 type Update = ReturnType<typeof useAcademyState>['update']
@@ -484,6 +488,7 @@ function QuickCheckView({ tx, draft, quickCheck, update }: { tx: AcademyCopy; dr
         availableMinutes: draft.availableMinutes,
         selfLevel: draft.selfLevel,
         testMode: draft.testMode,
+        testFormat: draft.testFormat ?? 'choice',
         language: draft.language,
         diagnostic: { estimatedLevel: summary.estimatedLevel, gaps: summary.gaps.slice(0, 12), known: summary.known.slice(0, 12) },
       })
@@ -626,6 +631,7 @@ function toProgramme(
     availableMinutes: d.availableMinutes,
     selfLevel: d.selfLevel,
     testMode: d.testMode,
+    testFormat: d.testFormat ?? 'choice',
     diagnostic: { questions: qc.questions, answers: qc.answers, gaps: summary.gaps, estimatedLevel: summary.estimatedLevel },
     objectives: plan.objectives,
     lessons,

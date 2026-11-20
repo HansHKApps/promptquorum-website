@@ -241,7 +241,9 @@ export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateM
   ctx.fillRect(p.boxX(0, W), 184.4 * MM, W * MM, 0.4 * MM)
   p.line(`${c.id}: ${m.id}`, p.x(0), 189.4, { size: 3.6, weight: 700 })
   p.line('PromptQuorum Academy · promptquorum.com/academy', p.x(W), 189.4, { size: 3, color: MUTED, align: 'end' })
-  p.paragraph(`${c.disclaimer} ${c.aiNote}`, 0, 193.3, W, { size: 2.5, color: MUTED, maxLines: 2, leading: 3 })
+  // Written answers (free / explain) are graded by AI: the certificate says so too, in a third footer line.
+  if (m.usesWrittenAnswers) p.paragraph(`${c.disclaimer} ${c.aiNote} ${tx.aiGradedNotice}`, 0, 192.6, W, { size: 2.3, color: MUTED, maxLines: 3, leading: 2.6 })
+  else p.paragraph(`${c.disclaimer} ${c.aiNote}`, 0, 193.3, W, { size: 2.5, color: MUTED, maxLines: 2, leading: 3 })
 }
 
 // ------------------------------------------------------------------------------------------------ PDF container

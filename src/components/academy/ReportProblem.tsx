@@ -24,7 +24,7 @@ export function ReportProblem({ tx, lang, context }: { tx: AcademyCopy; lang: st
       '---',
       context.lesson ? `${r.lesson}: ${context.lesson}` : '',
       q ? `${r.question}: ${q.prompt}` : '',
-      q ? `${r.options}: ${q.options.map((o, i) => `${i + 1}) ${o}`).join(' ')}` : '',
+      q && q.options.length ? `${r.options}: ${q.options.map((o, i) => `${i + 1}) ${o}`).join(' ')}` : '',
       q && q.correctIndex !== undefined ? `${r.marked}: ${q.correctIndex + 1}` : '',
       `${tx.feedbackMailLanguage}: ${lang}`,
       window.location.pathname,

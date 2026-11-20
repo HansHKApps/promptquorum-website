@@ -13,6 +13,7 @@ import { correctIndexOf, countingFinal, PASS_MARK, programmeScore } from '@/lib/
 import type { AcademyLang, Programme } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { AiBadge } from './AiBadge'
+import { creditLabel } from './credit'
 import { Content } from './Content'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
 import { renderCertificatePdf } from './certificate-pdf'
@@ -123,6 +124,8 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
       setDocBusy(false)
     }
   }
+  // Written answers (free / explain) are graded by AI: say so next to the score whenever any counted result used them.
+  const usesWritten = [...programme.progress.quizResults, ...(programme.progress.finalAttempts ?? [])].some((r) => r.openQuestions?.length)
   const retake = () =>
     update((s) => (s.programme ? { ...s, view: 'quiz', programme: { ...s.programme, progress: { ...s.programme.progress, activeQuiz: { quizId: 'final', questions: [], answers: {} } } } } : s))
 
@@ -135,11 +138,13 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
         <p className="mt-3 text-3xl font-bold text-gray-900">{tx.overallScore(score.percent)}</p>
         <p className={`mt-1 font-medium ${score.passed ? 'text-green-700' : 'text-amber-800'}`}>{score.passed ? tx.passedText(PASS_MARK) : tx.notPassedText(PASS_MARK)}</p>
         <p className="mt-1 text-sm text-gray-600">
-          {tx.quizScore(score.correct, score.total)}
+          {usesWritten ? tx.quizPoints(score.correct, score.total) : tx.quizScore(score.correct, score.total)}
           {minutes > 0 && ` · ${tx.timeSpent(tx.minutes(minutes))}`}
           {attempts > 1 && ` · ${tx.attemptOf(programme.progress.finalAttempts!.indexOf(final) + 1)}`}
         </p>
       </div>
+
+      {usesWritten && <p className="rounded-xl bg-gray-50 px-4 py-3 text-sm text-gray-700">{tx.aiGradedNotice}</p>}
 
       <div>
         <h3 className="font-medium text-gray-900">{tx.topicScores}</h3>
@@ -254,6 +259,34 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
           </div>
         )}
       </div>
+
+      {final.openQuestions && (
+        <details className="rounded-xl border border-gray-200 p-4">
+          <summary className="cursor-pointer font-medium text-gray-900">{tx.reviewAnswers}</summary>
+          <Content lang={programme.language}>
+            <ol className="mt-3 space-y-4">
+              {final.openQuestions.map((q, i) => (
+                <li key={q.id} className="space-y-1 text-sm">
+                  <p className="font-medium text-gray-900">
+                    {i + 1}. {q.prompt}
+                  </p>
+                  <p className="text-gray-800">
+                    {tx.yourAnswer}: {final.openAnswers?.[q.id] || '–'}
+                  </p>
+                  <p className={q.reveal && q.reveal.credit >= 1 ? 'text-green-800' : q.reveal && q.reveal.credit > 0 ? 'text-amber-800' : 'text-red-800'}>
+                    {creditLabel(tx, q.reveal?.credit ?? 0)}
+                  </p>
+                  {q.reveal && (
+                    <p className="text-gray-600">
+                      {tx.modelAnswerLabel}: {q.reveal.modelAnswer} <AiBadge text={tx.aiLabel} />
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </Content>
+        </details>
+      )}
 
       {final.questions && (
         <details className="rounded-xl border border-gray-200 p-4">

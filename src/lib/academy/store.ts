@@ -5,7 +5,7 @@
 import { z } from 'zod'
 import { isValidProgrammeLanguage } from './language'
 import { ACADEMY_MINUTE_OPTIONS, ACADEMY_STORAGE_KEY, ACADEMY_SUBJECT_MAX_CHARS } from './config'
-import { ACADEMY_VIEWS, LEVELS, TEST_MODES, type AcademyState, type SetupDraft } from './types'
+import { ACADEMY_VIEWS, LEVELS, TEST_FORMATS, TEST_MODES, type AcademyState, type SetupDraft } from './types'
 
 export const ACADEMY_STATE_VERSION = 1 as const
 
@@ -21,6 +21,7 @@ const draftSchema = z.object({
   availableMinutes: z.number().int().refine((n) => (ACADEMY_MINUTE_OPTIONS as readonly number[]).includes(n)),
   selfLevel: z.enum(LEVELS),
   testMode: z.enum(TEST_MODES),
+  testFormat: z.enum(TEST_FORMATS).optional().default('choice'),
   language: z.string().refine(isValidProgrammeLanguage),
   // Progress stored before the opt-in existed was saved by design then: it stays loadable and stays saved.
   saveProgress: z.boolean().optional().default(true),
@@ -117,5 +118,5 @@ export function clearAcademyState(storage: KeyValueStorage | null = browserStora
 }
 
 export function defaultDraft(language: string): SetupDraft {
-  return { subject: '', availableMinutes: 60, selfLevel: 'beginner', testMode: 'final', language, saveProgress: false, updatedAt: new Date(0).toISOString() }
+  return { subject: '', availableMinutes: 60, selfLevel: 'beginner', testMode: 'final', testFormat: 'choice', language, saveProgress: false, updatedAt: new Date(0).toISOString() }
 }
