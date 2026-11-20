@@ -2022,7 +2022,7 @@ jobs:
     audience: 'プロダクション環境でLLMプロンプトを管理する開発者、プロンプトエンジニア、エンジニアリングチームリード',
     primaryTerm: 'プロンプトのバージョン管理',
     readTime: '10分で読める',
-    seoTitle: 'プロンプトのバージョン管理：Gitワークフロー・ロールバック・自動テストの実践ガイド',
+    seoTitle: 'プロンプトのバージョン管理：Git・ロールバック実践ガイド',
     metaDescription: 'バージョン管理なしのプロンプトはサイレントに失敗します。MAJOR.MINOR.PATCH方式・Gitブランチワークフロー・自動回帰テストをすべてのプロンプト変更に適用し、品質低下を即座に検出・ロールバックしてください。',
     leadAnswerBlock: '**プロンプトのバージョン管理は、セマンティックバージョニング（MAJOR.MINOR.PATCH）とGitワークフローを使い、AIプロンプトへのすべての変更を追跡します。即時ロールバック・チーム協業・回帰検出を可能にし、コードに適用されてきた規律をプロンプトにも実現します。**',
     quickFacts: [
@@ -2385,8 +2385,8 @@ jobs:
     audience: '管理生产环境 LLM Prompt 的开发者、Prompt 工程师、工程团队负责人',
     primaryTerm: 'Prompt 版本控制',
     readTime: '阅读约10分钟',
-    seoTitle: 'Prompt 版本控制：用 Git 工作流与语义化版本防止静默失败',
-    metaDescription: '未版本化的 Prompt 会静默失败——无变更历史，质量下降无法回滚。对每次 Prompt 变更应用 MAJOR.MINOR.PATCH 语义化版本控制和 Git 分支工作流，每个 PR 自动回归测试，每次合并打版本标签，回滚只需 git revert。',
+    seoTitle: 'Prompt 版本控制：Git 工作流、语义化版本与回滚指南',
+    metaDescription: '未版本化的 Prompt 会静默失败，没有历史就无法回滚。对每次 Prompt 变更应用 MAJOR.MINOR.PATCH 版本控制、Git 分支工作流和自动回归测试。',
     leadAnswerBlock: '**Prompt 版本控制使用语义化版本控制（MAJOR.MINOR.PATCH）和 Git 工作流追踪每次 AI Prompt 的变更。它实现即时回滚、团队协作和回归检测——将代码管理的规范同等应用于 Prompt 管理。**',
     quickFacts: [
       'Prompt 语义化版本控制：输出格式变更升级 MAJOR，质量改善升级 MINOR，修复错别字升级 PATCH',
@@ -2748,7 +2748,7 @@ jobs:
     audience: '프로덕션에서 LLM 프롬프트를 관리하는 개발자, 프롬프트 엔지니어, 엔지니어링 팀 리더',
     primaryTerm: 'Prompt Version Control',
     readTime: '10분 분량',
-    seoTitle: '프롬프트 버전 관리: Git, Semver, 롤백',
+    seoTitle: '프롬프트 버전 관리: Git, 시맨틱 버저닝, 롤백 가이드',
     metaDescription: '버전 관리되지 않은 프롬프트는 조용히 실패합니다: 롤백도 기록도 없습니다. 각 프롬프트 변경에 MAJOR.MINOR.PATCH 버전 관리와 Git을 적용하십시오.',
     leadAnswerBlock: '**프롬프트 버전 관리는 시맨틱 버전 관리(MAJOR.MINOR.PATCH)와 Git 워크플로를 사용하여 AI 프롬프트의 모든 변경을 추적합니다. 즉각적인 롤백, 팀 협업, 회귀 탐지를 가능하게 합니다 — 코드에 적용되는 동일한 규율을 프롬프트에 적용합니다.**',
     quickFacts: [
