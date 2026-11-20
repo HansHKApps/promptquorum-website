@@ -9,31 +9,25 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { compareGroupTotal, compareSegmentCounts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
-// Live counts from the directory — recomputed at build time so this article never drifts from
-// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
-// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+// Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
+const SEG = compareSegmentCounts('train-operate')
+
+// Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
+// so this article never drifts from the table as the directory grows.
 const TOTAL_APP_COUNT = localAiApps.length
-const REVIEWED_TO_APPS = localAiApps.filter((a) => a.reviewSlug != null)
-const TO_FINE_TUNING = REVIEWED_TO_APPS.filter((a) => a.categories.includes('fine-tuning-lora')).length
-const TO_OBSERVABILITY_EVAL = new Set(
-  REVIEWED_TO_APPS.filter((a) => a.categories.includes('observability') || a.categories.includes('evaluation-benchmarking')).map(
-    (a) => a.slug,
-  ),
-).size
-const TO_TOTAL = new Set(
-  REVIEWED_TO_APPS.filter(
-    (a) => a.categories.includes('fine-tuning-lora') || a.categories.includes('observability') || a.categories.includes('evaluation-benchmarking'),
-  ).map((a) => a.slug),
-).size
+const TO_FINE_TUNING = SEG['fine-tuning']
+const TO_OBSERVABILITY_EVAL = SEG['observability']
+const TO_TOTAL = compareGroupTotal('train-operate')
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-21',
-    dateModified: '2026-09-21',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-21',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -68,8 +62,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'It depends on the kind of tool, so compare within one kind at a time. For fine-tuning, pick by LoRA and QLoRA support, low-VRAM training, a web UI and export format; for observability, pick by tracing, evaluations, prompt management and self-hosting. Use the table below, which is generated from each tool\'s official documentation.',
         bullets: [
-          'Fine-tuning: 4 tools compared on LoRA and QLoRA, web UI, multi-GPU training, low-VRAM mode and GGUF or Ollama export.',
-          'Observability and evaluation: 3 tools compared on tracing, evaluations, prompt management, OpenTelemetry, Docker and local LLMs.',
+          `Fine-tuning: ${SEG['fine-tuning']} tools compared on LoRA and QLoRA, web UI, multi-GPU training, low-VRAM mode and GGUF or Ollama export.`,
+          `Observability and evaluation: ${SEG['observability']} tools compared on tracing, evaluations, prompt management, OpenTelemetry, Docker and local LLMs.`,
           'A dash (—) means the project\'s documentation does not state it, not that the feature is missing.',
         ],
       },
@@ -208,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'en',
       datePublished: '2026-09-21',
-      dateModified: '2026-09-21',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -241,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-21',
-    dateModified: '2026-09-21',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-21',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -276,8 +270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Das hängt von der Art des Tools ab, vergleichen Sie also jeweils innerhalb einer Art. Beim Fine-Tuning wählen Sie nach LoRA- und QLoRA-Unterstützung, Training mit wenig VRAM, Web-Oberfläche und Exportformat; bei der Observability nach Tracing, Evaluierungen, Prompt-Verwaltung und Self-Hosting. Nutzen Sie die Tabelle unten, die aus der offiziellen Dokumentation des jeweiligen Tools erzeugt wird.',
         bullets: [
-          'Fine-Tuning: 4 Tools verglichen nach LoRA und QLoRA, Web-Oberfläche, Multi-GPU-Training, Modus für wenig VRAM und GGUF- oder Ollama-Export.',
-          'Observability und Evaluierung: 3 Tools verglichen nach Tracing, Evaluierungen, Prompt-Verwaltung, OpenTelemetry, Docker und lokalen LLMs.',
+          `Fine-Tuning: ${SEG['fine-tuning']} Tools verglichen nach LoRA und QLoRA, Web-Oberfläche, Multi-GPU-Training, Modus für wenig VRAM und GGUF- oder Ollama-Export.`,
+          `Observability und Evaluierung: ${SEG['observability']} Tools verglichen nach Tracing, Evaluierungen, Prompt-Verwaltung, OpenTelemetry, Docker und lokalen LLMs.`,
           'Ein Strich (—) bedeutet, dass die Dokumentation des Projekts es nicht angibt, nicht dass die Funktion fehlt.',
         ],
       },
@@ -416,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'de',
       datePublished: '2026-09-21',
-      dateModified: '2026-09-21',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -449,7 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-21',
-    dateModified: '2026-09-21',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-21',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -484,8 +478,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Cela dépend du type d\'outil, il faut donc comparer un type à la fois. Pour le fine-tuning, choisissez selon la prise en charge de LoRA et QLoRA, l\'entraînement à faible VRAM, une interface web et le format d\'export ; pour l\'observabilité, choisissez selon le tracing, les évaluations, la gestion des prompts et l\'auto-hébergement. Utilisez le tableau ci-dessous, généré à partir de la documentation officielle de chaque outil.',
         bullets: [
-          'Fine-tuning : 4 outils comparés sur LoRA et QLoRA, interface web, entraînement multi-GPU, mode faible VRAM et export GGUF ou Ollama.',
-          'Observabilité et évaluation : 3 outils comparés sur le tracing, les évaluations, la gestion des prompts, OpenTelemetry, Docker et les LLM locaux.',
+          `Fine-tuning : ${SEG['fine-tuning']} outils comparés sur LoRA et QLoRA, interface web, entraînement multi-GPU, mode faible VRAM et export GGUF ou Ollama.`,
+          `Observabilité et évaluation : ${SEG['observability']} outils comparés sur le tracing, les évaluations, la gestion des prompts, OpenTelemetry, Docker et les LLM locaux.`,
           'Un tiret (—) signifie que la documentation du projet ne l\'indique pas, et non que la fonctionnalité est absente.',
         ],
       },
@@ -624,7 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-21',
-      dateModified: '2026-09-21',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -657,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-21',
-    dateModified: '2026-09-21',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-21',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -692,8 +686,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende del tipo de herramienta, así que compara dentro de un solo tipo cada vez. Para fine-tuning, elige según el soporte de LoRA y QLoRA, el entrenamiento con poca VRAM, una interfaz web y el formato de exportación; para observabilidad, elige según el trazado, las evaluaciones, la gestión de prompts y el autoalojamiento. Usa la tabla de abajo, generada a partir de la documentación oficial de cada herramienta.',
         bullets: [
-          'Fine-tuning: 4 herramientas comparadas en LoRA y QLoRA, interfaz web, entrenamiento multi-GPU, modo de poca VRAM y exportación a GGUF u Ollama.',
-          'Observabilidad y evaluación: 3 herramientas comparadas en trazado, evaluaciones, gestión de prompts, OpenTelemetry, Docker y LLM locales.',
+          `Fine-tuning: ${SEG['fine-tuning']} herramientas comparadas en LoRA y QLoRA, interfaz web, entrenamiento multi-GPU, modo de poca VRAM y exportación a GGUF u Ollama.`,
+          `Observabilidad y evaluación: ${SEG['observability']} herramientas comparadas en trazado, evaluaciones, gestión de prompts, OpenTelemetry, Docker y LLM locales.`,
           'Un guion (—) significa que la documentación del proyecto no lo indica, no que la función no exista.',
         ],
       },
@@ -832,7 +826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'es',
       datePublished: '2026-09-21',
-      dateModified: '2026-09-21',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -865,7 +859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-21',
-    dateModified: '2026-09-21',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-21',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -900,8 +894,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'ツールの種類によって異なるため、1つの種類の中で比較してください。ファインチューニングなら、LoRA・QLoRAへの対応、低VRAM学習、Web UI、エクスポート形式で選びます。オブザーバビリティなら、トレーシング、評価、プロンプト管理、セルフホストで選びます。下の表は各ツールの公式ドキュメントから生成しています。',
         bullets: [
-          'ファインチューニング:4つのツールを、LoRA・QLoRA、Web UI、マルチGPU学習、低VRAMモード、GGUFまたはOllamaへのエクスポートで比較。',
-          'オブザーバビリティ・評価:3つのツールを、トレーシング、評価、プロンプト管理、OpenTelemetry、Docker、ローカルLLMで比較。',
+          `ファインチューニング:${SEG['fine-tuning']}つのツールを、LoRA・QLoRA、Web UI、マルチGPU学習、低VRAMモード、GGUFまたはOllamaへのエクスポートで比較。`,
+          `オブザーバビリティ・評価:${SEG['observability']}つのツールを、トレーシング、評価、プロンプト管理、OpenTelemetry、Docker、ローカルLLMで比較。`,
           'ダッシュ(—)は、プロジェクトのドキュメントに記載がないことを意味し、その機能がないという意味ではありません。',
         ],
       },
@@ -1040,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-21',
-      dateModified: '2026-09-21',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1073,7 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-21',
-    dateModified: '2026-09-21',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-21',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1108,8 +1102,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '这取决于工具的类别,因此每次只在同一类别内比较。微调方面,可按LoRA与QLoRA支持、低显存训练、Web界面和导出格式来选择;可观测性方面,可按追踪、评估、提示词管理和自托管来选择。请使用下方的表格,它生成自各工具的官方文档。',
         bullets: [
-          '微调:4款工具按LoRA与QLoRA、Web界面、多GPU训练、低显存模式以及GGUF或Ollama导出进行对比。',
-          '可观测性与评估:3款工具按追踪、评估、提示词管理、OpenTelemetry、Docker和本地LLM进行对比。',
+          `微调:${SEG['fine-tuning']}款工具按LoRA与QLoRA、Web界面、多GPU训练、低显存模式以及GGUF或Ollama导出进行对比。`,
+          `可观测性与评估:${SEG['observability']}款工具按追踪、评估、提示词管理、OpenTelemetry、Docker和本地LLM进行对比。`,
           '短横线(—)表示该项目的文档中没有说明,并不表示缺少该功能。',
         ],
       },
@@ -1248,7 +1242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-21',
-      dateModified: '2026-09-21',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1281,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-21',
-    dateModified: '2026-09-21',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-21',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1316,8 +1310,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende do tipo de ferramenta, então compare dentro de um tipo por vez. Para fine-tuning, escolha por suporte a LoRA e QLoRA, treinamento com pouca VRAM, interface web e formato de exportação; para observabilidade, escolha por tracing, avaliações, gerenciamento de prompts e auto-hospedagem. Use a tabela abaixo, gerada a partir da documentação oficial de cada ferramenta.',
         bullets: [
-          'Fine-tuning: 4 ferramentas comparadas em LoRA e QLoRA, interface web, treinamento multi-GPU, modo de pouca VRAM e exportação para GGUF ou Ollama.',
-          'Observabilidade e avaliação: 3 ferramentas comparadas em tracing, avaliações, gerenciamento de prompts, OpenTelemetry, Docker e LLMs locais.',
+          `Fine-tuning: ${SEG['fine-tuning']} ferramentas comparadas em LoRA e QLoRA, interface web, treinamento multi-GPU, modo de pouca VRAM e exportação para GGUF ou Ollama.`,
+          `Observabilidade e avaliação: ${SEG['observability']} ferramentas comparadas em tracing, avaliações, gerenciamento de prompts, OpenTelemetry, Docker e LLMs locais.`,
           'Um traço (—) significa que a documentação do projeto não informa isso, não que o recurso não exista.',
         ],
       },
@@ -1456,7 +1450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-21',
-      dateModified: '2026-09-21',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1489,7 +1483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-21',
-    dateModified: '2026-09-21',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-21',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1664,7 +1658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-21',
-      dateModified: '2026-09-21',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1697,7 +1691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-21',
-    dateModified: '2026-09-21',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-21',
     designSkin: 'hub',
     theme: 'Overview & Reference',
@@ -1732,8 +1726,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '도구의 종류에 따라 달라지므로 한 번에 한 종류 안에서 비교하세요. 파인튜닝은 LoRA·QLoRA 지원, 저VRAM 학습, 웹 UI, 내보내기 형식으로 고르고, 관측성은 트레이싱, 평가, 프롬프트 관리, 셀프 호스팅으로 고르면 됩니다. 각 도구의 공식 문서를 바탕으로 생성한 아래 표를 활용하세요.',
         bullets: [
-          '파인튜닝: 도구 4개를 LoRA·QLoRA, 웹 UI, 멀티 GPU 학습, 저VRAM 모드, GGUF 또는 Ollama 내보내기 기준으로 비교.',
-          '관측성·평가: 도구 3개를 트레이싱, 평가, 프롬프트 관리, OpenTelemetry, Docker, 로컬 LLM 기준으로 비교.',
+          `파인튜닝: 도구 ${SEG['fine-tuning']}개를 LoRA·QLoRA, 웹 UI, 멀티 GPU 학습, 저VRAM 모드, GGUF 또는 Ollama 내보내기 기준으로 비교.`,
+          `관측성·평가: 도구 ${SEG['observability']}개를 트레이싱, 평가, 프롬프트 관리, OpenTelemetry, Docker, 로컬 LLM 기준으로 비교.`,
           '대시(—)는 프로젝트 문서에 해당 내용이 명시되어 있지 않다는 뜻이며, 기능이 없다는 뜻이 아닙니다.',
         ],
       },
@@ -1872,7 +1866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-21',
-      dateModified: '2026-09-21',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1901,3 +1895,4 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 }
+

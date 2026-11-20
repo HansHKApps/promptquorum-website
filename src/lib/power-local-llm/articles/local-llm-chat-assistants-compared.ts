@@ -9,36 +9,34 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { compareGroupTotal, compareSegmentCounts, compareSegmentFacts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
-// Live counts from the directory — recomputed at build time so this article never drifts from
-// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
-// counted (matches the CategoryCompareTable's own "only reviewed tools" rule). The desktop/mobile/
+// Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
+const SEG = compareSegmentCounts('chat-assistants')
+const CHAT_FACTS = compareSegmentFacts('chat-assistants')
+const DESK = CHAT_FACTS['desktop-chat']
+const MOBILE = CHAT_FACTS['mobile-chat']
+
+// Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
+// so this article never drifts from the table as the directory grows. The desktop/mobile/
 // web-and-CLI split is general-chat-clients crossed with the tool's interface(s), not a separate
 // category — mirrors how the leadAnswerBlock/FAQ text describes the breakdown.
 const TOTAL_APP_COUNT = localAiApps.length
 const REVIEWED_CA_APPS = localAiApps.filter((a) => a.reviewSlug != null)
-const REVIEWED_GENERAL_CHAT_CLIENTS = REVIEWED_CA_APPS.filter((a) => a.categories.includes('general-chat-clients'))
-const CA_DESKTOP = REVIEWED_GENERAL_CHAT_CLIENTS.filter((a) => a.interfaces.includes('desktop')).length
-const CA_MOBILE = REVIEWED_GENERAL_CHAT_CLIENTS.filter((a) => a.interfaces.includes('mobile')).length
-const CA_WEB_CLI = REVIEWED_GENERAL_CHAT_CLIENTS.filter((a) => a.interfaces.includes('web') || a.interfaces.includes('cli')).length
-const CA_PERSONAL_ASSISTANTS = REVIEWED_CA_APPS.filter((a) => a.categories.includes('personal-assistants')).length
-const CA_ROLEPLAY = REVIEWED_CA_APPS.filter((a) => a.categories.includes('roleplay-companions')).length
-const CA_TOTAL = new Set(
-  REVIEWED_CA_APPS.filter(
-    (a) =>
-      a.categories.includes('general-chat-clients') ||
-      a.categories.includes('personal-assistants') ||
-      a.categories.includes('roleplay-companions'),
-  ).map((a) => a.slug),
-).size
+const CA_DESKTOP = SEG['desktop-chat']
+const CA_MOBILE = SEG['mobile-chat']
+const CA_WEB_CLI = SEG['web-chat']
+const CA_PERSONAL_ASSISTANTS = SEG['assistants']
+const CA_ROLEPLAY = SEG['roleplay']
+const CA_TOTAL = compareGroupTotal('chat-assistants')
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Easiest Desktop Apps',
@@ -73,10 +71,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'It depends on where you want to chat, so compare within one kind at a time. Pick by the constraint that matters most — the device (computer, phone or server), working offline, MCP support, connecting to Ollama or your own endpoint, or chatting with your files — and use the table below, which is generated from each tool\'s official documentation.',
         bullets: [
-          'Desktop chat apps: 17 tools compared on running models themselves, Ollama, endpoints, MCP, file chat and voice.',
-          'Mobile chat apps: 26 tools compared on offline use, importing models, in-app downloads, image input and voice.',
-          'Web and CLI clients: 13 tools compared on Docker, multi-user, Ollama, endpoints, file chat and MCP.',
-          'Personal assistants (13) and roleplay apps (4) are compared on the features that matter for each.',
+          `Desktop chat apps: ${SEG['desktop-chat']} tools compared on running models themselves, Ollama, endpoints, MCP, file chat and voice.`,
+          `Mobile chat apps: ${SEG['mobile-chat']} tools compared on offline use, importing models, in-app downloads, image input and voice.`,
+          `Web and CLI clients: ${SEG['web-chat']} tools compared on Docker, multi-user, Ollama, endpoints, file chat and MCP.`,
+          `Personal assistants (${SEG['assistants']}) and roleplay apps (${SEG['roleplay']}) are compared on the features that matter for each.`,
           'A dash (—) means the project\'s documentation does not state it, not that the feature is missing.',
         ],
       },
@@ -140,7 +138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP.** [AnythingLLM](/power-local-llm/anythingllm-review), [BoltAI](/power-local-llm/boltai-review), [Cherry Studio](/local-llms/cherry-studio-ai-desktop-client), [Jan](/power-local-llm/jan-review), [Locally Uncensored](/power-local-llm/locally-uncensored-review), [Odysseus](/power-local-llm/odysseus-review) and [Osaurus](/power-local-llm/osaurus-ai-review) document MCP support.',
           '**Chat with your files.** [AnythingLLM](/power-local-llm/anythingllm-review), [BoltAI](/power-local-llm/boltai-review), [Ekorbia](/power-local-llm/ekorbia-review), [GPT4All](/power-local-llm/gpt4all-review), [HilbertRaum](/power-local-llm/hilbertraum-review), [Locally Uncensored](/power-local-llm/locally-uncensored-review), [Off Grid AI](/power-local-llm/off-grid-ai-review), [On Device AI](/power-local-llm/on-device-ai-review), [Osaurus](/power-local-llm/osaurus-ai-review) and [Sidekick](/power-local-llm/sidekick-review) document chatting with your own files.',
           '**Voice.** [AnythingLLM](/power-local-llm/anythingllm-review), [BoltAI](/power-local-llm/boltai-review), [Ekorbia](/power-local-llm/ekorbia-review), [Enchanted](/power-local-llm/enchanted-review), [LM Studio](/power-local-llm/lm-studio-review), [Off Grid AI](/power-local-llm/off-grid-ai-review), [On Device AI](/power-local-llm/on-device-ai-review) and [Osaurus](/power-local-llm/osaurus-ai-review) document voice input or output.',
-          '**Price.** Of the 17 desktop apps, 11 are free, 5 freemium and 1 paid. Check each review for what the paid tier adds.',
+          `**Price.** Of the ${DESK.count} desktop apps, ${DESK.price.free} are free, ${DESK.price.freemium} freemium and ${DESK.price.paid} paid. Check each review for what the paid tier adds.`,
         ],
       },
       mobileDifferences: {
@@ -152,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**In-app model downloads.** [Arbiter](/power-local-llm/arbiter-local-ai-chat-review), [Enclave AI](/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/power-local-llm/google-ai-edge-gallery-review), [Liquid Apollo](/power-local-llm/liquid-apollo-review), [Locally AI](/power-local-llm/locally-ai-review), [Loci AI](/power-local-llm/loci-ai-review-offline-local-ai), [Maid](/power-local-llm/maid-review), [On Device AI](/power-local-llm/on-device-ai-review), [Pocket AI](/power-local-llm/pocket-ai-review), [PocketPal AI](/power-local-llm/pocketpal-ai-review) and [Private LLM](/power-local-llm/private-llm-review) document downloading models inside the app.',
           '**Image input.** [Arbiter](/power-local-llm/arbiter-local-ai-chat-review), [Enchanted](/power-local-llm/enchanted-review), [Google AI Edge Gallery](/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/power-local-llm/locally-ai-review), [Off Grid AI](/power-local-llm/off-grid-ai-review), [On Device AI](/power-local-llm/on-device-ai-review), [RikkaHub](/power-local-llm/rikkahub-review), [Solair AI](/power-local-llm/solair-ai-review) and [ToolNeuron](/power-local-llm/toolneuron-review) document image input.',
           '**Voice.** [Enchanted](/power-local-llm/enchanted-review), [Enclave AI](/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/power-local-llm/locally-ai-review), [Off Grid AI](/power-local-llm/off-grid-ai-review), [On Device AI](/power-local-llm/on-device-ai-review), [PocketPal AI](/power-local-llm/pocketpal-ai-review), [Solair AI](/power-local-llm/solair-ai-review) and [ToolNeuron](/power-local-llm/toolneuron-review) document voice input or output.',
-          '**Price.** Of the 26 phone apps, 16 are free, 6 freemium and 4 paid.',
+          `**Price.** Of the ${MOBILE.count} phone apps, ${MOBILE.price.free} are free, ${MOBILE.price.freemium} freemium and ${MOBILE.price.paid} paid.`,
           '**Documentation.** Most phone apps are documented only by their store listing or website, which states far less than a README does, so this table has more dashes than the others.',
         ],
       },
@@ -250,7 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'en',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -283,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Easiest Desktop Apps',
@@ -318,10 +316,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Das hängt davon ab, wo Sie chatten möchten – vergleichen Sie daher jeweils innerhalb einer Art. Wählen Sie nach der Einschränkung, die Ihnen am wichtigsten ist – Gerät (Computer, Smartphone oder Server), Offline-Betrieb, MCP-Unterstützung, Anbindung an Ollama oder einen eigenen Endpunkt oder Chat mit Ihren Dateien – und nutzen Sie die Tabelle unten, die aus der offiziellen Dokumentation des jeweiligen Tools erzeugt wird.',
         bullets: [
-          'Desktop-Chat-Apps: 17 Tools im Vergleich bei eigenem Modellbetrieb, Ollama, Endpunkten, MCP, Datei-Chat und Sprache.',
-          'Mobile Chat-Apps: 26 Tools im Vergleich bei Offline-Nutzung, Modellimport, In-App-Downloads, Bildeingabe und Sprache.',
-          'Web- und CLI-Clients: 13 Tools im Vergleich bei Docker, Mehrbenutzerbetrieb, Ollama, Endpunkten, Datei-Chat und MCP.',
-          'Persönliche Assistenten (13) und Rollenspiel-Apps (4) werden anhand der Funktionen verglichen, die für sie jeweils zählen.',
+          `Desktop-Chat-Apps: ${SEG['desktop-chat']} Tools im Vergleich bei eigenem Modellbetrieb, Ollama, Endpunkten, MCP, Datei-Chat und Sprache.`,
+          `Mobile Chat-Apps: ${SEG['mobile-chat']} Tools im Vergleich bei Offline-Nutzung, Modellimport, In-App-Downloads, Bildeingabe und Sprache.`,
+          `Web- und CLI-Clients: ${SEG['web-chat']} Tools im Vergleich bei Docker, Mehrbenutzerbetrieb, Ollama, Endpunkten, Datei-Chat und MCP.`,
+          `Persönliche Assistenten (${SEG['assistants']}) und Rollenspiel-Apps (${SEG['roleplay']}) werden anhand der Funktionen verglichen, die für sie jeweils zählen.`,
           'Ein Strich (—) bedeutet, dass die Dokumentation des Projekts die Angabe nicht enthält – nicht, dass die Funktion fehlt.',
         ],
       },
@@ -385,7 +383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP.** [AnythingLLM](/de/power-local-llm/anythingllm-review), [BoltAI](/de/power-local-llm/boltai-review), [Cherry Studio](/de/local-llms/cherry-studio-ai-desktop-client), [Jan](/de/power-local-llm/jan-review), [Locally Uncensored](/de/power-local-llm/locally-uncensored-review), [Odysseus](/de/power-local-llm/odysseus-review) und [Osaurus](/de/power-local-llm/osaurus-ai-review) dokumentieren MCP-Unterstützung.',
           '**Chat mit Ihren Dateien.** [AnythingLLM](/de/power-local-llm/anythingllm-review), [BoltAI](/de/power-local-llm/boltai-review), [Ekorbia](/de/power-local-llm/ekorbia-review), [GPT4All](/de/power-local-llm/gpt4all-review), [HilbertRaum](/de/power-local-llm/hilbertraum-review), [Locally Uncensored](/de/power-local-llm/locally-uncensored-review), [Off Grid AI](/de/power-local-llm/off-grid-ai-review), [On Device AI](/de/power-local-llm/on-device-ai-review), [Osaurus](/de/power-local-llm/osaurus-ai-review) und [Sidekick](/de/power-local-llm/sidekick-review) dokumentieren den Chat mit den eigenen Dateien.',
           '**Sprache.** [AnythingLLM](/de/power-local-llm/anythingllm-review), [BoltAI](/de/power-local-llm/boltai-review), [Ekorbia](/de/power-local-llm/ekorbia-review), [Enchanted](/de/power-local-llm/enchanted-review), [LM Studio](/de/power-local-llm/lm-studio-review), [Off Grid AI](/de/power-local-llm/off-grid-ai-review), [On Device AI](/de/power-local-llm/on-device-ai-review) und [Osaurus](/de/power-local-llm/osaurus-ai-review) dokumentieren Spracheingabe oder -ausgabe.',
-          '**Preis.** Von den 17 Desktop-Apps sind 11 kostenlos, 5 Freemium und 1 kostenpflichtig. Was die kostenpflichtige Stufe jeweils bietet, steht im jeweiligen Test.',
+          `**Preis.** Von den ${DESK.count} Desktop-Apps sind ${DESK.price.free} kostenlos, ${DESK.price.freemium} Freemium und ${DESK.price.paid} kostenpflichtig. Was die kostenpflichtige Stufe jeweils bietet, steht im jeweiligen Test.`,
         ],
       },
       mobileDifferences: {
@@ -397,7 +395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modell-Downloads in der App.** [Arbiter](/de/power-local-llm/arbiter-local-ai-chat-review), [Enclave AI](/de/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/de/power-local-llm/google-ai-edge-gallery-review), [Liquid Apollo](/de/power-local-llm/liquid-apollo-review), [Locally AI](/de/power-local-llm/locally-ai-review), [Loci AI](/de/power-local-llm/loci-ai-review-offline-local-ai), [Maid](/de/power-local-llm/maid-review), [On Device AI](/de/power-local-llm/on-device-ai-review), [Pocket AI](/de/power-local-llm/pocket-ai-review), [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) und [Private LLM](/de/power-local-llm/private-llm-review) dokumentieren das Herunterladen von Modellen innerhalb der App.',
           '**Bildeingabe.** [Arbiter](/de/power-local-llm/arbiter-local-ai-chat-review), [Enchanted](/de/power-local-llm/enchanted-review), [Google AI Edge Gallery](/de/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/de/power-local-llm/locally-ai-review), [Off Grid AI](/de/power-local-llm/off-grid-ai-review), [On Device AI](/de/power-local-llm/on-device-ai-review), [RikkaHub](/de/power-local-llm/rikkahub-review), [Solair AI](/de/power-local-llm/solair-ai-review) und [ToolNeuron](/de/power-local-llm/toolneuron-review) dokumentieren die Bildeingabe.',
           '**Sprache.** [Enchanted](/de/power-local-llm/enchanted-review), [Enclave AI](/de/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/de/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/de/power-local-llm/locally-ai-review), [Off Grid AI](/de/power-local-llm/off-grid-ai-review), [On Device AI](/de/power-local-llm/on-device-ai-review), [PocketPal AI](/de/power-local-llm/pocketpal-ai-review), [Solair AI](/de/power-local-llm/solair-ai-review) und [ToolNeuron](/de/power-local-llm/toolneuron-review) dokumentieren Spracheingabe oder -ausgabe.',
-          '**Preis.** Von den 26 Smartphone-Apps sind 16 kostenlos, 6 Freemium und 4 kostenpflichtig.',
+          `**Preis.** Von den ${MOBILE.count} Smartphone-Apps sind ${MOBILE.price.free} kostenlos, ${MOBILE.price.freemium} Freemium und ${MOBILE.price.paid} kostenpflichtig.`,
           '**Dokumentation.** Die meisten Smartphone-Apps sind nur durch ihren Store-Eintrag oder ihre Website dokumentiert, die weit weniger angeben als eine README – daher enthält diese Tabelle mehr Striche als die anderen.',
         ],
       },
@@ -495,7 +493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'de',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -528,7 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Easiest Desktop Apps',
@@ -563,10 +561,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Cela dépend de l\'endroit où vous voulez discuter : comparez donc un seul type à la fois. Choisissez selon la contrainte qui compte le plus — l\'appareil (ordinateur, téléphone ou serveur), le fonctionnement hors ligne, la prise en charge de MCP, la connexion à Ollama ou à votre propre point d\'accès, ou le chat avec vos fichiers — et appuyez-vous sur le tableau ci-dessous, généré à partir de la documentation officielle de chaque outil.',
         bullets: [
-          'Applications de chat de bureau : 17 outils comparés sur l\'exécution autonome des modèles, Ollama, les points d\'accès, MCP, le chat avec des fichiers et la voix.',
-          'Applications de chat mobiles : 26 outils comparés sur l\'usage hors ligne, l\'import de modèles, les téléchargements dans l\'application, la saisie d\'images et la voix.',
-          'Clients web et en ligne de commande : 13 outils comparés sur Docker, le multi-utilisateur, Ollama, les points d\'accès, le chat avec des fichiers et MCP.',
-          'Les assistants personnels (13) et les applications de jeu de rôle (4) sont comparés sur les fonctionnalités qui comptent pour chacun.',
+          `Applications de chat de bureau : ${SEG['desktop-chat']} outils comparés sur l'exécution autonome des modèles, Ollama, les points d'accès, MCP, le chat avec des fichiers et la voix.`,
+          `Applications de chat mobiles : ${SEG['mobile-chat']} outils comparés sur l'usage hors ligne, l'import de modèles, les téléchargements dans l'application, la saisie d'images et la voix.`,
+          `Clients web et en ligne de commande : ${SEG['web-chat']} outils comparés sur Docker, le multi-utilisateur, Ollama, les points d'accès, le chat avec des fichiers et MCP.`,
+          `Les assistants personnels (${SEG['assistants']}) et les applications de jeu de rôle (${SEG['roleplay']}) sont comparés sur les fonctionnalités qui comptent pour chacun.`,
           'Un tiret (—) signifie que la documentation du projet ne le mentionne pas, et non que la fonctionnalité est absente.',
         ],
       },
@@ -630,7 +628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP.** [AnythingLLM](/fr/power-local-llm/anythingllm-review), [BoltAI](/fr/power-local-llm/boltai-review), [Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client), [Jan](/fr/power-local-llm/jan-review), [Locally Uncensored](/fr/power-local-llm/locally-uncensored-review), [Odysseus](/fr/power-local-llm/odysseus-review) et [Osaurus](/fr/power-local-llm/osaurus-ai-review) documentent la prise en charge de MCP.',
           '**Chat avec vos fichiers.** [AnythingLLM](/fr/power-local-llm/anythingllm-review), [BoltAI](/fr/power-local-llm/boltai-review), [Ekorbia](/fr/power-local-llm/ekorbia-review), [GPT4All](/fr/power-local-llm/gpt4all-review), [HilbertRaum](/fr/power-local-llm/hilbertraum-review), [Locally Uncensored](/fr/power-local-llm/locally-uncensored-review), [Off Grid AI](/fr/power-local-llm/off-grid-ai-review), [On Device AI](/fr/power-local-llm/on-device-ai-review), [Osaurus](/fr/power-local-llm/osaurus-ai-review) et [Sidekick](/fr/power-local-llm/sidekick-review) documentent le chat avec vos propres fichiers.',
           '**Voix.** [AnythingLLM](/fr/power-local-llm/anythingllm-review), [BoltAI](/fr/power-local-llm/boltai-review), [Ekorbia](/fr/power-local-llm/ekorbia-review), [Enchanted](/fr/power-local-llm/enchanted-review), [LM Studio](/fr/power-local-llm/lm-studio-review), [Off Grid AI](/fr/power-local-llm/off-grid-ai-review), [On Device AI](/fr/power-local-llm/on-device-ai-review) et [Osaurus](/fr/power-local-llm/osaurus-ai-review) documentent l\'entrée ou la sortie vocale.',
-          '**Prix.** Sur les 17 applications de bureau, 11 sont gratuites, 5 freemium et 1 payante. Consultez chaque avis pour savoir ce qu\'ajoute l\'offre payante.',
+          `**Prix.** Sur les ${DESK.count} applications de bureau, ${DESK.price.free} sont gratuites, ${DESK.price.freemium} freemium et ${DESK.price.paid} payante${DESK.price.paid === 1 ? '' : 's'}. Consultez chaque avis pour savoir ce qu'ajoute l'offre payante.`,
         ],
       },
       mobileDifferences: {
@@ -642,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Téléchargement de modèles dans l\'application.** [Arbiter](/fr/power-local-llm/arbiter-local-ai-chat-review), [Enclave AI](/fr/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/fr/power-local-llm/google-ai-edge-gallery-review), [Liquid Apollo](/fr/power-local-llm/liquid-apollo-review), [Locally AI](/fr/power-local-llm/locally-ai-review), [Loci AI](/fr/power-local-llm/loci-ai-review-offline-local-ai), [Maid](/fr/power-local-llm/maid-review), [On Device AI](/fr/power-local-llm/on-device-ai-review), [Pocket AI](/fr/power-local-llm/pocket-ai-review), [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) et [Private LLM](/fr/power-local-llm/private-llm-review) documentent le téléchargement de modèles directement dans l\'application.',
           '**Saisie d\'images.** [Arbiter](/fr/power-local-llm/arbiter-local-ai-chat-review), [Enchanted](/fr/power-local-llm/enchanted-review), [Google AI Edge Gallery](/fr/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/fr/power-local-llm/locally-ai-review), [Off Grid AI](/fr/power-local-llm/off-grid-ai-review), [On Device AI](/fr/power-local-llm/on-device-ai-review), [RikkaHub](/fr/power-local-llm/rikkahub-review), [Solair AI](/fr/power-local-llm/solair-ai-review) et [ToolNeuron](/fr/power-local-llm/toolneuron-review) documentent la saisie d\'images.',
           '**Voix.** [Enchanted](/fr/power-local-llm/enchanted-review), [Enclave AI](/fr/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/fr/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/fr/power-local-llm/locally-ai-review), [Off Grid AI](/fr/power-local-llm/off-grid-ai-review), [On Device AI](/fr/power-local-llm/on-device-ai-review), [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review), [Solair AI](/fr/power-local-llm/solair-ai-review) et [ToolNeuron](/fr/power-local-llm/toolneuron-review) documentent l\'entrée ou la sortie vocale.',
-          '**Prix.** Sur les 26 applications pour téléphone, 16 sont gratuites, 6 freemium et 4 payantes.',
+          `**Prix.** Sur les ${MOBILE.count} applications pour téléphone, ${MOBILE.price.free} sont gratuites, ${MOBILE.price.freemium} freemium et ${MOBILE.price.paid} payantes.`,
           '**Documentation.** La plupart des applications pour téléphone sont documentées uniquement par leur page de boutique ou leur site, qui en dit bien moins qu\'un README : ce tableau contient donc plus de tirets que les autres.',
         ],
       },
@@ -740,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -773,7 +771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Easiest Desktop Apps',
@@ -808,10 +806,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende de dónde quieras chatear, así que compara dentro de un solo tipo cada vez. Elige según la restricción que más te importe — el dispositivo (ordenador, móvil o servidor), trabajar offline, compatibilidad con MCP, conectar con Ollama o con tu propio endpoint, o chatear con tus archivos — y usa la tabla de abajo, generada a partir de la documentación oficial de cada herramienta.',
         bullets: [
-          'Apps de chat de escritorio: 17 herramientas comparadas en ejecución propia de modelos, Ollama, endpoints, MCP, chat con archivos y voz.',
-          'Apps de chat para móvil: 26 herramientas comparadas en uso offline, importación de modelos, descargas dentro de la app, entrada de imágenes y voz.',
-          'Clientes web y de línea de comandos: 13 herramientas comparadas en Docker, multiusuario, Ollama, endpoints, chat con archivos y MCP.',
-          'Los asistentes personales (13) y las apps de rol (4) se comparan en las funciones que importan en cada caso.',
+          `Apps de chat de escritorio: ${SEG['desktop-chat']} herramientas comparadas en ejecución propia de modelos, Ollama, endpoints, MCP, chat con archivos y voz.`,
+          `Apps de chat para móvil: ${SEG['mobile-chat']} herramientas comparadas en uso offline, importación de modelos, descargas dentro de la app, entrada de imágenes y voz.`,
+          `Clientes web y de línea de comandos: ${SEG['web-chat']} herramientas comparadas en Docker, multiusuario, Ollama, endpoints, chat con archivos y MCP.`,
+          `Los asistentes personales (${SEG['assistants']}) y las apps de rol (${SEG['roleplay']}) se comparan en las funciones que importan en cada caso.`,
           'Un guion (—) significa que la documentación del proyecto no lo indica, no que la función no exista.',
         ],
       },
@@ -875,7 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP.** [AnythingLLM](/es/power-local-llm/anythingllm-review), [BoltAI](/es/power-local-llm/boltai-review), [Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client), [Jan](/es/power-local-llm/jan-review), [Locally Uncensored](/es/power-local-llm/locally-uncensored-review), [Odysseus](/es/power-local-llm/odysseus-review) y [Osaurus](/es/power-local-llm/osaurus-ai-review) documentan compatibilidad con MCP.',
           '**Chat con tus archivos.** [AnythingLLM](/es/power-local-llm/anythingllm-review), [BoltAI](/es/power-local-llm/boltai-review), [Ekorbia](/es/power-local-llm/ekorbia-review), [GPT4All](/es/power-local-llm/gpt4all-review), [HilbertRaum](/es/power-local-llm/hilbertraum-review), [Locally Uncensored](/es/power-local-llm/locally-uncensored-review), [Off Grid AI](/es/power-local-llm/off-grid-ai-review), [On Device AI](/es/power-local-llm/on-device-ai-review), [Osaurus](/es/power-local-llm/osaurus-ai-review) y [Sidekick](/es/power-local-llm/sidekick-review) documentan el chat con tus propios archivos.',
           '**Voz.** [AnythingLLM](/es/power-local-llm/anythingllm-review), [BoltAI](/es/power-local-llm/boltai-review), [Ekorbia](/es/power-local-llm/ekorbia-review), [Enchanted](/es/power-local-llm/enchanted-review), [LM Studio](/es/power-local-llm/lm-studio-review), [Off Grid AI](/es/power-local-llm/off-grid-ai-review), [On Device AI](/es/power-local-llm/on-device-ai-review) y [Osaurus](/es/power-local-llm/osaurus-ai-review) documentan entrada o salida de voz.',
-          '**Precio.** De las 17 apps de escritorio, 11 son gratuitas, 5 freemium y 1 de pago. Consulta cada análisis para ver qué añade el nivel de pago.',
+          `**Precio.** De las ${DESK.count} apps de escritorio, ${DESK.price.free} son gratuitas, ${DESK.price.freemium} freemium y ${DESK.price.paid} de pago. Consulta cada análisis para ver qué añade el nivel de pago.`,
         ],
       },
       mobileDifferences: {
@@ -887,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Descarga de modelos dentro de la app.** [Arbiter](/es/power-local-llm/arbiter-local-ai-chat-review), [Enclave AI](/es/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/es/power-local-llm/google-ai-edge-gallery-review), [Liquid Apollo](/es/power-local-llm/liquid-apollo-review), [Locally AI](/es/power-local-llm/locally-ai-review), [Loci AI](/es/power-local-llm/loci-ai-review-offline-local-ai), [Maid](/es/power-local-llm/maid-review), [On Device AI](/es/power-local-llm/on-device-ai-review), [Pocket AI](/es/power-local-llm/pocket-ai-review), [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) y [Private LLM](/es/power-local-llm/private-llm-review) documentan la descarga de modelos dentro de la app.',
           '**Entrada de imágenes.** [Arbiter](/es/power-local-llm/arbiter-local-ai-chat-review), [Enchanted](/es/power-local-llm/enchanted-review), [Google AI Edge Gallery](/es/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/es/power-local-llm/locally-ai-review), [Off Grid AI](/es/power-local-llm/off-grid-ai-review), [On Device AI](/es/power-local-llm/on-device-ai-review), [RikkaHub](/es/power-local-llm/rikkahub-review), [Solair AI](/es/power-local-llm/solair-ai-review) y [ToolNeuron](/es/power-local-llm/toolneuron-review) documentan la entrada de imágenes.',
           '**Voz.** [Enchanted](/es/power-local-llm/enchanted-review), [Enclave AI](/es/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/es/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/es/power-local-llm/locally-ai-review), [Off Grid AI](/es/power-local-llm/off-grid-ai-review), [On Device AI](/es/power-local-llm/on-device-ai-review), [PocketPal AI](/es/power-local-llm/pocketpal-ai-review), [Solair AI](/es/power-local-llm/solair-ai-review) y [ToolNeuron](/es/power-local-llm/toolneuron-review) documentan entrada o salida de voz.',
-          '**Precio.** De las 26 apps de móvil, 16 son gratuitas, 6 freemium y 4 de pago.',
+          `**Precio.** De las ${MOBILE.count} apps de móvil, ${MOBILE.price.free} son gratuitas, ${MOBILE.price.freemium} freemium y ${MOBILE.price.paid} de pago.`,
           '**Documentación.** La mayoría de las apps de móvil están documentadas solo por su ficha de la tienda o su sitio web, que indican mucho menos que un README, por lo que esta tabla tiene más guiones que las demás.',
         ],
       },
@@ -985,7 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'es',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1018,7 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Easiest Desktop Apps',
@@ -1053,10 +1051,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'どこでチャットしたいかによって変わるため、種類ごとに比較してください。最も重視する条件(デバイス(パソコン、スマートフォン、サーバー)、オフライン動作、MCP対応、Ollamaや自前エンドポイントへの接続、ファイルとのチャット)で選び、各ツールの公式ドキュメントから生成した下の表を活用してください。',
         bullets: [
-          'デスクトップチャットアプリ:17ツールを、モデルの自力実行、Ollama、エンドポイント、MCP、ファイルチャット、音声で比較。',
-          'モバイルチャットアプリ:26ツールを、オフライン動作、モデルのインポート、アプリ内ダウンロード、画像入力、音声で比較。',
-          'WebおよびCLIクライアント:13ツールを、Docker、マルチユーザー、Ollama、エンドポイント、ファイルチャット、MCPで比較。',
-          'パーソナルアシスタント(13)とロールプレイアプリ(4)は、それぞれで重要な機能で比較。',
+          `デスクトップチャットアプリ:${SEG['desktop-chat']}ツールを、モデルの自力実行、Ollama、エンドポイント、MCP、ファイルチャット、音声で比較。`,
+          `モバイルチャットアプリ:${SEG['mobile-chat']}ツールを、オフライン動作、モデルのインポート、アプリ内ダウンロード、画像入力、音声で比較。`,
+          `WebおよびCLIクライアント:${SEG['web-chat']}ツールを、Docker、マルチユーザー、Ollama、エンドポイント、ファイルチャット、MCPで比較。`,
+          `パーソナルアシスタント(${SEG['assistants']})とロールプレイアプリ(${SEG['roleplay']})は、それぞれで重要な機能で比較。`,
           'ダッシュ(—)は、プロジェクトのドキュメントに記載がないことを意味し、その機能がないという意味ではありません。',
         ],
       },
@@ -1120,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP。**[AnythingLLM](/ja/power-local-llm/anythingllm-review)、[BoltAI](/ja/power-local-llm/boltai-review)、[Cherry Studio](/ja/local-llms/cherry-studio-ai-desktop-client)、[Jan](/ja/power-local-llm/jan-review)、[Locally Uncensored](/ja/power-local-llm/locally-uncensored-review)、[Odysseus](/ja/power-local-llm/odysseus-review)と[Osaurus](/ja/power-local-llm/osaurus-ai-review)は、MCP対応を記載しています。',
           '**ファイルとのチャット。**[AnythingLLM](/ja/power-local-llm/anythingllm-review)、[BoltAI](/ja/power-local-llm/boltai-review)、[Ekorbia](/ja/power-local-llm/ekorbia-review)、[GPT4All](/ja/power-local-llm/gpt4all-review)、[HilbertRaum](/ja/power-local-llm/hilbertraum-review)、[Locally Uncensored](/ja/power-local-llm/locally-uncensored-review)、[Off Grid AI](/ja/power-local-llm/off-grid-ai-review)、[On Device AI](/ja/power-local-llm/on-device-ai-review)、[Osaurus](/ja/power-local-llm/osaurus-ai-review)と[Sidekick](/ja/power-local-llm/sidekick-review)は、自分のファイルとのチャットを記載しています。',
           '**音声。**[AnythingLLM](/ja/power-local-llm/anythingllm-review)、[BoltAI](/ja/power-local-llm/boltai-review)、[Ekorbia](/ja/power-local-llm/ekorbia-review)、[Enchanted](/ja/power-local-llm/enchanted-review)、[LM Studio](/ja/power-local-llm/lm-studio-review)、[Off Grid AI](/ja/power-local-llm/off-grid-ai-review)、[On Device AI](/ja/power-local-llm/on-device-ai-review)と[Osaurus](/ja/power-local-llm/osaurus-ai-review)は、音声入力または音声出力を記載しています。',
-          '**価格。**17のデスクトップアプリのうち、11が無料、5がフリーミアム、1が有料です。有料プランで何が追加されるかは、各レビューで確認してください。',
+          `**価格。**${DESK.count}のデスクトップアプリのうち、${DESK.price.free}が無料、${DESK.price.freemium}がフリーミアム、${DESK.price.paid}が有料です。有料プランで何が追加されるかは、各レビューで確認してください。`,
         ],
       },
       mobileDifferences: {
@@ -1132,7 +1130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**アプリ内モデルダウンロード。**[Arbiter](/ja/power-local-llm/arbiter-local-ai-chat-review)、[Enclave AI](/ja/power-local-llm/enclave-ai-review)、[Google AI Edge Gallery](/ja/power-local-llm/google-ai-edge-gallery-review)、[Liquid Apollo](/ja/power-local-llm/liquid-apollo-review)、[Locally AI](/ja/power-local-llm/locally-ai-review)、[Loci AI](/ja/power-local-llm/loci-ai-review-offline-local-ai)、[Maid](/ja/power-local-llm/maid-review)、[On Device AI](/ja/power-local-llm/on-device-ai-review)、[Pocket AI](/ja/power-local-llm/pocket-ai-review)、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)と[Private LLM](/ja/power-local-llm/private-llm-review)は、アプリ内でのモデルのダウンロードを記載しています。',
           '**画像入力。**[Arbiter](/ja/power-local-llm/arbiter-local-ai-chat-review)、[Enchanted](/ja/power-local-llm/enchanted-review)、[Google AI Edge Gallery](/ja/power-local-llm/google-ai-edge-gallery-review)、[Locally AI](/ja/power-local-llm/locally-ai-review)、[Off Grid AI](/ja/power-local-llm/off-grid-ai-review)、[On Device AI](/ja/power-local-llm/on-device-ai-review)、[RikkaHub](/ja/power-local-llm/rikkahub-review)、[Solair AI](/ja/power-local-llm/solair-ai-review)と[ToolNeuron](/ja/power-local-llm/toolneuron-review)は、画像入力を記載しています。',
           '**音声。**[Enchanted](/ja/power-local-llm/enchanted-review)、[Enclave AI](/ja/power-local-llm/enclave-ai-review)、[Google AI Edge Gallery](/ja/power-local-llm/google-ai-edge-gallery-review)、[Locally AI](/ja/power-local-llm/locally-ai-review)、[Off Grid AI](/ja/power-local-llm/off-grid-ai-review)、[On Device AI](/ja/power-local-llm/on-device-ai-review)、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)、[Solair AI](/ja/power-local-llm/solair-ai-review)と[ToolNeuron](/ja/power-local-llm/toolneuron-review)は、音声入力または音声出力を記載しています。',
-          '**価格。**26のスマホアプリのうち、16が無料、6がフリーミアム、4が有料です。',
+          `**価格。**${MOBILE.count}のスマホアプリのうち、${MOBILE.price.free}が無料、${MOBILE.price.freemium}がフリーミアム、${MOBILE.price.paid}が有料です。`,
           '**ドキュメント。**ほとんどのスマホアプリは、ストアの掲載情報かWebサイトでしか説明されておらず、READMEよりも記載が大幅に少ないため、この表は他の表よりダッシュが多くなっています。',
         ],
       },
@@ -1230,7 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1263,7 +1261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Easiest Desktop Apps',
@@ -1298,10 +1296,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '这取决于你想在哪里聊天,所以请一次只在一种类型内比较。按最重要的限制条件来选——设备(电脑、手机或服务器)、能否离线工作、MCP支持、连接Ollama或你自己的端点,或与你的文件对话——然后使用下方的表格,该表取自各工具的官方文档。',
         bullets: [
-          '桌面聊天应用:比较17款工具在自行运行模型、Ollama、端点、MCP、文件对话和语音方面的差异。',
-          '手机聊天应用:比较26款工具在离线使用、导入模型、应用内下载、图像输入和语音方面的差异。',
-          '网页与CLI客户端:比较13款工具在Docker、多用户、Ollama、端点、文件对话和MCP方面的差异。',
-          '个人助手(13款)与角色扮演应用(4款)按各自最重要的功能进行比较。',
+          `桌面聊天应用:比较${SEG['desktop-chat']}款工具在自行运行模型、Ollama、端点、MCP、文件对话和语音方面的差异。`,
+          `手机聊天应用:比较${SEG['mobile-chat']}款工具在离线使用、导入模型、应用内下载、图像输入和语音方面的差异。`,
+          `网页与CLI客户端:比较${SEG['web-chat']}款工具在Docker、多用户、Ollama、端点、文件对话和MCP方面的差异。`,
+          `个人助手(${SEG['assistants']}款)与角色扮演应用(${SEG['roleplay']}款)按各自最重要的功能进行比较。`,
           '破折号(—)表示该项目的文档没有说明,而不是表示该功能缺失。',
         ],
       },
@@ -1365,7 +1363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP。** [AnythingLLM](/zh/power-local-llm/anythingllm-review)、[BoltAI](/zh/power-local-llm/boltai-review)、[Cherry Studio](/zh/local-llms/cherry-studio-ai-desktop-client)、[Jan](/zh/power-local-llm/jan-review)、[Locally Uncensored](/zh/power-local-llm/locally-uncensored-review)、[Odysseus](/zh/power-local-llm/odysseus-review)和[Osaurus](/zh/power-local-llm/osaurus-ai-review)均在文档中说明支持MCP。',
           '**与文件对话。** [AnythingLLM](/zh/power-local-llm/anythingllm-review)、[BoltAI](/zh/power-local-llm/boltai-review)、[Ekorbia](/zh/power-local-llm/ekorbia-review)、[GPT4All](/zh/power-local-llm/gpt4all-review)、[HilbertRaum](/zh/power-local-llm/hilbertraum-review)、[Locally Uncensored](/zh/power-local-llm/locally-uncensored-review)、[Off Grid AI](/zh/power-local-llm/off-grid-ai-review)、[On Device AI](/zh/power-local-llm/on-device-ai-review)、[Osaurus](/zh/power-local-llm/osaurus-ai-review)和[Sidekick](/zh/power-local-llm/sidekick-review)均在文档中说明可与你自己的文件对话。',
           '**语音。** [AnythingLLM](/zh/power-local-llm/anythingllm-review)、[BoltAI](/zh/power-local-llm/boltai-review)、[Ekorbia](/zh/power-local-llm/ekorbia-review)、[Enchanted](/zh/power-local-llm/enchanted-review)、[LM Studio](/zh/power-local-llm/lm-studio-review)、[Off Grid AI](/zh/power-local-llm/off-grid-ai-review)、[On Device AI](/zh/power-local-llm/on-device-ai-review)和[Osaurus](/zh/power-local-llm/osaurus-ai-review)均在文档中说明支持语音输入或输出。',
-          '**价格。** 在17款桌面应用中,11款免费,5款为免费增值(freemium),1款付费。请查看各自的评测,了解付费方案增加了什么。',
+          `**价格。** 在${DESK.count}款桌面应用中,${DESK.price.free}款免费,${DESK.price.freemium}款为免费增值(freemium),${DESK.price.paid}款付费。请查看各自的评测,了解付费方案增加了什么。`,
         ],
       },
       mobileDifferences: {
@@ -1377,7 +1375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**应用内下载模型。** [Arbiter](/zh/power-local-llm/arbiter-local-ai-chat-review)、[Enclave AI](/zh/power-local-llm/enclave-ai-review)、[Google AI Edge Gallery](/zh/power-local-llm/google-ai-edge-gallery-review)、[Liquid Apollo](/zh/power-local-llm/liquid-apollo-review)、[Locally AI](/zh/power-local-llm/locally-ai-review)、[Loci AI](/zh/power-local-llm/loci-ai-review-offline-local-ai)、[Maid](/zh/power-local-llm/maid-review)、[On Device AI](/zh/power-local-llm/on-device-ai-review)、[Pocket AI](/zh/power-local-llm/pocket-ai-review)、[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)和[Private LLM](/zh/power-local-llm/private-llm-review)均在文档中说明可在应用内下载模型。',
           '**图像输入。** [Arbiter](/zh/power-local-llm/arbiter-local-ai-chat-review)、[Enchanted](/zh/power-local-llm/enchanted-review)、[Google AI Edge Gallery](/zh/power-local-llm/google-ai-edge-gallery-review)、[Locally AI](/zh/power-local-llm/locally-ai-review)、[Off Grid AI](/zh/power-local-llm/off-grid-ai-review)、[On Device AI](/zh/power-local-llm/on-device-ai-review)、[RikkaHub](/zh/power-local-llm/rikkahub-review)、[Solair AI](/zh/power-local-llm/solair-ai-review)和[ToolNeuron](/zh/power-local-llm/toolneuron-review)均在文档中说明支持图像输入。',
           '**语音。** [Enchanted](/zh/power-local-llm/enchanted-review)、[Enclave AI](/zh/power-local-llm/enclave-ai-review)、[Google AI Edge Gallery](/zh/power-local-llm/google-ai-edge-gallery-review)、[Locally AI](/zh/power-local-llm/locally-ai-review)、[Off Grid AI](/zh/power-local-llm/off-grid-ai-review)、[On Device AI](/zh/power-local-llm/on-device-ai-review)、[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)、[Solair AI](/zh/power-local-llm/solair-ai-review)和[ToolNeuron](/zh/power-local-llm/toolneuron-review)均在文档中说明支持语音输入或输出。',
-          '**价格。** 在26款手机应用中,16款免费,6款为免费增值(freemium),4款付费。',
+          `**价格。** 在${MOBILE.count}款手机应用中,${MOBILE.price.free}款免费,${MOBILE.price.freemium}款为免费增值(freemium),${MOBILE.price.paid}款付费。`,
           '**文档。** 大多数手机应用仅有应用商店页面或官网作为文档,其说明远少于README,因此这张表中的破折号比其他表更多。',
         ],
       },
@@ -1475,7 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1508,7 +1506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Easiest Desktop Apps',
@@ -1543,10 +1541,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende de onde você quer conversar, então compare um tipo por vez. Escolha pela restrição que mais importa — o dispositivo (computador, celular ou servidor), funcionar offline, suporte a MCP, conexão com o Ollama ou com o seu próprio endpoint, ou conversar com seus arquivos — e use a tabela abaixo, gerada a partir da documentação oficial de cada ferramenta.',
         bullets: [
-          'Apps de chat para desktop: 17 ferramentas comparadas em execução própria de modelos, Ollama, endpoints, MCP, chat com arquivos e voz.',
-          'Apps de chat para celular: 26 ferramentas comparadas em uso offline, importação de modelos, downloads dentro do app, entrada de imagem e voz.',
-          'Clientes web e CLI: 13 ferramentas comparadas em Docker, multiusuário, Ollama, endpoints, chat com arquivos e MCP.',
-          'Assistentes pessoais (13) e apps de roleplay (4) são comparados nos recursos que importam para cada tipo.',
+          `Apps de chat para desktop: ${SEG['desktop-chat']} ferramentas comparadas em execução própria de modelos, Ollama, endpoints, MCP, chat com arquivos e voz.`,
+          `Apps de chat para celular: ${SEG['mobile-chat']} ferramentas comparadas em uso offline, importação de modelos, downloads dentro do app, entrada de imagem e voz.`,
+          `Clientes web e CLI: ${SEG['web-chat']} ferramentas comparadas em Docker, multiusuário, Ollama, endpoints, chat com arquivos e MCP.`,
+          `Assistentes pessoais (${SEG['assistants']}) e apps de roleplay (${SEG['roleplay']}) são comparados nos recursos que importam para cada tipo.`,
           'Um traço (—) significa que a documentação do projeto não informa o recurso, e não que ele não exista.',
         ],
       },
@@ -1610,7 +1608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP.** [AnythingLLM](/pt/power-local-llm/anythingllm-review), [BoltAI](/pt/power-local-llm/boltai-review), [Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client), [Jan](/pt/power-local-llm/jan-review), [Locally Uncensored](/pt/power-local-llm/locally-uncensored-review), [Odysseus](/pt/power-local-llm/odysseus-review) e [Osaurus](/pt/power-local-llm/osaurus-ai-review) documentam suporte a MCP.',
           '**Chat com seus arquivos.** [AnythingLLM](/pt/power-local-llm/anythingllm-review), [BoltAI](/pt/power-local-llm/boltai-review), [Ekorbia](/pt/power-local-llm/ekorbia-review), [GPT4All](/pt/power-local-llm/gpt4all-review), [HilbertRaum](/pt/power-local-llm/hilbertraum-review), [Locally Uncensored](/pt/power-local-llm/locally-uncensored-review), [Off Grid AI](/pt/power-local-llm/off-grid-ai-review), [On Device AI](/pt/power-local-llm/on-device-ai-review), [Osaurus](/pt/power-local-llm/osaurus-ai-review) e [Sidekick](/pt/power-local-llm/sidekick-review) documentam a conversa com seus próprios arquivos.',
           '**Voz.** [AnythingLLM](/pt/power-local-llm/anythingllm-review), [BoltAI](/pt/power-local-llm/boltai-review), [Ekorbia](/pt/power-local-llm/ekorbia-review), [Enchanted](/pt/power-local-llm/enchanted-review), [LM Studio](/pt/power-local-llm/lm-studio-review), [Off Grid AI](/pt/power-local-llm/off-grid-ai-review), [On Device AI](/pt/power-local-llm/on-device-ai-review) e [Osaurus](/pt/power-local-llm/osaurus-ai-review) documentam entrada ou saída de voz.',
-          '**Preço.** Dos 17 apps de desktop, 11 são gratuitos, 5 freemium e 1 pago. Veja em cada análise o que o plano pago acrescenta.',
+          `**Preço.** Dos ${DESK.count} apps de desktop, ${DESK.price.free} são gratuitos, ${DESK.price.freemium} freemium e ${DESK.price.paid} pago${DESK.price.paid === 1 ? '' : 's'}. Veja em cada análise o que o plano pago acrescenta.`,
         ],
       },
       mobileDifferences: {
@@ -1622,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Download de modelos dentro do app.** [Arbiter](/pt/power-local-llm/arbiter-local-ai-chat-review), [Enclave AI](/pt/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/pt/power-local-llm/google-ai-edge-gallery-review), [Liquid Apollo](/pt/power-local-llm/liquid-apollo-review), [Locally AI](/pt/power-local-llm/locally-ai-review), [Loci AI](/pt/power-local-llm/loci-ai-review-offline-local-ai), [Maid](/pt/power-local-llm/maid-review), [On Device AI](/pt/power-local-llm/on-device-ai-review), [Pocket AI](/pt/power-local-llm/pocket-ai-review), [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) e [Private LLM](/pt/power-local-llm/private-llm-review) documentam o download de modelos dentro do app.',
           '**Entrada de imagem.** [Arbiter](/pt/power-local-llm/arbiter-local-ai-chat-review), [Enchanted](/pt/power-local-llm/enchanted-review), [Google AI Edge Gallery](/pt/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/pt/power-local-llm/locally-ai-review), [Off Grid AI](/pt/power-local-llm/off-grid-ai-review), [On Device AI](/pt/power-local-llm/on-device-ai-review), [RikkaHub](/pt/power-local-llm/rikkahub-review), [Solair AI](/pt/power-local-llm/solair-ai-review) e [ToolNeuron](/pt/power-local-llm/toolneuron-review) documentam entrada de imagem.',
           '**Voz.** [Enchanted](/pt/power-local-llm/enchanted-review), [Enclave AI](/pt/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/pt/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/pt/power-local-llm/locally-ai-review), [Off Grid AI](/pt/power-local-llm/off-grid-ai-review), [On Device AI](/pt/power-local-llm/on-device-ai-review), [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review), [Solair AI](/pt/power-local-llm/solair-ai-review) e [ToolNeuron](/pt/power-local-llm/toolneuron-review) documentam entrada ou saída de voz.',
-          '**Preço.** Dos 26 apps de celular, 16 são gratuitos, 6 freemium e 4 pagos.',
+          `**Preço.** Dos ${MOBILE.count} apps de celular, ${MOBILE.price.free} são gratuitos, ${MOBILE.price.freemium} freemium e ${MOBILE.price.paid} pagos.`,
           '**Documentação.** A maioria dos apps de celular é documentada apenas pela página da loja ou pelo site, que informa muito menos do que um README, por isso esta tabela tem mais traços que as outras.',
         ],
       },
@@ -1720,7 +1718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1753,7 +1751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Easiest Desktop Apps',
@@ -1788,10 +1786,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'يعتمد ذلك على المكان الذي تريد الدردشة منه، لذا قارن ضمن نوع واحد في كل مرة. اختر وفق القيد الأهم لك — الجهاز (حاسوب أو هاتف أو خادم)، أو العمل دون اتصال، أو دعم MCP، أو الاتصال بـ Ollama أو بنقطة نهاية خاصة بك، أو الدردشة مع ملفاتك — واستعن بالجدول أدناه المُولَّد من الوثائق الرسمية لكل أداة.',
         bullets: [
-          'تطبيقات دردشة سطح المكتب: 17 أداة تُقارَن من حيث تشغيل النماذج بنفسها وOllama ونقاط النهاية وMCP والدردشة مع الملفات والصوت.',
-          'تطبيقات دردشة الجوال: 26 أداة تُقارَن من حيث العمل دون اتصال واستيراد النماذج والتنزيل داخل التطبيق وإدخال الصور والصوت.',
-          'عملاء الويب وسطر الأوامر: 13 أداة تُقارَن من حيث Docker وتعدد المستخدمين وOllama ونقاط النهاية والدردشة مع الملفات وMCP.',
-          'المساعدات الشخصية (13) وتطبيقات لعب الأدوار (4) تُقارَن وفق الميزات الأهم لكل منها.',
+          `تطبيقات دردشة سطح المكتب: ${SEG['desktop-chat']} أداة تُقارَن من حيث تشغيل النماذج بنفسها وOllama ونقاط النهاية وMCP والدردشة مع الملفات والصوت.`,
+          `تطبيقات دردشة الجوال: ${SEG['mobile-chat']} أداة تُقارَن من حيث العمل دون اتصال واستيراد النماذج والتنزيل داخل التطبيق وإدخال الصور والصوت.`,
+          `عملاء الويب وسطر الأوامر: ${SEG['web-chat']} أداة تُقارَن من حيث Docker وتعدد المستخدمين وOllama ونقاط النهاية والدردشة مع الملفات وMCP.`,
+          `المساعدات الشخصية (${SEG['assistants']}) وتطبيقات لعب الأدوار (${SEG['roleplay']}) تُقارَن وفق الميزات الأهم لكل منها.`,
           'الشرطة (—) تعني أن وثائق المشروع لا تذكر هذه الميزة، لا أن الميزة غير موجودة.',
         ],
       },
@@ -1855,7 +1853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP.** [AnythingLLM](/ar/power-local-llm/anythingllm-review)، [BoltAI](/ar/power-local-llm/boltai-review)، [Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client)، [Jan](/ar/power-local-llm/jan-review)، [Locally Uncensored](/ar/power-local-llm/locally-uncensored-review)، [Odysseus](/ar/power-local-llm/odysseus-review) و[Osaurus](/ar/power-local-llm/osaurus-ai-review) توثّق دعم MCP.',
           '**الدردشة مع ملفاتك.** [AnythingLLM](/ar/power-local-llm/anythingllm-review)، [BoltAI](/ar/power-local-llm/boltai-review)، [Ekorbia](/ar/power-local-llm/ekorbia-review)، [GPT4All](/ar/power-local-llm/gpt4all-review)، [HilbertRaum](/ar/power-local-llm/hilbertraum-review)، [Locally Uncensored](/ar/power-local-llm/locally-uncensored-review)، [Off Grid AI](/ar/power-local-llm/off-grid-ai-review)، [On Device AI](/ar/power-local-llm/on-device-ai-review)، [Osaurus](/ar/power-local-llm/osaurus-ai-review) و[Sidekick](/ar/power-local-llm/sidekick-review) توثّق الدردشة مع ملفاتك الخاصة.',
           '**الصوت.** [AnythingLLM](/ar/power-local-llm/anythingllm-review)، [BoltAI](/ar/power-local-llm/boltai-review)، [Ekorbia](/ar/power-local-llm/ekorbia-review)، [Enchanted](/ar/power-local-llm/enchanted-review)، [LM Studio](/ar/power-local-llm/lm-studio-review)، [Off Grid AI](/ar/power-local-llm/off-grid-ai-review)، [On Device AI](/ar/power-local-llm/on-device-ai-review) و[Osaurus](/ar/power-local-llm/osaurus-ai-review) توثّق الإدخال أو الإخراج الصوتي.',
-          '**السعر.** من بين تطبيقات سطح المكتب الـ17، 11 مجانية و5 بنموذج freemium وواحد مدفوع. راجع مراجعة كل أداة لمعرفة ما تضيفه الخطة المدفوعة.',
+          `**السعر.** من بين تطبيقات سطح المكتب الـ${DESK.count}، ${DESK.price.free} مجانية و${DESK.price.freemium} بنموذج freemium و${DESK.price.paid} مدفوعة. راجع مراجعة كل أداة لمعرفة ما تضيفه الخطة المدفوعة.`,
         ],
       },
       mobileDifferences: {
@@ -1867,7 +1865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تنزيل النماذج داخل التطبيق.** [Arbiter](/ar/power-local-llm/arbiter-local-ai-chat-review)، [Enclave AI](/ar/power-local-llm/enclave-ai-review)، [Google AI Edge Gallery](/ar/power-local-llm/google-ai-edge-gallery-review)، [Liquid Apollo](/ar/power-local-llm/liquid-apollo-review)، [Locally AI](/ar/power-local-llm/locally-ai-review)، [Loci AI](/ar/power-local-llm/loci-ai-review-offline-local-ai)، [Maid](/ar/power-local-llm/maid-review)، [On Device AI](/ar/power-local-llm/on-device-ai-review)، [Pocket AI](/ar/power-local-llm/pocket-ai-review)، [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) و[Private LLM](/ar/power-local-llm/private-llm-review) توثّق تنزيل النماذج داخل التطبيق.',
           '**إدخال الصور.** [Arbiter](/ar/power-local-llm/arbiter-local-ai-chat-review)، [Enchanted](/ar/power-local-llm/enchanted-review)، [Google AI Edge Gallery](/ar/power-local-llm/google-ai-edge-gallery-review)، [Locally AI](/ar/power-local-llm/locally-ai-review)، [Off Grid AI](/ar/power-local-llm/off-grid-ai-review)، [On Device AI](/ar/power-local-llm/on-device-ai-review)، [RikkaHub](/ar/power-local-llm/rikkahub-review)، [Solair AI](/ar/power-local-llm/solair-ai-review) و[ToolNeuron](/ar/power-local-llm/toolneuron-review) توثّق إدخال الصور.',
           '**الصوت.** [Enchanted](/ar/power-local-llm/enchanted-review)، [Enclave AI](/ar/power-local-llm/enclave-ai-review)، [Google AI Edge Gallery](/ar/power-local-llm/google-ai-edge-gallery-review)، [Locally AI](/ar/power-local-llm/locally-ai-review)، [Off Grid AI](/ar/power-local-llm/off-grid-ai-review)، [On Device AI](/ar/power-local-llm/on-device-ai-review)، [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review)، [Solair AI](/ar/power-local-llm/solair-ai-review) و[ToolNeuron](/ar/power-local-llm/toolneuron-review) توثّق الإدخال أو الإخراج الصوتي.',
-          '**السعر.** من بين تطبيقات الهاتف الـ26، 16 مجانية و6 بنموذج freemium و4 مدفوعة.',
+          `**السعر.** من بين تطبيقات الهاتف الـ${MOBILE.count}، ${MOBILE.price.free} مجانية و${MOBILE.price.freemium} بنموذج freemium و${MOBILE.price.paid} مدفوعة.`,
           '**التوثيق.** معظم تطبيقات الهاتف موثَّقة فقط عبر صفحتها في المتجر أو موقعها، وهو يذكر أقل بكثير مما يذكره ملف README، لذا يحتوي هذا الجدول شرطات أكثر من غيره.',
         ],
       },
@@ -1965,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1998,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'Easiest Desktop Apps',
@@ -2033,10 +2031,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '어디에서 채팅하고 싶은지에 따라 달라지므로, 한 번에 한 종류 안에서 비교하십시오. 가장 중요한 조건 — 기기(컴퓨터, 휴대폰 또는 서버), 오프라인 작동, MCP 지원, Ollama 또는 자체 엔드포인트 연결, 파일과의 채팅 — 을 기준으로 고르고, 각 도구의 공식 문서로 생성한 아래 표를 활용하십시오.',
         bullets: [
-          '데스크톱 채팅 앱: 도구 17개를 자체 모델 실행, Ollama, 엔드포인트, MCP, 파일 채팅, 음성 기준으로 비교.',
-          '모바일 채팅 앱: 도구 26개를 오프라인 사용, 모델 가져오기, 앱 내 다운로드, 이미지 입력, 음성 기준으로 비교.',
-          '웹 및 CLI 클라이언트: 도구 13개를 Docker, 다중 사용자, Ollama, 엔드포인트, 파일 채팅, MCP 기준으로 비교.',
-          '개인 어시스턴트(13개)와 롤플레이 앱(4개)은 각각에 중요한 기능을 기준으로 비교.',
+          `데스크톱 채팅 앱: 도구 ${SEG['desktop-chat']}개를 자체 모델 실행, Ollama, 엔드포인트, MCP, 파일 채팅, 음성 기준으로 비교.`,
+          `모바일 채팅 앱: 도구 ${SEG['mobile-chat']}개를 오프라인 사용, 모델 가져오기, 앱 내 다운로드, 이미지 입력, 음성 기준으로 비교.`,
+          `웹 및 CLI 클라이언트: 도구 ${SEG['web-chat']}개를 Docker, 다중 사용자, Ollama, 엔드포인트, 파일 채팅, MCP 기준으로 비교.`,
+          `개인 어시스턴트(${SEG['assistants']}개)와 롤플레이 앱(${SEG['roleplay']}개)은 각각에 중요한 기능을 기준으로 비교.`,
           '대시(—)는 프로젝트 문서에 해당 내용이 명시되어 있지 않다는 뜻이며, 기능이 없다는 뜻이 아닙니다.',
         ],
       },
@@ -2100,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP.** [AnythingLLM](/ko/power-local-llm/anythingllm-review), [BoltAI](/ko/power-local-llm/boltai-review), [Cherry Studio](/ko/local-llms/cherry-studio-ai-desktop-client), [Jan](/ko/power-local-llm/jan-review), [Locally Uncensored](/ko/power-local-llm/locally-uncensored-review), [Odysseus](/ko/power-local-llm/odysseus-review) 및 [Osaurus](/ko/power-local-llm/osaurus-ai-review)는 MCP 지원을 문서화하고 있습니다.',
           '**파일과의 채팅.** [AnythingLLM](/ko/power-local-llm/anythingllm-review), [BoltAI](/ko/power-local-llm/boltai-review), [Ekorbia](/ko/power-local-llm/ekorbia-review), [GPT4All](/ko/power-local-llm/gpt4all-review), [HilbertRaum](/ko/power-local-llm/hilbertraum-review), [Locally Uncensored](/ko/power-local-llm/locally-uncensored-review), [Off Grid AI](/ko/power-local-llm/off-grid-ai-review), [On Device AI](/ko/power-local-llm/on-device-ai-review), [Osaurus](/ko/power-local-llm/osaurus-ai-review) 및 [Sidekick](/ko/power-local-llm/sidekick-review)는 자신의 파일과 채팅하는 기능을 문서화하고 있습니다.',
           '**음성.** [AnythingLLM](/ko/power-local-llm/anythingllm-review), [BoltAI](/ko/power-local-llm/boltai-review), [Ekorbia](/ko/power-local-llm/ekorbia-review), [Enchanted](/ko/power-local-llm/enchanted-review), [LM Studio](/ko/power-local-llm/lm-studio-review), [Off Grid AI](/ko/power-local-llm/off-grid-ai-review), [On Device AI](/ko/power-local-llm/on-device-ai-review) 및 [Osaurus](/ko/power-local-llm/osaurus-ai-review)는 음성 입력 또는 출력을 문서화하고 있습니다.',
-          '**가격.** 데스크톱 앱 17개 중 11개는 무료, 5개는 프리미엄, 1개는 유료입니다. 유료 등급이 추가하는 기능은 각 리뷰에서 확인하십시오.',
+          `**가격.** 데스크톱 앱 ${DESK.count}개 중 ${DESK.price.free}개는 무료, ${DESK.price.freemium}개는 프리미엄, ${DESK.price.paid}개는 유료입니다. 유료 등급이 추가하는 기능은 각 리뷰에서 확인하십시오.`,
         ],
       },
       mobileDifferences: {
@@ -2112,7 +2110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**앱 내 모델 다운로드.** [Arbiter](/ko/power-local-llm/arbiter-local-ai-chat-review), [Enclave AI](/ko/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/ko/power-local-llm/google-ai-edge-gallery-review), [Liquid Apollo](/ko/power-local-llm/liquid-apollo-review), [Locally AI](/ko/power-local-llm/locally-ai-review), [Loci AI](/ko/power-local-llm/loci-ai-review-offline-local-ai), [Maid](/ko/power-local-llm/maid-review), [On Device AI](/ko/power-local-llm/on-device-ai-review), [Pocket AI](/ko/power-local-llm/pocket-ai-review), [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review) 및 [Private LLM](/ko/power-local-llm/private-llm-review)는 앱 안에서 모델을 다운로드하는 기능을 문서화하고 있습니다.',
           '**이미지 입력.** [Arbiter](/ko/power-local-llm/arbiter-local-ai-chat-review), [Enchanted](/ko/power-local-llm/enchanted-review), [Google AI Edge Gallery](/ko/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/ko/power-local-llm/locally-ai-review), [Off Grid AI](/ko/power-local-llm/off-grid-ai-review), [On Device AI](/ko/power-local-llm/on-device-ai-review), [RikkaHub](/ko/power-local-llm/rikkahub-review), [Solair AI](/ko/power-local-llm/solair-ai-review) 및 [ToolNeuron](/ko/power-local-llm/toolneuron-review)는 이미지 입력을 문서화하고 있습니다.',
           '**음성.** [Enchanted](/ko/power-local-llm/enchanted-review), [Enclave AI](/ko/power-local-llm/enclave-ai-review), [Google AI Edge Gallery](/ko/power-local-llm/google-ai-edge-gallery-review), [Locally AI](/ko/power-local-llm/locally-ai-review), [Off Grid AI](/ko/power-local-llm/off-grid-ai-review), [On Device AI](/ko/power-local-llm/on-device-ai-review), [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review), [Solair AI](/ko/power-local-llm/solair-ai-review) 및 [ToolNeuron](/ko/power-local-llm/toolneuron-review)는 음성 입력 또는 출력을 문서화하고 있습니다.',
-          '**가격.** 휴대폰 앱 26개 중 16개는 무료, 6개는 프리미엄, 4개는 유료입니다.',
+          `**가격.** 휴대폰 앱 ${MOBILE.count}개 중 ${MOBILE.price.free}개는 무료, ${MOBILE.price.freemium}개는 프리미엄, ${MOBILE.price.paid}개는 유료입니다.`,
           '**문서.** 대부분의 휴대폰 앱은 스토어 설명이나 웹사이트로만 문서화되어 있는데, 이는 README보다 훨씬 적은 내용을 밝히므로 이 표에는 다른 표보다 대시가 더 많습니다.',
         ],
       },
@@ -2210,7 +2208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -2239,3 +2237,4 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 }
+

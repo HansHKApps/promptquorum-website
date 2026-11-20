@@ -9,29 +9,28 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { compareGroupTotal, compareSegmentCounts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
-// Live counts from the directory — recomputed at build time so this article never drifts from
-// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
-// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+// Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
+const SEG = compareSegmentCounts('knowledge-retrieval')
+
+// Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
+// so this article never drifts from the table as the directory grows.
 const TOTAL_APP_COUNT = localAiApps.length
-const REVIEWED_KR_APPS = localAiApps.filter((a) => a.reviewSlug != null)
-const KR_RAG_FRAMEWORKS = REVIEWED_KR_APPS.filter((a) => a.categories.includes('rag-frameworks')).length
-const KR_DOCUMENT_PDF_CHAT = REVIEWED_KR_APPS.filter((a) => a.categories.includes('document-pdf-chat')).length
-const KR_NOTES_INTEGRATIONS = REVIEWED_KR_APPS.filter((a) => a.categories.includes('notes-integrations')).length
-const KR_LOCAL_SEARCH = REVIEWED_KR_APPS.filter((a) => a.categories.includes('local-search')).length
-const KR_VECTOR_DATABASES = REVIEWED_KR_APPS.filter((a) => a.categories.includes('vector-databases')).length
-const KR_CATEGORIES = ['rag-frameworks', 'document-pdf-chat', 'notes-integrations', 'local-search', 'vector-databases']
-const KR_TOTAL = new Set(
-  REVIEWED_KR_APPS.filter((a) => a.categories.some((c) => KR_CATEGORIES.includes(c))).map((a) => a.slug),
-).size
+const KR_RAG_FRAMEWORKS = SEG['rag-frameworks']
+const KR_DOCUMENT_PDF_CHAT = SEG['document-chat']
+const KR_NOTES_INTEGRATIONS = SEG['notes-integrations']
+const KR_LOCAL_SEARCH = SEG['local-search']
+const KR_VECTOR_DATABASES = SEG['vector-databases']
+const KR_TOTAL = compareGroupTotal('knowledge-retrieval')
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -66,11 +65,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'It depends on the kind of tool, so compare within one kind at a time. Pick by the constraint that matters most — working with local LLMs, Docker or self-hosting, an API, hybrid search, a visual builder, or which notes app you already use — and use the table below, which is generated from each tool\'s official documentation.',
         bullets: [
-          'RAG frameworks: 13 tools compared on visual builder, local LLMs, agents, vector stores, Docker and API.',
-          'Document and PDF chat: 12 tools compared on local LLMs, document formats, citations, desktop app, Docker and API.',
-          'Vector databases: 4 tools compared on hybrid search, metadata filtering, clustering, Docker and managed cloud.',
-          'Notes integrations: 10 tools compared on which notes app, local LLMs, semantic search and chat with notes.',
-          'Local search and research: 7 tools compared on local LLMs, web search, your own files and citations.',
+          `RAG frameworks: ${SEG['rag-frameworks']} tools compared on visual builder, local LLMs, agents, vector stores, Docker and API.`,
+          `Document and PDF chat: ${SEG['document-chat']} tools compared on local LLMs, document formats, citations, desktop app, Docker and API.`,
+          `Vector databases: ${SEG['vector-databases']} tools compared on hybrid search, metadata filtering, clustering, Docker and managed cloud.`,
+          `Notes integrations: ${SEG['notes-integrations']} tools compared on which notes app, local LLMs, semantic search and chat with notes.`,
+          `Local search and research: ${SEG['local-search']} tools compared on local LLMs, web search, your own files and citations.`,
           'A dash (—) means the project\'s documentation does not state it, not that the feature is missing.',
         ],
       },
@@ -245,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'en',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -278,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -313,11 +312,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Das hängt von der Art des Tools ab, vergleichen Sie also jeweils innerhalb einer Art. Wählen Sie nach der Anforderung, die Ihnen am wichtigsten ist — Arbeit mit lokalen LLMs, Docker oder Self-Hosting, eine API, Hybridsuche, ein visueller Builder oder die Notiz-App, die Sie ohnehin nutzen — und verwenden Sie die Tabelle unten, die aus der offiziellen Dokumentation der einzelnen Tools erzeugt wird.',
         bullets: [
-          'RAG-Frameworks: 13 Tools verglichen nach visuellem Builder, lokalen LLMs, Agenten, Vektorspeichern, Docker und API.',
-          'Dokumenten- und PDF-Chat: 12 Tools verglichen nach lokalen LLMs, Dokumentformaten, Quellenangaben, Desktop-App, Docker und API.',
-          'Vektordatenbanken: 4 Tools verglichen nach Hybridsuche, Metadatenfilterung, Clustering, Docker und verwalteter Cloud.',
-          'Notiz-Integrationen: 10 Tools verglichen nach Notiz-App, lokalen LLMs, semantischer Suche und Chat mit Notizen.',
-          'Lokale Suche und Recherche: 7 Tools verglichen nach lokalen LLMs, Websuche, eigenen Dateien und Quellenangaben.',
+          `RAG-Frameworks: ${SEG['rag-frameworks']} Tools verglichen nach visuellem Builder, lokalen LLMs, Agenten, Vektorspeichern, Docker und API.`,
+          `Dokumenten- und PDF-Chat: ${SEG['document-chat']} Tools verglichen nach lokalen LLMs, Dokumentformaten, Quellenangaben, Desktop-App, Docker und API.`,
+          `Vektordatenbanken: ${SEG['vector-databases']} Tools verglichen nach Hybridsuche, Metadatenfilterung, Clustering, Docker und verwalteter Cloud.`,
+          `Notiz-Integrationen: ${SEG['notes-integrations']} Tools verglichen nach Notiz-App, lokalen LLMs, semantischer Suche und Chat mit Notizen.`,
+          `Lokale Suche und Recherche: ${SEG['local-search']} Tools verglichen nach lokalen LLMs, Websuche, eigenen Dateien und Quellenangaben.`,
           'Ein Strich (—) bedeutet, dass die Dokumentation des Projekts die Angabe nicht nennt — nicht, dass die Funktion fehlt.',
         ],
       },
@@ -492,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'de',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -525,7 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -560,11 +559,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Cela dépend du type d\'outil : comparez donc un seul type à la fois. Choisissez selon la contrainte qui compte le plus — fonctionner avec des LLM locaux, Docker ou l\'auto-hébergement, une API, la recherche hybride, un constructeur visuel, ou l\'application de notes que vous utilisez déjà — et appuyez-vous sur le tableau ci-dessous, généré à partir de la documentation officielle de chaque outil.',
         bullets: [
-          'Frameworks RAG : 13 outils comparés sur le constructeur visuel, les LLM locaux, les agents, les bases vectorielles, Docker et l\'API.',
-          'Chat avec documents et PDF : 12 outils comparés sur les LLM locaux, les formats de documents, les citations, l\'application de bureau, Docker et l\'API.',
-          'Bases de données vectorielles : 4 outils comparés sur la recherche hybride, le filtrage par métadonnées, le déploiement en cluster, Docker et le cloud géré.',
-          'Intégrations de notes : 10 outils comparés sur l\'application de notes concernée, les LLM locaux, la recherche sémantique et le chat avec vos notes.',
-          'Recherche et veille locales : 7 outils comparés sur les LLM locaux, la recherche web, vos propres fichiers et les citations.',
+          `Frameworks RAG : ${SEG['rag-frameworks']} outils comparés sur le constructeur visuel, les LLM locaux, les agents, les bases vectorielles, Docker et l'API.`,
+          `Chat avec documents et PDF : ${SEG['document-chat']} outils comparés sur les LLM locaux, les formats de documents, les citations, l'application de bureau, Docker et l'API.`,
+          `Bases de données vectorielles : ${SEG['vector-databases']} outils comparés sur la recherche hybride, le filtrage par métadonnées, le déploiement en cluster, Docker et le cloud géré.`,
+          `Intégrations de notes : ${SEG['notes-integrations']} outils comparés sur l'application de notes concernée, les LLM locaux, la recherche sémantique et le chat avec vos notes.`,
+          `Recherche et veille locales : ${SEG['local-search']} outils comparés sur les LLM locaux, la recherche web, vos propres fichiers et les citations.`,
           'Un tiret (—) signifie que la documentation du projet ne le mentionne pas, et non que la fonctionnalité est absente.',
         ],
       },
@@ -739,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -772,7 +771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -807,11 +806,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende del tipo de herramienta, así que compara dentro de un mismo tipo. Elige según la restricción que más te importe — trabajar con LLM locales, Docker o autoalojamiento, una API, búsqueda híbrida, un constructor visual o la app de notas que ya usas — y apóyate en la tabla de abajo, generada a partir de la documentación oficial de cada herramienta.',
         bullets: [
-          'Frameworks RAG: 13 herramientas comparadas en constructor visual, LLM locales, agentes, almacenes vectoriales, Docker y API.',
-          'Chat con documentos y PDF: 12 herramientas comparadas en LLM locales, formatos de documento, citas, app de escritorio, Docker y API.',
-          'Bases de datos vectoriales: 4 herramientas comparadas en búsqueda híbrida, filtrado por metadatos, clústeres, Docker y nube gestionada.',
-          'Integraciones con notas: 10 herramientas comparadas en app de notas, LLM locales, búsqueda semántica y chat con las notas.',
-          'Búsqueda e investigación locales: 7 herramientas comparadas en LLM locales, búsqueda web, tus propios archivos y citas.',
+          `Frameworks RAG: ${SEG['rag-frameworks']} herramientas comparadas en constructor visual, LLM locales, agentes, almacenes vectoriales, Docker y API.`,
+          `Chat con documentos y PDF: ${SEG['document-chat']} herramientas comparadas en LLM locales, formatos de documento, citas, app de escritorio, Docker y API.`,
+          `Bases de datos vectoriales: ${SEG['vector-databases']} herramientas comparadas en búsqueda híbrida, filtrado por metadatos, clústeres, Docker y nube gestionada.`,
+          `Integraciones con notas: ${SEG['notes-integrations']} herramientas comparadas en app de notas, LLM locales, búsqueda semántica y chat con las notas.`,
+          `Búsqueda e investigación locales: ${SEG['local-search']} herramientas comparadas en LLM locales, búsqueda web, tus propios archivos y citas.`,
           'Un guion (—) significa que la documentación del proyecto no lo indica, no que la función no exista.',
         ],
       },
@@ -986,7 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'es',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1019,7 +1018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -1054,11 +1053,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'ツールの種類によって異なるため、一度に1つの種類の中で比較してください。ローカルLLMでの利用、Dockerやセルフホスト、API、ハイブリッド検索、ビジュアルビルダー、すでに使っているノートアプリなど、最も重要な条件で選び、各ツールの公式ドキュメントから生成された下の表を活用してください。',
         bullets: [
-          'RAGフレームワーク:13ツールを、ビジュアルビルダー、ローカルLLM、エージェント、ベクトルストア、Docker、APIで比較。',
-          'ドキュメント/PDFチャット:12ツールを、ローカルLLM、ドキュメント形式、引用、デスクトップアプリ、Docker、APIで比較。',
-          'ベクトルデータベース:4ツールを、ハイブリッド検索、メタデータフィルタリング、クラスタリング、Docker、マネージドクラウドで比較。',
-          'ノート連携:10ツールを、対応ノートアプリ、ローカルLLM、セマンティック検索、ノートとのチャットで比較。',
-          'ローカル検索・リサーチ:7ツールを、ローカルLLM、Web検索、自分のファイル、引用で比較。',
+          `RAGフレームワーク:${SEG['rag-frameworks']}ツールを、ビジュアルビルダー、ローカルLLM、エージェント、ベクトルストア、Docker、APIで比較。`,
+          `ドキュメント/PDFチャット:${SEG['document-chat']}ツールを、ローカルLLM、ドキュメント形式、引用、デスクトップアプリ、Docker、APIで比較。`,
+          `ベクトルデータベース:${SEG['vector-databases']}ツールを、ハイブリッド検索、メタデータフィルタリング、クラスタリング、Docker、マネージドクラウドで比較。`,
+          `ノート連携:${SEG['notes-integrations']}ツールを、対応ノートアプリ、ローカルLLM、セマンティック検索、ノートとのチャットで比較。`,
+          `ローカル検索・リサーチ:${SEG['local-search']}ツールを、ローカルLLM、Web検索、自分のファイル、引用で比較。`,
           'ダッシュ(—)は、プロジェクトのドキュメントに記載がないという意味であり、機能がないという意味ではありません。',
         ],
       },
@@ -1233,7 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1266,7 +1265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -1301,11 +1300,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '这取决于工具的类型,因此请一次只在同一类型内比较。按对你最重要的限制条件来选择——是否支持本地LLM、Docker或自托管、API、混合搜索、可视化构建器,或者你已在使用的笔记应用——并使用下方由各工具官方文档生成的表格。',
         bullets: [
-          'RAG框架:对13款工具在可视化构建器、本地LLM、智能体、向量存储、Docker和API方面进行对比。',
-          '文档与PDF对话:对12款工具在本地LLM、文档格式、引用来源、桌面应用、Docker和API方面进行对比。',
-          '向量数据库:对4款工具在混合搜索、元数据过滤、集群部署、Docker和托管云方面进行对比。',
-          '笔记集成:对10款工具在所支持的笔记应用、本地LLM、语义搜索和与笔记对话方面进行对比。',
-          '本地搜索与研究:对7款工具在本地LLM、网络搜索、你自己的文件和引用来源方面进行对比。',
+          `RAG框架:对${SEG['rag-frameworks']}款工具在可视化构建器、本地LLM、智能体、向量存储、Docker和API方面进行对比。`,
+          `文档与PDF对话:对${SEG['document-chat']}款工具在本地LLM、文档格式、引用来源、桌面应用、Docker和API方面进行对比。`,
+          `向量数据库:对${SEG['vector-databases']}款工具在混合搜索、元数据过滤、集群部署、Docker和托管云方面进行对比。`,
+          `笔记集成:对${SEG['notes-integrations']}款工具在所支持的笔记应用、本地LLM、语义搜索和与笔记对话方面进行对比。`,
+          `本地搜索与研究:对${SEG['local-search']}款工具在本地LLM、网络搜索、你自己的文件和引用来源方面进行对比。`,
           '破折号(—)表示项目文档未说明该项,而不是表示缺少该功能。',
         ],
       },
@@ -1480,7 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1513,7 +1512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -1548,11 +1547,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende do tipo de ferramenta, então compare um tipo de cada vez. Escolha pela restrição que mais importa — trabalhar com LLMs locais, Docker ou auto-hospedagem, uma API, busca híbrida, um construtor visual ou qual app de notas você já usa — e use a tabela abaixo, gerada a partir da documentação oficial de cada ferramenta.',
         bullets: [
-          'Frameworks RAG: 13 ferramentas comparadas em construtor visual, LLMs locais, agentes, bancos vetoriais, Docker e API.',
-          'Chat com documentos e PDFs: 12 ferramentas comparadas em LLMs locais, formatos de documento, citações, app de desktop, Docker e API.',
-          'Bancos de dados vetoriais: 4 ferramentas comparadas em busca híbrida, filtragem por metadados, clusterização, Docker e nuvem gerenciada.',
-          'Integrações com notas: 10 ferramentas comparadas em qual app de notas, LLMs locais, busca semântica e chat com as notas.',
-          'Busca e pesquisa locais: 7 ferramentas comparadas em LLMs locais, busca na web, seus próprios arquivos e citações.',
+          `Frameworks RAG: ${SEG['rag-frameworks']} ferramentas comparadas em construtor visual, LLMs locais, agentes, bancos vetoriais, Docker e API.`,
+          `Chat com documentos e PDFs: ${SEG['document-chat']} ferramentas comparadas em LLMs locais, formatos de documento, citações, app de desktop, Docker e API.`,
+          `Bancos de dados vetoriais: ${SEG['vector-databases']} ferramentas comparadas em busca híbrida, filtragem por metadados, clusterização, Docker e nuvem gerenciada.`,
+          `Integrações com notas: ${SEG['notes-integrations']} ferramentas comparadas em qual app de notas, LLMs locais, busca semântica e chat com as notas.`,
+          `Busca e pesquisa locais: ${SEG['local-search']} ferramentas comparadas em LLMs locais, busca na web, seus próprios arquivos e citações.`,
           'Um traço (—) significa que a documentação do projeto não informa esse item, e não que o recurso não exista.',
         ],
       },
@@ -1727,7 +1726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -1760,7 +1759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -1795,11 +1794,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'يعتمد ذلك على نوع الأداة، لذا قارن داخل نوع واحد في كل مرة. اختر بحسب القيد الأهم لديك — العمل مع نماذج LLM محلية، أو Docker والاستضافة الذاتية، أو واجهة API، أو البحث الهجين، أو المنشئ المرئي، أو تطبيق الملاحظات الذي تستخدمه أصلًا — واستعن بالجدول أدناه، وهو مُولَّد من الوثائق الرسمية لكل أداة.',
         bullets: [
-          'أطر RAG: مقارنة 13 أداة من حيث المنشئ المرئي ونماذج LLM المحلية والوكلاء ومخازن المتجهات وDocker وAPI.',
-          'محادثة المستندات وملفات PDF: مقارنة 12 أداة من حيث نماذج LLM المحلية وصيغ المستندات والاستشهادات وتطبيق سطح المكتب وDocker وAPI.',
-          'قواعد البيانات المتجهية: مقارنة 4 أدوات من حيث البحث الهجين والتصفية حسب البيانات الوصفية والتجميع في عنقود وDocker والسحابة المُدارة.',
-          'تكاملات الملاحظات: مقارنة 10 أدوات من حيث تطبيق الملاحظات المدعوم ونماذج LLM المحلية والبحث الدلالي والمحادثة مع الملاحظات.',
-          'البحث المحلي والاستقصاء: مقارنة 7 أدوات من حيث نماذج LLM المحلية والبحث على الويب وملفاتك الخاصة والاستشهادات.',
+          `أطر RAG: مقارنة ${SEG['rag-frameworks']} أداة من حيث المنشئ المرئي ونماذج LLM المحلية والوكلاء ومخازن المتجهات وDocker وAPI.`,
+          `محادثة المستندات وملفات PDF: مقارنة ${SEG['document-chat']} أداة من حيث نماذج LLM المحلية وصيغ المستندات والاستشهادات وتطبيق سطح المكتب وDocker وAPI.`,
+          `قواعد البيانات المتجهية: مقارنة ${SEG['vector-databases']} أدوات من حيث البحث الهجين والتصفية حسب البيانات الوصفية والتجميع في عنقود وDocker والسحابة المُدارة.`,
+          `تكاملات الملاحظات: مقارنة ${SEG['notes-integrations']} أدوات من حيث تطبيق الملاحظات المدعوم ونماذج LLM المحلية والبحث الدلالي والمحادثة مع الملاحظات.`,
+          `البحث المحلي والاستقصاء: مقارنة ${SEG['local-search']} أدوات من حيث نماذج LLM المحلية والبحث على الويب وملفاتك الخاصة والاستشهادات.`,
           'الشرطة (—) تعني أن وثائق المشروع لا تذكر هذه الخاصية، وليس أن الميزة غير موجودة.',
         ],
       },
@@ -1974,7 +1973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -2007,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     affiliateDisclosure: true,
     publishDate: '2026-09-20',
-    dateModified: '2026-09-20',
+    dateModified: '2026-11-20',
     next_refresh_due: '2027-03-20',
     designSkin: 'hub',
     theme: 'RAG & Document Chat',
@@ -2042,11 +2041,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '도구의 종류에 따라 다르므로 한 번에 한 종류 안에서 비교하십시오. 로컬 LLM 사용, Docker 또는 셀프 호스팅, API, 하이브리드 검색, 시각적 빌더, 이미 쓰고 있는 노트 앱 등 가장 중요한 조건을 기준으로 고르고, 각 도구의 공식 문서를 바탕으로 생성한 아래 표를 활용하십시오.',
         bullets: [
-          'RAG 프레임워크: 시각적 빌더, 로컬 LLM, 에이전트, 벡터 저장소, Docker, API를 기준으로 13개 도구를 비교했습니다.',
-          '문서·PDF 채팅: 로컬 LLM, 문서 형식, 출처 인용, 데스크톱 앱, Docker, API를 기준으로 12개 도구를 비교했습니다.',
-          '벡터 데이터베이스: 하이브리드 검색, 메타데이터 필터링, 클러스터링, Docker, 관리형 클라우드를 기준으로 4개 도구를 비교했습니다.',
-          '노트 통합: 지원하는 노트 앱, 로컬 LLM, 시맨틱 검색, 노트와의 대화를 기준으로 10개 도구를 비교했습니다.',
-          '로컬 검색·리서치: 로컬 LLM, 웹 검색, 내 파일, 출처 인용을 기준으로 7개 도구를 비교했습니다.',
+          `RAG 프레임워크: 시각적 빌더, 로컬 LLM, 에이전트, 벡터 저장소, Docker, API를 기준으로 ${SEG['rag-frameworks']}개 도구를 비교했습니다.`,
+          `문서·PDF 채팅: 로컬 LLM, 문서 형식, 출처 인용, 데스크톱 앱, Docker, API를 기준으로 ${SEG['document-chat']}개 도구를 비교했습니다.`,
+          `벡터 데이터베이스: 하이브리드 검색, 메타데이터 필터링, 클러스터링, Docker, 관리형 클라우드를 기준으로 ${SEG['vector-databases']}개 도구를 비교했습니다.`,
+          `노트 통합: 지원하는 노트 앱, 로컬 LLM, 시맨틱 검색, 노트와의 대화를 기준으로 ${SEG['notes-integrations']}개 도구를 비교했습니다.`,
+          `로컬 검색·리서치: 로컬 LLM, 웹 검색, 내 파일, 출처 인용을 기준으로 ${SEG['local-search']}개 도구를 비교했습니다.`,
           '대시(—)는 프로젝트 문서에 해당 내용이 명시되어 있지 않다는 뜻이며, 기능이 없다는 뜻이 아닙니다.',
         ],
       },
@@ -2221,7 +2220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-20',
-      dateModified: '2026-09-20',
+      dateModified: '2026-11-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -2250,3 +2249,4 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 }
+

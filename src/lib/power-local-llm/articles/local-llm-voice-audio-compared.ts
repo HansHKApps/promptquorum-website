@@ -8,21 +8,19 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { compareGroupTotal, compareSegmentCounts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
-// Live counts from the directory — recomputed at build time so this article never drifts from
-// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
-// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+// Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
+const SEG = compareSegmentCounts('voice-audio')
+
+// Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
+// so this article never drifts from the table as the directory grows.
 const TOTAL_APP_COUNT = localAiApps.length
-const REVIEWED_VA_APPS = localAiApps.filter((a) => a.reviewSlug != null)
-const VA_TEXT_TO_SPEECH = REVIEWED_VA_APPS.filter((a) => a.categories.includes('text-to-speech')).length
-const VA_SPEECH_TO_TEXT = REVIEWED_VA_APPS.filter((a) => a.categories.includes('speech-to-text')).length
-const VA_REALTIME_VOICE_AGENTS = REVIEWED_VA_APPS.filter((a) => a.categories.includes('realtime-voice-agents')).length
-const VA_TOTAL = new Set(
-  REVIEWED_VA_APPS.filter(
-    (a) => a.categories.includes('text-to-speech') || a.categories.includes('speech-to-text') || a.categories.includes('realtime-voice-agents'),
-  ).map((a) => a.slug),
-).size
+const VA_TEXT_TO_SPEECH = SEG['text-to-speech']
+const VA_SPEECH_TO_TEXT = SEG['speech-to-text']
+const VA_REALTIME_VOICE_AGENTS = SEG['voice-agents']
+const VA_TOTAL = compareGroupTotal('voice-audio')
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -64,9 +62,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'It depends on the job, so compare within one job at a time. Pick by the constraint that matters most — license, platform, CPU-only use, a local API server, voice cloning, real-time transcription — and use the table below, which is generated from each tool\'s official documentation.',
         bullets: [
-          'Text-to-speech: 8 tools compared on languages, voice cloning, streaming, CPU use and API server.',
-          'Speech-to-text: 7 tools compared on real-time use, speaker labels, CPU use and API server.',
-          'Voice agents: 4 tools compared on fully-local operation, interruption, bring-your-own LLM and telephony.',
+          `Text-to-speech: ${SEG['text-to-speech']} tools compared on languages, voice cloning, streaming, CPU use and API server.`,
+          `Speech-to-text: ${SEG['speech-to-text']} tools compared on real-time use, speaker labels, CPU use and API server.`,
+          `Voice agents: ${SEG['voice-agents']} tools compared on fully-local operation, interruption, bring-your-own LLM and telephony.`,
           'A dash (—) means the project\'s documentation does not state it, not that the feature is missing.',
         ],
       },
@@ -284,9 +282,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Das hängt von der Aufgabe ab, vergleichen Sie also immer innerhalb einer Aufgabe. Wählen Sie nach der Anforderung, die Ihnen am wichtigsten ist — Lizenz, Plattform, reine CPU-Nutzung, lokaler API-Server, Stimmklonen, Echtzeit-Transkription — und nutzen Sie die Tabelle unten, die aus der offiziellen Dokumentation des jeweiligen Werkzeugs erzeugt wird.',
         bullets: [
-          'Text-zu-Sprache: 8 Werkzeuge im Vergleich nach Sprachen, Stimmklonen, Streaming, CPU-Nutzung und API-Server.',
-          'Sprache-zu-Text: 7 Werkzeuge im Vergleich nach Echtzeit-Nutzung, Sprecherkennzeichnung, CPU-Nutzung und API-Server.',
-          'Sprachagenten: 4 Werkzeuge im Vergleich nach vollständig lokalem Betrieb, Unterbrechung, eigenem LLM und Telefonie.',
+          `Text-zu-Sprache: ${SEG['text-to-speech']} Werkzeuge im Vergleich nach Sprachen, Stimmklonen, Streaming, CPU-Nutzung und API-Server.`,
+          `Sprache-zu-Text: ${SEG['speech-to-text']} Werkzeuge im Vergleich nach Echtzeit-Nutzung, Sprecherkennzeichnung, CPU-Nutzung und API-Server.`,
+          `Sprachagenten: ${SEG['voice-agents']} Werkzeuge im Vergleich nach vollständig lokalem Betrieb, Unterbrechung, eigenem LLM und Telefonie.`,
           'Ein Strich (—) bedeutet, dass die Dokumentation des Projekts es nicht angibt, nicht dass die Funktion fehlt.',
         ],
       },
@@ -504,9 +502,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Cela dépend de la tâche : comparez donc une tâche à la fois. Choisissez selon la contrainte qui compte le plus — licence, plateforme, usage CPU seul, serveur API local, clonage de voix, transcription en temps réel — et appuyez-vous sur le tableau ci-dessous, généré à partir de la documentation officielle de chaque outil.',
         bullets: [
-          'Synthèse vocale : 8 outils comparés sur les langues, le clonage de voix, le streaming, l\'usage CPU et le serveur API.',
-          'Transcription : 7 outils comparés sur l\'usage en temps réel, les étiquettes de locuteurs, l\'usage CPU et le serveur API.',
-          'Agents vocaux : 4 outils comparés sur le fonctionnement entièrement local, l\'interruption, l\'usage de votre propre LLM et la téléphonie.',
+          `Synthèse vocale : ${SEG['text-to-speech']} outils comparés sur les langues, le clonage de voix, le streaming, l'usage CPU et le serveur API.`,
+          `Transcription : ${SEG['speech-to-text']} outils comparés sur l'usage en temps réel, les étiquettes de locuteurs, l'usage CPU et le serveur API.`,
+          `Agents vocaux : ${SEG['voice-agents']} outils comparés sur le fonctionnement entièrement local, l'interruption, l'usage de votre propre LLM et la téléphonie.`,
           'Un tiret (—) signifie que la documentation du projet ne le précise pas, et non que la fonctionnalité est absente.',
         ],
       },
@@ -724,9 +722,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende de la tarea, así que compara dentro de una sola tarea cada vez. Elige según la restricción que más te importe —licencia, plataforma, uso solo con CPU, un servidor API local, clonación de voz, transcripción en tiempo real— y usa la tabla de abajo, generada a partir de la documentación oficial de cada herramienta.',
         bullets: [
-          'Texto a voz: 8 herramientas comparadas en idiomas, clonación de voz, streaming, uso de CPU y servidor API.',
-          'Voz a texto: 7 herramientas comparadas en uso en tiempo real, etiquetas de hablante, uso de CPU y servidor API.',
-          'Agentes de voz: 4 herramientas comparadas en funcionamiento totalmente local, interrupción, uso de tu propio LLM y telefonía.',
+          `Texto a voz: ${SEG['text-to-speech']} herramientas comparadas en idiomas, clonación de voz, streaming, uso de CPU y servidor API.`,
+          `Voz a texto: ${SEG['speech-to-text']} herramientas comparadas en uso en tiempo real, etiquetas de hablante, uso de CPU y servidor API.`,
+          `Agentes de voz: ${SEG['voice-agents']} herramientas comparadas en funcionamiento totalmente local, interrupción, uso de tu propio LLM y telefonía.`,
           'Un guion (—) significa que la documentación del proyecto no lo indica, no que la función no exista.',
         ],
       },
@@ -944,9 +942,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '用途によって異なるため、1つの役割の中で比較してください。ライセンス、プラットフォーム、CPUのみでの利用、ローカルAPIサーバー、ボイスクローン、リアルタイム文字起こしなど、最も重視する条件で選び、各ツールの公式ドキュメントから生成した下の表を使ってください。',
         bullets: [
-          '音声合成:8ツールを、対応言語、ボイスクローン、ストリーミング、CPU利用、APIサーバーで比較。',
-          '音声認識:7ツールを、リアルタイム利用、話者ラベル、CPU利用、APIサーバーで比較。',
-          'ボイスエージェント:4ツールを、完全ローカル動作、割り込み、独自LLMの利用、電話連携で比較。',
+          `音声合成:${SEG['text-to-speech']}ツールを、対応言語、ボイスクローン、ストリーミング、CPU利用、APIサーバーで比較。`,
+          `音声認識:${SEG['speech-to-text']}ツールを、リアルタイム利用、話者ラベル、CPU利用、APIサーバーで比較。`,
+          `ボイスエージェント:${SEG['voice-agents']}ツールを、完全ローカル動作、割り込み、独自LLMの利用、電話連携で比較。`,
           'ダッシュ(—)は、そのプロジェクトのドキュメントに記載がないことを示すもので、機能がないという意味ではありません。',
         ],
       },
@@ -1164,9 +1162,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '这取决于具体任务,因此请一次只在一类任务内做对比。按对你最重要的限制条件来选——许可证、平台、仅用CPU运行、本地API服务器、声音克隆、实时转录——并使用下方由各工具官方文档生成的表格。',
         bullets: [
-          '语音合成:8款工具,按语言、声音克隆、流式输出、CPU运行和API服务器进行对比。',
-          '语音转文字:7款工具,按实时使用、说话人标注、CPU运行和API服务器进行对比。',
-          '语音助手:4款工具,按完全本地运行、打断、自带LLM和电话集成进行对比。',
+          `语音合成:${SEG['text-to-speech']}款工具,按语言、声音克隆、流式输出、CPU运行和API服务器进行对比。`,
+          `语音转文字:${SEG['speech-to-text']}款工具,按实时使用、说话人标注、CPU运行和API服务器进行对比。`,
+          `语音助手:${SEG['voice-agents']}款工具,按完全本地运行、打断、自带LLM和电话集成进行对比。`,
           '短横线(—)表示该项目的文档未说明,并不代表该功能不存在。',
         ],
       },
@@ -1384,9 +1382,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende da função, então compare dentro de uma função por vez. Escolha pela restrição que mais importa — licença, plataforma, uso somente com CPU, servidor de API local, clonagem de voz, transcrição em tempo real — e use a tabela abaixo, gerada a partir da documentação oficial de cada ferramenta.',
         bullets: [
-          'Síntese de voz: 8 ferramentas comparadas por idiomas, clonagem de voz, streaming, uso de CPU e servidor de API.',
-          'Transcrição de fala: 7 ferramentas comparadas por uso em tempo real, identificação de falantes, uso de CPU e servidor de API.',
-          'Agentes de voz: 4 ferramentas comparadas por operação totalmente local, interrupção, uso do seu próprio LLM e telefonia.',
+          `Síntese de voz: ${SEG['text-to-speech']} ferramentas comparadas por idiomas, clonagem de voz, streaming, uso de CPU e servidor de API.`,
+          `Transcrição de fala: ${SEG['speech-to-text']} ferramentas comparadas por uso em tempo real, identificação de falantes, uso de CPU e servidor de API.`,
+          `Agentes de voz: ${SEG['voice-agents']} ferramentas comparadas por operação totalmente local, interrupção, uso do seu próprio LLM e telefonia.`,
           'Um traço (—) significa que a documentação do projeto não informa o dado, não que o recurso não exista.',
         ],
       },
@@ -1604,9 +1602,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'الأمر يعتمد على المهمة، لذا قارن داخل مهمة واحدة في كل مرة. اختر بحسب القيد الأهم لديك — الرخصة، أو المنصة، أو الاستخدام على CPU فقط، أو خادم API محلي، أو استنساخ الصوت، أو النسخ الفوري — واستعن بالجدول أدناه المولَّد من الوثائق الرسمية لكل أداة.',
         bullets: [
-          'تحويل النص إلى كلام: 8 أدوات تُقارَن من حيث اللغات واستنساخ الصوت والبث المتدفق واستخدام CPU وخادم API.',
-          'تحويل الكلام إلى نص: 7 أدوات تُقارَن من حيث الاستخدام الفوري وتمييز المتحدثين واستخدام CPU وخادم API.',
-          'الوكلاء الصوتيون: 4 أدوات تُقارَن من حيث التشغيل المحلي بالكامل والمقاطعة واستخدام نموذج LLM من اختيارك والاتصال الهاتفي.',
+          `تحويل النص إلى كلام: ${SEG['text-to-speech']} أدوات تُقارَن من حيث اللغات واستنساخ الصوت والبث المتدفق واستخدام CPU وخادم API.`,
+          `تحويل الكلام إلى نص: ${SEG['speech-to-text']} أدوات تُقارَن من حيث الاستخدام الفوري وتمييز المتحدثين واستخدام CPU وخادم API.`,
+          `الوكلاء الصوتيون: ${SEG['voice-agents']} أدوات تُقارَن من حيث التشغيل المحلي بالكامل والمقاطعة واستخدام نموذج LLM من اختيارك والاتصال الهاتفي.`,
           'الشرطة (—) تعني أن وثائق المشروع لا تذكر هذه الميزة، ولا تعني أنها غير موجودة.',
         ],
       },
@@ -1824,9 +1822,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '작업에 따라 다르므로, 한 번에 하나의 작업 안에서 비교하십시오. 라이선스, 플랫폼, CPU 전용 사용, 로컬 API 서버, 음성 복제, 실시간 받아쓰기 중 가장 중요한 조건을 기준으로 고르고, 각 도구의 공식 문서를 바탕으로 생성된 아래 표를 활용하십시오.',
         bullets: [
-          '음성 합성: 도구 8개를 언어, 음성 복제, 스트리밍, CPU 사용, API 서버 기준으로 비교.',
-          '음성 인식: 도구 7개를 실시간 사용, 화자 구분, CPU 사용, API 서버 기준으로 비교.',
-          '음성 에이전트: 도구 4개를 완전 로컬 동작, 끼어들기, 자체 LLM 연결, 전화 연동 기준으로 비교.',
+          `음성 합성: 도구 ${SEG['text-to-speech']}개를 언어, 음성 복제, 스트리밍, CPU 사용, API 서버 기준으로 비교.`,
+          `음성 인식: 도구 ${SEG['speech-to-text']}개를 실시간 사용, 화자 구분, CPU 사용, API 서버 기준으로 비교.`,
+          `음성 에이전트: 도구 ${SEG['voice-agents']}개를 완전 로컬 동작, 끼어들기, 자체 LLM 연결, 전화 연동 기준으로 비교.`,
           '대시(—)는 프로젝트 문서에 해당 내용이 명시되어 있지 않다는 뜻이며, 기능이 없다는 뜻이 아닙니다.',
         ],
       },
@@ -2005,3 +2003,4 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 }
+

@@ -288,6 +288,46 @@ export function buildCategoryCompareData(group: CategoryGroupKey, lang: Language
   }
 }
 
+/**
+ * Number of rows each comparison tab renders, keyed by segment key. Articles interpolate these into their
+ * "N tools compared" copy so the text always equals what the table shows (same rows as buildCategoryCompareData).
+ */
+export function compareSegmentCounts(group: CategoryGroupKey): Record<string, number> {
+  return Object.fromEntries(buildCategoryCompareData(group, 'en').segments.map((s) => [s.key, s.rows.length]))
+}
+
+/**
+ * Price and normalized-license tallies over the rows each comparison tab renders (same rows as the table),
+ * for article prose such as "11 are free, 5 freemium". Keyed by segment key; license keys are the labels
+ * the table shows (normalizeLicenseLabel).
+ */
+export function compareSegmentFacts(
+  group: CategoryGroupKey,
+): Record<string, { count: number; price: { free: number; freemium: number; paid: number }; license: Record<string, number> }> {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const out: Record<string, { count: number; price: { free: number; freemium: number; paid: number }; license: Record<string, number> }> = {}
+  for (const seg of buildCategoryCompareData(group, 'en').segments) {
+    const price = { free: 0, freemium: 0, paid: 0 }
+    const license: Record<string, number> = {}
+    for (const r of seg.rows) {
+      const t = bySlug.get(r.slug)
+      if (!t) continue
+      if (t.price in price) price[t.price as keyof typeof price]++
+      if (t.license && t.license !== 'TODO') {
+        const label = normalizeLicenseLabel(t.license)
+        license[label] = (license[label] ?? 0) + 1
+      }
+    }
+    out[seg.key] = { count: seg.rows.length, price, license }
+  }
+  return out
+}
+
+/** Distinct tools across all tabs of a group's comparison (a tool in two tabs counts once). */
+export function compareGroupTotal(group: CategoryGroupKey): number {
+  return new Set(buildCategoryCompareData(group, 'en').segments.flatMap((s) => s.rows.map((r) => r.slug))).size
+}
+
 /** Groups that have at least one comparison segment defined (the homepage tool only offers these). */
 export function getComparableGroups(lang: Language | string = 'en'): CategoryCompareData[] {
   return (Object.keys(COMPARE_SEGMENTS) as CategoryGroupKey[])

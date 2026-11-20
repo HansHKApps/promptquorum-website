@@ -9,21 +9,20 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { compareGroupTotal, compareSegmentCounts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
-// Live counts from the directory — recomputed at build time so this article never drifts from
-// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
-// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+// Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
+const SEG = compareSegmentCounts('code-development')
+
+// Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
+// so this article never drifts from the table as the directory grows.
 const TOTAL_APP_COUNT = localAiApps.length
-const REVIEWED_CD_APPS = localAiApps.filter((a) => a.reviewSlug != null)
-const CD_CODE_ASSISTANTS = REVIEWED_CD_APPS.filter((a) => a.categories.includes('code-assistants-ide-plugins')).length
-const CD_AGENT_FRAMEWORKS = REVIEWED_CD_APPS.filter((a) => a.categories.includes('agent-frameworks')).length
-const CD_AUTONOMOUS_AGENTS = REVIEWED_CD_APPS.filter((a) => a.categories.includes('autonomous-agents')).length
-const CD_WORKFLOW_BUILDERS = REVIEWED_CD_APPS.filter((a) => a.categories.includes('workflow-node-builders')).length
-const CD_CATEGORIES = ['code-assistants-ide-plugins', 'agent-frameworks', 'autonomous-agents', 'workflow-node-builders']
-const CD_TOTAL = new Set(
-  REVIEWED_CD_APPS.filter((a) => a.categories.some((c) => CD_CATEGORIES.includes(c))).map((a) => a.slug),
-).size
+const CD_CODE_ASSISTANTS = SEG['coding-assistants']
+const CD_AGENT_FRAMEWORKS = SEG['agent-frameworks']
+const CD_AUTONOMOUS_AGENTS = SEG['autonomous-agents']
+const CD_WORKFLOW_BUILDERS = SEG['workflow-builders']
+const CD_TOTAL = compareGroupTotal('code-development')
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -65,10 +64,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'It depends on the kind of tool, so compare within one kind at a time. Pick by the constraint that matters most — working with local LLMs or Ollama, your editor (VS Code or JetBrains), an agent mode, MCP support, or a visual builder — and use the table below, which is generated from each tool\'s official documentation.',
         bullets: [
-          'Coding assistants and IDE plugins: 20 tools compared on local LLMs, Ollama, VS Code, JetBrains, agent mode, completion and MCP.',
-          'Agent frameworks and SDKs: 29 tools compared on local LLMs, Ollama, multi-agent workflows, memory, MCP and tool calling.',
-          'Autonomous agents: 17 tools compared on local LLMs, Ollama, running code, web browsing, memory and sandboxing.',
-          'Workflow builders: 7 tools compared on visual editor, local LLMs, Docker, API and MCP.',
+          `Coding assistants and IDE plugins: ${SEG['coding-assistants']} tools compared on local LLMs, Ollama, VS Code, JetBrains, agent mode, completion and MCP.`,
+          `Agent frameworks and SDKs: ${SEG['agent-frameworks']} tools compared on local LLMs, Ollama, multi-agent workflows, memory, MCP and tool calling.`,
+          `Autonomous agents: ${SEG['autonomous-agents']} tools compared on local LLMs, Ollama, running code, web browsing, memory and sandboxing.`,
+          `Workflow builders: ${SEG['workflow-builders']} tools compared on visual editor, local LLMs, Docker, API and MCP.`,
           'A dash (—) means the project\'s documentation does not state it, not that the feature is missing.',
         ],
       },
@@ -304,10 +303,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Das hängt von der Art des Tools ab, vergleichen Sie also jeweils innerhalb einer Art. Wählen Sie nach der Einschränkung, die Ihnen am wichtigsten ist — Arbeit mit lokalen LLMs oder Ollama, Ihr Editor (VS Code oder JetBrains), ein Agentenmodus, MCP-Unterstützung oder ein visueller Builder — und nutzen Sie die Tabelle unten, die aus der offiziellen Dokumentation des jeweiligen Tools erzeugt wird.',
         bullets: [
-          'Coding-Assistenten und IDE-Plugins: 20 Tools im Vergleich nach lokalen LLMs, Ollama, VS Code, JetBrains, Agentenmodus, Vervollständigung und MCP.',
-          'Agent-Frameworks und SDKs: 29 Tools im Vergleich nach lokalen LLMs, Ollama, Multi-Agenten-Workflows, Speicher, MCP und Tool-Calling.',
-          'Autonome Agenten: 17 Tools im Vergleich nach lokalen LLMs, Ollama, Code-Ausführung, Web-Browsing, Speicher und Sandboxing.',
-          'Workflow-Builder: 7 Tools im Vergleich nach visuellem Editor, lokalen LLMs, Docker, API und MCP.',
+          `Coding-Assistenten und IDE-Plugins: ${SEG['coding-assistants']} Tools im Vergleich nach lokalen LLMs, Ollama, VS Code, JetBrains, Agentenmodus, Vervollständigung und MCP.`,
+          `Agent-Frameworks und SDKs: ${SEG['agent-frameworks']} Tools im Vergleich nach lokalen LLMs, Ollama, Multi-Agenten-Workflows, Speicher, MCP und Tool-Calling.`,
+          `Autonome Agenten: ${SEG['autonomous-agents']} Tools im Vergleich nach lokalen LLMs, Ollama, Code-Ausführung, Web-Browsing, Speicher und Sandboxing.`,
+          `Workflow-Builder: ${SEG['workflow-builders']} Tools im Vergleich nach visuellem Editor, lokalen LLMs, Docker, API und MCP.`,
           'Ein Strich (—) bedeutet, dass die Dokumentation des Projekts es nicht angibt, nicht dass die Funktion fehlt.',
         ],
       },
@@ -543,10 +542,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Cela dépend du type d\'outil : comparez donc un seul type à la fois. Choisissez selon la contrainte qui compte le plus — fonctionnement avec des LLM locaux ou Ollama, votre éditeur (VS Code ou JetBrains), un mode agent, la prise en charge de MCP ou un constructeur visuel — et servez-vous du tableau ci-dessous, généré à partir de la documentation officielle de chaque outil.',
         bullets: [
-          'Assistants de code et plugins IDE : 20 outils comparés sur les LLM locaux, Ollama, VS Code, JetBrains, le mode agent, la complétion et MCP.',
-          'Frameworks et SDK d\'agents : 29 outils comparés sur les LLM locaux, Ollama, les workflows multi-agents, la mémoire, MCP et l\'appel d\'outils.',
-          'Agents autonomes : 17 outils comparés sur les LLM locaux, Ollama, l\'exécution de code, la navigation web, la mémoire et l\'isolation en bac à sable.',
-          'Constructeurs de workflows : 7 outils comparés sur l\'éditeur visuel, les LLM locaux, Docker, l\'API et MCP.',
+          `Assistants de code et plugins IDE : ${SEG['coding-assistants']} outils comparés sur les LLM locaux, Ollama, VS Code, JetBrains, le mode agent, la complétion et MCP.`,
+          `Frameworks et SDK d'agents : ${SEG['agent-frameworks']} outils comparés sur les LLM locaux, Ollama, les workflows multi-agents, la mémoire, MCP et l'appel d'outils.`,
+          `Agents autonomes : ${SEG['autonomous-agents']} outils comparés sur les LLM locaux, Ollama, l'exécution de code, la navigation web, la mémoire et l'isolation en bac à sable.`,
+          `Constructeurs de workflows : ${SEG['workflow-builders']} outils comparés sur l'éditeur visuel, les LLM locaux, Docker, l'API et MCP.`,
           'Un tiret (—) signifie que la documentation du projet ne le mentionne pas, et non que la fonctionnalité est absente.',
         ],
       },
@@ -782,10 +781,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende del tipo de herramienta, así que compara dentro de un solo tipo cada vez. Elige según la restricción que más importe (trabajar con LLM locales u Ollama, tu editor (VS Code o JetBrains), un modo agente, compatibilidad con MCP o un constructor visual) y usa la tabla de abajo, generada a partir de la documentación oficial de cada herramienta.',
         bullets: [
-          'Asistentes de código y plugins de IDE: 20 herramientas comparadas en LLM locales, Ollama, VS Code, JetBrains, modo agente, autocompletado y MCP.',
-          'Frameworks y SDK de agentes: 29 herramientas comparadas en LLM locales, Ollama, flujos multiagente, memoria, MCP y llamada a herramientas.',
-          'Agentes autónomos: 17 herramientas comparadas en LLM locales, Ollama, ejecución de código, navegación web, memoria y aislamiento en sandbox.',
-          'Constructores de flujos: 7 herramientas comparadas en editor visual, LLM locales, Docker, API y MCP.',
+          `Asistentes de código y plugins de IDE: ${SEG['coding-assistants']} herramientas comparadas en LLM locales, Ollama, VS Code, JetBrains, modo agente, autocompletado y MCP.`,
+          `Frameworks y SDK de agentes: ${SEG['agent-frameworks']} herramientas comparadas en LLM locales, Ollama, flujos multiagente, memoria, MCP y llamada a herramientas.`,
+          `Agentes autónomos: ${SEG['autonomous-agents']} herramientas comparadas en LLM locales, Ollama, ejecución de código, navegación web, memoria y aislamiento en sandbox.`,
+          `Constructores de flujos: ${SEG['workflow-builders']} herramientas comparadas en editor visual, LLM locales, Docker, API y MCP.`,
           'Un guion (—) significa que la documentación del proyecto no lo indica, no que la función falte.',
         ],
       },
@@ -1021,10 +1020,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'ツールの種類によって答えが変わるため、1つの種類の中で比較してください。ローカルLLMやOllamaでの利用、使っているエディタ(VS CodeまたはJetBrains)、エージェントモード、MCPサポート、ビジュアルビルダーのうち、最も重要な条件で選び、各ツールの公式ドキュメントから生成された下の表を活用してください。',
         bullets: [
-          'コーディングアシスタントとIDEプラグイン:20ツールを、ローカルLLM、Ollama、VS Code、JetBrains、エージェントモード、補完、MCPで比較。',
-          'エージェントフレームワークとSDK:29ツールを、ローカルLLM、Ollama、マルチエージェントワークフロー、メモリ、MCP、ツール呼び出しで比較。',
-          '自律型エージェント:17ツールを、ローカルLLM、Ollama、コード実行、Web閲覧、メモリ、サンドボックスで比較。',
-          'ワークフロービルダー:7ツールを、ビジュアルエディタ、ローカルLLM、Docker、API、MCPで比較。',
+          `コーディングアシスタントとIDEプラグイン:${SEG['coding-assistants']}ツールを、ローカルLLM、Ollama、VS Code、JetBrains、エージェントモード、補完、MCPで比較。`,
+          `エージェントフレームワークとSDK:${SEG['agent-frameworks']}ツールを、ローカルLLM、Ollama、マルチエージェントワークフロー、メモリ、MCP、ツール呼び出しで比較。`,
+          `自律型エージェント:${SEG['autonomous-agents']}ツールを、ローカルLLM、Ollama、コード実行、Web閲覧、メモリ、サンドボックスで比較。`,
+          `ワークフロービルダー:${SEG['workflow-builders']}ツールを、ビジュアルエディタ、ローカルLLM、Docker、API、MCPで比較。`,
           'ダッシュ(—)は、プロジェクトのドキュメントに記載がないことを意味し、その機能がないという意味ではありません。',
         ],
       },
@@ -1260,10 +1259,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '这取决于工具的类型,因此请一次只在同一类型内比较。按对你最重要的限制条件来选择——是否支持本地LLM或Ollama、你使用的编辑器(VS Code或JetBrains)、智能体模式、MCP支持,还是可视化构建器——并使用下方的表格,该表格由各工具的官方文档生成。',
         bullets: [
-          '编程助手与IDE插件:20款工具,按本地LLM、Ollama、VS Code、JetBrains、智能体模式、代码补全和MCP进行对比。',
-          '智能体框架与SDK:29款工具,按本地LLM、Ollama、多智能体工作流、记忆、MCP和工具调用进行对比。',
-          '自主智能体:17款工具,按本地LLM、Ollama、运行代码、网页浏览、记忆和沙箱进行对比。',
-          '工作流构建器:7款工具,按可视化编辑器、本地LLM、Docker、API和MCP进行对比。',
+          `编程助手与IDE插件:${SEG['coding-assistants']}款工具,按本地LLM、Ollama、VS Code、JetBrains、智能体模式、代码补全和MCP进行对比。`,
+          `智能体框架与SDK:${SEG['agent-frameworks']}款工具,按本地LLM、Ollama、多智能体工作流、记忆、MCP和工具调用进行对比。`,
+          `自主智能体:${SEG['autonomous-agents']}款工具,按本地LLM、Ollama、运行代码、网页浏览、记忆和沙箱进行对比。`,
+          `工作流构建器:${SEG['workflow-builders']}款工具,按可视化编辑器、本地LLM、Docker、API和MCP进行对比。`,
           '破折号(—)表示项目文档中没有说明,并不代表该功能不存在。',
         ],
       },
@@ -1499,10 +1498,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende do tipo de ferramenta, então compare um tipo de cada vez. Escolha pela restrição que mais importa — funcionar com LLMs locais ou com o Ollama, seu editor (VS Code ou JetBrains), um modo agente, suporte a MCP ou um construtor visual — e use a tabela abaixo, gerada a partir da documentação oficial de cada ferramenta.',
         bullets: [
-          'Assistentes de código e plugins de IDE: 20 ferramentas comparadas em LLMs locais, Ollama, VS Code, JetBrains, modo agente, autocompletar e MCP.',
-          'Frameworks e SDKs de agentes: 29 ferramentas comparadas em LLMs locais, Ollama, fluxos multiagente, memória, MCP e chamada de ferramentas.',
-          'Agentes autônomos: 17 ferramentas comparadas em LLMs locais, Ollama, execução de código, navegação na web, memória e sandbox.',
-          'Construtores de fluxo de trabalho: 7 ferramentas comparadas em editor visual, LLMs locais, Docker, API e MCP.',
+          `Assistentes de código e plugins de IDE: ${SEG['coding-assistants']} ferramentas comparadas em LLMs locais, Ollama, VS Code, JetBrains, modo agente, autocompletar e MCP.`,
+          `Frameworks e SDKs de agentes: ${SEG['agent-frameworks']} ferramentas comparadas em LLMs locais, Ollama, fluxos multiagente, memória, MCP e chamada de ferramentas.`,
+          `Agentes autônomos: ${SEG['autonomous-agents']} ferramentas comparadas em LLMs locais, Ollama, execução de código, navegação na web, memória e sandbox.`,
+          `Construtores de fluxo de trabalho: ${SEG['workflow-builders']} ferramentas comparadas em editor visual, LLMs locais, Docker, API e MCP.`,
           'Um traço (—) significa que a documentação do projeto não informa isso, não que o recurso não exista.',
         ],
       },
@@ -1738,10 +1737,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'يعتمد ذلك على نوع الأداة، لذا قارن داخل نوع واحد في كل مرة. اختر بحسب القيد الأهم لك — العمل مع النماذج المحلية أو Ollama، أو محررك (VS Code أو JetBrains)، أو وضع الوكيل، أو دعم MCP، أو أداة بناء مرئية — واستخدم الجدول أدناه، وهو مُولَّد من الوثائق الرسمية لكل أداة.',
         bullets: [
-          'مساعدات البرمجة وإضافات IDE: 20 أداة تُقارَن من حيث النماذج المحلية وOllama وVS Code وJetBrains ووضع الوكيل والإكمال وMCP.',
-          'أطر الوكلاء ومجموعات SDK: 29 أداة تُقارَن من حيث النماذج المحلية وOllama وسير العمل متعدد الوكلاء والذاكرة وMCP واستدعاء الأدوات.',
-          'الوكلاء المستقلة: 17 أداة تُقارَن من حيث النماذج المحلية وOllama وتشغيل الشيفرة وتصفح الويب والذاكرة والعزل.',
-          'أدوات بناء سير العمل: 7 أدوات تُقارَن من حيث المحرر المرئي والنماذج المحلية وDocker وواجهة API وMCP.',
+          `مساعدات البرمجة وإضافات IDE: ${SEG['coding-assistants']} أداة تُقارَن من حيث النماذج المحلية وOllama وVS Code وJetBrains ووضع الوكيل والإكمال وMCP.`,
+          `أطر الوكلاء ومجموعات SDK: ${SEG['agent-frameworks']} أداة تُقارَن من حيث النماذج المحلية وOllama وسير العمل متعدد الوكلاء والذاكرة وMCP واستدعاء الأدوات.`,
+          `الوكلاء المستقلة: ${SEG['autonomous-agents']} أداة تُقارَن من حيث النماذج المحلية وOllama وتشغيل الشيفرة وتصفح الويب والذاكرة والعزل.`,
+          `أدوات بناء سير العمل: ${SEG['workflow-builders']} أدوات تُقارَن من حيث المحرر المرئي والنماذج المحلية وDocker وواجهة API وMCP.`,
           'الشرطة (—) تعني أن وثائق المشروع لا تذكر ذلك، لا أن الميزة غير موجودة.',
         ],
       },
@@ -1977,10 +1976,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '도구의 종류에 따라 다르므로, 한 번에 한 종류 안에서 비교하십시오. 로컬 LLM 또는 Ollama 사용, 사용하는 편집기(VS Code 또는 JetBrains), 에이전트 모드, MCP 지원, 시각적 빌더 중 가장 중요한 조건을 기준으로 고르고, 각 도구의 공식 문서에서 생성된 아래 표를 활용하십시오.',
         bullets: [
-          '코딩 어시스턴트와 IDE 플러그인: 도구 20개를 로컬 LLM, Ollama, VS Code, JetBrains, 에이전트 모드, 자동 완성, MCP 기준으로 비교.',
-          '에이전트 프레임워크와 SDK: 도구 29개를 로컬 LLM, Ollama, 멀티 에이전트 워크플로, 메모리, MCP, 도구 호출 기준으로 비교.',
-          '자율 에이전트: 도구 17개를 로컬 LLM, Ollama, 코드 실행, 웹 브라우징, 메모리, 샌드박스 기준으로 비교.',
-          '워크플로 빌더: 도구 7개를 시각적 편집기, 로컬 LLM, Docker, API, MCP 기준으로 비교.',
+          `코딩 어시스턴트와 IDE 플러그인: 도구 ${SEG['coding-assistants']}개를 로컬 LLM, Ollama, VS Code, JetBrains, 에이전트 모드, 자동 완성, MCP 기준으로 비교.`,
+          `에이전트 프레임워크와 SDK: 도구 ${SEG['agent-frameworks']}개를 로컬 LLM, Ollama, 멀티 에이전트 워크플로, 메모리, MCP, 도구 호출 기준으로 비교.`,
+          `자율 에이전트: 도구 ${SEG['autonomous-agents']}개를 로컬 LLM, Ollama, 코드 실행, 웹 브라우징, 메모리, 샌드박스 기준으로 비교.`,
+          `워크플로 빌더: 도구 ${SEG['workflow-builders']}개를 시각적 편집기, 로컬 LLM, Docker, API, MCP 기준으로 비교.`,
           '대시(—)는 해당 프로젝트의 문서에 명시되어 있지 않다는 뜻이며, 기능이 없다는 뜻이 아닙니다.',
         ],
       },
@@ -2177,3 +2176,4 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 }
+

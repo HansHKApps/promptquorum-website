@@ -8,24 +8,18 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { compareGroupTotal, compareSegmentCounts } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
-// Live counts from the directory — recomputed at build time so this article never drifts from
-// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
-// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+// Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
+const SEG = compareSegmentCounts('images-video')
+
+// Live counts derived from the same rows the CategoryCompareTable renders (src/lib/power-local-llm/compare-data.ts),
+// so this article never drifts from the table as the directory grows.
 const TOTAL_APP_COUNT = localAiApps.length
-const REVIEWED_IV_APPS = localAiApps.filter((a) => a.reviewSlug != null)
-const IV_GENERATION = new Set(
-  REVIEWED_IV_APPS.filter((a) => a.categories.includes('image-generation') || a.categories.includes('video-generation')).map(
-    (a) => a.slug,
-  ),
-).size
-const IV_VISION_OCR = REVIEWED_IV_APPS.filter((a) => a.categories.includes('vision-ocr')).length
-const IV_TOTAL = new Set(
-  REVIEWED_IV_APPS.filter(
-    (a) => a.categories.includes('image-generation') || a.categories.includes('video-generation') || a.categories.includes('vision-ocr'),
-  ).map((a) => a.slug),
-).size
+const IV_GENERATION = SEG['image-video-generation']
+const IV_VISION_OCR = SEG['vision-ocr']
+const IV_TOTAL = compareGroupTotal('images-video')
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -67,8 +61,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'It depends on the job, so compare within one job at a time. Pick by the constraint that matters most — license, platform, inpainting, extensions, a node workflow editor, a local API, low-VRAM operation — and use the table below, which is generated from each tool\'s official documentation.',
         bullets: [
-          'Image and video generation: 13 tools compared on inpainting, video, node workflows, extensions, low-VRAM mode and API.',
-          'Vision and OCR: 3 tools compared on reading text in images, multiple images per prompt and a local API.',
+          `Image and video generation: ${SEG['image-video-generation']} tools compared on inpainting, video, node workflows, extensions, low-VRAM mode and API.`,
+          `Vision and OCR: ${SEG['vision-ocr']} tools compared on reading text in images, multiple images per prompt and a local API.`,
           'A dash (—) means the project\'s documentation does not state it, not that the feature is missing.',
         ],
       },
@@ -278,8 +272,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Das hängt von der Aufgabe ab, daher immer nur innerhalb einer Aufgabe vergleichen. Wählen Sie nach der Einschränkung, die Ihnen am wichtigsten ist — Lizenz, Plattform, Inpainting, Erweiterungen, ein Node-Workflow-Editor, eine lokale API, Betrieb mit wenig VRAM — und nutzen Sie die Tabelle unten, die aus der offiziellen Dokumentation jedes Tools erzeugt wird.',
         bullets: [
-          'Bild- und Videogenerierung: 13 Tools im Vergleich bei Inpainting, Video, Node-Workflows, Erweiterungen, Low-VRAM-Modus und API.',
-          'Vision und OCR: 3 Tools im Vergleich beim Lesen von Text in Bildern, mehreren Bildern pro Prompt und einer lokalen API.',
+          `Bild- und Videogenerierung: ${SEG['image-video-generation']} Tools im Vergleich bei Inpainting, Video, Node-Workflows, Erweiterungen, Low-VRAM-Modus und API.`,
+          `Vision und OCR: ${SEG['vision-ocr']} Tools im Vergleich beim Lesen von Text in Bildern, mehreren Bildern pro Prompt und einer lokalen API.`,
           'Ein Strich (—) bedeutet, dass die Dokumentation des Projekts es nicht angibt, nicht dass die Funktion fehlt.',
         ],
       },
@@ -489,8 +483,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Cela dépend de la mission : comparez donc une mission à la fois. Choisissez selon la contrainte qui compte le plus — licence, plateforme, inpainting, extensions, éditeur de workflow par nœuds, API locale, fonctionnement avec peu de VRAM — et appuyez-vous sur le tableau ci-dessous, généré à partir de la documentation officielle de chaque outil.',
         bullets: [
-          'Génération d\'images et de vidéos : 13 outils comparés sur l\'inpainting, la vidéo, les workflows par nœuds, les extensions, le mode faible VRAM et l\'API.',
-          'Vision et OCR : 3 outils comparés sur la lecture de texte dans les images, plusieurs images par prompt et une API locale.',
+          `Génération d'images et de vidéos : ${SEG['image-video-generation']} outils comparés sur l'inpainting, la vidéo, les workflows par nœuds, les extensions, le mode faible VRAM et l'API.`,
+          `Vision et OCR : ${SEG['vision-ocr']} outils comparés sur la lecture de texte dans les images, plusieurs images par prompt et une API locale.`,
           'Un tiret (—) signifie que la documentation du projet ne le précise pas, et non que la fonctionnalité est absente.',
         ],
       },
@@ -700,8 +694,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende del trabajo, así que compara dentro de un solo trabajo cada vez. Elige según la restricción que más importe — licencia, plataforma, inpainting, extensiones, un editor de flujos por nodos, una API local, funcionamiento con poca VRAM — y usa la tabla de abajo, generada a partir de la documentación oficial de cada herramienta.',
         bullets: [
-          'Generación de imagen y vídeo: 13 herramientas comparadas en inpainting, vídeo, flujos por nodos, extensiones, modo de poca VRAM y API.',
-          'Visión y OCR: 3 herramientas comparadas en lectura de texto en imágenes, varias imágenes por prompt y API local.',
+          `Generación de imagen y vídeo: ${SEG['image-video-generation']} herramientas comparadas en inpainting, vídeo, flujos por nodos, extensiones, modo de poca VRAM y API.`,
+          `Visión y OCR: ${SEG['vision-ocr']} herramientas comparadas en lectura de texto en imágenes, varias imágenes por prompt y API local.`,
           'Un guion (—) significa que la documentación del proyecto no lo indica, no que la función no exista.',
         ],
       },
@@ -911,8 +905,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '役割によって答えが変わるため、1つの役割の中で比較してください。ライセンス、対応OS、インペイント、拡張機能、ノードワークフローエディタ、ローカルAPI、低VRAM動作など、最も重視する条件で選び、各ツールの公式ドキュメントから生成した下の表を使ってください。',
         bullets: [
-          '画像・動画生成:13ツールを、インペイント、動画、ノードワークフロー、拡張機能、低VRAMモード、APIで比較。',
-          'ビジョン・OCR:3ツールを、画像内テキストの読み取り、1プロンプトでの複数画像、ローカルAPIで比較。',
+          `画像・動画生成:${SEG['image-video-generation']}ツールを、インペイント、動画、ノードワークフロー、拡張機能、低VRAMモード、APIで比較。`,
+          `ビジョン・OCR:${SEG['vision-ocr']}ツールを、画像内テキストの読み取り、1プロンプトでの複数画像、ローカルAPIで比較。`,
           'ダッシュ(—)は、プロジェクトのドキュメントに記載がないことを意味し、機能がないという意味ではありません。',
         ],
       },
@@ -1122,8 +1116,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '这取决于任务,因此每次只在同一类任务内进行对比。请按最重要的限制条件来选择——许可证、平台、局部重绘、扩展、节点工作流编辑器、本地API、低显存运行——并使用下方根据各工具官方文档生成的表格。',
         bullets: [
-          '图像与视频生成:对13款工具在局部重绘、视频、节点工作流、扩展、低显存模式和API方面进行对比。',
-          '视觉与OCR:对3款工具在读取图像中的文字、单次提示多张图像和本地API方面进行对比。',
+          `图像与视频生成:对${SEG['image-video-generation']}款工具在局部重绘、视频、节点工作流、扩展、低显存模式和API方面进行对比。`,
+          `视觉与OCR:对${SEG['vision-ocr']}款工具在读取图像中的文字、单次提示多张图像和本地API方面进行对比。`,
           '短横线(—)表示项目文档中没有说明,并不表示该功能不存在。',
         ],
       },
@@ -1333,8 +1327,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Depende da tarefa, então compare dentro de um trabalho de cada vez. Escolha pela restrição que mais importa — licença, plataforma, inpainting, extensões, um editor de fluxo em nós, uma API local, operação com pouca VRAM — e use a tabela abaixo, gerada a partir da documentação oficial de cada ferramenta.',
         bullets: [
-          'Geração de imagem e vídeo: 13 ferramentas comparadas em inpainting, vídeo, fluxos em nós, extensões, modo de pouca VRAM e API.',
-          'Visão e OCR: 3 ferramentas comparadas em leitura de texto em imagens, várias imagens por prompt e API local.',
+          `Geração de imagem e vídeo: ${SEG['image-video-generation']} ferramentas comparadas em inpainting, vídeo, fluxos em nós, extensões, modo de pouca VRAM e API.`,
+          `Visão e OCR: ${SEG['vision-ocr']} ferramentas comparadas em leitura de texto em imagens, várias imagens por prompt e API local.`,
           'Um traço (—) significa que a documentação do projeto não informa isso, não que o recurso não exista.',
         ],
       },
@@ -1544,8 +1538,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'يعتمد ذلك على المهمة، لذا قارن ضمن مهمة واحدة في كل مرة. اختر بحسب القيد الأهم لك — الرخصة أو المنصة أو الطلاء الداخلي (inpainting) أو الإضافات أو محرر سير العمل بالعُقد أو واجهة API محلية أو التشغيل بذاكرة VRAM منخفضة — واستعن بالجدول أدناه المولَّد من الوثائق الرسمية لكل أداة.',
         bullets: [
-          'توليد الصور والفيديو: 13 أداة تُقارن من حيث الطلاء الداخلي والفيديو وسير العمل بالعُقد والإضافات ووضع VRAM المنخفض وواجهة API.',
-          'الرؤية وOCR: 3 أدوات تُقارن من حيث قراءة النص في الصور وقبول عدة صور في الوصف النصي الواحد وواجهة API محلية.',
+          `توليد الصور والفيديو: ${SEG['image-video-generation']} أداة تُقارن من حيث الطلاء الداخلي والفيديو وسير العمل بالعُقد والإضافات ووضع VRAM المنخفض وواجهة API.`,
+          `الرؤية وOCR: ${SEG['vision-ocr']} أدوات تُقارن من حيث قراءة النص في الصور وقبول عدة صور في الوصف النصي الواحد وواجهة API محلية.`,
           'الشرطة (—) تعني أن وثائق المشروع لا تذكر ذلك، وليس أن الميزة غير موجودة.',
         ],
       },
@@ -1755,8 +1749,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           '작업에 따라 다르므로 한 번에 하나의 작업 안에서 비교하십시오. 라이선스, 플랫폼, 인페인팅, 확장, 노드 워크플로 편집기, 로컬 API, 저VRAM 동작 중 가장 중요한 조건으로 고르고, 각 도구의 공식 문서를 바탕으로 생성한 아래 표를 활용하십시오.',
         bullets: [
-          '이미지·영상 생성: 인페인팅, 영상, 노드 워크플로, 확장, 저VRAM 모드, API를 기준으로 도구 13개를 비교.',
-          '비전·OCR: 이미지 속 텍스트 읽기, 프롬프트당 여러 이미지, 로컬 API를 기준으로 도구 3개를 비교.',
+          `이미지·영상 생성: 인페인팅, 영상, 노드 워크플로, 확장, 저VRAM 모드, API를 기준으로 도구 ${SEG['image-video-generation']}개를 비교.`,
+          `비전·OCR: 이미지 속 텍스트 읽기, 프롬프트당 여러 이미지, 로컬 API를 기준으로 도구 ${SEG['vision-ocr']}개를 비교.`,
           '대시(—)는 프로젝트 문서에 해당 내용이 명시되어 있지 않다는 뜻이며, 기능이 없다는 뜻이 아닙니다.',
         ],
       },
@@ -1927,3 +1921,4 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
 }
+
