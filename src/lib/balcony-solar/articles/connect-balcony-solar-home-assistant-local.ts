@@ -8,7 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/connect-balcony-solar-home-assistant-local-overview-hero-en.webp',
     title: 'Connect Balcony Solar to Home Assistant Locally: Brand-by-Brand Guide',
@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Most balcony solar kits support local Home Assistant integration — but the protocol depends on the brand and the specific product line. Anker SOLIX uses official Modbus TCP on port 502. Hoymiles routes through a DTU-Pro gateway over the same protocol. Zendure SolarFlow 800 Pro has a local HTTP/MQTT API; older Zendure models need a cloud MQTT bridge. EcoFlow PowerStream still requires cloud. This guide maps every major brand to its verified local interface path.',
     metaDescription: 'Connect balcony solar to Home Assistant without cloud: verified Modbus TCP, MQTT, and local API paths for Anker SOLIX, Hoymiles, Zendure, Marstek, Growatt, Deye, Victron, Sungrow, Kostal, and EcoFlow.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 min read',
     educationalLevel: 'Advanced',
     audience: 'Home Assistant users selecting or integrating balcony solar hardware',
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Victron Cerbo GX: both Modbus TCP and local MQTT — official HA integration, best local-control support in class',
         'EcoFlow PowerStream: cloud-only as of check date — "local solution" stated as in development, no release date',
       ],
-      updatedDate: '2026-07-03',
+      updatedDate: '2026-11-20',
     },
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -57,6 +57,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Re-Check: What Changed Since the Brand Matrix Was Verified',
+        content: '**Five points in the brand matrix and setup steps need adjusting; the matrix itself was verified on 2026-07-03 and has not been fully re-run.** (1) Home Assistant 2026.11 builds HACS in as a Marketplace under Settings > Marketplace; according to the [release notes](https://www.home-assistant.io/blog/2026/11/04/release-202611/), a separate HACS installation is no longer possible, existing HACS installs migrate on startup and custom repositories are added with "Add from link", so "install via HACS" steps on this page mean the Marketplace on 2026.11 and later. (2) For Anker SOLIX, the [ha-anker-solix-official repository](https://github.com/anker-charging/ha-anker-solix-official) lists Solarbank Max AC, Solarbank Max, XE AC, XE, Solarbank 4 E5000 Pro, Smart Meter Gen 2 and Smart Plug Gen 2 as supported, puts the Modbus TCP toggle under Devices, gear icon, Three-Party Control Settings in the Anker app, and says the X1 series and the V1 EV charger are out of scope, so the Anker row applies to those models only. (3) The [Victron GX integration](https://www.home-assistant.io/integrations/victron_gx/) in Home Assistant (introduced in 2026.5) connects over MQTT to a GX device with MQTT enabled, trying TLS on port 8883 and falling back to port 1883; its page does not mention Modbus, so Modbus TCP for Victron refers to Victron\'s own interface rather than the core integration. (4) EcoFlow PowerStream still has no official local path in the sources found; community bridges exist but are unofficial. Separately, EcoFlow STREAM 5000 and STREAM AC 5000 gained a Local Mode and an official Home Assistant integration using Modbus TCP through a firmware update, per [Plug-In Solar, Explained](https://www.pluginsolarexplained.co.uk/blog/ecoflow-stream-local-control-finally-here/) and [Notebookcheck](https://www.notebookcheck.com/EcoFlow-Stream-erhaelt-per-Update-lokalen-Modus-und-offizielle-Integration-in-Home-Assistant.1452462.0.html); reports name different firmware versions (1.1.7.28 and 1.1.7.21), so check EcoFlow\'s release notes. (5) For Zendure, a [community post](https://community.home-assistant.io/t/zendure-solarflow-800-pro-completely-local-zereo-feed-in-without-cloud-and-even-faster-no-mqtt-no-hacs-easy-mode/980110) says SolarFlow 800-series devices expose the local zenSDK HTTP API once it is enabled in the Zendure app, while the [Zendure wiki](https://wiki.zendure.com/en/zendure-software/zendure-home-assistant) says the official integration sends data either to the Zendure cloud or to a local MQTT broker. Firmware updates can change all of this, so verify against the repositories before buying. Modbus TCP has no authentication, so keep these devices on a trusted LAN. This is a summary of public information, not legal or electrical-safety advice.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -286,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   de: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/connect-balcony-solar-home-assistant-local-overview-hero-de.webp',
     title: 'Balkonkraftwerk lokal mit Home Assistant verbinden: Anleitung nach Marke',
@@ -294,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Die meisten Balkonkraftwerk-Systeme unterstützen eine lokale Home-Assistant-Integration — der Protokollweg hängt jedoch von Marke und Produktlinie ab. Anker SOLIX bietet offizielles Modbus TCP auf Port 502. Hoymiles läuft über das DTU-Pro-Gateway über dasselbe Protokoll. Der Zendure SolarFlow 800 Pro hat eine lokale HTTP/MQTT-API; ältere Zendure-Modelle benötigen einen Cloud-MQTT-Brückenweg. EcoFlow PowerStream ist weiterhin cloudabhängig. Diese Anleitung ordnet jede wichtige Marke ihrem verifizierten lokalen Integrationsweg zu.',
     metaDescription: 'Balkonkraftwerk ohne Cloud mit Home Assistant verbinden: verifizierte Modbus-TCP-, MQTT- und lokale API-Wege für Anker SOLIX, Hoymiles, Zendure, Marstek, Growatt, Deye, Victron, Sungrow, Kostal und EcoFlow.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 Min. Lesedauer',
     educationalLevel: 'Fortgeschritten',
     audience: 'Home-Assistant-Nutzer, die Balkonkraftwerke lokal integrieren oder auswählen',
@@ -321,7 +325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Victron Cerbo GX: sowohl Modbus TCP als auch lokales MQTT — offizielle HA-Integration, beste lokale Steuerung in der Klasse',
         'EcoFlow PowerStream: nur Cloud (Stand Prüfdatum) — lokale Lösung laut EcoFlow in Entwicklung, kein Veröffentlichungsdatum',
       ],
-      updatedDate: '2026-07-03',
+      updatedDate: '2026-11-20',
     },
     toc: [
       { label: 'Zusammenfassung', anchor: '#key-takeaways' },
@@ -335,6 +339,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Erneute Prüfung: Was sich seit der Prüfung der Markenmatrix geändert hat',
+        content: '**Fünf Punkte in der Markenmatrix und den Einrichtungsschritten müssen angepasst werden; die Matrix selbst wurde am 2026-07-03 geprüft und nicht vollständig neu durchlaufen.** (1) Home Assistant 2026.11 bringt HACS als Marketplace unter Einstellungen > Marketplace mit; laut [Release-Notes](https://www.home-assistant.io/blog/2026/11/04/release-202611/) ist eine separate HACS-Installation nicht mehr möglich, bestehende HACS-Installationen werden beim Start migriert und eigene Repositories werden über „Add from link“ hinzugefügt – „Installation über HACS“ bedeutet auf dieser Seite ab 2026.11 also den Marketplace. (2) Für Anker SOLIX nennt das [Repository ha-anker-solix-official](https://github.com/anker-charging/ha-anker-solix-official) Solarbank Max AC, Solarbank Max, XE AC, XE, Solarbank 4 E5000 Pro, Smart Meter Gen 2 und Smart Plug Gen 2 als unterstützt, legt den Modbus-TCP-Schalter in der Anker-App unter Geräte, Zahnrad, Three-Party Control Settings und nimmt die X1-Serie und den V1-EV-Charger aus; die Anker-Zeile gilt also nur für diese Modelle. (3) Die [Victron-GX-Integration](https://www.home-assistant.io/integrations/victron_gx/) in Home Assistant (seit 2026.5) verbindet sich per MQTT mit einem GX-Gerät mit aktiviertem MQTT, zuerst per TLS auf Port 8883, dann auf Port 1883; ihre Seite erwähnt kein Modbus, Modbus TCP bei Victron bezieht sich daher auf Victrons eigene Schnittstelle, nicht auf die Core-Integration. (4) Für EcoFlow PowerStream gibt es in den gefundenen Quellen weiterhin keinen offiziellen lokalen Weg; Community-Brücken existieren, sind aber inoffiziell. Unabhängig davon haben EcoFlow STREAM 5000 und STREAM AC 5000 per Firmware-Update einen lokalen Modus und eine offizielle Home-Assistant-Integration über Modbus TCP erhalten, laut [Plug-In Solar, Explained](https://www.pluginsolarexplained.co.uk/blog/ecoflow-stream-local-control-finally-here/) und [Notebookcheck](https://www.notebookcheck.com/EcoFlow-Stream-erhaelt-per-Update-lokalen-Modus-und-offizielle-Integration-in-Home-Assistant.1452462.0.html); die Berichte nennen unterschiedliche Firmware-Versionen (1.1.7.28 und 1.1.7.21), bitte die Release-Notes von EcoFlow prüfen. (5) Zu Zendure sagt ein [Community-Beitrag](https://community.home-assistant.io/t/zendure-solarflow-800-pro-completely-local-zereo-feed-in-without-cloud-and-even-faster-no-mqtt-no-hacs-easy-mode/980110), dass Geräte der SolarFlow-800-Reihe die lokale zenSDK-HTTP-API bereitstellen, sobald sie in der Zendure-App aktiviert ist, während das [Zendure-Wiki](https://wiki.zendure.com/en/zendure-software/zendure-home-assistant) angibt, dass die offizielle Integration Daten entweder an die Zendure-Cloud oder an einen lokalen MQTT-Broker sendet. Firmware-Updates können all das ändern; vor dem Kauf bitte in den Repositories prüfen. Modbus TCP kennt keine Authentifizierung, daher gehören diese Geräte in ein vertrauenswürdiges LAN. Dies ist eine Zusammenfassung öffentlicher Informationen und keine Rechts- oder Elektrosicherheitsberatung.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -479,7 +487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   fr: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/connect-balcony-solar-home-assistant-local-overview-hero-fr.webp',
     title: 'Connecter le solaire balcon à Home Assistant en local : guide par marque',
@@ -487,7 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'La plupart des kits solaires balcon supportent une intégration locale avec Home Assistant, mais le protocole dépend de la marque et de la gamme de produits. Anker SOLIX utilise Modbus TCP officiel sur le port 502. Hoymiles passe par une passerelle DTU-Pro avec le même protocole. Le Zendure SolarFlow 800 Pro dispose d\'une API HTTP/MQTT locale ; les anciens modèles Zendure nécessitent un pont MQTT cloud. EcoFlow PowerStream reste dépendant du cloud.',
     metaDescription: 'Connecter le solaire balcon à Home Assistant sans cloud : chemins Modbus TCP, MQTT et API locale vérifiés pour Anker SOLIX, Hoymiles, Zendure, Marstek, Growatt, Deye, Victron, Sungrow, Kostal et EcoFlow.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 min de lecture',
     educationalLevel: 'Avancé',
     audience: 'Utilisateurs Home Assistant intégrant ou choisissant du matériel solaire balcon',
@@ -507,7 +515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Victron Cerbo GX : Modbus TCP et MQTT local officiels — meilleur support local de la catégorie',
         'EcoFlow PowerStream : cloud uniquement à la date de vérification',
       ],
-      updatedDate: '2026-07-03',
+      updatedDate: '2026-11-20',
     },
     toc: [
       { label: 'Points clés', anchor: '#key-takeaways' },
@@ -521,6 +529,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Articles connexes', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Revérification : ce qui a changé depuis la vérification de la matrice des marques',
+        content: '**Cinq points de la matrice des marques et des étapes de configuration doivent être ajustés ; la matrice elle-même a été vérifiée le 2026-07-03 et n\'a pas été entièrement rejouée.** (1) Home Assistant 2026.11 intègre HACS sous forme de Marketplace dans Paramètres > Marketplace ; selon les [notes de version](https://www.home-assistant.io/blog/2026/11/04/release-202611/), une installation séparée de HACS n\'est plus possible, les installations HACS existantes sont migrées au démarrage et les dépôts personnalisés s\'ajoutent via « Add from link » : les étapes « installer via HACS » de cette page désignent donc le Marketplace à partir de 2026.11. (2) Pour Anker SOLIX, le [dépôt ha-anker-solix-official](https://github.com/anker-charging/ha-anker-solix-official) liste Solarbank Max AC, Solarbank Max, XE AC, XE, Solarbank 4 E5000 Pro, Smart Meter Gen 2 et Smart Plug Gen 2 comme pris en charge, place l\'option Modbus TCP dans l\'app Anker sous Appareils, roue dentée, Three-Party Control Settings, et exclut la série X1 et le chargeur V1 : la ligne Anker ne vaut que pour ces modèles. (3) L\'[intégration Victron GX](https://www.home-assistant.io/integrations/victron_gx/) de Home Assistant (depuis 2026.5) se connecte en MQTT à un appareil GX dont le MQTT est activé, en essayant TLS sur le port 8883 puis le port 1883 ; sa page ne mentionne pas Modbus, donc Modbus TCP chez Victron désigne l\'interface propre à Victron et non l\'intégration du noyau. (4) Pour EcoFlow PowerStream, les sources trouvées n\'indiquent toujours aucune voie locale officielle ; des passerelles communautaires existent mais ne sont pas officielles. Par ailleurs, EcoFlow STREAM 5000 et STREAM AC 5000 ont reçu par mise à jour du firmware un mode local et une intégration Home Assistant officielle via Modbus TCP, selon [Plug-In Solar, Explained](https://www.pluginsolarexplained.co.uk/blog/ecoflow-stream-local-control-finally-here/) et [Notebookcheck](https://www.notebookcheck.com/EcoFlow-Stream-erhaelt-per-Update-lokalen-Modus-und-offizielle-Integration-in-Home-Assistant.1452462.0.html) ; les articles citent des versions de firmware différentes (1.1.7.28 et 1.1.7.21), consultez les notes de version d\'EcoFlow. (5) Pour Zendure, un [message de la communauté](https://community.home-assistant.io/t/zendure-solarflow-800-pro-completely-local-zereo-feed-in-without-cloud-and-even-faster-no-mqtt-no-hacs-easy-mode/980110) indique que les SolarFlow de la série 800 exposent l\'API HTTP locale zenSDK une fois activée dans l\'app Zendure, tandis que le [wiki Zendure](https://wiki.zendure.com/en/zendure-software/zendure-home-assistant) indique que l\'intégration officielle envoie les données soit au cloud Zendure, soit à un courtier MQTT local. Les mises à jour du firmware peuvent tout changer : vérifiez les dépôts avant d\'acheter. Modbus TCP n\'a pas d\'authentification : gardez ces appareils sur un réseau local de confiance. Il s\'agit d\'un résumé d\'informations publiques, pas d\'un conseil juridique ni de sécurité électrique.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -653,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ja: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/connect-balcony-solar-home-assistant-local-overview-hero-ja.webp',
     title: 'ベランダ太陽光をHome Assistantにローカル接続：ブランド別ガイド',
@@ -661,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'ほとんどのベランダ太陽光キットはHome Assistantのローカル統合をサポートしていますが、使用プロトコルはブランドと製品ラインによって異なります。Anker SOLIXはポート502の公式Modbus TCPを使用します。HoymilesはDTU-Proゲートウェイ経由で同プロトコルを利用します。Zendure SolarFlow 800 ProはローカルHTTP/MQTT APIを持ち、旧モデルはクラウドMQTTブリッジが必要です。EcoFlow PowerStreamは引き続きクラウド依存です。',
     metaDescription: 'クラウドなしでベランダ太陽光をHome Assistantに接続：Anker SOLIX、Hoymiles、Zendure、Marstek、Growatt、Deye、Victron、Sungrow、Kostal、EcoFlowのModbus TCP・MQTT・ローカルAPI対応を検証済みで解説。',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11分で読める',
     educationalLevel: '上級',
     audience: 'ベランダ太陽光ハードウェアを選定・統合しているHome Assistantユーザー',
@@ -681,7 +693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Victron Cerbo GX：公式Modbus TCPとローカルMQTT — クラス最高のローカル制御',
         'EcoFlow PowerStream：検証日時点でクラウドのみ',
       ],
-      updatedDate: '2026-07-03',
+      updatedDate: '2026-11-20',
     },
     toc: [
       { label: 'まとめ', anchor: '#key-takeaways' },
@@ -695,6 +707,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '再確認:ブランド比較表の確認後に変わった点',
+        content: '**ブランド比較表とセットアップ手順のうち5点は調整が必要です。比較表自体は2026-07-03に確認したもので、全面的に再実施はしていません。** (1) Home Assistant 2026.11はHACSを「設定 > Marketplace」のMarketplaceとして内蔵します。[リリースノート](https://www.home-assistant.io/blog/2026/11/04/release-202611/)によると、HACSの個別インストールはできなくなり、既存のHACSは起動時に移行され、カスタムリポジトリは「Add from link」で追加します。このページの「HACSでインストール」は2026.11以降ではMarketplaceを指します。(2) Anker SOLIXについて、[ha-anker-solix-officialリポジトリ](https://github.com/anker-charging/ha-anker-solix-official)は、Solarbank Max AC、Solarbank Max、XE AC、XE、Solarbank 4 E5000 Pro、Smart Meter Gen 2、Smart Plug Gen 2を対応機種とし、AnkerアプリのModbus TCP切り替えを「デバイス、歯車アイコン、Three-Party Control Settings」の下に置き、X1シリーズとV1 EV充電器は対象外としています。したがってAnkerの行はこれらの機種にのみ当てはまります。(3) Home Assistantの[Victron GX統合](https://www.home-assistant.io/integrations/victron_gx/)(2026.5で導入)は、MQTTを有効にしたGXデバイスにMQTTで接続し、ポート8883のTLSを試してからポート1883にフォールバックします。ページにModbusの記載はないため、VictronのModbus TCPはコア統合ではなくVictron独自のインターフェースを指します。(4) EcoFlow PowerStreamは、確認した情報源では公式のローカル経路がまだありません。コミュニティ製ブリッジはありますが非公式です。別件として、EcoFlow STREAM 5000とSTREAM AC 5000は、[Plug-In Solar, Explained](https://www.pluginsolarexplained.co.uk/blog/ecoflow-stream-local-control-finally-here/)と[Notebookcheck](https://www.notebookcheck.com/EcoFlow-Stream-erhaelt-per-Update-lokalen-Modus-und-offizielle-Integration-in-Home-Assistant.1452462.0.html)によると、ファームウェア更新でローカルモードとModbus TCPによる公式Home Assistant統合を得ました。報道ごとにファームウェアのバージョンが異なる(1.1.7.28と1.1.7.21)ため、EcoFlowのリリースノートを確認してください。(5) Zendureについて、[コミュニティ投稿](https://community.home-assistant.io/t/zendure-solarflow-800-pro-completely-local-zereo-feed-in-without-cloud-and-even-faster-no-mqtt-no-hacs-easy-mode/980110)はSolarFlow 800シリーズがZendureアプリで有効化するとローカルのzenSDK HTTP APIを公開すると述べ、[Zendureのwiki](https://wiki.zendure.com/en/zendure-software/zendure-home-assistant)は公式統合がデータをZendureクラウドまたはローカルMQTTブローカーのどちらかに送ると述べています。ファームウェア更新で変わる可能性があるため、購入前にリポジトリで確認してください。Modbus TCPには認証がないため、これらの機器は信頼できるLAN内に置いてください。本欄は公開情報の要約であり、法的助言・電気安全上の助言ではありません。',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -821,7 +837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   zh: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/connect-balcony-solar-home-assistant-local-overview-hero-zh.webp',
     title: '阳台光伏接入Home Assistant本地控制：品牌逐一指南',
@@ -829,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '大多数阳台光伏套件支持与Home Assistant的本地集成，但使用的协议取决于品牌和具体产品线。Anker SOLIX在502端口提供官方Modbus TCP。Hoymiles通过DTU-Pro网关使用同一协议。Zendure SolarFlow 800 Pro具有本地HTTP/MQTT API；旧款Zendure型号需要云端MQTT桥接。EcoFlow PowerStream仍依赖云端。',
     metaDescription: '无需云端将阳台光伏连接到Home Assistant：验证Anker SOLIX、Hoymiles、Zendure、Marstek、Growatt、Deye、Victron、Sungrow、Kostal和EcoFlow的Modbus TCP、MQTT和本地API路径。',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '阅读约11分钟',
     educationalLevel: '高级',
     audience: '正在选择或集成阳台光伏硬件的Home Assistant用户',
@@ -849,7 +865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Victron Cerbo GX：官方Modbus TCP和本地MQTT — 同类产品中最佳本地控制',
         'EcoFlow PowerStream：截至验证日期仅支持云端',
       ],
-      updatedDate: '2026-07-03',
+      updatedDate: '2026-11-20',
     },
     toc: [
       { label: '要点摘要', anchor: '#key-takeaways' },
@@ -863,6 +879,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '复核:品牌矩阵核验之后的变化',
+        content: '**品牌矩阵和设置步骤中有五点需要调整;矩阵本身于2026-07-03核验,尚未完整重新核验。** (1) Home Assistant 2026.11将HACS内置为“设置 > Marketplace”下的Marketplace;据[发布说明](https://www.home-assistant.io/blog/2026/11/04/release-202611/),不再能单独安装HACS,现有HACS安装会在启动时迁移,自定义仓库通过“Add from link”添加,因此本页的“通过HACS安装”在2026.11及以后指的是Marketplace。(2) 对于Anker SOLIX,[ha-anker-solix-official仓库](https://github.com/anker-charging/ha-anker-solix-official)列出Solarbank Max AC、Solarbank Max、XE AC、XE、Solarbank 4 E5000 Pro、Smart Meter Gen 2和Smart Plug Gen 2为受支持机型,Anker应用中Modbus TCP开关位于“设备、齿轮图标、Three-Party Control Settings”之下,并说明X1系列和V1电动车充电器不在范围内,因此Anker一行仅适用于这些机型。(3) Home Assistant的[Victron GX集成](https://www.home-assistant.io/integrations/victron_gx/)(2026.5引入)通过MQTT连接已启用MQTT的GX设备,先尝试8883端口的TLS,再回退到1883端口;其页面未提及Modbus,因此Victron的Modbus TCP指的是Victron自身的接口,而非核心集成。(4) 在已找到的来源中,EcoFlow PowerStream仍没有官方本地途径;存在社区桥接方案,但并非官方。另外,据[Plug-In Solar, Explained](https://www.pluginsolarexplained.co.uk/blog/ecoflow-stream-local-control-finally-here/)和[Notebookcheck](https://www.notebookcheck.com/EcoFlow-Stream-erhaelt-per-Update-lokalen-Modus-und-offizielle-Integration-in-Home-Assistant.1452462.0.html)报道,EcoFlow STREAM 5000和STREAM AC 5000通过固件更新获得了本地模式以及基于Modbus TCP的官方Home Assistant集成;报道中的固件版本不一致(1.1.7.28和1.1.7.21),请查看EcoFlow的发布说明。(5) 关于Zendure,一条[社区帖子](https://community.home-assistant.io/t/zendure-solarflow-800-pro-completely-local-zereo-feed-in-without-cloud-and-even-faster-no-mqtt-no-hacs-easy-mode/980110)称SolarFlow 800系列设备在Zendure应用中启用后会开放本地zenSDK HTTP API,而[Zendure维基](https://wiki.zendure.com/en/zendure-software/zendure-home-assistant)称官方集成要么将数据发送到Zendure云,要么发送到本地MQTT代理。固件更新可能改变这一切,购买前请以仓库为准。Modbus TCP没有身份验证,请将这些设备置于可信的局域网内。本页为公开信息的汇总,不构成法律或电气安全建议。',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -987,7 +1007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/connect-balcony-solar-home-assistant-local-overview-hero-es.webp',
     title: 'Conectar solar de balcón a Home Assistant en local: guía por marca',
@@ -995,7 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'La mayoría de los kits de solar de balcón soportan integración local con Home Assistant, pero el protocolo depende de la marca y la línea de producto. Anker SOLIX usa Modbus TCP oficial en el puerto 502. Hoymiles pasa por una pasarela DTU-Pro con el mismo protocolo. El Zendure SolarFlow 800 Pro tiene una API HTTP/MQTT local; los modelos Zendure más antiguos necesitan un puente MQTT en la nube. EcoFlow PowerStream sigue siendo dependiente de la nube.',
     metaDescription: 'Conecta solar de balcón a Home Assistant sin nube: rutas Modbus TCP, MQTT y API local verificadas para Anker SOLIX, Hoymiles, Zendure, Marstek, Growatt, Deye, Victron, Sungrow, Kostal y EcoFlow.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 min de lectura',
     educationalLevel: 'Avanzado',
     audience: 'Usuarios de Home Assistant que integran o seleccionan hardware solar de balcón',
@@ -1015,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Victron Cerbo GX: Modbus TCP y MQTT local oficiales — mejor soporte local de la categoría',
         'EcoFlow PowerStream: solo nube a fecha de verificación',
       ],
-      updatedDate: '2026-07-03',
+      updatedDate: '2026-11-20',
     },
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
@@ -1029,6 +1049,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Artículos relacionados', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Reverificación: qué ha cambiado desde que se verificó la matriz de marcas',
+        content: '**Cinco puntos de la matriz de marcas y de los pasos de configuración necesitan ajustes; la matriz se verificó el 2026-07-03 y no se ha vuelto a ejecutar por completo.** (1) Home Assistant 2026.11 integra HACS como Marketplace en Ajustes > Marketplace; según las [notas de la versión](https://www.home-assistant.io/blog/2026/11/04/release-202611/), ya no es posible instalar HACS por separado, las instalaciones de HACS existentes se migran al arrancar y los repositorios personalizados se añaden con «Add from link», así que los pasos de «instalar mediante HACS» de esta página se refieren al Marketplace desde 2026.11. (2) Para Anker SOLIX, el [repositorio ha-anker-solix-official](https://github.com/anker-charging/ha-anker-solix-official) lista Solarbank Max AC, Solarbank Max, XE AC, XE, Solarbank 4 E5000 Pro, Smart Meter Gen 2 y Smart Plug Gen 2 como compatibles, sitúa el interruptor de Modbus TCP en la app de Anker en Dispositivos, rueda dentada, Three-Party Control Settings, y deja fuera la serie X1 y el cargador V1: la fila de Anker solo vale para esos modelos. (3) La [integración Victron GX](https://www.home-assistant.io/integrations/victron_gx/) de Home Assistant (desde 2026.5) se conecta por MQTT a un dispositivo GX con MQTT activado, probando TLS en el puerto 8883 y recurriendo al puerto 1883; su página no menciona Modbus, por lo que Modbus TCP en Victron se refiere a la interfaz propia de Victron y no a la integración del núcleo. (4) Para EcoFlow PowerStream, las fuentes encontradas siguen sin mostrar una vía local oficial; existen puentes de la comunidad, pero no son oficiales. Aparte, EcoFlow STREAM 5000 y STREAM AC 5000 recibieron mediante una actualización de firmware un modo local y una integración oficial de Home Assistant mediante Modbus TCP, según [Plug-In Solar, Explained](https://www.pluginsolarexplained.co.uk/blog/ecoflow-stream-local-control-finally-here/) y [Notebookcheck](https://www.notebookcheck.com/EcoFlow-Stream-erhaelt-per-Update-lokalen-Modus-und-offizielle-Integration-in-Home-Assistant.1452462.0.html); los informes citan versiones de firmware distintas (1.1.7.28 y 1.1.7.21), así que consulta las notas de versión de EcoFlow. (5) Sobre Zendure, una [publicación de la comunidad](https://community.home-assistant.io/t/zendure-solarflow-800-pro-completely-local-zereo-feed-in-without-cloud-and-even-faster-no-mqtt-no-hacs-easy-mode/980110) dice que los SolarFlow de la serie 800 exponen la API HTTP local zenSDK una vez activada en la app de Zendure, mientras que la [wiki de Zendure](https://wiki.zendure.com/en/zendure-software/zendure-home-assistant) indica que la integración oficial envía los datos a la nube de Zendure o a un broker MQTT local. Las actualizaciones de firmware pueden cambiarlo todo, así que verifica en los repositorios antes de comprar. Modbus TCP no tiene autenticación, así que mantén estos dispositivos en una red local de confianza. Es un resumen de información pública, no asesoramiento jurídico ni de seguridad eléctrica.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -1152,7 +1176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   pt: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/connect-balcony-solar-home-assistant-local-overview-hero-pt.webp',
     title: 'Conectar solar de varanda ao Home Assistant localmente: guia por marca',
@@ -1160,7 +1184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'A maioria dos kits de solar de varanda suporta integração local com o Home Assistant, mas o protocolo depende da marca e da linha de produto. O Anker SOLIX usa Modbus TCP oficial na porta 502. O Hoymiles passa por um gateway DTU-Pro com o mesmo protocolo. O Zendure SolarFlow 800 Pro tem uma API HTTP/MQTT local; modelos Zendure mais antigos precisam de uma ponte MQTT na nuvem. O EcoFlow PowerStream ainda depende da nuvem.',
     metaDescription: 'Conecte solar de varanda ao Home Assistant sem nuvem: rotas Modbus TCP, MQTT e API local verificadas para Anker SOLIX, Hoymiles, Zendure, Marstek, Growatt, Deye, Victron, Sungrow, Kostal e EcoFlow.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 min de leitura',
     educationalLevel: 'Avançado',
     audience: 'Utilizadores do Home Assistant que integram ou selecionam hardware de solar de varanda',
@@ -1180,7 +1204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Victron Cerbo GX: Modbus TCP e MQTT local oficiais — melhor suporte local da categoria',
         'EcoFlow PowerStream: apenas nuvem na data de verificação',
       ],
-      updatedDate: '2026-07-03',
+      updatedDate: '2026-11-20',
     },
     toc: [
       { label: 'Pontos-chave', anchor: '#key-takeaways' },
@@ -1194,6 +1218,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Artigos relacionados', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Reverificação: o que mudou desde que a matriz de marcas foi verificada',
+        content: '**Cinco pontos da matriz de marcas e dos passos de configuração precisam de ajuste; a matriz foi verificada em 2026-07-03 e não foi totalmente refeita.** (1) O Home Assistant 2026.11 integra o HACS como Marketplace em Configurações > Marketplace; segundo as [notas da versão](https://www.home-assistant.io/blog/2026/11/04/release-202611/), não é mais possível instalar o HACS separadamente, as instalações existentes do HACS migram na inicialização e repositórios personalizados são adicionados com «Add from link», então os passos de «instalar via HACS» desta página significam o Marketplace a partir da 2026.11. (2) Para a Anker SOLIX, o [repositório ha-anker-solix-official](https://github.com/anker-charging/ha-anker-solix-official) lista Solarbank Max AC, Solarbank Max, XE AC, XE, Solarbank 4 E5000 Pro, Smart Meter Gen 2 e Smart Plug Gen 2 como compatíveis, coloca a chave Modbus TCP no app da Anker em Dispositivos, ícone de engrenagem, Three-Party Control Settings, e exclui a série X1 e o carregador V1: a linha da Anker vale só para esses modelos. (3) A [integração Victron GX](https://www.home-assistant.io/integrations/victron_gx/) do Home Assistant (desde a 2026.5) conecta-se por MQTT a um dispositivo GX com MQTT ativado, tentando TLS na porta 8883 e recuando para a porta 1883; a página não menciona Modbus, então o Modbus TCP da Victron refere-se à interface própria da Victron e não à integração do núcleo. (4) Para a EcoFlow PowerStream, as fontes encontradas continuam sem mostrar um caminho local oficial; existem pontes da comunidade, mas não oficiais. Separadamente, a EcoFlow STREAM 5000 e a STREAM AC 5000 ganharam, por atualização de firmware, um modo local e uma integração oficial do Home Assistant via Modbus TCP, segundo a [Plug-In Solar, Explained](https://www.pluginsolarexplained.co.uk/blog/ecoflow-stream-local-control-finally-here/) e o [Notebookcheck](https://www.notebookcheck.com/EcoFlow-Stream-erhaelt-per-Update-lokalen-Modus-und-offizielle-Integration-in-Home-Assistant.1452462.0.html); os relatos citam versões de firmware diferentes (1.1.7.28 e 1.1.7.21), então consulte as notas de versão da EcoFlow. (5) Sobre a Zendure, uma [postagem da comunidade](https://community.home-assistant.io/t/zendure-solarflow-800-pro-completely-local-zereo-feed-in-without-cloud-and-even-faster-no-mqtt-no-hacs-easy-mode/980110) diz que os SolarFlow da série 800 expõem a API HTTP local zenSDK depois de ativada no app da Zendure, enquanto o [wiki da Zendure](https://wiki.zendure.com/en/zendure-software/zendure-home-assistant) diz que a integração oficial envia os dados para a nuvem da Zendure ou para um broker MQTT local. Atualizações de firmware podem mudar tudo isso, então verifique nos repositórios antes de comprar. O Modbus TCP não tem autenticação, então mantenha esses dispositivos em uma rede local confiável. Este é um resumo de informações públicas, não aconselhamento jurídico nem de segurança elétrica.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -1315,7 +1343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ar: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/connect-balcony-solar-home-assistant-local-overview-hero-ar.webp',
     title: 'توصيل الطاقة الشمسية للشرفة بـ Home Assistant محلياً: دليل شامل حسب العلامة التجارية',
@@ -1323,7 +1351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'تدعم معظم أطقم الطاقة الشمسية للشرفة التكامل المحلي مع Home Assistant، لكن البروتوكول يعتمد على العلامة التجارية وخط المنتج. يستخدم Anker SOLIX Modbus TCP الرسمي على المنفذ 502. يمر Hoymiles عبر بوابة DTU-Pro باستخدام نفس البروتوكول. يمتلك Zendure SolarFlow 800 Pro واجهة HTTP/MQTT محلية؛ النماذج القديمة تحتاج جسر MQTT سحابي. EcoFlow PowerStream لا يزال يعتمد على السحابة.',
     metaDescription: 'توصيل الطاقة الشمسية للشرفة بـ Home Assistant بدون سحابة: مسارات Modbus TCP وMQTT وAPI محلي موثقة لـ Anker SOLIX وHoymiles وZendure وMarstek وGrowatt وDeye وVictron وSungrow وKostal وEcoFlow.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '١١ دقيقة للقراءة',
     educationalLevel: 'متقدم',
     audience: 'مستخدمو Home Assistant الذين يدمجون أو يختارون أجهزة الطاقة الشمسية للشرفة',
@@ -1343,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Victron Cerbo GX: Modbus TCP وMQTT محلي رسميان — أفضل دعم محلي في الفئة',
         'EcoFlow PowerStream: سحابة فقط حتى تاريخ التحقق',
       ],
-      updatedDate: '2026-07-03',
+      updatedDate: '2026-11-20',
     },
     toc: [
       { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
@@ -1357,6 +1385,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قراءة ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'إعادة تحقق: ما تغيّر منذ التحقق من مصفوفة العلامات',
+        content: '**خمس نقاط في مصفوفة العلامات وخطوات الإعداد تحتاج إلى تعديل؛ وقد جرى التحقق من المصفوفة نفسها في 2026-07-03 ولم تُعَد بالكامل.** (1) يدمج Home Assistant 2026.11 مستودع HACS كمتجر (Marketplace) ضمن الإعدادات > Marketplace؛ ووفق [ملاحظات الإصدار](https://www.home-assistant.io/blog/2026/11/04/release-202611/) لم يعد تثبيت HACS منفصلاً ممكناً، وتُنقل تثبيتات HACS الحالية عند التشغيل، وتُضاف المستودعات المخصصة عبر «Add from link»، فخطوات «التثبيت عبر HACS» في هذه الصفحة تعني Marketplace ابتداءً من 2026.11. (2) بالنسبة إلى Anker SOLIX، يسرد [مستودع ha-anker-solix-official](https://github.com/anker-charging/ha-anker-solix-official) الأجهزة المدعومة: Solarbank Max AC وSolarbank Max وXE AC وXE وSolarbank 4 E5000 Pro وSmart Meter Gen 2 وSmart Plug Gen 2، ويضع مفتاح Modbus TCP في تطبيق Anker ضمن الأجهزة ثم أيقونة الترس ثم Three-Party Control Settings، ويستثني سلسلة X1 وشاحن V1 للسيارات؛ فصف Anker ينطبق على هذه الطرز فقط. (3) يتصل [تكامل Victron GX](https://www.home-assistant.io/integrations/victron_gx/) في Home Assistant (منذ 2026.5) عبر MQTT بجهاز GX مفعّل عليه MQTT، محاولاً TLS على المنفذ 8883 ثم المنفذ 1883؛ ولا تذكر صفحته Modbus، لذا يشير Modbus TCP لدى Victron إلى واجهة Victron نفسها لا إلى التكامل الأساسي. (4) بالنسبة إلى EcoFlow PowerStream لا تزال المصادر التي عُثر عليها لا تُظهر مساراً محلياً رسمياً؛ وتوجد جسور مجتمعية لكنها غير رسمية. ومن جهة أخرى، حصل EcoFlow STREAM 5000 وSTREAM AC 5000 عبر تحديث للبرنامج الثابت على وضع محلي وتكامل رسمي مع Home Assistant عبر Modbus TCP، وفق [Plug-In Solar, Explained](https://www.pluginsolarexplained.co.uk/blog/ecoflow-stream-local-control-finally-here/) و[Notebookcheck](https://www.notebookcheck.com/EcoFlow-Stream-erhaelt-per-Update-lokalen-Modus-und-offizielle-Integration-in-Home-Assistant.1452462.0.html)؛ وتذكر التقارير إصدارين مختلفين للبرنامج الثابت (1.1.7.28 و1.1.7.21) فراجع ملاحظات إصدار EcoFlow. (5) بالنسبة إلى Zendure، يقول [منشور مجتمعي](https://community.home-assistant.io/t/zendure-solarflow-800-pro-completely-local-zereo-feed-in-without-cloud-and-even-faster-no-mqtt-no-hacs-easy-mode/980110) إن أجهزة SolarFlow من السلسلة 800 تتيح واجهة zenSDK HTTP المحلية بعد تفعيلها في تطبيق Zendure، بينما يذكر [ويكي Zendure](https://wiki.zendure.com/en/zendure-software/zendure-home-assistant) أن التكامل الرسمي يرسل البيانات إما إلى سحابة Zendure أو إلى وسيط MQTT محلي. وقد تغيّر تحديثات البرنامج الثابت كل ذلك، فتحقق من المستودعات قبل الشراء. لا يملك Modbus TCP مصادقة، فأبقِ هذه الأجهزة على شبكة محلية موثوقة. هذا ملخص لمعلومات علنية وليس استشارة قانونية أو نصيحة سلامة كهربائية.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -1478,7 +1510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ko: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/connect-balcony-solar-home-assistant-local-overview-hero-ko.webp',
     title: '베란다 태양광을 Home Assistant에 로컬로 연결하기: 브랜드별 가이드',
@@ -1486,7 +1518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '대부분의 베란다 태양광 키트는 Home Assistant와의 로컬 통합을 지원하지만, 사용 프로토콜은 브랜드와 제품 라인에 따라 다릅니다. Anker SOLIX는 포트 502에서 공식 Modbus TCP를 사용합니다. Hoymiles는 DTU-Pro 게이트웨이를 통해 동일한 프로토콜을 사용합니다. Zendure SolarFlow 800 Pro는 로컬 HTTP/MQTT API를 가지고 있으며, 구형 Zendure 모델은 클라우드 MQTT 브리지가 필요합니다. EcoFlow PowerStream은 여전히 클라우드에 의존합니다.',
     metaDescription: '클라우드 없이 베란다 태양광을 Home Assistant에 연결하기: Anker SOLIX, Hoymiles, Zendure, Marstek, Growatt, Deye, Victron, Sungrow, Kostal, EcoFlow의 Modbus TCP, MQTT, 로컬 API 경로를 검증하여 안내합니다.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11분 읽기',
     educationalLevel: '고급',
     audience: '베란다 태양광 하드웨어를 선택하거나 통합하는 Home Assistant 사용자',
@@ -1506,7 +1538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Victron Cerbo GX: 공식 Modbus TCP 및 로컬 MQTT — 동급 최고의 로컬 제어',
         'EcoFlow PowerStream: 검증 날짜 기준 클라우드 전용',
       ],
-      updatedDate: '2026-07-03',
+      updatedDate: '2026-11-20',
     },
     toc: [
       { label: '핵심 요약', anchor: '#key-takeaways' },
@@ -1520,6 +1552,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '관련 글', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '재확인: 브랜드 매트릭스 검증 이후 달라진 점',
+        content: '**브랜드 매트릭스와 설정 단계 중 다섯 가지는 조정이 필요합니다. 매트릭스 자체는 2026-07-03에 검증된 것으로 전부 다시 수행하지는 않았습니다.** (1) Home Assistant 2026.11은 HACS를 설정 > Marketplace 아래의 Marketplace로 내장합니다. [릴리스 노트](https://www.home-assistant.io/blog/2026/11/04/release-202611/)에 따르면 HACS를 별도로 설치할 수 없고, 기존 HACS 설치는 시작 시 이전되며, 사용자 지정 저장소는 "Add from link"로 추가합니다. 따라서 이 페이지의 "HACS로 설치"는 2026.11 이후에는 Marketplace를 뜻합니다. (2) Anker SOLIX의 경우 [ha-anker-solix-official 저장소](https://github.com/anker-charging/ha-anker-solix-official)는 Solarbank Max AC, Solarbank Max, XE AC, XE, Solarbank 4 E5000 Pro, Smart Meter Gen 2, Smart Plug Gen 2를 지원 대상으로 나열하고, Anker 앱의 Modbus TCP 토글을 디바이스, 톱니바퀴 아이콘, Three-Party Control Settings 아래에 두며, X1 시리즈와 V1 EV 충전기는 범위 밖이라고 밝힙니다. 따라서 Anker 행은 이 모델에만 해당합니다. (3) Home Assistant의 [Victron GX 통합](https://www.home-assistant.io/integrations/victron_gx/)(2026.5 도입)은 MQTT가 활성화된 GX 장치에 MQTT로 연결하며 포트 8883의 TLS를 먼저 시도한 뒤 포트 1883으로 대체합니다. 해당 페이지에는 Modbus 언급이 없으므로 Victron의 Modbus TCP는 코어 통합이 아니라 Victron 자체 인터페이스를 가리킵니다. (4) EcoFlow PowerStream은 확인한 출처에서 여전히 공식 로컬 경로가 없으며, 커뮤니티 브리지는 있으나 비공식입니다. 별도로 EcoFlow STREAM 5000과 STREAM AC 5000은 [Plug-In Solar, Explained](https://www.pluginsolarexplained.co.uk/blog/ecoflow-stream-local-control-finally-here/)와 [Notebookcheck](https://www.notebookcheck.com/EcoFlow-Stream-erhaelt-per-Update-lokalen-Modus-und-offizielle-Integration-in-Home-Assistant.1452462.0.html)에 따르면 펌웨어 업데이트로 로컬 모드와 Modbus TCP 기반 공식 Home Assistant 통합을 얻었습니다. 보도마다 펌웨어 버전이 다르므로(1.1.7.28과 1.1.7.21) EcoFlow 릴리스 노트를 확인하십시오. (5) Zendure의 경우 [커뮤니티 게시물](https://community.home-assistant.io/t/zendure-solarflow-800-pro-completely-local-zereo-feed-in-without-cloud-and-even-faster-no-mqtt-no-hacs-easy-mode/980110)은 SolarFlow 800 시리즈가 Zendure 앱에서 활성화하면 로컬 zenSDK HTTP API를 제공한다고 하고, [Zendure 위키](https://wiki.zendure.com/en/zendure-software/zendure-home-assistant)는 공식 통합이 데이터를 Zendure 클라우드 또는 로컬 MQTT 브로커 중 하나로 보낸다고 합니다. 펌웨어 업데이트로 모두 바뀔 수 있으니 구매 전 저장소에서 확인하십시오. Modbus TCP에는 인증이 없으므로 이 장치들은 신뢰할 수 있는 LAN에 두십시오. 이는 공개 정보의 요약이며 법률·전기 안전 자문이 아닙니다.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
