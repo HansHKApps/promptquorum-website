@@ -25520,22 +25520,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Global AI governance is split into three models. The European Union has the AI Act (Regulation (EU) 2024/1689), a binding, risk-based law that entered into force on 1 August 2024 and applies in phases ([European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). The United States has no comprehensive federal AI statute; policy runs through executive orders, agency guidance, voluntary standards such as the NIST AI Risk Management Framework, and state laws. China regulates through targeted administrative measures, mainly from the Cyberspace Administration of China (CAC).',
             'For any organization deploying AI across regions, the practical differences are timelines, documentation duties and who can enforce. This page summarizes the three regimes as publicly documented in November 2026. It is a general overview, not legal advice.',
           ],
-          image: '/images/ai-three-region-framework-en.svg',
-          imageCaption: 'Three regulatory models: the EU AI Act (binding, risk-based), the US (executive action, sector rules and state laws) and China (CAC administrative measures).',
         },
         riskTiers: {
           title: 'AI Risk Classification: How Each Region Categorizes Risk',
           content: [
             'The three regions classify AI differently. The EU AI Act sorts systems by risk: prohibited practices, high-risk systems, systems with specific transparency duties and minimal-risk systems; general-purpose AI models have their own obligations. The US has no single risk taxonomy: duties arise from sector rules (for example in employment, credit and health), consumer-protection enforcement by the Federal Trade Commission and state laws. China applies content, security and filing requirements to public-facing generative AI, recommendation and deep-synthesis services.',
           ],
-          image: '/images/ai-risk-tiers-comparison-en.svg',
-          imageCaption: 'EU: risk-based classes. US: sector rules and state laws. China: content, security and filing requirements for public-facing services.',
         },
         timeline: {
           title: 'Regulatory Timeline: 2024–2027 and Beyond',
           content: [
-            'EU: The AI Act entered into force on 1 August 2024. Prohibited practices and AI literacy duties have applied since 2 February 2025, and obligations for general-purpose AI models since 2 August 2025. The AI Omnibus, in force since 27 July 2026, moved the high-risk rules for stand-alone (Annex III) systems to 2 December 2027 and for AI embedded in regulated products (Annex I) to 2 August 2028 ([European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). The Article 50 transparency duties were not deferred and apply from 2 August 2026 ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
-            'US: Executive Order 14365 of 11 December 2025 directs the Justice Department to challenge state AI laws and asks for a uniform federal framework, but it does not itself preempt any state law ([White House](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). Congress had not enacted a federal preemption statute in the sources we reviewed (November 2026). Colorado\'s SB 26-189, signed on 14 May 2026, replaces the state\'s 2024 AI Act and is scheduled to take effect on 1 January 2027; law-firm analyses note that litigation may affect that date ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
+            'EU: The AI Act entered into force on 1 August 2024. Prohibited practices and AI literacy duties have applied since 2 February 2025, and obligations for general-purpose AI models since 2 August 2025. The AI Omnibus, in force since 27 July 2026, moved the high-risk rules for stand-alone (Annex III) systems to 2 December 2027 and for AI embedded in regulated products (Annex I) to 2 August 2028 ([European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). The Article 50 transparency duties were not deferred and apply from 2 August 2026, except that the Article 50(2) watermarking duty has a grace period until 2 December 2026 for systems already on the market before that date ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
+            'US: Executive Order 14365 of 11 December 2025 directs the Justice Department to challenge state AI laws and asks for a uniform federal framework, but it does not itself preempt any state law ([White House](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). Congress had not enacted a federal preemption statute in the sources we reviewed (November 2026). Colorado\'s SB 26-189, signed on 14 May 2026, replaces the state\'s 2024 AI Act and is scheduled to take effect on 1 January 2027 ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
             'China: The Interim Measures for Generative AI Services have applied since 15 August 2023, the AI-content labeling measures since 1 September 2025, and an amended Cybersecurity Law with a general AI clause since 1 January 2026. China has no single comprehensive AI law, and its 2026 legislative work plan lists one as a priority without a published timeline ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
           ],
         },
@@ -25548,7 +25544,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         complianceBurden: {
           title: 'Compliance Effort: What Differs in Practice',
           content: [
-            'Compliance effort differs by region. In the EU, the AI Act sets documentation, risk-management and transparency duties that depend on a system\'s risk class and on whether you are a provider or a deployer; prohibitions, general-purpose AI duties and transparency duties already apply, while high-risk duties follow in December 2027 (Annex III) or August 2028 (Annex I). In the US, duties are spread across sectors and states, so the effort depends on where and in which sector you operate. In China, public-facing generative AI services may need CAC filing or security assessment and must label AI-generated content ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
+            'Compliance effort differs by region. In the EU, the AI Act sets documentation, risk-management and transparency duties that depend on a system\'s risk class and on whether you are a provider or a deployer; prohibitions, general-purpose AI duties and Article 50 transparency duties already apply (except that the Article 50(2) watermarking duty has a grace period until 2 December 2026 for systems already on the market), while high-risk duties follow in December 2027 (Annex III) or August 2028 (Annex I). In the US, duties are spread across sectors and states, so the effort depends on where and in which sector you operate. In China, public-facing generative AI services may need CAC filing or security assessment and must label AI-generated content ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
             'Cost and timeline figures vary widely with company size, use case and legal counsel, and no neutral public benchmark exists, so this page does not quote cost ranges. Get region-specific legal advice before committing to a launch plan.',
           ],
         },
@@ -25559,7 +25555,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'US-first: there is no comprehensive federal AI statute, so launch obligations come from sector rules, FTC consumer-protection law and the state laws that apply to you. Track state developments such as Colorado\'s SB 26-189 before launch.',
-            'EU-first: if you serve EU users, design for AI Act obligations from the start. Prohibited practices, general-purpose AI duties and transparency duties already apply; high-risk duties follow in 2027 and 2028. Using the EU documentation as a baseline elsewhere is a strategic choice, not a legal requirement.',
+            'EU-first: if you serve EU users, design for AI Act obligations from the start. Prohibited practices, general-purpose AI duties and Article 50 transparency duties already apply (subject to the watermarking grace period noted in the timeline); high-risk duties follow in 2027 and 2028. Using the EU documentation as a baseline elsewhere is a strategic choice, not a legal requirement.',
             'China: offering public-facing generative AI in mainland China involves CAC filing or registration, content labeling and security requirements. Ask local counsel whether and how your service can be offered.',
             'Multi-region: running one product in all three regions means maintaining separate documentation, labeling and review processes. Plan for region-specific configurations.',
           ],
@@ -25569,7 +25565,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             {
               q: 'Which region is moving fastest on AI regulation?',
-              a: 'The EU has the most detailed binding framework: the AI Act has applied in phases since 2025, although the AI Omnibus, in force since 27 July 2026, delayed the high-risk rules to December 2027 and August 2028 (European Commission). China issues targeted measures quickly, for example the AI-content labeling measures in September 2025. The US has no comprehensive federal law; a December 2025 executive order seeks a national framework while states continue to legislate.',
+              a: 'Of the three regimes covered here, the EU has the most detailed binding framework: the AI Act has applied in phases since 2025, although the AI Omnibus, in force since 27 July 2026, delayed the high-risk rules to December 2027 and August 2028 (European Commission). China issues targeted measures at a steady pace, for example the AI-content labeling measures in September 2025. The US has no comprehensive federal law; a December 2025 executive order seeks a national framework while states continue to legislate.',
             },
             {
               q: 'Can I use the same AI model in all three regions?',
@@ -25577,7 +25573,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'What happens if I ignore regional compliance requirements?',
-              a: 'The consequences depend on the regime. The AI Act allows fines of up to €35 million or 7% of worldwide annual turnover, whichever is higher, for prohibited practices, with lower tiers for other breaches (Article 99, [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). In the US, enforcement comes from agencies such as the FTC and from state attorneys general. In China, the relevant laws and CAC measures provide for corrective orders and penalties. None of these is a viable long-term strategy to ignore.',
+              a: 'The consequences depend on the regime. The AI Act allows fines of up to €35 million or 7% of worldwide annual turnover, whichever is higher, for prohibited practices, with lower tiers for other breaches (Article 99, [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). In the US, enforcement comes from agencies such as the FTC and from state attorneys general. In China, the relevant laws and CAC measures provide for corrective orders and penalties. Ignoring any of these regimes is not a sound long-term strategy.',
             },
             {
               q: 'Is GDPR the same as the EU AI Act?',
@@ -25607,22 +25603,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'تنقسم الحوكمة العالمية للذكاء الاصطناعي إلى ثلاثة نماذج. لدى الاتحاد الأوروبي قانون الذكاء الاصطناعي (اللائحة (EU) 2024/1689)، وهو قانون ملزم قائم على المخاطر دخل حيز النفاذ في 1 أغسطس 2024 ويُطبَّق على مراحل ([المفوضية الأوروبية](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). وليس لدى الولايات المتحدة قانون اتحادي شامل للذكاء الاصطناعي؛ إذ تمر السياسة عبر أوامر تنفيذية وإرشادات الوكالات ومعايير طوعية مثل NIST AI Risk Management Framework وقوانين الولايات. وتنظّم الصين عبر تدابير إدارية محددة، أبرزها من إدارة الفضاء الإلكتروني الصينية (CAC).',
             'بالنسبة لأي جهة تنشر الذكاء الاصطناعي في عدة مناطق، تكمن الفروق العملية في الجداول الزمنية والتزامات التوثيق وجهة الإنفاذ. تلخّص هذه الصفحة الأنظمة الثلاثة وفق ما هو موثَّق علنًا في نوفمبر 2026. وهي نظرة عامة وليست استشارة قانونية.',
           ],
-          image: '/images/ai-three-region-framework-en.svg',
-          imageCaption: 'ثلاثة نماذج تنظيمية: قانون الذكاء الاصطناعي الأوروبي (ملزم وقائم على المخاطر)، والولايات المتحدة (إجراءات تنفيذية وقواعد قطاعية وقوانين ولايات)، والصين (تدابير إدارية من CAC).',
         },
         riskTiers: {
           title: 'تصنيف مخاطر الذكاء الاصطناعي: كيف تصنّف كل منطقة المخاطر',
           content: [
             'تصنّف المناطق الثلاث الذكاء الاصطناعي بطرق مختلفة. يرتّب قانون الذكاء الاصطناعي الأوروبي الأنظمة حسب المخاطر: ممارسات محظورة، وأنظمة عالية المخاطر، وأنظمة لها التزامات شفافية محددة، وأنظمة ذات مخاطر دنيا؛ وللنماذج العامة الغرض التزاماتها الخاصة. وليس لدى الولايات المتحدة تصنيف موحد للمخاطر: إذ تنشأ الالتزامات من القواعد القطاعية (مثل التوظيف والائتمان والصحة) ومن إنفاذ حماية المستهلك بواسطة لجنة التجارة الاتحادية (FTC) ومن قوانين الولايات. وتفرض الصين متطلبات المحتوى والأمن والتسجيل على خدمات الذكاء الاصطناعي التوليدي والتوصية والتوليف العميق المتاحة للجمهور.',
           ],
-          image: '/images/ai-risk-tiers-comparison-en.svg',
-          imageCaption: 'الاتحاد الأوروبي: فئات قائمة على المخاطر. الولايات المتحدة: قواعد قطاعية وقوانين ولايات. الصين: متطلبات المحتوى والأمن والتسجيل للخدمات العامة.',
         },
         timeline: {
           title: 'الجدول الزمني التنظيمي: من 2024 إلى 2027 وما بعدها',
           content: [
-            'الاتحاد الأوروبي: دخل قانون الذكاء الاصطناعي حيز النفاذ في 1 أغسطس 2024. وتُطبَّق الممارسات المحظورة والتزامات الإلمام بالذكاء الاصطناعي منذ 2 فبراير 2025، والتزامات النماذج العامة الغرض منذ 2 أغسطس 2025. وقد أجّلت حزمة AI Omnibus، السارية منذ 27 يوليو 2026، قواعد المخاطر العالية للأنظمة المستقلة (الملحق III) إلى 2 ديسمبر 2027 وللذكاء الاصطناعي المدمج في منتجات منظَّمة (الملحق I) إلى 2 أغسطس 2028 ([المفوضية الأوروبية](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). ولم تُؤجَّل التزامات الشفافية في المادة 50 وهي سارية منذ 2 أغسطس 2026 ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
-            'الولايات المتحدة: يوجّه الأمر التنفيذي 14365 الصادر في 11 ديسمبر 2025 وزارة العدل إلى الطعن في قوانين الولايات المتعلقة بالذكاء الاصطناعي ويدعو إلى إطار اتحادي موحّد، لكنه لا يُلغي بذاته أي قانون ولاية ([البيت الأبيض](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). ولم يكن الكونغرس قد أقرّ قانونًا اتحاديًا للإحلال في المصادر التي راجعناها (نوفمبر 2026). أما قانون كولورادو SB 26-189 الموقَّع في 14 مايو 2026 فيحل محل قانون الولاية للذكاء الاصطناعي لعام 2024 ومن المقرر أن يبدأ سريانه في 1 يناير 2027؛ وتشير تحليلات مكاتب محاماة إلى أن الدعاوى قد تؤثر في هذا الموعد ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
+            'الاتحاد الأوروبي: دخل قانون الذكاء الاصطناعي حيز النفاذ في 1 أغسطس 2024. وتُطبَّق الممارسات المحظورة والتزامات الإلمام بالذكاء الاصطناعي منذ 2 فبراير 2025، والتزامات النماذج العامة الغرض منذ 2 أغسطس 2025. وقد أجّلت حزمة AI Omnibus، السارية منذ 27 يوليو 2026، قواعد المخاطر العالية للأنظمة المستقلة (الملحق III) إلى 2 ديسمبر 2027 وللذكاء الاصطناعي المدمج في منتجات منظَّمة (الملحق I) إلى 2 أغسطس 2028 ([المفوضية الأوروبية](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). ولم تُؤجَّل التزامات الشفافية في المادة 50 وهي سارية منذ 2 أغسطس 2026، باستثناء واجب الوسم بالعلامة المائية بموجب المادة 50(2) الذي تُمنح له مهلة حتى 2 ديسمبر 2026 للأنظمة المطروحة في السوق قبل ذلك التاريخ ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
+            'الولايات المتحدة: يوجّه الأمر التنفيذي 14365 الصادر في 11 ديسمبر 2025 وزارة العدل إلى الطعن في قوانين الولايات المتعلقة بالذكاء الاصطناعي ويدعو إلى إطار اتحادي موحّد، لكنه لا يُلغي بذاته أي قانون ولاية ([البيت الأبيض](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). ولم يكن الكونغرس قد أقرّ قانونًا اتحاديًا للإحلال في المصادر التي راجعناها (نوفمبر 2026). أما قانون كولورادو SB 26-189 الموقَّع في 14 مايو 2026 فيحل محل قانون الولاية للذكاء الاصطناعي لعام 2024 ومن المقرر أن يبدأ سريانه في 1 يناير 2027 ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
             'الصين: تُطبَّق التدابير المؤقتة لخدمات الذكاء الاصطناعي التوليدي منذ 15 أغسطس 2023، وتدابير وسم المحتوى المولَّد بالذكاء الاصطناعي منذ 1 سبتمبر 2025، وقانون الأمن السيبراني المعدَّل الذي يتضمن بندًا عامًا عن الذكاء الاصطناعي منذ 1 يناير 2026. وليس في الصين قانون شامل واحد للذكاء الاصطناعي، وتدرج خطتها التشريعية لعام 2026 هذا القانون أولوية دون جدول زمني معلن ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
           ],
         },
@@ -25635,7 +25627,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         complianceBurden: {
           title: 'جهد الامتثال: ما يختلف عمليًا',
           content: [
-            'يختلف جهد الامتثال بحسب المنطقة. في الاتحاد الأوروبي، يحدد قانون الذكاء الاصطناعي التزامات التوثيق وإدارة المخاطر والشفافية التي تعتمد على فئة مخاطر النظام وعلى كونك مزوّدًا أو مشغّلًا؛ وتسري بالفعل الحظورات والتزامات النماذج العامة الغرض والشفافية، بينما تأتي التزامات المخاطر العالية في ديسمبر 2027 (الملحق III) أو أغسطس 2028 (الملحق I). وفي الولايات المتحدة تتوزع الالتزامات على القطاعات والولايات، فيعتمد الجهد على مكان عملك وقطاعك. وفي الصين، قد تحتاج خدمات الذكاء الاصطناعي التوليدي العامة إلى تسجيل لدى CAC أو تقييم أمني، وعليها وسم المحتوى المولَّد بالذكاء الاصطناعي ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
+            'يختلف جهد الامتثال بحسب المنطقة. في الاتحاد الأوروبي، يحدد قانون الذكاء الاصطناعي التزامات التوثيق وإدارة المخاطر والشفافية التي تعتمد على فئة مخاطر النظام وعلى كونك مزوّدًا أو مشغّلًا؛ وتسري بالفعل الحظورات والتزامات النماذج العامة الغرض والشفافية بموجب المادة 50 (مع مهلة حتى 2 ديسمبر 2026 لواجب الوسم بالعلامة المائية في المادة 50(2) للأنظمة المطروحة بالفعل في السوق)، بينما تأتي التزامات المخاطر العالية في ديسمبر 2027 (الملحق III) أو أغسطس 2028 (الملحق I). وفي الولايات المتحدة تتوزع الالتزامات على القطاعات والولايات، فيعتمد الجهد على مكان عملك وقطاعك. وفي الصين، قد تحتاج خدمات الذكاء الاصطناعي التوليدي العامة إلى تسجيل لدى CAC أو تقييم أمني، وعليها وسم المحتوى المولَّد بالذكاء الاصطناعي ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
             'تتفاوت أرقام التكلفة والمدة كثيرًا بحسب حجم الشركة وحالة الاستخدام والمستشار القانوني، ولا يوجد معيار عام محايد، لذلك لا تذكر هذه الصفحة نطاقات للتكلفة. احصل على استشارة قانونية خاصة بكل منطقة قبل اعتماد خطة الإطلاق.',
           ],
         },
@@ -25646,7 +25638,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'الولايات المتحدة أولًا: لا يوجد قانون اتحادي شامل للذكاء الاصطناعي، وتأتي الالتزامات من القواعد القطاعية وقانون حماية المستهلك الذي تنفّذه FTC وقوانين الولايات المنطبقة عليك. تابع قبل الإطلاق تطورات مثل SB 26-189 في كولورادو.',
-            'الاتحاد الأوروبي أولًا: إذا كنت تخدم مستخدمين في الاتحاد الأوروبي، فصمّم وفق التزامات قانون الذكاء الاصطناعي منذ البداية. الحظورات والتزامات النماذج العامة الغرض والشفافية سارية بالفعل، وتأتي التزامات المخاطر العالية في 2027 و2028. واعتماد توثيق الاتحاد الأوروبي أساسًا في أماكن أخرى خيار استراتيجي وليس شرطًا قانونيًا.',
+            'الاتحاد الأوروبي أولًا: إذا كنت تخدم مستخدمين في الاتحاد الأوروبي، فصمّم وفق التزامات قانون الذكاء الاصطناعي منذ البداية. الحظورات والتزامات النماذج العامة الغرض والشفافية بموجب المادة 50 سارية بالفعل (مع مراعاة مهلة العلامة المائية المذكورة في الجدول الزمني)، وتأتي التزامات المخاطر العالية في 2027 و2028. واعتماد توثيق الاتحاد الأوروبي أساسًا في أماكن أخرى خيار استراتيجي وليس شرطًا قانونيًا.',
             'الصين: يتطلب تقديم ذكاء اصطناعي توليدي عام في البر الرئيسي للصين تسجيلًا لدى CAC ووسمًا للمحتوى ومتطلبات أمنية. اسأل مستشارًا محليًا عمّا إذا كان يمكن تقديم خدمتك وكيف.',
             'مناطق متعددة: تشغيل منتج واحد في المناطق الثلاث يعني الحفاظ على عمليات منفصلة للتوثيق والوسم والمراجعة. خطّط لتهيئات خاصة بكل منطقة.',
           ],
@@ -25656,7 +25648,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             {
               q: 'أي منطقة تتحرك أسرع في تنظيم الذكاء الاصطناعي؟',
-              a: 'لدى الاتحاد الأوروبي الإطار الملزم الأكثر تفصيلًا: يُطبَّق قانون الذكاء الاصطناعي على مراحل منذ 2025، رغم أن AI Omnibus، السارية منذ 27 يوليو 2026، أجّلت قواعد المخاطر العالية إلى ديسمبر 2027 وأغسطس 2028 (المفوضية الأوروبية). وتصدر الصين تدابير محددة بسرعة، مثل تدابير وسم محتوى الذكاء الاصطناعي في سبتمبر 2025. وليس لدى الولايات المتحدة قانون اتحادي شامل؛ ويسعى أمر تنفيذي صدر في ديسمبر 2025 إلى إطار وطني بينما تواصل الولايات التشريع.',
+              a: 'من بين الأنظمة الثلاثة المشمولة هنا، لدى الاتحاد الأوروبي الإطار الملزم الأكثر تفصيلًا: يُطبَّق قانون الذكاء الاصطناعي على مراحل منذ 2025، رغم أن AI Omnibus، السارية منذ 27 يوليو 2026، أجّلت قواعد المخاطر العالية إلى ديسمبر 2027 وأغسطس 2028 (المفوضية الأوروبية). وتصدر الصين تدابير محددة بوتيرة منتظمة، مثل تدابير وسم محتوى الذكاء الاصطناعي في سبتمبر 2025. وليس لدى الولايات المتحدة قانون اتحادي شامل؛ ويسعى أمر تنفيذي صدر في ديسمبر 2025 إلى إطار وطني بينما تواصل الولايات التشريع.',
             },
             {
               q: 'هل يمكنني استخدام نموذج الذكاء الاصطناعي نفسه في المناطق الثلاث؟',
@@ -25664,7 +25656,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'ماذا يحدث إذا تجاهلت متطلبات الامتثال الإقليمية؟',
-              a: 'تعتمد العواقب على النظام. يتيح قانون الذكاء الاصطناعي غرامات تصل إلى 35 مليون يورو أو 7% من إجمالي الإيرادات السنوية العالمية، أيهما أعلى، على الممارسات المحظورة، مع مستويات أدنى للمخالفات الأخرى (المادة 99، [اللائحة (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). وفي الولايات المتحدة يأتي الإنفاذ من وكالات مثل FTC ومن مدّعين عامين في الولايات. وفي الصين تنص القوانين ذات الصلة وتدابير CAC على أوامر تصحيح وعقوبات. وتجاهل هذه القواعد ليس خيارًا قابلًا للاستمرار على المدى الطويل.',
+              a: 'تعتمد العواقب على النظام. يتيح قانون الذكاء الاصطناعي غرامات تصل إلى 35 مليون يورو أو 7% من إجمالي الإيرادات السنوية العالمية، أيهما أعلى، على الممارسات المحظورة، مع مستويات أدنى للمخالفات الأخرى (المادة 99، [اللائحة (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). وفي الولايات المتحدة يأتي الإنفاذ من وكالات مثل FTC ومن مدّعين عامين في الولايات. وفي الصين تنص القوانين ذات الصلة وتدابير CAC على أوامر تصحيح وعقوبات. وتجاهل أي من هذه الأنظمة ليس استراتيجية سليمة على المدى الطويل.',
             },
             {
               q: 'هل اللائحة العامة لحماية البيانات (GDPR) هي نفسها قانون الذكاء الاصطناعي الأوروبي؟',
@@ -25694,22 +25686,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'La gobernanza global de la IA se divide en tres modelos. La Unión Europea tiene la AI Act (Reglamento (UE) 2024/1689), una ley vinculante y basada en riesgos que entró en vigor el 1 de agosto de 2024 y se aplica por fases ([Comisión Europea](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Estados Unidos no tiene una ley federal integral sobre IA; la política se canaliza mediante órdenes ejecutivas, guías de agencias, estándares voluntarios como el NIST AI Risk Management Framework y leyes estatales. China regula mediante medidas administrativas específicas, sobre todo de la Cyberspace Administration of China (CAC).',
             'Para cualquier organización que despliegue IA en varias regiones, las diferencias prácticas están en los plazos, las obligaciones de documentación y quién puede hacer cumplir la norma. Esta página resume los tres regímenes según lo documentado públicamente en noviembre de 2026. Es una visión general, no asesoramiento jurídico.',
           ],
-          image: '/images/ai-three-region-framework-en.svg',
-          imageCaption: 'Tres modelos regulatorios: AI Act de la UE (vinculante, basada en riesgos), EE. UU. (acción del Ejecutivo, normas sectoriales y leyes estatales) y China (medidas administrativas de la CAC).',
         },
         riskTiers: {
           title: 'Clasificación del Riesgo de IA: Cómo Cada Región Categoriza el Riesgo',
           content: [
             'Las tres regiones clasifican la IA de forma distinta. La AI Act ordena los sistemas por riesgo: prácticas prohibidas, sistemas de alto riesgo, sistemas con obligaciones de transparencia específicas y sistemas de riesgo mínimo; los modelos de IA de uso general tienen obligaciones propias. EE. UU. no tiene una taxonomía única: las obligaciones surgen de normas sectoriales (por ejemplo, empleo, crédito y salud), de la aplicación de la protección del consumidor por la Federal Trade Commission y de leyes estatales. China aplica requisitos de contenido, seguridad y registro a los servicios públicos de IA generativa, recomendación y síntesis profunda.',
           ],
-          image: '/images/ai-risk-tiers-comparison-en.svg',
-          imageCaption: 'UE: clases basadas en riesgo. EE. UU.: normas sectoriales y leyes estatales. China: requisitos de contenido, seguridad y registro para servicios públicos.',
         },
         timeline: {
           title: 'Cronología regulatoria: 2024–2027 y más allá',
           content: [
-            'UE: la AI Act entró en vigor el 1 de agosto de 2024. Las prácticas prohibidas y las obligaciones de alfabetización en IA se aplican desde el 2 de febrero de 2025, y las obligaciones para modelos de IA de uso general desde el 2 de agosto de 2025. El AI Omnibus, en vigor desde el 27 de julio de 2026, aplazó las reglas de alto riesgo de los sistemas independientes (anexo III) al 2 de diciembre de 2027 y las de la IA integrada en productos regulados (anexo I) al 2 de agosto de 2028 ([Comisión Europea](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Las obligaciones de transparencia del artículo 50 no se aplazaron y rigen desde el 2 de agosto de 2026 ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
-            'EE. UU.: la Orden Ejecutiva 14365, del 11 de diciembre de 2025, encarga al Departamento de Justicia impugnar leyes estatales de IA y pide un marco federal uniforme, pero por sí misma no anula ninguna ley estatal ([Casa Blanca](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). El Congreso no había aprobado una ley federal de preeminencia en las fuentes que revisamos (noviembre de 2026). La SB 26-189 de Colorado, firmada el 14 de mayo de 2026, sustituye la AI Act de 2024 del estado y está prevista para entrar en vigor el 1 de enero de 2027; análisis de despachos de abogados señalan que los litigios podrían afectar esa fecha ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
+            'UE: la AI Act entró en vigor el 1 de agosto de 2024. Las prácticas prohibidas y las obligaciones de alfabetización en IA se aplican desde el 2 de febrero de 2025, y las obligaciones para modelos de IA de uso general desde el 2 de agosto de 2025. El AI Omnibus, en vigor desde el 27 de julio de 2026, aplazó las reglas de alto riesgo de los sistemas independientes (anexo III) al 2 de diciembre de 2027 y las de la IA integrada en productos regulados (anexo I) al 2 de agosto de 2028 ([Comisión Europea](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Las obligaciones de transparencia del artículo 50 no se aplazaron y rigen desde el 2 de agosto de 2026, salvo la obligación de marcado (marca de agua) del artículo 50, apartado 2, que tiene un periodo de gracia hasta el 2 de diciembre de 2026 para los sistemas ya comercializados antes de esa fecha ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
+            'EE. UU.: la Orden Ejecutiva 14365, del 11 de diciembre de 2025, encarga al Departamento de Justicia impugnar leyes estatales de IA y pide un marco federal uniforme, pero por sí misma no anula ninguna ley estatal ([Casa Blanca](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). El Congreso no había aprobado una ley federal de preeminencia en las fuentes que revisamos (noviembre de 2026). La SB 26-189 de Colorado, firmada el 14 de mayo de 2026, sustituye la AI Act de 2024 del estado y está prevista para entrar en vigor el 1 de enero de 2027 ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
             'China: las Medidas Provisionales para Servicios de IA Generativa se aplican desde el 15 de agosto de 2023, las medidas de etiquetado de contenido generado por IA desde el 1 de septiembre de 2025 y una Ley de Ciberseguridad modificada, con una cláusula general sobre IA, desde el 1 de enero de 2026. China no tiene una ley integral única sobre IA; su plan legislativo de 2026 la menciona como prioridad, sin calendario publicado ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
           ],
         },
@@ -25722,7 +25710,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         complianceBurden: {
           title: 'Esfuerzo de cumplimiento: qué cambia en la práctica',
           content: [
-            'El esfuerzo de cumplimiento varía según la región. En la UE, la AI Act fija obligaciones de documentación, gestión de riesgos y transparencia que dependen de la clase de riesgo del sistema y de si eres proveedor o responsable del despliegue; las prohibiciones, las obligaciones de IA de uso general y la transparencia ya se aplican, mientras que las de alto riesgo llegan en diciembre de 2027 (anexo III) o agosto de 2028 (anexo I). En EE. UU., las obligaciones se reparten entre sectores y estados; el esfuerzo depende de dónde y en qué sector operes. En China, los servicios públicos de IA generativa pueden requerir registro ante la CAC o evaluación de seguridad y deben etiquetar el contenido generado por IA ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
+            'El esfuerzo de cumplimiento varía según la región. En la UE, la AI Act fija obligaciones de documentación, gestión de riesgos y transparencia que dependen de la clase de riesgo del sistema y de si eres proveedor o responsable del despliegue; las prohibiciones, las obligaciones de IA de uso general y la transparencia del artículo 50 ya se aplican (salvo el periodo de gracia hasta el 2 de diciembre de 2026 para el marcado con marca de agua del artículo 50, apartado 2, en sistemas ya comercializados), mientras que las de alto riesgo llegan en diciembre de 2027 (anexo III) o agosto de 2028 (anexo I). En EE. UU., las obligaciones se reparten entre sectores y estados; el esfuerzo depende de dónde y en qué sector operes. En China, los servicios públicos de IA generativa pueden requerir registro ante la CAC o evaluación de seguridad y deben etiquetar el contenido generado por IA ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
             'Las cifras de costes y plazos varían mucho según el tamaño de la empresa, el caso de uso y el asesoramiento jurídico, y no existe una referencia pública neutral, por lo que esta página no cita rangos de costes. Obtén asesoramiento jurídico específico de cada región antes de fijar un plan de lanzamiento.',
           ],
         },
@@ -25733,7 +25721,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'EE. UU. primero: no hay una ley federal integral sobre IA; las obligaciones vienen de normas sectoriales, de la protección del consumidor aplicada por la FTC y de las leyes estatales que te afecten. Sigue antes del lanzamiento novedades como la SB 26-189 de Colorado.',
-            'UE primero: si atiendes a usuarios de la UE, diseña para las obligaciones de la AI Act desde el principio. Las prohibiciones, las obligaciones de IA de uso general y la transparencia ya se aplican; las de alto riesgo llegan en 2027 y 2028. Usar la documentación de la UE como base en otros lugares es una decisión estratégica, no un requisito legal.',
+            'UE primero: si atiendes a usuarios de la UE, diseña para las obligaciones de la AI Act desde el principio. Las prohibiciones, las obligaciones de IA de uso general y la transparencia del artículo 50 ya se aplican (con el periodo de gracia para la marca de agua indicado en la cronología); las de alto riesgo llegan en 2027 y 2028. Usar la documentación de la UE como base en otros lugares es una decisión estratégica, no un requisito legal.',
             'China: ofrecer IA generativa pública en China continental implica registro ante la CAC, etiquetado de contenido y requisitos de seguridad. Pregunta a un asesor local si tu servicio puede ofrecerse y cómo.',
             'Multirregión: operar un producto en las tres regiones implica mantener procesos separados de documentación, etiquetado y revisión. Planifica configuraciones propias de cada región.',
           ],
@@ -25743,7 +25731,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             {
               q: '¿Qué región avanza más rápido en regulación de IA?',
-              a: 'La UE tiene el marco vinculante más detallado: la AI Act se aplica por fases desde 2025, aunque el AI Omnibus, en vigor desde el 27 de julio de 2026, aplazó las reglas de alto riesgo a diciembre de 2027 y agosto de 2028 (Comisión Europea). China publica medidas específicas con rapidez, por ejemplo las de etiquetado de contenido de IA en septiembre de 2025. EE. UU. no tiene una ley federal integral; una orden ejecutiva de diciembre de 2025 busca un marco nacional mientras los estados siguen legislando.',
+              a: 'De los tres regímenes tratados aquí, la UE tiene el marco vinculante más detallado: la AI Act se aplica por fases desde 2025, aunque el AI Omnibus, en vigor desde el 27 de julio de 2026, aplazó las reglas de alto riesgo a diciembre de 2027 y agosto de 2028 (Comisión Europea). China publica medidas específicas a un ritmo constante, por ejemplo las de etiquetado de contenido de IA en septiembre de 2025. EE. UU. no tiene una ley federal integral; una orden ejecutiva de diciembre de 2025 busca un marco nacional mientras los estados siguen legislando.',
             },
             {
               q: '¿Puedo usar el mismo modelo de IA en las tres regiones?',
@@ -25751,7 +25739,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '¿Qué pasa si ignoro los requisitos de cumplimiento regionales?',
-              a: 'Las consecuencias dependen del régimen. La AI Act prevé multas de hasta 35 millones de euros o el 7 % de la facturación anual mundial, la cifra que sea mayor, para las prácticas prohibidas, con niveles inferiores para otras infracciones (artículo 99, [Reglamento (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). En EE. UU., la aplicación corresponde a agencias como la FTC y a los fiscales generales estatales. En China, las leyes aplicables y las medidas de la CAC prevén órdenes de corrección y sanciones. Ignorar estas reglas no es viable a largo plazo.',
+              a: 'Las consecuencias dependen del régimen. La AI Act prevé multas de hasta 35 millones de euros o el 7 % de la facturación anual mundial, la cifra que sea mayor, para las prácticas prohibidas, con niveles inferiores para otras infracciones (artículo 99, [Reglamento (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). En EE. UU., la aplicación corresponde a agencias como la FTC y a los fiscales generales estatales. En China, las leyes aplicables y las medidas de la CAC prevén órdenes de corrección y sanciones. Ignorar cualquiera de estos regímenes no es una estrategia sensata a largo plazo.',
             },
             {
               q: '¿El RGPD es lo mismo que la AI Act de la UE?',
@@ -25781,22 +25769,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'A governança global de IA se divide em três modelos. A União Europeia tem o AI Act (Regulamento (UE) 2024/1689), uma lei vinculante e baseada em risco que entrou em vigor em 1º de agosto de 2024 e se aplica por fases ([Comissão Europeia](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Os Estados Unidos não têm uma lei federal abrangente sobre IA; a política passa por ordens executivas, orientações de agências, padrões voluntários como o NIST AI Risk Management Framework e leis estaduais. A China regula por medidas administrativas específicas, principalmente da Cyberspace Administration of China (CAC).',
             'Para qualquer organização que implante IA em várias regiões, as diferenças práticas estão nos prazos, nas obrigações de documentação e em quem pode fiscalizar. Esta página resume os três regimes conforme documentado publicamente em novembro de 2026. É uma visão geral, não aconselhamento jurídico.',
           ],
-          image: '/images/ai-three-region-framework-en.svg',
-          imageCaption: 'Três modelos regulatórios: AI Act da UE (vinculante, baseado em risco), EUA (ação do Executivo, regras setoriais e leis estaduais) e China (medidas administrativas da CAC).',
         },
         riskTiers: {
           title: 'Classificação de Risco de IA: Como Cada Região Categoriza o Risco',
           content: [
             'As três regiões classificam a IA de formas diferentes. O AI Act ordena os sistemas por risco: práticas proibidas, sistemas de alto risco, sistemas com deveres específicos de transparência e sistemas de risco mínimo; modelos de IA de uso geral têm obrigações próprias. Os EUA não têm uma taxonomia única: os deveres surgem de regras setoriais (por exemplo, emprego, crédito e saúde), da aplicação da defesa do consumidor pela Federal Trade Commission e de leis estaduais. A China aplica requisitos de conteúdo, segurança e registro a serviços públicos de IA generativa, recomendação e síntese profunda.',
           ],
-          image: '/images/ai-risk-tiers-comparison-en.svg',
-          imageCaption: 'UE: classes baseadas em risco. EUA: regras setoriais e leis estaduais. China: requisitos de conteúdo, segurança e registro para serviços públicos.',
         },
         timeline: {
           title: 'Cronologia regulatória: 2024–2027 e além',
           content: [
-            'UE: o AI Act entrou em vigor em 1º de agosto de 2024. As práticas proibidas e os deveres de alfabetização em IA se aplicam desde 2 de fevereiro de 2025, e as obrigações para modelos de IA de uso geral desde 2 de agosto de 2025. O AI Omnibus, em vigor desde 27 de julho de 2026, adiou as regras de alto risco para sistemas autônomos (anexo III) para 2 de dezembro de 2027 e para IA embarcada em produtos regulados (anexo I) para 2 de agosto de 2028 ([Comissão Europeia](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Os deveres de transparência do artigo 50 não foram adiados e valem desde 2 de agosto de 2026 ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
-            'EUA: a Ordem Executiva 14365, de 11 de dezembro de 2025, determina que o Departamento de Justiça conteste leis estaduais de IA e pede um marco federal uniforme, mas ela própria não anula nenhuma lei estadual ([Casa Branca](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). O Congresso não havia aprovado uma lei federal de preempção nas fontes que revisamos (novembro de 2026). A SB 26-189 do Colorado, sancionada em 14 de maio de 2026, substitui o AI Act de 2024 do estado e deve entrar em vigor em 1º de janeiro de 2027; análises de escritórios de advocacia observam que litígios podem afetar essa data ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
+            'UE: o AI Act entrou em vigor em 1º de agosto de 2024. As práticas proibidas e os deveres de alfabetização em IA se aplicam desde 2 de fevereiro de 2025, e as obrigações para modelos de IA de uso geral desde 2 de agosto de 2025. O AI Omnibus, em vigor desde 27 de julho de 2026, adiou as regras de alto risco para sistemas autônomos (anexo III) para 2 de dezembro de 2027 e para IA embarcada em produtos regulados (anexo I) para 2 de agosto de 2028 ([Comissão Europeia](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Os deveres de transparência do artigo 50 não foram adiados e valem desde 2 de agosto de 2026, exceto a obrigação de marcação (marca d’água) do artigo 50, n.º 2, que tem um período de carência até 2 de dezembro de 2026 para sistemas já colocados no mercado antes dessa data ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
+            'EUA: a Ordem Executiva 14365, de 11 de dezembro de 2025, determina que o Departamento de Justiça conteste leis estaduais de IA e pede um marco federal uniforme, mas ela própria não anula nenhuma lei estadual ([Casa Branca](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). O Congresso não havia aprovado uma lei federal de preempção nas fontes que revisamos (novembro de 2026). A SB 26-189 do Colorado, sancionada em 14 de maio de 2026, substitui o AI Act de 2024 do estado e deve entrar em vigor em 1º de janeiro de 2027 ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
             'China: as Medidas Provisórias para Serviços de IA Generativa se aplicam desde 15 de agosto de 2023, as medidas de rotulagem de conteúdo gerado por IA desde 1º de setembro de 2025 e uma Lei de Cibersegurança alterada, com cláusula geral sobre IA, desde 1º de janeiro de 2026. A China não tem uma lei única e abrangente sobre IA; seu plano legislativo de 2026 a lista como prioridade, sem cronograma publicado ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
           ],
         },
@@ -25809,7 +25793,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         complianceBurden: {
           title: 'Esforço de conformidade: o que muda na prática',
           content: [
-            'O esforço de conformidade varia por região. Na UE, o AI Act define deveres de documentação, gestão de riscos e transparência que dependem da classe de risco do sistema e de você ser provedor ou implantador; proibições, obrigações de IA de uso geral e transparência já se aplicam, enquanto os deveres de alto risco chegam em dezembro de 2027 (anexo III) ou agosto de 2028 (anexo I). Nos EUA, os deveres se distribuem entre setores e estados; o esforço depende de onde e em qual setor você atua. Na China, serviços públicos de IA generativa podem exigir registro na CAC ou avaliação de segurança e devem rotular o conteúdo gerado por IA ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
+            'O esforço de conformidade varia por região. Na UE, o AI Act define deveres de documentação, gestão de riscos e transparência que dependem da classe de risco do sistema e de você ser provedor ou implantador; proibições, obrigações de IA de uso geral e transparência do artigo 50 já se aplicam (exceto o período de carência até 2 de dezembro de 2026 para a marcação com marca d’água do artigo 50, n.º 2, em sistemas já no mercado), enquanto os deveres de alto risco chegam em dezembro de 2027 (anexo III) ou agosto de 2028 (anexo I). Nos EUA, os deveres se distribuem entre setores e estados; o esforço depende de onde e em qual setor você atua. Na China, serviços públicos de IA generativa podem exigir registro na CAC ou avaliação de segurança e devem rotular o conteúdo gerado por IA ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
             'Valores de custo e prazo variam muito conforme o porte da empresa, o caso de uso e a assessoria jurídica, e não existe referência pública neutra, então esta página não cita faixas de custo. Obtenha aconselhamento jurídico específico de cada região antes de fechar um plano de lançamento.',
           ],
         },
@@ -25820,7 +25804,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'EUA primeiro: não há lei federal abrangente sobre IA; os deveres vêm de regras setoriais, da defesa do consumidor aplicada pela FTC e das leis estaduais que valem para você. Acompanhe antes do lançamento novidades como a SB 26-189 do Colorado.',
-            'UE primeiro: se você atende usuários da UE, projete para as obrigações do AI Act desde o início. Proibições, obrigações de IA de uso geral e transparência já se aplicam; os deveres de alto risco chegam em 2027 e 2028. Usar a documentação da UE como base em outros lugares é uma escolha estratégica, não uma exigência legal.',
+            'UE primeiro: se você atende usuários da UE, projete para as obrigações do AI Act desde o início. Proibições, obrigações de IA de uso geral e transparência do artigo 50 já se aplicam (com o período de carência para a marca d’água indicado na cronologia); os deveres de alto risco chegam em 2027 e 2028. Usar a documentação da UE como base em outros lugares é uma escolha estratégica, não uma exigência legal.',
             'China: oferecer IA generativa pública na China continental envolve registro na CAC, rotulagem de conteúdo e requisitos de segurança. Pergunte a um advogado local se e como seu serviço pode ser oferecido.',
             'Multirregião: operar um produto nas três regiões significa manter processos separados de documentação, rotulagem e revisão. Planeje configurações específicas por região.',
           ],
@@ -25830,7 +25814,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             {
               q: 'Qual região avança mais rápido na regulação de IA?',
-              a: 'A UE tem o marco vinculante mais detalhado: o AI Act se aplica por fases desde 2025, embora o AI Omnibus, em vigor desde 27 de julho de 2026, tenha adiado as regras de alto risco para dezembro de 2027 e agosto de 2028 (Comissão Europeia). A China publica medidas específicas rapidamente, como as de rotulagem de conteúdo de IA em setembro de 2025. Os EUA não têm lei federal abrangente; uma ordem executiva de dezembro de 2025 busca um marco nacional enquanto os estados continuam legislando.',
+              a: 'Entre os três regimes tratados aqui, a UE tem o marco vinculante mais detalhado: o AI Act se aplica por fases desde 2025, embora o AI Omnibus, em vigor desde 27 de julho de 2026, tenha adiado as regras de alto risco para dezembro de 2027 e agosto de 2028 (Comissão Europeia). A China publica medidas específicas em ritmo constante, como as de rotulagem de conteúdo de IA em setembro de 2025. Os EUA não têm lei federal abrangente; uma ordem executiva de dezembro de 2025 busca um marco nacional enquanto os estados continuam legislando.',
             },
             {
               q: 'Posso usar o mesmo modelo de IA nas três regiões?',
@@ -25838,7 +25822,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'O que acontece se eu ignorar as exigências regionais de conformidade?',
-              a: 'As consequências dependem do regime. O AI Act prevê multas de até 35 milhões de euros ou 7% do faturamento anual global, o que for maior, para práticas proibidas, com patamares menores para outras infrações (artigo 99, [Regulamento (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). Nos EUA, a fiscalização vem de agências como a FTC e de procuradores-gerais estaduais. Na China, as leis aplicáveis e as medidas da CAC preveem ordens de correção e sanções. Ignorar essas regras não é viável a longo prazo.',
+              a: 'As consequências dependem do regime. O AI Act prevê multas de até 35 milhões de euros ou 7% do faturamento anual global, o que for maior, para práticas proibidas, com patamares menores para outras infrações (artigo 99, [Regulamento (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). Nos EUA, a fiscalização vem de agências como a FTC e de procuradores-gerais estaduais. Na China, as leis aplicáveis e as medidas da CAC preveem ordens de correção e sanções. Ignorar qualquer um desses regimes não é uma estratégia sensata a longo prazo.',
             },
             {
               q: 'A GDPR é o mesmo que o AI Act da UE?',
@@ -25866,22 +25850,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Die globale KI-Governance teilt sich in drei Modelle. Die Europäische Union hat den AI Act (Verordnung (EU) 2024/1689), ein verbindliches, risikobasiertes Gesetz, das am 1. August 2024 in Kraft trat und stufenweise gilt ([Europäische Kommission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Die USA haben kein umfassendes Bundesgesetz zu KI; die Politik läuft über Executive Orders, Behördenleitlinien, freiwillige Standards wie das NIST AI Risk Management Framework und einzelstaatliche Gesetze. China reguliert über gezielte Verwaltungsmaßnahmen, vor allem der Cyberspace Administration of China (CAC).',
             'Für Organisationen, die KI regionsübergreifend einsetzen, liegen die praktischen Unterschiede bei Fristen, Dokumentationspflichten und Durchsetzung. Diese Seite fasst die drei Regime nach öffentlich dokumentiertem Stand von November 2026 zusammen. Sie ist eine allgemeine Übersicht und keine Rechtsberatung.',
           ],
-          image: '/images/ai-three-region-framework-de.svg',
-          imageCaption: 'Drei Regulierungsmodelle: EU AI Act (verbindlich, risikobasiert), USA (Exekutivmaßnahmen, Branchenregeln und Landesgesetze) und China (Verwaltungsmaßnahmen der CAC).',
         },
         riskTiers: {
           title: 'KI-Risikoeinstufung: Wie jede Region Risiko kategorisiert',
           content: [
             'Die drei Regionen klassifizieren KI unterschiedlich. Der EU AI Act ordnet Systeme nach Risiko: verbotene Praktiken, Hochrisiko-Systeme, Systeme mit besonderen Transparenzpflichten und Systeme mit minimalem Risiko; für KI-Modelle mit allgemeinem Verwendungszweck gelten eigene Pflichten. Die USA kennen keine einheitliche Risikotaxonomie: Pflichten ergeben sich aus Branchenregeln (etwa in Beschäftigung, Kredit und Gesundheit), aus der Verbraucherschutz-Durchsetzung der Federal Trade Commission und aus Landesgesetzen. China stellt Inhalts-, Sicherheits- und Registrierungsanforderungen an öffentlich zugängliche generative KI, Empfehlungs- und Deep-Synthesis-Dienste.',
           ],
-          image: '/images/ai-risk-tiers-comparison-de.svg',
-          imageCaption: 'EU: risikobasierte Klassen. USA: Branchenregeln und Landesgesetze. China: Inhalts-, Sicherheits- und Registrierungsanforderungen für öffentliche Dienste.',
         },
         timeline: {
           title: 'Regulatorischer Zeitplan: 2024–2027 und danach',
           content: [
-            'EU: Der AI Act trat am 1. August 2024 in Kraft. Verbotene Praktiken und KI-Kompetenzpflichten gelten seit dem 2. Februar 2025, Pflichten für KI-Modelle mit allgemeinem Verwendungszweck seit dem 2. August 2025. Der AI Omnibus, seit dem 27. Juli 2026 in Kraft, verschob die Hochrisiko-Regeln für eigenständige Systeme (Anhang III) auf den 2. Dezember 2027 und für in regulierte Produkte eingebettete KI (Anhang I) auf den 2. August 2028 ([Europäische Kommission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Die Transparenzpflichten nach Artikel 50 wurden nicht verschoben und gelten ab dem 2. August 2026 ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
-            'USA: Die Executive Order 14365 vom 11. Dezember 2025 weist das Justizministerium an, einzelstaatliche KI-Gesetze anzufechten, und fordert einen einheitlichen Bundesrahmen; sie selbst verdrängt aber kein einzelstaatliches Gesetz ([Weißes Haus](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). Der Kongress hatte in den von uns geprüften Quellen (November 2026) kein Bundesgesetz zur Verdrängung einzelstaatlichen Rechts verabschiedet. Colorados SB 26-189, am 14. Mai 2026 unterzeichnet, ersetzt den AI Act des Bundesstaats von 2024 und soll am 1. Januar 2027 in Kraft treten; Analysen von Anwaltskanzleien weisen darauf hin, dass laufende Gerichtsverfahren diesen Termin beeinflussen können ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
+            'EU: Der AI Act trat am 1. August 2024 in Kraft. Verbotene Praktiken und KI-Kompetenzpflichten gelten seit dem 2. Februar 2025, Pflichten für KI-Modelle mit allgemeinem Verwendungszweck seit dem 2. August 2025. Der AI Omnibus, seit dem 27. Juli 2026 in Kraft, verschob die Hochrisiko-Regeln für eigenständige Systeme (Anhang III) auf den 2. Dezember 2027 und für in regulierte Produkte eingebettete KI (Anhang I) auf den 2. August 2028 ([Europäische Kommission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Die Transparenzpflichten nach Artikel 50 wurden nicht verschoben und gelten ab dem 2. August 2026, mit Ausnahme der Kennzeichnungspflicht (Wasserzeichen) nach Artikel 50 Absatz 2, für die für bereits vor diesem Datum in Verkehr gebrachte Systeme eine Übergangsfrist bis zum 2. Dezember 2026 gilt ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
+            'USA: Die Executive Order 14365 vom 11. Dezember 2025 weist das Justizministerium an, einzelstaatliche KI-Gesetze anzufechten, und fordert einen einheitlichen Bundesrahmen; sie selbst verdrängt aber kein einzelstaatliches Gesetz ([Weißes Haus](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). Der Kongress hatte in den von uns geprüften Quellen (November 2026) kein Bundesgesetz zur Verdrängung einzelstaatlichen Rechts verabschiedet. Colorados SB 26-189, am 14. Mai 2026 unterzeichnet, ersetzt den AI Act des Bundesstaats von 2024 und soll am 1. Januar 2027 in Kraft treten ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
             'China: Die Vorläufigen Maßnahmen für generative KI-Dienste gelten seit dem 15. August 2023, die Maßnahmen zur Kennzeichnung KI-generierter Inhalte seit dem 1. September 2025 und ein geändertes Cybersicherheitsgesetz mit allgemeiner KI-Klausel seit dem 1. Januar 2026. China hat kein einheitliches KI-Gesetz; der Gesetzgebungsplan 2026 nennt ein solches als Priorität, ohne veröffentlichten Zeitplan ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
           ],
         },
@@ -25894,7 +25874,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         complianceBurden: {
           title: 'Compliance-Aufwand: Was sich in der Praxis unterscheidet',
           content: [
-            'Der Compliance-Aufwand unterscheidet sich je Region. In der EU legt der AI Act Dokumentations-, Risikomanagement- und Transparenzpflichten fest, die von der Risikoklasse des Systems und davon abhängen, ob Sie Anbieter oder Betreiber sind; Verbote, Pflichten für KI-Modelle mit allgemeinem Verwendungszweck und Transparenzpflichten gelten bereits, Hochrisiko-Pflichten folgen im Dezember 2027 (Anhang III) bzw. August 2028 (Anhang I). In den USA verteilen sich die Pflichten auf Branchen und Bundesstaaten; der Aufwand hängt davon ab, wo und in welcher Branche Sie tätig sind. In China können öffentlich zugängliche generative KI-Dienste eine CAC-Registrierung oder Sicherheitsbewertung benötigen und müssen KI-generierte Inhalte kennzeichnen ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
+            'Der Compliance-Aufwand unterscheidet sich je Region. In der EU legt der AI Act Dokumentations-, Risikomanagement- und Transparenzpflichten fest, die von der Risikoklasse des Systems und davon abhängen, ob Sie Anbieter oder Betreiber sind; Verbote, Pflichten für KI-Modelle mit allgemeinem Verwendungszweck und Transparenzpflichten nach Artikel 50 gelten bereits (für die Wasserzeichen-Kennzeichnung nach Artikel 50 Absatz 2 gilt für bereits in Verkehr gebrachte Systeme eine Übergangsfrist bis zum 2. Dezember 2026), Hochrisiko-Pflichten folgen im Dezember 2027 (Anhang III) bzw. August 2028 (Anhang I). In den USA verteilen sich die Pflichten auf Branchen und Bundesstaaten; der Aufwand hängt davon ab, wo und in welcher Branche Sie tätig sind. In China können öffentlich zugängliche generative KI-Dienste eine CAC-Registrierung oder Sicherheitsbewertung benötigen und müssen KI-generierte Inhalte kennzeichnen ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
             'Kosten- und Zeitangaben schwanken stark mit Unternehmensgröße, Einsatzzweck und rechtlicher Beratung, und es gibt keinen neutralen öffentlichen Richtwert; diese Seite nennt daher keine Kostenspannen. Holen Sie regionsspezifische Rechtsberatung ein, bevor Sie sich auf einen Markteinführungsplan festlegen.',
           ],
         },
@@ -25905,7 +25885,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'USA zuerst: Es gibt kein umfassendes Bundesgesetz zu KI; Pflichten ergeben sich aus Branchenregeln, dem Verbraucherschutzrecht der FTC und den für Sie geltenden Landesgesetzen. Verfolgen Sie vor dem Start Entwicklungen wie Colorados SB 26-189.',
-            'EU zuerst: Wenn Sie Nutzer in der EU bedienen, planen Sie die AI-Act-Pflichten von Anfang an ein. Verbote, Pflichten für KI-Modelle mit allgemeinem Verwendungszweck und Transparenzpflichten gelten bereits; Hochrisiko-Pflichten folgen 2027 und 2028. Die EU-Dokumentation anderswo als Grundlage zu nutzen, ist eine strategische Entscheidung, keine rechtliche Pflicht.',
+            'EU zuerst: Wenn Sie Nutzer in der EU bedienen, planen Sie die AI-Act-Pflichten von Anfang an ein. Verbote, Pflichten für KI-Modelle mit allgemeinem Verwendungszweck und Transparenzpflichten nach Artikel 50 gelten bereits (vorbehaltlich der im Zeitplan genannten Übergangsfrist für Wasserzeichen); Hochrisiko-Pflichten folgen 2027 und 2028. Die EU-Dokumentation anderswo als Grundlage zu nutzen, ist eine strategische Entscheidung, keine rechtliche Pflicht.',
             'China: Das Angebot öffentlich zugänglicher generativer KI auf dem chinesischen Festland umfasst CAC-Registrierung, Inhaltskennzeichnung und Sicherheitsanforderungen. Klären Sie mit lokalen Rechtsberatern, ob und wie Ihr Dienst angeboten werden kann.',
             'Mehrere Regionen: Ein Produkt in allen drei Regionen erfordert getrennte Dokumentations-, Kennzeichnungs- und Prüfprozesse. Planen Sie regionsspezifische Konfigurationen ein.',
           ],
@@ -25915,7 +25895,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             {
               q: 'Welche Region reguliert KI am schnellsten?',
-              a: 'Die EU hat den detailliertesten verbindlichen Rahmen: Der AI Act gilt seit 2025 stufenweise, auch wenn der AI Omnibus, seit dem 27. Juli 2026 in Kraft, die Hochrisiko-Regeln auf Dezember 2027 und August 2028 verschoben hat (Europäische Kommission). China erlässt gezielte Maßnahmen zügig, etwa die Kennzeichnungsmaßnahmen für KI-Inhalte im September 2025. Die USA haben kein umfassendes Bundesgesetz; eine Executive Order vom Dezember 2025 strebt einen nationalen Rahmen an, während die Bundesstaaten weiter Gesetze erlassen.',
+              a: 'Von den drei hier behandelten Regimen hat die EU den detailliertesten verbindlichen Rahmen: Der AI Act gilt seit 2025 stufenweise, auch wenn der AI Omnibus, seit dem 27. Juli 2026 in Kraft, die Hochrisiko-Regeln auf Dezember 2027 und August 2028 verschoben hat (Europäische Kommission). China erlässt gezielte Maßnahmen in stetigem Takt, etwa die Kennzeichnungsmaßnahmen für KI-Inhalte im September 2025. Die USA haben kein umfassendes Bundesgesetz; eine Executive Order vom Dezember 2025 strebt einen nationalen Rahmen an, während die Bundesstaaten weiter Gesetze erlassen.',
             },
             {
               q: 'Kann ich dasselbe KI-Modell in allen drei Regionen nutzen?',
@@ -25923,7 +25903,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Was passiert, wenn ich regionale Compliance-Vorgaben ignoriere?',
-              a: 'Die Folgen hängen vom Regime ab. Der AI Act sieht für verbotene Praktiken Geldbußen von bis zu 35 Mio. € oder 7 % des weltweiten Jahresumsatzes vor, je nachdem, welcher Betrag höher ist, für andere Verstöße niedrigere Stufen (Artikel 99, [Verordnung (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). In den USA gehen Durchsetzungsmaßnahmen von Behörden wie der FTC und von Generalstaatsanwälten der Bundesstaaten aus. In China sehen die einschlägigen Gesetze und CAC-Maßnahmen Anordnungen zur Korrektur und Sanktionen vor. Keine dieser Vorgaben zu ignorieren ist langfristig tragfähig.',
+              a: 'Die Folgen hängen vom Regime ab. Der AI Act sieht für verbotene Praktiken Geldbußen von bis zu 35 Mio. € oder 7 % des weltweiten Jahresumsatzes vor, je nachdem, welcher Betrag höher ist, für andere Verstöße niedrigere Stufen (Artikel 99, [Verordnung (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). In den USA gehen Durchsetzungsmaßnahmen von Behörden wie der FTC und von Generalstaatsanwälten der Bundesstaaten aus. In China sehen die einschlägigen Gesetze und CAC-Maßnahmen Anordnungen zur Korrektur und Sanktionen vor. Eines dieser Regime zu ignorieren, ist langfristig keine tragfähige Strategie.',
             },
             {
               q: 'Ist die DSGVO dasselbe wie der EU AI Act?',
@@ -25951,22 +25931,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'La gouvernance mondiale de l\'IA se divise en trois modèles. L\'Union européenne dispose de l\'AI Act (règlement (UE) 2024/1689), une loi contraignante fondée sur les risques, entrée en vigueur le 1er août 2024 et applicable par étapes ([Commission européenne](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Les États-Unis n\'ont pas de loi fédérale générale sur l\'IA ; la politique passe par des décrets présidentiels, des orientations d\'agences, des normes volontaires comme le NIST AI Risk Management Framework et des lois d\'États. La Chine réglemente par des mesures administratives ciblées, principalement de la Cyberspace Administration of China (CAC).',
             'Pour toute organisation qui déploie l\'IA dans plusieurs régions, les différences pratiques portent sur les calendriers, les obligations de documentation et l\'autorité d\'application. Cette page résume les trois régimes selon l\'état public de novembre 2026. Il s\'agit d\'un aperçu général, non d\'un conseil juridique.',
           ],
-          image: '/images/ai-three-region-framework-fr.svg',
-          imageCaption: 'Trois modèles réglementaires : AI Act européen (contraignant, fondé sur les risques), États-Unis (action de l\'exécutif, règles sectorielles et lois d\'États) et Chine (mesures administratives de la CAC).',
         },
         riskTiers: {
           title: 'Classification des Risques IA: Comment Chaque Région Classe les Risques',
           content: [
             'Les trois régions classent l\'IA différemment. L\'AI Act classe les systèmes par risque : pratiques interdites, systèmes à haut risque, systèmes soumis à des obligations de transparence spécifiques et systèmes à risque minimal ; les modèles d\'IA à usage général ont leurs propres obligations. Les États-Unis n\'ont pas de taxonomie unique : les obligations découlent de règles sectorielles (emploi, crédit, santé, par exemple), de l\'application du droit de la consommation par la Federal Trade Commission et de lois d\'États. La Chine impose des exigences de contenu, de sécurité et d\'enregistrement aux services publics d\'IA générative, de recommandation et de synthèse profonde.',
           ],
-          image: '/images/ai-risk-tiers-comparison-fr.svg',
-          imageCaption: 'UE : classes fondées sur les risques. États-Unis : règles sectorielles et lois d\'États. Chine : exigences de contenu, de sécurité et d\'enregistrement pour les services publics.',
         },
         timeline: {
           title: 'Calendrier réglementaire : 2024–2027 et au-delà',
           content: [
-            'UE : l\'AI Act est entré en vigueur le 1er août 2024. Les pratiques interdites et les obligations de maîtrise de l\'IA s\'appliquent depuis le 2 février 2025, les obligations pour les modèles d\'IA à usage général depuis le 2 août 2025. L\'AI Omnibus, en vigueur depuis le 27 juillet 2026, a reporté les règles haut risque des systèmes autonomes (annexe III) au 2 décembre 2027 et celles de l\'IA intégrée à des produits réglementés (annexe I) au 2 août 2028 ([Commission européenne](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Les obligations de transparence de l\'article 50 n\'ont pas été reportées et s\'appliquent à partir du 2 août 2026 ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
-            'États-Unis : le décret 14365 du 11 décembre 2025 charge le ministère de la Justice de contester des lois d\'États sur l\'IA et demande un cadre fédéral uniforme, mais il ne supplante lui-même aucune loi d\'État ([Maison-Blanche](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). Le Congrès n\'avait pas adopté de loi fédérale de préemption dans les sources que nous avons examinées (novembre 2026). La loi SB 26-189 du Colorado, signée le 14 mai 2026, remplace l\'AI Act de 2024 de l\'État et doit entrer en vigueur le 1er janvier 2027 ; des analyses de cabinets d\'avocats indiquent que des contentieux peuvent influer sur cette date ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
+            'UE : l\'AI Act est entré en vigueur le 1er août 2024. Les pratiques interdites et les obligations de maîtrise de l\'IA s\'appliquent depuis le 2 février 2025, les obligations pour les modèles d\'IA à usage général depuis le 2 août 2025. L\'AI Omnibus, en vigueur depuis le 27 juillet 2026, a reporté les règles haut risque des systèmes autonomes (annexe III) au 2 décembre 2027 et celles de l\'IA intégrée à des produits réglementés (annexe I) au 2 août 2028 ([Commission européenne](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). Les obligations de transparence de l\'article 50 n\'ont pas été reportées et s\'appliquent à partir du 2 août 2026, sauf l\'obligation de marquage (filigrane) de l\'article 50, paragraphe 2, qui bénéficie d\'un délai de grâce jusqu\'au 2 décembre 2026 pour les systèmes déjà mis sur le marché avant cette date ([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
+            'États-Unis : le décret 14365 du 11 décembre 2025 charge le ministère de la Justice de contester des lois d\'États sur l\'IA et demande un cadre fédéral uniforme, mais il ne supplante lui-même aucune loi d\'État ([Maison-Blanche](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). Le Congrès n\'avait pas adopté de loi fédérale de préemption dans les sources que nous avons examinées (novembre 2026). La loi SB 26-189 du Colorado, signée le 14 mai 2026, remplace l\'AI Act de 2024 de l\'État et doit entrer en vigueur le 1er janvier 2027  ([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
             'Chine : les mesures provisoires sur les services d\'IA générative s\'appliquent depuis le 15 août 2023, les mesures d\'étiquetage des contenus générés par IA depuis le 1er septembre 2025 et une loi sur la cybersécurité modifiée, avec une clause générale sur l\'IA, depuis le 1er janvier 2026. La Chine n\'a pas de loi unique et complète sur l\'IA ; son plan législatif 2026 en fait une priorité, sans calendrier publié ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
           ],
         },
@@ -25979,7 +25955,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         complianceBurden: {
           title: 'Effort de conformité : ce qui diffère en pratique',
           content: [
-            'L\'effort de conformité varie selon la région. Dans l\'UE, l\'AI Act impose des obligations de documentation, de gestion des risques et de transparence qui dépendent de la classe de risque du système et de votre rôle de fournisseur ou de déployeur ; les interdictions, les obligations pour les modèles à usage général et la transparence s\'appliquent déjà, tandis que les obligations haut risque suivent en décembre 2027 (annexe III) ou août 2028 (annexe I). Aux États-Unis, les obligations sont réparties entre secteurs et États ; l\'effort dépend du lieu et du secteur d\'activité. En Chine, les services publics d\'IA générative peuvent nécessiter un enregistrement auprès de la CAC ou une évaluation de sécurité et doivent étiqueter les contenus générés par IA ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
+            'L\'effort de conformité varie selon la région. Dans l\'UE, l\'AI Act impose des obligations de documentation, de gestion des risques et de transparence qui dépendent de la classe de risque du système et de votre rôle de fournisseur ou de déployeur ; les interdictions, les obligations pour les modèles à usage général et la transparence de l\'article 50 s\'appliquent déjà (le marquage par filigrane de l\'article 50, paragraphe 2, bénéficie d\'un délai de grâce jusqu\'au 2 décembre 2026 pour les systèmes déjà mis sur le marché), tandis que les obligations haut risque suivent en décembre 2027 (annexe III) ou août 2028 (annexe I). Aux États-Unis, les obligations sont réparties entre secteurs et États ; l\'effort dépend du lieu et du secteur d\'activité. En Chine, les services publics d\'IA générative peuvent nécessiter un enregistrement auprès de la CAC ou une évaluation de sécurité et doivent étiqueter les contenus générés par IA ([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
             'Les coûts et délais varient fortement selon la taille de l\'entreprise, le cas d\'usage et le conseil juridique, et il n\'existe pas de référence publique neutre ; cette page ne cite donc aucune fourchette de coûts. Obtenez un avis juridique propre à chaque région avant de fixer un plan de lancement.',
           ],
         },
@@ -25990,7 +25966,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'États-Unis d\'abord : il n\'existe pas de loi fédérale générale sur l\'IA ; les obligations viennent des règles sectorielles, du droit de la consommation appliqué par la FTC et des lois d\'États qui vous concernent. Suivez avant le lancement des évolutions comme la SB 26-189 du Colorado.',
-            'UE d\'abord : si vous servez des utilisateurs de l\'UE, intégrez les obligations de l\'AI Act dès la conception. Les interdictions, les obligations pour les modèles à usage général et la transparence s\'appliquent déjà ; les obligations haut risque suivent en 2027 et 2028. Réutiliser la documentation européenne ailleurs est un choix stratégique, non une obligation légale.',
+            'UE d\'abord : si vous servez des utilisateurs de l\'UE, intégrez les obligations de l\'AI Act dès la conception. Les interdictions, les obligations pour les modèles à usage général et la transparence de l\'article 50 s\'appliquent déjà (sous réserve du délai de grâce pour le filigrane indiqué dans le calendrier) ; les obligations haut risque suivent en 2027 et 2028. Réutiliser la documentation européenne ailleurs est un choix stratégique, non une obligation légale.',
             'Chine : proposer de l\'IA générative publique en Chine continentale implique enregistrement auprès de la CAC, étiquetage des contenus et exigences de sécurité. Demandez à un conseil local si et comment votre service peut être proposé.',
             'Multi-régions : exploiter un produit dans les trois régions suppose des processus distincts de documentation, d\'étiquetage et de revue. Prévoyez des configurations propres à chaque région.',
           ],
@@ -26000,7 +25976,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             {
               q: 'Quelle région réglemente l\'IA le plus vite ?',
-              a: 'L\'UE dispose du cadre contraignant le plus détaillé : l\'AI Act s\'applique par étapes depuis 2025, même si l\'AI Omnibus, en vigueur depuis le 27 juillet 2026, a reporté les règles haut risque à décembre 2027 et août 2028 (Commission européenne). La Chine publie rapidement des mesures ciblées, comme celles sur l\'étiquetage des contenus d\'IA en septembre 2025. Les États-Unis n\'ont pas de loi fédérale générale ; un décret de décembre 2025 vise un cadre national tandis que les États continuent de légiférer.',
+              a: 'Parmi les trois régimes présentés ici, l\'UE dispose du cadre contraignant le plus détaillé : l\'AI Act s\'applique par étapes depuis 2025, même si l\'AI Omnibus, en vigueur depuis le 27 juillet 2026, a reporté les règles haut risque à décembre 2027 et août 2028 (Commission européenne). La Chine publie des mesures ciblées à un rythme soutenu, comme celles sur l\'étiquetage des contenus d\'IA en septembre 2025. Les États-Unis n\'ont pas de loi fédérale générale ; un décret de décembre 2025 vise un cadre national tandis que les États continuent de légiférer.',
             },
             {
               q: 'Puis-je utiliser le même modèle d\'IA dans les trois régions ?',
@@ -26008,7 +25984,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Que se passe-t-il si j\'ignore les exigences de conformité régionales ?',
-              a: 'Les conséquences dépendent du régime. L\'AI Act prévoit pour les pratiques interdites des amendes pouvant atteindre 35 millions d\'euros ou 7 % du chiffre d\'affaires annuel mondial, le montant le plus élevé étant retenu, et des paliers inférieurs pour les autres manquements (article 99, [règlement (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). Aux États-Unis, l\'application relève d\'agences comme la FTC et des procureurs généraux des États. En Chine, les lois applicables et les mesures de la CAC prévoient des mises en conformité et des sanctions. Ignorer ces règles n\'est pas viable à long terme.',
+              a: 'Les conséquences dépendent du régime. L\'AI Act prévoit pour les pratiques interdites des amendes pouvant atteindre 35 millions d\'euros ou 7 % du chiffre d\'affaires annuel mondial, le montant le plus élevé étant retenu, et des paliers inférieurs pour les autres manquements (article 99, [règlement (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). Aux États-Unis, l\'application relève d\'agences comme la FTC et des procureurs généraux des États. En Chine, les lois applicables et les mesures de la CAC prévoient des mises en conformité et des sanctions. Ignorer l\'un de ces régimes n\'est pas une stratégie viable à long terme.',
             },
             {
               q: 'Le RGPD est-il la même chose que l\'AI Act ?',
@@ -26036,22 +26012,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '世界のAIガバナンスは3つのモデルに分かれています。欧州連合にはAI法（規則（EU）2024/1689）があります。拘束力のあるリスクベースの法律で、2024年8月1日に発効し、段階的に適用されます（[欧州委員会](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)）。米国には包括的な連邦AI法がなく、大統領令、省庁のガイダンス、NIST AIリスクマネジメントフレームワークのような任意基準、州法を通じて政策が進められています。中国は、主に国家インターネット情報弁公室（CAC）による個別の行政措置で規制しています。',
             '複数地域でAIを展開する組織にとって、実務上の違いは期限、文書化義務、執行主体にあります。このページは、2026年11月時点で公開されている情報に基づき3つの体制をまとめたものです。一般的な概要であり、法的助言ではありません。',
           ],
-          image: '/images/ai-three-region-framework-ja.svg',
-          imageCaption: '3つの規制モデル：EU AI法（拘束力あり・リスクベース）、米国（大統領令・分野別ルール・州法）、中国（CACの行政措置）。',
         },
         riskTiers: {
           title: 'AIリスク分類：各地域がリスクを分類する方法',
           content: [
             '3つの地域はAIの分類方法が異なります。EUのAI法は、禁止される行為、高リスクシステム、特定の透明性義務があるシステム、最小リスクのシステムにリスクで分類し、汎用AIモデルには別の義務があります。米国には単一のリスク分類がなく、義務は分野別ルール（雇用、与信、医療など）、連邦取引委員会（FTC）による消費者保護の執行、州法から生じます。中国は、公開型の生成AI、レコメンド、ディープシンセシスのサービスにコンテンツ、セキュリティ、届出の要件を課しています。',
           ],
-          image: '/images/ai-risk-tiers-comparison-ja.svg',
-          imageCaption: 'EU：リスクベースの区分。米国：分野別ルールと州法。中国：公開サービス向けのコンテンツ・セキュリティ・届出要件。',
         },
         timeline: {
           title: '規制のタイムライン：2024年〜2027年とその先',
           content: [
-            'EU：AI法は2024年8月1日に発効しました。禁止される行為とAIリテラシー義務は2025年2月2日から、汎用AIモデルの義務は2025年8月2日から適用されています。2026年7月27日に発効したAIオムニバスにより、単独システム（附属書III）の高リスク規則は2027年12月2日に、規制対象製品に組み込まれるAI（附属書I）は2028年8月2日に延期されました（[欧州委員会](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)）。第50条の透明性義務は延期されず、2026年8月2日から適用されます（[Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)）。',
-            '米国：2025年12月11日の大統領令14365は、司法省に州のAI法への異議申立てを指示し、統一的な連邦枠組みを求めていますが、それ自体で州法を先占するものではありません（[ホワイトハウス](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)）。確認した情報源（2026年11月時点）では、連邦議会は連邦先占法を成立させていません。2026年5月14日に署名されたコロラド州のSB 26-189は、同州の2024年AI法に代わるもので、2027年1月1日の施行が予定されています。法律事務所の分析によると、訴訟がこの日程に影響する可能性があります（[Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)）。',
+            'EU：AI法は2024年8月1日に発効しました。禁止される行為とAIリテラシー義務は2025年2月2日から、汎用AIモデルの義務は2025年8月2日から適用されています。2026年7月27日に発効したAIオムニバスにより、単独システム（附属書III）の高リスク規則は2027年12月2日に、規制対象製品に組み込まれるAI（附属書I）は2028年8月2日に延期されました（[欧州委員会](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)）。第50条の透明性義務は延期されず、2026年8月2日から適用されます。ただし、第50条第2項の透かし表示義務は、この日より前に市場に出ているシステムについて2026年12月2日まで猶予されます（[Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)）。',
+            '米国：2025年12月11日の大統領令14365は、司法省に州のAI法への異議申立てを指示し、統一的な連邦枠組みを求めていますが、それ自体で州法を先占するものではありません（[ホワイトハウス](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)）。確認した情報源（2026年11月時点）では、連邦議会は連邦先占法を成立させていません。2026年5月14日に署名されたコロラド州のSB 26-189は、同州の2024年AI法に代わるもので、2027年1月1日の施行が予定されています（[Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)）。',
             '中国：生成AIサービス管理暫定弁法は2023年8月15日から、AI生成コンテンツの表示弁法は2025年9月1日から、AIに関する一般条項を含む改正サイバーセキュリティ法は2026年1月1日から適用されています。中国には単一の包括的なAI法はなく、2026年の立法計画は包括的AI立法を優先事項としていますが、スケジュールは公表されていません（[DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)）。',
           ],
         },
@@ -26064,7 +26036,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         complianceBurden: {
           title: 'コンプライアンスの負担：実務での違い',
           content: [
-            'コンプライアンスの負担は地域ごとに異なります。EUでは、AI法がシステムのリスク区分と、提供者か利用者かに応じた文書化、リスク管理、透明性の義務を定めています。禁止事項、汎用AIの義務、透明性義務はすでに適用されており、高リスクの義務は2027年12月（附属書III）または2028年8月（附属書I）に続きます。米国では義務が分野と州に分散しているため、負担は事業の所在地と分野によります。中国では、公開型の生成AIサービスにCACへの届出やセキュリティ評価が必要となる場合があり、AI生成コンテンツの表示が求められます（[DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)）。',
+            'コンプライアンスの負担は地域ごとに異なります。EUでは、AI法がシステムのリスク区分と、提供者か利用者かに応じた文書化、リスク管理、透明性の義務を定めています。禁止事項、汎用AIの義務、第50条の透明性義務はすでに適用されており（第50条第2項の透かし表示義務は、すでに市場にあるシステムについて2026年12月2日まで猶予）、高リスクの義務は2027年12月（附属書III）または2028年8月（附属書I）に続きます。米国では義務が分野と州に分散しているため、負担は事業の所在地と分野によります。中国では、公開型の生成AIサービスにCACへの届出やセキュリティ評価が必要となる場合があり、AI生成コンテンツの表示が求められます（[DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)）。',
             '費用や期間の数字は、企業規模、用途、法律顧問によって大きく異なり、中立的な公開ベンチマークもないため、このページでは費用の目安を示しません。展開計画を決める前に、地域ごとの法的助言を受けてください。',
           ],
         },
@@ -26075,7 +26047,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '米国を先に：包括的な連邦AI法はなく、義務は分野別ルール、FTCの消費者保護法、該当する州法から生じます。ローンチ前にコロラド州のSB 26-189のような州の動向を確認してください。',
-            'EUを先に：EUのユーザーにサービスを提供するなら、最初からAI法の義務を前提に設計してください。禁止事項、汎用AIの義務、透明性義務はすでに適用され、高リスクの義務は2027年と2028年に続きます。EU向けの文書を他地域の基準として使うかどうかは戦略上の判断であり、法的要件ではありません。',
+            'EUを先に：EUのユーザーにサービスを提供するなら、最初からAI法の義務を前提に設計してください。禁止事項、汎用AIの義務、第50条の透明性義務はすでに適用され（透かし表示の猶予はタイムラインを参照）、高リスクの義務は2027年と2028年に続きます。EU向けの文書を他地域の基準として使うかどうかは戦略上の判断であり、法的要件ではありません。',
             '中国：中国本土で公開型の生成AIを提供するには、CACへの届出または登録、コンテンツ表示、セキュリティ要件が関わります。サービスを提供できるか、どのように提供するかは、現地の弁護士に確認してください。',
             '複数地域：1つの製品を3地域で運用するには、文書化、表示、レビューのプロセスを別々に維持する必要があります。地域別の構成を計画してください。',
           ],
@@ -26085,7 +26057,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             {
               q: 'AI規制が最も速く進んでいる地域はどこですか？',
-              a: 'EUが最も詳細な拘束力のある枠組みを持ち、AI法は2025年から段階的に適用されています。ただし、2026年7月27日に発効したAIオムニバスにより、高リスク規則は2027年12月と2028年8月に延期されました（欧州委員会）。中国は、2025年9月のAI生成コンテンツ表示弁法のように、個別の措置を素早く出します。米国には包括的な連邦法がなく、2025年12月の大統領令が国家的な枠組みを目指す一方、州は引き続き立法しています。',
+              a: '本ページで扱う3つの体制のうち、EUが最も詳細な拘束力のある枠組みを持ち、AI法は2025年から段階的に適用されています。ただし、2026年7月27日に発効したAIオムニバスにより、高リスク規則は2027年12月と2028年8月に延期されました（欧州委員会）。中国は、2025年9月のAI生成コンテンツ表示弁法のように、個別の措置を着実に出しています。米国には包括的な連邦法がなく、2025年12月の大統領令が国家的な枠組みを目指す一方、州は引き続き立法しています。',
             },
             {
               q: '同じAIモデルを3地域すべてで使えますか？',
@@ -26093,7 +26065,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '地域ごとのコンプライアンス要件を無視するとどうなりますか？',
-              a: '結果は体制によって異なります。AI法は、禁止される行為について最大3,500万ユーロまたは全世界年間売上高の7％のいずれか高い方の制裁金を定め、その他の違反にはより低い区分があります（第99条、[規則（EU）2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)）。米国では、FTCなどの機関や州司法長官が執行します。中国では、関連法とCACの措置が是正命令や罰則を定めています。いずれも無視して長期的に事業を続けることはできません。',
+              a: '結果は体制によって異なります。AI法は、禁止される行為について最大3,500万ユーロまたは全世界年間売上高の7％のいずれか高い方の制裁金を定め、その他の違反にはより低い区分があります（第99条、[規則（EU）2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)）。米国では、FTCなどの機関や州司法長官が執行します。中国では、関連法とCACの措置が是正命令や罰則を定めています。いずれかの体制を無視することは、長期的には賢明な戦略ではありません。',
             },
             {
               q: 'GDPRはEU AI法と同じものですか？',
@@ -26121,22 +26093,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '全球AI治理分为三种模式。欧盟有《AI法案》（条例（EU）2024/1689），这是一部具有约束力、基于风险的法律，于2024年8月1日生效，分阶段适用（[欧盟委员会](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)）。美国没有全面的联邦AI法律，政策通过行政令、机构指南、NIST AI风险管理框架等自愿性标准以及各州法律推进。中国通过有针对性的行政措施进行监管，主要来自国家互联网信息办公室（CAC）。',
             '对于跨地区部署AI的组织，实际差异体现在时间表、文档义务和执法主体上。本页根据2026年11月的公开信息概述这三种体系，属于一般性介绍，不构成法律意见。',
           ],
-          image: '/images/ai-three-region-framework-zh.svg',
-          imageCaption: '三种监管模式：欧盟《AI法案》（有约束力、基于风险）、美国（行政行动、行业规则和州法律）、中国（CAC行政措施）。',
         },
         riskTiers: {
           title: 'AI风险分类: 每个地区如何分类风险',
           content: [
             '三个地区对AI的分类方式不同。欧盟《AI法案》按风险划分：被禁止的做法、高风险系统、有特定透明度义务的系统和最低风险系统；通用AI模型另有专门义务。美国没有统一的风险分类，义务来自行业规则（例如就业、信贷和医疗）、联邦贸易委员会（FTC）的消费者保护执法以及各州法律。中国对面向公众的生成式AI、算法推荐和深度合成服务提出内容、安全和备案要求。',
           ],
-          image: '/images/ai-risk-tiers-comparison-zh.svg',
-          imageCaption: '欧盟：基于风险的分级。美国：行业规则和州法律。中国：面向公众服务的内容、安全和备案要求。',
         },
         timeline: {
           title: '监管时间线：2024–2027年及以后',
           content: [
-            '欧盟：《AI法案》于2024年8月1日生效。被禁止的做法和AI素养义务自2025年2月2日起适用，通用AI模型义务自2025年8月2日起适用。2026年7月27日生效的AI综合立法（AI Omnibus）将独立系统（附件III）的高风险规则推迟到2027年12月2日，将嵌入受监管产品的AI（附件I）推迟到2028年8月2日（[欧盟委员会](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)）。第50条的透明度义务未被推迟，自2026年8月2日起适用（[Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)）。',
-            '美国：2025年12月11日的第14365号行政令指示司法部对州AI法律提出挑战，并要求制定统一的联邦框架，但其本身并不优先适用于任何州法律（[白宫](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)）。在我们查阅的来源中（2026年11月），国会尚未通过联邦先占立法。科罗拉多州于2026年5月14日签署的SB 26-189取代了该州2024年的AI法，计划于2027年1月1日生效；律师事务所的分析指出，诉讼可能影响这一日期（[Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)）。',
+            '欧盟：《AI法案》于2024年8月1日生效。被禁止的做法和AI素养义务自2025年2月2日起适用，通用AI模型义务自2025年8月2日起适用。2026年7月27日生效的AI综合立法（AI Omnibus）将独立系统（附件III）的高风险规则推迟到2027年12月2日，将嵌入受监管产品的AI（附件I）推迟到2028年8月2日（[欧盟委员会](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)）。第50条的透明度义务未被推迟，自2026年8月2日起适用，但第50条第2款的水印标识义务对在该日期之前已投放市场的系统设有宽限期，至2026年12月2日（[Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)）。',
+            '美国：2025年12月11日的第14365号行政令指示司法部对州AI法律提出挑战，并要求制定统一的联邦框架，但其本身并不优先适用于任何州法律（[白宫](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)）。在我们查阅的来源中（2026年11月），国会尚未通过联邦先占立法。科罗拉多州于2026年5月14日签署的SB 26-189取代了该州2024年的AI法，计划于2027年1月1日生效（[Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)）。',
             '中国：《生成式人工智能服务管理暂行办法》自2023年8月15日起施行，AI生成内容标识办法自2025年9月1日起施行，含AI一般条款的修订后《网络安全法》自2026年1月1日起施行。中国没有单一的综合性AI法律，2026年立法工作计划将其列为重点，但未公布时间表（[DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)）。',
           ],
         },
@@ -26149,7 +26117,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         complianceBurden: {
           title: '合规工作量：实践中的差异',
           content: [
-            '各地区的合规工作量不同。在欧盟，《AI法案》规定的文档、风险管理和透明度义务取决于系统的风险等级以及你是提供者还是部署者；禁止性规定、通用AI义务和透明度义务已经适用，高风险义务将于2027年12月（附件III）或2028年8月（附件I）起适用。在美国，义务分散在各行业和各州，工作量取决于你在哪里以及在哪个行业运营。在中国，面向公众的生成式AI服务可能需要向CAC备案或进行安全评估，并须标识AI生成内容（[DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)）。',
+            '各地区的合规工作量不同。在欧盟，《AI法案》规定的文档、风险管理和透明度义务取决于系统的风险等级以及你是提供者还是部署者；禁止性规定、通用AI义务和第50条透明度义务已经适用（第50条第2款的水印标识义务对已投放市场的系统宽限至2026年12月2日），高风险义务将于2027年12月（附件III）或2028年8月（附件I）起适用。在美国，义务分散在各行业和各州，工作量取决于你在哪里以及在哪个行业运营。在中国，面向公众的生成式AI服务可能需要向CAC备案或进行安全评估，并须标识AI生成内容（[DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)）。',
             '成本和时间因公司规模、用例和法律顾问而差异很大，也没有中立的公开基准，因此本页不给出成本区间。在确定上线计划之前，请获取各地区的专业法律意见。',
           ],
         },
@@ -26160,7 +26128,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '美国优先：美国没有全面的联邦AI法律，义务来自行业规则、FTC的消费者保护法以及适用于你的州法律。上线前请关注科罗拉多州SB 26-189等州级动态。',
-            '欧盟优先：如果你服务欧盟用户，请从一开始就按《AI法案》义务进行设计。禁止性规定、通用AI义务和透明度义务已经适用，高风险义务将在2027年和2028年起适用。把欧盟文档作为其他地区的基线是战略选择，而非法律要求。',
+            '欧盟优先：如果你服务欧盟用户，请从一开始就按《AI法案》义务进行设计。禁止性规定、通用AI义务和第50条透明度义务已经适用（水印标识的宽限期见时间线），高风险义务将在2027年和2028年起适用。把欧盟文档作为其他地区的基线是战略选择，而非法律要求。',
             '中国：在中国大陆提供面向公众的生成式AI，涉及向CAC备案或登记、内容标识和安全要求。请向当地律师咨询你的服务能否提供以及如何提供。',
             '多地区：在三个地区运营同一产品，意味着需要分别维护文档、标识和审查流程。请规划各地区专属的配置。',
           ],
@@ -26170,7 +26138,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             {
               q: '哪个地区的AI监管推进得最快？',
-              a: '欧盟拥有最详细、具有约束力的框架：《AI法案》自2025年起分阶段适用，不过2026年7月27日生效的AI综合立法将高风险规则推迟到2027年12月和2028年8月（欧盟委员会）。中国出台有针对性的措施很快，例如2025年9月的AI生成内容标识办法。美国没有全面的联邦法律；2025年12月的一项行政令寻求建立国家框架，同时各州仍在继续立法。',
+              a: '在本文涉及的三种体系中，欧盟拥有最详细、具有约束力的框架：《AI法案》自2025年起分阶段适用，不过2026年7月27日生效的AI综合立法将高风险规则推迟到2027年12月和2028年8月（欧盟委员会）。中国稳步出台有针对性的措施，例如2025年9月的AI生成内容标识办法。美国没有全面的联邦法律；2025年12月的一项行政令寻求建立国家框架，同时各州仍在继续立法。',
             },
             {
               q: '我能在三个地区使用同一个AI模型吗？',
@@ -26178,7 +26146,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '如果我忽视各地区的合规要求会怎样？',
-              a: '后果取决于监管体系。《AI法案》对被禁止的做法规定最高3500万欧元或全球年营业额7%（以较高者为准）的罚款，其他违规适用较低档次（第99条，[条例（EU）2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)）。在美国，执法来自FTC等机构和各州总检察长。在中国，相关法律和CAC措施规定了责令改正和处罚。忽视这些规则无法长期持续。',
+              a: '后果取决于监管体系。《AI法案》对被禁止的做法规定最高3500万欧元或全球年营业额7%（以较高者为准）的罚款，其他违规适用较低档次（第99条，[条例（EU）2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)）。在美国，执法来自FTC等机构和各州总检察长。在中国，相关法律和CAC措施规定了责令改正和处罚。无视其中任何一种体系都不是明智的长期策略。',
             },
             {
               q: 'GDPR和欧盟《AI法案》是一回事吗？',
@@ -26208,22 +26176,18 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '전 세계 AI 거버넌스는 세 가지 모델로 나뉩니다. 유럽연합에는 AI 법(규정 (EU) 2024/1689)이 있습니다. 구속력 있는 위험 기반 법률로 2024년 8월 1일 발효되었으며 단계적으로 적용됩니다([유럽연합 집행위원회](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). 미국에는 포괄적인 연방 AI 법이 없으며, 정책은 행정명령, 기관 지침, NIST AI 위험관리 프레임워크 같은 자발적 표준, 주 법률을 통해 진행됩니다. 중국은 주로 국가인터넷정보판공실(CAC)의 개별 행정 조치로 규제합니다.',
             '여러 지역에 AI를 배포하는 조직에게 실무적 차이는 일정, 문서화 의무, 집행 주체에 있습니다. 이 페이지는 2026년 11월 기준 공개된 정보에 따라 세 체계를 요약합니다. 일반적인 개요이며 법률 자문이 아닙니다.',
           ],
-          image: '/images/ai-three-region-framework-en.svg',
-          imageCaption: '세 가지 규제 모델: EU AI 법(구속력, 위험 기반), 미국(행정 조치, 분야별 규칙, 주 법률), 중국(CAC 행정 조치).',
         },
         riskTiers: {
           title: 'AI 위험 분류: 지역별로 위험을 구분하는 방식',
           content: [
             '세 지역은 AI를 서로 다르게 분류합니다. EU AI 법은 시스템을 위험에 따라 금지 행위, 고위험 시스템, 특정 투명성 의무가 있는 시스템, 최소 위험 시스템으로 나누며, 범용 AI 모델에는 별도의 의무가 있습니다. 미국에는 단일한 위험 분류가 없고, 의무는 분야별 규칙(예: 고용, 신용, 의료), 연방거래위원회(FTC)의 소비자 보호 집행, 주 법률에서 나옵니다. 중국은 공개 서비스 형태의 생성형 AI, 추천, 딥 합성 서비스에 콘텐츠, 보안, 등록 요건을 적용합니다.',
           ],
-          image: '/images/ai-risk-tiers-comparison-en.svg',
-          imageCaption: 'EU: 위험 기반 등급. 미국: 분야별 규칙과 주 법률. 중국: 공개 서비스에 대한 콘텐츠·보안·등록 요건.',
         },
         timeline: {
           title: '규제 타임라인: 2024~2027년 및 그 이후',
           content: [
-            'EU: AI 법은 2024년 8월 1일 발효되었습니다. 금지 행위와 AI 리터러시 의무는 2025년 2월 2일부터, 범용 AI 모델 의무는 2025년 8월 2일부터 적용됩니다. 2026년 7월 27일 발효된 AI 옴니버스는 독립형 시스템(부속서 III)의 고위험 규칙을 2027년 12월 2일로, 규제 제품에 내장된 AI(부속서 I)를 2028년 8월 2일로 연기했습니다([유럽연합 집행위원회](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). 제50조 투명성 의무는 연기되지 않았으며 2026년 8월 2일부터 적용됩니다([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
-            '미국: 2025년 12월 11일의 행정명령 14365는 법무부가 주 AI 법률에 이의를 제기하도록 지시하고 통일된 연방 체계를 요구하지만, 그 자체로 주 법률을 선점하지는 않습니다([백악관](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). 저희가 검토한 자료(2026년 11월 기준)에서는 연방 의회가 연방 선점 법률을 제정하지 않았습니다. 2026년 5월 14일 서명된 콜로라도주 SB 26-189는 같은 주의 2024년 AI 법을 대체하며 2027년 1월 1일 시행될 예정입니다. 로펌 분석에 따르면 소송이 이 일정에 영향을 줄 수 있습니다([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
+            'EU: AI 법은 2024년 8월 1일 발효되었습니다. 금지 행위와 AI 리터러시 의무는 2025년 2월 2일부터, 범용 AI 모델 의무는 2025년 8월 2일부터 적용됩니다. 2026년 7월 27일 발효된 AI 옴니버스는 독립형 시스템(부속서 III)의 고위험 규칙을 2027년 12월 2일로, 규제 제품에 내장된 AI(부속서 I)를 2028년 8월 2일로 연기했습니다([유럽연합 집행위원회](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). 제50조 투명성 의무는 연기되지 않았으며 2026년 8월 2일부터 적용되지만, 제50조 제2항의 워터마크 표시 의무는 그 날짜 이전에 이미 시장에 출시된 시스템에 대해 2026년 12월 2일까지 유예됩니다([Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/)).',
+            '미국: 2025년 12월 11일의 행정명령 14365는 법무부가 주 AI 법률에 이의를 제기하도록 지시하고 통일된 연방 체계를 요구하지만, 그 자체로 주 법률을 선점하지는 않습니다([백악관](https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/)). 저희가 검토한 자료(2026년 11월 기준)에서는 연방 의회가 연방 선점 법률을 제정하지 않았습니다. 2026년 5월 14일 서명된 콜로라도주 SB 26-189는 같은 주의 2024년 AI 법을 대체하며 2027년 1월 1일 시행될 예정입니다([Holland & Knight](https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189)).',
             '중국: 생성형 인공지능 서비스 관리 잠정 방법은 2023년 8월 15일부터, AI 생성 콘텐츠 표시 방법은 2025년 9월 1일부터, AI 일반 조항을 포함한 개정 사이버보안법은 2026년 1월 1일부터 적용됩니다. 중국에는 단일한 포괄적 AI 법이 없으며, 2026년 입법 계획은 이를 우선 과제로 꼽지만 일정은 공개되지 않았습니다([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
           ],
         },
@@ -26236,7 +26200,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         complianceBurden: {
           title: '컴플라이언스 부담: 실무에서 달라지는 점',
           content: [
-            '컴플라이언스 부담은 지역마다 다릅니다. EU에서는 AI 법이 시스템의 위험 등급과 제공자인지 배포자인지에 따라 달라지는 문서화, 위험 관리, 투명성 의무를 정합니다. 금지 사항, 범용 AI 의무, 투명성 의무는 이미 적용 중이며, 고위험 의무는 2027년 12월(부속서 III) 또는 2028년 8월(부속서 I)에 이어집니다. 미국에서는 의무가 분야와 주에 분산되어 있어 부담은 사업 지역과 분야에 따라 달라집니다. 중국에서는 공개 생성형 AI 서비스에 CAC 등록 또는 보안 평가가 필요할 수 있으며 AI 생성 콘텐츠를 표시해야 합니다([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
+            '컴플라이언스 부담은 지역마다 다릅니다. EU에서는 AI 법이 시스템의 위험 등급과 제공자인지 배포자인지에 따라 달라지는 문서화, 위험 관리, 투명성 의무를 정합니다. 금지 사항, 범용 AI 의무, 제50조 투명성 의무는 이미 적용 중이며(제50조 제2항 워터마크 표시 의무는 이미 시장에 있는 시스템에 대해 2026년 12월 2일까지 유예), 고위험 의무는 2027년 12월(부속서 III) 또는 2028년 8월(부속서 I)에 이어집니다. 미국에서는 의무가 분야와 주에 분산되어 있어 부담은 사업 지역과 분야에 따라 달라집니다. 중국에서는 공개 생성형 AI 서비스에 CAC 등록 또는 보안 평가가 필요할 수 있으며 AI 생성 콘텐츠를 표시해야 합니다([DLA Piper](https://intelligence.dlapiper.com/artificial-intelligence/?t=01-law&c=CN)).',
             '비용과 기간은 기업 규모, 사용 사례, 법률 자문에 따라 크게 달라지며 중립적인 공개 기준도 없으므로, 이 페이지는 비용 범위를 제시하지 않습니다. 출시 계획을 확정하기 전에 지역별 법률 자문을 받으십시오.',
           ],
         },
@@ -26247,7 +26211,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '미국 우선: 포괄적인 연방 AI 법이 없으므로 출시 의무는 분야별 규칙, FTC 소비자 보호법, 적용되는 주 법률에서 나옵니다. 출시 전에 콜로라도주 SB 26-189 같은 주 차원의 동향을 확인하십시오.',
-            'EU 우선: EU 사용자를 대상으로 한다면 처음부터 AI 법 의무를 기준으로 설계하십시오. 금지 사항, 범용 AI 의무, 투명성 의무는 이미 적용 중이며 고위험 의무는 2027년과 2028년에 이어집니다. EU 문서를 다른 지역의 기준으로 삼는 것은 전략적 선택이며 법적 요건이 아닙니다.',
+            'EU 우선: EU 사용자를 대상으로 한다면 처음부터 AI 법 의무를 기준으로 설계하십시오. 금지 사항, 범용 AI 의무, 제50조 투명성 의무는 이미 적용 중이며(워터마크 표시 유예는 타임라인 참조) 고위험 의무는 2027년과 2028년에 이어집니다. EU 문서를 다른 지역의 기준으로 삼는 것은 전략적 선택이며 법적 요건이 아닙니다.',
             '중국: 중국 본토에서 공개 생성형 AI를 제공하려면 CAC 등록, 콘텐츠 표시, 보안 요건이 따릅니다. 서비스를 제공할 수 있는지와 그 방법은 현지 변호사에게 문의하십시오.',
             '다중 지역: 하나의 제품을 세 지역에서 운영하려면 문서화, 표시, 검토 프로세스를 따로 유지해야 합니다. 지역별 구성을 계획하십시오.',
           ],
@@ -26257,7 +26221,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             {
               q: 'AI 규제가 가장 빠르게 진행되는 지역은 어디입니까?',
-              a: 'EU가 가장 상세한 구속력 있는 체계를 갖추고 있으며, AI 법은 2025년부터 단계적으로 적용됩니다. 다만 2026년 7월 27일 발효된 AI 옴니버스가 고위험 규칙을 2027년 12월과 2028년 8월로 연기했습니다(유럽연합 집행위원회). 중국은 2025년 9월의 AI 생성 콘텐츠 표시 방법처럼 개별 조치를 빠르게 발표합니다. 미국에는 포괄적인 연방법이 없으며, 2025년 12월 행정명령이 국가 체계를 추구하는 가운데 주들은 계속 입법하고 있습니다.',
+              a: '이 글에서 다루는 세 체계 중 EU가 가장 상세한 구속력 있는 체계를 갖추고 있으며, AI 법은 2025년부터 단계적으로 적용됩니다. 다만 2026년 7월 27일 발효된 AI 옴니버스가 고위험 규칙을 2027년 12월과 2028년 8월로 연기했습니다(유럽연합 집행위원회). 중국은 2025년 9월의 AI 생성 콘텐츠 표시 방법처럼 개별 조치를 꾸준히 발표합니다. 미국에는 포괄적인 연방법이 없으며, 2025년 12월 행정명령이 국가 체계를 추구하는 가운데 주들은 계속 입법하고 있습니다.',
             },
             {
               q: '세 지역에서 같은 AI 모델을 사용할 수 있습니까?',
@@ -26265,7 +26229,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '지역별 컴플라이언스 요건을 무시하면 어떻게 됩니까?',
-              a: '결과는 체계에 따라 다릅니다. AI 법은 금지 행위에 대해 최대 3,500만 유로 또는 전 세계 연간 매출의 7% 중 높은 금액의 과징금을 규정하며, 그 밖의 위반에는 더 낮은 등급이 있습니다(제99조, [규정 (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). 미국에서는 FTC 같은 기관과 주 법무장관이 집행합니다. 중국에서는 관련 법률과 CAC 조치가 시정 명령과 처벌을 규정합니다. 이를 무시하는 것은 장기적으로 지속 가능하지 않습니다.',
+              a: '결과는 체계에 따라 다릅니다. AI 법은 금지 행위에 대해 최대 3,500만 유로 또는 전 세계 연간 매출의 7% 중 높은 금액의 과징금을 규정하며, 그 밖의 위반에는 더 낮은 등급이 있습니다(제99조, [규정 (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)). 미국에서는 FTC 같은 기관과 주 법무장관이 집행합니다. 중국에서는 관련 법률과 CAC 조치가 시정 명령과 처벌을 규정합니다. 어느 한 체계라도 무시하는 것은 장기적으로 현명한 전략이 아닙니다.',
             },
             {
               q: 'GDPR은 EU AI 법과 같은 것입니까?',
@@ -26298,8 +26262,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'Cloud AI APIs trigger GDPR Chapter V transfer rules when prompts containing personal data reach providers outside the EU/EEA; running the model on your own EU hardware avoids that transfer, but GDPR still applies to the processing.',
-            'US transfers can rest on the EU-US Data Privacy Framework (adequacy decision of 10 July 2023) for certified providers; the General Court dismissed a challenge on 3 September 2025 and an appeal (C-703/25 P) is pending.',
-            'The EU AI Act timeline changed: the AI Omnibus (in force since 27 July 2026) moved high-risk obligations to 2 December 2027 (Annex III) and 2 August 2028 (Annex I); general-purpose AI duties apply since 2 August 2025 and Article 50 transparency duties since 2 August 2026.',
+            'US transfers can rest on the EU-US Data Privacy Framework (adequacy decision of 10 July 2023) for certified providers; the General Court dismissed a challenge on 3 September 2025 and an appeal is pending.',
+            'The EU AI Act timeline changed: the AI Omnibus (in force since 27 July 2026) moved high-risk obligations to 2 December 2027 (Annex III) and 2 August 2028 (Annex I); general-purpose AI duties apply since 2 August 2025 and Article 50 transparency duties since 2 August 2026 (Article 50(2) watermarking has a grace period until 2 December 2026 for systems already on the market).',
             'Qwen3.8 27B (released August 2026, Apache-2.0) is available in Ollama as qwen3.8:27b with an 18 GB download; the benchmark scores in its model card are developer-reported, not independent tests.',
             'Migration path: a local runtime such as Ollama plus a dispatch layer; the effort depends on your hardware, security review and existing workflows.',
           ],
@@ -26307,7 +26271,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         gdprPressure: {
           title: 'GDPR Transfer Rules Shape the Cloud-vs-Local Decision',
           content: [
-            'When a prompt contains personal data and is sent to an AI provider outside the EU/EEA, GDPR Chapter V on international transfers applies ([Article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). The usual transfer tools are an adequacy decision, standard contractual clauses (SCCs) with a transfer impact assessment, or binding corporate rules. For the US, the European Commission adopted an adequacy decision for the EU-US Data Privacy Framework (DPF) on 10 July 2023, so transfers to certified US companies can rely on it ([European Commission](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). The General Court dismissed an annulment action against that decision on 3 September 2025 (Case T-553/23); the applicant appealed on 31 October 2025 (Case C-703/25 P), and a law-firm update advises businesses to keep applying Chapter V in the meantime ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
+            'When a prompt contains personal data and is sent to an AI provider outside the EU/EEA, GDPR Chapter V on international transfers applies ([Article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). The usual transfer tools are an adequacy decision, standard contractual clauses (SCCs) with a transfer impact assessment, or binding corporate rules. For the US, the European Commission adopted an adequacy decision for the EU-US Data Privacy Framework (DPF) on 10 July 2023, so transfers to certified US companies can rely on it ([European Commission](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). The General Court dismissed an annulment action against that decision on 3 September 2025; the applicant appealed on 31 October 2025, and a law-firm update advises businesses to keep applying Chapter V in the meantime ([WilmerHale](https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20251201-european-court-of-justice-to-review-challenge-to-eu-us-data-privacy-framework), [Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'For providers outside the EU/EEA that no adequacy decision covers, you need another transfer tool and an assessment of the destination country\'s laws, following the CJEU\'s Schrems II judgment (Case C-311/18). Data protection authorities have also acted on AI services directly, for example the Italian Garante\'s temporary limitation of ChatGPT in 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)), and the European Data Protection Board adopted Opinion 28/2024 on 18 December 2024 on data protection aspects of AI models ([EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). Contracts, transfer assessments and reviews for each cloud provider are a real compliance cost; this page quotes no figures because no neutral benchmark exists.',
             'Running the model on hardware you control inside the EU/EEA means prompts stay in your environment, so Article 44 transfer rules are not triggered by the AI layer. GDPR still applies to the processing itself: lawful basis, minimisation, security and your [Article 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) record of processing. Local deployment simplifies the transfer analysis; it does not remove GDPR obligations. This page is a general overview, not legal advice; consult qualified counsel or your data protection officer about your own situation.',
           ],
@@ -26315,7 +26279,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         aiAct2026: {
           title: 'What the EU AI Act Changes for Deployers',
           content: [
-            'The AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and applies in phases. Obligations for providers of general-purpose AI models have applied since 2 August 2025, and Article 50 transparency duties since 2 August 2026. The AI Omnibus, in force since 27 July 2026, moved the high-risk rules to 2 December 2027 for stand-alone systems (Annex III) and 2 August 2028 for AI embedded in regulated products (Annex I) ([European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
+            'The AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and applies in phases. Obligations for providers of general-purpose AI models have applied since 2 August 2025, and Article 50 transparency duties since 2 August 2026 (Article 50(2) watermarking has a grace period until 2 December 2026 for systems already on the market). The AI Omnibus, in force since 27 July 2026, moved the high-risk rules to 2 December 2027 for stand-alone systems (Annex III) and 2 August 2028 for AI embedded in regulated products (Annex I) ([European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
             'The Act also applies to deployers, the organisations that use an AI system under their own authority. Whether you are a provider, a deployer or both depends on what you build and how you use the system; running an open-weight model locally does not decide that by itself. Ask counsel which obligations apply to your use case, in particular whether it is a high-risk use case.',
           ],
         },
@@ -26415,7 +26379,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Does the EU-US Data Privacy Framework remove the need to run AI locally?',
-              a: 'Not necessarily. For certified US providers the DPF adequacy decision can serve as the transfer basis, and the General Court dismissed a challenge to it on 3 September 2025. An appeal (Case C-703/25 P) is pending, so many organisations keep a fallback plan. Local deployment is one option; choose based on your risk assessment, contract terms and data sensitivity.',
+              a: 'Not necessarily. For certified US providers the DPF adequacy decision can serve as the transfer basis, and the General Court dismissed a challenge to it on 3 September 2025. An appeal is pending, so many organisations keep a fallback plan. Local deployment is one option; choose based on your risk assessment, contract terms and data sensitivity.',
             },
             {
               q: 'Is Qwen3.8 27B good enough for production use?',
@@ -26444,7 +26408,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'Does the EU-US Data Privacy Framework remove the need to run AI locally?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Not necessarily. For certified US providers the DPF adequacy decision can serve as the transfer basis, and the General Court dismissed a challenge to it on 3 September 2025. An appeal (Case C-703/25 P) is pending, so many organisations keep a fallback plan. Local deployment is one option; choose based on your risk assessment, contract terms and data sensitivity.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Not necessarily. For certified US providers the DPF adequacy decision can serve as the transfer basis, and the General Court dismissed a challenge to it on 3 September 2025. An appeal is pending, so many organisations keep a fallback plan. Local deployment is one option; choose based on your risk assessment, contract terms and data sensitivity.' },
           },
           {
             '@type': 'Question',
@@ -26479,8 +26443,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'Las APIs de IA en la nube activan las reglas de transferencia del capítulo V del RGPD cuando prompts con datos personales llegan a proveedores fuera de la UE/EEE; ejecutar el modelo en tu propio hardware en la UE evita esa transferencia, pero el RGPD sigue aplicándose al tratamiento.',
-            'Las transferencias a EE. UU. pueden basarse en el EU-US Data Privacy Framework (decisión de adecuación del 10 de julio de 2023) para proveedores certificados; el Tribunal General desestimó un recurso el 3 de septiembre de 2025 y hay un recurso de casación (C-703/25 P) pendiente.',
-            'El calendario de la AI Act cambió: el AI Omnibus (en vigor desde el 27 de julio de 2026) aplazó las obligaciones de alto riesgo al 2 de diciembre de 2027 (anexo III) y al 2 de agosto de 2028 (anexo I); las obligaciones de IA de uso general se aplican desde el 2 de agosto de 2025 y la transparencia del artículo 50 desde el 2 de agosto de 2026.',
+            'Las transferencias a EE. UU. pueden basarse en el EU-US Data Privacy Framework (decisión de adecuación del 10 de julio de 2023) para proveedores certificados; el Tribunal General desestimó un recurso el 3 de septiembre de 2025 y hay un recurso de casación pendiente.',
+            'El calendario de la AI Act cambió: el AI Omnibus (en vigor desde el 27 de julio de 2026) aplazó las obligaciones de alto riesgo al 2 de diciembre de 2027 (anexo III) y al 2 de agosto de 2028 (anexo I); las obligaciones de IA de uso general se aplican desde el 2 de agosto de 2025 y la transparencia del artículo 50 desde el 2 de agosto de 2026 (el marcado con marca de agua del artículo 50, apartado 2, tiene un periodo de gracia hasta el 2 de diciembre de 2026 para los sistemas ya comercializados).',
             'Qwen3.8 27B (publicado en agosto de 2026, Apache-2.0) está disponible en Ollama como qwen3.8:27b con una descarga de 18 GB; las puntuaciones de su model card las declara el desarrollador, no son pruebas independientes.',
             'Ruta de migración: un runtime local como Ollama más una capa de dispatch; el esfuerzo depende de tu hardware, la revisión de seguridad y tus flujos de trabajo actuales.',
           ],
@@ -26488,7 +26452,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         gdprPressure: {
           title: 'Las reglas de transferencia del RGPD condicionan la decisión entre nube y local',
           content: [
-            'Cuando un prompt contiene datos personales y se envía a un proveedor de IA fuera de la UE/EEE, se aplica el capítulo V del RGPD sobre transferencias internacionales ([artículo 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Los instrumentos habituales son una decisión de adecuación, cláusulas contractuales tipo (CCT) con una evaluación de impacto de la transferencia, o normas corporativas vinculantes. Para EE. UU., la Comisión Europea adoptó el 10 de julio de 2023 una decisión de adecuación para el EU-US Data Privacy Framework (DPF); las transferencias a empresas estadounidenses certificadas pueden basarse en ella ([Comisión Europea](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). El Tribunal General desestimó un recurso de anulación contra esa decisión el 3 de septiembre de 2025 (asunto T-553/23); el demandante recurrió el 31 de octubre de 2025 (asunto C-703/25 P), y una nota de un despacho aconseja seguir aplicando el capítulo V mientras tanto ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
+            'Cuando un prompt contiene datos personales y se envía a un proveedor de IA fuera de la UE/EEE, se aplica el capítulo V del RGPD sobre transferencias internacionales ([artículo 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Los instrumentos habituales son una decisión de adecuación, cláusulas contractuales tipo (CCT) con una evaluación de impacto de la transferencia, o normas corporativas vinculantes. Para EE. UU., la Comisión Europea adoptó el 10 de julio de 2023 una decisión de adecuación para el EU-US Data Privacy Framework (DPF); las transferencias a empresas estadounidenses certificadas pueden basarse en ella ([Comisión Europea](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). El Tribunal General desestimó un recurso de anulación contra esa decisión el 3 de septiembre de 2025; el demandante recurrió el 31 de octubre de 2025, y una nota de un despacho aconseja seguir aplicando el capítulo V mientras tanto ([WilmerHale](https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20251201-european-court-of-justice-to-review-challenge-to-eu-us-data-privacy-framework), [Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'Para proveedores fuera de la UE/EEE sin decisión de adecuación, necesitas otro instrumento de transferencia y una evaluación de la legislación del país de destino, conforme a la sentencia Schrems II del TJUE (asunto C-311/18). Las autoridades de protección de datos también han actuado directamente sobre servicios de IA, por ejemplo la limitación temporal de ChatGPT por la Garante italiana en 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)), y el Comité Europeo de Protección de Datos adoptó el 18 de diciembre de 2024 el dictamen 28/2024 sobre aspectos de protección de datos de los modelos de IA ([CEPD](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). Contratos, evaluaciones de transferencia y revisiones por cada proveedor en la nube son un coste de cumplimiento real; esta página no cita cifras porque no existe una referencia neutral.',
             'Ejecutar el modelo en hardware que controlas dentro de la UE/EEE significa que los prompts permanecen en tu entorno, por lo que las reglas de transferencia del artículo 44 no se activan por la capa de IA. El RGPD sigue aplicándose al tratamiento en sí: base jurídica, minimización, seguridad y tu [registro del artículo 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). El despliegue local simplifica el análisis de transferencias; no elimina las obligaciones del RGPD. Esta página es una visión general y no constituye asesoramiento jurídico; consulta a un profesional cualificado o a tu delegado de protección de datos sobre tu situación.',
           ],
@@ -26496,7 +26460,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         aiAct2026: {
           title: 'Qué cambia la AI Act para los responsables del despliegue',
           content: [
-            'La AI Act (Reglamento (UE) 2024/1689) entró en vigor el 1 de agosto de 2024 y se aplica por fases. Las obligaciones de los proveedores de modelos de IA de uso general se aplican desde el 2 de agosto de 2025 y la transparencia del artículo 50 desde el 2 de agosto de 2026. El AI Omnibus, en vigor desde el 27 de julio de 2026, aplazó las reglas de alto riesgo al 2 de diciembre de 2027 para sistemas independientes (anexo III) y al 2 de agosto de 2028 para IA integrada en productos regulados (anexo I) ([Comisión Europea](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
+            'La AI Act (Reglamento (UE) 2024/1689) entró en vigor el 1 de agosto de 2024 y se aplica por fases. Las obligaciones de los proveedores de modelos de IA de uso general se aplican desde el 2 de agosto de 2025 y la transparencia del artículo 50 desde el 2 de agosto de 2026 (el marcado con marca de agua del artículo 50, apartado 2, tiene un periodo de gracia hasta el 2 de diciembre de 2026 para los sistemas ya comercializados). El AI Omnibus, en vigor desde el 27 de julio de 2026, aplazó las reglas de alto riesgo al 2 de diciembre de 2027 para sistemas independientes (anexo III) y al 2 de agosto de 2028 para IA integrada en productos regulados (anexo I) ([Comisión Europea](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
             'La norma también se aplica a los responsables del despliegue, es decir, las organizaciones que usan un sistema de IA bajo su propia autoridad. Ser proveedor, responsable del despliegue o ambos depende de lo que desarrolles y de cómo uses el sistema; ejecutar un modelo open-weight en local no lo decide por sí solo. Consulta con un asesor qué obligaciones aplican a tu caso de uso, en particular si es un uso de alto riesgo.',
           ],
         },
@@ -26596,7 +26560,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '¿El EU-US Data Privacy Framework elimina la necesidad de ejecutar IA en local?',
-              a: 'No necesariamente. Para proveedores estadounidenses certificados, la decisión de adecuación del DPF puede servir como base de transferencia, y el Tribunal General desestimó un recurso contra ella el 3 de septiembre de 2025. Hay un recurso de casación (asunto C-703/25 P) pendiente, por lo que muchas organizaciones mantienen un plan alternativo. El despliegue local es una opción; decide según tu evaluación de riesgos, las condiciones contractuales y la sensibilidad de los datos.',
+              a: 'No necesariamente. Para proveedores estadounidenses certificados, la decisión de adecuación del DPF puede servir como base de transferencia, y el Tribunal General desestimó un recurso contra ella el 3 de septiembre de 2025. Hay un recurso de casación pendiente, por lo que muchas organizaciones mantienen un plan alternativo. El despliegue local es una opción; decide según tu evaluación de riesgos, las condiciones contractuales y la sensibilidad de los datos.',
             },
             {
               q: '¿Es Qwen3.8 27B suficientemente bueno para producción?',
@@ -26627,7 +26591,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: '¿El EU-US Data Privacy Framework elimina la necesidad de ejecutar IA en local?',
-            acceptedAnswer: { '@type': 'Answer', text: 'No necesariamente. Para proveedores estadounidenses certificados, la decisión de adecuación del DPF puede servir como base de transferencia, y el Tribunal General desestimó un recurso contra ella el 3 de septiembre de 2025. Hay un recurso de casación (asunto C-703/25 P) pendiente, por lo que muchas organizaciones mantienen un plan alternativo. El despliegue local es una opción; decide según tu evaluación de riesgos, las condiciones contractuales y la sensibilidad de los datos.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'No necesariamente. Para proveedores estadounidenses certificados, la decisión de adecuación del DPF puede servir como base de transferencia, y el Tribunal General desestimó un recurso contra ella el 3 de septiembre de 2025. Hay un recurso de casación pendiente, por lo que muchas organizaciones mantienen un plan alternativo. El despliegue local es una opción; decide según tu evaluación de riesgos, las condiciones contractuales y la sensibilidad de los datos.' },
           },
           {
             '@type': 'Question',
@@ -26662,8 +26626,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'تُفعّل واجهات الذكاء الاصطناعي السحابية قواعد النقل في الفصل الخامس من GDPR عندما تصل أوامر تحتوي بيانات شخصية إلى مزوّدين خارج الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية؛ وتشغيل النموذج على عتادك داخل الاتحاد يتجنب ذلك النقل، لكن GDPR يظل منطبقًا على المعالجة.',
-            'يمكن أن تستند عمليات النقل إلى الولايات المتحدة إلى إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (قرار الملاءمة الصادر في 10 يوليو 2023) للمزوّدين المعتمدين؛ ورفضت المحكمة العامة للاتحاد في 3 سبتمبر 2025 طعنًا فيه، والاستئناف (C-703/25 P) منظور.',
-            'تغيّر الجدول الزمني لقانون الذكاء الاصطناعي: أجّلت حزمة AI Omnibus (السارية منذ 27 يوليو 2026) التزامات المخاطر العالية إلى 2 ديسمبر 2027 (الملحق III) و2 أغسطس 2028 (الملحق I)؛ وتسري التزامات الذكاء الاصطناعي العام منذ 2 أغسطس 2025 والتزامات الشفافية في المادة 50 منذ 2 أغسطس 2026.',
+            'يمكن أن تستند عمليات النقل إلى الولايات المتحدة إلى إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (قرار الملاءمة الصادر في 10 يوليو 2023) للمزوّدين المعتمدين؛ ورفضت المحكمة العامة للاتحاد في 3 سبتمبر 2025 طعنًا فيه، والاستئناف منظور.',
+            'تغيّر الجدول الزمني لقانون الذكاء الاصطناعي: أجّلت حزمة AI Omnibus (السارية منذ 27 يوليو 2026) التزامات المخاطر العالية إلى 2 ديسمبر 2027 (الملحق III) و2 أغسطس 2028 (الملحق I)؛ وتسري التزامات الذكاء الاصطناعي العام منذ 2 أغسطس 2025 والتزامات الشفافية في المادة 50 منذ 2 أغسطس 2026 (مع مهلة حتى 2 ديسمبر 2026 لواجب الوسم بالعلامة المائية في المادة 50(2) للأنظمة المطروحة بالفعل في السوق).',
             'يتوفر Qwen3.8 27B (صدر في أغسطس 2026 بترخيص Apache-2.0) في Ollama باسم qwen3.8:27b بحجم تنزيل 18 GB؛ ودرجات الاختبارات في بطاقة النموذج أرقام أعلنها المطوّر وليست اختبارات مستقلة.',
             'مسار الانتقال: بيئة تشغيل محلية مثل Ollama مع طبقة توزيع؛ ويعتمد الجهد على العتاد والمراجعة الأمنية وسير العمل الحالي.',
           ],
@@ -26671,7 +26635,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         gdprPressure: {
           title: 'قواعد النقل في GDPR تحدد القرار بين السحابة والمحلي',
           content: [
-            'عندما يحتوي أمر على بيانات شخصية ويُرسل إلى مزوّد ذكاء اصطناعي خارج الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية، ينطبق الفصل الخامس من GDPR بشأن النقل الدولي ([المادة 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). والأدوات المعتادة هي قرار الملاءمة أو البنود التعاقدية النموذجية (SCC) مع تقييم أثر النقل أو القواعد المؤسسية الملزمة. وبالنسبة للولايات المتحدة، اعتمدت المفوضية الأوروبية في 10 يوليو 2023 قرار ملاءمة لإطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (DPF)، ويمكن أن تستند عمليات النقل إلى الشركات الأمريكية المعتمدة إليه ([المفوضية الأوروبية](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). ورفضت المحكمة العامة في 3 سبتمبر 2025 دعوى إلغاء ضد هذا القرار (القضية T-553/23)؛ واستأنف المدّعي في 31 أكتوبر 2025 (القضية C-703/25 P)، وينصح تحديث صادر عن مكتب محاماة الشركات بمواصلة تطبيق الفصل الخامس في الأثناء ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
+            'عندما يحتوي أمر على بيانات شخصية ويُرسل إلى مزوّد ذكاء اصطناعي خارج الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية، ينطبق الفصل الخامس من GDPR بشأن النقل الدولي ([المادة 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). والأدوات المعتادة هي قرار الملاءمة أو البنود التعاقدية النموذجية (SCC) مع تقييم أثر النقل أو القواعد المؤسسية الملزمة. وبالنسبة للولايات المتحدة، اعتمدت المفوضية الأوروبية في 10 يوليو 2023 قرار ملاءمة لإطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (DPF)، ويمكن أن تستند عمليات النقل إلى الشركات الأمريكية المعتمدة إليه ([المفوضية الأوروبية](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). ورفضت المحكمة العامة في 3 سبتمبر 2025 دعوى إلغاء ضد هذا القرار؛ واستأنف المدّعي في 31 أكتوبر 2025، وينصح تحديث صادر عن مكتب محاماة الشركات بمواصلة تطبيق الفصل الخامس في الأثناء ([WilmerHale](https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20251201-european-court-of-justice-to-review-challenge-to-eu-us-data-privacy-framework), [Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'بالنسبة للمزوّدين خارج الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية غير المشمولين بقرار ملاءمة، تحتاج إلى أداة نقل أخرى وتقييم لقوانين بلد الوجهة، وفق حكم Schrems II لمحكمة العدل الأوروبية (القضية C-311/18). وقد تحركت سلطات حماية البيانات مباشرة تجاه خدمات الذكاء الاصطناعي أيضًا، مثل التقييد المؤقت لـ ChatGPT من هيئة Garante الإيطالية في 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382))، واعتمد المجلس الأوروبي لحماية البيانات في 18 ديسمبر 2024 الرأي 28/2024 بشأن جوانب حماية البيانات في نماذج الذكاء الاصطناعي ([EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). والعقود وتقييمات النقل والمراجعات لكل مزوّد سحابي تكلفة امتثال حقيقية؛ ولا تذكر هذه الصفحة أرقامًا لعدم وجود معيار محايد.',
             'تشغيل النموذج على عتاد تتحكم فيه داخل الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية يعني بقاء الأوامر في بيئتك، فلا تتفعل قواعد النقل في المادة 44 بسبب طبقة الذكاء الاصطناعي. لكن GDPR يظل منطبقًا على المعالجة نفسها: الأساس القانوني وتقليل البيانات والأمن و[سجل أنشطة المعالجة في المادة 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). والنشر المحلي يبسّط تحليل النقل لكنه لا يلغي التزامات GDPR. هذه الصفحة نظرة عامة وليست استشارة قانونية؛ استشر محاميًا مؤهلًا أو مسؤول حماية البيانات لديك بشأن وضعك الخاص.',
           ],
@@ -26679,7 +26643,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         aiAct2026: {
           title: 'ما الذي يغيّره قانون الذكاء الاصطناعي للجهات المشغِّلة',
           content: [
-            'دخل قانون الذكاء الاصطناعي (اللائحة (EU) 2024/1689) حيز النفاذ في 1 أغسطس 2024 ويُطبَّق على مراحل. وتسري التزامات مزوّدي نماذج الذكاء الاصطناعي العامة الغرض منذ 2 أغسطس 2025، والتزامات الشفافية في المادة 50 منذ 2 أغسطس 2026. وأجّلت حزمة AI Omnibus، السارية منذ 27 يوليو 2026، قواعد المخاطر العالية إلى 2 ديسمبر 2027 للأنظمة المستقلة (الملحق III) و2 أغسطس 2028 للذكاء الاصطناعي المدمج في منتجات منظَّمة (الملحق I) ([المفوضية الأوروبية](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
+            'دخل قانون الذكاء الاصطناعي (اللائحة (EU) 2024/1689) حيز النفاذ في 1 أغسطس 2024 ويُطبَّق على مراحل. وتسري التزامات مزوّدي نماذج الذكاء الاصطناعي العامة الغرض منذ 2 أغسطس 2025، والتزامات الشفافية في المادة 50 منذ 2 أغسطس 2026 (مع مهلة حتى 2 ديسمبر 2026 لواجب الوسم بالعلامة المائية في المادة 50(2) للأنظمة المطروحة بالفعل في السوق). وأجّلت حزمة AI Omnibus، السارية منذ 27 يوليو 2026، قواعد المخاطر العالية إلى 2 ديسمبر 2027 للأنظمة المستقلة (الملحق III) و2 أغسطس 2028 للذكاء الاصطناعي المدمج في منتجات منظَّمة (الملحق I) ([المفوضية الأوروبية](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
             'ينطبق القانون أيضًا على الجهات المشغِّلة (deployers)، أي المؤسسات التي تستخدم نظام ذكاء اصطناعي تحت سلطتها. وكونك مزوّدًا أو مشغِّلًا أو كليهما يتوقف على ما تطوّره وكيف تستخدم النظام؛ وتشغيل نموذج مفتوح الأوزان محليًا لا يحسم ذلك وحده. اسأل مستشارًا قانونيًا عن الالتزامات المنطبقة على حالة استخدامك، لا سيما ما إذا كانت حالة عالية المخاطر.',
           ],
         },
@@ -26779,7 +26743,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'هل يلغي إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة الحاجة إلى التشغيل المحلي؟',
-              a: 'ليس بالضرورة. بالنسبة للمزوّدين الأمريكيين المعتمدين، يمكن أن يكون قرار ملاءمة DPF أساسًا للنقل، وقد رفضت المحكمة العامة في 3 سبتمبر 2025 طعنًا فيه. والاستئناف (القضية C-703/25 P) منظور، لذا تحتفظ مؤسسات كثيرة بخطة بديلة. النشر المحلي خيار واحد؛ قرّر بحسب تقييم المخاطر وشروط العقود وحساسية البيانات.',
+              a: 'ليس بالضرورة. بالنسبة للمزوّدين الأمريكيين المعتمدين، يمكن أن يكون قرار ملاءمة DPF أساسًا للنقل، وقد رفضت المحكمة العامة في 3 سبتمبر 2025 طعنًا فيه. والاستئناف منظور، لذا تحتفظ مؤسسات كثيرة بخطة بديلة. النشر المحلي خيار واحد؛ قرّر بحسب تقييم المخاطر وشروط العقود وحساسية البيانات.',
             },
             {
               q: 'هل Qwen3.8 27B جيد بما يكفي للإنتاج؟',
@@ -26810,7 +26774,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'هل يلغي إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة الحاجة إلى التشغيل المحلي؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'ليس بالضرورة. بالنسبة للمزوّدين الأمريكيين المعتمدين، يمكن أن يكون قرار ملاءمة DPF أساسًا للنقل، وقد رفضت المحكمة العامة في 3 سبتمبر 2025 طعنًا فيه. والاستئناف (القضية C-703/25 P) منظور، لذا تحتفظ مؤسسات كثيرة بخطة بديلة. النشر المحلي خيار واحد؛ قرّر بحسب تقييم المخاطر وشروط العقود وحساسية البيانات.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'ليس بالضرورة. بالنسبة للمزوّدين الأمريكيين المعتمدين، يمكن أن يكون قرار ملاءمة DPF أساسًا للنقل، وقد رفضت المحكمة العامة في 3 سبتمبر 2025 طعنًا فيه. والاستئناف منظور، لذا تحتفظ مؤسسات كثيرة بخطة بديلة. النشر المحلي خيار واحد؛ قرّر بحسب تقييم المخاطر وشروط العقود وحساسية البيانات.' },
           },
           {
             '@type': 'Question',
@@ -26845,8 +26809,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'Cloud-KI-APIs lösen die Übermittlungsregeln von DSGVO Kapitel V aus, wenn Prompts mit personenbezogenen Daten Anbieter außerhalb der EU/des EWR erreichen; ein Betrieb auf eigener EU-Hardware vermeidet diese Übermittlung, die DSGVO gilt aber weiterhin für die Verarbeitung.',
-            'Übermittlungen in die USA können sich bei zertifizierten Anbietern auf das EU-US Data Privacy Framework stützen (Angemessenheitsbeschluss vom 10. Juli 2023); das Gericht der EU wies am 3. September 2025 eine Klage dagegen ab, ein Rechtsmittel (C-703/25 P) ist anhängig.',
-            'Der AI-Act-Zeitplan hat sich geändert: Der AI Omnibus (seit 27. Juli 2026 in Kraft) verschob die Hochrisiko-Pflichten auf den 2. Dezember 2027 (Anhang III) und den 2. August 2028 (Anhang I); Pflichten für KI-Modelle mit allgemeinem Verwendungszweck gelten seit 2. August 2025, Transparenzpflichten nach Artikel 50 seit 2. August 2026.',
+            'Übermittlungen in die USA können sich bei zertifizierten Anbietern auf das EU-US Data Privacy Framework stützen (Angemessenheitsbeschluss vom 10. Juli 2023); das Gericht der EU wies am 3. September 2025 eine Klage dagegen ab, ein Rechtsmittel ist anhängig.',
+            'Der AI-Act-Zeitplan hat sich geändert: Der AI Omnibus (seit 27. Juli 2026 in Kraft) verschob die Hochrisiko-Pflichten auf den 2. Dezember 2027 (Anhang III) und den 2. August 2028 (Anhang I); Pflichten für KI-Modelle mit allgemeinem Verwendungszweck gelten seit 2. August 2025, Transparenzpflichten nach Artikel 50 seit 2. August 2026 (für die Wasserzeichen-Kennzeichnung nach Artikel 50 Absatz 2 gilt für bereits in Verkehr gebrachte Systeme eine Übergangsfrist bis zum 2. Dezember 2026).',
             'Qwen3.8 27B (veröffentlicht im August 2026, Apache-2.0) ist in Ollama als qwen3.8:27b mit 18 GB Download verfügbar; die Benchmark-Werte der Model Card sind Herstellerangaben, keine unabhängigen Tests.',
             'Migrationspfad: eine lokale Laufzeitumgebung wie Ollama plus eine Dispatch-Schicht; der Aufwand hängt von Hardware, Sicherheitsprüfung und bestehenden Workflows ab.',
           ],
@@ -26854,7 +26818,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         gdprPressure: {
           title: 'DSGVO-Übermittlungsregeln prägen die Entscheidung Cloud oder lokal',
           content: [
-            'Enthält ein Prompt personenbezogene Daten und wird er an einen KI-Anbieter außerhalb der EU/des EWR gesendet, gilt DSGVO Kapitel V zu internationalen Übermittlungen ([Artikel 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Übliche Instrumente sind ein Angemessenheitsbeschluss, Standardvertragsklauseln (SCC) mit Transfer-Folgenabschätzung oder verbindliche interne Datenschutzvorschriften. Für die USA erließ die Europäische Kommission am 10. Juli 2023 einen Angemessenheitsbeschluss zum EU-US Data Privacy Framework (DPF); Übermittlungen an zertifizierte US-Unternehmen können sich darauf stützen ([Europäische Kommission](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). Das Gericht der EU wies eine Nichtigkeitsklage gegen diesen Beschluss am 3. September 2025 ab (Rechtssache T-553/23); der Kläger legte am 31. Oktober 2025 Rechtsmittel ein (Rechtssache C-703/25 P), und eine Kanzlei rät, Kapitel V in der Zwischenzeit weiter anzuwenden ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
+            'Enthält ein Prompt personenbezogene Daten und wird er an einen KI-Anbieter außerhalb der EU/des EWR gesendet, gilt DSGVO Kapitel V zu internationalen Übermittlungen ([Artikel 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Übliche Instrumente sind ein Angemessenheitsbeschluss, Standardvertragsklauseln (SCC) mit Transfer-Folgenabschätzung oder verbindliche interne Datenschutzvorschriften. Für die USA erließ die Europäische Kommission am 10. Juli 2023 einen Angemessenheitsbeschluss zum EU-US Data Privacy Framework (DPF); Übermittlungen an zertifizierte US-Unternehmen können sich darauf stützen ([Europäische Kommission](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). Das Gericht der EU wies eine Nichtigkeitsklage gegen diesen Beschluss am 3. September 2025 ab; der Kläger legte am 31. Oktober 2025 Rechtsmittel ein, und eine Kanzlei rät, Kapitel V in der Zwischenzeit weiter anzuwenden ([WilmerHale](https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20251201-european-court-of-justice-to-review-challenge-to-eu-us-data-privacy-framework), [Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'Für Anbieter außerhalb der EU/des EWR ohne Angemessenheitsbeschluss benötigen Sie ein anderes Übermittlungsinstrument und eine Bewertung der Rechtslage im Zielland, wie sie das EuGH-Urteil Schrems II (Rechtssache C-311/18) verlangt. Datenschutzbehörden sind auch direkt gegen KI-Dienste vorgegangen, etwa die vorübergehende Beschränkung von ChatGPT durch die italienische Garante 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)); der Europäische Datenschutzausschuss verabschiedete am 18. Dezember 2024 die Stellungnahme 28/2024 zu Datenschutzaspekten von KI-Modellen ([EDSA](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). Verträge, Transferbewertungen und Überprüfungen je Cloud-Anbieter sind ein realer Compliance-Aufwand; diese Seite nennt keine Beträge, da es keinen neutralen Richtwert gibt.',
             'Läuft das Modell auf Hardware unter Ihrer Kontrolle innerhalb der EU/des EWR, bleiben Prompts in Ihrer Umgebung, sodass die Übermittlungsregeln des Artikels 44 durch die KI-Schicht nicht ausgelöst werden. Die DSGVO gilt aber weiterhin für die Verarbeitung selbst: Rechtsgrundlage, Datenminimierung, Sicherheit und Ihr [Artikel-30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)-Verzeichnis von Verarbeitungstätigkeiten. Lokaler Betrieb vereinfacht die Transferprüfung, hebt aber keine DSGVO-Pflichten auf. Diese Seite ist ein allgemeiner Überblick und keine Rechtsberatung; lassen Sie sich zu Ihrer eigenen Situation von qualifizierten Rechtsberatern oder Ihrem Datenschutzbeauftragten beraten.',
           ],
@@ -26862,7 +26826,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         aiAct2026: {
           title: 'Was der EU AI Act für Betreiber ändert',
           content: [
-            'Der AI Act (Verordnung (EU) 2024/1689) trat am 1. August 2024 in Kraft und gilt stufenweise. Pflichten für Anbieter von KI-Modellen mit allgemeinem Verwendungszweck gelten seit dem 2. August 2025, Transparenzpflichten nach Artikel 50 seit dem 2. August 2026. Der AI Omnibus, seit dem 27. Juli 2026 in Kraft, verschob die Hochrisiko-Regeln auf den 2. Dezember 2027 für eigenständige Systeme (Anhang III) und den 2. August 2028 für in regulierte Produkte eingebettete KI (Anhang I) ([Europäische Kommission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
+            'Der AI Act (Verordnung (EU) 2024/1689) trat am 1. August 2024 in Kraft und gilt stufenweise. Pflichten für Anbieter von KI-Modellen mit allgemeinem Verwendungszweck gelten seit dem 2. August 2025, Transparenzpflichten nach Artikel 50 seit dem 2. August 2026 (für die Wasserzeichen-Kennzeichnung nach Artikel 50 Absatz 2 gilt für bereits in Verkehr gebrachte Systeme eine Übergangsfrist bis zum 2. Dezember 2026). Der AI Omnibus, seit dem 27. Juli 2026 in Kraft, verschob die Hochrisiko-Regeln auf den 2. Dezember 2027 für eigenständige Systeme (Anhang III) und den 2. August 2028 für in regulierte Produkte eingebettete KI (Anhang I) ([Europäische Kommission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
             'Die Verordnung gilt auch für Betreiber, also Organisationen, die ein KI-System in eigener Verantwortung nutzen. Ob Sie Anbieter, Betreiber oder beides sind, hängt davon ab, was Sie entwickeln und wie Sie das System einsetzen; der lokale Betrieb eines Open-Weight-Modells entscheidet das nicht allein. Lassen Sie rechtlich klären, welche Pflichten für Ihren Anwendungsfall gelten, insbesondere ob es ein Hochrisiko-Einsatz ist.',
           ],
         },
@@ -26962,7 +26926,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Macht das EU-US Data Privacy Framework lokale KI überflüssig?',
-              a: 'Nicht unbedingt. Für zertifizierte US-Anbieter kann der Angemessenheitsbeschluss zum DPF als Übermittlungsgrundlage dienen; das Gericht der EU wies am 3. September 2025 eine Klage dagegen ab. Ein Rechtsmittel (Rechtssache C-703/25 P) ist anhängig, weshalb viele Organisationen einen Ausweichplan vorhalten. Lokaler Betrieb ist eine Option; entscheiden Sie nach Risikobewertung, Vertragsbedingungen und Datensensibilität.',
+              a: 'Nicht unbedingt. Für zertifizierte US-Anbieter kann der Angemessenheitsbeschluss zum DPF als Übermittlungsgrundlage dienen; das Gericht der EU wies am 3. September 2025 eine Klage dagegen ab. Ein Rechtsmittel ist anhängig, weshalb viele Organisationen einen Ausweichplan vorhalten. Lokaler Betrieb ist eine Option; entscheiden Sie nach Risikobewertung, Vertragsbedingungen und Datensensibilität.',
             },
             {
               q: 'Ist Qwen3.8 27B gut genug für den Produktivbetrieb?',
@@ -26993,7 +26957,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'Macht das EU-US Data Privacy Framework lokale KI überflüssig?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Nicht unbedingt. Für zertifizierte US-Anbieter kann der Angemessenheitsbeschluss zum DPF als Übermittlungsgrundlage dienen; das Gericht der EU wies am 3. September 2025 eine Klage dagegen ab. Ein Rechtsmittel (Rechtssache C-703/25 P) ist anhängig, weshalb viele Organisationen einen Ausweichplan vorhalten. Lokaler Betrieb ist eine Option; entscheiden Sie nach Risikobewertung, Vertragsbedingungen und Datensensibilität.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Nicht unbedingt. Für zertifizierte US-Anbieter kann der Angemessenheitsbeschluss zum DPF als Übermittlungsgrundlage dienen; das Gericht der EU wies am 3. September 2025 eine Klage dagegen ab. Ein Rechtsmittel ist anhängig, weshalb viele Organisationen einen Ausweichplan vorhalten. Lokaler Betrieb ist eine Option; entscheiden Sie nach Risikobewertung, Vertragsbedingungen und Datensensibilität.' },
           },
           {
             '@type': 'Question',
@@ -27028,8 +26992,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'Les API d\'IA cloud déclenchent les règles de transfert du chapitre V du RGPD lorsque des prompts contenant des données personnelles parviennent à des fournisseurs hors UE/EEE ; exécuter le modèle sur votre propre matériel dans l\'UE évite ce transfert, mais le RGPD s\'applique toujours au traitement.',
-            'Les transferts vers les États-Unis peuvent reposer sur le EU-US Data Privacy Framework (décision d\'adéquation du 10 juillet 2023) pour les fournisseurs certifiés ; le Tribunal de l\'UE a rejeté un recours le 3 septembre 2025 et un pourvoi (C-703/25 P) est pendant.',
-            'Le calendrier de l\'AI Act a changé : l\'AI Omnibus (en vigueur depuis le 27 juillet 2026) a reporté les obligations haut risque au 2 décembre 2027 (annexe III) et au 2 août 2028 (annexe I) ; les obligations pour les modèles d\'IA à usage général s\'appliquent depuis le 2 août 2025 et la transparence de l\'article 50 depuis le 2 août 2026.',
+            'Les transferts vers les États-Unis peuvent reposer sur le EU-US Data Privacy Framework (décision d\'adéquation du 10 juillet 2023) pour les fournisseurs certifiés ; le Tribunal de l\'UE a rejeté un recours le 3 septembre 2025 et un pourvoi est pendant.',
+            'Le calendrier de l\'AI Act a changé : l\'AI Omnibus (en vigueur depuis le 27 juillet 2026) a reporté les obligations haut risque au 2 décembre 2027 (annexe III) et au 2 août 2028 (annexe I) ; les obligations pour les modèles d\'IA à usage général s\'appliquent depuis le 2 août 2025 et la transparence de l\'article 50 depuis le 2 août 2026 (le marquage par filigrane de l\'article 50, paragraphe 2, bénéficie d\'un délai de grâce jusqu\'au 2 décembre 2026 pour les systèmes déjà mis sur le marché).',
             'Qwen3.8 27B (publié en août 2026, Apache-2.0) est disponible dans Ollama sous qwen3.8:27b, avec un téléchargement de 18 Go ; les scores de sa model card sont déclarés par l\'éditeur, pas issus de tests indépendants.',
             'Parcours de migration : un runtime local comme Ollama et une couche de dispatch ; l\'effort dépend de votre matériel, de la revue de sécurité et de vos workflows existants.',
           ],
@@ -27037,7 +27001,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         gdprPressure: {
           title: 'Les règles de transfert du RGPD orientent le choix entre cloud et local',
           content: [
-            'Lorsqu\'un prompt contient des données personnelles et part vers un fournisseur d\'IA hors UE/EEE, le chapitre V du RGPD sur les transferts internationaux s\'applique ([article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Les outils usuels sont une décision d\'adéquation, des clauses contractuelles types (CCT) avec une analyse d\'impact du transfert, ou des règles d\'entreprise contraignantes. Pour les États-Unis, la Commission européenne a adopté le 10 juillet 2023 une décision d\'adéquation pour le EU-US Data Privacy Framework (DPF) ; les transferts vers des entreprises américaines certifiées peuvent s\'y appuyer ([Commission européenne](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). Le Tribunal de l\'UE a rejeté un recours en annulation contre cette décision le 3 septembre 2025 (affaire T-553/23) ; le requérant a formé un pourvoi le 31 octobre 2025 (affaire C-703/25 P), et une note de cabinet conseille de continuer à appliquer le chapitre V en attendant ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
+            'Lorsqu\'un prompt contient des données personnelles et part vers un fournisseur d\'IA hors UE/EEE, le chapitre V du RGPD sur les transferts internationaux s\'applique ([article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Les outils usuels sont une décision d\'adéquation, des clauses contractuelles types (CCT) avec une analyse d\'impact du transfert, ou des règles d\'entreprise contraignantes. Pour les États-Unis, la Commission européenne a adopté le 10 juillet 2023 une décision d\'adéquation pour le EU-US Data Privacy Framework (DPF) ; les transferts vers des entreprises américaines certifiées peuvent s\'y appuyer ([Commission européenne](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). Le Tribunal de l\'UE a rejeté un recours en annulation contre cette décision le 3 septembre 2025 ; le requérant a formé un pourvoi le 31 octobre 2025, et une note de cabinet conseille de continuer à appliquer le chapitre V en attendant ([WilmerHale](https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20251201-european-court-of-justice-to-review-challenge-to-eu-us-data-privacy-framework), [Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'Pour les fournisseurs hors UE/EEE non couverts par une décision d\'adéquation, il faut un autre outil de transfert et une évaluation du droit du pays de destination, conformément à l\'arrêt Schrems II de la CJUE (affaire C-311/18). Les autorités de protection des données sont aussi intervenues directement sur des services d\'IA, par exemple la limitation temporaire de ChatGPT par la Garante italienne en 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)), et le Comité européen de la protection des données a adopté le 18 décembre 2024 l\'avis 28/2024 sur les aspects de protection des données des modèles d\'IA ([CEPD](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). Contrats, évaluations de transfert et revues pour chaque fournisseur cloud représentent un coût de conformité réel ; cette page ne cite aucun chiffre faute de référence neutre.',
             'Faire tourner le modèle sur du matériel que vous contrôlez dans l\'UE/EEE signifie que les prompts restent dans votre environnement : les règles de transfert de l\'article 44 ne sont pas déclenchées par la couche IA. Le RGPD s\'applique toutefois au traitement lui-même : base légale, minimisation, sécurité et votre [registre de l\'article 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). Le local simplifie l\'analyse des transferts ; il ne supprime pas les obligations du RGPD. Cette page est un aperçu général et ne constitue pas un conseil juridique ; consultez un avocat qualifié ou votre délégué à la protection des données pour votre situation.',
           ],
@@ -27045,7 +27009,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         aiAct2026: {
           title: 'Ce que l\'AI Act change pour les déployeurs',
           content: [
-            'L\'AI Act (règlement (UE) 2024/1689) est entré en vigueur le 1er août 2024 et s\'applique par étapes. Les obligations des fournisseurs de modèles d\'IA à usage général s\'appliquent depuis le 2 août 2025 et la transparence de l\'article 50 depuis le 2 août 2026. L\'AI Omnibus, en vigueur depuis le 27 juillet 2026, a reporté les règles haut risque au 2 décembre 2027 pour les systèmes autonomes (annexe III) et au 2 août 2028 pour l\'IA intégrée à des produits réglementés (annexe I) ([Commission européenne](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
+            'L\'AI Act (règlement (UE) 2024/1689) est entré en vigueur le 1er août 2024 et s\'applique par étapes. Les obligations des fournisseurs de modèles d\'IA à usage général s\'appliquent depuis le 2 août 2025 et la transparence de l\'article 50 depuis le 2 août 2026 (le marquage par filigrane de l\'article 50, paragraphe 2, bénéficie d\'un délai de grâce jusqu\'au 2 décembre 2026 pour les systèmes déjà mis sur le marché). L\'AI Omnibus, en vigueur depuis le 27 juillet 2026, a reporté les règles haut risque au 2 décembre 2027 pour les systèmes autonomes (annexe III) et au 2 août 2028 pour l\'IA intégrée à des produits réglementés (annexe I) ([Commission européenne](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
             'Le règlement s\'applique aussi aux déployeurs, c\'est-à-dire aux organisations qui utilisent un système d\'IA sous leur propre autorité. Être fournisseur, déployeur ou les deux dépend de ce que vous développez et de la façon dont vous utilisez le système ; exécuter un modèle open-weight en local ne tranche pas cela à lui seul. Demandez à un conseil quelles obligations s\'appliquent à votre cas d\'usage, en particulier s\'il s\'agit d\'un usage à haut risque.',
           ],
         },
@@ -27145,7 +27109,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Le EU-US Data Privacy Framework rend-il l\'IA locale inutile ?',
-              a: 'Pas nécessairement. Pour les fournisseurs américains certifiés, la décision d\'adéquation du DPF peut servir de base de transfert, et le Tribunal de l\'UE a rejeté un recours contre elle le 3 septembre 2025. Un pourvoi (affaire C-703/25 P) est pendant ; de nombreuses organisations gardent donc un plan de repli. Le local est une option ; décidez selon votre évaluation des risques, vos contrats et la sensibilité des données.',
+              a: 'Pas nécessairement. Pour les fournisseurs américains certifiés, la décision d\'adéquation du DPF peut servir de base de transfert, et le Tribunal de l\'UE a rejeté un recours contre elle le 3 septembre 2025. Un pourvoi est pendant ; de nombreuses organisations gardent donc un plan de repli. Le local est une option ; décidez selon votre évaluation des risques, vos contrats et la sensibilité des données.',
             },
             {
               q: 'Qwen3.8 27B est-il assez bon pour la production ?',
@@ -27176,7 +27140,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'Le EU-US Data Privacy Framework rend-il l\'IA locale inutile ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Pas nécessairement. Pour les fournisseurs américains certifiés, la décision d\'adéquation du DPF peut servir de base de transfert, et le Tribunal de l\'UE a rejeté un recours contre elle le 3 septembre 2025. Un pourvoi (affaire C-703/25 P) est pendant ; de nombreuses organisations gardent donc un plan de repli. Le local est une option ; décidez selon votre évaluation des risques, vos contrats et la sensibilité des données.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Pas nécessairement. Pour les fournisseurs américains certifiés, la décision d\'adéquation du DPF peut servir de base de transfert, et le Tribunal de l\'UE a rejeté un recours contre elle le 3 septembre 2025. Un pourvoi est pendant ; de nombreuses organisations gardent donc un plan de repli. Le local est une option ; décidez selon votre évaluation des risques, vos contrats et la sensibilité des données.' },
           },
           {
             '@type': 'Question',
@@ -27211,8 +27175,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'クラウドAI APIでは、個人データを含むプロンプトがEU/EEA域外の事業者に届くとGDPR第5章の域外移転規則が適用されます。EU域内の自社ハードウェアでモデルを動かせばその移転は避けられますが、処理そのものにはGDPRが引き続き適用されます。',
-            '認証済みの米国事業者への移転は、EU-USデータプライバシーフレームワーク（2023年7月10日の十分性認定）に依拠できます。EU一般裁判所は2025年9月3日に同認定への異議を退け、上訴（C-703/25 P）が係属中です。',
-            'EU AI法の日程が変わりました。2026年7月27日に発効したAIオムニバスにより、高リスク義務は2027年12月2日（附属書III）と2028年8月2日（附属書I）に延期されました。汎用AIの義務は2025年8月2日から、第50条の透明性義務は2026年8月2日から適用されています。',
+            '認証済みの米国事業者への移転は、EU-USデータプライバシーフレームワーク（2023年7月10日の十分性認定）に依拠できます。EU一般裁判所は2025年9月3日に同認定への異議を退け、上訴が係属中です。',
+            'EU AI法の日程が変わりました。2026年7月27日に発効したAIオムニバスにより、高リスク義務は2027年12月2日（附属書III）と2028年8月2日（附属書I）に延期されました。汎用AIの義務は2025年8月2日から、第50条の透明性義務は2026年8月2日から適用されています（第50条第2項の透かし表示義務は、すでに市場にあるシステムについて2026年12月2日まで猶予されます）。',
             'Qwen3.8 27B（2026年8月公開、Apache-2.0）はOllamaでqwen3.8:27bとして利用でき、ダウンロードサイズは18 GBです。モデルカードのベンチマークスコアは開発元の報告値であり、独立した検証ではありません。',
             '移行の流れ：Ollamaなどのローカルランタイムとディスパッチ層を用意します。工数はハードウェア、セキュリティレビュー、既存ワークフローによって変わります。',
           ],
@@ -27220,7 +27184,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         gdprPressure: {
           title: 'GDPRの域外移転規則がクラウドかローカルかの判断を左右する',
           content: [
-            '個人データを含むプロンプトをEU/EEA域外のAI事業者に送る場合、国際移転に関するGDPR第5章が適用されます（[第44条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)）。一般的な手段は、十分性認定、移転影響評価を伴う標準契約条項（SCC）、拘束的企業準則です。米国については、欧州委員会が2023年7月10日にEU-USデータプライバシーフレームワーク（DPF）の十分性認定を採択しており、認証済みの米国企業への移転はこれに依拠できます（[欧州委員会](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)）。EU一般裁判所は2025年9月3日にこの認定の取消請求を退け（T-553/23）、申立人は2025年10月31日に上訴しました（C-703/25 P）。法律事務所の情報では、その間も第5章を引き続き適用するよう助言されています（[Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)）。',
+            '個人データを含むプロンプトをEU/EEA域外のAI事業者に送る場合、国際移転に関するGDPR第5章が適用されます（[第44条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)）。一般的な手段は、十分性認定、移転影響評価を伴う標準契約条項（SCC）、拘束的企業準則です。米国については、欧州委員会が2023年7月10日にEU-USデータプライバシーフレームワーク（DPF）の十分性認定を採択しており、認証済みの米国企業への移転はこれに依拠できます（[欧州委員会](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)）。EU一般裁判所は2025年9月3日にこの認定の取消請求を退け、申立人は2025年10月31日に上訴しました。法律事務所の情報では、その間も第5章を引き続き適用するよう助言されています（[WilmerHale](https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20251201-european-court-of-justice-to-review-challenge-to-eu-us-data-privacy-framework), [Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)）。',
             '十分性認定の対象外であるEU/EEA域外の事業者については、別の移転手段と移転先国の法制度の評価が必要です（EU司法裁判所のSchrems II判決、C-311/18）。データ保護当局はAIサービスにも直接対応しており、例えば2023年にはイタリアのGaranteがChatGPTを一時的に制限しました（[Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)）。欧州データ保護会議は2024年12月18日に、AIモデルに関するデータ保護の側面についての意見28/2024を採択しています（[EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)）。クラウド事業者ごとの契約、移転評価、見直しは実際のコンプライアンスコストですが、中立的な基準がないため、このページでは金額を示しません。',
             'EU/EEA域内で自社管理のハードウェア上でモデルを動かせば、プロンプトは自社環境にとどまり、AI層によって第44条の移転規則が適用されることはありません。ただし処理そのものにはGDPRが適用され、適法性の根拠、データ最小化、セキュリティ、[第30条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)の処理活動記録が必要です。ローカル運用は移転の分析を簡単にしますが、GDPRの義務をなくすものではありません。 このページは一般的な概要であり、法的助言ではありません。個別の状況については、資格のある弁護士またはデータ保護責任者にご相談ください。',
           ],
@@ -27228,7 +27192,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         aiAct2026: {
           title: 'EU AI法が利用者（デプロイヤー）にもたらす変化',
           content: [
-            'AI法（規則（EU）2024/1689）は2024年8月1日に発効し、段階的に適用されます。汎用AIモデル提供者の義務は2025年8月2日から、第50条の透明性義務は2026年8月2日から適用されています。2026年7月27日に発効したAIオムニバスにより、高リスク規則は単独システム（附属書III）が2027年12月2日、規制対象製品に組み込まれるAI（附属書I）が2028年8月2日に延期されました（[欧州委員会](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)）。',
+            'AI法（規則（EU）2024/1689）は2024年8月1日に発効し、段階的に適用されます。汎用AIモデル提供者の義務は2025年8月2日から、第50条の透明性義務は2026年8月2日から適用されています（第50条第2項の透かし表示義務は、すでに市場にあるシステムについて2026年12月2日まで猶予されます）。2026年7月27日に発効したAIオムニバスにより、高リスク規則は単独システム（附属書III）が2027年12月2日、規制対象製品に組み込まれるAI（附属書I）が2028年8月2日に延期されました（[欧州委員会](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)）。',
             'この規則は、自らの権限でAIシステムを使う組織であるデプロイヤーにも適用されます。提供者、デプロイヤー、またはその両方のいずれになるかは、何を開発しどのように使うかによって決まり、オープンウェイトモデルをローカルで動かすだけでは決まりません。自社のユースケースにどの義務が適用されるか、特に高リスク用途に当たるかどうかは、弁護士に確認してください。',
           ],
         },
@@ -27328,7 +27292,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'EU-USデータプライバシーフレームワークがあればローカルAIは不要ですか？',
-              a: '必ずしもそうではありません。認証済みの米国事業者については、DPFの十分性認定が移転の根拠になり得ます。EU一般裁判所は2025年9月3日に同認定への異議を退けました。上訴（C-703/25 P）が係属中のため、代替計画を用意している組織が多くあります。ローカル運用は選択肢の一つであり、リスク評価、契約条件、データの機微性に基づいて判断してください。',
+              a: '必ずしもそうではありません。認証済みの米国事業者については、DPFの十分性認定が移転の根拠になり得ます。EU一般裁判所は2025年9月3日に同認定への異議を退けました。上訴が係属中のため、代替計画を用意している組織が多くあります。ローカル運用は選択肢の一つであり、リスク評価、契約条件、データの機微性に基づいて判断してください。',
             },
             {
               q: 'Qwen3.8 27Bは本番利用に十分な品質ですか？',
@@ -27359,7 +27323,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'EU-USデータプライバシーフレームワークがあればローカルAIは不要ですか？',
-            acceptedAnswer: { '@type': 'Answer', text: '必ずしもそうではありません。認証済みの米国事業者については、DPFの十分性認定が移転の根拠になり得ます。EU一般裁判所は2025年9月3日に同認定への異議を退けました。上訴（C-703/25 P）が係属中のため、代替計画を用意している組織が多くあります。ローカル運用は選択肢の一つであり、リスク評価、契約条件、データの機微性に基づいて判断してください。' },
+            acceptedAnswer: { '@type': 'Answer', text: '必ずしもそうではありません。認証済みの米国事業者については、DPFの十分性認定が移転の根拠になり得ます。EU一般裁判所は2025年9月3日に同認定への異議を退けました。上訴が係属中のため、代替計画を用意している組織が多くあります。ローカル運用は選択肢の一つであり、リスク評価、契約条件、データの機微性に基づいて判断してください。' },
           },
           {
             '@type': 'Question',
@@ -27394,8 +27358,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             '当包含个人数据的提示词到达欧盟/欧洲经济区以外的提供商时，云端AI API会触发GDPR第五章的传输规则；在欧盟境内自有硬件上运行模型可避免这种传输，但GDPR仍适用于处理活动本身。',
-            '向已认证的美国提供商传输数据可依据欧美数据隐私框架（2023年7月10日的充分性决定）；欧盟普通法院于2025年9月3日驳回了对该决定的挑战，上诉（C-703/25 P）尚在审理中。',
-            '欧盟《AI法案》的时间表已变化：2026年7月27日生效的AI综合立法（AI Omnibus）将高风险义务推迟到2027年12月2日（附件III）和2028年8月2日（附件I）；通用AI义务自2025年8月2日起适用，第50条透明度义务自2026年8月2日起适用。',
+            '向已认证的美国提供商传输数据可依据欧美数据隐私框架（2023年7月10日的充分性决定）；欧盟普通法院于2025年9月3日驳回了对该决定的挑战，上诉尚在审理中。',
+            '欧盟《AI法案》的时间表已变化：2026年7月27日生效的AI综合立法（AI Omnibus）将高风险义务推迟到2027年12月2日（附件III）和2028年8月2日（附件I）；通用AI义务自2025年8月2日起适用，第50条透明度义务自2026年8月2日起适用（第50条第2款的水印标识义务对已投放市场的系统宽限至2026年12月2日）。',
             'Qwen3.8 27B（2026年8月发布，Apache-2.0）可在Ollama中以qwen3.8:27b获取，下载大小为18 GB；其模型卡中的基准得分由开发方报告，并非独立测试。',
             '迁移路径：本地运行时（如Ollama）加调度层；工作量取决于你的硬件、安全审查和现有工作流。',
           ],
@@ -27403,7 +27367,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         gdprPressure: {
           title: 'GDPR传输规则影响云端与本地的选择',
           content: [
-            '当提示词包含个人数据并被发送到欧盟/欧洲经济区以外的AI提供商时，适用GDPR第五章关于国际传输的规定（[第44条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)）。常用的传输工具包括充分性决定、附带传输影响评估的标准合同条款（SCC）或具有约束力的公司规则。对于美国，欧盟委员会于2023年7月10日通过了欧美数据隐私框架（DPF）的充分性决定，向已认证的美国公司传输数据可以依据该决定（[欧盟委员会](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)）。欧盟普通法院于2025年9月3日驳回了对该决定的撤销诉讼（案件T-553/23）；申请人于2025年10月31日提起上诉（案件C-703/25 P），一份律所的更新建议企业在此期间继续适用第五章（[Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)）。',
+            '当提示词包含个人数据并被发送到欧盟/欧洲经济区以外的AI提供商时，适用GDPR第五章关于国际传输的规定（[第44条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)）。常用的传输工具包括充分性决定、附带传输影响评估的标准合同条款（SCC）或具有约束力的公司规则。对于美国，欧盟委员会于2023年7月10日通过了欧美数据隐私框架（DPF）的充分性决定，向已认证的美国公司传输数据可以依据该决定（[欧盟委员会](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)）。欧盟普通法院于2025年9月3日驳回了对该决定的撤销诉讼；申请人于2025年10月31日提起上诉，一份律所的更新建议企业在此期间继续适用第五章（[WilmerHale](https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20251201-european-court-of-justice-to-review-challenge-to-eu-us-data-privacy-framework), [Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)）。',
             '对于未被充分性决定覆盖、位于欧盟/欧洲经济区以外的提供商，需要其他传输工具并评估目的地国家的法律，这源于欧盟法院的Schrems II判决（案件C-311/18）。数据保护机构也直接对AI服务采取过行动，例如意大利Garante在2023年临时限制ChatGPT（[Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)）；欧洲数据保护委员会于2024年12月18日通过了关于AI模型数据保护问题的第28/2024号意见（[EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)）。为每个云服务商签订合同、进行传输评估和定期复核是实实在在的合规成本；由于没有中立的基准，本页不给出具体金额。',
             '在欧盟/欧洲经济区境内由你控制的硬件上运行模型，意味着提示词保留在你的环境中，因此AI层不会触发第44条的传输规则。但GDPR仍适用于处理活动本身：合法性基础、数据最小化、安全性，以及你的[第30条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)处理活动记录。本地部署简化了传输分析，但不会免除GDPR义务。 本页仅为一般性概述，不构成法律意见；针对你自己的情况，请咨询有资质的律师或数据保护官。',
           ],
@@ -27411,7 +27375,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         aiAct2026: {
           title: '《AI法案》对部署者的影响',
           content: [
-            '《AI法案》（条例（EU）2024/1689）于2024年8月1日生效，分阶段适用。通用AI模型提供者的义务自2025年8月2日起适用，第50条透明度义务自2026年8月2日起适用。2026年7月27日生效的AI综合立法将高风险规则推迟：独立系统（附件III）推迟到2027年12月2日，嵌入受监管产品的AI（附件I）推迟到2028年8月2日（[欧盟委员会](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)）。',
+            '《AI法案》（条例（EU）2024/1689）于2024年8月1日生效，分阶段适用。通用AI模型提供者的义务自2025年8月2日起适用，第50条透明度义务自2026年8月2日起适用（第50条第2款的水印标识义务对已投放市场的系统宽限至2026年12月2日）。2026年7月27日生效的AI综合立法将高风险规则推迟：独立系统（附件III）推迟到2027年12月2日，嵌入受监管产品的AI（附件I）推迟到2028年8月2日（[欧盟委员会](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)）。',
             '该法案同样适用于部署者，即在自己权限下使用AI系统的组织。你是提供者、部署者还是两者兼有，取决于你开发什么以及如何使用该系统；仅仅在本地运行开源权重模型并不能决定这一点。请咨询律师你的用例适用哪些义务，尤其是它是否属于高风险用途。',
           ],
         },
@@ -27511,7 +27475,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '欧美数据隐私框架是否使本地运行AI变得没有必要？',
-              a: '不一定。对于已认证的美国提供商，DPF充分性决定可以作为传输依据，欧盟普通法院于2025年9月3日驳回了对它的挑战。上诉（案件C-703/25 P）仍在审理中，因此许多组织保留备用方案。本地部署是一种选择；请根据你的风险评估、合同条款和数据敏感性来决定。',
+              a: '不一定。对于已认证的美国提供商，DPF充分性决定可以作为传输依据，欧盟普通法院于2025年9月3日驳回了对它的挑战。上诉仍在审理中，因此许多组织保留备用方案。本地部署是一种选择；请根据你的风险评估、合同条款和数据敏感性来决定。',
             },
             {
               q: 'Qwen3.8 27B是否足以用于生产？',
@@ -27542,7 +27506,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: '欧美数据隐私框架是否使本地运行AI变得没有必要？',
-            acceptedAnswer: { '@type': 'Answer', text: '不一定。对于已认证的美国提供商，DPF充分性决定可以作为传输依据，欧盟普通法院于2025年9月3日驳回了对它的挑战。上诉（案件C-703/25 P）仍在审理中，因此许多组织保留备用方案。本地部署是一种选择；请根据你的风险评估、合同条款和数据敏感性来决定。' },
+            acceptedAnswer: { '@type': 'Answer', text: '不一定。对于已认证的美国提供商，DPF充分性决定可以作为传输依据，欧盟普通法院于2025年9月3日驳回了对它的挑战。上诉仍在审理中，因此许多组织保留备用方案。本地部署是一种选择；请根据你的风险评估、合同条款和数据敏感性来决定。' },
           },
           {
             '@type': 'Question',
@@ -27577,8 +27541,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'APIs de IA em nuvem acionam as regras de transferência do capítulo V da GDPR quando prompts com dados pessoais chegam a provedores fora da UE/EEE; executar o modelo em hardware próprio na UE evita essa transferência, mas a GDPR continua valendo para o tratamento.',
-            'Transferências para os EUA podem se basear no EU-US Data Privacy Framework (decisão de adequação de 10 de julho de 2023) para provedores certificados; o Tribunal Geral negou um recurso em 3 de setembro de 2025 e há um recurso de apelação (C-703/25 P) pendente.',
-            'O cronograma do AI Act mudou: o AI Omnibus (em vigor desde 27 de julho de 2026) adiou as obrigações de alto risco para 2 de dezembro de 2027 (anexo III) e 2 de agosto de 2028 (anexo I); as obrigações de IA de uso geral valem desde 2 de agosto de 2025 e a transparência do artigo 50 desde 2 de agosto de 2026.',
+            'Transferências para os EUA podem se basear no EU-US Data Privacy Framework (decisão de adequação de 10 de julho de 2023) para provedores certificados; o Tribunal Geral negou um recurso em 3 de setembro de 2025 e há um recurso de apelação pendente.',
+            'O cronograma do AI Act mudou: o AI Omnibus (em vigor desde 27 de julho de 2026) adiou as obrigações de alto risco para 2 de dezembro de 2027 (anexo III) e 2 de agosto de 2028 (anexo I); as obrigações de IA de uso geral valem desde 2 de agosto de 2025 e a transparência do artigo 50 desde 2 de agosto de 2026 (a marcação com marca d’água do artigo 50, n.º 2, tem período de carência até 2 de dezembro de 2026 para sistemas já no mercado).',
             'O Qwen3.8 27B (lançado em agosto de 2026, Apache-2.0) está no Ollama como qwen3.8:27b, com download de 18 GB; as pontuações do model card são declaradas pelo desenvolvedor, não são testes independentes.',
             'Caminho de migração: um runtime local como o Ollama mais uma camada de dispatch; o esforço depende do seu hardware, da revisão de segurança e dos fluxos de trabalho existentes.',
           ],
@@ -27586,7 +27550,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         gdprPressure: {
           title: 'As regras de transferência da GDPR moldam a decisão entre nuvem e local',
           content: [
-            'Quando um prompt contém dados pessoais e é enviado a um provedor de IA fora da UE/EEE, aplica-se o capítulo V da GDPR sobre transferências internacionais ([artigo 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Os instrumentos usuais são uma decisão de adequação, cláusulas contratuais padrão (SCCs) com avaliação de impacto da transferência ou normas corporativas vinculantes. Para os EUA, a Comissão Europeia adotou em 10 de julho de 2023 uma decisão de adequação para o EU-US Data Privacy Framework (DPF); transferências para empresas americanas certificadas podem se basear nela ([Comissão Europeia](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). O Tribunal Geral negou uma ação de anulação contra essa decisão em 3 de setembro de 2025 (processo T-553/23); o autor recorreu em 31 de outubro de 2025 (processo C-703/25 P), e uma atualização de escritório de advocacia recomenda continuar aplicando o capítulo V enquanto isso ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
+            'Quando um prompt contém dados pessoais e é enviado a um provedor de IA fora da UE/EEE, aplica-se o capítulo V da GDPR sobre transferências internacionais ([artigo 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Os instrumentos usuais são uma decisão de adequação, cláusulas contratuais padrão (SCCs) com avaliação de impacto da transferência ou normas corporativas vinculantes. Para os EUA, a Comissão Europeia adotou em 10 de julho de 2023 uma decisão de adequação para o EU-US Data Privacy Framework (DPF); transferências para empresas americanas certificadas podem se basear nela ([Comissão Europeia](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). O Tribunal Geral negou uma ação de anulação contra essa decisão em 3 de setembro de 2025; o autor recorreu em 31 de outubro de 2025, e uma atualização de escritório de advocacia recomenda continuar aplicando o capítulo V enquanto isso ([WilmerHale](https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20251201-european-court-of-justice-to-review-challenge-to-eu-us-data-privacy-framework), [Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'Para provedores fora da UE/EEE sem decisão de adequação, é preciso outro instrumento de transferência e uma avaliação da legislação do país de destino, conforme o acórdão Schrems II do TJUE (processo C-311/18). Autoridades de proteção de dados também agiram diretamente sobre serviços de IA, como a limitação temporária do ChatGPT pela Garante italiana em 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)), e o Comitê Europeu para a Proteção de Dados adotou em 18 de dezembro de 2024 o parecer 28/2024 sobre aspectos de proteção de dados de modelos de IA ([EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). Contratos, avaliações de transferência e revisões para cada provedor em nuvem são um custo real de conformidade; esta página não cita valores porque não existe referência neutra.',
             'Executar o modelo em hardware sob seu controle dentro da UE/EEE significa que os prompts ficam no seu ambiente, de modo que as regras de transferência do artigo 44 não são acionadas pela camada de IA. A GDPR continua valendo para o tratamento em si: base legal, minimização, segurança e seu [registro do artigo 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). A implantação local simplifica a análise de transferências; não elimina as obrigações da GDPR. Para o Brasil, a LGPD e a ANPD tratam da proteção de dados pessoais, com regime próprio. Esta página é uma visão geral e não constitui aconselhamento jurídico; consulte um advogado qualificado ou o seu encarregado de proteção de dados sobre a sua situação.',
           ],
@@ -27594,7 +27558,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         aiAct2026: {
           title: 'O que o AI Act muda para quem implanta sistemas de IA',
           content: [
-            'O AI Act (Regulamento (UE) 2024/1689) entrou em vigor em 1º de agosto de 2024 e se aplica por fases. As obrigações dos provedores de modelos de IA de uso geral valem desde 2 de agosto de 2025 e a transparência do artigo 50 desde 2 de agosto de 2026. O AI Omnibus, em vigor desde 27 de julho de 2026, adiou as regras de alto risco para 2 de dezembro de 2027 para sistemas autônomos (anexo III) e 2 de agosto de 2028 para IA embarcada em produtos regulados (anexo I) ([Comissão Europeia](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
+            'O AI Act (Regulamento (UE) 2024/1689) entrou em vigor em 1º de agosto de 2024 e se aplica por fases. As obrigações dos provedores de modelos de IA de uso geral valem desde 2 de agosto de 2025 e a transparência do artigo 50 desde 2 de agosto de 2026 (a marcação com marca d’água do artigo 50, n.º 2, tem período de carência até 2 de dezembro de 2026 para sistemas já no mercado). O AI Omnibus, em vigor desde 27 de julho de 2026, adiou as regras de alto risco para 2 de dezembro de 2027 para sistemas autônomos (anexo III) e 2 de agosto de 2028 para IA embarcada em produtos regulados (anexo I) ([Comissão Europeia](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
             'O regulamento também se aplica a quem implanta (deployers), ou seja, organizações que usam um sistema de IA sob sua própria autoridade. Ser provedor, implantador ou ambos depende do que você desenvolve e de como usa o sistema; executar um modelo open-weight localmente não define isso sozinho. Consulte um advogado sobre quais obrigações se aplicam ao seu caso de uso, em especial se ele é de alto risco.',
           ],
         },
@@ -27694,7 +27658,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'O EU-US Data Privacy Framework elimina a necessidade de executar IA localmente?',
-              a: 'Não necessariamente. Para provedores americanos certificados, a decisão de adequação do DPF pode servir de base de transferência, e o Tribunal Geral negou um recurso contra ela em 3 de setembro de 2025. Há um recurso de apelação (processo C-703/25 P) pendente, por isso muitas organizações mantêm um plano alternativo. A implantação local é uma opção; decida com base na sua avaliação de riscos, nos termos contratuais e na sensibilidade dos dados.',
+              a: 'Não necessariamente. Para provedores americanos certificados, a decisão de adequação do DPF pode servir de base de transferência, e o Tribunal Geral negou um recurso contra ela em 3 de setembro de 2025. Há um recurso de apelação pendente, por isso muitas organizações mantêm um plano alternativo. A implantação local é uma opção; decida com base na sua avaliação de riscos, nos termos contratuais e na sensibilidade dos dados.',
             },
             {
               q: 'O Qwen3.8 27B é bom o bastante para produção?',
@@ -27725,7 +27689,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'O EU-US Data Privacy Framework elimina a necessidade de executar IA localmente?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Não necessariamente. Para provedores americanos certificados, a decisão de adequação do DPF pode servir de base de transferência, e o Tribunal Geral negou um recurso contra ela em 3 de setembro de 2025. Há um recurso de apelação (processo C-703/25 P) pendente, por isso muitas organizações mantêm um plano alternativo. A implantação local é uma opção; decida com base na sua avaliação de riscos, nos termos contratuais e na sensibilidade dos dados.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Não necessariamente. Para provedores americanos certificados, a decisão de adequação do DPF pode servir de base de transferência, e o Tribunal Geral negou um recurso contra ela em 3 de setembro de 2025. Há um recurso de apelação pendente, por isso muitas organizações mantêm um plano alternativo. A implantação local é uma opção; decida com base na sua avaliação de riscos, nos termos contratuais e na sensibilidade dos dados.' },
           },
           {
             '@type': 'Question',
@@ -27760,8 +27724,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             '개인정보가 포함된 프롬프트가 EU/EEA 밖의 제공업체에 도달하면 클라우드 AI API에는 GDPR 제5장의 이전 규칙이 적용됩니다. EU 내 자체 하드웨어에서 모델을 실행하면 그 이전을 피할 수 있지만, 처리 자체에는 GDPR이 계속 적용됩니다.',
-            '인증된 미국 제공업체로의 이전은 EU-US 데이터 프라이버시 프레임워크(2023년 7월 10일 적정성 결정)에 근거할 수 있습니다. EU 일반법원은 2025년 9월 3일 이에 대한 이의를 기각했으며, 상소(C-703/25 P)가 계속 중입니다.',
-            'EU AI 법 일정이 바뀌었습니다. 2026년 7월 27일 발효된 AI 옴니버스가 고위험 의무를 2027년 12월 2일(부속서 III)과 2028년 8월 2일(부속서 I)로 연기했습니다. 범용 AI 의무는 2025년 8월 2일부터, 제50조 투명성 의무는 2026년 8월 2일부터 적용됩니다.',
+            '인증된 미국 제공업체로의 이전은 EU-US 데이터 프라이버시 프레임워크(2023년 7월 10일 적정성 결정)에 근거할 수 있습니다. EU 일반법원은 2025년 9월 3일 이에 대한 이의를 기각했으며, 상소가 계속 중입니다.',
+            'EU AI 법 일정이 바뀌었습니다. 2026년 7월 27일 발효된 AI 옴니버스가 고위험 의무를 2027년 12월 2일(부속서 III)과 2028년 8월 2일(부속서 I)로 연기했습니다. 범용 AI 의무는 2025년 8월 2일부터, 제50조 투명성 의무는 2026년 8월 2일부터(제50조 제2항 워터마크 표시 의무는 이미 시장에 있는 시스템에 대해 2026년 12월 2일까지 유예) 적용됩니다.',
             'Qwen3.8 27B(2026년 8월 공개, Apache-2.0)는 Ollama에서 qwen3.8:27b로 사용할 수 있으며 다운로드 크기는 18 GB입니다. 모델 카드의 벤치마크 점수는 개발사가 보고한 값이며 독립적인 테스트가 아닙니다.',
             '전환 경로: Ollama 같은 로컬 런타임과 디스패치 계층을 갖춥니다. 작업량은 하드웨어, 보안 검토, 기존 워크플로에 따라 달라집니다.',
           ],
@@ -27769,7 +27733,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         gdprPressure: {
           title: 'GDPR 이전 규칙이 클라우드와 로컬의 선택을 좌우합니다',
           content: [
-            '개인정보가 포함된 프롬프트를 EU/EEA 밖의 AI 제공업체로 보내면 국제 이전에 관한 GDPR 제5장이 적용됩니다([제44조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). 일반적인 이전 수단은 적정성 결정, 이전 영향 평가를 동반한 표준계약조항(SCC), 구속력 있는 기업 규칙입니다. 미국에 대해서는 유럽연합 집행위원회가 2023년 7월 10일 EU-US 데이터 프라이버시 프레임워크(DPF)에 대한 적정성 결정을 채택했으며, 인증된 미국 기업으로의 이전은 이에 근거할 수 있습니다([유럽연합 집행위원회](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). EU 일반법원은 2025년 9월 3일 이 결정에 대한 취소 소송을 기각했고(사건 T-553/23), 신청인은 2025년 10월 31일 상소했습니다(사건 C-703/25 P). 한 로펌의 업데이트는 그동안 제5장을 계속 적용하라고 조언합니다([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
+            '개인정보가 포함된 프롬프트를 EU/EEA 밖의 AI 제공업체로 보내면 국제 이전에 관한 GDPR 제5장이 적용됩니다([제44조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). 일반적인 이전 수단은 적정성 결정, 이전 영향 평가를 동반한 표준계약조항(SCC), 구속력 있는 기업 규칙입니다. 미국에 대해서는 유럽연합 집행위원회가 2023년 7월 10일 EU-US 데이터 프라이버시 프레임워크(DPF)에 대한 적정성 결정을 채택했으며, 인증된 미국 기업으로의 이전은 이에 근거할 수 있습니다([유럽연합 집행위원회](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). EU 일반법원은 2025년 9월 3일 이 결정에 대한 취소 소송을 기각했고, 신청인은 2025년 10월 31일 상소했습니다. 한 로펌의 업데이트는 그동안 제5장을 계속 적용하라고 조언합니다([WilmerHale](https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20251201-european-court-of-justice-to-review-challenge-to-eu-us-data-privacy-framework), [Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             '적정성 결정이 적용되지 않는 EU/EEA 밖의 제공업체에는 별도의 이전 수단과 목적지 국가 법률에 대한 평가가 필요하며, 이는 EU 사법재판소의 Schrems II 판결(사건 C-311/18)에 따른 것입니다. 개인정보 보호 당국은 AI 서비스에도 직접 대응해 왔으며, 예를 들어 이탈리아 Garante는 2023년 ChatGPT를 일시 제한했습니다([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)). 유럽 개인정보 보호 이사회는 2024년 12월 18일 AI 모델의 개인정보 보호 측면에 관한 의견 28/2024를 채택했습니다([EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). 클라우드 제공업체별 계약, 이전 평가, 검토는 실제 컴플라이언스 비용이지만, 중립적인 기준이 없어 이 페이지는 금액을 제시하지 않습니다.',
             'EU/EEA 내에서 직접 통제하는 하드웨어로 모델을 실행하면 프롬프트가 자체 환경에 머무르므로, AI 계층 때문에 제44조의 이전 규칙이 적용되지는 않습니다. 그러나 처리 자체에는 GDPR이 계속 적용되며, 적법 근거, 데이터 최소화, 보안, [제30조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) 처리 활동 기록이 필요합니다. 로컬 배포는 이전 분석을 단순하게 하지만 GDPR 의무를 없애지는 않습니다. 이 페이지는 일반적인 개요이며 법률 자문이 아닙니다. 본인의 상황에 대해서는 자격 있는 변호사 또는 개인정보 보호 책임자와 상담하십시오.',
           ],
@@ -27777,7 +27741,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         aiAct2026: {
           title: 'EU AI 법이 배포자에게 바꾸는 것',
           content: [
-            'AI 법(규정 (EU) 2024/1689)은 2024년 8월 1일 발효되었으며 단계적으로 적용됩니다. 범용 AI 모델 제공자의 의무는 2025년 8월 2일부터, 제50조 투명성 의무는 2026년 8월 2일부터 적용됩니다. 2026년 7월 27일 발효된 AI 옴니버스는 고위험 규칙을 독립형 시스템(부속서 III)은 2027년 12월 2일로, 규제 제품에 내장된 AI(부속서 I)는 2028년 8월 2일로 연기했습니다([유럽연합 집행위원회](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
+            'AI 법(규정 (EU) 2024/1689)은 2024년 8월 1일 발효되었으며 단계적으로 적용됩니다. 범용 AI 모델 제공자의 의무는 2025년 8월 2일부터, 제50조 투명성 의무는 2026년 8월 2일부터(제50조 제2항 워터마크 표시 의무는 이미 시장에 있는 시스템에 대해 2026년 12월 2일까지 유예) 적용됩니다. 2026년 7월 27일 발효된 AI 옴니버스는 고위험 규칙을 독립형 시스템(부속서 III)은 2027년 12월 2일로, 규제 제품에 내장된 AI(부속서 I)는 2028년 8월 2일로 연기했습니다([유럽연합 집행위원회](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).',
             '이 규정은 자신의 권한으로 AI 시스템을 사용하는 조직인 배포자에게도 적용됩니다. 제공자인지, 배포자인지, 둘 다인지는 무엇을 개발하고 시스템을 어떻게 사용하는지에 따라 달라지며, 오픈 웨이트 모델을 로컬에서 실행한다는 사실만으로 결정되지 않습니다. 자사 사용 사례에 어떤 의무가 적용되는지, 특히 고위험 용도에 해당하는지는 변호사에게 확인하십시오.',
           ],
         },
@@ -27877,7 +27841,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'EU-US 데이터 프라이버시 프레임워크가 있으면 AI를 로컬에서 실행할 필요가 없습니까?',
-              a: '반드시 그렇지는 않습니다. 인증된 미국 제공업체에는 DPF 적정성 결정이 이전의 근거가 될 수 있으며, EU 일반법원은 2025년 9월 3일 이에 대한 이의를 기각했습니다. 상소(사건 C-703/25 P)가 계속 중이어서 많은 조직이 대체 계획을 유지합니다. 로컬 배포는 하나의 선택지이며, 위험 평가, 계약 조건, 데이터 민감도에 따라 판단하십시오.',
+              a: '반드시 그렇지는 않습니다. 인증된 미국 제공업체에는 DPF 적정성 결정이 이전의 근거가 될 수 있으며, EU 일반법원은 2025년 9월 3일 이에 대한 이의를 기각했습니다. 상소가 계속 중이어서 많은 조직이 대체 계획을 유지합니다. 로컬 배포는 하나의 선택지이며, 위험 평가, 계약 조건, 데이터 민감도에 따라 판단하십시오.',
             },
             {
               q: 'Qwen3.8 27B는 프로덕션에 충분한 수준입니까?',
@@ -27908,7 +27872,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'EU-US 데이터 프라이버시 프레임워크가 있으면 AI를 로컬에서 실행할 필요가 없습니까?',
-            acceptedAnswer: { '@type': 'Answer', text: '반드시 그렇지는 않습니다. 인증된 미국 제공업체에는 DPF 적정성 결정이 이전의 근거가 될 수 있으며, EU 일반법원은 2025년 9월 3일 이에 대한 이의를 기각했습니다. 상소(사건 C-703/25 P)가 계속 중이어서 많은 조직이 대체 계획을 유지합니다. 로컬 배포는 하나의 선택지이며, 위험 평가, 계약 조건, 데이터 민감도에 따라 판단하십시오.' },
+            acceptedAnswer: { '@type': 'Answer', text: '반드시 그렇지는 않습니다. 인증된 미국 제공업체에는 DPF 적정성 결정이 이전의 근거가 될 수 있으며, EU 일반법원은 2025년 9월 3일 이에 대한 이의를 기각했습니다. 상소가 계속 중이어서 많은 조직이 대체 계획을 유지합니다. 로컬 배포는 하나의 선택지이며, 위험 평가, 계약 조건, 데이터 민감도에 따라 판단하십시오.' },
           },
           {
             '@type': 'Question',
