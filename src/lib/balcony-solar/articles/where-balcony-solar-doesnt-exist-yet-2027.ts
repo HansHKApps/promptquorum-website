@@ -14,7 +14,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-18',
+    next_refresh_due: '2027-05-20',
     theme: 'Balcony Solar Legislation',
     heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-en.webp',
     title: 'Where Balcony Solar Doesn\'t Exist Yet: Bahrain and Taiwan (2027)',
@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Not every market has a balcony solar story to tell yet. Research into Bahrain and Taiwan found no dedicated plug-in/balcony-solar regulation, market activity, or consumer product culture in either, — this page reports that absence directly rather than manufacturing a country guide where none is warranted.',
     metaDescription: 'No plug-in/balcony-solar market, regulation, or product culture was found in Bahrain or Taiwan. Solar activity in both markets is utility/industrial or grid-scale/rooftop-PPA only. This page reports the gap and will be revisited if that changes.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '3 min read',
     educationalLevel: 'Beginner',
     audience: 'Balcony solar market watchers checking whether a market exists in Bahrain or Taiwan',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gulf/island housing stock and centralized utility management differ structurally from the German/US rental-apartment pattern that has driven balcony solar elsewhere — this page\'s own reasonable inference for the gap, not a sourced fact',
           'No speculation on if or when this might change — this page will be revisited if legislative or market activity emerges',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -52,6 +52,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Re-Check: Still No Plug-In Category, With Added Context',
+        content: '**A repeat search still found no dedicated plug-in/balcony-solar regulation, market or product category in Bahrain or Taiwan, but both countries have context that this page\'s earlier wording missed.** For Taiwan, an opinion column by the Taiwan Climate Action Network Research Center on [RECCESSARY (16 June 2026)](https://www.reccessary.com/zh-tw/insight/balcony-PV-trend) says Taiwan has no dedicated plug-in PV category yet, describes a gray zone and proposes a separate category at or below 800 W or 1,200 W with product certification, online registration and pilots in social and public rental housing; these are proposals, not rules. Separately, according to [CNA (10 June 2026)](https://www.cna.com.tw/news/afe/202606100265.aspx), a standard requiring solar equipment on new or extended buildings of 1,000 square metres (about 300 ping) or more takes effect on 1 August 2026, with exemptions for four building types; it targets large buildings, not balcony kits. For Bahrain, the earlier "utility/industrial only" framing is too narrow: the Sustainable Energy Authority\'s [net-metering page](https://www.sea.gov.bh/netmetering-3/) describes a net-metering policy approved by Cabinet Resolution No. 2 of 2017 (the page could not be opened in this refresh; the detail comes from a search result), and a commercial guide ([SurgePV](https://www.surgepv.com/blog/solar-incentives-in-bahrain)) says it covers homes up to 100 kW, which should be verified with the Electricity and Water Authority; nothing found addresses plug-in units specifically. The UAE and Saudi Arabia are covered in the Gulf and MENA article and were not re-checked here. This is a summary of public information, not legal advice.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -117,7 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Nicht jeder Markt hat bereits eine Balkonkraftwerk-Geschichte zu erzählen. Die Recherche zu Bahrain und Taiwan fand in keinem der beiden Länder eine eigene Regulierung, Marktaktivität oder Verbraucherprodukt-Kultur rund um steckerfertige Solaranlagen/Balkonkraftwerke, Stand Juli 2026 — diese Seite berichtet über diese Lücke direkt, statt einen Länderleitfaden zu konstruieren, wo keiner gerechtfertigt ist.',
     metaDescription: 'In Bahrain oder Taiwan wurde bis Juli 2026 kein Markt, keine Regulierung und keine Produktkultur für steckerfertige Solaranlagen/Balkonkraftwerke gefunden.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '3 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Balkonkraftwerk-Marktbeobachter, die prüfen, ob es einen Markt in Bahrain oder Taiwan gibt',
@@ -135,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wohnungsbestand mit zentralisiertem Versorgungsmanagement und Insel-Strukturen am Golf unterscheiden sich strukturell vom deutschen/US-amerikanischen Mietwohnungsmuster, das Balkonkraftwerke andernorts vorangetrieben hat — dies ist die eigene, plausible Einschätzung dieser Seite für die Lücke, kein belegter Fakt',
           'Keine Spekulation, ob oder wann sich das ändern könnte — diese Seite wird überarbeitet, sobald gesetzgeberische oder marktbezogene Aktivität entsteht',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -147,6 +151,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Erneute Prüfung: weiterhin keine Plug-in-Kategorie, mit zusätzlichem Kontext',
+        content: '**Eine erneute Suche fand weiterhin keine eigene Regelung, keinen Markt und keine Produktkategorie für Plug-in-/Balkonsolar in Bahrain oder Taiwan, doch beide Länder haben Kontext, den die frühere Formulierung dieser Seite nicht erfasste.** Für Taiwan stellt eine Meinungskolumne des Taiwan Climate Action Network Research Center auf [RECCESSARY (16. Juni 2026)](https://www.reccessary.com/zh-tw/insight/balcony-PV-trend) fest, dass es in Taiwan noch keine eigene Plug-in-PV-Kategorie gibt, beschreibt eine Grauzone und schlägt eine eigene Kategorie bis 800 W oder 1.200 W mit Produktzertifizierung, Online-Registrierung und Pilotprojekten im Sozial- und öffentlichen Mietwohnungsbau vor; das sind Vorschläge, keine Regeln. Unabhängig davon tritt laut [CNA (10. Juni 2026)](https://www.cna.com.tw/news/afe/202606100265.aspx) am 1. August 2026 eine Norm in Kraft, die Solaranlagen auf neuen oder erweiterten Gebäuden ab 1.000 Quadratmetern (rund 300 Ping) vorschreibt, mit Ausnahmen für vier Gebäudearten; sie zielt auf große Gebäude, nicht auf Balkon-Sets. Für Bahrain ist die frühere Darstellung „nur Versorger/Industrie“ zu eng: Die [Net-Metering-Seite](https://www.sea.gov.bh/netmetering-3/) der Sustainable Energy Authority beschreibt eine mit Kabinettsbeschluss Nr. 2 von 2017 genehmigte Net-Metering-Politik (die Seite ließ sich in dieser Aktualisierung nicht öffnen; die Angabe stammt aus einem Suchergebnis), und ein kommerzieller Ratgeber ([SurgePV](https://www.surgepv.com/blog/solar-incentives-in-bahrain)) nennt Haushalte bis 100 kW, was bei der Electricity and Water Authority geprüft werden sollte; zu Plug-in-Geräten im Besonderen wurde nichts gefunden. Die VAE und Saudi-Arabien werden im Artikel zu Golf und MENA behandelt und wurden hier nicht erneut geprüft. Dies ist eine Zusammenfassung öffentlicher Informationen und keine Rechtsberatung.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -212,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'No todos los mercados tienen todavía una historia que contar sobre energía solar de balcón. La investigación sobre Baréin y Taiwán no encontró regulación, actividad de mercado ni cultura de producto de consumo dedicada a la energía solar enchufable/de balcón en ninguno de los dos países, a fecha de julio de 2026 — esta página informa directamente de esa ausencia en lugar de fabricar una guía de país donde no está justificada.',
     metaDescription: 'No se encontró mercado, regulación ni cultura de producto de energía solar enchufable/de balcón en Baréin ni en Taiwán a fecha de julio de 2026.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '3 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Observadores del mercado de energía solar de balcón que verifican si existe un mercado en Baréin o Taiwán',
@@ -230,7 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El parque de vivienda con gestión centralizada de servicios públicos, y las estructuras insulares/del Golfo, difieren estructuralmente del patrón de vivienda de alquiler alemán/estadounidense que ha impulsado la energía solar de balcón en otros lugares — este es el propio razonamiento de esta página para explicar la ausencia, no un hecho documentado',
           'Sin especulación sobre si o cuándo esto podría cambiar — esta página se revisará si surge actividad legislativa o de mercado',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -242,6 +250,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Reverificación: sigue sin haber categoría plug-in, con contexto adicional',
+        content: '**Una nueva búsqueda siguió sin encontrar ninguna regulación, mercado o categoría de producto dedicados a la energía solar plug-in/de balcón en Baréin o Taiwán, pero ambos países tienen un contexto que la redacción anterior de esta página no recogía.** En el caso de Taiwán, una columna de opinión del Taiwan Climate Action Network Research Center en [RECCESSARY (16 de junio de 2026)](https://www.reccessary.com/zh-tw/insight/balcony-PV-trend) señala que Taiwán aún no tiene una categoría específica de FV plug-in, describe una zona gris y propone una categoría separada hasta 800 W o 1200 W con certificación de producto, registro en línea y pilotos en vivienda social y de alquiler público; son propuestas, no reglas. Por otra parte, según [CNA (10 de junio de 2026)](https://www.cna.com.tw/news/afe/202606100265.aspx), el 1 de agosto de 2026 entra en vigor una norma que exige equipos solares en edificios nuevos o ampliados de 1000 metros cuadrados (unos 300 ping) o más, con exenciones para cuatro tipos de edificio; se dirige a grandes edificios, no a kits de balcón. En cuanto a Baréin, el planteamiento anterior de «solo servicios públicos/industrial» es demasiado estrecho: la [página de medición neta](https://www.sea.gov.bh/netmetering-3/) de la Sustainable Energy Authority describe una política de medición neta aprobada por la Resolución n.º 2 de 2017 del Gabinete (la página no pudo abrirse en esta actualización; el dato procede de un resultado de búsqueda), y una guía comercial ([SurgePV](https://www.surgepv.com/blog/solar-incentives-in-bahrain)) indica que cubre viviendas de hasta 100 kW, algo que conviene verificar con la Electricity and Water Authority; no se encontró nada sobre unidades plug-in en concreto. Emiratos Árabes Unidos y Arabia Saudita se tratan en el artículo del Golfo y MENA y no se reverificaron aquí. Es un resumen de información pública, no asesoramiento jurídico.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -307,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Tous les marchés n\'ont pas encore une histoire solaire de balcon à raconter. Les recherches sur Bahreïn et Taïwan n\'ont trouvé aucune réglementation, activité de marché ou culture de produit dédiée au solaire plug-in/de balcon dans l\'un ou l\'autre pays, à juillet 2026 — cette page rapporte directement cette absence plutôt que de fabriquer un guide pays où rien ne le justifie.',
     metaDescription: 'Aucun marché, réglementation ou culture de produit solaire plug-in/de balcon n\'a été trouvé à Bahreïn ou à Taïwan à juillet 2026. L\'activité solaire y est uniquement industrielle/de service public ou à l\'échelle du réseau/PPA en toiture. Cette page signale cet écart et sera revue si la situation change.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '3 min de lecture',
     educationalLevel: 'Beginner',
     audience: 'Observateurs du marché du solaire de balcon vérifiant l\'existence d\'un marché à Bahreïn ou à Taïwan',
@@ -325,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le parc immobilier avec gestion centralisée des services publics et les structures insulaires/du Golfe diffèrent structurellement du schéma locatif allemand/américain qui a porté l\'adoption du solaire de balcon ailleurs — c\'est le propre raisonnement de cette page pour expliquer l\'écart, non un fait sourcé',
           'Aucune spéculation sur si ou quand cela pourrait changer — cette page sera revue si une activité législative ou de marché émerge',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -337,6 +349,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Revérification : toujours pas de catégorie plug-in, avec du contexte en plus',
+        content: '**Une nouvelle recherche n\'a toujours trouvé aucune réglementation, aucun marché ni aucune catégorie de produits dédiés au solaire plug-in/de balcon à Bahreïn ou à Taïwan, mais les deux pays présentent un contexte que la formulation précédente de cette page avait manqué.** Pour Taïwan, une tribune d\'opinion du Taiwan Climate Action Network Research Center sur [RECCESSARY (16 juin 2026)](https://www.reccessary.com/zh-tw/insight/balcony-PV-trend) indique que Taïwan n\'a pas encore de catégorie dédiée au PV plug-in, décrit une zone grise et propose une catégorie distincte jusqu\'à 800 W ou 1 200 W avec certification des produits, enregistrement en ligne et projets pilotes dans le logement social et locatif public ; ce sont des propositions, pas des règles. Par ailleurs, selon [CNA (10 juin 2026)](https://www.cna.com.tw/news/afe/202606100265.aspx), une norme imposant des équipements solaires sur les bâtiments neufs ou agrandis de 1 000 mètres carrés (environ 300 ping) ou plus entre en vigueur le 1er août 2026, avec des exemptions pour quatre types de bâtiments ; elle vise les grands bâtiments, pas les kits de balcon. Pour Bahreïn, la formulation antérieure « uniquement services publics/industriel » est trop étroite : la [page sur le net metering](https://www.sea.gov.bh/netmetering-3/) de la Sustainable Energy Authority décrit une politique de net metering approuvée par la résolution n° 2 de 2017 du Cabinet (la page n\'a pas pu être ouverte lors de cette mise à jour ; le détail provient d\'un résultat de recherche), et un guide commercial ([SurgePV](https://www.surgepv.com/blog/solar-incentives-in-bahrain)) indique qu\'elle couvre les logements jusqu\'à 100 kW, ce qui doit être vérifié auprès de l\'Electricity and Water Authority ; rien n\'a été trouvé concernant spécifiquement les unités plug-in. Les Émirats arabes unis et l\'Arabie saoudite sont traités dans l\'article Golfe et MENA et n\'ont pas été revérifiés ici. Il s\'agit d\'un résumé d\'informations publiques, pas d\'un conseil juridique.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -402,7 +418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'ليس لكل سوق قصة عن الطاقة الشمسية على الشرفات يرويها بعد. لم تجد الأبحاث حول البحرين وتايوان أي تنظيم أو نشاط سوقي أو ثقافة منتجات استهلاكية مخصصة للطاقة الشمسية القابلة للتوصيل/على الشرفات في أي من البلدين، حتى يوليو 2026 — تُبلغ هذه الصفحة عن هذا الغياب مباشرةً بدلاً من تلفيق دليل قُطري حيث لا يوجد مبرر لذلك.',
     metaDescription: 'لم يُعثر على سوق أو تنظيم أو ثقافة منتجات للطاقة الشمسية القابلة للتوصيل/على الشرفات في البحرين أو تايوان حتى يوليو 2026.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '3 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'مراقبو سوق الطاقة الشمسية على الشرفات الذين يتحققون مما إذا كان هناك سوق في البحرين أو تايوان',
@@ -420,7 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يختلف المخزون السكني ذو الإدارة المركزية للمرافق، وكذلك الهياكل الجزرية/الخليجية، بشكل بنيوي عن نمط الإيجار الألماني/الأمريكي الذي دفع تبنّي الطاقة الشمسية على الشرفات في أماكن أخرى — هذا استنتاج هذه الصفحة الخاص لتفسير الفجوة، وليس حقيقة موثّقة',
           'لا تكهّن بشأن ما إذا كان ذلك سيتغير أو متى — ستُراجَع هذه الصفحة إذا نشأ نشاط تشريعي أو سوقي',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -432,6 +448,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'إعادة تحقق: لا تزال فئة التوصيل المباشر غير موجودة، مع سياق إضافي',
+        content: '**لم يجد بحث متجدد أي لائحة أو سوق أو فئة منتجات مخصصة للطاقة الشمسية للتوصيل المباشر/الشرفات في البحرين أو تايوان، لكن للبلدين سياقاً لم تغطه صياغة هذه الصفحة السابقة.** ففي تايوان، يقول عمود رأي لمركز أبحاث Taiwan Climate Action Network على [RECCESSARY (16 يونيو 2026)](https://www.reccessary.com/zh-tw/insight/balcony-PV-trend) إن تايوان لا تملك بعد فئة مخصصة للطاقة الكهروضوئية بالتوصيل المباشر، ويصف منطقة رمادية ويقترح فئة منفصلة بقدرة 800 واط أو 1,200 واط فأقل مع اعتماد المنتجات والتسجيل الإلكتروني وتجارب في الإسكان الاجتماعي والإيجار العام؛ وهذه مقترحات وليست قواعد. ومن جهة أخرى، وبحسب [CNA (10 يونيو 2026)](https://www.cna.com.tw/news/afe/202606100265.aspx)، يبدأ في 1 أغسطس 2026 سريان معيار يشترط تركيب معدات شمسية في المباني الجديدة أو الموسّعة بمساحة 1,000 متر مربع (نحو 300 بينغ) فأكثر، مع استثناءات لأربعة أنواع من المباني؛ وهو يستهدف المباني الكبيرة لا أطقم الشرفات. أما في البحرين، فإن الصياغة السابقة «مرافق/صناعي فقط» ضيقة جداً: إذ تصف [صفحة القياس الصافي](https://www.sea.gov.bh/netmetering-3/) لدى هيئة الطاقة المستدامة سياسة قياس صافٍ أقرها قرار مجلس الوزراء رقم 2 لعام 2017 (تعذر فتح الصفحة في هذا التحديث؛ والتفصيل من نتيجة بحث)، ويذكر دليل تجاري ([SurgePV](https://www.surgepv.com/blog/solar-incentives-in-bahrain)) أنها تشمل المنازل حتى 100 كيلوواط، وهو ما ينبغي التحقق منه لدى هيئة الكهرباء والماء؛ ولم يُعثر على شيء يخص وحدات التوصيل المباشر تحديداً. وتغطي مقالة الخليج والشرق الأوسط وشمال أفريقيا الإمارات والسعودية ولم تُعد فحصهما هنا. هذا ملخص لمعلومات علنية وليس استشارة قانونية.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -497,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'すべての市場にバルコニー太陽光のストーリーがあるわけではありません。バーレーンと台湾を調査した結果、2026年7月時点でどちらの国にも、プラグイン式/バルコニー太陽光に特化した規制、市場活動、消費者向け製品文化は見つかりませんでした。このページは、根拠のない国別ガイドを作り上げるのではなく、この「空白」をそのまま報告します。',
     metaDescription: '2026年7月時点で、バーレーンにも台湾にも、プラグイン式/バルコニー太陽光の市場・規制・製品文化は確認されていません。両国の太陽光関連の動きは、公益事業者/産業用スケール、または屋根置きの系統連系・PPA案件に限られます。このページはこの空白を報告し、状況が変われば更新します。',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '3分で読める',
     educationalLevel: 'Beginner',
     audience: 'バーレーンや台湾にバルコニー太陽光市場が存在するかを確認したい市場観察者',
@@ -515,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '公益事業が一元管理された住宅事情や湾岸・島嶼特有の構造は、ドイツ・米国で見られる、バルコニー太陽光の普及を後押ししてきた賃貸集合住宅のパターンとは構造的に異なります——これはこのページ独自の合理的な推測であり、出典に基づく事実ではありません',
           'いつ・どのように変化するかについての推測はありません——立法・市場活動が生じた場合、本ページは改訂されます',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -527,6 +547,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '再確認:プラグイン区分は引き続きなし、補足の背景あり',
+        content: '**再検索でも、バーレーンと台湾にプラグイン型・バルコニー太陽光専用の規制、市場、製品カテゴリーは見つかりませんでした。ただし、両国にはこのページの従来の記述が拾えていなかった背景があります。** 台湾については、Taiwan Climate Action Network Research Centerの意見コラム([RECCESSARY、2026年6月16日](https://www.reccessary.com/zh-tw/insight/balcony-PV-trend))が、台湾にはまだ専用のプラグインPV区分がなく、グレーゾーンにあると述べ、800 Wまたは1,200 W以下の独立区分、製品認証、オンライン登録、社会住宅・公共賃貸住宅での試験導入を提案しています。これらは提案であり、規則ではありません。これとは別に、[CNA(2026年6月10日)](https://www.cna.com.tw/news/afe/202606100265.aspx)によると、建築面積1,000平方メートル(約300坪)以上の新築・増築建物に太陽光設備を義務づける基準が2026年8月1日に施行され、4種類の建物は対象外です。対象は大規模建物で、バルコニー用キットではありません。バーレーンについては、従来の「電力会社・産業規模のみ」という書き方は狭すぎます。Sustainable Energy Authorityの[ネットメータリングのページ](https://www.sea.gov.bh/netmetering-3/)は、2017年閣議決定第2号で承認されたネットメータリング政策を説明しています(今回の更新ではページを開けず、詳細は検索結果によるものです)。商業ガイド([SurgePV](https://www.surgepv.com/blog/solar-incentives-in-bahrain))は100 kWまでの住宅が対象としていますが、Electricity and Water Authorityで確認すべきです。プラグイン機器に特化した記述は見つかりませんでした。UAEとサウジアラビアは湾岸・MENA記事で扱っており、ここでは再確認していません。本欄は公開情報の要約であり、法的助言ではありません。',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -592,7 +616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '모든 시장에 아직 발코니 태양광 이야기가 있는 것은 아닙니다. 바레인과 대만을 조사한 결과, 2026년 7월 기준으로 두 나라 어디에서도 플러그인/발코니 태양광에 특화된 규제, 시장 활동, 소비자 제품 문화가 발견되지 않았습니다 — 이 페이지는 근거 없는 국가 가이드를 억지로 만들어내는 대신 이 공백을 있는 그대로 보고합니다.',
     metaDescription: '2026년 7월 기준 바레인과 대만 어디에서도 플러그인/발코니 태양광 시장, 규제, 제품 문화가 발견되지 않았습니다. 두 시장의 태양광 활동은 공공사업/산업용 또는 옥상형 계통연계·PPA에 국한됩니다. 이 페이지는 이 공백을 보고하며, 상황이 바뀌면 다시 검토합니다.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '3분 읽기',
     educationalLevel: 'Beginner',
     audience: '바레인이나 대만에 시장이 존재하는지 확인하려는 발코니 태양광 시장 관찰자',
@@ -610,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '공공사업이 중앙에서 관리되는 주택 재고와 섬·걸프 지역 특유의 구조는, 다른 지역에서 발코니 태양광 도입을 이끌어온 독일·미국식 임대 아파트 패턴과 구조적으로 다릅니다 — 이는 이 공백에 대한 이 페이지 자체의 합리적 추정이며, 출처가 있는 사실이 아닙니다',
           '언제 또는 어떻게 바뀔지에 대한 추측은 없습니다 — 입법 또는 시장 활동이 발생하면 이 페이지는 다시 검토됩니다',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -622,6 +646,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '관련 읽을거리', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '재확인: 플러그인 범주는 여전히 없음, 배경 보완',
+        content: '**다시 검색해도 바레인과 대만에서 플러그인·발코니 태양광을 위한 전용 규제, 시장, 제품 범주는 찾지 못했습니다. 다만 두 나라 모두 이 페이지의 기존 서술이 담지 못한 배경이 있습니다.** 대만의 경우 Taiwan Climate Action Network 연구센터의 의견 칼럼([RECCESSARY, 2026년 6월 16일](https://www.reccessary.com/zh-tw/insight/balcony-PV-trend))은 대만에 아직 전용 플러그인 PV 범주가 없고 회색지대에 있다고 설명하며, 800 W 또는 1,200 W 이하의 별도 범주, 제품 인증, 온라인 등록, 사회주택·공공임대주택 시범사업을 제안합니다. 이는 제안일 뿐 규칙이 아닙니다. 별도로 [CNA(2026년 6월 10일)](https://www.cna.com.tw/news/afe/202606100265.aspx)에 따르면 건축면적 1,000제곱미터(약 300핑) 이상의 신축·증축 건물에 태양광 설비를 의무화하는 기준이 2026년 8월 1일 시행되며 네 가지 건물 유형은 면제됩니다. 이는 대형 건물을 대상으로 하며 발코니 키트가 아닙니다. 바레인의 경우 기존의 "전력회사·산업 규모뿐"이라는 서술은 너무 좁습니다. Sustainable Energy Authority의 [넷미터링 페이지](https://www.sea.gov.bh/netmetering-3/)는 2017년 내각 결의 제2호로 승인된 넷미터링 정책을 설명합니다(이번 갱신에서는 페이지를 열지 못했고 세부 내용은 검색 결과에서 가져왔습니다). 상업용 가이드([SurgePV](https://www.surgepv.com/blog/solar-incentives-in-bahrain))는 100 kW까지의 주택이 대상이라고 하나 Electricity and Water Authority에서 확인해야 합니다. 플러그인 장치를 구체적으로 다룬 내용은 찾지 못했습니다. UAE와 사우디아라비아는 걸프·MENA 기사에서 다루며 여기서는 재확인하지 않았습니다. 이는 공개 정보의 요약이며 법률 자문이 아닙니다.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -687,7 +715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Nem todo mercado ainda tem uma história de energia solar de varanda para contar. A pesquisa sobre Bahrein e Taiwan não encontrou regulamentação, atividade de mercado ou cultura de produto dedicada à energia solar plug-in/de varanda em nenhum dos dois países, até julho de 2026 — esta página relata essa ausência diretamente, em vez de fabricar um guia de país onde nenhum se justifica.',
     metaDescription: 'Nenhum mercado, regulamentação ou cultura de produto de energia solar plug-in/de varanda foi encontrado no Bahrein ou em Taiwan até julho de 2026.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '3 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Observadores do mercado de energia solar de varanda verificando se existe um mercado no Bahrein ou em Taiwan',
@@ -705,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O estoque de moradias com gestão centralizada de serviços públicos, e as estruturas de ilha/Golfo, diferem estruturalmente do padrão de aluguel alemão/americano que impulsionou a adoção de energia solar de varanda em outros lugares — este é o raciocínio próprio desta página para explicar a lacuna, não um fato documentado',
           'Nenhuma especulação sobre se ou quando isso pode mudar — esta página será revisada se surgir atividade legislativa ou de mercado',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -717,6 +745,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Reverificação: ainda sem categoria plug-in, com contexto adicional',
+        content: '**Uma nova busca continuou sem encontrar regulação, mercado ou categoria de produto dedicados a energia solar plug-in/de varanda no Bahrein ou em Taiwan, mas os dois países têm um contexto que a redação anterior desta página não captava.** Em Taiwan, uma coluna de opinião do Taiwan Climate Action Network Research Center no [RECCESSARY (16 de junho de 2026)](https://www.reccessary.com/zh-tw/insight/balcony-PV-trend) afirma que Taiwan ainda não tem uma categoria específica de FV plug-in, descreve uma zona cinzenta e propõe uma categoria separada até 800 W ou 1.200 W com certificação de produto, registro online e pilotos em habitação social e de aluguel público; são propostas, não regras. Separadamente, segundo a [CNA (10 de junho de 2026)](https://www.cna.com.tw/news/afe/202606100265.aspx), uma norma que exige equipamentos solares em edifícios novos ou ampliados de 1.000 metros quadrados (cerca de 300 ping) ou mais entra em vigor em 1º de agosto de 2026, com isenções para quatro tipos de edifício; ela visa grandes edifícios, não kits de varanda. Quanto ao Bahrein, o enquadramento anterior de «apenas concessionárias/industrial» é estreito demais: a [página de net metering](https://www.sea.gov.bh/netmetering-3/) da Sustainable Energy Authority descreve uma política de net metering aprovada pela Resolução n.º 2 de 2017 do Gabinete (a página não pôde ser aberta nesta atualização; o detalhe vem de um resultado de busca), e um guia comercial ([SurgePV](https://www.surgepv.com/blog/solar-incentives-in-bahrain)) diz que ela cobre residências de até 100 kW, o que deve ser verificado com a Electricity and Water Authority; nada foi encontrado sobre unidades plug-in especificamente. Emirados Árabes Unidos e Arábia Saudita são tratados no artigo sobre Golfo e MENA e não foram reverificados aqui. Este é um resumo de informações públicas, não aconselhamento jurídico.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -782,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '并非每个市场都已经有阳台太阳能的故事可讲。针对巴林和台湾的调研发现，截至2026年7月，这两个地区都没有专门针对插电式/阳台太阳能的监管、市场活动或消费产品文化——本页直接报告这一空白，而不是在没有依据的情况下编造一篇地区指南。',
     metaDescription: '截至2026年7月，巴林和台湾均未发现插电式/阳台太阳能市场、监管或产品文化。两地的太阳能活动仅限于公用事业/工业规模，或屋顶电网并网/购电协议（PPA）项目。本页报告这一空白，情况变化时将更新。',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-11-20',
     readTime: '阅读约3分钟',
     educationalLevel: 'Beginner',
     audience: '想确认巴林或台湾是否存在阳台太阳能市场的观察者',
@@ -800,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '实行集中公用事业管理的住房存量，以及岛屿/海湾地区特有的结构，与推动其他地区阳台太阳能普及的德国/美国式租赁公寓模式在结构上存在差异——这是本页对该空白的合理推断，而非有据可查的事实',
           '不推测这一情况是否或何时会发生变化——若出现立法或市场活动，本页将进行更新',
         ],
-        updatedDate: '2026-07-18',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -812,6 +844,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '复核:仍无插电式类别,并补充背景',
+        content: '**再次检索后,仍未发现巴林或台湾有专门针对插电式/阳台太阳能的法规、市场或产品类别,但两地都有本页此前表述未涵盖的背景。** 就台湾而言,台湾气候行动网络研究中心的一篇评论专栏([RECCESSARY,2026年6月16日](https://www.reccessary.com/zh-tw/insight/balcony-PV-trend))指出,台湾尚无专门的插电式光电类别,处于灰色地带,并建议设立800 W或1,200 W以下的独立类别,配套产品认证、线上登记以及在社会住宅和公共出租住宅中试点;这些是建议,而非规则。另据[CNA(2026年6月10日)](https://www.cna.com.tw/news/afe/202606100265.aspx)报道,要求建筑面积1,000平方米(约300坪)以上的新建或增建建筑设置太阳能设备的标准将于2026年8月1日起施行,四类建筑可获豁免;该规定针对大型建筑,而非阳台套件。就巴林而言,此前“仅限公用事业/工业”的表述过窄:可持续能源管理局的[净计量页面](https://www.sea.gov.bh/netmetering-3/)介绍了经2017年第2号内阁决议批准的净计量政策(本次更新未能打开该页面,细节来自搜索结果),一份商业指南([SurgePV](https://www.surgepv.com/blog/solar-incentives-in-bahrain))称其覆盖最高100 kW的住宅,仍应向电力和水务局核实;未发现专门涉及插电式设备的内容。阿联酋和沙特阿拉伯已在海湾与中东北非文章中介绍,此处未重新核查。本页为公开信息的汇总,不构成法律意见。',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
