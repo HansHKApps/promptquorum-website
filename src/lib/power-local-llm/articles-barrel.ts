@@ -535,6 +535,7 @@ import { article as a_paperclip_review } from './articles/paperclip-review'
 import { article as a_next_ai_draw_io_review } from './articles/next-ai-draw-io-review'
 import { article as a_oriveo_review } from './articles/oriveo-review'
 import { article as a_open_paper_review } from './articles/open-paper-review'
+import { article as a_pyvideotrans_review } from './articles/pyvideotrans-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -1109,6 +1110,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'next-ai-draw-io-review':                              a_next_ai_draw_io_review,
   'oriveo-review':                                       a_oriveo_review,
   'open-paper-review':                                   a_open_paper_review,
+  'pyvideotrans-review':                                 a_pyvideotrans_review,
 }
 
 // The directory page's "Last updated" date follows the tool list: every 5 tools added after the article's own

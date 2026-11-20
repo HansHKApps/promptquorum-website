@@ -1337,6 +1337,7 @@ const HUB_THEMES: Array<{
       'lyonesse-review',
       'willow-inference-server-review',
       'ultimate-vocal-remover-review',
+      'pyvideotrans-review',
     ],
   },
   {

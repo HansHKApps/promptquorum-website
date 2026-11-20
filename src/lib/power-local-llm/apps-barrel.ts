@@ -433,6 +433,7 @@ import { app as app_openmontage } from './apps/openmontage'
 import { app as app_ecc } from './apps/ecc'
 import { app as app_oriveo } from './apps/oriveo'
 import { app as app_open_paper } from './apps/open-paper'
+import { app as app_pyvideotrans } from './apps/pyvideotrans'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -856,6 +857,7 @@ export const localAiApps: ToolRecord[] = [
   app_ecc,
   app_oriveo,
   app_open_paper,
+  app_pyvideotrans,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length

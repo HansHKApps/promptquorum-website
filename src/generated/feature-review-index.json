@@ -2098,5 +2098,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "open-paper-review",
     "url": "/power-local-llm/open-paper-review"
+  },
+  "pyvideotrans": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pyvideotrans-review",
+    "url": "/power-local-llm/pyvideotrans-review"
   }
 }
