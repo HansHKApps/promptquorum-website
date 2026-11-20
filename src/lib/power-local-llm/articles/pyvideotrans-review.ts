@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Platform', 'How to get it'],
         rows: [
-          { 'Platform': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', 'How to get it': 'Pre-packaged .7z (2.7 GB); extract, run sp.exe; unsigned' },
+          { 'Platform': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', 'How to get it': 'Pre-built .7z (2.7 GB); run sp.exe; unsigned per guide' },
           { 'Platform': '[Windows patch](https://github.com/jianchang512/pyvideotrans/releases/tag/v4.19)', 'How to get it': '400 MB patch that overlays an older package' },
           { 'Platform': '[macOS](https://en.pyvideotrans.com/getstart)', 'How to get it': 'Source setup: Homebrew, FFmpeg, uv, git clone, uv sync' },
           { 'Platform': '[Linux](https://en.pyvideotrans.com/getstart)', 'How to get it': 'Source setup: apt, FFmpeg, uv, git clone, uv sync' },
@@ -199,7 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Not a fit: videos that contain only music or silent images, which the guide lists as unsupported, or footage whose burned-in subtitles you want removed, which the guide says it cannot do.',
           'Not a fit: macOS or Linux users who want an installer; both need a terminal setup.',
-          'Not a fit: anyone who needs a signed, store-distributed Windows app, since the package is unsigned and not on GitHub release files.',
+          'Not a fit: anyone who needs a signed, store-distributed Windows app, since, per the project’s guide, the package is unsigned, and it is not on GitHub release files.',
           'Unverified: translation, dubbing and timing quality, speed and language count. PromptQuorum ran no tests and did not download or inspect the Windows package.',
           'Unverified: RAM and disk needs beyond the stated figures, and which local models run at usable speed on CPU only.',
           'Unverified: licenses of the individual models. The website tells users to check each model developer\'s license and commercial terms.',
@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**pyVideoTrans is worth trying if you want one free tool that handles transcription, translation and dubbing and you can accept a hands-on setup.**',
           'On paper it covers the whole chain: GPL-3.0 code, many local and cloud engines, speaker-aware dubbing, voice cloning integrations and three ways to run it. The maker is actively working on it, with four releases in five weeks.',
-          'The trade-offs are clear. The Windows archive is unsigned and hosted outside GitHub release files, macOS and Linux need a terminal, the defaults send text to online services, and no company or privacy policy for the app itself was found. Output quality is untested. Try it on a short clip you have the rights to use, and check the official site before relying on a newer build.',
+          'The trade-offs are clear. The Windows archive is unsigned per the project’s guide and hosted outside GitHub release files, macOS and Linux need a terminal, the defaults send text to online services, and no company or privacy policy for the app itself was found. Output quality is untested. Try it on a short clip you have the rights to use, and check the official site before relying on a newer build.',
         ],
       },
       sources: {
@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Plattform', 'So bekommen Sie es'],
         rows: [
-          { 'Plattform': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', 'So bekommen Sie es': 'Vorgepacktes .7z (2,7 GB); entpacken, sp.exe starten; unsigniert' },
+          { 'Plattform': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', 'So bekommen Sie es': '.7z (2,7 GB); sp.exe starten; laut Guide unsigniert' },
           { 'Plattform': '[Windows-Patch](https://github.com/jianchang512/pyvideotrans/releases/tag/v4.19)', 'So bekommen Sie es': '400-MB-Patch, der ein älteres Paket überschreibt' },
           { 'Plattform': '[macOS](https://en.pyvideotrans.com/getstart)', 'So bekommen Sie es': 'Quellcode-Setup: Homebrew, FFmpeg, uv, git clone, uv sync' },
           { 'Plattform': '[Linux](https://en.pyvideotrans.com/getstart)', 'So bekommen Sie es': 'Quellcode-Setup: apt, FFmpeg, uv, git clone, uv sync' },
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Nicht geeignet: Videos, die nur Musik oder stumme Bilder enthalten, die das Handbuch als nicht unterstützt nennt, oder Material, dessen eingebrannte Untertitel Sie entfernen wollen, was laut Handbuch nicht möglich ist.',
           'Nicht geeignet: macOS- oder Linux-Nutzer, die einen Installer möchten; beide brauchen eine Terminal-Einrichtung.',
-          'Nicht geeignet: wer eine signierte, über einen Store verteilte Windows-App braucht, denn das Paket ist unsigniert und nicht Teil der GitHub-Release-Dateien.',
+          'Nicht geeignet: wer eine signierte, über einen Store verteilte Windows-App braucht, denn das Paket ist laut Anleitung des Projekts unsigniert und nicht Teil der GitHub-Release-Dateien.',
           'Ungeprüft: Qualität von Übersetzung, Vertonung und Timing, Geschwindigkeit und Sprachanzahl. PromptQuorum hat keine Tests durchgeführt und das Windows-Paket weder heruntergeladen noch geprüft.',
           'Ungeprüft: RAM- und Speicherbedarf über die angegebenen Werte hinaus sowie welche lokalen Modelle nur auf der CPU brauchbar schnell laufen.',
           'Ungeprüft: Lizenzen der einzelnen Modelle. Die Website fordert Nutzer auf, Lizenz und kommerzielle Bedingungen jedes Modellentwicklers selbst zu prüfen.',
@@ -524,7 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**pyVideoTrans lohnt einen Versuch, wenn Sie ein kostenloses Werkzeug für Transkription, Übersetzung und Vertonung suchen und eine praktische Einrichtung akzeptieren.**',
           'Auf dem Papier deckt es die ganze Kette ab: GPL-3.0-Code, viele lokale und Cloud-Engines, sprecherbezogene Vertonung, Anbindungen für Stimmklonen und drei Betriebsarten. Der Hersteller arbeitet aktiv daran, mit vier Releases in fünf Wochen.',
-          'Die Kompromisse sind klar. Das Windows-Archiv ist unsigniert und außerhalb der GitHub-Release-Dateien gehostet, macOS und Linux brauchen ein Terminal, die Standardeinstellungen senden Text an Online-Dienste, und weder eine Firma noch eine Datenschutzerklärung für die App selbst wurde gefunden. PromptQuorum hat die Ausgabequalität nicht getestet. Probieren Sie es an einem kurzen Clip, dessen Rechte Sie besitzen, und prüfen Sie die offizielle Seite, bevor Sie sich auf einen neueren Build verlassen.',
+          'Die Kompromisse sind klar. Das Windows-Archiv ist laut Anleitung des Projekts unsigniert und außerhalb der GitHub-Release-Dateien gehostet, macOS und Linux brauchen ein Terminal, die Standardeinstellungen senden Text an Online-Dienste, und weder eine Firma noch eine Datenschutzerklärung für die App selbst wurde gefunden. PromptQuorum hat die Ausgabequalität nicht getestet. Probieren Sie es an einem kurzen Clip, dessen Rechte Sie besitzen, und prüfen Sie die offizielle Seite, bevor Sie sich auf einen neueren Build verlassen.',
         ],
       },
       sources: {
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Plataforma', 'Cómo conseguirla'],
         rows: [
-          { 'Plataforma': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', 'Cómo conseguirla': '.7z preempaquetado (2.7 GB); extraer, ejecutar sp.exe; sin firma' },
+          { 'Plataforma': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', 'Cómo conseguirla': '.7z (2.7 GB); ejecutar sp.exe; sin firma, según la guía' },
           { 'Plataforma': '[Parche para Windows](https://github.com/jianchang512/pyvideotrans/releases/tag/v4.19)', 'Cómo conseguirla': 'Parche de 400 MB que sobrescribe un paquete anterior' },
           { 'Plataforma': '[macOS](https://en.pyvideotrans.com/getstart)', 'Cómo conseguirla': 'Desde el código: Homebrew, FFmpeg, uv, git clone, uv sync' },
           { 'Plataforma': '[Linux](https://en.pyvideotrans.com/getstart)', 'Cómo conseguirla': 'Desde el código: apt, FFmpeg, uv, git clone, uv sync' },
@@ -741,7 +741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'No es para ti si: tus vídeos solo tienen música o imágenes mudas, que la guía lista como no compatibles, o quieres quitar subtítulos grabados en la imagen, algo que según la guía no puede hacer.',
           'No es para ti si: usas macOS o Linux y quieres un instalador; ambos necesitan instalación en terminal.',
-          'No es para ti si: necesitas una app de Windows firmada y distribuida por una tienda, porque el paquete no tiene firma y no forma parte de los archivos de la versión en GitHub.',
+          'No es para ti si: necesitas una app de Windows firmada y distribuida por una tienda, porque, según la guía del proyecto, el paquete no tiene firma y no forma parte de los archivos de la versión en GitHub.',
           'Sin verificar: calidad de traducción, doblaje y sincronización, velocidad y número de idiomas. PromptQuorum no hizo pruebas y no descargó ni inspeccionó el paquete de Windows.',
           'Sin verificar: necesidades de RAM y disco más allá de las cifras indicadas, y qué modelos locales funcionan con una velocidad útil solo con CPU.',
           'Sin verificar: licencias de cada modelo. El sitio web indica a los usuarios que consulten la licencia y los términos comerciales de cada desarrollador de modelos.',
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**pyVideoTrans merece una prueba si quieres una sola herramienta gratuita para transcribir, traducir y doblar y aceptas una instalación manual.**',
           'Sobre el papel cubre toda la cadena: código GPL-3.0, muchos motores locales y en la nube, doblaje por hablante, integraciones de clonación de voz y tres formas de ejecutarla. El responsable trabaja activamente en ella, con cuatro versiones en cinco semanas.',
-          'Las contrapartidas son claras. El archivo de Windows no tiene firma y se aloja fuera de los archivos de la versión en GitHub, macOS y Linux necesitan una terminal, los valores predeterminados envían texto a servicios en línea y no se encontró ni una empresa ni una política de privacidad de la propia app. PromptQuorum no ha probado la calidad del resultado. Pruébala con un clip corto cuyos derechos tengas y consulta el sitio oficial antes de fiarte de una compilación más reciente.',
+          'Las contrapartidas son claras. El archivo de Windows no tiene firma, según la guía del proyecto, y se aloja fuera de los archivos de la versión en GitHub, macOS y Linux necesitan una terminal, los valores predeterminados envían texto a servicios en línea y no se encontró ni una empresa ni una política de privacidad de la propia app. PromptQuorum no ha probado la calidad del resultado. Pruébala con un clip corto cuyos derechos tengas y consulta el sitio oficial antes de fiarte de una compilación más reciente.',
         ],
       },
       sources: {
@@ -935,7 +935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Plateforme', "Comment l'obtenir"],
         rows: [
-          { 'Plateforme': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', "Comment l'obtenir": '.7z préconstruit (2.7 Go) ; extraire, lancer sp.exe ; non signé' },
+          { 'Plateforme': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', "Comment l'obtenir": '.7z (2.7 Go) ; lancer sp.exe ; non signé selon le guide' },
           { 'Plateforme': '[Correctif Windows](https://github.com/jianchang512/pyvideotrans/releases/tag/v4.19)', "Comment l'obtenir": 'Correctif de 400 Mo qui écrase un ancien paquet' },
           { 'Plateforme': '[macOS](https://en.pyvideotrans.com/getstart)', "Comment l'obtenir": 'Depuis les sources : Homebrew, FFmpeg, uv, git clone, uv sync' },
           { 'Plateforme': '[Linux](https://en.pyvideotrans.com/getstart)', "Comment l'obtenir": 'Depuis les sources : apt, FFmpeg, uv, git clone, uv sync' },
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "Ne convient pas : les vidéos qui ne contiennent que de la musique ou des images muettes, que le guide indique comme non prises en charge, ou les images dont vous voulez retirer les sous-titres incrustés, ce que le guide dit ne pas pouvoir faire.",
           "Ne convient pas : les utilisateurs de macOS ou de Linux qui veulent un installateur ; les deux demandent une installation en terminal.",
-          "Ne convient pas : ceux qui ont besoin d'une application Windows signée et distribuée par un store, car le paquet n'est pas signé et ne fait pas partie des fichiers de la version GitHub.",
+          "Ne convient pas : ceux qui ont besoin d'une application Windows signée et distribuée par un store, car, selon le guide du projet, le paquet n'est pas signé et ne fait pas partie des fichiers de la version GitHub.",
           "Non vérifié : qualité de la traduction, du doublage et de la synchronisation, vitesse et nombre de langues. PromptQuorum n'a réalisé aucun test et n'a ni téléchargé ni inspecté le paquet Windows.",
           "Non vérifié : besoins en RAM et en disque au-delà des chiffres indiqués, et quels modèles locaux tournent à une vitesse utilisable sur CPU seul.",
           "Non vérifié : licences des différents modèles. Le site web demande aux utilisateurs de consulter la licence et les conditions commerciales de chaque développeur de modèle.",
@@ -1066,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "**pyVideoTrans vaut l'essai si vous voulez un seul outil gratuit pour transcrire, traduire et doubler et que vous acceptez une installation manuelle.**",
           "Sur le papier, il couvre toute la chaîne : code GPL-3.0, nombreux moteurs locaux et cloud, doublage par locuteur, intégrations de clonage de voix et trois façons de l'exécuter. L'éditeur y travaille activement, avec quatre versions en cinq semaines.",
-          "Les compromis sont clairs. L'archive Windows n'est pas signée et hébergée en dehors des fichiers de la version GitHub, macOS et Linux demandent un terminal, les réglages par défaut envoient du texte à des services en ligne, et ni entreprise ni politique de confidentialité de l'application elle-même n'ont été trouvées. PromptQuorum n'a pas testé la qualité de la sortie. Essayez-le sur un court extrait dont vous détenez les droits et consultez le site officiel avant de vous fier à une version plus récente.",
+          "Les compromis sont clairs. L'archive Windows n'est, selon le guide du projet, pas signée et hébergée en dehors des fichiers de la version GitHub, macOS et Linux demandent un terminal, les réglages par défaut envoient du texte à des services en ligne, et ni entreprise ni politique de confidentialité de l'application elle-même n'ont été trouvées. PromptQuorum n'a pas testé la qualité de la sortie. Essayez-le sur un court extrait dont vous détenez les droits et consultez le site officiel avant de vous fier à une version plus récente.",
         ],
       },
       sources: {
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['プラットフォーム', '入手方法'],
         rows: [
-          { 'プラットフォーム': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', '入手方法': 'パッケージ済み.7z（2.7 GB）。展開してsp.exeを実行。署名なし' },
+          { 'プラットフォーム': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', '入手方法': '.7z（2.7 GB）。sp.exeを実行。署名なし（ガイドによる）' },
           { 'プラットフォーム': '[Windows用パッチ](https://github.com/jianchang512/pyvideotrans/releases/tag/v4.19)', '入手方法': '旧パッケージに上書きする400 MBのパッチ' },
           { 'プラットフォーム': '[macOS](https://en.pyvideotrans.com/getstart)', '入手方法': 'ソース導入：Homebrew、FFmpeg、uv、git clone、uv sync' },
           { 'プラットフォーム': '[Linux](https://en.pyvideotrans.com/getstart)', '入手方法': 'ソース導入：apt、FFmpeg、uv、git clone、uv sync' },
@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '向かない：音楽だけ、または無音の映像だけの動画（ガイドは非対応と記載）、および映像に焼き込まれた字幕を消したい場合（ガイドは不可と記載）。',
           '向かない：インストーラーを求めるmacOSやLinuxの利用者。どちらもターミナルでの導入が必要です。',
-          '向かない：署名済みでストア配布のWindowsアプリが必要な人。パッケージは署名がなく、GitHubのリリースファイルにも含まれません。',
+          '向かない：署名済みでストア配布のWindowsアプリが必要な人。プロジェクトのガイドによるとパッケージは署名がなく、GitHubのリリースファイルにも含まれません。',
           '未確認：翻訳、吹き替え、タイミングの品質、速度、対応言語数。PromptQuorumはテストを行わず、Windows版パッケージのダウンロードも検査もしていません。',
           '未確認：記載された数値以外のRAMとディスクの必要量、およびCPUのみで実用的な速度が出るローカルモデル。',
           '未確認：個々のモデルのライセンス。Webサイトは、各モデル開発元のライセンスと商用条件を利用者が確認するよう求めています。',
@@ -1337,7 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**pyVideoTransは、文字起こし、翻訳、吹き替えを1つの無料ツールで行いたく、手間のかかる導入を受け入れられるなら試す価値があります。**',
           '紙の上では全工程をカバーしています。GPL-3.0のコード、多くのローカル／クラウドのエンジン、話者ごとの吹き替え、ボイスクローンの連携、3通りの実行方法です。開発元は活発に作業しており、5週間で4回のリリースがありました。',
-          '代償も明確です。Windows版アーカイブは署名がなく、GitHubのリリースファイルの外に置かれています。macOSとLinuxはターミナルが必要で、既定ではテキストがオンラインサービスへ送られ、アプリ自体の企業情報やプライバシーポリシーは見つかりませんでした。PromptQuorumは出力品質をテストしていません。権利を持つ短いクリップで試し、新しいビルドを使う前に公式サイトを確認してください。',
+          '代償も明確です。Windows版アーカイブはプロジェクトのガイドによると署名がなく、GitHubのリリースファイルの外に置かれています。macOSとLinuxはターミナルが必要で、既定ではテキストがオンラインサービスへ送られ、アプリ自体の企業情報やプライバシーポリシーは見つかりませんでした。PromptQuorumは出力品質をテストしていません。権利を持つ短いクリップで試し、新しいビルドを使う前に公式サイトを確認してください。',
         ],
       },
       sources: {
@@ -1477,7 +1477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Plataforma', 'Como obter'],
         rows: [
-          { 'Plataforma': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', 'Como obter': '.7z pré-empacotado (2.7 GB); extrair, executar sp.exe; sem assinatura' },
+          { 'Plataforma': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', 'Como obter': '.7z (2.7 GB); executar sp.exe; sem assinatura (guia)' },
           { 'Plataforma': '[Patch do Windows](https://github.com/jianchang512/pyvideotrans/releases/tag/v4.19)', 'Como obter': 'Patch de 400 MB que sobrescreve um pacote antigo' },
           { 'Plataforma': '[macOS](https://en.pyvideotrans.com/getstart)', 'Como obter': 'Pelo código: Homebrew, FFmpeg, uv, git clone, uv sync' },
           { 'Plataforma': '[Linux](https://en.pyvideotrans.com/getstart)', 'Como obter': 'Pelo código: apt, FFmpeg, uv, git clone, uv sync' },
@@ -1554,7 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Não serve: vídeos só com música ou imagens mudas, que o guia lista como não compatíveis, ou material cujas legendas gravadas na imagem você quer remover, algo que o guia diz não conseguir fazer.',
           'Não serve: usuários de macOS ou Linux que querem um instalador; ambos exigem instalação em terminal.',
-          'Não serve: quem precisa de um app de Windows assinado e distribuído por loja, pois o pacote não tem assinatura e não faz parte dos arquivos da versão no GitHub.',
+          'Não serve: quem precisa de um app de Windows assinado e distribuído por loja, pois, segundo o guia do projeto, o pacote não tem assinatura e não faz parte dos arquivos da versão no GitHub.',
           'Não verificado: qualidade de tradução, dublagem e sincronização, velocidade e quantidade de idiomas. A PromptQuorum não fez testes e não baixou nem inspecionou o pacote do Windows.',
           'Não verificado: necessidade de RAM e disco além dos valores informados, e quais modelos locais rodam em velocidade utilizável só com CPU.',
           'Não verificado: licenças de cada modelo. O site orienta os usuários a conferir a licença e os termos comerciais de cada desenvolvedor de modelo.',
@@ -1608,7 +1608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O pyVideoTrans vale o teste se você quer uma única ferramenta gratuita para transcrever, traduzir e dublar e aceita uma instalação manual.**',
           'No papel, ele cobre toda a cadeia: código GPL-3.0, muitos mecanismos locais e na nuvem, dublagem por falante, integrações de clonagem de voz e três formas de executar. O responsável trabalha ativamente nele, com quatro versões em cinco semanas.',
-          'As trocas são claras. O arquivo do Windows não tem assinatura e fica hospedado fora dos arquivos da versão no GitHub, macOS e Linux exigem um terminal, os padrões enviam texto a serviços online e não foram encontradas nem uma empresa nem uma política de privacidade do próprio app. A PromptQuorum não testou a qualidade da saída. Experimente em um trecho curto cujos direitos você tenha e confira o site oficial antes de confiar em uma versão mais nova.',
+          'As trocas são claras. O arquivo do Windows não tem assinatura, segundo o guia do projeto, e fica hospedado fora dos arquivos da versão no GitHub, macOS e Linux exigem um terminal, os padrões enviam texto a serviços online e não foram encontradas nem uma empresa nem uma política de privacidade do próprio app. A PromptQuorum não testou a qualidade da saída. Experimente em um trecho curto cujos direitos você tenha e confira o site oficial antes de confiar em uma versão mais nova.',
         ],
       },
       sources: {
@@ -1748,7 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['平台', '获取方式'],
         rows: [
-          { '平台': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', '获取方式': '预打包 .7z（2.7 GB）；解压后运行 sp.exe；无签名' },
+          { '平台': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', '获取方式': '.7z（2.7 GB）；运行 sp.exe；据指南无签名' },
           { '平台': '[Windows 补丁](https://github.com/jianchang512/pyvideotrans/releases/tag/v4.19)', '获取方式': '400 MB 补丁，覆盖旧版本包' },
           { '平台': '[macOS](https://en.pyvideotrans.com/getstart)', '获取方式': '源码安装：Homebrew、FFmpeg、uv、git clone、uv sync' },
           { '平台': '[Linux](https://en.pyvideotrans.com/getstart)', '获取方式': '源码安装：apt、FFmpeg、uv、git clone、uv sync' },
@@ -1825,7 +1825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '不适合：只有音乐或无声画面的视频（指南列为不支持），以及想去掉画面中烧录字幕的素材（指南称无法做到）。',
           '不适合：想要安装程序的 macOS 或 Linux 用户；两者都需要在终端中安装。',
-          '不适合：需要已签名、通过应用商店分发的 Windows 应用的人，因为安装包没有签名，也不在 GitHub 发布文件中。',
+          '不适合：需要已签名、通过应用商店分发的 Windows 应用的人，因为据项目指南，安装包没有签名，也不在 GitHub 发布文件中。',
           '未核实：翻译、配音和时间对齐的质量、速度以及支持的语言数量。PromptQuorum 没有做任何测试，也没有下载或检查 Windows 包。',
           '未核实：除已给出数字之外的内存和磁盘需求，以及哪些本地模型仅用 CPU 时速度可用。',
           '未核实：各个模型的许可证。网站要求用户自行查看各模型开发方的许可证和商用条款。',
@@ -1879,7 +1879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**如果您想用一个免费工具完成转写、翻译和配音，并且能接受动手安装，pyVideoTrans 值得一试。**',
           '纸面上它覆盖整条链路：GPL-3.0 代码、众多本地和云端引擎、按说话人配音、声音克隆集成，以及三种运行方式。开发方在积极维护，五周内发布了四个版本。',
-          '取舍也很清楚。Windows 压缩包没有签名，托管在 GitHub 发布文件之外；macOS 和 Linux 需要终端；默认设置会把文本发送到在线服务；也没有找到公司信息或应用本身的隐私政策。PromptQuorum 没有测试输出质量。请先用您拥有权利的短片段试用，并在依赖更新的版本之前查看官方网站。',
+          '取舍也很清楚。Windows 压缩包据项目指南没有签名，托管在 GitHub 发布文件之外；macOS 和 Linux 需要终端；默认设置会把文本发送到在线服务；也没有找到公司信息或应用本身的隐私政策。PromptQuorum 没有测试输出质量。请先用您拥有权利的短片段试用，并在依赖更新的版本之前查看官方网站。',
         ],
       },
       sources: {
@@ -2019,7 +2019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['المنصة', 'كيفية الحصول عليه'],
         rows: [
-          { 'المنصة': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', 'كيفية الحصول عليه': 'أرشيف .7z جاهز (2.7 GB)؛ فك الضغط وتشغيل sp.exe؛ بلا توقيع' },
+          { 'المنصة': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', 'كيفية الحصول عليه': '.7z (2.7 GB)؛ تشغيل sp.exe؛ بلا توقيع بحسب الدليل' },
           { 'المنصة': '[تصحيح Windows](https://github.com/jianchang512/pyvideotrans/releases/tag/v4.19)', 'كيفية الحصول عليه': 'تصحيح بحجم 400 MB يُنسخ فوق حزمة أقدم' },
           { 'المنصة': '[macOS](https://en.pyvideotrans.com/getstart)', 'كيفية الحصول عليه': 'من المصدر: Homebrew وFFmpeg وuv وgit clone وuv sync' },
           { 'المنصة': '[Linux](https://en.pyvideotrans.com/getstart)', 'كيفية الحصول عليه': 'من المصدر: apt وFFmpeg وuv وgit clone وuv sync' },
@@ -2096,7 +2096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'لا يناسب: مقاطع الفيديو التي تحتوي موسيقى فقط أو صورًا صامتة، وهي غير مدعومة بحسب الدليل، أو المواد التي تريد إزالة الترجمات المدمجة في صورتها، وهو ما يقول الدليل إنه لا يستطيعه.',
           'لا يناسب: مستخدمي macOS أو Linux الذين يريدون مثبّتًا جاهزًا؛ فكلاهما يحتاج إلى تثبيت في الطرفية.',
-          'لا يناسب: من يحتاج إلى تطبيق Windows موقّع وموزّع عبر متجر، لأن الحزمة بلا توقيع وليست ضمن ملفات الإصدار على GitHub.',
+          'لا يناسب: من يحتاج إلى تطبيق Windows موقّع وموزّع عبر متجر، لأن الحزمة، بحسب دليل المشروع، بلا توقيع وليست ضمن ملفات الإصدار على GitHub.',
           'غير متحقق منه: جودة الترجمة والدبلجة والتوقيت والسرعة وعدد اللغات. لم تُجرِ PromptQuorum اختبارات ولم تنزّل حزمة Windows ولم تفحصها.',
           'غير متحقق منه: احتياجات RAM والقرص فوق الأرقام المذكورة، وأي النماذج المحلية تعمل بسرعة مقبولة بالمعالج وحده.',
           'غير متحقق منه: تراخيص النماذج الفردية. ويطلب الموقع من المستخدمين مراجعة ترخيص كل مطوّر نموذج وشروطه التجارية.',
@@ -2150,7 +2150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يستحق pyVideoTrans التجربة إذا أردت أداة مجانية واحدة للتفريغ النصي والترجمة والدبلجة وقبلت تثبيتًا يدويًا.**',
           'على الورق يغطي السلسلة كاملة: شيفرة GPL-3.0، ومحركات محلية وسحابية كثيرة، ودبلجة تراعي المتحدثين، وتكاملات استنساخ الصوت، وثلاث طرق للتشغيل. والجهة المطوّرة تعمل عليه بنشاط، بأربعة إصدارات في خمسة أسابيع.',
-          'المقايضات واضحة. أرشيف Windows بلا توقيع ومستضاف خارج ملفات الإصدار على GitHub، ويحتاج macOS وLinux إلى طرفية، وتُرسل الإعدادات الافتراضية النص إلى خدمات عبر الإنترنت، ولم يُعثر على شركة ولا على سياسة خصوصية للتطبيق نفسه. لم تختبر PromptQuorum جودة المخرجات. جرّبه على مقطع قصير تملك حقوقه، وراجع الموقع الرسمي قبل الاعتماد على إصدار أحدث.',
+          'المقايضات واضحة. أرشيف Windows بلا توقيع، بحسب دليل المشروع، ومستضاف خارج ملفات الإصدار على GitHub، ويحتاج macOS وLinux إلى طرفية، وتُرسل الإعدادات الافتراضية النص إلى خدمات عبر الإنترنت، ولم يُعثر على شركة ولا على سياسة خصوصية للتطبيق نفسه. لم تختبر PromptQuorum جودة المخرجات. جرّبه على مقطع قصير تملك حقوقه، وراجع الموقع الرسمي قبل الاعتماد على إصدار أحدث.',
         ],
       },
       sources: {
@@ -2290,7 +2290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['플랫폼', '받는 방법'],
         rows: [
-          { '플랫폼': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', '받는 방법': '사전 패키지 .7z(2.7 GB); 압축 해제 후 sp.exe 실행; 서명 없음' },
+          { '플랫폼': '[Windows 10/11](https://en.pyvideotrans.com/downpackage)', '받는 방법': '.7z(2.7 GB); sp.exe 실행; 가이드상 서명 없음' },
           { '플랫폼': '[Windows 패치](https://github.com/jianchang512/pyvideotrans/releases/tag/v4.19)', '받는 방법': '이전 패키지에 덮어쓰는 400 MB 패치' },
           { '플랫폼': '[macOS](https://en.pyvideotrans.com/getstart)', '받는 방법': '소스 설치: Homebrew, FFmpeg, uv, git clone, uv sync' },
           { '플랫폼': '[Linux](https://en.pyvideotrans.com/getstart)', '받는 방법': '소스 설치: apt, FFmpeg, uv, git clone, uv sync' },
@@ -2367,7 +2367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '적합하지 않음: 음악만 있거나 소리 없는 화면만 있는 영상(가이드는 지원하지 않는다고 명시), 그리고 화면에 박힌 자막을 지우고 싶은 경우(가이드는 불가능하다고 명시).',
           '적합하지 않음: 설치 프로그램을 원하는 macOS·Linux 사용자. 둘 다 터미널 설치가 필요합니다.',
-          '적합하지 않음: 서명되고 스토어로 배포되는 Windows 앱이 필요한 경우. 패키지는 서명이 없고 GitHub 릴리스 파일에도 포함되지 않습니다.',
+          '적합하지 않음: 서명되고 스토어로 배포되는 Windows 앱이 필요한 경우. 패키지는 프로젝트 가이드에 따르면 서명이 없고 GitHub 릴리스 파일에도 포함되지 않습니다.',
           '미확인: 번역, 더빙, 타이밍의 품질과 속도, 지원 언어 수. PromptQuorum은 테스트를 하지 않았고 Windows 패키지를 내려받거나 검사하지도 않았습니다.',
           '미확인: 제시된 수치 외의 RAM과 디스크 요구량, 그리고 CPU만으로 실용적인 속도가 나오는 로컬 모델.',
           '미확인: 개별 모델의 라이선스. 웹사이트는 사용자가 각 모델 개발사의 라이선스와 상업적 조건을 직접 확인하도록 안내합니다.',
@@ -2421,7 +2421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**받아쓰기, 번역, 더빙을 하나의 무료 도구로 처리하고 싶고 직접 설치하는 수고를 감수할 수 있다면 pyVideoTrans를 써 볼 만합니다.**',
           '문서상으로는 전체 흐름을 다룹니다. GPL-3.0 코드, 다양한 로컬·클라우드 엔진, 화자별 더빙, 음성 복제 연동, 세 가지 실행 방식입니다. 개발 주체는 활발하게 작업하고 있으며 5주 동안 네 번 릴리스했습니다.',
-          '절충점도 분명합니다. Windows 압축 파일은 서명이 없고 GitHub 릴리스 파일 밖에 호스팅되며, macOS와 Linux는 터미널이 필요합니다. 기본값은 텍스트를 온라인 서비스로 보내고, 앱 자체의 회사 정보나 개인정보 처리방침은 찾지 못했습니다. PromptQuorum은 출력 품질을 테스트하지 않았습니다. 권리를 가진 짧은 영상으로 먼저 시험해 보고, 더 새로운 빌드를 믿기 전에 공식 사이트를 확인하십시오.',
+          '절충점도 분명합니다. Windows 압축 파일은 프로젝트 가이드에 따르면 서명이 없고 GitHub 릴리스 파일 밖에 호스팅되며, macOS와 Linux는 터미널이 필요합니다. 기본값은 텍스트를 온라인 서비스로 보내고, 앱 자체의 회사 정보나 개인정보 처리방침은 찾지 못했습니다. PromptQuorum은 출력 품질을 테스트하지 않았습니다. 권리를 가진 짧은 영상으로 먼저 시험해 보고, 더 새로운 빌드를 믿기 전에 공식 사이트를 확인하십시오.',
         ],
       },
       sources: {

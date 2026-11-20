@@ -913,7 +913,7 @@
       "images": []
     },
     "page-assist-review": {
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-11",
       "hasSections": true,
@@ -1810,7 +1810,7 @@
       "images": []
     },
     "local-vs-cloud-agents": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -5761,7 +5761,7 @@
       ]
     },
     "autonomous-local-agents-actually-work": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6407,7 +6407,7 @@
       "images": []
     },
     "best-local-models-tool-calling-2026": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6542,7 +6542,7 @@
       "images": []
     },
     "local-ai-agents-with-mcp": {
-      "dateModified": "2026-11-06",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -7512,7 +7512,7 @@
       ]
     },
     "local-multimodal-pipeline-voice-vision-text": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-14",
       "hasSections": true,
@@ -7939,7 +7939,7 @@
       ]
     },
     "local-ai-video-generation-vs-cloud": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-08-21",
       "hasSections": true,
@@ -7957,7 +7957,7 @@
       "images": []
     },
     "local-ai-image-generation-vs-cloud": {
-      "dateModified": "2026-08-21",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-08-21",
       "hasSections": true,
@@ -9690,7 +9690,7 @@
       "images": []
     },
     "local-llm-voice-audio-compared": {
-      "dateModified": "2026-11-13",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-20",
       "hasSections": true,
@@ -9708,7 +9708,7 @@
       "images": []
     },
     "local-llm-images-video-compared": {
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-20",
       "hasSections": true,
@@ -9798,7 +9798,7 @@
       "images": []
     },
     "local-llm-code-development-compared": {
-      "dateModified": "2026-09-21",
+      "dateModified": "2026-11-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-21",
       "hasSections": true,

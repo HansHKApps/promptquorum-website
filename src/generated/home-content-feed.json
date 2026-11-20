@@ -9562,7 +9562,7 @@
     "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
     "excerpt": "Page Assist is a free MIT-licensed browser extension for Chrome, Firefox and Edge to chat with local AI models via Ollama. Install links and 2026 review.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-20",
     "url": "/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9571,7 +9571,7 @@
     "title": "Page-Assist-Rezension 2026: Browser-Sidebar für lokale KI-Modelle",
     "excerpt": "Page Assist ist eine kostenlose, MIT-lizenzierte Browser-Erweiterung für Chrome, Firefox und Edge: Chat mit lokalen KI-Modellen via Ollama. Rezension 2026.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-20",
     "url": "/de/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9580,7 +9580,7 @@
     "title": "Page Assist : Test 2026 de la barre latérale de navigateur pour IA locale",
     "excerpt": "Page Assist est une extension gratuite (MIT) pour Chrome, Firefox et Edge : discutez avec des modèles IA locaux via Ollama. Liens d'installation et test.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-20",
     "url": "/fr/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9589,7 +9589,7 @@
     "title": "Page Assistレビュー2026：ローカルAIモデル用ブラウザサイドバー",
     "excerpt": "Page Assistの使い方を解説。Chrome・Firefox・Edge対応の無料MIT拡張機能で、Ollamaなどのローカルモデルとチャット。インストール手順と2026年レビュー。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-20",
     "url": "/ja/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9598,7 +9598,7 @@
     "title": "Page Assist 评测2026：本地AI模型的浏览器侧边栏",
     "excerpt": "Page Assist是免费、MIT许可的浏览器扩展，支持Chrome、Firefox和Edge，可通过Ollama与本地AI模型对话。含安装链接、使用方法及2026评测。",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-20",
     "url": "/zh/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9607,7 +9607,7 @@
     "title": "Page Assist: análisis 2026 de la barra lateral de navegador para IA local",
     "excerpt": "Page Assist es una extensión gratuita (MIT) para Chrome, Firefox y Edge: chatea con modelos de IA locales vía Ollama. Enlaces de instalación y análisis.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-20",
     "url": "/es/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9616,7 +9616,7 @@
     "title": "Page Assist: análise 2026 da barra lateral de navegador para IA local",
     "excerpt": "Page Assist é uma extensão gratuita (MIT) para Chrome, Firefox e Edge: converse com modelos de IA locais via Ollama. Links de instalação e análise 2026.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-20",
     "url": "/pt/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9625,7 +9625,7 @@
     "title": "مراجعة Page Assist 2026: الشريط الجانبي للمتصفح للنماذج الذكية المحلية",
     "excerpt": "Page Assist إضافة متصفح مجانية برخصة MIT لـ Chrome وFirefox وEdge للدردشة مع نماذج ذكاء اصطناعي محلية عبر Ollama. روابط التثبيت ومراجعة 2026.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-20",
     "url": "/ar/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -9634,7 +9634,7 @@
     "title": "Page Assist 리뷰 2026: 로컬 AI 모델용 브라우저 사이드바",
     "excerpt": "Page Assist는 Chrome, Firefox, Edge에서 Ollama 등 로컬 AI 모델과 채팅하는 무료 MIT 브라우저 확장 프로그램입니다. 설치 링크와 2026년 리뷰.",
     "publishDate": "2026-09-11",
-    "dateModified": "2026-11-03",
+    "dateModified": "2026-11-20",
     "url": "/ko/local-llms/page-assist-review",
     "cluster": "local-llms"
   },
@@ -12154,7 +12154,7 @@
     "title": "Local vs Cloud AI Agents 2026: Cost, Speed, Privacy Comparison",
     "excerpt": "Cloud agents respond in 100–300ms but cost $10/1M tokens. Local agents take 2–5 sec but cost $0. Break-even at 50M tokens/month. Full 2026 comparison with decision framework.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-20",
     "url": "/local-llms/local-vs-cloud-agents",
     "cluster": "local-llms"
   },
@@ -12163,7 +12163,7 @@
     "title": "Local vs Cloud AI Agenten 2026: Kosten-, Geschwindigkeit- und Datenschutzvergleich",
     "excerpt": "Lokale vs. Cloud-KI-Agenten 2026: Datenschutz, Kosten und Fähigkeiten im Vergleich. Wann lokale Agenten reichen und wann Cloud-APIs nötig sind.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-20",
     "url": "/de/local-llms/local-vs-cloud-agents",
     "cluster": "local-llms"
   },
@@ -12172,7 +12172,7 @@
     "title": "Agents IA Cloud vs Locaux 2026 : Comparaison des coûts, vitesse et confidentialité",
     "excerpt": "Agents Cloud répondent en 100–300ms, coûtent 18€/1M tokens. Agents locaux prennent 2–5 sec, coûtent 0€. Point d'équilibre 50M tokens/mois. Comparaison 2026 complet avec cadre décisionnel.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-20",
     "url": "/fr/local-llms/local-vs-cloud-agents",
     "cluster": "local-llms"
   },
@@ -12181,7 +12181,7 @@
     "title": "Local vs Cloud AIエージェント2026: コスト・速度・プライバシー比較",
     "excerpt": "クラウドエージェント100–300ms応答、¥3,300/1M tokens。ローカルエージェント2–5秒、¥0。損益分岐点50M tokens/月。2026年完全比較ガイド。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-20",
     "url": "/ja/local-llms/local-vs-cloud-agents",
     "cluster": "local-llms"
   },
@@ -12190,7 +12190,7 @@
     "title": "本地 vs 云端AI代理2026: 成本、速度和隐私对比",
     "excerpt": "云端代理100–300ms响应，$10/1M令牌。本地代理2–5秒，$0。损益分界点50M令牌/月。2026完整比较指南。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-20",
     "url": "/zh/local-llms/local-vs-cloud-agents",
     "cluster": "local-llms"
   },
@@ -12199,7 +12199,7 @@
     "title": "Agentes de IA Local vs Cloud 2026: Comparativa de Coste, Velocidad y Privacidad",
     "excerpt": "Los agentes cloud responden en 100–300 ms pero cuestan $10/1M tokens; los locales tardan 2–5 s pero cuestan $0. Punto de equilibrio: 50M tokens/mes. 2026.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-20",
     "url": "/es/local-llms/local-vs-cloud-agents",
     "cluster": "local-llms"
   },
@@ -12208,7 +12208,7 @@
     "title": "Agentes de IA Local vs Nuvem 2026: Comparação de Custo, Velocidade e Privacidade",
     "excerpt": "Agentes na nuvem respondem em 100–300 ms mas custam $10/1M tokens; os locais demoram 2–5 s mas custam $0. Ponto de equilíbrio: 50M tokens/mês. 2026.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-20",
     "url": "/pt/local-llms/local-vs-cloud-agents",
     "cluster": "local-llms"
   },
@@ -12217,7 +12217,7 @@
     "title": "وكلاء الذكاء الاصطناعي المحليون مقابل السحابيين ⁨2026⁩: مقارنة التكلفة والسرعة والخصوصية",
     "excerpt": "الوكلاء السحابيون يستجيبون خلال ⁨100⁩–⁨300⁩ مللي ثانية بتكلفة ⁨20⁩$/مليون رمز. الوكلاء المحليون يستغرقون ⁨2⁩–⁨5⁩ ثوانٍ بتكلفة ⁨0⁩$. التعادل ⁨50⁩ مليون رمز/شهر.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-20",
     "url": "/ar/local-llms/local-vs-cloud-agents",
     "cluster": "local-llms"
   },
@@ -12226,7 +12226,7 @@
     "title": "로컬 vs 클라우드 AI 에이전트 2026: 비용, 속도, 개인정보 보호 비교",
     "excerpt": "클라우드 에이전트는 100–300ms로 응답하지만 100만 토큰당 $10의 비용이 발생합니다. 로컬 에이전트는 2–5초가 소요되지만 비용은 $0입니다. 손익분기점은 월 5,000만 토큰입니다. 의사결정 프레임워크를 포함한 2026년 전체 비교.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-20",
     "url": "/ko/local-llms/local-vs-cloud-agents",
     "cluster": "local-llms"
   },
@@ -19930,7 +19930,7 @@
     "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
     "excerpt": "6 local AI agent stacks tested on 5 real tasks over 30 days: Cline + Ollama and Continue.dev work reliably, CrewAI/AutoGen and 3 others mostly fail.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-20",
     "url": "/power-local-llm/autonomous-local-agents-actually-work",
     "cluster": "power-local-llm"
   },
@@ -19939,7 +19939,7 @@
     "title": "Lokale KI-Agenten in 2026: Was funktioniert (und was noch fehlschlägt)",
     "excerpt": "Autonome, mehrstufige lokale KI-Agenten, app-übergreifend getestet auf 6 Stacks, 5 realen Aufgaben. 2 funktionieren, 3 scheitern verdeckt, 1 unbrauchbar.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-11-20",
     "url": "/de/power-local-llm/autonomous-local-agents-actually-work",
     "cluster": "power-local-llm"
   },
@@ -19948,7 +19948,7 @@
     "title": "Agents locaux en 2026 : Ce qui fonctionne réellement (et ce qui échoue)",
     "excerpt": "Agents IA locaux autonomes et multi-étapes testés sur 6 stacks, 5 tâches réelles multi-apps. 2 fonctionnent, 3 échouent en surprise, 1 est inutilisable.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/autonomous-local-agents-actually-work",
     "cluster": "power-local-llm"
   },
@@ -19957,7 +19957,7 @@
     "title": "ローカルAIエージェント2026年：実際に機能するもの（そして失敗するもの）",
     "excerpt": "自律的でマルチステップ、アプリ横断のローカルAIエージェント6スタックを実務タスク5種類でテスト。2つは確実に機能、3つは意外に失敗、1つは使用不可能。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/autonomous-local-agents-actually-work",
     "cluster": "power-local-llm"
   },
@@ -19966,7 +19966,7 @@
     "title": "本地AI代理2026：实际可行的方案（以及失败的原因）",
     "excerpt": "自主、多步骤、跨应用的本地AI代理，6个框架实测5项真实任务。2个可靠运行，3个意外失败，1个无法使用。包括企业部署指南。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/autonomous-local-agents-actually-work",
     "cluster": "power-local-llm"
   },
@@ -19975,7 +19975,7 @@
     "title": "Agentes de IA locales en 2026: lo que realmente funciona (y lo que sigue fallando)",
     "excerpt": "Agentes de IA locales autónomos y multipaso en 6 stacks, 5 tareas reales multiaplicación. 2 funcionan, 3 fallan de forma oculta, 1 es inutilizable.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/autonomous-local-agents-actually-work",
     "cluster": "power-local-llm"
   },
@@ -19984,7 +19984,7 @@
     "title": "Agentes de IA locais em 2026: o que realmente funciona (e o que ainda falha)",
     "excerpt": "Agentes de IA locais autônomos e multipasso testados em 6 stacks, 5 tarefas reais multiaplicativo. 2 funcionam, 3 falham de forma oculta, 1 é inutilizável.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/autonomous-local-agents-actually-work",
     "cluster": "power-local-llm"
   },
@@ -19993,7 +19993,7 @@
     "title": "وكلاء الذكاء الاصطناعي المحليون في ⁨2026⁩: ما يعمل فعلاً (وما يستمر في الفشل)",
     "excerpt": "وكلاء ⁨AI⁩ محليون مستقلون، متعددو الخطوات، عابرون للتطبيقات — اختُبروا في ⁨6⁩ أطر عمل و⁨5⁩ مهام حقيقية. نجح اثنان وأخفق ثلاثة بصمت وكان واحد عديم الفائدة.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/autonomous-local-agents-actually-work",
     "cluster": "power-local-llm"
   },
@@ -20002,7 +20002,7 @@
     "title": "2026년 로컬 AI 에이전트: 실제로 작동하는 것과 여전히 실패하는 것",
     "excerpt": "자율적이고 다단계이며 앱을 넘나드는 로컬 AI 에이전트 스택 6개를 실제 작업 5가지로 테스트하였습니다. 2개는 작동, 3개는 숨겨진 방식으로 실패, 1개는 사용 불가.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/autonomous-local-agents-actually-work",
     "cluster": "power-local-llm"
   },
@@ -21955,7 +21955,7 @@
     "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
     "excerpt": "Best small local LLM for tool calling? Gemma 4 27B runs in 16 GB VRAM at ~95% well-formed calls. Compared with Qwen3, GLM-4.7, Llama 3.3 on real MCP.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/power-local-llm/best-local-models-tool-calling-2026",
     "cluster": "power-local-llm"
   },
@@ -21964,7 +21964,7 @@
     "title": "Beste lokale Modelle für Tool Calling in 2026: Benchmarks und Vergleich",
     "excerpt": "Bestes kleines lokales LLM für Tool Calling? Gemma 4 27B: 16 GB VRAM, ca. 95 % wohlgeformte Aufrufe. Verglichen mit Qwen3, GLM-4.7, Llama 3.3 auf echtem MCP.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/de/power-local-llm/best-local-models-tool-calling-2026",
     "cluster": "power-local-llm"
   },
@@ -21973,7 +21973,7 @@
     "title": "Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison",
     "excerpt": "Meilleur petit LLM local pour le tool calling ? Gemma 4 27B : 16 GB de VRAM, ~95 % d'appels valides. Comparé à Qwen3, GLM-4.7 et Llama 3.3 sur MCP réel.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/best-local-models-tool-calling-2026",
     "cluster": "power-local-llm"
   },
@@ -21982,7 +21982,7 @@
     "title": "2026年のベストローカルツール呼び出しモデル : ベンチマークと比較",
     "excerpt": "ツール呼び出しに強い小型ローカルLLMは？Gemma 4 27BはVRAM約16 GBで整形式の呼び出し率約95%。Qwen3・GLM-4.7・Llama 3.3と実MCPサーバーで比較。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/best-local-models-tool-calling-2026",
     "cluster": "power-local-llm"
   },
@@ -21991,7 +21991,7 @@
     "title": "2026年最佳本地工具调用模型：基准和比较",
     "excerpt": "工具调用最佳小型本地模型？Gemma 4 27B 仅需约16 GB VRAM，格式正确率约95%。与Qwen3、GLM-4.7、Llama 3.3在真实MCP服务器上对比。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/best-local-models-tool-calling-2026",
     "cluster": "power-local-llm"
   },
@@ -22000,7 +22000,7 @@
     "title": "Mejores modelos locales para Tool Calling en 2026: Benchmarks y comparativa",
     "excerpt": "¿Mejor LLM local pequeño para tool calling? Gemma 4 27B: 16 GB de VRAM y ~95 % de llamadas válidas. Comparado con Qwen3, GLM-4.7 y Llama 3.3 en MCP real.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/best-local-models-tool-calling-2026",
     "cluster": "power-local-llm"
   },
@@ -22009,7 +22009,7 @@
     "title": "Melhores modelos locais para Tool Calling em 2026: Benchmarks e comparativo",
     "excerpt": "Melhor LLM local pequeno para tool calling? Gemma 4 27B: 16 GB de VRAM e ~95% de chamadas válidas. Comparado a Qwen3, GLM-4.7 e Llama 3.3 em MCP real.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/best-local-models-tool-calling-2026",
     "cluster": "power-local-llm"
   },
@@ -22018,7 +22018,7 @@
     "title": "أفضل النماذج المحلية لاستدعاء الأدوات في ⁨2026⁩: المعايير والمقارنة",
     "excerpt": "ما أفضل نموذج محلي صغير لاستدعاء الأدوات؟ يعمل Gemma 4 27B بنحو 16 GB من VRAM وبدقة ~95%. مقارنة مع Qwen3 وGLM-4.7 وLlama 3.3 على خوادم MCP حقيقية.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/best-local-models-tool-calling-2026",
     "cluster": "power-local-llm"
   },
@@ -22027,7 +22027,7 @@
     "title": "2026년 Tool Calling 최고의 로컬 모델: 벤치마크 및 비교",
     "excerpt": "소형 로컬 Tool Calling 모델은? Gemma 4 27B는 VRAM 약 16 GB에서 올바른 호출 약 95%. Qwen3, GLM-4.7, Llama 3.3과 실제 MCP 서버로 비교.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/best-local-models-tool-calling-2026",
     "cluster": "power-local-llm"
   },
@@ -22279,7 +22279,7 @@
     "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
     "excerpt": "How to use MCP with Ollama: connect a local model to files, Postgres, a browser and GitHub via Goose. Working config, maintained servers, safe permissions.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/power-local-llm/local-ai-agents-with-mcp",
     "cluster": "power-local-llm"
   },
@@ -22288,7 +22288,7 @@
     "title": "Ollama MCP einrichten 2026: Lokale Modelle mit Dateien, Datenbanken und APIs verbinden",
     "excerpt": "MCP mit Ollama nutzen: Lokales Modell per Goose mit Dateien, Postgres, Browser und GitHub verbinden. Config, gepflegte Server, sichere Rechte.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/de/power-local-llm/local-ai-agents-with-mcp",
     "cluster": "power-local-llm"
   },
@@ -22297,7 +22297,7 @@
     "title": "Ollama MCP 2026 : comment connecter un modèle local à vos fichiers, bases de données et APIs",
     "excerpt": "Ollama MCP : comment connecter un modèle local à vos fichiers, Postgres, un navigateur et GitHub avec Goose. Configuration pas à pas, serveurs maintenus.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/local-ai-agents-with-mcp",
     "cluster": "power-local-llm"
   },
@@ -22306,7 +22306,7 @@
     "title": "Ollama MCP 設定 2026：ローカルモデルをファイル・データベース・API につなぐ MCPサーバー入門",
     "excerpt": "Ollama で MCPサーバーを設定する方法。Goose でローカルモデルをファイル・Postgres・ブラウザ・GitHub に接続。動作する設定例と安全な権限設計を解説。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/local-ai-agents-with-mcp",
     "cluster": "power-local-llm"
   },
@@ -22315,7 +22315,7 @@
     "title": "通过 MCP 将 Ollama 连接到文件、数据库和 API：2026 年本地配置指南",
     "excerpt": "Ollama 本身不支持 MCP，需要客户端桥接。用 Goose 把本地模型连接到文件、Postgres、浏览器和 GitHub，附可用配置、仍在维护的服务器和安全权限设置。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/local-ai-agents-with-mcp",
     "cluster": "power-local-llm"
   },
@@ -22324,7 +22324,7 @@
     "title": "Configurar MCP con Ollama 2026: conecta modelos locales a archivos, bases de datos y APIs",
     "excerpt": "Cómo usar MCP con Ollama: conecta un modelo local a archivos, Postgres, un navegador y GitHub con Goose. Configuración que funciona y permisos seguros.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/local-ai-agents-with-mcp",
     "cluster": "power-local-llm"
   },
@@ -22333,7 +22333,7 @@
     "title": "Configurar MCP no Ollama 2026: conecte modelos locais a arquivos, bancos de dados e APIs",
     "excerpt": "Como usar MCP com o Ollama: conecte um modelo local a arquivos, Postgres, navegador e GitHub com o Goose. Config funcional e servidores mantidos.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/local-ai-agents-with-mcp",
     "cluster": "power-local-llm"
   },
@@ -22342,7 +22342,7 @@
     "title": "إعداد ⁨Ollama⁩ مع ⁨MCP⁩ ⁨2026⁩: ربط النماذج المحلية بالملفات وقواعد البيانات و⁨APIs⁩",
     "excerpt": "كيف تستخدم MCP مع Ollama: اربط نموذجاً محلياً بالملفات وPostgres والمتصفح وGitHub عبر Goose. إعدادات تعمل، وخوادم مُصانة، وأذونات آمنة لوكيلك المحلي.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/local-ai-agents-with-mcp",
     "cluster": "power-local-llm"
   },
@@ -22351,7 +22351,7 @@
     "title": "Ollama MCP 연결 방법 2026: 로컬 모델을 파일, 데이터베이스, API에 연동하기",
     "excerpt": "Ollama MCP 연결 방법: Goose로 로컬 모델을 파일, Postgres, 브라우저, GitHub에 연동합니다. 실제 설정, 유지되는 서버, 안전한 권한.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/local-ai-agents-with-mcp",
     "cluster": "power-local-llm"
   },
@@ -22762,82 +22762,82 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Apps & Software Directory: 417 Tools for Running AI Locally (2026)",
-    "excerpt": "Compare 417 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
+    "title": "Local LLM Apps & Software Directory: 422 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 422 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-20",
     "url": "/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 417 Apps zum lokalen Ausführen (2026)",
-    "excerpt": "Vergleichen Sie 417 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 422 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 422 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-20",
     "url": "/de/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Répertoire des logiciels et outils LLM locaux : 417 apps pour exécuter l'IA en local (2026)",
-    "excerpt": "Comparez 417 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 422 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 422 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-20",
     "url": "/fr/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす417のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを417件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす422のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを422件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-20",
     "url": "/ja/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "本地AI工具与LLM应用目录：417款软件，在本地运行AI（2026）",
-    "excerpt": "对比417款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：422款软件，在本地运行AI（2026）",
+    "excerpt": "对比422款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-20",
     "url": "/zh/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "Directorio de herramientas y software de LLM local: 417 apps para ejecutar IA en local (2026)",
-    "excerpt": "Compara 417 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
+    "title": "Directorio de herramientas y software de LLM local: 422 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 422 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-20",
     "url": "/es/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 417 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 417 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 422 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 422 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-20",
     "url": "/pt/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 417 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 417 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 422 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 422 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-20",
     "url": "/ar/directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 417개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 417개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 422개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 422개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-19",
+    "dateModified": "2026-11-20",
     "url": "/ko/directory",
     "cluster": "power-local-llm"
   },
@@ -25114,7 +25114,7 @@
     "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
     "excerpt": "Run a GPT-4V alternative fully on-device in 2026: whisper.cpp, Gemma 4, Qwen3-VL, Ollama and Piper TTS. Full Python orchestrator, no cloud.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-20",
     "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
     "cluster": "power-local-llm"
   },
@@ -25123,7 +25123,7 @@
     "title": "Lokale multimodale KI-Pipeline 2026: Sprache, Vision und Text-Modelle offline kombinieren",
     "excerpt": "Lokale multimodale KI-Pipeline 2026: whisper.cpp (Sprache), Gemma 4 E4B (Vision), Ollama (Text) und Piper TTS. Architektur, Hardware-Tiers und Code. Offline.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-20",
     "url": "/de/power-local-llm/local-multimodal-pipeline-voice-vision-text",
     "cluster": "power-local-llm"
   },
@@ -25132,7 +25132,7 @@
     "title": "Pipeline IA multimodale locale 2026 : combiner voix, vision et texte hors ligne",
     "excerpt": "Construire un pipeline IA multimodal local en 2026 : whisper.cpp pour la saisie vocale, Gemma 4 E4B pour la vision, Ollama pour le raisonnement textuel, Piper TTS pour la sortie vocale. Architecture, niveaux matériels, cas d'usage et code Python de l'orchestrateur. Entièrement hors ligne.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/local-multimodal-pipeline-voice-vision-text",
     "cluster": "power-local-llm"
   },
@@ -25141,7 +25141,7 @@
     "title": "ローカルマルチモーダルAIパイプライン2026：音声・ビジョン・テキストモデルをオフラインで統合",
     "excerpt": "2026年にローカルマルチモーダルAIパイプラインを構築：音声入力にwhisper.cpp、ビジョンにGemma 4 E4B、テキスト推論にOllama、音声出力にPiper TTS。アーキテクチャ、ハードウェア階層、ユースケース、Pythonオーケストレーターコード。完全オフライン対応。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/local-multimodal-pipeline-voice-vision-text",
     "cluster": "power-local-llm"
   },
@@ -25150,7 +25150,7 @@
     "title": "本地多模态AI流水线2026：离线整合语音、视觉与文本模型",
     "excerpt": "2026年构建本地多模态AI流水线：语音输入用whisper.cpp，视觉用Gemma 4 E4B，文本推理用Ollama，语音输出用Piper TTS。包含架构设计、硬件配置层级、使用场景和Python编排器代码。完全离线运行。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/local-multimodal-pipeline-voice-vision-text",
     "cluster": "power-local-llm"
   },
@@ -25159,7 +25159,7 @@
     "title": "Pipeline multimodal de IA local 2026: combina voz, visión y texto sin conexión",
     "excerpt": "Ejecuta IA de voz, visión y texto en local en 2026 con whisper.cpp, Gemma 4 E4B, Ollama y Piper TTS. Orquestador Python completo, sin nube ni claves de API.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/local-multimodal-pipeline-voice-vision-text",
     "cluster": "power-local-llm"
   },
@@ -25168,7 +25168,7 @@
     "title": "Pipeline multimodal de IA local 2026: combine voz, visão e texto offline",
     "excerpt": "Rode IA de voz, visão e texto localmente em 2026 com whisper.cpp, Gemma 4 E4B, Ollama e Piper TTS. Orquestrador Python completo, sem nuvem nem chaves de API.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/local-multimodal-pipeline-voice-vision-text",
     "cluster": "power-local-llm"
   },
@@ -25177,7 +25177,7 @@
     "title": "خط أنابيب الذكاء الاصطناعي متعدد الوسائط المحلي ⁨2026⁩: دمج الصوت والرؤية والنص دون اتصال",
     "excerpt": "خط أنابيب بدون اتصال: whisper.cpp للصوت وGemma 4 E4B للرؤية وOllama للنص وPiper TTS للإخراج. منسِّق Python غير متزامن مع 5 حالات استخدام عملية محلية.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/local-multimodal-pipeline-voice-vision-text",
     "cluster": "power-local-llm"
   },
@@ -25186,7 +25186,7 @@
     "title": "로컬 멀티모달 AI 파이프라인 2026: 음성·비전·텍스트를 오프라인으로 결합하기",
     "excerpt": "2026년 whisper.cpp, Gemma 4 E4B, Ollama, Piper TTS로 음성·비전·텍스트 AI를 로컬에서 실행하세요. 완전한 Python 오케스트레이터 코드 포함, 클라우드나 API 키 불필요.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/local-multimodal-pipeline-voice-vision-text",
     "cluster": "power-local-llm"
   },
@@ -26572,7 +26572,7 @@
     "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
     "excerpt": "Local AI video models (Wan 2.2, LTX-2, HunyuanVideo) are free if your GPU can run them. Invideo's cloud does everything for $17/mo. Honest comparison: VRAM, licenses, fine print.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-11-20",
     "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26581,7 +26581,7 @@
     "title": "Invideo vs. lokale KI-Videogenerierung: Die eine kostet 0 $ plus Ihr Wochenende – die andere kostet 17 $",
     "excerpt": "Lokale KI-Videomodelle (Wan 2.2, LTX-2, HunyuanVideo) sind kostenlos, wenn Ihre GPU sie ausführen kann. Invideos Cloud erledigt alles für 17 $/Monat. Ehrlicher Vergleich: VRAM, Lizenzen, Kleingedrucktes.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/de/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26590,7 +26590,7 @@
     "title": "Invideo vs vidéo IA locale : une option ne coûte rien (plus votre week-end), l'autre coûte 17 $",
     "excerpt": "Les modèles de vidéo IA locale (Wan 2.2, LTX-2, HunyuanVideo) sont gratuits si votre GPU suit. Le cloud invideo fait tout pour 17 $/mois. Comparatif honnête : VRAM, licences, clauses.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26599,7 +26599,7 @@
     "title": "Invideo vs ローカルAI動画生成：一方は$0＋週末の時間、もう一方は$17",
     "excerpt": "ローカルAI動画モデル（Wan 2.2、LTX-2、HunyuanVideo）は、GPUが対応していれば無料です。Invideoのクラウドなら月額$17ですべて完結します。VRAM、ライセンス、細則まで正直に比較します。",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26608,7 +26608,7 @@
     "title": "Invideo 与本地 AI 视频对比：一个 0 美元加你的周末，另一个 17 美元",
     "excerpt": "本地 AI 视频模型(Wan 2.2、LTX-2、HunyuanVideo)如果你的 GPU 够用就是免费的。Invideo 的云端方案每月 17 美元包办一切。诚实对比:VRAM、许可证、细则条款。",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26617,7 +26617,7 @@
     "title": "Invideo vs. IA de Video Local: Una Opción Cuesta $0 Más Tu Fin de Semana — la Otra Cuesta $17",
     "excerpt": "Los modelos de video con IA local (Wan 2.2, LTX-2, HunyuanVideo) son gratis si tu GPU puede correrlos. La nube de invideo lo hace todo por $17/mes. Comparación honesta: VRAM, licencias, letra pequeña.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26626,7 +26626,7 @@
     "title": "Invideo vs Vídeo IA Local: Uma Opção Custa $0 Mais o Seu Fim de Semana — a Outra Custa $17",
     "excerpt": "Modelos de vídeo IA locais (Wan 2.2, LTX-2, HunyuanVideo) são gratuitos se sua GPU aguentar. O invideo na nuvem faz tudo por $17/mês. Comparação honesta: VRAM, licenças, letras miúdas.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26635,7 +26635,7 @@
     "title": "Invideo مقابل الفيديو المحلي بالذكاء الاصطناعي: خيار بلا تكلفة يستهلك عطلتك مقابل خيار بـ 17 دولارًا",
     "excerpt": "نماذج الفيديو المحلية بالذكاء الاصطناعي (Wan 2.2 وLTX-2 وHunyuanVideo) مجانية إذا كان معالج الرسومات لديك يدعمها. تتولى منصة invideo السحابية كل شيء مقابل 17 دولارًا شهريًا. مقارنة صادقة: VRAM، التراخيص، والتفاصيل الدقيقة.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26644,7 +26644,7 @@
     "title": "Invideo vs 로컬 AI 비디오: 한쪽은 $0에 주말 시간, 다른 한쪽은 $17",
     "excerpt": "로컬 AI 비디오 모델(Wan 2.2, LTX-2, HunyuanVideo)은 GPU만 있으면 무료입니다. Invideo의 클라우드는 모든 것을 $17/월에 해결합니다. VRAM, 라이선스, 세부 조항까지 정직하게 비교합니다.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/local-ai-video-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26653,7 +26653,7 @@
     "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
     "excerpt": "FLUX, Stable Diffusion 3.5 and Qwen-Image run free on your own GPU. Adobe Firefly and getimg.ai do it all in the cloud from $8-10/mo. Honest comparison: VRAM, licenses, fine print, use cases.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26662,7 +26662,7 @@
     "title": "Lokale KI-Bilder sind kostenlos. Cloud-KI-Bilder sind sofort da. Ihre GPU entscheidet.",
     "excerpt": "FLUX, Stable Diffusion 3.5 und Qwen-Image laufen kostenlos auf Ihrer eigenen GPU. Adobe Firefly und getimg.ai erledigen alles in der Cloud ab 8-10 $/Monat. Ehrlicher Vergleich: VRAM, Lizenzen, Kleingedrucktes, Anwendungsfälle.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/de/power-local-llm/local-ai-image-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26671,7 +26671,7 @@
     "title": "Les images IA locales sont gratuites. Les images IA cloud sont instantanées. Votre GPU décide.",
     "excerpt": "FLUX, Stable Diffusion 3.5 et Qwen-Image tournent gratuitement sur votre GPU. Adobe Firefly et getimg.ai font tout dans le cloud dès 8-10 $/mois. Comparatif honnête : VRAM, licences, clauses, cas d’usage.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/local-ai-image-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26680,7 +26680,7 @@
     "title": "ローカルAI画像生成は無料。クラウドAI画像は即時。決め手はGPUです。",
     "excerpt": "FLUX、Stable Diffusion 3.5、Qwen-Imageは自分のGPUで無料実行可能。Adobe Fireflyとgetimg.aiは月額$8〜10でクラウド完結。VRAM・ライセンス・細則・ユースケースを正直に比較。",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/local-ai-image-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26689,7 +26689,7 @@
     "title": "本地AI图像免费,云端AI图像即时,你的GPU决定选哪个",
     "excerpt": "FLUX、Stable Diffusion 3.5和Qwen-Image可在自己的GPU上免费运行。Adobe Firefly和getimg.ai则从每月$8-10起提供全云端方案。诚实对比:显存、许可、细则条款、应用场景。",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/local-ai-image-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26698,7 +26698,7 @@
     "title": "Las imágenes con IA local son gratis. Las de la nube son instantáneas. Tu GPU decide.",
     "excerpt": "FLUX, Stable Diffusion 3.5 y Qwen-Image funcionan gratis en tu propia GPU. Adobe Firefly y getimg.ai lo hacen todo en la nube desde $8-10/mes. Comparativa honesta: VRAM, licencias, letra pequeña, casos de uso.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/local-ai-image-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26707,7 +26707,7 @@
     "title": "Imagens de IA Local São Gratuitas. Imagens de IA na Nuvem São Instantâneas. Sua GPU Decide.",
     "excerpt": "FLUX, Stable Diffusion 3.5 e Qwen-Image rodam de graça na sua própria GPU. Adobe Firefly e getimg.ai fazem tudo na nuvem a partir de $8-10/mês. Comparação honesta: VRAM, licenças, letras miúdas, casos de uso.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/local-ai-image-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26716,7 +26716,7 @@
     "title": "الصور بالذكاء الاصطناعي المحلي مجانية. الصور بالذكاء الاصطناعي السحابي فورية. معالج الرسوميات (GPU) لديك هو من يقرر.",
     "excerpt": "تعمل FLUX وStable Diffusion 3.5 وQwen-Image مجاناً على معالج الرسوميات (GPU) الخاص بك. تقدّم Adobe Firefly وgetimg.ai كل ذلك عبر السحابة بدءاً من 8-10 دولارات شهرياً. مقارنة صريحة: VRAM، التراخيص، التفاصيل الدقيقة، حالات الاستخدام.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/local-ai-image-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -26725,7 +26725,7 @@
     "title": "로컬 AI 이미지는 무료입니다. 클라우드 AI 이미지는 즉각적입니다. 선택은 GPU가 결정합니다.",
     "excerpt": "FLUX, Stable Diffusion 3.5, Qwen-Image는 내 GPU에서 무료로 실행됩니다. Adobe Firefly와 getimg.ai는 월 $8-10부터 클라우드에서 모든 것을 처리합니다. VRAM, 라이선스, 세부 조항, 사용 사례를 다루는 솔직한 비교.",
     "publishDate": "2026-08-21",
-    "dateModified": "2026-08-21",
+    "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/local-ai-image-generation-vs-cloud",
     "cluster": "power-local-llm"
   },
@@ -34427,81 +34427,81 @@
   {
     "lang": "en",
     "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-    "excerpt": "Compare 49 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
+    "excerpt": "Compare 50 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-20",
     "url": "/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Lokale Sprach- und Audio-Werkzeuge im Vergleich (2026): Text-zu-Sprache, Sprache-zu-Text und Sprachagenten",
-    "excerpt": "Vergleich von 49 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
+    "excerpt": "Vergleich von 50 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-20",
     "url": "/de/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Outils vocaux locaux comparés (2026) : synthèse vocale, transcription et agents vocaux",
-    "excerpt": "Comparez 49 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
+    "excerpt": "Comparez 50 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ローカル音声・スピーチツール比較(2026):音声合成・音声認識・ボイスエージェント",
-    "excerpt": "ローカル音声ツール49種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
+    "excerpt": "ローカル音声ツール50種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "本地语音工具对比(2026):语音合成、语音转文字与语音助手",
-    "excerpt": "并排对比49款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
+    "excerpt": "并排对比50款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Herramientas locales de voz y habla comparadas (2026): texto a voz, voz a texto y agentes de voz",
-    "excerpt": "Compara 49 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
+    "excerpt": "Compara 50 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Ferramentas locais de voz e fala comparadas (2026): síntese de voz, transcrição e agentes de voz",
-    "excerpt": "Compare 49 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
+    "excerpt": "Compare 50 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مقارنة أدوات الصوت والكلام المحلية (2026): تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون",
-    "excerpt": "قارن 49 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
+    "excerpt": "قارن 50 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "로컬 음성·음성 인식 도구 비교(2026): 음성 합성, 음성 인식, 음성 에이전트",
-    "excerpt": "로컬 음성 도구 49개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 음성 도구 50개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-11-13",
+    "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/local-llm-voice-audio-compared",
     "cluster": "power-local-llm"
   },
@@ -34510,7 +34510,7 @@
     "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
     "excerpt": "Compare 43 local image tools side by side: image and video generation (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI and more) and vision and OCR models. Licenses, platforms, inpainting, extensions, API and more, from official documentation.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-20",
     "url": "/power-local-llm/local-llm-images-video-compared",
     "cluster": "power-local-llm"
   },
@@ -34519,7 +34519,7 @@
     "title": "Lokale Bild-, Video- und Vision-Tools im Vergleich (2026): Generierung, Vision und OCR",
     "excerpt": "Vergleich von 43 lokalen Bild-Tools: Bild- und Videogenerierung (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI u. a.) sowie Vision- und OCR-Modelle. Lizenzen, Plattformen, Inpainting, Erweiterungen, API laut offizieller Dokumentation.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-20",
     "url": "/de/power-local-llm/local-llm-images-video-compared",
     "cluster": "power-local-llm"
   },
@@ -34528,7 +34528,7 @@
     "title": "Outils locaux d'image, de vidéo et de vision : comparatif (2026) — génération, vision et OCR",
     "excerpt": "Comparez 43 outils d'image locaux : génération d'images et de vidéos (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) et modèles de vision et OCR. Licences, plateformes, inpainting, extensions, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/local-llm-images-video-compared",
     "cluster": "power-local-llm"
   },
@@ -34537,7 +34537,7 @@
     "title": "ローカル画像・動画・ビジョンツール比較(2026):生成、ビジョン、OCR",
     "excerpt": "ローカル画像ツール43種を比較:画像・動画生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAIなど)とビジョン・OCRモデル。ライセンス、対応OS、インペイント、拡張機能、APIなどを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/local-llm-images-video-compared",
     "cluster": "power-local-llm"
   },
@@ -34546,7 +34546,7 @@
     "title": "本地图像、视频与视觉工具对比(2026):生成、视觉与OCR",
     "excerpt": "并排对比43款本地图像工具:图像与视频生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAI等)以及视觉与OCR模型。许可证、平台、局部重绘、扩展、API等,均来自官方文档。",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/local-llm-images-video-compared",
     "cluster": "power-local-llm"
   },
@@ -34555,7 +34555,7 @@
     "title": "Herramientas locales de imagen, vídeo y visión comparadas (2026): generación, visión y OCR",
     "excerpt": "Compara 43 herramientas locales de imagen: generación de imagen y vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) y modelos de visión y OCR. Licencias, plataformas y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/local-llm-images-video-compared",
     "cluster": "power-local-llm"
   },
@@ -34564,7 +34564,7 @@
     "title": "Ferramentas locais de imagem, vídeo e visão comparadas (2026): geração, visão e OCR",
     "excerpt": "Compare 43 ferramentas locais de imagem: geração de imagem e vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI e outras) e modelos de visão e OCR. Licenças, plataformas, inpainting, extensões e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/local-llm-images-video-compared",
     "cluster": "power-local-llm"
   },
@@ -34573,7 +34573,7 @@
     "title": "مقارنة أدوات الصور والفيديو والرؤية المحلية (2026): التوليد والرؤية وOCR",
     "excerpt": "قارن 43 أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو (AUTOMATIC1111 وComfyUI وFooocus وInvokeAI وغيرها) ونماذج الرؤية وOCR. التراخيص والمنصات والطلاء الداخلي والإضافات وواجهة API، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/local-llm-images-video-compared",
     "cluster": "power-local-llm"
   },
@@ -34582,7 +34582,7 @@
     "title": "로컬 이미지·영상·비전 도구 비교(2026): 생성, 비전, OCR",
     "excerpt": "로컬 이미지 도구 43개를 나란히 비교합니다: 이미지·영상 생성(AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI 등)과 비전·OCR 모델. 라이선스, 플랫폼, 인페인팅, 확장, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/local-llm-images-video-compared",
     "cluster": "power-local-llm"
   },
@@ -34670,7 +34670,7 @@
   {
     "lang": "en",
     "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-    "excerpt": "Compare 83 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
+    "excerpt": "Compare 84 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34679,7 +34679,7 @@
   {
     "lang": "de",
     "title": "Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche",
-    "excerpt": "83 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
+    "excerpt": "84 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34688,7 +34688,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche",
-    "excerpt": "Comparez 83 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 84 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34697,7 +34697,7 @@
   {
     "lang": "ja",
     "title": "ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索",
-    "excerpt": "ローカルの知識・検索ツール83種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
+    "excerpt": "ローカルの知識・検索ツール84種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34706,7 +34706,7 @@
   {
     "lang": "zh",
     "title": "本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索",
-    "excerpt": "并排对比83款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
+    "excerpt": "并排对比84款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34715,7 +34715,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda",
-    "excerpt": "Compara 83 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
+    "excerpt": "Compara 84 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34724,7 +34724,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca",
-    "excerpt": "Compare 83 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
+    "excerpt": "Compare 84 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34733,7 +34733,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث",
-    "excerpt": "قارن 83 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
+    "excerpt": "قارن 84 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34742,7 +34742,7 @@
   {
     "lang": "ko",
     "title": "로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색",
-    "excerpt": "로컬 지식·검색 도구 83개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 지식·검색 도구 84개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -34913,81 +34913,81 @@
   {
     "lang": "en",
     "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-    "excerpt": "Compare 83 local coding and agent tools side by side: coding assistants (Cline, Continue, Aider, Tabby), agent frameworks (CrewAI, LangGraph, AutoGen), autonomous agents and workflow builders (n8n, Dify). Local LLMs, MCP, VS Code, from official docs.",
+    "excerpt": "Compare 84 local coding and agent tools side by side: coding assistants (Cline, Continue, Aider, Tabby), agent frameworks (CrewAI, LangGraph, AutoGen), autonomous agents and workflow builders (n8n, Dify). Local LLMs, MCP, VS Code, from official docs.",
     "publishDate": "2026-09-21",
-    "dateModified": "2026-09-21",
+    "dateModified": "2026-11-20",
     "url": "/power-local-llm/local-llm-code-development-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Lokale Coding-Assistenten, Agenten und Workflow-Tools im Vergleich (2026): IDE-Plugins, Agent-Frameworks und autonome Agenten",
-    "excerpt": "Vergleich von 83 lokalen Coding- und Agenten-Tools: Coding-Assistenten (Cline, Continue, Aider, Tabby), Agent-Frameworks (CrewAI, LangGraph, AutoGen), autonome Agenten und Workflow-Builder (n8n, Dify). Lokale LLMs, MCP, VS Code laut offizieller Doku.",
+    "excerpt": "Vergleich von 84 lokalen Coding- und Agenten-Tools: Coding-Assistenten (Cline, Continue, Aider, Tabby), Agent-Frameworks (CrewAI, LangGraph, AutoGen), autonome Agenten und Workflow-Builder (n8n, Dify). Lokale LLMs, MCP, VS Code laut offizieller Doku.",
     "publishDate": "2026-09-21",
-    "dateModified": "2026-09-21",
+    "dateModified": "2026-11-20",
     "url": "/de/power-local-llm/local-llm-code-development-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Assistants de code, agents et outils de workflow locaux : comparatif (2026) — plugins IDE, frameworks d'agents et agents autonomes",
-    "excerpt": "Comparez 83 outils locaux de code et d'agents : assistants (Cline, Continue, Aider, Tabby), frameworks d'agents (CrewAI, LangGraph, AutoGen), agents autonomes et constructeurs de workflows (n8n, Dify). LLM locaux, MCP, VS Code, d'après les docs officielles.",
+    "excerpt": "Comparez 84 outils locaux de code et d'agents : assistants (Cline, Continue, Aider, Tabby), frameworks d'agents (CrewAI, LangGraph, AutoGen), agents autonomes et constructeurs de workflows (n8n, Dify). LLM locaux, MCP, VS Code, d'après les docs officielles.",
     "publishDate": "2026-09-21",
-    "dateModified": "2026-09-21",
+    "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/local-llm-code-development-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ローカルのコーディングアシスタント・エージェント・ワークフローツール比較(2026):IDEプラグイン、エージェントフレームワーク、自律型エージェント",
-    "excerpt": "ローカルのコーディング/エージェントツール83件を比較:コーディングアシスタント(Cline、Continue、Aider、Tabby)、エージェントフレームワーク(CrewAI、LangGraph、AutoGen)、自律型エージェント、ワークフロービルダー(n8n、Dify)。公式ドキュメントに基づく。",
+    "excerpt": "ローカルのコーディング/エージェントツール84件を比較:コーディングアシスタント(Cline、Continue、Aider、Tabby)、エージェントフレームワーク(CrewAI、LangGraph、AutoGen)、自律型エージェント、ワークフロービルダー(n8n、Dify)。公式ドキュメントに基づく。",
     "publishDate": "2026-09-21",
-    "dateModified": "2026-09-21",
+    "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/local-llm-code-development-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "本地编程助手、智能体与工作流工具对比(2026):IDE插件、智能体框架与自主智能体",
-    "excerpt": "并排对比83款本地编程与智能体工具:编程助手(Cline、Continue、Aider、Tabby)、智能体框架(CrewAI、LangGraph、AutoGen)、自主智能体与工作流构建器(n8n、Dify)。本地LLM、MCP、VS Code,数据来自官方文档。",
+    "excerpt": "并排对比84款本地编程与智能体工具:编程助手(Cline、Continue、Aider、Tabby)、智能体框架(CrewAI、LangGraph、AutoGen)、自主智能体与工作流构建器(n8n、Dify)。本地LLM、MCP、VS Code,数据来自官方文档。",
     "publishDate": "2026-09-21",
-    "dateModified": "2026-09-21",
+    "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/local-llm-code-development-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Comparativa (2026) de asistentes de código, agentes y herramientas de flujo de trabajo locales: plugins de IDE, frameworks de agentes y agentes autónomos",
-    "excerpt": "Compara 83 herramientas locales de código y agentes: asistentes, frameworks, agentes autónomos y constructores de flujos (n8n, Dify), según la documentación oficial.",
+    "excerpt": "Compara 84 herramientas locales de código y agentes: asistentes, frameworks, agentes autónomos y constructores de flujos (n8n, Dify), según la documentación oficial.",
     "publishDate": "2026-09-21",
-    "dateModified": "2026-09-21",
+    "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/local-llm-code-development-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Assistentes de código, agentes e ferramentas de fluxo de trabalho locais comparados (2026): plugins de IDE, frameworks de agentes e agentes autônomos",
-    "excerpt": "Compare 83 ferramentas locais de código e agentes: assistentes de código (Cline, Continue, Aider, Tabby), frameworks de agentes (CrewAI, LangGraph, AutoGen), agentes autônomos e construtores de fluxo (n8n, Dify). LLMs locais, MCP, VS Code.",
+    "excerpt": "Compare 84 ferramentas locais de código e agentes: assistentes de código (Cline, Continue, Aider, Tabby), frameworks de agentes (CrewAI, LangGraph, AutoGen), agentes autônomos e construtores de fluxo (n8n, Dify). LLMs locais, MCP, VS Code.",
     "publishDate": "2026-09-21",
-    "dateModified": "2026-09-21",
+    "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/local-llm-code-development-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مقارنة مساعدات البرمجة المحلية والوكلاء وأدوات سير العمل (2026): إضافات IDE وأطر الوكلاء والوكلاء المستقلة",
-    "excerpt": "قارن 83 أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة (Cline وContinue وAider وTabby)، وأطر الوكلاء (CrewAI وLangGraph وAutoGen)، والوكلاء المستقلة وأدوات سير العمل (n8n وDify). نماذج محلية وMCP وVS Code، من الوثائق الرسمية.",
+    "excerpt": "قارن 84 أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة (Cline وContinue وAider وTabby)، وأطر الوكلاء (CrewAI وLangGraph وAutoGen)، والوكلاء المستقلة وأدوات سير العمل (n8n وDify). نماذج محلية وMCP وVS Code، من الوثائق الرسمية.",
     "publishDate": "2026-09-21",
-    "dateModified": "2026-09-21",
+    "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/local-llm-code-development-compared",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "로컬 코딩 어시스턴트·에이전트·워크플로 도구 비교(2026): IDE 플러그인, 에이전트 프레임워크, 자율 에이전트",
-    "excerpt": "로컬 코딩·에이전트 도구 83개를 나란히 비교: 코딩 어시스턴트(Cline, Continue, Aider, Tabby), 에이전트 프레임워크(CrewAI, LangGraph, AutoGen), 자율 에이전트, 워크플로 빌더(n8n, Dify). 로컬 LLM, MCP, VS Code, 공식 문서 기준.",
+    "excerpt": "로컬 코딩·에이전트 도구 84개를 나란히 비교: 코딩 어시스턴트(Cline, Continue, Aider, Tabby), 에이전트 프레임워크(CrewAI, LangGraph, AutoGen), 자율 에이전트, 워크플로 빌더(n8n, Dify). 로컬 LLM, MCP, VS Code, 공식 문서 기준.",
     "publishDate": "2026-09-21",
-    "dateModified": "2026-09-21",
+    "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/local-llm-code-development-compared",
     "cluster": "power-local-llm"
   },
@@ -47305,6 +47305,168 @@
   },
   {
     "lang": "en",
+    "title": "GenOffice Review: Open-Source AI Office Suite for Word, Excel and PowerPoint Files",
+    "excerpt": "GenOffice is a free open-source desktop office suite with built-in AI for Word, Excel and PowerPoint files. Local editing, cloud AI by default, privacy.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/power-local-llm/genoffice-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "GenOffice-Rezension: Open-Source-KI-Office-Suite für Word-, Excel- und PowerPoint-Dateien",
+    "excerpt": "GenOffice ist eine kostenlose Open-Source-Office-Suite mit KI für Word-, Excel- und PowerPoint-Dateien. Lokale Bearbeitung, KI standardmäßig in der Cloud.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/de/power-local-llm/genoffice-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de GenOffice : suite bureautique IA open source pour fichiers Word, Excel et PowerPoint",
+    "excerpt": "GenOffice est une suite bureautique gratuite et open source avec IA pour fichiers Word, Excel et PowerPoint. Édition locale, IA dans le cloud par défaut.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/fr/power-local-llm/genoffice-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "GenOfficeレビュー：Word・Excel・PowerPointファイルを扱うオープンソースのAIオフィススイート",
+    "excerpt": "GenOfficeはAI搭載の無料オープンソースのデスクトップオフィススイート。Word・Excel・PowerPointに対応。編集はローカル、AIは標準でクラウドです。",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ja/power-local-llm/genoffice-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "GenOffice 评测：处理 Word、Excel 和 PowerPoint 文件的开源 AI 办公套件",
+    "excerpt": "GenOffice 是内置 AI 的免费开源桌面办公套件，支持 Word、Excel 和 PowerPoint 文件。编辑在本地完成，AI 默认走云端，附隐私说明。",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/zh/power-local-llm/genoffice-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de GenOffice: suite ofimática de código abierto con IA para archivos de Word, Excel y PowerPoint",
+    "excerpt": "GenOffice es una suite ofimática gratuita y de código abierto con IA para Word, Excel y PowerPoint. Edición local, IA en la nube por defecto, privacidad.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/es/power-local-llm/genoffice-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do GenOffice: suíte de escritório com IA de código aberto para arquivos Word, Excel e PowerPoint",
+    "excerpt": "O GenOffice é uma suíte de escritório gratuita e de código aberto com IA para Word, Excel e PowerPoint. Edição local, IA na nuvem por padrão, privacidade.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/pt/power-local-llm/genoffice-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة GenOffice: حزمة مكتبية مفتوحة المصدر بالذكاء الاصطناعي لملفات Office",
+    "excerpt": "GenOffice حزمة مكتبية مجانية ومفتوحة المصدر لسطح المكتب مع ذكاء اصطناعي لملفات Word وExcel وPowerPoint. التحرير محلي والذكاء الاصطناعي سحابي افتراضيًا.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ar/power-local-llm/genoffice-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "GenOffice 리뷰: Word·Excel·PowerPoint 파일을 다루는 오픈소스 AI 오피스 제품군",
+    "excerpt": "GenOffice는 AI를 내장한 무료 오픈소스 데스크톱 오피스입니다. Word·Excel·PowerPoint 지원, 편집은 로컬, AI는 기본 클라우드입니다.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ko/power-local-llm/genoffice-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Modly Review: Local Open-Source Image-to-3D Generator",
+    "excerpt": "Modly is a free desktop app that generates 3D meshes from images or prompts on your own GPU. Platforms, GPU needs, extensions, privacy and limits.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/power-local-llm/modly-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Modly-Rezension: lokaler Open-Source-Bild-zu-3D-Generator",
+    "excerpt": "Modly ist eine kostenlose Desktop-App, die 3D-Meshes aus Bildern oder Prompts auf Ihrer eigenen GPU erzeugt. Plattformen, GPU-Bedarf, Datenschutz, Grenzen.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/de/power-local-llm/modly-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Modly : générateur local open source d’image vers 3D",
+    "excerpt": "Modly est une application de bureau gratuite qui génère des maillages 3D à partir d’images ou de prompts sur votre propre GPU. Plateformes, GPU, limites.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/fr/power-local-llm/modly-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Modlyレビュー：ローカル画像→3D生成アプリ",
+    "excerpt": "Modlyは画像やプロンプトから3Dメッシュを自分のGPUで生成する無料デスクトップアプリです。対応OS、GPU要件、プライバシー、制限事項を解説します。",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ja/power-local-llm/modly-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Modly 评测：本地运行的开源图片转 3D 生成器",
+    "excerpt": "Modly 是免费桌面应用，可在您自己的 GPU 上根据图片或提示词生成 3D 网格。涵盖支持平台、显卡需求、模型扩展、隐私、模型许可与局限，并说明哪些内容未经核实。",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/zh/power-local-llm/modly-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Modly: generador local y de código abierto de imagen a 3D",
+    "excerpt": "Modly es una app de escritorio gratuita que genera mallas 3D a partir de imágenes o prompts en tu propia GPU. Plataformas, GPU, privacidad y límites.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/es/power-local-llm/modly-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Modly: gerador local e de código aberto de imagem para 3D",
+    "excerpt": "O Modly é um app de desktop gratuito que gera malhas 3D a partir de imagens ou prompts na sua própria GPU. Plataformas, GPU, privacidade e limites.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/pt/power-local-llm/modly-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Modly — مولّد محلي مفتوح المصدر من الصورة إلى ثلاثي الأبعاد",
+    "excerpt": "تطبيق Modly مجاني لسطح المكتب يولّد مجسمات ثلاثية الأبعاد من الصور أو الأوصاف على بطاقتك الرسومية. المنصات ومتطلبات GPU والإضافات والخصوصية والحدود.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ar/power-local-llm/modly-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Modly 리뷰: 로컬 이미지→3D 생성기",
+    "excerpt": "Modly는 이미지나 프롬프트로 3D 메시를 내 GPU에서 생성하는 무료 데스크톱 앱입니다. 지원 플랫폼, GPU 요구 사항, 개인정보 보호, 한계를 정리했습니다.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ko/power-local-llm/modly-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Open Generative AI Review: Open-Source Image and Video Studio",
     "excerpt": "Open Generative AI is an MIT-licensed image, video and lip-sync studio. It uses the paid Muapi API for most models and local engines in the desktop app.",
     "publishDate": "2026-11-18",
@@ -47787,6 +47949,87 @@
     "publishDate": "2026-11-19",
     "dateModified": "2026-11-19",
     "url": "/ko/power-local-llm/browser-use-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Nanobrowser Review: Free Open-Source AI Browser Agent for Chrome and Edge",
+    "excerpt": "Nanobrowser is a free, open-source AI browser agent for Chrome and Edge that works with cloud models or local Ollama. Privacy, modes, limits; untested.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/power-local-llm/nanobrowser-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Nanobrowser im Test: Kostenloser Open-Source-KI-Browser-Agent für Chrome und Edge",
+    "excerpt": "Nanobrowser ist ein kostenloser, quelloffener KI-Browser-Agent für Chrome und Edge mit Cloud-Modellen oder lokalem Ollama. Datenschutz, Modi, Grenzen.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/de/power-local-llm/nanobrowser-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Nanobrowser : agent de navigateur IA gratuit et open source pour Chrome et Edge",
+    "excerpt": "Nanobrowser est un agent de navigateur IA gratuit et open source pour Chrome et Edge, avec modèles cloud ou Ollama local. Confidentialité, modes, limites.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/fr/power-local-llm/nanobrowser-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Nanobrowser レビュー：Chrome・Edge向け無料オープンソースAIブラウザエージェント",
+    "excerpt": "Nanobrowserは、ChromeとEdge向けの無料オープンソースAIブラウザエージェント。クラウドモデルやローカルOllamaに対応。プライバシーと制約を解説。未検証。",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ja/power-local-llm/nanobrowser-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Nanobrowser 评测：适用于 Chrome 和 Edge 的免费开源 AI 浏览器智能体",
+    "excerpt": "Nanobrowser 是适用于 Chrome 和 Edge 的免费开源 AI 浏览器智能体，支持云端模型或本地 Ollama。隐私、模式与局限；未经测试。",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/zh/power-local-llm/nanobrowser-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de Nanobrowser: agente de navegador con IA gratuito y de código abierto para Chrome y Edge",
+    "excerpt": "Nanobrowser es un agente de IA gratuito y de código abierto para Chrome y Edge con modelos en la nube o Ollama local. Privacidad, modos y límites.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/es/power-local-llm/nanobrowser-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Nanobrowser: agente de navegador com IA gratuito e de código aberto para Chrome e Edge",
+    "excerpt": "O Nanobrowser é um agente de IA gratuito e de código aberto para Chrome e Edge, com modelos na nuvem ou Ollama local. Privacidade, modos e limites.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/pt/power-local-llm/nanobrowser-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Nanobrowser: وكيل متصفح مجاني ومفتوح المصدر بالذكاء الاصطناعي لمتصفحي Chrome وEdge",
+    "excerpt": "Nanobrowser وكيل متصفح مجاني ومفتوح المصدر لمتصفحي Chrome وEdge يعمل مع نماذج سحابية أو Ollama محلي. الخصوصية والأوضاع والحدود؛ لم يُختبر هنا.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ar/power-local-llm/nanobrowser-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Nanobrowser 리뷰: Chrome·Edge용 무료 오픈소스 AI 브라우저 에이전트",
+    "excerpt": "Nanobrowser는 Chrome과 Edge용 무료 오픈소스 AI 브라우저 에이전트로, 클라우드 모델과 로컬 Ollama를 지원합니다. 개인정보, 모드, 한계. 미검증.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ko/power-local-llm/nanobrowser-review",
     "cluster": "power-local-llm"
   },
   {
@@ -60508,6 +60751,87 @@
   },
   {
     "lang": "en",
+    "title": "OpenShorts Review: Open-Source AI Clip Maker for Vertical Shorts",
+    "excerpt": "OpenShorts turns long videos into captioned vertical clips. Self-host free with Docker or use the cloud. Local or cloud AI, pricing, privacy, open points.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/power-local-llm/openshorts-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "OpenShorts im Test: quelloffener KI-Clip-Maker für vertikale Shorts",
+    "excerpt": "OpenShorts macht aus langen Videos Hochformat-Clips mit Untertiteln. Gratis selbst hosten oder Cloud nutzen. KI lokal oder Cloud, Preise, Datenschutz.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/de/power-local-llm/openshorts-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test d'OpenShorts : générateur de clips IA open source pour shorts verticaux",
+    "excerpt": "OpenShorts transforme de longues vidéos en clips verticaux sous-titrés. Auto-hébergement gratuit ou cloud. IA locale ou cloud, tarifs, vie privée.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/fr/power-local-llm/openshorts-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "OpenShortsレビュー：縦型ショート向けのオープンソースAIクリップ作成ツール",
+    "excerpt": "OpenShortsは長い動画を字幕付きの縦型クリップに変えます。Dockerで無料セルフホストまたはクラウド利用。ローカルかクラウドか、料金、プライバシーを解説。",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ja/power-local-llm/openshorts-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "OpenShorts 评测：面向竖屏短视频的开源 AI 剪辑工具",
+    "excerpt": "OpenShorts 把长视频剪成带字幕的竖屏片段。可用 Docker 免费自托管，也可用云服务。本地还是云端 AI、价格、隐私与未核实事项。",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/zh/power-local-llm/openshorts-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de OpenShorts: generador de clips con IA de código abierto para shorts verticales",
+    "excerpt": "OpenShorts convierte vídeos largos en clips verticales subtitulados. Autoalójalo gratis o usa la nube. IA local o en la nube, precios y privacidad.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/es/power-local-llm/openshorts-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do OpenShorts: gerador de clipes com IA de código aberto para shorts verticais",
+    "excerpt": "O OpenShorts transforma vídeos longos em clipes verticais legendados. Hospede grátis com Docker ou use a nuvem. IA local ou na nuvem, preços, privacidade.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/pt/power-local-llm/openshorts-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة OpenShorts: أداة مفتوحة المصدر بالذكاء الاصطناعي لإنشاء مقاطع رأسية قصيرة",
+    "excerpt": "يحوّل OpenShorts الفيديوهات الطويلة إلى مقاطع رأسية مع ترجمة. استضفه مجاناً عبر Docker أو استخدم السحابة. الذكاء الاصطناعي محلياً أو سحابياً والخصوصية.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ar/power-local-llm/openshorts-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "OpenShorts 리뷰: 세로형 쇼츠를 만드는 오픈소스 AI 클립 제작 도구",
+    "excerpt": "OpenShorts는 긴 영상을 자막이 들어간 세로 클립으로 바꿉니다. Docker로 무료 직접 호스팅하거나 클라우드 이용. 로컬·클라우드 AI, 가격, 개인정보를 정리합니다.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ko/power-local-llm/openshorts-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Lexora Review: The Open-Source Desktop AI Agent",
     "excerpt": "Lexora is a free, open-source (AGPL-3.0) desktop AI agent for Windows, macOS, and Linux that chats and carries out tasks using your own model service or local models.",
     "publishDate": "2026-11-18",
@@ -61800,6 +62124,87 @@
     "publishDate": "2026-11-18",
     "dateModified": "2026-11-18",
     "url": "/ko/power-local-llm/open-paper-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "pyVideoTrans Review: Free Video Translation and AI Dubbing",
+    "excerpt": "pyVideoTrans translates and dubs videos with local or cloud engines for free. Platforms, install steps, GPU needs, license, privacy and unverified points.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/power-local-llm/pyvideotrans-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "pyVideoTrans im Test: kostenlose Videoübersetzung und KI-Vertonung",
+    "excerpt": "pyVideoTrans übersetzt und vertont Videos kostenlos mit lokalen oder Cloud-Engines. Plattformen, Setup, GPU-Bedarf, Lizenz, Datenschutz, offene Punkte.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/de/power-local-llm/pyvideotrans-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de pyVideoTrans : traduction vidéo et doublage IA gratuits",
+    "excerpt": "pyVideoTrans traduit et double des vidéos gratuitement, en local ou en cloud. Plateformes, GPU, licence, confidentialité et points non vérifiés.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/fr/power-local-llm/pyvideotrans-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "pyVideoTrans レビュー：無料の動画翻訳とAI吹き替え",
+    "excerpt": "pyVideoTransは動画の翻訳と吹き替えを無料で行います。対応OS、導入手順、GPU要件、ライセンス、プライバシーと未確認事項をまとめました。",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ja/power-local-llm/pyvideotrans-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "pyVideoTrans 评测：免费的视频翻译与 AI 配音",
+    "excerpt": "pyVideoTrans 可免费翻译并配音视频，支持本地或云端引擎。平台、安装步骤、GPU 要求、许可证、隐私和未核实事项一览，供选用前参考。",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/zh/power-local-llm/pyvideotrans-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de pyVideoTrans: traducción de vídeo y doblaje con IA gratis",
+    "excerpt": "pyVideoTrans traduce y dobla vídeos gratis con motores locales o en la nube. Plataformas, instalación, GPU, licencia, privacidad y puntos sin verificar.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/es/power-local-llm/pyvideotrans-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do pyVideoTrans: tradução de vídeo e dublagem com IA grátis",
+    "excerpt": "O pyVideoTrans traduz e dubla vídeos de graça, com mecanismos locais ou na nuvem. Plataformas, GPU, licença, privacidade e pontos não verificados.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/pt/power-local-llm/pyvideotrans-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة pyVideoTrans: ترجمة الفيديو والدبلجة بالذكاء الاصطناعي مجانًا",
+    "excerpt": "يترجم pyVideoTrans مقاطع الفيديو ويدبلجها مجانًا بمحركات محلية أو سحابية. المنصات والتثبيت ومتطلبات GPU والترخيص والخصوصية وما لم نتحقق منه.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ar/power-local-llm/pyvideotrans-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "pyVideoTrans 리뷰: 무료 영상 번역과 AI 더빙",
+    "excerpt": "pyVideoTrans는 영상을 무료로 번역하고 더빙합니다. 지원 OS, 설치 방법, GPU 요건, 라이선스, 개인정보 보호와 미확인 사항을 정리했습니다.",
+    "publishDate": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "url": "/ko/power-local-llm/pyvideotrans-review",
     "cluster": "power-local-llm"
   },
   {

@@ -382,7 +382,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[LastBrowser Review](/power-local-llm/lastbrowser-review) — a Windows AI browser with a Sidekick sidebar that can use Ollama.",
           "[Page Assist Review](/local-llms/page-assist-review) — a browser-extension sidebar that works with Ollama.",
-          "[Local LLM Software Directory](/directory) — the full catalogue of local AI tools."
+          "[Local LLM Software Directory](/directory) — the full catalogue of local AI tools.",
+          "[Nanobrowser Review](/power-local-llm/nanobrowser-review) — a free open-source Chrome and Edge extension whose agent clicks and types in your own browser, with a cloud model or a local Ollama or LM Studio model."
         ]
       }
     },
@@ -835,7 +836,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[LastBrowser-Rezension](/de/power-local-llm/lastbrowser-review) — ein Windows-KI-Browser mit Sidekick-Seitenleiste, die Ollama nutzen kann.",
           "[Page-Assist-Rezension](/de/local-llms/page-assist-review) — eine Browser-Erweiterung mit Seitenleiste, die mit Ollama funktioniert.",
-          "[Verzeichnis lokaler LLM-Software](/de/directory) — der vollständige Katalog lokaler KI-Tools."
+          "[Verzeichnis lokaler LLM-Software](/de/directory) — der vollständige Katalog lokaler KI-Tools.",
+          "[Nanobrowser Rezension](/de/power-local-llm/nanobrowser-review) — eine kostenlose, quelloffene Chrome- und Edge-Erweiterung, deren Agent in Ihrem eigenen Browser klickt und tippt, mit Cloud-Modell oder lokalem Ollama- bzw. LM-Studio-Modell."
         ]
       }
     }
@@ -1212,7 +1214,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Reseña de LastBrowser](/es/power-local-llm/lastbrowser-review) — un navegador de IA para Windows con barra lateral Sidekick que puede usar Ollama.",
           "[Reseña de Page Assist](/es/local-llms/page-assist-review) — una barra lateral como extensión del navegador que funciona con Ollama.",
-          "[Directorio de software de LLM local](/es/directory) — el catálogo completo de herramientas de IA local."
+          "[Directorio de software de LLM local](/es/directory) — el catálogo completo de herramientas de IA local.",
+          "[Reseña de Nanobrowser](/es/power-local-llm/nanobrowser-review) — una extensión gratuita y de código abierto para Chrome y Edge cuyo agente hace clic y escribe en tu propio navegador, con un modelo en la nube o un modelo local de Ollama o LM Studio."
         ]
       }
     }
@@ -1589,7 +1592,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Test de LastBrowser](/fr/power-local-llm/lastbrowser-review) — un navigateur IA pour Windows avec barre latérale Sidekick pouvant utiliser Ollama.",
           "[Test de Page Assist](/fr/local-llms/page-assist-review) — une barre latérale sous forme d'extension de navigateur qui fonctionne avec Ollama.",
-          "[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locale."
+          "[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d’IA locale.",
+          "[Test de Nanobrowser](/fr/power-local-llm/nanobrowser-review) — une extension gratuite et open source pour Chrome et Edge dont l'agent clique et saisit du texte dans votre propre navigateur, avec un modèle cloud ou un modèle local Ollama ou LM Studio."
         ]
       }
     }
@@ -1966,7 +1970,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[LastBrowserレビュー](/ja/power-local-llm/lastbrowser-review) — Ollamaを使えるSidekickサイドバー付きのWindows向けAIブラウザ。",
           "[Page Assistレビュー](/ja/local-llms/page-assist-review) — Ollamaに対応したブラウザ拡張機能のサイドバー。",
-          "[ローカルLLMソフトウェアディレクトリ](/ja/directory) — ローカルAIツールの全カタログ。"
+          "[ローカルLLMソフトウェアディレクトリ](/ja/directory) — ローカルAIツールの全カタログ。",
+          "[Nanobrowserレビュー](/ja/power-local-llm/nanobrowser-review) — ご自身のブラウザー内でエージェントがクリックや入力を行う、ChromeとEdge向けの無料オープンソース拡張機能。クラウドモデルまたはローカルのOllama・LM Studioモデルを使えます。"
         ]
       }
     }
@@ -2343,7 +2348,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[Análise do LastBrowser](/pt/power-local-llm/lastbrowser-review) — um navegador de IA para Windows com barra lateral Sidekick que pode usar o Ollama.",
           "[Análise do Page Assist](/pt/local-llms/page-assist-review) — uma barra lateral em forma de extensão de navegador que funciona com o Ollama.",
-          "[Diretório de software de LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local."
+          "[Diretório de software de LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local.",
+          "[Análise do Nanobrowser](/pt/power-local-llm/nanobrowser-review) — uma extensão gratuita e de código aberto para Chrome e Edge cujo agente clica e digita no seu próprio navegador, com um modelo na nuvem ou um modelo local do Ollama ou do LM Studio."
         ]
       }
     }
@@ -2720,7 +2726,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[مراجعة LastBrowser](/ar/power-local-llm/lastbrowser-review) — متصفح ذكاء اصطناعي لنظام Windows بشريط جانبي Sidekick يمكنه استخدام Ollama.",
           "[مراجعة Page Assist](/ar/local-llms/page-assist-review) — شريط جانبي على هيئة إضافة للمتصفح يعمل مع Ollama.",
-          "[دليل برمجيات LLM المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي."
+          "[دليل برمجيات LLM المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي.",
+          "[مراجعة Nanobrowser](/ar/power-local-llm/nanobrowser-review) — إضافة مجانية ومفتوحة المصدر لمتصفحي Chrome وEdge يقوم وكيلها بالنقر والكتابة في متصفحك أنت، بنموذج سحابي أو نموذج Ollama أو LM Studio محلي."
         ]
       }
     }
@@ -3097,7 +3104,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[LastBrowser 评测](/zh/power-local-llm/lastbrowser-review) — 带有可使用 Ollama 的 Sidekick 侧边栏的 Windows AI 浏览器。",
           "[Page Assist 评测](/zh/local-llms/page-assist-review) — 可搭配 Ollama 使用的浏览器扩展侧边栏。",
-          "[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。"
+          "[本地 LLM 软件目录](/zh/directory) — 本地 AI 工具的完整目录。",
+          "[Nanobrowser评测](/zh/power-local-llm/nanobrowser-review) — 适用于 Chrome 和 Edge 的免费开源扩展，其智能体在您自己的浏览器中点击和输入，可搭配云端模型或本地 Ollama、LM Studio 模型。"
         ]
       }
     }
@@ -3474,7 +3482,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "items": [
           "[LastBrowser 리뷰](/ko/power-local-llm/lastbrowser-review) — Ollama를 쓸 수 있는 Sidekick 사이드바가 있는 Windows용 AI 브라우저.",
           "[Page Assist 리뷰](/ko/local-llms/page-assist-review) — Ollama와 함께 작동하는 브라우저 확장 프로그램 사이드바.",
-          "[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 로컬 AI 도구 전체 카탈로그."
+          "[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 로컬 AI 도구 전체 카탈로그.",
+          "[Nanobrowser 리뷰](/ko/power-local-llm/nanobrowser-review) — 에이전트가 내 브라우저에서 직접 클릭하고 입력하는 Chrome·Edge용 무료 오픈소스 확장으로, 클라우드 모델이나 로컬 Ollama·LM Studio 모델을 쓸 수 있습니다."
         ]
       }
     }
