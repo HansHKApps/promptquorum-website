@@ -405,6 +405,7 @@ https://www.promptquorum.com/power-local-llm/frankly-ai-review
 https://www.promptquorum.com/power-local-llm/friedrichai-review
 https://www.promptquorum.com/power-local-llm/fullmoon-review
 https://www.promptquorum.com/power-local-llm/funclip-review
+https://www.promptquorum.com/power-local-llm/genoffice-review
 https://www.promptquorum.com/power-local-llm/genva-review
 https://www.promptquorum.com/power-local-llm/github-copilot-cli-review
 https://www.promptquorum.com/power-local-llm/google-ai-edge-gallery-review
@@ -568,6 +569,7 @@ https://www.promptquorum.com/power-local-llm/mlx-serve-review
 https://www.promptquorum.com/power-local-llm/mlxcel-review
 https://www.promptquorum.com/power-local-llm/mlxhub-review
 https://www.promptquorum.com/power-local-llm/mobile-llm-models-phi4-gemma-smollm
+https://www.promptquorum.com/power-local-llm/modly-review
 https://www.promptquorum.com/power-local-llm/msty-go-review
 https://www.promptquorum.com/power-local-llm/msty-hands-on-test
 https://www.promptquorum.com/power-local-llm/msty-review
@@ -577,6 +579,7 @@ https://www.promptquorum.com/power-local-llm/myagents-review
 https://www.promptquorum.com/power-local-llm/mylio-photos-review
 https://www.promptquorum.com/power-local-llm/n8n-review
 https://www.promptquorum.com/power-local-llm/nanobot-review
+https://www.promptquorum.com/power-local-llm/nanobrowser-review
 https://www.promptquorum.com/power-local-llm/nativ-review
 https://www.promptquorum.com/power-local-llm/nekoni-review
 https://www.promptquorum.com/power-local-llm/newelle-review
@@ -616,6 +619,7 @@ https://www.promptquorum.com/power-local-llm/openllm-review
 https://www.promptquorum.com/power-local-llm/openmausbot-review
 https://www.promptquorum.com/power-local-llm/openmontage-review
 https://www.promptquorum.com/power-local-llm/openrag-review
+https://www.promptquorum.com/power-local-llm/openshorts-review
 https://www.promptquorum.com/power-local-llm/openvoiceos-review
 https://www.promptquorum.com/power-local-llm/openwhispr-review
 https://www.promptquorum.com/power-local-llm/openwork-review
@@ -654,6 +658,7 @@ https://www.promptquorum.com/power-local-llm/private-llm-review
 https://www.promptquorum.com/power-local-llm/private-mind-review
 https://www.promptquorum.com/power-local-llm/privategpt-review
 https://www.promptquorum.com/power-local-llm/pydantic-ai-review
+https://www.promptquorum.com/power-local-llm/pyvideotrans-review
 https://www.promptquorum.com/power-local-llm/qdrant-review
 https://www.promptquorum.com/power-local-llm/quivr-self-hosted-knowledge-assistant-review
 https://www.promptquorum.com/power-local-llm/qwen-local-deployment-complete-guide-2026
