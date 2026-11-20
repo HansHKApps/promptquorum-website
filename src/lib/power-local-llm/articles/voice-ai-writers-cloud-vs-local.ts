@@ -9,17 +9,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-22',
-    next_refresh_due: '2027-02-22',
+    dateModified: '2026-11-20',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/voice-ai-writers-hero-en.webp',
     title: 'Best AI Writing Tools for Writers in 2026: Cloud vs. Local, Cost, Privacy & Productivity',
-    seoTitle: 'AI Writing Tools 2026: Grammarly vs. Jasper vs. Local — Buyer\'s Guide',
+    seoTitle: 'AI Writing Tools 2026: Grammarly vs Jasper vs Local',
     intro:
       'A 2026 G2 analysis of 2,771 verified AI-writing reviews found that 88% report real time savings — but for high-volume professional writers, reviewing and correcting AI suggestions often eats into those gains. That single finding reframes the buying decision: it is not "is AI good?" but "how much of my writing workflow can I actually delegate, and to which tool?" This guide compares cloud writing platforms (Grammarly, Jasper, Sudowrite, QuillBot) against local Whisper + LLM pipelines, using G2\'s data to show who benefits, who pays, and who should build locally instead.',
     metaDescription:
-      'Best AI writing tools 2026: Grammarly, Jasper, Sudowrite, QuillBot vs. local AI. G2-backed comparison of cost, privacy, and productivity to help you decide what\'s worth paying for.',
+      'Grammarly, Jasper, Sudowrite and QuillBot vs local AI in 2026: G2-backed comparison of cost, privacy and productivity to decide what is worth paying for.',
     twitterDescription:
       'G2 analyzed 2,771 AI writing reviews — 88% saved time, but pro writers face a review-overhead problem. Compare Grammarly, Jasper, Sudowrite, QuillBot vs. local AI for 2026.',
     audience:
@@ -76,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Professional writers benefit most from tools with brand/context features that cut review overhead.',
           'Most writers get the best long-term result from hybrid: cloud for everyday, local for confidential work.',
         ],
-        updatedDate: '2026-08-22',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -205,7 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**[Grammarly](https://grammarly.com/desktop)** — Best for: emails, documents, rewriting, grammar, tone, and everyday professional communication. Choose Grammarly if you want an integrated voice + editing workflow without building anything yourself. Free plan available; paid tiers add advanced tone and clarity features.',
-          '**[Jasper](https://jasper.ai/pricing)** — Best for: marketing teams, brand voice, campaign content, and collaborative workflows. Choose Jasper if you are producing high volumes of branded marketing content and need document context loaded into every draft. Paid plans scale with team size.',
+          '**[Jasper](https://jasper.ai/pricing)** — Best for: marketing teams, brand voice, campaign content, and collaborative workflows. Choose Jasper if you are producing high volumes of branded marketing content and need document context loaded into every draft. Per Jasper’s pricing page, Pro costs $69 per seat per month billed monthly ($59 billed yearly) with a 7-day free trial and two Brand Voices; Business is custom-priced.',
           '**[Sudowrite](https://sudowrite.com)** — Best for: fiction, brainstorming, scene development, and creative exploration. Choose Sudowrite if fiction is your primary use case and you want an AI creative partner rather than a business writing tool.',
           '**[QuillBot](https://quillbot.com)** — Best for: paraphrasing, rewriting, summarizing, and tone adjustments. Choose QuillBot if your primary need is fast rewriting, not full content generation. Free plan available.',
         ],
@@ -216,7 +217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://sudowrite.com', productName: 'Sudowrite', productCategory: 'AI Writing for Fiction', label: 'Explore Sudowrite' },
           { url: 'https://quillbot.com', productName: 'QuillBot', productCategory: 'AI Paraphrasing & Rewriting', label: 'Try QuillBot' }
         ],
-        note: 'Last verified against vendor pricing and plan pages on 2026-08-22. Pricing and free-tier availability change; confirm current terms before purchasing.',
+        note: 'Last verified on 2026-11-20 against the Grammarly, Jasper and Sudowrite plan pages; QuillBot’s page could not be retrieved, so its free-plan statement is unverified. Pricing and free-tier availability change; confirm current terms before purchasing.',
       },
       comparison: {
         id: 'comparison',
@@ -366,17 +367,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-22',
-    next_refresh_due: '2027-02-22',
+    dateModified: '2026-11-20',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/voice-ai-writers-hero-ar.webp',
     title: 'أفضل أدوات الكتابة بالذكاء الاصطناعي للكتّاب في 2026: السحابة مقابل التشغيل المحلي، التكلفة، الخصوصية، والإنتاجية',
-    seoTitle: 'أدوات الكتابة بالذكاء الاصطناعي 2026: Grammarly مقابل Jasper مقابل الحلول المحلية — دليل الشراء',
+    seoTitle: 'أدوات الكتابة بالذكاء الاصطناعي 2026: السحابة والمحلي',
     intro:
       'كشف تحليل أجرته منصة G2 عام 2026 لـ 2,771 مراجعة موثقة لأدوات الكتابة بالذكاء الاصطناعي أن 88% من المستخدمين أفادوا بتوفير وقت حقيقي — لكن بالنسبة للكتّاب المحترفين ذوي الإنتاج الكبير، غالبًا ما تلتهم مراجعة اقتراحات الذكاء الاصطناعي وتصحيحها هذا الوقت المُوفَّر. هذه النتيجة الواحدة تعيد صياغة قرار الشراء بالكامل: فالسؤال ليس "هل الذكاء الاصطناعي جيد؟" بل "ما مقدار سير عمل الكتابة الذي يمكنني تفويضه فعليًا، ولأي أداة؟" يقارن هذا الدليل منصات الكتابة السحابية (Grammarly وJasper وSudowrite وQuillBot) بمسارات محلية تعتمد على Whisper ونموذج لغوي محلي، مستخدمًا بيانات G2 لتوضيح من يستفيد، ومن يدفع الثمن، ومن يجب عليه البناء محليًا بدلًا من ذلك.',
     metaDescription:
-      'أفضل أدوات الكتابة بالذكاء الاصطناعي 2026: Grammarly وJasper وSudowrite وQuillBot مقابل الذكاء الاصطناعي المحلي. مقارنة مدعومة ببيانات G2 للتكلفة والخصوصية والإنتاجية تساعدك على تحديد ما يستحق الدفع مقابله.',
+      'Grammarly وJasper وSudowrite وQuillBot مقابل الذكاء الاصطناعي المحلي في 2026: مقارنة مدعومة ببيانات G2 للتكلفة والخصوصية والإنتاجية.',
     twitterDescription:
       'حللت G2 عدد 2,771 مراجعة لأدوات الكتابة بالذكاء الاصطناعي — 88% وفّروا وقتًا، لكن الكتّاب المحترفين يواجهون عبء مراجعة إضافيًا. قارن بين Grammarly وJasper وSudowrite وQuillBot والذكاء الاصطناعي المحلي لعام 2026.',
     audience:
@@ -433,7 +435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يستفيد الكتّاب المحترفون أكثر من الأدوات التي تحتوي ميزات علامة تجارية وسياق تقلّص عبء المراجعة.',
           'يحصل معظم الكتّاب على أفضل نتيجة على المدى الطويل من النهج الهجين: السحابة للاستخدام اليومي، والمحلي للأعمال السرية.',
         ],
-        updatedDate: '2026-08-22',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -562,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**[Grammarly](https://grammarly.com/desktop)** — الأنسب لـ: رسائل البريد الإلكتروني والمستندات وإعادة الصياغة والنحو والنبرة والتواصل المهني اليومي. اختر Grammarly إذا أردت سير عمل متكاملًا للصوت والتحرير دون بناء أي شيء بنفسك. تتوفر خطة مجانية؛ وتضيف الخطط المدفوعة ميزات متقدمة للنبرة والوضوح.',
-          '**[Jasper](https://jasper.ai/pricing)** — الأنسب لـ: فرق التسويق وصوت العلامة التجارية ومحتوى الحملات وسير العمل التعاوني. اختر Jasper إذا كنت تنتج كميات كبيرة من محتوى تسويقي مرتبط بالعلامة التجارية وتحتاج إلى سياق مستندات محمّل في كل مسودة. تتوسع الخطط المدفوعة بحسب حجم الفريق.',
+          '**[Jasper](https://jasper.ai/pricing)** — الأنسب لـ: فرق التسويق وصوت العلامة التجارية ومحتوى الحملات وسير العمل التعاوني. اختر Jasper إذا كنت تنتج كميات كبيرة من محتوى تسويقي مرتبط بالعلامة التجارية وتحتاج إلى سياق مستندات محمّل في كل مسودة. بحسب صفحة أسعار Jasper، تبلغ تكلفة خطة Pro ‏69 دولاراً لكل مقعد شهرياً بفوترة شهرية (59 دولاراً بفوترة سنوية) مع تجربة مجانية 7 أيام وصوتين للعلامة (Brand Voices)؛ وخطة Business بسعر مخصص.',
           '**[Sudowrite](https://sudowrite.com)** — الأنسب لـ: الروايات والعصف الذهني وتطوير المشاهد والاستكشاف الإبداعي. اختر Sudowrite إذا كانت الروايات استخدامك الأساسي وتريد شريكًا إبداعيًا بالذكاء الاصطناعي لا أداة كتابة تجارية.',
           '**[QuillBot](https://quillbot.com)** — الأنسب لـ: إعادة الصياغة وإعادة الكتابة والتلخيص وتعديل النبرة. اختر QuillBot إذا كانت حاجتك الأساسية إعادة الصياغة السريعة، لا توليد محتوى كامل. تتوفر خطة مجانية.',
         ],
@@ -573,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://sudowrite.com', productName: 'Sudowrite', productCategory: 'AI Writing for Fiction', label: 'استكشف Sudowrite' },
           { url: 'https://quillbot.com', productName: 'QuillBot', productCategory: 'AI Paraphrasing & Rewriting', label: 'جرّب QuillBot' }
         ],
-        note: 'تم التحقق آخر مرة من أسعار الموردين وصفحات الخطط بتاريخ 2026-08-22. الأسعار وتوفر الخطة المجانية قابلان للتغيير؛ تأكد من الشروط الحالية قبل الشراء.',
+        note: 'تم التحقق آخر مرة بتاريخ 2026-11-20 من صفحات خطط Grammarly وJasper وSudowrite؛ ولم نتمكن من فتح صفحة QuillBot، لذا فإن ما ذُكر عن خطتها المجانية لم يُتحقق منه. الأسعار وتوفر الخطة المجانية قابلان للتغيير؛ تأكد من الشروط الحالية قبل الشراء.',
       },
       comparison: {
         id: 'comparison',
@@ -723,17 +725,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-22',
-    next_refresh_due: '2027-02-22',
+    dateModified: '2026-11-20',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/voice-ai-writers-hero-de.webp',
     title: 'Die besten KI-Schreibtools für Autoren 2026: Cloud vs. lokal – Kosten, Datenschutz und Produktivität',
-    seoTitle: 'KI-Schreibtools 2026: Grammarly vs. Jasper vs. lokal – Kaufratgeber',
+    seoTitle: 'KI-Schreibtools 2026: Grammarly vs. Jasper vs. lokal',
     intro:
       'Eine G2-Analyse von 2.771 verifizierten Bewertungen zu KI-Schreibtools aus dem Jahr 2026 zeigt: 88 % der Nutzer berichten von einer echten Zeitersparnis – doch bei vielschreibenden Profi-Autoren frisst das Prüfen und Korrigieren von KI-Vorschlägen diesen Gewinn oft wieder auf. Dieser eine Befund verändert die Kaufentscheidung: Es geht nicht mehr um die Frage „Ist KI gut?“, sondern darum, „Wie viel meines Schreibworkflows kann ich tatsächlich delegieren – und an welches Tool?“ Dieser Ratgeber vergleicht Cloud-Schreibplattformen (Grammarly, Jasper, Sudowrite, QuillBot) mit lokalen Whisper-plus-LLM-Pipelines und nutzt die G2-Daten, um zu zeigen, wer davon profitiert, wer bezahlt und wer stattdessen lokal aufbauen sollte.',
     metaDescription:
-      'Beste KI-Schreibtools 2026: Grammarly, Jasper, Sudowrite und QuillBot vs. lokale KI. G2-gestützter Vergleich zu Kosten, Datenschutz und Produktivität für Ihre Kaufentscheidung.',
+      'Grammarly, Jasper, Sudowrite und QuillBot vs. lokale KI 2026: G2-gestützter Vergleich von Kosten, Datenschutz und Produktivität für Ihre Kaufentscheidung.',
     twitterDescription:
       'G2 hat 2.771 Bewertungen zu KI-Schreibtools ausgewertet – 88 % sparten Zeit, Profi-Autoren kämpfen jedoch mit Prüfaufwand. Vergleich: Grammarly, Jasper, Sudowrite, QuillBot vs. lokale KI für 2026.',
     audience:
@@ -790,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Profi-Autoren profitieren am meisten von Tools mit Marken-/Kontextfunktionen, die den Prüfaufwand senken.',
           'Die meisten Autoren erzielen langfristig das beste Ergebnis mit einem Hybridansatz: Cloud für den Alltag, lokal für vertrauliche Arbeit.',
         ],
-        updatedDate: '2026-08-22',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -919,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**[Grammarly](https://grammarly.com/desktop)** — Am besten für: E-Mails, Dokumente, Umformulierung, Grammatik, Tonfall und alltägliche professionelle Kommunikation. Wählen Sie Grammarly, wenn Sie einen integrierten Voice-plus-Redigier-Workflow wollen, ohne selbst etwas aufzubauen. Kostenloser Plan verfügbar; kostenpflichtige Stufen ergänzen erweiterte Ton- und Klarheitsfunktionen.',
-          '**[Jasper](https://jasper.ai/pricing)** — Am besten für: Marketingteams, Markenstimme, Kampagneninhalte und kollaborative Workflows. Wählen Sie Jasper, wenn Sie hohe Mengen an Marken-Marketinginhalten produzieren und Dokumentkontext in jedem Entwurf brauchen. Kostenpflichtige Pläne skalieren mit der Teamgröße.',
+          '**[Jasper](https://jasper.ai/pricing)** — Am besten für: Marketingteams, Markenstimme, Kampagneninhalte und kollaborative Workflows. Wählen Sie Jasper, wenn Sie hohe Mengen an Marken-Marketinginhalten produzieren und Dokumentkontext in jedem Entwurf brauchen. Laut Jaspers Preisseite kostet Pro 69 $ pro Platz und Monat bei monatlicher Abrechnung (59 $ bei jährlicher Abrechnung; US-Preise), mit 7 Tagen kostenloser Testphase und zwei Brand Voices; Business wird individuell bepreist.',
           '**[Sudowrite](https://sudowrite.com)** — Am besten für: Belletristik, Brainstorming, Szenenentwicklung und kreatives Explorieren. Wählen Sie Sudowrite, wenn Belletristik Ihr Hauptanwendungsfall ist und Sie einen kreativen KI-Partner statt eines Business-Schreibtools wollen.',
           '**[QuillBot](https://quillbot.com)** — Am besten für: Paraphrasieren, Umformulieren, Zusammenfassen und Tonanpassungen. Wählen Sie QuillBot, wenn Ihr Hauptbedarf schnelles Umformulieren ist, nicht vollständige Content-Generierung. Kostenloser Plan verfügbar.',
         ],
@@ -930,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://sudowrite.com', productName: 'Sudowrite', productCategory: 'AI Writing for Fiction', label: 'Sudowrite entdecken' },
           { url: 'https://quillbot.com', productName: 'QuillBot', productCategory: 'AI Paraphrasing & Rewriting', label: 'QuillBot testen' }
         ],
-        note: 'Zuletzt am 22.08.2026 gegen die Preis- und Plan-Seiten der Anbieter geprüft. Preise und die Verfügbarkeit kostenloser Stufen ändern sich; prüfen Sie die aktuellen Konditionen vor dem Kauf.',
+        note: 'Zuletzt am 20.11.2026 anhand der Tarifseiten von Grammarly, Jasper und Sudowrite geprüft; die Seite von QuillBot war nicht abrufbar, die Angabe zum kostenlosen Tarif ist daher ungeprüft. Preise und die Verfügbarkeit kostenloser Stufen ändern sich; prüfen Sie die aktuellen Konditionen vor dem Kauf.',
       },
       comparison: {
         id: 'comparison',
@@ -1080,17 +1083,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-22',
-    next_refresh_due: '2027-02-22',
+    dateModified: '2026-11-20',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/voice-ai-writers-hero-es.webp',
     title: 'Las mejores herramientas de escritura con IA para escritores en 2026: nube vs. local, costo, privacidad y productividad',
-    seoTitle: 'Herramientas de escritura con IA 2026: Grammarly vs. Jasper vs. local — Guía de compra',
+    seoTitle: 'Escritura con IA 2026: Grammarly vs Jasper vs local',
     intro:
       'Un análisis de G2 de 2026 sobre 2.771 reseñas verificadas de escritura con IA encontró que el 88% reporta un ahorro de tiempo real, pero para los escritores profesionales de alto volumen, revisar y corregir las sugerencias de la IA a menudo reduce esas ganancias. Ese único hallazgo replantea la decisión de compra: no se trata de "¿la IA es buena?", sino de "¿cuánto de mi flujo de trabajo de escritura puedo delegar realmente, y a qué herramienta?" Esta guía compara plataformas de escritura en la nube (Grammarly, Jasper, Sudowrite, QuillBot) frente a pipelines locales de Whisper + LLM, usando los datos de G2 para mostrar quién se beneficia, quién paga y quién debería construir localmente en su lugar.',
     metaDescription:
-      'Mejores herramientas de escritura con IA 2026: Grammarly, Jasper, Sudowrite, QuillBot vs. IA local. Comparación respaldada por G2 de costo, privacidad y productividad para ayudarte a decidir qué vale la pena pagar.',
+      'Grammarly, Jasper, Sudowrite y QuillBot frente a la IA local en 2026: comparativa basada en G2 de costes, privacidad y productividad para decidir.',
     twitterDescription:
       'G2 analizó 2.771 reseñas de escritura con IA: el 88% ahorró tiempo, pero los escritores profesionales enfrentan un problema de sobrecarga de revisión. Compara Grammarly, Jasper, Sudowrite, QuillBot vs. IA local para 2026.',
     audience:
@@ -1147,7 +1151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los escritores profesionales se benefician más de herramientas con funciones de marca/contexto que reducen la sobrecarga de revisión.',
           'La mayoría de los escritores obtiene el mejor resultado a largo plazo con un enfoque híbrido: nube para lo cotidiano, local para trabajo confidencial.',
         ],
-        updatedDate: '2026-08-22',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1276,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**[Grammarly](https://grammarly.com/desktop)** — Ideal para: correos, documentos, reescritura, gramática, tono y comunicación profesional cotidiana. Elige Grammarly si quieres un flujo de trabajo integrado de voz + edición sin construir nada tú mismo. Tiene plan gratuito; los planes de pago añaden funciones avanzadas de tono y claridad.',
-          '**[Jasper](https://jasper.ai/pricing)** — Ideal para: equipos de marketing, voz de marca, contenido de campañas y flujos de trabajo colaborativos. Elige Jasper si produces grandes volúmenes de contenido de marketing con marca y necesitas contexto documental cargado en cada borrador. Los planes de pago escalan según el tamaño del equipo.',
+          '**[Jasper](https://jasper.ai/pricing)** — Ideal para: equipos de marketing, voz de marca, contenido de campañas y flujos de trabajo colaborativos. Elige Jasper si produces grandes volúmenes de contenido de marketing con marca y necesitas contexto documental cargado en cada borrador. Según la página de precios de Jasper, Pro cuesta 69 $ por puesto al mes con facturación mensual (59 $ con facturación anual; precios en USD), con 7 días de prueba gratuita y dos Brand Voices; Business tiene precio personalizado.',
           '**[Sudowrite](https://sudowrite.com)** — Ideal para: ficción, lluvia de ideas, desarrollo de escenas y exploración creativa. Elige Sudowrite si la ficción es tu uso principal y quieres un socio creativo de IA en lugar de una herramienta de escritura de negocios.',
           '**[QuillBot](https://quillbot.com)** — Ideal para: parafraseo, reescritura, resúmenes y ajustes de tono. Elige QuillBot si tu necesidad principal es reescribir rápido, no generar contenido completo. Tiene plan gratuito.',
         ],
@@ -1287,7 +1291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://sudowrite.com', productName: 'Sudowrite', productCategory: 'AI Writing for Fiction', label: 'Explora Sudowrite' },
           { url: 'https://quillbot.com', productName: 'QuillBot', productCategory: 'AI Paraphrasing & Rewriting', label: 'Prueba QuillBot' }
         ],
-        note: 'Verificado por última vez frente a los precios y páginas de planes del proveedor el 22-08-2026. Los precios y la disponibilidad del nivel gratuito cambian; confirma los términos vigentes antes de comprar.',
+        note: 'Última comprobación el 20/11/2026 en las páginas de planes de Grammarly, Jasper y Sudowrite; la página de QuillBot no se pudo consultar, así que lo indicado sobre su plan gratuito no está verificado. Los precios y la disponibilidad del nivel gratuito cambian; confirma los términos vigentes antes de comprar.',
       },
       comparison: {
         id: 'comparison',
@@ -1437,17 +1441,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-22',
-    next_refresh_due: '2027-02-22',
+    dateModified: '2026-11-20',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/voice-ai-writers-hero-fr.webp',
     title: 'Meilleurs outils d\'écriture IA pour rédacteurs en 2026 : cloud vs local, coût, confidentialité et productivité',
-    seoTitle: 'Outils d\'écriture IA 2026 : Grammarly vs Jasper vs local — Guide d\'achat',
+    seoTitle: 'Outils d’écriture IA 2026 : Grammarly vs Jasper vs local',
     intro:
       'Une analyse G2 2026 portant sur 2 771 avis vérifiés sur l\'écriture IA montre que 88 % des utilisateurs constatent un vrai gain de temps — mais pour les rédacteurs professionnels à fort volume, la relecture et la correction des suggestions IA absorbent souvent ce gain. Ce constat change la question à se poser : ce n\'est plus « l\'IA est-elle bonne ? » mais « quelle part de mon flux de rédaction puis-je réellement déléguer, et à quel outil ? » Ce guide compare les plateformes d\'écriture cloud (Grammarly, Jasper, Sudowrite, QuillBot) aux pipelines locaux Whisper + LLM, en s\'appuyant sur les données G2 pour identifier qui en profite, qui doit payer, et qui a intérêt à construire une solution locale.',
     metaDescription:
-      'Meilleurs outils d\'écriture IA 2026 : Grammarly, Jasper, Sudowrite, QuillBot vs IA locale. Comparaison basée sur G2 du coût, de la confidentialité et de la productivité pour choisir ce qui vaut la peine d\'être payé.',
+      'Grammarly, Jasper, Sudowrite et QuillBot face à l’IA locale en 2026 : comparatif appuyé sur G2 des coûts, de la confidentialité et de la productivité.',
     twitterDescription:
       'G2 a analysé 2 771 avis sur l\'écriture IA — 88 % gagnent du temps, mais les rédacteurs pro font face à une surcharge de relecture. Comparez Grammarly, Jasper, Sudowrite, QuillBot vs IA locale pour 2026.',
     audience:
@@ -1504,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les rédacteurs professionnels tirent le plus de valeur des outils dotés de fonctionnalités de marque/contexte qui réduisent la relecture.',
           'La plupart des rédacteurs obtiennent le meilleur résultat à long terme avec l\'hybride : cloud au quotidien, local pour le travail confidentiel.',
         ],
-        updatedDate: '2026-08-22',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -1633,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**[Grammarly](https://grammarly.com/desktop)** — Idéal pour : e-mails, documents, réécriture, grammaire, ton et communication professionnelle courante. Choisissez Grammarly si vous voulez un flux voix + édition intégré sans rien construire vous-même. Offre gratuite disponible ; les formules payantes ajoutent des fonctionnalités avancées de ton et de clarté.',
-          '**[Jasper](https://jasper.ai/pricing)** — Idéal pour : équipes marketing, ton de marque, contenu de campagne et flux collaboratifs. Choisissez Jasper si vous produisez de gros volumes de contenu marketing de marque et avez besoin d\'un contexte documentaire chargé dans chaque brouillon. Les formules payantes évoluent avec la taille de l\'équipe.',
+          '**[Jasper](https://jasper.ai/pricing)** — Idéal pour : équipes marketing, ton de marque, contenu de campagne et flux collaboratifs. Choisissez Jasper si vous produisez de gros volumes de contenu marketing de marque et avez besoin d\'un contexte documentaire chargé dans chaque brouillon. Selon la page tarifaire de Jasper, Pro coûte 69 $ par poste et par mois en facturation mensuelle (59 $ en facturation annuelle ; prix en USD), avec 7 jours d\'essai gratuit et deux Brand Voices ; Business est sur devis.',
           '**[Sudowrite](https://sudowrite.com)** — Idéal pour : fiction, brainstorming, développement de scènes et exploration créative. Choisissez Sudowrite si la fiction est votre usage principal et que vous voulez un partenaire créatif IA plutôt qu\'un outil d\'écriture professionnelle.',
           '**[QuillBot](https://quillbot.com)** — Idéal pour : paraphrase, réécriture, résumé et ajustements de ton. Choisissez QuillBot si votre besoin principal est la réécriture rapide, pas la génération de contenu complète. Offre gratuite disponible.',
         ],
@@ -1644,7 +1649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://sudowrite.com', productName: 'Sudowrite', productCategory: 'AI Writing for Fiction', label: 'Découvrir Sudowrite' },
           { url: 'https://quillbot.com', productName: 'QuillBot', productCategory: 'AI Paraphrasing & Rewriting', label: 'Essayer QuillBot' }
         ],
-        note: 'Dernière vérification des prix et des formules auprès des éditeurs le 22/08/2026. Les prix et la disponibilité des offres gratuites évoluent ; vérifiez les conditions actuelles avant tout achat.',
+        note: 'Dernière vérification le 20/11/2026 des pages de formules de Grammarly, Jasper et Sudowrite ; la page de QuillBot n’a pas pu être consultée, son offre gratuite n’est donc pas vérifiée. Les prix et la disponibilité des offres gratuites évoluent ; vérifiez les conditions actuelles avant tout achat.',
       },
       comparison: {
         id: 'comparison',
@@ -1794,17 +1799,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-22',
-    next_refresh_due: '2027-02-22',
+    dateModified: '2026-11-20',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/voice-ai-writers-hero-ja.webp',
     title: '2026年ライター向けAI執筆ツール比較：クラウドvs.ローカル、コスト・プライバシー・生産性',
-    seoTitle: 'AI執筆ツール2026：Grammarly vs. Jasper vs. ローカルAI 購入ガイド',
+    seoTitle: 'AI執筆ツール2026：Grammarly vsローカル',
     intro:
         'G2が2026年に実施した2,771件の検証済みAIライティングレビュー分析では、88%が実際に時間を節約できたと回答しています。ただし高頻度で執筆するプロのライターにとっては、AIの提案を確認・修正する作業がその効果を打ち消してしまうことが多いのです。この結果は購入判断の軸を変えます。問われるべきは「AIは優れているか」ではなく「自分の執筆ワークフローのどこまでを、どのツールに任せられるか」です。本ガイドでは、クラウド型の執筆プラットフォーム（Grammarly、Jasper、Sudowrite、QuillBot）とローカルのWhisper＋LLMパイプラインをG2のデータをもとに比較し、誰が恩恵を受け、誰が対価を払い、誰がローカル構築を選ぶべきかを示します。',
     metaDescription:
-        '2026年おすすめAI執筆ツール：Grammarly、Jasper、Sudowrite、QuillBot vs. ローカルAI。G2データに基づくコスト・プライバシー・生産性の比較で、何にお金を払う価値があるか判断できます。',
+      '2026年のAI執筆ツール：Grammarly・Jasper・Sudowrite・QuillBotとローカルAIをG2データでコスト・プライバシー・生産性から比較します。',
     twitterDescription:
         'G2が2,771件のAIライティングレビューを分析。88%が時間を節約できた一方、プロのライターはレビュー作業の負担に直面。Grammarly、Jasper、Sudowrite、QuillBot vs. ローカルAIを2026年版で比較。',
     audience:
@@ -1861,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 'プロのライターは、レビュー負担を減らすブランド・コンテキスト機能を持つツールから最も恩恵を受ける。',
                 '多くのライターにとって長期的に最良の結果はハイブリッド。日常業務はクラウド、機密性の高い作業はローカル。',
             ],
-            updatedDate: '2026-08-22',
+            updatedDate: '2026-11-20',
         },
     },
     toc: [
@@ -1990,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             ],
             items: [
                 '**[Grammarly](https://grammarly.com/desktop)** — 最適な用途：メール、文書、リライト、文法、トーン、日常的なビジネスコミュニケーション。自分でインフラを構築せずに、音声入力と編集が統合されたワークフローが欲しいならGrammarlyを選びましょう。無料プランあり。有料プランでは高度なトーン・明瞭性機能が追加。',
-                '**[Jasper](https://jasper.ai/pricing)** — 最適な用途：マーケティングチーム、ブランドボイス、キャンペーンコンテンツ、共同作業ワークフロー。ブランド化されたマーケティングコンテンツを大量に制作し、あらゆる下書きに文書コンテキストを組み込みたいならJasperを選びましょう。有料プランはチーム規模に応じて拡張可能。',
+                '**[Jasper](https://jasper.ai/pricing)** — 最適な用途：マーケティングチーム、ブランドボイス、キャンペーンコンテンツ、共同作業ワークフロー。ブランド化されたマーケティングコンテンツを大量に制作し、あらゆる下書きに文書コンテキストを組み込みたいならJasperを選びましょう。Jasperの料金ページによると、Proは1席あたり月額$69（月払い。年払いは$59）で、7日間の無料トライアルとブランドボイス2つが付きます。Businessは個別見積もりです。',
                 '**[Sudowrite](https://sudowrite.com)** — 最適な用途：小説、ブレインストーミング、シーン展開、創作的な探求。小説が主な用途で、ビジネス文書ツールではなくAIの創作パートナーが欲しいならSudowriteを選びましょう。',
                 '**[QuillBot](https://quillbot.com)** — 最適な用途：言い換え、リライト、要約、トーン調整。フルのコンテンツ生成ではなく、素早いリライトが主なニーズならQuillBotを選びましょう。無料プランあり。',
             ],
@@ -2001,7 +2007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 { url: 'https://sudowrite.com', productName: 'Sudowrite', productCategory: 'AI Writing for Fiction', label: 'Sudowriteを見る' },
                 { url: 'https://quillbot.com', productName: 'QuillBot', productCategory: 'AI Paraphrasing & Rewriting', label: 'QuillBotを試す' }
             ],
-            note: '2026年8月22日時点でベンダーの価格・プランページに基づき最終確認済み。価格や無料プランの内容は変更されることがあるため、購入前に最新の条件をご確認ください。',
+            note: '2026年11月20日にGrammarly・Jasper・Sudowriteのプランページで最終確認しました。QuillBotのページは取得できなかったため、同サービスの無料プランに関する記述は未確認です。価格や無料プランの内容は変更されることがあるため、購入前に最新の条件をご確認ください。',
         },
         comparison: {
             id: 'comparison',
@@ -2151,17 +2157,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-22',
-    next_refresh_due: '2027-02-22',
+    dateModified: '2026-11-20',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/voice-ai-writers-hero-ko.webp',
     title: '2026년 작가를 위한 최고의 AI 글쓰기 도구: 클라우드 vs. 로컬, 비용, 개인정보 보호, 생산성',
-    seoTitle: 'AI 글쓰기 도구 2026: Grammarly vs. Jasper vs. 로컬 구매 가이드',
+    seoTitle: 'AI 글쓰기 도구 2026: Grammarly vs 로컬',
     intro:
       '2026년 G2가 검증된 AI 글쓰기 리뷰 2,771건을 분석한 결과, 88%가 실질적인 시간 절약을 보고했습니다. 그러나 고빈도로 글을 쓰는 전문 작가의 경우, AI 제안을 검토하고 수정하는 과정이 그 절약 효과를 상쇄하는 경우가 많습니다. 이 하나의 결과는 구매 결정의 기준 자체를 바꿉니다. 질문은 "AI가 좋은가?"가 아니라 "내 글쓰기 워크플로우 중 얼마만큼을 실제로 위임할 수 있으며, 어떤 도구에 맡길 것인가?"입니다. 이 가이드는 G2의 데이터를 바탕으로 클라우드 글쓰기 플랫폼(Grammarly, Jasper, Sudowrite, QuillBot)과 로컬 Whisper + LLM 파이프라인을 비교하여, 누가 이득을 보고 누가 비용을 지불하며 누가 로컬 구축을 선택해야 하는지 보여줍니다.',
     metaDescription:
-      '2026년 최고의 AI 글쓰기 도구: Grammarly, Jasper, Sudowrite, QuillBot vs. 로컬 AI. G2 데이터를 기반으로 비용, 개인정보 보호, 생산성을 비교하여 무엇에 비용을 지불할 가치가 있는지 알려드립니다.',
+      '2026년 AI 글쓰기 도구: Grammarly, Jasper, Sudowrite, QuillBot과 로컬 AI를 G2 데이터로 비용·개인정보·생산성 면에서 비교합니다.',
     twitterDescription:
       'G2가 AI 글쓰기 리뷰 2,771건을 분석했습니다. 88%가 시간을 절약했지만, 전문 작가는 검토 부담 문제에 직면합니다. 2026년 Grammarly, Jasper, Sudowrite, QuillBot과 로컬 AI를 비교합니다.',
     audience:
@@ -2218,7 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '전문 작가는 검토 부담을 줄여주는 브랜드/컨텍스트 기능이 있는 도구에서 가장 큰 이점을 얻습니다.',
           '대다수 작가는 하이브리드 방식에서 최선의 장기적 결과를 얻습니다. 일상 업무는 클라우드로, 기밀 작업은 로컬로 처리하는 방식입니다.',
         ],
-        updatedDate: '2026-08-22',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -2347,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**[Grammarly](https://grammarly.com/desktop)** — 최적의 용도: 이메일, 문서, 재작성, 문법, 어조, 일상적인 비즈니스 커뮤니케이션. 직접 구축하지 않고도 음성 + 편집이 통합된 워크플로우를 원한다면 Grammarly를 선택하십시오. 무료 플랜이 제공되며, 유료 등급은 고급 어조 및 명료성 기능을 추가로 제공합니다.',
-          '**[Jasper](https://jasper.ai/pricing)** — 최적의 용도: 마케팅 팀, 브랜드 보이스, 캠페인 콘텐츠, 협업 워크플로우. 브랜드화된 마케팅 콘텐츠를 대량으로 제작하며 모든 초안에 문서 컨텍스트가 반영되어야 한다면 Jasper를 선택하십시오. 유료 플랜은 팀 규모에 맞게 확장됩니다.',
+          '**[Jasper](https://jasper.ai/pricing)** — 최적의 용도: 마케팅 팀, 브랜드 보이스, 캠페인 콘텐츠, 협업 워크플로우. 브랜드화된 마케팅 콘텐츠를 대량으로 제작하며 모든 초안에 문서 컨텍스트가 반영되어야 한다면 Jasper를 선택하십시오. Jasper 요금 페이지에 따르면 Pro는 좌석당 월 $69(월간 결제, 연간 결제 시 $59)이며 7일 무료 체험과 브랜드 보이스 2개가 포함됩니다. Business는 별도 견적입니다.',
           '**[Sudowrite](https://sudowrite.com)** — 최적의 용도: 소설, 브레인스토밍, 장면 개발, 창작 탐색. 소설이 주된 용도이며 비즈니스 글쓰기 도구가 아닌 AI 창작 파트너를 원한다면 Sudowrite를 선택하십시오.',
           '**[QuillBot](https://quillbot.com)** — 최적의 용도: 패러프레이징, 재작성, 요약, 어조 조정. 전체 콘텐츠 생성이 아닌 빠른 재작성이 주된 목적이라면 QuillBot을 선택하십시오. 무료 플랜이 제공됩니다.',
         ],
@@ -2358,7 +2365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://sudowrite.com', productName: 'Sudowrite', productCategory: 'AI Writing for Fiction', label: 'Sudowrite 살펴보기' },
           { url: 'https://quillbot.com', productName: 'QuillBot', productCategory: 'AI Paraphrasing & Rewriting', label: 'QuillBot 사용해보기' }
         ],
-        note: '2026년 8월 22일 기준으로 공급업체의 가격 및 플랜 페이지를 확인했습니다. 가격 및 무료 등급 제공 여부는 변경될 수 있으므로 구매 전 최신 조건을 확인하십시오.',
+        note: '2026년 11월 20일에 Grammarly, Jasper, Sudowrite의 플랜 페이지를 확인했습니다. QuillBot 페이지는 불러오지 못해 해당 서비스의 무료 플랜 관련 서술은 확인되지 않았습니다. 가격 및 무료 등급 제공 여부는 변경될 수 있으므로 구매 전 최신 조건을 확인하십시오.',
       },
       comparison: {
         id: 'comparison',
@@ -2508,17 +2515,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-22',
-    next_refresh_due: '2027-02-22',
+    dateModified: '2026-11-20',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/voice-ai-writers-hero-pt.webp',
     title: 'Melhores Ferramentas de IA para Escrita em 2026: Nuvem vs. Local, Custo, Privacidade e Produtividade',
-    seoTitle: 'Ferramentas de IA para Escrita 2026: Grammarly vs. Jasper vs. Local',
+    seoTitle: 'Escrita com IA 2026: Grammarly vs Jasper vs local',
     intro:
       'Uma análise da G2 de 2026, com 2.771 avaliações verificadas de ferramentas de IA para escrita, mostrou que 88% relatam economia real de tempo — mas, para escritores profissionais de alto volume, revisar e corrigir as sugestões da IA muitas vezes consome esse ganho. Essa descoberta muda a pergunta central da decisão de compra: não é "a IA é boa?", e sim "quanto do meu fluxo de escrita eu realmente consigo delegar, e para qual ferramenta?" Este guia compara plataformas de escrita na nuvem (Grammarly, Jasper, Sudowrite, QuillBot) com pipelines locais de Whisper + LLM, usando os dados da G2 para mostrar quem se beneficia, quem paga e quem deveria construir localmente.',
     metaDescription:
-      'Melhores ferramentas de IA para escrita em 2026: Grammarly, Jasper, Sudowrite, QuillBot vs. IA local. Comparação baseada em dados da G2 sobre custo, privacidade e produtividade para você decidir o que vale pagar.',
+      'Grammarly, Jasper, Sudowrite e QuillBot vs IA local em 2026: comparação baseada no G2 de custo, privacidade e produtividade para decidir o que pagar.',
     twitterDescription:
       'A G2 analisou 2.771 avaliações de ferramentas de escrita com IA — 88% economizaram tempo, mas escritores profissionais enfrentam um problema de sobrecarga de revisão. Compare Grammarly, Jasper, Sudowrite, QuillBot vs. IA local para 2026.',
     audience:
@@ -2575,7 +2583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Escritores profissionais se beneficiam mais de ferramentas com recursos de marca/contexto que reduzem a sobrecarga de revisão.',
           'A maioria dos escritores obtém o melhor resultado a longo prazo com o modelo híbrido: nuvem para o dia a dia, local para trabalhos confidenciais.',
         ],
-        updatedDate: '2026-08-22',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -2704,7 +2712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**[Grammarly](https://grammarly.com/desktop)** — Ideal para: e-mails, documentos, reescrita, gramática, tom e comunicação profissional do dia a dia. Escolha o Grammarly se quiser um fluxo de trabalho integrado de voz + edição sem construir nada por conta própria. Plano gratuito disponível; os planos pagos adicionam recursos avançados de tom e clareza.',
-          '**[Jasper](https://jasper.ai/pricing)** — Ideal para: equipes de marketing, voz de marca, conteúdo de campanhas e fluxos de trabalho colaborativos. Escolha o Jasper se você produz alto volume de conteúdo de marketing com marca e precisa de contexto de documentos carregado em cada rascunho. Os planos pagos escalam conforme o tamanho da equipe.',
+          '**[Jasper](https://jasper.ai/pricing)** — Ideal para: equipes de marketing, voz de marca, conteúdo de campanhas e fluxos de trabalho colaborativos. Escolha o Jasper se você produz alto volume de conteúdo de marketing com marca e precisa de contexto de documentos carregado em cada rascunho. Segundo a página de preços da Jasper, o Pro custa US$ 69 por usuário ao mês na cobrança mensal (US$ 59 na cobrança anual), com 7 dias de teste grátis e dois Brand Voices; o Business tem preço sob consulta.',
           '**[Sudowrite](https://sudowrite.com)** — Ideal para: ficção, brainstorming, desenvolvimento de cenas e exploração criativa. Escolha o Sudowrite se ficção for seu principal caso de uso e você quiser um parceiro criativo de IA, não uma ferramenta de escrita comercial.',
           '**[QuillBot](https://quillbot.com)** — Ideal para: paráfrase, reescrita, resumo e ajustes de tom. Escolha o QuillBot se sua principal necessidade for reescrita rápida, não geração completa de conteúdo. Plano gratuito disponível.',
         ],
@@ -2715,7 +2723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://sudowrite.com', productName: 'Sudowrite', productCategory: 'AI Writing for Fiction', label: 'Conheça o Sudowrite' },
           { url: 'https://quillbot.com', productName: 'QuillBot', productCategory: 'AI Paraphrasing & Rewriting', label: 'Experimente o QuillBot' }
         ],
-        note: 'Última verificação em relação às páginas de preços e planos dos fornecedores em 22/08/2026. Preços e disponibilidade de planos gratuitos mudam; confirme as condições atuais antes de comprar.',
+        note: 'Última verificação em 20/11/2026 nas páginas de planos de Grammarly, Jasper e Sudowrite; a página do QuillBot não pôde ser acessada, então a menção ao plano gratuito dele não foi verificada. Preços e disponibilidade de planos gratuitos mudam; confirme as condições atuais antes de comprar.',
       },
       comparison: {
         id: 'comparison',
@@ -2865,13 +2873,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-22',
-    next_refresh_due: '2027-02-22',
+    dateModified: '2026-11-20',
+    next_refresh_due: '2027-05-20',
+    last_full_refresh: '2026-11-20',
     designSkin: 'hub',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/voice-ai-writers-hero-zh.webp',
     title: '2026年最佳AI写作工具:云端与本地对比、成本、隐私与效率',
-    seoTitle: 'AI写作工具2026:Grammarly对比Jasper对比本地方案——选购指南',
+    seoTitle: 'AI写作工具2026：Grammarly、Jasper与本地方案',
     intro:
       'G2在2026年对2,771条经核实的AI写作评论进行分析,发现88%的用户报告确实节省了时间——但对高产出的专业写作者来说,审核和修改AI建议往往会抵消这些收益。这一发现重新定义了购买决策的核心问题:不是"AI好不好用",而是"你的写作流程中有多少能真正交给AI处理,又该交给哪款工具"。本指南依据G2的数据,对比云端写作平台(Grammarly、Jasper、Sudowrite、QuillBot)与本地Whisper+LLM方案,说明谁能从中受益、谁需要付费、谁更适合搭建本地方案。',
     metaDescription:
@@ -2932,7 +2941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '专业写作者从具备品牌/语境功能、能减少审核成本的工具中获益最多。',
           '大多数写作者从混合模式中获得最佳的长期效果:日常用云端,机密内容用本地。',
         ],
-        updatedDate: '2026-08-22',
+        updatedDate: '2026-11-20',
       },
     },
     toc: [
@@ -3061,7 +3070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**[Grammarly](https://grammarly.com/desktop)**——最适合:邮件、文档、改写、语法、语气以及日常职场沟通。如果你想要一套集成的语音+编辑工作流程,又不想自己搭建任何东西,选Grammarly。提供免费版;付费版新增高级语气和清晰度功能。',
-          '**[Jasper](https://jasper.ai/pricing)**——最适合:营销团队、品牌语气、活动内容和协作工作流程。如果你需要产出大量品牌营销内容,并希望每次起草都自动加载文档语境,选Jasper。付费方案可随团队规模扩展。',
+          '**[Jasper](https://jasper.ai/pricing)**——最适合:营销团队、品牌语气、活动内容和协作工作流程。如果你需要产出大量品牌营销内容,并希望每次起草都自动加载文档语境,选Jasper。据Jasper定价页面,Pro版每席位每月$69(按月计费,按年计费为$59),含7天免费试用和2个品牌语气;Business版需联系销售报价。',
           '**[Sudowrite](https://sudowrite.com)**——最适合:小说创作、构思、场景开发和创意探索。如果小说创作是你的主要用途,并且你想要一个AI创意伙伴而非商务写作工具,选Sudowrite。',
           '**[QuillBot](https://quillbot.com)**——最适合:改写、重写、摘要和语气调整。如果你的主要需求是快速改写而非完整内容生成,选QuillBot。提供免费版。',
         ],
@@ -3072,7 +3081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://sudowrite.com', productName: 'Sudowrite', productCategory: 'AI Writing for Fiction', label: '了解Sudowrite' },
           { url: 'https://quillbot.com', productName: 'QuillBot', productCategory: 'AI Paraphrasing & Rewriting', label: '试用QuillBot' }
         ],
-        note: '价格信息最后核实于2026-08-22,依据各厂商定价和方案页面。定价和免费版可用性可能会变化,购买前请确认最新条款。',
+        note: '最后核实于2026-11-20,依据Grammarly、Jasper和Sudowrite的方案页面;QuillBot页面无法访问,因此其免费版的相关表述未经核实。定价和免费版可用性可能会变化,购买前请确认最新条款。',
       },
       comparison: {
         id: 'comparison',
