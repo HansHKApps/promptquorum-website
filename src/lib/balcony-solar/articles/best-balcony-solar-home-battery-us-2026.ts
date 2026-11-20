@@ -8,7 +8,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     last_full_refresh: '2026-07-03',
     current_hardware_mentioned: [
       'EcoFlow Delta Pro',
@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'In the US, "balcony solar" works very differently from Europe — no federal plug-in framework, patchwork state rules, and a buyer base that already reaches for portable power stations and home batteries for backup power, outages, and partial solar. This guide covers what US buyers actually buy: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, and Anker SOLIX portable systems that pair cleanly with panels without touching the grid.',
     metaDescription: 'Best home batteries and portable power stations for US solar buyers in 2026: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP vs NMC, local control, verified US availability.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 min read',
     educationalLevel: 'Intermediate',
     audience: 'US homeowners and renters seeking backup power, partial solar, or grid-independent capability without full rooftop installation',
@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Anker SOLIX Solarbank is NOT sold in the US — confirm you\'re looking at their portable power station line, not Solarbank',
           'All four brands are China-manufactured; US retail prices are subject to Section 301 tariffs — check prices at time of purchase',
         ],
-        updatedDate: '2026-07-03',
+        updatedDate: '2026-11-20',
       },
     },
     snippetBlocks: [
@@ -82,6 +82,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '2026 Update: US State Laws and Product Checks',
+        content: '**The US legal picture has moved beyond a pure patchwork: according to a plug-in solar roundup updated 4 October 2026, ten states have enacted plug-in solar laws, most capping devices at 1,200 W.** The vendor-run roundup ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)) lists Utah (HB 340, signed March 2025), Maine (LD 1730, signed 6 April 2026), Virginia (HB 395, 22 April 2026), Colorado (HB 26-1007, 7 May 2026, up to 1,920 W), Maryland (HB 1532, 12 May 2026), Connecticut (HB 5340, 20 May 2026), New Hampshire (SB 540-FN, June 2026), Vermont (S. 202, 16 June 2026), New Jersey (S 2368 / A 4836, 1 September 2026) and California (SB 868, signed 30 September 2026). It flags inconsistencies in its own figures, and other sources disagree on which laws name UL 3700 and on effective dates, so read the enacted bill text on each legislature\'s site; the bills were not verified against primary texts in this refresh. No federal plug-in framework was found, so the page\'s "patchwork" framing still holds, but it understates how many states now have dedicated laws. The same roundup says the federal 30% solar tax credit expired on 31 December 2025, which matters for any cost comparison here. The models, specs and prices below were not re-verified: newer generations such as the EcoFlow Delta Pro 3 and Anker SOLIX F3800 Plus appear in 2026 press, and a [Bob Vila roundup dated April 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) listed the F3800 Plus at $799.99 on sale, so treat prices on this page as undated. The statement that Anker Solarbank is not sold in the US was not re-confirmed either: search results showed an Amazon.com listing for the Solarbank 2 E1600 that could not be opened, so check Anker\'s US store. This is a summary of public information, not legal, tax or electrical-safety advice.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -435,7 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     last_full_refresh: '2026-07-03',
     current_hardware_mentioned: [
       'EcoFlow Delta Pro',
@@ -456,7 +460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'In den USA funktioniert „Balkon-Solar“ ganz anders als in Europa — es gibt kein bundesweites Plug-in-Rahmenwerk, sondern einen Flickenteppich einzelstaatlicher Regeln, und eine Käuferschaft, die für Notstrom, Stromausfälle und teilweise Solarnutzung ohnehin bereits zu tragbaren Powerstations und Heimspeichern greift. Dieser Leitfaden behandelt, was US-Käufer tatsächlich kaufen: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer und tragbare Anker-SOLIX-Systeme, die sich sauber mit Panels kombinieren lassen, ohne das Netz zu berühren.',
     metaDescription: 'Beste Heimspeicher und tragbare Powerstations für US-Solarkäufer 2026: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP vs. NMC, lokale Steuerung, geprüfte US-Verfügbarkeit.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'US-Hausbesitzer und Mieter, die Notstrom, teilweise Solarnutzung oder netzunabhängige Kapazität ohne vollständige Dachinstallation suchen',
@@ -483,7 +487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Anker SOLIX Solarbank wird in den USA NICHT verkauft — vergewissern Sie sich, dass Sie die tragbare Powerstation-Reihe betrachten, nicht die Solarbank',
           'Alle vier Marken werden in China gefertigt; die US-Einzelhandelspreise unterliegen Section-301-Zöllen — prüfen Sie die Preise zum Kaufzeitpunkt',
         ],
-        updatedDate: '2026-07-03',
+        updatedDate: '2026-11-20',
       },
     },
     snippetBlocks: [
@@ -509,6 +513,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Update 2026: US-Bundesstaatengesetze und Produktprüfung',
+        content: '**Das US-Rechtsbild ist über einen reinen Flickenteppich hinaus: Laut einer am 4. Oktober 2026 aktualisierten Übersicht zu Plug-in-Solar haben zehn Bundesstaaten Plug-in-Solargesetze verabschiedet, die Geräte meist auf 1.200 W begrenzen.** Die von einem Anbieter betriebene Übersicht ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)) nennt Utah (HB 340, unterzeichnet März 2025), Maine (LD 1730, unterzeichnet 6. April 2026), Virginia (HB 395, 22. April 2026), Colorado (HB 26-1007, 7. Mai 2026, bis 1.920 W), Maryland (HB 1532, 12. Mai 2026), Connecticut (HB 5340, 20. Mai 2026), New Hampshire (SB 540-FN, Juni 2026), Vermont (S. 202, 16. Juni 2026), New Jersey (S 2368 / A 4836, 1. September 2026) und Kalifornien (SB 868, unterzeichnet 30. September 2026). Sie weist selbst auf Unstimmigkeiten bei ihren Angaben hin, und andere Quellen widersprechen sich dabei, welche Gesetze UL 3700 nennen und wann sie in Kraft treten; bitte den verabschiedeten Gesetzestext auf der Website des jeweiligen Parlaments lesen – die Gesetze wurden in dieser Aktualisierung nicht an Primärtexten geprüft. Ein bundesweiter Plug-in-Rahmen wurde nicht gefunden, die Darstellung als „Flickenteppich“ bleibt also gültig, unterschätzt aber, wie viele Bundesstaaten inzwischen eigene Gesetze haben. Laut derselben Übersicht lief die bundesweite Solar-Steuergutschrift von 30 % am 31. Dezember 2025 aus, was für jeden Kostenvergleich hier relevant ist. Die unten genannten Modelle, Daten und Preise wurden nicht erneut geprüft: Neuere Generationen wie EcoFlow Delta Pro 3 und Anker SOLIX F3800 Plus tauchen in der Presse 2026 auf, und eine [Bob-Vila-Übersicht vom April 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) nannte den F3800 Plus im Angebot für 799,99 $ – Preise auf dieser Seite sind daher als undatiert zu behandeln. Auch die Aussage, Anker Solarbank werde in den USA nicht verkauft, wurde nicht erneut bestätigt: Suchergebnisse zeigten ein Amazon.com-Angebot für die Solarbank 2 E1600, das sich nicht öffnen ließ; bitte den US-Shop von Anker prüfen. Dies ist eine Zusammenfassung öffentlicher Informationen und keine Rechts-, Steuer- oder Elektrosicherheitsberatung.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -853,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     last_full_refresh: '2026-07-03',
     current_hardware_mentioned: [
       'EcoFlow Delta Pro',
@@ -874,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Aux États-Unis, le « solaire de balcon » fonctionne très différemment de l\'Europe : pas de cadre fédéral pour le plug-in, des règles disparates selon les États et un public d\'acheteurs qui se tourne déjà vers les stations électriques portables et les batteries domestiques pour l\'alimentation de secours, les coupures et le solaire partiel. Ce guide couvre ce que les acheteurs américains achètent réellement : les systèmes portables EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer et Anker SOLIX, qui se marient parfaitement avec des panneaux sans jamais toucher au réseau.',
     metaDescription: 'Meilleures batteries domestiques et stations électriques portables pour les acheteurs solaires aux États-Unis en 2026 : EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP vs NMC, contrôle local, disponibilité US vérifiée.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Propriétaires et locataires américains recherchant une alimentation de secours, du solaire partiel ou une capacité d\'indépendance vis-à-vis du réseau sans installation complète en toiture',
@@ -901,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'Anker SOLIX Solarbank n\'est PAS vendue aux États-Unis — assurez-vous de bien regarder leur gamme de stations électriques portables, pas la Solarbank',
           'Les quatre marques sont fabriquées en Chine ; les prix de détail américains sont soumis aux droits de douane de la Section 301 — vérifiez les prix au moment de l\'achat',
         ],
-        updatedDate: '2026-07-03',
+        updatedDate: '2026-11-20',
       },
     },
     snippetBlocks: [
@@ -927,6 +935,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Mise à jour 2026 : lois des États américains et vérifications produits',
+        content: '**Le paysage juridique américain dépasse désormais la simple mosaïque : selon un panorama du solaire plug-in mis à jour le 4 octobre 2026, dix États ont adopté des lois sur le solaire plug-in, la plupart plafonnant les appareils à 1 200 W.** Ce panorama tenu par un vendeur ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)) cite l\'Utah (HB 340, signée en mars 2025), le Maine (LD 1730, signée le 6 avril 2026), la Virginie (HB 395, 22 avril 2026), le Colorado (HB 26-1007, 7 mai 2026, jusqu\'à 1 920 W), le Maryland (HB 1532, 12 mai 2026), le Connecticut (HB 5340, 20 mai 2026), le New Hampshire (SB 540-FN, juin 2026), le Vermont (S. 202, 16 juin 2026), le New Jersey (S 2368 / A 4836, 1er septembre 2026) et la Californie (SB 868, signée le 30 septembre 2026). Il signale lui-même des incohérences dans ses chiffres, et d\'autres sources divergent sur les lois qui citent UL 3700 et sur les dates d\'entrée en vigueur : lisez le texte promulgué sur le site de chaque législature ; les textes n\'ont pas été vérifiés dans leurs sources primaires lors de cette mise à jour. Aucun cadre fédéral plug-in n\'a été trouvé, la formulation « mosaïque » de cette page reste donc valable, mais elle sous-estime le nombre d\'États dotés de lois dédiées. Selon le même panorama, le crédit d\'impôt fédéral de 30 % pour le solaire a expiré le 31 décembre 2025, ce qui compte pour toute comparaison de coûts ici. Les modèles, caractéristiques et prix ci-dessous n\'ont pas été revérifiés : des générations plus récentes comme l\'EcoFlow Delta Pro 3 et l\'Anker SOLIX F3800 Plus apparaissent dans la presse de 2026, et un [panorama Bob Vila d\'avril 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) affichait le F3800 Plus à 799,99 $ en promotion ; les prix de cette page doivent donc être considérés comme non datés. L\'affirmation selon laquelle Anker Solarbank n\'est pas vendu aux États-Unis n\'a pas non plus été reconfirmée : les résultats de recherche montraient une fiche Amazon.com pour le Solarbank 2 E1600 qui n\'a pas pu être ouverte ; vérifiez la boutique américaine d\'Anker. Il s\'agit d\'un résumé d\'informations publiques, pas d\'un conseil juridique, fiscal ni de sécurité électrique.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -1283,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     last_full_refresh: '2026-07-03',
     current_hardware_mentioned: [
       'EcoFlow Delta Pro',
@@ -1304,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '米国では「ベランダ発電（バルコニーソーラー）」の事情がヨーロッパとは大きく異なります。連邦レベルのプラグイン規格はなく、州ごとにルールがバラバラで、購入者は停電対策・非常用電源・部分的なソーラー運用のために、すでにポータブル電源や家庭用バッテリーへと手を伸ばしています。本ガイドでは、米国の購入者が実際に買っているもの、つまり系統（グリッド）に一切つながずにパネルと素直に組み合わせられる EcoFlow Delta Pro、Bluetti AC300、Jackery Explorer、Anker SOLIX のポータブルシステムを解説します。',
     metaDescription: '2026年の米国ソーラー購入者向けベスト家庭用バッテリー＆ポータブル電源：EcoFlow Delta Pro、Bluetti AC300、Jackery Explorer、Anker SOLIX。LFP対NMC、ローカル制御、米国での入手性を検証。',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11分で読める',
     educationalLevel: 'Intermediate',
     audience: '本格的な屋根設置なしに、非常用電源・部分的なソーラー・系統に依存しない運用を求める米国の持ち家所有者および賃貸居住者',
@@ -1331,7 +1343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Anker SOLIX Solarbank は米国では販売されていません。Solarbank ではなくポータブル電源のラインを見ているか確認してください',
           '4ブランドはいずれも中国製造で、米国小売価格は Section 301 関税の対象です。購入時点の価格を確認してください',
         ],
-        updatedDate: '2026-07-03',
+        updatedDate: '2026-11-20',
       },
     },
     snippetBlocks: [
@@ -1357,6 +1369,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '2026年の更新:米国の州法と製品の確認',
+        content: '**米国の法的状況は単なる寄せ集めを超えて進んでいます。2026年10月4日に更新されたプラグイン型太陽光のまとめによると、10の州がプラグイン型太陽光の法律を制定しており、多くは機器を1,200 Wまでに制限しています。** 事業者が運営するこのまとめ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026))は、ユタ州(HB 340、2025年3月署名)、メイン州(LD 1730、2026年4月6日署名)、バージニア州(HB 395、4月22日)、コロラド州(HB 26-1007、5月7日、1,920 Wまで)、メリーランド州(HB 1532、5月12日)、コネチカット州(HB 5340、5月20日)、ニューハンプシャー州(SB 540-FN、6月)、バーモント州(S. 202、6月16日)、ニュージャージー州(S 2368 / A 4836、9月1日)、カリフォルニア州(SB 868、2026年9月30日署名)を挙げています。同まとめは自身の数値の不整合も指摘しており、UL 3700を明記する法律や施行日については他の情報源と食い違うため、各州議会のサイトで成立した法案本文を確認してください。今回の更新では法案を一次資料で検証していません。連邦レベルのプラグイン向け枠組みは見つからなかったため、このページの「寄せ集め」という表現は引き続き妥当ですが、専用の法律を持つ州の数は過小に伝えています。同まとめによれば、連邦の太陽光30%税額控除は2025年12月31日に終了しており、ここでの費用比較に影響します。以下の機種、仕様、価格は再確認していません。EcoFlow Delta Pro 3やAnker SOLIX F3800 Plusなどの新世代機が2026年の報道に登場しており、[2026年4月付のBob Vilaのまとめ](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/)はF3800 Plusをセール価格799.99ドルで掲載していたため、このページの価格は日付不明として扱ってください。Anker Solarbankが米国で販売されていないという記述も再確認できていません。検索結果にはSolarbank 2 E1600のAmazon.comの掲載が表示されましたが開けなかったため、Ankerの米国ストアで確認してください。本欄は公開情報の要約であり、法的・税務・電気安全上の助言ではありません。',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -1713,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     last_full_refresh: '2026-07-03',
     current_hardware_mentioned: [
       'EcoFlow Delta Pro',
@@ -1734,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '在美国，"阳台太阳能"的运作方式与欧洲截然不同——没有联邦层面的即插即用框架，各州规则杂乱不一，而买家群体本来就习惯用便携式电源和家用电池来解决备电、停电和部分太阳能供电的需求。本指南聚焦美国买家真正会购买的产品：EcoFlow Delta Pro、Bluetti AC300、Jackery Explorer 以及 Anker SOLIX 等便携系统，它们能与太阳能板顺畅配对，而完全无需接入电网。',
     metaDescription: '2026 年面向美国太阳能买家的最佳家用电池与便携式电源：EcoFlow Delta Pro、Bluetti AC300、Jackery Explorer、Anker SOLIX——LFP 与 NMC 对比、本地控制、经核实的美国可购性。',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '阅读约11分钟',
     educationalLevel: 'Intermediate',
     audience: '希望在不做整套屋顶安装的前提下，获得备电、部分太阳能供电或脱网能力的美国房主与租户',
@@ -1761,7 +1777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Anker SOLIX Solarbank 在美国不销售——请确认你看的是其便携式电源产品线，而非 Solarbank',
           '这四家品牌均为中国制造；美国零售价受 Section 301 关税影响——请在购买时查询实时价格',
         ],
-        updatedDate: '2026-07-03',
+        updatedDate: '2026-11-20',
       },
     },
     snippetBlocks: [
@@ -1787,6 +1803,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '延伸阅读', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '2026年更新:美国各州法律与产品核查',
+        content: '**美国的法律格局已不止是零散拼凑:据2026年10月4日更新的插电式太阳能汇总,已有十个州通过了插电式太阳能法律,多数将设备限制在1,200 W以内。** 这份由商家运营的汇总([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026))列出:犹他州(HB 340,2025年3月签署)、缅因州(LD 1730,2026年4月6日签署)、弗吉尼亚州(HB 395,4月22日)、科罗拉多州(HB 26-1007,5月7日,最高1,920 W)、马里兰州(HB 1532,5月12日)、康涅狄格州(HB 5340,5月20日)、新罕布什尔州(SB 540-FN,6月)、佛蒙特州(S. 202,6月16日)、新泽西州(S 2368 / A 4836,9月1日)和加利福尼亚州(SB 868,2026年9月30日签署)。该汇总自己也指出了数据不一致之处,其他来源在哪些法律点名UL 3700以及生效日期上也有分歧,请阅读各州议会网站上的已颁布法案文本;本次更新未对照一手文本核实这些法案。未发现联邦层面的插电式框架,因此本页“零散拼凑”的说法仍然成立,但低估了已有专门立法的州的数量。同一汇总称,联邦30%太阳能税收抵免已于2025年12月31日到期,这会影响此处的成本比较。下文的型号、规格和价格未重新核实:EcoFlow Delta Pro 3和Anker SOLIX F3800 Plus等新一代产品出现在2026年的媒体报道中,[2026年4月的Bob Vila汇总](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/)曾列出F3800 Plus促销价799.99美元,因此本页价格应视为未标注日期。关于Anker Solarbank不在美国销售的说法也未重新确认:搜索结果显示Amazon.com上有Solarbank 2 E1600的页面但无法打开,请查看Anker美国商店。本页为公开信息的汇总,不构成法律、税务或电气安全建议。',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -2134,7 +2154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     last_full_refresh: '2026-07-03',
     current_hardware_mentioned: [
       'EcoFlow Delta Pro',
@@ -2155,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'En EE. UU., la "solar de balcón" funciona de forma muy distinta a Europa: no hay un marco federal para sistemas enchufables, las normas estatales son un mosaico, y una base de compradores que ya recurre a estaciones de energía portátiles y baterías domésticas para energía de respaldo, cortes de luz y solar parcial. Esta guía cubre lo que los compradores estadounidenses realmente compran: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer y los sistemas portátiles Anker SOLIX que se emparejan limpiamente con paneles sin tocar la red eléctrica.',
     metaDescription: 'Las mejores baterías domésticas y estaciones de energía portátiles para compradores de solar en EE. UU. en 2026: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP vs NMC, control local, disponibilidad verificada en EE. UU.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Propietarios e inquilinos de EE. UU. que buscan energía de respaldo, solar parcial o capacidad independiente de la red sin una instalación completa en el tejado',
@@ -2182,7 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El Anker SOLIX Solarbank NO se vende en EE. UU. — confirma que estás mirando su línea de estaciones de energía portátiles, no el Solarbank',
           'Las cuatro marcas se fabrican en China; los precios de venta en EE. UU. están sujetos a los aranceles de la Sección 301 — consulta los precios en el momento de la compra',
         ],
-        updatedDate: '2026-07-03',
+        updatedDate: '2026-11-20',
       },
     },
     snippetBlocks: [
@@ -2208,6 +2228,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Actualización 2026: leyes estatales de EE. UU. y comprobaciones de producto',
+        content: '**El panorama legal de EE. UU. ha ido más allá de un simple mosaico: según un resumen sobre energía solar plug-in actualizado el 4 de octubre de 2026, diez estados han aprobado leyes de solar plug-in, la mayoría con un límite de 1200 W por dispositivo.** El resumen, gestionado por un vendedor ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)), cita Utah (HB 340, firmada en marzo de 2025), Maine (LD 1730, firmada el 6 de abril de 2026), Virginia (HB 395, 22 de abril de 2026), Colorado (HB 26-1007, 7 de mayo de 2026, hasta 1920 W), Maryland (HB 1532, 12 de mayo de 2026), Connecticut (HB 5340, 20 de mayo de 2026), Nuevo Hampshire (SB 540-FN, junio de 2026), Vermont (S. 202, 16 de junio de 2026), Nueva Jersey (S 2368 / A 4836, 1 de septiembre de 2026) y California (SB 868, firmada el 30 de septiembre de 2026). El propio resumen señala incoherencias en sus cifras, y otras fuentes discrepan sobre qué leyes nombran UL 3700 y sobre las fechas de entrada en vigor; lee el texto promulgado en el sitio de cada legislatura, ya que en esta actualización no se verificaron los proyectos frente a textos primarios. No se encontró un marco federal para plug-in, así que el enfoque de «mosaico» de esta página sigue siendo válido, pero subestima cuántos estados tienen ya leyes específicas. Según el mismo resumen, el crédito fiscal federal del 30 % para energía solar venció el 31 de diciembre de 2025, lo que importa para cualquier comparación de costes aquí. Los modelos, especificaciones y precios que siguen no se reverificaron: generaciones más recientes como la EcoFlow Delta Pro 3 y la Anker SOLIX F3800 Plus aparecen en la prensa de 2026, y un [resumen de Bob Vila de abril de 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) listaba la F3800 Plus a 799,99 $ en oferta, por lo que los precios de esta página deben tratarse como sin fecha. Tampoco se reconfirmó que Anker Solarbank no se venda en EE. UU.: los resultados de búsqueda mostraron una ficha en Amazon.com del Solarbank 2 E1600 que no pudo abrirse, así que consulta la tienda de Anker en EE. UU. Es un resumen de información pública, no asesoramiento jurídico, fiscal ni de seguridad eléctrica.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -2564,7 +2588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     last_full_refresh: '2026-07-03',
     current_hardware_mentioned: [
       'EcoFlow Delta Pro',
@@ -2585,7 +2609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Nos EUA, a "energia solar de sacada" funciona de forma muito diferente da Europa — não há um marco regulatório federal para sistemas plug-and-play, as regras variam de estado para estado e o público comprador já recorre a estações portáteis de energia e baterias domésticas para energia de backup, quedas de energia e solar parcial. Este guia cobre o que os compradores nos EUA realmente compram: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer e sistemas portáteis Anker SOLIX que combinam de forma limpa com painéis sem tocar na rede elétrica.',
     metaDescription: 'Melhores baterias domésticas e estações portáteis de energia para compradores de solar nos EUA em 2026: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP vs NMC, controle local, disponibilidade verificada nos EUA.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Proprietários de imóveis e inquilinos nos EUA que buscam energia de backup, solar parcial ou capacidade independente da rede sem uma instalação completa no telhado',
@@ -2612,7 +2636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Anker SOLIX Solarbank NÃO é vendido nos EUA — confirme que você está olhando a linha de estações portáteis de energia da marca, e não o Solarbank',
           'As quatro marcas são fabricadas na China; os preços de varejo nos EUA estão sujeitos às tarifas da Seção 301 — verifique os preços no momento da compra',
         ],
-        updatedDate: '2026-07-03',
+        updatedDate: '2026-11-20',
       },
     },
     snippetBlocks: [
@@ -2638,6 +2662,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Leitura Relacionada', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'Atualização 2026: leis estaduais dos EUA e checagem de produtos',
+        content: '**O quadro legal dos EUA foi além de um simples mosaico: segundo um resumo sobre energia solar plug-in atualizado em 4 de outubro de 2026, dez estados aprovaram leis de solar plug-in, a maioria limitando os dispositivos a 1.200 W.** O resumo, mantido por um vendedor ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)), cita Utah (HB 340, sancionada em março de 2025), Maine (LD 1730, sancionada em 6 de abril de 2026), Virgínia (HB 395, 22 de abril de 2026), Colorado (HB 26-1007, 7 de maio de 2026, até 1.920 W), Maryland (HB 1532, 12 de maio de 2026), Connecticut (HB 5340, 20 de maio de 2026), Nova Hampshire (SB 540-FN, junho de 2026), Vermont (S. 202, 16 de junho de 2026), Nova Jersey (S 2368 / A 4836, 1º de setembro de 2026) e Califórnia (SB 868, sancionada em 30 de setembro de 2026). O próprio resumo aponta inconsistências em seus números, e outras fontes divergem sobre quais leis citam a UL 3700 e sobre as datas de vigência; leia o texto promulgado no site de cada legislatura, pois os projetos não foram verificados em textos primários nesta atualização. Nenhum marco federal para plug-in foi encontrado, então o enquadramento de «mosaico» desta página continua válido, mas subestima quantos estados já têm leis específicas. Segundo o mesmo resumo, o crédito fiscal federal de 30% para solar expirou em 31 de dezembro de 2025, o que importa para qualquer comparação de custos aqui. Os modelos, especificações e preços abaixo não foram reverificados: gerações mais novas, como a EcoFlow Delta Pro 3 e a Anker SOLIX F3800 Plus, aparecem na imprensa de 2026, e um [resumo da Bob Vila de abril de 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) listava a F3800 Plus a US$ 799,99 em promoção, então os preços desta página devem ser tratados como sem data. Também não foi reconfirmado que a Anker Solarbank não é vendida nos EUA: os resultados de busca mostraram um anúncio na Amazon.com do Solarbank 2 E1600 que não pôde ser aberto; confira a loja da Anker nos EUA. Este é um resumo de informações públicas, não aconselhamento jurídico, fiscal nem de segurança elétrica.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -2994,7 +3022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     last_full_refresh: '2026-07-03',
     current_hardware_mentioned: [
       'EcoFlow Delta Pro',
@@ -3015,7 +3043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'في الولايات المتحدة، تعمل "الطاقة الشمسية للشرفات" بشكل مختلف تماماً عن أوروبا — لا يوجد إطار اتحادي للتوصيل المباشر، والقواعد تختلف من ولاية إلى أخرى، وقاعدة المشترين تتجه بالفعل نحو محطات الطاقة المحمولة وبطاريات المنازل للطاقة الاحتياطية وحالات انقطاع التيار والطاقة الشمسية الجزئية. يغطي هذا الدليل ما يشتريه المستخدمون الأمريكيون فعلياً: EcoFlow Delta Pro وBluetti AC300 وJackery Explorer وأنظمة Anker SOLIX المحمولة التي تقترن بسلاسة مع الألواح دون الاتصال بالشبكة الكهربائية.',
     metaDescription: 'أفضل بطاريات المنازل ومحطات الطاقة المحمولة لمشتري الطاقة الشمسية في الولايات المتحدة 2026: EcoFlow Delta Pro، Bluetti AC300، Jackery Explorer، Anker SOLIX — مقارنة LFP مقابل NMC، التحكم المحلي، والتوافر المؤكد في الولايات المتحدة.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11 دقيقة للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'أصحاب المنازل والمستأجرون في الولايات المتحدة الباحثون عن طاقة احتياطية أو طاقة شمسية جزئية أو قدرة مستقلة عن الشبكة دون تركيب كامل على السطح',
@@ -3042,7 +3070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Anker SOLIX Solarbank غير مُباع في الولايات المتحدة — تأكد من أنك تنظر إلى خط محطات الطاقة المحمولة، وليس Solarbank',
           'الماركات الأربع جميعها مصنوعة في الصين؛ وأسعار التجزئة الأمريكية خاضعة لرسوم القسم 301 الجمركية — تحقق من الأسعار عند الشراء',
         ],
-        updatedDate: '2026-07-03',
+        updatedDate: '2026-11-20',
       },
     },
     snippetBlocks: [
@@ -3068,6 +3096,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: 'تحديث 2026: قوانين الولايات الأمريكية وفحص المنتجات',
+        content: '**تجاوز المشهد القانوني الأمريكي مجرد فسيفساء متفرقة: فوفق ملخص عن الطاقة الشمسية بالتوصيل المباشر جرى تحديثه في 4 أكتوبر 2026، أقرّت عشر ولايات قوانين لهذا النوع، ويحدّ معظمها قدرة الأجهزة عند 1,200 واط.** يذكر الملخص الذي يديره بائع ([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026)) ولاية يوتا (HB 340، وُقّع في مارس 2025) وماين (LD 1730، وُقّع في 6 أبريل 2026) وفرجينيا (HB 395، 22 أبريل 2026) وكولورادو (HB 26-1007، 7 مايو 2026، حتى 1,920 واط) وماريلاند (HB 1532، 12 مايو 2026) وكونيتيكت (HB 5340، 20 مايو 2026) ونيو هامبشير (SB 540-FN، يونيو 2026) وفيرمونت (S. 202، 16 يونيو 2026) ونيوجيرسي (S 2368 / A 4836، 1 سبتمبر 2026) وكاليفورنيا (SB 868، وُقّع في 30 سبتمبر 2026). وينبّه الملخص نفسه إلى تناقضات في أرقامه، وتختلف مصادر أخرى حول القوانين التي تذكر UL 3700 وحول تواريخ السريان، فاقرأ نص القانون الصادر على موقع كل هيئة تشريعية؛ ولم تُراجَع مشاريع القوانين على نصوص أولية في هذا التحديث. ولم يُعثر على إطار اتحادي للتوصيل المباشر، فتظل صياغة «الفسيفساء» في هذه الصفحة صحيحة، لكنها تقلل من عدد الولايات التي لديها قوانين مخصصة الآن. ووفق الملخص نفسه انتهى الائتمان الضريبي الاتحادي للطاقة الشمسية بنسبة 30% في 31 ديسمبر 2025، وهذا يهم أي مقارنة للتكلفة هنا. ولم يُعَد التحقق من الطرز والمواصفات والأسعار أدناه: فأجيال أحدث مثل EcoFlow Delta Pro 3 وAnker SOLIX F3800 Plus تظهر في صحافة 2026، وأورد [ملخص Bob Vila في أبريل 2026](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/) سعر F3800 Plus بـ799.99 دولاراً في عرض، لذا تُعامل الأسعار في هذه الصفحة على أنها غير مؤرخة. كما لم يُعَد تأكيد أن Anker Solarbank لا تُباع في الولايات المتحدة: فقد أظهرت نتائج البحث إعلاناً على Amazon.com لـSolarbank 2 E1600 تعذّر فتحه، فتحقق من متجر Anker الأمريكي. هذا ملخص لمعلومات علنية وليس استشارة قانونية أو ضريبية أو في السلامة الكهربائية.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
@@ -3421,7 +3453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-03',
+    next_refresh_due: '2027-05-20',
     last_full_refresh: '2026-07-03',
     current_hardware_mentioned: [
       'EcoFlow Delta Pro',
@@ -3442,7 +3474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '미국에서 "발코니 태양광"은 유럽과는 매우 다르게 작동합니다. 연방 차원의 플러그인 제도가 없고, 주(州)마다 규정이 제각각이며, 구매자층은 이미 백업 전원, 정전, 부분 태양광을 위해 포터블 파워 스테이션과 홈 배터리를 찾고 있습니다. 이 가이드는 미국 구매자가 실제로 구매하는 제품, 즉 그리드에 연결하지 않고도 패널과 깔끔하게 결합되는 EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX 포터블 시스템을 다룹니다.',
     metaDescription: '2026년 미국 태양광 구매자를 위한 최고의 홈 배터리 및 포터블 파워 스테이션: EcoFlow Delta Pro, Bluetti AC300, Jackery Explorer, Anker SOLIX — LFP 대 NMC, 로컬 제어, 검증된 미국 판매 여부.',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
+    dateModified: '2026-11-20',
     readTime: '11분 읽기',
     educationalLevel: 'Intermediate',
     audience: '전체 지붕 설치 없이 백업 전원, 부분 태양광 또는 그리드 독립 기능을 원하는 미국의 주택 소유자와 세입자',
@@ -3469,7 +3501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Anker SOLIX Solarbank는 미국에서 판매되지 않습니다 — Solarbank가 아니라 포터블 파워 스테이션 라인을 보고 있는지 확인하십시오',
           '네 브랜드 모두 중국 제조 제품입니다. 미국 소매가는 Section 301 관세 대상이므로 구매 시점에 가격을 확인하십시오',
         ],
-        updatedDate: '2026-07-03',
+        updatedDate: '2026-11-20',
       },
     },
     snippetBlocks: [
@@ -3495,6 +3527,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '관련 읽을거리', anchor: '#related-reading' },
     ],
     sections: {
+      statusNote: {
+        title: '2026년 업데이트: 미국 주 법률과 제품 점검',
+        content: '**미국의 법적 상황은 단순한 짜깁기를 넘어섰습니다. 2026년 10월 4일 업데이트된 플러그인 태양광 정리에 따르면 10개 주가 플러그인 태양광 법을 제정했으며 대부분 기기를 1,200 W로 제한합니다.** 판매업체가 운영하는 이 정리([PluginSolarUS](https://pluginsolarus.com/learn/state-legislation-roundup-2026))는 유타(HB 340, 2025년 3월 서명), 메인(LD 1730, 2026년 4월 6일 서명), 버지니아(HB 395, 4월 22일), 콜로라도(HB 26-1007, 5월 7일, 최대 1,920 W), 메릴랜드(HB 1532, 5월 12일), 코네티컷(HB 5340, 5월 20일), 뉴햄프셔(SB 540-FN, 6월), 버몬트(S. 202, 6월 16일), 뉴저지(S 2368 / A 4836, 9월 1일), 캘리포니아(SB 868, 2026년 9월 30일 서명)를 나열합니다. 이 정리 스스로도 수치의 불일치를 지적하고 있고, 어느 법이 UL 3700을 명시하는지와 시행일에 대해서는 다른 출처와 엇갈리므로 각 주 의회 사이트에서 제정된 법안 원문을 확인하십시오. 이번 갱신에서는 법안을 1차 자료로 검증하지 않았습니다. 연방 차원의 플러그인 체계는 찾지 못했으므로 이 페이지의 "짜깁기"라는 표현은 여전히 유효하지만, 전용 법을 가진 주의 수를 과소평가합니다. 같은 정리에 따르면 연방 태양광 30% 세액공제는 2025년 12월 31일에 종료되었으며, 이는 이 페이지의 비용 비교에 영향을 줍니다. 아래의 모델, 사양, 가격은 재확인하지 않았습니다. EcoFlow Delta Pro 3와 Anker SOLIX F3800 Plus 같은 신세대 제품이 2026년 보도에 등장하며, [2026년 4월자 Bob Vila 정리](https://www.bobvila.com/reviews/amazon-portable-generators-april-2026/)는 F3800 Plus를 할인가 799.99달러로 게재했으므로 이 페이지의 가격은 날짜가 없는 것으로 취급하십시오. Anker Solarbank가 미국에서 판매되지 않는다는 서술도 재확인하지 못했습니다. 검색 결과에 Solarbank 2 E1600의 Amazon.com 게시물이 나타났으나 열 수 없었으므로 Anker 미국 스토어에서 확인하십시오. 이는 공개 정보의 요약이며 법률·세무·전기 안전 자문이 아닙니다.',
+      },
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
