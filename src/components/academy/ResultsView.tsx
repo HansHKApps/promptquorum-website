@@ -17,6 +17,7 @@ import { Content } from './Content'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
 import { renderCertificatePdf } from './certificate-pdf'
 import { renderDocumentationPdf } from './documentation-pdf'
+import { ShareBar } from './ShareBar'
 import { StarRating } from './StarRating'
 import type { useAcademyState } from './useAcademyState'
 
@@ -161,6 +162,8 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
           ))}
         </ul>
       </div>
+
+      <ShareBar lang={lang} programme={programme} percent={score.percent} />
 
       <StarRating tx={tx} kind="programme" lang={programme.language} />
 

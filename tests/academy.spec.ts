@@ -212,7 +212,7 @@ test.describe('F6: correct answers stay on the server until answered', () => {
     })
     await openSeededLesson(page, { ...programme } as ReturnType<typeof seededProgramme>)
     // openSeededLesson seeds view 'lesson'; go to the quiz via the programme screen button.
-    await page.getByRole('button', { name: /back to programme/i }).click().catch(() => {})
+    await page.getByRole('button', { name: /back to program/i }).click().catch(() => {})
     await page.getByRole('button', { name: /continue the quiz/i }).click()
     await expect(page.getByText('Final question 1?')).toBeVisible()
     const before = (await stored(page)) ?? ''
@@ -262,7 +262,7 @@ test.describe('F12: setup form', () => {
   test('Start over empties the subject field', async ({ page }) => {
     await openSeededLesson(page)
     await page.route('**/api/academy/lesson', (r) => r.fulfill({ json: lessonReply }))
-    await page.getByRole('button', { name: /back to programme/i }).click()
+    await page.getByRole('button', { name: /back to program/i }).click()
     await page.getByRole('button', { name: /start over/i }).click()
     await expect(page.getByLabel(/what do you want to learn/i)).toHaveValue('')
   })
@@ -280,7 +280,7 @@ test.describe('F13: lessons + test split', () => {
   test('programme page shows the split', async ({ page }) => {
     await page.route('**/api/academy/lesson', (r) => r.fulfill({ json: lessonReply }))
     await openSeededLesson(page, seededProgramme({ testMode: 'final', testPlan: { finalQuestions: 6, lessonQuizQuestions: 0, testMinutes: 4.5 } }))
-    await page.getByRole('button', { name: /back to programme/i }).click()
+    await page.getByRole('button', { name: /back to program/i }).click()
     await expect(page.getByText('10 min lessons + 5 min test')).toBeVisible()
   })
 })
@@ -302,8 +302,11 @@ test.describe('F7: displayed content is not replaced', () => {
       })
     })
     await startSetup(page, false)
-    for (let i = 0; i < 5; i++) await page.getByRole('button', { name: 'A', exact: true }).click()
-    await expect(page.getByRole('heading', { name: /your programme/i })).toBeVisible()
+    for (let i = 0; i < 5; i++) {
+      await page.getByRole('button', { name: 'A', exact: true }).click()
+      await page.getByRole('button', { name: /next question/i }).click()
+    }
+    await expect(page.getByRole('heading', { name: /your program/i })).toBeVisible()
     const read = () => page.locator('#academy-programme').locator('xpath=..').innerText()
     const first = await read()
     await page.waitForTimeout(3000)
@@ -323,7 +326,7 @@ test.describe('Academy window behaves like the Ask Hans window', () => {
     await preset(page)
     await page.goto('/academy')
     await expect(page.getByRole('heading', { name: 'How it works' })).toBeVisible()
-    for (const label of ['Programmes created', 'Lessons written', 'Tests taken', 'Certificates downloaded']) await expect(page.getByText(label, { exact: true })).toBeVisible()
+    for (const label of ['Programs created', 'Lessons written', 'Tests taken', 'Certificates downloaded']) await expect(page.getByText(label, { exact: true })).toBeVisible()
     await expect(page.getByText('Anonymous totals. No personal data is counted.')).toBeVisible()
     await expect(win(page)).toHaveCount(0)
     await expect(page.getByLabel(/what do you want to learn/i)).toHaveCount(0)
@@ -559,6 +562,37 @@ test.describe('master spec v1', () => {
     await expect(page.getByLabel(/language of the certificate/i)).toBeVisible()
     await expect(page.getByLabel(/register this certificate/i)).not.toBeChecked()
     await expect(page.getByRole('button', { name: /download course documentation/i })).toBeVisible()
-    await expect(page.getByRole('group', { name: /how was this programme/i })).toBeVisible()
+    await expect(page.getByRole('group', { name: /how was this program/i })).toBeVisible()
+  })
+})
+
+
+test.describe('Quick check shows right / wrong, and the plan can be shared', () => {
+  test('quick check: right answer turns green, wrong turns red with the right one green; Next moves on', async ({ page }) => {
+    await preset(page)
+    await mockDiagnostic(page)
+    await startSetup(page, false)
+    // question 1: correct is A (index 0)
+    await page.getByRole('button', { name: 'B', exact: true }).click()
+    await expect(page.getByRole('button', { name: 'B', exact: true })).toHaveClass(/border-red-500/)
+    await expect(page.getByRole('button', { name: 'A', exact: true })).toHaveClass(/border-green-600/)
+    await expect(page.getByText('Not quite.')).toBeVisible()
+    await page.getByRole('button', { name: /next question/i }).click()
+    // question 2: correct is B (index 1)
+    await page.getByRole('button', { name: 'B', exact: true }).click()
+    await expect(page.getByRole('button', { name: 'B', exact: true })).toHaveClass(/border-green-600/)
+    await expect(page.getByText('Correct.')).toBeVisible()
+  })
+
+  test('programme page has share buttons for WhatsApp, Telegram, email, copy, Word and PDF', async ({ page }) => {
+    await page.route('**/api/academy/lesson', (r) => r.fulfill({ json: lessonReply }))
+    await openSeededLesson(page)
+    await page.getByRole('button', { name: /back to program/i }).click()
+    await expect(page.getByRole('link', { name: 'WhatsApp' })).toHaveAttribute('href', /^https:\/\/wa\.me\/\?text=.*promptquorum\.com%2Facademy/)
+    await expect(page.getByRole('link', { name: 'Telegram' })).toHaveAttribute('href', /^https:\/\/t\.me\/share\/url/)
+    await expect(page.getByRole('link', { name: 'Email' })).toHaveAttribute('href', /^mailto:/)
+    const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Word', exact: true }).click()])
+    expect(download.suggestedFilename()).toMatch(/\.docx$/)
+    await expect(page.getByRole('button', { name: 'PDF', exact: true })).toBeVisible()
   })
 })

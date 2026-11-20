@@ -20,6 +20,7 @@ import { Content } from './Content'
 import { LessonView } from './LessonView'
 import { QuizView } from './QuizView'
 import { ResultsView } from './ResultsView'
+import { ShareBar } from './ShareBar'
 import { useAcademyState } from './useAcademyState'
 
 export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicSuggestion[] }) {
@@ -54,6 +55,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
       ) : state.view === 'programme' && state.programme ? (
         <ProgrammeView
           tx={tx}
+          lang={lang}
           programme={state.programme}
           onOpenLesson={(i) => update((s) => (s.programme ? { ...s, view: 'lesson', programme: openLesson(s.programme, i) } : s))}
           onStartQuiz={(quizId) =>
@@ -444,6 +446,8 @@ function QuickCheckView({ tx, draft, quickCheck, update }: { tx: AcademyCopy; dr
   const [phase, setPhase] = useState<'idle' | 'loading' | 'building'>('idle')
   const [error, setError] = useState<{ code: AcademyErrorCode | 'network'; step: 'questions' | 'programme' } | null>(null)
   const started = useRef(false)
+  // Choice made on the question on screen, shown with green / red feedback until the learner presses "Next".
+  const [shown, setShown] = useState<number | null>(null)
   const back = () => update((s) => ({ ...s, view: 'setup' }))
 
   const loadQuestions = useCallback(async () => {
@@ -506,11 +510,16 @@ function QuickCheckView({ tx, draft, quickCheck, update }: { tx: AcademyCopy; dr
     )
   }
   const q = quickCheck.questions[index]
-  const answer = (choice: number) => {
-    const next: QuickCheck = { ...quickCheck, answers: { ...quickCheck.answers, [q.id]: choice } }
+  // The answer is recorded when the learner moves on, after seeing whether it was right.
+  const goNext = () => {
+    if (shown === null) return
+    const next: QuickCheck = { ...quickCheck, answers: { ...quickCheck.answers, [q.id]: shown } }
+    setShown(null)
     update((s) => ({ ...s, quickCheck: next }))
     if (index === total - 1) void buildProgramme(next)
   }
+  const answered = shown !== null
+  const rightPicked = shown === q.correctIndex
 
   return (
     <section aria-labelledby="academy-diagnostic" className="space-y-5 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
@@ -531,21 +540,37 @@ function QuickCheckView({ tx, draft, quickCheck, update }: { tx: AcademyCopy; dr
       <fieldset key={q.id}>
         <legend className="text-lg font-medium text-gray-900">{q.prompt}</legend>
         <div className="mt-3 grid gap-2">
-          {q.options.map((o, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => answer(i)}
-              className="rounded-xl border border-gray-300 px-4 py-3 text-start hover:border-purple-600 hover:bg-purple-50 focus-visible:ring-2 focus-visible:ring-purple-600"
-            >
-              {o}
+          {q.options.map((o, i) => {
+            const state = !answered ? 'idle' : i === q.correctIndex ? 'correct' : i === shown ? 'wrong' : 'other'
+            const cls = {
+              idle: 'border-gray-300 hover:border-purple-600 hover:bg-purple-50',
+              correct: 'border-green-600 bg-green-50 text-green-900',
+              wrong: 'border-red-500 bg-red-50 text-red-900',
+              other: 'border-gray-200 text-gray-500',
+            }[state]
+            return (
+              <button key={i} type="button" onClick={() => setShown(i)} disabled={answered} aria-pressed={shown === i} className={`rounded-xl border px-4 py-3 text-start focus-visible:ring-2 focus-visible:ring-purple-600 ${cls}`}>
+                {o}
+              </button>
+            )
+          })}
+          {!answered && (
+            <button type="button" onClick={() => setShown(-1)} className="rounded-xl px-4 py-2 text-start text-sm text-gray-600 underline underline-offset-2 hover:text-purple-700">
+              {tx.notSure}
             </button>
-          ))}
-          <button type="button" onClick={() => answer(-1)} className="rounded-xl px-4 py-2 text-start text-sm text-gray-600 underline underline-offset-2 hover:text-purple-700">
-            {tx.notSure}
-          </button>
+          )}
         </div>
       </fieldset>
+      {answered && (
+        <div className={`space-y-2 rounded-xl p-4 text-sm ${rightPicked ? 'bg-green-50 text-green-900' : 'bg-amber-50 text-amber-900'}`} role="status" aria-live="polite">
+          {shown !== -1 && <p className="font-semibold">{rightPicked ? tx.correctFeedback : tx.wrongFeedback}</p>}
+          <p>{q.explanationCorrect}</p>
+          {!rightPicked && shown !== null && shown >= 0 && q.explanationWrong[shown] && <p>{q.explanationWrong[shown]}</p>}
+          <button type="button" onClick={goNext} className="mt-1 rounded-xl bg-purple-600 px-5 py-2 font-medium text-white hover:bg-purple-700">
+            {tx.nextQuestion}
+          </button>
+        </div>
+      )}
       <button type="button" onClick={back} className="text-sm text-purple-700 underline underline-offset-2">
         {tx.changeSetup}
       </button>
@@ -609,6 +634,7 @@ function toProgramme(
 
 function ProgrammeView({
   tx,
+  lang,
   programme,
   onOpenLesson,
   onStartQuiz,
@@ -616,6 +642,7 @@ function ProgrammeView({
   onStartOver,
 }: {
   tx: AcademyCopy
+  lang: AcademyLang
   programme: Programme
   onOpenLesson: (index: number) => void
   onStartQuiz: (quizId: string) => void
@@ -656,6 +683,7 @@ function ProgrammeView({
           {programme.testMode === 'none' && <p className="text-sm">{tx.programmeComplete}</p>}
         </div>
       )}
+      <ShareBar lang={lang} programme={programme} />
       <div>
         <h3 className="font-medium text-gray-900">{tx.objectivesTitle}</h3>
         <Content lang={programme.language}>
