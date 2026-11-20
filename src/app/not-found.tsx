@@ -24,6 +24,10 @@ const HUBS = [
   { href: '/prompt-bites', label: 'Prompt Bites', desc: 'Short, practical prompt recipes' },
   { href: '/smart-home', label: 'Smart Home', desc: 'Local-first smart home and Home Assistant' },
   { href: '/balcony-solar', label: 'Balcony Solar', desc: 'Plug-in solar rules, kits and setup' },
+  { href: '/tools/what-can-i-run', label: 'Tools', desc: 'Check which local models your hardware can run' },
+  { href: '/academy', label: 'Academy', desc: 'Learn local AI step by step' },
+  { href: '/mcp-stats', label: 'MCP', desc: 'Live stats for the PromptQuorum MCP server' },
+  { href: '/askhans', label: 'Ask Hans', desc: 'Describe your machine and goal, get a software and model pick' },
   { href: '/blog', label: 'Blog', desc: 'News and notes from PromptQuorum' },
 ]
 
