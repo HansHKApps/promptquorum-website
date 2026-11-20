@@ -11,7 +11,7 @@
  *  - hasLiveSearch: whether the model searches the live web BY DEFAULT for end users.
  *    Tool-use integrations that must be explicitly wired are NOT counted as "default on".
  *
- * Last fact-checked: 2026-11-19
+ * Last fact-checked: 2026-11-20
  */
 
 export type SearchLayer =
@@ -57,7 +57,21 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
     license: 'Proprietary',
     deployment: 'Cloud only',
     sourceUrl: 'https://platform.claude.com/docs/en/about-claude/models/overview',
-    sourceNote: 'Knowledge cutoff June 2026 per Anthropic model overview (checked 2026-10-18); supersedes Claude Opus 5.',
+    sourceNote: 'Reliable knowledge cutoff and training data cutoff both June 2026 per Anthropic model overview (re-checked 2026-11-20); supersedes Claude Opus 5.',
+  },
+  {
+    modelName: 'Claude Fable 5.2 / Sonnet 5.5 / Haiku 5.5',
+    vendor: 'Anthropic',
+    cutoffDate: '2026-06',
+    cutoffVerified: true,
+    hasLiveSearchDefault: false,
+    searchLayer: 'Tool-use only',
+    searchNote:
+      'Same June 2026 reliable knowledge cutoff as Claude Opus 5.5. Tool-based web access; does not browse by default.',
+    license: 'Proprietary',
+    deployment: 'Cloud only',
+    sourceUrl: 'https://platform.claude.com/docs/en/about-claude/models/overview',
+    sourceNote: 'Anthropic model overview (checked 2026-11-20) lists a reliable knowledge cutoff of June 2026 for Claude Fable 5.2, Claude Sonnet 5.5 and Claude Haiku 5.5, the same as Claude Opus 5.5.',
   },
   {
     modelName: 'Claude Opus 5 (previous generation)',
@@ -77,29 +91,57 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
     modelName: 'GPT-6.2 Astra (ChatGPT)',
     vendor: 'OpenAI',
     cutoffDate: '2026-05',
-    cutoffVerified: false,
+    cutoffVerified: true,
     hasLiveSearchDefault: true,
     searchLayer: 'Bing',
     searchNote:
       'Live web via Bing in the ChatGPT product, triggered by model or user. Supersedes GPT-6 Astra; released alongside GPT-6.2 Sol.',
     license: 'Proprietary',
     deployment: 'Cloud only',
-    sourceUrl: 'https://openai.com/index/introducing-gpt-6-2-astra-sol',
-    sourceNote: 'May 2026 knowledge cutoff for GPT-6.2 Astra (released Nov 17, 2026). OpenAI\'s own announcement page returned HTTP 403 on direct fetch (checked 2026-11-19); the date is corroborated by multiple independent outlets reporting the same OpenAI announcement — recheck against the primary page once it is reachable.',
+    sourceUrl: 'https://developers.openai.com/api/docs/models',
+    sourceNote: 'Knowledge cutoff May 18, 2026 for GPT-6.2 Astra per OpenAI model documentation (checked 2026-11-20; released Nov 17, 2026).',
   },
   {
     modelName: 'GPT-6.2 Sol (ChatGPT)',
     vendor: 'OpenAI',
     cutoffDate: '2026-06',
-    cutoffVerified: false,
+    cutoffVerified: true,
     hasLiveSearchDefault: true,
     searchLayer: 'Bing',
     searchNote:
       'Live web via Bing in the ChatGPT product, triggered by model or user. Supersedes GPT-6.1 Sol; released alongside GPT-6.2 Astra. GPT-6 Luna (cost-optimized tier) is unaffected by this release and keeps its May 2026 cutoff.',
     license: 'Proprietary',
     deployment: 'Cloud only',
-    sourceUrl: 'https://openai.com/index/introducing-gpt-6-2-astra-sol',
-    sourceNote: 'June 2026 knowledge cutoff for GPT-6.2 Sol (released Nov 17, 2026, same announcement as GPT-6.2 Astra). OpenAI\'s own announcement page returned HTTP 403 on direct fetch (checked 2026-11-19); the date is corroborated by multiple independent outlets reporting the same OpenAI announcement — recheck against the primary page once it is reachable.',
+    sourceUrl: 'https://developers.openai.com/api/docs/models',
+    sourceNote: 'Knowledge cutoff June 1, 2026 for GPT-6.2 Sol per OpenAI model documentation (checked 2026-11-20; released Nov 17, 2026 with GPT-6.2 Astra).',
+  },
+  {
+    modelName: 'GPT-6.1 Terra (ChatGPT)',
+    vendor: 'OpenAI',
+    cutoffDate: '2026-06',
+    cutoffVerified: true,
+    hasLiveSearchDefault: true,
+    searchLayer: 'Bing',
+    searchNote:
+      'Live web via Bing in the ChatGPT product, triggered by model or user. OpenAI positions Terra as the faster, efficient tier for visual reasoning and computer use; the API lists web search among its supported tools.',
+    license: 'Proprietary',
+    deployment: 'Cloud only',
+    sourceUrl: 'https://developers.openai.com/api/docs/models',
+    sourceNote: 'Knowledge cutoff June 1, 2026 for GPT-6.1 Terra per OpenAI model documentation (checked 2026-11-20).',
+  },
+  {
+    modelName: 'GPT-6 Luna (ChatGPT)',
+    vendor: 'OpenAI',
+    cutoffDate: '2026-05',
+    cutoffVerified: true,
+    hasLiveSearchDefault: true,
+    searchLayer: 'Bing',
+    searchNote:
+      'Live web via Bing in the ChatGPT product, triggered by model or user. OpenAI positions Luna for cost-sensitive, high-volume workloads; it is not superseded by GPT-6.2.',
+    license: 'Proprietary',
+    deployment: 'Cloud only',
+    sourceUrl: 'https://developers.openai.com/api/docs/models',
+    sourceNote: 'Knowledge cutoff May 18, 2026 for GPT-6 Luna per OpenAI model documentation (checked 2026-11-20).',
   },
   {
     modelName: 'GPT-6 Astra / GPT-6.1 Sol (previous generation)',
@@ -144,18 +186,18 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
     sourceNote: 'Knowledge cutoff date per OpenAI model card.',
   },
   {
-    modelName: 'Gemini 4 Argon',
+    modelName: 'Gemini 4 (Argon / Carbon / Hydrogen / Neon)',
     vendor: 'Google',
-    cutoffDate: 'Not publicly disclosed',
-    cutoffVerified: false,
+    cutoffDate: '2026-03',
+    cutoffVerified: true,
     hasLiveSearchDefault: true,
     searchLayer: 'Google',
     searchNote:
-      'Google Search grounding is available across the Gemini apps and Vertex AI (carried over from the Gemini 3.x entry; not separately re-verified for Gemini 4 Argon).',
+      'Google Search grounding is available across the Gemini apps and Vertex AI (carried over from the Gemini 3.x entry; not separately re-verified for the Gemini 4 models).',
     license: 'Proprietary',
     deployment: 'Cloud only',
-    sourceUrl: 'https://deepmind.google/models/gemini/',
-    sourceNote: 'Google\'s Gemini model page (checked 2026-10-19) presents Gemini 4 Argon as the flagship and does not state a knowledge cutoff.',
+    sourceUrl: 'https://deepmind.google/models/model-cards/gemini-4-neon/',
+    sourceNote: 'The Google DeepMind model cards for Gemini 4 Argon (published Oct 13, 2026), Carbon (Nov 10), Hydrogen (Nov 12) and Neon (Nov 18) each state a knowledge cutoff of March 2026, with the caveat that knowledge may be less current in some domains (checked 2026-11-20). Gemini 4 Neon is the most recent release.',
   },
   {
     modelName: 'Gemini 3.1 Pro (previous generation)',
@@ -169,7 +211,7 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
     license: 'Proprietary',
     deployment: 'Cloud only',
     sourceUrl: 'https://deepmind.google/models/gemini/pro/',
-    sourceNote: 'Jan 2025 cutoff for Gemini 3.x generation per Google documentation; superseded by Gemini 4 Argon as Google\'s flagship.',
+    sourceNote: 'Jan 2025 cutoff for Gemini 3.x generation per Google documentation; superseded by the Gemini 4 models.',
   },
   {
     modelName: 'Grok 4.7',
@@ -210,7 +252,7 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
     license: 'Open weights',
     deployment: 'Both',
     sourceUrl: 'https://docs.mistral.ai/models/overview',
-    sourceNote: 'Mistral Large 4 (v26.10) is listed as current; no knowledge cutoff is stated on Mistral\'s models overview (checked 2026-10-19).',
+    sourceNote: 'Mistral Large 4 (v26.10) is listed as current alongside Mistral Small 4 (v26.03); no knowledge cutoff is stated on Mistral\'s models overview (checked 2026-11-20).',
   },
   {
     modelName: 'Mistral Large 3 (previous generation)',
@@ -237,7 +279,7 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
     license: 'Open weights',
     deployment: 'Both',
     sourceUrl: 'https://api-docs.deepseek.com/quick_start/pricing',
-    sourceNote: 'DeepSeek\'s pricing page (checked 2026-10-19) lists the V4 Flash and V4 Pro models and states no knowledge cutoff.',
+    sourceNote: 'DeepSeek\'s pricing page (checked 2026-11-20) lists DeepSeek-V4.1-Flash-1017 and DeepSeek-V4-Pro-0813 and states no knowledge cutoff.',
   },
   {
     modelName: 'DeepSeek-V3 / R1 (previous generation)',
@@ -272,7 +314,20 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
     sourceNote: 'Pretraining data cutoff of August 2024 per the Llama 4 Scout model card (checked 2026-10-19).',
   },
   {
-    modelName: 'Qwen3 14B / Qwen2.5 72B',
+    modelName: 'Muse Glimmer 30B',
+    vendor: 'Meta',
+    cutoffDate: '2026-01',
+    cutoffVerified: true,
+    hasLiveSearchDefault: false,
+    searchLayer: 'None',
+    searchNote: 'Open-weight model (about 30B parameters, Apache 2.0). No search layer. Cutoff is a hard limit when run locally.',
+    license: 'Open weights',
+    deployment: 'Both',
+    sourceUrl: 'https://huggingface.co/meta-models/Muse-Glimmer-30B',
+    sourceNote: 'Knowledge cutoff January 4, 2026 per the Muse Glimmer 30B model card (checked 2026-11-20); released August 2026. Published on Hugging Face under the "meta-models" organization, which the page labels as Meta.',
+  },
+  {
+    modelName: 'Qwen3.8-27B / Qwen3 14B / Qwen2.5 72B',
     vendor: 'Alibaba',
     cutoffDate: 'Not publicly disclosed',
     cutoffVerified: false,
@@ -283,7 +338,7 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
     license: 'Open weights',
     deployment: 'Both',
     sourceUrl: 'https://arxiv.org/abs/2412.15115',
-    sourceNote: 'Neither the Qwen2.5 technical report nor the Qwen2.5-72B-Instruct model card states a knowledge cutoff (checked 2026-10-19).',
+    sourceNote: 'Neither the Qwen2.5 technical report, the Qwen2.5-72B-Instruct model card nor the Qwen3.8-27B model card (Apache 2.0, released August 2026) states a knowledge cutoff (checked 2026-11-20).',
   },
   {
     modelName: 'Mistral Small 3 / Mistral 7B',
@@ -310,7 +365,7 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
     license: 'Open weights',
     deployment: 'Both',
     sourceUrl: 'https://api-docs.deepseek.com/quick_start/pricing',
-    sourceNote: 'No knowledge cutoff stated by DeepSeek (checked 2026-10-19).',
+    sourceNote: 'No knowledge cutoff stated by DeepSeek (checked 2026-11-20).',
   },
   {
     modelName: 'DeepSeek-V3 (open weights, previous generation)',
@@ -329,15 +384,15 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
   {
     modelName: 'Gemma 4',
     vendor: 'Google',
-    cutoffDate: 'Not publicly disclosed',
-    cutoffVerified: false,
+    cutoffDate: '2025-01',
+    cutoffVerified: true,
     hasLiveSearchDefault: false,
     searchLayer: 'None',
-    searchNote: 'Open-weight model from Google. No search layer. Cutoff is a hard limit when run locally.',
+    searchNote: 'Open-weight model from Google. No search layer. January 2025 is a hard knowledge limit when run locally.',
     license: 'Open weights',
     deployment: 'Both',
-    sourceUrl: 'https://ai.google.dev/gemma/docs',
-    sourceNote: 'Google\'s Gemma documentation (checked 2026-10-19) does not state a knowledge cutoff.',
+    sourceUrl: 'https://huggingface.co/google/gemma-4-31b-it',
+    sourceNote: 'January 2025 per the Gemma 4 model card ("a cutoff date of January 2025" for the pre-training dataset), checked 2026-11-20.',
   },
   {
     modelName: 'Gemma 3 27B (previous generation)',
@@ -374,4 +429,4 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
 export const ALL_MODELS: ModelCutoffEntry[] = [...CLOUD_MODELS, ...LOCAL_MODELS];
 
 /** Last date all entries above were fact-checked against primary sources. */
-export const CUTOFF_DATA_LAST_VERIFIED = '2026-11-19';
+export const CUTOFF_DATA_LAST_VERIFIED = '2026-11-20';
