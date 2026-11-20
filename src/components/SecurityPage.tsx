@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import { SECURITY_EMAIL, securityContent } from '@/lib/security/content'
+import { BackLink } from '@/components/BackLink'
 
 const SITE = 'https://www.promptquorum.com'
 const LINK = 'text-purple-600 hover:underline'
@@ -38,6 +39,7 @@ export function SecurityPage({ lang }: { lang: Language }) {
     <div className="min-h-screen bg-white pt-28 pb-24" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <BackLink lang={lang} />
 
         <div className="mb-12 pb-8 border-b border-gray-100">
           <p className="text-xs font-mono text-gray-400 mb-4">

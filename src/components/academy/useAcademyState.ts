@@ -6,6 +6,14 @@ import { clearAcademyState, emptyAcademyState, loadAcademyState, saveAcademyStat
 import type { AcademyState } from '@/lib/academy/types'
 
 /**
+ * In-memory copy of the learner's state for this page load. The Academy window unmounts the tool when it is closed,
+ * and the tool is also remounted when the window is reopened or the learner comes back from another page (Terms,
+ * Privacy, home); without this copy everything typed so far would be lost. It never touches storage (the opt-in
+ * below still decides that) and disappears on a full reload, as the privacy hint on the form promises.
+ */
+let memoryState: AcademyState | null = null
+
+/**
  * Academy state. It lives in memory; it is written to localStorage ONLY while the learner has ticked
  * "Save my progress in this browser" (draft.saveProgress). Without the tick a reload starts fresh.
  *
@@ -14,7 +22,7 @@ import type { AcademyState } from '@/lib/academy/types'
  * `saved` is false when the browser refused to store.
  */
 export function useAcademyState() {
-  const [state, setState] = useState<AcademyState>(emptyAcademyState)
+  const [state, setState] = useState<AcademyState>(() => memoryState ?? emptyAcademyState())
   const [ready, setReady] = useState(false)
   const [saved, setSaved] = useState(true)
   const [pending, setPending] = useState<AcademyState | null>(null)
@@ -25,11 +33,13 @@ export function useAcademyState() {
   const wrote = useRef(false)
 
   useEffect(() => {
-    const found = loadAcademyState()
+    // State already in memory (window closed and reopened, or back from another page): nothing to offer.
+    const found = memoryState ? emptyAcademyState() : loadAcademyState()
     if (found.draft) setPending(found)
     setReady(true)
     // "Delete my data" cleared storage: drop the in-memory copy too.
     const reset = () => {
+      memoryState = null
       current.current = emptyAcademyState()
       wrote.current = false
       setState(current.current)
@@ -43,6 +53,7 @@ export function useAcademyState() {
   const update = useCallback((fn: (s: AcademyState) => AcademyState, persist = true) => {
     const next = fn(current.current)
     current.current = next
+    memoryState = next
     setState(next)
     if (!persist) return
     if (next.draft?.saveProgress) {
@@ -60,6 +71,7 @@ export function useAcademyState() {
   const continueSaved = useCallback(() => {
     if (!pending) return
     current.current = pending
+    memoryState = pending
     wrote.current = true
     setState(pending)
     setPending(null)

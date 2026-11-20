@@ -5,6 +5,7 @@ import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, getLangDir, ogLocale, toOutputLocale, type Lang } from '@/lib/i18n/constants'
 import { TERMS, TERMS_UPDATED } from '@/lib/terms/content'
+import { BackLink } from '@/components/BackLink'
 
 const SITE = 'https://www.promptquorum.com'
 const path = (lang: Lang) => (lang === 'en' ? '/terms' : `/${lang}/terms`)
@@ -27,6 +28,7 @@ export function TermsPage({ lang }: { lang: Lang }) {
   return (
     <div lang={toOutputLocale(lang)} dir={getLangDir(lang)} className="min-h-screen bg-white pt-28 pb-24">
       <div className="mx-auto max-w-2xl px-4 sm:px-6">
+        <BackLink lang={lang} />
         <div className="mb-10 border-b border-gray-100 pb-8">
           <h1 className="text-3xl font-bold text-gray-900">{t.title}</h1>
           <p className="mt-2 text-sm text-gray-500">

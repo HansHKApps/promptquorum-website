@@ -5,7 +5,7 @@
 // State lives in localStorage only (see useAcademyState / src/lib/academy/store.ts).
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS } from '@/lib/academy/config'
+import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS, ACADEMY_USED_KEY } from '@/lib/academy/config'
 import { clearAcademyState, defaultDraft } from '@/lib/academy/store'
 import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
 import { lessonsDone, nextOpenLesson, openLesson } from '@/lib/academy/progress'
@@ -746,6 +746,11 @@ function PrivacyStrip({ tx, lang }: { tx: AcademyCopy; lang: AcademyLang }) {
         onClick={() => {
           if (!window.confirm(tx.deleteConfirm)) return
           clearAcademyState()
+          try {
+            localStorage.removeItem(ACADEMY_USED_KEY)
+          } catch {
+            /* blocked */
+          }
           window.dispatchEvent(new Event(ACADEMY_STATE_EVENT))
           setDeleted(true)
         }}

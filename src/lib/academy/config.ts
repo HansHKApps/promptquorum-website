@@ -2,6 +2,8 @@
 
 /** localStorage key of the whole Academy state (docs/academy/SPEC.md section 6). */
 export const ACADEMY_STORAGE_KEY = 'pq_academy_v1'
+/** Functional flag (no personal data): this browser has opened Academy, so the study-hat button is offered on every page. */
+export const ACADEMY_USED_KEY = 'pq_academy_used'
 
 /** Time choices on the setup screen, in minutes. */
 export const ACADEMY_MINUTE_OPTIONS = [15, 30, 45, 60, 90, 120, 180, 240] as const

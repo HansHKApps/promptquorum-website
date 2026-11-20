@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { authorPerson } from '@/lib/author'
 import { AppLink as Link } from '@/components/AppLink'
+import { BackLink } from '@/components/BackLink'
 
 export const metadata: Metadata = {
   title: 'Image Usage Rights — PromptQuorum',
@@ -57,6 +58,7 @@ export default function ImageLicensePage() {
 
       <div className="min-h-screen bg-surface pt-24 pb-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <BackLink lang="en" />
 
           <div className="py-16 border-b border-primary/20 mb-16">
             <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Legal</p>
