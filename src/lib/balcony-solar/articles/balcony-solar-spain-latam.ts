@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mexico',
         title: 'Mexico: No Small-System Exemption',
         content: [
-          '**Mexico has no plug-in-solar-specific framework — every grid-tied system, from the smallest plug-in unit up to 700kW, goes through the identical formal CFE interconnection contract process with a CRE-certified installer.** The 700kW "trámite simplificado" threshold, raised from 500kW under Mexico\'s Ley del Sector Eléctrico (effective March 19, 2025), is a permitting-complexity boundary, not a small-system exemption — a 300W balcony kit and a 690kW system face the same paperwork.',
+          '**Mexico has no plug-in-solar-specific framework — every grid-tied system, from the smallest plug-in unit up to 700kW, goes through the identical formal CFE interconnection contract process with an installer certified under current CFE/CNE rules.** The 700kW "trámite simplificado" threshold, raised from 500kW under Mexico\'s Ley del Sector Eléctrico (effective March 19, 2025), is a permitting-complexity boundary, not a small-system exemption — a 300W balcony kit and a 690kW system face the same paperwork.',
         ],
         callouts: [
           { type: 'info', text: 'General information only, not legal advice. Rules change and local details differ; confirm with the competent authority, grid operator or a qualified professional before buying or connecting a system.' },
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Is balcony solar definitely legal in Spain?', a: 'This cannot be answered with confidence — sources conflict on whether small kits get a simplified exemption or need the full RD 244/2019 formal process. Confirm directly with your regional energy authority.' },
           { q: 'Is the 800W exemption for Spain confirmed?', a: 'No — it appears to be a commonly repeated figure that may originate from other European markets rather than codified Spanish statutory text specifically.' },
           { q: 'What is "vertido cero" and does it help balcony solar buyers in Spain?', a: 'It\'s a zero-export self-consumption category exempt from access/connection permits under RD 244/2019. Whether it functions as a genuine simplified path for balcony kits specifically, versus a general practical safeguard, is unclear from available sources.' },
-          { q: 'Does Mexico allow balcony solar?', a: 'It\'s not banned, but there\'s no small-system exemption — the same full CFE interconnection process (contract, CRE-certified installer) applies to any grid-tied system size, from 1kW up to 700kW.' },
+          { q: 'Does Mexico allow balcony solar?', a: 'It\'s not banned, but there\'s no small-system exemption — the same full CFE interconnection process (contract, installer certified under current CFE/CNE rules) applies to any grid-tied system size, from 1kW up to 700kW.' },
           { q: 'What documentation might I need in Spain for a small balcony kit?', a: 'If the stricter legal-source interpretation applies, potentially a CIE certificate, REBT compliance documentation, regional Comunidad Autónoma registration, and distributor notification — confirm which of these actually apply to your specific system size and region.' },
           { q: 'Is Latin America generally covered by this page?', a: 'Only Mexico is covered here with verified data. Other Latin American countries were not independently researched for this guide — do not assume Mexico\'s status applies elsewhere in the region.' },
           { q: 'Why doesn\'t this page just pick a side on Spain\'s legality?', a: 'Because the underlying sources genuinely disagree, and asserting a confident answer either way would be presenting unverified information as fact — a direct violation of this site\'s sourcing standard.' },
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mexico',
         title: 'México: sin exención para sistemas pequeños',
         content: [
-          '**México no tiene un marco específico para energía solar plug-in — todo sistema conectado a la red, desde la unidad plug-in más pequeña hasta 700kW, pasa por el mismo proceso formal de contrato de interconexión de CFE con un instalador certificado por la CRE.** El umbral de 700kW del "trámite simplificado", elevado desde 500kW bajo la Ley del Sector Eléctrico de México (vigente desde el 19 de marzo de 2025), es un límite de complejidad de trámites, no una exención para sistemas pequeños — un kit de balcón de 300W y un sistema de 690kW enfrentan el mismo papeleo.',
+          '**México no tiene un marco específico para energía solar plug-in — todo sistema conectado a la red, desde la unidad plug-in más pequeña hasta 700kW, pasa por el mismo proceso formal de contrato de interconexión de CFE con un instalador certificado según las reglas vigentes de la CFE y la CNE.** El umbral de 700kW del "trámite simplificado", elevado desde 500kW bajo la Ley del Sector Eléctrico de México (vigente desde el 19 de marzo de 2025), es un límite de complejidad de trámites, no una exención para sistemas pequeños — un kit de balcón de 300W y un sistema de 690kW enfrentan el mismo papeleo.',
         ],
         callouts: [
           { type: 'info', text: 'Información general, no constituye asesoramiento legal. Las normas cambian y los detalles locales varían; confirma con la autoridad competente, la distribuidora o un profesional cualificado antes de comprar o conectar un sistema.' },
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Es definitivamente legal la energía solar de balcón en España?', a: 'Esto no puede responderse con confianza — las fuentes están en conflicto sobre si los kits pequeños obtienen una exención simplificada o necesitan el proceso formal completo del RD 244/2019. Confirma directamente con tu autoridad energética regional.' },
           { q: '¿Está confirmada la exención de 800W para España?', a: 'No — parece ser una cifra comúnmente repetida que puede originarse en otros mercados europeos en lugar de en un texto estatutario español codificado específicamente.' },
           { q: '¿Qué es el "vertido cero" y ayuda a los compradores de solar de balcón en España?', a: 'Es una categoría de autoconsumo sin inyección a la red exenta de permisos de acceso/conexión bajo el RD 244/2019. Si funciona como una vía simplificada genuina específicamente para kits de balcón, en lugar de una salvaguarda práctica general, no está claro según las fuentes disponibles.' },
-          { q: '¿Permite México la energía solar de balcón?', a: 'No está prohibida, pero no hay exención para sistemas pequeños — el mismo proceso completo de interconexión de CFE (contrato, instalador certificado por la CRE) aplica a cualquier tamaño de sistema conectado a la red, desde 1kW hasta 700kW.' },
+          { q: '¿Permite México la energía solar de balcón?', a: 'No está prohibida, pero no hay exención para sistemas pequeños — el mismo proceso completo de interconexión de CFE (contrato, instalador certificado según las reglas vigentes de la CFE y la CNE) aplica a cualquier tamaño de sistema conectado a la red, desde 1kW hasta 700kW.' },
           { q: '¿Qué documentación podría necesitar en España para un kit de balcón pequeño?', a: 'Si aplica la interpretación legal más estricta, potencialmente un certificado CIE, documentación de cumplimiento REBT, registro regional ante la Comunidad Autónoma, y notificación a la distribuidora — confirma cuáles de estos aplican realmente a tu tamaño de sistema y región específicos.' },
           { q: '¿Cubre esta página a Latinoamérica en general?', a: 'Solo México está cubierto aquí con datos verificados. Otros países latinoamericanos no fueron investigados de forma independiente para esta guía — no asumas que el estatus de México aplica en otras partes de la región.' },
           { q: '¿Por qué esta página no simplemente toma una postura sobre la legalidad de España?', a: 'Porque las fuentes subyacentes genuinamente no están de acuerdo, y afirmar una respuesta confiada en cualquier dirección presentaría información no verificada como hecho — una violación directa del estándar de sourcing de este sitio.' },
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mexico',
         title: 'México: sem isenção para sistemas pequenos',
         content: [
-          '**O México não tem um marco específico para energia solar plug-in — todo sistema conectado à rede, da menor unidade plug-in até 700kW, passa pelo mesmo processo formal de contrato de interconexão da CFE com um instalador certificado pela CRE.** O limiar de 700kW do "trámite simplificado", elevado de 500kW sob a Lei do Setor Elétrico do México (em vigor desde 19 de março de 2025), é um limite de complexidade de trâmites, não uma isenção para sistemas pequenos — um kit de varanda de 300W e um sistema de 690kW enfrentam a mesma papelada.',
+          '**O México não tem um marco específico para energia solar plug-in — todo sistema conectado à rede, da menor unidade plug-in até 700kW, passa pelo mesmo processo formal de contrato de interconexão da CFE com um instalador certificado segundo as regras vigentes da CFE e da CNE.** O limiar de 700kW do "trámite simplificado", elevado de 500kW sob a Lei do Setor Elétrico do México (em vigor desde 19 de março de 2025), é um limite de complexidade de trâmites, não uma isenção para sistemas pequenos — um kit de varanda de 300W e um sistema de 690kW enfrentam a mesma papelada.',
         ],
         callouts: [
           { type: 'info', text: 'Informações gerais, não constituem aconselhamento jurídico. As regras mudam e os detalhes locais variam; confirme com a autoridade competente, a distribuidora ou um profissional qualificado antes de comprar ou conectar um sistema.' },
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'A energia solar de varanda é definitivamente legal na Espanha?', a: 'Isso não pode ser respondido com confiança — as fontes estão em conflito sobre se kits pequenos obtêm uma isenção simplificada ou precisam do processo formal completo do RD 244/2019. Confirme diretamente com sua autoridade energética regional.' },
           { q: 'A isenção de 800W para a Espanha está confirmada?', a: 'Não — parece ser uma cifra comumente repetida que pode se originar de outros mercados europeus em vez de texto estatutário espanhol codificado especificamente.' },
           { q: 'O que é "vertido cero" e isso ajuda compradores de solar de varanda na Espanha?', a: 'É uma categoria de autoconsumo com injeção zero isenta de permissões de acesso/conexão sob o RD 244/2019. Se funciona como uma via simplificada genuína especificamente para kits de varanda, em vez de uma salvaguarda prática geral, não está claro pelas fontes disponíveis.' },
-          { q: 'O México permite energia solar de varanda?', a: 'Não é proibida, mas não há isenção para sistemas pequenos — o mesmo processo completo de interconexão da CFE (contrato, instalador certificado pela CRE) se aplica a qualquer tamanho de sistema conectado à rede, de 1kW a 700kW.' },
+          { q: 'O México permite energia solar de varanda?', a: 'Não é proibida, mas não há isenção para sistemas pequenos — o mesmo processo completo de interconexão da CFE (contrato, instalador certificado segundo as regras vigentes da CFE e da CNE) se aplica a qualquer tamanho de sistema conectado à rede, de 1kW a 700kW.' },
           { q: 'Que documentação eu poderia precisar na Espanha para um kit de varanda pequeno?', a: 'Se a interpretação jurídica mais rigorosa se aplicar, potencialmente um certificado CIE, documentação de conformidade REBT, registro regional junto à Comunidade Autônoma, e notificação à distribuidora — confirme quais desses realmente se aplicam ao tamanho do seu sistema e região específicos.' },
           { q: 'Esta página cobre a América Latina em geral?', a: 'Apenas o México é coberto aqui com dados verificados. Outros países latino-americanos não foram pesquisados de forma independente para este guia — não assuma que o status do México se aplica em outras partes da região.' },
           { q: 'Por que esta página simplesmente não toma um lado sobre a legalidade na Espanha?', a: 'Porque as fontes subjacentes genuinamente discordam, e afirmar uma resposta confiante em qualquer direção apresentaria informação não verificada como fato — uma violação direta do padrão de sourcing deste site.' },
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mexico',
         title: 'المكسيك: لا إعفاء للأنظمة الصغيرة',
         content: [
-          '**لا تملك المكسيك إطارًا مخصصًا للطاقة الشمسية القابلة للتوصيل المباشر — يمر كل نظام متصل بالشبكة، من أصغر وحدة قابلة للتوصيل المباشر حتى 700 كيلوواط، بنفس عملية عقد الربط الرسمية مع CFE عبر مُركِّب معتمد من CRE.** عتبة "trámite simplificado" البالغة 700 كيلوواط، والتي رُفعت من 500 كيلوواط بموجب قانون قطاع الكهرباء في المكسيك (ساري المفعول منذ 19 مارس 2025)، هي حد لتعقيد التصاريح، وليست إعفاءً للأنظمة الصغيرة — يواجه طقم شرفة بقدرة 300 واط ونظام بقدرة 690 كيلوواط نفس الأوراق.',
+          '**لا تملك المكسيك إطارًا مخصصًا للطاقة الشمسية القابلة للتوصيل المباشر — يمر كل نظام متصل بالشبكة، من أصغر وحدة قابلة للتوصيل المباشر حتى 700 كيلوواط، بنفس عملية عقد الربط الرسمية مع CFE عبر مُركِّب معتمد وفق قواعد CFE وCNE الحالية.** عتبة "trámite simplificado" البالغة 700 كيلوواط، والتي رُفعت من 500 كيلوواط بموجب قانون قطاع الكهرباء في المكسيك (ساري المفعول منذ 19 مارس 2025)، هي حد لتعقيد التصاريح، وليست إعفاءً للأنظمة الصغيرة — يواجه طقم شرفة بقدرة 300 واط ونظام بقدرة 690 كيلوواط نفس الأوراق.',
         ],
         callouts: [
           { type: 'info', text: 'معلومات عامة وليست استشارة قانونية. القواعد تتغيّر والتفاصيل المحلية تختلف؛ تأكد من الجهة المختصة أو مشغّل الشبكة أو مختص مؤهل قبل شراء أي نظام أو توصيله.' },
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل الطاقة الشمسية للشرفة قانونية بشكل قاطع في إسبانيا؟', a: 'لا يمكن الإجابة على هذا بثقة — تتضارب المصادر حول ما إذا كانت الأطقم الصغيرة تحصل على إعفاء مبسّط أو تحتاج إلى العملية الرسمية الكاملة بموجب RD 244/2019. تأكد مباشرة من هيئة الطاقة الإقليمية لديك.' },
           { q: 'هل إعفاء 800 واط لإسبانيا مؤكد؟', a: 'لا — يبدو أنه رقم مُكرَّر بشكل شائع قد يكون مصدره أسواقًا أوروبية أخرى وليس نصًا قانونيًا إسبانيًا مقنَّنًا تحديدًا.' },
           { q: 'ما هو "vertido cero" وهل يساعد مشتري الطاقة الشمسية للشرفة في إسبانيا؟', a: 'إنها فئة اكتفاء ذاتي بتصدير صفري معفاة من تصاريح الوصول/الاتصال بموجب RD 244/2019. أما إذا كانت تعمل كمسار مبسّط حقيقي مخصص لأطقم الشرفة تحديدًا، مقابل ضمان عملي عام، فذلك غير واضح من المصادر المتاحة.' },
-          { q: 'هل تسمح المكسيك بالطاقة الشمسية للشرفة؟', a: 'إنها ليست محظورة، لكن لا يوجد إعفاء للأنظمة الصغيرة — تنطبق نفس عملية الربط الكاملة لـ CFE (عقد، مُركِّب معتمد من CRE) على أي حجم نظام متصل بالشبكة، من 1 كيلوواط حتى 700 كيلوواط.' },
+          { q: 'هل تسمح المكسيك بالطاقة الشمسية للشرفة؟', a: 'إنها ليست محظورة، لكن لا يوجد إعفاء للأنظمة الصغيرة — تنطبق نفس عملية الربط الكاملة لـ CFE (عقد، مُركِّب معتمد وفق قواعد CFE وCNE الحالية) على أي حجم نظام متصل بالشبكة، من 1 كيلوواط حتى 700 كيلوواط.' },
           { q: 'ما الوثائق التي قد أحتاجها في إسبانيا لطقم شرفة صغير؟', a: 'إذا انطبق التفسير القانوني الأكثر صرامة، فقد تحتاج إلى شهادة CIE، وثائق الامتثال لـ REBT، تسجيل إقليمي لدى المجتمع المستقل، وإخطار الموزّع — تأكد من أي من هذه ينطبق فعليًا على حجم نظامك ومنطقتك المحددين.' },
           { q: 'هل تغطي هذه الصفحة أمريكا اللاتينية بشكل عام؟', a: 'المكسيك فقط مشمولة هنا ببيانات موثّقة. لم تُبحث دول أمريكا اللاتينية الأخرى بشكل مستقل لهذا الدليل — لا تفترض أن وضع المكسيك ينطبق في أماكن أخرى من المنطقة.' },
           { q: 'لماذا لا تتخذ هذه الصفحة ببساطة موقفًا بشأن قانونية إسبانيا؟', a: 'لأن المصادر الأساسية تختلف فعليًا، وتأكيد إجابة واثقة في أي اتجاه سيعني تقديم معلومات غير موثّقة كحقيقة — وهو انتهاك مباشر لمعيار التوثيق في هذا الموقع.' },
@@ -524,7 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mexico',
         title: 'メキシコ：小規模システムの適用除外なし',
         content: [
-          '**メキシコにはプラグイン太陽光専用の枠組みが存在しません — 最小のプラグイン機器から700kWまで、すべての系統連系システムが、CRE認定施工業者による同一の正式なCFE連系契約プロセスを経ます。** メキシコの電力セクター法（Ley del Sector Eléctrico、2025年3月19日発効）のもとで500kWから引き上げられた700kWの「trámite simplificado」（簡易手続き）閾値は、許可手続きの複雑さの境界であり、小規模システムの適用除外ではありません — 300Wのバルコニーキットと690kWのシステムは同じ書類手続きに直面します。',
+          '**メキシコにはプラグイン太陽光専用の枠組みが存在しません — 最小のプラグイン機器から700kWまで、すべての系統連系システムが、現行のCFE/CNE規則で認定された施工業者による同一の正式なCFE連系契約プロセスを経ます。** メキシコの電力セクター法（Ley del Sector Eléctrico、2025年3月19日発効）のもとで500kWから引き上げられた700kWの「trámite simplificado」（簡易手続き）閾値は、許可手続きの複雑さの境界であり、小規模システムの適用除外ではありません — 300Wのバルコニーキットと690kWのシステムは同じ書類手続きに直面します。',
         ],
         callouts: [
           { type: 'info', text: '一般的な情報であり、法的助言ではありません。ルールは変わり、地域ごとに細部も異なります。システムの購入や接続の前に、所管機関、系統事業者、または資格のある専門家に確認してください。' },
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'スペインでバルコニーソーラーは確実に合法ですか？', a: 'これは自信を持って答えることはできません — 小型キットが簡素化された適用除外を受けるか、RD 244/2019の正式な手続き全体が必要かについて情報源が対立しています。お住まいの地域のエネルギー当局に直接確認してください。' },
           { q: 'スペインの800Wの適用除外は確認されていますか？', a: 'いいえ — これはスペイン特有のコード化された法定文書ではなく、他の欧州市場に由来する可能性のある、よく繰り返される数字のようです。' },
           { q: '「vertido cero」とは何ですか？スペインのバルコニーソーラー購入者に役立ちますか？', a: 'RD 244/2019に基づきアクセス/接続許可が免除されるゼロ輸出の自家消費カテゴリーです。バルコニーキット専用の真の簡素化された経路として機能するのか、それとも一般的な実務上のセーフガードなのかは、入手可能な情報源からは不明です。' },
-          { q: 'メキシコはバルコニーソーラーを許可していますか？', a: '禁止されてはいませんが、小規模システムの適用除外は存在しません — 1kWから700kWまで、規模を問わずすべての系統連系システムに同じ完全なCFE連系プロセス（契約、CRE認定施工業者）が適用されます。' },
+          { q: 'メキシコはバルコニーソーラーを許可していますか？', a: '禁止されてはいませんが、小規模システムの適用除外は存在しません — 1kWから700kWまで、規模を問わずすべての系統連系システムに同じ完全なCFE連系プロセス（契約、現行のCFE/CNE規則で認定された施工業者）が適用されます。' },
           { q: 'スペインで小型バルコニーキットにどのような書類が必要になる可能性がありますか？', a: 'より厳格な法律解釈が適用される場合、CIE証明書、REBT準拠文書、地域の自治州登録、配電事業者への通知が必要になる可能性があります — これらのうち、実際にあなたの具体的なシステム規模と地域に適用されるものを確認してください。' },
           { q: 'このページはラテンアメリカを一般的にカバーしていますか？', a: 'ここで検証済みデータとしてカバーされているのはメキシコのみです。他のラテンアメリカ諸国は本ガイドのために独立して調査されていません — メキシコの状況が地域の他の国にも当てはまると想定しないでください。' },
           { q: 'なぜこのページはスペインの合法性についてどちらか一方に決めないのですか？', a: '根本となる情報源が実際に一致していないためであり、どちらか一方に自信を持った答えを主張することは、未確認の情報を事実として提示することになり、このサイトの情報源基準に直接違反することになるからです。' },
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mexico',
         title: '墨西哥：无小型系统豁免',
         content: [
-          '**墨西哥没有专门针对插拔式光伏的框架——从最小的插拔式设备到700kW，每一个并网系统都要经过与CRE认证安装商签订的相同正式CFE并网合同流程。** 根据墨西哥《电力行业法》（2025年3月19日生效）从500kW上调至700kW的"trámite simplificado"（简化手续）门槛，是一个审批复杂度的分界线，而非小型系统豁免——一台300W的阳台套件和一套690kW的系统面对的是同样的手续文件。',
+          '**墨西哥没有专门针对插拔式光伏的框架——从最小的插拔式设备到700kW，每一个并网系统都要经过与按CFE和CNE现行规则认证的安装商签订的相同正式CFE并网合同流程。** 根据墨西哥《电力行业法》（2025年3月19日生效）从500kW上调至700kW的"trámite simplificado"（简化手续）门槛，是一个审批复杂度的分界线，而非小型系统豁免——一台300W的阳台套件和一套690kW的系统面对的是同样的手续文件。',
         ],
         callouts: [
           { type: 'info', text: '本文为一般性信息,不构成法律建议。规则会变化,各地细节也不同;购买或接入系统之前,请向主管部门、电网运营商或具备资质的专业人士确认。' },
@@ -647,7 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '阳台光伏在西班牙绝对合法吗？', a: '这无法给出确定的答案——关于小型套件是获得简化豁免还是需要完整的RD 244/2019正式流程，各信息来源存在分歧。请直接与你所在地区的能源主管部门确认。' },
           { q: '西班牙的800W豁免已经确认了吗？', a: '没有——它似乎是一个被频繁重复引用的数字，可能源自其他欧洲市场，而非专门成文的西班牙法定文本。' },
           { q: '什么是"vertido cero"？它对西班牙的阳台光伏购买者有帮助吗？', a: '这是一种根据RD 244/2019免于接入/连接许可的零并网输出自用发电类别。它是否专门作为阳台套件的真正简化路径发挥作用，还是一种一般性的实用保障措施，从现有信息来源来看尚不明确。' },
-          { q: '墨西哥允许阳台光伏吗？', a: '并未被禁止，但不存在小型系统豁免——无论并网系统规模大小，从1kW到700kW，都适用同样完整的CFE并网流程（合同、CRE认证安装商）。' },
+          { q: '墨西哥允许阳台光伏吗？', a: '并未被禁止，但不存在小型系统豁免——无论并网系统规模大小，从1kW到700kW，都适用同样完整的CFE并网流程（合同、按CFE和CNE现行规则认证的安装商）。' },
           { q: '在西班牙安装小型阳台套件我可能需要哪些文件？', a: '如果采用更严格的法律解释，可能需要CIE证书、REBT合规文件、区域自治区注册以及配电公司通知——请确认这些中哪些实际适用于你具体的系统规模和所在地区。' },
           { q: '这个页面涵盖整个拉丁美洲吗？', a: '这里仅涵盖有核实数据的墨西哥。本指南没有对其他拉丁美洲国家进行独立调研——请不要假设墨西哥的状态适用于该地区的其他地方。' },
           { q: '为什么这个页面不干脆在西班牙合法性问题上表明立场？', a: '因为基础信息来源确实存在分歧，无论朝哪个方向给出确定的答案，都相当于把未经核实的信息当作事实呈现——这直接违反了本网站的信息来源标准。' },
@@ -744,7 +744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mexico',
         title: 'Mexique : aucune exemption pour petits systèmes',
         content: [
-          '**Le Mexique n\'a pas de cadre spécifique au solaire plug-in — chaque système raccordé au réseau, de la plus petite unité plug-in jusqu\'à 700 kW, passe par le même processus formel de contrat d\'interconnexion CFE avec un installateur certifié CRE.** Le seuil de 700 kW du « trámite simplificado », relevé de 500 kW en vertu de la Ley del Sector Eléctrico du Mexique (en vigueur depuis le 19 mars 2025), est une limite de complexité des permis, pas une exemption pour petits systèmes — un kit de balcon de 300 W et un système de 690 kW font face à la même paperasserie.',
+          '**Le Mexique n\'a pas de cadre spécifique au solaire plug-in — chaque système raccordé au réseau, de la plus petite unité plug-in jusqu\'à 700 kW, passe par le même processus formel de contrat d\'interconnexion CFE avec un installateur certifié selon les règles actuelles de la CFE et de la CNE.** Le seuil de 700 kW du « trámite simplificado », relevé de 500 kW en vertu de la Ley del Sector Eléctrico du Mexique (en vigueur depuis le 19 mars 2025), est une limite de complexité des permis, pas une exemption pour petits systèmes — un kit de balcon de 300 W et un système de 690 kW font face à la même paperasserie.',
         ],
         callouts: [
           { type: 'info', text: 'Informations générales, ne constituant pas un conseil juridique. Les règles évoluent et les détails locaux varient ; vérifiez auprès de l\'autorité compétente, du gestionnaire de réseau ou d\'un professionnel qualifié avant d\'acheter ou de raccorder un système.' },
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Le solaire de balcon est-il définitivement légal en Espagne ?', a: 'Cela ne peut pas être répondu avec confiance — les sources se contredisent sur la question de savoir si les petits kits bénéficient d\'une exemption simplifiée ou nécessitent le processus formel complet du RD 244/2019. Confirmez directement auprès de votre autorité énergétique régionale.' },
           { q: 'L\'exemption de 800 W pour l\'Espagne est-elle confirmée ?', a: 'Non — cela semble être un chiffre couramment répété qui pourrait provenir d\'autres marchés européens plutôt que d\'un texte statutaire espagnol codifié spécifiquement.' },
           { q: 'Qu\'est-ce que « vertido cero » et cela aide-t-il les acheteurs de solaire de balcon en Espagne ?', a: 'C\'est une catégorie d\'autoconsommation zéro export exemptée de permis d\'accès/de connexion en vertu du RD 244/2019. Qu\'elle fonctionne comme une véritable voie simplifiée spécifiquement pour les kits de balcon, par opposition à une garantie pratique générale, n\'est pas clair d\'après les sources disponibles.' },
-          { q: 'Le Mexique autorise-t-il le solaire de balcon ?', a: 'Ce n\'est pas interdit, mais il n\'y a pas d\'exemption pour petits systèmes — le même processus complet d\'interconnexion CFE (contrat, installateur certifié CRE) s\'applique à toute taille de système raccordé au réseau, de 1 kW jusqu\'à 700 kW.' },
+          { q: 'Le Mexique autorise-t-il le solaire de balcon ?', a: 'Ce n\'est pas interdit, mais il n\'y a pas d\'exemption pour petits systèmes — le même processus complet d\'interconnexion CFE (contrat, installateur certifié selon les règles actuelles de la CFE et de la CNE) s\'applique à toute taille de système raccordé au réseau, de 1 kW jusqu\'à 700 kW.' },
           { q: 'Quels documents pourrais-je avoir besoin en Espagne pour un petit kit de balcon ?', a: 'Si l\'interprétation juridique la plus stricte s\'applique, potentiellement un certificat CIE, une documentation de conformité REBT, un enregistrement régional auprès de la Comunidad Autónoma, et une notification au distributeur — confirmez lesquels s\'appliquent réellement à la taille et à la région spécifiques de votre système.' },
           { q: 'L\'Amérique latine est-elle généralement couverte par cette page ?', a: 'Seul le Mexique est couvert ici avec des données vérifiées. Les autres pays d\'Amérique latine n\'ont pas été recherchés indépendamment pour ce guide — ne présumez pas que le statut du Mexique s\'applique ailleurs dans la région.' },
           { q: 'Pourquoi cette page ne choisit-elle pas simplement un camp sur la légalité de l\'Espagne ?', a: 'Parce que les sources sous-jacentes sont véritablement en désaccord, et affirmer une réponse confiante dans un sens ou dans l\'autre présenterait des informations non vérifiées comme des faits — une violation directe de la norme de sourcing de ce site.' },
@@ -854,7 +854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mexico',
         title: 'Mexiko: keine Ausnahme für Kleinanlagen',
         content: [
-          '**Mexiko hat keinen spezifischen Rahmen für Plug-in-Solaranlagen – jedes netzgekoppelte System, von der kleinsten Plug-in-Einheit bis zu 700 kW, durchläuft denselben formalen CFE-Einspeisevertragsprozess mit einem CRE-zertifizierten Installateur.** Der 700-kW-Schwellenwert des „trámite simplificado", der nach Mexikos Ley del Sector Eléctrico (in Kraft seit 19. März 2025) von 500 kW angehoben wurde, ist eine Grenze für die Genehmigungskomplexität, keine Ausnahme für Kleinanlagen – ein 300-W-Balkonkraftwerk und eine 690-kW-Anlage stehen vor denselben Formalitäten.',
+          '**Mexiko hat keinen spezifischen Rahmen für Plug-in-Solaranlagen – jedes netzgekoppelte System, von der kleinsten Plug-in-Einheit bis zu 700 kW, durchläuft denselben formalen CFE-Einspeisevertragsprozess mit einem nach den aktuellen CFE-/CNE-Regeln zertifizierten Installateur.** Der 700-kW-Schwellenwert des „trámite simplificado", der nach Mexikos Ley del Sector Eléctrico (in Kraft seit 19. März 2025) von 500 kW angehoben wurde, ist eine Grenze für die Genehmigungskomplexität, keine Ausnahme für Kleinanlagen – ein 300-W-Balkonkraftwerk und eine 690-kW-Anlage stehen vor denselben Formalitäten.',
         ],
         callouts: [
           { type: 'info', text: 'Allgemeine Informationen, keine Rechtsberatung. Regeln ändern sich und lokale Details unterscheiden sich; klären Sie vor Kauf oder Anschluss einer Anlage die Lage mit der zuständigen Behörde, dem Netzbetreiber oder einer qualifizierten Fachperson.' },
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ist ein Balkonkraftwerk in Spanien definitiv legal?', a: 'Das kann nicht mit Sicherheit beantwortet werden – Quellen widersprechen sich, ob kleine Geräte eine vereinfachte Ausnahme erhalten oder das vollständige RD 244/2019-Verfahren benötigen. Klären Sie das direkt mit Ihrer regionalen Energiebehörde.' },
           { q: 'Ist die 800-W-Ausnahme für Spanien bestätigt?', a: 'Nein – sie scheint eine häufig wiederholte Zahl zu sein, die möglicherweise aus anderen europäischen Märkten stammt, nicht aus kodifiziertem spanischen Gesetzestext.' },
           { q: 'Was ist „vertido cero" und hilft es Balkonkraftwerk-Käufern in Spanien?', a: 'Das ist eine Eigenverbrauchskategorie mit Nulleinspeisung, die nach RD 244/2019 von Netzanschluss-/Zugangserlaubnissen befreit ist. Ob es als echter vereinfachter Weg speziell für Balkonkraftwerke funktioniert – statt als allgemeine praktische Sicherheitsregelung –, ist aus den verfügbaren Quellen unklar.' },
-          { q: 'Erlaubt Mexiko Balkonkraftwerke?', a: 'Es ist nicht verboten, aber es gibt keine Ausnahme für Kleinanlagen – dasselbe vollständige CFE-Einspeiseverfahren (Vertrag, CRE-zertifizierter Installateur) gilt für jede Größe eines netzgekoppelten Systems, von 1 kW bis 700 kW.' },
+          { q: 'Erlaubt Mexiko Balkonkraftwerke?', a: 'Es ist nicht verboten, aber es gibt keine Ausnahme für Kleinanlagen – dasselbe vollständige CFE-Einspeiseverfahren (Vertrag, nach den aktuellen CFE-/CNE-Regeln zertifizierter Installateur) gilt für jede Größe eines netzgekoppelten Systems, von 1 kW bis 700 kW.' },
           { q: 'Welche Unterlagen könnte ich in Spanien für ein kleines Balkonkraftwerk benötigen?', a: 'Wenn die strengere rechtliche Auslegung gilt, möglicherweise ein CIE-Zertifikat, REBT-Konformitätsdokumentation, regionale Comunidad-Autónoma-Registrierung und Netzbetreibermeldung – klären Sie, welche davon tatsächlich für Ihre spezifische Anlagengröße und Region gelten.' },
           { q: 'Als Rentner oder Auswanderer aus Deutschland in Spanien – was gilt für mich?', a: 'Dieselbe ungeklärte nationale Situation gilt für Sie. Manche Autonomen Gemeinschaften wie Andalusien oder die Kanaren können eigene Interpretationen haben – erkundigen Sie sich direkt bei der lokalen Energiebehörde Ihres Wohnsitzes.' },
           { q: 'Deckt diese Seite ganz Lateinamerika ab?', a: 'Nur Mexiko wird hier mit verifizierten Daten abgedeckt. Andere lateinamerikanische Länder wurden für diesen Leitfaden nicht unabhängig recherchiert – gehen Sie nicht davon aus, dass Mexikos Status anderswo in der Region gilt.' },
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'mexico',
         title: '멕시코: 소형 시스템 예외 없음',
         content: [
-          '**멕시코에는 플러그인 태양광 전용 체계가 없습니다 — 가장 작은 플러그인 장치부터 700kW까지, 모든 계통연계 시스템은 CRE 인증 설치업체와의 동일한 공식 CFE 연계 계약 절차를 거칩니다.** 멕시코 전력산업법(2025년 3월 19일 발효)에 따라 500kW에서 상향된 700kW의 "trámite simplificado"(간소 절차) 임계값은 소형 시스템 예외가 아니라 인허가 복잡성의 경계선입니다 — 300W 발코니 키트와 690kW 시스템은 동일한 서류 작업에 직면합니다.',
+          '**멕시코에는 플러그인 태양광 전용 체계가 없습니다 — 가장 작은 플러그인 장치부터 700kW까지, 모든 계통연계 시스템은 현행 CFE/CNE 규정에 따라 인증된 설치업체와의 동일한 공식 CFE 연계 계약 절차를 거칩니다.** 멕시코 전력산업법(2025년 3월 19일 발효)에 따라 500kW에서 상향된 700kW의 "trámite simplificado"(간소 절차) 임계값은 소형 시스템 예외가 아니라 인허가 복잡성의 경계선입니다 — 300W 발코니 키트와 690kW 시스템은 동일한 서류 작업에 직면합니다.',
         ],
         callouts: [
           { type: 'info', text: '일반적인 정보이며 법률 자문이 아닙니다. 규정은 바뀌고 지역별 세부 사항도 다릅니다. 시스템을 구매하거나 연결하기 전에 관할 기관, 계통 운영자 또는 자격을 갖춘 전문가에게 확인하십시오.' },
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '스페인에서 발코니 태양광은 확실히 합법인가요?', a: '이는 확신을 가지고 답할 수 없습니다 — 소형 키트가 간소화된 예외를 받는지, 아니면 RD 244/2019의 완전한 공식 절차가 필요한지에 대해 출처들이 상충합니다. 해당 지역 에너지 당국에 직접 확인하십시오.' },
           { q: '스페인의 800W 예외는 확인되었나요?', a: '아니요 — 이는 스페인 특유의 성문화된 법정 문서가 아니라 다른 유럽 시장에서 유래했을 수 있는, 흔히 반복되는 수치로 보입니다.' },
           { q: '"vertido cero"란 무엇이며 스페인의 발코니 태양광 구매자에게 도움이 되나요?', a: 'RD 244/2019에 따라 접속/연계 허가가 면제되는 제로 수출 자가소비 범주입니다. 이것이 발코니 키트에 특화된 진정한 간소화 경로로 기능하는지, 아니면 일반적인 실용적 보호 장치인지는 이용 가능한 출처로는 불분명합니다.' },
-          { q: '멕시코는 발코니 태양광을 허용하나요?', a: '금지되어 있지는 않지만 소형 시스템 예외가 없습니다 — 1kW부터 700kW까지, 규모와 무관하게 모든 계통연계 시스템에 동일한 완전한 CFE 연계 절차(계약, CRE 인증 설치업체)가 적용됩니다.' },
+          { q: '멕시코는 발코니 태양광을 허용하나요?', a: '금지되어 있지는 않지만 소형 시스템 예외가 없습니다 — 1kW부터 700kW까지, 규모와 무관하게 모든 계통연계 시스템에 동일한 완전한 CFE 연계 절차(계약, 현행 CFE/CNE 규정에 따라 인증된 설치업체)가 적용됩니다.' },
           { q: '스페인에서 소형 발코니 키트에 필요할 수 있는 서류는 무엇인가요?', a: '더 엄격한 법률 해석이 적용된다면, CIE 인증서, REBT 준수 문서, 지역 자치주 등록, 배전사업자 통지가 필요할 수 있습니다 — 이 중 실제로 귀하의 구체적인 시스템 규모와 지역에 적용되는 것이 무엇인지 확인하십시오.' },
           { q: '이 페이지는 라틴아메리카를 일반적으로 다루나요?', a: '여기서 검증된 데이터로 다루는 것은 멕시코뿐입니다. 다른 라틴아메리카 국가는 이 가이드를 위해 독립적으로 조사되지 않았습니다 — 멕시코의 상태가 해당 지역의 다른 곳에도 적용된다고 가정하지 마십시오.' },
           { q: '이 페이지는 왜 스페인의 합법성에 대해 한쪽 입장을 취하지 않나요?', a: '근거 출처가 실제로 동의하지 않기 때문이며, 어느 방향으로든 확신에 찬 답을 주장하는 것은 미검증 정보를 사실로 제시하는 것이 되어 이 사이트의 출처 기준을 직접 위반하게 됩니다.' },
