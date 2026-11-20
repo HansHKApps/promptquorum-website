@@ -93,7 +93,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         craftWhy: {
           title: 'Why It Works:',
-          content: 'CRAFT forces you to think about every angle of your request before asking the AI. The role + target combo ensures the AI understands exactly who the content is for and how to speak to them.',
+          content: 'CRAFT prompts you to think about every angle of your request before asking the AI. The role + target combination helps the AI understand who the content is for and how to speak to them.',
         },
         costar: {
           title: '2. CO-STAR Framework',
@@ -151,7 +151,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         specsWhy: {
           title: 'Why It Works:',
-          content: 'SPECS is detail-oriented and excellent when you need to convey complex requirements. The expected output field prevents the AI from guessing what you want.',
+          content: 'SPECS is detail-oriented and useful when you need to convey complex requirements. The expected output field reduces the amount the AI has to guess about what you want.',
         },
         risen: {
           title: '4. RISEN Framework',
@@ -179,7 +179,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         risenWhy: {
           title: 'Why It Works:',
-          content: 'RISEN is perfect for sequences and processes. The "narrowing" field prevents the AI from going off-track and ensures the output respects your constraints.',
+          content: 'RISEN suits sequences and processes. The "narrowing" field helps keep the AI on track and makes it more likely that the output respects your constraints.',
         },
         ape: {
           title: '5. APE Framework',
@@ -237,7 +237,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         traceWhy: {
           title: 'Why It Works:',
-          content: 'TRACE is powerful because showing an example teaches the AI exactly what you want. "Do this kind of thing" is often clearer than explaining it.',
+          content: 'TRACE can be effective because showing an example makes it clearer what you want. "Do this kind of thing" is often clearer than explaining it.',
         },
         rtf: {
           title: '8. RTF Framework',
@@ -253,7 +253,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         rtfWhy: {
           title: 'Why It Works:',
-          content: 'RTF is purpose-built for training and education. It ensures consistent, pedagogically sound output.',
+          content: 'RTF is designed for training and education and supports consistent, structured output.',
         },
         comparison: {
           title: 'Which Framework Should You Use?',
@@ -327,7 +327,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         craftWhy: {
           title: 'لماذا ينجح:',
-          content: 'يجبرك CRAFT على التفكير في كل زاوية من زوايا طلبك قبل سؤال الذكاء الاصطناعي. ويضمن الجمع بين الدور والجمهور المستهدف أن يفهم الذكاء الاصطناعي بدقة لمن يُوجَّه المحتوى وكيف يخاطبه.',
+          content: 'يدفعك CRAFT إلى التفكير في كل جوانب طلبك قبل أن تسأل الذكاء الاصطناعي. ويساعد الجمع بين الدور والجمهور المستهدف الذكاء الاصطناعي على فهم لمن المحتوى وكيف يخاطبهم.',
         },
         costar: {
           title: '2. إطار CO-STAR',
@@ -385,7 +385,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         specsWhy: {
           title: 'لماذا ينجح:',
-          content: 'إطار SPECS مُوجَّه نحو التفاصيل وممتاز عندما تحتاج إلى نقل متطلبات معقدة. ويمنع حقل «Expected Output» الذكاء الاصطناعي من تخمين ما تريد.',
+          content: 'يركّز SPECS على التفاصيل ويفيد عندما تحتاج إلى نقل متطلبات معقدة. ويقلّل حقل «Expected Output» ما يضطر الذكاء الاصطناعي إلى تخمينه عمّا تريد.',
         },
         risen: {
           title: '4. إطار RISEN',
@@ -413,7 +413,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         risenWhy: {
           title: 'لماذا ينجح:',
-          content: 'إطار RISEN مثالي للتسلسلات والعمليات. ويمنع حقل «Narrowing» الذكاء الاصطناعي من الخروج عن المسار ويضمن أن تحترم المخرجات قيودك.',
+          content: 'يناسب RISEN المتتاليات والعمليات. ويساعد حقل «Narrowing» على إبقاء الذكاء الاصطناعي على المسار، ويجعل من الأرجح أن يحترم الناتج قيودك.',
         },
         ape: {
           title: '5. إطار APE',
@@ -471,7 +471,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         traceWhy: {
           title: 'لماذا ينجح:',
-          content: 'إطار TRACE قوي لأن عرض مثال يعلّم الذكاء الاصطناعي بالضبط ما تريد. فقول «افعل شيئاً من هذا القبيل» غالباً ما يكون أوضح من شرحه.',
+          content: 'قد يكون TRACE فعّالًا لأن المثال يوضح ما تريده. وغالبًا ما يكون «افعل شيئًا من هذا النوع» أوضح من الشرح.',
         },
         rtf: {
           title: '8. إطار RTF',
@@ -487,7 +487,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         rtfWhy: {
           title: 'لماذا ينجح:',
-          content: 'إطار RTF مصمم خصيصاً للتدريب والتعليم. وهو يضمن مخرجات متسقة وسليمة تربوياً.',
+          content: 'صُمم RTF للتدريب والتعليم، ويدعم نواتج متسقة ومنظّمة.',
         },
         comparison: {
           title: 'أي إطار ينبغي أن تستخدم؟',
@@ -561,7 +561,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         craftWhy: {
           title: 'Warum es funktioniert:',
-          content: 'CRAFT zwingt Sie, alle Aspekte Ihrer Anfrage durchzudenken, bevor Sie die KI fragen. Die Kombination aus Rolle + Zielgruppe stellt sicher, dass die KI genau versteht, für wen der Inhalt ist und wie sie damit spricht.',
+          content: 'CRAFT regt dazu an, jeden Aspekt Ihrer Anfrage zu durchdenken, bevor Sie die KI fragen. Die Kombination aus Rolle und Zielgruppe hilft der KI zu verstehen, für wen der Inhalt gedacht ist und wie sie ihn ansprechen soll.',
         },
         costar: {
           title: '2. CO-STAR Framework',
@@ -619,7 +619,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         specsWhy: {
           title: 'Warum es funktioniert:',
-          content: 'SPECS ist detailorientiert und ausgezeichnet, wenn Sie komplexe Anforderungen vermitteln müssen. Das "Expected Output"-Feld verhindert, dass die KI raten muss, was Sie wollen.',
+          content: 'SPECS ist detailorientiert und nützlich, wenn Sie komplexe Anforderungen vermitteln müssen. Das Feld „Expected Output“ verringert, wie viel die KI über Ihre Wünsche raten muss.',
         },
         risen: {
           title: '4. RISEN Framework',
@@ -647,7 +647,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         risenWhy: {
           title: 'Warum es funktioniert:',
-          content: 'RISEN ist perfekt für Sequenzen und Prozesse. Das „Narrowing"-Feld verhindert, dass die KI vom Weg abkommt und stellt sicher, dass die Ausgabe Ihre Einschränkungen beachtet.',
+          content: 'RISEN eignet sich für Abfolgen und Prozesse. Das Feld „Narrowing“ hilft, die KI auf Kurs zu halten, und macht es wahrscheinlicher, dass die Ausgabe Ihre Vorgaben beachtet.',
         },
         ape: {
           title: '5. APE Framework',
@@ -705,7 +705,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         traceWhy: {
           title: 'Warum es funktioniert:',
-          content: 'TRACE ist mächtig, weil ein Beispiel die KI genau lehrt, was Sie wollen. „Machen Sie diese Art von Sache" ist oft klarer als es zu erklären.',
+          content: 'TRACE kann wirksam sein, weil ein Beispiel klarer macht, was Sie wollen. „Mach so etwas“ ist oft klarer als eine Erklärung.',
         },
         rtf: {
           title: '8. RTF Framework',
@@ -721,7 +721,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         rtfWhy: {
           title: 'Warum es funktioniert:',
-          content: 'RTF wurde speziell für Training und Bildung entwickelt. Es stellt konsistente, pädagogisch fundierte Ausgaben sicher.',
+          content: 'RTF ist für Schulung und Ausbildung gedacht und unterstützt konsistente, strukturierte Ausgaben.',
         },
         comparison: {
           title: 'Welches Framework sollten Sie verwenden?',
@@ -795,7 +795,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         craftWhy: {
           title: 'Pourquoi cela fonctionne :',
-          content: 'CRAFT vous force à réfléchir à chaque aspect de votre demande avant de poser la question à l\'IA. La combinaison rôle + cible garantit que l\'IA comprend exactement pour qui le contenu est destiné et comment lui parler.',
+          content: 'CRAFT vous invite à réfléchir à tous les aspects de votre demande avant de solliciter l’IA. L’association rôle + cible aide l’IA à comprendre à qui le contenu s’adresse et comment s’exprimer.',
         },
         costar: {
           title: '2. Framework CO-STAR',
@@ -853,7 +853,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         specsWhy: {
           title: 'Pourquoi cela fonctionne :',
-          content: 'SPECS est orienté vers les détails et excellent lorsque vous devez communiquer des exigences complexes. Le champ « Expected Output » empêche l\'IA de deviner ce que vous voulez.',
+          content: 'SPECS est axé sur le détail et utile pour transmettre des exigences complexes. Le champ « Expected Output » réduit ce que l’IA doit deviner de vos attentes.',
         },
         risen: {
           title: '4. Framework RISEN',
@@ -881,7 +881,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         risenWhy: {
           title: 'Pourquoi cela fonctionne :',
-          content: 'RISEN est parfait pour les séquences et les processus. Le champ « narrowing » empêche l\'IA de dévier et assure que la sortie respecte vos contraintes.',
+          content: 'RISEN convient aux séquences et aux processus. Le champ « Narrowing » aide à garder l’IA sur la bonne voie et rend plus probable que la sortie respecte vos contraintes.',
         },
         ape: {
           title: '5. Framework APE',
@@ -939,7 +939,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         traceWhy: {
           title: 'Pourquoi cela fonctionne :',
-          content: 'TRACE est puissant car montrer un exemple enseigne exactement à l\'IA ce que vous voulez. « Faire ce genre de chose » est souvent plus clair que l\'expliquer.',
+          content: 'TRACE peut être efficace, car un exemple précise ce que vous voulez. « Faites ce genre de chose » est souvent plus clair qu’une explication.',
         },
         rtf: {
           title: '8. Framework RTF',
@@ -955,7 +955,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         rtfWhy: {
           title: 'Pourquoi cela fonctionne :',
-          content: 'RTF est construit exprès pour la formation et l\'éducation. Il assure une sortie cohérente et pédagogiquement saine.',
+          content: 'RTF est conçu pour la formation et l’enseignement et favorise des sorties cohérentes et structurées.',
         },
         comparison: {
           title: 'Quel framework devriez-vous utiliser ?',
@@ -1029,7 +1029,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         craftWhy: {
           title: 'なぜうまくいくのか：',
-          content: 'CRAFTは、AIに質問する前にリクエストのすべての側面を考えることを強制します。ロール+ターゲットの組み合わせにより、AIはコンテンツが誰のためのもので、どのように話しかけるべきかを正確に理解します。',
+          content: 'CRAFTは、AIに依頼する前にリクエストのあらゆる側面を考えるよう促します。ロールとターゲットの組み合わせは、コンテンツが誰向けで、どのように語りかけるべきかをAIが理解する助けになります。',
         },
         costar: {
           title: '2. CO-STARフレームワーク',
@@ -1087,7 +1087,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         specsWhy: {
           title: 'なぜうまくいくのか：',
-          content: 'SPECSは詳細志向で、複雑な要件を伝える必要がある場合に優れています。 「Expected Output」フィールドは、AIがあなたが何を望んでいるかを推測することを防ぎます。',
+          content: 'SPECSは詳細重視で、複雑な要件を伝えたいときに役立ちます。「Expected Output」フィールドは、AIがあなたの望みを推測する部分を減らします。',
         },
         risen: {
           title: '4. RISENフレームワーク',
@@ -1115,7 +1115,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         risenWhy: {
           title: 'なぜうまくいくのか：',
-          content: 'RISENはシーケンスとプロセスに最適です。 「narrowing」フィールドはAIが脱線することを防ぎ、出力があなたの制約を尊重することを保証します。',
+          content: 'RISENはシーケンスやプロセスに向いています。「Narrowing」フィールドはAIが脱線しにくくなる助けになり、出力があなたの制約を尊重する可能性を高めます。',
         },
         ape: {
           title: '5. APEフレームワーク',
@@ -1173,7 +1173,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         traceWhy: {
           title: 'なぜうまくいくのか：',
-          content: 'TRACEは強力です。例を示すことはAIにあなたが何を望んでいるかを正確に教えるからです。 「この種のことをやる」は、多くの場合、それを説明するよりも明確です。',
+          content: 'TRACEは、例を示すことで望むものが明確になるため、効果的な場合があります。「こういうものを作って」と示すほうが、説明するより分かりやすいことがよくあります。',
         },
         rtf: {
           title: '8. RTFフレームワーク',
@@ -1189,7 +1189,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         rtfWhy: {
           title: 'なぜうまくいくのか：',
-          content: 'RTFは研修と教育向けに設計されています。 一貫性のある、教育学的に健全な出力を確保します。',
+          content: 'RTFは研修や教育向けに設計されており、一貫性のある構造化された出力を支援します。',
         },
         comparison: {
           title: 'どのフレームワークを使うべき？',
@@ -1263,7 +1263,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         craftWhy: {
           title: '为什么有效：',
-          content: 'CRAFT迫使您在提出AI问题之前思考请求的所有方面。 角色+目标组合确保AI准确了解内容针对的对象以及如何与他们交谈。',
+          content: 'CRAFT促使你在向AI提问之前考虑请求的各个方面。角色加目标受众的组合有助于AI理解内容是写给谁的，以及该如何与对方沟通。',
         },
         costar: {
           title: '2. CO-STAR框架',
@@ -1321,7 +1321,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         specsWhy: {
           title: '为什么有效：',
-          content: 'SPECS注重细节，在您需要传达复杂要求时非常有效。 预期输出字段防止AI猜测您想要什么。',
+          content: 'SPECS注重细节，适合需要传达复杂需求的场景。“预期输出”字段能减少AI对你想要什么的猜测。',
         },
         risen: {
           title: '4. RISEN框架',
@@ -1349,7 +1349,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         risenWhy: {
           title: '为什么有效：',
-          content: 'RISEN非常适合序列和流程。 "narrowing"字段防止AI偏离轨道，并确保输出遵守您的约束。',
+          content: 'RISEN适合序列和流程类任务。“限定条件”字段有助于让AI不偏离方向，并提高输出遵守你的约束的可能性。',
         },
         ape: {
           title: '5. APE框架',
@@ -1407,7 +1407,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         traceWhy: {
           title: '为什么有效：',
-          content: 'TRACE强大，因为展示示例准确地教导AI您想要什么。 "做这种事"通常比解释它更清楚。',
+          content: 'TRACE可能很有效，因为展示一个示例能让你想要的东西更清楚。“照这样做”往往比解释更直观。',
         },
         rtf: {
           title: '8. RTF框架',
@@ -1423,7 +1423,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         rtfWhy: {
           title: '为什么有效：',
-          content: 'RTF是为培训和教育而设计的。 它确保输出的一致性和教学上的合理性。',
+          content: 'RTF专为培训和教育设计，有助于产出一致、结构化的内容。',
         },
         comparison: {
           title: '您应该使用哪个框架？',
@@ -1497,7 +1497,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         craftWhy: {
           title: 'Por Qué Funciona:',
-          content: 'CRAFT te fuerza a pensar en cada aspecto de tu solicitud antes de hacerle una pregunta a la IA. La combinación de rol + objetivo garantiza que la IA entienda exactamente para quién es el contenido y cómo hablarse a sí misma.',
+          content: 'CRAFT te invita a pensar en todos los ángulos de tu petición antes de pedírsela a la IA. La combinación de rol y destinatario ayuda a la IA a entender para quién es el contenido y cómo dirigirse a esa persona.',
         },
         costar: {
           title: '2. Marco CO-STAR',
@@ -1555,7 +1555,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         specsWhy: {
           title: 'Por Qué Funciona:',
-          content: 'SPECS está orientado a los detalles y es excelente cuando necesitas comunicar requisitos complejos. El campo de salida esperada evita que la IA adivine qué quieres.',
+          content: 'SPECS está orientado al detalle y es útil cuando necesitas transmitir requisitos complejos. El campo «Expected Output» reduce lo que la IA tiene que adivinar sobre lo que quieres.',
         },
         risen: {
           title: '4. Marco RISEN',
@@ -1583,7 +1583,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         risenWhy: {
           title: 'Por Qué Funciona:',
-          content: 'RISEN es perfecto para secuencias y procesos. El campo "Narrowing" evita que la IA se salga del camino y asegura que la salida respete tus restricciones.',
+          content: 'RISEN encaja con secuencias y procesos. El campo «Narrowing» ayuda a mantener a la IA en el camino y hace más probable que el resultado respete tus restricciones.',
         },
         ape: {
           title: '5. Marco APE',
@@ -1641,7 +1641,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         traceWhy: {
           title: 'Por Qué Funciona:',
-          content: 'TRACE es poderoso porque mostrar un ejemplo le enseña a la IA exactamente qué quieres. "Haz este tipo de cosa" a menudo es más claro que explicarlo.',
+          content: 'TRACE puede ser eficaz porque un ejemplo aclara lo que quieres. «Haz algo así» suele ser más claro que explicarlo.',
         },
         rtf: {
           title: '8. Marco RTF',
@@ -1657,7 +1657,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         rtfWhy: {
           title: 'Por Qué Funciona:',
-          content: 'RTF está construido específicamente para capacitación y educación. Asegura una salida consistente y pedagógicamente sólida.',
+          content: 'RTF está pensado para formación y educación y favorece resultados coherentes y estructurados.',
         },
         comparison: {
           title: '¿Qué Marco Debería Usar?',
@@ -1731,7 +1731,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         craftWhy: {
           title: 'Por Que Funciona:',
-          content: 'O CRAFT força você a pensar em cada ângulo da sua solicitação antes de perguntar à IA. A combinação papel + público garante que a IA entenda exatamente para quem o conteúdo é destinado e como se comunicar com essa pessoa.',
+          content: 'O CRAFT leva você a pensar em todos os ângulos do seu pedido antes de perguntar à IA. A combinação de papel e público-alvo ajuda a IA a entender para quem o conteúdo é e como falar com essa pessoa.',
         },
         costar: {
           title: '2. Framework CO-STAR',
@@ -1789,7 +1789,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         specsWhy: {
           title: 'Por Que Funciona:',
-          content: 'O SPECS é detalhado e excelente quando você precisa comunicar requisitos complexos. O campo de saída esperada evita que a IA adivinhe o que você quer.',
+          content: 'O SPECS é orientado a detalhes e útil quando você precisa transmitir requisitos complexos. O campo "Expected Output" reduz o quanto a IA precisa adivinhar sobre o que você quer.',
         },
         risen: {
           title: '4. Framework RISEN',
@@ -1817,7 +1817,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         risenWhy: {
           title: 'Por Que Funciona:',
-          content: 'O RISEN é perfeito para sequências e processos. O campo "Narrowing" evita que a IA se desvie e garante que a saída respeite suas restrições.',
+          content: 'O RISEN combina com sequências e processos. O campo "Narrowing" ajuda a manter a IA no rumo e torna mais provável que a saída respeite suas restrições.',
         },
         ape: {
           title: '5. Framework APE',
@@ -1875,7 +1875,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         traceWhy: {
           title: 'Por Que Funciona:',
-          content: 'O TRACE é poderoso porque mostrar um exemplo ensina à IA exatamente o que você quer. "Faça esse tipo de coisa" é muitas vezes mais claro do que explicar.',
+          content: 'O TRACE pode ser eficaz porque um exemplo deixa mais claro o que você quer. "Faça algo assim" costuma ser mais claro do que explicar.',
         },
         rtf: {
           title: '8. Framework RTF',
@@ -1891,7 +1891,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         rtfWhy: {
           title: 'Por Que Funciona:',
-          content: 'O RTF foi criado especificamente para treinamento e educação. Garante uma saída consistente e pedagogicamente sólida.',
+          content: 'O RTF foi pensado para treinamento e educação e favorece saídas consistentes e estruturadas.',
         },
         comparison: {
           title: 'Qual Framework Você Deve Usar?',
@@ -1965,7 +1965,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         craftWhy: {
           title: '효과적인 이유:',
-          content: 'CRAFT는 AI에게 묻기 전에 요청의 모든 각도를 생각하도록 합니다. 역할 + 대상 조합은 AI가 콘텐츠가 누구를 위한 것인지와 그들에게 어떻게 말해야 하는지를 정확히 이해하도록 합니다.',
+          content: 'CRAFT는 AI에 요청하기 전에 요청의 모든 측면을 생각하도록 유도합니다. 역할과 대상 독자의 조합은 콘텐츠가 누구를 위한 것이고 어떻게 말해야 하는지 AI가 이해하는 데 도움이 됩니다.',
         },
         costar: {
           title: '2. CO-STAR 프레임워크',
@@ -2023,7 +2023,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         specsWhy: {
           title: '효과적인 이유:',
-          content: 'SPECS는 복잡한 요건을 전달해야 할 때 상세하고 탁월합니다. 예상 출력 필드는 AI가 원하는 것을 추측하는 것을 방지합니다.',
+          content: 'SPECS는 세부 사항 중심이며 복잡한 요구 사항을 전달해야 할 때 유용합니다. 기대 출력 필드는 AI가 원하는 바를 추측해야 하는 부분을 줄여 줍니다.',
         },
         risen: {
           title: '4. RISEN 프레임워크',
@@ -2051,7 +2051,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         risenWhy: {
           title: '효과적인 이유:',
-          content: 'RISEN은 시퀀스와 프로세스에 완벽합니다. "Narrowing" 필드는 AI가 벗어나는 것을 방지하고 출력이 제약을 준수하도록 합니다.',
+          content: 'RISEN은 순서와 프로세스에 적합합니다. 제한 필드는 AI가 궤도를 벗어나지 않도록 돕고 출력이 제약 조건을 지킬 가능성을 높입니다.',
         },
         ape: {
           title: '5. APE 프레임워크',
@@ -2109,7 +2109,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         traceWhy: {
           title: '효과적인 이유:',
-          content: 'TRACE는 예시를 보여주는 것이 AI에게 원하는 것을 정확히 가르치기 때문에 강력합니다. "이런 종류의 것을 하세요"는 종종 설명보다 더 명확합니다.',
+          content: 'TRACE는 예시를 보여 주면 원하는 바가 분명해지므로 효과적일 수 있습니다. "이런 식으로 해 주세요"가 설명보다 더 명확한 경우가 많습니다.',
         },
         rtf: {
           title: '8. RTF 프레임워크',
@@ -2125,7 +2125,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         rtfWhy: {
           title: '효과적인 이유:',
-          content: 'RTF는 특히 교육과 훈련을 위해 만들어졌습니다. 일관되고 교육학적으로 건전한 출력을 보장합니다.',
+          content: 'RTF는 교육과 훈련을 위해 설계되었으며 일관되고 구조화된 출력을 지원합니다.',
         },
         comparison: {
           title: '어떤 프레임워크를 사용해야 합니까?',
@@ -26309,7 +26309,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'When a prompt contains personal data and is sent to an AI provider outside the EU/EEA, GDPR Chapter V on international transfers applies ([Article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). The usual transfer tools are an adequacy decision, standard contractual clauses (SCCs) with a transfer impact assessment, or binding corporate rules. For the US, the European Commission adopted an adequacy decision for the EU-US Data Privacy Framework (DPF) on 10 July 2023, so transfers to certified US companies can rely on it ([European Commission](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). The General Court dismissed an annulment action against that decision on 3 September 2025 (Case T-553/23); the applicant appealed on 31 October 2025 (Case C-703/25 P), and a law-firm update advises businesses to keep applying Chapter V in the meantime ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'For providers outside the EU/EEA that no adequacy decision covers, you need another transfer tool and an assessment of the destination country\'s laws, following the CJEU\'s Schrems II judgment (Case C-311/18). Data protection authorities have also acted on AI services directly, for example the Italian Garante\'s temporary limitation of ChatGPT in 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)), and the European Data Protection Board adopted Opinion 28/2024 on 18 December 2024 on data protection aspects of AI models ([EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). Contracts, transfer assessments and reviews for each cloud provider are a real compliance cost; this page quotes no figures because no neutral benchmark exists.',
-            'Running the model on hardware you control inside the EU/EEA means prompts stay in your environment, so Article 44 transfer rules are not triggered by the AI layer. GDPR still applies to the processing itself: lawful basis, minimisation, security and your [Article 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) record of processing. Local deployment simplifies the transfer analysis; it does not remove GDPR obligations.',
+            'Running the model on hardware you control inside the EU/EEA means prompts stay in your environment, so Article 44 transfer rules are not triggered by the AI layer. GDPR still applies to the processing itself: lawful basis, minimisation, security and your [Article 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) record of processing. Local deployment simplifies the transfer analysis; it does not remove GDPR obligations. This page is a general overview, not legal advice; consult qualified counsel or your data protection officer about your own situation.',
           ],
         },
         aiAct2026: {
@@ -26490,7 +26490,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Cuando un prompt contiene datos personales y se envía a un proveedor de IA fuera de la UE/EEE, se aplica el capítulo V del RGPD sobre transferencias internacionales ([artículo 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Los instrumentos habituales son una decisión de adecuación, cláusulas contractuales tipo (CCT) con una evaluación de impacto de la transferencia, o normas corporativas vinculantes. Para EE. UU., la Comisión Europea adoptó el 10 de julio de 2023 una decisión de adecuación para el EU-US Data Privacy Framework (DPF); las transferencias a empresas estadounidenses certificadas pueden basarse en ella ([Comisión Europea](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). El Tribunal General desestimó un recurso de anulación contra esa decisión el 3 de septiembre de 2025 (asunto T-553/23); el demandante recurrió el 31 de octubre de 2025 (asunto C-703/25 P), y una nota de un despacho aconseja seguir aplicando el capítulo V mientras tanto ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'Para proveedores fuera de la UE/EEE sin decisión de adecuación, necesitas otro instrumento de transferencia y una evaluación de la legislación del país de destino, conforme a la sentencia Schrems II del TJUE (asunto C-311/18). Las autoridades de protección de datos también han actuado directamente sobre servicios de IA, por ejemplo la limitación temporal de ChatGPT por la Garante italiana en 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)), y el Comité Europeo de Protección de Datos adoptó el 18 de diciembre de 2024 el dictamen 28/2024 sobre aspectos de protección de datos de los modelos de IA ([CEPD](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). Contratos, evaluaciones de transferencia y revisiones por cada proveedor en la nube son un coste de cumplimiento real; esta página no cita cifras porque no existe una referencia neutral.',
-            'Ejecutar el modelo en hardware que controlas dentro de la UE/EEE significa que los prompts permanecen en tu entorno, por lo que las reglas de transferencia del artículo 44 no se activan por la capa de IA. El RGPD sigue aplicándose al tratamiento en sí: base jurídica, minimización, seguridad y tu [registro del artículo 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). El despliegue local simplifica el análisis de transferencias; no elimina las obligaciones del RGPD.',
+            'Ejecutar el modelo en hardware que controlas dentro de la UE/EEE significa que los prompts permanecen en tu entorno, por lo que las reglas de transferencia del artículo 44 no se activan por la capa de IA. El RGPD sigue aplicándose al tratamiento en sí: base jurídica, minimización, seguridad y tu [registro del artículo 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). El despliegue local simplifica el análisis de transferencias; no elimina las obligaciones del RGPD. Esta página es una visión general y no constituye asesoramiento jurídico; consulta a un profesional cualificado o a tu delegado de protección de datos sobre tu situación.',
           ],
         },
         aiAct2026: {
@@ -26673,7 +26673,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'عندما يحتوي أمر على بيانات شخصية ويُرسل إلى مزوّد ذكاء اصطناعي خارج الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية، ينطبق الفصل الخامس من GDPR بشأن النقل الدولي ([المادة 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). والأدوات المعتادة هي قرار الملاءمة أو البنود التعاقدية النموذجية (SCC) مع تقييم أثر النقل أو القواعد المؤسسية الملزمة. وبالنسبة للولايات المتحدة، اعتمدت المفوضية الأوروبية في 10 يوليو 2023 قرار ملاءمة لإطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (DPF)، ويمكن أن تستند عمليات النقل إلى الشركات الأمريكية المعتمدة إليه ([المفوضية الأوروبية](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). ورفضت المحكمة العامة في 3 سبتمبر 2025 دعوى إلغاء ضد هذا القرار (القضية T-553/23)؛ واستأنف المدّعي في 31 أكتوبر 2025 (القضية C-703/25 P)، وينصح تحديث صادر عن مكتب محاماة الشركات بمواصلة تطبيق الفصل الخامس في الأثناء ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'بالنسبة للمزوّدين خارج الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية غير المشمولين بقرار ملاءمة، تحتاج إلى أداة نقل أخرى وتقييم لقوانين بلد الوجهة، وفق حكم Schrems II لمحكمة العدل الأوروبية (القضية C-311/18). وقد تحركت سلطات حماية البيانات مباشرة تجاه خدمات الذكاء الاصطناعي أيضًا، مثل التقييد المؤقت لـ ChatGPT من هيئة Garante الإيطالية في 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382))، واعتمد المجلس الأوروبي لحماية البيانات في 18 ديسمبر 2024 الرأي 28/2024 بشأن جوانب حماية البيانات في نماذج الذكاء الاصطناعي ([EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). والعقود وتقييمات النقل والمراجعات لكل مزوّد سحابي تكلفة امتثال حقيقية؛ ولا تذكر هذه الصفحة أرقامًا لعدم وجود معيار محايد.',
-            'تشغيل النموذج على عتاد تتحكم فيه داخل الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية يعني بقاء الأوامر في بيئتك، فلا تتفعل قواعد النقل في المادة 44 بسبب طبقة الذكاء الاصطناعي. لكن GDPR يظل منطبقًا على المعالجة نفسها: الأساس القانوني وتقليل البيانات والأمن و[سجل أنشطة المعالجة في المادة 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). والنشر المحلي يبسّط تحليل النقل لكنه لا يلغي التزامات GDPR.',
+            'تشغيل النموذج على عتاد تتحكم فيه داخل الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية يعني بقاء الأوامر في بيئتك، فلا تتفعل قواعد النقل في المادة 44 بسبب طبقة الذكاء الاصطناعي. لكن GDPR يظل منطبقًا على المعالجة نفسها: الأساس القانوني وتقليل البيانات والأمن و[سجل أنشطة المعالجة في المادة 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). والنشر المحلي يبسّط تحليل النقل لكنه لا يلغي التزامات GDPR. هذه الصفحة نظرة عامة وليست استشارة قانونية؛ استشر محاميًا مؤهلًا أو مسؤول حماية البيانات لديك بشأن وضعك الخاص.',
           ],
         },
         aiAct2026: {
@@ -26856,7 +26856,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Enthält ein Prompt personenbezogene Daten und wird er an einen KI-Anbieter außerhalb der EU/des EWR gesendet, gilt DSGVO Kapitel V zu internationalen Übermittlungen ([Artikel 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Übliche Instrumente sind ein Angemessenheitsbeschluss, Standardvertragsklauseln (SCC) mit Transfer-Folgenabschätzung oder verbindliche interne Datenschutzvorschriften. Für die USA erließ die Europäische Kommission am 10. Juli 2023 einen Angemessenheitsbeschluss zum EU-US Data Privacy Framework (DPF); Übermittlungen an zertifizierte US-Unternehmen können sich darauf stützen ([Europäische Kommission](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). Das Gericht der EU wies eine Nichtigkeitsklage gegen diesen Beschluss am 3. September 2025 ab (Rechtssache T-553/23); der Kläger legte am 31. Oktober 2025 Rechtsmittel ein (Rechtssache C-703/25 P), und eine Kanzlei rät, Kapitel V in der Zwischenzeit weiter anzuwenden ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'Für Anbieter außerhalb der EU/des EWR ohne Angemessenheitsbeschluss benötigen Sie ein anderes Übermittlungsinstrument und eine Bewertung der Rechtslage im Zielland, wie sie das EuGH-Urteil Schrems II (Rechtssache C-311/18) verlangt. Datenschutzbehörden sind auch direkt gegen KI-Dienste vorgegangen, etwa die vorübergehende Beschränkung von ChatGPT durch die italienische Garante 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)); der Europäische Datenschutzausschuss verabschiedete am 18. Dezember 2024 die Stellungnahme 28/2024 zu Datenschutzaspekten von KI-Modellen ([EDSA](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). Verträge, Transferbewertungen und Überprüfungen je Cloud-Anbieter sind ein realer Compliance-Aufwand; diese Seite nennt keine Beträge, da es keinen neutralen Richtwert gibt.',
-            'Läuft das Modell auf Hardware unter Ihrer Kontrolle innerhalb der EU/des EWR, bleiben Prompts in Ihrer Umgebung, sodass die Übermittlungsregeln des Artikels 44 durch die KI-Schicht nicht ausgelöst werden. Die DSGVO gilt aber weiterhin für die Verarbeitung selbst: Rechtsgrundlage, Datenminimierung, Sicherheit und Ihr [Artikel-30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)-Verzeichnis von Verarbeitungstätigkeiten. Lokaler Betrieb vereinfacht die Transferprüfung, hebt aber keine DSGVO-Pflichten auf.',
+            'Läuft das Modell auf Hardware unter Ihrer Kontrolle innerhalb der EU/des EWR, bleiben Prompts in Ihrer Umgebung, sodass die Übermittlungsregeln des Artikels 44 durch die KI-Schicht nicht ausgelöst werden. Die DSGVO gilt aber weiterhin für die Verarbeitung selbst: Rechtsgrundlage, Datenminimierung, Sicherheit und Ihr [Artikel-30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)-Verzeichnis von Verarbeitungstätigkeiten. Lokaler Betrieb vereinfacht die Transferprüfung, hebt aber keine DSGVO-Pflichten auf. Diese Seite ist ein allgemeiner Überblick und keine Rechtsberatung; lassen Sie sich zu Ihrer eigenen Situation von qualifizierten Rechtsberatern oder Ihrem Datenschutzbeauftragten beraten.',
           ],
         },
         aiAct2026: {
@@ -27039,7 +27039,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Lorsqu\'un prompt contient des données personnelles et part vers un fournisseur d\'IA hors UE/EEE, le chapitre V du RGPD sur les transferts internationaux s\'applique ([article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Les outils usuels sont une décision d\'adéquation, des clauses contractuelles types (CCT) avec une analyse d\'impact du transfert, ou des règles d\'entreprise contraignantes. Pour les États-Unis, la Commission européenne a adopté le 10 juillet 2023 une décision d\'adéquation pour le EU-US Data Privacy Framework (DPF) ; les transferts vers des entreprises américaines certifiées peuvent s\'y appuyer ([Commission européenne](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). Le Tribunal de l\'UE a rejeté un recours en annulation contre cette décision le 3 septembre 2025 (affaire T-553/23) ; le requérant a formé un pourvoi le 31 octobre 2025 (affaire C-703/25 P), et une note de cabinet conseille de continuer à appliquer le chapitre V en attendant ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'Pour les fournisseurs hors UE/EEE non couverts par une décision d\'adéquation, il faut un autre outil de transfert et une évaluation du droit du pays de destination, conformément à l\'arrêt Schrems II de la CJUE (affaire C-311/18). Les autorités de protection des données sont aussi intervenues directement sur des services d\'IA, par exemple la limitation temporaire de ChatGPT par la Garante italienne en 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)), et le Comité européen de la protection des données a adopté le 18 décembre 2024 l\'avis 28/2024 sur les aspects de protection des données des modèles d\'IA ([CEPD](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). Contrats, évaluations de transfert et revues pour chaque fournisseur cloud représentent un coût de conformité réel ; cette page ne cite aucun chiffre faute de référence neutre.',
-            'Faire tourner le modèle sur du matériel que vous contrôlez dans l\'UE/EEE signifie que les prompts restent dans votre environnement : les règles de transfert de l\'article 44 ne sont pas déclenchées par la couche IA. Le RGPD s\'applique toutefois au traitement lui-même : base légale, minimisation, sécurité et votre [registre de l\'article 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). Le local simplifie l\'analyse des transferts ; il ne supprime pas les obligations du RGPD.',
+            'Faire tourner le modèle sur du matériel que vous contrôlez dans l\'UE/EEE signifie que les prompts restent dans votre environnement : les règles de transfert de l\'article 44 ne sont pas déclenchées par la couche IA. Le RGPD s\'applique toutefois au traitement lui-même : base légale, minimisation, sécurité et votre [registre de l\'article 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). Le local simplifie l\'analyse des transferts ; il ne supprime pas les obligations du RGPD. Cette page est un aperçu général et ne constitue pas un conseil juridique ; consultez un avocat qualifié ou votre délégué à la protection des données pour votre situation.',
           ],
         },
         aiAct2026: {
@@ -27222,7 +27222,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '個人データを含むプロンプトをEU/EEA域外のAI事業者に送る場合、国際移転に関するGDPR第5章が適用されます（[第44条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)）。一般的な手段は、十分性認定、移転影響評価を伴う標準契約条項（SCC）、拘束的企業準則です。米国については、欧州委員会が2023年7月10日にEU-USデータプライバシーフレームワーク（DPF）の十分性認定を採択しており、認証済みの米国企業への移転はこれに依拠できます（[欧州委員会](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)）。EU一般裁判所は2025年9月3日にこの認定の取消請求を退け（T-553/23）、申立人は2025年10月31日に上訴しました（C-703/25 P）。法律事務所の情報では、その間も第5章を引き続き適用するよう助言されています（[Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)）。',
             '十分性認定の対象外であるEU/EEA域外の事業者については、別の移転手段と移転先国の法制度の評価が必要です（EU司法裁判所のSchrems II判決、C-311/18）。データ保護当局はAIサービスにも直接対応しており、例えば2023年にはイタリアのGaranteがChatGPTを一時的に制限しました（[Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)）。欧州データ保護会議は2024年12月18日に、AIモデルに関するデータ保護の側面についての意見28/2024を採択しています（[EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)）。クラウド事業者ごとの契約、移転評価、見直しは実際のコンプライアンスコストですが、中立的な基準がないため、このページでは金額を示しません。',
-            'EU/EEA域内で自社管理のハードウェア上でモデルを動かせば、プロンプトは自社環境にとどまり、AI層によって第44条の移転規則が適用されることはありません。ただし処理そのものにはGDPRが適用され、適法性の根拠、データ最小化、セキュリティ、[第30条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)の処理活動記録が必要です。ローカル運用は移転の分析を簡単にしますが、GDPRの義務をなくすものではありません。',
+            'EU/EEA域内で自社管理のハードウェア上でモデルを動かせば、プロンプトは自社環境にとどまり、AI層によって第44条の移転規則が適用されることはありません。ただし処理そのものにはGDPRが適用され、適法性の根拠、データ最小化、セキュリティ、[第30条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)の処理活動記録が必要です。ローカル運用は移転の分析を簡単にしますが、GDPRの義務をなくすものではありません。 このページは一般的な概要であり、法的助言ではありません。個別の状況については、資格のある弁護士またはデータ保護責任者にご相談ください。',
           ],
         },
         aiAct2026: {
@@ -27405,7 +27405,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '当提示词包含个人数据并被发送到欧盟/欧洲经济区以外的AI提供商时，适用GDPR第五章关于国际传输的规定（[第44条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)）。常用的传输工具包括充分性决定、附带传输影响评估的标准合同条款（SCC）或具有约束力的公司规则。对于美国，欧盟委员会于2023年7月10日通过了欧美数据隐私框架（DPF）的充分性决定，向已认证的美国公司传输数据可以依据该决定（[欧盟委员会](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)）。欧盟普通法院于2025年9月3日驳回了对该决定的撤销诉讼（案件T-553/23）；申请人于2025年10月31日提起上诉（案件C-703/25 P），一份律所的更新建议企业在此期间继续适用第五章（[Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)）。',
             '对于未被充分性决定覆盖、位于欧盟/欧洲经济区以外的提供商，需要其他传输工具并评估目的地国家的法律，这源于欧盟法院的Schrems II判决（案件C-311/18）。数据保护机构也直接对AI服务采取过行动，例如意大利Garante在2023年临时限制ChatGPT（[Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)）；欧洲数据保护委员会于2024年12月18日通过了关于AI模型数据保护问题的第28/2024号意见（[EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)）。为每个云服务商签订合同、进行传输评估和定期复核是实实在在的合规成本；由于没有中立的基准，本页不给出具体金额。',
-            '在欧盟/欧洲经济区境内由你控制的硬件上运行模型，意味着提示词保留在你的环境中，因此AI层不会触发第44条的传输规则。但GDPR仍适用于处理活动本身：合法性基础、数据最小化、安全性，以及你的[第30条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)处理活动记录。本地部署简化了传输分析，但不会免除GDPR义务。',
+            '在欧盟/欧洲经济区境内由你控制的硬件上运行模型，意味着提示词保留在你的环境中，因此AI层不会触发第44条的传输规则。但GDPR仍适用于处理活动本身：合法性基础、数据最小化、安全性，以及你的[第30条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)处理活动记录。本地部署简化了传输分析，但不会免除GDPR义务。 本页仅为一般性概述，不构成法律意见；针对你自己的情况，请咨询有资质的律师或数据保护官。',
           ],
         },
         aiAct2026: {
@@ -27588,7 +27588,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Quando um prompt contém dados pessoais e é enviado a um provedor de IA fora da UE/EEE, aplica-se o capítulo V da GDPR sobre transferências internacionais ([artigo 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). Os instrumentos usuais são uma decisão de adequação, cláusulas contratuais padrão (SCCs) com avaliação de impacto da transferência ou normas corporativas vinculantes. Para os EUA, a Comissão Europeia adotou em 10 de julho de 2023 uma decisão de adequação para o EU-US Data Privacy Framework (DPF); transferências para empresas americanas certificadas podem se basear nela ([Comissão Europeia](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). O Tribunal Geral negou uma ação de anulação contra essa decisão em 3 de setembro de 2025 (processo T-553/23); o autor recorreu em 31 de outubro de 2025 (processo C-703/25 P), e uma atualização de escritório de advocacia recomenda continuar aplicando o capítulo V enquanto isso ([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             'Para provedores fora da UE/EEE sem decisão de adequação, é preciso outro instrumento de transferência e uma avaliação da legislação do país de destino, conforme o acórdão Schrems II do TJUE (processo C-311/18). Autoridades de proteção de dados também agiram diretamente sobre serviços de IA, como a limitação temporária do ChatGPT pela Garante italiana em 2023 ([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)), e o Comitê Europeu para a Proteção de Dados adotou em 18 de dezembro de 2024 o parecer 28/2024 sobre aspectos de proteção de dados de modelos de IA ([EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). Contratos, avaliações de transferência e revisões para cada provedor em nuvem são um custo real de conformidade; esta página não cita valores porque não existe referência neutra.',
-            'Executar o modelo em hardware sob seu controle dentro da UE/EEE significa que os prompts ficam no seu ambiente, de modo que as regras de transferência do artigo 44 não são acionadas pela camada de IA. A GDPR continua valendo para o tratamento em si: base legal, minimização, segurança e seu [registro do artigo 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). A implantação local simplifica a análise de transferências; não elimina as obrigações da GDPR. Para o Brasil, a LGPD e a ANPD tratam da proteção de dados pessoais, com regime próprio.',
+            'Executar o modelo em hardware sob seu controle dentro da UE/EEE significa que os prompts ficam no seu ambiente, de modo que as regras de transferência do artigo 44 não são acionadas pela camada de IA. A GDPR continua valendo para o tratamento em si: base legal, minimização, segurança e seu [registro do artigo 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). A implantação local simplifica a análise de transferências; não elimina as obrigações da GDPR. Para o Brasil, a LGPD e a ANPD tratam da proteção de dados pessoais, com regime próprio. Esta página é uma visão geral e não constitui aconselhamento jurídico; consulte um advogado qualificado ou o seu encarregado de proteção de dados sobre a sua situação.',
           ],
         },
         aiAct2026: {
@@ -27771,7 +27771,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '개인정보가 포함된 프롬프트를 EU/EEA 밖의 AI 제공업체로 보내면 국제 이전에 관한 GDPR 제5장이 적용됩니다([제44조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)). 일반적인 이전 수단은 적정성 결정, 이전 영향 평가를 동반한 표준계약조항(SCC), 구속력 있는 기업 규칙입니다. 미국에 대해서는 유럽연합 집행위원회가 2023년 7월 10일 EU-US 데이터 프라이버시 프레임워크(DPF)에 대한 적정성 결정을 채택했으며, 인증된 미국 기업으로의 이전은 이에 근거할 수 있습니다([유럽연합 집행위원회](https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en)). EU 일반법원은 2025년 9월 3일 이 결정에 대한 취소 소송을 기각했고(사건 T-553/23), 신청인은 2025년 10월 31일 상소했습니다(사건 C-703/25 P). 한 로펌의 업데이트는 그동안 제5장을 계속 적용하라고 조언합니다([Baker McKenzie](https://connectontech.bakermckenzie.com/eu-us-data-privacy-framework-still-business-as-usual/)).',
             '적정성 결정이 적용되지 않는 EU/EEA 밖의 제공업체에는 별도의 이전 수단과 목적지 국가 법률에 대한 평가가 필요하며, 이는 EU 사법재판소의 Schrems II 판결(사건 C-311/18)에 따른 것입니다. 개인정보 보호 당국은 AI 서비스에도 직접 대응해 왔으며, 예를 들어 이탈리아 Garante는 2023년 ChatGPT를 일시 제한했습니다([Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9827382)). 유럽 개인정보 보호 이사회는 2024년 12월 18일 AI 모델의 개인정보 보호 측면에 관한 의견 28/2024를 채택했습니다([EDPB](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)). 클라우드 제공업체별 계약, 이전 평가, 검토는 실제 컴플라이언스 비용이지만, 중립적인 기준이 없어 이 페이지는 금액을 제시하지 않습니다.',
-            'EU/EEA 내에서 직접 통제하는 하드웨어로 모델을 실행하면 프롬프트가 자체 환경에 머무르므로, AI 계층 때문에 제44조의 이전 규칙이 적용되지는 않습니다. 그러나 처리 자체에는 GDPR이 계속 적용되며, 적법 근거, 데이터 최소화, 보안, [제30조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) 처리 활동 기록이 필요합니다. 로컬 배포는 이전 분석을 단순하게 하지만 GDPR 의무를 없애지는 않습니다.',
+            'EU/EEA 내에서 직접 통제하는 하드웨어로 모델을 실행하면 프롬프트가 자체 환경에 머무르므로, AI 계층 때문에 제44조의 이전 규칙이 적용되지는 않습니다. 그러나 처리 자체에는 GDPR이 계속 적용되며, 적법 근거, 데이터 최소화, 보안, [제30조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) 처리 활동 기록이 필요합니다. 로컬 배포는 이전 분석을 단순하게 하지만 GDPR 의무를 없애지는 않습니다. 이 페이지는 일반적인 개요이며 법률 자문이 아닙니다. 본인의 상황에 대해서는 자격 있는 변호사 또는 개인정보 보호 책임자와 상담하십시오.',
           ],
         },
         aiAct2026: {
