@@ -6,6 +6,9 @@
 // Links are internal only: same tab. Clicking collapses Ask Hans to the logo (the chat is kept) and navigates.
 // `external` / `affiliate` on AskHansLink are reserved in categories.json and not rendered yet.
 //
+// The 2-minute promo no longer replaces the topic picture (2026-11-20): the picture (and its price-comparison link)
+// stays, the promo card is shown beneath it.
+//
 // Topic picture as a clickable link (v1, 2026-11-19): when a category carries `pictureLink`, the picture itself
 // becomes an external, non-affiliate price-comparison link (new tab, window stays open). See categories.ts.
 // The destination is resolved per visitor language via pictureLinkUrl() (2026-11-19) — never one fixed domain
@@ -144,7 +147,7 @@ export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedCli
   if (variant === 'strip') {
     return (
       <aside aria-label={`${tx.panelLabelPrefix}: ${label}`} className="flex flex-shrink-0 items-stretch gap-2 overflow-x-auto border-t border-border bg-muted/40 px-3 py-2">
-        {promo ? (
+        {promo && (
           <div className="flex flex-shrink-0 items-center gap-2 rounded-lg border border-primary/40 bg-white p-1.5">
             <img src={promoImage(lang)} alt={tx.promo.imageAlt} width={168} height={56} className="h-14 w-auto flex-shrink-0 rounded-md" />
             <div>
@@ -155,7 +158,8 @@ export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedCli
               <AskIcon name="X" className="h-3.5 w-3.5" />
             </button>
           </div>
-        ) : cat.pictureLink ? (
+        )}
+        {cat.pictureLink ? (
           <PictureThumbLink cat={cat} label={label} onPictureClick={onPictureClick} />
         ) : (
           <img src={cat.image} alt={cat.alt} width={56} height={56} className="h-14 w-14 flex-shrink-0 rounded-md object-cover" />
@@ -177,13 +181,13 @@ export function MarketingPanel({ categoryKey, related, onLinkClick, onRelatedCli
       </div>
       {/* Top third: topic picture, full width. Clickable (cursor, chip, shine) only when the category carries pictureLink. */}
       <div className="h-[22%] max-h-28 min-h-[64px] flex-shrink-0 overflow-hidden rounded-lg" style={{ backgroundColor: 'hsl(var(--hero-from))' }}>
-        {!promo && cat.pictureLink ? (
+        {cat.pictureLink ? (
           <PictureLink cat={cat} label={label} onPictureClick={onPictureClick} />
         ) : (
-          <img src={promo ? promoImage(lang) : cat.image} alt={promo ? tx.promo.imageAlt : cat.alt} width={900} height={300} className="h-full w-full select-none object-contain" draggable={false} />
+          <img src={cat.image} alt={cat.alt} width={900} height={300} className="h-full w-full select-none object-contain" draggable={false} />
         )}
       </div>
-      {!promo && cat.pictureLink && <p className="text-[10px] leading-snug text-muted-foreground">{tx.panel.pictureCaption}</p>}
+      {cat.pictureLink && <p className="text-[10px] leading-snug text-muted-foreground">{tx.panel.pictureCaption}</p>}
       {promo && onPromoClose && <PromoCard onClose={onPromoClose} />}
       {/* Rest: links that fit the conversation. */}
       <nav aria-label={hasRelated ? tx.panel.relatedHeading : tx.panelLinksHeading} className="flex min-h-0 flex-1 flex-col gap-1.5 overflow-y-auto">
