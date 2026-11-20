@@ -8,11 +8,21 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
-import { compareGroupTotal, compareSegmentCounts, compareToolsByLicense } from '@/lib/power-local-llm/compare-data'
+import { buildCategoryCompareData, compareGroupTotal, compareSegmentCounts, compareToolsByLicense } from '@/lib/power-local-llm/compare-data'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 
 // Live per-segment tool counts: the number of rows each comparison table tab actually renders, so these bullets can never drift from the table.
 const SEG = compareSegmentCounts('images-video')
+// Tools of one comparison tab (same rows as the table) whose record documents an attribute (true), as a localized "A, B and C" list that links each review.
+// The "What differs" lists use this so they always equal the table's "Yes" cells; pass links = false for a plain list of names.
+const WITH = (segment: string, attr: string, lang: string, links = true): string => {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const rows = buildCategoryCompareData('images-video', 'en').segments.find((s) => s.key === segment)?.rows ?? []
+  const parts = rows
+    .filter((r) => bySlug.get(r.slug)?.compare?.[attr] === true)
+    .map((r) => (links && r.reviewPath ? `[${r.name}](${lang === 'en' ? '' : `/${lang}`}${r.reviewPath})` : r.name))
+  return new Intl.ListFormat(lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en-GB' : lang, { style: 'long', type: 'conjunction' }).format(parts)
+}
 // Every image-and-video-generation tool (same rows as the table tab) under one license, as a localized linked list, so the license line can never omit a tool.
 const GEN = (license: string, lang: string) => compareToolsByLicense('images-video', 'image-video-generation', [license], lang)
 
@@ -56,7 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      `**The ${IV_TOTAL} local image tools in the PromptQuorum directory split into two jobs that should be compared separately: image and video generation (${IV_GENERATION} tools) and vision and OCR (${IV_VISION_OCR}).** Within generation, ComfyUI, InvokeAI and StableSwarmUI document node-based workflows; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI and ToolNeuron document extension systems; and AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge and ToolNeuron document a local API. For vision, LLaVA documents reading text in images and Idefics documents multiple images per prompt. Use the comparison table below, and read each tool's own review before you install it.`,
+      `**The ${IV_TOTAL} local image tools in the PromptQuorum directory split into two jobs that should be compared separately: image and video generation (${IV_GENERATION} tools) and vision and OCR (${IV_VISION_OCR}).** Within generation, ${WITH('image-video-generation', 'nodeWorkflow', 'en', false)} document node-based workflows; ${WITH('image-video-generation', 'extensions', 'en', false)} document extension systems; and ${WITH('image-video-generation', 'apiServer', 'en', false)} document a local API. For vision, LLaVA documents reading text in images and Idefics documents multiple images per prompt. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local image tool should I use?',
@@ -120,21 +130,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'generation-differences',
         title: 'Image and Video Generation: What Differs',
         items: [
-          '**Workflow style.** [ComfyUI](/power-local-llm/comfyui-review), [Invoke AI](/power-local-llm/invokeai-review) and [StableSwarmUI](/power-local-llm/stableswarmui-review) document node-based or graph workflows. The other tools\' documentation does not describe a node editor.',
-          '**Extensions and plugins.** [AUTOMATIC1111](/power-local-llm/automatic1111-review), ComfyUI, [Stable Diffusion WebUI Forge](/power-local-llm/stable-diffusion-forge-review), StableSwarmUI and [ToolNeuron](/power-local-llm/toolneuron-review) document an extension or plugin system.',
-          '**Video.** ComfyUI, StableSwarmUI, [DiffusionBee](/power-local-llm/diffusionbee-review), [Draw Things](/power-local-llm/draw-things-review), [Locally Uncensored](/power-local-llm/locally-uncensored-review) and [AnimateDiff](/power-local-llm/animatediff-video-generation-guide) document video or animation generation.',
-          '**Inpainting.** AUTOMATIC1111, ComfyUI, DiffusionBee, [Fooocus](/power-local-llm/fooocus-review) and Invoke AI document inpainting.',
-          '**Low-VRAM operation.** AUTOMATIC1111, Fooocus and [ControlNet](/power-local-llm/controlnet-review) document a low-VRAM mode or a stated small-VRAM requirement; for the others, check the review, since the requirement depends on the model you load.',
-          '**Local API.** AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge and ToolNeuron document an API other apps can call.',
+          `**Workflow style.** ${WITH('image-video-generation', 'nodeWorkflow', 'en')} document node-based or graph workflows. The other tools' documentation does not describe a node editor.`,
+          `**Extensions and plugins.** ${WITH('image-video-generation', 'extensions', 'en')} document an extension or plugin system.`,
+          `**Video.** ${WITH('image-video-generation', 'videoGeneration', 'en')} document video or animation generation.`,
+          `**Inpainting.** ${WITH('image-video-generation', 'inpainting', 'en')} document inpainting.`,
+          `**Low-VRAM operation.** ${WITH('image-video-generation', 'lowVram', 'en')} document a low-VRAM mode or a stated small-VRAM requirement; for the others, check the review, since the requirement depends on the model you load.`,
+          `**Local API.** ${WITH('image-video-generation', 'apiServer', 'en')} document an API other apps can call.`,
           `**License and price.** ${GEN('AGPL-3.0','en')} are AGPL-3.0; ${GEN('GPL-3.0','en')} are GPL-3.0; ${GEN('Apache-2.0','en')} are Apache-2.0; ${GEN('MIT','en')} are MIT; [Stable Diffusion](/power-local-llm/stable-diffusion-review) uses an OpenRAIL license. Draw Things is a closed-source app, Locally Uncensored is free and open source with an optional paid cloud add-on, and Invoke AI is freemium. Copyleft licenses attach conditions to distributing modified versions — see [AI Tool Licenses Explained](/power-local-llm/ai-tool-licenses-explained).`,
-          '**3D generation.** [Modly](/power-local-llm/modly-review) generates 3D meshes from an image or a text prompt with open-source models that run on your own GPU, and exports GLB, OBJ, STL and PLY. Its docs say an NVIDIA GPU is required. At the time of writing it is the only 3D generation tool in the directory, so it has no comparison segment; PromptQuorum has not tested it.',
+          '**3D generation.** [Modly](/power-local-llm/modly-review) generates 3D meshes from an image or a text prompt with models that run on your own GPU, and exports GLB, OBJ, STL and PLY. Its docs say an NVIDIA GPU is required. At the time of writing it is the only 3D generation tool in the directory, so it has no comparison segment; PromptQuorum has not tested it.',
         ],
       },
       visionDifferences: {
         id: 'vision-differences',
         title: 'Vision and OCR: What Differs',
         items: [
-          '**Reading text in images.** [LLaVA](/power-local-llm/llava-review) and [Ollama vision models](/power-local-llm/ollama-vision-models-review) document reading or recognizing text in images.',
+          `**Reading text in images.** ${WITH('vision-ocr', 'ocr', 'en')} document reading or recognizing text in images.`,
           '**Multiple images per prompt.** [Idefics](/power-local-llm/idefics-review) documents accepting several images in one prompt.',
           '**Local API.** Ollama vision models document a local API; Idefics\' documented API is hosted rather than local, so it is not counted.',
           '**License.** LLaVA and Idefics are Apache-2.0; Ollama vision models are a set of models whose licenses vary, so check each model\'s own license.',
@@ -267,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      `**Die ${IV_TOTAL} lokalen Bild-Tools im PromptQuorum-Verzeichnis teilen sich in zwei Aufgaben, die getrennt verglichen werden sollten: Bild- und Videogenerierung (${IV_GENERATION} Tools) sowie Vision und OCR (${IV_VISION_OCR}).** Innerhalb der Generierung dokumentieren ComfyUI, InvokeAI und StableSwarmUI knotenbasierte Workflows; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI und ToolNeuron dokumentieren Erweiterungssysteme; und AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge und ToolNeuron dokumentieren eine lokale API. Bei Vision dokumentiert LLaVA das Lesen von Text in Bildern und Idefics mehrere Bilder pro Prompt. Nutzen Sie die Vergleichstabelle unten und lesen Sie vor der Installation den jeweiligen Test des Tools.`,
+      `**Die ${IV_TOTAL} lokalen Bild-Tools im PromptQuorum-Verzeichnis teilen sich in zwei Aufgaben, die getrennt verglichen werden sollten: Bild- und Videogenerierung (${IV_GENERATION} Tools) sowie Vision und OCR (${IV_VISION_OCR}).** Innerhalb der Generierung dokumentieren ${WITH('image-video-generation', 'nodeWorkflow', 'de', false)} knotenbasierte Workflows; ${WITH('image-video-generation', 'extensions', 'de', false)} dokumentieren Erweiterungssysteme; und ${WITH('image-video-generation', 'apiServer', 'de', false)} dokumentieren eine lokale API. Bei Vision dokumentiert LLaVA das Lesen von Text in Bildern und Idefics mehrere Bilder pro Prompt. Nutzen Sie die Vergleichstabelle unten und lesen Sie vor der Installation den jeweiligen Test des Tools.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale Bild-Tool sollte ich verwenden?',
@@ -331,21 +341,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'generation-differences',
         title: 'Bild- und Videogenerierung: Was sich unterscheidet',
         items: [
-          '**Workflow-Stil.** [ComfyUI](/de/power-local-llm/comfyui-review), [Invoke AI](/de/power-local-llm/invokeai-review) und [StableSwarmUI](/de/power-local-llm/stableswarmui-review) dokumentieren knoten- oder graphbasierte Workflows. Die Dokumentation der übrigen Tools beschreibt keinen Node-Editor.',
-          '**Erweiterungen und Plugins.** [AUTOMATIC1111](/de/power-local-llm/automatic1111-review), ComfyUI, [Stable Diffusion WebUI Forge](/de/power-local-llm/stable-diffusion-forge-review), StableSwarmUI und [ToolNeuron](/de/power-local-llm/toolneuron-review) dokumentieren ein Erweiterungs- oder Plugin-System.',
-          '**Video.** ComfyUI, StableSwarmUI, [DiffusionBee](/de/power-local-llm/diffusionbee-review), [Draw Things](/de/power-local-llm/draw-things-review), [Locally Uncensored](/de/power-local-llm/locally-uncensored-review) und [AnimateDiff](/de/power-local-llm/animatediff-video-generation-guide) dokumentieren die Erzeugung von Video oder Animation.',
-          '**Inpainting.** AUTOMATIC1111, ComfyUI, DiffusionBee, [Fooocus](/de/power-local-llm/fooocus-review) und Invoke AI dokumentieren Inpainting.',
-          '**Betrieb mit wenig VRAM.** AUTOMATIC1111, Fooocus und [ControlNet](/de/power-local-llm/controlnet-review) dokumentieren einen Low-VRAM-Modus oder eine angegebene geringe VRAM-Anforderung; bei den übrigen im Test nachlesen, da die Anforderung vom geladenen Modell abhängt.',
-          '**Lokale API.** AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge und ToolNeuron dokumentieren eine API, die andere Apps aufrufen können.',
+          `**Workflow-Stil.** ${WITH('image-video-generation', 'nodeWorkflow', 'de')} dokumentieren knoten- oder graphbasierte Workflows. Die Dokumentation der übrigen Tools beschreibt keinen Node-Editor.`,
+          `**Erweiterungen und Plugins.** ${WITH('image-video-generation', 'extensions', 'de')} dokumentieren ein Erweiterungs- oder Plugin-System.`,
+          `**Video.** ${WITH('image-video-generation', 'videoGeneration', 'de')} dokumentieren die Erzeugung von Video oder Animation.`,
+          `**Inpainting.** ${WITH('image-video-generation', 'inpainting', 'de')} dokumentieren Inpainting.`,
+          `**Betrieb mit wenig VRAM.** ${WITH('image-video-generation', 'lowVram', 'de')} dokumentieren einen Low-VRAM-Modus oder eine angegebene geringe VRAM-Anforderung; bei den übrigen im Test nachlesen, da die Anforderung vom geladenen Modell abhängt.`,
+          `**Lokale API.** ${WITH('image-video-generation', 'apiServer', 'de')} dokumentieren eine API, die andere Apps aufrufen können.`,
           `**Lizenz und Preis.** ${GEN('AGPL-3.0','de')} stehen unter AGPL-3.0; ${GEN('GPL-3.0','de')} unter GPL-3.0; ${GEN('Apache-2.0','de')} unter Apache-2.0; ${GEN('MIT','de')} unter MIT; [Stable Diffusion](/de/power-local-llm/stable-diffusion-review) verwendet eine OpenRAIL-Lizenz. Draw Things ist eine Closed-Source-App, Locally Uncensored ist kostenlos und quelloffen mit einer optionalen kostenpflichtigen Cloud-Erweiterung, und Invoke AI ist Freemium. Copyleft-Lizenzen knüpfen Bedingungen an die Weitergabe veränderter Versionen — siehe [KI-Tool-Lizenzen erklärt](/de/power-local-llm/ai-tool-licenses-explained).`,
-          '**3D-Generierung.** [Modly](/de/power-local-llm/modly-review) erzeugt 3D-Meshes aus einem Bild oder Text-Prompt mit Open-Source-Modellen, die auf Ihrer eigenen GPU laufen, und exportiert GLB, OBJ, STL und PLY. Laut Dokumentation ist eine NVIDIA-GPU erforderlich. Zum Zeitpunkt der Erstellung ist es das einzige 3D-Generierungswerkzeug im Verzeichnis und hat daher kein Vergleichssegment; PromptQuorum hat es nicht getestet.',
+          '**3D-Generierung.** [Modly](/de/power-local-llm/modly-review) erzeugt 3D-Meshes aus einem Bild oder Text-Prompt mit Modellen, die auf Ihrer eigenen GPU laufen, und exportiert GLB, OBJ, STL und PLY. Laut Dokumentation ist eine NVIDIA-GPU erforderlich. Zum Zeitpunkt der Erstellung ist es das einzige 3D-Generierungswerkzeug im Verzeichnis und hat daher kein Vergleichssegment; PromptQuorum hat es nicht getestet.',
         ],
       },
       visionDifferences: {
         id: 'vision-differences',
         title: 'Vision und OCR: Was sich unterscheidet',
         items: [
-          '**Text in Bildern lesen.** [LLaVA](/de/power-local-llm/llava-review) und [Ollama-Vision-Modelle](/de/power-local-llm/ollama-vision-models-review) dokumentieren das Lesen oder Erkennen von Text in Bildern.',
+          `**Text in Bildern lesen.** ${WITH('vision-ocr', 'ocr', 'de')} dokumentieren das Lesen oder Erkennen von Text in Bildern.`,
           '**Mehrere Bilder pro Prompt.** [Idefics](/de/power-local-llm/idefics-review) dokumentiert die Annahme mehrerer Bilder in einem Prompt.',
           '**Lokale API.** Ollama-Vision-Modelle dokumentieren eine lokale API; die dokumentierte API von Idefics ist gehostet statt lokal und wird daher nicht mitgezählt.',
           '**Lizenz.** LLaVA und Idefics stehen unter Apache-2.0; Ollama-Vision-Modelle sind eine Sammlung von Modellen mit unterschiedlichen Lizenzen, prüfen Sie also die Lizenz des jeweiligen Modells.',
@@ -478,7 +488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      `**Les ${IV_TOTAL} outils d'image locaux du répertoire PromptQuorum se répartissent en deux missions qu'il faut comparer séparément : la génération d'images et de vidéos (${IV_GENERATION} outils) et la vision et l'OCR (${IV_VISION_OCR}).** Côté génération, ComfyUI, InvokeAI et StableSwarmUI documentent des workflows par nœuds ; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI et ToolNeuron documentent un système d'extensions ; et AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge et ToolNeuron documentent une API locale. Côté vision, LLaVA documente la lecture de texte dans les images et Idefics documente plusieurs images par prompt. Utilisez le tableau comparatif ci-dessous, et lisez l'avis de chaque outil avant de l'installer.`,
+      `**Les ${IV_TOTAL} outils d'image locaux du répertoire PromptQuorum se répartissent en deux missions qu'il faut comparer séparément : la génération d'images et de vidéos (${IV_GENERATION} outils) et la vision et l'OCR (${IV_VISION_OCR}).** Côté génération, ${WITH('image-video-generation', 'nodeWorkflow', 'fr', false)} documentent des workflows par nœuds ; ${WITH('image-video-generation', 'extensions', 'fr', false)} documentent un système d'extensions ; et ${WITH('image-video-generation', 'apiServer', 'fr', false)} documentent une API locale. Côté vision, LLaVA documente la lecture de texte dans les images et Idefics documente plusieurs images par prompt. Utilisez le tableau comparatif ci-dessous, et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil d\'image local choisir ?',
@@ -542,21 +552,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'generation-differences',
         title: 'Génération d\'images et de vidéos : ce qui diffère',
         items: [
-          '**Style de workflow.** [ComfyUI](/fr/power-local-llm/comfyui-review), [Invoke AI](/fr/power-local-llm/invokeai-review) et [StableSwarmUI](/fr/power-local-llm/stableswarmui-review) documentent des workflows par nœuds ou par graphe. La documentation des autres outils ne décrit pas d\'éditeur de nœuds.',
-          '**Extensions et plugins.** [AUTOMATIC1111](/fr/power-local-llm/automatic1111-review), ComfyUI, [Stable Diffusion WebUI Forge](/fr/power-local-llm/stable-diffusion-forge-review), StableSwarmUI et [ToolNeuron](/fr/power-local-llm/toolneuron-review) documentent un système d\'extensions ou de plugins.',
-          '**Vidéo.** ComfyUI, StableSwarmUI, [DiffusionBee](/fr/power-local-llm/diffusionbee-review), [Draw Things](/fr/power-local-llm/draw-things-review), [Locally Uncensored](/fr/power-local-llm/locally-uncensored-review) et [AnimateDiff](/fr/power-local-llm/animatediff-video-generation-guide) documentent la génération de vidéos ou d\'animations.',
-          '**Inpainting.** AUTOMATIC1111, ComfyUI, DiffusionBee, [Fooocus](/fr/power-local-llm/fooocus-review) et Invoke AI documentent l\'inpainting.',
-          '**Fonctionnement avec peu de VRAM.** AUTOMATIC1111, Fooocus et [ControlNet](/fr/power-local-llm/controlnet-review) documentent un mode faible VRAM ou une exigence de VRAM réduite ; pour les autres, consultez l\'avis, car l\'exigence dépend du modèle que vous chargez.',
-          '**API locale.** AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge et ToolNeuron documentent une API que d\'autres applications peuvent appeler.',
+          `**Style de workflow.** ${WITH('image-video-generation', 'nodeWorkflow', 'fr')} documentent des workflows par nœuds ou par graphe. La documentation des autres outils ne décrit pas d'éditeur de nœuds.`,
+          `**Extensions et plugins.** ${WITH('image-video-generation', 'extensions', 'fr')} documentent un système d'extensions ou de plugins.`,
+          `**Vidéo.** ${WITH('image-video-generation', 'videoGeneration', 'fr')} documentent la génération de vidéos ou d'animations.`,
+          `**Inpainting.** ${WITH('image-video-generation', 'inpainting', 'fr')} documentent l'inpainting.`,
+          `**Fonctionnement avec peu de VRAM.** ${WITH('image-video-generation', 'lowVram', 'fr')} documentent un mode faible VRAM ou une exigence de VRAM réduite ; pour les autres, consultez l'avis, car l'exigence dépend du modèle que vous chargez.`,
+          `**API locale.** ${WITH('image-video-generation', 'apiServer', 'fr')} documentent une API que d'autres applications peuvent appeler.`,
           `**Licence et prix.** ${GEN('AGPL-3.0','fr')} sont sous AGPL-3.0 ; ${GEN('GPL-3.0','fr')} sous GPL-3.0 ; ${GEN('Apache-2.0','fr')} sous Apache-2.0 ; ${GEN('MIT','fr')} sous MIT ; [Stable Diffusion](/fr/power-local-llm/stable-diffusion-review) utilise une licence OpenRAIL. Draw Things est une application à code source fermé, Locally Uncensored est gratuite et open source avec une extension cloud payante optionnelle, et Invoke AI est freemium. Les licences copyleft assortissent de conditions la distribution de versions modifiées — voir [Les licences des outils d'IA expliquées](/fr/power-local-llm/ai-tool-licenses-explained).`,
-          '**Génération 3D.** [Modly](/fr/power-local-llm/modly-review) génère des maillages 3D à partir d\'une image ou d\'un prompt texte avec des modèles open source qui s\'exécutent sur votre propre GPU, et exporte en GLB, OBJ, STL et PLY. Sa documentation indique qu\'un GPU NVIDIA est requis. Au moment de la rédaction, c\'est le seul outil de génération 3D de l\'annuaire ; il n\'a donc pas de segment de comparaison, et PromptQuorum ne l\'a pas testé.',
+          '**Génération 3D.** [Modly](/fr/power-local-llm/modly-review) génère des maillages 3D à partir d\'une image ou d\'un prompt texte avec des modèles qui s\'exécutent sur votre propre GPU, et exporte en GLB, OBJ, STL et PLY. Sa documentation indique qu\'un GPU NVIDIA est requis. Au moment de la rédaction, c\'est le seul outil de génération 3D de l\'annuaire ; il n\'a donc pas de segment de comparaison, et PromptQuorum ne l\'a pas testé.',
         ],
       },
       visionDifferences: {
         id: 'vision-differences',
         title: 'Vision et OCR : ce qui diffère',
         items: [
-          '**Lecture de texte dans les images.** [LLaVA](/fr/power-local-llm/llava-review) et [Ollama vision models](/fr/power-local-llm/ollama-vision-models-review) documentent la lecture ou la reconnaissance de texte dans les images.',
+          `**Lecture de texte dans les images.** ${WITH('vision-ocr', 'ocr', 'fr')} documentent la lecture ou la reconnaissance de texte dans les images.`,
           '**Plusieurs images par prompt.** [Idefics](/fr/power-local-llm/idefics-review) documente la prise en charge de plusieurs images dans un même prompt.',
           '**API locale.** Ollama vision models documentent une API locale ; l\'API documentée d\'Idefics est hébergée et non locale, elle n\'est donc pas comptée.',
           '**Licence.** LLaVA et Idefics sont sous Apache-2.0 ; Ollama vision models sont un ensemble de modèles aux licences variables : vérifiez donc la licence propre à chaque modèle.',
@@ -689,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      `**Las ${IV_TOTAL} herramientas locales de imagen del directorio de PromptQuorum se dividen en dos trabajos que conviene comparar por separado: generación de imagen y vídeo (${IV_GENERATION} herramientas) y visión y OCR (${IV_VISION_OCR}).** Dentro de la generación, ComfyUI, InvokeAI y StableSwarmUI documentan flujos de trabajo basados en nodos; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI y ToolNeuron documentan sistemas de extensiones; y AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge y ToolNeuron documentan una API local. En visión, LLaVA documenta la lectura de texto en imágenes e Idefics documenta varias imágenes por prompt. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
+      `**Las ${IV_TOTAL} herramientas locales de imagen del directorio de PromptQuorum se dividen en dos trabajos que conviene comparar por separado: generación de imagen y vídeo (${IV_GENERATION} herramientas) y visión y OCR (${IV_VISION_OCR}).** Dentro de la generación, ${WITH('image-video-generation', 'nodeWorkflow', 'es', false)} documentan flujos de trabajo basados en nodos; ${WITH('image-video-generation', 'extensions', 'es', false)} documentan sistemas de extensiones; y ${WITH('image-video-generation', 'apiServer', 'es', false)} documentan una API local. En visión, LLaVA documenta la lectura de texto en imágenes e Idefics documenta varias imágenes por prompt. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta local de imagen debería usar?',
@@ -753,21 +763,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'generation-differences',
         title: 'Generación de imagen y vídeo: qué cambia',
         items: [
-          '**Estilo de flujo de trabajo.** [ComfyUI](/es/power-local-llm/comfyui-review), [Invoke AI](/es/power-local-llm/invokeai-review) y [StableSwarmUI](/es/power-local-llm/stableswarmui-review) documentan flujos basados en nodos o grafos. La documentación de las demás herramientas no describe un editor de nodos.',
-          '**Extensiones y plugins.** [AUTOMATIC1111](/es/power-local-llm/automatic1111-review), ComfyUI, [Stable Diffusion WebUI Forge](/es/power-local-llm/stable-diffusion-forge-review), StableSwarmUI y [ToolNeuron](/es/power-local-llm/toolneuron-review) documentan un sistema de extensiones o plugins.',
-          '**Vídeo.** ComfyUI, StableSwarmUI, [DiffusionBee](/es/power-local-llm/diffusionbee-review), [Draw Things](/es/power-local-llm/draw-things-review), [Locally Uncensored](/es/power-local-llm/locally-uncensored-review) y [AnimateDiff](/es/power-local-llm/animatediff-video-generation-guide) documentan la generación de vídeo o animación.',
-          '**Inpainting.** AUTOMATIC1111, ComfyUI, DiffusionBee, [Fooocus](/es/power-local-llm/fooocus-review) e Invoke AI documentan el inpainting.',
-          '**Funcionamiento con poca VRAM.** AUTOMATIC1111, Fooocus y [ControlNet](/es/power-local-llm/controlnet-review) documentan un modo de poca VRAM o un requisito declarado de VRAM reducida; para las demás, consulta el análisis, ya que el requisito depende del modelo que cargues.',
-          '**API local.** AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge y ToolNeuron documentan una API a la que pueden llamar otras apps.',
+          `**Estilo de flujo de trabajo.** ${WITH('image-video-generation', 'nodeWorkflow', 'es')} documentan flujos basados en nodos o grafos. La documentación de las demás herramientas no describe un editor de nodos.`,
+          `**Extensiones y plugins.** ${WITH('image-video-generation', 'extensions', 'es')} documentan un sistema de extensiones o plugins.`,
+          `**Vídeo.** ${WITH('image-video-generation', 'videoGeneration', 'es')} documentan la generación de vídeo o animación.`,
+          `**Inpainting.** ${WITH('image-video-generation', 'inpainting', 'es')} documentan el inpainting.`,
+          `**Funcionamiento con poca VRAM.** ${WITH('image-video-generation', 'lowVram', 'es')} documentan un modo de poca VRAM o un requisito declarado de VRAM reducida; para las demás, consulta el análisis, ya que el requisito depende del modelo que cargues.`,
+          `**API local.** ${WITH('image-video-generation', 'apiServer', 'es')} documentan una API a la que pueden llamar otras apps.`,
           `**Licencia y precio.** ${GEN('AGPL-3.0','es')} son AGPL-3.0; ${GEN('GPL-3.0','es')} son GPL-3.0; ${GEN('Apache-2.0','es')} son Apache-2.0; ${GEN('MIT','es')} son MIT; [Stable Diffusion](/es/power-local-llm/stable-diffusion-review) usa una licencia OpenRAIL. Draw Things es una app de código cerrado, Locally Uncensored es gratuita y de código abierto con una extensión de nube de pago opcional, e Invoke AI es freemium. Las licencias copyleft imponen condiciones al distribuir versiones modificadas — consulta [Licencias de herramientas de IA explicadas](/es/power-local-llm/ai-tool-licenses-explained).`,
-          '**Generación 3D.** [Modly](/es/power-local-llm/modly-review) genera mallas 3D a partir de una imagen o un prompt de texto con modelos de código abierto que se ejecutan en tu propia GPU, y exporta GLB, OBJ, STL y PLY. Su documentación indica que se necesita una GPU NVIDIA. En el momento de escribir esto es la única herramienta de generación 3D del directorio, por lo que no tiene segmento de comparación; PromptQuorum no la ha probado.',
+          '**Generación 3D.** [Modly](/es/power-local-llm/modly-review) genera mallas 3D a partir de una imagen o un prompt de texto con modelos que se ejecutan en tu propia GPU, y exporta GLB, OBJ, STL y PLY. Su documentación indica que se necesita una GPU NVIDIA. En el momento de escribir esto es la única herramienta de generación 3D del directorio, por lo que no tiene segmento de comparación; PromptQuorum no la ha probado.',
         ],
       },
       visionDifferences: {
         id: 'vision-differences',
         title: 'Visión y OCR: qué cambia',
         items: [
-          '**Lectura de texto en imágenes.** [LLaVA](/es/power-local-llm/llava-review) y [los modelos de visión de Ollama](/es/power-local-llm/ollama-vision-models-review) documentan la lectura o el reconocimiento de texto en imágenes.',
+          `**Lectura de texto en imágenes.** ${WITH('vision-ocr', 'ocr', 'es')} documentan la lectura o el reconocimiento de texto en imágenes.`,
           '**Varias imágenes por prompt.** [Idefics](/es/power-local-llm/idefics-review) documenta que acepta varias imágenes en un mismo prompt.',
           '**API local.** Los modelos de visión de Ollama documentan una API local; la API documentada de Idefics está alojada y no es local, por lo que no se cuenta.',
           '**Licencia.** LLaVA e Idefics son Apache-2.0; los modelos de visión de Ollama son un conjunto de modelos con licencias distintas, así que consulta la licencia de cada modelo.',
@@ -900,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      `**PromptQuorumディレクトリにある${IV_TOTAL}のローカル画像ツールは、別々に比較すべき2つの役割に分かれます。画像・動画生成(${IV_GENERATION}ツール)と、ビジョン・OCR(${IV_VISION_OCR}ツール)です。** 生成系では、ComfyUI、InvokeAI、StableSwarmUIがノードベースのワークフローを、AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge、StableSwarmUI、ToolNeuronが拡張機能の仕組みを、AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge、ToolNeuronがローカルAPIをそれぞれドキュメントに記載しています。ビジョン系では、LLaVAが画像内のテキスト読み取りを、Ideficsが1回のプロンプトで複数画像を扱えることを記載しています。下の比較表を使い、インストール前に各ツールのレビューを読んでください。`,
+      `**PromptQuorumディレクトリにある${IV_TOTAL}のローカル画像ツールは、別々に比較すべき2つの役割に分かれます。画像・動画生成(${IV_GENERATION}ツール)と、ビジョン・OCR(${IV_VISION_OCR}ツール)です。** 生成系では、${WITH('image-video-generation', 'nodeWorkflow', 'ja', false)}がノードベースのワークフローを、${WITH('image-video-generation', 'extensions', 'ja', false)}が拡張機能の仕組みを、${WITH('image-video-generation', 'apiServer', 'ja', false)}がローカルAPIをそれぞれドキュメントに記載しています。ビジョン系では、LLaVAが画像内のテキスト読み取りを、Ideficsが1回のプロンプトで複数画像を扱えることを記載しています。下の比較表を使い、インストール前に各ツールのレビューを読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカル画像ツールを使えばよいか',
@@ -964,21 +974,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'generation-differences',
         title: '画像・動画生成:違いのポイント',
         items: [
-          '**ワークフローの形式。** [ComfyUI](/ja/power-local-llm/comfyui-review)、[Invoke AI](/ja/power-local-llm/invokeai-review)、[StableSwarmUI](/ja/power-local-llm/stableswarmui-review)は、ノードベースまたはグラフ形式のワークフローをドキュメントに記載しています。他のツールのドキュメントには、ノードエディタの記述はありません。',
-          '**拡張機能とプラグイン。** [AUTOMATIC1111](/ja/power-local-llm/automatic1111-review)、ComfyUI、[Stable Diffusion WebUI Forge](/ja/power-local-llm/stable-diffusion-forge-review)、StableSwarmUI、[ToolNeuron](/ja/power-local-llm/toolneuron-review)は、拡張機能またはプラグインの仕組みをドキュメントに記載しています。',
-          '**動画。** ComfyUI、StableSwarmUI、[DiffusionBee](/ja/power-local-llm/diffusionbee-review)、[Draw Things](/ja/power-local-llm/draw-things-review)、[Locally Uncensored](/ja/power-local-llm/locally-uncensored-review)、[AnimateDiff](/ja/power-local-llm/animatediff-video-generation-guide)は、動画またはアニメーションの生成をドキュメントに記載しています。',
-          '**インペイント。** AUTOMATIC1111、ComfyUI、DiffusionBee、[Fooocus](/ja/power-local-llm/fooocus-review)、Invoke AIは、インペイントをドキュメントに記載しています。',
-          '**低VRAM動作。** AUTOMATIC1111、Fooocus、[ControlNet](/ja/power-local-llm/controlnet-review)は、低VRAMモードまたは小さなVRAM要件の明記をドキュメントに記載しています。他のツールについては、必要な容量が読み込むモデルによって変わるため、レビューを確認してください。',
-          '**ローカルAPI。** AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge、ToolNeuronは、他のアプリから呼び出せるAPIをドキュメントに記載しています。',
+          `**ワークフローの形式。** ${WITH('image-video-generation', 'nodeWorkflow', 'ja')}は、ノードベースまたはグラフ形式のワークフローをドキュメントに記載しています。他のツールのドキュメントには、ノードエディタの記述はありません。`,
+          `**拡張機能とプラグイン。** ${WITH('image-video-generation', 'extensions', 'ja')}は、拡張機能またはプラグインの仕組みをドキュメントに記載しています。`,
+          `**動画。** ${WITH('image-video-generation', 'videoGeneration', 'ja')}は、動画またはアニメーションの生成をドキュメントに記載しています。`,
+          `**インペイント。** ${WITH('image-video-generation', 'inpainting', 'ja')}は、インペイントをドキュメントに記載しています。`,
+          `**低VRAM動作。** ${WITH('image-video-generation', 'lowVram', 'ja')}は、低VRAMモードまたは小さなVRAM要件の明記をドキュメントに記載しています。他のツールについては、必要な容量が読み込むモデルによって変わるため、レビューを確認してください。`,
+          `**ローカルAPI。** ${WITH('image-video-generation', 'apiServer', 'ja')}は、他のアプリから呼び出せるAPIをドキュメントに記載しています。`,
           `**ライセンスと価格。** ${GEN('AGPL-3.0','ja')}はAGPL-3.0、${GEN('GPL-3.0','ja')}はGPL-3.0、${GEN('Apache-2.0','ja')}はApache-2.0、${GEN('MIT','ja')}はMIT、[Stable Diffusion](/ja/power-local-llm/stable-diffusion-review)はOpenRAILライセンスです。Draw Thingsはクローズドソースのアプリ、Locally Uncensoredは無料のオープンソースアプリで有料のクラウド拡張はオプションです。Invoke AIはフリーミアムです。コピーレフト・ライセンスは、改変版を配布する際に条件を課します。詳しくは[AIツールのライセンスを解説](/ja/power-local-llm/ai-tool-licenses-explained)をご覧ください。`,
-          '**3D生成。**[Modly](/ja/power-local-llm/modly-review)は、画像またはテキストプロンプトから、ご自身のGPU上で動くオープンソースモデルで3Dメッシュを生成し、GLB、OBJ、STL、PLYで書き出します。ドキュメントではNVIDIA GPUが必須とされています。執筆時点でディレクトリ内の3D生成ツールはこれだけのため、比較セグメントはありません。PromptQuorumはテストしていません。',
+          '**3D生成。**[Modly](/ja/power-local-llm/modly-review)は、画像またはテキストプロンプトから、ご自身のGPU上で動くモデルで3Dメッシュを生成し、GLB、OBJ、STL、PLYで書き出します。ドキュメントではNVIDIA GPUが必須とされています。執筆時点でディレクトリ内の3D生成ツールはこれだけのため、比較セグメントはありません。PromptQuorumはテストしていません。',
         ],
       },
       visionDifferences: {
         id: 'vision-differences',
         title: 'ビジョン・OCR:違いのポイント',
         items: [
-          '**画像内テキストの読み取り。** [LLaVA](/ja/power-local-llm/llava-review)と[Ollamaのビジョンモデル](/ja/power-local-llm/ollama-vision-models-review)は、画像内のテキストの読み取りまたは認識をドキュメントに記載しています。',
+          `**画像内テキストの読み取り。** ${WITH('vision-ocr', 'ocr', 'ja')}は、画像内のテキストの読み取りまたは認識をドキュメントに記載しています。`,
           '**1プロンプトでの複数画像。** [Idefics](/ja/power-local-llm/idefics-review)は、1回のプロンプトで複数の画像を受け付けることをドキュメントに記載しています。',
           '**ローカルAPI。** OllamaのビジョンモデルはローカルAPIをドキュメントに記載しています。IdeficsのドキュメントにあるAPIはローカルではなくホスト型のため、対象に数えていません。',
           '**ライセンス。** LLaVAとIdeficsはApache-2.0です。Ollamaのビジョンモデルはライセンスが異なるモデルの集まりのため、各モデル自身のライセンスを確認してください。',
@@ -1111,7 +1121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      `**PromptQuorum目录中的${IV_TOTAL}款本地图像工具分为两类应分别对比的任务:图像与视频生成(${IV_GENERATION}款)以及视觉与OCR(${IV_VISION_OCR}款)。** 在生成类中,ComfyUI、InvokeAI和StableSwarmUI在文档中说明了基于节点的工作流;AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge、StableSwarmUI和ToolNeuron在文档中说明了扩展系统;AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge和ToolNeuron在文档中说明了本地API。在视觉类中,LLaVA在文档中说明了读取图像中的文字,Idefics在文档中说明了单次提示可处理多张图像。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
+      `**PromptQuorum目录中的${IV_TOTAL}款本地图像工具分为两类应分别对比的任务:图像与视频生成(${IV_GENERATION}款)以及视觉与OCR(${IV_VISION_OCR}款)。** 在生成类中,${WITH('image-video-generation', 'nodeWorkflow', 'zh', false)}在文档中说明了基于节点的工作流;${WITH('image-video-generation', 'extensions', 'zh', false)}在文档中说明了扩展系统;${WITH('image-video-generation', 'apiServer', 'zh', false)}在文档中说明了本地API。在视觉类中,LLaVA在文档中说明了读取图像中的文字,Idefics在文档中说明了单次提示可处理多张图像。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地图像工具?',
@@ -1175,21 +1185,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'generation-differences',
         title: '图像与视频生成:差异所在',
         items: [
-          '**工作流风格。** [ComfyUI](/zh/power-local-llm/comfyui-review)、[Invoke AI](/zh/power-local-llm/invokeai-review)和[StableSwarmUI](/zh/power-local-llm/stableswarmui-review)在文档中说明了基于节点或图的工作流。其他工具的文档没有描述节点编辑器。',
-          '**扩展与插件。** [AUTOMATIC1111](/zh/power-local-llm/automatic1111-review)、ComfyUI、[Stable Diffusion WebUI Forge](/zh/power-local-llm/stable-diffusion-forge-review)、StableSwarmUI和[ToolNeuron](/zh/power-local-llm/toolneuron-review)在文档中说明了扩展或插件系统。',
-          '**视频。** ComfyUI、StableSwarmUI、[DiffusionBee](/zh/power-local-llm/diffusionbee-review)、[Draw Things](/zh/power-local-llm/draw-things-review)、[Locally Uncensored](/zh/power-local-llm/locally-uncensored-review)和[AnimateDiff](/zh/power-local-llm/animatediff-video-generation-guide)在文档中说明了视频或动画生成。',
-          '**局部重绘。** AUTOMATIC1111、ComfyUI、DiffusionBee、[Fooocus](/zh/power-local-llm/fooocus-review)和Invoke AI在文档中说明了局部重绘。',
-          '**低显存运行。** AUTOMATIC1111、Fooocus和[ControlNet](/zh/power-local-llm/controlnet-review)在文档中说明了低显存模式或明确的小显存需求;其他工具请查看其评测,因为显存需求取决于你加载的模型。',
-          '**本地API。** AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge和ToolNeuron在文档中说明了可供其他应用调用的API。',
+          `**工作流风格。** ${WITH('image-video-generation', 'nodeWorkflow', 'zh')}在文档中说明了基于节点或图的工作流。其他工具的文档没有描述节点编辑器。`,
+          `**扩展与插件。** ${WITH('image-video-generation', 'extensions', 'zh')}在文档中说明了扩展或插件系统。`,
+          `**视频。** ${WITH('image-video-generation', 'videoGeneration', 'zh')}在文档中说明了视频或动画生成。`,
+          `**局部重绘。** ${WITH('image-video-generation', 'inpainting', 'zh')}在文档中说明了局部重绘。`,
+          `**低显存运行。** ${WITH('image-video-generation', 'lowVram', 'zh')}在文档中说明了低显存模式或明确的小显存需求;其他工具请查看其评测,因为显存需求取决于你加载的模型。`,
+          `**本地API。** ${WITH('image-video-generation', 'apiServer', 'zh')}在文档中说明了可供其他应用调用的API。`,
           `**许可证与价格。** ${GEN('AGPL-3.0','zh')}为AGPL-3.0;${GEN('GPL-3.0','zh')}为GPL-3.0;${GEN('Apache-2.0','zh')}为Apache-2.0;${GEN('MIT','zh')}为MIT;[Stable Diffusion](/zh/power-local-llm/stable-diffusion-review)使用OpenRAIL许可证。Draw Things是闭源应用,Locally Uncensored是免费开源应用(提供可选付费云端插件),Invoke AI为免费增值。Copyleft许可证会对分发修改后的版本附加条件——参见[AI工具许可证详解](/zh/power-local-llm/ai-tool-licenses-explained)。`,
-          '**3D 生成。** [Modly](/zh/power-local-llm/modly-review) 使用在您自己 GPU 上运行的开源模型，根据图片或文本提示词生成 3D 网格，并导出 GLB、OBJ、STL 和 PLY。其文档称需要 NVIDIA GPU。撰写本文时，它是目录中唯一的 3D 生成工具，因此没有对比分组；PromptQuorum 没有测试过它。',
+          '**3D 生成。** [Modly](/zh/power-local-llm/modly-review) 使用在您自己 GPU 上运行的模型，根据图片或文本提示词生成 3D 网格，并导出 GLB、OBJ、STL 和 PLY。其文档称需要 NVIDIA GPU。撰写本文时，它是目录中唯一的 3D 生成工具，因此没有对比分组；PromptQuorum 没有测试过它。',
         ],
       },
       visionDifferences: {
         id: 'vision-differences',
         title: '视觉与OCR:差异所在',
         items: [
-          '**读取图像中的文字。** [LLaVA](/zh/power-local-llm/llava-review)和[Ollama视觉模型](/zh/power-local-llm/ollama-vision-models-review)在文档中说明了读取或识别图像中的文字。',
+          `**读取图像中的文字。** ${WITH('vision-ocr', 'ocr', 'zh')}在文档中说明了读取或识别图像中的文字。`,
           '**单次提示多张图像。** [Idefics](/zh/power-local-llm/idefics-review)在文档中说明了可在一次提示中接受多张图像。',
           '**本地API。** Ollama视觉模型在文档中说明了本地API;Idefics文档中所述的API是托管的而非本地的,因此不计入。',
           '**许可证。** LLaVA和Idefics为Apache-2.0;Ollama视觉模型是一组许可证各不相同的模型,请查看每个模型自己的许可证。',
@@ -1322,7 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      `**As ${IV_TOTAL} ferramentas locais de imagem do diretório do PromptQuorum se dividem em dois trabalhos que devem ser comparados separadamente: geração de imagem e vídeo (${IV_GENERATION} ferramentas) e visão e OCR (${IV_VISION_OCR}).** Na geração, ComfyUI, InvokeAI e StableSwarmUI documentam fluxos de trabalho baseados em nós; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI e ToolNeuron documentam sistemas de extensões; e AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge e ToolNeuron documentam uma API local. Na visão, o LLaVA documenta a leitura de texto em imagens e o Idefics documenta várias imagens por prompt. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
+      `**As ${IV_TOTAL} ferramentas locais de imagem do diretório do PromptQuorum se dividem em dois trabalhos que devem ser comparados separadamente: geração de imagem e vídeo (${IV_GENERATION} ferramentas) e visão e OCR (${IV_VISION_OCR}).** Na geração, ${WITH('image-video-generation', 'nodeWorkflow', 'pt', false)} documentam fluxos de trabalho baseados em nós; ${WITH('image-video-generation', 'extensions', 'pt', false)} documentam sistemas de extensões; e ${WITH('image-video-generation', 'apiServer', 'pt', false)} documentam uma API local. Na visão, o LLaVA documenta a leitura de texto em imagens e o Idefics documenta várias imagens por prompt. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta local de imagem devo usar?',
@@ -1386,21 +1396,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'generation-differences',
         title: 'Geração de imagem e vídeo: o que muda',
         items: [
-          '**Estilo de fluxo de trabalho.** [ComfyUI](/pt/power-local-llm/comfyui-review), [Invoke AI](/pt/power-local-llm/invokeai-review) e [StableSwarmUI](/pt/power-local-llm/stableswarmui-review) documentam fluxos baseados em nós ou grafos. A documentação das outras ferramentas não descreve um editor de nós.',
-          '**Extensões e plugins.** [AUTOMATIC1111](/pt/power-local-llm/automatic1111-review), ComfyUI, [Stable Diffusion WebUI Forge](/pt/power-local-llm/stable-diffusion-forge-review), StableSwarmUI e [ToolNeuron](/pt/power-local-llm/toolneuron-review) documentam um sistema de extensões ou plugins.',
-          '**Vídeo.** ComfyUI, StableSwarmUI, [DiffusionBee](/pt/power-local-llm/diffusionbee-review), [Draw Things](/pt/power-local-llm/draw-things-review), [Locally Uncensored](/pt/power-local-llm/locally-uncensored-review) e [AnimateDiff](/pt/power-local-llm/animatediff-video-generation-guide) documentam geração de vídeo ou animação.',
-          '**Inpainting.** AUTOMATIC1111, ComfyUI, DiffusionBee, [Fooocus](/pt/power-local-llm/fooocus-review) e Invoke AI documentam inpainting.',
-          '**Operação com pouca VRAM.** AUTOMATIC1111, Fooocus e [ControlNet](/pt/power-local-llm/controlnet-review) documentam um modo de pouca VRAM ou um requisito declarado de VRAM pequena; para as demais, consulte a análise, pois o requisito depende do modelo que você carrega.',
-          '**API local.** AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge e ToolNeuron documentam uma API que outros apps podem chamar.',
+          `**Estilo de fluxo de trabalho.** ${WITH('image-video-generation', 'nodeWorkflow', 'pt')} documentam fluxos baseados em nós ou grafos. A documentação das outras ferramentas não descreve um editor de nós.`,
+          `**Extensões e plugins.** ${WITH('image-video-generation', 'extensions', 'pt')} documentam um sistema de extensões ou plugins.`,
+          `**Vídeo.** ${WITH('image-video-generation', 'videoGeneration', 'pt')} documentam geração de vídeo ou animação.`,
+          `**Inpainting.** ${WITH('image-video-generation', 'inpainting', 'pt')} documentam inpainting.`,
+          `**Operação com pouca VRAM.** ${WITH('image-video-generation', 'lowVram', 'pt')} documentam um modo de pouca VRAM ou um requisito declarado de VRAM pequena; para as demais, consulte a análise, pois o requisito depende do modelo que você carrega.`,
+          `**API local.** ${WITH('image-video-generation', 'apiServer', 'pt')} documentam uma API que outros apps podem chamar.`,
           `**Licença e preço.** ${GEN('AGPL-3.0','pt')} são AGPL-3.0; ${GEN('GPL-3.0','pt')} são GPL-3.0; ${GEN('Apache-2.0','pt')} são Apache-2.0; ${GEN('MIT','pt')} são MIT; o [Stable Diffusion](/pt/power-local-llm/stable-diffusion-review) usa uma licença OpenRAIL. O Draw Things é um app de código fechado, o Locally Uncensored é gratuito e de código aberto com um complemento de nuvem pago opcional, e o Invoke AI é freemium. Licenças copyleft impõem condições à distribuição de versões modificadas — veja [Licenças de ferramentas de IA explicadas](/pt/power-local-llm/ai-tool-licenses-explained).`,
-          '**Geração 3D.** [Modly](/pt/power-local-llm/modly-review) gera malhas 3D a partir de uma imagem ou de um prompt de texto com modelos de código aberto que rodam na sua própria GPU e exporta GLB, OBJ, STL e PLY. A documentação diz que uma GPU NVIDIA é necessária. No momento da redação, é a única ferramenta de geração 3D do diretório, por isso não tem segmento de comparação; a PromptQuorum não a testou.',
+          '**Geração 3D.** [Modly](/pt/power-local-llm/modly-review) gera malhas 3D a partir de uma imagem ou de um prompt de texto com modelos que rodam na sua própria GPU e exporta GLB, OBJ, STL e PLY. A documentação diz que uma GPU NVIDIA é necessária. No momento da redação, é a única ferramenta de geração 3D do diretório, por isso não tem segmento de comparação; a PromptQuorum não a testou.',
         ],
       },
       visionDifferences: {
         id: 'vision-differences',
         title: 'Visão e OCR: o que muda',
         items: [
-          '**Leitura de texto em imagens.** [LLaVA](/pt/power-local-llm/llava-review) e [modelos de visão do Ollama](/pt/power-local-llm/ollama-vision-models-review) documentam a leitura ou o reconhecimento de texto em imagens.',
+          `**Leitura de texto em imagens.** ${WITH('vision-ocr', 'ocr', 'pt')} documentam a leitura ou o reconhecimento de texto em imagens.`,
           '**Várias imagens por prompt.** O [Idefics](/pt/power-local-llm/idefics-review) documenta a aceitação de várias imagens em um único prompt.',
           '**API local.** Os modelos de visão do Ollama documentam uma API local; a API documentada do Idefics é hospedada, não local, por isso não é contada.',
           '**Licença.** LLaVA e Idefics são Apache-2.0; os modelos de visão do Ollama são um conjunto de modelos cujas licenças variam, então confira a licença de cada modelo.',
@@ -1533,7 +1543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      `**تنقسم أدوات الصور المحلية الـ${IV_TOTAL} في دليل PromptQuorum إلى مهمتين ينبغي مقارنتهما على حدة: توليد الصور والفيديو (${IV_GENERATION} أداة) والرؤية وOCR (${IV_VISION_OCR} أدوات).** ضمن التوليد، توثّق ComfyUI وInvokeAI وStableSwarmUI سير عمل قائمًا على العُقد؛ وتوثّق AUTOMATIC1111 وComfyUI وStable Diffusion WebUI Forge وStableSwarmUI وToolNeuron أنظمة إضافات؛ وتوثّق AUTOMATIC1111 وComfyUI وStable Diffusion WebUI Forge وToolNeuron واجهة API محلية. أما في الرؤية، فيوثّق LLaVA قراءة النص داخل الصور، ويوثّق Idefics قبول عدة صور في الوصف النصي الواحد. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
+      `**تنقسم أدوات الصور المحلية الـ${IV_TOTAL} في دليل PromptQuorum إلى مهمتين ينبغي مقارنتهما على حدة: توليد الصور والفيديو (${IV_GENERATION} أداة) والرؤية وOCR (${IV_VISION_OCR} ${IV_VISION_OCR > 10 ? 'أداة' : 'أدوات'}).** ضمن التوليد، توثّق ${WITH('image-video-generation', 'nodeWorkflow', 'ar', false)} سير عمل قائمًا على العُقد؛ وتوثّق ${WITH('image-video-generation', 'extensions', 'ar', false)} أنظمة إضافات؛ وتوثّق ${WITH('image-video-generation', 'apiServer', 'ar', false)} واجهة API محلية. أما في الرؤية، فيوثّق LLaVA قراءة النص داخل الصور، ويوثّق Idefics قبول عدة صور في الوصف النصي الواحد. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي أداة صور محلية ينبغي أن أستخدم؟',
@@ -1541,7 +1551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يعتمد ذلك على المهمة، لذا قارن ضمن مهمة واحدة في كل مرة. اختر بحسب القيد الأهم لك — الرخصة أو المنصة أو الطلاء الداخلي (inpainting) أو الإضافات أو محرر سير العمل بالعُقد أو واجهة API محلية أو التشغيل بذاكرة VRAM منخفضة — واستعن بالجدول أدناه المولَّد من الوثائق الرسمية لكل أداة.',
         bullets: [
           `توليد الصور والفيديو: ${SEG['image-video-generation']} أداة تُقارن من حيث الطلاء الداخلي والفيديو وسير العمل بالعُقد والإضافات ووضع VRAM المنخفض وواجهة API.`,
-          `الرؤية وOCR: ${SEG['vision-ocr']} أدوات تُقارن من حيث قراءة النص في الصور وقبول عدة صور في الوصف النصي الواحد وواجهة API محلية.`,
+          `الرؤية وOCR: ${SEG['vision-ocr']} ${SEG['vision-ocr'] > 10 ? 'أداة' : 'أدوات'} تُقارن من حيث قراءة النص في الصور وقبول عدة صور في الوصف النصي الواحد وواجهة API محلية.`,
           'الشرطة (—) تعني أن وثائق المشروع لا تذكر ذلك، وليس أن الميزة غير موجودة.',
         ],
       },
@@ -1597,21 +1607,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'generation-differences',
         title: 'توليد الصور والفيديو: ما الذي يختلف',
         items: [
-          '**أسلوب سير العمل.** توثّق [ComfyUI](/ar/power-local-llm/comfyui-review) و[Invoke AI](/ar/power-local-llm/invokeai-review) و[StableSwarmUI](/ar/power-local-llm/stableswarmui-review) سير عمل قائمًا على العُقد أو المخططات. أما وثائق بقية الأدوات فلا تصف محرر عُقد.',
-          '**الإضافات.** توثّق [AUTOMATIC1111](/ar/power-local-llm/automatic1111-review) وComfyUI و[Stable Diffusion WebUI Forge](/ar/power-local-llm/stable-diffusion-forge-review) وStableSwarmUI و[ToolNeuron](/ar/power-local-llm/toolneuron-review) نظام إضافات.',
-          '**الفيديو.** توثّق ComfyUI وStableSwarmUI و[DiffusionBee](/ar/power-local-llm/diffusionbee-review) و[Draw Things](/ar/power-local-llm/draw-things-review) و[Locally Uncensored](/ar/power-local-llm/locally-uncensored-review) و[AnimateDiff](/ar/power-local-llm/animatediff-video-generation-guide) توليد الفيديو أو الرسوم المتحركة.',
-          '**الطلاء الداخلي (inpainting).** توثّق AUTOMATIC1111 وComfyUI وDiffusionBee و[Fooocus](/ar/power-local-llm/fooocus-review) وInvoke AI الطلاء الداخلي.',
-          '**التشغيل بذاكرة VRAM منخفضة.** توثّق AUTOMATIC1111 وFooocus و[ControlNet](/ar/power-local-llm/controlnet-review) وضعًا لذاكرة VRAM منخفضة أو متطلبًا صغيرًا محددًا لها؛ أما الأدوات الأخرى فراجع مراجعتها، لأن المتطلب يعتمد على النموذج الذي تحمّله.',
-          '**واجهة API محلية.** توثّق AUTOMATIC1111 وComfyUI وStable Diffusion WebUI Forge وToolNeuron واجهة API يمكن لتطبيقات أخرى استدعاؤها.',
+          `**أسلوب سير العمل.** توثّق ${WITH('image-video-generation', 'nodeWorkflow', 'ar')} سير عمل قائمًا على العُقد أو المخططات. أما وثائق بقية الأدوات فلا تصف محرر عُقد.`,
+          `**الإضافات.** توثّق ${WITH('image-video-generation', 'extensions', 'ar')} نظام إضافات.`,
+          `**الفيديو.** توثّق ${WITH('image-video-generation', 'videoGeneration', 'ar')} توليد الفيديو أو الرسوم المتحركة.`,
+          `**الطلاء الداخلي (inpainting).** توثّق ${WITH('image-video-generation', 'inpainting', 'ar')} الطلاء الداخلي.`,
+          `**التشغيل بذاكرة VRAM منخفضة.** توثّق ${WITH('image-video-generation', 'lowVram', 'ar')} وضعًا لذاكرة VRAM منخفضة أو متطلبًا صغيرًا محددًا لها؛ أما الأدوات الأخرى فراجع مراجعتها، لأن المتطلب يعتمد على النموذج الذي تحمّله.`,
+          `**واجهة API محلية.** توثّق ${WITH('image-video-generation', 'apiServer', 'ar')} واجهة API يمكن لتطبيقات أخرى استدعاؤها.`,
           `**الرخصة والسعر.** ${GEN('AGPL-3.0','ar')} بترخيص AGPL-3.0؛ و${GEN('GPL-3.0','ar')} بترخيص GPL-3.0؛ و${GEN('Apache-2.0','ar')} بترخيص Apache-2.0؛ و${GEN('MIT','ar')} بترخيص MIT؛ ويستخدم [Stable Diffusion](/ar/power-local-llm/stable-diffusion-review) ترخيص OpenRAIL. Draw Things تطبيق مغلق المصدر، وLocally Uncensored مجاني ومفتوح المصدر مع إضافة سحابية مدفوعة اختيارية، وInvoke AI بنموذج فريميوم. تفرض تراخيص copyleft شروطًا على توزيع النسخ المعدّلة — راجع [شرح تراخيص أدوات الذكاء الاصطناعي](/ar/power-local-llm/ai-tool-licenses-explained).`,
-          '**توليد المجسمات ثلاثية الأبعاد.** [Modly](/ar/power-local-llm/modly-review) يولّد مجسمات (Mesh) ثلاثية الأبعاد من صورة أو وصف نصي بنماذج مفتوحة المصدر تعمل على بطاقتك الرسومية، ويصدّر بصيغ GLB وOBJ وSTL وPLY. تذكر وثائقه أن بطاقة NVIDIA مطلوبة. وهو وقت كتابة هذا المقال الأداة الوحيدة لتوليد المجسمات ثلاثية الأبعاد في الدليل، لذلك لا توجد له شريحة مقارنة؛ ولم تختبره PromptQuorum.',
+          '**توليد المجسمات ثلاثية الأبعاد.** [Modly](/ar/power-local-llm/modly-review) يولّد مجسمات (Mesh) ثلاثية الأبعاد من صورة أو وصف نصي بنماذج تعمل على بطاقتك الرسومية، ويصدّر بصيغ GLB وOBJ وSTL وPLY. تذكر وثائقه أن بطاقة NVIDIA مطلوبة. وهو وقت كتابة هذا المقال الأداة الوحيدة لتوليد المجسمات ثلاثية الأبعاد في الدليل، لذلك لا توجد له شريحة مقارنة؛ ولم تختبره PromptQuorum.',
         ],
       },
       visionDifferences: {
         id: 'vision-differences',
         title: 'الرؤية وOCR: ما الذي يختلف',
         items: [
-          '**قراءة النص في الصور.** يوثّق [LLaVA](/ar/power-local-llm/llava-review) و[نماذج الرؤية في Ollama](/ar/power-local-llm/ollama-vision-models-review) قراءة النص في الصور أو التعرف عليه.',
+          `**قراءة النص في الصور.** توثّق ${WITH('vision-ocr', 'ocr', 'ar')} قراءة النص في الصور أو التعرف عليه.`,
           '**عدة صور في الوصف النصي الواحد.** يوثّق [Idefics](/ar/power-local-llm/idefics-review) قبول عدة صور في وصف نصي واحد.',
           '**واجهة API محلية.** توثّق نماذج الرؤية في Ollama واجهة API محلية؛ أما واجهة API الموثّقة لدى Idefics فهي مستضافة وليست محلية، لذلك لا تُحتسب.',
           '**الرخصة.** LLaVA وIdefics بترخيص Apache-2.0؛ ونماذج الرؤية في Ollama مجموعة نماذج تتفاوت تراخيصها، لذا راجع رخصة كل نموذج على حدة.',
@@ -1744,7 +1754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      `**PromptQuorum 디렉터리의 로컬 이미지 도구 ${IV_TOTAL}개는 따로 비교해야 하는 두 가지 작업, 즉 이미지·영상 생성(${IV_GENERATION}개)과 비전·OCR(${IV_VISION_OCR}개)로 나뉩니다.** 생성 도구 중 ComfyUI, InvokeAI, StableSwarmUI는 노드 기반 워크플로를 문서화하고 있고, AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI, ToolNeuron은 확장 시스템을, AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, ToolNeuron은 로컬 API를 문서화하고 있습니다. 비전 도구 중 LLaVA는 이미지 속 텍스트 읽기를, Idefics는 프롬프트 하나에 여러 이미지 입력을 문서화하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
+      `**PromptQuorum 디렉터리의 로컬 이미지 도구 ${IV_TOTAL}개는 따로 비교해야 하는 두 가지 작업, 즉 이미지·영상 생성(${IV_GENERATION}개)과 비전·OCR(${IV_VISION_OCR}개)로 나뉩니다.** 생성 도구 중 ${WITH('image-video-generation', 'nodeWorkflow', 'ko', false)}은(는) 노드 기반 워크플로를 문서화하고 있고, ${WITH('image-video-generation', 'extensions', 'ko', false)}은(는) 확장 시스템을, ${WITH('image-video-generation', 'apiServer', 'ko', false)}은(는) 로컬 API를 문서화하고 있습니다. 비전 도구 중 LLaVA는 이미지 속 텍스트 읽기를, Idefics는 프롬프트 하나에 여러 이미지 입력을 문서화하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 이미지 도구를 써야 합니까?',
@@ -1808,21 +1818,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'generation-differences',
         title: '이미지·영상 생성: 무엇이 다른가',
         items: [
-          '**워크플로 방식.** [ComfyUI](/ko/power-local-llm/comfyui-review), [Invoke AI](/ko/power-local-llm/invokeai-review), [StableSwarmUI](/ko/power-local-llm/stableswarmui-review)는 노드 기반 또는 그래프 워크플로를 문서화하고 있습니다. 나머지 도구의 문서에는 노드 편집기가 설명되어 있지 않습니다.',
-          '**확장과 플러그인.** [AUTOMATIC1111](/ko/power-local-llm/automatic1111-review), ComfyUI, [Stable Diffusion WebUI Forge](/ko/power-local-llm/stable-diffusion-forge-review), StableSwarmUI, [ToolNeuron](/ko/power-local-llm/toolneuron-review)은 확장 또는 플러그인 시스템을 문서화하고 있습니다.',
-          '**영상.** ComfyUI, StableSwarmUI, [DiffusionBee](/ko/power-local-llm/diffusionbee-review), [Draw Things](/ko/power-local-llm/draw-things-review), [Locally Uncensored](/ko/power-local-llm/locally-uncensored-review), [AnimateDiff](/ko/power-local-llm/animatediff-video-generation-guide)는 영상 또는 애니메이션 생성을 문서화하고 있습니다.',
-          '**인페인팅.** AUTOMATIC1111, ComfyUI, DiffusionBee, [Fooocus](/ko/power-local-llm/fooocus-review), Invoke AI는 인페인팅을 문서화하고 있습니다.',
-          '**저VRAM 동작.** AUTOMATIC1111, Fooocus, [ControlNet](/ko/power-local-llm/controlnet-review)은 저VRAM 모드 또는 명시된 소용량 VRAM 요구 사항을 문서화하고 있습니다. 나머지 도구는 요구 사항이 불러오는 모델에 따라 달라지므로 리뷰를 확인하십시오.',
-          '**로컬 API.** AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, ToolNeuron은 다른 앱이 호출할 수 있는 API를 문서화하고 있습니다.',
+          `**워크플로 방식.** ${WITH('image-video-generation', 'nodeWorkflow', 'ko')}은(는) 노드 기반 또는 그래프 워크플로를 문서화하고 있습니다. 나머지 도구의 문서에는 노드 편집기가 설명되어 있지 않습니다.`,
+          `**확장과 플러그인.** ${WITH('image-video-generation', 'extensions', 'ko')}은(는) 확장 또는 플러그인 시스템을 문서화하고 있습니다.`,
+          `**영상.** ${WITH('image-video-generation', 'videoGeneration', 'ko')}은(는) 영상 또는 애니메이션 생성을 문서화하고 있습니다.`,
+          `**인페인팅.** ${WITH('image-video-generation', 'inpainting', 'ko')}은(는) 인페인팅을 문서화하고 있습니다.`,
+          `**저VRAM 동작.** ${WITH('image-video-generation', 'lowVram', 'ko')}은(는) 저VRAM 모드 또는 명시된 소용량 VRAM 요구 사항을 문서화하고 있습니다. 나머지 도구는 요구 사항이 불러오는 모델에 따라 달라지므로 리뷰를 확인하십시오.`,
+          `**로컬 API.** ${WITH('image-video-generation', 'apiServer', 'ko')}은(는) 다른 앱이 호출할 수 있는 API를 문서화하고 있습니다.`,
           `**라이선스와 가격.** ${GEN('AGPL-3.0','ko')}는 AGPL-3.0, ${GEN('GPL-3.0','ko')}는 GPL-3.0, ${GEN('Apache-2.0','ko')}는 Apache-2.0, ${GEN('MIT','ko')}은 MIT이며, [Stable Diffusion](/ko/power-local-llm/stable-diffusion-review)은 OpenRAIL 라이선스를 사용합니다. Draw Things는 폐쇄 소스 앱이며, Locally Uncensored는 무료 오픈소스 앱으로 선택적 유료 클라우드 애드온이 있고, Invoke AI는 프리미엄(freemium)입니다. 카피레프트 라이선스는 수정본을 배포할 때 조건을 붙입니다. 자세한 내용은 [AI 도구 라이선스 해설](/ko/power-local-llm/ai-tool-licenses-explained)을 참고하십시오.`,
-          '**3D 생성.** [Modly](/ko/power-local-llm/modly-review)는 이미지나 텍스트 프롬프트에서 내 GPU에서 실행되는 오픈소스 모델로 3D 메시를 생성하고 GLB, OBJ, STL, PLY로 내보냅니다. 문서에는 NVIDIA GPU가 필요하다고 되어 있습니다. 작성 시점에 디렉터리의 유일한 3D 생성 도구이므로 비교 구간이 없으며, PromptQuorum은 이를 테스트하지 않았습니다.',
+          '**3D 생성.** [Modly](/ko/power-local-llm/modly-review)는 이미지나 텍스트 프롬프트에서 내 GPU에서 실행되는 모델로 3D 메시를 생성하고 GLB, OBJ, STL, PLY로 내보냅니다. 문서에는 NVIDIA GPU가 필요하다고 되어 있습니다. 작성 시점에 디렉터리의 유일한 3D 생성 도구이므로 비교 구간이 없으며, PromptQuorum은 이를 테스트하지 않았습니다.',
         ],
       },
       visionDifferences: {
         id: 'vision-differences',
         title: '비전·OCR: 무엇이 다른가',
         items: [
-          '**이미지 속 텍스트 읽기.** [LLaVA](/ko/power-local-llm/llava-review)와 [Ollama 비전 모델](/ko/power-local-llm/ollama-vision-models-review)은 이미지 속 텍스트를 읽거나 인식하는 기능을 문서화하고 있습니다.',
+          `**이미지 속 텍스트 읽기.** ${WITH('vision-ocr', 'ocr', 'ko')}은(는) 이미지 속 텍스트를 읽거나 인식하는 기능을 문서화하고 있습니다.`,
           '**프롬프트당 여러 이미지.** [Idefics](/ko/power-local-llm/idefics-review)는 하나의 프롬프트에서 여러 이미지를 받는 기능을 문서화하고 있습니다.',
           '**로컬 API.** Ollama 비전 모델은 로컬 API를 문서화하고 있습니다. Idefics가 문서화한 API는 로컬이 아니라 호스팅 방식이므로 포함하지 않습니다.',
           '**라이선스.** LLaVA와 Idefics는 Apache-2.0입니다. Ollama 비전 모델은 라이선스가 서로 다른 모델들의 집합이므로 각 모델의 라이선스를 직접 확인하십시오.',

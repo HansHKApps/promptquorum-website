@@ -132,11 +132,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Observability and Evaluation: What Differs',
         items: [
           '**Tracing.** [Langfuse](/power-local-llm/langfuse-review) and [Plano](/power-local-llm/plano-review) document tracing of LLM calls.',
-          '**Evaluations.** [Langfuse](/power-local-llm/langfuse-review) document evaluations or scoring.',
-          '**Prompt management.** [Langfuse](/power-local-llm/langfuse-review) document prompt management.',
-          '**OpenTelemetry.** [Plano](/power-local-llm/plano-review) document OpenTelemetry support.',
+          '**Evaluations.** [Langfuse](/power-local-llm/langfuse-review) documents evaluations or scoring.',
+          '**Prompt management.** [Langfuse](/power-local-llm/langfuse-review) documents prompt management.',
+          '**OpenTelemetry.** [Plano](/power-local-llm/plano-review) documents OpenTelemetry support.',
           '**Docker and self-hosting.** [Langfuse](/power-local-llm/langfuse-review) and [Mission Control](/power-local-llm/mission-control-review) document Docker or self-hosted deployment.',
-          '**Local LLMs.** [Langfuse](/power-local-llm/langfuse-review) document working with local or self-hosted LLMs.',
+          '**Local LLMs.** [Langfuse](/power-local-llm/langfuse-review) documents working with local or self-hosted LLMs.',
         ],
       },
       limitations: {

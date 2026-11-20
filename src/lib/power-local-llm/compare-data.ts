@@ -356,6 +356,20 @@ export function compareToolsByLicense(group: CategoryGroupKey, segmentKey: strin
   return formatToolList(rows.map((r) => (r.reviewPath ? `[${r.name}](${prefix}${r.reviewPath})` : r.name)), lang)
 }
 
+/**
+ * Tools of one comparison tab (same rows as the table) that document `attrKey` as true (the "Yes" cells), as a localized
+ * "A, B and C" markdown list linking each tool's review. Same rule as compareSegmentAttrCounts, so a list in article prose
+ * always names exactly as many tools as the matching count states. Callers need at least two matches for the plural verb
+ * in the surrounding sentence to read correctly.
+ */
+export function compareToolsByAttr(group: CategoryGroupKey, segmentKey: string, attrKey: string, lang: Language | string = 'en'): string {
+  const bySlug = new Map(localAiApps.map((t) => [t.slug, t]))
+  const seg = buildCategoryCompareData(group, 'en').segments.find((s) => s.key === segmentKey)
+  const rows = (seg?.rows ?? []).filter((r) => bySlug.get(r.slug)?.compare?.[attrKey] === true)
+  const prefix = lang === 'en' ? '' : `/${lang}`
+  return formatToolList(rows.map((r) => (r.reviewPath ? `[${r.name}](${prefix}${r.reviewPath})` : r.name)), lang)
+}
+
 function formatToolList(parts: string[], lang: Language | string): string {
   // en-GB: "A, B and C" without the Oxford comma, matching the rest of the site's copy.
   const tag = lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en-GB' : String(lang)
