@@ -211,6 +211,30 @@ export const en: AboutCopy = {
   pressLabel: 'Press and partnerships:',
   followLabel: 'Follow along:',
 
+  // Academy
+  academyH2: "PromptQuorum Academy: learn local AI at your own pace",
+  academyLead: "Guides are written for everyone, but you are not everyone. Academy turns the PromptQuorum knowledge base into a short programme built for your subject, your time and your level.",
+  academyIdeaH3: "The basic idea",
+  academyIdea: "Reading a guide tells you what is true. Learning means finding out what you do not know yet, filling exactly that gap and checking that it stuck. Academy does all three in one place: it asks a few questions first, builds lessons around your gaps and tests you at the end. It is free and needs no account, in the spirit of the rest of PromptQuorum: you stay in control of your data.",
+  academyHowH3: "The concept, step by step",
+  academySteps: [
+    ["You choose.", "Name a subject, say how much time you have and pick your level: beginner, some knowledge or experienced. The programme can run in any language you name, not only the nine site languages."],
+    ["A quick check.", "A few multiple-choice questions show what you already know, so you do not sit through lessons you do not need."],
+    ["A programme built for you.", "From the result, Academy composes short text lessons that fit your time. They draw on PromptQuorum guides, and each lesson points to further reading."],
+    ["An AI tutor next to the lesson.", "Ask questions while you read. While a test question is open, the tutor does not give away the answer."],
+    ["Tests with explanations.", "Choose no test, a final test, or a short quiz after every lesson plus a final test. Every question has three answers, and every answer is explained."],
+    ["A certificate, if you want one.", "Reach 70% in the final test and download a PDF Certificate of Completion and a Course Documentation of what you covered. If you choose to register the certificate, a QR code leads to a verification page."],
+  ],
+  academyPrinciplesH3: "Principles",
+  academyPrinciples: [
+    ["Free, no account.", "There is nothing to sign up for. Progress stays in your browser, and only if you choose to save it."],
+    ["Open about AI.", "Lessons, questions and tutor answers are written by AI and labelled as such. They can contain errors, so check important details against the linked guides."],
+    ["Privacy first.", "Please do not enter personal data. Your input is sent to an AI provider to write the lessons and answers. Academy keeps no learner accounts, and your progress is not stored on our servers unless you register a certificate."],
+    ["No overclaiming.", "The certificate records what you did in Academy. It is not an accredited qualification."],
+  ],
+  academyHonest: "Academy is new and still being refined, so expect rough edges. Feedback by email is welcome and helps us improve it.",
+  ctaAcademy: "Open the Academy",
+
   breadcrumbHome: 'Home',
   breadcrumbAbout: 'About',
 }
