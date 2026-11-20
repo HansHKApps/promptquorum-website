@@ -15,7 +15,7 @@ import { RecentMentionsBlock } from './RecentMentionsBlock'
 import { FeedbackBlock } from './FeedbackBlock'
 import { QuickTipBlock } from './QuickTipBlock'
 import { PqAppBannerBlock } from './PqAppBannerBlock'
-import { McpBannerBlock } from './McpBannerBlock'
+import { ToolBarsBlock } from './ToolBarsBlock'
 import { LocalAiToolsBlock } from './LocalAiToolsBlock'
 import { t } from './home-i18n'
 import { StateOfLocalAiBanner } from './StateOfLocalAiBanner'
@@ -59,7 +59,7 @@ export function Home({ lang }: { lang: Language }) {
 
         <PqAppBannerBlock lang={lang} />
 
-        <McpBannerBlock lang={lang} />
+        <ToolBarsBlock lang={lang} />
 
         <LocalAiToolsBlock lang={lang} />
 
