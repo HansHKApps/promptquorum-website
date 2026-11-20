@@ -200,6 +200,30 @@ export const fr: AboutCopy = {
   foundersText: 'faites référencer votre outil, corrigez votre fiche ou ajoutez des notes de créateur :',
   pressLabel: 'Presse et partenariats :',
   followLabel: 'Suivez-nous :',
+  // Academy
+  academyH2: "PromptQuorum Academy : apprendre l'IA locale à votre rythme",
+  academyLead: "Les guides sont écrits pour tout le monde, mais vous n'êtes pas tout le monde. L'Academy transforme la base de connaissances PromptQuorum en un court programme construit pour votre sujet, votre temps et votre niveau.",
+  academyIdeaH3: "L'idée de base",
+  academyIdea: "Lire un guide vous dit ce qui est vrai. Apprendre, c'est découvrir ce que vous ne savez pas encore, combler précisément cette lacune et vérifier que cela a tenu. L'Academy fait les trois au même endroit : elle pose d'abord quelques questions, construit des leçons autour de vos lacunes et vous évalue à la fin. Elle est gratuite et sans compte, dans l'esprit du reste de PromptQuorum : vous gardez le contrôle de vos données.",
+  academyHowH3: "Le concept, étape par étape",
+  academySteps: [
+    ["Vous choisissez.", "Indiquez un sujet, le temps dont vous disposez et votre niveau : débutant, quelques connaissances ou expérimenté. Le programme peut se dérouler dans n'importe quelle langue que vous indiquez, pas seulement les neuf langues du site."],
+    ["Un contrôle rapide.", "Quelques questions à choix multiples montrent ce que vous savez déjà, pour ne pas suivre des leçons inutiles."],
+    ["Un programme construit pour vous.", "À partir du résultat, l'Academy compose de courtes leçons écrites adaptées à votre temps. Elles s'appuient sur les guides PromptQuorum, et chaque leçon renvoie vers des lectures complémentaires."],
+    ["Un tuteur IA à côté de la leçon.", "Posez vos questions pendant la lecture. Tant qu'une question de test est ouverte, le tuteur ne donne pas la réponse."],
+    ["Des tests avec explications.", "Choisissez aucun test, un test final, ou un court quiz après chaque leçon plus un test final. Chaque question a trois réponses, et chaque réponse est expliquée."],
+    ["Une attestation, si vous le souhaitez.", "Atteignez 70 % au test final et téléchargez une attestation PDF ainsi qu'une documentation du cours résumant ce que vous avez étudié. Si vous choisissez d'enregistrer l'attestation, un QR code mène à une page de vérification."],
+  ],
+  academyPrinciplesH3: "Principes",
+  academyPrinciples: [
+    ["Gratuit, sans compte.", "Rien à créer. Votre progression reste dans votre navigateur, et seulement si vous choisissez de l'enregistrer."],
+    ["Transparent sur l'IA.", "Les leçons, les questions et les réponses du tuteur sont rédigées par une IA et signalées comme telles. Elles peuvent contenir des erreurs : vérifiez les détails importants dans les guides liés."],
+    ["La vie privée d'abord.", "Merci de ne saisir aucune donnée personnelle. Vos saisies sont envoyées à un fournisseur d'IA qui rédige les leçons et les réponses. L'Academy ne tient aucun compte d'apprenant, et votre progression n'est pas stockée sur nos serveurs, sauf si vous enregistrez une attestation."],
+    ["Sans exagération.", "L'attestation consigne ce que vous avez fait dans l'Academy. Ce n'est pas une qualification accréditée."],
+  ],
+  academyHonest: "L'Academy est récente et en cours d'amélioration : quelques aspérités sont possibles. Vos retours par e-mail sont les bienvenus et nous aident à l'améliorer.",
+  ctaAcademy: "Ouvrir l'Academy",
+
   breadcrumbHome: 'Accueil',
   breadcrumbAbout: 'À propos',
 }

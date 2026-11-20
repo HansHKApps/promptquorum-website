@@ -200,6 +200,30 @@ export const de: AboutCopy = {
   foundersText: 'Ihr Tool eintragen lassen, Ihren Eintrag korrigieren oder Gründerhinweise hinzufügen:',
   pressLabel: 'Presse und Partnerschaften:',
   followLabel: 'Folgen Sie uns:',
+  // Academy
+  academyH2: "PromptQuorum Academy: lokale KI in Ihrem Tempo lernen",
+  academyLead: "Ratgeber sind für alle geschrieben, aber Sie sind nicht alle. Die Academy macht aus der PromptQuorum-Wissensbasis ein kurzes Programm, zugeschnitten auf Ihr Thema, Ihre Zeit und Ihr Niveau.",
+  academyIdeaH3: "Die Grundidee",
+  academyIdea: "Ein Ratgeber sagt Ihnen, was stimmt. Lernen heißt herauszufinden, was Sie noch nicht wissen, genau diese Lücke zu füllen und zu prüfen, ob es hängen geblieben ist. Die Academy erledigt alle drei Schritte an einem Ort: Sie stellt zuerst einige Fragen, baut Lektionen um Ihre Lücken herum und prüft Sie am Ende. Sie ist kostenlos und braucht kein Konto, ganz im Sinne des übrigen PromptQuorum: Sie behalten die Kontrolle über Ihre Daten.",
+  academyHowH3: "Das Konzept, Schritt für Schritt",
+  academySteps: [
+    ["Sie wählen.", "Nennen Sie ein Thema, sagen Sie, wie viel Zeit Sie haben, und wählen Sie Ihr Niveau: Einsteiger, Vorkenntnisse oder erfahren. Das Programm kann in jeder Sprache laufen, die Sie nennen, nicht nur in den neun Sprachen der Website."],
+    ["Ein kurzer Check.", "Einige Multiple-Choice-Fragen zeigen, was Sie schon wissen, damit Sie keine Lektionen durchsitzen müssen, die Sie nicht brauchen."],
+    ["Ein Programm nur für Sie.", "Aus dem Ergebnis stellt die Academy kurze Textlektionen zusammen, die in Ihre Zeit passen. Sie stützen sich auf PromptQuorum-Ratgeber, und jede Lektion verweist auf weiterführende Lektüre."],
+    ["Ein KI-Tutor neben der Lektion.", "Stellen Sie beim Lesen Fragen. Solange eine Testfrage offen ist, verrät der Tutor die Antwort nicht."],
+    ["Tests mit Erklärungen.", "Wählen Sie keinen Test, einen Abschlusstest oder nach jeder Lektion ein kurzes Quiz plus Abschlusstest. Jede Frage hat drei Antworten, und jede Antwort wird erklärt."],
+    ["Eine Teilnahmebescheinigung, wenn Sie möchten.", "Erreichen Sie im Abschlusstest 70 % und laden Sie eine PDF-Teilnahmebescheinigung sowie eine Kursdokumentation des Gelernten herunter. Wenn Sie die Bescheinigung registrieren, führt ein QR-Code zu einer Prüfseite."],
+  ],
+  academyPrinciplesH3: "Grundsätze",
+  academyPrinciples: [
+    ["Kostenlos, ohne Konto.", "Es gibt nichts zu registrieren. Ihr Fortschritt bleibt in Ihrem Browser, und nur dann, wenn Sie das Speichern wählen."],
+    ["Offen beim Thema KI.", "Lektionen, Fragen und Tutor-Antworten schreibt eine KI, und sie sind entsprechend gekennzeichnet. Sie können Fehler enthalten, prüfen Sie wichtige Details daher anhand der verlinkten Ratgeber."],
+    ["Datenschutz zuerst.", "Bitte geben Sie keine personenbezogenen Daten ein. Ihre Eingaben werden an einen KI-Anbieter gesendet, der die Lektionen und Antworten schreibt. Die Academy führt keine Lernerkonten, und Ihr Fortschritt liegt nicht auf unseren Servern, es sei denn, Sie registrieren eine Bescheinigung."],
+    ["Keine Übertreibung.", "Die Bescheinigung hält fest, was Sie in der Academy getan haben. Sie ist keine akkreditierte Qualifikation."],
+  ],
+  academyHonest: "Die Academy ist neu und wird noch verfeinert, rechnen Sie also mit Ecken und Kanten. Rückmeldungen per E-Mail sind willkommen und helfen uns, sie zu verbessern.",
+  ctaAcademy: "Academy öffnen",
+
   breadcrumbHome: 'Startseite',
   breadcrumbAbout: 'Über uns',
 }

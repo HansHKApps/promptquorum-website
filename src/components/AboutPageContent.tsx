@@ -495,6 +495,47 @@ export function AboutPageContent({ lang }: { lang: Language }) {
             </div>
           </section>
 
+          {/* Academy: basic idea + concept, outgoing link to the tool */}
+          <section id="academy" className="mb-20 scroll-mt-24">
+            <h2 className={H2}>{copy.academyH2}</h2>
+            <p className={LEAD}>{copy.academyLead}</p>
+
+            <h3 className="text-xl font-bold text-text-primary mb-2">{copy.academyIdeaH3}</h3>
+            <p className={`${BODY} mb-8`}>{copy.academyIdea}</p>
+
+            <div className={`${CARD} mb-8`}>
+              <h3 className="text-lg font-bold text-text-primary mb-4">{copy.academyHowH3}</h3>
+              <ol className="space-y-3">
+                {copy.academySteps.map(([lead, rest], i) => (
+                  <li key={lead} className="flex gap-3">
+                    <span className="shrink-0 w-7 h-7 rounded-full bg-hub-violet text-white text-sm font-bold flex items-center justify-center">
+                      {i + 1}
+                    </span>
+                    <p className={BODY}>
+                      <strong className="text-text-primary">{lead}</strong> {rest}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <h3 className="text-xl font-bold text-text-primary mb-3">{copy.academyPrinciplesH3}</h3>
+            <ul className="space-y-3 mb-6">
+              {copy.academyPrinciples.map(([lead, rest]) => (
+                <li key={lead} className="flex gap-3">
+                  <CheckIcon />
+                  <p className={BODY}>
+                    <strong className="text-text-primary">{lead}</strong> {rest}
+                  </p>
+                </li>
+              ))}
+            </ul>
+            <p className={`${BODY} italic mb-6`}>{copy.academyHonest}</p>
+            <AboutTrackedLink href={lp('/academy')} via="academy" className={LINK}>
+              {copy.ctaAcademy} {arrow}
+            </AboutTrackedLink>
+          </section>
+
           {/* Goal-first + audience */}
           <section id="for-you" className="mb-20 scroll-mt-24">
             <h2 className={H2}>{copy.forYouH2}</h2>

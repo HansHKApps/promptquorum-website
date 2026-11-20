@@ -156,6 +156,18 @@ export interface AboutCopy {
   pressLabel: string
   followLabel: string
 
+  // Academy
+  academyH2: string
+  academyLead: string
+  academyIdeaH3: string
+  academyIdea: string
+  academyHowH3: string
+  academySteps: [LeadRest, LeadRest, LeadRest, LeadRest, LeadRest, LeadRest]
+  academyPrinciplesH3: string
+  academyPrinciples: [LeadRest, LeadRest, LeadRest, LeadRest]
+  academyHonest: string
+  ctaAcademy: string
+
   // Schema / breadcrumb
   breadcrumbHome: string
   breadcrumbAbout: string

@@ -200,6 +200,30 @@ export const pt: AboutCopy = {
   foundersText: 'liste sua ferramenta, corrija sua entrada ou adicione notas de fundador:',
   pressLabel: 'Imprensa e parcerias:',
   followLabel: 'Acompanhe:',
+  // Academy
+  academyH2: "PromptQuorum Academy: aprenda IA local no seu ritmo",
+  academyLead: "Os guias são escritos para todo mundo, mas você não é todo mundo. A Academy transforma a base de conhecimento da PromptQuorum em um programa curto, feito para o seu tema, o seu tempo e o seu nível.",
+  academyIdeaH3: "A ideia básica",
+  academyIdea: "Ler um guia diz o que é verdade. Aprender é descobrir o que você ainda não sabe, preencher exatamente essa lacuna e conferir se ficou. A Academy faz as três coisas num só lugar: primeiro faz algumas perguntas, monta aulas em torno das suas lacunas e avalia você no fim. É gratuita e não exige conta, no espírito do resto da PromptQuorum: você mantém o controle dos seus dados.",
+  academyHowH3: "O conceito, passo a passo",
+  academySteps: [
+    ["Você escolhe.", "Informe um tema, quanto tempo tem e o seu nível: iniciante, algum conhecimento ou experiente. O programa pode rodar em qualquer idioma que você indicar, não só nos nove idiomas do site."],
+    ["Uma verificação rápida.", "Algumas perguntas de múltipla escolha mostram o que você já sabe, para que você não assista a aulas de que não precisa."],
+    ["Um programa feito para você.", "A partir do resultado, a Academy monta aulas curtas em texto que cabem no seu tempo. Elas se apoiam nos guias da PromptQuorum, e cada aula indica leituras complementares."],
+    ["Um tutor de IA ao lado da aula.", "Faça perguntas enquanto lê. Enquanto uma pergunta do teste está aberta, o tutor não entrega a resposta."],
+    ["Testes com explicações.", "Escolha nenhum teste, um teste final, ou um quiz curto após cada aula mais um teste final. Cada pergunta tem três respostas, e cada resposta é explicada."],
+    ["Um comprovante, se você quiser.", "Atinja 70% no teste final e baixe um comprovante em PDF e uma documentação do curso com o que você estudou. Se você optar por registrar o comprovante, um QR code leva a uma página de verificação."],
+  ],
+  academyPrinciplesH3: "Princípios",
+  academyPrinciples: [
+    ["Grátis e sem conta.", "Não há nada para cadastrar. Seu progresso fica no seu navegador, e só se você escolher salvá-lo."],
+    ["Transparência sobre a IA.", "As aulas, as perguntas e as respostas do tutor são escritas por IA e identificadas como tal. Podem conter erros, então confira os detalhes importantes nos guias indicados."],
+    ["Privacidade em primeiro lugar.", "Por favor, não informe dados pessoais. O que você digita é enviado a um provedor de IA que escreve as aulas e as respostas. A Academy não mantém contas de alunos, e seu progresso não é guardado em nossos servidores, a menos que você registre um comprovante."],
+    ["Sem exageros.", "O comprovante registra o que você fez na Academy. Não é uma qualificação credenciada."],
+  ],
+  academyHonest: "A Academy é nova e ainda está sendo refinada, então podem existir arestas. Comentários por e-mail são bem-vindos e nos ajudam a melhorá-la.",
+  ctaAcademy: "Abrir a Academy",
+
   breadcrumbHome: 'Início',
   breadcrumbAbout: 'Sobre',
 }
