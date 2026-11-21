@@ -14,6 +14,9 @@ import { SURFACE_CLASS } from './homeSurface'
 import { StatTilesClient, type StatTileItem } from './StatTilesClient'
 import { t } from './home-i18n'
 
+/** Static class names (Tailwind cannot build them dynamically): columns from the lg breakpoint up, by half the tile count. */
+const BAR_COLS: Record<number, string> = { 3: 'lg:grid-cols-3', 4: 'lg:grid-cols-4', 5: 'lg:grid-cols-5', 6: 'lg:grid-cols-6' }
+
 /**
  * `card` = the original tall 2-column tile card; `bar` = one slim horizontal row of the same five
  * stats, used near the top of the homepage where a tall box would push the tools below the fold.
@@ -103,7 +106,8 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
   if (layout === 'bar') {
     return (
       <section aria-label={t('statsTitle', lang)} className={`mb-8 rounded-xl border ${SURFACE_CLASS.stat} p-3`}>
-        <dl className={`grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 ${items.length > 6 ? 'xl:grid-cols-7' : ''}`}>
+        {/* Even rows: 10 tiles = 2 rows of 5 (7 columns left a half-empty second row, and the one tall tile with a long label stretched it). */}
+        <dl className={`grid grid-cols-2 gap-3 sm:grid-cols-3 ${items.length <= 6 ? 'lg:grid-cols-6' : BAR_COLS[Math.min(6, Math.ceil(items.length / 2))]}`}>
           <StatTilesClient
             items={items}
             layout="bar"
