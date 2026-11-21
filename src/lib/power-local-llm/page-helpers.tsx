@@ -1244,6 +1244,7 @@ const HUB_THEMES: Array<{
       'evershelf-review',
       'ai-file-sorter-review',
       'stratosort-review',
+      'pixafind-review',
       'linkwarden-review',
       'blinko-review',
       'tolaria-review',
