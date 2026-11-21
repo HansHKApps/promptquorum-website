@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-21',
     educationalLevel: 'Intermediate',
     audience: 'Developers who want to feed web pages into a local or cloud LLM pipeline as clean markdown or JSON, either through a hosted API or a self-hosted Docker stack',
     primaryTerm: 'Firecrawl',
@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Firecrawl pricing',
       'web scraping API for LLMs',
     ],
-    leadAnswerBlock: '**Firecrawl is an open-source (AGPL-3.0) web data API that searches, scrapes, crawls and maps websites and returns clean markdown or JSON for LLM pipelines.** It runs as a hosted service or on your own servers through Docker Compose, and the self-hosted edition is a reduced version of the cloud product.',
+    leadAnswerBlock: '**Firecrawl gives AI agents knowledge infrastructure to make them smarter, through one API, MCP server or CLI.** It also runs as a hosted service or on your own servers through Docker Compose, and the self-hosted edition is a reduced version of the cloud product.',
     quickAnswerTop: {
       en: {
         question: 'Can Firecrawl run fully on my own hardware?',
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-firecrawl',
         title: 'What Is Firecrawl?',
-        content: '**Firecrawl is a web data API for AI systems: you send it a URL or a search query, and it returns the page content in a format an LLM can use directly.** Its repository describes it as a way to "supercharge your AI agents with data from the web," and the company runs the hosted service at [firecrawl.dev](https://www.firecrawl.dev).',
+        content: '**Firecrawl is a web data API for AI systems: you send it a URL or a search query, and it returns the page content in a format an LLM can use directly.** Its repository describes it as a way to "supercharge your AI agents with data from the web," and the company runs the hosted service at [firecrawl.dev](https://www.firecrawl.dev). According to Firecrawl, its library [Firecrawl Alexandria](https://alexandria.firecrawl.dev/) puts 550+ data providers in one place (250M+ people, 75M+ companies, 41M+ research papers), alongside Firecrawl\'s specialized indexes and the live web. These are vendor figures, not PromptQuorum measurements.',
         items: [
           'Product type: a REST API with SDKs and a CLI, offered as a hosted service and as source code you can self-host',
           'Repository: [github.com/firecrawl/firecrawl](https://github.com/firecrawl/firecrawl), 192,265 stars, verified via the GitHub API',
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-21',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die Webseiten als sauberes Markdown oder JSON in eine lokale oder Cloud-LLM-Pipeline einspeisen wollen, über eine gehostete API oder einen selbst gehosteten Docker-Stack',
     primaryTerm: 'Firecrawl',
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Firecrawl Preise',
       'Web-Scraping-API für LLMs',
     ],
-    leadAnswerBlock: '**Firecrawl ist eine quelloffene (AGPL-3.0) Web-Daten-API, die Websites durchsucht, scrapt, crawlt und kartiert und sauberes Markdown oder JSON für LLM-Pipelines liefert.** Sie läuft als gehosteter Dienst oder als selbst gehosteter Docker-Compose-Stack, wobei die selbst gehostete Variante eine reduzierte Ausgabe des Cloud-Produkts ist.',
+    leadAnswerBlock: '**Firecrawl bietet KI-Agenten eine Wissensinfrastruktur, die sie leistungsfähiger machen soll, über eine API, einen MCP-Server oder eine CLI.** Außerdem läuft es als gehosteter Dienst oder als selbst gehosteter Docker-Compose-Stack, wobei die selbst gehostete Variante eine reduzierte Ausgabe des Cloud-Produkts ist.',
     quickAnswerTop: {
       de: {
         question: 'Kann Firecrawl komplett auf eigener Hardware laufen?',
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-firecrawl',
         title: 'Was ist Firecrawl?',
-        content: '**Firecrawl ist eine Web-Daten-API für KI-Systeme: Sie senden eine URL oder eine Suchanfrage und erhalten den Seiteninhalt in einem Format, das ein LLM direkt verwenden kann.** Das Repository beschreibt es als Weg, KI-Agenten „mit Daten aus dem Web zu versorgen“, und das Unternehmen betreibt den gehosteten Dienst unter [firecrawl.dev](https://www.firecrawl.dev).',
+        content: '**Firecrawl ist eine Web-Daten-API für KI-Systeme: Sie senden eine URL oder eine Suchanfrage und erhalten den Seiteninhalt in einem Format, das ein LLM direkt verwenden kann.** Das Repository beschreibt es als Weg, KI-Agenten „mit Daten aus dem Web zu versorgen“, und das Unternehmen betreibt den gehosteten Dienst unter [firecrawl.dev](https://www.firecrawl.dev). Laut Firecrawl vereint die Bibliothek [Firecrawl Alexandria](https://alexandria.firecrawl.dev/) mehr als 550 Datenanbieter an einem Ort (über 250 Mio. Personen, über 75 Mio. Unternehmen, über 41 Mio. Forschungsarbeiten), zusammen mit den spezialisierten Indizes von Firecrawl und dem Live-Web. Das sind Herstellerangaben, keine Messungen von PromptQuorum.',
         items: [
           'Produkttyp: eine REST-API mit SDKs und CLI, angeboten als gehosteter Dienst und als selbst hostbarer Quellcode',
           'Repository: [github.com/firecrawl/firecrawl](https://github.com/firecrawl/firecrawl), 192.265 Sterne, per GitHub-API geprüft',
@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-21',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que quieren alimentar un pipeline de LLM local o en la nube con páginas web en Markdown o JSON limpio, mediante una API alojada o un stack Docker autoalojado',
     primaryTerm: 'Firecrawl',
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'precios de Firecrawl',
       'API de web scraping para LLM',
     ],
-    leadAnswerBlock: '**Firecrawl es una API de datos web de código abierto (AGPL-3.0) que busca, extrae, rastrea y mapea sitios web y devuelve Markdown o JSON limpio para pipelines de LLM.** Funciona como servicio alojado o como stack autoalojado con Docker Compose, y la versión autoalojada es una edición reducida del producto en la nube.',
+    leadAnswerBlock: '**Firecrawl ofrece a los agentes de IA una infraestructura de conocimiento para hacerlos más capaces, mediante una API, un servidor MCP o una CLI.** Además funciona como servicio alojado o como stack autoalojado con Docker Compose, y la versión autoalojada es una edición reducida del producto en la nube.',
     quickAnswerTop: {
       es: {
         question: '¿Puede Firecrawl funcionar por completo en mi propio hardware?',
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-firecrawl',
         title: '¿Qué es Firecrawl?',
-        content: '**Firecrawl es una API de datos web para sistemas de IA: le envías una URL o una consulta de búsqueda y devuelve el contenido de la página en un formato que un LLM puede usar directamente.** Su repositorio lo describe como una forma de "dar a tus agentes de IA datos de la web", y la empresa opera el servicio alojado en [firecrawl.dev](https://www.firecrawl.dev).',
+        content: '**Firecrawl es una API de datos web para sistemas de IA: le envías una URL o una consulta de búsqueda y devuelve el contenido de la página en un formato que un LLM puede usar directamente.** Su repositorio lo describe como una forma de "dar a tus agentes de IA datos de la web", y la empresa opera el servicio alojado en [firecrawl.dev](https://www.firecrawl.dev). Según Firecrawl, su biblioteca [Firecrawl Alexandria](https://alexandria.firecrawl.dev/) reúne en un solo lugar más de 550 proveedores de datos (más de 250 M de personas, más de 75 M de empresas, más de 41 M de artículos de investigación), junto con los índices especializados de Firecrawl y la web en vivo. Son cifras del fabricante, no mediciones de PromptQuorum.',
         items: [
           'Tipo de producto: una API REST con SDK y CLI, ofrecida como servicio alojado y como código fuente autoalojable',
           'Repositorio: [github.com/firecrawl/firecrawl](https://github.com/firecrawl/firecrawl), 192,265 estrellas, verificado con la API de GitHub',
@@ -662,7 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-21',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs qui veulent alimenter un pipeline LLM local ou cloud avec des pages web en Markdown ou JSON propre, via une API hébergée ou une pile Docker auto-hébergée',
     primaryTerm: 'Firecrawl',
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'tarifs Firecrawl',
       'API de web scraping pour LLM',
     ],
-    leadAnswerBlock: '**Firecrawl est une API de données web open source (AGPL-3.0) qui recherche, extrait, explore et cartographie des sites web et renvoie du Markdown ou du JSON propre pour les pipelines LLM.** Elle fonctionne comme service hébergé ou comme pile Docker Compose auto-hébergée, la version auto-hébergée étant une édition réduite du produit cloud.',
+    leadAnswerBlock: '**Firecrawl fournit aux agents IA une infrastructure de connaissances censée les rendre plus performants, via une API, un serveur MCP ou une CLI.** Il fonctionne aussi comme service hébergé ou comme pile Docker Compose auto-hébergée, la version auto-hébergée étant une édition réduite du produit cloud.',
     quickAnswerTop: {
       fr: {
         question: 'Firecrawl peut-il fonctionner entièrement sur mon propre matériel ?',
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-firecrawl',
         title: 'Qu\'est-ce que Firecrawl ?',
-        content: '**Firecrawl est une API de données web pour les systèmes d\'IA : vous lui envoyez une URL ou une requête de recherche, et elle renvoie le contenu de la page dans un format qu\'un LLM peut utiliser directement.** Son dépôt la décrit comme un moyen de « donner à vos agents IA des données issues du web », et l\'entreprise exploite le service hébergé sur [firecrawl.dev](https://www.firecrawl.dev).',
+        content: '**Firecrawl est une API de données web pour les systèmes d\'IA : vous lui envoyez une URL ou une requête de recherche, et elle renvoie le contenu de la page dans un format qu\'un LLM peut utiliser directement.** Son dépôt la décrit comme un moyen de « donner à vos agents IA des données issues du web », et l\'entreprise exploite le service hébergé sur [firecrawl.dev](https://www.firecrawl.dev). Selon Firecrawl, sa bibliothèque [Firecrawl Alexandria](https://alexandria.firecrawl.dev/) réunit au même endroit plus de 550 fournisseurs de données (plus de 250 M de personnes, plus de 75 M d\'entreprises, plus de 41 M d\'articles de recherche), en plus des index spécialisés de Firecrawl et du web en direct. Ce sont des chiffres de l\'éditeur, pas des mesures de PromptQuorum.',
         items: [
           'Type de produit : une API REST avec SDK et CLI, proposée comme service hébergé et comme code source auto-hébergeable',
           'Dépôt : [github.com/firecrawl/firecrawl](https://github.com/firecrawl/firecrawl), 192 265 étoiles, vérifiées via l\'API GitHub',
@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-21',
     educationalLevel: 'Intermediate',
     audience: 'WebページをクリーンなマークダウンやJSONに変換してローカルまたはクラウドのLLMパイプラインに渡したい開発者（ホスト型APIまたはセルフホストのDockerスタックを利用）',
     primaryTerm: 'Firecrawl',
@@ -896,7 +896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Firecrawl 料金',
       'LLM向けWebスクレイピングAPI',
     ],
-    leadAnswerBlock: '**Firecrawlは、Webサイトの検索・スクレイピング・クロール・マッピングを行い、LLMパイプライン向けにクリーンなマークダウンまたはJSONを返すオープンソース（AGPL-3.0）のWebデータAPIです。** ホスト型サービスとしても、セルフホストのDocker Composeスタックとしても動作しますが、セルフホスト版はクラウド製品を縮小した版です。',
+    leadAnswerBlock: '**Firecrawlは、AIエージェントをより賢くするためのナレッジ基盤を、1つのAPI、MCPサーバー、またはCLIで提供します。** ホスト型サービスとしても、セルフホストのDocker Composeスタックとしても動作しますが、セルフホスト版はクラウド製品を縮小した版です。',
     quickAnswerTop: {
       ja: {
         question: 'Firecrawlは自分のハードウェアだけで完全に動かせますか？',
@@ -940,7 +940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-firecrawl',
         title: 'Firecrawlとは',
-        content: '**FirecrawlはAIシステム向けのWebデータAPIです。URLまたは検索クエリを送ると、LLMがそのまま使える形式でページの内容を返します。** リポジトリでは「AIエージェントにWebのデータを供給する」ものと説明されており、ホスト型サービスは同社が[firecrawl.dev](https://www.firecrawl.dev)で運営しています。',
+        content: '**FirecrawlはAIシステム向けのWebデータAPIです。URLまたは検索クエリを送ると、LLMがそのまま使える形式でページの内容を返します。** リポジトリでは「AIエージェントにWebのデータを供給する」ものと説明されており、ホスト型サービスは同社が[firecrawl.dev](https://www.firecrawl.dev)で運営しています。 Firecrawlによると、同社のライブラリ[Firecrawl Alexandria](https://alexandria.firecrawl.dev/)は、550以上のデータプロバイダー（2.5億人以上、7,500万社以上、4,100万本以上の研究論文）を1か所にまとめ、Firecrawlの専門インデックスやライブWebと併せて提供します。これらはベンダーの公表値であり、PromptQuorumの測定値ではありません。',
         items: [
           '製品タイプ：SDKとCLIを備えたREST APIで、ホスト型サービスとセルフホスト可能なソースコードの両方で提供されます',
           'リポジトリ：[github.com/firecrawl/firecrawl](https://github.com/firecrawl/firecrawl)、スター192,265（GitHub APIで確認）',
@@ -1098,7 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-21',
     educationalLevel: 'Intermediate',
     audience: '希望把网页转换为干净的Markdown或JSON，输入本地或云端LLM流水线的开发者，可使用托管API或自托管Docker栈',
     primaryTerm: 'Firecrawl',
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Firecrawl价格',
       '面向LLM的网页抓取API',
     ],
-    leadAnswerBlock: '**Firecrawl是一款开源（AGPL-3.0）网页数据API，可搜索、抓取、爬取并映射网站，并为LLM流水线返回干净的Markdown或JSON。** 它既可作为托管服务使用，也可作为自托管的Docker Compose栈运行，而自托管版本是云端产品的精简版。',
+    leadAnswerBlock: '**Firecrawl为AI智能体提供知识基础设施，让它们更聪明，可通过一个API、MCP服务器或CLI使用。** 它既可作为托管服务使用，也可作为自托管的Docker Compose栈运行，而自托管版本是云端产品的精简版。',
     quickAnswerTop: {
       zh: {
         question: 'Firecrawl能完全运行在自己的硬件上吗？',
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-firecrawl',
         title: 'Firecrawl是什么？',
-        content: '**Firecrawl是面向AI系统的网页数据API：你发送一个URL或搜索查询，它就以LLM可直接使用的格式返回页面内容。** 其仓库把它描述为“用来自网络的数据为AI智能体赋能”，公司在[firecrawl.dev](https://www.firecrawl.dev)运营托管服务。',
+        content: '**Firecrawl是面向AI系统的网页数据API：你发送一个URL或搜索查询，它就以LLM可直接使用的格式返回页面内容。** 其仓库把它描述为“用来自网络的数据为AI智能体赋能”，公司在[firecrawl.dev](https://www.firecrawl.dev)运营托管服务。 据Firecrawl介绍，其资料库[Firecrawl Alexandria](https://alexandria.firecrawl.dev/)把550多家数据提供方汇集在一处（2.5亿以上的人员、7500万以上的公司、4100万以上的研究论文），并与Firecrawl的专用索引和实时网络一起提供。这些是厂商公布的数字，并非PromptQuorum的测量结果。',
         items: [
           '产品类型：带SDK和命令行工具的REST API，既提供托管服务，也提供可自托管的源码',
           '仓库：[github.com/firecrawl/firecrawl](https://github.com/firecrawl/firecrawl)，192,265星标，已通过GitHub API核实',
@@ -1316,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-21',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores que querem alimentar um pipeline de LLM local ou na nuvem com páginas da web em Markdown ou JSON limpo, por meio de uma API hospedada ou de uma stack Docker auto-hospedada',
     primaryTerm: 'Firecrawl',
@@ -1332,7 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'preços do Firecrawl',
       'API de web scraping para LLM',
     ],
-    leadAnswerBlock: '**O Firecrawl é uma API de dados da web de código aberto (AGPL-3.0) que pesquisa, extrai, rastreia e mapeia sites e devolve Markdown ou JSON limpo para pipelines de LLM.** Ele funciona como serviço hospedado ou como stack auto-hospedada com Docker Compose, e a versão auto-hospedada é uma edição reduzida do produto na nuvem.',
+    leadAnswerBlock: '**O Firecrawl oferece aos agentes de IA uma infraestrutura de conhecimento para torná-los mais capazes, por meio de uma API, um servidor MCP ou uma CLI.** Ele também funciona como serviço hospedado ou como stack auto-hospedada com Docker Compose, e a versão auto-hospedada é uma edição reduzida do produto na nuvem.',
     quickAnswerTop: {
       pt: {
         question: 'O Firecrawl pode rodar totalmente no meu próprio hardware?',
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-firecrawl',
         title: 'O que é o Firecrawl?',
-        content: '**O Firecrawl é uma API de dados da web para sistemas de IA: você envia uma URL ou uma consulta de pesquisa e ele devolve o conteúdo da página em um formato que um LLM pode usar diretamente.** O repositório o descreve como uma forma de "dar aos seus agentes de IA dados da web", e a empresa opera o serviço hospedado em [firecrawl.dev](https://www.firecrawl.dev).',
+        content: '**O Firecrawl é uma API de dados da web para sistemas de IA: você envia uma URL ou uma consulta de pesquisa e ele devolve o conteúdo da página em um formato que um LLM pode usar diretamente.** O repositório o descreve como uma forma de "dar aos seus agentes de IA dados da web", e a empresa opera o serviço hospedado em [firecrawl.dev](https://www.firecrawl.dev). Segundo o Firecrawl, sua biblioteca [Firecrawl Alexandria](https://alexandria.firecrawl.dev/) reúne em um só lugar mais de 550 provedores de dados (mais de 250 mi de pessoas, mais de 75 mi de empresas, mais de 41 mi de artigos de pesquisa), junto com os índices especializados do Firecrawl e a web ao vivo. São números do fabricante, não medições do PromptQuorum.',
         items: [
           'Tipo de produto: uma API REST com SDKs e CLI, oferecida como serviço hospedado e como código-fonte que pode ser auto-hospedado',
           'Repositório: [github.com/firecrawl/firecrawl](https://github.com/firecrawl/firecrawl), 192.265 estrelas, verificadas pela API do GitHub',
@@ -1534,7 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-21',
     educationalLevel: 'Intermediate',
     audience: 'المطورون الذين يريدون تغذية مسار LLM محلي أو سحابي بصفحات الويب على شكل Markdown أو JSON نظيف، عبر واجهة API مستضافة أو حزمة Docker مستضافة ذاتيًا',
     primaryTerm: 'Firecrawl',
@@ -1550,7 +1550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'أسعار Firecrawl',
       'واجهة API لاستخراج بيانات الويب لـ LLM',
     ],
-    leadAnswerBlock: '**Firecrawl واجهة API لبيانات الويب مفتوحة المصدر (AGPL-3.0) تبحث في المواقع وتستخرج صفحاتها وتزحف عليها وترسم خرائطها، وتعيد Markdown أو JSON نظيفًا لمسارات LLM.** تعمل كخدمة مستضافة أو كحزمة Docker Compose مستضافة ذاتيًا، والنسخة المستضافة ذاتيًا هي إصدار مخفّض من المنتج السحابي.',
+    leadAnswerBlock: '**توفّر Firecrawl لوكلاء الذكاء الاصطناعي بنية تحتية للمعرفة تجعلهم أذكى، عبر واجهة API واحدة أو خادم MCP أو CLI.** وتعمل أيضًا كخدمة مستضافة أو كحزمة Docker Compose مستضافة ذاتيًا، والنسخة المستضافة ذاتيًا هي إصدار مخفّض من المنتج السحابي.',
     quickAnswerTop: {
       ar: {
         question: 'هل يمكن تشغيل Firecrawl بالكامل على عتادي الخاص؟',
@@ -1594,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-firecrawl',
         title: 'ما هي Firecrawl؟',
-        content: '**Firecrawl واجهة API لبيانات الويب موجهة لأنظمة الذكاء الاصطناعي: ترسل إليها رابطًا أو استعلام بحث فتعيد محتوى الصفحة بصيغة يستطيع LLM استخدامها مباشرة.** يصفها مستودعها بأنها وسيلة لتزويد وكلاء الذكاء الاصطناعي ببيانات من الويب، وتشغّل الشركة الخدمة المستضافة على [firecrawl.dev](https://www.firecrawl.dev).',
+        content: '**Firecrawl واجهة API لبيانات الويب موجهة لأنظمة الذكاء الاصطناعي: ترسل إليها رابطًا أو استعلام بحث فتعيد محتوى الصفحة بصيغة يستطيع LLM استخدامها مباشرة.** يصفها مستودعها بأنها وسيلة لتزويد وكلاء الذكاء الاصطناعي ببيانات من الويب، وتشغّل الشركة الخدمة المستضافة على [firecrawl.dev](https://www.firecrawl.dev). وفقًا لـ Firecrawl، تجمع مكتبتها [Firecrawl Alexandria](https://alexandria.firecrawl.dev/) أكثر من 550 مزوّد بيانات في مكان واحد (أكثر من 250 مليون شخص، وأكثر من 75 مليون شركة، وأكثر من 41 مليون ورقة بحثية)، إلى جانب الفهارس المتخصصة من Firecrawl والويب المباشر. هذه أرقام من الجهة المصنِّعة وليست قياسات من PromptQuorum.',
         items: [
           'نوع المنتج: واجهة REST API مع حزم SDK وأداة CLI، تُقدَّم كخدمة مستضافة وكشيفرة مصدرية يمكن استضافتها ذاتيًا',
           'المستودع: [github.com/firecrawl/firecrawl](https://github.com/firecrawl/firecrawl)، 192,265 نجمة، جرى التحقق منها عبر واجهة GitHub API',
@@ -1752,7 +1752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-21',
     educationalLevel: 'Intermediate',
     audience: '웹 페이지를 깔끔한 마크다운이나 JSON으로 변환해 로컬 또는 클라우드 LLM 파이프라인에 넣으려는 개발자 (호스팅 API 또는 셀프호스팅 Docker 스택 사용)',
     primaryTerm: 'Firecrawl',
@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Firecrawl 요금',
       'LLM용 웹 스크래핑 API',
     ],
-    leadAnswerBlock: '**Firecrawl은 웹사이트를 검색하고 스크래핑하고 크롤링하고 매핑한 뒤 LLM 파이프라인용으로 깔끔한 마크다운 또는 JSON을 반환하는 오픈소스(AGPL-3.0) 웹 데이터 API입니다.** 호스팅 서비스로도, 셀프호스팅 Docker Compose 스택으로도 실행할 수 있으며, 셀프호스팅 버전은 클라우드 제품의 축소판입니다.',
+    leadAnswerBlock: '**Firecrawl은 AI 에이전트를 더 똑똑하게 만드는 지식 인프라를 하나의 API, MCP 서버 또는 CLI로 제공합니다.** 호스팅 서비스로도, 셀프호스팅 Docker Compose 스택으로도 실행할 수 있으며, 셀프호스팅 버전은 클라우드 제품의 축소판입니다.',
     quickAnswerTop: {
       ko: {
         question: 'Firecrawl을 내 하드웨어에서만 완전히 실행할 수 있나요?',
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         id: 'what-is-firecrawl',
         title: 'Firecrawl이란?',
-        content: '**Firecrawl은 AI 시스템을 위한 웹 데이터 API입니다. URL이나 검색어를 보내면 LLM이 바로 쓸 수 있는 형식으로 페이지 내용을 돌려줍니다.** 저장소는 이를 AI 에이전트에 웹 데이터를 공급하는 수단으로 설명하며, 호스팅 서비스는 회사가 [firecrawl.dev](https://www.firecrawl.dev)에서 운영합니다.',
+        content: '**Firecrawl은 AI 시스템을 위한 웹 데이터 API입니다. URL이나 검색어를 보내면 LLM이 바로 쓸 수 있는 형식으로 페이지 내용을 돌려줍니다.** 저장소는 이를 AI 에이전트에 웹 데이터를 공급하는 수단으로 설명하며, 호스팅 서비스는 회사가 [firecrawl.dev](https://www.firecrawl.dev)에서 운영합니다. Firecrawl에 따르면 라이브러리 [Firecrawl Alexandria](https://alexandria.firecrawl.dev/)는 550개 이상의 데이터 제공자(2억 5천만 명 이상, 7,500만 개 이상의 기업, 4,100만 건 이상의 연구 논문)를 한곳에 모아 Firecrawl의 전문 인덱스, 라이브 웹과 함께 제공합니다. 이는 벤더가 밝힌 수치이며 PromptQuorum의 측정값이 아닙니다.',
         items: [
           '제품 유형: SDK와 CLI를 갖춘 REST API이며, 호스팅 서비스와 셀프호스팅 가능한 소스 코드로 제공됩니다',
           '저장소: [github.com/firecrawl/firecrawl](https://github.com/firecrawl/firecrawl), 스타 192,265개 (GitHub API로 확인)',
