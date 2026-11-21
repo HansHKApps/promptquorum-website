@@ -59,7 +59,7 @@ export const app: ToolRecord = {
   },
   verdict: 'Best for people with messy document, scan, image and audio folders on Mac, Windows or Linux who want AI-suggested names and folders they can review and undo, with local models that run offline after a one-time download of about 7 GB; limited by a noncommercial licence (commercial use needs a paid per-seat licence), an update check that is on by default, a very young public project, and privacy claims PromptQuorum did not test.',
   lastVerifiedDate: '2026-11-10',
-  lastUpstreamUpdate: '2026-11-10', // GitHub: newer of release v5.1.2 (2026-11-01) and last push to main (2026-11-10T02:33:08Z); read 2026-11-10
+  lastUpstreamUpdate: '2026-11-21', // GitHub: newer of latest release v5.4.1 (2026-11-19T02:49:45Z) and last push to main (2026-11-21T18:57:34Z); read 2026-11-21 via GitHub API; stale warning OFF
   lastUpstreamUpdateSource: 'https://github.com/iLevyTate/StratoSortStack',
   founderReviewedDate: '2026-11-10', // Owner instruction 2026-11-10 ("mark the Maker Notes and the Founder Badge"): Ben Kennedy, Ph.D. sent corrections and a note; drives the Founder-reviewed banner + star. Single review, so no founderReviewDates.
   founder: {
