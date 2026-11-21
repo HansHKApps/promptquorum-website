@@ -50,6 +50,12 @@ export const copy: AcademyBaseCopy = {
     free: { label: '短い記述式', hint: '各質問に数文で答えます。' },
     explain: { label: '概念を説明する', hint: '概念を自分の言葉で説明します。' },
   },
+  testDifficultyLegend: 'テストの難易度',
+  testDifficulties: {
+    easy: { label: 'やさしいテスト', hint: '主にレッスンで学んだ要点を確認します。' },
+    medium: { label: 'ふつうのテスト', hint: '理解と応用を組み合わせた問題です。' },
+    hard: { label: 'むずかしいテスト', hint: '主に新しい状況への応用で、紛らわしい誤答が含まれます。' },
+  },
   formatPickerTitle: 'どの形式でテストを受けますか？',
   formatPickerHint: 'テストごとに選び直せます。記述式は時間がかかります。',
   startTest: 'テストを始める',

@@ -5,7 +5,7 @@
 import { z } from 'zod'
 import { isValidProgrammeLanguage } from './language'
 import { ACADEMY_MINUTE_OPTIONS, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS } from './config'
-import { LEVELS, OPEN_FORMATS, TEST_FORMATS, TEST_MODES } from './types'
+import { LEVELS, OPEN_FORMATS, TEST_DIFFICULTIES, TEST_FORMATS, TEST_MODES } from './types'
 
 // ---------------------------------------------------------------------------------------------- model outputs
 
@@ -130,6 +130,7 @@ export const quizRequestSchema = z.object({
   language: languageSchema,
   selfLevel: z.enum(LEVELS),
   availableMinutes: minutes,
+  difficulty: z.enum(TEST_DIFFICULTIES).optional(),
   /** lesson quiz: one entry (that lesson); final test: every lesson, trimmed text */
   lessons: z
     .array(z.object({ title: z.string().max(200), topic: z.string().min(1).max(80), text: sourceText }))

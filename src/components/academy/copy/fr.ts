@@ -51,6 +51,12 @@ export const copy: AcademyBaseCopy = {
     free: { label: 'Réponse écrite courte', hint: 'Répondez à chaque question en quelques phrases.' },
     explain: { label: 'Expliquer le concept', hint: 'Expliquez un concept avec vos propres mots.' },
   },
+  testDifficultyLegend: 'Difficulté du test',
+  testDifficulties: {
+    easy: { label: 'Test facile', hint: 'Surtout les idées principales, telles qu’énoncées dans les leçons.' },
+    medium: { label: 'Test moyen', hint: 'Un mélange de compréhension et d’application.' },
+    hard: { label: 'Test difficile', hint: 'Surtout l’application à de nouvelles situations, avec des réponses fausses plausibles.' },
+  },
   formatPickerTitle: 'Comment souhaitez-vous être testé ?',
   formatPickerHint: 'Vous pouvez choisir à nouveau avant chaque test. Les réponses écrites prennent plus de temps.',
   startTest: 'Commencer le test',

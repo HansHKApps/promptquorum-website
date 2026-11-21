@@ -50,6 +50,12 @@ export const copy: AcademyBaseCopy = {
     free: { label: 'Short written answer', hint: 'Answer each question in a few sentences.' },
     explain: { label: 'Explain the concept', hint: 'Explain a concept in your own words.' },
   },
+  testDifficultyLegend: 'Test difficulty',
+  testDifficulties: {
+    easy: { label: 'Easy test', hint: 'Mostly the main ideas, straight from the lessons.' },
+    medium: { label: 'Medium test', hint: 'A mix of understanding and applying what you learned.' },
+    hard: { label: 'Difficult test', hint: 'Mostly applying ideas to new situations, with tricky wrong answers.' },
+  },
   formatPickerTitle: 'How do you want to be tested?',
   formatPickerHint: 'You can choose again for every test. Written answers take longer.',
   startTest: 'Start test',

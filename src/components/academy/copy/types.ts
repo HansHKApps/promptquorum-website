@@ -1,7 +1,7 @@
 // PromptQuorum Academy — the shape of one language's UI texts. en.ts is the source; the other eight are
 // translations of it (docs/geo-translation.md per-language rules). Keys are code-side identifiers: never translate them.
 
-import type { Level, TestFormat, TestMode } from '@/lib/academy/types'
+import type { Level, TestDifficulty, TestFormat, TestMode } from '@/lib/academy/types'
 import type { AcademyTopicHub } from '@/lib/academy/topics'
 import type { AcademyExtraCopy } from './extra'
 
@@ -31,6 +31,8 @@ export interface AcademyBaseCopy {
   testsLegend: string
   tests: Record<TestMode, { label: string; hint: string }>
   /** how tests ask (multiple choice / short written answer / explain the concept) */
+  testDifficultyLegend: string
+  testDifficulties: Record<TestDifficulty, { label: string; hint: string }>
   testFormatLegend: string
   testFormats: Record<TestFormat, { label: string; hint: string }>
   /** shown when a quiz or the final test opens, before it starts */

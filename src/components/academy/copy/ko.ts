@@ -50,6 +50,12 @@ export const copy: AcademyBaseCopy = {
     free: { label: '짧은 서술형', hint: '각 질문에 몇 문장으로 답합니다.' },
     explain: { label: '개념 설명하기', hint: '개념을 자신의 말로 설명합니다.' },
   },
+  testDifficultyLegend: '테스트 난이도',
+  testDifficulties: {
+    easy: { label: '쉬운 테스트', hint: '주로 강의에서 다룬 핵심 내용을 확인합니다.' },
+    medium: { label: '보통 테스트', hint: '이해와 응용을 섞은 문제입니다.' },
+    hard: { label: '어려운 테스트', hint: '주로 새로운 상황에 응용하는 문제이며, 헷갈리는 오답이 포함됩니다.' },
+  },
   formatPickerTitle: '어떤 방식으로 시험을 보시겠습니까?',
   formatPickerHint: '시험마다 다시 선택할 수 있습니다. 서술형은 시간이 더 걸립니다.',
   startTest: '시험 시작',

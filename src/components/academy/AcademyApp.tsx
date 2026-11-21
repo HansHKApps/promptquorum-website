@@ -12,7 +12,7 @@ import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
 import { lessonsDone, nextOpenLesson, openLesson } from '@/lib/academy/progress'
 import { programmeScore } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
-import { LEVELS, TEST_FORMATS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestFormat, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
+import { LEVELS, TEST_DIFFICULTIES, TEST_FORMATS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestDifficulty, type TestFormat, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { TERMS } from '@/lib/terms/content'
 import { isSiteLang, parseCustomLanguage } from '@/lib/academy/language'
@@ -272,6 +272,9 @@ function SetupForm({
       <ChoiceGroup<TestMode> legend={tx.testsLegend} name="academy-tests" values={TEST_MODES} labels={tx.tests} value={draft.testMode} onChange={(v) => change({ testMode: v })} />
       {draft.testMode !== 'none' && (
         <ChoiceGroup<TestFormat> legend={tx.testFormatLegend} name="academy-test-format" values={TEST_FORMATS} labels={tx.testFormats} value={draft.testFormat ?? 'choice'} onChange={(v) => change({ testFormat: v })} />
+      )}
+      {draft.testMode !== 'none' && (
+        <ChoiceGroup<TestDifficulty> legend={tx.testDifficultyLegend} name="academy-test-difficulty" values={TEST_DIFFICULTIES} labels={tx.testDifficulties} value={draft.testDifficulty ?? 'medium'} onChange={(v) => change({ testDifficulty: v })} />
       )}
 
       <div>
@@ -637,6 +640,7 @@ function toProgramme(
     selfLevel: d.selfLevel,
     testMode: d.testMode,
     testFormat: d.testFormat ?? 'choice',
+    testDifficulty: d.testDifficulty ?? 'medium',
     diagnostic: { questions: qc.questions, answers: qc.answers, gaps: summary.gaps, estimatedLevel: summary.estimatedLevel },
     objectives: plan.objectives,
     lessons,

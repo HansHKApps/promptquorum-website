@@ -5,7 +5,7 @@
 // test. Choosing starts the test (the questions are generated for that format only).
 
 import { useState } from 'react'
-import { TEST_FORMATS, type Programme, type TestFormat } from '@/lib/academy/types'
+import { TEST_DIFFICULTIES, TEST_FORMATS, type Programme, type TestDifficulty, type TestFormat } from '@/lib/academy/types'
 import { Mark, press } from './press'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
@@ -14,9 +14,10 @@ type Update = ReturnType<typeof useAcademyState>['update']
 
 export function FormatPicker({ tx, programme, update, title }: { tx: AcademyCopy; programme: Programme; update: Update; title: string }) {
   const [format, setFormat] = useState<TestFormat>(programme.testFormat ?? 'choice')
+  const [difficulty, setDifficulty] = useState<TestDifficulty>(programme.testDifficulty ?? 'medium')
   const start = () =>
     update((s) =>
-      s.programme?.progress.activeQuiz ? { ...s, programme: { ...s.programme, progress: { ...s.programme.progress, activeQuiz: { ...s.programme.progress.activeQuiz, format } } } } : s,
+      s.programme?.progress.activeQuiz ? { ...s, programme: { ...s.programme, testDifficulty: difficulty, progress: { ...s.programme.progress, activeQuiz: { ...s.programme.progress.activeQuiz, format } } } } : s,
     )
   const back = () => update((s) => ({ ...s, view: 'programme', programme: s.programme ? { ...s.programme, progress: { ...s.programme.progress, activeQuiz: undefined } } : s.programme }))
   return (
@@ -39,6 +40,23 @@ export function FormatPicker({ tx, programme, update, title }: { tx: AcademyCopy
                 <span className="min-w-0 flex-1">
                   <span className="block font-medium text-gray-900">{tx.testFormats[f].label}</span>
                   <span className="block text-sm text-gray-600">{tx.testFormats[f].hint}</span>
+                </span>
+              </span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend className="font-medium text-gray-900">{tx.testDifficultyLegend}</legend>
+        <div className="mt-2 grid gap-2 sm:grid-cols-3">
+          {TEST_DIFFICULTIES.map((d) => (
+            <label key={d} className="cursor-pointer" onPointerDown={press(() => setDifficulty(d)).onPointerDown}>
+              <input type="radio" name="academy-difficulty" value={d} checked={difficulty === d} onChange={() => setDifficulty(d)} className="peer sr-only" />
+              <span className="flex h-full items-start gap-3 rounded-xl border border-gray-300 px-4 py-3 peer-checked:border-purple-600 peer-checked:bg-purple-50 peer-focus-visible:ring-2 peer-focus-visible:ring-purple-600">
+                <Mark state={difficulty === d ? 'selected' : 'idle'} />
+                <span className="min-w-0 flex-1">
+                  <span className="block font-medium text-gray-900">{tx.testDifficulties[d].label}</span>
+                  <span className="block text-sm text-gray-600">{tx.testDifficulties[d].hint}</span>
                 </span>
               </span>
             </label>

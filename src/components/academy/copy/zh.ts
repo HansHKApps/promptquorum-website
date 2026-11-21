@@ -50,6 +50,12 @@ export const copy: AcademyBaseCopy = {
     free: { label: '简答题', hint: '用几句话回答每个问题。' },
     explain: { label: '解释概念', hint: '用自己的话解释一个概念。' },
   },
+  testDifficultyLegend: '测试难度',
+  testDifficulties: {
+    easy: { label: '简单测试', hint: '主要考查课程中直接讲到的要点。' },
+    medium: { label: '中等测试', hint: '理解与应用相结合。' },
+    hard: { label: '困难测试', hint: '主要考查在新情境中应用，错误选项更具迷惑性。' },
+  },
   formatPickerTitle: '你想用哪种方式测验？',
   formatPickerHint: '每次测验前都可以重新选择。书面回答需要更多时间。',
   startTest: '开始测验',

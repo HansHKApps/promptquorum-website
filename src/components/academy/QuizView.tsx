@@ -54,6 +54,7 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
       subject: programme.subject.slice(0, 120),
       language: programme.language,
       selfLevel: programme.selfLevel,
+      difficulty: programme.testDifficulty ?? 'medium',
       availableMinutes: programme.availableMinutes,
       lessons: lessonSource(programme, ids, isFinal ? 2500 : 4000),
       objectives: programme.objectives,
