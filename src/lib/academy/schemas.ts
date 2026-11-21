@@ -5,7 +5,7 @@
 import { z } from 'zod'
 import { isValidProgrammeLanguage } from './language'
 import { ACADEMY_MINUTE_OPTIONS, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS } from './config'
-import { LEVELS, OPEN_FORMATS, TEST_FORMATS, TEST_MODES } from './types'
+import { LEVELS, OPEN_FORMATS, TEST_DIFFICULTIES, TEST_FORMATS, TEST_MODES } from './types'
 
 // ---------------------------------------------------------------------------------------------- model outputs
 
@@ -23,7 +23,7 @@ export type GeneratedQuestion = z.infer<typeof generatedQuestionSchema>
 export const diagnosticOutputSchema = z.object({
   subjectSupported: z
     .boolean()
-    .describe('true if the subject is about AI, software, computer hardware, smart home, home energy/solar or closely related technology'),
+    .describe('true only if the subject is about local AI (running AI models on the learner\'s own computer, phone or home server, and the hardware, software, models, setup, privacy or prompting that go with it); false for anything else'),
   subjectTitle: z.string().describe('The subject as a short, clean title in the programme language'),
   questions: z.array(generatedQuestionSchema).describe('Diagnostic questions, from basic to advanced; empty if subjectSupported is false'),
 })
@@ -130,6 +130,7 @@ export const quizRequestSchema = z.object({
   language: languageSchema,
   selfLevel: z.enum(LEVELS),
   availableMinutes: minutes,
+  difficulty: z.enum(TEST_DIFFICULTIES).optional(),
   /** lesson quiz: one entry (that lesson); final test: every lesson, trimmed text */
   lessons: z
     .array(z.object({ title: z.string().max(200), topic: z.string().min(1).max(80), text: sourceText }))

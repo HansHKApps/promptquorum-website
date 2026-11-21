@@ -7,6 +7,7 @@
 // The hidden rubric (keyPoints) and the model answer never reach the browser before grading: they travel inside a
 // sealed token (seal.ts). Grading happens in grade.ts.
 
+import { DIFFICULTY_RULES } from './quiz'
 import { randomUUID } from 'node:crypto'
 import { generateStructured, type ParseClient } from './generate'
 import { promptLanguage } from './language'
@@ -79,6 +80,7 @@ async function generateRound(client: ParseClient, req: OpenQuizRequest, plan: Re
     user: [
       `Language: ${promptLanguage(req.language)}`,
       `Learner level: ${req.selfLevel}. Subject: <subject>${req.subject}</subject>`,
+      DIFFICULTY_RULES[req.difficulty ?? 'medium'],
       `Write ${total} questions with this topic spread: ${Object.entries(plan)
         .filter(([, n]) => n > 0)
         .map(([t, n]) => `${n} on "${t}"`)

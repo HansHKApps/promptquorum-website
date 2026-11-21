@@ -4,14 +4,18 @@
 // Ask Hans window: screens are views inside /academy, not URLs, so no learner page ever needs to be indexed.
 // State lives in localStorage only (see useAcademyState / src/lib/academy/store.ts).
 
+import { CabinetPrompt, CabinetView } from './CabinetView'
+import { CABINET_COPY } from './cabinet-copy'
+import { cabinetAvailable, clearCabinet, getCabinetFlag, putProgramme, requestPersistence, setCabinetFlag, type CabinetFlag } from '@/lib/academy/cabinet'
+import { Mark, press } from './press'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS, ACADEMY_USED_KEY } from '@/lib/academy/config'
+import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS, ACADEMY_TUTOR_OK_KEY, ACADEMY_USED_KEY } from '@/lib/academy/config'
 import { clearAcademyState, defaultDraft } from '@/lib/academy/store'
 import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
 import { lessonsDone, nextOpenLesson, openLesson } from '@/lib/academy/progress'
 import { programmeScore } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
-import { LEVELS, TEST_FORMATS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestFormat, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
+import { LEVELS, TEST_DIFFICULTIES, TEST_FORMATS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestDifficulty, type TestFormat, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { TERMS } from '@/lib/terms/content'
 import { isSiteLang, parseCustomLanguage } from '@/lib/academy/language'
@@ -34,6 +38,32 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
     if (!state.draft) update((s) => ({ ...s, view: 'setup', draft: defaultDraft(lang) }), false)
   }, [ready, state.draft, update, lang])
 
+  // The cabinet: a local library of every program (browser database on this computer, never sent to PromptQuorum).
+  const [cabinetFlag, setCabinetFlagState] = useState<CabinetFlag>(null)
+  const [cabinetOk, setCabinetOk] = useState(false)
+  useEffect(() => {
+    setCabinetOk(cabinetAvailable())
+    setCabinetFlagState(getCabinetFlag())
+  }, [])
+  // While the cabinet is on, the current program is kept in it (shortly after every change).
+  useEffect(() => {
+    const p = state.programme
+    if (cabinetFlag !== 'on' || !p) return
+    const t = window.setTimeout(() => void putProgramme(p).catch(() => {}), 1200)
+    return () => window.clearTimeout(t)
+  }, [cabinetFlag, state.programme])
+  const createCabinet = () => {
+    setCabinetFlag('on')
+    setCabinetFlagState('on')
+    requestPersistence()
+    if (state.programme) void putProgramme(state.programme).catch(() => {})
+  }
+  const declineCabinet = () => {
+    setCabinetFlag('declined')
+    setCabinetFlagState('declined')
+  }
+  const askCabinet = ready && cabinetOk && cabinetFlag === null && !!state.programme && lessonsDone(state.programme) >= 1 && state.view !== 'cabinet'
+
   const draft = state.draft
   // Once a program exists, its screens (quick check, program overview, lesson, quiz; the results screen has its own certificate-language chooser and stays in the page language) use the program language when the site
   // has that language, so labels like "Writing the lesson…" or "Deeper" match the lesson text. For a custom
@@ -54,8 +84,19 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           {tx.storageBlocked}
         </p>
       )}
+      {askCabinet && <CabinetPrompt lang={lang} onCreate={createCabinet} onDecline={declineCabinet} />}
+      {cabinetOk && ['setup', 'programme'].includes(state.view) && (
+        <div className="flex justify-end">
+          <button type="button" onClick={() => update((s) => ({ ...s, view: 'cabinet' }))} className="rounded-xl border border-purple-300 bg-white px-4 py-2 text-sm font-medium text-purple-800 hover:bg-purple-50">
+            <span aria-hidden="true">🗄️ </span>
+            {CABINET_COPY[lang].openButton}
+          </button>
+        </div>
+      )}
       <div {...learnProps}>
-      {state.view === 'quiz' && state.programme ? (
+      {state.view === 'cabinet' ? (
+        <CabinetView lang={lang} update={update} flag={cabinetFlag} onFlag={setCabinetFlagState} current={state.programme} />
+      ) : state.view === 'quiz' && state.programme ? (
         <QuizRouter tx={ltx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(ltx, code)} />
       ) : state.view === 'results' && state.programme && programmeScore(state.programme) ? (
         <ResultsView tx={tx} lang={lang} programme={state.programme} update={update} />
@@ -231,7 +272,7 @@ function SetupForm({
                       type="button"
                       title={t.hint}
                       aria-pressed={active}
-                      onClick={() => change({ subject: t.label })}
+                      {...press(() => change({ subject: t.label }))}
                       className={`rounded-full border px-3 py-1.5 text-sm transition-colors ${
                         active ? 'border-purple-600 bg-purple-600 text-white' : 'border-purple-200 bg-white text-purple-900 hover:bg-purple-50'
                       }`}
@@ -250,7 +291,7 @@ function SetupForm({
         <legend className="font-medium text-gray-900">{tx.timeLegend}</legend>
         <div className="mt-2 grid grid-cols-4 gap-2 sm:grid-cols-8">
           {ACADEMY_MINUTE_OPTIONS.map((m) => (
-            <label key={m} className="cursor-pointer">
+            <label key={m} className="cursor-pointer" onPointerDown={press(() => change({ availableMinutes: m })).onPointerDown}>
               <input
                 type="radio"
                 name="academy-minutes"
@@ -271,6 +312,9 @@ function SetupForm({
       <ChoiceGroup<TestMode> legend={tx.testsLegend} name="academy-tests" values={TEST_MODES} labels={tx.tests} value={draft.testMode} onChange={(v) => change({ testMode: v })} />
       {draft.testMode !== 'none' && (
         <ChoiceGroup<TestFormat> legend={tx.testFormatLegend} name="academy-test-format" values={TEST_FORMATS} labels={tx.testFormats} value={draft.testFormat ?? 'choice'} onChange={(v) => change({ testFormat: v })} />
+      )}
+      {draft.testMode !== 'none' && (
+        <ChoiceGroup<TestDifficulty> legend={tx.testDifficultyLegend} name="academy-test-difficulty" values={TEST_DIFFICULTIES} labels={tx.testDifficulties} value={draft.testDifficulty ?? 'medium'} onChange={(v) => change({ testDifficulty: v })} />
       )}
 
       <div>
@@ -380,11 +424,14 @@ function ChoiceGroup<T extends string>({
       <legend className="font-medium text-gray-900">{legend}</legend>
       <div className="mt-2 grid gap-2 sm:grid-cols-3">
         {values.map((v) => (
-          <label key={v} className="cursor-pointer">
+          <label key={v} className="cursor-pointer" onPointerDown={press(() => onChange(v)).onPointerDown}>
             <input type="radio" name={name} value={v} checked={value === v} onChange={() => onChange(v)} className="peer sr-only" />
-            <span className="block h-full rounded-xl border border-gray-300 px-4 py-3 peer-checked:border-purple-600 peer-checked:bg-purple-50 peer-focus-visible:ring-2 peer-focus-visible:ring-purple-600">
-              <span className="block font-medium text-gray-900">{labels[v].label}</span>
-              <span className="block text-sm text-gray-600">{labels[v].hint}</span>
+            <span className="flex h-full items-start gap-3 rounded-xl border border-gray-300 px-4 py-3 peer-checked:border-purple-600 peer-checked:bg-purple-50 peer-focus-visible:ring-2 peer-focus-visible:ring-purple-600">
+              <Mark state={value === v ? 'selected' : 'idle'} />
+              <span className="min-w-0 flex-1">
+                <span className="block font-medium text-gray-900">{labels[v].label}</span>
+                <span className="block text-sm text-gray-600">{labels[v].hint}</span>
+              </span>
             </span>
           </label>
         ))}
@@ -564,13 +611,14 @@ function QuickCheckView({ tx, draft, quickCheck, update }: { tx: AcademyCopy; dr
               other: 'border-gray-200 text-gray-500',
             }[state]
             return (
-              <button key={i} type="button" onClick={() => setShown(i)} disabled={answered} aria-pressed={shown === i} className={`rounded-xl border px-4 py-3 text-start focus-visible:ring-2 focus-visible:ring-purple-600 ${cls}`}>
-                {o}
+              <button key={i} type="button" {...press(() => setShown(i))} disabled={answered} aria-pressed={shown === i} className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-start focus-visible:ring-2 focus-visible:ring-purple-600 ${cls}`}>
+                <Mark state={state === 'correct' ? 'correct' : state === 'wrong' ? 'wrong' : shown === i ? 'selected' : 'idle'} />
+                <span className="min-w-0 flex-1">{o}</span>
               </button>
             )
           })}
           {!answered && (
-            <button type="button" onClick={() => setShown(-1)} className="rounded-xl px-4 py-2 text-start text-sm text-gray-600 underline underline-offset-2 hover:text-purple-700">
+            <button type="button" {...press(() => setShown(-1))} className="rounded-xl px-4 py-2 text-start text-sm text-gray-600 underline underline-offset-2 hover:text-purple-700">
               {tx.notSure}
             </button>
           )}
@@ -632,6 +680,7 @@ function toProgramme(
     selfLevel: d.selfLevel,
     testMode: d.testMode,
     testFormat: d.testFormat ?? 'choice',
+    testDifficulty: d.testDifficulty ?? 'medium',
     diagnostic: { questions: qc.questions, answers: qc.answers, gaps: summary.gaps, estimatedLevel: summary.estimatedLevel },
     objectives: plan.objectives,
     lessons,
@@ -696,7 +745,7 @@ function ProgrammeView({
       {next === -1 && (
         <div className="rounded-xl bg-green-50 px-4 py-3 text-green-900" role="status">
           <p className="font-medium">{tx.lessonsDoneTitle}</p>
-          {programme.testMode === 'none' && <p className="text-sm">{tx.programmeComplete}</p>}
+          {programme.testMode === 'none' ? <p className="text-sm">{tx.programmeComplete}</p> : !hasFinal && <p className="text-sm">{tx.lessonsDoneNextTest}</p>}
         </div>
       )}
       <ShareBar lang={lang} programme={programme} />
@@ -788,10 +837,13 @@ function PrivacyStrip({ tx, lang }: { tx: AcademyCopy; lang: AcademyLang }) {
         type="button"
         className="underline underline-offset-2 hover:text-purple-700"
         onClick={() => {
-          if (!window.confirm(tx.deleteConfirm)) return
+          const hasCabinet = getCabinetFlag() === 'on'
+          if (!window.confirm(hasCabinet ? `${tx.deleteConfirm}\n\n${CABINET_COPY[lang].deleteAlso}` : tx.deleteConfirm)) return
           clearAcademyState()
+          void clearCabinet()
           try {
             localStorage.removeItem(ACADEMY_USED_KEY)
+            localStorage.removeItem(ACADEMY_TUTOR_OK_KEY)
           } catch {
             /* blocked */
           }

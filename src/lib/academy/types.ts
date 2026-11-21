@@ -19,6 +19,9 @@ export type TestMode = (typeof TEST_MODES)[number]
  */
 export const TEST_FORMATS = ['choice', 'free', 'explain'] as const
 export type TestFormat = (typeof TEST_FORMATS)[number]
+/** How demanding the questions are (owner decision 2026-11-21). Set on the setup screen, changeable per test. */
+export const TEST_DIFFICULTIES = ['easy', 'medium', 'hard'] as const
+export type TestDifficulty = (typeof TEST_DIFFICULTIES)[number]
 export const OPEN_FORMATS = ['free', 'explain'] as const
 export type OpenFormat = (typeof OPEN_FORMATS)[number]
 
@@ -30,6 +33,8 @@ export interface SetupDraft {
   testMode: TestMode
   /** default test format; stored drafts from before this existed load as 'choice' */
   testFormat: TestFormat
+  /** question difficulty; stored drafts from before this existed load as 'medium' */
+  testDifficulty: TestDifficulty
   /** a site-language code, or a custom language (src/lib/academy/language.ts) */
   language: string
   /** opt-in "Save my progress in this browser"; false = nothing is written to localStorage (F3) */
@@ -122,6 +127,8 @@ export interface Programme {
   testMode: TestMode
   /** default format for tests; absent in programmes stored before formats existed = 'choice' */
   testFormat?: TestFormat
+  /** question difficulty; absent in programmes stored before this existed = 'medium' */
+  testDifficulty?: TestDifficulty
   /** answers: question id -> chosen option index (-1 = "not sure") */
   diagnostic: { questions: Question[]; answers: Record<string, number>; gaps: string[]; estimatedLevel: Level }
   objectives: string[]
@@ -158,7 +165,7 @@ export interface Programme {
 }
 
 /** Screens of the Academy tool. They are views inside /academy, not separate URLs (like the Ask Hans window). */
-export const ACADEMY_VIEWS = ['setup', 'diagnostic', 'programme', 'lesson', 'quiz', 'results'] as const
+export const ACADEMY_VIEWS = ['setup', 'diagnostic', 'programme', 'lesson', 'quiz', 'results', 'cabinet'] as const
 export type AcademyView = (typeof ACADEMY_VIEWS)[number]
 
 /** The quick check in progress (before a programme exists). */

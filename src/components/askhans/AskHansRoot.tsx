@@ -4,6 +4,7 @@
 // survives internal page navigation. The German search opens it with a CustomEvent (ASK_HANS_OPEN_EVENT).
 // Conversations are kept in sessionStorage only; nothing is stored on the server.
 
+import { ReadAloud } from '@/components/ReadAloud'
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { ASK_HANS_LIMITS, ASK_HANS_OPEN_EVENT, ASK_HANS_SPLIT, ASK_HANS_CONSENT_TEXT_VERSION, ASK_HANS_PROMO_AFTER_S, ASK_HANS_STORAGE } from '@/lib/askhans/config'
@@ -531,6 +532,7 @@ export function AskHansRoot() {
                   <Markdown text={m.content} />
                 </div>
               )}
+              {!readOnly && !m.pending && !m.error && !streaming && m.content && <ReadAloud lang={lang} getText={() => m.content} className="mt-1" />}
               {!readOnly && !m.pending && !m.error && !streaming && m.followups && m.followups.length > 0 && m.id === lastMessageId && (
                 <div role="group" aria-label={tx.followupsLabel} className="mt-2 flex flex-wrap gap-1.5 border-t border-border pt-2">
                   {m.followups.map((q) => (

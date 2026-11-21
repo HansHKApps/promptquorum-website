@@ -6,6 +6,7 @@
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { DocModel, DocOpenQuestion, DocQuestion } from '@/lib/academy/documentation'
 import { jpegsToPdf } from '@/lib/academy/pdf-pages'
+import { qrMatrix, verifyUrl } from '@/lib/academy/qr'
 import { langDirOf, htmlLangOf } from '@/lib/academy/language'
 import type { AcademyLang } from '@/lib/academy/types'
 import type { AcademyCopy } from './copy'
@@ -23,6 +24,9 @@ const MUTED = '#6b7280'
 const GOOD = '#15803d'
 const BAD = '#b91c1c'
 const FONT = 'system-ui, "Noto Sans", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans Arabic", "Noto Sans CJK JP", "Hiragino Sans", "Yu Gothic", "Microsoft YaHei", "PingFang SC", "Malgun Gothic", sans-serif'
+
+/** Clickable areas per drawn page (image pixels, top-left origin); read when the PDF is assembled. */
+const pageLinks = new WeakMap<HTMLCanvasElement, { x: number; y: number; w: number; h: number; url: string }[]>()
 
 class Doc {
   readonly pages: HTMLCanvasElement[] = []
@@ -159,7 +163,39 @@ export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: Acad
   d.para(c.perTopic, { size: 21, weight: 700, color: PURPLE, gap: 4 })
   for (const t of cert.byTopic) d.para(`${t.topic}: ${t.percent}% (${formatPoints(t.correct, lang)}/${t.total})`, { size: 21, indent: 16, gap: 2 })
   d.y += 12
-  d.keep(240)
+  // The course subject is the learner's own free request, not a PromptQuorum curriculum.
+  d.keep(120)
+  d.para(c.subjectNote, { size: 20, color: INK, gap: 10 })
+  d.keep(330)
+  d.rule()
+  if (m.number) {
+    // Registered: QR code and a clickable link to the verification page (clickable in the PDF, scannable on paper).
+    const url = verifyUrl(cert.id)
+    const matrix = qrMatrix(url)
+    const qrPx = 230
+    const quiet = 3
+    const cell = qrPx / (matrix.length + 2 * quiet)
+    const top = d.y
+    const qx = d.rtl ? PX_W - M - qrPx : M
+    d.ctx.fillStyle = '#ffffff'
+    d.ctx.fillRect(qx, top, qrPx, qrPx)
+    d.ctx.fillStyle = '#000000'
+    for (let r = 0; r < matrix.length; r++) for (let col = 0; col < matrix.length; col++) if (matrix[r][col]) d.ctx.fillRect(qx + (col + quiet) * cell, top + (r + quiet) * cell, cell + 0.5, cell + 0.5)
+    d.ctx.strokeStyle = '#d1d5db'
+    d.ctx.lineWidth = 2
+    d.ctx.strokeRect(qx, top, qrPx, qrPx)
+    const links = pageLinks.get(d.ctx.canvas) ?? []
+    links.push({ x: qx, y: top, w: qrPx, h: qrPx, url })
+    d.para(c.verifyTitle, { size: 26, weight: 700, color: PURPLE, indent: qrPx + 28, gap: 6 })
+    const ly = d.y
+    d.para(url, { size: 22, weight: 600, color: '#1d4ed8', indent: qrPx + 28, gap: 6 })
+    links.push({ x: M + (d.rtl ? 0 : qrPx + 28), y: ly, w: PX_W - 2 * M - qrPx - 28, h: d.y - ly, url })
+    d.para(c.verifyHint, { size: 19, color: MUTED, indent: qrPx + 28, gap: 6 })
+    pageLinks.set(d.ctx.canvas, links)
+    d.y = Math.max(d.y, top + qrPx) + 14
+  } else {
+    d.para(c.notRegisteredDoc, { size: 19, color: MUTED, gap: 10 })
+  }
   d.rule()
   d.para(c.notice, { size: 20, color: INK, gap: 8 })
   d.para(c.aiNote, { size: 18, color: MUTED, gap: 8 })
@@ -219,7 +255,7 @@ export async function renderDocumentationPdf(m: DocModel, tx: AcademyCopy, lang:
   for (const cv of canvases) {
     const blob = await new Promise<Blob | null>((resolve) => cv.toBlob(resolve, 'image/jpeg', 0.88))
     if (!blob) throw new Error('documentation: could not encode page')
-    pages.push({ jpeg: new Uint8Array(await blob.arrayBuffer()), px: { w: PX_W, h: PX_H }, pt: { w: 595.28, h: 841.89 } })
+    pages.push({ jpeg: new Uint8Array(await blob.arrayBuffer()), px: { w: PX_W, h: PX_H }, pt: { w: 595.28, h: 841.89 }, links: pageLinks.get(cv) })
   }
   return jpegsToPdf(pages, { title: `${tx.doc.title} ${m.cert.id}`, subject: m.cert.subject, keywords: m.cert.id, created: new Date(m.cert.issuedAt) })
 }

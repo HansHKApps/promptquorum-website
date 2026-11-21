@@ -1,7 +1,7 @@
 // PromptQuorum Academy — the shape of one language's UI texts. en.ts is the source; the other eight are
 // translations of it (docs/geo-translation.md per-language rules). Keys are code-side identifiers: never translate them.
 
-import type { Level, TestFormat, TestMode } from '@/lib/academy/types'
+import type { Level, TestDifficulty, TestFormat, TestMode } from '@/lib/academy/types'
 import type { AcademyTopicHub } from '@/lib/academy/topics'
 import type { AcademyExtraCopy } from './extra'
 
@@ -31,6 +31,8 @@ export interface AcademyBaseCopy {
   testsLegend: string
   tests: Record<TestMode, { label: string; hint: string }>
   /** how tests ask (multiple choice / short written answer / explain the concept) */
+  testDifficultyLegend: string
+  testDifficulties: Record<TestDifficulty, { label: string; hint: string }>
   testFormatLegend: string
   testFormats: Record<TestFormat, { label: string; hint: string }>
   /** shown when a quiz or the final test opens, before it starts */
@@ -118,6 +120,10 @@ export interface AcademyBaseCopy {
   backToProgramme: string
   doneNext: string
   doneLast: string
+  /** button on a lesson that is followed by another lesson */
+  nextLessonButton: (n: number, title: string) => string
+  /** shown after the last lesson when a final test follows */
+  lessonsDoneNextTest: string
   furtherReading: string
   fromPromptQuorum: string
 
@@ -153,6 +159,12 @@ export interface AcademyBaseCopy {
   continueQuiz: string
   startFinalTest: string
   seeResults: string
+  congratsPerfect: string
+  congratsPassed: string
+  finalNextSteps: string
+  notPassedYet: string
+  wellDone: string
+  seeResultsCertificate: string
   resultsTitle: string
   overallScore: (percent: number) => string
   passedText: (mark: number) => string

@@ -23,8 +23,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': 'Prompt engineering',
     'power-local-llm': 'Apps de IA local',
     'prompt-bites': 'Respuestas rápidas sobre IA local',
-    'smart-home': 'Hogar inteligente local',
-    'balcony-solar': 'Solar de balcón',
   },
 
   subjectLabel: '¿Qué quieres aprender?',
@@ -50,6 +48,12 @@ export const copy: AcademyBaseCopy = {
     choice: { label: 'Opción múltiple', hint: 'Elige una de tres respuestas.' },
     free: { label: 'Respuesta escrita corta', hint: 'Responde cada pregunta en pocas frases.' },
     explain: { label: 'Explicar el concepto', hint: 'Explica un concepto con tus propias palabras.' },
+  },
+  testDifficultyLegend: 'Dificultad de la prueba',
+  testDifficulties: {
+    easy: { label: 'Prueba fácil', hint: 'Sobre todo las ideas principales, tal como aparecen en las lecciones.' },
+    medium: { label: 'Prueba media', hint: 'Una mezcla de comprensión y aplicación.' },
+    hard: { label: 'Prueba difícil', hint: 'Sobre todo aplicar ideas a situaciones nuevas, con respuestas falsas engañosas.' },
   },
   formatPickerTitle: '¿Cómo quieres que te evaluemos?',
   formatPickerHint: 'Puedes elegir de nuevo antes de cada test. Las respuestas escritas llevan más tiempo.',
@@ -93,7 +97,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: 'Algo salió mal al preparar el contenido. Inténtalo de nuevo.',
   errorRate: 'Demasiadas solicitudes desde tu conexión. Espera un poco e inténtalo de nuevo.',
-  errorUnsupported: 'Academy trata IA, software, hardware informático, hogar inteligente y energía en casa. Elige un tema de estas áreas.',
+  errorUnsupported: 'PromptQuorum Academy enseña únicamente IA local: ejecutar IA en tu propio ordenador, móvil o servidor doméstico (por ejemplo Ollama, LM Studio, tamaños de modelo y cuantización, hardware para IA local, búsqueda privada en documentos, herramientas locales de voz e imagen). Tu tema no encaja, así que no se ha creado nada. Elige un tema de IA local, por ejemplo una de las sugerencias de abajo.',
   errorUnavailable: 'Academy no está disponible en este momento. Inténtalo más tarde.',
   retry: 'Reintentar',
 
@@ -119,6 +123,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: 'Volver al programa',
   doneNext: 'Hecho, siguiente lección',
   doneLast: 'Hecho, terminar lecciones',
+  nextLessonButton: (n, title) => `Siguiente: lección ${n} – ${title}`,
+  lessonsDoneNextTest: 'Siguiente paso: la prueba final. Con un 70 % obtienes tu certificado.',
   furtherReading: 'Para seguir leyendo',
   fromPromptQuorum: 'De PromptQuorum',
 
@@ -150,6 +156,12 @@ export const copy: AcademyBaseCopy = {
   continueLessons: 'Continuar',
   continueQuiz: 'Seguir con el quiz',
   startFinalTest: 'Empezar el test final',
+  congratsPerfect: '¡Puntuación perfecta! ¡Enhorabuena!',
+  congratsPassed: '¡Enhorabuena, has aprobado!',
+  finalNextSteps: 'A continuación: abre tus resultados, escribe tu nombre y descarga tu certificado en PDF y tu documentación del curso, un registro de tus lecciones, pruebas y respuestas.',
+  notPassedYet: 'Todavía no has alcanzado la nota de aprobado, y no pasa nada: aprender requiere repetición. Abre tus resultados para ver qué temas repasar y repite la prueba con preguntas nuevas.',
+  wellDone: '¡Bien hecho!',
+  seeResultsCertificate: 'Ver resultados y obtener mi certificado',
   seeResults: 'Ver resultados',
   resultsTitle: 'Tus resultados',
   overallScore: (p) => `${p} %`,

@@ -22,8 +22,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': 'プロンプトエンジニアリング',
     'power-local-llm': 'ローカルAIアプリ',
     'prompt-bites': 'ローカルAIのQ&A',
-    'smart-home': 'ローカルなスマートホーム',
-    'balcony-solar': 'ベランダ太陽光発電',
   },
 
   subjectLabel: '何を学びたいですか？',
@@ -49,6 +47,12 @@ export const copy: AcademyBaseCopy = {
     choice: { label: '選択式', hint: '3つの選択肢から1つ選びます。' },
     free: { label: '短い記述式', hint: '各質問に数文で答えます。' },
     explain: { label: '概念を説明する', hint: '概念を自分の言葉で説明します。' },
+  },
+  testDifficultyLegend: 'テストの難易度',
+  testDifficulties: {
+    easy: { label: 'やさしいテスト', hint: '主にレッスンで学んだ要点を確認します。' },
+    medium: { label: 'ふつうのテスト', hint: '理解と応用を組み合わせた問題です。' },
+    hard: { label: 'むずかしいテスト', hint: '主に新しい状況への応用で、紛らわしい誤答が含まれます。' },
   },
   formatPickerTitle: 'どの形式でテストを受けますか？',
   formatPickerHint: 'テストごとに選び直せます。記述式は時間がかかります。',
@@ -92,7 +96,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: 'コンテンツの準備中に問題が発生しました。もう一度お試しください。',
   errorRate: 'お使いの接続からのリクエストが多すぎます。少し待ってから再度お試しください。',
-  errorUnsupported: 'AcademyはAI、ソフトウェア、PCハードウェア、スマートホーム、家庭のエネルギーを扱います。これらの分野からテーマを選んでください。',
+  errorUnsupported: 'PromptQuorum Academyで学べるのはローカルAIのみです。自分のパソコン、スマートフォン、ホームサーバーでAIを動かす内容（例：Ollama、LM Studio、モデルサイズと量子化、ローカルAI向けハードウェア、プライベートな文書検索、ローカルの音声・画像ツール）が対象です。ご入力のテーマは対象外のため、何も作成していません。下の候補など、ローカルAIに関するテーマを選んでください。',
   errorUnavailable: '現在Academyは利用できません。しばらくしてから再度お試しください。',
   retry: '再試行',
 
@@ -118,6 +122,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: 'プログラムに戻る',
   doneNext: '完了して次のレッスンへ',
   doneLast: '完了してレッスンを終える',
+  nextLessonButton: (n, title) => `次へ：レッスン${n}「${title}」`,
+  lessonsDoneNextTest: '次のステップ：最終テスト。70%に達すると修了証を受け取れます。',
   furtherReading: '関連記事',
   fromPromptQuorum: 'PromptQuorumより',
 
@@ -149,6 +155,12 @@ export const copy: AcademyBaseCopy = {
   continueLessons: '続ける',
   continueQuiz: 'クイズを続ける',
   startFinalTest: '最終テストを始める',
+  congratsPerfect: '満点です！おめでとうございます！',
+  congratsPassed: '合格おめでとうございます！',
+  finalNextSteps: '次は結果を開き、お名前を入力して、PDFの修了証とコースドキュメント（レッスン、テスト、回答の記録）をダウンロードしましょう。',
+  notPassedYet: 'まだ合格ラインには届いていませんが、大丈夫です。学習には繰り返しが大切です。結果を開いて復習するトピックを確認し、新しい問題でもう一度挑戦しましょう。',
+  wellDone: 'よくできました！',
+  seeResultsCertificate: '結果を見て修了証を受け取る',
   seeResults: '結果を見る',
   resultsTitle: 'あなたの結果',
   overallScore: (p) => `${p}%`,

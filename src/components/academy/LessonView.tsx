@@ -5,6 +5,7 @@
 // programme. The learner always sees subject, objective, "lesson x of y" and progress (SPEC 5 navigation rule).
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { ReadAloud } from '@/components/ReadAloud'
 import { Markdown } from '@/components/askhans/markdown'
 import { ACADEMY_IDLE_AFTER_MS, ACADEMY_TICK_SECONDS } from '@/lib/academy/config'
 import { addActiveTime, lessonsDone, markLessonDone, setLessonContent } from '@/lib/academy/progress'
@@ -135,14 +136,16 @@ export function LessonView({
 
   return (
     <div ref={topRef} className="scroll-mt-24 space-y-4">
-      {/* Always visible: subject, lesson x of y, progress. */}
-      <div className="rounded-2xl border border-purple-100 bg-white p-4">
-        <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+      {/* Always visible, also while scrolling: subject, "lesson x of y · title" and progress (SPEC 5 navigation rule). */}
+      <div className="sticky top-0 z-20 -mx-1 rounded-2xl border border-purple-100 bg-white/95 px-4 py-3 shadow-sm backdrop-blur">
+        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm">
           <span className="font-medium text-gray-900">{programme.subject}</span>
-          <span className="text-gray-500">{tx.lessonOf(index + 1, total)}</span>
+          <span className="min-w-0 truncate text-gray-600">
+            {tx.lessonOf(index + 1, total)} · {lesson.title}
+          </span>
         </div>
-        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-purple-100" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={done}>
-          <div className="h-full bg-purple-600 transition-all" style={{ width: `${(done / total) * 100}%` }} />
+        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-purple-100" role="progressbar" aria-label={tx.lessonOf(index + 1, total)} aria-valuemin={0} aria-valuemax={total} aria-valuenow={done}>
+          <div className="h-full bg-purple-600 transition-all" style={{ width: `${(Math.max(done, index) / total) * 100}%` }} />
         </div>
       </div>
 
@@ -182,19 +185,14 @@ export function LessonView({
           </div>
         ) : (
           <>
-            <Content lang={programme.language} className="space-y-5">
+            <ReadAloud lang={programme.language} getText={() => `${lesson.title}. ${lesson.sections.map((s) => `${s.heading}. ${s.body}`).join(' ')}`} />
+            <Content lang={programme.language} className="space-y-8">
               {lesson.sections.map((s, i) => (
-                <section key={i} className="space-y-2">
-                  <h3 className="text-lg font-semibold text-gray-900">{s.heading}</h3>
-                  <div className="space-y-3 leading-relaxed text-gray-800">
+                <section key={i} className="space-y-3">
+                  <h3 className="pt-2 text-xl font-semibold leading-snug text-gray-900 sm:text-2xl">{s.heading}</h3>
+                  <div className="space-y-4 text-[1.05rem] leading-8 text-gray-800">
                     <Markdown text={s.body} />
                   </div>
-                  <SectionHelp
-                    label={tx.tutor.helpSection}
-                    groupLabel={tx.tutor.title}
-                    options={(['simpler', 'example', 'deeper', 'summarize'] as const).map((k) => ({ key: k, label: tx.tutor[k] }))}
-                    onPick={(k) => ask({ trigger: k, section: { heading: s.heading, body: s.body } })}
-                  />
                 </section>
               ))}
             </Content>
@@ -229,6 +227,8 @@ export function LessonView({
               lessonText={lesson.sections.map((s) => `${s.heading}\n${s.body}`).join('\n\n')}
               chips={lesson.followUpQuestions}
               seed={seed}
+              title={tx.tutor.discuss}
+              quick
             />
             <div className="flex flex-wrap items-start justify-between gap-4 border-t border-gray-100 pt-4">
               <StarRating key={lesson.id} tx={tx} kind="lesson" lang={programme.language} />
@@ -245,7 +245,7 @@ export function LessonView({
             aria-disabled={!ready}
             className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {last ? tx.doneLast : tx.doneNext}
+            {last ? tx.doneLast : tx.nextLessonButton(index + 2, programme.lessons[index + 1]?.title ?? '')}
           </button>
           <button type="button" onClick={() => update((s) => ({ ...s, view: 'programme' }))} className="text-purple-700 underline underline-offset-2">
             {tx.backToProgramme}
@@ -265,27 +265,6 @@ export function LessonView({
         >
           {tx.tutor.explain}
         </button>
-      )}
-    </div>
-  )
-}
-
-/** Quiet "Need help with this part?" link under a lesson section; the four options appear only on request. */
-function SectionHelp({ label, groupLabel, options, onPick }: { label: string; groupLabel: string; options: { key: 'simpler' | 'example' | 'deeper' | 'summarize'; label: string }[]; onPick: (k: 'simpler' | 'example' | 'deeper' | 'summarize') => void }) {
-  const [open, setOpen] = useState(false)
-  return (
-    <div className="pt-1">
-      <button type="button" aria-expanded={open} onClick={() => setOpen((o) => !o)} className="text-sm text-purple-700 underline-offset-2 hover:underline">
-        {label}
-      </button>
-      {open && (
-        <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={groupLabel}>
-          {options.map((o) => (
-            <button key={o.key} type="button" onClick={() => onPick(o.key)} className="rounded-full border border-purple-200 bg-white px-3 py-1 text-xs font-medium text-purple-800 hover:bg-purple-50">
-              {o.label}
-            </button>
-          ))}
-        </div>
       )}
     </div>
   )

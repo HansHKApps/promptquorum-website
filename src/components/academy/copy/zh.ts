@@ -22,8 +22,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': '提示词工程',
     'power-local-llm': '本地AI应用',
     'prompt-bites': '本地AI快问快答',
-    'smart-home': '本地智能家居',
-    'balcony-solar': '阳台光伏',
   },
 
   subjectLabel: '你想学什么？',
@@ -49,6 +47,12 @@ export const copy: AcademyBaseCopy = {
     choice: { label: '选择题', hint: '从三个答案中选一个。' },
     free: { label: '简答题', hint: '用几句话回答每个问题。' },
     explain: { label: '解释概念', hint: '用自己的话解释一个概念。' },
+  },
+  testDifficultyLegend: '测试难度',
+  testDifficulties: {
+    easy: { label: '简单测试', hint: '主要考查课程中直接讲到的要点。' },
+    medium: { label: '中等测试', hint: '理解与应用相结合。' },
+    hard: { label: '困难测试', hint: '主要考查在新情境中应用，错误选项更具迷惑性。' },
   },
   formatPickerTitle: '你想用哪种方式测验？',
   formatPickerHint: '每次测验前都可以重新选择。书面回答需要更多时间。',
@@ -92,7 +96,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: '准备内容时出错了，请重试。',
   errorRate: '你的网络发出的请求过多，请稍等片刻再试。',
-  errorUnsupported: 'Academy 涵盖AI、软件、电脑硬件、智能家居和家庭能源。请从这些领域中选择主题。',
+  errorUnsupported: 'PromptQuorum Academy 只教授本地 AI：在自己的电脑、手机或家用服务器上运行 AI（例如 Ollama、LM Studio、模型大小与量化、本地 AI 所需硬件、私密文档检索、本地语音和图像工具）。您的主题不在范围内，因此没有创建任何内容。请选择本地 AI 相关的主题，例如下方的建议。',
   errorUnavailable: 'Academy 暂时不可用，请稍后再试。',
   retry: '重试',
 
@@ -118,6 +122,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: '返回学习计划',
   doneNext: '完成，下一课',
   doneLast: '完成，结束课程',
+  nextLessonButton: (n, title) => `下一步：第${n}课 – ${title}`,
+  lessonsDoneNextTest: '下一步：参加期末测试。达到70%即可获得证书。',
   furtherReading: '延伸阅读',
   fromPromptQuorum: '来自 PromptQuorum',
 
@@ -149,6 +155,12 @@ export const copy: AcademyBaseCopy = {
   continueLessons: '继续',
   continueQuiz: '继续测验',
   startFinalTest: '开始期末测试',
+  congratsPerfect: '满分！恭喜您！',
+  congratsPassed: '恭喜，您已通过！',
+  finalNextSteps: '下一步：打开您的成绩，输入姓名，下载 PDF 证书和课程文档（记录您的课程、测试和答案）。',
+  notPassedYet: '您尚未达到及格线，没关系：学习需要反复练习。打开成绩查看需要复习的主题，然后用新题重新测试。',
+  wellDone: '做得好！',
+  seeResultsCertificate: '查看成绩并领取证书',
   seeResults: '查看结果',
   resultsTitle: '你的成绩',
   overallScore: (p) => `${p}%`,

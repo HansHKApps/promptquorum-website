@@ -22,8 +22,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': 'هندسة الـ prompts',
     'power-local-llm': 'تطبيقات الذكاء الاصطناعي المحلي',
     'prompt-bites': 'إجابات سريعة عن الذكاء الاصطناعي المحلي',
-    'smart-home': 'المنزل الذكي المحلي',
-    'balcony-solar': 'الطاقة الشمسية للشرفات',
   },
 
   subjectLabel: 'ماذا تريد أن تتعلّم؟',
@@ -49,6 +47,12 @@ export const copy: AcademyBaseCopy = {
     choice: { label: 'اختيار من متعدد', hint: 'اختر إجابة واحدة من ثلاث.' },
     free: { label: 'إجابة كتابية قصيرة', hint: 'أجب عن كل سؤال في بضع جمل.' },
     explain: { label: 'شرح المفهوم', hint: 'اشرح مفهوماً بكلماتك الخاصة.' },
+  },
+  testDifficultyLegend: 'مستوى صعوبة الاختبار',
+  testDifficulties: {
+    easy: { label: 'اختبار سهل', hint: 'يركّز على الأفكار الرئيسية كما وردت في الدروس.' },
+    medium: { label: 'اختبار متوسط', hint: 'مزيج من الفهم والتطبيق.' },
+    hard: { label: 'اختبار صعب', hint: 'يركّز على تطبيق الأفكار في مواقف جديدة مع إجابات خاطئة مضلِّلة.' },
   },
   formatPickerTitle: 'كيف تريد أن يتم اختبارك؟',
   formatPickerHint: 'يمكنك الاختيار من جديد قبل كل اختبار. الإجابات الكتابية تستغرق وقتاً أطول.',
@@ -92,7 +96,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: 'حدث خطأ أثناء تحضير المحتوى. يُرجى المحاولة مرة أخرى.',
   errorRate: 'طلبات كثيرة جدًا من اتصالك. يُرجى الانتظار قليلًا ثم المحاولة مرة أخرى.',
-  errorUnsupported: 'تغطي Academy الذكاء الاصطناعي والبرمجيات وعتاد الحاسوب والمنزل الذكي وطاقة المنزل. يُرجى اختيار موضوع من هذه المجالات.',
+  errorUnsupported: 'تعلّم PromptQuorum Academy الذكاء الاصطناعي المحلي فقط: تشغيل الذكاء الاصطناعي على حاسوبك أو هاتفك أو خادمك المنزلي (مثل Ollama وLM Studio وأحجام النماذج والتكميم والعتاد المناسب للذكاء الاصطناعي المحلي والبحث الخاص في المستندات وأدوات الصوت والصورة المحلية). موضوعك لا يندرج ضمن ذلك، لذا لم يُنشأ شيء. يُرجى اختيار موضوع في الذكاء الاصطناعي المحلي، مثل أحد الاقتراحات أدناه.',
   errorUnavailable: 'Academy غير متاحة حاليًا. يُرجى المحاولة لاحقًا.',
   retry: 'حاول مرة أخرى',
 
@@ -118,6 +122,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: 'العودة إلى البرنامج',
   doneNext: 'تم، الدرس التالي',
   doneLast: 'تم، إنهاء الدروس',
+  nextLessonButton: (n, title) => `التالي: الدرس ${n} – ${title}`,
+  lessonsDoneNextTest: 'الخطوة التالية: الاختبار النهائي. حقّق 70٪ لتحصل على شهادتك.',
   furtherReading: 'قراءة إضافية',
   fromPromptQuorum: 'من PromptQuorum',
 
@@ -149,6 +155,12 @@ export const copy: AcademyBaseCopy = {
   continueLessons: 'متابعة',
   continueQuiz: 'متابعة الاختبار',
   startFinalTest: 'ابدأ الاختبار النهائي',
+  congratsPerfect: 'درجة كاملة! تهانينا!',
+  congratsPassed: 'تهانينا، لقد نجحت!',
+  finalNextSteps: 'الخطوة التالية: افتح نتائجك، وأدخل اسمك، ونزّل شهادتك بصيغة PDF ووثائق الدورة، وهي سجل لدروسك واختباراتك وإجاباتك.',
+  notPassedYet: 'لم تبلغ درجة النجاح بعد، وهذا لا بأس به: التعلّم يحتاج إلى التكرار. افتح نتائجك لترى المواضيع التي تحتاج إلى مراجعة، ثم أعد الاختبار بأسئلة جديدة.',
+  wellDone: 'أحسنت!',
+  seeResultsCertificate: 'عرض النتائج والحصول على شهادتي',
   seeResults: 'عرض النتائج',
   resultsTitle: 'نتائجك',
   overallScore: (p) => `${p}%`,

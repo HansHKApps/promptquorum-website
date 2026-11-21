@@ -22,8 +22,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': '프롬프트 엔지니어링',
     'power-local-llm': '로컬 AI 앱',
     'prompt-bites': '로컬 AI 짧은 답변',
-    'smart-home': '로컬 스마트홈',
-    'balcony-solar': '베란다 태양광',
   },
 
   subjectLabel: '무엇을 배우고 싶으십니까?',
@@ -49,6 +47,12 @@ export const copy: AcademyBaseCopy = {
     choice: { label: '객관식', hint: '세 개의 답 중 하나를 고릅니다.' },
     free: { label: '짧은 서술형', hint: '각 질문에 몇 문장으로 답합니다.' },
     explain: { label: '개념 설명하기', hint: '개념을 자신의 말로 설명합니다.' },
+  },
+  testDifficultyLegend: '테스트 난이도',
+  testDifficulties: {
+    easy: { label: '쉬운 테스트', hint: '주로 강의에서 다룬 핵심 내용을 확인합니다.' },
+    medium: { label: '보통 테스트', hint: '이해와 응용을 섞은 문제입니다.' },
+    hard: { label: '어려운 테스트', hint: '주로 새로운 상황에 응용하는 문제이며, 헷갈리는 오답이 포함됩니다.' },
   },
   formatPickerTitle: '어떤 방식으로 시험을 보시겠습니까?',
   formatPickerHint: '시험마다 다시 선택할 수 있습니다. 서술형은 시간이 더 걸립니다.',
@@ -92,7 +96,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: '콘텐츠를 준비하는 중 문제가 발생했습니다. 다시 시도해 주십시오.',
   errorRate: '연결에서 요청이 너무 많습니다. 잠시 기다린 후 다시 시도해 주십시오.',
-  errorUnsupported: 'Academy는 AI, 소프트웨어, 컴퓨터 하드웨어, 스마트홈, 가정용 에너지를 다룹니다. 이 분야에서 주제를 선택해 주십시오.',
+  errorUnsupported: 'PromptQuorum Academy는 로컬 AI만 다룹니다. 자신의 컴퓨터, 휴대폰, 홈 서버에서 AI를 실행하는 내용(예: Ollama, LM Studio, 모델 크기와 양자화, 로컬 AI용 하드웨어, 비공개 문서 검색, 로컬 음성·이미지 도구)이 대상입니다. 입력하신 주제는 해당하지 않아 아무것도 만들지 않았습니다. 아래 추천 주제처럼 로컬 AI와 관련된 주제를 선택해 주십시오.',
   errorUnavailable: '현재 Academy를 이용할 수 없습니다. 나중에 다시 시도해 주십시오.',
   retry: '다시 시도',
 
@@ -118,6 +122,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: '프로그램으로 돌아가기',
   doneNext: '완료, 다음 레슨',
   doneLast: '완료, 레슨 마치기',
+  nextLessonButton: (n, title) => `다음: ${n}강 – ${title}`,
+  lessonsDoneNextTest: '다음 단계: 최종 테스트. 70%를 달성하면 수료증을 받습니다.',
   furtherReading: '더 읽어 보기',
   fromPromptQuorum: 'PromptQuorum 자료',
 
@@ -149,6 +155,12 @@ export const copy: AcademyBaseCopy = {
   continueLessons: '계속',
   continueQuiz: '퀴즈 계속하기',
   startFinalTest: '최종 테스트 시작',
+  congratsPerfect: '만점입니다! 축하합니다!',
+  congratsPassed: '합격을 축하합니다!',
+  finalNextSteps: '다음 단계: 결과를 열어 이름을 입력하고 PDF 수료증과 강의 기록 문서(강의, 테스트, 답안 기록)를 내려받으세요.',
+  notPassedYet: '아직 합격 기준에 도달하지 못했지만 괜찮습니다. 학습에는 반복이 필요합니다. 결과에서 복습할 주제를 확인하고 새 문제로 다시 시험을 보세요.',
+  wellDone: '잘하셨습니다!',
+  seeResultsCertificate: '결과 보고 수료증 받기',
   seeResults: '결과 보기',
   resultsTitle: '나의 결과',
   overallScore: (p) => `${p}%`,

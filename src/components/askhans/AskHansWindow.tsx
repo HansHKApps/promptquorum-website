@@ -5,10 +5,11 @@
 // Modal dialog semantics: focus is trapped inside, Esc closes, labelled for screen readers.
 
 import { useEffect, useId, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react'
+import { TextSizeControl, useTextScale } from '@/components/TextSizeControl'
 import { createPortal } from 'react-dom'
 import { Logo } from '@/components/Logo'
 import { ASK_HANS_WINDOW } from '@/lib/askhans/config'
-import { useAskCopy, ASK_HANS_CONTACT_EMAIL } from './copy'
+import { useAskCopy, useAskLang, ASK_HANS_CONTACT_EMAIL } from './copy'
 import { AskIcon } from './icons'
 import { InfoPanel } from './InfoPanel'
 import type { Rect } from './types'
@@ -69,6 +70,8 @@ interface Props {
 export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggleMaximize, onNew, newDisabled, powerActive, onTogglePower, onEscape, children }: Props) {
   const tx = useAskCopy()
   const isDesktop = useIsDesktop()
+  const { scale, setScale } = useTextScale()
+  const askLang = useAskLang()
   const titleId = useId()
   const ref = useRef<HTMLDivElement>(null)
   const [vp, setVp] = useState({ w: window.innerWidth, h: window.innerHeight })
@@ -236,6 +239,7 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
             </button>
           )}
           <InfoPanel />
+          <TextSizeControl lang={askLang} scale={scale} setScale={setScale} />
           {isDesktop && (
             <button
               type="button"
@@ -269,7 +273,7 @@ export function AskHansWindow({ maximized, rect, onRectChange, onClose, onToggle
           </a>
         </p>
 
-        <div className="flex min-h-0 flex-1 flex-col">{children}</div>
+        <div className="flex min-h-0 flex-1 flex-col" style={scale === 1 ? undefined : { zoom: scale }}>{children}</div>
 
         {isDesktop && (
           <p className="flex-shrink-0 border-t border-border bg-white px-3 py-1 text-center text-[10px] leading-snug text-muted-foreground">

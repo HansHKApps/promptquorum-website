@@ -23,8 +23,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': 'Prompt Engineering',
     'power-local-llm': 'Lokale KI-Apps',
     'prompt-bites': 'Kurzantworten zu lokaler KI',
-    'smart-home': 'Lokales Smart Home',
-    'balcony-solar': 'Balkonkraftwerke',
   },
 
   subjectLabel: 'Was möchten Sie lernen?',
@@ -50,6 +48,12 @@ export const copy: AcademyBaseCopy = {
     choice: { label: 'Multiple Choice', hint: 'Eine von drei Antworten wählen.' },
     free: { label: 'Kurze schriftliche Antwort', hint: 'Jede Frage in einigen Sätzen beantworten.' },
     explain: { label: 'Konzept erklären', hint: 'Ein Konzept mit eigenen Worten erklären.' },
+  },
+  testDifficultyLegend: 'Schwierigkeit des Tests',
+  testDifficulties: {
+    easy: { label: 'Leichter Test', hint: 'Vor allem die Hauptideen, direkt aus den Lektionen.' },
+    medium: { label: 'Mittlerer Test', hint: 'Eine Mischung aus Verstehen und Anwenden.' },
+    hard: { label: 'Schwerer Test', hint: 'Vor allem Anwendung auf neue Situationen, mit kniffligen falschen Antworten.' },
   },
   formatPickerTitle: 'Wie möchten Sie getestet werden?',
   formatPickerHint: 'Sie können vor jedem Test neu wählen. Schriftliche Antworten dauern länger.',
@@ -94,7 +98,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: 'Beim Vorbereiten der Inhalte ist etwas schiefgegangen. Bitte versuchen Sie es erneut.',
   errorRate: 'Zu viele Anfragen von Ihrer Verbindung. Bitte warten Sie kurz und versuchen Sie es dann erneut.',
-  errorUnsupported: 'Academy behandelt KI, Software, Computer-Hardware, Smart Home und Energie im Haushalt. Bitte wählen Sie ein Thema aus diesen Bereichen.',
+  errorUnsupported: 'PromptQuorum Academy behandelt ausschließlich lokale KI: KI auf dem eigenen Computer, Smartphone oder Heimserver betreiben (zum Beispiel Ollama, LM Studio, Modellgrößen und Quantisierung, Hardware für lokale KI, private Dokumentensuche, lokale Sprach- und Bildwerkzeuge). Ihr Thema passt nicht dazu, deshalb wurde nichts erstellt. Bitte wählen Sie ein Thema aus dem Bereich lokale KI, zum Beispiel einen der Vorschläge unten.',
   errorUnavailable: 'Academy ist gerade nicht verfügbar. Bitte versuchen Sie es später erneut.',
   retry: 'Erneut versuchen',
 
@@ -120,6 +124,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: 'Zurück zum Programm',
   doneNext: 'Erledigt, nächste Lektion',
   doneLast: 'Erledigt, Lektionen abschließen',
+  nextLessonButton: (n, title) => `Weiter: Lektion ${n} – ${title}`,
+  lessonsDoneNextTest: 'Nächster Schritt: der Abschlusstest. Mit 70 % erhalten Sie Ihr Zertifikat.',
   furtherReading: 'Weiterlesen',
   fromPromptQuorum: 'Von PromptQuorum',
 
@@ -151,6 +157,12 @@ export const copy: AcademyBaseCopy = {
   continueLessons: 'Weiter',
   continueQuiz: 'Quiz fortsetzen',
   startFinalTest: 'Abschlusstest starten',
+  congratsPerfect: 'Volle Punktzahl! Herzlichen Glückwunsch!',
+  congratsPassed: 'Herzlichen Glückwunsch, bestanden!',
+  finalNextSteps: 'Als Nächstes: Öffnen Sie Ihre Ergebnisse, geben Sie Ihren Namen ein und laden Sie Ihr PDF-Zertifikat und Ihre Kursdokumentation herunter, eine Aufzeichnung Ihrer Lektionen, Tests und Antworten.',
+  notPassedYet: 'Die Bestehensgrenze ist noch nicht erreicht, das ist völlig in Ordnung: Lernen braucht Wiederholung. Öffnen Sie Ihre Ergebnisse, sehen Sie, welche Themen Sie wiederholen sollten, und wiederholen Sie den Test mit neuen Fragen.',
+  wellDone: 'Gut gemacht!',
+  seeResultsCertificate: 'Ergebnisse ansehen und Zertifikat holen',
   seeResults: 'Ergebnisse ansehen',
   resultsTitle: 'Ihre Ergebnisse',
   overallScore: (p) => `${p} %`,

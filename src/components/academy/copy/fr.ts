@@ -23,8 +23,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': 'Prompt engineering',
     'power-local-llm': "Applications d'IA locale",
     'prompt-bites': "Réponses rapides sur l'IA locale",
-    'smart-home': 'Maison connectée locale',
-    'balcony-solar': 'Solaire de balcon',
   },
 
   subjectLabel: 'Que voulez-vous apprendre ?',
@@ -50,6 +48,12 @@ export const copy: AcademyBaseCopy = {
     choice: { label: 'Choix multiple', hint: 'Choisissez une réponse parmi trois.' },
     free: { label: 'Réponse écrite courte', hint: 'Répondez à chaque question en quelques phrases.' },
     explain: { label: 'Expliquer le concept', hint: 'Expliquez un concept avec vos propres mots.' },
+  },
+  testDifficultyLegend: 'Difficulté du test',
+  testDifficulties: {
+    easy: { label: 'Test facile', hint: 'Surtout les idées principales, telles qu’énoncées dans les leçons.' },
+    medium: { label: 'Test moyen', hint: 'Un mélange de compréhension et d’application.' },
+    hard: { label: 'Test difficile', hint: 'Surtout l’application à de nouvelles situations, avec des réponses fausses plausibles.' },
   },
   formatPickerTitle: 'Comment souhaitez-vous être testé ?',
   formatPickerHint: 'Vous pouvez choisir à nouveau avant chaque test. Les réponses écrites prennent plus de temps.',
@@ -94,7 +98,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: 'Un problème est survenu pendant la préparation du contenu. Veuillez réessayer.',
   errorRate: 'Trop de requêtes depuis votre connexion. Patientez un peu, puis réessayez.',
-  errorUnsupported: "Academy couvre l'IA, les logiciels, le matériel informatique, la maison connectée et l'énergie domestique. Veuillez choisir un sujet dans ces domaines.",
+  errorUnsupported: 'PromptQuorum Academy enseigne uniquement l’IA locale : faire fonctionner l’IA sur son propre ordinateur, téléphone ou serveur domestique (par exemple Ollama, LM Studio, tailles de modèles et quantification, matériel pour l’IA locale, recherche privée dans les documents, outils vocaux et d’image locaux). Votre sujet n’entre pas dans ce cadre ; rien n’a donc été créé. Veuillez choisir un thème d’IA locale, par exemple l’une des suggestions ci-dessous.',
   errorUnavailable: "Academy n'est pas disponible pour le moment. Veuillez réessayer plus tard.",
   retry: 'Réessayer',
 
@@ -120,6 +124,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: 'Retour au programme',
   doneNext: 'Terminé, leçon suivante',
   doneLast: 'Terminé, finir les leçons',
+  nextLessonButton: (n, title) => `Suite : leçon ${n} – ${title}`,
+  lessonsDoneNextTest: 'Prochaine étape : le test final. Avec 70 %, vous obtenez votre certificat.',
   furtherReading: 'Pour aller plus loin',
   fromPromptQuorum: 'De PromptQuorum',
 
@@ -151,6 +157,12 @@ export const copy: AcademyBaseCopy = {
   continueLessons: 'Continuer',
   continueQuiz: 'Reprendre le quiz',
   startFinalTest: 'Commencer le test final',
+  congratsPerfect: 'Score parfait ! Félicitations !',
+  congratsPassed: 'Félicitations, vous avez réussi !',
+  finalNextSteps: 'Ensuite : ouvrez vos résultats, saisissez votre nom et téléchargez votre certificat PDF et votre documentation de cours, un récapitulatif de vos leçons, tests et réponses.',
+  notPassedYet: 'Vous n’avez pas encore atteint le seuil de réussite, et ce n’est pas grave : apprendre demande de la répétition. Ouvrez vos résultats pour voir quels thèmes revoir, puis refaites le test avec de nouvelles questions.',
+  wellDone: 'Bravo !',
+  seeResultsCertificate: 'Voir les résultats et obtenir mon certificat',
   seeResults: 'Voir les résultats',
   resultsTitle: 'Vos résultats',
   overallScore: (p) => `${p} %`,

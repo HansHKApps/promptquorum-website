@@ -4,6 +4,8 @@
 // options, immediate feedback with the explanation, a short result at the end. The quiz in progress (questions and
 // answers) is kept in the stored programme, so a reload continues where the learner was.
 
+import { FinishedCard } from './FinishedCard'
+import { Mark, press, type MarkState } from './press'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { scoreQuiz } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
@@ -36,6 +38,8 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
   const [error, setError] = useState<AcademyErrorCode | 'network' | null>(null)
   const [feedbackFor, setFeedbackFor] = useState<string | null>(null)
   const [checking, setChecking] = useState(false)
+  // The option just pressed, shown as 'checking' at once so a press never looks like it did nothing.
+  const [pending, setPending] = useState<number | null>(null)
   const [checkError, setCheckError] = useState<AcademyErrorCode | 'network' | null>(null)
   const requested = useRef<string | null>(null)
 
@@ -51,6 +55,7 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
       subject: programme.subject.slice(0, 120),
       language: programme.language,
       selfLevel: programme.selfLevel,
+      difficulty: programme.testDifficulty ?? 'medium',
       availableMinutes: programme.availableMinutes,
       lessons: lessonSource(programme, ids, isFinal ? 2500 : 4000),
       objectives: programme.objectives,
@@ -80,21 +85,23 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
   if (finished) {
     const next = lessonIndex >= 0 && lessonIndex + 1 < programme.lessons.length ? lessonIndex + 1 : -1
     return (
-      <section className="space-y-4 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6" aria-live="polite">
-        <h2 className="text-xl font-semibold text-gray-900">{isFinal ? tx.finalTestTitle : tx.lessonQuizTitle(lessonIndex + 1)}</h2>
-        <p className="text-lg text-gray-800">{tx.quizScore(finished.result.correct, finished.result.total)}</p>
-        <button
-          type="button"
-          onClick={() =>
+      <FinishedCard
+        tx={tx}
+        title={isFinal ? tx.finalTestTitle : tx.lessonQuizTitle(lessonIndex + 1)}
+        scoreLine={tx.quizScore(finished.result.correct, finished.result.total)}
+        correct={finished.result.correct}
+        total={finished.result.total}
+        isFinal={isFinal}
+        buttonLabel={isFinal ? tx.seeResults : tx.continueLessons}
+        onContinue={() =>
+() =>
             update((s) =>
               isFinal ? { ...s, view: 'results' } : next >= 0 && s.programme ? { ...s, view: 'lesson', programme: { ...s.programme, progress: { ...s.programme.progress, currentLesson: next } } } : { ...s, view: 'programme' },
             )
-          }
-          className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700"
-        >
-          {isFinal ? tx.seeResults : tx.continueLessons}
-        </button>
-      </section>
+          
+        }
+      >
+      </FinishedCard>
     )
   }
 
@@ -158,8 +165,10 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
     if (answered || checking) return
     setCheckError(null)
     setChecking(true)
+    setPending(i)
     const res = await postJson<{ correct: boolean; correctIndex: 0 | 1 | 2; explanationCorrect: string; explanationChosen: string | null }>('/api/academy/answer', { sealed: current.sealed, choice: i })
     setChecking(false)
+    setPending(null)
     if (!res.ok) return setCheckError(res.code)
     const v = res.data
     updateProgramme((p) => {
@@ -201,14 +210,15 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
             const isCorrect = i === current.reveal?.correctIndex
             const state = !answered ? 'idle' : isCorrect ? 'correct' : i === chosen ? 'wrong' : 'other'
             const cls = {
-              idle: 'border-gray-300 hover:border-purple-600 hover:bg-purple-50',
+              idle: pending === i ? 'border-purple-600 bg-purple-50' : 'border-gray-300 hover:border-purple-600 hover:bg-purple-50',
               correct: 'border-green-600 bg-green-50 text-green-900',
               wrong: 'border-red-500 bg-red-50 text-red-900',
               other: 'border-gray-200 text-gray-500',
             }[state]
             return (
-              <button key={i} type="button" onClick={() => void choose(i)} disabled={answered || checking} aria-pressed={chosen === i} className={`rounded-xl border px-4 py-3 text-start ${cls}`}>
-                {o}
+              <button key={i} type="button" {...press(() => void choose(i))} disabled={answered || checking} aria-pressed={chosen === i} className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-start ${cls}`}>
+                <Mark state={(pending === i ? 'pending' : state === 'correct' ? 'correct' : state === 'wrong' ? 'wrong' : 'idle') as MarkState} />
+                <span className="min-w-0 flex-1">{o}</span>
               </button>
             )
           })}

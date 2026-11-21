@@ -645,6 +645,7 @@ t('F5: the model carries every field of SPEC 10 and the passing attempt', () => 
 t('F5: filename follows the spec; non-Latin subjects fall back to "programme"', () => {
   assert.equal(certificateFilename('Quantization on 16 GB RAM!', 'PQA-2026-ABCDEFGHJK'), 'PromptQuorum-Academy-Certificate-quantization-on-16-gb-ram-PQA-2026-ABCDEFGHJK.pdf')
   assert.equal(certificateFilename('ローカルLLM', 'PQA-2026-ABCDEFGHJK'), 'PromptQuorum-Academy-Certificate-llm-PQA-2026-ABCDEFGHJK.pdf')
+  assert.equal(certificateFilename('Local LLMs', 'PQA-2026-ABCDEFGHJK', { name: 'Anna Müller', completedAt: '2026-11-21T12:00:00' }), 'PromptQuorum-Academy-Certificate-local-llms-anna-muller-2026-11-21-PQA-2026-ABCDEFGHJK.pdf')
   assert.equal(certificateFilename('日本語', 'PQA-2026-ABCDEFGHJK'), 'PromptQuorum-Academy-Certificate-programme-PQA-2026-ABCDEFGHJK.pdf')
 })
 
@@ -741,6 +742,43 @@ t('PDF pages: N pages, consistent xref, identical bytes for identical input', ()
   const xref = Number(/startxref\n(\d+)/.exec(text)![1])
   assert.ok(text.slice(xref).startsWith('xref'))
   assert.deepEqual(a, jpegsToPdf([pg, pg, pg], info))
+})
+
+t('certificate PDF: link area becomes a clickable URI annotation, xref stays consistent', () => {
+  const jpeg = new Uint8Array([0xff, 0xd8, 0xff, 0xd9])
+  const url = 'https://www.promptquorum.com/academy/verify/PQA-2026-ABCDEFGHJK'
+  const pdf = jpegToPdf(jpeg, { w: 3508, h: 2480 }, { title: 'T', subject: 'S', keywords: 'K', created: new Date('2026-11-19T10:00:00Z') }, [{ x: 100, y: 100, w: 300, h: 40, url }])
+  const text = Buffer.from(pdf).toString('latin1')
+  assert.ok(text.includes('/Annots [7 0 R]') && text.includes(`/URI (${url})`) && text.includes('/Size 8') && text.includes('xref\n0 8'))
+})
+
+t('PDF pages: link areas become clickable URI annotations on their page', () => {
+  const jpeg = new Uint8Array([0xff, 0xd8, 0xff, 0xd9])
+  const base = { jpeg, px: { w: 1240, h: 1754 }, pt: { w: 595.28, h: 841.89 } }
+  const info = { title: 'T', subject: 'S', keywords: 'K', created: new Date('2026-11-20T10:00:00Z') }
+  const url = 'https://www.promptquorum.com/academy/verify/PQA-2026-ABCDEFGHJK'
+  const text = Buffer.from(jpegsToPdf([{ ...base, links: [{ x: 96, y: 1000, w: 230, h: 230, url }] }, base], info)).toString('latin1')
+  assert.ok(text.includes('/Subtype /Link') && text.includes(`/URI (${url})`) && text.includes('/Annots [10 0 R]'))
+  assert.ok(text.includes('/Size 11'))
+  const xref = Number(/startxref\n(\d+)/.exec(text)![1])
+  assert.ok(text.slice(xref).startsWith('xref'))
+})
+
+import { decodeBackup, encodeBackup, summarize } from '../src/lib/academy/cabinet'
+t('cabinet: summary, backup round trip with a PDF, and a foreign file is refused', async () => {
+  const p = completedProgramme()
+  const sum = summarize(p)
+  assert.equal(sum.id, p.id)
+  assert.equal(sum.lessonsTotal, p.lessons.length)
+  const pdf = new Blob([new Uint8Array([37, 80, 68, 70, 45, 49])], { type: 'application/pdf' })
+  const text = await encodeBackup([{ ...sum, updatedAt: '2026-11-21T10:00:00.000Z', programme: p, documentation: { filename: 'doc.pdf', blob: pdf } }])
+  const back = decodeBackup(text)
+  assert.equal(back.length, 1)
+  assert.equal(back[0].programme.id, p.id)
+  assert.equal(back[0].documentation?.filename, 'doc.pdf')
+  assert.equal(back[0].documentation?.blob.size, 6)
+  assert.throws(() => decodeBackup(JSON.stringify({ format: 'other', entries: [] })))
+  assert.equal(decodeBackup(JSON.stringify({ format: 'promptquorum-academy-cabinet', version: 1, entries: [{ programme: { id: 1 } }] })).length, 0)
 })
 
 t('hash: SHA-256 of "abc" matches the known value', async () => {
