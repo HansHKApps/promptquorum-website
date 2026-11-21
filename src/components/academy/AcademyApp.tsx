@@ -640,7 +640,7 @@ function QuickCheckView({ tx, draft, quickCheck, update }: { tx: AcademyCopy; dr
   if (error) {
     return <ErrorBox tx={tx} code={error.code} onBack={back} onRetry={() => (error.step === 'questions' ? loadQuestions() : quickCheck && buildProgramme(quickCheck))} />
   }
-  if (phase === 'loading' || !quickCheck) return <Busy text={tx.preparingQuestions} />
+  if (phase === 'loading' || !quickCheck) return <Busy text={tx.preparingQuestions} wait={draft.language} />
   if (phase === 'building') return <Busy text={tx.preparingProgramme} wait={draft.language} />
 
   const total = quickCheck.questions.length
