@@ -13,6 +13,11 @@ import type { AcademyState } from '@/lib/academy/types'
  */
 let memoryState: AcademyState | null = null
 
+/** Read-only look at the in-memory state, for the diagnostic block of feedback mails. */
+export function peekAcademyState(): AcademyState | null {
+  return memoryState
+}
+
 /**
  * Academy state. It lives in memory; it is written to localStorage ONLY while the learner has ticked
  * "Save my progress in this browser" (draft.saveProgress). Without the tick a reload starts fresh.

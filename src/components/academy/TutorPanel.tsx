@@ -14,6 +14,7 @@ import { cleanTutorText, splitTutorStream, tutorCost, TUTOR_CAP_LESSON, TUTOR_CA
 import type { Programme } from '@/lib/academy/types'
 import { Content } from './Content'
 import { shareCopyFor } from './copy/share'
+import { feedbackBody } from './feedback-context'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -223,8 +224,13 @@ export function TutorPanel({
     fireEvent({ type: 'report_mail' })
     const r = tx.report
     const q = turns[i - 1]?.content ?? ''
-    const body = [r.mailIntro, '', '', '---', `${r.lesson}: ${lessonTitle}`, q ? `Q: ${q.slice(0, 600)}` : '', `A: ${turns[i]?.content.slice(0, 1500) ?? ''}`, `${tx.feedbackMailLanguage}: ${programme.language}`, window.location.pathname].filter((l, k) => l !== '' || k < 4)
-    window.location.href = `mailto:${ACADEMY_CONTACT_EMAIL}?subject=${encodeURIComponent(r.mailSubject)}&body=${encodeURIComponent(body.join('\n'))}`
+    const body = feedbackBody({
+      intro: r.mailIntro,
+      note: shareCopyFor(programme.language).mailDataNote,
+      uiLang: programme.language,
+      extra: [`${r.lesson}: ${lessonTitle}`, q ? `Q: ${q.slice(0, 600)}` : '', `A: ${turns[i]?.content.slice(0, 1500) ?? ''}`].filter(Boolean),
+    })
+    window.location.href = `mailto:${ACADEMY_CONTACT_EMAIL}?subject=${encodeURIComponent(r.mailSubject)}&body=${encodeURIComponent(body)}`
     setSorryFor(null)
   }
 

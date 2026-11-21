@@ -702,6 +702,7 @@ import { sha256Hex } from '../src/lib/academy/hash'
 import { documentationModel } from '../src/lib/academy/documentation'
 import { documentationFilename } from '../src/lib/academy/certificate'
 import { splitTutorStream, TUTOR_SOURCES_MARK } from '../src/lib/academy/tutor'
+import { academyContext, CONTEXT_HEADER, recordAcademyError } from '../src/components/academy/feedback-context'
 import { loadLesson, prefetchLesson } from '../src/components/academy/lesson-loader'
 import { findMaterialForQuestion } from '../src/lib/academy/lesson'
 import { shareCopyFor } from '../src/components/academy/copy/share'
@@ -1224,6 +1225,19 @@ t('quiz result screens: the continue button calls its handler (a handler returni
     assert.ok(!/onContinue=\{\(\) =>\s*\(\) =>/.test(src), `${f}: onContinue must run update, not return a function`)
     assert.ok(/onContinue=\{\(\) =>\s*update\(/.test(src), f)
   }
+})
+
+t('feedback mail: structured diagnostic block with settings and recent errors, no learner text', () => {
+  const g = globalThis as unknown as Record<string, unknown>
+  const hadWindow = 'window' in g
+  g.window = { location: { pathname: '/de/academy' }, innerWidth: 1280, innerHeight: 720 }
+  Object.defineProperty(globalThis, 'navigator', { value: { language: 'de-DE', userAgent: 'TestAgent/1.0', onLine: true }, configurable: true })
+  recordAcademyError('/api/academy/lesson?x=1', 'generation')
+  const text = academyContext({ uiLang: 'de', extra: ['Rating: 2/5 (lesson)'] })
+  assert.ok(text.startsWith(CONTEXT_HEADER))
+  for (const part of ['Rating: 2/5 (lesson)', 'Page: /de/academy', 'UI language: de', 'Recent errors:', '/api/academy/lesson generation', 'Device: TestAgent/1.0', 'viewport 1280x720']) assert.ok(text.includes(part), part)
+  assert.ok(!text.includes('x=1'), 'query strings are dropped')
+  if (!hadWindow) delete g.window
 })
 
 void Promise.all(pending).then(() => {if (failed) {

@@ -6,6 +6,8 @@
 
 import { ACADEMY_CONTACT_EMAIL } from '@/lib/academy/config'
 import type { AcademyCopy } from './copy'
+import { shareCopyFor } from './copy/share'
+import { feedbackBody } from './feedback-context'
 
 export interface ReportContext {
   lesson?: string
@@ -17,19 +19,14 @@ export function ReportProblem({ tx, lang, context }: { tx: AcademyCopy; lang: st
   const open = () => {
     void fetch('/api/academy/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type: 'report_mail' }) }).catch(() => {})
     const q = context.question
-    const lines = [
-      r.mailIntro,
-      '',
-      '',
-      '---',
+    const extra = [
       context.lesson ? `${r.lesson}: ${context.lesson}` : '',
       q ? `${r.question}: ${q.prompt}` : '',
       q && q.options.length ? `${r.options}: ${q.options.map((o, i) => `${i + 1}) ${o}`).join(' ')}` : '',
       q && q.correctIndex !== undefined ? `${r.marked}: ${q.correctIndex + 1}` : '',
-      `${tx.feedbackMailLanguage}: ${lang}`,
-      window.location.pathname,
-    ].filter((l, i) => l !== '' || i < 4)
-    window.location.href = `mailto:${ACADEMY_CONTACT_EMAIL}?subject=${encodeURIComponent(r.mailSubject)}&body=${encodeURIComponent(lines.join('\n'))}`
+    ].filter(Boolean)
+    const body = feedbackBody({ intro: r.mailIntro, note: shareCopyFor(lang).mailDataNote, uiLang: lang, extra })
+    window.location.href = `mailto:${ACADEMY_CONTACT_EMAIL}?subject=${encodeURIComponent(r.mailSubject)}&body=${encodeURIComponent(body)}`
   }
   return (
     <span className="inline-flex flex-col">

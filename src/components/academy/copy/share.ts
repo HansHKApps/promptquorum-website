@@ -47,6 +47,7 @@ export interface ShareCopy {
   wandCopyAnswer: string
   wandClose: string
   wandPlaceholder: string
+  mailDataNote: string
 }
 
 export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
@@ -94,6 +95,7 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandCopyAnswer: 'Copy answer',
     wandClose: 'Close',
     wandPlaceholder: 'Ask a question about this section…',
+    mailDataNote: 'Below is technical data about what you were doing, so we can understand your message. You can edit or delete any of it before you send.',
   },
   de: {
     plan: 'Dieses Programm teilen',
@@ -139,6 +141,7 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandCopyAnswer: 'Antwort kopieren',
     wandClose: 'Schließen',
     wandPlaceholder: 'Stellen Sie eine Frage zu diesem Abschnitt …',
+    mailDataNote: 'Unten stehen technische Angaben dazu, was Sie gerade gemacht haben, damit wir Ihre Nachricht besser verstehen. Sie können alles vor dem Senden bearbeiten oder löschen.',
   },
   fr: {
     plan: 'Partager ce programme',
@@ -184,6 +187,7 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandCopyAnswer: 'Copier la réponse',
     wandClose: 'Fermer',
     wandPlaceholder: 'Posez une question sur cette section…',
+    mailDataNote: 'Ci-dessous figurent des données techniques sur ce que vous faisiez, pour mieux comprendre votre message. Vous pouvez tout modifier ou supprimer avant l’envoi.',
   },
   es: {
     plan: 'Compartir este programa',
@@ -229,6 +233,7 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandCopyAnswer: 'Copiar la respuesta',
     wandClose: 'Cerrar',
     wandPlaceholder: 'Haz una pregunta sobre esta sección…',
+    mailDataNote: 'Abajo hay datos técnicos sobre lo que estabas haciendo, para que entendamos mejor tu mensaje. Puedes editar o borrar cualquier parte antes de enviar.',
   },
   pt: {
     plan: 'Compartilhar este programa',
@@ -274,6 +279,7 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandCopyAnswer: 'Copiar a resposta',
     wandClose: 'Fechar',
     wandPlaceholder: 'Faça uma pergunta sobre esta seção…',
+    mailDataNote: 'Abaixo estão dados técnicos sobre o que você estava fazendo, para entendermos melhor sua mensagem. Você pode editar ou apagar qualquer parte antes de enviar.',
   },
   ja: {
     plan: 'このプログラムを共有',
@@ -319,6 +325,7 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandCopyAnswer: '回答をコピー',
     wandClose: '閉じる',
     wandPlaceholder: 'このセクションについて質問を入力…',
+    mailDataNote: '以下は、メッセージを理解しやすくするための、操作内容に関する技術的なデータです。送信前に自由に編集・削除できます。',
   },
   zh: {
     plan: '分享这个学习计划',
@@ -364,6 +371,7 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandCopyAnswer: '复制回答',
     wandClose: '关闭',
     wandPlaceholder: '就本节内容提问…',
+    mailDataNote: '下面是你当时操作的技术信息，便于我们理解你的留言。发送前你可以随意修改或删除。',
   },
   ar: {
     plan: 'مشاركة هذا البرنامج',
@@ -409,6 +417,7 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandCopyAnswer: 'نسخ الإجابة',
     wandClose: 'إغلاق',
     wandPlaceholder: 'اطرح سؤالًا عن هذا القسم…',
+    mailDataNote: 'فيما يلي بيانات تقنية عمّا كنت تفعله لنساعدنا على فهم رسالتك. يمكنك تعديل أي جزء منها أو حذفه قبل الإرسال.',
   },
   ko: {
     plan: '이 프로그램 공유',
@@ -454,6 +463,7 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandCopyAnswer: '답변 복사',
     wandClose: '닫기',
     wandPlaceholder: '이 섹션에 대해 질문을 입력하십시오…',
+    mailDataNote: '아래는 메시지를 이해하는 데 도움이 되도록 작업 내용에 관한 기술 정보입니다. 보내기 전에 자유롭게 수정하거나 삭제하실 수 있습니다.',
   },
 }
 

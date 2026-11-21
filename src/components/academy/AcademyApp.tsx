@@ -25,8 +25,9 @@ import { LessonView } from './LessonView'
 import { QuizRouter } from './QuizRouter'
 import { ResultsView } from './ResultsView'
 import { ShareBar } from './ShareBar'
-import { SHARE_COPY } from './copy/share'
+import { SHARE_COPY, shareCopyFor } from './copy/share'
 import { WaitNote } from './WaitNote'
+import { feedbackBody, recordAcademyError } from './feedback-context'
 import { prefetchLesson } from './lesson-loader'
 import { trackGrowth } from './SuccessShare'
 import { downloadBlob } from '@/components/askhans/power/export/download'
@@ -518,9 +519,13 @@ async function postJson<T>(url: string, body: unknown): Promise<ApiResult<T>> {
   try {
     const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
     const json = (await res.json().catch(() => null)) as (T & { error?: AcademyErrorCode }) | null
-    if (!res.ok || !json) return { ok: false, code: json?.error ?? 'failed' }
+    if (!res.ok || !json) {
+      recordAcademyError(url, json?.error ?? 'failed')
+      return { ok: false, code: json?.error ?? 'failed' }
+    }
     return { ok: true, data: json }
   } catch {
+    recordAcademyError(url, 'network')
     return { ok: false, code: 'network' }
   }
 }
@@ -961,7 +966,7 @@ function PrivacyStrip({ tx, lang }: { tx: AcademyCopy; lang: AcademyLang }) {
  *  anonymously (a plain total). */
 function FeedbackMail({ tx, lang }: { tx: AcademyCopy; lang: AcademyLang }) {
   const open = () => {
-    const body = `${tx.feedbackMailIntro}\n\n\n---\n${tx.feedbackMailLanguage}: ${lang}\n${window.location.pathname}`
+    const body = feedbackBody({ intro: tx.feedbackMailIntro, note: shareCopyFor(lang).mailDataNote, uiLang: lang })
     void fetch('/api/academy/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type: 'feedback_mail' }) }).catch(() => {})
     window.location.href = `mailto:${ACADEMY_CONTACT_EMAIL}?subject=${encodeURIComponent(tx.feedbackMailSubject)}&body=${encodeURIComponent(body)}`
   }
@@ -971,6 +976,7 @@ function FeedbackMail({ tx, lang }: { tx: AcademyCopy; lang: AcademyLang }) {
         {tx.feedbackLink}
       </button>
       <p className="text-xs text-gray-500">{tx.feedbackNote}</p>
+      <p className="text-xs text-gray-500">{shareCopyFor(lang).mailDataNote}</p>
     </div>
   )
 }

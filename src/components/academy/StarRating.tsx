@@ -8,6 +8,8 @@
 import { useState } from 'react'
 import { ACADEMY_CONTACT_EMAIL } from '@/lib/academy/config'
 import type { AcademyCopy } from './copy'
+import { shareCopyFor } from './copy/share'
+import { feedbackBody } from './feedback-context'
 
 function Star({ filled }: { filled: boolean }) {
   return (
@@ -35,7 +37,7 @@ export function StarRating({ tx, kind, lang }: { tx: AcademyCopy; kind: 'lesson'
   }
   const writeMail = () => {
     fireEvent({ type: 'rating_mail' })
-    const body = `${r.mailIntro}\n\n\n---\n${r.mailRating}: ${stars}/5\n${tx.feedbackMailLanguage}: ${lang}\n${window.location.pathname}`
+    const body = feedbackBody({ intro: r.mailIntro, note: shareCopyFor(lang).mailDataNote, uiLang: lang, extra: [`${r.mailRating}: ${stars}/5 (${kind})`] })
     window.location.href = `mailto:${ACADEMY_CONTACT_EMAIL}?subject=${encodeURIComponent(r.mailSubject(stars))}&body=${encodeURIComponent(body)}`
     setPhase('thanks')
   }
