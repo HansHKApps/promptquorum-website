@@ -48,12 +48,18 @@
     ],
     [
       "Qu’est-ce qui n’a pas été testé ?",
-      "L’annulation, le mode copie, le mode Dashboard, les réglages d’IA et de modèles, l’outil de discussion avec les documents, le délai, la mémoire, l’usage hors ligne et la désinstallation. La version de l’appli et les modèles utilisés n’ont pas été consignés.",
+      "L’annulation, le mode copie, le mode Dashboard, les réglages d’IA et de modèles, le délai, la mémoire, l’usage hors ligne et la désinstallation. La discussion avec les documents intégrée n’a été ouverte qu’ensuite et ses réponses n’ont pas été vérifiées. La version de l’appli et les modèles utilisés n’ont pas été consignés.",
+      "observed"
+    ],
+    [
+      "StratoSort dispose-t-il de sa propre recherche et discussion avec les documents (RAG) ?",
+      "Oui. Le développeur dit que StratoSort indexe localement le contenu extrait des fichiers, récupère les éléments pertinents pour une question et les transmet au modèle, si bien qu’aucune autre appli ni MCP n’est nécessaire. Sur le Mac, appuyez sur Cmd+K ou cliquez sur Knowledge OS pour ouvrir Search, Chat, Relate, Atlas et Timeline. Le testeur a ouvert ensuite Search, Chat, Timeline et Relate et a vu une réponse de chat avec des marqueurs de source ; il n’a pas vérifié si la réponse était correcte. Une version antérieure de cette page affirmait à tort qu’une couche de recherche manquait.",
       "observed"
     ]
   ],
   "status": "Partial",
   "published": "2026-11-17",
+  "modified": "2026-11-21",
   "started": "2026-11-17",
   "ended": null,
   "meta": [
@@ -114,7 +120,7 @@
     ],
     [
       "Aide d’une IA",
-      "Claude a rédigé ce rapport à partir des notes Word du testeur et de 22 captures d’écran. Les notes ont probablement été dictées à la voix (hypothèse).",
+      "Claude a rédigé ce rapport à partir des notes Word du testeur et de 22 captures d’écran. Les notes ont probablement été dictées à la voix (hypothèse). Le chapitre de correction a été rédigé par Claude à partir de la note du développeur et de cinq autres captures d’écran.",
       "assumption"
     ],
     [
@@ -125,8 +131,8 @@
   ],
   "disclosure": "Le testeur a fondé PromptQuorum, un site de contenu et un annuaire consacrés aux applis d’IA locales. StratoSort a été ajouté à l’annuaire le 2026-11-10 avec un avis rédigé par IA, fondé sur les pages du fabricant et sur une déclaration du fondateur fournie par le développeur, et non sur un test pratique. Le testeur est en contact avec le développeur, qui a réagi à sa première tentative. StratoSort reçoit des clics depuis le site. Aucun paiement ni parrainage n’est consigné dans les notes.",
   "verdict": {
-    "general": "Un organiseur de fichiers sur l’appareil d’après sa propre description, avec des garde-fous que le testeur a pu voir : un test à blanc, une vérification fichier par fichier avant tout déplacement, et un lien MCP que l’appli dit en lecture seule. Pendant cette session, l’analyse, la vérification et un déplacement de fichiers ont été lancés (la fin du déplacement n’est pas consignée) et le lien MCP a fonctionné depuis une autre appli d’IA locale, mais le tri a été mitigé et demande des réglages. L’annulation, le mode copie, l’outil de discussion avec les documents, les modèles utilisés, le fonctionnement hors ligne, les affirmations sur la confidentialité et la désinstallation n’ont pas été testés.",
-    "fit": "Le testeur y voit un outil prometteur qui demande de petits essais et des réglages répétés, et prévoit de refaire un test l’an prochain quand il aura davantage de documents d’entreprise. Il juge le lien MCP, éventuellement avec une couche de recherche par-dessus, comme la direction intéressante. Aucune décision sur la poursuite de l’usage n’est indiquée."
+    "general": "Un organiseur de fichiers sur l’appareil d’après sa propre description, avec des garde-fous que le testeur a pu voir : un test à blanc, une vérification fichier par fichier avant tout déplacement, et un lien MCP que l’appli dit en lecture seule. Pendant cette session, l’analyse, la vérification et un déplacement de fichiers ont été lancés (la fin du déplacement n’est pas consignée) et le lien MCP a fonctionné depuis une autre appli d’IA locale, mais la correspondance a été mitigée et demande des réglages. L’annulation, le mode copie, les modèles utilisés, le fonctionnement hors ligne, les affirmations sur la confidentialité et la désinstallation n’ont pas été testés. La recherche et la discussion avec les documents intégrées (Knowledge OS) ne faisaient pas partie de la session ; le testeur les a ouvertes ensuite et a vu une réponse de chat avec des marqueurs de source, mais n’a pas vérifié les réponses (voir le chapitre de correction).",
+    "fit": "Le testeur y voit un outil prometteur qui demande de petits essais et des réglages répétés, et prévoit de refaire un test l’an prochain quand il aura davantage de documents d’entreprise. Il jugeait le lien MCP, éventuellement avec une couche de recherche par-dessus, comme la direction intéressante. Le développeur a depuis signalé que la recherche et la discussion avec les documents sont déjà intégrées, cette couche existe donc (voir le chapitre de correction). Aucune décision sur la poursuite de l’usage n’est indiquée."
   },
   "scores": [
     [
@@ -136,12 +142,12 @@
     ],
     [
       "Prise en main et choix du modèle",
-      3,
+      4,
       "Le mode guidé et le test à blanc aident ; le concept de dossier n’était pas clair pour le testeur et la lecture d’un dossier entier a échoué."
     ],
     [
       "Fonction principale",
-      3,
+      4,
       "La vérification par fichier, le renommage et le déplacement ont fonctionné ; le tri a été mitigé et les tableurs n’ont été lus qu’en partie."
     ],
     [
@@ -151,7 +157,7 @@
     ],
     [
       "Intégration (MCP)",
-      3,
+      5,
       "Connexion établie et deux outils de lecture ont fonctionné ; la configuration a demandé de la rétro-ingénierie."
     ],
     [
@@ -180,6 +186,10 @@
     [
       "observed",
       "StratoSort est une appli de bureau qui suggère des noms et des dossiers pour les fichiers et laisse l’utilisateur les vérifier avant tout déplacement. Le testeur l’a utilisée sur un Apple M4 Pro de 24 GB, lors d’une seconde session après une première tentative qui n’avait pas abouti."
+    ],
+    [
+      "observed",
+      "Correction du 2026-11-21 : StratoSort dispose de son propre système de recherche (RAG) avec recherche et discussion avec les documents, appelé Knowledge OS (Cmd+K). Une version antérieure de cette page affirmait à tort qu’une couche de recherche manquait. Le développeur, Ben Kennedy, l’a signalé ; le testeur a ensuite ouvert Search, Chat, Timeline et Relate."
     ],
     [
       "measured",
@@ -392,6 +402,11 @@
           "stratosort-mcp-tool-list-and-client-setup"
         ],
         [
+          "observed",
+          "MCP étant un protocole standard, l’application peut être reliée à un client LLM courant : les boutons de configuration de cet écran visent Claude Desktop, Cursor et Zed, et le testeur l’a reliée à Loci. Le testeur n’a pas essayé Claude Desktop, Cursor ni Zed ; aucune connexion à ces clients n’est donc vérifiée.",
+          null
+        ],
+        [
           "vendor-claim",
           "Une ligne de cet écran indique : “These tools only read. None of them moves, renames or deletes files.”",
           null
@@ -428,7 +443,73 @@
         ],
         [
           "tester-view",
-          "Il dit que cela ne ressemble pas encore à un système de recherche mais va vers un jeu de données que des outils extérieurs peuvent interroger. Il n’a appelé que deux des quatre outils ; get_document_summary et chat_with_documents n’ont pas été appelés.",
+          "Il dit que cela ne ressemble pas encore à un système de recherche mais va vers un jeu de données que des outils extérieurs peuvent interroger. Il n’a appelé que deux des quatre outils ; get_document_summary et chat_with_documents n’ont pas été appelés. Correction : StratoSort dispose bien de son propre système de recherche (voir le chapitre de correction ci-dessous).",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-knowledge",
+      "title": "Correction : StratoSort a une recherche et un chat intégrés (Knowledge OS)",
+      "items": [
+        [
+          "observed",
+          "Après la première publication de ce test, le développeur, Ben Kennedy, a écrit que StratoSort inclut déjà un système de recherche (RAG) avec sa propre recherche et sa propre discussion avec les documents, et qu’il aurait dû orienter le testeur plus clairement vers cette fonction. Cette page affirmait le contraire à plusieurs endroits ; ces énoncés sont corrigés ici et signalés dans le texte. Merci, Ben, de l’avoir signalé.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "D’après le développeur : appuyer sur Cmd+K sur le Mac, ou cliquer sur Knowledge OS dans la navigation, ouvre cinq vues. Search trouve les fichiers analysés par le sens ou par mots-clés, en combinant la similarité vectorielle et la recherche par mots-clés. Chat répond aux questions sur ces fichiers avec des citations des documents sources. Relate est un graphe de fichiers liés et de groupes. Atlas est une carte de la bibliothèque où les fichiers similaires sont regroupés. Timeline liste les fichiers analysés par date.",
+          null
+        ],
+        [
+          "observed",
+          "Le testeur a ouvert Knowledge OS ensuite. La vue Search comporte une zone intitulée “Describe what you're looking for...” et trois conseils de recherche : le langage naturel, par exemple “vacation photos from beach”, les types de fichiers, par exemple “PDF documents”, et les descriptions de contenu, par exemple “spreadsheet with budget”. Aucune recherche n’a été lancée sur la capture d’écran.",
+          "stratosort-knowledge-os-search-tips"
+        ],
+        [
+          "observed",
+          "La vue Timeline liste les fichiers analysés, chacun avec une étiquette de dossier coupée dans la fenêtre étroite (par exemple CLARI…, SEO D… et STRAT…) et le nom du fichier. Les entrées visibles sont les propres exports et notes du test.",
+          "stratosort-knowledge-os-timeline-file-list"
+        ],
+        [
+          "measured",
+          "La barre supérieure de la vue Relate indique 5 smart folders et 550 files indexed ; le 550 diffère des 286 fichiers de l’exécution de tri, et la raison n’est pas consignée. Le graphe montre 14 clusters, 47 bridges, 0 scattered files, une note de santé de A (92) avec 1 finding, et 14 nœuds avec 28 liens. Une carte de suggestion nomme deux fichiers comme liés à 83 % bien qu’ils se trouvent dans des dossiers différents.",
+          "stratosort-knowledge-os-relate-graph-550-files"
+        ],
+        [
+          "observed",
+          "Dans Chat, une conversation nommée “bing data” contient une réponse de l’assistant sur des sessions Bing avec deux marqueurs de source numérotés à côté du texte, et un sélecteur de persona indiquant “Professional Re…” (coupé). Que les chiffres de la réponse correspondent aux fichiers sources n’a pas été vérifié.",
+          "stratosort-knowledge-os-chat-answer-with-sources"
+        ],
+        [
+          "observed",
+          "Une seconde capture du même chat montre l’état “Analyzing documents...” alors que le texte de la réponse est déjà affiché sans les marqueurs de source, et la barre latérale indique “No conversations yet”.",
+          "stratosort-knowledge-os-chat-analyzing-documents"
+        ],
+        [
+          "vendor-claim",
+          "Le développeur décrit le mécanisme : StratoSort indexe localement le contenu extrait des fichiers, récupère les éléments pertinents pour une question et les fournit au modèle, qui répond à partir des documents de l’utilisateur. Aucune autre appli ni MCP n’est nécessaire pour cela. MCP donne à une autre appli l’accès à la bibliothèque, tandis que Search et Chat intégrés fonctionnent dans StratoSort.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "Le développeur dit que la configuration par défaut fonctionne en local, y compris les embeddings, la recherche et le chat. Des fournisseurs cloud optionnels peuvent être activés mais ne sont pas obligatoires. Avec MCP, que le contenu récupéré reste local dépend aussi du client et du modèle connectés. Le testeur ne l’a pas vérifié.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "À propos de la remarque du testeur selon laquelle le tri demande des descriptions de dossiers claires et des retours, le développeur dit que cela est distinct de l’entraînement ou du fine-tuning du modèle de langage. Sur l’écran Organize, la destination d’un fichier peut être modifiée avant le déplacement. Après que deux fichiers différents du même type et de la même étiquette ont été déplacés du dossier suggéré vers un même autre dossier, StratoSort apprend cette correction d’acheminement ; elle peut être consultée dans Settings > Performance > Memory & Rules. Le testeur ne l’a pas essayé.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "Le développeur dit que les versions récentes ont traité les problèmes de la première prise en main du testeur : noms de fichiers en conflit, aperçus plus clairs et listes complètes de destinations, accès aux disques externes, acheminement plus cohérent des tableurs et signalement plus clair quand des fichiers ne sont pas déplacés. La version 5.4.0 a ajouté un essai sur cinq fichiers avant les gros lots, une gestion plus sûre des dossiers qui se chevauchent et “Needs review” pour les correspondances faibles au lieu d’une destination forcée, et a corrigé l’augmentation de l’usage mémoire pendant les longs lots et réduit les analyses répétées. Le testeur n’a pas retesté ces versions.",
+          null
+        ],
+        [
+          "observed",
+          "Ce que cela change : l’énoncé selon lequel une couche de recherche devrait être ajoutée était faux, et la remarque selon laquelle l’appli ne ressemble pas encore à un système de recherche ne tient pas. Ce qui reste : les écrans n’ont été vus qu’une fois, aucune réponse n’a été vérifiée par rapport aux fichiers, et les résultats de tri de la session d’origine sont inchangés.",
           null
         ]
       ]
@@ -449,7 +530,7 @@
         ],
         [
           "tester-view",
-          "Il prévoit de créer une entité juridique l’an prochain et de refaire le test avec davantage de documents pour voir si l’appli peut garder en ordre son système de dossiers. Ce qui l’intéresse, c’est cette combinaison avec MCP et peut-être une couche de recherche par-dessus.",
+          "Il prévoit de créer une entité juridique l’an prochain et de refaire le test avec davantage de documents pour voir si l’appli peut garder en ordre son système de dossiers. Ce qui l’intéresse, c’est cette combinaison avec MCP et peut-être une couche de recherche par-dessus. Correction : cette couche est déjà intégrée (voir le chapitre de correction ci-dessus).",
           null
         ],
         [
@@ -493,7 +574,7 @@
     [
       "Suggère des noms et des dossiers que vous pouvez vérifier et annuler ; ajoute la recherche sémantique et la discussion avec les documents.",
       "Fiche de l’annuaire PromptQuorum",
-      "Noms, dossiers et vérification vus ; annulation et discussion avec les documents non testées.",
+      "Noms, dossiers et vérification vus ; annulation non testée. Search, Chat, Timeline et Relate ont été ouverts ensuite (voir le chapitre de correction) ; qualité des réponses non vérifiée.",
       "third-party"
     ],
     [
@@ -676,6 +757,20 @@
       []
     ],
     [
+      "Ouvrir Knowledge OS : Search, Chat, Timeline, Relate (après la première publication)",
+      "StratoSort",
+      "Quatre vues ouvertes ; une réponse de chat avec deux marqueurs de source vue ; réponses non vérifiées",
+      "Non consignée",
+      "Partial",
+      [
+        "stratosort-knowledge-os-search-tips",
+        "stratosort-knowledge-os-timeline-file-list",
+        "stratosort-knowledge-os-relate-graph-550-files",
+        "stratosort-knowledge-os-chat-answer-with-sources",
+        "stratosort-knowledge-os-chat-analyzing-documents"
+      ]
+    ],
+    [
       "Annulation, mode copie, mode Dashboard, réglages d’IA et de modèles, usage hors ligne, désinstallation",
       "Sans objet",
       "Non testés",
@@ -695,7 +790,7 @@
     ],
     [
       "tester-error",
-      "A jugé que cela ne ressemble pas à un système de recherche après n’avoir appelé que list_smart_folders et search_documents. La liste des outils nomme aussi get_document_summary et chat_with_documents, qui n’ont pas été appelés."
+      "A jugé que cela ne ressemble pas à un système de recherche après n’avoir appelé que list_smart_folders et search_documents. StratoSort dispose de sa propre recherche (RAG) avec recherche et discussion avec les documents, appelée Knowledge OS ; le développeur dit qu’il aurait dû orienter le testeur plus clairement vers cette fonction. La liste des outils nomme aussi get_document_summary et chat_with_documents, qui n’ont pas été appelés."
     ],
     [
       "assumption",
@@ -958,6 +1053,17 @@
       "observed",
       "Info",
       []
+    ],
+    [
+      "SS-27",
+      "Correction. StratoSort a une recherche et une discussion avec les documents intégrées dans une fenêtre Knowledge OS (Cmd+K) avec Search, Chat, Timeline, Relate et Atlas. Le testeur a ouvert ensuite Search, Chat, Timeline et Relate ; la barre supérieure indiquait 5 smart folders et 550 files indexed, et une réponse de chat portait deux marqueurs de source. L’exactitude des réponses et Atlas n’ont pas été vérifiés. L’énoncé antérieur selon lequel une couche de recherche manquait était faux.",
+      "Recherche et chat",
+      "observed",
+      "Info",
+      [
+        "stratosort-knowledge-os-search-tips",
+        "stratosort-knowledge-os-chat-answer-with-sources"
+      ]
     ]
   ],
   "severity_note": "La gravité est l’impact sur un nouvel utilisateur. Proposée, pas mesurée. Info désigne un constat qui n’est ni un problème ni un atout ; Positive désigne ce qui a bien fonctionné.",
@@ -978,7 +1084,7 @@
         "Quiconque a besoin d’un usage commercial sans vérifier la licence : l’annuaire indique une licence non commerciale et une licence payante par poste pour l’usage commercial."
       ]
     ],
-    "retest": "Nouveau test lors d’une nouvelle version majeure, une fois livrés les correctifs que le développeur a traités, ou quand le testeur disposera des documents de sa société l’an prochain. À couvrir : consigner la version de l’appli et les modèles ; lancer un jeu de test connu et compter les fichiers appariés et non catégorisés ; la limite de texte des tableurs ; l’annulation ; le mode copie ; get_document_summary et chat_with_documents ; l’usage hors ligne avec inspection du trafic ; la mémoire à l’exécution ; la désinstallation ; les conditions de licence."
+    "retest": "Nouveau test lors d’une nouvelle version majeure, une fois livrés les correctifs que le développeur a traités, ou quand le testeur disposera des documents de sa société l’an prochain. À couvrir : consigner la version de l’appli et les modèles ; lancer un jeu de test connu et compter les fichiers appariés et non catégorisés ; la limite de texte des tableurs ; l’annulation ; le mode copie ; Search et Chat intégrés (vérifier les réponses et les marqueurs de source par rapport aux fichiers, et essayer Atlas) ; get_document_summary et chat_with_documents via MCP ; les changements que le développeur indique pour la version 5.4.0 ; l’usage hors ligne avec inspection du trafic ; la mémoire à l’exécution ; la désinstallation ; les conditions de licence."
   },
   "background_intro": "Source tierce et non vérifié. Tenu à part du test.",
   "background": [
@@ -994,7 +1100,8 @@
   "sources": [
     "Notes pratiques et captures d’écran du testeur (notes Word d’origine ; PDF des notes brutes à ajouter).",
     "Fiche et avis de StratoSort dans l’annuaire PromptQuorum (slug : stratosort), vérifiés le 2026-11-10.",
-    "Site du fabricant stratosort.com (affirmations du fabricant) et dépôt de code source iLevyTate/StratoSortStack, indiqués dans l’annuaire et non ouverts pour ce test."
+    "Site du fabricant stratosort.com (affirmations du fabricant) et dépôt de code source iLevyTate/StratoSortStack, indiqués dans l’annuaire et non ouverts pour ce test.",
+    "Note du développeur au testeur (Ben Kennedy) sur la recherche et le chat intégrés, les corrections du tri et les changements de la 5.4.0, reçue après la première publication (affirmations du fabricant)."
   ],
   "evidence_labels": {
     "observed": {
@@ -1409,6 +1516,111 @@
       "subject": "Capture d’écran de l’appli Loci (client MCP)",
       "rights": "Capture d’écran du testeur, d’une interface de logiciel tiers.",
       "captured": "Date du test non consignée ; heure exacte non consignée"
+    },
+    {
+      "id": "stratosort-knowledge-os-search-tips",
+      "figure": 19,
+      "file": "stratosort-knowledge-os-search-tips.webp",
+      "path": "images/stratosort-knowledge-os-search-tips.webp",
+      "alt": "Vue Search de Knowledge OS : onglets Search, Chat, Timeline, Relate et Atlas, une zone indiquant Describe what you're looking for, et trois conseils de recherche.",
+      "caption": "Vue Search de Knowledge OS avec ses conseils de recherche ; aucune recherche n’a été lancée sur cette capture d’écran. Observé.",
+      "role": "gallery",
+      "width": 1170,
+      "height": 732,
+      "bytes": 22636,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "Capture d’écran de l’appli StratoSort",
+      "rights": "Capture d’écran du testeur, d’une interface de logiciel tiers.",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-timeline-file-list",
+      "figure": 20,
+      "file": "stratosort-knowledge-os-timeline-file-list.webp",
+      "path": "images/stratosort-knowledge-os-timeline-file-list.webp",
+      "alt": "Vue Timeline de Knowledge OS : une liste de fichiers analysés avec une étiquette de dossier coupée et le nom du fichier, comme loci-app-test-2026-11-11.docx et search-performance-2026-11-10.xlsx.",
+      "caption": "Vue Timeline listant les fichiers analysés par étiquette de dossier et par nom. Observé.",
+      "role": "gallery",
+      "width": 1102,
+      "height": 1168,
+      "bytes": 44426,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "Capture d’écran de l’appli StratoSort",
+      "rights": "Capture d’écran du testeur, d’une interface de logiciel tiers.",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-relate-graph-550-files",
+      "figure": 21,
+      "file": "stratosort-knowledge-os-relate-graph-550-files.webp",
+      "path": "images/stratosort-knowledge-os-relate-graph-550-files.webp",
+      "alt": "Vue Relate de Knowledge OS : 14 clusters, 47 bridges, une note de santé de A (92), 14 nœuds et 28 liens, et la barre supérieure indiquant 5 smart folders et 550 files indexed.",
+      "caption": "Vue Relate avec le graphe des fichiers ; chiffres lus dans l’appli. Mesuré.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 597,
+      "bytes": 47756,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "Capture d’écran de l’appli StratoSort",
+      "rights": "Capture d’écran du testeur, d’une interface de logiciel tiers.",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-chat-answer-with-sources",
+      "figure": 22,
+      "file": "stratosort-knowledge-os-chat-answer-with-sources.webp",
+      "path": "images/stratosort-knowledge-os-chat-answer-with-sources.webp",
+      "alt": "Vue Chat de Knowledge OS : une conversation nommée bing data, une réponse de l’assistant sur des sessions Bing avec deux marqueurs de source numérotés, et un sélecteur de persona.",
+      "caption": "Réponse de chat avec deux marqueurs de source. Que les chiffres correspondent aux fichiers n’a pas été vérifié. Observé.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 570,
+      "bytes": 38892,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "Capture d’écran de l’appli StratoSort",
+      "rights": "Capture d’écran du testeur, d’une interface de logiciel tiers.",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-chat-analyzing-documents",
+      "figure": 23,
+      "file": "stratosort-knowledge-os-chat-analyzing-documents.webp",
+      "path": "images/stratosort-knowledge-os-chat-analyzing-documents.webp",
+      "alt": "Vue Chat montrant l’état Analyzing documents alors que le texte de la réponse est déjà visible sans marqueurs de source, et No conversations yet dans la barre latérale.",
+      "caption": "Le même chat pendant l’analyse des documents ; les marqueurs de source n’étaient pas encore apparus. Observé.",
+      "role": "gallery",
+      "width": 1600,
+      "height": 706,
+      "bytes": 46606,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "Capture d’écran de l’appli StratoSort",
+      "rights": "Capture d’écran du testeur, d’une interface de logiciel tiers.",
+      "captured": "2026-11-21"
     }
   ],
   "figure_order": [
@@ -1429,7 +1641,12 @@
     "stratosort-mcp-connected-in-client-four-tools",
     "stratosort-mcp-servers-list-in-client",
     "stratosort-mcp-list-smart-folders-result-table",
-    "stratosort-mcp-search-documents-permission-prompt"
+    "stratosort-mcp-search-documents-permission-prompt",
+    "stratosort-knowledge-os-search-tips",
+    "stratosort-knowledge-os-timeline-file-list",
+    "stratosort-knowledge-os-relate-graph-550-files",
+    "stratosort-knowledge-os-chat-answer-with-sources",
+    "stratosort-knowledge-os-chat-analyzing-documents"
   ],
   "ui": {
     "kicker": "Test pratique PromptQuorum · {app} · {date}",
