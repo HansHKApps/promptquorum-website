@@ -111,7 +111,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     ar: 'طاقة شمسية للشرفة',
   },
   academy: {
-    en: 'PromptQuorum Academy – free personalized AI learning programmes',
+    en: 'PromptQuorum Academy – free personalized AI learning programs',
     de: 'PromptQuorum Academy – kostenlose, persönliche KI-Lernprogramme',
     fr: 'PromptQuorum Academy – programmes d’apprentissage de l’IA gratuits et personnalisés',
     ja: 'PromptQuorum Academy – 無料のパーソナライズAI学習プログラム',

@@ -91,7 +91,7 @@ export const copy: AcademyBaseCopy = {
   questionOf: (i, n) => `Question ${i} of ${n}`,
   notSure: "I'm not sure",
   preparingQuestions: 'Preparing your questions…',
-  preparingProgramme: 'Building your programme…',
+  preparingProgramme: 'Building your program…',
   changeSetup: 'Change setup',
 
   errorGeneric: 'Something went wrong while preparing your content. Please try again.',

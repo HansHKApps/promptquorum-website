@@ -383,9 +383,9 @@ const HOME_UI = {
     ja: 'ページビュー（直近24時間）', zh: '页面浏览量（最近 24 小时）', es: 'Páginas vistas, últimas 24 horas',
     pt: 'Visualizações de página, últimas 24 horas', ar: 'مشاهدات الصفحات، آخر 24 ساعة', ko: '페이지뷰, 최근 24시간',
   },
-  /** Academy counter tile: programmes created (aggregate, no personal data). Links to /academy. */
+  /** Academy counter tile: programs created (aggregate, no personal data). Links to /academy. */
   statAcademyProgrammes: {
-    en: 'Academy programmes created', de: 'Academy-Lernpläne erstellt', fr: 'Parcours Academy créés',
+    en: 'Academy programs created', de: 'Academy-Lernpläne erstellt', fr: 'Parcours Academy créés',
     ja: '作成されたAcademyプログラム', zh: '已创建的 Academy 学习计划', es: 'Programas de Academy creados',
     pt: 'Programas da Academy criados', ar: 'برامج Academy التي أُنشئت', ko: '생성된 Academy 학습 프로그램',
   },
