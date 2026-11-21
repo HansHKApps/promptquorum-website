@@ -153,6 +153,12 @@ module.exports = {
 					'50%': { opacity: '0.1' },
 					'75%': { opacity: '0.85' },
 				},
+				// Academy launcher: a soft light sweep every few seconds so the button gets noticed (disabled with prefers-reduced-motion).
+				'academy-shine': {
+					'0%, 70%': { transform: 'translateX(-130%) skewX(-18deg)', opacity: '0' },
+					'78%': { opacity: '0.7' },
+					'100%': { transform: 'translateX(260%) skewX(-18deg)', opacity: '0' },
+				},
 				// Ask Hans clickable topic picture: one shine sweep per hover/focus (replayed by group-hover/group-focus toggling the class).
 				'pic-shine': {
 					'0%': { transform: 'translateX(-130%) skewX(-18deg)', opacity: '0' },
@@ -169,6 +175,7 @@ module.exports = {
 				'aff-icon-pop': 'aff-icon-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1 both',
 				'aff-glow': 'aff-glow 2.4s ease-in-out 0.3s 1 both',
 				'pic-shine': 'pic-shine 0.9s ease-out 1',
+				'academy-shine': 'academy-shine 4.5s ease-in-out infinite',
 			},
 		},
 	},

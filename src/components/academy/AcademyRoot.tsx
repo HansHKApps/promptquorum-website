@@ -37,19 +37,12 @@ export function AcademyRoot() {
   const lang = useLang()
   const [ready, setReady] = useState(false)
   const [ui, setUi] = useState<UiState>(CLOSED)
-  // The study-hat shows only for browsers that have opened Academy before (never for first-time visitors).
-  const [used, setUsed] = useState(false)
   const [topics, setTopics] = useState<TopicSuggestion[]>([])
   const topicsLang = useRef<string | null>(null)
   const launcherRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     setUi(loadUi())
-    try {
-      setUsed(localStorage.getItem(ACADEMY_USED_KEY) === '1')
-    } catch {
-      /* blocked: the hat then follows the session state only */
-    }
     setReady(true)
   }, [])
   useEffect(() => {
@@ -58,11 +51,10 @@ export function AcademyRoot() {
 
   const open = useCallback(() => {
     setUi((u) => ({ ...u, open: true }))
-    setUsed(true)
     try {
       localStorage.setItem(ACADEMY_USED_KEY, '1')
     } catch {
-      /* blocked: the hat then follows the session state only */
+      /* blocked: only the functional "has used Academy" flag is lost */
     }
   }, [])
   const close = useCallback(() => {
@@ -88,7 +80,7 @@ export function AcademyRoot() {
   if (!ready) return null
   return (
     <>
-      {!ui.open && (ui.everClosed || used) && <AcademyLauncher ref={launcherRef} lang={lang} onOpen={open} />}
+      {!ui.open && <AcademyLauncher ref={launcherRef} lang={lang} onOpen={open} />}
       {ui.open && (
         <AcademyWindow
           lang={lang}

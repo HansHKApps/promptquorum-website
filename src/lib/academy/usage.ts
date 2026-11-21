@@ -32,6 +32,7 @@ export const FEEDBACK_FIELDS = [
   'tutor:message',
   'mail:rating',
   'mail:report',
+  'launcher:click',
   'cert:registered_download',
 ] as const
 export type FeedbackField = (typeof FEEDBACK_FIELDS)[number]

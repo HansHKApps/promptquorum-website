@@ -1,8 +1,9 @@
 'use client'
 
-// Small round study-hat (graduation cap) button shown after the Academy window was closed (the Academy twin of
-// AskHansLogo). It sits one row above the Ask Hans pill, on the same right edge, so the two never overlap.
-// One click or tap (Enter / Space) reopens the window.
+// Round study-hat (graduation cap) button shown to EVERY visitor whenever the Academy window is closed (the Academy
+// twin of AskHansLogo). It sits one row above the Ask Hans pill, on the same right edge, so the two never overlap.
+// Made to stand out: purple-to-pink gradient, glow, a pulsing ring and a light sweep (the motion is off for
+// prefers-reduced-motion). One click or tap (Enter / Space) opens the window; every click is counted (Umami + Redis).
 
 import { forwardRef } from 'react'
 import type { AcademyLang } from '@/lib/academy/types'
@@ -18,6 +19,16 @@ function StudyHat() {
   )
 }
 
+/** Anonymous click counters: Umami event (like ask_hans_button_click) + a plain Redis total shown by `npm run academy:stats`. */
+function trackLauncherClick(): void {
+  try {
+    window.umami?.track('academy_launcher_click', { source_page: window.location.pathname })
+  } catch {
+    /* tracking must never block opening the Academy */
+  }
+  void fetch('/api/academy/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type: 'launcher_click' }) }).catch(() => {})
+}
+
 export const AcademyLauncher = forwardRef<HTMLButtonElement, { lang: AcademyLang; onOpen: () => void }>(function AcademyLauncher({ lang, onOpen }, ref) {
   const tx = ACADEMY_COPY[lang]
   return (
@@ -26,11 +37,20 @@ export const AcademyLauncher = forwardRef<HTMLButtonElement, { lang: AcademyLang
       ref={ref}
       aria-label={tx.launcherTitle}
       title={tx.launcherTitle}
-      onClick={onOpen}
+      onClick={() => {
+        trackLauncherClick()
+        onOpen()
+      }}
       style={{ touchAction: 'manipulation' }}
-      className="fixed z-[80] bottom-[8.5rem] right-[6rem] md:bottom-[5.5rem] md:right-[6.5rem] flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-colors hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+      className="group fixed z-[80] bottom-[8.5rem] right-[6rem] md:bottom-[5.5rem] md:right-[6.5rem] flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 via-purple-600 to-fuchsia-500 text-white shadow-[0_0_18px_rgba(168,85,247,0.65)] ring-2 ring-white/80 transition-transform duration-200 hover:scale-110 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
     >
-      <StudyHat />
+      <span aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-full bg-fuchsia-400/60 motion-safe:animate-ping" />
+      <span aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden rounded-full">
+        <span className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-transparent via-white/70 to-transparent motion-safe:animate-academy-shine" />
+      </span>
+      <span className="relative">
+        <StudyHat />
+      </span>
     </button>
   )
 })

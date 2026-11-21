@@ -2,7 +2,7 @@
 
 /** localStorage key of the whole Academy state (docs/academy/SPEC.md section 6). */
 export const ACADEMY_STORAGE_KEY = 'pq_academy_v1'
-/** Functional flag (no personal data): this browser has opened Academy, so the study-hat button is offered on every page. */
+/** Functional flag (no personal data): this browser has opened Academy (the study-hat button is now shown to every visitor regardless). */
 export const ACADEMY_USED_KEY = 'pq_academy_used'
 
 /**

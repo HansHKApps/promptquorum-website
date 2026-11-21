@@ -18,6 +18,7 @@ const eventSchema = z.discriminatedUnion('type', [
   z.object({ type: z.literal('tutor_message') }),
   z.object({ type: z.literal('rating_mail') }),
   z.object({ type: z.literal('report_mail') }),
+  z.object({ type: z.literal('launcher_click') }),
 ])
 
 export async function POST(req: NextRequest): Promise<Response> {
@@ -28,7 +29,7 @@ export async function POST(req: NextRequest): Promise<Response> {
     if (e.type === 'certificate' || e.type === 'feedback_mail') await recordAcademy(e.type)
     else {
       const field: FeedbackField =
-        e.type === 'rating' ? (`rating:${e.kind}:${e.stars}` as FeedbackField) : e.type === 'tutor_thumb' ? (e.up ? 'tutor:up' : 'tutor:down') : e.type === 'tutor_message' ? 'tutor:message' : e.type === 'rating_mail' ? 'mail:rating' : 'mail:report'
+        e.type === 'rating' ? (`rating:${e.kind}:${e.stars}` as FeedbackField) : e.type === 'tutor_thumb' ? (e.up ? 'tutor:up' : 'tutor:down') : e.type === 'tutor_message' ? 'tutor:message' : e.type === 'rating_mail' ? 'mail:rating' : e.type === 'launcher_click' ? 'launcher:click' : 'mail:report'
       await recordAcademyFeedback(field)
     }
     return academyJson({ ok: true })
