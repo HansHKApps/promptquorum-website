@@ -18,9 +18,11 @@ import { creditLabel } from './credit'
 import { formatPoints } from '@/lib/academy/format-points'
 import { Content } from './Content'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES, type AcademyCopy } from './copy'
-import { renderCertificatePdf } from './certificate-pdf'
+import { renderCertificatePdf, renderCertificatePng } from './certificate-pdf'
 import { renderDocumentationPdf } from './documentation-pdf'
 import { ShareBar } from './ShareBar'
+import { SHARE_COPY } from './copy/share'
+import { buildPlanShare } from './share-plan'
 import { StarRating } from './StarRating'
 import type { useAcademyState } from './useAcademyState'
 
@@ -52,6 +54,8 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
   const [regError, setRegError] = useState(false)
   const [docBlob, setDocBlob] = useState<{ blob: Blob; filename: string } | null>(null)
   const [docBusy, setDocBusy] = useState(false)
+  const [shareBusy, setShareBusy] = useState(false)
+  const [imageCopied, setImageCopied] = useState(false)
   const registeredNumber = programme.certificate?.number
   const score = programmeScore(programme)
   const final = countingFinal(programme)
@@ -133,6 +137,85 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
       setCertError(true)
     } finally {
       setDocBusy(false)
+    }
+  }
+  // Sharing the finished files themselves (not just a text): the phone's share sheet (WhatsApp, Telegram, ...) gets the PDF
+  // attached; where the browser cannot share files, the certificate is copied as an image to paste into a chat.
+  const sx = SHARE_COPY[lang]
+  const shareLink = buildPlanShare(programme, lang, sx, score.percent)
+  const sharedFile = (kind: 'certificate' | 'documentation' | 'image') => {
+    postEvent({ type: 'share_file', kind })
+    try {
+      window.umami?.track('academy_share_file', { kind, source_page: window.location.pathname })
+    } catch {
+      /* tracking never blocks sharing */
+    }
+  }
+  const trySharePdf = async (blob: Blob, filename: string, title: string): Promise<boolean> => {
+    const data = { files: [new File([blob], filename, { type: 'application/pdf' })], title, text: shareLink.plain }
+    if (typeof navigator === 'undefined' || typeof navigator.canShare !== 'function' || !navigator.canShare(data)) return false
+    try {
+      await navigator.share(data)
+    } catch (err) {
+      // The learner closing the share sheet is not an error and must not trigger the fallback.
+      if (!(err instanceof DOMException && err.name === 'AbortError')) return false
+    }
+    return true
+  }
+  const certParts = () => {
+    const model = certificateModel(programme, name)
+    return { model, number: registeredNumber, filename: certificateFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt }) }
+  }
+  const copyCertificateImage = async () => {
+    if (shareBusy) return
+    setShareBusy(true)
+    try {
+      const { model, number } = certParts()
+      const png = renderCertificatePng(model, ACADEMY_COPY[certLang], certLang, { registered: !!number, number })
+      // The promise form keeps the clipboard write inside the click gesture (Safari requires it).
+      await navigator.clipboard.write([new ClipboardItem({ 'image/png': png })])
+      sharedFile('image')
+      setImageCopied(true)
+      setTimeout(() => setImageCopied(false), 6000)
+    } catch (err) {
+      console.error('[academy] copy certificate image failed', err instanceof Error ? err.message : err)
+      setCertError(true)
+    } finally {
+      setShareBusy(false)
+    }
+  }
+  const shareCertificate = async () => {
+    if (shareBusy) return
+    setShareBusy(true)
+    try {
+      const { model, number, filename } = certParts()
+      const blob = await renderCertificatePdf(model, ACADEMY_COPY[certLang], certLang, { registered: !!number, number })
+      if (await trySharePdf(blob, filename, `${sx.docTitle}: ${programme.subject}`)) sharedFile('certificate')
+      else {
+        setShareBusy(false)
+        await copyCertificateImage()
+      }
+    } catch (err) {
+      console.error('[academy] certificate share failed', err instanceof Error ? err.message : err)
+      setCertError(true)
+    } finally {
+      setShareBusy(false)
+    }
+  }
+  const shareDocumentation = async () => {
+    if (shareBusy) return
+    setShareBusy(true)
+    try {
+      const model = certificateModel(programme, name)
+      const filename = documentationFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt })
+      const blob = docBlob?.blob ?? new Blob([(await renderDocumentationPdf(documentationModel(programme, model, languageName, registeredNumber), ACADEMY_COPY[certLang], certLang, programme.language)) as BlobPart], { type: 'application/pdf' })
+      if (await trySharePdf(blob, filename, `${tx.reg.docButton}: ${programme.subject}`)) sharedFile('documentation')
+      else saveBlob(blob, filename)
+    } catch (err) {
+      console.error('[academy] documentation share failed', err instanceof Error ? err.message : err)
+      setCertError(true)
+    } finally {
+      setShareBusy(false)
     }
   }
   // Written answers (free / explain) are graded by AI: say so next to the score whenever any counted result used them.
@@ -256,6 +339,24 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
                 {certError ? tx.certError : blocker ? blockerText : ''}
               </p>
             </div>
+            {programme.certificate && !blocker && (
+              <div className="space-y-2 rounded-xl border border-purple-100 bg-purple-50/40 p-4" dir={shareLink.dir}>
+                <div className="flex flex-wrap gap-2">
+                  <button type="button" disabled={shareBusy} onClick={() => void shareCertificate()} className="rounded-xl bg-purple-600 px-4 py-2 text-sm font-semibold text-white hover:bg-purple-700 disabled:opacity-50">
+                    {sx.shareCert}
+                  </button>
+                  <button type="button" disabled={shareBusy} onClick={() => void shareDocumentation()} className="rounded-xl border border-purple-600 px-4 py-2 text-sm font-semibold text-purple-700 hover:bg-purple-50 disabled:opacity-50">
+                    {sx.shareDoc}
+                  </button>
+                  <button type="button" disabled={shareBusy} onClick={() => void copyCertificateImage()} className="rounded-xl border border-purple-200 bg-white px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-50 disabled:opacity-50">
+                    {sx.copyCertImage}
+                  </button>
+                </div>
+                <p className="text-sm text-gray-700" role="status">
+                  {imageCopied ? sx.imageCopied : ''}
+                </p>
+              </div>
+            )}
           </div>
         ) : (
           <div className="space-y-2">

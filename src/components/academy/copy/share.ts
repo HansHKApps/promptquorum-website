@@ -14,6 +14,10 @@ export interface ShareCopy {
   docTitle: string
   objectives: string
   lessons: string
+  shareCert: string
+  shareDoc: string
+  copyCertImage: string
+  imageCopied: string
 }
 
 export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
@@ -28,6 +32,10 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     docTitle: 'Learning plan',
     objectives: 'Objectives',
     lessons: 'Lessons',
+    shareCert: 'Share certificate',
+    shareDoc: 'Share Course Documentation',
+    copyCertImage: 'Copy certificate as image',
+    imageCopied: 'Image copied. Paste it into WhatsApp or Telegram.',
   },
   de: {
     plan: 'Dieses Programm teilen',
@@ -40,6 +48,10 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     docTitle: 'Programm',
     objectives: 'Lernziele',
     lessons: 'Lektionen',
+    shareCert: 'Teilnahmebescheinigung teilen',
+    shareDoc: 'Kursdokumentation teilen',
+    copyCertImage: 'Teilnahmebescheinigung als Bild kopieren',
+    imageCopied: 'Bild kopiert. Fügen Sie es in WhatsApp oder Telegram ein.',
   },
   fr: {
     plan: 'Partager ce programme',
@@ -52,6 +64,10 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     docTitle: 'Programme',
     objectives: 'Objectifs',
     lessons: 'Leçons',
+    shareCert: 'Partager l’attestation',
+    shareDoc: 'Partager la documentation du cours',
+    copyCertImage: 'Copier l’attestation en image',
+    imageCopied: 'Image copiée. Collez-la dans WhatsApp ou Telegram.',
   },
   es: {
     plan: 'Compartir este programa',
@@ -64,6 +80,10 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     docTitle: 'Programa',
     objectives: 'Objetivos',
     lessons: 'Lecciones',
+    shareCert: 'Compartir la constancia',
+    shareDoc: 'Compartir la documentación del curso',
+    copyCertImage: 'Copiar la constancia como imagen',
+    imageCopied: 'Imagen copiada. Pégala en WhatsApp o Telegram.',
   },
   pt: {
     plan: 'Compartilhar este programa',
@@ -76,6 +96,10 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     docTitle: 'Programa',
     objectives: 'Objetivos',
     lessons: 'Aulas',
+    shareCert: 'Compartilhar o comprovante',
+    shareDoc: 'Compartilhar a documentação do curso',
+    copyCertImage: 'Copiar o comprovante como imagem',
+    imageCopied: 'Imagem copiada. Cole no WhatsApp ou no Telegram.',
   },
   ja: {
     plan: 'このプログラムを共有',
@@ -88,6 +112,10 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     docTitle: 'プログラム',
     objectives: '学習目標',
     lessons: 'レッスン',
+    shareCert: '修了証を共有',
+    shareDoc: '講座記録を共有',
+    copyCertImage: '修了証を画像としてコピー',
+    imageCopied: '画像をコピーしました。WhatsAppまたはTelegramに貼り付けてください。',
   },
   zh: {
     plan: '分享这个学习计划',
@@ -100,6 +128,10 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     docTitle: '学习计划',
     objectives: '学习目标',
     lessons: '课程',
+    shareCert: '分享完成证明',
+    shareDoc: '分享课程记录',
+    copyCertImage: '将完成证明复制为图片',
+    imageCopied: '图片已复制，请粘贴到 WhatsApp 或 Telegram。',
   },
   ar: {
     plan: 'مشاركة هذا البرنامج',
@@ -112,6 +144,10 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     docTitle: 'البرنامج',
     objectives: 'الأهداف',
     lessons: 'الدروس',
+    shareCert: 'مشاركة الإفادة',
+    shareDoc: 'مشاركة وثائق الدورة',
+    copyCertImage: 'نسخ الإفادة كصورة',
+    imageCopied: 'تم نسخ الصورة. الصقها في WhatsApp أو Telegram.',
   },
   ko: {
     plan: '이 프로그램 공유',
@@ -124,5 +160,9 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     docTitle: '프로그램',
     objectives: '학습 목표',
     lessons: '레슨',
+    shareCert: '수료증 공유',
+    shareDoc: '강좌 기록 공유',
+    copyCertImage: '수료증을 이미지로 복사',
+    imageCopied: '이미지를 복사했습니다. WhatsApp 또는 Telegram에 붙여넣으십시오.',
   },
 }

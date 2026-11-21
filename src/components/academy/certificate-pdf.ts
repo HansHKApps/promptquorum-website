@@ -337,3 +337,12 @@ export async function renderCertificatePdf(m: CertificateModel, tx: AcademyCopy,
   const pdf = jpegToPdf(new Uint8Array(await blob.arrayBuffer()), { w: PX_W, h: PX_H }, { title: `${tx.cert.title} ${m.id}`, subject: m.subject, keywords: m.id, created: new Date(m.issuedAt) }, certLinks.get(canvas) ?? [])
   return new Blob([pdf as BlobPart], { type: 'application/pdf' })
 }
+
+/** The certificate as a PNG image (for copying into WhatsApp / Telegram, which paste images, not PDFs). */
+export async function renderCertificatePng(m: CertificateModel, tx: AcademyCopy, lang: AcademyLang, extras: CertificateExtras = {}): Promise<Blob> {
+  const canvas = document.createElement('canvas')
+  await drawCertificate(canvas, m, tx, lang, extras)
+  const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))
+  if (!blob) throw new Error('certificate: could not encode image')
+  return blob
+}
