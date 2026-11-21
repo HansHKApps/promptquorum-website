@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Platform: 'Mac',
-            'Get It': '[Download for Mac](https://pixafind.com/download/mac/) — Apple Silicon (M1 or newer); not notarized, see the site's note',
+            'Get It': '[Download for Mac](https://pixafind.com/download/mac/) — Apple Silicon (M1 or newer); not notarized, see the site note',
           },
           {
             Platform: 'Linux',
