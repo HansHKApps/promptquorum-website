@@ -764,6 +764,23 @@ t('PDF pages: link areas become clickable URI annotations on their page', () => 
   assert.ok(text.slice(xref).startsWith('xref'))
 })
 
+import { decodeBackup, encodeBackup, summarize } from '../src/lib/academy/cabinet'
+t('cabinet: summary, backup round trip with a PDF, and a foreign file is refused', async () => {
+  const p = completedProgramme()
+  const sum = summarize(p)
+  assert.equal(sum.id, p.id)
+  assert.equal(sum.lessonsTotal, p.lessons.length)
+  const pdf = new Blob([new Uint8Array([37, 80, 68, 70, 45, 49])], { type: 'application/pdf' })
+  const text = await encodeBackup([{ ...sum, updatedAt: '2026-11-21T10:00:00.000Z', programme: p, documentation: { filename: 'doc.pdf', blob: pdf } }])
+  const back = decodeBackup(text)
+  assert.equal(back.length, 1)
+  assert.equal(back[0].programme.id, p.id)
+  assert.equal(back[0].documentation?.filename, 'doc.pdf')
+  assert.equal(back[0].documentation?.blob.size, 6)
+  assert.throws(() => decodeBackup(JSON.stringify({ format: 'other', entries: [] })))
+  assert.equal(decodeBackup(JSON.stringify({ format: 'promptquorum-academy-cabinet', version: 1, entries: [{ programme: { id: 1 } }] })).length, 0)
+})
+
 t('hash: SHA-256 of "abc" matches the known value', async () => {
   assert.equal(await sha256Hex(new TextEncoder().encode('abc')), 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad')
 })

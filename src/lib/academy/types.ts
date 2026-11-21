@@ -165,7 +165,7 @@ export interface Programme {
 }
 
 /** Screens of the Academy tool. They are views inside /academy, not separate URLs (like the Ask Hans window). */
-export const ACADEMY_VIEWS = ['setup', 'diagnostic', 'programme', 'lesson', 'quiz', 'results'] as const
+export const ACADEMY_VIEWS = ['setup', 'diagnostic', 'programme', 'lesson', 'quiz', 'results', 'cabinet'] as const
 export type AcademyView = (typeof ACADEMY_VIEWS)[number]
 
 /** The quick check in progress (before a programme exists). */

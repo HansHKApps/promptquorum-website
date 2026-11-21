@@ -4,6 +4,9 @@
 // Ask Hans window: screens are views inside /academy, not URLs, so no learner page ever needs to be indexed.
 // State lives in localStorage only (see useAcademyState / src/lib/academy/store.ts).
 
+import { CabinetPrompt, CabinetView } from './CabinetView'
+import { CABINET_COPY } from './cabinet-copy'
+import { cabinetAvailable, clearCabinet, getCabinetFlag, putProgramme, requestPersistence, setCabinetFlag, type CabinetFlag } from '@/lib/academy/cabinet'
 import { Mark, press } from './press'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS, ACADEMY_TUTOR_OK_KEY, ACADEMY_USED_KEY } from '@/lib/academy/config'
@@ -35,6 +38,32 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
     if (!state.draft) update((s) => ({ ...s, view: 'setup', draft: defaultDraft(lang) }), false)
   }, [ready, state.draft, update, lang])
 
+  // The cabinet: a local library of every program (browser database on this computer, never sent to PromptQuorum).
+  const [cabinetFlag, setCabinetFlagState] = useState<CabinetFlag>(null)
+  const [cabinetOk, setCabinetOk] = useState(false)
+  useEffect(() => {
+    setCabinetOk(cabinetAvailable())
+    setCabinetFlagState(getCabinetFlag())
+  }, [])
+  // While the cabinet is on, the current program is kept in it (shortly after every change).
+  useEffect(() => {
+    const p = state.programme
+    if (cabinetFlag !== 'on' || !p) return
+    const t = window.setTimeout(() => void putProgramme(p).catch(() => {}), 1200)
+    return () => window.clearTimeout(t)
+  }, [cabinetFlag, state.programme])
+  const createCabinet = () => {
+    setCabinetFlag('on')
+    setCabinetFlagState('on')
+    requestPersistence()
+    if (state.programme) void putProgramme(state.programme).catch(() => {})
+  }
+  const declineCabinet = () => {
+    setCabinetFlag('declined')
+    setCabinetFlagState('declined')
+  }
+  const askCabinet = ready && cabinetOk && cabinetFlag === null && !!state.programme && lessonsDone(state.programme) >= 1 && state.view !== 'cabinet'
+
   const draft = state.draft
   // Once a program exists, its screens (quick check, program overview, lesson, quiz; the results screen has its own certificate-language chooser and stays in the page language) use the program language when the site
   // has that language, so labels like "Writing the lesson…" or "Deeper" match the lesson text. For a custom
@@ -55,8 +84,19 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           {tx.storageBlocked}
         </p>
       )}
+      {askCabinet && <CabinetPrompt lang={lang} onCreate={createCabinet} onDecline={declineCabinet} />}
+      {cabinetOk && ['setup', 'programme'].includes(state.view) && (
+        <div className="flex justify-end">
+          <button type="button" onClick={() => update((s) => ({ ...s, view: 'cabinet' }))} className="rounded-xl border border-purple-300 bg-white px-4 py-2 text-sm font-medium text-purple-800 hover:bg-purple-50">
+            <span aria-hidden="true">🗄️ </span>
+            {CABINET_COPY[lang].openButton}
+          </button>
+        </div>
+      )}
       <div {...learnProps}>
-      {state.view === 'quiz' && state.programme ? (
+      {state.view === 'cabinet' ? (
+        <CabinetView lang={lang} update={update} flag={cabinetFlag} onFlag={setCabinetFlagState} current={state.programme} />
+      ) : state.view === 'quiz' && state.programme ? (
         <QuizRouter tx={ltx} programme={state.programme} update={update} postJson={postJson} errorText={(code) => errorText(ltx, code)} />
       ) : state.view === 'results' && state.programme && programmeScore(state.programme) ? (
         <ResultsView tx={tx} lang={lang} programme={state.programme} update={update} />
@@ -797,8 +837,10 @@ function PrivacyStrip({ tx, lang }: { tx: AcademyCopy; lang: AcademyLang }) {
         type="button"
         className="underline underline-offset-2 hover:text-purple-700"
         onClick={() => {
-          if (!window.confirm(tx.deleteConfirm)) return
+          const hasCabinet = getCabinetFlag() === 'on'
+          if (!window.confirm(hasCabinet ? `${tx.deleteConfirm}\n\n${CABINET_COPY[lang].deleteAlso}` : tx.deleteConfirm)) return
           clearAcademyState()
+          void clearCabinet()
           try {
             localStorage.removeItem(ACADEMY_USED_KEY)
             localStorage.removeItem(ACADEMY_TUTOR_OK_KEY)

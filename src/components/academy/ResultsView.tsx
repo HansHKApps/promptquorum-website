@@ -6,6 +6,7 @@
 
 import { useState } from 'react'
 import { certificateBlocker, certificateFilename, certificateModel, documentationFilename, NAME_MAX_CHARS } from '@/lib/academy/certificate'
+import { getCabinetFlag, putFile } from '@/lib/academy/cabinet'
 import { documentationModel } from '@/lib/academy/documentation'
 import { sha256Hex } from '@/lib/academy/hash'
 import { isSiteLang, languageDisplayName } from '@/lib/academy/language'
@@ -93,8 +94,15 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
       const docBytes = await renderDocumentationPdf(documentationModel(programme, model, languageName, number), txc, certLang, programme.language)
       // Step 2: the fingerprint of exactly this documentation file is stored once, for the check on the verification page.
       if (number && !registeredNumber) await post('/api/academy/register', { id: model.id, issuedAt: model.issuedAt, percent: model.percent, minutes: model.learningMinutes, subject: model.subject, language: programme.language, testMode: model.testMode, hash: await sha256Hex(docBytes) })
-      setDocBlob({ blob: new Blob([docBytes as BlobPart], { type: 'application/pdf' }), filename: documentationFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt }) })
+      const docFile = { blob: new Blob([docBytes as BlobPart], { type: 'application/pdf' }), filename: documentationFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt }) }
+      setDocBlob(docFile)
       const blob = await renderCertificatePdf(model, txc, certLang, { registered: !!number, number })
+      // The cabinet (if the learner created one) keeps both files on this computer.
+      if (getCabinetFlag() === 'on') {
+        const withCert = { ...programme, certificate: { id: model.id, learnerName: model.name, issuedAt: model.issuedAt, number } }
+        void putFile(withCert, 'documentation', docFile).catch(() => {})
+        void putFile(withCert, 'certificate', { blob, filename: certificateFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt }) }).catch(() => {})
+      }
       update((st) => (st.programme ? { ...st, programme: { ...st.programme, certificate: { id: model.id, learnerName: model.name, issuedAt: model.issuedAt, number } } } : st))
       saveBlob(blob, certificateFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt }))
       // Anonymous total only (no body beyond the event type); never blocks or fails the download.
@@ -117,7 +125,9 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
       if (!programme.certificate) update((st) => (st.programme ? { ...st, programme: { ...st.programme, certificate: { id: model.id, learnerName: model.name, issuedAt: model.issuedAt } } } : st))
       const bytes = await renderDocumentationPdf(documentationModel(programme, model, languageName, registeredNumber), ACADEMY_COPY[certLang], certLang, programme.language)
       const blob = new Blob([bytes as BlobPart], { type: 'application/pdf' })
-      saveBlob(blob, documentationFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt }))
+      const filename = documentationFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt })
+      if (getCabinetFlag() === 'on') void putFile(programme, 'documentation', { blob, filename }).catch(() => {})
+      saveBlob(blob, filename)
     } catch (err) {
       console.error('[academy] documentation failed', err instanceof Error ? err.message : err)
       setCertError(true)
