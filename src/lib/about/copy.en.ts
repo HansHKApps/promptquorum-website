@@ -68,15 +68,16 @@ export const en: AboutCopy = {
   believeItalic:
     'We don’t believe cloud AI is bad. We believe you should have a real choice, and that choosing local should be as easy as choosing cloud.',
 
-  ecosystemH2: 'One ecosystem, five parts that work together',
+  ecosystemH2: 'One ecosystem, six parts that work together',
   ecosystemLead:
-    'PromptQuorum is not just an app, and not just a directory. It is five parts built around the same goal, so you can go from “what should I run?” to a working setup without leaving the site.',
+    'PromptQuorum is not just an app, and not just a directory. It is six parts built around the same goal, so you can go from “what should I run?” to a working setup without leaving the site.',
   connectsLabel: 'Works with the rest:',
   findLabel: 'Find',
   learnLabel: 'Learn',
   useLabel: 'Use',
   askLabel: 'Ask',
   hansLabel: 'Chat',
+  academyLabel: "Practice",
   partFindTitle: 'The Local AI Directory',
   partFindOneLiner: 'The searchable, structured map of local-AI software.',
   partFindBody:
@@ -102,6 +103,11 @@ export const en: AboutCopy = {
   partHansBody:
     'An AI chat assistant on this site. Ask which app fits a job, what runs on your hardware or how a license works, and it answers from the same directory and guides. It is built on AI, so check important details in the directory entries and guides. Your conversation stays in your browser tab, and we do not store the text of questions or answers.',
   partHansConnects: 'it uses the same tools as the MCP server, so you get the directory’s answers without setting up an assistant of your own.',
+  partAcademyTitle: "PromptQuorum Academy",
+  partAcademyOneLiner: "A short learning programme built for your subject, time and level.",
+  partAcademyBody:
+    "Name a subject, your time and your level. Academy checks what you already know with a few questions, then composes short lessons from PromptQuorum guides, with an AI tutor next to each lesson, tests with explained answers and an optional certificate. It is free and needs no account. Lessons, questions and answers are written by AI and can contain errors, so check important details against the linked guides.",
+  partAcademyConnects: "lessons draw on the same guides as the Knowledge Base, and each one points to further reading there.",
   ctaOpenDirectory: 'Open the directory',
   ctaReadGuides: 'Read the guides',
   ctaAboutApp: 'About the app',

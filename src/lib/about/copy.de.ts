@@ -65,15 +65,16 @@ export const de: AboutCopy = {
     'Unabhängigkeit von fremder Kontrolle ist das Thema, das sich durch die gesamte Seite zieht. Deshalb ist das Verzeichnis neutral, deshalb verlinkt jeder Eintrag zur offiziellen Quelle, und deshalb veröffentlichen wir in neun Sprachen.',
   believeItalic:
     'Wir halten Cloud-KI nicht für schlecht. Wir sind überzeugt, dass Sie eine echte Wahl haben sollten – und dass die Entscheidung für lokal genauso einfach sein sollte wie die Entscheidung für die Cloud.',
-  ecosystemH2: 'Ein Ökosystem, fünf Teile, die zusammenspielen',
+  ecosystemH2: 'Ein Ökosystem, sechs Teile, die zusammenspielen',
   ecosystemLead:
-    'PromptQuorum ist nicht nur eine App und nicht nur ein Verzeichnis. Es sind fünf Teile, die auf dasselbe Ziel ausgerichtet sind, damit Sie von „Was sollte ich nutzen?“ zu einem funktionierenden Setup kommen, ohne die Seite zu verlassen.',
+    'PromptQuorum ist nicht nur eine App und nicht nur ein Verzeichnis. Es sind sechs Teile, die auf dasselbe Ziel ausgerichtet sind, damit Sie von „Was sollte ich nutzen?“ zu einem funktionierenden Setup kommen, ohne die Seite zu verlassen.',
   connectsLabel: 'Zusammenspiel mit dem Rest:',
   findLabel: 'Finden',
   learnLabel: 'Lernen',
   useLabel: 'Nutzen',
   askLabel: 'Fragen',
   hansLabel: 'Chatten',
+  academyLabel: "Üben",
   partFindTitle: 'Das Verzeichnis für lokale KI',
   partFindOneLiner: 'Die durchsuchbare, strukturierte Landkarte lokaler KI-Software.',
   partFindBody:
@@ -99,6 +100,11 @@ export const de: AboutCopy = {
   partHansBody:
     'Ein KI-Chat-Assistent auf dieser Website. Fragen Sie, welche App zu einer Aufgabe passt, was auf Ihrer Hardware läuft oder wie eine Lizenz funktioniert, und er antwortet aus demselben Verzeichnis und denselben Anleitungen. Er basiert auf KI, prüfen Sie wichtige Angaben daher in den Verzeichniseinträgen und Anleitungen. Ihr Gespräch bleibt in Ihrem Browser-Tab, und wir speichern weder Frage- noch Antworttexte.',
   partHansConnects: 'er nutzt dieselben Werkzeuge wie der MCP-Server, sodass Sie die Antworten des Verzeichnisses erhalten, ohne einen eigenen Assistenten einzurichten.',
+  partAcademyTitle: "PromptQuorum Academy",
+  partAcademyOneLiner: "Ein kurzes Lernprogramm, zugeschnitten auf Ihr Thema, Ihre Zeit und Ihr Niveau.",
+  partAcademyBody:
+    "Nennen Sie ein Thema, Ihre Zeit und Ihr Niveau. Die Academy prüft mit wenigen Fragen, was Sie schon wissen, und stellt daraus kurze Lektionen aus PromptQuorum-Ratgebern zusammen, mit einem KI-Tutor neben jeder Lektion, Tests mit erklärten Antworten und einer optionalen Teilnahmebescheinigung. Sie ist kostenlos und braucht kein Konto. Lektionen, Fragen und Antworten werden von KI geschrieben und können Fehler enthalten; prüfen Sie wichtige Details daher anhand der verlinkten Ratgeber.",
+  partAcademyConnects: "die Lektionen stützen sich auf dieselben Ratgeber wie die Wissensbasis, und jede verweist dort auf weiterführende Lektüre.",
   ctaOpenDirectory: 'Verzeichnis öffnen',
   ctaReadGuides: 'Anleitungen lesen',
   ctaAboutApp: 'Über die App',

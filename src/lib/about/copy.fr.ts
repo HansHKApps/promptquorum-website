@@ -65,15 +65,16 @@ export const fr: AboutCopy = {
     'L’indépendance vis-à-vis de tout contrôle est le fil conducteur de ce site. C’est pourquoi l’annuaire est neutre, pourquoi chaque fiche renvoie vers la source officielle, et pourquoi nous publions en neuf langues.',
   believeItalic:
     'Nous ne pensons pas que l’IA cloud soit mauvaise. Nous pensons que vous devriez avoir un vrai choix, et que choisir le local devrait être aussi simple que choisir le cloud.',
-  ecosystemH2: 'Un écosystème, cinq éléments qui fonctionnent ensemble',
+  ecosystemH2: 'Un écosystème, six éléments qui fonctionnent ensemble',
   ecosystemLead:
-    'PromptQuorum n’est ni une simple application, ni un simple annuaire. Ce sont cinq éléments construits autour du même objectif, pour vous permettre de passer de « qu’est-ce que je devrais utiliser ? » à une installation fonctionnelle sans quitter le site.',
+    'PromptQuorum n’est ni une simple application, ni un simple annuaire. Ce sont six éléments construits autour du même objectif, pour vous permettre de passer de « qu’est-ce que je devrais utiliser ? » à une installation fonctionnelle sans quitter le site.',
   connectsLabel: 'Fonctionne avec le reste :',
   findLabel: 'Trouver',
   learnLabel: 'Apprendre',
   useLabel: 'Utiliser',
   askLabel: 'Demander',
   hansLabel: 'Discuter',
+  academyLabel: "S’exercer",
   partFindTitle: 'L’annuaire de l’IA locale',
   partFindOneLiner: 'La carte structurée et consultable des logiciels d’IA locale.',
   partFindBody:
@@ -99,6 +100,11 @@ export const fr: AboutCopy = {
   partHansBody:
     'Un assistant de chat IA sur ce site. Demandez quelle application convient à une tâche, ce qui tourne sur votre matériel ou comment fonctionne une licence : il répond à partir du même annuaire et des mêmes guides. Il repose sur l’IA ; vérifiez donc les détails importants dans les fiches de l’annuaire et les guides. Votre conversation reste dans l’onglet de votre navigateur et nous ne conservons pas le texte des questions ni des réponses.',
   partHansConnects: 'il utilise les mêmes outils que le serveur MCP, vous obtenez donc les réponses de l’annuaire sans configurer votre propre assistant.',
+  partAcademyTitle: "PromptQuorum Academy",
+  partAcademyOneLiner: "Un court programme d’apprentissage construit pour votre sujet, votre temps et votre niveau.",
+  partAcademyBody:
+    "Indiquez un sujet, votre temps et votre niveau. L’Academy vérifie ce que vous savez déjà avec quelques questions, puis compose de courtes leçons à partir des guides PromptQuorum, avec un tuteur IA à côté de chaque leçon, des tests aux réponses expliquées et une attestation facultative. Elle est gratuite et ne demande aucun compte. Les leçons, les questions et les réponses sont rédigées par une IA et peuvent contenir des erreurs : vérifiez les détails importants dans les guides liés.",
+  partAcademyConnects: "les leçons s’appuient sur les mêmes guides que la base de connaissances, et chacune renvoie vers des lectures complémentaires.",
   ctaOpenDirectory: 'Ouvrir l’annuaire',
   ctaReadGuides: 'Lire les guides',
   ctaAboutApp: 'À propos de l’application',

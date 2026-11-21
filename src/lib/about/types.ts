@@ -63,6 +63,7 @@ export interface AboutCopy {
   useLabel: string
   askLabel: string
   hansLabel: string
+  academyLabel: string
   partFindTitle: string
   partFindOneLiner: string
   partFindBody: string // {{appCount}} {{groupCount}} {{categoryCount}}
@@ -83,6 +84,10 @@ export interface AboutCopy {
   partHansOneLiner: string
   partHansBody: string
   partHansConnects: string
+  partAcademyTitle: string
+  partAcademyOneLiner: string
+  partAcademyBody: string
+  partAcademyConnects: string
   ctaOpenDirectory: string
   ctaReadGuides: string
   ctaAboutApp: string

@@ -103,6 +103,15 @@ function ChatIcon() {
     </svg>
   )
 }
+function AcademyIcon() {
+  return (
+    <svg {...ICON_PROPS}>
+      <path d="M2 9l10-5 10 5-10 5L2 9z" />
+      <path d="M6 11.5V16c0 1.2 2.7 3 6 3s6-1.8 6-3v-4.5" />
+      <path d="M22 9v6" />
+    </svg>
+  )
+}
 function PlugIcon() {
   return (
     <svg {...ICON_PROPS}>
@@ -182,7 +191,7 @@ interface PartProps {
 
 function Part({ tone, verb, icon, title, oneLiner, children, connectsLabel, connects, href, cta, arrow, via, askHans }: PartProps) {
   return (
-    <div className={`rounded-xl border p-6 flex flex-col transition hover:shadow-lg hover:-translate-y-0.5 ${askHans ? 'sm:col-span-2' : ''} ${HUB_TONES[tone].tint} ${HUB_TONES[tone].edge}`}>
+    <div className={`rounded-xl border p-6 flex flex-col transition hover:shadow-lg hover:-translate-y-0.5 ${HUB_TONES[tone].tint} ${HUB_TONES[tone].edge}`}>
       <div className="flex items-center gap-3 mb-3">
         <div className={`w-11 h-11 rounded-xl text-white flex items-center justify-center shrink-0 ${HUB_TONES[tone].solid}`}>{icon}</div>
         <div>
@@ -461,6 +470,21 @@ export function AboutPageContent({ lang }: { lang: Language }) {
               </Part>
               <Part
                 tone={cycleTone(4)}
+                verb={copy.academyLabel}
+                icon={<AcademyIcon />}
+                title={copy.partAcademyTitle}
+                oneLiner={copy.partAcademyOneLiner}
+                connectsLabel={copy.connectsLabel}
+                connects={copy.partAcademyConnects}
+                href={lp('/academy')}
+                cta={copy.ctaAcademy}
+                arrow={arrow}
+                via="part_academy"
+              >
+                {copy.partAcademyBody}
+              </Part>
+              <Part
+                tone={cycleTone(5)}
                 verb={copy.hansLabel}
                 icon={<ChatIcon />}
                 title={copy.partHansTitle}
