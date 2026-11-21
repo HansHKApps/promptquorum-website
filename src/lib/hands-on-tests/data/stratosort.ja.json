@@ -402,6 +402,11 @@
           "stratosort-mcp-tool-list-and-client-setup"
         ],
         [
+          "observed",
+          "MCPは標準的なプロトコルのため、アプリは一般的なLLMクライアントと接続できます。この画面の設定ボタンはClaude Desktop、Cursor、Zed向けで、テスターはLociと接続しました。テスターはClaude Desktop、Cursor、Zedを試していないため、これらとの接続は検証されていません。",
+          null
+        ],
+        [
           "vendor-claim",
           "その画面の1行には、「These tools only read. None of them moves, renames or deletes files.」と書かれています。",
           null

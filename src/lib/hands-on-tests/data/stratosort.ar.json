@@ -402,6 +402,11 @@
           "stratosort-mcp-tool-list-and-client-setup"
         ],
         [
+          "observed",
+          "ولأن ⁦MCP⁩ بروتوكول قياسي، يمكن ربط التطبيق بعميل ⁦LLM⁩ شائع: أزرار الإعداد على هذه الشاشة مخصصة لـ ⁦Claude Desktop⁩ و⁦Cursor⁩ و⁦Zed⁩، وقد ربطه المختبِر بـ ⁦Loci⁩. لم يجرّب المختبِر ⁦Claude Desktop⁩ ولا ⁦Cursor⁩ ولا ⁦Zed⁩، ولذلك لم يتحقق من أي اتصال بها.",
+          null
+        ],
+        [
           "vendor-claim",
           "يقول سطر على تلك الشاشة: ⁦\"These tools only read. None of them moves, renames or deletes files.\"⁩",
           null

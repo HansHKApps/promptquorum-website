@@ -402,6 +402,11 @@
           "stratosort-mcp-tool-list-and-client-setup"
         ],
         [
+          "observed",
+          "MCP étant un protocole standard, l’application peut être reliée à un client LLM courant : les boutons de configuration de cet écran visent Claude Desktop, Cursor et Zed, et le testeur l’a reliée à Loci. Le testeur n’a pas essayé Claude Desktop, Cursor ni Zed ; aucune connexion à ces clients n’est donc vérifiée.",
+          null
+        ],
+        [
           "vendor-claim",
           "Une ligne de cet écran indique : “These tools only read. None of them moves, renames or deletes files.”",
           null

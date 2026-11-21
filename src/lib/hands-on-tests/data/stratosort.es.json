@@ -402,6 +402,11 @@
           "stratosort-mcp-tool-list-and-client-setup"
         ],
         [
+          "observed",
+          "Como MCP es un protocolo estándar, la app puede conectarse con un cliente LLM habitual: los botones de configuración de esa pantalla son para Claude Desktop, Cursor y Zed, y el evaluador la conectó con Loci. El evaluador no probó Claude Desktop, Cursor ni Zed, así que no se verificó ninguna conexión con ellos.",
+          null
+        ],
+        [
           "vendor-claim",
           "Una línea de esa pantalla dice: \"These tools only read. None of them moves, renames or deletes files.\"",
           null
