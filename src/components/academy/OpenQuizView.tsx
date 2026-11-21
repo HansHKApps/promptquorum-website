@@ -7,6 +7,8 @@
 // Nothing here is a different pass mark: points are pooled with the other quizzes by scoring.ts.
 
 import { FinishedCard } from './FinishedCard'
+import { SuccessShare } from './SuccessShare'
+import { isSiteLang } from '@/lib/academy/language'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { OPEN_ANSWER_MAX_CHARS } from '@/lib/academy/schemas'
 import { scoreOpenQuiz } from '@/lib/academy/scoring'
@@ -81,6 +83,14 @@ export function OpenQuizView({ tx, programme, update, postJson, errorText }: { t
         total={finished.result.total}
         isFinal={isFinal}
         buttonLabel={isFinal ? tx.seeResults : tx.continueLessons}
+        share={
+          <SuccessShare
+            lang={isSiteLang(programme.language) ? programme.language : 'en'}
+            subject={programme.subject}
+            percent={finished.result.total > 0 ? (finished.result.correct / finished.result.total) * 100 : 0}
+            minutes={programme.progress.secondsSpent / 60}
+          />
+        }
         onContinue={() =>
 () =>
             update((s) =>

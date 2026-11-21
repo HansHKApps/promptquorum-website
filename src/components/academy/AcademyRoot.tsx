@@ -10,6 +10,8 @@ import type { Rect, UiState } from '@/components/askhans/types'
 import { useLang } from '@/hooks/useLang'
 import { ACADEMY_OPEN_EVENT, ACADEMY_UI_KEY, ACADEMY_USED_KEY } from '@/lib/academy/config'
 import type { TopicSuggestion } from '@/lib/academy/types'
+import { CHALLENGE_PARAM, BEAT_PARAM, CHALLENGE_STORAGE_KEY, readChallenge } from '@/lib/academy/challenge'
+import { trackGrowth } from './SuccessShare'
 import { AcademyApp } from './AcademyApp'
 import { AcademyLauncher } from './AcademyLauncher'
 import { AcademyWindow } from './AcademyWindow'
@@ -61,6 +63,25 @@ export function AcademyRoot() {
     setUi((u) => ({ ...u, open: false, everClosed: true }))
     setTimeout(() => launcherRef.current?.focus(), 30)
   }, [])
+
+  // A challenge link (…/academy?challenge=<subject>&beat=<percent>): open the window with the subject prefilled.
+  // The parameters are removed from the address bar once read.
+  useEffect(() => {
+    if (!ready) return
+    const c = readChallenge(window.location.search)
+    if (!c) return
+    try {
+      sessionStorage.setItem(CHALLENGE_STORAGE_KEY, JSON.stringify(c))
+    } catch {
+      return
+    }
+    const url = new URL(window.location.href)
+    url.searchParams.delete(CHALLENGE_PARAM)
+    url.searchParams.delete(BEAT_PARAM)
+    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`)
+    trackGrowth('challenge_landed')
+    open()
+  }, [ready, open])
 
   useEffect(() => {
     window.addEventListener(ACADEMY_OPEN_EVENT, open)

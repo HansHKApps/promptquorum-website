@@ -196,3 +196,25 @@ export const gradeRequestSchema = z.object({
   answer: z.string().max(OPEN_ANSWER_MAX_CHARS.explain),
 })
 export type GradeRequest = z.infer<typeof gradeRequestSchema>
+
+// ---------------------------------------------------------------------------------------- next topics (results page)
+
+export const nextTopicsOutputSchema = z.object({
+  topics: z
+    .array(
+      z.object({
+        title: z.string().describe('A subject title the learner can start a new program with: 2 to 8 words, no quotes'),
+        reason: z.string().describe('One sentence (at most 25 words) on why this topic builds on or rounds out what the learner just finished'),
+      }),
+    )
+    .describe('Exactly 3 topics'),
+})
+export type NextTopicsOutput = z.infer<typeof nextTopicsOutputSchema>
+
+export const nextTopicsRequestSchema = z.object({
+  subject,
+  language: languageSchema,
+  selfLevel: z.enum(LEVELS),
+  objectives: z.array(z.string().max(300)).max(8),
+})
+export type NextTopicsRequest = z.infer<typeof nextTopicsRequestSchema>

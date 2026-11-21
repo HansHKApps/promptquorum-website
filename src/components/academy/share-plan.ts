@@ -21,8 +21,8 @@ export interface PlanShare {
 
 export const academyUrl = (lang: AcademyLang) => `${SITE_URL}${lang === 'en' ? '' : `/${lang}`}/academy`
 
-export function buildPlanShare(p: Programme, lang: AcademyLang, sx: ShareCopy, percent?: number): PlanShare {
-  const url = academyUrl(lang)
+export function buildPlanShare(p: Programme, lang: AcademyLang, sx: ShareCopy, percent?: number, urlOverride?: string): PlanShare {
+  const url = urlOverride ?? academyUrl(lang)
   const message = percent !== undefined ? sx.done(p.subject, percent) : sx.intro(p.subject)
   return {
     title: `${sx.docTitle}: ${p.subject}`,

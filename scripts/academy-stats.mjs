@@ -36,4 +36,5 @@ console.log(`  tutor: ${n(f['tutor:message'])} messages, thumbs up ${n(f['tutor:
 console.log(`  feedback mails opened ${n(counts[5])}, low-rating mails ${n(f['mail:rating'])}, report-a-problem mails ${n(f['mail:report'])}`)
 console.log(`  study-hat button clicks (floating launcher, all visitors): ${n(f['launcher:click'])}`)
 console.log(`  certificate shares: ${n(f['share:certificate'])} file shares, ${n(f['share:image'])} copied as image; documentation shares ${n(f['share:documentation'])}`)
+console.log(`  growth: result cards shared ${n(f['growth:share_card'])}, challenge links shared ${n(f['growth:challenge_shared'])}, challenge links opened ${n(f['growth:challenge_landed'])}, LinkedIn adds ${n(f['growth:linkedin'])}, weekly reminders ${n(f['growth:reminder'])}, next-topic boxes clicked ${n(f['growth:next_topic'])}`)
 console.log(`  generation calls today (UTC): ${n(today)}`)

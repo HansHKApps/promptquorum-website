@@ -22,6 +22,9 @@ import type { Programme, Question, QuizQuestion } from '../src/lib/academy/types
 import { articleText, finalizeLesson, isOnTopic, findMaterial, generateLesson, lessonProblems, stripLinks, toMaterial } from '../src/lib/academy/lesson'
 import { addActiveTime, markLessonDone, nextOpenLesson, openLesson } from '../src/lib/academy/progress'
 import { getArticle } from '../src/lib/mcp/tools'
+import { generateNextTopics, nextTopicsUserMessage } from '../src/lib/academy/next-topics'
+import { challengeLink, readChallenge, reminderIcs, sanitizeChallengeSubject } from '../src/lib/academy/challenge'
+import { SHARE_COPY } from '../src/components/academy/copy/share'
 import { balancedPick, generateQuiz, QuizShortError, topicPlan, verifyQuestions } from '../src/lib/academy/quiz'
 import { countingFinal, isCompleted, PASS_MARK, programmeScore, scoreOpenQuiz, scoreQuiz } from '../src/lib/academy/scoring'
 import { cleanAnswer, creditFrom, gradeAnswer } from '../src/lib/academy/grade'
@@ -1078,6 +1081,44 @@ t('open formats: every language has labels for all three formats and the AI-grad
     assert.ok(c.quizPoints(2.5, 3).includes('2.5') || c.quizPoints(2.5, 3).includes('2,5'), l)
     assert.ok(c.charactersLeft(12).includes('12'), l)
   }
+})
+
+t('growth: challenge links round-trip, reject links and markup, and every language has the new share texts', () => {
+  const link = challengeLink('https://www.promptquorum.com/de/academy', 'Local LLMs & GPUs', 84.6)
+  const c = readChallenge(new URL(link).search)
+  assert.deepEqual(c, { subject: 'Local LLMs & GPUs', beat: 85 })
+  assert.equal(sanitizeChallengeSubject('visit https://evil.example now'), null)
+  assert.equal(sanitizeChallengeSubject('<script>alert(1)</script>'), null)
+  assert.equal(sanitizeChallengeSubject('mail me@evil.example'), null)
+  assert.equal(sanitizeChallengeSubject('x'), null)
+  assert.equal(sanitizeChallengeSubject('a'.repeat(121)), null)
+  assert.equal(sanitizeChallengeSubject('Prompting\n\tbasics'), 'Prompting basics')
+  assert.equal(readChallenge('?challenge=Ollama&beat=250')?.beat, null)
+  for (const l of ALL_LANGS) {
+    const x = SHARE_COPY[l]
+    for (const k of ['shareCard', 'challenge', 'linkedin', 'successShare', 'reminder', 'reminderTitle', 'nextTitle', 'nextHint', 'nextStart', 'nextLoading', 'shareCert', 'shareDoc', 'copyCertImage', 'imageCopied'] as const) assert.ok(x[k], `${l}/${k}`)
+    assert.ok(x.challengeText('Ollama', 85).includes('Ollama') && x.challengeText('Ollama', 85).includes('85'), l)
+    assert.ok(x.challengeBanner(85).includes('85'), l)
+    assert.ok(x.streak(3).includes('3'), l)
+  }
+})
+
+t('growth: the weekly reminder is a valid recurring calendar event', () => {
+  const ics = reminderIcs('Time to learn, today; now', 'https://www.promptquorum.com/academy', new Date(2026, 10, 21, 10, 0))
+  assert.ok(ics.startsWith('BEGIN:VCALENDAR') && ics.includes('RRULE:FREQ=WEEKLY') && ics.includes('DTSTART:20261122T180000'))
+  assert.ok(ics.includes('SUMMARY:Time to learn\\, today\\; now'))
+  assert.ok(ics.endsWith('END:VCALENDAR\r\n'))
+})
+
+t('next topics: keeps 3 different topics, drops the finished subject, links and duplicates; retries when fewer than 3 remain', async () => {
+  const req = { subject: 'Ollama basics', language: 'en', selfLevel: 'beginner' as const, objectives: ['Install Ollama'] }
+  const bad = { topics: [{ title: 'Ollama basics', reason: 'same' }, { title: 'See https://x.example', reason: 'link' }, { title: 'Choosing a GPU', reason: 'Hardware decides speed.' }] }
+  const good = { topics: [{ title: 'Choosing a GPU', reason: 'Hardware decides speed.' }, { title: 'choosing a gpu', reason: 'dup' }, { title: 'Quantization explained', reason: 'Smaller models run faster.' }, { title: 'Local RAG setup', reason: 'Chat with your files.' }, { title: 'Extra topic', reason: 'Not needed.' }] }
+  const client = fakeClient([{ out: bad }, { out: good }])
+  const topics = await generateNextTopics(client, req)
+  assert.deepEqual(topics.map((x) => x.title), ['Choosing a GPU', 'Quantization explained', 'Local RAG setup'])
+  assert.equal(client.calls, 2)
+  assert.ok(nextTopicsUserMessage(req).includes('<subject>Ollama basics</subject>'))
 })
 
 void Promise.all(pending).then(() => {if (failed) {

@@ -18,8 +18,17 @@ import { HashCheck } from './HashCheck'
 
 const limiter = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(40, '1 h'), prefix: 'rl:academy:verify' })
 
-export function verifyMetadata(lang: AcademyLang): Metadata {
-  return { title: ACADEMY_COPY[lang].verify.title, robots: { index: false, follow: false, nocache: true } }
+/** With the certificate ID, link previews (WhatsApp, Telegram, LinkedIn) show a card with the score and subject. */
+export function verifyMetadata(lang: AcademyLang, rawId?: string): Metadata {
+  const title = ACADEMY_COPY[lang].verify.title
+  const id = rawId?.toUpperCase()
+  const image = id && CERTIFICATE_ID_PATTERN.test(id) ? [{ url: `https://www.promptquorum.com/academy/card/${id}`, width: 1200, height: 630 }] : undefined
+  return {
+    title,
+    robots: { index: false, follow: false, nocache: true },
+    openGraph: { title, siteName: 'PromptQuorum Academy', ...(image && { images: image }) },
+    twitter: { card: image ? 'summary_large_image' : 'summary', title, ...(image && { images: image.map((i) => i.url) }) },
+  }
 }
 
 export async function VerifyPage({ lang, params }: { lang: AcademyLang; params: Promise<{ id: string }> }) {

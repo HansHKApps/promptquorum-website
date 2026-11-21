@@ -25,6 +25,11 @@ import { LessonView } from './LessonView'
 import { QuizRouter } from './QuizRouter'
 import { ResultsView } from './ResultsView'
 import { ShareBar } from './ShareBar'
+import { SHARE_COPY } from './copy/share'
+import { trackGrowth } from './SuccessShare'
+import { downloadBlob } from '@/components/askhans/power/export/download'
+import { academyUrl } from './share-plan'
+import { ACADEMY_STREAK_EVENT, ACADEMY_STREAK_KEY, CHALLENGE_STORAGE_KEY, currentStreak, recordActiveDay, reminderIcs, sanitizeBeat, sanitizeChallengeSubject } from '@/lib/academy/challenge'
 import { useAcademyState } from './useAcademyState'
 
 export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicSuggestion[] }) {
@@ -37,6 +42,34 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
     if (!ready) return
     if (!state.draft) update((s) => ({ ...s, view: 'setup', draft: defaultDraft(lang) }), false)
   }, [ready, state.draft, update, lang])
+
+  // A challenge link ("beat my 85% in X", opened via AcademyRoot) prefills the subject and shows the score to beat.
+  const [challengeBeat, setChallengeBeat] = useState<number | null>(null)
+  useEffect(() => {
+    if (!ready || !state.draft) return
+    try {
+      const raw = sessionStorage.getItem(CHALLENGE_STORAGE_KEY)
+      if (!raw) return
+      sessionStorage.removeItem(CHALLENGE_STORAGE_KEY)
+      const c = JSON.parse(raw) as { subject?: string; beat?: number }
+      const subject = sanitizeChallengeSubject(c.subject)
+      if (!subject) return
+      setChallengeBeat(sanitizeBeat(String(c.beat)))
+      update((s) => ({ ...s, view: s.programme ? s.view : 'setup', draft: { ...(s.draft ?? defaultDraft(lang)), subject, updatedAt: new Date().toISOString() } }), false)
+    } catch {
+      /* unreadable challenge: ignored */
+    }
+  }, [ready, state.draft, update, lang])
+
+  // Learning streak: one more finished lesson or quiz = this calendar day counts (kept only in this browser).
+  const activity = state.programme ? lessonsDone(state.programme) + state.programme.progress.quizResults.length + (state.programme.progress.finalAttempts?.length ?? 0) : 0
+  const prevActivity = useRef<number | null>(null)
+  useEffect(() => {
+    if (!ready) return
+    // Only a step of one counts: loading another saved program changes the total by more and is not new activity.
+    if (prevActivity.current !== null && activity === prevActivity.current + 1) recordActiveDay()
+    prevActivity.current = activity
+  }, [ready, activity])
 
   // The cabinet: a local library of every program (browser database on this computer, never sent to PromptQuorum).
   const [cabinetFlag, setCabinetFlagState] = useState<CabinetFlag>(null)
@@ -129,6 +162,13 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
       ) : state.view === 'diagnostic' ? (
         <QuickCheckView tx={ltx} draft={draft} quickCheck={state.quickCheck} update={update} />
       ) : (
+        <>
+          {challengeBeat !== null && (
+            <p className="rounded-xl bg-fuchsia-50 px-4 py-3 text-sm font-medium text-fuchsia-900" role="status">
+              <span aria-hidden="true">🏆 </span>
+              {SHARE_COPY[lang].challengeBanner(challengeBeat)}
+            </p>
+          )}
         <SetupForm
           tx={tx}
           lang={lang}
@@ -154,6 +194,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
             })
           }
         />
+        </>
       )}
       </div>
       <PrivacyStrip tx={tx} lang={lang} />
@@ -714,6 +755,19 @@ function ProgrammeView({
   onShowResults: () => void
   onStartOver: () => void
 }) {
+  const sx = SHARE_COPY[lang]
+  const [streak, setStreak] = useState(0)
+  useEffect(() => {
+    const read = () => setStreak(currentStreak())
+    read()
+    window.addEventListener(ACADEMY_STREAK_EVENT, read)
+    return () => window.removeEventListener(ACADEMY_STREAK_EVENT, read)
+  }, [])
+  // Weekly reminder: a calendar file the learner opens in their own calendar; nothing is stored or sent by PromptQuorum.
+  const addReminder = () => {
+    trackGrowth('reminder')
+    downloadBlob(new Blob([reminderIcs(sx.reminderTitle, academyUrl(lang))], { type: 'text/calendar;charset=utf-8' }), 'promptquorum-academy-weekly.ics')
+  }
   const reading = programme.lessons.reduce((s, l) => s + l.estimatedMinutes, 0)
   const total = reading + programme.testPlan.testMinutes
   const { finalQuestions, lessonQuizQuestions } = programme.testPlan
@@ -738,6 +792,17 @@ function ProgrammeView({
         <p className="mt-1 text-sm text-gray-600">{tx.totalTime(tx.minutes(total))}</p>
         {programme.testMode !== 'none' && <p className="text-sm text-gray-600">{tx.testSplit(reading, Math.round(programme.testPlan.testMinutes))}</p>}
         {minutesSpent > 0 && <p className="text-sm text-gray-600">{tx.timeSpent(tx.minutes(minutesSpent))}</p>}
+        <div className="mt-2 flex flex-wrap items-center gap-3">
+          {streak >= 2 && (
+            <span className="rounded-full bg-orange-50 px-3 py-1 text-sm font-semibold text-orange-800">
+              <span aria-hidden="true">🔥 </span>
+              {sx.streak(streak)}
+            </span>
+          )}
+          <button type="button" onClick={addReminder} className="text-sm font-medium text-purple-800 underline underline-offset-2 hover:text-purple-600">
+            {sx.reminder}
+          </button>
+        </div>
         <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-purple-100" role="progressbar" aria-valuemin={0} aria-valuemax={programme.lessons.length} aria-valuenow={done}>
           <div className="h-full bg-purple-600 transition-all" style={{ width: `${(done / programme.lessons.length) * 100}%` }} />
         </div>
@@ -844,6 +909,7 @@ function PrivacyStrip({ tx, lang }: { tx: AcademyCopy; lang: AcademyLang }) {
           try {
             localStorage.removeItem(ACADEMY_USED_KEY)
             localStorage.removeItem(ACADEMY_TUTOR_OK_KEY)
+            localStorage.removeItem(ACADEMY_STREAK_KEY)
           } catch {
             /* blocked */
           }

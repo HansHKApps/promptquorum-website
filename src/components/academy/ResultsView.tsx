@@ -23,6 +23,10 @@ import { renderDocumentationPdf } from './documentation-pdf'
 import { ShareBar } from './ShareBar'
 import { SHARE_COPY } from './copy/share'
 import { buildPlanShare } from './share-plan'
+import { SuccessShare, trackGrowth } from './SuccessShare'
+import { NextTopics } from './NextTopics'
+import { defaultDraft } from '@/lib/academy/store'
+import { verifyUrl } from '@/lib/academy/qr'
 import { StarRating } from './StarRating'
 import type { useAcademyState } from './useAcademyState'
 
@@ -62,6 +66,14 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
   const attempts = programme.progress.finalAttempts?.length ?? 0
   const minutes = Math.round(programme.progress.secondsSpent / 60)
   const back = () => update((s) => ({ ...s, view: 'programme' }))
+  // "What to learn next": the chosen topic goes into the setup form with the same language, time and level. The finished
+  // program stays in memory until the new one is built, so the certificate above can still be created meanwhile.
+  const startNext = (title: string) =>
+    update((s) => ({
+      ...s,
+      view: 'setup',
+      draft: { ...(s.draft ?? defaultDraft(programme.language)), subject: title, language: programme.language, availableMinutes: programme.availableMinutes, selfLevel: programme.selfLevel, updatedAt: new Date().toISOString() },
+    }))
   if (!score || !final) {
     return null
   }
@@ -142,7 +154,9 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
   // Sharing the finished files themselves (not just a text): the phone's share sheet (WhatsApp, Telegram, ...) gets the PDF
   // attached; where the browser cannot share files, the certificate is copied as an image to paste into a chat.
   const sx = SHARE_COPY[lang]
-  const shareLink = buildPlanShare(programme, lang, sx, score.percent)
+  // A registered certificate has a public verification page with its own preview image: share that link instead of the plain site URL.
+  const publicUrl = registeredNumber && programme.certificate ? verifyUrl(programme.certificate.id) : undefined
+  const shareLink = buildPlanShare(programme, lang, sx, score.percent, publicUrl)
   const sharedFile = (kind: 'certificate' | 'documentation' | 'image') => {
     postEvent({ type: 'share_file', kind })
     try {
@@ -161,6 +175,22 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
       if (!(err instanceof DOMException && err.name === 'AbortError')) return false
     }
     return true
+  }
+  const addToLinkedIn = () => {
+    const c = programme.certificate
+    if (!c) return
+    const d = new Date(c.issuedAt)
+    const q = new URLSearchParams({
+      startTask: 'CERTIFICATION_NAME',
+      name: `${tx.cert.title}: ${programme.subject}`.slice(0, 100),
+      organizationName: 'PromptQuorum Academy',
+      issueYear: String(d.getFullYear()),
+      issueMonth: String(d.getMonth() + 1),
+      certId: c.id,
+      certUrl: publicUrl ?? shareLink.url,
+    })
+    trackGrowth('linkedin')
+    window.open(`https://www.linkedin.com/profile/add?${q.toString()}`, '_blank', 'noopener,noreferrer')
   }
   const certParts = () => {
     const model = certificateModel(programme, name)
@@ -351,7 +381,11 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
                   <button type="button" disabled={shareBusy} onClick={() => void copyCertificateImage()} className="rounded-xl border border-purple-200 bg-white px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-50 disabled:opacity-50">
                     {sx.copyCertImage}
                   </button>
+                  <button type="button" onClick={addToLinkedIn} className="rounded-xl border border-purple-200 bg-white px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-50">
+                    {sx.linkedin}
+                  </button>
                 </div>
+                <SuccessShare lang={lang} subject={programme.subject} percent={score.percent} minutes={Math.max(1, minutes)} heading={false} channels={false} />
                 <p className="text-sm text-gray-700" role="status">
                   {imageCopied ? sx.imageCopied : ''}
                 </p>

@@ -36,6 +36,12 @@ export const FEEDBACK_FIELDS = [
   'share:certificate',
   'share:documentation',
   'share:image',
+  'growth:share_card',
+  'growth:challenge_shared',
+  'growth:challenge_landed',
+  'growth:linkedin',
+  'growth:reminder',
+  'growth:next_topic',
   'cert:registered_download',
 ] as const
 export type FeedbackField = (typeof FEEDBACK_FIELDS)[number]

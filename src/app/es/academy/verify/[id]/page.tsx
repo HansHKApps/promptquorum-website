@@ -3,8 +3,8 @@
 import type { Metadata } from 'next'
 import { VerifyPage, verifyMetadata } from '@/components/academy/VerifyPage'
 
-export function generateMetadata(): Metadata {
-  return verifyMetadata('es')
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  return verifyMetadata('es', (await params).id)
 }
 
 export default function Route({ params }: { params: Promise<{ id: string }> }) {

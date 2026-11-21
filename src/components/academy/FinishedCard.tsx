@@ -80,6 +80,7 @@ export function FinishedCard({
   isFinal,
   buttonLabel,
   onContinue,
+  share,
   children,
 }: {
   tx: AcademyCopy
@@ -90,6 +91,8 @@ export function FinishedCard({
   isFinal: boolean
   buttonLabel: string
   onContinue: () => void
+  /** shown only when the result is a pass: the share buttons (see SuccessShare) */
+  share?: ReactNode
   children?: ReactNode
 }) {
   const pct = total > 0 ? (correct / total) * 100 : 0
@@ -108,6 +111,7 @@ export function FinishedCard({
       <p className="text-lg text-gray-800">{scoreLine}</p>
       {isFinal ? <p className="text-gray-800">{passed ? tx.finalNextSteps : tx.notPassedYet}</p> : passed && <p className="text-gray-800">{tx.wellDone}</p>}
       {children}
+      {passed && share}
       <button type="button" onClick={onContinue} className="relative rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700">
         {isFinal && passed ? tx.seeResultsCertificate : buttonLabel}
       </button>

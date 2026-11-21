@@ -19,6 +19,7 @@ const eventSchema = z.discriminatedUnion('type', [
   z.object({ type: z.literal('rating_mail') }),
   z.object({ type: z.literal('report_mail') }),
   z.object({ type: z.literal('launcher_click') }),
+  z.object({ type: z.literal('growth'), kind: z.enum(['share_card', 'challenge_shared', 'challenge_landed', 'linkedin', 'reminder', 'next_topic']) }),
   z.object({ type: z.literal('share_file'), kind: z.enum(['certificate', 'documentation', 'image']) }),
 ])
 
@@ -30,7 +31,7 @@ export async function POST(req: NextRequest): Promise<Response> {
     if (e.type === 'certificate' || e.type === 'feedback_mail') await recordAcademy(e.type)
     else {
       const field: FeedbackField =
-        e.type === 'rating' ? (`rating:${e.kind}:${e.stars}` as FeedbackField) : e.type === 'tutor_thumb' ? (e.up ? 'tutor:up' : 'tutor:down') : e.type === 'tutor_message' ? 'tutor:message' : e.type === 'rating_mail' ? 'mail:rating' : e.type === 'launcher_click' ? 'launcher:click' : e.type === 'share_file' ? (`share:${e.kind}` as FeedbackField) : 'mail:report'
+        e.type === 'rating' ? (`rating:${e.kind}:${e.stars}` as FeedbackField) : e.type === 'tutor_thumb' ? (e.up ? 'tutor:up' : 'tutor:down') : e.type === 'tutor_message' ? 'tutor:message' : e.type === 'rating_mail' ? 'mail:rating' : e.type === 'launcher_click' ? 'launcher:click' : e.type === 'growth' ? (`growth:${e.kind}` as FeedbackField) : e.type === 'share_file' ? (`share:${e.kind}` as FeedbackField) : 'mail:report'
       await recordAcademyFeedback(field)
     }
     return academyJson({ ok: true })
