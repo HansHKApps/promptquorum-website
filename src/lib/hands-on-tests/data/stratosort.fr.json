@@ -142,12 +142,12 @@
     ],
     [
       "Prise en main et choix du modèle",
-      3,
+      4,
       "Le mode guidé et le test à blanc aident ; le concept de dossier n’était pas clair pour le testeur et la lecture d’un dossier entier a échoué."
     ],
     [
       "Fonction principale",
-      3,
+      4,
       "La vérification par fichier, le renommage et le déplacement ont fonctionné ; le tri a été mitigé et les tableurs n’ont été lus qu’en partie."
     ],
     [
@@ -157,7 +157,7 @@
     ],
     [
       "Intégration (MCP)",
-      3,
+      5,
       "Connexion établie et deux outils de lecture ont fonctionné ; la configuration a demandé de la rétro-ingénierie."
     ],
     [

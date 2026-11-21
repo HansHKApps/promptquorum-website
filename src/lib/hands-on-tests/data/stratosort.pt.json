@@ -142,12 +142,12 @@
     ],
     [
       "Primeiros passos e escolha de modelo",
-      3,
+      4,
       "O modo guiado e a simulação ajudam; o conceito de pastas não ficou claro para o testador e a leitura de uma pasta inteira falhou."
     ],
     [
       "Função principal",
-      3,
+      4,
       "Revisão por arquivo, renomeação e movimentação funcionaram; a classificação foi mista e as planilhas foram lidas só em parte."
     ],
     [
@@ -157,7 +157,7 @@
     ],
     [
       "Integração (MCP)",
-      3,
+      5,
       "Conectou e duas ferramentas de leitura funcionaram; a configuração exigiu engenharia reversa."
     ],
     [

@@ -142,12 +142,12 @@
     ],
     [
       "Einstieg und Modellauswahl",
-      3,
+      4,
       "Der geführte Modus und der Probelauf helfen; das Ordnerkonzept blieb dem Tester unklar, und das Lesen eines ganzen Ordners scheiterte."
     ],
     [
       "Kernfunktion",
-      3,
+      4,
       "Prüfung pro Datei, Umbenennen und Verschieben funktionierten; die Zuordnung war gemischt, und Tabellen wurden nur teilweise gelesen."
     ],
     [
@@ -157,7 +157,7 @@
     ],
     [
       "Integration (MCP)",
-      3,
+      5,
       "Verbunden, und zwei lesende Werkzeuge funktionierten; das Einrichten erforderte Rückwärtsanalyse."
     ],
     [

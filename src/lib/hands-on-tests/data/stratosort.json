@@ -142,12 +142,12 @@
     ],
     [
       "Onboarding and model choice",
-      3,
+      4,
       "Guided mode and dry run help; the folder concept was unclear to the tester and a whole-folder read failed."
     ],
     [
       "Core function",
-      3,
+      4,
       "Per-file review, renaming and moving worked; matching was mixed and spreadsheets were read in part."
     ],
     [
@@ -157,7 +157,7 @@
     ],
     [
       "Integration (MCP)",
-      3,
+      5,
       "Connected and two read tools worked; setup needed reverse engineering."
     ],
     [
