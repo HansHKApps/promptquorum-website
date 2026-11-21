@@ -3084,7 +3084,7 @@
         "slug": "sourcegraph-cody-review",
         "title": "Sourcegraph Cody Review: Now Enterprise-Only, After Spinning Off Amp",
         "url": "/power-local-llm/sourcegraph-cody-review",
-        "dateModified": "2026-09-05",
+        "dateModified": "2026-11-21",
         "tier": "about"
       },
       {
@@ -3143,6 +3143,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "sourcegraph-cody-review",
+        "title": "Sourcegraph Cody Review: Now Enterprise-Only, After Spinning Off Amp",
+        "url": "/power-local-llm/sourcegraph-cody-review",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -3187,14 +3195,6 @@
         "title": "Kilo Code Review: The Open-Source Coding Agent Now Owned by Anaconda",
         "url": "/power-local-llm/kilo-code-review",
         "dateModified": "2026-09-12",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "sourcegraph-cody-review",
-        "title": "Sourcegraph Cody Review: Now Enterprise-Only, After Spinning Off Amp",
-        "url": "/power-local-llm/sourcegraph-cody-review",
-        "dateModified": "2026-09-05",
         "tier": "mentioned"
       }
     ],
@@ -10248,7 +10248,7 @@
         "slug": "firecrawl-review",
         "title": "Firecrawl Review: Open-Source Web Data API for LLM Pipelines",
         "url": "/power-local-llm/firecrawl-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-11-21",
         "tier": "about"
       },
       {
@@ -14561,9 +14561,25 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "firecrawl-review",
+        "title": "Firecrawl Review: Open-Source Web Data API for LLM Pipelines",
+        "url": "/power-local-llm/firecrawl-review",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pixafind-review",
         "title": "PixaFind Review: Local AI Search for Your Files and Photos",
         "url": "/power-local-llm/pixafind-review",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "sourcegraph-cody-review",
+        "title": "Sourcegraph Cody Review: Now Enterprise-Only, After Spinning Off Amp",
+        "url": "/power-local-llm/sourcegraph-cody-review",
         "dateModified": "2026-11-21",
         "tier": "mentioned"
       },
@@ -14612,22 +14628,6 @@
         "slug": "local-ai-video-generation-vs-cloud",
         "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
         "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
