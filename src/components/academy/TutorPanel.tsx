@@ -7,6 +7,7 @@
 // Caps: 30 per programme, 8 per lesson, rephrase buttons count half. Output is rendered as sanitised markdown.
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { ReadAloud } from '@/components/ReadAloud'
 import { Markdown } from '@/components/askhans/markdown'
 import { ACADEMY_CONTACT_EMAIL, ACADEMY_TUTOR_OK_DAYS, ACADEMY_TUTOR_OK_KEY } from '@/lib/academy/config'
 import { cleanTutorText, tutorCost, TUTOR_CAP_LESSON, TUTOR_CAP_PROGRAMME, type TutorTrigger } from '@/lib/academy/tutor'
@@ -262,7 +263,8 @@ export function TutorPanel({
                             {x.content ? <Markdown text={cleanTutorText(x.content)} /> : <span className="text-gray-500">{t.thinking}</span>}
                           </Content>
                           {x.content && !busy && (
-                            <div className="mt-1 flex items-center gap-2 text-xs text-gray-600">
+                            <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-gray-600">
+                              <ReadAloud lang={programme.language} getText={() => cleanTutorText(x.content)} />
                               {x.thumb === 'down' && sorryFor === i ? (
                                 <div role="group" aria-label={t.sorry} className="w-full rounded-xl border border-purple-200 bg-purple-50 p-3 text-sm text-purple-950">
                                   <p>{t.sorry}</p>

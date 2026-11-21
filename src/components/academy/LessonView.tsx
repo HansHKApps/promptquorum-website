@@ -5,6 +5,7 @@
 // programme. The learner always sees subject, objective, "lesson x of y" and progress (SPEC 5 navigation rule).
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { ReadAloud } from '@/components/ReadAloud'
 import { Markdown } from '@/components/askhans/markdown'
 import { ACADEMY_IDLE_AFTER_MS, ACADEMY_TICK_SECONDS } from '@/lib/academy/config'
 import { addActiveTime, lessonsDone, markLessonDone, setLessonContent } from '@/lib/academy/progress'
@@ -182,6 +183,7 @@ export function LessonView({
           </div>
         ) : (
           <>
+            <ReadAloud lang={programme.language} getText={() => `${lesson.title}. ${lesson.sections.map((s) => `${s.heading}. ${s.body}`).join(' ')}`} />
             <Content lang={programme.language} className="space-y-8">
               {lesson.sections.map((s, i) => (
                 <section key={i} className="space-y-3">
