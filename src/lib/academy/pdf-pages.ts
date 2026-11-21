@@ -18,6 +18,8 @@ export interface PdfPage {
   px: { w: number; h: number }
   /** page size in PDF points */
   pt: { w: number; h: number }
+  /** clickable areas, in image pixels measured from the top-left corner (turned into link annotations) */
+  links?: { x: number; y: number; w: number; h: number; url: string }[]
 }
 
 export function jpegsToPdf(pages: PdfPage[], info: { title: string; subject: string; keywords: string; created: Date }): Uint8Array {
@@ -44,9 +46,21 @@ export function jpegsToPdf(pages: PdfPage[], info: { title: string; subject: str
   obj(1, '<< /Type /Catalog /Pages 2 0 R >>')
   obj(2, `<< /Type /Pages /Kids [${pages.map((_, i) => `${4 + 3 * i} 0 R`).join(' ')}] /Count ${pages.length} >>`)
   obj(3, `<< /Title ${pdfString(info.title)} /Subject ${pdfString(info.subject)} /Keywords ${pdfString(info.keywords)} /Producer (PromptQuorum Academy) /CreationDate (${date}) >>`)
+  // link annotation objects come after the page objects
+  let nextAnnot = 4 + 3 * pages.length
+  const annots: { n: number; body: string }[] = []
   pages.forEach((pg, i) => {
     const pageN = 4 + 3 * i
-    obj(pageN, `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pg.pt.w} ${pg.pt.h}] /Resources << /XObject << /Im0 ${pageN + 2} 0 R >> >> /Contents ${pageN + 1} 0 R >>`)
+    const refs: number[] = []
+    for (const l of pg.links ?? []) {
+      const kx = pg.pt.w / pg.px.w
+      const ky = pg.pt.h / pg.px.h
+      const r = [l.x * kx, pg.pt.h - (l.y + l.h) * ky, (l.x + l.w) * kx, pg.pt.h - l.y * ky].map((v) => v.toFixed(2))
+      const n = nextAnnot++
+      refs.push(n)
+      annots.push({ n, body: `<< /Type /Annot /Subtype /Link /Rect [${r.join(' ')}] /Border [0 0 0] /A << /S /URI /URI ${pdfString(l.url)} >> >>` })
+    }
+    obj(pageN, `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pg.pt.w} ${pg.pt.h}] /Resources << /XObject << /Im0 ${pageN + 2} 0 R >> >> /Contents ${pageN + 1} 0 R${refs.length ? ` /Annots [${refs.map((n) => `${n} 0 R`).join(' ')}]` : ''} >>`)
     const content = `q ${pg.pt.w} 0 0 ${pg.pt.h} 0 0 cm /Im0 Do Q`
     obj(pageN + 1, `<< /Length ${content.length} >>\nstream\n${content}\nendstream`)
     obj(pageN + 2, () => {
@@ -55,7 +69,8 @@ export function jpegsToPdf(pages: PdfPage[], info: { title: string; subject: str
       push('\nendstream')
     })
   })
-  const total = 3 + 3 * pages.length
+  for (const a of annots) obj(a.n, a.body)
+  const total = 3 + 3 * pages.length + annots.length
   const xref = length
   push(`xref\n0 ${total + 1}\n0000000000 65535 f \n`)
   for (let n = 1; n <= total; n++) push(`${String(offsets[n]).padStart(10, '0')} 00000 n \n`)

@@ -744,6 +744,18 @@ t('PDF pages: N pages, consistent xref, identical bytes for identical input', ()
   assert.deepEqual(a, jpegsToPdf([pg, pg, pg], info))
 })
 
+t('PDF pages: link areas become clickable URI annotations on their page', () => {
+  const jpeg = new Uint8Array([0xff, 0xd8, 0xff, 0xd9])
+  const base = { jpeg, px: { w: 1240, h: 1754 }, pt: { w: 595.28, h: 841.89 } }
+  const info = { title: 'T', subject: 'S', keywords: 'K', created: new Date('2026-11-20T10:00:00Z') }
+  const url = 'https://www.promptquorum.com/academy/verify/PQA-2026-ABCDEFGHJK'
+  const text = Buffer.from(jpegsToPdf([{ ...base, links: [{ x: 96, y: 1000, w: 230, h: 230, url }] }, base], info)).toString('latin1')
+  assert.ok(text.includes('/Subtype /Link') && text.includes(`/URI (${url})`) && text.includes('/Annots [10 0 R]'))
+  assert.ok(text.includes('/Size 11'))
+  const xref = Number(/startxref\n(\d+)/.exec(text)![1])
+  assert.ok(text.slice(xref).startsWith('xref'))
+})
+
 t('hash: SHA-256 of "abc" matches the known value', async () => {
   assert.equal(await sha256Hex(new TextEncoder().encode('abc')), 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad')
 })
