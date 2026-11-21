@@ -74,6 +74,7 @@ import { article as a_stratosort_review } from './articles/stratosort-review'
 import { article as a_sprich_review } from './articles/sprich-review'
 import { article as a_weesper_neon_flow_review } from './articles/weesper-neon-flow-review'
 import { article as a_whispy_review } from './articles/whispy-review'
+import { article as a_pixafind_review } from './articles/pixafind-review'
 import { article as a_sablate_review } from './articles/sablate-review'
 import { article as a_cocoindex_review } from './articles/cocoindex-review'
 import { article as a_opendataloader_pdf_review } from './articles/opendataloader-pdf-review'
@@ -856,6 +857,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'sprich-review':                                 a_sprich_review,
   'weesper-neon-flow-review':                      a_weesper_neon_flow_review,
   'whispy-review':                                 a_whispy_review,
+  'pixafind-review':                               a_pixafind_review,
   'sablate-review':                                a_sablate_review,
   'cocoindex-review':                              a_cocoindex_review,
   'opendataloader-pdf-review':                     a_opendataloader_pdf_review,

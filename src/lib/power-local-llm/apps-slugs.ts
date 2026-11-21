@@ -231,6 +231,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'sprich':                                  'sprich',
   'weesper-neon-flow':                       'weesper-neon-flow',
   'whispy':                                  'whispy',
+  'pixafind':                                'pixafind',
   'sablate':                                 'sablate',
   'cocoindex':                               'cocoindex',
   'opendataloader-pdf':                      'opendataloader-pdf',

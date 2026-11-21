@@ -14560,6 +14560,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "pixafind-review",
+        "title": "PixaFind Review: Local AI Search for Your Files and Photos",
+        "url": "/power-local-llm/pixafind-review",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
@@ -14622,17 +14630,9 @@
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-11-20",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-knowledge-retrieval-compared",
-        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 291,
+    "totalCount": 292,
     "capped": true
   },
   "Qdrant": {
@@ -17022,6 +17022,28 @@
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
+        "dateModified": "2026-11-20",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "PixaFind": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pixafind-review",
+        "title": "PixaFind Review: Local AI Search for Your Files and Photos",
+        "url": "/power-local-llm/pixafind-review",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
         "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
