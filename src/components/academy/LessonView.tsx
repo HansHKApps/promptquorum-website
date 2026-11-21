@@ -14,7 +14,9 @@ import type { Lesson, Programme } from '@/lib/academy/types'
 import { AiBadge } from './AiBadge'
 import { Content } from './Content'
 import { ReportProblem } from './ReportProblem'
+import { SectionWand } from './SectionWand'
 import { StarRating } from './StarRating'
+import { WaitNote } from './WaitNote'
 import { TutorPanel, type TutorSeed } from './TutorPanel'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
@@ -179,9 +181,12 @@ export function LessonView({
             </button>
           </div>
         ) : loading || !lesson.sections.length ? (
-          <div className="flex items-center gap-3 text-gray-700" role="status" aria-live="polite">
-            <span className="h-5 w-5 shrink-0 animate-spin rounded-full border-2 border-purple-200 border-t-purple-600" aria-hidden="true" />
-            {tx.preparingLesson}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3 text-gray-700" role="status" aria-live="polite">
+              <span className="h-5 w-5 shrink-0 animate-spin rounded-full border-2 border-purple-200 border-t-purple-600" aria-hidden="true" />
+              {tx.preparingLesson}
+            </div>
+            <WaitNote language={programme.language} />
           </div>
         ) : (
           <>
@@ -189,7 +194,10 @@ export function LessonView({
             <Content lang={programme.language} className="space-y-8">
               {lesson.sections.map((s, i) => (
                 <section key={i} className="space-y-3">
-                  <h3 className="pt-2 text-xl font-semibold leading-snug text-gray-900 sm:text-2xl">{s.heading}</h3>
+                  <div className="flex items-start gap-3 pt-2">
+                    <h3 className="text-xl font-semibold leading-snug text-gray-900 sm:text-2xl">{s.heading}</h3>
+                    <SectionWand tx={tx} programme={programme} update={update} lessonKey={lesson.id} lessonTitle={lesson.title} section={s} index={i} />
+                  </div>
                   <div className="space-y-4 text-[1.05rem] leading-8 text-gray-800">
                     <Markdown text={s.body} />
                   </div>

@@ -10,9 +10,10 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { ReadAloud } from '@/components/ReadAloud'
 import { Markdown } from '@/components/askhans/markdown'
 import { ACADEMY_CONTACT_EMAIL, ACADEMY_TUTOR_OK_DAYS, ACADEMY_TUTOR_OK_KEY } from '@/lib/academy/config'
-import { cleanTutorText, tutorCost, TUTOR_CAP_LESSON, TUTOR_CAP_PROGRAMME, type TutorTrigger } from '@/lib/academy/tutor'
+import { cleanTutorText, splitTutorStream, tutorCost, TUTOR_CAP_LESSON, TUTOR_CAP_PROGRAMME, type TutorSource, type TutorTrigger } from '@/lib/academy/tutor'
 import type { Programme } from '@/lib/academy/types'
 import { Content } from './Content'
+import { shareCopyFor } from './copy/share'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -34,10 +35,12 @@ interface Turn {
   role: 'user' | 'assistant'
   content: string
   thumb?: 'up' | 'down'
+  /** PromptQuorum guides (and web pages) the answer was based on, shown as links under it */
+  sources?: TutorSource[]
 }
 
 /** True while the notice was confirmed less than ACADEMY_TUTOR_OK_DAYS ago; an expired or unreadable value counts as not given. */
-function tutorNoticeConfirmed(): boolean {
+export function tutorNoticeConfirmed(): boolean {
   try {
     const at = Number(localStorage.getItem(ACADEMY_TUTOR_OK_KEY))
     const age = Date.now() - at
@@ -47,7 +50,7 @@ function tutorNoticeConfirmed(): boolean {
   return false
 }
 
-function fireEvent(body: unknown) {
+export function fireEvent(body: unknown) {
   void fetch('/api/academy/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).catch(() => {})
 }
 
@@ -114,7 +117,7 @@ export function TutorPanel({
       if (usedHere + cost > TUTOR_CAP_LESSON) return setError(t.limitLesson)
       setError(null)
       setBusy(true)
-      const shown = s.trigger === 'ask' || s.trigger === 'chip' ? (s.message ?? '') : s.trigger === 'explain' ? `${t.explain}: ${s.selected ?? ''}` : s.trigger === 'why' ? t.why : (t[s.trigger] ?? '')
+      const shown = s.trigger === 'ask' || s.trigger === 'chip' ? (s.message ?? '') : s.trigger === 'explain' ? `${t.explain}: ${s.selected ?? ''}` : s.trigger === 'why' ? t.why : s.trigger === 'quiz' ? shareCopyFor(programme.language).wandQuiz : s.trigger === 'terms' ? shareCopyFor(programme.language).wandTerms : t[s.trigger]
       const history = turns.slice(-6).map((x) => ({ role: x.role, content: x.content.slice(0, 3000) }))
       setTurns((prev) => [...prev, { role: 'user', content: shown }, { role: 'assistant', content: '' }])
       update((st) =>
@@ -158,10 +161,10 @@ export function TutorPanel({
           const { done, value } = await reader.read()
           if (done) break
           text += dec.decode(value, { stream: true })
-          const shownText = text
-          setTurns((prev) => prev.map((x, i) => (i === prev.length - 1 ? { ...x, content: shownText } : x)))
+          const part = splitTutorStream(text)
+          setTurns((prev) => prev.map((x, i) => (i === prev.length - 1 ? { ...x, content: part.text, sources: part.sources } : x)))
         }
-        if (!text.trim() || text.includes('\u0000')) throw new Error('tutor')
+        if (!splitTutorStream(text).text.trim() || text.includes('\u0000')) throw new Error('tutor')
       } catch {
         setTurns((prev) => prev.slice(0, -2))
         setError(t.error)
@@ -262,6 +265,18 @@ export function TutorPanel({
                           <Content lang={programme.language} className="space-y-2">
                             {x.content ? <Markdown text={cleanTutorText(x.content)} /> : <span className="text-gray-500">{t.thinking}</span>}
                           </Content>
+                          {x.content && !busy && !!x.sources?.length && (
+                            <ul className="mt-2 space-y-1 text-xs">
+                              {x.sources.map((src) => (
+                                <li key={src.url} className="flex flex-wrap items-center gap-2">
+                                  <a href={src.url} target={src.web ? '_blank' : undefined} rel={src.web ? 'noopener noreferrer nofollow' : undefined} className="font-medium text-purple-700 underline underline-offset-2 hover:text-purple-900">
+                                    {src.title}
+                                  </a>
+                                  {!src.web && <span className="rounded-full bg-purple-50 px-2 py-0.5 text-purple-700">{tx.fromPromptQuorum}</span>}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                           {x.content && !busy && (
                             <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-gray-600">
                               <ReadAloud lang={programme.language} getText={() => cleanTutorText(x.content)} />

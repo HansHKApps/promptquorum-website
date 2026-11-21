@@ -55,6 +55,12 @@ export function findMaterial(req: Pick<LessonRequest, 'subject' | 'language' | '
   return toMaterial([...byLesson, ...bySubject])
 }
 
+/** PromptQuorum guides that match a learner's free question in the tutor (question first, then the subject). */
+export function findMaterialForQuestion(question: string, subject: string, language: string): Material[] {
+  const lang = siteLangOf(language)
+  return toMaterial([...searchPromptquorum({ query: question, lang, limit: 10 }), ...searchPromptquorum({ query: `${question} ${subject}`, lang, limit: 10 })])
+}
+
 /** Readable plain text of an article object (titles, paragraphs, list items, FAQs), HTML removed. */
 export function articleText(article: Record<string, unknown>, maxChars: number): string {
   const parts: string[] = []
@@ -77,9 +83,9 @@ export function articleText(article: Record<string, unknown>, maxChars: number):
   return parts.join('\n').slice(0, maxChars)
 }
 
-function readGrounding(material: Material[], language: string): string {
+export function readGrounding(material: Material[], language: string, count = 2): string {
   const lang: Lang = siteLangOf(language)
-  const top = material.slice(0, 2)
+  const top = material.slice(0, count)
   const per = Math.floor(GROUNDING_MAX_CHARS / Math.max(top.length, 1))
   return top
     .map((m) => {

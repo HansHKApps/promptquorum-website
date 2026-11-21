@@ -26,6 +26,7 @@ import { QuizRouter } from './QuizRouter'
 import { ResultsView } from './ResultsView'
 import { ShareBar } from './ShareBar'
 import { SHARE_COPY } from './copy/share'
+import { WaitNote } from './WaitNote'
 import { trackGrowth } from './SuccessShare'
 import { downloadBlob } from '@/components/askhans/power/export/download'
 import { academyUrl } from './share-plan'
@@ -117,6 +118,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
   const learnLang: AcademyLang = programLang && isSiteLang(programLang) ? programLang : lang
   const ltx = ACADEMY_COPY[learnLang]
   const learning = ['diagnostic', 'programme', 'lesson', 'quiz'].includes(state.view)
+  const stripLang: AcademyLang = learning || state.view === 'results' ? learnLang : lang
   const learnProps = learning && learnLang !== lang ? { lang: learnLang, dir: learnLang === 'ar' ? ('rtl' as const) : ('ltr' as const) } : {}
   if (!ready || !draft) {
     return <div className="h-96 animate-pulse rounded-2xl border border-purple-100 bg-white" aria-busy="true" aria-label={tx.loading} />
@@ -209,7 +211,10 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
         </>
       )}
       </div>
-      <PrivacyStrip tx={tx} lang={lang} />
+      {/* Once the learner works in their program language, the notes below follow it (a German course on an English page shows German). */}
+      <div {...(stripLang !== lang ? { lang: stripLang, dir: stripLang === 'ar' ? ('rtl' as const) : ('ltr' as const) } : {})}>
+        <PrivacyStrip tx={ACADEMY_COPY[stripLang]} lang={stripLang} />
+      </div>
     </div>
   )
 }
@@ -527,11 +532,14 @@ export function programmeKey(d: Pick<SetupDraft, 'subject' | 'availableMinutes' 
 
 type Update = ReturnType<typeof useAcademyState>['update']
 
-function Busy({ text }: { text: string }) {
+function Busy({ text, wait }: { text: string; /** program language: also shows why it takes a moment (see WaitNote) */ wait?: string }) {
   return (
-    <div className="flex items-center gap-3 rounded-2xl border border-purple-100 bg-white p-6 text-gray-700" role="status" aria-live="polite">
-      <span className="h-5 w-5 shrink-0 animate-spin rounded-full border-2 border-purple-200 border-t-purple-600" aria-hidden="true" />
-      {text}
+    <div className="space-y-4 rounded-2xl border border-purple-100 bg-white p-6 text-gray-700">
+      <div className="flex items-center gap-3" role="status" aria-live="polite">
+        <span className="h-5 w-5 shrink-0 animate-spin rounded-full border-2 border-purple-200 border-t-purple-600" aria-hidden="true" />
+        {text}
+      </div>
+      {wait && <WaitNote language={wait} />}
     </div>
   )
 }
@@ -611,7 +619,7 @@ function QuickCheckView({ tx, draft, quickCheck, update }: { tx: AcademyCopy; dr
     return <ErrorBox tx={tx} code={error.code} onBack={back} onRetry={() => (error.step === 'questions' ? loadQuestions() : quickCheck && buildProgramme(quickCheck))} />
   }
   if (phase === 'loading' || !quickCheck) return <Busy text={tx.preparingQuestions} />
-  if (phase === 'building') return <Busy text={tx.preparingProgramme} />
+  if (phase === 'building') return <Busy text={tx.preparingProgramme} wait={draft.language} />
 
   const total = quickCheck.questions.length
   const index = quickCheck.questions.findIndex((q) => !(q.id in quickCheck.answers))
@@ -619,7 +627,7 @@ function QuickCheckView({ tx, draft, quickCheck, update }: { tx: AcademyCopy; dr
     // All answered (e.g. the page was reloaded while the programme was being built): build it now.
     return (
       <div className="space-y-3">
-        <Busy text={tx.preparingProgramme} />
+        <Busy text={tx.preparingProgramme} wait={draft.language} />
         <AutoRun run={() => buildProgramme(quickCheck)} />
       </div>
     )

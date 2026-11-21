@@ -33,6 +33,20 @@ export interface ShareCopy {
   nextLoading: string
   newProgram: string
   newProgramConfirm: string
+  waitHeading: string
+  waitBody: string
+  waitPoints: [string, string, string]
+  wandLabel: string
+  wandQuiz: string
+  wandTerms: string
+  wandCopy: string
+  wandNote: string
+  wandAsk: string
+  wandBasis: string
+  wandNoteLabel: string
+  wandCopyAnswer: string
+  wandClose: string
+  wandPlaceholder: string
 }
 
 export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
@@ -66,6 +80,20 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextLoading: 'Finding topics that fit…',
     newProgram: 'Start a new program',
     newProgramConfirm: 'Your certificate has not been created yet. If you start a new program, the current one is no longer available here. Start anyway?',
+    waitHeading: 'Made just for you',
+    waitBody: 'Creating this takes a moment, usually under a minute, because nothing here is copied from a standard course. It is written for your subject, your level and your time, using PromptQuorum guides as a source. Please keep this window open.',
+    waitPoints: ['Individual: built around your subject, level and time', 'Grounded in PromptQuorum guides on local AI', 'Free, with an AI tutor and a certificate'],
+    wandLabel: 'Work with this section',
+    wandQuiz: 'Ask me a question',
+    wandTerms: 'Explain the key terms',
+    wandCopy: 'Copy this section',
+    wandNote: 'Add a note',
+    wandAsk: 'Ask about this section',
+    wandBasis: 'Answers are based only on this section.',
+    wandNoteLabel: 'My note for this section',
+    wandCopyAnswer: 'Copy answer',
+    wandClose: 'Close',
+    wandPlaceholder: 'Ask a question about this section…',
   },
   de: {
     plan: 'Dieses Programm teilen',
@@ -97,6 +125,20 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextLoading: 'Passende Themen werden gesucht…',
     newProgram: 'Neues Programm starten',
     newProgramConfirm: 'Ihre Teilnahmebescheinigung wurde noch nicht erstellt. Wenn Sie ein neues Programm starten, ist das aktuelle hier nicht mehr verfügbar. Trotzdem starten?',
+    waitHeading: 'Speziell für Sie erstellt',
+    waitBody: 'Das dauert einen Moment, meist weniger als eine Minute, denn nichts hier ist aus einem Standardkurs kopiert. Der Inhalt wird für Ihr Thema, Ihr Niveau und Ihre Zeit geschrieben und stützt sich auf PromptQuorum-Anleitungen. Bitte lassen Sie dieses Fenster geöffnet.',
+    waitPoints: ['Individuell: auf Ihr Thema, Niveau und Zeitbudget zugeschnitten', 'Gestützt auf PromptQuorum-Anleitungen zu lokaler KI', 'Kostenlos, mit KI-Tutor und Teilnahmebescheinigung'],
+    wandLabel: 'Mit diesem Abschnitt arbeiten',
+    wandQuiz: 'Mich dazu abfragen',
+    wandTerms: 'Fachbegriffe erklären',
+    wandCopy: 'Abschnitt kopieren',
+    wandNote: 'Notiz hinzufügen',
+    wandAsk: 'Zu diesem Abschnitt fragen',
+    wandBasis: 'Die Antworten beziehen sich nur auf diesen Abschnitt.',
+    wandNoteLabel: 'Meine Notiz zu diesem Abschnitt',
+    wandCopyAnswer: 'Antwort kopieren',
+    wandClose: 'Schließen',
+    wandPlaceholder: 'Stellen Sie eine Frage zu diesem Abschnitt …',
   },
   fr: {
     plan: 'Partager ce programme',
@@ -128,6 +170,20 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextLoading: 'Recherche de sujets adaptés…',
     newProgram: 'Démarrer un nouveau programme',
     newProgramConfirm: 'Votre attestation n’a pas encore été créée. Si vous démarrez un nouveau programme, le programme actuel ne sera plus disponible ici. Démarrer quand même ?',
+    waitHeading: 'Conçu rien que pour vous',
+    waitBody: 'Cela prend un instant, en général moins d’une minute, car rien ici n’est copié d’un cours standard. Le contenu est rédigé pour votre sujet, votre niveau et votre temps, en s’appuyant sur les guides PromptQuorum. Gardez cette fenêtre ouverte, s’il vous plaît.',
+    waitPoints: ['Individuel : adapté à votre sujet, votre niveau et votre temps', 'Appuyé sur les guides PromptQuorum sur l’IA locale', 'Gratuit, avec tuteur IA et attestation'],
+    wandLabel: 'Travailler cette section',
+    wandQuiz: 'Me poser une question',
+    wandTerms: 'Expliquer les termes clés',
+    wandCopy: 'Copier cette section',
+    wandNote: 'Ajouter une note',
+    wandAsk: 'Poser une question sur cette section',
+    wandBasis: 'Les réponses se basent uniquement sur cette section.',
+    wandNoteLabel: 'Ma note sur cette section',
+    wandCopyAnswer: 'Copier la réponse',
+    wandClose: 'Fermer',
+    wandPlaceholder: 'Posez une question sur cette section…',
   },
   es: {
     plan: 'Compartir este programa',
@@ -159,6 +215,20 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextLoading: 'Buscando temas adecuados…',
     newProgram: 'Empezar un programa nuevo',
     newProgramConfirm: 'Todavía no has creado tu constancia. Si empiezas un programa nuevo, el actual dejará de estar disponible aquí. ¿Empezar de todos modos?',
+    waitHeading: 'Hecho solo para ti',
+    waitBody: 'Esto tarda un momento, normalmente menos de un minuto, porque nada aquí se copia de un curso estándar. El contenido se escribe para tu tema, tu nivel y tu tiempo, apoyándose en las guías de PromptQuorum. Mantén esta ventana abierta.',
+    waitPoints: ['Individual: a medida de tu tema, nivel y tiempo', 'Basado en las guías de PromptQuorum sobre IA local', 'Gratis, con tutor de IA y constancia'],
+    wandLabel: 'Trabajar con esta sección',
+    wandQuiz: 'Hazme una pregunta',
+    wandTerms: 'Explicar los términos clave',
+    wandCopy: 'Copiar esta sección',
+    wandNote: 'Añadir una nota',
+    wandAsk: 'Preguntar sobre esta sección',
+    wandBasis: 'Las respuestas se basan solo en esta sección.',
+    wandNoteLabel: 'Mi nota sobre esta sección',
+    wandCopyAnswer: 'Copiar la respuesta',
+    wandClose: 'Cerrar',
+    wandPlaceholder: 'Haz una pregunta sobre esta sección…',
   },
   pt: {
     plan: 'Compartilhar este programa',
@@ -190,6 +260,20 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextLoading: 'Buscando assuntos adequados…',
     newProgram: 'Começar um novo programa',
     newProgramConfirm: 'Seu comprovante ainda não foi criado. Se você começar um novo programa, o atual não ficará mais disponível aqui. Começar mesmo assim?',
+    waitHeading: 'Feito só para você',
+    waitBody: 'Isso leva um instante, geralmente menos de um minuto, porque nada aqui é copiado de um curso padrão. O conteúdo é escrito para o seu assunto, o seu nível e o seu tempo, com base nos guias da PromptQuorum. Mantenha esta janela aberta.',
+    waitPoints: ['Individual: sob medida para o seu assunto, nível e tempo', 'Baseado nos guias da PromptQuorum sobre IA local', 'Grátis, com tutor de IA e comprovante'],
+    wandLabel: 'Trabalhar com esta seção',
+    wandQuiz: 'Me faça uma pergunta',
+    wandTerms: 'Explicar os termos-chave',
+    wandCopy: 'Copiar esta seção',
+    wandNote: 'Adicionar uma nota',
+    wandAsk: 'Perguntar sobre esta seção',
+    wandBasis: 'As respostas se baseiam apenas nesta seção.',
+    wandNoteLabel: 'Minha nota sobre esta seção',
+    wandCopyAnswer: 'Copiar a resposta',
+    wandClose: 'Fechar',
+    wandPlaceholder: 'Faça uma pergunta sobre esta seção…',
   },
   ja: {
     plan: 'このプログラムを共有',
@@ -221,6 +305,20 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextLoading: '合うテーマを探しています…',
     newProgram: '新しいプログラムを始める',
     newProgramConfirm: '修了証はまだ作成されていません。新しいプログラムを始めると、現在のプログラムはここでは利用できなくなります。それでも始めますか？',
+    waitHeading: 'あなただけのために作成中',
+    waitBody: '標準コースのコピーではないため、作成には少し時間がかかります（通常1分以内）。テーマ、レベル、学習時間に合わせて、PromptQuorumのガイドを参考に書いています。このウィンドウは開いたままにしてください。',
+    waitPoints: ['個別対応：テーマ、レベル、時間に合わせて作成', 'ローカルAIに関するPromptQuorumのガイドが土台', '無料。AIチューターと証明書付き'],
+    wandLabel: 'このセクションを活用',
+    wandQuiz: '質問してもらう',
+    wandTerms: '重要用語を説明',
+    wandCopy: 'このセクションをコピー',
+    wandNote: 'メモを追加',
+    wandAsk: 'このセクションについて質問',
+    wandBasis: '回答はこのセクションの内容のみに基づきます。',
+    wandNoteLabel: 'このセクションへのメモ',
+    wandCopyAnswer: '回答をコピー',
+    wandClose: '閉じる',
+    wandPlaceholder: 'このセクションについて質問を入力…',
   },
   zh: {
     plan: '分享这个学习计划',
@@ -252,6 +350,20 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextLoading: '正在寻找合适的主题…',
     newProgram: '开始新的学习计划',
     newProgramConfirm: '你还没有生成完成证明。开始新的学习计划后，当前计划将无法在此继续查看。仍要开始吗？',
+    waitHeading: '专为你生成',
+    waitBody: '这需要一点时间，通常不到一分钟，因为这里没有任何内容是照搬标准课程的。内容根据你的主题、水平和时间撰写，并参考 PromptQuorum 的指南。请保持此窗口打开。',
+    waitPoints: ['个性化：围绕你的主题、水平和时间', '以 PromptQuorum 的本地 AI 指南为依据', '免费，含 AI 导师和完成证明'],
+    wandLabel: '针对本节操作',
+    wandQuiz: '向我提问',
+    wandTerms: '解释关键术语',
+    wandCopy: '复制本节内容',
+    wandNote: '添加笔记',
+    wandAsk: '就本节提问',
+    wandBasis: '回答仅基于本节内容。',
+    wandNoteLabel: '我对本节的笔记',
+    wandCopyAnswer: '复制回答',
+    wandClose: '关闭',
+    wandPlaceholder: '就本节内容提问…',
   },
   ar: {
     plan: 'مشاركة هذا البرنامج',
@@ -283,6 +395,20 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextLoading: 'جارٍ البحث عن مواضيع مناسبة…',
     newProgram: 'ابدأ برنامجًا جديدًا',
     newProgramConfirm: 'لم تنشئ الإفادة بعد. إذا بدأت برنامجًا جديدًا فلن يبقى البرنامج الحالي متاحًا هنا. هل تريد المتابعة؟',
+    waitHeading: 'مُعدّ لك خصيصًا',
+    waitBody: 'يستغرق هذا لحظات، وعادةً أقل من دقيقة، لأن أيًّا من هذا المحتوى ليس منسوخًا من دورة جاهزة. يُكتب المحتوى لموضوعك ومستواك ووقتك، اعتمادًا على أدلة PromptQuorum. يُرجى إبقاء هذه النافذة مفتوحة.',
+    waitPoints: ['فردي: مصمَّم حول موضوعك ومستواك ووقتك', 'قائم على أدلة PromptQuorum حول الذكاء الاصطناعي المحلي', 'مجاني، مع معلّم بالذكاء الاصطناعي وإفادة'],
+    wandLabel: 'العمل مع هذا القسم',
+    wandQuiz: 'اطرح عليّ سؤالًا',
+    wandTerms: 'اشرح المصطلحات الأساسية',
+    wandCopy: 'نسخ هذا القسم',
+    wandNote: 'إضافة ملاحظة',
+    wandAsk: 'اسأل عن هذا القسم',
+    wandBasis: 'تعتمد الإجابات على هذا القسم فقط.',
+    wandNoteLabel: 'ملاحظتي على هذا القسم',
+    wandCopyAnswer: 'نسخ الإجابة',
+    wandClose: 'إغلاق',
+    wandPlaceholder: 'اطرح سؤالًا عن هذا القسم…',
   },
   ko: {
     plan: '이 프로그램 공유',
@@ -314,5 +440,24 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextLoading: '알맞은 주제를 찾는 중입니다…',
     newProgram: '새 프로그램 시작',
     newProgramConfirm: '증서를 아직 만들지 않았습니다. 새 프로그램을 시작하면 현재 프로그램은 여기에서 더 이상 사용할 수 없습니다. 그래도 시작하시겠습니까?',
+    waitHeading: '당신만을 위해 만드는 중',
+    waitBody: '표준 강좌를 복사한 것이 아니기 때문에 시간이 조금 걸리며, 보통 1분 이내입니다. 주제, 수준, 시간에 맞춰 PromptQuorum 가이드를 바탕으로 작성합니다. 이 창을 열어 두십시오.',
+    waitPoints: ['개별 맞춤: 주제, 수준, 시간에 맞춤', '로컬 AI에 관한 PromptQuorum 가이드 기반', '무료, AI 튜터와 증서 포함'],
+    wandLabel: '이 섹션 활용하기',
+    wandQuiz: '저에게 질문하기',
+    wandTerms: '핵심 용어 설명',
+    wandCopy: '이 섹션 복사',
+    wandNote: '메모 추가',
+    wandAsk: '이 섹션에 대해 질문',
+    wandBasis: '답변은 이 섹션의 내용만을 바탕으로 합니다.',
+    wandNoteLabel: '이 섹션에 대한 내 메모',
+    wandCopyAnswer: '답변 복사',
+    wandClose: '닫기',
+    wandPlaceholder: '이 섹션에 대해 질문을 입력하십시오…',
   },
+}
+
+/** Texts for a programme language: a custom language (no UI texts on the site) falls back to English. */
+export function shareCopyFor(language: string): ShareCopy {
+  return (SHARE_COPY as Record<string, ShareCopy>)[language] ?? SHARE_COPY.en
 }

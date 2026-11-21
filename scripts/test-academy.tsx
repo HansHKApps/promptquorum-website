@@ -699,6 +699,9 @@ import { jpegsToPdf } from '../src/lib/academy/pdf-pages'
 import { sha256Hex } from '../src/lib/academy/hash'
 import { documentationModel } from '../src/lib/academy/documentation'
 import { documentationFilename } from '../src/lib/academy/certificate'
+import { splitTutorStream, TUTOR_SOURCES_MARK } from '../src/lib/academy/tutor'
+import { findMaterialForQuestion } from '../src/lib/academy/lesson'
+import { shareCopyFor } from '../src/components/academy/copy/share'
 import { cleanTutorText, tutorCost, tutorRequestSchema, tutorUserMessage, TUTOR_CAP_LESSON, TUTOR_CAP_PROGRAMME } from '../src/lib/academy/tutor'
 
 t('quick check size: 59 minutes -> 3 questions, 60 minutes -> 6', () => {
@@ -1137,6 +1140,32 @@ t('Course Documentation: every language has the new headings and the formatted t
     assert.ok(c.lessonN(2).includes('2'), l)
     assert.ok(c.scoring(70).includes('70'), l)
   }
+})
+
+t('tutor: wand actions need a section, sources are split off the stream, free questions find PromptQuorum guides', () => {
+  const base = { language: 'en', subject: 'Types of LLMs', objectives: [], lesson: { title: 'L', text: 'text' }, history: [] }
+  for (const trigger of ['quiz', 'terms'] as const) {
+    assert.ok(tutorRequestSchema.safeParse({ ...base, trigger, scope: 'section', section: { heading: 'H', body: 'B' } }).success, trigger)
+    assert.ok(!tutorRequestSchema.safeParse({ ...base, trigger }).success, `${trigger} without section`)
+  }
+  assert.ok(tutorUserMessage(tutorRequestSchema.parse({ ...base, trigger: 'ask', message: 'x', scope: 'section' })).includes('Scope: section'))
+  const raw = `Answer text${TUTOR_SOURCES_MARK}${JSON.stringify([{ title: 'A', url: 'https://www.promptquorum.com/x' }, { title: 'bad', url: 'javascript:alert(1)' }])}`
+  const part = splitTutorStream(raw)
+  assert.equal(part.text, 'Answer text')
+  assert.deepEqual(part.sources.map((s) => s.url), ['https://www.promptquorum.com/x'])
+  assert.deepEqual(splitTutorStream('plain').sources, [])
+  assert.equal(splitTutorStream(`cut${TUTOR_SOURCES_MARK}[{"title"`).sources.length, 0)
+  const guides = findMaterialForQuestion('best MoE models for a 24 GB MacBook', 'Types of LLMs', 'en')
+  assert.ok(guides.length >= 3 && guides.every((g) => g.url.startsWith('https://www.promptquorum.com/')))
+})
+
+t('wand and wait texts exist in every language; a custom language falls back to English', () => {
+  for (const l of ALL_LANGS) {
+    const x = shareCopyFor(l)
+    for (const k of ['waitHeading', 'waitBody', 'wandLabel', 'wandQuiz', 'wandTerms', 'wandCopy', 'wandNote', 'wandAsk', 'wandBasis', 'wandNoteLabel', 'wandCopyAnswer', 'wandClose', 'wandPlaceholder'] as const) assert.ok(x[k], `${l}/${k}`)
+    assert.equal(x.waitPoints.length, 3, l)
+  }
+  assert.equal(shareCopyFor('sw').waitHeading, shareCopyFor('en').waitHeading)
 })
 
 void Promise.all(pending).then(() => {if (failed) {

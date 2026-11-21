@@ -135,6 +135,8 @@ export interface Programme {
   lessons: Lesson[]
   testPlan: { finalQuestions: number; lessonQuizQuestions: number; testMinutes: number }
   finalTest?: QuizQuestion[]
+  /** the learner's own notes per lesson section (magic wand), key `<lesson id>:<section index>`; stays in this browser */
+  notes?: Record<string, string>
   progress: {
     currentLesson: number
     lessonStatus: Record<string, 'todo' | 'viewed' | 'done'>
