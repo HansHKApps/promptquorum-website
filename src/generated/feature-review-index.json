@@ -2014,6 +2014,11 @@
     "urlSlug": "whispy-review",
     "url": "/power-local-llm/whispy-review"
   },
+  "pixafind": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pixafind-review",
+    "url": "/power-local-llm/pixafind-review"
+  },
   "sablate": {
     "cluster": "power-local-llm",
     "urlSlug": "sablate-review",
