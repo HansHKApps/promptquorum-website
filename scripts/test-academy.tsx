@@ -1,5 +1,7 @@
 // Unit tests for PromptQuorum Academy (pure logic: storage, copy coverage, topics). Run: npm run test:academy
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+import { z } from 'zod'
 import { ACADEMY_STORAGE_KEY } from '../src/lib/academy/config'
 import {
   clearAcademyState,
@@ -700,6 +702,7 @@ import { sha256Hex } from '../src/lib/academy/hash'
 import { documentationModel } from '../src/lib/academy/documentation'
 import { documentationFilename } from '../src/lib/academy/certificate'
 import { splitTutorStream, TUTOR_SOURCES_MARK } from '../src/lib/academy/tutor'
+import { loadLesson, prefetchLesson } from '../src/components/academy/lesson-loader'
 import { findMaterialForQuestion } from '../src/lib/academy/lesson'
 import { shareCopyFor } from '../src/components/academy/copy/share'
 import { cleanTutorText, tutorCost, tutorRequestSchema, tutorUserMessage, TUTOR_CAP_LESSON, TUTOR_CAP_PROGRAMME } from '../src/lib/academy/tutor'
@@ -1166,6 +1169,61 @@ t('wand and wait texts exist in every language; a custom language falls back to 
     assert.equal(x.waitPoints.length, 3, l)
   }
   assert.equal(shareCopyFor('sw').waitHeading, shareCopyFor('en').waitHeading)
+})
+
+t('generation: JSON cut off mid-string (SDK parse error) is retried once with a larger token budget', async () => {
+  const seen: number[] = []
+  let n = 0
+  const client = {
+    messages: {
+      parse: (async (params: { max_tokens: number }) => {
+        seen.push(params.max_tokens)
+        if (n++ === 0) throw new Error('Failed to parse structured output: Error: Failed to parse structured output as JSON: Unterminated string in JSON at position 4439')
+        return { stop_reason: 'end_turn', parsed_output: { x: 1 }, usage: { input_tokens: 1, output_tokens: 1, cache_read_input_tokens: 0 } }
+      }) as unknown as ParseClient['messages']['parse'],
+    },
+  } as ParseClient
+  const r = await generateStructured({ client, label: 'test', system: 's', user: 'u', schema: z.object({ x: z.number() }), maxTokens: 6000 })
+  assert.equal(r.attempts, 2)
+  assert.deepEqual(r.value, { x: 1 })
+  assert.ok(seen[1] > seen[0], `second call asks for more tokens: ${seen.join(', ')}`)
+  // other errors are not swallowed
+  const boom = { messages: { parse: (async () => { throw new Error('timeout') }) as unknown as ParseClient['messages']['parse'] } } as ParseClient
+  await assert.rejects(generateStructured({ client: boom, label: 'test', system: 's', user: 'u', schema: z.object({ x: z.number() }), maxTokens: 100 }), /timeout/)
+})
+
+t('lesson loader: one request per lesson (prefetch and foreground share it), no prefetch for a written lesson, a failed prefetch is not repeated', async () => {
+  const p = completedProgramme()
+  p.lessons.forEach((l) => { l.sections = [] })
+  const state = { programme: p } as unknown as Parameters<Parameters<typeof loadLesson>[0]['update']>[0] extends infer S ? S : never
+  let calls = 0
+  const post = (async () => {
+    calls++
+    await new Promise((r) => setTimeout(r, 20))
+    return { ok: true, data: { sections: [{ heading: 'H', body: 'B' }], furtherReading: [], followUpQuestions: [] } }
+  }) as unknown as Parameters<typeof loadLesson>[0]['postJson']
+  let cur = state as { programme?: Programme }
+  const update = ((fn: (s: { programme?: Programme }) => { programme?: Programme }) => { cur = fn(cur) }) as unknown as Parameters<typeof loadLesson>[0]['update']
+  prefetchLesson({ programme: p, index: 1, update, postJson: post })
+  const fg = await loadLesson({ programme: p, index: 1, update, postJson: post, retry: true })
+  assert.equal(calls, 1)
+  assert.ok(fg.ok && cur.programme!.lessons[1].sections.length === 1)
+  prefetchLesson({ programme: cur.programme!, index: 1, update, postJson: post })
+  assert.equal(calls, 1, 'a written lesson is not fetched again')
+  const failing = (async () => { calls++; return { ok: false, code: 'generation' } }) as unknown as Parameters<typeof loadLesson>[0]['postJson']
+  prefetchLesson({ programme: cur.programme!, index: 0, update, postJson: failing })
+  await new Promise((r) => setTimeout(r, 10))
+  prefetchLesson({ programme: cur.programme!, index: 0, update, postJson: failing })
+  await new Promise((r) => setTimeout(r, 10))
+  assert.equal(calls, 2, 'failed prefetch is not repeated')
+})
+
+t('quiz result screens: the continue button calls its handler (a handler returning a function did nothing)', () => {
+  for (const f of ['QuizView', 'OpenQuizView']) {
+    const src = readFileSync(`src/components/academy/${f}.tsx`, 'utf8')
+    assert.ok(!/onContinue=\{\(\) =>\s*\(\) =>/.test(src), `${f}: onContinue must run update, not return a function`)
+    assert.ok(/onContinue=\{\(\) =>\s*update\(/.test(src), f)
+  }
 })
 
 void Promise.all(pending).then(() => {if (failed) {

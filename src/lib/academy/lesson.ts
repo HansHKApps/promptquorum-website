@@ -225,7 +225,8 @@ export async function generateLesson(client: ParseClient, req: LessonRequest, si
     system: LESSON_SYSTEM,
     user: lessonUserMessage(req, material, grounding),
     schema: lessonOutputSchema,
-    maxTokens: 6000,
+    // Thinking tokens count toward this cap; 6000 was hit by long thinks (JSON cut off mid-string). Only tokens used are billed.
+    maxTokens: 10000,
     signal,
     validate: (v) => ({ problems: lessonProblems(v, req, material.length) }),
     // A lesson that is still a bit long or picked a wrong number after the retry is still usable:

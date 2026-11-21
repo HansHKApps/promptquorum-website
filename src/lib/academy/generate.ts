@@ -53,31 +53,46 @@ export async function generateStructured<S extends z.ZodType>(args: GenerateArgs
   let feedback = ''
   let lastProblem = ''
   let lastSchemaValid: z.infer<S> | undefined
+  let maxTokens = args.maxTokens
 
   for (let attempt = 1; attempt <= 2; attempt++) {
     const started = Date.now()
-    const res = await args.client.messages.parse(
-      {
-        model,
-        max_tokens: args.maxTokens,
-        // The system prompt is identical for every learner, so it is cached; per-request data is in the user turn.
-        system: [{ type: 'text', text: args.system, cache_control: { type: 'ephemeral' } }],
-        messages: [{ role: 'user', content: feedback ? `${args.user}\n\n${feedback}` : args.user }],
-        output_config: { effort: 'medium', format: zodOutputFormat(args.schema) },
-      },
-      { signal: args.signal },
-    )
-    usage.input += res.usage?.input_tokens ?? 0
-    usage.output += res.usage?.output_tokens ?? 0
-    usage.cacheRead += res.usage?.cache_read_input_tokens ?? 0
+    let res: Awaited<ReturnType<typeof args.client.messages.parse>> | null = null
+    try {
+      res = await args.client.messages.parse(
+        {
+          model,
+          max_tokens: maxTokens,
+          // The system prompt is identical for every learner, so it is cached; per-request data is in the user turn.
+          system: [{ type: 'text', text: args.system, cache_control: { type: 'ephemeral' } }],
+          messages: [{ role: 'user', content: feedback ? `${args.user}\n\n${feedback}` : args.user }],
+          output_config: { effort: 'medium', format: zodOutputFormat(args.schema) },
+        },
+        { signal: args.signal },
+      )
+    } catch (err) {
+      // The SDK throws (instead of returning stop_reason "max_tokens") when the JSON was cut off mid-string. Thinking
+      // tokens count toward max_tokens, so a long think leaves too little room for the text. Treat it as "cut off":
+      // retry once with a larger budget. Anything else (timeouts, API errors) still propagates.
+      if (!(err instanceof Error) || !/Failed to parse structured output/i.test(err.message)) throw err
+    }
+    if (res) {
+      usage.input += res.usage?.input_tokens ?? 0
+      usage.output += res.usage?.output_tokens ?? 0
+      usage.cacheRead += res.usage?.cache_read_input_tokens ?? 0
+    }
 
     let problems: string[]
     let value: z.infer<S> | undefined
-    if (res.stop_reason === 'refusal') {
+    if (!res) {
+      problems = ['The answer was cut off. Write shorter text so the whole JSON fits.']
+      maxTokens = Math.min(Math.round(maxTokens * 1.6), 16000)
+    } else if (res.stop_reason === 'refusal') {
       logUsage(args.label, model, attempt, usage, Date.now() - started, 'refused')
       throw new AcademyGenerationError(`${args.label}: refused`, 'refused')
     } else if (res.stop_reason === 'max_tokens') {
       problems = ['The answer was cut off. Write shorter text so the whole JSON fits.']
+      maxTokens = Math.min(Math.round(maxTokens * 1.6), 16000)
     } else {
       // The SDK validates against the schema; parsed_output is null when that failed.
       const parsed = args.schema.safeParse(res.parsed_output)

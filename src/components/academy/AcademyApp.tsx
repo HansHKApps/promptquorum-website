@@ -27,6 +27,7 @@ import { ResultsView } from './ResultsView'
 import { ShareBar } from './ShareBar'
 import { SHARE_COPY } from './copy/share'
 import { WaitNote } from './WaitNote'
+import { prefetchLesson } from './lesson-loader'
 import { trackGrowth } from './SuccessShare'
 import { downloadBlob } from '@/components/askhans/power/export/download'
 import { academyUrl } from './share-plan'
@@ -55,6 +56,17 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
       update((s) => ({ ...s, view: 'setup', quickCheck: undefined, draft: s.draft ? { ...s.draft, subject: '', updatedAt: new Date().toISOString() } : s.draft }), false)
     }
   }, [ready, state.draft, state.programme, state.view, update])
+
+  // While the program overview is on screen, lesson 1 (the next open lesson) already starts being written, so "Start" opens it
+  // without a wait. A failed background start is silent; the lesson screen then loads it normally.
+  const overviewProgramme = state.view === 'programme' ? state.programme : undefined
+  useEffect(() => {
+    if (!ready || !overviewProgramme) return
+    const i = nextOpenLesson(overviewProgramme)
+    if (i < 0 || overviewProgramme.lessons[i].sections.length) return
+    const id = window.setTimeout(() => prefetchLesson({ programme: overviewProgramme, index: i, update, postJson }), 4000)
+    return () => window.clearTimeout(id)
+  }, [ready, overviewProgramme, update])
 
   // A challenge link ("beat my 85% in X", opened via AcademyRoot) prefills the subject and shows the score to beat.
   const [challengeBeat, setChallengeBeat] = useState<number | null>(null)

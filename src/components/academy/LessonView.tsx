@@ -8,10 +8,11 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { ReadAloud } from '@/components/ReadAloud'
 import { Markdown } from '@/components/askhans/markdown'
 import { ACADEMY_IDLE_AFTER_MS, ACADEMY_TICK_SECONDS } from '@/lib/academy/config'
-import { addActiveTime, lessonsDone, markLessonDone, setLessonContent } from '@/lib/academy/progress'
+import { addActiveTime, lessonsDone, markLessonDone } from '@/lib/academy/progress'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { Lesson, Programme } from '@/lib/academy/types'
 import { AiBadge } from './AiBadge'
+import { loadLesson, prefetchLesson } from './lesson-loader'
 import { Content } from './Content'
 import { ReportProblem } from './ReportProblem'
 import { SectionWand } from './SectionWand'
@@ -83,22 +84,15 @@ export function LessonView({
 
   useActiveSeconds((sec) => updateProgramme((p) => addActiveTime(p, lesson.id, sec)))
 
+  // One shared request per lesson (see lesson-loader): if the prefetch started this lesson while the learner was still
+  // reading the previous one, this simply waits for it (or finds the text already stored and never gets here).
   const load = useCallback(async () => {
     setError(null)
     setLoading(true)
-    const res = await postJson<Pick<Lesson, 'sections' | 'furtherReading' | 'followUpQuestions'>>('/api/academy/lesson', {
-      subject: programme.subject.slice(0, 120),
-      language: programme.language,
-      selfLevel: programme.selfLevel,
-      objectives: programme.objectives,
-      lesson: { title: lesson.title, topic: lesson.topic, estimatedMinutes: lesson.estimatedMinutes, objectiveIds: lesson.objectiveIds, recap: !!lesson.recap },
-      index,
-      otherTitles: programme.lessons.filter((_, i) => i !== index).map((l) => l.title),
-    })
+    const r = await loadLesson({ programme, index, update, postJson, retry: true })
     setLoading(false)
-    if (!res.ok) return setError(res.code)
-    updateProgramme((p) => setLessonContent(p, index, res.data))
-  }, [index, lesson, programme.language, programme.lessons, programme.objectives, programme.selfLevel, programme.subject, postJson, updateProgramme])
+    if (!r.ok) setError(r.code)
+  }, [programme, index, update, postJson])
 
   // Generate once per lesson (the ref guards against React's double effect in development).
   useEffect(() => {
@@ -110,6 +104,16 @@ export function LessonView({
   useEffect(() => {
     topRef.current?.scrollIntoView({ block: 'start' })
   }, [index])
+
+  // Prefetch: once the learner is about a third through this lesson's reading time (at least 20 s of active reading),
+  // the next lesson starts being written in the background, so "Next lesson" opens without a wait.
+  const activeSeconds = programme.progress.lessonSeconds?.[lesson.id] ?? 0
+  const prefetchDue = lesson.sections.length > 0 && !error && index < programme.lessons.length - 1 && activeSeconds >= Math.max(20, Math.round(lesson.estimatedMinutes * 60 * 0.35))
+  useEffect(() => {
+    if (prefetchDue) prefetchLesson({ programme, index: index + 1, update, postJson })
+    // `programme` is read once when the threshold is crossed; later ticks must not re-run this.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [prefetchDue, index])
 
   const total = programme.lessons.length
   const done = lessonsDone(programme)
