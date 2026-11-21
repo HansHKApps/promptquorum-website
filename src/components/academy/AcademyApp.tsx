@@ -4,6 +4,7 @@
 // Ask Hans window: screens are views inside /academy, not URLs, so no learner page ever needs to be indexed.
 // State lives in localStorage only (see useAcademyState / src/lib/academy/store.ts).
 
+import { Mark, press } from './press'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS, ACADEMY_TUTOR_OK_KEY, ACADEMY_USED_KEY } from '@/lib/academy/config'
 import { clearAcademyState, defaultDraft } from '@/lib/academy/store'
@@ -231,7 +232,7 @@ function SetupForm({
                       type="button"
                       title={t.hint}
                       aria-pressed={active}
-                      onClick={() => change({ subject: t.label })}
+                      {...press(() => change({ subject: t.label }))}
                       className={`rounded-full border px-3 py-1.5 text-sm transition-colors ${
                         active ? 'border-purple-600 bg-purple-600 text-white' : 'border-purple-200 bg-white text-purple-900 hover:bg-purple-50'
                       }`}
@@ -250,7 +251,7 @@ function SetupForm({
         <legend className="font-medium text-gray-900">{tx.timeLegend}</legend>
         <div className="mt-2 grid grid-cols-4 gap-2 sm:grid-cols-8">
           {ACADEMY_MINUTE_OPTIONS.map((m) => (
-            <label key={m} className="cursor-pointer">
+            <label key={m} className="cursor-pointer" onPointerDown={press(() => change({ availableMinutes: m })).onPointerDown}>
               <input
                 type="radio"
                 name="academy-minutes"
@@ -380,11 +381,14 @@ function ChoiceGroup<T extends string>({
       <legend className="font-medium text-gray-900">{legend}</legend>
       <div className="mt-2 grid gap-2 sm:grid-cols-3">
         {values.map((v) => (
-          <label key={v} className="cursor-pointer">
+          <label key={v} className="cursor-pointer" onPointerDown={press(() => onChange(v)).onPointerDown}>
             <input type="radio" name={name} value={v} checked={value === v} onChange={() => onChange(v)} className="peer sr-only" />
-            <span className="block h-full rounded-xl border border-gray-300 px-4 py-3 peer-checked:border-purple-600 peer-checked:bg-purple-50 peer-focus-visible:ring-2 peer-focus-visible:ring-purple-600">
-              <span className="block font-medium text-gray-900">{labels[v].label}</span>
-              <span className="block text-sm text-gray-600">{labels[v].hint}</span>
+            <span className="flex h-full items-start gap-3 rounded-xl border border-gray-300 px-4 py-3 peer-checked:border-purple-600 peer-checked:bg-purple-50 peer-focus-visible:ring-2 peer-focus-visible:ring-purple-600">
+              <Mark state={value === v ? 'selected' : 'idle'} />
+              <span className="min-w-0 flex-1">
+                <span className="block font-medium text-gray-900">{labels[v].label}</span>
+                <span className="block text-sm text-gray-600">{labels[v].hint}</span>
+              </span>
             </span>
           </label>
         ))}
@@ -564,13 +568,14 @@ function QuickCheckView({ tx, draft, quickCheck, update }: { tx: AcademyCopy; dr
               other: 'border-gray-200 text-gray-500',
             }[state]
             return (
-              <button key={i} type="button" onClick={() => setShown(i)} disabled={answered} aria-pressed={shown === i} className={`rounded-xl border px-4 py-3 text-start focus-visible:ring-2 focus-visible:ring-purple-600 ${cls}`}>
-                {o}
+              <button key={i} type="button" {...press(() => setShown(i))} disabled={answered} aria-pressed={shown === i} className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-start focus-visible:ring-2 focus-visible:ring-purple-600 ${cls}`}>
+                <Mark state={state === 'correct' ? 'correct' : state === 'wrong' ? 'wrong' : shown === i ? 'selected' : 'idle'} />
+                <span className="min-w-0 flex-1">{o}</span>
               </button>
             )
           })}
           {!answered && (
-            <button type="button" onClick={() => setShown(-1)} className="rounded-xl px-4 py-2 text-start text-sm text-gray-600 underline underline-offset-2 hover:text-purple-700">
+            <button type="button" {...press(() => setShown(-1))} className="rounded-xl px-4 py-2 text-start text-sm text-gray-600 underline underline-offset-2 hover:text-purple-700">
               {tx.notSure}
             </button>
           )}

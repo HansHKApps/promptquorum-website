@@ -6,6 +6,7 @@
 
 import { useState } from 'react'
 import { TEST_FORMATS, type Programme, type TestFormat } from '@/lib/academy/types'
+import { Mark, press } from './press'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -31,11 +32,14 @@ export function FormatPicker({ tx, programme, update, title }: { tx: AcademyCopy
         <legend className="sr-only">{tx.testFormatLegend}</legend>
         <div className="grid gap-2 sm:grid-cols-3">
           {TEST_FORMATS.map((f) => (
-            <label key={f} className="cursor-pointer">
+            <label key={f} className="cursor-pointer" onPointerDown={press(() => setFormat(f)).onPointerDown}>
               <input type="radio" name="academy-format" value={f} checked={format === f} onChange={() => setFormat(f)} className="peer sr-only" />
-              <span className="block h-full rounded-xl border border-gray-300 px-4 py-3 peer-checked:border-purple-600 peer-checked:bg-purple-50 peer-focus-visible:ring-2 peer-focus-visible:ring-purple-600">
-                <span className="block font-medium text-gray-900">{tx.testFormats[f].label}</span>
-                <span className="block text-sm text-gray-600">{tx.testFormats[f].hint}</span>
+              <span className="flex h-full items-start gap-3 rounded-xl border border-gray-300 px-4 py-3 peer-checked:border-purple-600 peer-checked:bg-purple-50 peer-focus-visible:ring-2 peer-focus-visible:ring-purple-600">
+                <Mark state={format === f ? 'selected' : 'idle'} />
+                <span className="min-w-0 flex-1">
+                  <span className="block font-medium text-gray-900">{tx.testFormats[f].label}</span>
+                  <span className="block text-sm text-gray-600">{tx.testFormats[f].hint}</span>
+                </span>
               </span>
             </label>
           ))}
