@@ -8,6 +8,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Markdown } from '@/components/askhans/markdown'
+import { ACADEMY_CONTACT_EMAIL, ACADEMY_TUTOR_OK_DAYS, ACADEMY_TUTOR_OK_KEY } from '@/lib/academy/config'
 import { cleanTutorText, tutorCost, TUTOR_CAP_LESSON, TUTOR_CAP_PROGRAMME, type TutorTrigger } from '@/lib/academy/tutor'
 import type { Programme } from '@/lib/academy/types'
 import { Content } from './Content'
@@ -34,6 +35,17 @@ interface Turn {
   thumb?: 'up' | 'down'
 }
 
+/** True while the notice was confirmed less than ACADEMY_TUTOR_OK_DAYS ago; an expired or unreadable value counts as not given. */
+function tutorNoticeConfirmed(): boolean {
+  try {
+    const at = Number(localStorage.getItem(ACADEMY_TUTOR_OK_KEY))
+    const age = Date.now() - at
+    if (Number.isFinite(at) && at > 0 && age >= 0 && age <= ACADEMY_TUTOR_OK_DAYS * 86_400_000) return true
+    localStorage.removeItem(ACADEMY_TUTOR_OK_KEY)
+  } catch {}
+  return false
+}
+
 function fireEvent(body: unknown) {
   void fetch('/api/academy/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).catch(() => {})
 }
@@ -50,6 +62,8 @@ export function TutorPanel({
   seed,
   whyButton,
   whyOpenButton,
+  title,
+  quick,
 }: {
   tx: AcademyCopy
   programme: Programme
@@ -66,14 +80,24 @@ export function TutorPanel({
   whyButton?: TutorSeed['why'] | null
   /** written quiz: the "Why?" payload of the answer just graded (null = nothing to ask about) */
   whyOpenButton?: TutorSeed['whyOpen'] | null
+  /** heading override (lesson screen: the closing question) */
+  title?: string
+  /** lesson screen: offer the four one-click rephrasings of the whole lesson */
+  quick?: boolean
 }) {
   const t = tx.tutor
   const [open, setOpen] = useState(false)
+  // Read after mount (localStorage does not exist on the server); a still-valid earlier confirmation skips the notice.
   const [accepted, setAccepted] = useState(false)
+  useEffect(() => {
+    if (tutorNoticeConfirmed()) setAccepted(true)
+  }, [])
   const [turns, setTurns] = useState<Turn[]>([])
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [input, setInput] = useState('')
+  // After a thumbs-down: index of the answer for which we offer "tell us what was wrong" (null = not asked).
+  const [sorryFor, setSorryFor] = useState<number | null>(null)
   const lastSeed = useRef<number>(0)
   const pending = useRef<TutorSeed | null>(null)
   const endRef = useRef<HTMLDivElement>(null)
@@ -169,6 +193,9 @@ export function TutorPanel({
   }, [turns])
 
   const accept = () => {
+    try {
+      localStorage.setItem(ACADEMY_TUTOR_OK_KEY, String(Date.now()))
+    } catch {}
     setAccepted(true)
     const p = pending.current
     pending.current = null
@@ -185,13 +212,23 @@ export function TutorPanel({
   const rate = (i: number, up: boolean) => {
     setTurns((prev) => prev.map((x, k) => (k === i ? { ...x, thumb: up ? 'up' : 'down' } : x)))
     fireEvent({ type: 'tutor_thumb', up })
+    setSorryFor(up ? null : i)
+  }
+  // Opens the learner's own mail program with the question and the answer prefilled; nothing is stored on our server.
+  const tellUs = (i: number) => {
+    fireEvent({ type: 'report_mail' })
+    const r = tx.report
+    const q = turns[i - 1]?.content ?? ''
+    const body = [r.mailIntro, '', '', '---', `${r.lesson}: ${lessonTitle}`, q ? `Q: ${q.slice(0, 600)}` : '', `A: ${turns[i]?.content.slice(0, 1500) ?? ''}`, `${tx.feedbackMailLanguage}: ${programme.language}`, window.location.pathname].filter((l, k) => l !== '' || k < 4)
+    window.location.href = `mailto:${ACADEMY_CONTACT_EMAIL}?subject=${encodeURIComponent(r.mailSubject)}&body=${encodeURIComponent(body.join('\n'))}`
+    setSorryFor(null)
   }
 
   return (
     <section aria-labelledby={`academy-tutor-${lessonKey}`} className="rounded-2xl border border-purple-200 bg-purple-50/40 p-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h3 id={`academy-tutor-${lessonKey}`} className="font-semibold text-purple-900">
-          {t.title}
+          {title ?? t.title}
         </h3>
         <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} className="rounded-lg border border-purple-300 bg-white px-3 py-1 text-sm font-medium text-purple-800 hover:bg-purple-50">
           {open ? t.close : t.open}
@@ -226,7 +263,19 @@ export function TutorPanel({
                           </Content>
                           {x.content && !busy && (
                             <div className="mt-1 flex items-center gap-2 text-xs text-gray-600">
-                              {x.thumb ? (
+                              {x.thumb === 'down' && sorryFor === i ? (
+                                <div role="group" aria-label={t.sorry} className="w-full rounded-xl border border-purple-200 bg-purple-50 p-3 text-sm text-purple-950">
+                                  <p>{t.sorry}</p>
+                                  <div className="mt-2 flex flex-wrap gap-2">
+                                    <button type="button" onClick={() => tellUs(i)} className="rounded-lg bg-purple-600 px-3 py-1 font-medium text-white hover:bg-purple-700">
+                                      {t.tellUs}
+                                    </button>
+                                    <button type="button" onClick={() => setSorryFor(null)} className="rounded-lg border border-purple-300 bg-white px-3 py-1 font-medium text-purple-800 hover:bg-purple-50">
+                                      {t.noThanks}
+                                    </button>
+                                  </div>
+                                </div>
+                              ) : x.thumb ? (
                                 <span>{t.thanks}</span>
                               ) : (
                                 <>
@@ -263,6 +312,15 @@ export function TutorPanel({
                 <button type="button" disabled={disabled} onClick={() => void run({ trigger: 'why', why: whyButton })} className="rounded-xl border border-purple-600 px-4 py-2 font-medium text-purple-700 hover:bg-purple-50 disabled:cursor-not-allowed disabled:opacity-50">
                   {t.why}
                 </button>
+              )}
+              {quick && (
+                <div className="flex flex-wrap gap-2" role="group" aria-label={t.title}>
+                  {(['simpler', 'example', 'deeper', 'summarize'] as const).map((k) => (
+                    <button key={k} type="button" disabled={disabled} onClick={() => void run({ trigger: k, section: { heading: lessonTitle, body: lessonText.slice(0, 3000) } })} className="rounded-full border border-purple-200 bg-white px-3 py-1 text-sm font-medium text-purple-800 hover:bg-purple-50 disabled:cursor-not-allowed disabled:opacity-50">
+                      {t[k]}
+                    </button>
+                  ))}
+                </div>
               )}
               {chips && chips.length > 0 && !whyButton && !whyOpenButton && (
                 <div>

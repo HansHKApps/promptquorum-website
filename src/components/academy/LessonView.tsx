@@ -182,19 +182,13 @@ export function LessonView({
           </div>
         ) : (
           <>
-            <Content lang={programme.language} className="space-y-5">
+            <Content lang={programme.language} className="space-y-8">
               {lesson.sections.map((s, i) => (
-                <section key={i} className="space-y-2">
-                  <h3 className="text-lg font-semibold text-gray-900">{s.heading}</h3>
-                  <div className="space-y-3 leading-relaxed text-gray-800">
+                <section key={i} className="space-y-3">
+                  <h3 className="pt-2 text-xl font-semibold leading-snug text-gray-900 sm:text-2xl">{s.heading}</h3>
+                  <div className="space-y-4 text-[1.05rem] leading-8 text-gray-800">
                     <Markdown text={s.body} />
                   </div>
-                  <SectionHelp
-                    label={tx.tutor.helpSection}
-                    groupLabel={tx.tutor.title}
-                    options={(['simpler', 'example', 'deeper', 'summarize'] as const).map((k) => ({ key: k, label: tx.tutor[k] }))}
-                    onPick={(k) => ask({ trigger: k, section: { heading: s.heading, body: s.body } })}
-                  />
                 </section>
               ))}
             </Content>
@@ -229,6 +223,8 @@ export function LessonView({
               lessonText={lesson.sections.map((s) => `${s.heading}\n${s.body}`).join('\n\n')}
               chips={lesson.followUpQuestions}
               seed={seed}
+              title={tx.tutor.discuss}
+              quick
             />
             <div className="flex flex-wrap items-start justify-between gap-4 border-t border-gray-100 pt-4">
               <StarRating key={lesson.id} tx={tx} kind="lesson" lang={programme.language} />
@@ -265,27 +261,6 @@ export function LessonView({
         >
           {tx.tutor.explain}
         </button>
-      )}
-    </div>
-  )
-}
-
-/** Quiet "Need help with this part?" link under a lesson section; the four options appear only on request. */
-function SectionHelp({ label, groupLabel, options, onPick }: { label: string; groupLabel: string; options: { key: 'simpler' | 'example' | 'deeper' | 'summarize'; label: string }[]; onPick: (k: 'simpler' | 'example' | 'deeper' | 'summarize') => void }) {
-  const [open, setOpen] = useState(false)
-  return (
-    <div className="pt-1">
-      <button type="button" aria-expanded={open} onClick={() => setOpen((o) => !o)} className="text-sm text-purple-700 underline-offset-2 hover:underline">
-        {label}
-      </button>
-      {open && (
-        <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={groupLabel}>
-          {options.map((o) => (
-            <button key={o.key} type="button" onClick={() => onPick(o.key)} className="rounded-full border border-purple-200 bg-white px-3 py-1 text-xs font-medium text-purple-800 hover:bg-purple-50">
-              {o.label}
-            </button>
-          ))}
-        </div>
       )}
     </div>
   )

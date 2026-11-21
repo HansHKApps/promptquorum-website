@@ -5,6 +5,13 @@ export const ACADEMY_STORAGE_KEY = 'pq_academy_v1'
 /** Functional flag (no personal data): this browser has opened Academy, so the study-hat button is offered on every page. */
 export const ACADEMY_USED_KEY = 'pq_academy_used'
 
+/**
+ * The AI-tutor notice ("answers may contain errors, no personal data") is confirmed once and then remembered for 30 days
+ * (same period as the Ask Hans consent). Only a timestamp is stored, nothing personal; "Delete my data" removes it.
+ */
+export const ACADEMY_TUTOR_OK_KEY = 'pq_academy_tutor_ok'
+export const ACADEMY_TUTOR_OK_DAYS = 30
+
 /** Time choices on the setup screen, in minutes. */
 export const ACADEMY_MINUTE_OPTIONS = [15, 30, 45, 60, 90, 120, 180, 240] as const
 

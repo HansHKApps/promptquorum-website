@@ -5,6 +5,7 @@
 // close (= minimize to the floating pill). Floating = non-modal; full screen = modal with focus trap, Esc closes.
 
 import { useEffect, useId, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react'
+import { TextSizeControl, useTextScale } from '@/components/TextSizeControl'
 import { createPortal } from 'react-dom'
 import { Logo } from '@/components/Logo'
 import { ASK_HANS_WINDOW } from '@/lib/askhans/config'
@@ -64,6 +65,7 @@ interface Props {
 export function AcademyWindow({ lang, maximized, rect, onRectChange, onClose, onToggleMaximize, children }: Props) {
   const tx = ACADEMY_COPY[lang]
   const isDesktop = useIsDesktop()
+  const { scale, setScale } = useTextScale()
   const titleId = useId()
   const ref = useRef<HTMLDivElement>(null)
   const [vp, setVp] = useState({ w: window.innerWidth, h: window.innerHeight })
@@ -205,6 +207,7 @@ export function AcademyWindow({ lang, maximized, rect, onRectChange, onClose, on
             <h1 id={titleId} className="truncate text-sm font-bold leading-tight">{tx.h1}</h1>
             <p className="truncate text-[11px] leading-tight text-muted-foreground">{tx.tagline}</p>
           </div>
+          <TextSizeControl lang={lang} scale={scale} setScale={setScale} />
           {isDesktop && (
             <button
               type="button"
@@ -231,7 +234,7 @@ export function AcademyWindow({ lang, maximized, rect, onRectChange, onClose, on
           {tx.disclaimer}
         </p>
 
-        <div className="flex min-h-0 flex-1 flex-col">{children}</div>
+        <div className="flex min-h-0 flex-1 flex-col" style={scale === 1 ? undefined : { zoom: scale }}>{children}</div>
 
         {isDesktop && (
           <p className="flex-shrink-0 border-t border-border bg-white px-3 py-1 text-center text-[10px] leading-snug text-muted-foreground">
