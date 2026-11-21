@@ -48,10 +48,15 @@ export interface DocModel {
   languageName: string
   attemptsCount: number
   objectives: string[]
+  /** the learner's original request: level, planned time, test format */
+  request: { selfLevel: Programme['selfLevel']; availableMinutes: number; testFormat: NonNullable<Programme['testFormat']> }
+  /** per objective: the 1-based numbers and titles of the lessons that serve it */
+  objectiveLessons: { number: number; title: string }[][]
   lessons: { title: string; estimatedMinutes: number; recordedMinutes: number }[]
+  totals: { estimatedMinutes: number; recordedMinutes: number }
   diagnostic: DocQuestion[]
   attempts: DocAttempt[]
-  lessonsText: { title: string; sections: { heading: string; body: string }[]; furtherReading: { title: string; url: string }[] }[]
+  lessonsText: { title: string; objectives: string[]; sections: { heading: string; body: string }[]; furtherReading: { title: string; url: string }[] }[]
 }
 
 function toDocQuestions(questions: (Question | QuizQuestion)[], answers: Record<string, number>): DocQuestion[] {
@@ -87,9 +92,15 @@ export function documentationModel(p: Programme, cert: CertificateModel, languag
     languageName,
     attemptsCount: finals.length,
     objectives: p.objectives,
+    request: { selfLevel: p.selfLevel, availableMinutes: p.availableMinutes, testFormat: p.testFormat ?? 'choice' },
+    objectiveLessons: p.objectives.map((_, oi) => p.lessons.flatMap((l, li) => (l.objectiveIds.includes(oi) ? [{ number: li + 1, title: l.title }] : []))),
     lessons: p.lessons.map((l) => ({ title: l.title, estimatedMinutes: l.estimatedMinutes, recordedMinutes: Math.round((p.progress.lessonSeconds?.[l.id] ?? 0) / 60) })),
+    totals: {
+      estimatedMinutes: p.lessons.reduce((a, l) => a + l.estimatedMinutes, 0),
+      recordedMinutes: p.lessons.reduce((a, l) => a + Math.round((p.progress.lessonSeconds?.[l.id] ?? 0) / 60), 0),
+    },
     diagnostic: toDocQuestions(p.diagnostic.questions, p.diagnostic.answers),
     attempts,
-    lessonsText: p.lessons.map((l) => ({ title: l.title, sections: l.sections, furtherReading: l.furtherReading.map((r) => ({ title: r.title, url: r.url })) })),
+    lessonsText: p.lessons.map((l) => ({ title: l.title, objectives: l.objectiveIds.map((i) => p.objectives[i]).filter(Boolean), sections: l.sections, furtherReading: l.furtherReading.map((r) => ({ title: r.title, url: r.url })) })),
   }
 }

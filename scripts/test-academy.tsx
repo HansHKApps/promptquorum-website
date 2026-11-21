@@ -803,6 +803,13 @@ t('Course Documentation: both attempts, wrong answers and the passing attempt; s
   assert.deepEqual(finals.map((a) => [a.attemptNumber, a.passing]), [[1, false], [2, true]])
   assert.ok(finals[0].questions.length === 10 && finals[0].questions.filter((q) => !q.right).length === 6)
   assert.ok(d.lessons.length === p.lessons.length && d.lessonsText.length === p.lessons.length)
+  // individual request, objective -> lesson map and time totals
+  assert.equal(d.request.selfLevel, p.selfLevel)
+  assert.equal(d.request.availableMinutes, p.availableMinutes)
+  assert.equal(d.objectiveLessons.length, p.objectives.length)
+  p.objectives.forEach((_, oi) => assert.deepEqual(d.objectiveLessons[oi].map((x) => x.number), p.lessons.flatMap((l, li) => (l.objectiveIds.includes(oi) ? [li + 1] : []))))
+  assert.equal(d.totals.estimatedMinutes, p.lessons.reduce((a, l) => a + l.estimatedMinutes, 0))
+  assert.ok(d.lessonsText.every((l, i) => l.objectives.length === p.lessons[i].objectiveIds.filter((k) => p.objectives[k]).length))
   assert.equal(documentationFilename('Quantization on 16 GB RAM!', 'PQA-2026-ABCDEFGHJK'), 'PromptQuorum-Academy-Course-Documentation-quantization-on-16-gb-ram-PQA-2026-ABCDEFGHJK.pdf')
 })
 
@@ -1119,6 +1126,17 @@ t('next topics: keeps 3 different topics, drops the finished subject, links and 
   assert.deepEqual(topics.map((x) => x.title), ['Choosing a GPU', 'Quantization explained', 'Local RAG setup'])
   assert.equal(client.calls, 2)
   assert.ok(nextTopicsUserMessage(req).includes('<subject>Ollama basics</subject>'))
+})
+
+t('Course Documentation: every language has the new headings and the formatted texts', () => {
+  for (const l of ALL_LANGS) {
+    const c = ACADEMY_COPY[l].doc
+    for (const k of ['sectionRecord', 'sectionProgramme', 'sectionAssessment', 'sectionMaterial', 'sectionCredential', 'programmeType', 'programmeTypeValue', 'scope', 'assessmentFormat', 'timeNote', 'showsTitle', 'shows', 'limitsTitle', 'limits', 'requestTitle', 'requestHint', 'level', 'plannedTime', 'mapTitle', 'timeTotals', 'estTotal', 'recTotal', 'diff', 'diagnosticPurpose', 'assessmentLimit', 'lessonObjective'] as const) assert.ok(c[k], `${l}/${k}`)
+    assert.ok(c.scopeValue(5, 4).includes('5') && c.scopeValue(5, 4).includes('4'), l)
+    assert.ok(c.questionsCount(6).includes('6'), l)
+    assert.ok(c.lessonN(2).includes('2'), l)
+    assert.ok(c.scoring(70).includes('70'), l)
+  }
 })
 
 void Promise.all(pending).then(() => {if (failed) {
