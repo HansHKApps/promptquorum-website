@@ -43,6 +43,18 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
     if (!state.draft) update((s) => ({ ...s, view: 'setup', draft: defaultDraft(lang) }), false)
   }, [ready, state.draft, update, lang])
 
+  // Coming back to the Academy (window reopened, or back from another page) after a program was finished and its
+  // certificate created: land on the setup form so a new program can be started right away. The finished program stays
+  // in memory behind the "Continue" link of the banner, so its result can still be opened.
+  const parkedOnce = useRef(false)
+  useEffect(() => {
+    if (!ready || !state.draft || parkedOnce.current) return
+    parkedOnce.current = true
+    if (state.programme?.certificate && state.view !== 'setup' && state.view !== 'cabinet') {
+      update((s) => ({ ...s, view: 'setup', quickCheck: undefined, draft: s.draft ? { ...s.draft, subject: '', updatedAt: new Date().toISOString() } : s.draft }), false)
+    }
+  }, [ready, state.draft, state.programme, state.view, update])
+
   // A challenge link ("beat my 85% in X", opened via AcademyRoot) prefills the subject and shows the score to beat.
   const [challengeBeat, setChallengeBeat] = useState<number | null>(null)
   useEffect(() => {
@@ -174,10 +186,10 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           lang={lang}
           draft={draft}
           topics={topics}
-          pendingSubject={pending?.programme?.subject ?? pending?.draft?.subject ?? null}
-          onContinue={continueSaved}
+          pendingSubject={pending?.programme?.subject ?? pending?.draft?.subject ?? state.programme?.subject ?? null}
+          onContinue={() => (pending ? continueSaved() : update((s) => ({ ...s, view: s.programme && programmeScore(s.programme) ? 'results' : 'programme' }), false))}
           onChange={(patch) => update((s) => ({ ...s, draft: { ...(s.draft ?? draft), ...patch, updatedAt: new Date().toISOString() } }))}
-          onStartNew={discardSaved}
+          onStartNew={() => (pending ? discardSaved() : update((s) => ({ ...s, programme: undefined, quickCheck: undefined }), false))}
           onSubmit={() =>
             update((s) => {
               const d = { ...(s.draft ?? draft), subject: (s.draft ?? draft).subject.trim() }

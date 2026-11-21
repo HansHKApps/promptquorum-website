@@ -31,6 +31,8 @@ export interface ShareCopy {
   nextHint: string
   nextStart: string
   nextLoading: string
+  newProgram: string
+  newProgramConfirm: string
 }
 
 export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
@@ -62,6 +64,8 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextHint: 'These topics build on what you just learned. Pick one to start a new program.',
     nextStart: 'Start this program',
     nextLoading: 'Finding topics that fit…',
+    newProgram: 'Start a new program',
+    newProgramConfirm: 'Your certificate has not been created yet. If you start a new program, the current one is no longer available here. Start anyway?',
   },
   de: {
     plan: 'Dieses Programm teilen',
@@ -91,6 +95,8 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextHint: 'Diese Themen bauen auf dem auf, was Sie gerade gelernt haben. Wählen Sie eines, um ein neues Programm zu starten.',
     nextStart: 'Dieses Programm starten',
     nextLoading: 'Passende Themen werden gesucht…',
+    newProgram: 'Neues Programm starten',
+    newProgramConfirm: 'Ihre Teilnahmebescheinigung wurde noch nicht erstellt. Wenn Sie ein neues Programm starten, ist das aktuelle hier nicht mehr verfügbar. Trotzdem starten?',
   },
   fr: {
     plan: 'Partager ce programme',
@@ -120,6 +126,8 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextHint: 'Ces sujets prolongent ce que vous venez d’apprendre. Choisissez-en un pour démarrer un nouveau programme.',
     nextStart: 'Démarrer ce programme',
     nextLoading: 'Recherche de sujets adaptés…',
+    newProgram: 'Démarrer un nouveau programme',
+    newProgramConfirm: 'Votre attestation n’a pas encore été créée. Si vous démarrez un nouveau programme, le programme actuel ne sera plus disponible ici. Démarrer quand même ?',
   },
   es: {
     plan: 'Compartir este programa',
@@ -149,6 +157,8 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextHint: 'Estos temas se apoyan en lo que acabas de aprender. Elige uno para empezar un programa nuevo.',
     nextStart: 'Empezar este programa',
     nextLoading: 'Buscando temas adecuados…',
+    newProgram: 'Empezar un programa nuevo',
+    newProgramConfirm: 'Todavía no has creado tu constancia. Si empiezas un programa nuevo, el actual dejará de estar disponible aquí. ¿Empezar de todos modos?',
   },
   pt: {
     plan: 'Compartilhar este programa',
@@ -178,6 +188,8 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextHint: 'Estes assuntos continuam o que você acabou de aprender. Escolha um para começar um novo programa.',
     nextStart: 'Começar este programa',
     nextLoading: 'Buscando assuntos adequados…',
+    newProgram: 'Começar um novo programa',
+    newProgramConfirm: 'Seu comprovante ainda não foi criado. Se você começar um novo programa, o atual não ficará mais disponível aqui. Começar mesmo assim?',
   },
   ja: {
     plan: 'このプログラムを共有',
@@ -207,6 +219,8 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextHint: 'これらのテーマは、今学んだ内容を土台にしています。1つ選んで新しいプログラムを始めましょう。',
     nextStart: 'このプログラムを始める',
     nextLoading: '合うテーマを探しています…',
+    newProgram: '新しいプログラムを始める',
+    newProgramConfirm: '修了証はまだ作成されていません。新しいプログラムを始めると、現在のプログラムはここでは利用できなくなります。それでも始めますか？',
   },
   zh: {
     plan: '分享这个学习计划',
@@ -236,6 +250,8 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextHint: '这些主题都建立在你刚学完的内容之上。选一个，开始新的学习计划。',
     nextStart: '开始这个学习计划',
     nextLoading: '正在寻找合适的主题…',
+    newProgram: '开始新的学习计划',
+    newProgramConfirm: '你还没有生成完成证明。开始新的学习计划后，当前计划将无法在此继续查看。仍要开始吗？',
   },
   ar: {
     plan: 'مشاركة هذا البرنامج',
@@ -265,6 +281,8 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextHint: 'تبني هذه المواضيع على ما تعلّمته للتو. اختر واحدًا لبدء برنامج جديد.',
     nextStart: 'ابدأ هذا البرنامج',
     nextLoading: 'جارٍ البحث عن مواضيع مناسبة…',
+    newProgram: 'ابدأ برنامجًا جديدًا',
+    newProgramConfirm: 'لم تنشئ الإفادة بعد. إذا بدأت برنامجًا جديدًا فلن يبقى البرنامج الحالي متاحًا هنا. هل تريد المتابعة؟',
   },
   ko: {
     plan: '이 프로그램 공유',
@@ -294,5 +312,7 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     nextHint: '이 주제들은 방금 배운 내용을 바탕으로 합니다. 하나를 선택하여 새 프로그램을 시작하십시오.',
     nextStart: '이 프로그램 시작',
     nextLoading: '알맞은 주제를 찾는 중입니다…',
+    newProgram: '새 프로그램 시작',
+    newProgramConfirm: '증서를 아직 만들지 않았습니다. 새 프로그램을 시작하면 현재 프로그램은 여기에서 더 이상 사용할 수 없습니다. 그래도 시작하시겠습니까?',
   },
 }

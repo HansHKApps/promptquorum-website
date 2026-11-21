@@ -1103,7 +1103,7 @@ t('growth: challenge links round-trip, reject links and markup, and every langua
   assert.equal(readChallenge('?challenge=Ollama&beat=250')?.beat, null)
   for (const l of ALL_LANGS) {
     const x = SHARE_COPY[l]
-    for (const k of ['shareCard', 'challenge', 'linkedin', 'successShare', 'reminder', 'reminderTitle', 'nextTitle', 'nextHint', 'nextStart', 'nextLoading', 'shareCert', 'shareDoc', 'copyCertImage', 'imageCopied'] as const) assert.ok(x[k], `${l}/${k}`)
+    for (const k of ['shareCard', 'challenge', 'linkedin', 'successShare', 'reminder', 'reminderTitle', 'nextTitle', 'nextHint', 'nextStart', 'nextLoading', 'newProgram', 'newProgramConfirm', 'shareCert', 'shareDoc', 'copyCertImage', 'imageCopied'] as const) assert.ok(x[k], `${l}/${k}`)
     assert.ok(x.challengeText('Ollama', 85).includes('Ollama') && x.challengeText('Ollama', 85).includes('85'), l)
     assert.ok(x.challengeBanner(85).includes('85'), l)
     assert.ok(x.streak(3).includes('3'), l)

@@ -6,6 +6,7 @@
 
 import { useEffect, useId, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react'
 import { TextSizeControl, useTextScale } from '@/components/TextSizeControl'
+import Link from 'next/link'
 import { createPortal } from 'react-dom'
 import { Logo } from '@/components/Logo'
 import { ASK_HANS_WINDOW } from '@/lib/askhans/config'
@@ -200,13 +201,23 @@ export function AcademyWindow({ lang, maximized, rect, onRectChange, onClose, on
           onPointerDown={startDrag}
           className={`flex flex-shrink-0 items-center gap-2 border-b border-border bg-white px-3 py-2 ${floating ? 'cursor-move touch-none select-none' : ''}`}
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary" aria-hidden="true">
-            <Logo size={22} role="presentation" aria-hidden="true" />
-          </span>
-          <div className="min-w-0 flex-1">
-            <h1 id={titleId} className="truncate text-sm font-bold leading-tight">{tx.h1}</h1>
-            <p className="truncate text-[11px] leading-tight text-muted-foreground">{tx.tagline}</p>
-          </div>
+          {/* Logo and title lead back to the PromptQuorum home page (own language). The window closes to the floating button; everything typed or
+              learned so far stays in memory (and in the browser if "Save my progress" is ticked), so reopening continues where the learner left off. */}
+          <Link
+            href={lang === 'en' ? '/' : `/${lang}`}
+            onClick={onClose}
+            onPointerDown={(e) => e.stopPropagation()}
+            title="PromptQuorum"
+            className="flex min-w-0 flex-1 items-center gap-2 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+          >
+            <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-secondary" aria-hidden="true">
+              <Logo size={22} role="presentation" aria-hidden="true" />
+            </span>
+            <span className="min-w-0 flex-1 text-start">
+              <span id={titleId} role="heading" aria-level={1} className="block truncate text-sm font-bold leading-tight">{tx.h1}</span>
+              <span className="block truncate text-[11px] leading-tight text-muted-foreground">{tx.tagline}</span>
+            </span>
+          </Link>
           <TextSizeControl lang={lang} scale={scale} setScale={setScale} />
           {isDesktop && (
             <button

@@ -68,6 +68,11 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
   const back = () => update((s) => ({ ...s, view: 'programme' }))
   // "What to learn next": the chosen topic goes into the setup form with the same language, time and level. The finished
   // program stays in memory until the new one is built, so the certificate above can still be created meanwhile.
+  // "Start a new program": clear the finished program (a passed one without a certificate asks first) and open the setup form.
+  const startNewProgram = () => {
+    if (score?.passed && !programme.certificate && !window.confirm(sx.newProgramConfirm)) return
+    update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined, draft: s.draft ? { ...s.draft, subject: '', updatedAt: new Date().toISOString() } : s.draft }))
+  }
   const startNext = (title: string) =>
     update((s) => ({
       ...s,
@@ -404,6 +409,12 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
             </button>
           </div>
         )}
+      </div>
+
+      <div>
+        <button type="button" onClick={startNewProgram} className="rounded-xl border border-purple-600 px-5 py-2.5 font-semibold text-purple-700 hover:bg-purple-50">
+          {sx.newProgram}
+        </button>
       </div>
 
       {final.openQuestions && (
