@@ -993,6 +993,12 @@ const nextConfig: NextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
         ],
       },
+      {
+        // Live Academy programme total for the static homepage tile. The catch-all `/:path*` above would cache it for
+        // a day in the browser and at the edge; last matching rule wins, so this one keeps it to one minute.
+        source: '/api/academy/totals',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, s-maxage=60, stale-while-revalidate=300' }],
+      },
     ]
   },
 }
