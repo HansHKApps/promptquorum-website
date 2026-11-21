@@ -10,6 +10,30 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-creative-writing",
+        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
+        "url": "/power-local-llm/best-local-llm-creative-writing",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
+        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
+        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
@@ -56,33 +80,9 @@
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-11-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-11-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-11-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-multimodal-pipeline-voice-vision-text",
-        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
-        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
-        "dateModified": "2026-11-20",
-        "tier": "about"
       }
     ],
-    "totalCount": 388,
+    "totalCount": 389,
     "capped": true
   },
   "llama.cpp": {
@@ -651,6 +651,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -671,14 +687,6 @@
         "title": "SillyTavern in 2026: The Free Frontend for AI Character Roleplay and Long-Form Chat",
         "url": "/local-llms/sillytavern-review",
         "dateModified": "2026-11-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -712,17 +720,9 @@
         "url": "/power-local-llm/bodega-one-code-review",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "backyard-ai-review-local-roleplay-2026",
-        "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
-        "url": "/power-local-llm/backyard-ai-review-local-roleplay",
-        "dateModified": "2026-09-02",
-        "tier": "about"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "Llamafile": {
@@ -948,7 +948,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 195,
+    "totalCount": 196,
     "capped": true
   },
   "Atomic Chat": {
@@ -1434,7 +1434,15 @@
         "slug": "backyard-ai-review-local-roleplay-2026",
         "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
         "url": "/power-local-llm/backyard-ai-review-local-roleplay",
-        "dateModified": "2026-09-02",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-11-21",
         "tier": "about"
       },
       {
@@ -1455,11 +1463,11 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-10-30",
-        "tier": "about"
+        "slug": "risuai-review",
+        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
+        "url": "/power-local-llm/risuai-review",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -1467,14 +1475,6 @@
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "risuai-review",
-        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
-        "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-11-14",
         "tier": "mentioned"
       },
       {
@@ -2332,11 +2332,11 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-11-18",
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay",
+        "dateModified": "2026-11-21",
         "tier": "mentioned"
       },
       {
@@ -2344,7 +2344,15 @@
         "slug": "risuai-review",
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-11-14",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
+        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
+        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -2370,14 +2378,6 @@
         "url": "/power-local-llm/text-generator-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "exllamav2-explained",
-        "title": "ExLlamaV2 Explained 2026: Archived, Succeeded by ExLlamaV3",
-        "url": "/power-local-llm/exllamav2-explained",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 16,
@@ -2395,10 +2395,42 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "rin-chat-review",
+        "title": "Rin Chat Review: Free Desktop App for AI Roleplay and Character Chat",
+        "url": "/power-local-llm/rin-chat-review",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "risuai-review",
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-11-14",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
+        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
+        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
+        "dateModified": "2026-11-21",
         "tier": "about"
       },
       {
@@ -2407,14 +2439,6 @@
         "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
         "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
         "dateModified": "2026-11-13",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -2440,33 +2464,9 @@
         "url": "/power-local-llm/librechat-review",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "backyard-ai-review-local-roleplay-2026",
-        "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
-        "url": "/power-local-llm/backyard-ai-review-local-roleplay",
-        "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-vs-sillytavern",
-        "title": "Open WebUI vs SillyTavern: Best Chat UI for Local LLMs",
-        "url": "/local-llms/open-webui-vs-sillytavern",
-        "dateModified": "2026-08-30",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
-        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
-        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "LobeHub": {
@@ -7171,6 +7171,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
+        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
+        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-image-generation-vs-cloud",
         "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
         "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
@@ -7231,14 +7239,6 @@
         "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
         "dateModified": "2026-11-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "layla-review",
-        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
-        "url": "/power-local-llm/layla-review",
-        "dateModified": "2026-10-30",
         "tier": "about"
       }
     ],
@@ -7328,7 +7328,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 27,
+    "totalCount": 28,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -7414,7 +7414,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "Invoke AI": {
@@ -8212,7 +8212,23 @@
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-10-30",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
+        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
+        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
+        "dateModified": "2026-11-21",
         "tier": "about"
       },
       {
@@ -8241,26 +8257,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "backyard-ai-review-local-roleplay-2026",
-        "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
-        "url": "/power-local-llm/backyard-ai-review-local-roleplay",
-        "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
-        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
-        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
-        "dateModified": "2026-08-29",
-        "tier": "about"
+        "slug": "best-local-llm-creative-writing",
+        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
+        "url": "/power-local-llm/best-local-llm-creative-writing",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
         "slug": "risuai-review",
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-11-14",
+        "dateModified": "2026-11-21",
         "tier": "mentioned"
       },
       {
@@ -8269,14 +8277,6 @@
         "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
         "url": "/power-local-llm/local-ai-on-iphone-guide",
         "dateModified": "2026-11-13",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-creative-writing",
-        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
-        "url": "/power-local-llm/best-local-llm-creative-writing",
-        "dateModified": "2026-11-06",
         "tier": "mentioned"
       },
       {
@@ -8298,7 +8298,23 @@
         "slug": "risuai-review",
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
-        "dateModified": "2026-11-14",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
+        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
+        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
+        "dateModified": "2026-11-21",
         "tier": "about"
       },
       {
@@ -8343,34 +8359,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "backyard-ai-review-local-roleplay-2026",
-        "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
-        "url": "/power-local-llm/backyard-ai-review-local-roleplay",
-        "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
-        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
-        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
-        "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-on-iphone-guide",
-        "title": "Local AI on iPhone in 2026: What Is Possible, What Is Not, and the iPhone Apps We Cover",
-        "url": "/power-local-llm/local-ai-on-iphone-guide",
-        "dateModified": "2026-11-13",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-11-21",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-11-13",
+        "slug": "best-local-llm-creative-writing",
+        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
+        "url": "/power-local-llm/best-local-llm-creative-writing",
+        "dateModified": "2026-11-21",
         "tier": "mentioned"
       }
     ],
@@ -8443,6 +8443,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
@@ -8495,14 +8503,6 @@
         "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
         "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
         "dateModified": "2026-11-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-10-30",
         "tier": "about"
       },
       {
@@ -11945,6 +11945,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
+        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
+        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-video-generation-vs-cloud",
         "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
         "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
@@ -11980,14 +11988,6 @@
         "slug": "best-arabic-local-llms-2026",
         "title": "Best Arabic Local LLMs: Jais, Falcon & Running Arabic AI On-Premise (2026)",
         "url": "/local-llms/best-arabic-local-llms-2026",
-        "dateModified": "2026-11-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-business-writing",
-        "title": "Best Local LLMs for Writing Emails and Business Documents in 2026",
-        "url": "/local-llms/best-local-llms-business-writing",
         "dateModified": "2026-11-19",
         "tier": "mentioned"
       }
@@ -14561,6 +14561,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "agnai-review",
+        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
+        "url": "/power-local-llm/agnai-review",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "firecrawl-review",
         "title": "Firecrawl Review: Open-Source Web Data API for LLM Pipelines",
         "url": "/power-local-llm/firecrawl-review",
@@ -14572,6 +14588,14 @@
         "slug": "pixafind-review",
         "title": "PixaFind Review: Local AI Search for Your Files and Photos",
         "url": "/power-local-llm/pixafind-review",
+        "dateModified": "2026-11-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "risuai-review",
+        "title": "RisuAI Review: Open-Source Roleplay Chat Client",
+        "url": "/power-local-llm/risuai-review",
         "dateModified": "2026-11-21",
         "tier": "mentioned"
       },
@@ -14604,30 +14628,6 @@
         "slug": "best-local-models-tool-calling-2026",
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-with-mcp",
-        "title": "Ollama MCP Setup 2026: Connect Local Models to Files, Databases and APIs",
-        "url": "/power-local-llm/local-ai-agents-with-mcp",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-image-generation-vs-cloud",
-        "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
-        "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-video-generation-vs-cloud",
-        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
-        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
         "dateModified": "2026-11-20",
         "tier": "mentioned"
       }
@@ -17046,6 +17046,28 @@
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
         "dateModified": "2026-11-20",
         "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "Rin Chat": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "rin-chat-review",
+        "title": "Rin Chat Review: Free Desktop App for AI Roleplay and Character Chat",
+        "url": "/power-local-llm/rin-chat-review",
+        "dateModified": "2026-11-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-chat-assistants-compared",
+        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
+        "url": "/power-local-llm/local-llm-chat-assistants-compared",
+        "dateModified": "2026-11-20",
+        "tier": "about"
       }
     ],
     "totalCount": 2,

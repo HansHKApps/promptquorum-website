@@ -1117,6 +1117,7 @@ const HUB_THEMES: Array<{
       'backyard-ai-review-local-roleplay',
       'agnai-review',
       'risuai-review',
+      'rin-chat-review',
       'swerve-ai-review',
       'hiwaifu-review',
       'open-llm-vtuber-review',

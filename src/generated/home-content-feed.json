@@ -21874,7 +21874,7 @@
     "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
     "excerpt": "Gemma 4 31B and Qwen3.8-27B fit one 24 GB GPU. See the best local LLM for fiction, dialogue and worldbuilding per VRAM tier, with Ollama commands.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-21",
     "url": "/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -21883,7 +21883,7 @@
     "title": "Beste lokale LLMs für kreatives Schreiben (2026): Belletristik, Dialog & Weltenbau",
     "excerpt": "Gemma 4 31B und Qwen3.8-27B passen auf eine 24-GB-GPU. Das beste lokale LLM für Prosa, Dialog und Weltenbau je VRAM-Stufe, mit Ollama-Befehlen.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-21",
     "url": "/de/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -21892,7 +21892,7 @@
     "title": "Meilleurs LLM locaux pour l'écriture créative (2026) : fiction, dialogue et worldbuilding",
     "excerpt": "Gemma 4 31B et Qwen3.8-27B tiennent sur un GPU de 24 Go. Le meilleur LLM local pour fiction, dialogue et worldbuilding par palier de VRAM, avec commandes Ollama.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-21",
     "url": "/fr/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -21901,7 +21901,7 @@
     "title": "創作向けベストローカルLLM（2026年）：小説・対話・世界観構築",
     "excerpt": "Gemma 4 31BとQwen3.8-27Bは24GB GPU1枚で動作。小説・対話・世界観構築に向くローカルLLMをVRAM帯別にOllamaコマンド付きで紹介します。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-21",
     "url": "/ja/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -21910,7 +21910,7 @@
     "title": "2026年创意写作最佳本地LLM：小说、对话与世界观构建",
     "excerpt": "Gemma 4 31B和Qwen3.8-27B可在单张24GB显卡上运行。按显存档位推荐适合小说、对话与世界观构建的最佳本地LLM，附Ollama命令。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-21",
     "url": "/zh/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -21919,7 +21919,7 @@
     "title": "Mejores LLM locales para escritura creativa (2026): ficción, diálogo y worldbuilding",
     "excerpt": "Gemma 4 31B y Qwen3.8-27B caben en una GPU de 24 GB. El mejor LLM local para ficción, diálogo y worldbuilding por nivel de VRAM, con comandos de Ollama.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-21",
     "url": "/es/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -21928,7 +21928,7 @@
     "title": "Melhores LLMs locais para escrita criativa (2026): ficção, diálogo e worldbuilding",
     "excerpt": "Gemma 4 31B e Qwen3.8-27B cabem em uma GPU de 24 GB. O melhor LLM local para ficção, diálogo e worldbuilding por faixa de VRAM, com comandos do Ollama.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-21",
     "url": "/pt/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -21937,7 +21937,7 @@
     "title": "أفضل نماذج LLM المحلية للكتابة الإبداعية (2026): الخيال والحوار وبناء العوالم",
     "excerpt": "يعمل نموذج Gemma 4 31B ونموذج Qwen3.8-27B على بطاقة 24 جيجابايت واحدة. أفضل LLM محلي للخيال والحوار وبناء العوالم حسب فئة VRAM، مع أوامر Ollama.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-21",
     "url": "/ar/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -21946,7 +21946,7 @@
     "title": "2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 대화, 세계관 구축",
     "excerpt": "Gemma 4 31B와 Qwen3.8-27B는 24GB GPU 한 장에서 실행됩니다. 소설, 대화, 세계관 구축에 맞는 최고의 로컬 LLM을 VRAM 구간별로 Ollama 명령과 함께 소개합니다.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-21",
     "url": "/ko/power-local-llm/best-local-llm-creative-writing",
     "cluster": "power-local-llm"
   },
@@ -22762,8 +22762,8 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Apps & Software Directory: 424 Tools for Running AI Locally (2026)",
-    "excerpt": "Compare 424 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
+    "title": "Local LLM Apps & Software Directory: 425 Tools for Running AI Locally (2026)",
+    "excerpt": "Compare 425 local LLM apps and software for Mac, Windows, Linux, iOS and Android: chat clients, runtimes, coding tools. Filter by license, price, hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-20",
     "url": "/directory",
@@ -22771,8 +22771,8 @@
   },
   {
     "lang": "de",
-    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 424 Apps zum lokalen Ausführen (2026)",
-    "excerpt": "Vergleichen Sie 424 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
+    "title": "Verzeichnis für LLM-Tools & lokale KI-Software: 425 Apps zum lokalen Ausführen (2026)",
+    "excerpt": "Vergleichen Sie 425 LLM-Tools, Apps und Software für lokale KI auf Mac, Windows, Linux, iOS und Android. Filtern nach Lizenz, Preis und Hardware.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-20",
     "url": "/de/directory",
@@ -22780,8 +22780,8 @@
   },
   {
     "lang": "fr",
-    "title": "Répertoire des logiciels et outils LLM locaux : 424 apps pour exécuter l'IA en local (2026)",
-    "excerpt": "Comparez 424 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
+    "title": "Répertoire des logiciels et outils LLM locaux : 425 apps pour exécuter l'IA en local (2026)",
+    "excerpt": "Comparez 425 logiciels, outils et apps LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par licence, prix et matériel pour choisir.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-20",
     "url": "/fr/directory",
@@ -22789,8 +22789,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす424のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを424件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす425のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを425件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-20",
     "url": "/ja/directory",
@@ -22798,8 +22798,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地AI工具与LLM应用目录：424款软件，在本地运行AI（2026）",
-    "excerpt": "对比424款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI工具与LLM应用目录：425款软件，在本地运行AI（2026）",
+    "excerpt": "对比425款适用于Mac、Windows、Linux、iOS和Android的本地AI工具与LLM应用。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-20",
     "url": "/zh/directory",
@@ -22807,8 +22807,8 @@
   },
   {
     "lang": "es",
-    "title": "Directorio de herramientas y software de LLM local: 424 apps para ejecutar IA en local (2026)",
-    "excerpt": "Compara 424 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
+    "title": "Directorio de herramientas y software de LLM local: 425 apps para ejecutar IA en local (2026)",
+    "excerpt": "Compara 425 herramientas, apps y software de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por licencia, precio y hardware y elige.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-20",
     "url": "/es/directory",
@@ -22816,8 +22816,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 424 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 424 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 425 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 425 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-20",
     "url": "/pt/directory",
@@ -22825,8 +22825,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 424 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 424 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 425 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 425 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-20",
     "url": "/ar/directory",
@@ -22834,8 +22834,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 424개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 424개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 425개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 425개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-20",
     "url": "/ko/directory",
@@ -23494,7 +23494,7 @@
     "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
     "excerpt": "Backyard AI review 2026: free local roleplay app for Windows and Mac. Character Hub, Fimbulvetr 10.7B, Backyard Cloud pricing ($7/$18/$35), hardware needs, and how it compares with Loci AI and SillyTavern.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-21",
     "url": "/power-local-llm/backyard-ai-review-local-roleplay",
     "cluster": "power-local-llm"
   },
@@ -23503,7 +23503,7 @@
     "title": "Backyard-AI-Rezension: Lokaler KI-Charakter-Chat und Rollenspiel",
     "excerpt": "Backyard-AI-Rezension 2026: kostenlose lokale Rollenspiel-App für Windows und Mac. Character Hub, Fimbulvetr 10.7B, Backyard-Cloud-Preise (7 $/18 $/35 $), Hardware-Bedarf und Vergleich mit Loci AI und SillyTavern.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-21",
     "url": "/de/power-local-llm/backyard-ai-review-local-roleplay",
     "cluster": "power-local-llm"
   },
@@ -23512,7 +23512,7 @@
     "title": "Avis sur Backyard AI: chat de personnages IA et roleplay local",
     "excerpt": "Avis Backyard AI 2026 : app de roleplay local gratuite pour Windows et Mac. Character Hub, Fimbulvetr 10.7B, tarifs Backyard Cloud (7 $/18 $/35 $), besoins matériels et comparaison avec Loci AI et SillyTavern.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-21",
     "url": "/fr/power-local-llm/backyard-ai-review-local-roleplay",
     "cluster": "power-local-llm"
   },
@@ -23521,7 +23521,7 @@
     "title": "Backyard AIレビュー:ローカルAIキャラクターチャットとロールプレイ",
     "excerpt": "Backyard AIレビュー2026:WindowsとMac向け無料ローカルロールプレイアプリ。Character Hub、Fimbulvetr 10.7B、Backyard Cloud料金(7/18/35ドル)、必要ハードウェア、Loci AIやSillyTavernとの比較。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-21",
     "url": "/ja/power-local-llm/backyard-ai-review-local-roleplay",
     "cluster": "power-local-llm"
   },
@@ -23530,7 +23530,7 @@
     "title": "Backyard AI评测:本地AI角色聊天与角色扮演",
     "excerpt": "Backyard AI 2026评测:适用于Windows和Mac的免费本地角色扮演应用。Character Hub、Fimbulvetr 10.7B、Backyard Cloud定价($7/$18/$35)、硬件需求,以及与Loci AI、SillyTavern的对比。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-21",
     "url": "/zh/power-local-llm/backyard-ai-review-local-roleplay",
     "cluster": "power-local-llm"
   },
@@ -23539,7 +23539,7 @@
     "title": "Análisis de Backyard AI: Chat de Personajes IA y Roleplay Local",
     "excerpt": "Backyard AI 2026: app gratuita de roleplay local para Windows y Mac. Character Hub, Fimbulvetr 10.7B, precios de Backyard Cloud ($7/$18/$35), requisitos de hardware y comparación con Loci AI y SillyTavern.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-21",
     "url": "/es/power-local-llm/backyard-ai-review-local-roleplay",
     "cluster": "power-local-llm"
   },
@@ -23548,7 +23548,7 @@
     "title": "Análise do Backyard AI: Chat de Personagens IA e Roleplay Local",
     "excerpt": "Backyard AI 2026: app gratuito de roleplay local para Windows e Mac. Character Hub, Fimbulvetr 10.7B, preços do Backyard Cloud ($7/$18/$35), requisitos de hardware e comparação com Loci AI e SillyTavern.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-21",
     "url": "/pt/power-local-llm/backyard-ai-review-local-roleplay",
     "cluster": "power-local-llm"
   },
@@ -23557,7 +23557,7 @@
     "title": "مراجعة Backyard AI: محادثة الشخصيات بالذكاء الاصطناعي ولعب الأدوار محلياً",
     "excerpt": "مراجعة Backyard AI 2026: تطبيق مجاني للعب الأدوار المحلي على Windows و Mac. Character Hub، وFimbulvetr 10.7B، وأسعار Backyard Cloud ($7/$18/$35)، ومتطلبات الأجهزة، ومقارنة مع Loci AI وSillyTavern.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-21",
     "url": "/ar/power-local-llm/backyard-ai-review-local-roleplay",
     "cluster": "power-local-llm"
   },
@@ -23566,7 +23566,7 @@
     "title": "Backyard AI 리뷰: 로컬 AI 캐릭터 채팅과 롤플레이",
     "excerpt": "Backyard AI 2026 리뷰: Windows와 Mac용 무료 로컬 롤플레이 앱입니다. Character Hub, Fimbulvetr 10.7B, Backyard Cloud 요금제($7/$18/$35), 필요 하드웨어, Loci AI 및 SillyTavern과의 비교를 다룹니다.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-21",
     "url": "/ko/power-local-llm/backyard-ai-review-local-roleplay",
     "cluster": "power-local-llm"
   },
@@ -24385,7 +24385,7 @@
     "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
     "excerpt": "SillyTavern for deep customisation, Agnai for multi-user servers, RisuAI as the lighter option. Character cards, lore books, group chat, privacy compared.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-21",
     "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
     "cluster": "power-local-llm"
   },
@@ -24394,7 +24394,7 @@
     "title": "SillyTavern vs Agnai vs RisuAI: Beste lokale Roleplay-Oberfläche (2026)",
     "excerpt": "SillyTavern für tiefe Anpassung, Agnai für Mehrbenutzer-Server, RisuAI als leichte Option. Charakterkarten, Lorebooks, Gruppenchat, Datenschutz.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-21",
     "url": "/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
     "cluster": "power-local-llm"
   },
@@ -24403,7 +24403,7 @@
     "title": "SillyTavern vs Agnai vs RisuAI : Meilleure interface roleplay locale (2026)",
     "excerpt": "SillyTavern pour la personnalisation, Agnai pour le multi-utilisateur, RisuAI en option légère. Cartes, lorebooks, chat de groupe, vie privée comparés.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-21",
     "url": "/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
     "cluster": "power-local-llm"
   },
@@ -24412,7 +24412,7 @@
     "title": "SillyTavern vs Agnai vs RisuAI：2026年ローカルLLMロールプレイUI比較",
     "excerpt": "SillyTavernは高度なカスタマイズ、Agnaiは複数人サーバー、RisuAIは軽量な選択肢。キャラカード、ロアブック、グループチャット、プライバシーを比較。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-21",
     "url": "/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
     "cluster": "power-local-llm"
   },
@@ -24421,7 +24421,7 @@
     "title": "SillyTavern vs Agnai vs RisuAI：2026年最佳本地角色扮演前端对比",
     "excerpt": "本地LLM角色扮演前端对比：SillyTavern适合深度自定义，Agnai适合多用户服务器，RisuAI更轻量。涵盖角色卡、世界书、群聊与隐私。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-21",
     "url": "/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
     "cluster": "power-local-llm"
   },
@@ -24430,7 +24430,7 @@
     "title": "SillyTavern vs Agnai vs RisuAI: Mejor interfaz de roleplay local (2026)",
     "excerpt": "SillyTavern para personalizar a fondo, Agnai para multiusuario, RisuAI como opción ligera. Tarjetas, lorebooks, chat grupal y privacidad comparados.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-21",
     "url": "/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
     "cluster": "power-local-llm"
   },
@@ -24439,7 +24439,7 @@
     "title": "SillyTavern vs Agnai vs RisuAI: Melhor interface de roleplay local (2026)",
     "excerpt": "SillyTavern para personalizar a fundo, Agnai para multiusuário, RisuAI como opção leve. Cartões, lorebooks, chat em grupo e privacidade comparados.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-21",
     "url": "/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
     "cluster": "power-local-llm"
   },
@@ -24448,7 +24448,7 @@
     "title": "⁨SillyTavern⁩ مقابل ⁨Agnai⁩ مقابل ⁨RisuAI⁩: أفضل واجهة ⁨roleplay⁩ محلية (⁨2026⁩)",
     "excerpt": "SillyTavern للتخصيص العميق، وAgnai للخوادم متعددة المستخدمين، وRisuAI كخيار أخف. مقارنة بطاقات الشخصيات وlorebooks والدردشة الجماعية والخصوصية.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-21",
     "url": "/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
     "cluster": "power-local-llm"
   },
@@ -24457,7 +24457,7 @@
     "title": "SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 인터페이스 (2026)",
     "excerpt": "SillyTavern은 깊은 커스터마이징, Agnai는 다중 사용자 서버, RisuAI는 가벼운 대안. 캐릭터 카드, 로어북, 그룹 채팅, 개인정보 보호를 비교합니다.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-11-21",
     "url": "/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
     "cluster": "power-local-llm"
   },
@@ -34832,7 +34832,7 @@
   {
     "lang": "en",
     "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-    "excerpt": "Compare 149 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
+    "excerpt": "Compare 150 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -34850,7 +34850,7 @@
   {
     "lang": "fr",
     "title": "Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle",
-    "excerpt": "Comparez 149 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
+    "excerpt": "Comparez 150 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/fr/power-local-llm/local-llm-chat-assistants-compared",
@@ -34859,7 +34859,7 @@
   {
     "lang": "ja",
     "title": "ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ",
-    "excerpt": "ローカルチャットアプリとAIアシスタント149種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
+    "excerpt": "ローカルチャットアプリとAIアシスタント150種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/ja/power-local-llm/local-llm-chat-assistants-compared",
@@ -34868,7 +34868,7 @@
   {
     "lang": "zh",
     "title": "本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演",
-    "excerpt": "并排对比149款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
+    "excerpt": "并排对比150款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/zh/power-local-llm/local-llm-chat-assistants-compared",
@@ -34877,7 +34877,7 @@
   {
     "lang": "es",
     "title": "Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol",
-    "excerpt": "Compara 149 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
+    "excerpt": "Compara 150 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/es/power-local-llm/local-llm-chat-assistants-compared",
@@ -34886,7 +34886,7 @@
   {
     "lang": "pt",
     "title": "Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay",
-    "excerpt": "Compare 149 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
+    "excerpt": "Compare 150 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/pt/power-local-llm/local-llm-chat-assistants-compared",
@@ -34895,7 +34895,7 @@
   {
     "lang": "ar",
     "title": "مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار",
-    "excerpt": "قارن 149 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
+    "excerpt": "قارن 150 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/ar/power-local-llm/local-llm-chat-assistants-compared",
@@ -34904,7 +34904,7 @@
   {
     "lang": "ko",
     "title": "로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이",
-    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 149개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 150개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-11-20",
     "url": "/ko/power-local-llm/local-llm-chat-assistants-compared",
@@ -42684,6 +42684,87 @@
     "publishDate": "2026-11-21",
     "dateModified": "2026-11-21",
     "url": "/ko/power-local-llm/pixafind-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Rin Chat Review: Free Desktop App for AI Roleplay and Character Chat",
+    "excerpt": "Rin Chat review: free Windows and Linux roleplay app with encrypted cards, game-master dice and a card forge, using Ollama or any API. Limits inside.",
+    "publishDate": "2026-11-21",
+    "dateModified": "2026-11-21",
+    "url": "/power-local-llm/rin-chat-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Rin Chat Rezension: Gratis-Desktop-App für KI-Rollenspiel und Charakter-Chat",
+    "excerpt": "Rin Chat Rezension: Gratis-Rollenspiel-App für Windows und Linux mit verschlüsselten Karten, Spielleiter-Würfeln und Karten-Schmiede, mit Ollama oder API.",
+    "publishDate": "2026-11-21",
+    "dateModified": "2026-11-21",
+    "url": "/de/power-local-llm/rin-chat-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Rin Chat : application de bureau gratuite pour le jeu de rôle IA",
+    "excerpt": "Test de Rin Chat : application gratuite de jeu de rôle pour Windows et Linux, cartes chiffrées, dés de maître du jeu et forge de cartes, avec Ollama.",
+    "publishDate": "2026-11-21",
+    "dateModified": "2026-11-21",
+    "url": "/fr/power-local-llm/rin-chat-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Rin Chat レビュー：AIロールプレイとキャラクターチャットの無料デスクトップアプリ",
+    "excerpt": "Rin Chatのレビュー：暗号化カード、ダイス付きゲームマスター、カードフォージを備えた、Windows・Linux向けの無料ロールプレイアプリ。OllamaやAPIに対応。制限も解説。",
+    "publishDate": "2026-11-21",
+    "dateModified": "2026-11-21",
+    "url": "/ja/power-local-llm/rin-chat-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Rin Chat评测：用于AI角色扮演和角色聊天的免费桌面应用",
+    "excerpt": "Rin Chat评测：适用于Windows和Linux的免费角色扮演应用，带加密角色卡、游戏主持骰子和角色卡工坊，可搭配Ollama或任意API。含限制说明。",
+    "publishDate": "2026-11-21",
+    "dateModified": "2026-11-21",
+    "url": "/zh/power-local-llm/rin-chat-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Rin Chat: app de escritorio gratis para rol con IA y chat con personajes",
+    "excerpt": "Reseña de Rin Chat: app gratis de rol para Windows y Linux con tarjetas cifradas, dados de director de juego y creador de tarjetas, con Ollama o API.",
+    "publishDate": "2026-11-21",
+    "dateModified": "2026-11-21",
+    "url": "/es/power-local-llm/rin-chat-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Rin Chat: app de desktop grátis para roleplay com IA e chat com personagens",
+    "excerpt": "Análise do Rin Chat: app grátis de roleplay para Windows e Linux com cartões criptografados, dados de mestre de jogo e criador de cartões. Limites.",
+    "publishDate": "2026-11-21",
+    "dateModified": "2026-11-21",
+    "url": "/pt/power-local-llm/rin-chat-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Rin Chat: تطبيق مكتبي مجاني للعب الأدوار والمحادثة مع الشخصيات بالذكاء الاصطناعي",
+    "excerpt": "مراجعة Rin Chat: تطبيق مجاني للعب الأدوار على Windows وLinux ببطاقات مشفّرة ونرد لمدير اللعبة ومحرر بطاقات، مع Ollama أو أي API. القيود داخل المراجعة.",
+    "publishDate": "2026-11-21",
+    "dateModified": "2026-11-21",
+    "url": "/ar/power-local-llm/rin-chat-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Rin Chat 리뷰: AI 롤플레이와 캐릭터 채팅을 위한 무료 데스크톱 앱",
+    "excerpt": "Rin Chat 리뷰: 암호화 카드, 게임 마스터 주사위, 카드 포지를 갖춘 Windows·Linux용 무료 롤플레이 앱. Ollama나 API 사용, 한계 정리.",
+    "publishDate": "2026-11-21",
+    "dateModified": "2026-11-21",
+    "url": "/ko/power-local-llm/rin-chat-review",
     "cluster": "power-local-llm"
   },
   {
@@ -54598,7 +54679,7 @@
     "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
     "excerpt": "Agnai (agnai.chat) is a free, open-source AI roleplay chat: hosted or self-hosted via npm/Docker, 9 AI services, group chat. Setup and SillyTavern comparison.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-11-21",
     "url": "/power-local-llm/agnai-review",
     "cluster": "power-local-llm"
   },
@@ -54607,7 +54688,7 @@
     "title": "Agnai-Rezension: Selbst hostbarer KI-Rollenspiel-Chat",
     "excerpt": "Agnai (agnai.chat) ist ein kostenloser, quelloffener KI-Rollenspiel-Chat: gehostet oder selbst gehostet per npm/Docker, 9 KI-Dienste, Gruppenchat. Setup und Vergleich.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-11-21",
     "url": "/de/power-local-llm/agnai-review",
     "cluster": "power-local-llm"
   },
@@ -54616,7 +54697,7 @@
     "title": "Agnai: Avis sur ce Chat de Jeu de Rôle IA Auto-Hébergeable",
     "excerpt": "Agnai (agnai.chat) est un chat de jeu de rôle IA open source et gratuit : hébergé ou auto-hébergé via npm/Docker, 9 services IA, chat de groupe. Installation et comparatif.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-11-21",
     "url": "/fr/power-local-llm/agnai-review",
     "cluster": "power-local-llm"
   },
@@ -54625,7 +54706,7 @@
     "title": "Agnaiレビュー:セルフホスト可能なAIロールプレイチャット",
     "excerpt": "Agnai(agnai.chat)は無料のオープンソースAIロールプレイチャット。ホスト版またはnpm/Dockerでセルフホスト、9つのAIサービス、グループチャット対応。導入手順と比較。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-11-21",
     "url": "/ja/power-local-llm/agnai-review",
     "cluster": "power-local-llm"
   },
@@ -54634,7 +54715,7 @@
     "title": "Agnai评测:可自托管的AI角色扮演聊天平台",
     "excerpt": "Agnai(agnai.chat)是免费开源的AI角色扮演聊天平台:托管版或通过npm/Docker自托管,支持9种AI服务和群聊。含安装步骤与同类对比。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-11-21",
     "url": "/zh/power-local-llm/agnai-review",
     "cluster": "power-local-llm"
   },
@@ -54643,7 +54724,7 @@
     "title": "Agnai: Reseña del Chat de Rol IA Autoalojable",
     "excerpt": "Agnai (agnai.chat) es un chat de rol con IA gratuito y de código abierto: alojado o autoalojado con npm/Docker, 9 servicios de IA, chat grupal. Instalación y comparativa.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-11-21",
     "url": "/es/power-local-llm/agnai-review",
     "cluster": "power-local-llm"
   },
@@ -54652,7 +54733,7 @@
     "title": "Agnai: Análise do Chat de Roleplay com IA Auto-Hospedável",
     "excerpt": "Agnai (agnai.chat) é um chat de roleplay com IA gratuito e de código aberto: hospedado ou auto-hospedado via npm/Docker, 9 serviços de IA, chat em grupo. Instalação e comparação.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-11-21",
     "url": "/pt/power-local-llm/agnai-review",
     "cluster": "power-local-llm"
   },
@@ -54661,7 +54742,7 @@
     "title": "مراجعة Agnai: منصة دردشة تقمص أدوار بالذكاء الاصطناعي قابلة للاستضافة الذاتية",
     "excerpt": "Agnai (agnai.chat) منصة دردشة تقمص أدوار مفتوحة المصدر ومجانية: نسخة مستضافة أو استضافة ذاتية عبر npm/Docker، 9 خدمات ذكاء اصطناعي ودردشة جماعية. الإعداد والمقارنة.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-11-21",
     "url": "/ar/power-local-llm/agnai-review",
     "cluster": "power-local-llm"
   },
@@ -54670,7 +54751,7 @@
     "title": "Agnai 리뷰: 셀프 호스팅 가능한 AI 롤플레이 채팅",
     "excerpt": "Agnai(agnai.chat)는 무료 오픈소스 AI 롤플레이 채팅입니다. 호스팅 버전 또는 npm/Docker 셀프 호스팅, 9개 AI 서비스, 그룹 채팅. 설치 방법과 비교.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-10-30",
+    "dateModified": "2026-11-21",
     "url": "/ko/power-local-llm/agnai-review",
     "cluster": "power-local-llm"
   },
@@ -54760,7 +54841,7 @@
     "title": "RisuAI Review: Open-Source Roleplay Chat Client",
     "excerpt": "RisuAI is a free roleplay chat client that runs in a browser with no install. Desktop installers, Docker, Node.js 22.13+ and a requirements table.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-21",
     "url": "/power-local-llm/risuai-review",
     "cluster": "power-local-llm"
   },
@@ -54769,7 +54850,7 @@
     "title": "RisuAI Review: Quelloffener Rollenspiel-Chat-Client",
     "excerpt": "RisuAI ist ein kostenloser Rollenspiel-Client, der ohne Installation im Browser läuft. Desktop-Installer, Docker, Node.js 22.13+ und Anforderungstabelle.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-21",
     "url": "/de/power-local-llm/risuai-review",
     "cluster": "power-local-llm"
   },
@@ -54778,7 +54859,7 @@
     "title": "Avis RisuAI: client de chat de jeu de rôle open source",
     "excerpt": "RisuAI est un client de roleplay gratuit utilisable dans le navigateur sans installation. Version bureau, Docker, Node.js 22.13+ et tableau des prérequis.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-21",
     "url": "/fr/power-local-llm/risuai-review",
     "cluster": "power-local-llm"
   },
@@ -54787,7 +54868,7 @@
     "title": "RisuAIレビュー:オープンソースのロールプレイ・チャットクライアント",
     "excerpt": "RisuAIはブラウザだけで使える無料のロールプレイ用チャットクライアントです。デスクトップ版、Docker、Node.js 22.13以上、動作要件の表を掲載します。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-21",
     "url": "/ja/power-local-llm/risuai-review",
     "cluster": "power-local-llm"
   },
@@ -54796,7 +54877,7 @@
     "title": "RisuAI评测:开源角色扮演聊天客户端",
     "excerpt": "RisuAI 是免费的角色扮演聊天客户端,浏览器打开即可使用,无需安装。含桌面版、Docker、Node.js 22.13+ 和系统要求表。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-21",
     "url": "/zh/power-local-llm/risuai-review",
     "cluster": "power-local-llm"
   },
@@ -54805,7 +54886,7 @@
     "title": "Reseña de RisuAI: cliente de chat de rol de código abierto",
     "excerpt": "RisuAI es un cliente de roleplay gratuito que funciona en el navegador sin instalar nada. Instaladores de escritorio, Docker, Node.js 22.13+ y requisitos.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-21",
     "url": "/es/power-local-llm/risuai-review",
     "cluster": "power-local-llm"
   },
@@ -54814,7 +54895,7 @@
     "title": "Análise do RisuAI: cliente de chat de roleplay open source",
     "excerpt": "RisuAI é um cliente de roleplay gratuito que roda no navegador, sem instalar nada. Instaladores desktop, Docker, Node.js 22.13+ e tabela de requisitos.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-21",
     "url": "/pt/power-local-llm/risuai-review",
     "cluster": "power-local-llm"
   },
@@ -54823,7 +54904,7 @@
     "title": "مراجعة RisuAI: عميل دردشة لعب أدوار مفتوح المصدر",
     "excerpt": "RisuAI عميل دردشة مجاني للعب الأدوار يعمل في المتصفح دون تثبيت. مثبّتات سطح المكتب وDocker وNode.js 22.13+ وجدول المتطلبات.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-21",
     "url": "/ar/power-local-llm/risuai-review",
     "cluster": "power-local-llm"
   },
@@ -54832,7 +54913,7 @@
     "title": "RisuAI 리뷰: 오픈소스 롤플레이 채팅 클라이언트",
     "excerpt": "RisuAI는 브라우저에서 바로 쓰는 무료 롤플레이 클라이언트입니다. 모바일 사용 가능 여부, 데스크톱·Docker 설치, 시스템 요구사항 표를 정리했습니다.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-21",
     "url": "/ko/power-local-llm/risuai-review",
     "cluster": "power-local-llm"
   },

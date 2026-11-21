@@ -2019,6 +2019,11 @@
     "urlSlug": "pixafind-review",
     "url": "/power-local-llm/pixafind-review"
   },
+  "rin-chat": {
+    "cluster": "power-local-llm",
+    "urlSlug": "rin-chat-review",
+    "url": "/power-local-llm/rin-chat-review"
+  },
   "sablate": {
     "cluster": "power-local-llm",
     "urlSlug": "sablate-review",

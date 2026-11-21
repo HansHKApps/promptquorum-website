@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -359,6 +359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Rin Chat Review](/power-local-llm/rin-chat-review) — a free, closed-source Windows and Linux desktop app that opens SillyTavern character cards and adds game-master dice.',
           '[SillyTavern vs. Agnai vs. RisuAI: Best Roleplay Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — the open-source, more configurable alternative; full backend/frontend comparison.',
           '[Uncensored Local LLMs for Creative Writing: Ethics, Legality & Best Practices](/power-local-llm/uncensored-local-llm-creative-writing-ethics) — model-level guidance that applies to any local roleplay frontend, Backyard AI included.',
           '[Local LLM Prompts for Fiction Writers](/power-local-llm/local-llm-prompts-for-fiction-writers) — prompt structures for character voice and narrative consistency.',
@@ -372,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -734,6 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
+          '[Rin Chat Rezension](/de/power-local-llm/rin-chat-review) — kostenlose Desktop-App (Closed Source) für Windows und Linux, die SillyTavern-Charakterkarten öffnet und Würfel für Spielleiter ergänzt.',
           '[SillyTavern vs. Agnai vs. RisuAI: Bestes Rollenspiel-Frontend](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — die quelloffene, konfigurierbarere Alternative; vollständiger Backend/Frontend-Vergleich.',
           '[Unzensierte lokale LLMs für kreatives Schreiben: Ethik, Legalität & Best Practices](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics) — modellseitige Hinweise, die für jedes lokale Rollenspiel-Frontend gelten, Backyard AI eingeschlossen.',
           '[Lokale-LLM-Prompts für Belletristik-Autoren](/de/power-local-llm/local-llm-prompts-for-fiction-writers) — Prompt-Strukturen für Charakterstimme und narrative Konsistenz.',
@@ -747,7 +749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -1109,6 +1111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Reseña de Rin Chat](/es/power-local-llm/rin-chat-review) — app de escritorio gratuita y de código cerrado para Windows y Linux que abre las tarjetas de personaje de SillyTavern y añade dados de director de juego.',
           '[SillyTavern vs. Agnai vs. RisuAI: el mejor frontend de roleplay](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — la alternativa de código abierto y más configurable; comparación completa de backend/frontend.',
           '[LLMs locales sin censura para escritura creativa: ética, legalidad y buenas prácticas](/es/power-local-llm/uncensored-local-llm-creative-writing-ethics) — orientación a nivel de modelo aplicable a cualquier frontend de roleplay local, Backyard AI incluido.',
           '[Prompts de LLM local para escritores de ficción](/es/power-local-llm/local-llm-prompts-for-fiction-writers) — estructuras de prompt para la voz del personaje y la consistencia narrativa.',
@@ -1122,7 +1125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -1484,6 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Test de Rin Chat](/fr/power-local-llm/rin-chat-review) — application de bureau gratuite et propriétaire pour Windows et Linux, qui ouvre les cartes de personnage SillyTavern et ajoute des dés de maître du jeu.',
           '[SillyTavern vs. Agnai vs. RisuAI : le meilleur frontend de roleplay](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — l\'alternative open source, plus configurable ; comparaison complète backend/frontend.',
           '[LLM locaux non censurés pour l\'écriture créative : éthique, légalité et bonnes pratiques](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics) — recommandations au niveau du modèle, applicables à tout frontend de roleplay local, Backyard AI compris.',
           '[Prompts LLM local pour auteurs de fiction](/fr/power-local-llm/local-llm-prompts-for-fiction-writers) — structures de prompt pour la voix des personnages et la cohérence narrative.',
@@ -1497,7 +1501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -1859,6 +1863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[Rin Chat レビュー](/ja/power-local-llm/rin-chat-review) — SillyTavernのキャラクターカードを開け、ゲームマスター用ダイスを備えた、Windows・Linux向けの無料のクローズドソースのデスクトップアプリ。',
           '[SillyTavern vs. Agnai vs. RisuAI:最適なロールプレイフロントエンド](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — オープンソースでより設定自由度の高い代替アプリ。バックエンド/フロントエンドの完全比較。',
           '[検閲なしのローカルLLMによる創作:倫理・合法性・ベストプラクティス](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics) — Backyard AIを含む、あらゆるローカルロールプレイフロントエンドに適用されるモデルレベルのガイダンス。',
           '[小説家のためのローカルLLMプロンプト](/ja/power-local-llm/local-llm-prompts-for-fiction-writers) — キャラクターの声と物語の一貫性のためのプロンプト構造。',
@@ -1872,7 +1877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -2234,6 +2239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
+          '[Rin Chat评测](/zh/power-local-llm/rin-chat-review) — 适用于 Windows 和 Linux 的免费闭源桌面应用，可直接打开 SillyTavern 角色卡，并提供游戏主持人骰子。',
           '[SillyTavern vs. Agnai vs. RisuAI:最佳角色扮演前端](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 更开放、更可配置的替代方案;完整的后端/前端对比。',
           '[无审查本地LLM创意写作:伦理、合法性与最佳实践](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 适用于包括Backyard AI在内的任何本地角色扮演前端的模型层面指导。',
           '[面向小说作者的本地LLM提示词](/zh/power-local-llm/local-llm-prompts-for-fiction-writers) — 用于角色声线和叙事一致性的提示词结构。',
@@ -2247,7 +2253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -2609,6 +2615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Análise do Rin Chat](/pt/power-local-llm/rin-chat-review) — app de desktop gratuito e de código fechado para Windows e Linux que abre os cartões de personagem do SillyTavern e adiciona dados de mestre de jogo.',
           '[SillyTavern vs. Agnai vs. RisuAI: o melhor frontend de roleplay](/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — a alternativa open source e mais configurável; comparação completa de backend/frontend.',
           '[LLMs locais sem censura para escrita criativa: ética, legalidade e boas práticas](/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics) — orientações no nível do modelo aplicáveis a qualquer frontend de roleplay local, incluindo o Backyard AI.',
           '[Prompts de LLM local para escritores de ficção](/pt/power-local-llm/local-llm-prompts-for-fiction-writers) — estruturas de prompt para voz de personagem e consistência narrativa.',
@@ -2622,7 +2629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -2984,6 +2991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[مراجعة Rin Chat](/ar/power-local-llm/rin-chat-review) — تطبيق مكتبي مجاني مغلق المصدر لويندوز ولينكس يفتح بطاقات شخصيات SillyTavern ويضيف زهر مدير اللعبة.',
           '[SillyTavern مقابل Agnai مقابل RisuAI: أفضل واجهة أمامية للعب الأدوار](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — البديل مفتوح المصدر الأكثر قابلية للتخصيص؛ مقارنة كاملة بين الخلفية والواجهة الأمامية.',
           '[نماذج LLM المحلية غير الخاضعة للرقابة للكتابة الإبداعية: الأخلاقيات والقانونية وأفضل الممارسات](/ar/power-local-llm/uncensored-local-llm-creative-writing-ethics) — إرشادات على مستوى النموذج تنطبق على أي واجهة أمامية للعب الأدوار المحلي، بما في ذلك Backyard AI.',
           '[أوامر LLM المحلية لكتّاب القصص](/ar/power-local-llm/local-llm-prompts-for-fiction-writers) — هياكل أوامر لصوت الشخصية واتساق السرد.',
@@ -2997,7 +3005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -3359,6 +3367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
+          '[Rin Chat 리뷰](/ko/power-local-llm/rin-chat-review) — SillyTavern 캐릭터 카드를 열고 게임 마스터용 주사위를 더한 Windows·Linux용 무료 비공개 소스 데스크톱 앱입니다.',
           '[SillyTavern 대 Agnai 대 RisuAI: 최고의 롤플레이 프런트엔드](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 오픈소스이며 설정 자유도가 더 높은 대안. 백엔드/프런트엔드 전체 비교.',
           '[검열 없는 로컬 LLM 창작 글쓰기: 윤리, 합법성, 모범 사례](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics) — Backyard AI를 포함한 모든 로컬 롤플레이 프런트엔드에 적용되는 모델 수준 가이드.',
           '[소설가를 위한 로컬 LLM 프롬프트](/ko/power-local-llm/local-llm-prompts-for-fiction-writers) — 캐릭터 목소리와 서사적 일관성을 위한 프롬프트 구조.',

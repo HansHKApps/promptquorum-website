@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-21',
     next_refresh_due: '2026-12-19',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -406,6 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Rin Chat Review](/power-local-llm/rin-chat-review) — a free, closed-source Windows and Linux desktop app that opens SillyTavern character cards and adds game-master dice.',
           '[RisuAI review](/power-local-llm/risuai-review) — download links, install steps per system and requirements for the browser-first frontend.',
           '[SillyTavern review](/local-llms/sillytavern-review) — free download, install steps per OS and system requirements for the deepest of the three frontends.',
           '[Backyard AI Review: Local AI Character Chat and Roleplay](/power-local-llm/backyard-ai-review-local-roleplay) — free desktop app with a built-in Character Hub and Fimbulvetr 10.7B; the low-friction alternative to the frontends covered in this article.',
@@ -426,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-21',
     next_refresh_due: '2026-12-19',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -822,6 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
+          '[Rin Chat Rezension](/de/power-local-llm/rin-chat-review) — kostenlose Desktop-App (Closed Source) für Windows und Linux, die SillyTavern-Charakterkarten öffnet und Würfel für Spielleiter ergänzt.',
           '[RisuAI-Rezension](/de/power-local-llm/risuai-review) — Download-Links, Installation pro System und Anforderungen des Frontends, das zuerst im Browser läuft.',
           '[SillyTavern-Rezension](/de/local-llms/sillytavern-review) — kostenloser Download, Installation pro System und Systemanforderungen des am tiefsten konfigurierbaren der drei Frontends.',
           '[Backyard AI im Test: Lokaler KI-Charakter-Chat und Rollenspiel](/de/power-local-llm/backyard-ai-review-local-roleplay) — kostenlose Desktop-App mit integriertem Character Hub und Fimbulvetr 10.7B; die unkomplizierte Alternative zu den in diesem Artikel behandelten Frontends.',
@@ -841,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-21',
     next_refresh_due: '2026-12-19',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -1239,6 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
+          '[Reseña de Rin Chat](/es/power-local-llm/rin-chat-review) — app de escritorio gratuita y de código cerrado para Windows y Linux que abre las tarjetas de personaje de SillyTavern y añade dados de director de juego.',
           '[Reseña de RisuAI](/es/power-local-llm/risuai-review) — enlaces de descarga, pasos de instalación por sistema y requisitos del frontend que funciona primero en el navegador.',
           '[Reseña de SillyTavern](/es/local-llms/sillytavern-review) — descarga gratuita, pasos de instalación por sistema y requisitos del más configurable de los tres frontends.',
           '[Análisis de Backyard AI: chat de personajes IA y roleplay local](/es/power-local-llm/backyard-ai-review-local-roleplay) — app de escritorio gratuita con Character Hub integrado y Fimbulvetr 10.7B; la alternativa de baja fricción a los frontends cubiertos en este artículo.',
@@ -1262,7 +1265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-21',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1271,7 +1274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-21',
     next_refresh_due: '2026-12-19',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -1668,6 +1671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
+          '[Rin Chat 리뷰](/ko/power-local-llm/rin-chat-review) — SillyTavern 캐릭터 카드를 열고 게임 마스터용 주사위를 더한 Windows·Linux용 무료 비공개 소스 데스크톱 앱입니다.',
           '[RisuAI 리뷰](/ko/power-local-llm/risuai-review) — 브라우저 우선 프론트엔드의 다운로드 링크, OS별 설치 단계, 시스템 요구사항.',
           '[SillyTavern 리뷰](/ko/local-llms/sillytavern-review) — 세 프론트엔드 중 설정 폭이 가장 넓은 SillyTavern의 무료 다운로드, OS별 설치 단계, 시스템 요구사항.',
           '[Backyard AI 리뷰: 로컬 AI 캐릭터 채팅과 롤플레이](/ko/power-local-llm/backyard-ai-review-local-roleplay) — 내장 Character Hub와 Fimbulvetr 10.7B를 갖춘 무료 데스크톱 앱으로, 이 글에서 다루는 프런트엔드에 대한 손쉬운 대안입니다.',
@@ -1691,7 +1695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-21',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1700,7 +1704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-21',
     next_refresh_due: '2026-12-19',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -2094,6 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
+          '[Análise do Rin Chat](/pt/power-local-llm/rin-chat-review) — app de desktop gratuito e de código fechado para Windows e Linux que abre os cartões de personagem do SillyTavern e adiciona dados de mestre de jogo.',
           '[Análise do RisuAI](/pt/power-local-llm/risuai-review) — links de download, passos de instalação por sistema e requisitos do frontend pensado primeiro para o navegador.',
           '[Análise do SillyTavern](/pt/local-llms/sillytavern-review) — download gratuito, passos de instalação por sistema e requisitos do frontend mais configurável dos três.',
           '[Análise do Backyard AI: chat de personagens IA e roleplay local](/pt/power-local-llm/backyard-ai-review-local-roleplay) — app de desktop gratuito com Character Hub integrado e Fimbulvetr 10.7B; a alternativa sem fricção aos frontends abordados neste artigo.',
@@ -2116,7 +2121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-21',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2125,7 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-21',
     next_refresh_due: '2026-12-19',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -2513,6 +2518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
+          '[Test de Rin Chat](/fr/power-local-llm/rin-chat-review) — application de bureau gratuite et propriétaire pour Windows et Linux, qui ouvre les cartes de personnage SillyTavern et ajoute des dés de maître du jeu.',
           '[Test de RisuAI](/fr/power-local-llm/risuai-review) — liens de téléchargement, étapes d\'installation par système et prérequis du frontend pensé d\'abord pour le navigateur.',
           '[Test de SillyTavern](/fr/local-llms/sillytavern-review) — téléchargement gratuit, étapes d\'installation par système et prérequis du frontend le plus configurable des trois.',
           '[Avis sur Backyard AI : chat de personnages IA et roleplay local](/fr/power-local-llm/backyard-ai-review-local-roleplay) — application de bureau gratuite avec Character Hub intégré et Fimbulvetr 10.7B ; l\'alternative sans friction aux frontends traités dans cet article.',
@@ -2532,7 +2538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-21',
     next_refresh_due: '2026-12-19',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -2934,6 +2940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連情報',
         items: [
+          '[Rin Chat レビュー](/ja/power-local-llm/rin-chat-review) — SillyTavernのキャラクターカードを開け、ゲームマスター用ダイスを備えた、Windows・Linux向けの無料のクローズドソースのデスクトップアプリ。',
           '[RisuAIレビュー](/ja/power-local-llm/risuai-review) — ブラウザ中心のフロントエンドのダウンロードリンク、OS別の導入手順、動作要件。',
           '[SillyTavernレビュー](/ja/local-llms/sillytavern-review) — 3つの中で最も設定の自由度が高いフロントエンドの無料ダウンロード、OS別の導入手順、動作要件。',
           '[Backyard AIレビュー:ローカルAIキャラクターチャットとロールプレイ](/ja/power-local-llm/backyard-ai-review-local-roleplay) — Character HubとFimbulvetr 10.7Bを内蔵した無料デスクトップアプリ。本記事で扱うフロントエンドに対する手軽な代替アプリ。',
@@ -2953,7 +2960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-21',
     next_refresh_due: '2026-12-19',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -3355,6 +3362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
+          '[Rin Chat评测](/zh/power-local-llm/rin-chat-review) — 适用于 Windows 和 Linux 的免费闭源桌面应用，可直接打开 SillyTavern 角色卡，并提供游戏主持人骰子。',
           '[RisuAI 评测](/zh/power-local-llm/risuai-review) — 以浏览器优先的前端:下载链接、各系统安装步骤与系统要求。',
           '[SillyTavern 评测](/zh/local-llms/sillytavern-review) — 三者中可配置性最强的前端:免费下载、各系统安装步骤与系统要求。',
           '[Backyard AI评测:本地AI角色聊天与角色扮演](/zh/power-local-llm/backyard-ai-review-local-roleplay) ——内置Character Hub和Fimbulvetr 10.7B的免费桌面应用;是本文所述前端之外低门槛的替代方案。',
@@ -3375,7 +3383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-29',
+    dateModified: '2026-11-21',
     next_refresh_due: '2026-12-19',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -3633,6 +3641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
+          '[مراجعة Rin Chat](/ar/power-local-llm/rin-chat-review) — تطبيق مكتبي مجاني مغلق المصدر لويندوز ولينكس يفتح بطاقات شخصيات SillyTavern ويضيف زهر مدير اللعبة.',
           '[مراجعة RisuAI](/ar/power-local-llm/risuai-review) — روابط التنزيل وخطوات التثبيت لكل نظام ومتطلبات الواجهة التي تعمل أولاً في المتصفح.',
           '[مراجعة SillyTavern](/ar/local-llms/sillytavern-review) — التنزيل المجاني وخطوات التثبيت لكل نظام ومتطلبات الواجهة الأكثر قابلية للضبط بين الثلاث.',
           '[مراجعة Backyard AI: محادثة الشخصيات بالذكاء الاصطناعي ولعب الأدوار محلياً](/ar/power-local-llm/backyard-ai-review-local-roleplay) — تطبيق سطح مكتب مجاني مع Character Hub مدمج وFimbulvetr 10.7B؛ البديل السلس للواجهات التي يغطيها هذا المقال.',
@@ -3653,7 +3662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-08-29',
+      dateModified: '2026-11-21',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

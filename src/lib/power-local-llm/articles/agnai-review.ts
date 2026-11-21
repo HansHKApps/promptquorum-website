@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-12',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -249,6 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Rin Chat Review](/power-local-llm/rin-chat-review) — a free, closed-source Windows and Linux desktop app that opens SillyTavern character cards and adds game-master dice.',
           '[Local LLM Software Directory](https://www.promptquorum.com/directory) — comprehensive app and tool directory for all platforms, including Agnai\'s own entry.',
           '[SillyTavern Review](/local-llms/sillytavern-review) — the extension-rich, Ollama-compatible alternative with the largest configuration surface.',
           '[Backyard AI Review: Local AI Character Chat and Roleplay](/power-local-llm/backyard-ai-review-local-roleplay-2026) — a closed-source, single-installer alternative for readers who want zero configuration.',
@@ -261,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-12',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -508,6 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Rin Chat Rezension](/de/power-local-llm/rin-chat-review) — kostenlose Desktop-App (Closed Source) für Windows und Linux, die SillyTavern-Charakterkarten öffnet und Würfel für Spielleiter ergänzt.',
           '[Local LLM Software Directory](https://www.promptquorum.com/directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen, inklusive Agnais eigenem Eintrag.',
           '[SillyTavern-Rezension](/de/local-llms/sillytavern-review) — die erweiterungsreiche, Ollama-kompatible Alternative mit der größten Konfigurationsfläche.',
           '[Backyard-AI-Rezension: Lokaler KI-Charakter-Chat und Rollenspiel](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) — eine Closed-Source-Alternative mit einem Installer für Leser, die keine Konfiguration wollen.',
@@ -520,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-12',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -767,6 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Test de Rin Chat](/fr/power-local-llm/rin-chat-review) — application de bureau gratuite et propriétaire pour Windows et Linux, qui ouvre les cartes de personnage SillyTavern et ajoute des dés de maître du jeu.',
           '[Répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes, incluant la fiche d\'Agnai.',
           '[Avis SillyTavern](/fr/local-llms/sillytavern-review) — l\'alternative riche en extensions et compatible Ollama, avec la plus grande surface de configuration.',
           '[Avis Backyard AI : Chat de Personnage IA Local et Jeu de Rôle](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) — une alternative closed-source à installeur unique pour les lecteurs qui veulent zéro configuration.',
@@ -779,7 +782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-12',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -1026,6 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Reseña de Rin Chat](/es/power-local-llm/rin-chat-review) — app de escritorio gratuita y de código cerrado para Windows y Linux que abre las tarjetas de personaje de SillyTavern y añade dados de director de juego.',
           '[Directorio de software de LLM locales](https://www.promptquorum.com/directory) — directorio completo de apps y herramientas para todas las plataformas, incluida la ficha propia de Agnai.',
           '[Reseña de SillyTavern](/es/local-llms/sillytavern-review) — la alternativa rica en extensiones y compatible con Ollama, con la mayor superficie de configuración.',
           '[Reseña de Backyard AI: Chat de Personajes IA Local y Rol](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) — una alternativa de código cerrado con un solo instalador para quienes quieren cero configuración.',
@@ -1038,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-12',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -1285,6 +1289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Análise do Rin Chat](/pt/power-local-llm/rin-chat-review) — app de desktop gratuito e de código fechado para Windows e Linux que abre os cartões de personagem do SillyTavern e adiciona dados de mestre de jogo.',
           '[Diretório de Software de LLMs Locais](https://www.promptquorum.com/directory) — diretório completo de apps e ferramentas para todas as plataformas, incluindo a própria ficha do Agnai.',
           '[Análise do SillyTavern](/pt/local-llms/sillytavern-review) — a alternativa rica em extensões e compatível com Ollama, com a maior superfície de configuração.',
           '[Análise do Backyard AI: Chat de Personagens IA Local e Roleplay](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) — uma alternativa de código fechado com instalador único para quem quer zero configuração.',
@@ -1297,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-12',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -1544,6 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[Rin Chat レビュー](/ja/power-local-llm/rin-chat-review) — SillyTavernのキャラクターカードを開け、ゲームマスター用ダイスを備えた、Windows・Linux向けの無料のクローズドソースのデスクトップアプリ。',
           '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory) — Agnai自身のエントリーを含む、全プラットフォーム対応の包括的なアプリ・ツールディレクトリ。',
           '[SillyTavernレビュー](/ja/local-llms/sillytavern-review) — 拡張機能が豊富でOllama互換、最大の設定範囲を持つ代替ツール。',
           '[Backyard AIレビュー:ローカルAIキャラクターチャットとロールプレイ](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026) — 設定不要を求める読者向けのインストーラー1本のクローズドソース代替ツール。',
@@ -1556,7 +1562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-12',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -1803,6 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[Rin Chat评测](/zh/power-local-llm/rin-chat-review) — 适用于 Windows 和 Linux 的免费闭源桌面应用，可直接打开 SillyTavern 角色卡，并提供游戏主持人骰子。',
           '[本地LLM软件目录](https://www.promptquorum.com/directory) —— 涵盖所有平台的完整应用与工具目录,包含Agnai自己的条目。',
           '[SillyTavern评测](/zh/local-llms/sillytavern-review) —— 扩展丰富、兼容Ollama、配置面最广的替代方案。',
           '[Backyard AI评测:本地AI角色聊天与角色扮演](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026) —— 面向想要零配置读者的单安装程序闭源替代方案。',
@@ -1815,7 +1822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-12',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -2062,6 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[مراجعة Rin Chat](/ar/power-local-llm/rin-chat-review) — تطبيق مكتبي مجاني مغلق المصدر لويندوز ولينكس يفتح بطاقات شخصيات SillyTavern ويضيف زهر مدير اللعبة.',
           '[دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) — دليل شامل للتطبيقات والأدوات لجميع المنصات، بما في ذلك مدخل Agnai الخاص.',
           '[مراجعة SillyTavern](/ar/local-llms/sillytavern-review) — البديل الغني بالإضافات والمتوافق مع Ollama، بأكبر مساحة إعداد.',
           '[مراجعة Backyard AI: دردشة شخصيات محلية وتقمص أدوار بالذكاء الاصطناعي](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026) — بديل مغلق المصدر بمثبّت واحد للقرّاء الراغبين في صفر إعداد.',
@@ -2074,7 +2082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-12',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-21',
     next_refresh_due: '2027-03-12',
     designSkin: 'hub',
     theme: 'Creative & Roleplay',
@@ -2321,6 +2329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
+          '[Rin Chat 리뷰](/ko/power-local-llm/rin-chat-review) — SillyTavern 캐릭터 카드를 열고 게임 마스터용 주사위를 더한 Windows·Linux용 무료 비공개 소스 데스크톱 앱입니다.',
           '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) — Agnai 자체 항목을 포함해 모든 플랫폼을 아우르는 포괄적인 앱·도구 디렉터리.',
           '[SillyTavern 리뷰](/ko/local-llms/sillytavern-review) — 확장 기능이 풍부하고 Ollama와 호환되며 가장 넓은 설정 범위를 가진 대안.',
           '[Backyard AI 리뷰: 로컬 AI 캐릭터 채팅과 롤플레이](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026) — 설정이 전혀 필요 없길 원하는 독자를 위한 단일 설치 프로그램의 클로즈드 소스 대안.',

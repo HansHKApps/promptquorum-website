@@ -799,6 +799,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'weesper-neon-flow-review',
   'whispy-review',
   'pixafind-review',
+  'rin-chat-review',
   'sablate-review',
 
   // TranscriptionSuite review (Voice, Speech & Multimodal) — 2026-10-18
