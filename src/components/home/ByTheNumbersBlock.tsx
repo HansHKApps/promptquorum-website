@@ -4,7 +4,7 @@ import { getFounderVerifiedApps, getHandsOnTestedApps } from '@/lib/home/statDet
 import { getMcpUsageSnapshotCached } from '@/lib/mcp/usage'
 import { getAskHansTotals } from '@/lib/askhans/totals'
 import { academyEnabled } from '@/lib/academy/config'
-import { getAcademyProgrammesTotal } from '@/lib/academy/usage'
+import { getAcademyTotalsLive } from '@/lib/academy/usage'
 import { getUmamiStat } from '@/lib/partners/umami'
 import { getGscStat } from '@/lib/partners/gsc'
 import { partnersContent } from '@/lib/partners/content'
@@ -25,7 +25,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
   const gsc = await getGscStat()
   const askHansOn = process.env.ASK_HANS_ENABLED === 'true'
   const askHansTotals = askHansOn ? await getAskHansTotals() : null
-  const academyTotal = academyEnabled() ? await getAcademyProgrammesTotal() : null
+  const academyTotal = academyEnabled() ? (await getAcademyTotalsLive()).programmes : null
   const founderVerifiedApps = getFounderVerifiedApps(lang)
   const handsOnTestedApps = getHandsOnTestedApps(lang)
   const mcpStatsHref = lang === 'en' ? '/mcp-stats' : `/${lang}/mcp-stats`
@@ -95,6 +95,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
           icon: 'posts' as const,
           href: academyHref,
           hint: t('statAcademyProgrammesHint', lang),
+          liveCounter: 'academyProgrammes' as const,
         }]
       : []),
   ]

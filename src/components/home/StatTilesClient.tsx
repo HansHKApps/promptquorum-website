@@ -5,7 +5,7 @@
 // component so it can keep awaiting its data sources — only the click/open
 // state here needs to run on the client.
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
 import type { FounderVerifiedAppRow, HandsOnTestedAppRow } from '@/lib/home/statDetails'
@@ -20,6 +20,8 @@ export type StatTileItem = {
   hint?: string
   desc?: string
   drawer?: 'founder' | 'handsOn'
+  /** The homepage is static, so this value is only the build-time number; the client replaces it with the live total. */
+  liveCounter?: 'academyProgrammes'
 }
 
 export function StatTilesClient({
@@ -40,6 +42,29 @@ export function StatTilesClient({
   askHansHref: string
 }) {
   const [openDrawer, setOpenDrawer] = useState<'founder' | 'handsOn' | null>(null)
+  // Static page, live number: show the larger of the build-time value and the live total (counters only ever grow).
+  const [academyProgrammes, setAcademyProgrammes] = useState<number | null>(null)
+  const wantsAcademy = items.some((item) => item.liveCounter === 'academyProgrammes')
+  useEffect(() => {
+    if (!wantsAcademy) return
+    let cancelled = false
+    fetch('/api/academy/totals')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((json: { programmes?: unknown } | null) => {
+        if (!cancelled && json && typeof json.programmes === 'number' && Number.isFinite(json.programmes)) setAcademyProgrammes(json.programmes)
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [wantsAcademy])
+  const displayValue = (item: StatTileItem): string => {
+    if (item.liveCounter === 'academyProgrammes' && academyProgrammes !== null) {
+      const built = Number(item.value.replace(/[^\d]/g, '')) || 0
+      return Math.max(built, academyProgrammes).toLocaleString()
+    }
+    return item.value
+  }
 
   const tileClass = layout === 'bar'
     ? 'rounded-lg border border-tone-list-edge bg-tone-list p-3 transition hover:shadow-md hover:-translate-y-0.5 text-left w-full'
@@ -51,7 +76,7 @@ export function StatTilesClient({
         <HomeIcon name={item.icon} size={14} />
         {item.label}
       </dt>
-      <dd className={`mt-1 font-semibold leading-none text-text-primary ${layout === 'bar' ? 'text-2xl' : 'text-3xl'}`}>{item.value}</dd>
+      <dd className={`mt-1 font-semibold leading-none text-text-primary ${layout === 'bar' ? 'text-2xl' : 'text-3xl'}`}>{displayValue(item)}</dd>
       {item.desc && <p className="mt-1.5 text-[11px] leading-snug text-text-secondary">{item.desc}</p>}
       {item.hint && <p className={`mt-${layout === 'bar' ? '1' : '1.5'} text-[11px] font-medium text-primary`}>{item.hint}</p>}
     </>
