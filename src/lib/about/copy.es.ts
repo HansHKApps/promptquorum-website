@@ -65,15 +65,16 @@ export const es: AboutCopy = {
     'La independencia frente al control es el tema central de todo este sitio. Por eso el directorio es neutral, por eso cada entrada enlaza a la fuente oficial y por eso publicamos en nueve idiomas.',
   believeItalic:
     'No creemos que la IA en la nube sea mala. Creemos que deberías tener una opción real, y que elegir local debería ser tan fácil como elegir la nube.',
-  ecosystemH2: 'Un ecosistema, cinco partes que trabajan juntas',
+  ecosystemH2: 'Un ecosistema, seis partes que trabajan juntas',
   ecosystemLead:
-    'PromptQuorum no es solo una aplicación, ni solo un directorio. Son cinco partes construidas en torno al mismo objetivo, para que puedas pasar de «¿qué debería ejecutar?» a una configuración funcional sin salir del sitio.',
+    'PromptQuorum no es solo una aplicación, ni solo un directorio. Son seis partes construidas en torno al mismo objetivo, para que puedas pasar de «¿qué debería ejecutar?» a una configuración funcional sin salir del sitio.',
   connectsLabel: 'Funciona con el resto:',
   findLabel: 'Encontrar',
   learnLabel: 'Aprender',
   useLabel: 'Usar',
   askLabel: 'Preguntar',
   hansLabel: 'Chatear',
+  academyLabel: "Practicar",
   partFindTitle: 'El directorio de IA local',
   partFindOneLiner: 'El mapa estructurado y buscable del software de IA local.',
   partFindBody:
@@ -99,6 +100,11 @@ export const es: AboutCopy = {
   partHansBody:
     'Un asistente de chat con IA en este sitio. Pregunta qué aplicación encaja con una tarea, qué funciona en tu hardware o cómo funciona una licencia, y responde desde el mismo directorio y las mismas guías. Se basa en IA, así que comprueba los detalles importantes en las fichas del directorio y en las guías. Tu conversación se queda en la pestaña de tu navegador y no guardamos el texto de las preguntas ni de las respuestas.',
   partHansConnects: 'usa las mismas herramientas que el servidor MCP, así que obtienes las respuestas del directorio sin configurar un asistente propio.',
+  partAcademyTitle: "PromptQuorum Academy",
+  partAcademyOneLiner: "Un programa de aprendizaje breve pensado para tu tema, tu tiempo y tu nivel.",
+  partAcademyBody:
+    "Indica un tema, tu tiempo y tu nivel. Academy comprueba con unas pocas preguntas lo que ya sabes y compone lecciones breves a partir de las guías de PromptQuorum, con un tutor de IA junto a cada lección, tests con respuestas explicadas y una constancia opcional. Es gratis y no requiere cuenta. Las lecciones, las preguntas y las respuestas las escribe una IA y pueden contener errores, así que comprueba los detalles importantes en las guías enlazadas.",
+  partAcademyConnects: "las lecciones se apoyan en las mismas guías que la base de conocimiento, y cada una remite a lecturas complementarias.",
   ctaOpenDirectory: 'Abrir el directorio',
   ctaReadGuides: 'Leer las guías',
   ctaAboutApp: 'Sobre la aplicación',

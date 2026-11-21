@@ -65,15 +65,16 @@ export const zh: AboutCopy = {
     '摆脱受制于人，是这个网站上所有内容的共同主题：这也是为什么目录保持中立、每个条目都链接到官方来源、以及我们用九种语言发布内容的原因。',
   believeItalic:
     '我们并不认为云端 AI 不好。我们相信，你应该拥有真正的选择权，而选择本地 AI 应该和选择云端 AI 一样简单。',
-  ecosystemH2: '一个生态系统，五个协同运作的部分',
+  ecosystemH2: '一个生态系统，六个协同运作的部分',
   ecosystemLead:
-    'PromptQuorum 不只是一款应用，也不只是一个目录，而是围绕同一个目标构建的五个部分，让你无需离开这个网站，就能从“我该运行什么？”一路走到实际可用的配置。',
+    'PromptQuorum 不只是一款应用，也不只是一个目录，而是围绕同一个目标构建的六个部分，让你无需离开这个网站，就能从“我该运行什么？”一路走到实际可用的配置。',
   connectsLabel: '与其他部分的联动：',
   findLabel: '查找',
   learnLabel: '学习',
   useLabel: '使用',
   askLabel: '询问',
   hansLabel: '对话',
+  academyLabel: "练习",
   partFindTitle: '本地 AI 目录',
   partFindOneLiner: '可检索、结构化的本地 AI 软件地图。',
   partFindBody:
@@ -99,6 +100,11 @@ export const zh: AboutCopy = {
   partHansBody:
     '本站上的 AI 聊天助手。你可以问哪款应用适合某项任务、什么能在你的硬件上运行，或者某个许可证是什么意思，它会依据同一份目录和指南来回答。它基于 AI，重要细节请到目录条目和指南中核对。你的对话只保留在浏览器标签页中，我们不会保存问题和回答的文本。',
   partHansConnects: '它使用与 MCP 服务器相同的工具，因此无需自己配置助手，也能得到目录给出的答案。',
+  partAcademyTitle: "PromptQuorum Academy",
+  partAcademyOneLiner: "围绕你的主题、时间和水平量身定制的短小学习计划。",
+  partAcademyBody:
+    "告诉 Academy 你的主题、时间和水平，它会用几道题检查你已经掌握的内容，再根据 PromptQuorum 指南编排简短的课程，每节课旁都有 AI 辅导，测试附带解析，需要时还可获得完成证明。它免费，无需账号。课程、题目和答案均由 AI 编写，可能含有错误，重要细节请对照链接的指南核实。",
+  partAcademyConnects: "课程取材于与知识库相同的指南，每节课都会指向可继续阅读的内容。",
   ctaOpenDirectory: '打开目录',
   ctaReadGuides: '阅读指南',
   ctaAboutApp: '关于这款应用',
