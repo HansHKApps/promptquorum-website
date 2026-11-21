@@ -22,8 +22,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': '提示词工程',
     'power-local-llm': '本地AI应用',
     'prompt-bites': '本地AI快问快答',
-    'smart-home': '本地智能家居',
-    'balcony-solar': '阳台光伏',
   },
 
   subjectLabel: '你想学什么？',
@@ -98,7 +96,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: '准备内容时出错了，请重试。',
   errorRate: '你的网络发出的请求过多，请稍等片刻再试。',
-  errorUnsupported: 'Academy 涵盖AI、软件、电脑硬件、智能家居和家庭能源。请从这些领域中选择主题。',
+  errorUnsupported: 'PromptQuorum Academy 只教授本地 AI：在自己的电脑、手机或家用服务器上运行 AI（例如 Ollama、LM Studio、模型大小与量化、本地 AI 所需硬件、私密文档检索、本地语音和图像工具）。您的主题不在范围内，因此没有创建任何内容。请选择本地 AI 相关的主题，例如下方的建议。',
   errorUnavailable: 'Academy 暂时不可用，请稍后再试。',
   retry: '重试',
 

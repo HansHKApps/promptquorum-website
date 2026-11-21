@@ -23,7 +23,7 @@ export type GeneratedQuestion = z.infer<typeof generatedQuestionSchema>
 export const diagnosticOutputSchema = z.object({
   subjectSupported: z
     .boolean()
-    .describe('true if the subject is about AI, software, computer hardware, smart home, home energy/solar or closely related technology'),
+    .describe('true only if the subject is about local AI (running AI models on the learner\'s own computer, phone or home server, and the hardware, software, models, setup, privacy or prompting that go with it); false for anything else'),
   subjectTitle: z.string().describe('The subject as a short, clean title in the programme language'),
   questions: z.array(generatedQuestionSchema).describe('Diagnostic questions, from basic to advanced; empty if subjectSupported is false'),
 })

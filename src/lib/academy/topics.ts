@@ -8,7 +8,7 @@ import { ACADEMY_MAX_CATEGORY_TOPICS } from './config'
 import type { AcademyLang, TopicSuggestion } from './types'
 
 /** Content hubs offered as learning subjects (blog is retired, product is the app itself). */
-export const ACADEMY_TOPIC_HUBS = ['local-llms', 'prompt-engineering', 'power-local-llm', 'prompt-bites', 'smart-home', 'balcony-solar'] as const
+export const ACADEMY_TOPIC_HUBS = ['local-llms', 'prompt-engineering', 'power-local-llm', 'prompt-bites'] as const
 export type AcademyTopicHub = (typeof ACADEMY_TOPIC_HUBS)[number]
 
 export function buildAcademyTopics(lang: AcademyLang, hubLabels: Record<AcademyTopicHub, string>): TopicSuggestion[] {

@@ -23,8 +23,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': 'Prompt Engineering',
     'power-local-llm': 'Lokale KI-Apps',
     'prompt-bites': 'Kurzantworten zu lokaler KI',
-    'smart-home': 'Lokales Smart Home',
-    'balcony-solar': 'Balkonkraftwerke',
   },
 
   subjectLabel: 'Was möchten Sie lernen?',
@@ -100,7 +98,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: 'Beim Vorbereiten der Inhalte ist etwas schiefgegangen. Bitte versuchen Sie es erneut.',
   errorRate: 'Zu viele Anfragen von Ihrer Verbindung. Bitte warten Sie kurz und versuchen Sie es dann erneut.',
-  errorUnsupported: 'Academy behandelt KI, Software, Computer-Hardware, Smart Home und Energie im Haushalt. Bitte wählen Sie ein Thema aus diesen Bereichen.',
+  errorUnsupported: 'PromptQuorum Academy behandelt ausschließlich lokale KI: KI auf dem eigenen Computer, Smartphone oder Heimserver betreiben (zum Beispiel Ollama, LM Studio, Modellgrößen und Quantisierung, Hardware für lokale KI, private Dokumentensuche, lokale Sprach- und Bildwerkzeuge). Ihr Thema passt nicht dazu, deshalb wurde nichts erstellt. Bitte wählen Sie ein Thema aus dem Bereich lokale KI, zum Beispiel einen der Vorschläge unten.',
   errorUnavailable: 'Academy ist gerade nicht verfügbar. Bitte versuchen Sie es später erneut.',
   retry: 'Erneut versuchen',
 

@@ -22,8 +22,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': 'プロンプトエンジニアリング',
     'power-local-llm': 'ローカルAIアプリ',
     'prompt-bites': 'ローカルAIのQ&A',
-    'smart-home': 'ローカルなスマートホーム',
-    'balcony-solar': 'ベランダ太陽光発電',
   },
 
   subjectLabel: '何を学びたいですか？',
@@ -98,7 +96,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: 'コンテンツの準備中に問題が発生しました。もう一度お試しください。',
   errorRate: 'お使いの接続からのリクエストが多すぎます。少し待ってから再度お試しください。',
-  errorUnsupported: 'AcademyはAI、ソフトウェア、PCハードウェア、スマートホーム、家庭のエネルギーを扱います。これらの分野からテーマを選んでください。',
+  errorUnsupported: 'PromptQuorum Academyで学べるのはローカルAIのみです。自分のパソコン、スマートフォン、ホームサーバーでAIを動かす内容（例：Ollama、LM Studio、モデルサイズと量子化、ローカルAI向けハードウェア、プライベートな文書検索、ローカルの音声・画像ツール）が対象です。ご入力のテーマは対象外のため、何も作成していません。下の候補など、ローカルAIに関するテーマを選んでください。',
   errorUnavailable: '現在Academyは利用できません。しばらくしてから再度お試しください。',
   retry: '再試行',
 

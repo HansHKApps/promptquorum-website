@@ -22,8 +22,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': '프롬프트 엔지니어링',
     'power-local-llm': '로컬 AI 앱',
     'prompt-bites': '로컬 AI 짧은 답변',
-    'smart-home': '로컬 스마트홈',
-    'balcony-solar': '베란다 태양광',
   },
 
   subjectLabel: '무엇을 배우고 싶으십니까?',
@@ -98,7 +96,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: '콘텐츠를 준비하는 중 문제가 발생했습니다. 다시 시도해 주십시오.',
   errorRate: '연결에서 요청이 너무 많습니다. 잠시 기다린 후 다시 시도해 주십시오.',
-  errorUnsupported: 'Academy는 AI, 소프트웨어, 컴퓨터 하드웨어, 스마트홈, 가정용 에너지를 다룹니다. 이 분야에서 주제를 선택해 주십시오.',
+  errorUnsupported: 'PromptQuorum Academy는 로컬 AI만 다룹니다. 자신의 컴퓨터, 휴대폰, 홈 서버에서 AI를 실행하는 내용(예: Ollama, LM Studio, 모델 크기와 양자화, 로컬 AI용 하드웨어, 비공개 문서 검색, 로컬 음성·이미지 도구)이 대상입니다. 입력하신 주제는 해당하지 않아 아무것도 만들지 않았습니다. 아래 추천 주제처럼 로컬 AI와 관련된 주제를 선택해 주십시오.',
   errorUnavailable: '현재 Academy를 이용할 수 없습니다. 나중에 다시 시도해 주십시오.',
   retry: '다시 시도',
 

@@ -23,8 +23,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': 'Prompt engineering',
     'power-local-llm': 'Apps de IA local',
     'prompt-bites': 'Respuestas rápidas sobre IA local',
-    'smart-home': 'Hogar inteligente local',
-    'balcony-solar': 'Solar de balcón',
   },
 
   subjectLabel: '¿Qué quieres aprender?',
@@ -99,7 +97,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: 'Algo salió mal al preparar el contenido. Inténtalo de nuevo.',
   errorRate: 'Demasiadas solicitudes desde tu conexión. Espera un poco e inténtalo de nuevo.',
-  errorUnsupported: 'Academy trata IA, software, hardware informático, hogar inteligente y energía en casa. Elige un tema de estas áreas.',
+  errorUnsupported: 'PromptQuorum Academy enseña únicamente IA local: ejecutar IA en tu propio ordenador, móvil o servidor doméstico (por ejemplo Ollama, LM Studio, tamaños de modelo y cuantización, hardware para IA local, búsqueda privada en documentos, herramientas locales de voz e imagen). Tu tema no encaja, así que no se ha creado nada. Elige un tema de IA local, por ejemplo una de las sugerencias de abajo.',
   errorUnavailable: 'Academy no está disponible en este momento. Inténtalo más tarde.',
   retry: 'Reintentar',
 

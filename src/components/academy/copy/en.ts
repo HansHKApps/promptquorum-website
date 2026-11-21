@@ -22,8 +22,6 @@ export const copy: AcademyBaseCopy = {
     'prompt-engineering': 'Prompt engineering',
     'power-local-llm': 'Local AI apps',
     'prompt-bites': 'Local AI quick answers',
-    'smart-home': 'Local smart home',
-    'balcony-solar': 'Balcony solar',
   },
 
   subjectLabel: 'What do you want to learn?',
@@ -98,7 +96,7 @@ export const copy: AcademyBaseCopy = {
 
   errorGeneric: 'Something went wrong while preparing your content. Please try again.',
   errorRate: 'Too many requests from your connection. Please wait a little and try again.',
-  errorUnsupported: 'Academy covers AI, software, computer hardware, smart home and home energy. Please choose a subject from these areas.',
+  errorUnsupported: 'PromptQuorum Academy teaches local AI only: running AI on your own computer, phone or home server (for example Ollama, LM Studio, model sizes and quantization, hardware for local AI, private document search, local voice and image tools). Your subject does not fit, so nothing was created. Please pick a local AI topic, such as one of the suggestions below.',
   errorUnavailable: 'Academy is not available right now. Please try again later.',
   retry: 'Try again',
 
