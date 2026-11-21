@@ -92,11 +92,9 @@ export function OpenQuizView({ tx, programme, update, postJson, errorText }: { t
           />
         }
         onContinue={() =>
-() =>
             update((s) =>
               isFinal ? { ...s, view: 'results' } : next >= 0 && s.programme ? { ...s, view: 'lesson', programme: { ...s.programme, progress: { ...s.programme.progress, currentLesson: next } } } : { ...s, view: 'programme' },
             )
-          
         }
       >
         <p className="text-sm text-gray-600">{tx.aiGradedNotice}</p>

@@ -104,11 +104,9 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
           />
         }
         onContinue={() =>
-() =>
             update((s) =>
               isFinal ? { ...s, view: 'results' } : next >= 0 && s.programme ? { ...s, view: 'lesson', programme: { ...s.programme, progress: { ...s.programme.progress, currentLesson: next } } } : { ...s, view: 'programme' },
             )
-          
         }
       >
       </FinishedCard>
