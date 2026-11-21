@@ -118,6 +118,10 @@ export interface AcademyBaseCopy {
   backToProgramme: string
   doneNext: string
   doneLast: string
+  /** button on a lesson that is followed by another lesson */
+  nextLessonButton: (n: number, title: string) => string
+  /** shown after the last lesson when a final test follows */
+  lessonsDoneNextTest: string
   furtherReading: string
   fromPromptQuorum: string
 

@@ -118,6 +118,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: '返回学习计划',
   doneNext: '完成，下一课',
   doneLast: '完成，结束课程',
+  nextLessonButton: (n, title) => `下一步：第${n}课 – ${title}`,
+  lessonsDoneNextTest: '下一步：参加期末测试。达到70%即可获得证书。',
   furtherReading: '延伸阅读',
   fromPromptQuorum: '来自 PromptQuorum',
 

@@ -119,6 +119,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: 'Volver al programa',
   doneNext: 'Hecho, siguiente lección',
   doneLast: 'Hecho, terminar lecciones',
+  nextLessonButton: (n, title) => `Siguiente: lección ${n} – ${title}`,
+  lessonsDoneNextTest: 'Siguiente paso: la prueba final. Con un 70 % obtienes tu certificado.',
   furtherReading: 'Para seguir leyendo',
   fromPromptQuorum: 'De PromptQuorum',
 

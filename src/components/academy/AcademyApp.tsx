@@ -696,7 +696,7 @@ function ProgrammeView({
       {next === -1 && (
         <div className="rounded-xl bg-green-50 px-4 py-3 text-green-900" role="status">
           <p className="font-medium">{tx.lessonsDoneTitle}</p>
-          {programme.testMode === 'none' && <p className="text-sm">{tx.programmeComplete}</p>}
+          {programme.testMode === 'none' ? <p className="text-sm">{tx.programmeComplete}</p> : !hasFinal && <p className="text-sm">{tx.lessonsDoneNextTest}</p>}
         </div>
       )}
       <ShareBar lang={lang} programme={programme} />

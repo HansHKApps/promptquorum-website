@@ -136,14 +136,16 @@ export function LessonView({
 
   return (
     <div ref={topRef} className="scroll-mt-24 space-y-4">
-      {/* Always visible: subject, lesson x of y, progress. */}
-      <div className="rounded-2xl border border-purple-100 bg-white p-4">
-        <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+      {/* Always visible, also while scrolling: subject, "lesson x of y · title" and progress (SPEC 5 navigation rule). */}
+      <div className="sticky top-0 z-20 -mx-1 rounded-2xl border border-purple-100 bg-white/95 px-4 py-3 shadow-sm backdrop-blur">
+        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm">
           <span className="font-medium text-gray-900">{programme.subject}</span>
-          <span className="text-gray-500">{tx.lessonOf(index + 1, total)}</span>
+          <span className="min-w-0 truncate text-gray-600">
+            {tx.lessonOf(index + 1, total)} · {lesson.title}
+          </span>
         </div>
-        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-purple-100" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={done}>
-          <div className="h-full bg-purple-600 transition-all" style={{ width: `${(done / total) * 100}%` }} />
+        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-purple-100" role="progressbar" aria-label={tx.lessonOf(index + 1, total)} aria-valuemin={0} aria-valuemax={total} aria-valuenow={done}>
+          <div className="h-full bg-purple-600 transition-all" style={{ width: `${(Math.max(done, index) / total) * 100}%` }} />
         </div>
       </div>
 
@@ -243,7 +245,7 @@ export function LessonView({
             aria-disabled={!ready}
             className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {last ? tx.doneLast : tx.doneNext}
+            {last ? tx.doneLast : tx.nextLessonButton(index + 2, programme.lessons[index + 1]?.title ?? '')}
           </button>
           <button type="button" onClick={() => update((s) => ({ ...s, view: 'programme' }))} className="text-purple-700 underline underline-offset-2">
             {tx.backToProgramme}

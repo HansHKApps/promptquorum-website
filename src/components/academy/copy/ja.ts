@@ -118,6 +118,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: 'プログラムに戻る',
   doneNext: '完了して次のレッスンへ',
   doneLast: '完了してレッスンを終える',
+  nextLessonButton: (n, title) => `次へ：レッスン${n}「${title}」`,
+  lessonsDoneNextTest: '次のステップ：最終テスト。70%に達すると修了証を受け取れます。',
   furtherReading: '関連記事',
   fromPromptQuorum: 'PromptQuorumより',
 

@@ -118,6 +118,8 @@ export const copy: AcademyBaseCopy = {
   backToProgramme: '프로그램으로 돌아가기',
   doneNext: '완료, 다음 레슨',
   doneLast: '완료, 레슨 마치기',
+  nextLessonButton: (n, title) => `다음: ${n}강 – ${title}`,
+  lessonsDoneNextTest: '다음 단계: 최종 테스트. 70%를 달성하면 수료증을 받습니다.',
   furtherReading: '더 읽어 보기',
   fromPromptQuorum: 'PromptQuorum 자료',
 
