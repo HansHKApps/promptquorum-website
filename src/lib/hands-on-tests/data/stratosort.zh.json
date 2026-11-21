@@ -48,12 +48,18 @@
     ],
     [
       "哪些内容没有测试？",
-      "撤销、复制模式、Dashboard 模式、AI 与模型设置、文档对话工具、用时、内存、离线使用和卸载。应用版本和所用模型没有记录。",
+      "撤销、复制模式、Dashboard 模式、AI 与模型设置、用时、内存、离线使用和卸载。内置的文档对话是事后才打开的，其回答没有核对。应用版本和所用模型没有记录。",
+      "observed"
+    ],
+    [
+      "StratoSort 有自己的搜索和文档对话（RAG）吗？",
+      "有。开发者说，StratoSort 在本地为提取出的文件内容建立索引，针对问题检索相关内容并交给模型，因此不需要其他应用或 MCP。在 Mac 上按 Cmd+K 或点击 Knowledge OS，即可打开 Search、Chat、Relate、Atlas 和 Timeline。测试者事后打开了 Search、Chat、Timeline 和 Relate，看到一条带来源标记的对话回答；他没有核对该回答是否正确。本页早先的版本错误地写成缺少检索层。",
       "observed"
     ]
   ],
   "status": "Partial",
   "published": "2026-11-17",
+  "modified": "2026-11-21",
   "started": "2026-11-17",
   "ended": null,
   "meta": [
@@ -114,7 +120,7 @@
     ],
     [
       "AI 辅助",
-      "本报告由 Claude 根据测试者的 Word 笔记和 22 张截图起草。笔记很可能是语音口述的（假设）。",
+      "本报告由 Claude 根据测试者的 Word 笔记和 22 张截图起草。笔记很可能是语音口述的（假设）。更正章节由 Claude 根据开发者的说明和另外五张截图起草。",
       "assumption"
     ],
     [
@@ -125,8 +131,8 @@
   ],
   "disclosure": "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。StratoSort 于 2026-11-10 加入目录，附有一篇依据厂商页面和开发者提供的创始人说明、由 AI 撰写的评测，并非来自上手测试。测试者与开发者保持联系，开发者回应了测试者的第一次尝试。StratoSort 从本站获得点击。笔记中没有付款或赞助的记录。",
   "verdict": {
-    "general": "按其自身描述，这是一款在设备本地运行的文件整理工具，带有测试者看得到的保护措施：试运行、任何文件移动之前的逐个审核，以及应用称只读的 MCP 连接。在这次测试中，分析、审核和文件移动都运行了（移动的结束情况未记录），MCP 连接也能从另一款本地 AI 应用使用，但匹配结果参差不齐，需要调整。撤销、复制模式、文档对话工具、所用模型、离线运行、隐私声明和卸载均未测试。",
-    "fit": "测试者认为它是一款有前景的工具，需要小规模测试和反复微调，并打算明年有更多商务文档时再测一次。他认为 MCP 连接（也许再加上一层检索）是值得关注的方向。没有写明是否继续使用的决定。"
+    "general": "按其自身描述，这是一款在设备本地运行的文件整理工具，带有测试者看得到的保护措施：试运行、任何文件移动之前的逐个审核，以及应用称只读的 MCP 连接。在这次测试中，分析、审核和一次文件移动都运行了（移动的结束情况未记录），MCP 连接也能从另一款本地 AI 应用使用，但匹配结果参差不齐，需要调整。撤销、复制模式、所用模型、离线运行、隐私声明和卸载均未测试。内置的搜索和文档对话（Knowledge OS）不在这次测试之内；测试者事后打开了它们，看到一条带来源标记的对话回答，但没有核对回答内容（见更正章节）。",
+    "fit": "测试者认为它是一款有前景的工具，需要小规模测试和反复微调，并打算明年有更多商务文档时再测一次。他认为 MCP 连接（也许再加上一层检索）是值得关注的方向。开发者随后指出，搜索和文档对话已经内置，所以这一层是存在的（见更正章节）。没有写明是否继续使用的决定。"
   },
   "scores": [
     [
@@ -180,6 +186,10 @@
     [
       "observed",
       "StratoSort 是一款桌面应用，为文件建议名称和文件夹，并让用户在任何文件移动之前审核。测试者在 24 GB 的 Apple M4 Pro 上运行它，这是第一次尝试没有成功之后的第二次测试。"
+    ],
+    [
+      "observed",
+      "2026-11-21 的更正：StratoSort 有自己的检索系统（RAG），带有搜索和文档对话，称为 Knowledge OS（Cmd+K）。本页早先的版本错误地写成缺少检索层。开发者 Ben Kennedy 指出了这一点；随后测试者打开了 Search、Chat、Timeline 和 Relate。"
     ],
     [
       "measured",
@@ -428,7 +438,73 @@
         ],
         [
           "tester-view",
-          "他说它看起来还不像检索系统，而是朝着可供外部工具查询的数据集发展。他只调用了四个工具中的两个；get_document_summary 和 chat_with_documents 没有被调用。",
+          "他说它看起来还不像检索系统，而是朝着可供外部工具查询的数据集发展。他只调用了四个工具中的两个；get_document_summary 和 chat_with_documents 没有被调用。更正：StratoSort 确实有自己的检索系统（见下方的更正章节）。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-knowledge",
+      "title": "更正：StratoSort 内置搜索和对话（Knowledge OS）",
+      "items": [
+        [
+          "observed",
+          "本次测试首次发布之后，开发者 Ben Kennedy 来信说，StratoSort 已经包含检索系统（RAG），带有自己的搜索和文档对话，并说他本应更清楚地把测试者引导到这里。本页在多处写了相反的内容；这些说法已在此处更正，并在正文中作了标注。谢谢你，Ben，指出了这一点。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "据开发者所述：在 Mac 上按 Cmd+K，或点击导航中的 Knowledge OS，会打开五个视图。Search 按含义或关键词查找已分析的文件，结合了向量相似度和关键词搜索。Chat 回答关于这些文件的问题，并附带来源文档的引用。Relate 是相关文件和文件簇的图谱。Atlas 是资料库的地图，相似的文件被归在一起。Timeline 按日期列出已分析的文件。",
+          null
+        ],
+        [
+          "observed",
+          "测试者事后打开了 Knowledge OS。Search 视图中有一个写着“Describe what you're looking for...”的输入框和三条搜索提示：自然语言，例如“vacation photos from beach”；文件类型，例如“PDF documents”；内容描述，例如“spreadsheet with budget”。截图中没有运行搜索。",
+          "stratosort-knowledge-os-search-tips"
+        ],
+        [
+          "observed",
+          "Timeline 视图列出已分析的文件，每个文件带有一个文件夹标签（在狭窄的窗口中被截断，例如 CLARI…、SEO D… 和 STRAT…）和文件名。可见的条目是本次测试自己的导出文件和笔记。",
+          "stratosort-knowledge-os-timeline-file-list"
+        ],
+        [
+          "measured",
+          "Relate 视图的顶栏写着 5 个智能文件夹和 550 个已索引文件；这个 550 与整理运行中的 286 个文件不同，原因未记录。图谱显示 14 个簇、47 个桥接、0 个零散文件，健康等级为 A（92），有 1 条发现，以及 14 个节点和 28 条连线。一张建议卡片指出两个文件的相关度为 83 %，尽管它们位于不同的文件夹。",
+          "stratosort-knowledge-os-relate-graph-550-files"
+        ],
+        [
+          "observed",
+          "在 Chat 中，一个名为“bing data”的对话里有一条关于 Bing 会话的助手回答，文字旁有两个带编号的来源标记，另有一个写着“Professional Re…”（被截断）的角色选择器。回答中的数字是否与来源文件一致，没有核对。",
+          "stratosort-knowledge-os-chat-answer-with-sources"
+        ],
+        [
+          "observed",
+          "同一对话的第二张截图显示状态“Analyzing documents...”，而回答文字已经出现在屏幕上，却没有来源标记，侧边栏写着“No conversations yet”。",
+          "stratosort-knowledge-os-chat-analyzing-documents"
+        ],
+        [
+          "vendor-claim",
+          "开发者描述了其机制：StratoSort 在本地为提取出的文件内容建立索引，针对问题检索相关内容并提供给模型，由模型根据用户的文档作答。这不需要其他应用或 MCP。MCP 让另一款应用能够访问资料库，而内置的 Search 和 Chat 在 StratoSort 内部运行。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "开发者说，默认设置在本地运行，包括嵌入、检索和对话。可以启用可选的云服务商，但并非必需。使用 MCP 时，检索到的内容是否留在本地，还取决于所连接的客户端和模型。测试者没有核实这一点。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "针对测试者提出的整理需要清晰的文件夹描述和反馈这一点，开发者说这与训练或微调语言模型是两回事。在 Organize 界面上，可以在移动之前更改某个文件的目的地。当两个类型和标签相同的不同文件从建议的文件夹被移动到同一个其他文件夹之后，StratoSort 会学习这一路由纠正；可以在 Settings > Performance > Memory & Rules 中查看。测试者没有试过这一功能。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "开发者说，近期版本已处理了测试者第一次测试中的问题：文件名冲突、更清晰的预览和完整的目的地列表、外置硬盘访问、更一致的电子表格归类，以及文件未移动时更清晰的提示。5.4.0 版新增了大批量处理之前的五个文件试运行、对重叠文件夹更安全的处理，以及对匹配较弱的文件使用“Needs review”而不是强行指定目的地；同时修复了长批量处理时内存占用增长的问题，并减少了重复分析。测试者没有复测这些版本。",
+          null
+        ],
+        [
+          "observed",
+          "这带来的变化：关于需要补上一层检索的说法是错的，关于该应用还不像检索系统的评语也不成立。保持不变的是：这些界面只看过一次，没有对照文件核对任何回答，原始测试中的整理结果也没有改变。",
           null
         ]
       ]
@@ -449,7 +525,7 @@
         ],
         [
           "tester-view",
-          "他打算明年成立一家公司，并用更多文档重复这次测试，看它能否让他的文件夹体系保持有序。他感兴趣的是这与 MCP 的结合，也许再加上一层检索。",
+          "他打算明年成立一家公司，并用更多文档重复这次测试，看它能否让他的文件夹体系保持有序。他感兴趣的是这与 MCP 的结合，也许再加上一层检索。更正：这一层已经内置（见上方的更正章节）。",
           null
         ],
         [
@@ -493,7 +569,7 @@
     [
       "建议名称和文件夹，可审核并撤销；另有语义搜索和文档对话。",
       "PromptQuorum 目录条目",
-      "看到了名称、文件夹和审核；撤销和文档对话未测试。",
+      "看到了名称、文件夹和审核；撤销未测试。Search、Chat、Timeline 和 Relate 是事后打开的（见更正章节）；回答质量未核对。",
       "third-party"
     ],
     [
@@ -676,6 +752,20 @@
       []
     ],
     [
+      "打开 Knowledge OS：Search、Chat、Timeline、Relate（首次发布之后）",
+      "StratoSort",
+      "打开了四个视图；看到一条带两个来源标记的对话回答；回答未核对",
+      "未记录",
+      "Partial",
+      [
+        "stratosort-knowledge-os-search-tips",
+        "stratosort-knowledge-os-timeline-file-list",
+        "stratosort-knowledge-os-relate-graph-550-files",
+        "stratosort-knowledge-os-chat-answer-with-sources",
+        "stratosort-knowledge-os-chat-analyzing-documents"
+      ]
+    ],
+    [
       "撤销、复制模式、Dashboard 模式、AI 与模型设置、离线使用、卸载",
       "不适用",
       "未测试",
@@ -695,7 +785,7 @@
     ],
     [
       "tester-error",
-      "他只调用了 list_smart_folders 和 search_documents，就判断它看起来不像检索系统。工具列表里还有 get_document_summary 和 chat_with_documents，它们没有被调用。"
+      "他只调用了 list_smart_folders 和 search_documents，就判断它看起来不像检索系统。StratoSort 有自己的检索（RAG），带有搜索和文档对话，称为 Knowledge OS；开发者说他本应更清楚地把测试者引导到这里。工具列表里还有 get_document_summary 和 chat_with_documents，它们没有被调用。"
     ],
     [
       "assumption",
@@ -958,6 +1048,17 @@
       "observed",
       "Info",
       []
+    ],
+    [
+      "SS-27",
+      "更正。StratoSort 在 Knowledge OS 窗口（Cmd+K）中内置了搜索和文档对话，带有 Search、Chat、Timeline、Relate 和 Atlas。测试者事后打开了 Search、Chat、Timeline 和 Relate；顶栏显示 5 个智能文件夹和 550 个已索引文件，一条对话回答带有两个来源标记。回答是否正确以及 Atlas 均未核对。早先关于缺少检索层的说法是错的。",
+      "搜索与对话",
+      "observed",
+      "Info",
+      [
+        "stratosort-knowledge-os-search-tips",
+        "stratosort-knowledge-os-chat-answer-with-sources"
+      ]
     ]
   ],
   "severity_note": "严重程度指对首次使用者的影响，是建议值，不是测量值。Info 表示既不是问题也不是优点的发现；Positive 表示表现良好的地方。",
@@ -978,7 +1079,7 @@
         "需要商业使用却不核对许可的人：目录列出的是非商业许可，以及商业使用需要的按席位付费许可。"
       ]
     ],
-    "retest": "在新的主要版本发布后、开发者处理的问题发布之后，或明年测试者拿到公司文档时复测。覆盖：记录应用版本和所用模型；用一组已知的测试文件运行，统计已匹配与未分类的数量；电子表格的文本限制；撤销；复制模式；get_document_summary 和 chat_with_documents；检查流量后的离线使用；运行时内存；卸载；许可条款。"
+    "retest": "在新的主要版本发布后、开发者处理的问题发布之后，或明年测试者拿到公司文档时复测。覆盖：记录应用版本和所用模型；用一组已知的测试文件运行，统计已匹配与未分类的数量；电子表格的文本限制；撤销；复制模式；内置的 Search 和 Chat（对照文件核对回答和来源标记，并试用 Atlas）；通过 MCP 调用 get_document_summary 和 chat_with_documents；开发者列出的 5.4.0 版变更；检查流量后的离线使用；运行时内存；卸载；许可条款。"
   },
   "background_intro": "第三方信息，未经核实。与测试内容分开列出。",
   "background": [
@@ -994,7 +1095,8 @@
   "sources": [
     "测试者的实测笔记和截图（原始 Word 笔记；原始笔记 PDF 待补充）。",
     "PromptQuorum 目录中 StratoSort 的条目和评测（slug：stratosort），核实于 2026-11-10。",
-    "厂商网站 stratosort.com（厂商声明）和源码仓库 iLevyTate/StratoSortStack，均在目录中列出，本次测试没有打开。"
+    "厂商网站 stratosort.com（厂商声明）和源码仓库 iLevyTate/StratoSortStack，均在目录中列出，本次测试没有打开。",
+    "开发者写给测试者（Ben Kennedy）的说明，涉及内置搜索与对话、整理纠正和 5.4.0 版的变更，在首次发布之后收到（厂商声明）。"
   ],
   "evidence_labels": {
     "observed": {
@@ -1409,6 +1511,111 @@
       "subject": "Loci 应用（MCP 客户端）的截图",
       "rights": "测试者本人对第三方软件界面所截的截图。",
       "captured": "测试日期未记录；具体时间未记录"
+    },
+    {
+      "id": "stratosort-knowledge-os-search-tips",
+      "figure": 19,
+      "file": "stratosort-knowledge-os-search-tips.webp",
+      "path": "images/stratosort-knowledge-os-search-tips.webp",
+      "alt": "Knowledge OS 的 Search 视图：标签页 Search、Chat、Timeline、Relate 和 Atlas，一个写着 Describe what you're looking for 的输入框，以及三条搜索提示。",
+      "caption": "Knowledge OS 的 Search 视图及其搜索提示；这张截图中没有运行搜索。观察所得。",
+      "role": "gallery",
+      "width": 1170,
+      "height": 732,
+      "bytes": 22636,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-timeline-file-list",
+      "figure": 20,
+      "file": "stratosort-knowledge-os-timeline-file-list.webp",
+      "path": "images/stratosort-knowledge-os-timeline-file-list.webp",
+      "alt": "Knowledge OS 的 Timeline 视图：已分析文件的列表，带有被截断的文件夹标签和文件名，例如 loci-app-test-2026-11-11.docx 和 search-performance-2026-11-10.xlsx。",
+      "caption": "Timeline 视图，按文件夹标签和名称列出已分析的文件。观察所得。",
+      "role": "gallery",
+      "width": 1102,
+      "height": 1168,
+      "bytes": 44426,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-relate-graph-550-files",
+      "figure": 21,
+      "file": "stratosort-knowledge-os-relate-graph-550-files.webp",
+      "path": "images/stratosort-knowledge-os-relate-graph-550-files.webp",
+      "alt": "Knowledge OS 的 Relate 视图：14 个簇、47 个桥接、健康等级 A（92）、14 个节点和 28 条连线，顶栏写着 5 个智能文件夹和 550 个已索引文件。",
+      "caption": "带有文件图谱的 Relate 视图；数值读自应用。测量所得。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 597,
+      "bytes": 47756,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-chat-answer-with-sources",
+      "figure": 22,
+      "file": "stratosort-knowledge-os-chat-answer-with-sources.webp",
+      "path": "images/stratosort-knowledge-os-chat-answer-with-sources.webp",
+      "alt": "Knowledge OS 的 Chat 视图：一个名为 bing data 的对话，一条关于 Bing 会话、带有两个编号来源标记的助手回答，以及一个角色选择器。",
+      "caption": "带有两个来源标记的 Chat 回答。数字是否与文件一致，没有核对。观察所得。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 570,
+      "bytes": 38892,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-chat-analyzing-documents",
+      "figure": 23,
+      "file": "stratosort-knowledge-os-chat-analyzing-documents.webp",
+      "path": "images/stratosort-knowledge-os-chat-analyzing-documents.webp",
+      "alt": "Chat 视图显示状态 Analyzing documents，而回答文字已经可见却没有来源标记，侧边栏写着 No conversations yet。",
+      "caption": "同一对话在文档分析期间的画面；来源标记尚未出现。观察所得。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 706,
+      "bytes": 46606,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "StratoSort 应用的截图",
+      "rights": "测试者本人对第三方软件界面所截的截图。",
+      "captured": "2026-11-21"
     }
   ],
   "figure_order": [
@@ -1429,7 +1636,12 @@
     "stratosort-mcp-connected-in-client-four-tools",
     "stratosort-mcp-servers-list-in-client",
     "stratosort-mcp-list-smart-folders-result-table",
-    "stratosort-mcp-search-documents-permission-prompt"
+    "stratosort-mcp-search-documents-permission-prompt",
+    "stratosort-knowledge-os-search-tips",
+    "stratosort-knowledge-os-timeline-file-list",
+    "stratosort-knowledge-os-relate-graph-550-files",
+    "stratosort-knowledge-os-chat-answer-with-sources",
+    "stratosort-knowledge-os-chat-analyzing-documents"
   ],
   "ui": {
     "kicker": "PromptQuorum 上手测试 · {app} · {date}",

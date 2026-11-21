@@ -48,12 +48,18 @@
     ],
     [
       "テストしていないことは何ですか？",
-      "元に戻す、コピーモード、Dashboardモード、AIとモデルの設定、ドキュメントチャットのツール、計時、メモリ、オフライン利用、アンインストール。アプリのバージョンと使用したモデルは記録なしです。",
+      "元に戻す、コピーモード、Dashboardモード、AIとモデルの設定、計時、メモリ、オフライン利用、アンインストール。内蔵のドキュメントチャットは後から開いただけで、その回答は確認していません。アプリのバージョンと使用したモデルは記録なしです。",
+      "observed"
+    ],
+    [
+      "StratoSortには独自の検索とドキュメントチャット（RAG）がありますか？",
+      "はい。開発者によれば、StratoSortは抽出したファイルの内容をローカルでインデックス化し、質問に関連する内容を取り出してモデルに渡すため、ほかのアプリやMCPは不要です。Macでは、Cmd+Kを押すかKnowledge OSをクリックすると、Search、Chat、Relate、Atlas、Timelineが開きます。テスターは後からSearch、Chat、Timeline、Relateを開き、出典マーカー付きのチャットの回答を見ましたが、回答が正しいかどうかは確認していません。このページの以前の版は、検索の層が欠けていると誤って記していました。",
       "observed"
     ]
   ],
   "status": "Partial",
   "published": "2026-11-17",
+  "modified": "2026-11-21",
   "started": "2026-11-17",
   "ended": null,
   "meta": [
@@ -114,7 +120,7 @@
     ],
     [
       "使用したAI支援",
-      "Claudeが、テスターのWordメモと22枚のスクリーンショットからこのレポートを下書きしました。メモはおそらく音声入力で作成されたものです（推測）。",
+      "Claudeが、テスターのWordメモと22枚のスクリーンショットからこのレポートを下書きしました。メモはおそらく音声入力で作成されたものです（推測）。訂正の章は、開発者のメモと追加の5枚のスクリーンショットからClaudeが下書きしました。",
       "assumption"
     ],
     [
@@ -125,8 +131,8 @@
   ],
   "disclosure": "テスターは、ローカルAIアプリに関するコンテンツサイト兼ディレクトリであるPromptQuorumを創設しています。StratoSortは、2026-11-10に、ハンズオンテストではなく開発元のページと開発者から提供された創設者コメントに基づくAI作成のレビュー付きでディレクトリに追加されました。テスターは開発者と連絡を取っており、開発者はテスターの最初の試行に応答しました。StratoSortはサイトからのクリックを受けています。支払いやスポンサーシップはメモに記録されていません。",
   "verdict": {
-    "general": "自己紹介によればオンデバイスのファイル整理アプリで、テスターが確認できた安全策があります。ドライラン、何かを動かす前のファイルごとの確認、そしてアプリが読み取り専用だと述べるMCP連携です。このセッションでは、分析、確認、ファイルの移動を実行し（移動の終了は記録なし）、MCP連携は別のローカルAIアプリから動作しましたが、振り分けは混在した結果で、調整が必要です。元に戻す、コピーモード、ドキュメントチャットのツール、使用したモデル、オフライン動作、プライバシーに関する主張、アンインストールはテストしていません。",
-    "fit": "テスターは、小さなテストと繰り返しの微調整が必要な有望なツールと見ており、来年、ビジネス文書が増えた時点で再テストする予定です。MCP連携、場合によってはその上に検索の層を重ねることを、興味深い方向と見ています。使い続けるかどうかの決定は記されていません。"
+    "general": "自己紹介によればオンデバイスのファイル整理アプリで、テスターが確認できた安全策があります。ドライラン、何かを動かす前のファイルごとの確認、そしてアプリが読み取り専用だと述べるMCP連携です。このセッションでは、分析、確認、ファイルの移動を実行し（移動の終了は記録なし）、MCP連携は別のローカルAIアプリから動作しましたが、振り分けは混在した結果で、調整が必要です。元に戻す、コピーモード、使用したモデル、オフライン動作、プライバシーに関する主張、アンインストールはテストしていません。内蔵の検索とドキュメントチャット（Knowledge OS）はセッションの対象ではなく、テスターは後から開いて、出典マーカー付きのチャットの回答を見ましたが、回答の確認はしていません（訂正の章を参照）。",
+    "fit": "テスターは、小さなテストと繰り返しの微調整が必要な有望なツールと見ており、来年、ビジネス文書が増えた時点で再テストする予定です。MCP連携、場合によってはその上に検索の層を重ねることを、興味深い方向と見ていました。その後、開発者から、検索とドキュメントチャットはすでに内蔵されているとの指摘があり、その層は存在します（訂正の章を参照）。使い続けるかどうかの決定は記されていません。"
   },
   "scores": [
     [
@@ -180,6 +186,10 @@
     [
       "observed",
       "StratoSortは、ファイルの名前とフォルダを提案し、何かを動かす前にユーザーが確認できるデスクトップアプリです。テスターは24 GBのApple M4 Proで、最初の試行がうまくいかなかったあとの2回目のセッションとして実行しました。"
+    ],
+    [
+      "observed",
+      "2026-11-21の訂正：StratoSortには、検索とドキュメントチャットを備えた独自の検索システム（RAG）があり、Knowledge OS（Cmd+K）と呼ばれています。このページの以前の版は、検索の層が欠けていると誤って記していました。開発者のBen Kennedyが指摘し、その後テスターはSearch、Chat、Timeline、Relateを開きました。"
     ],
     [
       "measured",
@@ -428,7 +438,73 @@
         ],
         [
           "tester-view",
-          "彼は、まだ検索システムのようには見えないが、外部のツールが照会できるデータセットに近づいていると述べています。呼び出したのは4つのツールのうち2つだけで、get_document_summaryとchat_with_documentsは呼び出していません。",
+          "彼は、まだ検索システムのようには見えないが、外部のツールが照会できるデータセットに近づいていると述べています。呼び出したのは4つのツールのうち2つだけで、get_document_summaryとchat_with_documentsは呼び出していません。訂正：StratoSortには独自の検索システムがあります（下の訂正の章を参照）。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-knowledge",
+      "title": "訂正：StratoSortには検索とチャットが内蔵されています（Knowledge OS）",
+      "items": [
+        [
+          "observed",
+          "このテストの最初の公開後、開発者のBen Kennedyから、StratoSortにはすでに独自の検索とドキュメントチャットを備えた検索システム（RAG）が含まれており、テスターにもっと分かりやすく案内すべきだった、との連絡がありました。このページは複数の箇所でその反対のことを記していました。それらの記述はここで訂正し、本文中に印を付けています。Benさん、ご指摘ありがとうございます。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "開発者によれば、MacでCmd+Kを押すか、ナビゲーションのKnowledge OSをクリックすると、5つのビューが開きます。Searchは、ベクトル類似度とキーワード検索を組み合わせて、分析済みのファイルを意味やキーワードで探します。Chatは、それらのファイルについての質問に、出典ドキュメントの引用付きで答えます。Relateは、関連するファイルとクラスターのグラフです。Atlasは、類似したファイルをまとめたライブラリの地図です。Timelineは、分析済みのファイルを日付順に一覧表示します。",
+          null
+        ],
+        [
+          "observed",
+          "テスターは後からKnowledge OSを開きました。Searchビューには「Describe what you're looking for...」という入力欄と、3つの検索のヒントがあります。「vacation photos from beach」のような自然言語、「PDF documents」のようなファイルの種類、「spreadsheet with budget」のような内容の説明です。スクリーンショットでは検索は実行していません。",
+          "stratosort-knowledge-os-search-tips"
+        ],
+        [
+          "observed",
+          "Timelineビューは、分析済みのファイルを、幅の狭いウィンドウで途切れたフォルダのラベル（たとえばCLARI…、SEO D…、STRAT…）とファイル名とともに一覧表示します。見えているのは、このテスト自身のエクスポートとメモです。",
+          "stratosort-knowledge-os-timeline-file-list"
+        ],
+        [
+          "measured",
+          "Relateビューの上部バーには、5 smart foldersと550 files indexedと表示されています。550は振り分けの実行の286ファイルとは異なり、その理由は記録なしです。グラフには、14クラスター、47ブリッジ、散らばったファイル0件、所見1件でヘルスグレードA（92）、14ノードと28リンクが表示されています。提案カードは、異なるフォルダにある2つのファイルを83%関連していると示しています。",
+          "stratosort-knowledge-os-relate-graph-550-files"
+        ],
+        [
+          "observed",
+          "Chatでは、「bing data」という名前の会話に、Bingのセッションについてのアシスタントの回答があり、本文の横に番号付きの出典マーカーが2つ付いています。また、「Professional Re…」（途切れています）と表示されたペルソナの選択欄があります。回答の数値が出典ファイルと一致するかどうかは確認していません。",
+          "stratosort-knowledge-os-chat-answer-with-sources"
+        ],
+        [
+          "observed",
+          "同じチャットの2枚目のキャプチャでは、回答のテキストはすでに画面に表示されているものの出典マーカーはなく、「Analyzing documents...」というステータスが表示され、サイドバーには「No conversations yet」とあります。",
+          "stratosort-knowledge-os-chat-analyzing-documents"
+        ],
+        [
+          "vendor-claim",
+          "開発者は仕組みを次のように説明しています。StratoSortは抽出したファイルの内容をローカルでインデックス化し、質問に関連する内容を取り出してモデルに渡し、モデルがユーザーの文書から回答します。このためにほかのアプリやMCPは不要です。MCPは別のアプリにライブラリへのアクセスを与えるもので、内蔵のSearchとChatはStratoSortの内部で動作します。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "開発者によれば、既定の構成では、埋め込み、検索、チャットを含めてローカルで動作します。クラウドのプロバイダーを有効にすることもできますが、必須ではありません。MCPを使う場合、取り出された内容がローカルにとどまるかどうかは、接続されたクライアントとモデルにも左右されます。テスターはこれを検証していません。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "振り分けには明確なフォルダの説明とフィードバックが必要だというテスターの指摘について、開発者は、これは言語モデルの学習やファインチューニングとは別のものだと述べています。Organize画面では、移動の前にファイルの移動先を変更できます。同じ種類とラベルの異なる2つのファイルを、提案されたフォルダから同じ別のフォルダへ移動すると、StratoSortはその振り分けの修正を学習し、Settings > Performance > Memory & Rulesで確認できます。テスターはこれを試していません。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "開発者によれば、最近のリリースでは、テスターの最初のテストで挙がった問題に対応しています。ファイル名の競合、より分かりやすいプレビューと移動先の完全な一覧、外付けドライブへのアクセス、スプレッドシートのより一貫した振り分け、ファイルが移動しない場合のより分かりやすい報告です。バージョン5.4.0では、大きなバッチの前の5ファイルの試行、重なり合うフォルダのより安全な処理、弱い一致に対して移動先を強制せず「Needs review」とする動作が追加され、長いバッチ中のメモリ使用量の増加が修正され、繰り返しの分析が減りました。テスターはこれらのバージョンを再テストしていません。",
+          null
+        ],
+        [
+          "observed",
+          "これで変わること：検索の層を追加する必要があるという記述は誤りであり、アプリがまだ検索システムのようには見えないという発言は成り立ちません。変わらないこと：画面を見たのは1回だけで、回答はファイルと照らして確認しておらず、元のセッションの振り分けの結果は変わりません。",
           null
         ]
       ]
@@ -449,7 +525,7 @@
         ],
         [
           "tester-view",
-          "彼は来年、法人を設立する予定で、より多くの文書でテストを繰り返し、フォルダ構成を整った状態に保てるかどうかを確かめるつもりです。彼の関心は、MCPと、場合によってはその上の検索の層との組み合わせにあります。",
+          "彼は来年、法人を設立する予定で、より多くの文書でテストを繰り返し、フォルダ構成を整った状態に保てるかどうかを確かめるつもりです。彼の関心は、MCPと、場合によってはその上の検索の層との組み合わせにあります。訂正：その層はすでに内蔵されています（上の訂正の章を参照）。",
           null
         ],
         [
@@ -493,7 +569,7 @@
     [
       "確認して元に戻せる名前とフォルダを提案し、セマンティック検索とドキュメントチャットを追加する。",
       "PromptQuorumディレクトリの項目",
-      "名前、フォルダ、確認は確認。元に戻すとドキュメントチャットは未テスト。",
+      "名前、フォルダ、確認は確認。元に戻すは未テスト。Search、Chat、Timeline、Relateは後から開いた（訂正の章を参照）。回答の品質は未確認。",
       "third-party"
     ],
     [
@@ -676,6 +752,20 @@
       []
     ],
     [
+      "Knowledge OSを開く：Search、Chat、Timeline、Relate（最初の公開後）",
+      "StratoSort",
+      "4つのビューが開いた。2つの出典マーカー付きのチャットの回答を1つ確認。回答は未確認",
+      "記録なし",
+      "Partial",
+      [
+        "stratosort-knowledge-os-search-tips",
+        "stratosort-knowledge-os-timeline-file-list",
+        "stratosort-knowledge-os-relate-graph-550-files",
+        "stratosort-knowledge-os-chat-answer-with-sources",
+        "stratosort-knowledge-os-chat-analyzing-documents"
+      ]
+    ],
+    [
       "元に戻す、コピーモード、Dashboardモード、AIとモデルの設定、オフライン利用、アンインストール",
       "該当なし",
       "未テスト",
@@ -695,7 +785,7 @@
     ],
     [
       "tester-error",
-      "list_smart_foldersとsearch_documentsだけを呼び出したあとで、検索システムのようには見えないと判断しました。ツール一覧にはget_document_summaryとchat_with_documentsも含まれていますが、これらは呼び出していません。"
+      "list_smart_foldersとsearch_documentsだけを呼び出したあとで、検索システムのようには見えないと判断しました。StratoSortには、検索とドキュメントチャットを備えた独自の検索システム（RAG）があり、Knowledge OSと呼ばれています。開発者は、テスターにもっと分かりやすく案内すべきだったと述べています。ツール一覧にはget_document_summaryとchat_with_documentsも含まれていますが、これらは呼び出していません。"
     ],
     [
       "assumption",
@@ -958,6 +1048,17 @@
       "observed",
       "Info",
       []
+    ],
+    [
+      "SS-27",
+      "訂正。StratoSortには、Knowledge OSウィンドウ（Cmd+K）に、Search、Chat、Timeline、Relate、Atlasを備えた検索とドキュメントチャットが内蔵されています。テスターは後からSearch、Chat、Timeline、Relateを開きました。上部バーには5 smart foldersと550 files indexedと表示され、チャットの回答の1つには2つの出典マーカーが付いていました。回答の正しさとAtlasは確認していません。検索の層が欠けているという以前の記述は誤りでした。",
+      "検索とチャット",
+      "observed",
+      "Info",
+      [
+        "stratosort-knowledge-os-search-tips",
+        "stratosort-knowledge-os-chat-answer-with-sources"
+      ]
     ]
   ],
   "severity_note": "重要度は、初めて使う人への影響度です。案であり、実測値ではありません。Infoは、問題でも長所でもない所見を示します。Positiveは、うまく動作したことを示します。",
@@ -978,7 +1079,7 @@
         "ライセンスを確認せずに商用利用したい人：ディレクトリには、非商用ライセンスと、商用利用向けの席数単位の有料ライセンスが記載されています。"
       ]
     ],
-    "retest": "新しいメジャーバージョンが出たとき、開発者が対応した問題が反映されたあと、または来年テスターが会社の文書を用意できたときに再テストしてください。対象：アプリのバージョンとモデルの記録、既知のテストセットを実行して一致と未分類を数えること、スプレッドシートのテキスト制限、元に戻す、コピーモード、get_document_summaryとchat_with_documents、通信を調べたオフライン利用、実行時のメモリ、アンインストール、ライセンス条件。"
+    "retest": "新しいメジャーバージョンが出たとき、開発者が対応した問題が反映されたあと、または来年テスターが会社の文書を用意できたときに再テストしてください。対象：アプリのバージョンとモデルの記録、既知のテストセットを実行して一致と未分類を数えること、スプレッドシートのテキスト制限、元に戻す、コピーモード、内蔵のSearchとChat（回答と出典マーカーをファイルと照らして確認し、Atlasも試す）、MCP経由のget_document_summaryとchat_with_documents、開発者が挙げるバージョン5.4.0の変更点、通信を調べたオフライン利用、実行時のメモリ、アンインストール、ライセンス条件。"
   },
   "background_intro": "第三者情報で、未検証です。テストとは分けて記載しています。",
   "background": [
@@ -994,7 +1095,8 @@
   "sources": [
     "テスターのハンズオンのメモとスクリーンショット（元のWordメモ。生のメモのPDFは追加予定）。",
     "StratoSortのPromptQuorumディレクトリ項目とレビュー（slug: stratosort）、2026-11-10確認。",
-    "ベンダーサイトstratosort.com（ベンダーの主張）とソースリポジトリiLevyTate/StratoSortStack。どちらもディレクトリに記載されており、このテストでは開いていません。"
+    "ベンダーサイトstratosort.com（ベンダーの主張）とソースリポジトリiLevyTate/StratoSortStack。どちらもディレクトリに記載されており、このテストでは開いていません。",
+    "内蔵の検索とチャット、振り分けの修正、5.4.0の変更点についての開発者（Ben Kennedy）からテスターへのメモ。最初の公開後に受領（ベンダーの主張）。"
   ],
   "evidence_labels": {
     "observed": {
@@ -1409,6 +1511,111 @@
       "subject": "Lociアプリ（MCPクライアント）のスクリーンショット",
       "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
       "captured": "テスト日は記録なし。正確な時刻は記録なし"
+    },
+    {
+      "id": "stratosort-knowledge-os-search-tips",
+      "figure": 19,
+      "file": "stratosort-knowledge-os-search-tips.webp",
+      "path": "images/stratosort-knowledge-os-search-tips.webp",
+      "alt": "Knowledge OSのSearchビュー：Search、Chat、Timeline、Relate、Atlasのタブ、Describe what you're looking forと書かれた入力欄、3つの検索のヒント。",
+      "caption": "Knowledge OSのSearchビューと検索のヒント。このスクリーンショットでは検索は実行していません。観察。",
+      "role": "gallery",
+      "width": 1170,
+      "height": 732,
+      "bytes": 22636,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-timeline-file-list",
+      "figure": 20,
+      "file": "stratosort-knowledge-os-timeline-file-list.webp",
+      "path": "images/stratosort-knowledge-os-timeline-file-list.webp",
+      "alt": "Knowledge OSのTimelineビュー：途切れたフォルダのラベルとファイル名（loci-app-test-2026-11-11.docxやsearch-performance-2026-11-10.xlsxなど）を並べた、分析済みファイルの一覧。",
+      "caption": "分析済みのファイルをフォルダのラベルと名前で一覧表示したTimelineビュー。観察。",
+      "role": "gallery",
+      "width": 1102,
+      "height": 1168,
+      "bytes": 44426,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-relate-graph-550-files",
+      "figure": 21,
+      "file": "stratosort-knowledge-os-relate-graph-550-files.webp",
+      "path": "images/stratosort-knowledge-os-relate-graph-550-files.webp",
+      "alt": "Knowledge OSのRelateビュー：14クラスター、47ブリッジ、ヘルスグレードA（92）、14ノードと28リンク、上部バーには5 smart foldersと550 files indexed。",
+      "caption": "ファイルのグラフを表示したRelateビュー。件数はアプリから読み取り。実測。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 597,
+      "bytes": 47756,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-chat-answer-with-sources",
+      "figure": 22,
+      "file": "stratosort-knowledge-os-chat-answer-with-sources.webp",
+      "path": "images/stratosort-knowledge-os-chat-answer-with-sources.webp",
+      "alt": "Knowledge OSのChatビュー：bing dataという名前の会話、Bingのセッションについてのアシスタントの回答と2つの番号付き出典マーカー、ペルソナの選択欄。",
+      "caption": "2つの出典マーカー付きのチャットの回答。数値がファイルと一致するかどうかは確認していません。観察。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 570,
+      "bytes": 38892,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026-11-21"
+    },
+    {
+      "id": "stratosort-knowledge-os-chat-analyzing-documents",
+      "figure": 23,
+      "file": "stratosort-knowledge-os-chat-analyzing-documents.webp",
+      "path": "images/stratosort-knowledge-os-chat-analyzing-documents.webp",
+      "alt": "Analyzing documentsというステータスが表示され、回答のテキストは出典マーカーなしですでに見えているChatビュー。サイドバーにはNo conversations yet。",
+      "caption": "ドキュメントを分析中の同じチャット。出典マーカーはまだ表示されていませんでした。観察。",
+      "role": "gallery",
+      "width": 1600,
+      "height": 706,
+      "bytes": 46606,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-knowledge"
+      ],
+      "subject": "StratoSortアプリのスクリーンショット",
+      "rights": "テスター自身のスクリーンショット（サードパーティ製ソフトウェアのUI）。",
+      "captured": "2026-11-21"
     }
   ],
   "figure_order": [
@@ -1429,7 +1636,12 @@
     "stratosort-mcp-connected-in-client-four-tools",
     "stratosort-mcp-servers-list-in-client",
     "stratosort-mcp-list-smart-folders-result-table",
-    "stratosort-mcp-search-documents-permission-prompt"
+    "stratosort-mcp-search-documents-permission-prompt",
+    "stratosort-knowledge-os-search-tips",
+    "stratosort-knowledge-os-timeline-file-list",
+    "stratosort-knowledge-os-relate-graph-550-files",
+    "stratosort-knowledge-os-chat-answer-with-sources",
+    "stratosort-knowledge-os-chat-analyzing-documents"
   ],
   "ui": {
     "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
