@@ -57,7 +57,7 @@ export async function generateDiagnostic(client: ParseClient, req: DiagnosticReq
     signal,
     validate: (v) => {
       if (!v.subjectSupported) return { problems: [] }
-      const problems = v.questions.flatMap(questionProblems)
+      const problems = v.questions.flatMap((q, i) => questionProblems(q, i))
       const want = diagnosticCount(req.availableMinutes)
       if (v.questions.length < want) problems.push(`write ${want} questions (got ${v.questions.length})`)
       // Too many is not an error: keep the first ones.

@@ -14,7 +14,7 @@ export const generatedQuestionSchema = z.object({
   topic: z.string().describe('Short topic label (2-5 words) this question checks; reuse the same label for questions on the same topic'),
   prompt: z.string().describe('The question. Tests understanding (why / when / which), not recall of a term'),
   correct: z.string().describe('The one correct answer'),
-  wrong: z.array(z.string()).describe('Exactly two plausible but clearly wrong answers'),
+  wrong: z.array(z.string()).describe('The plausible but clearly wrong answers; exactly as many as the request asks for (one fewer than the number of answer options)'),
   explanationCorrect: z.string().describe('1-2 sentences: why the correct answer is correct'),
   explanationWrong: z.array(z.string()).describe('Exactly two short reasons, in the same order as `wrong`'),
 })
@@ -118,7 +118,7 @@ export type QuizOutput = z.infer<typeof quizOutputSchema>
 
 /** The verifier's answers: one per question, by number, choosing option 1, 2 or 3 (or 0 if none is defensible). */
 export const verifyOutputSchema = z.object({
-  answers: z.array(z.object({ n: z.number().int(), choice: z.number().int().describe('1, 2 or 3; 0 if no option is clearly correct') })),
+  answers: z.array(z.object({ n: z.number().int(), choice: z.number().int().describe('The number of the correct option (1 to the number of options); 0 if no option is clearly correct') })),
 })
 export type VerifyOutput = z.infer<typeof verifyOutputSchema>
 
@@ -131,6 +131,8 @@ export const quizRequestSchema = z.object({
   selfLevel: z.enum(LEVELS),
   availableMinutes: minutes,
   difficulty: z.enum(TEST_DIFFICULTIES).optional(),
+  /** answer options per multiple-choice question, 3 to 6 (absent = 3) */
+  optionCount: z.number().int().min(3).max(6).optional(),
   /** lesson quiz: one entry (that lesson); final test: every lesson, trimmed text */
   lessons: z
     .array(z.object({ title: z.string().max(200), topic: z.string().min(1).max(80), text: sourceText }))
@@ -144,8 +146,8 @@ export type QuizRequest = z.infer<typeof quizRequestSchema>
 
 export const answerRequestSchema = z.object({
   sealed: z.string().min(20).max(4000),
-  /** option index 0-2, or -1 for "not sure" */
-  choice: z.number().int().min(-1).max(2),
+  /** option index 0-5, or -1 for "not sure" */
+  choice: z.number().int().min(-1).max(5),
 })
 export type AnswerRequest = z.infer<typeof answerRequestSchema>
 

@@ -12,6 +12,10 @@ export const ACADEMY_USED_KEY = 'pq_academy_used'
 export const ACADEMY_TUTOR_OK_KEY = 'pq_academy_tutor_ok'
 export const ACADEMY_TUTOR_OK_DAYS = 30
 
+/** Answer options per multiple-choice question the learner can pick (more = harder). */
+export const CHOICE_OPTION_COUNTS = [3, 4, 5, 6] as const
+export const CHOICE_OPTIONS_DEFAULT = 3
+
 /** Time choices on the setup screen, in minutes. */
 export const ACADEMY_MINUTE_OPTIONS = [15, 30, 45, 60, 90, 120, 180, 240] as const
 

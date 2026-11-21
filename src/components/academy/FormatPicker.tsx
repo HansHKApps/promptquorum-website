@@ -6,6 +6,7 @@
 
 import { useState } from 'react'
 import { TEST_DIFFICULTIES, TEST_FORMATS, type Programme, type TestDifficulty, type TestFormat } from '@/lib/academy/types'
+import { ChoiceOptionsPicker } from './ChoiceOptionsPicker'
 import { Mark, press } from './press'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
@@ -15,9 +16,10 @@ type Update = ReturnType<typeof useAcademyState>['update']
 export function FormatPicker({ tx, programme, update, title }: { tx: AcademyCopy; programme: Programme; update: Update; title: string }) {
   const [format, setFormat] = useState<TestFormat>(programme.testFormat ?? 'choice')
   const [difficulty, setDifficulty] = useState<TestDifficulty>(programme.testDifficulty ?? 'medium')
+  const [choiceOptions, setChoiceOptions] = useState<number>(programme.choiceOptions ?? 3)
   const start = () =>
     update((s) =>
-      s.programme?.progress.activeQuiz ? { ...s, programme: { ...s.programme, testDifficulty: difficulty, progress: { ...s.programme.progress, activeQuiz: { ...s.programme.progress.activeQuiz, format } } } } : s,
+      s.programme?.progress.activeQuiz ? { ...s, programme: { ...s.programme, testDifficulty: difficulty, choiceOptions, progress: { ...s.programme.progress, activeQuiz: { ...s.programme.progress.activeQuiz, format } } } } : s,
     )
   const back = () => update((s) => ({ ...s, view: 'programme', programme: s.programme ? { ...s.programme, progress: { ...s.programme.progress, activeQuiz: undefined } } : s.programme }))
   return (
@@ -46,6 +48,7 @@ export function FormatPicker({ tx, programme, update, title }: { tx: AcademyCopy
           ))}
         </div>
       </fieldset>
+      {format === 'choice' && <ChoiceOptionsPicker lang={programme.language} name="academy-choice-options-test" value={choiceOptions} onChange={setChoiceOptions} />}
       <fieldset>
         <legend className="font-medium text-gray-900">{tx.testDifficultyLegend}</legend>
         <div className="mt-2 grid gap-2 sm:grid-cols-3">

@@ -37,6 +37,8 @@ export interface SetupDraft {
   testDifficulty: TestDifficulty
   /** a site-language code, or a custom language (src/lib/academy/language.ts) */
   language: string
+  /** answer options per multiple-choice test question, 3 to 6; stored drafts from before this existed load as 3 */
+  choiceOptions: number
   /** opt-in "Save my progress in this browser"; false = nothing is written to localStorage (F3) */
   saveProgress: boolean
   updatedAt: string
@@ -47,10 +49,11 @@ export interface Question {
   topic: string
   kind: 'diagnostic' | 'lesson' | 'final'
   prompt: string
-  options: [string, string, string]
-  correctIndex: 0 | 1 | 2
+  /** 3 to 6 answer options (3 for the quick check; the learner picks the count for tests) */
+  options: string[]
+  correctIndex: number
   explanationCorrect: string
-  explanationWrong: [string?, string?, string?]
+  explanationWrong: (string | undefined)[]
 }
 
 /**
@@ -60,7 +63,7 @@ export interface Question {
  */
 export interface QuizQuestion extends Omit<Question, 'correctIndex' | 'explanationCorrect' | 'explanationWrong'> {
   sealed: string
-  reveal?: { correctIndex: 0 | 1 | 2; explanationCorrect: string; explanationChosen?: string | null }
+  reveal?: { correctIndex: number; explanationCorrect: string; explanationChosen?: string | null }
 }
 
 /** What the server reveals after an open answer was graded. `credit` is 0, 0.5 or 1. */
@@ -129,6 +132,8 @@ export interface Programme {
   testFormat?: TestFormat
   /** question difficulty; absent in programmes stored before this existed = 'medium' */
   testDifficulty?: TestDifficulty
+  /** answer options per multiple-choice test question (3 to 6); absent = 3 */
+  choiceOptions?: number
   /** answers: question id -> chosen option index (-1 = "not sure") */
   diagnostic: { questions: Question[]; answers: Record<string, number>; gaps: string[]; estimatedLevel: Level }
   objectives: string[]

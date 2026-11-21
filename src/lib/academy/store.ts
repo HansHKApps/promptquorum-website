@@ -23,6 +23,7 @@ const draftSchema = z.object({
   testMode: z.enum(TEST_MODES),
   testFormat: z.enum(TEST_FORMATS).optional().default('choice'),
   testDifficulty: z.enum(TEST_DIFFICULTIES).optional().default('medium'),
+  choiceOptions: z.number().int().min(3).max(6).optional().default(3),
   language: z.string().refine(isValidProgrammeLanguage),
   // Progress stored before the opt-in existed was saved by design then: it stays loadable and stays saved.
   saveProgress: z.boolean().optional().default(true),
@@ -36,10 +37,10 @@ const questionSchema = z.object({
   topic: z.string(),
   kind: z.enum(['diagnostic', 'lesson', 'final']),
   prompt: z.string(),
-  options: z.tuple([z.string(), z.string(), z.string()]),
-  correctIndex: z.union([z.literal(0), z.literal(1), z.literal(2)]),
+  options: z.array(z.string()).min(3).max(6),
+  correctIndex: z.number().int().min(0).max(5),
   explanationCorrect: z.string(),
-  explanationWrong: z.array(z.string().optional().nullable()).length(3),
+  explanationWrong: z.array(z.string().optional().nullable()).min(3).max(6),
 })
 
 const quickCheckSchema = z.object({
@@ -119,5 +120,5 @@ export function clearAcademyState(storage: KeyValueStorage | null = browserStora
 }
 
 export function defaultDraft(language: string): SetupDraft {
-  return { subject: '', availableMinutes: 60, selfLevel: 'beginner', testMode: 'final', testFormat: 'choice', testDifficulty: 'medium', language, saveProgress: false, updatedAt: new Date(0).toISOString() }
+  return { subject: '', availableMinutes: 60, selfLevel: 'beginner', testMode: 'final', testFormat: 'choice', testDifficulty: 'medium', choiceOptions: 3, language, saveProgress: false, updatedAt: new Date(0).toISOString() }
 }

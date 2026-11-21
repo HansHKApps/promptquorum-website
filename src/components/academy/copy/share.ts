@@ -48,6 +48,9 @@ export interface ShareCopy {
   wandClose: string
   wandPlaceholder: string
   mailDataNote: string
+  choiceLegend: string
+  choiceHint: string
+  choiceN: (n: number) => string
 }
 
 export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
@@ -96,6 +99,9 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandClose: 'Close',
     wandPlaceholder: 'Ask a question about this section…',
     mailDataNote: 'Below is technical data about what you were doing, so we can understand your message. You can edit or delete any of it before you send.',
+    choiceLegend: 'Answer options per question',
+    choiceHint: 'More options make the test harder: 3 is easier, 6 is hardest.',
+    choiceN: (n) => `${n} answers`,
   },
   de: {
     plan: 'Dieses Programm teilen',
@@ -142,6 +148,9 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandClose: 'Schließen',
     wandPlaceholder: 'Stellen Sie eine Frage zu diesem Abschnitt …',
     mailDataNote: 'Unten stehen technische Angaben dazu, was Sie gerade gemacht haben, damit wir Ihre Nachricht besser verstehen. Sie können alles vor dem Senden bearbeiten oder löschen.',
+    choiceLegend: 'Antwortmöglichkeiten pro Frage',
+    choiceHint: 'Mehr Antworten machen den Test schwerer: 3 ist leichter, 6 am schwersten.',
+    choiceN: (n) => `${n} Antworten`,
   },
   fr: {
     plan: 'Partager ce programme',
@@ -188,6 +197,9 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandClose: 'Fermer',
     wandPlaceholder: 'Posez une question sur cette section…',
     mailDataNote: 'Ci-dessous figurent des données techniques sur ce que vous faisiez, pour mieux comprendre votre message. Vous pouvez tout modifier ou supprimer avant l’envoi.',
+    choiceLegend: 'Réponses proposées par question',
+    choiceHint: 'Plus il y a de réponses, plus le test est difficile : 3 est plus facile, 6 le plus difficile.',
+    choiceN: (n) => `${n} réponses`,
   },
   es: {
     plan: 'Compartir este programa',
@@ -234,6 +246,9 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandClose: 'Cerrar',
     wandPlaceholder: 'Haz una pregunta sobre esta sección…',
     mailDataNote: 'Abajo hay datos técnicos sobre lo que estabas haciendo, para que entendamos mejor tu mensaje. Puedes editar o borrar cualquier parte antes de enviar.',
+    choiceLegend: 'Opciones de respuesta por pregunta',
+    choiceHint: 'Más opciones hacen la prueba más difícil: 3 es más fácil y 6 la más difícil.',
+    choiceN: (n) => `${n} opciones`,
   },
   pt: {
     plan: 'Compartilhar este programa',
@@ -280,6 +295,9 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandClose: 'Fechar',
     wandPlaceholder: 'Faça uma pergunta sobre esta seção…',
     mailDataNote: 'Abaixo estão dados técnicos sobre o que você estava fazendo, para entendermos melhor sua mensagem. Você pode editar ou apagar qualquer parte antes de enviar.',
+    choiceLegend: 'Alternativas por pergunta',
+    choiceHint: 'Mais alternativas deixam o teste mais difícil: 3 é mais fácil e 6 é o mais difícil.',
+    choiceN: (n) => `${n} alternativas`,
   },
   ja: {
     plan: 'このプログラムを共有',
@@ -326,6 +344,9 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandClose: '閉じる',
     wandPlaceholder: 'このセクションについて質問を入力…',
     mailDataNote: '以下は、メッセージを理解しやすくするための、操作内容に関する技術的なデータです。送信前に自由に編集・削除できます。',
+    choiceLegend: '1問あたりの選択肢の数',
+    choiceHint: '選択肢が多いほどテストは難しくなります（3つが易しく、6つが最も難しい）。',
+    choiceN: (n) => `${n}択`,
   },
   zh: {
     plan: '分享这个学习计划',
@@ -372,6 +393,9 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandClose: '关闭',
     wandPlaceholder: '就本节内容提问…',
     mailDataNote: '下面是你当时操作的技术信息，便于我们理解你的留言。发送前你可以随意修改或删除。',
+    choiceLegend: '每题选项数量',
+    choiceHint: '选项越多，测试越难：3 个较容易，6 个最难。',
+    choiceN: (n) => `${n} 个选项`,
   },
   ar: {
     plan: 'مشاركة هذا البرنامج',
@@ -418,6 +442,9 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandClose: 'إغلاق',
     wandPlaceholder: 'اطرح سؤالًا عن هذا القسم…',
     mailDataNote: 'فيما يلي بيانات تقنية عمّا كنت تفعله لنساعدنا على فهم رسالتك. يمكنك تعديل أي جزء منها أو حذفه قبل الإرسال.',
+    choiceLegend: 'عدد الخيارات لكل سؤال',
+    choiceHint: 'كلما زادت الخيارات صَعُب الاختبار: 3 أسهل و6 هو الأصعب.',
+    choiceN: (n) => `${n} خيارات`,
   },
   ko: {
     plan: '이 프로그램 공유',
@@ -464,6 +491,9 @@ export const SHARE_COPY: Record<AcademyLang, ShareCopy> = {
     wandClose: '닫기',
     wandPlaceholder: '이 섹션에 대해 질문을 입력하십시오…',
     mailDataNote: '아래는 메시지를 이해하는 데 도움이 되도록 작업 내용에 관한 기술 정보입니다. 보내기 전에 자유롭게 수정하거나 삭제하실 수 있습니다.',
+    choiceLegend: '문항당 선택지 수',
+    choiceHint: '선택지가 많을수록 테스트가 어렵습니다. 3개가 가장 쉽고 6개가 가장 어렵습니다.',
+    choiceN: (n) => `${n}개 선택지`,
   },
 }
 

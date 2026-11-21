@@ -702,6 +702,8 @@ import { sha256Hex } from '../src/lib/academy/hash'
 import { documentationModel } from '../src/lib/academy/documentation'
 import { documentationFilename } from '../src/lib/academy/certificate'
 import { splitTutorStream, TUTOR_SOURCES_MARK } from '../src/lib/academy/tutor'
+import { quizSystem } from '../src/lib/academy/quiz'
+import { answerRequestSchema, quizRequestSchema } from '../src/lib/academy/schemas'
 import { academyContext, CONTEXT_HEADER, recordAcademyError } from '../src/components/academy/feedback-context'
 import { loadLesson, prefetchLesson } from '../src/components/academy/lesson-loader'
 import { findMaterialForQuestion } from '../src/lib/academy/lesson'
@@ -1238,6 +1240,45 @@ t('feedback mail: structured diagnostic block with settings and recent errors, n
   for (const part of ['Rating: 2/5 (lesson)', 'Page: /de/academy', 'UI language: de', 'Recent errors:', '/api/academy/lesson generation', 'Device: TestAgent/1.0', 'viewport 1280x720']) assert.ok(text.includes(part), part)
   assert.ok(!text.includes('x=1'), 'query strings are dropped')
   if (!hadWindow) delete g.window
+})
+
+t('multiple choice with 3 to 6 answer options: questions, sealed keys, requests and drafts', () => {
+  const g = (n: number): GeneratedQuestion => ({ topic: 'T', prompt: 'P?', correct: 'right', wrong: Array.from({ length: n - 1 }, (_, i) => `wrong ${i}`), explanationCorrect: 'because', explanationWrong: Array.from({ length: n - 1 }, (_, i) => `why ${i}`) })
+  for (const n of [3, 4, 5, 6]) {
+    assert.deepEqual(questionProblems(g(n), 0, n), [], `n=${n}`)
+    assert.ok(questionProblems(g(n), 0, n === 6 ? 3 : n + 1).length > 0, `a ${n}-option question does not pass for another count`)
+    const seen = new Set<number>()
+    for (let i = 0; i < 400; i++) {
+      const q = toQuestion(g(n), 'final')
+      assert.equal(q.options.length, n)
+      assert.equal(q.options[q.correctIndex], 'right')
+      assert.equal(q.explanationWrong.length, n)
+      assert.equal(q.explanationWrong[q.correctIndex], undefined)
+      seen.add(q.correctIndex)
+    }
+    assert.equal(seen.size, n, `the correct answer appears at every position (${n})`)
+    const q = toQuestion(g(n), 'final')
+    const key = openAnswerKey(toClientQuestion(q, 'secret').sealed, 'secret')
+    assert.ok(key && key.correctIndex === q.correctIndex && key.explanationWrong.length === n)
+    const wrong = q.options.findIndex((_, i) => i !== q.correctIndex)
+    assert.equal(judgeAnswer(key!, wrong).explanationChosen, q.explanationWrong[wrong] ?? null)
+    assert.equal(judgeAnswer(key!, n - 1).correct, q.correctIndex === n - 1)
+  }
+  const base = { kind: 'final', subject: 'Subject', language: 'en', selfLevel: 'beginner', availableMinutes: 30, lessons: [{ title: 'L', topic: 'T', text: 'x' }], objectives: [] }
+  assert.ok(quizRequestSchema.safeParse({ ...base, optionCount: 6 }).success)
+  assert.ok(quizRequestSchema.safeParse(base).success)
+  assert.ok(!quizRequestSchema.safeParse({ ...base, optionCount: 7 }).success)
+  assert.ok(!quizRequestSchema.safeParse({ ...base, optionCount: 2 }).success)
+  assert.ok(answerRequestSchema.safeParse({ sealed: 'x'.repeat(30), choice: 5 }).success)
+  assert.ok(!answerRequestSchema.safeParse({ sealed: 'x'.repeat(30), choice: 6 }).success)
+  assert.equal(defaultDraft('en').choiceOptions, 3)
+  const old = { version: 1, view: 'setup', draft: { subject: 'x', availableMinutes: 30, selfLevel: 'beginner', testMode: 'final', language: 'en', updatedAt: '2026-11-20T10:00:00Z' } }
+  assert.equal(migrateAcademyState(old).draft?.choiceOptions, 3, 'a draft stored before the setting existed loads with 3')
+  assert.ok(quizSystem(5).includes('exactly 4 wrong answers') && quizSystem(3).includes('exactly 2 wrong answers'))
+  for (const l of ALL_LANGS) {
+    const x = shareCopyFor(l)
+    assert.ok(x.choiceLegend && x.choiceHint && x.choiceN(5).includes('5'), l)
+  }
 })
 
 void Promise.all(pending).then(() => {if (failed) {

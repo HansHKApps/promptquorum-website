@@ -7,11 +7,12 @@ import type { GeneratedQuestion } from './schemas'
 import type { Question } from './types'
 
 /** Problems with one generated question (empty = fine). Used by every quiz kind. */
-export function questionProblems(q: GeneratedQuestion, i: number): string[] {
+export function questionProblems(q: GeneratedQuestion, i: number, optionCount = 3): string[] {
   const p: string[] = []
   const at = `questions.${i}`
-  if (q.wrong.length !== 2) p.push(`${at}.wrong must have exactly 2 entries`)
-  if (q.explanationWrong.length !== 2) p.push(`${at}.explanationWrong must have exactly 2 entries`)
+  const wrongCount = optionCount - 1
+  if (q.wrong.length !== wrongCount) p.push(`${at}.wrong must have exactly ${wrongCount} entries`)
+  if (q.explanationWrong.length !== wrongCount) p.push(`${at}.explanationWrong must have exactly ${wrongCount} entries`)
   const options = [q.correct, ...q.wrong].map((o) => o.trim().toLowerCase())
   if (options.some((o) => !o)) p.push(`${at}: empty answer option`)
   if (new Set(options).size !== options.length) p.push(`${at}: answer options must all differ`)
@@ -22,9 +23,10 @@ export function questionProblems(q: GeneratedQuestion, i: number): string[] {
 
 /** `rand(n)` returns 0..n-1; injectable so tests can check the distribution. */
 export function toQuestion(q: GeneratedQuestion, kind: Question['kind'], rand: (n: number) => number = (n) => randomInt(n)): Question {
-  const correctIndex = rand(3) as 0 | 1 | 2
-  const options: string[] = [q.wrong[0], q.wrong[1]]
-  const explanationWrong: (string | undefined)[] = [q.explanationWrong[0], q.explanationWrong[1]]
+  // The number of options follows the question (3 to 6); the correct answer goes to a random position among them.
+  const correctIndex = rand(q.wrong.length + 1)
+  const options: string[] = [...q.wrong]
+  const explanationWrong: (string | undefined)[] = [...q.explanationWrong]
   options.splice(correctIndex, 0, q.correct)
   explanationWrong.splice(correctIndex, 0, undefined)
   return {
@@ -32,9 +34,9 @@ export function toQuestion(q: GeneratedQuestion, kind: Question['kind'], rand: (
     topic: q.topic.trim(),
     kind,
     prompt: q.prompt.trim(),
-    options: options as [string, string, string],
+    options,
     correctIndex,
     explanationCorrect: q.explanationCorrect.trim(),
-    explanationWrong: explanationWrong as [string?, string?, string?],
+    explanationWrong,
   }
 }

@@ -32,8 +32,8 @@ export const tutorRequestSchema = z
     why: z
       .object({
         prompt: z.string().max(500),
-        options: z.array(z.string().max(300)).length(3),
-        correctIndex: z.number().int().min(0).max(2),
+        options: z.array(z.string().max(300)).min(3).max(6),
+        correctIndex: z.number().int().min(0).max(5),
         chosenIndex: z.number().int().min(-1).max(2),
       })
       .optional(),

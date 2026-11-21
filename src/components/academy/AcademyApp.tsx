@@ -27,6 +27,7 @@ import { ResultsView } from './ResultsView'
 import { ShareBar } from './ShareBar'
 import { SHARE_COPY, shareCopyFor } from './copy/share'
 import { WaitNote } from './WaitNote'
+import { ChoiceOptionsPicker } from './ChoiceOptionsPicker'
 import { feedbackBody, recordAcademyError } from './feedback-context'
 import { prefetchLesson } from './lesson-loader'
 import { trackGrowth } from './SuccessShare'
@@ -215,7 +216,8 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
                 ...s,
                 draft: d,
                 quickCheck: sameCheck ? s.quickCheck : undefined,
-                programme: sameProgramme ? s.programme : undefined,
+                // The answer-option count is a test setting, not part of the program plan: an unchanged plan is kept with the new count.
+                programme: sameProgramme && s.programme ? { ...s.programme, choiceOptions: d.choiceOptions ?? 3 } : undefined,
                 view: sameProgramme ? 'programme' : 'diagnostic',
               }
             })
@@ -383,6 +385,9 @@ function SetupForm({
       <ChoiceGroup<TestMode> legend={tx.testsLegend} name="academy-tests" values={TEST_MODES} labels={tx.tests} value={draft.testMode} onChange={(v) => change({ testMode: v })} />
       {draft.testMode !== 'none' && (
         <ChoiceGroup<TestFormat> legend={tx.testFormatLegend} name="academy-test-format" values={TEST_FORMATS} labels={tx.testFormats} value={draft.testFormat ?? 'choice'} onChange={(v) => change({ testFormat: v })} />
+      )}
+      {draft.testMode !== 'none' && (draft.testFormat ?? 'choice') === 'choice' && (
+        <ChoiceOptionsPicker lang={lang} name="academy-choice-options" value={draft.choiceOptions ?? 3} onChange={(n) => change({ choiceOptions: n })} />
       )}
       {draft.testMode !== 'none' && (
         <ChoiceGroup<TestDifficulty> legend={tx.testDifficultyLegend} name="academy-test-difficulty" values={TEST_DIFFICULTIES} labels={tx.testDifficulties} value={draft.testDifficulty ?? 'medium'} onChange={(v) => change({ testDifficulty: v })} />
@@ -759,6 +764,7 @@ function toProgramme(
     testMode: d.testMode,
     testFormat: d.testFormat ?? 'choice',
     testDifficulty: d.testDifficulty ?? 'medium',
+    choiceOptions: d.choiceOptions ?? 3,
     diagnostic: { questions: qc.questions, answers: qc.answers, gaps: summary.gaps, estimatedLevel: summary.estimatedLevel },
     objectives: plan.objectives,
     lessons,

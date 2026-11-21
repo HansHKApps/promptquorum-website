@@ -11,6 +11,7 @@ import { langDirOf, htmlLangOf } from '@/lib/academy/language'
 import type { AcademyLang } from '@/lib/academy/types'
 import type { AcademyCopy } from './copy'
 import { creditLabel } from './credit'
+import { shareCopyFor } from './copy/share'
 import { formatPoints } from '@/lib/academy/format-points'
 
 const PX_W = 1240
@@ -205,7 +206,7 @@ export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: Acad
     [c.completed, formatDisplayDate(cert.completedAt, lang)],
     [c.activeTime, tx.minutes(cert.learningMinutes)],
     [c.testMode, tx.tests[cert.testMode].label],
-    [c.assessmentFormat, `${tx.testFormats[m.request.testFormat].label} · ${c.questionsCount(finalTotal)}`],
+    [c.assessmentFormat, `${tx.testFormats[m.request.testFormat].label}${m.request.testFormat === 'choice' ? ` (${shareCopyFor(lang).choiceN(m.request.choiceOptions)})` : ''} · ${c.questionsCount(finalTotal)}`],
     [c.attempts, String(m.attemptsCount)],
     [c.overall, `${cert.percent}% (${formatPoints(cert.correct, lang)}/${cert.total})`],
     [c.status, cert.percent >= cert.passMark ? c.passed : c.notPassed],
@@ -259,7 +260,7 @@ export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: Acad
   // ---- Assessment evidence
   d.section(c.sectionAssessment)
   d.heading(c.sectionAssessment)
-  d.para(`${tx.testFormats[m.request.testFormat].label} · ${c.questionsCount(finalTotal)} · ${c.passed}: ≥ ${cert.passMark}%`, { size: 24, weight: 700, gap: 6 })
+  d.para(`${tx.testFormats[m.request.testFormat].label}${m.request.testFormat === 'choice' ? ` (${shareCopyFor(lang).choiceN(m.request.choiceOptions)})` : ''} · ${c.questionsCount(finalTotal)} · ${c.passed}: ≥ ${cert.passMark}%`, { size: 24, weight: 700, gap: 6 })
   d.para(c.scoring(cert.passMark), { size: 19, color: INK, gap: 6 })
   d.para(c.assessmentLimit, { size: 19, color: MUTED, gap: 10 })
   for (const a of m.attempts) {

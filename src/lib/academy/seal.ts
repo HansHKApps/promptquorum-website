@@ -9,7 +9,7 @@ import type { OpenFormat, Question } from './types'
 export interface AnswerKey {
   /** question id the key belongs to (binds the token to one question) */
   id: string
-  correctIndex: 0 | 1 | 2
+  correctIndex: number
   explanationCorrect: string
   explanationWrong: (string | null)[]
 }
@@ -19,7 +19,7 @@ export type ClientQuestion = Omit<Question, 'correctIndex' | 'explanationCorrect
 
 export interface AnswerVerdict {
   correct: boolean
-  correctIndex: 0 | 1 | 2
+  correctIndex: number
   explanationCorrect: string
   /** the reason the chosen answer is wrong (null when correct, "not sure" or missing) */
   explanationChosen: string | null
@@ -50,7 +50,7 @@ export function openAnswerKey(token: string, secret?: string): AnswerKey | null 
     decipher.setAuthTag(raw.subarray(12, 28))
     const json = Buffer.concat([decipher.update(raw.subarray(28)), decipher.final()]).toString('utf8')
     const k = JSON.parse(json) as AnswerKey
-    return typeof k.id === 'string' && [0, 1, 2].includes(k.correctIndex) ? k : null
+    return typeof k.id === 'string' && Number.isInteger(k.correctIndex) && k.correctIndex >= 0 && k.correctIndex <= 5 ? k : null
   } catch {
     return null
   }
@@ -59,18 +59,18 @@ export function openAnswerKey(token: string, secret?: string): AnswerKey | null 
 /** Strips the key from a full question and seals it. */
 export function toClientQuestion(q: Question, secret?: string): ClientQuestion {
   const { correctIndex, explanationCorrect, explanationWrong, ...rest } = q
-  const sealed = sealAnswerKey({ id: q.id, correctIndex, explanationCorrect, explanationWrong: [0, 1, 2].map((i) => explanationWrong[i] ?? null) }, secret)
+  const sealed = sealAnswerKey({ id: q.id, correctIndex, explanationCorrect, explanationWrong: q.options.map((_, i) => explanationWrong[i] ?? null) }, secret)
   return { ...rest, sealed }
 }
 
-/** choice: option index 0-2, or -1 for "not sure". */
+/** choice: option index 0-5, or -1 for "not sure". */
 export function judgeAnswer(key: AnswerKey, choice: number): AnswerVerdict {
   const correct = choice === key.correctIndex
   return {
     correct,
     correctIndex: key.correctIndex,
     explanationCorrect: key.explanationCorrect,
-    explanationChosen: !correct && choice >= 0 && choice <= 2 ? (key.explanationWrong[choice] ?? null) : null,
+    explanationChosen: !correct && choice >= 0 && choice <= 5 ? (key.explanationWrong[choice] ?? null) : null,
   }
 }
 

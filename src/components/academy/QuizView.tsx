@@ -58,6 +58,7 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
       language: programme.language,
       selfLevel: programme.selfLevel,
       difficulty: programme.testDifficulty ?? 'medium',
+      optionCount: programme.choiceOptions ?? 3,
       availableMinutes: programme.availableMinutes,
       lessons: lessonSource(programme, ids, isFinal ? 2500 : 4000),
       objectives: programme.objectives,
@@ -174,7 +175,7 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
     setCheckError(null)
     setChecking(true)
     setPending(i)
-    const res = await postJson<{ correct: boolean; correctIndex: 0 | 1 | 2; explanationCorrect: string; explanationChosen: string | null }>('/api/academy/answer', { sealed: current.sealed, choice: i })
+    const res = await postJson<{ correct: boolean; correctIndex: number; explanationCorrect: string; explanationChosen: string | null }>('/api/academy/answer', { sealed: current.sealed, choice: i })
     setChecking(false)
     setPending(null)
     if (!res.ok) return setCheckError(res.code)

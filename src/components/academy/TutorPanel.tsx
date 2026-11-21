@@ -27,7 +27,7 @@ export interface TutorSeed {
   message?: string
   section?: { heading: string; body: string }
   selected?: string
-  why?: { prompt: string; options: [string, string, string]; correctIndex: number; chosenIndex: number }
+  why?: { prompt: string; options: string[]; correctIndex: number; chosenIndex: number }
   /** written formats: the graded answer, sent only after grading */
   whyOpen?: { prompt: string; answer: string; covered: string[]; missed: string[]; modelAnswer: string }
 }

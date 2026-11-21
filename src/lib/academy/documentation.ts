@@ -8,7 +8,7 @@ import type { Programme, Question, QuizQuestion, QuizResult } from './types'
 
 export interface DocQuestion {
   prompt: string
-  options: [string, string, string]
+  options: string[]
   /** -1 = "not sure" / unanswered */
   chosen: number
   correctIndex: number | null
@@ -49,7 +49,7 @@ export interface DocModel {
   attemptsCount: number
   objectives: string[]
   /** the learner's original request: level, planned time, test format */
-  request: { selfLevel: Programme['selfLevel']; availableMinutes: number; testFormat: NonNullable<Programme['testFormat']> }
+  request: { selfLevel: Programme['selfLevel']; availableMinutes: number; testFormat: NonNullable<Programme['testFormat']>; choiceOptions: number }
   /** per objective: the 1-based numbers and titles of the lessons that serve it */
   objectiveLessons: { number: number; title: string }[][]
   lessons: { title: string; estimatedMinutes: number; recordedMinutes: number }[]
@@ -92,7 +92,7 @@ export function documentationModel(p: Programme, cert: CertificateModel, languag
     languageName,
     attemptsCount: finals.length,
     objectives: p.objectives,
-    request: { selfLevel: p.selfLevel, availableMinutes: p.availableMinutes, testFormat: p.testFormat ?? 'choice' },
+    request: { selfLevel: p.selfLevel, availableMinutes: p.availableMinutes, testFormat: p.testFormat ?? 'choice', choiceOptions: p.choiceOptions ?? 3 },
     objectiveLessons: p.objectives.map((_, oi) => p.lessons.flatMap((l, li) => (l.objectiveIds.includes(oi) ? [{ number: li + 1, title: l.title }] : []))),
     lessons: p.lessons.map((l) => ({ title: l.title, estimatedMinutes: l.estimatedMinutes, recordedMinutes: Math.round((p.progress.lessonSeconds?.[l.id] ?? 0) / 60) })),
     totals: {
