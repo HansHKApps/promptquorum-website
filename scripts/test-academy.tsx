@@ -744,6 +744,14 @@ t('PDF pages: N pages, consistent xref, identical bytes for identical input', ()
   assert.deepEqual(a, jpegsToPdf([pg, pg, pg], info))
 })
 
+t('certificate PDF: link area becomes a clickable URI annotation, xref stays consistent', () => {
+  const jpeg = new Uint8Array([0xff, 0xd8, 0xff, 0xd9])
+  const url = 'https://www.promptquorum.com/academy/verify/PQA-2026-ABCDEFGHJK'
+  const pdf = jpegToPdf(jpeg, { w: 3508, h: 2480 }, { title: 'T', subject: 'S', keywords: 'K', created: new Date('2026-11-19T10:00:00Z') }, [{ x: 100, y: 100, w: 300, h: 40, url }])
+  const text = Buffer.from(pdf).toString('latin1')
+  assert.ok(text.includes('/Annots [7 0 R]') && text.includes(`/URI (${url})`) && text.includes('/Size 8') && text.includes('xref\n0 8'))
+})
+
 t('PDF pages: link areas become clickable URI annotations on their page', () => {
   const jpeg = new Uint8Array([0xff, 0xd8, 0xff, 0xd9])
   const base = { jpeg, px: { w: 1240, h: 1754 }, pt: { w: 595.28, h: 841.89 } }

@@ -118,6 +118,9 @@ function loadImage(src: string): Promise<HTMLImageElement | null> {
 }
 
 /** Draws the certificate. Exported for tests that want to look at the picture. */
+/** Clickable areas of the last drawn certificate canvas (image pixels), read when the PDF is assembled. */
+const certLinks = new WeakMap<HTMLCanvasElement, { x: number; y: number; w: number; h: number; url: string }[]>()
+
 export interface CertificateExtras {
   /** registered for online verification: the sequential number and a QR code to the verification page */
   registered?: boolean
@@ -233,6 +236,14 @@ export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateM
     ctx.lineWidth = 0.3 * MM
     ctx.strokeRect(originX, 142 * MM, qrMm * MM, qrMm * MM)
     p.line(x.scan, originX + (qrMm * MM) / 2, 175.2, { size: 2.8, color: MUTED, align: 'center' })
+    // The same address as a printed, clickable link next to the QR code (clickable in the PDF, readable on paper).
+    const url = verifyUrl(m.id)
+    const linkWmm = Math.min(colW - qrMm - 6, 100)
+    p.line(url, p.x(right), 180.6, { size: 2.7, weight: 600, color: '#1d4ed8' })
+    certLinks.set(canvas, [
+      { x: originX, y: 142 * MM, w: qrMm * MM, h: qrMm * MM, url },
+      { x: p.boxX(right, linkWmm), y: 177.8 * MM, w: linkWmm * MM, h: 4 * MM, url },
+    ])
   } else {
     p.paragraph(x.notRegistered, right, 173, colW, { size: 3.2, color: MUTED, maxLines: 2, leading: 4 })
   }
@@ -260,7 +271,13 @@ export function pdfString(s: string): string {
 }
 
 /** One-page A4 landscape PDF holding the JPEG. Pure bytes in, bytes out, so it can be unit-tested. */
-export function jpegToPdf(jpeg: Uint8Array, px: { w: number; h: number }, info: { title: string; subject: string; keywords: string; created: Date }): Uint8Array {
+export function jpegToPdf(
+  jpeg: Uint8Array,
+  px: { w: number; h: number },
+  info: { title: string; subject: string; keywords: string; created: Date },
+  /** clickable areas in image pixels from the top-left corner (link annotations, objects 7 and up) */
+  links: { x: number; y: number; w: number; h: number; url: string }[] = [],
+): Uint8Array {
   const parts: Uint8Array[] = []
   const offsets: number[] = []
   let length = 0
@@ -283,7 +300,7 @@ export function jpegToPdf(jpeg: Uint8Array, px: { w: number; h: number }, info: 
   push('%PDF-1.4\n%\xE2\xE3\xCF\xD3\n')
   obj(1, '<< /Type /Catalog /Pages 2 0 R >>')
   obj(2, '<< /Type /Pages /Kids [3 0 R] /Count 1 >>')
-  obj(3, `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${W} ${H}] /Resources << /XObject << /Im0 5 0 R >> >> /Contents 4 0 R >>`)
+  obj(3, `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${W} ${H}] /Resources << /XObject << /Im0 5 0 R >> >> /Contents 4 0 R${links.length ? ` /Annots [${links.map((_, i) => `${7 + i} 0 R`).join(' ')}]` : ''} >>`)
   const content = `q ${W} 0 0 ${H} 0 0 cm /Im0 Do Q`
   obj(4, `<< /Length ${content.length} >>\nstream\n${content}\nendstream`)
   obj(5, () => {
@@ -292,10 +309,17 @@ export function jpegToPdf(jpeg: Uint8Array, px: { w: number; h: number }, info: 
     push('\nendstream')
   })
   obj(6, `<< /Title ${pdfString(info.title)} /Subject ${pdfString(info.subject)} /Keywords ${pdfString(info.keywords)} /Producer (PromptQuorum Academy) /CreationDate (${date}) >>`)
+  links.forEach((l, i) => {
+    const kx = W / px.w
+    const ky = H / px.h
+    const r = [l.x * kx, H - (l.y + l.h) * ky, (l.x + l.w) * kx, H - l.y * ky].map((v) => v.toFixed(2))
+    obj(7 + i, `<< /Type /Annot /Subtype /Link /Rect [${r.join(' ')}] /Border [0 0 0] /A << /S /URI /URI ${pdfString(l.url)} >> >>`)
+  })
+  const count = 7 + links.length
   const xref = length
-  push(`xref\n0 7\n0000000000 65535 f \n`)
-  for (let n = 1; n <= 6; n++) push(`${String(offsets[n]).padStart(10, '0')} 00000 n \n`)
-  push(`trailer\n<< /Size 7 /Root 1 0 R /Info 6 0 R >>\nstartxref\n${xref}\n%%EOF\n`)
+  push(`xref\n0 ${count}\n0000000000 65535 f \n`)
+  for (let n = 1; n < count; n++) push(`${String(offsets[n]).padStart(10, '0')} 00000 n \n`)
+  push(`trailer\n<< /Size ${count} /Root 1 0 R /Info 6 0 R >>\nstartxref\n${xref}\n%%EOF\n`)
   const out = new Uint8Array(length)
   let at = 0
   for (const b of parts) {
@@ -310,6 +334,6 @@ export async function renderCertificatePdf(m: CertificateModel, tx: AcademyCopy,
   await drawCertificate(canvas, m, tx, lang, extras)
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/jpeg', 0.92))
   if (!blob) throw new Error('certificate: could not encode image')
-  const pdf = jpegToPdf(new Uint8Array(await blob.arrayBuffer()), { w: PX_W, h: PX_H }, { title: `${tx.cert.title} ${m.id}`, subject: m.subject, keywords: m.id, created: new Date(m.issuedAt) })
+  const pdf = jpegToPdf(new Uint8Array(await blob.arrayBuffer()), { w: PX_W, h: PX_H }, { title: `${tx.cert.title} ${m.id}`, subject: m.subject, keywords: m.id, created: new Date(m.issuedAt) }, certLinks.get(canvas) ?? [])
   return new Blob([pdf as BlobPart], { type: 'application/pdf' })
 }
