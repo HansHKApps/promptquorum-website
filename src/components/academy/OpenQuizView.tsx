@@ -6,6 +6,7 @@
 // The quiz in progress is kept in the stored programme like the multiple-choice quiz, so a reload continues.
 // Nothing here is a different pass mark: points are pooled with the other quizzes by scoring.ts.
 
+import { FinishedCard } from './FinishedCard'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { OPEN_ANSWER_MAX_CHARS } from '@/lib/academy/schemas'
 import { scoreOpenQuiz } from '@/lib/academy/scoring'
@@ -72,22 +73,24 @@ export function OpenQuizView({ tx, programme, update, postJson, errorText }: { t
   if (finished) {
     const next = lessonIndex >= 0 && lessonIndex + 1 < programme.lessons.length ? lessonIndex + 1 : -1
     return (
-      <section className="space-y-4 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6" aria-live="polite">
-        <h2 className="text-xl font-semibold text-gray-900">{isFinal ? tx.finalTestTitle : tx.lessonQuizTitle(lessonIndex + 1)}</h2>
-        <p className="text-lg text-gray-800">{tx.quizPoints(finished.result.correct, finished.result.total)}</p>
-        <p className="text-sm text-gray-600">{tx.aiGradedNotice}</p>
-        <button
-          type="button"
-          onClick={() =>
+      <FinishedCard
+        tx={tx}
+        title={isFinal ? tx.finalTestTitle : tx.lessonQuizTitle(lessonIndex + 1)}
+        scoreLine={tx.quizPoints(finished.result.correct, finished.result.total)}
+        correct={finished.result.correct}
+        total={finished.result.total}
+        isFinal={isFinal}
+        buttonLabel={isFinal ? tx.seeResults : tx.continueLessons}
+        onContinue={() =>
+() =>
             update((s) =>
               isFinal ? { ...s, view: 'results' } : next >= 0 && s.programme ? { ...s, view: 'lesson', programme: { ...s.programme, progress: { ...s.programme.progress, currentLesson: next } } } : { ...s, view: 'programme' },
             )
-          }
-          className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700"
-        >
-          {isFinal ? tx.seeResults : tx.continueLessons}
-        </button>
-      </section>
+          
+        }
+      >
+        <p className="text-sm text-gray-600">{tx.aiGradedNotice}</p>
+      </FinishedCard>
     )
   }
 

@@ -645,6 +645,7 @@ t('F5: the model carries every field of SPEC 10 and the passing attempt', () => 
 t('F5: filename follows the spec; non-Latin subjects fall back to "programme"', () => {
   assert.equal(certificateFilename('Quantization on 16 GB RAM!', 'PQA-2026-ABCDEFGHJK'), 'PromptQuorum-Academy-Certificate-quantization-on-16-gb-ram-PQA-2026-ABCDEFGHJK.pdf')
   assert.equal(certificateFilename('ローカルLLM', 'PQA-2026-ABCDEFGHJK'), 'PromptQuorum-Academy-Certificate-llm-PQA-2026-ABCDEFGHJK.pdf')
+  assert.equal(certificateFilename('Local LLMs', 'PQA-2026-ABCDEFGHJK', { name: 'Anna Müller', completedAt: '2026-11-21T12:00:00' }), 'PromptQuorum-Academy-Certificate-local-llms-anna-muller-2026-11-21-PQA-2026-ABCDEFGHJK.pdf')
   assert.equal(certificateFilename('日本語', 'PQA-2026-ABCDEFGHJK'), 'PromptQuorum-Academy-Certificate-programme-PQA-2026-ABCDEFGHJK.pdf')
 })
 

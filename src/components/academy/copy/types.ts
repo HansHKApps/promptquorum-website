@@ -159,6 +159,12 @@ export interface AcademyBaseCopy {
   continueQuiz: string
   startFinalTest: string
   seeResults: string
+  congratsPerfect: string
+  congratsPassed: string
+  finalNextSteps: string
+  notPassedYet: string
+  wellDone: string
+  seeResultsCertificate: string
   resultsTitle: string
   overallScore: (percent: number) => string
   passedText: (mark: number) => string

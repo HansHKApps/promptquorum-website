@@ -39,8 +39,8 @@ export function certificateBlocker(p: Programme, name: string): CertificateBlock
 }
 
 /** `PromptQuorum-Academy-Course-Documentation-<subject-slug>-<ID>.pdf` (SPEC 12.1). */
-export function documentationFilename(subject: string, id: string): string {
-  return certificateFilename(subject, id).replace('-Certificate-', '-Course-Documentation-')
+export function documentationFilename(subject: string, id: string, extra?: { name?: string; completedAt?: string }): string {
+  return certificateFilename(subject, id, extra).replace('-Certificate-', '-Course-Documentation-')
 }
 
 export interface CertificateModel {
@@ -90,14 +90,30 @@ export function certificateModel(p: Programme, name: string, now: Date = new Dat
   }
 }
 
-/** `PromptQuorum-Academy-Certificate-<subject-slug>-<ID>.pdf` (SPEC 10). Non-Latin subjects fall back to "programme". */
-export function certificateFilename(subject: string, id: string): string {
-  const slug = subject
+function slugOf(text: string, max: number): string {
+  return text
     .normalize('NFKD')
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
-    .slice(0, 40)
-  return `PromptQuorum-Academy-Certificate-${slug || 'programme'}-${id}.pdf`
+    .slice(0, max)
+    .replace(/-+$/g, '')
+}
+
+/** Local calendar date of an ISO timestamp as YYYY-MM-DD ('' if unreadable). */
+function fileDate(iso: string): string {
+  const d = new Date(iso)
+  if (Number.isNaN(d.getTime())) return ''
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+}
+
+/**
+ * `PromptQuorum-Academy-Certificate-<subject-slug>[-<learner-name>][-<YYYY-MM-DD course finished>]-<ID>.pdf` (SPEC 10).
+ * Non-Latin subjects fall back to "programme"; a name with no Latin letters is left out. The name is only used for the
+ * file name on the learner's own computer.
+ */
+export function certificateFilename(subject: string, id: string, extra?: { name?: string; completedAt?: string }): string {
+  const parts = [slugOf(subject, 40) || 'programme', slugOf(extra?.name ?? '', 30), extra?.completedAt ? fileDate(extra.completedAt) : '']
+  return `PromptQuorum-Academy-Certificate-${parts.filter(Boolean).join('-')}-${id}.pdf`
 }

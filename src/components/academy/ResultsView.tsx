@@ -93,10 +93,10 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
       const docBytes = await renderDocumentationPdf(documentationModel(programme, model, languageName, number), txc, certLang, programme.language)
       // Step 2: the fingerprint of exactly this documentation file is stored once, for the check on the verification page.
       if (number && !registeredNumber) await post('/api/academy/register', { id: model.id, issuedAt: model.issuedAt, percent: model.percent, minutes: model.learningMinutes, subject: model.subject, language: programme.language, testMode: model.testMode, hash: await sha256Hex(docBytes) })
-      setDocBlob({ blob: new Blob([docBytes as BlobPart], { type: 'application/pdf' }), filename: documentationFilename(model.subject, model.id) })
+      setDocBlob({ blob: new Blob([docBytes as BlobPart], { type: 'application/pdf' }), filename: documentationFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt }) })
       const blob = await renderCertificatePdf(model, txc, certLang, { registered: !!number, number })
       update((st) => (st.programme ? { ...st, programme: { ...st.programme, certificate: { id: model.id, learnerName: model.name, issuedAt: model.issuedAt, number } } } : st))
-      saveBlob(blob, certificateFilename(model.subject, model.id))
+      saveBlob(blob, certificateFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt }))
       // Anonymous total only (no body beyond the event type); never blocks or fails the download.
       postEvent({ type: 'certificate' })
     } catch (err) {
@@ -117,7 +117,7 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
       if (!programme.certificate) update((st) => (st.programme ? { ...st, programme: { ...st.programme, certificate: { id: model.id, learnerName: model.name, issuedAt: model.issuedAt } } } : st))
       const bytes = await renderDocumentationPdf(documentationModel(programme, model, languageName, registeredNumber), ACADEMY_COPY[certLang], certLang, programme.language)
       const blob = new Blob([bytes as BlobPart], { type: 'application/pdf' })
-      saveBlob(blob, documentationFilename(model.subject, model.id))
+      saveBlob(blob, documentationFilename(model.subject, model.id, { name: model.name, completedAt: model.completedAt }))
     } catch (err) {
       console.error('[academy] documentation failed', err instanceof Error ? err.message : err)
       setCertError(true)

@@ -4,6 +4,7 @@
 // options, immediate feedback with the explanation, a short result at the end. The quiz in progress (questions and
 // answers) is kept in the stored programme, so a reload continues where the learner was.
 
+import { FinishedCard } from './FinishedCard'
 import { Mark, press, type MarkState } from './press'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { scoreQuiz } from '@/lib/academy/scoring'
@@ -84,21 +85,23 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
   if (finished) {
     const next = lessonIndex >= 0 && lessonIndex + 1 < programme.lessons.length ? lessonIndex + 1 : -1
     return (
-      <section className="space-y-4 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6" aria-live="polite">
-        <h2 className="text-xl font-semibold text-gray-900">{isFinal ? tx.finalTestTitle : tx.lessonQuizTitle(lessonIndex + 1)}</h2>
-        <p className="text-lg text-gray-800">{tx.quizScore(finished.result.correct, finished.result.total)}</p>
-        <button
-          type="button"
-          onClick={() =>
+      <FinishedCard
+        tx={tx}
+        title={isFinal ? tx.finalTestTitle : tx.lessonQuizTitle(lessonIndex + 1)}
+        scoreLine={tx.quizScore(finished.result.correct, finished.result.total)}
+        correct={finished.result.correct}
+        total={finished.result.total}
+        isFinal={isFinal}
+        buttonLabel={isFinal ? tx.seeResults : tx.continueLessons}
+        onContinue={() =>
+() =>
             update((s) =>
               isFinal ? { ...s, view: 'results' } : next >= 0 && s.programme ? { ...s, view: 'lesson', programme: { ...s.programme, progress: { ...s.programme.progress, currentLesson: next } } } : { ...s, view: 'programme' },
             )
-          }
-          className="rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700"
-        >
-          {isFinal ? tx.seeResults : tx.continueLessons}
-        </button>
-      </section>
+          
+        }
+      >
+      </FinishedCard>
     )
   }
 
