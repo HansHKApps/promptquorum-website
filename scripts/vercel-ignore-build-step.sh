@@ -1,31 +1,21 @@
 #!/usr/bin/env bash
 # Vercel "Ignored Build Step" — exit 0 skips the build, exit 1 proceeds.
 #
-# Two independent gates, checked in order:
+# Gates, checked in order:
 #
-#   1. Docs-only skip (existing behavior, unchanged): commits touching only
-#      *.md files or docs/ can't affect the deployed app — skip.
+#   1. Docs-only skip: commits touching only *.md files or docs/ can't affect
+#      the deployed app — skip.
 #
-#   2. (OBSOLETE, replaced by on-demand deploys — see bottom of file.)
-#      Former throttle: the live production site
-#      serves /build-info.json, written at build time by
-#      scripts/write-build-info.mjs (npm "prebuild"). If the live build is
-#      younger than THROTTLE_HOURS, skip this build. Commits keep landing on
-#      main; the first push after the window expires builds and picks up
-#      everything accumulated since. Rationale: every production build
-#      rewrites the ISR cache for all prerendered URLs (ISR write costs).
+#   2. Preview deployments are disabled; opt in per commit with [preview].
 #
-# The throttle applies ONLY to production (VERCEL_ENV=production). Preview
-# deployments keep today's behavior. Escape hatch: put [force-deploy]
-# anywhere in the commit message.
+#   3. Production builds are ON DEMAND ONLY. Pushes to main just collect work;
+#      scripts/deploy.sh pushes one empty commit carrying [force-deploy], which
+#      is the only thing that builds production. (This replaced the old 3-hour
+#      build throttle, so a batch of merged work always becomes ONE build.)
 #
-# No secrets required. On ANY error (endpoint missing, network, bad JSON)
-# the script FAILS OPEN and builds — the throttle can never block a deploy.
+# No secrets required.
 set -uo pipefail
 
-THROTTLE_HOURS="${THROTTLE_HOURS:-3}"
-PROD_HOST="${VERCEL_PROJECT_PRODUCTION_URL:-www.promptquorum.com}"
-BUILD_INFO_URL="https://${PROD_HOST}/build-info.json"
 
 # ---------------------------------------------------------------------------
 # Gate 1: docs-only skip (unchanged from the original script)
@@ -62,7 +52,7 @@ if docs_only_check; then
 fi
 
 # ---------------------------------------------------------------------------
-# Gate 2: production build throttle (token-free)
+# Gate 2: previews are disabled
 # ---------------------------------------------------------------------------
 # Preview deployments are not used here — every pushed branch was producing a
 # preview build nobody looked at, burning build minutes and cluttering the
@@ -80,14 +70,13 @@ fi
 
 case "${VERCEL_GIT_COMMIT_MESSAGE:-}" in
   *"[force-deploy]"*)
-    echo "[force-deploy] flag found in commit message; bypassing throttle. Proceeding."
+    echo "[force-deploy] flag found in commit message; shipping this production build on demand. Proceeding."
     exit 1
     ;;
 esac
 
-# Production builds are ON DEMAND ONLY. Pushes to main just collect work;
+# Gate 3: production builds are ON DEMAND ONLY. Pushes to main just collect work;
 # nothing deploys until someone ships with scripts/deploy.sh (which pushes an
-# empty commit carrying [force-deploy], handled above). This replaces the old
-# 3-hour throttle so a batch of merged work always becomes ONE build.
+# empty commit carrying [force-deploy], handled above).
 echo "Production build skipped: deploys are on demand. Run scripts/deploy.sh (or put [force-deploy] in the commit message) to ship everything on main."
 exit 0
