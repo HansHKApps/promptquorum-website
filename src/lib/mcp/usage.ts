@@ -5,6 +5,7 @@
 
 import { unstable_cache } from 'next/cache'
 import { redis } from '@/lib/redis'
+import { keepLastGood } from '@/lib/lastGood'
 
 export const MCP_TOOL_NAMES = [
   'search_promptquorum',
@@ -83,7 +84,7 @@ function lastNDaysUtc(n: number): string[] {
  * force-static build, which would otherwise fail the entire `next build`.
  * Callers get an all-zero snapshot instead of a thrown error.
  */
-export async function getMcpUsageSnapshot(): Promise<UsageSnapshot> {
+async function readMcpUsageSnapshot(): Promise<UsageSnapshot> {
   const zeroed = Object.fromEntries(MCP_TOOL_NAMES.map((t) => [t, 0])) as Record<McpToolName, number>
   const fallback: UsageSnapshot = {
     total: 0,
@@ -95,7 +96,7 @@ export async function getMcpUsageSnapshot(): Promise<UsageSnapshot> {
     generatedAt: new Date().toISOString(),
   }
 
-  try {
+  {
     const dates = lastNDaysUtc(TREND_DAYS)
     const today = dates[dates.length - 1]
     // One MGET: the lifetime keys, then one daily key per tool per day. The
@@ -139,11 +140,24 @@ export async function getMcpUsageSnapshot(): Promise<UsageSnapshot> {
       days: dates.map((date, i) => ({ date, calls: dayTotals[i] })),
       generatedAt: fallback.generatedAt,
     }
-  } catch (err) {
-    console.error('[mcp usage] failed to read snapshot', err)
-    return fallback
   }
 }
+
+const emptyMcpSnapshot = (floor?: Record<string, number | string | null>): UsageSnapshot => {
+  const zeroed = Object.fromEntries(MCP_TOOL_NAMES.map((t) => [t, 0])) as Record<McpToolName, number>
+  return {
+    total: Number(floor?.total ?? 0),
+    byTool: { ...zeroed },
+    today: { ...zeroed },
+    last7: { ...zeroed },
+    last30: { ...zeroed },
+    days: lastNDaysUtc(TREND_DAYS).map((date) => ({ date, calls: 0 })),
+    generatedAt: new Date().toISOString(),
+  }
+}
+
+/** Never shows a failed read as zero: on a Redis error it returns the last good snapshot (see lastGood.ts). */
+export const getMcpUsageSnapshot = (): Promise<UsageSnapshot> => keepLastGood('mcp:snapshot', readMcpUsageSnapshot, emptyMcpSnapshot)
 
 /**
  * Same data as getMcpUsageSnapshot(), wrapped in Next's unstable_cache so it
@@ -166,7 +180,8 @@ export async function getMcpUsageSnapshot(): Promise<UsageSnapshot> {
  * still belongs on the `force-dynamic` /mcp-stats page, which should call
  * getMcpUsageSnapshot() directly instead.
  */
-export const getMcpUsageSnapshotCached = unstable_cache(getMcpUsageSnapshot, ['mcp-usage-snapshot'], {
+const readMcpUsageSnapshotCachedOrThrow = unstable_cache(readMcpUsageSnapshot, ['mcp-usage-snapshot'], {
   revalidate: 86400,
   tags: ['mcp-usage'],
 })
+export const getMcpUsageSnapshotCached = (): Promise<UsageSnapshot> => keepLastGood('mcp:snapshot', readMcpUsageSnapshotCachedOrThrow, emptyMcpSnapshot)

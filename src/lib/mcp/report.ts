@@ -3,6 +3,7 @@
 // language counters (usage-dimensions.ts). A Redis outage yields an all-zero report, never an error.
 
 import { redis } from '@/lib/redis'
+import { keepLastGood } from '@/lib/lastGood'
 import { MCP_TOOL_NAMES } from './usage'
 import { REPORT_DAYS, lastNDaysUtc, rankRows, windowsOf, zeroCounts } from '@/lib/usage/report-types'
 import type { ReportRow, UsageReportBase, WindowCounts } from '@/lib/usage/report-types'
@@ -29,7 +30,7 @@ function empty(dates: string[]): McpReport {
   }
 }
 
-export async function getMcpReport(): Promise<McpReport> {
+async function readMcpReport(): Promise<McpReport> {
   const dates = lastNDaysUtc(REPORT_DAYS)
   const report = empty(dates)
   try {
@@ -90,7 +91,10 @@ export async function getMcpReport(): Promise<McpReport> {
     for (const bucket of Object.values(prefixes)) report[bucket] = rankRows(rows[bucket])
   } catch (err) {
     console.error('[mcp usage] failed to read report', err instanceof Error ? err.message : err)
-    return empty(dates)
+    throw err
   }
   return report
 }
+
+/** Never shows a failed read as zeros: on a Redis error it returns the last good report (see lastGood.ts). */
+export const getMcpReport = () => keepLastGood('mcp:report', readMcpReport, () => empty(lastNDaysUtc(REPORT_DAYS)))

@@ -3,6 +3,7 @@
 
 import { unstable_cache } from 'next/cache'
 import { redis } from '@/lib/redis'
+import { keepLastGood } from '@/lib/lastGood'
 import { recordAcademyDay } from './day-store'
 
 export const ACADEMY_COUNTERS = ['programme', 'lesson', 'test', 'certificate', 'feedback_mail'] as const
@@ -95,9 +96,7 @@ export interface AcademyTotals {
   since: string | null
 }
 
-async function readTotals(): Promise<AcademyTotals> {
-  const zero: AcademyTotals = { programmes: 0, lessons: 0, tests: 0, certificates: 0, certificatesRegistered: 0, since: null }
-  try {
+async function readTotalsOrThrow(): Promise<AcademyTotals> {
     const [programmes, legacy, lessons, tests, certificates, registered, since] = await redis.mget<(number | string | null)[]>(
       key('programme'),
       LEGACY_PROGRAMMES_KEY,
@@ -115,14 +114,16 @@ async function readTotals(): Promise<AcademyTotals> {
       certificatesRegistered: Number(registered ?? 0),
       since: typeof since === 'string' && /^\d{4}-\d{2}-\d{2}/.test(since) ? since : null,
     }
-  } catch (err) {
-    console.error('[academy usage] failed to read totals', err instanceof Error ? err.message : err)
-    return zero
-  }
 }
 
-/** Cached like the MCP counter, so statically rendered pages stay static (refreshes once a day). */
-export const getAcademyTotals = unstable_cache(readTotals, ['academy-totals'], { revalidate: 86400, tags: ['academy-usage'] })
+const emptyTotals = (): AcademyTotals => ({ programmes: 0, lessons: 0, tests: 0, certificates: 0, certificatesRegistered: 0, since: null })
+
+/** Never shows a failed read as zero: on a Redis error it returns the last good totals (see lastGood.ts). */
+const readTotals = (): Promise<AcademyTotals> => keepLastGood('academy:totals', readTotalsOrThrow, emptyTotals)
+
+/** Cached like the MCP counter, so statically rendered pages stay static (refreshes once a day). A throw is never cached. */
+const readTotalsCachedOrThrow = unstable_cache(readTotalsOrThrow, ['academy-totals'], { revalidate: 86400, tags: ['academy-usage'] })
+export const getAcademyTotals = (): Promise<AcademyTotals> => keepLastGood('academy:totals', readTotalsCachedOrThrow, emptyTotals)
 /** Uncached read for the /academy entrance page (like Ask Hans: live counters, never cached). */
 export const getAcademyTotalsLive = readTotals
 export const getAcademyProgrammesTotal = async () => (await getAcademyTotals()).programmes

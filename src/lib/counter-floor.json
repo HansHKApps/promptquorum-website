@@ -1,0 +1,5 @@
+{
+  "_comment": "Last values known to be real, used only while Redis is unreachable and this server process has no earlier good read. Counters only grow, so raise these occasionally; never lower them.",
+  "askhans:totals": { "answers": 704 },
+  "mcp:snapshot": { "total": 3148 }
+}
