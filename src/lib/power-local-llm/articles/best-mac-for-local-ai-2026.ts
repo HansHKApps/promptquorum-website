@@ -2343,18 +2343,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
     last_seo_review: '2026-10-17',
     theme: 'Overview & Reference',
-    title: 'ローカルAIに最適なMac 2026：Mac mini vs Mac Studio vs MacBook Pro',
-    seoTitle: 'ローカルAI用Mac 2026：Mini vs Studio vs MBP比較',
+    title: 'ローカルAIおすすめMac 2026：Mac mini vs Mac Studio vs MacBook Pro',
+    seoTitle: 'ローカルAI用おすすめMac 2026：Mini vs Studio vs MBP',
     intro:
-      'Mac選びの多くのアドバイスはチップ名にとらわれがちですが、購入判断を実際に左右する数値はunified memoryです。Apple Siliconではモデルが他のすべてと同じメモリプールに置かれるため、64GBのMac miniは34Bモデルを動かせますが、32GBのMac miniには収まりません。Appleは2026年8月25日にMac miniとMac Studioのラインアップを刷新しました（2026年9月22日から出荷中）。本ガイドでは、新しいハードウェアでローカルLLMを動かすための4つの階層——エントリーの常時稼働サーバーとしてのMac mini M6、より高性能なサーバーとしてのMac mini M5 Pro、ポータブルワークステーションとしてのMacBook Pro 16"（M5 ProまたはM5 Max）、デスクトップおよび超大容量メモリの選択肢としてのMac Studio（M5 MaxまたはM5 Ultra）——を、購入を決める数値、すなわちunified memory、メモリ帯域幅、実測のtokens per second、価格で比較します。2点の注意があります。第一に、Appleが示す開始価格は基本メモリ構成のものであり、ローカルLLMに必要なメモリ量のものではありません——$899のMac mini M6は16GB、$1,699のMac mini M5 Proは24GB、$2,499のMac Studio M5 Maxは36GBです——そのため、本ガイドで推奨する構成はより高価になります（32GBのM6は約$1,300、64GBのM5 Proは約$2,700、128GBのMac Studio M5 Maxは約$5,100）。第二に、新チップの独立したテストはまだ乏しい状況です。あるハンズオンテストが小さなモデルでM6とM5 ProのMac miniを測定したにとどまり、M5 MaxとM5 Ultraについては独立した70B測定を見つけられませんでした。そのため、これらのチップの性能値はApple自身の数値であり、その旨を明示しています。価格は最終更新時点の米国定価です。購入前に現在のApple Storeの価格を確認してください。',
+      'Mac選びの多くのアドバイスはチップ名にとらわれがちですが、購入判断を実際に左右する数値はunified memoryです。Apple Siliconではモデルが他のすべてと同じメモリプールに置かれるため、64GBのMac miniは34Bモデルを動かせますが、32GBのMac miniには収まりません。Appleは2026年8月25日にMac miniとMac Studioのラインアップを刷新しました（2026年9月22日から出荷中）。本ガイドでは、新しいハードウェアでローカルLLMを動かすための4つの階層——エントリーの常時稼働サーバーとしてのMac mini M6、より高性能なサーバーとしてのMac mini M5 Pro、ポータブルワークステーションとしてのMacBook Pro 16"（M5 ProまたはM5 Max）、デスクトップおよび超大容量メモリの選択肢としてのMac Studio（M5 MaxまたはM5 Ultra）——を、購入を決める数値、すなわちunified memory、メモリ帯域幅、実測のtokens per second、価格で比較します。2点の注意があります。第一に、Appleが示す開始価格は基本メモリ構成のものであり、ローカルLLMに必要なメモリ量のものではありません——$899のMac mini M6は16GB、$1,699のMac mini M5 Proは24GB、$2,499のMac Studio M5 Maxは36GBです——そのため、本ガイドで推奨する構成はより高価になります（32GBのM6は約$1,300、64GBのM5 Proは約$2,700、128GBのMac Studio M5 Maxは約$5,100）。第二に、新チップの独立したテストはまだ乏しい状況です。あるハンズオンテストが小さなモデルでM6とM5 ProのMac miniを測定したにとどまり、M5 MaxとM5 Ultraについては独立した70B測定を見つけられませんでした。そのため、これらのチップの性能値はApple自身の数値であり、その旨を明示しています。本ページの$表記は米ドルの米国価格で、日本での販売価格は税・輸入コスト・為替・販売店により異なります。購入前にApple Store（apple.com/jp）の税込価格を確認し、価格.comで比較してください。',
     metaDescription:
-      'Mac mini M6 32GBは約$1,300、M5 Pro 64GBは約$2,700。Mac Studio M5 Max 128GBは約$5,100、M5 Ultraは$5,499から。unified memory・帯域幅・実際の価格を比較。',
+      'おすすめMac比較：Mac mini M6 32GBは米国価格で約$1,300、M5 Pro 64GBは約$2,700、Mac Studio M5 Max 128GBは約$5,100。日本の価格は価格.comで確認。',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ja.webp',
     twitterDescription:
       'ローカルAI向けMac mini M6 vs M5 Pro vs MacBook Pro vs Mac Studio M5 Max/M5 Ultraを32〜256GBの実際の価格で比較。ルールは一つ：まずunified memory、次に帯域幅。',
@@ -2394,12 +2394,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルai おすすめ mac mini',
     ],
     leadAnswerBlock:
-      '**ローカルAIに最適なMacは、unified memoryがあなたのモデルに合うものです。32GBのMac mini M6（約$1,300）は7B-14Bモデルをカバーし、64GBのMac mini M5 Pro（約$2,700）またはMacBook Pro M5 Proは34Bと70B Q4を余裕の少ない状態で処理し、128GBのMac Studio M5 Max（約$5,100）はより高品質な70B向けのデスクトップ選択肢であり、Mac Studio M5 Ultra（96GBで$5,499から、256GBで約$9,500、最大512GB）は最大のローカルモデル向けの極端な選択肢です。**',
+      '**ローカルAIに最適なMacは、unified memoryがあなたのモデルに合うものです。32GBのMac mini M6（米国価格で約$1,300）は7B-14Bモデルをカバーし、64GBのMac mini M5 Pro（約$2,700）またはMacBook Pro M5 Proは34Bと70B Q4を余裕の少ない状態で処理し、128GBのMac Studio M5 Max（約$5,100）はより高品質な70B向けのデスクトップ選択肢であり、Mac Studio M5 Ultra（96GBで$5,499から、256GBで約$9,500、最大512GB）は最大のローカルモデル向けの極端な選択肢です。** 価格はすべて米ドルの米国価格で、日本での販売価格は税・為替・販売店により異なります。価格.comなどで確認してください。',
     quickAnswerTop: {
       ja: {
         question: '2026年にローカルLLMを動かすにはどのMacを買うべきですか？',
         answer:
-          'まずunified memoryで、次に帯域幅で選びます——そしてチップではなくメモリに値段をつけて考えてください。Appleの開始価格は基本メモリ構成のみのものです。Mac mini M6 32GB（約$1,300；$899のベースモデルは16GB）はエントリーの選択肢で7B-14Bモデルをカバーします——30Bや70Bモデルは収まりません。Mac mini M5 Pro 64GB（約$2,700；$1,699のベースモデルは24GB）は本格的な用途向けのコストパフォーマンスの選択肢で、常時稼働サーバーとして34Bモデルを静かに動かします。MacBook Pro 16" M5 Pro 64GBは34B-70B Q4向けのポータブルの選択肢で、M5 Max 128GBはQ5で70Bを動かします。Mac Studio M5 Max（64GBで約$3,500、128GBで約$5,100）はMac mini M5 Proの2倍の帯域幅を持つデスクトップの選択肢で、Mac Studio M5 Ultra（96GBで$5,499から、256GBで約$9,500、最大512GB）は最大のローカルモデル向けの極端な選択肢です。これらはすべて2026年9月22日に出荷されましたが、M5 Ultraの512GB構成のみ2026年10月下旬の出荷です。',
+          'まずunified memoryで、次に帯域幅で選びます——そしてチップではなくメモリに値段をつけて考えてください。Appleの開始価格は基本メモリ構成のみのものです。Mac mini M6 32GB（約$1,300；$899のベースモデルは16GB）はエントリーの選択肢で7B-14Bモデルをカバーします——30Bや70Bモデルは収まりません。Mac mini M5 Pro 64GB（約$2,700；$1,699のベースモデルは24GB）は本格的な用途向けのコストパフォーマンスの選択肢で、常時稼働サーバーとして34Bモデルを静かに動かします。MacBook Pro 16" M5 Pro 64GBは34B-70B Q4向けのポータブルの選択肢で、M5 Max 128GBはQ5で70Bを動かします。Mac Studio M5 Max（64GBで約$3,500、128GBで約$5,100）はMac mini M5 Proの2倍の帯域幅を持つデスクトップの選択肢で、Mac Studio M5 Ultra（96GBで$5,499から、256GBで約$9,500、最大512GB）は最大のローカルモデル向けの極端な選択肢です。これらはすべて2026年9月22日に出荷されましたが、M5 Ultraの512GB構成のみ2026年10月下旬の出荷です。ここで示した$は米国価格です。日本での価格は税・為替・販売店で異なるため、Apple Store（apple.com/jp）と価格.comで確認してください。',
         bullets: [
           'エントリー：Mac mini M6 32GB、約$1,300、7B-14Bモデルのみ（32GBのメモリ上限）',
           'コスパ／常時稼働サーバー：Mac mini M5 Pro 64GB、約$2,700、34Bモデルと余裕の少ない70B Q4',
@@ -2436,7 +2436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**unified memoryが拘束的な制約です。** Apple Siliconではモデルがシステムと一つのメモリプールを共有します——unified memoryに収まらないモデルは動きません。ターゲットモデルにメモリが合うMacを選び、その後で帯域幅とフォームファクターを最適化してください。',
           '**メモリは購入後にアップグレードできません。** Apple Siliconのunified memoryは基板に直付けされています。買ったものが恒久的な構成です——今だけでなく2年後に動かしたいモデルに合わせて容量を決めてください。',
-          '**エントリーの選択：Mac mini M6 32GB（約$1,300）** ——Appleの2026年8月25日刷新のエントリーチップ、170GB/sの帯域幅、32GBのメモリ上限は7B-14Bモデルのみをカバー；30Bや70Bには不十分です。広告されている$899は16GBモデルの価格です。',
+          '**エントリーの選択：Mac mini M6 32GB（米国価格で約$1,300）** ——Appleの2026年8月25日刷新のエントリーチップ、170GB/sの帯域幅、32GBのメモリ上限は7B-14Bモデルのみをカバー；30Bや70Bには不十分です。広告されている$899は16GBモデルの価格です。',
           '**コスパ／サーバーの選択：Mac mini M5 Pro 64GB（約$2,700）** ——静音、負荷時25-55W（推定）、電気代は年間約¥4,000-6,000、64GBで34Bモデルを動かし、70B Q4を余裕の少ない状態で収めます。広告されている$1,699は24GBモデルの価格です。',
           '**ポータブルの選択：MacBook Pro 16" M5 Pro 64GB（約$3,000-3,400）またはM5 Max 128GB（約$5,000以上）** ——307-614GB/sの帯域幅、70BをQ4からQ5まで実行。ポータビリティと引き換えに、持続負荷時にスロットリングが発生することがあります（程度は負荷や筐体により異なります）。',
           '**デスクトップの選択：Mac Studio M5 Max 64GB（約$3,500）または128GB（約$5,100）** ——614GB/sの帯域幅で、128GBモデルならQ5の70Bを動かします。2026年9月22日から出荷中；独立したベンチマークはまだ見つかっていません。',
@@ -2459,7 +2459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Q4_K_Mでのunified memoryの目安：** パラメータ10億あたり約0.6GB、加えてコンテキストとツール用に2-4GB。',
           '**メモリ帯域幅：** Mac mini M6 170GB/s、M5 Pro 307GB/s、M5 Max 460-614GB/s、M5 Ultra 1.2TB/s。',
           '**消費電力の範囲：** Mac mini M5 Pro 25-55W（推定）、MacBook Pro M5 Max 60-100W（推定）（LLM負荷時）。',
-          '**入手性：** 2026年8月25日のMac miniとMac Studioの刷新は2026年9月22日から出荷されています（M5 Ultraの512GB構成のみ2026年10月下旬）——購入前に現在のApple Storeの価格を確認してください。',
+          '**入手性：** 2026年8月25日のMac miniとMac Studioの刷新は2026年9月22日から出荷されています（M5 Ultraの512GB構成のみ2026年10月下旬）——本ページの$は米国価格です。日本の価格はApple Store（apple.com/jp）と価格.comで確認してください。',
         ],
       },
       editorsChoice: {
@@ -2495,7 +2495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026年のローカルAIでMacはどう比較されるか',
         content:
-          'メモリと帯域幅の数値はApple仕様です。MacBook Proの速度は目安となる推定値です。範囲はリンク先のM5 Pro vs M5 Maxベンチマークページを参照してください。本ガイドのために再測定したものではありません。Mac miniの行の速度は、基本メモリ構成のマシンで小さな4Bモデルを対象にした独立ハンズオンテスト1件（出典参照）によるものです。M6、Mac miniのM5 Pro、Mac StudioのM5 Max、M5 Ultraについては独立した70B測定を見つけられなかったため、これらのセルは推定ではなくその旨を明示しています。価格は行に記載した構成の米国定価です。Appleが示す開始価格は基本メモリ構成のみのもの（M6は16GB、M5 Proは24GB、M5 Maxは36GB、M5 Ultraは96GB）なので、ここではメモリ増設分を含めています。購入前に現在のApple Storeの価格を確認してください。',
+          'メモリと帯域幅の数値はApple仕様です。MacBook Proの速度は目安となる推定値です。範囲はリンク先のM5 Pro vs M5 Maxベンチマークページを参照してください。本ガイドのために再測定したものではありません。Mac miniの行の速度は、基本メモリ構成のマシンで小さな4Bモデルを対象にした独立ハンズオンテスト1件（出典参照）によるものです。M6、Mac miniのM5 Pro、Mac StudioのM5 Max、M5 Ultraについては独立した70B測定を見つけられなかったため、これらのセルは推定ではなくその旨を明示しています。価格は行に記載した構成の米国定価です。Appleが示す開始価格は基本メモリ構成のみのもの（M6は16GB、M5 Proは24GB、M5 Maxは36GB、M5 Ultraは96GB）なので、ここではメモリ増設分を含めています。本ページの$は米国価格です。日本での販売価格は税・為替・販売店により異なるため、購入前にApple Store（apple.com/jp）の税込価格を確認し、価格.comで比較してください。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2573,7 +2573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ja.webp',
-        imageCaption: 'Mac mini M6 32GB（約$1,300）とM5 Pro 64GB（約$2,700）、MacBook Pro 16" M5 Pro/M5 Max、Mac Studio M5 Max 64-128GB（約$3,500-$5,100）とM5 Ultra（$5,499から、256GBは約$9,500、最大512GB）の比較。',
+        imageCaption: '米国価格での比較：Mac mini M6 32GB（約$1,300）とM5 Pro 64GB（約$2,700）、MacBook Pro 16" M5 Pro/M5 Max、Mac Studio M5 Max 64-128GB（約$3,500-$5,100）とM5 Ultra（$5,499から、256GBは約$9,500、最大512GB）の比較。',
       },
       whichMac: {
         id: 'which-mac',
@@ -2791,12 +2791,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: '購入先',
         content:
-          '**Appleはあらゆる構成を直接販売しています；Amazonやその他の小売店は一般的な構成を在庫し、Appleの定価を下回ることもあります。** 以下のリンクは単なる製品検索リンクであり、アフィリエイトタグは付いておらず、コミッションを得ません。',
+          '**Appleはあらゆる構成を直接販売しています；Amazonやその他の小売店は一般的な構成を在庫し、Appleの定価を下回ることもあります。** 以下のリンクは単なる製品検索リンクであり、アフィリエイトタグは付いておらず、コミッションを得ません。**日本で購入する場合：** Apple Store（apple.com/jp）のオンラインストアで構成と税込価格を確認し、Amazon.co.jp、ヨドバシ、ソフマップなどの家電量販店では取り扱いと価格を各店で確認してください。価格の比較には価格.comが便利です。海外から直接輸入する場合はPSEマーク（電源）、技適（Wi-Fi/Bluetooth）、国内保証・サポートの有無を購入前に確認してください。',
         items: [
-          '**Apple Store（[apple.com](https://apple.com)）：** 受注生産を含む、あらゆるメモリとストレージの構成の唯一の入手先。64GBのMac mini M5 Pro、128GBのMac Studio M5 Max、Mac Studio M5 Ultraのメモリ階層には必須です（これらは受注生産です）。',
-          '**Amazon：** Mac miniとMacBook Proの人気の固定構成を在庫し、Appleの定価を下回って割引されることもあります。大容量メモリの受注生産構成の品揃えは限られます。',
+          '**Apple Store（[apple.com/jp](https://www.apple.com/jp/)）：** 受注生産を含む、あらゆるメモリとストレージ構成を選べる公式の購入先で、受注生産の構成はここで選べます。64GBのMac mini M5 Pro、128GBのMac Studio M5 Max、Mac Studio M5 Ultraのメモリ階層には必須です（これらは受注生産です）。',
+          '**Amazon.co.jp：** Mac miniとMacBook Proの人気の固定構成を在庫し、Appleの定価を下回って割引されることもあります。大容量メモリの受注生産構成の品揃えは限られます。',
           '**Apple認定整備済製品：** 前世代のMac（M4 Max Mac Studio、Mac mini M4 Pro、より古いMacBook Pro）を割引価格でフル保証付きで——より安い70Bデスクトップを得る賢明な選択肢です。',
-          '**家電量販店および正規販売店：** 一般的な構成を扱い、時にAppleの価格を下回ります；MacBook Pro 16"に有用です。',
+          '**家電量販店および正規販売店（ヨドバシ、ソフマップなど）：** 取り扱いのある構成と価格は各店で確認してください；MacBook Pro 16"の比較に有用です。価格の比較には価格.comも使えます。',
         ],
         callouts: [
           {
@@ -2896,6 +2896,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'MacをAIサーバーとして運用するのにいくらかかりますか？',
             a: 'ごくわずかです。Mac mini M5 ProはLLM負荷時に約25-55W、アイドル時に約8Wを消費すると推定されます（推定値であり、PromptQuorumによる実測ではありません）。1年間まるごと24時間365日稼働させても電気代は約¥4,000-6,000。この低い運用コストが、Mac miniが常時稼働サーバーのコスパの選択肢である中心的な理由です。',
+          },
+          {
+            q: 'Macは日本でどこで買うのがよいですか？保証はどうなりますか？',
+            a: 'Apple Store（apple.com/jp）のオンラインストアなら、メモリやストレージを選ぶ受注生産の構成も含め、日本向けの税込価格を確認できます。Amazon.co.jpやヨドバシ、ソフマップなどの家電量販店は、取り扱い構成と価格を各店で確認してください。海外から直接輸入する場合は、国内保証・サポートの有無を購入前に確認してください。',
+          },
+          {
+            q: 'MacはAC 100Vの日本の電源でそのまま使えますか？',
+            a: '電圧と電源プラグの仕様は、購入するモデルの公式仕様ページで確認してください。国内で販売されるモデルは通常、日本の電源で使えるよう設計されていますが、詳細は公式仕様ページで確認してください。海外から直接輸入する場合はPSEマーク（電源）と技適（Wi-Fi/Bluetooth）を購入前に確認してください。',
+          },
+          {
+            q: 'Macの日本での価格はどこで比較できますか？',
+            a: '価格.comで製品名と構成を検索すると、販売店ごとの価格を比較できます。Apple Storeの価格（apple.com/jp）と、Amazon.co.jp、ヨドバシ、ソフマップなどの店舗価格を並べ、税込価格・ポイント・保証条件を確認してください。本ページの$表記は米国価格で、日本の販売価格は為替・税・販売店により異なります。',
           },
         ],
       },
@@ -4674,18 +4686,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-04-17',
     last_full_refresh: '2026-10-17',
     next_seo_review_due: '2026-11-17',
     last_seo_review: '2026-10-17',
     theme: 'Overview & Reference',
-    title: '로컬 AI용 최고의 Mac 2026: Mac Mini vs Mac Studio vs MacBook Pro',
-    seoTitle: '로컬 AI용 Mac 2026: Mini vs Studio vs MBP',
+    title: '로컬 AI용 Mac 추천 2026: 맥미니 vs Mac Studio vs MacBook Pro',
+    seoTitle: '로컬 AI Mac 추천 2026: 맥미니 vs Studio vs MBP',
     intro:
-      'Mac을 AI용으로 추천하는 대부분의 글은 칩 이름에만 집중하지만, 실제로 구매 결정을 좌우하는 수치는 통합 메모리(Unified Memory)입니다. Apple Silicon에서는 모델이 시스템의 모든 것과 동일한 메모리 풀을 공유합니다. 따라서 64GB Mac Mini는 더 빠른 32GB Mac Mini가 담을 수 없는 34B 모델을 실행할 수 있습니다. Apple은 2026년 8월 25일에 Mac Mini와 Mac Studio 라인업을 새롭게 했으며(2026년 9월 22일부터 출하 중), 이 가이드는 새 하드웨어에서 로컬 LLM을 실행하기 위한 네 가지 등급을 비교합니다. 저렴한 상시 가동 서버인 보급형 Mac Mini M6, 더 강력한 서버인 Mac Mini M5 Pro, 휴대용 워크스테이션인 MacBook Pro 16"(M5 Pro 또는 M5 Max), 그리고 데스크톱 및 초대용량 메모리 옵션인 Mac Studio(M5 Max 또는 M5 Ultra)를 구매 결정에 중요한 수치인 통합 메모리, 메모리 대역폭, 측정된 초당 토큰 수, 가격으로 비교합니다. 두 가지 주의 사항이 있습니다. 첫째, Apple이 내세우는 시작 가격은 기본 메모리 구성 기준이며 로컬 LLM에 필요한 메모리 구성이 아닙니다. $899의 Mac Mini M6는 16GB, $1,699의 Mac Mini M5 Pro는 24GB, $2,499의 Mac Studio M5 Max는 36GB이므로, 여기서 권장하는 구성은 더 비쌉니다(32GB M6는 약 $1,300, 64GB M5 Pro는 약 $2,700, 128GB Mac Studio M5 Max는 약 $5,100). 둘째, 새 칩에 대한 독립적인 테스트는 아직 부족합니다. 한 건의 실제 사용 테스트가 소형 모델에서 M6와 M5 Pro Mac Mini를 측정했을 뿐이며, M5 Max나 M5 Ultra의 70B 독립 측정치는 찾지 못했습니다. 따라서 해당 칩의 성능 수치는 Apple 자체 수치이며 그렇게 표시되어 있습니다. 가격은 마지막 업데이트 시점의 미국 정가이므로 구매 전 Apple Store에서 현재 가격을 확인하십시오.',
+      'Mac을 AI용으로 추천하는 대부분의 글은 칩 이름에만 집중하지만, 실제로 구매 결정을 좌우하는 수치는 통합 메모리(Unified Memory)입니다. Apple Silicon에서는 모델이 시스템의 모든 것과 동일한 메모리 풀을 공유합니다. 따라서 64GB Mac Mini는 더 빠른 32GB Mac Mini가 담을 수 없는 34B 모델을 실행할 수 있습니다. Apple은 2026년 8월 25일에 Mac Mini와 Mac Studio 라인업을 새롭게 했으며(2026년 9월 22일부터 출하 중), 이 가이드는 새 하드웨어에서 로컬 LLM을 실행하기 위한 네 가지 등급을 비교합니다. 저렴한 상시 가동 서버인 보급형 Mac Mini M6, 더 강력한 서버인 Mac Mini M5 Pro, 휴대용 워크스테이션인 MacBook Pro 16"(M5 Pro 또는 M5 Max), 그리고 데스크톱 및 초대용량 메모리 옵션인 Mac Studio(M5 Max 또는 M5 Ultra)를 구매 결정에 중요한 수치인 통합 메모리, 메모리 대역폭, 측정된 초당 토큰 수, 가격으로 비교합니다. 두 가지 주의 사항이 있습니다. 첫째, Apple이 내세우는 시작 가격은 기본 메모리 구성 기준이며 로컬 LLM에 필요한 메모리 구성이 아닙니다. $899의 Mac Mini M6는 16GB, $1,699의 Mac Mini M5 Pro는 24GB, $2,499의 Mac Studio M5 Max는 36GB이므로, 여기서 권장하는 구성은 더 비쌉니다(32GB M6는 약 $1,300, 64GB M5 Pro는 약 $2,700, 128GB Mac Studio M5 Max는 약 $5,100). 둘째, 새 칩에 대한 독립적인 테스트는 아직 부족합니다. 한 건의 실제 사용 테스트가 소형 모델에서 M6와 M5 Pro Mac Mini를 측정했을 뿐이며, M5 Max나 M5 Ultra의 70B 독립 측정치는 찾지 못했습니다. 따라서 해당 칩의 성능 수치는 Apple 자체 수치이며 그렇게 표시되어 있습니다. 이 페이지의 $ 표기는 달러 기준 미국 가격이며, 국내 판매 가격은 세금·수입 비용·환율·판매처에 따라 다릅니다. 구매 전 Apple Store 한국(apple.com/kr)의 세금 포함 가격을 확인하고 다나와에서 비교하십시오.',
     metaDescription:
-      'Mac Mini M6 32GB 약 $1,300, M5 Pro 64GB 약 $2,700, Mac Studio M5 Max 128GB 약 $5,100. 통합 메모리, 대역폭, 실제 가격 비교.',
+      '로컬 AI Mac 추천: Mac Mini M6 32GB 미국 가격 약 $1,300, M5 Pro 64GB 약 $2,700, M5 Max 128GB 약 $5,100. 국내 가격은 다나와에서 확인.',
     heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ko.webp',
     twitterDescription:
       'Mac Mini M6 vs M5 Pro vs MacBook Pro vs Mac Studio M5 Max/M5 Ultra 로컬 AI 비교, 32-256GB 실제 가격 포함. 하나의 원칙: 통합 메모리를 먼저 보고, 그다음 대역폭을 보십시오.',
@@ -4715,7 +4727,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: '로컬 AI용 Mac',
     targetKeywords: [
-      '로컬 ai용 최고의 mac 2026',
+      '로컬 ai용 mac 추천 2026',
+      '로컬 ai 맥미니 추천',
       'mac mini vs mac studio 로컬 llm',
       'macbook pro m5 max 로컬 llm',
       '로컬 llm에 필요한 통합 메모리',
@@ -4725,12 +4738,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ai용 최고의 mac mini',
     ],
     leadAnswerBlock:
-      '**로컬 AI용 최고의 Mac은 통합 메모리가 모델에 맞는 것입니다. Mac Mini M6 32GB(약 $1,300)는 7B-14B 모델을 커버하고, Mac Mini M5 Pro 64GB(약 $2,700) 또는 MacBook Pro M5 Pro는 34B와 여유가 빠듯한 70B Q4 작업을 처리하며, Mac Studio M5 Max 128GB(약 $5,100)는 더 높은 품질의 70B를 위한 데스크톱 선택이고, Mac Studio M5 Ultra(96GB $5,499부터, 256GB 약 $9,500, 최대 512GB)는 가장 큰 로컬 모델을 위한 극단적 선택입니다.**',
+      '**로컬 AI용 최고의 Mac은 통합 메모리가 모델에 맞는 것입니다. Mac Mini M6 32GB(미국 가격 약 $1,300)는 7B-14B 모델을 커버하고, Mac Mini M5 Pro 64GB(약 $2,700) 또는 MacBook Pro M5 Pro는 34B와 여유가 빠듯한 70B Q4 작업을 처리하며, Mac Studio M5 Max 128GB(약 $5,100)는 더 높은 품질의 70B를 위한 데스크톱 선택이고, Mac Studio M5 Ultra(96GB $5,499부터, 256GB 약 $9,500, 최대 512GB)는 가장 큰 로컬 모델을 위한 극단적 선택입니다.** 가격은 모두 달러 기준 미국 가격이며, 국내 판매 가격은 세금·환율·판매처에 따라 다릅니다. 다나와 등에서 확인하십시오.',
     quickAnswerTop: {
       ko: {
         question: '2026년에 로컬 LLM 실행을 위해 어떤 Mac을 구매해야 합니까?',
         answer:
-          '통합 메모리를 먼저 보고, 그다음 대역폭을 고려하십시오. 그리고 칩이 아니라 메모리의 가격을 따져야 합니다. Apple의 시작 가격은 기본 메모리만 포함하기 때문입니다. Mac Mini M6 32GB(약 $1,300, $899 기본 모델은 16GB)는 보급형 진입점으로 7B-14B 모델을 커버하며, 30B나 70B 모델은 담을 수 없습니다. Mac Mini M5 Pro 64GB(약 $2,700, $1,699 기본 모델은 24GB)는 진지한 사용을 위한 가성비 선택으로, 34B 모델을 조용하게 상시 가동 서버로 실행합니다. MacBook Pro 16" M5 Pro 64GB는 34B-70B Q4 작업을 위한 휴대용 선택이고, M5 Max 128GB는 70B를 Q5로 실행합니다. Mac Studio M5 Max(64GB 약 $3,500, 128GB 약 $5,100)는 Mac Mini M5 Pro의 두 배 대역폭을 가진 데스크톱 선택이고, Mac Studio M5 Ultra(96GB $5,499부터, 256GB 약 $9,500, 최대 512GB)는 가장 큰 로컬 모델을 위한 극단적 선택입니다. 이 모두는 2026년 9월 22일에 출하되었으며, 2026년 10월 하순에 출하되는 M5 Ultra 512GB 구성만 예외입니다.',
+          '통합 메모리를 먼저 보고, 그다음 대역폭을 고려하십시오. 그리고 칩이 아니라 메모리의 가격을 따져야 합니다. Apple의 시작 가격은 기본 메모리만 포함하기 때문입니다. Mac Mini M6 32GB(약 $1,300, $899 기본 모델은 16GB)는 보급형 진입점으로 7B-14B 모델을 커버하며, 30B나 70B 모델은 담을 수 없습니다. Mac Mini M5 Pro 64GB(약 $2,700, $1,699 기본 모델은 24GB)는 진지한 사용을 위한 가성비 선택으로, 34B 모델을 조용하게 상시 가동 서버로 실행합니다. MacBook Pro 16" M5 Pro 64GB는 34B-70B Q4 작업을 위한 휴대용 선택이고, M5 Max 128GB는 70B를 Q5로 실행합니다. Mac Studio M5 Max(64GB 약 $3,500, 128GB 약 $5,100)는 Mac Mini M5 Pro의 두 배 대역폭을 가진 데스크톱 선택이고, Mac Studio M5 Ultra(96GB $5,499부터, 256GB 약 $9,500, 최대 512GB)는 가장 큰 로컬 모델을 위한 극단적 선택입니다. 이 모두는 2026년 9월 22일에 출하되었으며, 2026년 10월 하순에 출하되는 M5 Ultra 512GB 구성만 예외입니다. 여기의 $는 미국 가격입니다. 국내 가격은 세금·환율·판매처에 따라 다르므로 Apple Store 한국(apple.com/kr)과 다나와에서 확인하십시오.',
         bullets: [
           '보급형: Mac Mini M6 32GB, 약 $1,300, 7B-14B 모델만(32GB 메모리 한계)',
           '가성비 / 상시 가동 서버: Mac Mini M5 Pro 64GB, 약 $2,700, 34B 모델과 여유가 빠듯한 70B Q4',
@@ -4767,7 +4780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**통합 메모리가 결정적인 제약입니다.** Apple Silicon에서 모델은 시스템과 동일한 메모리 풀을 공유합니다. 통합 메모리에 맞지 않는 모델은 실행할 수 없습니다. 목표 모델에 맞는 메모리를 가진 Mac을 선택하고, 그 후에 대역폭과 폼 팩터를 최적화하십시오.',
           '**메모리는 구매 후 업그레이드가 불가능합니다.** Apple Silicon 통합 메모리는 납땜되어 있습니다. 구매하는 것이 영구적입니다. 오늘뿐만 아니라 2년 후에 실행하고 싶은 모델에 맞게 크기를 결정하십시오.',
-          '**보급형 추천: Mac Mini M6 32GB(약 $1,300)** — Apple의 2026년 8월 25일 업데이트의 진입 칩, 170GB/s 대역폭, 32GB 메모리 한계는 7B-14B 모델만 커버; 30B나 70B에는 부족합니다. 광고된 $899는 16GB 모델입니다.',
+          '**보급형 추천: Mac Mini M6 32GB(미국 가격 약 $1,300)** — Apple의 2026년 8월 25일 업데이트의 진입 칩, 170GB/s 대역폭, 32GB 메모리 한계는 7B-14B 모델만 커버; 30B나 70B에는 부족합니다. 광고된 $899는 16GB 모델입니다.',
           '**가성비 / 서버 추천: Mac Mini M5 Pro 64GB(약 $2,700)** — 조용하고, LLM 부하 시 25-55W(추정), 연간 전기료 약 $26-39, 64GB로 34B 모델 실행 및 70B Q4를 여유가 빠듯하게 수용 가능. 광고된 $1,699는 24GB 모델입니다.',
           '**휴대용 추천: MacBook Pro 16" M5 Pro 64GB(약 $3,000-3,400) 또는 M5 Max 128GB(약 $5,000 이상)** — 307-614GB/s 대역폭, 70B를 Q4부터 Q5까지 실행. 지속적인 부하 시 성능이 제한될 수 있으며(정도는 작업 부하와 본체에 따라 다름), 그 대신 휴대성을 얻습니다.',
           '**데스크톱 추천: Mac Studio M5 Max 64GB(약 $3,500) 또는 128GB(약 $5,100)** — 614GB/s 대역폭으로 128GB 모델은 70B를 Q5 품질로 실행. 2026년 9월 22일부터 출하 중이며, 아직 독립적인 벤치마크는 찾지 못했습니다.',
@@ -4790,7 +4803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Q4_K_M에서의 통합 메모리 규칙:** 10억 파라미터당 약 0.6GB, 컨텍스트 및 도구용으로 2-4GB 추가.',
           '**메모리 대역폭:** Mac Mini M6 170GB/s, M5 Pro 307GB/s, M5 Max 460-614GB/s, M5 Ultra 1.2TB/s.',
           '**전력 소비 범위:** Mac Mini M5 Pro 25-55W(추정), MacBook Pro M5 Max LLM 부하 시 60-100W(추정).',
-          '**가용성:** 2026년 8월 25일의 Mac Mini 및 Mac Studio 업데이트는 2026년 9월 22일부터 출하 중이며, M5 Ultra 512GB 구성만 2026년 10월 하순에 출하됩니다 — 구매 전 Apple Store에서 현재 가격을 확인하십시오.',
+          '**가용성:** 2026년 8월 25일의 Mac Mini 및 Mac Studio 업데이트는 2026년 9월 22일부터 출하 중이며, M5 Ultra 512GB 구성만 2026년 10월 하순에 출하됩니다 — 이 페이지의 $는 미국 가격입니다. 국내 가격은 Apple Store 한국(apple.com/kr)과 다나와에서 확인하십시오.',
         ],
       },
       editorsChoice: {
@@ -4826,7 +4839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 로컬 AI를 위한 Mac 비교',
         content:
-          '메모리 및 대역폭 수치는 Apple의 공식 사양입니다. MacBook Pro 속도는 참고용 추정치이며, 범위는 링크된 M5 Pro vs M5 Max 벤치마크 페이지를 참조하십시오. 이 가이드를 위해 다시 측정한 것은 아닙니다. Mac Mini 행의 속도는 기본 메모리 기기에서 소형 4B 모델로 진행된 한 건의 독립적인 실제 사용 테스트(출처 참조)에서 가져왔습니다. M6, Mac Mini M5 Pro, Mac Studio M5 Max, M5 Ultra의 70B 독립 측정치는 찾지 못했으므로, 해당 칸은 추정치가 아니라 이렇게 표시되어 있습니다. 가격은 해당 행에 명시된 구성의 미국 정가입니다. Apple이 내세우는 시작 가격은 기본 메모리만 포함하므로(M6 16GB, M5 Pro 24GB, M5 Max 36GB, M5 Ultra 96GB) 여기에는 메모리 업그레이드 비용이 포함되어 있습니다. 구매 전 Apple Store에서 현재 가격을 확인하십시오.',
+          '메모리 및 대역폭 수치는 Apple의 공식 사양입니다. MacBook Pro 속도는 참고용 추정치이며, 범위는 링크된 M5 Pro vs M5 Max 벤치마크 페이지를 참조하십시오. 이 가이드를 위해 다시 측정한 것은 아닙니다. Mac Mini 행의 속도는 기본 메모리 기기에서 소형 4B 모델로 진행된 한 건의 독립적인 실제 사용 테스트(출처 참조)에서 가져왔습니다. M6, Mac Mini M5 Pro, Mac Studio M5 Max, M5 Ultra의 70B 독립 측정치는 찾지 못했으므로, 해당 칸은 추정치가 아니라 이렇게 표시되어 있습니다. 가격은 해당 행에 명시된 구성의 미국 정가입니다. Apple이 내세우는 시작 가격은 기본 메모리만 포함하므로(M6 16GB, M5 Pro 24GB, M5 Max 36GB, M5 Ultra 96GB) 여기에는 메모리 업그레이드 비용이 포함되어 있습니다. 이 페이지의 $는 미국 가격입니다. 국내 판매 가격은 세금·환율·판매처에 따라 다르므로 구매 전 Apple Store 한국(apple.com/kr)의 세금 포함 가격을 확인하고 다나와에서 비교하십시오.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4904,7 +4917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ko.webp',
-        imageCaption: 'Mac Mini M6 32GB(약 $1,300)와 M5 Pro 64GB(약 $2,700) 대 MacBook Pro 16" M5 Pro/M5 Max 대 Mac Studio M5 Max 64-128GB(약 $3,500-$5,100)와 M5 Ultra($5,499부터, 256GB 약 $9,500, 최대 512GB) 비교.',
+        imageCaption: '미국 가격 기준 비교: Mac Mini M6 32GB(약 $1,300)와 M5 Pro 64GB(약 $2,700) 대 MacBook Pro 16" M5 Pro/M5 Max 대 Mac Studio M5 Max 64-128GB(약 $3,500-$5,100)와 M5 Ultra($5,499부터, 256GB 약 $9,500, 최대 512GB) 비교.',
       },
       whichMac: {
         id: 'which-mac',
@@ -5122,12 +5135,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: '구매처',
         content:
-          '**Apple은 모든 구성을 직접 판매합니다. Amazon 및 다른 소매업체는 일반적인 구성을 보유하고 있으며 때로는 Apple 정가보다 낮은 가격을 제공합니다.** 아래 링크는 단순 제품 검색 링크입니다. 제휴 태그가 없으며 수수료를 발생시키지 않습니다.',
+          '**Apple은 모든 구성을 직접 판매합니다. Amazon 및 다른 소매업체는 일반적인 구성을 보유하고 있으며 때로는 Apple 정가보다 낮은 가격을 제공합니다.** 아래 링크는 단순 제품 검색 링크입니다. 제휴 태그가 없으며 수수료를 발생시키지 않습니다. **국내에서 구매하는 경우:** Apple Store 한국 온라인 스토어(apple.com/kr)에서 구성과 세금 포함 가격을 확인하고, 쿠팡과 컴퓨존 등에서는 취급 여부와 가격을 각 판매처에서 확인하십시오. 가격 비교에는 다나와가 유용합니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하십시오.',
         items: [
-          '**Apple Store([apple.com](https://apple.com)):** 맞춤 구성을 포함한 모든 메모리 및 저장 공간 구성의 유일한 소스입니다. 주문 제작 방식인 64GB Mac Mini M5 Pro, 128GB Mac Studio M5 Max, Mac Studio M5 Ultra 메모리 등급에는 필수입니다.',
+          '**Apple Store([apple.com/kr](https://www.apple.com/kr/)):** 맞춤 구성을 포함해 모든 메모리 및 저장 공간 구성을 선택할 수 있는 공식 구매처입니다. 주문 제작 방식인 64GB Mac Mini M5 Pro, 128GB Mac Studio M5 Max, Mac Studio M5 Ultra 메모리 등급에는 필수입니다.',
           '**Amazon:** Mac Mini 및 MacBook Pro의 일반적인 고정 구성을 보유하고 있으며 때로는 Apple 정가보다 낮은 가격을 제공합니다. 고용량 주문 제작 구성의 선택은 제한적입니다.',
           '**Apple 리퍼비시:** 이전 세대 Mac(Mac Studio M4 Max, Mac Mini M4 Pro, 이전 MacBook Pro)을 전체 보증과 함께 할인된 가격으로 제공합니다. 더 저렴한 70B 데스크톱을 원하는 경우 합리적인 옵션입니다.',
-          '**B&H Photo 및 공인 대리점:** 일반적인 구성을 보유하고 있으며 때로는 Apple 가격을 능가합니다. MacBook Pro 16"에 유용합니다.',
+          '**쿠팡, 컴퓨존 및 공인 판매처:** 취급 구성과 가격은 각 판매처에서 확인하십시오. MacBook Pro 16" 가격 비교에 유용하며, 다나와에서도 비교할 수 있습니다.',
         ],
         callouts: [
           {
@@ -5228,6 +5241,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Mac을 AI 서버로 운영하는 비용은 얼마입니까?',
             a: '매우 저렴합니다. Mac Mini M5 Pro는 LLM 부하 시 약 25-55W, 유휴 시 약 8W를 소비하는 것으로 추정됩니다(추정치이며 PromptQuorum이 측정한 값이 아닙니다). 1년 동안 24/7 운영하는 비용은 미국 기준 전기료로 약 $26-39입니다. 이 낮은 운영 비용이 Mac Mini가 상시 가동 서버로서 최고의 가성비를 제공하는 핵심 이유입니다.',
           },
+          {
+            q: 'Mac은 국내에서 어디서 구매하는 것이 좋고 AS는 어떻게 됩니까?',
+            a: 'Apple Store 한국 온라인 스토어(apple.com/kr)에서는 메모리와 저장 공간을 고르는 주문 제작 구성을 포함해 국내 판매 가격을 확인할 수 있습니다. 쿠팡과 컴퓨존 등은 취급 구성과 가격을 각 판매처에서 확인하십시오. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하십시오.',
+          },
+          {
+            q: 'Mac은 국내 220V 전원에서 그대로 사용할 수 있습니까?',
+            a: '전압과 전원 어댑터 사양은 구매하려는 모델의 공식 사양 페이지에서 확인하십시오. 국내에 정식 유통되는 모델은 보통 국내 전원에서 사용하도록 만들어졌지만, 자세한 내용은 공식 사양 페이지에서 확인하십시오. 해외 직구 제품은 KC 인증과 국내 AS 가능 여부를 구매 전에 확인하십시오.',
+          },
+          {
+            q: 'Mac의 국내 가격은 어디서 비교할 수 있습니까?',
+            a: '다나와에서 제품명과 구성을 검색하면 판매처별 가격을 비교할 수 있습니다. Apple Store 한국(apple.com/kr) 가격과 쿠팡, 컴퓨존 등의 판매 가격을 나란히 놓고 세금 포함 가격과 보증 조건을 확인하십시오. 이 페이지의 $ 표기는 미국 가격이며, 국내 판매 가격은 환율·세금·판매처에 따라 다릅니다.',
+          },
         ],
       },
       relatedReading: {
@@ -5248,12 +5273,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '로컬 AI용 최고의 Mac 2026: Mac Mini vs Mac Studio vs MacBook Pro',
-      description: '로컬 LLM용 Mac 비교: Mac Mini M6/M5 Pro, MacBook Pro 16" M5 Pro/M5 Max, Mac Studio M5 Max/M5 Ultra. 통합 메모리, 초당 토큰, 전력 소비 및 2026년 미국 실제 가격.',
+      headline: '로컬 AI용 Mac 추천 2026: 맥미니 vs Mac Studio vs MacBook Pro',
+      description: '로컬 LLM용 Mac 비교: Mac Mini M6/M5 Pro, MacBook Pro 16" M5 Pro/M5 Max, Mac Studio M5 Max/M5 Ultra. 통합 메모리, 초당 토큰, 전력 소비 및 2026년 미국 가격(달러 기준).',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-22',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -5264,7 +5289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: '로컬 AI용 최고의 Mac 2026', item: '[www.promptquorum.com/ko/power-local-llm/best-mac-for-local-ai-2026](https://www.promptquorum.com/ko/power-local-llm/best-mac-for-local-ai-2026)' },
+        { '@type': 'ListItem', position: 3, name: '로컬 AI용 Mac 추천 2026', item: '[www.promptquorum.com/ko/power-local-llm/best-mac-for-local-ai-2026](https://www.promptquorum.com/ko/power-local-llm/best-mac-for-local-ai-2026)' },
       ],
     },
   },

@@ -285,7 +285,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
         ['70B', 'Q5', '約50 GB', '48 GBカード1枚では不足'],
         ['70B', 'Q8', '約74 GB', 'マルチGPU構成'],
       ],
-      outro: 'VRAMが足りない場合は、[24GB VRAMで70Bモデルを動かす方法](/local-llms/run-70b-models-24gb-vram)と[VRAM完全ガイド](/local-llms/how-much-vram-local-llm)をご覧ください。',
+      outro: 'VRAMが足りない場合は、[24GB VRAMで70Bモデルを動かす方法](/local-llms/run-70b-models-24gb-vram)と[VRAM完全ガイド](/local-llms/how-much-vram-local-llm)をご覧ください。ハードウェアを選ぶ段階では、[ミニPC比較](/local-llms/best-mini-pcs-local-llm)、[AMDミニPC比較](/local-llms/best-amd-mini-pc-local-llm-2026)、[バジェットGPUガイド](/local-llms/best-budget-gpus-local-llm)も参考になります。',
     },
     {
       id: 'quantization-16gb',
@@ -379,7 +379,7 @@ export const HUB_PRACTICAL_SECTIONS: Record<string, HubPracticalSection[]> = {
         ['70B', 'Q5', '약 50 GB', '48 GB 카드 한 장으로는 부족'],
         ['70B', 'Q8', '약 74 GB', '멀티 GPU 구성'],
       ],
-      outro: 'VRAM이 부족하다면 [24GB VRAM으로 70B 모델 실행하기](/local-llms/run-70b-models-24gb-vram)와 [VRAM 전체 가이드](/local-llms/how-much-vram-local-llm)를 참고하세요.',
+      outro: 'VRAM이 부족하다면 [24GB VRAM으로 70B 모델 실행하기](/local-llms/run-70b-models-24gb-vram)와 [VRAM 전체 가이드](/local-llms/how-much-vram-local-llm)를 참고하세요. 하드웨어를 고르는 단계라면 [미니 PC 가이드](/local-llms/best-mini-pcs-local-llm), [Mac 선택 가이드](/power-local-llm/best-mac-for-local-ai-2026), [예산형 GPU 가이드](/local-llms/best-budget-gpus-local-llm)도 참고하세요.',
     },
     {
       id: 'quantization-16gb',
