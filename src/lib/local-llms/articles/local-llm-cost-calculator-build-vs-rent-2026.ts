@@ -268,13 +268,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-de.webp',
     title: 'Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026',
-    seoTitle: 'Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026',
-    metaDescription: 'Interaktiver Rechner: lokale GPU-Hardware vs. Cloud-GPU-Miete (RunPod, Vast.ai) für LLMs vergleichen. Live-Break-even in Stunden und Monaten, Preise 2026.',
+    seoTitle: 'Lokale KI vs. Cloud-KI: Kostenrechner Kaufen vs. Mieten',
+    metaDescription: 'Lokale GPU kaufen oder Cloud-GPU mieten? Break-even-Beispiel, RunPod- und Vast.ai-Preise vom 22. November 2026 und ein Rechner für Ihre eigenen Zahlen.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-09-02',
-    leadAnswerBlock: '**Ob lokale KI-Hardware oder Cloud-GPU-Miete günstiger ist, hängt vor allem davon ab, wie viele Stunden pro Monat Sie nutzen — es gibt keine pauschale Antwort. Nutzen Sie den Rechner unten mit Ihren eigenen Zahlen; als grober Anhaltspunkt: unter 100 Std./Monat spricht meist für Cloud-Miete, über 500 Std./Monat (oder Dauerbetrieb) meist für eigene Hardware.**',
+    dateModified: '2026-11-22',
+    leadAnswerBlock: '**Lokale Hardware oder gemietete Cloud-GPU: Was günstiger ist, hängt vor allem von Ihren Stunden pro Monat ab. Geben Sie im Rechner unten Ihre eigenen Zahlen ein.**',
     quickAnswerTop: {
       question: 'Ist es günstiger, eine lokale LLM-Workstation zu bauen oder Cloud-GPUs zu mieten?',
       answer: 'Das hängt vom Nutzungsvolumen ab, nicht von einer festen Regel. Unter 100 Std./Monat ist Cloud-GPU-Miete (RunPod, Vast.ai) fast immer günstiger, da keine Anfangsinvestition anfällt. Über etwa 500 Std./Monat oder bei Dauerbetrieb gewinnt meist eigene Hardware, sobald Strom und Wiederverkaufswert eingerechnet werden. Nutzen Sie den Rechner unten mit Ihren eigenen Stunden, Hardwarepreis und Strompreis für den genauen Break-even.',
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ Std./Monat oder Dauerbetrieb: lokal gewinnt meist bei Gesamtkosten',
         'Vollständige TCO = Hardwarepreis + Strom − Wiederverkaufswert, nicht nur Kaufpreis ÷ Cloud-Rate',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -307,14 +307,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Die Kernfrage ist "wie viele Stunden pro Monat?" — keine feste Lokal-vs-Cloud-Regel',
-          'Cloud-GPU-Miete (RunPod, Vast.ai) kostet etwa 0,13–0,69 $/Std. für eine RTX-4090-Klasse-GPU',
-          'Eine empfohlene lokale RTX-4090-Workstation kostet insgesamt ca. 2.600 €',
-          'Naiver Break-even (Preis ÷ Cloud-Rate): 5.600 Stunden — ignoriert aber Strom und Wiederverkauf',
-          'Vollständiger TCO-Break-even (Hardware + Strom − Wiederverkauf): ca. 4.780 Stunden, etwa 20 Monate bei 8 Std./Tag — Rechner unten für eigene Zahlen nutzen',
-          'Strom fügt bei einem 450-W-System etwa 0,02 $/Std. (USA) bis 0,06 $/Std. (Deutschland) hinzu',
-          'Cloud gewinnt bei sporadischer oder experimenteller Nutzung unter ca. 100 Std./Monat',
-          'Lokal gewinnt bei täglichem Dauerbetrieb, sensiblen Daten oder 500+ Std./Monat',
+          'Die Kernfrage lautet: Stunden pro Monat, keine feste Regel',
+          'RunPod listet eine RTX 4090 mit 0,34 $/Std. (Community) und 0,89 $/Std. (Secure); unterbrechbare Vast.ai-Angebote lagen bei 0,26–0,60 $/Std. (gelesen am 22. November 2026)',
+          'Beispielwerte: lokales RTX-4090-System für 3.300 $, 450 W und 0,17 $/kWh, etwa 0,08 $/Std. Strom — ersetzen Sie sie durch Ihre eigenen',
+          'Break-even im Beispiel: etwa 4.060 Stunden (17 Monate bei 240 Std./Monat) gegenüber 0,89 $/Std. und etwa 12.520 Stunden (52 Monate) gegenüber 0,34 $/Std.',
+          'Mit 1.000 $ Wiederverkaufswert liegt der Break-even im selben Beispiel bei etwa 2.830 bzw. 8.730 Stunden',
+          'Strom für ein 450-W-System kostet etwa 18 $/Monat bei 0,17 $/kWh und 240 Std./Monat',
+          'Cloud gewinnt bei sporadischer, gelegentlicher oder experimenteller Nutzung unter ca. 100 Std./Monat',
+          'Lokal gewinnt bei täglichem Dauerbetrieb, sensiblen Daten oder 500+ Std./Monat, sofern die Hardware ausgelastet bleibt',
         ],
       },
       usageTiers: {
@@ -335,17 +335,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Geben Sie Ihre monatlichen Nutzungsstunden, Cloud-GPU-Tarif, Hardwarepreis, Strompreis, erwarteten Wiederverkaufswert und Nutzungsdauer ein. Der Rechner unten berechnet live Ihre Cloud-Kosten pro Monat, Ihre lokalen Betriebskosten, Ihre Gesamtkosten und Ihren Break-even-Punkt. Alle Werte sind berechnete Schätzungen aus Ihren Eingaben plus recherchierten Referenzpreisen — keine von PromptQuorum selbst gemessenen Werte.',
         component: 'CostCalculator',
       },
+      workedExample: {
+        title: 'Rechenbeispiel: Break-even für ein RTX-4090-System',
+        content: '**Break-even-Stunden = (Hardwarepreis − Wiederverkaufswert) ÷ (Cloud-Preis pro Stunde − Stromkosten pro Stunde).** Stromkosten pro Stunde = Watt ÷ 1.000 × Preis pro kWh.\n\nBeispielwerte, die Sie durch Ihre eigenen ersetzen sollten: 3.300 $ für ein RTX-4090-System (die Karte allein wurde bei [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) neu mit 2.000–3.000 $ gelistet, Stand 2026-10-15), 450 W bei 0,17 $/kWh (0,45 × 0,17 = 0,0765 $/Std.) und 240 Nutzungsstunden pro Monat. Die Cloud-Preise sind RunPod-Listenpreise für eine RTX 4090, gelesen am 22. November 2026.\n\nBei 240 Stunden im Monat beträgt die Cloud-Rechnung etwa 214 $ (Secure) bzw. 82 $ (Community), gegenüber etwa 18 $ Strom für das lokale System. Das Ergebnis ignoriert Reparaturen, Ihre Zeit und Preisänderungen auf beiden Seiten; der Rechner oben nutzt dieselbe Formel mit Ihren Zahlen.',
+        columns: ['Cloud-Preis', 'Break-even', 'Bei 240 Std./Monat', 'Mit 1.000 $ Wiederverkauf'],
+        rows: [
+          { 'Cloud-Preis': '0,89 $/Std. (RunPod Secure Cloud)', 'Break-even': '≈4.060 Stunden', 'Bei 240 Std./Monat': '≈17 Monate', 'Mit 1.000 $ Wiederverkauf': '≈2.830 Std. (≈12 Monate)' },
+          { 'Cloud-Preis': '0,34 $/Std. (RunPod Community Cloud)', 'Break-even': '≈12.520 Stunden', 'Bei 240 Std./Monat': '≈52 Monate', 'Mit 1.000 $ Wiederverkauf': '≈8.730 Std. (≈36 Monate)' },
+        ],
+      },
       hardwareDecision: {
         title: 'Hardware-Entscheidungstabelle',
-        content: 'Ordnen Sie Ihre Zielmodellgröße und Ihr Nutzungsmuster einer Hardware-Stufe zu, bevor Sie einen konkreten Build kalkulieren.',
+        content: 'Ordnen Sie Ihre Zielmodellgröße und Ihr Nutzungsmuster einer Hardware-Stufe zu, bevor Sie einen konkreten Build kalkulieren. Die Preisklassen sind beispielhafte Systempreise in US-Dollar, keine Angebote; lokale Preise weichen wegen Steuern und Einfuhrzöllen ab.',
         columns: ['Stufe', 'VRAM / RAM', 'Am besten für', 'Preisklasse'],
         rows: [
-          { Stufe: 'N150 Mini-PC', 'VRAM / RAM': '16 GB RAM', 'Am besten für': 'Leichter Chat, bis 7B', Preisklasse: 'Unter 500 €' },
-          { Stufe: 'Ryzen Mini-PC', 'VRAM / RAM': '32–64 GB RAM', 'Am besten für': '7B–14B täglich, 24/7-Server', Preisklasse: '500–1.000 €' },
-          { Stufe: 'RTX 3090 (gebraucht)', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 30B Q4, bestes VRAM/€', Preisklasse: '750–1.200 €' },
-          { Stufe: 'RTX 4090', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 34B Q4, schnellste Single-GPU', Preisklasse: '1.900–2.600 €' },
-          { Stufe: '48-GB-GPU-Setup', 'VRAM / RAM': '48 GB VRAM', 'Am besten für': 'Bis 70B Q4, Entwicklung', Preisklasse: '4.000 €+' },
-          { Stufe: 'Mac (Unified Memory)', 'VRAM / RAM': '48–128 GB unified', 'Am besten für': '70B+ via MLX, geringer Verbrauch', Preisklasse: '2.000–4.000 €+' },
+          { Stufe: 'N150 Mini-PC', 'VRAM / RAM': '16 GB RAM', 'Am besten für': 'Leichter Chat, bis 7B', Preisklasse: 'Unter 500 $' },
+          { Stufe: 'Ryzen Mini-PC', 'VRAM / RAM': '32–64 GB RAM', 'Am besten für': '7B–14B täglich, 24/7-Server', Preisklasse: '500–1.000 $' },
+          { Stufe: 'RTX 3090 (gebraucht)', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 30B Q4, bestes VRAM/€', Preisklasse: '1.800–2.500 $' },
+          { Stufe: 'RTX 4090', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 34B Q4, schnellste Single-GPU', Preisklasse: '3.000–4.500 $' },
+          { Stufe: '48-GB-GPU-Setup', 'VRAM / RAM': '48 GB VRAM', 'Am besten für': 'Bis 70B Q4, Entwicklung', Preisklasse: '5.000 $+' },
+          { Stufe: 'Mac (Unified Memory)', 'VRAM / RAM': '48–128 GB unified', 'Am besten für': '70B+ via MLX, geringer Verbrauch', Preisklasse: '2.000–4.000 $+' },
         ],
       },
       rentPath: {
@@ -362,11 +371,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '"Was soll ich kaufen?" nach Preisklasse',
-        content: '**Unter 500 €** — Keine dedizierte KI-Hardware kaufen. Vorhandene Geräte nutzen oder für gelegentlichen Bedarf mieten.\n\n**500–1.000 €** — Ein Ryzen-Mini-PC mit 32GB+ RAM. Siehe [besten AMD-Mini-PC für lokale LLMs](/de/local-llms/best-amd-mini-pc-local-llm-2026) und [Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review).\n\n**750–1.200 €** — Eine gebrauchte RTX 3090 oder ein leistungsstärkerer Mini-PC. Siehe [Guide zu den besten Mini-PCs](/de/local-llms/best-mini-pcs-local-llm) und [beste GPU unter $500](/de/local-llms/best-gpu-for-llm-inference-under-500-2026).\n\n**1.900–2.600 €** — Eine diskrete GPU-Workstation (RTX 4090, EOL-Gebrauchtmarktpreis) oder ein Mac mit großem Unified Memory (ca. 2.000–4.000 €). Siehe [Workstation-Build-Guide](/de/local-llms/local-llm-workstation-build) und [Apple-Silicon-Guide](/de/local-llms/apple-silicon-local-llm-guide-2026).\n\n**4.000 €+** — 48GB+ VRAM, Multi-GPU oder Workstation-Klasse. Auslastung sorgfältig kalkulieren — diese Stufe rechnet sich nur bei intensiver Dauernutzung. Siehe [PromptQuorums GPU-Workstation-Build-Guide](/de/power-local-llm/best-workstation-build-local-ai-2026).',
+        content: '**Unter 500 $** — Keine dedizierte KI-Hardware kaufen. Nutzen Sie vorhandene Geräte oder mieten Sie für gelegentlichen Bedarf eine Cloud-GPU.\n\n**500–1.000 $** — Ein Ryzen-Mini-PC mit 32 GB+ RAM. Siehe den [besten AMD-Mini-PC für lokale LLMs](/de/local-llms/best-amd-mini-pc-local-llm-2026) und den [Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review).\n\n**1.000–1.800 $** — Ein leistungsstärkerer Mini-PC. Siehe den [Guide zu den besten Mini-PCs](/de/local-llms/best-mini-pcs-local-llm) und die [beste GPU unter 500 $](/de/local-llms/best-gpu-for-llm-inference-under-500-2026) als Einstiegskontext.\n\n**1.800–2.500 $** — Ein Build mit gebrauchter RTX 3090 (die Karte allein wurde bei [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) mit 1.400–1.550 $ gelistet). Siehe den [Guide zum Bau einer lokalen LLM-Workstation](/de/local-llms/local-llm-workstation-build).\n\n**3.000–4.500 $** — Eine RTX-4090-Workstation oder ein Mac mit großem Unified Memory. Siehe den [Workstation-Build-Guide](/de/local-llms/local-llm-workstation-build) und den [Apple-Silicon-Guide](/de/local-llms/apple-silicon-local-llm-guide-2026).\n\n**5.000 $+** — 48 GB+ VRAM, Multi-GPU oder Workstation-Klasse. Kalkulieren Sie die Auslastung zuerst: Diese Stufe rechnet sich nur bei intensiver Dauernutzung. Siehe [PromptQuorums GPU-Workstation-Build-Guide](/de/power-local-llm/best-workstation-build-local-ai-2026).',
       },
       hardwarePicks: {
         title: 'Hardware-Empfehlungen nach Kategorie',
-        content: '- **Budget:** [GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review) — Einstiegs-Mini-PC für 7B-Modelle\n- **Mittelklasse:** [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, 24/7-Ollama-Server; [Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) als Ryzen-Alternative\n- **GPU-Preis-Leistung:** RTX 3090 (gebraucht, ca. 750–1.200 €) — bestes VRAM pro Euro bei 24GB\n- **GPU-Leistung:** RTX 4090 (ca. 1.900–2.600 €, EOL-Gebrauchtmarktpreis Stand August 2026 — Produktionsende im Q2 2026) — schnellste Single-GPU-Option, siehe [Workstation-Build-Guide](/de/local-llms/local-llm-workstation-build)\n- **Apple-Option:** Mac mit viel Unified Memory für 70B+ Modelle bei geringem Verbrauch — siehe [Apple-Silicon-Guide](/de/local-llms/apple-silicon-local-llm-guide-2026)\n\nDie RTX-3090/4090- und Apple-Links oben sind reine Produkt-/Referenzlinks — PromptQuorum hat kein Partnerprogramm und erhält keine Provision auf Hardware-Käufe.',
+        content: '- **Budget:** [GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review) — Einstiegs-Mini-PC für 7B-Modelle\n- **Mittelklasse:** [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, 24/7-Ollama-Server; [Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) als Ryzen-Alternative\n- **GPU-Preis-Leistung:** RTX 3090 (gebrauchte Karte bei [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) mit 1.400–1.550 $ gelistet, Stand 2026-10-15) — 24 GB VRAM zu einem niedrigeren Kartenpreis als die RTX 4090\n- **GPU-Leistung:** RTX 4090 (neu 2.000–3.000 $, verkaufte gebrauchte Angebote 2.575–3.010 $ laut InsiderLLM) — schneller als die RTX 3090, aber teurer, siehe [Workstation-Build-Guide](/de/local-llms/local-llm-workstation-build)\n- **Apple-Option:** Mac mit viel Unified Memory für 70B+ Modelle bei geringem Verbrauch — siehe [Apple-Silicon-Guide](/de/local-llms/apple-silicon-local-llm-guide-2026)\n\nDie RTX-3090/4090- und Apple-Links oben sind reine Produkt-/Referenzlinks — PromptQuorum hat kein Partnerprogramm und erhält keine Provision auf Hardware-Käufe.',
       },
       dontBuy: {
         title: 'Wann Sie KEINE lokale KI-Hardware kaufen sollten',
@@ -374,27 +383,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whenLocalWins: {
         title: 'Wann lokale KI gewinnt',
-        content: '- **Tägliche, planbare Nutzung** — die Stunden summieren sich schnell, siehe Nutzungstabelle oben\n- **Kostenplanbarkeit** — ein fixer Hardwarepreis lässt sich leichter budgetieren als variable Cloud-Rechnungen\n- **Sensible Daten oder Offline-Pflicht** — nichts verlässt Ihr Netzwerk\n- **Bedarf an unbegrenzter Inferenz** — laut Ollamas eigener Dokumentation ist der Betrieb von Modellen auf eigener Hardware unbegrenzt; nur Ollamas separater Cloud-Dienst hat planabhängige Nutzungslimits\n- **Mehrjähriger Nutzungshorizont** mit gut ausgelasteter Hardware',
+        content: '- **Tägliche, planbare Nutzung** — die Stunden summieren sich schnell, siehe Nutzungstabelle oben\n- **Kostenplanbarkeit** — ein fixer Hardwarepreis lässt sich leichter budgetieren als variable Cloud-Rechnungen\n- **Sensible Daten oder Offline-Pflicht** — Prompts werden auf Ihrem eigenen Rechner statt auf den Servern eines Anbieters verarbeitet; Modell-Downloads und Update-Prüfungen nutzen weiterhin das Netzwerk\n- **Keine Gebühr pro Anfrage für selbst betriebene Modelle** — lokale Modelle nutzen Ihre eigene Hardware, während Ollamas separater Cloud-Dienst planabhängige Sitzungs- und Wochenlimits hat ([Ollama-Preise](https://ollama.com/pricing))\n- **Mehrjähriger Nutzungshorizont** mit gut ausgelasteter Hardware',
       },
       electricity: {
         title: 'Strompreise nach Land',
-        content: 'Eine 450-W-Workstation im Dauerbetrieb von 240 Std./Monat (8 Std./Tag) kostet in den USA etwa 18 $/Monat Strom, in Deutschland etwa 40 $/Monat. Nutzen Sie im Rechner oben Ihren eigenen Tarif — dies sind Referenzwerte.',
-        columns: ['Land', 'Haushaltstarif', '450-W-System, 240 Std./Monat'],
+        content: 'Ein 450-W-System mit 240 Betriebsstunden im Monat (8 Std./Tag) verbraucht 108 kWh. Bei den Beispieltarifen unten kostet das etwa 18 $ im Monat (USA) bis etwa 40 $ (Deutschland). Die Tarife sind Beispielwerte passend zu den Rechner-Voreinstellungen, keine belegten Durchschnitte: Nutzen Sie Ihren eigenen Tarif.',
+        columns: ['Land', 'Beispieltarif', '450 W, 240 Std./Monat'],
         rows: [
-          { Land: 'USA', Haushaltstarif: '~0,17 $/kWh', '450-W-System, 240 Std./Monat': '~18 $/Monat' },
-          { Land: 'Deutschland', Haushaltstarif: '~0,37 €/kWh (~0,37 $)', '450-W-System, 240 Std./Monat': '~40 $/Monat' },
-          { Land: 'Vereinigtes Königreich', Haushaltstarif: '~0,26 £/kWh (~0,33 $)', '450-W-System, 240 Std./Monat': '~36 $/Monat' },
-          { Land: 'Frankreich', Haushaltstarif: '~0,22 €/kWh (~0,22 $)', '450-W-System, 240 Std./Monat': '~24 $/Monat' },
+          { 'Land': 'USA', 'Beispieltarif': '0,17 $/kWh', '450 W, 240 Std./Monat': '18 $/Monat' },
+          { 'Land': 'Deutschland', 'Beispieltarif': '0,37 $/kWh', '450 W, 240 Std./Monat': '40 $/Monat' },
+          { 'Land': 'Vereinigtes Königreich', 'Beispieltarif': '0,33 $/kWh', '450 W, 240 Std./Monat': '36 $/Monat' },
+          { 'Land': 'Frankreich', 'Beispieltarif': '0,22 $/kWh', '450 W, 240 Std./Monat': '24 $/Monat' },
         ],
       },
       cloudProviders: {
         title: 'Vergleich Cloud-GPU-Anbieter',
-        content: 'Repräsentative RTX-4090-Klasse-Tarife, Stand August 2026 — aktuelle Preise vor der Miete immer prüfen, sie ändern sich häufig.',
-        columns: ['Anbieter', 'Am besten für', 'Preismodell', 'Fazit'],
+        content: 'Listenpreise für eine RTX 4090, gelesen am 22. November 2026. Die Vast.ai-Werte sind Einzel-GPU-Angebote aus der öffentlichen Offers-API und ändern sich minütlich.',
+        columns: ['Anbieter', 'RTX 4090', 'Abrechnung', 'Hinweis'],
         rows: [
-          { Anbieter: 'RunPod', 'Am besten für': 'Zuverlässigkeit, verwaltete Pods', Preismodell: 'Pro Sekunde, 0,34–0,69 $/Std.', Fazit: 'Solider Standard für stetige Workloads' },
-          { Anbieter: 'Vast.ai', 'Am besten für': 'Niedrigster Preis, flexibel', Preismodell: 'Marktplatz-Bieten, 0,13–0,34 $/Std.', Fazit: 'Günstigste, Hostqualität variiert' },
-          { Anbieter: 'Lambda Labs', 'Am besten für': 'Rechenzentrums-GPUs (A100/H100)', Preismodell: 'Stündlich on-demand, 1,99–4,29 $/Std.', Fazit: 'Beste Wahl für großes Training, nicht für günstige 4090-Miete' },
+          { 'Anbieter': 'RunPod', 'RTX 4090': '0,34–0,89 $/Std. (Community–Secure)', 'Abrechnung': 'pro Sekunde', 'Hinweis': 'Consumer- und Rechenzentrums-GPUs in einer Liste' },
+          { 'Anbieter': 'Vast.ai', 'RTX 4090': '0,26–0,60 $/Std. unterbrechbar, 0,38–2,34 $/Std. on-demand', 'Abrechnung': 'pro Sekunde', 'Hinweis': 'Marktplatz; Hostqualität variiert je Angebot' },
+          { 'Anbieter': 'Lambda', 'RTX 4090': 'nicht gelistet', 'Abrechnung': 'pro Minute', 'Hinweis': 'H100 3,79–4,89 $/Std., A100 40 GB 1,99 $/Std.' },
         ],
       },
       finalVerdict: {
@@ -431,35 +440,43 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist lokale KI immer günstiger als Cloud?',
-            a: 'Nein. Lokale Hardware ist erst ab einer Nutzungsschwelle günstiger, die von Hardwarepreis, Strompreis und Cloud-Rate abhängt — typischerweise etwa 250–500 Std./Monat bei einer Mittelklasse-GPU-Workstation. Darunter ist Cloud-Miete meist günstiger, da keine Anfangsinvestition anfällt.',
+            a: 'Nein. Lokale Hardware ist erst ab einer Nutzungsschwelle günstiger, die von Hardwarepreis, Strompreis und Cloud-Preis abhängt — als Faustregel etwa 250–500 Std./Monat bei einer Mittelklasse-GPU-Workstation. Darunter ist Cloud-Miete meist günstiger, weil keine Anfangsinvestition anfällt.',
           },
           {
             q: 'Ab wie vielen Stunden lohnt sich der Kauf lokaler Hardware?',
-            a: 'Für eine 2.600-€-RTX-4090-Workstation gegenüber einer 0,50-$/Std.-Cloud-Rate liegt der naive Break-even (Preis ÷ Rate) bei 5.600 kumulierten Stunden. Rechnet man Strom und Wiederverkaufswert ein, liegt der vollständige TCO-Break-even bei 240 Std./Monat (8 Std./Tag) bei ca. 4.780 Stunden — etwa 20 Monaten. Nutzen Sie den Rechner oben für Ihre eigenen Zahlen.',
+            a: 'Für das Beispielsystem mit RTX 4090 für 3.300 $ liegt der Break-even gegenüber RunPod Secure Cloud (0,89 $/Std.) bei etwa 4.060 Stunden (17 Monate bei 240 Std./Monat), gegenüber Community Cloud (0,34 $/Std.) bei etwa 12.520 Stunden (52 Monate). Mit 1.000 $ Wiederverkaufswert sinkt er auf etwa 2.830 bzw. 8.730 Stunden. Hardwarepreis, Leistungsaufnahme und Strompreis sind Beispielwerte; nutzen Sie den Rechner oben mit Ihren eigenen.',
           },
           {
-            q: 'Ist Strom in Kostenschätzungen für lokale KI enthalten?',
-            a: 'Sollte er sein, ist es aber oft nicht in einfachen Vergleichen. Ein 450-W-System im 8-Std.-Tagesbetrieb fügt in den USA (~0,17 $/kWh) etwa 18 $/Monat, in Deutschland (~0,37 €/kWh) etwa 40 $/Monat hinzu. Der Rechner oben erlaubt Ihren eigenen Tarif.',
+            q: 'Sind Stromkosten in Kostenschätzungen für lokale KI enthalten?',
+            a: 'Sie sollten es sein, fehlen aber oft in einfachen Vergleichen. Ein 450-W-System im Betrieb von 8 Std./Tag kostet bei einem Beispielwert von 0,17 $/kWh etwa 18 $/Monat, bei 0,37 $/kWh etwa 40 $/Monat. Im Rechner oben können Sie Ihren eigenen Tarif eingeben.',
+          },
+          {
+            q: 'Was kostet der Betrieb eines lokalen LLM im Vergleich zur Cloud?',
+            a: 'Im Rechenbeispiel kostet die Miete einer RTX 4090 bei RunPod für 240 Stunden etwa 82 $ im Monat bei 0,34 $/Std. oder 214 $ bei 0,89 $/Std., ohne Anfangsinvestition. Das lokale System kostet 3.300 $ im Voraus plus etwa 18 $ Strom im Monat. Was günstiger ist, hängt davon ab, wie lange Sie es nutzen: siehe die Break-even-Tabelle oben.',
+          },
+          {
+            q: 'Ist ein KI-Abo günstiger als eine gemietete oder gekaufte GPU?',
+            a: 'Ein Abo kostet eine feste Monatsgebühr mit Nutzungslimits des Anbieters, eine gemietete GPU wird stundenweise abgerechnet und eine gekaufte GPU kostet im Voraus. Zur Rechnung Kaufen gegen Abo siehe [GPU vs. ChatGPT Plus 2026](/de/local-llms/gpu-vs-ai-subscription-roi) und [Lokale LLMs vs ChatGPT Plus](/de/local-llms/local-llms-vs-chatgpt-plus).',
           },
           {
             q: 'Ist ein Mac für lokale LLMs geeignet?',
             a: 'Macs mit viel Unified Memory können große Modelle (70B-Klasse) bei geringem Stromverbrauch betreiben, was ihre Kostenbilanz verbessert, besonders in Ländern mit hohen Strompreisen. Details im oben verlinkten Apple-Silicon-Guide.',
           },
           {
-            q: 'Reichen 24GB VRAM für lokale LLMs?',
-            a: '24GB (RTX 3090 oder RTX 4090) laufen komfortabel mit Modellen bis etwa 30–34B Parametern bei 4-Bit-Quantisierung, was die meisten Einzelnutzer-Anwendungsfälle abdeckt. 70B-Klasse-Modelle benötigen etwa 48GB, erreichbar mit Dual-GPU-Setups oder Macs mit viel Unified Memory.',
+            q: 'Reichen 24 GB VRAM für lokale LLMs?',
+            a: 'Mit 24 GB (RTX 3090 oder RTX 4090) laufen Modelle bis etwa 30–34B Parameter bei 4-Bit-Quantisierung, was die meisten Einzelnutzer-Fälle abdeckt. 70B-Modelle brauchen etwa 48 GB, erreichbar mit Dual-GPU-Setups oder Macs mit viel Unified Memory.',
           },
           {
             q: 'RTX 4090 kaufen oder Cloud-GPU-Zeit mieten?',
-            a: 'Kaufen, wenn Sie über mehrere Jahre anhaltende Nutzung von etwa 250–500+ Std./Monat erwarten und die Hardware gut auslasten können. Mieten, wenn Ihre Nutzung gelegentlich, sporadisch ist oder Sie den Workload noch validieren — Mieten vermeidet die ca. 1.900–2.600-€-Anfangsinvestition einer RTX 4090 (EOL-Gebrauchtmarktpreis, Stand August 2026, Produktionsende im Q2 2026) komplett.',
+            a: 'Kaufen, wenn Sie über mehrere Jahre eine Nutzung von mehr als etwa 250–500 Std./Monat erwarten und die Hardware auslasten können. Mieten, wenn Ihre Nutzung gelegentlich oder sporadisch ist oder Sie den Workload noch prüfen: Mieten vermeidet die Anfangsinvestition für eine RTX 4090 (neu 2.000–3.000 $ laut InsiderLLM, Stand 2026-10-15) vollständig.',
           },
           {
             q: 'Was ist der günstigste Weg, ein lokales LLM zu betreiben?',
-            a: 'Für die niedrigsten Anfangskosten ist ein Ryzen-Mini-PC (500–1.000 $) mit einem quantisierten 7B–14B-Modell das günstigste dedizierte lokale Setup. Für die niedrigsten Kosten pro Inferenz bei geringem Volumen ist Cloud-GPU-Miete ganz ohne Hardwarekauf günstiger.',
+            a: 'Bei den niedrigsten Anfangskosten ist ein Ryzen-Mini-PC (eine beispielhafte Klasse von 500–1.000 $) mit einem quantisierten 7B–14B-Modell das günstigste dedizierte lokale Setup. Bei geringem Volumen kostet Cloud-GPU-Miete ganz ohne Hardwarekauf weniger.',
           },
           {
-            q: 'Bedeutet lokale KI, dass Daten den Computer nie verlassen?',
-            a: 'Ja, bei lokaler Inferenz mit Tools wie Ollama auf eigener Hardware werden keine Daten irgendwohin gesendet. Das gilt nicht für Ollamas separaten Cloud-Dienst, der Anfragen an Ollamas Infrastruktur sendet — nur der lokale On-Device-Modus hält Daten vollständig auf Ihrem Rechner.',
+            q: 'Bedeutet lokale KI, dass meine Daten den Rechner nie verlassen?',
+            a: 'Bei lokaler Inferenz mit Tools wie Ollama verarbeitet ein Modell auf Ihrer eigenen Hardware Ihre Prompts, statt eines Cloud-Anbieters. Ollama dokumentiert, dass Sie nur lokale Modelle nutzen und die Cloud-Funktionen deaktivieren können. Modell-Downloads, Update-Prüfungen und andere Software auf dem Rechner können weiterhin das Netzwerk nutzen.',
           },
         ],
       },
@@ -467,46 +484,40 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         heading: 'Weiterführende Artikel',
         items: [
-          '[Lokale LLM vs Cloud-GPU Kostenvergleich](/de/local-llms/local-llm-vs-cloud-gpu-cost) -- local LLM vs cloud GPU cost comparison',
-          '[Cloud-GPU-Mietvergleich 2026](/de/local-llms/cloud-gpu-rental-comparison-2026) -- cloud GPU rental comparison 2026',
-          '[Lokale LLM Workstation Build-Anleitung](/de/local-llms/local-llm-workstation-build) -- local LLM workstation build guide',
-          '[Beste GPU für lokale LLM-Inferenz unter $500 (2026)](/de/local-llms/best-gpu-for-llm-inference-under-500-2026) -- best GPU under $500 for LLM inference',
-          '[GPU vs KI-Abonnement ROI](/de/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
-          '[Beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
-          '[Apple Silicon Local LLM Guide 2026](/de/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[Lokale LLM vs Cloud-GPU Kostenvergleich](/de/local-llms/local-llm-vs-cloud-gpu-cost) -- Break-even-Stunden und Kosten pro Token',
+          '[Cloud-GPU-Mietvergleich 2026](/de/local-llms/cloud-gpu-rental-comparison-2026) -- Stundenpreise, Abrechnung und Regionen',
+          '[Lokale LLM Workstation Build-Anleitung](/de/local-llms/local-llm-workstation-build) -- Stücklisten für ein lokales GPU-System',
+          '[Beste GPU für lokale LLM-Inferenz unter $500 (2026)](/de/local-llms/best-gpu-for-llm-inference-under-500-2026) -- Einstiegs-GPUs',
+          '[GPU vs KI-Abonnement ROI](/de/local-llms/gpu-vs-ai-subscription-roi) -- Kaufen oder abonnieren',
+          '[Beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm) -- Stromsparende Optionen für einen 24/7-Server',
+          '[Apple Silicon Local LLM Guide 2026](/de/local-llms/apple-silicon-local-llm-guide-2026) -- Macs mit Unified Memory',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          '[RunPod-Preise](https://www.runpod.io/pricing), gelesen am 22. November 2026',
+          '[Vast.ai-Preise](https://vast.ai/pricing) und die öffentliche Offers-API (Einzel-GPU-Angebote für RTX 4090), gelesen am 22. November 2026',
+          '[Lambda-Preise](https://lambda.com/pricing), gelesen am 22. November 2026',
+          '[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Preisspannen für RTX 4090 und RTX 3090 (Stand 2026-10-15)',
+          '[Ollama-Preise](https://ollama.com/pricing) und [Ollama-Cloud-Doku](https://docs.ollama.com/cloud), gelesen am 22. November 2026',
         ],
       },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Ist lokale KI immer günstiger als Cloud?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Nein. Lokale Hardware ist erst ab etwa 250–500 Std./Monat günstiger, abhängig von Hardwarepreis, Strompreis und Cloud-Rate. Darunter ist Cloud-Miete meist günstiger.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ab wie vielen Stunden lohnt sich der Kauf lokaler Hardware?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Für eine 2.600-€-RTX-4090-Workstation bei 0,50 $/Std. Cloud-Rate liegt der naive Break-even bei 5.600 Stunden; der vollständige TCO-Break-even mit Strom und Wiederverkauf liegt bei ca. 4.780 Stunden (ca. 20 Monate bei 8 Std./Tag).' },
-        },
-      ],
-    },
-    schema: { '@type': 'TechArticle', headline: 'Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026', description: 'Interaktiver TCO-Rechner: lokale GPU-Hardware vs. Cloud-GPU-Miete für LLMs 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-09-02', url: 'https://www.promptquorum.com/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'de' },
   },
   fr: {
     designSkin: 'hub',
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-fr.webp',
     title: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026',
-    seoTitle: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026',
-    metaDescription: 'Calculateur interactif : comparez matériel GPU local vs location cloud (RunPod, Vast.ai) pour LLM. Seuil de rentabilité en direct, prix 2026 à jour.',
+    seoTitle: 'IA locale vs cloud : calculateur de coût, acheter ou louer',
+    metaDescription: 'Acheter un GPU local ou louer un GPU cloud ? Exemple de seuil de rentabilité, prix RunPod et Vast.ai du 22 novembre 2026 et calculateur pour vos chiffres.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-09-02',
-    leadAnswerBlock: '**Savoir si le matériel IA local ou la location cloud GPU est plus économique dépend surtout du nombre d\'heures d\'utilisation par mois — il n\'y a pas de réponse universelle. Utilisez le calculateur ci-dessous avec vos propres chiffres ; comme point de repère : moins de 100 h/mois favorise généralement la location, plus de 500 h/mois (ou usage continu) favorise généralement l\'achat.**',
+    dateModified: '2026-11-22',
+    leadAnswerBlock: '**Matériel local ou GPU cloud loué : le moins cher dépend surtout de vos heures par mois. Saisissez vos propres chiffres dans le calculateur ci-dessous.**',
     quickAnswerTop: {
       question: 'Est-il moins cher de construire un serveur LLM local ou de louer un GPU cloud ?',
       answer: 'Cela dépend du volume d\'utilisation, pas d\'une règle fixe. En dessous de 100 h/mois, la location cloud GPU (RunPod, Vast.ai) est presque toujours moins chère, car sans investissement initial. Au-delà d\'environ 500 h/mois ou en usage continu, posséder le matériel gagne généralement une fois l\'électricité et la valeur de revente prises en compte. Utilisez le calculateur ci-dessous avec vos propres chiffres pour un seuil de rentabilité exact.',
@@ -518,7 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ h/mois ou usage continu : le local gagne généralement en coût total',
         'TCO complet = prix du matériel + électricité − revente, pas seulement prix ÷ tarif cloud',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -539,14 +550,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'La question centrale est « combien d\'heures par mois ? », pas une règle fixe local-vs-cloud',
-          'La location cloud GPU (RunPod, Vast.ai) coûte environ 0,13–0,69 $/h pour un GPU classe RTX 4090',
-          'Une workstation RTX 4090 locale recommandée coûte environ 2 600 € au total',
-          'Seuil naïf (prix ÷ tarif cloud) : 5 600 heures — mais ignore électricité et revente',
-          'Seuil TCO complet (matériel + électricité − revente) : environ 4 780 heures, soit environ 20 mois à 8 h/jour — voir le calculateur ci-dessous',
-          'L\'électricité ajoute environ 0,02 $/h (États-Unis) à 0,06 $/h (Allemagne) pour un système 450 W',
-          'Le cloud gagne pour les charges sporadiques ou expérimentales sous ~100 h/mois',
-          'Le local gagne pour l\'usage quotidien continu, les données sensibles ou 500+ h/mois',
+          'La question clé : les heures par mois, pas une règle fixe',
+          'RunPod liste une RTX 4090 à 0,34 $/h (Community) et 0,89 $/h (Secure) ; les offres interruptibles de Vast.ai allaient de 0,26 à 0,60 $/h (relevé le 22 novembre 2026)',
+          'Valeurs d\'exemple : système RTX 4090 local à 3 300 $, 450 W et 0,17 $/kWh, soit environ 0,08 $/h d\'électricité — remplacez-les par les vôtres',
+          'Seuil de rentabilité dans cet exemple : environ 4 060 heures (17 mois à 240 h/mois) face à 0,89 $/h et environ 12 520 heures (52 mois) face à 0,34 $/h',
+          'Avec 1 000 $ de valeur de revente, le même exemple devient rentable après environ 2 830 et 8 730 heures',
+          'L\'électricité d\'un système de 450 W coûte environ 18 $/mois à 0,17 $/kWh et 240 h/mois',
+          'Le cloud gagne pour un usage ponctuel, irrégulier ou expérimental sous environ 100 h/mois',
+          'Le local gagne pour une inférence quotidienne soutenue, des données sensibles ou 500+ h/mois, si le matériel reste occupé',
         ],
       },
       usageTiers: {
@@ -567,17 +578,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Entrez vos heures d\'utilisation mensuelles, votre tarif GPU cloud, le prix de votre matériel local, votre tarif électrique, la valeur de revente attendue et la durée de possession. Le calculateur ci-dessous calcule en direct votre coût cloud mensuel, votre coût d\'exploitation local, votre coût total de possession et votre seuil de rentabilité. Toutes les valeurs sont des estimations calculées à partir de vos données et de prix de référence recherchés, pas des mesures effectuées par PromptQuorum.',
         component: 'CostCalculator',
       },
+      workedExample: {
+        title: 'Exemple chiffré : seuil de rentabilité d\'un système RTX 4090',
+        content: '**Heures de rentabilité = (prix du matériel − valeur de revente) ÷ (tarif cloud par heure − électricité par heure).** Électricité par heure = watts ÷ 1 000 × prix du kWh.\n\nValeurs d\'exemple, à remplacer par les vôtres : 3 300 $ pour un système RTX 4090 (la carte seule était listée à 2 000–3 000 $ neuve par [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), mis à jour le 2026-10-15), 450 W à 0,17 $/kWh (0,45 × 0,17 = 0,0765 $/h) et 240 heures d\'usage par mois. Les tarifs cloud sont les prix catalogue RunPod pour une RTX 4090, relevés le 22 novembre 2026.\n\nÀ 240 heures par mois, la facture cloud est d\'environ 214 $ (Secure) ou 82 $ (Community), contre environ 18 $ d\'électricité pour le système local. Le résultat ignore les réparations, votre temps et les variations de prix des deux côtés ; le calculateur ci-dessus applique la même formule à vos chiffres.',
+        columns: ['Tarif cloud', 'Seuil de rentabilité', 'À 240 h/mois', 'Avec 1 000 $ de revente'],
+        rows: [
+          { 'Tarif cloud': '0,89 $/h (RunPod Secure Cloud)', 'Seuil de rentabilité': '≈4 060 heures', 'À 240 h/mois': '≈17 mois', 'Avec 1 000 $ de revente': '≈2 830 h (≈12 mois)' },
+          { 'Tarif cloud': '0,34 $/h (RunPod Community Cloud)', 'Seuil de rentabilité': '≈12 520 heures', 'À 240 h/mois': '≈52 mois', 'Avec 1 000 $ de revente': '≈8 730 h (≈36 mois)' },
+        ],
+      },
       hardwareDecision: {
         title: 'Tableau de décision matériel',
-        content: 'Associez la taille de modèle visée et votre usage à un niveau de matériel avant de chiffrer une configuration précise.',
+        content: 'Associez la taille de modèle visée et votre usage à un niveau de matériel avant de chiffrer une configuration précise. Les gammes de prix sont des prix de système d\'exemple en dollars américains, pas des devis ; les prix locaux varient selon les taxes et droits d\'importation.',
         columns: ['Niveau', 'VRAM / RAM', 'Idéal pour', 'Gamme de prix'],
         rows: [
-          { Niveau: 'Mini PC N150', 'VRAM / RAM': '16 Go RAM', 'Idéal pour': 'Chat léger, jusqu\'à 7B', 'Gamme de prix': 'Moins de 500 €' },
-          { Niveau: 'Mini PC Ryzen', 'VRAM / RAM': '32–64 Go RAM', 'Idéal pour': '7B–14B quotidien, serveur 24/7', 'Gamme de prix': '500–1 000 €' },
-          { Niveau: 'RTX 3090 (occasion)', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 30B Q4, meilleur VRAM/€', 'Gamme de prix': '750–1 200 €' },
-          { Niveau: 'RTX 4090', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 34B Q4, GPU unique le plus rapide', 'Gamme de prix': '1 900–2 900 €' },
-          { Niveau: 'Setup GPU 48 Go', 'VRAM / RAM': '48 Go VRAM', 'Idéal pour': 'Jusqu\'à 70B Q4, R&D', 'Gamme de prix': '4 000 €+' },
-          { Niveau: 'Mac (mémoire unifiée)', 'VRAM / RAM': '48–128 Go unifié', 'Idéal pour': '70B+ via MLX, faible consommation', 'Gamme de prix': '2 000–4 000 €+' },
+          { Niveau: 'Mini PC N150', 'VRAM / RAM': '16 Go RAM', 'Idéal pour': 'Chat léger, jusqu\'à 7B', 'Gamme de prix': 'Moins de 500 $' },
+          { Niveau: 'Mini PC Ryzen', 'VRAM / RAM': '32–64 Go RAM', 'Idéal pour': '7B–14B quotidien, serveur 24/7', 'Gamme de prix': '500–1 000 $' },
+          { Niveau: 'RTX 3090 (occasion)', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 30B Q4, meilleur VRAM/€', 'Gamme de prix': '1 800–2 500 $' },
+          { Niveau: 'RTX 4090', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 34B Q4, GPU unique le plus rapide', 'Gamme de prix': '3 000–4 500 $' },
+          { Niveau: 'Setup GPU 48 Go', 'VRAM / RAM': '48 Go VRAM', 'Idéal pour': 'Jusqu\'à 70B Q4, R&D', 'Gamme de prix': '5 000 $+' },
+          { Niveau: 'Mac (mémoire unifiée)', 'VRAM / RAM': '48–128 Go unifié', 'Idéal pour': '70B+ via MLX, faible consommation', 'Gamme de prix': '2 000–4 000 $+' },
         ],
       },
       rentPath: {
@@ -594,11 +614,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whatToBuy: {
         title: '« Que dois-je acheter ? » par gamme de prix',
-        content: '**Moins de 500 €** — N\'achetez pas de matériel IA dédié. Utilisez ce que vous avez déjà ou louez pour des besoins occasionnels.\n\n**500–1 000 €** — Un mini PC Ryzen avec 32 Go+ de RAM. Voir le [meilleur mini PC AMD pour LLM local](/fr/local-llms/best-amd-mini-pc-local-llm-2026) et le [test Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review).\n\n**750–1 200 €** — Une RTX 3090 d\'occasion, ou un mini PC plus puissant. Voir le [guide des meilleurs mini PC](/fr/local-llms/best-mini-pcs-local-llm) et le [guide meilleure GPU sous 500 $](/fr/local-llms/best-gpu-for-llm-inference-under-500-2026).\n\n**1 900–2 900 €** — Une workstation GPU dédiée (RTX 4090, prix occasion post-EOL) ou un Mac à grande mémoire unifiée (env. 2 000–4 000 €). Voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build) et le [guide Apple Silicon](/fr/local-llms/apple-silicon-local-llm-guide-2026).\n\n**4 000 €+** — 48 Go+ VRAM, multi-GPU ou classe workstation. Calculez votre taux d\'utilisation avec soin — ce niveau ne se rentabilise qu\'en usage intensif soutenu. Voir le [guide de build workstation GPU de PromptQuorum](/fr/power-local-llm/best-workstation-build-local-ai-2026).',
+        content: '**Moins de 500 $** — N\'achetez pas de matériel IA dédié. Utilisez ce que vous avez déjà ou louez un GPU cloud pour des besoins occasionnels.\n\n**500–1 000 $** — Un mini PC Ryzen avec 32 Go+ de RAM. Voir le [meilleur mini PC AMD pour LLM local](/fr/local-llms/best-amd-mini-pc-local-llm-2026) et le [test Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review).\n\n**1 000–1 800 $** — Un mini PC plus puissant. Voir le [guide des meilleurs mini PC](/fr/local-llms/best-mini-pcs-local-llm) et le [guide meilleur GPU sous 500 $](/fr/local-llms/best-gpu-for-llm-inference-under-500-2026) pour le contexte des GPU d\'entrée.\n\n**1 800–2 500 $** — Une configuration avec RTX 3090 d\'occasion (la carte seule était listée à 1 400–1 550 $ par [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)). Voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build).\n\n**3 000–4 500 $** — Une workstation RTX 4090 ou un Mac à grande mémoire unifiée. Voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build) et le [guide Apple Silicon](/fr/local-llms/apple-silicon-local-llm-guide-2026).\n\n**5 000 $+** — 48 Go+ de VRAM, multi-GPU ou classe workstation. Calculez d\'abord votre taux d\'utilisation : ce niveau ne se rentabilise qu\'en usage intensif soutenu. Voir le [guide de build workstation GPU de PromptQuorum](/fr/power-local-llm/best-workstation-build-local-ai-2026).',
       },
       hardwarePicks: {
         title: 'Sélections matérielles par catégorie',
-        content: '- **Budget :** [GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — mini PC d\'entrée pour modèles 7B\n- **Milieu de gamme :** [Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, serveur Ollama 24/7 ; [Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) en alternative Ryzen\n- **Meilleur rapport GPU :** RTX 3090 (occasion, env. 750–1 200 €) — meilleur VRAM par euro en 24 Go\n- **Performance GPU :** RTX 4090 (env. 1 900–2 900 €, prix occasion post-EOL, août 2026 — fin de production au T2 2026) — GPU unique le plus rapide, voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build)\n- **Option Apple :** Mac à grande mémoire unifiée pour modèles 70B+ à faible consommation — voir le [guide Apple Silicon](/fr/local-llms/apple-silicon-local-llm-guide-2026)\n\nLes liens RTX 3090/4090 et Apple ci-dessus sont de simples liens produit/éditoriaux — PromptQuorum n\'a aucun programme d\'affiliation et ne perçoit aucune commission sur un achat matériel.',
+        content: '- **Budget :** [GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — mini PC d\'entrée pour modèles 7B\n- **Milieu de gamme :** [Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, serveur Ollama 24/7 ; [Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) en alternative Ryzen\n- **Rapport qualité-prix GPU :** RTX 3090 (carte d\'occasion listée à 1 400–1 550 $ par [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), mis à jour le 2026-10-15) — 24 Go de VRAM à un prix de carte inférieur à la RTX 4090\n- **Performance GPU :** RTX 4090 (neuve 2 000–3 000 $, annonces d\'occasion vendues 2 575–3 010 $ selon InsiderLLM) — plus rapide que la RTX 3090, mais plus chère, voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build)\n- **Option Apple :** Mac à grande mémoire unifiée pour modèles 70B+ à faible consommation — voir le [guide Apple Silicon](/fr/local-llms/apple-silicon-local-llm-guide-2026)\n\nLes liens RTX 3090/4090 et Apple ci-dessus sont de simples liens produit/éditoriaux — PromptQuorum n\'a aucun programme d\'affiliation et ne perçoit aucune commission sur un achat matériel.',
       },
       dontBuy: {
         title: 'Quand NE PAS acheter de matériel IA local',
@@ -606,27 +626,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       whenLocalWins: {
         title: 'Quand l\'IA locale gagne',
-        content: '- **Usage quotidien et prévisible** — les heures s\'additionnent vite, voir le tableau d\'usage ci-dessus\n- **Prévisibilité des coûts** — un coût matériel fixe se budgète plus facilement que des factures cloud variables\n- **Données sensibles ou besoin hors ligne** — rien ne quitte votre réseau\n- **Besoin d\'inférence illimitée** — la documentation d\'Ollama indique que l\'exécution de modèles sur votre propre matériel est illimitée ; seul le service cloud géré d\'Ollama, distinct de l\'usage local, applique des limites selon le forfait\n- **Horizon d\'usage pluriannuel** avec un matériel bien utilisé',
+        content: '- **Usage quotidien et prévisible** — les heures s\'additionnent vite, voir le tableau d\'usage ci-dessus\n- **Prévisibilité des coûts** — un coût matériel fixe se budgète plus facilement que des factures cloud variables\n- **Données sensibles ou besoin hors ligne** — les prompts sont traités sur votre propre machine plutôt que sur les serveurs d\'un fournisseur ; les téléchargements de modèles et les vérifications de mise à jour utilisent toujours le réseau\n- **Pas de frais par requête pour les modèles que vous exécutez vous-même** — les modèles locaux utilisent votre propre matériel, alors que le service cloud distinct d\'Ollama applique des limites de session et hebdomadaires selon le forfait ([tarifs Ollama](https://ollama.com/pricing))\n- **Horizon d\'usage pluriannuel** avec un matériel bien utilisé',
       },
       electricity: {
-        title: 'Prix de l\'électricité par pays',
-        content: 'Une workstation locale de 450 W fonctionnant 240 h/mois (8 h/jour) coûte environ 18 $/mois en électricité aux États-Unis, contre environ 24 $/mois en France. Utilisez votre propre tarif dans le calculateur ci-dessus — ce sont des valeurs de référence.',
-        columns: ['Pays', 'Tarif résidentiel', 'Système 450 W, 240 h/mois'],
+        title: 'Coût de l\'électricité par pays',
+        content: 'Un système de 450 W utilisé 240 heures par mois (8 h/jour) consomme 108 kWh. Aux tarifs d\'exemple ci-dessous, cela coûte environ 18 $ par mois (États-Unis) à environ 40 $ (Allemagne). Ces tarifs sont des valeurs d\'exemple identiques aux préréglages du calculateur, pas des moyennes sourcées : utilisez votre propre tarif.',
+        columns: ['Pays', 'Tarif d\'exemple', '450 W, 240 h/mois'],
         rows: [
-          { Pays: 'États-Unis', 'Tarif résidentiel': '~0,17 $/kWh', 'Système 450 W, 240 h/mois': '~18 $/mois' },
-          { Pays: 'Allemagne', 'Tarif résidentiel': '~0,37 €/kWh (~0,37 $)', 'Système 450 W, 240 h/mois': '~40 $/mois' },
-          { Pays: 'Royaume-Uni', 'Tarif résidentiel': '~0,26 £/kWh (~0,33 $)', 'Système 450 W, 240 h/mois': '~36 $/mois' },
-          { Pays: 'France', 'Tarif résidentiel': '~0,22 €/kWh (~0,22 $)', 'Système 450 W, 240 h/mois': '~24 $/mois' },
+          { 'Pays': 'États-Unis', 'Tarif d\'exemple': '0,17 $/kWh', '450 W, 240 h/mois': '18 $/mois' },
+          { 'Pays': 'Allemagne', 'Tarif d\'exemple': '0,37 $/kWh', '450 W, 240 h/mois': '40 $/mois' },
+          { 'Pays': 'Royaume-Uni', 'Tarif d\'exemple': '0,33 $/kWh', '450 W, 240 h/mois': '36 $/mois' },
+          { 'Pays': 'France', 'Tarif d\'exemple': '0,22 $/kWh', '450 W, 240 h/mois': '24 $/mois' },
         ],
       },
       cloudProviders: {
-        title: 'Comparatif des fournisseurs de GPU cloud',
-        content: 'Tarifs représentatifs classe RTX 4090, août 2026 — vérifiez toujours les prix actuels avant de louer, ils changent fréquemment.',
-        columns: ['Fournisseur', 'Idéal pour', 'Modèle de prix', 'Verdict'],
+        title: 'Comparatif de location de GPU cloud',
+        content: 'Prix catalogue pour une RTX 4090, relevés le 22 novembre 2026. Les chiffres Vast.ai sont des offres à un seul GPU issues de son API publique d\'offres et changent à la minute.',
+        columns: ['Fournisseur', 'RTX 4090', 'Facturation', 'Remarque'],
         rows: [
-          { Fournisseur: 'RunPod', 'Idéal pour': 'Fiabilité, pods gérés', 'Modèle de prix': 'À la seconde, 0,34–0,69 $/h', Verdict: 'Bon choix par défaut pour usage régulier' },
-          { Fournisseur: 'Vast.ai', 'Idéal pour': 'Prix le plus bas, flexible', 'Modèle de prix': 'Enchères marketplace, 0,13–0,34 $/h', Verdict: 'Le moins cher, qualité d\'hôte variable' },
-          { Fournisseur: 'Lambda Labs', 'Idéal pour': 'GPU data-center (A100/H100)', 'Modèle de prix': 'À l\'heure, 1,99–4,29 $/h', Verdict: 'Idéal pour l\'entraînement, pas pour louer une 4090 pas chère' },
+          { 'Fournisseur': 'RunPod', 'RTX 4090': '0,34–0,89 $/h (Community–Secure)', 'Facturation': 'à la seconde', 'Remarque': 'GPU grand public et datacenter dans une liste' },
+          { 'Fournisseur': 'Vast.ai', 'RTX 4090': '0,26–0,60 $/h interruptible, 0,38–2,34 $/h à la demande', 'Facturation': 'à la seconde', 'Remarque': 'Place de marché ; qualité d\'hôte variable' },
+          { 'Fournisseur': 'Lambda', 'RTX 4090': 'non listée', 'Facturation': 'à la minute', 'Remarque': 'H100 3,79–4,89 $/h, A100 40 Go 1,99 $/h' },
         ],
       },
       finalVerdict: {
@@ -661,110 +681,73 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: 'L\'IA locale est-elle toujours moins chère que le cloud ?', a: 'Non. Le matériel local n\'est moins cher qu\'au-delà d\'un seuil d\'usage dépendant du prix du matériel, du tarif électrique et du tarif cloud — typiquement environ 250–500 h/mois pour une workstation GPU milieu de gamme. En dessous, la location cloud est généralement moins chère.' },
-            { q: 'À partir de combien d\'heures l\'achat de matériel local devient-il rentable ?', a: 'Pour une workstation RTX 4090 à 2 600 € face à un tarif cloud de 0,50 $/h, le seuil naïf (prix ÷ tarif) est de 5 600 heures cumulées. En intégrant électricité et valeur de revente, le seuil TCO complet à 240 h/mois (8 h/jour) est d\'environ 4 780 heures, soit environ 20 mois. Utilisez le calculateur ci-dessus pour vos chiffres.' },
-            { q: 'L\'électricité est-elle incluse dans les estimations de coût de l\'IA locale ?', a: 'Elle devrait l\'être, mais elle est souvent absente des comparaisons simples. Un système de 450 W fonctionnant 8 h/jour ajoute environ 18 $/mois aux États-Unis ou environ 24 $/mois en France, selon les tarifs résidentiels.' },
-            { q: 'Un Mac convient-il pour les LLM locaux ?', a: 'Les Mac à grande mémoire unifiée peuvent exécuter de grands modèles (classe 70B) à faible consommation, ce qui améliore leur coût de possession, en particulier dans les pays à tarif électrique élevé. Voir le guide Apple Silicon lié plus haut pour les tailles de modèle et performances actuelles.' },
-            { q: '24 Go de VRAM suffisent-ils pour les LLM locaux ?', a: '24 Go (RTX 3090 ou RTX 4090) exécutent confortablement des modèles jusqu\'à environ 30–34B de paramètres en quantification 4 bits, ce qui couvre la plupart des usages IA locale mono-utilisateur. Les modèles classe 70B nécessitent environ 48 Go, atteints avec des configurations bi-GPU ou des Mac à grande mémoire unifiée.' },
-            { q: 'Faut-il acheter une RTX 4090 ou louer du temps de GPU cloud ?', a: 'Achetez si vous prévoyez un usage soutenu au-delà d\'environ 250–500 h/mois sur plusieurs années et pouvez garder le matériel bien utilisé. Louez si votre usage est occasionnel, sporadique, ou si vous validez encore la charge de travail — la location évite entièrement l\'investissement initial d\'environ 1 900–2 900 € d\'une RTX 4090 (prix occasion post-EOL, août 2026, fin de production au T2 2026).' },
-            { q: 'Quel est le moyen le moins cher d\'exécuter un LLM local ?', a: 'Pour le coût initial le plus bas, un mini PC Ryzen (500–1 000 €) exécutant un modèle 7B–14B quantifié est la configuration locale dédiée la moins chère. Pour le coût le plus bas par inférence à faible volume, la location cloud GPU sans aucun achat de matériel est moins chère.' },
-            { q: 'Exécuter l\'IA en local signifie-t-il que les données ne quittent jamais mon ordinateur ?', a: 'Oui, pour l\'inférence locale via des outils comme Ollama sur votre propre matériel — aucune donnée n\'est envoyée nulle part. Ceci est distinct du service cloud géré séparé d\'Ollama, qui envoie bien des requêtes à l\'infrastructure d\'Ollama ; seul le mode local sur l\'appareil garde les données entièrement sur votre machine.' },
-            { q: 'Est-il moins cher de construire un serveur LLM local ou de louer un GPU cloud ?', a: 'Cela dépend du volume d\'utilisation. En dessous de 100 h/mois, la location cloud gagne presque toujours. Au-delà de ~500 h/mois, posséder le matériel gagne généralement une fois électricité et revente pris en compte.' },
-          ],
+          {
+            q: 'L\'IA locale est-elle toujours moins chère que le cloud ?',
+            a: 'Non. Le matériel local n\'est moins cher qu\'au-dessus d\'un seuil d\'usage qui dépend du prix du matériel, du tarif d\'électricité et du tarif cloud — en règle générale autour de 250–500 h/mois pour une workstation GPU de milieu de gamme. En dessous, la location cloud est généralement moins chère car elle n\'a aucun coût initial.',
+          },
+          {
+            q: 'À partir de combien d\'heures l\'achat de matériel local devient-il rentable ?',
+            a: 'Pour le système d\'exemple RTX 4090 à 3 300 $, le seuil de rentabilité face à RunPod Secure Cloud (0,89 $/h) est d\'environ 4 060 heures (17 mois à 240 h/mois) ; face à Community Cloud (0,34 $/h), il est d\'environ 12 520 heures (52 mois). Avec 1 000 $ de valeur de revente, il passe à environ 2 830 et 8 730 heures. Prix du matériel, puissance et électricité sont des valeurs d\'exemple : utilisez le calculateur ci-dessus avec les vôtres.',
+          },
+          {
+            q: 'L\'électricité est-elle incluse dans les estimations de coût de l\'IA locale ?',
+            a: 'Elle devrait l\'être, mais manque souvent dans les comparaisons simples. Un système de 450 W utilisé 8 heures par jour ajoute environ 18 $/mois à un tarif d\'exemple de 0,17 $/kWh, ou environ 40 $/mois à 0,37 $/kWh. Le calculateur ci-dessus vous permet de saisir votre propre tarif.',
+          },
+          {
+            q: 'Combien coûte l\'exécution d\'un LLM local par rapport au cloud ?',
+            a: 'Dans l\'exemple chiffré, la location d\'une RTX 4090 chez RunPod coûte environ 82 $ par mois à 0,34 $/h ou 214 $ à 0,89 $/h pour 240 heures, sans coût initial. Le système local coûte 3 300 $ au départ plus environ 18 $ d\'électricité par mois. Le moins cher dépend de la durée d\'utilisation : voir le tableau de seuil de rentabilité ci-dessus.',
+          },
+          {
+            q: 'Un abonnement IA est-il moins cher que louer ou acheter un GPU ?',
+            a: 'Un abonnement facture un tarif mensuel fixe avec les limites d\'usage du fournisseur, un GPU loué est facturé à l\'heure et un GPU acheté coûte au départ. Pour le calcul acheter ou s\'abonner, voir [GPU vs ChatGPT Plus 2026](/fr/local-llms/gpu-vs-ai-subscription-roi) et [LLMs locaux vs ChatGPT Plus](/fr/local-llms/local-llms-vs-chatgpt-plus).',
+          },
+          {
+            q: 'Un Mac convient-il aux LLM locaux ?',
+            a: 'Les Mac à grande mémoire unifiée peuvent exécuter de grands modèles (classe 70B) avec une faible consommation, ce qui améliore leur bilan de coût, surtout dans les pays où l\'électricité est chère. Voir le guide Apple Silicon ci-dessus pour les détails.',
+          },
+          {
+            q: '24 Go de VRAM suffisent-ils pour les LLM locaux ?',
+            a: '24 Go (RTX 3090 ou RTX 4090) exécutent des modèles jusqu\'à environ 30–34B paramètres en quantification 4 bits, ce qui couvre la plupart des usages mono-utilisateur. Les modèles de classe 70B demandent environ 48 Go, atteints avec des configurations double GPU ou des Mac à grande mémoire unifiée.',
+          },
+          {
+            q: 'Faut-il acheter une RTX 4090 ou louer du temps de GPU cloud ?',
+            a: 'Achetez si vous prévoyez un usage soutenu au-delà d\'environ 250–500 h/mois sur plusieurs années et pouvez garder le matériel occupé. Louez si votre usage est occasionnel, irrégulier ou si vous validez encore la charge de travail : la location évite entièrement le coût initial d\'une RTX 4090 (neuve 2 000–3 000 $ selon InsiderLLM, mis à jour le 2026-10-15).',
+          },
+          {
+            q: 'Quel est le moyen le moins cher d\'exécuter un LLM local ?',
+            a: 'Pour le coût initial le plus bas, un mini PC Ryzen (une gamme d\'exemple de 500–1 000 $) exécutant un modèle 7B–14B quantifié est la configuration locale dédiée la moins chère. À faible volume, la location de GPU cloud sans aucun achat de matériel coûte moins.',
+          },
+          {
+            q: 'Exécuter l\'IA en local signifie-t-il que mes données ne quittent jamais mon ordinateur ?',
+            a: 'Avec l\'inférence locale via des outils comme Ollama, vos prompts sont traités par un modèle sur votre propre matériel plutôt que par un fournisseur cloud. Ollama documente que vous pouvez n\'utiliser que des modèles locaux et désactiver ses fonctions cloud. Les téléchargements de modèles, les vérifications de mise à jour et d\'autres logiciels de la machine peuvent toujours utiliser le réseau.',
+          },
+        ],
       },
       relatedReading: {
         id: 'related-reading',
         heading: 'Lectures recommandées',
         items: [
-          '[Comparaison coûts LLM local vs GPU cloud](/fr/local-llms/local-llm-vs-cloud-gpu-cost) -- local LLM vs cloud GPU cost comparison',
-          '[Comparaison location GPU cloud 2026](/fr/local-llms/cloud-gpu-rental-comparison-2026) -- cloud GPU rental comparison 2026',
-          '[Guide de construction workstation LLM local](/fr/local-llms/local-llm-workstation-build) -- local LLM workstation build guide',
-          '[Meilleure GPU LLM local sous $500 (2026)](/fr/local-llms/best-gpu-for-llm-inference-under-500-2026) -- best GPU under $500 for LLM inference',
-          '[GPU vs abonnement IA ROI](/fr/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
-          '[Meilleurs mini PC pour LLM local](/fr/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
-          '[Guide Apple Silicon pour LLM local 2026](/fr/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[Comparaison coûts LLM local vs GPU cloud](/fr/local-llms/local-llm-vs-cloud-gpu-cost) -- heures de rentabilité et coût par token',
+          '[Comparaison location GPU cloud 2026](/fr/local-llms/cloud-gpu-rental-comparison-2026) -- prix horaires, facturation et régions',
+          '[Guide de construction workstation LLM local](/fr/local-llms/local-llm-workstation-build) -- listes de pièces pour un système GPU local',
+          '[Meilleure GPU LLM local sous $500 (2026)](/fr/local-llms/best-gpu-for-llm-inference-under-500-2026) -- GPU d\'entrée de gamme',
+          '[GPU vs abonnement IA ROI](/fr/local-llms/gpu-vs-ai-subscription-roi) -- acheter ou s\'abonner',
+          '[Meilleurs mini PC pour LLM local](/fr/local-llms/best-mini-pcs-local-llm) -- options basse consommation pour un serveur 24/7',
+          '[Guide Apple Silicon pour LLM local 2026](/fr/local-llms/apple-silicon-local-llm-guide-2026) -- Mac à mémoire unifiée',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          '[Tarifs RunPod](https://www.runpod.io/pricing), relevés le 22 novembre 2026',
+          '[Tarifs Vast.ai](https://vast.ai/pricing) et son API publique d\'offres (offres RTX 4090 à un seul GPU), relevés le 22 novembre 2026',
+          '[Tarifs Lambda](https://lambda.com/pricing), relevés le 22 novembre 2026',
+          '[InsiderLLM : NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fourchettes de prix des RTX 4090 et RTX 3090 (mis à jour le 2026-10-15)',
+          '[Tarifs Ollama](https://ollama.com/pricing) et [documentation cloud d\'Ollama](https://docs.ollama.com/cloud), relevés le 22 novembre 2026',
         ],
       },
     },
-    faqSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-          {
-            '@type': 'Question',
-            'name': 'L\'IA locale est-elle toujours moins chère que le cloud ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Non. Le matériel local n\'est moins cher qu\'au-delà d\'un seuil d\'usage dépendant du prix du matériel, du tarif électrique et du tarif cloud — typiquement environ 250–500 h/mois pour une workstation GPU milieu de gamme. En dessous, la location cloud est généralement moins chère.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'À partir de combien d\'heures l\'achat de matériel local devient-il rentable ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Pour une workstation RTX 4090 à 2 600 € face à un tarif cloud de 0,50 $/h, le seuil naïf (prix ÷ tarif) est de 5 600 heures cumulées. En intégrant électricité et valeur de revente, le seuil TCO complet à 240 h/mois (8 h/jour) est d\'environ 4 780 heures, soit environ 20 mois. Utilisez le calculateur ci-dessus pour vos chiffres.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'L\'électricité est-elle incluse dans les estimations de coût de l\'IA locale ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Elle devrait l\'être, mais elle est souvent absente des comparaisons simples. Un système de 450 W fonctionnant 8 h/jour ajoute environ 18 $/mois aux États-Unis ou environ 24 $/mois en France, selon les tarifs résidentiels.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Un Mac convient-il pour les LLM locaux ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Les Mac à grande mémoire unifiée peuvent exécuter de grands modèles (classe 70B) à faible consommation, ce qui améliore leur coût de possession, en particulier dans les pays à tarif électrique élevé. Voir le guide Apple Silicon lié plus haut pour les tailles de modèle et performances actuelles.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '24 Go de VRAM suffisent-ils pour les LLM locaux ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '24 Go (RTX 3090 ou RTX 4090) exécutent confortablement des modèles jusqu\'à environ 30–34B de paramètres en quantification 4 bits, ce qui couvre la plupart des usages IA locale mono-utilisateur. Les modèles classe 70B nécessitent environ 48 Go, atteints avec des configurations bi-GPU ou des Mac à grande mémoire unifiée.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Faut-il acheter une RTX 4090 ou louer du temps de GPU cloud ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Achetez si vous prévoyez un usage soutenu au-delà d\'environ 250–500 h/mois sur plusieurs années et pouvez garder le matériel bien utilisé. Louez si votre usage est occasionnel, sporadique, ou si vous validez encore la charge de travail — la location évite entièrement l\'investissement initial d\'environ 1 900–2 900 € d\'une RTX 4090 (prix occasion post-EOL, août 2026, fin de production au T2 2026).',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Quel est le moyen le moins cher d\'exécuter un LLM local ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Pour le coût initial le plus bas, un mini PC Ryzen (500–1 000 €) exécutant un modèle 7B–14B quantifié est la configuration locale dédiée la moins chère. Pour le coût le plus bas par inférence à faible volume, la location cloud GPU sans aucun achat de matériel est moins chère.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Exécuter l\'IA en local signifie-t-il que les données ne quittent jamais mon ordinateur ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Oui, pour l\'inférence locale via des outils comme Ollama sur votre propre matériel — aucune donnée n\'est envoyée nulle part. Ceci est distinct du service cloud géré séparé d\'Ollama, qui envoie bien des requêtes à l\'infrastructure d\'Ollama ; seul le mode local sur l\'appareil garde les données entièrement sur votre machine.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Est-il moins cher de construire un serveur LLM local ou de louer un GPU cloud ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Cela dépend du volume d\'utilisation. En dessous de 100 h/mois, la location cloud gagne presque toujours. Au-delà de ~500 h/mois, posséder le matériel gagne généralement une fois électricité et revente pris en compte.',
-            },
-          },
-        ],
-    },
-    schema: { '@type': 'TechArticle', headline: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026', description: 'Calculateur interactif de coût total de possession comparant matériel GPU local et location cloud GPU pour LLM en 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-09-02', url: 'https://www.promptquorum.com/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'fr' },
   },
   ja: {
     designSkin: 'hub',
