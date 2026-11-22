@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 395,
+    "totalCount": 396,
     "capped": true
   },
   "llama.cpp": {
@@ -1984,7 +1984,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "bobe-review",
-        "title": "BoBe Review: Free Local AI Assistant for Mac",
+        "title": "BoBe Review: Local AI Assistant for Mac",
         "url": "/power-local-llm/bobe-review",
         "dateModified": "2026-09-04",
         "tier": "about"
@@ -1998,7 +1998,7 @@
       {
         "cluster": "power-local-llm",
         "slug": "voxa-review",
-        "title": "Voxa Review: Private Voice Assistant Orb for Desktop",
+        "title": "Voxa Review: Open-Source Voice Orb for Desktop (Cloud or Local)",
         "url": "/power-local-llm/voxa-review",
         "dateModified": "2026-09-04",
         "tier": "about"
@@ -7170,14 +7170,6 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "cloud-gpu-rental-comparison-2026",
-        "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
-        "url": "/local-llms/cloud-gpu-rental-comparison-2026",
-        "dateModified": "2026-11-22",
-        "tier": "about"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "animatediff-video-generation-guide-2026",
         "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
@@ -7240,9 +7232,17 @@
         "url": "/local-llms/apple-silicon-m5-local-llm",
         "dateModified": "2026-11-06",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "comfyui-review",
+        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
+        "url": "/power-local-llm/comfyui-review",
+        "dateModified": "2026-11-03",
+        "tier": "about"
       }
     ],
-    "totalCount": 38,
+    "totalCount": 37,
     "capped": true
   },
   "ComfyUI": {
@@ -11944,14 +11944,6 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "cloud-gpu-rental-comparison-2026",
-        "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
-        "url": "/local-llms/cloud-gpu-rental-comparison-2026",
-        "dateModified": "2026-11-22",
-        "tier": "mentioned"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "animatediff-video-generation-guide-2026",
         "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
@@ -11990,9 +11982,17 @@
         "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
         "dateModified": "2026-11-20",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
+        "title": "AutoDL Pricing 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU",
+        "url": "/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
+        "dateModified": "2026-11-19",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 76,
+    "totalCount": 75,
     "capped": true
   },
   "Newelle": {
@@ -12088,14 +12088,6 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "cloud-gpu-rental-comparison-2026",
-        "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
-        "url": "/local-llms/cloud-gpu-rental-comparison-2026",
-        "dateModified": "2026-11-22",
-        "tier": "about"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "qwen-local-deployment-complete-guide-2026",
         "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
@@ -12157,6 +12149,14 @@
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
         "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-11-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-security-privacy-checklist",
+        "title": "Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup",
+        "url": "/local-llms/local-llm-security-privacy-checklist",
+        "dateModified": "2026-11-15",
         "tier": "about"
       }
     ],

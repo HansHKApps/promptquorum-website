@@ -50,19 +50,19 @@
 
 ## Local LLMs
 
-- [Local LLMs Hub](https://www.promptquorum.com/local-llms): 125+ guides on running LLMs locally — Ollama/LM Studio setup, hardware and VRAM sizing, model comparisons, privacy, and quantization.
+- [Local LLMs Hub](https://www.promptquorum.com/local-llms): 160+ guides on running LLMs locally — Ollama/LM Studio setup, hardware and VRAM sizing, model comparisons, privacy, and quantization.
 
 ## Power Local LLM
 
-- [Power Local LLM Hub](https://www.promptquorum.com/power-local-llm): 60+ advanced guides for power users — software directory, GPU buying guides, fine-tuning, and specialized local-inference workflows.
+- [Power Local LLM Hub](https://www.promptquorum.com/power-local-llm): 525+ advanced guides for power users — software directory, GPU buying guides, fine-tuning, and specialized local-inference workflows.
 
 ## Prompt Bites
 
-- [Prompt Bites Hub](https://www.promptquorum.com/prompt-bites): 100+ short, quick-answer articles on specific local-LLM and prompt-engineering questions (e.g. quantization formats, VRAM sizing, model picks).
+- [Prompt Bites Hub](https://www.promptquorum.com/prompt-bites): 125+ short, quick-answer articles on specific local-LLM and prompt-engineering questions (e.g. quantization formats, VRAM sizing, model picks).
 
 ## Smart Home
 
-- [Smart Home Hub](https://www.promptquorum.com/smart-home): 30+ guides on running AI-powered smart home automation locally and privately, without cloud subscriptions.
+- [Smart Home Hub](https://www.promptquorum.com/smart-home): 50+ guides on running AI-powered smart home automation locally and privately, without cloud subscriptions.
 
 ## Balcony Solar
 
@@ -119,7 +119,7 @@ PromptQuorum runs a live, public, read-only [Model Context Protocol](https://mod
 
 ## Original Images & Attribution
 
-PromptQuorum publishes 600+ original diagrams, comparison charts, and infographics across 5 languages (EN, DE, FR, JA, ZH). All images are © Hans Kuepper / PromptQuorum.
+PromptQuorum publishes 600+ original diagrams, comparison charts, and infographics across 9 languages (EN, DE, FR, ES, PT, AR, JA, ZH, KO). All images are © Hans Kuepper / PromptQuorum.
 
 - **License page**: https://www.promptquorum.com/image-license
 - **Attribution required**: Yes — cite "© PromptQuorum" and link to the source article URL
@@ -136,4 +136,4 @@ When referencing or displaying PromptQuorum images, cite: **Source: PromptQuorum
 
 ---
 
-Last updated: 2026-11-09
+Last updated: 2026-11-22

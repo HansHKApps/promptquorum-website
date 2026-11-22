@@ -30923,5 +30923,141 @@
       "t14": "2026-12-04",
       "t28": "2026-12-18"
     }
+  },
+  {
+    "id": "2daad71d-d8b3-43db-bee8-042da762df9c",
+    "slug": "/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-22T10:36:37.924Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "hourly prices only, no cost per token (dateModified 2026-11-15)",
+        "new": "cost-per-token section + FAQ added, prices re-read 2026-11-22"
+      }
+    ],
+    "reason": "Page refresh 2026-11-22: new cost-per-token section (third-party NoctHost data) + FAQ on cost per million tokens; vendor prices re-verified 22 Nov; all 9 locales; risk-gated",
+    "queries": [
+      "cost of running local llm vs cloud",
+      "cloud vs local llm cost calculator",
+      "cloud gpu for llm"
+    ],
+    "baseline": {
+      "position": 10.6,
+      "impressions": 1085,
+      "clicks": 1,
+      "ctr": 0.0009216589861751152,
+      "period": "28d to 2026-11-22"
+    },
+    "deployedAt": "2026-11-22",
+    "measure": {
+      "t14": "2026-12-06",
+      "t28": "2026-12-20"
+    }
+  },
+  {
+    "id": "88eadbd0-e348-4d59-8eca-092973e949eb",
+    "slug": "/prompt-bites/cloud-gpu-cost-per-hour",
+    "date": "2026-11-22T11:18:51.274Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Cloud GPU Cost Per Hour 2026 | Prompt Bites (43 chars)",
+        "new": "Cloud GPU Cost Per Hour 2026: RTX 4090, A100, H100 (50 chars)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "A100 80 GB 1.19-2.79, H100 1.99-4.29",
+        "new": "A100 80 GB 1.19-3.19, H100 1.99-4.89"
+      }
+    ],
+    "reason": "Page refresh 2026-11-22: RunPod/Lambda hourly prices re-read, cheapest claims scoped to checked listings, seoTitle/meta brought into locale budgets, cross-link to cost-per-token section; 9 locales; risk-gated",
+    "queries": [
+      "gpu cost per hour",
+      "cloud gpu prices",
+      "gpu cloud pricing",
+      "cloud gpu pricing 2026"
+    ],
+    "baseline": {
+      "position": 8.22,
+      "impressions": 716,
+      "clicks": 1,
+      "ctr": 0.0013966480446927375,
+      "period": "28d to 2026-11-22"
+    },
+    "deployedAt": "2026-11-22",
+    "measure": {
+      "t14": "2026-12-06",
+      "t28": "2026-12-20"
+    }
+  },
+  {
+    "id": "d8bbcf45-ab3e-4b0e-aa08-15dc7f9b9c2f",
+    "slug": "/local-llms/cloud-gpu-rental-comparison-2026",
+    "date": "2026-11-22T13:06:27.437Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale August 2026 snapshots, uneven locales (5183 lines)",
+        "new": "prices read 2026-11-22, 9 locales at parity (2802 lines)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "ko/ja/fr/zh generic titles",
+        "new": "ko RunPod 가격 비교, ja GPU料金比較, fr prix GPU, zh GPU租赁价格对比"
+      }
+    ],
+    "reason": "Full monthly refresh 2026-11-22: prices/facts re-read from primary sources, month snapshots and unverifiable claims removed, USD no longer shown as euro, all 9 locales rebuilt to one structure (14 FAQs), titles/metas reviewed per locale (ko/ja/fr/zh adapted to own queries); risk-gated",
+    "queries": [
+      "runpod vs lambda labs",
+      "alternative runpod",
+      "runpod 가격",
+      "gpuレンタル価格",
+      "lambda labs prix",
+      "vast.ai"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 6493,
+      "clicks": 10,
+      "ctr": 0.0015401201293700909,
+      "period": "28d to 2026-11-22"
+    },
+    "deployedAt": "2026-11-22",
+    "measure": {
+      "t14": "2026-12-06",
+      "t28": "2026-12-20"
+    }
+  },
+  {
+    "id": "5a5b0cd6-586d-4711-98e4-b7eeac2f5bf6",
+    "slug": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
+    "date": "2026-11-22T13:40:10.056Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale prices, mixed currencies, uneven locales",
+        "new": "worked example + prices read 2026-11-22, 9 locales at parity"
+      }
+    ],
+    "reason": "Full monthly refresh 2026-11-22: worked break-even example added, prices re-read from primary sources, unverifiable claims and month snapshots removed, foreign-currency amounts replaced by USD, all 9 locales at one structure (19 sections, 10 FAQs); risk-gated",
+    "queries": [
+      "cloud vs local llm cost calculator",
+      "cost of running local llm vs cloud",
+      "ai subscription cost versus rent",
+      "ki server kosten",
+      "cout serveur gpu llm"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 1319,
+      "clicks": 7,
+      "ctr": 0.00530705079605762,
+      "period": "28d to 2026-11-22"
+    },
+    "deployedAt": "2026-11-22",
+    "measure": {
+      "t14": "2026-12-06",
+      "t28": "2026-12-20"
+    }
   }
 ]

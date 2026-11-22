@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-en.webp',
     title: 'How Much Does a Cloud GPU Cost Per Hour in 2026?',
-    seoTitle: 'Cloud GPU Cost Per Hour 2026 | Prompt Bites',
+    seoTitle: 'Cloud GPU Cost Per Hour 2026: RTX 4090, A100, H100',
     metaDescription: 'Cloud GPU cost per hour: RTX 4090 from $0.34, A100 80 GB $1.19-3.19, H100 $1.99-4.89. The cheapest cloud GPUs by the hour, with RunPod and Lambda rates.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-22',
@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['runpod-vs-vastai-pricing', 'best-gpu-under-600-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      'Cloud GPUs cost $0.34-0.89/hr for an RTX 4090 24 GB, $1.19-3.19/hr for an A100 80 GB and $1.99-4.89/hr for an H100 80 GB across RunPod and Lambda. The cheapest hourly options are older 24 GB cards: RunPod lists the RTX A5000 from $0.16/hr and the RTX 3090 from $0.22/hr on Community Cloud. Vast.ai marketplace prices move with supply, so read its live grid before booking.',
+      'A cloud GPU costs $0.34-0.89/hr (RTX 4090), $1.19-3.19/hr (A100 80 GB) or $1.99-4.89/hr (H100 80 GB) at RunPod and Lambda; cheapest checked is the RTX A5000.',
     toc: [
       { label: 'Best Pick by Workload', anchor: '#best-pick' },
       { label: 'Cloud GPU Hourly Rates by Card', anchor: '#comparison' },
@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'How much does a cloud GPU cost per hour in 2026?',
-        answer: 'RTX 4090: $0.34-0.89/hr. A100 80 GB: $1.19-3.19/hr. H100 80 GB: $1.99-4.89/hr. Cheapest by the hour: RTX A5000 from $0.16/hr.',
+        answer: 'RTX 4090: $0.34-0.89/hr. A100 80 GB: $1.19-3.19/hr. H100 80 GB: $1.99-4.89/hr. Cheapest among the RunPod and Lambda listings checked: RTX A5000 from $0.16/hr.',
         bullets: [
           'RunPod lists the RTX 4090 at $0.34/hr on Community Cloud and $0.89/hr on Secure Cloud.',
           'Lambda charges $3.79/hr for an H100 PCIe and $4.59-4.89/hr for an H100 SXM; RunPod lists an H100 PCIe from $1.99/hr.',
@@ -49,10 +49,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GB costs $0.34-0.89/hr on RunPod — a low-cost option for 13B-30B inference',
+          'RTX 4090: $0.34-0.89/hr on RunPod',
           'A100 80 GB costs $1.19-3.19/hr across RunPod and Lambda and is the workhorse for 70B inference and most fine-tuning',
           'H100 80 GB costs $1.99-4.89/hr and is only worth it for large-scale training or latency-critical serving',
-          'The cheapest cloud GPUs per hour are older 24 GB cards from $0.16/hr — rates change often, so check the provider page before booking',
+          'Among the RunPod and Lambda listings checked, the cheapest cloud GPUs per hour are older 24 GB cards from $0.16/hr — rates change often, so check the provider page before booking',
         ],
       },
       bestPick: {
@@ -116,12 +116,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Hourly rate': '$1.99-4.89/hr',
             'Best for': 'Large-scale training, latency-critical serving',
           },
-          {
-            'GPU': '[L40S (DigitalOcean)](/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '48 GB',
-            'Hourly rate': '$1.57/hr',
-            'Best for': 'Models that need 48 GB',
-          },
         ],
       },
       cheapest: {
@@ -129,7 +123,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Cheapest Cloud GPUs by the Hour',
         content: [
           '<strong>Among the RunPod and Lambda listings checked, the cheapest cloud GPUs per hour are older 24 GB and 48 GB cards, starting at $0.16/hr.</strong> RunPod lists these Community and Secure Cloud rates; they suit small-model inference and testing, not large training runs.',
-          'Some providers price differently: the <a href="/power-local-llm/clore-ai-review" class="text-primary hover:underline">Clore.ai review</a> covers a marketplace where hosts set their own prices, and the <a href="/power-local-llm/novita-ai-review" class="text-primary hover:underline">Novita AI review</a> covers per-token model APIs. For Vultr, DigitalOcean and UpCloud, see the <a href="/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud" class="text-primary hover:underline">Vultr, DigitalOcean and UpCloud GPU cloud</a>; <a href="/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">cloud GPU providers compared</a> puts all of them side by side.',
         ],
         columns: ['GPU', 'VRAM', 'Hourly rate', 'Best for'],
         rows: [
@@ -157,18 +150,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Hourly rate': '$0.44-0.69/hr',
             'Best for': 'Low-power inference',
           },
-          {
-            'GPU': '[RTX 4000 Ada (DigitalOcean)](/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '20 GB',
-            'Hourly rate': '$0.76/hr',
-            'Best for': '7B-13B inference, testing',
-          },
-          {
-            'GPU': '[A16 (Vultr)](/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '16 GB',
-            'Hourly rate': 'from $0.471/hr',
-            'Best for': '7B-13B inference, testing',
-          },
+        ],
+        items: [
+          'Renting instead of buying: see [cloud GPU providers compared](/power-local-llm/best-cloud-gpu-providers), the [Clore.ai review](/power-local-llm/clore-ai-review), the [Novita AI review](/power-local-llm/novita-ai-review) and the [Vultr, DigitalOcean and UpCloud GPU comparison](/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud).',
         ],
       },
       snippets: {
@@ -176,7 +160,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Summary',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Cloud GPUs cost about $0.34-0.89/hr for an RTX 4090, $1.19-3.19/hr for an A100 80 GB and $1.99-4.89/hr for an H100 80 GB.' },
-          { type: 'plain-terms', text: 'Renting a GPU in the cloud is billed by the hour, and the price depends on the card, the provider and whether the rental can be interrupted. Smaller 24 GB cards are cheapest and handle small and mid-size models; A100 and H100 cards cost more and suit large models and training.' },
+          { type: 'plain-terms', text: 'Renting a GPU in the cloud is billed by the hour, and the price depends on the card, the provider and whether the rental can be interrupted. Among RunPod and Lambda listings, smaller 24 GB cards are cheapest and handle small and mid-size models; A100 and H100 cards cost more and suit large models and training.' },
         ],
       },
       faq: {
@@ -216,7 +200,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[RunPod vs Vast.ai Pricing](/prompt-bites/runpod-vs-vastai-pricing) — managed vs marketplace tradeoffs',
           '[Best GPU Under $600 for Local LLMs](/prompt-bites/best-gpu-under-600-local-llm) — buy vs rent decision context',
           '[Best GPU Buying Guide for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — full hardware-buying overview',
-          '[Cloud GPU providers compared](/power-local-llm/best-cloud-gpu-providers) — [Clore.ai review](/power-local-llm/clore-ai-review) — [Novita AI review](/power-local-llm/novita-ai-review) — [Vultr, DigitalOcean and UpCloud GPU cloud](/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
+          '[Local LLM vs Cloud GPU Cost](/local-llms/local-llm-vs-cloud-gpu-cost) — break-even hours and cost per token',
+          'Rent instead of buy: [cloud GPU providers compared](/power-local-llm/best-cloud-gpu-providers), [Clore.ai review](/power-local-llm/clore-ai-review), [Novita AI review](/power-local-llm/novita-ai-review) and [Vultr, DigitalOcean and UpCloud GPU comparison](/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
         ],
       },
     },
@@ -226,8 +211,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-de.webp',
     title: 'Wie viel kostet eine Cloud-GPU pro Stunde 2026?',
-    seoTitle: 'Cloud-GPU-Kosten pro Stunde 2026 | Prompt Bites',
-    metaDescription: 'Cloud-GPU-Kosten pro Stunde: RTX 4090 ab 0,34 $, A100 80 GB 1,19-3,19 $, H100 1,99-4,89 $. Die günstigsten Cloud-GPUs pro Stunde mit RunPod- und Lambda-Tarifen.',
+    seoTitle: 'Cloud-GPU-Kosten pro Stunde 2026: RTX 4090, A100, H100',
+    metaDescription: 'Cloud-GPU-Kosten pro Stunde: RTX 4090 ab 0,34 $, A100 80 GB 1,19-3,19 $, H100 1,99-4,89 $. Günstigste Cloud-GPUs pro Stunde bei RunPod und Lambda.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
@@ -242,7 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 Min. Lesezeit',
     leadAnswerBlock:
-      'Cloud-GPUs kosten bei RunPod und Lambda 0,34-0,89 $/h für eine RTX 4090 24 GB, 1,19-3,19 $/h für eine A100 80 GB und 1,99-4,89 $/h für eine H100 80 GB. Pro Stunde am günstigsten sind ältere 24-GB-Karten: RunPod listet die RTX A5000 ab 0,16 $/h und die RTX 3090 ab 0,22 $/h in der Community Cloud. Marktplatzpreise bei Vast.ai schwanken mit dem Angebot — vor der Buchung das Live-Raster prüfen.',
+      'Cloud-GPUs bei RunPod und Lambda: RTX 4090 0,34-0,89 $/h, A100 80 GB 1,19-3,19 $/h, H100 80 GB 1,99-4,89 $/h. Am günstigsten geprüft: RTX A5000 ab 0,16 $/h.',
     toc: [
       { label: 'Beste Wahl nach Workload', anchor: '#best-pick' },
       { label: 'Stundentarife je Karte', anchor: '#comparison' },
@@ -255,7 +240,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Wie viel kostet eine Cloud-GPU pro Stunde 2026?',
-        answer: 'RTX 4090: 0,34-0,89 $/h. A100 80 GB: 1,19-3,19 $/h. H100 80 GB: 1,99-4,89 $/h. Am günstigsten pro Stunde: RTX A5000 ab 0,16 $/h.',
+        answer: 'RTX 4090: 0,34-0,89 $/h. A100 80 GB: 1,19-3,19 $/h. H100 80 GB: 1,99-4,89 $/h. Am günstigsten in den geprüften RunPod- und Lambda-Angeboten: RTX A5000 ab 0,16 $/h.',
         bullets: [
           'RunPod listet die RTX 4090 mit 0,34 $/h in der Community Cloud und 0,89 $/h in der Secure Cloud.',
           'Lambda berechnet 3,79 $/h für eine H100 PCIe und 4,59-4,89 $/h für eine H100 SXM; RunPod listet eine H100 PCIe ab 1,99 $/h.',
@@ -269,10 +254,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GB kostet bei RunPod 0,34-0,89 $/h — eine preiswerte Option für 13B-30B-Inferenz',
+          'RTX 4090: 0,34-0,89 $/h bei RunPod',
           'A100 80 GB kostet 1,19-3,19 $/h bei RunPod und Lambda und ist das Arbeitstier für 70B-Inferenz und die meisten Fine-Tuning-Jobs',
           'H100 80 GB kostet 1,99-4,89 $/h und lohnt sich nur für große Trainings oder latenzkritisches Serving',
-          'Die günstigsten Cloud-GPUs pro Stunde sind ältere 24-GB-Karten ab 0,16 $/h — Tarife ändern sich oft, vor der Buchung die Anbieterseite prüfen',
+          'In den geprüften RunPod- und Lambda-Angeboten sind die günstigsten Cloud-GPUs pro Stunde ältere 24-GB-Karten ab 0,16 $/h — Tarife ändern sich oft, vor der Buchung die Anbieterseite prüfen',
         ],
       },
       bestPick: {
@@ -336,12 +321,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Stundenpreis': '1,99-4,89 $/h',
             'Geeignet für': 'Große Trainings, latenzkritisches Serving',
           },
-          {
-            'GPU': '[L40S (DigitalOcean)](/de/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '48 GB',
-            'Stundenpreis': '1,57 $/h',
-            'Geeignet für': 'Modelle, die 48 GB brauchen',
-          },
         ],
       },
       cheapest: {
@@ -349,7 +328,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Günstigste Cloud-GPUs pro Stunde',
         content: [
           '<strong>Unter den geprüften RunPod- und Lambda-Angeboten sind ältere 24-GB- und 48-GB-Karten pro Stunde am günstigsten, ab 0,16 $/h.</strong> RunPod listet diese Tarife für Community und Secure Cloud; sie eignen sich für Inferenz mit kleinen Modellen und Tests, nicht für große Trainingsläufe.',
-          'Manche Anbieter rechnen anders ab: das <a href="/de/power-local-llm/clore-ai-review" class="text-primary hover:underline">Clore.ai-Review</a> behandelt einen Marktplatz, auf dem die Hosts ihre Preise selbst festlegen, und das <a href="/de/power-local-llm/novita-ai-review" class="text-primary hover:underline">Novita AI-Review</a> Modell-APIs mit Abrechnung pro Token. Zu Vultr, DigitalOcean und UpCloud siehe <a href="/de/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud" class="text-primary hover:underline">GPU-Cloud von Vultr, DigitalOcean und UpCloud</a>; <a href="/de/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">Cloud-GPU-Anbieter im Vergleich</a> stellt alle nebeneinander.',
         ],
         columns: ['GPU', 'VRAM', 'Stundenpreis', 'Geeignet für'],
         rows: [
@@ -377,18 +355,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Stundenpreis': '0,44-0,69 $/h',
             'Geeignet für': 'Stromsparende Inferenz',
           },
-          {
-            'GPU': '[RTX 4000 Ada (DigitalOcean)](/de/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '20 GB',
-            'Stundenpreis': '0,76 $/h',
-            'Geeignet für': '7B-13B-Inferenz, Tests',
-          },
-          {
-            'GPU': '[A16 (Vultr)](/de/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '16 GB',
-            'Stundenpreis': 'ab 0,471 $/h',
-            'Geeignet für': '7B-13B-Inferenz, Tests',
-          },
+        ],
+        items: [
+          'Mieten statt kaufen: Siehe [Cloud-GPU-Anbieter im Vergleich](/de/power-local-llm/best-cloud-gpu-providers), den [Clore.ai-Test](/de/power-local-llm/clore-ai-review), den [Novita-AI-Test](/de/power-local-llm/novita-ai-review) und den [GPU-Vergleich von Vultr, DigitalOcean und UpCloud](/de/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud).',
         ],
       },
       snippets: {
@@ -396,7 +365,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Zusammenfassung',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Cloud-GPUs kosten etwa 0,34-0,89 $/h für eine RTX 4090, 1,19-3,19 $/h für eine A100 80 GB und 1,99-4,89 $/h für eine H100 80 GB.' },
-          { type: 'plain-terms', text: 'Eine GPU in der Cloud zu mieten wird pro Stunde abgerechnet; der Preis hängt von Karte, Anbieter und Unterbrechbarkeit ab. Kleinere 24-GB-Karten sind am günstigsten und bewältigen kleine bis mittlere Modelle; A100- und H100-Karten kosten mehr und eignen sich für große Modelle und Training.' },
+          { type: 'plain-terms', text: 'Eine GPU in der Cloud zu mieten wird pro Stunde abgerechnet; der Preis hängt von Karte, Anbieter und Unterbrechbarkeit ab. Bei RunPod und Lambda sind kleinere 24-GB-Karten am günstigsten und bewältigen kleine bis mittlere Modelle; A100- und H100-Karten kosten mehr und eignen sich für große Modelle und Training.' },
         ],
       },
       faq: {
@@ -436,7 +405,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[RunPod vs Vast.ai Preise](/prompt-bites/runpod-vs-vastai-pricing) — Managed vs Marktplatz im Vergleich',
           '[Beste GPU unter 800 € für lokale LLMs](/prompt-bites/best-gpu-under-600-local-llm) — Kontext zur Kauf-vs-Miet-Entscheidung',
           '[GPU-Kaufberatung für lokale LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — vollständige Hardware-Kaufübersicht',
-          '[Cloud-GPU-Anbieter im Vergleich](/de/power-local-llm/best-cloud-gpu-providers) — [Clore.ai-Review](/de/power-local-llm/clore-ai-review) — [Novita AI-Review](/de/power-local-llm/novita-ai-review) — [GPU-Cloud von Vultr, DigitalOcean und UpCloud](/de/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
+          '[Lokale GPU vs. Cloud-GPU: Kosten-Break-even](/local-llms/local-llm-vs-cloud-gpu-cost) — Break-even-Stunden und Kosten pro Token',
+          'Mieten statt kaufen: [Cloud-GPU-Anbieter im Vergleich](/de/power-local-llm/best-cloud-gpu-providers), [Clore.ai-Test](/de/power-local-llm/clore-ai-review), [Novita-AI-Test](/de/power-local-llm/novita-ai-review) und [GPU-Vergleich von Vultr, DigitalOcean und UpCloud](/de/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
         ],
       },
     },
@@ -446,8 +416,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-fr.webp',
     title: 'Combien coûte un GPU cloud par heure en 2026 ?',
-    seoTitle: 'Coût horaire GPU cloud 2026 | Prompt Bites',
-    metaDescription: 'Coût horaire d\'un GPU cloud : RTX 4090 dès 0,34 $, A100 80 GB 1,19-3,19 $, H100 1,99-4,89 $. Les GPU cloud les moins chers à l\'heure, avec les tarifs RunPod et Lambda.',
+    seoTitle: 'Coût horaire d\'un GPU cloud 2026 : RTX 4090, A100, H100',
+    metaDescription: 'Coût horaire d\'un GPU cloud : RTX 4090 dès 0,34 $, A100 80 GB 1,19-3,19 $, H100 1,99-4,89 $. Les GPU cloud les moins chers, tarifs RunPod et Lambda.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
@@ -462,7 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 min de lecture',
     leadAnswerBlock:
-      'Chez RunPod et Lambda, un GPU cloud coûte 0,34-0,89 $/h pour une RTX 4090 24 GB, 1,19-3,19 $/h pour une A100 80 GB et 1,99-4,89 $/h pour une H100 80 GB. Les options les moins chères à l\'heure sont d\'anciennes cartes de 24 GB : RunPod affiche la RTX A5000 dès 0,16 $/h et la RTX 3090 dès 0,22 $/h en Community Cloud. Les prix de la place de marché Vast.ai varient selon l\'offre ; consultez sa grille en direct avant de réserver.',
+      'GPU cloud chez RunPod et Lambda : RTX 4090 0,34-0,89 $/h, A100 80 GB 1,19-3,19 $/h, H100 80 GB 1,99-4,89 $/h. Le moins cher vérifié : RTX A5000 dès 0,16 $/h.',
     toc: [
       { label: 'Meilleur choix selon la charge', anchor: '#best-pick' },
       { label: 'Tarifs horaires par carte', anchor: '#comparison' },
@@ -475,7 +445,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Combien coûte un GPU cloud par heure en 2026 ?',
-        answer: 'RTX 4090 : 0,34-0,89 $/h. A100 80 GB : 1,19-3,19 $/h. H100 80 GB : 1,99-4,89 $/h. Moins cher à l\'heure : RTX A5000 dès 0,16 $/h.',
+        answer: 'RTX 4090 : 0,34-0,89 $/h. A100 80 GB : 1,19-3,19 $/h. H100 80 GB : 1,99-4,89 $/h. Moins cher dans les offres RunPod et Lambda vérifiées : RTX A5000 dès 0,16 $/h.',
         bullets: [
           'RunPod affiche la RTX 4090 à 0,34 $/h en Community Cloud et 0,89 $/h en Secure Cloud.',
           'Lambda facture 3,79 $/h pour une H100 PCIe et 4,59-4,89 $/h pour une H100 SXM ; RunPod affiche une H100 PCIe dès 1,99 $/h.',
@@ -489,10 +459,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'La RTX 4090 24 GB coûte 0,34-0,89 $/h chez RunPod — une option économique pour l\'inférence 13B-30B',
+          'RTX 4090 : 0,34-0,89 $/h chez RunPod',
           'L\'A100 80 GB coûte 1,19-3,19 $/h chez RunPod et Lambda et reste la valeur sûre pour l\'inférence 70B et la plupart des fine-tunings',
           'La H100 80 GB coûte 1,99-4,89 $/h et ne vaut la peine que pour les gros entraînements ou le service à latence critique',
-          'Les GPU cloud les moins chers à l\'heure sont d\'anciennes cartes de 24 GB dès 0,16 $/h — les tarifs changent souvent, vérifiez la page du fournisseur avant de réserver',
+          'Parmi les offres RunPod et Lambda vérifiées, les GPU cloud les moins chers à l\'heure sont d\'anciennes cartes de 24 GB dès 0,16 $/h — les tarifs changent souvent, vérifiez la page du fournisseur avant de réserver',
         ],
       },
       bestPick: {
@@ -556,12 +526,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Tarif horaire': '1,99-4,89 $/h',
             'Idéal pour': 'Gros entraînements, service à latence critique',
           },
-          {
-            'GPU': '[L40S (DigitalOcean)](/fr/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '48 GB',
-            'Tarif horaire': '1,57 $/h',
-            'Idéal pour': 'Modèles nécessitant 48 GB',
-          },
         ],
       },
       cheapest: {
@@ -569,7 +533,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'GPU cloud les moins chers à l\'heure',
         content: [
           '<strong>Parmi les offres RunPod et Lambda examinées, les GPU cloud les moins chers à l\'heure sont d\'anciennes cartes de 24 GB et 48 GB, dès 0,16 $/h.</strong> RunPod affiche ces tarifs Community et Secure Cloud ; ils conviennent à l\'inférence de petits modèles et aux tests, pas aux gros entraînements.',
-          'Certains fournisseurs tarifent autrement : l\'<a href="/fr/power-local-llm/clore-ai-review" class="text-primary hover:underline">avis sur Clore.ai</a> présente une place de marché où les hôtes fixent leurs prix, et l\'<a href="/fr/power-local-llm/novita-ai-review" class="text-primary hover:underline">avis sur Novita AI</a> des API de modèles facturées au token. Pour Vultr, DigitalOcean et UpCloud, voir <a href="/fr/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud" class="text-primary hover:underline">GPU cloud de Vultr, DigitalOcean et UpCloud</a> ; <a href="/fr/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">fournisseurs de GPU cloud comparés</a> les met côte à côte.',
         ],
         columns: ['GPU', 'VRAM', 'Tarif horaire', 'Idéal pour'],
         rows: [
@@ -597,18 +560,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Tarif horaire': '0,44-0,69 $/h',
             'Idéal pour': 'Inférence basse consommation',
           },
-          {
-            'GPU': '[RTX 4000 Ada (DigitalOcean)](/fr/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '20 GB',
-            'Tarif horaire': '0,76 $/h',
-            'Idéal pour': 'Inférence 7B-13B, tests',
-          },
-          {
-            'GPU': '[A16 (Vultr)](/fr/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '16 GB',
-            'Tarif horaire': 'dès 0,471 $/h',
-            'Idéal pour': 'Inférence 7B-13B, tests',
-          },
+        ],
+        items: [
+          'Louer plutôt qu\'acheter : voir les [fournisseurs de GPU cloud comparés](/fr/power-local-llm/best-cloud-gpu-providers), le [test de Clore.ai](/fr/power-local-llm/clore-ai-review), le [test de Novita AI](/fr/power-local-llm/novita-ai-review) et le [comparatif GPU Vultr, DigitalOcean et UpCloud](/fr/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud).',
         ],
       },
       snippets: {
@@ -616,7 +570,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Résumé',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Un GPU cloud coûte environ 0,34-0,89 $/h pour une RTX 4090, 1,19-3,19 $/h pour une A100 80 GB et 1,99-4,89 $/h pour une H100 80 GB.' },
-          { type: 'plain-terms', text: 'La location d\'un GPU dans le cloud est facturée à l\'heure ; le prix dépend de la carte, du fournisseur et de l\'interruptibilité. Les cartes de 24 GB sont les moins chères et gèrent les modèles petits et moyens ; les A100 et H100 coûtent plus cher et conviennent aux grands modèles et à l\'entraînement.' },
+          { type: 'plain-terms', text: 'La location d\'un GPU dans le cloud est facturée à l\'heure ; le prix dépend de la carte, du fournisseur et de l\'interruptibilité. Chez RunPod et Lambda, les cartes de 24 GB sont les moins chères et gèrent les modèles petits et moyens ; les A100 et H100 coûtent plus cher et conviennent aux grands modèles et à l\'entraînement.' },
         ],
       },
       faq: {
@@ -656,7 +610,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[RunPod vs Vast.ai prix](/prompt-bites/runpod-vs-vastai-pricing) — managé vs marketplace',
           '[Meilleur GPU sous 600 € pour LLM local](/prompt-bites/best-gpu-under-600-local-llm) — contexte acheter vs louer',
           '[Guide d\'achat GPU pour LLM local 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — vue d\'achat matériel complète',
-          '[fournisseurs de GPU cloud comparés](/fr/power-local-llm/best-cloud-gpu-providers) — [avis sur Clore.ai](/fr/power-local-llm/clore-ai-review) — [avis sur Novita AI](/fr/power-local-llm/novita-ai-review) — [GPU cloud de Vultr, DigitalOcean et UpCloud](/fr/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
+          '[GPU local vs cloud pour LLM : seuil de rentabilité](/local-llms/local-llm-vs-cloud-gpu-cost) — heures de rentabilité et coût par token',
+          'Louer plutôt qu\'acheter : [fournisseurs de GPU cloud comparés](/fr/power-local-llm/best-cloud-gpu-providers), [test de Clore.ai](/fr/power-local-llm/clore-ai-review), [test de Novita AI](/fr/power-local-llm/novita-ai-review) et [comparatif GPU Vultr, DigitalOcean et UpCloud](/fr/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
         ],
       },
     },
@@ -682,7 +637,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4分で読める',
     leadAnswerBlock:
-      'RunPodとLambdaでのクラウドGPUの時間料金は、RTX 4090 24 GBが$0.34-0.89/h、A100 80 GBが$1.19-3.19/h、H100 80 GBが$1.99-4.89/hです。時間あたりで最も安いのは旧世代の24 GBカードで、RunPodはCommunity CloudでRTX A5000を$0.16/hから、RTX 3090を$0.22/hから掲載しています。Vast.aiのマーケットプレイス価格は需給で変動するため、予約前にライブ一覧を確認してください。',
+      'クラウドGPUの料金は、RunPodとLambdaでRTX 4090が$0.34-0.89/h、A100 80 GBが$1.19-3.19/h、H100 80 GBが$1.99-4.89/hです。確認した掲載で最安はRTX A5000の$0.16/hからです。Vast.aiはホストごとに価格が変わります。',
     toc: [
       { label: 'ワークロード別ベストピック', anchor: '#best-pick' },
       { label: 'カード別クラウドGPU時間料金', anchor: '#comparison' },
@@ -695,7 +650,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: '2026年、クラウドGPUの時間料金はいくら？',
-        answer: 'RTX 4090: $0.34-0.89/h。A100 80 GB: $1.19-3.19/h。H100 80 GB: $1.99-4.89/h。時間あたり最安: RTX A5000が$0.16/hから。',
+        answer: 'RTX 4090: $0.34-0.89/h。A100 80 GB: $1.19-3.19/h。H100 80 GB: $1.99-4.89/h。確認したRunPodとLambdaの掲載で時間あたり最安: RTX A5000が$0.16/hから。',
         bullets: [
           'RunPodはRTX 4090をCommunity Cloudで$0.34/h、Secure Cloudで$0.89/hと掲載しています。',
           'LambdaはH100 PCIeを$3.79/h、H100 SXMを$4.59-4.89/hで提供。RunPodのH100 PCIeは$1.99/hからです。',
@@ -712,7 +667,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'RTX 4090 24 GBはRunPodで$0.34-0.89/h — 13B-30B推論向けの低コストな選択肢',
           'A100 80 GBはRunPodとLambdaで$1.19-3.19/hで、70B推論とほとんどのファインチューニングの主力',
           'H100 80 GBは$1.99-4.89/hで、大規模トレーニングやレイテンシ重視のサービングでのみ価値がある',
-          '時間あたり最安のクラウドGPUは$0.16/hからの旧世代24 GBカード — 料金は頻繁に変わるため、予約前に各社ページを確認',
+          '確認したRunPodとLambdaの掲載では、時間あたり最安のクラウドGPUは$0.16/hからの旧世代24 GBカード — 料金は頻繁に変わるため、予約前に各社ページを確認',
         ],
       },
       bestPick: {
@@ -776,12 +731,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             '時間料金': '$1.99-4.89/h',
             '適した用途': '大規模トレーニング、低遅延サービング',
           },
-          {
-            'GPU': '[L40S (DigitalOcean)](/ja/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '48 GB',
-            '時間料金': '$1.57/h',
-            '適した用途': '48 GBが必要なモデル',
-          },
         ],
       },
       cheapest: {
@@ -789,7 +738,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '時間あたり最安のクラウドGPU',
         content: [
           '<strong>確認したRunPodとLambdaの掲載の中で、時間あたり最も安いクラウドGPUは$0.16/hからの旧世代24 GB・48 GBカードです。</strong>RunPodがCommunity CloudとSecure Cloudの料金を掲載しており、小型モデルの推論やテスト向きで、大規模トレーニングには向きません。',
-          '料金の仕組みが異なるプロバイダーもあります。<a href="/ja/power-local-llm/clore-ai-review" class="text-primary hover:underline">Clore.aiレビュー</a>はホストが価格を決めるマーケットプレイス、<a href="/ja/power-local-llm/novita-ai-review" class="text-primary hover:underline">Novita AIレビュー</a>はトークン単位課金のモデルAPIを扱っています。Vultr・DigitalOcean・UpCloudは<a href="/ja/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud" class="text-primary hover:underline">Vultr・DigitalOcean・UpCloudのGPUクラウド</a>を、すべての比較は<a href="/ja/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">クラウドGPUプロバイダー比較</a>をご覧ください。',
         ],
         columns: ['GPU', 'VRAM', '時間料金', '適した用途'],
         rows: [
@@ -817,18 +765,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             '時間料金': '$0.44-0.69/h',
             '適した用途': '低消費電力の推論',
           },
-          {
-            'GPU': '[RTX 4000 Ada (DigitalOcean)](/ja/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '20 GB',
-            '時間料金': '$0.76/h',
-            '適した用途': '7B-13B推論、テスト',
-          },
-          {
-            'GPU': '[A16 (Vultr)](/ja/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '16 GB',
-            '時間料金': '$0.471/hから',
-            '適した用途': '7B-13B推論、テスト',
-          },
+        ],
+        items: [
+          '購入ではなくレンタルをお考えの場合は、[クラウドGPUプロバイダー比較](/ja/power-local-llm/best-cloud-gpu-providers)、[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)、[Novita AIレビュー](/ja/power-local-llm/novita-ai-review)、[Vultr・DigitalOcean・UpCloudのGPU比較](/ja/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)をご覧ください。',
         ],
       },
       snippets: {
@@ -836,7 +775,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '要約',
         snippetBlocks: [
           { type: 'one-sentence', text: 'クラウドGPUの料金は、RTX 4090が約$0.34-0.89/h、A100 80 GBが$1.19-3.19/h、H100 80 GBが$1.99-4.89/hです。' },
-          { type: 'plain-terms', text: 'クラウドでGPUを借りる料金は時間単位で課金され、カードの種類、プロバイダー、中断可能かどうかで決まります。24 GBクラスの小型カードが最も安く、小〜中規模モデルに対応します。A100とH100は高価で、大規模モデルやトレーニング向きです。' },
+          { type: 'plain-terms', text: 'クラウドでGPUを借りる料金は時間単位で課金され、カードの種類、プロバイダー、中断可能かどうかで決まります。RunPodとLambdaの掲載では、24 GBクラスの小型カードが最も安く、小〜中規模モデルに対応します。A100とH100は高価で、大規模モデルやトレーニング向きです。' },
         ],
       },
       faq: {
@@ -876,7 +815,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[RunPod vs Vast.ai 料金](/prompt-bites/runpod-vs-vastai-pricing) — マネージド対マーケットのトレードオフ',
           '[600ドル以下のローカルLLM向けベストGPU](/prompt-bites/best-gpu-under-600-local-llm) — 購入対レンタルの判断材料',
           '[2026年ローカルLLM向けGPU購入ガイド](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — ハードウェア購入の全体像',
-          '[クラウドGPUプロバイダー比較](/ja/power-local-llm/best-cloud-gpu-providers) — [Clore.aiレビュー](/ja/power-local-llm/clore-ai-review) — [Novita AIレビュー](/ja/power-local-llm/novita-ai-review) — [Vultr・DigitalOcean・UpCloudのGPUクラウド](/ja/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
+          '[LLM向けローカルGPUとクラウドGPUの費用：損益分岐](/local-llms/local-llm-vs-cloud-gpu-cost) — 損益分岐の時間と1トークンあたりの費用',
+          '購入ではなくレンタル：[クラウドGPUプロバイダー比較](/ja/power-local-llm/best-cloud-gpu-providers)、[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)、[Novita AIレビュー](/ja/power-local-llm/novita-ai-review)、[Vultr・DigitalOcean・UpCloudのGPU比較](/ja/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
         ],
       },
     },
@@ -902,7 +842,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '阅读约4分钟',
     leadAnswerBlock:
-      '在RunPod和Lambda,云GPU每小时的价格为:RTX 4090 24 GB $0.34-0.89,A100 80 GB $1.19-3.19,H100 80 GB $1.99-4.89。按小时计最便宜的是旧款24 GB显卡:RunPod在Community Cloud中列出RTX A5000起价$0.16/小时,RTX 3090起价$0.22/小时。Vast.ai市场价格随供需波动,预订前请查看其实时列表。',
+      '在RunPod和Lambda上,云GPU价格为:RTX 4090 $0.34-0.89/h,A100 80 GB $1.19-3.19/h,H100 80 GB $1.99-4.89/h。在已查看的报价中最便宜的是RTX A5000,$0.16/h起。Vast.ai价格因主机而异。',
     toc: [
       { label: '按负载的最佳选择', anchor: '#best-pick' },
       { label: '按卡型的云GPU小时价', anchor: '#comparison' },
@@ -915,7 +855,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '2026年云GPU每小时多少钱？',
-        answer: 'RTX 4090: $0.34-0.89/h。A100 80 GB: $1.19-3.19/h。H100 80 GB: $1.99-4.89/h。按小时最便宜: RTX A5000起价$0.16/h。',
+        answer: 'RTX 4090: $0.34-0.89/h。A100 80 GB: $1.19-3.19/h。H100 80 GB: $1.99-4.89/h。在已查看的RunPod和Lambda报价中按小时最便宜: RTX A5000起价$0.16/h。',
         bullets: [
           'RunPod列出的RTX 4090价格为:Community Cloud $0.34/h,Secure Cloud $0.89/h。',
           'Lambda的H100 PCIe为$3.79/h,H100 SXM为$4.59-4.89/h;RunPod的H100 PCIe起价$1.99/h。',
@@ -932,7 +872,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'RTX 4090 24 GB在RunPod上为$0.34-0.89/h——13B-30B推理的低成本选择',
           'A100 80 GB在RunPod和Lambda为$1.19-3.19/h,是70B推理和大多数微调任务的主力',
           'H100 80 GB为$1.99-4.89/h,只有大规模训练或对延迟要求严格的服务才值得',
-          '按小时计最便宜的云GPU是起价$0.16/h的旧款24 GB显卡——价格经常变动,预订前请查看服务商页面',
+          '在已查看的RunPod和Lambda报价中,按小时计最便宜的云GPU是起价$0.16/h的旧款24 GB显卡——价格经常变动,预订前请查看服务商页面',
         ],
       },
       bestPick: {
@@ -996,12 +936,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             '每小时价格': '$1.99-4.89/h',
             '适用场景': '大规模训练,低延迟服务',
           },
-          {
-            'GPU': '[L40S (DigitalOcean)](/zh/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '48 GB',
-            '每小时价格': '$1.57/h',
-            '适用场景': '需要48 GB的模型',
-          },
         ],
       },
       cheapest: {
@@ -1009,7 +943,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '按小时计最便宜的云GPU',
         content: [
           '<strong>在已核对的RunPod和Lambda报价中,按小时计最便宜的云GPU是旧款24 GB和48 GB显卡,起价$0.16/h。</strong>RunPod列出了这些Community Cloud和Secure Cloud价格;适合小模型推理和测试,不适合大型训练。',
-          '有些服务商的计费方式不同：<a href="/zh/power-local-llm/clore-ai-review" class="text-primary hover:underline">Clore.ai评测</a>介绍由主机自行定价的市场，<a href="/zh/power-local-llm/novita-ai-review" class="text-primary hover:underline">Novita AI评测</a>介绍按token计费的模型API。Vultr、DigitalOcean和UpCloud请见<a href="/zh/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud" class="text-primary hover:underline">Vultr、DigitalOcean与UpCloud的GPU云</a>；全部服务商并排对比见<a href="/zh/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">云GPU服务商对比</a>。',
         ],
         columns: ['GPU', 'VRAM', '每小时价格', '适用场景'],
         rows: [
@@ -1037,18 +970,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             '每小时价格': '$0.44-0.69/h',
             '适用场景': '低功耗推理',
           },
-          {
-            'GPU': '[RTX 4000 Ada (DigitalOcean)](/zh/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '20 GB',
-            '每小时价格': '$0.76/h',
-            '适用场景': '7B-13B推理,测试',
-          },
-          {
-            'GPU': '[A16 (Vultr)](/zh/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '16 GB',
-            '每小时价格': '$0.471/h起',
-            '适用场景': '7B-13B推理,测试',
-          },
+        ],
+        items: [
+          '租用而非购买：请参阅[云GPU提供商对比](/zh/power-local-llm/best-cloud-gpu-providers)、[Clore.ai评测](/zh/power-local-llm/clore-ai-review)、[Novita AI评测](/zh/power-local-llm/novita-ai-review)和[Vultr、DigitalOcean和UpCloud的GPU对比](/zh/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)。',
         ],
       },
       snippets: {
@@ -1056,7 +980,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '摘要',
         snippetBlocks: [
           { type: 'one-sentence', text: '云GPU价格约为:RTX 4090 $0.34-0.89/h,A100 80 GB $1.19-3.19/h,H100 80 GB $1.99-4.89/h。' },
-          { type: 'plain-terms', text: '在云端租用GPU按小时计费,价格取决于显卡型号、服务商以及租用是否可中断。24 GB级的小型显卡最便宜,可运行中小型模型;A100和H100价格更高,适合大模型和训练。' },
+          { type: 'plain-terms', text: '在云端租用GPU按小时计费,价格取决于显卡型号、服务商以及租用是否可中断。在RunPod和Lambda的报价中,24 GB级的小型显卡最便宜,可运行中小型模型;A100和H100价格更高,适合大模型和训练。' },
         ],
       },
       faq: {
@@ -1096,7 +1020,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[RunPod vs Vast.ai 价格](/prompt-bites/runpod-vs-vastai-pricing) — 托管vs市场权衡',
           '[600美元以下本地LLM最佳GPU](/prompt-bites/best-gpu-under-600-local-llm) — 买与租决策背景',
           '[2026本地LLM GPU购买指南](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 硬件购买全景',
-          '[云GPU服务商对比](/zh/power-local-llm/best-cloud-gpu-providers) — [Clore.ai评测](/zh/power-local-llm/clore-ai-review) — [Novita AI评测](/zh/power-local-llm/novita-ai-review) — [Vultr、DigitalOcean与UpCloud的GPU云](/zh/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
+          '[LLM本地GPU与云GPU成本：盈亏平衡](/local-llms/local-llm-vs-cloud-gpu-cost) — 盈亏平衡小时数与每token成本',
+          '租用而非购买：[云GPU提供商对比](/zh/power-local-llm/best-cloud-gpu-providers)、[Clore.ai评测](/zh/power-local-llm/clore-ai-review)、[Novita AI评测](/zh/power-local-llm/novita-ai-review)和[Vultr、DigitalOcean和UpCloud的GPU对比](/zh/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
         ],
       },
     },
@@ -1107,7 +1032,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-pt.webp',
     title: 'Quanto custa uma GPU na nuvem por hora em 2026?',
     seoTitle: 'Preço de GPU na nuvem por hora 2026 | Prompt Bites',
-    metaDescription: 'Custo de GPU na nuvem por hora: RTX 4090 a partir de $0,34, A100 80 GB $1,19–3,19, H100 $1,99–4,89. As GPUs na nuvem mais baratas por hora, com preços da RunPod e da Lambda.',
+    metaDescription: 'Custo de GPU na nuvem por hora: RTX 4090 a partir de $0,34, A100 80 GB $1,19–3,19, H100 $1,99–4,89. As mais baratas, com preços da RunPod e Lambda.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
@@ -1122,7 +1047,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 min de leitura',
     leadAnswerBlock:
-      'Na RunPod e na Lambda, as GPUs na nuvem custam $0,34–0,89/h para uma RTX 4090 24 GB, $1,19–3,19/h para uma A100 80 GB e $1,99–4,89/h para uma H100 80 GB. As opções mais baratas por hora são placas antigas de 24 GB: a RunPod lista a RTX A5000 a partir de $0,16/h e a RTX 3090 a partir de $0,22/h na Community Cloud. Os preços do marketplace da Vast.ai variam com a oferta; consulte a grade ao vivo antes de reservar.',
+      'GPU na nuvem na RunPod e na Lambda: RTX 4090 $0,34–0,89/h, A100 80 GB $1,19–3,19/h, H100 80 GB $1,99–4,89/h. A mais barata verificada: RTX A5000 desde $0,16/h.',
     toc: [
       { label: 'Melhor opção por carga de trabalho', anchor: '#best-pick' },
       { label: 'Tarifas horárias de GPU por placa', anchor: '#comparison' },
@@ -1135,7 +1060,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Quanto custa uma GPU na nuvem por hora em 2026?',
-        answer: 'RTX 4090: $0,34–0,89/h. A100 80 GB: $1,19–3,19/h. H100 80 GB: $1,99–4,89/h. Mais barata por hora: RTX A5000 a partir de $0,16/h.',
+        answer: 'RTX 4090: $0,34–0,89/h. A100 80 GB: $1,19–3,19/h. H100 80 GB: $1,99–4,89/h. Mais barata nas ofertas RunPod e Lambda verificadas: RTX A5000 a partir de $0,16/h.',
         bullets: [
           'A RunPod lista a RTX 4090 a $0,34/h na Community Cloud e $0,89/h na Secure Cloud.',
           'A Lambda cobra $3,79/h por uma H100 PCIe e $4,59–4,89/h por uma H100 SXM; a RunPod lista uma H100 PCIe a partir de $1,99/h.',
@@ -1149,10 +1074,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'A RTX 4090 24 GB custa $0,34–0,89/h na RunPod — uma opção de baixo custo para inferência de 13B–30B',
+          'RTX 4090: $0,34–0,89/h na RunPod',
           'A A100 80 GB custa $1,19–3,19/h na RunPod e na Lambda e é a base para inferência de 70B e a maioria dos fine-tunings',
           'A H100 80 GB custa $1,99–4,89/h e só vale a pena para treinamento em grande escala ou serviço com latência crítica',
-          'As GPUs na nuvem mais baratas por hora são placas antigas de 24 GB a partir de $0,16/h — os preços mudam com frequência; confira a página do provedor antes de reservar',
+          'Nas ofertas RunPod e Lambda verificadas, as GPUs na nuvem mais baratas por hora são placas antigas de 24 GB a partir de $0,16/h — os preços mudam com frequência; confira a página do provedor antes de reservar',
         ],
       },
       bestPick: {
@@ -1216,12 +1141,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Preço por hora': '$1,99–4,89/h',
             'Ideal para': 'Treino em larga escala, latência crítica',
           },
-          {
-            'GPU': '[L40S (DigitalOcean)](/pt/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '48 GB',
-            'Preço por hora': '$1,57/h',
-            'Ideal para': 'Modelos que exigem 48 GB',
-          },
         ],
       },
       cheapest: {
@@ -1229,7 +1148,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'GPUs na nuvem mais baratas por hora',
         content: [
           '<strong>Entre as ofertas da RunPod e da Lambda verificadas, as GPUs na nuvem mais baratas por hora são placas antigas de 24 GB e 48 GB, a partir de $0,16/h.</strong> A RunPod lista essas tarifas da Community e da Secure Cloud; servem para inferência de modelos pequenos e testes, não para grandes treinamentos.',
-          'Alguns provedores cobram de outra forma: a <a href="/pt/power-local-llm/clore-ai-review" class="text-primary hover:underline">análise de Clore.ai</a> cobre um marketplace em que os hosts definem os próprios preços e a <a href="/pt/power-local-llm/novita-ai-review" class="text-primary hover:underline">análise de Novita AI</a>, APIs de modelos com cobrança por token. Para Vultr, DigitalOcean e UpCloud, veja <a href="/pt/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud" class="text-primary hover:underline">GPU cloud da Vultr, DigitalOcean e UpCloud</a>; <a href="/pt/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">provedores de GPU cloud comparados</a> coloca todos lado a lado.',
         ],
         columns: ['GPU', 'VRAM', 'Preço por hora', 'Ideal para'],
         rows: [
@@ -1257,18 +1175,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Preço por hora': '$0,44–0,69/h',
             'Ideal para': 'Inferência de baixo consumo',
           },
-          {
-            'GPU': '[RTX 4000 Ada (DigitalOcean)](/pt/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '20 GB',
-            'Preço por hora': '$0,76/h',
-            'Ideal para': 'Inferência 7B–13B, testes',
-          },
-          {
-            'GPU': '[A16 (Vultr)](/pt/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '16 GB',
-            'Preço por hora': 'a partir de $0,471/h',
-            'Ideal para': 'Inferência 7B–13B, testes',
-          },
+        ],
+        items: [
+          'Alugar em vez de comprar: veja os [provedores de GPU na nuvem comparados](/pt/power-local-llm/best-cloud-gpu-providers), a [análise do Clore.ai](/pt/power-local-llm/clore-ai-review), a [análise do Novita AI](/pt/power-local-llm/novita-ai-review) e a [comparação de GPU da Vultr, DigitalOcean e UpCloud](/pt/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud).',
         ],
       },
       snippets: {
@@ -1276,7 +1185,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Resumo',
         snippetBlocks: [
           { type: 'one-sentence', text: 'GPUs na nuvem custam cerca de $0,34–0,89/h para uma RTX 4090, $1,19–3,19/h para uma A100 80 GB e $1,99–4,89/h para uma H100 80 GB.' },
-          { type: 'plain-terms', text: 'Alugar uma GPU na nuvem é cobrado por hora, e o preço depende da placa, do provedor e de o aluguel poder ser interrompido. Placas menores de 24 GB são as mais baratas e atendem modelos pequenos e médios; A100 e H100 custam mais e servem para modelos grandes e treinamento.' },
+          { type: 'plain-terms', text: 'Alugar uma GPU na nuvem é cobrado por hora, e o preço depende da placa, do provedor e de o aluguel poder ser interrompido. Na RunPod e na Lambda, placas menores de 24 GB são as mais baratas e atendem modelos pequenos e médios; A100 e H100 custam mais e servem para modelos grandes e treinamento.' },
         ],
       },
       faq: {
@@ -1316,7 +1225,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[RunPod vs Vast.ai Preços](/pt/prompt-bites/runpod-vs-vastai-pricing) — prós e contras de gerenciado vs marketplace',
           '[Melhor GPU por menos de $600 para LLMs locais](/pt/prompt-bites/best-gpu-under-600-local-llm) — contexto para decidir entre comprar e alugar',
           '[Guia completo de compra de GPU para LLMs locais 2026](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — panorama completo de compra de hardware',
-          '[provedores de GPU cloud comparados](/pt/power-local-llm/best-cloud-gpu-providers) — [análise de Clore.ai](/pt/power-local-llm/clore-ai-review) — [análise de Novita AI](/pt/power-local-llm/novita-ai-review) — [GPU cloud da Vultr, DigitalOcean e UpCloud](/pt/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
+          '[GPU local vs na nuvem para LLM: ponto de equilíbrio](/local-llms/local-llm-vs-cloud-gpu-cost) — horas de equilíbrio e custo por token',
+          'Alugar em vez de comprar: [provedores de GPU na nuvem comparados](/pt/power-local-llm/best-cloud-gpu-providers), [análise do Clore.ai](/pt/power-local-llm/clore-ai-review), [análise do Novita AI](/pt/power-local-llm/novita-ai-review) e [comparação de GPU da Vultr, DigitalOcean e UpCloud](/pt/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
         ],
       },
     },
@@ -1327,7 +1237,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-es.webp',
     title: '¿Cuánto cuesta un GPU en la nube por hora en 2026?',
     seoTitle: 'Precio GPU en la nube por hora 2026 | Prompt Bites',
-    metaDescription: 'Costo de GPU en la nube por hora: RTX 4090 desde $0,34, A100 80 GB $1,19–3,19, H100 $1,99–4,89. Las GPU en la nube más baratas por hora, con tarifas de RunPod y Lambda.',
+    metaDescription: 'Costo de GPU en la nube por hora: RTX 4090 desde $0,34, A100 80 GB $1,19–3,19, H100 $1,99–4,89. Las más baratas, con tarifas de RunPod y Lambda.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
@@ -1342,7 +1252,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 min de lectura',
     leadAnswerBlock:
-      'En RunPod y Lambda, las GPU en la nube cuestan $0,34–0,89/h para una RTX 4090 24 GB, $1,19–3,19/h para una A100 80 GB y $1,99–4,89/h para una H100 80 GB. Las opciones más baratas por hora son tarjetas antiguas de 24 GB: RunPod lista la RTX A5000 desde $0,16/h y la RTX 3090 desde $0,22/h en Community Cloud. Los precios del marketplace de Vast.ai varían con la oferta; consulte su cuadrícula en vivo antes de reservar.',
+      'GPU en la nube en RunPod y Lambda: RTX 4090 $0,34–0,89/h, A100 80 GB $1,19–3,19/h, H100 80 GB $1,99–4,89/h. La más barata revisada: RTX A5000 desde $0,16/h.',
     toc: [
       { label: 'Mejor opción según la carga de trabajo', anchor: '#best-pick' },
       { label: 'Tarifas horarias de GPU por tarjeta', anchor: '#comparison' },
@@ -1355,7 +1265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Cuánto cuesta un GPU en la nube por hora en 2026?',
-        answer: 'RTX 4090: $0,34–0,89/h. A100 80 GB: $1,19–3,19/h. H100 80 GB: $1,99–4,89/h. Más barata por hora: RTX A5000 desde $0,16/h.',
+        answer: 'RTX 4090: $0,34–0,89/h. A100 80 GB: $1,19–3,19/h. H100 80 GB: $1,99–4,89/h. Más barata en las ofertas de RunPod y Lambda revisadas: RTX A5000 desde $0,16/h.',
         bullets: [
           'RunPod lista la RTX 4090 a $0,34/h en Community Cloud y $0,89/h en Secure Cloud.',
           'Lambda cobra $3,79/h por una H100 PCIe y $4,59–4,89/h por una H100 SXM; RunPod lista una H100 PCIe desde $1,99/h.',
@@ -1369,10 +1279,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'La RTX 4090 24 GB cuesta $0,34–0,89/h en RunPod — una opción de bajo costo para inferencia de 13B–30B',
+          'RTX 4090: $0,34–0,89/h en RunPod',
           'La A100 80 GB cuesta $1,19–3,19/h en RunPod y Lambda y es la base para inferencia de 70B y la mayoría del fine-tuning',
           'La H100 80 GB cuesta $1,99–4,89/h y solo vale la pena para entrenamiento a gran escala o servicio con latencia crítica',
-          'Las GPU en la nube más baratas por hora son tarjetas antiguas de 24 GB desde $0,16/h — las tarifas cambian a menudo; revise la página del proveedor antes de reservar',
+          'En las ofertas de RunPod y Lambda revisadas, las GPU en la nube más baratas por hora son tarjetas antiguas de 24 GB desde $0,16/h — las tarifas cambian a menudo; revise la página del proveedor antes de reservar',
         ],
       },
       bestPick: {
@@ -1436,12 +1346,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Tarifa por hora': '$1,99–4,89/h',
             'Ideal para': 'Entrenamiento a gran escala, latencia crítica',
           },
-          {
-            'GPU': '[L40S (DigitalOcean)](/es/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '48 GB',
-            'Tarifa por hora': '$1,57/h',
-            'Ideal para': 'Modelos que necesitan 48 GB',
-          },
         ],
       },
       cheapest: {
@@ -1449,7 +1353,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'GPU en la nube más baratas por hora',
         content: [
           '<strong>Entre las ofertas de RunPod y Lambda revisadas, las GPU en la nube más baratas por hora son tarjetas antiguas de 24 GB y 48 GB, desde $0,16/h.</strong> RunPod lista estas tarifas de Community y Secure Cloud; sirven para inferencia con modelos pequeños y pruebas, no para grandes entrenamientos.',
-          'Algunos proveedores cobran de otra forma: la <a href="/es/power-local-llm/clore-ai-review" class="text-primary hover:underline">reseña de Clore.ai</a> cubre un marketplace donde los hosts fijan sus propios precios y la <a href="/es/power-local-llm/novita-ai-review" class="text-primary hover:underline">reseña de Novita AI</a>, API de modelos con cobro por token. Para Vultr, DigitalOcean y UpCloud, consulta <a href="/es/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud" class="text-primary hover:underline">GPU cloud de Vultr, DigitalOcean y UpCloud</a>; <a href="/es/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">proveedores de GPU cloud comparados</a> los pone lado a lado.',
         ],
         columns: ['GPU', 'VRAM', 'Tarifa por hora', 'Ideal para'],
         rows: [
@@ -1477,18 +1380,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'Tarifa por hora': '$0,44–0,69/h',
             'Ideal para': 'Inferencia de bajo consumo',
           },
-          {
-            'GPU': '[RTX 4000 Ada (DigitalOcean)](/es/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '20 GB',
-            'Tarifa por hora': '$0,76/h',
-            'Ideal para': 'Inferencia 7B–13B, pruebas',
-          },
-          {
-            'GPU': '[A16 (Vultr)](/es/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '16 GB',
-            'Tarifa por hora': 'desde $0,471/h',
-            'Ideal para': 'Inferencia 7B–13B, pruebas',
-          },
+        ],
+        items: [
+          'Alquilar en lugar de comprar: consulta los [proveedores de GPU en la nube comparados](/es/power-local-llm/best-cloud-gpu-providers), la [reseña de Clore.ai](/es/power-local-llm/clore-ai-review), la [reseña de Novita AI](/es/power-local-llm/novita-ai-review) y la [comparativa de GPU de Vultr, DigitalOcean y UpCloud](/es/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud).',
         ],
       },
       snippets: {
@@ -1496,7 +1390,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Resumen',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Las GPU en la nube cuestan unos $0,34–0,89/h para una RTX 4090, $1,19–3,19/h para una A100 80 GB y $1,99–4,89/h para una H100 80 GB.' },
-          { type: 'plain-terms', text: 'Alquilar una GPU en la nube se factura por hora, y el precio depende de la tarjeta, el proveedor y si el alquiler puede interrumpirse. Las tarjetas pequeñas de 24 GB son las más baratas y manejan modelos pequeños y medianos; las A100 y H100 cuestan más y sirven para modelos grandes y entrenamiento.' },
+          { type: 'plain-terms', text: 'Alquilar una GPU en la nube se factura por hora, y el precio depende de la tarjeta, el proveedor y si el alquiler puede interrumpirse. En RunPod y Lambda, las tarjetas pequeñas de 24 GB son las más baratas y manejan modelos pequeños y medianos; las A100 y H100 cuestan más y sirven para modelos grandes y entrenamiento.' },
         ],
       },
       faq: {
@@ -1536,7 +1430,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[RunPod vs Vast.ai Precios](/es/prompt-bites/runpod-vs-vastai-pricing) — ventajas y desventajas de gestionado vs marketplace',
           '[Mejor GPU por menos de $600 para LLMs locales](/es/prompt-bites/best-gpu-under-600-local-llm) — contexto para decidir entre comprar y alquilar',
           '[Guía completa para comprar GPU para LLMs locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — panorama completo de compra de hardware',
-          '[proveedores de GPU cloud comparados](/es/power-local-llm/best-cloud-gpu-providers) — [reseña de Clore.ai](/es/power-local-llm/clore-ai-review) — [reseña de Novita AI](/es/power-local-llm/novita-ai-review) — [GPU cloud de Vultr, DigitalOcean y UpCloud](/es/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
+          '[GPU local vs en la nube para LLM: punto de equilibrio](/local-llms/local-llm-vs-cloud-gpu-cost) — horas de equilibrio y costo por token',
+          'Alquilar en lugar de comprar: [proveedores de GPU en la nube comparados](/es/power-local-llm/best-cloud-gpu-providers), [reseña de Clore.ai](/es/power-local-llm/clore-ai-review), [reseña de Novita AI](/es/power-local-llm/novita-ai-review) y [comparativa de GPU de Vultr, DigitalOcean y UpCloud](/es/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
         ],
       },
     },
@@ -1547,7 +1442,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ar.webp',
     title: 'كم تكلّف وحدة ⁨GPU⁩ السحابية في الساعة عام ⁨2026⁩؟',
     seoTitle: 'تكلفة ⁨GPU⁩ السحابية في الساعة ⁨2026⁩ | ⁨Prompt Bites⁩',
-    metaDescription: 'تكلفة ⁨GPU⁩ السحابية في الساعة: ⁨RTX 4090⁩ من ⁨$0.34⁩، و⁨A100 80 GB⁩ من ⁨$1.19⁩ إلى ⁨$3.19⁩، و⁨H100⁩ من ⁨$1.99⁩ إلى ⁨$4.89⁩. أرخص وحدات ⁨GPU⁩ السحابية بالساعة مع أسعار ⁨RunPod⁩ و⁨Lambda⁩.',
+    metaDescription: 'تكلفة ⁨GPU⁩ السحابية في الساعة: ⁨RTX 4090⁩ من ⁨$0.34⁩، و⁨A100 80 GB⁩ من ⁨$1.19⁩ إلى ⁨$3.19⁩، و⁨H100⁩ من ⁨$1.99⁩ إلى ⁨$4.89⁩ لدى ⁨RunPod⁩ و⁨Lambda⁩.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
@@ -1562,7 +1457,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 دقائق للقراءة',
     leadAnswerBlock:
-      'تتراوح تكلفة وحدات ⁨GPU⁩ السحابية لدى ⁨RunPod⁩ و⁨Lambda⁩ بين ⁨$0.34⁩ و⁨$0.89⁩ في الساعة لبطاقة ⁨RTX 4090 24 GB⁩، وبين ⁨$1.19⁩ و⁨$3.19⁩ لبطاقة ⁨A100 80 GB⁩، وبين ⁨$1.99⁩ و⁨$4.89⁩ لبطاقة ⁨H100 80 GB⁩. أرخص الخيارات بالساعة هي بطاقات ⁨24 GB⁩ الأقدم: تُدرج ⁨RunPod⁩ بطاقة ⁨RTX A5000⁩ من ⁨$0.16⁩ في الساعة وبطاقة ⁨RTX 3090⁩ من ⁨$0.22⁩ في ⁨Community Cloud⁩. تتغير أسعار سوق ⁨Vast.ai⁩ مع العرض، فراجع القائمة المباشرة قبل الحجز.',
+      'لدى ⁨RunPod⁩ و⁨Lambda⁩: ⁨RTX 4090⁩ من ⁨$0.34⁩ إلى ⁨$0.89⁩ في الساعة، و⁨A100 80 GB⁩ من ⁨$1.19⁩ إلى ⁨$3.19⁩، و⁨H100 80 GB⁩ من ⁨$1.99⁩ إلى ⁨$4.89⁩. الأرخص في العروض المفحوصة: ⁨RTX A5000⁩ من ⁨$0.16⁩.',
     toc: [
       { label: 'أفضل اختيار حسب حمل العمل', anchor: '#best-pick' },
       { label: 'أسعار GPU السحابية بالساعة حسب الكرت', anchor: '#comparison' },
@@ -1575,7 +1470,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'كم تكلّف وحدة GPU السحابية في الساعة عام 2026؟',
-        answer: '⁨RTX 4090⁩: ⁨$0.34–0.89⁩/ساعة. ⁨A100 80 GB⁩: ⁨$1.19–3.19⁩/ساعة. ⁨H100 80 GB⁩: ⁨$1.99–4.89⁩/ساعة. الأرخص بالساعة: ⁨RTX A5000⁩ من ⁨$0.16⁩/ساعة.',
+        answer: '⁨RTX 4090⁩: ⁨$0.34–0.89⁩/ساعة. ⁨A100 80 GB⁩: ⁨$1.19–3.19⁩/ساعة. ⁨H100 80 GB⁩: ⁨$1.99–4.89⁩/ساعة. الأرخص في عروض ⁨RunPod⁩ و⁨Lambda⁩ التي جرى فحصها: ⁨RTX A5000⁩ من ⁨$0.16⁩/ساعة.',
         bullets: [
           'تُدرج ⁨RunPod⁩ بطاقة ⁨RTX 4090⁩ بسعر ⁨$0.34⁩/ساعة في ⁨Community Cloud⁩ و⁨$0.89⁩/ساعة في ⁨Secure Cloud⁩.',
           'تتقاضى ⁨Lambda⁩ مبلغ ⁨$3.79⁩/ساعة لبطاقة ⁨H100 PCIe⁩ و⁨$4.59–4.89⁩/ساعة لبطاقة ⁨H100 SXM⁩؛ وتُدرج ⁨RunPod⁩ بطاقة ⁨H100 PCIe⁩ من ⁨$1.99⁩/ساعة.',
@@ -1589,10 +1484,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'تكلف ⁨RTX 4090 24 GB⁩ ما بين ⁨$0.34⁩ و⁨$0.89⁩ في الساعة لدى ⁨RunPod⁩ — بطاقة منخفضة التكلفة لاستنتاج نماذج ⁨13B–30B⁩',
+          '⁨RTX 4090⁩: ⁨$0.34–0.89⁩ لدى ⁨RunPod⁩',
           'تكلف ⁨A100 80 GB⁩ ما بين ⁨$1.19⁩ و⁨$3.19⁩ في الساعة لدى ⁨RunPod⁩ و⁨Lambda⁩ وهي الخيار الأساسي لاستنتاج ⁨70B⁩ ومعظم الضبط الدقيق',
           'تكلف ⁨H100 80 GB⁩ ما بين ⁨$1.99⁩ و⁨$4.89⁩ في الساعة ولا تستحق ذلك إلا للتدريب الواسع أو الخدمة الحساسة للتأخير',
-          'أرخص وحدات ⁨GPU⁩ السحابية بالساعة هي بطاقات ⁨24 GB⁩ الأقدم من ⁨$0.16⁩ في الساعة — تتغير الأسعار كثيرًا، فتحقق من صفحة المزوّد قبل الحجز',
+          'ضمن عروض ⁨RunPod⁩ و⁨Lambda⁩ التي جرى فحصها، أرخص وحدات ⁨GPU⁩ السحابية بالساعة هي بطاقات ⁨24 GB⁩ الأقدم من ⁨$0.16⁩ في الساعة — تتغير الأسعار كثيرًا، فتحقق من صفحة المزوّد قبل الحجز',
         ],
       },
       bestPick: {
@@ -1656,12 +1551,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'السعر بالساعة': '⁨$1.99–4.89⁩/ساعة',
             'الأنسب لـ': 'تدريب واسع وخدمة حساسة للتأخير',
           },
-          {
-            'GPU': '[L40S (DigitalOcean)](/ar/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '⁨48 GB⁩',
-            'السعر بالساعة': '⁨$1.57⁩/ساعة',
-            'الأنسب لـ': 'نماذج تحتاج ⁨48 GB⁩',
-          },
         ],
       },
       cheapest: {
@@ -1669,7 +1558,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'أرخص وحدات ⁨GPU⁩ السحابية بالساعة',
         content: [
           '<strong>من بين عروض ⁨RunPod⁩ و⁨Lambda⁩ التي جرى فحصها، أرخص وحدات ⁨GPU⁩ السحابية بالساعة هي بطاقات ⁨24 GB⁩ و⁨48 GB⁩ الأقدم، بدءًا من ⁨$0.16⁩ في الساعة.</strong> تُدرج ⁨RunPod⁩ هذه الأسعار في ⁨Community⁩ و⁨Secure Cloud⁩؛ وهي مناسبة لاستنتاج النماذج الصغيرة والاختبار، لا لعمليات التدريب الكبيرة.',
-          'تسعّر بعض المزوّدين بطريقة مختلفة: تتناول <a href="/ar/power-local-llm/clore-ai-review" class="text-primary hover:underline">مراجعة Clore.ai</a> سوقًا يحدد فيه المضيفون أسعارهم بأنفسهم، وتتناول <a href="/ar/power-local-llm/novita-ai-review" class="text-primary hover:underline">مراجعة Novita AI</a> واجهات API للنماذج بالتسعير لكل رمز (token). وبالنسبة إلى Vultr وDigitalOcean وUpCloud راجع <a href="/ar/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud" class="text-primary hover:underline">سحابة GPU من Vultr وDigitalOcean وUpCloud</a>؛ ويضعها <a href="/ar/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">مقارنة مزوّدي GPU السحابية</a> جنبًا إلى جنب.',
         ],
         columns: ['⁨GPU⁩', '⁨VRAM⁩', 'السعر بالساعة', 'الأنسب لـ'],
         rows: [
@@ -1697,18 +1585,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'السعر بالساعة': '⁨$0.44–0.69⁩/ساعة',
             'الأنسب لـ': 'استنتاج منخفض الاستهلاك',
           },
-          {
-            'GPU': '[RTX 4000 Ada (DigitalOcean)](/ar/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '⁨20 GB⁩',
-            'السعر بالساعة': '⁨$0.76⁩/ساعة',
-            'الأنسب لـ': 'استنتاج ⁨7B–13B⁩ واختبار',
-          },
-          {
-            'GPU': '[A16 (Vultr)](/ar/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '⁨16 GB⁩',
-            'السعر بالساعة': 'من ⁨$0.471⁩/ساعة',
-            'الأنسب لـ': 'استنتاج ⁨7B–13B⁩ واختبار',
-          },
+        ],
+        items: [
+          'الاستئجار بدلاً من الشراء: راجع [مقارنة مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers) و[مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review) و[مراجعة Novita AI](/ar/power-local-llm/novita-ai-review) و[مقارنة GPU لدى Vultr وDigitalOcean وUpCloud](/ar/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud).',
         ],
       },
       snippets: {
@@ -1716,7 +1595,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'ملخص',
         snippetBlocks: [
           { type: 'one-sentence', text: 'تكلف وحدات ⁨GPU⁩ السحابية نحو ⁨$0.34–0.89⁩ في الساعة لبطاقة ⁨RTX 4090⁩، و⁨$1.19–3.19⁩ لبطاقة ⁨A100 80 GB⁩، و⁨$1.99–4.89⁩ لبطاقة ⁨H100 80 GB⁩.' },
-          { type: 'plain-terms', text: 'يُحاسَب استئجار ⁨GPU⁩ في السحابة بالساعة، ويعتمد السعر على البطاقة والمزوّد وإمكانية مقاطعة الإيجار. البطاقات الصغيرة ذات ⁨24 GB⁩ هي الأرخص وتتعامل مع النماذج الصغيرة والمتوسطة؛ أما ⁨A100⁩ و⁨H100⁩ فأغلى وتناسب النماذج الكبيرة والتدريب.' },
+          { type: 'plain-terms', text: 'يُحاسَب استئجار ⁨GPU⁩ في السحابة بالساعة، ويعتمد السعر على البطاقة والمزوّد وإمكانية مقاطعة الإيجار. لدى ⁨RunPod⁩ و⁨Lambda⁩، البطاقات الصغيرة ذات ⁨24 GB⁩ هي الأرخص وتتعامل مع النماذج الصغيرة والمتوسطة؛ أما ⁨A100⁩ و⁨H100⁩ فأغلى وتناسب النماذج الكبيرة والتدريب.' },
         ],
       },
       faq: {
@@ -1756,7 +1635,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[RunPod مقابل Vast.ai الأسعار](/ar/prompt-bites/runpod-vs-vastai-pricing) — المقايضات بين المُدار والسوق',
           '[أفضل GPU بأقل من $600 لنماذج LLM المحلية](/ar/prompt-bites/best-gpu-under-600-local-llm) — سياق قرار الشراء مقابل الإيجار',
           '[دليل شراء GPU لنماذج LLM المحلية 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — نظرة شاملة على شراء الأجهزة',
-          '[مقارنة مزوّدي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers) — [مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review) — [مراجعة Novita AI](/ar/power-local-llm/novita-ai-review) — [سحابة GPU من Vultr وDigitalOcean وUpCloud](/ar/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
+          '[تكلفة GPU محلية مقابل سحابية لـ LLM: التعادل](/local-llms/local-llm-vs-cloud-gpu-cost) — ساعات التعادل والتكلفة لكل token',
+          'الاستئجار بدلاً من الشراء: [مقارنة مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers)، [مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review)، [مراجعة Novita AI](/ar/power-local-llm/novita-ai-review)، [مقارنة GPU لدى Vultr وDigitalOcean وUpCloud](/ar/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
         ],
       },
     },
@@ -1767,7 +1647,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ko.webp',
     title: '2026년 클라우드 GPU 시간당 비용은 얼마입니까?',
     seoTitle: '클라우드 GPU 시간당 가격 2026 | Prompt Bites',
-    metaDescription: '클라우드 GPU 시간당 비용: RTX 4090 $0.34부터, A100 80 GB $1.19–3.19, H100 $1.99–4.89. RunPod와 Lambda 요금으로 보는 시간당 가장 저렴한 클라우드 GPU.',
+    metaDescription: '클라우드 GPU 시간당 비용: RTX 4090 $0.34부터, A100 80 GB $1.19–3.19, H100 $1.99–4.89. RunPod·Lambda 요금 기준.',
     publishDate: '2026-05-22',
     dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
@@ -1782,7 +1662,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4분 분량',
     leadAnswerBlock:
-      'RunPod와 Lambda에서 클라우드 GPU 시간당 비용은 RTX 4090 24 GB가 $0.34–0.89, A100 80 GB가 $1.19–3.19, H100 80 GB가 $1.99–4.89입니다. 시간당 가장 저렴한 선택지는 구형 24 GB 카드로, RunPod는 Community Cloud에서 RTX A5000를 $0.16/시간부터, RTX 3090을 $0.22/시간부터 게시합니다. Vast.ai 마켓플레이스 가격은 수급에 따라 변하므로 예약 전에 실시간 목록을 확인하세요.',
+      '클라우드 GPU는 RunPod와 Lambda에서 RTX 4090 $0.34–0.89/시간, A100 80 GB $1.19–3.19/시간, H100 80 GB $1.99–4.89/시간입니다. 확인한 목록 중 최저가는 RTX A5000 $0.16/시간부터입니다. Vast.ai 가격은 호스트마다 다릅니다.',
     toc: [
       { label: '워크로드별 최적 선택', anchor: '#best-pick' },
       { label: 'GPU 카드별 시간당 요금 비교', anchor: '#comparison' },
@@ -1795,7 +1675,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '2026년 클라우드 GPU 시간당 비용은 얼마입니까?',
-        answer: 'RTX 4090: $0.34–0.89/시간. A100 80 GB: $1.19–3.19/시간. H100 80 GB: $1.99–4.89/시간. 시간당 최저가: RTX A5000 $0.16/시간부터.',
+        answer: 'RTX 4090: $0.34–0.89/시간. A100 80 GB: $1.19–3.19/시간. H100 80 GB: $1.99–4.89/시간. 확인한 RunPod·Lambda 목록 중 시간당 최저가: RTX A5000 $0.16/시간부터.',
         bullets: [
           'RunPod는 RTX 4090을 Community Cloud에서 $0.34/시간, Secure Cloud에서 $0.89/시간으로 게시합니다.',
           'Lambda는 H100 PCIe를 $3.79/시간, H100 SXM을 $4.59–4.89/시간에 제공하며, RunPod의 H100 PCIe는 $1.99/시간부터입니다.',
@@ -1812,7 +1692,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'RTX 4090 24 GB는 RunPod에서 $0.34–0.89/시간 — 13B–30B 추론을 위한 저비용 선택지',
           'A100 80 GB는 RunPod와 Lambda에서 $1.19–3.19/시간으로, 70B 추론과 대부분의 파인튜닝의 주력',
           'H100 80 GB는 $1.99–4.89/시간이며, 대규모 학습이나 지연 시간이 중요한 서빙에서만 가치가 있음',
-          '시간당 가장 저렴한 클라우드 GPU는 $0.16/시간부터 시작하는 구형 24 GB 카드 — 요금은 자주 바뀌므로 예약 전 제공업체 페이지를 확인',
+          '확인한 RunPod·Lambda 목록 중 시간당 가장 저렴한 클라우드 GPU는 $0.16/시간부터 시작하는 구형 24 GB 카드 — 요금은 자주 바뀌므로 예약 전 제공업체 페이지를 확인',
         ],
       },
       bestPick: {
@@ -1876,12 +1756,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             '시간당 가격': '$1.99–4.89/시간',
             '적합한 용도': '대규모 학습, 저지연 서빙',
           },
-          {
-            'GPU': '[L40S (DigitalOcean)](/ko/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '48 GB',
-            '시간당 가격': '$1.57/시간',
-            '적합한 용도': '48 GB가 필요한 모델',
-          },
         ],
       },
       cheapest: {
@@ -1889,7 +1763,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '시간당 가장 저렴한 클라우드 GPU',
         content: [
           '<strong>확인한 RunPod와 Lambda 목록 중 시간당 가장 저렴한 클라우드 GPU는 $0.16/시간부터 시작하는 구형 24 GB 및 48 GB 카드입니다.</strong> RunPod가 Community Cloud와 Secure Cloud 요금을 게시하며, 소형 모델 추론과 테스트에 적합하고 대규모 학습에는 맞지 않습니다.',
-          '과금 방식이 다른 제공업체도 있습니다. <a href="/ko/power-local-llm/clore-ai-review" class="text-primary hover:underline">Clore.ai 리뷰</a>는 호스트가 직접 가격을 정하는 마켓플레이스를, <a href="/ko/power-local-llm/novita-ai-review" class="text-primary hover:underline">Novita AI 리뷰</a>는 토큰 단위로 과금하는 모델 API를 다룹니다. Vultr, DigitalOcean, UpCloud는 <a href="/ko/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud" class="text-primary hover:underline">Vultr·DigitalOcean·UpCloud GPU 클라우드</a>를, 전체 비교는 <a href="/ko/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">클라우드 GPU 제공업체 비교</a>를 참고하십시오.',
         ],
         columns: ['GPU', 'VRAM', '시간당 가격', '적합한 용도'],
         rows: [
@@ -1917,18 +1790,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             '시간당 가격': '$0.44–0.69/시간',
             '적합한 용도': '저전력 추론',
           },
-          {
-            'GPU': '[RTX 4000 Ada (DigitalOcean)](/ko/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '20 GB',
-            '시간당 가격': '$0.76/시간',
-            '적합한 용도': '7B–13B 추론, 테스트',
-          },
-          {
-            'GPU': '[A16 (Vultr)](/ko/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
-            'VRAM': '16 GB',
-            '시간당 가격': '$0.471/시간부터',
-            '적합한 용도': '7B–13B 추론, 테스트',
-          },
+        ],
+        items: [
+          '구매 대신 대여를 고려하신다면 [클라우드 GPU 제공업체 비교](/ko/power-local-llm/best-cloud-gpu-providers), [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review), [Novita AI 리뷰](/ko/power-local-llm/novita-ai-review), [Vultr, DigitalOcean, UpCloud GPU 비교](/ko/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)를 참고하십시오.',
         ],
       },
       snippets: {
@@ -1936,7 +1800,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '요약 정보',
         snippetBlocks: [
           { type: 'one-sentence', text: '클라우드 GPU 비용은 RTX 4090이 시간당 약 $0.34–0.89, A100 80 GB가 $1.19–3.19, H100 80 GB가 $1.99–4.89입니다.' },
-          { type: 'plain-terms', text: '클라우드에서 GPU를 빌리는 비용은 시간 단위로 청구되며, 카드 종류, 제공업체, 대여 중단 가능 여부에 따라 달라집니다. 24 GB급 소형 카드가 가장 저렴하고 소형·중형 모델에 적합하며, A100과 H100은 더 비싸고 대형 모델과 학습에 쓰입니다.' },
+          { type: 'plain-terms', text: '클라우드에서 GPU를 빌리는 비용은 시간 단위로 청구되며, 카드 종류, 제공업체, 대여 중단 가능 여부에 따라 달라집니다. RunPod와 Lambda에서는 24 GB급 소형 카드가 가장 저렴하고 소형·중형 모델에 적합하며, A100과 H100은 더 비싸고 대형 모델과 학습에 쓰입니다.' },
         ],
       },
       faq: {
@@ -1976,7 +1840,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[RunPod vs Vast.ai 가격 비교](/ko/prompt-bites/runpod-vs-vastai-pricing) — 관리형 대 마켓플레이스 장단점',
           '[로컬 LLM용 $600 이하 최적 GPU](/ko/prompt-bites/best-gpu-under-600-local-llm) — 구매 대 임대 결정을 위한 맥락',
           '[로컬 LLM용 GPU 구매 완전 가이드 2026](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 하드웨어 구매 전체 개요',
-          '[클라우드 GPU 제공업체 비교](/ko/power-local-llm/best-cloud-gpu-providers) — [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review) — [Novita AI 리뷰](/ko/power-local-llm/novita-ai-review) — [Vultr·DigitalOcean·UpCloud GPU 클라우드](/ko/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
+          '[LLM용 로컬 GPU vs 클라우드 GPU 비용: 손익분기](/local-llms/local-llm-vs-cloud-gpu-cost) — 손익분기 시간과 token당 비용',
+          '구매 대신 대여: [클라우드 GPU 제공업체 비교](/ko/power-local-llm/best-cloud-gpu-providers), [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review), [Novita AI 리뷰](/ko/power-local-llm/novita-ai-review), [Vultr, DigitalOcean, UpCloud GPU 비교](/ko/power-local-llm/vultr-digitalocean-upcloud-gpu-cloud)',
         ],
       },
     },

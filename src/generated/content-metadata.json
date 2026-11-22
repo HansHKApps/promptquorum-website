@@ -2760,16 +2760,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-en.svg",
-          "title": "Hourly pricing comparison across RunPod, Vast.ai, and Lambda Labs for RTX 4090, RTX 5090, A100 80GB, and H100 80GB GPUs, including uptime SLA percentages for each provider. RunPod offers the most balanced pricing with a 99% uptime SLA, Vast.ai starts as low as $0.08/hr with no SLA, and Lambda Labs charges a premium for its 99.9% SLA."
-        },
-        {
-          "url": "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-en.svg",
-          "title": "Cost timeline comparing RunPod RTX 4090 rental at $0.50/hr against buying a $2,000–2,600 RTX 4090 outright (EOL pricing, August 2026), based on 4 hours of daily use. Renting stays cheaper until roughly 4,600 hours (about 38 months), after which owning the GPU costs less than continued RunPod rental."
-        }
-      ]
+      "images": []
     },
     "eu-cloud-gpu-gdpr-2026": {
       "dateModified": "2026-11-22",
@@ -7333,7 +7324,7 @@
       "images": [
         {
           "url": "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.webp",
-          "title": "Hermes 3 balances instruction quality and uncensored range best — fully abliterated models drift faster and write worse prose."
+          "title": "Hermes 3 balances instruction quality and uncensored range well in our editorial view; check each model card for current behaviour."
         },
         {
           "url": "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-en.webp",

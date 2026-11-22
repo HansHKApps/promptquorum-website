@@ -1,9 +1,9 @@
 import type { AcademyBaseCopy } from './types'
 
 export const copy: AcademyBaseCopy = {
-  metaTitle: 'PromptQuorum Academy：免费的个性化AI学习',
+  metaTitle: 'PromptQuorum Academy：免费的个性化本地 AI 学习',
   metaDescription:
-    '选择主题、可用时间和水平。PromptQuorum Academy 参考 PromptQuorum 指南生成简短课程，并提供AI辅导、测试和PDF完成证明。',
+    '选择本地 AI 主题、可用时间和水平。PromptQuorum Academy 参考 PromptQuorum 指南生成简短的本地 AI 课程，并提供AI辅导、测试和PDF完成证明。',
   h1: 'PromptQuorum Academy',
   intro: '用为你的时间和水平定制的短课程学习本地AI、提示词等主题。免费，无需注册账号。',
   howTitle: '使用方式',
@@ -75,7 +75,7 @@ export const copy: AcademyBaseCopy = {
   testSplit: (l, t) => `${l} 分钟课程 + ${t} 分钟测试`,
   storageBlocked: '此浏览器不允许保存。你可以继续，但关闭页面后进度会丢失。',
   loading: '加载中',
-  tagline: '个性化 AI 学习，免费',
+  tagline: '个性化本地 AI 学习，免费',
   windowClose: '关闭',
   windowMaximize: '最大化',
   windowRestore: '还原',

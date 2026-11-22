@@ -18,11 +18,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "title": "Local LLM vs Cloud GPU: What Is Cheaper?",
     "heroImage": "/images/local-llm-vs-cloud-gpu-cost-overview-hero-en.webp",
     "seoTitle": "Local GPU vs Cloud GPU Cost for LLMs: Break-Even 2026",
-    "intro": "**Buying a GPU beats renting one only at steady use. A $2,000 RTX 4090 (example price) breaks even after about 2,400 hours against RunPod Secure Cloud at $0.89/hour and about 7,200 hours against Community Cloud at $0.34/hour (vendor prices read 2 November 2026). Below that, renting is cheaper in this model, which ignores resale value and the host PC.**",
-    "metaDescription": "Local GPU vs cloud GPU cost for LLMs: break-even hours using RunPod, Lambda and AWS prices read 2 November 2026, plus the formula to redo it.",
+    "intro": "**Buying a GPU beats renting only at steady use. An example $2,000 RTX 4090 breaks even after about 2,400 hours against RunPod Secure Cloud ($0.89/hour) or about 7,200 hours against Community Cloud ($0.34/hour), prices read 22 November 2026. Below that, renting is cheaper in this model.**",
+    "metaDescription": "Local GPU vs cloud GPU cost for LLMs: break-even hours using RunPod, Lambda and AWS prices read 22 November 2026, plus the formula to redo it.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
-    "leadAnswerBlock": "**Buying a GPU beats renting one only at steady use. A $2,000 RTX 4090 (example price) breaks even after about 2,400 hours against RunPod Secure Cloud at $0.89/hour and about 7,200 hours against Community Cloud at $0.34/hour (vendor prices read 2 November 2026). Below that, renting is cheaper in this model, which ignores resale value and the host PC.**",
+    "leadAnswerBlock": "**Buying a GPU beats renting only at steady use. An example $2,000 RTX 4090 breaks even after about 2,400 hours against RunPod Secure Cloud ($0.89/hour) or about 7,200 hours against Community Cloud ($0.34/hour), prices read 22 November 2026. Below that, renting is cheaper in this model.**",
     "audience": "Developers familiar with Ollama or LM Studio deciding whether to buy a GPU or rent one",
     "readTime": "7 min read",
     "educationalLevel": "Intermediate",
@@ -41,6 +41,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "anchor": "#providers"
       },
       {
+        "label": "Cost per Token",
+        "anchor": "#tokens"
+      },
+      {
         "label": "1-Year and 24/7 Cost",
         "anchor": "#one-year"
       },
@@ -56,7 +60,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "snippetBlocks": [
           {
             "type": "one-sentence",
-            "text": "A local RTX 4090 bought for an example $2,000 breaks even against a rented RTX 4090 after about 2,400 hours on RunPod Secure Cloud ($0.89/hour) or about 7,200 hours on Community Cloud ($0.34/hour), with vendor prices read 2 November 2026; below that, renting is cheaper."
+            "text": "A local RTX 4090 bought for an example $2,000 breaks even against a rented RTX 4090 after about 2,400 hours on RunPod Secure Cloud ($0.89/hour) or about 7,200 hours on Community Cloud ($0.34/hour), with vendor prices read 22 November 2026; below that, renting is cheaper."
           },
           {
             "type": "plain-terms",
@@ -70,6 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Against RunPod Secure Cloud RTX 4090 ($0.89/hour): break-even after about 2,400 hours",
           "Running 24/7, the same break-even comes after about 101 days (Secure) or about 301 days (Community)",
           "Cloud wins for bursts, for hardware most buyers cannot get (H100, B200) and when you do not want to tie up capital",
+          "Per token, a third-party NoctHost measurement of Llama 3.1 8B gives about 322k tokens per $1 on an RTX 4000 Ada ($0.73/hour) and about 157k on an L4 ($1.16/hour), measured 15 November 2026",
           "The purchase price, wattage and electricity rate are example inputs, not market data: replace them with your own"
         ]
       },
@@ -79,8 +84,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**A local GPU costs its electricity per hour plus its purchase price spread over the hours you use it.** Electricity per hour = power draw in kW × your price per kWh.",
           "Example inputs (replace with your own): an RTX 4090 draws 450 W (NVIDIA total graphics power), at $0.14/kWh that is 0.45 × 0.14 = $0.063/hour. An RTX 4070 draws 200 W, which is $0.028/hour. The $2,000 purchase price is the low end of the new RTX 4090 listings tracked by [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) ($2,000-3,000 against a $1,599 MSRP; source updated 2026-10-15); used sold listings were $2,575-3,010. Break-even hours grow in proportion to the price you actually pay.",
-          "Cloud: RunPod lists the RTX 4090 (24 GB) at $0.34/hour on Community Cloud and $0.89/hour on Secure Cloud, read on 2 November 2026.",
-          "Lambda lists an A6000 (48 GB) at $1.09/hour and an A100 (40 GB) at $1.99/hour, per GPU on demand, read on 2 November 2026.",
+          "Cloud: RunPod lists the RTX 4090 (24 GB) at $0.34/hour on Community Cloud and $0.89/hour on Secure Cloud, read on 22 November 2026.",
+          "Lambda lists an A6000 (48 GB) at $1.09/hour and an A100 (40 GB) at $1.99/hour, per GPU on demand, read on 22 November 2026.",
           "Cloud prices change without notice, so check the provider page before you decide."
         ]
       },
@@ -99,12 +104,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "providers",
         "title": "How Do Cloud GPU Providers Compare?",
         "content": [
-          "**Prices below are on-demand list prices per GPU-hour, read from the provider pages on 2 November 2026, before tax.**",
-          "RunPod (Community / Secure): RTX 4090 24 GB $0.34/hour / $0.89/hour; A100 PCIe 80 GB $1.19/hour / $1.79/hour; L40S 48 GB $0.79/hour / $1.09/hour; RTX A6000 48 GB $0.33/hour / $0.59/hour.",
-          "Lambda (single-GPU instances): A6000 48 GB $1.09/hour; A100 40 GB $1.99/hour; H100 PCIe 80 GB $3.29/hour; H100 SXM 80 GB $4.29/hour.",
+          "**Prices below are on-demand list prices per GPU-hour, read from the provider pages on 22 November 2026, before tax.**",
+          "RunPod (Community / Secure): RTX 4090 24 GB $0.34/hour / $0.89/hour; A100 PCIe 80 GB $1.19/hour / $2.09/hour; L40S 48 GB $0.79/hour / $1.09/hour; RTX A6000 48 GB $0.33/hour / $0.69/hour.",
+          "Lambda (single-GPU instances): A6000 48 GB $1.09/hour; A100 40 GB $1.99/hour; H100 PCIe 80 GB $3.79/hour; H100 SXM 80 GB $4.89/hour.",
           "DigitalOcean GPU Droplets: RTX 6000 Ada 48 GB $1.57/hour; L40S 48 GB $1.57/hour; H100 80 GB $4.41/hour.",
-          "AWS EC2 g4dn.2xlarge (one NVIDIA T4, 16 GiB): $0.752/hour on demand, $0.474/hour with a 1-year reservation and $0.311/hour spot, as listed by the third-party index Vantage. A T4 has less memory and lower throughput than an RTX 4090 (see NVIDIA spec pages), so this is not a like-for-like comparison.",
-          "To turn these list prices into a provider choice, [compare cloud GPU providers](/power-local-llm/best-cloud-gpu-providers) or read the [RunPod review](/power-local-llm/runpod-review) and the [Vast.ai review](/power-local-llm/vast-ai-review). For a GPU marketplace option, see the [Clore.ai review](/power-local-llm/clore-ai-review)."
+          "AWS EC2 g4dn.2xlarge (one NVIDIA T4, 16 GiB): $0.752/hour on demand, $0.474/hour with a 1-year reservation and $0.259/hour spot, as listed by the third-party index Vantage. A T4 has less memory and lower throughput than an RTX 4090 (see NVIDIA spec pages), so this is not a like-for-like comparison.",
+          "To rent instead of buy, [compare cloud GPU providers](/power-local-llm/best-cloud-gpu-providers) and read the [RunPod review](/power-local-llm/runpod-review), the [Vast.ai review](/power-local-llm/vast-ai-review) and the [Clore.ai review](/power-local-llm/clore-ai-review)."
+        ]
+      },
+      "tokens": {
+        "id": "tokens",
+        "title": "What Does a Cloud GPU Cost per Token?",
+        "content": [
+          "**Tokens per dollar = tokens per second × 3,600 ÷ price per hour, and it only holds while the GPU generates without pauses.** An hourly price alone does not say how much output you get for it.",
+          "The only measured speeds on this page come from a third party and are a vendor benchmark, not a PromptQuorum measurement: [NoctHost GPU LLM speed table (third party)](https://nocthost.com/gpu-llm-speed). NoctHost, a GPU server provider, ran Ollama with Llama 3.1 8B (Q4_K_M, about 5 GB) on one fresh cloud server per card on 15 November 2026: a warm-up, then three runs per card at temperature 0 with 256 new tokens, median reported, speed = eval_count ÷ eval_duration from the Ollama API.",
+          "RTX 4000 Ada (20 GB, Linode, $0.73/hour): about 65 tokens per second, about 322k tokens per $1.",
+          "L4 (24 GB, OVHcloud, $1.16/hour): about 51 tokens per second, about 157k tokens per $1.",
+          "That is roughly $3 and $6 per million generated tokens (PromptQuorum arithmetic from the NoctHost figures).",
+          "Read these with care: two cards, one 8B model, NoctHost's own hourly prices (no read date on its page), and neither card is in the price lists above, so the numbers do not transfer to the RTX 4090 example or to a larger model. Idle time raises the real cost: a card that generates 25% of the time costs four times as much per token.",
+          "To put a local card on the same scale, apply the formula with your own electricity per hour (about $0.063 for the example RTX 4090) in place of the cloud price, using tokens per second you measured with the same model. That is running cost only, without the purchase price."
         ]
       },
       "one-year": {
@@ -123,7 +141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "Can I use cloud GPUs for 24/7 continuous inference?",
-            "a": "Yes, but this is where renting costs most. A rented RTX 4090 running 8,760 hours costs $2,978 a year on RunPod Community Cloud or $7,796 on Secure Cloud (read 2 November 2026); the example local card costs about $552 a year in electricity after the purchase."
+            "a": "Yes, but this is where renting costs most. A rented RTX 4090 running 8,760 hours costs $2,978 a year on RunPod Community Cloud or $7,796 on Secure Cloud (read 22 November 2026); the example local card costs about $552 a year in electricity after the purchase."
           },
           {
             "q": "Is a cloud GPU always cheaper for occasional use?",
@@ -132,6 +150,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "q": "Which cloud price should I compare my GPU against?",
             "a": "Compare against a GPU with the same memory. For an RTX 4090 (24 GB) that is RunPod's RTX 4090 at $0.34/hour (Community) or $0.89/hour (Secure). An AWS T4 at $0.752/hour has 16 GiB and lower throughput (see NVIDIA spec pages)."
+          },
+          {
+            "q": "What does it cost to run an LLM in the cloud per million tokens?",
+            "a": "It depends on the card, the model and how busy the GPU is. In a third-party measurement by NoctHost (15 November 2026, Ollama, Llama 3.1 8B at Q4_K_M), an RTX 4000 Ada at $0.73/hour generated about 65 tokens per second, about 322k tokens per dollar or roughly $3 per million tokens. An L4 at $1.16/hour generated about 51 tokens per second, about 157k tokens per dollar or roughly $6 per million. Both assume the GPU generates without pauses."
           },
           {
             "q": "Are cloud GPU prices fixed?",
@@ -155,32 +177,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Ignoring the host PC: a GPU needs a machine, power supply and cooling that are not in the card price.",
           "Comparing different memory sizes: a 16 GiB T4 and a 24 GB RTX 4090 do not run the same models.",
           "Using one tier only: the same RunPod RTX 4090 costs about 2.6 times more on Secure Cloud than on Community Cloud.",
-          "Assuming local is always cheaper: below about 2,400 to 7,200 hours the rented card costs less in this example."
+          "Assuming local is always cheaper: below about 2,400 to 7,200 hours the rented card costs less in this example.",
+          "Comparing hourly prices without speed: in the third-party NoctHost test the same 8B model gave about 322k tokens per dollar on one card and about 157k on another."
         ]
       },
       "relatedReading": {
         "title": "Related Reading",
         "items": [
           "[Renting GPU Cloud vs Buying On-Prem for Enterprise AI (2026)](/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- the same rent-vs-buy question at enterprise procurement scale, with a full TCO break-even model.",
+          "[Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- plug in your own hours, electricity and hardware price.",
           "[Cloud GPU Rental Comparison: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026)",
           "[Is Buying a GPU Worth It vs AI Subscriptions?](/local-llms/gpu-vs-ai-subscription-roi)",
           "[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)",
           "[Local LLM vs ChatGPT Plus Cost Comparison](/local-llms/local-llms-vs-chatgpt-plus)",
           "[Multi-GPU Local LLMs: Scaling Beyond Single GPU](/local-llms/multi-gpu-local-llms)",
           "[When Should You Combine Local and Cloud LLM Inference?](/prompt-bites/hybrid-local-cloud-llm-strategy) -- the architecture question, once you already know which is cheaper.",
-          "[Compare cloud GPU providers](/power-local-llm/best-cloud-gpu-providers) -- Provider overview, with the [RunPod review](/power-local-llm/runpod-review) and the [Vast.ai review](/power-local-llm/vast-ai-review).",
-          "[Clore.ai review](/power-local-llm/clore-ai-review) -- a GPU marketplace option for renting instead of buying"
+          "Rent instead of buy: [compare cloud GPU providers](/power-local-llm/best-cloud-gpu-providers), [RunPod review](/power-local-llm/runpod-review), [Vast.ai review](/power-local-llm/vast-ai-review) and [Clore.ai review](/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
         "title": "Sources",
         "items": [
-          "[RunPod GPU pricing](https://www.runpod.io/pricing), read 2 November 2026",
-          "[Lambda GPU pricing](https://lambda.ai/pricing), read 2 November 2026",
-          "[DigitalOcean GPU Droplet pricing](https://www.digitalocean.com/pricing/gpu-droplets), read 2 November 2026",
-          "[AWS EC2 g4dn.2xlarge price listing (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), third-party index, read 2 November 2026",
+          "[RunPod GPU pricing](https://www.runpod.io/pricing), read 22 November 2026",
+          "[Lambda GPU pricing](https://lambda.com/pricing), read 22 November 2026",
+          "[DigitalOcean GPU Droplet pricing](https://www.digitalocean.com/pricing/gpu-droplets), read 22 November 2026",
+          "[AWS EC2 g4dn.2xlarge price listing (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), third-party index, read 22 November 2026",
           "[NVIDIA GeForce RTX 4090 specifications](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) and [RTX 4070](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/)",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), RTX 4090 new and used price ranges for the purchase-price example (updated 2026-10-15)"
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), RTX 4090 new and used price ranges for the purchase-price example (updated 2026-10-15)",
+          "[NoctHost: GPU LLM speed table](https://nocthost.com/gpu-llm-speed), third-party vendor benchmark, measured 15 November 2026, read 22 November 2026"
         ]
       }
     },
@@ -188,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Local GPU vs Cloud GPU Cost for LLMs: Break-Even 2026",
-      "description": "Local GPU vs cloud GPU cost for LLMs: break-even hours using RunPod, Lambda and AWS prices read 2 November 2026, plus the formula to redo it.",
+      "description": "Local GPU vs cloud GPU cost for LLMs: break-even hours using RunPod, Lambda and AWS prices read 22 November 2026, plus the formula to redo it.",
       "url": "https://www.promptquorum.com/local-llms/local-llm-vs-cloud-gpu-cost",
       "inLanguage": "en",
       "datePublished": "2026-04-05",
@@ -222,7 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "name": "Can I use cloud GPUs for 24/7 continuous inference?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, but this is where renting costs most. A rented RTX 4090 running 8,760 hours costs $2,978 a year on RunPod Community Cloud or $7,796 on Secure Cloud (read 2 November 2026); the example local card costs about $552 a year in electricity after the purchase."
+            "text": "Yes, but this is where renting costs most. A rented RTX 4090 running 8,760 hours costs $2,978 a year on RunPod Community Cloud or $7,796 on Secure Cloud (read 22 November 2026); the example local card costs about $552 a year in electricity after the purchase."
           }
         },
         {
@@ -239,6 +263,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Compare against a GPU with the same memory. For an RTX 4090 (24 GB) that is RunPod's RTX 4090 at $0.34/hour (Community) or $0.89/hour (Secure). An AWS T4 at $0.752/hour has 16 GiB and lower throughput (see NVIDIA spec pages)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it cost to run an LLM in the cloud per million tokens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the card, the model and how busy the GPU is. In a third-party measurement by NoctHost (15 November 2026, Ollama, Llama 3.1 8B at Q4_K_M), an RTX 4000 Ada at $0.73/hour generated about 65 tokens per second, about 322k tokens per dollar or roughly $3 per million tokens. An L4 at $1.16/hour generated about 51 tokens per second, about 157k tokens per dollar or roughly $6 per million. Both assume the GPU generates without pauses."
           }
         },
         {
@@ -280,12 +312,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           "@type": "Thing",
           "name": "RunPod RTX 4090",
-          "description": "$0.34/hour on Community Cloud and $0.89/hour on Secure Cloud (read 2 November 2026)."
+          "description": "$0.34/hour on Community Cloud and $0.89/hour on Secure Cloud (read 22 November 2026)."
         },
         {
           "@type": "Thing",
           "name": "Lambda A100 40 GB",
-          "description": "$1.99/hour on demand (read 2 November 2026); suited to one-off fine-tuning jobs."
+          "description": "$1.99/hour on demand (read 22 November 2026); suited to one-off fine-tuning jobs."
         }
       ]
     }
@@ -298,11 +330,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "title": "LLM local vs GPU en la nube: ¿qué sale más barato?",
     "heroImage": "/images/local-llm-vs-cloud-gpu-cost-overview-hero-es.webp",
     "seoTitle": "GPU local vs en la nube para LLM: punto de equilibrio 2026",
-    "intro": "**Comprar una GPU compensa solo con uso constante. Una RTX 4090 de 2.000 $ (ejemplo) se amortiza tras unas 2.400 horas frente a RunPod Secure Cloud a 0,89 $/hora y tras unas 7.200 horas frente a Community Cloud a 0,34 $/hora (precios de los proveedores consultados el 2 de noviembre de 2026). Por debajo de eso, alquilar sale más barato en este modelo, que no tiene en cuenta el valor de reventa ni el PC anfitrión.**",
-    "metaDescription": "GPU local o en la nube para LLM: horas de equilibrio con precios de RunPod, Lambda y AWS del 2 de noviembre de 2026 y la fórmula para repetirlo.",
+    "intro": "**Comprar una GPU compensa solo con uso constante. Una RTX 4090 (ejemplo: 2.000 $) se amortiza tras unas 2.400 horas vs. RunPod Secure Cloud (0,89 $/hora) o unas 7.200 vs. Community Cloud (0,34 $/hora); precios del 22 de noviembre de 2026. Por debajo, alquilar sale más barato en este modelo.**",
+    "metaDescription": "GPU local o en la nube para LLM: horas de equilibrio con precios de RunPod, Lambda y AWS del 22 de noviembre de 2026 y la fórmula para repetirlo.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
-    "leadAnswerBlock": "**Comprar una GPU compensa solo con uso constante. Una RTX 4090 de 2.000 $ (ejemplo) se amortiza tras unas 2.400 horas frente a RunPod Secure Cloud a 0,89 $/hora y tras unas 7.200 horas frente a Community Cloud a 0,34 $/hora (precios de los proveedores consultados el 2 de noviembre de 2026). Por debajo de eso, alquilar sale más barato en este modelo, que no tiene en cuenta el valor de reventa ni el PC anfitrión.**",
+    "leadAnswerBlock": "**Comprar una GPU compensa solo con uso constante. Una RTX 4090 (ejemplo: 2.000 $) se amortiza tras unas 2.400 horas vs. RunPod Secure Cloud (0,89 $/hora) o unas 7.200 vs. Community Cloud (0,34 $/hora); precios del 22 de noviembre de 2026. Por debajo, alquilar sale más barato en este modelo.**",
     "audience": "Desarrolladores que usan Ollama o LM Studio y deciden si comprar una GPU o alquilarla",
     "readTime": "7 min de lectura",
     "educationalLevel": "Intermediate",
@@ -321,6 +353,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "anchor": "#providers"
       },
       {
+        "label": "Costo por token",
+        "anchor": "#tokens"
+      },
+      {
         "label": "Costo a 1 año y 24/7",
         "anchor": "#one-year"
       },
@@ -336,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "snippetBlocks": [
           {
             "type": "one-sentence",
-            "text": "Una RTX 4090 local comprada por 2.000 $ (ejemplo) se amortiza frente a una RTX 4090 alquilada tras unas 2.400 horas en RunPod Secure Cloud (0,89 $/hora) o unas 7.200 horas en Community Cloud (0,34 $/hora), con precios de los proveedores consultados el 2 de noviembre de 2026; por debajo de eso, alquilar sale más barato."
+            "text": "Una RTX 4090 local comprada por 2.000 $ (ejemplo) se amortiza frente a una RTX 4090 alquilada tras unas 2.400 horas en RunPod Secure Cloud (0,89 $/hora) o unas 7.200 horas en Community Cloud (0,34 $/hora), con precios de los proveedores consultados el 22 de noviembre de 2026; por debajo de eso, alquilar sale más barato."
           },
           {
             "type": "plain-terms",
@@ -350,6 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Frente a RunPod Secure Cloud RTX 4090 (0,89 $/hora): equilibrio tras unas 2.400 horas",
           "Con carga 24/7, el equilibrio llega tras unos 101 días (Secure) o unos 301 días (Community)",
           "La nube gana en ráfagas, con hardware que la mayoría de los compradores no consigue (H100, B200) y cuando no quieres inmovilizar capital",
+          "Por token, una medición de un tercero (NoctHost) con Llama 3.1 8B da unos 322.000 tokens por dólar en una RTX 4000 Ada (0,73 $/hora) y unos 157.000 en una L4 (1,16 $/hora), medida el 15 de noviembre de 2026",
           "El precio de compra, la potencia y la tarifa eléctrica son valores de ejemplo, no datos de mercado: sustitúyelos por los tuyos"
         ]
       },
@@ -359,8 +396,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**Una GPU local cuesta su electricidad por hora más su precio de compra repartido entre las horas que la uses.** Electricidad por hora = consumo en kW × tu precio por kWh.",
           "Valores de ejemplo (cámbialos por los tuyos): una RTX 4090 consume 450 W (potencia gráfica total según NVIDIA); a 0,14 $/kWh son 0,45 × 0,14 = 0,063 $/hora. Una RTX 4070 consume 200 W, es decir 0,028 $/hora. El precio de compra de 2.000 $ es el extremo inferior de los listados nuevos de la RTX 4090 que sigue [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (2.000-3.000 $ frente a un MSRP de 1.599 $; fuente actualizada el 2026-10-15); los listados vendidos de segunda mano fueron de 2.575-3.010 $. Las horas de equilibrio crecen en proporción al precio que pagues de verdad.",
-          "Nube: RunPod lista la RTX 4090 (24 GB) a 0,34 $/hora en Community Cloud y 0,89 $/hora en Secure Cloud, consultado el 2 de noviembre de 2026.",
-          "Lambda lista una A6000 (48 GB) a 1,09 $/hora y una A100 (40 GB) a 1,99 $/hora, por GPU bajo demanda, consultado el 2 de noviembre de 2026.",
+          "Nube: RunPod lista la RTX 4090 (24 GB) a 0,34 $/hora en Community Cloud y 0,89 $/hora en Secure Cloud, consultado el 22 de noviembre de 2026.",
+          "Lambda lista una A6000 (48 GB) a 1,09 $/hora y una A100 (40 GB) a 1,99 $/hora, por GPU bajo demanda, consultado el 22 de noviembre de 2026.",
           "Los precios de la nube cambian sin aviso, así que revisa la página del proveedor antes de decidir."
         ]
       },
@@ -379,12 +416,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "providers",
         "title": "¿Cómo se comparan los proveedores de GPU en la nube?",
         "content": [
-          "**Los precios de abajo son precios de lista bajo demanda por hora de GPU, sin impuestos, leídos en las páginas de los proveedores el 2 de noviembre de 2026.**",
-          "RunPod (Community / Secure): RTX 4090 24 GB 0,34 $/hora / 0,89 $/hora; A100 PCIe 80 GB 1,19 $/hora / 1,79 $/hora; L40S 48 GB 0,79 $/hora / 1,09 $/hora; RTX A6000 48 GB 0,33 $/hora / 0,59 $/hora.",
-          "Lambda (instancias de una GPU): A6000 48 GB 1,09 $/hora; A100 40 GB 1,99 $/hora; H100 PCIe 80 GB 3,29 $/hora; H100 SXM 80 GB 4,29 $/hora.",
+          "**Los precios de abajo son precios de lista bajo demanda por hora de GPU, sin impuestos, leídos en las páginas de los proveedores el 22 de noviembre de 2026.**",
+          "RunPod (Community / Secure): RTX 4090 24 GB 0,34 $/hora / 0,89 $/hora; A100 PCIe 80 GB 1,19 $/hora / 2,09 $/hora; L40S 48 GB 0,79 $/hora / 1,09 $/hora; RTX A6000 48 GB 0,33 $/hora / 0,69 $/hora.",
+          "Lambda (instancias de una GPU): A6000 48 GB 1,09 $/hora; A100 40 GB 1,99 $/hora; H100 PCIe 80 GB 3,79 $/hora; H100 SXM 80 GB 4,89 $/hora.",
           "DigitalOcean GPU Droplets: RTX 6000 Ada 48 GB 1,57 $/hora; L40S 48 GB 1,57 $/hora; H100 80 GB 4,41 $/hora.",
-          "AWS EC2 g4dn.2xlarge (una NVIDIA T4, 16 GiB): 0,752 $/hora bajo demanda, 0,474 $/hora con reserva de 1 año y 0,311 $/hora spot, según el índice de terceros Vantage. Una T4 tiene menos memoria y menor rendimiento que una RTX 4090 (consulta las páginas de especificaciones de NVIDIA), así que no es una comparación equivalente.",
-          "Para convertir estos precios de lista en una elección de proveedor, puedes [comparar proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers) o leer la [reseña de RunPod](/es/power-local-llm/runpod-review) y la [reseña de Vast.ai](/es/power-local-llm/vast-ai-review). Para una opción de marketplace de GPU, consulta la [reseña de Clore.ai](/es/power-local-llm/clore-ai-review)."
+          "AWS EC2 g4dn.2xlarge (una NVIDIA T4, 16 GiB): 0,752 $/hora bajo demanda, 0,474 $/hora con reserva de 1 año y 0,259 $/hora spot, según el índice de terceros Vantage. Una T4 tiene menos memoria y menor rendimiento que una RTX 4090 (consulta las páginas de especificaciones de NVIDIA), así que no es una comparación equivalente.",
+          "Si prefieres alquilar en lugar de comprar, puedes [comparar proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers) y leer la [reseña de RunPod](/es/power-local-llm/runpod-review), la [reseña de Vast.ai](/es/power-local-llm/vast-ai-review) y la [reseña de Clore.ai](/es/power-local-llm/clore-ai-review)."
+        ]
+      },
+      "tokens": {
+        "id": "tokens",
+        "title": "¿Cuánto cuesta por token una GPU en la nube?",
+        "content": [
+          "**Tokens por dólar = tokens por segundo × 3.600 ÷ precio por hora, y solo se cumple mientras la GPU genera sin pausas.** Un precio por hora no dice cuánta salida obtienes a cambio.",
+          "Las únicas velocidades medidas en esta página provienen de un tercero y son un benchmark del proveedor, no una medición de PromptQuorum: [tabla de velocidad de GPU con LLM de NoctHost (tercero)](https://nocthost.com/gpu-llm-speed). NoctHost, un proveedor de servidores con GPU, ejecutó Ollama con Llama 3.1 8B (Q4_K_M, unos 5 GB) en un servidor en la nube nuevo por tarjeta el 15 de noviembre de 2026: un calentamiento y luego tres ejecuciones por tarjeta con temperatura 0 y 256 tokens nuevos; se informa la mediana, y la velocidad es eval_count ÷ eval_duration de la API de Ollama.",
+          "RTX 4000 Ada (20 GB, Linode, 0,73 $/hora): unos 65 tokens por segundo, unos 322.000 tokens por dólar.",
+          "L4 (24 GB, OVHcloud, 1,16 $/hora): unos 51 tokens por segundo, unos 157.000 tokens por dólar.",
+          "Eso equivale a unos 3 $ y 6 $ por millón de tokens generados (cálculo de PromptQuorum a partir de las cifras de NoctHost).",
+          "Léelo con cuidado: dos tarjetas, un modelo de 8B, precios por hora propios de NoctHost (sin fecha de lectura en su página), y ninguna de las dos tarjetas está en las listas de precios de arriba, así que las cifras no se trasladan al ejemplo de la RTX 4090 ni a un modelo mayor. El tiempo ocioso eleva el costo real: una tarjeta que genera el 25 % del tiempo cuesta cuatro veces más por token.",
+          "Para poner una tarjeta local en la misma escala, aplica la fórmula con tu propio costo de electricidad por hora (unos 0,063 $ para la RTX 4090 del ejemplo) en lugar del precio de la nube, y usa los tokens por segundo que mediste con el mismo modelo. Es solo costo de funcionamiento, sin el precio de compra."
         ]
       },
       "one-year": {
@@ -403,7 +453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "¿Puedo usar GPU en la nube para inferencia continua 24/7?",
-            "a": "Sí, pero es donde alquilar cuesta más. Una RTX 4090 alquilada durante 8.760 horas cuesta 2.978 $ al año en RunPod Community Cloud o 7.796 $ en Secure Cloud (consultado el 2 de noviembre de 2026); la tarjeta local de ejemplo cuesta unos 552 $ al año en electricidad tras la compra."
+            "a": "Sí, pero es donde alquilar cuesta más. Una RTX 4090 alquilada durante 8.760 horas cuesta 2.978 $ al año en RunPod Community Cloud o 7.796 $ en Secure Cloud (consultado el 22 de noviembre de 2026); la tarjeta local de ejemplo cuesta unos 552 $ al año en electricidad tras la compra."
           },
           {
             "q": "¿Una GPU en la nube es siempre más barata para uso ocasional?",
@@ -412,6 +462,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "q": "¿Con qué precio de la nube debo comparar mi GPU?",
             "a": "Compárala con una GPU de la misma memoria. Para una RTX 4090 (24 GB) es la RTX 4090 de RunPod a 0,34 $/hora (Community) o 0,89 $/hora (Secure). Una T4 de AWS a 0,752 $/hora tiene 16 GiB y menor rendimiento (consulta las páginas de especificaciones de NVIDIA)."
+          },
+          {
+            "q": "¿Cuánto cuesta ejecutar un LLM en la nube por millón de tokens?",
+            "a": "Depende de la tarjeta, el modelo y lo ocupada que esté la GPU. En una medición del tercero NoctHost (15 de noviembre de 2026, Ollama, Llama 3.1 8B en Q4_K_M), una RTX 4000 Ada a 0,73 $/hora generó unos 65 tokens por segundo, es decir, unos 322.000 tokens por dólar o unos 3 $ por millón de tokens. Una L4 a 1,16 $/hora generó unos 51 tokens por segundo, es decir, unos 157.000 tokens por dólar o unos 6 $ por millón. Ambas cifras suponen que la GPU genera sin pausas."
           },
           {
             "q": "¿Son fijos los precios de las GPU en la nube?",
@@ -435,32 +489,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Ignorar el PC anfitrión: una GPU necesita equipo, fuente de alimentación y refrigeración que no están en el precio de la tarjeta.",
           "Comparar memorias distintas: una T4 de 16 GiB y una RTX 4090 de 24 GB no ejecutan los mismos modelos.",
           "Mirar un solo nivel: la misma RTX 4090 de RunPod cuesta unas 2,6 veces más en Secure Cloud que en Community Cloud.",
-          "Suponer que lo local siempre es más barato: por debajo de unas 2.400 a 7.200 horas, la tarjeta alquilada cuesta menos en este ejemplo."
+          "Suponer que lo local siempre es más barato: por debajo de unas 2.400 a 7.200 horas, la tarjeta alquilada cuesta menos en este ejemplo.",
+          "Comparar precios por hora sin mirar la velocidad: en la prueba del tercero NoctHost, el mismo modelo de 8B dio unos 322.000 tokens por dólar en una tarjeta y unos 157.000 en otra."
         ]
       },
       "relatedReading": {
         "title": "Lecturas relacionadas",
         "items": [
           "[Alquilar GPU en la nube vs comprar on-prem para IA empresarial (2026)](/es/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- la misma pregunta de alquilar vs comprar a escala de compra empresarial, con un modelo completo de TCO y punto de equilibrio.",
+          "[IA Local vs IA en la Nube: Calculadora de Costos (Comprar vs Rentar) 2026](/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- introduce tus propias horas, tu tarifa eléctrica y el precio del hardware.",
           "[Comparativa de alquiler de GPU en la nube: RunPod vs Vast.ai vs Lambda Labs](/es/local-llms/cloud-gpu-rental-comparison-2026)",
           "[¿Vale la pena comprar una GPU vs suscripciones de IA?](/es/local-llms/gpu-vs-ai-subscription-roi)",
           "[Mejores GPU económicas para LLM local](/es/local-llms/best-budget-gpus-local-llm)",
           "[Comparativa de costo: LLM local vs ChatGPT Plus](/es/local-llms/local-llms-vs-chatgpt-plus)",
           "[LLM local con múltiples GPU: Escalando más allá de una sola GPU](/es/local-llms/multi-gpu-local-llms)",
           "[¿Cuándo deberías combinar inferencia de LLM local y en la nube?](/es/prompt-bites/hybrid-local-cloud-llm-strategy) -- la pregunta de arquitectura, una vez que ya sabes cuál es más barato.",
-          "[Comparar proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers) -- Resumen de proveedores, con la [reseña de RunPod](/es/power-local-llm/runpod-review) y la [reseña de Vast.ai](/es/power-local-llm/vast-ai-review).",
-          "[reseña de Clore.ai](/es/power-local-llm/clore-ai-review) -- una opción de marketplace de GPU para alquilar en lugar de comprar"
+          "Alquilar en lugar de comprar: [comparar proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers), [reseña de RunPod](/es/power-local-llm/runpod-review), [reseña de Vast.ai](/es/power-local-llm/vast-ai-review) y [reseña de Clore.ai](/es/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
         "title": "Fuentes",
         "items": [
-          "[Precios de GPU de RunPod](https://www.runpod.io/pricing), consultado el 2 de noviembre de 2026",
-          "[Precios de GPU de Lambda](https://lambda.ai/pricing), consultado el 2 de noviembre de 2026",
-          "[Precios de GPU Droplets de DigitalOcean](https://www.digitalocean.com/pricing/gpu-droplets), consultado el 2 de noviembre de 2026",
-          "[Precio de AWS EC2 g4dn.2xlarge (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), índice de terceros, consultado el 2 de noviembre de 2026",
+          "[Precios de GPU de RunPod](https://www.runpod.io/pricing), consultado el 22 de noviembre de 2026",
+          "[Precios de GPU de Lambda](https://lambda.com/pricing), consultado el 22 de noviembre de 2026",
+          "[Precios de GPU Droplets de DigitalOcean](https://www.digitalocean.com/pricing/gpu-droplets), consultado el 22 de noviembre de 2026",
+          "[Precio de AWS EC2 g4dn.2xlarge (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), índice de terceros, consultado el 22 de noviembre de 2026",
           "[Especificaciones de la NVIDIA GeForce RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) y [RTX 4070](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/)",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), rangos de precio de la RTX 4090 nueva y de segunda mano para el precio de compra del ejemplo (actualizado el 2026-10-15)"
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), rangos de precio de la RTX 4090 nueva y de segunda mano para el precio de compra del ejemplo (actualizado el 2026-10-15)",
+          "[NoctHost: tabla de velocidad de GPU con LLM](https://nocthost.com/gpu-llm-speed), benchmark de proveedor de un tercero, medido el 15 de noviembre de 2026, consultado el 22 de noviembre de 2026"
         ]
       }
     },
@@ -468,7 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "GPU local vs en la nube para LLM: punto de equilibrio 2026",
-      "description": "GPU local o en la nube para LLM: horas de equilibrio con precios de RunPod, Lambda y AWS del 2 de noviembre de 2026 y la fórmula para repetirlo.",
+      "description": "GPU local o en la nube para LLM: horas de equilibrio con precios de RunPod, Lambda y AWS del 22 de noviembre de 2026 y la fórmula para repetirlo.",
       "url": "https://www.promptquorum.com/es/local-llms/local-llm-vs-cloud-gpu-cost",
       "inLanguage": "es",
       "datePublished": "2026-04-05",
@@ -502,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "name": "¿Puedo usar GPU en la nube para inferencia continua 24/7?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, pero es donde alquilar cuesta más. Una RTX 4090 alquilada durante 8.760 horas cuesta 2.978 $ al año en RunPod Community Cloud o 7.796 $ en Secure Cloud (consultado el 2 de noviembre de 2026); la tarjeta local de ejemplo cuesta unos 552 $ al año en electricidad tras la compra."
+            "text": "Sí, pero es donde alquilar cuesta más. Una RTX 4090 alquilada durante 8.760 horas cuesta 2.978 $ al año en RunPod Community Cloud o 7.796 $ en Secure Cloud (consultado el 22 de noviembre de 2026); la tarjeta local de ejemplo cuesta unos 552 $ al año en electricidad tras la compra."
           }
         },
         {
@@ -519,6 +575,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Compárala con una GPU de la misma memoria. Para una RTX 4090 (24 GB) es la RTX 4090 de RunPod a 0,34 $/hora (Community) o 0,89 $/hora (Secure). Una T4 de AWS a 0,752 $/hora tiene 16 GiB y menor rendimiento (consulta las páginas de especificaciones de NVIDIA)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta ejecutar un LLM en la nube por millón de tokens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de la tarjeta, el modelo y lo ocupada que esté la GPU. En una medición del tercero NoctHost (15 de noviembre de 2026, Ollama, Llama 3.1 8B en Q4_K_M), una RTX 4000 Ada a 0,73 $/hora generó unos 65 tokens por segundo, es decir, unos 322.000 tokens por dólar o unos 3 $ por millón de tokens. Una L4 a 1,16 $/hora generó unos 51 tokens por segundo, es decir, unos 157.000 tokens por dólar o unos 6 $ por millón. Ambas cifras suponen que la GPU genera sin pausas."
           }
         },
         {
@@ -560,12 +624,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           "@type": "Thing",
           "name": "RunPod RTX 4090",
-          "description": "0,34 $/hora en Community Cloud y 0,89 $/hora en Secure Cloud (consultado el 2 de noviembre de 2026)."
+          "description": "0,34 $/hora en Community Cloud y 0,89 $/hora en Secure Cloud (consultado el 22 de noviembre de 2026)."
         },
         {
           "@type": "Thing",
           "name": "Lambda A100 40 GB",
-          "description": "1,99 $/hora bajo demanda (consultado el 2 de noviembre de 2026); adecuada para trabajos puntuales de ajuste fino."
+          "description": "1,99 $/hora bajo demanda (consultado el 22 de noviembre de 2026); adecuada para trabajos puntuales de ajuste fino."
         }
       ]
     }
@@ -578,11 +642,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "title": "نموذج لغوي محلي مقابل وحدة معالجة رسومات سحابية: الأرخص؟",
     "heroImage": "/images/local-llm-vs-cloud-gpu-cost-overview-hero-ar.webp",
     "seoTitle": "تكلفة GPU محلية مقابل سحابية لـ LLM: التعادل 2026",
-    "intro": "**شراء وحدة GPU يتفوق على استئجارها فقط مع الاستخدام المنتظم. بطاقة RTX 4090 بسعر 2,000 دولار (سعر مثال) تتعادل بعد نحو 2,400 ساعة مقابل RunPod Secure Cloud بسعر 0.89 دولار/ساعة، وبعد نحو 7,200 ساعة مقابل Community Cloud بسعر 0.34 دولار/ساعة (أسعار المزودين قُرئت في 2 نوفمبر 2026). وتحت ذلك يكون الاستئجار أرخص في هذا النموذج، الذي لا يحتسب قيمة إعادة البيع ولا جهاز الحاسوب المضيف.**",
-    "metaDescription": "GPU محلية أم سحابية لـ LLM: ساعات التعادل بأسعار RunPod وLambda وAWS المقروءة في 2 نوفمبر 2026، مع المعادلة لإعادة الحساب.",
+    "intro": "**شراء وحدة GPU يتفوق على استئجارها فقط مع الاستخدام المنتظم. بطاقة RTX 4090 (مثال: 2,000 دولار) تتعادل بعد نحو 2,400 ساعة مقابل RunPod Secure Cloud (0.89 دولار/ساعة) أو نحو 7,200 مقابل Community Cloud (0.34 دولار/ساعة)؛ الأسعار في 22 نوفمبر 2026. وتحت ذلك يكون الاستئجار أرخص في هذا النموذج.**",
+    "metaDescription": "GPU محلية أم سحابية لـ LLM: ساعات التعادل بأسعار RunPod وLambda وAWS المقروءة في 22 نوفمبر 2026، مع المعادلة لإعادة الحساب.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
-    "leadAnswerBlock": "**شراء وحدة GPU يتفوق على استئجارها فقط مع الاستخدام المنتظم. بطاقة RTX 4090 بسعر 2,000 دولار (سعر مثال) تتعادل بعد نحو 2,400 ساعة مقابل RunPod Secure Cloud بسعر 0.89 دولار/ساعة، وبعد نحو 7,200 ساعة مقابل Community Cloud بسعر 0.34 دولار/ساعة (أسعار المزودين قُرئت في 2 نوفمبر 2026). وتحت ذلك يكون الاستئجار أرخص في هذا النموذج، الذي لا يحتسب قيمة إعادة البيع ولا جهاز الحاسوب المضيف.**",
+    "leadAnswerBlock": "**شراء وحدة GPU يتفوق على استئجارها فقط مع الاستخدام المنتظم. بطاقة RTX 4090 (مثال: 2,000 دولار) تتعادل بعد نحو 2,400 ساعة مقابل RunPod Secure Cloud (0.89 دولار/ساعة) أو نحو 7,200 مقابل Community Cloud (0.34 دولار/ساعة)؛ الأسعار في 22 نوفمبر 2026. وتحت ذلك يكون الاستئجار أرخص في هذا النموذج.**",
     "audience": "مطورون يستخدمون Ollama أو LM Studio ويقررون بين شراء وحدة GPU أو استئجارها",
     "readTime": "7 دقائق قراءة",
     "educationalLevel": "Intermediate",
@@ -601,6 +665,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "anchor": "#providers"
       },
       {
+        "label": "التكلفة لكل token",
+        "anchor": "#tokens"
+      },
+      {
         "label": "التكلفة لعام كامل وعلى مدار الساعة",
         "anchor": "#one-year"
       },
@@ -616,7 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "snippetBlocks": [
           {
             "type": "one-sentence",
-            "text": "بطاقة RTX 4090 محلية اشتُريت بسعر مثال 2,000 دولار تتعادل أمام RTX 4090 مستأجرة بعد نحو 2,400 ساعة على RunPod Secure Cloud (0.89 دولار/ساعة) أو نحو 7,200 ساعة على Community Cloud (0.34 دولار/ساعة)، بأسعار مزودين قُرئت في 2 نوفمبر 2026؛ وتحت ذلك يكون الاستئجار أرخص."
+            "text": "بطاقة RTX 4090 محلية اشتُريت بسعر مثال 2,000 دولار تتعادل أمام RTX 4090 مستأجرة بعد نحو 2,400 ساعة على RunPod Secure Cloud (0.89 دولار/ساعة) أو نحو 7,200 ساعة على Community Cloud (0.34 دولار/ساعة)، بأسعار مزودين قُرئت في 22 نوفمبر 2026؛ وتحت ذلك يكون الاستئجار أرخص."
           },
           {
             "type": "plain-terms",
@@ -630,6 +698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "مقابل RunPod Secure Cloud RTX 4090 (0.89 دولار/ساعة): التعادل بعد نحو 2,400 ساعة",
           "مع التشغيل المتواصل يأتي التعادل بعد نحو 101 يوماً (Secure) أو نحو 301 يوماً (Community)",
           "تتفوق السحابة في الأحمال المؤقتة، ومع عتاد لا يستطيع معظم المشترين الحصول عليه (H100 وB200)، وحين لا تريد تجميد رأس المال",
+          "لكل token، يعطي قياس من طرف ثالث (NoctHost) مع Llama 3.1 8B نحو 322,000 token لكل دولار على RTX 4000 Ada (0.73 دولار/ساعة) ونحو 157,000 على L4 (1.16 دولار/ساعة)، قيس في 15 نوفمبر 2026",
           "سعر الشراء والقدرة وسعر الكهرباء مدخلات مثال وليست بيانات سوق: استبدلها بقيمك"
         ]
       },
@@ -639,8 +708,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**تكلفة وحدة GPU المحلية هي كهرباؤها بالساعة مضافاً إليها سعر الشراء موزعاً على ساعات الاستخدام.** الكهرباء بالساعة = القدرة بالكيلوواط × سعر الكيلوواط ساعة.",
           "مدخلات المثال (استبدلها بقيمك): تستهلك RTX 4090 نحو 450 واط (Total Graphics Power من NVIDIA)، وبسعر 0.14 دولار/كيلوواط ساعة يكون الناتج 0.45 × 0.14 = 0.063 دولار/ساعة. أما RTX 4070 فتستهلك 200 واط، أي 0.028 دولار/ساعة. سعر الشراء 2,000 دولار هو الحد الأدنى لقوائم RTX 4090 الجديدة التي يتتبعها [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (من 2,000 إلى 3,000 دولار مقابل MSRP قدره 1,599 دولار؛ المصدر محدّث في 2026-10-15)، أما قوائم البيع المستعملة فكانت 2,575-3,010 دولار. تزداد ساعات التعادل بما يتناسب مع السعر الذي تدفعه فعلاً.",
-          "السحابة: تعرض RunPod بطاقة RTX 4090 (24 GB) بسعر 0.34 دولار/ساعة على Community Cloud و0.89 دولار/ساعة على Secure Cloud، قُرئت في 2 نوفمبر 2026.",
-          "تعرض Lambda بطاقة A6000 (48 GB) بسعر 1.09 دولار/ساعة وبطاقة A100 (40 GB) بسعر 1.99 دولار/ساعة، لكل GPU عند الطلب، قُرئت في 2 نوفمبر 2026.",
+          "السحابة: تعرض RunPod بطاقة RTX 4090 (24 GB) بسعر 0.34 دولار/ساعة على Community Cloud و0.89 دولار/ساعة على Secure Cloud، قُرئت في 22 نوفمبر 2026.",
+          "تعرض Lambda بطاقة A6000 (48 GB) بسعر 1.09 دولار/ساعة وبطاقة A100 (40 GB) بسعر 1.99 دولار/ساعة، لكل GPU عند الطلب، قُرئت في 22 نوفمبر 2026.",
           "تتغير أسعار السحابة دون إشعار، لذا راجع صفحة المزود قبل أن تقرر."
         ]
       },
@@ -659,12 +728,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "providers",
         "title": "كيف يقارن مزودو GPU السحابية؟",
         "content": [
-          "**الأسعار أدناه أسعار قائمة عند الطلب لكل ساعة GPU، دون ضرائب، قُرئت من صفحات المزودين في 2 نوفمبر 2026.**",
-          "RunPod (Community / Secure): RTX 4090 24 GB 0.34 دولار/ساعة / 0.89 دولار/ساعة؛ A100 PCIe 80 GB 1.19 دولار/ساعة / 1.79 دولار/ساعة؛ L40S 48 GB 0.79 دولار/ساعة / 1.09 دولار/ساعة؛ RTX A6000 48 GB 0.33 دولار/ساعة / 0.59 دولار/ساعة.",
-          "Lambda (نُسخ بوحدة GPU واحدة): A6000 48 GB 1.09 دولار/ساعة؛ A100 40 GB 1.99 دولار/ساعة؛ H100 PCIe 80 GB 3.29 دولار/ساعة؛ H100 SXM 80 GB 4.29 دولار/ساعة.",
+          "**الأسعار أدناه أسعار قائمة عند الطلب لكل ساعة GPU، دون ضرائب، قُرئت من صفحات المزودين في 22 نوفمبر 2026.**",
+          "RunPod (Community / Secure): RTX 4090 24 GB 0.34 دولار/ساعة / 0.89 دولار/ساعة؛ A100 PCIe 80 GB 1.19 دولار/ساعة / 2.09 دولار/ساعة؛ L40S 48 GB 0.79 دولار/ساعة / 1.09 دولار/ساعة؛ RTX A6000 48 GB 0.33 دولار/ساعة / 0.69 دولار/ساعة.",
+          "Lambda (نُسخ بوحدة GPU واحدة): A6000 48 GB 1.09 دولار/ساعة؛ A100 40 GB 1.99 دولار/ساعة؛ H100 PCIe 80 GB 3.79 دولار/ساعة؛ H100 SXM 80 GB 4.89 دولار/ساعة.",
           "DigitalOcean GPU Droplets: RTX 6000 Ada 48 GB 1.57 دولار/ساعة؛ L40S 48 GB 1.57 دولار/ساعة؛ H100 80 GB 4.41 دولار/ساعة.",
-          "AWS EC2 g4dn.2xlarge (وحدة NVIDIA T4 واحدة، 16 GiB): 0.752 دولار/ساعة عند الطلب، و0.474 دولار/ساعة بحجز لمدة سنة، و0.311 دولار/ساعة سبوت، وفق الفهرس الخارجي Vantage. بطاقة T4 ذاكرتها أقل وإنتاجيتها أدنى من RTX 4090 (راجع صفحات مواصفات NVIDIA)، فالمقارنة ليست متكافئة.",
-          "لتحويل هذه الأسعار المعلنة إلى اختيار مزوّد، راجع [مقارنة مزوّدي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers) أو اقرأ [مراجعة RunPod](/ar/power-local-llm/runpod-review) و[مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review). وللاطلاع على خيار سوق GPU، راجع [مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review)."
+          "AWS EC2 g4dn.2xlarge (وحدة NVIDIA T4 واحدة، 16 GiB): 0.752 دولار/ساعة عند الطلب، و0.474 دولار/ساعة بحجز لمدة سنة، و0.259 دولار/ساعة سبوت، وفق الفهرس الخارجي Vantage. بطاقة T4 ذاكرتها أقل وإنتاجيتها أدنى من RTX 4090 (راجع صفحات مواصفات NVIDIA)، فالمقارنة ليست متكافئة.",
+          "إذا كنت تفضّل الاستئجار على الشراء، فيمكنك [المقارنة بين مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers) وقراءة [مراجعة RunPod](/ar/power-local-llm/runpod-review) و[مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review) و[مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review)."
+        ]
+      },
+      "tokens": {
+        "id": "tokens",
+        "title": "كم تكلّف وحدة GPU سحابية لكل token؟",
+        "content": [
+          "**عدد الـ token لكل دولار = عدد الـ token في الثانية × 3,600 ÷ السعر في الساعة، ولا يصح ذلك إلا ما دامت وحدة GPU تولّد دون توقف.** السعر بالساعة وحده لا يبيّن كم من المخرجات تحصل عليه مقابله.",
+          "السرعات المقيسة الوحيدة في هذه الصفحة جاءت من طرف ثالث وهي اختبار أداء من مزوّد، وليست قياساً أجرته PromptQuorum: [جدول سرعة GPU مع LLM من NoctHost (طرف ثالث)](https://nocthost.com/gpu-llm-speed). شغّلت NoctHost، وهي مزوّد لخوادم GPU، Ollama مع Llama 3.1 8B (Q4_K_M، نحو 5 GB) على خادم سحابي جديد لكل بطاقة في 15 نوفمبر 2026: تسخين أولاً ثم ثلاث تشغيلات لكل بطاقة عند temperature 0 مع 256 token جديداً، والمعروض هو الوسيط، والسرعة هي eval_count ÷ eval_duration من واجهة Ollama البرمجية.",
+          "RTX 4000 Ada (20 GB، Linode، 0.73 دولار/ساعة): نحو 65 token في الثانية، ونحو 322,000 token لكل دولار.",
+          "L4 (24 GB، OVHcloud، 1.16 دولار/ساعة): نحو 51 token في الثانية، ونحو 157,000 token لكل دولار.",
+          "هذا يعادل نحو 3 دولارات ونحو 6 دولارات لكل مليون token مولَّد (حساب PromptQuorum انطلاقاً من أرقام NoctHost).",
+          "اقرأ هذه الأرقام بحذر: بطاقتان فقط، ونموذج واحد بحجم 8B، وأسعار بالساعة خاصة بـ NoctHost (دون تاريخ قراءة في صفحتها)، وكلتا البطاقتين غير موجودتين في قوائم الأسعار أعلاه، لذا لا تنطبق الأرقام على مثال RTX 4090 ولا على نموذج أكبر. الوقت الخامل يرفع التكلفة الفعلية: البطاقة التي تولّد في 25% من الوقت فقط تكلّف أربعة أضعاف لكل token.",
+          "لوضع بطاقة محلية على المقياس نفسه، طبّق المعادلة بتكلفة الكهرباء في الساعة لديك (نحو 0.063 دولار لـ RTX 4090 في المثال) بدل سعر السحابة، وبعدد الـ token في الثانية الذي قسته أنت بالنموذج نفسه. هذه تكلفة تشغيل فقط، دون سعر الشراء."
         ]
       },
       "one-year": {
@@ -683,7 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "هل يمكنني استخدام GPU سحابية للاستدلال المتواصل على مدار الساعة؟",
-            "a": "نعم، لكنها الحالة التي يكلّف فيها الاستئجار أكثر. تكلّف RTX 4090 مستأجرة لمدة 8,760 ساعة 2,978 دولار سنوياً على RunPod Community Cloud أو 7,796 دولار على Secure Cloud (قُرئت في 2 نوفمبر 2026)؛ وتكلّف بطاقة المثال المحلية بعد الشراء نحو 552 دولار سنوياً كهرباء."
+            "a": "نعم، لكنها الحالة التي يكلّف فيها الاستئجار أكثر. تكلّف RTX 4090 مستأجرة لمدة 8,760 ساعة 2,978 دولار سنوياً على RunPod Community Cloud أو 7,796 دولار على Secure Cloud (قُرئت في 22 نوفمبر 2026)؛ وتكلّف بطاقة المثال المحلية بعد الشراء نحو 552 دولار سنوياً كهرباء."
           },
           {
             "q": "هل GPU السحابية دائماً أرخص للاستخدام المتقطع؟",
@@ -692,6 +774,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "q": "بأي سعر سحابي أقارن وحدة GPU الخاصة بي؟",
             "a": "قارنها بوحدة لها الذاكرة نفسها. بالنسبة إلى RTX 4090 (24 GB) هي RTX 4090 من RunPod بسعر 0.34 دولار/ساعة (Community) أو 0.89 دولار/ساعة (Secure). أما T4 من AWS بسعر 0.752 دولار/ساعة فذاكرتها 16 GiB وإنتاجيتها أدنى (راجع صفحات مواصفات NVIDIA)."
+          },
+          {
+            "q": "كم تكلفة تشغيل LLM في السحابة لكل مليون token؟",
+            "a": "يعتمد ذلك على البطاقة والنموذج ومدى انشغال وحدة GPU. في قياس أجرته NoctHost، وهي طرف ثالث (15 نوفمبر 2026، Ollama، Llama 3.1 8B بصيغة Q4_K_M)، ولّدت RTX 4000 Ada بسعر 0.73 دولار/ساعة نحو 65 token في الثانية، أي نحو 322,000 token لكل دولار أو نحو 3 دولارات لكل مليون token. وولّدت L4 بسعر 1.16 دولار/ساعة نحو 51 token في الثانية، أي نحو 157,000 token لكل دولار أو نحو 6 دولارات لكل مليون. كلا الرقمين يفترض أن وحدة GPU تولّد دون توقف."
           },
           {
             "q": "هل أسعار GPU السحابية ثابتة؟",
@@ -715,32 +801,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "تجاهل الحاسوب المضيف: تحتاج GPU إلى جهاز ومزود طاقة وتبريد غير داخلة في سعر البطاقة.",
           "مقارنة أحجام ذاكرة مختلفة: لا تشغّل T4 بذاكرة 16 GiB وRTX 4090 بذاكرة 24 GB النماذج نفسها.",
           "النظر إلى مستوى واحد فقط: تكلّف RTX 4090 نفسها على RunPod نحو 2.6 ضعف على Secure Cloud مقارنة بـ Community Cloud.",
-          "افتراض أن المحلي أرخص دائماً: تحت نحو 2,400 إلى 7,200 ساعة تكون البطاقة المستأجرة أرخص في هذا المثال."
+          "افتراض أن المحلي أرخص دائماً: تحت نحو 2,400 إلى 7,200 ساعة تكون البطاقة المستأجرة أرخص في هذا المثال.",
+          "مقارنة الأسعار بالساعة دون النظر إلى السرعة: في اختبار NoctHost، وهي طرف ثالث، أعطى النموذج نفسه بحجم 8B نحو 322,000 token لكل دولار على بطاقة ونحو 157,000 على أخرى."
         ]
       },
       "relatedReading": {
         "title": "قراءات ذات صلة",
         "items": [
           "[استئجار GPU سحابي مقابل الشراء المحلي للذكاء الاصطناعي المؤسسي (2026)](/ar/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- نفس سؤال الاستئجار مقابل الشراء على نطاق الشراء المؤسسي، مع نموذج كامل للتكلفة الإجمالية ونقطة التعادل.",
+          "[الذكاء الاصطناعي المحلي مقابل السحابي: حاسبة التكلفة (شراء مقابل استئجار) 2026](/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- أدخل ساعات استخدامك وتعرفة الكهرباء وسعر العتاد.",
           "[مقارنة تأجير GPU السحابية: RunPod مقابل Vast.ai مقابل Lambda Labs](/ar/local-llms/cloud-gpu-rental-comparison-2026)",
           "[هل يستحق شراء GPU مقابل اشتراكات الذكاء الاصطناعي؟](/ar/local-llms/gpu-vs-ai-subscription-roi)",
           "[أفضل بطاقات GPU الاقتصادية لـLLM المحلي](/ar/local-llms/best-budget-gpus-local-llm)",
           "[مقارنة التكلفة: LLM المحلي مقابل ChatGPT Plus](/ar/local-llms/local-llms-vs-chatgpt-plus)",
           "[LLM محلي بعدة GPU: التوسع لما بعد GPU واحدة](/ar/local-llms/multi-gpu-local-llms)",
           "[متى يجب الجمع بين الاستدلال المحلي واستدلال LLM السحابي؟](/ar/prompt-bites/hybrid-local-cloud-llm-strategy) -- سؤال التصميم المعماري، بعد أن تعرف بالفعل أيهما أرخص.",
-          "[مقارنة مزوّدي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers) -- نظرة عامة على المزوّدين، مع [مراجعة RunPod](/ar/power-local-llm/runpod-review) و[مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review).",
-          "[مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review) -- خيار سوق GPU للإيجار بدل الشراء"
+          "الاستئجار بدلاً من الشراء: [المقارنة بين مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers)، [مراجعة RunPod](/ar/power-local-llm/runpod-review)، [مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review)، [مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
         "title": "المصادر",
         "items": [
-          "[أسعار GPU لدى RunPod](https://www.runpod.io/pricing)، قُرئت في 2 نوفمبر 2026",
-          "[أسعار GPU لدى Lambda](https://lambda.ai/pricing)، قُرئت في 2 نوفمبر 2026",
-          "[أسعار GPU Droplets لدى DigitalOcean](https://www.digitalocean.com/pricing/gpu-droplets)، قُرئت في 2 نوفمبر 2026",
-          "[سعر AWS EC2 g4dn.2xlarge (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge)، فهرس خارجي، قُرئ في 2 نوفمبر 2026",
+          "[أسعار GPU لدى RunPod](https://www.runpod.io/pricing)، قُرئت في 22 نوفمبر 2026",
+          "[أسعار GPU لدى Lambda](https://lambda.com/pricing)، قُرئت في 22 نوفمبر 2026",
+          "[أسعار GPU Droplets لدى DigitalOcean](https://www.digitalocean.com/pricing/gpu-droplets)، قُرئت في 22 نوفمبر 2026",
+          "[سعر AWS EC2 g4dn.2xlarge (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge)، فهرس خارجي، قُرئ في 22 نوفمبر 2026",
           "[مواصفات NVIDIA GeForce RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) و[RTX 4070](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/)",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، نطاقات أسعار RTX 4090 الجديدة والمستعملة لسعر الشراء في المثال (محدّث في 2026-10-15)"
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، نطاقات أسعار RTX 4090 الجديدة والمستعملة لسعر الشراء في المثال (محدّث في 2026-10-15)",
+          "[NoctHost: جدول سرعة GPU مع LLM](https://nocthost.com/gpu-llm-speed)، اختبار أداء من مزوّد وهو طرف ثالث، قيس في 15 نوفمبر 2026، قُرئ في 22 نوفمبر 2026"
         ]
       }
     },
@@ -748,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "تكلفة GPU محلية مقابل سحابية لـ LLM: التعادل 2026",
-      "description": "GPU محلية أم سحابية لـ LLM: ساعات التعادل بأسعار RunPod وLambda وAWS المقروءة في 2 نوفمبر 2026، مع المعادلة لإعادة الحساب.",
+      "description": "GPU محلية أم سحابية لـ LLM: ساعات التعادل بأسعار RunPod وLambda وAWS المقروءة في 22 نوفمبر 2026، مع المعادلة لإعادة الحساب.",
       "url": "https://www.promptquorum.com/ar/local-llms/local-llm-vs-cloud-gpu-cost",
       "inLanguage": "ar",
       "datePublished": "2026-04-05",
@@ -782,7 +870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "name": "هل يمكنني استخدام GPU سحابية للاستدلال المتواصل على مدار الساعة؟",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "نعم، لكنها الحالة التي يكلّف فيها الاستئجار أكثر. تكلّف RTX 4090 مستأجرة لمدة 8,760 ساعة 2,978 دولار سنوياً على RunPod Community Cloud أو 7,796 دولار على Secure Cloud (قُرئت في 2 نوفمبر 2026)؛ وتكلّف بطاقة المثال المحلية بعد الشراء نحو 552 دولار سنوياً كهرباء."
+            "text": "نعم، لكنها الحالة التي يكلّف فيها الاستئجار أكثر. تكلّف RTX 4090 مستأجرة لمدة 8,760 ساعة 2,978 دولار سنوياً على RunPod Community Cloud أو 7,796 دولار على Secure Cloud (قُرئت في 22 نوفمبر 2026)؛ وتكلّف بطاقة المثال المحلية بعد الشراء نحو 552 دولار سنوياً كهرباء."
           }
         },
         {
@@ -799,6 +887,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "قارنها بوحدة لها الذاكرة نفسها. بالنسبة إلى RTX 4090 (24 GB) هي RTX 4090 من RunPod بسعر 0.34 دولار/ساعة (Community) أو 0.89 دولار/ساعة (Secure). أما T4 من AWS بسعر 0.752 دولار/ساعة فذاكرتها 16 GiB وإنتاجيتها أدنى (راجع صفحات مواصفات NVIDIA)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كم تكلفة تشغيل LLM في السحابة لكل مليون token؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "يعتمد ذلك على البطاقة والنموذج ومدى انشغال وحدة GPU. في قياس أجرته NoctHost، وهي طرف ثالث (15 نوفمبر 2026، Ollama، Llama 3.1 8B بصيغة Q4_K_M)، ولّدت RTX 4000 Ada بسعر 0.73 دولار/ساعة نحو 65 token في الثانية، أي نحو 322,000 token لكل دولار أو نحو 3 دولارات لكل مليون token. وولّدت L4 بسعر 1.16 دولار/ساعة نحو 51 token في الثانية، أي نحو 157,000 token لكل دولار أو نحو 6 دولارات لكل مليون. كلا الرقمين يفترض أن وحدة GPU تولّد دون توقف."
           }
         },
         {
@@ -840,12 +936,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           "@type": "Thing",
           "name": "RunPod RTX 4090",
-          "description": "0.34 دولار/ساعة على Community Cloud و0.89 دولار/ساعة على Secure Cloud (قُرئت في 2 نوفمبر 2026)."
+          "description": "0.34 دولار/ساعة على Community Cloud و0.89 دولار/ساعة على Secure Cloud (قُرئت في 22 نوفمبر 2026)."
         },
         {
           "@type": "Thing",
           "name": "Lambda A100 40 GB",
-          "description": "1.99 دولار/ساعة عند الطلب (قُرئت في 2 نوفمبر 2026)؛ مناسبة لمهام الضبط الدقيق لمرة واحدة."
+          "description": "1.99 دولار/ساعة عند الطلب (قُرئت في 22 نوفمبر 2026)؛ مناسبة لمهام الضبط الدقيق لمرة واحدة."
         }
       ]
     }
@@ -858,11 +954,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "title": "LLM local vs GPU na nuvem: o que sai mais barato?",
     "heroImage": "/images/local-llm-vs-cloud-gpu-cost-overview-hero-pt.webp",
     "seoTitle": "GPU local vs na nuvem para LLM: ponto de equilíbrio 2026",
-    "intro": "**Comprar uma GPU só compensa com uso constante. Uma RTX 4090 de US$ 2.000 (exemplo) se paga após cerca de 2.400 horas frente à RunPod Secure Cloud a US$ 0,89/hora e após cerca de 7.200 horas frente à Community Cloud a US$ 0,34/hora (preços dos provedores lidos em 2 de novembro de 2026). Abaixo disso, alugar sai mais barato neste modelo, que não considera o valor de revenda nem o PC hospedeiro.**",
-    "metaDescription": "GPU local ou na nuvem para LLM: horas de equilíbrio com preços da RunPod, Lambda e AWS lidos em 2 de novembro de 2026, e a fórmula para refazer a conta.",
+    "intro": "**Comprar uma GPU só compensa com uso constante. Uma RTX 4090 (exemplo: US$ 2.000) se paga em ~2.400 h vs. RunPod Secure Cloud (US$ 0,89/hora) ou ~7.200 h vs. Community Cloud (US$ 0,34/hora); preços de 22 de novembro de 2026. Abaixo disso, alugar sai mais barato neste modelo.**",
+    "metaDescription": "GPU local ou na nuvem para LLM: horas de equilíbrio com preços da RunPod, Lambda e AWS lidos em 22 de novembro de 2026, e a fórmula para refazer a conta.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
-    "leadAnswerBlock": "**Comprar uma GPU só compensa com uso constante. Uma RTX 4090 de US$ 2.000 (exemplo) se paga após cerca de 2.400 horas frente à RunPod Secure Cloud a US$ 0,89/hora e após cerca de 7.200 horas frente à Community Cloud a US$ 0,34/hora (preços dos provedores lidos em 2 de novembro de 2026). Abaixo disso, alugar sai mais barato neste modelo, que não considera o valor de revenda nem o PC hospedeiro.**",
+    "leadAnswerBlock": "**Comprar uma GPU só compensa com uso constante. Uma RTX 4090 (exemplo: US$ 2.000) se paga em ~2.400 h vs. RunPod Secure Cloud (US$ 0,89/hora) ou ~7.200 h vs. Community Cloud (US$ 0,34/hora); preços de 22 de novembro de 2026. Abaixo disso, alugar sai mais barato neste modelo.**",
     "audience": "Desenvolvedores que usam Ollama ou LM Studio e decidem entre comprar uma GPU ou alugar uma",
     "readTime": "7 min de leitura",
     "educationalLevel": "Intermediate",
@@ -881,6 +977,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "anchor": "#providers"
       },
       {
+        "label": "Custo por token",
+        "anchor": "#tokens"
+      },
+      {
         "label": "Custo em 1 ano e em 24/7",
         "anchor": "#one-year"
       },
@@ -896,7 +996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "snippetBlocks": [
           {
             "type": "one-sentence",
-            "text": "Uma RTX 4090 local comprada por US$ 2.000 (exemplo) se paga frente a uma RTX 4090 alugada após cerca de 2.400 horas na RunPod Secure Cloud (US$ 0,89/hora) ou cerca de 7.200 horas na Community Cloud (US$ 0,34/hora), com preços dos provedores lidos em 2 de novembro de 2026; abaixo disso, alugar sai mais barato."
+            "text": "Uma RTX 4090 local comprada por US$ 2.000 (exemplo) se paga frente a uma RTX 4090 alugada após cerca de 2.400 horas na RunPod Secure Cloud (US$ 0,89/hora) ou cerca de 7.200 horas na Community Cloud (US$ 0,34/hora), com preços dos provedores lidos em 22 de novembro de 2026; abaixo disso, alugar sai mais barato."
           },
           {
             "type": "plain-terms",
@@ -910,6 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Frente à RunPod Secure Cloud RTX 4090 (US$ 0,89/hora): equilíbrio após cerca de 2.400 horas",
           "Em carga 24/7, o equilíbrio chega após cerca de 101 dias (Secure) ou cerca de 301 dias (Community)",
           "A nuvem vence em picos de uso, com hardware que a maioria dos compradores não consegue obter (H100, B200) e quando não quer imobilizar capital",
+          "Por token, uma medição de terceiros (NoctHost) com o Llama 3.1 8B dá cerca de 322.000 tokens por dólar em uma RTX 4000 Ada (US$ 0,73/hora) e cerca de 157.000 em uma L4 (US$ 1,16/hora), medida em 15 de novembro de 2026",
           "Preço de compra, potência e tarifa de energia são valores de exemplo, não dados de mercado: substitua pelos seus"
         ]
       },
@@ -919,8 +1020,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**Uma GPU local custa a eletricidade por hora mais o preço de compra dividido pelas horas de uso.** Eletricidade por hora = consumo em kW × seu preço por kWh.",
           "Valores de exemplo (troque pelos seus): uma RTX 4090 consome 450 W (potência gráfica total segundo a NVIDIA); a US$ 0,14/kWh são 0,45 × 0,14 = US$ 0,063/hora. Uma RTX 4070 consome 200 W, ou seja US$ 0,028/hora. O preço de compra de US$ 2.000 é o extremo inferior das listagens novas da RTX 4090 acompanhadas pela [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (US$ 2.000-3.000 contra um MSRP de US$ 1.599; fonte atualizada em 2026-10-15); as listagens vendidas de usadas ficaram em US$ 2.575-3.010. As horas de equilíbrio crescem na proporção do preço que você realmente paga.",
-          "Nuvem: a RunPod lista a RTX 4090 (24 GB) a US$ 0,34/hora na Community Cloud e US$ 0,89/hora na Secure Cloud, lido em 2 de novembro de 2026.",
-          "A Lambda lista uma A6000 (48 GB) a US$ 1,09/hora e uma A100 (40 GB) a US$ 1,99/hora, por GPU sob demanda, lido em 2 de novembro de 2026.",
+          "Nuvem: a RunPod lista a RTX 4090 (24 GB) a US$ 0,34/hora na Community Cloud e US$ 0,89/hora na Secure Cloud, lido em 22 de novembro de 2026.",
+          "A Lambda lista uma A6000 (48 GB) a US$ 1,09/hora e uma A100 (40 GB) a US$ 1,99/hora, por GPU sob demanda, lido em 22 de novembro de 2026.",
           "Os preços da nuvem mudam sem aviso, então confira a página do provedor antes de decidir."
         ]
       },
@@ -939,12 +1040,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "providers",
         "title": "Como os provedores de GPU na nuvem se comparam?",
         "content": [
-          "**Os preços abaixo são preços de tabela sob demanda por hora de GPU, sem impostos, lidos nas páginas dos provedores em 2 de novembro de 2026.**",
-          "RunPod (Community / Secure): RTX 4090 24 GB US$ 0,34/hora / US$ 0,89/hora; A100 PCIe 80 GB US$ 1,19/hora / US$ 1,79/hora; L40S 48 GB US$ 0,79/hora / US$ 1,09/hora; RTX A6000 48 GB US$ 0,33/hora / US$ 0,59/hora.",
-          "Lambda (instâncias de uma GPU): A6000 48 GB US$ 1,09/hora; A100 40 GB US$ 1,99/hora; H100 PCIe 80 GB US$ 3,29/hora; H100 SXM 80 GB US$ 4,29/hora.",
+          "**Os preços abaixo são preços de tabela sob demanda por hora de GPU, sem impostos, lidos nas páginas dos provedores em 22 de novembro de 2026.**",
+          "RunPod (Community / Secure): RTX 4090 24 GB US$ 0,34/hora / US$ 0,89/hora; A100 PCIe 80 GB US$ 1,19/hora / US$ 2,09/hora; L40S 48 GB US$ 0,79/hora / US$ 1,09/hora; RTX A6000 48 GB US$ 0,33/hora / US$ 0,69/hora.",
+          "Lambda (instâncias de uma GPU): A6000 48 GB US$ 1,09/hora; A100 40 GB US$ 1,99/hora; H100 PCIe 80 GB US$ 3,79/hora; H100 SXM 80 GB US$ 4,89/hora.",
           "DigitalOcean GPU Droplets: RTX 6000 Ada 48 GB US$ 1,57/hora; L40S 48 GB US$ 1,57/hora; H100 80 GB US$ 4,41/hora.",
-          "AWS EC2 g4dn.2xlarge (uma NVIDIA T4, 16 GiB): US$ 0,752/hora sob demanda, US$ 0,474/hora com reserva de 1 ano e US$ 0,311/hora spot, segundo o índice de terceiros Vantage. Uma T4 tem menos memória e menor desempenho que uma RTX 4090 (veja as páginas de especificações da NVIDIA), então não é uma comparação equivalente.",
-          "Para transformar esses preços de tabela em uma escolha de provedor, você pode [comparar provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers) ou ler a [análise do RunPod](/pt/power-local-llm/runpod-review) e a [análise do Vast.ai](/pt/power-local-llm/vast-ai-review). Para uma opção de marketplace de GPU, veja a [análise de Clore.ai](/pt/power-local-llm/clore-ai-review)."
+          "AWS EC2 g4dn.2xlarge (uma NVIDIA T4, 16 GiB): US$ 0,752/hora sob demanda, US$ 0,474/hora com reserva de 1 ano e US$ 0,259/hora spot, segundo o índice de terceiros Vantage. Uma T4 tem menos memória e menor desempenho que uma RTX 4090 (veja as páginas de especificações da NVIDIA), então não é uma comparação equivalente.",
+          "Se você prefere alugar em vez de comprar, pode [comparar provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers) e ler a [análise do RunPod](/pt/power-local-llm/runpod-review), a [análise do Vast.ai](/pt/power-local-llm/vast-ai-review) e a [análise do Clore.ai](/pt/power-local-llm/clore-ai-review)."
+        ]
+      },
+      "tokens": {
+        "id": "tokens",
+        "title": "Quanto custa por token uma GPU na nuvem?",
+        "content": [
+          "**Tokens por dólar = tokens por segundo × 3.600 ÷ preço por hora, e isso só vale enquanto a GPU gera sem pausas.** Um preço por hora sozinho não diz quanta saída você recebe por ele.",
+          "As únicas velocidades medidas nesta página vêm de terceiros e são um benchmark de fornecedor, não uma medição da PromptQuorum: [tabela de velocidade de GPU com LLM da NoctHost (terceiros)](https://nocthost.com/gpu-llm-speed). A NoctHost, fornecedora de servidores com GPU, executou o Ollama com o Llama 3.1 8B (Q4_K_M, cerca de 5 GB) em um servidor de nuvem novo por placa em 15 de novembro de 2026: um aquecimento e depois três execuções por placa com temperatura 0 e 256 tokens novos; a mediana é a informada, e a velocidade é eval_count ÷ eval_duration da API do Ollama.",
+          "RTX 4000 Ada (20 GB, Linode, US$ 0,73/hora): cerca de 65 tokens por segundo, cerca de 322.000 tokens por dólar.",
+          "L4 (24 GB, OVHcloud, US$ 1,16/hora): cerca de 51 tokens por segundo, cerca de 157.000 tokens por dólar.",
+          "Isso dá cerca de US$ 3 e US$ 6 por milhão de tokens gerados (cálculo da PromptQuorum a partir dos números da NoctHost).",
+          "Leia com cuidado: duas placas, um modelo de 8B, preços por hora próprios da NoctHost (sem data de leitura na página dela), e nenhuma das placas está nas listas de preços acima, então os números não se aplicam ao exemplo da RTX 4090 nem a um modelo maior. Tempo ocioso eleva o custo real: uma placa que gera em 25% do tempo custa quatro vezes mais por token.",
+          "Para colocar uma placa local na mesma escala, aplique a fórmula com o seu próprio custo de energia por hora (cerca de US$ 0,063 para a RTX 4090 do exemplo) no lugar do preço da nuvem, usando os tokens por segundo que você mediu com o mesmo modelo. Isso é só custo de operação, sem o preço de compra."
         ]
       },
       "one-year": {
@@ -963,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "Posso usar GPUs na nuvem para inferência contínua 24/7?",
-            "a": "Pode, mas é onde alugar custa mais. Uma RTX 4090 alugada por 8.760 horas custa US$ 2.978 por ano na RunPod Community Cloud ou US$ 7.796 na Secure Cloud (lido em 2 de novembro de 2026); a placa local de exemplo custa cerca de US$ 552 por ano de eletricidade depois da compra."
+            "a": "Pode, mas é onde alugar custa mais. Uma RTX 4090 alugada por 8.760 horas custa US$ 2.978 por ano na RunPod Community Cloud ou US$ 7.796 na Secure Cloud (lido em 22 de novembro de 2026); a placa local de exemplo custa cerca de US$ 552 por ano de eletricidade depois da compra."
           },
           {
             "q": "Uma GPU na nuvem é sempre mais barata para uso ocasional?",
@@ -972,6 +1086,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "q": "Com qual preço de nuvem devo comparar minha GPU?",
             "a": "Compare com uma GPU de mesma memória. Para uma RTX 4090 (24 GB), é a RTX 4090 da RunPod a US$ 0,34/hora (Community) ou US$ 0,89/hora (Secure). Uma T4 da AWS a US$ 0,752/hora tem 16 GiB e menor desempenho (veja as páginas de especificações da NVIDIA)."
+          },
+          {
+            "q": "Quanto custa executar um LLM na nuvem por milhão de tokens?",
+            "a": "Depende da placa, do modelo e de quão ocupada a GPU fica. Em uma medição da NoctHost, de terceiros (15 de novembro de 2026, Ollama, Llama 3.1 8B em Q4_K_M), uma RTX 4000 Ada a US$ 0,73/hora gerou cerca de 65 tokens por segundo, ou seja, cerca de 322.000 tokens por dólar, ou cerca de US$ 3 por milhão de tokens. Uma L4 a US$ 1,16/hora gerou cerca de 51 tokens por segundo, ou seja, cerca de 157.000 tokens por dólar, ou cerca de US$ 6 por milhão. Os dois valores supõem que a GPU gere sem pausas."
           },
           {
             "q": "Os preços de GPU na nuvem são fixos?",
@@ -995,32 +1113,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Ignorar o PC hospedeiro: uma GPU precisa de máquina, fonte e refrigeração que não estão no preço da placa.",
           "Comparar memórias diferentes: uma T4 de 16 GiB e uma RTX 4090 de 24 GB não executam os mesmos modelos.",
           "Olhar só um nível: a mesma RTX 4090 da RunPod custa cerca de 2,6 vezes mais na Secure Cloud do que na Community Cloud.",
-          "Supor que o local é sempre mais barato: abaixo de cerca de 2.400 a 7.200 horas, a placa alugada custa menos neste exemplo."
+          "Supor que o local é sempre mais barato: abaixo de cerca de 2.400 a 7.200 horas, a placa alugada custa menos neste exemplo.",
+          "Comparar preços por hora sem olhar a velocidade: no teste da NoctHost, de terceiros, o mesmo modelo de 8B rendeu cerca de 322.000 tokens por dólar em uma placa e cerca de 157.000 em outra."
         ]
       },
       "relatedReading": {
         "title": "Leituras relacionadas",
         "items": [
           "[Alugar GPU na nuvem vs comprar on-prem para IA empresarial (2026)](/pt/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- a mesma pergunta de alugar vs comprar em escala de compra empresarial, com um modelo completo de TCO e ponto de equilíbrio.",
+          "[IA Local vs IA na Nuvem: Calculadora de Custo (Montar vs Alugar) 2026](/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- informe suas próprias horas, tarifa de energia e preço do hardware.",
           "[Comparativo de aluguel de GPU em nuvem: RunPod vs Vast.ai vs Lambda Labs](/pt/local-llms/cloud-gpu-rental-comparison-2026)",
           "[Vale a pena comprar uma GPU vs assinaturas de IA?](/pt/local-llms/gpu-vs-ai-subscription-roi)",
           "[Melhores GPUs econômicas para LLM local](/pt/local-llms/best-budget-gpus-local-llm)",
           "[Comparativo de custo: LLM local vs ChatGPT Plus](/pt/local-llms/local-llms-vs-chatgpt-plus)",
           "[LLM local com múltiplas GPUs: escalando além de uma única GPU](/pt/local-llms/multi-gpu-local-llms)",
           "[Quando você deve combinar inferência de LLM local e na nuvem?](/pt/prompt-bites/hybrid-local-cloud-llm-strategy) -- a questão de arquitetura, depois que você já sabe qual é mais barato.",
-          "[Comparar provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers) -- Visão geral dos provedores, com a [análise do RunPod](/pt/power-local-llm/runpod-review) e a [análise do Vast.ai](/pt/power-local-llm/vast-ai-review).",
-          "[análise de Clore.ai](/pt/power-local-llm/clore-ai-review) -- uma opção de marketplace de GPU para alugar em vez de comprar"
+          "Alugar em vez de comprar: [comparar provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers), [análise do RunPod](/pt/power-local-llm/runpod-review), [análise do Vast.ai](/pt/power-local-llm/vast-ai-review) e [análise do Clore.ai](/pt/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
         "title": "Fontes",
         "items": [
-          "[Preços de GPU da RunPod](https://www.runpod.io/pricing), lido em 2 de novembro de 2026",
-          "[Preços de GPU da Lambda](https://lambda.ai/pricing), lido em 2 de novembro de 2026",
-          "[Preços de GPU Droplets da DigitalOcean](https://www.digitalocean.com/pricing/gpu-droplets), lido em 2 de novembro de 2026",
-          "[Preço da AWS EC2 g4dn.2xlarge (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), índice de terceiros, lido em 2 de novembro de 2026",
+          "[Preços de GPU da RunPod](https://www.runpod.io/pricing), lido em 22 de novembro de 2026",
+          "[Preços de GPU da Lambda](https://lambda.com/pricing), lido em 22 de novembro de 2026",
+          "[Preços de GPU Droplets da DigitalOcean](https://www.digitalocean.com/pricing/gpu-droplets), lido em 22 de novembro de 2026",
+          "[Preço da AWS EC2 g4dn.2xlarge (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), índice de terceiros, lido em 22 de novembro de 2026",
           "[Especificações da NVIDIA GeForce RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) e [RTX 4070](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/)",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), faixas de preço da RTX 4090 nova e usada para o preço de compra do exemplo (atualizado em 2026-10-15)"
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), faixas de preço da RTX 4090 nova e usada para o preço de compra do exemplo (atualizado em 2026-10-15)",
+          "[NoctHost: tabela de velocidade de GPU com LLM](https://nocthost.com/gpu-llm-speed), benchmark de fornecedor de terceiros, medido em 15 de novembro de 2026, lido em 22 de novembro de 2026"
         ]
       }
     },
@@ -1028,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "GPU local vs na nuvem para LLM: ponto de equilíbrio 2026",
-      "description": "GPU local ou na nuvem para LLM: horas de equilíbrio com preços da RunPod, Lambda e AWS lidos em 2 de novembro de 2026, e a fórmula para refazer a conta.",
+      "description": "GPU local ou na nuvem para LLM: horas de equilíbrio com preços da RunPod, Lambda e AWS lidos em 22 de novembro de 2026, e a fórmula para refazer a conta.",
       "url": "https://www.promptquorum.com/pt/local-llms/local-llm-vs-cloud-gpu-cost",
       "inLanguage": "pt-BR",
       "datePublished": "2026-04-05",
@@ -1062,7 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "name": "Posso usar GPUs na nuvem para inferência contínua 24/7?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pode, mas é onde alugar custa mais. Uma RTX 4090 alugada por 8.760 horas custa US$ 2.978 por ano na RunPod Community Cloud ou US$ 7.796 na Secure Cloud (lido em 2 de novembro de 2026); a placa local de exemplo custa cerca de US$ 552 por ano de eletricidade depois da compra."
+            "text": "Pode, mas é onde alugar custa mais. Uma RTX 4090 alugada por 8.760 horas custa US$ 2.978 por ano na RunPod Community Cloud ou US$ 7.796 na Secure Cloud (lido em 22 de novembro de 2026); a placa local de exemplo custa cerca de US$ 552 por ano de eletricidade depois da compra."
           }
         },
         {
@@ -1079,6 +1199,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Compare com uma GPU de mesma memória. Para uma RTX 4090 (24 GB), é a RTX 4090 da RunPod a US$ 0,34/hora (Community) ou US$ 0,89/hora (Secure). Uma T4 da AWS a US$ 0,752/hora tem 16 GiB e menor desempenho (veja as páginas de especificações da NVIDIA)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto custa executar um LLM na nuvem por milhão de tokens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende da placa, do modelo e de quão ocupada a GPU fica. Em uma medição da NoctHost, de terceiros (15 de novembro de 2026, Ollama, Llama 3.1 8B em Q4_K_M), uma RTX 4000 Ada a US$ 0,73/hora gerou cerca de 65 tokens por segundo, ou seja, cerca de 322.000 tokens por dólar, ou cerca de US$ 3 por milhão de tokens. Uma L4 a US$ 1,16/hora gerou cerca de 51 tokens por segundo, ou seja, cerca de 157.000 tokens por dólar, ou cerca de US$ 6 por milhão. Os dois valores supõem que a GPU gere sem pausas."
           }
         },
         {
@@ -1120,12 +1248,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           "@type": "Thing",
           "name": "RunPod RTX 4090",
-          "description": "US$ 0,34/hora na Community Cloud e US$ 0,89/hora na Secure Cloud (lido em 2 de novembro de 2026)."
+          "description": "US$ 0,34/hora na Community Cloud e US$ 0,89/hora na Secure Cloud (lido em 22 de novembro de 2026)."
         },
         {
           "@type": "Thing",
           "name": "Lambda A100 40 GB",
-          "description": "US$ 1,99/hora sob demanda (lido em 2 de novembro de 2026); indicada para ajustes finos pontuais."
+          "description": "US$ 1,99/hora sob demanda (lido em 22 de novembro de 2026); indicada para ajustes finos pontuais."
         }
       ]
     }
@@ -1138,11 +1266,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "title": "Lokale LLMs vs. Cloud-GPU: Was ist günstiger?",
     "heroImage": "/images/local-llm-vs-cloud-gpu-cost-overview-hero-de.webp",
     "seoTitle": "Lokale GPU vs. Cloud-GPU für LLMs: Kosten-Break-even 2026",
-    "intro": "**Eine GPU zu kaufen lohnt sich nur bei dauerhafter Nutzung. Eine RTX 4090 für 2.000 $ (Beispielpreis) rechnet sich nach rund 2.400 Stunden gegenüber RunPod Secure Cloud zu 0,89 $/Stunde und nach rund 7.200 Stunden gegenüber Community Cloud zu 0,34 $/Stunde (Anbieterpreise abgerufen am 2. November 2026). Darunter ist Mieten in diesem Modell günstiger, das Wiederverkaufswert und Host-PC nicht berücksichtigt.**",
-    "metaDescription": "Lokale GPU oder Cloud-GPU für LLMs: Break-even-Stunden mit RunPod-, Lambda- und AWS-Preisen vom 2. November 2026 und die Formel zum Nachrechnen.",
+    "intro": "**GPU-Kauf lohnt sich nur bei dauerhafter Nutzung. Eine RTX 4090 (Beispiel: 2.000 $) rechnet sich nach rund 2.400 Stunden gegenüber RunPod Secure Cloud (0,89 $/Stunde) oder rund 7.200 Stunden gegenüber Community Cloud (0,34 $/Stunde; Preise abgerufen am 22. November 2026). Darunter ist Mieten in diesem Modell günstiger.**",
+    "metaDescription": "Lokale GPU oder Cloud-GPU für LLMs: Break-even-Stunden mit RunPod-, Lambda- und AWS-Preisen vom 22. November 2026 und die Formel zum Nachrechnen.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
-    "leadAnswerBlock": "**Eine GPU zu kaufen lohnt sich nur bei dauerhafter Nutzung. Eine RTX 4090 für 2.000 $ (Beispielpreis) rechnet sich nach rund 2.400 Stunden gegenüber RunPod Secure Cloud zu 0,89 $/Stunde und nach rund 7.200 Stunden gegenüber Community Cloud zu 0,34 $/Stunde (Anbieterpreise abgerufen am 2. November 2026). Darunter ist Mieten in diesem Modell günstiger, das Wiederverkaufswert und Host-PC nicht berücksichtigt.**",
+    "leadAnswerBlock": "**GPU-Kauf lohnt sich nur bei dauerhafter Nutzung. Eine RTX 4090 (Beispiel: 2.000 $) rechnet sich nach rund 2.400 Stunden gegenüber RunPod Secure Cloud (0,89 $/Stunde) oder rund 7.200 Stunden gegenüber Community Cloud (0,34 $/Stunde; Preise abgerufen am 22. November 2026). Darunter ist Mieten in diesem Modell günstiger.**",
     "audience": "Entwickler, die Ollama oder LM Studio nutzen und entscheiden, ob sie eine GPU kaufen oder mieten",
     "readTime": "7 Min. Lesezeit",
     "educationalLevel": "Intermediate",
@@ -1161,6 +1289,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "anchor": "#providers"
       },
       {
+        "label": "Kosten pro Token",
+        "anchor": "#tokens"
+      },
+      {
         "label": "Kosten für 1 Jahr und 24/7",
         "anchor": "#one-year"
       },
@@ -1176,7 +1308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "snippetBlocks": [
           {
             "type": "one-sentence",
-            "text": "Eine lokale RTX 4090, gekauft für beispielhafte 2.000 $, rechnet sich gegenüber einer gemieteten RTX 4090 nach rund 2.400 Stunden bei RunPod Secure Cloud (0,89 $/Stunde) bzw. nach rund 7.200 Stunden bei Community Cloud (0,34 $/Stunde), mit Anbieterpreisen vom 2. November 2026; darunter ist Mieten günstiger."
+            "text": "Eine lokale RTX 4090, gekauft für beispielhafte 2.000 $, rechnet sich gegenüber einer gemieteten RTX 4090 nach rund 2.400 Stunden bei RunPod Secure Cloud (0,89 $/Stunde) bzw. nach rund 7.200 Stunden bei Community Cloud (0,34 $/Stunde), mit Anbieterpreisen vom 22. November 2026; darunter ist Mieten günstiger."
           },
           {
             "type": "plain-terms",
@@ -1190,6 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Gegenüber RunPod Secure Cloud RTX 4090 (0,89 $/Stunde): Break-even nach rund 2.400 Stunden",
           "Im Dauerbetrieb (24/7) liegt der Break-even bei rund 101 Tagen (Secure) bzw. rund 301 Tagen (Community)",
           "Die Cloud gewinnt bei Lastspitzen, bei Hardware, die die meisten Käufer nicht bekommen (H100, B200), und wenn Sie kein Kapital binden wollen",
+          "Pro Token: Eine Messung des Drittanbieters NoctHost mit Llama 3.1 8B ergab rund 322.000 Token pro Dollar auf einer RTX 4000 Ada (0,73 $/Stunde) und rund 157.000 auf einer L4 (1,16 $/Stunde), gemessen am 15. November 2026",
           "Kaufpreis, Leistungsaufnahme und Strompreis sind Beispielwerte, keine Marktdaten: Ersetzen Sie sie durch Ihre eigenen"
         ]
       },
@@ -1199,8 +1332,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**Eine lokale GPU kostet pro Stunde Strom plus ihren Kaufpreis, verteilt auf die Stunden, die Sie sie nutzen.** Stromkosten pro Stunde = Leistungsaufnahme in kW × Ihr Preis pro kWh.",
           "Beispielwerte (durch eigene ersetzen): Eine RTX 4090 nimmt 450 W auf (NVIDIA Total Graphics Power); bei 0,14 $/kWh sind das 0,45 × 0,14 = 0,063 $/Stunde. Eine RTX 4070 nimmt 200 W auf, das sind 0,028 $/Stunde. Der Kaufpreis von 2.000 $ ist das untere Ende der neuen RTX-4090-Angebote, die [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) verfolgt (2.000-3.000 $ bei einer UVP von 1.599 $; Quelle aktualisiert am 2026-10-15); gebrauchte Verkaufsangebote lagen bei 2.575-3.010 $. Der Break-even in Stunden wächst im Verhältnis zum tatsächlich gezahlten Preis.",
-          "Cloud: RunPod listet die RTX 4090 (24 GB) mit 0,34 $/Stunde in der Community Cloud und 0,89 $/Stunde in der Secure Cloud, abgerufen am 2. November 2026.",
-          "Lambda listet eine A6000 (48 GB) mit 1,09 $/Stunde und eine A100 (40 GB) mit 1,99 $/Stunde, jeweils pro GPU on demand, abgerufen am 2. November 2026.",
+          "Cloud: RunPod listet die RTX 4090 (24 GB) mit 0,34 $/Stunde in der Community Cloud und 0,89 $/Stunde in der Secure Cloud, abgerufen am 22. November 2026.",
+          "Lambda listet eine A6000 (48 GB) mit 1,09 $/Stunde und eine A100 (40 GB) mit 1,99 $/Stunde, jeweils pro GPU on demand, abgerufen am 22. November 2026.",
           "Cloud-Preise ändern sich ohne Ankündigung; prüfen Sie die Seite des Anbieters, bevor Sie entscheiden."
         ]
       },
@@ -1219,12 +1352,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "providers",
         "title": "Wie schneiden die Cloud-GPU-Anbieter im Vergleich ab?",
         "content": [
-          "**Die Preise unten sind On-Demand-Listenpreise pro GPU-Stunde ohne Steuern, abgerufen auf den Anbieterseiten am 2. November 2026.**",
-          "RunPod (Community / Secure): RTX 4090 24 GB 0,34 $/Stunde / 0,89 $/Stunde; A100 PCIe 80 GB 1,19 $/Stunde / 1,79 $/Stunde; L40S 48 GB 0,79 $/Stunde / 1,09 $/Stunde; RTX A6000 48 GB 0,33 $/Stunde / 0,59 $/Stunde.",
-          "Lambda (Single-GPU-Instanzen): A6000 48 GB 1,09 $/Stunde; A100 40 GB 1,99 $/Stunde; H100 PCIe 80 GB 3,29 $/Stunde; H100 SXM 80 GB 4,29 $/Stunde.",
+          "**Die Preise unten sind On-Demand-Listenpreise pro GPU-Stunde ohne Steuern, abgerufen auf den Anbieterseiten am 22. November 2026.**",
+          "RunPod (Community / Secure): RTX 4090 24 GB 0,34 $/Stunde / 0,89 $/Stunde; A100 PCIe 80 GB 1,19 $/Stunde / 2,09 $/Stunde; L40S 48 GB 0,79 $/Stunde / 1,09 $/Stunde; RTX A6000 48 GB 0,33 $/Stunde / 0,69 $/Stunde.",
+          "Lambda (Single-GPU-Instanzen): A6000 48 GB 1,09 $/Stunde; A100 40 GB 1,99 $/Stunde; H100 PCIe 80 GB 3,79 $/Stunde; H100 SXM 80 GB 4,89 $/Stunde.",
           "DigitalOcean GPU Droplets: RTX 6000 Ada 48 GB 1,57 $/Stunde; L40S 48 GB 1,57 $/Stunde; H100 80 GB 4,41 $/Stunde.",
-          "AWS EC2 g4dn.2xlarge (eine NVIDIA T4, 16 GiB): 0,752 $/Stunde On-Demand, 0,474 $/Stunde mit 1-Jahres-Reservierung und 0,311 $/Stunde Spot, laut dem Drittanbieter-Index Vantage. Eine T4 hat weniger Speicher und geringeren Durchsatz als eine RTX 4090 (siehe NVIDIA-Spezifikationsseiten), der Vergleich hinkt also.",
-          "Um aus diesen Listenpreisen eine Anbieterwahl zu machen, können Sie [Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers) oder den [RunPod-Testbericht](/de/power-local-llm/runpod-review) und den [Vast.ai-Testbericht](/de/power-local-llm/vast-ai-review) lesen. Für eine GPU-Marktplatz-Option lesen Sie das [Clore.ai-Review](/de/power-local-llm/clore-ai-review)."
+          "AWS EC2 g4dn.2xlarge (eine NVIDIA T4, 16 GiB): 0,752 $/Stunde On-Demand, 0,474 $/Stunde mit 1-Jahres-Reservierung und 0,259 $/Stunde Spot, laut dem Drittanbieter-Index Vantage. Eine T4 hat weniger Speicher und geringeren Durchsatz als eine RTX 4090 (siehe NVIDIA-Spezifikationsseiten), der Vergleich hinkt also.",
+          "Wer lieber mietet als kauft, kann [Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers) und den [RunPod-Test](/de/power-local-llm/runpod-review), den [Vast.ai-Test](/de/power-local-llm/vast-ai-review) sowie den [Clore.ai-Test](/de/power-local-llm/clore-ai-review) lesen."
+        ]
+      },
+      "tokens": {
+        "id": "tokens",
+        "title": "Was kostet eine Cloud-GPU pro Token?",
+        "content": [
+          "**Token pro Dollar = Token pro Sekunde × 3.600 ÷ Preis pro Stunde, und das gilt nur, solange die GPU ohne Pausen generiert.** Ein Stundenpreis allein sagt nicht, wie viel Ausgabe Sie dafür bekommen.",
+          "Die einzigen gemessenen Geschwindigkeiten auf dieser Seite stammen von einem Drittanbieter und sind ein Anbieter-Benchmark, keine Messung von PromptQuorum: [NoctHost-Tabelle zur GPU-LLM-Geschwindigkeit (Drittanbieter)](https://nocthost.com/gpu-llm-speed). NoctHost, ein Anbieter von GPU-Servern, hat am 15. November 2026 Ollama mit Llama 3.1 8B (Q4_K_M, rund 5 GB) auf je einem frischen Cloud-Server pro Karte ausgeführt: ein Warm-up, dann drei Läufe pro Karte bei Temperatur 0 mit 256 neuen Token; angegeben ist der Median, die Geschwindigkeit ist eval_count ÷ eval_duration aus der Ollama-API.",
+          "RTX 4000 Ada (20 GB, Linode, 0,73 $/Stunde): rund 65 Token pro Sekunde, rund 322.000 Token pro Dollar.",
+          "L4 (24 GB, OVHcloud, 1,16 $/Stunde): rund 51 Token pro Sekunde, rund 157.000 Token pro Dollar.",
+          "Das entspricht etwa 3 $ und 6 $ pro Million erzeugter Token (Rechnung von PromptQuorum auf Basis der NoctHost-Werte).",
+          "Mit Vorsicht lesen: zwei Karten, ein 8B-Modell, die eigenen Stundenpreise von NoctHost (auf deren Seite ohne Abrufdatum), und keine der Karten steht in den obigen Preislisten. Die Werte lassen sich daher weder auf das RTX-4090-Beispiel noch auf ein größeres Modell übertragen. Leerlauf erhöht die tatsächlichen Kosten: Eine Karte, die nur zu 25 % der Zeit generiert, kostet pro Token das Vierfache.",
+          "Um eine lokale Karte auf dieselbe Skala zu bringen, wenden Sie die Formel mit Ihren eigenen Stromkosten pro Stunde (rund 0,063 $ für die Beispiel-RTX-4090) anstelle des Cloud-Preises an und setzen Ihre selbst mit demselben Modell gemessenen Token pro Sekunde ein. Das sind nur die Betriebskosten, ohne Kaufpreis."
         ]
       },
       "one-year": {
@@ -1243,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "Kann ich Cloud-GPUs für Dauerbetrieb (24/7) nutzen?",
-            "a": "Ja, aber hier ist Mieten am teuersten. Eine gemietete RTX 4090 kostet bei 8.760 Stunden 2.978 $ pro Jahr in der RunPod Community Cloud oder 7.796 $ in der Secure Cloud (abgerufen am 2. November 2026); die lokale Beispielkarte kostet nach dem Kauf rund 552 $ Strom pro Jahr."
+            "a": "Ja, aber hier ist Mieten am teuersten. Eine gemietete RTX 4090 kostet bei 8.760 Stunden 2.978 $ pro Jahr in der RunPod Community Cloud oder 7.796 $ in der Secure Cloud (abgerufen am 22. November 2026); die lokale Beispielkarte kostet nach dem Kauf rund 552 $ Strom pro Jahr."
           },
           {
             "q": "Ist eine Cloud-GPU bei gelegentlicher Nutzung immer günstiger?",
@@ -1252,6 +1398,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "q": "Mit welchem Cloud-Preis sollte ich meine GPU vergleichen?",
             "a": "Vergleichen Sie mit einer GPU mit gleichem Speicher. Für eine RTX 4090 (24 GB) ist das die RTX 4090 von RunPod mit 0,34 $/Stunde (Community) bzw. 0,89 $/Stunde (Secure). Eine AWS T4 für 0,752 $/Stunde hat 16 GiB und geringeren Durchsatz (siehe NVIDIA-Spezifikationsseiten)."
+          },
+          {
+            "q": "Was kostet es, ein LLM in der Cloud pro Million Token zu betreiben?",
+            "a": "Das hängt von Karte, Modell und Auslastung der GPU ab. In einer Messung des Drittanbieters NoctHost (15. November 2026, Ollama, Llama 3.1 8B in Q4_K_M) erzeugte eine RTX 4000 Ada bei 0,73 $/Stunde rund 65 Token pro Sekunde, also rund 322.000 Token pro Dollar oder etwa 3 $ pro Million Token. Eine L4 bei 1,16 $/Stunde erzeugte rund 51 Token pro Sekunde, also rund 157.000 Token pro Dollar oder etwa 6 $ pro Million. Beide Werte setzen voraus, dass die GPU ohne Pausen generiert."
           },
           {
             "q": "Sind Cloud-GPU-Preise fest?",
@@ -1275,27 +1425,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Den Host-PC ignorieren: Eine GPU braucht Rechner, Netzteil und Kühlung, die nicht im Kartenpreis stecken.",
           "Verschiedene Speichergrößen vergleichen: Eine T4 mit 16 GiB und eine RTX 4090 mit 24 GB führen nicht dieselben Modelle aus.",
           "Nur eine Stufe betrachten: Dieselbe RunPod-RTX-4090 kostet in der Secure Cloud rund 2,6-mal so viel wie in der Community Cloud.",
-          "Annehmen, lokal sei immer günstiger: Unterhalb von rund 2.400 bis 7.200 Stunden ist die gemietete Karte in diesem Beispiel billiger."
+          "Annehmen, lokal sei immer günstiger: Unterhalb von rund 2.400 bis 7.200 Stunden ist die gemietete Karte in diesem Beispiel billiger.",
+          "Stundenpreise ohne Geschwindigkeit vergleichen: Im Test des Drittanbieters NoctHost lieferte dasselbe 8B-Modell auf einer Karte rund 322.000 Token pro Dollar und auf einer anderen rund 157.000."
         ]
       },
       "relatedReading": {
         "title": "Weiterführende Artikel",
         "items": [
           "[GPU-Cloud mieten vs. On-Prem-Hardware kaufen für Enterprise-KI (2026)](/de/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- dieselbe Miete-vs-Kauf-Frage im Enterprise-Beschaffungsmaßstab, mit vollständigem TCO- und Break-Even-Modell.",
+          "[Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026](/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- setzen Sie Ihre eigenen Stunden, Stromkosten und Hardwarepreise ein.",
+          "[RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz 2026](/de/local-llms/cloud-gpu-rental-comparison-2026)",
+          "[GPU vs. ChatGPT Plus 2026: Wann sich der GPU-Kauf gegenüber dem Abo lohnt](/de/local-llms/gpu-vs-ai-subscription-roi)",
+          "[Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB & Alternativen](/de/local-llms/best-budget-gpus-local-llm)",
+          "[Lokale LLMs vs ChatGPT Plus 2026: Vollständiger Kostenvergleich über 7 Preisstufen](/de/local-llms/local-llms-vs-chatgpt-plus)",
+          "[Multi-GPU Lokale LLMs 2026: 70B-Modelle auf 2+ GPUs mit vLLM und Ollama ausführen](/de/local-llms/multi-gpu-local-llms)",
           "[Wann sollten Sie lokale und Cloud-LLM-Inferenz kombinieren?](/de/prompt-bites/hybrid-local-cloud-llm-strategy) -- die Architekturfrage, sobald Sie bereits wissen, was günstiger ist.",
-          "[Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers) -- Anbieterübersicht mit dem [RunPod-Testbericht](/de/power-local-llm/runpod-review) und dem [Vast.ai-Testbericht](/de/power-local-llm/vast-ai-review).",
-          "[Clore.ai-Review](/de/power-local-llm/clore-ai-review) -- eine GPU-Marktplatz-Option zum Mieten statt Kaufen"
+          "Mieten statt kaufen: [Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers), [RunPod-Test](/de/power-local-llm/runpod-review), [Vast.ai-Test](/de/power-local-llm/vast-ai-review) und [Clore.ai-Test](/de/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
         "title": "Quellen",
         "items": [
-          "[RunPod GPU-Preise](https://www.runpod.io/pricing), abgerufen am 2. November 2026",
-          "[Lambda GPU-Preise](https://lambda.ai/pricing), abgerufen am 2. November 2026",
-          "[DigitalOcean GPU-Droplet-Preise](https://www.digitalocean.com/pricing/gpu-droplets), abgerufen am 2. November 2026",
-          "[AWS-EC2-g4dn.2xlarge-Preis (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), Drittanbieter-Index, abgerufen am 2. November 2026",
+          "[RunPod GPU-Preise](https://www.runpod.io/pricing), abgerufen am 22. November 2026",
+          "[Lambda GPU-Preise](https://lambda.com/pricing), abgerufen am 22. November 2026",
+          "[DigitalOcean GPU-Droplet-Preise](https://www.digitalocean.com/pricing/gpu-droplets), abgerufen am 22. November 2026",
+          "[AWS-EC2-g4dn.2xlarge-Preis (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), Drittanbieter-Index, abgerufen am 22. November 2026",
           "[NVIDIA GeForce RTX 4090 Spezifikationen](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) und [RTX 4070](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/)",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Preisspannen der neuen und gebrauchten RTX 4090 für den Beispiel-Kaufpreis (aktualisiert am 2026-10-15)"
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Preisspannen der neuen und gebrauchten RTX 4090 für den Beispiel-Kaufpreis (aktualisiert am 2026-10-15)",
+          "[NoctHost: Tabelle zur GPU-LLM-Geschwindigkeit](https://nocthost.com/gpu-llm-speed), Anbieter-Benchmark eines Drittanbieters, gemessen am 15. November 2026, abgerufen am 22. November 2026"
         ]
       }
     },
@@ -1303,7 +1460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Lokale GPU vs. Cloud-GPU für LLMs: Kosten-Break-even 2026",
-      "description": "Lokale GPU oder Cloud-GPU für LLMs: Break-even-Stunden mit RunPod-, Lambda- und AWS-Preisen vom 2. November 2026 und die Formel zum Nachrechnen.",
+      "description": "Lokale GPU oder Cloud-GPU für LLMs: Break-even-Stunden mit RunPod-, Lambda- und AWS-Preisen vom 22. November 2026 und die Formel zum Nachrechnen.",
       "url": "https://www.promptquorum.com/de/local-llms/local-llm-vs-cloud-gpu-cost",
       "inLanguage": "de",
       "datePublished": "2026-04-05",
@@ -1337,7 +1494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "name": "Kann ich Cloud-GPUs für Dauerbetrieb (24/7) nutzen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, aber hier ist Mieten am teuersten. Eine gemietete RTX 4090 kostet bei 8.760 Stunden 2.978 $ pro Jahr in der RunPod Community Cloud oder 7.796 $ in der Secure Cloud (abgerufen am 2. November 2026); die lokale Beispielkarte kostet nach dem Kauf rund 552 $ Strom pro Jahr."
+            "text": "Ja, aber hier ist Mieten am teuersten. Eine gemietete RTX 4090 kostet bei 8.760 Stunden 2.978 $ pro Jahr in der RunPod Community Cloud oder 7.796 $ in der Secure Cloud (abgerufen am 22. November 2026); die lokale Beispielkarte kostet nach dem Kauf rund 552 $ Strom pro Jahr."
           }
         },
         {
@@ -1354,6 +1511,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Vergleichen Sie mit einer GPU mit gleichem Speicher. Für eine RTX 4090 (24 GB) ist das die RTX 4090 von RunPod mit 0,34 $/Stunde (Community) bzw. 0,89 $/Stunde (Secure). Eine AWS T4 für 0,752 $/Stunde hat 16 GiB und geringeren Durchsatz (siehe NVIDIA-Spezifikationsseiten)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet es, ein LLM in der Cloud pro Million Token zu betreiben?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das hängt von Karte, Modell und Auslastung der GPU ab. In einer Messung des Drittanbieters NoctHost (15. November 2026, Ollama, Llama 3.1 8B in Q4_K_M) erzeugte eine RTX 4000 Ada bei 0,73 $/Stunde rund 65 Token pro Sekunde, also rund 322.000 Token pro Dollar oder etwa 3 $ pro Million Token. Eine L4 bei 1,16 $/Stunde erzeugte rund 51 Token pro Sekunde, also rund 157.000 Token pro Dollar oder etwa 6 $ pro Million. Beide Werte setzen voraus, dass die GPU ohne Pausen generiert."
           }
         },
         {
@@ -1395,12 +1560,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           "@type": "Thing",
           "name": "RunPod RTX 4090",
-          "description": "0,34 $/Stunde in der Community Cloud und 0,89 $/Stunde in der Secure Cloud (abgerufen am 2. November 2026)."
+          "description": "0,34 $/Stunde in der Community Cloud und 0,89 $/Stunde in der Secure Cloud (abgerufen am 22. November 2026)."
         },
         {
           "@type": "Thing",
           "name": "Lambda A100 40 GB",
-          "description": "1,99 $/Stunde On-Demand (abgerufen am 2. November 2026); geeignet für einmalige Fine-Tuning-Jobs."
+          "description": "1,99 $/Stunde On-Demand (abgerufen am 22. November 2026); geeignet für einmalige Fine-Tuning-Jobs."
         }
       ]
     }
@@ -1413,11 +1578,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "title": "ローカルLLMとクラウドGPU：どちらが安いか",
     "heroImage": "/images/local-llm-vs-cloud-gpu-cost-overview-hero-ja.webp",
     "seoTitle": "LLM向けローカルGPUとクラウドGPUの費用：損益分岐2026",
-    "intro": "**GPUを買う方が得になるのは、継続して使う場合だけです。例として2,000ドルのRTX 4090は、RunPod Secure Cloud（0.89ドル/時間）に対して約2,400時間、Community Cloud（0.34ドル/時間）に対して約7,200時間で元が取れます（ベンダー価格は2026年11月2日確認）。それ未満なら、このモデル（再販価値とホストPCの費用は含みません）ではレンタルの方が安くなります。**",
-    "metaDescription": "LLM向けにローカルGPUとクラウドGPUを比較。2026年11月2日時点のRunPod・Lambda・AWSの料金で損益分岐の時間を算出し、計算式も示します。",
+    "intro": "**GPUを買う方が得になるのは、継続して使う場合だけです。例として2,000ドルのRTX 4090は、RunPod Secure Cloud（0.89ドル/時間）に対して約2,400時間、Community Cloud（0.34ドル/時間）に対して約7,200時間で元が取れます（ベンダー価格は2026年11月22日確認）。それ未満なら、このモデル（再販価値とホストPCの費用は含みません）ではレンタルの方が安くなります。**",
+    "metaDescription": "LLM向けにローカルGPUとクラウドGPUを比較。2026年11月22日時点のRunPod・Lambda・AWSの料金で損益分岐の時間を算出し、計算式も示します。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
-    "leadAnswerBlock": "**GPUを買う方が得になるのは、継続して使う場合だけです。例として2,000ドルのRTX 4090は、RunPod Secure Cloud（0.89ドル/時間）に対して約2,400時間、Community Cloud（0.34ドル/時間）に対して約7,200時間で元が取れます（ベンダー価格は2026年11月2日確認）。それ未満なら、このモデル（再販価値とホストPCの費用は含みません）ではレンタルの方が安くなります。**",
+    "leadAnswerBlock": "**GPUを買う方が得になるのは、継続して使う場合だけです。例として2,000ドルのRTX 4090は、RunPod Secure Cloud（0.89ドル/時間）に対して約2,400時間、Community Cloud（0.34ドル/時間）に対して約7,200時間で元が取れます（ベンダー価格は2026年11月22日確認）。それ未満なら、このモデル（再販価値とホストPCの費用は含みません）ではレンタルの方が安くなります。**",
     "audience": "OllamaやLM Studioを使い、GPUを買うか借りるかを決めたい開発者",
     "readTime": "読了目安7分",
     "educationalLevel": "Intermediate",
@@ -1436,6 +1601,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "anchor": "#providers"
       },
       {
+        "label": "1トークンあたりの費用",
+        "anchor": "#tokens"
+      },
+      {
         "label": "1年間と24時間365日の費用",
         "anchor": "#one-year"
       },
@@ -1451,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "snippetBlocks": [
           {
             "type": "one-sentence",
-            "text": "例として2,000ドルで買ったローカルのRTX 4090は、レンタルのRTX 4090に対し、RunPod Secure Cloud（0.89ドル/時間）なら約2,400時間、Community Cloud（0.34ドル/時間）なら約7,200時間で元が取れ（ベンダー価格は2026年11月2日確認）、それ未満ならレンタルの方が安くなります。"
+            "text": "例として2,000ドルで買ったローカルのRTX 4090は、レンタルのRTX 4090に対し、RunPod Secure Cloud（0.89ドル/時間）なら約2,400時間、Community Cloud（0.34ドル/時間）なら約7,200時間で元が取れ（ベンダー価格は2026年11月22日確認）、それ未満ならレンタルの方が安くなります。"
           },
           {
             "type": "plain-terms",
@@ -1465,6 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "RunPod Secure CloudのRTX 4090（0.89ドル/時間）に対して：約2,400時間で損益分岐",
           "24時間365日の連続稼働なら、損益分岐は約101日（Secure）または約301日（Community）",
           "短期の負荷集中、多くの購入者が入手できないハードウェア（H100、B200）、資金を寝かせたくない場合はクラウドが有利",
+          "トークンあたりでは、第三者であるNoctHostのLlama 3.1 8B測定で、RTX 4000 Ada（0.73ドル/時間）が1ドルあたり約322,000トークン、L4（1.16ドル/時間）が約157,000トークン（2026年11月15日測定）",
           "購入価格・消費電力・電気料金は例示の前提であり、市場データではありません。自分の値に置き換えてください"
         ]
       },
@@ -1474,8 +1644,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**ローカルGPUの費用は、1時間あたりの電気代に、使用時間で割った購入価格を足したものです。**1時間あたりの電気代＝消費電力（kW）×電気料金（1kWhあたり）。",
           "例の前提（自分の値に置き換えてください）：RTX 4090の消費電力は450 W（NVIDIAのTotal Graphics Power）で、0.14ドル/kWhなら0.45 × 0.14 = 0.063ドル/時間。RTX 4070は200 Wで0.028ドル/時間です。購入価格の2,000ドルは、[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)が追跡している新品RTX 4090の出品価格の下限です（MSRP 1,599ドルに対し2,000〜3,000ドル、情報源の更新日：2026-10-15）。中古の落札実績は2,575〜3,010ドルでした。損益分岐の時間は、実際に支払う価格に比例して増えます。",
-          "クラウド：RunPodはRTX 4090（24 GB）を、Community Cloudで0.34ドル/時間、Secure Cloudで0.89ドル/時間と掲載しています（2026年11月2日確認）。",
-          "Lambdaは、A6000（48 GB）を1.09ドル/時間、A100（40 GB）を1.99ドル/時間と掲載しています（GPU1基あたり・オンデマンド、2026年11月2日確認）。",
+          "クラウド：RunPodはRTX 4090（24 GB）を、Community Cloudで0.34ドル/時間、Secure Cloudで0.89ドル/時間と掲載しています（2026年11月22日確認）。",
+          "Lambdaは、A6000（48 GB）を1.09ドル/時間、A100（40 GB）を1.99ドル/時間と掲載しています（GPU1基あたり・オンデマンド、2026年11月22日確認）。",
           "クラウドの料金は予告なく変わるため、決める前に各社のページを確認してください。"
         ]
       },
@@ -1494,12 +1664,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "providers",
         "title": "クラウドGPUプロバイダーはどう違うか",
         "content": [
-          "**以下は各社ページで2026年11月2日に確認した、税別・オンデマンドのGPU1時間あたりの定価です。**",
-          "RunPod（Community / Secure）：RTX 4090 24 GB 0.34ドル/時間 / 0.89ドル/時間、A100 PCIe 80 GB 1.19ドル/時間 / 1.79ドル/時間、L40S 48 GB 0.79ドル/時間 / 1.09ドル/時間、RTX A6000 48 GB 0.33ドル/時間 / 0.59ドル/時間。",
-          "Lambda（GPU1基のインスタンス）：A6000 48 GB 1.09ドル/時間、A100 40 GB 1.99ドル/時間、H100 PCIe 80 GB 3.29ドル/時間、H100 SXM 80 GB 4.29ドル/時間。",
+          "**以下は各社ページで2026年11月22日に確認した、税別・オンデマンドのGPU1時間あたりの定価です。**",
+          "RunPod（Community / Secure）：RTX 4090 24 GB 0.34ドル/時間 / 0.89ドル/時間、A100 PCIe 80 GB 1.19ドル/時間 / 2.09ドル/時間、L40S 48 GB 0.79ドル/時間 / 1.09ドル/時間、RTX A6000 48 GB 0.33ドル/時間 / 0.69ドル/時間。",
+          "Lambda（GPU1基のインスタンス）：A6000 48 GB 1.09ドル/時間、A100 40 GB 1.99ドル/時間、H100 PCIe 80 GB 3.79ドル/時間、H100 SXM 80 GB 4.89ドル/時間。",
           "DigitalOcean GPU Droplets：RTX 6000 Ada 48 GB 1.57ドル/時間、L40S 48 GB 1.57ドル/時間、H100 80 GB 4.41ドル/時間。",
-          "AWS EC2 g4dn.2xlarge（NVIDIA T4が1基、16 GiB）：オンデマンド0.752ドル/時間、1年予約0.474ドル/時間、スポット0.311ドル/時間（第三者の価格インデックスVantageの掲載値）。T4はRTX 4090よりメモリが少なくスループットも低い（NVIDIAの仕様ページを参照）ため、同等の比較にはなりません。",
-          "これらの定価を事業者選びにつなげるには、[クラウドGPU事業者を比較](/ja/power-local-llm/best-cloud-gpu-providers)するか、[RunPodレビュー](/ja/power-local-llm/runpod-review)と[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)をご覧ください。 GPUマーケットプレイスの選択肢については[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)をご覧ください。"
+          "AWS EC2 g4dn.2xlarge（NVIDIA T4が1基、16 GiB）：オンデマンド0.752ドル/時間、1年予約0.474ドル/時間、スポット0.259ドル/時間（第三者の価格インデックスVantageの掲載値）。T4はRTX 4090よりメモリが少なくスループットも低い（NVIDIAの仕様ページを参照）ため、同等の比較にはなりません。",
+          "購入ではなくレンタルを選ぶ場合は、[クラウドGPUプロバイダーを比較](/ja/power-local-llm/best-cloud-gpu-providers)したうえで、[RunPodレビュー](/ja/power-local-llm/runpod-review)、[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)、[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)をご覧ください。"
+        ]
+      },
+      "tokens": {
+        "id": "tokens",
+        "title": "クラウドGPUの1トークンあたりの費用はいくらか",
+        "content": [
+          "**1ドルあたりのトークン数＝1秒あたりのトークン数×3,600÷1時間あたりの料金で、GPUが途切れなく生成し続ける間だけ成り立ちます。** 時間単価だけでは、その料金でどれだけの出力が得られるかは分かりません。",
+          "このページで実測した速度は第三者のものだけで、PromptQuorumの測定ではなくベンダーのベンチマークです：[NoctHostのGPU LLM速度表（第三者）](https://nocthost.com/gpu-llm-speed)。GPUサーバーを提供するNoctHostは、2026年11月15日に、カードごとに新しいクラウドサーバーを1台用意し、OllamaでLlama 3.1 8B（Q4_K_M、約5 GB）を実行しました。ウォームアップの後、カードごとに3回、temperature 0、新規256トークンで測定し、中央値を掲載しています。速度はOllama APIのeval_count÷eval_durationです。",
+          "RTX 4000 Ada（20 GB、Linode、0.73ドル/時間）：毎秒約65トークン、1ドルあたり約322,000トークン。",
+          "L4（24 GB、OVHcloud、1.16ドル/時間）：毎秒約51トークン、1ドルあたり約157,000トークン。",
+          "100万トークンあたりに直すと、およそ3ドルと6ドルです（NoctHostの値からPromptQuorumが計算）。",
+          "読むときの注意：カードは2枚、モデルは8Bの1種類、時間単価はNoctHost自身のもので（同社ページに確認日の記載なし）、どちらのカードも上の料金一覧にはありません。そのため、RTX 4090の例や大きなモデルにはそのまま当てはまりません。待機時間があると実際の費用は上がります：生成しているのが25％の時間だけのカードは、1トークンあたり4倍かかります。",
+          "ローカルのカードを同じ尺度に載せるには、クラウドの料金の代わりに自分の1時間あたりの電気代（例のRTX 4090で約0.063ドル）を使い、同じモデルで自分が測った毎秒トークン数を式に入れます。これは購入価格を含まない運用費だけです。"
         ]
       },
       "one-year": {
@@ -1518,7 +1701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "クラウドGPUを24時間365日の連続推論に使えますか？",
-            "a": "使えますが、レンタルが最も高くつく使い方です。RTX 4090を8,760時間借りると、RunPod Community Cloudで年2,978ドル、Secure Cloudで7,796ドルです（2026年11月2日確認）。例のローカルカードは、購入後の電気代が年約552ドルです。"
+            "a": "使えますが、レンタルが最も高くつく使い方です。RTX 4090を8,760時間借りると、RunPod Community Cloudで年2,978ドル、Secure Cloudで7,796ドルです（2026年11月22日確認）。例のローカルカードは、購入後の電気代が年約552ドルです。"
           },
           {
             "q": "たまにしか使わないなら、クラウドGPUは常に安いですか？",
@@ -1527,6 +1710,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "q": "自分のGPUは、どのクラウド価格と比べればよいですか？",
             "a": "メモリが同じGPUと比べてください。RTX 4090（24 GB）なら、RunPodのRTX 4090の0.34ドル/時間（Community）または0.89ドル/時間（Secure）です。AWSのT4（0.752ドル/時間）は16 GiBで、スループットも低いGPUです（NVIDIAの仕様ページを参照）。"
+          },
+          {
+            "q": "クラウドでLLMを動かすと100万トークンあたりいくらかかりますか",
+            "a": "カード、モデル、GPUの稼働率によって変わります。第三者NoctHostの測定（2026年11月15日、Ollama、Llama 3.1 8B・Q4_K_M）では、RTX 4000 Ada（0.73ドル/時間）が毎秒約65トークンで、1ドルあたり約322,000トークン、100万トークンあたりおよそ3ドルでした。L4（1.16ドル/時間）は毎秒約51トークンで、1ドルあたり約157,000トークン、100万トークンあたりおよそ6ドルでした。どちらもGPUが途切れなく生成することが前提です。"
           },
           {
             "q": "クラウドGPUの料金は固定ですか？",
@@ -1550,27 +1737,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "ホストPCを無視すること：GPUにはPC、電源、冷却が必要で、カード価格には含まれません。",
           "メモリ容量の違うものを比べること：16 GiBのT4と24 GBのRTX 4090では動かせるモデルが違います。",
           "片方のティアだけを見ること：RunPodの同じRTX 4090は、Secure CloudがCommunity Cloudの約2.6倍です。",
-          "ローカルが常に安いと思い込むこと：この例では約2,400〜7,200時間未満なら、借りる方が安くなります。"
+          "ローカルが常に安いと思い込むこと：この例では約2,400〜7,200時間未満なら、借りる方が安くなります。",
+          "速度を見ずに時間単価だけを比べること：第三者NoctHostのテストでは、同じ8Bモデルが、ある1枚で1ドルあたり約322,000トークン、別の1枚で約157,000トークンでした。"
         ]
       },
       "relatedReading": {
         "title": "関連記事",
         "items": [
           "[GPUクラウドレンタル vs オンプレ購入：エンタープライズAI TCO比較 2026](/ja/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- 企業調達規模での同じレンタル対購入の問いを、完全なTCOと損益分岐点モデルとともに。",
+          "[ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版](/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- 自分の利用時間・電気料金・ハードウェア価格を入力して計算できます。",
+          "[RunPod vs Vast.ai vs Lambda Labs：LLM推論向けGPUレンタル比較2026](/ja/local-llms/cloud-gpu-rental-comparison-2026)",
+          "[GPU vs ChatGPT Plus 2026: GPU購入でサブスク代は回収できるか](/ja/local-llms/gpu-vs-ai-subscription-roi)",
+          "[ローカルLLM向けの最高のバジェットGPU](/ja/local-llms/best-budget-gpus-local-llm)",
+          "[ローカルLLM vs ChatGPT Plus 2026：7つの価格レベルの完全比較](/ja/local-llms/local-llms-vs-chatgpt-plus)",
+          "[マルチGPU ローカルLLMs 2026: 2+ GPUsで70Bモデルを実行する（vLLM + Ollama）](/ja/local-llms/multi-gpu-local-llms)",
           "[ローカルとクラウドのLLM推論を組み合わせるべきタイミングとは？](/ja/prompt-bites/hybrid-local-cloud-llm-strategy) -- どちらが安いかが分かった後の、アーキテクチャの選択について。",
-          "[クラウドGPU事業者を比較](/ja/power-local-llm/best-cloud-gpu-providers) -- 事業者の概要と、[RunPodレビュー](/ja/power-local-llm/runpod-review)、[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)。",
-          "[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review) -- 購入ではなくレンタルで使えるGPUマーケットプレイスの選択肢"
+          "購入ではなくレンタル：[クラウドGPUプロバイダーを比較](/ja/power-local-llm/best-cloud-gpu-providers)、[RunPodレビュー](/ja/power-local-llm/runpod-review)、[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)、[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
         "title": "出典",
         "items": [
-          "[RunPod GPU料金](https://www.runpod.io/pricing)（2026年11月2日確認）",
-          "[Lambda GPU料金](https://lambda.ai/pricing)（2026年11月2日確認）",
-          "[DigitalOcean GPU Droplet料金](https://www.digitalocean.com/pricing/gpu-droplets)（2026年11月2日確認）",
-          "[AWS EC2 g4dn.2xlargeの料金（Vantage）](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge)（第三者インデックス、2026年11月2日確認）",
+          "[RunPod GPU料金](https://www.runpod.io/pricing)（2026年11月22日確認）",
+          "[Lambda GPU料金](https://lambda.com/pricing)（2026年11月22日確認）",
+          "[DigitalOcean GPU Droplet料金](https://www.digitalocean.com/pricing/gpu-droplets)（2026年11月22日確認）",
+          "[AWS EC2 g4dn.2xlargeの料金（Vantage）](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge)（第三者インデックス、2026年11月22日確認）",
           "[NVIDIA GeForce RTX 4090の仕様](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/)と[RTX 4070](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/)",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、例の購入価格に使った新品・中古RTX 4090の価格帯（2026-10-15更新）"
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、例の購入価格に使った新品・中古RTX 4090の価格帯（2026-10-15更新）",
+          "[NoctHost: GPU LLM速度表](https://nocthost.com/gpu-llm-speed)、第三者のベンダーベンチマーク（2026年11月15日測定、2026年11月22日確認）"
         ]
       }
     },
@@ -1578,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "LLM向けローカルGPUとクラウドGPUの費用：損益分岐2026",
-      "description": "LLM向けにローカルGPUとクラウドGPUを比較。2026年11月2日時点のRunPod・Lambda・AWSの料金で損益分岐の時間を算出し、計算式も示します。",
+      "description": "LLM向けにローカルGPUとクラウドGPUを比較。2026年11月22日時点のRunPod・Lambda・AWSの料金で損益分岐の時間を算出し、計算式も示します。",
       "url": "https://www.promptquorum.com/ja/local-llms/local-llm-vs-cloud-gpu-cost",
       "inLanguage": "ja",
       "datePublished": "2026-04-05",
@@ -1612,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "name": "クラウドGPUを24時間365日の連続推論に使えますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "使えますが、レンタルが最も高くつく使い方です。RTX 4090を8,760時間借りると、RunPod Community Cloudで年2,978ドル、Secure Cloudで7,796ドルです（2026年11月2日確認）。例のローカルカードは、購入後の電気代が年約552ドルです。"
+            "text": "使えますが、レンタルが最も高くつく使い方です。RTX 4090を8,760時間借りると、RunPod Community Cloudで年2,978ドル、Secure Cloudで7,796ドルです（2026年11月22日確認）。例のローカルカードは、購入後の電気代が年約552ドルです。"
           }
         },
         {
@@ -1629,6 +1823,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "メモリが同じGPUと比べてください。RTX 4090（24 GB）なら、RunPodのRTX 4090の0.34ドル/時間（Community）または0.89ドル/時間（Secure）です。AWSのT4（0.752ドル/時間）は16 GiBで、スループットも低いGPUです（NVIDIAの仕様ページを参照）。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "クラウドでLLMを動かすと100万トークンあたりいくらかかりますか",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "カード、モデル、GPUの稼働率によって変わります。第三者NoctHostの測定（2026年11月15日、Ollama、Llama 3.1 8B・Q4_K_M）では、RTX 4000 Ada（0.73ドル/時間）が毎秒約65トークンで、1ドルあたり約322,000トークン、100万トークンあたりおよそ3ドルでした。L4（1.16ドル/時間）は毎秒約51トークンで、1ドルあたり約157,000トークン、100万トークンあたりおよそ6ドルでした。どちらもGPUが途切れなく生成することが前提です。"
           }
         },
         {
@@ -1670,12 +1872,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           "@type": "Thing",
           "name": "RunPod RTX 4090",
-          "description": "Community Cloudで0.34ドル/時間、Secure Cloudで0.89ドル/時間（2026年11月2日確認）。"
+          "description": "Community Cloudで0.34ドル/時間、Secure Cloudで0.89ドル/時間（2026年11月22日確認）。"
         },
         {
           "@type": "Thing",
           "name": "Lambda A100 40 GB",
-          "description": "オンデマンド1.99ドル/時間（2026年11月2日確認）。単発のファインチューニング向きです。"
+          "description": "オンデマンド1.99ドル/時間（2026年11月22日確認）。単発のファインチューニング向きです。"
         }
       ]
     }
@@ -1688,11 +1890,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "title": "LLM local vs GPU cloud : qu'est-ce qui coûte le moins ?",
     "heroImage": "/images/local-llm-vs-cloud-gpu-cost-overview-hero-fr.webp",
     "seoTitle": "GPU local vs cloud pour LLM : seuil de rentabilité 2026",
-    "intro": "**Acheter un GPU ne se justifie qu'en usage régulier. Une RTX 4090 à 2 000 $ (exemple) est rentabilisée après environ 2 400 heures face à RunPod Secure Cloud à 0,89 $/heure et après environ 7 200 heures face à Community Cloud à 0,34 $/heure (prix des fournisseurs relevés le 2 novembre 2026). En deçà, louer coûte moins dans ce modèle, qui ignore la valeur de revente et le PC hôte.**",
-    "metaDescription": "GPU local ou cloud pour LLM : heures de rentabilité avec les prix RunPod, Lambda et AWS relevés le 2 novembre 2026, et la formule pour refaire le calcul.",
+    "intro": "**Acheter un GPU ne vaut qu'en usage régulier. Une RTX 4090 (2 000 $, exemple) est rentabilisée après environ 2 400 heures contre RunPod Secure Cloud (0,89 $/heure) ou 7 200 contre Community Cloud (0,34 $/heure ; prix du 22 novembre 2026). En deçà, louer coûte moins dans ce modèle.**",
+    "metaDescription": "GPU local ou cloud pour LLM : heures de rentabilité avec les prix RunPod, Lambda et AWS relevés le 22 novembre 2026, et la formule pour refaire le calcul.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
-    "leadAnswerBlock": "**Acheter un GPU ne se justifie qu'en usage régulier. Une RTX 4090 à 2 000 $ (exemple) est rentabilisée après environ 2 400 heures face à RunPod Secure Cloud à 0,89 $/heure et après environ 7 200 heures face à Community Cloud à 0,34 $/heure (prix des fournisseurs relevés le 2 novembre 2026). En deçà, louer coûte moins dans ce modèle, qui ignore la valeur de revente et le PC hôte.**",
+    "leadAnswerBlock": "**Acheter un GPU ne vaut qu'en usage régulier. Une RTX 4090 (2 000 $, exemple) est rentabilisée après environ 2 400 heures contre RunPod Secure Cloud (0,89 $/heure) ou 7 200 contre Community Cloud (0,34 $/heure ; prix du 22 novembre 2026). En deçà, louer coûte moins dans ce modèle.**",
     "audience": "Développeurs qui utilisent Ollama ou LM Studio et hésitent entre acheter un GPU et en louer un",
     "readTime": "7 min de lecture",
     "educationalLevel": "Intermediate",
@@ -1711,6 +1913,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "anchor": "#providers"
       },
       {
+        "label": "Coût par token",
+        "anchor": "#tokens"
+      },
+      {
         "label": "Coût sur 1 an et en 24/7",
         "anchor": "#one-year"
       },
@@ -1726,7 +1932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "snippetBlocks": [
           {
             "type": "one-sentence",
-            "text": "Une RTX 4090 locale achetée 2 000 $ (exemple) est rentabilisée face à une RTX 4090 louée après environ 2 400 heures chez RunPod Secure Cloud (0,89 $/heure) ou environ 7 200 heures chez Community Cloud (0,34 $/heure), avec des prix de fournisseurs relevés le 2 novembre 2026 ; en dessous, la location coûte moins."
+            "text": "Une RTX 4090 locale achetée 2 000 $ (exemple) est rentabilisée face à une RTX 4090 louée après environ 2 400 heures chez RunPod Secure Cloud (0,89 $/heure) ou environ 7 200 heures chez Community Cloud (0,34 $/heure), avec des prix de fournisseurs relevés le 22 novembre 2026 ; en dessous, la location coûte moins."
           },
           {
             "type": "plain-terms",
@@ -1740,6 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Face à RunPod Secure Cloud RTX 4090 (0,89 $/heure) : rentabilité après environ 2 400 heures",
           "En 24/7, la rentabilité arrive après environ 101 jours (Secure) ou environ 301 jours (Community)",
           "Le cloud l'emporte pour les pics de charge, pour le matériel que la plupart des acheteurs ne peuvent pas obtenir (H100, B200) et quand on ne veut pas immobiliser de capital",
+          "Par token, une mesure du tiers NoctHost avec Llama 3.1 8B donne environ 322 000 tokens par dollar sur une RTX 4000 Ada (0,73 $/heure) et environ 157 000 sur une L4 (1,16 $/heure), mesurée le 15 novembre 2026",
           "Le prix d'achat, la puissance et le tarif d'électricité sont des valeurs d'exemple, pas des données de marché : remplacez-les par les vôtres"
         ]
       },
@@ -1749,8 +1956,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**Un GPU local coûte son électricité par heure plus son prix d'achat réparti sur les heures d'utilisation.** Électricité par heure = puissance en kW × votre prix du kWh.",
           "Valeurs d'exemple (à remplacer par les vôtres) : une RTX 4090 consomme 450 W (puissance graphique totale selon NVIDIA) ; à 0,14 $/kWh, cela fait 0,45 × 0,14 = 0,063 $/heure. Une RTX 4070 consomme 200 W, soit 0,028 $/heure. Le prix d'achat de 2 000 $ correspond au bas de la fourchette des annonces neuves de RTX 4090 suivies par [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (2 000-3 000 $ pour un PDSF de 1 599 $ ; source mise à jour le 2026-10-15) ; les annonces vendues d'occasion étaient à 2 575-3 010 $. Les heures de rentabilité augmentent proportionnellement au prix réellement payé.",
-          "Cloud : RunPod indique la RTX 4090 (24 Go) à 0,34 $/heure en Community Cloud et 0,89 $/heure en Secure Cloud, relevé le 2 novembre 2026.",
-          "Lambda indique une A6000 (48 Go) à 1,09 $/heure et une A100 (40 Go) à 1,99 $/heure, par GPU à la demande, relevé le 2 novembre 2026.",
+          "Cloud : RunPod indique la RTX 4090 (24 Go) à 0,34 $/heure en Community Cloud et 0,89 $/heure en Secure Cloud, relevé le 22 novembre 2026.",
+          "Lambda indique une A6000 (48 Go) à 1,09 $/heure et une A100 (40 Go) à 1,99 $/heure, par GPU à la demande, relevé le 22 novembre 2026.",
           "Les prix du cloud changent sans préavis : vérifiez la page du fournisseur avant de décider."
         ]
       },
@@ -1769,12 +1976,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "providers",
         "title": "Comment se comparent les fournisseurs de GPU cloud ?",
         "content": [
-          "**Les prix ci-dessous sont des prix catalogue à la demande par heure de GPU, hors taxes, relevés sur les pages des fournisseurs le 2 novembre 2026.**",
-          "RunPod (Community / Secure) : RTX 4090 24 Go 0,34 $/heure / 0,89 $/heure ; A100 PCIe 80 Go 1,19 $/heure / 1,79 $/heure ; L40S 48 Go 0,79 $/heure / 1,09 $/heure ; RTX A6000 48 Go 0,33 $/heure / 0,59 $/heure.",
-          "Lambda (instances à un GPU) : A6000 48 Go 1,09 $/heure ; A100 40 Go 1,99 $/heure ; H100 PCIe 80 Go 3,29 $/heure ; H100 SXM 80 Go 4,29 $/heure.",
+          "**Les prix ci-dessous sont des prix catalogue à la demande par heure de GPU, hors taxes, relevés sur les pages des fournisseurs le 22 novembre 2026.**",
+          "RunPod (Community / Secure) : RTX 4090 24 Go 0,34 $/heure / 0,89 $/heure ; A100 PCIe 80 Go 1,19 $/heure / 2,09 $/heure ; L40S 48 Go 0,79 $/heure / 1,09 $/heure ; RTX A6000 48 Go 0,33 $/heure / 0,69 $/heure.",
+          "Lambda (instances à un GPU) : A6000 48 Go 1,09 $/heure ; A100 40 Go 1,99 $/heure ; H100 PCIe 80 Go 3,79 $/heure ; H100 SXM 80 Go 4,89 $/heure.",
           "DigitalOcean GPU Droplets : RTX 6000 Ada 48 Go 1,57 $/heure ; L40S 48 Go 1,57 $/heure ; H100 80 Go 4,41 $/heure.",
-          "AWS EC2 g4dn.2xlarge (un NVIDIA T4, 16 Gio) : 0,752 $/heure à la demande, 0,474 $/heure avec réservation d'un an et 0,311 $/heure en spot, selon l'index tiers Vantage. Un T4 a moins de mémoire et un débit plus faible qu'une RTX 4090 (voir les pages de spécifications NVIDIA) : la comparaison n'est pas équivalente.",
-          "Pour passer de ces tarifs publics à un choix de fournisseur, vous pouvez [comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) ou lire l'[avis sur RunPod](/fr/power-local-llm/runpod-review) et l'[avis sur Vast.ai](/fr/power-local-llm/vast-ai-review). Pour une option de place de marché GPU, consultez l'[avis sur Clore.ai](/fr/power-local-llm/clore-ai-review)."
+          "AWS EC2 g4dn.2xlarge (un NVIDIA T4, 16 Gio) : 0,752 $/heure à la demande, 0,474 $/heure avec réservation d'un an et 0,259 $/heure en spot, selon l'index tiers Vantage. Un T4 a moins de mémoire et un débit plus faible qu'une RTX 4090 (voir les pages de spécifications NVIDIA) : la comparaison n'est pas équivalente.",
+          "Pour louer plutôt qu'acheter, vous pouvez [comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) et lire le [test de RunPod](/fr/power-local-llm/runpod-review), le [test de Vast.ai](/fr/power-local-llm/vast-ai-review) et le [test de Clore.ai](/fr/power-local-llm/clore-ai-review)."
+        ]
+      },
+      "tokens": {
+        "id": "tokens",
+        "title": "Combien coûte un GPU cloud par token ?",
+        "content": [
+          "**Tokens par dollar = tokens par seconde × 3 600 ÷ prix par heure, et cela ne vaut que tant que le GPU génère sans pause.** Un prix horaire seul ne dit pas quelle quantité de sortie vous obtenez en échange.",
+          "Les seules vitesses mesurées sur cette page viennent d'un tiers et constituent un benchmark de fournisseur, pas une mesure de PromptQuorum : [tableau de vitesse GPU pour LLM de NoctHost (tiers)](https://nocthost.com/gpu-llm-speed). NoctHost, fournisseur de serveurs GPU, a exécuté Ollama avec Llama 3.1 8B (Q4_K_M, environ 5 Go) sur un serveur cloud neuf par carte le 15 novembre 2026 : un échauffement, puis trois exécutions par carte à température 0 avec 256 nouveaux tokens ; la médiane est indiquée, et la vitesse est eval_count ÷ eval_duration de l'API Ollama.",
+          "RTX 4000 Ada (20 Go, Linode, 0,73 $/heure) : environ 65 tokens par seconde, environ 322 000 tokens par dollar.",
+          "L4 (24 Go, OVHcloud, 1,16 $/heure) : environ 51 tokens par seconde, environ 157 000 tokens par dollar.",
+          "Cela représente environ 3 $ et 6 $ par million de tokens générés (calcul de PromptQuorum à partir des chiffres de NoctHost).",
+          "À lire avec prudence : deux cartes, un modèle 8B, les prix horaires propres à NoctHost (sans date de relevé sur sa page), et aucune des deux cartes ne figure dans les listes de prix ci-dessus ; les chiffres ne se transposent donc ni à l'exemple de la RTX 4090 ni à un modèle plus grand. Le temps d'inactivité augmente le coût réel : une carte qui génère 25 % du temps coûte quatre fois plus par token.",
+          "Pour placer une carte locale sur la même échelle, appliquez la formule avec votre propre coût d'électricité par heure (environ 0,063 $ pour la RTX 4090 de l'exemple) à la place du prix cloud, avec les tokens par seconde que vous avez mesurés sur le même modèle. Il s'agit uniquement du coût d'exploitation, sans le prix d'achat."
         ]
       },
       "one-year": {
@@ -1793,7 +2013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "Puis-je utiliser des GPU cloud pour une inférence continue 24/7 ?",
-            "a": "Oui, mais c'est là que la location coûte le plus. Une RTX 4090 louée 8 760 heures coûte 2 978 $ par an chez RunPod Community Cloud ou 7 796 $ en Secure Cloud (relevé le 2 novembre 2026) ; la carte locale d'exemple coûte environ 552 $ par an d'électricité après l'achat."
+            "a": "Oui, mais c'est là que la location coûte le plus. Une RTX 4090 louée 8 760 heures coûte 2 978 $ par an chez RunPod Community Cloud ou 7 796 $ en Secure Cloud (relevé le 22 novembre 2026) ; la carte locale d'exemple coûte environ 552 $ par an d'électricité après l'achat."
           },
           {
             "q": "Un GPU cloud est-il toujours moins cher pour un usage occasionnel ?",
@@ -1802,6 +2022,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "q": "Avec quel prix cloud comparer mon GPU ?",
             "a": "Comparez-le à un GPU de même mémoire. Pour une RTX 4090 (24 Go), c'est la RTX 4090 de RunPod à 0,34 $/heure (Community) ou 0,89 $/heure (Secure). Un T4 AWS à 0,752 $/heure a 16 Gio et un débit plus faible (voir les pages de spécifications NVIDIA)."
+          },
+          {
+            "q": "Combien coûte l'exécution d'un LLM dans le cloud par million de tokens ?",
+            "a": "Cela dépend de la carte, du modèle et du taux d'occupation du GPU. Dans une mesure du tiers NoctHost (15 novembre 2026, Ollama, Llama 3.1 8B en Q4_K_M), une RTX 4000 Ada à 0,73 $/heure a généré environ 65 tokens par seconde, soit environ 322 000 tokens par dollar ou environ 3 $ par million de tokens. Une L4 à 1,16 $/heure a généré environ 51 tokens par seconde, soit environ 157 000 tokens par dollar ou environ 6 $ par million. Les deux valeurs supposent que le GPU génère sans pause."
           },
           {
             "q": "Les prix des GPU cloud sont-ils fixes ?",
@@ -1825,27 +2049,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Ignorer le PC hôte : un GPU demande une machine, une alimentation et un refroidissement absents du prix de la carte.",
           "Comparer des mémoires différentes : un T4 de 16 Gio et une RTX 4090 de 24 Go n'exécutent pas les mêmes modèles.",
           "Ne regarder qu'un seul niveau : la même RTX 4090 RunPod coûte environ 2,6 fois plus cher en Secure Cloud qu'en Community Cloud.",
-          "Supposer que le local est toujours moins cher : en dessous de environ 2 400 à 7 200 heures, la carte louée coûte moins dans cet exemple."
+          "Supposer que le local est toujours moins cher : en dessous de environ 2 400 à 7 200 heures, la carte louée coûte moins dans cet exemple.",
+          "Comparer les prix horaires sans regarder la vitesse : dans le test du tiers NoctHost, le même modèle 8B a donné environ 322 000 tokens par dollar sur une carte et environ 157 000 sur une autre."
         ]
       },
       "relatedReading": {
         "title": "Lectures complémentaires",
         "items": [
           "[Louer du GPU cloud ou acheter du matériel on-prem pour l'IA d'entreprise (2026)](/fr/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- la même question louer-vs-acheter à l'échelle de l'achat d'entreprise, avec un modèle complet de TCO et de seuil de rentabilité.",
+          "[IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026](/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- renseignez vos propres heures, votre tarif d'électricité et le prix du matériel.",
+          "[RunPod vs Vast.ai vs Lambda Labs pour l'inférence LLM 2026](/fr/local-llms/cloud-gpu-rental-comparison-2026)",
+          "[GPU vs ChatGPT Plus 2026 : quand l'achat d'un GPU rentabilise l'abonnement](/fr/local-llms/gpu-vs-ai-subscription-roi)",
+          "[Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB et alternatives](/fr/local-llms/best-budget-gpus-local-llm)",
+          "[LLMs locaux vs ChatGPT Plus 2026 : Comparaison tarifaire complète sur 7 niveaux](/fr/local-llms/local-llms-vs-chatgpt-plus)",
+          "[Multi-GPU LLMs Locaux 2026 : Exécuter les Modèles 70B sur 2+ GPUs avec vLLM et Ollama](/fr/local-llms/multi-gpu-local-llms)",
           "[Quand faut-il combiner inférence LLM locale et cloud ?](/fr/prompt-bites/hybrid-local-cloud-llm-strategy) -- la question d'architecture, une fois que vous savez déjà lequel est le moins cher.",
-          "[Comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) -- Vue d'ensemble des fournisseurs, avec l'[avis sur RunPod](/fr/power-local-llm/runpod-review) et l'[avis sur Vast.ai](/fr/power-local-llm/vast-ai-review).",
-          "[avis sur Clore.ai](/fr/power-local-llm/clore-ai-review) -- une option de place de marché GPU pour louer plutôt qu'acheter"
+          "Louer plutôt qu'acheter : [comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers), [test de RunPod](/fr/power-local-llm/runpod-review), [test de Vast.ai](/fr/power-local-llm/vast-ai-review) et [test de Clore.ai](/fr/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
         "title": "Sources",
         "items": [
-          "[Tarifs GPU RunPod](https://www.runpod.io/pricing), relevé le 2 novembre 2026",
-          "[Tarifs GPU Lambda](https://lambda.ai/pricing), relevé le 2 novembre 2026",
-          "[Tarifs GPU Droplets DigitalOcean](https://www.digitalocean.com/pricing/gpu-droplets), relevé le 2 novembre 2026",
-          "[Prix AWS EC2 g4dn.2xlarge (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), index tiers, relevé le 2 novembre 2026",
+          "[Tarifs GPU RunPod](https://www.runpod.io/pricing), relevé le 22 novembre 2026",
+          "[Tarifs GPU Lambda](https://lambda.com/pricing), relevé le 22 novembre 2026",
+          "[Tarifs GPU Droplets DigitalOcean](https://www.digitalocean.com/pricing/gpu-droplets), relevé le 22 novembre 2026",
+          "[Prix AWS EC2 g4dn.2xlarge (Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), index tiers, relevé le 22 novembre 2026",
           "[Spécifications NVIDIA GeForce RTX 4090](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) et [RTX 4070](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/)",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fourchettes de prix de la RTX 4090 neuve et d'occasion pour le prix d'achat de l'exemple (mis à jour le 2026-10-15)"
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fourchettes de prix de la RTX 4090 neuve et d'occasion pour le prix d'achat de l'exemple (mis à jour le 2026-10-15)",
+          "[NoctHost : tableau de vitesse GPU pour LLM](https://nocthost.com/gpu-llm-speed), benchmark de fournisseur d'un tiers, mesuré le 15 novembre 2026, relevé le 22 novembre 2026"
         ]
       }
     },
@@ -1853,7 +2084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "GPU local vs cloud pour LLM : seuil de rentabilité 2026",
-      "description": "GPU local ou cloud pour LLM : heures de rentabilité avec les prix RunPod, Lambda et AWS relevés le 2 novembre 2026, et la formule pour refaire le calcul.",
+      "description": "GPU local ou cloud pour LLM : heures de rentabilité avec les prix RunPod, Lambda et AWS relevés le 22 novembre 2026, et la formule pour refaire le calcul.",
       "url": "https://www.promptquorum.com/fr/local-llms/local-llm-vs-cloud-gpu-cost",
       "inLanguage": "fr",
       "datePublished": "2026-04-05",
@@ -1887,7 +2118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "name": "Puis-je utiliser des GPU cloud pour une inférence continue 24/7 ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui, mais c'est là que la location coûte le plus. Une RTX 4090 louée 8 760 heures coûte 2 978 $ par an chez RunPod Community Cloud ou 7 796 $ en Secure Cloud (relevé le 2 novembre 2026) ; la carte locale d'exemple coûte environ 552 $ par an d'électricité après l'achat."
+            "text": "Oui, mais c'est là que la location coûte le plus. Une RTX 4090 louée 8 760 heures coûte 2 978 $ par an chez RunPod Community Cloud ou 7 796 $ en Secure Cloud (relevé le 22 novembre 2026) ; la carte locale d'exemple coûte environ 552 $ par an d'électricité après l'achat."
           }
         },
         {
@@ -1904,6 +2135,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Comparez-le à un GPU de même mémoire. Pour une RTX 4090 (24 Go), c'est la RTX 4090 de RunPod à 0,34 $/heure (Community) ou 0,89 $/heure (Secure). Un T4 AWS à 0,752 $/heure a 16 Gio et un débit plus faible (voir les pages de spécifications NVIDIA)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte l'exécution d'un LLM dans le cloud par million de tokens ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela dépend de la carte, du modèle et du taux d'occupation du GPU. Dans une mesure du tiers NoctHost (15 novembre 2026, Ollama, Llama 3.1 8B en Q4_K_M), une RTX 4000 Ada à 0,73 $/heure a généré environ 65 tokens par seconde, soit environ 322 000 tokens par dollar ou environ 3 $ par million de tokens. Une L4 à 1,16 $/heure a généré environ 51 tokens par seconde, soit environ 157 000 tokens par dollar ou environ 6 $ par million. Les deux valeurs supposent que le GPU génère sans pause."
           }
         },
         {
@@ -1945,12 +2184,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           "@type": "Thing",
           "name": "RunPod RTX 4090",
-          "description": "0,34 $/heure en Community Cloud et 0,89 $/heure en Secure Cloud (relevé le 2 novembre 2026)."
+          "description": "0,34 $/heure en Community Cloud et 0,89 $/heure en Secure Cloud (relevé le 22 novembre 2026)."
         },
         {
           "@type": "Thing",
           "name": "Lambda A100 40 Go",
-          "description": "1,99 $/heure à la demande (relevé le 2 novembre 2026) ; adapté aux fine-tunings ponctuels."
+          "description": "1,99 $/heure à la demande (relevé le 22 novembre 2026) ; adapté aux fine-tunings ponctuels."
         }
       ]
     }
@@ -1963,11 +2202,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "title": "本地LLM与云GPU：哪个更便宜？",
     "heroImage": "/images/local-llm-vs-cloud-gpu-cost-overview-hero-zh.webp",
     "seoTitle": "LLM本地GPU与云GPU成本：盈亏平衡2026",
-    "intro": "**只有长期稳定使用，买GPU才比租GPU划算。以示例价2,000美元的RTX 4090计算，对比RunPod Secure Cloud（0.89美元/小时）约2,400小时回本，对比Community Cloud（0.34美元/小时）约7,200小时回本（供应商价格读取于2026年11月2日）。低于这个用量，在该模型下租用更便宜（模型未计入转售价值和主机费用）。**",
-    "metaDescription": "LLM用本地GPU还是云GPU更省钱：用2026年11月2日读取的RunPod、Lambda和AWS价格算出盈亏平衡小时数，并附计算公式供你自行重算。",
+    "intro": "**只有长期稳定使用，买GPU才比租GPU划算。以示例价2,000美元的RTX 4090计算，对比RunPod Secure Cloud（0.89美元/小时）约2,400小时回本，对比Community Cloud（0.34美元/小时）约7,200小时回本（供应商价格读取于2026年11月22日）。低于这个用量，在该模型下租用更便宜（模型未计入转售价值和主机费用）。**",
+    "metaDescription": "LLM用本地GPU还是云GPU更省钱：用2026年11月22日读取的RunPod、Lambda和AWS价格算出盈亏平衡小时数，并附计算公式供你自行重算。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
-    "leadAnswerBlock": "**只有长期稳定使用，买GPU才比租GPU划算。以示例价2,000美元的RTX 4090计算，对比RunPod Secure Cloud（0.89美元/小时）约2,400小时回本，对比Community Cloud（0.34美元/小时）约7,200小时回本（供应商价格读取于2026年11月2日）。低于这个用量，在该模型下租用更便宜（模型未计入转售价值和主机费用）。**",
+    "leadAnswerBlock": "**只有长期稳定使用，买GPU才比租GPU划算。以示例价2,000美元的RTX 4090计算，对比RunPod Secure Cloud（0.89美元/小时）约2,400小时回本，对比Community Cloud（0.34美元/小时）约7,200小时回本（供应商价格读取于2026年11月22日）。低于这个用量，在该模型下租用更便宜（模型未计入转售价值和主机费用）。**",
     "audience": "使用Ollama或LM Studio、正在决定买GPU还是租GPU的开发者",
     "readTime": "阅读约7分钟",
     "educationalLevel": "Intermediate",
@@ -1986,6 +2225,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "anchor": "#providers"
       },
       {
+        "label": "每token成本",
+        "anchor": "#tokens"
+      },
+      {
         "label": "1年与全天候运行成本",
         "anchor": "#one-year"
       },
@@ -2001,7 +2244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "snippetBlocks": [
           {
             "type": "one-sentence",
-            "text": "以示例价2,000美元购入的本地RTX 4090，对比租用的RTX 4090，在RunPod Secure Cloud（0.89美元/小时）约2,400小时回本，在Community Cloud（0.34美元/小时）约7,200小时回本（供应商价格读取于2026年11月2日）；低于这个用量，租用更便宜。"
+            "text": "以示例价2,000美元购入的本地RTX 4090，对比租用的RTX 4090，在RunPod Secure Cloud（0.89美元/小时）约2,400小时回本，在Community Cloud（0.34美元/小时）约7,200小时回本（供应商价格读取于2026年11月22日）；低于这个用量，租用更便宜。"
           },
           {
             "type": "plain-terms",
@@ -2015,6 +2258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "对比RunPod Secure Cloud的RTX 4090（0.89美元/小时）：约2,400小时回本",
           "全天候运行时，回本时间约为101天（Secure）或301天（Community）",
           "突发负载、多数买家难以获得的硬件（H100、B200）以及不想占用资金时，云更有优势",
+          "按token计，第三方NoctHost用Llama 3.1 8B的测量显示：RTX 4000 Ada（0.73美元/小时）每美元约322,000个token，L4（1.16美元/小时）约157,000个（2026年11月15日测量）",
           "购买价格、功耗和电价都是示例输入，不是市场数据，请换成你自己的数值"
         ]
       },
@@ -2024,8 +2268,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**本地GPU的成本是每小时电费，加上把购买价格摊到使用小时上的部分。**每小时电费＝功耗（kW）×每千瓦时电价。",
           "示例输入（请换成你自己的）：RTX 4090功耗450 W（NVIDIA的Total Graphics Power），电价0.14美元/kWh时为0.45 × 0.14 = 0.063美元/小时。RTX 4070功耗200 W，即0.028美元/小时。购买价2,000美元是[InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)追踪的全新RTX 4090挂牌价的下限（MSRP为1,599美元时挂牌价为2,000-3,000美元，来源更新于2026-10-15）；二手成交记录为2,575-3,010美元。回本所需小时数与实际支付价格成正比。",
-          "云端：RunPod列出的RTX 4090（24 GB）在Community Cloud为0.34美元/小时，在Secure Cloud为0.89美元/小时，读取于2026年11月2日。",
-          "Lambda列出的A6000（48 GB）为1.09美元/小时，A100（40 GB）为1.99美元/小时，均为每块GPU按需价格，读取于2026年11月2日。",
+          "云端：RunPod列出的RTX 4090（24 GB）在Community Cloud为0.34美元/小时，在Secure Cloud为0.89美元/小时，读取于2026年11月22日。",
+          "Lambda列出的A6000（48 GB）为1.09美元/小时，A100（40 GB）为1.99美元/小时，均为每块GPU按需价格，读取于2026年11月22日。",
           "云端价格会不经通知而变化，决定前请查看服务商页面。"
         ]
       },
@@ -2044,12 +2288,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "providers",
         "title": "云GPU服务商如何对比",
         "content": [
-          "**以下是2026年11月2日从各服务商页面读取的按需标价，按每GPU小时计，不含税。**",
-          "RunPod（Community / Secure）：RTX 4090 24 GB 0.34美元/小时 / 0.89美元/小时；A100 PCIe 80 GB 1.19美元/小时 / 1.79美元/小时；L40S 48 GB 0.79美元/小时 / 1.09美元/小时；RTX A6000 48 GB 0.33美元/小时 / 0.59美元/小时。",
-          "Lambda（单GPU实例）：A6000 48 GB 1.09美元/小时；A100 40 GB 1.99美元/小时；H100 PCIe 80 GB 3.29美元/小时；H100 SXM 80 GB 4.29美元/小时。",
+          "**以下是2026年11月22日从各服务商页面读取的按需标价，按每GPU小时计，不含税。**",
+          "RunPod（Community / Secure）：RTX 4090 24 GB 0.34美元/小时 / 0.89美元/小时；A100 PCIe 80 GB 1.19美元/小时 / 2.09美元/小时；L40S 48 GB 0.79美元/小时 / 1.09美元/小时；RTX A6000 48 GB 0.33美元/小时 / 0.69美元/小时。",
+          "Lambda（单GPU实例）：A6000 48 GB 1.09美元/小时；A100 40 GB 1.99美元/小时；H100 PCIe 80 GB 3.79美元/小时；H100 SXM 80 GB 4.89美元/小时。",
           "DigitalOcean GPU Droplets：RTX 6000 Ada 48 GB 1.57美元/小时；L40S 48 GB 1.57美元/小时；H100 80 GB 4.41美元/小时。",
-          "AWS EC2 g4dn.2xlarge（一块NVIDIA T4，16 GiB）：按需0.752美元/小时，1年预留0.474美元/小时，竞价0.311美元/小时，数据来自第三方价格索引Vantage。T4的显存更少、吞吐量更低（参见NVIDIA规格页面），因此不是同等对比。",
-          "要把这些标价转化为服务商的选择，可以[对比云GPU服务商](/zh/power-local-llm/best-cloud-gpu-providers)，或阅读[RunPod评测](/zh/power-local-llm/runpod-review)和[Vast.ai评测](/zh/power-local-llm/vast-ai-review)。 如需GPU市场型方案，请参阅[Clore.ai评测](/zh/power-local-llm/clore-ai-review)。"
+          "AWS EC2 g4dn.2xlarge（一块NVIDIA T4，16 GiB）：按需0.752美元/小时，1年预留0.474美元/小时，竞价0.259美元/小时，数据来自第三方价格索引Vantage。T4的显存更少、吞吐量更低（参见NVIDIA规格页面），因此不是同等对比。",
+          "如果更倾向于租用而不是购买，可以[对比云GPU提供商](/zh/power-local-llm/best-cloud-gpu-providers)，并阅读[RunPod评测](/zh/power-local-llm/runpod-review)、[Vast.ai评测](/zh/power-local-llm/vast-ai-review)和[Clore.ai评测](/zh/power-local-llm/clore-ai-review)。"
+        ]
+      },
+      "tokens": {
+        "id": "tokens",
+        "title": "云GPU每个token的成本是多少",
+        "content": [
+          "**每美元token数 = 每秒token数 × 3,600 ÷ 每小时价格，且仅在GPU不间断生成时成立。** 仅凭小时价格，无法知道这笔钱能换来多少输出。",
+          "本页唯一的实测速度来自第三方，属于厂商基准测试，不是PromptQuorum的测量：[NoctHost的GPU LLM速度表（第三方）](https://nocthost.com/gpu-llm-speed)。提供GPU服务器的NoctHost于2026年11月15日，为每块显卡各用一台全新云服务器，用Ollama运行Llama 3.1 8B（Q4_K_M，约5 GB）：先预热，再对每块显卡运行三次，temperature为0，生成256个新token，取中位数；速度为Ollama API返回的eval_count ÷ eval_duration。",
+          "RTX 4000 Ada（20 GB，Linode，0.73美元/小时）：约每秒65个token，每美元约322,000个token。",
+          "L4（24 GB，OVHcloud，1.16美元/小时）：约每秒51个token，每美元约157,000个token。",
+          "折合每百万个生成token约3美元和约6美元（PromptQuorum根据NoctHost数据计算）。",
+          "解读时请注意：只有两块显卡、一个8B模型，小时价格是NoctHost自己的（其页面未注明读取日期），且两块显卡都不在上面的价格列表中，因此这些数字不能直接套用到RTX 4090示例或更大的模型。空闲时间会推高实际成本：只有25%时间在生成的显卡，每个token的成本是满载时的四倍。",
+          "要把本地显卡放到同一尺度上，用你自己的每小时电费（示例RTX 4090约0.063美元）代替云价格套用该公式，并代入你用同一模型实测的每秒token数。这只是运行成本，不含购买价格。"
         ]
       },
       "one-year": {
@@ -2068,7 +2325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "可以用云GPU做全天候持续推理吗？",
-            "a": "可以，但这是租用最贵的场景。租用RTX 4090运行8,760小时，在RunPod Community Cloud每年2,978美元，在Secure Cloud为7,796美元（读取于2026年11月2日）；示例本地显卡购买后每年电费约552美元。"
+            "a": "可以，但这是租用最贵的场景。租用RTX 4090运行8,760小时，在RunPod Community Cloud每年2,978美元，在Secure Cloud为7,796美元（读取于2026年11月22日）；示例本地显卡购买后每年电费约552美元。"
           },
           {
             "q": "偶尔使用时，云GPU总是更便宜吗？",
@@ -2077,6 +2334,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "q": "我的GPU应该和哪个云端价格比？",
             "a": "和显存相同的GPU比。RTX 4090（24 GB）对应RunPod的RTX 4090：0.34美元/小时（Community）或0.89美元/小时（Secure）。AWS的T4（0.752美元/小时）只有16 GiB，吞吐量也更低（参见NVIDIA规格页面）。"
+          },
+          {
+            "q": "在云上运行LLM，每百万个token要花多少钱？",
+            "a": "取决于显卡、模型和GPU的繁忙程度。在第三方NoctHost的测量中（2026年11月15日，Ollama，Llama 3.1 8B，Q4_K_M），RTX 4000 Ada（0.73美元/小时）约每秒生成65个token，即每美元约322,000个token，约合每百万个token 3美元；L4（1.16美元/小时）约每秒生成51个token，即每美元约157,000个token，约合每百万个token 6美元。两者都假设GPU不间断生成。"
           },
           {
             "q": "云GPU价格是固定的吗？",
@@ -2100,27 +2361,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "忽略主机电脑：GPU需要机器、电源和散热，这些不在显卡价格里。",
           "比较不同显存容量：16 GiB的T4和24 GB的RTX 4090跑不了同样的模型。",
           "只看一个档位：RunPod同一款RTX 4090在Secure Cloud比在Community Cloud贵约2.6倍。",
-          "认为本地一定更便宜：在这个示例里，低于约2,400至7,200小时时，租用的显卡更便宜。"
+          "认为本地一定更便宜：在这个示例里，低于约2,400至7,200小时时，租用的显卡更便宜。",
+          "只比小时价格、不看速度：在第三方NoctHost的测试中，同一个8B模型在一块显卡上每美元约322,000个token，在另一块上约157,000个。"
         ]
       },
       "relatedReading": {
         "title": "相关阅读",
         "items": [
           "[租用GPU云 vs 购买本地硬件：企业AI TCO对比 2026](/zh/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) — 在企业采购规模下的同一个租用vs购买问题，附完整的TCO与盈亏平衡模型。",
+          "[本地AI vs 云端AI：成本计算器（自建 vs 租用）2026](/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 代入你自己的使用时长、电费和硬件价格。",
+          "[RunPod vs Vast.ai vs Lambda Labs：LLM推理云GPU租赁对比2026](/zh/local-llms/cloud-gpu-rental-comparison-2026)",
+          "[GPU vs ChatGPT Plus 2026:买GPU何时能收回订阅成本](/zh/local-llms/gpu-vs-ai-subscription-roi)",
+          "[本地LLM的最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm)",
+          "[本地LLM vs ChatGPT Plus 2026：7个价格级别完整对比](/zh/local-llms/local-llms-vs-chatgpt-plus)",
+          "[多GPU本地LLMs 2026：在2+个GPU上运行70B模型（vLLM和Ollama）](/zh/local-llms/multi-gpu-local-llms)",
           "[什么时候应该结合本地和云端LLM推理？](/zh/prompt-bites/hybrid-local-cloud-llm-strategy) — 在你已经知道哪个更便宜之后，如何设计架构的问题。",
-          "[对比云GPU服务商](/zh/power-local-llm/best-cloud-gpu-providers) -- 服务商概览，附[RunPod评测](/zh/power-local-llm/runpod-review)与[Vast.ai评测](/zh/power-local-llm/vast-ai-review)。",
-          "[Clore.ai评测](/zh/power-local-llm/clore-ai-review) -- 租用而非购买的GPU市场型方案"
+          "租用而非购买：[对比云GPU提供商](/zh/power-local-llm/best-cloud-gpu-providers)、[RunPod评测](/zh/power-local-llm/runpod-review)、[Vast.ai评测](/zh/power-local-llm/vast-ai-review)和[Clore.ai评测](/zh/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
         "title": "来源",
         "items": [
-          "[RunPod GPU价格](https://www.runpod.io/pricing)，读取于2026年11月2日",
-          "[Lambda GPU价格](https://lambda.ai/pricing)，读取于2026年11月2日",
-          "[DigitalOcean GPU Droplet价格](https://www.digitalocean.com/pricing/gpu-droplets)，读取于2026年11月2日",
-          "[AWS EC2 g4dn.2xlarge价格（Vantage）](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge)，第三方索引，读取于2026年11月2日",
+          "[RunPod GPU价格](https://www.runpod.io/pricing)，读取于2026年11月22日",
+          "[Lambda GPU价格](https://lambda.com/pricing)，读取于2026年11月22日",
+          "[DigitalOcean GPU Droplet价格](https://www.digitalocean.com/pricing/gpu-droplets)，读取于2026年11月22日",
+          "[AWS EC2 g4dn.2xlarge价格（Vantage）](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge)，第三方索引，读取于2026年11月22日",
           "[NVIDIA GeForce RTX 4090规格](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/)和[RTX 4070](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/)",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，示例购买价所用的全新与二手RTX 4090价格区间（2026-10-15更新）"
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，示例购买价所用的全新与二手RTX 4090价格区间（2026-10-15更新）",
+          "[NoctHost：GPU LLM速度表](https://nocthost.com/gpu-llm-speed)，第三方厂商基准测试，测量于2026年11月15日，读取于2026年11月22日"
         ]
       }
     },
@@ -2128,7 +2396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "LLM本地GPU与云GPU成本：盈亏平衡2026",
-      "description": "LLM用本地GPU还是云GPU更省钱：用2026年11月2日读取的RunPod、Lambda和AWS价格算出盈亏平衡小时数，并附计算公式供你自行重算。",
+      "description": "LLM用本地GPU还是云GPU更省钱：用2026年11月22日读取的RunPod、Lambda和AWS价格算出盈亏平衡小时数，并附计算公式供你自行重算。",
       "url": "https://www.promptquorum.com/zh/local-llms/local-llm-vs-cloud-gpu-cost",
       "inLanguage": "zh",
       "datePublished": "2026-04-05",
@@ -2162,7 +2430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "name": "可以用云GPU做全天候持续推理吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "可以，但这是租用最贵的场景。租用RTX 4090运行8,760小时，在RunPod Community Cloud每年2,978美元，在Secure Cloud为7,796美元（读取于2026年11月2日）；示例本地显卡购买后每年电费约552美元。"
+            "text": "可以，但这是租用最贵的场景。租用RTX 4090运行8,760小时，在RunPod Community Cloud每年2,978美元，在Secure Cloud为7,796美元（读取于2026年11月22日）；示例本地显卡购买后每年电费约552美元。"
           }
         },
         {
@@ -2179,6 +2447,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "和显存相同的GPU比。RTX 4090（24 GB）对应RunPod的RTX 4090：0.34美元/小时（Community）或0.89美元/小时（Secure）。AWS的T4（0.752美元/小时）只有16 GiB，吞吐量也更低（参见NVIDIA规格页面）。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "在云上运行LLM，每百万个token要花多少钱？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "取决于显卡、模型和GPU的繁忙程度。在第三方NoctHost的测量中（2026年11月15日，Ollama，Llama 3.1 8B，Q4_K_M），RTX 4000 Ada（0.73美元/小时）约每秒生成65个token，即每美元约322,000个token，约合每百万个token 3美元；L4（1.16美元/小时）约每秒生成51个token，即每美元约157,000个token，约合每百万个token 6美元。两者都假设GPU不间断生成。"
           }
         },
         {
@@ -2220,12 +2496,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           "@type": "Thing",
           "name": "RunPod RTX 4090",
-          "description": "Community Cloud 0.34美元/小时，Secure Cloud 0.89美元/小时（读取于2026年11月2日）。"
+          "description": "Community Cloud 0.34美元/小时，Secure Cloud 0.89美元/小时（读取于2026年11月22日）。"
         },
         {
           "@type": "Thing",
           "name": "Lambda A100 40 GB",
-          "description": "按需1.99美元/小时（读取于2026年11月2日），适合一次性微调任务。"
+          "description": "按需1.99美元/小时（读取于2026年11月22日），适合一次性微调任务。"
         }
       ]
     }
@@ -2238,11 +2514,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     "title": "로컬 LLM vs 클라우드 GPU: 무엇이 더 저렴한가",
     "heroImage": "/images/local-llm-vs-cloud-gpu-cost-overview-hero-ko.webp",
     "seoTitle": "LLM용 로컬 GPU vs 클라우드 GPU 비용: 손익분기 2026",
-    "intro": "**GPU를 사는 편이 유리한 것은 꾸준히 쓸 때뿐입니다. 예시 가격 2,000달러의 RTX 4090은 RunPod Secure Cloud(0.89달러/시간) 대비 약 2,400시간, Community Cloud(0.34달러/시간) 대비 약 7,200시간이면 본전입니다(공급업체 가격은 2026년 11월 2일 확인). 그 아래로 쓰면 이 모델에서는 대여가 더 쌉니다(재판매 가치와 호스트 PC 비용은 반영하지 않음).**",
-    "metaDescription": "LLM에 로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지, 2026년 11월 2일 확인한 RunPod·Lambda·AWS 가격으로 손익분기 시간을 계산하고 공식도 제공합니다.",
+    "intro": "**GPU를 사는 편이 유리한 것은 꾸준히 쓸 때뿐입니다. 예시 가격 2,000달러의 RTX 4090은 RunPod Secure Cloud(0.89달러/시간) 대비 약 2,400시간, Community Cloud(0.34달러/시간) 대비 약 7,200시간이면 본전입니다(공급업체 가격은 2026년 11월 22일 확인). 그 아래로 쓰면 이 모델에서는 대여가 더 쌉니다(재판매 가치와 호스트 PC 비용은 반영하지 않음).**",
+    "metaDescription": "LLM에 로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지, 2026년 11월 22일 확인한 RunPod·Lambda·AWS 가격으로 손익분기 시간을 계산하고 공식도 제공합니다.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
-    "leadAnswerBlock": "**GPU를 사는 편이 유리한 것은 꾸준히 쓸 때뿐입니다. 예시 가격 2,000달러의 RTX 4090은 RunPod Secure Cloud(0.89달러/시간) 대비 약 2,400시간, Community Cloud(0.34달러/시간) 대비 약 7,200시간이면 본전입니다(공급업체 가격은 2026년 11월 2일 확인). 그 아래로 쓰면 이 모델에서는 대여가 더 쌉니다(재판매 가치와 호스트 PC 비용은 반영하지 않음).**",
+    "leadAnswerBlock": "**GPU를 사는 편이 유리한 것은 꾸준히 쓸 때뿐입니다. 예시 가격 2,000달러의 RTX 4090은 RunPod Secure Cloud(0.89달러/시간) 대비 약 2,400시간, Community Cloud(0.34달러/시간) 대비 약 7,200시간이면 본전입니다(공급업체 가격은 2026년 11월 22일 확인). 그 아래로 쓰면 이 모델에서는 대여가 더 쌉니다(재판매 가치와 호스트 PC 비용은 반영하지 않음).**",
     "audience": "Ollama나 LM Studio를 쓰며 GPU를 살지 빌릴지 정하려는 개발자",
     "readTime": "읽는 시간 7분",
     "educationalLevel": "Intermediate",
@@ -2261,6 +2537,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "anchor": "#providers"
       },
       {
+        "label": "token당 비용",
+        "anchor": "#tokens"
+      },
+      {
         "label": "1년 및 24시간 365일 비용",
         "anchor": "#one-year"
       },
@@ -2276,7 +2556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "snippetBlocks": [
           {
             "type": "one-sentence",
-            "text": "예시로 2,000달러에 산 로컬 RTX 4090은 대여한 RTX 4090 대비 RunPod Secure Cloud(0.89달러/시간)에서 약 2,400시간, Community Cloud(0.34달러/시간)에서 약 7,200시간이면 본전이며(공급업체 가격은 2026년 11월 2일 확인), 그 아래로 쓰면 대여가 더 쌉니다."
+            "text": "예시로 2,000달러에 산 로컬 RTX 4090은 대여한 RTX 4090 대비 RunPod Secure Cloud(0.89달러/시간)에서 약 2,400시간, Community Cloud(0.34달러/시간)에서 약 7,200시간이면 본전이며(공급업체 가격은 2026년 11월 22일 확인), 그 아래로 쓰면 대여가 더 쌉니다."
           },
           {
             "type": "plain-terms",
@@ -2290,6 +2570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "RunPod Secure Cloud RTX 4090(0.89달러/시간) 대비: 약 2,400시간 후 손익분기",
           "24시간 365일 가동하면 손익분기는 약 101일(Secure) 또는 약 301일(Community)",
           "일시적 부하, 대부분의 구매자가 구하기 어려운 하드웨어(H100, B200), 자본을 묶고 싶지 않을 때는 클라우드가 유리",
+          "token당으로는 제3자 NoctHost의 Llama 3.1 8B 측정에서 RTX 4000 Ada(0.73달러/시간)는 1달러당 약 322,000 token, L4(1.16달러/시간)는 약 157,000 token이었습니다(2026년 11월 15일 측정)",
           "구매 가격, 소비 전력, 전기 요금은 예시 입력이며 시장 데이터가 아닙니다. 본인 값으로 바꾸세요"
         ]
       },
@@ -2299,8 +2580,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "content": [
           "**로컬 GPU의 비용은 시간당 전기료에, 사용 시간으로 나눈 구매 가격을 더한 값입니다.** 시간당 전기료 = 소비 전력(kW) × kWh당 전기 요금.",
           "예시 입력(본인 값으로 교체): RTX 4090의 소비 전력은 450 W(NVIDIA Total Graphics Power)이고, 0.14달러/kWh이면 0.45 × 0.14 = 0.063달러/시간입니다. RTX 4070은 200 W로 0.028달러/시간입니다. 구매가 2,000달러는 [InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)이 추적하는 신품 RTX 4090 매물 가격의 하단입니다(MSRP 1,599달러 대비 2,000~3,000달러, 출처 갱신일 2026-10-15). 중고 낙찰 기록은 2,575~3,010달러였습니다. 손익분기 시간은 실제로 지불하는 가격에 비례해 늘어납니다.",
-          "클라우드: RunPod은 RTX 4090(24 GB)을 Community Cloud 0.34달러/시간, Secure Cloud 0.89달러/시간로 게시합니다(2026년 11월 2일 확인).",
-          "Lambda는 A6000(48 GB)을 1.09달러/시간, A100(40 GB)을 1.99달러/시간로 게시합니다(GPU 1개당 온디맨드, 2026년 11월 2일 확인).",
+          "클라우드: RunPod은 RTX 4090(24 GB)을 Community Cloud 0.34달러/시간, Secure Cloud 0.89달러/시간로 게시합니다(2026년 11월 22일 확인).",
+          "Lambda는 A6000(48 GB)을 1.09달러/시간, A100(40 GB)을 1.99달러/시간로 게시합니다(GPU 1개당 온디맨드, 2026년 11월 22일 확인).",
           "클라우드 가격은 예고 없이 바뀌므로 결정하기 전에 제공업체 페이지를 확인하세요."
         ]
       },
@@ -2319,12 +2600,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "id": "providers",
         "title": "클라우드 GPU 제공업체는 어떻게 비교되는가",
         "content": [
-          "**아래 가격은 2026년 11월 2일에 각 제공업체 페이지에서 확인한, 세금 제외 온디맨드 GPU 시간당 정가입니다.**",
-          "RunPod(Community / Secure): RTX 4090 24 GB 0.34달러/시간 / 0.89달러/시간, A100 PCIe 80 GB 1.19달러/시간 / 1.79달러/시간, L40S 48 GB 0.79달러/시간 / 1.09달러/시간, RTX A6000 48 GB 0.33달러/시간 / 0.59달러/시간.",
-          "Lambda(GPU 1개 인스턴스): A6000 48 GB 1.09달러/시간, A100 40 GB 1.99달러/시간, H100 PCIe 80 GB 3.29달러/시간, H100 SXM 80 GB 4.29달러/시간.",
+          "**아래 가격은 2026년 11월 22일에 각 제공업체 페이지에서 확인한, 세금 제외 온디맨드 GPU 시간당 정가입니다.**",
+          "RunPod(Community / Secure): RTX 4090 24 GB 0.34달러/시간 / 0.89달러/시간, A100 PCIe 80 GB 1.19달러/시간 / 2.09달러/시간, L40S 48 GB 0.79달러/시간 / 1.09달러/시간, RTX A6000 48 GB 0.33달러/시간 / 0.69달러/시간.",
+          "Lambda(GPU 1개 인스턴스): A6000 48 GB 1.09달러/시간, A100 40 GB 1.99달러/시간, H100 PCIe 80 GB 3.79달러/시간, H100 SXM 80 GB 4.89달러/시간.",
           "DigitalOcean GPU Droplets: RTX 6000 Ada 48 GB 1.57달러/시간, L40S 48 GB 1.57달러/시간, H100 80 GB 4.41달러/시간.",
-          "AWS EC2 g4dn.2xlarge(NVIDIA T4 1개, 16 GiB): 온디맨드 0.752달러/시간, 1년 예약 0.474달러/시간, 스팟 0.311달러/시간(제3자 가격 지수 Vantage 기준). T4는 RTX 4090보다 메모리가 적고 처리량이 낮아(NVIDIA 사양 페이지 참조) 동등한 비교가 아닙니다.",
-          "이 정가를 업체 선택으로 연결하려면 [클라우드 GPU 업체 비교](/ko/power-local-llm/best-cloud-gpu-providers)를 보거나 [RunPod 리뷰](/ko/power-local-llm/runpod-review)와 [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review)를 읽어 보십시오. GPU 마켓플레이스 선택지는 [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review)를 참고하십시오."
+          "AWS EC2 g4dn.2xlarge(NVIDIA T4 1개, 16 GiB): 온디맨드 0.752달러/시간, 1년 예약 0.474달러/시간, 스팟 0.259달러/시간(제3자 가격 지수 Vantage 기준). T4는 RTX 4090보다 메모리가 적고 처리량이 낮아(NVIDIA 사양 페이지 참조) 동등한 비교가 아닙니다.",
+          "구매 대신 대여를 선호하신다면 [클라우드 GPU 제공업체 비교](/ko/power-local-llm/best-cloud-gpu-providers)와 [RunPod 리뷰](/ko/power-local-llm/runpod-review), [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review), [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review)를 참고하십시오."
+        ]
+      },
+      "tokens": {
+        "id": "tokens",
+        "title": "클라우드 GPU는 token당 비용이 얼마인가",
+        "content": [
+          "**1달러당 token 수 = 초당 token 수 × 3,600 ÷ 시간당 가격이며, GPU가 쉬지 않고 생성하는 동안에만 성립합니다.** 시간당 가격만으로는 그 가격에 얼마나 많은 출력을 얻는지 알 수 없습니다.",
+          "이 페이지에서 실측한 속도는 제3자의 것뿐이며, PromptQuorum의 측정이 아닌 벤더 벤치마크입니다: [NoctHost GPU LLM 속도 표(제3자)](https://nocthost.com/gpu-llm-speed). GPU 서버를 제공하는 NoctHost는 2026년 11월 15일에 카드마다 새 클라우드 서버를 하나씩 사용해 Ollama로 Llama 3.1 8B(Q4_K_M, 약 5 GB)를 실행했습니다. 워밍업 후 카드당 3회, temperature 0, 새 token 256개로 측정해 중앙값을 보고했으며, 속도는 Ollama API의 eval_count ÷ eval_duration입니다.",
+          "RTX 4000 Ada(20 GB, Linode, 0.73달러/시간): 초당 약 65 token, 1달러당 약 322,000 token.",
+          "L4(24 GB, OVHcloud, 1.16달러/시간): 초당 약 51 token, 1달러당 약 157,000 token.",
+          "100만 생성 token당으로 환산하면 각각 약 3달러와 약 6달러입니다(NoctHost 수치로 PromptQuorum이 계산).",
+          "해석할 때 유의하십시오. 카드는 두 장, 모델은 8B 하나이고, 시간당 가격은 NoctHost 자체 가격이며(해당 페이지에 확인 날짜 없음), 두 카드 모두 위 가격 목록에 없습니다. 따라서 RTX 4090 예시나 더 큰 모델에는 그대로 적용되지 않습니다. 유휴 시간은 실제 비용을 높입니다. 시간의 25%만 생성하는 카드는 token당 비용이 4배입니다.",
+          "로컬 카드를 같은 기준에 놓으려면 클라우드 가격 대신 본인의 시간당 전기 요금(예시 RTX 4090은 약 0.063달러)을 공식에 넣고, 같은 모델로 직접 측정한 초당 token 수를 사용하십시오. 구매 가격을 제외한 운영 비용일 뿐입니다."
         ]
       },
       "one-year": {
@@ -2343,7 +2637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "faqs": [
           {
             "q": "클라우드 GPU를 24시간 365일 연속 추론에 쓸 수 있나요?",
-            "a": "쓸 수 있지만, 대여 비용이 가장 커지는 경우입니다. RTX 4090을 8,760시간 빌리면 RunPod Community Cloud에서 연 2,978달러, Secure Cloud에서 7,796달러입니다(2026년 11월 2일 확인). 예시 로컬 카드는 구매 후 전기료가 연 약 552달러입니다."
+            "a": "쓸 수 있지만, 대여 비용이 가장 커지는 경우입니다. RTX 4090을 8,760시간 빌리면 RunPod Community Cloud에서 연 2,978달러, Secure Cloud에서 7,796달러입니다(2026년 11월 22일 확인). 예시 로컬 카드는 구매 후 전기료가 연 약 552달러입니다."
           },
           {
             "q": "가끔 쓸 때는 클라우드 GPU가 항상 더 싼가요?",
@@ -2352,6 +2646,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             "q": "내 GPU는 어떤 클라우드 가격과 비교해야 하나요?",
             "a": "메모리가 같은 GPU와 비교하세요. RTX 4090(24 GB)이라면 RunPod RTX 4090의 0.34달러/시간(Community) 또는 0.89달러/시간(Secure)입니다. AWS T4(0.752달러/시간)는 16 GiB이고 처리량이 낮습니다(NVIDIA 사양 페이지 참조)."
+          },
+          {
+            "q": "클라우드에서 LLM을 실행하면 100만 token당 비용이 얼마입니까?",
+            "a": "카드, 모델, GPU 가동률에 따라 달라집니다. 제3자 NoctHost의 측정(2026년 11월 15일, Ollama, Llama 3.1 8B Q4_K_M)에서 RTX 4000 Ada(0.73달러/시간)는 초당 약 65 token을 생성해 1달러당 약 322,000 token, 100만 token당 약 3달러였습니다. L4(1.16달러/시간)는 초당 약 51 token으로 1달러당 약 157,000 token, 100만 token당 약 6달러였습니다. 두 값 모두 GPU가 쉬지 않고 생성한다고 가정합니다."
           },
           {
             "q": "클라우드 GPU 가격은 고정인가요?",
@@ -2375,32 +2673,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "호스트 PC 무시하기: GPU에는 PC, 파워서플라이, 쿨링이 필요하며 카드 가격에 포함되지 않습니다.",
           "메모리 크기가 다른 것을 비교하기: 16 GiB T4와 24 GB RTX 4090은 같은 모델을 돌리지 못합니다.",
           "한 가지 등급만 보기: RunPod의 같은 RTX 4090이 Secure Cloud에서는 Community Cloud보다 약 2.6배 비쌉니다.",
-          "로컬이 항상 싸다고 가정하기: 이 예시에서는 약 2,400~7,200시간 미만이면 빌리는 카드가 더 쌉니다."
+          "로컬이 항상 싸다고 가정하기: 이 예시에서는 약 2,400~7,200시간 미만이면 빌리는 카드가 더 쌉니다.",
+          "속도를 보지 않고 시간당 가격만 비교하기: 제3자 NoctHost 테스트에서 같은 8B 모델이 한 카드에서는 1달러당 약 322,000 token, 다른 카드에서는 약 157,000 token이었습니다."
         ]
       },
       "relatedReading": {
         "title": "관련 읽기",
         "items": [
           "[GPU 클라우드 임대 vs 온프레미스 구매: 기업 AI TCO 비교 (2026)](/ko/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- 기업 조달 규모에서의 같은 임대 대 구매 질문을, 완전한 TCO 손익분기 모델과 함께.",
+          "[로컬 AI vs 클라우드 AI: 비용 계산기(구매 vs 렌탈) 2026](/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- 본인의 사용 시간, 전기 요금, 하드웨어 가격을 넣어 계산합니다.",
           "[클라우드 GPU 렌탈 비교: RunPod vs Vast.ai vs Lambda Labs](/ko/local-llms/cloud-gpu-rental-comparison-2026)",
           "[GPU 구매 vs AI 구독: 어느 쪽이 더 이득입니까?](/ko/local-llms/gpu-vs-ai-subscription-roi)",
           "[로컬 LLM을 위한 최고의 보급형 GPU](/ko/local-llms/best-budget-gpus-local-llm)",
           "[로컬 LLM vs ChatGPT Plus 비용 비교](/ko/local-llms/local-llms-vs-chatgpt-plus)",
           "[멀티 GPU 로컬 LLM: 단일 GPU를 넘어서는 확장](/ko/local-llms/multi-gpu-local-llms)",
           "[로컬과 클라우드 LLM 추론을 언제 결합해야 할까요?](/ko/prompt-bites/hybrid-local-cloud-llm-strategy) -- 어느 쪽이 더 저렴한지 이미 알고 난 뒤의 아키텍처 문제.",
-          "[클라우드 GPU 업체 비교](/ko/power-local-llm/best-cloud-gpu-providers) -- 업체 개요와 [RunPod 리뷰](/ko/power-local-llm/runpod-review), [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review).",
-          "[Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review) -- 구매 대신 대여할 수 있는 GPU 마켓플레이스 선택지"
+          "구매 대신 대여: [클라우드 GPU 제공업체 비교](/ko/power-local-llm/best-cloud-gpu-providers), [RunPod 리뷰](/ko/power-local-llm/runpod-review), [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review), [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review)"
         ]
       },
       "sources": {
         "title": "출처",
         "items": [
-          "[RunPod GPU 가격](https://www.runpod.io/pricing), 2026년 11월 2일 확인",
-          "[Lambda GPU 가격](https://lambda.ai/pricing), 2026년 11월 2일 확인",
-          "[DigitalOcean GPU Droplet 가격](https://www.digitalocean.com/pricing/gpu-droplets), 2026년 11월 2일 확인",
-          "[AWS EC2 g4dn.2xlarge 가격(Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), 제3자 지수, 2026년 11월 2일 확인",
+          "[RunPod GPU 가격](https://www.runpod.io/pricing), 2026년 11월 22일 확인",
+          "[Lambda GPU 가격](https://lambda.com/pricing), 2026년 11월 22일 확인",
+          "[DigitalOcean GPU Droplet 가격](https://www.digitalocean.com/pricing/gpu-droplets), 2026년 11월 22일 확인",
+          "[AWS EC2 g4dn.2xlarge 가격(Vantage)](https://instances.vantage.sh/aws/ec2/g4dn.2xlarge), 제3자 지수, 2026년 11월 22일 확인",
           "[NVIDIA GeForce RTX 4090 사양](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/) 및 [RTX 4070](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/)",
-          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 예시 구매가에 사용한 신품·중고 RTX 4090 가격대(2026-10-15 갱신)"
+          "[InsiderLLM: NVIDIA GPU Prices Are Rising](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 예시 구매가에 사용한 신품·중고 RTX 4090 가격대(2026-10-15 갱신)",
+          "[NoctHost: GPU LLM 속도 표](https://nocthost.com/gpu-llm-speed), 제3자 벤더 벤치마크, 2026년 11월 15일 측정, 2026년 11월 22일 확인"
         ]
       }
     },
@@ -2408,7 +2708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "LLM용 로컬 GPU vs 클라우드 GPU 비용: 손익분기 2026",
-      "description": "LLM에 로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지, 2026년 11월 2일 확인한 RunPod·Lambda·AWS 가격으로 손익분기 시간을 계산하고 공식도 제공합니다.",
+      "description": "LLM에 로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지, 2026년 11월 22일 확인한 RunPod·Lambda·AWS 가격으로 손익분기 시간을 계산하고 공식도 제공합니다.",
       "url": "https://www.promptquorum.com/ko/local-llms/local-llm-vs-cloud-gpu-cost",
       "inLanguage": "ko",
       "datePublished": "2026-04-05",
@@ -2442,7 +2742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "name": "클라우드 GPU를 24시간 365일 연속 추론에 쓸 수 있나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "쓸 수 있지만, 대여 비용이 가장 커지는 경우입니다. RTX 4090을 8,760시간 빌리면 RunPod Community Cloud에서 연 2,978달러, Secure Cloud에서 7,796달러입니다(2026년 11월 2일 확인). 예시 로컬 카드는 구매 후 전기료가 연 약 552달러입니다."
+            "text": "쓸 수 있지만, 대여 비용이 가장 커지는 경우입니다. RTX 4090을 8,760시간 빌리면 RunPod Community Cloud에서 연 2,978달러, Secure Cloud에서 7,796달러입니다(2026년 11월 22일 확인). 예시 로컬 카드는 구매 후 전기료가 연 약 552달러입니다."
           }
         },
         {
@@ -2459,6 +2759,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "메모리가 같은 GPU와 비교하세요. RTX 4090(24 GB)이라면 RunPod RTX 4090의 0.34달러/시간(Community) 또는 0.89달러/시간(Secure)입니다. AWS T4(0.752달러/시간)는 16 GiB이고 처리량이 낮습니다(NVIDIA 사양 페이지 참조)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "클라우드에서 LLM을 실행하면 100만 token당 비용이 얼마입니까?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "카드, 모델, GPU 가동률에 따라 달라집니다. 제3자 NoctHost의 측정(2026년 11월 15일, Ollama, Llama 3.1 8B Q4_K_M)에서 RTX 4000 Ada(0.73달러/시간)는 초당 약 65 token을 생성해 1달러당 약 322,000 token, 100만 token당 약 3달러였습니다. L4(1.16달러/시간)는 초당 약 51 token으로 1달러당 약 157,000 token, 100만 token당 약 6달러였습니다. 두 값 모두 GPU가 쉬지 않고 생성한다고 가정합니다."
           }
         },
         {
@@ -2500,12 +2808,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           "@type": "Thing",
           "name": "RunPod RTX 4090",
-          "description": "Community Cloud 0.34달러/시간, Secure Cloud 0.89달러/시간(2026년 11월 2일 확인)."
+          "description": "Community Cloud 0.34달러/시간, Secure Cloud 0.89달러/시간(2026년 11월 22일 확인)."
         },
         {
           "@type": "Thing",
           "name": "Lambda A100 40 GB",
-          "description": "온디맨드 1.99달러/시간(2026년 11월 2일 확인). 1회성 파인튜닝에 적합합니다."
+          "description": "온디맨드 1.99달러/시간(2026년 11월 22일 확인). 1회성 파인튜닝에 적합합니다."
         }
       ]
     }

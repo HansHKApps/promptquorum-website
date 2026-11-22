@@ -1,0 +1,40 @@
+name: llms.txt Weekly Refresh
+
+# public/llms.txt is a hand-maintained static file; its hub counts and language
+# count drift as content grows. Runs scripts/refresh-llms-txt.mjs every Sunday.
+# The AI briefing download itself is built live in the browser (src/lib/aiBriefing.ts)
+# and the search index is rebuilt on every deploy, so neither needs a job.
+
+on:
+  schedule:
+    - cron: '41 6 * * 0' # Sundays ~06:41 UTC
+  workflow_dispatch: {}
+
+concurrency:
+  group: llms-txt-weekly
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: Refresh llms.txt
+        run: node scripts/refresh-llms-txt.mjs
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/llms.txt
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "chore(llms): weekly llms.txt refresh"
+          git push

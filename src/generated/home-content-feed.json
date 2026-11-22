@@ -14987,7 +14987,7 @@
   {
     "lang": "en",
     "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
-    "excerpt": "RunPod vs Vast.ai vs Lambda Labs for LLM inference: RTX 4090, A100, H100, RTX 5090 hourly pricing, uptime SLA, and GDPR compliance compared.",
+    "excerpt": "RunPod vs Vast.ai vs Lambda Labs for LLM inference: RTX 4090, RTX 5090, A100 and H100 hourly prices, billing and regions compared, read 22 November 2026.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "url": "/local-llms/cloud-gpu-rental-comparison-2026",
@@ -14996,7 +14996,7 @@
   {
     "lang": "de",
     "title": "RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz 2026",
-    "excerpt": "RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz: Stundenpreise für RTX 4090, A100, H100, RTX 5090, Verfügbarkeits-SLA und DSGVO-Konformität. Aktualisiert August 2026.",
+    "excerpt": "RunPod, Vast.ai und Lambda Labs für LLM-Inferenz: Stundenpreise für RTX 4090, 5090, A100 und H100, Abrechnung und Regionen, Stand 22. November 2026.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "url": "/de/local-llms/cloud-gpu-rental-comparison-2026",
@@ -15005,7 +15005,7 @@
   {
     "lang": "fr",
     "title": "RunPod vs Vast.ai vs Lambda Labs pour l'inférence LLM 2026",
-    "excerpt": "RunPod vs Vast.ai vs Lambda Labs pour l'inférence LLM : tarifs horaires RTX 4090, A100, H100, RTX 5090, SLA de disponibilité et conformité RGPD. Mis à jour août 2026.",
+    "excerpt": "RunPod, Vast.ai et Lambda Labs pour l'inférence LLM : prix horaires RTX 4090, 5090, A100 et H100, facturation et régions, relevés le 22 novembre 2026.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "url": "/fr/local-llms/cloud-gpu-rental-comparison-2026",
@@ -15014,7 +15014,7 @@
   {
     "lang": "ja",
     "title": "RunPod vs Vast.ai vs Lambda Labs：LLM推論向けGPUレンタル比較2026",
-    "excerpt": "LLM推論向けRunPod・Vast.ai・Lambda Labs比較:RTX 4090・A100・H100・RTX 5090の時間料金、稼働率SLA、GDPR対応。",
+    "excerpt": "RunPod・Vast.ai・Lambda LabsのGPUレンタル料金を比較。RTX 4090・5090・A100・H100の時間単価、課金方式、リージョンを2026年11月22日時点で確認しました。",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "url": "/ja/local-llms/cloud-gpu-rental-comparison-2026",
@@ -15023,7 +15023,7 @@
   {
     "lang": "zh",
     "title": "RunPod vs Vast.ai vs Lambda Labs：LLM推理云GPU租赁对比2026",
-    "excerpt": "面向LLM推理的RunPod、Vast.ai、Lambda Labs对比:RTX 4090、A100、H100、RTX 5090的每小时价格、正常运行时间SLA、GDPR合规性。",
+    "excerpt": "对比RunPod、Vast.ai和Lambda Labs用于LLM推理的GPU租赁价格：RTX 4090、5090、A100、H100每小时价格、计费方式与区域，数据读取于2026年11月22日。",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "url": "/zh/local-llms/cloud-gpu-rental-comparison-2026",
@@ -15031,8 +15031,8 @@
   },
   {
     "lang": "es",
-    "title": "RunPod vs Vast.ai vs Lambda Labs para Inferencia LLM 2026",
-    "excerpt": "RunPod vs Vast.ai vs Lambda Labs para inferencia LLM: precios por hora de RTX 4090, A100, H100 y RTX 5090, SLA de uptime y cumplimiento GDPR.",
+    "title": "RunPod vs Vast.ai vs Lambda Labs para inferencia LLM 2026",
+    "excerpt": "RunPod, Vast.ai y Lambda Labs para inferencia LLM: precios por hora de RTX 4090, 5090, A100 y H100, facturación y regiones, al 22 de noviembre de 2026.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "url": "/es/local-llms/cloud-gpu-rental-comparison-2026",
@@ -15040,8 +15040,8 @@
   },
   {
     "lang": "pt",
-    "title": "Aluguel de GPU na Nuvem 2026: RunPod vs Vast.ai vs Lambda Labs",
-    "excerpt": "Compare RunPod, Vast.ai e Lambda Labs para inferência LLM: preços ($0,34–$3,99/hr), SLA de uptime, conformidade LGPD e tempo de configuração. 2026.",
+    "title": "RunPod vs Vast.ai vs Lambda Labs para inferência de LLM 2026",
+    "excerpt": "RunPod, Vast.ai e Lambda Labs para inferência de LLM: preços por hora de RTX 4090, 5090, A100 e H100, cobrança e regiões, em 22 de novembro de 2026.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "url": "/pt/local-llms/cloud-gpu-rental-comparison-2026",
@@ -15049,8 +15049,8 @@
   },
   {
     "lang": "ar",
-    "title": "RunPod مقابل Vast.ai مقابل Lambda Labs لاستدلال LLM 2026",
-    "excerpt": "RunPod مقابل Vast.ai مقابل Lambda Labs لاستدلال LLM: أسعار RTX 4090 وA100 وH100 وRTX 5090 بالساعة، واتفاقية وقت التشغيل، وامتثال GDPR. محدَّثة أغسطس 2026.",
+    "title": "مقارنة ⁨RunPod⁩ و⁨Vast.ai⁩ و⁨Lambda Labs⁩ لاستدلال ⁨LLM⁩ 2026",
+    "excerpt": "مقارنة ⁨RunPod⁩ و⁨Vast.ai⁩ و⁨Lambda Labs⁩ لاستدلال ⁨LLM⁩: أسعار الساعة لبطاقات ⁨RTX 4090⁩ و⁨A100⁩ و⁨H100⁩ والفوترة والمناطق، 22 نوفمبر 2026.",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "url": "/ar/local-llms/cloud-gpu-rental-comparison-2026",
@@ -15058,8 +15058,8 @@
   },
   {
     "lang": "ko",
-    "title": "클라우드 GPU 렌탈 2026: RunPod vs Vast.ai vs Lambda Labs",
-    "excerpt": "로컬 LLM 추론을 위한 RunPod, Vast.ai, Lambda Labs 비교: 가격($0.34–$3.99/시간), 가동률 SLA, GDPR 준수 여부, 설정 시간.",
+    "title": "RunPod vs Vast.ai vs Lambda Labs: LLM 추론용 GPU 렌탈 비교 2026",
+    "excerpt": "RunPod, Vast.ai, Lambda Labs의 LLM 추론용 GPU 렌탈 가격 비교. RTX 4090·5090·A100·H100 시간당 요금과 과금, 리전(2026년 11월 22일 기준).",
     "publishDate": "2026-05-17",
     "dateModified": "2026-11-22",
     "url": "/ko/local-llms/cloud-gpu-rental-comparison-2026",
@@ -15149,7 +15149,7 @@
   {
     "lang": "en",
     "title": "Local LLM vs Cloud GPU: What Is Cheaper?",
-    "excerpt": "Local GPU vs cloud GPU cost for LLMs: break-even hours using RunPod, Lambda and AWS prices read 2 November 2026, plus the formula to redo it.",
+    "excerpt": "Local GPU vs cloud GPU cost for LLMs: break-even hours using RunPod, Lambda and AWS prices read 22 November 2026, plus the formula to redo it.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
     "url": "/local-llms/local-llm-vs-cloud-gpu-cost",
@@ -15158,7 +15158,7 @@
   {
     "lang": "de",
     "title": "Lokale LLMs vs. Cloud-GPU: Was ist günstiger?",
-    "excerpt": "Lokale GPU oder Cloud-GPU für LLMs: Break-even-Stunden mit RunPod-, Lambda- und AWS-Preisen vom 2. November 2026 und die Formel zum Nachrechnen.",
+    "excerpt": "Lokale GPU oder Cloud-GPU für LLMs: Break-even-Stunden mit RunPod-, Lambda- und AWS-Preisen vom 22. November 2026 und die Formel zum Nachrechnen.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
     "url": "/de/local-llms/local-llm-vs-cloud-gpu-cost",
@@ -15167,7 +15167,7 @@
   {
     "lang": "fr",
     "title": "LLM local vs GPU cloud : qu'est-ce qui coûte le moins ?",
-    "excerpt": "GPU local ou cloud pour LLM : heures de rentabilité avec les prix RunPod, Lambda et AWS relevés le 2 novembre 2026, et la formule pour refaire le calcul.",
+    "excerpt": "GPU local ou cloud pour LLM : heures de rentabilité avec les prix RunPod, Lambda et AWS relevés le 22 novembre 2026, et la formule pour refaire le calcul.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
     "url": "/fr/local-llms/local-llm-vs-cloud-gpu-cost",
@@ -15176,7 +15176,7 @@
   {
     "lang": "ja",
     "title": "ローカルLLMとクラウドGPU：どちらが安いか",
-    "excerpt": "LLM向けにローカルGPUとクラウドGPUを比較。2026年11月2日時点のRunPod・Lambda・AWSの料金で損益分岐の時間を算出し、計算式も示します。",
+    "excerpt": "LLM向けにローカルGPUとクラウドGPUを比較。2026年11月22日時点のRunPod・Lambda・AWSの料金で損益分岐の時間を算出し、計算式も示します。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
     "url": "/ja/local-llms/local-llm-vs-cloud-gpu-cost",
@@ -15185,7 +15185,7 @@
   {
     "lang": "zh",
     "title": "本地LLM与云GPU：哪个更便宜？",
-    "excerpt": "LLM用本地GPU还是云GPU更省钱：用2026年11月2日读取的RunPod、Lambda和AWS价格算出盈亏平衡小时数，并附计算公式供你自行重算。",
+    "excerpt": "LLM用本地GPU还是云GPU更省钱：用2026年11月22日读取的RunPod、Lambda和AWS价格算出盈亏平衡小时数，并附计算公式供你自行重算。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
     "url": "/zh/local-llms/local-llm-vs-cloud-gpu-cost",
@@ -15194,7 +15194,7 @@
   {
     "lang": "es",
     "title": "LLM local vs GPU en la nube: ¿qué sale más barato?",
-    "excerpt": "GPU local o en la nube para LLM: horas de equilibrio con precios de RunPod, Lambda y AWS del 2 de noviembre de 2026 y la fórmula para repetirlo.",
+    "excerpt": "GPU local o en la nube para LLM: horas de equilibrio con precios de RunPod, Lambda y AWS del 22 de noviembre de 2026 y la fórmula para repetirlo.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
     "url": "/es/local-llms/local-llm-vs-cloud-gpu-cost",
@@ -15203,7 +15203,7 @@
   {
     "lang": "pt",
     "title": "LLM local vs GPU na nuvem: o que sai mais barato?",
-    "excerpt": "GPU local ou na nuvem para LLM: horas de equilíbrio com preços da RunPod, Lambda e AWS lidos em 2 de novembro de 2026, e a fórmula para refazer a conta.",
+    "excerpt": "GPU local ou na nuvem para LLM: horas de equilíbrio com preços da RunPod, Lambda e AWS lidos em 22 de novembro de 2026, e a fórmula para refazer a conta.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
     "url": "/pt/local-llms/local-llm-vs-cloud-gpu-cost",
@@ -15212,7 +15212,7 @@
   {
     "lang": "ar",
     "title": "نموذج لغوي محلي مقابل وحدة معالجة رسومات سحابية: الأرخص؟",
-    "excerpt": "GPU محلية أم سحابية لـ LLM: ساعات التعادل بأسعار RunPod وLambda وAWS المقروءة في 2 نوفمبر 2026، مع المعادلة لإعادة الحساب.",
+    "excerpt": "GPU محلية أم سحابية لـ LLM: ساعات التعادل بأسعار RunPod وLambda وAWS المقروءة في 22 نوفمبر 2026، مع المعادلة لإعادة الحساب.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
     "url": "/ar/local-llms/local-llm-vs-cloud-gpu-cost",
@@ -15221,7 +15221,7 @@
   {
     "lang": "ko",
     "title": "로컬 LLM vs 클라우드 GPU: 무엇이 더 저렴한가",
-    "excerpt": "LLM에 로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지, 2026년 11월 2일 확인한 RunPod·Lambda·AWS 가격으로 손익분기 시간을 계산하고 공식도 제공합니다.",
+    "excerpt": "LLM에 로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지, 2026년 11월 22일 확인한 RunPod·Lambda·AWS 가격으로 손익분기 시간을 계산하고 공식도 제공합니다.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-11-22",
     "url": "/ko/local-llms/local-llm-vs-cloud-gpu-cost",
@@ -17093,7 +17093,7 @@
   {
     "lang": "en",
     "title": "Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026",
-    "excerpt": "Interactive calculator: compare owning local GPU hardware vs renting cloud GPUs (RunPod, Vast.ai) for LLMs. Live break-even in hours and months, updated 2026 pricing.",
+    "excerpt": "Compare owning a local GPU with renting a cloud GPU for LLMs: worked break-even example, RunPod and Vast.ai prices, and a calculator for your own numbers.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17102,7 +17102,7 @@
   {
     "lang": "de",
     "title": "Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026",
-    "excerpt": "Interaktiver Rechner: lokale GPU-Hardware vs. Cloud-GPU-Miete (RunPod, Vast.ai) für LLMs vergleichen. Live-Break-even in Stunden und Monaten, Preise 2026.",
+    "excerpt": "Lokale GPU kaufen oder Cloud-GPU mieten? Break-even-Beispiel, RunPod- und Vast.ai-Preise vom 22. November 2026 und ein Rechner für Ihre eigenen Zahlen.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17111,7 +17111,7 @@
   {
     "lang": "fr",
     "title": "IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026",
-    "excerpt": "Calculateur interactif : comparez matériel GPU local vs location cloud (RunPod, Vast.ai) pour LLM. Seuil de rentabilité en direct, prix 2026 à jour.",
+    "excerpt": "Acheter un GPU local ou louer un GPU cloud ? Exemple de seuil de rentabilité, prix RunPod et Vast.ai du 22 novembre 2026 et calculateur pour vos chiffres.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17120,7 +17120,7 @@
   {
     "lang": "ja",
     "title": "ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版",
-    "excerpt": "インタラクティブ計算機：ローカルGPUハードウェア vs クラウドGPUレンタル（RunPod、Vast.ai）をLLM向けに比較。損益分岐点をリアルタイム計算、2026年最新価格。",
+    "excerpt": "ローカルGPUを買うかクラウドGPUを借りるか。損益分岐の計算例、RunPodとVast.aiの2026年11月22日時点の料金、自分の数値で試せる計算機。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17129,7 +17129,7 @@
   {
     "lang": "zh",
     "title": "本地AI vs 云端AI：成本计算器（自建 vs 租用）2026",
-    "excerpt": "交互式计算器：对比本地GPU硬件与云GPU租用（RunPod、Vast.ai）运行LLM的成本。实时计算损益平衡点，2026年最新价格。",
+    "excerpt": "购买本地GPU还是租用云GPU？含盈亏平衡计算示例、2026年11月22日读取的RunPod和Vast.ai价格，以及可输入自己数据的计算器。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17138,7 +17138,7 @@
   {
     "lang": "es",
     "title": "IA Local vs IA en la Nube: Calculadora de Costos (Comprar vs Rentar) 2026",
-    "excerpt": "Calculadora interactiva: compara hardware GPU local vs alquilar GPU en la nube (RunPod, Vast.ai) para LLMs. Punto de equilibrio en vivo, precios 2026 actualizados.",
+    "excerpt": "¿Comprar una GPU local o alquilar una en la nube? Ejemplo de punto de equilibrio, precios de RunPod y Vast.ai del 22 de noviembre de 2026 y calculadora.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17147,7 +17147,7 @@
   {
     "lang": "pt",
     "title": "IA Local vs IA na Nuvem: Calculadora de Custo (Montar vs Alugar) 2026",
-    "excerpt": "Calculadora interativa: compare hardware GPU local vs alugar GPU na nuvem (RunPod, Vast.ai) para LLMs. Ponto de equilíbrio em tempo real, preços de 2026 atualizados.",
+    "excerpt": "Comprar uma GPU local ou alugar uma na nuvem? Exemplo de ponto de equilíbrio, preços da RunPod e Vast.ai de 22 de novembro de 2026 e calculadora.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17156,7 +17156,7 @@
   {
     "lang": "ar",
     "title": "الذكاء الاصطناعي المحلي مقابل السحابي: حاسبة التكلفة (شراء مقابل استئجار) 2026",
-    "excerpt": "حاسبة تفاعلية: قارن بين أجهزة GPU المحلية واستئجار GPU السحابي (RunPod، Vast.ai) لنماذج LLM. نقطة تعادل حية بالساعات والأشهر، أسعار 2026 محدثة.",
+    "excerpt": "هل تشتري GPU محلية أم تستأجر GPU سحابية؟ مثال حساب نقطة التعادل وأسعار RunPod وVast.ai المقروءة في 22 نوفمبر 2026 وحاسبة لأرقامك الخاصة.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -17165,7 +17165,7 @@
   {
     "lang": "ko",
     "title": "로컬 AI vs 클라우드 AI: 비용 계산기(구매 vs 렌탈) 2026",
-    "excerpt": "인터랙티브 계산기: 로컬 GPU 하드웨어와 클라우드 GPU 렌탈(RunPod, Vast.ai)을 LLM 기준으로 비교합니다. 실시간 손익분기점 계산, 2026년 최신 가격 반영.",
+    "excerpt": "로컬 GPU 구매와 클라우드 GPU 임대 비용 비교: 손익분기 계산 예시, 2026년 11월 22일 확인한 RunPod·Vast.ai 가격, 직접 입력하는 계산기.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-11-22",
     "url": "/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
@@ -24572,7 +24572,7 @@
   {
     "lang": "ja",
     "title": "無検閲ローカルLLMと創作活動：小説家が使うべき場面（2026年版）",
-    "excerpt": "小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0が最適。モデル5つをVRAM別に比較し、日本語で書く場合のモデル選び、LM StudioとOllamaの設定、倫理的責任まで解説。",
+    "excerpt": "小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0を中心に比較。モデル5つをVRAM別に比較し、日本語で書く場合のモデル選び、LM StudioとOllamaの設定、倫理的責任まで解説。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-11-13",
     "url": "/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics",
@@ -33535,8 +33535,8 @@
   },
   {
     "lang": "en",
-    "title": "BoBe Review: Free Local AI Assistant for Mac",
-    "excerpt": "BoBe is a free, open-source, local AI desktop assistant for Mac, described by its own site as processing data on-device. Here is what the site states, and what is still unverified.",
+    "title": "BoBe Review: Local AI Assistant for Mac",
+    "excerpt": "BoBe's own site describes it as a free, open-source, local AI desktop assistant for Mac that processes data on-device. What it states, and what is unverified.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/power-local-llm/bobe-review",
@@ -33544,8 +33544,8 @@
   },
   {
     "lang": "de",
-    "title": "BoBe Review: Kostenloser lokaler KI-Assistent für Mac",
-    "excerpt": "BoBe ist ein kostenloser, quelloffener, lokaler KI-Desktop-Assistent für Mac, den die eigene Website als datenverarbeitend auf dem Gerät beschreibt. Was die Website angibt — und was noch unbestätigt ist.",
+    "title": "BoBe Review: Lokaler KI-Assistent für Mac",
+    "excerpt": "Die Website von BoBe beschreibt es als kostenlosen, quelloffenen, lokalen KI-Desktop-Assistenten für Mac, der Daten auf dem Gerät verarbeitet. Was sie angibt — und was unbestätigt ist.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/de/power-local-llm/bobe-review",
@@ -33553,8 +33553,8 @@
   },
   {
     "lang": "fr",
-    "title": "BoBe Review: assistant IA local gratuit pour Mac",
-    "excerpt": "BoBe est un assistant IA de bureau local, gratuit et open source pour Mac, décrit par son propre site comme traitant les données sur l'appareil. Ce que le site indique — et ce qui reste à vérifier.",
+    "title": "BoBe Review: assistant IA local pour Mac",
+    "excerpt": "Le site de BoBe le décrit comme un assistant IA de bureau local, gratuit et open source pour Mac qui traite les données sur l'appareil. Ce qu'il indique — et ce qui reste à vérifier.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/fr/power-local-llm/bobe-review",
@@ -33562,8 +33562,8 @@
   },
   {
     "lang": "ja",
-    "title": "BoBeレビュー：無料のローカルAIアシスタント（Mac向け）",
-    "excerpt": "BoBeは、公式サイトがデータを端末上で処理すると説明する無料・オープンソースのMac向けローカルAIアシスタントです。公式サイトの記載内容と、未確認の点を整理します。",
+    "title": "BoBeレビュー：Mac向けローカルAIアシスタント",
+    "excerpt": "BoBeの公式サイトは、無料・オープンソースのMac向けローカルAIデスクトップアシスタントで、データを端末上で処理すると説明しています。記載内容と未確認の点を整理します。",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/ja/power-local-llm/bobe-review",
@@ -33571,8 +33571,8 @@
   },
   {
     "lang": "zh",
-    "title": "BoBe 评测：免费的Mac本地AI助手",
-    "excerpt": "BoBe是一款免费、开源的Mac本地AI桌面助手，其官网称数据在设备端处理。以下是官网自述的信息，以及尚未核实的部分。",
+    "title": "BoBe 评测：Mac本地AI助手",
+    "excerpt": "BoBe官网称其为免费、开源的Mac本地AI桌面助手，数据在设备端处理。以下是官网自述的信息，以及尚未核实的部分。",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/zh/power-local-llm/bobe-review",
@@ -33580,8 +33580,8 @@
   },
   {
     "lang": "es",
-    "title": "BoBe Review: asistente de IA local gratuito para Mac",
-    "excerpt": "BoBe es un asistente de IA de escritorio local, gratuito y de código abierto para Mac que su propio sitio describe como procesador de datos en el dispositivo. Esto es lo que indica el sitio, y lo que aún no está verificado.",
+    "title": "BoBe Review: asistente de IA local para Mac",
+    "excerpt": "El sitio de BoBe lo describe como un asistente de IA de escritorio local, gratuito y de código abierto para Mac que procesa datos en el dispositivo. Lo que indica, y lo no verificado.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/es/power-local-llm/bobe-review",
@@ -33589,8 +33589,8 @@
   },
   {
     "lang": "pt",
-    "title": "BoBe Review: assistente de IA local gratuito para Mac",
-    "excerpt": "BoBe é um assistente de IA de desktop local, gratuito e de código aberto para Mac que o próprio site descreve como processador de dados no dispositivo. Veja o que o site afirma — e o que ainda não foi verificado.",
+    "title": "BoBe Review: assistente de IA local para Mac",
+    "excerpt": "O site do BoBe o descreve como um assistente de IA de desktop local, gratuito e de código aberto para Mac que processa dados no dispositivo. O que ele afirma, e o que não foi verificado.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/pt/power-local-llm/bobe-review",
@@ -33598,8 +33598,8 @@
   },
   {
     "lang": "ar",
-    "title": "مراجعة BoBe: مساعد ذكاء اصطناعي محلي مجاني لأجهزة Mac",
-    "excerpt": "BoBe مساعد ذكاء اصطناعي محلي مجاني ومفتوح المصدر لسطح مكتب Mac، يصفه موقعه الرسمي بأنه يعالج البيانات على الجهاز نفسه. إليك ما يذكره الموقع الرسمي، وما لم يتم التحقق منه بعد.",
+    "title": "مراجعة BoBe: مساعد ذكاء اصطناعي محلي لأجهزة Mac",
+    "excerpt": "يصف موقع BoBe الرسمي التطبيق بأنه مساعد ذكاء اصطناعي محلي مجاني ومفتوح المصدر لسطح مكتب Mac يعالج البيانات على الجهاز. ما يذكره الموقع، وما لم يتم التحقق منه.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/ar/power-local-llm/bobe-review",
@@ -33607,8 +33607,8 @@
   },
   {
     "lang": "ko",
-    "title": "BoBe 리뷰: 무료 Mac 로컬 AI 어시스턴트",
-    "excerpt": "BoBe는 공식 사이트가 데이터를 기기 내에서 처리한다고 설명하는 무료 오픈소스 Mac 로컬 AI 데스크톱 어시스턴트입니다. 공식 사이트가 밝힌 내용과 아직 확인되지 않은 부분을 정리했습니다.",
+    "title": "BoBe 리뷰: Mac 로컬 AI 어시스턴트",
+    "excerpt": "BoBe 공식 사이트는 이를 데이터를 기기 내에서 처리하는 무료 오픈소스 Mac 로컬 AI 데스크톱 어시스턴트로 설명합니다. 사이트가 밝힌 내용과 확인되지 않은 부분을 정리했습니다.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/ko/power-local-llm/bobe-review",
@@ -33617,7 +33617,7 @@
   {
     "lang": "en",
     "title": "Osaurus Review: Free On-Device AI App for Mac",
-    "excerpt": "Osaurus is a free, MIT-licensed native Swift app that runs open-source AI models on-device on Apple Silicon Macs. No account, no cloud requirement, agent tools built in.",
+    "excerpt": "Osaurus is a free native Swift app that runs open-source AI models on Apple Silicon Macs. Mac app open source (MIT), no account, no cloud requirement, agent tools built in.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/power-local-llm/osaurus-ai-review",
@@ -33626,7 +33626,7 @@
   {
     "lang": "de",
     "title": "Osaurus-Rezension: Kostenlose On-Device-KI-App für Mac",
-    "excerpt": "Osaurus ist eine kostenlose, MIT-lizenzierte native Swift-App, die Open-Source-KI-Modelle auf Apple-Silicon-Macs lokal ausführt. Kein Konto, kein Cloud-Zwang, Agenten-Tools integriert.",
+    "excerpt": "Osaurus ist eine kostenlose native Swift-App, die Open-Source-KI-Modelle auf Apple-Silicon-Macs ausführt. Mac-App quelloffen (MIT), kein Konto, kein Cloud-Zwang, Agenten-Tools integriert.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/de/power-local-llm/osaurus-ai-review",
@@ -33635,7 +33635,7 @@
   {
     "lang": "fr",
     "title": "Osaurus: application IA locale gratuite pour Mac",
-    "excerpt": "Osaurus est une application Swift native gratuite sous licence MIT qui exécute des modèles d'IA open source sur Mac Apple Silicon, en local. Sans compte, sans cloud imposé, outils d'agent inclus.",
+    "excerpt": "Osaurus est une application Swift native gratuite qui exécute des modèles d'IA open source sur Mac Apple Silicon. Application Mac open source (MIT), sans compte, sans cloud imposé, outils d'agent inclus.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/fr/power-local-llm/osaurus-ai-review",
@@ -33644,7 +33644,7 @@
   {
     "lang": "ja",
     "title": "Osaurusレビュー：Mac向け無料オンデバイスAIアプリ",
-    "excerpt": "OsaurusはApple SiliconのMac上でオープンソースAIモデルをオンデバイスで実行する、無料でMITライセンスのネイティブSwiftアプリです。アカウント不要、クラウド強制なし、エージェント機能を搭載。",
+    "excerpt": "OsaurusはApple SiliconのMac上でオープンソースAIモデルを実行する無料のネイティブSwiftアプリです。MacアプリはMITライセンスのオープンソース、アカウント不要、クラウド強制なし、エージェント機能を搭載。",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/ja/power-local-llm/osaurus-ai-review",
@@ -33653,7 +33653,7 @@
   {
     "lang": "zh",
     "title": "Osaurus 评测：Mac 免费本地 AI 应用",
-    "excerpt": "Osaurus 是一款免费、MIT 许可的原生 Swift 应用，可在 Apple Silicon Mac 上本地运行开源 AI 模型。无需账户，不强制使用云服务，内置智能体工具。",
+    "excerpt": "Osaurus 是一款免费的原生 Swift 应用，可在 Apple Silicon Mac 上运行开源 AI 模型。Mac 应用开源（MIT）、无需账户、无需云端、内置智能体工具。",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/zh/power-local-llm/osaurus-ai-review",
@@ -33662,7 +33662,7 @@
   {
     "lang": "es",
     "title": "Osaurus: app gratuita de IA local para Mac",
-    "excerpt": "Osaurus es una app nativa en Swift, gratuita y con licencia MIT, que ejecuta modelos de IA de código abierto en tu Mac con Apple Silicon. Sin cuenta, sin nube obligatoria, con herramientas de agente.",
+    "excerpt": "Osaurus es una app nativa en Swift, gratuita, que ejecuta modelos de IA de código abierto en Mac con Apple Silicon. App para Mac de código abierto (MIT), sin cuenta, sin nube obligatoria, herramientas de agente incluidas.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/es/power-local-llm/osaurus-ai-review",
@@ -33671,7 +33671,7 @@
   {
     "lang": "pt",
     "title": "Osaurus: app gratuito de IA local para Mac",
-    "excerpt": "O Osaurus é um app nativo em Swift, gratuito e com licença MIT, que roda modelos de IA de código aberto localmente em Macs com Apple Silicon. Sem conta, sem nuvem obrigatória, com ferramentas de agente.",
+    "excerpt": "O Osaurus é um app nativo em Swift, gratuito, que executa modelos de IA de código aberto em Macs com Apple Silicon. App para Mac de código aberto (MIT), sem conta, sem nuvem obrigatória, ferramentas de agente incluídas.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/pt/power-local-llm/osaurus-ai-review",
@@ -33680,7 +33680,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Osaurus: تطبيق ذكاء اصطناعي محلي مجاني لـ Mac",
-    "excerpt": "Osaurus تطبيق Swift أصلي مجاني ومرخّص بموجب MIT يشغّل نماذج ذكاء اصطناعي مفتوحة المصدر محليًا على أجهزة Mac بمعالج Apple Silicon. بدون حساب، بدون سحابة إلزامية، مع أدوات وكيل مدمجة.",
+    "excerpt": "Osaurus تطبيق Swift أصلي ومجاني يشغّل نماذج الذكاء الاصطناعي مفتوحة المصدر على أجهزة Mac بمعالج Apple Silicon. تطبيق Mac مفتوح المصدر (MIT)، دون حساب، ودون إلزام بالسحابة، مع أدوات وكلاء مدمجة.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/ar/power-local-llm/osaurus-ai-review",
@@ -33689,7 +33689,7 @@
   {
     "lang": "ko",
     "title": "Osaurus 리뷰: Mac용 무료 온디바이스 AI 앱",
-    "excerpt": "Osaurus는 Apple Silicon Mac에서 오픈소스 AI 모델을 온디바이스로 실행하는 무료 MIT 라이선스 네이티브 Swift 앱입니다. 계정 불필요, 클라우드 강제 없음, 에이전트 도구 내장.",
+    "excerpt": "Osaurus는 Apple Silicon Mac에서 오픈소스 AI 모델을 실행하는 무료 네이티브 Swift 앱입니다. Mac 앱은 오픈소스(MIT), 계정 불필요, 클라우드 강제 없음, 에이전트 도구 내장.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/ko/power-local-llm/osaurus-ai-review",
@@ -33698,7 +33698,7 @@
   {
     "lang": "en",
     "title": "Hanoki Review: Branching AI Chat App for Mac",
-    "excerpt": "Hanoki is a hybrid branching AI chat app for Mac — cloud models via your own API keys or local models via Ollama. Chats stored locally in SQLite.",
+    "excerpt": "Hanoki is a hybrid branching AI chat app for Mac — cloud models via your own API keys or local models via Ollama. Chats stored locally in SQLite, per Hanoki's site.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/power-local-llm/hanoki-review",
@@ -33707,7 +33707,7 @@
   {
     "lang": "de",
     "title": "Hanoki-Rezension: Verzweigte KI-Chat-App für Mac",
-    "excerpt": "Hanoki ist eine hybride, verzweigte KI-Chat-App für Mac — Cloud-Modelle über eigene API-Schlüssel oder lokale Modelle über Ollama. Chats werden lokal in SQLite gespeichert.",
+    "excerpt": "Hanoki ist eine hybride, verzweigte KI-Chat-App für Mac — Cloud-Modelle über eigene API-Schlüssel oder lokale Modelle über Ollama. Laut Hanoki-Website werden Chats lokal in SQLite gespeichert.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/de/power-local-llm/hanoki-review",
@@ -33716,7 +33716,7 @@
   {
     "lang": "fr",
     "title": "Hanoki: chat IA à embranchements pour Mac (test)",
-    "excerpt": "Hanoki est une app de chat IA hybride à embranchements pour Mac — modèles cloud via vos propres clés API ou modèles locaux via Ollama. Discussions stockées localement en SQLite.",
+    "excerpt": "Hanoki est une app de chat IA hybride à embranchements pour Mac — modèles cloud via vos propres clés API ou modèles locaux via Ollama. Discussions stockées localement en SQLite, selon le site de Hanoki.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/fr/power-local-llm/hanoki-review",
@@ -33724,8 +33724,8 @@
   },
   {
     "lang": "ja",
-    "title": "Hanokiレビュー:分岐型AIチャットアプリ(Mac向け・)",
-    "excerpt": "Hanokiは、Mac向けのハイブリッド型分岐AIチャットアプリ。自分のAPIキーでクラウドモデル、またはOllamaでローカルモデルを利用可能。チャットはSQLiteでローカル保存。",
+    "title": "Hanokiレビュー:分岐型AIチャットアプリ(Mac向け)",
+    "excerpt": "Hanokiは、Mac向けのハイブリッド型分岐AIチャットアプリ。自分のAPIキーでクラウドモデル、またはOllamaでローカルモデルを利用可能。チャットはSQLiteでローカル保存（Hanoki公式サイトによる）。",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/ja/power-local-llm/hanoki-review",
@@ -33734,7 +33734,7 @@
   {
     "lang": "zh",
     "title": "Hanoki评测:面向Mac的分支式AI聊天应用",
-    "excerpt": "Hanoki是面向Mac的混合型分支式AI聊天应用——用自己的API密钥调用云端模型,或通过Ollama运行本地模型。聊天记录以SQLite本地保存。",
+    "excerpt": "Hanoki是面向Mac的混合型分支式AI聊天应用——用自己的API密钥调用云端模型,或通过Ollama运行本地模型。据Hanoki官网,聊天记录以SQLite本地保存。",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/zh/power-local-llm/hanoki-review",
@@ -33743,7 +33743,7 @@
   {
     "lang": "es",
     "title": "Hanoki: reseña de la app de chat IA con ramificaciones para Mac",
-    "excerpt": "Hanoki es una app híbrida de chat IA con ramificaciones para Mac: modelos en la nube con tus propias claves API o modelos locales vía Ollama. Chats guardados localmente en SQLite.",
+    "excerpt": "Hanoki es una app híbrida de chat IA con ramificaciones para Mac: modelos en la nube con tus propias claves API o modelos locales vía Ollama. Chats guardados localmente en SQLite, según el sitio de Hanoki.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/es/power-local-llm/hanoki-review",
@@ -33752,7 +33752,7 @@
   {
     "lang": "pt",
     "title": "Hanoki: análise do app de chat IA com ramificações para Mac",
-    "excerpt": "Hanoki é um app híbrido de chat IA com ramificações para Mac — modelos em nuvem com suas próprias chaves de API ou modelos locais via Ollama. Chats salvos localmente em SQLite.",
+    "excerpt": "Hanoki é um app híbrido de chat IA com ramificações para Mac — modelos em nuvem com suas próprias chaves de API ou modelos locais via Ollama. Chats salvos localmente em SQLite, segundo o site do Hanoki.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/pt/power-local-llm/hanoki-review",
@@ -33761,7 +33761,7 @@
   {
     "lang": "ar",
     "title": "مراجعة Hanoki: تطبيق دردشة ذكاء اصطناعي متفرع لـ Mac",
-    "excerpt": "Hanoki تطبيق دردشة ذكاء اصطناعي هجين ومتفرع لـ Mac — نماذج سحابية عبر مفاتيح API الخاصة بك أو نماذج محلية عبر Ollama. المحادثات تُخزَّن محليًا في SQLite.",
+    "excerpt": "Hanoki تطبيق دردشة ذكاء اصطناعي هجين ومتفرع لـ Mac — نماذج سحابية عبر مفاتيح API الخاصة بك أو نماذج محلية عبر Ollama. المحادثات تُخزَّن محليًا في SQLite وفق موقع Hanoki.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/ar/power-local-llm/hanoki-review",
@@ -33770,7 +33770,7 @@
   {
     "lang": "ko",
     "title": "Hanoki 리뷰: Mac용 분기형 AI 채팅 앱",
-    "excerpt": "Hanoki는 Mac용 하이브리드 분기형 AI 채팅 앱입니다. 자신의 API 키로 클라우드 모델을, 또는 Ollama로 로컬 모델을 사용할 수 있으며 채팅은 SQLite에 로컬 저장됩니다.",
+    "excerpt": "Hanoki는 Mac용 하이브리드 분기형 AI 채팅 앱입니다. 자신의 API 키로 클라우드 모델을, 또는 Ollama로 로컬 모델을 사용할 수 있으며 Hanoki 사이트에 따르면 채팅은 SQLite에 로컬 저장됩니다.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/ko/power-local-llm/hanoki-review",
@@ -33778,7 +33778,7 @@
   },
   {
     "lang": "en",
-    "title": "Voxa Review: Private Voice Assistant Orb for Desktop",
+    "title": "Voxa Review: Open-Source Voice Orb for Desktop (Cloud or Local)",
     "excerpt": "Voxa review: an open-source, MIT-licensed voice-orb assistant for Windows, macOS, and Linux. How the hybrid cloud/local-daemon setup works, Markdown note storage, and who should use it.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -33787,7 +33787,7 @@
   },
   {
     "lang": "de",
-    "title": "Voxa Review: Privater Sprachassistent-Orb für den Desktop",
+    "title": "Voxa Review: Open-Source-Sprach-Orb für den Desktop (Cloud oder lokal)",
     "excerpt": "Voxa Review: ein Open-Source, MIT-lizenzierter Sprach-Orb-Assistent für Windows, macOS und Linux. Wie das hybride Cloud/lokale-Daemon-Setup funktioniert, Markdown-Notizen und für wen es geeignet ist.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -33796,7 +33796,7 @@
   },
   {
     "lang": "fr",
-    "title": "Voxa: avis sur l'assistant vocal privé pour bureau",
+    "title": "Voxa: avis sur l'orbe vocal open source pour bureau (cloud ou local)",
     "excerpt": "Avis Voxa : assistant vocal open source sous licence MIT, sous forme d'orbe, pour Windows, macOS et Linux. Fonctionnement hybride cloud/démon local, notes en Markdown, et pour qui il convient.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -33805,7 +33805,7 @@
   },
   {
     "lang": "ja",
-    "title": "Voxaレビュー：デスクトップ向けプライベート音声アシスタントオーブ",
+    "title": "Voxaレビュー：デスクトップ向けオープンソース音声オーブ（クラウド／ローカル）",
     "excerpt": "Voxaレビュー：Windows・macOS・Linux向けのMITライセンスのオープンソース音声オーブアシスタント。クラウド/ローカルデーモンのハイブリッド構成、Markdownメモ、向いている人を解説。",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -33814,7 +33814,7 @@
   },
   {
     "lang": "zh",
-    "title": "Voxa评测：桌面端私密语音助手悬浮球",
+    "title": "Voxa评测：桌面端开源语音悬浮球（云端或本地）",
     "excerpt": "Voxa评测：一款MIT许可的开源语音悬浮球助手，支持Windows、macOS和Linux。解析云端/本地守护进程混合架构、Markdown笔记存储，以及适合哪些用户。",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -33823,7 +33823,7 @@
   },
   {
     "lang": "es",
-    "title": "Voxa: reseña del asistente de voz privado para escritorio",
+    "title": "Voxa: reseña del orbe de voz de código abierto para escritorio (nube o local)",
     "excerpt": "Reseña de Voxa: asistente de voz de código abierto bajo licencia MIT, en forma de orbe, para Windows, macOS y Linux. Cómo funciona la configuración híbrida nube/daemon local, notas en Markdown y para quién es.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -33832,7 +33832,7 @@
   },
   {
     "lang": "pt",
-    "title": "Voxa: análise do assistente de voz privado para desktop",
+    "title": "Voxa: análise do orbe de voz de código aberto para desktop (nuvem ou local)",
     "excerpt": "Análise do Voxa: assistente de voz de código aberto sob licença MIT, em formato de orbe, para Windows, macOS e Linux. Como funciona a configuração híbrida nuvem/daemon local, notas em Markdown e para quem é indicado.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -33841,7 +33841,7 @@
   },
   {
     "lang": "ar",
-    "title": "مراجعة Voxa: مساعد صوتي خاص على شكل كرة عائمة لسطح المكتب",
+    "title": "مراجعة Voxa: كرة صوتية عائمة مفتوحة المصدر لسطح المكتب (سحابية أو محلية)",
     "excerpt": "مراجعة Voxa: مساعد صوتي مفتوح المصدر برخصة MIT على شكل كرة، لأنظمة Windows وmacOS وLinux. كيف يعمل الإعداد الهجين بين السحابة والخدمة المحلية، وتخزين الملاحظات بصيغة Markdown، ولمن يناسب.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -33850,7 +33850,7 @@
   },
   {
     "lang": "ko",
-    "title": "Voxa 리뷰: 데스크톱용 프라이빗 음성 어시스턴트 오브",
+    "title": "Voxa 리뷰: 데스크톱용 오픈소스 음성 오브(클라우드 또는 로컬)",
     "excerpt": "Voxa 리뷰: Windows, macOS, Linux를 지원하는 MIT 라이선스 오픈소스 음성 오브 어시스턴트. 하이브리드 클라우드/로컬 데몬 구성, Markdown 메모 저장 방식, 적합한 사용자를 다룹니다.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -66188,7 +66188,7 @@
   {
     "lang": "de",
     "title": "Wie viel kostet eine Cloud-GPU pro Stunde 2026?",
-    "excerpt": "Cloud-GPU-Kosten pro Stunde: RTX 4090 ab 0,34 $, A100 80 GB 1,19-3,19 $, H100 1,99-4,89 $. Die günstigsten Cloud-GPUs pro Stunde mit RunPod- und Lambda-Tarifen.",
+    "excerpt": "Cloud-GPU-Kosten pro Stunde: RTX 4090 ab 0,34 $, A100 80 GB 1,19-3,19 $, H100 1,99-4,89 $. Günstigste Cloud-GPUs pro Stunde bei RunPod und Lambda.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/de/prompt-bites/cloud-gpu-cost-per-hour",
@@ -66197,7 +66197,7 @@
   {
     "lang": "fr",
     "title": "Combien coûte un GPU cloud par heure en 2026 ?",
-    "excerpt": "Coût horaire d'un GPU cloud : RTX 4090 dès 0,34 $, A100 80 GB 1,19-3,19 $, H100 1,99-4,89 $. Les GPU cloud les moins chers à l'heure, avec les tarifs RunPod et Lambda.",
+    "excerpt": "Coût horaire d'un GPU cloud : RTX 4090 dès 0,34 $, A100 80 GB 1,19-3,19 $, H100 1,99-4,89 $. Les GPU cloud les moins chers, tarifs RunPod et Lambda.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/fr/prompt-bites/cloud-gpu-cost-per-hour",
@@ -66224,7 +66224,7 @@
   {
     "lang": "es",
     "title": "¿Cuánto cuesta un GPU en la nube por hora en 2026?",
-    "excerpt": "Costo de GPU en la nube por hora: RTX 4090 desde $0,34, A100 80 GB $1,19–3,19, H100 $1,99–4,89. Las GPU en la nube más baratas por hora, con tarifas de RunPod y Lambda.",
+    "excerpt": "Costo de GPU en la nube por hora: RTX 4090 desde $0,34, A100 80 GB $1,19–3,19, H100 $1,99–4,89. Las más baratas, con tarifas de RunPod y Lambda.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/es/prompt-bites/cloud-gpu-cost-per-hour",
@@ -66233,7 +66233,7 @@
   {
     "lang": "pt",
     "title": "Quanto custa uma GPU na nuvem por hora em 2026?",
-    "excerpt": "Custo de GPU na nuvem por hora: RTX 4090 a partir de $0,34, A100 80 GB $1,19–3,19, H100 $1,99–4,89. As GPUs na nuvem mais baratas por hora, com preços da RunPod e da Lambda.",
+    "excerpt": "Custo de GPU na nuvem por hora: RTX 4090 a partir de $0,34, A100 80 GB $1,19–3,19, H100 $1,99–4,89. As mais baratas, com preços da RunPod e Lambda.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/pt/prompt-bites/cloud-gpu-cost-per-hour",
@@ -66242,7 +66242,7 @@
   {
     "lang": "ar",
     "title": "كم تكلّف وحدة ⁨GPU⁩ السحابية في الساعة عام ⁨2026⁩؟",
-    "excerpt": "تكلفة ⁨GPU⁩ السحابية في الساعة: ⁨RTX 4090⁩ من ⁨$0.34⁩، و⁨A100 80 GB⁩ من ⁨$1.19⁩ إلى ⁨$3.19⁩، و⁨H100⁩ من ⁨$1.99⁩ إلى ⁨$4.89⁩. أرخص وحدات ⁨GPU⁩ السحابية بالساعة مع أسعار ⁨RunPod⁩ و⁨Lambda⁩.",
+    "excerpt": "تكلفة ⁨GPU⁩ السحابية في الساعة: ⁨RTX 4090⁩ من ⁨$0.34⁩، و⁨A100 80 GB⁩ من ⁨$1.19⁩ إلى ⁨$3.19⁩، و⁨H100⁩ من ⁨$1.99⁩ إلى ⁨$4.89⁩ لدى ⁨RunPod⁩ و⁨Lambda⁩.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/ar/prompt-bites/cloud-gpu-cost-per-hour",
@@ -66251,7 +66251,7 @@
   {
     "lang": "ko",
     "title": "2026년 클라우드 GPU 시간당 비용은 얼마입니까?",
-    "excerpt": "클라우드 GPU 시간당 비용: RTX 4090 $0.34부터, A100 80 GB $1.19–3.19, H100 $1.99–4.89. RunPod와 Lambda 요금으로 보는 시간당 가장 저렴한 클라우드 GPU.",
+    "excerpt": "클라우드 GPU 시간당 비용: RTX 4090 $0.34부터, A100 80 GB $1.19–3.19, H100 $1.99–4.89. RunPod·Lambda 요금 기준.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-11-22",
     "url": "/ko/prompt-bites/cloud-gpu-cost-per-hour",
