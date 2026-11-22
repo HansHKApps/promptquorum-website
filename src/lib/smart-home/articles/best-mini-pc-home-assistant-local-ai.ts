@@ -1703,6 +1703,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Beelink EQ14 (Amazon)', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'A9 Max 가격 확인 →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
           { label: 'GEEKOM A9 Max (Amazon)', url: 'https://www.amazon.com/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: "다나와에서 'Beelink SER8' 최저가 확인", url: 'https://search.danawa.com/dsearch.php?query=Beelink%20SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: "다나와에서 'Beelink EQ14' 최저가 확인", url: 'https://search.danawa.com/dsearch.php?query=Beelink%20EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: "다나와에서 'GMKtec G3 Plus' 최저가 확인", url: 'https://search.danawa.com/dsearch.php?query=GMKtec%20G3%20Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: "다나와에서 'Minisforum UM890 Pro' 최저가 확인", url: 'https://search.danawa.com/dsearch.php?query=Minisforum%20UM890%20Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: "다나와에서 'GEEKOM A9 Max' 최저가 확인", url: 'https://search.danawa.com/dsearch.php?query=GEEKOM%20A9%20Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: '가격 — 공식 스토어 미국 달러 정가, 2026-10-25 확인; 국내 가격은 다를 수 있습니다. GMKtec G3 Plus와 Minisforum UM890 Pro는 공식 스토어에서 품절로 표시됩니다. 미니 PC 가격은 빠르게 변동하며 서드파티 판매처 가격(여기서는 확인하지 않음)은 다를 수 있으므로 구매 전 현재 목록을 확인하십시오.',
       },
@@ -1894,7 +1899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-to-buy',
         title: '어느 것을 구매해야 할까?',
         content:
-          '**사용 가능한 가장 강력한 기기를 구매하기보다 실제 워크로드에 맞는 기기를 선택하십시오.** 국내에서 구매할 때는 다나와(가격 비교)에서 가격을 확인하고, 쿠팡과 컴퓨존에서도 재고와 가격을 확인하세요. 이 페이지의 달러 가격은 미국 정가이므로 국내 판매가는 환율·세금·유통 비용에 따라 달라지며, 국내 정식 유통 제품인지 확인하는 것이 좋습니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요. 중고는 당근마켓, 중고나라에서 상태와 보증을 확인하세요.',
+          '**사용 가능한 가장 강력한 기기를 구매하기보다 실제 워크로드에 맞는 기기를 선택하십시오.** 국내에서 구매할 때는 다나와(가격 비교)에서 가격을 확인하고, 쿠팡과 컴퓨존에서도 재고와 가격을 확인하세요. 아래 링크에서 다나와의 최신 최저가를 바로 확인할 수 있습니다. 이 페이지의 달러 가격은 미국 정가이므로 국내 판매가는 환율·세금·유통 비용에 따라 달라지며, 국내 정식 유통 제품인지 확인하는 것이 좋습니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요. 중고는 당근마켓, 중고나라에서 상태와 보증을 확인하세요.',
         items: [
           'Home Assistant가 유일한 워크로드라면: Beelink EQ14 또는 GMKtec G3 Plus를 구매하십시오.',
           'Home Assistant와 로컬 7B 모델을 하나의 기기에서 원한다면: Beelink SER8(32 GB 구성)을 구매하십시오.',
@@ -2513,6 +2518,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Beelink EQ14（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'A9 Maxの価格を見る →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
           { label: 'GEEKOM A9 Max（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: '価格.comで「Beelink SER8」の最安値を確認', url: 'https://kakaku.com/search_results/Beelink%20SER8/', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: '価格.comで「Beelink EQ14」の最安値を確認', url: 'https://kakaku.com/search_results/Beelink%20EQ14/', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: '価格.comで「GMKtec G3 Plus」の最安値を確認', url: 'https://kakaku.com/search_results/GMKtec%20G3%20Plus/', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+          { label: '価格.comで「Minisforum UM890 Pro」の最安値を確認', url: 'https://kakaku.com/search_results/Minisforum%20UM890%20Pro/', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: '価格.comで「GEEKOM A9 Max」の最安値を確認', url: 'https://kakaku.com/search_results/GEEKOM%20A9%20Max/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: '価格——公式ストアの米ドル標準価格（2026-10-25確認）で、日本国内の価格とは異なる場合があります。GMKtec G3 PlusとMinisforum UM890 Proは公式ストアで在庫切れ表示です。ミニPCの価格は急速に変動し、サードパーティ販売店の価格（ここでは未確認）は異なる場合があります；購入前に最新の掲載価格を確認してください。',
       },
@@ -2704,7 +2714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-to-buy',
         title: 'どれを買うべきか',
         content:
-          '**入手可能な最も高性能な機種を買うのではなく、実際のワークロードに合った機種を選びましょう。** 日本で購入する場合は、Amazon.co.jp と価格.com（価格比較）で価格を確認し、ドスパラ、ツクモ、ヨドバシ、ソフマップなどの大手電子機器販売店でも在庫と価格を確認してください。本ページの米ドル価格は米国の標準価格のため、国内の販売価格は為替・税金・輸入コストで変わります。海外から直接輸入する場合はPSEマーク（電源）、技適（Wi-Fi/Bluetooth）、国内保証・サポートの有無を購入前に確認してください。中古を検討する場合は、メルカリ、ヤフオク!、じゃんぱらなどで状態と保証を確認してください。',
+          '**入手可能な最も高性能な機種を買うのではなく、実際のワークロードに合った機種を選びましょう。** 日本で購入する場合は、Amazon.co.jp と価格.com（価格比較）で価格を確認し、ドスパラ、ツクモ、ヨドバシ、ソフマップなどの大手電子機器販売店でも在庫と価格を確認してください。下のリンクから、価格.comの最新の最安値を直接確認できます。本ページの米ドル価格は米国の標準価格のため、国内の販売価格は為替・税金・輸入コストで変わります。海外から直接輸入する場合はPSEマーク（電源）、技適（Wi-Fi/Bluetooth）、国内保証・サポートの有無を購入前に確認してください。中古を検討する場合は、メルカリ、ヤフオク!、じゃんぱらなどで状態と保証を確認してください。',
         items: [
           'Home Assistant のみが目的なら：Beelink EQ14 または GMKtec G3 Plus を購入。',
           'Home Assistant とローカル 7B モデルを一台でこなしたいなら：Beelink SER8（32 GB構成）を購入。',

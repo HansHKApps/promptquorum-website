@@ -2791,7 +2791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: '購入先',
         content:
-          '**Appleはあらゆる構成を直接販売しています；Amazonやその他の小売店は一般的な構成を在庫し、Appleの定価を下回ることもあります。** 以下のリンクは単なる製品検索リンクであり、アフィリエイトタグは付いておらず、コミッションを得ません。**日本で購入する場合：** Apple Store（apple.com/jp）のオンラインストアで構成と税込価格を確認し、Amazon.co.jp、ヨドバシ、ソフマップなどの家電量販店では取り扱いと価格を各店で確認してください。価格の比較には価格.comが便利です。海外から直接輸入する場合はPSEマーク（電源）、技適（Wi-Fi/Bluetooth）、国内保証・サポートの有無を購入前に確認してください。',
+          '**Appleはあらゆる構成を直接販売しています；Amazonやその他の小売店は一般的な構成を在庫し、Appleの定価を下回ることもあります。** 以下のリンクは単なる製品検索リンクであり、アフィリエイトタグは付いておらず、コミッションを得ません。**日本で購入する場合：** Apple Store（apple.com/jp）のオンラインストアで構成と税込価格を確認し、Amazon.co.jp、ヨドバシ、ソフマップなどの家電量販店では取り扱いと価格を各店で確認してください。価格の比較には価格.comが便利です。下のリンクから、価格.comの最新の最安値を直接確認できます。海外から直接輸入する場合はPSEマーク（電源）、技適（Wi-Fi/Bluetooth）、国内保証・サポートの有無を購入前に確認してください。',
         items: [
           '**Apple Store（[apple.com/jp](https://www.apple.com/jp/)）：** 受注生産を含む、あらゆるメモリとストレージ構成を選べる公式の購入先で、受注生産の構成はここで選べます。64GBのMac mini M5 Pro、128GBのMac Studio M5 Max、Mac Studio M5 Ultraのメモリ階層には必須です（これらは受注生産です）。',
           '**Amazon.co.jp：** Mac miniとMacBook Proの人気の固定構成を在庫し、Appleの定価を下回って割引されることもあります。大容量メモリの受注生産構成の品揃えは限られます。',
@@ -2818,6 +2818,42 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'mac',
             priceRange: '899-9500',
             label: 'AmazonでMacを見る',
+          },
+          {
+            url: 'https://kakaku.com/search_results/Mac%20mini%20M6/',
+            productName: 'Mac mini M6',
+            productCategory: 'mac',
+            label: '価格.comで「Mac mini M6」の最安値を確認',
+          },
+          {
+            url: 'https://kakaku.com/search_results/Mac%20mini%20M5%20Pro/',
+            productName: 'Mac mini M5 Pro',
+            productCategory: 'mac',
+            label: '価格.comで「Mac mini M5 Pro」の最安値を確認',
+          },
+          {
+            url: 'https://kakaku.com/search_results/MacBook%20Pro%2016%20M5%20Pro/',
+            productName: 'MacBook Pro 16 M5 Pro',
+            productCategory: 'mac',
+            label: '価格.comで「MacBook Pro 16 M5 Pro」の最安値を確認',
+          },
+          {
+            url: 'https://kakaku.com/search_results/MacBook%20Pro%2016%20M5%20Max/',
+            productName: 'MacBook Pro 16 M5 Max',
+            productCategory: 'mac',
+            label: '価格.comで「MacBook Pro 16 M5 Max」の最安値を確認',
+          },
+          {
+            url: 'https://kakaku.com/search_results/Mac%20Studio%20M5%20Max/',
+            productName: 'Mac Studio M5 Max',
+            productCategory: 'mac',
+            label: '価格.comで「Mac Studio M5 Max」の最安値を確認',
+          },
+          {
+            url: 'https://kakaku.com/search_results/Mac%20Studio%20M5%20Ultra/',
+            productName: 'Mac Studio M5 Ultra',
+            productCategory: 'mac',
+            label: '価格.comで「Mac Studio M5 Ultra」の最安値を確認',
           },
         ],
       },
@@ -5135,7 +5171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: '구매처',
         content:
-          '**Apple은 모든 구성을 직접 판매합니다. Amazon 및 다른 소매업체는 일반적인 구성을 보유하고 있으며 때로는 Apple 정가보다 낮은 가격을 제공합니다.** 아래 링크는 단순 제품 검색 링크입니다. 제휴 태그가 없으며 수수료를 발생시키지 않습니다. **국내에서 구매하는 경우:** Apple Store 한국 온라인 스토어(apple.com/kr)에서 구성과 세금 포함 가격을 확인하고, 쿠팡과 컴퓨존 등에서는 취급 여부와 가격을 각 판매처에서 확인하십시오. 가격 비교에는 다나와가 유용합니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하십시오.',
+          '**Apple은 모든 구성을 직접 판매합니다. Amazon 및 다른 소매업체는 일반적인 구성을 보유하고 있으며 때로는 Apple 정가보다 낮은 가격을 제공합니다.** 아래 링크는 단순 제품 검색 링크입니다. 제휴 태그가 없으며 수수료를 발생시키지 않습니다. **국내에서 구매하는 경우:** Apple Store 한국 온라인 스토어(apple.com/kr)에서 구성과 세금 포함 가격을 확인하고, 쿠팡과 컴퓨존 등에서는 취급 여부와 가격을 각 판매처에서 확인하십시오. 가격 비교에는 다나와가 유용합니다. 아래 링크에서 다나와의 최신 최저가를 바로 확인할 수 있습니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하십시오.',
         items: [
           '**Apple Store([apple.com/kr](https://www.apple.com/kr/)):** 맞춤 구성을 포함해 모든 메모리 및 저장 공간 구성을 선택할 수 있는 공식 구매처입니다. 주문 제작 방식인 64GB Mac Mini M5 Pro, 128GB Mac Studio M5 Max, Mac Studio M5 Ultra 메모리 등급에는 필수입니다.',
           '**Amazon:** Mac Mini 및 MacBook Pro의 일반적인 고정 구성을 보유하고 있으며 때로는 Apple 정가보다 낮은 가격을 제공합니다. 고용량 주문 제작 구성의 선택은 제한적입니다.',
@@ -5162,6 +5198,42 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'mac',
             priceRange: '899-9500',
             label: 'Amazon에서 Mac 탐색',
+          },
+          {
+            url: 'https://search.danawa.com/dsearch.php?query=Mac%20mini%20M6',
+            productName: 'Mac mini M6',
+            productCategory: 'mac',
+            label: '다나와에서 \'Mac mini M6\' 최저가 확인',
+          },
+          {
+            url: 'https://search.danawa.com/dsearch.php?query=Mac%20mini%20M5%20Pro',
+            productName: 'Mac mini M5 Pro',
+            productCategory: 'mac',
+            label: '다나와에서 \'Mac mini M5 Pro\' 최저가 확인',
+          },
+          {
+            url: 'https://search.danawa.com/dsearch.php?query=MacBook%20Pro%2016%20M5%20Pro',
+            productName: 'MacBook Pro 16 M5 Pro',
+            productCategory: 'mac',
+            label: '다나와에서 \'MacBook Pro 16 M5 Pro\' 최저가 확인',
+          },
+          {
+            url: 'https://search.danawa.com/dsearch.php?query=MacBook%20Pro%2016%20M5%20Max',
+            productName: 'MacBook Pro 16 M5 Max',
+            productCategory: 'mac',
+            label: '다나와에서 \'MacBook Pro 16 M5 Max\' 최저가 확인',
+          },
+          {
+            url: 'https://search.danawa.com/dsearch.php?query=Mac%20Studio%20M5%20Max',
+            productName: 'Mac Studio M5 Max',
+            productCategory: 'mac',
+            label: '다나와에서 \'Mac Studio M5 Max\' 최저가 확인',
+          },
+          {
+            url: 'https://search.danawa.com/dsearch.php?query=Mac%20Studio%20M5%20Ultra',
+            productName: 'Mac Studio M5 Ultra',
+            productCategory: 'mac',
+            label: '다나와에서 \'Mac Studio M5 Ultra\' 최저가 확인',
           },
         ],
       },

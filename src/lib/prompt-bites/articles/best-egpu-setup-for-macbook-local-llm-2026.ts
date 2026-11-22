@@ -2158,6 +2158,36 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         productCategory: 'gpu',
         label: 'Razer Core X(초기형) (Amazon)',
       },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=Mac%20mini%20M5%20Pro',
+        productName: 'Mac mini M5 Pro',
+        productCategory: 'mac',
+        label: "다나와에서 'Mac mini M5 Pro' 최저가 확인",
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=AOOSTAR%20GEM12%20Pro',
+        productName: 'AOOSTAR GEM12 Pro',
+        productCategory: 'mini-pc',
+        label: "다나와에서 'AOOSTAR GEM12 Pro' 최저가 확인",
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=Minisforum%20UM890%20Pro',
+        productName: 'Minisforum UM890 Pro',
+        productCategory: 'mini-pc',
+        label: "다나와에서 'Minisforum UM890 Pro' 최저가 확인",
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=RTX%203090%2024GB',
+        productName: 'RTX 3090 24GB',
+        productCategory: 'gpu',
+        label: "다나와에서 'RTX 3090 24GB' 최저가 확인",
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=Razer%20Core%20X%20V2',
+        productName: 'Razer Core X V2',
+        productCategory: 'gpu',
+        label: "다나와에서 'Razer Core X V2' 최저가 확인",
+      },
     ],
     publishDate: '2026-05-26',
     dateModified: '2026-11-22',
@@ -2256,7 +2286,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         productItems: [
           {
             title: 'Mac mini M5 Pro(최대 64GB) — 추천 macOS 선택',
-            content: 'Apple의 Mac mini M5 Pro(2026년 9월 22일부터 판매)는 미국 가격 1,699달러부터 시작하며 최대 64GB 통합 메모리(307GB/s)를 제공합니다. 토큰 생성은 메모리 대역폭에 제한되므로, 약 19–20GB의 32B Q4 모델은 이 대역폭에서 이론상 상한이 약 15 tok/s이며 실제 속도는 이보다 낮습니다. 별도의 GPU 머신 없이 32B급 모델을 메모리에 올려야 할 때 적합합니다. 기본형 Mac mini M6(미국 가격 899달러부터, 최대 32GB, 170GB/s)는 7B–14B 모델에 맞습니다. 이 글의 달러 가격은 미국 기준이며 국내 판매가는 세금, 수입 비용, 환율에 따라 다르므로 다나와에서 여러 판매처의 가격을 비교하고 쿠팡 등 주요 쇼핑몰에서 재고와 가격을 확인하세요. 국내 정식 유통 제품인지, 국내 AS가 가능한지도 구매 전에 확인하는 것이 좋습니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요. 이 확인 항목은 구매 전 참고용이며 전기·수입에 관한 전문적인 조언이 아닙니다.',
+            content: 'Apple의 Mac mini M5 Pro(2026년 9월 22일부터 판매)는 미국 가격 1,699달러부터 시작하며 최대 64GB 통합 메모리(307GB/s)를 제공합니다. 토큰 생성은 메모리 대역폭에 제한되므로, 약 19–20GB의 32B Q4 모델은 이 대역폭에서 이론상 상한이 약 15 tok/s이며 실제 속도는 이보다 낮습니다. 별도의 GPU 머신 없이 32B급 모델을 메모리에 올려야 할 때 적합합니다. 기본형 Mac mini M6(미국 가격 899달러부터, 최대 32GB, 170GB/s)는 7B–14B 모델에 맞습니다. 이 글의 달러 가격은 미국 기준이며 국내 판매가는 세금, 수입 비용, 환율에 따라 다르므로 다나와에서 여러 판매처의 가격을 비교하고 쿠팡 등 주요 쇼핑몰에서 재고와 가격을 확인하세요. 아래 링크에서 다나와의 최신 최저가를 바로 확인할 수 있습니다. 국내 정식 유통 제품인지, 국내 AS가 가능한지도 구매 전에 확인하는 것이 좋습니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요. 이 확인 항목은 구매 전 참고용이며 전기·수입에 관한 전문적인 조언이 아닙니다.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M5 Pro (Amazon)', url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro' },
             ],
