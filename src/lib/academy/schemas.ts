@@ -35,6 +35,7 @@ export const programmeOutputSchema = z.object({
     .array(
       z.object({
         title: z.string(),
+        summary: z.string().describe('One or two plain sentences (under 40 words) saying what the learner will understand after this lesson'),
         topic: z.string().describe('Short topic label (2-5 words), used for per-topic scores'),
         estimatedMinutes: z.number().int().describe('Reading time in whole minutes'),
         objectiveIds: z.array(z.number().int()).describe('0-based indexes into objectives that this lesson serves (at least one)'),
@@ -47,6 +48,8 @@ export type ProgrammeOutput = z.infer<typeof programmeOutputSchema>
 
 // ------------------------------------------------------------------------------------------- request bodies
 
+/** Longest wish a learner can write per topic or for the whole programme. */
+export const LEARNER_TEXT_MAX = 500
 const languageSchema = z.string().max(80).refine(isValidProgrammeLanguage)
 const subject = z.string().trim().min(ACADEMY_SUBJECT_MIN_CHARS).max(ACADEMY_SUBJECT_MAX_CHARS)
 const minutes = z.number().int().refine((n) => (ACADEMY_MINUTE_OPTIONS as readonly number[]).includes(n))
@@ -102,7 +105,12 @@ export const lessonRequestSchema = z.object({
     estimatedMinutes: z.number().int().min(1).max(120),
     objectiveIds: z.array(z.number().int().min(0).max(7)).max(8),
     recap: z.boolean().optional(),
+    summary: z.string().max(400).optional(),
   }),
+  /** the learner's wish for this lesson, from the topic's fine-tuning box */
+  learnerNote: z.string().trim().max(LEARNER_TEXT_MAX).optional(),
+  /** the learner's free line for the whole programme */
+  freeWish: z.string().trim().max(LEARNER_TEXT_MAX).optional(),
   index: z.number().int().min(0).max(11),
   /** titles of the other lessons, so this one does not repeat them */
   otherTitles: z.array(z.string().max(200)).max(12),

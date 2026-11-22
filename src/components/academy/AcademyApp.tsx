@@ -13,7 +13,7 @@ import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_PREFS_KEY, ACADE
 import { clearPrefs, loadPrefs, savePrefs } from '@/lib/academy/prefs'
 import { clearAcademyState, defaultDraft } from '@/lib/academy/store'
 import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
-import { lessonsDone, nextOpenLesson, openLesson } from '@/lib/academy/progress'
+import { clearLessonContent, lessonsDone, nextOpenLesson, openLesson, setFreeWish, setLessonNote } from '@/lib/academy/progress'
 import { programmeScore } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import { LEVELS, SETUP_FIELDS, TEST_DIFFICULTIES, TEST_FORMATS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type SetupField, type TestDifficulty, type TestFormat, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
@@ -26,6 +26,7 @@ import { LessonView } from './LessonView'
 import { QuizRouter } from './QuizRouter'
 import { ResultsView } from './ResultsView'
 import { ShareBar } from './ShareBar'
+import { FreeWishLine, LessonTuner, TuneBadge } from './TopicTuner'
 import { SHARE_COPY, shareCopyFor } from './copy/share'
 import { WaitNote } from './WaitNote'
 import { ChoiceOptionsPicker } from './ChoiceOptionsPicker'
@@ -186,6 +187,9 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           }
           onShowResults={() => update((s) => ({ ...s, view: 'results' }))}
           // "Start over" also empties the subject field, so new text is not appended to the old subject (F12).
+          onSaveNote={(i, note, confirmed) => update((s) => (s.programme ? { ...s, programme: setLessonNote(s.programme, i, note, confirmed) } : s))}
+          onRewriteLesson={(i) => update((s) => (s.programme ? { ...s, programme: clearLessonContent(s.programme, i) } : s))}
+          onSaveFreeWish={(text) => update((s) => (s.programme ? { ...s, programme: setFreeWish(s.programme, text) } : s))}
           onStartOver={() => update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined, draft: s.draft ? { ...s.draft, subject: '', picked: [] } : s.draft }))}
         />
       ) : state.view === 'diagnostic' ? (
@@ -828,7 +832,7 @@ function AutoRun({ run }: { run: () => void }) {
   return null
 }
 
-type ProgrammeLessonPlan = { title: string; topic: string; estimatedMinutes: number; objectiveIds: number[]; recap: boolean }
+type ProgrammeLessonPlan = { title: string; summary?: string; topic: string; estimatedMinutes: number; objectiveIds: number[]; recap: boolean }
 
 function toProgramme(
   d: SetupDraft,
@@ -840,6 +844,7 @@ function toProgramme(
   const lessons: Lesson[] = plan.lessons.map((l, i) => ({
     id: `lesson-${i + 1}`,
     title: l.title,
+    summary: l.summary?.trim() || undefined,
     topic: l.topic,
     estimatedMinutes: l.estimatedMinutes,
     objectiveIds: l.objectiveIds,
@@ -881,6 +886,9 @@ function ProgrammeView({
   onOpenLesson,
   onStartQuiz,
   onShowResults,
+  onSaveNote,
+  onRewriteLesson,
+  onSaveFreeWish,
   onStartOver,
 }: {
   tx: AcademyCopy
@@ -889,6 +897,9 @@ function ProgrammeView({
   onOpenLesson: (index: number) => void
   onStartQuiz: (quizId: string) => void
   onShowResults: () => void
+  onSaveNote: (index: number, note: string, confirmed: boolean) => void
+  onRewriteLesson: (index: number) => void
+  onSaveFreeWish: (text: string) => void
   onStartOver: () => void
 }) {
   const sx = SHARE_COPY[lang]
@@ -968,32 +979,39 @@ function ProgrammeView({
             const isDone = programme.progress.lessonStatus[l.id] === 'done'
             return (
               <li key={l.id}>
-                <button
-                  type="button"
-                  onClick={() => onOpenLesson(i)}
-                  className="flex w-full items-start gap-3 rounded-xl border border-gray-200 px-4 py-3 text-start hover:border-purple-400 hover:bg-purple-50"
+                <LessonTuner
+                  lang={lang}
+                  contentLang={programme.language}
+                  lesson={l}
+                  done={isDone}
+                  onSave={(note, confirmed) => onSaveNote(i, note, confirmed)}
+                  onRewrite={() => onRewriteLesson(i)}
                 >
-                  <span
-                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${isDone ? 'bg-green-600 text-white' : 'bg-purple-100 text-purple-700'}`}
-                    aria-hidden="true"
-                  >
-                    {isDone ? '✓' : i + 1}
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block font-medium text-gray-900">
-                      {l.title}
-                      {l.recap && <span className="ms-2 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-normal text-gray-600">{tx.recapBadge}</span>}
-                      {isDone && <span className="ms-2 rounded-full bg-green-50 px-2 py-0.5 text-xs font-normal text-green-800">{tx.statusDone}</span>}
+                  <button type="button" onClick={() => onOpenLesson(i)} className="flex h-full w-full items-start gap-3 rounded-s-xl px-4 py-3 text-start hover:bg-purple-50">
+                    <span
+                      className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${isDone ? 'bg-green-600 text-white' : 'bg-purple-100 text-purple-700'}`}
+                      aria-hidden="true"
+                    >
+                      {isDone ? '✓' : i + 1}
                     </span>
-                    <span className="block text-sm text-gray-500">{l.topic}</span>
-                  </span>
-                  <span className="shrink-0 whitespace-nowrap text-sm text-gray-500">{tx.minutes(l.estimatedMinutes)}</span>
-                </button>
+                    <span className="min-w-0 flex-1">
+                      <span className="block font-medium text-gray-900">
+                        {l.title}
+                        {l.recap && <span className="ms-2 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-normal text-gray-600">{tx.recapBadge}</span>}
+                        {isDone && <span className="ms-2 rounded-full bg-green-50 px-2 py-0.5 text-xs font-normal text-green-800">{tx.statusDone}</span>}
+                        <TuneBadge lang={lang} lesson={l} />
+                      </span>
+                      <span className="block text-sm text-gray-500">{l.topic}</span>
+                    </span>
+                    <span className="shrink-0 whitespace-nowrap text-sm text-gray-500">{tx.minutes(l.estimatedMinutes)}</span>
+                  </button>
+                </LessonTuner>
               </li>
             )
           })}
         </ol>
         </Content>
+        <FreeWishLine lang={lang} value={programme.freeWish ?? ''} onSave={onSaveFreeWish} />
       </div>
       <p className="text-sm text-gray-700">{testLine}</p>
       <div className="flex flex-wrap gap-3">

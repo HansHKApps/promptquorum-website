@@ -122,6 +122,14 @@ export interface Lesson {
   objectiveIds: number[]
   /** true when the quick check showed the learner already knows this topic: a short recap only */
   recap?: boolean
+  /** one or two sentences on what the lesson covers, shown when the learner opens the topic on the overview; absent in older programmes */
+  summary?: string
+  /** the learner's own wish for this lesson (fine-tuning on the overview); stays in this browser until the lesson is requested */
+  learnerNote?: string
+  /** the learner pressed "Confirm" on the topic */
+  confirmed?: boolean
+  /** the note this lesson text was written with; differs from learnerNote = offer to rewrite the lesson */
+  noteUsed?: string
   /** empty until the lesson is generated on first open (Phase 3) */
   sections: { heading: string; body: string }[]
   furtherReading: { title: string; url: string; source: 'promptquorum' | 'external' }[]
@@ -150,6 +158,8 @@ export interface Programme {
   lessons: Lesson[]
   testPlan: { finalQuestions: number; lessonQuizQuestions: number; testMinutes: number }
   finalTest?: QuizQuestion[]
+  /** free line under the lessons: a wish for the whole programme, handed to every lesson written after it was saved */
+  freeWish?: string
   /** the learner's own notes per lesson section (magic wand), key `<lesson id>:<section index>`; stays in this browser */
   notes?: Record<string, string>
   progress: {
