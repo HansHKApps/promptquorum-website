@@ -6,22 +6,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     affiliateLinks: [
       {
+        url: 'https://www.amazon.com/s?k=Minisforum+MS-S1+MAX',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: 'Minisforum MS-S1 MAX on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+GTR9+Pro',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: 'Beelink GTR9 Pro on Amazon',
+      },
+      {
         url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
         productName: 'AOOSTAR GEM12',
         productCategory: 'mini-pc',
         label: 'AOOSTAR GEM12 on Amazon',
       },
       {
-        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
-        productName: 'Minisforum mini PC',
+        url: 'https://www.amazon.com/s?k=GMKtec+EVO-X2',
+        productName: 'GMKtec EVO-X2',
         productCategory: 'mini-pc',
-        label: 'Minisforum mini PC on Amazon',
-      },
-      {
-        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
-        productName: 'Beelink mini PC',
-        productCategory: 'mini-pc',
-        label: 'Beelink mini PC on Amazon',
+        priceRange: '3500-3650',
+        label: 'GMKtec EVO-X2 on Amazon',
       },
     ],
     freshness_tier: 'semi_annual',
@@ -307,6 +314,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'You need 128GB or plan to run 70B Q5. You want passive cooling. You need local eGPU expansion.',
         linuxCompatibility: 'ROCm 6.2+ fully supported. Kernel 6.11+ required. Ollama default install works out of box. No custom driver compilation needed.',
         whereToBuy: 'Minisforum store, Amazon DE/UK/US (often faster), local EU retailers.',
+        affiliateLinks: [
+          {
+            url: 'https://www.minisforum.com/products/ms-s1-max',
+            productName: 'Minisforum MS-S1 MAX',
+            productCategory: 'mini-pc',
+            label: 'Minisforum MS-S1 MAX official site',
+          },
+        ],
       },
       'beelink-gtr9': {
         id: 'beelink-gtr9',
@@ -341,6 +356,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Budget is tight. You only plan to run one model at a time. Desk space is limited. You value maximum quiet operation.',
         linuxCompatibility: 'ROCm 6.2+ stable. Kernel 6.11+. Beelink ships with Ubuntu 24.04 pre-installed (ROCm already configured). Smoothest setup experience.',
         whereToBuy: 'Beelink store, Amazon US/DE/UK, AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://www.bee-link.com/products/beelink-gtr9-pro-amd-ryzen-ai-max-395',
+            productName: 'Beelink GTR9 Pro',
+            productCategory: 'mini-pc',
+            label: 'Beelink GTR9 Pro official site',
+          },
+        ],
       },
       'aoostar-gem12': {
         id: 'aoostar-gem12',
@@ -375,6 +398,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Budget is primary concern. You do not care about eGPU expansion. You want the simplest, most proven setup.',
         linuxCompatibility: 'ROCm 6.2+ supported. Kernel 6.11+. OCuLink eGPU support on Linux is experimental.',
         whereToBuy: 'AOOSTAR direct, Amazon US/DE, AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://aoostar.com/products/aoostar-gem12-pro-amd-r7-pro-8845hs-mini-pc',
+            productName: 'AOOSTAR GEM12',
+            productCategory: 'mini-pc',
+            label: 'AOOSTAR GEM12 official site',
+          },
+        ],
       },
       'gmktec-evo-x2': {
         id: 'gmktec-evo-x2',
@@ -410,6 +441,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Price is your main criterion (the other three machines are listed lower, per reported prices). You plan multi-box clustering (2.5G Ethernet only). You need an independently measured tokens-per-second figure for this exact unit.',
         linuxCompatibility: 'GMKtec lists Windows 11 Pro or Ubuntu. It uses the same Radeon 8060S as the other three machines; we found no independent ROCm test of this unit.',
         whereToBuy: 'GMKtec official store (US prices read 2026-11-14); Amazon (Notebookcheck reported $3,649 for 128GB / 2TB on 2026-07-18).',
+        affiliateLinks: [
+          {
+            url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc',
+            productName: 'GMKtec EVO-X2',
+            productCategory: 'mini-pc',
+            priceRange: '3500-3650',
+            label: 'GMKtec EVO-X2 official site',
+          },
+        ],
       },
       benchmarks: {
         id: 'benchmarks',
@@ -718,22 +758,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     affiliateLinks: [
       {
-        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        url: 'https://www.amazon.es/s?k=Minisforum+MS-S1+MAX',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: 'Minisforum MS-S1 MAX en Amazon.es',
+      },
+      {
+        url: 'https://www.amazon.es/s?k=Beelink+GTR9+Pro',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: 'Beelink GTR9 Pro en Amazon.es',
+      },
+      {
+        url: 'https://www.amazon.es/s?k=AOOSTAR+GEM12',
         productName: 'AOOSTAR GEM12',
         productCategory: 'mini-pc',
-        label: 'AOOSTAR GEM12 on Amazon',
+        label: 'AOOSTAR GEM12 en Amazon.es',
       },
       {
-        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
-        productName: 'Minisforum mini PC',
+        url: 'https://www.amazon.es/s?k=GMKtec+EVO-X2',
+        productName: 'GMKtec EVO-X2',
         productCategory: 'mini-pc',
-        label: 'Minisforum mini PC on Amazon',
-      },
-      {
-        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
-        productName: 'Beelink mini PC',
-        productCategory: 'mini-pc',
-        label: 'Beelink mini PC on Amazon',
+        priceRange: '3500-3650',
+        label: 'GMKtec EVO-X2 en Amazon.es',
       },
     ],
     freshness_tier: 'semi_annual',
@@ -862,6 +909,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Necesitas 128 GB o planeas usar 70B Q5. Quieres enfriamiento pasivo. Necesitas expansión eGPU local.',
         linuxCompatibility: 'ROCm 6.2+ totalmente soportado. Requiere kernel 6.11+. La instalación estándar de Ollama funciona de inmediato. No se necesita compilar drivers personalizados.',
         whereToBuy: 'Tienda Minisforum, Amazon DE/UK/US (suele ser más rápido), minoristas locales en la UE.',
+        affiliateLinks: [
+          {
+            url: 'https://www.minisforum.com/products/ms-s1-max',
+            productName: 'Minisforum MS-S1 MAX',
+            productCategory: 'mini-pc',
+            label: 'Minisforum MS-S1 MAX – sitio oficial',
+          },
+        ],
       },
       'beelink-gtr9': {
         id: 'beelink-gtr9',
@@ -896,6 +951,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'El presupuesto es ajustado. Solo planeas ejecutar un modelo a la vez. El espacio en el escritorio es limitado. Priorizas el silencio máximo.',
         linuxCompatibility: 'ROCm 6.2+ estable. Kernel 6.11+. Beelink incluye Ubuntu 24.04 preinstalado con ROCm ya configurado. La experiencia de configuración más sencilla.',
         whereToBuy: 'Tienda Beelink, Amazon US/DE/UK, AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://www.bee-link.com/products/beelink-gtr9-pro-amd-ryzen-ai-max-395',
+            productName: 'Beelink GTR9 Pro',
+            productCategory: 'mini-pc',
+            label: 'Beelink GTR9 Pro – sitio oficial',
+          },
+        ],
       },
       'aoostar-gem12': {
         id: 'aoostar-gem12',
@@ -930,6 +993,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'El presupuesto es la principal preocupación. No te interesa la expansión eGPU. Quieres la configuración más simple y probada.',
         linuxCompatibility: 'ROCm 6.2+ soportado. Kernel 6.11+. El soporte eGPU por OCuLink en Linux es experimental.',
         whereToBuy: 'AOOSTAR directo, Amazon US/DE, AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://aoostar.com/products/aoostar-gem12-pro-amd-r7-pro-8845hs-mini-pc',
+            productName: 'AOOSTAR GEM12',
+            productCategory: 'mini-pc',
+            label: 'AOOSTAR GEM12 – sitio oficial',
+          },
+        ],
       },
       'gmktec-evo-x2': {
         id: 'gmktec-evo-x2',
@@ -965,6 +1036,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'El precio es tu criterio principal (las otras tres máquinas figuran más baratas, según los precios informados). Planeas agrupar varios equipos en clúster (solo Ethernet de 2,5G). Necesitas una cifra de tokens por segundo medida de forma independiente para esta unidad concreta.',
         linuxCompatibility: 'GMKtec indica Windows 11 Pro o Ubuntu. Usa la misma Radeon 8060S que las otras tres máquinas; no encontramos ninguna prueba ROCm independiente de esta unidad.',
         whereToBuy: 'Tienda oficial de GMKtec (precios de EE. UU. consultados el 2026-11-14); Amazon (Notebookcheck informó $3.649 por 128 GB / 2 TB el 2026-07-18).',
+        affiliateLinks: [
+          {
+            url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc',
+            productName: 'GMKtec EVO-X2',
+            productCategory: 'mini-pc',
+            priceRange: '3500-3650',
+            label: 'GMKtec EVO-X2 – sitio oficial',
+          },
+        ],
       },
       benchmarks: {
         id: 'benchmarks',
@@ -1300,22 +1380,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     affiliateLinks: [
       {
-        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        url: 'https://www.amazon.ae/s?k=Minisforum+MS-S1+MAX',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: 'Minisforum MS-S1 MAX على Amazon.ae',
+      },
+      {
+        url: 'https://www.amazon.ae/s?k=Beelink+GTR9+Pro',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: 'Beelink GTR9 Pro على Amazon.ae',
+      },
+      {
+        url: 'https://www.amazon.ae/s?k=AOOSTAR+GEM12',
         productName: 'AOOSTAR GEM12',
         productCategory: 'mini-pc',
-        label: 'AOOSTAR GEM12 on Amazon',
+        label: 'AOOSTAR GEM12 على Amazon.ae',
       },
       {
-        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
-        productName: 'Minisforum mini PC',
+        url: 'https://www.amazon.ae/s?k=GMKtec+EVO-X2',
+        productName: 'GMKtec EVO-X2',
         productCategory: 'mini-pc',
-        label: 'Minisforum mini PC on Amazon',
-      },
-      {
-        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
-        productName: 'Beelink mini PC',
-        productCategory: 'mini-pc',
-        label: 'Beelink mini PC on Amazon',
+        priceRange: '3500-3650',
+        label: 'GMKtec EVO-X2 على Amazon.ae',
       },
     ],
     freshness_tier: 'semi_annual',
@@ -1444,6 +1531,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'تحتاج إلى 128 GB أو تخطط لاستخدام 70B Q5. تريد تبريداً سلبياً. تحتاج إلى توسعة eGPU محلية.',
         linuxCompatibility: 'ROCm 6.2+ مدعوم بالكامل. يتطلب kernel 6.11+. يعمل تثبيت Ollama القياسي فوراً. لا حاجة لترجمة برامج تشغيل مخصصة.',
         whereToBuy: 'متجر Minisforum، Amazon DE/UK/US (غالباً أسرع)، تجار التجزئة المحليون في الاتحاد الأوروبي.',
+        affiliateLinks: [
+          {
+            url: 'https://www.minisforum.com/products/ms-s1-max',
+            productName: 'Minisforum MS-S1 MAX',
+            productCategory: 'mini-pc',
+            label: 'Minisforum MS-S1 MAX – الموقع الرسمي',
+          },
+        ],
       },
       'beelink-gtr9': {
         id: 'beelink-gtr9',
@@ -1478,6 +1573,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'الميزانية محدودة. تخطط لتشغيل نموذج واحد فقط في كل مرة. المساحة على المكتب محدودة. تعطي الأولوية لأقصى درجات الهدوء.',
         linuxCompatibility: 'ROCm 6.2+ مستقر. Kernel 6.11+. يتضمن Beelink نظام Ubuntu 24.04 مثبّتاً مسبقاً مع ROCm مُهيّأ بالفعل. أبسط تجربة إعداد.',
         whereToBuy: 'متجر Beelink، Amazon US/DE/UK، AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://www.bee-link.com/products/beelink-gtr9-pro-amd-ryzen-ai-max-395',
+            productName: 'Beelink GTR9 Pro',
+            productCategory: 'mini-pc',
+            label: 'Beelink GTR9 Pro – الموقع الرسمي',
+          },
+        ],
       },
       'aoostar-gem12': {
         id: 'aoostar-gem12',
@@ -1512,6 +1615,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'الميزانية هي الهاجس الأساسي. لا تهتم بتوسعة eGPU. تريد أبسط إعداد مجرّب.',
         linuxCompatibility: 'ROCm 6.2+ مدعوم. Kernel 6.11+. دعم eGPU عبر OCuLink على Linux تجريبي.',
         whereToBuy: 'AOOSTAR مباشرةً، Amazon US/DE، AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://aoostar.com/products/aoostar-gem12-pro-amd-r7-pro-8845hs-mini-pc',
+            productName: 'AOOSTAR GEM12',
+            productCategory: 'mini-pc',
+            label: 'AOOSTAR GEM12 – الموقع الرسمي',
+          },
+        ],
       },
       'gmktec-evo-x2': {
         id: 'gmktec-evo-x2',
@@ -1547,6 +1658,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'السعر هو معيارك الأول (الأجهزة الثلاثة الأخرى مدرجة بسعر أقل وفق الأسعار المنقولة). تخطط لربط عدة أجهزة في عنقود (Ethernet بسرعة 2.5G فقط). تحتاج إلى رقم رموز/ثانية مقاس بشكل مستقل لهذا الجهاز بعينه.',
         linuxCompatibility: 'تذكر GMKtec نظام Windows 11 Pro أو Ubuntu. يستخدم Radeon 8060S نفسه الموجود في الأجهزة الثلاثة الأخرى؛ ولم نجد اختبار ROCm مستقلاً لهذا الجهاز.',
         whereToBuy: 'متجر GMKtec الرسمي (أسعار الولايات المتحدة بتاريخ 2026-11-14)؛ Amazon (أفادت Notebookcheck بسعر 3,649 دولار لطراز 128 GB / 2 TB بتاريخ 2026-07-18).',
+        affiliateLinks: [
+          {
+            url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc',
+            productName: 'GMKtec EVO-X2',
+            productCategory: 'mini-pc',
+            priceRange: '3500-3650',
+            label: 'GMKtec EVO-X2 – الموقع الرسمي',
+          },
+        ],
       },
       benchmarks: {
         id: 'benchmarks',
@@ -1882,22 +2002,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     affiliateLinks: [
       {
-        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        url: 'https://www.amazon.com.br/s?k=Minisforum+MS-S1+MAX',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: 'Minisforum MS-S1 MAX na Amazon.com.br',
+      },
+      {
+        url: 'https://www.amazon.com.br/s?k=Beelink+GTR9+Pro',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: 'Beelink GTR9 Pro na Amazon.com.br',
+      },
+      {
+        url: 'https://www.amazon.com.br/s?k=AOOSTAR+GEM12',
         productName: 'AOOSTAR GEM12',
         productCategory: 'mini-pc',
-        label: 'AOOSTAR GEM12 on Amazon',
+        label: 'AOOSTAR GEM12 na Amazon.com.br',
       },
       {
-        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
-        productName: 'Minisforum mini PC',
+        url: 'https://www.amazon.com.br/s?k=GMKtec+EVO-X2',
+        productName: 'GMKtec EVO-X2',
         productCategory: 'mini-pc',
-        label: 'Minisforum mini PC on Amazon',
-      },
-      {
-        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
-        productName: 'Beelink mini PC',
-        productCategory: 'mini-pc',
-        label: 'Beelink mini PC on Amazon',
+        priceRange: '3500-3650',
+        label: 'GMKtec EVO-X2 na Amazon.com.br',
       },
     ],
     freshness_tier: 'semi_annual',
@@ -2039,22 +2166,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     affiliateLinks: [
       {
-        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        url: 'https://www.amazon.de/s?k=Minisforum+MS-S1+MAX',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: 'Minisforum MS-S1 MAX bei Amazon.de',
+      },
+      {
+        url: 'https://www.amazon.de/s?k=Beelink+GTR9+Pro',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: 'Beelink GTR9 Pro bei Amazon.de',
+      },
+      {
+        url: 'https://www.amazon.de/s?k=AOOSTAR+GEM12',
         productName: 'AOOSTAR GEM12',
         productCategory: 'mini-pc',
-        label: 'AOOSTAR GEM12 on Amazon',
+        label: 'AOOSTAR GEM12 bei Amazon.de',
       },
       {
-        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
-        productName: 'Minisforum mini PC',
+        url: 'https://www.amazon.de/s?k=GMKtec+EVO-X2',
+        productName: 'GMKtec EVO-X2',
         productCategory: 'mini-pc',
-        label: 'Minisforum mini PC on Amazon',
-      },
-      {
-        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
-        productName: 'Beelink mini PC',
-        productCategory: 'mini-pc',
-        label: 'Beelink mini PC on Amazon',
+        priceRange: '3500-3650',
+        label: 'GMKtec EVO-X2 bei Amazon.de',
       },
     ],
     freshness_tier: 'semi_annual',
@@ -2182,6 +2316,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Sie benötigen 128GB oder planen 70B Q5. Sie möchten Passivkühlung. Sie benötigen lokale eGPU-Erweiterung.',
         linuxCompatibility: 'ROCm 6.2+ vollständig unterstützt. Kernel 6.11+ erforderlich. Ollama-Standardinstallation funktioniert sofort. Keine benutzerdefinierte Treiberkompilierung nötig.',
         whereToBuy: 'Minisforum-Shop, Amazon DE/UK/US (oft schneller), lokale EU-Händler.',
+        affiliateLinks: [
+          {
+            url: 'https://www.minisforum.com/products/ms-s1-max',
+            productName: 'Minisforum MS-S1 MAX',
+            productCategory: 'mini-pc',
+            label: 'Minisforum MS-S1 MAX – offizielle Website',
+          },
+        ],
       },
       'beelink-gtr9': {
         id: 'beelink-gtr9',
@@ -2216,6 +2358,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Budget ist knapp. Sie planen nur ein Modell gleichzeitig auszuführen. Schreibtischplatz ist begrenzt. Sie legen größten Wert auf leisen Betrieb.',
         linuxCompatibility: 'ROCm 6.2+ stabil. Kernel 6.11+. Beelink liefert mit Ubuntu 24.04 vorinstalliert (ROCm bereits konfiguriert). Reibungsloseste Einrichtungserfahrung.',
         whereToBuy: 'Beelink-Shop, Amazon US/DE/UK, AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://www.bee-link.com/products/beelink-gtr9-pro-amd-ryzen-ai-max-395',
+            productName: 'Beelink GTR9 Pro',
+            productCategory: 'mini-pc',
+            label: 'Beelink GTR9 Pro – offizielle Website',
+          },
+        ],
       },
       'aoostar-gem12': {
         id: 'aoostar-gem12',
@@ -2250,6 +2400,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Budget ist primäres Kriterium. eGPU-Erweiterung irrelevant. Sie wünschen das einfachste, bewährteste Setup.',
         linuxCompatibility: 'ROCm 6.2+ unterstützt. Kernel 6.11+. OCuLink-eGPU-Unterstützung unter Linux experimentell.',
         whereToBuy: 'AOOSTAR direkt, Amazon US/DE, AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://aoostar.com/products/aoostar-gem12-pro-amd-r7-pro-8845hs-mini-pc',
+            productName: 'AOOSTAR GEM12',
+            productCategory: 'mini-pc',
+            label: 'AOOSTAR GEM12 – offizielle Website',
+          },
+        ],
       },
       'gmktec-evo-x2': {
         id: 'gmktec-evo-x2',
@@ -2285,6 +2443,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Der Preis ist Ihr Hauptkriterium (die anderen drei Geräte sind nach den übernommenen Preisen günstiger). Sie planen ein Cluster aus mehreren Geräten (nur 2,5G-Ethernet). Sie benötigen eine unabhängig gemessene Tokens-pro-Sekunde-Angabe für genau dieses Gerät.',
         linuxCompatibility: 'GMKtec nennt Windows 11 Pro oder Ubuntu. Es nutzt dieselbe Radeon 8060S wie die anderen drei Geräte; einen unabhängigen ROCm-Test dieses Geräts haben wir nicht gefunden.',
         whereToBuy: 'Offizieller GMKtec-Shop (US-Preise abgerufen am 2026-11-14); Amazon (Notebookcheck meldete 3.649 $ für 128GB / 2TB am 2026-07-18).',
+        affiliateLinks: [
+          {
+            url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc',
+            productName: 'GMKtec EVO-X2',
+            productCategory: 'mini-pc',
+            priceRange: '3500-3650',
+            label: 'GMKtec EVO-X2 – offizielle Website',
+          },
+        ],
       },
       benchmarks: {
         id: 'benchmarks',
@@ -2558,22 +2725,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     affiliateLinks: [
       {
-        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        url: 'https://www.amazon.fr/s?k=Minisforum+MS-S1+MAX',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: 'Minisforum MS-S1 MAX sur Amazon.fr',
+      },
+      {
+        url: 'https://www.amazon.fr/s?k=Beelink+GTR9+Pro',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: 'Beelink GTR9 Pro sur Amazon.fr',
+      },
+      {
+        url: 'https://www.amazon.fr/s?k=AOOSTAR+GEM12',
         productName: 'AOOSTAR GEM12',
         productCategory: 'mini-pc',
-        label: 'AOOSTAR GEM12 on Amazon',
+        label: 'AOOSTAR GEM12 sur Amazon.fr',
       },
       {
-        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
-        productName: 'Minisforum mini PC',
+        url: 'https://www.amazon.fr/s?k=GMKtec+EVO-X2',
+        productName: 'GMKtec EVO-X2',
         productCategory: 'mini-pc',
-        label: 'Minisforum mini PC on Amazon',
-      },
-      {
-        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
-        productName: 'Beelink mini PC',
-        productCategory: 'mini-pc',
-        label: 'Beelink mini PC on Amazon',
+        priceRange: '3500-3650',
+        label: 'GMKtec EVO-X2 sur Amazon.fr',
       },
     ],
     freshness_tier: 'semi_annual',
@@ -2703,6 +2877,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Besoin 128Go ou planifiez 70B Q5. Voulez cooling passif. Besoin eGPU local expansion.',
         linuxCompatibility: 'ROCm 6.2+ complètement supporté. Kernel 6.11+ requis. Installation standard Ollama fonctionne immédiatement. Aucune compilation driver custom nécessaire.',
         whereToBuy: 'Minisforum shop, Amazon DE/UK/US (souvent plus rapide), revendeurs EU locaux.',
+        affiliateLinks: [
+          {
+            url: 'https://www.minisforum.com/products/ms-s1-max',
+            productName: 'Minisforum MS-S1 MAX',
+            productCategory: 'mini-pc',
+            label: 'Minisforum MS-S1 MAX – site officiel',
+          },
+        ],
       },
       'beelink-gtr9': {
         id: 'beelink-gtr9',
@@ -2737,6 +2919,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Budget serré. Planifiez modèle seulement parallèle. Espace bureau limité. Valor cooling silence.',
         linuxCompatibility: 'ROCm 6.2+ stable. Kernel 6.11+. Beelink livrés Ubuntu 24.04 (ROCm déjà configué). Setupmost seamless experience.',
         whereToBuy: 'Beelink shop, Amazon US/DE/UK, AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://www.bee-link.com/products/beelink-gtr9-pro-amd-ryzen-ai-max-395',
+            productName: 'Beelink GTR9 Pro',
+            productCategory: 'mini-pc',
+            label: 'Beelink GTR9 Pro – site officiel',
+          },
+        ],
       },
       'aoostar-gem12': {
         id: 'aoostar-gem12',
@@ -2771,6 +2961,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Budget criteria. eGPU expansion irrelevant. Voulez setup simplest proven.',
         linuxCompatibility: 'ROCm 6.2+ supporté. Kernel 6.11+. eGPU support OCuLink Linux experimental.',
         whereToBuy: 'AOOSTAR direct, Amazon US/DE, AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://aoostar.com/products/aoostar-gem12-pro-amd-r7-pro-8845hs-mini-pc',
+            productName: 'AOOSTAR GEM12',
+            productCategory: 'mini-pc',
+            label: 'AOOSTAR GEM12 – site officiel',
+          },
+        ],
       },
       'gmktec-evo-x2': {
         id: 'gmktec-evo-x2',
@@ -2806,6 +3004,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: 'Le prix est votre critère principal (les trois autres machines sont moins chères, d\'après les prix repris). Vous prévoyez de mettre plusieurs machines en grappe (Ethernet 2,5G seulement). Vous avez besoin d\'un chiffre de tokens par seconde mesuré de façon indépendante pour cette unité précise.',
         linuxCompatibility: 'GMKtec indique Windows 11 Pro ou Ubuntu. Elle utilise la même Radeon 8060S que les trois autres machines ; nous n\'avons trouvé aucun test ROCm indépendant de cette unité.',
         whereToBuy: 'Boutique officielle de GMKtec (prix américains consultés le 2026-11-14) ; Amazon (Notebookcheck a relevé 3 649 $ pour 128Go / 2To le 2026-07-18).',
+        affiliateLinks: [
+          {
+            url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc',
+            productName: 'GMKtec EVO-X2',
+            productCategory: 'mini-pc',
+            priceRange: '3500-3650',
+            label: 'GMKtec EVO-X2 – site officiel',
+          },
+        ],
       },
       benchmarks: {
         id: 'benchmarks',
@@ -3079,22 +3286,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     affiliateLinks: [
       {
-        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        url: 'https://www.amazon.co.jp/s?k=Minisforum+MS-S1+MAX',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: 'Minisforum MS-S1 MAX（Amazon.co.jp）',
+      },
+      {
+        url: 'https://www.amazon.co.jp/s?k=Beelink+GTR9+Pro',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: 'Beelink GTR9 Pro（Amazon.co.jp）',
+      },
+      {
+        url: 'https://www.amazon.co.jp/s?k=AOOSTAR+GEM12',
         productName: 'AOOSTAR GEM12',
         productCategory: 'mini-pc',
-        label: 'AOOSTAR GEM12 on Amazon',
+        label: 'AOOSTAR GEM12（Amazon.co.jp）',
       },
       {
-        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
-        productName: 'Minisforum mini PC',
+        url: 'https://www.amazon.co.jp/s?k=GMKtec+EVO-X2',
+        productName: 'GMKtec EVO-X2',
         productCategory: 'mini-pc',
-        label: 'Minisforum mini PC on Amazon',
-      },
-      {
-        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
-        productName: 'Beelink mini PC',
-        productCategory: 'mini-pc',
-        label: 'Beelink mini PC on Amazon',
+        priceRange: '3500-3650',
+        label: 'GMKtec EVO-X2（Amazon.co.jp）',
       },
     ],
     freshness_tier: 'semi_annual',
@@ -3218,6 +3432,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'ソロ開発者・スタートアップ・最初の70Bセットアップ。',
         avoidIf: '128GB必須 or eGPU拡張計画 or <¥165,000予算。',
         whereToBuy: '[Minisforumストア](https://store.minisforum.com)',
+        affiliateLinks: [
+          {
+            url: 'https://www.minisforum.com/products/ms-s1-max',
+            productName: 'Minisforum MS-S1 MAX',
+            productCategory: 'mini-pc',
+            label: 'Minisforum MS-S1 MAX（公式サイト）',
+          },
+        ],
       },
       'beelink-gtr9': {
         id: 'beelink-gtr9',
@@ -3247,6 +3469,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'チーム環境・複数LLM同時実行・大コンテキスト研究・本番推論。',
         avoidIf: '単一70B実行のみ or 予算¥200,000以下。',
         whereToBuy: '[Beelinkストア](https://www.bee-link.com)',
+        affiliateLinks: [
+          {
+            url: 'https://www.bee-link.com/products/beelink-gtr9-pro-amd-ryzen-ai-max-395',
+            productName: 'Beelink GTR9 Pro',
+            productCategory: 'mini-pc',
+            label: 'Beelink GTR9 Pro（公式サイト）',
+          },
+        ],
       },
       'aoostar-gem12': {
         id: 'aoostar-gem12',
@@ -3276,6 +3506,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'eGPU拡張計画・プレミアム筺体・静粛環境・発烧友。',
         avoidIf: '単体推論のみ or eGPU予算なし or サポート重視。',
         whereToBuy: '[AOOSTARストア](https://aoostar.com)',
+        affiliateLinks: [
+          {
+            url: 'https://aoostar.com/products/aoostar-gem12-pro-amd-r7-pro-8845hs-mini-pc',
+            productName: 'AOOSTAR GEM12',
+            productCategory: 'mini-pc',
+            label: 'AOOSTAR GEM12（公式サイト）',
+          },
+        ],
       },
       'gmktec-evo-x2': {
         id: 'gmktec-evo-x2',
@@ -3309,6 +3547,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'Ryzen AI Max+ 395搭載機で64GBか128GBを選びたく、2つ目のM.2スロットが欲しい方。現在の価格を確認してから購入する方向けです。詳細は[GMKtec EVO-X2のページ](/ja/local-llms/gmktec-evo-x2-local-ai-workstation)をご覧ください。',
         avoidIf: '価格が最優先の方(転載価格では他の3機種のほうが安価です)。複数台でクラスターを組む予定の方(2.5G Ethernetのみ)。この機種そのものの独立測定したトークン/秒の値が必要な方。',
         whereToBuy: '[GMKtec公式ストア](https://www.gmktec.com)(米国価格は2026-11-14確認)。Amazonでは、Notebookcheckが2026-07-18に128GB / 2TBを3,649ドルと報告しています。',
+        affiliateLinks: [
+          {
+            url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc',
+            productName: 'GMKtec EVO-X2',
+            productCategory: 'mini-pc',
+            priceRange: '3500-3650',
+            label: 'GMKtec EVO-X2（公式サイト）',
+          },
+        ],
       },
       benchmarks: {
         id: 'benchmarks',
@@ -3577,22 +3824,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     affiliateLinks: [
       {
-        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        url: 'https://search.jd.com/Search?keyword=Minisforum+MS-S1+MAX',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: 'Minisforum MS-S1 MAX（京东）',
+      },
+      {
+        url: 'https://search.jd.com/Search?keyword=Beelink+GTR9+Pro',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: 'Beelink GTR9 Pro（京东）',
+      },
+      {
+        url: 'https://search.jd.com/Search?keyword=AOOSTAR+GEM12',
         productName: 'AOOSTAR GEM12',
         productCategory: 'mini-pc',
-        label: 'AOOSTAR GEM12 on Amazon',
+        label: 'AOOSTAR GEM12（京东）',
       },
       {
-        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
-        productName: 'Minisforum mini PC',
+        url: 'https://search.jd.com/Search?keyword=GMKtec+EVO-X2',
+        productName: 'GMKtec EVO-X2',
         productCategory: 'mini-pc',
-        label: 'Minisforum mini PC on Amazon',
-      },
-      {
-        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
-        productName: 'Beelink mini PC',
-        productCategory: 'mini-pc',
-        label: 'Beelink mini PC on Amazon',
+        priceRange: '3500-3650',
+        label: 'GMKtec EVO-X2（京东）',
       },
     ],
     freshness_tier: 'semi_annual',
@@ -3716,6 +3970,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '独立开发者、初创公司、第一次70B设置。',
         avoidIf: '128GB必需 or eGPU扩展计划 or <¥10000预算。',
         whereToBuy: '[Minisforum官方店](https://store.minisforum.com)',
+        affiliateLinks: [
+          {
+            url: 'https://www.minisforum.com/products/ms-s1-max',
+            productName: 'Minisforum MS-S1 MAX',
+            productCategory: 'mini-pc',
+            label: 'Minisforum MS-S1 MAX（官方网站）',
+          },
+        ],
       },
       'beelink-gtr9': {
         id: 'beelink-gtr9',
@@ -3745,6 +4007,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '团队环境、并行LLM运行、大上下文研究、生产推理。',
         avoidIf: '仅单一70B运行 or 预算¥13500以下。',
         whereToBuy: '[Beelink官方店](https://www.bee-link.com)',
+        affiliateLinks: [
+          {
+            url: 'https://www.bee-link.com/products/beelink-gtr9-pro-amd-ryzen-ai-max-395',
+            productName: 'Beelink GTR9 Pro',
+            productCategory: 'mini-pc',
+            label: 'Beelink GTR9 Pro（官方网站）',
+          },
+        ],
       },
       'aoostar-gem12': {
         id: 'aoostar-gem12',
@@ -3774,6 +4044,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: 'eGPU扩展计划、高端外壳、静音环境、发烧友。',
         avoidIf: '仅单体推理 or无eGPU预算 or 重视支持。',
         whereToBuy: '[AOOSTAR官方店](https://aoostar.com)',
+        affiliateLinks: [
+          {
+            url: 'https://aoostar.com/products/aoostar-gem12-pro-amd-r7-pro-8845hs-mini-pc',
+            productName: 'AOOSTAR GEM12',
+            productCategory: 'mini-pc',
+            label: 'AOOSTAR GEM12（官方网站）',
+          },
+        ],
       },
       'gmktec-evo-x2': {
         id: 'gmktec-evo-x2',
@@ -3807,6 +4085,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestFor: '想要Ryzen AI Max+ 395主机、可在64GB与128GB之间选择并需要第二个M.2插槽，且确认当前价格后再购买的用户。详情见[GMKtec EVO-X2页面](/zh/local-llms/gmktec-evo-x2-local-ai-workstation)。',
         avoidIf: '价格是首要标准(按转引价格，其余三款更便宜)。计划多台组成集群(仅2.5G以太网)。需要针对这台设备独立实测的每秒令牌数。',
         whereToBuy: '[GMKtec官方店](https://www.gmktec.com)(美国价格于2026-11-14查看)。亚马逊方面，Notebookcheck于2026-07-18报告128GB / 2TB为$3,649。',
+        affiliateLinks: [
+          {
+            url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc',
+            productName: 'GMKtec EVO-X2',
+            productCategory: 'mini-pc',
+            priceRange: '3500-3650',
+            label: 'GMKtec EVO-X2（官方网站）',
+          },
+        ],
       },
       benchmarks: {
         id: 'benchmarks',
@@ -4075,22 +4362,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     affiliateLinks: [
       {
+        url: 'https://www.amazon.com/s?k=Minisforum+MS-S1+MAX',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: 'Minisforum MS-S1 MAX (Amazon)',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+GTR9+Pro',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: 'Beelink GTR9 Pro (Amazon)',
+      },
+      {
         url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
         productName: 'AOOSTAR GEM12',
         productCategory: 'mini-pc',
-        label: 'AOOSTAR GEM12 on Amazon',
+        label: 'AOOSTAR GEM12 (Amazon)',
       },
       {
-        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
-        productName: 'Minisforum mini PC',
+        url: 'https://www.amazon.com/s?k=GMKtec+EVO-X2',
+        productName: 'GMKtec EVO-X2',
         productCategory: 'mini-pc',
-        label: 'Minisforum mini PC on Amazon',
-      },
-      {
-        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
-        productName: 'Beelink mini PC',
-        productCategory: 'mini-pc',
-        label: 'Beelink mini PC on Amazon',
+        priceRange: '3500-3650',
+        label: 'GMKtec EVO-X2 (Amazon)',
       },
     ],
     freshness_tier: 'semi_annual',
@@ -4219,6 +4513,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: '128GB가 필요하거나 70B Q5 실행을 계획하는 경우. 패시브 쿨링을 원하는 경우. 로컬 eGPU 확장이 필요한 경우.',
         linuxCompatibility: 'ROCm 6.2+ 완전 지원. 커널 6.11+ 필요. Ollama 기본 설치가 즉시 작동. 커스텀 드라이버 컴파일 불필요.',
         whereToBuy: 'Minisforum 스토어, Amazon DE/UK/US(종종 더 빠름), 현지 EU 소매업체.',
+        affiliateLinks: [
+          {
+            url: 'https://www.minisforum.com/products/ms-s1-max',
+            productName: 'Minisforum MS-S1 MAX',
+            productCategory: 'mini-pc',
+            label: 'Minisforum MS-S1 MAX (공식 사이트)',
+          },
+        ],
       },
       'beelink-gtr9': {
         id: 'beelink-gtr9',
@@ -4253,6 +4555,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: '예산이 빠듯한 경우. 한 번에 하나의 모델만 실행할 계획인 경우. 데스크 공간이 제한된 경우. 최대한 조용한 작동을 원하는 경우.',
         linuxCompatibility: 'ROCm 6.2+ 안정화. 커널 6.11+. Beelink는 Ubuntu 24.04(ROCm 이미 구성)와 함께 출고. 가장 원활한 설정 경험.',
         whereToBuy: 'Beelink 스토어, Amazon US/DE/UK, AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://www.bee-link.com/products/beelink-gtr9-pro-amd-ryzen-ai-max-395',
+            productName: 'Beelink GTR9 Pro',
+            productCategory: 'mini-pc',
+            label: 'Beelink GTR9 Pro (공식 사이트)',
+          },
+        ],
       },
       'aoostar-gem12': {
         id: 'aoostar-gem12',
@@ -4287,6 +4597,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: '예산이 주요 관심사인 경우. eGPU 확장에 관심 없는 경우. 가장 단순하고 검증된 설정을 원하는 경우.',
         linuxCompatibility: 'ROCm 6.2+ 지원. 커널 6.11+. Linux에서 OCuLink eGPU 지원은 실험적입니다.',
         whereToBuy: 'AOOSTAR 직접 구매, Amazon US/DE, AliExpress.',
+        affiliateLinks: [
+          {
+            url: 'https://aoostar.com/products/aoostar-gem12-pro-amd-r7-pro-8845hs-mini-pc',
+            productName: 'AOOSTAR GEM12',
+            productCategory: 'mini-pc',
+            label: 'AOOSTAR GEM12 (공식 사이트)',
+          },
+        ],
       },
       'gmktec-evo-x2': {
         id: 'gmktec-evo-x2',
@@ -4322,6 +4640,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         avoidIf: '가격이 가장 중요한 기준인 경우(전재 가격 기준으로 나머지 세 기기가 더 저렴합니다). 여러 대를 클러스터로 묶을 계획인 경우(2.5G 이더넷뿐). 이 기기에 대해 독립적으로 측정한 초당 토큰 수가 필요한 경우.',
         linuxCompatibility: 'GMKtec은 Windows 11 Pro 또는 Ubuntu를 제공한다고 표기합니다. 나머지 세 기기와 같은 Radeon 8060S를 사용하며, 이 기기의 독립적인 ROCm 테스트는 찾지 못했습니다.',
         whereToBuy: 'GMKtec 공식 스토어(미국 가격은 2026-11-14 확인), Amazon(Notebookcheck는 2026-07-18에 128GB / 2TB를 $3,649로 보도).',
+        affiliateLinks: [
+          {
+            url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc',
+            productName: 'GMKtec EVO-X2',
+            productCategory: 'mini-pc',
+            priceRange: '3500-3650',
+            label: 'GMKtec EVO-X2 (공식 사이트)',
+          },
+        ],
       },
       benchmarks: {
         id: 'benchmarks',
