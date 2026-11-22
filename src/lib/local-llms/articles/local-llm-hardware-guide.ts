@@ -6032,6 +6032,7 @@ schema: {
             '[2026年最高のローカル推論モデル：DeepSeek-R1 Distillランキング](/ja/local-llms/best-local-reasoning-model-deepseek-r1-2026) — ハードウェアティア別（7B〜70B）のDeepSeek-R1 Distill比較、ベンチマーク、Ollamaセットアップ。',
             '[MRAMとメモリ内コンピューティング：オンデバイスAIの次のステップ?](/ja/local-llms/mram-in-memory-computing-local-ai-2026) -- AIのためのMRAMとメモリ内コンピューティング',
             '[クラウドGPUを時間単位でレンタル](/ja/power-local-llm/best-cloud-gpu-providers) -- GPUレンタル事業者の比較。購入前に大きなカードを試すために。',
+            '[ローカルLLM向けミニPC 2026年版](/ja/local-llms/best-mini-pcs-local-llm) — ローカルLLM用にミニPCを選ぶときの条件と構成ごとの違いを比較したガイドです。',
           ],
         },
         sources: {
@@ -7908,6 +7909,9 @@ schema: {
             '[2026년 최고의 로컬 추론 모델: DeepSeek-R1 Distill 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 하드웨어 티어별(7B~70B) DeepSeek-R1 Distill 비교, 벤치마크 데이터 및 Ollama 설정 가이드.',
             '[MRAM과 인메모리 컴퓨팅: 온디바이스 AI의 다음 도약?](/ko/local-llms/mram-in-memory-computing-local-ai-2026) -- AI를 위한 MRAM과 인메모리 컴퓨팅',
             '[클라우드 GPU를 시간 단위로 대여](/ko/power-local-llm/best-cloud-gpu-providers) -- 구매 전에 더 큰 카드를 시험해 볼 수 있는 GPU 대여 업체 비교.',
+            '[로컬 LLM용 미니 PC 추천 가이드](/ko/local-llms/best-mini-pcs-local-llm) — 로컬 LLM에 맞는 미니 PC의 조건과 구성별 차이를 비교한 가이드입니다.',
+            '[로컬 AI용 Mac 추천 가이드](/ko/power-local-llm/best-mac-for-local-ai-2026) — Mac mini, Mac Studio, MacBook Pro를 로컬 AI 용도로 비교한 가이드입니다.',
+            '[로컬 LLM용 예산형 GPU 가이드](/ko/local-llms/best-budget-gpus-local-llm) — RTX 3060 12GB 등 예산형 GPU에서 실행할 수 있는 모델을 정리한 가이드입니다.',
           ],
         },
         sources: {

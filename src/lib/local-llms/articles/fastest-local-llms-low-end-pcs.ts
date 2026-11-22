@@ -3799,6 +3799,7 @@ schema: {
             '[CPU専用で動くおすすめLLM](/ja/local-llms/best-cpu-only-llm) — GPUがないマシン向けのランキング形式のおすすめ。モデルごとの推定トークン/秒付き。',
             '[小型ローカルLLMモデル](/ja/local-llms/small-local-llm-models) — 4B未満の階層を品質で比較し、最も軽量で実用に耐えるモデルを紹介。',
             '[レンタルGPUで大きなモデルを試す](/ja/power-local-llm/best-cloud-gpu-providers) -- GPUレンタル事業者の比較と[RunPodレビュー](/ja/power-local-llm/runpod-review)。',
+            '[ローカルLLM向けミニPC 2026年版](/ja/local-llms/best-mini-pcs-local-llm) — ローカルLLM用にミニPCを選ぶときの条件と構成ごとの違いを比較したガイドです。',
           ],
         },
         'sources': {

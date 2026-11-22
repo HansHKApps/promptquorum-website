@@ -1488,6 +1488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama のインストール方法](/ja/local-llms/how-to-install-ollama) — クラスター横断：ローカルモデルを動かす',
           '[2026年おすすめバルコニー太陽光キット](/ja/balcony-solar/best-balcony-solar-kits-2026) — Home Assistant セットアップに太陽光モニタリングを追加',
           '[Home Assistant Energyダッシュボード：完全設定ガイド（2026年）](/ja/smart-home/home-assistant-energy-dashboard-guide) — 家庭のエネルギー使用量を追跡・可視化する',
+          '[Home Assistant向けローカルAIミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — Home AssistantとローカルAIを1台のミニPCで動かすときの選び方を解説したガイドです。',
         ],
       },
     },
