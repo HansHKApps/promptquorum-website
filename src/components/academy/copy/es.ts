@@ -1,9 +1,9 @@
 import type { AcademyBaseCopy } from './types'
 
 export const copy: AcademyBaseCopy = {
-  metaTitle: 'PromptQuorum Academy: aprende IA gratis, a tu medida',
+  metaTitle: 'PromptQuorum Academy: aprende IA local gratis, a tu medida',
   metaDescription:
-    'Elige un tema, tu tiempo y tu nivel. PromptQuorum Academy crea lecciones cortas que se apoyan en las guías de PromptQuorum, con tutor de IA, tests y constancia PDF.',
+    'Elige un tema de IA local, tu tiempo y tu nivel. PromptQuorum Academy crea lecciones cortas sobre IA local que se apoyan en las guías de PromptQuorum, con tutor de IA, tests y constancia PDF.',
   h1: 'PromptQuorum Academy',
   intro: 'Aprende IA local, prompting y temas relacionados en lecciones cortas adaptadas a tu tiempo y tu nivel. Gratis y sin cuenta.',
   howTitle: 'Cómo funciona',
@@ -76,7 +76,7 @@ export const copy: AcademyBaseCopy = {
   testSplit: (l, t) => `${l} min de lecciones + ${t} min de prueba`,
   storageBlocked: 'Este navegador no permite guardar. Puedes continuar, pero perderás tu progreso al cerrar la página.',
   loading: 'Cargando',
-  tagline: 'Aprendizaje de IA personalizado, gratis',
+  tagline: 'Aprendizaje personalizado de IA local, gratis',
   windowClose: 'Cerrar',
   windowMaximize: 'Maximizar',
   windowRestore: 'Restaurar',

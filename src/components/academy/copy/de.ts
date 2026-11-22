@@ -1,9 +1,9 @@
 import type { AcademyBaseCopy } from './types'
 
 export const copy: AcademyBaseCopy = {
-  metaTitle: 'PromptQuorum Academy: kostenlos KI lernen, persönlich',
+  metaTitle: 'PromptQuorum Academy: kostenlos lokale KI lernen, persönlich',
   metaDescription:
-    'Wählen Sie Thema, Zeit und Niveau. PromptQuorum Academy erstellt kurze Lektionen mit Bezug auf PromptQuorum-Ratgeber, mit KI-Tutor, Tests und PDF-Teilnahmebescheinigung.',
+    'Wählen Sie Thema, Zeit und Niveau. PromptQuorum Academy erstellt kurze Lektionen zu lokaler KI mit Bezug auf PromptQuorum-Ratgeber, mit KI-Tutor, Tests und PDF-Teilnahmebescheinigung.',
   h1: 'PromptQuorum Academy',
   intro: 'Lernen Sie lokale KI, Prompting und verwandte Themen in kurzen Lektionen, zugeschnitten auf Ihre Zeit und Ihr Niveau. Kostenlos, ohne Konto.',
   howTitle: 'So funktioniert es',
@@ -77,7 +77,7 @@ export const copy: AcademyBaseCopy = {
   storageBlocked:
     'Dieser Browser erlaubt kein Speichern. Sie können fortfahren, aber Ihr Fortschritt geht verloren, wenn Sie die Seite schließen.',
   loading: 'Wird geladen',
-  tagline: 'Persönliches KI-Lernen, kostenlos',
+  tagline: 'Persönlich lokale KI lernen, kostenlos',
   windowClose: 'Schließen',
   windowMaximize: 'Maximieren',
   windowRestore: 'Wiederherstellen',
