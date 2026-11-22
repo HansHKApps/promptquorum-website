@@ -1,9 +1,9 @@
 import type { AcademyBaseCopy } from './types'
 
 export const copy: AcademyBaseCopy = {
-  metaTitle: 'PromptQuorum Academy: 무료 맞춤형 AI 학습',
+  metaTitle: 'PromptQuorum Academy: 무료 맞춤형 로컬 AI 학습',
   metaDescription:
-    '주제, 시간, 수준을 고르십시오. PromptQuorum Academy는 PromptQuorum 가이드를 참고해 짧은 레슨을 만들고 AI 튜터, 테스트, PDF 수료증을 제공합니다.',
+    '로컬 AI 주제, 시간, 수준을 고르십시오. PromptQuorum Academy는 PromptQuorum 가이드를 참고해 짧은 로컬 AI 레슨을 만들고 AI 튜터, 테스트, PDF 수료증을 제공합니다.',
   h1: 'PromptQuorum Academy',
   intro: '로컬 AI, 프롬프트 작성 등 관련 주제를 시간과 수준에 맞춘 짧은 레슨으로 배웁니다. 무료이며 계정이 필요 없습니다.',
   howTitle: '이용 방법',
@@ -75,7 +75,7 @@ export const copy: AcademyBaseCopy = {
   testSplit: (l, t) => `수업 ${l}분 + 시험 ${t}분`,
   storageBlocked: '이 브라우저는 저장을 허용하지 않습니다. 계속할 수 있지만 페이지를 닫으면 진행 상황이 사라집니다.',
   loading: '불러오는 중',
-  tagline: '맞춤형 AI 학습, 무료',
+  tagline: '맞춤형 로컬 AI 학습, 무료',
   windowClose: '닫기',
   windowMaximize: '최대화',
   windowRestore: '복원',

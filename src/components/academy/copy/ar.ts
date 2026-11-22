@@ -1,9 +1,9 @@
 import type { AcademyBaseCopy } from './types'
 
 export const copy: AcademyBaseCopy = {
-  metaTitle: 'PromptQuorum Academy: تعلّم AI مجانًا وبما يناسبك',
+  metaTitle: 'PromptQuorum Academy: تعلّم الذكاء الاصطناعي المحلي مجانًا وبما يناسبك',
   metaDescription:
-    'اختر موضوعًا ووقتك ومستواك. تنشئ PromptQuorum Academy دروسًا قصيرة تستند إلى أدلة PromptQuorum، مع مدرّس AI واختبارات وإفادة PDF.',
+    'اختر موضوعًا في الذكاء الاصطناعي المحلي ووقتك ومستواك. تنشئ PromptQuorum Academy دروسًا قصيرة عن الذكاء الاصطناعي المحلي تستند إلى أدلة PromptQuorum، مع مدرّس AI واختبارات وإفادة PDF.',
   h1: 'PromptQuorum Academy',
   intro: 'تعلّم الذكاء الاصطناعي المحلي وكتابة الـ prompts ومواضيع قريبة منها في دروس قصيرة تناسب وقتك ومستواك. مجانًا ودون حساب.',
   howTitle: 'كيف تعمل',
@@ -75,7 +75,7 @@ export const copy: AcademyBaseCopy = {
   testSplit: (l, t) => `${l} دقيقة دروس + ${t} دقيقة اختبار`,
   storageBlocked: 'هذا المتصفح لا يسمح بالحفظ. يمكنك المتابعة، لكن تقدّمك سيضيع عند إغلاق الصفحة.',
   loading: 'جارٍ التحميل',
-  tagline: 'تعلّم مخصص للذكاء الاصطناعي، مجانًا',
+  tagline: 'تعلّم مخصص للذكاء الاصطناعي المحلي، مجانًا',
   windowClose: 'إغلاق',
   windowMaximize: 'تكبير',
   windowRestore: 'استعادة',
