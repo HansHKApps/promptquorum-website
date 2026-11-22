@@ -108,8 +108,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Tier: 'N150 mini PC', 'VRAM / RAM': '16GB RAM', 'Best For': 'Light chat, models up to 7B', 'Price Class': 'Under $500' },
           { Tier: 'Ryzen mini PC', 'VRAM / RAM': '32–64GB RAM', 'Best For': '7B–14B daily use, 24/7 server', 'Price Class': '$500–1,000' },
-          { Tier: 'RTX 3090 (used)', 'VRAM / RAM': '24GB VRAM', 'Best For': 'Up to 30B Q4, best VRAM/$', 'Price Class': '$1,800–2,500' },
-          { Tier: 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'Best For': 'Up to 34B Q4, fastest single-GPU', 'Price Class': '$3,000–4,500' },
+          { Tier: 'RTX 3090 (used)', 'VRAM / RAM': '24GB VRAM', 'Best For': 'Up to 30B Q4, lowest-priced 24 GB card here', 'Price Class': '$1,800–2,500' },
+          { Tier: 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'Best For': 'Up to 34B Q4, faster than the RTX 3090', 'Price Class': '$3,000–4,500' },
           { Tier: '48GB GPU setup', 'VRAM / RAM': '48GB VRAM', 'Best For': 'Up to 70B Q4, dev/research', 'Price Class': '$5,000+' },
           { Tier: 'Mac (unified memory)', 'VRAM / RAM': '48–128GB unified', 'Best For': '70B+ via MLX, low power draw', 'Price Class': '$2,000–4,000+' },
         ],
@@ -351,8 +351,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Stufe: 'N150 Mini-PC', 'VRAM / RAM': '16 GB RAM', 'Am besten für': 'Leichter Chat, bis 7B', Preisklasse: 'Unter 500 $' },
           { Stufe: 'Ryzen Mini-PC', 'VRAM / RAM': '32–64 GB RAM', 'Am besten für': '7B–14B täglich, 24/7-Server', Preisklasse: '500–1.000 $' },
-          { Stufe: 'RTX 3090 (gebraucht)', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 30B Q4, bestes VRAM/€', Preisklasse: '1.800–2.500 $' },
-          { Stufe: 'RTX 4090', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 34B Q4, schnellste Single-GPU', Preisklasse: '3.000–4.500 $' },
+          { Stufe: 'RTX 3090 (gebraucht)', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 30B Q4, günstigste 24-GB-Karte hier', Preisklasse: '1.800–2.500 $' },
+          { Stufe: 'RTX 4090', 'VRAM / RAM': '24 GB VRAM', 'Am besten für': 'Bis 34B Q4, schneller als die RTX 3090', Preisklasse: '3.000–4.500 $' },
           { Stufe: '48-GB-GPU-Setup', 'VRAM / RAM': '48 GB VRAM', 'Am besten für': 'Bis 70B Q4, Entwicklung', Preisklasse: '5.000 $+' },
           { Stufe: 'Mac (Unified Memory)', 'VRAM / RAM': '48–128 GB unified', 'Am besten für': '70B+ via MLX, geringer Verbrauch', Preisklasse: '2.000–4.000 $+' },
         ],
@@ -594,8 +594,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Niveau: 'Mini PC N150', 'VRAM / RAM': '16 Go RAM', 'Idéal pour': 'Chat léger, jusqu\'à 7B', 'Gamme de prix': 'Moins de 500 $' },
           { Niveau: 'Mini PC Ryzen', 'VRAM / RAM': '32–64 Go RAM', 'Idéal pour': '7B–14B quotidien, serveur 24/7', 'Gamme de prix': '500–1 000 $' },
-          { Niveau: 'RTX 3090 (occasion)', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 30B Q4, meilleur VRAM/€', 'Gamme de prix': '1 800–2 500 $' },
-          { Niveau: 'RTX 4090', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 34B Q4, GPU unique le plus rapide', 'Gamme de prix': '3 000–4 500 $' },
+          { Niveau: 'RTX 3090 (occasion)', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 30B Q4, carte 24 Go la moins chère ici', 'Gamme de prix': '1 800–2 500 $' },
+          { Niveau: 'RTX 4090', 'VRAM / RAM': '24 Go VRAM', 'Idéal pour': 'Jusqu\'à 34B Q4, plus rapide que la RTX 3090', 'Gamme de prix': '3 000–4 500 $' },
           { Niveau: 'Setup GPU 48 Go', 'VRAM / RAM': '48 Go VRAM', 'Idéal pour': 'Jusqu\'à 70B Q4, R&D', 'Gamme de prix': '5 000 $+' },
           { Niveau: 'Mac (mémoire unifiée)', 'VRAM / RAM': '48–128 Go unifié', 'Idéal pour': '70B+ via MLX, faible consommation', 'Gamme de prix': '2 000–4 000 $+' },
         ],
@@ -837,8 +837,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '階層': 'N150ミニPC', 'VRAM／RAM': '16GB RAM', '最適用途': '軽いチャット、7Bまで', '価格帯': '500ドル未満' },
           { '階層': 'Ryzenミニ PC', 'VRAM／RAM': '32〜64GB RAM', '最適用途': '7B〜14B常用、24/7サーバー', '価格帯': '500〜1,000ドル' },
-          { '階層': 'RTX 3090（中古）', 'VRAM／RAM': '24GB VRAM', '最適用途': '30B Q4まで、最良のVRAM単価', '価格帯': '1,800〜2,500ドル' },
-          { '階層': 'RTX 4090（中古）', 'VRAM／RAM': '24GB VRAM', '最適用途': '34B Q4まで、最速の単一GPU', '価格帯': '3,000〜4,500ドル' },
+          { '階層': 'RTX 3090（中古）', 'VRAM／RAM': '24GB VRAM', '最適用途': '30B Q4まで、ここで最も安い24GBカード', '価格帯': '1,800〜2,500ドル' },
+          { '階層': 'RTX 4090', 'VRAM／RAM': '24GB VRAM', '最適用途': '34B Q4まで、RTX 3090より高速', '価格帯': '3,000〜4,500ドル' },
           { '階層': '48GB GPU構成', 'VRAM／RAM': '48GB VRAM', '最適用途': '70B Q4まで、開発・研究', '価格帯': '5,000ドル以上' },
           { '階層': 'Mac（統合メモリ）', 'VRAM／RAM': '48〜128GB統合', '最適用途': 'MLXで70B以上、低消費電力', '価格帯': '2,000〜4,000ドル以上' },
         ],
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       gpuPath: {
         title: 'パス3 — 本格的なローカルAI：GPUワークステーション',
-        content: '30B以上のモデル、ファインチューニング、高速なマルチユーザー推論が必要になったら、ディスクリートGPUワークステーションが適切な階層です。重要な指標は生のベンチマーク速度ではなく円当たりVRAM——VRAMがそもそも読み込めるモデルサイズを決めます。[ローカルLLMワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)と[PromptQuorumのGPUワークステーション構築ガイド](/ja/power-local-llm/best-workstation-build-local-ai-2026)をご覧ください。',
+        content: '30B以上のモデル、ファインチューニング、高速なマルチユーザー推論が必要になったら、ディスクリートGPUワークステーションが適切な階層です。重要な指標は生のベンチマーク速度ではなくドル当たりVRAM——VRAMがそもそも読み込めるモデルサイズを決めます。[ローカルLLMワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)と[PromptQuorumのGPUワークステーション構築ガイド](/ja/power-local-llm/best-workstation-build-local-ai-2026)をご覧ください。',
       },
       whatToBuy: {
         title: '「何を買うべきか」価格帯別',
@@ -1080,8 +1080,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Nivel: 'Mini PC N150', 'VRAM / RAM': '16GB RAM', 'Mejor para': 'Chat ligero, hasta 7B', 'Rango de precio': 'Menos de 500 $' },
           { Nivel: 'Mini PC Ryzen', 'VRAM / RAM': '32–64GB RAM', 'Mejor para': '7B–14B diario, servidor 24/7', 'Rango de precio': '500–1.000 $' },
-          { Nivel: 'RTX 3090 (usada)', 'VRAM / RAM': '24GB VRAM', 'Mejor para': 'Hasta 30B Q4, mejor VRAM/$', 'Rango de precio': '1.800–2.500 $' },
-          { Nivel: 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'Mejor para': 'Hasta 34B Q4, GPU única más rápida', 'Rango de precio': '3.000–4.500 $' },
+          { Nivel: 'RTX 3090 (usada)', 'VRAM / RAM': '24GB VRAM', 'Mejor para': 'Hasta 30B Q4, la tarjeta de 24 GB más barata aquí', 'Rango de precio': '1.800–2.500 $' },
+          { Nivel: 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'Mejor para': 'Hasta 34B Q4, más rápida que la RTX 3090', 'Rango de precio': '3.000–4.500 $' },
           { Nivel: 'Setup GPU 48GB', 'VRAM / RAM': '48GB VRAM', 'Mejor para': 'Hasta 70B Q4, desarrollo', 'Rango de precio': '5.000 $+' },
           { Nivel: 'Mac (memoria unificada)', 'VRAM / RAM': '48–128GB unificada', 'Mejor para': '70B+ vía MLX, bajo consumo', 'Rango de precio': '2.000–4.000 $+' },
         ],
@@ -1323,8 +1323,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الفئة': 'ميني PC بمعالج N150', 'VRAM / RAM': '16 GB RAM', 'الأفضل لـ': 'محادثة خفيفة، حتى 7B', 'فئة السعر': 'أقل من 500 دولار' },
           { 'الفئة': 'ميني PC بمعالج Ryzen', 'VRAM / RAM': '32–64 GB RAM', 'الأفضل لـ': '7B–14B يوميًا، خادم 24/7', 'فئة السعر': '500–1,000 دولار' },
-          { 'الفئة': 'RTX 3090 (مستعملة)', 'VRAM / RAM': '24GB VRAM', 'الأفضل لـ': 'حتى 30B Q4، أفضل VRAM/دولار', 'فئة السعر': '1,800–2,500 دولار' },
-          { 'الفئة': 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'الأفضل لـ': 'حتى 34B Q4، أسرع GPU واحدة', 'فئة السعر': '3,000–4,500 دولار' },
+          { 'الفئة': 'RTX 3090 (مستعملة)', 'VRAM / RAM': '24GB VRAM', 'الأفضل لـ': 'حتى 30B Q4، أرخص بطاقة 24 GB هنا', 'فئة السعر': '1,800–2,500 دولار' },
+          { 'الفئة': 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'الأفضل لـ': 'حتى 34B Q4، أسرع من RTX 3090', 'فئة السعر': '3,000–4,500 دولار' },
           { 'الفئة': 'تكوين GPU بـ 48GB', 'VRAM / RAM': '48GB VRAM', 'الأفضل لـ': 'حتى 70B Q4، تطوير وبحث', 'فئة السعر': '5,000 دولار فأكثر' },
           { 'الفئة': 'Mac (ذاكرة موحَّدة)', 'VRAM / RAM': '48–128GB موحدة', 'الأفضل لـ': '70B+ عبر MLX، استهلاك منخفض', 'فئة السعر': '2,000–4,000 دولار فأكثر' },
         ],
@@ -1566,8 +1566,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '等级': 'N150迷你主机', 'VRAM／RAM': '16GB RAM', '最适合': '轻量聊天，7B以下', '价格区间': '低于500美元' },
           { '等级': 'Ryzen迷你主机', 'VRAM／RAM': '32–64GB RAM', '最适合': '7B–14B日常使用，24/7服务器', '价格区间': '500–1,000美元' },
-          { '等级': 'RTX 3090（二手）', 'VRAM／RAM': '24GB VRAM', '最适合': '30B Q4以下，最佳VRAM单价', '价格区间': '1,800–2,500美元' },
-          { '等级': 'RTX 4090', 'VRAM／RAM': '24GB VRAM', '最适合': '34B Q4以下，最快单卡', '价格区间': '3,000–4,500美元' },
+          { '等级': 'RTX 3090（二手）', 'VRAM／RAM': '24GB VRAM', '最适合': '30B Q4以下，此处价格最低的24GB显卡', '价格区间': '1,800–2,500美元' },
+          { '等级': 'RTX 4090', 'VRAM／RAM': '24GB VRAM', '最适合': '34B Q4以下，比RTX 3090更快', '价格区间': '3,000–4,500美元' },
           { '等级': '48GB GPU配置', 'VRAM／RAM': '48GB VRAM', '最适合': '70B Q4以下，开发研究', '价格区间': '5,000美元以上' },
           { '等级': 'Mac（统一内存）', 'VRAM／RAM': '48–128GB统一', '最适合': '通过MLX运行70B以上，低功耗', '价格区间': '2,000–4,000美元以上' },
         ],
@@ -1809,8 +1809,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Nível: 'Mini PC N150', 'VRAM / RAM': '16GB RAM', 'Melhor para': 'Chat leve, até 7B', 'Faixa de preço': 'Menos de US$ 500' },
           { Nível: 'Mini PC Ryzen', 'VRAM / RAM': '32–64GB RAM', 'Melhor para': '7B–14B diário, servidor 24/7', 'Faixa de preço': 'US$ 500–1.000' },
-          { Nível: 'RTX 3090 (usada)', 'VRAM / RAM': '24GB VRAM', 'Melhor para': 'Até 30B Q4, melhor VRAM/R$', 'Faixa de preço': 'US$ 1.800–2.500' },
-          { Nível: 'RTX 4090 (usada)', 'VRAM / RAM': '24GB VRAM', 'Melhor para': 'Até 34B Q4, GPU única mais rápida', 'Faixa de preço': 'US$ 3.000–4.500' },
+          { Nível: 'RTX 3090 (usada)', 'VRAM / RAM': '24GB VRAM', 'Melhor para': 'Até 30B Q4, a placa de 24 GB mais barata aqui', 'Faixa de preço': 'US$ 1.800–2.500' },
+          { Nível: 'RTX 4090', 'VRAM / RAM': '24GB VRAM', 'Melhor para': 'Até 34B Q4, mais rápida que a RTX 3090', 'Faixa de preço': 'US$ 3.000–4.500' },
           { Nível: 'Setup GPU 48GB', 'VRAM / RAM': '48GB VRAM', 'Melhor para': 'Até 70B Q4, desenvolvimento', 'Faixa de preço': 'US$ 5.000+' },
           { Nível: 'Mac (memória unificada)', 'VRAM / RAM': '48–128GB unificada', 'Melhor para': '70B+ via MLX, baixo consumo', 'Faixa de preço': 'US$ 2.000–4.000+' },
         ],
@@ -2052,8 +2052,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '등급': 'N150 미니 PC', 'VRAM / RAM': '16GB RAM', '최적 용도': '가벼운 채팅, 7B 이하', '가격대': '500달러 미만' },
           { '등급': 'Ryzen 미니 PC', 'VRAM / RAM': '32~64GB RAM', '최적 용도': '7B~14B 일상 사용, 24/7 서버', '가격대': '500~1,000달러' },
-          { '등급': 'RTX 3090(중고)', 'VRAM / RAM': '24GB VRAM', '최적 용도': '30B Q4까지, 최고의 VRAM/달러', '가격대': '1,800~2,500달러' },
-          { '등급': 'RTX 4090', 'VRAM / RAM': '24GB VRAM', '최적 용도': '34B Q4까지, 최고속 단일 GPU', '가격대': '3,000~4,500달러' },
+          { '등급': 'RTX 3090(중고)', 'VRAM / RAM': '24GB VRAM', '최적 용도': '30B Q4까지, 여기서 가장 저렴한 24GB 카드', '가격대': '1,800~2,500달러' },
+          { '등급': 'RTX 4090', 'VRAM / RAM': '24GB VRAM', '최적 용도': '34B Q4까지, RTX 3090보다 빠름', '가격대': '3,000~4,500달러' },
           { '등급': '48GB GPU 구성', 'VRAM / RAM': '48GB VRAM', '최적 용도': '70B Q4까지, 개발·연구', '가격대': '5,000달러 이상' },
           { '등급': 'Mac(통합 메모리)', 'VRAM / RAM': '48~128GB 통합', '최적 용도': 'MLX로 70B 이상, 저전력', '가격대': '2,000~4,000달러 이상' },
         ],
