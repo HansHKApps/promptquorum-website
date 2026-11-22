@@ -16,6 +16,7 @@ import { AiBadge } from './AiBadge'
 import { Content } from './Content'
 import { ReportProblem } from './ReportProblem'
 import { TutorPanel } from './TutorPanel'
+import { usePrefetchNextLesson } from './usePrefetchNextLesson'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -81,6 +82,11 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
     requested.current = active.quizId
     void load()
   }, [active, load])
+
+  // On the last question: the next lesson starts being written in the background.
+  const qs = active?.questions ?? []
+  const shownIdx = feedbackFor ? qs.findIndex((q) => q.id === feedbackFor) : qs.findIndex((q) => !(q.id in (active?.answers ?? {})))
+  usePrefetchNextLesson({ programme, quizId: isFinal ? undefined : quizId, onLastQuestion: qs.length > 0 && shownIdx === qs.length - 1, update, postJson })
 
   const backToProgramme = () => update((s) => ({ ...s, view: 'programme' }))
 
