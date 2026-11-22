@@ -3009,6 +3009,7 @@ schema: {
       },
     },
   ko: {
+    affiliateDisclosure: true,
       freshness_tier: 'semi_annual',
       designSkin: 'hub',
       theme: 'Hardware & Performance',

@@ -270,6 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    affiliateDisclosure: true,
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     last_full_refresh: '2026-11-18',
@@ -535,6 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    affiliateDisclosure: true,
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     last_full_refresh: '2026-11-18',
@@ -800,6 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    affiliateDisclosure: true,
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     last_full_refresh: '2026-11-18',
@@ -1066,6 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    affiliateDisclosure: true,
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     last_full_refresh: '2026-11-18',
@@ -1331,6 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    affiliateDisclosure: true,
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     last_full_refresh: '2026-11-18',
@@ -1596,6 +1601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    affiliateDisclosure: true,
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     last_full_refresh: '2026-11-18',
@@ -1861,6 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    affiliateDisclosure: true,
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     last_full_refresh: '2026-11-18',
@@ -2126,6 +2133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    affiliateDisclosure: true,
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     last_full_refresh: '2026-11-18',
