@@ -12,6 +12,12 @@ export const ACADEMY_USED_KEY = 'pq_academy_used'
 export const ACADEMY_TUTOR_OK_KEY = 'pq_academy_tutor_ok'
 export const ACADEMY_TUTOR_OK_DAYS = 30
 
+/**
+ * Opt-in "Remember these choices": the setup choices (time, level, test settings) so the next setup form has them
+ * preselected. Written only while the learner ticks the box; "Delete my data" removes it. No subject, nothing personal.
+ */
+export const ACADEMY_PREFS_KEY = 'pq_academy_prefs'
+
 /** Answer options per multiple-choice question the learner can pick (more = harder). */
 export const CHOICE_OPTION_COUNTS = [3, 4, 5, 6] as const
 export const CHOICE_OPTIONS_DEFAULT = 3

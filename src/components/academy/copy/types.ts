@@ -48,6 +48,12 @@ export interface AcademyBaseCopy {
   continueSaved: string
   saveProgressLabel: string
   saveProgressHint: string
+  /** setup form: every line must be chosen by the learner, nothing is preselected */
+  chooseAll: string
+  chooseLine: string
+  /** opt-in checkbox: keep time, level and test settings for the next setup form */
+  rememberLabel: string
+  rememberHint: string
   /** short label on AI-generated content (lessons, quizzes, explanations) */
   aiLabel: string
   ageNotice: string
