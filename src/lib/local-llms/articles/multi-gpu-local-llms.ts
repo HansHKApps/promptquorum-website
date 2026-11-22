@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       designSkin: 'hub',
       theme: 'Hardware & Performance',
+      affiliateDisclosure: true,
       title: 'Multi-GPU Local LLMs 2026: Run 70B Models Across 2+ GPUs with vLLM and Ollama',
       heroImage: '/images/multi-gpu-local-llms-overview-hero-en.webp',
       seoTitle: 'Multi-GPU Local LLMs 2026: 70B on 2 GPUs (vLLM, Ollama)',
@@ -33,6 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Setup With Ollama', anchor: '#ollama-setup' },
         { label: 'Performance: 2 GPUs', anchor: '#performance' },
         { label: 'When to Use Multi-GPU', anchor: '#when-to-use' },
+        { label: 'Regional Pricing & Where to Buy', anchor: '#where-to-buy' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
         { label: 'FAQ', anchor: '#faq' },
         { label: 'Related Reading', anchor: '#related-reading' },
@@ -119,6 +121,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           callouts: [
             { type: '💡', text: 'Pro Tip: For experimentation with 70B models, try single-GPU CPU offloading first; it is much slower than a model that fits in VRAM but costs nothing extra. Once production demand is confirmed, consider a second RTX 4090 for a multi-GPU setup.' },
+          ],
+        },
+        whereToBuy: {
+          id: 'where-to-buy',
+          title: 'Regional Pricing & Where to Buy',
+          content:
+            '**Prices and stock vary by region, and EU/UK listed prices include VAT.** The links below are plain product-search links per region; they carry no affiliate tags and earn no commission.',
+          items: [
+            '**United States:** Amazon and Newegg have the widest stock. Used RTX 3060 and RTX 4090 cards are common; new flagship stock is thin, and the RTX 5090 is often sold out at list price.',
+            '**Germany:** Amazon.de and Mindfactory.de; expect roughly 19% VAT in listed prices, and German GPU prices that often run above US figures.',
+            '**France:** Amazon.fr and LDLC; pricing is similar to Germany with 20% VAT, and flagship stock has been intermittent.',
+            '**Japan:** Amazon.co.jp and Kakaku.com for price comparison; new-card pricing tracks the US, with thinner used-card supply.',
+            '**China:** JD.com is the reference marketplace; high-end GPU availability and pricing differ substantially from Western markets.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              text: 'GPU prices and stock have been moving week to week in 2026. Check the live retailer listing, and compare new against used, before you order.',
+            },
+          ],
+          affiliateLinks: [
+            {
+              url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+              productName: 'Local-LLM GPUs (US)',
+              productCategory: 'gpu',
+              label: 'Browse GPUs on Amazon US',
+            },
+            {
+              url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+              productName: 'Local-LLM GPUs (Germany)',
+              productCategory: 'gpu',
+              label: 'Browse GPUs on Amazon.de',
+            },
+            {
+              url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+              productName: 'Local-LLM GPUs (France)',
+              productCategory: 'gpu',
+              label: 'Browse GPUs on Amazon.fr',
+            },
+            {
+              url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+              productName: 'Local-LLM GPUs (Japan)',
+              productCategory: 'gpu',
+              label: 'Browse GPUs on Amazon.co.jp',
+            },
           ],
         },
         commonMistakes: {
@@ -363,6 +410,7 @@ schema: {
         { label: 'Configuración con Ollama', anchor: '#ollama-setup' },
         { label: 'Rendimiento: 2 GPUs', anchor: '#performance' },
         { label: 'Cuándo usar Multi-GPU', anchor: '#when-to-use' },
+        { label: 'Precios regionales y dónde comprar', anchor: '#where-to-buy' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
         { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
@@ -448,6 +496,51 @@ schema: {
           ],
           callouts: [
             { type: '💡', text: 'Consejo Pro: para experimentar con modelos 70B, prueba primero el CPU offloading con una sola GPU; es mucho más lento que un modelo que cabe en VRAM, pero no cuesta nada extra. Cuando la demanda de producción esté confirmada, plantéate una segunda RTX 4090 para un setup multi-GPU.' },
+          ],
+        },
+        whereToBuy: {
+          id: 'where-to-buy',
+          title: 'Precios regionales y dónde comprar',
+          content:
+            '**Los precios y la disponibilidad varían por región, y los precios en la UE incluyen IVA.** Los enlaces de abajo son simples enlaces de búsqueda de productos por región; no llevan etiquetas de afiliado y no generan comisión.',
+          items: [
+            '**España:** Amazon.es y PcComponentes tienen el stock más amplio. Las tarjetas de segunda mano RTX 3060 y RTX 4090 se encuentran en Wallapop y Milanuncios.',
+            '**México:** Amazon.com.mx y Mercado Libre son las referencias principales; los precios incluyen IVA y pueden variar por tipo de cambio.',
+            '**Argentina, Colombia y resto de Latinoamérica:** Mercado Libre es el marketplace de referencia en toda la región; verifica siempre los precios actualizados ya que el tipo de cambio afecta significativamente el costo final.',
+            '**Comparador de precios:** Idealo.es es el estándar para comparar precios de tarjetas nuevas en España — verifica ahí la fuente más barata actualmente.',
+            '**Disponibilidad:** las tarjetas de gama alta (RTX 4090, RTX 5090) están intermitentemente agotadas en 2026, y la RTX 5090 suele estar agotada al precio de lista; espera precios fluctuantes y verifica varios distribuidores.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              text: 'Los precios y el stock de GPU cambian de una semana a otra en 2026. Consulta la oferta actual del minorista y compara nuevo frente a usado antes de pedir.',
+            },
+          ],
+          affiliateLinks: [
+            {
+              url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+              productName: 'GPUs para LLMs locales (EE. UU.)',
+              productCategory: 'gpu',
+              label: 'Ver GPUs en Amazon EE. UU.',
+            },
+            {
+              url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+              productName: 'GPUs para LLMs locales (Alemania)',
+              productCategory: 'gpu',
+              label: 'Ver GPUs en Amazon.de',
+            },
+            {
+              url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+              productName: 'GPUs para LLMs locales (Francia)',
+              productCategory: 'gpu',
+              label: 'Ver GPUs en Amazon.fr',
+            },
+            {
+              url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+              productName: 'GPUs para LLMs locales (Japón)',
+              productCategory: 'gpu',
+              label: 'Ver GPUs en Amazon.co.jp',
+            },
           ],
         },
         commonMistakes: {
@@ -692,6 +785,7 @@ schema: {
         { label: 'الإعداد بـ Ollama', anchor: '#ollama-setup' },
         { label: 'الأداء: 2 GPU', anchor: '#performance' },
         { label: 'متى تستخدم تعدد GPU', anchor: '#when-to-use' },
+        { label: 'الأسعار الإقليمية وأين تشتري', anchor: '#where-to-buy' },
         { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
         { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
@@ -777,6 +871,52 @@ schema: {
           ],
           callouts: [
             { type: '💡', text: 'نصيحة: عند تجربة نماذج 70B، جرّب أولًا offload إلى CPU مع GPU واحدة؛ فهو أبطأ بكثير من نموذج يتسع في VRAM لكنه لا يكلّف شيئًا إضافيًا. وبعد تأكيد الطلب الإنتاجي، فكّر في بطاقة RTX 4090 ثانية لإعداد متعدد GPU.' },
+          ],
+        },
+        whereToBuy: {
+          id: 'where-to-buy',
+          title: 'الأسعار الإقليمية وأين تشتري',
+          content:
+            '**تختلف الأسعار والتوافر بين المناطق، والأسعار المعروضة في الاتحاد الأوروبي تتضمن ضريبة القيمة المضافة.** الروابط أدناه روابط بحث عن المنتجات لكل منطقة، ولا تحمل علامات تابعة ولا تدرّ عمولة.',
+          items: [
+            '**الولايات المتحدة:** Amazon وNewegg لديهما أوسع مخزون. بطاقات RTX 3060 وRTX 4090 المستعملة شائعة؛ مخزون الطرازات الرائدة الجديد شحيح، وRTX 5090 غالباً ما تنفد بسعر القائمة.',
+            '**ألمانيا:** Amazon.de وMindfactory.de؛ توقّع نحو 19% ضريبة قيمة مضافة ضمن الأسعار المعروضة، وأسعار GPU الألمانية تفوق الأرقام الأمريكية.',
+            '**فرنسا:** Amazon.fr وLDLC؛ الأسعار مشابهة لألمانيا مع ضريبة 20%، ومخزون الطرازات الرائدة متقطع.',
+            '**اليابان:** Amazon.co.jp وKakaku.com لمقارنة الأسعار؛ أسعار البطاقات الجديدة تتبع الأسعار الأمريكية، مع عرض أضيق من البطاقات المستعملة.',
+            '**الصين:** JD.com هو السوق المرجعي؛ توافر GPU الراقية وأسعارها يختلفان كثيراً عن الأسواق الغربية.',
+            '**الشرق الأوسط وشمال إفريقيا:** Amazon.ae والمستوردون المحليون. الأسعار عادةً أعلى من الأسعار الأمريكية؛ لم نرصد أسعاراً محلية لهذا الدليل، فتحقق من عروض البائعين مباشرة.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              text: 'تتغير أسعار GPU ومخزونها من أسبوع إلى آخر في 2026. راجع عرض البائع الحالي وقارن بين الجديد والمستعمل قبل الطلب.',
+            },
+          ],
+          affiliateLinks: [
+            {
+              url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+              productName: 'بطاقات GPU للنماذج اللغوية المحلية (الولايات المتحدة)',
+              productCategory: 'gpu',
+              label: 'تصفح بطاقات GPU على Amazon الأمريكي',
+            },
+            {
+              url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+              productName: 'بطاقات GPU للنماذج اللغوية المحلية (ألمانيا)',
+              productCategory: 'gpu',
+              label: 'تصفح بطاقات GPU على Amazon.de',
+            },
+            {
+              url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+              productName: 'بطاقات GPU للنماذج اللغوية المحلية (فرنسا)',
+              productCategory: 'gpu',
+              label: 'تصفح بطاقات GPU على Amazon.fr',
+            },
+            {
+              url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+              productName: 'بطاقات GPU للنماذج اللغوية المحلية (اليابان)',
+              productCategory: 'gpu',
+              label: 'تصفح بطاقات GPU على Amazon.co.jp',
+            },
           ],
         },
         commonMistakes: {
@@ -1020,6 +1160,7 @@ schema: {
         { label: 'Setup mit Ollama', anchor: '#ollama-setup' },
         { label: 'Performance: 2 GPUs', anchor: '#performance' },
         { label: 'Wann sollte man Multi-GPU nutzen?', anchor: '#when-to-use' },
+        { label: 'Regionale Preise & Bezugsquellen', anchor: '#where-to-buy' },
         { label: 'Häufige Multi-GPU-Fehler', anchor: '#common-mistakes' },
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
@@ -1105,6 +1246,51 @@ schema: {
           ],
           callouts: [
             { type: '💡', text: 'Pro-Tipp: Probieren Sie beim Experimentieren mit 70B-Modellen zuerst CPU-Offloading mit einer einzelnen GPU; das ist deutlich langsamer als ein Modell, das in den VRAM passt, kostet aber nichts extra. Sobald der Produktionsbedarf bestätigt ist, ziehen Sie eine zweite RTX 4090 für ein Multi-GPU-Setup in Betracht.' },
+          ],
+        },
+        whereToBuy: {
+          id: 'where-to-buy',
+          title: 'Regionale Preise & Bezugsquellen',
+          content:
+            '**Preise und Verfügbarkeit schwanken je Region; in Deutschland und der EU enthalten die Listenpreise die Mehrwertsteuer.** Die folgenden Links sind reine Produkt-Suchlinks pro Region; sie tragen keine Affiliate-Kennungen und erzeugen keine Provision.',
+          items: [
+            '**Deutschland:** Mindfactory.de und alternate.de sind neben Amazon.de etablierte Anlaufstellen für Grafikkarten; deutsche Preise liegen häufig über den US-Werten.',
+            '**Gebrauchtmarkt:** eBay Kleinanzeigen ist ein großer deutscher Gebrauchtmarkt für GPUs. Gebrauchte Karten sind nicht mehr verlässlich günstiger als neue — vergleichen Sie beide und bevorzugen Sie Verkäufer mit Rückgaberecht.',
+            '**Österreich & Schweiz:** Geizhals.at und digitec.ch decken den DACH-Raum ab; Preise und Verfügbarkeit weichen leicht von Deutschland ab.',
+            '**Preisvergleich:** Geizhals.de ist der Standard für den Preisvergleich neuer Karten in Deutschland — prüfen Sie dort die aktuell günstigste Bezugsquelle.',
+            '**Verfügbarkeit:** High-End-Karten (RTX 4090, RTX 5090) sind 2026 zeitweise knapp, die RTX 5090 ist zum Listenpreis oft ausverkauft; rechnen Sie mit schwankenden Preisen und prüfen Sie mehrere Händler.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              text: 'GPU-Preise und Lagerbestände schwanken 2026 von Woche zu Woche. Prüfen Sie vor der Bestellung das aktuelle Händlerangebot und vergleichen Sie Neu- mit Gebrauchtware.',
+            },
+          ],
+          affiliateLinks: [
+            {
+              url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+              productName: 'GPUs für lokale LLMs (Deutschland)',
+              productCategory: 'gpu',
+              label: 'GPUs bei Amazon.de durchsuchen',
+            },
+            {
+              url: 'https://www.mindfactory.de/Hardware/Grafikkarten+(VGA).html',
+              productName: 'GPUs für lokale LLMs (Mindfactory)',
+              productCategory: 'gpu',
+              label: 'GPUs bei Mindfactory durchsuchen',
+            },
+            {
+              url: 'https://www.alternate.de/Grafikkarten',
+              productName: 'GPUs für lokale LLMs (alternate.de)',
+              productCategory: 'gpu',
+              label: 'GPUs bei alternate.de durchsuchen',
+            },
+            {
+              url: 'https://geizhals.de/?cat=gra16_512',
+              productName: 'GPU-Preisvergleich (Geizhals)',
+              productCategory: 'gpu',
+              label: 'GPU-Preise bei Geizhals vergleichen',
+            },
           ],
         },
         commonMistakes: {
@@ -1348,6 +1534,7 @@ schema: {
         { label: 'Configuration avec Ollama', anchor: '#ollama-setup' },
         { label: 'Performance : 2 GPUs', anchor: '#performance' },
         { label: 'Quand utiliser Multi-GPU ?', anchor: '#when-to-use' },
+        { label: 'Prix régionaux et où acheter', anchor: '#where-to-buy' },
         { label: 'Erreurs courantes Multi-GPU', anchor: '#common-mistakes' },
         { label: 'Questions fréquemment posées', anchor: '#faq' },
         { label: 'Lectures complémentaires', anchor: '#related-reading' },
@@ -1433,6 +1620,51 @@ schema: {
           ],
           callouts: [
             { type: '💡', text: 'Astuce Pro : pour expérimenter avec des modèles 70B, essayez d\'abord le CPU offloading avec un seul GPU ; c\'est bien plus lent qu\'un modèle qui tient en VRAM, mais cela ne coûte rien de plus. Une fois la demande de production confirmée, envisagez une seconde RTX 4090 pour une configuration multi-GPU.' },
+          ],
+        },
+        whereToBuy: {
+          id: 'where-to-buy',
+          title: 'Prix régionaux et où acheter',
+          content:
+            '**Les prix et la disponibilité varient selon la région, et les prix affichés dans l\'UE incluent la TVA.** Les liens ci-dessous sont de simples liens de recherche de produits par région ; ils ne portent aucune balise d\'affiliation et ne génèrent aucune commission.',
+          items: [
+            '**France :** Amazon.fr et LDLC offrent le plus large stock ; Materiel.net et Top Achat sont aussi des références pour les cartes graphiques.',
+            '**Comparateur de prix :** Idealo.fr et Geizhals.eu sont les standards pour comparer les prix du neuf en France — vérifiez-y la source la moins chère actuellement.',
+            '**Belgique et Suisse :** Alternate.be et Digitec.ch couvrent les marchés francophones voisins ; les prix et la disponibilité diffèrent légèrement de la France.',
+            '**Occasion :** LeBonCoin est un grand marché français de l\'occasion pour les GPU — comparez-y le neuf et l\'occasion, car l\'occasion n\'est plus fiablement moins chère.',
+            '**Disponibilité :** les cartes haut de gamme (RTX 4090, RTX 5090) sont par moments en rupture en 2026, et le RTX 5090 est souvent épuisé au prix catalogue ; attendez-vous à des prix fluctuants et vérifiez plusieurs revendeurs.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              text: 'Les prix et les stocks des GPU fluctuent d\'une semaine à l\'autre en 2026. Consultez l\'offre actuelle du revendeur et comparez le neuf à l\'occasion avant de commander.',
+            },
+          ],
+          affiliateLinks: [
+            {
+              url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+              productName: 'Local-LLM GPUs (US)',
+              productCategory: 'gpu',
+              label: 'Parcourir les GPU sur Amazon US',
+            },
+            {
+              url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+              productName: 'Local-LLM GPUs (Germany)',
+              productCategory: 'gpu',
+              label: 'Parcourir les GPU sur Amazon.de',
+            },
+            {
+              url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+              productName: 'Local-LLM GPUs (France)',
+              productCategory: 'gpu',
+              label: 'Parcourir les GPU sur Amazon.fr',
+            },
+            {
+              url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+              productName: 'Local-LLM GPUs (Japan)',
+              productCategory: 'gpu',
+              label: 'Parcourir les GPU sur Amazon.co.jp',
+            },
           ],
         },
         commonMistakes: {
@@ -1676,6 +1908,7 @@ schema: {
         { label: 'OllamaでのセットアップOllama', anchor: '#ollama-setup' },
         { label: 'パフォーマンス: 2 GPUs', anchor: '#performance' },
         { label: 'マルチGPUをいつ使うべきか?', anchor: '#when-to-use' },
+        { label: '地域別価格と購入先', anchor: '#where-to-buy' },
         { label: 'マルチGPUの一般的なミス', anchor: '#common-mistakes' },
         { label: 'よくある質問', anchor: '#faq' },
         { label: '関連する読み物', anchor: '#related-reading' },
@@ -1761,6 +1994,51 @@ schema: {
           ],
           callouts: [
             { type: '💡', text: 'プロのヒント：70Bモデルを試す段階では、まず単一GPUでのCPUオフロードを試してください。VRAMに収まるモデルよりはるかに遅くなりますが、追加費用はかかりません。本番での需要が確認できたら、マルチGPU構成のために2枚目のRTX 4090を検討してください。' },
+          ],
+        },
+        whereToBuy: {
+          id: 'where-to-buy',
+          title: '地域別価格と購入先',
+          content:
+            '**価格と在庫は地域によって異なり、EUの表示価格には付加価値税（VAT）が含まれます。** 以下のリンクは地域別の製品検索リンクで、アフィリエイトタグは付いておらず、手数料は発生しません。',
+          items: [
+            '**日本：** Amazon.co.jpとドスパラ・パソコン工房・TSUKUMOがグラフィックカードの主な購入先です。',
+            '**価格比較：** Kakaku.com（価格.com）は日本で新品価格を比較する標準であり、現在最も安い購入先をそこで確認してください。',
+            '**自作系ショップ：** アーク（Ark）などの自作PC専門店は、ハイエンドGPUの在庫がオンライン小売より早く入ることがあります。',
+            '**中古：** メルカリやヤフオク！は日本のGPUの主な中古市場です — ただし2026年は中古が新品より確実に安いとは限らないため、新品の価格と必ず比べてください。',
+            '**在庫状況：** ハイエンドカード（RTX 4090、RTX 5090）は2026年には時折品薄で、価格は変動し、為替の影響も受けます。RTX 5090は定価では売り切れていることも多いため、複数の小売店を確認してください。',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              text: '2026年のGPU価格と在庫は週ごとに変動しています。注文前に販売店の最新の掲載情報を確認し、新品と中古を比較してください。',
+            },
+          ],
+          affiliateLinks: [
+            {
+              url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+              productName: 'Local-LLM GPUs (US)',
+              productCategory: 'gpu',
+              label: 'Amazon USでGPUを探す',
+            },
+            {
+              url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+              productName: 'Local-LLM GPUs (Germany)',
+              productCategory: 'gpu',
+              label: 'Amazon.deでGPUを探す',
+            },
+            {
+              url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+              productName: 'Local-LLM GPUs (France)',
+              productCategory: 'gpu',
+              label: 'Amazon.frでGPUを探す',
+            },
+            {
+              url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+              productName: 'Local-LLM GPUs (Japan)',
+              productCategory: 'gpu',
+              label: 'Amazon.co.jpでGPUを探す',
+            },
           ],
         },
         commonMistakes: {
@@ -2004,6 +2282,7 @@ schema: {
         { label: 'Ollama多GPU设置', anchor: '#ollama-setup' },
         { label: '2个GPU的性能', anchor: '#performance' },
         { label: '何时使用多GPU', anchor: '#when-to-use' },
+        { label: '地区价格与购买渠道', anchor: '#where-to-buy' },
         { label: '常见错误', anchor: '#common-mistakes' },
         { label: '常见问题', anchor: '#faq' },
         { label: '相关阅读', anchor: '#related-reading' },
@@ -2089,6 +2368,51 @@ schema: {
           ],
           callouts: [
             { type: '💡', text: '专业提示：试用70B模型时，先尝试单GPU加CPU卸载；它比能完全装入显存的模型慢得多，但不需要额外花钱。确认有生产需求后，再考虑加装第二块RTX 4090组成多GPU配置。' },
+          ],
+        },
+        whereToBuy: {
+          id: 'where-to-buy',
+          title: '地区价格与购买渠道',
+          content:
+            '**价格和库存因地区而异，欧盟标价含增值税。** 下方链接是按地区的普通商品搜索链接；它们不带联盟标签，也不产生佣金。',
+          items: [
+            '**美国：** Amazon 和 Newegg 货源最广。二手 RTX 3060 和 RTX 4090 显卡常见；全新旗舰货源稀少，RTX 5090 在标价下常常缺货。',
+            '**德国：** Amazon.de 和 Mindfactory.de；标价通常含约 19% 增值税，德国显卡价格高于美国。',
+            '**法国：** Amazon.fr 和 LDLC；价格与德国相近，含 20% 增值税，旗舰货源时断时续。',
+            '**日本：** Amazon.co.jp 和 Kakaku.com 用于比价；全新显卡价格跟随美国，二手货源较少。',
+            '**中国：** 全新显卡看京东和淘宝，二手 RTX 4090 与 RTX 3060 主要在闲鱼成交；高端显卡的供货和价格与西方市场差异显著。',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              text: '2026 年显卡价格和库存每周都在变化。下单前请查看零售商的实时报价，并比较全新与二手。',
+            },
+          ],
+          affiliateLinks: [
+            {
+              url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+              productName: 'Local-LLM GPUs (US)',
+              productCategory: 'gpu',
+              label: '在 Amazon US 浏览显卡',
+            },
+            {
+              url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+              productName: 'Local-LLM GPUs (Germany)',
+              productCategory: 'gpu',
+              label: '在 Amazon.de 浏览显卡',
+            },
+            {
+              url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+              productName: 'Local-LLM GPUs (France)',
+              productCategory: 'gpu',
+              label: '在 Amazon.fr 浏览显卡',
+            },
+            {
+              url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+              productName: 'Local-LLM GPUs (Japan)',
+              productCategory: 'gpu',
+              label: '在 Amazon.co.jp 浏览显卡',
+            },
           ],
         },
         commonMistakes: {
@@ -2333,6 +2657,7 @@ schema: {
         { label: 'Configuração com Ollama', anchor: '#ollama-setup' },
         { label: 'Desempenho: 2 GPUs', anchor: '#performance' },
         { label: 'Quando usar Multi-GPU', anchor: '#when-to-use' },
+        { label: 'Preços regionais e onde comprar', anchor: '#where-to-buy' },
         { label: 'Erros comuns', anchor: '#common-mistakes' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
@@ -2418,6 +2743,51 @@ schema: {
           ],
           callouts: [
             { type: '💡', text: 'Dica Pro: para experimentar com modelos 70B, tente primeiro o CPU offloading com uma única GPU; é muito mais lento do que um modelo que cabe na VRAM, mas não custa nada a mais. Depois de confirmar a demanda de produção, considere uma segunda RTX 4090 para uma configuração multi-GPU.' },
+          ],
+        },
+        whereToBuy: {
+          id: 'where-to-buy',
+          title: 'Preços regionais e onde comprar',
+          content:
+            '**Os preços e a disponibilidade variam por região, e os preços na UE incluem IVA.** Os links abaixo são links simples de pesquisa de produtos por região; não carregam tags de afiliado e não geram comissão.',
+          items: [
+            '**Brasil:** Kabum, Pichau e Terabyteshop têm o estoque mais amplo. As RTX 3060 e RTX 4090 usadas aparecem no Mercado Livre; os preços incluem impostos de importação que elevam os valores acima dos EUA.',
+            '**Mercado de usados (Brasil):** O Mercado Livre é o principal marketplace para GPUs usadas no Brasil. Compare sempre o preço de uma placa usada verificada com o de uma nova e prefira vendedores com devolução ou garantia.',
+            '**Argentina, Colômbia e restante da América Latina:** O Mercado Livre é a referência em toda a região; verifique sempre os preços atualizados, pois a taxa de câmbio afeta significativamente o custo final.',
+            '**Comparador de preços:** O Buscapé e o Zoom são referência para comparar preços de placas novas no Brasil — verifique lá a fonte mais barata atualmente.',
+            '**Disponibilidade:** Placas de alta faixa (RTX 4090, RTX 5090) têm disponibilidade intermitente em 2026; a RTX 5090 costuma esgotar pelo preço de lista; espere preços flutuantes e verifique vários distribuidores.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              text: 'Os preços e o estoque de GPUs mudam de semana para semana em 2026. Confira a oferta atual da loja e compare novo com usado antes de comprar.',
+            },
+          ],
+          affiliateLinks: [
+            {
+              url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+              productName: 'GPUs para LLMs locais (EUA)',
+              productCategory: 'gpu',
+              label: 'Ver GPUs na Amazon EUA',
+            },
+            {
+              url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+              productName: 'GPUs para LLMs locais (Alemanha)',
+              productCategory: 'gpu',
+              label: 'Ver GPUs na Amazon.de',
+            },
+            {
+              url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+              productName: 'GPUs para LLMs locais (França)',
+              productCategory: 'gpu',
+              label: 'Ver GPUs na Amazon.fr',
+            },
+            {
+              url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+              productName: 'GPUs para LLMs locais (Japão)',
+              productCategory: 'gpu',
+              label: 'Ver GPUs na Amazon.co.jp',
+            },
           ],
         },
         commonMistakes: {
@@ -2661,6 +3031,7 @@ schema: {
         { label: 'Ollama 설정', anchor: '#ollama-setup' },
         { label: '성능: GPU 2개', anchor: '#performance' },
         { label: '멀티 GPU 사용 시기', anchor: '#when-to-use' },
+        { label: '지역별 가격 및 구매처', anchor: '#where-to-buy' },
         { label: '자주 하는 실수', anchor: '#common-mistakes' },
         { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '관련 문서', anchor: '#related-reading' },
@@ -2746,6 +3117,51 @@ schema: {
           ],
           callouts: [
             { type: '💡', text: '전문가 팁: 70B 모델을 실험하는 단계라면 먼저 단일 GPU CPU 오프로딩을 시도해 보십시오. VRAM에 들어가는 모델보다 훨씬 느리지만 추가 비용은 들지 않습니다. 프로덕션 수요가 확인되면 멀티 GPU 구성을 위해 두 번째 RTX 4090을 고려하십시오.' },
+          ],
+        },
+        whereToBuy: {
+          id: 'where-to-buy',
+          title: '지역별 가격 및 구매처',
+          content:
+            '**가격과 재고는 지역에 따라 다르며 EU 표시 가격에는 VAT가 포함됩니다.** 아래 링크는 지역별 제품 검색 링크입니다. 제휴 태그가 없으며 커미션이 발생하지 않습니다.',
+          items: [
+            '**한국:** 다나와, 에누리, Auction, 11번가가 광범위한 재고를 보유하고 있습니다. 중고 RTX 3060과 RTX 4090은 중고나라와 당근마켓에서 구할 수 있습니다.',
+            '**일본:** Amazon.co.jp와 Yodobashi Camera, Ark PC가 주요 참고처입니다. 가격에 소비세가 포함됩니다.',
+            '**미국:** Amazon.com과 Newegg는 가장 광범위한 재고를 보유하고 있으며, 중고는 eBay를 확인하십시오. RTX 5090은 출시 가격으로는 자주 품절됩니다.',
+            '**가격 비교:** 다나와 (한국)나 Idealo (EU)는 현재 최저가를 확인하기 위한 표준입니다.',
+            '**가용성:** 고급형 카드 (RTX 4090, RTX 5090)는 2026년에 간헐적으로 품절 상태입니다. 변동하는 가격을 예상하고 여러 유통업체를 확인하십시오.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              text: '2026년 GPU 가격과 재고는 매주 변동합니다. 주문 전에 판매처의 최신 상품 정보를 확인하고 신품과 중고를 비교하십시오.',
+            },
+          ],
+          affiliateLinks: [
+            {
+              url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+              productName: '로컬 LLM용 GPU (미국)',
+              productCategory: 'gpu',
+              label: 'Amazon 미국에서 GPU 보기',
+            },
+            {
+              url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+              productName: '로컬 LLM용 GPU (독일)',
+              productCategory: 'gpu',
+              label: 'Amazon.de에서 GPU 보기',
+            },
+            {
+              url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+              productName: '로컬 LLM용 GPU (프랑스)',
+              productCategory: 'gpu',
+              label: 'Amazon.fr에서 GPU 보기',
+            },
+            {
+              url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+              productName: '로컬 LLM용 GPU (일본)',
+              productCategory: 'gpu',
+              label: 'Amazon.co.jp에서 GPU 보기',
+            },
           ],
         },
         commonMistakes: {

@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['RTX 3060 12GB', 'Ryzen 5 7600', 'DDR5-6000'],
     designSkin: 'hub',
     theme: 'Hardware Setups',
+    affiliateDisclosure: true,
     title: 'Local LLM PC Build Under $1,000 With a Used GPU (2026)',
     heroImage: '/images/local-llm-pc-build-1000-overview-hero-en.webp',
     seoTitle: 'Local LLM PC Build Under $1,000 With a Used GPU (2026)',
@@ -31,6 +32,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Expected Performance by Model Size', anchor: '#performance' },
       { label: 'Assembly Notes', anchor: '#assembly' },
       { label: 'Upgrade Path', anchor: '#upgrade-path' },
+      { label: 'Regional Pricing & Where to Buy', anchor: '#where-to-buy' },
       { label: 'Common Mistakes at This Budget', anchor: '#mistakes' },
       { label: 'Frequently Asked Questions', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related-reading' },
@@ -119,6 +121,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'This build is designed so the GPU is the only part worth replacing later. The B650 motherboard supports a second PCIe slot (typically x4 electrical) for adding a second GPU down the line, though tensor-split multi-GPU inference needs at least x8/x8 to avoid a PCIe bandwidth bottleneck — see the dual-GPU build (about $2,400) for a board chosen with that in mind.',
           'The most straightforward upgrade is swapping the GPU for one with more VRAM when budget allows. An RTX 5060 Ti 16GB (from $679 per the InsiderLLM tracker; about $800 new on gpuprix, 2026-11-18) adds 4GB of VRAM but would push the build over $1,000, and a used RTX 3090 24GB (about $1,400-1,550) is out of this build\'s budget. The Ryzen 5 7600 and 32GB RAM are not the limit for such a swap; check the new card\'s power requirement against the 650W PSU in the manufacturer specification.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Regional Pricing & Where to Buy',
+        content:
+          '**Prices and stock vary by region, and EU/UK listed prices include VAT.** The links below are plain product-search links per region; they carry no affiliate tags and earn no commission.',
+        items: [
+          '**United States:** Amazon and Newegg have the widest stock. Used RTX 3060 and RTX 4090 cards are common; new flagship stock is thin, and the RTX 5090 is often sold out at list price.',
+          '**Germany:** Amazon.de and Mindfactory.de; expect roughly 19% VAT in listed prices, and German GPU prices that often run above US figures.',
+          '**France:** Amazon.fr and LDLC; pricing is similar to Germany with 20% VAT, and flagship stock has been intermittent.',
+          '**Japan:** Amazon.co.jp and Kakaku.com for price comparison; new-card pricing tracks the US, with thinner used-card supply.',
+          '**China:** JD.com is the reference marketplace; high-end GPU availability and pricing differ substantially from Western markets.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'GPU prices and stock have been moving week to week in 2026. Check the live retailer listing, and compare new against used, before you order.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+            productName: 'Local-LLM GPUs (US)',
+            productCategory: 'gpu',
+            label: 'Browse GPUs on Amazon US',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+            productName: 'Local-LLM GPUs (Germany)',
+            productCategory: 'gpu',
+            label: 'Browse GPUs on Amazon.de',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+            productName: 'Local-LLM GPUs (France)',
+            productCategory: 'gpu',
+            label: 'Browse GPUs on Amazon.fr',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+            productName: 'Local-LLM GPUs (Japan)',
+            productCategory: 'gpu',
+            label: 'Browse GPUs on Amazon.co.jp',
+          },
         ],
       },
       mistakes: {
@@ -250,6 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Rendimiento Esperado por Tamaño de Modelo', anchor: '#performance' },
       { label: 'Notas de Ensamblaje', anchor: '#assembly' },
       { label: 'Ruta de Actualización', anchor: '#upgrade-path' },
+      { label: 'Precios regionales y dónde comprar', anchor: '#where-to-buy' },
       { label: 'Errores Comunes con Este Presupuesto', anchor: '#mistakes' },
       { label: 'Preguntas Frecuentes', anchor: '#faq' },
       { label: 'Lecturas Relacionadas', anchor: '#related-reading' },
@@ -338,6 +386,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Este build está diseñado para que la GPU sea el único componente que valga la pena reemplazar más adelante. La placa B650 soporta una segunda ranura PCIe (típicamente x4 eléctrica) para añadir una segunda GPU en el futuro, aunque la inferencia multi-GPU con tensor-split necesita al menos x8/x8 para evitar un cuello de botella de ancho de banda PCIe — consulta el build dual-GPU (unos $2,400) para una placa elegida con eso en mente.',
           'La actualización más directa es cambiar la GPU por una con más VRAM cuando el presupuesto lo permita. Una RTX 5060 Ti 16GB (desde $679 según el rastreador de InsiderLLM; unos $800 nueva en gpuprix, 2026-11-18) añade 4GB de VRAM pero llevaría el build por encima de $1,000, y una RTX 3090 24GB usada (~$1,400-1,550) queda fuera del presupuesto de este build. El Ryzen 5 7600 y los 32GB de RAM no son el límite para ese cambio; compara el consumo de la nueva tarjeta con la fuente de 650W en la especificación del fabricante.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Precios regionales y dónde comprar',
+        content:
+          '**Los precios y la disponibilidad varían por región, y los precios en la UE incluyen IVA.** Los enlaces de abajo son simples enlaces de búsqueda de productos por región; no llevan etiquetas de afiliado y no generan comisión.',
+        items: [
+          '**España:** Amazon.es y PcComponentes tienen el stock más amplio. Las tarjetas de segunda mano RTX 3060 y RTX 4090 se encuentran en Wallapop y Milanuncios.',
+          '**México:** Amazon.com.mx y Mercado Libre son las referencias principales; los precios incluyen IVA y pueden variar por tipo de cambio.',
+          '**Argentina, Colombia y resto de Latinoamérica:** Mercado Libre es el marketplace de referencia en toda la región; verifica siempre los precios actualizados ya que el tipo de cambio afecta significativamente el costo final.',
+          '**Comparador de precios:** Idealo.es es el estándar para comparar precios de tarjetas nuevas en España — verifica ahí la fuente más barata actualmente.',
+          '**Disponibilidad:** las tarjetas de gama alta (RTX 4090, RTX 5090) están intermitentemente agotadas en 2026, y la RTX 5090 suele estar agotada al precio de lista; espera precios fluctuantes y verifica varios distribuidores.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Los precios y el stock de GPU cambian de una semana a otra en 2026. Consulta la oferta actual del minorista y compara nuevo frente a usado antes de pedir.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+            productName: 'GPUs para LLMs locales (EE. UU.)',
+            productCategory: 'gpu',
+            label: 'Ver GPUs en Amazon EE. UU.',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+            productName: 'GPUs para LLMs locales (Alemania)',
+            productCategory: 'gpu',
+            label: 'Ver GPUs en Amazon.de',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+            productName: 'GPUs para LLMs locales (Francia)',
+            productCategory: 'gpu',
+            label: 'Ver GPUs en Amazon.fr',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+            productName: 'GPUs para LLMs locales (Japón)',
+            productCategory: 'gpu',
+            label: 'Ver GPUs en Amazon.co.jp',
+          },
         ],
       },
       mistakes: {
@@ -469,6 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '모델 크기별 예상 성능', anchor: '#performance' },
       { label: '조립 시 유의사항', anchor: '#assembly' },
       { label: '업그레이드 경로', anchor: '#upgrade-path' },
+      { label: '지역별 가격 및 구매처', anchor: '#where-to-buy' },
       { label: '이 예산대에서 흔한 실수', anchor: '#mistakes' },
       { label: '자주 묻는 질문', anchor: '#faq' },
       { label: '관련 읽기', anchor: '#related-reading' },
@@ -557,6 +651,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '이 빌드는 나중에 교체할 가치가 있는 부품이 GPU 하나뿐이도록 설계되었습니다. B650 메인보드는 두 번째 PCIe 슬롯(대개 전기적으로 x4)을 지원하여 이후 두 번째 GPU를 추가할 수 있지만, 텐서 분할 멀티 GPU 추론은 PCIe 대역폭 병목을 피하려면 최소 x8/x8이 필요합니다 — 이를 염두에 두고 선택한 보드는 듀얼 GPU 빌드(약 $2,400)를 참고하시기 바랍니다.',
           '가장 간단한 업그레이드는 예산이 허락할 때 VRAM이 더 큰 GPU로 교체하는 것입니다. RTX 5060 Ti 16GB(InsiderLLM 트래커 기준 $679부터, gpuprix 기준 새 제품 약 $800, 2026-11-18)는 VRAM을 4GB 늘려 주지만 빌드 총액이 $1,000을 넘게 되며, 중고 RTX 3090 24GB(약 $1,400-1,550)는 이 빌드의 예산을 벗어납니다. Ryzen 5 7600과 32GB RAM은 이러한 교체의 제약이 아니지만, 새 카드의 전력 요구 사항을 650W PSU와 비교해 제조사 사양에서 확인하십시오.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '지역별 가격 및 구매처',
+        content:
+          '**가격과 재고는 지역에 따라 다르며 EU 표시 가격에는 VAT가 포함됩니다.** 아래 링크는 지역별 제품 검색 링크입니다. 제휴 태그가 없으며 커미션이 발생하지 않습니다.',
+        items: [
+          '**한국:** 다나와, 에누리, Auction, 11번가가 광범위한 재고를 보유하고 있습니다. 중고 RTX 3060과 RTX 4090은 중고나라와 당근마켓에서 구할 수 있습니다.',
+          '**일본:** Amazon.co.jp와 Yodobashi Camera, Ark PC가 주요 참고처입니다. 가격에 소비세가 포함됩니다.',
+          '**미국:** Amazon.com과 Newegg는 가장 광범위한 재고를 보유하고 있으며, 중고는 eBay를 확인하십시오. RTX 5090은 출시 가격으로는 자주 품절됩니다.',
+          '**가격 비교:** 다나와 (한국)나 Idealo (EU)는 현재 최저가를 확인하기 위한 표준입니다.',
+          '**가용성:** 고급형 카드 (RTX 4090, RTX 5090)는 2026년에 간헐적으로 품절 상태입니다. 변동하는 가격을 예상하고 여러 유통업체를 확인하십시오.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '2026년 GPU 가격과 재고는 매주 변동합니다. 주문 전에 판매처의 최신 상품 정보를 확인하고 신품과 중고를 비교하십시오.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+            productName: '로컬 LLM용 GPU (미국)',
+            productCategory: 'gpu',
+            label: 'Amazon 미국에서 GPU 보기',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+            productName: '로컬 LLM용 GPU (독일)',
+            productCategory: 'gpu',
+            label: 'Amazon.de에서 GPU 보기',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+            productName: '로컬 LLM용 GPU (프랑스)',
+            productCategory: 'gpu',
+            label: 'Amazon.fr에서 GPU 보기',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+            productName: '로컬 LLM용 GPU (일본)',
+            productCategory: 'gpu',
+            label: 'Amazon.co.jp에서 GPU 보기',
+          },
         ],
       },
       mistakes: {
@@ -688,6 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الأداء المتوقع حسب حجم النموذج', anchor: '#performance' },
       { label: 'ملاحظات التجميع', anchor: '#assembly' },
       { label: 'مسار الترقية', anchor: '#upgrade-path' },
+      { label: 'الأسعار الإقليمية وأين تشتري', anchor: '#where-to-buy' },
       { label: 'الأخطاء الشائعة عند هذه الميزانية', anchor: '#mistakes' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
       { label: 'قراءات ذات صلة', anchor: '#related-reading' },
@@ -776,6 +916,52 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'صُمم هذا التجميع بحيث تكون GPU القطعة الوحيدة التي تستحق الاستبدال لاحقاً. تدعم اللوحة الأم B650 منفذ PCIe ثانٍ (عادةً x4 كهربائياً) لإضافة GPU ثانية لاحقاً، رغم أن استدلال multi-GPU بتقسيم tensor يحتاج إلى x8/x8 على الأقل لتجنّب عنق زجاجة في عرض نطاق PCIe — راجع التجميع بثنائي GPU (نحو 2,400 دولار) للوحة أم اختيرت مع مراعاة ذلك.',
           'أبسط ترقية هي استبدال GPU بأخرى ذات VRAM أكبر عندما تسمح الميزانية. بطاقة RTX 5060 Ti 16GB (من 679 دولاراً حسب متتبع InsiderLLM؛ نحو 800 دولار جديدة على gpuprix، 2026-11-18) تضيف 4GB من VRAM لكنها سترفع التجميع فوق 1,000 دولار، وبطاقة RTX 3090 24GB مستعملة (نحو 1,400-1,550 دولار) خارج ميزانية هذا التجميع. لا يمثل Ryzen 5 7600 وذاكرة 32GB عائقاً لهذا الاستبدال؛ طابق احتياج البطاقة الجديدة من الطاقة مع مزوّد 650W في مواصفات الشركة المصنّعة.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'الأسعار الإقليمية وأين تشتري',
+        content:
+          '**تختلف الأسعار والتوافر بين المناطق، والأسعار المعروضة في الاتحاد الأوروبي تتضمن ضريبة القيمة المضافة.** الروابط أدناه روابط بحث عن المنتجات لكل منطقة، ولا تحمل علامات تابعة ولا تدرّ عمولة.',
+        items: [
+          '**الولايات المتحدة:** Amazon وNewegg لديهما أوسع مخزون. بطاقات RTX 3060 وRTX 4090 المستعملة شائعة؛ مخزون الطرازات الرائدة الجديد شحيح، وRTX 5090 غالباً ما تنفد بسعر القائمة.',
+          '**ألمانيا:** Amazon.de وMindfactory.de؛ توقّع نحو 19% ضريبة قيمة مضافة ضمن الأسعار المعروضة، وأسعار GPU الألمانية تفوق الأرقام الأمريكية.',
+          '**فرنسا:** Amazon.fr وLDLC؛ الأسعار مشابهة لألمانيا مع ضريبة 20%، ومخزون الطرازات الرائدة متقطع.',
+          '**اليابان:** Amazon.co.jp وKakaku.com لمقارنة الأسعار؛ أسعار البطاقات الجديدة تتبع الأسعار الأمريكية، مع عرض أضيق من البطاقات المستعملة.',
+          '**الصين:** JD.com هو السوق المرجعي؛ توافر GPU الراقية وأسعارها يختلفان كثيراً عن الأسواق الغربية.',
+          '**الشرق الأوسط وشمال إفريقيا:** Amazon.ae والمستوردون المحليون. الأسعار عادةً أعلى من الأسعار الأمريكية؛ لم نرصد أسعاراً محلية لهذا الدليل، فتحقق من عروض البائعين مباشرة.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'تتغير أسعار GPU ومخزونها من أسبوع إلى آخر في 2026. راجع عرض البائع الحالي وقارن بين الجديد والمستعمل قبل الطلب.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+            productName: 'بطاقات GPU للنماذج اللغوية المحلية (الولايات المتحدة)',
+            productCategory: 'gpu',
+            label: 'تصفح بطاقات GPU على Amazon الأمريكي',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+            productName: 'بطاقات GPU للنماذج اللغوية المحلية (ألمانيا)',
+            productCategory: 'gpu',
+            label: 'تصفح بطاقات GPU على Amazon.de',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+            productName: 'بطاقات GPU للنماذج اللغوية المحلية (فرنسا)',
+            productCategory: 'gpu',
+            label: 'تصفح بطاقات GPU على Amazon.fr',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+            productName: 'بطاقات GPU للنماذج اللغوية المحلية (اليابان)',
+            productCategory: 'gpu',
+            label: 'تصفح بطاقات GPU على Amazon.co.jp',
+          },
         ],
       },
       mistakes: {
@@ -907,6 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '各模型规模的预期性能', anchor: '#performance' },
       { label: '组装注意事项', anchor: '#assembly' },
       { label: '升级路径', anchor: '#upgrade-path' },
+      { label: '地区价格与购买渠道', anchor: '#where-to-buy' },
       { label: '该预算下的常见错误', anchor: '#mistakes' },
       { label: '常见问题', anchor: '#faq' },
       { label: '相关阅读', anchor: '#related-reading' },
@@ -995,6 +1182,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '本构建的设计理念是，日后唯一值得更换的部件就是GPU。B650主板支持第二个PCIe插槽（通常为x4电气规格），可用于后续加装第二张GPU，不过tensor-split多GPU推理至少需要x8/x8才能避免PCIe带宽瓶颈——为此专门选择主板的方案请参见双GPU构建方案（约$2,400）。',
           '最直接的升级是在预算允许时把GPU换成显存更大的型号。RTX 5060 Ti 16GB（据InsiderLLM价格追踪页起价$679；据gpuprix全新约$800，2026-11-18）可增加4GB显存，但会使整机超过$1,000；二手RTX 3090 24GB（约$1,400-1,550）则超出本构建的预算。Ryzen 5 7600和32GB内存不是这类更换的瓶颈；请对照厂商规格，核对新卡的供电需求与650W电源是否匹配。',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '地区价格与购买渠道',
+        content:
+          '**价格和库存因地区而异，欧盟标价含增值税。** 下方链接是按地区的普通商品搜索链接；它们不带联盟标签，也不产生佣金。',
+        items: [
+          '**美国：** Amazon 和 Newegg 货源最广。二手 RTX 3060 和 RTX 4090 显卡常见；全新旗舰货源稀少，RTX 5090 在标价下常常缺货。',
+          '**德国：** Amazon.de 和 Mindfactory.de；标价通常含约 19% 增值税，德国显卡价格高于美国。',
+          '**法国：** Amazon.fr 和 LDLC；价格与德国相近，含 20% 增值税，旗舰货源时断时续。',
+          '**日本：** Amazon.co.jp 和 Kakaku.com 用于比价；全新显卡价格跟随美国，二手货源较少。',
+          '**中国：** 全新显卡看京东和淘宝，二手 RTX 4090 与 RTX 3060 主要在闲鱼成交；高端显卡的供货和价格与西方市场差异显著。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '2026 年显卡价格和库存每周都在变化。下单前请查看零售商的实时报价，并比较全新与二手。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+            productName: 'Local-LLM GPUs (US)',
+            productCategory: 'gpu',
+            label: '在 Amazon US 浏览显卡',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+            productName: 'Local-LLM GPUs (Germany)',
+            productCategory: 'gpu',
+            label: '在 Amazon.de 浏览显卡',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+            productName: 'Local-LLM GPUs (France)',
+            productCategory: 'gpu',
+            label: '在 Amazon.fr 浏览显卡',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+            productName: 'Local-LLM GPUs (Japan)',
+            productCategory: 'gpu',
+            label: '在 Amazon.co.jp 浏览显卡',
+          },
         ],
       },
       mistakes: {
@@ -1126,6 +1358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'モデルサイズ別の期待パフォーマンス', anchor: '#performance' },
       { label: '組み立てに関する注意点', anchor: '#assembly' },
       { label: 'アップグレードパス', anchor: '#upgrade-path' },
+      { label: '地域別価格と購入先', anchor: '#where-to-buy' },
       { label: 'この予算でよくある失敗', anchor: '#mistakes' },
       { label: 'よくある質問', anchor: '#faq' },
       { label: '関連記事', anchor: '#related-reading' },
@@ -1214,6 +1447,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'このビルドは、後で交換する価値があるパーツがGPUだけになるよう設計されています。B650マザーボードは2本目のPCIeスロット（通常x4動作）をサポートし、将来的に2枚目のGPUを追加できますが、テンソル分割によるマルチGPU推論にはPCIe帯域幅のボトルネックを避けるため少なくともx8/x8が必要です — その点を考慮したボードについてはデュアルGPUビルド（約$2,400）を参照してください。',
           '最も手軽なアップグレードは、予算が許すときにVRAMの大きいGPUへ交換することです。RTX 5060 Ti 16GB（InsiderLLMトラッカーで$679から、gpuprixで新品約$800、2026-11-18）はVRAMが4GB増えますが、ビルド総額が$1,000を超えます。中古RTX 3090 24GB（約$1,400〜1,550）はこのビルドの予算外です。Ryzen 5 7600と32GB RAMはこうした交換の制約にはなりませんが、新しいカードの電力要件を650W電源と照らし、メーカー仕様で確認してください。',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '地域別価格と購入先',
+        content:
+          '**価格と在庫は地域によって異なり、EUの表示価格には付加価値税（VAT）が含まれます。** 以下のリンクは地域別の製品検索リンクで、アフィリエイトタグは付いておらず、手数料は発生しません。',
+        items: [
+          '**日本：** Amazon.co.jpとドスパラ・パソコン工房・TSUKUMOがグラフィックカードの主な購入先です。',
+          '**価格比較：** Kakaku.com（価格.com）は日本で新品価格を比較する標準であり、現在最も安い購入先をそこで確認してください。',
+          '**自作系ショップ：** アーク（Ark）などの自作PC専門店は、ハイエンドGPUの在庫がオンライン小売より早く入ることがあります。',
+          '**中古：** メルカリやヤフオク！は日本のGPUの主な中古市場です — ただし2026年は中古が新品より確実に安いとは限らないため、新品の価格と必ず比べてください。',
+          '**在庫状況：** ハイエンドカード（RTX 4090、RTX 5090）は2026年には時折品薄で、価格は変動し、為替の影響も受けます。RTX 5090は定価では売り切れていることも多いため、複数の小売店を確認してください。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '2026年のGPU価格と在庫は週ごとに変動しています。注文前に販売店の最新の掲載情報を確認し、新品と中古を比較してください。',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+            productName: 'Local-LLM GPUs (US)',
+            productCategory: 'gpu',
+            label: 'Amazon USでGPUを探す',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+            productName: 'Local-LLM GPUs (Germany)',
+            productCategory: 'gpu',
+            label: 'Amazon.deでGPUを探す',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+            productName: 'Local-LLM GPUs (France)',
+            productCategory: 'gpu',
+            label: 'Amazon.frでGPUを探す',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+            productName: 'Local-LLM GPUs (Japan)',
+            productCategory: 'gpu',
+            label: 'Amazon.co.jpでGPUを探す',
+          },
         ],
       },
       mistakes: {
@@ -1345,6 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Erwartete Leistung nach Modellgröße', anchor: '#performance' },
       { label: 'Hinweise zum Zusammenbau', anchor: '#assembly' },
       { label: 'Aufrüstpfad', anchor: '#upgrade-path' },
+      { label: 'Regionale Preise & Bezugsquellen', anchor: '#where-to-buy' },
       { label: 'Häufige Fehler bei diesem Budget', anchor: '#mistakes' },
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
       { label: 'Weiterlesen', anchor: '#related-reading' },
@@ -1433,6 +1712,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Dieser Build ist so konzipiert, dass später nur die GPU austauschwürdig ist. Das B650-Mainboard unterstützt einen zweiten PCIe-Slot (typischerweise x4 elektrisch) für eine spätere zweite GPU, wobei Tensor-Split-Multi-GPU-Inferenz mindestens x8/x8 benötigt, um einen PCIe-Bandbreiten-Flaschenhals zu vermeiden — siehe den Dual-GPU-Build (ca. 2.400 $) für ein bewusst dafür ausgewähltes Mainboard.',
           'Das naheliegendste Upgrade ist der Tausch der GPU gegen eine mit mehr VRAM, sobald das Budget es zulässt. Eine RTX 5060 Ti 16GB (ab 679 $ laut InsiderLLM-Tracker; ca. 800 $ neu bei gpuprix, 2026-11-18) bringt 4 GB mehr VRAM, würde den Build aber über 1.000 $ heben, und eine gebrauchte RTX 3090 24GB (ca. 1.400–1.550 $) liegt außerhalb des Budgets dieses Builds. Ryzen 5 7600 und 32 GB RAM sind für einen solchen Tausch nicht der limitierende Faktor; den Leistungsbedarf der neuen Karte mit dem 650W-Netzteil anhand der Herstellerangabe abgleichen.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Regionale Preise & Bezugsquellen',
+        content:
+          '**Preise und Verfügbarkeit schwanken je Region; in Deutschland und der EU enthalten die Listenpreise die Mehrwertsteuer.** Die folgenden Links sind reine Produkt-Suchlinks pro Region; sie tragen keine Affiliate-Kennungen und erzeugen keine Provision.',
+        items: [
+          '**Deutschland:** Mindfactory.de und alternate.de sind neben Amazon.de etablierte Anlaufstellen für Grafikkarten; deutsche Preise liegen häufig über den US-Werten.',
+          '**Gebrauchtmarkt:** eBay Kleinanzeigen ist ein großer deutscher Gebrauchtmarkt für GPUs. Gebrauchte Karten sind nicht mehr verlässlich günstiger als neue — vergleichen Sie beide und bevorzugen Sie Verkäufer mit Rückgaberecht.',
+          '**Österreich & Schweiz:** Geizhals.at und digitec.ch decken den DACH-Raum ab; Preise und Verfügbarkeit weichen leicht von Deutschland ab.',
+          '**Preisvergleich:** Geizhals.de ist der Standard für den Preisvergleich neuer Karten in Deutschland — prüfen Sie dort die aktuell günstigste Bezugsquelle.',
+          '**Verfügbarkeit:** High-End-Karten (RTX 4090, RTX 5090) sind 2026 zeitweise knapp, die RTX 5090 ist zum Listenpreis oft ausverkauft; rechnen Sie mit schwankenden Preisen und prüfen Sie mehrere Händler.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'GPU-Preise und Lagerbestände schwanken 2026 von Woche zu Woche. Prüfen Sie vor der Bestellung das aktuelle Händlerangebot und vergleichen Sie Neu- mit Gebrauchtware.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+            productName: 'GPUs für lokale LLMs (Deutschland)',
+            productCategory: 'gpu',
+            label: 'GPUs bei Amazon.de durchsuchen',
+          },
+          {
+            url: 'https://www.mindfactory.de/Hardware/Grafikkarten+(VGA).html',
+            productName: 'GPUs für lokale LLMs (Mindfactory)',
+            productCategory: 'gpu',
+            label: 'GPUs bei Mindfactory durchsuchen',
+          },
+          {
+            url: 'https://www.alternate.de/Grafikkarten',
+            productName: 'GPUs für lokale LLMs (alternate.de)',
+            productCategory: 'gpu',
+            label: 'GPUs bei alternate.de durchsuchen',
+          },
+          {
+            url: 'https://geizhals.de/?cat=gra16_512',
+            productName: 'GPU-Preisvergleich (Geizhals)',
+            productCategory: 'gpu',
+            label: 'GPU-Preise bei Geizhals vergleichen',
+          },
         ],
       },
       mistakes: {
@@ -1564,6 +1888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Performances attendues par taille de modèle', anchor: '#performance' },
       { label: 'Notes d\'assemblage', anchor: '#assembly' },
       { label: 'Voie d\'évolution', anchor: '#upgrade-path' },
+      { label: 'Prix régionaux et où acheter', anchor: '#where-to-buy' },
       { label: 'Erreurs courantes à ce budget', anchor: '#mistakes' },
       { label: 'Questions fréquemment posées', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
@@ -1652,6 +1977,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Cette configuration est conçue pour que le GPU soit le seul composant à remplacer plus tard. La carte mère B650 supporte un second slot PCIe (généralement x4 électrique) pour ajouter un second GPU ultérieurement, bien que l\'inférence multi-GPU en tensor-split nécessite au moins du x8/x8 pour éviter un goulot d\'étranglement de bande passante PCIe — voir la configuration à double GPU (environ $2,400) pour une carte mère choisie en tenant compte de cela.',
           'La mise à niveau la plus directe consiste à remplacer le GPU par un modèle avec plus de VRAM quand le budget le permet. Une RTX 5060 Ti 16 Go (à partir de $679 d\'après le suivi d\'InsiderLLM ; environ $800 neuve sur gpuprix, 2026-11-18) ajoute 4 Go de VRAM mais ferait dépasser $1,000 à la configuration, et une RTX 3090 24 Go d\'occasion (environ $1,400-1,550) sort du budget de cette configuration. Le Ryzen 5 7600 et les 32 Go de RAM ne sont pas la limite pour un tel remplacement ; comparez la consommation de la nouvelle carte à l\'alimentation 650W dans la spécification du fabricant.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Prix régionaux et où acheter',
+        content:
+          '**Les prix et la disponibilité varient selon la région, et les prix affichés dans l\'UE incluent la TVA.** Les liens ci-dessous sont de simples liens de recherche de produits par région ; ils ne portent aucune balise d\'affiliation et ne génèrent aucune commission.',
+        items: [
+          '**France :** Amazon.fr et LDLC offrent le plus large stock ; Materiel.net et Top Achat sont aussi des références pour les cartes graphiques.',
+          '**Comparateur de prix :** Idealo.fr et Geizhals.eu sont les standards pour comparer les prix du neuf en France — vérifiez-y la source la moins chère actuellement.',
+          '**Belgique et Suisse :** Alternate.be et Digitec.ch couvrent les marchés francophones voisins ; les prix et la disponibilité diffèrent légèrement de la France.',
+          '**Occasion :** LeBonCoin est un grand marché français de l\'occasion pour les GPU — comparez-y le neuf et l\'occasion, car l\'occasion n\'est plus fiablement moins chère.',
+          '**Disponibilité :** les cartes haut de gamme (RTX 4090, RTX 5090) sont par moments en rupture en 2026, et le RTX 5090 est souvent épuisé au prix catalogue ; attendez-vous à des prix fluctuants et vérifiez plusieurs revendeurs.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Les prix et les stocks des GPU fluctuent d\'une semaine à l\'autre en 2026. Consultez l\'offre actuelle du revendeur et comparez le neuf à l\'occasion avant de commander.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+            productName: 'Local-LLM GPUs (US)',
+            productCategory: 'gpu',
+            label: 'Parcourir les GPU sur Amazon US',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+            productName: 'Local-LLM GPUs (Germany)',
+            productCategory: 'gpu',
+            label: 'Parcourir les GPU sur Amazon.de',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+            productName: 'Local-LLM GPUs (France)',
+            productCategory: 'gpu',
+            label: 'Parcourir les GPU sur Amazon.fr',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+            productName: 'Local-LLM GPUs (Japan)',
+            productCategory: 'gpu',
+            label: 'Parcourir les GPU sur Amazon.co.jp',
+          },
         ],
       },
       mistakes: {
@@ -1783,6 +2153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Desempenho Esperado por Tamanho de Modelo', anchor: '#performance' },
       { label: 'Notas de Montagem', anchor: '#assembly' },
       { label: 'Caminho de Upgrade', anchor: '#upgrade-path' },
+      { label: 'Preços regionais e onde comprar', anchor: '#where-to-buy' },
       { label: 'Erros Comuns Nesse Orçamento', anchor: '#mistakes' },
       { label: 'Perguntas Frequentes', anchor: '#faq' },
       { label: 'Leituras Relacionadas', anchor: '#related-reading' },
@@ -1871,6 +2242,51 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Este build foi projetado para que a GPU seja a única peça que vale a pena substituir depois. A placa-mãe B650 suporta um segundo slot PCIe (tipicamente x4 elétrico) para adicionar uma segunda GPU no futuro, embora a inferência multi-GPU com tensor-split precise de pelo menos x8/x8 para evitar um gargalo de largura de banda PCIe — veja o build dual-GPU (cerca de $2.400) para uma placa escolhida com isso em mente.',
           'O upgrade mais direto é trocar a GPU por uma com mais VRAM quando o orçamento permitir. Uma RTX 5060 Ti 16GB (a partir de $679 segundo o rastreador da InsiderLLM; cerca de $800 nova no gpuprix, 2026-11-18) acrescenta 4GB de VRAM, mas levaria o build acima de $1.000, e uma RTX 3090 24GB usada (cerca de $1.400-1.550) fica fora do orçamento deste build. O Ryzen 5 7600 e os 32GB de RAM não são o limite para essa troca; compare o consumo da nova placa com a fonte de 650W na especificação do fabricante.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Preços regionais e onde comprar',
+        content:
+          '**Os preços e a disponibilidade variam por região, e os preços na UE incluem IVA.** Os links abaixo são links simples de pesquisa de produtos por região; não carregam tags de afiliado e não geram comissão.',
+        items: [
+          '**Brasil:** Kabum, Pichau e Terabyteshop têm o estoque mais amplo. As RTX 3060 e RTX 4090 usadas aparecem no Mercado Livre; os preços incluem impostos de importação que elevam os valores acima dos EUA.',
+          '**Mercado de usados (Brasil):** O Mercado Livre é o principal marketplace para GPUs usadas no Brasil. Compare sempre o preço de uma placa usada verificada com o de uma nova e prefira vendedores com devolução ou garantia.',
+          '**Argentina, Colômbia e restante da América Latina:** O Mercado Livre é a referência em toda a região; verifique sempre os preços atualizados, pois a taxa de câmbio afeta significativamente o custo final.',
+          '**Comparador de preços:** O Buscapé e o Zoom são referência para comparar preços de placas novas no Brasil — verifique lá a fonte mais barata atualmente.',
+          '**Disponibilidade:** Placas de alta faixa (RTX 4090, RTX 5090) têm disponibilidade intermitente em 2026; a RTX 5090 costuma esgotar pelo preço de lista; espere preços flutuantes e verifique vários distribuidores.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Os preços e o estoque de GPUs mudam de semana para semana em 2026. Confira a oferta atual da loja e compare novo com usado antes de comprar.',
+          },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=GPU+for+local+LLM',
+            productName: 'GPUs para LLMs locais (EUA)',
+            productCategory: 'gpu',
+            label: 'Ver GPUs na Amazon EUA',
+          },
+          {
+            url: 'https://www.amazon.de/s?k=Grafikkarte+RTX',
+            productName: 'GPUs para LLMs locais (Alemanha)',
+            productCategory: 'gpu',
+            label: 'Ver GPUs na Amazon.de',
+          },
+          {
+            url: 'https://www.amazon.fr/s?k=carte+graphique+RTX',
+            productName: 'GPUs para LLMs locais (França)',
+            productCategory: 'gpu',
+            label: 'Ver GPUs na Amazon.fr',
+          },
+          {
+            url: 'https://www.amazon.co.jp/s?k=RTX+GPU',
+            productName: 'GPUs para LLMs locais (Japão)',
+            productCategory: 'gpu',
+            label: 'Ver GPUs na Amazon.co.jp',
+          },
         ],
       },
       mistakes: {
