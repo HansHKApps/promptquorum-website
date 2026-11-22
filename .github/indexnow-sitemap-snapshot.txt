@@ -677,6 +677,7 @@ https://www.promptquorum.com/power-local-llm/replace-zapier-with-local-ai-agents
 https://www.promptquorum.com/power-local-llm/rescript-review
 https://www.promptquorum.com/power-local-llm/return-editor-review
 https://www.promptquorum.com/power-local-llm/rikkahub-review
+https://www.promptquorum.com/power-local-llm/rin-chat-review
 https://www.promptquorum.com/power-local-llm/risuai-review
 https://www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent
 https://www.promptquorum.com/power-local-llm/run-ai-on-tablet-ipad-android
