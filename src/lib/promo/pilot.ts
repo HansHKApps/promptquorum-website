@@ -1,7 +1,8 @@
 // The promo-slot pilot: which pages carry which slot, and which pages are the matched controls.
 // Pages are keyed by their English path; the same entry applies to all 8 locale versions (/de/..., /fr/..., ...).
-// 96 page groups: 91 article groups + the 5 hubs (P5). Article groups per target: Directory 30, Ask Hans 12, Power Mode 30, MCP 19,
-// each balanced over P1-P4 within its target (MCP 4/5/5/5, Power Mode 8/8/7/7, Ask Hans 3/3/3/3, Directory 8/7/7/8).
+// 104 page groups: 99 article groups + the 5 hubs (P5). Article groups per target: Directory 30, Ask Hans 12, Power Mode 30, MCP 19, Academy 8,
+// each balanced over P1-P4 within its target (MCP 4/5/5/5, Power Mode 8/8/7/7, Ask Hans 3/3/3/3, Directory 8/7/7/8, Academy 2/2/2/2).
+// 2026-11-22: Academy added as the fifth target (8 prompt-engineering groups not used by Ask Hans, each with its own control; GSC EN impressions, 28 days to 2026-11-22). Judged pooled over placements like Ask Hans.
 // History: started with 25 (20 articles + 5 hubs), tripled the article groups to 65 (source: GSC, 28 days to 2026-11-07), then
 // 2026-11-16 expanded MCP (6 -> 19, three creative-writing pages excluded afterwards) and Power Mode (12 -> 30) by GSC clicks (28 days to 2026-11-16). Ask Hans stays at its 12
 // prompt-engineering pages (owner decision 2026-11-16: no other cluster; lower goal; 8-week window; judged pooled over placements).
@@ -128,6 +129,15 @@ export const PILOT_GROUPS: Readonly<Record<string, PilotEntry>> = {
   [LL + 'apple-silicon-vs-nvidia-gpu-local-llm']: { placement: 'P4', target: 'power-mode' },
   [LL + 'local-llms-vs-claude-pro']: { placement: 'P4', target: 'power-mode' },
   [LL + 'ollama-on-mac-apple-silicon-setup-2026']: { placement: 'P4', target: 'power-mode' },
+  // fourth wave: Academy (prompt-engineering pages not used by any other target or as a control; pooled judgement)
+  [PE + 'ai-code-review']: { placement: 'P1', target: 'academy' },
+  [PE + 'the-single-step-prompt-method']: { placement: 'P1', target: 'academy' },
+  [PE + 'chain-of-thought-prompting']: { placement: 'P2', target: 'academy' },
+  [PE + 'specs-framework']: { placement: 'P2', target: 'academy' },
+  [PE + 'prompt-chaining']: { placement: 'P3', target: 'academy' },
+  [PE + 'geopolitics-and-ai']: { placement: 'P3', target: 'academy' },
+  [PE + 'self-consistency-prompting']: { placement: 'P4', target: 'academy' },
+  [PE + 'how-to-test-prompts-across-models']: { placement: 'P4', target: 'academy' },
   // hubs / index pages (P5)
   '/local-llms': { placement: 'P5', target: 'directory' },
   '/power-local-llm': { placement: 'P5', target: 'ask-hans' },
@@ -231,6 +241,15 @@ export const PILOT_CONTROLS: Readonly<Record<string, string>> = {
   [LL + 'apple-silicon-vs-nvidia-gpu-local-llm']: LL + 'best-local-llms-code-review',
   [LL + 'local-llms-vs-claude-pro']: LL + 'best-arabic-local-llms-2026',
   [LL + 'ollama-on-mac-apple-silicon-setup-2026']: LL + 'local-llm-openai-compatible-api',
+  // Academy controls (paired by rank on EN impressions, 28 days to 2026-11-22: 1,479 vs 1,163 / 1,014 vs 820 / 902 vs 736 / 716 vs 482 / 707 vs 375 / 647 vs 360 / 553 vs 251 / 400 vs 206; the lower pairs are looser)
+  [PE + 'ai-code-review']: PE + 'best-prompt-optimization-tools-for-teams',
+  [PE + 'chain-of-thought-prompting']: PE + 'your-brand-voice-ai',
+  [PE + 'prompt-chaining']: PE + 'best-prompt-engineering-ides',
+  [PE + 'self-consistency-prompting']: PE + 'best-tools-structured-output-json',
+  [PE + 'how-to-test-prompts-across-models']: PE + 'best-prompt-management-platforms',
+  [PE + 'geopolitics-and-ai']: PE + 'ai-powered-research',
+  [PE + 'specs-framework']: PE + 'prompt-evaluation-metrics',
+  [PE + 'the-single-step-prompt-method']: PE + 'gpt-claude-or-gemini-how-to-pick-the-right-model',
 }
 
 const LOCALE_PREFIX = /^\/(?:de|fr|ja|zh|es|pt|ar|ko)(?=\/|$)/

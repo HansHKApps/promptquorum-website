@@ -15,11 +15,13 @@ import { PromoSlot } from './PromoSlot'
 export type PilotSpot = 'P1' | 'P2' | 'P3' | 'P4' | 'P5'
 
 const PILOT_ON = process.env.NEXT_PUBLIC_PROMO_PILOT === 'true'
+// Academy slots also need the Academy itself on (its window is mounted only then); derived from ACADEMY_ENABLED in next.config.ts.
+const ACADEMY_ON = process.env.NEXT_PUBLIC_ACADEMY_PROMO_ENABLED === 'true'
 
 export function PilotPromoSlot({ at }: { at: PilotSpot }) {
   const pathname = usePathname() ?? ''
   const entry = PILOT_ON ? pilotEntryFor(pathname) : null
-  if (!entry) return null
+  if (!entry || (entry.target === 'academy' && !ACADEMY_ON)) return null
 
   const variantFor = (p: PromoPlacement): PromoVariant => (p === 'P1' ? (entry.target === 'mcp' ? 'card' : 'strip') : entry.target === 'mcp' ? 'callout' : 'card')
 

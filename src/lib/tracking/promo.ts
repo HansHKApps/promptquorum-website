@@ -64,13 +64,13 @@ export function trackPromo(event: PromoEvent, ctx: PromoContext): void {
 }
 
 /**
- * Ask Hans was opened by a promo slot (source = `promo_<target>_<placement>`). Sent to Umami regardless of the Ask Hans
+ * Ask Hans, Power Mode or the Academy window was opened by a promo slot (source = `promo_<target>_<placement>`). Sent to Umami regardless of the Ask Hans
  * consent choice, because Umami here is cookieless and anonymous. Fires only when the window actually opened (an
  * already open window is not a new open).
  */
 export function trackPromoOpen(source: string): void {
   try {
-    const m = /^promo_(ask_hans|power_mode)_(p[1-5])$/.exec(source)
+    const m = /^promo_(ask_hans|power_mode|academy)_(p[1-5])$/.exec(source)
     if (!m) return
     const page = window.location.pathname
     const target = m[1].replace('_', '-') as PromoTarget

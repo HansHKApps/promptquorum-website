@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Checks the promo-slot pilot config (src/lib/promo/pilot.ts): 96 groups (91 articles + 5 hubs), each target balanced
+// Checks the promo-slot pilot config (src/lib/promo/pilot.ts): 104 groups (99 articles + 5 hubs), each target balanced
 // over P1-P4 (max-min <= 1), P5 on 5 hubs, targets match the cluster table, every page exists, every article group has a
 // distinct control that is not in the pilot, and excluded pages (PILOT_EXCLUDED) appear nowhere. Run: npm run test:promo-pilot
 import fs from 'node:fs'
@@ -18,14 +18,14 @@ const errors = []
 const fail = (m) => errors.push(m)
 
 const entries = Object.entries(PILOT_GROUPS)
-if (entries.length !== 96) fail(`expected 96 groups, got ${entries.length}`)
+if (entries.length !== 104) fail(`expected 104 groups, got ${entries.length}`)
 const byPl = {}
 for (const [, e] of entries) byPl[e.placement] = (byPl[e.placement] ?? 0) + 1
 if (byPl.P5 !== 5) fail(`P5: expected 5 hubs, got ${byPl.P5 ?? 0}`)
 // Balanced placements WITHIN each target (the overall P1-P4 totals differ because the targets have different sizes).
 const byTP = {}
 for (const [, e] of entries) if (e.placement !== 'P5') { byTP[e.target] ??= { P1: 0, P2: 0, P3: 0, P4: 0 }; byTP[e.target][e.placement]++ }
-const SIZES = { mcp: 19, 'power-mode': 30, 'ask-hans': 12, directory: 30 }
+const SIZES = { mcp: 19, 'power-mode': 30, 'ask-hans': 12, directory: 30, academy: 8 }
 for (const [t, n] of Object.entries(SIZES)) {
   const c = byTP[t] ?? { P1: 0, P2: 0, P3: 0, P4: 0 }, v = Object.values(c)
   if (v.reduce((a, b) => a + b, 0) !== n) fail(`${t}: expected ${n} article groups, got ${v.reduce((a, b) => a + b, 0)}`)
@@ -51,7 +51,7 @@ const articleFile = (k) => {
   const name = SLUG_MAPS[c]?.[slug] ?? slug
   return path.join(ROOT, 'src/lib', c, 'articles', name + '.ts')
 }
-const allowed = { 'local-llms': ['power-mode', 'directory'], 'power-local-llm': ['directory', 'mcp'], 'prompt-engineering': ['ask-hans'] }
+const allowed = { 'local-llms': ['power-mode', 'directory'], 'power-local-llm': ['directory', 'mcp'], 'prompt-engineering': ['ask-hans', 'academy'] }
 const mix = {}
 for (const [k, e] of entries) {
   if (e.placement === 'P5') continue
@@ -64,6 +64,7 @@ for (const [k, e] of entries) {
 if ((mix['local-llms']?.['power-mode'] ?? 0) !== 30 || (mix['local-llms']?.directory ?? 0) !== 12) fail('local-llms should be 30 Power Mode + 12 Directory')
 if ((mix['power-local-llm']?.directory ?? 0) !== 18 || (mix['power-local-llm']?.mcp ?? 0) !== 19) fail('power-local-llm should be 18 Directory + 19 MCP')
 if ((mix['prompt-engineering']?.['ask-hans'] ?? 0) !== 12) fail('prompt-engineering should be 12 Ask Hans groups')
+if ((mix['prompt-engineering']?.academy ?? 0) !== 8) fail('prompt-engineering should be 8 Academy groups')
 // Each of P1-P4 mixes clusters and targets (cluster must not equal placement).
 for (const p of ['P1', 'P2', 'P3', 'P4']) {
   const inP = entries.filter(([, e]) => e.placement === p)

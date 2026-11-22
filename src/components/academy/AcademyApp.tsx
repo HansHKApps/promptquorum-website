@@ -625,6 +625,12 @@ function QuickCheckView({ tx, draft, quickCheck, update }: { tx: AcademyCopy; dr
       setPhase('idle')
       if (!res.ok) return setError({ code: res.code, step: 'programme' })
       const programme = toProgramme(draft, qc, summary, res.data)
+      // Anonymous adoption signal for the promo pilot (academy_programme_started per page group). No subject, no text.
+      try {
+        window.umami?.track('academy_programme_started', { source_page: window.location.pathname })
+      } catch {
+        /* analytics must never block the learner */
+      }
       update((s) => ({ ...s, programme, view: 'programme' }))
     },
     [draft, update],

@@ -1,8 +1,8 @@
 // COPY for the promo slots, all 9 locales: headline, one supporting line, button. Marketing voice, but every claim
 // matches the live product: Ask Hans recommends one app with reasons and sources; Power Mode builds one report with
 // hardware, apps and next steps (export as PDF, Word or Markdown); the directory covers {count} apps and lists
-// hardware needs; MCP is read-only and connects with one config entry. No "free", "best", "always" or accuracy claims.
-// Brand and tool names (PromptQuorum, Ask Hans, Power Mode, MCP) stay untranslated.
+// hardware needs; MCP is read-only and connects with one config entry; Academy builds a personal program on a local-AI subject (lessons, quizzes, a final test, an AI-labelled tutor). No "free", "best", "always" or accuracy claims.
+// Brand and tool names (PromptQuorum, Ask Hans, Power Mode, MCP, Academy) stay untranslated. Academy copy avoids the words the Academy spec forbids (diploma, certified, accredited, official, graduate, qualification).
 // `{count}` is the directory tool count read at build time (src/generated/promo-facts.json), never hardcoded.
 import type { Lang } from '@/hooks/useLang'
 import type { PromoTarget } from '@/lib/promo/types'
@@ -23,53 +23,62 @@ export const PROMO_COPY: Record<Lang, Record<PromoTarget, PromoText>> = {
     'ask-hans': { headline: 'Stop searching. Just ask Hans.', sub: 'Tell Ask Hans your goal and your computer. Get one app recommendation with the reasons and the sources.', cta: 'Ask Hans now' },
     'power-mode': { headline: 'Your whole local AI setup in one report.', sub: 'Answer a few guided questions. Get hardware, apps and next steps in one document, as PDF, Word or Markdown.', cta: 'Start Power Mode' },
     mcp: { headline: 'Plug PromptQuorum into your own AI.', sub: 'Guides and app data inside your assistant, connected with one line of config.', cta: 'Connect now', snippetLabel: 'Example config (formats vary by client)' },
+    academy: { headline: 'Learn local AI with a program built for you.', sub: 'Pick a subject and your time. Academy builds a personal program with lessons, quizzes and a final test, and an AI tutor answers your questions.', cta: 'Open Academy' },
   },
   de: {
     directory: { headline: '{count} lokale KI-Apps. Finden Sie die, die auf Ihrem PC läuft.', headlineNoCount: 'Finden Sie die lokale KI-App, die auf Ihrem PC läuft.', sub: 'Nach Kategorie stöbern und sehen, welche Apps zu Ihrer Hardware passen.', cta: 'Verzeichnis entdecken' },
     'ask-hans': { headline: 'Schluss mit Suchen. Fragen Sie einfach Hans.', sub: 'Nennen Sie Ask Hans Ihr Ziel und Ihren Computer. Sie erhalten eine App-Empfehlung mit Begründung und Quellen.', cta: 'Jetzt Ask Hans fragen' },
     'power-mode': { headline: 'Ihr komplettes lokales KI-Setup in einem Bericht.', sub: 'Beantworten Sie ein paar geführte Fragen. Hardware, Apps und nächste Schritte landen in einem Dokument, als PDF, Word oder Markdown.', cta: 'Power Mode starten' },
     mcp: { headline: 'Verbinden Sie PromptQuorum mit Ihrer eigenen KI.', sub: 'Ratgeber und App-Daten direkt in Ihrem Assistenten, verbunden mit einer Zeile Konfiguration.', cta: 'Jetzt verbinden', snippetLabel: 'Beispielkonfiguration (Format je nach Client)' },
+    academy: { headline: 'Lokale KI lernen – mit einem Programm nur für Sie.', sub: 'Wählen Sie ein Thema und Ihre Zeit. Academy erstellt ein persönliches Programm mit Lektionen, Quizfragen und Abschlusstest; ein KI-Tutor beantwortet Ihre Fragen.', cta: 'Academy öffnen' },
   },
   fr: {
     directory: { headline: '{count} applications d’IA locale. Trouvez celle qui tourne sur votre PC.', headlineNoCount: 'Trouvez l’application d’IA locale qui tourne sur votre PC.', sub: 'Parcourez par catégorie et voyez quelles applications conviennent à votre matériel.', cta: 'Explorer l’annuaire' },
     'ask-hans': { headline: 'Arrêtez de chercher. Demandez à Hans.', sub: 'Décrivez à Ask Hans votre objectif et votre ordinateur. Recevez une application recommandée, avec les raisons et les sources.', cta: 'Demander à Ask Hans' },
     'power-mode': { headline: 'Toute votre configuration d’IA locale dans un seul rapport.', sub: 'Répondez à quelques questions guidées. Matériel, applications et prochaines étapes dans un document, en PDF, Word ou Markdown.', cta: 'Lancer Power Mode' },
     mcp: { headline: 'Branchez PromptQuorum sur votre propre IA.', sub: 'Guides et données d’applications dans votre assistant, connectés avec une seule ligne de configuration.', cta: 'Connecter maintenant', snippetLabel: 'Exemple de configuration (le format varie selon le client)' },
+    academy: { headline: 'Apprenez l’IA locale avec un programme fait pour vous.', sub: 'Choisissez un sujet et votre temps disponible. Academy crée un programme personnel avec leçons, quiz et test final ; un tuteur IA répond à vos questions.', cta: 'Ouvrir Academy' },
   },
   es: {
     directory: { headline: '{count} aplicaciones de IA local. Encuentra la que funciona en tu PC.', headlineNoCount: 'Encuentra la aplicación de IA local que funciona en tu PC.', sub: 'Explora por categoría y descubre qué aplicaciones encajan con tu hardware.', cta: 'Explorar el directorio' },
     'ask-hans': { headline: 'Deja de buscar. Pregúntale a Hans.', sub: 'Cuéntale a Ask Hans tu objetivo y tu ordenador. Recibe una aplicación recomendada, con los motivos y las fuentes.', cta: 'Preguntar a Ask Hans' },
     'power-mode': { headline: 'Toda tu configuración de IA local en un solo informe.', sub: 'Responde unas pocas preguntas guiadas. Hardware, aplicaciones y próximos pasos en un documento, en PDF, Word o Markdown.', cta: 'Iniciar Power Mode' },
     mcp: { headline: 'Conecta PromptQuorum a tu propia IA.', sub: 'Guías y datos de aplicaciones dentro de tu asistente, conectados con una sola línea de configuración.', cta: 'Conectar ahora', snippetLabel: 'Configuración de ejemplo (el formato varía según el cliente)' },
+    academy: { headline: 'Aprende IA local con un programa hecho para ti.', sub: 'Elige un tema y tu tiempo. Academy crea un programa personal con lecciones, cuestionarios y una prueba final, y un tutor de IA responde tus preguntas.', cta: 'Abrir Academy' },
   },
   pt: {
     directory: { headline: '{count} aplicativos de IA local. Encontre o que roda no seu PC.', headlineNoCount: 'Encontre o aplicativo de IA local que roda no seu PC.', sub: 'Explore por categoria e veja quais aplicativos combinam com o seu hardware.', cta: 'Explorar o diretório' },
     'ask-hans': { headline: 'Chega de procurar. Pergunte ao Hans.', sub: 'Conte ao Ask Hans o seu objetivo e o seu computador. Receba um aplicativo recomendado, com os motivos e as fontes.', cta: 'Perguntar ao Ask Hans' },
     'power-mode': { headline: 'Toda a sua configuração de IA local em um relatório.', sub: 'Responda a algumas perguntas guiadas. Hardware, aplicativos e próximos passos em um documento, em PDF, Word ou Markdown.', cta: 'Iniciar o Power Mode' },
     mcp: { headline: 'Conecte o PromptQuorum à sua própria IA.', sub: 'Guias e dados de aplicativos dentro do seu assistente, conectados com uma única linha de configuração.', cta: 'Conectar agora', snippetLabel: 'Configuração de exemplo (o formato varia por cliente)' },
+    academy: { headline: 'Aprenda IA local com um programa feito para você.', sub: 'Escolha um assunto e o seu tempo. O Academy cria um programa pessoal com lições, questionários e uma prova final, e um tutor de IA responde às suas perguntas.', cta: 'Abrir o Academy' },
   },
   ja: {
     directory: { headline: 'ローカルAIアプリ{count}本。あなたのPCで動く1本が見つかる。', headlineNoCount: 'あなたのPCで動くローカルAIアプリが見つかる。', sub: 'カテゴリ別に探して、お使いのハードウェアに合うアプリを確認できます。', cta: 'ディレクトリを見る' },
     'ask-hans': { headline: '探すのは終わり。Hansに聞くだけ。', sub: '目的とパソコンの環境をAsk Hansに伝えるだけで、理由と出典付きでアプリを1つおすすめします。', cta: 'Ask Hansに聞く' },
     'power-mode': { headline: 'ローカルAI環境のすべてを、1つのレポートに。', sub: 'いくつかの質問に答えるだけで、ハードウェア、アプリ、次のステップが1つの文書に。PDF、Word、Markdownで保存できます。', cta: 'Power Modeを始める' },
     mcp: { headline: 'PromptQuorumを、あなたのAIにつなごう。', sub: 'ガイドとアプリデータを、お使いのアシスタントから。設定は1行で接続できます。', cta: '今すぐ接続', snippetLabel: '設定例（形式はクライアントにより異なります）' },
+    academy: { headline: 'あなた専用のプログラムで、ローカルAIを学ぼう。', sub: 'テーマと使える時間を選ぶだけ。Academyがレッスン、クイズ、最終テストを備えた個人向けプログラムを作成し、AIチューターが質問に答えます。', cta: 'Academyを開く' },
   },
   zh: {
     directory: { headline: '{count} 款本地 AI 应用，找到能在您电脑上运行的那一款。', headlineNoCount: '找到能在您电脑上运行的本地 AI 应用。', sub: '按类别浏览，查看哪些应用适合您的硬件。', cta: '探索应用目录' },
     'ask-hans': { headline: '别再到处搜索，直接问 Hans。', sub: '告诉 Ask Hans 您的目标和电脑配置，即可获得一款应用推荐，并附上理由和来源。', cta: '立即问 Ask Hans' },
     'power-mode': { headline: '您的整套本地 AI 方案，一份报告搞定。', sub: '回答几个引导问题，硬件、应用和后续步骤汇总成一份文档，可导出为 PDF、Word 或 Markdown。', cta: '开始使用 Power Mode' },
     mcp: { headline: '把 PromptQuorum 接入您自己的 AI。', sub: '指南和应用数据直接用在您的助手里，一行配置即可连接。', cta: '立即连接', snippetLabel: '配置示例（格式因客户端而异）' },
+    academy: { headline: '用为您定制的学习计划，学会本地 AI。', sub: '选择主题和可用时间，Academy 会生成包含课程、测验和最终测试的个人学习计划，AI 导师可随时解答您的问题。', cta: '打开 Academy' },
   },
   ko: {
     directory: { headline: '로컬 AI 앱 {count}개. 내 PC에서 돌아가는 앱을 찾아보세요.', headlineNoCount: '내 PC에서 돌아가는 로컬 AI 앱을 찾아보세요.', sub: '카테고리별로 둘러보고 내 하드웨어에 맞는 앱을 확인하세요.', cta: '디렉터리 둘러보기' },
     'ask-hans': { headline: '그만 검색하세요. Hans에게 물어보세요.', sub: '목표와 컴퓨터를 Ask Hans에게 알려 주세요. 이유와 출처를 곁들여 앱 하나를 추천해 드립니다.', cta: 'Ask Hans에게 묻기' },
     'power-mode': { headline: '로컬 AI 환경 전체를 보고서 하나에.', sub: '안내에 따라 몇 가지 질문에 답하면 하드웨어, 앱, 다음 단계가 문서 하나로 정리됩니다. PDF, Word, Markdown으로 저장할 수 있습니다.', cta: 'Power Mode 시작하기' },
     mcp: { headline: 'PromptQuorum을 나만의 AI에 연결하세요.', sub: '가이드와 앱 데이터를 사용 중인 어시스턴트에서 바로, 설정 한 줄로 연결합니다.', cta: '지금 연결하기', snippetLabel: '설정 예시(형식은 클라이언트마다 다름)' },
+    academy: { headline: '나에게 맞춘 프로그램으로 로컬 AI를 배워 보세요.', sub: '주제와 가능한 시간을 고르세요. Academy가 레슨, 퀴즈, 최종 테스트로 구성된 개인 프로그램을 만들고, AI 튜터가 질문에 답해 드립니다.', cta: 'Academy 열기' },
   },
   ar: {
     directory: { headline: '{count} تطبيقاً للذكاء الاصطناعي المحلي. اعثر على ما يعمل على حاسوبك.', headlineNoCount: 'اعثر على تطبيق الذكاء الاصطناعي المحلي الذي يعمل على حاسوبك.', sub: 'تصفّح حسب الفئة وتعرّف على التطبيقات المناسبة لعتادك.', cta: 'استكشف الدليل' },
     'ask-hans': { headline: 'كفى بحثاً. اسأل Hans فقط.', sub: 'أخبر Ask Hans بهدفك وحاسوبك. ستحصل على توصية بتطبيق واحد مع الأسباب والمصادر.', cta: 'اسأل Ask Hans الآن' },
     'power-mode': { headline: 'إعداد الذكاء الاصطناعي المحلي كاملاً في تقرير واحد.', sub: 'أجب عن بضعة أسئلة موجَّهة. العتاد والتطبيقات والخطوات التالية في مستند واحد بصيغة PDF أو Word أو Markdown.', cta: 'ابدأ Power Mode' },
     mcp: { headline: 'اربط PromptQuorum بالذكاء الاصطناعي الخاص بك.', sub: 'الأدلة وبيانات التطبيقات داخل مساعدك، بسطر واحد من الإعداد.', cta: 'اتصل الآن', snippetLabel: 'مثال على الإعداد (يختلف التنسيق حسب العميل)' },
+    academy: { headline: 'تعلّم الذكاء الاصطناعي المحلي ببرنامج مصمَّم لك.', sub: 'اختر موضوعاً والوقت المتاح لديك. تنشئ Academy برنامجاً شخصياً من دروس واختبارات قصيرة واختبار نهائي، ويجيب مدرّس بالذكاء الاصطناعي عن أسئلتك.', cta: 'افتح Academy' },
   },
 }
