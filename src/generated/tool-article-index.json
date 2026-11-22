@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "local-llm-cost-calculator-build-vs-rent-2026",
+        "title": "Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026",
+        "url": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
+        "dateModified": "2026-11-22",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-11-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-11-20",
-        "tier": "about"
       }
     ],
-    "totalCount": 389,
+    "totalCount": 390,
     "capped": true
   },
   "llama.cpp": {
@@ -2395,6 +2395,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "rin-chat-review",
+        "title": "Rin Chat Review: Free Desktop App for AI Roleplay and Character Chat",
+        "url": "/power-local-llm/rin-chat-review",
+        "dateModified": "2026-11-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
@@ -2406,14 +2414,6 @@
         "slug": "backyard-ai-review-local-roleplay-2026",
         "title": "Backyard AI Review: Local AI Character Chat and Roleplay",
         "url": "/power-local-llm/backyard-ai-review-local-roleplay",
-        "dateModified": "2026-11-21",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rin-chat-review",
-        "title": "Rin Chat Review: Free Desktop App for AI Roleplay and Character Chat",
-        "url": "/power-local-llm/rin-chat-review",
         "dateModified": "2026-11-21",
         "tier": "about"
       },
@@ -7242,7 +7242,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 38,
+    "totalCount": 37,
     "capped": true
   },
   "ComfyUI": {
@@ -8545,18 +8545,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "nativ-review",
-        "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
-        "url": "/power-local-llm/nativ-review",
-        "dateModified": "2026-11-18",
+        "slug": "stratosort-review",
+        "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
+        "url": "/power-local-llm/stratosort-review",
+        "dateModified": "2026-11-21",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "stratosort-review",
-        "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
-        "url": "/power-local-llm/stratosort-review",
-        "dateModified": "2026-11-17",
+        "slug": "nativ-review",
+        "title": "Nativ Review: Free Open-Source Local AI App for Mac with MLX",
+        "url": "/power-local-llm/nativ-review",
+        "dateModified": "2026-11-18",
         "tier": "mentioned"
       },
       {
@@ -11992,7 +11992,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 76,
+    "totalCount": 75,
     "capped": true
   },
   "Newelle": {
@@ -14560,6 +14560,22 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "local-llm-cost-calculator-build-vs-rent-2026",
+        "title": "Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026",
+        "url": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
+        "dateModified": "2026-11-22",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "rin-chat-review",
+        "title": "Rin Chat Review: Free Desktop App for AI Roleplay and Character Chat",
+        "url": "/power-local-llm/rin-chat-review",
+        "dateModified": "2026-11-22",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
@@ -14614,25 +14630,9 @@
         "url": "/local-llms/page-assist-review",
         "dateModified": "2026-11-20",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autonomous-local-agents-actually-work",
-        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
-        "url": "/power-local-llm/autonomous-local-agents-actually-work",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-models-tool-calling-2026",
-        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
-        "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-11-20",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 292,
+    "totalCount": 293,
     "capped": true
   },
   "Qdrant": {
@@ -16948,7 +16948,7 @@
         "slug": "stratosort-review",
         "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
         "url": "/power-local-llm/stratosort-review",
-        "dateModified": "2026-11-17",
+        "dateModified": "2026-11-21",
         "tier": "about"
       }
     ],
@@ -17058,7 +17058,7 @@
         "slug": "rin-chat-review",
         "title": "Rin Chat Review: Free Desktop App for AI Roleplay and Character Chat",
         "url": "/power-local-llm/rin-chat-review",
-        "dateModified": "2026-11-21",
+        "dateModified": "2026-11-22",
         "tier": "about"
       },
       {

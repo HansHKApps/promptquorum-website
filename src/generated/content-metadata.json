@@ -2745,7 +2745,7 @@
       "images": []
     },
     "cloud-gpu-rental-comparison-2026": {
-      "dateModified": "2026-10-16",
+      "dateModified": "2026-11-22",
       "lastFactChecked": null,
       "publishDate": "2026-05-17",
       "hasSections": true,
@@ -2760,16 +2760,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-en.svg",
-          "title": "Hourly pricing comparison across RunPod, Vast.ai, and Lambda Labs for RTX 4090, RTX 5090, A100 80GB, and H100 80GB GPUs, including uptime SLA percentages for each provider. RunPod offers the most balanced pricing with a 99% uptime SLA, Vast.ai starts as low as $0.08/hr with no SLA, and Lambda Labs charges a premium for its 99.9% SLA."
-        },
-        {
-          "url": "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-en.svg",
-          "title": "Cost timeline comparing RunPod RTX 4090 rental at $0.50/hr against buying a $2,000–2,600 RTX 4090 outright (EOL pricing, August 2026), based on 4 hours of daily use. Renting stays cheaper until roughly 4,600 hours (about 38 months), after which owning the GPU costs less than continued RunPod rental."
-        }
-      ]
+      "images": []
     },
     "eu-cloud-gpu-gdpr-2026": {
       "dateModified": "2026-08-30",
@@ -2790,7 +2781,7 @@
       "images": []
     },
     "local-llm-vs-cloud-gpu-cost": {
-      "dateModified": "2026-11-15",
+      "dateModified": "2026-11-22",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -3409,7 +3400,7 @@
       ]
     },
     "local-llm-cost-calculator-build-vs-rent-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-11-22",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -8011,7 +8002,7 @@
       "images": []
     },
     "digitalocean-vs-aws-cloud-for-ai-companies": {
-      "dateModified": "2026-11-07",
+      "dateModified": "2026-11-22",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -11436,7 +11427,7 @@
       "images": []
     },
     "stratosort-review": {
-      "dateModified": "2026-11-17",
+      "dateModified": "2026-11-21",
       "lastFactChecked": null,
       "publishDate": "2026-11-10",
       "hasSections": true,
@@ -11526,7 +11517,7 @@
       "images": []
     },
     "rin-chat-review": {
-      "dateModified": "2026-11-21",
+      "dateModified": "2026-11-22",
       "lastFactChecked": null,
       "publishDate": "2026-11-21",
       "hasSections": true,
@@ -16677,7 +16668,7 @@
       "images": []
     },
     "cloudGpuCostPerHour": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-11-22",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
