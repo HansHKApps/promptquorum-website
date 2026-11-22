@@ -1398,6 +1398,13 @@ const HUB_THEMES: Array<{
     colorBadge: 'bg-indigo-50 text-indigo-700 border-indigo-200',
     colorDot: 'bg-indigo-400',
     slugs: [
+      'best-cloud-gpu-providers',
+      'runpod-review',
+      'vast-ai-review',
+      'clore-ai-review',
+      'novita-ai-review',
+      'vultr-digitalocean-upcloud-gpu-cloud',
+      'gpu-server-hosting-cudo-cherry-database-mart',
       'agentic-ai-security-identity-access',
       'best-local-llms-customer-support-call-centers-enterprise',
       'enterprise-chatbot-deployment-helpdesk-hr-bots',

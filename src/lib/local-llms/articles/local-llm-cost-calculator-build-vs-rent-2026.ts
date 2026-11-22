@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-27',
+    dateModified: '2026-11-22',
     leadAnswerBlock: '**Whether local AI hardware or cloud GPU rental is cheaper depends primarily on how many hours per month you use it — there is no universal answer. Enter your own numbers into the calculator below for a precise result; as a rough starting point, under 100 hours/month usually favors cloud rental and over 500 hours/month (or 24/7 use) usually favors owning hardware.**',
     quickAnswerTop: {
       question: 'Is it cheaper to build a local LLM server or rent cloud GPU?',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ hr/month or 24/7: local usually wins on total cost of ownership',
         'Full TCO = hardware price + electricity − resale value, not just purchase price ÷ cloud rate',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'The core question is "how many hours/month?" — not a fixed local-vs-cloud rule',
-          'Cloud GPU rental (RunPod, Vast.ai) costs roughly $0.13–0.69/hr for an RTX 4090-class GPU',
+          'Cloud GPU rental (RunPod) costs roughly $0.34–0.89/hr for an RTX 4090-class GPU',
           'A recommended local RTX 4090 workstation costs ~$2,800 total (GPU + full system)',
           'Naive break-even (price ÷ cloud rate only): 5,600 hours — but that ignores electricity and resale',
           'Full-TCO break-even (hardware + electricity − resale, vs. monthly cloud cost): ~4,780 hours, about 20 months at 8 hr/day usage — use the calculator below for your own numbers',
@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       rentPath: {
         title: 'Path 1 — Low Usage: Rent a Cloud GPU',
-        content: 'Renting is the right call for experimentation, occasional fine-tuning runs, variable workloads, or testing a model before you commit to hardware. You pay only for the hours you use, with no maintenance and instant access to GPU tiers (H100, A100 80GB) that would cost thousands to own.\n\nCompare current cloud GPU prices before renting: [RunPod pricing](https://www.runpod.io/pricing) and [Vast.ai pricing](https://vast.ai/pricing) are editorial references, not affiliate links — PromptQuorum has no commission relationship with either provider.',
+        content: 'Renting is the right call for experimentation, occasional fine-tuning runs, variable workloads, or testing a model before you commit to hardware. You pay only for the hours you use, with no maintenance and instant access to GPU tiers (H100, A100 80GB) that would cost thousands to own.\n\nCompare current cloud GPU prices before renting: [RunPod pricing](https://www.runpod.io/pricing) and [Vast.ai pricing](https://vast.ai/pricing) are editorial references, not affiliate links — PromptQuorum has no commission relationship with either provider.\n\nIf you are not ready to buy, renting is the lower-commitment option: read the [RunPod review](/power-local-llm/runpod-review), the [Vast.ai review](/power-local-llm/vast-ai-review) and the [Clore.ai review](/power-local-llm/clore-ai-review), or [compare cloud GPU providers](/power-local-llm/best-cloud-gpu-providers). For renting a whole server instead of a cloud instance, see [GPU server hosting providers](/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       miniPcPath: {
         title: 'Path 2 — Medium Usage: A Mini PC May Beat a GPU Workstation',
@@ -146,12 +146,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudProviders: {
         title: 'Cloud GPU Rental Comparison',
-        content: 'Representative RTX 4090-class rates — always check current pricing before renting, rates change frequently.',
+        content: 'Representative RTX 4090-class rates — always check current pricing before renting, rates change frequently. Prices checked November 22, 2026 on the official RunPod (RTX 4090: $0.34 Community to $0.89 Secure per hour) and Lambda pricing pages; the Vast.ai figure is the starting spot price advertised on its own site, and marketplace listings change continuously.',
         columns: ['Provider', 'Best For', 'Pricing Model', 'Verdict'],
         rows: [
-          { Provider: 'RunPod', 'Best For': 'Reliability, managed pods', 'Pricing Model': 'Per-second, $0.34–0.69/hr', Verdict: 'Solid default for steady workloads' },
-          { Provider: 'Vast.ai', 'Best For': 'Lowest price, flexible', 'Pricing Model': 'Marketplace bidding, $0.13–0.34/hr', Verdict: 'Cheapest, host quality varies' },
-          { Provider: 'Lambda Labs', 'Best For': 'Data-center GPUs (A100/H100)', 'Pricing Model': 'Hourly on-demand, $1.99–4.29/hr', Verdict: 'Best for large-model training, not budget 4090 rental' },
+          { Provider: 'RunPod', 'Best For': 'Reliability, managed pods', 'Pricing Model': 'Per-second, $0.34–0.89/hr', Verdict: 'Solid default for steady workloads' },
+          { Provider: 'Vast.ai', 'Best For': 'Lowest price, flexible', 'Pricing Model': 'Marketplace bidding, from $0.14/hr (spot)', Verdict: 'Cheapest, host quality varies' },
+          { Provider: 'Lambda Labs', 'Best For': 'Data-center GPUs (A100/H100)', 'Pricing Model': 'Hourly on-demand, $1.99–4.89/hr', Verdict: 'Best for large-model training, not budget 4090 rental' },
         ],
       },
       finalVerdict: {
@@ -231,6 +231,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs AI Subscription ROI](/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
           '[Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
           '[Apple Silicon Local LLM Guide 2026](/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[Compare cloud GPU providers](/power-local-llm/best-cloud-gpu-providers) -- provider hub with the [RunPod review](/power-local-llm/runpod-review), [Vast.ai review](/power-local-llm/vast-ai-review) and [Clore.ai review](/power-local-llm/clore-ai-review)',
+          '[GPU server hosting providers](/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) -- renting a whole GPU server instead of a cloud instance',
         ],
       },
     },
@@ -270,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Interactive total-cost-of-ownership calculator comparing local GPU hardware vs cloud GPU rental for running LLMs in 2026.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-27',
+      dateModified: '2026-11-22',
       url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'en',
       'proficiencyLevel': 'Intermediate',
@@ -286,7 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     leadAnswerBlock: '**Ob lokale KI-Hardware oder Cloud-GPU-Miete günstiger ist, hängt vor allem davon ab, wie viele Stunden pro Monat Sie nutzen — es gibt keine pauschale Antwort. Nutzen Sie den Rechner unten mit Ihren eigenen Zahlen; als grober Anhaltspunkt: unter 100 Std./Monat spricht meist für Cloud-Miete, über 500 Std./Monat (oder Dauerbetrieb) meist für eigene Hardware.**',
     quickAnswerTop: {
       question: 'Ist es günstiger, eine lokale LLM-Workstation zu bauen oder Cloud-GPUs zu mieten?',
@@ -299,7 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ Std./Monat oder Dauerbetrieb: lokal gewinnt meist bei Gesamtkosten',
         'Vollständige TCO = Hardwarepreis + Strom − Wiederverkaufswert, nicht nur Kaufpreis ÷ Cloud-Rate',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -321,7 +323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Die Kernfrage ist "wie viele Stunden pro Monat?" — keine feste Lokal-vs-Cloud-Regel',
-          'Cloud-GPU-Miete (RunPod, Vast.ai) kostet etwa 0,13–0,69 $/Std. für eine RTX-4090-Klasse-GPU',
+          'Cloud-GPU-Miete (RunPod) kostet etwa 0,34–0,89 $/Std. für eine RTX-4090-Klasse-GPU',
           'Eine empfohlene lokale RTX-4090-Workstation kostet insgesamt ca. 2.600 €',
           'Naiver Break-even (Preis ÷ Cloud-Rate): 5.600 Stunden — ignoriert aber Strom und Wiederverkauf',
           'Vollständiger TCO-Break-even (Hardware + Strom − Wiederverkauf): ca. 4.780 Stunden, etwa 20 Monate bei 8 Std./Tag — Rechner unten für eigene Zahlen nutzen',
@@ -363,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       rentPath: {
         title: 'Weg 1 — Geringe Nutzung: Cloud-GPU mieten',
-        content: 'Mieten ist richtig für Experimente, gelegentliches Fine-Tuning, wechselnde Workloads oder zum Testen vor der Anschaffung. Sie zahlen nur genutzte Stunden, ohne Wartung und mit sofortigem Zugriff auf GPU-Klassen (H100, A100 80GB), die im Kauf tausende Dollar kosten würden.\n\nAktuelle Cloud-GPU-Preise vergleichen: [RunPod-Preise](https://www.runpod.io/pricing) und [Vast.ai-Preise](https://vast.ai/pricing) sind redaktionelle Referenzlinks, keine Affiliate-Links — PromptQuorum hat mit keinem der beiden Anbieter eine Provisionsbeziehung.',
+        content: 'Mieten ist richtig für Experimente, gelegentliches Fine-Tuning, wechselnde Workloads oder zum Testen vor der Anschaffung. Sie zahlen nur genutzte Stunden, ohne Wartung und mit sofortigem Zugriff auf GPU-Klassen (H100, A100 80GB), die im Kauf tausende Dollar kosten würden.\n\nAktuelle Cloud-GPU-Preise vergleichen: [RunPod-Preise](https://www.runpod.io/pricing) und [Vast.ai-Preise](https://vast.ai/pricing) sind redaktionelle Referenzlinks, keine Affiliate-Links — PromptQuorum hat mit keinem der beiden Anbieter eine Provisionsbeziehung.\n\nWenn Sie noch nicht kaufen möchten, ist Mieten die Option mit weniger Bindung: Lesen Sie den [RunPod-Test](/de/power-local-llm/runpod-review), den [Vast.ai-Test](/de/power-local-llm/vast-ai-review) und den [Clore.ai-Test](/de/power-local-llm/clore-ai-review) oder [vergleichen Sie Cloud-GPU-Anbieter](/de/power-local-llm/best-cloud-gpu-providers). Für die Miete eines ganzen Servers statt einer Cloud-Instanz siehe [Anbieter für GPU-Server-Hosting](/de/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       miniPcPath: {
         title: 'Weg 2 — Mittlere Nutzung: Ein Mini-PC schlägt oft die GPU-Workstation',
@@ -402,12 +404,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudProviders: {
         title: 'Vergleich Cloud-GPU-Anbieter',
-        content: 'Repräsentative RTX-4090-Klasse-Tarife, Stand August 2026 — aktuelle Preise vor der Miete immer prüfen, sie ändern sich häufig.',
+        content: 'Repräsentative RTX-4090-Klasse-Tarife — aktuelle Preise vor der Miete immer prüfen, sie ändern sich häufig. Preise am 22. November 2026 auf den offiziellen Preisseiten von RunPod (RTX 4090: 0,34 $ Community bis 0,89 $ Secure pro Stunde) und Lambda geprüft; der Vast.ai-Wert ist der auf der eigenen Website beworbene Startpreis für Spot, und Marktplatzangebote ändern sich laufend.',
         columns: ['Anbieter', 'Am besten für', 'Preismodell', 'Fazit'],
         rows: [
-          { Anbieter: 'RunPod', 'Am besten für': 'Zuverlässigkeit, verwaltete Pods', Preismodell: 'Pro Sekunde, 0,34–0,69 $/Std.', Fazit: 'Solider Standard für stetige Workloads' },
-          { Anbieter: 'Vast.ai', 'Am besten für': 'Niedrigster Preis, flexibel', Preismodell: 'Marktplatz-Bieten, 0,13–0,34 $/Std.', Fazit: 'Günstigste, Hostqualität variiert' },
-          { Anbieter: 'Lambda Labs', 'Am besten für': 'Rechenzentrums-GPUs (A100/H100)', Preismodell: 'Stündlich on-demand, 1,99–4,29 $/Std.', Fazit: 'Beste Wahl für großes Training, nicht für günstige 4090-Miete' },
+          { Anbieter: 'RunPod', 'Am besten für': 'Zuverlässigkeit, verwaltete Pods', Preismodell: 'Pro Sekunde, 0,34–0,89 $/Std.', Fazit: 'Solider Standard für stetige Workloads' },
+          { Anbieter: 'Vast.ai', 'Am besten für': 'Niedrigster Preis, flexibel', Preismodell: 'Marktplatz-Bieten, ab 0,14 $/Std. (Spot)', Fazit: 'Günstigste, Hostqualität variiert' },
+          { Anbieter: 'Lambda Labs', 'Am besten für': 'Rechenzentrums-GPUs (A100/H100)', Preismodell: 'Stündlich on-demand, 1,99–4,89 $/Std.', Fazit: 'Beste Wahl für großes Training, nicht für günstige 4090-Miete' },
         ],
       },
       finalVerdict: {
@@ -487,6 +489,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs KI-Abonnement ROI](/de/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
           '[Beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
           '[Apple Silicon Local LLM Guide 2026](/de/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[Cloud-GPU-Anbieter vergleichen](/de/power-local-llm/best-cloud-gpu-providers) -- Anbieter-Hub mit [RunPod-Test](/de/power-local-llm/runpod-review), [Vast.ai-Test](/de/power-local-llm/vast-ai-review) und [Clore.ai-Test](/de/power-local-llm/clore-ai-review)',
+          '[Anbieter für GPU-Server-Hosting](/de/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) -- Miete eines ganzen GPU-Servers statt einer Cloud-Instanz',
         ],
       },
     },
@@ -506,7 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026', description: 'Interaktiver TCO-Rechner: lokale GPU-Hardware vs. Cloud-GPU-Miete für LLMs 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-09-02', url: 'https://www.promptquorum.com/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026', description: 'Interaktiver TCO-Rechner: lokale GPU-Hardware vs. Cloud-GPU-Miete für LLMs 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'de' },
   },
   fr: {
     designSkin: 'hub',
@@ -518,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     leadAnswerBlock: '**Savoir si le matériel IA local ou la location cloud GPU est plus économique dépend surtout du nombre d\'heures d\'utilisation par mois — il n\'y a pas de réponse universelle. Utilisez le calculateur ci-dessous avec vos propres chiffres ; comme point de repère : moins de 100 h/mois favorise généralement la location, plus de 500 h/mois (ou usage continu) favorise généralement l\'achat.**',
     quickAnswerTop: {
       question: 'Est-il moins cher de construire un serveur LLM local ou de louer un GPU cloud ?',
@@ -531,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ h/mois ou usage continu : le local gagne généralement en coût total',
         'TCO complet = prix du matériel + électricité − revente, pas seulement prix ÷ tarif cloud',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -553,7 +557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'La question centrale est « combien d\'heures par mois ? », pas une règle fixe local-vs-cloud',
-          'La location cloud GPU (RunPod, Vast.ai) coûte environ 0,13–0,69 $/h pour un GPU classe RTX 4090',
+          'La location cloud GPU (RunPod) coûte environ 0,34–0,89 $/h pour un GPU classe RTX 4090',
           'Une workstation RTX 4090 locale recommandée coûte environ 2 600 € au total',
           'Seuil naïf (prix ÷ tarif cloud) : 5 600 heures — mais ignore électricité et revente',
           'Seuil TCO complet (matériel + électricité − revente) : environ 4 780 heures, soit environ 20 mois à 8 h/jour — voir le calculateur ci-dessous',
@@ -595,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       rentPath: {
         title: 'Voie 1 — Usage faible : louer un GPU cloud',
-        content: 'La location convient à l\'expérimentation, au fine-tuning occasionnel, aux charges variables ou aux tests avant achat. Vous ne payez que les heures utilisées, sans entretien, avec un accès immédiat à des GPU (H100, A100 80 Go) qui coûteraient des milliers de dollars à l\'achat.\n\nComparez les prix cloud actuels : [tarifs RunPod](https://www.runpod.io/pricing) et [tarifs Vast.ai](https://vast.ai/pricing) sont des liens éditoriaux de référence, non des liens d\'affiliation — PromptQuorum n\'a de relation de commission avec aucun des deux fournisseurs.',
+        content: 'La location convient à l\'expérimentation, au fine-tuning occasionnel, aux charges variables ou aux tests avant achat. Vous ne payez que les heures utilisées, sans entretien, avec un accès immédiat à des GPU (H100, A100 80 Go) qui coûteraient des milliers de dollars à l\'achat.\n\nComparez les prix cloud actuels : [tarifs RunPod](https://www.runpod.io/pricing) et [tarifs Vast.ai](https://vast.ai/pricing) sont des liens éditoriaux de référence, non des liens d\'affiliation — PromptQuorum n\'a de relation de commission avec aucun des deux fournisseurs.\n\nSi vous n\'êtes pas prêt à acheter, la location est l\'option la moins engageante : lisez le [test de RunPod](/fr/power-local-llm/runpod-review), le [test de Vast.ai](/fr/power-local-llm/vast-ai-review) et le [test de Clore.ai](/fr/power-local-llm/clore-ai-review), ou [comparez les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers). Pour louer un serveur entier plutôt qu\'une instance cloud, consultez les [fournisseurs d\'hébergement de serveurs GPU](/fr/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       miniPcPath: {
         title: 'Voie 2 — Usage moyen : un mini PC peut battre une workstation GPU',
@@ -634,12 +638,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudProviders: {
         title: 'Comparatif des fournisseurs de GPU cloud',
-        content: 'Tarifs représentatifs classe RTX 4090, août 2026 — vérifiez toujours les prix actuels avant de louer, ils changent fréquemment.',
+        content: 'Tarifs représentatifs classe RTX 4090 — vérifiez toujours les prix actuels avant de louer, ils changent fréquemment. Tarifs vérifiés le 22 novembre 2026 sur les pages de prix officielles de RunPod (RTX 4090 : 0,34 $ Community à 0,89 $ Secure par heure) et de Lambda ; la valeur Vast.ai est le prix de départ spot affiché sur son propre site, et les offres de marketplace changent en continu.',
         columns: ['Fournisseur', 'Idéal pour', 'Modèle de prix', 'Verdict'],
         rows: [
-          { Fournisseur: 'RunPod', 'Idéal pour': 'Fiabilité, pods gérés', 'Modèle de prix': 'À la seconde, 0,34–0,69 $/h', Verdict: 'Bon choix par défaut pour usage régulier' },
-          { Fournisseur: 'Vast.ai', 'Idéal pour': 'Prix le plus bas, flexible', 'Modèle de prix': 'Enchères marketplace, 0,13–0,34 $/h', Verdict: 'Le moins cher, qualité d\'hôte variable' },
-          { Fournisseur: 'Lambda Labs', 'Idéal pour': 'GPU data-center (A100/H100)', 'Modèle de prix': 'À l\'heure, 1,99–4,29 $/h', Verdict: 'Idéal pour l\'entraînement, pas pour louer une 4090 pas chère' },
+          { Fournisseur: 'RunPod', 'Idéal pour': 'Fiabilité, pods gérés', 'Modèle de prix': 'À la seconde, 0,34–0,89 $/h', Verdict: 'Bon choix par défaut pour usage régulier' },
+          { Fournisseur: 'Vast.ai', 'Idéal pour': 'Prix le plus bas, flexible', 'Modèle de prix': 'Enchères marketplace, dès 0,14 $/h (spot)', Verdict: 'Le moins cher, qualité d\'hôte variable' },
+          { Fournisseur: 'Lambda Labs', 'Idéal pour': 'GPU data-center (A100/H100)', 'Modèle de prix': 'À l\'heure, 1,99–4,89 $/h', Verdict: 'Idéal pour l\'entraînement, pas pour louer une 4090 pas chère' },
         ],
       },
       finalVerdict: {
@@ -696,6 +700,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs abonnement IA ROI](/fr/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
           '[Meilleurs mini PC pour LLM local](/fr/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
           '[Guide Apple Silicon pour LLM local 2026](/fr/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[Comparer les fournisseurs de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) -- hub avec le [test de RunPod](/fr/power-local-llm/runpod-review), le [test de Vast.ai](/fr/power-local-llm/vast-ai-review) et le [test de Clore.ai](/fr/power-local-llm/clore-ai-review)',
+          '[Fournisseurs d\'hébergement de serveurs GPU](/fr/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) -- location d\'un serveur GPU entier plutôt qu\'une instance cloud',
         ],
       },
     },
@@ -777,7 +783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
     },
-    schema: { '@type': 'TechArticle', headline: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026', description: 'Calculateur interactif de coût total de possession comparant matériel GPU local et location cloud GPU pour LLM en 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-09-02', url: 'https://www.promptquorum.com/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026', description: 'Calculateur interactif de coût total de possession comparant matériel GPU local et location cloud GPU pour LLM en 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'fr' },
   },
   ja: {
     designSkin: 'hub',
@@ -789,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     leadAnswerBlock: '**ローカルAIハードウェアとクラウドGPUレンタルのどちらが安いかは、主に月間の使用時間によって決まります——万能の答えはありません。以下の計算機にご自身の数値を入力してください。目安として、月100時間未満はレンタルが有利、月500時間超（または常時稼働）は購入が有利になる傾向があります。**',
     quickAnswerTop: {
       question: 'ローカルLLMサーバーを構築するのとクラウドGPUを借りるのはどちらが安いですか？',
@@ -802,7 +808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '月500時間以上または常時稼働：総所有コストではローカルが有利になることが多い',
         '完全なTCO＝ハードウェア価格＋電気代−売却価値。購入価格÷クラウド料金だけでは不十分',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -824,7 +830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '核心の問いは「月何時間使うか」であり、固定のローカルvsクラウドのルールではない',
-          'クラウドGPUレンタル（RunPod、Vast.ai）はRTX 4090クラスGPUで約0.13〜0.69ドル/時',
+          'クラウドGPUレンタル（RunPod）はRTX 4090クラスGPUで約0.34〜0.89ドル/時',
           '推奨ローカルRTX 4090ワークステーションの総額は約43万円',
           '単純損益分岐点（価格÷クラウド料金のみ）：5,600時間——ただし電気代と売却価値を無視した数値',
           '完全TCO損益分岐点（ハードウェア＋電気代−売却価値）：約4,780時間、1日8時間利用で約20ヶ月——正確な数値は以下の計算機で',
@@ -866,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       rentPath: {
         title: 'パス1 — 少ない使用量：クラウドGPUをレンタル',
-        content: '実験、たまのファインチューニング、変動するワークロード、購入前のテストにはレンタルが適しています。使った時間分だけ支払い、メンテナンス不要で、購入すれば数千ドルするGPU（H100、A100 80GB）にも即座にアクセスできます。\n\n現在のクラウドGPU価格を比較：[RunPod料金](https://www.runpod.io/pricing)と[Vast.ai料金](https://vast.ai/pricing)は編集上の参考リンクであり、アフィリエイトリンクではありません——PromptQuorumはどちらのプロバイダーとも報酬関係はありません。',
+        content: '実験、たまのファインチューニング、変動するワークロード、購入前のテストにはレンタルが適しています。使った時間分だけ支払い、メンテナンス不要で、購入すれば数千ドルするGPU（H100、A100 80GB）にも即座にアクセスできます。\n\n現在のクラウドGPU価格を比較：[RunPod料金](https://www.runpod.io/pricing)と[Vast.ai料金](https://vast.ai/pricing)は編集上の参考リンクであり、アフィリエイトリンクではありません——PromptQuorumはどちらのプロバイダーとも報酬関係はありません。\n\nまだ購入の準備ができていない場合、レンタルは拘束の少ない選択肢です。[RunPodレビュー](/ja/power-local-llm/runpod-review)、[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)、[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)をご覧になるか、[クラウドGPUプロバイダーを比較](/ja/power-local-llm/best-cloud-gpu-providers)してください。サーバー1台を丸ごと借りたい場合は、[GPUサーバーホスティング事業者](/ja/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart)をご覧ください。',
       },
       miniPcPath: {
         title: 'パス2 — 中程度の使用量：ミニPCがGPUワークステーションを上回る場合',
@@ -905,12 +911,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudProviders: {
         title: 'クラウドGPUレンタル比較',
-        content: '2026年8月時点のRTX 4090クラスの代表的な料金です——レンタル前に必ず最新価格を確認してください。頻繁に変動します。',
+        content: 'RTX 4090クラスの代表的な料金です——レンタル前に必ず最新価格を確認してください。頻繁に変動します。料金は2026年11月22日にRunPod（RTX 4090：Communityで0.34ドル、Secureで0.89ドル/時）とLambdaの公式料金ページで確認しました。Vast.aiの数値は同社サイトが掲げるスポットの開始価格で、マーケットプレイスの掲載価格は常時変動します。',
         columns: ['プロバイダー', '最適用途', '価格モデル', '評価'],
         rows: [
-          { 'プロバイダー': 'RunPod', '最適用途': '信頼性、マネージドPod', '価格モデル': '秒単位課金、0.34〜0.69ドル/時', '評価': '安定利用に堅実な標準選択' },
-          { 'プロバイダー': 'Vast.ai', '最適用途': '最低価格、柔軟性', '価格モデル': 'マーケットプレイス入札、0.13〜0.34ドル/時', '評価': '最安だがホスト品質にばらつき' },
-          { 'プロバイダー': 'Lambda Labs', '最適用途': 'データセンターGPU（A100/H100）', '価格モデル': '時間単位オンデマンド、1.99〜4.29ドル/時', '評価': '大規模学習向け、安価な4090レンタルには不向き' },
+          { 'プロバイダー': 'RunPod', '最適用途': '信頼性、マネージドPod', '価格モデル': '秒単位課金、0.34〜0.89ドル/時', '評価': '安定利用に堅実な標準選択' },
+          { 'プロバイダー': 'Vast.ai', '最適用途': '最低価格、柔軟性', '価格モデル': 'マーケットプレイス入札、スポット0.14ドル/時から', '評価': '最安だがホスト品質にばらつき' },
+          { 'プロバイダー': 'Lambda Labs', '最適用途': 'データセンターGPU（A100/H100）', '価格モデル': '時間単位オンデマンド、1.99〜4.89ドル/時', '評価': '大規模学習向け、安価な4090レンタルには不向き' },
         ],
       },
       finalVerdict: {
@@ -990,6 +996,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs AIサブスクリプション ROI](/ja/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
           '[ローカルLLM向けベストミニPC](/ja/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
           '[Apple Siliconローカルllmガイド2026](/ja/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[クラウドGPUプロバイダーを比較](/ja/power-local-llm/best-cloud-gpu-providers) -- [RunPodレビュー](/ja/power-local-llm/runpod-review)、[Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)、[Clore.aiレビュー](/ja/power-local-llm/clore-ai-review)を集めたハブ',
+          '[GPUサーバーホスティング事業者](/ja/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) -- クラウドインスタンスではなくGPUサーバー1台を丸ごとレンタル',
         ],
       },
     },
@@ -1009,7 +1017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版', description: 'ローカルGPUハードウェアとクラウドGPUレンタルをLLM向けに比較するインタラクティブなTCO計算機、2026年版。', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-09-02', url: 'https://www.promptquorum.com/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版', description: 'ローカルGPUハードウェアとクラウドGPUレンタルをLLM向けに比較するインタラクティブなTCO計算機、2026年版。', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'ja' },
   },
   es: {
     designSkin: 'hub',
@@ -1021,7 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-22',
     leadAnswerBlock: '**Si el hardware de IA local o el alquiler de GPU en la nube es más barato depende principalmente de cuántas horas al mes lo uses — no hay una respuesta universal. Introduce tus propios números en la calculadora de abajo; como punto de partida, menos de 100 horas/mes suele favorecer el alquiler y más de 500 horas/mes (o uso continuo) suele favorecer la compra.**',
     quickAnswerTop: {
       question: '¿Es más barato construir un servidor LLM local o alquilar GPU en el cloud?',
@@ -1034,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ hr/mes o continuo: lo local suele ganar en costo total',
         'TCO completo = precio del hardware + electricidad − reventa, no solo precio ÷ tarifa cloud',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -1056,7 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'La pregunta central es "¿cuántas horas al mes?", no una regla fija local-vs-nube',
-          'El alquiler de GPU en la nube (RunPod, Vast.ai) cuesta aproximadamente 0,13–0,69 $/hr para una GPU clase RTX 4090',
+          'El alquiler de GPU en la nube (RunPod) cuesta aproximadamente 0,34–0,89 $/hr para una GPU clase RTX 4090',
           'Una workstation RTX 4090 local recomendada cuesta unos 2.800 $ en total',
           'Punto de equilibrio ingenuo (precio ÷ tarifa cloud): 5.600 horas — pero ignora electricidad y reventa',
           'Punto de equilibrio TCO completo (hardware + electricidad − reventa): ~4.780 horas, unos 20 meses a 8 hr/día — usa la calculadora de abajo para tus números',
@@ -1098,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       rentPath: {
         title: 'Camino 1 — Uso bajo: alquilar GPU en la nube',
-        content: 'Alquilar es lo correcto para experimentación, fine-tuning ocasional, cargas variables o probar antes de comprometerte con hardware. Solo pagas las horas usadas, sin mantenimiento y con acceso instantáneo a niveles de GPU (H100, A100 80GB) que costarían miles de dólares comprar.\n\nCompara precios actuales de GPU en la nube: [precios de RunPod](https://www.runpod.io/pricing) y [precios de Vast.ai](https://vast.ai/pricing) son enlaces editoriales de referencia, no enlaces de afiliado — PromptQuorum no tiene relación de comisión con ninguno de los dos proveedores.',
+        content: 'Alquilar es lo correcto para experimentación, fine-tuning ocasional, cargas variables o probar antes de comprometerte con hardware. Solo pagas las horas usadas, sin mantenimiento y con acceso instantáneo a niveles de GPU (H100, A100 80GB) que costarían miles de dólares comprar.\n\nCompara precios actuales de GPU en la nube: [precios de RunPod](https://www.runpod.io/pricing) y [precios de Vast.ai](https://vast.ai/pricing) son enlaces editoriales de referencia, no enlaces de afiliado — PromptQuorum no tiene relación de comisión con ninguno de los dos proveedores.\n\nSi aún no estás listo para comprar, alquilar es la opción de menor compromiso: lee la [reseña de RunPod](/es/power-local-llm/runpod-review), la [reseña de Vast.ai](/es/power-local-llm/vast-ai-review) y la [reseña de Clore.ai](/es/power-local-llm/clore-ai-review), o [compara proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers). Para alquilar un servidor completo en lugar de una instancia en la nube, consulta los [proveedores de alojamiento de servidores GPU](/es/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       miniPcPath: {
         title: 'Camino 2 — Uso medio: un mini PC puede superar a una workstation GPU',
@@ -1137,12 +1145,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudProviders: {
         title: 'Comparación de proveedores de GPU en la nube',
-        content: 'Tarifas representativas clase RTX 4090, agosto de 2026 — verifica siempre los precios actuales antes de alquilar, cambian con frecuencia.',
+        content: 'Tarifas representativas clase RTX 4090 — verifica siempre los precios actuales antes de alquilar, cambian con frecuencia. Precios comprobados el 22 de noviembre de 2026 en las páginas oficiales de precios de RunPod (RTX 4090: 0,34 $ Community a 0,89 $ Secure por hora) y Lambda; la cifra de Vast.ai es el precio inicial spot que anuncia en su propio sitio, y las ofertas del marketplace cambian continuamente.',
         columns: ['Proveedor', 'Mejor para', 'Modelo de precio', 'Veredicto'],
         rows: [
-          { Proveedor: 'RunPod', 'Mejor para': 'Fiabilidad, pods gestionados', 'Modelo de precio': 'Por segundo, 0,34–0,69 $/hr', Veredicto: 'Opción sólida por defecto para uso constante' },
-          { Proveedor: 'Vast.ai', 'Mejor para': 'Precio más bajo, flexible', 'Modelo de precio': 'Subasta de mercado, 0,13–0,34 $/hr', Veredicto: 'El más barato, calidad de host variable' },
-          { Proveedor: 'Lambda Labs', 'Mejor para': 'GPUs de centro de datos (A100/H100)', 'Modelo de precio': 'Por hora bajo demanda, 1,99–4,29 $/hr', Veredicto: 'Mejor para entrenamiento grande, no para alquilar una 4090 económica' },
+          { Proveedor: 'RunPod', 'Mejor para': 'Fiabilidad, pods gestionados', 'Modelo de precio': 'Por segundo, 0,34–0,89 $/hr', Veredicto: 'Opción sólida por defecto para uso constante' },
+          { Proveedor: 'Vast.ai', 'Mejor para': 'Precio más bajo, flexible', 'Modelo de precio': 'Subasta de mercado, desde 0,14 $/hr (spot)', Veredicto: 'El más barato, calidad de host variable' },
+          { Proveedor: 'Lambda Labs', 'Mejor para': 'GPUs de centro de datos (A100/H100)', 'Modelo de precio': 'Por hora bajo demanda, 1,99–4,89 $/hr', Veredicto: 'Mejor para entrenamiento grande, no para alquilar una 4090 económica' },
         ],
       },
       finalVerdict: {
@@ -1222,6 +1230,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs suscripción IA ROI](/es/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
           '[Mejores mini PCs para LLM local](/es/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
           '[Guía Apple Silicon para LLM local 2026](/es/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[Comparar proveedores de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers) -- centro con la [reseña de RunPod](/es/power-local-llm/runpod-review), la [reseña de Vast.ai](/es/power-local-llm/vast-ai-review) y la [reseña de Clore.ai](/es/power-local-llm/clore-ai-review)',
+          '[Proveedores de alojamiento de servidores GPU](/es/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) -- alquiler de un servidor GPU completo en lugar de una instancia en la nube',
         ],
       },
     },
@@ -1253,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Calculadora interactiva de costo total de propiedad comparando hardware GPU local vs alquiler de GPU en la nube para LLMs en 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-22',
       url: 'https://www.promptquorum.com/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'es',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1281,7 +1291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-22',
     leadAnswerBlock: '**ما إذا كانت الأجهزة المحلية أم استئجار GPU السحابي أرخص يعتمد بشكل أساسي على عدد ساعات الاستخدام شهريًا — لا توجد إجابة عامة. استخدم الحاسبة أدناه بأرقامك الخاصة؛ كنقطة انطلاق تقريبية: أقل من 100 ساعة/شهر يميل عادةً للاستئجار السحابي، وأكثر من 500 ساعة/شهر (أو التشغيل المستمر) يميل عادةً لصالح امتلاك الأجهزة.**',
     quickAnswerTop: {
       question: 'هل بناء خادم LLM محلي أرخص أم استئجار GPU في السحابة؟',
@@ -1294,7 +1304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ ساعة/شهر أو تشغيل مستمر: يتفوق المحلي عادةً في التكلفة الإجمالية',
         'التكلفة الإجمالية الكاملة = سعر الأجهزة + الكهرباء − إعادة البيع، وليس فقط السعر ÷ تعرفة السحابة',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -1316,7 +1326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'السؤال الجوهري هو "كم ساعة شهريًا؟" وليس قاعدة ثابتة محلي-مقابل-سحابي',
-          'يكلف استئجار GPU السحابي (RunPod، Vast.ai) نحو 0.13–0.69 دولار/ساعة لفئة GPU مثل RTX 4090',
+          'يكلف استئجار GPU السحابي (RunPod) نحو 0.34–0.89 دولار/ساعة لفئة GPU مثل RTX 4090',
           'تكلف محطة عمل RTX 4090 المحلية الموصى بها نحو 2800 دولار إجمالًا',
           'نقطة التعادل الساذجة (السعر ÷ تعرفة السحابة فقط): 5600 ساعة — لكنها تتجاهل الكهرباء وإعادة البيع',
           'نقطة تعادل التكلفة الإجمالية الكاملة (الأجهزة + الكهرباء − إعادة البيع): نحو 4780 ساعة، أي نحو 20 شهرًا عند 8 ساعات/يوم — استخدم الحاسبة أدناه لأرقامك',
@@ -1358,7 +1368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       rentPath: {
         title: 'المسار 1 — استخدام منخفض: استئجار GPU سحابي',
-        content: 'الاستئجار هو الخيار الصحيح للتجريب، والضبط الدقيق العَرَضي، وأحمال العمل المتغيرة، أو اختبار قبل الالتزام بأجهزة. تدفع فقط الساعات المستخدمة، بلا صيانة، وبوصول فوري لفئات GPU (H100، A100 80GB) قد تكلف آلاف الدولارات عند الشراء.\n\nقارن أسعار GPU السحابي الحالية: [أسعار RunPod](https://www.runpod.io/pricing) و[أسعار Vast.ai](https://vast.ai/pricing) هي روابط تحريرية مرجعية وليست روابط أفلييت — لا توجد لـ PromptQuorum علاقة عمولة مع أي من المزودين.',
+        content: 'الاستئجار هو الخيار الصحيح للتجريب، والضبط الدقيق العَرَضي، وأحمال العمل المتغيرة، أو اختبار قبل الالتزام بأجهزة. تدفع فقط الساعات المستخدمة، بلا صيانة، وبوصول فوري لفئات GPU (H100، A100 80GB) قد تكلف آلاف الدولارات عند الشراء.\n\nقارن أسعار GPU السحابي الحالية: [أسعار RunPod](https://www.runpod.io/pricing) و[أسعار Vast.ai](https://vast.ai/pricing) هي روابط تحريرية مرجعية وليست روابط أفلييت — لا توجد لـ PromptQuorum علاقة عمولة مع أي من المزودين.\n\nإذا لم تكن مستعداً للشراء بعد، فالاستئجار خيار أقل التزاماً: اقرأ [مراجعة RunPod](/ar/power-local-llm/runpod-review) و[مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review) و[مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review)، أو [قارن مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers). لاستئجار خادم كامل بدلًا من نسخة سحابية، راجع [مزودو استضافة خوادم GPU](/ar/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       miniPcPath: {
         title: 'المسار 2 — استخدام متوسط: الميني PC قد يتفوق على محطة عمل GPU',
@@ -1397,12 +1407,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudProviders: {
         title: 'مقارنة مزودي GPU السحابي',
-        content: 'تعرفات تمثيلية لفئة RTX 4090، اعتبارًا من أغسطس 2026 — تحقق دائمًا من الأسعار الحالية قبل الاستئجار، فهي تتغير باستمرار.',
+        content: 'تعرفات تمثيلية لفئة RTX 4090 — تحقق دائمًا من الأسعار الحالية قبل الاستئجار، فهي تتغير باستمرار. تم التحقق من الأسعار في 22 نوفمبر 2026 على صفحات الأسعار الرسمية لـ RunPod (RTX 4090: 0.34 دولار Community إلى 0.89 دولار Secure في الساعة) وLambda؛ ورقم Vast.ai هو سعر البداية للـ spot المعلن على موقعها، وعروض السوق تتغير باستمرار.',
         columns: ['المزود', 'الأفضل لـ', 'نموذج التسعير', 'الحكم'],
         rows: [
-          { 'المزود': 'RunPod', 'الأفضل لـ': 'الموثوقية، pods مُدارة', 'نموذج التسعير': 'بالثانية، 0.34–0.69 دولار/ساعة', 'الحكم': 'خيار افتراضي جيد للأحمال المستقرة' },
-          { 'المزود': 'Vast.ai', 'الأفضل لـ': 'أقل سعر، مرن', 'نموذج التسعير': 'مزاد سوقي، 0.13–0.34 دولار/ساعة', 'الحكم': 'الأرخص، جودة المضيف متفاوتة' },
-          { 'المزود': 'Lambda Labs', 'الأفضل لـ': 'GPU مراكز بيانات (A100/H100)', 'نموذج التسعير': 'بالساعة عند الطلب، 1.99–4.29 دولار/ساعة', 'الحكم': 'الأفضل للتدريب الكبير، لا لاستئجار 4090 رخيصة' },
+          { 'المزود': 'RunPod', 'الأفضل لـ': 'الموثوقية، pods مُدارة', 'نموذج التسعير': 'بالثانية، 0.34–0.89 دولار/ساعة', 'الحكم': 'خيار افتراضي جيد للأحمال المستقرة' },
+          { 'المزود': 'Vast.ai', 'الأفضل لـ': 'أقل سعر، مرن', 'نموذج التسعير': 'مزاد سوقي، من 0.14 دولار/ساعة (spot)', 'الحكم': 'الأرخص، جودة المضيف متفاوتة' },
+          { 'المزود': 'Lambda Labs', 'الأفضل لـ': 'GPU مراكز بيانات (A100/H100)', 'نموذج التسعير': 'بالساعة عند الطلب، 1.99–4.89 دولار/ساعة', 'الحكم': 'الأفضل للتدريب الكبير، لا لاستئجار 4090 رخيصة' },
         ],
       },
       finalVerdict: {
@@ -1482,6 +1492,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU مقابل اشتراك الذكاء الاصطناعي العائد على الاستثمار](/ar/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
           '[أفضل أجهزة ميني PC لـ LLM المحلي](/ar/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
           '[دليل Apple Silicon لـ LLM المحلي 2026](/ar/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[قارن مزودي GPU السحابية](/ar/power-local-llm/best-cloud-gpu-providers) -- مركز يضم [مراجعة RunPod](/ar/power-local-llm/runpod-review) و[مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review) و[مراجعة Clore.ai](/ar/power-local-llm/clore-ai-review)',
+          '[مزودو استضافة خوادم GPU](/ar/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) -- استئجار خادم GPU كامل بدلًا من نسخة سحابية',
         ],
       },
     },
@@ -1508,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'حاسبة تفاعلية لإجمالي تكلفة الملكية تقارن بين أجهزة GPU المحلية واستئجار GPU سحابي لتشغيل نماذج LLM في 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-22',
       url: 'https://www.promptquorum.com/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'ar',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1536,7 +1548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-22',
     leadAnswerBlock: '**本地AI硬件与云GPU租用哪个更便宜，主要取决于每月使用小时数——没有放之四海而皆准的答案。请在下方计算器中输入您自己的数字；作为大致参考，每月不足100小时通常租用更划算，超过500小时（或全天候使用）通常自建更划算。**',
     quickAnswerTop: {
       question: '自建本地LLM服务器和租用云GPU哪个更便宜？',
@@ -1549,7 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '每月500小时以上或全天候：总成本上本地通常更划算',
         '完整TCO＝硬件价格＋电费−转售价值，而非仅用购买价格÷云端费率',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -1571,7 +1583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '核心问题是"每月使用多少小时"，而非固定的本地vs云端规则',
-          '云GPU租用（RunPod、Vast.ai）对于RTX 4090级别GPU约为0.13–0.69美元/小时',
+          '云GPU租用（RunPod）对于RTX 4090级别GPU约为0.34–0.89美元/小时',
           '推荐的本地RTX 4090工作站总成本约2,800美元',
           '简单损益平衡点（价格÷云端费率）：5,600小时——但忽略了电费和转售价值',
           '完整TCO损益平衡点（硬件＋电费−转售价值）：约4,780小时，按每天8小时使用约合20个月——具体数字见下方计算器',
@@ -1613,7 +1625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       rentPath: {
         title: '路径一 — 使用量低：租用云GPU',
-        content: '租用适合实验、偶尔的微调、变化的工作负载，或在投入硬件前先测试。您只需为实际使用的时长付费，无需维护，还能即时获得购买需数千美元的GPU等级（H100、A100 80GB）的访问权限。\n\n比较当前云GPU价格：[RunPod价格](https://www.runpod.io/pricing)和[Vast.ai价格](https://vast.ai/pricing)为编辑参考链接，不是联盟链接——PromptQuorum与这两家提供商均无佣金关系。',
+        content: '租用适合实验、偶尔的微调、变化的工作负载，或在投入硬件前先测试。您只需为实际使用的时长付费，无需维护，还能即时获得购买需数千美元的GPU等级（H100、A100 80GB）的访问权限。\n\n比较当前云GPU价格：[RunPod价格](https://www.runpod.io/pricing)和[Vast.ai价格](https://vast.ai/pricing)为编辑参考链接，不是联盟链接——PromptQuorum与这两家提供商均无佣金关系。\n\n如果您还没有准备好购买，租用是承诺更少的选择：请阅读[RunPod评测](/zh/power-local-llm/runpod-review)、[Vast.ai评测](/zh/power-local-llm/vast-ai-review)和[Clore.ai评测](/zh/power-local-llm/clore-ai-review)，或[比较云GPU提供商](/zh/power-local-llm/best-cloud-gpu-providers)。若想租用整台服务器而非云实例,请参阅[GPU服务器托管提供商](/zh/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart)。',
       },
       miniPcPath: {
         title: '路径二 — 使用量中等：迷你主机可能优于GPU工作站',
@@ -1652,12 +1664,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudProviders: {
         title: '云GPU租用服务商对比',
-        content: '截至2026年8月的RTX 4090级别代表性价格——租用前务必核实最新价格，价格变动频繁。',
+        content: 'RTX 4090级别代表性价格——租用前务必核实最新价格，价格变动频繁。价格已于2026年11月22日在RunPod（RTX 4090：Community 0.34美元，Secure 0.89美元/小时）和Lambda官方定价页核实；Vast.ai的数字是其官网标示的现货起始价，市场挂牌价持续变动。',
         columns: ['服务商', '最适合', '定价模式', '结论'],
         rows: [
-          { '服务商': 'RunPod', '最适合': '可靠性、托管Pod', '定价模式': '按秒计费，0.34–0.69美元/小时', '结论': '稳定使用场景的可靠默认选择' },
-          { '服务商': 'Vast.ai', '最适合': '最低价格、灵活', '定价模式': '市场竞价，0.13–0.34美元/小时', '结论': '最便宜，但主机质量参差不齐' },
-          { '服务商': 'Lambda Labs', '最适合': '数据中心级GPU（A100/H100）', '定价模式': '按小时按需付费，1.99–4.29美元/小时', '结论': '适合大规模训练，不适合低价租用4090' },
+          { '服务商': 'RunPod', '最适合': '可靠性、托管Pod', '定价模式': '按秒计费，0.34–0.89美元/小时', '结论': '稳定使用场景的可靠默认选择' },
+          { '服务商': 'Vast.ai', '最适合': '最低价格、灵活', '定价模式': '市场竞价，现货价0.14美元/小时起', '结论': '最便宜，但主机质量参差不齐' },
+          { '服务商': 'Lambda Labs', '最适合': '数据中心级GPU（A100/H100）', '定价模式': '按小时按需付费，1.99–4.89美元/小时', '结论': '适合大规模训练，不适合低价租用4090' },
         ],
       },
       finalVerdict: {
@@ -1737,6 +1749,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs AI订阅ROI](/zh/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
           '[本地LLM最佳迷你主机](/zh/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
           '[Apple Silicon本地LLM指南2026](/zh/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[比较云GPU提供商](/zh/power-local-llm/best-cloud-gpu-providers) -- 含[RunPod评测](/zh/power-local-llm/runpod-review)、[Vast.ai评测](/zh/power-local-llm/vast-ai-review)和[Clore.ai评测](/zh/power-local-llm/clore-ai-review)的专题',
+          '[GPU服务器托管提供商](/zh/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) -- 租用整台GPU服务器而非云实例',
         ],
       },
     },
@@ -1756,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '本地AI vs 云端AI：成本计算器（自建 vs 租用）2026', description: '交互式总拥有成本计算器，对比本地GPU硬件与云GPU租用运行LLM的成本，2026年版。', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-28', url: 'https://www.promptquorum.com/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '本地AI vs 云端AI：成本计算器（自建 vs 租用）2026', description: '交互式总拥有成本计算器，对比本地GPU硬件与云GPU租用运行LLM的成本，2026年版。', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'zh' },
   },
   pt: {
     designSkin: 'hub',
@@ -1768,7 +1782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     leadAnswerBlock: '**Se o hardware de IA local ou o aluguel de GPU na nuvem é mais barato depende principalmente de quantas horas por mês você usa — não existe resposta universal. Use a calculadora abaixo com seus próprios números; como ponto de partida, menos de 100 horas/mês costuma favorecer o aluguel e mais de 500 horas/mês (ou uso contínuo) costuma favorecer a compra.**',
     quickAnswerTop: {
       question: 'É mais barato montar um servidor de LLM local ou alugar GPU na nuvem?',
@@ -1781,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '500+ h/mês ou contínuo: o local costuma vencer no custo total',
         'TCO completo = preço do hardware + eletricidade − revenda, não apenas preço ÷ tarifa da nuvem',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -1803,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'A pergunta central é "quantas horas por mês?", não uma regra fixa local-vs-nuvem',
-          'O aluguel de GPU na nuvem (RunPod, Vast.ai) custa aproximadamente US$ 0,13–0,69/h para uma GPU classe RTX 4090',
+          'O aluguel de GPU na nuvem (RunPod) custa aproximadamente US$ 0,34–0,89/h para uma GPU classe RTX 4090',
           'Uma workstation RTX 4090 local recomendada custa cerca de R$ 25.000 no total',
           'Ponto de equilíbrio ingênuo (preço ÷ tarifa da nuvem): 5.600 horas — mas ignora eletricidade e revenda',
           'Ponto de equilíbrio de TCO completo (hardware + eletricidade − revenda): ~4.780 horas, cerca de 20 meses a 8h/dia — veja a calculadora abaixo para seus números',
@@ -1845,7 +1859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       rentPath: {
         title: 'Caminho 1 — Uso baixo: alugar GPU na nuvem',
-        content: 'Alugar é a escolha certa para experimentação, fine-tuning ocasional, cargas variáveis ou testar antes de investir em hardware. Você paga só as horas usadas, sem manutenção, com acesso imediato a níveis de GPU (H100, A100 80GB) que custariam milhares de dólares para comprar.\n\nCompare preços atuais de GPU na nuvem: [preços do RunPod](https://www.runpod.io/pricing) e [preços do Vast.ai](https://vast.ai/pricing) são links editoriais de referência, não links de afiliado — a PromptQuorum não tem relação de comissão com nenhum dos dois provedores.',
+        content: 'Alugar é a escolha certa para experimentação, fine-tuning ocasional, cargas variáveis ou testar antes de investir em hardware. Você paga só as horas usadas, sem manutenção, com acesso imediato a níveis de GPU (H100, A100 80GB) que custariam milhares de dólares para comprar.\n\nCompare preços atuais de GPU na nuvem: [preços do RunPod](https://www.runpod.io/pricing) e [preços do Vast.ai](https://vast.ai/pricing) são links editoriais de referência, não links de afiliado — a PromptQuorum não tem relação de comissão com nenhum dos dois provedores.\n\nSe você ainda não está pronto para comprar, alugar é a opção de menor compromisso: leia a [análise do RunPod](/pt/power-local-llm/runpod-review), a [análise do Vast.ai](/pt/power-local-llm/vast-ai-review) e a [análise do Clore.ai](/pt/power-local-llm/clore-ai-review), ou [compare provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers). Para alugar um servidor inteiro em vez de uma instância na nuvem, veja os [provedores de hospedagem de servidores GPU](/pt/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart).',
       },
       miniPcPath: {
         title: 'Caminho 2 — Uso médio: um mini PC pode superar uma workstation GPU',
@@ -1884,12 +1898,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudProviders: {
         title: 'Comparação de provedores de GPU na nuvem',
-        content: 'Tarifas representativas de classe RTX 4090, em agosto de 2026 — verifique sempre os preços atuais antes de alugar, eles mudam com frequência.',
+        content: 'Tarifas representativas de classe RTX 4090 — verifique sempre os preços atuais antes de alugar, eles mudam com frequência. Preços verificados em 22 de novembro de 2026 nas páginas oficiais de preços da RunPod (RTX 4090: US$ 0,34 Community a US$ 0,89 Secure por hora) e da Lambda; o valor da Vast.ai é o preço inicial spot anunciado em seu próprio site, e as ofertas do marketplace mudam continuamente.',
         columns: ['Provedor', 'Melhor para', 'Modelo de Preço', 'Veredito'],
         rows: [
-          { Provedor: 'RunPod', 'Melhor para': 'Confiabilidade, pods gerenciados', 'Modelo de Preço': 'Por segundo, US$ 0,34–0,69/h', Veredito: 'Boa opção padrão para uso constante' },
-          { Provedor: 'Vast.ai', 'Melhor para': 'Menor preço, flexível', 'Modelo de Preço': 'Leilão de mercado, US$ 0,13–0,34/h', Veredito: 'O mais barato, qualidade do host variável' },
-          { Provedor: 'Lambda Labs', 'Melhor para': 'GPUs de data center (A100/H100)', 'Modelo de Preço': 'Por hora sob demanda, US$ 1,99–4,29/h', Veredito: 'Melhor para treinamento grande, não para alugar uma 4090 barata' },
+          { Provedor: 'RunPod', 'Melhor para': 'Confiabilidade, pods gerenciados', 'Modelo de Preço': 'Por segundo, US$ 0,34–0,89/h', Veredito: 'Boa opção padrão para uso constante' },
+          { Provedor: 'Vast.ai', 'Melhor para': 'Menor preço, flexível', 'Modelo de Preço': 'Leilão de mercado, a partir de US$ 0,14/h (spot)', Veredito: 'O mais barato, qualidade do host variável' },
+          { Provedor: 'Lambda Labs', 'Melhor para': 'GPUs de data center (A100/H100)', 'Modelo de Preço': 'Por hora sob demanda, US$ 1,99–4,89/h', Veredito: 'Melhor para treinamento grande, não para alugar uma 4090 barata' },
         ],
       },
       finalVerdict: {
@@ -1969,6 +1983,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs Assinatura de IA ROI](/pt/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
           '[Melhores Mini PCs para LLM Local](/pt/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
           '[Guia de Apple Silicon para LLM Local 2026](/pt/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[Comparar provedores de GPU na nuvem](/pt/power-local-llm/best-cloud-gpu-providers) -- hub com a [análise do RunPod](/pt/power-local-llm/runpod-review), a [análise do Vast.ai](/pt/power-local-llm/vast-ai-review) e a [análise do Clore.ai](/pt/power-local-llm/clore-ai-review)',
+          '[Provedores de hospedagem de servidores GPU](/pt/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) -- aluguel de um servidor GPU inteiro em vez de uma instância na nuvem',
         ],
       },
     },
@@ -1994,7 +2010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Calculadora interativa de custo total de propriedade comparando hardware GPU local vs aluguel de GPU na nuvem para rodar LLMs em 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-09-02',
+      dateModified: '2026-11-22',
       url: 'https://www.promptquorum.com/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'pt-BR',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2022,7 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-08-28',
+    dateModified: '2026-11-22',
     leadAnswerBlock: '**로컬 AI 하드웨어와 클라우드 GPU 렌탈 중 어느 쪽이 더 저렴한지는 주로 월간 사용 시간에 달려 있습니다 — 정해진 정답은 없습니다. 아래 계산기에 직접 수치를 입력해보세요. 대략적인 기준으로는 월 100시간 미만이면 보통 렌탈이, 월 500시간 이상(또는 상시 가동)이면 보통 구매가 유리합니다.**',
     quickAnswerTop: {
       question: '로컬 LLM 서버를 직접 구축하는 것과 클라우드 GPU를 렌탈하는 것 중 어느 쪽이 더 저렴합니까?',
@@ -2035,7 +2051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '월 500시간 이상 또는 상시 가동: 총비용 기준으로 로컬이 보통 유리',
         '완전한 TCO = 하드웨어 가격 + 전기 요금 − 재판매 가치, 단순히 가격 ÷ 클라우드 요금이 아님',
       ],
-      updatedDate: '2026-08',
+      updatedDate: '2026-11',
     },
     snippetBlocks: [
       {
@@ -2057,7 +2073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '핵심 질문은 "월 몇 시간 사용하는가"이며, 고정된 로컬-대-클라우드 규칙이 아닙니다',
-          '클라우드 GPU 렌탈(RunPod, Vast.ai)은 RTX 4090급 GPU 기준 시간당 약 $0.13~0.69입니다',
+          '클라우드 GPU 렌탈(RunPod)은 RTX 4090급 GPU 기준 시간당 약 $0.34~0.89입니다',
           '추천 로컬 RTX 4090 워크스테이션은 총 약 $2,800입니다',
           '단순 손익분기점(가격 ÷ 클라우드 요금만): 5,600시간 — 하지만 전기 요금과 재판매 가치는 무시한 값입니다',
           '완전한 TCO 손익분기점(하드웨어 + 전기 − 재판매): 약 4,780시간, 하루 8시간 사용 시 약 20개월 — 정확한 수치는 아래 계산기 참고',
@@ -2099,7 +2115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       rentPath: {
         title: '경로 1 — 낮은 사용량: 클라우드 GPU 렌탈',
-        content: '실험, 가끔 하는 파인튜닝, 변동성 있는 워크로드, 또는 하드웨어 투자 전 테스트에는 렌탈이 적합합니다. 사용한 시간만큼만 비용을 지불하며 유지 관리가 필요 없고, 구매 시 수천 달러가 드는 GPU 등급(H100, A100 80GB)에도 즉시 접근할 수 있습니다.\n\n현재 클라우드 GPU 가격 비교: [RunPod 가격](https://www.runpod.io/pricing)과 [Vast.ai 가격](https://vast.ai/pricing)은 편집상 참고 링크이며 제휴 링크가 아닙니다 — PromptQuorum은 두 제공업체 어디와도 수수료 관계가 없습니다.',
+        content: '실험, 가끔 하는 파인튜닝, 변동성 있는 워크로드, 또는 하드웨어 투자 전 테스트에는 렌탈이 적합합니다. 사용한 시간만큼만 비용을 지불하며 유지 관리가 필요 없고, 구매 시 수천 달러가 드는 GPU 등급(H100, A100 80GB)에도 즉시 접근할 수 있습니다.\n\n현재 클라우드 GPU 가격 비교: [RunPod 가격](https://www.runpod.io/pricing)과 [Vast.ai 가격](https://vast.ai/pricing)은 편집상 참고 링크이며 제휴 링크가 아닙니다 — PromptQuorum은 두 제공업체 어디와도 수수료 관계가 없습니다.\n\n아직 구매할 준비가 되지 않았다면 렌탈이 부담이 적은 선택지입니다. [RunPod 리뷰](/ko/power-local-llm/runpod-review), [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review), [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review)를 읽거나 [클라우드 GPU 제공업체를 비교](/ko/power-local-llm/best-cloud-gpu-providers)해 보십시오. 클라우드 인스턴스 대신 서버 한 대를 통째로 임대하려면 [GPU 서버 호스팅 제공업체](/ko/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart)를 참고하십시오.',
       },
       miniPcPath: {
         title: '경로 2 — 중간 사용량: 미니 PC가 GPU 워크스테이션을 능가할 수 있음',
@@ -2138,12 +2154,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudProviders: {
         title: '클라우드 GPU 제공업체 비교',
-        content: '2026년 8월 기준 RTX 4090급 대표 요금입니다 — 렌탈 전 항상 최신 가격을 확인하세요. 가격은 자주 변동합니다.',
+        content: 'RTX 4090급 대표 요금입니다 — 렌탈 전 항상 최신 가격을 확인하세요. 가격은 자주 변동합니다. 가격은 2026년 11월 22일 RunPod(RTX 4090: Community $0.34, Secure $0.89/시간)와 Lambda 공식 가격 페이지에서 확인했습니다. Vast.ai 수치는 해당 사이트가 내건 스팟 시작 가격이며, 마켓플레이스 등록가는 지속적으로 변동합니다.',
         columns: ['제공업체', '최적 용도', '가격 모델', '결론'],
         rows: [
-          { '제공업체': 'RunPod', '최적 용도': '신뢰성, 관리형 팟', '가격 모델': '초 단위 과금, $0.34~0.69/시간', '결론': '꾸준한 워크로드에 무난한 기본 선택' },
-          { '제공업체': 'Vast.ai', '최적 용도': '최저가, 유연함', '가격 모델': '마켓플레이스 입찰, $0.13~0.34/시간', '결론': '가장 저렴하지만 호스트 품질 편차 있음' },
-          { '제공업체': 'Lambda Labs', '최적 용도': '데이터센터급 GPU(A100/H100)', '가격 모델': '시간당 온디맨드, $1.99~4.29/시간', '결론': '대규모 학습에 적합, 저가 4090 렌탈에는 부적합' },
+          { '제공업체': 'RunPod', '최적 용도': '신뢰성, 관리형 팟', '가격 모델': '초 단위 과금, $0.34~0.89/시간', '결론': '꾸준한 워크로드에 무난한 기본 선택' },
+          { '제공업체': 'Vast.ai', '최적 용도': '최저가, 유연함', '가격 모델': '마켓플레이스 입찰, 스팟 시간당 $0.14부터', '결론': '가장 저렴하지만 호스트 품질 편차 있음' },
+          { '제공업체': 'Lambda Labs', '최적 용도': '데이터센터급 GPU(A100/H100)', '가격 모델': '시간당 온디맨드, $1.99~4.89/시간', '결론': '대규모 학습에 적합, 저가 4090 렌탈에는 부적합' },
         ],
       },
       finalVerdict: {
@@ -2223,6 +2239,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[GPU vs AI 구독 ROI](/ko/local-llms/gpu-vs-ai-subscription-roi) -- GPU vs AI subscription ROI',
           '[로컬 LLM 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm) -- best mini PCs for local LLMs',
           '[Apple Silicon 로컬 LLM 가이드 2026](/ko/local-llms/apple-silicon-local-llm-guide-2026) -- Apple Silicon local LLM guide',
+          '[클라우드 GPU 제공업체를 비교](/ko/power-local-llm/best-cloud-gpu-providers) -- [RunPod 리뷰](/ko/power-local-llm/runpod-review), [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review), [Clore.ai 리뷰](/ko/power-local-llm/clore-ai-review)를 모은 허브',
+          '[GPU 서버 호스팅 제공업체](/ko/power-local-llm/gpu-server-hosting-cudo-cherry-database-mart) -- 클라우드 인스턴스 대신 GPU 서버 한 대를 통째로 임대',
         ],
       },
     },
@@ -2248,7 +2266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: '2026년 LLM 운영을 위한 로컬 GPU 하드웨어와 클라우드 GPU 렌탈을 비교하는 인터랙티브 총소유비용(TCO) 계산기.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-28',
+      dateModified: '2026-11-22',
       url: 'https://www.promptquorum.com/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'ko',
       'proficiencyLevel': 'Intermediate',

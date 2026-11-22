@@ -359,6 +359,13 @@ import { article as a_enterprise_rag_vector_database_deployment_guide_2026 } fro
 import { article as a_wechat_bot_local_llm_personal_assistant_2026 } from './articles/wechat-bot-local-llm-personal-assistant-2026'
 import { article as a_best_web_hosting_2026 } from './articles/best-web-hosting-2026'
 import { article as a_digitalocean_vs_aws_cloud_for_ai_companies } from './articles/digitalocean-vs-aws-cloud-for-ai-companies'
+import { article as a_best_cloud_gpu_providers } from './articles/best-cloud-gpu-providers'
+import { article as a_gpu_server_hosting_cudo_cherry_database_mart } from './articles/gpu-server-hosting-cudo-cherry-database-mart'
+import { article as a_vultr_digitalocean_upcloud_gpu_cloud } from './articles/vultr-digitalocean-upcloud-gpu-cloud'
+import { article as a_novita_ai_review } from './articles/novita-ai-review'
+import { article as a_clore_ai_review } from './articles/clore-ai-review'
+import { article as a_vast_ai_review } from './articles/vast-ai-review'
+import { article as a_runpod_review } from './articles/runpod-review'
 import { article as a_flowise_ai_visual_workflow_builder_review } from './articles/flowise-ai-visual-workflow-builder-review'
 import { article as a_haystack_deepset_rag_framework_review } from './articles/haystack-deepset-rag-framework-review'
 import { article as a_dify_ai_workflow_builder_review } from './articles/dify-ai-workflow-builder-review'
@@ -634,6 +641,13 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'animatediff-video-generation-guide-2026':           a_animatediff_video_generation_guide_2026,
   'best-web-hosting-2026':                             a_best_web_hosting_2026,
   'digitalocean-vs-aws-cloud-for-ai-companies':         a_digitalocean_vs_aws_cloud_for_ai_companies,
+  'best-cloud-gpu-providers': a_best_cloud_gpu_providers,
+  'gpu-server-hosting-cudo-cherry-database-mart': a_gpu_server_hosting_cudo_cherry_database_mart,
+  'vultr-digitalocean-upcloud-gpu-cloud': a_vultr_digitalocean_upcloud_gpu_cloud,
+  'novita-ai-review': a_novita_ai_review,
+  'clore-ai-review': a_clore_ai_review,
+  'vast-ai-review': a_vast_ai_review,
+  'runpod-review': a_runpod_review,
   'flowise-ai-visual-workflow-builder-review':         a_flowise_ai_visual_workflow_builder_review,
   'haystack-deepset-rag-framework-review':             a_haystack_deepset_rag_framework_review,
   'enterprise-llm-inference-servers-vllm-tgi-nim-2026': a_enterprise_llm_inference_servers_vllm_tgi_nim_2026,

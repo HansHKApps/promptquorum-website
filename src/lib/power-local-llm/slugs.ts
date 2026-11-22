@@ -147,6 +147,13 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-web-hosting':                        'best-web-hosting-2026',
   // AI cloud provider comparison — 2026-09-05
   'digitalocean-vs-aws-cloud-for-ai-companies': 'digitalocean-vs-aws-cloud-for-ai-companies',
+  'best-cloud-gpu-providers': 'best-cloud-gpu-providers',
+  'gpu-server-hosting-cudo-cherry-database-mart': 'gpu-server-hosting-cudo-cherry-database-mart',
+  'vultr-digitalocean-upcloud-gpu-cloud': 'vultr-digitalocean-upcloud-gpu-cloud',
+  'novita-ai-review': 'novita-ai-review',
+  'clore-ai-review': 'clore-ai-review',
+  'vast-ai-review': 'vast-ai-review',
+  'runpod-review': 'runpod-review',
 
   // Flowise shutdown coverage 2026-09-02
   'flowise-ai-visual-workflow-builder-review':    'flowise-ai-visual-workflow-builder-review',

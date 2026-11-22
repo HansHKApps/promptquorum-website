@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-vram-for-local-llm-overview-hero-en.webp',
     title: 'How Much VRAM Do You Need for a Local LLM?',
-    dateModified: '2026-10-20',
+    dateModified: '2026-11-22',
     seoTitle: 'VRAM Tiers for Local LLMs 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB runs Llama 3.2 3B Q4. 6 GB handles Llama 3.1 8B Q4_K_M. 12 GB unlocks Qwen3 14B. Formula: params × 0.6 = GB at Q4. VRAM tier guide from PromptQuorum.',
     publishDate: '2026-05-18',
@@ -65,6 +65,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'If a model exceeds your VRAM, you have three options: lower the quantization (Q4_K_M instead of Q5), reduce the context window with <code>/set parameter num_ctx 2048</code>, or let Ollama offload layers to system RAM.',
           'CPU offload works but is slow — each layer moved to RAM adds latency. For interactive use, stay within your GPU\'s VRAM limit. Reducing context from 4096 to 2048 tokens saves approximately 2 GB on a 7-8B model.',
           'For a full breakdown of model sizes and the math behind VRAM estimates, see the <a href="/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">complete VRAM guide for local LLMs</a>. For the 7B tier specifically, see <a href="/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">how much RAM a 7B model needs</a>.',
+          'If a larger card is not in the budget yet, compare providers that rent GPUs by the hour: <a href="/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">No GPU with enough VRAM? Rent one</a>.',
         ],
       },
       faq: {
@@ -99,7 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM-Stufen lokale LLMs 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB für Llama 3.2 3B bei Q4. 6 GB für Llama 3.1 8B Q4_K_M. 12 GB für Qwen3 14B. Formel: Parameter × 0,6 = GB bei Q4. VRAM-Stufenführer von PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-20',
+    dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -147,6 +148,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Wenn ein Modell Ihren VRAM überschreitet, haben Sie drei Möglichkeiten: Quantisierung reduzieren (Q4_K_M statt Q5), das Kontextfenster mit <code>/set parameter num_ctx 2048</code> verkleinern oder Ollama Schichten in den System-RAM auslagern lassen.',
           'CPU-Offload funktioniert, ist aber langsam — jede in den RAM verschobene Schicht erhöht die Latenz. Für interaktive Nutzung bleiben Sie innerhalb des VRAM-Limits Ihrer GPU. Die Reduzierung des Kontexts von 4096 auf 2048 Tokens spart etwa 2 GB bei einem 7–8B-Modell.',
           'Für eine vollständige Aufschlüsselung der Modellgrößen und die Berechnung hinter VRAM-Schätzungen, siehe den <a href="/de/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">vollständigen VRAM-Leitfaden für lokale LLMs</a>. Speziell für die 7B-Tier, siehe <a href="/de/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">wie viel RAM ein 7B-Modell benötigt</a>.',
+          'Falls eine größere Karte noch nicht ins Budget passt, vergleichen Sie Anbieter, die GPUs stundenweise vermieten: <a href="/de/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">Keine GPU mit genug VRAM? Mieten Sie eine</a>.',
         ],
       },
       faq: {
@@ -181,7 +183,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Paliers VRAM LLM local 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 Go pour Llama 3.2 3B en Q4. 6 Go pour Llama 3.1 8B Q4_K_M. 12 Go pour Qwen3 14B. Formule : params × 0,6 = Go en Q4. Paliers VRAM par PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-20',
+    dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -229,6 +231,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Si un modèle dépasse votre VRAM, vous avez trois options : réduire la quantisation (Q4_K_M au lieu de Q5), réduire la fenêtre de contexte avec <code>/set parameter num_ctx 2048</code>, ou laisser Ollama décharger des couches vers la RAM système.',
           'Le déchargement CPU fonctionne mais est lent — chaque couche déplacée vers la RAM ajoute de la latence. Pour un usage interactif, restez dans les limites VRAM de votre GPU. Réduire le contexte de 4096 à 2048 tokens économise environ 2 Go sur un modèle 7-8B.',
           'Pour une répartition complète des tailles de modèles et les calculs derrière les estimations VRAM, voir le <a href="/fr/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">guide VRAM complet pour les LLMs locaux</a>. Pour le tier 7B spécifiquement, voir <a href="/fr/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">combien de RAM nécessite un modèle 7B</a>.',
+          'Si une carte plus puissante n\'entre pas encore dans votre budget, comparez les fournisseurs qui louent des GPU à l\'heure : <a href="/fr/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">Pas de GPU avec assez de VRAM ? Louez-en une</a>.',
         ],
       },
       faq: {
@@ -263,7 +266,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'ローカルLLM VRAMティア 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GBでLlama 3.2 3Bが動作。6 GBでLlama 3.1 8B Q4が動作。12 GBでQwen3 14B Q4が収まります。PromptQuorumによるVRAM選択ガイド。',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-20',
+    dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -311,6 +314,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'モデルがVRAMを超える場合、3つの選択肢があります：量化を下げる（Q5の代わりにQ4_K_M）、<code>/set parameter num_ctx 2048</code>でコンテキストウィンドウを縮小する、またはOllamaにレイヤーをシステムRAMにオフロードさせる。',
           'CPUオフロードは機能しますが低速です — RAMに移動された各レイヤーがレイテンシを増加させます。インタラクティブな使用では、GPUのVRAM制限内に収めてください。コンテキストを4096から2048トークンに削減すると、7-8Bモデルで約2 GBを節約できます。',
           'モデルサイズの完全な内訳とVRAM推定の計算については、<a href="/ja/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">ローカルLLMの完全VRAMガイド</a>を参照してください。7Bティアについては、<a href="/ja/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">7Bモデルに必要なRAM量</a>を参照してください。',
+          'より大きなGPUを買う予算がまだない場合は、GPUを時間単位で借りられるプロバイダーを比較してください：<a href="/ja/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">VRAMが足りるGPUがない場合はレンタル</a>。',
         ],
       },
       faq: {
@@ -345,7 +349,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'LLM显存速查 2026：4GB到24GB各档位运行哪款模型',
     metaDescription: '本地大模型各参数规模所需显存参考（2026）：4 GB运行Llama 3.2 3B Q4；6 GB运行Llama 3.1 8B Q4_K_M；12 GB解锁Qwen3 14B；24 GB承载Qwen3 32B。通用公式：参数量（B）×0.6≈Q4量化所需显存（GB）。',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-20',
+    dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -393,6 +397,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '当模型超出显存时，您有三个选择：降低量化等级（用Q4_K_M代替Q5）、使用<code>/set parameter num_ctx 2048</code>缩小上下文窗口，或让Ollama将层卸载到系统RAM。',
           'CPU卸载可以运行但速度较慢——每个移至RAM的层都会增加延迟。对于交互式使用，请保持在GPU显存限制内。将上下文从4096缩减到2048令牌，7-8B模型约可节省2 GB显存。',
           '有关模型大小的完整分类以及显存估算的计算方法，请参阅<a href="/zh/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">本地LLM完整显存指南</a>。关于7B档位的详情，请参阅<a href="/zh/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">7B模型所需RAM量</a>。',
+          '如果暂时没有预算购买更大的显卡，可以对比按小时出租GPU的服务商：<a href="/zh/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">没有足够VRAM的GPU？可以租用一块</a>。',
         ],
       },
       faq: {
@@ -427,7 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Requisitos de VRAM para LLMs locais 2026 | PromptQuorum',
     metaDescription: '4 GB para Llama 3.2 3B Q4. 6 GB para Llama 3.1 8B Q4_K_M. 12 GB para Qwen3 14B. Fórmula: params × 0,6 = GB em Q4. Guia de VRAM do PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-20',
+    dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -475,6 +480,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Se um modelo exceder sua VRAM, você tem três opções: reduzir a quantização (Q4_K_M em vez de Q5), reduzir a janela de contexto com <code>/set parameter num_ctx 2048</code>, ou deixar o Ollama descarregar camadas para a RAM do sistema.',
           'O offload para CPU funciona, mas é lento — cada camada movida para a RAM adiciona latência. Para uso interativo, fique dentro do limite de VRAM da sua GPU. Reduzir o contexto de 4096 para 2048 tokens economiza aproximadamente 2 GB em um modelo 7-8B.',
           'Para um detalhamento completo dos tamanhos de modelos e a matemática por trás das estimativas de VRAM, veja o <a href="/pt/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">guia completo de VRAM para LLMs locais</a>. Para o nível 7B especificamente, veja <a href="/pt/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">quanta RAM um modelo 7B precisa</a>.',
+          'Se ainda não dá para comprar uma placa maior, compare provedores que alugam GPUs por hora: <a href="/pt/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">Sem uma GPU com VRAM suficiente? Alugue uma</a>.',
         ],
       },
       faq: {
@@ -509,7 +515,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Requisitos de VRAM para LLMs locales 2026 | PromptQuorum',
     metaDescription: '4 GB para Llama 3.2 3B Q4. 6 GB para Llama 3.1 8B Q4_K_M. 12 GB para Qwen3 14B. Fórmula: params × 0,6 = GB en Q4. Guía de VRAM de PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-20',
+    dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -557,6 +563,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Si un modelo supera tu VRAM tienes tres opciones: reducir la cuantización (Q4_K_M en lugar de Q5), reducir la ventana de contexto con <code>/set parameter num_ctx 2048</code>, o dejar que Ollama descargue capas en la RAM del sistema.',
           'El offloading a CPU funciona pero es lento — cada capa movida a RAM añade latencia. Para uso interactivo, mantente dentro del límite de VRAM de tu GPU. Reducir el contexto de 4096 a 2048 tokens ahorra aproximadamente 2 GB en un modelo 7-8B.',
           'Para un desglose completo de tamaños de modelos y el cálculo de estimación de VRAM, consulta la <a href="/es/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">guía completa de VRAM para LLMs locales</a>. Para el rango 7B específicamente, consulta <a href="/es/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">cuánta RAM necesita un modelo 7B</a>.',
+          'Si todavía no puedes comprar una tarjeta más grande, compara proveedores que alquilan GPU por horas: <a href="/es/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">¿No tienes una GPU con suficiente VRAM? Alquila una</a>.',
         ],
       },
       faq: {
@@ -591,7 +598,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨VRAM⁩ للنماذج المحلية ⁨2026⁩: من ⁨4 GB⁩ إلى ⁨70B⁩',
     metaDescription: '⁨4 GB⁩ تكفي لـ ⁨Llama 3.2 3B Q4⁩؛ ⁨6 GB⁩ تُشغّل ⁨Llama 3.1 8B Q4⁩_⁨K⁩_⁨M⁩؛ ⁨12 GB⁩ تفتح ⁨Qwen3 14B Q4⁩. القاعدة: معاملات × ⁨0.6⁩ = ⁨GB⁩ عند ⁨Q4⁩. من ⁨PromptQuorum⁩.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-20',
+    dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     quickAnswerTop: {
@@ -639,6 +646,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'إذا تجاوز النموذج VRAM المتاحة لديك، فلديك ثلاثة خيارات: تقليل التكميم (Q4_K_M بدلاً من Q5)، تقليل نافذة السياق باستخدام <code>/set parameter num_ctx 2048</code>، أو السماح لـ Ollama بنقل الطبقات إلى RAM الجهاز.',
           'النقل إلى CPU يعمل لكنه بطيء — كل طبقة تُنقل إلى RAM تضيف كمون. للاستخدام التفاعلي، ابقَ ضمن حد VRAM لـ GPU. تقليل السياق من 4096 إلى 2048 توكن يوفر ~2 GB في نموذج 7-8B.',
           'للتفاصيل الكاملة حول أحجام النماذج وحساب VRAM، راجع <a href="/ar/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">الدليل الشامل لـ VRAM للنماذج المحلية</a>. للنطاق 7B تحديداً، راجع <a href="/ar/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">كم ذاكرة يحتاج نموذج 7B</a>.',
+          'إذا لم تكن ميزانيتك تسمح بعد بشراء بطاقة أكبر، فقارن بين مزوّدين يؤجّرون وحدات GPU بالساعة: <a href="/ar/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">لا تملك GPU بذاكرة VRAM كافية؟ استأجر واحدة</a>.',
         ],
       },
       faq: {
@@ -673,7 +681,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '로컬 LLM VRAM 요구사항 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB로 Llama 3.2 3B Q4 실행. 6 GB로 Llama 3.1 8B Q4_K_M 처리. 12 GB로 Qwen3 14B 실행. 공식: 파라미터 × 0.6 = Q4 기준 GB. PromptQuorum VRAM 티어 가이드.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-20',
+    dateModified: '2026-11-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
     readTime: '4분 분량',
@@ -766,6 +774,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '모델이 VRAM을 초과할 경우 세 가지 옵션이 있습니다. 양자화를 낮추거나(Q5 대신 Q4_K_M), <code>/set parameter num_ctx 2048</code>로 컨텍스트 창을 줄이거나, Ollama가 레이어를 시스템 RAM으로 오프로드하도록 허용하는 방법입니다.',
           'CPU 오프로드는 작동하지만 속도가 느립니다. RAM으로 이동된 레이어마다 지연이 추가됩니다. 인터랙티브 사용을 위해서는 GPU의 VRAM 한도 내에서 유지하십시오. 7-8B 모델에서 컨텍스트를 4096에서 2048 토큰으로 줄이면 약 2 GB를 절약할 수 있습니다.',
           '모델 크기와 VRAM 추정 계산에 대한 전체 분석은 <a href="/ko/local-llms/how-much-vram-local-llm" class="text-primary hover:underline">로컬 LLM VRAM 완전 가이드</a>를 참조하십시오. 7B 티어에 대해서는 <a href="/ko/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">7B 모델에 필요한 RAM 용량</a>을 참조하십시오.',
+          '더 큰 그래픽카드를 아직 구매하기 어렵다면 GPU를 시간 단위로 대여하는 제공업체를 비교해 보십시오: <a href="/ko/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">VRAM이 충분한 GPU가 없다면 대여하세요</a>.',
         ],
       },
       faq: {

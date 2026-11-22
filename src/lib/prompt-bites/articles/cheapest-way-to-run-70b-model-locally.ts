@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cheapest-way-to-run-70b-model-locally-overview-hero-en.webp',
     type: 'comparison',
     title: 'Cheapest Practical Way to Run a 70B Model Locally in 2026',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-22',
     seoTitle: 'Cheapest Practical Way to Run 70B Locally 2026',
     metaDescription: 'The cheapest practical way to run a 70B model locally is a used dual RTX 3090 (~48GB VRAM) or the new $1,699 M5 Pro Mac mini (64GB). Check current prices — used GPU pricing varies widely.',
     educationalLevel: 'Intermediate',
@@ -144,6 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'If you only need a 70B model occasionally, don\'t buy hardware at all. Cloud GPU rental is often dramatically cheaper for occasional use than a $1,500–3,000 hardware purchase — RunPod\'s Community Cloud A40 48GB (the smallest GPU that fits 70B Q4 in full) runs around $0.44/hour as of this check, and hosted-inference APIs serving Llama 3.3 70B exist at a per-token rate with no hardware at all.',
           'This is worth naming plainly rather than glossing over, since a page that only ever recommends buying reads as trying to sell hardware to everyone — for occasional or bursty use, renting is the honest answer.',
+          'To try 70B models before buying hardware, <a href="/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">rent a GPU for 70B models</a>, or read the <a href="/power-local-llm/vast-ai-review" class="text-primary hover:underline">Vast.ai review</a> for one marketplace option. Another rental option for readers not ready to buy is covered in the <a href="/power-local-llm/clore-ai-review" class="text-primary hover:underline">Clore.ai marketplace review</a>.',
         ],
         affiliateLinks: [
           { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io', productName: 'RunPod GPU Cloud', productCategory: 'cloud-gpu' },
@@ -205,6 +206,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[DeepSeek-R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[Best DeepSeek Distill for Your GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[Cloud GPU Cost Per Hour 2026](/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
+          '[Rent a GPU for 70B models](/power-local-llm/best-cloud-gpu-providers) — [Vast.ai review](/power-local-llm/vast-ai-review)',
+          '[Clore.ai marketplace review](/power-local-llm/clore-ai-review) — another rental option before you buy hardware',
         ],
       },
     },
@@ -248,7 +251,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 6, name: 'Cloud GPU rental', description: 'No hardware purchase, best for occasional use' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Cheapest Practical Way to Run 70B Model Locally 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'en' },
+    schema: { '@type': 'TechArticle', headline: 'Cheapest Practical Way to Run 70B Model Locally 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'en' },
   },
   de: {
     designSkin: 'hub',
@@ -258,7 +261,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cheapest-way-to-run-70b-model-locally-overview-hero-de.webp',
     type: 'comparison',
     title: 'Günstigster praktikabler Weg, ein 70B-Modell lokal zu betreiben 2026',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-22',
     seoTitle: 'Günstigster praktikabler Weg für 70B lokal 2026',
     metaDescription: 'Der günstigste praktikable Weg, ein 70B-Modell lokal zu betreiben, ist eine gebrauchte Dual-RTX-3090 (~48 GB VRAM) oder der neue Mac mini mit M5 Pro (64 GB, ab 1.699 $). Aktuelle Preise prüfen — gebrauchte GPUs schwanken stark.',
     educationalLevel: 'Intermediate',
@@ -383,6 +386,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Wenn Sie ein 70B-Modell nur gelegentlich brauchen, kaufen Sie gar keine Hardware. Cloud-GPU-Miete ist für gelegentliche Nutzung oft deutlich günstiger als eine Hardware-Anschaffung für 1.500–3.000 $ — RunPods Community-Cloud-A40 mit 48 GB (die kleinste GPU, die 70B Q4 vollständig aufnimmt) kostet nach diesem Check rund 0,44 $/Stunde, und gehostete Inferenz-APIs für Llama 3.3 70B existieren ganz ohne eigene Hardware, mit Preis pro Token.',
           'Das sollte man klar benennen statt zu übergehen, denn eine Seite, die nur je Hardware-Kauf empfiehlt, wirkt, als wolle sie allen Hardware verkaufen — bei gelegentlicher oder unregelmäßiger Nutzung ist Mieten die ehrlichere Antwort.',
+          'Um 70B-Modelle vor dem Hardwarekauf auszuprobieren, können Sie <a href="/de/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">eine GPU für 70B-Modelle mieten</a>; das <a href="/de/power-local-llm/vast-ai-review" class="text-primary hover:underline">Vast.ai-Review</a> stellt eine Marktplatz-Option vor. Eine weitere Mietoption für alle, die noch nicht kaufen möchten, behandelt der <a href="/de/power-local-llm/clore-ai-review" class="text-primary hover:underline">Clore.ai-Marktplatz-Test</a>.',
         ],
         affiliateLinks: [
           { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io', productName: 'RunPod GPU Cloud', productCategory: 'cloud-gpu' },
@@ -443,6 +447,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[DeepSeek-R1 Distill VRAM-Spickzettel](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[Bestes DeepSeek Distill für Ihre GPU](/de/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[Cloud-GPU-Kosten pro Stunde 2026](/de/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
+          '[eine GPU für 70B-Modelle mieten](/de/power-local-llm/best-cloud-gpu-providers) — [Vast.ai-Review](/de/power-local-llm/vast-ai-review)',
+          '[Clore.ai-Marktplatz-Test](/de/power-local-llm/clore-ai-review) — eine weitere Mietoption, bevor Sie Hardware kaufen',
         ],
       },
     },
@@ -453,7 +459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: 'Kann ich ein 70B-Modell auf einer einzelnen Consumer-GPU betreiben?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht vollständig — keine einzelne Consumer-GPU hat genug VRAM für ein 70B-Q4_K_M-Modell (~42 GB). Eine RTX 4090 (24 GB) kann es mit CPU-Offloading bei etwa 8–12 Tok/s betreiben.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Günstigster praktikabler Weg, ein 70B-Modell lokal zu betreiben 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/de/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Günstigster praktikabler Weg, ein 70B-Modell lokal zu betreiben 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/de/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'de' },
   },
   fr: {
     designSkin: 'hub',
@@ -463,7 +469,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cheapest-way-to-run-70b-model-locally-overview-hero-fr.webp',
     type: 'comparison',
     title: 'Moyen le moins cher et pratique de faire tourner un modèle 70B localement en 2026',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-22',
     seoTitle: 'Configuration 70B locale la moins chère et pratique 2026',
     metaDescription: 'Le moyen le moins cher et pratique de faire tourner un modèle 70B localement est un dual RTX 3090 d\'occasion (~48 Go de VRAM) ou le nouveau Mac mini M5 Pro (64 Go, à partir de 1 699 $). Vérifiez les prix actuels.',
     educationalLevel: 'Intermediate',
@@ -588,6 +594,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Si vous n\'avez besoin d\'un modèle 70B qu\'occasionnellement, n\'achetez pas de matériel du tout. La location de GPU cloud est souvent bien moins chère pour un usage occasionnel qu\'un achat matériel de 1 500 à 3 000 $ — le A40 48 Go en Community Cloud de RunPod (le plus petit GPU accueillant un 70B Q4 en entier) tourne autour de 0,44 $/heure au moment de cette vérification, et des API d\'inférence hébergées pour Llama 3.3 70B existent avec une tarification au token, sans aucun matériel.',
           'Il vaut mieux le dire clairement plutôt que de l\'occulter, car une page qui ne recommande que l\'achat donne l\'impression de vouloir vendre du matériel à tout le monde — pour un usage occasionnel ou irrégulier, la location est la réponse honnête.',
+          'Pour essayer des modèles 70B avant d\'acheter du matériel, vous pouvez <a href="/fr/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">louer un GPU pour les modèles 70B</a> ; l\'<a href="/fr/power-local-llm/vast-ai-review" class="text-primary hover:underline">avis sur Vast.ai</a> présente une option de marketplace. Une autre option de location, pour ceux qui ne sont pas prêts à acheter, est détaillée dans l\'<a href="/fr/power-local-llm/clore-ai-review" class="text-primary hover:underline">avis sur la place de marché Clore.ai</a>.',
         ],
         affiliateLinks: [
           { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io', productName: 'RunPod GPU Cloud', productCategory: 'cloud-gpu' },
@@ -648,6 +655,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Aide-mémoire VRAM DeepSeek-R1 Distill](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[Meilleur DeepSeek Distill pour votre GPU](/fr/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[Coût GPU cloud par heure 2026](/fr/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
+          '[louer un GPU pour les modèles 70B](/fr/power-local-llm/best-cloud-gpu-providers) — [avis sur Vast.ai](/fr/power-local-llm/vast-ai-review)',
+          '[avis sur la place de marché Clore.ai](/fr/power-local-llm/clore-ai-review) — une autre option de location avant d\'acheter du matériel',
         ],
       },
     },
@@ -658,7 +667,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: 'Puis-je faire tourner un modèle 70B sur un seul GPU grand public ?', acceptedAnswer: { '@type': 'Answer', text: 'Pas complètement — aucun GPU grand public n\'a assez de VRAM pour un 70B Q4_K_M (~42 Go). Une RTX 4090 (24 Go) peut le faire tourner avec offload CPU à environ 8–12 tok/s.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Moyen le moins cher et pratique de faire tourner un modèle 70B localement en 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/fr/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Moyen le moins cher et pratique de faire tourner un modèle 70B localement en 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/fr/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'fr' },
   },
   ja: {
     designSkin: 'hub',
@@ -668,7 +677,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cheapest-way-to-run-70b-model-locally-overview-hero-ja.webp',
     type: 'comparison',
     title: '2026年版 70Bモデルをローカルで動かす最も安い実用的な方法',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-22',
     seoTitle: '2026年版 70Bをローカルで動かす最安の実用構成',
     metaDescription: '70Bモデルをローカルで動かす最も安い実用的な方法は、中古のデュアルRTX 3090（約48GB VRAM）、または新しいM5 Pro Mac mini（64GB、1,699ドルから）です。現在の価格を確認してください。',
     educationalLevel: 'Intermediate',
@@ -793,6 +802,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '70Bモデルをたまにしか使わないなら、そもそもハードウェアを購入しないでください。クラウドGPUのレンタルは、たまにしか使わない場合、1,500〜3,000ドルのハードウェア購入より大幅に安いことが多いです——RunPodのCommunity Cloud A40 48GB（70B Q4を完全に収容できる最小のGPU）は、この確認時点で1時間あたり約0.44ドルで利用でき、Llama 3.3 70Bを提供するホスト型推論APIもハードウェア一切不要でトークン単位の従量課金で存在します。',
           '購入ばかりを勧めるページはすべての人にハードウェアを売り込もうとしているように見えるため、これは曖昧にせずはっきり述べておく価値があります——たまにしか使わない、または不定期な利用には、レンタルが正直な答えです。',
+          'ハードウェアを購入する前に70Bモデルを試すには、<a href="/ja/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">70Bモデル向けにGPUをレンタル</a>するか、<a href="/ja/power-local-llm/vast-ai-review" class="text-primary hover:underline">Vast.aiレビュー</a>でマーケットプレイスの一例を確認してください。まだ購入の準備ができていない方向けの別のレンタル選択肢は、<a href="/ja/power-local-llm/clore-ai-review" class="text-primary hover:underline">Clore.aiマーケットプレイスのレビュー</a>で紹介しています。',
         ],
         affiliateLinks: [
           { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io', productName: 'RunPod GPU Cloud', productCategory: 'cloud-gpu' },
@@ -853,6 +863,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[DeepSeek-R1 Distill VRAMチートシート](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[お使いのGPUに最適なDeepSeek Distill](/ja/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[2026年版 クラウドGPUの時間あたりコスト](/ja/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
+          '[70Bモデル向けにGPUをレンタル](/ja/power-local-llm/best-cloud-gpu-providers) — [Vast.aiレビュー](/ja/power-local-llm/vast-ai-review)',
+          '[Clore.aiマーケットプレイスのレビュー](/ja/power-local-llm/clore-ai-review) — ハードウェアを買う前の別のレンタル選択肢',
         ],
       },
     },
@@ -863,7 +875,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: '70Bモデルを単体のコンシューマー向けGPUで動かせますか？', acceptedAnswer: { '@type': 'Answer', text: '完全には無理です——単体で70B Q4_K_Mモデル（約42GB）を収容できるコンシューマー向けGPUはありません。RTX 4090（24GB）ならCPUオフロードで約8〜12 tok/sで動かせます。' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年版 70Bモデルをローカルで動かす最も安い実用的な方法', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ja/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: '2026年版 70Bモデルをローカルで動かす最も安い実用的な方法', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/ja/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ja' },
   },
   es: {
     designSkin: 'hub',
@@ -873,7 +885,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cheapest-way-to-run-70b-model-locally-overview-hero-es.webp',
     type: 'comparison',
     title: 'Forma más barata y práctica de ejecutar un modelo 70B en local en 2026',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-22',
     seoTitle: 'Configuración local 70B más barata y práctica 2026',
     metaDescription: 'La forma más barata y práctica de ejecutar un modelo 70B en local es una dual RTX 3090 de segunda mano (~48 GB de VRAM) o el nuevo Mac mini M5 Pro (64 GB, desde 1.699 $). Consulta los precios actuales.',
     educationalLevel: 'Intermediate',
@@ -998,6 +1010,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Si solo necesitas un modelo 70B de forma ocasional, no compres hardware en absoluto. Alquilar una GPU en la nube suele ser muchísimo más barato para uso ocasional que una compra de hardware de 1.500–3.000 $ — la A40 de 48 GB en Community Cloud de RunPod (la GPU más pequeña que cabe un 70B Q4 por completo) cuesta alrededor de 0,44 $/hora en el momento de esta comprobación, y existen APIs de inferencia alojadas para Llama 3.3 70B con tarifa por token, sin hardware alguno.',
           'Merece la pena decirlo claramente en vez de pasarlo por alto, porque una página que solo recomienda comprar da la impresión de querer vender hardware a todo el mundo — para uso ocasional o irregular, alquilar es la respuesta honesta.',
+          'Para probar modelos 70B antes de comprar hardware, puedes <a href="/es/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">alquilar una GPU para modelos 70B</a>; la <a href="/es/power-local-llm/vast-ai-review" class="text-primary hover:underline">reseña de Vast.ai</a> presenta una opción de marketplace. Otra opción de alquiler para quien aún no está listo para comprar aparece en la <a href="/es/power-local-llm/clore-ai-review" class="text-primary hover:underline">reseña del marketplace Clore.ai</a>.',
         ],
         affiliateLinks: [
           { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io', productName: 'RunPod GPU Cloud', productCategory: 'cloud-gpu' },
@@ -1058,6 +1071,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Chuleta de VRAM para DeepSeek-R1 Distill](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[Mejor DeepSeek Distill para tu GPU](/es/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[Coste de GPU en la nube por hora 2026](/es/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
+          '[alquilar una GPU para modelos 70B](/es/power-local-llm/best-cloud-gpu-providers) — [reseña de Vast.ai](/es/power-local-llm/vast-ai-review)',
+          '[reseña del marketplace Clore.ai](/es/power-local-llm/clore-ai-review) — otra opción de alquiler antes de comprar hardware',
         ],
       },
     },
@@ -1068,7 +1083,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: '¿Puedo ejecutar un modelo 70B en una sola GPU de consumo?', acceptedAnswer: { '@type': 'Answer', text: 'No del todo — ninguna GPU de consumo tiene suficiente VRAM para un 70B Q4_K_M (~42 GB). Una RTX 4090 (24 GB) puede ejecutarlo con offload a CPU a unos 8–12 tok/s.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Forma más barata y práctica de ejecutar un modelo 70B en local en 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/es/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'es' },
+    schema: { '@type': 'TechArticle', headline: 'Forma más barata y práctica de ejecutar un modelo 70B en local en 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/es/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'es' },
   },
   zh: {
     designSkin: 'hub',
@@ -1078,7 +1093,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cheapest-way-to-run-70b-model-locally-overview-hero-zh.webp',
     type: 'comparison',
     title: '2026年本地运行70B模型最便宜的实用方案',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-22',
     seoTitle: '2026年本地运行70B最便宜的实用配置',
     metaDescription: '在本地运行70B模型最便宜的实用方案是二手双RTX 3090（约48GB显存），或全新的M5 Pro版Mac mini（64GB，起售价1,699美元）。请查看当前价格。',
     educationalLevel: 'Intermediate',
@@ -1203,6 +1218,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '如果你只是偶尔需要用到70B模型，那就完全不要购买硬件。对于偶尔使用的场景，租用云端GPU通常比花费1,500至3,000美元购买硬件便宜得多——RunPod Community Cloud上的A40 48GB（能完整容纳70B Q4的最小显卡）在本次核实时约为每小时0.44美元，此外还有按token计费、完全无需任何硬件的Llama 3.3 70B托管推理API。',
           '这一点值得明确说出来，而不是回避——一个只推荐购买的页面看起来像是想把硬件卖给所有人。对于偶尔或不规律的使用场景，租用才是诚实的答案。',
+          '在购买硬件之前想试用70B模型，可以<a href="/zh/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">为70B模型租用GPU</a>；<a href="/zh/power-local-llm/vast-ai-review" class="text-primary hover:underline">Vast.ai评测</a>介绍了一种市场型方案。尚未准备购买的读者，还可以在<a href="/zh/power-local-llm/clore-ai-review" class="text-primary hover:underline">Clore.ai市场评测</a>中了解另一种租用方案。',
         ],
         affiliateLinks: [
           { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io', productName: 'RunPod GPU Cloud', productCategory: 'cloud-gpu' },
@@ -1263,6 +1279,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[DeepSeek-R1 Distill显存速查表](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[最适合你显卡的DeepSeek Distill](/zh/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[2026年云端GPU每小时费用](/zh/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
+          '[为70B模型租用GPU](/zh/power-local-llm/best-cloud-gpu-providers) — [Vast.ai评测](/zh/power-local-llm/vast-ai-review)',
+          '[Clore.ai市场评测](/zh/power-local-llm/clore-ai-review) — 购买硬件前的另一种租用方案',
         ],
       },
     },
@@ -1273,7 +1291,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: '我能在单张消费级显卡上运行70B模型吗？', acceptedAnswer: { '@type': 'Answer', text: '无法完整运行——没有任何单张消费级显卡拥有足够显存容纳一个70B Q4_K_M模型（约42GB）。RTX 4090（24GB）可以通过CPU卸载以约8至12 tok/s运行它。' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年本地运行70B模型最便宜的实用方案', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/zh/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年本地运行70B模型最便宜的实用方案', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/zh/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'zh' },
   },
   pt: {
     designSkin: 'hub',
@@ -1283,7 +1301,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cheapest-way-to-run-70b-model-locally-overview-hero-pt.webp',
     type: 'comparison',
     title: 'Forma Mais Barata e Prática de Rodar um Modelo 70B Localmente em 2026',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-22',
     seoTitle: 'Configuração Local 70B Mais Barata e Prática 2026',
     metaDescription: 'A forma mais barata e prática de rodar um modelo 70B localmente é uma dupla de RTX 3090 usadas (~48GB de VRAM) ou o novo Mac mini M5 Pro (64GB, a partir de US$ 1.699). Confira os preços atuais.',
     educationalLevel: 'Intermediate',
@@ -1408,6 +1426,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Se você só precisa de um modelo 70B ocasionalmente, não compre hardware algum. Alugar uma GPU na nuvem costuma ser muito mais barato para uso ocasional do que uma compra de hardware de US$ 1.500–3.000 — a A40 de 48GB no Community Cloud da RunPod (a menor GPU que comporta um 70B Q4 por completo) custa cerca de US$ 0,44/hora nesta verificação, e existem APIs de inferência hospedadas para Llama 3.3 70B com cobrança por token, sem nenhum hardware.',
           'Vale a pena dizer isso claramente em vez de deixar de lado, porque uma página que só recomenda comprar parece estar tentando vender hardware para todo mundo — para uso ocasional ou irregular, alugar é a resposta honesta.',
+          'Para testar modelos 70B antes de comprar hardware, você pode <a href="/pt/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">alugar uma GPU para modelos 70B</a>; a <a href="/pt/power-local-llm/vast-ai-review" class="text-primary hover:underline">análise de Vast.ai</a> apresenta uma opção de marketplace. Outra opção de aluguel para quem ainda não está pronto para comprar está na <a href="/pt/power-local-llm/clore-ai-review" class="text-primary hover:underline">análise do marketplace Clore.ai</a>.',
         ],
         affiliateLinks: [
           { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io', productName: 'RunPod GPU Cloud', productCategory: 'cloud-gpu' },
@@ -1468,6 +1487,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Cola de VRAM para DeepSeek-R1 Distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[Melhor DeepSeek Distill para sua GPU](/pt/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[Custo de GPU na Nuvem por Hora 2026](/pt/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
+          '[alugar uma GPU para modelos 70B](/pt/power-local-llm/best-cloud-gpu-providers) — [análise de Vast.ai](/pt/power-local-llm/vast-ai-review)',
+          '[análise do marketplace Clore.ai](/pt/power-local-llm/clore-ai-review) — outra opção de aluguel antes de comprar hardware',
         ],
       },
     },
@@ -1478,7 +1499,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: 'Posso rodar um modelo 70B em uma única GPU de consumo?', acceptedAnswer: { '@type': 'Answer', text: 'Não totalmente — nenhuma GPU de consumo tem VRAM suficiente para um 70B Q4_K_M (~42GB). Uma RTX 4090 (24GB) pode rodá-lo com offload para a CPU a cerca de 8–12 tok/s.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Forma Mais Barata e Prática de Rodar um Modelo 70B Localmente em 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/pt/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'pt-BR' },
+    schema: { '@type': 'TechArticle', headline: 'Forma Mais Barata e Prática de Rodar um Modelo 70B Localmente em 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/pt/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'pt-BR' },
   },
   ar: {
     designSkin: 'hub',
@@ -1488,7 +1509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cheapest-way-to-run-70b-model-locally-overview-hero-ar.webp',
     type: 'comparison',
     title: 'أرخص طريقة عملية لتشغيل نموذج 70B محليًا في 2026',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-22',
     seoTitle: 'أرخص إعداد عملي لتشغيل 70B محليًا 2026',
     metaDescription: 'أرخص طريقة عملية لتشغيل نموذج 70B محليًا هي بطاقتا RTX 3090 مستعملتان (~48 جيجابايت VRAM)، أو جهاز Mac mini الجديد بمعالج M5 Pro (64 جيجابايت، بسعر يبدأ من 1,699 دولارًا). تحقق من الأسعار الحالية.',
     educationalLevel: 'Intermediate',
@@ -1613,6 +1634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'إذا كنت تحتاج إلى نموذج 70B بشكل غير منتظم فقط، فلا تشترِ أي أجهزة على الإطلاق. غالبًا ما يكون استئجار بطاقة رسومية سحابية أرخص بكثير للاستخدام غير المنتظم من شراء أجهزة بقيمة 1,500–3,000 دولار — تبلغ تكلفة بطاقة A40 بسعة 48 جيجابايت على Community Cloud من RunPod (أصغر بطاقة تستوعب 70B بصيغة Q4 كاملًا) نحو 0.44 دولارًا في الساعة وقت هذا التحقق، وتوجد أيضًا واجهات برمجية استدلال مستضافة لنموذج Llama 3.3 70B بتسعير لكل رمز، دون أي أجهزة على الإطلاق.',
           'يستحق هذا أن يُذكر بوضوح بدلًا من تجاهله، لأن صفحة توصي فقط بالشراء تبدو وكأنها تحاول بيع الأجهزة للجميع — بالنسبة للاستخدام غير المنتظم أو العرضي، الاستئجار هو الإجابة الصادقة.',
+          'لتجربة نماذج 70B قبل شراء العتاد، يمكنك <a href="/ar/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">استئجار GPU لنماذج 70B</a>، أو الاطلاع على <a href="/ar/power-local-llm/vast-ai-review" class="text-primary hover:underline">مراجعة Vast.ai</a> لخيار قائم على السوق. ويتناول <a href="/ar/power-local-llm/clore-ai-review" class="text-primary hover:underline">مراجعة سوق Clore.ai</a> خيار إيجار آخر لمن ليسوا مستعدين للشراء بعد.',
         ],
         affiliateLinks: [
           { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io', productName: 'RunPod GPU Cloud', productCategory: 'cloud-gpu' },
@@ -1673,6 +1695,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[ورقة غش VRAM لـ DeepSeek-R1 Distill](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[أفضل DeepSeek Distill لبطاقتك الرسومية](/ar/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[تكلفة البطاقة الرسومية السحابية في الساعة 2026](/ar/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
+          '[استئجار GPU لنماذج 70B](/ar/power-local-llm/best-cloud-gpu-providers) — [مراجعة Vast.ai](/ar/power-local-llm/vast-ai-review)',
+          '[مراجعة سوق Clore.ai](/ar/power-local-llm/clore-ai-review) — خيار إيجار آخر قبل شراء العتاد',
         ],
       },
     },
@@ -1683,7 +1707,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: 'هل يمكنني تشغيل نموذج 70B على بطاقة رسومية استهلاكية واحدة؟', acceptedAnswer: { '@type': 'Answer', text: 'ليس بالكامل — لا تملك أي بطاقة رسومية استهلاكية ذاكرة VRAM كافية لنموذج 70B بصيغة Q4_K_M (~42 جيجابايت). يمكن لـRTX 4090 (24 جيجابايت) تشغيله بتحميل جزئي على المعالج بنحو 8–12 رمز/ثانية.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'أرخص طريقة عملية لتشغيل نموذج 70B محليًا في 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ar/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ar' },
+    schema: { '@type': 'TechArticle', headline: 'أرخص طريقة عملية لتشغيل نموذج 70B محليًا في 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/ar/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ar' },
   },
   ko: {
     designSkin: 'hub',
@@ -1693,7 +1717,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cheapest-way-to-run-70b-model-locally-overview-hero-ko.webp',
     type: 'comparison',
     title: '2026년 70B 모델을 가장 저렴하고 실용적으로 로컬에서 실행하는 방법',
-    dateModified: '2026-08-26',
+    dateModified: '2026-11-22',
     seoTitle: '2026년 가장 저렴하고 실용적인 70B 로컬 구성',
     metaDescription: '70B 모델을 로컬에서 실행하는 가장 저렴하고 실용적인 방법은 중고 RTX 3090 2장(약 48GB VRAM) 구성이거나 신형 M5 Pro Mac mini(64GB, 1,699달러부터)입니다. 현재 가격을 확인하십시오.',
     educationalLevel: 'Intermediate',
@@ -1818,6 +1842,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '70B 모델이 가끔씩만 필요하다면 하드웨어를 아예 구매하지 마십시오. 클라우드 GPU 대여는 가끔씩 사용하는 경우 1,500~3,000달러의 하드웨어 구매보다 훨씬 저렴한 경우가 많습니다 — RunPod의 Community Cloud A40 48GB(70B Q4를 완전히 수용하는 가장 작은 GPU)는 이 확인 시점 기준 시간당 약 0.44달러이며, Llama 3.3 70B를 제공하는 호스팅형 추론 API는 하드웨어 없이 토큰당 요금으로 존재합니다.',
           '구매만 추천하는 페이지는 모두에게 하드웨어를 팔려는 것처럼 보이므로, 이를 얼버무리지 않고 명확히 밝힐 가치가 있습니다 — 가끔씩 또는 불규칙적으로 사용하는 경우, 대여가 정직한 답입니다.',
+          '하드웨어를 구매하기 전에 70B 모델을 시험해 보려면 <a href="/ko/power-local-llm/best-cloud-gpu-providers" class="text-primary hover:underline">70B 모델용 GPU 대여</a>할 수 있으며, <a href="/ko/power-local-llm/vast-ai-review" class="text-primary hover:underline">Vast.ai 리뷰</a>에서 마켓플레이스 방식의 한 예를 볼 수 있습니다. 아직 구매할 준비가 되지 않은 분을 위한 또 다른 대여 선택지는 <a href="/ko/power-local-llm/clore-ai-review" class="text-primary hover:underline">Clore.ai 마켓플레이스 리뷰</a>에서 다룹니다.',
         ],
         affiliateLinks: [
           { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io', productName: 'RunPod GPU Cloud', productCategory: 'cloud-gpu' },
@@ -1878,6 +1903,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[DeepSeek-R1 Distill VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[GPU에 가장 적합한 DeepSeek Distill](/ko/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[2026년 클라우드 GPU 시간당 비용](/ko/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
+          '[70B 모델용 GPU 대여](/ko/power-local-llm/best-cloud-gpu-providers) — [Vast.ai 리뷰](/ko/power-local-llm/vast-ai-review)',
+          '[Clore.ai 마켓플레이스 리뷰](/ko/power-local-llm/clore-ai-review) — 하드웨어를 구매하기 전의 또 다른 대여 선택지',
         ],
       },
     },
@@ -1888,6 +1915,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'Question', name: '단일 소비자용 GPU에서 70B 모델을 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '완전히는 불가능합니다 — 단일 소비자용 GPU 중 70B Q4_K_M 모델(약 42GB)을 담을 만큼 VRAM이 충분한 것은 없습니다. RTX 4090(24GB)은 CPU 오프로드로 약 8~12 tok/s에 실행할 수 있습니다.' } },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026년 70B 모델을 가장 저렴하고 실용적으로 로컬에서 실행하는 방법', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ko/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ko' },
+    schema: { '@type': 'TechArticle', headline: '2026년 70B 모델을 가장 저렴하고 실용적으로 로컬에서 실행하는 방법', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/ko/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'ko' },
   },
 }

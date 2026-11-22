@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: '**Older used GPUs sell below their launch prices (InsiderLLM tracker: RTX 3080 10GB $280-350, RTX 3060 12GB about $300), but the RTX 3090 and RTX 4090 now sell near or above MSRP in US listings.** The used market is generally well-stocked with ex-mining and ex-gaming cards. Buying used can make sense for a first rig or an upgrade; mining cards are riskier unless you can test on-site. Prices below are US-market estimates and change quickly.',
       metaDescription: 'Used GPUs for local LLMs: RTX 3060, 3080, 3090 and 4090 price ranges, where to buy, mining-card risks and how to test a card before you pay.',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-15',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**Older used GPUs sell below their launch prices (InsiderLLM tracker: RTX 3080 10GB $280-350, RTX 3060 12GB about $300), but the RTX 3090 and RTX 4090 now sell near or above MSRP in US listings. Test any used card before buying, especially ex-mining cards.**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       readTime: '8 min',
@@ -114,6 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Buying a mining RTX 3080 at a steep discount without testing--VRAM may be degraded and show errors under load.',
             'Assuming "like new condition" means healthy VRAM--cosmetics ≠ component health. Always stress-test.',
             'Paying for shipping on a GPU without buyer protection (not eBay)--if it arrives dead, you\'re stuck.',
+            '**Not sure a used card is enough?** You can [rent before you buy a used card](/power-local-llm/best-cloud-gpu-providers) to check that your models fit and run at a speed you accept.',
           ],
         },
         'faqSection': {
@@ -137,6 +138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms)',
             '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide)',
+            '[Rent before you buy a used card](/power-local-llm/best-cloud-gpu-providers) -- Rent a similar GPU first to check fit and speed.',
           ],
         },
         'sources': {
@@ -157,7 +159,7 @@ schema: {
         'description': 'Used GPUs for local LLMs: RTX 3060, 3080, 3090 and 4090 price ranges, where to buy, mining-card risks and how to test a card before you pay.',
         'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -258,6 +260,7 @@ schema: {
       intro: '**Las GPUs de segunda mano más antiguas se venden por debajo de su precio de lanzamiento (rastreador de InsiderLLM: RTX 3080 10GB $280-350, RTX 3060 12GB unos $300), pero la RTX 3090 y la RTX 4090 se venden ahora cerca o por encima del MSRP en los listados de EE. UU.** El mercado de segunda mano suele estar bien surtido de tarjetas ex-minería y ex-gaming. Comprar de segunda mano puede tener sentido para tu primer equipo o al actualizar; las tarjetas de minería son más arriesgadas a menos que puedas probarlas in situ. Los precios son estimaciones del mercado de EE. UU. y cambian con rapidez.',
       metaDescription: 'GPUs de segunda mano para LLMs locales: rangos de precio de RTX 3060, 3080, 3090 y 4090, dónde comprar, riesgos de las tarjetas de minería y cómo probarlas.',
       publishDate: '2026-04-05',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**Las GPUs de segunda mano más antiguas se venden por debajo del precio de lanzamiento (rastreador de InsiderLLM: RTX 3080 10GB $280-350, RTX 3060 12GB unos $300), pero la RTX 3090 y la RTX 4090 se venden ahora cerca o por encima del MSRP en los listados de EE. UU. Prueba cualquier tarjeta usada antes de comprar, sobre todo las ex-minería.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo de LLMs locales',
       readTime: '8 min de lectura',
@@ -353,6 +356,7 @@ schema: {
             'Comprar una RTX 3080 de minería con un gran descuento sin probarla: la VRAM puede estar degradada y mostrar errores bajo carga.',
             'Asumir que "como nueva" equivale a VRAM saludable: el aspecto cosmético no equivale a salud de los componentes. Haz siempre una prueba de estrés.',
             'Pagar el envío de una GPU sin protección al comprador (fuera de eBay): si llega defectuosa, puede que tengas poco recurso.',
+            '**¿No estás seguro de que una tarjeta usada baste?** Puedes [alquilar antes de comprar una tarjeta usada](/es/power-local-llm/best-cloud-gpu-providers) para comprobar que tus modelos caben y funcionan a una velocidad que te resulte aceptable.',
           ],
         },
         'faqSection': {
@@ -376,6 +380,7 @@ schema: {
             '[RTX 5090 vs RTX 4090](/es/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms)',
             '[Guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide)',
+            '[Alquilar antes de comprar una tarjeta usada](/es/power-local-llm/best-cloud-gpu-providers) -- Alquila primero una GPU similar para comprobar el ajuste y la velocidad.',
           ],
         },
         'sources': {
@@ -396,7 +401,7 @@ schema: {
         'description': 'GPUs de segunda mano para LLMs locales: rangos de precio de RTX 3060, 3080, 3090 y 4090, dónde comprar, riesgos de las tarjetas de minería y cómo probarlas.',
         'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -476,6 +481,7 @@ schema: {
       intro: '**وحدات GPU المستعملة الأقدم تُباع بأقل من سعر إطلاقها (متتبع InsiderLLM: RTX 3080 10GB بين $280 و$350، وRTX 3060 12GB نحو $300)، لكن RTX 3090 وRTX 4090 تُباعان الآن قرب سعر MSRP أو فوقه في قوائم السوق الأمريكي.** السوق المستعمل عادةً ما يكون مليئًا ببطاقات سابقة للتعدين وسابقة للألعاب. الشراء المستعمل قد يكون منطقيًا لأول جهاز لك أو عند الترقية؛ بطاقات التعدين أكثر مخاطرة ما لم تستطع اختبارها في الموقع. الأسعار أدناه تقديرات للسوق الأمريكي وتتغير بسرعة.',
       metaDescription: '⁨GPU⁩ مستعملة لنماذج ⁨LLM⁩ المحلية: نطاقات أسعار ⁨RTX 3060⁩ و⁨3080⁩ و⁨3090⁩ و⁨4090⁩، وأين تشتري، ومخاطر بطاقات التعدين، وكيف تختبر البطاقة قبل الدفع.',
       publishDate: '2026-04-05',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**وحدات GPU المستعملة الأقدم تُباع بأقل من سعر إطلاقها (متتبع InsiderLLM: RTX 3080 10GB بين $280 و$350، وRTX 3060 12GB نحو $300)، لكن RTX 3090 وRTX 4090 تُباعان الآن قرب سعر MSRP أو فوقه في قوائم السوق الأمريكي. اختبر أي بطاقة مستعملة قبل الشراء، خصوصًا بطاقات التعدين السابقة.**',
       audience: 'المطورون المُلمّون بـ Ollama أو LM Studio الذين يحسّنون سير عمل نماذج LLM المحلية',
       readTime: '8 دقائق قراءة',
@@ -571,6 +577,7 @@ schema: {
             'شراء RTX 3080 من التعدين بخصم كبير دون اختبارها: قد يكون VRAM متدهورًا ويُظهر أخطاء تحت الحمل.',
             'افتراض أن "كالجديدة" يعادل VRAM سليمًا: المظهر الخارجي لا يعادل صحة المكونات. أجرِ دائمًا اختبار إجهاد.',
             'دفع رسوم شحن GPU دون حماية المشتري (خارج eBay): إذا وصلت معطلة، فقد لا يكون أمامك سوى سبيل ضئيل للرجوع على البائع.',
+            '**لست متأكدًا من كفاية بطاقة مستعملة؟** يمكنك [الاستئجار قبل شراء بطاقة مستعملة](/ar/power-local-llm/best-cloud-gpu-providers) للتحقق من أن نماذجك تتسع وتعمل بسرعة تقبلها.',
           ],
         },
         'faqSection': {
@@ -594,6 +601,7 @@ schema: {
             '[RTX 5090 مقابل RTX 4090](/ar/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[أفضل وحدات GPU لنماذج LLM المحلية](/ar/local-llms/best-gpus-for-local-llms)',
             '[دليل عتاد LLM المحلي](/ar/local-llms/local-llm-hardware-guide)',
+            '[الاستئجار قبل شراء بطاقة مستعملة](/ar/power-local-llm/best-cloud-gpu-providers) -- استأجر أولًا GPU مشابهة للتحقق من ملاءمة النموذج والسرعة.',
           ],
         },
         'sources': {
@@ -614,7 +622,7 @@ schema: {
         'description': 'GPU مستعملة لنماذج LLM المحلية: نطاقات أسعار RTX 3060 و3080 و3090 و4090، وأين تشتري، ومخاطر بطاقات التعدين، وكيف تختبر البطاقة قبل الدفع.',
         'url': 'https://www.promptquorum.com/ar/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
@@ -696,6 +704,7 @@ schema: {
       intro: '**GPUs usadas mais antigas são vendidas abaixo do preço de lançamento (rastreador da InsiderLLM: RTX 3080 10GB US$ 280-350, RTX 3060 12GB cerca de US$ 300), mas a RTX 3090 e a RTX 4090 agora são vendidas perto do MSRP ou acima dele nas listagens dos EUA.** O mercado de usados costuma estar bem abastecido de placas ex-mineração e ex-gaming. Comprar usado pode fazer sentido para seu primeiro setup ou ao atualizar; placas de mineração são mais arriscadas a menos que você possa testá-las in loco. Os preços abaixo são estimativas do mercado dos EUA e mudam rápido.',
       metaDescription: 'GPUs usadas para LLMs locais: faixas de preço da RTX 3060, 3080, 3090 e 4090, onde comprar, riscos das placas de mineração e como testar antes de pagar.',
       publishDate: '2026-04-05',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**GPUs usadas mais antigas são vendidas abaixo do preço de lançamento (rastreador da InsiderLLM: RTX 3080 10GB US$ 280-350, RTX 3060 12GB cerca de US$ 300), mas a RTX 3090 e a RTX 4090 agora são vendidas perto do MSRP ou acima dele nas listagens dos EUA. Teste qualquer placa usada antes de comprar, principalmente as ex-mineração.**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho de LLMs locais',
       readTime: '8 min de leitura',
@@ -791,6 +800,7 @@ schema: {
             'Comprar uma RTX 3080 de mineração com grande desconto sem testá-la — a VRAM pode estar degradada e mostrar erros sob carga.',
             'Assumir que "como nova" equivale a VRAM saudável — aparência estética não equivale à saúde dos componentes. Faça sempre um teste de estresse.',
             'Pagar o frete de uma GPU sem proteção ao comprador (fora do eBay) — se chegar com defeito, talvez você tenha pouco recurso.',
+            '**Não tem certeza de que uma placa usada basta?** Você pode [alugar antes de comprar uma placa usada](/pt/power-local-llm/best-cloud-gpu-providers) para verificar se seus modelos cabem e rodam em uma velocidade aceitável para você.',
           ],
         },
         faqSection: {
@@ -814,6 +824,7 @@ schema: {
             '[RTX 5090 vs RTX 4090](/pt/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Melhores GPUs para LLMs locais](/pt/local-llms/best-gpus-for-local-llms)',
             '[Guia de hardware para LLMs locais](/pt/local-llms/local-llm-hardware-guide)',
+            '[Alugar antes de comprar uma placa usada](/pt/power-local-llm/best-cloud-gpu-providers) -- Alugue primeiro uma GPU semelhante para verificar o encaixe e a velocidade.',
           ],
         },
         'sources': {
@@ -835,7 +846,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/used-gpus-for-local-llms',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
-        dateModified: '2026-11-15',
+        dateModified: '2026-11-22',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -911,6 +922,7 @@ schema: {
       intro: '**Ältere gebrauchte GPUs werden unter ihrem Einführungspreis verkauft (InsiderLLM-Tracker: RTX 3080 10GB 280-350 $, RTX 3060 12GB ca. 300 $), die RTX 3090 und die RTX 4090 liegen in US-Angeboten inzwischen aber nahe an oder über der UVP.** Der Gebrauchtmarkt ist in der Regel gut mit Ex-Mining- und Ex-Gaming-Karten versorgt. Der Kauf gebrauchter Hardware kann für Ihr erstes System oder beim Aufrüsten sinnvoll sein; Mining-Karten sind riskanter, es sei denn, Sie können vor Ort testen. Die Preise unten sind Schätzungen für den US-Markt und ändern sich schnell.',
       metaDescription: 'Gebrauchte GPUs für lokale LLMs: Preisbereiche für RTX 3060, 3080, 3090 und 4090, wo kaufen, Risiken bei Mining-Karten und wie Sie eine Karte vor dem Kauf testen.',
       publishDate: '2026-04-05',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**Ältere gebrauchte GPUs werden unter ihrem Einführungspreis verkauft (InsiderLLM-Tracker: RTX 3080 10GB 280-350 $, RTX 3060 12GB ca. 300 $), die RTX 3090 und die RTX 4090 liegen in US-Angeboten inzwischen aber nahe an oder über der UVP. Testen Sie jede gebrauchte Karte vor dem Kauf, besonders Ex-Mining-Karten.**',
       audience: 'Entwickler, die mit Ollama oder LM Studio lokale LLM-Workflows optimieren',
       readTime: '8 Min. Lesezeit',
@@ -1006,6 +1018,7 @@ schema: {
             'Eine Mining-RTX-3080 mit hohem Rabatt kaufen, ohne zu testen – der VRAM kann verschlissen sein und unter Last Fehler zeigen.',
             'Annehmen, dass "wie neu" bedeutet gesunder VRAM – Kosmetik ≠ Komponentengesundheit. Immer Stress-Test durchführen.',
             'Für Versand ohne Käuferschutz bezahlen (nicht eBay) – kommt sie defekt an, haben Sie möglicherweise kaum Rückgriffsmöglichkeiten.',
+            '**Unsicher, ob eine gebrauchte Karte reicht?** Sie können [mieten, bevor Sie eine gebrauchte Karte kaufen](/de/power-local-llm/best-cloud-gpu-providers), um zu prüfen, ob Ihre Modelle passen und in einer für Sie akzeptablen Geschwindigkeit laufen.',
           ],
         },
         'faqSection': {
@@ -1029,6 +1042,7 @@ schema: {
             '[RTX 5090 vs RTX 4090](/de/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms)',
             '[Leitfaden zur lokalen LLM-Hardware](/de/local-llms/local-llm-hardware-guide)',
+            '[Mieten, bevor Sie eine gebrauchte Karte kaufen](/de/power-local-llm/best-cloud-gpu-providers) -- Mieten Sie zuerst eine ähnliche GPU, um Passform und Geschwindigkeit zu prüfen.',
           ],
         },
         'sources': {
@@ -1049,7 +1063,7 @@ schema: {
         'description': 'Gebrauchte GPUs für lokale LLMs: Preisbereiche für RTX 3060, 3080, 3090 und 4090, wo kaufen, Risiken bei Mining-Karten und wie Sie eine Karte vor dem Kauf testen.',
         'url': 'https://www.promptquorum.com/de/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1129,6 +1143,7 @@ schema: {
       intro: '**Les GPU d\'occasion plus anciens se vendent en dessous de leur prix de lancement (suivi d\'InsiderLLM : RTX 3080 10GB 280-350 $, RTX 3060 12GB environ 300 $), mais la RTX 3090 et la RTX 4090 se vendent désormais près du PDSF ou au-dessus dans les annonces américaines.** Le marché de l\'occasion est généralement bien approvisionné en cartes ex-mining et ex-gaming. L\'achat d\'occasion peut avoir du sens pour votre premier système ou lors d\'une mise à niveau ; les cartes minières sont plus risquées sauf si vous pouvez tester sur site. Les prix ci-dessous sont des estimations pour le marché américain et changent rapidement.',
       metaDescription: 'GPU d\'occasion pour LLM locaux : fourchettes de prix des RTX 3060, 3080, 3090 et 4090, où acheter, risques des cartes de minage et comment tester avant de payer.',
       publishDate: '2026-04-05',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**Les GPU d\'occasion plus anciens se vendent en dessous de leur prix de lancement (suivi d\'InsiderLLM : RTX 3080 10GB 280-350 $, RTX 3060 12GB environ 300 $), mais la RTX 3090 et la RTX 4090 se vendent désormais près du PDSF ou au-dessus dans les annonces américaines. Testez toute carte d\'occasion avant d\'acheter, surtout les cartes ex-mining.**',
       audience: 'Développeurs familiers avec Ollama ou LM Studio optimisant les workflows LLM locaux',
       readTime: '8 min de lecture',
@@ -1224,6 +1239,7 @@ schema: {
             'Acheter une RTX 3080 minière avec une forte remise sans tester – le VRAM peut être dégradé et montrer des erreurs sous charge.',
             'Supposer "comme neuve" signifie VRAM sain – cosmétique ≠ santé composant. Toujours test stress.',
             'Payer expédition sans protection acheteur (pas eBay) – si arrive morte, vous êtes bloqué.',
+            '**Vous ne savez pas si une carte d\'occasion suffit ?** Vous pouvez [louer avant d\'acheter une carte d\'occasion](/fr/power-local-llm/best-cloud-gpu-providers) pour vérifier que vos modèles tiennent et tournent à une vitesse acceptable pour vous.',
           ],
         },
         'faqSection': {
@@ -1247,6 +1263,7 @@ schema: {
             '[RTX 5090 vs RTX 4090](/fr/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Meilleures GPU pour LLMs locaux](/fr/local-llms/best-gpus-for-local-llms)',
             '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide)',
+            '[Louer avant d\'acheter une carte d\'occasion](/fr/power-local-llm/best-cloud-gpu-providers) -- Louez d\'abord un GPU similaire pour vérifier la compatibilité et la vitesse.',
           ],
         },
         'sources': {
@@ -1267,7 +1284,7 @@ schema: {
         'description': 'GPU d\'occasion pour LLM locaux : fourchettes de prix des RTX 3060, 3080, 3090 et 4090, où acheter, risques des cartes de minage et comment tester avant de payer.',
         'url': 'https://www.promptquorum.com/fr/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1347,6 +1364,7 @@ schema: {
       intro: '**古めの中古GPUは発売価格を下回る価格で売られていますが（InsiderLLMトラッカー：RTX 3080 10GBは$280-350、RTX 3060 12GBは約$300）、RTX 3090とRTX 4090は米国の出品で現在MSRP付近かそれ以上で取引されています。** 中古市場には元マイニングおよび元ゲーミングのカードが豊富に流通しています。初めての構築やアップグレードでは中古購入が合理的な場合もありますが、マイニングカードは現地でテストできない限りリスクが高くなります。以下の価格は米国市場の目安で、すぐに変動します。',
       metaDescription: 'ローカルLLM向け中古GPU：RTX 3060、3080、3090、4090の価格帯（米国市場の目安）、購入先、マイニングカードのリスク、購入前のテスト方法を解説します。',
       publishDate: '2026-04-05',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**古めの中古GPUは発売価格を下回る価格で売られていますが（InsiderLLMトラッカー：RTX 3080 10GBは$280-350、RTX 3060 12GBは約$300）、RTX 3090とRTX 4090は米国の出品で現在MSRP付近かそれ以上で取引されています。中古カードは、特に元マイニングカードの場合、購入前に必ずテストしてください。**',
       audience: 'OllamaまたはLM Studioに精通し、ローカルLLMワークフローを最適化する開発者',
       readTime: '8分で読める',
@@ -1442,6 +1460,7 @@ schema: {
             '大幅な割引のマイニングRTX 3080をテストせずに購入 – VRAMが劣化していて、負荷下でエラーが出る可能性があります。',
             '「新品同様の状態」がVRAM健全を意味すると仮定 – 外見≠コンポーネント健全性。常にストレステストを実施。',
             '購入者保護なしで送料を払う（eBayではない） – 到着時に死亡していれば、立ち往生しています。',
+            '**中古カードで足りるか不安ですか？** [中古カードを買う前にレンタルで試す](/ja/power-local-llm/best-cloud-gpu-providers)ことで、モデルが収まり、許容できる速度で動くかを確認できます。',
           ],
         },
         'faqSection': {
@@ -1465,6 +1484,7 @@ schema: {
             '[RTX 5090 vs RTX 4090](/ja/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[ローカルLLM向けベストGPU](/ja/local-llms/best-gpus-for-local-llms)',
             '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)',
+            '[中古カードを買う前にレンタルで試す](/ja/power-local-llm/best-cloud-gpu-providers) -- 似たGPUを先にレンタルして、収まるかと速度を確認します。',
           ],
         },
         'sources': {
@@ -1485,7 +1505,7 @@ schema: {
         'description': 'ローカルLLM向け中古GPU：RTX 3060、3080、3090、4090の価格帯（米国市場の目安）、購入先、マイニングカードのリスク、購入前のテスト方法を解説します。',
         'url': 'https://www.promptquorum.com/ja/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1565,6 +1585,7 @@ schema: {
       intro: '**较旧的二手GPU成交价低于发售价（InsiderLLM追踪页：RTX 3080 10GB为$280-350，RTX 3060 12GB约$300），但RTX 3090和RTX 4090目前在美国挂牌中已接近或高于MSRP。** 二手市场通常有大量前采矿和前游戏的卡。购买二手对于首次组装或升级可能有意义；除非可以现场测试，采矿卡风险更高。以下价格为美国市场估算，变化很快。',
       metaDescription: '本地LLM二手GPU选购：RTX 3060、3080、3090、4090价格区间（美国市场参考）、购买渠道、矿卡风险，以及付款前如何测试显卡。',
       publishDate: '2026-04-05',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**较旧的二手GPU成交价低于发售价（InsiderLLM追踪页：RTX 3080 10GB为$280-350，RTX 3060 12GB约$300），但RTX 3090和RTX 4090目前在美国挂牌中已接近或高于MSRP。购买前请测试任何二手卡，尤其是前采矿卡。**',
       audience: '熟悉Ollama或LM Studio优化本地LLM工作流的开发者',
       readTime: '阅读约8分钟',
@@ -1660,6 +1681,7 @@ schema: {
             '以大幅折扣购买采矿RTX 3080而不测试—显存可能已降级，负载下显示错误。',
             '假设"如新状态"意味着健康的VRAM—外观≠组件健康。始终进行压力测试。',
             '为没有购买者保护的GPU运费付费（不是eBay）—如果到达时死亡，您被困。',
+            '**不确定二手显卡够不够用？** 可以[购买二手显卡前先租用](/zh/power-local-llm/best-cloud-gpu-providers)，确认模型能装下并以你能接受的速度运行。',
           ],
         },
         'faqSection': {
@@ -1683,6 +1705,7 @@ schema: {
             '[RTX 5090 vs RTX 4090](/zh/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[本地LLM最佳GPU](/zh/local-llms/best-gpus-for-local-llms)',
             '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)',
+            '[购买二手显卡前先租用](/zh/power-local-llm/best-cloud-gpu-providers) -- 先租用类似的GPU，确认显存是否够用以及速度如何。',
           ],
         },
         'sources': {
@@ -1703,7 +1726,7 @@ schema: {
         'description': '本地LLM二手GPU选购：RTX 3060、3080、3090、4090价格区间（美国市场参考）、购买渠道、矿卡风险，以及付款前如何测试显卡。',
         'url': 'https://www.promptquorum.com/zh/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-15',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1783,6 +1806,7 @@ schema: {
       intro: '**구형 중고 GPU는 출시가보다 낮은 가격에 거래되지만(InsiderLLM 트래커: RTX 3080 10GB는 $280~350, RTX 3060 12GB는 약 $300), RTX 3090과 RTX 4090은 현재 미국 매물에서 MSRP 근처이거나 그 이상에 거래됩니다.** 중고 시장에는 일반적으로 채굴용 및 게이밍용 카드가 풍부하게 공급되고 있습니다. 첫 번째 장비 구성이나 업그레이드 시 중고 구매는 합리적일 수 있습니다. 단, 채굴용 카드는 현장에서 직접 테스트할 수 없다면 더 위험합니다. 아래 가격은 미국 시장 추정치이며 빠르게 변동합니다.',
       metaDescription: '로컬 LLM용 중고 GPU: RTX 3060, 3080, 3090, 4090 가격대(미국 시장 기준), 구매처, 채굴용 카드 리스크, 구매 전 테스트 방법을 정리했습니다.',
       publishDate: '2026-04-05',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '구형 중고 GPU는 출시가보다 낮은 가격에 거래되지만(InsiderLLM 트래커: RTX 3080 10GB는 $280~350, RTX 3060 12GB는 약 $300), RTX 3090과 RTX 4090은 현재 미국 매물에서 MSRP 근처이거나 그 이상에 거래됩니다. 구매 전에는 모든 중고 카드를, 특히 채굴용이었던 카드를 반드시 테스트하십시오.',
       audience: 'Ollama 또는 LM Studio를 활용하여 로컬 LLM 워크플로우를 최적화하는 개발자',
       readTime: '8분',
@@ -1878,6 +1902,7 @@ schema: {
             '테스트 없이 큰 폭으로 할인된 채굴용 RTX 3080 구매 — VRAM이 열화되어 부하 시 오류가 발생할 수 있습니다.',
             '"거의 새것 상태"를 VRAM 정상으로 오해 — 외관과 부품 상태는 별개입니다. 반드시 스트레스 테스트를 실시하십시오.',
             '구매자 보호 없이(eBay 외) 배송으로 GPU 구매 대금 선결제 — 불량으로 도착하면 구제받을 방법이 거의 없을 수 있습니다.',
+            '**중고 카드로 충분한지 확신이 서지 않으십니까?** [중고 카드를 사기 전에 대여](/ko/power-local-llm/best-cloud-gpu-providers)하여 모델이 들어가는지, 받아들일 만한 속도로 실행되는지 확인할 수 있습니다.',
           ],
         },
         'faqSection': {
@@ -1901,6 +1926,7 @@ schema: {
             '[RTX 5090 vs RTX 4090](/ko/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[로컬 LLM용 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms)',
             '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)',
+            '[중고 카드를 사기 전에 대여](/ko/power-local-llm/best-cloud-gpu-providers) -- 비슷한 GPU를 먼저 대여해 적합성과 속도를 확인합니다.',
           ],
         },
         'sources': {

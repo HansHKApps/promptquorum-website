@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Real VRAM by model size at Q4, based on actual GGUF file sizes: 7B needs ~4GB, 13B ~8GB, 22B ~13GB, 70B ~42GB. Free calculator plus Q5/Q8 charts.',
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-en.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**A 7B model needs about 4GB of VRAM at Q4 (4-bit) for its weights; 13B about 8GB; 22B about 13GB; 70B about 42GB. Add 1-2GB for context and the OS, and budget 15-20% more for Q5 or roughly 75% more for Q8.**',
       quickAnswerTop: {
         en: {
@@ -192,6 +192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '- **System overhead** (OS, drivers, Ollama/LM Studio runtime): ~1-2GB.',
             'Rule: A 70B model Q4 (40-48GB) + KV cache (4GB) + system (2GB) = ~46-54GB allocated.',
             'Always buy GPUs with at least 1-2GB headroom above theoretical minimums.',
+            'If your card falls short of these numbers, see [no GPU with enough VRAM? rent one](/power-local-llm/best-cloud-gpu-providers) for rental options.',
           ],
         },
         'mistakes': {
@@ -237,6 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Running 70B Models on Apple Silicon M5 Max](/local-llms/running-70b-models-apple-silicon-m5-max) -- How unified memory lets Macs run 70B natively where 24GB VRAM fails.',
             '[Best Models for Apple Silicon 2026](/local-llms/best-models-apple-silicon-2026) -- Specific model picks per unified-memory tier: 16GB through 128GB.',
             '[GPU vs CPU vs Apple Silicon for Local LLMs](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- Three-platform architecture comparison: NVIDIA CUDA, Apple unified memory, and CPU-only inference side by side.',
+            '[No GPU with enough VRAM? Rent one](/power-local-llm/best-cloud-gpu-providers) -- Rental options when your card does not have enough VRAM.',
           ],
         },
         'sources': {
@@ -255,7 +257,7 @@ schema: {
         'description': 'How much VRAM does a 70B LLM need? See exact 2026 requirements for Q4/Q5 quantization, 13B–70B models, and what fits in 40GB–48GB GPUs.',
         'url': 'https://www.promptquorum.com/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-09',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -377,7 +379,7 @@ schema: {
       metaDescription: 'VRAM real por tamaño en Q4, según archivos GGUF reales: 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora gratis, tablas Q5/Q8 y fórmula.',
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-es.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**Un modelo 7B necesita unos 4 GB de VRAM en Q4 (4 bits) para sus pesos; 13B unos 8 GB; 22B unos 13 GB; 70B unos 42 GB. Añade 1-2 GB para contexto y sistema, y un 15-20% más para Q5 o un 75% más para Q8.**',
       nextStep: {
         text: 'Ya conoces tu presupuesto de VRAM. Ahora elige la GPU correcta para él.',
@@ -529,6 +531,7 @@ schema: {
             '- **Overhead del sistema** (SO, drivers, runtime de Ollama/LM Studio): ~1-2 GB.',
             'Regla: Un modelo 70B Q4 (40-48 GB) + caché KV (4 GB) + sistema (2 GB) = ~46-54 GB asignados.',
             'Siempre compra GPUs con al menos 1-2 GB de margen por encima de los mínimos teóricos.',
+            'Si tu tarjeta no alcanza estas cifras, consulta [¿no tienes una GPU con suficiente VRAM? alquila una](/es/power-local-llm/best-cloud-gpu-providers) para ver las opciones de alquiler.',
           ],
         },
         'mistakes': {
@@ -574,6 +577,7 @@ schema: {
             '[Ejecutar modelos 70B en Apple Silicon M5 Max](/es/local-llms/running-70b-models-apple-silicon-m5-max) -- Cómo la memoria unificada permite a los Mac ejecutar 70B donde falla una VRAM de 24 GB.',
             '[Mejores modelos para Apple Silicon 2026](/es/local-llms/best-models-apple-silicon-2026) -- Selección de modelos específicos por nivel de memoria unificada: de 16 GB a 128 GB.',
             '[GPU vs CPU vs Apple Silicon para LLMs locales](/es/local-llms/gpu-vs-cpu-vs-apple-silicon) -- Comparativa de tres plataformas: NVIDIA CUDA, memoria unificada de Apple e inferencia solo con CPU, lado a lado.',
+            '[¿No tienes una GPU con suficiente VRAM? Alquila una](/es/power-local-llm/best-cloud-gpu-providers) -- Opciones de alquiler cuando tu tarjeta no tiene suficiente VRAM.',
           ],
         },
         'sources': {
@@ -592,7 +596,7 @@ schema: {
         'description': '¿Cuánta VRAM necesita un LLM de 70B? Consulta los requisitos exactos de 2026 para cuantización Q4/Q5, modelos de 13B a 70B y qué cabe en GPUs de 40 GB a 48 GB.',
         'url': 'https://www.promptquorum.com/es/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-09',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -714,7 +718,7 @@ schema: {
       metaDescription: 'VRAM الحقيقية حسب حجم النموذج في Q4 بحسب أحجام ملفات GGUF: 7B ~4 GB و13B ~8 GB و22B ~13 GB و70B ~42 GB. حاسبة مجانية وجداول Q5/Q8.',
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-ar.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**يحتاج نموذج 7B إلى نحو 4 GB من VRAM بتكميم Q4 (4 بت) لأوزانه؛ 13B نحو 8 GB؛ 22B نحو 13 GB؛ 70B نحو 42 GB. أضف 1-2 GB كهامش للسياق والنظام فوق هذه الأرقام، و15-20% أكثر لـQ5 أو نحو 75% أكثر لـQ8.**',
       nextStep: {
         text: 'أصبحت تعرف ميزانية VRAM لديك. والآن اختر GPU المناسبة لها.',
@@ -866,6 +870,7 @@ schema: {
             '- **عبء النظام** (نظام التشغيل، التعريفات، بيئة تشغيل Ollama/LM Studio): ~1-2 GB.',
             'القاعدة: نموذج 70B Q4 (40-48 GB) + ذاكرة KV (4 GB) + نظام (2 GB) = ~46-54 GB مخصصة.',
             'اشترِ دائمًا GPU بهامش 1-2 GB على الأقل فوق الحد الأدنى النظري.',
+            'إذا كانت بطاقتك دون هذه الأرقام، فراجع [لا تملك GPU بذاكرة VRAM كافية؟ استأجر واحدة](/ar/power-local-llm/best-cloud-gpu-providers) لمعرفة خيارات الاستئجار.',
           ],
         },
         'mistakes': {
@@ -911,6 +916,7 @@ schema: {
             '[تشغيل نماذج 70B على Apple Silicon M5 Max](/ar/local-llms/running-70b-models-apple-silicon-m5-max) -- كيف تتيح الذاكرة الموحدة لأجهزة Mac تشغيل 70B حيث تفشل VRAM بسعة 24 GB.',
             '[أفضل النماذج لـ Apple Silicon 2026](/ar/local-llms/best-models-apple-silicon-2026) -- اختيار نماذج محدد حسب مستوى الذاكرة الموحدة: من 16 GB إلى 128 GB.',
             '[GPU مقابل CPU مقابل Apple Silicon لنماذج LLM المحلية](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon) -- مقارنة ثلاث منصات: NVIDIA CUDA والذاكرة الموحدة من Apple والاستدلال عبر CPU فقط، جنبًا إلى جنب.',
+            '[لا تملك GPU بذاكرة VRAM كافية؟ استأجر واحدة](/ar/power-local-llm/best-cloud-gpu-providers) -- خيارات الاستئجار عندما لا تكفي ذاكرة VRAM في بطاقتك.',
           ],
         },
         'sources': {
@@ -929,7 +935,7 @@ schema: {
         'description': 'كم تحتاج نماذج 70B من VRAM؟ راجع المتطلبات الدقيقة لعام 2026 لتكميم Q4/Q5 ونماذج من 13B إلى 70B وما يتسع في GPU من 40 GB إلى 48 GB.',
         'url': 'https://www.promptquorum.com/ar/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-09',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1051,7 +1057,7 @@ schema: {
       metaDescription: 'VRAM real por tamanho em Q4, com base em arquivos GGUF reais: 7B ~4 GB, 13B ~8 GB, 22B ~13 GB, 70B ~42 GB. Calculadora grátis e tabelas Q5/Q8.',
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-pt.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**Um modelo 7B precisa de cerca de 4 GB de VRAM em Q4 (4 bits) para os pesos; 13B de cerca de 8 GB; 22B de 13 GB; 70B de 42 GB. Adicione 1-2 GB para contexto e sistema, e 15-20% para Q5 ou 75% para Q8.**',
       nextStep: {
         text: 'Você já conhece seu orçamento de VRAM. Agora escolha a GPU certa para ele.',
@@ -1203,6 +1209,7 @@ schema: {
             '- **Overhead do sistema** (SO, drivers, runtime do Ollama/LM Studio): ~1-2 GB.',
             'Regra: Um modelo 70B Q4 (40-48 GB) + cache KV (4 GB) + sistema (2 GB) = ~46-54 GB alocados.',
             'Sempre compre GPUs com pelo menos 1-2 GB de margem acima dos mínimos teóricos.',
+            'Se a sua placa não alcança esses valores, veja [sem uma GPU com VRAM suficiente? alugue uma](/pt/power-local-llm/best-cloud-gpu-providers) para conhecer as opções de aluguel.',
           ],
         },
         'mistakes': {
@@ -1247,6 +1254,7 @@ schema: {
             '[Rodar modelos 70B em Apple Silicon M5 Max](/pt/local-llms/running-70b-models-apple-silicon-m5-max) -- Como a memória unificada permite aos Macs rodar 70B onde uma VRAM de 24 GB falha.',
             '[Melhores modelos para Apple Silicon 2026](/pt/local-llms/best-models-apple-silicon-2026) -- Seleção de modelos específicos por nível de memória unificada: de 16 GB a 128 GB.',
             '[GPU vs CPU vs Apple Silicon para LLMs locais](/pt/local-llms/gpu-vs-cpu-vs-apple-silicon) -- Comparativo de três plataformas: NVIDIA CUDA, memória unificada da Apple e inferência apenas com CPU, lado a lado.',
+            '[Sem uma GPU com VRAM suficiente? Alugue uma](/pt/power-local-llm/best-cloud-gpu-providers) -- Opções de aluguel quando a sua placa não tem VRAM suficiente.',
           ],
         },
         'sources': {
@@ -1265,7 +1273,7 @@ schema: {
         'description': 'Quanta VRAM um LLM de 70B precisa? Veja os requisitos exatos de 2026 para quantização Q4/Q5, modelos de 13B a 70B e o que cabe em GPUs de 40 GB a 48 GB.',
         'url': 'https://www.promptquorum.com/pt/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-09',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1382,7 +1390,7 @@ schema: {
         href: '/fr/local-llms/best-budget-gpus-local-llm',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**Un modèle 7B a besoin d\'environ 4 GB de VRAM en Q4 (4 bits) ; 13B environ 8 GB ; 22B 13 GB ; 70B 42 GB. Ajoutez 1-2 GB pour le contexte et le système, et 15-20 % en Q5 ou 75 % en Q8.**',
       readTime: '7 min de lecture',
       educationalLevel: 'Beginner',
@@ -1514,6 +1522,7 @@ schema: {
             'Achetez toujours des GPU avec au moins 1-2 GB de marge au-dessus des minimums théoriques.',
             '',
             '⚠️ **Risque de marge**: Les fenêtres de contexte longues (32K tokens) peuvent gonfler la surcharge KV cache à 8+ GB sur un modèle 70B. Un modèle 70B utilisant ~42 GB sur une GPU 48 GB (2× RTX 4090) laisse seulement 6 GB pour KV cache. Avec une conversation de 32K tokens, le modèle manque de VRAM à mi-conversation, causant des crashes. Réduisez soit la longueur max du contexte, soit achetez une GPU plus grande.',
+            'Si votre carte n\'atteint pas ces valeurs, consultez [pas de GPU avec assez de VRAM ? Louez-en une](/fr/power-local-llm/best-cloud-gpu-providers) pour les options de location.',
           ],
         },
         mistakes: {
@@ -1575,6 +1584,7 @@ schema: {
             '[Modèles 70B sur Apple Silicon M5 Max](/fr/local-llms/running-70b-models-apple-silicon-m5-max) -- Comment la mémoire unifiée permet aux Macs de faire tourner 70B là où 24 Go VRAM échoue.',
             '[Meilleurs modèles pour Apple Silicon 2026](/fr/local-llms/best-models-apple-silicon-2026) -- Recommandations de modèles par tier de mémoire : 16 Go à 128 Go.',
             '[GPU vs CPU vs Apple Silicon pour les LLM locaux](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon) -- Comparaison trois plateformes : NVIDIA CUDA, mémoire unifiée Apple et inférence CPU uniquement.',
+            '[Pas de GPU avec assez de VRAM ? Louez-en une](/fr/power-local-llm/best-cloud-gpu-providers) -- Options de location quand votre carte manque de VRAM.',
           ],
         },
         sources: {
@@ -1592,7 +1602,7 @@ schema: {
         headline: 'Combien de VRAM avez-vous besoin pour exécuter un Local LLM en 2026?',
         description: 'VRAM pour LLMs locaux, chiffres Q4 cohérents avec des tailles réelles de fichiers GGUF : 7B nécessite ~4 GB (Q4), 13B ~8 GB, 70B ~42 GB. Formule, sélection GPU et compromis de quantification. Guide 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/how-much-vram-local-llm',
-        dateModified: '2026-11-09',
+        dateModified: '2026-11-22',
         'datePublished': '2026-04-04',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         speakable: {
@@ -1656,7 +1666,7 @@ schema: {
         href: '/de/local-llms/best-budget-gpus-local-llm',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**Ein 7B-Modell benötigt bei Q4 (4-Bit) etwa 4 GB VRAM für die Gewichte; 13B etwa 8 GB; 22B etwa 13 GB; 70B etwa 42 GB. Rechnen Sie 1-2 GB für Kontext und System dazu, bei Q5 etwa 15-20 % und bei Q8 etwa 75 % mehr.**',
       readTime: '7 min Lesezeit',
       educationalLevel: 'Beginner',
@@ -1689,7 +1699,7 @@ schema: {
         },
         'batch-size': { title: 'Batch-Größe und Multi-User-Inferenz', content: ['Batch-Größe ist die Anzahl der Text-Eingaben, die in einer Ausführung verarbeitet werden.', '', '**Single-User-Inferenz (batch=1)**: Eine Eingabeaufforderung auf einer GPU. VRAM: Nur Modellgröße + KV-Cache.', 'Beispiel: Llama3 7B Q4 = 3,5 GB (Modell) + 1,5 GB (KV-Cache) = 5 GB.', '', '**Batch-Verarbeitung (batch=4, 8, 16)**: Mehrere Eingaben gleichzeitig verarbeiten. VRAM: Die Gewichte werden geteilt; zusätzlich wächst vor allem der KV-Cache (einer pro Anfrage).', 'batch=4: Gewichte nur einmal, dazu vier KV-Caches — bei 7B Q4 und moderatem Kontext typischerweise wenige GB zusätzlich, nicht ×4 VRAM. Der Durchsatz steigt oft deutlich (je nach Setup).', '', 'Batch-Inferenz ist wichtig für Multi-User-Server (3-5 Personen, gleichzeitige Anfragen). Für Single-User/Entwicklung nicht erforderlich.', '', 'KV-Cache (abhängig von Sequenzlänge):'] },
         overhead: {
-          id: 'overhead', title: 'VRAM-Overhead: Mehr als nur Modellgröße', content: ['Die Parametergröße des Modells ist nicht das gesamte VRAM-Anforderungs-Bild. Zusätzlicher Speicher ist erforderlich:', '', '**KV-Cache (Key-Value Cache)**: Das Modell muss vorherige Token „merken". Nebenprodukt des Transformer-Aufmerksamkeitsmechanismus.', '- Proportional zur Eingabe-Ausgabe-Länge.', '- 7B-Modell, 2048-Token-Kontext, batch=1: +2-4 GB.', '', '**Aktivierungen**: Zwischenrechenergebnisse während der Inferenz.', '- Typischerweise 10-15% der Modellgröße.', '- 7B: +0,7-1,5 GB.', '', '**Laufzeit-Overhead**: CUDA-Speicherpool, Framebuffer, OS-Reservierungen.', '- Typischerweise 0,5-1,5 GB.'] },
+          id: 'overhead', title: 'VRAM-Overhead: Mehr als nur Modellgröße', content: ['Die Parametergröße des Modells ist nicht das gesamte VRAM-Anforderungs-Bild. Zusätzlicher Speicher ist erforderlich:', '', '**KV-Cache (Key-Value Cache)**: Das Modell muss vorherige Token „merken". Nebenprodukt des Transformer-Aufmerksamkeitsmechanismus.', '- Proportional zur Eingabe-Ausgabe-Länge.', '- 7B-Modell, 2048-Token-Kontext, batch=1: +2-4 GB.', '', '**Aktivierungen**: Zwischenrechenergebnisse während der Inferenz.', '- Typischerweise 10-15% der Modellgröße.', '- 7B: +0,7-1,5 GB.', '', '**Laufzeit-Overhead**: CUDA-Speicherpool, Framebuffer, OS-Reservierungen.', '- Typischerweise 0,5-1,5 GB.', 'Wenn Ihre Karte diese Werte nicht erreicht, finden Sie unter [keine GPU mit genug VRAM? Mieten Sie eine](/de/power-local-llm/best-cloud-gpu-providers) Mietoptionen.'] },
         mistakes: {
           id: 'mistakes', title: 'Häufige Fehler', content: ['**Missverständnis 1: „VRAM erforderlich = Modellgröße"**', 'VRAM ist immer größer als die Modellgröße. Ein 4 GB-Modell (7B Q4) benötigt real eher 5-6 GB mit Puffer. RTX 4060 8 GB ist sicher, aber RTX 3060 6 GB kann eng werden.', '', '**Missverständnis 2: „Apple Silicon (M3) Speicher ist nicht das gleiche wie GPU VRAM"**', 'Apple Silicon verwendet Unified Memory -- CPU und GPU teilen einen Speicherpool. Unified Memory ist nur teilweise als GPU-Speicher nutzbar; macOS reserviert einen Teil. Ein 13B-Modell in Q4 (~7 GB) kann auf M3 16 GB ausgeführt werden.', '', '**Missverständnis 3: „Quantisierung verlangsamt die Inferenz"**', 'Tatsächlich: Q4 ist schneller als Q5/Q8. Niedrigere Speicherbandbreite, effizienterer Cache. Ollama: Q4 ist einige Prozentpunkte schneller.'] },
         'regional-context': { title: 'Regionales Umfeld', content: ['**EU und Deutschland (DSGVO + BSI)**', 'Lokale LLM-Inferenz kann helfen, Datenabflüsse an Cloud-Anbieter zu vermeiden, und damit die DSGVO-Fragen für diesen Verarbeitungsschritt vereinfachen. Ob ein Einsatz DSGVO-konform ist, hängt jedoch von Ihrer gesamten Verarbeitung ab (Rechtsgrundlage, technische und organisatorische Maßnahmen, Auftragsverarbeitung, ggf. Datenschutz-Folgenabschätzung) und nicht allein vom Ort der Inferenz. Das BSI (Bundesamt für Sicherheit in der Informationstechnik) veröffentlicht IT-Sicherheitsempfehlungen; klären Sie mit Ihrer oder Ihrem Datenschutzbeauftragten, was für Ihren Fall gilt. Dies ist eine allgemeine Information, keine Rechtsberatung.', '', '**Orientierungswerte für den deutschen Mittelstand (Richtwerte, keine Vorgaben):**', '- **1-50 Nutzer:** RTX 4070 Ti (12 GB) mit einem 13B-Modell in Q4 (7-8 GB). Skalierbar mit Ollama im single-GPU-Modus.', '- **50-500 Nutzer:** RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB) für parallele Anfragen und Batch-Verarbeitung. Erfordert vLLM oder Text Generation WebUI.', '- **500+ Nutzer:** A100 (80 GB) oder H100 (80 GB). Enterprise-Setup mit Load-Balancing über mehrere Server.', '', '**Mögliche Sicherheitsmaßnahmen (an BSI-Empfehlungen orientieren):**', '- ECC-GPUs (A6000, A100) können Speicherfehler erkennen.', '- GPU-Speicher-Dumps durch physische Sicherheit oder verschlüsselten Speicher (sofern verfügbar) erschweren.', '- Modellabhängigkeiten und die Herkunft der Trainingsdaten im Rahmen Ihrer DSGVO-Dokumentation prüfen.'] },
@@ -1697,11 +1707,11 @@ schema: {
         faqSection: {
           id: 'faq', faqs: [{ q: 'Kann ein 3B-Modell auf meiner GPU laufen?', a: 'Ja. Q4-Quantisierung benötigt für ein 3B-Modell nur 1,5-2 GB VRAM; es läuft auf nahezu jeder GPU mit 4 GB (z. B. RTX 3050 4 GB) und notfalls auf der CPU. Ollama, Llama.cpp, LM Studio unterstützen alle.' }, { q: 'Ist RTX 4060 ausreichend für 7B Q4?', a: 'Knapp. RTX 4060 (8 GB) sollte 5 GB theoretisch verwalten, aber OS/Laufzeit-Overhead (0,5-1,5 GB) wird eng. RTX 4070 (12 GB) empfohlen.' }, { q: 'Sind 12 GB für ein 13B-Modell ausreichend?', a: 'Ja, deutlich. Ein 13B-Modell braucht bei Q4 nur etwa 8 GB, 12 GB lässt also echten Puffer. Bei Q5 (~9 GB) ist es noch komfortabel; bei Q8 (~14 GB) wird es eng.' }, { q: 'Benötige ich 24 GB für ein 70B-Modell?', a: 'Nein, aber Sie brauchen fast so viel. Ein 70B-Modell benötigt etwa 42 GB bei Q4 allein für die Gewichte. Bei Q5+ sind es 50 GB+. 24 GB reichen für ein 70B-Modell bei Q4 oder höher nicht aus; Quantisierungen unter 4 Bit passen mit Qualitätsverlust.' }, { q: 'Reduziert höhere Batch-Größe VRAM für einzelne Inferenz?', a: 'Nein. Einzelne Inferenz verwendet immer batch=1. Batch-Größe hilft nur Durchsatz (Multi-User-Szenarios).' }, { q: 'Was ist die präziseste Quantisierung?', a: 'Q8 verliert meist kaum Qualität; Q5 und Q4 etwas mehr, je nach Modell und Aufgabe. Für die meisten Fälle Q4 beste Balance.' }, { q: 'Kann ich Teil des VRAM auf CPU-RAM auslagern?', a: 'Ja, über teilweises Auslagern von Layern ins System-RAM. Llama.cpp und Ollama unterstützen es. Die Leistung kann deutlich sinken (oft um 30-50% oder mehr, je nach Anzahl der ausgelagerten Layer).' }, { q: 'Was ist die minimale VRAM für lokale LLM-Ausführung?', a: '4 GB VRAM mit 3B Q4-Modell -- Modell ~1,8 GB, KV-Cache hat Platz. Praktisches Minimum 8 GB VRAM + 7B Q4. Unter 6 GB OOM für die meisten 7B-Modelle.' }, { q: 'Ist Apple Silicon VRAM dasselbe wie GPU VRAM?', a: 'Apple Silicon verwendet Unified Memory zwischen CPU/GPU gemeinsam -- Unified Memory ist nur teilweise als GPU-Speicher nutzbar; macOS reserviert einen Teil. Ein MacBook Pro M3 mit 18 GB kann ein 13B-Modell in Q4 (~7 GB) + Overhead ausführen.' }, { q: 'Wie viel VRAM benötigt 7B bei verschiedenen Quantisierungen?', a: '7B FP32: ~28 GB -- unpraktisch auf Consumer-GPUs. 7B Q8: ~7 GB -- passt auf RTX 4070 Ti 12 GB mit Puffer. 7B Q5: ~5 GB -- passt auf 8 GB GPU. 7B Q4: ~4 GB Gewichte + ~1-2 GB Overhead = ~5-6 GB -- passt auf 6 GB GPU eng, 8 GB komfortabel.' }, { q: 'Welche VRAM-Anforderungen hat lokale Inferenz in Unternehmen mit Datenschutzanforderungen?', a: 'Minimum RTX 4070 Ti (12 GB) für bis zu 50 Nutzer mit einem 13B-Modell in Q4. Für 50-500 Nutzer RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB). ECC-GPU kann zur Speicherfehler-Erkennung sinnvoll sein; GPU-Speicher-Dumps sollten durch Firmware- und physische Sicherheit erschwert werden. Ob der Einsatz datenschutzkonform ist, hängt von Ihrer gesamten Verarbeitung ab; keine Rechtsberatung.' }, { q: 'Welche GPU empfiehlt sich für einen Team-Server im deutschen Mittelstand?', a: 'RTX 4070 Ti (12 GB) für 1-50 Mitarbeiter. RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB) für 50-500 Mitarbeiter. RTX 4070 Ti kann ein 13B-Modell in Q4 + vLLM mit 3-5 gleichzeitigen Anfragen verwalten. Größere Teams benötigen A100 (80 GB) oder H100 und Enterprise-Clustering.' }] },
         relatedReading: {
-          id: 'related-reading', title: 'Weiterführende Literatur', items: ['/de/local-llms/best-local-llms-2026', '/de/local-llms/how-to-run-ollama-locally', '/de/local-llms/local-llm-hardware-guide', '/de/local-llms/best-amd-gpus-local-llm', '/de/local-llms/local-llm-security-privacy-checklist', '/de/local-llms/how-much-unified-memory-for-local-llm', '/de/local-llms/running-70b-models-apple-silicon-m5-max', '/de/local-llms/best-models-apple-silicon-2026', '/de/local-llms/gpu-vs-cpu-vs-apple-silicon'] },
+          id: 'related-reading', title: 'Weiterführende Literatur', items: ['/de/local-llms/best-local-llms-2026', '/de/local-llms/how-to-run-ollama-locally', '/de/local-llms/local-llm-hardware-guide', '/de/local-llms/best-amd-gpus-local-llm', '/de/local-llms/local-llm-security-privacy-checklist', '/de/local-llms/how-much-unified-memory-for-local-llm', '/de/local-llms/running-70b-models-apple-silicon-m5-max', '/de/local-llms/best-models-apple-silicon-2026', '/de/local-llms/gpu-vs-cpu-vs-apple-silicon', '[Keine GPU mit genug VRAM? Mieten Sie eine](/de/power-local-llm/best-cloud-gpu-providers) -- Mietoptionen, wenn Ihre Karte nicht genug VRAM hat.'] },
         sources: {
           id: 'sources', title: 'Quellen', items: ['NVIDIA CUDA-Dokumentation: GPU-Speicherverwaltung, Tensor Cores, Compute Capability', 'Ollama-Dokumentation: VRAM-Anforderungen, Quantisierungsschemata, GPU-Kompatibilitätsmatrix', 'Llama.cpp GitHub: GGUF-Format, Q4/Q5/Q8-Implementierung, Speicher-Profilierung'] },
       },
-schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Wie viel VRAM benötigen Sie für einen lokalen LLM im Jahr 2026?', description: 'VRAM für lokale LLMs, Q4-Werte konsistent mit echten GGUF-Dateien: 7B benötigt ~4 GB (Q4), 13B ~8 GB, 70B ~42 GB. Formel, GPU-Auswahl, Quantisierungs-Tradeoffs.', 'url': 'https://www.promptquorum.com/de/local-llms/how-much-vram-local-llm', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, datePublished: '2026-04-05', dateModified: '2026-11-09', inLanguage: 'de', image: '/og-image.png', publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } },
+schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Wie viel VRAM benötigen Sie für einen lokalen LLM im Jahr 2026?', description: 'VRAM für lokale LLMs, Q4-Werte konsistent mit echten GGUF-Dateien: 7B benötigt ~4 GB (Q4), 13B ~8 GB, 70B ~42 GB. Formel, GPU-Auswahl, Quantisierungs-Tradeoffs.', 'url': 'https://www.promptquorum.com/de/local-llms/how-much-vram-local-llm', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, datePublished: '2026-04-05', dateModified: '2026-11-22', inLanguage: 'de', image: '/og-image.png', publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } },
       howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'VRAM-Anforderungen für lokale LLMs berechnen', step: [{ '@type': 'HowToStep', name: 'VRAM-Berechnungsformel verstehen', text: 'VRAM = Milliarden Parameter × Byte pro Parameter (≈0,6 für Q4) + KV-Cache + Overhead' }, { '@type': 'HowToStep', name: 'Modellgröße auswählen', text: '7B (Anfänger), 13B (empfohlen), 70B (high-performance) wählen.' }, { '@type': 'HowToStep', name: 'Quantisierungsstufe bestimmen', text: 'Q4 (Standard, VRAM-effizient), Q5 (Balance), Q8 (Genauigkeit prioritär) wählen.' }, { '@type': 'HowToStep', name: 'KV-Cache-Overhead addieren', text: 'Bei Sequenzlänge 2048 +2-5 GB addieren.' }, { '@type': 'HowToStep', name: 'GPU-Speicher überprüfen', text: 'RTX 4070 (12 GB) minimum empfohlen. Größer als berechnet wählen.' }] },
       itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Lokale LLM VRAM-Anforderungen Kurzanleitung', itemListElement: [{ '@type': 'ListItem', position: 1, name: '7B Q4 Modell', description: '4-5 GB VRAM. RTX 4070 (12 GB) empfohlen.' }, { '@type': 'ListItem', position: 2, name: '13B Q4 Modell', description: '8-10 GB VRAM. RTX 4080 (16 GB) empfohlen.' }, { '@type': 'ListItem', position: 3, name: '70B Q4 Modell', description: '~42 GB VRAM. Zwei RTX 4090 (48 GB total) oder A100 (80 GB).' }, { '@type': 'ListItem', position: 4, name: 'KV-Cache', description: 'Proportional zu Output-Token. 2048 Token +2-5 GB.' }, { '@type': 'ListItem', position: 5, name: 'Apple Silicon (M3)', description: 'Unified Memory ist nur teilweise als GPU-Speicher nutzbar; macOS reserviert einen Teil.' }] },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'de', mainEntity: [{ '@type': 'Question', name: 'Kann ein 3B-Modell auf meiner GPU laufen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Q4-Quantisierung benötigt für ein 3B-Modell nur 1,5-2 GB VRAM; es läuft auf nahezu jeder GPU mit 4 GB (z. B. RTX 3050 4 GB) und notfalls auf der CPU. Ollama, Llama.cpp, LM Studio unterstützen alle.' } }, { '@type': 'Question', name: 'Ist RTX 4060 ausreichend für 7B Q4?', acceptedAnswer: { '@type': 'Answer', text: 'Knapp. RTX 4060 (8 GB) sollte 5 GB theoretisch verwalten, aber OS/Laufzeit-Overhead wird eng. RTX 4070 (12 GB) empfohlen.' } }, { '@type': 'Question', name: 'Sind 12 GB für ein 13B-Modell ausreichend?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, deutlich. Ein 13B-Modell braucht bei Q4 nur etwa 8 GB, 12 GB lässt also echten Puffer. Bei Q5 (~9 GB) ist es noch komfortabel; bei Q8 (~14 GB) wird es eng.' } }, { '@type': 'Question', name: 'Benötige ich 24 GB für ein 70B-Modell?', acceptedAnswer: { '@type': 'Answer', text: 'Nein, aber Sie brauchen fast so viel. Ein 70B-Modell benötigt etwa 42 GB bei Q4 allein für die Gewichte. Bei Q5+ sind es 50 GB+. 24 GB reichen für ein 70B-Modell bei Q4 oder höher nicht aus; Quantisierungen unter 4 Bit passen mit Qualitätsverlust.' } }, { '@type': 'Question', name: 'Reduziert höhere Batch-Größe VRAM für einzelne Inferenz?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Einzelne Inferenz verwendet immer batch=1. Batch-Größe hilft nur Durchsatz (Multi-User-Szenarios).' } }, { '@type': 'Question', name: 'Was ist die präziseste Quantisierung?', acceptedAnswer: { '@type': 'Answer', text: 'Q8 verliert meist kaum Qualität; Q5 und Q4 etwas mehr, je nach Modell und Aufgabe. Für die meisten Fälle Q4 beste Balance.' } }, { '@type': 'Question', name: 'Kann ich Teil des VRAM auf CPU-RAM auslagern?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, über teilweises Auslagern von Layern ins System-RAM. Llama.cpp und Ollama unterstützen es. Die Leistung kann deutlich sinken (oft um 30-50% oder mehr, je nach Anzahl der ausgelagerten Layer).' } }, { '@type': 'Question', name: 'Was ist die minimale VRAM für lokale LLM-Ausführung?', acceptedAnswer: { '@type': 'Answer', text: '4 GB VRAM mit 3B Q4. Praktisches Minimum 8 GB VRAM + 7B Q4. Unter 6 GB OOM für die meisten 7B-Modelle.' } }, { '@type': 'Question', name: 'Ist Apple Silicon VRAM dasselbe wie GPU VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Silicon verwendet Unified Memory -- Unified Memory ist nur teilweise als GPU-Speicher nutzbar; macOS reserviert einen Teil. Ein MacBook Pro M3 mit 18 GB kann ein 13B-Modell in Q4 (~7 GB) + Overhead ausführen.' } }, { '@type': 'Question', name: 'Wie viel VRAM benötigt 7B bei verschiedenen Quantisierungen?', acceptedAnswer: { '@type': 'Answer', text: '7B FP32: ~28 GB. 7B Q8: ~7 GB. 7B Q5: ~5 GB. 7B Q4: ~5-6 GB (4 GB Gewichte + 1-2 GB Overhead). 6 GB GPU eng, 8 GB komfortabel.' } }, { '@type': 'Question', name: 'Welche VRAM-Anforderungen hat lokale Inferenz in Unternehmen mit Datenschutzanforderungen?', acceptedAnswer: { '@type': 'Answer', text: 'Minimum RTX 4070 Ti (12 GB) für bis zu 50 Nutzer mit einem 13B-Modell in Q4. Für 50-500 Nutzer RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB). ECC-GPU kann zur Speicherfehler-Erkennung sinnvoll sein. Datenschutzkonformität hängt von der gesamten Verarbeitung ab; keine Rechtsberatung.' } }, { '@type': 'Question', name: 'Welche GPU empfiehlt sich für einen Team-Server im deutschen Mittelstand?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4070 Ti (12 GB) für 1-50 Mitarbeiter. RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB) für 50-500 Mitarbeiter. RTX 4070 Ti kann ein 13B-Modell in Q4 + vLLM mit 3-5 gleichzeitigen Anfragen verwalten.' } }] },
@@ -1720,7 +1730,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
         href: '/ja/local-llms/best-budget-gpus-local-llm',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**7BモデルはQ4（4ビット）量子化で重みに約4 GBのVRAMが必要で、13Bは約8 GB、22Bは約13 GB、70Bは約42 GBです。コンテキストとシステム用に1-2 GBを追加し、Q5では約15-20%増、Q8では約75%増を見込んでください。**',
       readTime: '7分で読める',
       educationalLevel: 'Beginner',
@@ -1752,7 +1762,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
         },
         'batch-size': { title: 'バッチサイズ', content: ['シングルユーザー推論はbatch=1です。'] },
         overhead: {
-          id: 'overhead', title: 'オーバーヘッド', content: ['KVキャッシュ、アクティベーション、ランタイムが追加メモリを消費。'] },
+          id: 'overhead', title: 'オーバーヘッド', content: ['KVキャッシュ、アクティベーション、ランタイムが追加メモリを消費。', 'お使いのカードがこの数値に届かない場合、レンタルの選択肢は[VRAMが足りるGPUがない場合はレンタル](/ja/power-local-llm/best-cloud-gpu-providers)をご覧ください。'] },
         'regional-context': { title: '地域的背景', content: ['日本 (METI): ローカルLLM推論は主権データ管理として重要。'] },
         mistakes: { title: '一般的な間違い', content: ['VRAM ≠ モデルサイズ。常に5 GB以上の余地が必要。'] },
         vramCalculator: { id: 'vram-calculator', title: 'VRAM計算機', component: 'VramCalculator', content: 'モデルサイズと量子化を選択してVRAM要件を推定します。' },
@@ -1772,11 +1782,11 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
             { q: '異なる量子化レベルで7Bには何GBのVRAMが必要ですか?', a: '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~5GB。7B Q4: ~5-6GB(4GBの重み + 1-2GBオーバーヘッド)。6GBはきついです、8GBが快適です。' },
           ] },
         relatedReading: {
-          id: 'related-reading', title: '関連資料', items: ['/ja/local-llms/best-local-llms-2026', '/ja/local-llms/how-much-unified-memory-for-local-llm', '/ja/local-llms/running-70b-models-apple-silicon-m5-max', '/ja/local-llms/best-models-apple-silicon-2026', '/ja/local-llms/gpu-vs-cpu-vs-apple-silicon'] },
+          id: 'related-reading', title: '関連資料', items: ['/ja/local-llms/best-local-llms-2026', '/ja/local-llms/how-much-unified-memory-for-local-llm', '/ja/local-llms/running-70b-models-apple-silicon-m5-max', '/ja/local-llms/best-models-apple-silicon-2026', '/ja/local-llms/gpu-vs-cpu-vs-apple-silicon', '[VRAMが足りるGPUがない場合はレンタル](/ja/power-local-llm/best-cloud-gpu-providers) -- カードのVRAMが足りないときのレンタル選択肢。'] },
         sources: {
           id: 'sources', title: '参考資料', items: ['NVIDIA CUDA ドキュメント', 'Ollama ドキュメント'] },
       },
-schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2026年にローカルLLMを実行するのに必要なVRAMはどのくらい?', 'url': 'https://www.promptquorum.com/ja/local-llms/how-much-vram-local-llm', inLanguage: 'ja', datePublished: '2026-04-04', dateModified: '2026-11-09', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } },
+schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2026年にローカルLLMを実行するのに必要なVRAMはどのくらい?', 'url': 'https://www.promptquorum.com/ja/local-llms/how-much-vram-local-llm', inLanguage: 'ja', datePublished: '2026-04-04', dateModified: '2026-11-22', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
@@ -1919,7 +1929,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         href: '/zh/local-llms/best-budget-gpus-local-llm',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**7B模型在Q4（4位）量化下权重约需4 GB显存，13B约需8 GB，22B约需13 GB，70B约需42 GB。请为上下文和系统预留1-2 GB，Q5约增加15-20%，Q8约增加75%。**',
       readTime: '7分钟阅读',
       educationalLevel: 'Beginner',
@@ -1951,7 +1961,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         },
         'batch-size': { title: '批大小', content: ['单用户推理总是batch=1。批处理仅有助吞吐量。'] },
         overhead: {
-          id: 'overhead', title: '显存开销', content: ['KV缓存、激活、运行时开销占额外5 GB。'] },
+          id: 'overhead', title: '显存开销', content: ['KV缓存、激活、运行时开销占额外5 GB。', '如果你的显卡达不到这些数值，请参阅[没有足够显存的GPU？租一张](/zh/power-local-llm/best-cloud-gpu-providers)了解租用选项。'] },
         'regional-context': { title: '地区背景', content: ['中国 (CAC): 本地LLM推理用于数据主权。Qwen3 32B Q4（约20 GB）可在单张RTX 4090上运行，是常见选择。以上不构成法律建议。'] },
         mistakes: { title: '常见错误', content: ['显存 ≠ 模型大小。总需要5 GB以上余地。'] },
         vramCalculator: { id: 'vram-calculator', title: '显存计算器', component: 'VramCalculator', content: '选择你的模型大小和量子化方式以估计显存需求。' },
@@ -1970,11 +1980,11 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             { q: '7B模型在不同量化级别需要多少显存?', a: '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~5GB。7B Q4: ~5-6GB(4GB权重+ 1-2GB开销)。6GB太紧张,8GB比较舒适。' },
           ] },
         relatedReading: {
-          id: 'related-reading', title: '相关阅读', items: ['/zh/local-llms/best-local-llms-2026', '/zh/local-llms/how-much-unified-memory-for-local-llm', '/zh/local-llms/running-70b-models-apple-silicon-m5-max', '/zh/local-llms/best-models-apple-silicon-2026', '/zh/local-llms/gpu-vs-cpu-vs-apple-silicon'] },
+          id: 'related-reading', title: '相关阅读', items: ['/zh/local-llms/best-local-llms-2026', '/zh/local-llms/how-much-unified-memory-for-local-llm', '/zh/local-llms/running-70b-models-apple-silicon-m5-max', '/zh/local-llms/best-models-apple-silicon-2026', '/zh/local-llms/gpu-vs-cpu-vs-apple-silicon', '[没有足够显存的GPU？租一张](/zh/power-local-llm/best-cloud-gpu-providers) -- 显卡显存不足时的租用选项。'] },
         sources: {
           id: 'sources', title: '参考资源', items: ['NVIDIA CUDA文档', 'Ollama文档'] },
       },
-schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2026年运行本地LLM需要多少显存?', 'url': 'https://www.promptquorum.com/zh/local-llms/how-much-vram-local-llm', inLanguage: 'zh', datePublished: '2026-04-04', dateModified: '2026-11-09', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } },
+schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2026年运行本地LLM需要多少显存?', 'url': 'https://www.promptquorum.com/zh/local-llms/how-much-vram-local-llm', inLanguage: 'zh', datePublished: '2026-04-04', dateModified: '2026-11-22', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
@@ -2107,7 +2117,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
       metaDescription: '로컬 LLM에 필요한 정확한 VRAM: 7B는 6~8GB, 13B는 10~14GB, 70B는 Q4에서 40~48GB. Q2~Q8 양자화, 배치 크기, 컨텍스트별 차트 포함.',
       heroImage: '/images/how-much-vram-local-llm-vram-by-size-hero-ko.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '**7B 모델은 Q4(4비트)에서 가중치에 약 4GB VRAM이 필요하고, 13B는 약 8GB, 22B는 약 13GB, 70B는 약 42GB가 필요합니다. 컨텍스트와 시스템을 위해 1~2GB를 추가하고, Q5에서는 15~20% 더, Q8에서는 약 75% 더 예상하십시오.**',
       nextStep: {
         text: 'VRAM 예산을 파악하셨습니다. 이제 적합한 GPU를 선택하십시오.',
@@ -2259,6 +2269,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             '- **시스템 오버헤드**(OS, 드라이버, Ollama/LM Studio 런타임): 약 1~2GB.',
             '규칙: 70B 모델 Q4(40~48GB) + KV 캐시(4GB) + 시스템(2GB) = 약 46~54GB 할당.',
             '항상 이론적 최소치보다 최소 1~2GB 여유가 있는 GPU를 구매하십시오.',
+            '사용 중인 카드가 이 수치에 미치지 못한다면 대여 옵션은 [VRAM이 충분한 GPU가 없다면 대여](/ko/power-local-llm/best-cloud-gpu-providers)에서 확인하십시오.',
           ],
         },
         'mistakes': {
@@ -2304,6 +2315,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             '[Apple Silicon M5 Max에서 70B 모델 실행](/ko/local-llms/running-70b-models-apple-silicon-m5-max) -- 통합 메모리가 Mac이 24GB VRAM이 실패하는 곳에서 70B를 기본적으로 실행할 수 있게 하는 방법.',
             '[Apple Silicon을 위한 최고의 모델 2026](/ko/local-llms/best-models-apple-silicon-2026) -- 통합 메모리 등급별 특정 모델 선택: 16GB~128GB.',
             '[로컬 LLM을 위한 GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon) -- 세 플랫폼 아키텍처 비교: NVIDIA CUDA, Apple 통합 메모리, CPU 전용 추론 병렬 비교.',
+            '[VRAM이 충분한 GPU가 없다면 대여](/ko/power-local-llm/best-cloud-gpu-providers) -- 카드의 VRAM이 부족할 때의 대여 옵션.',
           ],
         },
         'sources': {
@@ -2322,7 +2334,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         'description': '70B LLM에 VRAM이 얼마나 필요합니까? Q4/Q5 양자화, 13B~70B 모델, 40GB~48GB GPU에 맞는 모델의 2026년 정확한 요구 사항을 확인하십시오.',
         'url': 'https://www.promptquorum.com/ko/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-11-09',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [

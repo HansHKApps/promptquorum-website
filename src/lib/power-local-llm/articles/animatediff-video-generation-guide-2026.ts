@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', 'RTX 3060 12GB', 'RTX 4070 Ti Super 16GB', 'RTX 4090 24GB'],
     leadAnswerBlock:
-      '**AnimateDiff is the pick for readers who already run Stable Diffusion locally and want to animate an existing checkpoint or LoRA without retraining anything.** It is a free, Apache 2.0-licensed motion module — not a full video model — used through the community-maintained ComfyUI-AnimateDiff-Evolved node or the AUTOMATIC1111 sd-webui-animatediff extension, generating short (roughly 2-second, 16-frame) clips on consumer GPUs. Readers who want longer, more coherent, or photorealistic video should compare it with newer native video models in [Local AI Video Generation vs. Cloud](/power-local-llm/local-ai-video-generation-vs-cloud); readers with no local GPU at all should read [Cloud GPU Rental](/power-local-llm/cloud-gpu-rental-guide-2026) first.',
+      '**AnimateDiff is the pick for readers who already run Stable Diffusion locally and want to animate an existing checkpoint or LoRA without retraining anything.** It is a free, Apache 2.0-licensed motion module — not a full video model — used through the community-maintained ComfyUI-AnimateDiff-Evolved node or the AUTOMATIC1111 sd-webui-animatediff extension, generating short (roughly 2-second, 16-frame) clips on consumer GPUs. Readers who want longer, more coherent, or photorealistic video should compare it with newer native video models in [Local AI Video Generation vs. Cloud](/power-local-llm/local-ai-video-generation-vs-cloud); readers with no local GPU at all should read [Cloud GPU Rental](/power-local-llm/best-cloud-gpu-providers) first.',
     quickAnswerTop: {
       en: {
         question: 'What is AnimateDiff and is it free to use?',
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**SD1.5-based AnimateDiff workflows commonly run on 8-12 GB VRAM for basic text-to-video generation at moderate resolution (roughly 512x512, the module\'s native 16-frame window); SDXL support needs meaningfully more.**',
           'The official repository states SDXL inference "usually requires ~13 GB VRAM," depending on the personalized checkpoint and generation settings used. Community reports for SD1.5 workflows vary with resolution, frame count, and whether ControlNet is layered in — expect the lower end of the 8-12 GB range for a single short clip at default settings, and the higher end (or beyond, toward 16 GB+) once you add higher resolution, more frames, or multiple ControlNets in a video-to-video pipeline. These are hedged, community-reported ranges rather than a single verified benchmark, since exact VRAM use depends heavily on your specific workflow.',
-          'Practical guidance: an 8 GB card is a workable starting point for SD1.5 text-to-video experimentation at default settings; a 12 GB card gives comfortable headroom for SD1.5 workflows with ControlNet; a 16 GB card (e.g. an RTX 4070 Ti Super) is the more comfortable minimum once you move to SDXL-based AnimateDiff or heavier video-to-video pipelines. Readers whose GPU falls short of these tiers, or who have no local GPU, should compare renting one — see [Cloud GPU Rental Guide 2026](/power-local-llm/cloud-gpu-rental-guide-2026) — against buying, in [Best GPU Buying Guide for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) (the same VRAM-tier guidance applies to AnimateDiff as to other local generative-AI workloads).',
+          'Practical guidance: an 8 GB card is a workable starting point for SD1.5 text-to-video experimentation at default settings; a 12 GB card gives comfortable headroom for SD1.5 workflows with ControlNet; a 16 GB card (e.g. an RTX 4070 Ti Super) is the more comfortable minimum once you move to SDXL-based AnimateDiff or heavier video-to-video pipelines. Readers whose GPU falls short of these tiers, or who have no local GPU, should compare renting one — see [Cloud GPU Rental Guide 2026](/power-local-llm/best-cloud-gpu-providers) — against buying, in [Best GPU Buying Guide for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) (the same VRAM-tier guidance applies to AnimateDiff as to other local generative-AI workloads).',
         ],
       },
       motionLorasLimitations: {
@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Reader who needs photorealistic, long-form, or precisely camera-controlled video.** Native video models — local ones like Wan 2.2 or LTX-2, or commercial ones like Runway or Pika — handle this better; see [Local AI Video Generation vs. Cloud](/power-local-llm/local-ai-video-generation-vs-cloud).',
           '**Reader with no Stable Diffusion checkpoint they already like.** Without a starting point worth animating, there is little advantage over a native video model that generates directly from a text prompt.',
           '**Reader who needs guaranteed commercial-use rights without reading license text.** The academic-use framing in AnimateDiff\'s own README, plus the separate checkpoint license, means this is not a zero-diligence "free for commercial use" tool — see the License Clarity section above.',
-          '**Reader without any local GPU, or a card under roughly 8 GB VRAM.** SD1.5-based AnimateDiff is workable from 8 GB, but readers below that tier should consider [Cloud GPU Rental](/power-local-llm/cloud-gpu-rental-guide-2026) or a cloud video service instead.',
+          '**Reader without any local GPU, or a card under roughly 8 GB VRAM.** SD1.5-based AnimateDiff is workable from 8 GB, but readers below that tier should consider [Cloud GPU Rental](/power-local-llm/best-cloud-gpu-providers) or a cloud video service instead.',
           '**Reader who wants a one-click app experience.** Both ComfyUI and AUTOMATIC1111 assume some comfort with node graphs or extension settings — this is not a polished consumer product.',
         ],
       },
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local AI Video Generation vs. Cloud 2026](/power-local-llm/local-ai-video-generation-vs-cloud) — newer native video models (Wan 2.2, LTX-2, HunyuanVideo) compared against commercial cloud video, for readers who need longer or more coherent clips than AnimateDiff produces.',
           '[Local AI Image Generation vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) — the still-image side of the same local-vs-cloud decision; the checkpoint you pick there is what AnimateDiff animates.',
           '[Best GPU Buying Guide for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — VRAM-tier hardware guidance that applies to AnimateDiff as much as to local language models.',
-          '[Cloud GPU Rental Guide 2026](/power-local-llm/cloud-gpu-rental-guide-2026) — for readers without a locally capable GPU who still want to run AnimateDiff workflows.',
+          '[Cloud GPU Rental Guide 2026](/power-local-llm/best-cloud-gpu-providers) — for readers without a locally capable GPU who still want to run AnimateDiff workflows.',
           '[Local LLM Software Directory 2026](/directory) — the full local-AI tool directory, including the image-generation and visual-AI tier AnimateDiff belongs to.',
         ],
       },
@@ -365,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -408,7 +408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', 'RTX 3060 12GB', 'RTX 4070 Ti Super 16GB', 'RTX 4090 24GB'],
     leadAnswerBlock:
-      '**AnimateDiff ist die richtige Wahl für Leser, die bereits lokal Stable Diffusion nutzen und einen vorhandenen Checkpoint oder ein LoRA animieren möchten, ohne irgendetwas neu zu trainieren.** Es handelt sich um ein kostenloses, Apache-2.0-lizenziertes Motion-Modul — kein vollständiges Video-Modell —, das über den community-gepflegten ComfyUI-AnimateDiff-Evolved-Node oder die AUTOMATIC1111-Erweiterung sd-webui-animatediff genutzt wird und kurze Clips (rund 2 Sekunden, 16 Frames) auf Consumer-GPUs erzeugt. Wer längere, kohärentere oder fotorealistische Videos möchte, sollte es mit neueren nativen Video-Modellen in [Lokale KI-Videogenerierung vs. Cloud](/de/power-local-llm/local-ai-video-generation-vs-cloud) vergleichen; wer keine lokale GPU besitzt, sollte zuerst [Cloud-GPU-Miete](/de/power-local-llm/cloud-gpu-rental-guide-2026) lesen.',
+      '**AnimateDiff ist die richtige Wahl für Leser, die bereits lokal Stable Diffusion nutzen und einen vorhandenen Checkpoint oder ein LoRA animieren möchten, ohne irgendetwas neu zu trainieren.** Es handelt sich um ein kostenloses, Apache-2.0-lizenziertes Motion-Modul — kein vollständiges Video-Modell —, das über den community-gepflegten ComfyUI-AnimateDiff-Evolved-Node oder die AUTOMATIC1111-Erweiterung sd-webui-animatediff genutzt wird und kurze Clips (rund 2 Sekunden, 16 Frames) auf Consumer-GPUs erzeugt. Wer längere, kohärentere oder fotorealistische Videos möchte, sollte es mit neueren nativen Video-Modellen in [Lokale KI-Videogenerierung vs. Cloud](/de/power-local-llm/local-ai-video-generation-vs-cloud) vergleichen; wer keine lokale GPU besitzt, sollte zuerst [Cloud-GPU-Miete](/de/power-local-llm/best-cloud-gpu-providers) lesen.',
     quickAnswerTop: {
       en: {
         question: 'What is AnimateDiff and is it free to use?',
@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**SD1.5-basierte AnimateDiff-Workflows laufen für einfaches Text-zu-Video bei moderater Auflösung (etwa 512x512, das native 16-Frame-Fenster des Moduls) üblicherweise mit 8-12 GB VRAM; SDXL-Unterstützung braucht deutlich mehr.**',
           'Das offizielle Repository gibt an, dass SDXL-Inferenz „üblicherweise ~13 GB VRAM" benötigt, abhängig vom personalisierten Checkpoint und den Generierungseinstellungen. Community-Berichte für SD1.5-Workflows variieren je nach Auflösung, Frame-Anzahl und ob ControlNet eingebunden ist — rechnen Sie mit dem unteren Ende der 8-12-GB-Spanne bei einem kurzen Clip mit Standardeinstellungen und mit dem oberen Ende (oder darüber, Richtung 16 GB+), sobald höhere Auflösung, mehr Frames oder mehrere ControlNets in einer Video-zu-Video-Pipeline hinzukommen. Dies sind vorsichtig formulierte, community-berichtete Spannen statt eines einzelnen verifizierten Benchmarks, da der tatsächliche VRAM-Bedarf stark vom konkreten Workflow abhängt.',
-          'Praktische Richtwerte: Eine 8-GB-Karte ist ein brauchbarer Einstieg für SD1.5-Text-zu-Video-Experimente mit Standardeinstellungen; eine 12-GB-Karte bietet komfortablen Spielraum für SD1.5-Workflows mit ControlNet; eine 16-GB-Karte (z. B. eine RTX 4070 Ti Super) ist das komfortablere Minimum, sobald Sie zu SDXL-basiertem AnimateDiff oder schwereren Video-zu-Video-Pipelines wechseln. Leser, deren GPU unter diesen Stufen liegt oder die keine lokale GPU besitzen, sollten Miete — siehe [Cloud-GPU-Miete-Guide 2026](/de/power-local-llm/cloud-gpu-rental-guide-2026) — gegen Kauf abwägen, im [Besten GPU-Kaufratgeber für lokale LLMs 2026](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) (dieselbe VRAM-Stufen-Richtlinie gilt für AnimateDiff wie für andere lokale generative KI-Workloads).',
+          'Praktische Richtwerte: Eine 8-GB-Karte ist ein brauchbarer Einstieg für SD1.5-Text-zu-Video-Experimente mit Standardeinstellungen; eine 12-GB-Karte bietet komfortablen Spielraum für SD1.5-Workflows mit ControlNet; eine 16-GB-Karte (z. B. eine RTX 4070 Ti Super) ist das komfortablere Minimum, sobald Sie zu SDXL-basiertem AnimateDiff oder schwereren Video-zu-Video-Pipelines wechseln. Leser, deren GPU unter diesen Stufen liegt oder die keine lokale GPU besitzen, sollten Miete — siehe [Cloud-GPU-Miete-Guide 2026](/de/power-local-llm/best-cloud-gpu-providers) — gegen Kauf abwägen, im [Besten GPU-Kaufratgeber für lokale LLMs 2026](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) (dieselbe VRAM-Stufen-Richtlinie gilt für AnimateDiff wie für andere lokale generative KI-Workloads).',
         ],
       },
       motionLorasLimitations: {
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Leser, die fotorealistisches, langes oder präzise kamerakontrolliertes Video brauchen.** Native Video-Modelle — lokale wie Wan 2.2 oder LTX-2, oder kommerzielle wie Runway oder Pika — leisten das besser; siehe [Lokale KI-Videogenerierung vs. Cloud](/de/power-local-llm/local-ai-video-generation-vs-cloud).',
           '**Leser ohne einen Stable-Diffusion-Checkpoint, der ihnen bereits gefällt.** Ohne einen animationswürdigen Ausgangspunkt gibt es kaum einen Vorteil gegenüber einem nativen Video-Modell, das direkt aus einem Textprompt generiert.',
           '**Leser, die garantierte kommerzielle Nutzungsrechte ohne Lizenztext-Lektüre brauchen.** Die akademische Rahmung im eigenen README von AnimateDiff plus die separate Checkpoint-Lizenz bedeuten, dass dies kein sorgloses „frei für kommerzielle Nutzung"-Tool ist — siehe den Abschnitt Lizenzklarheit oben.',
-          '**Leser ohne lokale GPU oder mit einer Karte unter rund 8 GB VRAM.** SD1.5-basiertes AnimateDiff ist ab 8 GB brauchbar, aber Leser unterhalb dieser Stufe sollten stattdessen [Cloud-GPU-Miete](/de/power-local-llm/cloud-gpu-rental-guide-2026) oder einen Cloud-Video-Dienst in Betracht ziehen.',
+          '**Leser ohne lokale GPU oder mit einer Karte unter rund 8 GB VRAM.** SD1.5-basiertes AnimateDiff ist ab 8 GB brauchbar, aber Leser unterhalb dieser Stufe sollten stattdessen [Cloud-GPU-Miete](/de/power-local-llm/best-cloud-gpu-providers) oder einen Cloud-Video-Dienst in Betracht ziehen.',
           '**Leser, die eine Ein-Klick-App-Erfahrung wollen.** Sowohl ComfyUI als auch AUTOMATIC1111 setzen etwas Vertrautheit mit Node-Graphen oder Erweiterungseinstellungen voraus — kein poliertes Endverbraucherprodukt.',
         ],
       },
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lokale KI-Videogenerierung vs. Cloud 2026](/de/power-local-llm/local-ai-video-generation-vs-cloud) — neuere native Video-Modelle (Wan 2.2, LTX-2, HunyuanVideo) im Vergleich zu kommerziellem Cloud-Video, für Leser, die längere oder kohärentere Clips als AnimateDiff brauchen.',
           '[Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) — die Einzelbild-Seite derselben lokal-vs-Cloud-Entscheidung; der dort gewählte Checkpoint ist das, was AnimateDiff animiert.',
           '[Bester GPU-Kaufratgeber für lokale LLMs 2026](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — VRAM-Stufen-Hardwareberatung, die für AnimateDiff genauso gilt wie für lokale Sprachmodelle.',
-          '[Cloud-GPU-Miete-Guide 2026](/de/power-local-llm/cloud-gpu-rental-guide-2026) — für Leser ohne lokal ausreichende GPU, die trotzdem AnimateDiff-Workflows nutzen möchten.',
+          '[Cloud-GPU-Miete-Guide 2026](/de/power-local-llm/best-cloud-gpu-providers) — für Leser ohne lokal ausreichende GPU, die trotzdem AnimateDiff-Workflows nutzen möchten.',
           '[Lokales LLM-Software-Verzeichnis 2026](/de/directory) — das vollständige lokale-KI-Tool-Verzeichnis, einschließlich der Bildgenerierungs- und Visual-AI-Schicht, zu der AnimateDiff gehört.',
         ],
       },
@@ -732,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 Go VRAM', '12 Go VRAM', '16 Go VRAM', 'RTX 3060 12Go', 'RTX 4070 Ti Super 16Go', 'RTX 4090 24Go'],
     leadAnswerBlock:
-      '**AnimateDiff est le bon choix pour les lecteurs qui utilisent déjà Stable Diffusion en local et veulent animer un checkpoint ou un LoRA existant sans rien réentraîner.** C\'est un module de mouvement gratuit, sous licence Apache 2.0 — pas un modèle vidéo complet —, utilisé via le nœud communautaire ComfyUI-AnimateDiff-Evolved ou l\'extension AUTOMATIC1111 sd-webui-animatediff, générant de courts clips (environ 2 secondes, 16 images) sur des GPU grand public. Les lecteurs qui veulent des vidéos plus longues, plus cohérentes ou photoréalistes devraient le comparer aux modèles vidéo natifs plus récents dans [Génération vidéo IA locale vs. cloud](/fr/power-local-llm/local-ai-video-generation-vs-cloud) ; ceux qui n\'ont pas de GPU local devraient d\'abord lire [Location de GPU cloud](/fr/power-local-llm/cloud-gpu-rental-guide-2026).',
+      '**AnimateDiff est le bon choix pour les lecteurs qui utilisent déjà Stable Diffusion en local et veulent animer un checkpoint ou un LoRA existant sans rien réentraîner.** C\'est un module de mouvement gratuit, sous licence Apache 2.0 — pas un modèle vidéo complet —, utilisé via le nœud communautaire ComfyUI-AnimateDiff-Evolved ou l\'extension AUTOMATIC1111 sd-webui-animatediff, générant de courts clips (environ 2 secondes, 16 images) sur des GPU grand public. Les lecteurs qui veulent des vidéos plus longues, plus cohérentes ou photoréalistes devraient le comparer aux modèles vidéo natifs plus récents dans [Génération vidéo IA locale vs. cloud](/fr/power-local-llm/local-ai-video-generation-vs-cloud) ; ceux qui n\'ont pas de GPU local devraient d\'abord lire [Location de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers).',
     quickAnswerTop: {
       en: {
         question: 'What is AnimateDiff and is it free to use?',
@@ -894,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Les workflows AnimateDiff basés sur SD1.5 tournent couramment avec 8-12 Go de VRAM pour du texte-vers-vidéo basique en résolution modérée (environ 512x512, la fenêtre native de 16 images du module) ; le support SDXL demande sensiblement plus.**',
           'Le dépôt officiel indique que l\'inférence SDXL « nécessite habituellement environ 13 Go de VRAM », selon le checkpoint personnalisé et les paramètres de génération utilisés. Les retours communautaires pour les workflows SD1.5 varient selon la résolution, le nombre d\'images, et la présence ou non de ControlNet — attendez-vous au bas de la fourchette 8-12 Go pour un clip court avec les réglages par défaut, et au haut de la fourchette (voire au-delà, vers 16 Go+) une fois que vous ajoutez une résolution plus élevée, plus d\'images, ou plusieurs ControlNets dans un pipeline vidéo-vers-vidéo. Ce sont des fourchettes prudentes rapportées par la communauté plutôt qu\'un benchmark unique vérifié, car l\'usage réel de VRAM dépend fortement du workflow spécifique.',
-          'Conseil pratique : une carte à 8 Go est un point de départ viable pour l\'expérimentation texte-vers-vidéo SD1.5 aux réglages par défaut ; une carte à 12 Go offre une marge confortable pour les workflows SD1.5 avec ControlNet ; une carte à 16 Go (par ex. une RTX 4070 Ti Super) est le minimum plus confortable une fois que vous passez à AnimateDiff basé sur SDXL ou à des pipelines vidéo-vers-vidéo plus lourds. Les lecteurs dont le GPU est en deçà de ces paliers, ou qui n\'ont pas de GPU local, devraient comparer la location — voir [Guide de location de GPU cloud 2026](/fr/power-local-llm/cloud-gpu-rental-guide-2026) — à l\'achat, dans le [Meilleur guide d\'achat de GPU pour LLM locaux 2026](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) (les mêmes paliers de VRAM s\'appliquent à AnimateDiff qu\'aux autres charges de travail d\'IA générative locale).',
+          'Conseil pratique : une carte à 8 Go est un point de départ viable pour l\'expérimentation texte-vers-vidéo SD1.5 aux réglages par défaut ; une carte à 12 Go offre une marge confortable pour les workflows SD1.5 avec ControlNet ; une carte à 16 Go (par ex. une RTX 4070 Ti Super) est le minimum plus confortable une fois que vous passez à AnimateDiff basé sur SDXL ou à des pipelines vidéo-vers-vidéo plus lourds. Les lecteurs dont le GPU est en deçà de ces paliers, ou qui n\'ont pas de GPU local, devraient comparer la location — voir [Guide de location de GPU cloud 2026](/fr/power-local-llm/best-cloud-gpu-providers) — à l\'achat, dans le [Meilleur guide d\'achat de GPU pour LLM locaux 2026](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) (les mêmes paliers de VRAM s\'appliquent à AnimateDiff qu\'aux autres charges de travail d\'IA générative locale).',
         ],
       },
       motionLorasLimitations: {
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Lecteur qui a besoin de vidéo photoréaliste, longue ou avec un contrôle caméra précis.** Les modèles vidéo natifs — locaux comme Wan 2.2 ou LTX-2, ou commerciaux comme Runway ou Pika — le gèrent mieux ; voir [Génération vidéo IA locale vs. cloud](/fr/power-local-llm/local-ai-video-generation-vs-cloud).',
           '**Lecteur sans checkpoint Stable Diffusion qu\'il apprécie déjà.** Sans point de départ digne d\'être animé, l\'avantage sur un modèle vidéo natif générant directement depuis un prompt texte est faible.',
           '**Lecteur qui a besoin de droits d\'usage commercial garantis sans lire de texte de licence.** Le cadrage académique dans le README propre d\'AnimateDiff, plus la licence de checkpoint séparée, signifient que ce n\'est pas un outil « libre d\'usage commercial » sans diligence — voir la section Clarté sur la licence ci-dessus.',
-          '**Lecteur sans GPU local, ou avec une carte sous environ 8 Go de VRAM.** AnimateDiff basé sur SD1.5 est viable dès 8 Go, mais les lecteurs en deçà devraient envisager la [location de GPU cloud](/fr/power-local-llm/cloud-gpu-rental-guide-2026) ou un service vidéo cloud à la place.',
+          '**Lecteur sans GPU local, ou avec une carte sous environ 8 Go de VRAM.** AnimateDiff basé sur SD1.5 est viable dès 8 Go, mais les lecteurs en deçà devraient envisager la [location de GPU cloud](/fr/power-local-llm/best-cloud-gpu-providers) ou un service vidéo cloud à la place.',
           '**Lecteur qui veut une expérience d\'application en un clic.** ComfyUI et AUTOMATIC1111 supposent tous deux une certaine aisance avec les graphes de nœuds ou les réglages d\'extension — ce n\'est pas un produit grand public abouti.',
         ],
       },
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Génération vidéo IA locale vs. cloud 2026](/fr/power-local-llm/local-ai-video-generation-vs-cloud) — modèles vidéo natifs plus récents (Wan 2.2, LTX-2, HunyuanVideo) comparés à la vidéo cloud commerciale, pour les lecteurs ayant besoin de clips plus longs ou plus cohérents qu\'AnimateDiff.',
           '[Génération d\'images IA locale vs. cloud](/fr/power-local-llm/local-ai-image-generation-vs-cloud) — le volet image fixe de la même décision local-vs-cloud ; le checkpoint choisi là-bas est ce qu\'AnimateDiff anime.',
           '[Meilleur guide d\'achat de GPU pour LLM locaux 2026](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — conseils matériels par palier de VRAM applicables à AnimateDiff autant qu\'aux modèles de langage locaux.',
-          '[Guide de location de GPU cloud 2026](/fr/power-local-llm/cloud-gpu-rental-guide-2026) — pour les lecteurs sans GPU local suffisant qui veulent quand même exécuter des workflows AnimateDiff.',
+          '[Guide de location de GPU cloud 2026](/fr/power-local-llm/best-cloud-gpu-providers) — pour les lecteurs sans GPU local suffisant qui veulent quand même exécuter des workflows AnimateDiff.',
           '[Répertoire de logiciels LLM locaux 2026](/fr/directory) — le répertoire complet d\'outils IA locale, incluant la couche génération d\'images et IA visuelle à laquelle appartient AnimateDiff.',
         ],
       },
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -1142,7 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8GB VRAM', '12GB VRAM', '16GB VRAM', 'RTX 3060 12GB', 'RTX 4070 Ti Super 16GB', 'RTX 4090 24GB'],
     leadAnswerBlock:
-      '**AnimateDiffは、すでにローカルでStable Diffusionを使っており、何も再学習せずに既存のチェックポイントやLoRAをアニメーション化したい読者に適しています。** これは完全な動画モデルではなく、無料でApache 2.0ライセンスのモーションモジュールであり、コミュニティが保守するComfyUI-AnimateDiff-Evolvedノードや、AUTOMATIC1111のsd-webui-animatediff拡張機能を通じて使用し、コンシューマー向けGPUで短いクリップ（約2秒、16フレーム）を生成します。より長く、一貫性が高く、フォトリアルな動画が必要な読者は、[ローカルAI動画生成 vs. クラウド](/ja/power-local-llm/local-ai-video-generation-vs-cloud)で新しいネイティブ動画モデルと比較してください。ローカルGPUがない読者は、まず[クラウドGPUレンタル](/ja/power-local-llm/cloud-gpu-rental-guide-2026)をご覧ください。',
+      '**AnimateDiffは、すでにローカルでStable Diffusionを使っており、何も再学習せずに既存のチェックポイントやLoRAをアニメーション化したい読者に適しています。** これは完全な動画モデルではなく、無料でApache 2.0ライセンスのモーションモジュールであり、コミュニティが保守するComfyUI-AnimateDiff-Evolvedノードや、AUTOMATIC1111のsd-webui-animatediff拡張機能を通じて使用し、コンシューマー向けGPUで短いクリップ（約2秒、16フレーム）を生成します。より長く、一貫性が高く、フォトリアルな動画が必要な読者は、[ローカルAI動画生成 vs. クラウド](/ja/power-local-llm/local-ai-video-generation-vs-cloud)で新しいネイティブ動画モデルと比較してください。ローカルGPUがない読者は、まず[クラウドGPUレンタル](/ja/power-local-llm/best-cloud-gpu-providers)をご覧ください。',
     quickAnswerTop: {
       en: {
         question: 'What is AnimateDiff and is it free to use?',
@@ -1261,7 +1261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**SD1.5ベースのAnimateDiffワークフローは、中程度の解像度（モジュールのネイティブな16フレームウィンドウで約512x512）での基本的なテキスト動画生成であれば、8-12GBのVRAMで動作するのが一般的です。SDXL対応にはかなり多くが必要です。**',
           '公式リポジトリによると、SDXL推論は「通常約13GBのVRAM」を必要とし、これは使用するパーソナライズされたチェックポイントや生成設定によって異なります。SD1.5ワークフローに関するコミュニティの報告は、解像度、フレーム数、ControlNetを組み合わせるかどうかによってばらつきがあります——標準設定での短いクリップ1本であれば8-12GBの範囲の下限を、高解像度・多フレーム・video-to-videoパイプラインでの複数ControlNet併用であれば上限（あるいはそれ以上、16GB超）を想定してください。これらは単一の検証済みベンチマークではなく、実際のワークフローに大きく左右される、慎重に幅を持たせたコミュニティ報告値です。',
-          '実用的な目安：8GBカードは標準設定でのSD1.5テキスト動画生成の実験には十分な出発点であり、12GBカードはControlNetを併用するSD1.5ワークフローに快適な余裕を与え、16GBカード（例：RTX 4070 Ti Super）はSDXLベースのAnimateDiffやより重いvideo-to-videoパイプラインに移行する際のより快適な最低ラインです。GPUがこれらの水準に届かない、あるいはローカルGPUを持たない読者は、[クラウドGPUレンタルガイド2026](/ja/power-local-llm/cloud-gpu-rental-guide-2026)でのレンタルと、[ローカルLLM向けベストGPU購入ガイド2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026)での購入を比較検討してください（同じVRAM水準のガイダンスが、他のローカル生成AIワークロードと同様にAnimateDiffにも当てはまります）。',
+          '実用的な目安：8GBカードは標準設定でのSD1.5テキスト動画生成の実験には十分な出発点であり、12GBカードはControlNetを併用するSD1.5ワークフローに快適な余裕を与え、16GBカード（例：RTX 4070 Ti Super）はSDXLベースのAnimateDiffやより重いvideo-to-videoパイプラインに移行する際のより快適な最低ラインです。GPUがこれらの水準に届かない、あるいはローカルGPUを持たない読者は、[クラウドGPUレンタルガイド2026](/ja/power-local-llm/best-cloud-gpu-providers)でのレンタルと、[ローカルLLM向けベストGPU購入ガイド2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026)での購入を比較検討してください（同じVRAM水準のガイダンスが、他のローカル生成AIワークロードと同様にAnimateDiffにも当てはまります）。',
         ],
       },
       motionLorasLimitations: {
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**フォトリアルで長編、または精密なカメラ制御が必要な動画を求める読者。** Wan 2.2やLTX-2などのローカルネイティブ動画モデル、あるいはRunwayやPikaなどの商用モデルの方が、これらをより上手く処理します。[ローカルAI動画生成 vs. クラウド](/ja/power-local-llm/local-ai-video-generation-vs-cloud)を参照してください。',
           '**すでに気に入っているStable Diffusionチェックポイントを持たない読者。** アニメーション化する価値のある出発点がなければ、テキストプロンプトから直接生成するネイティブ動画モデルに対する優位性はほとんどありません。',
           '**ライセンス条文を読まずに確実な商用利用権を必要とする読者。** AnimateDiff自身のREADMEにある学術用途の枠組みに加え、別途のチェックポイントライセンスがあるため、これは注意義務なしの「商用利用無料」ツールではありません——上記のライセンスの明確化の章を参照してください。',
-          '**ローカルGPUを持たない、または約8GB未満のVRAMのカードしかない読者。** SD1.5ベースのAnimateDiffは8GBから実用的ですが、それを下回る読者は代わりに[クラウドGPUレンタル](/ja/power-local-llm/cloud-gpu-rental-guide-2026)やクラウド動画サービスを検討すべきです。',
+          '**ローカルGPUを持たない、または約8GB未満のVRAMのカードしかない読者。** SD1.5ベースのAnimateDiffは8GBから実用的ですが、それを下回る読者は代わりに[クラウドGPUレンタル](/ja/power-local-llm/best-cloud-gpu-providers)やクラウド動画サービスを検討すべきです。',
           '**ワンクリックアプリ体験を求める読者。** ComfyUIとAUTOMATIC1111はどちらも、ノードグラフや拡張機能の設定にある程度慣れていることを前提としています——洗練された一般消費者向け製品ではありません。',
         ],
       },
@@ -1457,7 +1457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ローカルAI動画生成 vs. クラウド 2026](/ja/power-local-llm/local-ai-video-generation-vs-cloud) — AnimateDiffより長く一貫性のあるクリップが必要な読者向けに、新しいネイティブ動画モデル（Wan 2.2、LTX-2、HunyuanVideo）を商用クラウド動画と比較。',
           '[ローカルAI画像生成 vs. クラウド](/ja/power-local-llm/local-ai-image-generation-vs-cloud) — 同じローカル対クラウドの判断の静止画側の記事。そこで選んだチェックポイントがAnimateDiffでアニメーション化されるものになる。',
           '[ローカルLLM向けベストGPU購入ガイド2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — ローカルの言語モデルと同様にAnimateDiffにも当てはまるVRAM水準別のハードウェアガイダンス。',
-          '[クラウドGPUレンタルガイド2026](/ja/power-local-llm/cloud-gpu-rental-guide-2026) — ローカルで十分なGPUを持たないがAnimateDiffのワークフローを実行したい読者向け。',
+          '[クラウドGPUレンタルガイド2026](/ja/power-local-llm/best-cloud-gpu-providers) — ローカルで十分なGPUを持たないがAnimateDiffのワークフローを実行したい読者向け。',
           '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — AnimateDiffが属する画像生成・ビジュアルAI層を含む、ローカルAIツールの完全なディレクトリ。',
         ],
       },
@@ -1466,7 +1466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8GB VRAM', '12GB VRAM', '16GB VRAM', 'RTX 3060 12GB', 'RTX 4070 Ti Super 16GB', 'RTX 4090 24GB'],
     leadAnswerBlock:
-      '**AnimateDiff适合已经在本地使用Stable Diffusion、并希望在不重新训练任何东西的情况下为现有检查点或LoRA添加动画的读者。** 它是一款免费、采用Apache 2.0许可证的运动模块——而非完整的视频模型——通过社区维护的ComfyUI-AnimateDiff-Evolved节点或AUTOMATIC1111的sd-webui-animatediff扩展使用，在消费级GPU上生成短片段（约2秒、16帧）。希望获得更长、更连贯或更具照片级真实感视频的读者，应在[本地AI视频生成 vs. 云端](/zh/power-local-llm/local-ai-video-generation-vs-cloud)中与更新的原生视频模型进行比较；完全没有本地GPU的读者应先阅读[云端GPU租赁指南](/zh/power-local-llm/cloud-gpu-rental-guide-2026)。',
+      '**AnimateDiff适合已经在本地使用Stable Diffusion、并希望在不重新训练任何东西的情况下为现有检查点或LoRA添加动画的读者。** 它是一款免费、采用Apache 2.0许可证的运动模块——而非完整的视频模型——通过社区维护的ComfyUI-AnimateDiff-Evolved节点或AUTOMATIC1111的sd-webui-animatediff扩展使用，在消费级GPU上生成短片段（约2秒、16帧）。希望获得更长、更连贯或更具照片级真实感视频的读者，应在[本地AI视频生成 vs. 云端](/zh/power-local-llm/local-ai-video-generation-vs-cloud)中与更新的原生视频模型进行比较；完全没有本地GPU的读者应先阅读[云端GPU租赁指南](/zh/power-local-llm/best-cloud-gpu-providers)。',
     quickAnswerTop: {
       en: {
         question: 'What is AnimateDiff and is it free to use?',
@@ -1628,7 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**基于SD1.5的AnimateDiff工作流在中等分辨率（约512x512，模块原生的16帧窗口）下进行基础文本转视频时，通常在8-12GB VRAM下运行；SDXL支持则需要明显更多。**',
           '官方仓库说明SDXL推理"通常需要约13GB VRAM"，具体取决于所使用的个性化检查点和生成设置。社区对SD1.5工作流的报告因分辨率、帧数以及是否叠加ControlNet而有所不同——在默认设置下生成单个短片段时，预计接近8-12GB区间的下限；而在提高分辨率、增加帧数，或在图生图管线中叠加多个ControlNet时，预计接近区间上限（甚至超出，达到16GB以上）。这些是经过谨慎表述的社区报告范围，而非单一经过验证的基准测试，因为实际VRAM占用高度取决于具体工作流。',
-          '实用建议：8GB显卡是SD1.5文本转视频默认设置实验的可行起点；12GB显卡为搭配ControlNet的SD1.5工作流提供了充裕余量；16GB显卡（例如RTX 4070 Ti Super）在转向基于SDXL的AnimateDiff或更重的图生图管线时是更舒适的最低配置。GPU未达到这些档位、或没有本地GPU的读者，应在[2026年云端GPU租赁指南](/zh/power-local-llm/cloud-gpu-rental-guide-2026)中比较租用与购买——参见[2026年本地LLM最佳GPU选购指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026)（同样的VRAM档位建议适用于AnimateDiff，与其他本地生成式AI工作负载一致）。',
+          '实用建议：8GB显卡是SD1.5文本转视频默认设置实验的可行起点；12GB显卡为搭配ControlNet的SD1.5工作流提供了充裕余量；16GB显卡（例如RTX 4070 Ti Super）在转向基于SDXL的AnimateDiff或更重的图生图管线时是更舒适的最低配置。GPU未达到这些档位、或没有本地GPU的读者，应在[2026年云端GPU租赁指南](/zh/power-local-llm/best-cloud-gpu-providers)中比较租用与购买——参见[2026年本地LLM最佳GPU选购指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026)（同样的VRAM档位建议适用于AnimateDiff，与其他本地生成式AI工作负载一致）。',
         ],
       },
       motionLorasLimitations: {
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**需要照片级真实感、长篇或精确镜头控制视频的读者。** 无论是Wan 2.2或LTX-2等本地原生视频模型，还是Runway或Pika等商用模型，在这方面都表现更好；参见[本地AI视频生成 vs. 云端](/zh/power-local-llm/local-ai-video-generation-vs-cloud)。',
           '**没有已经喜欢的Stable Diffusion检查点的读者。** 若没有值得动画化的起点，相比能够直接从文本提示生成的原生视频模型，优势不大。',
           '**需要在不阅读许可证文本的情况下获得有保障商业使用权的读者。** AnimateDiff自身README中的学术用途表述，加上单独的检查点许可证，意味着这并非一个无需尽职调查的"免费商用"工具——参见上方的许可证解析部分。',
-          '**没有本地GPU、或显卡VRAM低于约8GB的读者。** 基于SD1.5的AnimateDiff从8GB起即可实用，但低于该档位的读者应改为考虑[云端GPU租赁](/zh/power-local-llm/cloud-gpu-rental-guide-2026)或云端视频服务。',
+          '**没有本地GPU、或显卡VRAM低于约8GB的读者。** 基于SD1.5的AnimateDiff从8GB起即可实用，但低于该档位的读者应改为考虑[云端GPU租赁](/zh/power-local-llm/best-cloud-gpu-providers)或云端视频服务。',
           '**希望获得一键式应用体验的读者。** ComfyUI和AUTOMATIC1111都假定用户对节点图或扩展设置有一定的熟悉度——这不是一款打磨精良的大众消费级产品。',
         ],
       },
@@ -1824,7 +1824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026年本地AI视频生成 vs. 云端](/zh/power-local-llm/local-ai-video-generation-vs-cloud) — 面向需要比AnimateDiff更长或更连贯片段的读者，将更新的原生视频模型（Wan 2.2、LTX-2、HunyuanVideo）与商用云端视频进行对比。',
           '[本地AI图像生成 vs. 云端](/zh/power-local-llm/local-ai-image-generation-vs-cloud) — 同一本地对比云端决策的静态图像一侧；您在那里选择的检查点，正是AnimateDiff将要动画化的对象。',
           '[2026年本地LLM最佳GPU选购指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 按VRAM档位划分的硬件建议，同样适用于AnimateDiff和本地语言模型。',
-          '[2026年云端GPU租赁指南](/zh/power-local-llm/cloud-gpu-rental-guide-2026) — 面向没有足够本地GPU、但仍希望运行AnimateDiff工作流的读者。',
+          '[2026年云端GPU租赁指南](/zh/power-local-llm/best-cloud-gpu-providers) — 面向没有足够本地GPU、但仍希望运行AnimateDiff工作流的读者。',
           '[2026年本地LLM软件目录](/zh/directory) — 完整的本地AI工具目录，涵盖AnimateDiff所属的图像生成与视觉AI层级。',
         ],
       },
@@ -1833,7 +1833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -1876,7 +1876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', 'RTX 3060 12GB', 'RTX 4070 Ti Super 16GB', 'RTX 4090 24GB'],
     leadAnswerBlock:
-      '**AnimateDiff es la opción para lectores que ya usan Stable Diffusion en local y quieren animar un checkpoint o LoRA existente sin reentrenar nada.** Es un módulo de movimiento gratuito con licencia Apache 2.0 — no un modelo de video completo —, usado a través del nodo comunitario ComfyUI-AnimateDiff-Evolved o la extensión sd-webui-animatediff de AUTOMATIC1111, generando clips cortos (unos 2 segundos, 16 fotogramas) en GPU de consumo. Los lectores que quieran video más largo, coherente o fotorrealista deberían compararlo con modelos de video nativos más nuevos en [Generación de video IA local vs. la nube](/es/power-local-llm/local-ai-video-generation-vs-cloud); quienes no tengan GPU local deberían leer primero [Alquiler de GPU en la nube](/es/power-local-llm/cloud-gpu-rental-guide-2026).',
+      '**AnimateDiff es la opción para lectores que ya usan Stable Diffusion en local y quieren animar un checkpoint o LoRA existente sin reentrenar nada.** Es un módulo de movimiento gratuito con licencia Apache 2.0 — no un modelo de video completo —, usado a través del nodo comunitario ComfyUI-AnimateDiff-Evolved o la extensión sd-webui-animatediff de AUTOMATIC1111, generando clips cortos (unos 2 segundos, 16 fotogramas) en GPU de consumo. Los lectores que quieran video más largo, coherente o fotorrealista deberían compararlo con modelos de video nativos más nuevos en [Generación de video IA local vs. la nube](/es/power-local-llm/local-ai-video-generation-vs-cloud); quienes no tengan GPU local deberían leer primero [Alquiler de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers).',
     quickAnswerTop: {
       en: {
         question: 'What is AnimateDiff and is it free to use?',
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Los workflows de AnimateDiff basados en SD1.5 suelen funcionar con 8-12 GB de VRAM para texto a video básico en resolución moderada (aproximadamente 512x512, la ventana nativa de 16 fotogramas del módulo); el soporte de SDXL necesita bastante más.**',
           'El repositorio oficial indica que la inferencia SDXL «normalmente requiere ~13 GB de VRAM», dependiendo del checkpoint personalizado y la configuración de generación usada. Los reportes de la comunidad para workflows SD1.5 varían según la resolución, el número de fotogramas y si se añade ControlNet — espera el extremo inferior del rango 8-12 GB para un clip corto con la configuración por defecto, y el extremo superior (o más, hacia 16 GB+) al añadir mayor resolución, más fotogramas, o múltiples ControlNets en un pipeline de video a video. Son rangos comunitarios reportados con cautela, no un único benchmark verificado, ya que el uso real de VRAM depende mucho del workflow específico.',
-          'Guía práctica: una tarjeta de 8 GB es un punto de partida viable para experimentar con texto a video SD1.5 en configuración por defecto; una tarjeta de 12 GB da margen cómodo para workflows SD1.5 con ControlNet; una tarjeta de 16 GB (por ejemplo, una RTX 4070 Ti Super) es el mínimo más cómodo al pasar a AnimateDiff basado en SDXL o pipelines de video a video más pesados. Los lectores cuya GPU quede por debajo de estos niveles, o que no tengan GPU local, deberían comparar alquilar — ver [Guía de alquiler de GPU en la nube 2026](/es/power-local-llm/cloud-gpu-rental-guide-2026) — frente a comprar, en la [Mejor guía de compra de GPU para LLM locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) (la misma orientación por nivel de VRAM aplica a AnimateDiff igual que a otras cargas de trabajo de IA generativa local).',
+          'Guía práctica: una tarjeta de 8 GB es un punto de partida viable para experimentar con texto a video SD1.5 en configuración por defecto; una tarjeta de 12 GB da margen cómodo para workflows SD1.5 con ControlNet; una tarjeta de 16 GB (por ejemplo, una RTX 4070 Ti Super) es el mínimo más cómodo al pasar a AnimateDiff basado en SDXL o pipelines de video a video más pesados. Los lectores cuya GPU quede por debajo de estos niveles, o que no tengan GPU local, deberían comparar alquilar — ver [Guía de alquiler de GPU en la nube 2026](/es/power-local-llm/best-cloud-gpu-providers) — frente a comprar, en la [Mejor guía de compra de GPU para LLM locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) (la misma orientación por nivel de VRAM aplica a AnimateDiff igual que a otras cargas de trabajo de IA generativa local).',
         ],
       },
       motionLorasLimitations: {
@@ -2113,7 +2113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Lector que necesita video fotorrealista, de formato largo, o con control de cámara preciso.** Los modelos de video nativos — locales como Wan 2.2 o LTX-2, o comerciales como Runway o Pika — manejan esto mejor; ver [Generación de video IA local vs. la nube](/es/power-local-llm/local-ai-video-generation-vs-cloud).',
           '**Lector sin un checkpoint de Stable Diffusion que ya le guste.** Sin un punto de partida que valga la pena animar, hay poca ventaja frente a un modelo de video nativo que genera directamente desde un prompt de texto.',
           '**Lector que necesita derechos de uso comercial garantizados sin leer texto legal.** El marco de uso académico en el propio README de AnimateDiff, más la licencia separada del checkpoint, significan que esto no es una herramienta «libre para uso comercial» sin diligencia previa — ver la sección Claridad sobre la licencia arriba.',
-          '**Lector sin GPU local, o con una tarjeta por debajo de unos 8 GB de VRAM.** AnimateDiff basado en SD1.5 es viable desde 8 GB, pero los lectores por debajo de ese nivel deberían considerar [Alquiler de GPU en la nube](/es/power-local-llm/cloud-gpu-rental-guide-2026) o un servicio de video en la nube en su lugar.',
+          '**Lector sin GPU local, o con una tarjeta por debajo de unos 8 GB de VRAM.** AnimateDiff basado en SD1.5 es viable desde 8 GB, pero los lectores por debajo de ese nivel deberían considerar [Alquiler de GPU en la nube](/es/power-local-llm/best-cloud-gpu-providers) o un servicio de video en la nube en su lugar.',
           '**Lector que quiere una experiencia de app de un solo clic.** Tanto ComfyUI como AUTOMATIC1111 asumen cierta comodidad con grafos de nodos o configuraciones de extensión — no es un producto de consumo pulido.',
         ],
       },
@@ -2191,7 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Generación de video IA local vs. la nube 2026](/es/power-local-llm/local-ai-video-generation-vs-cloud) — modelos de video nativos más nuevos (Wan 2.2, LTX-2, HunyuanVideo) comparados con el video comercial en la nube, para lectores que necesiten clips más largos o coherentes que los de AnimateDiff.',
           '[Generación de imágenes IA local vs. la nube](/es/power-local-llm/local-ai-image-generation-vs-cloud) — el lado de imagen fija de la misma decisión local vs. nube; el checkpoint que elijas ahí es lo que AnimateDiff anima.',
           '[Mejor guía de compra de GPU para LLM locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — orientación de hardware por nivel de VRAM aplicable a AnimateDiff tanto como a los modelos de lenguaje locales.',
-          '[Guía de alquiler de GPU en la nube 2026](/es/power-local-llm/cloud-gpu-rental-guide-2026) — para lectores sin una GPU local suficiente que aun así quieran ejecutar workflows de AnimateDiff.',
+          '[Guía de alquiler de GPU en la nube 2026](/es/power-local-llm/best-cloud-gpu-providers) — para lectores sin una GPU local suficiente que aun así quieran ejecutar workflows de AnimateDiff.',
           '[Directorio de software LLM local 2026](/es/directory) — el directorio completo de herramientas de IA local, incluyendo la capa de generación de imágenes e IA visual a la que pertenece AnimateDiff.',
         ],
       },
@@ -2200,7 +2200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', 'RTX 3060 12GB', 'RTX 4070 Ti Super 16GB', 'RTX 4090 24GB'],
     leadAnswerBlock:
-      '**O AnimateDiff é a escolha certa para leitores que já usam o Stable Diffusion localmente e querem animar um checkpoint ou LoRA existente sem retreinar nada.** É um módulo de movimento gratuito, com licença Apache 2.0 — não um modelo de vídeo completo —, usado através do nó mantido pela comunidade ComfyUI-AnimateDiff-Evolved ou da extensão sd-webui-animatediff do AUTOMATIC1111, gerando clipes curtos (cerca de 2 segundos, 16 quadros) em GPUs domésticas. Leitores que querem vídeos mais longos, mais coerentes ou fotorrealistas devem compará-lo com modelos de vídeo nativos mais recentes em [Geração de vídeo IA local vs. nuvem](/pt/power-local-llm/local-ai-video-generation-vs-cloud); quem não tem GPU local deve ler primeiro [Aluguel de GPU em nuvem](/pt/power-local-llm/cloud-gpu-rental-guide-2026).',
+      '**O AnimateDiff é a escolha certa para leitores que já usam o Stable Diffusion localmente e querem animar um checkpoint ou LoRA existente sem retreinar nada.** É um módulo de movimento gratuito, com licença Apache 2.0 — não um modelo de vídeo completo —, usado através do nó mantido pela comunidade ComfyUI-AnimateDiff-Evolved ou da extensão sd-webui-animatediff do AUTOMATIC1111, gerando clipes curtos (cerca de 2 segundos, 16 quadros) em GPUs domésticas. Leitores que querem vídeos mais longos, mais coerentes ou fotorrealistas devem compará-lo com modelos de vídeo nativos mais recentes em [Geração de vídeo IA local vs. nuvem](/pt/power-local-llm/local-ai-video-generation-vs-cloud); quem não tem GPU local deve ler primeiro [Aluguel de GPU em nuvem](/pt/power-local-llm/best-cloud-gpu-providers).',
     quickAnswerTop: {
       en: {
         question: 'What is AnimateDiff and is it free to use?',
@@ -2362,7 +2362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Workflows do AnimateDiff baseados em SD1.5 costumam rodar com 8-12 GB de VRAM para texto-em-vídeo básico em resolução moderada (cerca de 512x512, a janela nativa de 16 quadros do módulo); o suporte a SDXL precisa de bem mais.**',
           'O repositório oficial informa que a inferência SDXL "normalmente requer ~13 GB de VRAM", dependendo do checkpoint personalizado e das configurações de geração usadas. Relatos da comunidade para workflows SD1.5 variam conforme a resolução, o número de quadros e se há ControlNet envolvido — espere a ponta inferior da faixa de 8-12 GB para um clipe curto com configurações padrão, e a ponta superior (ou além, rumo a 16 GB+) ao adicionar resolução maior, mais quadros, ou múltiplos ControlNets em um pipeline vídeo-para-vídeo. Essas são faixas relatadas com cautela pela comunidade, não um único benchmark verificado, já que o uso real de VRAM depende muito do workflow específico.',
-          'Orientação prática: uma placa de 8 GB é um ponto de partida viável para experimentação com texto-em-vídeo SD1.5 em configurações padrão; uma placa de 12 GB oferece folga confortável para workflows SD1.5 com ControlNet; uma placa de 16 GB (por exemplo, uma RTX 4070 Ti Super) é o mínimo mais confortável ao migrar para o AnimateDiff baseado em SDXL ou pipelines vídeo-para-vídeo mais pesados. Leitores cuja GPU fique abaixo desses níveis, ou que não tenham GPU local, devem comparar alugar — veja o [Guia de aluguel de GPU em nuvem 2026](/pt/power-local-llm/cloud-gpu-rental-guide-2026) — com comprar, no [Melhor guia de compra de GPU para LLMs locais 2026](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) (a mesma orientação por nível de VRAM se aplica ao AnimateDiff tanto quanto a outras cargas de trabalho locais de IA generativa).',
+          'Orientação prática: uma placa de 8 GB é um ponto de partida viável para experimentação com texto-em-vídeo SD1.5 em configurações padrão; uma placa de 12 GB oferece folga confortável para workflows SD1.5 com ControlNet; uma placa de 16 GB (por exemplo, uma RTX 4070 Ti Super) é o mínimo mais confortável ao migrar para o AnimateDiff baseado em SDXL ou pipelines vídeo-para-vídeo mais pesados. Leitores cuja GPU fique abaixo desses níveis, ou que não tenham GPU local, devem comparar alugar — veja o [Guia de aluguel de GPU em nuvem 2026](/pt/power-local-llm/best-cloud-gpu-providers) — com comprar, no [Melhor guia de compra de GPU para LLMs locais 2026](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) (a mesma orientação por nível de VRAM se aplica ao AnimateDiff tanto quanto a outras cargas de trabalho locais de IA generativa).',
         ],
       },
       motionLorasLimitations: {
@@ -2480,7 +2480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Leitor que precisa de vídeo fotorrealista, de longa duração, ou com controle preciso de câmera.** Modelos de vídeo nativos — locais como Wan 2.2 ou LTX-2, ou comerciais como Runway ou Pika — lidam melhor com isso; veja [Geração de vídeo IA local vs. nuvem](/pt/power-local-llm/local-ai-video-generation-vs-cloud).',
           '**Leitor sem um checkpoint do Stable Diffusion de que já goste.** Sem um ponto de partida que valha a pena animar, há pouca vantagem sobre um modelo de vídeo nativo que gera diretamente a partir de um prompt de texto.',
           '**Leitor que precisa de direitos de uso comercial garantidos sem ler texto de licença.** O enquadramento de uso acadêmico no próprio README do AnimateDiff, mais a licença separada do checkpoint, significam que esta não é uma ferramenta "livre para uso comercial" sem diligência — veja a seção Clareza sobre a licença acima.',
-          '**Leitor sem GPU local, ou com uma placa abaixo de cerca de 8 GB de VRAM.** O AnimateDiff baseado em SD1.5 é viável a partir de 8 GB, mas leitores abaixo desse nível devem considerar [Aluguel de GPU em nuvem](/pt/power-local-llm/cloud-gpu-rental-guide-2026) ou um serviço de vídeo em nuvem em vez disso.',
+          '**Leitor sem GPU local, ou com uma placa abaixo de cerca de 8 GB de VRAM.** O AnimateDiff baseado em SD1.5 é viável a partir de 8 GB, mas leitores abaixo desse nível devem considerar [Aluguel de GPU em nuvem](/pt/power-local-llm/best-cloud-gpu-providers) ou um serviço de vídeo em nuvem em vez disso.',
           '**Leitor que quer uma experiência de app com um clique.** Tanto o ComfyUI quanto o AUTOMATIC1111 pressupõem certo conforto com grafos de nós ou configurações de extensão — não é um produto de consumo polido.',
         ],
       },
@@ -2558,7 +2558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Geração de vídeo IA local vs. nuvem 2026](/pt/power-local-llm/local-ai-video-generation-vs-cloud) — modelos de vídeo nativos mais recentes (Wan 2.2, LTX-2, HunyuanVideo) comparados ao vídeo comercial em nuvem, para leitores que precisam de clipes mais longos ou coerentes do que o AnimateDiff produz.',
           '[Geração de imagens IA local vs. nuvem](/pt/power-local-llm/local-ai-image-generation-vs-cloud) — o lado de imagem estática da mesma decisão local vs. nuvem; o checkpoint escolhido ali é o que o AnimateDiff anima.',
           '[Melhor guia de compra de GPU para LLMs locais 2026](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — orientação de hardware por nível de VRAM aplicável ao AnimateDiff tanto quanto a modelos de linguagem locais.',
-          '[Guia de aluguel de GPU em nuvem 2026](/pt/power-local-llm/cloud-gpu-rental-guide-2026) — para leitores sem uma GPU local suficiente que ainda assim querem rodar workflows do AnimateDiff.',
+          '[Guia de aluguel de GPU em nuvem 2026](/pt/power-local-llm/best-cloud-gpu-providers) — para leitores sem uma GPU local suficiente que ainda assim querem rodar workflows do AnimateDiff.',
           '[Diretório de software LLM local 2026](/pt/directory) — o diretório completo de ferramentas de IA local, incluindo a camada de geração de imagens e IA visual à qual o AnimateDiff pertence.',
         ],
       },
@@ -2567,7 +2567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -2610,7 +2610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8 GB VRAM', '12 GB VRAM', '16 GB VRAM', 'RTX 3060 12GB', 'RTX 4070 Ti Super 16GB', 'RTX 4090 24GB'],
     leadAnswerBlock:
-      '**يُعد AnimateDiff الخيار المناسب للقراء الذين يستخدمون بالفعل Stable Diffusion محلياً ويريدون تحريك نقطة فحص أو LoRA موجودة دون إعادة تدريب أي شيء.** إنه وحدة حركة مجانية مرخّصة بموجب Apache 2.0 — وليس نموذج فيديو كاملاً — تُستخدم عبر عقدة ComfyUI-AnimateDiff-Evolved التي يصونها المجتمع أو امتداد sd-webui-animatediff الخاص بـ AUTOMATIC1111، وتولّد مقاطع قصيرة (نحو ثانيتين، 16 إطاراً) على وحدات معالجة رسومات استهلاكية. القراء الذين يريدون فيديو أطول أو أكثر اتساقاً أو واقعياً فوتوغرافياً يجب أن يقارنوه بنماذج الفيديو الأصلية الأحدث في [توليد الفيديو المحلي بالذكاء الاصطناعي مقابل السحابة](/ar/power-local-llm/local-ai-video-generation-vs-cloud)؛ من لا يملك وحدة معالجة رسومات محلية عليه قراءة [دليل استئجار وحدات معالجة الرسومات السحابية](/ar/power-local-llm/cloud-gpu-rental-guide-2026) أولاً.',
+      '**يُعد AnimateDiff الخيار المناسب للقراء الذين يستخدمون بالفعل Stable Diffusion محلياً ويريدون تحريك نقطة فحص أو LoRA موجودة دون إعادة تدريب أي شيء.** إنه وحدة حركة مجانية مرخّصة بموجب Apache 2.0 — وليس نموذج فيديو كاملاً — تُستخدم عبر عقدة ComfyUI-AnimateDiff-Evolved التي يصونها المجتمع أو امتداد sd-webui-animatediff الخاص بـ AUTOMATIC1111، وتولّد مقاطع قصيرة (نحو ثانيتين، 16 إطاراً) على وحدات معالجة رسومات استهلاكية. القراء الذين يريدون فيديو أطول أو أكثر اتساقاً أو واقعياً فوتوغرافياً يجب أن يقارنوه بنماذج الفيديو الأصلية الأحدث في [توليد الفيديو المحلي بالذكاء الاصطناعي مقابل السحابة](/ar/power-local-llm/local-ai-video-generation-vs-cloud)؛ من لا يملك وحدة معالجة رسومات محلية عليه قراءة [دليل استئجار وحدات معالجة الرسومات السحابية](/ar/power-local-llm/best-cloud-gpu-providers) أولاً.',
     quickAnswerTop: {
       en: {
         question: 'What is AnimateDiff and is it free to use?',
@@ -2729,7 +2729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**تعمل سير عمل AnimateDiff المعتمدة على SD1.5 عادة بـ 8-12 جيجابايت VRAM لتوليد نص إلى فيديو أساسي بدقة متوسطة (نحو 512×512، نافذة الوحدة الأصلية المكونة من 16 إطاراً)؛ يحتاج دعم SDXL أكثر من ذلك بكثير.**',
           'يذكر المستودع الرسمي أن استدلال SDXL "يتطلب عادة نحو 13 جيجابايت VRAM"، حسب نقطة الفحص المخصصة وإعدادات التوليد المستخدمة. تتفاوت تقارير المجتمع بشأن سير عمل SD1.5 حسب الدقة وعدد الإطارات، وما إذا كان ControlNet مضافاً — توقع الحد الأدنى من نطاق 8-12 جيجابايت لمقطع قصير واحد بإعدادات افتراضية، والحد الأعلى (أو أكثر، نحو 16 جيجابايت وما فوق) عند إضافة دقة أعلى، أو مزيد من الإطارات، أو عدة ControlNets في خط أنابيب فيديو إلى فيديو. هذه نطاقات مُبلَّغ عنها من المجتمع بحذر وليست معياراً واحداً مُتحقَّقاً منه، لأن استخدام VRAM الفعلي يعتمد بشدة على سير العمل المحدد.',
-          'إرشاد عملي: بطاقة 8 جيجابايت نقطة انطلاق قابلة للتطبيق للتجريب مع نص إلى فيديو SD1.5 بالإعدادات الافتراضية؛ بطاقة 12 جيجابايت تمنح هامشاً مريحاً لسير عمل SD1.5 مع ControlNet؛ بطاقة 16 جيجابايت (مثل RTX 4070 Ti Super) هي الحد الأدنى الأكثر راحة عند الانتقال إلى AnimateDiff المعتمد على SDXL أو خطوط أنابيب فيديو إلى فيديو أثقل. القراء الذين تقل وحدة معالجة الرسومات لديهم عن هذه المستويات، أو لا يملكون وحدة معالجة رسومات محلية، يجب أن يقارنوا الاستئجار — راجع [دليل استئجار وحدات معالجة الرسومات السحابية 2026](/ar/power-local-llm/cloud-gpu-rental-guide-2026) — بالشراء، في [أفضل دليل شراء وحدة معالجة رسومات للنماذج اللغوية المحلية 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) (تنطبق نفس إرشادات مستويات VRAM على AnimateDiff كما تنطبق على أعباء عمل الذكاء الاصطناعي التوليدي المحلي الأخرى).',
+          'إرشاد عملي: بطاقة 8 جيجابايت نقطة انطلاق قابلة للتطبيق للتجريب مع نص إلى فيديو SD1.5 بالإعدادات الافتراضية؛ بطاقة 12 جيجابايت تمنح هامشاً مريحاً لسير عمل SD1.5 مع ControlNet؛ بطاقة 16 جيجابايت (مثل RTX 4070 Ti Super) هي الحد الأدنى الأكثر راحة عند الانتقال إلى AnimateDiff المعتمد على SDXL أو خطوط أنابيب فيديو إلى فيديو أثقل. القراء الذين تقل وحدة معالجة الرسومات لديهم عن هذه المستويات، أو لا يملكون وحدة معالجة رسومات محلية، يجب أن يقارنوا الاستئجار — راجع [دليل استئجار وحدات معالجة الرسومات السحابية 2026](/ar/power-local-llm/best-cloud-gpu-providers) — بالشراء، في [أفضل دليل شراء وحدة معالجة رسومات للنماذج اللغوية المحلية 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) (تنطبق نفس إرشادات مستويات VRAM على AnimateDiff كما تنطبق على أعباء عمل الذكاء الاصطناعي التوليدي المحلي الأخرى).',
         ],
       },
       motionLorasLimitations: {
@@ -2847,7 +2847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**القارئ الذي يحتاج فيديو واقعياً فوتوغرافياً أو طويلاً أو بتحكم دقيق بالكاميرا.** تتعامل نماذج الفيديو الأصلية بشكل أفضل مع ذلك — المحلية منها مثل Wan 2.2 أو LTX-2، أو التجارية مثل Runway أو Pika؛ راجع [توليد الفيديو المحلي بالذكاء الاصطناعي مقابل السحابة](/ar/power-local-llm/local-ai-video-generation-vs-cloud).',
           '**القارئ الذي لا يملك نقطة فحص Stable Diffusion يعجبه بالفعل.** بدون نقطة انطلاق تستحق التحريك، هناك ميزة قليلة مقارنة بنموذج فيديو أصلي يولّد مباشرة من مطالبة نصية.',
           '**القارئ الذي يحتاج حقوق استخدام تجارية مضمونة دون قراءة نص الترخيص.** إطار الاستخدام الأكاديمي في ملف README الخاص بـ AnimateDiff نفسه، بالإضافة إلى ترخيص نقطة الفحص المنفصل، يعني أن هذه ليست أداة "مجانية للاستخدام التجاري" بلا عناية واجبة — راجع قسم وضوح الترخيص أعلاه.',
-          '**القارئ الذي لا يملك وحدة معالجة رسومات محلية، أو يملك بطاقة أقل من نحو 8 جيجابايت VRAM.** AnimateDiff المعتمد على SD1.5 قابل للتطبيق من 8 جيجابايت، لكن القراء دون ذلك المستوى يجب أن ينظروا في [استئجار وحدة معالجة رسومات سحابية](/ar/power-local-llm/cloud-gpu-rental-guide-2026) أو خدمة فيديو سحابية بدلاً من ذلك.',
+          '**القارئ الذي لا يملك وحدة معالجة رسومات محلية، أو يملك بطاقة أقل من نحو 8 جيجابايت VRAM.** AnimateDiff المعتمد على SD1.5 قابل للتطبيق من 8 جيجابايت، لكن القراء دون ذلك المستوى يجب أن ينظروا في [استئجار وحدة معالجة رسومات سحابية](/ar/power-local-llm/best-cloud-gpu-providers) أو خدمة فيديو سحابية بدلاً من ذلك.',
           '**القارئ الذي يريد تجربة تطبيق بنقرة واحدة.** يفترض كل من ComfyUI وAUTOMATIC1111 قدراً من الارتياح مع مخططات العُقد أو إعدادات الامتدادات — إنه ليس منتجاً استهلاكياً مصقولاً.',
         ],
       },
@@ -2925,7 +2925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[توليد الفيديو المحلي بالذكاء الاصطناعي مقابل السحابة 2026](/ar/power-local-llm/local-ai-video-generation-vs-cloud) — مقارنة نماذج الفيديو الأصلية الأحدث (Wan 2.2، LTX-2، HunyuanVideo) بالفيديو السحابي التجاري، للقراء الذين يحتاجون مقاطع أطول أو أكثر اتساقاً مما ينتجه AnimateDiff.',
           '[توليد الصور المحلي بالذكاء الاصطناعي مقابل السحابة](/ar/power-local-llm/local-ai-image-generation-vs-cloud) — الجانب الخاص بالصورة الثابتة من نفس قرار المحلي مقابل السحابة؛ نقطة الفحص التي تختارها هناك هي ما يحرّكه AnimateDiff.',
           '[أفضل دليل شراء وحدة معالجة رسومات للنماذج اللغوية المحلية 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — إرشادات أجهزة حسب مستوى VRAM تنطبق على AnimateDiff بقدر انطباقها على نماذج اللغة المحلية.',
-          '[دليل استئجار وحدات معالجة الرسومات السحابية 2026](/ar/power-local-llm/cloud-gpu-rental-guide-2026) — للقراء الذين لا يملكون وحدة معالجة رسومات محلية كافية لكنهم يريدون تشغيل سير عمل AnimateDiff.',
+          '[دليل استئجار وحدات معالجة الرسومات السحابية 2026](/ar/power-local-llm/best-cloud-gpu-providers) — للقراء الذين لا يملكون وحدة معالجة رسومات محلية كافية لكنهم يريدون تشغيل سير عمل AnimateDiff.',
           '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلي، بما في ذلك طبقة توليد الصور والذكاء الاصطناعي البصري التي ينتمي إليها AnimateDiff.',
         ],
       },
@@ -2934,7 +2934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-02',
-    dateModified: '2026-09-02',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-03-02',
     designSkin: 'hub',
     theme: 'Image & Video Generation',
@@ -2977,7 +2977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['8GB VRAM', '12GB VRAM', '16GB VRAM', 'RTX 3060 12GB', 'RTX 4070 Ti Super 16GB', 'RTX 4090 24GB'],
     leadAnswerBlock:
-      '**AnimateDiff는 이미 로컬에서 Stable Diffusion을 사용하고 있고, 아무것도 재학습하지 않고 기존 체크포인트나 LoRA를 애니메이션화하고 싶은 독자에게 적합합니다.** 완전한 영상 모델이 아니라 무료이며 Apache 2.0 라이선스를 따르는 모션 모듈로, 커뮤니티가 유지 관리하는 ComfyUI-AnimateDiff-Evolved 노드나 AUTOMATIC1111의 sd-webui-animatediff 확장을 통해 사용하며, 소비자용 GPU에서 짧은 클립(약 2초, 16프레임)을 생성합니다. 더 길고 일관되거나 사실적인 영상을 원하는 독자는 [로컬 AI 영상 생성 vs. 클라우드](/ko/power-local-llm/local-ai-video-generation-vs-cloud)에서 최신 네이티브 영상 모델과 비교해 보아야 하며, 로컬 GPU가 전혀 없는 독자는 먼저 [클라우드 GPU 대여 가이드](/ko/power-local-llm/cloud-gpu-rental-guide-2026)를 읽어보시기 바랍니다.',
+      '**AnimateDiff는 이미 로컬에서 Stable Diffusion을 사용하고 있고, 아무것도 재학습하지 않고 기존 체크포인트나 LoRA를 애니메이션화하고 싶은 독자에게 적합합니다.** 완전한 영상 모델이 아니라 무료이며 Apache 2.0 라이선스를 따르는 모션 모듈로, 커뮤니티가 유지 관리하는 ComfyUI-AnimateDiff-Evolved 노드나 AUTOMATIC1111의 sd-webui-animatediff 확장을 통해 사용하며, 소비자용 GPU에서 짧은 클립(약 2초, 16프레임)을 생성합니다. 더 길고 일관되거나 사실적인 영상을 원하는 독자는 [로컬 AI 영상 생성 vs. 클라우드](/ko/power-local-llm/local-ai-video-generation-vs-cloud)에서 최신 네이티브 영상 모델과 비교해 보아야 하며, 로컬 GPU가 전혀 없는 독자는 먼저 [클라우드 GPU 대여 가이드](/ko/power-local-llm/best-cloud-gpu-providers)를 읽어보시기 바랍니다.',
     quickAnswerTop: {
       en: {
         question: 'What is AnimateDiff and is it free to use?',
@@ -3096,7 +3096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**SD1.5 기반 AnimateDiff 워크플로는 중간 해상도(모듈의 기본 16프레임 윈도우 기준 약 512x512)에서 기본적인 텍스트-투-비디오 생성 시 일반적으로 8-12GB VRAM으로 실행됩니다. SDXL 지원에는 훨씬 더 많은 VRAM이 필요합니다.**',
           '공식 저장소는 SDXL 추론이 사용하는 개인화된 체크포인트와 생성 설정에 따라 "일반적으로 약 13GB VRAM이 필요"하다고 명시합니다. SD1.5 워크플로에 대한 커뮤니티 보고는 해상도, 프레임 수, ControlNet 사용 여부에 따라 달라집니다 — 기본 설정에서 짧은 클립 하나라면 8-12GB 범위의 하단을, 더 높은 해상도, 더 많은 프레임, 또는 비디오-투-비디오 파이프라인에서 여러 ControlNet을 추가하면 상단(혹은 16GB 이상)을 예상하세요. 이는 단일한 검증된 벤치마크가 아니라, 실제 VRAM 사용량이 구체적인 워크플로에 크게 좌우되기 때문에 신중하게 표현된 커뮤니티 보고 범위입니다.',
-          '실용적인 지침: 8GB 카드는 기본 설정의 SD1.5 텍스트-투-비디오 실험에 실행 가능한 출발점이며, 12GB 카드는 ControlNet을 사용하는 SD1.5 워크플로에 여유를 제공하고, 16GB 카드(예: RTX 4070 Ti Super)는 SDXL 기반 AnimateDiff나 더 무거운 비디오-투-비디오 파이프라인으로 넘어갈 때 더 편안한 최소 사양입니다. GPU가 이러한 등급에 미치지 못하거나 로컬 GPU가 없는 독자는 [2026 클라우드 GPU 대여 가이드](/ko/power-local-llm/cloud-gpu-rental-guide-2026)에서 대여를, [2026 로컬 LLM용 최고의 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026)에서 구매를 비교해 보아야 합니다(동일한 VRAM 등급 지침이 다른 로컬 생성형 AI 작업과 마찬가지로 AnimateDiff에도 적용됩니다).',
+          '실용적인 지침: 8GB 카드는 기본 설정의 SD1.5 텍스트-투-비디오 실험에 실행 가능한 출발점이며, 12GB 카드는 ControlNet을 사용하는 SD1.5 워크플로에 여유를 제공하고, 16GB 카드(예: RTX 4070 Ti Super)는 SDXL 기반 AnimateDiff나 더 무거운 비디오-투-비디오 파이프라인으로 넘어갈 때 더 편안한 최소 사양입니다. GPU가 이러한 등급에 미치지 못하거나 로컬 GPU가 없는 독자는 [2026 클라우드 GPU 대여 가이드](/ko/power-local-llm/best-cloud-gpu-providers)에서 대여를, [2026 로컬 LLM용 최고의 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026)에서 구매를 비교해 보아야 합니다(동일한 VRAM 등급 지침이 다른 로컬 생성형 AI 작업과 마찬가지로 AnimateDiff에도 적용됩니다).',
         ],
       },
       motionLorasLimitations: {
@@ -3214,7 +3214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**사실적이고 장편이며 정밀한 카메라 제어가 필요한 영상이 필요한 독자.** Wan 2.2나 LTX-2 같은 로컬 네이티브 영상 모델, 또는 Runway나 Pika 같은 상업용 모델이 이를 더 잘 처리합니다. [로컬 AI 영상 생성 vs. 클라우드](/ko/power-local-llm/local-ai-video-generation-vs-cloud)를 참고하세요.',
           '**이미 마음에 드는 Stable Diffusion 체크포인트가 없는 독자.** 애니메이션화할 가치가 있는 출발점이 없다면, 텍스트 프롬프트에서 직접 생성하는 네이티브 영상 모델에 비해 얻을 이점이 거의 없습니다.',
           '**라이선스 문서를 읽지 않고도 보장된 상업적 이용 권리가 필요한 독자.** AnimateDiff 자체 README에 있는 학술적 용도 프레이밍에 더해 별도의 체크포인트 라이선스까지 있다는 것은, 이것이 별도 확인이 필요 없는 "상업적으로 무료" 도구가 아니라는 뜻입니다 — 위의 라이선스 명확히 하기 섹션을 참고하세요.',
-          '**로컬 GPU가 없거나 약 8GB VRAM 미만의 카드를 가진 독자.** SD1.5 기반 AnimateDiff는 8GB부터 실용적이지만, 그 등급 미만의 독자는 대신 [클라우드 GPU 대여](/ko/power-local-llm/cloud-gpu-rental-guide-2026)나 클라우드 영상 서비스를 고려해야 합니다.',
+          '**로컬 GPU가 없거나 약 8GB VRAM 미만의 카드를 가진 독자.** SD1.5 기반 AnimateDiff는 8GB부터 실용적이지만, 그 등급 미만의 독자는 대신 [클라우드 GPU 대여](/ko/power-local-llm/best-cloud-gpu-providers)나 클라우드 영상 서비스를 고려해야 합니다.',
           '**원클릭 앱 경험을 원하는 독자.** ComfyUI와 AUTOMATIC1111 모두 노드 그래프나 확장 설정에 어느 정도 익숙함을 전제로 합니다 — 완성도 높은 일반 소비자 제품이 아닙니다.',
         ],
       },
@@ -3292,7 +3292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026 로컬 AI 영상 생성 vs. 클라우드](/ko/power-local-llm/local-ai-video-generation-vs-cloud) — AnimateDiff보다 더 길거나 일관된 클립이 필요한 독자를 위해 최신 네이티브 영상 모델(Wan 2.2, LTX-2, HunyuanVideo)을 상업용 클라우드 영상과 비교합니다.',
           '[로컬 AI 이미지 생성 vs. 클라우드](/ko/power-local-llm/local-ai-image-generation-vs-cloud) — 동일한 로컬 vs. 클라우드 결정의 정지 이미지 쪽 이야기입니다. 그곳에서 선택한 체크포인트가 바로 AnimateDiff가 애니메이션화하는 대상입니다.',
           '[2026 로컬 LLM용 최고의 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 로컬 언어 모델과 마찬가지로 AnimateDiff에도 적용되는 VRAM 등급별 하드웨어 가이드입니다.',
-          '[2026 클라우드 GPU 대여 가이드](/ko/power-local-llm/cloud-gpu-rental-guide-2026) — 로컬에 충분한 GPU가 없지만 그래도 AnimateDiff 워크플로를 실행하고 싶은 독자를 위한 가이드입니다.',
+          '[2026 클라우드 GPU 대여 가이드](/ko/power-local-llm/best-cloud-gpu-providers) — 로컬에 충분한 GPU가 없지만 그래도 AnimateDiff 워크플로를 실행하고 싶은 독자를 위한 가이드입니다.',
           '[2026 로컬 LLM 소프트웨어 디렉토리](/ko/directory) — AnimateDiff가 속한 이미지 생성 및 비주얼 AI 계층을 포함한 전체 로컬 AI 도구 디렉토리입니다.',
         ],
       },

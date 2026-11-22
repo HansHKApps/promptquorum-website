@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Best CPU-only LLMs with no GPU: Phi-4 Mini at an estimated 15-25 tok/s, plus Llama 3.2 3B, Gemma 4 E2B, Qwen3 8B and DeepSeek-R1 7B. RAM needs included.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-en.webp',
       publishDate: '2026-05-07',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_benchmarks_used: ['tok/s (estimated from memory bandwidth)'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
@@ -240,6 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Fastest Local LLMs for Low-End PCs](/local-llms/fastest-local-llms-low-end-pcs) — Old or low-end PC? Estimated speeds by RAM tier →',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Why Q4_K_M matters for CPU inference speed →',
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Lightweight coding models that can run on CPU →',
+            'If CPU speed is not enough, check [when a cloud GPU is cheaper than upgrading](/power-local-llm/best-cloud-gpu-providers) before you buy new hardware.',
           ],
         },
         regionalContext: {
@@ -272,6 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — step-by-step guide to your first local LLM',
             '[Ollama Command Guide](/local-llms/ollama-command-guide) — how to manage CPU/GPU modes, multi-GPU, and offloading',
             '[Can You Run a Local LLM on a Raspberry Pi 5?](/prompt-bites/local-llm-raspberry-pi-5) — the same CPU-only constraints taken to their extreme on a low-cost single-board computer',
+            '[When a cloud GPU is cheaper than upgrading](/power-local-llm/best-cloud-gpu-providers) -- A cost view for CPU-only users weighing a hardware upgrade.',
           ],
         },
         sources: {
@@ -300,7 +302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         description: 'Best CPU-only LLMs with no GPU: Phi-4 Mini at an estimated 15-25 tok/s, plus Llama 3.2 3B, Gemma 4 E2B, Qwen3 8B and DeepSeek-R1 7B. RAM needs included.',
         url: 'https://www.promptquorum.com/local-llms/best-cpu-only-llm',
         datePublished: '2026-04-01',
-        dateModified: '2026-10-23',
+        dateModified: '2026-11-22',
         inLanguage: 'en',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -489,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Mejores LLM solo CPU sin GPU: Phi-4 Mini a unos 15-25 tok/s estimados, más Llama 3.2 3B, Gemma 4 E2B, Qwen3 8B y DeepSeek-R1 7B. Con requisitos de RAM.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-es.webp',
       publishDate: '2026-05-07',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
       leadAnswerBlock: '**La inferencia solo con CPU funciona con modelos de 3–8B en un PC moderno con 8–32 GB de RAM. Entre los modelos comparados, Phi-4 Mini (3,8B, 2,5 GB) es la opción general más equilibrada: unos 15–25 tok/s estimados con RAM de doble canal, según estimaciones de PromptQuorum, no mediciones.**',
@@ -661,6 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[LLM locales más rápidos para PC de gama baja](/es/local-llms/fastest-local-llms-low-end-pcs) — ¿PC antiguo o de gama baja? Velocidades estimadas según la RAM →',
             '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — Por qué Q4_K_M importa para la velocidad en CPU →',
             '[Mejores LLM locales para programar](/es/local-llms/best-local-llms-for-coding) — Modelos ligeros de código que pueden ejecutarse en CPU →',
+            'Si la velocidad de la CPU no es suficiente, revisa [cuándo una GPU en la nube sale más barata que actualizar](/es/power-local-llm/best-cloud-gpu-providers) antes de comprar hardware nuevo.',
           ],
         },
         regionalContext: {
@@ -693,6 +696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Mejores modelos LLM locales para principiantes](/es/local-llms/best-beginner-local-llm-models) — guía paso a paso para tu primer LLM local',
             '[Guía de comandos de Ollama](/es/local-llms/ollama-command-guide) — cómo gestionar los modos CPU/GPU, multi-GPU y la descarga a GPU',
             '[¿Se puede ejecutar un LLM local en una Raspberry Pi 5?](/es/prompt-bites/local-llm-raspberry-pi-5) — las mismas limitaciones de solo CPU llevadas al extremo en un ordenador de placa única económico',
+            '[Cuándo una GPU en la nube sale más barata que actualizar](/es/power-local-llm/best-cloud-gpu-providers) -- Una mirada a los costes para quienes usan solo CPU y valoran actualizar el hardware.',
           ],
         },
         sources: {
@@ -890,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'أفضل نماذج LLM على CPU فقط بلا GPU: Phi-4 Mini بسرعة مقدّرة 15-25 tok/s، مع Llama 3.2 3B وGemma 4 E2B وQwen3 8B وDeepSeek-R1 7B، ومتطلبات RAM.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-ar.webp',
       publishDate: '2026-05-07',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
       leadAnswerBlock: '**يعمل الاستدلال على CPU فقط مع نماذج 3–8B على جهاز حديث بذاكرة 8–32 GB. من بين النماذج المقارنة هنا، يُعد Phi-4 Mini (3.8B، ملف 2.5 GB) الخيار العام الأفضل بسرعة تقديرية 15–25 tok/s مع ذاكرة ثنائية القناة (تقدير من PromptQuorum وليس قياساً مخبرياً).**',
@@ -1062,6 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[أسرع نماذج LLM المحلية للأجهزة منخفضة المواصفات](/ar/local-llms/fastest-local-llms-low-end-pcs) — جهاز قديم أو منخفض المواصفات؟ سرعات مقدّرة بحسب فئة RAM →',
             '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) — لماذا يهم Q4_K_M لسرعة الاستدلال على CPU →',
             '[أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) — نماذج برمجة خفيفة يمكن تشغيلها على CPU →',
+            'إذا لم تكن سرعة المعالج كافية، فراجع [متى تكون GPU السحابية أرخص من الترقية](/ar/power-local-llm/best-cloud-gpu-providers) قبل شراء عتاد جديد.',
           ],
         },
         regionalContext: {
@@ -1094,6 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models) — دليل خطوة بخطوة لأول LLM محلي لك',
             '[دليل أوامر Ollama](/ar/local-llms/ollama-command-guide) — كيفية إدارة أوضاع CPU/GPU وتعدد GPU وتفريغ الحمل',
             '[هل يمكن تشغيل LLM محلي على Raspberry Pi 5؟](/ar/prompt-bites/local-llm-raspberry-pi-5) — قيود CPU فقط نفسها لكن في أقصى حالاتها على لوحة حاسوب مفردة منخفضة التكلفة',
+            '[متى تكون GPU السحابية أرخص من الترقية](/ar/power-local-llm/best-cloud-gpu-providers) -- نظرة على التكلفة للمستخدمين الذين يعتمدون على المعالج فقط ويفكرون في ترقية العتاد.',
           ],
         },
         sources: {
@@ -1291,7 +1297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Melhores LLMs só com CPU, sem GPU: Phi-4 Mini a 15-25 tok/s estimados, além de Llama 3.2 3B, Gemma 4 E2B, Qwen3 8B e DeepSeek-R1 7B. Com a RAM necessária.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-pt.webp',
       publishDate: '2026-05-07',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
       leadAnswerBlock: '**A inferência só com CPU funciona com modelos de 3–8B em um PC moderno com 8–32 GB de RAM. Entre os modelos comparados, o Phi-4 Mini (3.8B, 2.5 GB) é a melhor escolha geral: cerca de 15–25 tok/s estimados com RAM dual-channel (estimativa da PromptQuorum, não medição).**',
@@ -1463,6 +1469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[LLMs locais mais rápidos para PCs básicos](/pt/local-llms/fastest-local-llms-low-end-pcs) — PC antigo ou básico? Velocidades estimadas por faixa de RAM →',
             '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) — Por que o Q4_K_M importa para a velocidade da inferência em CPU →',
             '[Melhores LLMs locais para programação](/pt/local-llms/best-local-llms-for-coding) — Modelos leves de código que podem rodar na CPU →',
+            'Se a velocidade da CPU não for suficiente, veja [quando uma GPU na nuvem é mais barata que fazer upgrade](/pt/power-local-llm/best-cloud-gpu-providers) antes de comprar hardware novo.',
           ],
         },
         regionalContext: {
@@ -1495,6 +1502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Melhores modelos de LLM local para iniciantes](/pt/local-llms/best-beginner-local-llm-models) — guia passo a passo para o seu primeiro LLM local',
             '[Guia de comandos do Ollama](/pt/local-llms/ollama-command-guide) — como gerenciar os modos CPU/GPU, multi-GPU e offloading',
             '[Dá para rodar um LLM local em um Raspberry Pi 5?](/pt/prompt-bites/local-llm-raspberry-pi-5) — as mesmas restrições de só CPU levadas ao extremo em um computador de placa única de baixo custo',
+            '[Quando uma GPU na nuvem é mais barata que fazer upgrade](/pt/power-local-llm/best-cloud-gpu-providers) -- Uma visão de custos para quem usa só CPU e avalia atualizar o hardware.',
           ],
         },
         sources: {
@@ -1692,7 +1700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Beste CPU-only-LLMs ohne GPU: Phi-4 Mini mit geschätzt 15–25 Tok/s, dazu Llama 3.2 3B, Gemma 4 E2B, Qwen3 8B und DeepSeek-R1 7B. Inkl. RAM-Bedarf.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-de.webp',
       publishDate: '2026-05-07',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
       leadAnswerBlock: '**Reine CPU-Inferenz funktioniert mit 3–8B-Modellen auf einem modernen PC mit 8–32 GB RAM. Unter den hier verglichenen Modellen ist Phi-4 Mini (3,8B, 2,5 GB Datei) die beste Allround-Wahl: geschätzt 15–25 Tok/s bei Dual-Channel-RAM (PromptQuorum-Schätzung, keine Labormessung).**',
@@ -1850,6 +1858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Schnellste lokale LLMs für Low-End-PCs](/de/local-llms/fastest-local-llms-low-end-pcs) — Alter oder schwacher PC? Geschätzte Geschwindigkeiten nach RAM-Stufe →',
             '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — Warum Q4_K_M für die CPU-Inferenzgeschwindigkeit zählt →',
             '[Beste lokale LLMs fürs Coding](/de/local-llms/best-local-llms-for-coding) — Schlanke Coding-Modelle, die auf der CPU laufen können →',
+            'Reicht die CPU-Geschwindigkeit nicht aus, prüfen Sie, [wann eine Cloud-GPU günstiger ist als ein Upgrade](/de/power-local-llm/best-cloud-gpu-providers), bevor Sie neue Hardware kaufen.',
           ],
         },
         regionalContext: {
@@ -1882,6 +1891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Beste lokale LLM-Modelle für Einsteiger](/de/local-llms/best-beginner-local-llm-models) — Schritt-für-Schritt-Anleitung zu Ihrem ersten lokalen LLM',
             '[Ollama-Befehlsübersicht](/de/local-llms/ollama-command-guide) — CPU-/GPU-Modi, Multi-GPU und Offloading verwalten',
             '[Lässt sich ein lokales LLM auf einem Raspberry Pi 5 ausführen?](/de/prompt-bites/local-llm-raspberry-pi-5) — dieselben reinen CPU-Beschränkungen, auf einem günstigen Einplatinencomputer auf die Spitze getrieben',
+            '[Wann eine Cloud-GPU günstiger ist als ein Upgrade](/de/power-local-llm/best-cloud-gpu-providers) -- Kostenperspektive für Nutzer ohne GPU, die ein Hardware-Upgrade erwägen.',
           ],
         },
         sources: {
@@ -2079,7 +2089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Les meilleurs LLM sans GPU : Phi-4 Mini à environ 15-25 tok/s estimés, plus Llama 3.2 3B, Gemma 4 E2B, Qwen3 8B et DeepSeek-R1 7B. RAM requise incluse.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-fr.webp',
       publishDate: '2026-05-07',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
       leadAnswerBlock: '**L\'inférence sur CPU seul fonctionne avec des modèles de 3–8B sur un PC récent avec 8–32 GB de RAM. Parmi les modèles comparés, Phi-4 Mini (3,8B, 2,5 GB) est le meilleur choix polyvalent : environ 15–25 tok/s estimés en RAM double canal (estimation PromptQuorum, pas une mesure).**',
@@ -2237,6 +2247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[LLM locaux les plus rapides pour PC bas de gamme](/fr/local-llms/fastest-local-llms-low-end-pcs) — PC ancien ou limité ? Vitesses estimées selon la RAM →',
             '[Quantification des LLM expliquée](/fr/local-llms/llm-quantization-explained) — Pourquoi Q4_K_M compte pour la vitesse sur CPU →',
             '[Meilleurs LLM locaux pour le code](/fr/local-llms/best-local-llms-for-coding) — Modèles de code légers qui tournent sur CPU →',
+            'Si la vitesse du CPU ne suffit pas, vérifiez [quand un GPU cloud coûte moins cher qu\'une mise à niveau](/fr/power-local-llm/best-cloud-gpu-providers) avant d\'acheter du nouveau matériel.',
           ],
         },
         regionalContext: {
@@ -2269,6 +2280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Meilleurs modèles LLM locaux pour débutants](/fr/local-llms/best-beginner-local-llm-models) — guide pas à pas vers votre premier LLM local',
             '[Guide des commandes Ollama](/fr/local-llms/ollama-command-guide) — gérer les modes CPU/GPU, le multi-GPU et le déchargement',
             '[Peut-on faire tourner un LLM local sur un Raspberry Pi 5 ?](/fr/prompt-bites/local-llm-raspberry-pi-5) — les mêmes contraintes du CPU seul, poussées à l\'extrême sur une carte monocarte à bas coût',
+            '[Quand un GPU cloud coûte moins cher qu\'une mise à niveau](/fr/power-local-llm/best-cloud-gpu-providers) -- Une vue des coûts pour les utilisateurs sans GPU qui envisagent une mise à niveau matérielle.',
           ],
         },
         sources: {
@@ -2466,7 +2478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'GPU不要のCPU専用LLMを比較。Phi-4 Miniは推定15～25トークン/秒。Llama 3.2 3B、Gemma 4 E2B、Qwen3 8B、DeepSeek-R1 7Bも掲載し、必要なRAMも示します。',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-ja.webp',
       publishDate: '2026-05-07',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
       leadAnswerBlock: '**CPU専用の推論は、8～32 GB RAMを搭載した最新のPCで3～8Bモデルに実用的です。ここで比較したモデルのうち、Phi-4 Mini（3.8B、ファイル2.5 GB）が総合的な最有力候補で、デュアルチャネルRAMで推定15～25 tok/s（PromptQuorumの推定値であり、実験室での測定値ではありません）。**',
@@ -2624,6 +2636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[低スペック PC 向け最速ローカル LLM](/ja/local-llms/fastest-local-llms-low-end-pcs) — 古い PC や低スペック PC をお使いですか？RAM 帯別の推定速度 →',
             '[LLM 量子化を解説](/ja/local-llms/llm-quantization-explained) — CPU 推論の速度に Q4_K_M が重要な理由 →',
             '[コーディング向け最高のローカル LLM](/ja/local-llms/best-local-llms-for-coding) — CPU で動く軽量なコーディングモデル →',
+            'CPUの速度が足りない場合は、新しいハードウェアを買う前に[クラウドGPUがアップグレードより安くなる場面](/ja/power-local-llm/best-cloud-gpu-providers)を確認してください。',
           ],
         },
         regionalContext: {
@@ -2656,6 +2669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[初心者向けのおすすめローカル LLM モデル](/ja/local-llms/best-beginner-local-llm-models) — 最初のローカル LLM へのステップバイステップガイド',
             '[Ollama コマンドガイド](/ja/local-llms/ollama-command-guide) — CPU/GPU モード、マルチ GPU、オフロードの管理方法',
             '[Raspberry Pi 5 でローカル LLM を実行できますか？](/ja/prompt-bites/local-llm-raspberry-pi-5) — 同じ CPU のみという制約を、低価格のシングルボードコンピューターで極限まで押し進めたケース',
+            '[クラウドGPUがアップグレードより安くなる場面](/ja/power-local-llm/best-cloud-gpu-providers) -- CPUのみで使っていてハードウェア更新を検討している方向けのコストの見方。',
           ],
         },
         sources: {
@@ -2853,7 +2867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: '无需GPU也能跑大模型：Phi-4 Mini估算15-25 tok/s，另有Llama 3.2 3B、Gemma 4 E2B、Qwen3 8B与DeepSeek-R1 7B，附内存需求。',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-zh.webp',
       publishDate: '2026-05-07',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
       leadAnswerBlock: '**纯 CPU 推理适用于配备 8–32 GB 内存的现代电脑上的 3–8B 模型。在这里比较的模型中，Phi-4 Mini（3.8B，文件 2.5 GB）是最均衡的选择，双通道内存下估算 15–25 tok/s（PromptQuorum 的估值，并非实验室实测）。**',
@@ -3011,6 +3025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[低配电脑上最快的本地 LLM](/zh/local-llms/fastest-local-llms-low-end-pcs) — 电脑太旧或配置较低？按内存档位查看估算速度 →',
             '[LLM 量化详解](/zh/local-llms/llm-quantization-explained) — 为什么 Q4_K_M 对 CPU 推理速度很重要 →',
             '[最适合编程的本地 LLM](/zh/local-llms/best-local-llms-for-coding) — 可在 CPU 上运行的轻量编程模型 →',
+            '如果CPU速度不够，在购买新硬件之前，请先了解[云GPU何时比升级硬件更划算](/zh/power-local-llm/best-cloud-gpu-providers)。',
           ],
         },
         regionalContext: {
@@ -3043,6 +3058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[最适合初学者的本地 LLM 模型](/zh/local-llms/best-beginner-local-llm-models) — 你的第一个本地 LLM 分步指南',
             '[Ollama 命令指南](/zh/local-llms/ollama-command-guide) — 如何管理 CPU/GPU 模式、多 GPU 和卸载',
             '[能在树莓派 5 上运行本地 LLM 吗？](/zh/prompt-bites/local-llm-raspberry-pi-5) — 在低成本单板计算机上，同样的纯 CPU 限制被推到极致',
+            '[云GPU何时比升级硬件更划算](/zh/power-local-llm/best-cloud-gpu-providers) -- 面向仅用CPU、正在考虑升级硬件的用户的成本视角。',
           ],
         },
         sources: {
@@ -3240,7 +3256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'GPU 불필요한 CPU 전용 LLM: Phi-4 Mini 추정 15–25 tok/s, Llama 3.2 3B, Gemma 4 E2B, Qwen3 8B, DeepSeek-R1 7B. RAM 안내.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-ko.webp',
       publishDate: '2026-05-07',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Dual-channel DDR4-3200', 'Dual-channel DDR5-5600', 'Single-channel DDR4-3200 laptop', 'RTX 3060 12 GB', 'RTX 4090'],
       leadAnswerBlock: '**CPU 전용 추론은 8~32 GB RAM을 갖춘 최신 PC에서 3~8B 모델에 실용적입니다. 여기서 비교한 모델 중 Phi-4 Mini(3.8B, 파일 2.5 GB)가 가장 균형 잡힌 선택이며, 듀얼 채널 RAM에서 추정 15–25 tok/s입니다(PromptQuorum의 추정치이며 실험실 측정값이 아닙니다).**',
@@ -3412,6 +3428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[저사양 PC용 가장 빠른 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs) — 오래되었거나 저사양인 PC? RAM 등급별 추정 속도 →',
             '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — CPU 추론 속도에 Q4_K_M이 중요한 이유 →',
             '[코딩용 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — CPU에서 실행할 수 있는 경량 코딩 모델 →',
+            'CPU 속도가 충분하지 않다면 새 하드웨어를 구매하기 전에 [클라우드 GPU가 업그레이드보다 저렴한 경우](/ko/power-local-llm/best-cloud-gpu-providers)를 확인하십시오.',
           ],
         },
         regionalContext: {
@@ -3444,6 +3461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[초보자를 위한 최고의 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) — 첫 로컬 LLM을 위한 단계별 가이드',
             '[Ollama 명령어 가이드](/ko/local-llms/ollama-command-guide) — CPU/GPU 모드, 멀티 GPU, 오프로딩 관리 방법',
             '[Raspberry Pi 5에서 로컬 LLM을 실행할 수 있습니까?](/ko/prompt-bites/local-llm-raspberry-pi-5) — 저렴한 싱글 보드 컴퓨터에서 극한까지 밀어붙인 동일한 CPU 전용 제약',
+            '[클라우드 GPU가 업그레이드보다 저렴한 경우](/ko/power-local-llm/best-cloud-gpu-providers) -- CPU만 사용하며 하드웨어 업그레이드를 고민하는 분을 위한 비용 관점.',
           ],
         },
         sources: {

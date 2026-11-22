@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-en.webp',
       twitterDescription: 'CPU-only: Qwen3 1.7B est. 25–40 tok/s. Phi-4-mini est. 15–25 tok/s. 8GB RAM no GPU guide. Ollama commands included.',
       publishDate: '2026-04-05',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       leadAnswerBlock: 'Among the models compared here, Qwen3 1.7B (Q4_K_M) is the fastest pick for a CPU-only PC with 4–8 GB RAM, at an estimated 25–40 tok/s. For better quality on 8 GB, use Phi-4-mini (3.8B) at an estimated 15–25 tok/s.',
       quickAnswer: {
         title: 'Fastest Local LLMs for Low-End PCs (2026)',
@@ -270,6 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Worked examples (ceilings, not predictions): dual-channel DDR4-3200 gives 3200 × 8 × 2 = 51.2 GB/s; dividing by the 2.5 GB Phi-4-mini file gives about 20 tok/s at most. Dual-channel DDR5-5600 gives 89.6 GB/s, or about 36 tok/s at most for the same file. A single-channel DDR4-3200 laptop gives 25.6 GB/s, or about 10 tok/s at most. Real speed is lower than the ceiling.',
             '**Intel N100 mini PCs have one memory channel** ([Intel specifications](https://www.intel.com/content/www/us/en/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html): DDR4-3200, DDR5-4800 or LPDDR5-4800). With DDR4-3200 the ceiling for the 1.4 GB Qwen3 1.7B file is about 18 tok/s; with DDR5-4800 about 27 tok/s. Expect the N100 to land below the dual-channel ranges in this guide.',
             '**This is slower than cloud chatbots but sufficient for interactive use.** A 3B model at 25 tok/sec generates a 500-token response in 20 seconds — acceptable for non-time-critical tasks like code review, summarization, and creative writing.',
+            '**Want to try larger models without buying hardware?** You can [test larger models on a rented GPU](/power-local-llm/best-cloud-gpu-providers) by the hour, and the [RunPod review](/power-local-llm/runpod-review) covers one such provider in detail.',
           ],
         },
         'quantization': {
@@ -416,6 +417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — Full hardware requirements by model size for 2026.',
             '[Best CPU-Only LLMs](/local-llms/best-cpu-only-llm) — Ranked picks for machines with no GPU at all, with estimated tok/s for each model.',
             '[Small Local LLM Models](/local-llms/small-local-llm-models) — The sub-4B tier ranked on quality, for the lightest models that still hold up.',
+            '[Test larger models on a rented GPU](/power-local-llm/best-cloud-gpu-providers) -- GPU rental providers compared, plus the [RunPod review](/power-local-llm/runpod-review).',
           ],
         },
         'sources': {
@@ -442,7 +444,7 @@ schema: {
         'headline': 'Fastest Local LLMs for Low-End PCs 2026: CPU-Only Guide',
         'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -692,7 +694,7 @@ schema: {
       heroImage: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-es.webp',
       twitterDescription: 'Solo CPU: Qwen3 1.7B est. 25–40 tok/s. Phi-4-mini est. 15–25 tok/s. Guía sin GPU con 8 GB RAM. Comandos de Ollama incluidos.',
       publishDate: '2026-04-05',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       leadAnswerBlock: 'Entre los modelos comparados aquí, Qwen3 1.7B (Q4_K_M) es la opción más rápida para un PC solo con CPU y 4–8 GB de RAM, con unos 25–40 tok/s estimados. Para mayor calidad con 8 GB, usa Phi-4-mini (3.8B), con unos 15–25 tok/s estimados.',
       quickAnswer: {
         title: 'LLMs Locales más Rápidos para PCs de Gama Baja (2026)',
@@ -828,6 +830,7 @@ schema: {
             'Ejemplos resueltos (techos, no predicciones): DDR4-3200 de doble canal da 3200 × 8 × 2 = 51.2 GB/s; dividido entre el archivo de 2.5 GB de Phi-4-mini, son unos 20 tok/s como máximo. DDR5-5600 de doble canal da 89.6 GB/s, o unos 36 tok/s como máximo con el mismo archivo. Un portátil DDR4-3200 de un solo canal da 25.6 GB/s, o unos 10 tok/s como máximo. La velocidad real es menor que el techo.',
             '**Los mini PC Intel N100 tienen un solo canal de memoria** ([especificaciones de Intel](https://www.intel.com/content/www/us/en/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html): DDR4-3200, DDR5-4800 o LPDDR5-4800). Con DDR4-3200, el techo para el archivo de 1.4 GB de Qwen3 1.7B es de unos 18 tok/s; con DDR5-4800, de unos 27 tok/s. Espera que el N100 quede por debajo de los rangos de doble canal de esta guía.',
             '**Esto es más lento que los chatbots en la nube pero suficiente para uso interactivo.** Un modelo 3B a 25 tok/s genera una respuesta de 500 tokens en 20 segundos — aceptable para tareas no urgentes como revisión de código, resúmenes y escritura creativa.',
+            '**¿Quieres probar modelos más grandes sin comprar hardware?** Puedes [probar modelos más grandes en una GPU alquilada](/es/power-local-llm/best-cloud-gpu-providers) por horas, y la [reseña de RunPod](/es/power-local-llm/runpod-review) describe a uno de esos proveedores en detalle.',
           ],
         },
         'quantization': {
@@ -974,6 +977,7 @@ schema: {
             '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — Requisitos completos de hardware por tamaño de modelo para 2026.',
             '[Mejores LLMs solo CPU](/es/local-llms/best-cpu-only-llm) — Selección ordenada para equipos sin ninguna GPU, con tok/s estimados para cada modelo.',
             '[Modelos LLM locales pequeños](/es/local-llms/small-local-llm-models) — El nivel por debajo de 4B ordenado por calidad, para los modelos más ligeros que aún rinden bien.',
+            '[Probar modelos más grandes en una GPU alquilada](/es/power-local-llm/best-cloud-gpu-providers) -- Proveedores de alquiler de GPU comparados, junto con la [reseña de RunPod](/es/power-local-llm/runpod-review).',
           ],
         },
         'sources': {
@@ -1000,7 +1004,7 @@ schema: {
         'headline': 'LLMs Locales más Rápidos para PCs de Gama Baja 2026: Guía Solo CPU',
         'url': 'https://www.promptquorum.com/es/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -1250,7 +1254,7 @@ schema: {
       heroImage: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-ar.webp',
       twitterDescription: 'CPU فقط: Qwen3 1.7B تقديرياً 25–40 tok/s. Phi-4-mini تقديرياً 15–25 tok/s. دليل 8 جيجابايت رام دون GPU. أوامر Ollama مضمّنة.',
       publishDate: '2026-04-05',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       leadAnswerBlock: 'من بين النماذج المقارَنة هنا، يُعدّ Qwen3 1.7B (Q4_K_M) الخيار الأسرع لكمبيوتر بمعالج CPU فقط وذاكرة 4–8 جيجابايت رام، بسرعة تقديرية 25–40 رمزاً/ثانية. لجودة أفضل مع 8 جيجابايت، استخدم Phi-4-mini (3.8B) بسرعة تقديرية 15–25 رمزاً/ثانية.',
       quickAnswer: {
         title: 'أسرع نماذج LLM المحلية لأجهزة الكمبيوتر منخفضة المواصفات (2026)',
@@ -1386,6 +1390,7 @@ schema: {
             'أمثلة محسوبة (سقوف لا تنبؤات): رام DDR4-3200 ثنائية القناة تعطي 3200 × 8 × 2 = 51.2 GB/s؛ وبقسمتها على ملف Phi-4-mini البالغ 2.5 GB نحصل على نحو 20 tok/s كحد أقصى. وDDR5-5600 ثنائية القناة تعطي 89.6 GB/s، أي نحو 36 tok/s كحد أقصى للملف نفسه. وحاسوب محمول بـ DDR4-3200 أحادية القناة يعطي 25.6 GB/s، أي نحو 10 tok/s كحد أقصى. السرعة الفعلية أقل من السقف.',
             '**أجهزة Intel N100 المصغّرة لها قناة ذاكرة واحدة** ([مواصفات Intel](https://www.intel.com/content/www/us/en/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html): DDR4-3200 أو DDR5-4800 أو LPDDR5-4800). مع DDR4-3200 يبلغ السقف لملف Qwen3 1.7B البالغ 1.4 GB نحو 18 tok/s؛ ومع DDR5-4800 نحو 27 tok/s. توقّع أن يقع N100 دون النطاقات ثنائية القناة في هذا الدليل.',
             '**هذا أبطأ من روبوتات الدردشة السحابية لكنه كافٍ للاستخدام التفاعلي.** ينتج نموذج 3B بسرعة 25 tok/s رداً من 500 رمز في 20 ثانية — مقبول للمهام غير العاجلة كمراجعة الكود والتلخيصات والكتابة الإبداعية.',
+            '**هل تريد تجربة نماذج أكبر دون شراء عتاد؟** يمكنك [اختبار نماذج أكبر على GPU مستأجرة](/ar/power-local-llm/best-cloud-gpu-providers) بالساعة، وتتناول [مراجعة RunPod](/ar/power-local-llm/runpod-review) أحد هؤلاء المزوّدين بالتفصيل.',
           ],
         },
         'quantization': {
@@ -1532,6 +1537,7 @@ schema: {
             '[دليل عتاد LLM المحلي](/ar/local-llms/local-llm-hardware-guide) — متطلبات عتاد كاملة حسب حجم النموذج لـ 2026.',
             '[أفضل LLM بمعالج فقط](/ar/local-llms/best-cpu-only-llm) — اختيارات مرتبة للأجهزة التي لا تملك GPU إطلاقاً، مع سرعات تقديرية بالرمز في الثانية لكل نموذج.',
             '[نماذج LLM المحلية الصغيرة](/ar/local-llms/small-local-llm-models) — فئة ما دون 4B مرتبة حسب الجودة، لأخف النماذج التي لا تزال صالحة للاستخدام.',
+            '[اختبار نماذج أكبر على GPU مستأجرة](/ar/power-local-llm/best-cloud-gpu-providers) -- مقارنة بين مزوّدي تأجير GPU، مع [مراجعة RunPod](/ar/power-local-llm/runpod-review).',
           ],
         },
         'sources': {
@@ -1559,7 +1565,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/fastest-local-llms-low-end-pcs',
         'inLanguage': 'ar',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -1811,7 +1817,7 @@ schema: {
       heroImage: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-pt.webp',
       twitterDescription: 'Somente CPU: Qwen3 1.7B est. 25–40 tok/s. Phi-4-mini est. 15–25 tok/s. Guia sem GPU com 8 GB de RAM. Comandos do Ollama incluídos.',
       publishDate: '2026-04-05',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       leadAnswerBlock: 'Entre os modelos comparados aqui, o Qwen3 1.7B (Q4_K_M) é a opção mais rápida para um PC somente com CPU e 4–8 GB de RAM, com cerca de 25–40 tok/s (estimado). Para mais qualidade com 8 GB, use o Phi-4-mini (3.8B), com cerca de 15–25 tok/s (estimado).',
       quickAnswer: {
         title: 'LLMs Locais mais Rápidos para PCs de Baixo Custo (2026)',
@@ -1947,6 +1953,7 @@ schema: {
             'Exemplos práticos (tetos, não previsões): DDR4-3200 dual-channel dá 3200 × 8 × 2 = 51.2 GB/s; dividindo pelo arquivo de 2.5 GB do Phi-4-mini, dá no máximo cerca de 20 tok/s. DDR5-5600 dual-channel dá 89.6 GB/s, ou no máximo cerca de 36 tok/s para o mesmo arquivo. Um notebook DDR4-3200 single-channel dá 25.6 GB/s, ou no máximo cerca de 10 tok/s. A velocidade real fica abaixo do teto.',
             '**Os mini PCs Intel N100 têm um único canal de memória** ([especificações da Intel](https://www.intel.com/content/www/us/en/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html): DDR4-3200, DDR5-4800 ou LPDDR5-4800). Com DDR4-3200, o teto para o arquivo de 1.4 GB do Qwen3 1.7B é de cerca de 18 tok/s; com DDR5-4800, cerca de 27 tok/s. Espere que o N100 fique abaixo das faixas dual-channel deste guia.',
             '**Isso é mais lento que os chatbots em nuvem, mas suficiente para uso interativo.** Um modelo 3B a 25 tok/s gera uma resposta de 500 tokens em 20 segundos — aceitável para tarefas não urgentes como revisão de código, resumos e escrita criativa.',
+            '**Quer testar modelos maiores sem comprar hardware?** Você pode [testar modelos maiores em uma GPU alugada](/pt/power-local-llm/best-cloud-gpu-providers) por hora, e a [análise do RunPod](/pt/power-local-llm/runpod-review) descreve um desses provedores em detalhe.',
           ],
         },
         'quantization': {
@@ -2093,6 +2100,7 @@ schema: {
             '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) — Requisitos completos de hardware por tamanho de modelo para 2026.',
             '[Melhores LLMs somente CPU](/pt/local-llms/best-cpu-only-llm) — Escolhas ranqueadas para máquinas sem nenhuma GPU, com tok/s estimados para cada modelo.',
             '[Modelos de LLM local pequenos](/pt/local-llms/small-local-llm-models) — O nível abaixo de 4B ranqueado por qualidade, para os modelos mais leves que ainda se sustentam.',
+            '[Testar modelos maiores em uma GPU alugada](/pt/power-local-llm/best-cloud-gpu-providers) -- Provedores de aluguel de GPU comparados, junto com a [análise do RunPod](/pt/power-local-llm/runpod-review).',
           ],
         },
         'sources': {
@@ -2121,7 +2129,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/fastest-local-llms-low-end-pcs',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
-        dateModified: '2026-10-23',
+        dateModified: '2026-11-22',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
@@ -2369,7 +2377,7 @@ schema: {
       heroImage: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-de.webp',
       twitterDescription: 'Nur CPU: Qwen3 1.7B geschätzt 25–40 Tok/s. Phi-4-mini geschätzt 15–25 Tok/s. 8GB-RAM-Guide ohne GPU. Ollama-Befehle inklusive.',
       publishDate: '2026-04-05',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       leadAnswerBlock: 'Unter den hier verglichenen Modellen ist Qwen3 1.7B (Q4_K_M) die schnellste Wahl für einen reinen CPU-PC mit 4–8 GB RAM, bei geschätzt 25–40 Tok/s. Für bessere Qualität bei 8 GB nutzen Sie Phi-4-mini (3.8B) mit geschätzt 15–25 Tok/s.',
       quickAnswer: {
         title: 'Schnellste lokale LLMs für Low-End-PCs (2026)',
@@ -2505,6 +2513,7 @@ schema: {
             'Rechenbeispiele (Obergrenzen, keine Prognosen): Dual-Channel-DDR4-3200 ergibt 3200 × 8 × 2 = 51,2 GB/s; geteilt durch die 2,5 GB große Phi-4-mini-Datei sind das höchstens etwa 20 Tok/s. Dual-Channel-DDR5-5600 ergibt 89,6 GB/s, also höchstens etwa 36 Tok/s für dieselbe Datei. Ein Single-Channel-DDR4-3200-Notebook liefert 25,6 GB/s, also höchstens etwa 10 Tok/s. Die reale Geschwindigkeit liegt unter der Obergrenze.',
             '**Intel-N100-Mini-PCs haben nur einen Speicherkanal** ([Intel-Spezifikationen](https://www.intel.com/content/www/us/en/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html): DDR4-3200, DDR5-4800 oder LPDDR5-4800). Mit DDR4-3200 liegt die Obergrenze für die 1,4 GB große Qwen3-1.7B-Datei bei etwa 18 Tok/s, mit DDR5-4800 bei etwa 27 Tok/s. Erwarten Sie, dass der N100 unter den Dual-Channel-Bereichen in diesem Leitfaden landet.',
             '**Das ist langsamer als Cloud-Chatbots, aber ausreichend für interaktive Nutzung.** Ein 3B-Modell mit 25 Tok/Sek generiert eine 500-Token-Antwort in 20 Sekunden — akzeptabel für nicht zeitkritische Aufgaben wie Code-Review, Zusammenfassung und kreatives Schreiben.',
+            '**Größere Modelle ausprobieren, ohne Hardware zu kaufen?** Sie können [größere Modelle auf einer gemieteten GPU testen](/de/power-local-llm/best-cloud-gpu-providers), stundenweise abgerechnet; der [RunPod-Testbericht](/de/power-local-llm/runpod-review) behandelt einen dieser Anbieter im Detail.',
           ],
         },
         'quantization': {
@@ -2653,6 +2662,7 @@ schema: {
             '[Lokaler LLM-Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) — Vollständige Hardwareanforderungen nach Modellgröße für 2026.',
             '[Beste reine CPU-LLMs](/de/local-llms/best-cpu-only-llm) — Rangliste der Empfehlungen für Rechner ganz ohne GPU, mit geschätzten Tok/s je Modell.',
             '[Kleine lokale LLM-Modelle](/de/local-llms/small-local-llm-models) — Die Stufe unter 4B nach Qualität gereiht, für die leichtesten Modelle, die noch überzeugen.',
+            '[Größere Modelle auf einer gemieteten GPU testen](/de/power-local-llm/best-cloud-gpu-providers) -- Anbieter für GPU-Miete im Vergleich, dazu der [RunPod-Testbericht](/de/power-local-llm/runpod-review).',
           ],
         },
         'sources': {
@@ -2679,7 +2689,7 @@ schema: {
         'headline': 'Schnellste lokale LLMs für Low-End-PCs 2026: CPU-only-Guide',
         'url': 'https://www.promptquorum.com/de/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -2945,7 +2955,7 @@ schema: {
       heroImage: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-fr.webp',
       twitterDescription: 'CPU seul : Qwen3 1.7B est. 25–40 tok/s. Phi-4-mini est. 15–25 tok/s. Guide sans GPU, 8 Go de RAM. Commandes Ollama incluses.',
       publishDate: '2026-04-05',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       leadAnswerBlock: 'Parmi les modèles comparés ici, Qwen3 1.7B (Q4_K_M) est le choix le plus rapide pour un PC en CPU seul avec 4–8 Go de RAM, à environ 25–40 tok/s estimés. Pour une meilleure qualité avec 8 Go, utilisez Phi-4-mini (3.8B), à environ 15–25 tok/s estimés.',
       quickAnswer: {
         title: 'LLMs locaux les plus rapides pour PC bas de gamme (2026)',
@@ -3081,6 +3091,7 @@ schema: {
             'Exemples chiffrés (des plafonds, pas des prévisions) : de la DDR4-3200 double canal donne 3200 × 8 × 2 = 51.2 Go/s ; divisé par le fichier de 2.5 Go de Phi-4-mini, cela donne environ 20 tok/s au maximum. De la DDR5-5600 double canal donne 89.6 Go/s, soit environ 36 tok/s au maximum pour le même fichier. Un portable en DDR4-3200 simple canal donne 25.6 Go/s, soit environ 10 tok/s au maximum. La vitesse réelle est inférieure au plafond.',
             '**Les mini PC Intel N100 n\'ont qu\'un seul canal mémoire** ([spécifications Intel](https://www.intel.com/content/www/us/en/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html) : DDR4-3200, DDR5-4800 ou LPDDR5-4800). Avec de la DDR4-3200, le plafond pour le fichier de 1.4 Go de Qwen3 1.7B est d\'environ 18 tok/s ; avec de la DDR5-4800, d\'environ 27 tok/s. Attendez-vous à ce que le N100 reste en dessous des plages double canal de ce guide.',
             '**C\'est plus lent que les chatbots cloud, mais suffisant pour un usage interactif.** Un modèle 3B à 25 tok/sec génère une réponse de 500 tokens en 20 secondes — acceptable pour des tâches non urgentes comme la revue de code, la synthèse et l\'écriture créative.',
+            '**Envie d\'essayer de plus gros modèles sans acheter de matériel ?** Vous pouvez [tester de plus gros modèles sur un GPU loué](/fr/power-local-llm/best-cloud-gpu-providers) à l\'heure, et l\'[avis sur RunPod](/fr/power-local-llm/runpod-review) présente l\'un de ces fournisseurs en détail.',
           ],
         },
         'quantization': {
@@ -3227,6 +3238,7 @@ schema: {
             '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — Prérequis matériels complets par taille de modèle pour 2026.',
             '[Meilleurs LLM CPU seul](/fr/local-llms/best-cpu-only-llm) — Sélection classée pour les machines sans aucun GPU, avec des tok/s estimés pour chaque modèle.',
             '[Petits modèles LLM locaux](/fr/local-llms/small-local-llm-models) — Le palier sous 4B classé par qualité, pour les modèles les plus légers qui tiennent encore la route.',
+            '[Tester de plus gros modèles sur un GPU loué](/fr/power-local-llm/best-cloud-gpu-providers) -- Comparatif des fournisseurs de location de GPU, avec l\'[avis sur RunPod](/fr/power-local-llm/runpod-review).',
           ],
         },
         'sources': {
@@ -3253,7 +3265,7 @@ schema: {
         'headline': 'LLMs locaux les plus rapides pour PC bas de gamme 2026 : guide CPU seul',
         'url': 'https://www.promptquorum.com/fr/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -3503,7 +3515,7 @@ schema: {
       heroImage: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-ja.webp',
       twitterDescription: 'CPU専用：Qwen3 1.7B 推定25〜40トークン/秒。Phi-4-mini 推定15〜25トークン/秒。RAM 8GB・GPU不要ガイド。Ollamaコマンド付き。',
       publishDate: '2026-04-05',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       leadAnswerBlock: 'ここで比較したモデルの中では、CPU専用でRAM 4〜8 GBのPCで最速の選択肢はQwen3 1.7B（Q4_K_M）で、推定25〜40トークン/秒です。RAM 8 GBでより高い品質が欲しい場合は、推定15〜25トークン/秒のPhi-4-mini（3.8B）をお使いください。',
       quickAnswer: {
         title: '低スペックPC向け最速ローカルLLM（2026年）',
@@ -3639,6 +3651,7 @@ schema: {
             '計算例（予測ではなく上限値）：デュアルチャネルDDR4-3200では3200 × 8 × 2 = 51.2 GB/s、これを2.5 GBのPhi-4-miniのファイルで割ると最大で約20トークン/秒。デュアルチャネルDDR5-5600では89.6 GB/sで、同じファイルなら最大で約36トークン/秒。シングルチャネルDDR4-3200のノートPCでは25.6 GB/sで、最大で約10トークン/秒。実際の速度は上限値より低くなります。',
             '**Intel N100のミニPCはメモリチャネルが1つです**（[Intelの仕様](https://www.intel.com/content/www/us/en/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html)：DDR4-3200、DDR5-4800、LPDDR5-4800）。DDR4-3200では、1.4 GBのQwen3 1.7Bファイルの上限は約18トークン/秒、DDR5-4800では約27トークン/秒です。N100は本ガイドのデュアルチャネルの範囲を下回ると考えてください。',
             '**クラウドのチャットボットより低速ですが、インタラクティブ使用には十分です。** 25トークン/秒の3Bモデルは500トークンのレスポンスを20秒で生成 — コードレビュー、要約、創作など時間に余裕のあるタスクに許容範囲。',
+            '**ハードウェアを買わずに大きなモデルを試したいですか？** [レンタルGPUで大きなモデルを試す](/ja/power-local-llm/best-cloud-gpu-providers)ことができます。時間単位で利用でき、[RunPodレビュー](/ja/power-local-llm/runpod-review)ではそのような事業者の1社を詳しく解説しています。',
           ],
         },
         'quantization': {
@@ -3785,6 +3798,7 @@ schema: {
             '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — 2026年のモデルサイズ別ハードウェア要件の完全版。',
             '[CPU専用で動くおすすめLLM](/ja/local-llms/best-cpu-only-llm) — GPUがないマシン向けのランキング形式のおすすめ。モデルごとの推定トークン/秒付き。',
             '[小型ローカルLLMモデル](/ja/local-llms/small-local-llm-models) — 4B未満の階層を品質で比較し、最も軽量で実用に耐えるモデルを紹介。',
+            '[レンタルGPUで大きなモデルを試す](/ja/power-local-llm/best-cloud-gpu-providers) -- GPUレンタル事業者の比較と[RunPodレビュー](/ja/power-local-llm/runpod-review)。',
           ],
         },
         'sources': {
@@ -3811,7 +3825,7 @@ schema: {
         'headline': '低スペックPC向け最速ローカルLLM 2026：CPU専用ガイド',
         'url': 'https://www.promptquorum.com/ja/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -4061,7 +4075,7 @@ schema: {
       heroImage: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-zh.webp',
       twitterDescription: '纯CPU：Qwen3 1.7B 估算25–40 tok/s。Phi-4-mini 估算15–25 tok/s。8GB内存无GPU指南。附Ollama命令。',
       publishDate: '2026-04-05',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '在本文对比的模型中，Qwen3 1.7B（Q4_K_M）是纯CPU、4–8 GB内存电脑上最快的选择，估算为25–40 tok/s。若8GB内存追求更好质量，请使用Phi-4-mini（3.8B），估算为15–25 tok/s。',
       quickAnswer: {
         title: '低配电脑最快本地LLM（2026年）',
@@ -4197,6 +4211,7 @@ schema: {
             '计算示例（上限，而非预测）：双通道DDR4-3200为3200 × 8 × 2 = 51.2 GB/s；除以2.5 GB的Phi-4-mini文件，最多约20 tok/s。双通道DDR5-5600为89.6 GB/s，同一文件最多约36 tok/s。单通道DDR4-3200的笔记本为25.6 GB/s，最多约10 tok/s。实际速度低于上限。',
             '**Intel N100迷你主机只有一个内存通道**（[Intel规格](https://www.intel.com/content/www/us/en/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html)：DDR4-3200、DDR5-4800或LPDDR5-4800）。使用DDR4-3200时，1.4 GB的Qwen3 1.7B文件上限约为18 tok/s；使用DDR5-4800时约为27 tok/s。N100的实际表现会低于本指南中的双通道范围。',
             '**这比云端聊天机器人慢，但足以满足交互式使用。** 3B模型以25词元/秒生成500词元响应需20秒——对于代码审查、摘要和创意写作等非时间敏感任务可接受。',
+            '**想在不购买硬件的情况下试用更大的模型？** 可以[在租用的GPU上测试更大的模型](/zh/power-local-llm/best-cloud-gpu-providers)，按小时使用；[RunPod评测](/zh/power-local-llm/runpod-review)详细介绍了其中一家服务商。',
           ],
         },
         'quantization': {
@@ -4343,6 +4358,7 @@ schema: {
             '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) — 2026年按模型大小划分的完整硬件需求。',
             '[最佳纯CPU LLM](/zh/local-llms/best-cpu-only-llm) — 完全没有GPU的电脑上的精选排名，附各模型的估算 tok/s。',
             '[小型本地LLM模型](/zh/local-llms/small-local-llm-models) — 按质量排序的4B以下档位，适合仍能保持实用水准的最轻量模型。',
+            '[在租用的GPU上测试更大的模型](/zh/power-local-llm/best-cloud-gpu-providers) -- GPU租用服务商对比，附[RunPod评测](/zh/power-local-llm/runpod-review)。',
           ],
         },
         'sources': {
@@ -4369,7 +4385,7 @@ schema: {
         'headline': '低配电脑最快本地LLM 2026：纯CPU指南',
         'url': 'https://www.promptquorum.com/zh/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -4619,7 +4635,7 @@ schema: {
       heroImage: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-ko.webp',
       twitterDescription: 'CPU 전용: Qwen3 1.7B 추정 초당 25–40 토큰. Phi-4-mini 추정 초당 15–25 토큰. RAM 8GB GPU 불필요 가이드. Ollama 명령어 포함.',
       publishDate: '2026-04-05',
-      dateModified: '2026-10-23',
+      dateModified: '2026-11-22',
       leadAnswerBlock: '여기서 비교한 모델 중 CPU 전용, RAM 4–8 GB PC에서 가장 빠른 선택은 Qwen3 1.7B (Q4_K_M)이며, 추정 초당 25–40 토큰입니다. RAM 8 GB에서 더 나은 품질을 원하신다면 Phi-4-mini (3.8B)를 사용하십시오. 추정 초당 15–25 토큰입니다.',
       quickAnswer: {
         title: '저사양 PC를 위한 가장 빠른 로컬 LLM (2026)',
@@ -4755,6 +4771,7 @@ schema: {
             '계산 예시 (예측이 아닌 상한값): 듀얼 채널 DDR4-3200은 3200 × 8 × 2 = 51.2 GB/s이며, 2.5 GB인 Phi-4-mini 파일로 나누면 최대 약 초당 20 토큰입니다. 듀얼 채널 DDR5-5600은 89.6 GB/s로, 같은 파일에서 최대 약 초당 36 토큰입니다. 싱글 채널 DDR4-3200 노트북은 25.6 GB/s로 최대 약 초당 10 토큰입니다. 실제 속도는 상한값보다 낮습니다.',
             '**Intel N100 미니 PC는 메모리 채널이 하나입니다** ([Intel 사양](https://www.intel.com/content/www/us/en/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html): DDR4-3200, DDR5-4800 또는 LPDDR5-4800). DDR4-3200에서 1.4 GB인 Qwen3 1.7B 파일의 상한은 약 초당 18 토큰이고, DDR5-4800에서는 약 초당 27 토큰입니다. N100은 이 가이드의 듀얼 채널 범위보다 낮게 나올 것으로 예상하십시오.',
             '**이는 클라우드 챗봇보다 느리지만 대화형 사용에는 충분합니다.** 초당 25 토큰의 3B 모델은 500 토큰 응답을 20초에 생성합니다 — 코드 검토, 요약, 창작 글쓰기와 같은 비시간 중요 작업에는 허용 가능합니다.',
+            '**하드웨어를 사지 않고 더 큰 모델을 시험해 보고 싶으십니까?** [대여한 GPU에서 더 큰 모델 테스트](/ko/power-local-llm/best-cloud-gpu-providers)를 시간 단위로 할 수 있으며, [RunPod 리뷰](/ko/power-local-llm/runpod-review)에서 그러한 업체 한 곳을 자세히 다룹니다.',
           ],
         },
         'quantization': {
@@ -4901,6 +4918,7 @@ schema: {
             '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 2026년 모델 크기별 전체 하드웨어 요구 사항.',
             '[최고의 CPU 전용 LLM](/ko/local-llms/best-cpu-only-llm) — GPU가 전혀 없는 머신을 위한 순위별 추천, 모델별 추정 tok/s 포함.',
             '[소형 로컬 LLM 모델](/ko/local-llms/small-local-llm-models) — 품질 기준으로 순위를 매긴 4B 미만 티어, 여전히 쓸 만한 가장 가벼운 모델용.',
+            '[대여한 GPU에서 더 큰 모델 테스트](/ko/power-local-llm/best-cloud-gpu-providers) -- GPU 대여 업체 비교 및 [RunPod 리뷰](/ko/power-local-llm/runpod-review).',
           ],
         },
         'sources': {
@@ -4927,7 +4945,7 @@ schema: {
         'headline': '2026년 저사양 PC를 위한 가장 빠른 로컬 LLM: CPU 전용 가이드',
         'url': 'https://www.promptquorum.com/ko/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-10-23',
+        'dateModified': '2026-11-22',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',

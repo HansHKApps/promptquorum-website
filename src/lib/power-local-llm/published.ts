@@ -162,6 +162,13 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // AI cloud provider comparison (DigitalOcean vs AWS vs GCP vs Azure vs OCI) — 2026-09-05
   'digitalocean-vs-aws-cloud-for-ai-companies',
+  'best-cloud-gpu-providers',
+  'gpu-server-hosting-cudo-cherry-database-mart',
+  'vultr-digitalocean-upcloud-gpu-cloud',
+  'novita-ai-review',
+  'clore-ai-review',
+  'vast-ai-review',
+  'runpod-review',
 
   // ASUS mini PC + electricity/solar affiliate pages — 2026-09-01
   'asus-mini-pc-local-ai',
