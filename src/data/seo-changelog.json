@@ -30949,5 +30949,37 @@
       "period": "28d to 2026-11-22"
     },
     "deployedAt": null
+  },
+  {
+    "id": "88eadbd0-e348-4d59-8eca-092973e949eb",
+    "slug": "/prompt-bites/cloud-gpu-cost-per-hour",
+    "date": "2026-11-22T11:18:51.274Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Cloud GPU Cost Per Hour 2026 | Prompt Bites (43 chars)",
+        "new": "Cloud GPU Cost Per Hour 2026: RTX 4090, A100, H100 (50 chars)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "A100 80 GB 1.19-2.79, H100 1.99-4.29",
+        "new": "A100 80 GB 1.19-3.19, H100 1.99-4.89"
+      }
+    ],
+    "reason": "Page refresh 2026-11-22: RunPod/Lambda hourly prices re-read, cheapest claims scoped to checked listings, seoTitle/meta brought into locale budgets, cross-link to cost-per-token section; 9 locales; risk-gated",
+    "queries": [
+      "gpu cost per hour",
+      "cloud gpu prices",
+      "gpu cloud pricing",
+      "cloud gpu pricing 2026"
+    ],
+    "baseline": {
+      "position": 8.22,
+      "impressions": 716,
+      "clicks": 1,
+      "ctr": 0.0013966480446927375,
+      "period": "28d to 2026-11-22"
+    },
+    "deployedAt": null
   }
 ]
