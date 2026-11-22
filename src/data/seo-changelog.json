@@ -30981,5 +30981,39 @@
       "period": "28d to 2026-11-22"
     },
     "deployedAt": null
+  },
+  {
+    "id": "d8bbcf45-ab3e-4b0e-aa08-15dc7f9b9c2f",
+    "slug": "/local-llms/cloud-gpu-rental-comparison-2026",
+    "date": "2026-11-22T13:06:27.437Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale August 2026 snapshots, uneven locales (5183 lines)",
+        "new": "prices read 2026-11-22, 9 locales at parity (2802 lines)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "ko/ja/fr/zh generic titles",
+        "new": "ko RunPod 가격 비교, ja GPU料金比較, fr prix GPU, zh GPU租赁价格对比"
+      }
+    ],
+    "reason": "Full monthly refresh 2026-11-22: prices/facts re-read from primary sources, month snapshots and unverifiable claims removed, USD no longer shown as euro, all 9 locales rebuilt to one structure (14 FAQs), titles/metas reviewed per locale (ko/ja/fr/zh adapted to own queries); risk-gated",
+    "queries": [
+      "runpod vs lambda labs",
+      "alternative runpod",
+      "runpod 가격",
+      "gpuレンタル価格",
+      "lambda labs prix",
+      "vast.ai"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 6493,
+      "clicks": 10,
+      "ctr": 0.0015401201293700909,
+      "period": "28d to 2026-11-22"
+    },
+    "deployedAt": null
   }
 ]
