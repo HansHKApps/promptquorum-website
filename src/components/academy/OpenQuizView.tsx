@@ -20,7 +20,7 @@ import { ReportProblem } from './ReportProblem'
 import { TutorPanel } from './TutorPanel'
 import { usePrefetchNextLesson } from './usePrefetchNextLesson'
 import { creditLabel } from './credit'
-import { lessonSource } from './QuizView'
+import { lessonSource, requestQuiz } from './quiz-loader'
 import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
@@ -48,22 +48,11 @@ export function OpenQuizView({ tx, programme, update, postJson, errorText }: { t
     if (!active) return
     setError(null)
     setLoading(true)
-    const ids = isFinal ? programme.lessons.map((l) => l.id) : [active.quizId]
-    const res = await postJson<{ questions: OpenQuestion[] }>('/api/academy/open-quiz', {
-      kind: isFinal ? 'final' : 'lesson',
-      format: active.format === 'explain' ? 'explain' : 'free',
-      subject: programme.subject.slice(0, 120),
-      language: programme.language,
-      selfLevel: programme.selfLevel,
-      difficulty: programme.testDifficulty ?? 'medium',
-      availableMinutes: programme.availableMinutes,
-      lessons: lessonSource(programme, ids, isFinal ? 2500 : 4000),
-      objectives: programme.objectives,
-    })
+    const res = await requestQuiz(programme, active.quizId, active.format === 'explain' ? 'explain' : 'free', postJson)
     setLoading(false)
     if (!res.ok) return setError(res.code)
-    updateProgramme((p) => (p.progress.activeQuiz ? { ...p, progress: { ...p.progress, activeQuiz: { ...p.progress.activeQuiz, openQuestions: res.data.questions, openAnswers: {} } } } : p))
-  }, [active, isFinal, programme, postJson, updateProgramme])
+    updateProgramme((p) => (p.progress.activeQuiz ? { ...p, progress: { ...p.progress, activeQuiz: { ...p.progress.activeQuiz, openQuestions: res.data.questions as OpenQuestion[], openAnswers: {} } } } : p))
+  }, [active, programme, postJson, updateProgramme])
 
   useEffect(() => {
     if (!active || active.openQuestions?.length || requested.current === active.quizId) return

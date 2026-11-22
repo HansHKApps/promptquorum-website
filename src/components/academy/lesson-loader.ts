@@ -8,7 +8,7 @@ import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { AcademyState, Lesson, Programme } from '@/lib/academy/types'
 
 type LessonData = Pick<Lesson, 'sections' | 'furtherReading' | 'followUpQuestions'>
-export type LoadResult = { ok: true } | { ok: false; code: AcademyErrorCode | 'network' }
+export type LoadResult = { ok: true; data: LessonData } | { ok: false; code: AcademyErrorCode | 'network' }
 type PostJson = <T>(url: string, body: unknown) => Promise<{ ok: true; data: T } | { ok: false; code: AcademyErrorCode | 'network' }>
 type UpdateFn = (fn: (s: AcademyState) => AcademyState) => void
 
@@ -54,7 +54,7 @@ export function loadLesson(opts: { programme: Programme; index: number; update: 
     if (!res.ok) return { ok: false, code: res.code }
     const data = res.data
     update((s) => (s.programme && s.programme.id === programmeId && !s.programme.lessons[index].sections.length ? { ...s, programme: setLessonContent(s.programme, index, data) } : s))
-    return { ok: true }
+    return { ok: true, data }
   })().finally(() => inflight.delete(key))
   inflight.set(key, task)
   return task
@@ -64,13 +64,15 @@ export function loadLesson(opts: { programme: Programme; index: number; update: 
  * Background start of a lesson the learner has not opened yet. Never throws, never shows an error; a failed prefetch is
  * simply not retried here, so the normal load (with its retry button) takes over when the lesson is opened.
  */
-export function prefetchLesson(opts: { programme: Programme; index: number; update: UpdateFn; postJson: PostJson }): void {
+export function prefetchLesson(opts: { programme: Programme; index: number; update: UpdateFn; postJson: PostJson; onReady?: (withLesson: Programme) => void }): void {
   const { programme, index } = opts
   const lesson = programme.lessons[index]
-  if (!lesson || lesson.sections.length) return
+  if (!lesson) return
+  if (lesson.sections.length) return opts.onReady?.(programme)
   const key = keyOf(programme, index)
   if (inflight.has(key) || prefetchFailed.has(key)) return
   void loadLesson(opts).then((r) => {
     if (!r.ok) prefetchFailed.add(key)
+    else opts.onReady?.(setLessonContent(programme, index, r.data))
   })
 }

@@ -8,6 +8,7 @@ import { FinishedCard } from './FinishedCard'
 import { SuccessShare } from './SuccessShare'
 import { isSiteLang } from '@/lib/academy/language'
 import { Mark, press, type MarkState } from './press'
+import { lessonSource, requestQuiz } from './quiz-loader'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { scoreQuiz } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
@@ -23,12 +24,7 @@ import type { useAcademyState } from './useAcademyState'
 type Update = ReturnType<typeof useAcademyState>['update']
 type Post = <T>(url: string, body: unknown) => Promise<{ ok: true; data: T } | { ok: false; code: AcademyErrorCode | 'network' }>
 
-/** Lesson text sent as the quiz source (the verifier checks answers against exactly this text). */
-export function lessonSource(p: Programme, ids: string[], maxChars: number) {
-  return p.lessons
-    .filter((l) => ids.includes(l.id))
-    .map((l) => ({ title: l.title, topic: l.topic, text: l.sections.map((s) => `${s.heading}\n${s.body}`).join('\n\n').slice(0, maxChars) }))
-}
+export { lessonSource }
 
 export function QuizView({ tx, programme, update, postJson, errorText }: { tx: AcademyCopy; programme: Programme; update: Update; postJson: Post; errorText: (c: AcademyErrorCode | 'network') => string }) {
   const active = programme.progress.activeQuiz
@@ -52,22 +48,11 @@ export function QuizView({ tx, programme, update, postJson, errorText }: { tx: A
     if (!active) return
     setError(null)
     setLoading(true)
-    const ids = isFinal ? programme.lessons.map((l) => l.id) : [active.quizId]
-    const res = await postJson<{ questions: QuizQuestion[] }>('/api/academy/quiz', {
-      kind: isFinal ? 'final' : 'lesson',
-      subject: programme.subject.slice(0, 120),
-      language: programme.language,
-      selfLevel: programme.selfLevel,
-      difficulty: programme.testDifficulty ?? 'medium',
-      optionCount: programme.choiceOptions ?? 3,
-      availableMinutes: programme.availableMinutes,
-      lessons: lessonSource(programme, ids, isFinal ? 2500 : 4000),
-      objectives: programme.objectives,
-    })
+    const res = await requestQuiz(programme, active.quizId, 'choice', postJson)
     setLoading(false)
     if (!res.ok) return setError(res.code)
-    updateProgramme((p) => (p.progress.activeQuiz ? { ...p, progress: { ...p.progress, activeQuiz: { ...p.progress.activeQuiz, questions: res.data.questions } } } : p))
-  }, [active, isFinal, programme, postJson, updateProgramme])
+    updateProgramme((p) => (p.progress.activeQuiz ? { ...p, progress: { ...p.progress, activeQuiz: { ...p.progress.activeQuiz, questions: res.data.questions as QuizQuestion[] } } } : p))
+  }, [active, programme, postJson, updateProgramme])
 
   // A quiz stored before answers moved to the server holds the correct answers in the browser: drop it and generate a new one.
   useEffect(() => {
