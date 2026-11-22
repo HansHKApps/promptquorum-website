@@ -1541,15 +1541,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
     title: 'ローカルLLM向けノートパソコンのおすすめ：購入ガイド2026',
-    seoTitle: 'ローカルLLM向けノートPC 2026：MacとThinkPad',
+    seoTitle: 'ローカルLLM向けノートPCおすすめ2026：MacとThinkPad',
     intro:
       'ローカルLLM向けのノートパソコン選びのアドバイスの多くは、GPUから始まってそこで終わってしまいます。どのモデルが収まるかを実際に決める数値はメモリです。WindowsゲーミングノートパソコンであればVRAM、Apple Siliconであればunified memoryであり、メモリに収まらないモデルは読み込みに失敗するか、スワップに頼って這うように遅くなります。本ガイドでは、3つの購入スタイルにわたって4つのノートパソコン系統を比較します。携帯できる筐体で最大のメモリを得るためのApple MacBook Pro、NVIDIA GPUの速度を求めるためのLenovo ThinkPadまたはASUS ROGゲーミングノートパソコン、修理性とアップグレード性のためのFramework Laptop 16です。携帯機は熱的な制約により、同じチップを搭載したデスクトップより20～30%遅く動作すると考えてください。2026年を通じてメモリ不足によりノートパソコンの価格が上昇しているため、ここに記載した価格はすべて幅として扱い、購入前に現在の価格を確認してください。',
     metaDescription:
-      'ローカルLLM向けノートPC：MacBook Pro M5 Pro/Max、ThinkPad、ASUS ROG、Framework 16。必要なRAM・VRAM・unified memoryを購入スタイル別に比較します。',
+      'ローカルLLM向けノートPCのおすすめ：MacBook Pro M5 Pro/Max、ThinkPad、ASUS ROG、Framework 16。必要なRAM・VRAM・unified memoryを購入スタイル別に比較します。',
     heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-ja.webp',
     twitterDescription:
       'MacBook Pro、ThinkPad、ASUS ROG、Framework 16 — ローカルLLM向けの4つのノートパソコン系統、ルールは1つ：メモリで選ぶ。どのモデルが収まるかを決めるのはGPU名ではなく、VRAMまたはunified memoryです。',
@@ -2023,6 +2023,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'unified memoryが128 GBのノートパソコンで70Bモデルは動かせますか？',
             a: 'はい。Q4量子化の70Bモデルにはおよそ40～45 GBが必要で、24 GBのGPUより多くのメモリを備えたノートパソコンが必要です。M5 Maxを搭載したMacBook Pro 16インチと14インチは最大128 GBのunified memoryに対応し、ASUS ROG Flow Z13のようなAMD Ryzen AI Max+搭載ノートパソコンも128 GBまで対応しますが、メモリ帯域幅は低めです。実用的ではあるものの高速ではない生成を想定し、お使いのモデルについて独立したベンチマークを確認してください。',
+          },
+          {
+            q: 'ローカルAIモデルを実行するには、ノートパソコンとデスクトップのどちらが良いですか？',
+            a: '同じ予算ならデスクトップの方が性能面で有利です。24 GBのカードを載せ、フルパワーで動かし、しっかり冷却できるためです。持ち運びが必要な場合はノートパソコンが向いていますが、持続的な速度は約20～30%低くなります。ローカルでAIモデルを動かすPCを1台だけ持ち、しかも持ち運べる必要があるなら、決め手になるのはCPUではなくunified memoryまたはVRAMです。上で紹介した各ノートパソコン系統はこの数値を軸に整理しています。',
           },
         ],
       },
@@ -4090,15 +4094,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-11-09',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-04-19',
     theme: 'Overview & Reference',
-    title: '로컬 LLM 실행을 위한 최고의 노트북: 2026년 구매 가이드',
-    seoTitle: '로컬 LLM 노트북 2026: MacBook부터 ThinkPad까지',
+    title: '로컬 LLM 실행을 위한 노트북 추천: 2026년 구매 가이드',
+    seoTitle: '로컬 LLM 노트북 추천 2026: MacBook부터 ThinkPad까지',
     intro:
       '로컬 LLM을 위한 노트북 추천의 대부분은 GPU로 시작해서 거기서 끝납니다. 실제로 어떤 모델이 들어갈 수 있는지를 결정하는 수치는 메모리입니다. Windows 게이밍 노트북의 VRAM, 또는 Apple Silicon의 통합 메모리 — 메모리에 맞지 않는 모델은 로드되지 않거나 swap에서 느리게 실행됩니다. 이 가이드는 세 가지 구매 스타일에 따라 네 가지 노트북 제품군을 비교합니다: 휴대 가능한 폼팩터에서 가장 많은 메모리를 원하는 경우 Apple MacBook Pro, NVIDIA GPU 속도를 원하는 경우 Lenovo ThinkPad 또는 ASUS ROG 게이밍 노트북, 수리 및 업그레이드를 원하는 경우 Framework Laptop 16. 동일한 칩이 탑재된 데스크톱에 비해 노트북은 열 제한으로 인해 약 20~30% 느리게 동작합니다. 메모리 부족 사태로 노트북 가격이 2026년 내내 상승했으므로, 이 가이드의 모든 가격을 범위로 취급하고 구매 전에 현재 가격을 확인하십시오.',
     metaDescription:
-      '2026년 로컬 LLM용 최고의 노트북: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM·VRAM·통합 메모리를 구매 스타일별 비교.',
+      '2026년 로컬 LLM용 노트북 추천: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM·VRAM·통합 메모리를 구매 스타일별 비교.',
     heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-ko.webp',
     twitterDescription:
       'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — 로컬 LLM을 위한 네 가지 노트북 제품군, 원칙은 하나: 메모리로 구매하십시오. VRAM 또는 통합 메모리가 어떤 모델이 들어가는지를 결정하며, GPU 이름이 아닙니다.',
@@ -4473,6 +4477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**독일:** Amazon.de와 독일 제조사 스토어; 표시 가격에 약 19% 부가세가 포함되어 있습니다.',
           '**프랑스:** Amazon.fr과 프랑스 제조사 스토어; 가격은 20% 부가세가 포함된 독일과 유사합니다.',
           '**일본:** Amazon.co.jp와 일본 제조사 스토어; 구성 옵션은 미국과 동일합니다.',
+          '**한국:** 다나와에서 여러 판매처의 가격을 비교하고 쿠팡 등 주요 쇼핑몰에서 재고와 가격을 확인하세요. 국내 정식 유통 제품인지, 국내 AS가 가능한지 구매 전에 확인하는 것이 좋습니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요.',
           '**모델 업데이트 근처에서 구매하는 경우:** 새로운 세대가 출시될 때 이전 세대 가격이 떨어지는 경우가 많으며, 중고 또는 리퍼비시 게이밍 노트북은 신제품 프리미엄의 많은 부분을 피할 수 있습니다.',
         ],
         callouts: [
@@ -4576,6 +4581,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '통합 메모리 128GB 노트북으로 70B 모델을 실행할 수 있습니까?',
             a: '예. Q4 양자화의 70B 모델은 약 40~45GB가 필요하므로, 24GB GPU보다 메모리가 큰 노트북이 필요합니다. M5 Max를 탑재한 MacBook Pro 16인치와 14인치는 통합 메모리가 최대 128GB이고, ASUS ROG Flow Z13 같은 AMD Ryzen AI Max+ 노트북도 128GB까지 지원하지만 메모리 대역폭은 더 낮습니다. 사용할 만하지만 빠르지는 않은 생성 속도를 예상하고, 사용하려는 모델의 독립 벤치마크를 확인하십시오.',
           },
+          {
+            q: '로컬 AI 모델을 실행하기에 노트북과 데스크톱 중 어느 쪽이 더 좋습니까?',
+            a: '같은 예산이라면 데스크톱이 성능 면에서 유리합니다. 24GB 카드를 장착해 최대 성능으로 돌리고 충분히 냉각할 수 있기 때문입니다. 이동이 필요하다면 노트북이 맞지만, 지속 속도는 약 20~30% 낮아집니다. 로컬 AI 모델을 돌릴 컴퓨터를 한 대만 두고 휴대성까지 필요하다면 결정적인 수치는 CPU가 아니라 통합 메모리 또는 VRAM입니다. 위에서 소개한 제품군도 이 기준으로 구성했습니다.',
+          },
         ],
       },
       relatedReading: {
@@ -4593,12 +4602,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '로컬 LLM 실행을 위한 최고의 노트북: 2026년 구매 가이드',
-      description: '2026년 로컬 LLM용 최고의 노트북: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM·VRAM·통합 메모리를 구매 스타일별 비교.',
+      headline: '로컬 LLM 실행을 위한 노트북 추천: 2026년 구매 가이드',
+      description: '2026년 로컬 LLM용 노트북 추천: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM·VRAM·통합 메모리를 구매 스타일별 비교.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-laptop-for-local-llm',
       inLanguage: 'ko',
       datePublished: '2026-05-22',
-      dateModified: '2026-11-09',
+      dateModified: '2026-11-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

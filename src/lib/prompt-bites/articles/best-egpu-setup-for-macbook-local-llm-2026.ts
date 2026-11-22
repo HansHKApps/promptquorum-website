@@ -2160,9 +2160,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-22',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**Apple Silicon MacBook(M1–M5)은 eGPU를 기본 지원하지 않습니다. macOS에는 외장 GPU 드라이버가 없으며 Razer도 Core X V2를 "not supported by M1 & later Mac devices"라고 명시합니다. 유일한 경로는 Tiny Corp의 TinyGPU 드라이버(Tiny Corp에 따르면 Apple이 승인)로, Thunderbolt 또는 USB4를 통해 AMD RDNA 3+ 또는 NVIDIA Ampere+ eGPU에서 AI 연산을 실행하지만 문서화된 것은 tinygrad뿐이며 Ollama, llama.cpp, MLX는 해당되지 않습니다. 지원되는 구성으로는 Mac mini M5 Pro 또는 LAN으로 제공하는 OCuLink 미니 PC를 사용하십시오.**',
+    leadAnswerBlock: '**Apple Silicon MacBook(M1–M5)은 eGPU를 기본 지원하지 않습니다. macOS에는 외장 GPU 드라이버가 없으며 Razer도 Core X V2를 "not supported by M1 & later Mac devices"라고 명시합니다. Apple Silicon에서 eGPU로 AI 연산을 실행하는 방법으로 저희가 확인한 것은 Tiny Corp의 TinyGPU 드라이버(Tiny Corp에 따르면 Apple이 승인)뿐이며, Thunderbolt 또는 USB4를 통해 AMD RDNA 3+ 또는 NVIDIA Ampere+ eGPU에서 AI 연산을 실행하지만 문서화된 것은 tinygrad뿐이며 Ollama, llama.cpp, MLX는 해당되지 않습니다. 지원되는 구성으로는 Mac mini M5 Pro 또는 LAN으로 제공하는 OCuLink 미니 PC를 사용하십시오.**',
     quickAnswerTop: {
       ko: {
         question: 'MacBook에서 로컬 LLM 추론에 eGPU를 사용할 수 있습니까?',
@@ -2255,15 +2255,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Mac에서 GPU 추론을 위한 실제 대안',
         productItems: [
           {
-            title: 'Mac mini M5 Pro(최대 64GB) — 최적의 macOS 선택',
-            content: 'Apple의 Mac mini M5 Pro(2026년 9월 22일부터 판매)는 미국 가격 1,699달러부터 시작하며 최대 64GB 통합 메모리(307GB/s)를 제공합니다. 토큰 생성은 메모리 대역폭에 제한되므로, 약 19–20GB의 32B Q4 모델은 이 대역폭에서 이론상 상한이 약 15 tok/s이며 실제 속도는 이보다 낮습니다. 별도의 GPU 머신 없이 32B급 모델을 메모리에 올려야 할 때 적합합니다. 기본형 Mac mini M6(899달러부터, 최대 32GB, 170GB/s)는 7B–14B 모델에 맞습니다.',
+            title: 'Mac mini M5 Pro(최대 64GB) — 추천 macOS 선택',
+            content: 'Apple의 Mac mini M5 Pro(2026년 9월 22일부터 판매)는 미국 가격 1,699달러부터 시작하며 최대 64GB 통합 메모리(307GB/s)를 제공합니다. 토큰 생성은 메모리 대역폭에 제한되므로, 약 19–20GB의 32B Q4 모델은 이 대역폭에서 이론상 상한이 약 15 tok/s이며 실제 속도는 이보다 낮습니다. 별도의 GPU 머신 없이 32B급 모델을 메모리에 올려야 할 때 적합합니다. 기본형 Mac mini M6(미국 가격 899달러부터, 최대 32GB, 170GB/s)는 7B–14B 모델에 맞습니다. 이 글의 달러 가격은 미국 기준이며 국내 판매가는 세금, 수입 비용, 환율에 따라 다르므로 다나와에서 여러 판매처의 가격을 비교하고 쿠팡 등 주요 쇼핑몰에서 재고와 가격을 확인하세요. 국내 정식 유통 제품인지, 국내 AS가 가능한지도 구매 전에 확인하는 것이 좋습니다. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요. 이 확인 항목은 구매 전 참고용이며 전기·수입에 관한 전문적인 조언이 아닙니다.',
             affiliateLinks: [
               { label: 'Apple Mac Mini M5 Pro (Amazon)', url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro' },
             ],
           },
           {
-            title: 'OCuLink 미니 PC + RTX 3090(최적의 GPU/휴대 조합)',
-            content: 'OCuLink 포트가 있는 미니 PC(예: Minisforum UM890 Pro — Ryzen 9 8945HS, 2024년 출시 당시 베어본 479달러부터, AOOSTAR GEM12+ Pro — 베어본 약 359달러로 게재)를 OCuLink 독으로 데스크톱 GPU에 연결합니다. OCuLink는 핫스왑이 안 되므로 연결 전에 PC 전원을 끄십시오. 커뮤니티 llama.cpp 벤치마크는 RTX 3090에서 8B Q4_K_M 모델이 대략 90–95 tok/s라고 보고하지만 출처마다 차이가 있고 컨텍스트 길이와 빌드에 따라 달라집니다. 미니 PC에서 Ollama를 실행해 LAN으로 제공하고 MacBook은 클라이언트로 유지합니다.',
+            title: 'OCuLink 미니 PC + RTX 3090(GPU/휴대 조합 추천)',
+            content: 'OCuLink 포트가 있는 미니 PC(예: Minisforum UM890 Pro — Ryzen 9 8945HS, 2024년 출시 당시 미국 가격 베어본 479달러부터, AOOSTAR GEM12+ Pro — 미국 가격 베어본 약 359달러로 게재)를 OCuLink 독으로 데스크톱 GPU에 연결합니다. OCuLink는 핫스왑이 안 되므로 연결 전에 PC 전원을 끄십시오. 커뮤니티 llama.cpp 벤치마크는 RTX 3090에서 8B Q4_K_M 모델이 대략 90–95 tok/s라고 보고하지만 출처마다 차이가 있고 컨텍스트 길이와 빌드에 따라 달라집니다. 미니 PC에서 Ollama를 실행해 LAN으로 제공하고 MacBook은 클라이언트로 유지합니다.',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink (Amazon)', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
               { label: 'Minisforum UM890 Pro (Amazon)', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
@@ -2279,7 +2279,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             title: 'Windows/Linux 노트북의 Thunderbolt eGPU(Mac이 아닌 경우)',
-            content: 'Thunderbolt 4 또는 5가 있는 x86 Windows·Linux 노트북에서는 eGPU가 Ollama와 함께 작동합니다. 링크는 기본 PCIe 슬롯보다 느리지만 모델이 VRAM에 올라가면 토큰 생성은 주로 GPU 자체의 메모리 대역폭에 좌우되므로 실제 손실은 링크 격차가 시사하는 것보다 작습니다. Razer Core X V2(349.99달러, Thunderbolt 5, 전원 공급 장치 미포함)는 Windows용이며 Razer 페이지는 M1 이후 Mac에서 eGPU가 지원되지 않는다고 명시합니다.',
+            content: 'Thunderbolt 4 또는 5가 있는 x86 Windows·Linux 노트북에서는 eGPU가 Ollama와 함께 작동합니다. 링크는 기본 PCIe 슬롯보다 느리지만 모델이 VRAM에 올라가면 토큰 생성은 주로 GPU 자체의 메모리 대역폭에 좌우되므로 실제 손실은 링크 격차가 시사하는 것보다 작습니다. Razer Core X V2(미국 가격 349.99달러, Thunderbolt 5, 전원 공급 장치 미포함)는 Windows용이며 Razer 페이지는 M1 이후 Mac에서 eGPU가 지원되지 않는다고 명시합니다.',
             affiliateLinks: [
               { label: 'Razer Core X V2 eGPU 인클로저 (Amazon)', url: 'https://www.amazon.com/s?k=Razer+Core+X+V2' },
               { label: 'Razer Core X(초기형) (Amazon)', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
@@ -2384,22 +2384,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '@type': 'ListItem',
           position: 1,
           name: '홈',
-          item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)',
+          item: 'https://www.promptquorum.com/ko',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: '프롬프트 바이트',
-          item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)',
+          item: 'https://www.promptquorum.com/ko/prompt-bites',
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가',
-          item: '[www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026](https://www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026)',
+          item: 'https://www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026',
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ko' },
+    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가', datePublished: '2026-05-26', dateModified: '2026-11-22', url: 'https://www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ko' },
   },
 }

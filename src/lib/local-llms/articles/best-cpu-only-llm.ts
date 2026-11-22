@@ -2656,6 +2656,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[初心者向けのおすすめローカル LLM モデル](/ja/local-llms/best-beginner-local-llm-models) — 最初のローカル LLM へのステップバイステップガイド',
             '[Ollama コマンドガイド](/ja/local-llms/ollama-command-guide) — CPU/GPU モード、マルチ GPU、オフロードの管理方法',
             '[Raspberry Pi 5 でローカル LLM を実行できますか？](/ja/prompt-bites/local-llm-raspberry-pi-5) — 同じ CPU のみという制約を、低価格のシングルボードコンピューターで極限まで押し進めたケース',
+            '[ローカルLLM向けバジェットGPU](/ja/local-llms/best-budget-gpus-local-llm) — RTX 3060 12GBなど予算を抑えたGPUで動かせるモデルを整理したガイドです。',
+            '[ローカルLLM向けミニPC 2026年版](/ja/local-llms/best-mini-pcs-local-llm) — ローカルLLM用にミニPCを選ぶときの条件と構成ごとの違いを比較したガイドです。',
           ],
         },
         sources: {
