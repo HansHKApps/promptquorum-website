@@ -21,7 +21,7 @@ export type StatTileItem = {
   desc?: string
   drawer?: 'founder' | 'handsOn'
   /** The homepage is static, so this value is only the build-time number; the client replaces it with the live total. */
-  liveCounter?: 'academyProgrammes'
+  liveCounter?: 'academyProgrammes' | 'askHansAnswers'
 }
 
 export function StatTilesClient({
@@ -43,25 +43,31 @@ export function StatTilesClient({
 }) {
   const [openDrawer, setOpenDrawer] = useState<'founder' | 'handsOn' | null>(null)
   // Static page, live number: show the larger of the build-time value and the live total (counters only ever grow).
-  const [academyProgrammes, setAcademyProgrammes] = useState<number | null>(null)
-  const wantsAcademy = items.some((item) => item.liveCounter === 'academyProgrammes')
+  const [live, setLive] = useState<{ academyProgrammes: number | null; askHansAnswers: number | null }>({ academyProgrammes: null, askHansAnswers: null })
+  const wanted = (kind: 'academyProgrammes' | 'askHansAnswers') => items.some((item) => item.liveCounter === kind)
+  const wantsAcademy = wanted('academyProgrammes')
+  const wantsAskHans = wanted('askHansAnswers')
   useEffect(() => {
-    if (!wantsAcademy) return
     let cancelled = false
-    fetch('/api/academy/totals')
-      .then((res) => (res.ok ? res.json() : null))
-      .then((json: { programmes?: unknown } | null) => {
-        if (!cancelled && json && typeof json.programmes === 'number' && Number.isFinite(json.programmes)) setAcademyProgrammes(json.programmes)
-      })
-      .catch(() => {})
+    const load = (url: string, field: 'programmes' | 'answers', key: 'academyProgrammes' | 'askHansAnswers') =>
+      fetch(url)
+        .then((res) => (res.ok ? res.json() : null))
+        .then((json: Record<string, unknown> | null) => {
+          const v = json?.[field]
+          if (!cancelled && typeof v === 'number' && Number.isFinite(v)) setLive((prev) => ({ ...prev, [key]: v }))
+        })
+        .catch(() => {})
+    if (wantsAcademy) void load('/api/academy/totals', 'programmes', 'academyProgrammes')
+    if (wantsAskHans) void load('/api/askhans/totals', 'answers', 'askHansAnswers')
     return () => {
       cancelled = true
     }
-  }, [wantsAcademy])
+  }, [wantsAcademy, wantsAskHans])
   const displayValue = (item: StatTileItem): string => {
-    if (item.liveCounter === 'academyProgrammes' && academyProgrammes !== null) {
+    const liveValue = item.liveCounter ? live[item.liveCounter] : null
+    if (item.liveCounter && liveValue !== null) {
       const built = Number(item.value.replace(/[^\d]/g, '')) || 0
-      return Math.max(built, academyProgrammes).toLocaleString()
+      return Math.max(built, liveValue).toLocaleString()
     }
     return item.value
   }

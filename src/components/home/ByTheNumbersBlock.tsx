@@ -71,6 +71,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
       ? [{
           label: t('statAskHansCalls', lang),
           value: askHansTotals.answers.toLocaleString(),
+          liveCounter: 'askHansAnswers' as const,
           icon: 'mcp' as const,
           href: askHansHref,
           hint: t('statAskHansCallsHint', lang),
