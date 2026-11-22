@@ -54,7 +54,7 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
   // The certificate and the Course Documentation are written in a language chosen here (default: the programme language if the site has it).
   const [certLang, setCertLang] = useState<AcademyLang>(isSiteLang(programme.language) ? programme.language : lang)
   // Opt-in registry (unticked by default): only then a record is stored and a QR code is printed.
-  const [register, setRegister] = useState(false)
+  const [register, setRegister] = useState(true)
   const [regError, setRegError] = useState(false)
   const [docBlob, setDocBlob] = useState<{ blob: Blob; filename: string } | null>(null)
   const [docBusy, setDocBusy] = useState(false)
@@ -340,7 +340,8 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
                 <p className="text-sm text-green-800">{tx.reg.done(registeredNumber)}</p>
               ) : (
                 <label className="flex cursor-pointer items-start gap-3 text-sm text-gray-800">
-                  <input type="checkbox" checked={register} onChange={(e) => setRegister(e.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-purple-600" />
+                  <input type="checkbox" role="switch" checked={register} onChange={(e) => setRegister(e.target.checked)} className="peer sr-only" />
+                  <span aria-hidden="true" className="relative mt-0.5 inline-block h-5 w-9 shrink-0 rounded-full bg-gray-300 transition-colors after:absolute after:left-0.5 after:top-0.5 after:h-4 after:w-4 after:rounded-full after:bg-white after:transition-transform peer-checked:bg-purple-600 peer-checked:after:translate-x-4 peer-focus-visible:ring-2 peer-focus-visible:ring-purple-600 peer-focus-visible:ring-offset-2" />
                   <span>{tx.reg.optIn}</span>
                 </label>
               )}
