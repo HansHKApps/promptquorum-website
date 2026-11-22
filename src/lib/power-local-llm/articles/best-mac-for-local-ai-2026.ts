@@ -727,14 +727,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/es/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
             label: 'Ver precio del Mac Mini M5 Pro en Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro',
+            url: 'https://www.amazon.es/s?k=Mac+Mini+M5+Pro',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
@@ -873,14 +873,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/es/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '1300-2900',
             label: 'Ver precio del Mac Mini M5 Pro en Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+            url: 'https://www.amazon.es/s?k=Mac+Mini+M6',
             productName: 'Apple Mac Mini M6',
             productCategory: 'mac',
             priceRange: '899-2900',
@@ -911,14 +911,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/macbook-pro/',
+            url: 'https://www.apple.com/es/macbook-pro/',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
             label: 'Ver precio del MacBook Pro 16" M5 Max en Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=MacBook+Pro+16+M5+Max',
+            url: 'https://www.amazon.es/s?k=MacBook+Pro+16+M5+Max',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
@@ -945,14 +945,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-studio/',
+            url: 'https://www.apple.com/es/mac-studio/',
             productName: 'Apple Mac Studio M5 Max 128GB',
             productCategory: 'mac',
             priceRange: '2499-9500',
             label: 'Ver precio del Mac Studio en Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Studio+M5',
+            url: 'https://www.amazon.es/s?k=Mac+Studio+M5',
             productName: 'Apple Mac Studio M5',
             productCategory: 'mac',
             priceRange: '2499-9500',
@@ -1057,14 +1057,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/shop/buy-mac',
+            url: 'https://www.apple.com/es/shop/buy-mac',
             productName: 'Macs for local AI (Apple Store)',
             productCategory: 'mac',
             priceRange: '899-9500',
             label: 'Explorar Mac en Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+for+local+AI',
+            url: 'https://www.amazon.es/s?k=Mac+for+local+AI',
             productName: 'Macs for local AI (Amazon)',
             productCategory: 'mac',
             priceRange: '899-9500',
@@ -1316,14 +1316,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/de/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
             label: 'Mac Mini M5 Pro Preis bei Apple prüfen',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro',
+            url: 'https://www.amazon.de/s?k=Mac+Mini+M5+Pro',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
@@ -1462,14 +1462,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/de/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '1300-2900',
             label: 'Mac Mini M5 Pro Preis bei Apple prüfen',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+            url: 'https://www.amazon.de/s?k=Mac+Mini+M6',
             productName: 'Apple Mac Mini M6',
             productCategory: 'mac',
             priceRange: '899-2900',
@@ -1500,14 +1500,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/macbook-pro/',
+            url: 'https://www.apple.com/de/macbook-pro/',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
             label: 'MacBook Pro 16" M5 Max Preis bei Apple prüfen',
           },
           {
-            url: 'https://www.amazon.com/s?k=MacBook+Pro+16+M5+Max',
+            url: 'https://www.amazon.de/s?k=MacBook+Pro+16+M5+Max',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
@@ -1534,14 +1534,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-studio/',
+            url: 'https://www.apple.com/de/mac-studio/',
             productName: 'Apple Mac Studio M5 Max 128GB',
             productCategory: 'mac',
             priceRange: '2499-9500',
             label: 'Mac Studio Preis bei Apple prüfen',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Studio+M5',
+            url: 'https://www.amazon.de/s?k=Mac+Studio+M5',
             productName: 'Apple Mac Studio M5',
             productCategory: 'mac',
             priceRange: '2499-9500',
@@ -1646,14 +1646,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/shop/buy-mac',
+            url: 'https://www.apple.com/de/shop/buy-mac',
             productName: 'Macs for local AI (Apple Store)',
             productCategory: 'mac',
             priceRange: '899-9500',
             label: 'Macs bei Apple durchsuchen',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+for+local+AI',
+            url: 'https://www.amazon.de/s?k=Mac+for+local+AI',
             productName: 'Macs for local AI (Amazon)',
             productCategory: 'mac',
             priceRange: '899-9500',
@@ -1900,14 +1900,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/fr/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
             label: 'Vérifier le prix du Mac mini M5 Pro sur Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro',
+            url: 'https://www.amazon.fr/s?k=Mac+Mini+M5+Pro',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
@@ -2046,14 +2046,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/fr/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '1300-2900',
             label: 'Vérifier le prix du Mac mini M5 Pro sur Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+            url: 'https://www.amazon.fr/s?k=Mac+Mini+M6',
             productName: 'Apple Mac Mini M6',
             productCategory: 'mac',
             priceRange: '899-2900',
@@ -2084,14 +2084,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/macbook-pro/',
+            url: 'https://www.apple.com/fr/macbook-pro/',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
             label: 'Vérifier le prix du MacBook Pro 16" M5 Max sur Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=MacBook+Pro+16+M5+Max',
+            url: 'https://www.amazon.fr/s?k=MacBook+Pro+16+M5+Max',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
@@ -2118,14 +2118,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-studio/',
+            url: 'https://www.apple.com/fr/mac-studio/',
             productName: 'Apple Mac Studio M5 Max 128GB',
             productCategory: 'mac',
             priceRange: '2499-9500',
             label: 'Vérifier le prix du Mac Studio sur Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Studio+M5',
+            url: 'https://www.amazon.fr/s?k=Mac+Studio+M5',
             productName: 'Apple Mac Studio M5',
             productCategory: 'mac',
             priceRange: '2499-9500',
@@ -2230,14 +2230,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/shop/buy-mac',
+            url: 'https://www.apple.com/fr/shop/buy-mac',
             productName: 'Macs for local AI (Apple Store)',
             productCategory: 'mac',
             priceRange: '899-9500',
             label: 'Parcourir les Mac sur Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+for+local+AI',
+            url: 'https://www.amazon.fr/s?k=Mac+for+local+AI',
             productName: 'Macs for local AI (Amazon)',
             productCategory: 'mac',
             priceRange: '899-9500',
@@ -2476,14 +2476,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/jp/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
             label: 'AppleでMac mini M5 Proの価格を確認',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro',
+            url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M5+Pro',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
@@ -2622,14 +2622,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/jp/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '1300-2900',
             label: 'AppleでMac mini M5 Proの価格を確認',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+            url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M6',
             productName: 'Apple Mac Mini M6',
             productCategory: 'mac',
             priceRange: '899-2900',
@@ -2660,14 +2660,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/macbook-pro/',
+            url: 'https://www.apple.com/jp/macbook-pro/',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
             label: 'AppleでMacBook Pro 16" M5 Maxの価格を確認',
           },
           {
-            url: 'https://www.amazon.com/s?k=MacBook+Pro+16+M5+Max',
+            url: 'https://www.amazon.co.jp/s?k=MacBook+Pro+16+M5+Max',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
@@ -2694,14 +2694,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-studio/',
+            url: 'https://www.apple.com/jp/mac-studio/',
             productName: 'Apple Mac Studio M5 Max 128GB',
             productCategory: 'mac',
             priceRange: '2499-9500',
             label: 'AppleでMac Studioの価格を確認',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Studio+M5',
+            url: 'https://www.amazon.co.jp/s?k=Mac+Studio+M5',
             productName: 'Apple Mac Studio M5',
             productCategory: 'mac',
             priceRange: '2499-9500',
@@ -2806,14 +2806,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/shop/buy-mac',
+            url: 'https://www.apple.com/jp/shop/buy-mac',
             productName: 'Macs for local AI (Apple Store)',
             productCategory: 'mac',
             priceRange: '899-9500',
             label: 'AppleでMacを見る',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+for+local+AI',
+            url: 'https://www.amazon.co.jp/s?k=Mac+for+local+AI',
             productName: 'Macs for local AI (Amazon)',
             productCategory: 'mac',
             priceRange: '899-9500',
@@ -3052,18 +3052,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/cn/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
             label: '在 Apple 查看 Mac mini M5 Pro 价格',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro',
+            url: 'https://search.jd.com/Search?keyword=Mac+Mini+M5+Pro',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
-            label: '在 Amazon 查看 Mac mini M5 Pro 价格',
+            label: '在京东查看 Mac mini M5 Pro 价格',
           },
         ],
       },
@@ -3198,18 +3198,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/cn/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '1300-2900',
             label: '在 Apple 查看 Mac mini M5 Pro 价格',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+            url: 'https://search.jd.com/Search?keyword=Mac+Mini+M6',
             productName: 'Apple Mac Mini M6',
             productCategory: 'mac',
             priceRange: '899-2900',
-            label: '在 Amazon 查看 Mac mini 价格',
+            label: '在京东查看 Mac mini 价格',
           },
         ],
       },
@@ -3236,18 +3236,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/macbook-pro/',
+            url: 'https://www.apple.com/cn/macbook-pro/',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
             label: '在 Apple 查看 MacBook Pro 16" M5 Max 价格',
           },
           {
-            url: 'https://www.amazon.com/s?k=MacBook+Pro+16+M5+Max',
+            url: 'https://search.jd.com/Search?keyword=MacBook+Pro+16+M5+Max',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
-            label: '在 Amazon 查看 MacBook Pro 16" M5 Max 价格',
+            label: '在京东查看 MacBook Pro 16" M5 Max 价格',
           },
         ],
       },
@@ -3270,18 +3270,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-studio/',
+            url: 'https://www.apple.com/cn/mac-studio/',
             productName: 'Apple Mac Studio M5 Max 128GB',
             productCategory: 'mac',
             priceRange: '2499-9500',
             label: '在 Apple 查看 Mac Studio 价格',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Studio+M5',
+            url: 'https://search.jd.com/Search?keyword=Mac+Studio+M5',
             productName: 'Apple Mac Studio M5',
             productCategory: 'mac',
             priceRange: '2499-9500',
-            label: '在 Amazon 查看 Mac Studio 价格',
+            label: '在京东查看 Mac Studio 价格',
           },
         ],
       },
@@ -3382,14 +3382,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/shop/buy-mac',
+            url: 'https://www.apple.com/cn/shop/buy-mac',
             productName: 'Macs for local AI (Apple Store)',
             productCategory: 'mac',
             priceRange: '899-9500',
             label: '在 Apple 浏览 Mac',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+for+local+AI',
+            url: 'https://search.jd.com/Search?keyword=Mac+for+local+AI',
             productName: 'Macs for local AI (Amazon)',
             productCategory: 'mac',
             priceRange: '899-9500',
@@ -3628,14 +3628,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/br/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
             label: 'Ver preço do Mac Mini M5 Pro na Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro',
+            url: 'https://www.amazon.com.br/s?k=Mac+Mini+M5+Pro',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
@@ -3774,14 +3774,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/br/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '1300-2900',
             label: 'Ver preço do Mac Mini M5 Pro na Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+            url: 'https://www.amazon.com.br/s?k=Mac+Mini+M6',
             productName: 'Apple Mac Mini M6',
             productCategory: 'mac',
             priceRange: '899-2900',
@@ -3812,14 +3812,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/macbook-pro/',
+            url: 'https://www.apple.com/br/macbook-pro/',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
             label: 'Ver preço do MacBook Pro 16" M5 Max na Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=MacBook+Pro+16+M5+Max',
+            url: 'https://www.amazon.com.br/s?k=MacBook+Pro+16+M5+Max',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
@@ -3846,14 +3846,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-studio/',
+            url: 'https://www.apple.com/br/mac-studio/',
             productName: 'Apple Mac Studio M5 Max 128GB',
             productCategory: 'mac',
             priceRange: '2499-9500',
             label: 'Ver preço do Mac Studio na Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Studio+M5',
+            url: 'https://www.amazon.com.br/s?k=Mac+Studio+M5',
             productName: 'Apple Mac Studio M5',
             productCategory: 'mac',
             priceRange: '2499-9500',
@@ -3958,14 +3958,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/shop/buy-mac',
+            url: 'https://www.apple.com/br/shop/buy-mac',
             productName: 'Macs for local AI (Apple Store)',
             productCategory: 'mac',
             priceRange: '899-9500',
             label: 'Explorar Macs na Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+for+local+AI',
+            url: 'https://www.amazon.com.br/s?k=Mac+for+local+AI',
             productName: 'Macs for local AI (Amazon)',
             productCategory: 'mac',
             priceRange: '899-9500',
@@ -4218,14 +4218,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/ae-ar/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
             label: 'عرض سعر Mac Mini M5 Pro على Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro',
+            url: 'https://www.amazon.ae/s?k=Mac+Mini+M5+Pro',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
@@ -4364,14 +4364,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/ae-ar/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '1300-2900',
             label: 'عرض سعر Mac Mini M5 Pro على Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+            url: 'https://www.amazon.ae/s?k=Mac+Mini+M6',
             productName: 'Apple Mac Mini M6',
             productCategory: 'mac',
             priceRange: '899-2900',
@@ -4402,14 +4402,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/macbook-pro/',
+            url: 'https://www.apple.com/ae-ar/macbook-pro/',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
             label: 'عرض سعر MacBook Pro 16" M5 Max على Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=MacBook+Pro+16+M5+Max',
+            url: 'https://www.amazon.ae/s?k=MacBook+Pro+16+M5+Max',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
@@ -4436,14 +4436,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-studio/',
+            url: 'https://www.apple.com/ae-ar/mac-studio/',
             productName: 'Apple Mac Studio M5 Max 128GB',
             productCategory: 'mac',
             priceRange: '2499-9500',
             label: 'عرض سعر Mac Studio على Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+Studio+M5',
+            url: 'https://www.amazon.ae/s?k=Mac+Studio+M5',
             productName: 'Apple Mac Studio M5',
             productCategory: 'mac',
             priceRange: '2499-9500',
@@ -4548,14 +4548,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/shop/buy-mac',
+            url: 'https://www.apple.com/ae-ar/mac/',
             productName: 'Macs for local AI (Apple Store)',
             productCategory: 'mac',
             priceRange: '899-9500',
             label: 'استكشاف أجهزة Mac على Apple',
           },
           {
-            url: 'https://www.amazon.com/s?k=Mac+for+local+AI',
+            url: 'https://www.amazon.ae/s?k=Mac+for+local+AI',
             productName: 'Macs for local AI (Amazon)',
             productCategory: 'mac',
             priceRange: '899-9500',
@@ -4807,7 +4807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/kr/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '2700-2900',
@@ -4953,7 +4953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-mini/',
+            url: 'https://www.apple.com/kr/mac-mini/',
             productName: 'Apple Mac Mini M5 Pro 64GB',
             productCategory: 'mac',
             priceRange: '1300-2900',
@@ -4991,7 +4991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/macbook-pro/',
+            url: 'https://www.apple.com/kr/macbook-pro/',
             productName: 'Apple MacBook Pro 16" M5 Max',
             productCategory: 'mac',
             priceRange: '3899-5900',
@@ -5025,7 +5025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/mac-studio/',
+            url: 'https://www.apple.com/kr/mac-studio/',
             productName: 'Apple Mac Studio M5 Max 128GB',
             productCategory: 'mac',
             priceRange: '2499-9500',
@@ -5137,7 +5137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           {
-            url: 'https://www.apple.com/shop/buy-mac',
+            url: 'https://www.apple.com/kr/shop/buy-mac',
             productName: 'Macs for local AI (Apple Store)',
             productCategory: 'mac',
             priceRange: '899-9500',

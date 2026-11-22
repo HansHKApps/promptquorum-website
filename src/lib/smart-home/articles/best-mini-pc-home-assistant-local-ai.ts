@@ -91,8 +91,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Check SER8 price →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 on Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
           { label: 'Check EQ14 price →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 on Amazon', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'Check A9 Max price →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max on Amazon', url: 'https://www.amazon.com/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: 'Prices — official store list prices in USD, checked 2026-10-25. The GMKtec G3 Plus and Minisforum UM890 Pro show as sold out at their official stores. Mini PC pricing moves quickly and third-party retailer prices (not verified here) can differ; confirm the current listing before buying.',
       },
@@ -131,7 +134,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Higher power draw under AI load than a low-power box',
               'Overkill if you only need Home Assistant with no local AI',
             ],
-            affiliateLinks: [{ label: 'Check price →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' }],
+            affiliateLinks: [
+              { label: 'Check price →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' },
+              { label: 'Beelink SER8 on Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 2,
@@ -149,7 +155,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Less RAM headroom than the Ryzen-class options',
               'Not a strong fit if you plan to add Frigate with multiple cameras',
             ],
-            affiliateLinks: [{ label: 'Check price →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' }],
+            affiliateLinks: [
+              { label: 'Check price →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' },
+              { label: 'Beelink EQ14 on Amazon', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 3,
@@ -166,7 +175,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Same AI-performance ceiling as other N150-class boxes',
               'Availability and exact configuration vary by retailer',
             ],
-            affiliateLinks: [{ label: 'Check price →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' }],
+            affiliateLinks: [
+              { label: 'Check price →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' },
+              { label: 'GMKtec G3 Plus on Amazon', url: 'https://www.amazon.com/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 4,
@@ -184,7 +196,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Barebones units need RAM and storage purchased separately',
               'Landed pricing can shift with import costs',
             ],
-            affiliateLinks: [{ label: 'Check price →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' }],
+            affiliateLinks: [
+              { label: 'Check price →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' },
+              { label: 'Minisforum UM890 Pro on Amazon', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 5,
@@ -202,7 +217,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'The NPU does not meaningfully speed up local-LLM chat — don\'t buy this expecting an NPU-driven LLM boost',
               'More capability than most Home Assistant setups actually need',
             ],
-            affiliateLinks: [{ label: 'Check price →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' }],
+            affiliateLinks: [
+              { label: 'Check price →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' },
+              { label: 'GEEKOM A9 Max on Amazon', url: 'https://www.amazon.com/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+            ],
           },
         ],
       },
@@ -475,8 +493,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'راجع سعر SER8 ←', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 على Amazon.ae', url: 'https://www.amazon.ae/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
           { label: 'راجع سعر EQ14 ←', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 على Amazon.ae', url: 'https://www.amazon.ae/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'راجع سعر A9 Max ←', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max على Amazon.ae', url: 'https://www.amazon.ae/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: 'الأسعار — أسعار القائمة الرسمية بالدولار الأمريكي في المتاجر الرسمية، جرى التحقق منها في 2026-10-25؛ وقد تختلف الأسعار في بلدك. يظهر GMKtec G3 Plus وMinisforum UM890 Pro على أنهما غير متوفرين في متجريهما الرسميين. تتغيّر أسعار mini PC بسرعة، وقد تختلف أسعار البائعين الخارجيين (غير موثّقة هنا)؛ تأكد من القائمة الحالية قبل الشراء.',
       },
@@ -515,7 +536,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'استهلاك طاقة أعلى تحت حِمل الذكاء الاصطناعي مقارنةً بصندوق منخفض الطاقة',
               'مبالغ فيه إذا كنت تحتاج Home Assistant فقط دون ذكاء اصطناعي محلي',
             ],
-            affiliateLinks: [{ label: 'راجع السعر ←', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' }],
+            affiliateLinks: [
+              { label: 'راجع السعر ←', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' },
+              { label: 'Beelink SER8 على Amazon.ae', url: 'https://www.amazon.ae/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 2,
@@ -533,7 +557,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'حيّز RAM أقل من خيارات فئة Ryzen',
               'ليس خيارًا قويًا إذا كنت تخطط لإضافة Frigate مع عدة كاميرات',
             ],
-            affiliateLinks: [{ label: 'راجع السعر ←', url: 'https://www.bee-link.com/products/beelink-eq14-n150' }],
+            affiliateLinks: [
+              { label: 'راجع السعر ←', url: 'https://www.bee-link.com/products/beelink-eq14-n150' },
+              { label: 'Beelink EQ14 على Amazon.ae', url: 'https://www.amazon.ae/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 3,
@@ -550,7 +577,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'نفس سقف أداء الذكاء الاصطناعي مثل صناديق فئة N150 الأخرى',
               'التوفر والتكوين الدقيق يختلفان حسب البائع',
             ],
-            affiliateLinks: [{ label: 'راجع السعر ←', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' }],
+            affiliateLinks: [
+              { label: 'راجع السعر ←', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' },
+              { label: 'GMKtec G3 Plus على Amazon.ae', url: 'https://www.amazon.ae/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 4,
@@ -568,7 +598,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'الوحدات بدون تجهيزات تتطلب شراء RAM والتخزين بشكل منفصل',
               'السعر النهائي قد يتغيّر مع تكاليف الاستيراد',
             ],
-            affiliateLinks: [{ label: 'راجع السعر ←', url: 'https://www.minisforum.com/products/minisforum-um890-pro' }],
+            affiliateLinks: [
+              { label: 'راجع السعر ←', url: 'https://www.minisforum.com/products/minisforum-um890-pro' },
+              { label: 'Minisforum UM890 Pro على Amazon.ae', url: 'https://www.amazon.ae/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 5,
@@ -586,7 +619,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'لا تسرّع NPU دردشة LLM المحلية بشكل ملموس — لا تشترِ هذا الجهاز متوقعًا تحسينًا في LLM مدفوعًا بـ NPU',
               'قدرة أكبر مما تحتاجه معظم إعدادات Home Assistant فعليًا',
             ],
-            affiliateLinks: [{ label: 'راجع السعر ←', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' }],
+            affiliateLinks: [
+              { label: 'راجع السعر ←', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' },
+              { label: 'GEEKOM A9 Max على Amazon.ae', url: 'https://www.amazon.ae/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+            ],
           },
         ],
       },
@@ -859,8 +895,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'SER8-Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
           { label: 'EQ14-Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'A9-Max-Preis prüfen →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max bei Amazon.de', url: 'https://www.amazon.de/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: 'Preise – offizielle Shop-Listenpreise in US-Dollar, geprüft am 25.10.2026; in der EU weichen die Preise ab. GMKtec G3 Plus und Minisforum UM890 Pro sind in ihren offiziellen Shops als ausverkauft gelistet. Mini-PC-Preise ändern sich schnell, und Preise bei Dritthändlern (hier nicht geprüft) können abweichen; prüfen Sie das aktuelle Angebot vor dem Kauf.',
       },
@@ -899,7 +938,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Höherer Stromverbrauch unter KI-Last als ein stromsparendes Gerät',
               'Überdimensioniert, wenn Sie nur Home Assistant ohne lokale KI benötigen',
             ],
-            affiliateLinks: [{ label: 'Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' }],
+            affiliateLinks: [
+              { label: 'Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' },
+              { label: 'Beelink SER8 bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 2,
@@ -917,7 +959,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Weniger RAM-Spielraum als die Ryzen-Klasse',
               'Weniger geeignet, wenn Sie Frigate mit mehreren Kameras hinzufügen möchten',
             ],
-            affiliateLinks: [{ label: 'Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' }],
+            affiliateLinks: [
+              { label: 'Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' },
+              { label: 'Beelink EQ14 bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 3,
@@ -934,7 +979,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Gleiche KI-Leistungsobergrenze wie andere Geräte der N150-Klasse',
               'Verfügbarkeit und genaue Konfiguration variieren je nach Händler',
             ],
-            affiliateLinks: [{ label: 'Preis prüfen →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' }],
+            affiliateLinks: [
+              { label: 'Preis prüfen →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' },
+              { label: 'GMKtec G3 Plus bei Amazon.de', url: 'https://www.amazon.de/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 4,
@@ -952,7 +1000,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Barebone-Einheiten benötigen separat gekauften RAM und Speicher',
               'Der Endpreis kann sich mit Importkosten ändern',
             ],
-            affiliateLinks: [{ label: 'Preis prüfen →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' }],
+            affiliateLinks: [
+              { label: 'Preis prüfen →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' },
+              { label: 'Minisforum UM890 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 5,
@@ -970,7 +1021,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Die NPU beschleunigt lokalen LLM-Chat nicht spürbar – kaufen Sie dieses Gerät nicht in Erwartung eines NPU-gestützten LLM-Boosts',
               'Mehr Leistung, als die meisten Home-Assistant-Aufbauten tatsächlich benötigen',
             ],
-            affiliateLinks: [{ label: 'Preis prüfen →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' }],
+            affiliateLinks: [
+              { label: 'Preis prüfen →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' },
+              { label: 'GEEKOM A9 Max bei Amazon.de', url: 'https://www.amazon.de/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+            ],
           },
         ],
       },
@@ -1243,8 +1297,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Ver precio del SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 en Amazon.es', url: 'https://www.amazon.es/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
           { label: 'Ver precio del EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 en Amazon.es', url: 'https://www.amazon.es/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'Ver precio del A9 Max →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max en Amazon.es', url: 'https://www.amazon.es/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: 'Precios — precios de lista de las tiendas oficiales en dólares estadounidenses, comprobados el 25-10-2026; en tu país pueden variar según impuestos locales. El GMKtec G3 Plus y el Minisforum UM890 Pro figuran como agotados en sus tiendas oficiales. El precio de los mini PC cambia con rapidez y los precios de terceros (no verificados aquí) pueden diferir; confirma el listado vigente antes de comprar.',
       },
@@ -1283,7 +1340,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Mayor consumo bajo carga de IA que un equipo de bajo consumo',
               'Excesivo si solo necesitas Home Assistant sin IA local',
             ],
-            affiliateLinks: [{ label: 'Ver precio →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' }],
+            affiliateLinks: [
+              { label: 'Ver precio →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' },
+              { label: 'Beelink SER8 en Amazon.es', url: 'https://www.amazon.es/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 2,
@@ -1301,7 +1361,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Menos margen de RAM que las opciones de clase Ryzen',
               'No es la mejor opción si planeas añadir Frigate con varias cámaras',
             ],
-            affiliateLinks: [{ label: 'Ver precio →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' }],
+            affiliateLinks: [
+              { label: 'Ver precio →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' },
+              { label: 'Beelink EQ14 en Amazon.es', url: 'https://www.amazon.es/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 3,
@@ -1318,7 +1381,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Mismo límite de rendimiento de IA que otros equipos de clase N150',
               'La disponibilidad y la configuración exacta varían según el vendedor',
             ],
-            affiliateLinks: [{ label: 'Ver precio →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' }],
+            affiliateLinks: [
+              { label: 'Ver precio →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' },
+              { label: 'GMKtec G3 Plus en Amazon.es', url: 'https://www.amazon.es/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 4,
@@ -1336,7 +1402,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Las unidades barebones requieren comprar RAM y almacenamiento por separado',
               'El precio final puede variar con los costes de importación',
             ],
-            affiliateLinks: [{ label: 'Ver precio →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' }],
+            affiliateLinks: [
+              { label: 'Ver precio →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' },
+              { label: 'Minisforum UM890 Pro en Amazon.es', url: 'https://www.amazon.es/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 5,
@@ -1354,7 +1423,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'La NPU no acelera de forma significativa el chat con LLM local — no la compres esperando una mejora del LLM impulsada por la NPU',
               'Más capacidad de la que la mayoría de instalaciones de Home Assistant realmente necesita',
             ],
-            affiliateLinks: [{ label: 'Ver precio →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' }],
+            affiliateLinks: [
+              { label: 'Ver precio →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' },
+              { label: 'GEEKOM A9 Max en Amazon.es', url: 'https://www.amazon.es/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+            ],
           },
         ],
       },
@@ -1626,8 +1698,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'SER8 가격 확인 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 (Amazon)', url: 'https://www.amazon.com/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
           { label: 'EQ14 가격 확인 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 (Amazon)', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'A9 Max 가격 확인 →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max (Amazon)', url: 'https://www.amazon.com/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: '가격 — 공식 스토어 미국 달러 정가, 2026-10-25 확인; 국내 가격은 다를 수 있습니다. GMKtec G3 Plus와 Minisforum UM890 Pro는 공식 스토어에서 품절로 표시됩니다. 미니 PC 가격은 빠르게 변동하며 서드파티 판매처 가격(여기서는 확인하지 않음)은 다를 수 있으므로 구매 전 현재 목록을 확인하십시오.',
       },
@@ -1666,7 +1741,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '저전력 기기보다 AI 부하 시 전력 소비가 높음',
               '로컬 AI 없이 Home Assistant만 필요하다면 과한 사양',
             ],
-            affiliateLinks: [{ label: '가격 확인 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' }],
+            affiliateLinks: [
+              { label: '가격 확인 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' },
+              { label: 'Beelink SER8 (Amazon)', url: 'https://www.amazon.com/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 2,
@@ -1684,7 +1762,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Ryzen 등급보다 RAM 여유가 적음',
               '여러 카메라로 Frigate를 추가할 계획이라면 적합하지 않음',
             ],
-            affiliateLinks: [{ label: '가격 확인 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' }],
+            affiliateLinks: [
+              { label: '가격 확인 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' },
+              { label: 'Beelink EQ14 (Amazon)', url: 'https://www.amazon.com/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 3,
@@ -1701,7 +1782,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '다른 N150 등급 기기와 동일한 AI 성능 한계',
               '가용성과 정확한 구성은 판매처마다 다름',
             ],
-            affiliateLinks: [{ label: '가격 확인 →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' }],
+            affiliateLinks: [
+              { label: '가격 확인 →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' },
+              { label: 'GMKtec G3 Plus (Amazon)', url: 'https://www.amazon.com/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 4,
@@ -1719,7 +1803,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '베어본 제품은 RAM과 저장소를 별도로 구매해야 함',
               '수입 비용에 따라 최종 가격이 변동될 수 있음',
             ],
-            affiliateLinks: [{ label: '가격 확인 →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' }],
+            affiliateLinks: [
+              { label: '가격 확인 →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' },
+              { label: 'Minisforum UM890 Pro (Amazon)', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 5,
@@ -1737,7 +1824,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'NPU가 로컬 LLM 채팅을 눈에 띄게 가속하지는 않음 — NPU 기반 LLM 성능 향상을 기대하고 구매하지 마십시오',
               '대부분의 Home Assistant 설정에 실제로 필요한 것보다 더 많은 성능',
             ],
-            affiliateLinks: [{ label: '가격 확인 →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' }],
+            affiliateLinks: [
+              { label: '가격 확인 →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' },
+              { label: 'GEEKOM A9 Max (Amazon)', url: 'https://www.amazon.com/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+            ],
           },
         ],
       },
@@ -2010,8 +2100,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Voir le prix du SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
           { label: 'Voir le prix de l\'EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'Voir le prix de l\'A9 Max →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max sur Amazon.fr', url: 'https://www.amazon.fr/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: 'Prix — prix catalogue des boutiques officielles en dollars américains, vérifiés le 25/10/2026 ; ils diffèrent en France. Le GMKtec G3 Plus et le Minisforum UM890 Pro sont indiqués comme épuisés sur leurs boutiques officielles. Les prix des mini-PC évoluent rapidement et ceux des revendeurs tiers (non vérifiés ici) peuvent différer ; vérifiez l\'offre actuelle avant d\'acheter.',
       },
@@ -2050,7 +2143,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Consommation plus élevée sous charge IA qu\'une machine basse consommation',
               'Surdimensionné si vous n\'avez besoin que de Home Assistant sans IA locale',
             ],
-            affiliateLinks: [{ label: 'Voir le prix →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' }],
+            affiliateLinks: [
+              { label: 'Voir le prix →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' },
+              { label: 'Beelink SER8 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 2,
@@ -2068,7 +2164,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Moins de marge de RAM que les options de classe Ryzen',
               'Pas idéal si vous prévoyez d\'ajouter Frigate avec plusieurs caméras',
             ],
-            affiliateLinks: [{ label: 'Voir le prix →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' }],
+            affiliateLinks: [
+              { label: 'Voir le prix →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' },
+              { label: 'Beelink EQ14 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 3,
@@ -2085,7 +2184,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Même plafond de performance IA que les autres machines de classe N150',
               'La disponibilité et la configuration exacte varient selon le vendeur',
             ],
-            affiliateLinks: [{ label: 'Voir le prix →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' }],
+            affiliateLinks: [
+              { label: 'Voir le prix →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' },
+              { label: 'GMKtec G3 Plus sur Amazon.fr', url: 'https://www.amazon.fr/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 4,
@@ -2103,7 +2205,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Les unités nues nécessitent l\'achat séparé de RAM et de stockage',
               'Le prix final peut varier avec les coûts d\'importation',
             ],
-            affiliateLinks: [{ label: 'Voir le prix →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' }],
+            affiliateLinks: [
+              { label: 'Voir le prix →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' },
+              { label: 'Minisforum UM890 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 5,
@@ -2121,7 +2226,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Le NPU n\'accélère pas de manière significative le chat LLM local — ne l\'achetez pas en espérant un gain de performance LLM grâce au NPU',
               'Plus de capacité que ce dont la plupart des installations Home Assistant ont réellement besoin',
             ],
-            affiliateLinks: [{ label: 'Voir le prix →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' }],
+            affiliateLinks: [
+              { label: 'Voir le prix →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' },
+              { label: 'GEEKOM A9 Max sur Amazon.fr', url: 'https://www.amazon.fr/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+            ],
           },
         ],
       },
@@ -2394,8 +2502,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'SER8の価格を見る →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
           { label: 'EQ14の価格を見る →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'A9 Maxの価格を見る →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: '価格——公式ストアの米ドル標準価格（2026-10-25確認）で、日本国内の価格とは異なる場合があります。GMKtec G3 PlusとMinisforum UM890 Proは公式ストアで在庫切れ表示です。ミニPCの価格は急速に変動し、サードパーティ販売店の価格（ここでは未確認）は異なる場合があります；購入前に最新の掲載価格を確認してください。',
       },
@@ -2434,7 +2545,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'AI 負荷時の消費電力は低電力機より高い',
               'ローカルAI不要でHome Assistantのみなら過剰スペック',
             ],
-            affiliateLinks: [{ label: '価格を見る →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' }],
+            affiliateLinks: [
+              { label: '価格を見る →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' },
+              { label: 'Beelink SER8（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 2,
@@ -2452,7 +2566,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Ryzenクラスよりも RAM の余裕が少ない',
               '複数カメラでFrigateを追加する予定には向かない',
             ],
-            affiliateLinks: [{ label: '価格を見る →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' }],
+            affiliateLinks: [
+              { label: '価格を見る →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' },
+              { label: 'Beelink EQ14（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 3,
@@ -2469,7 +2586,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '他の N150 クラス機と同じ AI 性能の上限',
               '在庫状況や正確な構成は販売店により異なる',
             ],
-            affiliateLinks: [{ label: '価格を見る →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' }],
+            affiliateLinks: [
+              { label: '価格を見る →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' },
+              { label: 'GMKtec G3 Plus（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 4,
@@ -2487,7 +2607,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'ベアボーン機はRAMとストレージを別途購入する必要がある',
               '輸入コストにより最終価格が変動する可能性がある',
             ],
-            affiliateLinks: [{ label: '価格を見る →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' }],
+            affiliateLinks: [
+              { label: '価格を見る →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' },
+              { label: 'Minisforum UM890 Pro（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 5,
@@ -2505,7 +2628,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'NPU がローカル LLM チャットを大きく高速化するわけではない——NPUによるLLM性能向上を期待して購入しないこと',
               'ほとんどの Home Assistant 構成が実際に必要とする以上の性能',
             ],
-            affiliateLinks: [{ label: '価格を見る →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' }],
+            affiliateLinks: [
+              { label: '価格を見る →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' },
+              { label: 'GEEKOM A9 Max（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+            ],
           },
         ],
       },
@@ -2778,8 +2904,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Ver preço do SER8 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8 na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
           { label: 'Ver preço do EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14 na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'Ver preço do A9 Max →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: 'Preços — preços de tabela das lojas oficiais em dólares americanos, verificados em 25/10/2026; no Brasil os valores variam bastante devido a impostos de importação. O GMKtec G3 Plus e o Minisforum UM890 Pro aparecem como esgotados em suas lojas oficiais. O preço de mini PCs muda rapidamente e os preços de revendedores (não verificados aqui) podem diferir; confira a oferta atual antes de comprar.',
       },
@@ -2818,7 +2947,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Consumo mais alto sob carga de IA do que uma máquina de baixo consumo',
               'Exagerado se você só precisa do Home Assistant, sem IA local',
             ],
-            affiliateLinks: [{ label: 'Ver preço →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' }],
+            affiliateLinks: [
+              { label: 'Ver preço →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' },
+              { label: 'Beelink SER8 na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 2,
@@ -2836,7 +2968,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Menos folga de RAM que as opções de classe Ryzen',
               'Não é uma boa opção se você planeja adicionar o Frigate com várias câmeras',
             ],
-            affiliateLinks: [{ label: 'Ver preço →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' }],
+            affiliateLinks: [
+              { label: 'Ver preço →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' },
+              { label: 'Beelink EQ14 na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 3,
@@ -2853,7 +2988,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Mesmo teto de desempenho de IA que outras máquinas de classe N150',
               'Disponibilidade e configuração exata variam por revendedor',
             ],
-            affiliateLinks: [{ label: 'Ver preço →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' }],
+            affiliateLinks: [
+              { label: 'Ver preço →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' },
+              { label: 'GMKtec G3 Plus na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 4,
@@ -2871,7 +3009,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Unidades sem componentes exigem compra separada de RAM e armazenamento',
               'O preço final pode variar com custos de importação',
             ],
-            affiliateLinks: [{ label: 'Ver preço →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' }],
+            affiliateLinks: [
+              { label: 'Ver preço →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' },
+              { label: 'Minisforum UM890 Pro na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 5,
@@ -2889,7 +3030,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'A NPU não acelera de forma significativa o chat de LLM local — não compre esperando um ganho de desempenho de LLM vindo da NPU',
               'Mais capacidade do que a maioria das instalações de Home Assistant realmente precisa',
             ],
-            affiliateLinks: [{ label: 'Ver preço →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' }],
+            affiliateLinks: [
+              { label: 'Ver preço →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' },
+              { label: 'GEEKOM A9 Max na Amazon.com.br', url: 'https://www.amazon.com.br/s?k=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+            ],
           },
         ],
       },
@@ -3162,8 +3306,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: '查看 SER8 价格 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+          { label: 'Beelink SER8（京东）', url: 'https://search.jd.com/Search?keyword=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
           { label: '查看 EQ14 价格 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+          { label: 'Beelink EQ14（京东）', url: 'https://search.jd.com/Search?keyword=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: '查看 A9 Max 价格 →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+          { label: 'GEEKOM A9 Max（京东）', url: 'https://search.jd.com/Search?keyword=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
         note: '价格——官方商店美元标价，核对于 2026-10-25；各地价格会有差异。GMKtec G3 Plus 与 Minisforum UM890 Pro 在其官方商店显示为缺货。迷你 PC 价格变化很快，第三方经销商价格（此处未核实）可能不同；购买前请确认当前报价。',
       },
@@ -3202,7 +3349,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'AI 负载下功耗高于低功耗机型',
               '若只需 Home Assistant 而不需要本地 AI，则显得过剩',
             ],
-            affiliateLinks: [{ label: '查看价格 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' }],
+            affiliateLinks: [
+              { label: '查看价格 →', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs' },
+              { label: 'Beelink SER8（京东）', url: 'https://search.jd.com/Search?keyword=Beelink+SER8', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 2,
@@ -3220,7 +3370,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '内存余量小于 Ryzen 级别机型',
               '若计划为多摄像头添加 Frigate，则不够合适',
             ],
-            affiliateLinks: [{ label: '查看价格 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' }],
+            affiliateLinks: [
+              { label: '查看价格 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150' },
+              { label: 'Beelink EQ14（京东）', url: 'https://search.jd.com/Search?keyword=Beelink+EQ14', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 3,
@@ -3237,7 +3390,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'AI 性能上限与其他 N150 级别机型相同',
               '可用性与具体配置因经销商而异',
             ],
-            affiliateLinks: [{ label: '查看价格 →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' }],
+            affiliateLinks: [
+              { label: '查看价格 →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor' },
+              { label: 'GMKtec G3 Plus（京东）', url: 'https://search.jd.com/Search?keyword=GMKtec+G3+Plus', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 4,
@@ -3255,7 +3411,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '裸机版本需另购内存和存储',
               '因进口成本，最终售价可能波动',
             ],
-            affiliateLinks: [{ label: '查看价格 →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' }],
+            affiliateLinks: [
+              { label: '查看价格 →', url: 'https://www.minisforum.com/products/minisforum-um890-pro' },
+              { label: 'Minisforum UM890 Pro（京东）', url: 'https://search.jd.com/Search?keyword=Minisforum+UM890+Pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+            ],
           },
           {
             rank: 5,
@@ -3273,7 +3432,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'NPU 并不能显著加速本地 LLM 聊天——不要期待 NPU 带来 LLM 性能提升而购买本机型',
               '性能超出大多数 Home Assistant 配置的实际需求',
             ],
-            affiliateLinks: [{ label: '查看价格 →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' }],
+            affiliateLinks: [
+              { label: '查看价格 →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/' },
+              { label: 'GEEKOM A9 Max（京东）', url: 'https://search.jd.com/Search?keyword=GEEKOM+A9+Max', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+            ],
           },
         ],
       },
