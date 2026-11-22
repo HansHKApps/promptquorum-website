@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local LLM Workstation Build 2026 | PromptQuorum</title>
-    <meta name="description" content="Interactive presentation: Build a $4,000–6,000 professional local LLM workstation with dual RTX 4090 GPUs, Threadripper 7970X CPU, and enterprise cooling.">
-    <meta property="og:title" content="Local LLM Workstation Build 2026 — PromptQuorum">
-    <meta property="og:description" content="Complete guide to professional LLM workstation: dual RTX 4090, Threadripper, 128GB DDR5, cooling, power requirements, multi-user performance. 12-slide presentation.">
+    <title>Local LLM PC Build 2026: Workstation, GPU, RAM, PSU, Cost | PromptQuorum</title>
+    <meta name="description" content="Build a local LLM PC or workstation: 48 GB of VRAM for 70B models, 64 GB RAM, PSU sizing and sourced 2026 prices for dual RTX 3090, 4090 and 5090.">
+    <meta property="og:title" content="Local LLM PC Build 2026: Workstation, GPU, RAM, PSU, Cost — PromptQuorum">
+    <meta property="og:description" content="Build a local LLM PC or workstation: 48 GB of VRAM for 70B models, 64 GB RAM, PSU sizing and sourced 2026 prices for dual RTX 3090, 4090 and 5090.">
     <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llm-workstation-build">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -18,45 +18,55 @@
         .header-links { display: flex; gap: 16px; }
         .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; }
         .content-area { flex: 1; overflow: hidden; }
-        .slide { width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 48px; text-align: center; overflow: auto; animation: fadeIn 0.5s ease-in; }
+        .slide { position: relative; width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 40px 48px 44px; text-align: center; overflow: auto; animation: fadeIn 0.5s ease-in; }
         .slide.active { display: flex; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .slide h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
-        .slide h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 700; margin-bottom: 16px; color: #1c1b1f; }
-        .slide p { font-size: clamp(16px, 1.8vw, 20px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
-        .slide ul { text-align: left; display: inline-block; margin: 16px 0; max-width: 90%; }
-        .slide li { font-size: clamp(16px, 1.8vw, 20px); margin: 8px 0; color: #49454f; }
+        .slide h1 { font-size: clamp(28px, 3.6vw, 44px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+        .slide h2 { font-size: clamp(24px, 2.8vw, 36px); font-weight: 700; margin-bottom: 14px; color: #1c1b1f; }
+        .slide p { font-size: clamp(15px, 1.6vw, 19px); margin-bottom: 10px; color: #49454f; line-height: 1.5; max-width: 1000px; }
+        .slide ul, .slide ol { text-align: start; display: inline-block; margin: 12px 0; max-width: 92%; }
+        .slide ol { padding-inline-start: 1.4em; }
+        .slide li { font-size: clamp(15px, 1.6vw, 19px); margin: 8px 0; color: #49454f; line-height: 1.45; }
+        .slide code { background: #f3edf7; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
         .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
         .slide.title p { color: #6750a4; font-weight: 500; margin-top: 12px; }
-        .slide table { margin: 20px auto; border-collapse: collapse; max-width: 95%; }
-        .slide th, .slide td { padding: 12px; text-align: left; border-bottom: 1px solid #e8def8; font-size: clamp(14px, 1.6vw, 18px); }
+        .slide table { margin: 14px auto; border-collapse: collapse; max-width: 96%; }
+        .slide th, .slide td { padding: 8px 12px; text-align: start; border-bottom: 1px solid #e8def8; font-size: clamp(13px, 1.4vw, 17px); }
         .slide th { background: #6750a4; color: white; font-weight: 600; }
+        .slide table.dense th, .slide table.dense td { padding: 4px 10px; font-size: clamp(12px, 1.2vw, 15px); }
+        .slide table.dense { margin: 8px auto; }
+        .slide .faq-item { margin-bottom: 14px; text-align: start; max-width: 1000px; }
+        .slide .cta-btn { display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; }
+        .slide .slide-footer { position: absolute; bottom: 12px; inset-inline-end: 16px; font-size: 11px; color: #999; margin: 0; }
+        .slide-footer a { color: #999; text-decoration: none; border-bottom: 1px solid #ddd; }
         .controls { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background: #fafaf8; border-top: 1px solid #e8def8; flex-shrink: 0; }
         button { background: #6750a4; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; }
         button:hover { background: #7d5260; }
+        button:disabled { opacity: 0.45; cursor: default; }
         .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; }
         @page { size: A4 landscape; margin: 0; }
-        
-    @media (max-width: 640px) {
-      .slide { padding: 20px 16px; }
-      .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
-      .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
-      .slide p { font-size: 14px; margin-bottom: 10px; }
-      .slide ul { font-size: 1em; margin: 10px 0; }
-      .slide ul li { margin-bottom: 8px; }
-      .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
-      .slide table th, .slide table td { padding: 6px 8px; white-space: nowrap; }
-      .header { padding: 10px 12px; }
-      .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-      .header-links { gap: 8px; font-size: 11px; }
-      .subtitle { font-size: 14px; }
-      .logo { height: 24px; margin-bottom: 12px; }
-      .controls { padding: 10px 12px; }
-      .controls button { padding: 6px 12px; font-size: 12px; }
-    }
-
-    @media print {
-            .slide, .slide * { animation: none !important; opacity: 1 !important; } * { margin: 0; padding: 0; } html, body { overflow: visible !important; height: auto !important; background: white !important; } .header, .controls { display: none !important; } .presentation-container { display: block !important; height: auto !important; } .content-area { display: block !important; overflow: visible !important; } .slide { display: flex !important; page-break-after: always; width: 100%; height: 210mm; padding: 20mm 24mm; margin: 0; background: white; overflow: visible !important; } .slide::after { content: counter(page-counter) " / 12"; position: absolute; bottom: 15mm; right: 24mm; font-size: 9pt; color: #999; } }
+        @media (max-width: 640px) {
+          .slide { padding: 20px 16px 36px; }
+          .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
+          .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
+          .slide p { font-size: 14px; }
+          .slide li { font-size: 14px; }
+          .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
+          .slide table th, .slide table td { padding: 6px 8px; }
+          .header { padding: 10px 12px; }
+          .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+          .header-links { gap: 8px; font-size: 11px; }
+          .controls { padding: 10px 12px; }
+          .controls button { padding: 6px 12px; font-size: 12px; }
+        }
+        @media print {
+          .slide, .slide * { animation: none !important; opacity: 1 !important; }
+          html, body { overflow: visible !important; height: auto !important; background: white !important; }
+          .header, .controls { display: none !important; }
+          .presentation-container { display: block !important; height: auto !important; }
+          .content-area { display: block !important; overflow: visible !important; }
+          .slide { display: flex !important; page-break-after: always; width: 100%; min-height: 210mm; padding: 14mm 18mm; margin: 0; background: white; overflow: visible !important; }
+        }
     </style>
 </head>
 <body>
@@ -64,179 +74,2814 @@
         <div class="header">
             <div class="header-left">
                 <img src="/logo.svg" alt="PromptQuorum">
-                <span id="header-title">Local LLM Workstation Build 2026</span>
+                <span id="header-title"></span>
             </div>
             <div class="header-links">
-                <a href="https://www.promptquorum.com/local-llms/local-llm-workstation-build" target="_blank">← Back to Article</a>
-                <a href="https://www.promptquorum.com" target="_blank">PromptQuorum.com</a>
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/local-llm-workstation-build" target="_blank" rel="noopener">← Back to Article</a>
+                <a href="https://www.promptquorum.com" target="_blank" rel="noopener">PromptQuorum.com</a>
             </div>
         </div>
         <div class="content-area" id="slides-container"></div>
         <div class="controls">
             <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
-            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">12</span></span>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
             <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
         </div>
     </div>
 
     <script>
         const CONTENT = {
-            en: {
-                title: 'Local LLM Workstation Build 2026',
-                slides: [
-                    { type: 'title', h1: 'Local LLM Workstation Build 2026', subtitle: 'Dual RTX 4090 · Threadripper 7970X · 48GB VRAM · $4,000–6,000', p: 'A complete professional setup guide for building an inference powerhouse that runs 70B models locally, serves 2–3 concurrent users, and eliminates cloud API costs forever.' },
-                    { type: 'list', h2: 'Who Is This Build For?', items: ['<strong>SMBs & Enterprises:</strong> Teams of 5+ running internal LLM APIs without cloud dependency.', '<strong>AI Researchers:</strong> Fine-tuning large models while simultaneously serving inference to collaborators.', '<strong>MLOps Engineers:</strong> Building internal inference clusters without recurring cloud costs.', '<strong>Content Studios:</strong> Running 24/7 inference workloads for generative content pipelines.'] },
-                    { type: 'table', h2: 'Complete Parts List & Cost Breakdown', columns: ['Component', 'Selection', 'Cost'], rows: [{ Component: 'GPU (×2)', Selection: 'RTX 4090 24 GB', Cost: '$3,200–3,800' }, { Component: 'CPU', Selection: 'Threadripper 7970X (32-core)', Cost: '$2,000–2,500' }, { Component: 'Motherboard', Selection: 'TRX50 WS Pro', Cost: '$600–800' }, { Component: 'RAM', Selection: '128 GB DDR5 ECC', Cost: '$400–600' }, { Component: 'Storage', Selection: '4 TB NVMe + 12 TB HDD', Cost: '$350–500' }, { Component: 'PSU', Selection: '2000W Platinum', Cost: '$300–500' }, { Component: 'Cooling', Selection: 'Custom loop or dual AIO', Cost: '$400–800' }, { Component: 'Case', Selection: 'Full-tower EATX', Cost: '$150–250' }, { Component: 'Total', Selection: '—', Cost: '$4,000–6,000' }] },
-                    { type: 'list', h2: 'Dual GPU Configuration Options', items: ['<strong>Side-by-Side (PCIe):</strong> Each GPU runs independent model instances. Best for serving multiple small models concurrently.', '<strong>NVLink Bridge:</strong> Unifies 48 GB VRAM into a single addressable pool. Essential for models exceeding 24 GB.', '<strong>Tensor Parallelism:</strong> Software-level model sharding via vLLM or llama.cpp. Higher throughput for large batch inference.'] },
-                    { type: 'list', h2: 'RTX 5090 vs RTX 4090: Value Analysis', items: ['<strong>Dual RTX 4090:</strong> 48GB VRAM, $3,400 total, 100+ tok/s (Q4 70B) — best value.', '<strong>Single RTX 5090:</strong> 32GB VRAM, $2,500, 40–50 tok/s — simpler, less VRAM.', '<strong>Dual RTX 5090:</strong> 64GB VRAM, $5,000, 120+ tok/s — overkill for most workloads.', '→ Recommendation: Dual RTX 4090 for professional workloads.'] },
-                    { type: 'list', h2: 'Cooling Solutions: 1,200W of Heat', items: ['<strong>🌊 Custom Loop ($1,500–2,500):</strong> Best performance, lowest noise (40 dB), highest thermal headroom. Requires 6–8 hours assembly.', '<strong>❄️ Dual 360mm AIO ($600–900):</strong> Best balance. One AIO per GPU plus CPU cooler. Modular, easier than custom loop.', '<strong>💨 High-End Air:</strong> Budget option, louder (60+ dB), not ideal for office environments.'] },
-                    { type: 'list', h2: 'Power Supply & Electrical Requirements', items: ['<strong>Single 2000W Platinum:</strong> Cleaner cable management. Corsair AX2000 or Seasonic Prime TX-2000 recommended.', '<strong>Dual 1200W (Redundant):</strong> Hot-swap redundancy for 24/7 uptime. Requires dual PSU adapter bracket.', '<strong>Circuit Requirement:</strong> Minimum 20A dedicated circuit (30A strongly preferred). ~1,600–1,800W sustained draw.', '<strong>Important:</strong> Never share with other high-draw devices.'] },
-                    { type: 'list', h2: 'CPU: Why Threadripper 7970X?', items: ['<strong>32 cores:</strong> Enable parallel fine-tuning while GPUs serve inference simultaneously.', '<strong>88 PCIe 5.0 lanes:</strong> Both GPUs run at full x16 bandwidth — no bottlenecks.', '<strong>Quad-channel DDR5:</strong> Feeds data to GPU at maximum rate.', '<strong>ECC support:</strong> Critical for unattended 24/7 inference stability.'] },
-                    { type: 'list', h2: 'Inference Performance Benchmarks', items: ['<strong>14 tok/s per user:</strong> Sustained throughput per concurrent user on 70B model with tensor parallelism.', '<strong>2–3 concurrent 70B users:</strong> At comfortable generation speeds, running simultaneously.', '<strong>8+ concurrent 7B users:</strong> Ideal for internal API endpoints serving small teams.', '<strong>48GB total VRAM:</strong> Run full Q8 70B without quantization compromise.'] },
-                    { type: 'numbered', h2: '4 Common Build Mistakes to Avoid', items: ['<strong>Undersized power circuit:</strong> Running 1,800W on shared 15A circuit trips breakers. Dedicate a 30A circuit before powering on.', '<strong>Ignoring PCIe slot spacing:</strong> Two RTX 4090s in adjacent slots blocks airflow. Use riser cable or space them apart.', '<strong>Skipping ECC RAM:</strong> Non-ECC silently corrupts training runs. 128GB DDR5 ECC is non-negotiable.', '<strong>Misconfigured tensor parallelism:</strong> Without proper vLLM flags, models default to single GPU. Validate with <code>nvidia-smi</code>.'] },
-                    { type: 'faq', h2: 'FAQ & Troubleshooting', faqs: [{ q: 'Can I start with one GPU and add later?', a: 'Yes — but buy a TRX50 motherboard now. Upgrading the board later is more expensive.' }, { q: 'Is 128 GB RAM really necessary?', a: 'For inference-only: 64 GB is sufficient. 128 GB required when fine-tuning 70B while serving inference.' }, { q: 'What software stack?', a: 'vLLM for multi-user inference. Ollama for quick testing. llama.cpp for CPU+GPU hybrid when VRAM insufficient.' }] },
-                    { type: 'title', h1: 'Ready to Build?', subtitle: 'Start with the electrical circuit inspection', p: 'It\'s the most overlooked step and the one most likely to delay your workstation build.' }
-                ]
-            },
-            de: {
-                title: 'Lokale LLM-Workstation 2026',
-                slides: [
-                    { type: 'title', h1: 'Lokale LLM-Workstation Build 2026', subtitle: 'Dual RTX 4090 · Threadripper 7970X · 48GB VRAM · €4.000–6.000', p: 'Ein umfassender Leitfaden zum Aufbau einer professionellen Inferenz-Workstation, die 70B-Modelle lokal ausführt, 2–3 gleichzeitige Benutzer bedient und Cloud-API-Kosten eliminiert.' },
-                    { type: 'list', h2: 'Für wen ist dieser Build?', items: ['<strong>KMU & Unternehmen:</strong> Teams mit 5+ Mitarbeitern, die interne LLM-APIs ohne Cloud-Abhängigkeit betreiben.', '<strong>AI-Forscher:</strong> Feinabstimmung großer Modelle während gleichzeitiger Inferenzdienste.', '<strong>MLOps-Ingenieure:</strong> Aufbau interner Inferenz-Cluster ohne wiederkehrende Cloud-Kosten.', '<strong>Content-Studios:</strong> 24/7 Inferenzlast für generative Content-Pipelines.'] },
-                    { type: 'table', h2: 'Komplette Teileliste & Kostenaufschlüsselung', columns: ['Komponente', 'Modell', 'Kosten'], rows: [{ Komponente: 'GPU (×2)', Modell: 'RTX 4090 24 GB', Kosten: '€3.000–3.600' }, { Komponente: 'CPU', Modell: 'Threadripper 7970X', Kosten: '€1.900–2.400' }, { Komponente: 'Motherboard', Modell: 'TRX50 WS Pro', Kosten: '€550–750' }, { Komponente: 'RAM', Modell: '128 GB DDR5 ECC', Kosten: '€350–550' }, { Komponente: 'Storage', Modell: '4 TB NVMe + 12 TB HDD', Kosten: '€300–450' }, { Komponente: 'PSU', Modell: '2000W Platinum', Kosten: '€300–500' }, { Komponente: 'Kühlung', Modell: 'Custom Loop oder AIO', Kosten: '€350–750' }, { Komponente: 'Gehäuse', Modell: 'Full-Tower EATX', Kosten: '€150–250' }, { Komponente: 'Gesamt', Modell: '—', Kosten: '€4.000–6.000' }] },
-                    { type: 'list', h2: 'Dual-GPU-Konfigurationsoptionen', items: ['<strong>Nebeneinander (PCIe):</strong> Jede GPU führt unabhängige Modellinstanzen aus. Ideal für mehrere kleine Modelle gleichzeitig.', '<strong>NVLink-Brücke:</strong> Vereinigt 48 GB VRAM in einem einzigen Pool. Erforderlich für Modelle > 24 GB.', '<strong>Tensor-Parallelisierung:</strong> Software-Sharding über vLLM oder llama.cpp. Höherer Durchsatz bei Batch-Inferenz.'] },
-                    { type: 'list', h2: 'RTX 5090 vs RTX 4090: Wertanalyse', items: ['<strong>Dual RTX 4090:</strong> 48GB VRAM, €3.300, 100+ tok/s (Q4 70B) — bestes Preis-Leistungs-Verhältnis.', '<strong>Single RTX 5090:</strong> 32GB VRAM, €2.400, 40–50 tok/s — einfacher, weniger VRAM.', '<strong>Dual RTX 5090:</strong> 64GB VRAM, €4.800, 120+ tok/s — Überdimensioniert für die meisten Workloads.', '→ Empfehlung: Dual RTX 4090 für professionelle Workloads.'] },
-                    { type: 'list', h2: 'Kühlungslösungen: 1.200W Wärmeleistung', items: ['<strong>🌊 Custom Loop (€1.400–2.200):</strong> Beste Leistung, niedrigste Lautstärke (40 dB), maximale Wärmeleistung.', '<strong>❄️ Dual 360mm AIO (€550–800):</strong> Bestes Gleichgewicht. Ein AIO pro GPU plus CPU-Kühler. Modular, einfacher als Custom Loop.', '<strong>💨 High-End-Luftkühlung:</strong> Budget-Option, lauter (60+ dB), nicht ideal für Büroumgebungen.'] },
-                    { type: 'list', h2: 'Stromversorgung & Elektrik-Anforderungen', items: ['<strong>Single 2000W Platinum:</strong> Saubere Kabelführung. Corsair AX2000 oder Seasonic Prime TX-2000 empfohlen.', '<strong>Dual 1200W (redundant):</strong> Hot-Swap-Redundanz für 24/7-Betrieb. Erfordert Dual-PSU-Adapter.', '<strong>Stromkreis-Anforderung:</strong> Mindestens 20A dedizierter Stromkreis (30A dringend empfohlen). ~1.600–1.800W Dauerlast.', '<strong>Wichtig:</strong> Niemals mit anderen Hochlast-Geräten teilen.'] },
-                    { type: 'list', h2: 'CPU: Warum Threadripper 7970X?', items: ['<strong>32 Kerne:</strong> Ermöglichen Parallel-Feinabstimmung während GPUs Inferenz bedienen.', '<strong>88 PCIe 5.0-Lanes:</strong> Beide GPUs laufen mit voller x16-Bandbreite — keine Engpässe.', '<strong>Quad-Channel DDR5:</strong> Speisungsdatenrate GPU maximal.', '<strong>ECC-Unterstützung:</strong> Essentiell für unbeaufsichtigten 24/7-Betrieb.'] },
-                    { type: 'list', h2: 'Inferenz-Performance Benchmarks', items: ['<strong>14 tok/s pro Benutzer:</strong> Nachhaltiger Durchsatz pro gleichzeitigen Benutzer auf 70B-Modell.', '<strong>2–3 gleichzeitige 70B-Benutzer:</strong> Bei komfortabler Generierungsgeschwindigkeit, gleichzeitig laufend.', '<strong>8+ gleichzeitige 7B-Benutzer:</strong> Ideal für interne API-Endpoints für Teams.', '<strong>48GB gesamt VRAM:</strong> Vollständiges Q8 70B ohne Quantisierungskompromiss.'] },
-                    { type: 'numbered', h2: '4 häufige Build-Fehler zum Vermeiden', items: ['<strong>Zu kleine Stromschaltung:</strong> 1.800W auf gemeinsamer 15A-Schaltung unterbrechen Unterbrecher. 30A-Schaltung vor Inbetriebnahme dedizieren.', '<strong>Ignorieren von PCIe-Slot-Abstand:</strong> Zwei RTX 4090s in benachbarten Slots blockieren Luftstrom. Riser-Kabel verwenden oder trennen.', '<strong>ECC-RAM überspringen:</strong> Non-ECC beschädigt Training-Läufe stumm. 128GB DDR5 ECC nicht verhandelbar.', '<strong>Falsch konfigurierte Tensor-Parallelisierung:</strong> Ohne richtige vLLM-Flags standardmäßig Single-GPU. Mit <code>nvidia-smi</code> validieren.'] },
-                    { type: 'faq', h2: 'FAQ & Fehlerbehebung', faqs: [{ q: 'Kann ich mit einer GPU starten und später eine hinzufügen?', a: 'Ja — aber kaufen Sie jetzt ein TRX50-Motherboard. Ein späteren Modul-Upgrade ist teurer.' }, { q: 'Ist 128 GB RAM wirklich notwendig?', a: 'Nur Inferenz: 64 GB ausreichend. 128 GB erforderlich bei Feinabstimmung von 70B während Inferenz.' }, { q: 'Welcher Software-Stack?', a: 'vLLM für Multi-User-Inferenz. Ollama für schnelle Tests. llama.cpp für CPU+GPU-Hybrid.', }] },
-                    { type: 'title', h1: 'Bereit zu bauen?', subtitle: 'Beginnen Sie mit der Stromkreisprüfung', p: 'Es ist der am meisten übersehene Schritt und am wahrscheinlichsten, Ihren Build zu verzögern.' }
-                ]
-            },
-            fr: {
-                title: 'Station de travail LLM local 2026',
-                slides: [
-                    { type: 'title', h1: 'Station de Travail LLM Local 2026', subtitle: 'Dual RTX 4090 · Threadripper 7970X · 48 GB VRAM · 4 000–6 000 €', p: 'Un guide complet pour construire une station de travail d\'inférence professionnelle qui exécute des modèles 70B localement, sert 2–3 utilisateurs concurrents, et élimine les coûts des API cloud.' },
-                    { type: 'list', h2: 'Pour qui ce build?', items: ['<strong>PME & Entreprises :</strong> Équipes de 5+ exécutant des API LLM internes sans dépendance cloud.', '<strong>Chercheurs IA :</strong> Affinement fin de grands modèles tout en servant l\'inférence aux collaborateurs.', '<strong>Ingénieurs MLOps :</strong> Construction de clusters d\'inférence internes sans coûts cloud récurrents.', '<strong>Studios de contenu :</strong> Charges d\'inférence 24/7 pour pipelines de contenu générateur.'] },
-                    { type: 'table', h2: 'Liste complète des pièces & ventilation des coûts', columns: ['Composant', 'Sélection', 'Coût'], rows: [{ Composant: 'GPU (×2)', Sélection: 'RTX 4090 24 GB', Coût: '€3 000–3 600' }, { Composant: 'CPU', Sélection: 'Threadripper 7970X', Coût: '€1 900–2 400' }, { Composant: 'Carte mère', Sélection: 'TRX50 WS Pro', Coût: '€550–750' }, { Composant: 'RAM', Sélection: '128 GB DDR5 ECC', Coût: '€350–550' }, { Composant: 'Stockage', Sélection: '4 TB NVMe + 12 TB HDD', Coût: '€300–450' }, { Composant: 'PSU', Sélection: '2000W Platinum', Coût: '€300–500' }, { Composant: 'Refroidissement', Sélection: 'Boucle personnalisée ou AIO', Coût: '€350–750' }, { Composant: 'Boîtier', Sélection: 'Full-Tower EATX', Coût: '€150–250' }, { Composant: 'Total', Sélection: '—', Coût: '€4 000–6 000' }] },
-                    { type: 'list', h2: 'Options de configuration dual-GPU', items: ['<strong>Côte à côte (PCIe) :</strong> Chaque GPU exécute des instances de modèle indépendantes. Idéal pour servir plusieurs petits modèles simultanément.', '<strong>Pont NVLink :</strong> Unifie 48 GB VRAM dans un pool unique. Essentiel pour les modèles dépassant 24 GB.', '<strong>Parallélisme tensoriel :</strong> Sharding au niveau logiciel via vLLM ou llama.cpp. Débit supérieur pour l\'inférence par lot.'] },
-                    { type: 'list', h2: 'RTX 5090 vs RTX 4090 : Analyse de valeur', items: ['<strong>Dual RTX 4090 :</strong> 48 GB VRAM, €3 300, 100+ tok/s (Q4 70B) — meilleur rapport qualité-prix.', '<strong>Single RTX 5090 :</strong> 32 GB VRAM, €2 400, 40–50 tok/s — plus simple, moins VRAM.', '<strong>Dual RTX 5090 :</strong> 64 GB VRAM, €4 800, 120+ tok/s — surdimensionné pour la plupart des charges.', '→ Recommandation : Dual RTX 4090 pour les charges professionnelles.'] },
-                    { type: 'list', h2: 'Solutions de refroidissement : 1 200 W de chaleur', items: ['<strong>🌊 Boucle personnalisée (€1 400–2 200) :</strong> Meilleure performance, bruit minimal (40 dB), capacité thermique maximale.', '<strong>❄️ Dual 360mm AIO (€550–800) :</strong> Meilleur équilibre. Un AIO par GPU plus refroidisseur CPU. Modulaire, plus simple que boucle personnalisée.', '<strong>💨 Refroidissement haute gamme par air :</strong> Option budget, plus bruyant (60+ dB), non idéal pour environnement bureau.'] },
-                    { type: 'list', h2: 'Alimentation électrique & exigences électriques', items: ['<strong>Single 2000W Platinum :</strong> Acheminement des câbles plus propre. Corsair AX2000 ou Seasonic Prime TX-2000 recommandé.', '<strong>Dual 1200W (Redondant) :</strong> Redondance de swap à chaud pour disponibilité 24/7. Nécessite adaptateur PSU dual.', '<strong>Exigence de circuit :</strong> Circuit dédié minimum 20A (30A fortement recommandé). ~1 600–1 800 W de charge soutenue.', '<strong>Important :</strong> Ne jamais partager avec d\'autres appareils haute puissance.'] },
-                    { type: 'list', h2: 'CPU : Pourquoi Threadripper 7970X?', items: ['<strong>32 cœurs :</strong> Permettent l\'affinement fin parallèle pendant que les GPU servent l\'inférence.', '<strong>88 lanes PCIe 5.0 :</strong> Les deux GPU fonctionnent à bande passante x16 complète — pas d\'goulots.', '<strong>DDR5 quad-canal :</strong> Alimentation des données GPU au débit maximal.', '<strong>Support ECC :</strong> Critique pour stabilité fonctionnement 24/7 sans surveillance.'] },
-                    { type: 'list', h2: 'Benchmarks de performance d\'inférence', items: ['<strong>14 tok/s par utilisateur :</strong> Débit soutenu par utilisateur concurrent sur modèle 70B avec parallélisme tensoriel.', '<strong>2–3 utilisateurs 70B concurrents :</strong> À vitesses de génération confortables, fonctionnant simultanément.', '<strong>8+ utilisateurs 7B concurrents :</strong> Idéal pour endpoints API internes servant les équipes.', '<strong>48 GB VRAM total :</strong> Exécution complète Q8 70B sans compromis de quantification.'] },
-                    { type: 'numbered', h2: '4 erreurs courantes de build à éviter', items: ['<strong>Circuit électrique trop petit :</strong> 1 800 W sur circuit 15A partagé déclenche les disjoncteurs. Dédier circuit 30A avant mise sous tension.', '<strong>Ignorer espacement slots PCIe :</strong> Deux RTX 4090s dans slots adjacents bloquent flux air. Utiliser câble riser ou les espacer.', '<strong>Sauter RAM ECC :</strong> RAM non-ECC corrompt silencieusement exécutions d\'entraînement. 128 GB DDR5 ECC non-négociable.', '<strong>Parallélisme tensoriel mal configuré :</strong> Sans flags vLLM corrects, modèles défaut single-GPU. Valider avec <code>nvidia-smi</code>.'] },
-                    { type: 'faq', h2: 'FAQ & Dépannage', faqs: [{ q: 'Puis-je commencer avec une GPU et en ajouter une plus tard?', a: 'Oui — mais achetez une carte mère TRX50 maintenant. Mise à jour ultérieure est plus coûteuse.' }, { q: 'Les 128 GB de RAM sont-ils vraiment nécessaires?', a: 'Inférence seule: 64 GB suffisant. 128 GB requis lors d\'affinement 70B tout en servant inférence.' }, { q: 'Quel pile logiciel?', a: 'vLLM pour inférence multi-utilisateur. Ollama pour tests rapides. llama.cpp pour hybride CPU+GPU.' }] },
-                    { type: 'title', h1: 'Prêt à construire?', subtitle: 'Commencez par l\'inspection du circuit électrique', p: 'C\'est l\'étape la plus négligée et la plus susceptible de retarder votre build.' }
-                ]
-            },
-            ja: {
-                title: 'ローカルLLMワークステーション構築2026',
-                slides: [
-                    { type: 'title', h1: 'ローカルLLMワークステーション構築2026', subtitle: 'Dual RTX 4090 · Threadripper 7970X · 48GB VRAM · $4,000–6,000', p: '70Bモデルをローカルで実行し、2–3人の同時ユーザーをサーブでき、クラウドAPI コストを排除するプロフェッショナルなワークステーション構築の完全ガイド。' },
-                    { type: 'list', h2: 'このビルドは誰の為か?', items: ['<strong>中小企業 & エンタープライズ :</strong> クラウドに依存せず内部LLM APIを実行する5人以上のチーム。', '<strong>AIリサーチャー :</strong> 大規模モデルの微調整と同時に推論を提供。', '<strong>MLOpsエンジニア :</strong> 繰り返されるクラウドコストなしで内部推論クラスターを構築。', '<strong>コンテンツスタジオ :</strong> 生成コンテンツパイプラインの24/7 推論ワークロード。'] },
-                    { type: 'table', h2: '完全パーツリスト & コスト内訳', columns: ['コンポーネント', '選択', 'コスト'], rows: [{ コンポーネント: 'GPU (×2)', 選択: 'RTX 4090 24 GB', コスト: '¥358,000–423,000' }, { コンポーネント: 'CPU', 選択: 'Threadripper 7970X', コスト: '¥280,000–348,000' }, { コンポーネント: 'マザーボード', 選択: 'TRX50 WS Pro', コスト: '¥77,000–112,000' }, { コンポーネント: 'RAM', 選択: '128 GB DDR5 ECC', コスト: '¥56,000–84,000' }, { コンポーネント: 'ストレージ', 選択: '4 TB NVMe + 12 TB HDD', コスト: '¥42,000–70,000' }, { コンポーネント: 'PSU', 選択: '2000W Platinum', コスト: '¥42,000–70,000' }, { コンポーネント: '冷却', 選択: 'カスタムループ/デュアルAIO', コスト: '¥49,000–105,000' }, { コンポーネント: 'ケース', 選択: 'フルタワーEATX', コスト: '¥21,000–35,000' }, { コンポーネント: '合計', 選択: '—', コスト: '¥561,000–803,000' }] },
-                    { type: 'list', h2: 'デュアルGPU構成オプション', items: ['<strong>サイドバイサイド (PCIe) :</strong> 各GPUは独立したモデルインスタンスを実行。複数の小規模モデルを同時に提供するのに最適。', '<strong>NVLink ブリッジ :</strong> 48GB VRAMを単一のアドレス可能なプールに統合。24GBを超えるモデルに必須。', '<strong>テンソル並列化 :</strong> vLLMまたはllama.cpp経由のソフトウェアレベルのモデルシャーディング。バッチ推論の高いスループット。'] },
-                    { type: 'list', h2: 'RTX 5090 vs RTX 4090 : 価値分析', items: ['<strong>デュアルRTX 4090 :</strong> 48GB VRAM、¥392,000、100+ tok/s (Q4 70B) — 最高の価値。', '<strong>シングルRTX 5090 :</strong> 32GB VRAM、¥280,000、40–50 tok/s — よりシンプル、VRAMが少ない。', '<strong>デュアルRTX 5090 :</strong> 64GB VRAM、¥670,000、120+ tok/s — ほとんどのワークロードに過剰。', '→ 推奨: プロフェッショナルワークロード用デュアルRTX 4090。'] },
-                    { type: 'list', h2: '冷却ソリューション：1,200W の熱', items: ['<strong>🌊 カスタムループ (¥168,000–264,000) :</strong> 最高パフォーマンス、最小ノイズ (40 dB)、最大熱容量。6–8時間の組立が必要。', '<strong>❄️ デュアル360mm AIO (¥84,000–126,000) :</strong> 最高のバランス。GPU あたり1つのAIOと CPU クーラー。モジュール式、カスタムループより簡単。', '<strong>💨 ハイエンド空気冷却 :</strong> 予算オプション、より大きな音 (60+ dB)、オフィス環境には不適切。'] },
-                    { type: 'list', h2: '電源 & 電気要件', items: ['<strong>シングル2000W プラチナ:</strong> より清潔なケーブルルーティング。Corsair AX2000またはSeasonic Prime TX-2000推奨。', '<strong>デュアル1200W (冗長) :</strong> 24/7稼働用のホットスワップ冗長性。デュアルPSUアダプターブラケットが必要。', '<strong>回路要件 :</strong> 最小20A専用回路 (30A強く推奨)。 ~1,600–1,800Wの継続的な消費。', '<strong>重要 :</strong> 他の高消費電力デバイスと決して共有しないこと。'] },
-                    { type: 'list', h2: 'CPU: なぜThreadripper 7970X?', items: ['<strong>32コア :</strong> GPU が推論をサーブする間、並列微調整が可能。', '<strong>88 PCIe 5.0レーン :</strong> 両GPUが完全x16帯域幅で実行 — ボトルネックなし。', '<strong>クアッドチャネルDDR5 :</strong> GPU へのデータフィードを最大レートで。', '<strong>ECC サポート :</strong> 無人24/7推論安定性に重要。'] },
-                    { type: 'list', h2: '推論パフォーマンス ベンチマーク', items: ['<strong>14 tok/s ユーザーあたり :</strong> テンソル並列化により70Bモデル上の同時ユーザーあたりの継続スループット。', '<strong>2–3 同時70Bユーザー :</strong> 快適な生成速度で、同時に実行。', '<strong>8+ 同時7Bユーザー :</strong> チームにサービスを提供する内部APIエンドポイントに最適。', '<strong>48GB合計VRAM :</strong> 量子化の妥協なく完全Q8 70Bを実行。'] },
-                    { type: 'numbered', h2: '回避すべき4つの一般的なビルドエラー', items: ['<strong>電源回路が小さすぎる :</strong> 共有15A回路で1,800W実行でブレーカーが落ちる。電源投入前に30A回路を専用にする。', '<strong>PCIeスロット間隔を無視 :</strong> 隣接したスロット内の2つのRTX 4090sはエアフローをブロック。ライザーケーブルを使用するか離す。', '<strong>ECC RAMをスキップ :</strong> 非ECC RAMはトレーニング実行を暗黙的に破壊。128GB DDR5 ECC は必須。', '<strong>誤って構成されたテンソル並列化 :</strong> 正しいvLLMフラグなしで、モデルはシングルGPUにデフォルト。 <code>nvidia-smi</code> で検証。'] },
-                    { type: 'faq', h2: 'FAQ & トラブルシューティング', faqs: [{ q: '1つのGPUで開始し、後で別のGPUを追加できますか?', a: 'はい — ただし今すぐTRX50マザーボードを購入してください。後での更新はより高額です。' }, { q: '128GB RAMは本当に必要ですか?', a: '推論のみ: 64GBで十分。微調整70B同時推論: 128GB必要。' }, { q: 'どのソフトウェアスタック?', a: 'マルチユーザー推論ではvLLM。 素早いテストではOllama。CPUハイブリッドではllama.cpp。' }] },
-                    { type: 'title', h1: '構築の準備はできていますか?', subtitle: '電気回路の検査から開始', p: 'これは最も見落とされやすく、ビルドを遅延させる可能性が高いステップです。' }
-                ]
-            },
-            zh: {
-                title: '本地LLM工作站构建2026',
-                slides: [
-                    { type: 'title', h1: '本地LLM工作站构建2026', subtitle: '双RTX 4090 · Threadripper 7970X · 48GB显存 · $4,000–6,000', p: '专业工作站构建完整指南，可在本地运行70B模型，同时服务2–3个用户，消除云API成本。' },
-                    { type: 'list', h2: '这个构建适合谁?', items: ['<strong>中小企业 & 企业 :</strong> 5人以上的团队运行内部LLM API，无需云依赖。', '<strong>AI研究人员 :</strong> 微调大型模型同时为协作者提供推理服务。', '<strong>MLOps工程师 :</strong> 构建内部推理集群，无需重复的云成本。', '<strong>内容工作室 :</strong> 24/7推理工作负载用于生成内容管道。'] },
-                    { type: 'table', h2: '完整零件清单 & 成本明细', columns: ['组件', '选择', '成本'], rows: [{ 组件: 'GPU (×2)', 选择: 'RTX 4090 24 GB', 成本: '$3,200–3,800' }, { 组件: 'CPU', 选择: 'Threadripper 7970X', 成本: '$2,000–2,500' }, { 组件: '主板', 选择: 'TRX50 WS Pro', 成本: '$600–800' }, { 组件: 'RAM', 选择: '128 GB DDR5 ECC', 成本: '$400–600' }, { 组件: '存储', 选择: '4 TB NVMe + 12 TB HDD', 成本: '$350–500' }, { 组件: '电源', 选择: '2000W Platinum', 成本: '$300–500' }, { 组件: '散热', 选择: '自定义液冷/双AIO', 成本: '$400–800' }, { 组件: '机箱', 选择: '全塔式EATX', 成本: '$150–250' }, { 组件: '总计', 选择: '—', 成本: '$4,000–6,000' }] },
-                    { type: 'list', h2: '双GPU配置选项', items: ['<strong>并排 (PCIe) :</strong> 每个GPU独立运行模型实例。最适合同时服务多个小模型。', '<strong>NVLink 桥接 :</strong> 将48GB显存统一为单个可寻址池。对于超过24GB的模型必不可少。', '<strong>张量并行化 :</strong> 通过vLLM或llama.cpp进行软件级模型分片。批处理推理的高吞吐量。'] },
-                    { type: 'list', h2: 'RTX 5090 vs RTX 4090: 价值分析', items: ['<strong>双RTX 4090 :</strong> 48GB显存，$3,400，100+ tok/s (Q4 70B) — 最佳价值。', '<strong>单RTX 5090 :</strong> 32GB显存，$2,500，40–50 tok/s — 更简单，显存少。', '<strong>双RTX 5090 :</strong> 64GB显存，$5,000，120+ tok/s — 对大多数工作负载过度配置。', '→ 推荐: 专业工作负载用双RTX 4090。'] },
-                    { type: 'list', h2: '散热方案：1,200W热耗散', items: ['<strong>🌊 自定义液循环 ($1,500–2,500) :</strong> 最佳性能，最低噪音 (40 dB)，最大散热能力。需6–8小时装配。', '<strong>❄️ 双360mm AIO ($600–900) :</strong> 最佳平衡。每个GPU一个AIO加CPU散热器。模块化，比自定义液循环简单。', '<strong>💨 高端风冷 :</strong> 预算选项，更嘈杂 (60+ dB)，不适合办公环境。'] },
-                    { type: 'list', h2: '电源 & 电气要求', items: ['<strong>单2000W铂金 :</strong> 更清洁的布线。推荐Corsair AX2000或Seasonic Prime TX-2000。', '<strong>双1200W (冗余) :</strong> 24/7运行的热交换冗余。需双PSU适配器。', '<strong>电路要求 :</strong> 最少20A专用电路 (强烈推荐30A)。 ~1,600–1,800W持续消耗。', '<strong>重要 :</strong> 永远不要与其他高功耗设备共享。'] },
-                    { type: 'list', h2: 'CPU: 为什么是Threadripper 7970X?', items: ['<strong>32核心 :</strong> 在GPU服务推理的同时启用并行微调。', '<strong>88条PCIe 5.0通道 :</strong> 两个GPU都以完整x16带宽运行 — 无瓶颈。', '<strong>四通道DDR5 :</strong> 向GPU提供最大数据速率。', '<strong>ECC支持 :</strong> 对于无人值守24/7推理稳定性至关重要。'] },
-                    { type: 'list', h2: '推理性能基准', items: ['<strong>每个用户14 tok/s :</strong> 通过张量并行化在70B模型上每个并发用户的持续吞吐量。', '<strong>2–3个并发70B用户 :</strong> 在舒适的生成速度下同时运行。', '<strong>8+个并发7B用户 :</strong> 理想用于为团队服务的内部API端点。', '<strong>总计48GB显存 :</strong> 运行完整Q8 70B，无需量化妥协。'] },
-                    { type: 'numbered', h2: '要避免的4个常见构建错误', items: ['<strong>电源电路过小 :</strong> 在共享15A电路上运行1,800W会跳闸。在通电前专用30A电路。', '<strong>忽视PCIe插槽间距 :</strong> 相邻插槽中的两个RTX 4090会阻挡气流。使用延长线或隔开。', '<strong>跳过ECC RAM :</strong> 非ECC静默破坏训练运行。128GB DDR5 ECC不可协商。', '<strong>张量并行化配置错误 :</strong> 没有正确的vLLM标志，模型默认为单GPU。用<code>nvidia-smi</code>验证。'] },
-                    { type: 'faq', h2: 'FAQ & 故障排除', faqs: [{ q: '我可以从一个GPU开始，稍后添加另一个吗?', a: '可以 — 但现在购买TRX50主板。稍后升级更昂贵。' }, { q: '128GB RAM真的是必需的吗?', a: '仅推理: 64GB足够。微调70B同时推理: 需要128GB。' }, { q: '应该使用什么软件栈?', a: '多用户推理用vLLM。快速测试用Ollama。CPU混合用llama.cpp。' }] },
-                    { type: 'title', h1: '准备好构建了吗?', subtitle: '从电气电路检查开始', p: '这是最容易被忽视的步骤，也是最可能延迟构建的步骤。' }
-                ]
-            }
-        };
+  en: {
+    title: "Local LLM PC Build 2026: Workstation, GPU, RAM, PSU, Cost",
+    ui: {
+      prev: "← Prev",
+      next: "Next →",
+      back: "← Back to Article",
+      short: "← Article",
+      cta: "Read the full guide",
+      ctaBody: "Sources, prices with dates and every caveat are in the article."
+    },
+    slides: [
+      {
+        type: "title",
+        h1: "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
+        subtitle: "A local LLM workstation for 70B models needs about 48 GB of GPU memory: Llama 3.3 70B is 43 GB at Q4, so one 24 GB card cannot hold it and two can. In InsiderLLM tracker listings dated 2026-10-15, two used RTX 3090 cards cost about $2,800–3,100.",
+        link: "https://www.promptquorum.com/local-llms/local-llm-workstation-build"
+      },
+      {
+        type: "list",
+        h2: "TLDR",
+        items: [
+          "VRAM target: Llama 3.3 70B at Q4 is a 43 GB download, so plan for 48 GB of GPU memory (two 24 GB cards) and expect about 5 GB left for context.",
+          "GPUs: two used RTX 3090 (about $1,400–1,550 each) are the lowest-priced 48 GB route in the tracked data; two used RTX 4090 cost about $2,575–3,010 each; two new RTX 5090 (about $4,500–4,700 each) give 64 GB.",
+          "NVLink: NVIDIA lists no NVLink on the RTX 4090 and RTX 5090; the RTX 3090 supports a bridge. llama.cpp, Ollama and vLLM split a model across GPUs over PCIe without it."
+        ]
+      },
+      {
+        type: "list",
+        h2: "TLDR",
+        items: [
+          "CPU: a Threadripper 9960X ($1,499 launch price) or 9970X ($2,499) on TRX50 offers up to 80 PCIe 5.0 lanes; a Ryzen desktop board with two x8 slots also runs two GPUs.",
+          "RAM: 64 GB is enough when the model sits in VRAM. Hardware Busters reported DDR5 prices up about 500% in the 12 months to August 2026 and one 128 GB kit listed at $3,399, so buy 64 GB first.",
+          "Power: GPU ratings alone are 700 W (2× RTX 3090), 900 W (2× RTX 4090) or 1,150 W (2× RTX 5090), plus 350 W for a Threadripper. Size the PSU at about 1.2× the sum and check your circuit."
+        ]
+      },
+      {
+        type: "list",
+        h2: "TLDR",
+        items: [
+          "Speed: PromptQuorum has not measured 70B on a dual-GPU build. Developer-reported single-card llama.cpp 7B results are 158.2 (RTX 3090), 186.2 (RTX 4090) and 290.0 tok/s (RTX 5090).",
+          "Alternatives: Mac Studio M5 Max (from $2,499, up to 128 GB) or M5 Ultra (from $5,499, up to 512 GB) and mini workstations such as Strix Halo and DGX Spark give large memory in one box."
+        ]
+      },
+      {
+        type: "table",
+        h2: "A 70B Model Needs About 48 GB of GPU Memory",
+        intro: "Build a multi-GPU workstation when a model you rely on does not fit in 24–32 GB of VRAM; the context cache needs memory on top of the model file.",
+        columns: [
+          "Model (Q4-class)",
+          "Download size",
+          "Fits on"
+        ],
+        rows: [
+          {
+            "Model (Q4-class)": "gpt-oss:20b",
+            "Download size": "14 GB",
+            "Fits on": "One 16 GB or larger GPU"
+          },
+          {
+            "Model (Q4-class)": "32B-class model",
+            "Download size": "About 20 GB",
+            "Fits on": "One 24 GB GPU"
+          },
+          {
+            "Model (Q4-class)": "llama3.3:70b",
+            "Download size": "43 GB",
+            "Fits on": "Two 24 GB GPUs (48 GB)"
+          },
+          {
+            "Model (Q4-class)": "gpt-oss:120b",
+            "Download size": "65 GB",
+            "Fits on": "80 GB or more; not 64 GB"
+          }
+        ]
+      },
+      {
+        type: "table",
+        h2: "Dual-GPU Parts List With Sourced Prices",
+        intro: "GPUs and CPU alone start near $4,300: two used RTX 3090 ($2,800–3,100) plus a Threadripper 9960X ($1,499 at AMD's launch price), before motherboard, memory, PSU, cooling, storage and case.",
+        columns: [
+          "Component",
+          "Pick",
+          "Price",
+          "Why"
+        ],
+        rows: [
+          {
+            Component: "GPUs",
+            Pick: "2× used RTX 3090 24 GB",
+            Price: "$2,800–3,100",
+            Why: "48 GB pool; NVLink bridge supported"
+          },
+          {
+            Component: "GPUs (alternative)",
+            Pick: "2× used RTX 4090 24 GB",
+            Price: "$5,150–6,020",
+            Why: "Faster prompt processing; no NVLink"
+          },
+          {
+            Component: "CPU",
+            Pick: "Threadripper 9960X, 24 cores",
+            Price: "$1,499 launch",
+            Why: "350 W TDP; TRX50 platform"
+          },
+          {
+            Component: "CPU (alternative)",
+            Pick: "Threadripper 9970X, 32 cores",
+            Price: "$2,499 launch",
+            Why: "More cores for CPU-side work"
+          },
+          {
+            Component: "Motherboard",
+            Pick: "TRX50 (sTR5) board",
+            Price: "Not tracked",
+            Why: "Two x16 slots with room for 3-slot cards"
+          },
+          {
+            Component: "RAM",
+            Pick: "64 GB registered DDR5",
+            Price: "Not tracked",
+            Why: "See memory price note below"
+          },
+          {
+            Component: "PSU",
+            Pick: "1,300–1,600 W, enough GPU cables",
+            Price: "Not tracked",
+            Why: "About 1.2× summed component ratings"
+          },
+          {
+            Component: "Storage",
+            Pick: "2–4 TB NVMe SSD",
+            Price: "Not tracked",
+            Why: "A 70B Q4 file is 43 GB"
+          },
+          {
+            Component: "Case and cooling",
+            Pick: "Large airflow case",
+            Price: "Not tracked",
+            Why: "Two cards plus a 350 W CPU"
+          },
+          {
+            Component: "Floor (GPU + CPU)",
+            Pick: "Dual 3090 + 9960X",
+            Price: "$4,299–4,599",
+            Why: "Before the five untracked lines"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "Two GPUs Share One Model Over PCIe",
+        items: [
+          "<strong>Seat two identical cards:</strong> use slots that run at least x8 each and leave airflow between the cards. Check the lane diagram in the motherboard manual, not just the slot count.",
+          "<strong>Install the NVIDIA driver and confirm both cards:</strong> run <code>nvidia-smi</code> and check that both GPUs and their full memory appear.",
+          "<strong>Start with layer splitting:</strong> Ollama spreads a model across available GPUs automatically; llama.cpp takes <code>--tensor-split 1,1</code> for an even split.",
+          "<strong>Use vLLM for multi-user serving:</strong> <code>--tensor-parallel-size 2</code> shards the weights across both cards; use a 4-bit checkpoint such as an AWQ build so the weights fit in 48 GB.",
+          "<strong>Measure before you trust a number:</strong> run your own prompts, record tokens per second, memory use and temperatures over a long run.",
+          "<strong>Cap power if needed:</strong> <code>nvidia-smi -pl &lt;watts&gt;</code> lowers the board power limit; test the speed effect on your workload before keeping a value."
+        ]
+      },
+      {
+        type: "table",
+        h2: "RTX 3090, 4090, 5090 and RTX PRO 6000 Compared",
+        intro: "For 48 GB, used RTX 3090 cards are the lowest-priced pair in the tracked data; two RTX 5090 reach 64 GB at roughly three times that price, and one RTX PRO 6000 reaches 96 GB on a single card.",
+        columns: [
+          "Setup",
+          "VRAM",
+          "GPU price",
+          "Rated power",
+          "NVLink"
+        ],
+        rows: [
+          {
+            Setup: "2× RTX 3090 (used)",
+            VRAM: "48 GB",
+            "GPU price": "$2,800–3,100",
+            "Rated power": "700 W",
+            NVLink: "Bridge supported"
+          },
+          {
+            Setup: "2× RTX 4090 (used)",
+            VRAM: "48 GB",
+            "GPU price": "$5,150–6,020",
+            "Rated power": "900 W",
+            NVLink: "No"
+          },
+          {
+            Setup: "1× RTX 5090 (new)",
+            VRAM: "32 GB",
+            "GPU price": "$4,500–4,700",
+            "Rated power": "575 W",
+            NVLink: "No"
+          },
+          {
+            Setup: "2× RTX 5090 (new)",
+            VRAM: "64 GB",
+            "GPU price": "$9,000–9,400",
+            "Rated power": "1,150 W",
+            NVLink: "No"
+          },
+          {
+            Setup: "1× RTX PRO 6000",
+            VRAM: "96 GB",
+            "GPU price": "About $16,000",
+            "Rated power": "600 W max",
+            NVLink: "Not applicable"
+          }
+        ]
+      },
+      {
+        type: "list",
+        h2: "Cooling Roughly 1.25 kW Depends on Airflow and Slot Spacing",
+        intro: "Heat output equals electrical draw: two 450 W cards plus a 350 W CPU are rated at 1,250 W before drives and fans, so airflow and slot spacing decide whether the cards throttle.",
+        items: [
+          "<strong>Slot spacing:</strong> NVIDIA lists the reference RTX 4090 as a 3-slot, 304 mm card. Choose a motherboard and case that leave a gap between the two cards, or the upper card breathes the lower card's exhaust.",
+          "<strong>Case airflow:</strong> front intake, rear and top exhaust, and filters you can clean. A case built for two large cards matters more than a fancy radiator.",
+          "<strong>Power limits:</strong> lowering the power limit with <code>nvidia-smi -pl</code> reduces heat and peak draw. Test the speed cost on your workload before settling on a value."
+        ]
+      },
+      {
+        type: "list",
+        h2: "PSU and Circuit Sizing From Rated Power",
+        intro: "Add the rated power of every GPU and the CPU, then size the PSU at about 1.2× that sum: roughly 1,260 W for two RTX 3090 and a 9960X, 1,500 W for two RTX 4090, 1,800 W for two RTX 5090.",
+        items: [
+          "<strong>Rated draws:</strong> NVIDIA lists 350 W for the RTX 3090, 450 W for the RTX 4090 and 575 W for the RTX 5090. AMD rates the Threadripper 9000 series at 350 W.",
+          "<strong>Single-card requirements do not add up:</strong> NVIDIA's 850 W system requirement for the RTX 4090 is for a system with one card. Size a two-card build from the sum above.",
+          "<strong>Connectors:</strong> count the PCIe 8-pin or 12V-2x6 cables the PSU provides and follow the card maker's guidance for adapters.",
+          "<strong>Circuit:</strong> a US 120 V / 15 A circuit is rated 1,800 W, and electrical practice commonly limits continuous loads to 80% of that, 1,440 W. A 230 V / 16 A circuit is rated 3,680 W. Have a licensed electrician check the circuit before running a two-GPU machine at full load.",
+          "This page is general information, not electrical advice. Ratings and local codes differ; have a qualified electrician check circuits and wiring."
+        ]
+      },
+      {
+        type: "table",
+        h2: "What Is Measured, What Is Not, and How Many Users Fit",
+        intro: "PromptQuorum has not measured 70B on a dual-GPU build, so this page publishes no tokens-per-second figure for it; below are developer-reported single-card results and arithmetic from file sizes.",
+        columns: [
+          "Setup",
+          "Pool",
+          "Left after 43 GB model"
+        ],
+        rows: [
+          {
+            Setup: "2× 24 GB (48 GB)",
+            Pool: "48 GB",
+            "Left after 43 GB model": "About 5 GB"
+          },
+          {
+            Setup: "1× 32 GB",
+            Pool: "32 GB",
+            "Left after 43 GB model": "Does not fit"
+          },
+          {
+            Setup: "2× 32 GB (64 GB)",
+            Pool: "64 GB",
+            "Left after 43 GB model": "About 21 GB"
+          },
+          {
+            Setup: "1× 96 GB",
+            Pool: "96 GB",
+            "Left after 43 GB model": "About 53 GB"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "Common Workstation Build Mistakes",
+        items: [
+          "<strong>Assuming NVLink on RTX 4090 or RTX 5090.</strong> NVIDIA lists no NVLink on either card. Plan for PCIe splitting.",
+          "<strong>Mixing GPU models.</strong> vLLM tensor parallelism shards weights evenly, so the card with less memory limits the pair. Buy identical cards.",
+          "<strong>Buying 128 GB of DDR5 first.</strong> A model that sits in VRAM does not need it, and DDR5 prices were rising in 2026. Start at 64 GB.",
+          "<strong>Sizing the PSU from one card.</strong> NVIDIA's 850 W figure for the RTX 4090 is for one card. Add both cards and the CPU, then add headroom.",
+          "<strong>Leaving electricity out of the cost.</strong> 900 W running continuously is 7,884 kWh a year: about $1,180 at an example rate of $0.15/kWh and about $2,760 at $0.35/kWh. Real draw during inference is usually below rated power and a workstation rarely runs 24/7, so treat this as an upper bound."
+        ]
+      },
+      {
+        type: "faq",
+        h2: "Frequently Asked Questions",
+        faqs: [
+          {
+            q: "Should I use NVLink to join two GPUs?",
+            a: "You cannot on the RTX 4090 or RTX 5090: NVIDIA lists no NVLink on either. The RTX 3090 supports a bridge, but llama.cpp, Ollama and vLLM split a model over PCIe without one, and the gain from NVLink depends on the engine and batch size."
+          },
+          {
+            q: "Can one RTX 5090 run a 70B model?",
+            a: "Not entirely in VRAM. The RTX 5090 has 32 GB and the Llama 3.3 70B Q4 file is 43 GB, so about 11 GB or more runs from system RAM, which is much slower. A 32B-class model at Q4 (about 20 GB) fits on one card."
+          },
+          {
+            q: "How much does a local LLM workstation cost in 2026?",
+            a: "GPUs and CPU alone start near $4,300: two used RTX 3090 at $2,800–3,100 combined (tracker listings of 2026-10-15) plus a Threadripper 9960X at $1,499 (AMD launch price). Two used RTX 4090 raise the GPU line to about $5,150–6,020. Motherboard, registered DDR5, PSU, cooling, storage and case come on top, and memory prices in particular were rising in 2026, so price the full list at current listings."
+          }
+        ]
+      },
+      {
+        type: "cta",
+        h2: "Read the full guide",
+        body: "Sources, prices with dates and every caveat are in the article.",
+        cta: "Local LLM PC Build 2026: Workstation, GPU, RAM, PSU, Cost",
+        href: "https://www.promptquorum.com/local-llms/local-llm-workstation-build"
+      }
+    ]
+  },
+  de: {
+    title: "LLM-PC bauen 2026: Workstation mit GPU, RAM, Netzteil",
+    ui: {
+      prev: "← Zurück",
+      next: "Weiter →",
+      back: "← Zurück zum Artikel",
+      short: "← Artikel",
+      cta: "Vollständigen Leitfaden lesen",
+      ctaBody: "Quellen, Preise mit Datum und alle Einschränkungen stehen im Artikel."
+    },
+    slides: [
+      {
+        type: "title",
+        h1: "PC für lokale LLM bauen (2026): GPUs, RAM, Netzteil und Kosten für 70B-Modelle",
+        subtitle: "Eine lokale LLM-Workstation für 70B-Modelle braucht rund 48 GB GPU-Speicher: Llama 3.3 70B ist bei Q4 43 GB groß, eine 24-GB-Karte nimmt es nicht auf, zwei Karten schon. In Tracker-Angeboten von InsiderLLM vom 2026-10-15 kosten zwei gebrauchte RTX 3090 etwa $2,800–3,100.",
+        link: "https://www.promptquorum.com/de/local-llms/local-llm-workstation-build"
+      },
+      {
+        type: "list",
+        h2: "Zusammenfassung",
+        items: [
+          "VRAM-Ziel: Llama 3.3 70B bei Q4 ist ein Download von 43 GB. Planen Sie daher 48 GB GPU-Speicher ein (zwei 24-GB-Karten) und rechnen Sie mit etwa 5 GB Rest für den Kontext.",
+          "GPUs: Zwei gebrauchte RTX 3090 (je etwa $1,400–1,550) sind in den erfassten Daten der günstigste Weg zu 48 GB; zwei gebrauchte RTX 4090 kosten je etwa $2,575–3,010; zwei neue RTX 5090 (je etwa $4,500–4,700) bieten 64 GB.",
+          "NVLink: NVIDIA führt bei der RTX 4090 und der RTX 5090 kein NVLink auf; die RTX 3090 unterstützt eine Brücke. llama.cpp, Ollama und vLLM verteilen ein Modell auch ohne NVLink über PCIe auf mehrere GPUs."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Zusammenfassung",
+        items: [
+          "CPU: Ein Threadripper 9960X ($1,499 Einführungspreis) oder 9970X ($2,499) auf TRX50 bietet bis zu 80 PCIe-5.0-Lanes; auch ein Ryzen-Desktopboard mit zwei x8-Slots betreibt zwei GPUs.",
+          "RAM: 64 GB genügen, wenn das Modell im VRAM liegt. Hardware Busters meldete, die DDR5-Preise seien in den 12 Monaten bis August 2026 um etwa 500 % gestiegen und ein 128-GB-Kit sei mit $3,399 gelistet gewesen; kaufen Sie daher zuerst 64 GB.",
+          "Leistung: Allein die GPU-Nennleistungen betragen 700 W (2× RTX 3090), 900 W (2× RTX 4090) oder 1.150 W (2× RTX 5090), dazu 350 W für einen Threadripper. Dimensionieren Sie das Netzteil auf etwa das 1,2-Fache der Summe und prüfen Sie Ihren Stromkreis."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Zusammenfassung",
+        items: [
+          "Geschwindigkeit: PromptQuorum hat 70B auf einem Dual-GPU-Aufbau nicht gemessen. Von Entwicklern gemeldete llama.cpp-Ergebnisse für 7B auf einer einzelnen Karte sind 158,2 (RTX 3090), 186,2 (RTX 4090) und 290,0 tok/s (RTX 5090).",
+          "Alternativen: Mac Studio M5 Max (ab $2,499, bis zu 128 GB) oder M5 Ultra (ab $5,499, bis zu 512 GB) sowie Mini-Workstations wie Strix Halo und DGX Spark bieten viel Speicher in einem Gehäuse."
+        ]
+      },
+      {
+        type: "table",
+        h2: "Ein 70B-Modell braucht etwa 48 GB GPU-Speicher",
+        intro: "Bauen Sie eine Multi-GPU-Workstation, wenn ein Modell, auf das Sie sich verlassen, nicht in 24–32 GB VRAM passt; der Kontext-Cache braucht zusätzlich zur Modelldatei Speicher.",
+        columns: [
+          "Modell (Q4-Klasse)",
+          "Download-Größe",
+          "Passt auf"
+        ],
+        rows: [
+          {
+            "Modell (Q4-Klasse)": "gpt-oss:20b",
+            "Download-Größe": "14 GB",
+            "Passt auf": "Eine GPU mit 16 GB oder mehr"
+          },
+          {
+            "Modell (Q4-Klasse)": "Modell der 32B-Klasse",
+            "Download-Größe": "Etwa 20 GB",
+            "Passt auf": "Eine GPU mit 24 GB"
+          },
+          {
+            "Modell (Q4-Klasse)": "llama3.3:70b",
+            "Download-Größe": "43 GB",
+            "Passt auf": "Zwei GPUs mit 24 GB (48 GB)"
+          },
+          {
+            "Modell (Q4-Klasse)": "gpt-oss:120b",
+            "Download-Größe": "65 GB",
+            "Passt auf": "80 GB oder mehr; nicht 64 GB"
+          }
+        ]
+      },
+      {
+        type: "table",
+        h2: "Teileliste für zwei GPUs mit belegten Preisen",
+        intro: "GPUs und CPU allein beginnen bei etwa $4,300: zwei gebrauchte RTX 3090 ($2,800–3,100) plus ein Threadripper 9960X ($1,499 zum Einführungspreis von AMD), noch ohne Mainboard, Speicher, Netzteil, Kühlung, Datenspeicher und Gehäuse.",
+        columns: [
+          "Komponente",
+          "Auswahl",
+          "Preis",
+          "Begründung"
+        ],
+        rows: [
+          {
+            Komponente: "GPUs",
+            Auswahl: "2× RTX 3090 24 GB (gebraucht)",
+            Preis: "$2,800–3,100",
+            "Begründung": "48-GB-Pool; NVLink-Brücke unterstützt"
+          },
+          {
+            Komponente: "GPUs (Alternative)",
+            Auswahl: "2× RTX 4090 24 GB (gebraucht)",
+            Preis: "$5,150–6,020",
+            "Begründung": "Schnellere Prompt-Verarbeitung; kein NVLink"
+          },
+          {
+            Komponente: "CPU",
+            Auswahl: "Threadripper 9960X, 24 Kerne",
+            Preis: "$1,499 Einführungspreis",
+            "Begründung": "350 W TDP; TRX50-Plattform"
+          },
+          {
+            Komponente: "CPU (Alternative)",
+            Auswahl: "Threadripper 9970X, 32 Kerne",
+            Preis: "$2,499 Einführungspreis",
+            "Begründung": "Mehr Kerne für CPU-seitige Aufgaben"
+          },
+          {
+            Komponente: "Mainboard",
+            Auswahl: "TRX50-Board (sTR5)",
+            Preis: "Nicht erfasst",
+            "Begründung": "Zwei x16-Slots mit Platz für 3-Slot-Karten"
+          },
+          {
+            Komponente: "RAM",
+            Auswahl: "64 GB registrierter DDR5",
+            Preis: "Nicht erfasst",
+            "Begründung": "Siehe Hinweis zu den Speicherpreisen unten"
+          },
+          {
+            Komponente: "Netzteil",
+            Auswahl: "1.300–1.600 W, genügend GPU-Kabel",
+            Preis: "Nicht erfasst",
+            "Begründung": "Etwa das 1,2-Fache der summierten Nennleistungen"
+          },
+          {
+            Komponente: "Datenspeicher",
+            Auswahl: "NVMe-SSD mit 2–4 TB",
+            Preis: "Nicht erfasst",
+            "Begründung": "Eine 70B-Q4-Datei ist 43 GB groß"
+          },
+          {
+            Komponente: "Gehäuse und Kühlung",
+            Auswahl: "Großes Gehäuse mit gutem Luftstrom",
+            Preis: "Nicht erfasst",
+            "Begründung": "Zwei Karten plus eine CPU mit 350 W"
+          },
+          {
+            Komponente: "Untergrenze (GPU + CPU)",
+            Auswahl: "Dual 3090 + 9960X",
+            Preis: "$4,299–4,599",
+            "Begründung": "Vor den fünf nicht erfassten Positionen"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "Zwei GPUs teilen sich ein Modell über PCIe",
+        items: [
+          "<strong>Zwei identische Karten einsetzen:</strong> Verwenden Sie Slots, die jeweils mit mindestens x8 laufen, und lassen Sie Luft zwischen den Karten. Prüfen Sie das Lane-Diagramm im Mainboard-Handbuch, nicht nur die Zahl der Slots.",
+          "<strong>NVIDIA-Treiber installieren und beide Karten bestätigen:</strong> Führen Sie <code>nvidia-smi</code> aus und prüfen Sie, ob beide GPUs mit ihrem vollen Speicher erscheinen.",
+          "<strong>Mit Layer-Splitting beginnen:</strong> Ollama verteilt ein Modell automatisch auf die verfügbaren GPUs; llama.cpp nimmt <code>--tensor-split 1,1</code> für eine gleichmäßige Aufteilung.",
+          "<strong>vLLM für Mehrbenutzerbetrieb nutzen:</strong> <code>--tensor-parallel-size 2</code> verteilt die Gewichte auf beide Karten; verwenden Sie einen 4-Bit-Checkpoint, etwa eine AWQ-Version, damit die Gewichte in 48 GB passen.",
+          "<strong>Messen, bevor Sie einer Zahl trauen:</strong> Lassen Sie eigene Prompts laufen und erfassen Sie Token pro Sekunde, Speicherbelegung und Temperaturen über einen langen Lauf.",
+          "<strong>Leistung bei Bedarf begrenzen:</strong> <code>nvidia-smi -pl &lt;watts&gt;</code> senkt das Leistungslimit der Karte; testen Sie die Auswirkung auf die Geschwindigkeit bei Ihrer Last, bevor Sie einen Wert beibehalten."
+        ]
+      },
+      {
+        type: "table",
+        h2: "RTX 3090, 4090, 5090 und RTX PRO 6000 im Vergleich",
+        intro: "Für 48 GB sind gebrauchte RTX 3090 in den erfassten Daten das günstigste Paar; zwei RTX 5090 erreichen 64 GB zum etwa Dreifachen dieses Preises, und eine RTX PRO 6000 erreicht 96 GB auf einer einzelnen Karte.",
+        columns: [
+          "Aufbau",
+          "VRAM",
+          "GPU-Preis",
+          "Nennleistung",
+          "NVLink"
+        ],
+        rows: [
+          {
+            Aufbau: "2× RTX 3090 (gebraucht)",
+            VRAM: "48 GB",
+            "GPU-Preis": "$2,800–3,100",
+            Nennleistung: "700 W",
+            NVLink: "Brücke unterstützt"
+          },
+          {
+            Aufbau: "2× RTX 4090 (gebraucht)",
+            VRAM: "48 GB",
+            "GPU-Preis": "$5,150–6,020",
+            Nennleistung: "900 W",
+            NVLink: "Nein"
+          },
+          {
+            Aufbau: "1× RTX 5090 (neu)",
+            VRAM: "32 GB",
+            "GPU-Preis": "$4,500–4,700",
+            Nennleistung: "575 W",
+            NVLink: "Nein"
+          },
+          {
+            Aufbau: "2× RTX 5090 (neu)",
+            VRAM: "64 GB",
+            "GPU-Preis": "$9,000–9,400",
+            Nennleistung: "1.150 W",
+            NVLink: "Nein"
+          },
+          {
+            Aufbau: "1× RTX PRO 6000",
+            VRAM: "96 GB",
+            "GPU-Preis": "Etwa $16,000",
+            Nennleistung: "Max. 600 W",
+            NVLink: "Nicht zutreffend"
+          }
+        ]
+      },
+      {
+        type: "list",
+        h2: "Die Kühlung von rund 1,25 kW hängt von Luftstrom und Slot-Abstand ab",
+        intro: "Die Abwärme entspricht der elektrischen Leistungsaufnahme: Zwei Karten mit 450 W plus eine CPU mit 350 W sind vor Laufwerken und Lüftern mit 1.250 W angegeben, sodass Luftstrom und Slot-Abstand darüber entscheiden, ob die Karten drosseln.",
+        items: [
+          "<strong>Slot-Abstand:</strong> NVIDIA führt die Referenz-RTX-4090 als 3-Slot-Karte mit 304 mm auf. Wählen Sie ein Mainboard und ein Gehäuse, die zwischen den beiden Karten einen Abstand lassen, sonst saugt die obere Karte die Abluft der unteren an.",
+          "<strong>Luftstrom im Gehäuse:</strong> Frontlüfter als Zuluft, Abluft hinten und oben sowie Filter, die sich reinigen lassen. Ein Gehäuse, das für zwei große Karten gebaut ist, zählt mehr als ein aufwendiger Radiator.",
+          "<strong>Leistungslimits:</strong> Ein niedrigeres Leistungslimit per <code>nvidia-smi -pl</code> senkt Wärme und Spitzenverbrauch. Testen Sie die Geschwindigkeitseinbuße bei Ihrer Last, bevor Sie sich auf einen Wert festlegen."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Netzteil und Stromkreis richten sich nach der Nennleistung",
+        intro: "Addieren Sie die Nennleistung aller GPUs und der CPU und dimensionieren Sie das Netzteil auf etwa das 1,2-Fache dieser Summe: grob 1.260 W für zwei RTX 3090 und einen 9960X, 1.500 W für zwei RTX 4090, 1.800 W für zwei RTX 5090.",
+        items: [
+          "<strong>Nennleistungen:</strong> NVIDIA gibt 350 W für die RTX 3090, 450 W für die RTX 4090 und 575 W für die RTX 5090 an. AMD gibt die Threadripper-9000-Serie mit 350 W an.",
+          "<strong>Anforderungen für eine einzelne Karte addieren sich nicht:</strong> Die Systemanforderung von 850 W, die NVIDIA für die RTX 4090 nennt, gilt für ein System mit einer Karte. Dimensionieren Sie einen Aufbau mit zwei Karten anhand der Summe von oben.",
+          "<strong>Anschlüsse:</strong> Zählen Sie die PCIe-8-Pin- oder 12V-2x6-Kabel, die das Netzteil bereitstellt, und folgen Sie den Hinweisen des Kartenherstellers zu Adaptern.",
+          "<strong>Stromkreis:</strong> Ein US-Stromkreis mit 120 V / 15 A ist für 1.800 W ausgelegt, und die elektrotechnische Praxis begrenzt Dauerlasten üblicherweise auf 80 % davon, also 1.440 W. Ein Stromkreis mit 230 V / 16 A ist für 3.680 W ausgelegt. Lassen Sie den Stromkreis von einer zugelassenen Elektrofachkraft prüfen, bevor Sie einen Rechner mit zwei GPUs unter Volllast betreiben.",
+          "Diese Seite enthält allgemeine Informationen und keine elektrotechnische Beratung. Nennwerte und örtliche Vorschriften unterscheiden sich; lassen Sie Stromkreise und Leitungen von einer qualifizierten Elektrofachkraft prüfen."
+        ]
+      },
+      {
+        type: "table",
+        h2: "Was gemessen ist, was nicht und wie viele Nutzer passen",
+        intro: "PromptQuorum hat 70B auf einem Dual-GPU-Aufbau nicht gemessen, daher nennt diese Seite dafür keinen Wert in Token pro Sekunde; unten stehen von Entwicklern gemeldete Ergebnisse für einzelne Karten und Rechenwerte aus Dateigrößen.",
+        columns: [
+          "Aufbau",
+          "Pool",
+          "Rest nach 43-GB-Modell"
+        ],
+        rows: [
+          {
+            Aufbau: "2× 24 GB (48 GB)",
+            Pool: "48 GB",
+            "Rest nach 43-GB-Modell": "Etwa 5 GB"
+          },
+          {
+            Aufbau: "1× 32 GB",
+            Pool: "32 GB",
+            "Rest nach 43-GB-Modell": "Passt nicht"
+          },
+          {
+            Aufbau: "2× 32 GB (64 GB)",
+            Pool: "64 GB",
+            "Rest nach 43-GB-Modell": "Etwa 21 GB"
+          },
+          {
+            Aufbau: "1× 96 GB",
+            Pool: "96 GB",
+            "Rest nach 43-GB-Modell": "Etwa 53 GB"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "Häufige Fehler beim Bau einer Workstation",
+        items: [
+          "<strong>NVLink bei RTX 4090 oder RTX 5090 voraussetzen.</strong> NVIDIA führt bei keiner der beiden Karten NVLink auf. Planen Sie die Aufteilung über PCIe ein.",
+          "<strong>GPU-Modelle mischen.</strong> Die Tensor-Parallelität von vLLM verteilt die Gewichte gleichmäßig, sodass die Karte mit weniger Speicher das Paar begrenzt. Kaufen Sie identische Karten.",
+          "<strong>Zuerst 128 GB DDR5 kaufen.</strong> Ein Modell, das im VRAM liegt, braucht sie nicht, und die DDR5-Preise stiegen 2026. Beginnen Sie mit 64 GB.",
+          "<strong>Das Netzteil nach einer Karte auslegen.</strong> Die 850 W, die NVIDIA für die RTX 4090 nennt, gelten für eine Karte. Addieren Sie beide Karten und die CPU und rechnen Sie dann Reserve dazu.",
+          "<strong>Den Strom bei den Kosten vergessen.</strong> 900 W im Dauerbetrieb sind 7.884 kWh pro Jahr: etwa $1,180 bei einem Beispielpreis von $0.15/kWh und etwa $2,760 bei $0.35/kWh. Die tatsächliche Leistungsaufnahme bei der Inferenz liegt meist unter der Nennleistung, und eine Workstation läuft selten rund um die Uhr; betrachten Sie dies daher als Obergrenze."
+        ]
+      },
+      {
+        type: "faq",
+        h2: "Häufig gestellte Fragen",
+        faqs: [
+          {
+            q: "Sollte ich NVLink nutzen, um zwei GPUs zu koppeln?",
+            a: "Bei der RTX 4090 und der RTX 5090 können Sie das nicht: NVIDIA führt bei keiner der beiden NVLink auf. Die RTX 3090 unterstützt eine Brücke, doch llama.cpp, Ollama und vLLM verteilen ein Modell auch ohne sie über PCIe, und der Gewinn durch NVLink hängt von Engine und Batch-Größe ab."
+          },
+          {
+            q: "Kann eine einzelne RTX 5090 ein 70B-Modell ausführen?",
+            a: "Nicht vollständig im VRAM. Die RTX 5090 hat 32 GB, und die Datei von Llama 3.3 70B Q4 ist 43 GB groß, sodass etwa 11 GB oder mehr aus dem Arbeitsspeicher laufen, was deutlich langsamer ist. Ein Modell der 32B-Klasse bei Q4 (etwa 20 GB) passt auf eine Karte."
+          },
+          {
+            q: "Was kostet ein PC für lokale LLM im Jahr 2026?",
+            a: "GPUs und CPU allein beginnen bei etwa $4,300: zwei gebrauchte RTX 3090 für zusammen $2,800–3,100 (Tracker-Angebote vom 2026-10-15) plus ein Threadripper 9960X für $1,499 (Einführungspreis von AMD). Zwei gebrauchte RTX 4090 heben den GPU-Posten auf etwa $5,150–6,020. Mainboard, registrierter DDR5, Netzteil, Kühlung, Datenspeicher und Gehäuse kommen hinzu, und besonders die Speicherpreise stiegen 2026; kalkulieren Sie die vollständige Liste daher mit aktuellen Angeboten."
+          }
+        ]
+      },
+      {
+        type: "cta",
+        h2: "Vollständigen Leitfaden lesen",
+        body: "Quellen, Preise mit Datum und alle Einschränkungen stehen im Artikel.",
+        cta: "LLM-PC bauen 2026: Workstation mit GPU, RAM, Netzteil",
+        href: "https://www.promptquorum.com/de/local-llms/local-llm-workstation-build"
+      }
+    ]
+  },
+  fr: {
+    title: "Station de travail LLM local 2026 : GPU, RAM, coût",
+    ui: {
+      prev: "← Précédent",
+      next: "Suivant →",
+      back: "← Retour à l'article",
+      short: "← Article",
+      cta: "Lire le guide complet",
+      ctaBody: "Les sources, les prix datés et toutes les réserves figurent dans l'article."
+    },
+    slides: [
+      {
+        type: "title",
+        h1: "Station de travail LLM local (2026) : GPU, RAM, alimentation et coûts pour modèles 70B",
+        subtitle: "Une station de travail LLM local pour modèles 70B demande environ 48 GB de mémoire GPU : Llama 3.3 70B pèse 43 GB en Q4, une carte de 24 GB ne suffit pas, deux oui. Selon le suivi d'InsiderLLM au 2026-10-15, deux RTX 3090 d'occasion coûtent environ $2,800–3,100.",
+        link: "https://www.promptquorum.com/fr/local-llms/local-llm-workstation-build"
+      },
+      {
+        type: "list",
+        h2: "Points clés",
+        items: [
+          "VRAM visée : Llama 3.3 70B en Q4 pèse 43 GB au téléchargement ; prévoyez 48 GB de mémoire GPU (deux cartes de 24 GB) et comptez sur environ 5 GB restants pour le contexte.",
+          "GPU : deux RTX 3090 d'occasion (environ $1,400–1,550 pièce) sont la voie à 48 GB la moins chère dans les données suivies ; deux RTX 4090 d'occasion coûtent environ $2,575–3,010 pièce ; deux RTX 5090 neuves (environ $4,500–4,700 pièce) donnent 64 GB.",
+          "NVLink : NVIDIA ne mentionne aucun NVLink sur la RTX 4090 ni sur la RTX 5090 ; la RTX 3090 accepte un pont. llama.cpp, Ollama et vLLM répartissent un modèle sur plusieurs GPU via PCIe, sans pont."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Points clés",
+        items: [
+          "Processeur : un Threadripper 9960X ($1,499 au lancement) ou 9970X ($2,499) sur TRX50 offre jusqu'à 80 lignes PCIe 5.0 ; une carte mère Ryzen grand public avec deux slots x8 fait aussi tourner deux GPU.",
+          "RAM : 64 GB suffisent quand le modèle tient en VRAM. Hardware Busters a rapporté une hausse d'environ 500 % des prix de la DDR5 sur les 12 mois jusqu'en août 2026 et un kit de 128 GB affiché à $3,399 ; achetez donc d'abord 64 GB.",
+          "Puissance : les seules puissances nominales des GPU font 700 W (2× RTX 3090), 900 W (2× RTX 4090) ou 1 150 W (2× RTX 5090), plus 350 W pour un Threadripper. Dimensionnez l'alimentation à environ 1.2× la somme et vérifiez votre circuit électrique."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Points clés",
+        items: [
+          "Vitesse : PromptQuorum n'a pas mesuré de modèle 70B sur une configuration double GPU. Les résultats llama.cpp 7B sur une seule carte, rapportés par des développeurs, sont de 158.2 (RTX 3090), 186.2 (RTX 4090) et 290.0 tok/s (RTX 5090).",
+          "Alternatives : le Mac Studio M5 Max (à partir de $2,499, jusqu'à 128 GB) ou M5 Ultra (à partir de $5,499, jusqu'à 512 GB) et des mini-stations comme Strix Halo et DGX Spark offrent beaucoup de mémoire dans un seul boîtier."
+        ]
+      },
+      {
+        type: "table",
+        h2: "Un modèle 70B demande environ 48 GB de mémoire GPU",
+        intro: "Montez une station multi-GPU quand un modèle dont vous dépendez ne tient pas dans 24–32 GB de VRAM ; le cache de contexte réclame de la mémoire en plus du fichier du modèle.",
+        columns: [
+          "Modèle (classe Q4)",
+          "Taille du téléchargement",
+          "Tient sur"
+        ],
+        rows: [
+          {
+            "Modèle (classe Q4)": "gpt-oss:20b",
+            "Taille du téléchargement": "14 GB",
+            "Tient sur": "Un GPU de 16 GB ou plus"
+          },
+          {
+            "Modèle (classe Q4)": "Modèle de classe 32B",
+            "Taille du téléchargement": "Environ 20 GB",
+            "Tient sur": "Un GPU de 24 GB"
+          },
+          {
+            "Modèle (classe Q4)": "llama3.3:70b",
+            "Taille du téléchargement": "43 GB",
+            "Tient sur": "Deux GPU de 24 GB (48 GB)"
+          },
+          {
+            "Modèle (classe Q4)": "gpt-oss:120b",
+            "Taille du téléchargement": "65 GB",
+            "Tient sur": "80 GB ou plus ; pas 64 GB"
+          }
+        ]
+      },
+      {
+        type: "table",
+        h2: "Liste de pièces double GPU avec prix sourcés",
+        intro: "Les GPU et le processeur seuls démarrent près de $4,300 : deux RTX 3090 d'occasion ($2,800–3,100) plus un Threadripper 9960X ($1,499 au prix de lancement d'AMD), avant carte mère, mémoire, alimentation, refroidissement, stockage et boîtier.",
+        columns: [
+          "Composant",
+          "Choix",
+          "Prix",
+          "Pourquoi"
+        ],
+        rows: [
+          {
+            Composant: "GPU",
+            Choix: "2× RTX 3090 24 GB d'occasion",
+            Prix: "$2,800–3,100",
+            Pourquoi: "Pool de 48 GB ; pont NVLink pris en charge"
+          },
+          {
+            Composant: "GPU (alternative)",
+            Choix: "2× RTX 4090 24 GB d'occasion",
+            Prix: "$5,150–6,020",
+            Pourquoi: "Traitement du prompt plus rapide ; pas de NVLink"
+          },
+          {
+            Composant: "Processeur",
+            Choix: "Threadripper 9960X, 24 cœurs",
+            Prix: "$1,499 au lancement",
+            Pourquoi: "TDP de 350 W ; plateforme TRX50"
+          },
+          {
+            Composant: "Processeur (alternative)",
+            Choix: "Threadripper 9970X, 32 cœurs",
+            Prix: "$2,499 au lancement",
+            Pourquoi: "Plus de cœurs pour le travail côté CPU"
+          },
+          {
+            Composant: "Carte mère",
+            Choix: "Carte TRX50 (sTR5)",
+            Prix: "Non suivi",
+            Pourquoi: "Deux slots x16 avec place pour des cartes de 3 slots"
+          },
+          {
+            Composant: "RAM",
+            Choix: "64 GB de DDR5 registered",
+            Prix: "Non suivi",
+            Pourquoi: "Voir la note sur le prix de la mémoire ci-dessous"
+          },
+          {
+            Composant: "Alimentation",
+            Choix: "1 300–1 600 W, assez de câbles GPU",
+            Prix: "Non suivi",
+            Pourquoi: "Environ 1.2× la somme des puissances nominales"
+          },
+          {
+            Composant: "Stockage",
+            Choix: "SSD NVMe de 2–4 To",
+            Prix: "Non suivi",
+            Pourquoi: "Un fichier 70B en Q4 pèse 43 GB"
+          },
+          {
+            Composant: "Boîtier et refroidissement",
+            Choix: "Grand boîtier à fort flux d'air",
+            Prix: "Non suivi",
+            Pourquoi: "Deux cartes plus un processeur de 350 W"
+          },
+          {
+            Composant: "Plancher (GPU + CPU)",
+            Choix: "Double 3090 + 9960X",
+            Prix: "$4,299–4,599",
+            Pourquoi: "Avant les cinq lignes non suivies"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "Deux GPU se partagent un modèle via PCIe",
+        items: [
+          "<strong>Installez deux cartes identiques :</strong> utilisez des slots qui tournent au moins en x8 chacun et laissez de l'air entre les cartes. Consultez le schéma des lignes dans le manuel de la carte mère, pas seulement le nombre de slots.",
+          "<strong>Installez le pilote NVIDIA et vérifiez les deux cartes :</strong> lancez <code>nvidia-smi</code> et contrôlez que les deux GPU et leur mémoire complète apparaissent.",
+          "<strong>Commencez par la répartition par couches :</strong> Ollama répartit automatiquement un modèle sur les GPU disponibles ; llama.cpp accepte <code>--tensor-split 1,1</code> pour une répartition égale.",
+          "<strong>Utilisez vLLM pour servir plusieurs utilisateurs :</strong> <code>--tensor-parallel-size 2</code> répartit les poids sur les deux cartes ; prenez un checkpoint 4 bits, par exemple une version AWQ, pour que les poids tiennent dans 48 GB.",
+          "<strong>Mesurez avant de vous fier à un chiffre :</strong> lancez vos propres prompts et relevez les tokens par seconde, l'usage mémoire et les températures sur une longue durée.",
+          "<strong>Plafonnez la puissance si nécessaire :</strong> <code>nvidia-smi -pl &lt;watts&gt;</code> abaisse la limite de puissance de la carte ; testez l'effet sur la vitesse avec votre charge de travail avant de conserver une valeur."
+        ]
+      },
+      {
+        type: "table",
+        h2: "Comparatif RTX 3090, 4090, 5090 et RTX PRO 6000",
+        intro: "Pour 48 GB, les RTX 3090 d'occasion forment la paire la moins chère des données suivies ; deux RTX 5090 atteignent 64 GB pour environ trois fois ce prix, et une seule RTX PRO 6000 atteint 96 GB sur une carte unique.",
+        columns: [
+          "Configuration",
+          "VRAM",
+          "Prix GPU",
+          "Puissance nominale",
+          "NVLink"
+        ],
+        rows: [
+          {
+            Configuration: "2× RTX 3090 (occasion)",
+            VRAM: "48 GB",
+            "Prix GPU": "$2,800–3,100",
+            "Puissance nominale": "700 W",
+            NVLink: "Pont pris en charge"
+          },
+          {
+            Configuration: "2× RTX 4090 (occasion)",
+            VRAM: "48 GB",
+            "Prix GPU": "$5,150–6,020",
+            "Puissance nominale": "900 W",
+            NVLink: "Non"
+          },
+          {
+            Configuration: "1× RTX 5090 (neuve)",
+            VRAM: "32 GB",
+            "Prix GPU": "$4,500–4,700",
+            "Puissance nominale": "575 W",
+            NVLink: "Non"
+          },
+          {
+            Configuration: "2× RTX 5090 (neuves)",
+            VRAM: "64 GB",
+            "Prix GPU": "$9,000–9,400",
+            "Puissance nominale": "1 150 W",
+            NVLink: "Non"
+          },
+          {
+            Configuration: "1× RTX PRO 6000",
+            VRAM: "96 GB",
+            "Prix GPU": "Environ $16,000",
+            "Puissance nominale": "600 W max.",
+            NVLink: "Sans objet"
+          }
+        ]
+      },
+      {
+        type: "list",
+        h2: "Refroidir environ 1,25 kW dépend du flux d'air et de l'espacement des slots",
+        intro: "La chaleur dégagée égale la puissance électrique consommée : deux cartes de 450 W plus un processeur de 350 W représentent 1 250 W nominaux avant disques et ventilateurs, si bien que le flux d'air et l'espacement des slots décident si les cartes brident leur fréquence.",
+        items: [
+          "<strong>Espacement des slots :</strong> NVIDIA décrit la RTX 4090 de référence comme une carte de 3 slots et 304 mm. Choisissez une carte mère et un boîtier qui laissent un intervalle entre les deux cartes, sinon la carte du haut aspire l'air chaud rejeté par celle du bas.",
+          "<strong>Flux d'air du boîtier :</strong> entrée à l'avant, évacuation à l'arrière et en haut, filtres que l'on peut nettoyer. Un boîtier conçu pour deux grandes cartes compte plus qu'un radiateur sophistiqué.",
+          "<strong>Limites de puissance :</strong> abaisser la limite avec <code>nvidia-smi -pl</code> réduit la chaleur et la consommation de pointe. Testez le coût en vitesse sur votre charge de travail avant de retenir une valeur."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Dimensionner alimentation et circuit à partir de la puissance nominale",
+        intro: "Additionnez la puissance nominale de chaque GPU et du processeur, puis dimensionnez l'alimentation à environ 1.2× cette somme : environ 1 260 W pour deux RTX 3090 et un 9960X, 1 500 W pour deux RTX 4090, 1 800 W pour deux RTX 5090.",
+        items: [
+          "<strong>Consommations nominales :</strong> NVIDIA indique 350 W pour la RTX 3090, 450 W pour la RTX 4090 et 575 W pour la RTX 5090. AMD donne 350 W pour la série Threadripper 9000.",
+          "<strong>Les exigences par carte ne s'additionnent pas :</strong> l'exigence système de 850 W de NVIDIA pour la RTX 4090 vaut pour un système à une seule carte. Dimensionnez une configuration à deux cartes à partir de la somme ci-dessus.",
+          "<strong>Connecteurs :</strong> comptez les câbles PCIe 8 broches ou 12V-2x6 que fournit l'alimentation et suivez les recommandations du fabricant de la carte pour les adaptateurs.",
+          "<strong>Circuit :</strong> un circuit américain de 120 V / 15 A est donné pour 1 800 W, et la pratique électrique limite couramment les charges continues à 80 % de cette valeur, soit 1 440 W. Un circuit de 230 V / 16 A est donné pour 3 680 W. Faites vérifier le circuit par un électricien agréé avant de faire tourner une machine à deux GPU à pleine charge.",
+          "Cette page donne des informations générales et ne constitue pas un conseil électrique. Les valeurs nominales et les normes locales diffèrent ; faites vérifier circuits et câblage par un électricien qualifié."
+        ]
+      },
+      {
+        type: "table",
+        h2: "Ce qui est mesuré, ce qui ne l'est pas, et combien d'utilisateurs tiennent",
+        intro: "PromptQuorum n'a pas mesuré de modèle 70B sur une configuration double GPU : cette page ne publie donc aucun chiffre de tokens par seconde pour elle ; vous trouverez ci-dessous des résultats sur une seule carte rapportés par des développeurs et des calculs à partir des tailles de fichiers.",
+        columns: [
+          "Configuration",
+          "Pool",
+          "Reste après le modèle de 43 GB"
+        ],
+        rows: [
+          {
+            Configuration: "2× 24 GB (48 GB)",
+            Pool: "48 GB",
+            "Reste après le modèle de 43 GB": "Environ 5 GB"
+          },
+          {
+            Configuration: "1× 32 GB",
+            Pool: "32 GB",
+            "Reste après le modèle de 43 GB": "Ne tient pas"
+          },
+          {
+            Configuration: "2× 32 GB (64 GB)",
+            Pool: "64 GB",
+            "Reste après le modèle de 43 GB": "Environ 21 GB"
+          },
+          {
+            Configuration: "1× 96 GB",
+            Pool: "96 GB",
+            "Reste après le modèle de 43 GB": "Environ 53 GB"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "Erreurs courantes dans le montage d'une station de travail",
+        items: [
+          "<strong>Supposer un NVLink sur la RTX 4090 ou la RTX 5090.</strong> NVIDIA n'en mentionne aucun sur ces deux cartes. Prévoyez une répartition via PCIe.",
+          "<strong>Mélanger des modèles de GPU.</strong> Le parallélisme tensoriel de vLLM répartit les poids à parts égales : la carte qui a le moins de mémoire limite la paire. Achetez des cartes identiques.",
+          "<strong>Acheter d'abord 128 GB de DDR5.</strong> Un modèle qui tient en VRAM n'en a pas besoin, et les prix de la DDR5 montaient en 2026. Commencez à 64 GB.",
+          "<strong>Dimensionner l'alimentation à partir d'une seule carte.</strong> Le chiffre de 850 W de NVIDIA pour la RTX 4090 vaut pour une carte. Additionnez les deux cartes et le processeur, puis ajoutez une marge.",
+          "<strong>Oublier l'électricité dans le coût.</strong> 900 W en continu représentent 7 884 kWh par an : environ $1,180 pour un tarif d'exemple de $0.15/kWh et environ $2,760 à $0.35/kWh. La consommation réelle pendant l'inférence est généralement inférieure à la puissance nominale et une station tourne rarement 24 h/24, 7 j/7 : voyez-y une borne supérieure."
+        ]
+      },
+      {
+        type: "faq",
+        h2: "Questions fréquentes",
+        faqs: [
+          {
+            q: "Faut-il utiliser NVLink pour relier deux GPU ?",
+            a: "C'est impossible sur la RTX 4090 ou la RTX 5090 : NVIDIA n'en mentionne aucun sur ces cartes. La RTX 3090 accepte un pont, mais llama.cpp, Ollama et vLLM répartissent un modèle via PCIe sans pont, et le gain apporté par NVLink dépend du moteur et de la taille de lot."
+          },
+          {
+            q: "Une seule RTX 5090 peut-elle faire tourner un modèle 70B ?",
+            a: "Pas entièrement en VRAM. La RTX 5090 a 32 GB et le fichier Llama 3.3 70B en Q4 pèse 43 GB, donc environ 11 GB ou plus tournent depuis la RAM système, ce qui est bien plus lent. Un modèle de classe 32B en Q4 (environ 20 GB) tient sur une seule carte."
+          },
+          {
+            q: "Combien coûte une station de travail LLM local en 2026 ?",
+            a: "Les GPU et le processeur seuls démarrent près de $4,300 : deux RTX 3090 d'occasion à $2,800–3,100 au total (annonces relevées le 2026-10-15) plus un Threadripper 9960X à $1,499 (prix de lancement d'AMD). Deux RTX 4090 d'occasion portent la ligne GPU à environ $5,150–6,020. Carte mère, DDR5 registered, alimentation, refroidissement, stockage et boîtier s'y ajoutent, et les prix de la mémoire en particulier montaient en 2026 : chiffrez donc la liste complète d'après les annonces actuelles."
+          }
+        ]
+      },
+      {
+        type: "cta",
+        h2: "Lire le guide complet",
+        body: "Les sources, les prix datés et toutes les réserves figurent dans l'article.",
+        cta: "Station de travail LLM local 2026 : GPU, RAM, coût",
+        href: "https://www.promptquorum.com/fr/local-llms/local-llm-workstation-build"
+      }
+    ]
+  },
+  ja: {
+    title: "ローカルLLM ワークステーション自作 2026：GPU・費用",
+    ui: {
+      prev: "← 前へ",
+      next: "次へ →",
+      back: "← 記事に戻る",
+      short: "← 記事",
+      cta: "ガイド全文を読む",
+      ctaBody: "出典、日付付きの価格、すべての注意点は記事に記載しています。"
+    },
+    slides: [
+      {
+        type: "title",
+        h1: "ローカルLLMワークステーションの自作ガイド（2026年）：70Bモデル向けGPU・RAM・電源・費用",
+        subtitle: "70Bモデル向けのローカルLLMワークステーションには、約48 GBのGPUメモリが必要です。Llama 3.3 70BのQ4版は43 GBあるため、24 GBのカード1枚では載らず、2枚なら載ります。InsiderLLMのトラッカーの2026-10-15付の掲載価格（米国の販売済み出品）では、中古RTX 3090を2枚で約$2,800–3,100です。",
+        link: "https://www.promptquorum.com/ja/local-llms/local-llm-workstation-build"
+      },
+      {
+        type: "list",
+        h2: "重要ポイント",
+        items: [
+          "VRAMの目標：Llama 3.3 70BのQ4版は43 GBのダウンロードです。GPUメモリは48 GB（24 GBカード2枚）を見込み、コンテキスト用に残るのは約5 GBです。",
+          "GPU：追跡データで最も安く48 GBを確保できるのは中古RTX 3090の2枚構成（1枚あたり約$1,400–1,550）です。中古RTX 4090は1枚あたり約$2,575–3,010、新品RTX 5090の2枚構成（1枚あたり約$4,500–4,700）なら64 GBになります。",
+          "NVLink：NVIDIAはRTX 4090とRTX 5090にNVLinkを記載していません。RTX 3090はブリッジに対応します。llama.cpp、Ollama、vLLMはNVLinkなしでもPCIe経由でモデルを複数GPUに分割できます。"
+        ]
+      },
+      {
+        type: "list",
+        h2: "重要ポイント",
+        items: [
+          "CPU：TRX50プラットフォームのThreadripper 9960X（発表時価格$1,499）または9970X（$2,499）は最大80レーンのPCIe 5.0を備えます。x8スロットを2本持つRyzenデスクトップ用ボードでも2枚のGPUを動かせます。",
+          "RAM：モデルがVRAMに収まるなら64 GBで十分です。Hardware Bustersは、DDR5の価格が2026年8月までの12か月で約500%上昇し、128 GBキットが$3,399で掲載されたと報じています。まず64 GBから購入してください。",
+          "電力：GPUの定格だけで700 W（RTX 3090を2枚）、900 W（RTX 4090を2枚）、1,150 W（RTX 5090を2枚）に加え、Threadripperが350 Wです。電源は合計の約1.2倍を目安に選び、ブレーカーの容量も確認してください。"
+        ]
+      },
+      {
+        type: "list",
+        h2: "重要ポイント",
+        items: [
+          "速度：PromptQuorumはデュアルGPU構成での70Bを計測していません。開発者が報告したllama.cppの7Bでの単一カード結果は、RTX 3090が158.2、RTX 4090が186.2、RTX 5090が290.0 tok/sです。",
+          "代替案：Mac Studio M5 Max（$2,499から、最大128 GB）やM5 Ultra（$5,499から、最大512 GB）、Strix HaloやDGX Sparkなどのミニワークステーションなら、大容量メモリを1台に収められます。"
+        ]
+      },
+      {
+        type: "table",
+        h2: "70Bモデルには約48 GBのGPUメモリが必要",
+        intro: "依存しているモデルが24〜32 GBのVRAMに収まらないなら、マルチGPUワークステーションを検討してください。コンテキストキャッシュには、モデルファイルとは別にメモリが必要です。",
+        columns: [
+          "モデル（Q4クラス）",
+          "ダウンロードサイズ",
+          "搭載先"
+        ],
+        rows: [
+          {
+            "モデル（Q4クラス）": "gpt-oss:20b",
+            "ダウンロードサイズ": "14 GB",
+            "搭載先": "16 GB以上のGPU 1枚"
+          },
+          {
+            "モデル（Q4クラス）": "32Bクラスのモデル",
+            "ダウンロードサイズ": "約20 GB",
+            "搭載先": "24 GBのGPU 1枚"
+          },
+          {
+            "モデル（Q4クラス）": "llama3.3:70b",
+            "ダウンロードサイズ": "43 GB",
+            "搭載先": "24 GBのGPU 2枚（48 GB）"
+          },
+          {
+            "モデル（Q4クラス）": "gpt-oss:120b",
+            "ダウンロードサイズ": "65 GB",
+            "搭載先": "80 GB以上。64 GBでは不可"
+          }
+        ]
+      },
+      {
+        type: "table",
+        h2: "出典付き価格で見るデュアルGPUのパーツ構成",
+        intro: "GPUとCPUだけで$4,300前後から始まります。中古RTX 3090を2枚（$2,800–3,100）とThreadripper 9960X（AMD発表時の価格で$1,499）の合計で、マザーボード、メモリ、電源、冷却、ストレージ、ケースは別です。",
+        columns: [
+          "パーツ",
+          "選択肢",
+          "価格",
+          "理由"
+        ],
+        rows: [
+          {
+            "パーツ": "GPU",
+            "選択肢": "中古RTX 3090 24 GB×2",
+            "価格": "$2,800–3,100",
+            "理由": "48 GBのプール。NVLinkブリッジ対応"
+          },
+          {
+            "パーツ": "GPU（代替）",
+            "選択肢": "中古RTX 4090 24 GB×2",
+            "価格": "$5,150–6,020",
+            "理由": "プロンプト処理が速い。NVLinkなし"
+          },
+          {
+            "パーツ": "CPU",
+            "選択肢": "Threadripper 9960X、24コア",
+            "価格": "発表時$1,499",
+            "理由": "TDP 350 W。TRX50プラットフォーム"
+          },
+          {
+            "パーツ": "CPU（代替）",
+            "選択肢": "Threadripper 9970X、32コア",
+            "価格": "発表時$2,499",
+            "理由": "CPU側の処理向けにコア数が多い"
+          },
+          {
+            "パーツ": "マザーボード",
+            "選択肢": "TRX50（sTR5）ボード",
+            "価格": "追跡なし",
+            "理由": "3スロット厚のカードが入るx16スロットが2本"
+          },
+          {
+            "パーツ": "RAM",
+            "選択肢": "64 GBのRDIMMのDDR5",
+            "価格": "追跡なし",
+            "理由": "下のメモリ価格の注記を参照"
+          },
+          {
+            "パーツ": "電源",
+            "選択肢": "1,300–1,600 W、GPU用ケーブルが十分あるもの",
+            "価格": "追跡なし",
+            "理由": "各パーツの定格合計の約1.2倍"
+          },
+          {
+            "パーツ": "ストレージ",
+            "選択肢": "2〜4 TBのNVMe SSD",
+            "価格": "追跡なし",
+            "理由": "70BのQ4ファイルは43 GB"
+          },
+          {
+            "パーツ": "ケースと冷却",
+            "選択肢": "エアフローの良い大型ケース",
+            "価格": "追跡なし",
+            "理由": "カード2枚と350 WのCPUを収めるため"
+          },
+          {
+            "パーツ": "最低ライン（GPU＋CPU）",
+            "選択肢": "3090を2枚＋9960X",
+            "価格": "$4,299–4,599",
+            "理由": "追跡していない5項目を除いた金額"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "2枚のGPUはPCIe経由で1つのモデルを分担する",
+        items: [
+          "<strong>同一のカードを2枚取り付ける：</strong> 各カードがx8以上で動作するスロットを使い、カードの間にエアフローの余裕を残します。スロット数だけでなく、マザーボードのマニュアルにあるレーン構成図を確認してください。",
+          "<strong>NVIDIAドライバーをインストールし、2枚とも認識されているか確認する：</strong> <code>nvidia-smi</code>を実行し、2枚のGPUとそれぞれの全メモリが表示されることを確かめます。",
+          "<strong>まずレイヤー分割から始める：</strong> Ollamaは利用可能なGPUにモデルを自動で振り分けます。llama.cppでは<code>--tensor-split 1,1</code>で均等に分割できます。",
+          "<strong>複数ユーザー向けの提供にはvLLMを使う：</strong> <code>--tensor-parallel-size 2</code>で重みを2枚のカードに分割配置します。重みが48 GBに収まるよう、AWQ版のような4ビットのチェックポイントを使ってください。",
+          "<strong>数字を信じる前に計測する：</strong> 実際に使うプロンプトを実行し、毎秒トークン数、メモリ使用量、温度を長時間の実行で記録します。",
+          "<strong>必要なら電力を制限する：</strong> <code>nvidia-smi -pl &lt;watts&gt;</code>でボードの電力上限を下げられます。値を決める前に、自分の用途で速度への影響を試してください。"
+        ]
+      },
+      {
+        type: "table",
+        h2: "RTX 3090・4090・5090・RTX PRO 6000の比較",
+        intro: "48 GBを得るなら、追跡データで最も安いのは中古RTX 3090のペアです。RTX 5090を2枚にすると64 GBになりますが、価格はおよそ3倍で、RTX PRO 6000なら1枚で96 GBになります。",
+        columns: [
+          "構成",
+          "VRAM",
+          "GPU価格",
+          "定格電力",
+          "NVLink"
+        ],
+        rows: [
+          {
+            "構成": "RTX 3090×2（中古）",
+            VRAM: "48 GB",
+            "GPU価格": "$2,800–3,100",
+            "定格電力": "700 W",
+            NVLink: "ブリッジ対応"
+          },
+          {
+            "構成": "RTX 4090×2（中古）",
+            VRAM: "48 GB",
+            "GPU価格": "$5,150–6,020",
+            "定格電力": "900 W",
+            NVLink: "なし"
+          },
+          {
+            "構成": "RTX 5090×1（新品）",
+            VRAM: "32 GB",
+            "GPU価格": "$4,500–4,700",
+            "定格電力": "575 W",
+            NVLink: "なし"
+          },
+          {
+            "構成": "RTX 5090×2（新品）",
+            VRAM: "64 GB",
+            "GPU価格": "$9,000–9,400",
+            "定格電力": "1,150 W",
+            NVLink: "なし"
+          },
+          {
+            "構成": "RTX PRO 6000×1",
+            VRAM: "96 GB",
+            "GPU価格": "約$16,000",
+            "定格電力": "最大600 W",
+            NVLink: "該当なし"
+          }
+        ]
+      },
+      {
+        type: "list",
+        h2: "約1.25 kWの冷却はエアフローとスロット間隔で決まる",
+        intro: "発熱量は消費電力と等しくなります。450 Wのカード2枚と350 WのCPUで、ドライブやファンを除いても定格1,250 Wになるため、カードがサーマルスロットリングするかどうかはエアフローとスロット間隔で決まります。",
+        items: [
+          "<strong>スロット間隔：</strong> NVIDIAはリファレンス仕様のRTX 4090を3スロット、304 mmのカードとしています。2枚のカードの間に隙間ができるマザーボードとケースを選んでください。そうしないと、上のカードが下のカードの排気を吸い込みます。",
+          "<strong>ケースのエアフロー：</strong> 前面吸気、背面と上面の排気、掃除できるフィルターを備えたものを選びます。大型カード2枚を想定したケースは、凝ったラジエーターより重要です。",
+          "<strong>電力制限：</strong> <code>nvidia-smi -pl</code>で電力上限を下げると、発熱とピーク消費電力が減ります。値を決める前に、自分の用途で速度への影響を試してください。"
+        ]
+      },
+      {
+        type: "list",
+        h2: "電源とブレーカー容量は定格電力から見積もる",
+        intro: "すべてのGPUとCPUの定格電力を足し、その合計の約1.2倍を電源容量の目安にします。RTX 3090を2枚と9960Xなら約1,260 W、RTX 4090を2枚なら1,500 W、RTX 5090を2枚なら1,800 Wです。",
+        items: [
+          "<strong>定格消費電力：</strong> NVIDIAはRTX 3090を350 W、RTX 4090を450 W、RTX 5090を575 Wとしています。AMDはThreadripper 9000シリーズを350 Wとしています。",
+          "<strong>単一カードの要件は足し算できません：</strong> NVIDIAがRTX 4090について示す850 Wのシステム要件は、カード1枚のシステム向けです。2枚構成は上の合計から見積もってください。",
+          "<strong>コネクター：</strong> 電源が備えるPCIe 8ピンまたは12V-2x6ケーブルの本数を数え、アダプターについてはカードメーカーの案内に従ってください。",
+          "<strong>ブレーカー：</strong> 米国の120 V / 15 Aの回路は定格1,800 Wで、電気設備の慣行では連続負荷をその80%の1,440 Wに抑えるのが一般的です。230 V / 16 Aの回路は定格3,680 Wです。2GPU構成のマシンを全負荷で動かす前に、資格を持つ電気技術者に回路を確認してもらってください。",
+          "このページは一般的な情報であり、電気工事に関する助言ではありません。定格や各地の規定は異なります。回路や配線は資格を持つ電気技術者に確認してもらってください。"
+        ]
+      },
+      {
+        type: "table",
+        h2: "計測済みの内容、未計測の内容、同時利用人数の目安",
+        intro: "PromptQuorumはデュアルGPU構成での70Bを計測していないため、このページでは毎秒トークン数を掲載しません。以下は開発者が報告した単一カードの結果と、ファイルサイズからの計算です。",
+        columns: [
+          "構成",
+          "プール",
+          "43 GBモデルを載せた後の残り"
+        ],
+        rows: [
+          {
+            "構成": "24 GB×2（48 GB）",
+            "プール": "48 GB",
+            "43 GBモデルを載せた後の残り": "約5 GB"
+          },
+          {
+            "構成": "32 GB×1",
+            "プール": "32 GB",
+            "43 GBモデルを載せた後の残り": "載らない"
+          },
+          {
+            "構成": "32 GB×2（64 GB）",
+            "プール": "64 GB",
+            "43 GBモデルを載せた後の残り": "約21 GB"
+          },
+          {
+            "構成": "96 GB×1",
+            "プール": "96 GB",
+            "43 GBモデルを載せた後の残り": "約53 GB"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "ワークステーション自作でよくある失敗",
+        items: [
+          "<strong>RTX 4090やRTX 5090でNVLinkが使えると思い込む。</strong> NVIDIAはどちらのカードにもNVLinkを記載していません。PCIeでの分割を前提に計画してください。",
+          "<strong>異なるGPUモデルを混在させる。</strong> vLLMのテンソル並列は重みを均等に分割するため、メモリの少ないカードがペア全体の上限になります。同じカードを2枚買ってください。",
+          "<strong>先に128 GBのDDR5を買う。</strong> VRAMに収まるモデルには不要で、DDR5の価格は2026年に上昇していました。64 GBから始めてください。",
+          "<strong>電源をカード1枚分で見積もる。</strong> RTX 4090についてNVIDIAが示す850 Wはカード1枚の場合の数字です。2枚のカードとCPUを合計し、さらに余裕を加えてください。",
+          "<strong>電気代を費用に入れ忘れる。</strong> 900 Wを連続で動かすと年間7,884 kWhで、約$1,180（電力料金を例として$0.15/kWhとした場合）、約$2,760（$0.35/kWhの場合）です。推論中の実際の消費電力は通常、定格より低く、ワークステーションが24時間365日動き続けることもまれなので、上限の目安として捉えてください。"
+        ]
+      },
+      {
+        type: "faq",
+        h2: "よくある質問",
+        faqs: [
+          {
+            q: "2枚のGPUをつなぐのにNVLinkを使うべきですか？",
+            a: "RTX 4090とRTX 5090では使えません。NVIDIAはどちらにもNVLinkを記載していません。RTX 3090はブリッジに対応しますが、llama.cpp、Ollama、vLLMはブリッジなしでもPCIe経由でモデルを分割でき、NVLinkで得られる効果はエンジンとバッチサイズによって変わります。"
+          },
+          {
+            q: "RTX 5090 1枚で70Bモデルは動きますか？",
+            a: "VRAMだけでは載りません。RTX 5090は32 GBで、Llama 3.3 70BのQ4ファイルは43 GBあるため、約11 GB以上がシステムRAMから実行され、大幅に遅くなります。Q4の32Bクラスのモデル（約20 GB）なら1枚に載ります。"
+          },
+          {
+            q: "ローカルLLM用ワークステーションの費用は2026年でいくらですか？",
+            a: "GPUとCPUだけで$4,300前後から始まります。中古RTX 3090を2枚で合計$2,800–3,100（2026-10-15のトラッカー掲載価格）に、Threadripper 9960Xが$1,499（AMD発表時の価格）です。中古RTX 4090を2枚にすると、GPUの項目は約$5,150–6,020になります。これに加えてマザーボード、RDIMMのDDR5、電源、冷却、ストレージ、ケースの費用がかかり、特にメモリ価格は2026年に上昇していたため、全パーツを最新の出品価格で見積もってください。"
+          }
+        ]
+      },
+      {
+        type: "cta",
+        h2: "ガイド全文を読む",
+        body: "出典、日付付きの価格、すべての注意点は記事に記載しています。",
+        cta: "ローカルLLM ワークステーション自作 2026：GPU・費用",
+        href: "https://www.promptquorum.com/ja/local-llms/local-llm-workstation-build"
+      }
+    ]
+  },
+  zh: {
+    title: "本地LLM工作站装机2026：GPU、内存、电源与成本",
+    ui: {
+      prev: "← 上一页",
+      next: "下一页 →",
+      back: "← 返回文章",
+      short: "← 文章",
+      cta: "阅读完整指南",
+      ctaBody: "来源、带日期的价格和所有注意事项都在文章中。"
+    },
+    slides: [
+      {
+        type: "title",
+        h1: "本地LLM工作站装机指南（2026）：70B模型所需的GPU、内存、电源与成本",
+        subtitle: "运行70B模型的本地LLM工作站需要约48 GB显存：Llama 3.3 70B的Q4版本下载体积为43 GB，一张24 GB显卡装不下，两张可以。根据InsiderLLM 2026-10-15的行情追踪列表（美国已成交列表），两张二手RTX 3090约$2,800–3,100。",
+        link: "https://www.promptquorum.com/zh/local-llms/local-llm-workstation-build"
+      },
+      {
+        type: "list",
+        h2: "核心要点",
+        items: [
+          "显存目标：Llama 3.3 70B的Q4版本是43 GB的下载文件，因此应规划48 GB显存（两张24 GB显卡），上下文大约只剩5 GB可用。",
+          "GPU：在追踪数据中，两张二手RTX 3090（每张约$1,400–1,550）是达到48 GB的最低价方案；两张二手RTX 4090每张约$2,575–3,010；两张全新RTX 5090（每张约$4,500–4,700）可达64 GB。",
+          "NVLink：NVIDIA官网未列出RTX 4090和RTX 5090的NVLink支持；RTX 3090支持桥接器。llama.cpp、Ollama和vLLM无需NVLink，即可通过PCIe把模型拆分到多张GPU上。"
+        ]
+      },
+      {
+        type: "list",
+        h2: "核心要点",
+        items: [
+          "CPU：TRX50平台上的Threadripper 9960X（发布价$1,499）或9970X（$2,499）最多提供80条PCIe 5.0通道；带两个x8插槽的Ryzen桌面主板同样可以运行两张GPU。",
+          "内存：模型放在显存里时，64 GB内存就够用。Hardware Busters报道，截至2026年8月的12个月内DDR5价格上涨约500%，一套128 GB内存套装标价$3,399，所以建议先买64 GB。",
+          "功耗：仅GPU的额定功率就是700 W（2× RTX 3090）、900 W（2× RTX 4090）或1,150 W（2× RTX 5090），Threadripper再加350 W。电源按总和的约1.2倍选择，并检查你的供电线路。"
+        ]
+      },
+      {
+        type: "list",
+        h2: "核心要点",
+        items: [
+          "速度：PromptQuorum没有在双GPU机器上实测过70B模型。开发者报告的单卡llama.cpp 7B成绩为：RTX 3090 158.2、RTX 4090 186.2、RTX 5090 290.0 tok/s。",
+          "替代方案：Mac Studio M5 Max（起价$2,499, 最高128 GB）或M5 Ultra（起价$5,499, 最高512 GB），以及Strix Halo、DGX Spark等迷你工作站，一台机器就能提供大容量内存。"
+        ]
+      },
+      {
+        type: "table",
+        h2: "70B模型需要约48 GB显存",
+        intro: "当你依赖的模型放不进24–32 GB显存时，才需要组多GPU工作站；除了模型文件本身，上下文缓存也要占用显存。",
+        columns: [
+          "模型（Q4级）",
+          "下载体积",
+          "适用显卡"
+        ],
+        rows: [
+          {
+            "模型（Q4级）": "gpt-oss:20b",
+            "下载体积": "14 GB",
+            "适用显卡": "一张16 GB或更大的GPU"
+          },
+          {
+            "模型（Q4级）": "32B级模型",
+            "下载体积": "约20 GB",
+            "适用显卡": "一张24 GB GPU"
+          },
+          {
+            "模型（Q4级）": "llama3.3:70b",
+            "下载体积": "43 GB",
+            "适用显卡": "两张24 GB GPU（共48 GB）"
+          },
+          {
+            "模型（Q4级）": "gpt-oss:120b",
+            "下载体积": "65 GB",
+            "适用显卡": "80 GB或更多；64 GB不够"
+          }
+        ]
+      },
+      {
+        type: "table",
+        h2: "双GPU配件清单与有来源的价格",
+        intro: "仅GPU加CPU就接近$4,300：两张二手RTX 3090（$2,800–3,100）加一颗Threadripper 9960X（AMD发布价$1,499），这还没算主板、内存、电源、散热、存储和机箱。",
+        columns: [
+          "配件",
+          "选择",
+          "价格",
+          "理由"
+        ],
+        rows: [
+          {
+            "配件": "GPU",
+            "选择": "2× 二手RTX 3090 24 GB",
+            "价格": "$2,800–3,100",
+            "理由": "48 GB显存池；支持NVLink桥接器"
+          },
+          {
+            "配件": "GPU（备选）",
+            "选择": "2× 二手RTX 4090 24 GB",
+            "价格": "$5,150–6,020",
+            "理由": "提示词处理更快；无NVLink"
+          },
+          {
+            "配件": "CPU",
+            "选择": "Threadripper 9960X，24核",
+            "价格": "$1,499 发布价",
+            "理由": "350 W TDP；TRX50平台"
+          },
+          {
+            "配件": "CPU（备选）",
+            "选择": "Threadripper 9970X，32核",
+            "价格": "$2,499 发布价",
+            "理由": "CPU端任务有更多核心"
+          },
+          {
+            "配件": "主板",
+            "选择": "TRX50（sTR5）主板",
+            "价格": "未追踪",
+            "理由": "两个x16插槽，能容纳3槽显卡"
+          },
+          {
+            "配件": "内存",
+            "选择": "64 GB registered DDR5",
+            "价格": "未追踪",
+            "理由": "见下方内存价格提示"
+          },
+          {
+            "配件": "电源",
+            "选择": "1,300–1,600 W，GPU供电线足够",
+            "价格": "未追踪",
+            "理由": "约为各部件额定功率总和的1.2倍"
+          },
+          {
+            "配件": "存储",
+            "选择": "2–4 TB NVMe SSD",
+            "价格": "未追踪",
+            "理由": "70B Q4文件为43 GB"
+          },
+          {
+            "配件": "机箱与散热",
+            "选择": "大型风道机箱",
+            "价格": "未追踪",
+            "理由": "两张显卡加一颗350 W的CPU"
+          },
+          {
+            "配件": "底价（GPU + CPU）",
+            "选择": "双3090 + 9960X",
+            "价格": "$4,299–4,599",
+            "理由": "尚未计入五项未追踪的配件"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "两张显卡通过PCIe共同承载一个模型",
+        items: [
+          "<strong>装入两张相同的显卡：</strong> 使用每个至少运行在x8的插槽，并让两张显卡之间留出风道。要看主板手册里的通道分配图，而不只是插槽数量。",
+          "<strong>安装NVIDIA驱动并确认两张卡都被识别：</strong> 运行<code>nvidia-smi</code>，检查两张GPU及其完整显存是否都显示出来。",
+          "<strong>先用按层拆分：</strong> Ollama会自动把模型分布到可用的GPU上；llama.cpp用<code>--tensor-split 1,1</code>即可平均拆分。",
+          "<strong>多用户服务用vLLM：</strong> <code>--tensor-parallel-size 2</code>会把权重分片到两张卡上；请使用AWQ等4-bit检查点，让权重装得进48 GB。",
+          "<strong>先自己测，再信数字：</strong> 用你自己的提示词运行，并在长时间运行中记录每秒token数、显存占用和温度。",
+          "<strong>需要时限制功耗：</strong> <code>nvidia-smi -pl &lt;watts&gt;</code>可降低显卡功率上限；保留某个数值之前，先在你自己的负载上测试对速度的影响。"
+        ]
+      },
+      {
+        type: "table",
+        h2: "RTX 3090、4090、5090与RTX PRO 6000对比",
+        intro: "要凑够48 GB，二手RTX 3090是追踪数据中最便宜的组合；两张RTX 5090可达64 GB，价格约为前者的三倍，而一张RTX PRO 6000单卡就能达到96 GB。",
+        columns: [
+          "配置",
+          "显存",
+          "GPU价格",
+          "额定功率",
+          "NVLink"
+        ],
+        rows: [
+          {
+            "配置": "2× RTX 3090（二手）",
+            "显存": "48 GB",
+            "GPU价格": "$2,800–3,100",
+            "额定功率": "700 W",
+            NVLink: "支持桥接器"
+          },
+          {
+            "配置": "2× RTX 4090（二手）",
+            "显存": "48 GB",
+            "GPU价格": "$5,150–6,020",
+            "额定功率": "900 W",
+            NVLink: "无"
+          },
+          {
+            "配置": "1× RTX 5090（全新）",
+            "显存": "32 GB",
+            "GPU价格": "$4,500–4,700",
+            "额定功率": "575 W",
+            NVLink: "无"
+          },
+          {
+            "配置": "2× RTX 5090（全新）",
+            "显存": "64 GB",
+            "GPU价格": "$9,000–9,400",
+            "额定功率": "1,150 W",
+            NVLink: "无"
+          },
+          {
+            "配置": "1× RTX PRO 6000",
+            "显存": "96 GB",
+            "GPU价格": "约$16,000",
+            "额定功率": "最高600 W",
+            NVLink: "不适用"
+          }
+        ]
+      },
+      {
+        type: "list",
+        h2: "约1.25 kW的散热取决于风道和插槽间距",
+        intro: "发热量等于电力消耗：两张450 W显卡加一颗350 W的CPU，额定合计1,250 W，还没算硬盘和风扇，所以风道和插槽间距决定了显卡是否会降频。",
+        items: [
+          "<strong>插槽间距：</strong> NVIDIA标明公版RTX 4090为3槽、304 mm的显卡。请选择能让两张显卡之间留出空隙的主板和机箱，否则上面那张显卡会吸入下面那张的排出热风。",
+          "<strong>机箱风道：</strong> 前部进风、后部和顶部出风，并配有可清洗的滤网。为两张大显卡设计的机箱，比花哨的水冷排更重要。",
+          "<strong>功耗限制：</strong> 用<code>nvidia-smi -pl</code>降低功率上限可减少发热和峰值功耗。确定数值之前，先在你自己的负载上测试对速度的影响。"
+        ]
+      },
+      {
+        type: "list",
+        h2: "按额定功率估算电源和供电线路",
+        intro: "把每张GPU和CPU的额定功率相加，电源按这个总和的约1.2倍选择：两张RTX 3090加9960X约1,260 W，两张RTX 4090为1,500 W，两张RTX 5090为1,800 W。",
+        items: [
+          "<strong>额定功耗：</strong> NVIDIA标明RTX 3090为350 W，RTX 4090为450 W，RTX 5090为575 W。AMD标称Threadripper 9000系列为350 W。",
+          "<strong>单卡要求不能直接相加：</strong> NVIDIA为RTX 4090标明的850 W系统要求针对只有一张显卡的系统。双卡机器请按上面的总和来估算。",
+          "<strong>接口：</strong> 数一数电源提供的PCIe 8-pin或12V-2x6线缆数量，转接头请遵循显卡厂商的指引。",
+          "<strong>供电线路：</strong> 美国120 V / 15 A线路的额定功率为1,800 W，电气规范通常把持续负载限制在其80%，即1,440 W。230 V / 16 A线路的额定功率为3,680 W。双GPU机器满载运行之前，请让持证电工检查线路。",
+          "本页仅为一般性信息，不构成电气方面的建议。额定值和当地规范各不相同；请让有资质的电工检查线路和布线。"
+        ]
+      },
+      {
+        type: "table",
+        h2: "哪些已实测、哪些没有，以及能支持多少用户",
+        intro: "PromptQuorum没有在双GPU机器上实测过70B模型，所以本页不提供该配置的每秒token数；下面是开发者报告的单卡成绩，以及根据文件体积推算的数字。",
+        columns: [
+          "配置",
+          "显存池",
+          "放入43 GB模型后剩余"
+        ],
+        rows: [
+          {
+            "配置": "2× 24 GB（48 GB）",
+            "显存池": "48 GB",
+            "放入43 GB模型后剩余": "约5 GB"
+          },
+          {
+            "配置": "1× 32 GB",
+            "显存池": "32 GB",
+            "放入43 GB模型后剩余": "装不下"
+          },
+          {
+            "配置": "2× 32 GB（64 GB）",
+            "显存池": "64 GB",
+            "放入43 GB模型后剩余": "约21 GB"
+          },
+          {
+            "配置": "1× 96 GB",
+            "显存池": "96 GB",
+            "放入43 GB模型后剩余": "约53 GB"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "装机常见错误",
+        items: [
+          "<strong>以为RTX 4090或RTX 5090有NVLink。</strong> NVIDIA官网未列出这两张显卡的NVLink支持。请按PCIe拆分来规划。",
+          "<strong>混用不同型号的GPU。</strong> vLLM张量并行会均匀分片权重，显存较小的那张会限制整对显卡。请买相同的显卡。",
+          "<strong>一上来就买128 GB的DDR5。</strong> 放在显存里的模型用不上这么多内存，而且2026年DDR5价格一直在上涨。从64 GB起步。",
+          "<strong>按一张显卡估算电源。</strong> NVIDIA为RTX 4090给出的850 W是针对一张显卡的。请把两张显卡和CPU加在一起，再留出余量。",
+          "<strong>成本里漏掉电费。</strong> 900 W持续运行一年是7,884 kWh：约$1,180（示例电价$0.15/kWh），约$2,760（电价$0.35/kWh）。推理时的实际功耗通常低于额定功率，工作站也很少24小时不停运行，所以请把它当作上限。"
+        ]
+      },
+      {
+        type: "faq",
+        h2: "常见问题",
+        faqs: [
+          {
+            q: "需要用NVLink把两张GPU连起来吗？",
+            a: "RTX 4090和RTX 5090上做不到：NVIDIA官网未列出这两张显卡的NVLink支持。RTX 3090支持桥接器，但llama.cpp、Ollama和vLLM无需桥接器就能通过PCIe拆分模型，而NVLink带来的提升取决于推理引擎和批大小。"
+          },
+          {
+            q: "一张RTX 5090能运行70B模型吗？",
+            a: "无法完全放进显存。RTX 5090有32 GB，而Llama 3.3 70B的Q4文件为43 GB，所以约11 GB或更多要放到系统内存里运行，速度慢得多。Q4的32B级模型（约20 GB）可以放进一张卡。"
+          },
+          {
+            q: "2026年组一台本地LLM工作站要花多少钱？",
+            a: "仅GPU加CPU就接近$4,300：两张二手RTX 3090合计$2,800–3,100（2026-10-15的行情列表），加一颗$1,499的Threadripper 9960X（AMD发布价）。换成两张二手RTX 4090，GPU这一项升至约$5,150–6,020。主板、registered DDR5、电源、散热、存储和机箱还要另算，尤其是内存价格在2026年一直在上涨，所以请按当前行情给完整清单估价。"
+          }
+        ]
+      },
+      {
+        type: "cta",
+        h2: "阅读完整指南",
+        body: "来源、带日期的价格和所有注意事项都在文章中。",
+        cta: "本地LLM工作站装机2026：GPU、内存、电源与成本",
+        href: "https://www.promptquorum.com/zh/local-llms/local-llm-workstation-build"
+      }
+    ]
+  },
+  es: {
+    title: "Estación de trabajo para LLM local 2026: GPU, RAM, PSU",
+    ui: {
+      prev: "← Anterior",
+      next: "Siguiente →",
+      back: "← Volver al artículo",
+      short: "← Artículo",
+      cta: "Leer la guía completa",
+      ctaBody: "Las fuentes, los precios con fecha y todas las salvedades están en el artículo."
+    },
+    slides: [
+      {
+        type: "title",
+        h1: "Estación de trabajo para LLM local (2026): GPU, RAM, PSU y costos para modelos de 70B",
+        subtitle: "Una estación de trabajo para LLM local de 70B necesita unos 48 GB de memoria de GPU: Llama 3.3 70B pesa 43 GB en Q4; una tarjeta de 24 GB no basta, dos sí. Según el tracker de InsiderLLM (2026-10-15), dos RTX 3090 usadas cuestan unos $2,800–3,100.",
+        link: "https://www.promptquorum.com/es/local-llms/local-llm-workstation-build"
+      },
+      {
+        type: "list",
+        h2: "Puntos clave",
+        items: [
+          "Objetivo de VRAM: Llama 3.3 70B en Q4 es una descarga de 43 GB, así que planea 48 GB de memoria de GPU (dos tarjetas de 24 GB) y cuenta con unos 5 GB libres para el contexto.",
+          "GPU: dos RTX 3090 usadas (unos $1,400–1,550 cada una) son la vía de 48 GB más barata en los datos del tracker; dos RTX 4090 usadas cuestan unos $2,575–3,010 cada una; dos RTX 5090 nuevas (unos $4,500–4,700 cada una) dan 64 GB.",
+          "NVLink: NVIDIA no lista NVLink en la RTX 4090 ni en la RTX 5090; la RTX 3090 admite un puente. llama.cpp, Ollama y vLLM reparten un modelo entre varias GPU por PCIe sin necesitarlo."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Puntos clave",
+        items: [
+          "CPU: un Threadripper 9960X ($1,499 de precio de lanzamiento) o 9970X ($2,499) en TRX50 ofrece hasta 80 líneas PCIe 5.0; una placa Ryzen de escritorio con dos ranuras x8 también puede mover dos GPU.",
+          "RAM: 64 GB bastan cuando el modelo cabe en la VRAM. Hardware Busters reportó que los precios de la DDR5 subieron cerca de un 500% en los 12 meses hasta agosto de 2026 y que un kit de 128 GB se listó en $3,399, así que compra primero 64 GB.",
+          "Consumo: solo las potencias nominales de las GPU suman 700 W (2× RTX 3090), 900 W (2× RTX 4090) o 1,150 W (2× RTX 5090), más 350 W de un Threadripper. Dimensiona la PSU en cerca de 1.2× la suma y revisa tu circuito eléctrico."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Puntos clave",
+        items: [
+          "Velocidad: PromptQuorum no ha medido un modelo de 70B en un equipo con dos GPU. Los resultados de llama.cpp con 7B en una sola tarjeta, reportados por desarrolladores, son 158.2 (RTX 3090), 186.2 (RTX 4090) y 290.0 tok/s (RTX 5090).",
+          "Alternativas: el Mac Studio M5 Max (desde $2,499, hasta 128 GB) o M5 Ultra (desde $5,499, hasta 512 GB) y mini estaciones como Strix Halo y DGX Spark ofrecen mucha memoria en una sola caja."
+        ]
+      },
+      {
+        type: "table",
+        h2: "Un modelo de 70B necesita unos 48 GB de memoria de GPU",
+        intro: "Arma una estación de trabajo con varias GPU cuando un modelo del que dependes no cabe en 24–32 GB de VRAM; la caché de contexto necesita memoria además del archivo del modelo.",
+        columns: [
+          "Modelo (clase Q4)",
+          "Tamaño de descarga",
+          "Cabe en"
+        ],
+        rows: [
+          {
+            "Modelo (clase Q4)": "gpt-oss:20b",
+            "Tamaño de descarga": "14 GB",
+            "Cabe en": "Una GPU de 16 GB o más"
+          },
+          {
+            "Modelo (clase Q4)": "Modelo de clase 32B",
+            "Tamaño de descarga": "Unos 20 GB",
+            "Cabe en": "Una GPU de 24 GB"
+          },
+          {
+            "Modelo (clase Q4)": "llama3.3:70b",
+            "Tamaño de descarga": "43 GB",
+            "Cabe en": "Dos GPU de 24 GB (48 GB)"
+          },
+          {
+            "Modelo (clase Q4)": "gpt-oss:120b",
+            "Tamaño de descarga": "65 GB",
+            "Cabe en": "80 GB o más; no en 64 GB"
+          }
+        ]
+      },
+      {
+        type: "table",
+        h2: "Lista de piezas con dos GPU y precios con fuente",
+        intro: "Solo las GPU y la CPU parten cerca de $4,300: dos RTX 3090 usadas ($2,800–3,100) más un Threadripper 9960X ($1,499 al precio de lanzamiento de AMD), antes de placa base, memoria, PSU, refrigeración, almacenamiento y gabinete.",
+        columns: [
+          "Componente",
+          "Elección",
+          "Precio",
+          "Motivo"
+        ],
+        rows: [
+          {
+            Componente: "GPU",
+            "Elección": "2× RTX 3090 usadas de 24 GB",
+            Precio: "$2,800–3,100",
+            Motivo: "Pool de 48 GB; admite puente NVLink"
+          },
+          {
+            Componente: "GPU (alternativa)",
+            "Elección": "2× RTX 4090 usadas de 24 GB",
+            Precio: "$5,150–6,020",
+            Motivo: "Procesamiento de prompts más rápido; sin NVLink"
+          },
+          {
+            Componente: "CPU",
+            "Elección": "Threadripper 9960X, 24 núcleos",
+            Precio: "$1,499 de lanzamiento",
+            Motivo: "TDP de 350 W; plataforma TRX50"
+          },
+          {
+            Componente: "CPU (alternativa)",
+            "Elección": "Threadripper 9970X, 32 núcleos",
+            Precio: "$2,499 de lanzamiento",
+            Motivo: "Más núcleos para trabajo del lado de la CPU"
+          },
+          {
+            Componente: "Placa base",
+            "Elección": "Placa TRX50 (sTR5)",
+            Precio: "Sin rastrear",
+            Motivo: "Dos ranuras x16 con espacio para tarjetas de 3 ranuras"
+          },
+          {
+            Componente: "RAM",
+            "Elección": "64 GB de DDR5 registrada",
+            Precio: "Sin rastrear",
+            Motivo: "Consulta la nota sobre precios de memoria más abajo"
+          },
+          {
+            Componente: "PSU",
+            "Elección": "1,300–1,600 W, con suficientes cables para GPU",
+            Precio: "Sin rastrear",
+            Motivo: "Cerca de 1.2× la suma de potencias nominales"
+          },
+          {
+            Componente: "Almacenamiento",
+            "Elección": "SSD NVMe de 2–4 TB",
+            Precio: "Sin rastrear",
+            Motivo: "Un archivo de 70B en Q4 pesa 43 GB"
+          },
+          {
+            Componente: "Gabinete y refrigeración",
+            "Elección": "Gabinete grande con buen flujo de aire",
+            Precio: "Sin rastrear",
+            Motivo: "Dos tarjetas más una CPU de 350 W"
+          },
+          {
+            Componente: "Piso (GPU + CPU)",
+            "Elección": "Dos 3090 + 9960X",
+            Precio: "$4,299–4,599",
+            Motivo: "Antes de las cinco líneas sin rastrear"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "Dos GPU comparten un modelo por PCIe",
+        items: [
+          "<strong>Instala dos tarjetas idénticas:</strong> usa ranuras que funcionen al menos a x8 cada una y deja flujo de aire entre las tarjetas. Revisa el diagrama de líneas en el manual de la placa base, no solo el número de ranuras.",
+          "<strong>Instala el driver de NVIDIA y confirma ambas tarjetas:</strong> ejecuta <code>nvidia-smi</code> y comprueba que aparezcan las dos GPU con toda su memoria.",
+          "<strong>Empieza con la división por capas:</strong> Ollama reparte un modelo entre las GPU disponibles de forma automática; llama.cpp acepta <code>--tensor-split 1,1</code> para una división pareja.",
+          "<strong>Usa vLLM para servir a varios usuarios:</strong> <code>--tensor-parallel-size 2</code> reparte los pesos entre ambas tarjetas; usa un checkpoint de 4 bits, como una versión AWQ, para que los pesos quepan en 48 GB.",
+          "<strong>Mide antes de confiar en una cifra:</strong> ejecuta tus propios prompts y registra los tokens por segundo, el uso de memoria y las temperaturas durante una sesión larga.",
+          "<strong>Limita la potencia si hace falta:</strong> <code>nvidia-smi -pl &lt;watts&gt;</code> reduce el límite de potencia de la tarjeta; prueba el efecto en la velocidad con tu carga de trabajo antes de quedarte con un valor."
+        ]
+      },
+      {
+        type: "table",
+        h2: "Comparativa de RTX 3090, 4090, 5090 y RTX PRO 6000",
+        intro: "Para 48 GB, las RTX 3090 usadas son el par más barato en los datos del tracker; dos RTX 5090 llegan a 64 GB a cerca de tres veces ese precio, y una RTX PRO 6000 llega a 96 GB en una sola tarjeta.",
+        columns: [
+          "Configuración",
+          "VRAM",
+          "Precio de GPU",
+          "Potencia nominal",
+          "NVLink"
+        ],
+        rows: [
+          {
+            "Configuración": "2× RTX 3090 (usadas)",
+            VRAM: "48 GB",
+            "Precio de GPU": "$2,800–3,100",
+            "Potencia nominal": "700 W",
+            NVLink: "Admite puente"
+          },
+          {
+            "Configuración": "2× RTX 4090 (usadas)",
+            VRAM: "48 GB",
+            "Precio de GPU": "$5,150–6,020",
+            "Potencia nominal": "900 W",
+            NVLink: "No"
+          },
+          {
+            "Configuración": "1× RTX 5090 (nueva)",
+            VRAM: "32 GB",
+            "Precio de GPU": "$4,500–4,700",
+            "Potencia nominal": "575 W",
+            NVLink: "No"
+          },
+          {
+            "Configuración": "2× RTX 5090 (nuevas)",
+            VRAM: "64 GB",
+            "Precio de GPU": "$9,000–9,400",
+            "Potencia nominal": "1,150 W",
+            NVLink: "No"
+          },
+          {
+            "Configuración": "1× RTX PRO 6000",
+            VRAM: "96 GB",
+            "Precio de GPU": "Unos $16,000",
+            "Potencia nominal": "600 W máx.",
+            NVLink: "No aplica"
+          }
+        ]
+      },
+      {
+        type: "list",
+        h2: "Enfriar cerca de 1.25 kW depende del flujo de aire y el espacio entre ranuras",
+        intro: "El calor generado equivale al consumo eléctrico: dos tarjetas de 450 W más una CPU de 350 W suman 1,250 W nominales antes de discos y ventiladores, así que el flujo de aire y el espacio entre ranuras deciden si las tarjetas reducen su velocidad por temperatura.",
+        items: [
+          "<strong>Espacio entre ranuras:</strong> NVIDIA lista la RTX 4090 de referencia como una tarjeta de 3 ranuras y 304 mm. Elige una placa base y un gabinete que dejen un hueco entre las dos tarjetas, o la de arriba respirará el aire caliente de la de abajo.",
+          "<strong>Flujo de aire del gabinete:</strong> entrada frontal, salida trasera y superior, y filtros que puedas limpiar. Un gabinete pensado para dos tarjetas grandes importa más que un radiador llamativo.",
+          "<strong>Límites de potencia:</strong> bajar el límite de potencia con <code>nvidia-smi -pl</code> reduce el calor y el consumo pico. Prueba cuánta velocidad cuesta con tu carga de trabajo antes de fijar un valor."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Cómo dimensionar la PSU y el circuito a partir de la potencia nominal",
+        intro: "Suma la potencia nominal de cada GPU y de la CPU, y dimensiona la PSU en cerca de 1.2× esa suma: unos 1,260 W para dos RTX 3090 y un 9960X, 1,500 W para dos RTX 4090, 1,800 W para dos RTX 5090.",
+        items: [
+          "<strong>Consumos nominales:</strong> NVIDIA lista 350 W para la RTX 3090, 450 W para la RTX 4090 y 575 W para la RTX 5090. AMD asigna 350 W a la serie Threadripper 9000.",
+          "<strong>Los requisitos de una sola tarjeta no se suman:</strong> el requisito de sistema de 850 W que NVIDIA indica para la RTX 4090 corresponde a un sistema con una tarjeta. Dimensiona un equipo de dos tarjetas con la suma de arriba.",
+          "<strong>Conectores:</strong> cuenta los cables PCIe de 8 pines o 12V-2x6 que ofrece la PSU y sigue las indicaciones del fabricante de la tarjeta sobre adaptadores.",
+          "<strong>Circuito:</strong> un circuito de 120 V / 15 A en EE. UU. tiene una capacidad nominal de 1,800 W, y la práctica eléctrica suele limitar las cargas continuas al 80% de eso, 1,440 W. Un circuito de 230 V / 16 A tiene una capacidad nominal de 3,680 W. Pide a un electricista con licencia que revise el circuito antes de usar un equipo con dos GPU a plena carga.",
+          "Esta página es información general, no asesoría eléctrica. Las potencias nominales y las normas locales varían; pide a un electricista cualificado que revise los circuitos y el cableado."
+        ]
+      },
+      {
+        type: "table",
+        h2: "Qué se midió, qué no y cuántos usuarios caben",
+        intro: "PromptQuorum no ha medido un modelo de 70B en un equipo con dos GPU, así que esta página no publica ninguna cifra de tokens por segundo para él; a continuación hay resultados de una sola tarjeta reportados por desarrolladores y cálculos a partir de los tamaños de archivo.",
+        columns: [
+          "Configuración",
+          "Pool",
+          "Libre tras el modelo de 43 GB"
+        ],
+        rows: [
+          {
+            "Configuración": "2× 24 GB (48 GB)",
+            Pool: "48 GB",
+            "Libre tras el modelo de 43 GB": "Unos 5 GB"
+          },
+          {
+            "Configuración": "1× 32 GB",
+            Pool: "32 GB",
+            "Libre tras el modelo de 43 GB": "No cabe"
+          },
+          {
+            "Configuración": "2× 32 GB (64 GB)",
+            Pool: "64 GB",
+            "Libre tras el modelo de 43 GB": "Unos 21 GB"
+          },
+          {
+            "Configuración": "1× 96 GB",
+            Pool: "96 GB",
+            "Libre tras el modelo de 43 GB": "Unos 53 GB"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "Errores comunes al armar una estación de trabajo",
+        items: [
+          "<strong>Dar por hecho que hay NVLink en la RTX 4090 o la RTX 5090.</strong> NVIDIA no lista NVLink en ninguna de las dos. Planea la división por PCIe.",
+          "<strong>Mezclar modelos de GPU.</strong> El paralelismo de tensores de vLLM reparte los pesos por igual, así que la tarjeta con menos memoria limita al par. Compra tarjetas idénticas.",
+          "<strong>Comprar primero 128 GB de DDR5.</strong> Un modelo que cabe en la VRAM no los necesita, y los precios de la DDR5 estaban subiendo en 2026. Empieza con 64 GB.",
+          "<strong>Dimensionar la PSU a partir de una sola tarjeta.</strong> La cifra de 850 W de NVIDIA para la RTX 4090 corresponde a una tarjeta. Suma ambas tarjetas y la CPU, y luego añade margen.",
+          "<strong>Dejar la electricidad fuera del costo.</strong> 900 W en funcionamiento continuo son 7,884 kWh al año: unos $1,180 con una tarifa de ejemplo de $0.15/kWh y unos $2,760 con $0.35/kWh. El consumo real durante la inferencia suele ser menor que la potencia nominal y una estación de trabajo rara vez funciona las 24 horas, todos los días, así que toma esto como un límite superior."
+        ]
+      },
+      {
+        type: "faq",
+        h2: "Preguntas frecuentes",
+        faqs: [
+          {
+            q: "¿Debo usar NVLink para unir dos GPU?",
+            a: "No puedes en la RTX 4090 ni en la RTX 5090: NVIDIA no lista NVLink en ninguna de las dos. La RTX 3090 admite un puente, pero llama.cpp, Ollama y vLLM reparten un modelo por PCIe sin él, y la ganancia de NVLink depende del motor y del tamaño de lote."
+          },
+          {
+            q: "¿Puede una sola RTX 5090 ejecutar un modelo de 70B?",
+            a: "No por completo en VRAM. La RTX 5090 tiene 32 GB y el archivo de Llama 3.3 70B en Q4 pesa 43 GB, así que unos 11 GB o más se ejecutan desde la RAM del sistema, lo cual es mucho más lento. Un modelo de clase 32B en Q4 (unos 20 GB) sí cabe en una sola tarjeta."
+          },
+          {
+            q: "¿Cuánto cuesta una estación de trabajo para LLM local en 2026?",
+            a: "Solo las GPU y la CPU parten cerca de $4,300: dos RTX 3090 usadas a $2,800–3,100 en conjunto (listados del tracker del 2026-10-15) más un Threadripper 9960X a $1,499 (precio de lanzamiento de AMD). Dos RTX 4090 usadas elevan la línea de GPU a unos $5,150–6,020. La placa base, la DDR5 registrada, la PSU, la refrigeración, el almacenamiento y el gabinete se suman aparte, y los precios de la memoria en particular estaban subiendo en 2026, así que calcula la lista completa con los listados actuales."
+          }
+        ]
+      },
+      {
+        type: "cta",
+        h2: "Leer la guía completa",
+        body: "Las fuentes, los precios con fecha y todas las salvedades están en el artículo.",
+        cta: "Estación de trabajo para LLM local 2026: GPU, RAM, PSU",
+        href: "https://www.promptquorum.com/es/local-llms/local-llm-workstation-build"
+      }
+    ]
+  },
+  pt: {
+    title: "Estação de trabalho para LLM local 2026: GPU, RAM, custo",
+    ui: {
+      prev: "← Anterior",
+      next: "Próximo →",
+      back: "← Voltar ao artigo",
+      short: "← Artigo",
+      cta: "Ler o guia completo",
+      ctaBody: "As fontes, os preços com data e todas as ressalvas estão no artigo."
+    },
+    slides: [
+      {
+        type: "title",
+        h1: "Estação de trabalho para LLM local (2026): GPUs, RAM, fonte e custos para modelos 70B",
+        subtitle: "Uma estação de trabalho de LLM local para 70B precisa de uns 48 GB de memória de GPU: o Llama 3.3 70B tem 43 GB em Q4; uma placa de 24 GB não basta, duas sim. Segundo a InsiderLLM (2026-10-15), duas RTX 3090 usadas custam cerca de $2,800–3,100.",
+        link: "https://www.promptquorum.com/pt/local-llms/local-llm-workstation-build"
+      },
+      {
+        type: "list",
+        h2: "Pontos principais",
+        items: [
+          "Meta de VRAM: o Llama 3.3 70B em Q4 é um download de 43 GB, então planeje 48 GB de memória de GPU (duas placas de 24 GB) e espere sobrar cerca de 5 GB para o contexto.",
+          "GPUs: duas RTX 3090 usadas (cerca de $1,400–1,550 cada) são o caminho de 48 GB mais barato nos dados rastreados; duas RTX 4090 usadas custam cerca de $2,575–3,010 cada; duas RTX 5090 novas (cerca de $4,500–4,700 cada) dão 64 GB.",
+          "NVLink: a NVIDIA não lista NVLink na RTX 4090 nem na RTX 5090; a RTX 3090 aceita uma ponte. llama.cpp, Ollama e vLLM dividem um modelo entre GPUs via PCIe sem ela."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Pontos principais",
+        items: [
+          "CPU: um Threadripper 9960X ($1,499 de preço de lançamento) ou 9970X ($2,499) em TRX50 oferece até 80 lanes PCIe 5.0; uma placa-mãe Ryzen com dois slots x8 também roda duas GPUs.",
+          "RAM: 64 GB bastam quando o modelo fica na VRAM. A Hardware Busters informou que os preços da DDR5 subiram cerca de 500% nos 12 meses até agosto de 2026 e que um kit de 128 GB apareceu a $3,399, então compre 64 GB primeiro.",
+          "Energia: só as potências nominais das GPUs somam 700 W (2× RTX 3090), 900 W (2× RTX 4090) ou 1,150 W (2× RTX 5090), mais 350 W de um Threadripper. Dimensione a fonte em cerca de 1.2× a soma e confira seu circuito."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Pontos principais",
+        items: [
+          "Velocidade: a PromptQuorum não mediu um 70B em uma montagem com duas GPUs. Resultados do llama.cpp com 7B em uma única placa, reportados por desenvolvedores, são 158.2 (RTX 3090), 186.2 (RTX 4090) e 290.0 tok/s (RTX 5090).",
+          "Alternativas: o Mac Studio M5 Max (a partir de $2,499, até 128 GB) ou M5 Ultra (a partir de $5,499, até 512 GB) e mini workstations como Strix Halo e DGX Spark entregam muita memória em uma só caixa."
+        ]
+      },
+      {
+        type: "table",
+        h2: "Um modelo 70B precisa de cerca de 48 GB de memória de GPU",
+        intro: "Monte uma estação de trabalho com várias GPUs quando um modelo de que você depende não cabe em 24–32 GB de VRAM; o cache de contexto precisa de memória além do arquivo do modelo.",
+        columns: [
+          "Modelo (classe Q4)",
+          "Tamanho do download",
+          "Cabe em"
+        ],
+        rows: [
+          {
+            "Modelo (classe Q4)": "gpt-oss:20b",
+            "Tamanho do download": "14 GB",
+            "Cabe em": "Uma GPU de 16 GB ou mais"
+          },
+          {
+            "Modelo (classe Q4)": "Modelo da classe 32B",
+            "Tamanho do download": "Cerca de 20 GB",
+            "Cabe em": "Uma GPU de 24 GB"
+          },
+          {
+            "Modelo (classe Q4)": "llama3.3:70b",
+            "Tamanho do download": "43 GB",
+            "Cabe em": "Duas GPUs de 24 GB (48 GB)"
+          },
+          {
+            "Modelo (classe Q4)": "gpt-oss:120b",
+            "Tamanho do download": "65 GB",
+            "Cabe em": "80 GB ou mais; não cabe em 64 GB"
+          }
+        ]
+      },
+      {
+        type: "table",
+        h2: "Lista de peças com duas GPUs e preços com fonte",
+        intro: "Só as GPUs e a CPU já começam perto de $4,300: duas RTX 3090 usadas ($2,800–3,100) mais um Threadripper 9960X ($1,499 no preço de lançamento da AMD), antes de placa-mãe, memória, fonte, refrigeração, armazenamento e gabinete.",
+        columns: [
+          "Componente",
+          "Escolha",
+          "Preço",
+          "Por quê"
+        ],
+        rows: [
+          {
+            Componente: "GPUs",
+            Escolha: "2× RTX 3090 24 GB usadas",
+            "Preço": "$2,800–3,100",
+            "Por quê": "Pool de 48 GB; ponte NVLink suportada"
+          },
+          {
+            Componente: "GPUs (alternativa)",
+            Escolha: "2× RTX 4090 24 GB usadas",
+            "Preço": "$5,150–6,020",
+            "Por quê": "Processamento de prompt mais rápido; sem NVLink"
+          },
+          {
+            Componente: "CPU",
+            Escolha: "Threadripper 9960X, 24 núcleos",
+            "Preço": "$1,499 de lançamento",
+            "Por quê": "TDP de 350 W; plataforma TRX50"
+          },
+          {
+            Componente: "CPU (alternativa)",
+            Escolha: "Threadripper 9970X, 32 núcleos",
+            "Preço": "$2,499 de lançamento",
+            "Por quê": "Mais núcleos para trabalho na CPU"
+          },
+          {
+            Componente: "Placa-mãe",
+            Escolha: "Placa TRX50 (sTR5)",
+            "Preço": "Não rastreado",
+            "Por quê": "Dois slots x16 com espaço para placas de 3 slots"
+          },
+          {
+            Componente: "RAM",
+            Escolha: "64 GB de DDR5 registrada",
+            "Preço": "Não rastreado",
+            "Por quê": "Veja a nota sobre preço de memória abaixo"
+          },
+          {
+            Componente: "Fonte",
+            Escolha: "1,300–1,600 W, com cabos de GPU suficientes",
+            "Preço": "Não rastreado",
+            "Por quê": "Cerca de 1.2× a soma das potências nominais"
+          },
+          {
+            Componente: "Armazenamento",
+            Escolha: "SSD NVMe de 2–4 TB",
+            "Preço": "Não rastreado",
+            "Por quê": "Um arquivo 70B Q4 tem 43 GB"
+          },
+          {
+            Componente: "Gabinete e refrigeração",
+            Escolha: "Gabinete grande com bom fluxo de ar",
+            "Preço": "Não rastreado",
+            "Por quê": "Duas placas mais uma CPU de 350 W"
+          },
+          {
+            Componente: "Piso (GPU + CPU)",
+            Escolha: "Duas 3090 + 9960X",
+            "Preço": "$4,299–4,599",
+            "Por quê": "Antes das cinco linhas sem rastreamento"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "Duas GPUs dividem um modelo via PCIe",
+        items: [
+          "<strong>Instale duas placas idênticas:</strong> use slots que rodem pelo menos a x8 cada um e deixe espaço para o ar circular entre as placas. Confira o diagrama de lanes no manual da placa-mãe, não só o número de slots.",
+          "<strong>Instale o driver da NVIDIA e confirme as duas placas:</strong> rode <code>nvidia-smi</code> e verifique se as duas GPUs aparecem com a memória completa.",
+          "<strong>Comece com a divisão por camadas:</strong> o Ollama distribui o modelo pelas GPUs disponíveis automaticamente; o llama.cpp usa <code>--tensor-split 1,1</code> para uma divisão igual.",
+          "<strong>Use o vLLM para atender vários usuários:</strong> <code>--tensor-parallel-size 2</code> divide os pesos entre as duas placas; use um checkpoint de 4 bits, como uma versão AWQ, para os pesos caberem em 48 GB.",
+          "<strong>Meça antes de confiar em um número:</strong> rode seus próprios prompts e registre tokens por segundo, uso de memória e temperaturas durante uma execução longa.",
+          "<strong>Limite a potência se necessário:</strong> <code>nvidia-smi -pl &lt;watts&gt;</code> reduz o limite de potência da placa; teste o efeito na velocidade com a sua carga de trabalho antes de manter um valor."
+        ]
+      },
+      {
+        type: "table",
+        h2: "RTX 3090, 4090, 5090 e RTX PRO 6000 comparadas",
+        intro: "Para 48 GB, as RTX 3090 usadas são o par mais barato nos dados rastreados; duas RTX 5090 chegam a 64 GB por cerca de três vezes esse preço, e uma RTX PRO 6000 chega a 96 GB em uma única placa.",
+        columns: [
+          "Configuração",
+          "VRAM",
+          "Preço das GPUs",
+          "Potência nominal",
+          "NVLink"
+        ],
+        rows: [
+          {
+            "Configuração": "2× RTX 3090 (usadas)",
+            VRAM: "48 GB",
+            "Preço das GPUs": "$2,800–3,100",
+            "Potência nominal": "700 W",
+            NVLink: "Ponte suportada"
+          },
+          {
+            "Configuração": "2× RTX 4090 (usadas)",
+            VRAM: "48 GB",
+            "Preço das GPUs": "$5,150–6,020",
+            "Potência nominal": "900 W",
+            NVLink: "Não"
+          },
+          {
+            "Configuração": "1× RTX 5090 (nova)",
+            VRAM: "32 GB",
+            "Preço das GPUs": "$4,500–4,700",
+            "Potência nominal": "575 W",
+            NVLink: "Não"
+          },
+          {
+            "Configuração": "2× RTX 5090 (novas)",
+            VRAM: "64 GB",
+            "Preço das GPUs": "$9,000–9,400",
+            "Potência nominal": "1,150 W",
+            NVLink: "Não"
+          },
+          {
+            "Configuração": "1× RTX PRO 6000",
+            VRAM: "96 GB",
+            "Preço das GPUs": "Cerca de $16,000",
+            "Potência nominal": "600 W no máximo",
+            NVLink: "Não se aplica"
+          }
+        ]
+      },
+      {
+        type: "list",
+        h2: "Refrigerar cerca de 1.25 kW depende do fluxo de ar e do espaçamento dos slots",
+        intro: "A geração de calor é igual ao consumo elétrico: duas placas de 450 W mais uma CPU de 350 W somam 1,250 W nominais antes de unidades e ventoinhas, então o fluxo de ar e o espaçamento dos slots decidem se as placas sofrem throttling.",
+        items: [
+          "<strong>Espaçamento dos slots:</strong> a NVIDIA lista a RTX 4090 de referência como uma placa de 3 slots e 304 mm. Escolha uma placa-mãe e um gabinete que deixem um vão entre as duas placas, ou a placa de cima respira o ar quente que sai da de baixo.",
+          "<strong>Fluxo de ar do gabinete:</strong> entrada frontal, saída traseira e superior, e filtros que você consiga limpar. Um gabinete feito para duas placas grandes importa mais do que um radiador sofisticado.",
+          "<strong>Limites de potência:</strong> reduzir o limite de potência com <code>nvidia-smi -pl</code> diminui o calor e o pico de consumo. Teste o custo em velocidade na sua carga de trabalho antes de fixar um valor."
+        ]
+      },
+      {
+        type: "list",
+        h2: "Dimensionamento da fonte e do circuito pela potência nominal",
+        intro: "Some a potência nominal de cada GPU e da CPU e dimensione a fonte em cerca de 1.2× essa soma: aproximadamente 1,260 W para duas RTX 3090 e um 9960X, 1,500 W para duas RTX 4090, 1,800 W para duas RTX 5090.",
+        items: [
+          "<strong>Consumos nominais:</strong> a NVIDIA lista 350 W para a RTX 3090, 450 W para a RTX 4090 e 575 W para a RTX 5090. A AMD indica 350 W para a série Threadripper 9000.",
+          "<strong>Requisitos de uma placa não se somam:</strong> o requisito de sistema de 850 W da NVIDIA para a RTX 4090 vale para um sistema com uma só placa. Dimensione uma montagem com duas placas pela soma acima.",
+          "<strong>Conectores:</strong> conte os cabos PCIe de 8 pinos ou 12V-2x6 que a fonte oferece e siga a orientação do fabricante da placa sobre adaptadores.",
+          "<strong>Circuito:</strong> um circuito americano de 120 V / 15 A é nominalmente de 1,800 W, e a prática elétrica costuma limitar cargas contínuas a 80% disso, 1,440 W. Um circuito de 230 V / 16 A é nominalmente de 3,680 W. Peça a um eletricista habilitado que confira o circuito antes de rodar uma máquina com duas GPUs em carga total.",
+          "Esta página traz informação geral, não orientação elétrica. As potências nominais e as normas locais variam; peça a um eletricista qualificado que confira circuitos e fiação."
+        ]
+      },
+      {
+        type: "table",
+        h2: "O que foi medido, o que não foi e quantos usuários cabem",
+        intro: "A PromptQuorum não mediu um 70B em uma montagem com duas GPUs, então esta página não publica nenhum número de tokens por segundo para ela; abaixo estão resultados de uma única placa reportados por desenvolvedores e contas feitas a partir dos tamanhos dos arquivos.",
+        columns: [
+          "Configuração",
+          "Pool",
+          "Sobra após o modelo de 43 GB"
+        ],
+        rows: [
+          {
+            "Configuração": "2× 24 GB (48 GB)",
+            Pool: "48 GB",
+            "Sobra após o modelo de 43 GB": "Cerca de 5 GB"
+          },
+          {
+            "Configuração": "1× 32 GB",
+            Pool: "32 GB",
+            "Sobra após o modelo de 43 GB": "Não cabe"
+          },
+          {
+            "Configuração": "2× 32 GB (64 GB)",
+            Pool: "64 GB",
+            "Sobra após o modelo de 43 GB": "Cerca de 21 GB"
+          },
+          {
+            "Configuração": "1× 96 GB",
+            Pool: "96 GB",
+            "Sobra após o modelo de 43 GB": "Cerca de 53 GB"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "Erros comuns ao montar uma estação de trabalho",
+        items: [
+          "<strong>Presumir NVLink na RTX 4090 ou na RTX 5090.</strong> A NVIDIA não lista NVLink em nenhuma das duas. Planeje a divisão via PCIe.",
+          "<strong>Misturar modelos de GPU.</strong> O paralelismo de tensores do vLLM divide os pesos por igual, então a placa com menos memória limita o par. Compre placas idênticas.",
+          "<strong>Comprar 128 GB de DDR5 primeiro.</strong> Um modelo que fica na VRAM não precisa disso, e os preços da DDR5 estavam subindo em 2026. Comece com 64 GB.",
+          "<strong>Dimensionar a fonte a partir de uma placa só.</strong> O número de 850 W da NVIDIA para a RTX 4090 vale para uma placa. Some as duas placas e a CPU e depois acrescente folga.",
+          "<strong>Deixar a eletricidade fora do custo.</strong> 900 W em uso contínuo dão 7,884 kWh por ano: cerca de $1,180 a uma tarifa de exemplo de $0.15/kWh e cerca de $2,760 a $0.35/kWh. O consumo real durante a inferência costuma ficar abaixo da potência nominal e uma workstation raramente roda 24 horas por dia, então trate isso como um limite superior."
+        ]
+      },
+      {
+        type: "faq",
+        h2: "Perguntas frequentes",
+        faqs: [
+          {
+            q: "Devo usar NVLink para juntar duas GPUs?",
+            a: "Na RTX 4090 ou na RTX 5090 você não pode: a NVIDIA não lista NVLink em nenhuma das duas. A RTX 3090 aceita uma ponte, mas llama.cpp, Ollama e vLLM dividem um modelo via PCIe sem ela, e o ganho do NVLink depende do engine e do tamanho do lote."
+          },
+          {
+            q: "Uma RTX 5090 roda um modelo 70B?",
+            a: "Não inteiramente na VRAM. A RTX 5090 tem 32 GB e o arquivo do Llama 3.3 70B Q4 tem 43 GB, então cerca de 11 GB ou mais rodam a partir da RAM do sistema, que é bem mais lenta. Um modelo da classe 32B em Q4 (cerca de 20 GB) cabe em uma placa."
+          },
+          {
+            q: "Quanto custa uma estação de trabalho para LLM local em 2026?",
+            a: "Só as GPUs e a CPU já começam perto de $4,300: duas RTX 3090 usadas a $2,800–3,100 no total (anúncios de rastreador de 2026-10-15) mais um Threadripper 9960X a $1,499 (preço de lançamento da AMD). Duas RTX 4090 usadas elevam a linha das GPUs para cerca de $5,150–6,020. Placa-mãe, DDR5 registrada, fonte, refrigeração, armazenamento e gabinete vêm por cima, e os preços de memória em particular estavam subindo em 2026, então calcule a lista completa com os anúncios atuais."
+          }
+        ]
+      },
+      {
+        type: "cta",
+        h2: "Ler o guia completo",
+        body: "As fontes, os preços com data e todas as ressalvas estão no artigo.",
+        cta: "Estação de trabalho para LLM local 2026: GPU, RAM, custo",
+        href: "https://www.promptquorum.com/pt/local-llms/local-llm-workstation-build"
+      }
+    ]
+  },
+  ar: {
+    title: "محطة عمل LLM محلية 2026: GPU وRAM وPSU والتكلفة",
+    ui: {
+      prev: "→ السابق",
+      next: "التالي ←",
+      back: "→ العودة إلى المقال",
+      short: "→ المقال",
+      cta: "اقرأ الدليل الكامل",
+      ctaBody: "المصادر والأسعار المؤرخة وكل التحفظات موجودة في المقال."
+    },
+    slides: [
+      {
+        type: "title",
+        h1: "تجميع محطة عمل لنماذج LLM محلية (2026): بطاقات GPU وذاكرة RAM ومزود الطاقة والتكلفة لنماذج 70B",
+        subtitle: "تحتاج محطة عمل لنماذج LLM محلية بحجم 70B إلى نحو 48 GB من ذاكرة GPU: حجم Llama 3.3 70B بتكميم Q4 هو 43 GB، فلا تتسع له بطاقة واحدة بسعة 24 GB وتتسع له بطاقتان. في قوائم متتبّع InsiderLLM المؤرخة 2026-10-15 تكلفة بطاقتي RTX 3090 مستعملتين نحو $2,800–3,100.",
+        link: "https://www.promptquorum.com/ar/local-llms/local-llm-workstation-build"
+      },
+      {
+        type: "list",
+        h2: "النقاط الرئيسية",
+        items: [
+          "هدف VRAM: نموذج Llama 3.3 70B بتكميم Q4 هو تنزيل بحجم 43 GB، لذا خطّط لـ 48 GB من ذاكرة GPU (بطاقتان بسعة 24 GB لكل منهما) وتوقّع بقاء نحو 5 GB للسياق.",
+          "بطاقات GPU: بطاقتا RTX 3090 مستعملتان (نحو $1,400–1,550 للواحدة) هما أقل طريق سعرًا إلى 48 GB في البيانات المتتبَّعة؛ وتكلفة بطاقتي RTX 4090 مستعملتين نحو $2,575–3,010 للواحدة؛ وبطاقتا RTX 5090 جديدتان (نحو $4,500–4,700 للواحدة) تعطيان 64 GB.",
+          "NVLink: لا تذكر NVIDIA وجود NVLink في RTX 4090 وRTX 5090؛ أما RTX 3090 فتدعم جسرًا. تقسّم llama.cpp وOllama وvLLM النموذج على بطاقات GPU عبر PCIe من دونه."
+        ]
+      },
+      {
+        type: "list",
+        h2: "النقاط الرئيسية",
+        items: [
+          "المعالج: يوفّر Threadripper 9960X (سعر الإطلاق $1,499) أو 9970X ($2,499) على منصة TRX50 ما يصل إلى 80 مسار PCIe 5.0؛ كما تشغّل لوحة Ryzen المكتبية ذات فتحتين x8 بطاقتي GPU أيضًا.",
+          "الذاكرة RAM: تكفي 64 GB عندما يكون النموذج في VRAM. أفاد Hardware Busters بأن أسعار DDR5 ارتفعت بنحو 500% خلال 12 شهرًا حتى أغسطس 2026 وبأن مجموعة واحدة بسعة 128 GB أُدرجت بسعر $3,399، لذا اشترِ 64 GB أولًا.",
+          "الطاقة: القدرات المقدّرة للبطاقات وحدها هي 700 W (2× RTX 3090) أو 900 W (2× RTX 4090) أو 1,150 W (2× RTX 5090)، إضافة إلى 350 W لمعالج Threadripper. اختر مزود الطاقة بنحو 1.2× المجموع وتحقّق من دائرتك الكهربائية."
+        ]
+      },
+      {
+        type: "list",
+        h2: "النقاط الرئيسية",
+        items: [
+          "السرعة: لم تقِس PromptQuorum نموذج 70B على جهاز ببطاقتي GPU. نتائج llama.cpp لنموذج 7B على بطاقة واحدة كما أبلغ عنها المطورون هي 158.2 (RTX 3090) و186.2 (RTX 4090) و290.0 tok/s (RTX 5090).",
+          "البدائل: يعطي Mac Studio M5 Max (من $2,499, وحتى 128 GB) أو M5 Ultra (من $5,499, وحتى 512 GB) وأجهزة محطات العمل المصغّرة مثل Strix Halo وDGX Spark ذاكرة كبيرة في صندوق واحد."
+        ]
+      },
+      {
+        type: "table",
+        h2: "نموذج 70B يحتاج إلى نحو 48 GB من ذاكرة GPU",
+        intro: "ابنِ محطة عمل متعددة البطاقات عندما لا يتسع نموذج تعتمد عليه في 24–32 GB من VRAM؛ فذاكرة السياق (context cache) تحتاج إلى ذاكرة فوق حجم ملف النموذج.",
+        columns: [
+          "النموذج (فئة Q4)",
+          "حجم التنزيل",
+          "يتسع على"
+        ],
+        rows: [
+          {
+            "النموذج (فئة Q4)": "gpt-oss:20b",
+            "حجم التنزيل": "14 GB",
+            "يتسع على": "بطاقة GPU واحدة بسعة 16 GB أو أكثر"
+          },
+          {
+            "النموذج (فئة Q4)": "نموذج من فئة 32B",
+            "حجم التنزيل": "نحو 20 GB",
+            "يتسع على": "بطاقة GPU واحدة بسعة 24 GB"
+          },
+          {
+            "النموذج (فئة Q4)": "llama3.3:70b",
+            "حجم التنزيل": "43 GB",
+            "يتسع على": "بطاقتا GPU بسعة 24 GB (48 GB)"
+          },
+          {
+            "النموذج (فئة Q4)": "gpt-oss:120b",
+            "حجم التنزيل": "65 GB",
+            "يتسع على": "80 GB أو أكثر؛ لا يتسع في 64 GB"
+          }
+        ]
+      },
+      {
+        type: "table",
+        h2: "قائمة قطع ببطاقتي رسوميات مع أسعار موثقة",
+        intro: "تبدأ البطاقات والمعالج وحدهما قرب $4,300: بطاقتا RTX 3090 مستعملتان ($2,800–3,100) إضافة إلى Threadripper 9960X ($1,499 بسعر الإطلاق لدى AMD)، قبل اللوحة الأم والذاكرة ومزود الطاقة والتبريد والتخزين والهيكل.",
+        columns: [
+          "المكوّن",
+          "الاختيار",
+          "السعر",
+          "السبب"
+        ],
+        rows: [
+          {
+            "المكوّن": "بطاقات GPU",
+            "الاختيار": "2× RTX 3090 بسعة 24 GB (مستعملة)",
+            "السعر": "$2,800–3,100",
+            "السبب": "مجمّع بسعة 48 GB؛ جسر NVLink مدعوم"
+          },
+          {
+            "المكوّن": "بطاقات GPU (بديل)",
+            "الاختيار": "2× RTX 4090 بسعة 24 GB (مستعملة)",
+            "السعر": "$5,150–6,020",
+            "السبب": "معالجة أسرع للمطالبات؛ بلا NVLink"
+          },
+          {
+            "المكوّن": "المعالج",
+            "الاختيار": "Threadripper 9960X بـ 24 نواة",
+            "السعر": "$1,499 عند الإطلاق",
+            "السبب": "استهلاك TDP بقدرة 350 W؛ منصة TRX50"
+          },
+          {
+            "المكوّن": "المعالج (بديل)",
+            "الاختيار": "Threadripper 9970X بـ 32 نواة",
+            "السعر": "$2,499 عند الإطلاق",
+            "السبب": "أنوية أكثر للأعمال على جانب المعالج"
+          },
+          {
+            "المكوّن": "اللوحة الأم",
+            "الاختيار": "لوحة TRX50 (sTR5)",
+            "السعر": "غير متتبَّع",
+            "السبب": "فتحتا x16 مع مساحة لبطاقات بسُمك 3 فتحات"
+          },
+          {
+            "المكوّن": "الذاكرة RAM",
+            "الاختيار": "64 GB من DDR5 المسجّلة",
+            "السعر": "غير متتبَّع",
+            "السبب": "راجع ملاحظة أسعار الذاكرة أدناه"
+          },
+          {
+            "المكوّن": "مزود الطاقة",
+            "الاختيار": "1,300–1,600 W مع عدد كافٍ من كابلات GPU",
+            "السعر": "غير متتبَّع",
+            "السبب": "نحو 1.2× مجموع القدرات المقدّرة للمكوّنات"
+          },
+          {
+            "المكوّن": "التخزين",
+            "الاختيار": "قرص NVMe SSD بسعة 2–4 TB",
+            "السعر": "غير متتبَّع",
+            "السبب": "ملف نموذج 70B بتكميم Q4 حجمه 43 GB"
+          },
+          {
+            "المكوّن": "الهيكل والتبريد",
+            "الاختيار": "هيكل كبير بتدفق هواء جيد",
+            "السعر": "غير متتبَّع",
+            "السبب": "بطاقتان إضافة إلى معالج بقدرة 350 W"
+          },
+          {
+            "المكوّن": "الحد الأدنى (GPU + معالج)",
+            "الاختيار": "RTX 3090 مزدوجة + 9960X",
+            "السعر": "$4,299–4,599",
+            "السبب": "قبل الأسطر الخمسة غير المتتبَّعة"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "بطاقتا رسوميات تتقاسمان نموذجًا واحدًا عبر PCIe",
+        items: [
+          "<strong>ركّب بطاقتين متطابقتين:</strong> استخدم فتحات تعمل بسرعة x8 على الأقل لكل بطاقة واترك مجالًا لتدفق الهواء بين البطاقتين. راجع مخطط المسارات في دليل اللوحة الأم، لا عدد الفتحات فقط.",
+          "<strong>ثبّت تعريف NVIDIA وتأكد من ظهور البطاقتين:</strong> شغّل <code>nvidia-smi</code> وتحقق من ظهور كلتا بطاقتي GPU وذاكرتيهما كاملتين.",
+          "<strong>ابدأ بتقسيم الطبقات:</strong> تقسّم Ollama النموذج على بطاقات GPU المتاحة تلقائيًا؛ وتقبل llama.cpp الخيار <code>--tensor-split 1,1</code> لتقسيم متساوٍ.",
+          "<strong>استخدم vLLM للخدمة متعددة المستخدمين:</strong> يوزّع <code>--tensor-parallel-size 2</code> الأوزان على البطاقتين؛ استخدم نقطة تحقق بتكميم 4 بت مثل إصدار AWQ لكي تتسع الأوزان في 48 GB.",
+          "<strong>قِس قبل أن تثق برقم:</strong> شغّل مطالباتك أنت وسجّل عدد الرموز في الثانية واستهلاك الذاكرة ودرجات الحرارة على مدى تشغيل طويل.",
+          "<strong>حدّد الطاقة عند الحاجة:</strong> يخفض <code>nvidia-smi -pl &lt;watts&gt;</code> حد قدرة اللوحة؛ اختبر أثر ذلك في السرعة على حِمل عملك قبل اعتماد قيمة."
+        ]
+      },
+      {
+        type: "table",
+        h2: "مقارنة RTX 3090 وRTX 4090 وRTX 5090 وRTX PRO 6000",
+        intro: "للوصول إلى 48 GB، تُعد بطاقات RTX 3090 المستعملة أقل الأزواج سعرًا في البيانات المتتبَّعة؛ وتصل بطاقتا RTX 5090 إلى 64 GB بنحو ثلاثة أضعاف هذا السعر، وتصل بطاقة RTX PRO 6000 واحدة إلى 96 GB.",
+        columns: [
+          "التكوين",
+          "VRAM",
+          "سعر GPU",
+          "القدرة المقدّرة",
+          "NVLink"
+        ],
+        rows: [
+          {
+            "التكوين": "2× RTX 3090 (مستعملة)",
+            VRAM: "48 GB",
+            "سعر GPU": "$2,800–3,100",
+            "القدرة المقدّرة": "700 W",
+            NVLink: "الجسر مدعوم"
+          },
+          {
+            "التكوين": "2× RTX 4090 (مستعملة)",
+            VRAM: "48 GB",
+            "سعر GPU": "$5,150–6,020",
+            "القدرة المقدّرة": "900 W",
+            NVLink: "لا"
+          },
+          {
+            "التكوين": "1× RTX 5090 (جديدة)",
+            VRAM: "32 GB",
+            "سعر GPU": "$4,500–4,700",
+            "القدرة المقدّرة": "575 W",
+            NVLink: "لا"
+          },
+          {
+            "التكوين": "2× RTX 5090 (جديدة)",
+            VRAM: "64 GB",
+            "سعر GPU": "$9,000–9,400",
+            "القدرة المقدّرة": "1,150 W",
+            NVLink: "لا"
+          },
+          {
+            "التكوين": "1× RTX PRO 6000",
+            VRAM: "96 GB",
+            "سعر GPU": "نحو $16,000",
+            "القدرة المقدّرة": "600 W كحد أقصى",
+            NVLink: "لا ينطبق"
+          }
+        ]
+      },
+      {
+        type: "list",
+        h2: "تبريد نحو 1.25 kW يعتمد على تدفق الهواء والمسافة بين الفتحات",
+        intro: "الحرارة الناتجة تساوي الاستهلاك الكهربائي: بطاقتان بقدرة 450 W لكل منهما إضافة إلى معالج بقدرة 350 W تبلغ قدرتها المقدّرة 1,250 W قبل الأقراص والمراوح، لذا يحدد تدفق الهواء والمسافة بين الفتحات ما إذا كانت البطاقتان ستخفضان أداءهما بسبب الحرارة (throttle).",
+        items: [
+          "<strong>المسافة بين الفتحات:</strong> تذكر NVIDIA أن RTX 4090 المرجعية بطاقة بسُمك 3 فتحات وطول 304 mm. اختر لوحة أم وهيكلًا يتركان فراغًا بين البطاقتين، وإلا استنشقت البطاقة العلوية هواء العادم الخارج من السفلية.",
+          "<strong>تدفق الهواء في الهيكل:</strong> سحب هواء أمامي، وطرد خلفي وعلوي، ومرشحات يمكنك تنظيفها. هيكل مصمم لبطاقتين كبيرتين أهم من مبرّد سائل فاخر.",
+          "<strong>حدود الطاقة:</strong> خفض حد الطاقة بالأمر <code>nvidia-smi -pl</code> يقلل الحرارة وذروة الاستهلاك. اختبر كلفة ذلك في السرعة على حِمل عملك قبل اعتماد قيمة."
+        ]
+      },
+      {
+        type: "list",
+        h2: "تحديد حجم مزود الطاقة والدائرة الكهربائية من القدرة المقدّرة",
+        intro: "اجمع القدرة المقدّرة لكل بطاقة GPU وللمعالج، ثم اختر مزود الطاقة بنحو 1.2× هذا المجموع: نحو 1,260 W لبطاقتي RTX 3090 ومعالج 9960X، و1,500 W لبطاقتي RTX 4090، و1,800 W لبطاقتي RTX 5090.",
+        items: [
+          "<strong>الاستهلاك المقدّر:</strong> تذكر NVIDIA 350 W لبطاقة RTX 3090 و450 W لبطاقة RTX 4090 و575 W لبطاقة RTX 5090. وتحدد AMD قدرة سلسلة Threadripper 9000 بـ 350 W.",
+          "<strong>متطلبات البطاقة الواحدة لا تُجمع:</strong> متطلب NVIDIA البالغ 850 W لـ RTX 4090 هو لنظام ببطاقة واحدة. احسب حجم تجميع ببطاقتين من المجموع أعلاه.",
+          "<strong>الموصّلات:</strong> احسب كابلات PCIe 8-pin أو 12V-2x6 التي يوفّرها مزود الطاقة، واتبع إرشادات صانع البطاقة بشأن المحوّلات.",
+          "<strong>الدائرة الكهربائية:</strong> دائرة أمريكية بجهد 120 V وتيار 15 A قدرتها المقدّرة 1,800 W، وتحدّ الممارسات الكهربائية عادةً الأحمال المستمرة بنسبة 80% منها، أي 1,440 W. ودائرة بجهد 230 V وتيار 16 A قدرتها المقدّرة 3,680 W. اطلب من كهربائي مرخّص فحص الدائرة قبل تشغيل جهاز ببطاقتي GPU بحِمل كامل.",
+          "هذه الصفحة معلومات عامة وليست نصيحة كهربائية. تختلف القدرات المقدّرة والأكواد المحلية؛ اطلب من كهربائي مؤهل فحص الدوائر والأسلاك."
+        ]
+      },
+      {
+        type: "table",
+        h2: "ما الذي قيس وما الذي لم يُقَس وكم مستخدمًا يتسع",
+        intro: "لم تقِس PromptQuorum نموذج 70B على جهاز ببطاقتي GPU، لذا لا تنشر هذه الصفحة رقمًا لعدد الرموز في الثانية له؛ وفيما يلي نتائج بطاقة واحدة أبلغ عنها المطورون وحسابات مبنية على أحجام الملفات.",
+        columns: [
+          "التكوين",
+          "المجمّع",
+          "المتبقي بعد نموذج 43 GB"
+        ],
+        rows: [
+          {
+            "التكوين": "2× 24 GB (48 GB)",
+            "المجمّع": "48 GB",
+            "المتبقي بعد نموذج 43 GB": "نحو 5 GB"
+          },
+          {
+            "التكوين": "1× 32 GB",
+            "المجمّع": "32 GB",
+            "المتبقي بعد نموذج 43 GB": "لا يتسع"
+          },
+          {
+            "التكوين": "2× 32 GB (64 GB)",
+            "المجمّع": "64 GB",
+            "المتبقي بعد نموذج 43 GB": "نحو 21 GB"
+          },
+          {
+            "التكوين": "1× 96 GB",
+            "المجمّع": "96 GB",
+            "المتبقي بعد نموذج 43 GB": "نحو 53 GB"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "أخطاء شائعة في تجميع محطات العمل",
+        items: [
+          "<strong>افتراض وجود NVLink في RTX 4090 أو RTX 5090.</strong> لا تذكر NVIDIA وجود NVLink في أي من البطاقتين. خطّط للتقسيم عبر PCIe.",
+          "<strong>خلط طرازات GPU.</strong> يوزّع التوازي الموتّري في vLLM الأوزان بالتساوي، فتحدّ البطاقة الأقل ذاكرة من قدرة الزوج. اشترِ بطاقتين متطابقتين.",
+          "<strong>شراء 128 GB من DDR5 أولًا.</strong> النموذج الموجود في VRAM لا يحتاج إليها، وكانت أسعار DDR5 ترتفع في 2026. ابدأ بـ 64 GB.",
+          "<strong>تحديد حجم مزود الطاقة من بطاقة واحدة.</strong> رقم NVIDIA البالغ 850 W لـ RTX 4090 هو لبطاقة واحدة. اجمع البطاقتين والمعالج ثم أضف هامشًا.",
+          "<strong>إغفال الكهرباء من التكلفة.</strong> تشغيل 900 W باستمرار يعني 7,884 kWh في السنة: نحو $1,180 بسعر افتراضي قدره $0.15/kWh ونحو $2,760 بسعر $0.35/kWh. والاستهلاك الفعلي أثناء الاستدلال أقل عادةً من القدرة المقدّرة، وقلّما تعمل محطة العمل 24 ساعة على مدار الأسبوع، لذا اعتبر هذا حدًا أعلى."
+        ]
+      },
+      {
+        type: "faq",
+        h2: "الأسئلة الشائعة",
+        faqs: [
+          {
+            q: "هل أستخدم NVLink لربط بطاقتي GPU؟",
+            a: "لا يمكنك ذلك في RTX 4090 أو RTX 5090: فـ NVIDIA لا تذكر وجود NVLink في أي منهما. وتدعم RTX 3090 جسرًا، لكن llama.cpp وOllama وvLLM تقسّم النموذج عبر PCIe من دونه، ويعتمد مكسب NVLink على المحرّك وحجم الدفعة."
+          },
+          {
+            q: "هل تشغّل بطاقة RTX 5090 واحدة نموذج 70B؟",
+            a: "ليس بالكامل في VRAM. تبلغ سعة RTX 5090 ما قدره 32 GB وملف Llama 3.3 70B بتكميم Q4 حجمه 43 GB، فيعمل نحو 11 GB أو أكثر من ذاكرة النظام RAM، وهذا أبطأ بكثير. أما نموذج من فئة 32B بتكميم Q4 (نحو 20 GB) فيتسع في بطاقة واحدة."
+          },
+          {
+            q: "كم تبلغ تكلفة محطة عمل لنماذج LLM محلية في 2026؟",
+            a: "تبدأ البطاقات والمعالج وحدهما قرب $4,300: بطاقتا RTX 3090 مستعملتان بمجموع $2,800–3,100 (قوائم المتتبّع بتاريخ 2026-10-15) إضافة إلى Threadripper 9960X بسعر $1,499 (سعر الإطلاق لدى AMD). وترفع بطاقتا RTX 4090 مستعملتان بند GPU إلى نحو $5,150–6,020. وتأتي اللوحة الأم وذاكرة DDR5 المسجّلة ومزود الطاقة والتبريد والتخزين والهيكل فوق ذلك، كما كانت أسعار الذاكرة خاصةً ترتفع في 2026، لذا احسب القائمة كاملة بحسب القوائم الحالية."
+          }
+        ]
+      },
+      {
+        type: "cta",
+        h2: "اقرأ الدليل الكامل",
+        body: "المصادر والأسعار المؤرخة وكل التحفظات موجودة في المقال.",
+        cta: "محطة عمل LLM محلية 2026: GPU وRAM وPSU والتكلفة",
+        href: "https://www.promptquorum.com/ar/local-llms/local-llm-workstation-build"
+      }
+    ]
+  },
+  ko: {
+    title: "로컬 LLM 워크스테이션 구축 2026: GPU·RAM·PSU·비용",
+    ui: {
+      prev: "← 이전",
+      next: "다음 →",
+      back: "← 기사로 돌아가기",
+      short: "← 기사",
+      cta: "전체 가이드 읽기",
+      ctaBody: "출처, 날짜가 표시된 가격, 모든 유의 사항은 기사에 있습니다."
+    },
+    slides: [
+      {
+        type: "title",
+        h1: "로컬 LLM 워크스테이션 구축 (2026): 70B 모델용 GPU, RAM, PSU, 비용",
+        subtitle: "70B 모델용 로컬 LLM 워크스테이션에는 약 48 GB의 GPU 메모리가 필요합니다. Llama 3.3 70B의 Q4 다운로드 크기가 43 GB이므로 24 GB 카드 한 장으로는 올릴 수 없고, 두 장이면 가능합니다. 2026-10-15자 InsiderLLM 트래커 매물(미국 판매 완료 기준)으로 보면 중고 RTX 3090 두 장은 약 $2,800–3,100입니다.",
+        link: "https://www.promptquorum.com/ko/local-llms/local-llm-workstation-build"
+      },
+      {
+        type: "list",
+        h2: "핵심 내용",
+        items: [
+          "VRAM 목표: Q4의 Llama 3.3 70B는 43 GB 다운로드이므로 48 GB의 GPU 메모리(24 GB 카드 두 장)를 계획하시고, 컨텍스트에 쓸 여유는 약 5 GB로 예상하십시오.",
+          "GPU: 추적된 데이터에서는 중고 RTX 3090 두 장(장당 약 $1,400–1,550)이 가장 저렴한 48 GB 구성입니다. 중고 RTX 4090 두 장은 장당 약 $2,575–3,010이고, 신품 RTX 5090 두 장(장당 약 $4,500–4,700)은 64 GB를 제공합니다.",
+          "NVLink: NVIDIA는 RTX 4090과 RTX 5090에 NVLink를 명시하지 않으며, RTX 3090은 브리지를 지원합니다. llama.cpp, Ollama, vLLM은 NVLink 없이도 PCIe로 모델을 여러 GPU에 나눕니다."
+        ]
+      },
+      {
+        type: "list",
+        h2: "핵심 내용",
+        items: [
+          "CPU: TRX50 플랫폼의 Threadripper 9960X(출시가 $1,499) 또는 9970X($2,499)는 최대 80개의 PCIe 5.0 레인을 제공합니다. x8 슬롯 두 개를 갖춘 Ryzen 데스크톱 보드로도 GPU 두 장을 구동할 수 있습니다.",
+          "RAM: 모델이 VRAM에 올라간다면 64 GB로 충분합니다. Hardware Busters는 DDR5 가격이 2026년 8월까지 12개월간 약 500% 올랐고 128 GB 키트 하나가 $3,399에 등록되었다고 보도했으므로, 먼저 64 GB를 구매하십시오.",
+          "전력: GPU 정격만으로 700 W(RTX 3090 2장), 900 W(RTX 4090 2장), 1,150 W(RTX 5090 2장)이며, Threadripper는 여기에 350 W가 더해집니다. PSU는 합계의 약 1.2배로 산정하고 전기 회로를 확인하십시오."
+        ]
+      },
+      {
+        type: "list",
+        h2: "핵심 내용",
+        items: [
+          "속도: PromptQuorum은 듀얼 GPU 구성에서 70B를 측정하지 않았습니다. 개발자가 보고한 단일 카드 llama.cpp 7B 결과는 158.2(RTX 3090), 186.2(RTX 4090), 290.0 tok/s(RTX 5090)입니다.",
+          "대안: Mac Studio M5 Max(시작가 $2,499, 최대 128 GB)와 M5 Ultra(시작가 $5,499, 최대 512 GB), 그리고 Strix Halo, DGX Spark 같은 미니 워크스테이션은 한 대로 대용량 메모리를 제공합니다."
+        ]
+      },
+      {
+        type: "table",
+        h2: "70B 모델에는 약 48 GB의 GPU 메모리가 필요합니다",
+        intro: "의존하는 모델이 24–32 GB VRAM에 들어가지 않을 때 멀티 GPU 워크스테이션을 구축하십시오. 컨텍스트 캐시에는 모델 파일 외에 추가 메모리가 필요합니다.",
+        columns: [
+          "모델 (Q4급)",
+          "다운로드 크기",
+          "구동 가능한 구성"
+        ],
+        rows: [
+          {
+            "모델 (Q4급)": "gpt-oss:20b",
+            "다운로드 크기": "14 GB",
+            "구동 가능한 구성": "16 GB 이상 GPU 한 장"
+          },
+          {
+            "모델 (Q4급)": "32B급 모델",
+            "다운로드 크기": "약 20 GB",
+            "구동 가능한 구성": "24 GB GPU 한 장"
+          },
+          {
+            "모델 (Q4급)": "llama3.3:70b",
+            "다운로드 크기": "43 GB",
+            "구동 가능한 구성": "24 GB GPU 두 장(48 GB)"
+          },
+          {
+            "모델 (Q4급)": "gpt-oss:120b",
+            "다운로드 크기": "65 GB",
+            "구동 가능한 구성": "80 GB 이상, 64 GB는 불가"
+          }
+        ]
+      },
+      {
+        type: "table",
+        h2: "출처가 있는 가격의 듀얼 GPU 부품 목록",
+        intro: "GPU와 CPU만으로도 $4,300 근처에서 시작합니다. 중고 RTX 3090 두 장($2,800–3,100)과 Threadripper 9960X(AMD 출시가 $1,499)를 합한 금액이며, 메인보드, 메모리, PSU, 쿨링, 스토리지, 케이스는 제외한 값입니다.",
+        columns: [
+          "부품",
+          "선택",
+          "가격",
+          "이유"
+        ],
+        rows: [
+          {
+            "부품": "GPU",
+            "선택": "중고 RTX 3090 24 GB 2장",
+            "가격": "$2,800–3,100",
+            "이유": "48 GB 메모리 풀, NVLink 브리지 지원"
+          },
+          {
+            "부품": "GPU (대안)",
+            "선택": "중고 RTX 4090 24 GB 2장",
+            "가격": "$5,150–6,020",
+            "이유": "더 빠른 프롬프트 처리, NVLink 없음"
+          },
+          {
+            "부품": "CPU",
+            "선택": "Threadripper 9960X, 24코어",
+            "가격": "$1,499 (출시가)",
+            "이유": "TDP 350 W, TRX50 플랫폼"
+          },
+          {
+            "부품": "CPU (대안)",
+            "선택": "Threadripper 9970X, 32코어",
+            "가격": "$2,499 (출시가)",
+            "이유": "CPU 측 작업을 위한 더 많은 코어"
+          },
+          {
+            "부품": "메인보드",
+            "선택": "TRX50(sTR5) 보드",
+            "가격": "추적 안 됨",
+            "이유": "3슬롯 카드가 들어가는 x16 슬롯 두 개"
+          },
+          {
+            "부품": "RAM",
+            "선택": "64 GB 레지스터드 DDR5",
+            "가격": "추적 안 됨",
+            "이유": "아래 메모리 가격 참고 사항 확인"
+          },
+          {
+            "부품": "PSU",
+            "선택": "1,300–1,600 W, GPU 케이블 충분",
+            "가격": "추적 안 됨",
+            "이유": "부품 정격 합계의 약 1.2배"
+          },
+          {
+            "부품": "스토리지",
+            "선택": "2–4 TB NVMe SSD",
+            "가격": "추적 안 됨",
+            "이유": "70B Q4 파일은 43 GB"
+          },
+          {
+            "부품": "케이스와 쿨링",
+            "선택": "공기 흐름이 좋은 대형 케이스",
+            "가격": "추적 안 됨",
+            "이유": "카드 두 장과 350 W CPU"
+          },
+          {
+            "부품": "최소 합계 (GPU + CPU)",
+            "선택": "3090 2장 + 9960X",
+            "가격": "$4,299–4,599",
+            "이유": "추적되지 않은 다섯 항목 제외"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "두 GPU는 PCIe로 하나의 모델을 나눠 담습니다",
+        items: [
+          "<strong>동일한 카드 두 장 장착:</strong> 각각 최소 x8로 동작하는 슬롯을 사용하고 카드 사이에 공기가 흐를 공간을 두십시오. 슬롯 개수만 보지 말고 메인보드 매뉴얼의 레인 구성도를 확인하십시오.",
+          "<strong>NVIDIA 드라이버 설치 및 두 카드 확인:</strong> <code>nvidia-smi</code>를 실행하여 두 GPU와 전체 메모리가 표시되는지 확인하십시오.",
+          "<strong>레이어 분할로 시작:</strong> Ollama는 사용 가능한 GPU에 모델을 자동으로 분산하며, llama.cpp는 균등 분할을 위해 <code>--tensor-split 1,1</code>을 사용합니다.",
+          "<strong>다중 사용자 서빙에는 vLLM 사용:</strong> <code>--tensor-parallel-size 2</code>는 가중치를 두 카드에 샤딩합니다. 가중치가 48 GB에 들어가도록 AWQ 빌드 같은 4비트 체크포인트를 사용하십시오.",
+          "<strong>수치를 믿기 전에 측정:</strong> 실제 프롬프트를 실행하고 장시간 실행 동안의 초당 토큰 수, 메모리 사용량, 온도를 기록하십시오.",
+          "<strong>필요하면 전력 제한:</strong> <code>nvidia-smi -pl &lt;watts&gt;</code>는 보드 전력 한도를 낮춥니다. 값을 유지하기 전에 작업 부하에서 속도에 미치는 영향을 테스트하십시오."
+        ]
+      },
+      {
+        type: "table",
+        h2: "RTX 3090, 4090, 5090, RTX PRO 6000 비교",
+        intro: "48 GB 기준으로는 중고 RTX 3090 두 장이 추적된 데이터에서 가장 저렴한 조합입니다. RTX 5090 두 장은 약 세 배 가격에 64 GB에 이르고, RTX PRO 6000 한 장은 단일 카드로 96 GB에 이릅니다.",
+        columns: [
+          "구성",
+          "VRAM",
+          "GPU 가격",
+          "정격 전력",
+          "NVLink"
+        ],
+        rows: [
+          {
+            "구성": "RTX 3090 2장 (중고)",
+            VRAM: "48 GB",
+            "GPU 가격": "$2,800–3,100",
+            "정격 전력": "700 W",
+            NVLink: "브리지 지원"
+          },
+          {
+            "구성": "RTX 4090 2장 (중고)",
+            VRAM: "48 GB",
+            "GPU 가격": "$5,150–6,020",
+            "정격 전력": "900 W",
+            NVLink: "없음"
+          },
+          {
+            "구성": "RTX 5090 1장 (신품)",
+            VRAM: "32 GB",
+            "GPU 가격": "$4,500–4,700",
+            "정격 전력": "575 W",
+            NVLink: "없음"
+          },
+          {
+            "구성": "RTX 5090 2장 (신품)",
+            VRAM: "64 GB",
+            "GPU 가격": "$9,000–9,400",
+            "정격 전력": "1,150 W",
+            NVLink: "없음"
+          },
+          {
+            "구성": "RTX PRO 6000 1장",
+            VRAM: "96 GB",
+            "GPU 가격": "약 $16,000",
+            "정격 전력": "최대 600 W",
+            NVLink: "해당 없음"
+          }
+        ]
+      },
+      {
+        type: "list",
+        h2: "약 1.25 kW의 냉각은 공기 흐름과 슬롯 간격에 달려 있습니다",
+        intro: "발열량은 전기 소비량과 같습니다. 450 W 카드 두 장과 350 W CPU는 드라이브와 팬을 제외하고도 정격 1,250 W이므로, 카드가 쓰로틀링하는지는 공기 흐름과 슬롯 간격이 좌우합니다.",
+        items: [
+          "<strong>슬롯 간격:</strong> NVIDIA는 레퍼런스 RTX 4090을 3슬롯, 304 mm 카드로 명시합니다. 두 카드 사이에 간격이 남는 메인보드와 케이스를 고르십시오. 그렇지 않으면 위쪽 카드가 아래쪽 카드의 배기를 들이마십니다.",
+          "<strong>케이스 공기 흐름:</strong> 전면 흡기, 후면과 상단 배기, 청소할 수 있는 필터가 필요합니다. 화려한 라디에이터보다 큰 카드 두 장을 위해 설계된 케이스가 더 중요합니다.",
+          "<strong>전력 제한:</strong> <code>nvidia-smi -pl</code>로 전력 한도를 낮추면 발열과 최대 소비 전력이 줄어듭니다. 값을 정하기 전에 작업 부하에서 속도 손실을 테스트하십시오."
+        ]
+      },
+      {
+        type: "list",
+        h2: "정격 전력으로 산정하는 PSU와 전기 회로",
+        intro: "모든 GPU와 CPU의 정격 전력을 더한 뒤 그 합계의 약 1.2배로 PSU를 산정하십시오. RTX 3090 두 장과 9960X는 약 1,260 W, RTX 4090 두 장은 1,500 W, RTX 5090 두 장은 1,800 W입니다.",
+        items: [
+          "<strong>정격 소비 전력:</strong> NVIDIA는 RTX 3090을 350 W, RTX 4090을 450 W, RTX 5090을 575 W로 명시합니다. AMD는 Threadripper 9000 시리즈를 350 W로 표기합니다.",
+          "<strong>단일 카드 요구 사항은 합산되지 않습니다:</strong> RTX 4090에 대한 NVIDIA의 850 W 시스템 요구 사항은 카드 한 장짜리 시스템 기준입니다. 카드 두 장 구성은 위의 합계로 산정하십시오.",
+          "<strong>커넥터:</strong> PSU가 제공하는 PCIe 8핀 또는 12V-2x6 케이블 수를 세어 보고, 어댑터는 카드 제조사의 안내를 따르십시오.",
+          "<strong>회로:</strong> 미국의 120 V / 15 A 회로는 정격 1,800 W이며, 전기 실무에서는 지속 부하를 그 80%인 1,440 W로 제한하는 것이 일반적입니다. 230 V / 16 A 회로는 정격 3,680 W입니다. GPU 두 장 머신을 전부하로 돌리기 전에 면허를 가진 전기 기사에게 회로를 점검받으십시오.",
+          "이 페이지는 일반 정보이며 전기 관련 조언이 아닙니다. 정격과 지역별 규정은 다르므로, 회로와 배선은 자격을 갖춘 전기 기사에게 점검받으십시오."
+        ]
+      },
+      {
+        type: "table",
+        h2: "측정한 것, 측정하지 않은 것, 수용 가능한 사용자 수",
+        intro: "PromptQuorum은 듀얼 GPU 구성에서 70B를 측정하지 않았으므로 이 페이지는 해당 구성의 초당 토큰 수 수치를 게시하지 않습니다. 아래는 개발자가 보고한 단일 카드 결과와 파일 크기로 계산한 수치입니다.",
+        columns: [
+          "구성",
+          "메모리 풀",
+          "43 GB 모델 적재 후 잔여"
+        ],
+        rows: [
+          {
+            "구성": "24 GB 2장 (48 GB)",
+            "메모리 풀": "48 GB",
+            "43 GB 모델 적재 후 잔여": "약 5 GB"
+          },
+          {
+            "구성": "32 GB 1장",
+            "메모리 풀": "32 GB",
+            "43 GB 모델 적재 후 잔여": "적재 불가"
+          },
+          {
+            "구성": "32 GB 2장 (64 GB)",
+            "메모리 풀": "64 GB",
+            "43 GB 모델 적재 후 잔여": "약 21 GB"
+          },
+          {
+            "구성": "96 GB 1장",
+            "메모리 풀": "96 GB",
+            "43 GB 모델 적재 후 잔여": "약 53 GB"
+          }
+        ]
+      },
+      {
+        type: "numbered",
+        h2: "워크스테이션 구축 시 흔한 실수",
+        items: [
+          "<strong>RTX 4090이나 RTX 5090에 NVLink가 있다고 가정하기.</strong> NVIDIA는 두 카드 모두에 NVLink를 명시하지 않습니다. PCIe 분할을 전제로 계획하십시오.",
+          "<strong>서로 다른 GPU 모델 혼용하기.</strong> vLLM 텐서 병렬 처리는 가중치를 균등하게 샤딩하므로 메모리가 적은 카드가 한 쌍의 한계를 정합니다. 동일한 카드를 구매하십시오.",
+          "<strong>DDR5 128 GB를 먼저 사기.</strong> VRAM에 올라가는 모델에는 필요하지 않으며 DDR5 가격은 2026년에 오르는 추세였습니다. 64 GB로 시작하십시오.",
+          "<strong>카드 한 장을 기준으로 PSU 산정하기.</strong> RTX 4090에 대한 NVIDIA의 850 W 수치는 카드 한 장 기준입니다. 두 카드와 CPU를 모두 더한 다음 여유분을 더하십시오.",
+          "<strong>전기 요금을 비용에서 빼기.</strong> 900 W를 연속으로 가동하면 연간 7,884 kWh입니다. 예시 요금으로는 약 $1,180($0.15/kWh), 약 $2,760($0.35/kWh)입니다. 추론 중 실제 소비 전력은 보통 정격보다 낮고 워크스테이션을 24시간 가동하는 경우도 드물므로, 이 값은 상한으로 보십시오."
+        ]
+      },
+      {
+        type: "faq",
+        h2: "자주 묻는 질문",
+        faqs: [
+          {
+            q: "두 GPU를 연결하려면 NVLink를 써야 합니까?",
+            a: "RTX 4090이나 RTX 5090에서는 쓸 수 없습니다. NVIDIA는 두 카드 모두에 NVLink를 명시하지 않습니다. RTX 3090은 브리지를 지원하지만 llama.cpp, Ollama, vLLM은 브리지 없이도 PCIe로 모델을 나누며, NVLink로 얻는 이득은 엔진과 배치 크기에 따라 달라집니다."
+          },
+          {
+            q: "RTX 5090 한 장으로 70B 모델을 실행할 수 있습니까?",
+            a: "전부 VRAM에서 실행하는 것은 불가능합니다. RTX 5090은 32 GB이고 Llama 3.3 70B Q4 파일은 43 GB이므로 약 11 GB 이상이 시스템 RAM에서 실행되어 훨씬 느립니다. Q4의 32B급 모델(약 20 GB)은 카드 한 장에 들어갑니다."
+          },
+          {
+            q: "2026년에 로컬 LLM 워크스테이션 구축 비용은 얼마입니까?",
+            a: "GPU와 CPU만으로 $4,300 근처에서 시작합니다. 중고 RTX 3090 두 장이 합계 $2,800–3,100(2026-10-15자 트래커 매물)이고 Threadripper 9960X가 $1,499(AMD 출시가)입니다. 중고 RTX 4090 두 장이면 GPU 항목이 약 $5,150–6,020으로 올라갑니다. 메인보드, 레지스터드 DDR5, PSU, 쿨링, 스토리지, 케이스는 별도이며 특히 메모리 가격이 2026년에 오르는 추세였으므로, 전체 목록은 현재 매물 가격으로 계산하십시오."
+          }
+        ]
+      },
+      {
+        type: "cta",
+        h2: "전체 가이드 읽기",
+        body: "출처, 날짜가 표시된 가격, 모든 유의 사항은 기사에 있습니다.",
+        cta: "로컬 LLM 워크스테이션 구축 2026: GPU·RAM·PSU·비용",
+        href: "https://www.promptquorum.com/ko/local-llms/local-llm-workstation-build"
+      }
+    ]
+  }
+};
 
-        let currentSlideIndex = 0;
         const params = new URLSearchParams(window.location.search);
-        let currentLanguage = params.get('lang') || 'en';
-        if (!CONTENT[currentLanguage]) currentLanguage = 'en';
+        let lang = params.get('lang') || 'en';
+        if (!CONTENT[lang]) lang = 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang];
+        const prefix = lang === 'en' ? '' : '/' + lang;
+        const articleUrl = 'https://www.promptquorum.com' + prefix + '/local-llms/local-llm-workstation-build';
+        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang === 'zh' ? 'zh-Hans' : lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
         function renderSlide(slide) {
-            let html = '<div class="slide ';
-            if (slide.type === 'title') html += 'title';
-            html += '">';
-
-            if (slide.type === 'title') {
-                html += `<h1>${slide.h1}</h1><p style="color:#6750a4;margin:12px 0">${slide.subtitle}</p><p>${slide.p}</p>`;
-            } else if (slide.type === 'list') {
-                html += `<h2>${slide.h2}</h2><ul>`;
-                slide.items.forEach(item => html += `<li>${item}</li>`);
-                html += '</ul>';
-            } else if (slide.type === 'table') {
-                html += `<h2>${slide.h2}</h2><table><tr>`;
-                slide.columns.forEach(col => html += `<th>${col}</th>`);
-                html += '</tr>';
-                slide.rows.forEach(row => {
-                    html += '<tr>';
-                    slide.columns.forEach(col => html += `<td>${row[col]}</td>`);
-                    html += '</tr>';
-                });
-                html += '</table>';
-            } else if (slide.type === 'numbered') {
-                html += `<h2>${slide.h2}</h2><ol style="text-align:left;display:inline-block;max-width:90%">`;
-                slide.items.forEach(item => html += `<li style="margin:12px 0;font-size:clamp(16px,1.8vw,20px)">${item}</li>`);
-                html += '</ol>';
-            } else if (slide.type === 'faq') {
-                html += `<h2>${slide.h2}</h2>`;
-                slide.faqs.forEach(faq => {
-                    html += `<div style="text-align:left;margin:12px auto;max-width:90%"><strong>${faq.q}</strong><p style="margin-top:8px">${faq.a}</p></div>`;
-                });
+            let html = '';
+            const footer = '<p class="slide-footer"><a href="' + articleUrl + '" target="_blank" rel="noopener">' + content.ui.short + '</a></p>';
+            switch (slide.type) {
+                case 'title':
+                    html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" style="height:36px;margin-bottom:16px"><h1>' + slide.h1 + '</h1><p>' + slide.subtitle + '</p>' + footer;
+                    break;
+                case 'list':
+                    html = '<h2>' + slide.h2 + '</h2>';
+                    if (slide.intro) html += '<p>' + slide.intro + '</p>';
+                    html += '<ul>' + slide.items.map(function (i) { return '<li>' + i + '</li>'; }).join('') + '</ul>' + footer;
+                    break;
+                case 'numbered':
+                    html = '<h2>' + slide.h2 + '</h2><ol>' + slide.items.map(function (i) { return '<li>' + i + '</li>'; }).join('') + '</ol>' + footer;
+                    break;
+                case 'table':
+                    html = '<h2>' + slide.h2 + '</h2>';
+                    if (slide.intro) html += '<p>' + slide.intro + '</p>';
+                    html += '<table' + (slide.rows.length > 8 ? ' class="dense"' : '') + '><tr>' + slide.columns.map(function (c) { return '<th>' + c + '</th>'; }).join('') + '</tr>';
+                    slide.rows.forEach(function (row) {
+                        html += '<tr>' + slide.columns.map(function (c) { return '<td>' + row[c] + '</td>'; }).join('') + '</tr>';
+                    });
+                    html += '</table>' + footer;
+                    break;
+                case 'faq':
+                    html = '<h2>' + slide.h2 + '</h2>' + slide.faqs.map(function (f) { return '<div class="faq-item"><strong>' + f.q + '</strong><p>' + f.a + '</p></div>'; }).join('') + footer;
+                    break;
+                case 'cta':
+                    html = '<h2>' + slide.h2 + '</h2><p>' + slide.body + '</p><a class="cta-btn" href="' + slide.href + '" target="_blank" rel="noopener">' + slide.cta + '</a>' + footer;
+                    break;
             }
-
-            html += '</div>';
-            return html;
+            return '<div class="slide ' + slide.type + '">' + html + '</div>';
         }
 
-        function updateSlides() {
-            const container = document.getElementById('slides-container');
-            let slides = CONTENT[currentLanguage]?.slides || CONTENT['en'].slides;
-            
-            container.innerHTML = slides.map(renderSlide).join('');
-            const slideElements = document.querySelectorAll('.slide');
-            slideElements.forEach((slide, index) => {
-                if (index === currentSlideIndex) slide.classList.add('active');
-                else slide.classList.remove('active');
-            });
+        document.getElementById('header-title').textContent = content.title.replace(/&amp;/g, '&');
+        const backLink = document.getElementById('back-link');
+        backLink.href = articleUrl;
+        backLink.textContent = content.ui.back;
+        document.getElementById('prevBtn').textContent = content.ui.prev;
+        document.getElementById('nextBtn').textContent = content.ui.next;
 
-            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
-            document.getElementById('totalSlides').textContent = slides.length;
-            document.getElementById('header-title').textContent = CONTENT[currentLanguage]?.title || 'Local LLM Workstation Build 2026';
+        const container = document.getElementById('slides-container');
+        container.innerHTML = content.slides.map(renderSlide).join('');
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            currentSlide = Math.max(0, Math.min(totalSlides - 1, n));
+            slides.forEach(function (s) { s.classList.remove('active'); });
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
         }
+        function changeSlide(d) { showSlide(currentSlide + d); }
 
-        function changeSlide(direction) {
-            const slides = CONTENT[currentLanguage]?.slides || CONTENT['en'].slides;
-            currentSlideIndex = Math.max(0, Math.min(currentSlideIndex + direction, slides.length - 1));
-            updateSlides();
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') changeSlide(1);
-            if (e.key === 'ArrowLeft') changeSlide(-1);
+        document.addEventListener('keydown', function (e) {
+            const rtl = document.documentElement.dir === 'rtl';
+            if (e.key === 'ArrowLeft') changeSlide(rtl ? 1 : -1);
+            if (e.key === 'ArrowRight') changeSlide(rtl ? -1 : 1);
         });
 
-        updateSlides();
+        window.addEventListener('beforeprint', function () { slides.forEach(function (s) { s.style.display = 'flex'; }); });
+        window.addEventListener('afterprint', function () { slides.forEach(function (s) { s.style.removeProperty('display'); }); showSlide(currentSlide); });
+        if (isPrint) window.addEventListener('load', function () { window.print(); });
+
+        showSlide(0);
     </script>
 </body>
 </html>

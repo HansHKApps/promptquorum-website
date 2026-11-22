@@ -51,6 +51,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llm-workstation-build",
+        "title": "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
+        "url": "/local-llms/local-llm-workstation-build",
+        "dateModified": "2026-11-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "local-llms-vs-cloud-apis",
         "title": "Local LLMs vs Cloud APIs: Which Should You Use in 2026?",
         "url": "/local-llms/local-llms-vs-cloud-apis",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/best-gpu-buying-guide-local-llm-2026",
         "dateModified": "2026-11-22",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "clore-ai-review",
-        "title": "Clore.ai Review (2026): Crypto-Paid GPU Marketplace for LLM Work",
-        "url": "/power-local-llm/clore-ai-review",
-        "dateModified": "2026-11-22",
-        "tier": "about"
       }
     ],
-    "totalCount": 396,
+    "totalCount": 397,
     "capped": true
   },
   "llama.cpp": {
@@ -116,6 +116,14 @@
         "slug": "local-llm-hardware-guide",
         "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
         "url": "/local-llms/local-llm-hardware-guide",
+        "dateModified": "2026-11-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-workstation-build",
+        "title": "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
+        "url": "/local-llms/local-llm-workstation-build",
         "dateModified": "2026-11-22",
         "tier": "about"
       },
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-11-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "continue-dev-vs-cline-vs-aider-local",
-        "title": "Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026",
-        "url": "/power-local-llm/continue-dev-vs-cline-vs-aider-local",
-        "dateModified": "2026-11-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 199,
+    "totalCount": 200,
     "capped": true
   },
   "vLLM": {
@@ -178,6 +178,14 @@
         "slug": "vllm-explained",
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
+        "dateModified": "2026-11-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "local-llm-workstation-build",
+        "title": "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
+        "url": "/local-llms/local-llm-workstation-build",
         "dateModified": "2026-11-22",
         "tier": "about"
       },
@@ -242,14 +250,6 @@
         "slug": "airi-review",
         "title": "AIRI Review: Open-Source AI Companion with Voice Chat and Game Integrations",
         "url": "/power-local-llm/airi-review",
-        "dateModified": "2026-11-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "solomd-review",
-        "title": "SoloMD Review: Free Markdown Notes App with AI Chat for Local Models and MCP",
-        "url": "/power-local-llm/solomd-review",
         "dateModified": "2026-11-18",
         "tier": "about"
       }
@@ -11679,6 +11679,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "local-llm-workstation-build",
+        "title": "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
+        "url": "/local-llms/local-llm-workstation-build",
+        "dateModified": "2026-11-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "amd-ryzen-ai-halo-local-ai-workstation",
         "title": "AMD Ryzen AI Halo Price and Specs for Local AI",
         "url": "/local-llms/amd-ryzen-ai-halo-local-ai-workstation",
@@ -11732,17 +11740,9 @@
         "url": "/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark",
         "dateModified": "2026-10-31",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "minisforum-ms-s1-max-local-ai-workstation",
-        "title": "Minisforum MS-S1 MAX for Local AI: Specs, Price and Verdict",
-        "url": "/local-llms/minisforum-ms-s1-max-local-ai-workstation",
-        "dateModified": "2026-10-31",
-        "tier": "about"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "YoVoice": {

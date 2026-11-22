@@ -333,7 +333,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/power-local-llm/vast-ai-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '3.8', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'Vast.ai GPU Cloud',
@@ -673,7 +672,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/de/power-local-llm/vast-ai-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '3.8', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'Vast.ai GPU Cloud',
@@ -1013,7 +1011,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/fr/power-local-llm/vast-ai-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '3.8', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'Vast.ai GPU Cloud',
@@ -1353,7 +1350,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/es/power-local-llm/vast-ai-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '3.8', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'Vast.ai GPU Cloud',
@@ -1693,7 +1689,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/ja/power-local-llm/vast-ai-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '3.8', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'Vast.ai GPU Cloud',
@@ -2033,7 +2028,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/zh/power-local-llm/vast-ai-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '3.8', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'Vast.ai GPU Cloud',
@@ -2373,7 +2367,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/ko/power-local-llm/vast-ai-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '3.8', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'Vast.ai GPU Cloud',
@@ -2713,7 +2706,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/pt/power-local-llm/vast-ai-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '3.8', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'Vast.ai GPU Cloud',
@@ -3053,7 +3045,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/ar/power-local-llm/vast-ai-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '3.8', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'Vast.ai GPU Cloud',

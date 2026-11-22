@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[AMD Ryzen AI Max+ Mini PCs (2026)](/local-llms/best-amd-mini-pc-local-llm-2026) — unified memory 64–128GB, 50 TOPS NPU, Linux ROCm support for $1,200–2,500',
             '[Best Laptops for Running Local LLMs](/local-llms/best-laptops-local-llm) — GPU requirements, thermal throttling, and battery limits for portable inference',
-            '[Local LLM PC Build Under $1,000](/local-llms/local-llm-workstation-build) — full tower ATX builds with maximum VRAM and multi-GPU support',
+            '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build) — full tower ATX builds with maximum VRAM and multi-GPU support',
             '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs RTX A4000 vs used Quadro cards compared by VRAM and price',
             '[Local LLM on Laptop Guide](/local-llms/local-llm-on-laptop) — thermal management and battery life on power-constrained hardware',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — why Q4_K_M is the standard and how quantization reduces VRAM requirements',
@@ -578,7 +578,7 @@ schema: {
           items: [
             '[AMD Ryzen AI Max+ Mini-PCs (2026)](/de/local-llms/best-amd-mini-pc-local-llm-2026) — Unified Memory 64–128GB, 50 TOPS NPU, Linux-ROCm-Unterstützung für €1.200–2.600',
             '[Beste Laptops für lokale LLMs](/de/local-llms/best-laptops-local-llm) — GPU-Anforderungen, thermisches Throttling und Akkugrenzen für mobile Inferenz',
-            '[Lokaler LLM-PC-Build unter 900 €](/de/local-llms/local-llm-workstation-build) — Full-Tower-ATX-Builds mit maximalem VRAM und Multi-GPU-Unterstützung',
+            '[Lokale LLM-Workstation bauen](/de/local-llms/local-llm-workstation-build) — Full-Tower-ATX-Builds mit maximalem VRAM und Multi-GPU-Unterstützung',
             '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs. RTX A4000 vs. gebrauchte Quadro-Karten nach VRAM und Preis verglichen',
             '[Lokaler LLM auf Laptop: Leitfaden](/de/local-llms/local-llm-on-laptop) — Thermomanagement und Akkulaufzeit auf leistungsbeschränkter Hardware',
             '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und wie Quantisierung VRAM-Anforderungen reduziert',
@@ -895,7 +895,7 @@ schema: {
           items: [
             "[Mini-PC AMD Ryzen AI Max+ (2026)](/fr/local-llms/best-amd-mini-pc-local-llm-2026) - Memoire unifiee 64-128 Go, 50 TOPS NPU, support Linux ROCm pour EUR 1200-2600",
             "[Meilleurs laptops pour LLM locaux](/fr/local-llms/best-laptops-local-llm) - exigences GPU, bride thermique et limites de batterie pour l'inference portable",
-            "[Build PC LLM local sous 900 EUR](/fr/local-llms/local-llm-workstation-build) - builds ATX pleine tour avec VRAM maximale et support multi-GPU",
+            "[Station de travail LLM locale](/fr/local-llms/local-llm-workstation-build) - builds ATX pleine tour avec VRAM maximale et support multi-GPU",
             "[Meilleurs GPU abordables pour LLM locaux](/fr/local-llms/best-budget-gpus-local-llm) - RTX 5060 Ti vs RTX A4000 vs cartes Quadro d'occasion compares par VRAM et prix",
             "[Guide LLM local sur laptop](/fr/local-llms/local-llm-on-laptop) - gestion thermique et autonomie sur materiel a puissance limitee",
             "[Quantification LLM expliquee](/fr/local-llms/llm-quantization-explained) - pourquoi Q4_K_M est le standard et comment la quantification reduit les besoins VRAM",
@@ -1213,7 +1213,7 @@ schema: {
           items: [
             '[AMD Ryzen AI Max+ミニPC (2026)](/ja/local-llms/best-amd-mini-pc-local-llm-2026) — ユニファイドメモリ 64–128GB、50 TOPS NPU、Linux ROCm対応 ¥172,000–205,000',
             '[ローカルLLM向けノートPCベスト](/ja/local-llms/best-laptops-local-llm) — ポータブル推論のGPU要件、サーマルスロットリング、バッテリー制限',
-            '[約¥150,000以下でのローカルLLM PCビルド](/ja/local-llms/local-llm-workstation-build) — 最大VRAMとマルチGPUサポートのフルタワーATXビルド',
+            '[ローカルLLMワークステーション構築](/ja/local-llms/local-llm-workstation-build) — 最大VRAMとマルチGPUサポートのフルタワーATXビルド',
             '[ローカルLLM向けコスパGPUベスト](/ja/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs RTX A4000 vs 中古QuadroをVRAMと価格で比較',
             '[ノートPC向けローカルLLMガイド](/ja/local-llms/local-llm-on-laptop) — 電力制限ハードウェアでのサーマル管理とバッテリー寿命',
             '[LLM量子化の解説](/ja/local-llms/llm-quantization-explained) — Q4_K_Mが標準である理由と量子化がVRAM要件を削減する仕組み',
@@ -1658,7 +1658,7 @@ schema: {
           items: [
             '[AMD Ryzen AI Max+迷你PC (2026)](/zh/local-llms/best-amd-mini-pc-local-llm-2026) — 统一内存 64–128GB、50 TOPS NPU、Linux ROCm支持 ¥10500–13700',
             '[本地LLM最佳笔记本推荐](/zh/local-llms/best-laptops-local-llm) — GPU要求、散热降速和便携推理的电池限制',
-            '[$1,000以下本地LLM PC构建](/zh/local-llms/local-llm-workstation-build) — 最大VRAM和多GPU支持的全尺寸ATX塔式构建',
+            '[本地LLM工作站搭建](/zh/local-llms/local-llm-workstation-build) — 最大VRAM和多GPU支持的全尺寸ATX塔式构建',
             '[本地LLM最佳预算GPU推荐](/zh/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs RTX A4000 vs 二手Quadro按VRAM和价格对比',
             '[笔记本本地LLM指南](/zh/local-llms/local-llm-on-laptop) — 功耗受限硬件的散热管理和电池续航',
             '[LLM量化详解](/zh/local-llms/llm-quantization-explained) — 为什么Q4_K_M是标准以及量化如何降低VRAM需求',
@@ -2088,7 +2088,7 @@ schema: {
           items: [
             '[Mini PCs AMD Ryzen AI Max+ (2026)](/es/local-llms/best-amd-mini-pc-local-llm-2026) — memoria unificada 64–128GB, NPU de 50 TOPS, soporte Linux ROCm por $1,200–2,500',
             '[Mejores laptops para ejecutar LLMs locales](/es/local-llms/best-laptops-local-llm) — requisitos de GPU, throttling térmico y límites de batería para inferencia portátil',
-            '[Build de PC para LLM local por menos de $1,000](/es/local-llms/local-llm-workstation-build) — builds ATX de torre completa con VRAM máxima y soporte multi-GPU',
+            '[Estación de trabajo para LLM local](/es/local-llms/local-llm-workstation-build) — builds ATX de torre completa con VRAM máxima y soporte multi-GPU',
             '[Mejores GPUs económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs RTX A4000 vs tarjetas Quadro usadas comparadas por VRAM y precio',
             '[Guía de LLM local en laptop](/es/local-llms/local-llm-on-laptop) — gestión térmica y duración de batería en hardware con restricciones de energía',
             '[Cuantización LLM explicada](/es/local-llms/llm-quantization-explained) — por qué Q4_K_M es el estándar y cómo la cuantización reduce los requisitos de VRAM',
@@ -2410,7 +2410,7 @@ schema: {
           items: [
             '[أجهزة كمبيوتر مصغرة AMD Ryzen AI Max+ (2026)](/ar/local-llms/best-amd-mini-pc-local-llm-2026) — ذاكرة موحدة 64–128GB، NPU بقدرة 50 TOPS، دعم Linux ROCm مقابل 1,200–2,500 دولار',
             '[أفضل الحواسيب المحمولة لتشغيل نماذج LLM المحلية](/ar/local-llms/best-laptops-local-llm) — متطلبات GPU والخنق الحراري وحدود البطارية للاستدلال المحمول',
-            '[تجميع كمبيوتر لنموذج LLM محلي بأقل من 1,000 دولار](/ar/local-llms/local-llm-workstation-build) — تجميعات ATX برجية بأقصى VRAM ودعم multi-GPU',
+            '[تجميع محطة عمل لنماذج LLM محلية](/ar/local-llms/local-llm-workstation-build) — تجميعات ATX برجية بأقصى VRAM ودعم multi-GPU',
             '[أفضل وحدات GPU الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm) — مقارنة RTX 5060 Ti مقابل RTX A4000 مقابل بطاقات Quadro المستعملة من حيث VRAM والسعر',
             '[دليل LLM المحلي على الحاسوب المحمول](/ar/local-llms/local-llm-on-laptop) — إدارة الحرارة وعمر البطارية على عتاد مقيّد الطاقة',
             '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) — لماذا يُعد Q4_K_M المعيار وكيف يقلّل التكميم متطلبات VRAM',
@@ -2823,7 +2823,7 @@ schema: {
           items: [
             '[Mini PCs AMD Ryzen AI Max+ (2026)](/pt/local-llms/best-amd-mini-pc-local-llm-2026) — memória unificada 64–128GB, NPU de 50 TOPS, suporte Linux ROCm por $1.200–2.500',
             '[Melhores laptops para LLMs locais](/pt/local-llms/best-laptops-local-llm) — requisitos de GPU, throttling térmico e limites de bateria para inferência portátil',
-            '[Build de PC para LLM local por menos de $1.000](/pt/local-llms/local-llm-workstation-build) — builds ATX de torre completa com VRAM máxima e suporte multi-GPU',
+            '[Estação de trabalho para LLM local](/pt/local-llms/local-llm-workstation-build) — builds ATX de torre completa com VRAM máxima e suporte multi-GPU',
             '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs RTX A4000 vs placas Quadro usadas comparadas por VRAM e preço',
             '[Guia de LLM local em laptop](/pt/local-llms/local-llm-on-laptop) — gerenciamento térmico e duração de bateria em hardware com restrições de energia',
             '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) — por que Q4_K_M é o padrão e como a quantização reduz os requisitos de VRAM',
@@ -3151,7 +3151,7 @@ schema: {
       items: [
         '[AMD Ryzen AI Max+ 미니 PC(2026)](/ko/local-llms/best-amd-mini-pc-local-llm-2026) — 통합 메모리 64~128GB, 50 TOPS NPU, Linux ROCm 지원(미국 가격 $1,200~$2,500)',
         '[로컬 LLM을 위한 최고의 노트북](/ko/local-llms/best-laptops-local-llm) — 휴대용 추론을 위한 GPU 요구사항, 열 스로틀링, 배터리 한계',
-        '[미국 가격 $1,000 이하 로컬 LLM PC 빌드](/ko/local-llms/local-llm-workstation-build) — 최대 VRAM과 멀티 GPU 지원을 갖춘 풀 타워 ATX 빌드',
+        '[로컬 LLM 워크스테이션 구축](/ko/local-llms/local-llm-workstation-build) — 최대 VRAM과 멀티 GPU 지원을 갖춘 풀 타워 ATX 빌드',
         '[로컬 LLM을 위한 최고의 저가형 GPU](/ko/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs RTX A4000 vs 중고 Quadro 카드 VRAM 및 가격 비교',
         '[노트북에서 로컬 LLM 가이드](/ko/local-llms/local-llm-on-laptop) — 전력 제한 하드웨어에서의 열 관리 및 배터리 수명',
         '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4_K_M이 표준인 이유와 양자화가 VRAM 요구사항을 줄이는 방법',

@@ -152,7 +152,7 @@ cmd_finish() {
   git -C "$REPO" update-ref "refs/branch-archive/$branch" "$branch"
   git -C "$REPO" branch -D "$branch" >/dev/null
   echo "Merged '$slug' to main and removed the session. Branch archived at refs/branch-archive/$branch."
-  echo "Production deploys on the next [force-deploy] commit, or when the 3h throttle window opens."
+  echo "Not deployed: production deploys are on demand. Run scripts/deploy.sh to ship everything on main as one build."
 }
 
 cmd_drop() {

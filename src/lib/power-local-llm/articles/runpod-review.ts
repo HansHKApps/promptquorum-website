@@ -342,7 +342,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/power-local-llm/runpod-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '4.3', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'RunPod GPU Cloud',
@@ -692,7 +691,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/de/power-local-llm/runpod-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '4.3', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'RunPod GPU Cloud',
@@ -1042,7 +1040,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/fr/power-local-llm/runpod-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '4.3', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'RunPod GPU Cloud',
@@ -1392,7 +1389,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/es/power-local-llm/runpod-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '4.3', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'RunPod GPU Cloud',
@@ -1742,7 +1738,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/ja/power-local-llm/runpod-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '4.3', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'RunPod GPU Cloud',
@@ -2092,7 +2087,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/zh/power-local-llm/runpod-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '4.3', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'RunPod GPU Cloud',
@@ -2442,7 +2436,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/ko/power-local-llm/runpod-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '4.3', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'RunPod GPU Cloud',
@@ -2792,7 +2785,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/pt/power-local-llm/runpod-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '4.3', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'RunPod GPU Cloud',
@@ -3142,7 +3134,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
       url: 'https://www.promptquorum.com/ar/power-local-llm/runpod-review',
-      reviewRating: { '@type': 'Rating', ratingValue: '4.3', bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'Service',
         name: 'RunPod GPU Cloud',

@@ -31059,5 +31059,90 @@
       "t14": "2026-12-06",
       "t28": "2026-12-20"
     }
+  },
+  {
+    "id": "2a8cab08-f74d-4b4c-b0fc-993f8ca352cf",
+    "slug": "/local-llms/local-llm-workstation-build",
+    "date": "2026-11-22T19:00:57.506Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Build a Local LLM PC: Best Workstation Setup (GPU, VRAM, 7B–70B Models)",
+        "new": "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Local LLM Workstation Build 2026: Dual RTX 4090, $4–6K, 70B Ready",
+        "new": "Local LLM PC Build 2026: Workstation, GPU, RAM, PSU, Cost"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Build a powerful local LLM workstation with the right GPU, VRAM, and RAM. Exact PC setups to run 7B–70B models fast with Ollama and LM Studio.",
+        "new": "Build a local LLM PC or workstation: 48 GB of VRAM for 70B models, 64 GB RAM, PSU sizing and sourced 2026 prices for dual RTX 3090, 4090 and 5090."
+      }
+    ],
+    "reason": "Full-depth rewrite: title/meta now match the corrected body (48 GB VRAM for 70B, no NVLink on 4090/5090, sourced prices, 64GB RAM/VRAM FAQ); 'PC' kept for the llm pc build query",
+    "queries": [
+      "64gb workstation local llm",
+      "local llm workstation",
+      "llm pc build",
+      "ai workstation for local llm",
+      "dual rtx 4090 workstation"
+    ],
+    "baseline": {
+      "position": 9.39,
+      "impressions": 930,
+      "clicks": 4,
+      "ctr": 0.004301075268817204,
+      "period": "28d 2026-10-26 to 2026-11-22"
+    },
+    "deployedAt": "2026-11-22",
+    "measure": {
+      "t14": "2026-12-06",
+      "t28": "2026-12-20"
+    }
+  },
+  {
+    "id": "f74f4ab2-b7c3-43ac-97a7-959495e6ce0c",
+    "slug": "/de/local-llms/local-llm-workstation-build",
+    "date": "2026-11-22T19:00:57.638Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Local LLM PC bauen: Beste Workstation (GPU, VRAM, 7B–70B Modelle)",
+        "new": "PC für lokale LLM bauen (2026): GPUs, RAM, Netzteil und Kosten für 70B-Modelle"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Lokale LLM-Workstation bauen 2026: Guide für 70B",
+        "new": "LLM-PC bauen 2026: Workstation mit GPU, RAM, Netzteil"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Baue deine Local LLM Workstation mit der richtigen GPU, VRAM und RAM. Konkrete PC-Builds für 7B–70B Modelle mit Ollama und LM Studio.",
+        "new": "LLM-PC als Workstation bauen: 48 GB VRAM für 70B-Modelle, 64 GB RAM, Netzteil-Auslegung und belegte Preise 2026 für Dual-RTX-3090-, 4090- und 5090-Builds."
+      }
+    ],
+    "reason": "Full-depth rewrite, DE queries: llm pc, pc für lokale llm, local llm pc, llm workstation",
+    "queries": [
+      "llm pc",
+      "pc für lokale llm",
+      "local llm pc",
+      "llm workstation",
+      "llm pc build",
+      "rechner für lokale llm"
+    ],
+    "baseline": {
+      "position": 7.69,
+      "impressions": 396,
+      "clicks": 7,
+      "ctr": 0.017676767676767676,
+      "period": "28d 2026-10-26 to 2026-11-22"
+    },
+    "deployedAt": "2026-11-22",
+    "measure": {
+      "t14": "2026-12-06",
+      "t28": "2026-12-20"
+    }
   }
 ]
