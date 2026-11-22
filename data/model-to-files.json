@@ -88,7 +88,9 @@
   ],
   "Claude Haiku 5.5": [
     "src/lib/prompt-engineering/articles/tokens-costs-limits.ts",
-    "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts"
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
   ],
   "Claude Opus 5.5": [
     "src/lib/prompt-engineering/articles/tokens-costs-limits.ts",
@@ -104,6 +106,7 @@
   ],
   "GPT-6 Luna": [
     "src/lib/prompt-engineering/articles/tokens-costs-limits.ts",
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
     "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
     "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
     "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
@@ -111,7 +114,7 @@
     "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts",
     "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
   ],
-  "GPT-6.1 Sol": [
+  "GPT-6.2 Sol": [
     "src/lib/prompt-engineering/articles/tokens-costs-limits.ts",
     "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
     "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
@@ -198,11 +201,28 @@
     "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
     "src/lib/power-local-llm/articles/perfect-memory-review.ts"
   ],
+  "Claude Fable 5.2": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
+  ],
+  "Claude Sonnet 5.5": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
+    "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
+    "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts"
+  ],
   "GPT-4o": [
     "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
     "src/lib/blog/blogContent.ts"
   ],
-  "GPT-6 Astra": [
+  "GPT-6.1 Terra": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
+  ],
+  "GPT-6.2 Astra": [
     "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
     "src/lib/prompt-engineering/articles/how-llms-actually-work.ts",
     "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
@@ -213,6 +233,18 @@
     "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
     "src/lib/prompt-bites/articles/best-llm-right-now.ts",
     "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
+  ],
+  "Gemini 4 Carbon": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
+  ],
+  "Gemini 4 Hydrogen": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
+  ],
+  "Gemini 4 Neon": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
   ],
   "Gemma 4": [
     "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
@@ -240,6 +272,10 @@
     "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
     "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts"
   ],
+  "Muse Glimmer 30B": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
+  ],
   "Perplexity": [
     "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts"
   ],
@@ -260,40 +296,31 @@
     "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts",
     "src/lib/local-llms/articles/mlx-vs-ollama-vs-llama-cpp-mac.ts"
   ],
-  "Qwen3 14B": [
+  "Qwen3.8-27B": [
     "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
-    "src/lib/prompt-bites/articles/best-local-llm-legal-medical-privacy.ts",
-    "src/lib/prompt-bites/articles/how-much-vram-for-local-llm.ts",
-    "src/lib/prompt-bites/articles/strix-halo-ollama-vulkan.ts",
-    "src/lib/prompt-bites/articles/mistral-small-24b-vs-qwen-14b-vs-llama-8b.ts",
+    "src/lib/prompt-bites/articles/local-ai-trend-2027-frontier-desktop-ai.ts",
     "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
-    "src/lib/prompt-bites/articles/is-qwen-gdpr-compliant.ts",
-    "src/lib/prompt-bites/articles/best-14b-models-coding.ts",
-    "src/lib/prompt-bites/articles/qwen-14b-vs-llama-8b.ts",
-    "src/lib/prompt-bites/articles/radeon-6800m-local-llm.ts",
-    "src/lib/prompt-bites/articles/best-local-llm-16gb-ram-laptop.ts",
-    "src/lib/prompt-bites/articles/can-local-llm-help-gdpr.ts",
-    "src/lib/power-local-llm/articles/qwen-local-deployment-complete-guide-2026.ts",
-    "src/lib/power-local-llm/articles/local-llm-email-and-calendar-automation.ts",
-    "src/lib/power-local-llm/articles/anythingllm-vs-privategpt-vs-openwebui-rag.ts",
-    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
-    "src/lib/local-llms/articles/qwen-local-gdpr-setup-guide-2026.ts",
-    "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts",
+    "src/lib/prompt-bites/articles/best-qwen-model-for-coding.ts",
+    "src/lib/prompt-bites/articles/best-korean-language-models-local.ts",
+    "src/lib/prompt-bites/articles/best-rtx-4090-setup-70b-models.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing.ts",
+    "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
+    "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
+    "src/lib/local-llms/articles/best-local-llms-for-creative-writing.ts",
+    "src/lib/local-llms/articles/70b-models-consumer-hardware.ts",
+    "src/lib/local-llms/articles/best-local-llms-2026.ts",
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/best-local-llms-business-writing.ts",
     "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts",
-    "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts",
-    "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts"
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
+    "src/lib/local-llms/articles/run-qwen-locally-guide-2026.ts",
+    "src/lib/local-llms/articles/local-llms-for-coding-workflows.ts"
   ],
   "Mistral Small 4": [
     "src/lib/prompt-engineering/articles/how-llms-actually-work.ts",
     "src/lib/prompt-bites/articles/mistral-small-24b-vs-qwen-14b-vs-llama-8b.ts",
     "src/lib/power-local-llm/articles/local-llm-email-and-calendar-automation.ts",
     "src/lib/power-local-llm/articles/local-rag-on-your-pdfs-step-by-step.ts"
-  ],
-  "Claude Sonnet 5.5": [
-    "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
-    "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
-    "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
-    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts"
   ],
   "Qwen3 8B": [
     "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
@@ -339,9 +366,6 @@
   ],
   "claude-sonnet-4-6": [
     "src/lib/prompt-engineering/articles/prompt-chaining.ts"
-  ],
-  "Claude Fable 5.1": [
-    "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts"
   ],
   "DeepSeek-R1": [
     "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
@@ -445,23 +469,6 @@
   "Mistral Large 3": [
     "src/lib/prompt-bites/articles/local-ai-trend-2027-frontier-desktop-ai.ts",
     "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts"
-  ],
-  "Qwen3.8-27B": [
-    "src/lib/prompt-bites/articles/local-ai-trend-2027-frontier-desktop-ai.ts",
-    "src/lib/prompt-bites/articles/best-qwen-model-for-coding.ts",
-    "src/lib/prompt-bites/articles/best-korean-language-models-local.ts",
-    "src/lib/prompt-bites/articles/best-rtx-4090-setup-70b-models.ts",
-    "src/lib/power-local-llm/articles/best-local-llm-creative-writing.ts",
-    "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
-    "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
-    "src/lib/local-llms/articles/best-local-llms-for-creative-writing.ts",
-    "src/lib/local-llms/articles/70b-models-consumer-hardware.ts",
-    "src/lib/local-llms/articles/best-local-llms-2026.ts",
-    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
-    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts",
-    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
-    "src/lib/local-llms/articles/run-qwen-locally-guide-2026.ts",
-    "src/lib/local-llms/articles/local-llms-for-coding-workflows.ts"
   ],
   "gpt-oss-120b": [
     "src/lib/prompt-bites/articles/local-ai-trend-2027-frontier-desktop-ai.ts",
@@ -579,6 +586,27 @@
     "src/lib/local-llms/articles/fastest-local-llms-low-end-pcs.ts",
     "src/lib/local-llms/articles/small-local-llm-models.ts"
   ],
+  "Qwen3 14B": [
+    "src/lib/prompt-bites/articles/best-local-llm-legal-medical-privacy.ts",
+    "src/lib/prompt-bites/articles/how-much-vram-for-local-llm.ts",
+    "src/lib/prompt-bites/articles/strix-halo-ollama-vulkan.ts",
+    "src/lib/prompt-bites/articles/mistral-small-24b-vs-qwen-14b-vs-llama-8b.ts",
+    "src/lib/prompt-bites/articles/is-qwen-gdpr-compliant.ts",
+    "src/lib/prompt-bites/articles/best-14b-models-coding.ts",
+    "src/lib/prompt-bites/articles/qwen-14b-vs-llama-8b.ts",
+    "src/lib/prompt-bites/articles/radeon-6800m-local-llm.ts",
+    "src/lib/prompt-bites/articles/best-local-llm-16gb-ram-laptop.ts",
+    "src/lib/prompt-bites/articles/can-local-llm-help-gdpr.ts",
+    "src/lib/power-local-llm/articles/qwen-local-deployment-complete-guide-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-email-and-calendar-automation.ts",
+    "src/lib/power-local-llm/articles/anythingllm-vs-privategpt-vs-openwebui-rag.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
+    "src/lib/local-llms/articles/qwen-local-gdpr-setup-guide-2026.ts",
+    "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts",
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts",
+    "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts",
+    "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts"
+  ],
   "Qwen3 0.6B": [
     "src/lib/prompt-bites/articles/best-ollama-models-cpu-only.ts",
     "src/lib/prompt-bites/articles/can-you-run-rag-on-2gb-ram.ts",
@@ -617,7 +645,8 @@
     "src/lib/prompt-bites/articles/local-ai-trend-2027-private-rag.ts",
     "src/lib/prompt-bites/articles/best-local-llm-16gb-ram-laptop.ts",
     "src/lib/power-local-llm/articles/return-editor-review.ts",
-    "src/lib/local-llms/articles/best-local-llms-for-creative-writing.ts"
+    "src/lib/local-llms/articles/best-local-llms-for-creative-writing.ts",
+    "src/lib/local-llms/articles/best-local-llms-business-writing.ts"
   ],
   "Rinna 3.6B": [
     "src/lib/prompt-bites/articles/best-local-llm-apps-japan-android.ts",
@@ -699,6 +728,7 @@
     "src/lib/power-local-llm/articles/replace-grammarly-notion-ai-with-local.ts",
     "src/lib/local-llms/articles/best-local-llms-for-creative-writing.ts",
     "src/lib/local-llms/articles/best-local-llms-2026.ts",
+    "src/lib/local-llms/articles/best-local-llms-business-writing.ts",
     "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts"
   ],
   "Qwen 3.5 4B": [
@@ -765,6 +795,16 @@
     "src/lib/power-local-llm/articles/local-llm-with-logseq-and-joplin.ts",
     "src/lib/power-local-llm/articles/local-llm-with-obsidian-2026.ts",
     "src/lib/power-local-llm/articles/local-llm-personal-knowledge-base-2026.ts"
+  ],
+  "Hunyuan-MT-7B": [
+    "src/lib/prompt-bites/articles/best-local-llm-for-translation.ts"
+  ],
+  "Qwen3 8B/14B/32B": [
+    "src/lib/prompt-bites/articles/best-local-llm-for-translation.ts",
+    "src/lib/local-llms/articles/local-llm-hardware-guide.ts"
+  ],
+  "TranslateGemma 4B/12B/27B": [
+    "src/lib/prompt-bites/articles/best-local-llm-for-translation.ts"
   ],
   "Qwen3-Coder-30B-A3B": [
     "src/lib/prompt-bites/articles/best-qwen-model-for-coding.ts",
@@ -923,7 +963,8 @@
     "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
     "src/lib/power-local-llm/articles/local-llm-screenwriting-and-novel-drafting.ts",
     "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts",
-    "src/lib/local-llms/articles/best-local-llms-for-creative-writing.ts"
+    "src/lib/local-llms/articles/best-local-llms-for-creative-writing.ts",
+    "src/lib/local-llms/articles/best-local-llms-business-writing.ts"
   ],
   "Mistral Nemo 12B": [
     "src/lib/prompt-bites/articles/best-ollama-models-rtx-3060-12gb.ts"
@@ -1047,6 +1088,7 @@
     "src/lib/power-local-llm/articles/local-ai-workstation-build-guide.ts",
     "src/lib/local-llms/articles/ollama-on-mac-apple-silicon-setup-2026.ts",
     "src/lib/local-llms/articles/mac-mini-m5-local-ai-server.ts",
+    "src/lib/local-llms/articles/best-local-llms-business-writing.ts",
     "src/lib/local-llms/articles/m5-pro-max-llm-benchmarks-2026.ts",
     "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts",
     "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts",
@@ -1226,6 +1268,7 @@
     "src/lib/power-local-llm/articles/local-tts-voice-cloning-piper-coqui-xtts.ts",
     "src/lib/power-local-llm/articles/styletts-2-review.ts",
     "src/lib/power-local-llm/articles/best-tts-for-ollama.ts",
+    "src/lib/power-local-llm/articles/elevenlabs-vs-local-tts-piper-xtts.ts",
     "src/lib/power-local-llm/articles/best-local-tts-raspberry-pi.ts",
     "src/lib/power-local-llm/articles/best-local-tts-nvidia-gpu.ts",
     "src/lib/power-local-llm/articles/xtts-v2-review.ts",
@@ -1277,6 +1320,7 @@
   ],
   "Piper": [
     "src/lib/power-local-llm/articles/best-tts-for-ollama.ts",
+    "src/lib/power-local-llm/articles/elevenlabs-vs-local-tts-piper-xtts.ts",
     "src/lib/power-local-llm/articles/best-local-tts-raspberry-pi.ts",
     "src/lib/power-local-llm/articles/piper-vs-kokoro-tts.ts",
     "src/lib/power-local-llm/articles/piper-vs-chatterbox-tts.ts",
@@ -1420,12 +1464,14 @@
   "LM Studio": [
     "src/lib/power-local-llm/articles/local-operator-review.ts",
     "src/lib/power-local-llm/articles/perfect-memory-review.ts",
-    "src/lib/power-local-llm/articles/presenton-review.ts"
+    "src/lib/power-local-llm/articles/presenton-review.ts",
+    "src/lib/power-local-llm/articles/nanobrowser-review.ts"
   ],
   "Ollama": [
     "src/lib/power-local-llm/articles/local-operator-review.ts",
     "src/lib/power-local-llm/articles/perfect-memory-review.ts",
     "src/lib/power-local-llm/articles/presenton-review.ts",
+    "src/lib/power-local-llm/articles/nanobrowser-review.ts",
     "src/lib/power-local-llm/articles/home-assistant-assist-review.ts",
     "src/lib/power-local-llm/articles/open-llm-vtuber-review.ts",
     "src/lib/power-local-llm/articles/browser-use-review.ts"
@@ -1458,6 +1504,11 @@
   ],
   "Nemotron 3": [
     "src/lib/power-local-llm/articles/humla-review.ts"
+  ],
+  "ElevenLabs Eleven v4": [
+    "src/lib/power-local-llm/articles/elevenlabs-vs-local-tts-piper-xtts.ts",
+    "src/lib/power-local-llm/articles/chatterbox-vs-elevenlabs.ts",
+    "src/lib/power-local-llm/articles/kokoro-vs-elevenlabs.ts"
   ],
   "ComfyUI": [
     "src/lib/power-local-llm/articles/automatic1111-review.ts"
@@ -1593,7 +1644,8 @@
   ],
   "Kokoro-82M": [
     "src/lib/power-local-llm/articles/piper-vs-kokoro-tts.ts",
-    "src/lib/power-local-llm/articles/best-local-tts-mac.ts"
+    "src/lib/power-local-llm/articles/best-local-tts-mac.ts",
+    "src/lib/power-local-llm/articles/kokoro-vs-elevenlabs.ts"
   ],
   "AnimateDiff SDXL beta (mm_sdxl_v10_beta)": [
     "src/lib/power-local-llm/articles/animatediff-video-generation-guide-2026.ts"
@@ -1692,11 +1744,17 @@
   "Nemotron": [
     "src/lib/power-local-llm/articles/fluidvoice-review.ts"
   ],
+  "FLUX 3 Image Klein": [
+    "src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts"
+  ],
   "FLUX.1 Kontext": [
     "src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts",
     "src/lib/power-local-llm/articles/invokeai-review.ts"
   ],
   "FLUX.2 dev": [
+    "src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts"
+  ],
+  "FLUX.2 klein 4B": [
     "src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts"
   ],
   "HiDream-O1": [
@@ -1705,6 +1763,9 @@
   "Qwen-Image": [
     "src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts",
     "src/lib/power-local-llm/articles/invokeai-review.ts"
+  ],
+  "Qwen-Image-2512": [
+    "src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts"
   ],
   "Qwen-Image-Edit": [
     "src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts"
@@ -1924,6 +1985,9 @@
     "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts"
   ],
   "Chatterbox Multilingual V3": [
+    "src/lib/power-local-llm/articles/chatterbox-vs-elevenlabs.ts"
+  ],
+  "Chatterbox-Nano": [
     "src/lib/power-local-llm/articles/chatterbox-vs-elevenlabs.ts"
   ],
   "Chatterbox-Turbo": [
@@ -2321,6 +2385,9 @@
     "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
     "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts"
   ],
+  "Mistral Small 3.2 24B": [
+    "src/lib/local-llms/articles/best-local-llms-business-writing.ts"
+  ],
   "Phi-3 3.8B": [
     "src/lib/local-llms/articles/text-generation-webui-vs-vllm-vs-llamacpp.ts"
   ],
@@ -2373,9 +2440,6 @@
     "src/lib/local-llms/articles/local-llm-hardware-guide.ts"
   ],
   "Mistral Small 3.1 24B / Small 4": [
-    "src/lib/local-llms/articles/local-llm-hardware-guide.ts"
-  ],
-  "Qwen3 8B/14B/32B": [
     "src/lib/local-llms/articles/local-llm-hardware-guide.ts"
   ]
 }

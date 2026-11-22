@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-19",
+  "last_updated": "2026-11-22",
   "models": [
     {
       "company": "Supersonic Labs",
@@ -185,10 +185,10 @@
       "type": "closed",
       "release_date": null,
       "status": "superseded",
-      "superseded_by": null,
+      "superseded_by": "GPT-6.1 Terra",
       "source_url": "https://openai.com",
-      "verified_date": "2026-11-09",
-      "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant). No confirmed same-named 'Terra' successor found this cycle (OpenAI's site is bot-blocked from this session; unverified third-party mentions of a 'GPT-6.1 Terra' exist but are not confirmed from an official source) -- left unresolved rather than guessed. Needs a real OpenAI-source check."
+      "verified_date": "2026-11-22",
+      "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant). RESOLVED 2026-11-22: developers.openai.com/api/docs/models (direct fetch this cycle) confirmed GPT-6.1 Terra as a real current model ($1/$5 MTok, 'Fast and efficient'), closing the previously dangling superseded_by."
     },
     {
       "company": "OpenAI",
@@ -3955,7 +3955,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://www.anthropic.com/news/claude-fable-5-2",
-      "verified_date": "2026-11-19",
+      "verified_date": "2026-11-22",
       "notes": "General-access successor to Claude Fable 5.1; shares underlying model with Claude Mythos 5.2 (access-tier variant)."
     },
     {
@@ -3967,7 +3967,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://www.anthropic.com/news/claude-fable-5-2",
-      "verified_date": "2026-11-19",
+      "verified_date": "2026-11-22",
       "notes": "Vetted-access-tier variant of Claude Fable 5.2 (cybersecurity/life-sciences verification programs); same underlying model as Fable 5.2, different access rules."
     },
     {
@@ -3979,8 +3979,8 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
-      "verified_date": "2026-11-19",
-      "notes": "Frontier successor to GPT-6 Astra. Official OpenAI announcement page returned HTTP 403 to direct fetch on 2026-11-19; corroborated by multiple independent outlets (TechCrunch, 9to5Mac, Digital Trends, Decrypt) citing the same Nov 17, 2026 OpenAI announcement and pricing. Flagged for re-verification against the primary page when accessible."
+      "verified_date": "2026-11-22",
+      "notes": "Frontier successor to GPT-6 Astra. RE-VERIFIED 2026-11-22: developers.openai.com/api/docs/models (direct fetch) confirms GPT-6.2 Astra as current, $8/$40 MTok, knowledge cutoff July 2026, 1.05M context. Original entry (2026-11-19) flagged HTTP 403 on announcement page; primary API docs page resolved cleanly this cycle."
     },
     {
       "company": "OpenAI",
@@ -3991,8 +3991,8 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
-      "verified_date": "2026-11-19",
-      "notes": "Efficient successor to GPT-6.1 Sol, same release as GPT-6.2 Astra. Official page returned HTTP 403 to direct fetch on 2026-11-19; corroborated by multiple independent outlets citing the same OpenAI announcement. Flagged for re-verification against the primary page when accessible."
+      "verified_date": "2026-11-22",
+      "notes": "Efficient successor to GPT-6.1 Sol, same release as GPT-6.2 Astra. RE-VERIFIED 2026-11-22: developers.openai.com/api/docs/models (direct fetch) confirms GPT-6.2 Sol as current, $2/$10 MTok, knowledge cutoff July 2026. Original entry (2026-11-19) had HTTP 403 on announcement page; primary API docs page resolved this cycle."
     },
     {
       "company": "Google DeepMind",
@@ -4003,7 +4003,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://deepmind.google/models/model-cards/gemini-4-carbon/",
-      "verified_date": "2026-11-19",
+      "verified_date": "2026-11-22",
       "notes": "Based on Gemini 4 Argon; heavier frontier model for long-horizon/deep-reasoning work. Argon remains current/listed, not superseded."
     },
     {
@@ -4015,7 +4015,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/",
-      "verified_date": "2026-11-19",
+      "verified_date": "2026-11-22",
       "notes": "Adapted from Gemini 4 Carbon; fast/everyday-execution sibling model. No full critical-capability assessment required (no material capability gain over Argon)."
     },
     {
@@ -4027,7 +4027,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://deepmind.google/models/model-cards/gemini-4-neon/",
-      "verified_date": "2026-11-19",
+      "verified_date": "2026-11-22",
       "notes": "Adapted from Gemini 4 Carbon; safety evaluated against Hydrogen (comparable) and Argon (no material capability change, Argon critical-capability determination carried forward). Full Safety & Security Report pending at verification time."
     },
     {
@@ -4039,8 +4039,116 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://www.alibabacloud.com/press-room/alibaba-unveils-qwen4-max",
-      "verified_date": "2026-11-19",
+      "verified_date": "2026-11-22",
       "notes": "Successor to Qwen3.8-Max; new Qwen4 MoE architecture, 1M-token context. Flagship weights not open at launch; Alibaba states smaller open-weight Qwen4 models will follow."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-6.1 Terra",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://developers.openai.com/api/docs/models",
+      "verified_date": "2026-11-22",
+      "notes": "Confirmed current on developers.openai.com/api/docs/models (direct fetch 2026-11-22). Fast and efficient tier of the GPT-6 lineup, $1/$5 MTok. Name-matched successor to GPT-5.6 Terra, closing the LINEAGE_DANGLING flag on that entry. Distinct from GPT-6.2 Astra (flagship, $8/$40) and GPT-6.2 Sol (balanced, $2/$10)."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 3.6 Flash",
+      "type": "closed",
+      "release_date": "2026-07-21",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+      "verified_date": "2026-11-22",
+      "notes": "Confirmed on Google's own model card (deepmind.google/models/model-cards/gemini-3-6-flash/, direct fetch 2026-11-22). Released 2026-07-21. 1M-token context, 64K max output, multimodal (text/image/audio/video), $1.50/$7.50 MTok. Positioned as 'workhorse' tier between Gemini 3.5 Flash and 3.8 Flash. Not in any prior registry cycle; added this cycle as a gap."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Opus 4.5",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "Claude Opus 4.6",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-11-22",
+      "notes": "Listed in Anthropic's own 'Legacy models (still available)' table (platform.claude.com, 2026-11-22 fetch). 200K-token context, $5/$25 MTok. Superseded by Claude Opus 4.6. Neither 4.5 nor 4.6 had prior registry entries; both added this cycle as a gap."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Opus 4.6",
+      "type": "closed",
+      "release_date": null,
+      "status": "superseded",
+      "superseded_by": "Claude Opus 4.7",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-11-22",
+      "notes": "Listed in Anthropic's own 'Legacy models (still available)' table (platform.claude.com, 2026-11-22 fetch). 1M-token context, $5/$25 MTok. Superseded by Claude Opus 4.7 (already in registry). Added this cycle alongside Claude Opus 4.5 to close a lineage gap."
+    },
+    {
+      "company": "MiniMax",
+      "family": "MiniMax",
+      "model": "MiniMax M3",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/MiniMaxAI",
+      "verified_date": "2026-11-22",
+      "notes": "Confirmed on huggingface.co/MiniMaxAI (2026-11-22 fetch). MiniMax's current flagship LLM, 427B multimodal, natively handles text/image/video. Distinct from MiniMax H3 (video generation, already in registry) — M3 is a general-purpose large language model. MiniMax M2/M2.1/M2.5 are earlier superseded generations not yet tracked in this registry. Added as a gap: the registry previously tracked MiniMax only for video generation."
+    },
+    {
+      "company": "MiniMax",
+      "family": "MiniMax",
+      "model": "MiniMax M3.1 Flash",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/MiniMaxAI",
+      "verified_date": "2026-11-22",
+      "notes": "Confirmed on huggingface.co/MiniMaxAI (2026-11-22 fetch). MiniMax's current fast/efficient LLM sibling, 220B total. Positioned as the speed-optimized variant of the M3 lineup. API-only, same closed license as M3."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3-Coder-480B-A35B",
+      "type": "open-weight",
+      "release_date": "2025-05",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "verified_date": "2026-11-22",
+      "notes": "Confirmed on huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct (2026-11-22 fetch) and AWS Bedrock (as 'Qwen3 Coder 480B A35B Instruct'). Released May 2025, Apache 2.0, 480B total / 35B active MoE, 256K context. Flagship Qwen3-Coder size not previously in this registry (the existing Qwen3-Coder entries cover 30B-A3B and Next/80B). Added this cycle as a gap."
+    },
+    {
+      "company": "Moonshot AI",
+      "family": "Kimi",
+      "model": "Kimi K3.1 Pro Highspeed",
+      "type": "closed",
+      "release_date": "2026-10-23",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://platform.kimi.ai",
+      "verified_date": "2026-11-22",
+      "notes": "Confirmed real on platform.kimi.ai and AWS Bedrock (2026-11-22 cycle). Announced in the same Moonshot forum post as Kimi K3.1 Pro (2026-10-23); same intelligence as K3.1 Pro at approximately 3x speed. Separate API endpoint from K3.1 Pro. Release date = forum announcement date, same as K3.1 Pro. The K3.1 Pro registry entry notes this model but had not added it as its own entry."
+    },
+    {
+      "company": "Mistral AI",
+      "family": "Mistral",
+      "model": "Magistral Small",
+      "type": "open-weight",
+      "release_date": "2025-06-10",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://mistral.ai/news/magistral",
+      "verified_date": "2026-11-22",
+      "notes": "Confirmed on mistral.ai/news/magistral (2026-11-22 fetch). Released 2025-06-10. Mistral's first reasoning model in a small form factor, 24B parameters, Apache 2.0. Available on AWS Bedrock as 'Magistral Small 2509' (a date-tagged variant). Co-developed for step-by-step reasoning at a local/edge-deployable size. Added this cycle as a gap — this is an older release that was never entered in the registry."
     }
   ],
   "sources": [

@@ -48,26 +48,6 @@
     ]
   },
   {
-    "siteModel": "GPT-6 Astra",
-    "registryModel": "GPT-6 Astra",
-    "status": "superseded",
-    "superseded_by": "GPT-6.2 Astra",
-    "notes": "CONFIRMED CURRENT (2026-10-18 fetch): OpenAI's own models docs list GPT-6 Astra as the most capable model ($10/$50/MTok, 1.05M context, knowledge cutoff Apr 2026). The previously-unresolved relationship to GPT-5.6 is now resolved: GPT-5.6 is fully superseded. GPT-6 Astra, GPT-6.1 Sol, and GPT-6 Luna are the three current tiers.",
-    "fileCount": 10,
-    "files": [
-      "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
-      "src/lib/prompt-engineering/articles/how-llms-actually-work.ts",
-      "src/lib/prompt-engineering/articles/zero-shot-vs-few-shot.ts",
-      "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
-      "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
-      "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
-      "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
-      "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
-      "src/lib/prompt-bites/articles/best-llm-right-now.ts",
-      "src/lib/power-local-llm/articles/liquid-apollo-review.ts"
-    ]
-  },
-  {
     "siteModel": "DeepSeek-R1",
     "registryModel": "DeepSeek-R1",
     "status": "superseded",
@@ -103,22 +83,6 @@
       "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts",
       "src/lib/power-local-llm/articles/best-local-llm-apps-iphone-2026.ts",
       "src/lib/local-llms/articles/local-llm-hardware-guide.ts"
-    ]
-  },
-  {
-    "siteModel": "GPT-6.1 Sol",
-    "registryModel": "GPT-6.1 Sol",
-    "status": "superseded",
-    "superseded_by": "GPT-6.2 Sol",
-    "notes": "Confirmed current per OpenAI's own models docs (2026-10-18 fetch). Balanced tier of the GPT-6 family, $2/MTok input, $10/MTok output. 1.05M-token context, knowledge cutoff Apr 2026. Part of the three-tier GPT-6 lineup: Astra (most capable) / Sol (balanced) / Luna (cost-optimized).",
-    "fileCount": 6,
-    "files": [
-      "src/lib/prompt-engineering/articles/tokens-costs-limits.ts",
-      "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
-      "src/lib/prompt-engineering/articles/temperature-and-top-p.ts",
-      "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
-      "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
-      "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
     ]
   },
   {
@@ -348,17 +312,6 @@
     ]
   },
   {
-    "siteModel": "Claude Fable 5.1",
-    "registryModel": "Claude Fable 5.1",
-    "status": "superseded",
-    "superseded_by": "Claude Fable 5.2",
-    "notes": "'For demanding reasoning and long-horizon agentic work' per Anthropic's own comparison table; recommended when evals on Opus 5 at higher effort still fall short. 1M-token context, reliable knowledge cutoff Jun 2026, retirement not sooner than 2027-09-01. Supersedes Claude Fable 5. Anthropic's own pricing footnote also references a 'Claude Mythos 5.1' (2.5% cache-read discount tier, mirroring the Fable 5.1 rate) -- not independently verified via a dedicated model page this cycle; left untracked as a separate entry until confirmed, do not cite it as a distinct current model yet.",
-    "fileCount": 1,
-    "files": [
-      "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts"
-    ]
-  },
-  {
     "siteModel": "ERNIE 4.0",
     "registryModel": "ERNIE 4.0",
     "status": "superseded",
@@ -417,8 +370,8 @@
     "siteModel": "GPT-5.6 Terra",
     "registryModel": "GPT-5.6 Terra",
     "status": "superseded",
-    "superseded_by": null,
-    "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant). No confirmed same-named 'Terra' successor found this cycle (OpenAI's site is bot-blocked from this session; unverified third-party mentions of a 'GPT-6.1 Terra' exist but are not confirmed from an official source) -- left unresolved rather than guessed. Needs a real OpenAI-source check.",
+    "superseded_by": "GPT-6.1 Terra",
+    "notes": "Earlier tooling matched this to GPT-6 Astra (wrong variant). RESOLVED 2026-11-22: developers.openai.com/api/docs/models (direct fetch this cycle) confirmed GPT-6.1 Terra as a real current model ($1/$5 MTok, 'Fast and efficient'), closing the previously dangling superseded_by.",
     "fileCount": 1,
     "files": [
       "src/lib/prompt-bites/articles/local-ai-trend-2027-cloud-subsidy-collapse.ts"
@@ -730,6 +683,17 @@
     "fileCount": 1,
     "files": [
       "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts"
+    ]
+  },
+  {
+    "siteModel": "Mistral Small 3.2 24B",
+    "registryModel": "Mistral Small",
+    "status": "superseded",
+    "superseded_by": "Mistral Small 4",
+    "notes": "Site's most-mentioned Mistral model (23 mentions, generic 'Mistral Small' without version). Mistral's own docs list a legacy deprecation table with specific retirement dates per point version — exact version(s) the site means is unverified; needs page-by-page check, not a blanket fact.",
+    "fileCount": 1,
+    "files": [
+      "src/lib/local-llms/articles/best-local-llms-business-writing.ts"
     ]
   },
   {
