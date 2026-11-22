@@ -30923,5 +30923,31 @@
       "t14": "2026-12-04",
       "t28": "2026-12-18"
     }
+  },
+  {
+    "id": "2daad71d-d8b3-43db-bee8-042da762df9c",
+    "slug": "/local-llms/local-llm-vs-cloud-gpu-cost",
+    "date": "2026-11-22T10:36:37.924Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "hourly prices only, no cost per token (dateModified 2026-11-15)",
+        "new": "cost-per-token section + FAQ added, prices re-read 2026-11-22"
+      }
+    ],
+    "reason": "Page refresh 2026-11-22: new cost-per-token section (third-party NoctHost data) + FAQ on cost per million tokens; vendor prices re-verified 22 Nov; all 9 locales; risk-gated",
+    "queries": [
+      "cost of running local llm vs cloud",
+      "cloud vs local llm cost calculator",
+      "cloud gpu for llm"
+    ],
+    "baseline": {
+      "position": 10.6,
+      "impressions": 1085,
+      "clicks": 1,
+      "ctr": 0.0009216589861751152,
+      "period": "28d to 2026-11-22"
+    },
+    "deployedAt": null
   }
 ]
