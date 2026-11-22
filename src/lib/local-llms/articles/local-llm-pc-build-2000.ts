@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) — VRAM-per-dollar comparison across every price tier',
           '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — why Q4_K_M is the default choice and how it affects VRAM',
           '[VRAM Calculator for Local LLMs](/local-llms/vram-calculator-local-llm) — estimate VRAM needs for any model size and quantization',
-          '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build) — higher-budget single-GPU workstation alternative',
+          '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build) — higher-budget dual-GPU workstation with 48 GB of VRAM for 70B-class models',
         ],
       },
       sources: {
@@ -474,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Mejores GPUs Económicas para LLMs Locales](/es/local-llms/best-budget-gpus-local-llm) — comparación de VRAM por dólar en cada nivel de precio',
           '[Cuantización de LLM Explicada](/es/local-llms/llm-quantization-explained) — por qué Q4_K_M es la elección por defecto y cómo afecta la VRAM',
           '[Calculadora de VRAM para LLMs Locales](/es/local-llms/vram-calculator-local-llm) — estima las necesidades de VRAM para cualquier tamaño de modelo y cuantización',
-          '[Build de Estación de Trabajo para LLM Local](/es/local-llms/local-llm-workstation-build) — alternativa de una sola GPU con presupuesto mayor',
+          '[Build de Estación de Trabajo para LLM Local](/es/local-llms/local-llm-workstation-build) — alternativa de presupuesto mayor con dos GPU y 48 GB de VRAM para modelos de clase 70B',
         ],
       },
       sources: {
@@ -744,7 +744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[로컬 LLM을 위한 최고의 저가형 GPU](/ko/local-llms/best-budget-gpus-local-llm) — 모든 가격대에 걸친 VRAM 대비 가성비 비교',
           '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4_K_M이 기본 선택인 이유와 VRAM에 미치는 영향',
           '[로컬 LLM용 VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) — 모델 크기와 양자화별 VRAM 요구량 추정',
-          '[로컬 LLM 워크스테이션 빌드](/ko/local-llms/local-llm-workstation-build) — 더 높은 예산의 단일 GPU 워크스테이션 대안',
+          '[로컬 LLM 워크스테이션 빌드](/ko/local-llms/local-llm-workstation-build) — 더 높은 예산의 이중 GPU 워크스테이션 대안: 70B급 모델용 48 GB VRAM',
         ],
       },
       sources: {
@@ -1015,7 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[أفضل بطاقات GPU الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm) — مقارنة قيمة VRAM مقابل السعر عبر جميع فئات الأسعار',
           '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) — لماذا يُعد Q4_K_M الخيار الافتراضي وكيف يؤثر على VRAM',
           '[حاسبة VRAM لنماذج LLM المحلية](/ar/local-llms/vram-calculator-local-llm) — تقدير احتياجات VRAM لأي حجم نموذج وتكميم',
-          '[تجميع محطة عمل لنماذج LLM محلية](/ar/local-llms/local-llm-workstation-build) — بديل محطة عمل بـ GPU واحدة وميزانية أعلى',
+          '[تجميع محطة عمل لنماذج LLM محلية](/ar/local-llms/local-llm-workstation-build) — بديل بميزانية أعلى ببطاقتي GPU و48 GB من VRAM لنماذج فئة 70B',
         ],
       },
       sources: {
@@ -1285,7 +1285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ローカルLLM向けコスパGPUベスト](/ja/local-llms/best-budget-gpus-local-llm) — 全価格帯のVRAM単価比較',
           '[LLM量子化の解説](/ja/local-llms/llm-quantization-explained) — Q4_K_Mが標準である理由とVRAMへの影響',
           '[ローカルLLM向けVRAM計算ツール](/ja/local-llms/vram-calculator-local-llm) — 任意のモデルサイズと量子化で必要なVRAMを見積もる',
-          '[ローカルLLMワークステーションビルド](/ja/local-llms/local-llm-workstation-build) — より高予算のシングルGPUワークステーションの代替案',
+          '[ローカルLLMワークステーションビルド](/ja/local-llms/local-llm-workstation-build) — より高予算の、70Bクラスのモデル向け48GB VRAMのデュアルGPUワークステーション',
         ],
       },
       sources: {
@@ -1555,7 +1555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — VRAM-pro-Dollar-Vergleich über alle Preisklassen',
           '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — warum Q4_K_M die Standardwahl ist und wie sie sich auf VRAM auswirkt',
           '[VRAM-Rechner für lokale LLMs](/de/local-llms/vram-calculator-local-llm) — VRAM-Bedarf für jede Modellgröße und Quantisierung abschätzen',
-          '[Lokaler LLM-Workstation-Build](/de/local-llms/local-llm-workstation-build) — Single-GPU-Workstation-Alternative mit höherem Budget',
+          '[Lokaler LLM-Workstation-Build](/de/local-llms/local-llm-workstation-build) — Dual-GPU-Workstation mit höherem Budget und 48 GB VRAM für 70B-Modelle',
         ],
       },
       sources: {
@@ -1825,7 +1825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Meilleurs GPU économiques pour LLM locaux](/fr/local-llms/best-budget-gpus-local-llm) — comparaison du rapport VRAM/prix sur tous les paliers de budget',
           '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) — pourquoi Q4_K_M est le choix par défaut et son effet sur la VRAM',
           '[Calculateur de VRAM pour LLM locaux](/fr/local-llms/vram-calculator-local-llm) — estimez les besoins en VRAM pour toute taille de modèle et quantification',
-          '[Configuration station de travail pour LLM local](/fr/local-llms/local-llm-workstation-build) — alternative mono-GPU haut de gamme',
+          '[Configuration station de travail pour LLM local](/fr/local-llms/local-llm-workstation-build) — alternative bi-GPU à budget plus élevé, avec 48 GB de VRAM pour les modèles 70B',
         ],
       },
       sources: {
@@ -2095,7 +2095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[本地LLM最佳预算GPU推荐](/zh/local-llms/best-budget-gpus-local-llm) — 各价位每美元显存性价比对比',
           '[LLM量化详解](/zh/local-llms/llm-quantization-explained) — 为什么Q4_K_M是默认选择及其对显存的影响',
           '[本地LLM显存计算器](/zh/local-llms/vram-calculator-local-llm) — 估算任意模型规模和量化方式所需的显存',
-          '[本地LLM工作站构建](/zh/local-llms/local-llm-workstation-build) — 更高预算的单GPU工作站替代方案',
+          '[本地LLM工作站构建](/zh/local-llms/local-llm-workstation-build) — 更高预算的双 GPU 工作站替代方案，48 GB 显存，面向 70B 级模型',
         ],
       },
       sources: {
@@ -2365,7 +2365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Melhores GPUs Econômicas para LLMs Locais](/pt/local-llms/best-budget-gpus-local-llm) — comparação de VRAM por dólar em todas as faixas de preço',
           '[Quantização de LLM Explicada](/pt/local-llms/llm-quantization-explained) — por que Q4_K_M é a escolha padrão e como isso afeta a VRAM',
           '[Calculadora de VRAM para LLMs Locais](/pt/local-llms/vram-calculator-local-llm) — estime as necessidades de VRAM para qualquer tamanho de modelo e quantização',
-          '[Build de Workstation para LLM Local](/pt/local-llms/local-llm-workstation-build) — alternativa de workstation com GPU única e orçamento maior',
+          '[Build de Workstation para LLM Local](/pt/local-llms/local-llm-workstation-build) — alternativa de orçamento maior com duas GPUs e 48 GB de VRAM para modelos da classe 70B',
         ],
       },
       sources: {

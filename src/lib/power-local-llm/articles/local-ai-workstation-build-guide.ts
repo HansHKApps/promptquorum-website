@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Choose the GPU for your build with the full buying guide](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — eight GPUs across four budget tiers, with current prices and the surge math.',
-          '[See the dual-GPU 70B workstation build for production use](/local-llms/local-llm-workstation-build) — the $4,000-6,000 multi-user tier beyond this guide\'s enthusiast build.',
+          '[See the dual-GPU 70B workstation build for production use](/local-llms/local-llm-workstation-build) — a 48 GB dual-GPU tier for 70B-class models beyond this guide\'s enthusiast build.',
           '[Compare building a PC against renting cloud GPUs](/power-local-llm/cloud-gpu-rental-guide-2026) — when renting beats owning hardware for occasional compute.',
           '[Work out the VRAM each model size needs before you build](/local-llms/how-much-vram-local-llm) — the complete VRAM-by-model-size method behind the tier choices here.',
           '[Consider a Mac as an alternative to a PC build](/power-local-llm/best-mac-for-local-ai-2026) — when unified-memory Apple Silicon beats a discrete-GPU PC for local AI.',
@@ -1042,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Lektüre',
         items: [
           '[Wählen Sie die GPU für Ihren Build mit dem vollständigen Kaufratgeber](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — acht GPUs über vier Budget-Stufen, mit aktuellen Preisen und der Rechnung zum Preisanstieg.',
-          '[Sehen Sie den Dual-GPU-70B-Workstation-Build für den Produktiveinsatz](/de/local-llms/local-llm-workstation-build) — die 4.000-6.000-€-Mehrnutzer-Stufe jenseits des Enthusiasten-Builds dieser Anleitung.',
+          '[Sehen Sie den Dual-GPU-70B-Workstation-Build für den Produktiveinsatz](/de/local-llms/local-llm-workstation-build) — die Dual-GPU-Stufe mit 48 GB VRAM für 70B-Modelle jenseits des Enthusiasten-Builds dieser Anleitung.',
           '[Vergleichen Sie den PC-Bau mit der Miete von Cloud-GPUs](/de/power-local-llm/cloud-gpu-rental-guide-2026) — wann Mieten den Hardwarekauf für gelegentliche Rechenlast schlägt.',
           '[Ermitteln Sie das VRAM jeder Modellgröße vor dem Bau](/de/local-llms/how-much-vram-local-llm) — die vollständige VRAM-nach-Modellgröße-Methode hinter den Stufenwahlen hier.',
           '[Ziehen Sie einen Mac als Alternative zu einem PC-Build in Betracht](/de/power-local-llm/best-mac-for-local-ai-2026) — wann Apple Silicon mit vereinheitlichtem Speicher einen PC mit dedizierter GPU für lokale KI schlägt.',
@@ -1560,7 +1560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pour aller plus loin',
         items: [
           '[Choisissez le GPU de votre configuration avec le guide d\'achat complet](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — huit GPU sur quatre niveaux de budget, avec les prix actuels et le calcul de la flambée.',
-          '[Découvrez la configuration de station 70B bi-GPU pour un usage en production](/fr/local-llms/local-llm-workstation-build) — le niveau multi-utilisateur à 4 000-6 000 € au-delà de la configuration enthousiaste de ce guide.',
+          '[Découvrez la configuration de station 70B bi-GPU pour un usage en production](/fr/local-llms/local-llm-workstation-build) — le niveau bi-GPU à 48 GB de VRAM pour les modèles 70B, au-delà de la configuration enthousiaste de ce guide.',
           '[Comparez le montage d\'un PC à la location de GPU cloud](/fr/power-local-llm/cloud-gpu-rental-guide-2026) — quand la location bat la possession de matériel pour un calcul occasionnel.',
           '[Calculez la VRAM nécessaire à chaque taille de modèle avant de monter](/fr/local-llms/how-much-vram-local-llm) — la méthode complète de VRAM par taille de modèle derrière les choix de niveau ici.',
           '[Envisagez un Mac comme alternative à un montage PC](/fr/power-local-llm/best-mac-for-local-ai-2026) — quand l\'Apple Silicon à mémoire unifiée bat un PC à GPU dédié pour l\'IA locale.',
@@ -2078,7 +2078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[完全な購入ガイドで構成のGPUを選ぶ](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 4つの予算ティアにわたる8つのGPU、現在の価格と高騰の計算付き。',
-          '[本番運用向けのデュアルGPU 70Bワークステーション構成を見る](/ja/local-llms/local-llm-workstation-build) — 本ガイドのハイエンド構成の先にある、¥4,000〜6,000相当の多人数向けティア。',
+          '[本番運用向けのデュアルGPU 70Bワークステーション構成を見る](/ja/local-llms/local-llm-workstation-build) — 本ガイドのハイエンド構成の先にある、70Bクラスのモデル向け48GB VRAMのデュアルGPUティア。',
           '[PCを組むこととクラウドGPUのレンタルを比較する](/ja/power-local-llm/cloud-gpu-rental-guide-2026) — たまの計算用途では、レンタルがハードウェア所有を上回る場合。',
           '[組む前に各モデルサイズが必要とするVRAMを算出する](/ja/local-llms/how-much-vram-local-llm) — ここでのティア選択の背景にある、モデルサイズ別VRAMの完全な算出法。',
           '[PC構成の代替としてMacを検討する](/ja/power-local-llm/best-mac-for-local-ai-2026) — 統合メモリのApple Siliconが、ローカルAIで専用GPUのPCを上回る場合。',
@@ -2596,7 +2596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '延伸阅读',
         items: [
           '[用完整购买指南为你的配置选 GPU](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 横跨四个预算档位的八块 GPU,附当前价格和涨价算账。',
-          '[查看面向生产用途的双 GPU 70B 工作站配置](/zh/local-llms/local-llm-workstation-build) — 本指南发烧配置之外、4,000-6,000 美元的多用户档位。',
+          '[查看面向生产用途的双 GPU 70B 工作站配置](/zh/local-llms/local-llm-workstation-build) — 本指南发烧配置之外、面向 70B 级模型的 48 GB 显存双 GPU 档位。',
           '[把自己装 PC 与租用云 GPU 做对比](/zh/power-local-llm/cloud-gpu-rental-guide-2026) — 在偶尔需要算力时,租用何时优于自购硬件。',
           '[装机前算清每个模型规模所需的显存](/zh/local-llms/how-much-vram-local-llm) — 这里档位选择背后、按模型规模算显存的完整方法。',
           '[把 Mac 作为 PC 装机的替代方案来考虑](/zh/power-local-llm/best-mac-for-local-ai-2026) — 统一内存的 Apple Silicon 何时在本地 AI 上胜过独立 GPU 的 PC。',
@@ -3114,7 +3114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Elige la GPU para tu configuración con la guía de compra completa](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — ocho GPU en cuatro niveles de presupuesto, con precios actuales y el cálculo del aumento.',
-          '[Ve la configuración de workstation 70B de GPU dual para uso en producción](/es/local-llms/local-llm-workstation-build) — el nivel multiusuario de €4.000-6.000 más allá de la configuración entusiasta de esta guía.',
+          '[Ve la configuración de workstation 70B de GPU dual para uso en producción](/es/local-llms/local-llm-workstation-build) — el nivel de GPU dual con 48 GB de VRAM para modelos de clase 70B, más allá de la configuración entusiasta de esta guía.',
           '[Compara armar una PC contra rentar GPU en la nube](/es/power-local-llm/cloud-gpu-rental-guide-2026) — cuándo rentar supera tener hardware propio para cómputo ocasional.',
           '[Calcula la VRAM que necesita cada tamaño de modelo antes de armar](/es/local-llms/how-much-vram-local-llm) — el método completo de VRAM por tamaño de modelo detrás de las elecciones de nivel aquí.',
           '[Considera una Mac como alternativa a una configuración de PC](/es/power-local-llm/best-mac-for-local-ai-2026) — cuándo el Apple Silicon con memoria unificada supera a una PC con GPU dedicada para IA local.',
@@ -3645,7 +3645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Escolha a GPU para sua configuração com o guia de compra completo](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — oito GPUs em quatro níveis de orçamento, com preços atuais e o cálculo do aumento.',
-          '[Veja a configuração de workstation 70B de GPU dupla para uso em produção](/pt/local-llms/local-llm-workstation-build) — o nível multiusuário de R$ 26.000–40.000 além da configuração entusiasta deste guia.',
+          '[Veja a configuração de workstation 70B de GPU dupla para uso em produção](/pt/local-llms/local-llm-workstation-build) — o nível de GPU dupla com 48 GB de VRAM para modelos da classe 70B, além da configuração entusiasta deste guia.',
           '[Compare montar um PC versus alugar GPU na nuvem](/pt/power-local-llm/cloud-gpu-rental-guide-2026) — quando alugar supera ter hardware próprio para computação ocasional.',
           '[Calcule a VRAM que cada tamanho de modelo precisa antes de montar](/pt/local-llms/how-much-vram-local-llm) — o método completo de VRAM por tamanho de modelo por trás das escolhas de nível aqui.',
           '[Considere um Mac como alternativa a uma configuração de PC](/pt/power-local-llm/best-mac-for-local-ai-2026) — quando o Apple Silicon com memória unificada supera um PC com GPU dedicada para IA local.',
@@ -4176,7 +4176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءة ذات صلة',
         items: [
           '[اختر الـGPU لإعدادك مع الدليل الكامل للشراء](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — ثمانية GPU في أربعة مستويات ميزانية، مع الأسعار الحالية وحساب الارتفاع.',
-          '[شاهد إعداد محطة عمل 70B بـGPU مزدوجة للاستخدام الإنتاجي](/ar/local-llms/local-llm-workstation-build) — المستوى متعدد المستخدمين 4000–6000 دولار ما وراء الإعداد المتحمس في هذا الدليل.',
+          '[شاهد إعداد محطة عمل 70B بـGPU مزدوجة للاستخدام الإنتاجي](/ar/local-llms/local-llm-workstation-build) — مستوى GPU مزدوجة بذاكرة 48 GB لنماذج فئة 70B ما وراء الإعداد المتحمس في هذا الدليل.',
           '[قارن بناء حاسوب مقابل استئجار GPU في السحابة](/ar/power-local-llm/cloud-gpu-rental-guide-2026) — متى يتفوق الاستئجار على امتلاك أجهزة للحوسبة العرضية.',
           '[احسب VRAM التي يحتاجها كل حجم نموذج قبل البناء](/ar/local-llms/how-much-vram-local-llm) — الطريقة الكاملة لـVRAM حسب حجم النموذج خلف اختيارات المستوى هنا.',
           '[فكّر في Mac كبديل لإعداد PC](/ar/power-local-llm/best-mac-for-local-ai-2026) — متى يتفوق Apple Silicon بالذاكرة الموحدة على PC بـGPU مخصصة للذكاء الاصطناعي المحلي.',
@@ -4707,7 +4707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 자료',
         items: [
           '[전체 구매 가이드로 구성에 맞는 GPU 선택](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 현재 가격과 가격 급등 계산이 포함된 네 가지 예산 단계의 GPU 8종.',
-          '[프로덕션 사용을 위한 이중 GPU 70B 워크스테이션 구성 보기](/ko/local-llms/local-llm-workstation-build) — 이 가이드의 고급형 구성을 넘어서는 $4,000–6,000 다중 사용자 단계.',
+          '[프로덕션 사용을 위한 이중 GPU 70B 워크스테이션 구성 보기](/ko/local-llms/local-llm-workstation-build) — 이 가이드의 고급형 구성을 넘어서는 70B급 모델용 48 GB VRAM 이중 GPU 단계.',
           '[PC 구성 대 클라우드 GPU 대여 비교](/ko/power-local-llm/cloud-gpu-rental-guide-2026) — 가끔 컴퓨팅에는 자체 하드웨어 소유보다 대여가 나을 때.',
           '[구성 전 각 모델 크기에 필요한 VRAM 계산](/ko/local-llms/how-much-vram-local-llm) — 여기 단계 선택 이면의 모델 크기별 완전한 VRAM 방법론.',
           '[로컬 AI를 위한 PC 구성의 대안으로 Mac 고려](/ko/power-local-llm/best-mac-for-local-ai-2026) — 통합 메모리를 갖춘 Apple Silicon이 로컬 AI를 위한 전용 GPU PC를 능가하는 경우.',

@@ -34089,96 +34089,6 @@
     "width": 800,
     "height": 360
   },
-  "/images/local-llm-workstation-build-components-layout-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-components-layout-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-components-layout-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-components-layout-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-components-layout-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-components-layout-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-cooling-setup-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-cooling-setup-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-cooling-setup-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-cooling-setup-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-cooling-setup-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-cooling-setup-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-dual-gpu-config-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 360
-  },
-  "/images/local-llm-workstation-build-dual-gpu-config-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 360
-  },
-  "/images/local-llm-workstation-build-dual-gpu-config-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 360
-  },
-  "/images/local-llm-workstation-build-dual-gpu-config-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 360
-  },
-  "/images/local-llm-workstation-build-dual-gpu-config-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 360
-  },
-  "/images/local-llm-workstation-build-dual-gpu-config-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 360
-  },
   "/images/local-llm-workstation-build-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -34223,36 +34133,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/local-llm-workstation-build-power-electrical-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-power-electrical-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-power-electrical-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-power-electrical-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-power-electrical-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/local-llm-workstation-build-power-electrical-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
   },
   "/images/local-llms-for-coding-workflows-generation-workflow-en.svg": {
     "encodingFormat": "image/svg+xml",

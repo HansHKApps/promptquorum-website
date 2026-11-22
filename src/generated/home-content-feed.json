@@ -12826,10 +12826,10 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルLLM向けの最高のバジェットGPU",
-    "excerpt": "RTX 3060 12GB（中古約$320–350）でローカルLLMを7種実行：Qwen3 14B（推定9-12トークン/秒）、Qwen3 8B（推定16-20トークン/秒）ほか。VRAMと速度の早見表付き。",
+    "title": "ローカルLLM向けおすすめバジェットGPU",
+    "excerpt": "ローカルLLMおすすめGPU：RTX 3060 12GB（米国中古価格約$320–350）でQwen3 14B（推定9-12トークン/秒）ほか7種を実行。VRAMと速度の早見表付き。国内価格は価格.comで確認。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-18",
+    "dateModified": "2026-11-22",
     "url": "/ja/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -12871,10 +12871,10 @@
   },
   {
     "lang": "ko",
-    "title": "2026 로컬 LLM 최고의 예산형 GPU: RTX 3060 12GB",
-    "excerpt": "RTX 3060 12GB: Qwen3 8B 초당 약 16-20토큰, 14B 초당 약 9-12토큰(추정). 예산별 GPU 추천과 가격 비교 정리.",
+    "title": "2026 로컬 LLM 예산형 GPU 추천: RTX 3060 12GB",
+    "excerpt": "RTX 3060 12GB: Qwen3 8B 초당 약 16-20토큰(추정). 예산별 GPU 추천, 미국 가격 비교, 국내 가격은 다나와 확인.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-04-05",
+    "dateModified": "2026-11-22",
     "url": "/ko/local-llms/best-budget-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -13150,10 +13150,10 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルLLM・AI推論に最適なAMD GPU",
-    "excerpt": "AI・ローカルLLM向けAMD GPUの選び方。RX 7900 XTX（24GB）、RX 9070 XT（16GB）、Radeon AI PRO R9700（32GB）をROCm・VulkanとNVIDIA比較で解説。",
+    "title": "ローカルLLM・AI推論におすすめのAMD GPU",
+    "excerpt": "AI・ローカルLLM向けおすすめAMD GPUの選び方。RX 7900 XTX（24GB）、RX 9070 XT（16GB）、Radeon AI PRO R9700（32GB）をROCm・VulkanとNVIDIA比較で解説。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-22",
     "url": "/ja/local-llms/best-amd-gpus-local-llm",
     "cluster": "local-llms"
   },
@@ -13195,91 +13195,91 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 LLM·AI 추론에 가장 좋은 AMD GPU",
-    "excerpt": "로컬 LLM·AI용 AMD GPU: RX 7900 XTX(24GB), RX 9070 XT(16GB), R9700(32GB)을 ROCm·Vulkan, NVIDIA 비교와 함께 정리합니다.",
+    "title": "로컬 LLM·AI 추론용 추천 AMD GPU",
+    "excerpt": "로컬 LLM·AI용 AMD GPU 추천: RX 7900 XTX(24GB), RX 9070 XT(16GB), R9700(32GB)을 ROCm·Vulkan, NVIDIA 비교와 함께 정리합니다.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-11-22",
     "url": "/ko/local-llms/best-amd-gpus-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "en",
-    "title": "Build a Local LLM PC: Best Workstation Setup (GPU, VRAM, 7B–70B Models)",
-    "excerpt": "Build a powerful local LLM workstation with the right GPU, VRAM, and RAM. Exact PC setups to run 7B–70B models fast with Ollama and LM Studio.",
+    "title": "Local LLM PC and Workstation Build (2026): GPUs, RAM, PSU and Costs for 70B Models",
+    "excerpt": "Build a local LLM PC or workstation: 48 GB of VRAM for 70B models, 64 GB RAM, PSU sizing and sourced 2026 prices for dual RTX 3090, 4090 and 5090.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-22",
     "url": "/local-llms/local-llm-workstation-build",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
-    "title": "Local LLM PC bauen: Beste Workstation (GPU, VRAM, 7B–70B Modelle)",
-    "excerpt": "Baue deine Local LLM Workstation mit der richtigen GPU, VRAM und RAM. Konkrete PC-Builds für 7B–70B Modelle mit Ollama und LM Studio.",
+    "title": "PC für lokale LLM bauen (2026): GPUs, RAM, Netzteil und Kosten für 70B-Modelle",
+    "excerpt": "LLM-PC als Workstation bauen: 48 GB VRAM für 70B-Modelle, 64 GB RAM, Netzteil-Auslegung und belegte Preise 2026 für Dual-RTX-3090-, 4090- und 5090-Builds.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-22",
     "url": "/de/local-llms/local-llm-workstation-build",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
-    "title": "Construire un PC LLM local : meilleure workstation (GPU, VRAM, modèles 7B–70B)",
-    "excerpt": "Créez une workstation LLM locale avec le bon GPU, VRAM et RAM. Configurations précises pour exécuter des modèles 7B à 70B avec Ollama et LM Studio.",
+    "title": "Station de travail LLM local (2026) : GPU, RAM, alimentation et coûts pour modèles 70B",
+    "excerpt": "Montez une station de travail LLM local : 48 GB de VRAM pour modèles 70B, 64 GB de RAM, alimentation et prix 2026 sourcés pour double RTX 3090, 4090, 5090.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-22",
     "url": "/fr/local-llms/local-llm-workstation-build",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
-    "title": "ローカルLLM用PC構築：最適ワークステーション（GPU・VRAM・7B〜70B対応）",
-    "excerpt": "ローカルLLMを高速に動かすPC構成を解説。GPU・VRAM・RAMの最適な組み合わせで、7B〜70BモデルをOllamaやLM Studioで実行できます。",
+    "title": "ローカルLLMワークステーションの自作ガイド（2026年）：70Bモデル向けGPU・RAM・電源・費用",
+    "excerpt": "ローカルLLM用ワークステーションの組み方。70Bモデル向けの48 GB VRAM、64 GB RAM、電源容量の目安と、RTX 3090・4090・5090構成の2026年の出典付き価格を解説します。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-22",
     "url": "/ja/local-llms/local-llm-workstation-build",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
-    "title": "本地LLM电脑配置指南：最佳工作站方案（GPU、VRAM、7B–70B模型）",
-    "excerpt": "构建本地LLM工作站，选择合适的GPU、VRAM和内存。查看可运行7B–70B模型的真实配置，支持Ollama和LM Studio。",
+    "title": "本地LLM工作站装机指南（2026）：70B模型所需的GPU、内存、电源与成本",
+    "excerpt": "搭建本地LLM工作站：70B模型需约48 GB显存，另含64 GB内存、电源选型，以及双RTX 3090、4090、5090方案的2026年有来源价格。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-22",
     "url": "/zh/local-llms/local-llm-workstation-build",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
-    "title": "Construye un PC para LLM Local: Mejor Estación de Trabajo (GPU, VRAM, Modelos 7B–70B)",
-    "excerpt": "Construye una estación de trabajo LLM local con la GPU, VRAM y RAM adecuadas. Configuraciones exactas para ejecutar modelos 7B–70B con Ollama y LM Studio.",
+    "title": "Estación de trabajo para LLM local (2026): GPU, RAM, PSU y costos para modelos de 70B",
+    "excerpt": "Arma una estación de trabajo para LLM local: 48 GB de VRAM para modelos de 70B, 64 GB de RAM, PSU y precios 2026 con fuente para RTX 3090, 4090 y 5090.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-22",
     "url": "/es/local-llms/local-llm-workstation-build",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
-    "title": "Monte um PC para LLM Local: Melhor Estação de Trabalho (GPU, VRAM, Modelos 7B–70B)",
-    "excerpt": "Monte uma estação de trabalho LLM local com GPU, VRAM e RAM adequadas. Configurações exatas para executar modelos 7B–70B com Ollama e LM Studio.",
+    "title": "Estação de trabalho para LLM local (2026): GPUs, RAM, fonte e custos para modelos 70B",
+    "excerpt": "Monte uma estação de trabalho para LLM local: 48 GB de VRAM para modelos 70B, 64 GB de RAM, fonte e preços de 2026 com fonte para RTX 3090, 4090 e 5090.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-22",
     "url": "/pt/local-llms/local-llm-workstation-build",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "ابنِ حاسوبًا لـ⁨LLM⁩ المحلي: أفضل محطة عمل (⁨GPU⁩، ⁨VRAM⁩، نماذج ⁨7B⁩–⁨70B⁩)",
-    "excerpt": "محطة بـ ⁨4⁩,⁨000⁩–⁨6⁩,⁨000⁩$: بطاقتا ⁨RTX 4090⁩ (⁨48 GB VRAM⁩)، ⁨Threadripper 7970X⁩ (⁨32⁩ نواة)، ⁨128 GB DDR5⁩، مزود ⁨2⁩,⁨000W⁩. تخدم ⁨2⁩–⁨3⁩ مستخدمين لنماذج ⁨70B⁩.",
+    "title": "تجميع محطة عمل لنماذج LLM محلية (2026): بطاقات GPU وذاكرة RAM ومزود الطاقة والتكلفة لنماذج 70B",
+    "excerpt": "دليل تجميع محطة عمل لنماذج LLM محلية: 48 GB من VRAM لنماذج 70B وذاكرة RAM بسعة 64 GB وحجم مزود الطاقة وأسعار 2026 الموثقة لبطاقات RTX.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-22",
     "url": "/ar/local-llms/local-llm-workstation-build",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
-    "title": "로컬 LLM PC 제작: 최고의 워크스테이션 설정 (GPU, VRAM, 7B~70B 모델)",
-    "excerpt": "올바른 GPU, VRAM, RAM을 갖춘 강력한 로컬 LLM 워크스테이션을 제작하세요. Ollama와 LM Studio로 7B~70B 모델을 빠르게 실행하는 정확한 PC 구성.",
+    "title": "로컬 LLM 워크스테이션 구축 (2026): 70B 모델용 GPU, RAM, PSU, 비용",
+    "excerpt": "70B 모델용 로컬 LLM 워크스테이션 구축 가이드: VRAM 48 GB, RAM 64 GB, PSU 산정, 듀얼 RTX 3090·4090·5090 구성의 출처 있는 2026년 가격.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-11-22",
     "url": "/ko/local-llms/local-llm-workstation-build",
     "cluster": "local-llms"
   },
@@ -13312,10 +13312,10 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルLLM向けミニPC 2026年版：Mac Mini M6・M5 Pro・Framework Desktop比較",
-    "excerpt": "新しいMac mini（2026年8月）：M6は899ドルから（最大32GB）、M5 Proは1,699ドルから（最大64GB、70Bに必要）。Framework Desktop 128GB：70Bで20+ tok/s（約¥330,000）。ASUS PN51 + RTX 5060 Ti：約¥140,000。",
+    "title": "ローカルLLM向けおすすめミニPC 2026年版：Mac Mini M6・M5 Pro・Framework Desktop比較",
+    "excerpt": "ローカルLLM向けおすすめミニPC。新Mac mini（2026年8月）：M6は米国価格899ドルから（最大32GB）、M5 Proは1,699ドルから（最大64GB、70B向け）。Framework Desktop 128GB：70Bは報告値で約20〜25 tok/s（当サイト未測定、約¥330,000）。ASUS PN51 + RTX 5060 Ti：約¥140,000。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-22",
     "url": "/ja/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13357,10 +13357,10 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 LLM을 위한 최고의 미니 PC 2026: Mac Mini M6, M5 Pro, Framework Desktop 비교",
-    "excerpt": "새로운 Mac mini(2026년 8월): M6는 899달러부터(최대 32GB), M5 Pro는 1,699달러부터(최대 64GB, 70B 구동에 필요). Framework Desktop 128GB: 70B 초당 20토큰 이상($1,999). ASUS PN51+RTX 5060 Ti: $900.",
+    "title": "로컬 LLM 미니 PC 추천 2026: 맥미니 M6, M5 Pro, Framework Desktop 비교",
+    "excerpt": "로컬 LLM 미니 PC 추천: 맥미니 M6는 미국 가격 899달러부터(최대 32GB), M5 Pro는 1,699달러부터(최대 64GB, 70B용). Framework Desktop 128GB: 70B 보고값 초당 약 20~25 토큰(당사 미측정, $1,999). ASUS PN51+RTX 5060 Ti: $900.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-22",
     "url": "/ko/local-llms/best-mini-pcs-local-llm",
     "cluster": "local-llms"
   },
@@ -13393,10 +13393,10 @@
   },
   {
     "lang": "ja",
-    "title": "2026年ローカルLLM向け最強AMDミニPC:AOOSTAR・Minisforum・Beelink・GMKtec徹底比較",
-    "excerpt": "AMD Ryzen AI Max+ ミニPC比較:Minisforum MS-A2・Beelink GTR9・AOOSTAR GEM12・GMKtec EVO-X2。スペック・価格・70Bモデル性能。",
+    "title": "2026年ローカルLLM向けおすすめAMDミニPC:AOOSTAR・Minisforum・Beelink・GMKtec徹底比較",
+    "excerpt": "おすすめAMDミニPCを比較:Minisforum MS-A2・Beelink GTR9・AOOSTAR GEM12・GMKtec EVO-X2。米国価格・70B性能・常時稼働の騒音と消費電力。",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-22",
     "url": "/ja/local-llms/best-amd-mini-pc-local-llm-2026",
     "cluster": "local-llms"
   },
@@ -13438,10 +13438,10 @@
   },
   {
     "lang": "ko",
-    "title": "2026년 로컬 LLM용 최고의 AMD 미니 PC: AOOSTAR, Minisforum, Beelink, GMKtec 비교",
-    "excerpt": "AMD Ryzen AI Max+ 미니 PC 비교: Minisforum MS-A2, Beelink GTR9, AOOSTAR GEM12, GMKtec EVO-X2. 사양, 가격, 70B 모델 성능.",
+    "title": "2026년 로컬 LLM용 AMD 미니 PC 추천: AOOSTAR, Minisforum, Beelink, GMKtec 비교",
+    "excerpt": "AMD Ryzen AI Max+ 미니 PC 추천 비교: Minisforum MS-A2, Beelink GTR9, AOOSTAR GEM12, GMKtec EVO-X2. 사양, 미국 가격, 70B 모델 성능.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-22",
     "url": "/ko/local-llms/best-amd-mini-pc-local-llm-2026",
     "cluster": "local-llms"
   },
@@ -20278,10 +20278,10 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAIに最適なMac 2026：Mac mini vs Mac Studio vs MacBook Pro",
-    "excerpt": "Mac mini M6 32GBは約$1,300、M5 Pro 64GBは約$2,700。Mac Studio M5 Max 128GBは約$5,100、M5 Ultraは$5,499から。unified memory・帯域幅・実際の価格を比較。",
+    "title": "ローカルAIおすすめMac 2026：Mac mini vs Mac Studio vs MacBook Pro",
+    "excerpt": "おすすめMac比較：Mac mini M6 32GBは米国価格で約$1,300、M5 Pro 64GBは約$2,700、Mac Studio M5 Max 128GBは約$5,100。日本の価格は価格.comで確認。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-22",
     "url": "/ja/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -20323,10 +20323,10 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI용 최고의 Mac 2026: Mac Mini vs Mac Studio vs MacBook Pro",
-    "excerpt": "Mac Mini M6 32GB 약 $1,300, M5 Pro 64GB 약 $2,700, Mac Studio M5 Max 128GB 약 $5,100. 통합 메모리, 대역폭, 실제 가격 비교.",
+    "title": "로컬 AI용 Mac 추천 2026: 맥미니 vs Mac Studio vs MacBook Pro",
+    "excerpt": "로컬 AI Mac 추천: Mac Mini M6 32GB 미국 가격 약 $1,300, M5 Pro 64GB 약 $2,700, M5 Max 128GB 약 $5,100. 국내 가격은 다나와에서 확인.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-22",
     "url": "/ko/power-local-llm/best-mac-for-local-ai-2026",
     "cluster": "power-local-llm"
   },
@@ -21008,9 +21008,9 @@
   {
     "lang": "ja",
     "title": "ローカルLLM向けノートパソコンのおすすめ：購入ガイド2026",
-    "excerpt": "ローカルLLM向けノートPC：MacBook Pro M5 Pro/Max、ThinkPad、ASUS ROG、Framework 16。必要なRAM・VRAM・unified memoryを購入スタイル別に比較します。",
+    "excerpt": "ローカルLLM向けノートPCのおすすめ：MacBook Pro M5 Pro/Max、ThinkPad、ASUS ROG、Framework 16。必要なRAM・VRAM・unified memoryを購入スタイル別に比較します。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-22",
     "url": "/ja/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -21052,10 +21052,10 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 LLM 실행을 위한 최고의 노트북: 2026년 구매 가이드",
-    "excerpt": "2026년 로컬 LLM용 최고의 노트북: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM·VRAM·통합 메모리를 구매 스타일별 비교.",
+    "title": "로컬 LLM 실행을 위한 노트북 추천: 2026년 구매 가이드",
+    "excerpt": "2026년 로컬 LLM용 노트북 추천: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. RAM·VRAM·통합 메모리를 구매 스타일별 비교.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-11-09",
+    "dateModified": "2026-11-22",
     "url": "/ko/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
@@ -25381,10 +25381,10 @@
   },
   {
     "lang": "ja",
-    "title": "Apple MLX vs NVIDIA CUDA ローカルLLM比較：2026年どちらを選ぶべきか？",
-    "excerpt": "M5 Ultra vs RTX 5090：M5 UltraはLlama 3.3 70Bで約45 tok/s（96GB、5,499ドル）。RTX 5090の32GBでは70Bを読み込めない。M5 Max・コスト・消費電力も比較 2026年。",
+    "title": "Apple MLX vs NVIDIA CUDA ローカルLLM比較：2026年のおすすめはどちら？",
+    "excerpt": "M5 UltraとRTX 5090を比較：RTX 5090の32GB VRAMではLlama 3.3 70Bを読み込めませんが、M5 Ultra（96GB、米国価格5,499米ドル）なら収まります。M5 Max・消費電力・おすすめ構成も比較。",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-22",
     "url": "/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -25426,10 +25426,10 @@
   },
   {
     "lang": "ko",
-    "title": "Apple MLX vs NVIDIA CUDA 로컬 LLM: 2026년에 어떤 시스템을 선택해야 합니까?",
-    "excerpt": "M5 Ultra vs RTX 5090: M5 Ultra는 Llama 3.3 70B에서 약 45 tok/s (96GB, $5,499); RTX 5090의 32GB로는 70B를 로드할 수 없음. M5 Max·비용·전력 비교도 포함 2026.",
+    "title": "Apple MLX vs NVIDIA CUDA 로컬 LLM 비교: 2026년 어떤 시스템을 추천할까요?",
+    "excerpt": "M5 Ultra vs RTX 5090: RTX 5090의 32GB VRAM으로는 Llama 3.3 70B를 로드할 수 없지만 M5 Ultra(96GB, 미국 가격 5,499달러)는 메모리에 올릴 수 있습니다. M5 Max·전력·추천 구성 비교.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-11-06",
+    "dateModified": "2026-11-22",
     "url": "/ko/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -67549,7 +67549,7 @@
     "title": "MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가",
     "excerpt": "Apple Silicon MacBook은 eGPU를 기본 지원하지 않습니다. 2026년 대안: TinyGPU(tinygrad 전용), Mac mini M5 Pro, LAN 연결 OCuLink 미니 PC.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-22",
     "url": "/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026",
     "cluster": "prompt-bites"
   },
@@ -79813,10 +79813,10 @@
   },
   {
     "lang": "ja",
-    "title": "Home Assistant + ローカルAIに最適なミニPC（2026）",
-    "excerpt": "Home Assistant 向け最適ミニPC（2026年）：Beelink SER8（約$799〜）でFrigate＋7B、予算重視はIntel N150機（約$385〜500）、AI重視はGEEKOM A9 Max。",
+    "title": "Home Assistant + ローカルAIにおすすめのミニPC（2026）",
+    "excerpt": "Home Assistant 向けおすすめミニPC（2026年）：Beelink SER8（米国価格 約$799〜）でFrigate＋7B、予算重視はIntel N150機、AI重視はGEEKOM A9 Max。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-25",
+    "dateModified": "2026-11-22",
     "url": "/ja/smart-home/best-mini-pc-home-assistant-local-ai",
     "cluster": "smart-home"
   },
@@ -79858,10 +79858,10 @@
   },
   {
     "lang": "ko",
-    "title": "Home Assistant + 로컬 AI를 위한 최고의 미니 PC (2026)",
-    "excerpt": "Home Assistant 최고의 미니 PC 2026: Beelink SER8(약 $799부터), 예산형 Intel N150(약 $385–500), AI용 GEEKOM A9 Max.",
+    "title": "Home Assistant + 로컬 AI 미니 PC 추천 (2026)",
+    "excerpt": "Home Assistant 미니 PC 추천 2026: Beelink SER8(미국 가격 약 $799부터), 예산형 Intel N150, AI용 GEEKOM A9 Max.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-10-25",
+    "dateModified": "2026-11-22",
     "url": "/ko/smart-home/best-mini-pc-home-assistant-local-ai",
     "cluster": "smart-home"
   },

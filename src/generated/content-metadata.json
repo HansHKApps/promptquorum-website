@@ -2136,7 +2136,7 @@
       ]
     },
     "local-llm-workstation-build": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-11-22",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2151,24 +2151,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/local-llm-workstation-build-components-layout-en.svg",
-          "title": "Workstation components: dual RTX 4090 GPUs (48GB total VRAM), Threadripper 7970X CPU (32 cores), 128GB DDR5 RAM, 2000W PSU, and liquid cooling system for 1,200W heat dissipation."
-        },
-        {
-          "url": "/images/local-llm-workstation-build-dual-gpu-config-en.svg",
-          "title": "Three dual-GPU configuration options: side-by-side independent (heterogeneous workloads, no NVLink), NVLink bridge (unified 48GB VRAM pool, large context windows), and tensor parallelism (single 70B model sharded across GPUs for 28 tok/s throughput)."
-        },
-        {
-          "url": "/images/local-llm-workstation-build-cooling-setup-en.svg",
-          "title": "Heat dissipation: 1,200W total from dual RTX 4090s (450W each) and Threadripper CPU (200W). Cooling solutions: custom liquid loop ($1,500–2,500), dual 360mm AIO ($600–900), or air cooling (not recommended, causes thermal throttling)."
-        },
-        {
-          "url": "/images/local-llm-workstation-build-power-electrical-en.svg",
-          "title": "Power requirements: ~1,100W continuous (450W + 450W GPUs, 200W CPU) with spikes to 1,300W. PSU options: single 2000W (simpler, cleaner cables) or dual 1200W (redundant, complex setup). Both require dedicated 20A 240V circuit."
-        }
-      ]
+      "images": []
     },
     "best-mini-pcs-local-llm": {
       "dateModified": "2026-11-09",
