@@ -31015,5 +31015,33 @@
       "period": "28d to 2026-11-22"
     },
     "deployedAt": null
+  },
+  {
+    "id": "5a5b0cd6-586d-4711-98e4-b7eeac2f5bf6",
+    "slug": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
+    "date": "2026-11-22T13:40:10.056Z",
+    "fields": [
+      {
+        "field": "body",
+        "old": "stale prices, mixed currencies, uneven locales",
+        "new": "worked example + prices read 2026-11-22, 9 locales at parity"
+      }
+    ],
+    "reason": "Full monthly refresh 2026-11-22: worked break-even example added, prices re-read from primary sources, unverifiable claims and month snapshots removed, foreign-currency amounts replaced by USD, all 9 locales at one structure (19 sections, 10 FAQs); risk-gated",
+    "queries": [
+      "cloud vs local llm cost calculator",
+      "cost of running local llm vs cloud",
+      "ai subscription cost versus rent",
+      "ki server kosten",
+      "cout serveur gpu llm"
+    ],
+    "baseline": {
+      "position": 0,
+      "impressions": 1319,
+      "clicks": 7,
+      "ctr": 0.00530705079605762,
+      "period": "28d to 2026-11-22"
+    },
+    "deployedAt": null
   }
 ]
