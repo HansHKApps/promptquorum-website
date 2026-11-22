@@ -185,6 +185,10 @@ export interface Programme {
     secondsSpent: number
     /** active seconds per lesson id (capped, SPEC 6.1) */
     lessonSeconds?: Record<string, number>
+    /** active seconds in tests, keyed by quiz id (a lesson id or "final"); counted in `secondsSpent` too */
+    testSeconds?: Record<string, number>
+    /** working periods: a new one starts with the first action after more than a minute without one */
+    sessions?: number
     startedAt: string
     completedAt?: string
   }

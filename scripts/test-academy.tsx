@@ -22,7 +22,9 @@ import { finalTestSize, clampProgramme, contentMinutes, programmeProblems, testM
 import { diagnosticOutputSchema, programmeOutputSchema, type GeneratedQuestion, type ProgrammeOutput } from '../src/lib/academy/schemas'
 import type { Programme, Question, QuizQuestion } from '../src/lib/academy/types'
 import { articleText, finalizeLesson, isOnTopic, findMaterial, generateLesson, lessonProblems, stripLinks, toMaterial } from '../src/lib/academy/lesson'
-import { addActiveTime, markLessonDone, nextOpenLesson, openLesson } from '../src/lib/academy/progress'
+import { addActiveTime, addActivity, addTestTime, markLessonDone, nextOpenLesson, openLesson } from '../src/lib/academy/progress'
+import { formatDuration, learningRecord } from '../src/lib/academy/record'
+import { RECORD_COPY } from '../src/components/academy/copy/record'
 import { getArticle } from '../src/lib/mcp/tools'
 import { generateNextTopics, nextTopicsUserMessage } from '../src/lib/academy/next-topics'
 import { challengeLink, readChallenge, reminderIcs, sanitizeChallengeSubject } from '../src/lib/academy/challenge'
@@ -376,6 +378,63 @@ t('progress: active time is capped at 3x the lesson estimate; status never goes 
   p = openLesson(p, 0)
   assert.equal(p.progress.lessonStatus['lesson-1'], 'done')
   assert.equal(nextOpenLesson(p), 1)
+})
+
+t('learning record: active time vs total time, sessions, tests, never negative away time', () => {
+  let p = sampleProgramme()
+  p = { ...p, progress: { ...p.progress, startedAt: '2026-11-01T10:00:00.000Z', completedAt: '2026-11-01T12:00:00.000Z' } }
+  // first tick of a window opens a session; later ticks in the same session do not
+  p = addActivity(p, { kind: 'lesson', id: 'lesson-1' }, 5, true)
+  p = addActivity(p, { kind: 'lesson', id: 'lesson-1' }, 5, false)
+  p = addActivity(p, { kind: 'test', id: 'final' }, 5, true)
+  assert.equal(p.progress.sessions, 2)
+  assert.equal(p.progress.secondsSpent, 15)
+  assert.equal(p.progress.testSeconds?.final, 5)
+  let r = learningRecord(p)
+  assert.equal(r.totalSeconds, 7200)
+  assert.equal(r.activeSeconds, 15)
+  assert.equal(r.awaySeconds, 7185)
+  assert.equal(r.lessonsActiveSeconds, 10)
+  assert.equal(r.testsActiveSeconds, 5)
+  // zero seconds or an unknown lesson adds nothing, and does not open a session
+  assert.equal(addActivity(p, { kind: 'lesson', id: 'nope' }, 5, true), p)
+  assert.equal(addActivity(p, { kind: 'test', id: 'final' }, 0, true), p)
+  // a test is capped
+  for (let i = 0; i < 2000; i++) p = addTestTime(p, 'lesson-2', 5)
+  assert.equal(p.progress.testSeconds?.['lesson-2'], 7200)
+  // active longer than the wall clock (clock change) never gives negative time away
+  r = learningRecord({ ...p, progress: { ...p.progress, startedAt: '2026-11-01T10:00:00.000Z', completedAt: '2026-11-01T10:00:10.000Z' } })
+  assert.equal(r.awaySeconds, 0)
+  // programme saved before this feature: no sessions, no test seconds
+  const old = sampleProgramme()
+  assert.equal(learningRecord(old).sessions, 0)
+  assert.equal(learningRecord(old).secondsPerQuestion, null)
+})
+
+t('learning record: answers per stage and duration format', () => {
+  const p = sampleProgramme()
+  const q = (id: string) => ({ id, prompt: 'x', options: ['a', 'b'], topic: 'T', correctIndex: 0 }) as Question
+  p.diagnostic = { ...p.diagnostic, questions: [q('a'), q('b')], answers: { a: 0, b: -1 } }
+  p.progress.finalAttempts = [{ quizId: 'final', answers: { x: 0, y: -1, z: 1 }, correct: 1, total: 3, byTopic: {}, takenAt: '2026-11-01T11:00:00.000Z' }]
+  const r = learningRecord(p)
+  assert.deepEqual(r.quickCheck, { asked: 2, answered: 1, correct: null })
+  assert.deepEqual(r.finalTests, { asked: 3, answered: 2, correct: 1 })
+  assert.equal(r.finalAttempts, 1)
+  assert.equal(formatDuration(40, 'en'), '40 sec')
+  assert.equal(formatDuration(75 * 60, 'en'), '1 hr 15 min')
+  assert.ok(formatDuration(26 * 3600, 'de').includes('26') === false && formatDuration(26 * 3600, 'de').includes('1'))
+})
+
+t('learning record copy: complete in all nine languages and privacy text covers it', () => {
+  for (const l of ALL_LANGS) {
+    const c = RECORD_COPY[l]
+    assert.ok(c, l)
+    for (const [k, v] of Object.entries(c)) if (typeof v === 'string') assert.ok(v.trim().length > 2, `${l}.${k}`)
+    assert.ok(c.answeredOf(3, 10).includes('3') && c.answeredOf(3, 10).includes('10'), l)
+    assert.ok(c.correctN('6').includes('6'), l)
+  }
+  // the privacy text of every language mentions the learning record (same marker in every language: "Academy")
+  for (const l of ALL_LANGS) assert.ok(ACADEMY_COPY[l].privacyNote.includes('Academy'), l)
 })
 
 t('progress: all lessons done completes a no-test programme, but not one with tests (SPEC 9)', () => {

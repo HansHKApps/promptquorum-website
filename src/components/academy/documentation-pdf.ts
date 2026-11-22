@@ -13,6 +13,9 @@ import type { AcademyCopy } from './copy'
 import { creditLabel } from './credit'
 import { shareCopyFor } from './copy/share'
 import { formatPoints } from '@/lib/academy/format-points'
+import { formatDuration } from '@/lib/academy/record'
+import { toOutputLocale } from '@/lib/i18n/constants'
+import { RECORD_COPY } from './copy/record'
 
 const PX_W = 1240
 const PX_H = 1754
@@ -179,6 +182,9 @@ function openQuestionBlock(d: Doc, tx: AcademyCopy, c: AcademyCopy['doc'], q: Do
 export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: AcademyLang, programmeLanguage: string): Promise<HTMLCanvasElement[]> {
   void programmeLanguage
   const c = tx.doc
+  const R = RECORD_COPY[lang]
+  const rec = m.record
+  const dur = (sec: number) => formatDuration(sec, toOutputLocale(lang))
   const d = new Doc(lang)
   try {
     await document.fonts?.ready
@@ -204,7 +210,10 @@ export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: Acad
     [c.scope, c.scopeValue(m.objectives.length, m.lessons.length)],
     [c.started, formatDisplayDate(cert.startedAt, lang)],
     [c.completed, formatDisplayDate(cert.completedAt, lang)],
-    [c.activeTime, tx.minutes(cert.learningMinutes)],
+    [R.totalTime, dur(rec.totalSeconds)],
+    [c.activeTime, dur(rec.activeSeconds)],
+    [R.awayTime, dur(rec.awaySeconds)],
+    [R.sessions, String(rec.sessions)],
     [c.testMode, tx.tests[cert.testMode].label],
     [c.assessmentFormat, `${tx.testFormats[m.request.testFormat].label}${m.request.testFormat === 'choice' ? ` (${shareCopyFor(lang).choiceN(m.request.choiceOptions)})` : ''} · ${c.questionsCount(finalTotal)}`],
     [c.attempts, String(m.attemptsCount)],
@@ -213,6 +222,20 @@ export async function drawDocumentation(m: DocModel, tx: AcademyCopy, lang: Acad
   ]
   for (const [k, v] of rows) d.row(k, v)
   d.para(c.timeNote, { size: 18, color: MUTED, gap: 8 })
+  // Learning record: where the active time went, how many questions were answered, and the definition of both times.
+  d.heading(R.title, 28)
+  d.row(R.inLessons, dur(rec.lessonsActiveSeconds))
+  d.row(R.inTests, dur(rec.testsActiveSeconds))
+  if (rec.secondsPerQuestion !== null) d.row(R.perQuestion, dur(rec.secondsPerQuestion))
+  d.row(R.attempts, String(rec.finalAttempts))
+  d.row(R.tutor, formatPoints(rec.tutorRequests, lang))
+  d.para(R.answersTitle, { size: 21, weight: 700, color: PURPLE, gap: 4 })
+  const stages: [string, typeof rec.quickCheck][] = [[R.quickCheck, rec.quickCheck], [R.lessonQuizzes, rec.lessonQuizzes], [R.finalTest, rec.finalTests]]
+  for (const [label, st] of stages) {
+    if (!st.asked) continue
+    d.para(`${label}: ${R.answeredOf(st.answered, st.asked)}${st.correct === null ? '' : ` · ${R.correctN(formatPoints(st.correct, lang))}`}`, { size: 21, indent: 16, gap: 2 })
+  }
+  d.para(R.rule, { size: 18, color: MUTED, gap: 8 })
   d.para(c.perTopic, { size: 21, weight: 700, color: PURPLE, gap: 4 })
   for (const t of cert.byTopic) d.para(`${t.topic}: ${t.percent}% (${formatPoints(t.correct, lang)}/${t.total})`, { size: 21, indent: 16, gap: 2 })
   d.y += 12
