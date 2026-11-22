@@ -5,6 +5,7 @@
 //   askhans:day:<date>   hash  same field names, per UTC day (shared with the consent-based counters)
 
 import { redis } from '@/lib/redis'
+import { keepLastGood } from '@/lib/lastGood'
 
 const TOTAL_KEY = 'askhans:total'
 const DAY_TTL_S = 90 * 86_400
@@ -56,12 +57,12 @@ export interface AskHansTotals {
   since: string | null
 }
 
-export async function getAskHansTotals(): Promise<AskHansTotals> {
-  try {
-    const h = (await redis.hgetall<Record<string, string | number>>(TOTAL_KEY)) ?? {}
-    const n = (k: string) => Number(h[k] ?? 0) || 0
-    return { requests: n('requests'), answers: n('answers'), opens: n('opens'), power: n('power'), since: typeof h.since === 'string' ? h.since : null }
-  } catch {
-    return { requests: 0, answers: 0, opens: 0, power: 0, since: null }
-  }
+async function readAskHansTotals(): Promise<AskHansTotals> {
+  const h = (await redis.hgetall<Record<string, string | number>>(TOTAL_KEY)) ?? {}
+  const n = (k: string) => Number(h[k] ?? 0) || 0
+  return { requests: n('requests'), answers: n('answers'), opens: n('opens'), power: n('power'), since: typeof h.since === 'string' ? h.since : null }
 }
+
+/** Never shows a failed read as zero: on a Redis error it returns the last good totals (see lastGood.ts). */
+export const getAskHansTotals = (): Promise<AskHansTotals> =>
+  keepLastGood('askhans:totals', readAskHansTotals, (floor) => ({ requests: 0, answers: Number(floor?.answers ?? 0), opens: 0, power: 0, since: null }))

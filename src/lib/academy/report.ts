@@ -4,6 +4,7 @@
 // IPs, subjects or learner text. A Redis outage yields an all-zero report, so the page never fails because of it.
 
 import { redis } from '@/lib/redis'
+import { keepLastGood } from '@/lib/lastGood'
 import { DURATION_BUCKETS } from '@/lib/askhans/engagement'
 import { REPORT_DAYS, lastNDaysUtc, rankRows, windowsOf, zeroCounts } from '@/lib/usage/report-types'
 import type { ReportRow, WindowCounts } from '@/lib/usage/report-types'
@@ -70,7 +71,7 @@ function emptyReport(dates: string[]): AcademyReport {
 const lifetimeOf = (t: AcademyTotals, key: AcademyHeadlineKey): number =>
   key === 'programme' ? t.programmes : key === 'lesson' ? t.lessons : key === 'test' ? t.tests : t.certificates
 
-export async function getAcademyReport(): Promise<AcademyReport> {
+async function readAcademyReport(): Promise<AcademyReport> {
   const dates = lastNDaysUtc(REPORT_DAYS)
   const report = emptyReport(dates)
   try {
@@ -143,7 +144,10 @@ export async function getAcademyReport(): Promise<AcademyReport> {
     report.actions = withAll(rankRows(actions, 20), (k) => num(f[k]))
   } catch (err) {
     console.error('[academy] report failed', err instanceof Error ? err.message : err)
-    return emptyReport(dates)
+    throw err
   }
   return report
 }
+
+/** Never shows a failed read as zeros: on a Redis error it returns the last good report (see lastGood.ts). */
+export const getAcademyReport = () => keepLastGood('academy:report', readAcademyReport, () => emptyReport(lastNDaysUtc(REPORT_DAYS)))

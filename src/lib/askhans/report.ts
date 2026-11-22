@@ -6,6 +6,7 @@
 // getMcpUsageSnapshot), so the page never fails because of it.
 
 import { redis } from '@/lib/redis'
+import { keepLastGood } from '@/lib/lastGood'
 import { getAskHansTotals } from './totals'
 import { REPORT_DAYS, lastNDaysUtc, rankRows, windowsOf, zeroCounts } from '@/lib/usage/report-types'
 import type { EngagementStats, FeedbackStats, ReportRow, ReportWindow, UsageReportBase, WindowCounts } from '@/lib/usage/report-types'
@@ -76,7 +77,7 @@ async function olderRatings(since: string | null, firstWindowDay: string): Promi
   return out
 }
 
-export async function getAskHansReport(): Promise<AskHansReport> {
+async function readAskHansReport(): Promise<AskHansReport> {
   const dates = lastNDaysUtc(REPORT_DAYS)
   const report = emptyReport(dates)
   try {
@@ -182,7 +183,10 @@ export async function getAskHansReport(): Promise<AskHansReport> {
     for (const bucket of Object.values(prefixes)) report[bucket] = rankRows(rows[bucket])
   } catch (err) {
     console.error('[askhans] report failed', err instanceof Error ? err.message : err)
-    return emptyReport(dates)
+    throw err
   }
   return report
 }
+
+/** Never shows a failed read as zeros: on a Redis error it returns the last good report (see lastGood.ts). */
+export const getAskHansReport = () => keepLastGood('askhans:report', readAskHansReport, () => emptyReport(lastNDaysUtc(REPORT_DAYS)))
