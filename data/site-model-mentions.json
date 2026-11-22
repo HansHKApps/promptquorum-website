@@ -29,7 +29,7 @@
       "Claude Haiku 5.5",
       "Claude Opus 5.5",
       "GPT-6 Luna",
-      "GPT-6.1 Sol",
+      "GPT-6.2 Sol",
       "Gemini 3.5 Flash-Lite",
       "Gemini 3.8 Flash",
       "Gemini 4 Argon",
@@ -51,19 +51,28 @@
     "file": "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
     "models": [
       "ChatGPT",
+      "Claude Fable 5.2",
+      "Claude Haiku 5.5",
       "Claude Opus 5.5",
+      "Claude Sonnet 5.5",
       "DeepSeek-V4",
       "GPT-4o",
-      "GPT-6 Astra",
-      "GPT-6.1 Sol",
+      "GPT-6 Luna",
+      "GPT-6.1 Terra",
+      "GPT-6.2 Astra",
+      "GPT-6.2 Sol",
       "Gemini 4 Argon",
+      "Gemini 4 Carbon",
+      "Gemini 4 Hydrogen",
+      "Gemini 4 Neon",
       "Gemma 4",
       "Grok 4.7",
       "Llama 4 Scout",
       "Mistral Large 4",
+      "Muse Glimmer 30B",
       "Perplexity",
       "Phi-4",
-      "Qwen3 14B"
+      "Qwen3.8-27B"
     ]
   },
   {
@@ -71,7 +80,7 @@
     "models": [
       "Claude Opus 5.5",
       "DeepSeek-V4",
-      "GPT-6 Astra",
+      "GPT-6.2 Astra",
       "Gemini 4 Argon",
       "Llama 3.1 8B",
       "Mistral Large 4",
@@ -85,7 +94,7 @@
       "Claude Haiku 5.5",
       "Claude Opus 5.5",
       "Claude Sonnet 5.5",
-      "GPT-6 Astra",
+      "GPT-6.2 Astra",
       "Gemini 3.8 Flash",
       "Gemini 4 Argon",
       "Gemma 4",
@@ -104,21 +113,21 @@
     "models": [
       "Claude Opus 5.5",
       "Claude Sonnet 5.5",
-      "GPT-6 Astra",
       "GPT-6 Luna",
-      "GPT-6.1 Sol",
+      "GPT-6.2 Astra",
+      "GPT-6.2 Sol",
       "Gemini 4 Argon"
     ]
   },
   {
     "file": "src/lib/prompt-engineering/articles/gpt-claude-gemini-which-model.ts",
     "models": [
-      "Claude Fable 5.1",
+      "Claude Fable 5.2",
       "Claude Opus 5.5",
       "DeepSeek-V4",
-      "GPT-6 Astra",
       "GPT-6 Luna",
-      "GPT-6.1 Sol",
+      "GPT-6.2 Astra",
+      "GPT-6.2 Sol",
       "Gemini 3.5 Flash-Lite",
       "Gemini 3.8 Flash",
       "Gemini 4 Argon",
@@ -129,7 +138,7 @@
     "file": "src/lib/prompt-engineering/articles/best-tools-structured-output.ts",
     "models": [
       "Claude Opus 5.5",
-      "GPT-6 Astra",
+      "GPT-6.2 Astra",
       "Gemini 4 Argon"
     ]
   },
@@ -151,7 +160,7 @@
     "file": "src/lib/prompt-engineering/articles/prompts-to-repeatable-workflows.ts",
     "models": [
       "Claude Sonnet 5.5",
-      "GPT-6 Astra",
+      "GPT-6.2 Astra",
       "Gemini 4 Argon"
     ]
   },
@@ -311,18 +320,26 @@
     "file": "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
     "models": [
       "ChatGPT",
+      "Claude Fable 5.2",
+      "Claude Haiku 5.5",
       "Claude Opus 5.5",
+      "Claude Sonnet 5.5",
       "DeepSeek-V4",
-      "GPT-6 Astra",
       "GPT-6 Luna",
-      "GPT-6.1 Sol",
+      "GPT-6.1 Terra",
+      "GPT-6.2 Astra",
+      "GPT-6.2 Sol",
       "Gemini 4 Argon",
+      "Gemini 4 Carbon",
+      "Gemini 4 Hydrogen",
+      "Gemini 4 Neon",
       "Gemma 4",
       "Grok 4.7",
       "Llama 4 Scout",
       "Mistral Large 4",
+      "Muse Glimmer 30B",
       "Phi-4",
-      "Qwen3 14B"
+      "Qwen3.8-27B"
     ]
   },
   {
@@ -361,6 +378,14 @@
       "all-minilm",
       "mxbai-embed-large",
       "nomic-embed-text"
+    ]
+  },
+  {
+    "file": "src/lib/prompt-bites/articles/best-local-llm-for-translation.ts",
+    "models": [
+      "Hunyuan-MT-7B",
+      "Qwen3 8B/14B/32B",
+      "TranslateGemma 4B/12B/27B"
     ]
   },
   {
@@ -432,7 +457,7 @@
     "file": "src/lib/prompt-bites/articles/best-llm-right-now.ts",
     "models": [
       "Claude Opus 5.5",
-      "GPT-6 Astra",
+      "GPT-6.2 Astra",
       "Gemini 4 Argon"
     ]
   },
@@ -961,6 +986,14 @@
     ]
   },
   {
+    "file": "src/lib/power-local-llm/articles/elevenlabs-vs-local-tts-piper-xtts.ts",
+    "models": [
+      "ElevenLabs Eleven v4",
+      "Piper",
+      "XTTS v2"
+    ]
+  },
+  {
     "file": "src/lib/power-local-llm/articles/automatic1111-review.ts",
     "models": [
       "ComfyUI",
@@ -1405,12 +1438,15 @@
   {
     "file": "src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts",
     "models": [
+      "FLUX 3 Image Klein",
       "FLUX.1 Kontext",
       "FLUX.1 dev",
       "FLUX.1 schnell",
       "FLUX.2 dev",
+      "FLUX.2 klein 4B",
       "HiDream-O1",
       "Qwen-Image",
+      "Qwen-Image-2512",
       "Qwen-Image-Edit",
       "Stable Diffusion 3.5"
     ]
@@ -1580,6 +1616,13 @@
       "Llama 3.2 3B",
       "Phi-4 Mini",
       "Qwen3 4B"
+    ]
+  },
+  {
+    "file": "src/lib/power-local-llm/articles/nanobrowser-review.ts",
+    "models": [
+      "LM Studio",
+      "Ollama"
     ]
   },
   {
@@ -1788,7 +1831,9 @@
     "models": [
       "Chatterbox",
       "Chatterbox Multilingual V3",
-      "Chatterbox-Turbo"
+      "Chatterbox-Nano",
+      "Chatterbox-Turbo",
+      "ElevenLabs Eleven v4"
     ]
   },
   {
@@ -2055,7 +2100,7 @@
   {
     "file": "src/lib/power-local-llm/articles/liquid-apollo-review.ts",
     "models": [
-      "GPT-6 Astra",
+      "GPT-6.2 Astra",
       "LFM2-1.2B",
       "LFM2-2.6B",
       "LFM2-350M",
@@ -2236,6 +2281,13 @@
     "file": "src/lib/power-local-llm/articles/meetini-review.ts",
     "models": [
       "OpenAI"
+    ]
+  },
+  {
+    "file": "src/lib/power-local-llm/articles/kokoro-vs-elevenlabs.ts",
+    "models": [
+      "ElevenLabs Eleven v4",
+      "Kokoro-82M"
     ]
   },
   {
@@ -2470,6 +2522,17 @@
     ]
   },
   {
+    "file": "src/lib/local-llms/articles/best-local-llms-business-writing.ts",
+    "models": [
+      "Gemma 4 12B",
+      "Gemma 4 31B",
+      "Ministral 3 8B",
+      "Mistral Small 3.2 24B",
+      "Qwen3.5 9B",
+      "Qwen3.8-27B"
+    ]
+  },
+  {
     "file": "src/lib/local-llms/articles/best-cpu-only-llm.ts",
     "models": [
       "DeepSeek-R1 7B",
@@ -2599,7 +2662,7 @@
       "DeepSeek-V4-Flash",
       "DeepSeek-V4-Pro",
       "GPT-6 Luna",
-      "GPT-6.1 Sol",
+      "GPT-6.2 Sol",
       "OpenAI o1-mini"
     ]
   },
