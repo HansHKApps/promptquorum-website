@@ -12,7 +12,7 @@
 import { createMcpHandler } from 'mcp-handler'
 import { ResourceTemplate } from '@modelcontextprotocol/server'
 import { createHash } from 'crypto'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit } from '@/lib/safe-ratelimit'
 import { getSiteOverview } from '@/lib/home/overview'
 import { z } from 'zod'
 import { redis } from '@/lib/redis'
@@ -727,11 +727,7 @@ const handler = createMcpHandler(
 // SHA-256 of the IP (never the raw IP), kept for the 1-minute window only and
 // never stored with the usage counters.
 // A Redis outage must never take the server down, so failures fail open.
-const mcpLimiter = new Ratelimit({
-  redis,
-  limiter: Ratelimit.slidingWindow(120, '1 m'),
-  prefix: 'rl:mcp:ip',
-})
+const mcpLimiter = new SafeRatelimit(120, '1 m', 'rl:mcp:ip')
 
 async function rateLimited(request: Request): Promise<Response | null> {
   if (request.method !== 'POST') return null

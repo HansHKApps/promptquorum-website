@@ -15,7 +15,7 @@
 import { NextRequest } from 'next/server'
 import { createHash } from 'crypto'
 import Anthropic from '@anthropic-ai/sdk'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit } from '@/lib/safe-ratelimit'
 import { redis } from '@/lib/redis'
 import { ASK_HANS_DEFAULT_MODEL, ASK_HANS_LIMITS } from '@/lib/askhans/config'
 import { buildSystemPrompt } from '@/lib/askhans/system-prompt'
@@ -30,11 +30,7 @@ import { buildToolDefinitions, runTool, SET_CATEGORY_TOOL } from '@/lib/askhans/
 export const runtime = 'nodejs'
 export const maxDuration = 60
 
-const limiter = new Ratelimit({
-  redis,
-  limiter: Ratelimit.slidingWindow(ASK_HANS_LIMITS.rateLimitRequests, ASK_HANS_LIMITS.rateLimitWindow),
-  prefix: 'rl:askhans:ip',
-})
+const limiter = new SafeRatelimit(ASK_HANS_LIMITS.rateLimitRequests, ASK_HANS_LIMITS.rateLimitWindow, 'rl:askhans:ip')
 
 const MAX_HISTORY_MESSAGES = ASK_HANS_LIMITS.maxMessagesPerVisit * 2
 const MAX_ASSISTANT_CHARS = 8000
@@ -119,8 +115,8 @@ export async function POST(req: NextRequest): Promise<Response> {
   }
   if (!parsed) return errorResponse('failed', 400)
 
-  // Rate limiting protects Hans's API credit: in production a Redis outage closes the endpoint
-  // (fail closed); only local development without Redis lets requests through.
+  // Rate limiting protects Hans's API credit. SafeRatelimit falls back to a per-instance in-memory limit when Redis
+  // is unavailable (decision 2026-11-22), so a Redis outage no longer closes the endpoint; the catch below is a last resort.
   try {
     const rl = await limiter.limit(ipKey(req))
     if (!rl.success) return errorResponse('rate', 429)

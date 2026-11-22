@@ -2,6 +2,7 @@
 // days, last 30 days, all time), built from the per-tool daily counters (usage.ts) and the per-day app / category /
 // language counters (usage-dimensions.ts). A Redis outage yields an all-zero report, never an error.
 
+import { unstable_cache } from 'next/cache'
 import { redis } from '@/lib/redis'
 import { keepLastGood } from '@/lib/lastGood'
 import { MCP_TOOL_NAMES } from './usage'
@@ -97,4 +98,6 @@ async function readMcpReport(): Promise<McpReport> {
 }
 
 /** Never shows a failed read as zeros: on a Redis error it returns the last good report (see lastGood.ts). */
-export const getMcpReport = () => keepLastGood('mcp:report', readMcpReport, () => empty(lastNDaysUtc(REPORT_DAYS)))
+// Shared 5-minute server cache: ~30 Redis commands per /mcp-stats view (9 locales, force-dynamic). A throw is never cached.
+const readMcpReportCached = unstable_cache(readMcpReport, ['mcp-report'], { revalidate: 300, tags: ['mcp-usage'] })
+export const getMcpReport = () => keepLastGood('mcp:report', readMcpReportCached, () => empty(lastNDaysUtc(REPORT_DAYS)))

@@ -118,12 +118,14 @@ async function readTotalsOrThrow(): Promise<AcademyTotals> {
 
 const emptyTotals = (): AcademyTotals => ({ programmes: 0, lessons: 0, tests: 0, certificates: 0, certificatesRegistered: 0, since: null })
 
-/** Never shows a failed read as zero: on a Redis error it returns the last good totals (see lastGood.ts). */
-const readTotals = (): Promise<AcademyTotals> => keepLastGood('academy:totals', readTotalsOrThrow, emptyTotals)
-
 /** Cached like the MCP counter, so statically rendered pages stay static (refreshes once a day). A throw is never cached. */
 const readTotalsCachedOrThrow = unstable_cache(readTotalsOrThrow, ['academy-totals'], { revalidate: 86400, tags: ['academy-usage'] })
 export const getAcademyTotals = (): Promise<AcademyTotals> => keepLastGood('academy:totals', readTotalsCachedOrThrow, emptyTotals)
-/** Uncached read for the /academy entrance page (like Ask Hans: live counters, never cached). */
-export const getAcademyTotalsLive = readTotals
+/**
+ * Near-live read for the /academy page, the report and the homepage tile. Shared 5-minute server cache (all regions/instances):
+ * these pages are hit on every view and used to cost Redis one read each, which exhausted the free request quota (2026-11-22).
+ * A throw is never cached; keepLastGood still shows the last known numbers when Redis fails.
+ */
+const readTotalsShortCachedOrThrow = unstable_cache(readTotalsOrThrow, ['academy-totals-live'], { revalidate: 300, tags: ['academy-usage'] })
+export const getAcademyTotalsLive = (): Promise<AcademyTotals> => keepLastGood('academy:totals', readTotalsShortCachedOrThrow, emptyTotals)
 export const getAcademyProgrammesTotal = async () => (await getAcademyTotals()).programmes

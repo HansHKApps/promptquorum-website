@@ -4,7 +4,7 @@
 
 import Anthropic from '@anthropic-ai/sdk'
 import { createHash } from 'crypto'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit, redisIsDown, markRedisDown } from '@/lib/safe-ratelimit'
 import type { NextRequest } from 'next/server'
 import type { z } from 'zod'
 import { redis } from '@/lib/redis'
@@ -25,11 +25,11 @@ export function academyJson(body: unknown): Response {
   return Response.json(body, { headers: { 'Cache-Control': 'no-store' } })
 }
 
-const limiters = new Map<string, Ratelimit>()
-function limiter(name: string, requests: number, window: `${number} ${'m' | 'h'}`): Ratelimit {
+const limiters = new Map<string, SafeRatelimit>()
+function limiter(name: string, requests: number, window: `${number} ${'m' | 'h'}`): SafeRatelimit {
   let l = limiters.get(name)
   if (!l) {
-    l = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(requests, window), prefix: `rl:academy:${name}` })
+    l = new SafeRatelimit(requests, window, `rl:academy:${name}`)
     limiters.set(name, l)
   }
   return l
@@ -90,18 +90,31 @@ function sameOrigin(req: NextRequest): boolean {
   }
 }
 
-/** Whole-site daily ceiling of generation calls (UTC day). Counts first, then compares; a Redis error propagates to the guard. */
+/**
+ * Whole-site daily ceiling of generation calls (UTC day). Counts first, then compares.
+ * While Redis is unavailable (see safe-ratelimit.ts) each server instance counts on its own: weaker, but Academy stays up.
+ */
+const memBudget = { key: '', n: 0 }
 async function globalBudgetLeft(): Promise<boolean> {
   const key = `academy:global:${new Date().toISOString().slice(0, 10)}`
-  const n = await redis.incr(key)
-  if (n === 1) await redis.expire(key, 2 * 86_400)
-  return n <= ACADEMY_DAILY_GLOBAL
+  if (!redisIsDown()) {
+    try {
+      const n = await redis.incr(key)
+      if (n === 1) await redis.expire(key, 2 * 86_400)
+      return n <= ACADEMY_DAILY_GLOBAL
+    } catch (err) {
+      markRedisDown()
+      console.error('[academy] global budget: Redis unavailable, counting in memory', err instanceof Error ? err.message : err)
+    }
+  }
+  if (memBudget.key !== key) {
+    memBudget.key = key
+    memBudget.n = 0
+  }
+  memBudget.n += 1
+  return memBudget.n <= ACADEMY_DAILY_GLOBAL
 }
 
-/**
- * Academy's own key (its own Anthropic workspace: separate cost view and a hard monthly spend limit there),
- * falling back to the key Ask Hans uses.
- */
 export function academyApiKey(): string | undefined {
   return process.env.ACADEMY_ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY || undefined
 }

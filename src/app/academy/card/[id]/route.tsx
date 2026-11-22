@@ -6,14 +6,14 @@
 import { createHash } from 'crypto'
 import { ImageResponse } from 'next/og'
 import type { NextRequest } from 'next/server'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit } from '@/lib/safe-ratelimit'
 import { academyEnabled } from '@/lib/academy/config'
 import { CERTIFICATE_ID_PATTERN } from '@/lib/academy/certificate'
 import { redis } from '@/lib/redis'
 
 export const runtime = 'nodejs'
 
-const limiter = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(60, '1 h'), prefix: 'rl:academy:card' })
+const limiter = new SafeRatelimit(60, '1 h', 'rl:academy:card')
 /** The built-in image font covers Latin only; other scripts would render as empty boxes, so their subject is left off. */
 const LATIN = /^[\p{Script=Latin}\p{N}\p{P}\p{S}\s]+$/u
 

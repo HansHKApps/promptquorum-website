@@ -157,7 +157,9 @@ const emptyMcpSnapshot = (floor?: Record<string, number | string | null>): Usage
 }
 
 /** Never shows a failed read as zero: on a Redis error it returns the last good snapshot (see lastGood.ts). */
-export const getMcpUsageSnapshot = (): Promise<UsageSnapshot> => keepLastGood('mcp:snapshot', readMcpUsageSnapshot, emptyMcpSnapshot)
+// Shared 5-minute server cache: /mcp-stats (9 locales, force-dynamic) read ~1 Redis MGET per view. A throw is never cached.
+const readMcpUsageSnapshotShortCached = unstable_cache(readMcpUsageSnapshot, ['mcp-usage-snapshot-live'], { revalidate: 300, tags: ['mcp-usage'] })
+export const getMcpUsageSnapshot = (): Promise<UsageSnapshot> => keepLastGood('mcp:snapshot', readMcpUsageSnapshotShortCached, emptyMcpSnapshot)
 
 /**
  * Same data as getMcpUsageSnapshot(), wrapped in Next's unstable_cache so it

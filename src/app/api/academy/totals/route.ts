@@ -11,5 +11,5 @@ export const dynamic = 'force-dynamic'
 export async function GET(): Promise<Response> {
   if (!academyEnabled()) return new Response(null, { status: 404 })
   const { programmes } = await getAcademyTotalsLive()
-  return Response.json({ programmes }, { headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300' } })
+  return Response.json({ programmes }, { headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' } })
 }

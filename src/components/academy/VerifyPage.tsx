@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 import { createHash } from 'crypto'
 import { headers } from 'next/headers'
 import { notFound } from 'next/navigation'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit } from '@/lib/safe-ratelimit'
 import { academyEnabled } from '@/lib/academy/config'
 import { CERTIFICATE_ID_PATTERN } from '@/lib/academy/certificate'
 import { languageDisplayName, htmlLangOf, langDirOf, isSiteLang } from '@/lib/academy/language'
@@ -16,7 +16,7 @@ import { redis } from '@/lib/redis'
 import { ACADEMY_COPY, ACADEMY_LANGUAGE_NAMES } from './copy'
 import { HashCheck } from './HashCheck'
 
-const limiter = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(40, '1 h'), prefix: 'rl:academy:verify' })
+const limiter = new SafeRatelimit(40, '1 h', 'rl:academy:verify')
 
 /** With the certificate ID, link previews (WhatsApp, Telegram, LinkedIn) show a card with the score and subject. */
 export function verifyMetadata(lang: AcademyLang, rawId?: string): Metadata {

@@ -12,7 +12,7 @@
 //                                          sum:convs:<V>, sum:qs:<V>, sum:secs:<V>
 
 import { NextRequest, NextResponse } from 'next/server'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit } from '@/lib/safe-ratelimit'
 import { createHash } from 'crypto'
 import { redis } from '@/lib/redis'
 import {
@@ -21,7 +21,7 @@ import {
 
 export const runtime = 'nodejs'
 
-const limiter = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(120, '1 m'), prefix: 'rl:askhans:exp' })
+const limiter = new SafeRatelimit(120, '1 m', 'rl:askhans:exp')
 const TTL_S = 120 * 86_400
 const has = (list: readonly string[], v: unknown): v is string => typeof v === 'string' && list.includes(v)
 const int = (v: unknown, max: number): number | null => (typeof v === 'number' && Number.isInteger(v) && v >= 0 && v <= max ? v : null)
