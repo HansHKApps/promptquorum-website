@@ -27,7 +27,7 @@ import { ImageLightbox } from '@/components/ImageLightbox'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { slugifySectionId } from '@/lib/sectionAnchor'
 import { FactsDisclaimer } from '@/components/FactsDisclaimer'
-import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
+import { affiliateDisclosureFor, hasMonetisedAffiliateLinks } from '@/lib/tracking/affiliate'
 import { AffiliateLink } from '@/components/AffiliateLink'
 import { CopyButton } from '@/components/CopyButton'
 import { NextStepBlock } from '@/components/NextStepBlock'
@@ -994,7 +994,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
         {/* Affiliate disclosure — neutral third-party-link notice */}
         {(article as any).affiliateDisclosure && (
           <p className="affiliate-disclosure text-xs text-text-secondary bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 mb-6">
-            {AFFILIATE_DISCLOSURE[lang] ?? AFFILIATE_DISCLOSURE['en']}
+            {affiliateDisclosureFor(lang, hasMonetisedAffiliateLinks(article))}
           </p>
         )}
 

@@ -4,15 +4,21 @@
 // fires on clicks to retailer / product / signup pages on affiliate buying-guide
 // articles.
 //
-// HONESTY NOTE: PromptQuorum is not currently enrolled in any affiliate program
-// and outbound product links carry no affiliate tags (they earn no commission).
-// Links therefore use rel="nofollow" — NOT "sponsored" — and pages show a
-// neutral third-party-link notice, NOT a commission disclosure. When real
-// affiliate programs go live: (1) switch the AffiliateLink rel to
-// "nofollow sponsored", and (2) swap AFFILIATE_DISCLOSURE for
-// AFFILIATE_DISCLOSURE_COMMISSION below.
+// HONESTY NOTE: a link is only ever described as commission-earning when it
+// really is one. The switch is PER LINK and automatic, driven by the URL itself
+// (see isMonetisedUrl below and monetised-link-signals.json):
+//   - plain provider URL (no referral/affiliate parameter)  -> rel="nofollow"
+//     and the neutral third-party-link notice (AFFILIATE_DISCLOSURE);
+//   - URL carrying a referral/affiliate code or an affiliate-network redirect
+//     -> rel="nofollow sponsored" and, on any page that has at least one such
+//     link, the commission wording (AFFILIATE_DISCLOSURE_COMMISSION).
+// Nothing here is flipped by hand: writing real codes into the links (for the
+// cloud-GPU pages: scripts/apply-gpu-cloud-refs.mjs) is the go-live step, and the
+// rel + disclosure follow from it. Today no link on the site carries a code, so
+// the live output is unchanged.
 
 import { localeAndCluster } from '@/lib/tracking/umami-events'
+import signals from '@/lib/tracking/monetised-link-signals.json'
 
 export interface AffiliateClickParams {
   url: string
@@ -89,6 +95,67 @@ export const isAffiliateUrl = (url: string): boolean => {
   }
 }
 
+const MONETISED_PARAMS: ReadonlySet<string> = new Set(signals.queryParams)
+const MONETISED_UTM_MEDIUMS: ReadonlySet<string> = new Set(signals.utmMediumValues)
+
+/**
+ * True when the URL is a commission-earning link: it carries a referral / affiliate query parameter
+ * (monetised-link-signals.json), a utm_medium that names an affiliate channel, or it points at an
+ * affiliate-network redirect host. The site's own outbound source tag (utm_source=promptquorum.com,
+ * utm_medium=referral, added at click time by OutboundUtmTagger) is deliberately NOT a signal. Relative
+ * and unparsable URLs are never monetised.
+ */
+export const isMonetisedUrl = (url: string): boolean => {
+  let u: URL
+  try {
+    u = new URL(url)
+  } catch {
+    return false
+  }
+  const host = u.hostname.toLowerCase().replace(/^www\./, '')
+  if (signals.redirectHosts.some((h) => host === h || host.endsWith(`.${h}`))) return true
+  for (const [key, value] of u.searchParams) {
+    const k = key.toLowerCase()
+    if (k === 'utm_medium') {
+      if (MONETISED_UTM_MEDIUMS.has(value.toLowerCase())) return true
+      continue
+    }
+    if (MONETISED_PARAMS.has(k) && value.trim() !== '') return true
+  }
+  return false
+}
+
+/** rel attribute for an affiliate link: "sponsored" is added only for a genuinely monetised URL. */
+export const affiliateRelFor = (url: string): string =>
+  isMonetisedUrl(url) ? 'nofollow sponsored noopener noreferrer' : 'nofollow noopener noreferrer'
+
+/**
+ * True when any `affiliateLinks` entry anywhere inside the given article/section data points at a monetised
+ * URL. Walks the whole value, so it covers section-level and ranked-item-level lists in every locale block.
+ */
+export const hasMonetisedAffiliateLinks = (data: unknown): boolean => {
+  const seen = new Set<object>()
+  const walk = (node: unknown): boolean => {
+    if (!node || typeof node !== 'object') return false
+    if (seen.has(node as object)) return false
+    seen.add(node as object)
+    if (Array.isArray(node)) return node.some(walk)
+    for (const [key, value] of Object.entries(node as Record<string, unknown>)) {
+      if (key === 'affiliateLinks' && Array.isArray(value)) {
+        if (value.some((l) => l && typeof (l as { url?: unknown }).url === 'string' && isMonetisedUrl((l as { url: string }).url))) return true
+      } else if (walk(value)) return true
+    }
+    return false
+  }
+  return walk(data)
+}
+
+/** Disclosure text for a page: commission wording only when the page has a monetised link, else the neutral notice. */
+export const affiliateDisclosureFor = (lang: string, pageHasMonetisedLinks: boolean): string => {
+  const table = pageHasMonetisedLinks ? AFFILIATE_DISCLOSURE_COMMISSION : AFFILIATE_DISCLOSURE
+  return table[lang] ?? table['en']
+}
+
 /**
  * Fire an `affiliate_click` event to Umami. Never fires for an on-page anchor or other same-site link — those
  * are navigation, not a click on a third-party product/retailer link, and `partner` must always be a real
@@ -127,8 +194,10 @@ export function trackAffiliateClick(p: AffiliateClickParams): void {
 // AFFILIATE_DISCLOSURE is the neutral, currently-accurate notice: PromptQuorum
 // is not enrolled in any affiliate program, so outbound links carry no
 // affiliate tags and earn no commission. AFFILIATE_DISCLOSURE_COMMISSION holds
-// the commission wording — switch the PowerLocalLLMPostClient lookup to it once
-// real affiliate programs go live (see the HONESTY NOTE at the top of this file).
+// the commission wording. Post clients choose between the two through
+// affiliateDisclosureFor(lang, hasMonetisedAffiliateLinks(article)), so a page shows
+// the commission wording exactly when it carries a monetised link (see the HONESTY NOTE
+// at the top of this file) — never by a manual global switch.
 export const AFFILIATE_DISCLOSURE: Record<string, string> = {
   en: 'This page contains links to third-party products for reference. PromptQuorum is not enrolled in any affiliate program — these are plain links that earn no commission. Clicking links and your next steps are entirely your own responsibility. Any recommendation on this page reflects our own reading of the vendors\' public pages, not a vendor endorsement or a test.',
   de: 'Diese Seite enthält Verweislinks zu Produkten von Drittanbietern. PromptQuorum ist an keinem Partnerprogramm beteiligt — es sind reine Referenzlinks, die keine Provision erzielen. Das Anklicken von Links und Ihre nächsten Schritte liegen in Ihrer eigenen Verantwortung. Jede Empfehlung auf dieser Seite beruht auf unserer eigenen Auswertung der öffentlichen Seiten der Anbieter, nicht auf einer Billigung durch die Anbieter oder einem Test.',
@@ -159,7 +228,7 @@ export const SPONSORED_LABEL: Record<string, string> = {
   ko: '광고',
 }
 
-// Commission wording — use only once real affiliate programs go live.
+// Commission wording — shown only on pages with at least one monetised link (see affiliateDisclosureFor).
 export const AFFILIATE_DISCLOSURE_COMMISSION: Record<string, string> = {
   en: 'This page contains product links. We may earn a commission if you purchase through these links, at no extra cost to you.',
   de: 'Diese Seite enthält Produktlinks. Wir erhalten möglicherweise eine Provision, wenn Sie über diese Links kaufen — ohne Mehrkosten für Sie.',

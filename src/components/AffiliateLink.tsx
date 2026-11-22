@@ -1,6 +1,6 @@
 'use client'
 
-import { trackAffiliateClick } from '@/lib/tracking/affiliate'
+import { affiliateRelFor, trackAffiliateClick } from '@/lib/tracking/affiliate'
 import {
   AFFILIATE_LINK_MARKER,
   getAffiliateProduct,
@@ -51,9 +51,11 @@ const ShoppingBagIcon = () => (
 /**
  * Outbound product link for affiliate buying-guide articles.
  *
- * Carries rel="nofollow" (NOT "sponsored") because PromptQuorum is not yet
- * enrolled in any affiliate program and these links earn no commission. When
- * affiliate programs go live, change the rel below to "nofollow sponsored".
+ * rel is chosen per link by affiliateRelFor(): a plain provider URL carries
+ * rel="nofollow" (no commission is earned on it), and a URL that carries a real
+ * referral / affiliate code (see monetised-link-signals.json) carries
+ * rel="nofollow sponsored". Nothing to flip at go-live: writing the code into the
+ * link is what changes the rel.
  */
 export function AffiliateLink({
   productKey,
@@ -101,7 +103,7 @@ export function AffiliateLink({
         <a
           href={resolvedUrl}
           target="_blank"
-          rel="nofollow noopener noreferrer"
+          rel={affiliateRelFor(resolvedUrl)}
           onClick={handleClick}
           data-placement={placement}
           className="affiliate-link inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-white no-underline hover:bg-primary/90"
@@ -122,7 +124,7 @@ export function AffiliateLink({
     <a
       href={resolvedUrl}
       target="_blank"
-      rel="nofollow noopener noreferrer"
+      rel={affiliateRelFor(resolvedUrl)}
       onClick={handleClick}
       data-placement={placement}
       className="affiliate-link inline-flex items-center gap-1 font-medium text-primary hover:underline"

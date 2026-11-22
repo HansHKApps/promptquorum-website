@@ -11,8 +11,14 @@
  * the configured one (deep links included), so supply a deep link in the JSON if
  * you want to keep one.
  *
- * Dry-run by default; `--write` applies. Refuses any URL that is not https://.
+ * Dry-run by default; `--write` applies. Refuses any URL that is not https://, and any URL the site would
+ * not recognise as a monetised link (no referral/affiliate parameter, see monetised-link-signals.json).
  * Prints a per-file count of rewritten entries. Commits nothing.
+ *
+ * GO-LIVE: this script is the only manual step. Once a code is written into a link, AffiliateLink renders it
+ * with rel="nofollow sponsored" and every page that has such a link swaps the neutral notice for the commission
+ * disclosure, automatically (src/lib/tracking/affiliate.ts). Before running it with real codes, the owner must
+ * confirm the program terms and lift the CLAUDE.md rule "no affiliate parameters on any URL".
  *
  *   node scripts/apply-gpu-cloud-refs.mjs            # dry run
  *   node scripts/apply-gpu-cloud-refs.mjs --write    # apply
@@ -52,12 +58,33 @@ const write = process.argv.includes('--write')
 const refsPath = join(root, 'scripts/gpu-cloud-refs.json')
 const refs = existsSync(refsPath) ? JSON.parse(readFileSync(refsPath, 'utf8')) : {}
 
+// Same signals the site uses (src/lib/tracking/monetised-link-signals.json) to decide that a link earns a
+// commission and therefore gets rel="sponsored" + the commission disclosure. A configured URL the site would
+// NOT recognise would leave the pages saying "no commission" while earning one, so it is refused by default.
+const signals = JSON.parse(readFileSync(join(root, 'src/lib/tracking/monetised-link-signals.json'), 'utf8'))
+const isMonetised = (url) => {
+  let u
+  try { u = new URL(url) } catch { return false }
+  const host = u.hostname.toLowerCase().replace(/^www\./, '')
+  if (signals.redirectHosts.some((h) => host === h || host.endsWith('.' + h))) return true
+  for (const [key, value] of u.searchParams) {
+    const k = key.toLowerCase()
+    if (k === 'utm_medium') { if (signals.utmMediumValues.includes(value.toLowerCase())) return true; continue }
+    if (signals.queryParams.includes(k) && value.trim() !== '') return true
+  }
+  return false
+}
+const allowUndetected = process.argv.includes('--allow-undetected')
+
 const errors = []
 for (const [k, v] of Object.entries(refs)) {
   if (!(k in HOSTS)) errors.push(`unknown provider key "${k}" (known: ${Object.keys(HOSTS).join(', ')})`)
   else if (typeof v !== 'string' || !v.startsWith('https://')) errors.push(`"${k}": refusing non-https URL ${JSON.stringify(v)}`)
   else {
-    try { new URL(v) } catch { errors.push(`"${k}": not a valid URL`) }
+    try { new URL(v) } catch { errors.push(`"${k}": not a valid URL`); continue }
+    if (!isMonetised(v) && !allowUndetected) {
+      errors.push(`"${k}": ${v} carries no referral/affiliate parameter or network host the site recognises (see src/lib/tracking/monetised-link-signals.json), so the page would still show the "no commission" notice. Add the parameter name to that file, or pass --allow-undetected if this is deliberately not a commission link.`)
+    }
   }
 }
 if (errors.length) {

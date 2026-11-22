@@ -24,7 +24,7 @@ import { powerLLMHubPath, powerLLMArticlePath } from '@/lib/power-local-llm/meta
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { AffiliateLink } from '@/components/AffiliateLink'
-import { AFFILIATE_DISCLOSURE, SPONSORED_LABEL } from '@/lib/tracking/affiliate'
+import { affiliateDisclosureFor, hasMonetisedAffiliateLinks, SPONSORED_LABEL } from '@/lib/tracking/affiliate'
 import { VramCalculator } from '@/components/VramCalculator'
 import dynamic from 'next/dynamic'
 import { RobotInferenceBudgetCalculator } from '@/components/RobotInferenceBudgetCalculator'
@@ -1655,7 +1655,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
         {/* Affiliate disclosure — neutral third-party-link notice */}
         {article.affiliateDisclosure && (
           <p className={`affiliate-disclosure text-xs text-text-secondary px-4 py-2.5 mb-6 ${isDirectoryPage ? 'bg-hub-violet-tint border border-hub-violet-edge rounded-[14px]' : 'bg-gray-50 border border-gray-200 rounded-lg'}`}>
-            {AFFILIATE_DISCLOSURE[lang] ?? AFFILIATE_DISCLOSURE['en']}
+            {affiliateDisclosureFor(lang, hasMonetisedAffiliateLinks(article))}
           </p>
         )}
 
