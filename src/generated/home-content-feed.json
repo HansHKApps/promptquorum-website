@@ -14987,81 +14987,81 @@
   {
     "lang": "en",
     "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
-    "excerpt": "RunPod vs Vast.ai vs Lambda Labs for LLM inference: RTX 4090, A100, H100, RTX 5090 hourly pricing, uptime SLA, and GDPR compliance compared.",
+    "excerpt": "RunPod vs Vast.ai vs Lambda Labs for LLM inference: RTX 4090, RTX 5090, A100 and H100 hourly prices, billing and regions compared, read 22 November 2026.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-16",
+    "dateModified": "2026-11-22",
     "url": "/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz 2026",
-    "excerpt": "RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz: Stundenpreise für RTX 4090, A100, H100, RTX 5090, Verfügbarkeits-SLA und DSGVO-Konformität. Aktualisiert August 2026.",
+    "excerpt": "RunPod, Vast.ai und Lambda Labs für LLM-Inferenz: Stundenpreise für RTX 4090, 5090, A100 und H100, Abrechnung und Regionen, Stand 22. November 2026.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-16",
+    "dateModified": "2026-11-22",
     "url": "/de/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "RunPod vs Vast.ai vs Lambda Labs pour l'inférence LLM 2026",
-    "excerpt": "RunPod vs Vast.ai vs Lambda Labs pour l'inférence LLM : tarifs horaires RTX 4090, A100, H100, RTX 5090, SLA de disponibilité et conformité RGPD. Mis à jour août 2026.",
+    "excerpt": "RunPod, Vast.ai et Lambda Labs pour l'inférence LLM : prix horaires RTX 4090, 5090, A100 et H100, facturation et régions, relevés le 22 novembre 2026.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-16",
+    "dateModified": "2026-11-22",
     "url": "/fr/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "RunPod vs Vast.ai vs Lambda Labs：LLM推論向けGPUレンタル比較2026",
-    "excerpt": "LLM推論向けRunPod・Vast.ai・Lambda Labs比較:RTX 4090・A100・H100・RTX 5090の時間料金、稼働率SLA、GDPR対応。",
+    "excerpt": "RunPod・Vast.ai・Lambda LabsのGPUレンタル料金を比較。RTX 4090・5090・A100・H100の時間単価、課金方式、リージョンを2026年11月22日時点で確認しました。",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-16",
+    "dateModified": "2026-11-22",
     "url": "/ja/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "RunPod vs Vast.ai vs Lambda Labs：LLM推理云GPU租赁对比2026",
-    "excerpt": "面向LLM推理的RunPod、Vast.ai、Lambda Labs对比:RTX 4090、A100、H100、RTX 5090的每小时价格、正常运行时间SLA、GDPR合规性。",
+    "excerpt": "对比RunPod、Vast.ai和Lambda Labs用于LLM推理的GPU租赁价格：RTX 4090、5090、A100、H100每小时价格、计费方式与区域，数据读取于2026年11月22日。",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-16",
+    "dateModified": "2026-11-22",
     "url": "/zh/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
-    "title": "RunPod vs Vast.ai vs Lambda Labs para Inferencia LLM 2026",
-    "excerpt": "RunPod vs Vast.ai vs Lambda Labs para inferencia LLM: precios por hora de RTX 4090, A100, H100 y RTX 5090, SLA de uptime y cumplimiento GDPR.",
+    "title": "RunPod vs Vast.ai vs Lambda Labs para inferencia LLM 2026",
+    "excerpt": "RunPod, Vast.ai y Lambda Labs para inferencia LLM: precios por hora de RTX 4090, 5090, A100 y H100, facturación y regiones, al 22 de noviembre de 2026.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-16",
+    "dateModified": "2026-11-22",
     "url": "/es/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
-    "title": "Aluguel de GPU na Nuvem 2026: RunPod vs Vast.ai vs Lambda Labs",
-    "excerpt": "Compare RunPod, Vast.ai e Lambda Labs para inferência LLM: preços ($0,34–$3,99/hr), SLA de uptime, conformidade LGPD e tempo de configuração. 2026.",
+    "title": "RunPod vs Vast.ai vs Lambda Labs para inferência de LLM 2026",
+    "excerpt": "RunPod, Vast.ai e Lambda Labs para inferência de LLM: preços por hora de RTX 4090, 5090, A100 e H100, cobrança e regiões, em 22 de novembro de 2026.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-16",
+    "dateModified": "2026-11-22",
     "url": "/pt/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "RunPod مقابل Vast.ai مقابل Lambda Labs لاستدلال LLM 2026",
-    "excerpt": "RunPod مقابل Vast.ai مقابل Lambda Labs لاستدلال LLM: أسعار RTX 4090 وA100 وH100 وRTX 5090 بالساعة، واتفاقية وقت التشغيل، وامتثال GDPR. محدَّثة أغسطس 2026.",
+    "title": "مقارنة ⁨RunPod⁩ و⁨Vast.ai⁩ و⁨Lambda Labs⁩ لاستدلال ⁨LLM⁩ 2026",
+    "excerpt": "مقارنة ⁨RunPod⁩ و⁨Vast.ai⁩ و⁨Lambda Labs⁩ لاستدلال ⁨LLM⁩: أسعار الساعة لبطاقات ⁨RTX 4090⁩ و⁨A100⁩ و⁨H100⁩ والفوترة والمناطق، 22 نوفمبر 2026.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-16",
+    "dateModified": "2026-11-22",
     "url": "/ar/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
-    "title": "클라우드 GPU 렌탈 2026: RunPod vs Vast.ai vs Lambda Labs",
-    "excerpt": "로컬 LLM 추론을 위한 RunPod, Vast.ai, Lambda Labs 비교: 가격($0.34–$3.99/시간), 가동률 SLA, GDPR 준수 여부, 설정 시간.",
+    "title": "RunPod vs Vast.ai vs Lambda Labs: LLM 추론용 GPU 렌탈 비교 2026",
+    "excerpt": "RunPod, Vast.ai, Lambda Labs의 LLM 추론용 GPU 렌탈 가격 비교. RTX 4090·5090·A100·H100 시간당 요금과 과금, 리전(2026년 11월 22일 기준).",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-10-16",
+    "dateModified": "2026-11-22",
     "url": "/ko/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
@@ -15149,81 +15149,81 @@
   {
     "lang": "en",
     "title": "Local LLM vs Cloud GPU: What Is Cheaper?",
-    "excerpt": "Local GPU vs cloud GPU cost for LLMs: break-even hours using RunPod, Lambda and AWS prices read 2 November 2026, plus the formula to redo it.",
+    "excerpt": "Local GPU vs cloud GPU cost for LLMs: break-even hours using RunPod, Lambda and AWS prices read 22 November 2026, plus the formula to redo it.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-22",
     "url": "/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Lokale LLMs vs. Cloud-GPU: Was ist günstiger?",
-    "excerpt": "Lokale GPU oder Cloud-GPU für LLMs: Break-even-Stunden mit RunPod-, Lambda- und AWS-Preisen vom 2. November 2026 und die Formel zum Nachrechnen.",
+    "excerpt": "Lokale GPU oder Cloud-GPU für LLMs: Break-even-Stunden mit RunPod-, Lambda- und AWS-Preisen vom 22. November 2026 und die Formel zum Nachrechnen.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-22",
     "url": "/de/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "LLM local vs GPU cloud : qu'est-ce qui coûte le moins ?",
-    "excerpt": "GPU local ou cloud pour LLM : heures de rentabilité avec les prix RunPod, Lambda et AWS relevés le 2 novembre 2026, et la formule pour refaire le calcul.",
+    "excerpt": "GPU local ou cloud pour LLM : heures de rentabilité avec les prix RunPod, Lambda et AWS relevés le 22 novembre 2026, et la formule pour refaire le calcul.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-22",
     "url": "/fr/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "ローカルLLMとクラウドGPU：どちらが安いか",
-    "excerpt": "LLM向けにローカルGPUとクラウドGPUを比較。2026年11月2日時点のRunPod・Lambda・AWSの料金で損益分岐の時間を算出し、計算式も示します。",
+    "excerpt": "LLM向けにローカルGPUとクラウドGPUを比較。2026年11月22日時点のRunPod・Lambda・AWSの料金で損益分岐の時間を算出し、計算式も示します。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-22",
     "url": "/ja/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "本地LLM与云GPU：哪个更便宜？",
-    "excerpt": "LLM用本地GPU还是云GPU更省钱：用2026年11月2日读取的RunPod、Lambda和AWS价格算出盈亏平衡小时数，并附计算公式供你自行重算。",
+    "excerpt": "LLM用本地GPU还是云GPU更省钱：用2026年11月22日读取的RunPod、Lambda和AWS价格算出盈亏平衡小时数，并附计算公式供你自行重算。",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-22",
     "url": "/zh/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "LLM local vs GPU en la nube: ¿qué sale más barato?",
-    "excerpt": "GPU local o en la nube para LLM: horas de equilibrio con precios de RunPod, Lambda y AWS del 2 de noviembre de 2026 y la fórmula para repetirlo.",
+    "excerpt": "GPU local o en la nube para LLM: horas de equilibrio con precios de RunPod, Lambda y AWS del 22 de noviembre de 2026 y la fórmula para repetirlo.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-22",
     "url": "/es/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "LLM local vs GPU na nuvem: o que sai mais barato?",
-    "excerpt": "GPU local ou na nuvem para LLM: horas de equilíbrio com preços da RunPod, Lambda e AWS lidos em 2 de novembro de 2026, e a fórmula para refazer a conta.",
+    "excerpt": "GPU local ou na nuvem para LLM: horas de equilíbrio com preços da RunPod, Lambda e AWS lidos em 22 de novembro de 2026, e a fórmula para refazer a conta.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-22",
     "url": "/pt/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "نموذج لغوي محلي مقابل وحدة معالجة رسومات سحابية: الأرخص؟",
-    "excerpt": "GPU محلية أم سحابية لـ LLM: ساعات التعادل بأسعار RunPod وLambda وAWS المقروءة في 2 نوفمبر 2026، مع المعادلة لإعادة الحساب.",
+    "excerpt": "GPU محلية أم سحابية لـ LLM: ساعات التعادل بأسعار RunPod وLambda وAWS المقروءة في 22 نوفمبر 2026، مع المعادلة لإعادة الحساب.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-22",
     "url": "/ar/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM vs 클라우드 GPU: 무엇이 더 저렴한가",
-    "excerpt": "LLM에 로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지, 2026년 11월 2일 확인한 RunPod·Lambda·AWS 가격으로 손익분기 시간을 계산하고 공식도 제공합니다.",
+    "excerpt": "LLM에 로컬 GPU와 클라우드 GPU 중 무엇이 저렴한지, 2026년 11월 22일 확인한 RunPod·Lambda·AWS 가격으로 손익분기 시간을 계산하고 공식도 제공합니다.",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-11-15",
+    "dateModified": "2026-11-22",
     "url": "/ko/local-llms/local-llm-vs-cloud-gpu-cost",
     "cluster": "local-llms"
   },
@@ -17093,81 +17093,81 @@
   {
     "lang": "en",
     "title": "Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026",
-    "excerpt": "Interactive calculator: compare owning local GPU hardware vs renting cloud GPUs (RunPod, Vast.ai) for LLMs. Live break-even in hours and months, updated 2026 pricing.",
+    "excerpt": "Compare owning a local GPU with renting a cloud GPU for LLMs: worked break-even example, RunPod and Vast.ai prices, and a calculator for your own numbers.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-11-22",
     "url": "/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026",
-    "excerpt": "Interaktiver Rechner: lokale GPU-Hardware vs. Cloud-GPU-Miete (RunPod, Vast.ai) für LLMs vergleichen. Live-Break-even in Stunden und Monaten, Preise 2026.",
+    "excerpt": "Lokale GPU kaufen oder Cloud-GPU mieten? Break-even-Beispiel, RunPod- und Vast.ai-Preise vom 22. November 2026 und ein Rechner für Ihre eigenen Zahlen.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-22",
     "url": "/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026",
-    "excerpt": "Calculateur interactif : comparez matériel GPU local vs location cloud (RunPod, Vast.ai) pour LLM. Seuil de rentabilité en direct, prix 2026 à jour.",
+    "excerpt": "Acheter un GPU local ou louer un GPU cloud ? Exemple de seuil de rentabilité, prix RunPod et Vast.ai du 22 novembre 2026 et calculateur pour vos chiffres.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-22",
     "url": "/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版",
-    "excerpt": "インタラクティブ計算機：ローカルGPUハードウェア vs クラウドGPUレンタル（RunPod、Vast.ai）をLLM向けに比較。損益分岐点をリアルタイム計算、2026年最新価格。",
+    "excerpt": "ローカルGPUを買うかクラウドGPUを借りるか。損益分岐の計算例、RunPodとVast.aiの2026年11月22日時点の料金、自分の数値で試せる計算機。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-22",
     "url": "/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "本地AI vs 云端AI：成本计算器（自建 vs 租用）2026",
-    "excerpt": "交互式计算器：对比本地GPU硬件与云GPU租用（RunPod、Vast.ai）运行LLM的成本。实时计算损益平衡点，2026年最新价格。",
+    "excerpt": "购买本地GPU还是租用云GPU？含盈亏平衡计算示例、2026年11月22日读取的RunPod和Vast.ai价格，以及可输入自己数据的计算器。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-22",
     "url": "/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "IA Local vs IA en la Nube: Calculadora de Costos (Comprar vs Rentar) 2026",
-    "excerpt": "Calculadora interactiva: compara hardware GPU local vs alquilar GPU en la nube (RunPod, Vast.ai) para LLMs. Punto de equilibrio en vivo, precios 2026 actualizados.",
+    "excerpt": "¿Comprar una GPU local o alquilar una en la nube? Ejemplo de punto de equilibrio, precios de RunPod y Vast.ai del 22 de noviembre de 2026 y calculadora.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-22",
     "url": "/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "IA Local vs IA na Nuvem: Calculadora de Custo (Montar vs Alugar) 2026",
-    "excerpt": "Calculadora interativa: compare hardware GPU local vs alugar GPU na nuvem (RunPod, Vast.ai) para LLMs. Ponto de equilíbrio em tempo real, preços de 2026 atualizados.",
+    "excerpt": "Comprar uma GPU local ou alugar uma na nuvem? Exemplo de ponto de equilíbrio, preços da RunPod e Vast.ai de 22 de novembro de 2026 e calculadora.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-11-22",
     "url": "/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "الذكاء الاصطناعي المحلي مقابل السحابي: حاسبة التكلفة (شراء مقابل استئجار) 2026",
-    "excerpt": "حاسبة تفاعلية: قارن بين أجهزة GPU المحلية واستئجار GPU السحابي (RunPod، Vast.ai) لنماذج LLM. نقطة تعادل حية بالساعات والأشهر، أسعار 2026 محدثة.",
+    "excerpt": "هل تشتري GPU محلية أم تستأجر GPU سحابية؟ مثال حساب نقطة التعادل وأسعار RunPod وVast.ai المقروءة في 22 نوفمبر 2026 وحاسبة لأرقامك الخاصة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-22",
     "url": "/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "로컬 AI vs 클라우드 AI: 비용 계산기(구매 vs 렌탈) 2026",
-    "excerpt": "인터랙티브 계산기: 로컬 GPU 하드웨어와 클라우드 GPU 렌탈(RunPod, Vast.ai)을 LLM 기준으로 비교합니다. 실시간 손익분기점 계산, 2026년 최신 가격 반영.",
+    "excerpt": "로컬 GPU 구매와 클라우드 GPU 임대 비용 비교: 손익분기 계산 예시, 2026년 11월 22일 확인한 RunPod·Vast.ai 가격, 직접 입력하는 계산기.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-11-22",
     "url": "/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026",
     "cluster": "local-llms"
   },
@@ -26896,7 +26896,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Cloud for AI Companies Compared in 2026",
     "excerpt": "Compare 8 AI clouds, from DigitalOcean and AWS to CoreWeave, RunPod and Lambda, on H100 price, GPU availability and workload fit for AI teams.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-07",
+    "dateModified": "2026-11-22",
     "url": "/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26905,7 +26905,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: Cloud für KI-Unternehmen im Vergleich 2026",
     "excerpt": "8 KI-Clouds im Vergleich, von DigitalOcean und AWS bis CoreWeave, RunPod und Lambda: H100-Preis, GPU-Verfügbarkeit und Workload-Eignung für KI-Teams.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-07",
+    "dateModified": "2026-11-22",
     "url": "/de/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26914,7 +26914,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod : comparatif des clouds pour entreprises IA en 2026",
     "excerpt": "Comparatif de 8 clouds IA, de DigitalOcean et AWS à CoreWeave, RunPod et Lambda : prix du H100, disponibilité des GPU et adéquation aux charges de travail.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-07",
+    "dateModified": "2026-11-22",
     "url": "/fr/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26923,7 +26923,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod：2026年AI企業向けクラウド比較",
     "excerpt": "DigitalOcean、AWS、CoreWeave、RunPodなどAI向け主要クラウド8社を、H100の料金・入手性・用途への適合性で比較。DigitalOceanとAWSの料金は2026年11月7日に確認。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-07",
+    "dateModified": "2026-11-22",
     "url": "/ja/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26932,7 +26932,7 @@
     "title": "DigitalOcean 对比 AWS 对比 CoreWeave 对比 RunPod：2026 年 AI 公司云服务对比",
     "excerpt": "从 H100 价格、可用性和工作负载适配度比较 DigitalOcean、AWS、CoreWeave、RunPod 等 8 家 AI 云服务商。DigitalOcean 与 AWS 价格核对于 2026-11-07。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-07",
+    "dateModified": "2026-11-22",
     "url": "/zh/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26941,7 +26941,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: comparativa de nubes para empresas de IA en 2026",
     "excerpt": "Compara 8 nubes de IA, de DigitalOcean y AWS a CoreWeave, RunPod y Lambda, por precio del H100, disponibilidad de GPU y ajuste a tu carga de trabajo.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-07",
+    "dateModified": "2026-11-22",
     "url": "/es/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26950,7 +26950,7 @@
     "title": "DigitalOcean vs. AWS vs. CoreWeave vs. RunPod: comparativo de nuvens para empresas de IA em 2026",
     "excerpt": "Compare 8 nuvens de IA, do DigitalOcean e da AWS à CoreWeave, RunPod e Lambda, por preço do H100, disponibilidade de GPU e adequação à carga de trabalho.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-07",
+    "dateModified": "2026-11-22",
     "url": "/pt/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26959,7 +26959,7 @@
     "title": "DigitalOcean مقابل AWS مقابل CoreWeave مقابل RunPod: مقارنة السحابات لشركات الذكاء الاصطناعي في 2026",
     "excerpt": "قارن 8 سحابات ذكاء اصطناعي، من DigitalOcean وAWS إلى CoreWeave وRunPod وLambda، من حيث سعر H100 وتوفر GPU وملاءمة حمل العمل.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-07",
+    "dateModified": "2026-11-22",
     "url": "/ar/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -26968,7 +26968,7 @@
     "title": "DigitalOcean 대 AWS 대 CoreWeave 대 RunPod: 2026년 AI 기업용 클라우드 비교",
     "excerpt": "DigitalOcean, AWS, CoreWeave, RunPod 등 AI 클라우드 8곳을 H100 가격, GPU 가용성, 워크로드 적합성으로 비교합니다.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-11-07",
+    "dateModified": "2026-11-22",
     "url": "/ko/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies",
     "cluster": "power-local-llm"
   },
@@ -42286,7 +42286,7 @@
     "title": "StratoSort Review: Local AI File Organizer for Mac, Windows and Linux",
     "excerpt": "StratoSort review: AI file organizer for Mac, Windows and Linux using local llama.cpp models, offline after install. Licence, limits. Hands-on test linked.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-17",
+    "dateModified": "2026-11-21",
     "url": "/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
@@ -42295,7 +42295,7 @@
     "title": "StratoSort Rezension: Lokaler KI-Dateiorganizer für Mac, Windows und Linux",
     "excerpt": "StratoSort Rezension: KI-Dateiorganizer für Mac, Windows, Linux mit lokalen llama.cpp-Modellen, offline nach Installation. Lizenz, Grenzen. Praxistest verlinkt.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-17",
+    "dateModified": "2026-11-21",
     "url": "/de/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
@@ -42304,7 +42304,7 @@
     "title": "Test de StratoSort : organiseur de fichiers IA local pour Mac, Windows et Linux",
     "excerpt": "Test de StratoSort : organiseur de fichiers IA pour Mac, Windows, Linux, modèles llama.cpp locaux, hors ligne après installation. Limites. Test pratique lié.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-17",
+    "dateModified": "2026-11-21",
     "url": "/fr/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
@@ -42313,7 +42313,7 @@
     "title": "StratoSort レビュー：Mac・Windows・Linux向けのローカルAIファイル整理アプリ",
     "excerpt": "StratoSortのレビュー：Mac・Windows・Linux向けのAIファイル整理アプリ。PC上でllama.cppを実行し、導入後はオフライン対応。ライセンスと制限を解説。実機テストへのリンクあり。",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-17",
+    "dateModified": "2026-11-21",
     "url": "/ja/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
@@ -42322,7 +42322,7 @@
     "title": "StratoSort评测：适用于Mac、Windows和Linux的本地AI文件整理工具",
     "excerpt": "StratoSort评测：适用于Mac、Windows和Linux的AI文件整理应用，本地运行llama.cpp模型，安装后可离线使用。许可、隐私与限制，已链接实测文章。",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-17",
+    "dateModified": "2026-11-21",
     "url": "/zh/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
@@ -42331,7 +42331,7 @@
     "title": "Reseña de StratoSort: organizador de archivos con IA local para Mac, Windows y Linux",
     "excerpt": "Reseña de StratoSort: organizador de archivos con IA para Mac, Windows y Linux con modelos llama.cpp locales, sin conexión tras instalar. Prueba práctica enlazada.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-17",
+    "dateModified": "2026-11-21",
     "url": "/es/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
@@ -42340,7 +42340,7 @@
     "title": "Análise do StratoSort: organizador de arquivos com IA local para Mac, Windows e Linux",
     "excerpt": "Análise do StratoSort: organizador de arquivos com IA para Mac, Windows e Linux, com modelos llama.cpp locais que funcionam offline. Teste prático vinculado.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-17",
+    "dateModified": "2026-11-21",
     "url": "/pt/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
@@ -42349,7 +42349,7 @@
     "title": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي المحلي لأجهزة Mac وWindows وLinux",
     "excerpt": "مراجعة StratoSort: منظّم ملفات بالذكاء الاصطناعي لـ Mac وWindows وLinux بنماذج llama.cpp محلية دون اتصال بعد التثبيت. الرخصة والخصوصية. مع رابط الاختبار العملي.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-17",
+    "dateModified": "2026-11-21",
     "url": "/ar/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
@@ -42358,7 +42358,7 @@
     "title": "StratoSort 리뷰: Mac·Windows·Linux용 로컬 AI 파일 정리 앱",
     "excerpt": "StratoSort 리뷰: llama.cpp 로컬 모델로 파일을 정리하는 Mac·Windows·Linux용 AI 앱. 설치 후 오프라인 작동. 라이선스, 한계. 직접 테스트 링크.",
     "publishDate": "2026-11-10",
-    "dateModified": "2026-11-17",
+    "dateModified": "2026-11-21",
     "url": "/ko/power-local-llm/stratosort-review",
     "cluster": "power-local-llm"
   },
@@ -42691,7 +42691,7 @@
     "title": "Rin Chat Review: Free Desktop App for AI Roleplay and Character Chat",
     "excerpt": "Rin Chat review: free Windows and Linux roleplay app with encrypted cards, game-master dice and a card forge, using Ollama or any API. Limits inside.",
     "publishDate": "2026-11-21",
-    "dateModified": "2026-11-21",
+    "dateModified": "2026-11-22",
     "url": "/power-local-llm/rin-chat-review",
     "cluster": "power-local-llm"
   },
@@ -42700,7 +42700,7 @@
     "title": "Rin Chat Rezension: Gratis-Desktop-App für KI-Rollenspiel und Charakter-Chat",
     "excerpt": "Rin Chat Rezension: Gratis-Rollenspiel-App für Windows und Linux mit verschlüsselten Karten, Spielleiter-Würfeln und Karten-Schmiede, mit Ollama oder API.",
     "publishDate": "2026-11-21",
-    "dateModified": "2026-11-21",
+    "dateModified": "2026-11-22",
     "url": "/de/power-local-llm/rin-chat-review",
     "cluster": "power-local-llm"
   },
@@ -42709,7 +42709,7 @@
     "title": "Test de Rin Chat : application de bureau gratuite pour le jeu de rôle IA",
     "excerpt": "Test de Rin Chat : application gratuite de jeu de rôle pour Windows et Linux, cartes chiffrées, dés de maître du jeu et forge de cartes, avec Ollama.",
     "publishDate": "2026-11-21",
-    "dateModified": "2026-11-21",
+    "dateModified": "2026-11-22",
     "url": "/fr/power-local-llm/rin-chat-review",
     "cluster": "power-local-llm"
   },
@@ -42718,7 +42718,7 @@
     "title": "Rin Chat レビュー：AIロールプレイとキャラクターチャットの無料デスクトップアプリ",
     "excerpt": "Rin Chatのレビュー：暗号化カード、ダイス付きゲームマスター、カードフォージを備えた、Windows・Linux向けの無料ロールプレイアプリ。OllamaやAPIに対応。制限も解説。",
     "publishDate": "2026-11-21",
-    "dateModified": "2026-11-21",
+    "dateModified": "2026-11-22",
     "url": "/ja/power-local-llm/rin-chat-review",
     "cluster": "power-local-llm"
   },
@@ -42727,7 +42727,7 @@
     "title": "Rin Chat评测：用于AI角色扮演和角色聊天的免费桌面应用",
     "excerpt": "Rin Chat评测：适用于Windows和Linux的免费角色扮演应用，带加密角色卡、游戏主持骰子和角色卡工坊，可搭配Ollama或任意API。含限制说明。",
     "publishDate": "2026-11-21",
-    "dateModified": "2026-11-21",
+    "dateModified": "2026-11-22",
     "url": "/zh/power-local-llm/rin-chat-review",
     "cluster": "power-local-llm"
   },
@@ -42736,7 +42736,7 @@
     "title": "Reseña de Rin Chat: app de escritorio gratis para rol con IA y chat con personajes",
     "excerpt": "Reseña de Rin Chat: app gratis de rol para Windows y Linux con tarjetas cifradas, dados de director de juego y creador de tarjetas, con Ollama o API.",
     "publishDate": "2026-11-21",
-    "dateModified": "2026-11-21",
+    "dateModified": "2026-11-22",
     "url": "/es/power-local-llm/rin-chat-review",
     "cluster": "power-local-llm"
   },
@@ -42745,7 +42745,7 @@
     "title": "Análise do Rin Chat: app de desktop grátis para roleplay com IA e chat com personagens",
     "excerpt": "Análise do Rin Chat: app grátis de roleplay para Windows e Linux com cartões criptografados, dados de mestre de jogo e criador de cartões. Limites.",
     "publishDate": "2026-11-21",
-    "dateModified": "2026-11-21",
+    "dateModified": "2026-11-22",
     "url": "/pt/power-local-llm/rin-chat-review",
     "cluster": "power-local-llm"
   },
@@ -42754,7 +42754,7 @@
     "title": "مراجعة Rin Chat: تطبيق مكتبي مجاني للعب الأدوار والمحادثة مع الشخصيات بالذكاء الاصطناعي",
     "excerpt": "مراجعة Rin Chat: تطبيق مجاني للعب الأدوار على Windows وLinux ببطاقات مشفّرة ونرد لمدير اللعبة ومحرر بطاقات، مع Ollama أو أي API. القيود داخل المراجعة.",
     "publishDate": "2026-11-21",
-    "dateModified": "2026-11-21",
+    "dateModified": "2026-11-22",
     "url": "/ar/power-local-llm/rin-chat-review",
     "cluster": "power-local-llm"
   },
@@ -42763,7 +42763,7 @@
     "title": "Rin Chat 리뷰: AI 롤플레이와 캐릭터 채팅을 위한 무료 데스크톱 앱",
     "excerpt": "Rin Chat 리뷰: 암호화 카드, 게임 마스터 주사위, 카드 포지를 갖춘 Windows·Linux용 무료 롤플레이 앱. Ollama나 API 사용, 한계 정리.",
     "publishDate": "2026-11-21",
-    "dateModified": "2026-11-21",
+    "dateModified": "2026-11-22",
     "url": "/ko/power-local-llm/rin-chat-review",
     "cluster": "power-local-llm"
   },
@@ -65612,81 +65612,81 @@
   {
     "lang": "en",
     "title": "How Much Does a Cloud GPU Cost Per Hour in 2026?",
-    "excerpt": "Cloud GPU cost per hour: RTX 4090 from $0.34, A100 80 GB $1.19-2.79, H100 $1.99-4.29. The cheapest cloud GPUs by the hour, with RunPod and Lambda rates.",
+    "excerpt": "Cloud GPU cost per hour: RTX 4090 from $0.34, A100 80 GB $1.19-3.19, H100 $1.99-4.89. The cheapest cloud GPUs by the hour, with RunPod and Lambda rates.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-22",
     "url": "/prompt-bites/cloud-gpu-cost-per-hour",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "Wie viel kostet eine Cloud-GPU pro Stunde 2026?",
-    "excerpt": "Cloud-GPU-Kosten pro Stunde: RTX 4090 ab 0,34 $, A100 80 GB 1,19-2,79 $, H100 1,99-4,29 $. Die günstigsten Cloud-GPUs pro Stunde mit RunPod- und Lambda-Tarifen.",
+    "excerpt": "Cloud-GPU-Kosten pro Stunde: RTX 4090 ab 0,34 $, A100 80 GB 1,19-3,19 $, H100 1,99-4,89 $. Günstigste Cloud-GPUs pro Stunde bei RunPod und Lambda.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-22",
     "url": "/de/prompt-bites/cloud-gpu-cost-per-hour",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Combien coûte un GPU cloud par heure en 2026 ?",
-    "excerpt": "Coût horaire d'un GPU cloud : RTX 4090 dès 0,34 $, A100 80 GB 1,19-2,79 $, H100 1,99-4,29 $. Les GPU cloud les moins chers à l'heure, avec les tarifs RunPod et Lambda.",
+    "excerpt": "Coût horaire d'un GPU cloud : RTX 4090 dès 0,34 $, A100 80 GB 1,19-3,19 $, H100 1,99-4,89 $. Les GPU cloud les moins chers, tarifs RunPod et Lambda.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-22",
     "url": "/fr/prompt-bites/cloud-gpu-cost-per-hour",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "2026年、クラウドGPUの時間料金はいくら？",
-    "excerpt": "クラウドGPUの時間料金:RTX 4090は$0.34から、A100 80 GBは$1.19-2.79、H100は$1.99-4.29。RunPodとLambdaの料金で見る時間あたり最安のクラウドGPU。",
+    "excerpt": "クラウドGPUの時間料金:RTX 4090は$0.34から、A100 80 GBは$1.19-3.19、H100は$1.99-4.89。RunPodとLambdaの料金で見る時間あたり最安のクラウドGPU。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-22",
     "url": "/ja/prompt-bites/cloud-gpu-cost-per-hour",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "2026年云GPU每小时多少钱？",
-    "excerpt": "云GPU每小时价格:RTX 4090 起价$0.34,A100 80 GB $1.19-2.79,H100 $1.99-4.29。附RunPod和Lambda报价的最便宜按小时计费云GPU。",
+    "excerpt": "云GPU每小时价格:RTX 4090 起价$0.34,A100 80 GB $1.19-3.19,H100 $1.99-4.89。附RunPod和Lambda报价的最便宜按小时计费云GPU。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-22",
     "url": "/zh/prompt-bites/cloud-gpu-cost-per-hour",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "¿Cuánto cuesta un GPU en la nube por hora en 2026?",
-    "excerpt": "Costo de GPU en la nube por hora: RTX 4090 desde $0,34, A100 80 GB $1,19–2,79, H100 $1,99–4,29. Las GPU en la nube más baratas por hora, con tarifas de RunPod y Lambda.",
+    "excerpt": "Costo de GPU en la nube por hora: RTX 4090 desde $0,34, A100 80 GB $1,19–3,19, H100 $1,99–4,89. Las más baratas, con tarifas de RunPod y Lambda.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-22",
     "url": "/es/prompt-bites/cloud-gpu-cost-per-hour",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "Quanto custa uma GPU na nuvem por hora em 2026?",
-    "excerpt": "Custo de GPU na nuvem por hora: RTX 4090 a partir de $0,34, A100 80 GB $1,19–2,79, H100 $1,99–4,29. As GPUs na nuvem mais baratas por hora, com preços da RunPod e da Lambda.",
+    "excerpt": "Custo de GPU na nuvem por hora: RTX 4090 a partir de $0,34, A100 80 GB $1,19–3,19, H100 $1,99–4,89. As mais baratas, com preços da RunPod e Lambda.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-22",
     "url": "/pt/prompt-bites/cloud-gpu-cost-per-hour",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "كم تكلّف وحدة ⁨GPU⁩ السحابية في الساعة عام ⁨2026⁩؟",
-    "excerpt": "تكلفة ⁨GPU⁩ السحابية في الساعة: ⁨RTX 4090⁩ من ⁨$0.34⁩، و⁨A100 80 GB⁩ من ⁨$1.19⁩ إلى ⁨$2.79⁩، و⁨H100⁩ من ⁨$1.99⁩ إلى ⁨$4.29⁩. أرخص وحدات ⁨GPU⁩ السحابية بالساعة مع أسعار ⁨RunPod⁩ و⁨Lambda⁩.",
+    "excerpt": "تكلفة ⁨GPU⁩ السحابية في الساعة: ⁨RTX 4090⁩ من ⁨$0.34⁩، و⁨A100 80 GB⁩ من ⁨$1.19⁩ إلى ⁨$3.19⁩، و⁨H100⁩ من ⁨$1.99⁩ إلى ⁨$4.89⁩ لدى ⁨RunPod⁩ و⁨Lambda⁩.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-22",
     "url": "/ar/prompt-bites/cloud-gpu-cost-per-hour",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "2026년 클라우드 GPU 시간당 비용은 얼마입니까?",
-    "excerpt": "클라우드 GPU 시간당 비용: RTX 4090 $0.34부터, A100 80 GB $1.19–2.79, H100 $1.99–4.29. RunPod와 Lambda 요금으로 보는 시간당 가장 저렴한 클라우드 GPU.",
+    "excerpt": "클라우드 GPU 시간당 비용: RTX 4090 $0.34부터, A100 80 GB $1.19–3.19, H100 $1.99–4.89. RunPod·Lambda 요금 기준.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-11-22",
     "url": "/ko/prompt-bites/cloud-gpu-cost-per-hour",
     "cluster": "prompt-bites"
   },
