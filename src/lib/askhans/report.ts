@@ -189,4 +189,6 @@ async function readAskHansReport(): Promise<AskHansReport> {
 }
 
 /** Never shows a failed read as zeros: on a Redis error it returns the last good report (see lastGood.ts). */
-export const getAskHansReport = () => keepLastGood('askhans:report', readAskHansReport, () => emptyReport(lastNDaysUtc(REPORT_DAYS)))
+// Shared 5-minute server cache: 30+ Redis commands per /askhans view (9 locales, force-dynamic). A throw is never cached.
+const readAskHansReportCached = unstable_cache(readAskHansReport, ['askhans-report'], { revalidate: 300, tags: ['askhans-usage'] })
+export const getAskHansReport = () => keepLastGood('askhans:report', readAskHansReportCached, () => emptyReport(lastNDaysUtc(REPORT_DAYS)))

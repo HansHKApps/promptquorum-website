@@ -97,4 +97,6 @@ async function readMcpReport(): Promise<McpReport> {
 }
 
 /** Never shows a failed read as zeros: on a Redis error it returns the last good report (see lastGood.ts). */
-export const getMcpReport = () => keepLastGood('mcp:report', readMcpReport, () => empty(lastNDaysUtc(REPORT_DAYS)))
+// Shared 5-minute server cache: ~30 Redis commands per /mcp-stats view (9 locales, force-dynamic). A throw is never cached.
+const readMcpReportCached = unstable_cache(readMcpReport, ['mcp-report'], { revalidate: 300, tags: ['mcp-usage'] })
+export const getMcpReport = () => keepLastGood('mcp:report', readMcpReportCached, () => empty(lastNDaysUtc(REPORT_DAYS)))
