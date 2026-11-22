@@ -7,6 +7,8 @@
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { qrMatrix, verifyUrl } from '@/lib/academy/qr'
 import { toOutputLocale } from '@/lib/i18n/constants'
+import { formatDuration } from '@/lib/academy/record'
+import { RECORD_COPY } from './copy/record'
 import type { CertificateModel } from '@/lib/academy/certificate'
 import type { AcademyLang } from '@/lib/academy/types'
 import { getLangDir } from '@/lib/i18n/constants'
@@ -134,6 +136,7 @@ export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateM
   const { ctx } = p
   const c = tx.cert
   const x = tx.certX
+  const R = RECORD_COPY[lang]
   const W = p.innerWidthMm
   try {
     await document.fonts?.ready
@@ -185,7 +188,9 @@ export async function drawCertificate(canvas: HTMLCanvasElement, m: CertificateM
     p.rect(off, 105, tileW, 22, '#f5f3ff')
     const at = p.x(off + 5)
     const size = p.fit(t.value, tileW - 10, i === 0 ? 10 : 5, 700, 3.4)
-    p.line(t.value, at, i === 0 ? 117 : 115, { size, weight: 700, color: t.color ?? INK })
+    p.line(t.value, at, i === 0 ? 117 : i === 2 ? 113.4 : 115, { size, weight: 700, color: t.color ?? INK })
+    // Both times on the third tile: the active time above, the total time (start to completion) below.
+    if (i === 2) p.paragraph(`${R.totalShort}: ${formatDuration(m.totalSeconds, toOutputLocale(lang))}`, off + 5, 118.6, tileW - 10, { size: 3.2, color: INK, maxLines: 1 })
     p.paragraph(t.label, off + 5, 123, tileW - 10, { size: 3, color: MUTED, maxLines: 1 })
   })
 

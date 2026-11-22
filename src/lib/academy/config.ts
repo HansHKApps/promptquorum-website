@@ -63,3 +63,5 @@ export const ACADEMY_LESSON_TIME_CAP_FACTOR = 3
 export const ACADEMY_OPEN_EVENT = 'academy:open'
 /** sessionStorage: window open / maximized / position and size (tab-scoped, never localStorage; same as Ask Hans' UI state). */
 export const ACADEMY_UI_KEY = 'academy.ui.v1'
+/** One test (a lesson quiz or the final test) never counts more than this many active seconds. */
+export const ACADEMY_TEST_TIME_CAP_SECONDS = 2 * 60 * 60

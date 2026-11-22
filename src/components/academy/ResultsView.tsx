@@ -28,6 +28,7 @@ import { NextTopics } from './NextTopics'
 import { defaultDraft } from '@/lib/academy/store'
 import { verifyUrl } from '@/lib/academy/qr'
 import { StarRating } from './StarRating'
+import { LearningRecordCard } from './LearningRecordCard'
 import type { useAcademyState } from './useAcademyState'
 
 type Update = ReturnType<typeof useAcademyState>['update']
@@ -284,6 +285,8 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
       </div>
 
       {usesWritten && <p className="rounded-xl bg-gray-50 px-4 py-3 text-sm text-gray-700">{tx.aiGradedNotice}</p>}
+
+      <LearningRecordCard programme={programme} lang={lang} />
 
       <div>
         <h3 className="font-medium text-gray-900">{tx.topicScores}</h3>

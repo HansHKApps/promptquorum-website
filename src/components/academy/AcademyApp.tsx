@@ -13,7 +13,8 @@ import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_PREFS_KEY, ACADE
 import { clearPrefs, loadPrefs, savePrefs } from '@/lib/academy/prefs'
 import { clearAcademyState, defaultDraft } from '@/lib/academy/store'
 import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
-import { clearLessonContent, lessonsDone, nextOpenLesson, openLesson, setFreeWish, setLessonNote } from '@/lib/academy/progress'
+import { addActivity, clearLessonContent, lessonsDone, nextOpenLesson, openLesson, setFreeWish, setLessonNote } from '@/lib/academy/progress'
+import { ActivityTracker, type ActivityTarget } from './ActivityTracker'
 import { programmeScore } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import { LEVELS, SETUP_FIELDS, TEST_DIFFICULTIES, TEST_FORMATS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type SetupField, type TestDifficulty, type TestFormat, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
@@ -136,6 +137,14 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
   const learning = ['diagnostic', 'programme', 'lesson', 'quiz'].includes(state.view)
   const stripLang: AcademyLang = learning || state.view === 'results' ? learnLang : lang
   const learnProps = learning && learnLang !== lang ? { lang: learnLang, dir: learnLang === 'ar' ? ('rtl' as const) : ('ltr' as const) } : {}
+  // Where active time is booked: the open lesson, or the open test. Other screens (overview, results) count nothing.
+  const prog = state.programme
+  const activityTarget: ActivityTarget =
+    prog && state.view === 'lesson' && prog.lessons[prog.progress.currentLesson]
+      ? { kind: 'lesson', id: prog.lessons[prog.progress.currentLesson].id }
+      : prog && state.view === 'quiz' && prog.progress.activeQuiz
+        ? { kind: 'test', id: prog.progress.activeQuiz.quizId }
+        : null
   if (!ready || !draft) {
     return <div className="h-96 animate-pulse rounded-2xl border border-purple-100 bg-white" aria-busy="true" aria-label={tx.loading} />
   }
@@ -156,6 +165,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           </button>
         </div>
       )}
+      {state.programme && <ActivityTracker target={activityTarget} onTick={(t, sec, fresh) => update((s) => (s.programme ? { ...s, programme: addActivity(s.programme, t, sec, fresh) } : s))} />}
       <div {...learnProps}>
       {state.view === 'cabinet' ? (
         <CabinetView lang={lang} update={update} flag={cabinetFlag} onFlag={setCabinetFlagState} current={state.programme} />

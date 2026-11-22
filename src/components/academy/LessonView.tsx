@@ -7,8 +7,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { ReadAloud } from '@/components/ReadAloud'
 import { Markdown } from '@/components/askhans/markdown'
-import { ACADEMY_IDLE_AFTER_MS, ACADEMY_TICK_SECONDS } from '@/lib/academy/config'
-import { addActiveTime, lessonsDone, markLessonDone } from '@/lib/academy/progress'
+import { lessonsDone, markLessonDone } from '@/lib/academy/progress'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
 import type { Lesson, Programme } from '@/lib/academy/types'
 import { AiBadge } from './AiBadge'
@@ -23,25 +22,6 @@ import type { AcademyCopy } from './copy'
 import type { useAcademyState } from './useAcademyState'
 
 type Update = ReturnType<typeof useAcademyState>['update']
-
-/** Counts active seconds while the tab is visible and the learner interacted within the last minute (SPEC 6.1). */
-function useActiveSeconds(onTick: (seconds: number) => void) {
-  const lastInteraction = useRef(Date.now())
-  const tick = useRef(onTick)
-  tick.current = onTick
-  useEffect(() => {
-    const mark = () => (lastInteraction.current = Date.now())
-    const events = ['pointerdown', 'keydown', 'scroll', 'touchstart', 'wheel'] as const
-    events.forEach((e) => window.addEventListener(e, mark, { passive: true }))
-    const id = window.setInterval(() => {
-      if (document.visibilityState === 'visible' && Date.now() - lastInteraction.current < ACADEMY_IDLE_AFTER_MS) tick.current(ACADEMY_TICK_SECONDS)
-    }, ACADEMY_TICK_SECONDS * 1000)
-    return () => {
-      events.forEach((e) => window.removeEventListener(e, mark))
-      window.clearInterval(id)
-    }
-  }, [])
-}
 
 export function LessonView({
   tx,
@@ -81,8 +61,6 @@ export function LessonView({
   }, [])
 
   const updateProgramme = useCallback((fn: (p: Programme) => Programme) => update((s) => (s.programme ? { ...s, programme: fn(s.programme) } : s)), [update])
-
-  useActiveSeconds((sec) => updateProgramme((p) => addActiveTime(p, lesson.id, sec)))
 
   // One shared request per lesson (see lesson-loader): if the prefetch started this lesson while the learner was still
   // reading the previous one, this simply waits for it (or finds the text already stored and never gets here).

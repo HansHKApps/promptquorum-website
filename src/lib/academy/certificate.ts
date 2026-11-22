@@ -1,6 +1,7 @@
 // PromptQuorum Academy — certificate data (docs/academy/SPEC.md section 10, QA audit F5). Pure functions, browser-safe.
 // The certificate is created in the browser only; the learner's name never reaches a server.
 
+import { learningRecord } from './record'
 import { countingFinal, isCompleted, PASS_MARK, programmeScore } from './scoring'
 import type { Programme } from './types'
 
@@ -54,6 +55,8 @@ export interface CertificateModel {
   issuedAt: string
   /** active learning minutes recorded in the browser */
   learningMinutes: number
+  /** start to completion in seconds, breaks included */
+  totalSeconds: number
   testMode: Programme['testMode']
   percent: number
   passMark: number
@@ -80,6 +83,7 @@ export function certificateModel(p: Programme, name: string, now: Date = new Dat
     completedAt: p.progress.completedAt ?? final.takenAt,
     issuedAt,
     learningMinutes: Math.max(1, Math.round(p.progress.secondsSpent / 60)),
+    totalSeconds: learningRecord(p).totalSeconds,
     testMode: p.testMode,
     percent: score.percent,
     passMark: PASS_MARK,

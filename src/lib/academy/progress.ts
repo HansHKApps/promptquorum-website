@@ -1,6 +1,6 @@
 // PromptQuorum Academy — progress updates on the stored programme (browser-safe, pure functions).
 
-import { ACADEMY_LESSON_TIME_CAP_FACTOR } from './config'
+import { ACADEMY_LESSON_TIME_CAP_FACTOR, ACADEMY_TEST_TIME_CAP_SECONDS } from './config'
 import type { Lesson, Programme } from './types'
 
 /** Adds active seconds to a lesson and the total, never beyond the per-lesson cap (SPEC 6.1). */
@@ -19,6 +19,32 @@ export function addActiveTime(p: Programme, lessonId: string, seconds: number): 
       lessonSeconds: { ...p.progress.lessonSeconds, [lessonId]: before + added },
     },
   }
+}
+
+/** Adds active seconds spent in a test (lesson quiz id or "final"). Capped per test; counts in the total. */
+export function addTestTime(p: Programme, quizId: string, seconds: number): Programme {
+  if (seconds <= 0) return p
+  const before = p.progress.testSeconds?.[quizId] ?? 0
+  const added = Math.max(0, Math.min(seconds, ACADEMY_TEST_TIME_CAP_SECONDS - before))
+  if (!added) return p
+  return {
+    ...p,
+    progress: {
+      ...p.progress,
+      secondsSpent: p.progress.secondsSpent + added,
+      testSeconds: { ...p.progress.testSeconds, [quizId]: before + added },
+    },
+  }
+}
+
+/**
+ * One tick of the activity tracker. `where` is a lesson id or a quiz id; `newSession` is true for the first tick after
+ * a pause of more than a minute (or after opening the window). A session is only counted when time was really added.
+ */
+export function addActivity(p: Programme, where: { kind: 'lesson' | 'test'; id: string }, seconds: number, newSession: boolean): Programme {
+  const next = where.kind === 'lesson' ? addActiveTime(p, where.id, seconds) : addTestTime(p, where.id, seconds)
+  if (next === p || !newSession) return next
+  return { ...next, progress: { ...next.progress, sessions: (next.progress.sessions ?? 0) + 1 } }
 }
 
 /** Opening a lesson marks it viewed (never downgrades "done") and makes it the current one. */

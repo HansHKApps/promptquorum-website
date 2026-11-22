@@ -3,6 +3,7 @@
 // Not included: tutor chat history (may contain personal data). Time per question is not recorded in v1.
 
 import type { CertificateModel } from './certificate'
+import { learningRecord, type LearningRecord } from './record'
 import { correctIndexOf, countingFinal } from './scoring'
 import type { Programme, Question, QuizQuestion, QuizResult } from './types'
 
@@ -47,6 +48,8 @@ export interface DocModel {
   /** the programme language as a display name */
   languageName: string
   attemptsCount: number
+  /** total and active time, sessions, answers, tutor use */
+  record: LearningRecord
   objectives: string[]
   /** the learner's original request: level, planned time, test format */
   request: { selfLevel: Programme['selfLevel']; availableMinutes: number; testFormat: NonNullable<Programme['testFormat']>; choiceOptions: number }
@@ -91,6 +94,7 @@ export function documentationModel(p: Programme, cert: CertificateModel, languag
     number,
     languageName,
     attemptsCount: finals.length,
+    record: learningRecord(p),
     objectives: p.objectives,
     request: { selfLevel: p.selfLevel, availableMinutes: p.availableMinutes, testFormat: p.testFormat ?? 'choice', choiceOptions: p.choiceOptions ?? 3 },
     objectiveLessons: p.objectives.map((_, oi) => p.lessons.flatMap((l, li) => (l.objectiveIds.includes(oi) ? [{ number: li + 1, title: l.title }] : []))),
