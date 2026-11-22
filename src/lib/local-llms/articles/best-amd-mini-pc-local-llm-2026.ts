@@ -3310,6 +3310,36 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         priceRange: '3500-3650',
         label: 'GMKtec EVO-X2（Amazon.co.jp）',
       },
+      {
+        url: 'https://kakaku.com/search_results/Minisforum%20MS-S1%20MAX/',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: '価格.comで「Minisforum MS-S1 MAX」の最安値を確認',
+      },
+      {
+        url: 'https://kakaku.com/search_results/Minisforum%20MS-A2/',
+        productName: 'Minisforum MS-A2',
+        productCategory: 'mini-pc',
+        label: '価格.comで「Minisforum MS-A2」の最安値を確認',
+      },
+      {
+        url: 'https://kakaku.com/search_results/Beelink%20GTR9%20Pro/',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: '価格.comで「Beelink GTR9 Pro」の最安値を確認',
+      },
+      {
+        url: 'https://kakaku.com/search_results/AOOSTAR%20GEM12/',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: '価格.comで「AOOSTAR GEM12」の最安値を確認',
+      },
+      {
+        url: 'https://kakaku.com/search_results/GMKtec%20EVO-X2/',
+        productName: 'GMKtec EVO-X2',
+        productCategory: 'mini-pc',
+        label: '価格.comで「GMKtec EVO-X2」の最安値を確認',
+      },
     ],
     freshness_tier: 'semi_annual',
     designSkin: 'hub',
@@ -3356,7 +3386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdictBox: {
         id: 'verdict-picks',
         title: 'おすすめ商品',
-        content: '3つの購入者タイプに対応した3つの優選商品と、GMKtec EVO-X2の価格に関する注意です。日本で購入する場合は、Amazon.co.jpのほか、ドスパラ、ツクモ、ヨドバシ、ソフマップなどの大手電機・PCショップで、取り扱いの有無と価格を確認してください。価格.comで価格を比較できます。本ページのドル表記は米国価格で、日本での実売価格は税・輸入コスト・為替で異なります。海外から直接輸入する場合はPSEマーク（電源）、技適（Wi-Fi/Bluetooth）、国内保証・サポートの有無を購入前に確認してください。',
+        content: '3つの購入者タイプに対応した3つの優選商品と、GMKtec EVO-X2の価格に関する注意です。日本で購入する場合は、Amazon.co.jpのほか、ドスパラ、ツクモ、ヨドバシ、ソフマップなどの大手電機・PCショップで、取り扱いの有無と価格を確認してください。価格.comで価格を比較できます。下のリンクから、価格.comの最新の最安値を直接確認できます。本ページのドル表記は米国価格で、日本での実売価格は税・輸入コスト・為替で異なります。海外から直接輸入する場合はPSEマーク（電源）、技適（Wi-Fi/Bluetooth）、国内保証・サポートの有無を購入前に確認してください。',
         callouts: [
           { type: '🥇 総合ベスト・最安の掲載価格: Minisforum MS-A2', text: '¥172,000(転載値)· 96GB · RAMと品質と価格の最高バランス。Llama 3.3 70Bを快適実行。[Minisforumで確認 →](https://store.minisforum.com)' },
           { type: '⚠️ 価格要確認: GMKtec EVO-X2', text: '2,199.99ドル(64GB)· 3,499.99〜3,649.99ドル(128GB)· 同じRyzen AI Max+ 395ですが、他の3機種より高価です(GMKtec米国ストア、2026-11-14確認、メーカー表示、円換算なし)。バジェット向けではありません。[GMKtecで確認 →](https://www.gmktec.com)' },
@@ -4459,6 +4489,36 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         priceRange: '3500-3650',
         label: 'GMKtec EVO-X2 (Amazon)',
       },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=Minisforum%20MS-S1%20MAX',
+        productName: 'Minisforum MS-S1 MAX',
+        productCategory: 'mini-pc',
+        label: '다나와에서 \'Minisforum MS-S1 MAX\' 최저가 확인',
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=Minisforum%20MS-A2',
+        productName: 'Minisforum MS-A2',
+        productCategory: 'mini-pc',
+        label: '다나와에서 \'Minisforum MS-A2\' 최저가 확인',
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=Beelink%20GTR9%20Pro',
+        productName: 'Beelink GTR9 Pro',
+        productCategory: 'mini-pc',
+        label: '다나와에서 \'Beelink GTR9 Pro\' 최저가 확인',
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=AOOSTAR%20GEM12',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: '다나와에서 \'AOOSTAR GEM12\' 최저가 확인',
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=GMKtec%20EVO-X2',
+        productName: 'GMKtec EVO-X2',
+        productCategory: 'mini-pc',
+        label: '다나와에서 \'GMKtec EVO-X2\' 최저가 확인',
+      },
     ],
     freshness_tier: 'semi_annual',
     designSkin: 'hub',
@@ -4503,7 +4563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdictBox: {
         id: 'verdict-picks',
         title: '추천 제품',
-        content: '세 가지 구매자 유형에 맞는 세 가지 최적 제품과 GMKtec EVO-X2 가격 주의 사항입니다. 한국에서 구매할 때는 다나와에서 가격을 비교하고, 쿠팡과 컴퓨존 등에서 판매 여부와 가격을 확인하세요. 이 페이지의 달러 표기는 미국 가격이며, 한국 판매 가격은 세금, 수입 비용, 환율에 따라 다릅니다. 국내 정식 유통 여부와 국내 AS를 구매 전에 확인하세요. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요.',
+        content: '세 가지 구매자 유형에 맞는 세 가지 최적 제품과 GMKtec EVO-X2 가격 주의 사항입니다. 한국에서 구매할 때는 다나와에서 가격을 비교하고, 쿠팡과 컴퓨존 등에서 판매 여부와 가격을 확인하세요. 아래 링크에서 다나와의 최신 최저가를 바로 확인할 수 있습니다. 이 페이지의 달러 표기는 미국 가격이며, 한국 판매 가격은 세금, 수입 비용, 환율에 따라 다릅니다. 국내 정식 유통 여부와 국내 AS를 구매 전에 확인하세요. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요.',
         callouts: [
           { type: '🥇 종합 최고이자 최저 표시 가격: Minisforum MS-A2', text: '미국 가격 1,599달러(전재) · 96GB · RAM, 빌드 품질, 가격의 최적 균형. Llama 3.3 70B를 안정적으로 실행. [Minisforum에서 보기 →](https://store.minisforum.com)' },
           { type: '⚠️ 가격 확인 필요: GMKtec EVO-X2', text: '미국 가격 2,199.99달러(64GB) · 3,499.99~3,649.99달러(128GB) · 같은 Ryzen AI Max+ 395이지만 나머지 세 기기보다 비쌉니다(GMKtec 미국 스토어, 2026-11-14 확인, 제조사 표기). 가성비 선택은 아닙니다. [GMKtec에서 보기 →](https://www.gmktec.com)' },

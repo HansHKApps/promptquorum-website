@@ -1000,6 +1000,30 @@ schema: {
           productCategory: 'mini-pc',
           label: 'Framework Desktop（公式サイト）',
         },
+        {
+          url: 'https://kakaku.com/search_results/Mac%20mini%20M6/',
+          productName: 'Mac mini M6',
+          productCategory: 'mini-pc',
+          label: '価格.comで「Mac mini M6」の最安値を確認',
+        },
+        {
+          url: 'https://kakaku.com/search_results/Mac%20mini%20M5%20Pro/',
+          productName: 'Mac mini M5 Pro',
+          productCategory: 'mini-pc',
+          label: '価格.comで「Mac mini M5 Pro」の最安値を確認',
+        },
+        {
+          url: 'https://kakaku.com/search_results/Framework%20Desktop/',
+          productName: 'Framework Desktop',
+          productCategory: 'mini-pc',
+          label: '価格.comで「Framework Desktop」の最安値を確認',
+        },
+        {
+          url: 'https://kakaku.com/search_results/ASUS%20PN51/',
+          productName: 'ASUS PN51',
+          productCategory: 'mini-pc',
+          label: '価格.comで「ASUS PN51」の最安値を確認',
+        },
       ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-21',
@@ -1103,7 +1127,7 @@ schema: {
         platforms: {
           id: 'platforms',
           title: 'コストパフォーマンスに優れたミニPCプラットフォームは？',
-          content: '**Ryzen 5とRTX 5060 Ti搭載のASUS PN51は約¥140,000で従来型x86として、この構成の中で最もコストパフォーマンスが高い選択肢を提供 — フルタワーと同一のLLMスループットを半額以下で実現。** **日本で購入する場合は、Amazon.co.jpと価格.comで価格を比較し、ドスパラ・ツクモ・ヨドバシ・ソフマップなどの大手販売店で在庫と価格を確認してください。** 中古を検討する場合はメルカリ、ヤフオク!、じゃんぱらも候補ですが、保証の有無を必ず確認してください。海外から直接輸入する場合はPSEマーク（電源）、技適（Wi-Fi/Bluetooth）、国内保証・サポートの有無を購入前に確認してください。',
+          content: '**Ryzen 5とRTX 5060 Ti搭載のASUS PN51は約¥140,000で従来型x86として、この構成の中で最もコストパフォーマンスが高い選択肢を提供 — フルタワーと同一のLLMスループットを半額以下で実現。** **日本で購入する場合は、Amazon.co.jpと価格.comで価格を比較し、ドスパラ・ツクモ・ヨドバシ・ソフマップなどの大手販売店で在庫と価格を確認してください。** 下のリンクから、価格.comの最新の最安値を直接確認できます。中古を検討する場合はメルカリ、ヤフオク!、じゃんぱらも候補ですが、保証の有無を必ず確認してください。海外から直接輸入する場合はPSEマーク（電源）、技適（Wi-Fi/Bluetooth）、国内保証・サポートの有無を購入前に確認してください。',
           items: [
             '**Intel NUC 13 Pro（Core i7）：** コンパクトなアップグレード可能65W CPU。Thunderbolt 3 eGPUドック経由でGPU接続。ベース約¥95,000 + RTX 5060 Ti ¥75,000 + ドック¥40,000 = 約¥210,000。最高の製品品質。',
             '**ASUS PN51またはPN52（Mini-ITXベアボーン）：** Ryzen 5（¥22,000）+ 32 GB RAM（¥12,000）+ 1TB SSD（¥10,500）+ [RTX 5060 Ti](/ja/local-llms/best-budget-gpus-local-llm)（¥75,000）= 約¥140,000。この構成の中で最もコストパフォーマンスが高い。',
@@ -2929,6 +2953,30 @@ schema: {
         productCategory: 'mini-pc',
         label: 'Framework Desktop (공식 사이트)',
       },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=Mac%20mini%20M6',
+        productName: 'Mac mini M6',
+        productCategory: 'mini-pc',
+        label: '다나와에서 \'Mac mini M6\' 최저가 확인',
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=Mac%20mini%20M5%20Pro',
+        productName: 'Mac mini M5 Pro',
+        productCategory: 'mini-pc',
+        label: '다나와에서 \'Mac mini M5 Pro\' 최저가 확인',
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=Framework%20Desktop',
+        productName: 'Framework Desktop',
+        productCategory: 'mini-pc',
+        label: '다나와에서 \'Framework Desktop\' 최저가 확인',
+      },
+      {
+        url: 'https://search.danawa.com/dsearch.php?query=ASUS%20PN51',
+        productName: 'ASUS PN51',
+        productCategory: 'mini-pc',
+        label: '다나와에서 \'ASUS PN51\' 최저가 확인',
+      },
     ],
   freshness_tier: 'semi_annual',
   next_refresh_due: '2026-10-21',
@@ -3033,7 +3081,7 @@ schema: {
     platforms: {
       id: 'platforms',
       title: '가성비가 가장 뛰어난 미니 PC 플랫폼은?',
-      content: '**Ryzen 5와 RTX 5060 Ti를 탑재한 ASUS PN51이 미국 가격 $900에 기존 x86 중 이 구성에서 가성비가 가장 좋은 선택지를 제공합니다 — 풀 타워와 동일한 LLM 처리량을 절반 가격에 실현합니다.** **국내에서 구매할 때는 다나와에서 가격을 비교하고, 쿠팡과 컴퓨존에서 판매 여부와 가격을 확인하세요.** 국내 정식 유통 제품인지, 국내 AS가 가능한지 구매 전에 확인하는 것이 좋습니다. 중고는 당근마켓이나 중고나라를 이용할 수 있지만 보증 여부를 꼭 확인하세요. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요.',
+      content: '**Ryzen 5와 RTX 5060 Ti를 탑재한 ASUS PN51이 미국 가격 $900에 기존 x86 중 이 구성에서 가성비가 가장 좋은 선택지를 제공합니다 — 풀 타워와 동일한 LLM 처리량을 절반 가격에 실현합니다.** **국내에서 구매할 때는 다나와에서 가격을 비교하고, 쿠팡과 컴퓨존에서 판매 여부와 가격을 확인하세요.** 아래 링크에서 다나와의 최신 최저가를 바로 확인할 수 있습니다. 국내 정식 유통 제품인지, 국내 AS가 가능한지 구매 전에 확인하는 것이 좋습니다. 중고는 당근마켓이나 중고나라를 이용할 수 있지만 보증 여부를 꼭 확인하세요. 해외 직구 제품은 KC 인증, 전압(220V) 호환, 국내 AS 가능 여부를 구매 전에 확인하세요.',
       image: '/images/best-mini-pcs-local-llm-platform-value-hero-ko.webp',
       imageCaption: '미니 PC 플랫폼 가성비 비교: ASUS PN51 + RTX 5060 Ti가 약 미국 가격 $900에 이 구성 중에서 가성비가 가장 좋은 선택지 제공; Intel NUC 13 + Thunderbolt eGPU 독은 프리미엄 빌드 품질로 약 $1,300.',
       items: [
