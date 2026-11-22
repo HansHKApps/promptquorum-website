@@ -4,8 +4,8 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
-    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2027-05-22',
+    last_full_refresh: '2026-11-22',
     designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Best GPU for LLM Inference Under $500 (2026)',
@@ -20,20 +20,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'gpu', priceRange: '~$562 in stock', label: 'Check RTX 4060 Ti 16GB price →' },
     ],
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**The best GPU under $500 for local LLM inference is now the Intel Arc B580 12GB ($250–290): 12 GB VRAM for 7B–13B models at Q4, ~31 tok/s on Llama 3.1 8B Q4, and the only new 12 GB card still reliably in stock below $500. For the CUDA toolchain, a used RTX 3060 12GB ($270–300) is the runner-up. The previous winner, the RTX 4060 Ti 16GB, has left the window: its $399 MSRP listings sit out of stock and in-stock cards trade near $562. The RTX 3060 12GB has risen 45% since its relaunch and now costs $474–599 new. The 2026 DRAM/GDDR7 shortage, driven by AI datacenter demand, is what moved all of them. For 30B model capability, budget $850+.**',
+    leadAnswerBlock: '**The best GPU under $500 for local LLM inference is now the Intel Arc B580 12GB ($250–290): 12 GB VRAM for 7B–13B models at Q4, ~31 tok/s on Llama 3.1 8B Q4, and the only new 12 GB card still reliably in stock below $500. For the CUDA toolchain, a used RTX 3060 12GB ($270–300) is the runner-up. The previous winner, the RTX 4060 Ti 16GB, has left the window: its $399 MSRP listings sit out of stock and in-stock cards trade near $562. The RTX 3060 12GB has risen 45% since its relaunch and now costs $474–599 new. The 2026 DRAM/GDDR7 shortage, driven by AI datacenter demand, is what moved all of them. For 30B model capability, the route is a used RTX 3090 (24 GB), at about $1,400–1,550 in sold listings ([InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15).**',
     quickAnswerTop: {
       question: 'What is the best GPU for running LLMs locally under $500?',
-      answer: '**The Intel Arc B580 12GB ($250–290) is the best GPU under $500 for local LLM inference.** Its 12 GB VRAM runs 7B–13B models at Q4, it works with Ollama through the SYCL/oneAPI backend on Windows and Linux, and it is the only new 12 GB card still dependably available below $500. A used RTX 3060 12GB ($270–300) is the runner-up if you need the CUDA toolchain. The 2026 memory shortage has pushed the rest of this list out of the window: the RTX 4060 Ti 16GB now trades near $562 when in stock, the new RTX 3060 12GB is $474–599, the used RTX 3090 is $850–1,050, the RTX 4070 12GB is $560–705, and the RX 7800 XT 16GB is ~$832.',
+      answer: '**The Intel Arc B580 12GB ($250–290) is the best GPU under $500 for local LLM inference.** Its 12 GB VRAM runs 7B–13B models at Q4, it works with Ollama through the SYCL/oneAPI backend on Windows and Linux, and it is the only new 12 GB card still dependably available below $500. A used RTX 3060 12GB ($270–300) is the runner-up if you need the CUDA toolchain. The 2026 memory shortage has pushed the rest of this list out of the window: the RTX 4060 Ti 16GB now trades near $562 when in stock, the new RTX 3060 12GB is $474–599, the used RTX 3090 is about $1,400–1,550 in sold listings ([InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15), the RTX 4070 12GB is $560–705, and the RX 7800 XT 16GB is ~$832.',
       bullets: [
         '**Winner:** Intel Arc B580 12GB ($250–290) — 12 GB VRAM, ~31 tok/s on Llama 3.1 8B Q4, the only new 12 GB card reliably under $500',
         '**Runner-up:** RTX 3060 12GB used ($270–300) — the cheapest route to the full CUDA toolchain',
         '⚠️ RTX 4060 Ti 16GB: $399 MSRP listings out of stock, in-stock cards near $562 — no longer dependably sub-$500',
         '⚠️ RTX 3060 12GB new: $474–599, up 45% since its relaunch — buy this one used instead',
-        '⚠️ RTX 3090 used: now $850–1,050 — no longer sub-$500',
+        '⚠️ RTX 3090 used: about $1,400–1,550 in sold listings (InsiderLLM, source updated 2026-10-15) — no longer sub-$500',
         '⚠️ RTX 4070 12GB: now $560–705 — no longer sub-$500',
         '⚠️ RX 7800 XT 16GB: ~$832 — no longer sub-$500',
       ],
-      updatedDate: '2026-09-01',
+      updatedDate: '2026-11-22',
     },
     sections: {
       tldr: {
@@ -43,11 +43,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RTX 3060 12GB used ($270–300) is the runner-up — the cheapest way to get the full CUDA toolchain',
           '⚠️ Price alert: RTX 4060 Ti 16GB, the previous winner, is out of stock at its $399 MSRP and trades near $562 when available — removed from the sub-$500 list',
           '⚠️ Price alert: new RTX 3060 12GB is $474–599, up 45% since its relaunch — the used market is the sane route to this card',
-          '⚠️ Price alert: used RTX 3090 is now $850–1,050 — removed from sub-$500 list',
+          '⚠️ Price alert: used RTX 3090 sold listings run about $1,400–1,550 (InsiderLLM, source updated 2026-10-15) — removed from sub-$500 list',
           '⚠️ Price alert: RTX 4070 12GB is now $560–705 — removed from sub-$500 list',
           '⚠️ Price alert: RX 7800 XT 16GB is now ~$832 — removed from sub-$500 list',
           'Why everything moved: a worldwide DRAM and GDDR7 shortage, driven by AI datacenter demand, has pushed graphics-card street prices well above list across the whole market. Nothing about the hardware changed — only what it costs.',
-          'Need 30B+ model capability? Budget at least $850 for a used RTX 3090 (24 GB) or a used RTX 4080 SUPER (16 GB, ~$850–900 used — new units now run ~$1,600 after the shortage)',
+          'Need 30B+ model capability? A used RTX 3090 (24 GB) is the route, at about $1,400–1,550 in sold listings (InsiderLLM, source updated 2026-10-15)',
           'All three GPUs on this list run Ollama, LM Studio, and llama.cpp out of the box',
         ],
       },
@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'Performance Comparison — Current Prices + Test Results',
-        content: 'Benchmarks measured with Ollama 0.30.x, llama.cpp server, models from HuggingFace. Test system: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD. Speeds are unchanged from previous testing — the hardware did not move, the prices did. Excluded for exceeding $500: used RTX 3090 ($850–1,050), RTX 4070 12GB ($560–705), RX 7800 XT 16GB (~$832), and new RTX 3060 12GB ($474–599).',
+        content: 'Benchmarks measured with Ollama 0.30.x, llama.cpp server, models from HuggingFace. Test system: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD. Speeds are unchanged from previous testing — the hardware did not move, the prices did. Excluded for exceeding $500: used RTX 3090 (about $1,400–1,550 in sold listings, InsiderLLM, source updated 2026-10-15), RTX 4070 12GB ($560–705), RX 7800 XT 16GB (~$832), and new RTX 3060 12GB ($474–599).',
         columns: ['GPU', 'VRAM', 'Price', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Max Model (Q4)'],
         rows: [
           { GPU: 'Intel Arc B580 12GB ★', VRAM: '12 GB', 'Price': '$250–290', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM limited', 'Max Model (Q4)': '13B (Q4)' },
@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         title: 'How We Selected and Tested These GPUs',
-        content: 'Selection criteria: available to purchase new or used under $500; supported by at least one major inference runtime (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (8 GB cards excluded — insufficient for meaningful local LLM use). Several cards have been removed from this list on price: used RTX 3090 (24 GB) now trades at $850–1,050; RTX 4070 12GB lists at $560–705; RX 7800 XT 16GB at ~$832; and the new RTX 3060 12GB, which relaunched at $339, has risen about 45% to $474–599. The RTX 4060 Ti 16GB is retained but flagged — its $399 MSRP listings are out of stock and in-stock cards sit near $562. The cause is common to all of them: a worldwide DRAM and GDDR7 shortage driven by AI datacenter demand has pushed graphics-card street prices well above list across the market, with NVIDIA RTX 50-series cards trading roughly 36–39% over MSRP and AMD raising Radeon prices about 10%. All benchmarks are tok/s (tokens per second) generation speed, averaged over 10 runs at batch size 1, measured with Ollama 0.30.x on Ubuntu 22.04 LTS. GPU prices verified against retailer listings and eBay sold listings.',
+        content: 'Selection criteria: available to purchase new or used under $500; supported by at least one major inference runtime (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (8 GB cards excluded — insufficient for meaningful local LLM use). Several cards have been removed from this list on price: used RTX 3090 (24 GB) sold listings run about $1,400–1,550 ([InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source updated 2026-10-15); RTX 4070 12GB lists at $560–705; RX 7800 XT 16GB at ~$832; and the new RTX 3060 12GB, which relaunched at $339, has risen about 45% to $474–599. The RTX 4060 Ti 16GB is retained but flagged — its $399 MSRP listings are out of stock and in-stock cards sit near $562. The cause is common to all of them: a worldwide DRAM and GDDR7 shortage driven by AI datacenter demand has pushed graphics-card street prices well above list across the market, with the RTX 5090 at around $4,500–4,700 new against a $1,999 MSRP and the RTX 5080 at $1,200–1,600 against $999 (InsiderLLM tracker, source updated 2026-10-15). All benchmarks are tok/s (tokens per second) generation speed, averaged over 10 runs at batch size 1, measured with Ollama 0.30.x on Ubuntu 22.04 LTS. GPU prices verified against retailer listings and eBay sold listings.',
       },
       vramGuide: {
         title: 'VRAM Requirements by Model Size',
@@ -137,12 +137,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Best all-around under $500** → Intel Arc B580 12GB ($250–290). The only new 12 GB card still dependably in stock below $500. 7B–13B models at Q4, ~31 tok/s on Llama 3.1 8B Q4, Ollama via SYCL on Windows and Linux.',
           '**Cheapest CUDA card that works** → RTX 3060 12GB used ($270–300). The full CUDA toolchain — Ollama, LM Studio, vLLM, LoRA fine-tuning — for roughly the same money as the Arc. Buy used: the new card is now $474–599.',
           '**Best hardware, if you can find it at list** → RTX 4060 Ti 16GB. At its $399 MSRP it beats everything else here, running 14B at Q8 in-GPU. But MSRP listings are out of stock and in-stock cards run ~$562, which is outside this page\'s budget.',
-          '**Need 30B model capability?** → The sub-$500 window closed in mid-2026 and has not reopened. Used RTX 3090 (24 GB) now trades at $850–1,050. Budget $850+ for a used RTX 3090 or a used RTX 4080 SUPER (16 GB) — new RTX 4080 SUPER units now run ~$1,600.',
+          '**Need 30B model capability?** → The sub-$500 window closed in mid-2026 and has not reopened. A used RTX 3090 (24 GB) is the route: sold listings run about $1,400–1,550 (InsiderLLM, source updated 2026-10-15).',
           '**Windows user, no fuss** → RTX 3060 12GB used. NVIDIA CUDA has the broadest Windows toolchain support for LLMs, fine-tuning, and multimodal runtimes, and the used 3060 is the cheapest way into it.',
           '**Need more than 12 GB for a test?** Instead of stretching the budget, [rent a 24 GB card for a few dollars](/power-local-llm/best-cloud-gpu-providers) and see whether the larger models are worth it.',
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-en.svg',
-        imageCaption: 'Decision tree for choosing a budget GPU under $500 for local LLM inference: routes to Intel Arc B580 12GB ($250–290) as the default pick, used RTX 3060 12GB ($270–300) if you need CUDA, and a $850+ used RTX 3090 (24 GB) for 30B models.',
+        imageCaption: 'Decision tree for choosing a budget GPU under $500 for local LLM inference: routes to Intel Arc B580 12GB ($250–290) as the default pick, used RTX 3060 12GB ($270–300) if you need CUDA, and a used RTX 3090 (24 GB, about $1,400–1,550 in sold listings per InsiderLLM, 2026-10-15) for 30B models.',
       },
       softwareCompat: {
         title: 'Software Compatibility by GPU',
@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I still buy a used RTX 3090 for under $500 in 2026?',
-            a: 'No. Used RTX 3090 cards trade at $850–1,050 on eBay. The price rose first as LLM enthusiasts recognised the 24 GB VRAM value, then again during the 2026 memory shortage. It is no longer a sub-$500 option and has not been for some time. If you need 30B model capability (which requires 24 GB VRAM), budget $850+ for a used RTX 3090 or consider a used RTX 4080 SUPER (16 GB, ~$850–900 used — new units now run ~$1,600 after the shortage) for faster 14B Q8 performance.',
+            a: 'No. The [InsiderLLM tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source updated 2026-10-15) lists used RTX 3090 sold listings at about $1,400–1,550, so the card is no longer a sub-$500 option. These are listing data, not a price quote. The 24 GB of VRAM is what keeps it attractive: it is the budget route to 30B-class models, which need roughly 18–20 GB at Q4.',
           },
           {
             q: 'Does AMD work for running LLMs locally?',
@@ -184,11 +184,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I run a 70B model on a single GPU under $500?',
-            a: 'Not at full speed. Even the RTX 3090 (24 GB) cannot hold 70B Q4 (~40 GB) entirely in VRAM. You can use CPU offloading with llama.cpp to split the model between GPU VRAM and system RAM, but speed drops to 2–5 tok/s — too slow for interactive use. To run 70B models at usable speeds, you need two GPUs (2× RTX 3090 totaling 48 GB) or cloud inference.',
+            a: 'Not at full speed. Even the RTX 3090 (24 GB) cannot hold 70B Q4 (~40 GB) entirely in VRAM. You can use CPU offloading with llama.cpp to split the model between GPU VRAM and system RAM, but generation then runs far below the speed of a model that fits in VRAM, which makes interactive use impractical. To run 70B models on GPUs, you need two 24 GB cards (2× RTX 3090 totaling 48 GB) or cloud inference.',
           },
           {
             q: 'Will newer GPUs (RTX 5060 Ti) make these obsolete?',
-            a: 'The RTX 5060 Ti 16GB has shipped, and it did not undercut the RTX 4060 Ti — it went the other way. It launched at a $429 MSRP and now sells around $800 (recent median $805), roughly 88% over list, because the same memory shortage that repriced this whole list hit it hardest as a current-generation card. It is a genuinely better GPU than anything here, with 16 GB of VRAM and faster inference, but it is not a sub-$500 card and waiting for it to become one is not a plan worth making. Buy on what is available now: the Intel Arc B580 12GB at $250–290, or a used RTX 3060 12GB at $270–300 if you need CUDA.',
+            a: 'The RTX 5060 Ti 16GB has shipped, and it did not undercut the RTX 4060 Ti — it went the other way. It launched at a $429 MSRP, and retail listings from $679 were reported on Amazon US ([Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/), 2026-01-27), well above list — the same direction as the memory-shortage repricing of this whole list. It is a genuinely better GPU than anything here, with 16 GB of VRAM and faster inference, but it is not a sub-$500 card and waiting for it to become one is not a plan worth making. Buy on what is available now: the Intel Arc B580 12GB at $250–290, or a used RTX 3060 12GB at $270–300 if you need CUDA.',
           },
           {
             q: 'How much does a used RTX 4060 Ti 16GB cost?',
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Can I still buy a used RTX 3090 for under $500 in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No — used RTX 3090 cards now trade at $850–1,050 on eBay, up from ~$440 in early 2025. For 30B model capability you need a $850+ budget for a used RTX 3090 or ~$850 for a used RTX 4080 SUPER (16 GB); new RTX 4080 SUPER units now run ~$1,600.',
+            text: 'No — the InsiderLLM tracker (source updated 2026-10-15) lists used RTX 3090 sold listings at about $1,400–1,550. For 30B model capability, a used RTX 3090 (24 GB) is the budget route.',
           },
         },
         {
@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Can I run a 70B model on a single GPU under $500?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Not at full speed. Even the RTX 3090 (24 GB) cannot hold 70B Q4 entirely in VRAM. CPU offloading drops speed to 2–5 tok/s. Two GPUs or cloud inference is required for usable 70B performance.',
+            text: 'Not at full speed. Even the RTX 3090 (24 GB) cannot hold 70B Q4 entirely in VRAM. CPU offloading runs far below the speed of a model that fits in VRAM. Two 24 GB GPUs or cloud inference are the practical routes for 70B models.',
           },
         },
         {
@@ -273,8 +273,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
-    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2027-05-22',
+    last_full_refresh: '2026-11-22',
     designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Mejor GPU para inferencia LLM por menos de 500 € (2026)',
@@ -289,19 +289,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'gpu', priceRange: '~560 € con stock', label: 'Ver precio de la RTX 4060 Ti 16GB →' },
     ],
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**La mejor GPU por menos de 500 € para inferencia LLM local es ahora la Intel Arc B580 12GB (250–290 €): 12 GB de VRAM para modelos 7B–13B en Q4, ~31 tok/s en Llama 3.1 8B Q4, y la única tarjeta nueva de 12 GB que sigue disponible de forma fiable por debajo de 500 €. Para la cadena de herramientas CUDA, una RTX 3060 12GB de segunda mano (270–300 €) es la segunda opción. La ganadora anterior, la RTX 4060 Ti 16GB, ha salido de la ventana: sus anuncios al PVP de 399 € están sin stock y las unidades disponibles rondan los 560 €. La RTX 3060 12GB ha subido un 45 % desde su relanzamiento y cuesta 470–600 € nueva. La escasez mundial de DRAM y GDDR7 de 2026, impulsada por la demanda de los centros de datos de IA, es lo que ha movido a todas ellas. Para capacidad de modelos 30B, presupuesta 900 €+. Precios de referencia para España (PVP con IVA); en Latinoamérica los precios varían por impuestos de importación y tipo de cambio.**',
+    leadAnswerBlock: '**La mejor GPU por menos de 500 € para inferencia LLM local es ahora la Intel Arc B580 12GB (250–290 €): 12 GB de VRAM para modelos 7B–13B en Q4, ~31 tok/s en Llama 3.1 8B Q4, y la única tarjeta nueva de 12 GB que sigue disponible de forma fiable por debajo de 500 €. Para la cadena de herramientas CUDA, una RTX 3060 12GB de segunda mano (270–300 €) es la segunda opción. La ganadora anterior, la RTX 4060 Ti 16GB, ha salido de la ventana: sus anuncios al PVP de 399 € están sin stock y las unidades disponibles rondan los 560 €. La RTX 3060 12GB ha subido un 45 % desde su relanzamiento y cuesta 470–600 € nueva. La escasez mundial de DRAM y GDDR7 de 2026, impulsada por la demanda de los centros de datos de IA, es lo que ha movido a todas ellas. Para capacidad de modelos 30B, la vía es una RTX 3090 usada (24 GB), con unos $1,400–1,550 USD en anuncios vendidos ([tracker de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15; en dólares, sin convertir). Precios de referencia para España (PVP con IVA); en Latinoamérica los precios varían por impuestos de importación y tipo de cambio.**',
     quickAnswerTop: {
       question: '¿Cuál es la mejor GPU para ejecutar LLMs localmente por menos de 500 €?',
-      answer: '**La Intel Arc B580 12GB (250–290 €) es la mejor GPU por menos de 500 € para inferencia LLM local.** Sus 12 GB de VRAM ejecutan modelos 7B–13B en Q4, funciona con Ollama mediante el backend SYCL/oneAPI en Windows y Linux, y es la única tarjeta nueva de 12 GB que sigue estando disponible de forma fiable por debajo de 500 €. Una RTX 3060 12GB de segunda mano (270–300 €) es la segunda opción si necesitas la cadena de herramientas CUDA. La escasez de memoria de 2026 ha sacado al resto de esta lista de la ventana: la RTX 4060 Ti 16GB ronda los 560 € cuando hay stock, la RTX 3060 12GB nueva está a 470–600 €, la RTX 3090 usada a 850–1.050 €, la RTX 4070 12GB a 560–705 € y la RX 7800 XT 16GB a ~682 €.',
+      answer: '**La Intel Arc B580 12GB (250–290 €) es la mejor GPU por menos de 500 € para inferencia LLM local.** Sus 12 GB de VRAM ejecutan modelos 7B–13B en Q4, funciona con Ollama mediante el backend SYCL/oneAPI en Windows y Linux, y es la única tarjeta nueva de 12 GB que sigue estando disponible de forma fiable por debajo de 500 €. Una RTX 3060 12GB de segunda mano (270–300 €) es la segunda opción si necesitas la cadena de herramientas CUDA. La escasez de memoria de 2026 ha sacado al resto de esta lista de la ventana: la RTX 4060 Ti 16GB ronda los 560 € cuando hay stock, la RTX 3060 12GB nueva está a 470–600 €, la RTX 3090 usada a unos $1,400–1,550 USD en anuncios vendidos ([InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15), la RTX 4070 12GB a 560–705 € y la RX 7800 XT 16GB a ~682 €.',
       bullets: [
         '**Ganadora:** Intel Arc B580 12GB (250–290 €) — 12 GB VRAM, ~31 tok/s en Llama 3.1 8B Q4, la única tarjeta nueva de 12 GB fiablemente por debajo de 500 €',
         '**Segunda opción:** RTX 3060 12GB de segunda mano (270–300 €) — la vía más barata a la cadena de herramientas CUDA completa',
         '⚠️ RTX 4060 Ti 16GB: sin stock a su PVP de 399 €, ~560 € cuando aparece — ya no es fiablemente sub-500 €',
         '⚠️ RTX 3060 12GB nueva: 470–600 €, un 45 % más desde su relanzamiento — cómprala de segunda mano',
-        '⚠️ RTX 3090 de segunda mano: ahora 850–1.050 € — ya no es sub-500 €',
+        '⚠️ RTX 3090 de segunda mano: unos $1,400–1,550 USD en anuncios vendidos (InsiderLLM, fuente actualizada el 2026-10-15) — ya no es sub-500 €',
         '⚠️ RTX 4070 12GB: ahora 560–705 € — ya no es sub-500 €. RX 7800 XT 16GB: ~682 € — tampoco.',
       ],
-      updatedDate: '2026-09-01',
+      updatedDate: '2026-11-22',
     },
     sections: {
       tldr: {
@@ -311,9 +311,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La RTX 3060 12GB de segunda mano (270–300 €) es la segunda opción — la vía más barata a la cadena de herramientas CUDA completa',
           '⚠️ Alerta de precio: la RTX 4060 Ti 16GB, la ganadora anterior, está sin stock a su PVP de 399 € y ronda los 560 € cuando aparece — eliminada de la lista sub-500 €',
           '⚠️ Alerta de precio: la RTX 3060 12GB nueva está a 470–600 €, un 45 % más desde su relanzamiento — el mercado de segunda mano es la vía sensata para esta tarjeta',
-          '⚠️ Alerta de precio: la RTX 3090 de segunda mano ahora vale 850–1.050 €; la RTX 4070 12GB, 560–705 € — ambas eliminadas de la lista sub-500 €',
+          '⚠️ Alerta de precio: la RTX 3090 de segunda mano ronda los $1,400–1,550 USD en anuncios vendidos (InsiderLLM, fuente actualizada el 2026-10-15); la RTX 4070 12GB, 560–705 € — ambas eliminadas de la lista sub-500 €',
           'Por qué se movió todo: una escasez mundial de DRAM y GDDR7, impulsada por la demanda de los centros de datos de IA, ha empujado los precios de calle muy por encima del precio de lista en todo el mercado. El hardware no ha cambiado; solo lo que cuesta.',
-          '¿Necesitas capacidad para modelos 30B? Presupuesta al menos 850 € para una RTX 3090 usada (24 GB) o una RTX 4080 SUPER de segunda mano (16 GB, ~850 € de segunda mano; nueva ronda ahora los 1.600 € tras la escasez)',
+          '¿Necesitas capacidad para modelos 30B? La vía es una RTX 3090 usada (24 GB), con unos $1,400–1,550 USD en anuncios vendidos (InsiderLLM, fuente actualizada el 2026-10-15)',
           'Las tres GPU de esta lista funcionan con Ollama, LM Studio y llama.cpp de fábrica',
         ],
       },
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'Comparación de rendimiento — Precios actuales + Resultados de pruebas',
-        content: 'Benchmarks medidos con Ollama 0.30.x, servidor llama.cpp, modelos de HuggingFace. Sistema de prueba: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD. Las velocidades no han cambiado respecto a pruebas anteriores: el hardware no se ha movido, los precios sí. Excluidas por superar los 500 €: RTX 3090 usada (850–1.050 €), RTX 4070 12GB (560–705 €), RX 7800 XT 16GB (~682 €) y RTX 3060 12GB nueva (470–600 €).',
+        content: 'Benchmarks medidos con Ollama 0.30.x, servidor llama.cpp, modelos de HuggingFace. Sistema de prueba: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD. Las velocidades no han cambiado respecto a pruebas anteriores: el hardware no se ha movido, los precios sí. Excluidas por superar los 500 €: RTX 3090 usada (unos $1,400–1,550 USD en anuncios vendidos, InsiderLLM, fuente actualizada el 2026-10-15), RTX 4070 12GB (560–705 €), RX 7800 XT 16GB (~682 €) y RTX 3060 12GB nueva (470–600 €).',
         columns: ['GPU', 'VRAM', 'Precio', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modelo máximo (Q4)'],
         rows: [
           { GPU: 'Intel Arc B580 12GB ★', VRAM: '12 GB', 'Precio': '250–290 €', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado por VRAM', 'Modelo máximo (Q4)': '13B (Q4)' },
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         title: 'Cómo seleccionamos y probamos estas GPU',
-        content: 'Criterios de selección: disponibles para compra nueva o usada por menos de 500 €; compatibles con al menos un runtime de inferencia principal (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (tarjetas de 8 GB excluidas). Varias tarjetas han salido de la lista por precio: la RTX 3090 usada (24 GB) cotiza ahora a 850–1.050 €; la RTX 4070 12GB a 560–705 €; la RX 7800 XT 16GB a ~682 €; y la RTX 3060 12GB nueva, que se relanzó a 334 €, ha subido en torno a un 45 % hasta 470–600 €. La RTX 4060 Ti 16GB se mantiene, pero con advertencia: sus anuncios al PVP de 399 € están sin stock y las unidades disponibles rondan los 560 €. La causa es común a todas: una escasez mundial de DRAM y GDDR7 impulsada por la demanda de los centros de datos de IA ha empujado los precios de calle muy por encima del precio de lista en todo el mercado, con las RTX 50 de NVIDIA en torno a un 36–39 % por encima del PVP y AMD subiendo Radeon alrededor de un 10 %. Todos los benchmarks son tok/s, promediados sobre 10 ejecuciones con batch size 1, medidos con Ollama 0.30.x en Ubuntu 22.04 LTS.',
+        content: 'Criterios de selección: disponibles para compra nueva o usada por menos de 500 €; compatibles con al menos un runtime de inferencia principal (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (tarjetas de 8 GB excluidas). Varias tarjetas han salido de la lista por precio: la RTX 3090 usada (24 GB) ronda los $1,400–1,550 USD en anuncios vendidos ([tracker de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fuente actualizada el 2026-10-15); la RTX 4070 12GB a 560–705 €; la RX 7800 XT 16GB a ~682 €; y la RTX 3060 12GB nueva, que se relanzó a 334 €, ha subido en torno a un 45 % hasta 470–600 €. La RTX 4060 Ti 16GB se mantiene, pero con advertencia: sus anuncios al PVP de 399 € están sin stock y las unidades disponibles rondan los 560 €. La causa es común a todas: una escasez mundial de DRAM y GDDR7 impulsada por la demanda de los centros de datos de IA ha empujado los precios de calle muy por encima del precio de lista en todo el mercado, con la RTX 5090 en torno a $4,500–4,700 nueva frente a un PVP de $1,999 y la RTX 5080 a $1,200–1,600 frente a $999 (tracker de InsiderLLM, fuente actualizada el 2026-10-15). Todos los benchmarks son tok/s, promediados sobre 10 ejecuciones con batch size 1, medidos con Ollama 0.30.x en Ubuntu 22.04 LTS.',
       },
       vramGuide: {
         title: 'Requisitos de VRAM por tamaño de modelo',
@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Modelo 7B en Q8: ~7.5 GB VRAM — cabe en todas las GPU aquí',
           'Modelo 13B en Q4: ~8.5 GB VRAM — cabe en todas las GPU de esta lista',
           'Modelo 14B en Q8: ~14 GB VRAM — solo RTX 4060 Ti 16GB y RTX 3090 (usada)',
-          'Modelo 30B en Q4: ~18 GB VRAM — requiere 24 GB (RTX 3090 usada, ahora 850 €+)',
+          'Modelo 30B en Q4: ~18 GB VRAM — requiere 24 GB (RTX 3090 usada)',
           'Modelo 70B en Q4: ~40 GB — requiere dos GPU o descarga a CPU',
         ],
       },
@@ -403,12 +403,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mejor opción general por menos de 500 €** → Intel Arc B580 12GB (250–290 €). La única tarjeta nueva de 12 GB fiablemente disponible por debajo de 500 €. Modelos 7B–13B en Q4, ~31 tok/s en Llama 3.1 8B Q4, Ollama vía SYCL en Windows y Linux.',
           '**Tarjeta CUDA más barata que funciona** → RTX 3060 12GB de segunda mano (270–300 €). La cadena CUDA completa — Ollama, LM Studio, vLLM, ajuste fino LoRA — por aproximadamente el mismo dinero que la Arc. Cómprala usada: la nueva está a 470–600 €.',
           '**El mejor hardware, si lo encuentras a PVP** → RTX 4060 Ti 16GB. A su PVP de 399 € supera a todo lo demás aquí, ejecutando 14B en Q8 en GPU. Pero los anuncios a PVP están sin stock y las unidades disponibles rondan los 560 €, fuera del presupuesto de esta página.',
-          '**¿Necesitas capacidad para modelos 30B?** → La ventana sub-500 € se cerró a mediados de 2026 y no se ha reabierto. La RTX 3090 usada (24 GB) ahora cotiza a 850–1.050 €. Presupuesta 850 €+ para una RTX 3090 usada o para una RTX 4080 SUPER (16 GB) de segunda mano — nueva ronda ahora los 1.600 €.',
+          '**¿Necesitas capacidad para modelos 30B?** → La ventana sub-500 € se cerró a mediados de 2026 y no se ha reabierto. La vía es una RTX 3090 usada (24 GB): los anuncios vendidos rondan los $1,400–1,550 USD (InsiderLLM, fuente actualizada el 2026-10-15).',
           '**Usuario de Windows, sin complicaciones** → RTX 4060 Ti 16GB. NVIDIA CUDA tiene el soporte más amplio en Windows para LLMs, fine-tuning y runtimes multimodales.',
           '**¿Necesitas más de 12 GB para una prueba?** En lugar de estirar el presupuesto, puedes [alquilar una tarjeta de 24 GB por unos pocos dólares](/es/power-local-llm/best-cloud-gpu-providers) y comprobar si los modelos más grandes valen la pena.',
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-es.svg',
-        imageCaption: 'Árbol de decisión para elegir una GPU económica por menos de 500 € para inferencia LLM local: dirige a la Intel Arc B580 12GB (250–290 €) como opción principal, a la RTX 3060 12GB usada (270–300 €) si necesitas CUDA, y a una RTX 3090 usada (24 GB) desde 900 €+ para modelos de 30B o más.',
+        imageCaption: 'Árbol de decisión para elegir una GPU económica por menos de 500 € para inferencia LLM local: dirige a la Intel Arc B580 12GB (250–290 €) como opción principal, a la RTX 3060 12GB usada (270–300 €) si necesitas CUDA, y a una RTX 3090 usada (24 GB, unos $1,400–1,550 USD en anuncios vendidos según InsiderLLM, 2026-10-15) para modelos de 30B o más.',
       },
       softwareCompat: {
         title: 'Compatibilidad de software por GPU',
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo comprar una RTX 3090 de segunda mano por menos de 500 € en 2026?',
-            a: 'No. Las RTX 3090 de segunda mano cotizan a 850–1.050 € en eBay. El precio subió primero cuando los entusiastas de los LLMs reconocieron el valor de sus 24 GB de VRAM, y otra vez durante la escasez de memoria de 2026. Ya no es una opción por debajo de 500 €, y hace tiempo que no lo es. Si necesitas capacidad para modelos 30B (que requiere 24 GB de VRAM), presupuesta 900 €+ para una RTX 3090 usada o considera una RTX 4080 SUPER de segunda mano (16 GB, ~850 €; nueva ronda ahora los 1.600 € tras la escasez) para un 14B Q8 más rápido.',
+            a: 'No. El [tracker de InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fuente actualizada el 2026-10-15) recoge anuncios vendidos de la RTX 3090 usada a unos $1,400–1,550 USD (en dólares, sin convertir; los precios en tu país pueden variar según impuestos locales), así que ya no es una opción por debajo de 500 €. Son datos de anuncios, no una cotización. Sus 24 GB de VRAM la mantienen atractiva: es la vía económica hacia modelos de clase 30B, que necesitan unos 18–20 GB en Q4.',
           },
           {
             q: '¿Funciona AMD para ejecutar LLMs localmente?',
@@ -450,11 +450,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo ejecutar un modelo de 70B en una sola GPU por menos de 500 €?',
-            a: 'No a plena velocidad. Incluso la RTX 3090 (24 GB) no puede almacenar 70B Q4 (~40 GB) completamente en VRAM. Puedes usar descarga a CPU con llama.cpp para dividir el modelo entre VRAM y RAM del sistema, pero la velocidad cae a 2–5 tok/s — demasiado lento para uso interactivo. Para ejecutar modelos 70B a velocidades utilizables, necesitas dos GPU (2× RTX 3090 con 48 GB en total) o inferencia en la nube.',
+            a: 'No a plena velocidad. Incluso la RTX 3090 (24 GB) no puede almacenar 70B Q4 (~40 GB) completamente en VRAM. Puedes usar descarga a CPU con llama.cpp para dividir el modelo entre VRAM y RAM del sistema, pero entonces la generación va muy por debajo de la velocidad de un modelo que cabe en la VRAM, lo que hace poco práctico el uso interactivo. Para ejecutar modelos 70B en GPU, necesitas dos tarjetas de 24 GB (2× RTX 3090 con 48 GB en total) o inferencia en la nube.',
           },
           {
             q: '¿Los nuevos modelos (RTX 5060 Ti) harán obsoletas estas GPU?',
-            a: 'La RTX 5060 Ti 16GB ya se ha lanzado, y no quedó por debajo de la RTX 4060 Ti: ocurrió lo contrario. Salió con un PVP de 429 $ y ahora se vende en torno a 800 € (mediana reciente de 805 $), alrededor de un 88 % por encima del precio de lista, porque la misma escasez de memoria que reajustó toda esta lista la golpeó con más fuerza al ser una tarjeta de generación actual. Es una GPU genuinamente mejor que cualquiera de las de aquí, con 16 GB de VRAM e inferencia más rápida, pero no es una tarjeta por debajo de 500 € y esperar a que lo sea no es un plan razonable. Compra según lo que hay disponible ahora: la Intel Arc B580 12GB a 250–290 €, o una RTX 3060 12GB de segunda mano a 270–300 € si necesitas CUDA.',
+            a: 'La RTX 5060 Ti 16GB ya se ha lanzado, y no quedó por debajo de la RTX 4060 Ti: ocurrió lo contrario. Salió con un PVP de $429, y se reportaron listados minoristas desde $679 en Amazon EE. UU. ([Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/), 2026-01-27), muy por encima del precio de lista: en la misma dirección que el reajuste de precios por la escasez de memoria de toda esta lista. Es una GPU genuinamente mejor que cualquiera de las de aquí, con 16 GB de VRAM e inferencia más rápida, pero no es una tarjeta por debajo de 500 € y esperar a que lo sea no es un plan razonable. Compra según lo que hay disponible ahora: la Intel Arc B580 12GB a 250–290 €, o una RTX 3060 12GB de segunda mano a 270–300 € si necesitas CUDA.',
           },
           {
             q: '¿Cuánto cuesta una RTX 4060 Ti 16GB de segunda mano?',
@@ -492,7 +492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Puedo comprar una RTX 3090 de segunda mano por menos de 500 € en 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No. Las RTX 3090 de segunda mano cotizan a 850–1.050 € en eBay, muy por encima del límite de 500 €. Para capacidad 30B necesitas un presupuesto de 900 €+ o considera una RTX 4080 SUPER de segunda mano (~850 €).',
+            text: 'No. El tracker de InsiderLLM (fuente actualizada el 2026-10-15) recoge anuncios vendidos de la RTX 3090 usada a unos $1,400–1,550 USD. Para capacidad 30B, una RTX 3090 usada (24 GB) es la vía económica.',
           },
         },
         {
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Puedo ejecutar un modelo de 70B en una sola GPU por menos de 500 €?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No a plena velocidad. Incluso la RTX 3090 (24 GB) no puede alojar 70B Q4 (~40 GB) completamente en VRAM. La descarga a CPU reduce la velocidad a 2–5 tok/s. Se necesitan dos GPU o inferencia en la nube.',
+            text: 'No a plena velocidad. Incluso la RTX 3090 (24 GB) no puede alojar 70B Q4 (~40 GB) completamente en VRAM. La descarga a CPU queda muy por debajo de la velocidad de un modelo que cabe en la VRAM. Para 70B, las vías prácticas son dos GPU de 24 GB o inferencia en la nube.',
           },
         },
         {
@@ -550,8 +550,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
-    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2027-05-22',
+    last_full_refresh: '2026-11-22',
     designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'أفضل ⁨GPU⁩ للاستدلال على نماذج ⁨LLM⁩ بأقل من $⁨500⁩ (⁨2026⁩)',
@@ -566,19 +566,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'gpu', priceRange: '~$562 عند التوفر', label: 'تحقق من سعر RTX 4060 Ti 16GB ←' },
     ],
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**أفضل GPU بأقل من $500 للاستدلال المحلي على نماذج LLM صارت Intel Arc B580 12GB ($250–290): 12 GB من VRAM لنماذج 7B–13B بتكميم Q4، بسرعة ~31 tok/s على Llama 3.1 8B Q4، وهي البطاقة الجديدة الوحيدة بسعة 12 GB التي ما زالت متوفرة بشكل موثوق تحت $500. ولمن يحتاج سلسلة أدوات CUDA، فإن RTX 3060 12GB مستعملة ($270–300) هي البديل. أما الفائزة السابقة، RTX 4060 Ti 16GB، فقد خرجت من النطاق: عروضها بسعرها المُعلن $399 نافدة من المخزون، والوحدات المتوفرة تقارب $562. وارتفعت RTX 3060 12GB نحو 45% منذ إعادة إطلاقها لتصل إلى $474–599 جديدة. والسبب في تحرك جميع هذه الأسعار واحد: نقص عالمي في ذاكرة DRAM وGDDR7 مدفوعاً بطلب مراكز بيانات الذكاء الاصطناعي. ولقدرة نماذج 30B، خصص $850+.**',
+    leadAnswerBlock: '**أفضل GPU بأقل من $500 للاستدلال المحلي على نماذج LLM صارت Intel Arc B580 12GB ($250–290): 12 GB من VRAM لنماذج 7B–13B بتكميم Q4، بسرعة ~31 tok/s على Llama 3.1 8B Q4، وهي البطاقة الجديدة الوحيدة بسعة 12 GB التي ما زالت متوفرة بشكل موثوق تحت $500. ولمن يحتاج سلسلة أدوات CUDA، فإن RTX 3060 12GB مستعملة ($270–300) هي البديل. أما الفائزة السابقة، RTX 4060 Ti 16GB، فقد خرجت من النطاق: عروضها بسعرها المُعلن $399 نافدة من المخزون، والوحدات المتوفرة تقارب $562. وارتفعت RTX 3060 12GB نحو 45% منذ إعادة إطلاقها لتصل إلى $474–599 جديدة. والسبب في تحرك جميع هذه الأسعار واحد: نقص عالمي في ذاكرة DRAM وGDDR7 مدفوعاً بطلب مراكز بيانات الذكاء الاصطناعي. ولقدرة نماذج 30B، الطريق هو RTX 3090 مستعملة (24 GB) بنحو $1,400–1,550 في الإعلانات المباعة ([متتبّع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15). الأسعار بالدولار الأمريكي وقد تختلف في بلدك بحسب الضرائب والرسوم الجمركية.**',
     quickAnswerTop: {
       question: 'ما أفضل GPU لتشغيل نماذج LLM محليًا بأقل من $500؟',
-      answer: 'بطاقة Intel Arc B580 12GB ($250–290) هي الأفضل بأقل من $500 للاستدلال المحلي على نماذج LLM. تشغّل 12 GB من VRAM نماذج 7B–13B بتكميم Q4، وتعمل مع Ollama عبر واجهة SYCL/oneAPI على ويندوز ولينكس، وهي البطاقة الجديدة الوحيدة بسعة 12 GB التي ما زالت متوفرة بشكل موثوق تحت $500. وRTX 3060 12GB مستعملة ($270–300) هي البديل لمن يحتاج سلسلة أدوات CUDA. أخرج نقص الذاكرة في 2026 بقية القائمة من النطاق: RTX 4060 Ti 16GB تقارب $562 عند توفرها، وRTX 3060 12GB الجديدة بـ $474–599، وRTX 3090 المستعملة بـ $850–1,050، وRTX 4070 12GB بـ $560–705، وRX 7800 XT 16GB بـ ~$832.',
+      answer: 'بطاقة Intel Arc B580 12GB ($250–290) هي الأفضل بأقل من $500 للاستدلال المحلي على نماذج LLM. تشغّل 12 GB من VRAM نماذج 7B–13B بتكميم Q4، وتعمل مع Ollama عبر واجهة SYCL/oneAPI على ويندوز ولينكس، وهي البطاقة الجديدة الوحيدة بسعة 12 GB التي ما زالت متوفرة بشكل موثوق تحت $500. وRTX 3060 12GB مستعملة ($270–300) هي البديل لمن يحتاج سلسلة أدوات CUDA. أخرج نقص الذاكرة في 2026 بقية القائمة من النطاق: RTX 4060 Ti 16GB تقارب $562 عند توفرها، وRTX 3060 12GB الجديدة بـ $474–599، وRTX 3090 المستعملة بنحو $1,400–1,550 في الإعلانات المباعة (InsiderLLM، المصدر محدّث في 2026-10-15)، وRTX 4070 12GB بـ $560–705، وRX 7800 XT 16GB بـ ~$832.',
       bullets: [
         '**الفائزة:** Intel Arc B580 12GB ($250–290) — 12 GB VRAM، ~31 tok/s على Llama 3.1 8B Q4، البطاقة الجديدة الوحيدة بسعة 12 GB تحت $500 بشكل موثوق',
         '**البديل:** RTX 3060 12GB مستعملة ($270–300) — أرخص طريق إلى سلسلة أدوات CUDA الكاملة',
         '⚠️ RTX 4060 Ti 16GB: نافدة بسعرها المُعلن $399، و~$562 عند توفرها — لم تعد خياراً موثوقاً تحت $500',
         '⚠️ RTX 3060 12GB جديدة: $474–599، بارتفاع 45% منذ إعادة الإطلاق — اشترِها مستعملة بدلاً من ذلك',
-        '⚠️ RTX 3090 مستعملة: الآن $850–1,050 — لم تعد خياراً بأقل من $500',
+        '⚠️ RTX 3090 مستعملة: نحو $1,400–1,550 في الإعلانات المباعة (InsiderLLM، المصدر محدّث في 2026-10-15) — لم تعد خياراً بأقل من $500',
         '⚠️ RTX 4070 12GB: الآن $560–705، وRX 7800 XT 16GB: ~$832 — كلتاهما فوق $500',
       ],
-      updatedDate: '2026-09-01',
+      updatedDate: '2026-11-22',
     },
     sections: {
       tldr: {
@@ -588,9 +588,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RTX 3060 12GB مستعملة ($270–300) هي البديل — أرخص طريق إلى سلسلة أدوات CUDA الكاملة',
           '⚠️ تنبيه سعر: RTX 4060 Ti 16GB، الفائزة السابقة، نافدة بسعرها المُعلن $399 وتقارب $562 عند توفرها — أُزيلت من قائمة ما دون $500',
           '⚠️ تنبيه سعر: RTX 3060 12GB الجديدة بـ $474–599، بارتفاع 45% منذ إعادة الإطلاق — السوق المستعملة هي الطريق المعقول لهذه البطاقة',
-          '⚠️ تنبيه سعر: RTX 3090 المستعملة أصبحت بـ $850–1,050، وRTX 4070 12GB بـ $560–705 — كلتاهما أُزيلت من قائمة ما دون $500',
+          '⚠️ تنبيه سعر: RTX 3090 المستعملة نحو $1,400–1,550 في الإعلانات المباعة (InsiderLLM، المصدر محدّث في 2026-10-15)، وRTX 4070 12GB بـ $560–705 — كلتاهما أُزيلت من قائمة ما دون $500',
           'لماذا تحرك كل شيء: نقص عالمي في ذاكرة DRAM وGDDR7، مدفوعاً بطلب مراكز بيانات الذكاء الاصطناعي، دفع أسعار بطاقات الرسوميات في السوق فوق أسعارها المُعلنة عبر السوق كلها. لم يتغير العتاد، بل ما تدفعه فقط.',
-          'تحتاج قدرة نماذج 30B؟ خصص ميزانية $850 على الأقل لـ RTX 3090 مستعملة (24 GB) أو RTX 4080 SUPER مستعملة (16 GB، ~$850؛ الجديدة الآن نحو $1,600 بعد النقص)',
+          'تحتاج قدرة نماذج 30B؟ الطريق هو RTX 3090 مستعملة (24 GB) بنحو $1,400–1,550 في الإعلانات المباعة (InsiderLLM، المصدر محدّث في 2026-10-15)',
           'كل بطاقات GPU الثلاث في هذه القائمة تعمل مع Ollama وLM Studio وllama.cpp من المصنع',
         ],
       },
@@ -638,7 +638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'مقارنة الأداء — الأسعار الحالية + نتائج الاختبارات',
-        content: 'قياسات أُجريت باستخدام Ollama 0.30.x، وخادم llama.cpp، ونماذج من HuggingFace. نظام الاختبار: Ryzen 9 7950X، و64 GB DDR5، وقرص NVMe SSD. لم تتغير السرعات عن الاختبارات السابقة: العتاد لم يتحرك، بل الأسعار. مستبعدة لتخطيها $500: RTX 3090 المستعملة ($850–1,050)، وRTX 4070 12GB ($560–705)، وRX 7800 XT 16GB (~$832)، وRTX 3060 12GB الجديدة ($474–599).',
+        content: 'قياسات أُجريت باستخدام Ollama 0.30.x، وخادم llama.cpp، ونماذج من HuggingFace. نظام الاختبار: Ryzen 9 7950X، و64 GB DDR5، وقرص NVMe SSD. لم تتغير السرعات عن الاختبارات السابقة: العتاد لم يتحرك، بل الأسعار. مستبعدة لتخطيها $500: RTX 3090 المستعملة (نحو $1,400–1,550 في الإعلانات المباعة، InsiderLLM، المصدر محدّث في 2026-10-15)، وRTX 4070 12GB ($560–705)، وRX 7800 XT 16GB (~$832)، وRTX 3060 12GB الجديدة ($474–599).',
         columns: ['GPU', 'VRAM', 'السعر', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'أقصى نموذج (Q4)'],
         rows: [
           { GPU: 'Intel Arc B580 12GB ★', VRAM: '12 GB', 'السعر': '$250–290', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'محدود بـ VRAM', 'أقصى نموذج (Q4)': '13B (Q4)' },
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         title: 'كيف اخترنا واختبرنا هذه البطاقات',
-        content: 'معايير الاختيار: متاحة للشراء جديدة أو مستعملة بأقل من $500؛ متوافقة مع واحد على الأقل من أنظمة تشغيل الاستدلال الرئيسية (Ollama، LM Studio، llama.cpp)؛ VRAM ≥ 12 GB (بطاقات 8 GB مستبعدة). استُبعدت عدة بطاقات على أساس السعر: RTX 3090 المستعملة (24 GB) تُتداول الآن بـ $850–1,050؛ وRTX 4070 12GB بـ $560–705؛ وRX 7800 XT 16GB بـ ~$832؛ وRTX 3060 12GB الجديدة، التي أُعيد إطلاقها بـ $339، ارتفعت نحو 45% لتصل إلى $474–599. أُبقيت RTX 4060 Ti 16GB في القائمة مع تنبيه — فعروضها بسعرها المُعلن $399 نافدة والوحدات المتوفرة تقارب $562. والسبب مشترك بينها جميعاً: نقص عالمي في ذاكرة DRAM وGDDR7 مدفوعاً بطلب مراكز بيانات الذكاء الاصطناعي دفع أسعار بطاقات الرسوميات فوق أسعارها المُعلنة عبر السوق كلها، إذ تُتداول بطاقات NVIDIA من سلسلة RTX 50 بنحو 36–39% فوق السعر الرسمي ورفعت AMD أسعار Radeon نحو 10%. جميع القياسات هي tok/s بمتوسط 10 عمليات بحجم دفعة 1، مقيسة باستخدام Ollama 0.30.x على Ubuntu 22.04 LTS.',
+        content: 'معايير الاختيار: متاحة للشراء جديدة أو مستعملة بأقل من $500؛ متوافقة مع واحد على الأقل من أنظمة تشغيل الاستدلال الرئيسية (Ollama، LM Studio، llama.cpp)؛ VRAM ≥ 12 GB (بطاقات 8 GB مستبعدة). استُبعدت عدة بطاقات على أساس السعر: RTX 3090 المستعملة (24 GB) تبلغ إعلاناتها المباعة نحو $1,400–1,550 ([متتبّع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)، المصدر محدّث في 2026-10-15)؛ وRTX 4070 12GB بـ $560–705؛ وRX 7800 XT 16GB بـ ~$832؛ وRTX 3060 12GB الجديدة، التي أُعيد إطلاقها بـ $339، ارتفعت نحو 45% لتصل إلى $474–599. أُبقيت RTX 4060 Ti 16GB في القائمة مع تنبيه — فعروضها بسعرها المُعلن $399 نافدة والوحدات المتوفرة تقارب $562. والسبب مشترك بينها جميعاً: نقص عالمي في ذاكرة DRAM وGDDR7 مدفوعاً بطلب مراكز بيانات الذكاء الاصطناعي دفع أسعار بطاقات الرسوميات فوق أسعارها المُعلنة عبر السوق كلها، إذ تبلغ RTX 5090 الجديدة نحو $4,500–4,700 مقابل سعر رسمي $1,999، وRTX 5080 نحو $1,200–1,600 مقابل $999 (متتبّع InsiderLLM، المصدر محدّث في 2026-10-15). جميع القياسات هي tok/s بمتوسط 10 عمليات بحجم دفعة 1، مقيسة باستخدام Ollama 0.30.x على Ubuntu 22.04 LTS.',
       },
       vramGuide: {
         title: 'متطلبات VRAM حسب حجم النموذج',
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'نموذج 7B بتكميم Q8: ~7.5 GB VRAM — يناسب كل بطاقات GPU هنا',
           'نموذج 13B بتكميم Q4: ~8.5 GB VRAM — يناسب كل بطاقات GPU في هذه القائمة',
           'نموذج 14B بتكميم Q8: ~14 GB VRAM — فقط RTX 4060 Ti 16GB وRTX 3090 (مستعملة)',
-          'نموذج 30B بتكميم Q4: ~18 GB VRAM — يتطلب 24 GB (RTX 3090 مستعملة، الآن بـ $850+)',
+          'نموذج 30B بتكميم Q4: ~18 GB VRAM — يتطلب 24 GB (RTX 3090 مستعملة)',
           'نموذج 70B بتكميم Q4: ~40 GB — يتطلب بطاقتي GPU أو تفريغاً إلى CPU',
         ],
       },
@@ -680,12 +680,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أفضل خيار شامل بأقل من $500** ← Intel Arc B580 12GB ($250–290). البطاقة الجديدة الوحيدة بسعة 12 GB المتوفرة بشكل موثوق تحت $500. نماذج 7B–13B عند Q4، ~31 tok/s على Llama 3.1 8B Q4، وOllama عبر SYCL على Windows وLinux.',
           '**أرخص بطاقة CUDA تعمل** ← RTX 3060 12GB مستعملة ($270–300). سلسلة أدوات CUDA الكاملة — Ollama وLM Studio وvLLM والضبط الدقيق LoRA — بنحو نفس سعر Arc. اشترِها مستعملة: الجديدة الآن بـ $474–599.',
           '**أفضل عتاد، إن وجدته بسعره المُعلن** ← RTX 4060 Ti 16GB. عند سعرها المُعلن $399 تتفوق على كل ما عداها هنا، وتشغّل 14B عند Q8 على GPU. لكن عروض السعر المُعلن نافدة والوحدات المتوفرة تقارب $562، أي خارج ميزانية هذه الصفحة.',
-          '**تحتاج قدرة نماذج 30B؟** ← نافذة $500 أُغلقت في منتصف 2026 ولم تُفتح مجدداً. RTX 3090 المستعملة (24 GB) الآن بـ $850–1,050. خصص $850+ لـ RTX 3090 مستعملة أو لـ RTX 4080 SUPER مستعملة (16 GB) — الجديدة الآن نحو $1,600.',
+          '**تحتاج قدرة نماذج 30B؟** ← نافذة $500 أُغلقت في منتصف 2026 ولم تُفتح مجدداً. الطريق هو RTX 3090 مستعملة (24 GB)، وإعلاناتها المباعة نحو $1,400–1,550 (InsiderLLM، المصدر محدّث في 2026-10-15).',
           '**مستخدم Windows، دون تعقيدات** ← RTX 3060 12GB مستعملة. لدى NVIDIA CUDA أوسع دعم على Windows لنماذج LLM والضبط الدقيق وأنظمة التشغيل متعددة الوسائط، و3060 المستعملة هي أرخص طريق إليه.',
           '**هل تحتاج إلى أكثر من 12 GB لاختبار؟** بدلًا من توسيع الميزانية، يمكنك [استئجار بطاقة 24 GB مقابل بضعة دولارات](/ar/power-local-llm/best-cloud-gpu-providers) ومعرفة ما إذا كانت النماذج الأكبر تستحق ذلك.',
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ar.svg',
-        imageCaption: 'شجرة قرار لاختيار GPU اقتصادية بأقل من $500 للاستدلال المحلي على LLM: تقود إلى Intel Arc B580 12GB ($250–290) كخيار أساسي، وRTX 3060 12GB مستعملة ($270–300) لمن يحتاج CUDA، وRTX 3090 مستعملة (24 GB) من $850+ لنماذج 30B.',
+        imageCaption: 'شجرة قرار لاختيار GPU اقتصادية بأقل من $500 للاستدلال المحلي على LLM: تقود إلى Intel Arc B580 12GB ($250–290) كخيار أساسي، وRTX 3060 12GB مستعملة ($270–300) لمن يحتاج CUDA، وRTX 3090 مستعملة (24 GB، نحو $1,400–1,550 في الإعلانات المباعة وفق InsiderLLM، 2026-10-15) لنماذج 30B.',
       },
       softwareCompat: {
         title: 'توافق البرمجيات حسب GPU',
@@ -715,7 +715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل لا يزال بإمكاني شراء RTX 3090 مستعملة بأقل من $500 في 2026؟',
-            a: 'لا. تُتداول RTX 3090 المستعملة بـ $850–1,050 على eBay. ارتفع السعر أولاً مع تزايد إدراك المتحمسين لـ LLM لقيمة 24 GB VRAM، ثم مرة أخرى خلال نقص الذاكرة في 2026. لم تعد خياراً بأقل من $500، ولم تكن كذلك منذ فترة. إن كنت تحتاج قدرة نماذج 30B (التي تتطلب 24 GB VRAM)، خصص ميزانية $850+ لـ RTX 3090 مستعملة أو فكّر في RTX 4080 SUPER مستعملة (16 GB، ~$850؛ الجديدة الآن نحو $1,600 بعد النقص) لأداء أسرع على 14B Q8.',
+            a: 'لا. يسجّل [متتبّع InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (المصدر محدّث في 2026-10-15) إعلانات مباعة لـ RTX 3090 المستعملة بنحو $1,400–1,550، لذا لم تعد خياراً بأقل من $500. هذه بيانات إعلانات وليست عرض سعر، وهي بالدولار الأمريكي وقد تختلف في بلدك بحسب الضرائب والرسوم الجمركية. وتبقى سعة 24 GB VRAM هي ما يجعلها جذابة: فهي الطريق الاقتصادي إلى نماذج فئة 30B التي تحتاج نحو 18–20 GB بتكميم Q4.',
           },
           {
             q: 'هل تعمل AMD لتشغيل نماذج LLM محلياً؟',
@@ -727,11 +727,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني تشغيل نموذج 70B على بطاقة GPU واحدة بأقل من $500؟',
-            a: 'ليس بكامل السرعة. حتى RTX 3090 (24 GB) لا تستطيع تخزين 70B Q4 (~40 GB) بالكامل في VRAM. يمكنك استخدام التفريغ إلى CPU مع llama.cpp لتقسيم النموذج بين VRAM وRAM النظام، لكن السرعة تنخفض إلى 2–5 tok/s — بطيء جداً للاستخدام التفاعلي. لتشغيل نماذج 70B بسرعات قابلة للاستخدام، تحتاج إلى بطاقتي GPU (2× RTX 3090 بسعة 48 GB إجمالاً) أو استدلال سحابي.',
+            a: 'ليس بكامل السرعة. حتى RTX 3090 (24 GB) لا تستطيع تخزين 70B Q4 (~40 GB) بالكامل في VRAM. يمكنك استخدام التفريغ إلى CPU مع llama.cpp لتقسيم النموذج بين VRAM وRAM النظام، لكن التوليد حينها يجري بسرعة أقل بكثير من نموذج يتسع في VRAM، ما يجعل الاستخدام التفاعلي غير عملي. لتشغيل نماذج 70B على GPU، تحتاج إلى بطاقتين بسعة 24 GB (2× RTX 3090 بسعة 48 GB إجمالاً) أو استدلال سحابي.',
           },
           {
             q: 'هل ستجعل البطاقات الجديدة (RTX 5060 Ti) هذه البطاقات قديمة؟',
-            a: 'صدرت RTX 5060 Ti 16GB بالفعل، ولم تنزل تحت سعر RTX 4060 Ti — بل حدث العكس. أُطلقت بسعر مُعلن $429 وتُباع الآن بنحو $800 (الوسيط الأخير $805)، أي نحو 88% فوق السعر المُعلن، لأن نفس نقص الذاكرة الذي أعاد تسعير هذه القائمة كلها ضربها بأشد صورة بوصفها بطاقة من الجيل الحالي. هي بطاقة أفضل فعلاً من أي شيء هنا، بسعة 16 GB من VRAM واستدلال أسرع، لكنها ليست بطاقة تحت $500، وانتظار أن تصبح كذلك ليس خطة تستحق البناء عليها. اشترِ بناءً على المتوفر الآن: Intel Arc B580 12GB بـ $250–290، أو RTX 3060 12GB مستعملة بـ $270–300 إن كنت تحتاج CUDA.',
+            a: 'صدرت RTX 5060 Ti 16GB بالفعل، ولم تنزل تحت سعر RTX 4060 Ti — بل حدث العكس. أُطلقت بسعر مُعلن $429، وأُفيد بإعلانات تجزئة تبدأ من $679 على Amazon الأمريكي ([Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/)، 2026-01-27)، أي أعلى بكثير من السعر المُعلن، وهو الاتجاه نفسه لإعادة التسعير بسبب نقص الذاكرة في هذه القائمة كلها. هي بطاقة أفضل فعلاً من أي شيء هنا، بسعة 16 GB من VRAM واستدلال أسرع، لكنها ليست بطاقة تحت $500، وانتظار أن تصبح كذلك ليس خطة تستحق البناء عليها. اشترِ بناءً على المتوفر الآن: Intel Arc B580 12GB بـ $250–290، أو RTX 3060 12GB مستعملة بـ $270–300 إن كنت تحتاج CUDA.',
           },
           {
             q: 'كم يكلّف RTX 4060 Ti 16GB مستعملة؟',
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'هل لا يزال بإمكاني شراء RTX 3090 مستعملة بأقل من $500 في 2026؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'لا — تُتداول RTX 3090 المستعملة بـ $850–1,050 على eBay، أعلى بكثير من حد $500. لقدرة نماذج 30B تحتاج ميزانية $850+ أو فكّر في RTX 4080 SUPER مستعملة (~$850).',
+            text: 'لا — يسجّل متتبّع InsiderLLM (المصدر محدّث في 2026-10-15) إعلانات مباعة لـ RTX 3090 المستعملة بنحو $1,400–1,550. لقدرة نماذج 30B، RTX 3090 مستعملة (24 GB) هي الطريق الاقتصادي.',
           },
         },
         {
@@ -778,7 +778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'هل يمكنني تشغيل نموذج 70B على بطاقة GPU واحدة بأقل من $500؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'ليس بكامل السرعة. حتى RTX 3090 (24 GB) لا تستطيع إيواء 70B Q4 (~40 GB) بالكامل في VRAM. التفريغ إلى CPU يخفض السرعة إلى 2–5 tok/s. تحتاج إلى بطاقتي GPU أو استدلال سحابي.',
+            text: 'ليس بكامل السرعة. حتى RTX 3090 (24 GB) لا تستطيع إيواء 70B Q4 (~40 GB) بالكامل في VRAM. التفريغ إلى CPU يبقي السرعة أقل بكثير من نموذج يتسع في VRAM. الطريقان العمليان لنماذج 70B هما بطاقتا GPU بسعة 24 GB أو استدلال سحابي.',
           },
         },
         {
@@ -829,8 +829,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
-    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2027-05-22',
+    last_full_refresh: '2026-11-22',
     designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Melhor GPU para inferência de LLM por menos de US$ 500 (2026)',
@@ -844,19 +844,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.amazon.com/s?k=Intel+Arc+B580', productName: 'Intel Arc B580 12GB', productCategory: 'gpu', priceRange: 'R$ 2.060–2.400', label: 'Ver preço da Intel Arc B580 12GB →' },
     ],
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**A melhor GPU por menos de US$ 500 para inferência de LLM local no Brasil é a RTX 3060 12GB (R$ 1.450–2.000): 12 GB de VRAM para modelos 7B–13B em Q4/Q8, ~36 tok/s no Llama 3.1 8B Q4, e a cadeia CUDA completa. A Intel Arc B580 12GB é a alternativa, mas atenção: no Brasil ela custa R$ 2.060–2.400, ou seja **mais** que a RTX 3060 — o inverso do que acontece no mercado em dólar, onde a Arc é a mais barata. A vencedora anterior, a RTX 4060 Ti 16GB, saiu da faixa: passou de R$ 3.299 e no exterior os anúncios ao preço de tabela estão sem estoque. A escassez mundial de DRAM e GDDR7 de 2026, puxada pela demanda dos data centers de IA, é o que moveu todos esses preços. Para capacidade de modelos 30B, reserve a partir de R$ 6.000. Os preços no Brasil variam bastante por impostos de importação e câmbio, e não acompanham linearmente a faixa em dólar.**',
+    leadAnswerBlock: '**A melhor GPU por menos de US$ 500 para inferência de LLM local no Brasil é a RTX 3060 12GB (R$ 1.450–2.000): 12 GB de VRAM para modelos 7B–13B em Q4/Q8, ~36 tok/s no Llama 3.1 8B Q4, e a cadeia CUDA completa. A Intel Arc B580 12GB é a alternativa, mas atenção: no Brasil ela custa R$ 2.060–2.400, ou seja **mais** que a RTX 3060 — o inverso do que acontece no mercado em dólar, onde a Arc é a mais barata. A vencedora anterior, a RTX 4060 Ti 16GB, saiu da faixa: passou de R$ 3.299 e no exterior os anúncios ao preço de tabela estão sem estoque. A escassez mundial de DRAM e GDDR7 de 2026, puxada pela demanda dos data centers de IA, é o que moveu todos esses preços. Para capacidade de modelos 30B, o caminho é uma RTX 3090 usada (24 GB), a cerca de US$ 1.400–1.550 em anúncios vendidos ([tracker da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15; valor em dólares, sem conversão). Os preços no Brasil variam bastante por impostos de importação e câmbio, e não acompanham linearmente a faixa em dólar.**',
     quickAnswerTop: {
       question: 'Qual é a melhor GPU para rodar LLMs localmente por menos de US$ 500?',
-      answer: '**A RTX 3060 12GB (R$ 1.450–2.000) é a melhor GPU por menos de US$ 500 para inferência de LLM local no Brasil.** Seus 12 GB de VRAM rodam modelos 7B–13B em Q4/Q8 com folga, a ~36 tok/s no Llama 3.1 8B Q4, com Ollama, LM Studio, vLLM e ajuste fino LoRA funcionando de fábrica. A Intel Arc B580 12GB (R$ 2.060–2.400) é a alternativa de arquitetura mais nova, mas no mercado brasileiro custa mais que a RTX 3060, ao contrário do que ocorre em dólar. A escassez de memória de 2026 tirou o resto da lista da faixa: a RTX 4060 Ti 16GB passou de R$ 3.299, a RTX 3090 usada parte de R$ 6.000, a RTX 4070 12GB está em ~R$ 3.500 e a RX 7800 XT 16GB em ~R$ 2.900.',
+      answer: '**A RTX 3060 12GB (R$ 1.450–2.000) é a melhor GPU por menos de US$ 500 para inferência de LLM local no Brasil.** Seus 12 GB de VRAM rodam modelos 7B–13B em Q4/Q8 com folga, a ~36 tok/s no Llama 3.1 8B Q4, com Ollama, LM Studio, vLLM e ajuste fino LoRA funcionando de fábrica. A Intel Arc B580 12GB (R$ 2.060–2.400) é a alternativa de arquitetura mais nova, mas no mercado brasileiro custa mais que a RTX 3060, ao contrário do que ocorre em dólar. A escassez de memória de 2026 tirou o resto da lista da faixa: a RTX 4060 Ti 16GB passou de R$ 3.299, a RTX 3090 usada fica em cerca de US$ 1.400–1.550 em anúncios vendidos (InsiderLLM, fonte atualizada em 2026-10-15), a RTX 4070 12GB está em ~R$ 3.500 e a RX 7800 XT 16GB em ~R$ 2.900.',
       bullets: [
         '**Vencedora:** RTX 3060 12GB (R$ 1.450–2.000) — 12 GB de VRAM, ~36 tok/s no Llama 3.1 8B Q4, cadeia CUDA completa',
         '**Alternativa:** Intel Arc B580 12GB (R$ 2.060–2.400) — arquitetura mais nova, mas no Brasil custa mais que a RTX 3060',
         '⚠️ RTX 4060 Ti 16GB: passou de R$ 3.299 e está sem estoque ao preço de tabela no exterior — fora da faixa',
-        '⚠️ RTX 3090 de segunda mão: preço atual a partir de R$ 6.000 — não é mais sub-US$ 500',
+        '⚠️ RTX 3090 de segunda mão: cerca de US$ 1.400–1.550 em anúncios vendidos (InsiderLLM, fonte atualizada em 2026-10-15) — não é mais sub-US$ 500',
         '⚠️ RTX 4070 12GB: agora ~R$ 3.500 — não é mais sub-US$ 500',
         '⚠️ RX 7800 XT 16GB: agora ~R$ 2.900 — não é mais sub-US$ 500',
       ],
-      updatedDate: '2026-09-01',
+      updatedDate: '2026-11-22',
     },
     sections: {
       tldr: {
@@ -865,10 +865,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A RTX 3060 12GB vence para a maioria no Brasil: 12 GB de VRAM, R$ 1.450–2.000, ~36 tok/s no Llama 3.1 8B Q4, cadeia CUDA completa**',
           'A Intel Arc B580 12GB (R$ 2.060–2.400) é a alternativa — arquitetura mais nova, mas no mercado brasileiro custa mais que a RTX 3060, ao contrário do que ocorre em dólar',
           '⚠️ Alerta de preço: a RTX 4060 Ti 16GB, a vencedora anterior, passou de R$ 3.299 e no exterior está sem estoque ao preço de tabela — removida da lista sub-US$ 500',
-          '⚠️ Alerta de preço: a RTX 3090 de segunda mão está agora a partir de R$ 6.000 — removida da lista sub-US$ 500',
+          '⚠️ Alerta de preço: os anúncios vendidos da RTX 3090 de segunda mão ficam em cerca de US$ 1.400–1.550 (InsiderLLM, fonte atualizada em 2026-10-15) — removida da lista sub-US$ 500',
           '⚠️ Alerta de preço: a RTX 4070 12GB está agora em ~R$ 3.500 — removida da lista sub-US$ 500',
           '⚠️ Alerta de preço: a RX 7800 XT 16GB está agora em ~R$ 2.900 — removida da lista sub-US$ 500',
-          'Por que tudo se moveu: uma escassez mundial de DRAM e GDDR7, puxada pela demanda dos data centers de IA, empurrou os preços de rua das placas bem acima do preço de tabela no mundo todo. O hardware não mudou; só o que ele custa. Precisa de capacidade para modelos 30B? Orçamento a partir de R$ 6.000 para uma RTX 3090 usada (24 GB).',
+          'Por que tudo se moveu: uma escassez mundial de DRAM e GDDR7, puxada pela demanda dos data centers de IA, empurrou os preços de rua das placas bem acima do preço de tabela no mundo todo. O hardware não mudou; só o que ele custa. Precisa de capacidade para modelos 30B? O caminho é uma RTX 3090 usada (24 GB), a cerca de US$ 1.400–1.550 em anúncios vendidos (InsiderLLM, fonte atualizada em 2026-10-15).',
           'As três GPUs desta lista funcionam com Ollama, LM Studio e llama.cpp de fábrica',
         ],
       },
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'Comparação de desempenho — Preços atuais + resultados de testes',
-        content: 'Benchmarks medidos com Ollama 0.30.x, servidor llama.cpp, modelos do HuggingFace. Sistema de teste: Ryzen 9 7950X, 64 GB DDR5, SSD NVMe. As velocidades não mudaram em relação aos testes anteriores: o hardware não se moveu, os preços sim. Excluídas por ultrapassarem a faixa: RTX 3090 usada (a partir de R$ 6.000), RTX 4070 12GB (~R$ 3.500), RX 7800 XT 16GB (~R$ 2.900) e RTX 4060 Ti 16GB (acima de R$ 3.299).',
+        content: 'Benchmarks medidos com Ollama 0.30.x, servidor llama.cpp, modelos do HuggingFace. Sistema de teste: Ryzen 9 7950X, 64 GB DDR5, SSD NVMe. As velocidades não mudaram em relação aos testes anteriores: o hardware não se moveu, os preços sim. Excluídas por ultrapassarem a faixa: RTX 3090 usada (cerca de US$ 1.400–1.550 em anúncios vendidos, InsiderLLM, fonte atualizada em 2026-10-15), RTX 4070 12GB (~R$ 3.500), RX 7800 XT 16GB (~R$ 2.900) e RTX 4060 Ti 16GB (acima de R$ 3.299).',
         columns: ['GPU', 'VRAM', 'Preço', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modelo máximo (Q4)'],
         rows: [
           { GPU: 'RTX 3060 12GB ★', VRAM: '12 GB', 'Preço': 'R$ 1.450–2.000', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado pela VRAM', 'Modelo máximo (Q4)': '14B (Q4)' },
@@ -928,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         title: 'Como selecionamos e testamos estas GPUs',
-        content: 'Critérios de seleção: disponíveis para compra nova ou usada na faixa de US$ 500; compatíveis com pelo menos um runtime de inferência principal (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (placas de 8 GB excluídas). Várias placas saíram da lista por preço: a RTX 3090 usada (24 GB) parte de R$ 6.000; a RTX 4070 12GB está em ~R$ 3.500; a RX 7800 XT 16GB em ~R$ 2.900; e a RTX 4060 Ti 16GB passou de R$ 3.299, com os anúncios ao preço de tabela sem estoque no exterior. A causa é comum a todas: uma escassez mundial de DRAM e GDDR7 puxada pela demanda dos data centers de IA empurrou os preços de rua bem acima da tabela no mundo todo, com as RTX 50 da NVIDIA cerca de 36–39% acima do preço sugerido e a AMD elevando as Radeon em torno de 10%. Todos os benchmarks são tok/s, média de 10 execuções com batch size 1, medidos com Ollama 0.30.x no Ubuntu 22.04 LTS.',
+        content: 'Critérios de seleção: disponíveis para compra nova ou usada na faixa de US$ 500; compatíveis com pelo menos um runtime de inferência principal (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (placas de 8 GB excluídas). Várias placas saíram da lista por preço: a RTX 3090 usada (24 GB) tem anúncios vendidos em cerca de US$ 1.400–1.550 ([tracker da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), fonte atualizada em 2026-10-15); a RTX 4070 12GB está em ~R$ 3.500; a RX 7800 XT 16GB em ~R$ 2.900; e a RTX 4060 Ti 16GB passou de R$ 3.299, com os anúncios ao preço de tabela sem estoque no exterior. A causa é comum a todas: uma escassez mundial de DRAM e GDDR7 puxada pela demanda dos data centers de IA empurrou os preços de rua bem acima da tabela no mundo todo, com a RTX 5090 em torno de US$ 4.500–4.700 nova frente a um preço sugerido de US$ 1.999 e a RTX 5080 a US$ 1.200–1.600 frente a US$ 999 (tracker da InsiderLLM, fonte atualizada em 2026-10-15). Todos os benchmarks são tok/s, média de 10 execuções com batch size 1, medidos com Ollama 0.30.x no Ubuntu 22.04 LTS.',
       },
       vramGuide: {
         title: 'Requisitos de VRAM por tamanho de modelo',
@@ -947,7 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Modelo 7B em Q8: ~7,5 GB de VRAM — cabe em todas as GPUs aqui',
           'Modelo 13B em Q4: ~8,5 GB de VRAM — cabe em todas as GPUs desta lista',
           'Modelo 14B em Q8: ~14 GB de VRAM — só RTX 4060 Ti 16GB e RTX 3090 (usada)',
-          'Modelo 30B em Q4: ~18 GB de VRAM — requer 24 GB (RTX 3090 de segunda mão, agora a partir de R$ 6.000)',
+          'Modelo 30B em Q4: ~18 GB de VRAM — requer 24 GB (RTX 3090 de segunda mão)',
           'Modelo 70B em Q4: ~40 GB — exige duas GPUs ou offload para CPU',
         ],
       },
@@ -958,12 +958,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Melhor opção geral por menos de US$ 500** → RTX 3060 12GB (R$ 1.450–2.000). A entrada mais barata em 12 GB no Brasil, com a cadeia CUDA completa: Ollama, LM Studio, vLLM e ajuste fino LoRA.',
           '**Alternativa de arquitetura mais nova** → Intel Arc B580 12GB (R$ 2.060–2.400). Boa placa, mas no Brasil custa mais que a RTX 3060 — o inverso do mercado em dólar. Escolha-a se preferir arquitetura nova e não precisar de LoRA.',
           '**Melhor hardware, se achar perto da tabela** → RTX 4060 Ti 16GB. Roda 14B em Q8 na GPU e supera tudo aqui, mas passou de R$ 3.299 e está sem estoque ao preço de tabela no exterior.',
-          '**Precisa de capacidade para modelos 30B?** → A janela sub-US$ 500 fechou em meados de 2026 e não reabriu. A RTX 3090 usada (24 GB) agora está a partir de R$ 6.000.',
+          '**Precisa de capacidade para modelos 30B?** → A janela sub-US$ 500 fechou em meados de 2026 e não reabriu. O caminho é uma RTX 3090 usada (24 GB), com anúncios vendidos em cerca de US$ 1.400–1.550 (InsiderLLM, fonte atualizada em 2026-10-15).',
           '**Usuário de Windows, sem complicação** → RTX 4060 Ti 16GB. A NVIDIA CUDA tem o suporte mais amplo no Windows para LLMs, fine-tuning e runtimes multimodais.',
           '**Precisa de mais de 12 GB para um teste?** Em vez de esticar o orçamento, você pode [alugar uma placa de 24 GB por poucos dólares](/pt/power-local-llm/best-cloud-gpu-providers) e ver se os modelos maiores valem a pena.',
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-pt.svg',
-        imageCaption: 'Árvore de decisão para escolher uma GPU econômica por menos de US$ 500 para inferência de LLM local no Brasil: leva à RTX 3060 12GB (R$ 1.450–2.000) como opção padrão, à Intel Arc B580 12GB (R$ 2.060–2.400) como alternativa, e a uma RTX 3090 usada (24 GB) a partir de R$ 6.000 para modelos 30B.',
+        imageCaption: 'Árvore de decisão para escolher uma GPU econômica por menos de US$ 500 para inferência de LLM local no Brasil: leva à RTX 3060 12GB (R$ 1.450–2.000) como opção padrão, à Intel Arc B580 12GB (R$ 2.060–2.400) como alternativa, e a uma RTX 3090 usada (24 GB, cerca de US$ 1.400–1.550 em anúncios vendidos segundo a InsiderLLM, 2026-10-15) para modelos 30B.',
       },
       softwareCompat: {
         title: 'Compatibilidade de software por GPU',
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ainda posso comprar uma RTX 3090 de segunda mão por menos de US$ 500 em 2026?',
-            a: 'Não. As RTX 3090 de segunda mão estão sendo negociadas a partir de R$ 6.000 no Mercado Livre. O preço subiu primeiro quando os entusiastas de LLM reconheceram o valor dos 24 GB de VRAM, e de novo durante a escassez de memória de 2026. Não é mais uma opção dentro da faixa, e já não é há um bom tempo. Se você precisa de capacidade para modelos 30B (que exige 24 GB de VRAM), reserve a partir de R$ 6.000 para uma RTX 3090 usada.',
+            a: 'Não. O [tracker da InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (fonte atualizada em 2026-10-15) registra anúncios vendidos da RTX 3090 usada em cerca de US$ 1.400–1.550 (em dólares, sem conversão), então ela não é mais uma opção sub-US$ 500. São dados de anúncios, não uma cotação. Os preços no Brasil podem variar bastante devido a impostos de importação. Os 24 GB de VRAM mantêm a placa atraente: é o caminho econômico para modelos da classe 30B, que precisam de cerca de 18–20 GB em Q4.',
           },
           {
             q: 'A AMD funciona para rodar LLMs localmente?',
@@ -1005,11 +1005,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso rodar um modelo 70B em uma única GPU por menos de US$ 500?',
-            a: 'Não em velocidade plena. Mesmo a RTX 3090 (24 GB) não consegue armazenar 70B Q4 (~40 GB) inteiramente na VRAM. Você pode usar offload para CPU com o llama.cpp para dividir o modelo entre VRAM e RAM do sistema, mas a velocidade cai para 2–5 tok/s — lento demais para uso interativo. Para rodar modelos 70B em velocidades utilizáveis, você precisa de duas GPUs (2× RTX 3090 com 48 GB no total) ou inferência na nuvem.',
+            a: 'Não em velocidade plena. Mesmo a RTX 3090 (24 GB) não consegue armazenar 70B Q4 (~40 GB) inteiramente na VRAM. Você pode usar offload para CPU com o llama.cpp para dividir o modelo entre VRAM e RAM do sistema, mas a geração fica muito abaixo da velocidade de um modelo que cabe na VRAM, o que torna o uso interativo impraticável. Para rodar modelos 70B em GPU, você precisa de duas placas de 24 GB (2× RTX 3090 com 48 GB no total) ou inferência na nuvem.',
           },
           {
             q: 'As novas placas (RTX 5060 Ti) vão tornar essas GPUs obsoletas?',
-            a: 'A RTX 5060 Ti 16GB já foi lançada, e não ficou abaixo da RTX 4060 Ti — foi o contrário. Saiu com preço de tabela de US$ 429 e hoje é vendida por cerca de US$ 800 (mediana recente de US$ 805), cerca de 88% acima da tabela, porque a mesma escassez de memória que reprecificou toda esta lista bateu mais forte nela por ser placa de geração atual. É uma GPU genuinamente melhor que qualquer uma daqui, com 16 GB de VRAM e inferência mais rápida, mas não é uma placa dentro da faixa, e esperar que ela entre não é um plano que se sustente. Compre pelo que está disponível agora: no Brasil, a RTX 3060 12GB por R$ 1.450–2.000.',
+            a: 'A RTX 5060 Ti 16GB já foi lançada, e não ficou abaixo da RTX 4060 Ti — foi o contrário. Saiu com preço de tabela de US$ 429, e foram relatados anúncios de varejo a partir de US$ 679 na Amazon dos EUA ([Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/), 2026-01-27), bem acima da tabela: na mesma direção da reprecificação por escassez de memória de toda esta lista. É uma GPU genuinamente melhor que qualquer uma daqui, com 16 GB de VRAM e inferência mais rápida, mas não é uma placa dentro da faixa, e esperar que ela entre não é um plano que se sustente. Compre pelo que está disponível agora: no Brasil, a RTX 3060 12GB por R$ 1.450–2.000.',
           },
           {
             q: 'Quanto custa uma RTX 4060 Ti 16GB usada?',
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Ainda posso comprar uma RTX 3090 de segunda mão por menos de US$ 500 em 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Não — as RTX 3090 de segunda mão estão a partir de R$ 6.000 no Mercado Livre, bem acima da faixa de US$ 500. Para capacidade de modelos 30B você precisa de a partir de R$ 6.000.',
+            text: 'Não — o tracker da InsiderLLM (fonte atualizada em 2026-10-15) registra anúncios vendidos da RTX 3090 usada em cerca de US$ 1.400–1.550. Para capacidade de modelos 30B, uma RTX 3090 usada (24 GB) é o caminho econômico.',
           },
         },
         {
@@ -1055,7 +1055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Posso rodar um modelo 70B em uma única GPU por menos de US$ 500?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Não em velocidade plena. Mesmo a RTX 3090 (24 GB) não consegue alojar 70B Q4 (~40 GB) inteiramente na VRAM. O offload para CPU reduz a velocidade para 2–5 tok/s. São necessárias duas GPUs ou inferência na nuvem.',
+            text: 'Não em velocidade plena. Mesmo a RTX 3090 (24 GB) não consegue alojar 70B Q4 (~40 GB) inteiramente na VRAM. O offload para CPU deixa a velocidade muito abaixo da de um modelo que cabe na VRAM. Para 70B, os caminhos práticos são duas GPUs de 24 GB ou inferência na nuvem.',
           },
         },
         {
@@ -1106,8 +1106,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   de: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
-    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2027-05-22',
+    last_full_refresh: '2026-11-22',
     designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Beste GPU für LLM-Inferenz unter 500 € (2026)',
@@ -1122,19 +1122,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'gpu', priceRange: '~560 € auf Lager', label: 'Preis der RTX 4060 Ti 16GB ansehen →' },
     ],
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**Die beste GPU unter 500 € für lokale LLM-Inferenz ist jetzt der Intel Arc B580 12GB (250–290 €): 12 GB VRAM für 7B–13B-Modelle mit Q4, ~31 Tok/s bei Llama 3.1 8B Q4, und die einzige neue 12-GB-Karte, die verlässlich unter 500 € zu bekommen ist. Wer die CUDA-Toolchain braucht, nimmt eine gebrauchte RTX 3060 12GB (270–300 €). Die bisherige Siegerin, die RTX 4060 Ti 16GB, ist aus dem Fenster gefallen: Angebote zur UVP von 399 € sind nicht lieferbar, verfügbare Karten liegen bei rund 560 €. Die RTX 3060 12GB ist seit ihrer Neuauflage um etwa 45 % gestiegen und kostet neu 470–600 €. Bewegt hat sie alle dieselbe Ursache: eine weltweite DRAM- und GDDR7-Knappheit, getrieben von der Nachfrage der KI-Rechenzentren. Für 30B-Modell-Fähigkeit rechne mit 850 €+.**',
+    leadAnswerBlock: '**Die beste GPU unter 500 € für lokale LLM-Inferenz ist jetzt der Intel Arc B580 12GB (250–290 €): 12 GB VRAM für 7B–13B-Modelle mit Q4, ~31 Tok/s bei Llama 3.1 8B Q4, und die einzige neue 12-GB-Karte, die verlässlich unter 500 € zu bekommen ist. Wer die CUDA-Toolchain braucht, nimmt eine gebrauchte RTX 3060 12GB (270–300 €). Die bisherige Siegerin, die RTX 4060 Ti 16GB, ist aus dem Fenster gefallen: Angebote zur UVP von 399 € sind nicht lieferbar, verfügbare Karten liegen bei rund 560 €. Die RTX 3060 12GB ist seit ihrer Neuauflage um etwa 45 % gestiegen und kostet neu 470–600 €. Bewegt hat sie alle dieselbe Ursache: eine weltweite DRAM- und GDDR7-Knappheit, getrieben von der Nachfrage der KI-Rechenzentren. Für 30B-Modell-Fähigkeit ist eine gebrauchte RTX 3090 (24 GB) der Weg, mit rund 1.400–1.550 USD in verkauften Angeboten (nicht in EUR umgerechnet; [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Quelle aktualisiert am 2026-10-15).**',
     quickAnswerTop: {
       question: 'Welche GPU ist am besten für lokale KI-Modelle unter 500 €?',
-      answer: '**Der Intel Arc B580 12GB (250–290 €) ist die beste GPU unter 500 € für lokale LLM-Inferenz.** Seine 12 GB VRAM führen 7B–13B-Modelle mit Q4 aus, er läuft mit Ollama über das SYCL/oneAPI-Backend unter Windows und Linux, und er ist die einzige neue 12-GB-Karte, die verlässlich unter 500 € verfügbar bleibt. Eine gebrauchte RTX 3060 12GB (270–300 €) ist die Zweitwahl, wenn du die CUDA-Toolchain brauchst. Die Speicherknappheit 2026 hat den Rest dieser Liste aus dem Fenster gehoben: Die RTX 4060 Ti 16GB liegt lieferbar bei rund 560 €, die neue RTX 3060 12GB bei 470–600 €, die gebrauchte RTX 3090 bei 850–1.050 €, die RTX 4070 12GB bei 560–705 € und die RX 7800 XT 16GB bei ~682 €.',
+      answer: '**Der Intel Arc B580 12GB (250–290 €) ist die beste GPU unter 500 € für lokale LLM-Inferenz.** Seine 12 GB VRAM führen 7B–13B-Modelle mit Q4 aus, er läuft mit Ollama über das SYCL/oneAPI-Backend unter Windows und Linux, und er ist die einzige neue 12-GB-Karte, die verlässlich unter 500 € verfügbar bleibt. Eine gebrauchte RTX 3060 12GB (270–300 €) ist die Zweitwahl, wenn du die CUDA-Toolchain brauchst. Die Speicherknappheit 2026 hat den Rest dieser Liste aus dem Fenster gehoben: Die RTX 4060 Ti 16GB liegt lieferbar bei rund 560 €, die neue RTX 3060 12GB bei 470–600 €, die gebrauchte RTX 3090 bei rund 1.400–1.550 USD in verkauften Angeboten ([InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Quelle aktualisiert am 2026-10-15), die RTX 4070 12GB bei 560–705 € und die RX 7800 XT 16GB bei ~682 €.',
       bullets: [
         '**Sieger:** Intel Arc B580 12GB (250–290 €) — 12 GB VRAM, ~31 Tok/s bei Llama 3.1 8B Q4, einzige neue 12-GB-Karte verlässlich unter 500 €',
         '**Zweitplatzierte:** RTX 3060 12GB gebraucht (270–300 €) — günstigster Weg zur vollen CUDA-Toolchain',
         '⚠️ RTX 4060 Ti 16GB: zur UVP von 399 € nicht lieferbar, ~560 € wenn verfügbar — keine verlässliche Sub-500-€-Option mehr',
         '⚠️ RTX 3060 12GB neu: 470–600 €, seit der Neuauflage um 45 % gestiegen — kauf sie stattdessen gebraucht',
-        '⚠️ RTX 3090 gebraucht: jetzt 850–1.050 € — keine Sub-500-€-Option mehr',
+        '⚠️ RTX 3090 gebraucht: rund 1.400–1.550 USD in verkauften Angeboten (InsiderLLM, Quelle aktualisiert am 2026-10-15) — keine Sub-500-€-Option mehr',
         '⚠️ RTX 4070 12GB: jetzt 560–705 €, RX 7800 XT 16GB: ~682 € — beide über 500 €',
       ],
-      updatedDate: '2026-09-01',
+      updatedDate: '2026-11-22',
     },
     sections: {
       tldr: {
@@ -1144,9 +1144,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RTX 3060 12GB gebraucht (270–300 €) ist die Zweitplatzierte — günstigster Weg zur vollen CUDA-Toolchain',
           '⚠️ Preisalarm: Die RTX 4060 Ti 16GB, die bisherige Siegerin, ist zur UVP von 399 € nicht lieferbar und kostet verfügbar rund 560 € — aus der Sub-500-€-Liste entfernt',
           '⚠️ Preisalarm: Die neue RTX 3060 12GB kostet 470–600 €, seit der Neuauflage um 45 % gestiegen — der Gebrauchtmarkt ist der vernünftige Weg zu dieser Karte',
-          '⚠️ Preisalarm: Gebrauchte RTX 3090 kostet jetzt 850–1.050 €, RTX 4070 12GB 560–705 € — beide aus der Sub-500-€-Liste entfernt',
+          '⚠️ Preisalarm: Gebrauchte RTX 3090: rund 1.400–1.550 USD in verkauften Angeboten (InsiderLLM, Quelle aktualisiert am 2026-10-15), RTX 4070 12GB 560–705 € — beide aus der Sub-500-€-Liste entfernt',
           '⚠️ Preisalarm: RX 7800 XT 16GB kostet jetzt ~682 € — aus der Sub-500-€-Liste entfernt',
-          'Warum sich alles bewegt hat: Eine weltweite DRAM- und GDDR7-Knappheit, getrieben von der Nachfrage der KI-Rechenzentren, hat die Straßenpreise für Grafikkarten marktweit deutlich über die Listenpreise gehoben. Die Hardware hat sich nicht verändert, nur was sie kostet. Für 30B-Modelle rechne mit mindestens 900 € für eine gebrauchte RTX 3090 (24 GB).',
+          'Warum sich alles bewegt hat: Eine weltweite DRAM- und GDDR7-Knappheit, getrieben von der Nachfrage der KI-Rechenzentren, hat die Straßenpreise für Grafikkarten marktweit deutlich über die Listenpreise gehoben. Die Hardware hat sich nicht verändert, nur was sie kostet. Für 30B-Modelle ist eine gebrauchte RTX 3090 (24 GB) der Weg, mit rund 1.400–1.550 USD in verkauften Angeboten (InsiderLLM, Quelle aktualisiert am 2026-10-15).',
           'Alle drei GPUs auf dieser Liste laufen mit Ollama, LM Studio und llama.cpp sofort einsatzbereit',
         ],
       },
@@ -1191,7 +1191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'Leistungsvergleich — Aktuelle Preise + Testergebnisse',
-        content: 'Benchmarks gemessen mit Ollama 0.30.x, llama.cpp-Server, Modelle von HuggingFace. Testsystem: Ryzen 9 7950X, 64 GB DDR5, NVMe-SSD. Die Geschwindigkeiten haben sich gegenüber früheren Tests nicht verändert: Die Hardware hat sich nicht bewegt, die Preise schon. Wegen Überschreitung der 500 € ausgeschlossen: gebrauchte RTX 3090 (850–1.050 €), RTX 4070 12GB (560–705 €), RX 7800 XT 16GB (~682 €) und neue RTX 3060 12GB (470–600 €).',
+        content: 'Benchmarks gemessen mit Ollama 0.30.x, llama.cpp-Server, Modelle von HuggingFace. Testsystem: Ryzen 9 7950X, 64 GB DDR5, NVMe-SSD. Die Geschwindigkeiten haben sich gegenüber früheren Tests nicht verändert: Die Hardware hat sich nicht bewegt, die Preise schon. Wegen Überschreitung der 500 € ausgeschlossen: gebrauchte RTX 3090 (rund 1.400–1.550 USD in verkauften Angeboten, InsiderLLM, Quelle aktualisiert am 2026-10-15), RTX 4070 12GB (560–705 €), RX 7800 XT 16GB (~682 €) und neue RTX 3060 12GB (470–600 €).',
         columns: ['GPU', 'VRAM', 'Preis', 'Llama 3.1 8B Q4 Tok/s', 'Qwen3 14B Q8 Tok/s', 'Max. Modell (Q4)'],
         rows: [
           { GPU: 'Intel Arc B580 12GB ★', VRAM: '12 GB', 'Preis': '250–290 €', 'Llama 3.1 8B Q4 Tok/s': '31 Tok/s', 'Qwen3 14B Q8 Tok/s': 'VRAM-limitiert', 'Max. Modell (Q4)': '13B (Q4)' },
@@ -1203,7 +1203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         title: 'Wie wir diese GPUs ausgewählt und getestet haben',
-        content: 'Auswahlkriterien: neu oder gebraucht für unter 500 € erhältlich; unterstützt von mindestens einer wichtigen Inferenz-Laufzeitumgebung (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (8-GB-Karten ausgeschlossen). Mehrere Karten sind wegen des Preises aus der Liste geflogen: Die gebrauchte RTX 3090 (24 GB) liegt jetzt bei 850–1.050 €; die RTX 4070 12GB bei 560–705 €; die RX 7800 XT 16GB bei ~682 €; und die neue RTX 3060 12GB, die für 334 € neu aufgelegt wurde, ist um rund 45 % auf 470–600 € gestiegen. Die RTX 4060 Ti 16GB bleibt in der Liste, aber mit Warnhinweis — Angebote zur UVP von 399 € sind nicht lieferbar, verfügbare Karten liegen bei rund 560 €. Die Ursache ist bei allen dieselbe: Eine weltweite DRAM- und GDDR7-Knappheit, getrieben von der Nachfrage der KI-Rechenzentren, hat die Straßenpreise marktweit deutlich über die Listenpreise gehoben, wobei NVIDIAs RTX-50-Serie rund 36–39 % über UVP gehandelt wird und AMD die Radeon-Preise um etwa 10 % angehoben hat. Alle Benchmarks sind Tok/s, gemittelt über 10 Durchläufe bei Batch-Größe 1, gemessen mit Ollama 0.30.x auf Ubuntu 22.04 LTS.',
+        content: 'Auswahlkriterien: neu oder gebraucht für unter 500 € erhältlich; unterstützt von mindestens einer wichtigen Inferenz-Laufzeitumgebung (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (8-GB-Karten ausgeschlossen). Mehrere Karten sind wegen des Preises aus der Liste geflogen: Die gebrauchte RTX 3090 (24 GB) liegt in verkauften Angeboten bei rund 1.400–1.550 USD ([InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), Quelle aktualisiert am 2026-10-15); die RTX 4070 12GB bei 560–705 €; die RX 7800 XT 16GB bei ~682 €; und die neue RTX 3060 12GB, die für 334 € neu aufgelegt wurde, ist um rund 45 % auf 470–600 € gestiegen. Die RTX 4060 Ti 16GB bleibt in der Liste, aber mit Warnhinweis — Angebote zur UVP von 399 € sind nicht lieferbar, verfügbare Karten liegen bei rund 560 €. Die Ursache ist bei allen dieselbe: Eine weltweite DRAM- und GDDR7-Knappheit, getrieben von der Nachfrage der KI-Rechenzentren, hat die Straßenpreise marktweit deutlich über die Listenpreise gehoben, wobei die RTX 5090 neu bei rund 4.500–4.700 USD gegenüber 1.999 USD UVP liegt und die RTX 5080 bei 1.200–1.600 USD gegenüber 999 USD (InsiderLLM-Tracker, Quelle aktualisiert am 2026-10-15). Alle Benchmarks sind Tok/s, gemittelt über 10 Durchläufe bei Batch-Größe 1, gemessen mit Ollama 0.30.x auf Ubuntu 22.04 LTS.',
       },
       vramGuide: {
         title: 'VRAM-Anforderungen nach Modellgröße',
@@ -1233,12 +1233,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Bester Allrounder unter 500 €** → Intel Arc B580 12GB (250–290 €). Die einzige neue 12-GB-Karte, die verlässlich unter 500 € verfügbar ist. 7B–13B-Modelle mit Q4, ~31 Tok/s bei Llama 3.1 8B Q4, Ollama über SYCL unter Windows und Linux.',
           '**Günstigste funktionierende CUDA-Karte** → RTX 3060 12GB gebraucht (270–300 €). Die volle CUDA-Toolchain — Ollama, LM Studio, vLLM, LoRA-Fine-Tuning — für ungefähr denselben Preis wie der Arc. Kauf sie gebraucht: neu kostet sie 470–600 €.',
           '**Beste Hardware, falls zur UVP zu finden** → RTX 4060 Ti 16GB. Zur UVP von 399 € schlägt sie alles andere hier und führt 14B mit Q8 in-GPU aus. Angebote zur UVP sind aber nicht lieferbar, verfügbare Karten kosten rund 560 € — außerhalb des Budgets dieser Seite.',
-          '**Brauchst du 30B-Modell-Fähigkeit?** → Das Sub-500-€-Fenster hat sich Mitte 2026 geschlossen und ist nicht wieder aufgegangen. Gebrauchte RTX 3090 (24 GB) liegt jetzt bei 850–1.050 €. Rechne mit 850 €+ für eine gebrauchte RTX 3090 oder eine gebrauchte RTX 4080 SUPER (16 GB) — neu kostet sie inzwischen ~1.600 €.',
+          '**Brauchst du 30B-Modell-Fähigkeit?** → Das Sub-500-€-Fenster hat sich Mitte 2026 geschlossen und ist nicht wieder aufgegangen. Der Weg ist eine gebrauchte RTX 3090 (24 GB): verkaufte Angebote liegen bei rund 1.400–1.550 USD (InsiderLLM, Quelle aktualisiert am 2026-10-15).',
           '**Windows-Nutzer, ohne Aufwand** → RTX 3060 12GB gebraucht. NVIDIA CUDA bietet die breiteste Windows-Toolchain-Unterstützung für LLMs, Fine-Tuning und multimodale Laufzeiten, und die gebrauchte 3060 ist der günstigste Einstieg.',
           '**Brauchen Sie für einen Test mehr als 12 GB?** Statt das Budget zu sprengen, können Sie [eine 24-GB-Karte für wenige Dollar mieten](/de/power-local-llm/best-cloud-gpu-providers) und prüfen, ob sich die größeren Modelle lohnen.',
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-de.svg',
-        imageCaption: 'Entscheidungsbaum zur Wahl einer Budget-GPU unter 500 € für lokale LLM-Inferenz: führt zum Intel Arc B580 12GB (250–290 €) als Standardwahl, zur gebrauchten RTX 3060 12GB (270–300 €) wenn CUDA gebraucht wird, und zu einer gebrauchten RTX 3090 (24 GB) ab 900 € für 30B-Modelle.',
+        imageCaption: 'Entscheidungsbaum zur Wahl einer Budget-GPU unter 500 € für lokale LLM-Inferenz: führt zum Intel Arc B580 12GB (250–290 €) als Standardwahl, zur gebrauchten RTX 3060 12GB (270–300 €) wenn CUDA gebraucht wird, und zu einer gebrauchten RTX 3090 (24 GB, rund 1.400–1.550 USD in verkauften Angeboten laut InsiderLLM, 2026-10-15) für 30B-Modelle.',
       },
       softwareCompat: {
         title: 'Software-Kompatibilität nach GPU',
@@ -1272,7 +1272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich eine gebrauchte RTX 3090 noch für unter 500 € kaufen?',
-            a: 'Nein. Gebrauchte RTX 3090 werden für 850–1.050 € auf eBay.de gehandelt. Der Preis stieg zuerst, als LLM-Enthusiasten den Wert der 24 GB VRAM erkannten, und dann noch einmal während der Speicherknappheit 2026. Sie ist keine Sub-500-€-Option mehr und war es schon länger nicht. Wenn du 30B-Modell-Fähigkeit brauchst (die 24 GB VRAM voraussetzt), rechne mit 850 €+ für eine gebrauchte RTX 3090 oder ~850 € für eine gebrauchte RTX 4080 SUPER (16 GB) — neu kostet sie inzwischen ~1.600 €.',
+            a: 'Nein. Der [InsiderLLM-Tracker](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (Quelle aktualisiert am 2026-10-15) verzeichnet verkaufte Angebote der gebrauchten RTX 3090 bei rund 1.400–1.550 USD (nicht in EUR umgerechnet; Preise in Deutschland können abweichen). Damit ist sie keine Sub-500-€-Option mehr. Das sind Angebotsdaten, keine Preisauskunft. Die 24 GB VRAM machen sie weiterhin interessant: Sie ist der Budget-Weg zu Modellen der 30B-Klasse, die in Q4 etwa 18–20 GB brauchen.',
           },
           {
             q: 'Was ist mit Intel-Arc-GPUs für KI?',
@@ -1280,11 +1280,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich ein 70B-Modell auf einer einzigen GPU unter 500 € ausführen?',
-            a: 'Nicht mit voller Geschwindigkeit. Selbst die RTX 3090 (24 GB) kann 70B Q4 (~40 GB) nicht vollständig im VRAM unterbringen. Mit CPU-Offloading über llama.cpp lässt sich das Modell zwischen GPU-VRAM und System-RAM aufteilen, aber die Geschwindigkeit sinkt auf 2–5 Tok/s — zu langsam für interaktive Nutzung. Für nutzbare Geschwindigkeiten bei 70B-Modellen brauchst du zwei GPUs (2× RTX 3090 mit insgesamt 48 GB) oder Cloud-Inferenz.',
+            a: 'Nicht mit voller Geschwindigkeit. Selbst die RTX 3090 (24 GB) kann 70B Q4 (~40 GB) nicht vollständig im VRAM unterbringen. Mit CPU-Offloading über llama.cpp lässt sich das Modell zwischen GPU-VRAM und System-RAM aufteilen, aber die Erzeugung läuft dann weit unter der Geschwindigkeit eines Modells, das ins VRAM passt, was interaktive Nutzung unpraktisch macht. Für 70B-Modelle auf GPUs brauchst du zwei 24-GB-Karten (2× RTX 3090 mit insgesamt 48 GB) oder Cloud-Inferenz.',
           },
           {
             q: 'Machen neuere GPUs (RTX 5060 Ti) diese Karten überflüssig?',
-            a: 'Die RTX 5060 Ti 16GB ist erschienen — und sie hat die RTX 4060 Ti nicht unterboten, sondern das Gegenteil. Sie startete mit einer UVP von 429 $ und kostet jetzt rund 800 € (aktueller Median 805 $), rund 88 % über Liste, weil dieselbe Speicherknappheit, die diese ganze Liste neu bepreist hat, sie als Karte der aktuellen Generation am härtesten getroffen hat. Sie ist eine echt bessere GPU als alles hier, mit 16 GB VRAM und schnellerer Inferenz, aber sie ist keine Sub-500-€-Karte, und darauf zu warten, dass sie eine wird, ist kein tragfähiger Plan. Kauf nach dem, was jetzt verfügbar ist: Intel Arc B580 12GB für 250–290 € oder eine gebrauchte RTX 3060 12GB für 270–300 €, wenn du CUDA brauchst.',
+            a: 'Die RTX 5060 Ti 16GB ist erschienen — und sie hat die RTX 4060 Ti nicht unterboten, sondern das Gegenteil. Sie startete mit einer UVP von 429 $, und für Amazon US wurden Händlerangebote ab 679 $ gemeldet ([Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/), 2026-01-27), deutlich über Liste — in dieselbe Richtung wie die Neubepreisung dieser ganzen Liste durch die Speicherknappheit. Sie ist eine echt bessere GPU als alles hier, mit 16 GB VRAM und schnellerer Inferenz, aber sie ist keine Sub-500-€-Karte, und darauf zu warten, dass sie eine wird, ist kein tragfähiger Plan. Kauf nach dem, was jetzt verfügbar ist: Intel Arc B580 12GB für 250–290 € oder eine gebrauchte RTX 3060 12GB für 270–300 €, wenn du CUDA brauchst.',
           },
           {
             q: 'Was kostet eine gebrauchte RTX 4060 Ti 16GB?',
@@ -1314,10 +1314,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Reichen 8 GB VRAM für lokale KI-Modelle?',
           acceptedAnswer: { '@type': 'Answer', text: '8 GB VRAM beschränken auf 7B-Modelle bei Q4. Für sinnvolle lokale LLM-Nutzung 2026 sind 12 GB das Minimum, 16 GB empfohlen.' },
         },
-        { '@type': 'Question', name: 'Kann ich eine gebrauchte RTX 3090 noch für unter 500 € kaufen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — gebrauchte RTX 3090 werden für 850–1.050 € auf eBay.de gehandelt, weit über der 500-€-Grenze. Für 30B-Modell-Fähigkeit rechne mit 850 €+ oder ~850 € für eine gebrauchte RTX 4080 SUPER (16 GB).' } },
+        { '@type': 'Question', name: 'Kann ich eine gebrauchte RTX 3090 noch für unter 500 € kaufen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — der InsiderLLM-Tracker (Quelle aktualisiert am 2026-10-15) verzeichnet verkaufte Angebote der gebrauchten RTX 3090 bei rund 1.400–1.550 USD. Für 30B-Modell-Fähigkeit ist eine gebrauchte RTX 3090 (24 GB) der Budget-Weg.' } },
         { '@type': 'Question', name: 'Was ist mit Intel-Arc-GPUs für KI?', acceptedAnswer: { '@type': 'Answer', text: 'Der Intel Arc B580 12GB ist die beste Arc-Option 2026 und inzwischen die beste Karte auf dieser Seite: 12 GB VRAM für 250–290 €, rund 30–40 % langsamer als NVIDIA in reinen Tok/s, aber die einzige neue 12-GB-Karte verlässlich unter 500 €. Für LoRA-Fine-Tuning stattdessen eine gebrauchte RTX 3060 12GB.' } },
-        { '@type': 'Question', name: 'Kann ich ein 70B-Modell auf einer einzigen GPU unter 500 € ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht mit voller Geschwindigkeit. Selbst die RTX 3090 (24 GB) kann 70B Q4 (~40 GB) nicht vollständig im VRAM unterbringen. CPU-Offloading senkt die Geschwindigkeit auf 2–5 Tok/s. Zwei GPUs oder Cloud-Inferenz sind nötig.' } },
-        { '@type': 'Question', name: 'Machen neuere GPUs (RTX 5060 Ti) diese Karten überflüssig?', acceptedAnswer: { '@type': 'Answer', text: 'Die RTX 5060 Ti 16GB ist erschienen und hat die RTX 4060 Ti nicht unterboten: Sie startete mit 429 $ UVP und kostet jetzt rund 800 €, rund 88 % über Liste. Sie ist die bessere GPU, aber keine Sub-500-€-Karte.' } },
+        { '@type': 'Question', name: 'Kann ich ein 70B-Modell auf einer einzigen GPU unter 500 € ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht mit voller Geschwindigkeit. Selbst die RTX 3090 (24 GB) kann 70B Q4 (~40 GB) nicht vollständig im VRAM unterbringen. CPU-Offloading liegt weit unter der Geschwindigkeit eines Modells, das ins VRAM passt. Praktische Wege für 70B-Modelle sind zwei 24-GB-GPUs oder Cloud-Inferenz.' } },
+        { '@type': 'Question', name: 'Machen neuere GPUs (RTX 5060 Ti) diese Karten überflüssig?', acceptedAnswer: { '@type': 'Answer', text: 'Die RTX 5060 Ti 16GB ist erschienen und hat die RTX 4060 Ti nicht unterboten: Sie startete mit 429 $ UVP, und für Amazon US wurden Händlerangebote ab 679 $ gemeldet (Wccftech, 2026-01-27). Sie ist die bessere GPU, aber keine Sub-500-€-Karte.' } },
         { '@type': 'Question', name: 'Was kostet eine gebrauchte RTX 4060 Ti 16GB?', acceptedAnswer: { '@type': 'Answer', text: 'Da lieferbare Neukarten bei rund 560 € liegen, rufen Gebrauchtangebote auf eBay.de etwa 420–480 € auf, abhängig vom Zustand. Achte darauf, dass es die 16-GB-Variante ist — es gibt auch eine mit 8 GB.' } },
       ],
     },
@@ -1337,8 +1337,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   fr: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
-    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2027-05-22',
+    last_full_refresh: '2026-11-22',
     designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: 'Meilleure GPU pour l\'inférence LLM à moins de 500 € (2026)',
@@ -1353,19 +1353,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16 Go', productCategory: 'gpu', priceRange: '~560 € en stock', label: 'Voir le prix de la RTX 4060 Ti 16 Go →' },
     ],
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**La meilleure GPU sous 500 € pour l\'inférence LLM locale est désormais l\'Intel Arc B580 12 Go (250–290 €) : 12 Go de VRAM pour les modèles 7B–13B en Q4, ~31 tok/s sur Llama 3.1 8B Q4, et la seule carte neuve de 12 Go encore disponible de façon fiable sous 500 €. Pour la chaîne d\'outils CUDA, une RTX 3060 12 Go d\'occasion (270–300 €) est l\'alternative. La gagnante précédente, la RTX 4060 Ti 16 Go, est sortie de la fenêtre : ses annonces au tarif conseillé de 399 € sont en rupture et les cartes disponibles tournent autour de 560 €. La RTX 3060 12 Go a grimpé d\'environ 45 % depuis sa relance et coûte 470–600 € neuve. Une même cause les a toutes déplacées : une pénurie mondiale de DRAM et de GDDR7, tirée par la demande des centres de données IA. Pour la capacité 30B, prévoyez 850 €+.**',
+    leadAnswerBlock: '**La meilleure GPU sous 500 € pour l\'inférence LLM locale est désormais l\'Intel Arc B580 12 Go (250–290 €) : 12 Go de VRAM pour les modèles 7B–13B en Q4, ~31 tok/s sur Llama 3.1 8B Q4, et la seule carte neuve de 12 Go encore disponible de façon fiable sous 500 €. Pour la chaîne d\'outils CUDA, une RTX 3060 12 Go d\'occasion (270–300 €) est l\'alternative. La gagnante précédente, la RTX 4060 Ti 16 Go, est sortie de la fenêtre : ses annonces au tarif conseillé de 399 € sont en rupture et les cartes disponibles tournent autour de 560 €. La RTX 3060 12 Go a grimpé d\'environ 45 % depuis sa relance et coûte 470–600 € neuve. Une même cause les a toutes déplacées : une pénurie mondiale de DRAM et de GDDR7, tirée par la demande des centres de données IA. Pour la capacité 30B, la voie est une RTX 3090 d\'occasion (24 Go), à environ 1 400–1 550 $ USD en annonces vendues (non converti en EUR ; [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15).**',
     quickAnswerTop: {
       question: 'Quelle est la meilleure GPU pour faire tourner des LLMs en local à moins de 500 € ?',
-      answer: 'L\'Intel Arc B580 12 Go (250–290 €) est la meilleure GPU sous 500 € pour l\'inférence LLM locale. Ses 12 Go de VRAM font tourner les modèles 7B–13B en Q4, il fonctionne avec Ollama via le backend SYCL/oneAPI sous Windows et Linux, et c\'est la seule carte neuve de 12 Go encore disponible de façon fiable sous 500 €. Une RTX 3060 12 Go d\'occasion (270–300 €) est l\'alternative si vous avez besoin de la chaîne CUDA. La pénurie de mémoire de 2026 a sorti le reste de cette liste de la fenêtre : la RTX 4060 Ti 16 Go tourne autour de 560 € quand elle est en stock, la RTX 3060 12 Go neuve est à 470–600 €, la RTX 3090 d\'occasion à 850–1 050 €, la RTX 4070 12 Go à 560–705 € et la RX 7800 XT 16 Go à ~682 €.',
+      answer: 'L\'Intel Arc B580 12 Go (250–290 €) est la meilleure GPU sous 500 € pour l\'inférence LLM locale. Ses 12 Go de VRAM font tourner les modèles 7B–13B en Q4, il fonctionne avec Ollama via le backend SYCL/oneAPI sous Windows et Linux, et c\'est la seule carte neuve de 12 Go encore disponible de façon fiable sous 500 €. Une RTX 3060 12 Go d\'occasion (270–300 €) est l\'alternative si vous avez besoin de la chaîne CUDA. La pénurie de mémoire de 2026 a sorti le reste de cette liste de la fenêtre : la RTX 4060 Ti 16 Go tourne autour de 560 € quand elle est en stock, la RTX 3060 12 Go neuve est à 470–600 €, la RTX 3090 d\'occasion à environ 1 400–1 550 $ USD en annonces vendues ([InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15), la RTX 4070 12 Go à 560–705 € et la RX 7800 XT 16 Go à ~682 €.',
       bullets: [
         '**Gagnante :** Intel Arc B580 12 Go (250–290 €) — 12 Go VRAM, ~31 tok/s sur Llama 3.1 8B Q4, seule carte neuve de 12 Go fiablement sous 500 €',
         '**Alternative :** RTX 3060 12 Go d\'occasion (270–300 €) — la voie la moins chère vers la chaîne CUDA complète',
         '⚠️ RTX 4060 Ti 16 Go : en rupture au tarif conseillé de 399 €, ~560 € quand disponible — plus une option fiable sous 500 €',
         '⚠️ RTX 3060 12 Go neuve : 470–600 €, +45 % depuis sa relance — achetez-la d\'occasion',
-        '⚠️ RTX 3090 occasion : 850–1 050 €, RTX 4070 12 Go : 560–705 € — plus des options sous 500 €',
+        '⚠️ RTX 3090 occasion : environ 1 400–1 550 $ USD en annonces vendues (InsiderLLM, source mise à jour le 2026-10-15), RTX 4070 12 Go : 560–705 € — plus des options sous 500 €',
         '⚠️ RX 7800 XT 16 Go : maintenant ~682 € — plus une option sous 500 €',
       ],
-      updatedDate: '2026-09-01',
+      updatedDate: '2026-11-22',
     },
     sections: {
       tldr: {
@@ -1375,9 +1375,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La RTX 3060 12 Go d\'occasion (270–300 €) est l\'alternative — la voie la moins chère vers la chaîne CUDA complète',
           '⚠️ Alerte prix : la RTX 4060 Ti 16 Go, gagnante précédente, est en rupture au tarif conseillé de 399 € et coûte ~560 € quand disponible — retirée de la liste sous 500 €',
           '⚠️ Alerte prix : la RTX 3060 12 Go neuve est à 470–600 €, +45 % depuis sa relance — le marché de l\'occasion est la voie raisonnable pour cette carte',
-          '⚠️ Alerte prix : RTX 3090 occasion à 850–1 050 € et RTX 4070 12 Go à 560–705 € — retirées de la liste sous 500 €',
+          '⚠️ Alerte prix : RTX 3090 occasion à environ 1 400–1 550 $ USD en annonces vendues (InsiderLLM, source mise à jour le 2026-10-15) et RTX 4070 12 Go à 560–705 € — retirées de la liste sous 500 €',
           '⚠️ Alerte prix : RX 7800 XT 16 Go coûte maintenant ~682 € — retirée de la liste sous 500 €',
-          'Pourquoi tout a bougé : une pénurie mondiale de DRAM et de GDDR7, tirée par la demande des centres de données IA, a poussé les prix de rue des cartes graphiques nettement au-dessus des tarifs catalogue sur tout le marché. Le matériel n\'a pas changé, seulement son prix. Besoin de modèles 30B ? Prévoyez au moins 900 € pour une RTX 3090 occasion (24 Go).',
+          'Pourquoi tout a bougé : une pénurie mondiale de DRAM et de GDDR7, tirée par la demande des centres de données IA, a poussé les prix de rue des cartes graphiques nettement au-dessus des tarifs catalogue sur tout le marché. Le matériel n\'a pas changé, seulement son prix. Besoin de modèles 30B ? La voie est une RTX 3090 occasion (24 Go), à environ 1 400–1 550 $ USD en annonces vendues (InsiderLLM, source mise à jour le 2026-10-15).',
           'Les trois GPU de cette liste fonctionnent avec Ollama, LM Studio et llama.cpp sans configuration',
         ],
       },
@@ -1422,7 +1422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'Comparatif de performances — Prix actuels + résultats de tests',
-        content: 'Benchmarks mesurés avec Ollama 0.30.x, serveur llama.cpp, modèles issus de HuggingFace. Système de test : Ryzen 9 7950X, 64 Go DDR5, SSD NVMe. Les vitesses n\'ont pas changé par rapport aux tests précédents : le matériel n\'a pas bougé, les prix si. Exclues pour dépassement des 500 € : RTX 3090 occasion (850–1 050 €), RTX 4070 12 Go (560–705 €), RX 7800 XT 16 Go (~682 €) et RTX 3060 12 Go neuve (470–600 €).',
+        content: 'Benchmarks mesurés avec Ollama 0.30.x, serveur llama.cpp, modèles issus de HuggingFace. Système de test : Ryzen 9 7950X, 64 Go DDR5, SSD NVMe. Les vitesses n\'ont pas changé par rapport aux tests précédents : le matériel n\'a pas bougé, les prix si. Exclues pour dépassement des 500 € : RTX 3090 occasion (environ 1 400–1 550 $ USD en annonces vendues, InsiderLLM, source mise à jour le 2026-10-15), RTX 4070 12 Go (560–705 €), RX 7800 XT 16 Go (~682 €) et RTX 3060 12 Go neuve (470–600 €).',
         columns: ['GPU', 'VRAM', 'Prix', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modèle max (Q4)'],
         rows: [
           { GPU: 'Intel Arc B580 12 Go ★', VRAM: '12 Go', 'Prix': '250–290 €', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limité par la VRAM', 'Modèle max (Q4)': '13B (Q4)' },
@@ -1434,7 +1434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         title: 'Comment nous avons sélectionné et testé ces GPU',
-        content: 'Critères de sélection : disponibles neuves ou d\'occasion sous 500 € ; compatibles avec au moins un runtime d\'inférence majeur (Ollama, LM Studio, llama.cpp) ; VRAM ≥ 12 Go (cartes 8 Go exclues). Plusieurs cartes sont sorties de la liste sur le prix : la RTX 3090 occasion (24 Go) se négocie désormais à 850–1 050 € ; la RTX 4070 12 Go à 560–705 € ; la RX 7800 XT 16 Go à ~682 € ; et la RTX 3060 12 Go neuve, relancée à 334 €, a grimpé d\'environ 45 % à 470–600 €. La RTX 4060 Ti 16 Go est conservée mais signalée — ses annonces au tarif conseillé de 399 € sont en rupture et les cartes disponibles tournent autour de 560 €. La cause leur est commune : une pénurie mondiale de DRAM et de GDDR7 tirée par la demande des centres de données IA a poussé les prix de rue nettement au-dessus des tarifs catalogue sur tout le marché, les RTX 50 de NVIDIA s\'échangeant environ 36–39 % au-dessus du prix conseillé et AMD ayant relevé ses tarifs Radeon d\'environ 10 %. Tous les benchmarks sont en tok/s, moyennés sur 10 exécutions à batch size 1, mesurés avec Ollama 0.30.x sous Ubuntu 22.04 LTS.',
+        content: 'Critères de sélection : disponibles neuves ou d\'occasion sous 500 € ; compatibles avec au moins un runtime d\'inférence majeur (Ollama, LM Studio, llama.cpp) ; VRAM ≥ 12 Go (cartes 8 Go exclues). Plusieurs cartes sont sorties de la liste sur le prix : la RTX 3090 occasion (24 Go) se situe autour de 1 400–1 550 $ USD en annonces vendues ([suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), source mise à jour le 2026-10-15) ; la RTX 4070 12 Go à 560–705 € ; la RX 7800 XT 16 Go à ~682 € ; et la RTX 3060 12 Go neuve, relancée à 334 €, a grimpé d\'environ 45 % à 470–600 €. La RTX 4060 Ti 16 Go est conservée mais signalée — ses annonces au tarif conseillé de 399 € sont en rupture et les cartes disponibles tournent autour de 560 €. La cause leur est commune : une pénurie mondiale de DRAM et de GDDR7 tirée par la demande des centres de données IA a poussé les prix de rue nettement au-dessus des tarifs catalogue sur tout le marché, la RTX 5090 neuve se situant autour de 4 500–4 700 $ USD pour un prix conseillé de 1 999 $ et la RTX 5080 à 1 200–1 600 $ pour 999 $ (suivi InsiderLLM, source mise à jour le 2026-10-15). Tous les benchmarks sont en tok/s, moyennés sur 10 exécutions à batch size 1, mesurés avec Ollama 0.30.x sous Ubuntu 22.04 LTS.',
       },
       vramGuide: {
         title: 'Besoins en VRAM selon la taille du modèle',
@@ -1464,12 +1464,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Meilleur choix global sous 500 €** → Intel Arc B580 12 Go (250–290 €). La seule carte neuve de 12 Go fiablement disponible sous 500 €. Modèles 7B–13B en Q4, ~31 tok/s sur Llama 3.1 8B Q4, Ollama via SYCL sous Windows et Linux.',
           '**Carte CUDA la moins chère qui fonctionne** → RTX 3060 12 Go d\'occasion (270–300 €). La chaîne CUDA complète — Ollama, LM Studio, vLLM, fine-tuning LoRA — pour à peu près le même prix que l\'Arc. Achetez-la d\'occasion : la neuve est à 470–600 €.',
           '**Meilleur matériel, si vous le trouvez au tarif** → RTX 4060 Ti 16 Go. Au tarif conseillé de 399 € elle bat tout le reste ici, faisant tourner 14B en Q8 en GPU. Mais les annonces au tarif sont en rupture et les cartes disponibles coûtent ~560 €, hors du budget de cette page.',
-          '**Besoin de la capacité 30B ?** → La fenêtre sous 500 € s\'est refermée mi-2026 et ne s\'est pas rouverte. La RTX 3090 occasion (24 Go) se négocie désormais à 850–1 050 €. Prévoyez 850 €+ pour une RTX 3090 d\'occasion ou une RTX 4080 SUPER (16 Go) d\'occasion — le neuf coûte désormais ~1 600 €.',
+          '**Besoin de la capacité 30B ?** → La fenêtre sous 500 € s\'est refermée mi-2026 et ne s\'est pas rouverte. La voie est une RTX 3090 occasion (24 Go) : les annonces vendues se situent autour de 1 400–1 550 $ USD (InsiderLLM, source mise à jour le 2026-10-15).',
           '**Utilisateur Windows, sans complications** → RTX 4060 Ti 16 Go. NVIDIA CUDA offre le support Windows le plus large pour les LLM, le fine-tuning et les runtimes multimodaux.',
           '**Besoin de plus de 12 Go pour un test ?** Plutôt que de dépasser votre budget, vous pouvez [louer une carte de 24 Go pour quelques dollars](/fr/power-local-llm/best-cloud-gpu-providers) et voir si les modèles plus grands en valent la peine.',
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-fr.svg',
-        imageCaption: 'Arbre de décision pour choisir une GPU économique sous 500 € pour l\'inférence LLM locale : mène à l\'Intel Arc B580 12 Go (250–290 €) par défaut, à la RTX 3060 12 Go d\'occasion (270–300 €) si CUDA est nécessaire, et à une RTX 3090 occasion (24 Go) à partir de 900 € pour les modèles 30B.',
+        imageCaption: 'Arbre de décision pour choisir une GPU économique sous 500 € pour l\'inférence LLM locale : mène à l\'Intel Arc B580 12 Go (250–290 €) par défaut, à la RTX 3060 12 Go d\'occasion (270–300 €) si CUDA est nécessaire, et à une RTX 3090 occasion (24 Go, environ 1 400–1 550 $ USD en annonces vendues selon InsiderLLM, 2026-10-15) pour les modèles 30B.',
       },
       softwareCompat: {
         title: 'Compatibilité logicielle par GPU',
@@ -1499,7 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Peut-on encore acheter une RTX 3090 occasion pour moins de 500 € ?',
-            a: 'Non. Les RTX 3090 d\'occasion se négocient à 850–1 050 € sur eBay.fr. Le prix a d\'abord augmenté quand les passionnés de LLM ont reconnu la valeur des 24 Go de VRAM, puis de nouveau pendant la pénurie de mémoire de 2026. Ce n\'est plus une option sous 500 €, et ça ne l\'est plus depuis un moment. Si vous avez besoin de la capacité 30B (qui exige 24 Go de VRAM), prévoyez 850 €+ pour une RTX 3090 d\'occasion ou ~850 € pour une RTX 4080 SUPER (16 Go) d\'occasion — le neuf coûte désormais ~1 600 €.',
+            a: 'Non. Le [suivi InsiderLLM](https://insiderllm.com/guides/nvidia-gpu-prices-rising/) (source mise à jour le 2026-10-15) relève des annonces vendues de RTX 3090 d\'occasion autour de 1 400–1 550 $ USD (non converti en EUR ; les prix en France peuvent différer), donc ce n\'est plus une option sous 500 €. Ce sont des données d\'annonces, pas un devis. Ses 24 Go de VRAM la gardent intéressante : c\'est la voie économique vers les modèles de classe 30B, qui demandent environ 18–20 Go en Q4.',
           },
           {
             q: 'Les GPU AMD fonctionnent-elles pour l\'IA locale ?',
@@ -1511,11 +1511,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Puis-je faire tourner un modèle 70B sur une seule GPU sous 500 € ?',
-            a: 'Pas à pleine vitesse. Même la RTX 3090 (24 Go) ne peut pas contenir 70B Q4 (~40 Go) entièrement en VRAM. Vous pouvez utiliser l\'offloading CPU avec llama.cpp pour répartir le modèle entre la VRAM et la RAM système, mais la vitesse chute à 2–5 tok/s — trop lent pour un usage interactif. Pour faire tourner des modèles 70B à une vitesse utilisable, il faut deux GPU (2× RTX 3090, soit 48 Go au total) ou de l\'inférence cloud.',
+            a: 'Pas à pleine vitesse. Même la RTX 3090 (24 Go) ne peut pas contenir 70B Q4 (~40 Go) entièrement en VRAM. Vous pouvez utiliser l\'offloading CPU avec llama.cpp pour répartir le modèle entre la VRAM et la RAM système, mais la génération tourne alors bien en dessous de la vitesse d\'un modèle qui tient en VRAM, ce qui rend l\'usage interactif peu pratique. Pour faire tourner des modèles 70B sur GPU, il faut deux cartes de 24 Go (2× RTX 3090, soit 48 Go au total) ou de l\'inférence cloud.',
           },
           {
             q: 'Les nouvelles GPU (RTX 5060 Ti) rendront-elles ces cartes obsolètes ?',
-            a: 'La RTX 5060 Ti 16 Go est sortie, et elle n\'a pas passé sous la RTX 4060 Ti : c\'est l\'inverse qui s\'est produit. Lancée à un tarif conseillé de 429 $, elle se vend maintenant autour de 800 € (médiane récente de 805 $), environ 88 % au-dessus du tarif, parce que la pénurie de mémoire qui a repositionné toute cette liste l\'a frappée le plus fort en tant que carte de génération actuelle. C\'est une GPU réellement meilleure que tout ce qui figure ici, avec 16 Go de VRAM et une inférence plus rapide, mais ce n\'est pas une carte sous 500 €, et attendre qu\'elle le devienne n\'est pas un plan tenable. Achetez selon ce qui est disponible : l\'Intel Arc B580 12 Go à 250–290 €, ou une RTX 3060 12 Go d\'occasion à 270–300 € si vous avez besoin de CUDA.',
+            a: 'La RTX 5060 Ti 16 Go est sortie, et elle n\'a pas passé sous la RTX 4060 Ti : c\'est l\'inverse qui s\'est produit. Lancée à un tarif conseillé de 429 $, elle a été signalée en annonces de détail à partir de 679 $ sur Amazon US ([Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/), 2026-01-27), bien au-dessus du tarif : dans le même sens que le repositionnement de toute cette liste par la pénurie de mémoire. C\'est une GPU réellement meilleure que tout ce qui figure ici, avec 16 Go de VRAM et une inférence plus rapide, mais ce n\'est pas une carte sous 500 €, et attendre qu\'elle le devienne n\'est pas un plan tenable. Achetez selon ce qui est disponible : l\'Intel Arc B580 12 Go à 250–290 €, ou une RTX 3060 12 Go d\'occasion à 270–300 € si vous avez besoin de CUDA.',
           },
           {
             q: 'Combien coûte une RTX 4060 Ti 16 Go d\'occasion ?',
@@ -1545,10 +1545,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '8 Go de VRAM suffisent-ils pour les LLMs en local ?',
           acceptedAnswer: { '@type': 'Answer', text: '8 Go limitent aux modèles 7B en Q4. Pour une utilisation sérieuse, 12 Go est le minimum, 16 Go est recommandé.' },
         },
-        { '@type': 'Question', name: 'Peut-on encore acheter une RTX 3090 occasion pour moins de 500 € ?', acceptedAnswer: { '@type': 'Answer', text: 'Non — les RTX 3090 d\'occasion se négocient à 850–1 050 € sur eBay.fr, bien au-dessus du plafond de 500 €. Pour la capacité 30B, prévoyez 850 €+ ou ~850 € pour une RTX 4080 SUPER (16 Go) d\'occasion.' } },
+        { '@type': 'Question', name: 'Peut-on encore acheter une RTX 3090 occasion pour moins de 500 € ?', acceptedAnswer: { '@type': 'Answer', text: 'Non — le suivi InsiderLLM (source mise à jour le 2026-10-15) relève des annonces vendues de RTX 3090 d\'occasion autour de 1 400–1 550 $ USD. Pour la capacité 30B, une RTX 3090 d\'occasion (24 Go) est la voie économique.' } },
         { '@type': 'Question', name: 'Qu\'en est-il des GPU Intel Arc pour l\'IA ?', acceptedAnswer: { '@type': 'Answer', text: 'L\'Intel Arc B580 12 Go est la meilleure option Arc en 2026 et désormais la meilleure carte de cette page : 12 Go de VRAM à 250–290 €, environ 30–40 % plus lent que NVIDIA en tok/s bruts, mais seule carte neuve de 12 Go fiablement sous 500 €. Pour le fine-tuning LoRA, préférez une RTX 3060 12 Go d\'occasion.' } },
-        { '@type': 'Question', name: 'Puis-je faire tourner un modèle 70B sur une seule GPU sous 500 € ?', acceptedAnswer: { '@type': 'Answer', text: 'Pas à pleine vitesse. Même la RTX 3090 (24 Go) ne peut pas contenir 70B Q4 (~40 Go) entièrement en VRAM. L\'offloading CPU fait chuter la vitesse à 2–5 tok/s. Deux GPU ou de l\'inférence cloud sont nécessaires.' } },
-        { '@type': 'Question', name: 'Les nouvelles GPU (RTX 5060 Ti) rendront-elles ces cartes obsolètes ?', acceptedAnswer: { '@type': 'Answer', text: 'La RTX 5060 Ti 16 Go est sortie et n\'a pas passé sous la RTX 4060 Ti : lancée à 429 $ conseillés, elle se vend autour de 800 €, environ 88 % au-dessus du tarif. C\'est la meilleure GPU, mais pas une carte sous 500 €.' } },
+        { '@type': 'Question', name: 'Puis-je faire tourner un modèle 70B sur une seule GPU sous 500 € ?', acceptedAnswer: { '@type': 'Answer', text: 'Pas à pleine vitesse. Même la RTX 3090 (24 Go) ne peut pas contenir 70B Q4 (~40 Go) entièrement en VRAM. L\'offloading CPU reste bien en dessous de la vitesse d\'un modèle qui tient en VRAM. Les voies pratiques pour le 70B sont deux GPU de 24 Go ou l\'inférence cloud.' } },
+        { '@type': 'Question', name: 'Les nouvelles GPU (RTX 5060 Ti) rendront-elles ces cartes obsolètes ?', acceptedAnswer: { '@type': 'Answer', text: 'La RTX 5060 Ti 16 Go est sortie et n\'a pas passé sous la RTX 4060 Ti : lancée à 429 $ conseillés, elle a été signalée à partir de 679 $ sur Amazon US (Wccftech, 2026-01-27). C\'est la meilleure GPU, mais pas une carte sous 500 €.' } },
         { '@type': 'Question', name: 'Combien coûte une RTX 4060 Ti 16 Go d\'occasion ?', acceptedAnswer: { '@type': 'Answer', text: 'Avec des cartes neuves disponibles autour de 560 €, les annonces d\'occasion tournent entre 420 et 480 € sur eBay.fr, selon l\'état. Vérifiez qu\'il s\'agit bien de la variante 16 Go, une version 8 Go existant aussi.' } },
       ],
     },
@@ -1568,8 +1568,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ja: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
-    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2027-05-22',
+    last_full_refresh: '2026-11-22',
     designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '500ドル以下のLLM推論向けGPUおすすめランキング（2026年）',
@@ -1584,19 +1584,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'gpu', priceRange: '在庫時~$562', label: 'RTX 4060 Ti 16GBの価格を見る →' },
     ],
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**$500以下のローカルLLM推論に最良のGPUは、いまやIntel Arc B580 12GB（約¥58,000〜67,000）です。12GB VRAMで7B–13BモデルをQ4実行し、Llama 3.1 8B Q4で約31トークン/秒。$500相当以下で安定して入手できる唯一の新品12GBカードです。CUDAツールチェーンが必要なら、中古のRTX 3060 12GB（約¥42,000〜47,000）が次点になります。前回の1位だったRTX 4060 Ti 16GBは枠から外れました。希望小売価格$399の在庫はなく、実際に買えるカードは約$562（約¥117,000）です。RTX 3060 12GBも再発売時から約45%上昇し、新品で$474〜599（約¥74,000〜94,000）になりました。すべてを動かした原因は同じです。AIデータセンター需要が牽引する世界的なDRAM・GDDR7不足です。30Bモデルが必要なら$850以上を見込んでください。**',
+    leadAnswerBlock: '**$500以下のローカルLLM推論に最良のGPUは、いまやIntel Arc B580 12GB（約¥58,000〜67,000）です。12GB VRAMで7B–13BモデルをQ4実行し、Llama 3.1 8B Q4で約31トークン/秒。$500相当以下で安定して入手できる唯一の新品12GBカードです。CUDAツールチェーンが必要なら、中古のRTX 3060 12GB（約¥42,000〜47,000）が次点になります。前回の1位だったRTX 4060 Ti 16GBは枠から外れました。希望小売価格$399の在庫はなく、実際に買えるカードは約$562（約¥117,000）です。RTX 3060 12GBも再発売時から約45%上昇し、新品で$474〜599（約¥74,000〜94,000）になりました。すべてを動かした原因は同じです。AIデータセンター需要が牽引する世界的なDRAM・GDDR7不足です。30Bモデルが必要なら、中古RTX 3090（24GB）が現実的な選択肢で、売却済み出品で約$1,400〜1,550です（[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、出典更新日2026-10-15。米ドル表記）。**',
     quickAnswerTop: {
       question: '$500以下でローカルAIモデルを動かす最高のGPUは何ですか？',
-      answer: 'Intel Arc B580 12GB（約¥58,000〜67,000）が$500以下のローカルLLM推論に最良です。12GB VRAMで7B–13BモデルをQ4実行し、SYCL/oneAPIバックエンドによりWindows・LinuxでOllamaが動作します。$500相当以下で安定して入手できる唯一の新品12GBカードです。CUDAツールチェーンが必要な場合は、中古のRTX 3060 12GB（約¥42,000〜47,000）が次点です。2026年のメモリ不足により、このリストの他は枠外になりました。RTX 4060 Ti 16GBは在庫があるとき約$562（約¥117,000）、新品RTX 3060 12GBは$474〜599、中古RTX 3090は$850〜1,050、RTX 4070 12GBは$560〜705、RX 7800 XT 16GBは約$832です。',
+      answer: 'Intel Arc B580 12GB（約¥58,000〜67,000）が$500以下のローカルLLM推論に最良です。12GB VRAMで7B–13BモデルをQ4実行し、SYCL/oneAPIバックエンドによりWindows・LinuxでOllamaが動作します。$500相当以下で安定して入手できる唯一の新品12GBカードです。CUDAツールチェーンが必要な場合は、中古のRTX 3060 12GB（約¥42,000〜47,000）が次点です。2026年のメモリ不足により、このリストの他は枠外になりました。RTX 4060 Ti 16GBは在庫があるとき約$562（約¥117,000）、新品RTX 3060 12GBは$474〜599、中古RTX 3090は売却済み出品で約$1,400〜1,550（InsiderLLM、出典更新日2026-10-15）、RTX 4070 12GBは$560〜705、RX 7800 XT 16GBは約$832です。',
       bullets: [
         '**優勝:** Intel Arc B580 12GB（約¥58,000〜67,000）— 12GB VRAM、Llama 3.1 8B Q4で約31トークン/秒、$500相当以下で安定入手できる唯一の新品12GBカード',
         '**次点:** 中古RTX 3060 12GB（約¥42,000〜47,000）— フルCUDAツールチェーンへの最安ルート',
         '⚠️ RTX 4060 Ti 16GB：希望小売価格$399では在庫なし、入手可能な個体は約$562（約¥117,000）— $500相当以下の安定した選択肢ではない',
         '⚠️ 新品RTX 3060 12GB：$474〜599（約¥74,000〜94,000）、再発売時から45%上昇 — 中古で買うべき',
-        '⚠️ 中古RTX 3090：現在 約¥142,000〜162,000 — $500相当以下の選択肢ではない',
+        '⚠️ 中古RTX 3090：売却済み出品で約$1,400〜1,550（InsiderLLM、出典更新日2026-10-15）— $500相当以下の選択肢ではない',
         '⚠️ RTX 4070 12GB：約¥90,000、RX 7800 XT 16GB：約¥120,000 — いずれも$500相当超',
       ],
-      updatedDate: '2026-09-01',
+      updatedDate: '2026-11-22',
     },
     sections: {
       tldr: {
@@ -1606,9 +1606,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '中古RTX 3060 12GB（約¥42,000〜47,000）が次点 — フルCUDAツールチェーンへの最安ルート',
           '⚠️ 価格警告：前回1位のRTX 4060 Ti 16GBは希望小売価格$399で在庫がなく、入手可能な個体は約$562 — $500相当以下リストから除外',
           '⚠️ 価格警告：新品RTX 3060 12GBは$474〜599（約¥74,000〜94,000）、再発売時から45%上昇 — このカードは中古市場が現実的',
-          '⚠️ 価格警告：中古RTX 3090は現在 約¥142,000〜162,000、RTX 4070 12GBは約¥90,000 — いずれも$500相当以下リストから除外',
+          '⚠️ 価格警告：中古RTX 3090は売却済み出品で約$1,400〜1,550（InsiderLLM、出典更新日2026-10-15）、RTX 4070 12GBは約¥90,000 — いずれも$500相当以下リストから除外',
           '⚠️ 価格警告：RX 7800 XT 16GBは現在 約¥120,000 — $500相当以下リストから除外',
-          'なぜ全部動いたのか：AIデータセンター需要が牽引する世界的なDRAM・GDDR7不足により、グラフィックスカードの実売価格が市場全体で定価を大きく上回りました。ハードウェアは何も変わっていません。変わったのは価格だけです。30Bモデルが必要なら中古RTX 3090（24GB）に¥150,000以上を見込んでください。',
+          'なぜ全部動いたのか：AIデータセンター需要が牽引する世界的なDRAM・GDDR7不足により、グラフィックスカードの実売価格が市場全体で定価を大きく上回りました。ハードウェアは何も変わっていません。変わったのは価格だけです。30Bモデルが必要なら、中古RTX 3090（24GB）が現実的な選択肢で、売却済み出品で約$1,400〜1,550です（InsiderLLM、出典更新日2026-10-15）。',
           'リスト上の3機種はいずれもOllama・LM Studio・llama.cppをそのまま動作',
         ],
       },
@@ -1653,7 +1653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: '性能比較 — 現在価格 + テスト結果',
-        content: 'ベンチマークはOllama 0.30.x、llama.cppサーバー、HuggingFaceのモデルで測定。テストシステム：Ryzen 9 7950X、64GB DDR5、NVMe SSD。速度は以前のテストから変わっていません。動いたのはハードウェアではなく価格です。$500相当超のため除外：中古RTX 3090（$850〜1,050）、RTX 4070 12GB（$560〜705）、RX 7800 XT 16GB（約$832）、新品RTX 3060 12GB（$474〜599）。',
+        content: 'ベンチマークはOllama 0.30.x、llama.cppサーバー、HuggingFaceのモデルで測定。テストシステム：Ryzen 9 7950X、64GB DDR5、NVMe SSD。速度は以前のテストから変わっていません。動いたのはハードウェアではなく価格です。$500相当超のため除外：中古RTX 3090（売却済み出品で約$1,400〜1,550、InsiderLLM、出典更新日2026-10-15）、RTX 4070 12GB（$560〜705）、RX 7800 XT 16GB（約$832）、新品RTX 3060 12GB（$474〜599）。',
         columns: ['GPU', 'VRAM', '価格', 'Llama 3.1 8B Q4 トークン/秒', 'Qwen3 14B Q8 トークン/秒', '最大モデル（Q4）'],
         rows: [
           { GPU: 'Intel Arc B580 12GB ★', VRAM: '12GB', '価格': '約¥58,000〜67,000', 'Llama 3.1 8B Q4 トークン/秒': '31トークン/秒', 'Qwen3 14B Q8 トークン/秒': 'VRAM制限あり', '最大モデル (Q4)': '13B (Q4)' },
@@ -1665,7 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         title: 'これらのGPUを選定・テストした方法',
-        content: '選定基準：新品または中古で$500相当以下で購入可能なこと；主要な推論ランタイム（Ollama、LM Studio、llama.cpp）の少なくとも1つに対応していること；VRAM 12GB以上（8GBカードは除外）。価格を理由に複数のカードがリストから外れました。中古RTX 3090（24GB）は$850〜1,050、RTX 4070 12GBは$560〜705、RX 7800 XT 16GBは約$832、そして¥52,980で再発売された新品RTX 3060 12GBは約45%上昇して$474〜599です。RTX 4060 Ti 16GBは残していますが注意付きです——希望小売価格$399の出品は在庫切れで、入手可能な個体は約$562です。原因はすべて共通で、AIデータセンター需要が牽引する世界的なDRAM・GDDR7不足により、実売価格が市場全体で定価を大きく上回りました。NVIDIAのRTX 50シリーズは希望小売価格より約36〜39%高く取引され、AMDもRadeonを約10%引き上げています。ベンチマークはすべてバッチサイズ1で10回実行の平均トークン/秒、Ubuntu 22.04 LTS上のOllama 0.30.xで測定。',
+        content: '選定基準：新品または中古で$500相当以下で購入可能なこと；主要な推論ランタイム（Ollama、LM Studio、llama.cpp）の少なくとも1つに対応していること；VRAM 12GB以上（8GBカードは除外）。価格を理由に複数のカードがリストから外れました。中古RTX 3090（24GB）は売却済み出品で約$1,400〜1,550（[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)、出典更新日2026-10-15）、RTX 4070 12GBは$560〜705、RX 7800 XT 16GBは約$832、そして¥52,980で再発売された新品RTX 3060 12GBは約45%上昇して$474〜599です。RTX 4060 Ti 16GBは残していますが注意付きです——希望小売価格$399の出品は在庫切れで、入手可能な個体は約$562です。原因はすべて共通で、AIデータセンター需要が牽引する世界的なDRAM・GDDR7不足により、実売価格が市場全体で定価を大きく上回りました。RTX 5090の新品は希望小売価格$1,999に対して約$4,500〜4,700、RTX 5080は$999に対して$1,200〜1,600です（InsiderLLMトラッカー、出典更新日2026-10-15）。ベンチマークはすべてバッチサイズ1で10回実行の平均トークン/秒、Ubuntu 22.04 LTS上のOllama 0.30.xで測定。',
       },
       vramGuide: {
         title: 'モデルサイズ別のVRAM要件',
@@ -1695,12 +1695,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**$500以下の総合ベスト** → Intel Arc B580 12GB（約¥58,000〜67,000）。$500相当以下で安定して入手できる唯一の新品12GBカード。7B–13BモデルをQ4実行、Llama 3.1 8B Q4で約31トークン/秒、SYCL経由でWindows・LinuxのOllamaに対応。',
           '**動作する最安のCUDAカード** → 中古RTX 3060 12GB（約¥42,000〜47,000）。Ollama、LM Studio、vLLM、LoRAファインチューニングを含むフルCUDAツールチェーンが使えます。中古で買ってください。新品は$474〜599です。',
           '**希望小売価格で見つかるなら最良のハードウェア** → RTX 4060 Ti 16GB。希望小売価格$399ならここにある他のどれよりも優れ、14B Q8をGPU内実行できます。ただし希望小売価格の出品は在庫切れで、入手可能な個体は約$562とこのページの予算外です。',
-          '**30Bモデル対応が必要ですか？** → $500相当以下の枠は2026年半ばに閉じ、再び開いていません。中古RTX 3090（24GB）は現在約¥142,000〜162,000です。',
+          '**30Bモデル対応が必要ですか？** → $500相当以下の枠は2026年半ばに閉じ、再び開いていません。中古RTX 3090（24GB）が現実的な選択肢で、売却済み出品で約$1,400〜1,550です（InsiderLLM、出典更新日2026-10-15）。',
           '**Windowsユーザーで手間をかけたくない場合** → 中古RTX 3060 12GB。NVIDIA CUDAはLLM・ファインチューニング・マルチモーダルランタイムで最も幅広いWindowsツールチェーンサポートを提供し、中古3060はその最安の入口です。',
           '**テストに12 GB以上が必要ですか？** 予算を広げる代わりに、[24 GBカードを数ドルでレンタル](/ja/power-local-llm/best-cloud-gpu-providers)して、大きなモデルが価値に見合うかを確かめられます。',
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ja.svg',
-        imageCaption: '500ドル以下のローカルLLM推論向けバジェットGPU選定の決定木：標準の選択肢としてIntel Arc B580 12GB（約¥58,000〜67,000）、CUDAが必要なら中古RTX 3060 12GB（約¥42,000〜47,000）、30Bモデルには中古RTX 3090（24GB、¥150,000以上）へ導きます。',
+        imageCaption: '500ドル以下のローカルLLM推論向けバジェットGPU選定の決定木：標準の選択肢としてIntel Arc B580 12GB（約¥58,000〜67,000）、CUDAが必要なら中古RTX 3060 12GB（約¥42,000〜47,000）、30Bモデルには中古RTX 3090（24GB、InsiderLLMによる売却済み出品で約$1,400〜1,550、2026-10-15）へ導きます。',
       },
       softwareCompat: {
         title: 'GPU別ソフトウェア互換性',
@@ -1725,11 +1725,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         faqs: [
             { q: '8GB VRAMはローカルLLMに十分ですか？', a: '8GB VRAMはQ4量子化で7Bモデルに限定されます。13Bモデルは完全にVRAMに収まらず、14BモデルはCPU RAMへのオフロードが発生し速度が80〜95%低下します。2026年の実用的なローカルLLM利用には12GBが最低限、16GBが推奨です。' },
-            { q: '中古RTX 3090は今でも$500以下で買えますか？', a: 'いいえ。中古RTX 3090は$850〜1,050（約¥142,000〜162,000）で取引されています。まずLLM愛好家が24GB VRAMの価値を認識したことで上がり、次いで2026年のメモリ不足で再び上がりました。もはや$500相当以下の選択肢ではなく、その状態がしばらく続いています。30Bモデル（24GB VRAMが必要）に対応したいなら、中古RTX 3090に$850以上、または14B Q8をより高速に動かすなら中古RTX 4080 SUPER（16GB、約$850。品薄後の新品は約$1,600）を検討してください。' },
+            { q: '中古RTX 3090は今でも$500以下で買えますか？', a: 'いいえ。[InsiderLLMトラッカー](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（出典更新日2026-10-15）は、中古RTX 3090の売却済み出品を約$1,400〜1,550と記録しており、$500相当以下の選択肢ではありません（米ドル表記。日本での価格は異なる場合があります）。これは出品データであり、価格の見積もりではありません。24GB VRAMにより、30Bクラスのモデル（Q4で約18〜20GB必要）に手が届く低予算の選択肢であり続けています。' },
             { q: 'AMD GPUはローカルAIに使えますか？', a: 'はい、条件付きで。Linux上のOllama（ROCm）はRX 7800 XTでうまく動作します。WindowsのROCmサポートは改善中ですが手動設定が必要です。LoRAファインチューニングはほとんどのツールでAMDをサポートしていません。価格に関する注意：RX 7800 XT 16GBは2026年7月時点で約¥120,000に上昇したため、もはや$500相当以下の予算には収まりません——その価格帯では、RTX 4060 Ti 16GBまたはRTX 3060 12GB（いずれもNVIDIA/CUDA）が推奨の選択肢です。Windowsやファインチューニングを行うならNVIDIAを選んでください。' },
             { q: 'AI用のIntel Arc GPUはどうですか？', a: 'Intel Arc B580 12GBは2026年のベストなArc選択肢であり、メモリ不足がNVIDIA勢を再価格付けした結果、このページ全体でも最良のカードになりました。SYCLバックエンドでWindowsとLinuxの両方でOllamaを実行でき、性能は生のトークン/秒でNVIDIAより30〜40%低くなります。コストパフォーマンスは「強い」を通り越して決定的です。同等のNVIDIAカードが$474〜599のところ、12GB VRAMが$250〜290です。主な制約はいまもソフトウェアで、vLLM、ファインチューニング系ツール、マルチモーダルランタイムはArcを十分にサポートしていません。LoRAファインチューニングが必要なら中古のRTX 3060 12GBを選んでください。' },
-            { q: '$500以下のGPU1枚で70Bモデルを実行できますか？', a: 'フル速度では不可能です。RTX 3090（24GB）でさえ、70B Q4（約40GB）を完全にVRAMに収めることはできません。llama.cppのCPUオフロードを使えばGPU VRAMとシステムRAMにモデルを分割できますが、速度は2〜5トークン/秒まで低下し、対話的な用途には遅すぎます。70Bモデルを実用的な速度で実行するには、GPU2枚（RTX 3090×2枚で計48GB）またはクラウド推論が必要です。' },
-            { q: '新しいGPU（RTX 5060 Ti）はこれらを時代遅れにしますか？', a: 'RTX 5060 Ti 16GBはすでに発売され、RTX 4060 Tiを下回るどころか逆になりました。希望小売価格$429で登場し、現在は約$800（直近の中央値$805）、定価より約88%高い水準で売られています。このリスト全体を再価格付けしたのと同じメモリ不足が、現行世代カードである同機を最も強く直撃したためです。16GB VRAMとより高速な推論を備え、ここにあるどれよりも実際に優れたGPUですが、$500以下のカードではなく、そうなるのを待つのは現実的な計画ではありません。いま買えるもので判断してください。Intel Arc B580 12GBが$250〜290、CUDAが必要なら中古RTX 3060 12GBが$270〜300です。' },
+            { q: '$500以下のGPU1枚で70Bモデルを実行できますか？', a: 'フル速度では不可能です。RTX 3090（24GB）でさえ、70B Q4（約40GB）を完全にVRAMに収めることはできません。llama.cppのCPUオフロードを使えばGPU VRAMとシステムRAMにモデルを分割できますが、その場合の生成速度はVRAMに収まるモデルを大きく下回り、対話的な用途には実用的ではありません。70Bモデルは、24GBカード2枚（RTX 3090×2枚で計48GB）またはクラウド推論で動かすのが現実的です。' },
+            { q: '新しいGPU（RTX 5060 Ti）はこれらを時代遅れにしますか？', a: 'RTX 5060 Ti 16GBはすでに発売され、RTX 4060 Tiを下回るどころか逆になりました。希望小売価格$429で登場し、米国Amazonでは$679からの小売出品が報告されており（[Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/)、2026-01-27）、定価を大きく上回っています。このリスト全体を再価格付けしたメモリ不足と同じ方向の動きです。16GB VRAMとより高速な推論を備え、ここにあるどれよりも実際に優れたGPUですが、$500以下のカードではなく、そうなるのを待つのは現実的な計画ではありません。いま買えるもので判断してください。Intel Arc B580 12GBが$250〜290、CUDAが必要なら中古RTX 3060 12GBが$270〜300です。' },
             { q: '中古のRTX 4060 Ti 16GBはいくらですか？', a: '中古のRTX 4060 Ti 16GBは新品の値上がりに追随しています。在庫のある新品が約$562のため、中古の出品はeBayで概ね$420〜480、状態や保証残存期間により変動します。希望小売価格の新品供給が枯れたため、中古で買っても大きな節約にならない数少ないカードの1つです。' },
           ],
       },
@@ -1763,7 +1763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '中古RTX 3090は今でも$500以下で買えますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'いいえ。中古RTX 3090は$850〜1,050（約¥142,000〜162,000）で取引されており、$500相当の枠を大きく超えています。30Bモデル対応には$850以上、または中古RTX 4080 SUPER（16GB、約$850）を検討してください。',
+              'text': 'いいえ。InsiderLLMトラッカー（出典更新日2026-10-15）は、中古RTX 3090の売却済み出品を約$1,400〜1,550と記録しています。30Bモデル対応には、中古RTX 3090（24GB）が低予算の選択肢です。',
             },
           },
           {
@@ -1787,7 +1787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '$500以下のGPU1枚で70Bモデルを実行できますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'フル速度では不可能です。RTX 3090（24GB）でさえ、70B Q4（約40GB）を完全にVRAMに収めることはできません。llama.cppのCPUオフロードを使えばGPU VRAMとシステムRAMにモデルを分割できますが、速度は2〜5トークン/秒まで低下し、対話的な用途には遅すぎます。70Bモデルを実用的な速度で実行するには、GPU2枚（RTX 3090×2枚で計48GB）またはクラウド推論が必要です。',
+              'text': 'フル速度では不可能です。RTX 3090（24GB）でさえ、70B Q4（約40GB）を完全にVRAMに収めることはできません。llama.cppのCPUオフロードを使えばGPU VRAMとシステムRAMにモデルを分割できますが、その場合の生成速度はVRAMに収まるモデルを大きく下回り、対話的な用途には実用的ではありません。70Bモデルは、24GBカード2枚（RTX 3090×2枚で計48GB）またはクラウド推論で動かすのが現実的です。',
             },
           },
           {
@@ -1795,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '新しいGPU（RTX 5060 Ti）はこれらを時代遅れにしますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RTX 5060 Ti 16GBはすでに発売され、RTX 4060 Tiを下回りませんでした。希望小売価格$429で登場し、現在は約$800と定価より約88%高い水準です。より優れたGPUですが、$500以下のカードではありません。',
+              'text': 'RTX 5060 Ti 16GBはすでに発売され、RTX 4060 Tiを下回りませんでした。希望小売価格$429で登場し、米国Amazonでは$679からの小売出品が報告されています（Wccftech、2026-01-27）。より優れたGPUですが、$500以下のカードではありません。',
             },
           },
           {
@@ -1824,8 +1824,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   zh: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
-    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2027-05-22',
+    last_full_refresh: '2026-11-22',
     designSkin: 'hub',
     theme: 'Hardware & Performance',
     title: '2026年500美元以下LLM推理最佳GPU排行',
@@ -1840,19 +1840,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'gpu', priceRange: '有货时~$562', label: '查看RTX 4060 Ti 16GB价格 →' },
     ],
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**$500以下本地LLM推理的最佳GPU现在是Intel Arc B580 12GB（$250–290）：12GB显存可运行7B–13B模型的Q4，Llama 3.1 8B Q4约31 tok/s，而且它是目前唯一仍能稳定以500美元以下买到的全新12GB显卡。若需要CUDA工具链，二手RTX 3060 12GB（$270–300）是次选。此前的冠军RTX 4060 Ti 16GB已经出局：$399官方定价的货源缺货，实际能买到的卡约$562。RTX 3060 12GB自重新上市以来上涨约45%，全新价已达$474–599。推动这一切的是同一个原因：AI数据中心需求引发的全球DRAM与GDDR7短缺。若需要30B模型能力，请预算$850以上。**',
+    leadAnswerBlock: '**$500以下本地LLM推理的最佳GPU现在是Intel Arc B580 12GB（$250–290）：12GB显存可运行7B–13B模型的Q4，Llama 3.1 8B Q4约31 tok/s，而且它是目前唯一仍能稳定以500美元以下买到的全新12GB显卡。若需要CUDA工具链，二手RTX 3060 12GB（$270–300）是次选。此前的冠军RTX 4060 Ti 16GB已经出局：$399官方定价的货源缺货，实际能买到的卡约$562。RTX 3060 12GB自重新上市以来上涨约45%，全新价已达$474–599。推动这一切的是同一个原因：AI数据中心需求引发的全球DRAM与GDDR7短缺。若需要30B模型能力，二手RTX 3090（24GB）是可行路线，已售出挂牌价约$1,400–1,550（[InsiderLLM追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15）。**',
     quickAnswerTop: {
       question: '$500以下跑本地大模型最好的GPU是什么？',
-      answer: '**Intel Arc B580 12GB（$250–290）是$500以下本地LLM推理的最佳GPU。** 12GB显存可运行7B–13B模型的Q4，通过SYCL/oneAPI后端在Windows和Linux上运行Ollama，并且是目前唯一仍能稳定以500美元以下买到的全新12GB显卡。若需要CUDA工具链，二手RTX 3060 12GB（$270–300）是次选。2026年的存储器短缺已把榜单其余部分推出这个价位：RTX 4060 Ti 16GB有货时约$562，全新RTX 3060 12GB为$474–599，二手RTX 3090为$850–1,050，RTX 4070 12GB为$560–705，RX 7800 XT 16GB约$832。',
+      answer: '**Intel Arc B580 12GB（$250–290）是$500以下本地LLM推理的最佳GPU。** 12GB显存可运行7B–13B模型的Q4，通过SYCL/oneAPI后端在Windows和Linux上运行Ollama，并且是目前唯一仍能稳定以500美元以下买到的全新12GB显卡。若需要CUDA工具链，二手RTX 3060 12GB（$270–300）是次选。2026年的存储器短缺已把榜单其余部分推出这个价位：RTX 4060 Ti 16GB有货时约$562，全新RTX 3060 12GB为$474–599，二手RTX 3090已售出挂牌价约$1,400–1,550（InsiderLLM，来源更新于2026-10-15），RTX 4070 12GB为$560–705，RX 7800 XT 16GB约$832。',
       bullets: [
         '**优胜:** Intel Arc B580 12GB（$250–290）——12GB显存、Llama 3.1 8B Q4约31 tok/s，唯一稳定低于$500的全新12GB显卡',
         '**次选:** 二手RTX 3060 12GB（$270–300）——获得完整CUDA工具链的最便宜途径',
         '⚠️ RTX 4060 Ti 16GB：$399官方定价缺货，有货时约$562 — 不再是稳定的$500以下选项',
         '⚠️ 全新RTX 3060 12GB：$474–599，自重新上市以来上涨45% — 请改买二手',
-        '⚠️ 二手RTX 3090：现价$850–1,050 — 不再是$500以下选项',
+        '⚠️ 二手RTX 3090：已售出挂牌价约$1,400–1,550（InsiderLLM，来源更新于2026-10-15）— 不再是$500以下选项',
         '⚠️ RTX 4070 12GB：现价$560–705，RX 7800 XT 16GB：约$832 — 均超过$500',
       ],
-      updatedDate: '2026-09-01',
+      updatedDate: '2026-11-22',
     },
     sections: {
       tldr: {
@@ -1862,9 +1862,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '二手RTX 3060 12GB（$270–300）是次选 — 获得完整CUDA工具链的最便宜途径',
           '⚠️ 价格警报：此前的冠军RTX 4060 Ti 16GB在$399官方定价下缺货，有货时约$562 — 已从$500以下列表移除',
           '⚠️ 价格警报：全新RTX 3060 12GB现价$474–599，自重新上市以来上涨45% — 这张卡走二手市场才合理',
-          '⚠️ 价格警报：二手RTX 3090现价$850–1,050，RTX 4070 12GB现价$560–705 — 均已从$500以下列表移除',
+          '⚠️ 价格警报：二手RTX 3090已售出挂牌价约$1,400–1,550（InsiderLLM，来源更新于2026-10-15），RTX 4070 12GB现价$560–705 — 均已从$500以下列表移除',
           '⚠️ 价格警报：RX 7800 XT 16GB现价约$832 — 已从$500以下列表移除',
-          '为什么全都变了：AI数据中心需求引发的全球DRAM与GDDR7短缺，已将显卡成交价在整个市场推高至远超官方定价的水平。硬件本身没有变化，变的只是价格。需要30B模型能力？请为二手RTX 3090（24GB）预算$850以上。',
+          '为什么全都变了：AI数据中心需求引发的全球DRAM与GDDR7短缺，已将显卡成交价在整个市场推高至远超官方定价的水平。硬件本身没有变化，变的只是价格。需要30B模型能力？二手RTX 3090（24GB）是可行路线，已售出挂牌价约$1,400–1,550（InsiderLLM，来源更新于2026-10-15）。',
           '列表中所有3款GPU均可直接运行Ollama、LM Studio和llama.cpp',
         ],
       },
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: '性能对比 — 当前价格与测试结果',
-        content: '基准测试使用Ollama 0.30.x、llama.cpp服务端，模型来自HuggingFace。测试系统：Ryzen 9 7950X、64GB DDR5、NVMe SSD。速度与此前测试相比没有变化：变的不是硬件，而是价格。因超出$500而排除：二手RTX 3090（$850–1,050）、RTX 4070 12GB（$560–705）、RX 7800 XT 16GB（约$832）以及全新RTX 3060 12GB（$474–599）。',
+        content: '基准测试使用Ollama 0.30.x、llama.cpp服务端，模型来自HuggingFace。测试系统：Ryzen 9 7950X、64GB DDR5、NVMe SSD。速度与此前测试相比没有变化：变的不是硬件，而是价格。因超出$500而排除：二手RTX 3090（已售出挂牌价约$1,400–1,550，InsiderLLM，来源更新于2026-10-15）、RTX 4070 12GB（$560–705）、RX 7800 XT 16GB（约$832）以及全新RTX 3060 12GB（$474–599）。',
         columns: ['GPU', '显存', '价格', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', '最大模型（Q4）'],
         rows: [
           { GPU: 'Intel Arc B580 12GB ★', '显存': '12GB', '价格': '$250–290', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': '显存受限', '最大模型 (Q4)': '13B (Q4)' },
@@ -1923,7 +1923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         title: '我们如何挑选并测试这些GPU',
-        content: '筛选标准：能以新品或二手价格在$500以下购得；至少支持一种主流推理运行时（Ollama、LM Studio、llama.cpp）；显存≥12GB（8GB显卡已排除）。多款显卡因价格被移出榜单：二手RTX 3090（24GB）现价$850–1,050；RTX 4070 12GB为$560–705；RX 7800 XT 16GB约$832；以$339重新上市的全新RTX 3060 12GB已上涨约45%至$474–599。RTX 4060 Ti 16GB予以保留但加注提醒——$399官方定价缺货，现货约$562。原因是共通的：AI数据中心需求引发的全球DRAM与GDDR7短缺，已将成交价在整个市场推高至远超官方定价的水平，NVIDIA RTX 50系列成交价约高出建议零售价36–39%，AMD也将Radeon上调约10%。所有基准均为tok/s，批大小为1、取10次运行平均，在Ubuntu 22.04 LTS上使用Ollama 0.30.x测得。',
+        content: '筛选标准：能以新品或二手价格在$500以下购得；至少支持一种主流推理运行时（Ollama、LM Studio、llama.cpp）；显存≥12GB（8GB显卡已排除）。多款显卡因价格被移出榜单：二手RTX 3090（24GB）已售出挂牌价约$1,400–1,550（[InsiderLLM追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)，来源更新于2026-10-15）；RTX 4070 12GB为$560–705；RX 7800 XT 16GB约$832；以$339重新上市的全新RTX 3060 12GB已上涨约45%至$474–599。RTX 4060 Ti 16GB予以保留但加注提醒——$399官方定价缺货，现货约$562。原因是共通的：AI数据中心需求引发的全球DRAM与GDDR7短缺，已将成交价在整个市场推高至远超官方定价的水平，RTX 5090全新价约$4,500–4,700（建议零售价$1,999），RTX 5080为$1,200–1,600（建议零售价$999）（InsiderLLM追踪，来源更新于2026-10-15）。所有基准均为tok/s，批大小为1、取10次运行平均，在Ubuntu 22.04 LTS上使用Ollama 0.30.x测得。',
       },
       vramGuide: {
         title: '按模型规模划分的显存需求',
@@ -1953,12 +1953,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**$500以下综合最佳** → Intel Arc B580 12GB（$250–290）。唯一稳定低于$500的全新12GB显卡。7B–13B模型Q4，Llama 3.1 8B Q4约31 tok/s，通过SYCL在Windows和Linux上运行Ollama。',
           '**能用的最便宜CUDA显卡** → 二手RTX 3060 12GB（$270–300）。以与Arc相近的价格获得完整CUDA工具链——Ollama、LM Studio、vLLM和LoRA微调。请买二手：全新已是$474–599。',
           '**最强硬件，前提是能按官方定价买到** → RTX 4060 Ti 16GB。在$399官方定价下它胜过这里的一切，可将14B的Q8放入GPU运行。但官方定价缺货，现货约$562，超出本文预算。',
-          '**需要30B模型能力？** → $500以下窗口已在2026年年中关闭且未再打开。二手RTX 3090（24GB）现价$850–1,050。请预算$850以上购买二手RTX 3090，或购买二手RTX 4080 SUPER（16GB）——新品短缺后现售约$1,600。',
+          '**需要30B模型能力？** → $500以下窗口已在2026年年中关闭且未再打开。二手RTX 3090（24GB）是可行路线，已售出挂牌价约$1,400–1,550（InsiderLLM，来源更新于2026-10-15）。',
           '**Windows用户，追求省心** → 二手RTX 3060 12GB。NVIDIA CUDA在LLM、微调和多模态运行时方面拥有最广泛的Windows工具链支持，而二手3060是进入这一生态最便宜的方式。',
           '**测试需要超过12 GB显存？** 与其放宽预算，不如[花几美元租用24 GB显卡](/zh/power-local-llm/best-cloud-gpu-providers)，看看更大的模型是否值得。',
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-zh.svg',
-        imageCaption: '选择500美元以下预算GPU用于本地LLM推理的决策树：默认指向Intel Arc B580 12GB（$250–290），需要CUDA则指向二手RTX 3060 12GB（$270–300），30B模型则指向$850以上的二手RTX 3090（24GB）。',
+        imageCaption: '选择500美元以下预算GPU用于本地LLM推理的决策树：默认指向Intel Arc B580 12GB（$250–290），需要CUDA则指向二手RTX 3060 12GB（$270–300），30B模型则指向二手RTX 3090（24GB，InsiderLLM已售出挂牌价约$1,400–1,550，2026-10-15）。',
       },
       softwareCompat: {
         title: '各GPU的软件兼容性',
@@ -1988,7 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '二手RTX 3090还能以$500以下买到吗？',
-            a: '不能。eBay上的二手RTX 3090交易价格为$850–1,050。价格先是在LLM爱好者认识到24GB显存的价值后上涨，随后又在2026年的存储器短缺中再度上涨。它早已不是$500以下的选项。需要30B模型能力（需24GB显存），请预算$850以上购买二手RTX 3090，或考虑二手RTX 4080 SUPER（16GB，约$850；新品短缺后约$1,600）以获得更快的14B Q8性能。',
+            a: '不能。[InsiderLLM追踪](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)（来源更新于2026-10-15）记录的二手RTX 3090已售出挂牌价约$1,400–1,550，因此它已不是$500以下的选项。这是挂牌数据，不是报价。24GB显存使它仍是通往30B级模型（Q4约需18–20GB）的低预算路线。',
           },
           {
             q: 'AMD显卡能用于本地AI吗？',
@@ -2000,11 +2000,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '单块500美元以下的GPU能跑70B模型吗？',
-            a: '无法流畅运行。即使是RTX 3090（24GB）也无法将70B Q4（约40GB）完全装入显存。用llama.cpp进行CPU卸载可以分割模型，但速度降至2–5 tok/s，无法交互使用。流畅运行70B模型需要双GPU（如2×RTX 3090共48GB）或云推理服务。',
+            a: '无法流畅运行。即使是RTX 3090（24GB）也无法将70B Q4（约40GB）完全装入显存。用llama.cpp进行CPU卸载可以分割模型，但此时生成速度远低于完全放进显存的模型，交互使用并不实用。在GPU上运行70B模型需要两张24GB显卡（如2×RTX 3090共48GB）或云推理服务。',
           },
           {
             q: '新款GPU（RTX 5060 Ti）会让这些显卡过时吗？',
-            a: 'RTX 5060 Ti 16GB已经上市，而且并没有低于RTX 4060 Ti，反而相反。它以$429官方定价发布，如今售价约$800（近期中位数为$805），比官方定价高约88%——因为让整份榜单重新定价的那场存储器短缺，对身为当代产品的它冲击最大。它确实是比这里任何一张都更好的GPU，拥有16GB显存和更快的推理速度，但它不是$500以下的显卡，而等待它降到那个价位并不是一个值得依赖的计划。请按现在买得到的东西决策：Intel Arc B580 12GB为$250–290，若需要CUDA则选二手RTX 3060 12GB（$270–300）。',
+            a: 'RTX 5060 Ti 16GB已经上市，而且并没有低于RTX 4060 Ti，反而相反。它以$429官方定价发布，美国亚马逊曾报道有$679起的零售挂牌（[Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/)，2026-01-27），远高于官方定价——与让整份榜单重新定价的存储器短缺方向一致。它确实是比这里任何一张都更好的GPU，拥有16GB显存和更快的推理速度，但它不是$500以下的显卡，而等待它降到那个价位并不是一个值得依赖的计划。请按现在买得到的东西决策：Intel Arc B580 12GB为$250–290，若需要CUDA则选二手RTX 3060 12GB（$270–300）。',
           },
           {
             q: '二手RTX 4060 Ti 16GB多少钱？',
@@ -2037,11 +2037,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: '单块500美元以下的GPU能跑70B模型吗？',
-          acceptedAnswer: { '@type': 'Answer', text: '无法流畅运行。即使RTX 3090（24GB）也装不下70B Q4（约40GB）。CPU卸载会让速度降至2–5 tok/s。需要双GPU或云推理。' },
+          acceptedAnswer: { '@type': 'Answer', text: '无法流畅运行。即使RTX 3090（24GB）也装不下70B Q4（约40GB）。CPU卸载的速度远低于完全放进显存的模型。实用路线是两张24GB显卡或云推理。' },
         },
-        { '@type': 'Question', name: '二手RTX 3090还能以$500以下买到吗？', acceptedAnswer: { '@type': 'Answer', text: '不能——eBay上的二手RTX 3090交易价格为$850–1,050，已远超$500。需要30B模型能力请预算$850以上，或考虑二手RTX 4080 SUPER（16GB，约$850）。' } },
+        { '@type': 'Question', name: '二手RTX 3090还能以$500以下买到吗？', acceptedAnswer: { '@type': 'Answer', text: '不能——InsiderLLM追踪（来源更新于2026-10-15）记录的二手RTX 3090已售出挂牌价约$1,400–1,550，已远超$500。需要30B模型能力，二手RTX 3090（24GB）是低预算路线。' } },
         { '@type': 'Question', name: 'AI用的Intel Arc显卡怎么样？', acceptedAnswer: { '@type': 'Answer', text: 'Intel Arc B580 12GB是2026年最佳Arc选择，也是本文整体最佳：12GB显存$250–290，原始tok/s性能比NVIDIA低30–40%，但它是唯一稳定低于$500的全新12GB显卡。若需要LoRA微调请改买二手RTX 3060 12GB。' } },
-        { '@type': 'Question', name: '新款GPU（RTX 5060 Ti）会让这些显卡过时吗？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 5060 Ti 16GB已上市，并未低于RTX 4060 Ti：它以$429官方定价发布，现售约$800，高出约88%。它是更好的GPU，但不是$500以下的显卡。' } },
+        { '@type': 'Question', name: '新款GPU（RTX 5060 Ti）会让这些显卡过时吗？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 5060 Ti 16GB已上市，并未低于RTX 4060 Ti：它以$429官方定价发布，美国亚马逊曾报道有$679起的零售挂牌（Wccftech，2026-01-27）。它是更好的GPU，但不是$500以下的显卡。' } },
         { '@type': 'Question', name: '二手RTX 4060 Ti 16GB多少钱？', acceptedAnswer: { '@type': 'Answer', text: '由于有货的新品约$562，二手在eBay上大约是$420–480，取决于成色。请确认是16GB版本，因为也存在8GB版的RTX 4060 Ti。' } },
       ],
     },
@@ -2061,8 +2061,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ko: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
-    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2027-05-22',
+    last_full_refresh: '2026-11-22',
     designSkin: 'hub',
     theme: '하드웨어 & 성능',
     title: '500달러 이하 LLM 추론용 최고 GPU 순위 (2026년)',
@@ -2077,19 +2077,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB', productName: 'RTX 4060 Ti 16GB', productCategory: 'gpu', priceRange: '재고 시 ~$562', label: 'RTX 4060 Ti 16GB 가격 확인 →' },
     ],
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**$500 이하 로컬 LLM 추론에 가장 적합한 GPU는 이제 Intel Arc B580 12GB($250–290)입니다. 12GB VRAM으로 7B–13B 모델을 Q4로 실행하며 Llama 3.1 8B Q4에서 약 31 tok/s를 냅니다. $500 아래에서 안정적으로 구할 수 있는 유일한 신품 12GB 카드입니다. CUDA 도구 체인이 필요하다면 중고 RTX 3060 12GB($270–300)가 차선책입니다. 직전 1위였던 RTX 4060 Ti 16GB는 이 범위에서 벗어났습니다. $399 권장소비자가격 매물은 품절이고 실제로 구할 수 있는 카드는 약 $562입니다. RTX 3060 12GB도 재출시 이후 약 45% 올라 신품 $474–599가 되었습니다. 이 모두를 움직인 원인은 하나입니다. AI 데이터센터 수요가 견인한 전 세계 DRAM 및 GDDR7 공급 부족입니다. 30B 모델이 필요하다면 $850 이상을 예산으로 잡으십시오.**',
+    leadAnswerBlock: '**$500 이하 로컬 LLM 추론에 가장 적합한 GPU는 이제 Intel Arc B580 12GB($250–290)입니다. 12GB VRAM으로 7B–13B 모델을 Q4로 실행하며 Llama 3.1 8B Q4에서 약 31 tok/s를 냅니다. $500 아래에서 안정적으로 구할 수 있는 유일한 신품 12GB 카드입니다. CUDA 도구 체인이 필요하다면 중고 RTX 3060 12GB($270–300)가 차선책입니다. 직전 1위였던 RTX 4060 Ti 16GB는 이 범위에서 벗어났습니다. $399 권장소비자가격 매물은 품절이고 실제로 구할 수 있는 카드는 약 $562입니다. RTX 3060 12GB도 재출시 이후 약 45% 올라 신품 $474–599가 되었습니다. 이 모두를 움직인 원인은 하나입니다. AI 데이터센터 수요가 견인한 전 세계 DRAM 및 GDDR7 공급 부족입니다. 30B 모델이 필요하다면 중고 RTX 3090(24GB)이 현실적인 선택이며, 판매 완료 매물 기준 약 $1,400–1,550입니다([InsiderLLM 추적](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15).**',
     quickAnswerTop: {
       question: '$500 이하에서 LLM을 로컬로 실행하기에 가장 좋은 GPU는 무엇입니까?',
-      answer: '**Intel Arc B580 12GB($250–290)는 $500 이하 로컬 LLM 추론에서 최고의 GPU입니다.** 12GB VRAM으로 7B–13B 모델을 Q4로 실행하고, SYCL/oneAPI 백엔드를 통해 Windows와 Linux에서 Ollama가 동작하며, $500 아래에서 안정적으로 구할 수 있는 유일한 신품 12GB 카드입니다. CUDA 도구 체인이 필요하면 중고 RTX 3060 12GB($270–300)가 차선책입니다. 2026년 메모리 공급 부족으로 나머지는 모두 이 범위를 벗어났습니다. RTX 4060 Ti 16GB는 재고가 있을 때 약 $562, 신품 RTX 3060 12GB는 $474–599, 중고 RTX 3090은 $850–1,050, RTX 4070 12GB는 $560–705, RX 7800 XT 16GB는 약 $832입니다.',
+      answer: '**Intel Arc B580 12GB($250–290)는 $500 이하 로컬 LLM 추론에서 최고의 GPU입니다.** 12GB VRAM으로 7B–13B 모델을 Q4로 실행하고, SYCL/oneAPI 백엔드를 통해 Windows와 Linux에서 Ollama가 동작하며, $500 아래에서 안정적으로 구할 수 있는 유일한 신품 12GB 카드입니다. CUDA 도구 체인이 필요하면 중고 RTX 3060 12GB($270–300)가 차선책입니다. 2026년 메모리 공급 부족으로 나머지는 모두 이 범위를 벗어났습니다. RTX 4060 Ti 16GB는 재고가 있을 때 약 $562, 신품 RTX 3060 12GB는 $474–599, 중고 RTX 3090은 판매 완료 매물 기준 약 $1,400–1,550(InsiderLLM, 출처 갱신일 2026-10-15), RTX 4070 12GB는 $560–705, RX 7800 XT 16GB는 약 $832입니다.',
       bullets: [
         '**우승:** Intel Arc B580 12GB($250–290) — 12GB VRAM, Llama 3.1 8B Q4에서 약 31 tok/s, $500 아래에서 안정적으로 구할 수 있는 유일한 신품 12GB 카드',
         '**차선책:** 중고 RTX 3060 12GB($270–300) — 완전한 CUDA 도구 체인으로 가는 가장 저렴한 경로',
         '⚠️ RTX 4060 Ti 16GB: $399 권장가 매물 품절, 재고 시 약 $562 — 더 이상 안정적인 $500 이하 선택지 아님',
         '⚠️ 신품 RTX 3060 12GB: $474–599, 재출시 이후 45% 상승 — 중고로 구매하십시오',
-        '⚠️ 중고 RTX 3090: 현재 $850–1,050 — $500 이하 선택지 아님',
+        '⚠️ 중고 RTX 3090: 판매 완료 매물 기준 약 $1,400–1,550(InsiderLLM, 출처 갱신일 2026-10-15) — $500 이하 선택지 아님',
         '⚠️ RTX 4070 12GB: 현재 $560–705, RX 7800 XT 16GB: 약 $832 — 모두 $500 초과',
       ],
-      updatedDate: '2026-09-01',
+      updatedDate: '2026-11-22',
     },
     sections: {
       tldr: {
@@ -2099,9 +2099,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '중고 RTX 3060 12GB($270–300)가 차선책 — 완전한 CUDA 도구 체인으로 가는 가장 저렴한 경로',
           '⚠️ 가격 경고: 직전 1위였던 RTX 4060 Ti 16GB는 $399 권장가에 품절이며 재고 시 약 $562 — $500 이하 목록에서 제거',
           '⚠️ 가격 경고: 신품 RTX 3060 12GB는 $474–599로 재출시 이후 45% 상승 — 이 카드는 중고 시장이 합리적입니다',
-          '⚠️ 가격 경고: 중고 RTX 3090이 $850–1,050, RTX 4070 12GB가 $560–705로 상승 — 모두 $500 이하 목록에서 제거',
+          '⚠️ 가격 경고: 중고 RTX 3090이 판매 완료 매물 기준 약 $1,400–1,550(InsiderLLM, 출처 갱신일 2026-10-15), RTX 4070 12GB가 $560–705로 상승 — 모두 $500 이하 목록에서 제거',
           '⚠️ 가격 경고: RX 7800 XT 16GB가 약 $832로 상승 — $500 이하 목록에서 제거',
-          '왜 전부 움직였나: AI 데이터센터 수요가 견인한 전 세계 DRAM 및 GDDR7 공급 부족으로 그래픽카드 실거래가가 시장 전반에서 정가를 크게 웃돌게 되었습니다. 하드웨어는 그대로이고 가격만 바뀌었습니다. 30B 모델이 필요하다면 중고 RTX 3090(24GB)에 최소 $850을 예산으로 잡으십시오.',
+          '왜 전부 움직였나: AI 데이터센터 수요가 견인한 전 세계 DRAM 및 GDDR7 공급 부족으로 그래픽카드 실거래가가 시장 전반에서 정가를 크게 웃돌게 되었습니다. 하드웨어는 그대로이고 가격만 바뀌었습니다. 30B 모델이 필요하다면 중고 RTX 3090(24GB)이 현실적인 선택이며, 판매 완료 매물 기준 약 $1,400–1,550입니다(InsiderLLM, 출처 갱신일 2026-10-15).',
           '이 목록의 GPU 3개 모두 Ollama, LM Studio, llama.cpp를 즉시 사용 가능',
         ],
       },
@@ -2149,7 +2149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: '성능 비교 — 현재 가격 + 테스트 결과',
-        content: 'Ollama 0.30.x, llama.cpp 서버, HuggingFace 모델로 측정한 벤치마크입니다. 테스트 시스템: Ryzen 9 7950X, 64GB DDR5, NVMe SSD. 속도는 이전 테스트와 동일합니다. 움직인 것은 하드웨어가 아니라 가격입니다. $500 초과로 제외: 중고 RTX 3090($850–1,050), RTX 4070 12GB($560–705), RX 7800 XT 16GB(약 $832), 신품 RTX 3060 12GB($474–599).',
+        content: 'Ollama 0.30.x, llama.cpp 서버, HuggingFace 모델로 측정한 벤치마크입니다. 테스트 시스템: Ryzen 9 7950X, 64GB DDR5, NVMe SSD. 속도는 이전 테스트와 동일합니다. 움직인 것은 하드웨어가 아니라 가격입니다. $500 초과로 제외: 중고 RTX 3090(판매 완료 매물 기준 약 $1,400–1,550, InsiderLLM, 출처 갱신일 2026-10-15), RTX 4070 12GB($560–705), RX 7800 XT 16GB(약 $832), 신품 RTX 3060 12GB($474–599).',
         columns: ['GPU', 'VRAM', '가격', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', '최대 모델 (Q4)'],
         rows: [
           { GPU: 'Intel Arc B580 12GB ★', VRAM: '12 GB', '가격': '$250–290', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM 부족', '최대 모델 (Q4)': '13B (Q4)' },
@@ -2161,7 +2161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         title: 'GPU 선정 및 테스트 방법',
-        content: '선정 기준: 신품 또는 중고로 $500 이하 구매 가능; 주요 추론 런타임(Ollama, LM Studio, llama.cpp) 중 하나 이상 지원; VRAM 12GB 이상(8GB 카드 제외). 여러 카드가 가격 때문에 목록에서 빠졌습니다. 중고 RTX 3090(24GB)은 현재 $850–1,050, RTX 4070 12GB는 $560–705, RX 7800 XT 16GB는 약 $832이며, $339에 재출시된 신품 RTX 3060 12GB는 약 45% 올라 $474–599가 되었습니다. RTX 4060 Ti 16GB는 목록에 남기되 주의 표시를 달았습니다. $399 권장가 매물은 품절이고 재고품은 약 $562입니다. 원인은 모두 같습니다. AI 데이터센터 수요가 견인한 전 세계 DRAM 및 GDDR7 공급 부족으로 실거래가가 시장 전반에서 정가를 크게 웃돌게 되었고, NVIDIA RTX 50 시리즈는 권장가보다 약 36~39% 높게 거래되며 AMD도 Radeon 가격을 약 10% 인상했습니다. 모든 벤치마크는 배치 크기 1로 10회 실행한 평균 tok/s이며 Ubuntu 22.04 LTS에서 Ollama 0.30.x로 측정했습니다.',
+        content: '선정 기준: 신품 또는 중고로 $500 이하 구매 가능; 주요 추론 런타임(Ollama, LM Studio, llama.cpp) 중 하나 이상 지원; VRAM 12GB 이상(8GB 카드 제외). 여러 카드가 가격 때문에 목록에서 빠졌습니다. 중고 RTX 3090(24GB)은 판매 완료 매물 기준 약 $1,400–1,550([InsiderLLM 추적](https://insiderllm.com/guides/nvidia-gpu-prices-rising/), 출처 갱신일 2026-10-15), RTX 4070 12GB는 $560–705, RX 7800 XT 16GB는 약 $832이며, $339에 재출시된 신품 RTX 3060 12GB는 약 45% 올라 $474–599가 되었습니다. RTX 4060 Ti 16GB는 목록에 남기되 주의 표시를 달았습니다. $399 권장가 매물은 품절이고 재고품은 약 $562입니다. 원인은 모두 같습니다. AI 데이터센터 수요가 견인한 전 세계 DRAM 및 GDDR7 공급 부족으로 실거래가가 시장 전반에서 정가를 크게 웃돌게 되었고, RTX 5090 신품은 권장가 $1,999 대비 약 $4,500–4,700, RTX 5080은 $999 대비 $1,200–1,600입니다(InsiderLLM 추적, 출처 갱신일 2026-10-15). 모든 벤치마크는 배치 크기 1로 10회 실행한 평균 tok/s이며 Ubuntu 22.04 LTS에서 Ollama 0.30.x로 측정했습니다.',
       },
       vramGuide: {
         title: '모델 크기별 VRAM 요구량',
@@ -2180,7 +2180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '7B 모델 Q8: 약 7.5GB VRAM — 여기 있는 모든 GPU에 맞음',
           '13B 모델 Q4: 약 8.5GB VRAM — 이 목록의 모든 GPU에 맞음',
           '14B 모델 Q8: 약 14GB VRAM — RTX 4060 Ti 16GB와 중고 RTX 3090만 가능하지만 둘 다 현재 $500 이하가 아닙니다',
-          '30B 모델 Q4: 약 18GB VRAM — 24GB 필요 (중고 RTX 3090, 현재 $850+)',
+          '30B 모델 Q4: 약 18GB VRAM — 24GB 필요 (중고 RTX 3090)',
           '70B 모델 Q4: 약 40GB — GPU 2개 또는 CPU 오프로딩 필요',
         ],
       },
@@ -2191,12 +2191,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**$500 이하 최고 올라운더** → Intel Arc B580 12GB($250–290). $500 아래에서 안정적으로 구할 수 있는 유일한 신품 12GB 카드. 7B–13B 모델 Q4, Llama 3.1 8B Q4에서 약 31 tok/s, SYCL을 통해 Windows와 Linux에서 Ollama 동작.',
           '**가장 저렴한 작동하는 CUDA 카드** → 중고 RTX 3060 12GB($270–300). Arc와 거의 같은 가격으로 Ollama, LM Studio, vLLM, LoRA 파인튜닝을 포함한 완전한 CUDA 도구 체인을 얻습니다. 중고로 사십시오. 신품은 $474–599입니다.',
           '**권장가에 구할 수 있다면 최고의 하드웨어** → RTX 4060 Ti 16GB. $399 권장가라면 여기 있는 어떤 것보다 낫고 14B Q8을 GPU 내에서 실행합니다. 다만 권장가 매물은 품절이고 재고품은 약 $562로 이 문서의 예산을 벗어납니다.',
-          '**30B 모델 기능이 필요하다면?** → $500 이하 선택지는 2026년 중반에 사라졌고 다시 열리지 않았습니다. 중고 RTX 3090(24GB)은 현재 $850–1,050입니다. 중고 RTX 3090에 $850 이상, 또는 중고 RTX 4080 SUPER(16GB)를 예산으로 잡으십시오 — 신품은 공급난 이후 약 $1,600입니다.',
+          '**30B 모델 기능이 필요하다면?** → $500 이하 선택지는 2026년 중반에 사라졌고 다시 열리지 않았습니다. 중고 RTX 3090(24GB)이 현실적인 선택이며, 판매 완료 매물 기준 약 $1,400–1,550입니다(InsiderLLM, 출처 갱신일 2026-10-15).',
           '**Windows 사용자, 간편 설정** → 중고 RTX 3060 12GB. NVIDIA CUDA가 LLM, 파인튜닝, 멀티모달 런타임에서 가장 넓은 Windows 지원을 제공하며, 중고 3060이 그 생태계로 들어가는 가장 저렴한 방법입니다.',
           '**테스트에 12 GB보다 많은 용량이 필요하십니까?** 예산을 늘리는 대신 [24 GB 카드를 몇 달러에 대여](/ko/power-local-llm/best-cloud-gpu-providers)하여 더 큰 모델이 그만한 가치가 있는지 확인할 수 있습니다.',
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ko.svg',
-        imageCaption: '500달러 이하 예산 GPU를 선택하기 위한 로컬 LLM 추론 결정 트리: 기본 선택지는 Intel Arc B580 12GB($250–290), CUDA가 필요하면 중고 RTX 3060 12GB($270–300), 30B 모델에는 $850 이상의 중고 RTX 3090(24GB).',
+        imageCaption: '500달러 이하 예산 GPU를 선택하기 위한 로컬 LLM 추론 결정 트리: 기본 선택지는 Intel Arc B580 12GB($250–290), CUDA가 필요하면 중고 RTX 3060 12GB($270–300), 30B 모델에는 중고 RTX 3090(24GB, InsiderLLM 판매 완료 매물 기준 약 $1,400–1,550, 2026-10-15).',
       },
       softwareCompat: {
         title: 'GPU별 소프트웨어 호환성',
@@ -2226,7 +2226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '2026년에 중고 RTX 3090을 $500 이하로 구매할 수 있습니까?',
-            a: '아니요. 중고 RTX 3090은 eBay에서 $850–1,050에 거래됩니다. LLM 애호가들이 24GB VRAM의 가치를 인식하면서 먼저 오르고, 2026년 메모리 공급 부족으로 다시 올랐습니다. 더 이상 $500 이하 선택지가 아니며 그렇게 된 지 한참 되었습니다. 30B 모델 기능(24GB VRAM 필요)이 필요하다면 중고 RTX 3090에 $850 이상을 예산으로 잡거나, 더 빠른 14B Q8 성능을 원한다면 중고 RTX 4080 SUPER(16GB, 약 $850; 신품은 공급난 이후 약 $1,600)를 고려하십시오.',
+            a: '아니요. [InsiderLLM 추적](https://insiderllm.com/guides/nvidia-gpu-prices-rising/)(출처 갱신일 2026-10-15)은 중고 RTX 3090의 판매 완료 매물을 약 $1,400–1,550로 기록하고 있어, 더 이상 $500 이하 선택지가 아닙니다. 이는 매물 데이터이며 가격 견적이 아닙니다. 24GB VRAM 덕분에 30B급 모델(Q4에서 약 18–20GB 필요)로 가는 저예산 경로로 남아 있습니다.',
           },
           {
             q: 'AMD GPU로 로컬 LLM을 실행할 수 있습니까?',
@@ -2238,11 +2238,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '500달러 이하 GPU 한 장으로 70B 모델을 실행할 수 있습니까?',
-            a: '전체 속도로는 불가능합니다. RTX 3090(24GB)조차 70B Q4(약 40GB)를 VRAM에 완전히 담을 수 없습니다. llama.cpp의 CPU 오프로드로 모델을 GPU VRAM과 시스템 RAM에 나눌 수 있지만, 속도가 2~5 tok/s로 떨어져 대화형 사용에는 너무 느립니다. 70B 모델을 사용 가능한 속도로 실행하려면 GPU 2개(RTX 3090 ×2, 48GB 합산) 또는 클라우드 추론이 필요합니다.',
+            a: '전체 속도로는 불가능합니다. RTX 3090(24GB)조차 70B Q4(약 40GB)를 VRAM에 완전히 담을 수 없습니다. llama.cpp의 CPU 오프로드로 모델을 GPU VRAM과 시스템 RAM에 나눌 수 있지만, 이 경우 생성 속도가 VRAM에 완전히 올린 모델보다 크게 낮아 대화형 사용에는 실용적이지 않습니다. GPU에서 70B 모델을 실행하려면 24GB 카드 2장(RTX 3090 ×2, 48GB 합산) 또는 클라우드 추론이 필요합니다.',
           },
           {
             q: '새로운 GPU(RTX 5060 Ti)가 이 GPU들을 구식으로 만들 것입니까?',
-            a: 'RTX 5060 Ti 16GB는 이미 출시되었고, RTX 4060 Ti보다 낮은 가격이 되기는커녕 반대가 되었습니다. $429 권장소비자가격으로 출시되었지만 현재 약 $800(최근 중앙값 $805)에 판매되어 정가보다 약 88% 높습니다. 이 목록 전체의 가격을 다시 매긴 바로 그 메모리 공급 부족이, 현세대 카드인 이 제품을 가장 강하게 때렸기 때문입니다. 16GB VRAM과 더 빠른 추론을 갖춘, 여기 있는 어떤 것보다도 실제로 더 나은 GPU이지만 $500 이하 카드는 아니며, 그렇게 되기를 기다리는 것은 세울 만한 계획이 아닙니다. 지금 구할 수 있는 것으로 결정하십시오. Intel Arc B580 12GB가 $250–290, CUDA가 필요하면 중고 RTX 3060 12GB가 $270–300입니다.',
+            a: 'RTX 5060 Ti 16GB는 이미 출시되었고, RTX 4060 Ti보다 낮은 가격이 되기는커녕 반대가 되었습니다. $429 권장소비자가격으로 출시되었고, 미국 Amazon에서 $679부터 시작하는 소매 매물이 보고되었습니다([Wccftech](https://wccftech.com/gamers-ditch-geforce-rtx-5060-ti-16-gb-as-the-gpu-soars-in-price-significantly/), 2026-01-27). 정가를 크게 웃도는 수준이며, 이 목록 전체의 가격을 다시 매긴 메모리 공급 부족과 같은 방향입니다. 16GB VRAM과 더 빠른 추론을 갖춘, 여기 있는 어떤 것보다도 실제로 더 나은 GPU이지만 $500 이하 카드는 아니며, 그렇게 되기를 기다리는 것은 세울 만한 계획이 아닙니다. 지금 구할 수 있는 것으로 결정하십시오. Intel Arc B580 12GB가 $250–290, CUDA가 필요하면 중고 RTX 3060 12GB가 $270–300입니다.',
           },
           {
             q: '중고 RTX 4060 Ti 16GB의 가격은 얼마입니까?',
@@ -2281,7 +2281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '2026년에 중고 RTX 3090을 $500 이하로 구매할 수 있습니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '아니요 — 중고 RTX 3090은 eBay에서 $850–1,050에 거래되어 $500을 크게 넘습니다. 30B 기능이 필요하다면 $850 이상 예산 또는 중고 RTX 4080 SUPER(약 $850)를 고려하십시오.',
+            text: '아니요 — InsiderLLM 추적(출처 갱신일 2026-10-15)은 중고 RTX 3090의 판매 완료 매물을 약 $1,400–1,550로 기록하고 있어 $500을 크게 넘습니다. 30B 기능이 필요하다면 중고 RTX 3090(24GB)이 저예산 경로입니다.',
           },
         },
         {
@@ -2289,7 +2289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '500달러 이하 GPU 한 장으로 70B 모델을 실행할 수 있습니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '전체 속도로는 불가능합니다. RTX 3090(24GB)조차 70B Q4(약 40GB)를 VRAM에 담을 수 없습니다. CPU 오프로드 시 속도가 2~5 tok/s로 떨어집니다. GPU 2개 또는 클라우드 추론이 필요합니다.',
+            text: '전체 속도로는 불가능합니다. RTX 3090(24GB)조차 70B Q4(약 40GB)를 VRAM에 담을 수 없습니다. CPU 오프로드 시 속도는 VRAM에 완전히 올린 모델보다 크게 낮습니다. 실용적인 경로는 24GB GPU 2개 또는 클라우드 추론입니다.',
           },
         },
         {
