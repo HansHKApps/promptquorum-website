@@ -9,13 +9,14 @@ import { CABINET_COPY } from './cabinet-copy'
 import { cabinetAvailable, clearCabinet, getCabinetFlag, putProgramme, requestPersistence, setCabinetFlag, type CabinetFlag } from '@/lib/academy/cabinet'
 import { Mark, press } from './press'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS, ACADEMY_TUTOR_OK_KEY, ACADEMY_USED_KEY } from '@/lib/academy/config'
+import { ACADEMY_CONTACT_EMAIL, ACADEMY_MINUTE_OPTIONS, ACADEMY_PREFS_KEY, ACADEMY_STATE_EVENT, ACADEMY_SUBJECT_MAX_CHARS, ACADEMY_SUBJECT_MIN_CHARS, ACADEMY_TUTOR_OK_KEY, ACADEMY_USED_KEY } from '@/lib/academy/config'
+import { clearPrefs, loadPrefs, savePrefs } from '@/lib/academy/prefs'
 import { clearAcademyState, defaultDraft } from '@/lib/academy/store'
 import { summarizeDiagnostic } from '@/lib/academy/diagnostic-summary'
 import { lessonsDone, nextOpenLesson, openLesson } from '@/lib/academy/progress'
 import { programmeScore } from '@/lib/academy/scoring'
 import type { AcademyErrorCode } from '@/lib/academy/route-errors'
-import { LEVELS, TEST_DIFFICULTIES, TEST_FORMATS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type TestDifficulty, type TestFormat, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
+import { LEVELS, SETUP_FIELDS, TEST_DIFFICULTIES, TEST_FORMATS, TEST_MODES, type AcademyLang, type Lesson, type Level, type Programme, type Question, type QuickCheck, type SetupDraft, type SetupField, type TestDifficulty, type TestFormat, type TestMode, type TopicSuggestion } from '@/lib/academy/types'
 import { ALL_LANGS } from '@/lib/i18n/constants'
 import { TERMS } from '@/lib/terms/content'
 import { isSiteLang, parseCustomLanguage } from '@/lib/academy/language'
@@ -185,7 +186,7 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           }
           onShowResults={() => update((s) => ({ ...s, view: 'results' }))}
           // "Start over" also empties the subject field, so new text is not appended to the old subject (F12).
-          onStartOver={() => update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined, draft: s.draft ? { ...s.draft, subject: '' } : s.draft }))}
+          onStartOver={() => update((s) => ({ ...s, view: 'setup', quickCheck: undefined, programme: undefined, draft: s.draft ? { ...s.draft, subject: '', picked: [] } : s.draft }))}
         />
       ) : state.view === 'diagnostic' ? (
         <QuickCheckView tx={ltx} draft={draft} quickCheck={state.quickCheck} update={update} />
@@ -204,8 +205,15 @@ export function AcademyApp({ lang, topics }: { lang: AcademyLang; topics: TopicS
           topics={topics}
           pendingSubject={pending?.programme?.subject ?? pending?.draft?.subject ?? state.programme?.subject ?? null}
           onContinue={() => (pending ? continueSaved() : update((s) => ({ ...s, view: s.programme && programmeScore(s.programme) ? 'results' : 'programme' }), false))}
-          onChange={(patch) => update((s) => ({ ...s, draft: { ...(s.draft ?? draft), ...patch, updatedAt: new Date().toISOString() } }))}
-          onStartNew={() => (pending ? discardSaved() : update((s) => ({ ...s, programme: undefined, quickCheck: undefined }), false))}
+          onChange={(patch) =>
+            update((s) => {
+              const base = s.draft ?? draft
+              // Chosen lines are merged into the latest state, so two quick clicks never lose one of them.
+              const picked = patch.picked && base.picked !== undefined ? Array.from(new Set([...base.picked, ...patch.picked])) : patch.picked ?? base.picked
+              return { ...s, draft: { ...base, ...patch, picked, updatedAt: new Date().toISOString() } }
+            })
+          }
+          onStartNew={() => (pending ? discardSaved() : update((s) => ({ ...s, programme: undefined, quickCheck: undefined, draft: s.draft ? { ...s.draft, picked: [] } : s.draft }), false))}
           onSubmit={() =>
             update((s) => {
               const d = { ...(s.draft ?? draft), subject: (s.draft ?? draft).subject.trim() }
@@ -259,6 +267,10 @@ function SetupForm({
   onSubmit: () => void
 }) {
   const [error, setError] = useState(false)
+  // Lines the learner has to choose themselves (nothing is preselected) and that were still empty at the last start press.
+  const [missing, setMissing] = useState<SetupField[]>([])
+  const [remember, setRemember] = useState(false)
+  const picked = (f: SetupField) => draft.picked === undefined || draft.picked.includes(f)
   const customLang = parseCustomLanguage(draft.language)
   const [otherMode, setOtherMode] = useState(!!customLang)
   const [otherText, setOtherText] = useState(customLang?.name ?? '')
@@ -272,10 +284,37 @@ function SetupForm({
     setLangState('idle')
     onChange({ language: res.data.language })
   }
+  // The learner's own earlier choices, only if they ticked "Remember these choices" (they are then preselected and count as chosen).
+  const freshForm = draft.picked !== undefined && draft.picked.length === 0
+  useEffect(() => {
+    if (!freshForm) return
+    const prefs = loadPrefs()
+    if (!prefs) return
+    setRemember(true)
+    onChange({ ...prefs, picked: [...SETUP_FIELDS] })
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- runs when the form becomes empty (mount, "Start over")
+  }, [freshForm])
+
+  /** The lines this setup needs: the test sub-lines exist only once tests were chosen and are on. */
+  const neededFields = (): SetupField[] => {
+    const f: SetupField[] = ['time', 'level', 'tests']
+    if (picked('tests') && draft.testMode !== 'none') {
+      f.push('format', 'difficulty')
+      if (picked('format') && (draft.testFormat ?? 'choice') === 'choice') f.push('options')
+    }
+    return f
+  }
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
     if (draft.subject.trim().length < ACADEMY_SUBJECT_MIN_CHARS) {
       setError(true)
+      return
+    }
+    // Nothing starts on a value the learner did not choose: every empty line is marked and the form scrolls to the first.
+    const empty = neededFields().filter((f) => !picked(f))
+    if (empty.length > 0) {
+      setMissing(empty)
+      document.getElementById(`academy-field-${empty[0]}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
       return
     }
     // "Other language" chosen but not checked yet: check it first, the programme starts with the next press.
@@ -283,12 +322,30 @@ function SetupForm({
       if (langState !== 'checking') void checkLanguage()
       return
     }
+    // Opt-in: remember (or forget) the learner's choices for the next setup form.
+    if (remember) {
+      savePrefs({ availableMinutes: draft.availableMinutes, selfLevel: draft.selfLevel, testMode: draft.testMode, testFormat: draft.testFormat ?? 'choice', testDifficulty: draft.testDifficulty ?? 'medium', choiceOptions: draft.choiceOptions ?? 3 })
+    } else {
+      clearPrefs()
+    }
     onSubmit()
   }
   const change = (patch: Partial<SetupDraft>) => {
     setError(false)
     onChange(patch)
   }
+  /** A click on one of the choice lines: set the value and mark the line as chosen. */
+  const choose = (field: SetupField, patch: Partial<SetupDraft>) => {
+    setMissing((m) => m.filter((x) => x !== field))
+    change({ ...patch, picked: Array.from(new Set([...(draft.picked ?? SETUP_FIELDS), field])) })
+  }
+  const lineError = (field: SetupField) =>
+    missing.includes(field) ? (
+      <p className="mt-2 text-sm font-medium text-red-700" role="alert">
+        {tx.chooseLine}
+      </p>
+    ) : null
+  const lineClass = (field: SetupField) => (missing.includes(field) ? 'rounded-2xl ring-2 ring-red-300 ring-offset-4' : '')
 
   return (
     <form onSubmit={submit} noValidate className="space-y-6 rounded-2xl border border-purple-100 bg-white p-5 sm:p-6">
@@ -360,17 +417,17 @@ function SetupForm({
         )}
       </div>
 
-      <fieldset>
+      <fieldset id="academy-field-time" className={lineClass('time')}>
         <legend className="font-medium text-gray-900">{tx.timeLegend}</legend>
         <div className="mt-2 grid grid-cols-4 gap-2 sm:grid-cols-8">
           {ACADEMY_MINUTE_OPTIONS.map((m) => (
-            <label key={m} className="cursor-pointer" onPointerDown={press(() => change({ availableMinutes: m })).onPointerDown}>
+            <label key={m} className="cursor-pointer" onPointerDown={press(() => choose('time', { availableMinutes: m })).onPointerDown}>
               <input
                 type="radio"
                 name="academy-minutes"
                 value={m}
-                checked={draft.availableMinutes === m}
-                onChange={() => change({ availableMinutes: m })}
+                checked={picked('time') && draft.availableMinutes === m}
+                onChange={() => choose('time', { availableMinutes: m })}
                 className="peer sr-only"
               />
               <span className="block whitespace-nowrap rounded-xl border border-gray-300 px-1 py-2 text-center text-sm peer-checked:border-purple-600 peer-checked:bg-purple-600 peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-purple-600">
@@ -379,18 +436,34 @@ function SetupForm({
             </label>
           ))}
         </div>
+        {lineError('time')}
       </fieldset>
 
-      <ChoiceGroup<Level> legend={tx.levelLegend} name="academy-level" values={LEVELS} labels={tx.levels} value={draft.selfLevel} onChange={(v) => change({ selfLevel: v })} />
-      <ChoiceGroup<TestMode> legend={tx.testsLegend} name="academy-tests" values={TEST_MODES} labels={tx.tests} value={draft.testMode} onChange={(v) => change({ testMode: v })} />
-      {draft.testMode !== 'none' && (
-        <ChoiceGroup<TestFormat> legend={tx.testFormatLegend} name="academy-test-format" values={TEST_FORMATS} labels={tx.testFormats} value={draft.testFormat ?? 'choice'} onChange={(v) => change({ testFormat: v })} />
+      <div id="academy-field-level" className={lineClass('level')}>
+        <ChoiceGroup<Level> legend={tx.levelLegend} name="academy-level" values={LEVELS} labels={tx.levels} value={picked('level') ? draft.selfLevel : null} onChange={(v) => choose('level', { selfLevel: v })} />
+        {lineError('level')}
+      </div>
+      <div id="academy-field-tests" className={lineClass('tests')}>
+        <ChoiceGroup<TestMode> legend={tx.testsLegend} name="academy-tests" values={TEST_MODES} labels={tx.tests} value={picked('tests') ? draft.testMode : null} onChange={(v) => choose('tests', { testMode: v })} />
+        {lineError('tests')}
+      </div>
+      {picked('tests') && draft.testMode !== 'none' && (
+        <div id="academy-field-format" className={lineClass('format')}>
+          <ChoiceGroup<TestFormat> legend={tx.testFormatLegend} name="academy-test-format" values={TEST_FORMATS} labels={tx.testFormats} value={picked('format') ? (draft.testFormat ?? 'choice') : null} onChange={(v) => choose('format', { testFormat: v })} />
+          {lineError('format')}
+        </div>
       )}
-      {draft.testMode !== 'none' && (draft.testFormat ?? 'choice') === 'choice' && (
-        <ChoiceOptionsPicker lang={lang} name="academy-choice-options" value={draft.choiceOptions ?? 3} onChange={(n) => change({ choiceOptions: n })} />
+      {picked('tests') && draft.testMode !== 'none' && picked('format') && (draft.testFormat ?? 'choice') === 'choice' && (
+        <div id="academy-field-options" className={lineClass('options')}>
+          <ChoiceOptionsPicker lang={lang} name="academy-choice-options" value={picked('options') ? (draft.choiceOptions ?? 3) : 0} onChange={(n) => choose('options', { choiceOptions: n })} />
+          {lineError('options')}
+        </div>
       )}
-      {draft.testMode !== 'none' && (
-        <ChoiceGroup<TestDifficulty> legend={tx.testDifficultyLegend} name="academy-test-difficulty" values={TEST_DIFFICULTIES} labels={tx.testDifficulties} value={draft.testDifficulty ?? 'medium'} onChange={(v) => change({ testDifficulty: v })} />
+      {picked('tests') && draft.testMode !== 'none' && (
+        <div id="academy-field-difficulty" className={lineClass('difficulty')}>
+          <ChoiceGroup<TestDifficulty> legend={tx.testDifficultyLegend} name="academy-test-difficulty" values={TEST_DIFFICULTIES} labels={tx.testDifficulties} value={picked('difficulty') ? (draft.testDifficulty ?? 'medium') : null} onChange={(v) => choose('difficulty', { testDifficulty: v })} />
+          {lineError('difficulty')}
+        </div>
       )}
 
       <div>
@@ -455,6 +528,14 @@ function SetupForm({
       </div>
 
       <label className="flex cursor-pointer items-start gap-3 text-sm text-gray-800">
+        <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-purple-600" />
+        <span>
+          <span className="block font-medium text-gray-900">{tx.rememberLabel}</span>
+          <span className="block text-gray-600">{tx.rememberHint}</span>
+        </span>
+      </label>
+
+      <label className="flex cursor-pointer items-start gap-3 text-sm text-gray-800">
         <input
           type="checkbox"
           checked={draft.saveProgress}
@@ -467,6 +548,11 @@ function SetupForm({
         </span>
       </label>
 
+      {missing.length > 0 && (
+        <p className="text-sm font-medium text-red-700" role="alert">
+          {tx.chooseAll}
+        </p>
+      )}
       <button type="submit" className="w-full rounded-xl bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 sm:w-auto">
         {tx.submit}
       </button>
@@ -492,7 +578,8 @@ function ChoiceGroup<T extends string>({
   name: string
   values: readonly T[]
   labels: Record<T, { label: string; hint: string }>
-  value: T
+  /** null = nothing chosen yet (no line is preselected on the setup form) */
+  value: T | null
   onChange: (v: T) => void
 }) {
   return (
@@ -959,6 +1046,7 @@ function PrivacyStrip({ tx, lang }: { tx: AcademyCopy; lang: AcademyLang }) {
             localStorage.removeItem(ACADEMY_USED_KEY)
             localStorage.removeItem(ACADEMY_TUTOR_OK_KEY)
             localStorage.removeItem(ACADEMY_STREAK_KEY)
+            localStorage.removeItem(ACADEMY_PREFS_KEY)
           } catch {
             /* blocked */
           }

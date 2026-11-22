@@ -25,6 +25,14 @@ export type TestDifficulty = (typeof TEST_DIFFICULTIES)[number]
 export const OPEN_FORMATS = ['free', 'explain'] as const
 export type OpenFormat = (typeof OPEN_FORMATS)[number]
 
+/**
+ * The setup lines the learner must choose themselves, every time (owner decision 2026-11-22: a programme must never
+ * start on values the learner did not pick). A line counts as chosen once the learner clicked it, or when the
+ * opt-in "Remember these choices" filled it from the learner's own earlier choice.
+ */
+export const SETUP_FIELDS = ['time', 'level', 'tests', 'format', 'difficulty', 'options'] as const
+export type SetupField = (typeof SETUP_FIELDS)[number]
+
 /** What the learner enters on the setup screen before a programme exists. */
 export interface SetupDraft {
   subject: string
@@ -41,6 +49,8 @@ export interface SetupDraft {
   choiceOptions: number
   /** opt-in "Save my progress in this browser"; false = nothing is written to localStorage (F3) */
   saveProgress: boolean
+  /** the lines the learner has chosen; undefined (a draft stored before this existed) = all chosen */
+  picked?: SetupField[]
   updatedAt: string
 }
 
