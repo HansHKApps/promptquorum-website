@@ -231,7 +231,7 @@ const en: AcademyExtraCopy = {
   reg: {
     statRegistered: 'Certificates registered for online verification',
     title: 'Online verification (optional)',
-    optIn: 'Register this certificate so that others can verify it online. We store the data listed below. You can ask us to delete it.',
+    optIn: 'Register this certificate so that others can verify it online (on by default; switch it off if you do not want this). We store the data listed below. You can ask us to delete it.',
     data: 'Stored: certificate ID and number, issue date, score, pass status, learning time, subject, language, test mode and a fingerprint (hash) of the Course Documentation. Not stored: your name, answers, lessons, chats, IP address or email.',
     deleteNote: 'To delete the record, write to hello@promptquorum.com and name the certificate ID.',
     done: (n) => `Registered as No. ${n}.`,
@@ -413,7 +413,7 @@ const de: AcademyExtraCopy = {
   reg: {
     statRegistered: 'Für die Online-Überprüfung registrierte Bescheinigungen',
     title: 'Online-Überprüfung (optional)',
-    optIn: 'Diese Bescheinigung registrieren, damit andere sie online überprüfen können. Wir speichern die unten genannten Daten. Sie können die Löschung verlangen.',
+    optIn: 'Diese Bescheinigung registrieren, damit andere sie online überprüfen können (standardmäßig an; schalten Sie es aus, wenn Sie das nicht möchten). Wir speichern die unten genannten Daten. Sie können die Löschung verlangen.',
     data: 'Gespeichert: Bescheinigungs-ID und -Nummer, Ausstellungsdatum, Ergebnis, Bestehensstatus, Lernzeit, Thema, Sprache, Testmodus und ein Fingerabdruck (Hash) der Kursdokumentation. Nicht gespeichert: Ihr Name, Antworten, Lektionen, Chats, IP-Adresse oder E-Mail.',
     deleteNote: 'Zum Löschen schreiben Sie an hello@promptquorum.com und nennen die Bescheinigungs-ID.',
     done: (n) => `Registriert als Nr. ${n}.`,
@@ -595,7 +595,7 @@ const fr: AcademyExtraCopy = {
   reg: {
     statRegistered: 'Attestations enregistrées pour la vérification en ligne',
     title: 'Vérification en ligne (facultative)',
-    optIn: 'Enregistrer cette attestation pour que d’autres puissent la vérifier en ligne. Nous conservons les données listées ci-dessous. Vous pouvez demander leur suppression.',
+    optIn: 'Enregistrer cette attestation pour que d’autres puissent la vérifier en ligne (activé par défaut ; désactivez-le si vous ne le souhaitez pas). Nous conservons les données listées ci-dessous. Vous pouvez demander leur suppression.',
     data: 'Conservé : identifiant et numéro de l’attestation, date de délivrance, score, réussite, temps d’apprentissage, sujet, langue, mode de test et une empreinte (hash) de la documentation du cours. Non conservé : votre nom, réponses, leçons, discussions, adresse IP ou e-mail.',
     deleteNote: 'Pour supprimer l’enregistrement, écrivez à hello@promptquorum.com en indiquant l’identifiant de l’attestation.',
     done: (n) => `Enregistrée sous le n° ${n}.`,
@@ -777,7 +777,7 @@ const es: AcademyExtraCopy = {
   reg: {
     statRegistered: 'Constancias registradas para la verificación en línea',
     title: 'Verificación en línea (opcional)',
-    optIn: 'Registra esta constancia para que otras personas puedan verificarla en línea. Guardamos los datos indicados abajo. Puedes pedirnos que los borremos.',
+    optIn: 'Registra esta constancia para que otras personas puedan verificarla en línea (activado por defecto; desactívalo si no lo quieres). Guardamos los datos indicados abajo. Puedes pedirnos que los borremos.',
     data: 'Se guarda: ID y número de la constancia, fecha de emisión, puntuación, aprobado, tiempo de aprendizaje, tema, idioma, modo de prueba y una huella (hash) de la documentación del curso. No se guarda: tu nombre, respuestas, lecciones, chats, dirección IP ni correo electrónico.',
     deleteNote: 'Para borrar el registro, escribe a hello@promptquorum.com indicando el ID de la constancia.',
     done: (n) => `Registrada con el n.º ${n}.`,
@@ -959,7 +959,7 @@ const pt: AcademyExtraCopy = {
   reg: {
     statRegistered: 'Comprovantes registrados para verificação on-line',
     title: 'Verificação on-line (opcional)',
-    optIn: 'Registre este comprovante para que outras pessoas possam verificá-lo on-line. Armazenamos os dados listados abaixo. Você pode pedir que sejam apagados.',
+    optIn: 'Registre este comprovante para que outras pessoas possam verificá-lo on-line (ativado por padrão; desative se não quiser). Armazenamos os dados listados abaixo. Você pode pedir que sejam apagados.',
     data: 'Armazenado: ID e número do comprovante, data de emissão, pontuação, aprovação, tempo de aprendizagem, assunto, idioma, modo de teste e uma impressão digital (hash) da documentação do curso. Não armazenado: seu nome, respostas, lições, conversas, endereço IP ou e-mail.',
     deleteNote: 'Para apagar o registro, escreva para hello@promptquorum.com informando o ID do comprovante.',
     done: (n) => `Registrado com o n.º ${n}.`,
@@ -1141,7 +1141,7 @@ const ja: AcademyExtraCopy = {
   reg: {
     statRegistered: 'オンライン照会に登録された修了証',
     title: 'オンライン照会（任意）',
-    optIn: 'この修了証を登録すると、第三者がオンラインで照会できます。下記のデータを保存します。削除を依頼することもできます。',
+    optIn: 'この修了証を登録すると、第三者がオンラインで照会できます（初期設定でオン。不要な場合はオフにしてください）。下記のデータを保存します。削除を依頼することもできます。',
     data: '保存するもの：修了証のIDと番号、発行日、得点、合否、学習時間、テーマ、言語、テスト形式、講座記録のフィンガープリント（ハッシュ）。保存しないもの：お名前、解答、レッスン、チャット、IPアドレス、メールアドレス。',
     deleteNote: '記録を削除するには、hello@promptquorum.com に修了証IDを添えてご連絡ください。',
     done: (n) => `No. ${n} として登録しました。`,
@@ -1323,7 +1323,7 @@ const zh: AcademyExtraCopy = {
   reg: {
     statRegistered: '已登记在线核验的证明',
     title: '在线核验（可选）',
-    optIn: '登记此完成证明，其他人即可在线核验。我们会保存下列数据。你可以要求我们删除。',
+    optIn: '登记此完成证明，其他人即可在线核验（默认开启；不需要请关闭）。我们会保存下列数据。你可以要求我们删除。',
     data: '保存内容：证明 ID 和编号、签发日期、得分、是否通过、学习时长、主题、语言、测验模式，以及课程记录的指纹（哈希）。不保存：你的姓名、答案、课程、聊天记录、IP 地址或电子邮件。',
     deleteNote: '如需删除记录，请发邮件至 hello@promptquorum.com 并注明证明 ID。',
     done: (n) => `已登记，编号 ${n}。`,
@@ -1505,7 +1505,7 @@ const ar: AcademyExtraCopy = {
   reg: {
     statRegistered: 'إفادات مسجّلة للتحقق عبر الإنترنت',
     title: 'التحقق عبر الإنترنت (اختياري)',
-    optIn: 'سجّل هذه الإفادة ليتمكن الآخرون من التحقق منها عبر الإنترنت. نحفظ البيانات المذكورة أدناه. ويمكنك طلب حذفها.',
+    optIn: 'سجّل هذه الإفادة ليتمكن الآخرون من التحقق منها عبر الإنترنت (مفعَّل افتراضيًا؛ أوقفه إن لم تُرد ذلك). نحفظ البيانات المذكورة أدناه. ويمكنك طلب حذفها.',
     data: 'يُحفظ: معرّف الإفادة ورقمها، تاريخ الإصدار، الدرجة، حالة النجاح، مدة التعلّم، الموضوع، اللغة، نمط الاختبار، وبصمة (hash) لوثائق الدورة. لا يُحفظ: اسمك أو إجاباتك أو الدروس أو المحادثات أو عنوان IP أو البريد الإلكتروني.',
     deleteNote: 'لحذف السجل، راسل hello@promptquorum.com مع ذكر معرّف الإفادة.',
     done: (n) => `تم التسجيل برقم ${n}.`,
@@ -1687,7 +1687,7 @@ const ko: AcademyExtraCopy = {
   reg: {
     statRegistered: '온라인 확인용으로 등록된 수료증',
     title: '온라인 확인 (선택)',
-    optIn: '이 수료증을 등록하면 다른 사람이 온라인으로 확인할 수 있습니다. 아래 데이터를 저장합니다. 삭제를 요청할 수도 있습니다.',
+    optIn: '이 수료증을 등록하면 다른 사람이 온라인으로 확인할 수 있습니다(기본값은 켜짐이며, 원하지 않으면 끄십시오). 아래 데이터를 저장합니다. 삭제를 요청할 수도 있습니다.',
     data: '저장: 수료증 ID와 번호, 발급일, 점수, 합격 여부, 학습 시간, 주제, 언어, 시험 방식, 강좌 기록의 지문(해시). 저장하지 않음: 이름, 답안, 수업, 채팅, IP 주소, 이메일.',
     deleteNote: '기록을 삭제하려면 hello@promptquorum.com 으로 수료증 ID와 함께 문의해 주십시오.',
     done: (n) => `${n}번으로 등록되었습니다.`,
