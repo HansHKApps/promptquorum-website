@@ -87,6 +87,7 @@ Rules:
 - The lesson minutes must add up to the reading time given in the request (within ±${Math.round(MINUTES_TOLERANCE * 100)}%). Test time is already subtracted.
 - Adapt to the quick-check result: topics listed as gaps get full lessons; topics listed as known get at most one short recap lesson (recap: true) or are folded into another lesson.
 - Prefer topics that the PromptQuorum material covers, so lessons can link to it, but do not limit yourself to it if the subject needs more.
+- Give every lesson a summary: one or two plain sentences saying what the learner will understand afterwards. The learner reads it to decide whether to adjust the topic.
 - Lesson titles are concrete ("Choosing a quantization level for 16 GB of RAM"), not generic ("Introduction").
 - Do not promise specific prices, version numbers or benchmark numbers in titles or objectives.
 - Write objectives, titles and topics in the language named in the request. Topic labels are 2-5 words; reuse a label when two lessons share a topic.`

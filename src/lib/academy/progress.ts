@@ -51,6 +51,20 @@ export function lessonsDone(p: Programme): number {
   return p.lessons.filter((l) => p.progress.lessonStatus[l.id] === 'done').length
 }
 
-export function setLessonContent(p: Programme, index: number, content: Pick<Lesson, 'sections' | 'furtherReading' | 'followUpQuestions'>): Programme {
+/** Saves the learner's wish for one topic. `confirmed` is the "Confirm" button; the text may be empty (confirm as it is). */
+export function setLessonNote(p: Programme, index: number, note: string, confirmed: boolean): Programme {
+  return { ...p, lessons: p.lessons.map((l, i) => (i === index ? { ...l, learnerNote: note.trim() || undefined, confirmed } : l)) }
+}
+
+/** Throws the written lesson away so it is written again with the current wish (the learner asked for it). */
+export function clearLessonContent(p: Programme, index: number): Programme {
+  return { ...p, lessons: p.lessons.map((l, i) => (i === index ? { ...l, sections: [], furtherReading: [], followUpQuestions: undefined, noteUsed: undefined } : l)) }
+}
+
+export function setFreeWish(p: Programme, wish: string): Programme {
+  return { ...p, freeWish: wish.trim() || undefined }
+}
+
+export function setLessonContent(p: Programme, index: number, content: Pick<Lesson, 'sections' | 'furtherReading' | 'followUpQuestions' | 'noteUsed'>): Programme {
   return { ...p, lessons: p.lessons.map((l, i) => (i === index ? { ...l, ...content } : l)) }
 }

@@ -26,7 +26,9 @@ export function lessonRequest(p: Programme, index: number) {
     language: p.language,
     selfLevel: p.selfLevel,
     objectives: p.objectives,
-    lesson: { title: lesson.title, topic: lesson.topic, estimatedMinutes: lesson.estimatedMinutes, objectiveIds: lesson.objectiveIds, recap: !!lesson.recap },
+    lesson: { title: lesson.title, topic: lesson.topic, estimatedMinutes: lesson.estimatedMinutes, objectiveIds: lesson.objectiveIds, recap: !!lesson.recap, ...(lesson.summary ? { summary: lesson.summary.slice(0, 400) } : {}) },
+    ...(lesson.learnerNote ? { learnerNote: lesson.learnerNote } : {}),
+    ...(p.freeWish ? { freeWish: p.freeWish } : {}),
     index,
     otherTitles: p.lessons.filter((_, i) => i !== index).map((l) => l.title),
   }
@@ -52,7 +54,7 @@ export function loadLesson(opts: { programme: Programme; index: number; update: 
       res = await postJson<LessonData>('/api/academy/lesson', lessonRequest(programme, index))
     }
     if (!res.ok) return { ok: false, code: res.code }
-    const data = res.data
+    const data = { ...res.data, noteUsed: programme.lessons[index].learnerNote ?? '' }
     update((s) => (s.programme && s.programme.id === programmeId && !s.programme.lessons[index].sections.length ? { ...s, programme: setLessonContent(s.programme, index, data) } : s))
     return { ok: true }
   })().finally(() => inflight.delete(key))
