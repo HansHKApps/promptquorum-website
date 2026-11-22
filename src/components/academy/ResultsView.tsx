@@ -237,6 +237,16 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
       setShareBusy(false)
     }
   }
+  // WhatsApp / Telegram / Email buttons: send the certificate page itself. A link cannot carry a file, so: phones with file
+  // sharing get the PDF in the share sheet; everywhere else the chat opens (synchronously, to avoid popup blocking) and the
+  // certificate image is copied to the clipboard, ready to paste.
+  const shareCertificateVia = async (href: string) => {
+    if (shareBusy) return
+    const canFiles = typeof navigator !== 'undefined' && typeof navigator.canShare === 'function' && navigator.canShare({ files: [new File([], 'c.pdf', { type: 'application/pdf' })] })
+    if (canFiles) return shareCertificate()
+    window.open(href, '_blank', 'noopener,noreferrer')
+    await copyCertificateImage()
+  }
   const shareDocumentation = async () => {
     if (shareBusy) return
     setShareBusy(true)
@@ -297,7 +307,7 @@ export function ResultsView({ tx, lang, programme, update }: { tx: AcademyCopy; 
         </ul>
       </div>
 
-      <ShareBar lang={lang} programme={programme} percent={score.percent} />
+      <ShareBar lang={lang} programme={programme} percent={score.percent} onLinkedIn={programme.certificate && !blocker ? addToLinkedIn : undefined} onShareCert={programme.certificate && !blocker ? (href) => void shareCertificateVia(href) : undefined} status={imageCopied ? sx.imageCopied : undefined} />
 
       <StarRating tx={tx} kind="programme" lang={programme.language} />
 

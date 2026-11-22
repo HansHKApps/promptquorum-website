@@ -20,7 +20,9 @@ const CHANNELS: { key: ShareChannel; label: string; bg: string }[] = [
   { key: 'email', label: 'Email', bg: '#c5221f' },
 ]
 
-export function ShareBar({ lang, programme, percent }: { lang: AcademyLang; programme: Programme; percent?: number }) {
+/** `onShareCert` (set when a certificate exists): WhatsApp/Telegram/Email then send the certificate itself, not only a text. */
+/** `onLinkedIn` is set only when a certificate exists: it opens LinkedIn's "Add certification" form prefilled, so the learner saves it to their profile. */
+export function ShareBar({ lang, programme, percent, onLinkedIn, onShareCert, status }: { lang: AcademyLang; programme: Programme; percent?: number; onLinkedIn?: () => void; onShareCert?: (href: string) => void; status?: string }) {
   const sx = SHARE_COPY[lang]
   const tx = ACADEMY_COPY[lang]
   const [copied, setCopied] = useState(false)
@@ -52,11 +54,17 @@ export function ShareBar({ lang, programme, percent }: { lang: AcademyLang; prog
       <p className="font-medium text-gray-900">{percent !== undefined ? sx.result : sx.plan}</p>
       <div className="flex flex-wrap gap-2">
         {CHANNELS.map((c) => (
-          <a key={c.key} href={shareHref(c.key, share.plain, share.title)} target="_blank" rel="noopener noreferrer" className={BTN}>
+          <a key={c.key} href={shareHref(c.key, share.plain, share.title)} target="_blank" rel="noopener noreferrer" className={BTN} onClick={onShareCert ? (e) => { e.preventDefault(); onShareCert(shareHref(c.key, share.plain, share.title)) } : undefined}>
             <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full" style={{ background: c.bg }} />
             {c.label}
           </a>
         ))}
+        {onLinkedIn && (
+          <button type="button" onClick={onLinkedIn} className={BTN}>
+            <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full" style={{ background: '#0a66c2' }} />
+            LinkedIn
+          </button>
+        )}
         <button type="button" onClick={() => void copy()} className={BTN}>
           {copied ? sx.copied : sx.copy}
         </button>
@@ -67,6 +75,7 @@ export function ShareBar({ lang, programme, percent }: { lang: AcademyLang; prog
           PDF
         </button>
       </div>
+      {status && <p className="text-sm text-gray-700" role="status">{status}</p>}
     </div>
   )
 }
