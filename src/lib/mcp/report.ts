@@ -2,6 +2,7 @@
 // days, last 30 days, all time), built from the per-tool daily counters (usage.ts) and the per-day app / category /
 // language counters (usage-dimensions.ts). A Redis outage yields an all-zero report, never an error.
 
+import { unstable_cache } from 'next/cache'
 import { redis } from '@/lib/redis'
 import { keepLastGood } from '@/lib/lastGood'
 import { MCP_TOOL_NAMES } from './usage'

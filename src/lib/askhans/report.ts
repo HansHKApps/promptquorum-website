@@ -5,6 +5,7 @@
 // Never contains names, IPs or question text. A Redis outage yields an all-zero report (same contract as
 // getMcpUsageSnapshot), so the page never fails because of it.
 
+import { unstable_cache } from 'next/cache'
 import { redis } from '@/lib/redis'
 import { keepLastGood } from '@/lib/lastGood'
 import { getAskHansTotals } from './totals'
