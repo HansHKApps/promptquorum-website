@@ -4,6 +4,7 @@
 // theme / language / level / minutes / test mode per stage). Never throws: a Redis outage must not break a learner.
 
 import { redis } from '@/lib/redis'
+import { recordAcademyDay } from './day-store'
 import {
   ACADEMY_DEMAND_MIN_PUBLIC,
   ACADEMY_DEMAND_TOP_N,
@@ -50,6 +51,8 @@ export async function recordDemand(stage: DemandStage, input: DemandInput): Prom
       }
     }
     await p.exec()
+    // Per-day mirror for the public usage report (language and setup choices only, same anonymity as the dims above).
+    if (stage === 'programme') await recordAcademyDay([`lang:${lang}`, input.level ? `level:${input.level}` : '', input.minutes ? `minutes:${input.minutes}` : '', input.testMode ? `mode:${input.testMode}` : '', `theme:${theme}`].filter(Boolean))
     // Occasional trim; a failed trim is harmless.
     if (stage === 'programme' && subject && Math.random() < 0.02) {
       await Promise.all([ALL, TRAINED, langKey(lang)].map((k) => redis.zremrangebyrank(k, 0, -(MAX_ENTRIES + 1))))

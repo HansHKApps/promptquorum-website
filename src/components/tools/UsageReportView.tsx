@@ -29,7 +29,7 @@ const WINDOWS: { key: ReportWindow; label: (lang: Language) => string }[] = [
   { key: 'last30', label: (l) => tMcp('tableLast30', l) },
 ]
 
-function Bars({ days, label, barTone }: { days: UsageReportBase['days']; label: string; barTone: string }) {
+export function Bars({ days, label, barTone }: { days: UsageReportBase['days']; label: string; barTone: string }) {
   const max = Math.max(1, ...days.map((d) => d.count))
   const barW = 10
   const gap = 4
@@ -49,7 +49,7 @@ function Bars({ days, label, barTone }: { days: UsageReportBase['days']; label: 
   )
 }
 
-function BreakdownTable({ heading, firstCol, rows, label, mono, lang }: { heading: string; firstCol: string; rows: ReportRow[]; label: (key: string) => string; mono?: boolean; lang: Language }) {
+export function BreakdownTable({ heading, firstCol, rows, label, mono, lang }: { heading: string; firstCol: string; rows: ReportRow[]; label: (key: string) => string; mono?: boolean; lang: Language }) {
   const fmt = (n: number) => n.toLocaleString(toOutputLocale(lang))
   const tone = HUB_TONES.violet
   const showAll = rows.some((r) => r.allTime !== undefined)
