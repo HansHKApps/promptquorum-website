@@ -4,6 +4,9 @@
 // Facts verified 2026-11-21 against rin.chat (home, download, changelog 1.0.4 dated 20 Nov 2026, features, quickstart, choosing-a-provider, privacy policy, terms effective 12 Nov 2026, license, contact).
 // No hands-on test by PromptQuorum. Stale-project warning is OFF (version 1.0.4 released 2026-11-20). HQ country US (Rin Chat LLC, Utah).
 
+// 2026-11-22 maker round: the maker read the finished review, called it fair and careful and sent corrections (optional subscription, phones via Remote Access + Android closed testing,
+// seven languages, encryption check without source, memory, import formats) and a note (fromTheMaker, 9 locales). Founder-reviewed badge set on the tile. dateModified 2026-11-22.
+
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
 
@@ -12,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-21',
-    dateModified: '2026-11-21',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-05-21',
     theme: 'Creative & Roleplay',
     heroImage: '/images/rin-chat-review-hero-en.webp',
@@ -45,12 +48,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Is Rin Chat a local AI roleplay app?',
         answer: "Partly. The app itself runs on your computer and stores its data there, but it ships no model: you connect Ollama, KoboldCpp, LM Studio or any OpenAI-compatible service. With a local backend the chat stays on your machine; with a cloud API the prompts go from your device to that provider, per the maker's privacy policy.",
         bullets: [
-          'It opens V1, V2 and V3 character cards, including cards embedded in PNG images, and lorebooks.',
-          'Cards and chats are stored with AES-256-GCM encryption on your computer, per the maker.',
-          'Windows 10 or 11 and 64-bit Linux builds exist; macOS has no release date and no Android build is offered yet.',
+          'It opens V1, V2 and V3 character cards (also from PNG images and .charx bundles), lorebooks and its own .aicc bundles, per the maker.',
+          'Cards and chats are stored with AES-256-GCM encryption on your computer, per the maker, who also describes a check that needs no source code.',
+          'Windows 10 or 11 and 64-bit Linux builds exist; macOS has no release date. Phones and tablets can use the app through its Remote Access, and the maker says an Android app is in closed testing on Google Play.',
           'The app is closed source, so its claims cannot be checked in code.',
         ],
-        updatedDate: '2026-11-21',
+        updatedDate: '2026-11-22',
       },
     },
     toc: [
@@ -64,6 +67,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Privacy, License and Cost', anchor: 'privacy' },
       { label: 'Trade-Offs: Benefits vs. Limitations', anchor: 'tradeoffs' },
       { label: 'Rin Chat vs. Alternatives', anchor: 'vs-alternatives' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Who Should Use Rin Chat', anchor: 'who-should-use' },
       { label: 'Who Should Not Use Rin Chat', anchor: 'who-should-not-use' },
       { label: 'FAQ', anchor: 'faq' },
@@ -91,7 +95,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Maker: Rin Chat LLC, a company in Utah, United States, per its contact page.',
           'Maintenance: version 1.0.4 is dated 20 November 2026, which shows active development, but the site still calls it an open beta.',
           'Cost: free for personal, non-commercial use under a proprietary license.',
-          'Gaps: closed source, mandatory usage statistics, an unsigned Windows installer, no macOS or released Android build and no hands-on test by PromptQuorum.',
+          'Gaps: closed source, mandatory usage statistics, an unsigned Windows installer, no macOS build, an Android app that is still in closed testing, per the maker, and no hands-on test by PromptQuorum.',
+          'Maker review: the maker read this review on 22 November 2026, called it fair and careful and sent corrections, which are applied below.',
         ],
       },
       getItRinChat: {
@@ -111,8 +116,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Get It': '[Download the AppImage or .deb](https://rin.chat/download/) — 64-bit x86 (amd64)',
           },
           {
-            Platform: 'Mac and Android',
-            'Get It': 'No download yet; macOS has no date, and Android has no download page or store listing',
+            Platform: 'Mac',
+            'Get It': 'No download yet; macOS is in progress, with no date',
+          },
+          {
+            Platform: 'Phone and tablet',
+            'Get It': 'Remote Access serves the app to a phone browser; Android app in closed testing, per the maker',
           },
           {
             Platform: 'Website',
@@ -123,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Get It': '[Rin Chat privacy policy](https://rin.chat/privacy/)',
           },
         ],
-        note: 'The download page says the app is an open beta. No public source repository was found.',
+        note: 'The download page says the app is an open beta. No public source repository was found. The maker says the Android app should be public within about two weeks of 22 November 2026.',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -182,13 +191,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**The feature set centres on cards, game mechanics and privacy.** Everything below comes from the maker\'s features page and changelog.',
         ],
         items: [
-          '**Card and lorebook import.** It reads V1, V2 and V3 character cards, including cards embedded in a PNG, plus standalone lorebooks; links work from Chub, RisuRealm, Pygmalion, Perchance and AI Character Cards.',
+          '**Card and lorebook import.** It reads V1, V2 and V3 character cards, including cards embedded in a PNG, plus standalone lorebooks; links work from Chub, RisuRealm, Pygmalion, Perchance and AI Character Cards. The maker adds that import also accepts .charx and .aicc bundles, plus Rin Chat themes, generators and document styles.',
           '**Adventure mode.** The model plays game master while the app acts as referee: it rolls the dice, tracks stats and reverses them cleanly when you edit or reroll a message.',
           '**Document styles.** Cards can define styled in-chat documents such as notices, letters, bounty posters and terminal screens; thirty styles are built in.',
           '**Card forge.** A conversational editor, run on your connected model, that helps you create and edit cards, lorebooks and other app elements.',
+          '**Memory.** The maker lists rolling summaries, a memory tree for long chats, optional vector recall of older messages and pinned memories.',
           '**Groups, voice and images.** Group chats, bundled offline text-to-speech (Piper, Kokoro, Pocket TTS), offline dictation with Whisper, and image generation through tools such as Automatic1111, Forge, SwarmUI and ComfyUI.',
-          '**Reach.** A Discord bot, and remote access from a phone browser.',
-          '**Languages.** The features page lists seven interface languages: English, Simplified Chinese, Japanese, Spanish, German, French and Russian; the homepage FAQ lists five.',
+          '**Reach.** A Discord bot, and Remote Access, which serves the app from your computer to the browser of a phone or tablet. The maker says an Android app is in closed testing on Google Play.',
+          '**Languages.** The maker says the app ships in seven interface languages: English, Simplified Chinese, Japanese, Spanish, German, French and Russian. The homepage FAQ said five; the maker says that was a mistake and is fixed.',
         ],
       },
       backendsHardware: {
@@ -204,7 +214,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacy, License and Cost',
         content: [
           '**The maker says cards and chats are encrypted with AES-256-GCM on your computer, protected by your password or operating-system keychain, with a 24-word recovery phrase.** Per the privacy policy, requests go directly from your device to the provider you choose and do not pass through the maker\'s servers.',
-          'The terms say the app sends usage statistics at install and launch (a random installation ID, version, operating system, architecture, package format and language) and that this "cannot be switched off"; the policy says it never includes prompts or characters. Further statistics, such as providers used, are optional. The website uses Google Analytics, with consent in the EU, UK and Switzerland. The policy also mentions an optional Rin Chat subscription and account; PromptQuorum found no price for it.',
+          'The maker describes a way to check the encryption without the source code. The vault is a folder, by default the rin-chat folder inside Documents, in a subfolder named after your user name. Its index file, aicc.db, is SQLCipher-encrypted, so any SQLite tool reports "file is not a database", and every card, chat, image and setting is its own AES-256-GCM .blob file that reads as random bytes, with no PNG, JSON or plain text inside. Per the maker, nothing is readable until the vault is unlocked with a key held in your operating system\'s keychain. PromptQuorum did not run this check.',
+          'The terms say the app sends usage statistics at install and launch (a random installation ID, version, operating system, architecture, package format and language) and that this "cannot be switched off"; the policy says it never includes prompts or characters. Further statistics, such as providers used, are optional. The website uses Google Analytics, with consent in the EU, UK and Switzerland. The policy also mentions an optional Rin Chat subscription. The maker says it is not publicly announced yet: an optional service with hosted models, so you do not need your own API key, likely about a month away while it is tested. Per the maker it will never paywall any part of Rin Chat and will never be required, because every feature works with your own API key or a local model. PromptQuorum found no price.',
           'The license makes Rin Chat proprietary and free for personal, non-commercial use, and users must be at least 18. The app is closed source and PromptQuorum did not inspect its storage or network traffic, so none of this is verified.',
         ],
       },
@@ -232,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Benefit: 'Encrypted storage',
             'What it means in real use': 'Per the maker, cards and chats are unreadable without your password or key.',
-            'Limitation / caveat': 'Closed source, so the encryption cannot be audited.',
+            'Limitation / caveat': 'Closed source; the maker describes a file check, which PromptQuorum did not run.',
           },
           {
             Benefit: 'Flexible backends',
@@ -298,6 +309,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: "Platform, price, and feature details for third-party apps change frequently. Verify current specifics on each project's own page before deciding.",
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          "The maker of Rin Chat read this review on 22 November 2026, called it fair and careful, and sent the corrections now applied here: the optional subscription, which is not publicly announced yet (the maker is fine with it being mentioned); phone and tablet access through Remote Access and the Android app in closed testing; seven interface languages instead of five; a way to check the encryption without the source code; the memory features; and the extra import formats. The note below is the maker's own words, not PromptQuorum's independent assessment.",
+          '"I started out moderating the SillyTavern Discord and Reddit and building the first simple installer for SillyTavern ([sillyTavernSimpleLauncher](https://github.com/blueprintCoding/sillyTavernSimpleLauncher)), then worked with the SillyTavern developers and DeffColony on the SillyTavern Launcher, a command-line installer and updater, before moving on to my own projects."',
+          '"I built [aicharactercards.com](https://aicharactercards.com/), a site for sharing and grading AI character cards, and kept meeting people who wanted to use those cards but couldn\'t get a chat app running. So I built Rin Chat to fix that: easy to install, with a focus on privacy and security, and to push roleplay forward with a better card format, real memory, the Card Forge and Adventure Mode."',
+          '"It\'s just me, self-funded. Next up: Android, macOS, and more immersive cards through document styles and card-carried chat styles."',
+        ],
+        note: '— The maker of Rin Chat',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Who Should Use Rin Chat',
@@ -313,7 +335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Who Should Not Use Rin Chat',
         items: [
           '**Anyone who needs open-source code.** The app is proprietary.',
-          '**Mac and phone users.** No macOS or released Android build exists yet.',
+          '**Mac users and anyone who needs a native phone app today.** No macOS build exists and the Android app is in closed testing, per the maker; Remote Access works from a phone or tablet browser.',
           '**Commercial users.** The license covers personal, non-commercial use.',
           '**Anyone who needs zero telemetry.** The terms say the basic usage statistics cannot be switched off.',
         ],
@@ -328,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is Rin Chat free?',
-            a: 'The homepage says every feature is unlocked with no trial or account. A Rin Chat subscription appears in the policy, with no price found.',
+            a: 'The homepage says every feature is unlocked with no trial or account. The maker says an optional hosted-model subscription, not yet announced, will never be required and will never paywall any part of Rin Chat; no price was found.',
           },
           {
             q: 'Can I use my SillyTavern cards?',
@@ -336,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is there a Mac or Android version?',
-            a: 'Not yet. The maker says macOS is in progress without a date, and Android is announced but has no download page or store listing.',
+            a: 'Not as a native app yet. The maker says macOS is in progress without a date and an Android app is in closed testing on Google Play, due to be public within about two weeks of 22 November 2026. Phones and tablets can already use Rin Chat through Remote Access, which serves the app from your computer to the phone browser.',
           },
           {
             q: 'Who makes Rin Chat?',
@@ -348,8 +370,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content: [
-          'Rin Chat is a good fit if you want a packaged Windows or Linux app for character chat that opens SillyTavern and AI Character Cards files, keeps its data encrypted on your computer, and adds dice and stats. It shipped version 1.0.4 on 20 November 2026.',
-          'The caveats are closed source, mandatory usage statistics, an unsigned Windows installer, no Mac or released Android build, an open-beta label and claims PromptQuorum could not check. Try it with one card and a local backend before moving a large library.',
+          'Rin Chat is a good fit if you want a packaged Windows or Linux app for character chat that opens SillyTavern and AI Character Cards files, keeps its data encrypted on your computer, and adds dice and stats. It shipped version 1.0.4 on 20 November 2026. Its maker has read this review and sent corrections, which are applied.',
+          'The caveats are closed source, mandatory usage statistics, an unsigned Windows installer, no Mac build, an Android app still in closed testing, an open-beta label and claims PromptQuorum could not check. Try it with one card and a local backend before moving a large library.',
         ],
       },
       sources: {
@@ -381,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-21',
-    dateModified: '2026-11-21',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-05-21',
     theme: 'Creative & Roleplay',
     heroImage: '/images/rin-chat-review-hero-de.webp',
@@ -414,12 +436,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Ist Rin Chat eine lokale KI-Rollenspiel-App?',
         answer: 'Teilweise. Die App selbst läuft auf Ihrem Computer und speichert ihre Daten dort, bringt aber kein Modell mit: Sie verbinden Ollama, KoboldCpp, LM Studio oder einen beliebigen OpenAI-kompatiblen Dienst. Mit einem lokalen Backend bleibt der Chat auf Ihrem Rechner; bei einer Cloud-API gehen die Prompts laut Datenschutzerklärung des Herstellers von Ihrem Gerät an diesen Anbieter.',
         bullets: [
-          'Sie öffnet Charakterkarten der Versionen V1, V2 und V3, auch in PNG-Bilder eingebettete Karten, sowie Lorebooks.',
-          'Karten und Chats werden laut Hersteller mit AES-256-GCM verschlüsselt auf Ihrem Computer gespeichert.',
-          'Es gibt Builds für Windows 10 oder 11 und für 64-Bit-Linux; für macOS gibt es kein Veröffentlichungsdatum, und ein Android-Build wird noch nicht angeboten.',
+          'Sie öffnet Charakterkarten der Versionen V1, V2 und V3 (auch aus PNG-Bildern und .charx-Bundles), Lorebooks und eigene .aicc-Bundles, laut Hersteller.',
+          'Karten und Chats werden laut Hersteller mit AES-256-GCM verschlüsselt auf Ihrem Computer gespeichert; der Hersteller beschreibt zudem eine Prüfung ohne Quellcode.',
+          'Es gibt Builds für Windows 10 oder 11 und für 64-Bit-Linux; für macOS gibt es kein Veröffentlichungsdatum. Smartphones und Tablets nutzen die App über den Fernzugriff (Remote Access), und laut Hersteller befindet sich eine Android-App in der geschlossenen Testphase bei Google Play.',
           'Die App ist Closed Source, ihre Aussagen lassen sich daher nicht im Code prüfen.',
         ],
-        updatedDate: '2026-11-21',
+        updatedDate: '2026-11-22',
       },
     },
     toc: [
@@ -433,6 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Datenschutz, Lizenz und Kosten', anchor: 'privacy' },
       { label: 'Abwägungen: Vorteile und Einschränkungen', anchor: 'tradeoffs' },
       { label: 'Rin Chat im Vergleich zu Alternativen', anchor: 'vs-alternatives' },
+      { label: 'Vom Hersteller', anchor: 'from-the-maker' },
       { label: 'Für wen Rin Chat geeignet ist', anchor: 'who-should-use' },
       { label: 'Für wen Rin Chat nicht geeignet ist', anchor: 'who-should-not-use' },
       { label: 'FAQ', anchor: 'faq' },
@@ -460,7 +483,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hersteller: Rin Chat LLC, ein Unternehmen in Utah, USA, laut Kontaktseite.',
           'Pflege: Version 1.0.4 stammt vom 20. November 2026, was auf aktive Entwicklung hindeutet, die Website nennt sie aber weiterhin eine offene Beta.',
           'Kosten: kostenlos für die private, nichtkommerzielle Nutzung unter einer proprietären Lizenz.',
-          'Lücken: Closed Source, verpflichtende Nutzungsstatistiken, ein nicht signierter Windows-Installer, kein macOS- und kein veröffentlichter Android-Build und kein Praxistest durch PromptQuorum.',
+          'Lücken: Closed Source, verpflichtende Nutzungsstatistiken, ein nicht signierter Windows-Installer, kein macOS-Build, eine Android-App, die laut Hersteller noch in der geschlossenen Testphase ist, und kein Praxistest durch PromptQuorum.',
+          'Rückmeldung des Herstellers: Er hat diese Rezension am 22. November 2026 gelesen, sie als fair und sorgfältig bezeichnet und Korrekturen geschickt, die unten umgesetzt sind.',
         ],
       },
       getItRinChat: {
@@ -480,8 +504,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Bezugsquelle: '[AppImage oder .deb herunterladen](https://rin.chat/download/) — 64-Bit x86 (amd64)',
           },
           {
-            Plattform: 'Mac und Android',
-            Bezugsquelle: 'Noch kein Download; laut Hersteller ist macOS in Arbeit, ohne Termin, und Android ist angekündigt, hat aber weder Download-Seite noch Store-Eintrag',
+            Plattform: 'Mac',
+            Bezugsquelle: 'Noch kein Download; macOS ist in Arbeit, ohne Termin',
+          },
+          {
+            Plattform: 'Smartphone und Tablet',
+            Bezugsquelle: 'Fernzugriff liefert die App an den Handy-Browser; Android-App im geschlossenen Test, laut Hersteller',
           },
           {
             Plattform: 'Website',
@@ -492,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Bezugsquelle: '[Rin-Chat-Datenschutzerklärung](https://rin.chat/privacy/)',
           },
         ],
-        note: 'Die Download-Seite nennt die App eine offene Beta. Ein öffentliches Quellcode-Repository wurde nicht gefunden.',
+        note: 'Die Download-Seite nennt die App eine offene Beta. Ein öffentliches Quellcode-Repository wurde nicht gefunden. Laut Hersteller soll die Android-App etwa zwei Wochen nach dem 22. November 2026 öffentlich sein.',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -551,13 +579,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Der Funktionsumfang dreht sich um Karten, Spielmechanik und Datenschutz.** Alles Folgende stammt von der Funktionsseite und dem Changelog des Herstellers.',
         ],
         items: [
-          '**Import von Karten und Lorebooks.** Sie liest Charakterkarten der Versionen V1, V2 und V3, auch in ein PNG eingebettete Karten, sowie eigenständige Lorebooks; Links funktionieren von Chub, RisuRealm, Pygmalion, Perchance und AI Character Cards.',
+          '**Import von Karten und Lorebooks.** Sie liest Charakterkarten der Versionen V1, V2 und V3, auch in ein PNG eingebettete Karten, sowie eigenständige Lorebooks; Links funktionieren von Chub, RisuRealm, Pygmalion, Perchance und AI Character Cards. Der Hersteller ergänzt, dass der Import auch .charx- und .aicc-Bundles sowie Rin-Chat-Themes, -Generatoren und -Dokumentstile akzeptiert.',
           '**Abenteuer-Modus.** Das Modell spielt den Spielleiter, während die App als Schiedsrichter fungiert: Sie würfelt, verfolgt Werte und macht sie sauber rückgängig, wenn Sie eine Nachricht bearbeiten oder neu würfeln.',
           '**Dokumentstile.** Karten können gestaltete Dokumente im Chat festlegen, etwa Mitteilungen, Briefe, Steckbriefe und Terminal-Bildschirme; dreißig Stile sind eingebaut.',
           '**Karten-Schmiede.** Ein dialogbasierter Editor, der auf Ihrem verbundenen Modell läuft und beim Erstellen und Bearbeiten von Karten, Lorebooks und anderen App-Elementen hilft.',
+          '**Gedächtnis.** Der Hersteller nennt fortlaufende Zusammenfassungen, einen Gedächtnisbaum für lange Chats, optionalen Vektor-Abruf älterer Nachrichten und angeheftete Erinnerungen.',
           '**Gruppen, Sprache und Bilder.** Gruppenchats, mitgelieferte Offline-Sprachausgabe (Piper, Kokoro, Pocket TTS), Offline-Diktat mit Whisper und Bilderzeugung über Werkzeuge wie Automatic1111, Forge, SwarmUI und ComfyUI.',
-          '**Reichweite.** Ein Discord-Bot und Fernzugriff aus dem Browser eines Smartphones.',
-          '**Sprachen.** Die Funktionsseite nennt sieben Oberflächensprachen: Englisch, vereinfachtes Chinesisch, Japanisch, Spanisch, Deutsch, Französisch und Russisch; die FAQ der Startseite nennt fünf.',
+          '**Reichweite.** Ein Discord-Bot und der Fernzugriff (Remote Access), der die App von Ihrem Computer an den Browser eines Smartphones oder Tablets ausliefert. Laut Hersteller befindet sich eine Android-App in der geschlossenen Testphase bei Google Play.',
+          '**Sprachen.** Laut Hersteller erscheint die App in sieben Oberflächensprachen: Englisch, vereinfachtes Chinesisch, Japanisch, Spanisch, Deutsch, Französisch und Russisch. Die FAQ der Startseite nannte fünf; laut Hersteller war das ein Fehler und ist behoben.',
         ],
       },
       backendsHardware: {
@@ -573,7 +602,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenschutz, Lizenz und Kosten',
         content: [
           '**Laut Hersteller werden Karten und Chats auf Ihrem Computer mit AES-256-GCM verschlüsselt, geschützt durch Ihr Passwort oder den Schlüsselbund des Betriebssystems, mit einer Wiederherstellungsphrase aus 24 Wörtern.** Laut Datenschutzerklärung gehen Anfragen direkt von Ihrem Gerät an den gewählten Anbieter und laufen nicht über die Server des Herstellers.',
-          'Die Nutzungsbedingungen sagen, die App sende bei Installation und Start Nutzungsstatistiken (eine zufällige Installations-ID, Version, Betriebssystem, Architektur, Paketformat und Sprache) und das lasse sich „nicht abschalten“; die Datenschutzerklärung sagt, dass sie nie Prompts oder Charaktere enthalten. Weitere Statistiken, etwa zu genutzten Anbietern, sind optional. Die Website nutzt Google Analytics, in der EU, im Vereinigten Königreich und in der Schweiz mit Einwilligung. Die Erklärung erwähnt zudem ein optionales Rin-Chat-Abonnement mit Konto; PromptQuorum hat dafür keinen Preis gefunden.',
+          'Der Hersteller beschreibt, wie sich die Verschlüsselung ohne Quellcode prüfen lässt. Der Tresor ist ein Ordner, standardmäßig der Ordner „rin-chat“ in Dokumente, darin ein Unterordner mit Ihrem Benutzernamen. Seine Indexdatei aicc.db ist mit SQLCipher verschlüsselt, daher meldet jedes SQLite-Werkzeug „file is not a database“, und jede Karte, jeder Chat, jedes Bild und jede Einstellung ist eine eigene AES-256-GCM-.blob-Datei, die wie Zufallsdaten aussieht, ohne PNG, JSON oder Klartext darin. Laut Hersteller ist nichts lesbar, bis der Tresor mit einem im Schlüsselbund Ihres Betriebssystems gespeicherten Schlüssel entsperrt wird. PromptQuorum hat diese Prüfung nicht durchgeführt.',
+          'Die Nutzungsbedingungen sagen, die App sende bei Installation und Start Nutzungsstatistiken (eine zufällige Installations-ID, Version, Betriebssystem, Architektur, Paketformat und Sprache) und das lasse sich „nicht abschalten“; die Datenschutzerklärung sagt, dass sie nie Prompts oder Charaktere enthalten. Weitere Statistiken, etwa zu genutzten Anbietern, sind optional. Die Website nutzt Google Analytics, in der EU, im Vereinigten Königreich und in der Schweiz mit Einwilligung. Die Erklärung erwähnt zudem ein optionales Rin-Chat-Abonnement. Laut Hersteller ist es noch nicht öffentlich angekündigt: ein optionaler Dienst mit gehosteten Modellen, für den Sie keinen eigenen API-Schlüssel brauchen, voraussichtlich in etwa einem Monat, während er getestet wird. Laut Hersteller soll er nie einen Teil von Rin Chat hinter eine Bezahlschranke stellen und nie Pflicht sein, denn jede Funktion läuft mit Ihrem eigenen API-Schlüssel oder einem lokalen Modell. PromptQuorum hat keinen Preis gefunden.',
           'Die Lizenz macht Rin Chat proprietär und kostenlos für die private, nichtkommerzielle Nutzung, und Nutzer müssen mindestens 18 Jahre alt sein. Die App ist Closed Source, und PromptQuorum hat weder ihre Speicherung noch ihren Netzwerkverkehr untersucht, nichts davon ist also überprüft.',
         ],
       },
@@ -601,7 +631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Vorteil: 'Verschlüsselter Speicher',
             'Bedeutung im Alltag': 'Laut Hersteller sind Karten und Chats ohne Passwort oder Schlüssel unlesbar.',
-            'Einschränkung / Hinweis': 'Closed Source, die Verschlüsselung lässt sich nicht prüfen.',
+            'Einschränkung / Hinweis': 'Closed Source; der Hersteller beschreibt eine Dateiprüfung, die PromptQuorum nicht durchgeführt hat.',
           },
           {
             Vorteil: 'Flexible Backends',
@@ -667,6 +697,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Plattform-, Preis- und Funktionsangaben zu Apps von Drittanbietern ändern sich häufig. Prüfen Sie die aktuellen Angaben auf der Seite des jeweiligen Projekts, bevor Sie sich entscheiden.',
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Hersteller',
+        content: [
+          'Der Hersteller von Rin Chat hat diese Rezension am 22. November 2026 gelesen, sie als fair und sorgfältig bezeichnet und die hier nun umgesetzten Korrekturen geschickt: das optionale Abonnement, das noch nicht öffentlich angekündigt ist (der Hersteller hat nichts gegen die Erwähnung); der Zugriff per Smartphone und Tablet über den Fernzugriff und die Android-App in der geschlossenen Testphase; sieben Oberflächensprachen statt fünf; eine Möglichkeit, die Verschlüsselung ohne Quellcode zu prüfen; die Gedächtnis-Funktionen; und die zusätzlichen Importformate. Die folgende Notiz sind die eigenen Worte des Herstellers, keine unabhängige Einschätzung von PromptQuorum.',
+          '„Ich habe angefangen, den SillyTavern-Discord und -Reddit zu moderieren und den ersten einfachen Installer für SillyTavern zu bauen ([sillyTavernSimpleLauncher](https://github.com/blueprintCoding/sillyTavernSimpleLauncher)), habe dann mit den SillyTavern-Entwicklern und DeffColony am SillyTavern Launcher gearbeitet, einem Kommandozeilen-Installer und -Updater, und mich danach eigenen Projekten zugewandt.“',
+          '„Ich habe [aicharactercards.com](https://aicharactercards.com/) gebaut, eine Seite zum Teilen und Bewerten von KI-Charakterkarten, und traf immer wieder Menschen, die diese Karten nutzen wollten, aber keine Chat-App zum Laufen bekamen. Also habe ich Rin Chat gebaut, um das zu lösen: leicht zu installieren, mit Schwerpunkt auf Datenschutz und Sicherheit, und um das Rollenspiel voranzubringen – mit einem besseren Kartenformat, echtem Gedächtnis, der Karten-Schmiede und dem Abenteuer-Modus.“',
+          '„Ich bin allein und finanziere alles selbst. Als Nächstes: Android, macOS und immersivere Karten durch Dokumentstile und Chat-Stile, die in der Karte stecken.“',
+        ],
+        note: '— Der Hersteller von Rin Chat',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Für wen Rin Chat geeignet ist',
@@ -682,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Für wen Rin Chat nicht geeignet ist',
         items: [
           '**Alle, die Open-Source-Code brauchen.** Die App ist proprietär.',
-          '**Mac- und Smartphone-Nutzer.** Es gibt noch keinen macOS- und keinen veröffentlichten Android-Build.',
+          '**Mac-Nutzer und alle, die heute eine native Smartphone-App brauchen.** Es gibt keinen macOS-Build, und die Android-App ist laut Hersteller noch in der geschlossenen Testphase; der Fernzugriff funktioniert im Browser von Smartphone oder Tablet.',
           '**Kommerzielle Nutzer.** Die Lizenz deckt die private, nichtkommerzielle Nutzung ab.',
           '**Alle, die keinerlei Telemetrie wollen.** Laut Nutzungsbedingungen lassen sich die grundlegenden Nutzungsstatistiken nicht abschalten.',
         ],
@@ -697,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Rin Chat kostenlos?',
-            a: 'Die Startseite sagt, alle Funktionen seien ohne Test und ohne Konto freigeschaltet. Ein Rin-Chat-Abonnement taucht in der Datenschutzerklärung auf, ein Preis wurde nicht gefunden.',
+            a: 'Die Startseite sagt, alle Funktionen seien ohne Test und ohne Konto freigeschaltet. Laut Hersteller wird ein optionales, noch nicht angekündigtes Abonnement mit gehosteten Modellen nie Pflicht sein und nie einen Teil von Rin Chat hinter eine Bezahlschranke stellen; ein Preis wurde nicht gefunden.',
           },
           {
             q: 'Kann ich meine SillyTavern-Karten verwenden?',
@@ -705,7 +746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Gibt es eine Mac- oder Android-Version?',
-            a: 'Noch nicht. Laut Hersteller ist macOS in Arbeit, ohne Termin, und Android ist angekündigt, hat aber weder Download-Seite noch Store-Eintrag.',
+            a: 'Noch nicht als native App. Laut Hersteller ist macOS in Arbeit, ohne Termin, und eine Android-App befindet sich in der geschlossenen Testphase bei Google Play und soll etwa zwei Wochen nach dem 22. November 2026 öffentlich sein. Smartphones und Tablets können Rin Chat schon jetzt über den Fernzugriff nutzen, der die App von Ihrem Computer an den Handy-Browser ausliefert.',
           },
           {
             q: 'Wer macht Rin Chat?',
@@ -717,8 +758,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content: [
-          'Rin Chat passt, wenn Sie eine fertige Windows- oder Linux-App für Charakter-Chat wollen, die Dateien von SillyTavern und AI Character Cards öffnet, ihre Daten verschlüsselt auf Ihrem Computer hält und Würfel und Werte ergänzt. Am 20. November 2026 erschien Version 1.0.4.',
-          'Die Vorbehalte sind Closed Source, verpflichtende Nutzungsstatistiken, ein nicht signierter Windows-Installer, kein Mac- und kein veröffentlichter Android-Build, die Kennzeichnung als offene Beta und Aussagen, die PromptQuorum nicht prüfen konnte. Probieren Sie es mit einer Karte und einem lokalen Backend aus, bevor Sie eine große Bibliothek umziehen.',
+          'Rin Chat passt, wenn Sie eine fertige Windows- oder Linux-App für Charakter-Chat wollen, die Dateien von SillyTavern und AI Character Cards öffnet, ihre Daten verschlüsselt auf Ihrem Computer hält und Würfel und Werte ergänzt. Am 20. November 2026 erschien Version 1.0.4. Der Hersteller hat diese Rezension gelesen und Korrekturen geschickt, die umgesetzt sind.',
+          'Die Vorbehalte sind Closed Source, verpflichtende Nutzungsstatistiken, ein nicht signierter Windows-Installer, kein Mac-Build, eine Android-App, die noch in der geschlossenen Testphase ist, die Kennzeichnung als offene Beta und Aussagen, die PromptQuorum nicht prüfen konnte. Probieren Sie es mit einer Karte und einem lokalen Backend aus, bevor Sie eine große Bibliothek umziehen.',
         ],
       },
       sources: {
@@ -750,7 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-21',
-    dateModified: '2026-11-21',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-05-21',
     theme: 'Creative & Roleplay',
     heroImage: '/images/rin-chat-review-hero-fr.webp',
@@ -783,12 +824,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Rin Chat est-elle une application locale de jeu de rôle IA ?',
         answer: "En partie. L'application s'exécute sur votre ordinateur et y stocke ses données, mais elle n'embarque aucun modèle : vous connectez Ollama, KoboldCpp, LM Studio ou tout service compatible OpenAI. Avec un backend local, la conversation reste sur votre machine ; avec une API cloud, les prompts partent de votre appareil vers ce fournisseur, selon la politique de confidentialité de l'éditeur.",
         bullets: [
-          "Elle ouvre les cartes de personnage V1, V2 et V3, y compris celles intégrées dans des images PNG, ainsi que les lorebooks.",
-          "Cartes et conversations sont stockées avec un chiffrement AES-256-GCM sur votre ordinateur, selon l'éditeur.",
-          "Des versions existent pour Windows 10 ou 11 et pour Linux 64 bits ; macOS n'a pas de date de sortie et aucune version Android n'est encore proposée.",
+          "Elle ouvre les cartes de personnage V1, V2 et V3 (y compris depuis des images PNG et des paquets .charx), les lorebooks et ses propres paquets .aicc, selon l'éditeur.",
+          "Cartes et conversations sont stockées avec un chiffrement AES-256-GCM sur votre ordinateur, selon l'éditeur, qui décrit aussi une vérification possible sans code source.",
+          "Des versions existent pour Windows 10 ou 11 et pour Linux 64 bits ; macOS n'a pas de date de sortie. Téléphones et tablettes peuvent utiliser l'application via son accès à distance (Remote Access), et l'éditeur indique qu'une application Android est en test fermé sur Google Play.",
           "L'application est à code fermé : ses affirmations ne peuvent pas être vérifiées dans le code.",
         ],
-        updatedDate: '2026-11-21',
+        updatedDate: '2026-11-22',
       },
     },
     toc: [
@@ -802,6 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Confidentialité, licence et coût', anchor: 'privacy' },
       { label: 'Compromis : avantages et limites', anchor: 'tradeoffs' },
       { label: 'Rin Chat face aux alternatives', anchor: 'vs-alternatives' },
+      { label: "Mot de l'éditeur", anchor: 'from-the-maker' },
       { label: 'Pour qui Rin Chat est adapté', anchor: 'who-should-use' },
       { label: "Pour qui Rin Chat n'est pas adapté", anchor: 'who-should-not-use' },
       { label: 'FAQ', anchor: 'faq' },
@@ -829,7 +871,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Éditeur : Rin Chat LLC, une société de l'Utah, aux États-Unis, selon sa page de contact.",
           "Maintenance : la version 1.0.4 date du 20 novembre 2026, ce qui indique un développement actif, mais le site la présente toujours comme une bêta ouverte.",
           "Coût : gratuit pour un usage personnel non commercial, sous licence propriétaire.",
-          "Lacunes : code fermé, statistiques d'usage obligatoires, installateur Windows non signé, pas de version macOS ni de version Android publiée, et pas de test pratique par PromptQuorum.",
+          "Lacunes : code fermé, statistiques d'usage obligatoires, installateur Windows non signé, pas de version macOS, une application Android encore en test fermé selon l'éditeur, et pas de test pratique par PromptQuorum.",
+          "Relecture de l'éditeur : il a lu cet article le 22 novembre 2026, l'a jugé juste et soigné et a envoyé des corrections, appliquées ci-dessous.",
         ],
       },
       getItRinChat: {
@@ -849,8 +892,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où le trouver': "[Télécharger l'AppImage ou le .deb](https://rin.chat/download/) — x86 64 bits (amd64)",
           },
           {
-            Plateforme: 'Mac et Android',
-            'Où le trouver': "Pas encore de téléchargement ; selon l'éditeur, macOS est en cours, sans date, et Android est annoncé mais n'a ni page de téléchargement ni fiche de boutique",
+            Plateforme: 'Mac',
+            'Où le trouver': 'Pas encore de téléchargement ; macOS est en cours, sans date',
+          },
+          {
+            Plateforme: 'Téléphone et tablette',
+            'Où le trouver': "L'accès à distance sert l'app au navigateur ; Android en test fermé, selon l'éditeur",
           },
           {
             Plateforme: 'Site web',
@@ -861,7 +908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où le trouver': '[Confidentialité de Rin Chat](https://rin.chat/privacy/)',
           },
         ],
-        note: "La page de téléchargement indique que l'application est une bêta ouverte. Aucun dépôt de code source public n'a été trouvé.",
+        note: "La page de téléchargement indique que l'application est une bêta ouverte. Aucun dépôt de code source public n'a été trouvé. L'éditeur indique que l'application Android devrait être publique environ deux semaines après le 22 novembre 2026.",
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -920,13 +967,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**L'ensemble des fonctions tourne autour des cartes, de la mécanique de jeu et de la confidentialité.** Tout ce qui suit provient de la page des fonctionnalités et du journal des modifications de l'éditeur.",
         ],
         items: [
-          "**Import de cartes et de lorebooks.** Elle lit les cartes de personnage V1, V2 et V3, y compris celles intégrées dans un PNG, ainsi que des lorebooks autonomes ; les liens fonctionnent depuis Chub, RisuRealm, Pygmalion, Perchance et AI Character Cards.",
+          "**Import de cartes et de lorebooks.** Elle lit les cartes de personnage V1, V2 et V3, y compris celles intégrées dans un PNG, ainsi que des lorebooks autonomes ; les liens fonctionnent depuis Chub, RisuRealm, Pygmalion, Perchance et AI Character Cards. L'éditeur ajoute que l'import accepte aussi les paquets .charx et .aicc, ainsi que les thèmes, générateurs et styles de documents de Rin Chat.",
           "**Mode aventure.** Le modèle joue le maître du jeu pendant que l'application fait office d'arbitre : elle lance les dés, suit les statistiques et les annule proprement quand vous modifiez ou relancez un message.",
           "**Styles de documents.** Les cartes peuvent définir des documents mis en forme dans la conversation, comme des avis, des lettres, des avis de recherche et des écrans de terminal ; trente styles sont intégrés.",
           "**Forge de cartes.** Un éditeur conversationnel, exécuté sur votre modèle connecté, qui aide à créer et modifier des cartes, des lorebooks et d'autres éléments de l'application.",
+          "**Mémoire.** L'éditeur cite des résumés progressifs, un arbre de mémoire pour les longues conversations, un rappel vectoriel facultatif des anciens messages et des souvenirs épinglés.",
           "**Groupes, voix et images.** Discussions de groupe, synthèse vocale hors ligne incluse (Piper, Kokoro, Pocket TTS), dictée hors ligne avec Whisper et génération d'images via des outils comme Automatic1111, Forge, SwarmUI et ComfyUI.",
-          "**Portée.** Un bot Discord et un accès à distance depuis le navigateur d'un téléphone.",
-          "**Langues.** La page des fonctionnalités liste sept langues d'interface : anglais, chinois simplifié, japonais, espagnol, allemand, français et russe ; la FAQ de la page d'accueil en liste cinq.",
+          "**Portée.** Un bot Discord et l'accès à distance (Remote Access), qui sert l'application depuis votre ordinateur au navigateur d'un téléphone ou d'une tablette. L'éditeur indique qu'une application Android est en test fermé sur Google Play.",
+          "**Langues.** L'éditeur indique que l'application existe en sept langues d'interface : anglais, chinois simplifié, japonais, espagnol, allemand, français et russe. La FAQ de la page d'accueil en indiquait cinq ; l'éditeur dit qu'il s'agissait d'une erreur, corrigée.",
         ],
       },
       backendsHardware: {
@@ -942,7 +990,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Confidentialité, licence et coût',
         content: [
           "**L'éditeur indique que cartes et conversations sont chiffrées avec AES-256-GCM sur votre ordinateur, protégées par votre mot de passe ou le trousseau du système, avec une phrase de récupération de 24 mots.** Selon la politique de confidentialité, les requêtes partent directement de votre appareil vers le fournisseur choisi et ne transitent pas par les serveurs de l'éditeur.",
-          "Les conditions d'utilisation indiquent que l'application envoie des statistiques d'usage à l'installation et au lancement (un identifiant d'installation aléatoire, la version, le système d'exploitation, l'architecture, le format de paquet et la langue) et que cela « ne peut pas être désactivé » ; la politique précise qu'elles n'incluent jamais de prompts ni de personnages. D'autres statistiques, comme les fournisseurs utilisés, sont facultatives. Le site utilise Google Analytics, avec consentement dans l'UE, au Royaume-Uni et en Suisse. La politique mentionne aussi un abonnement Rin Chat facultatif et un compte ; PromptQuorum n'en a trouvé aucun prix.",
+          "L'éditeur décrit une vérification du chiffrement qui ne demande pas le code source. Le coffre est un dossier, par défaut le dossier « rin-chat » dans Documents, avec un sous-dossier à votre nom d'utilisateur. Son index, aicc.db, est chiffré avec SQLCipher : tout outil SQLite répond « file is not a database », et chaque carte, conversation, image et réglage est un fichier .blob AES-256-GCM distinct qui ressemble à des octets aléatoires, sans PNG, JSON ni texte brut à l'intérieur. Selon l'éditeur, rien n'est lisible tant que le coffre n'est pas déverrouillé avec la clé conservée dans le trousseau de votre système. PromptQuorum n'a pas effectué cette vérification.",
+          "Les conditions d'utilisation indiquent que l'application envoie des statistiques d'usage à l'installation et au lancement (un identifiant d'installation aléatoire, la version, le système d'exploitation, l'architecture, le format de paquet et la langue) et que cela « ne peut pas être désactivé » ; la politique précise qu'elles n'incluent jamais de prompts ni de personnages. D'autres statistiques, comme les fournisseurs utilisés, sont facultatives. Le site utilise Google Analytics, avec consentement dans l'UE, au Royaume-Uni et en Suisse. La politique mentionne aussi un abonnement Rin Chat facultatif. Selon l'éditeur, il n'est pas encore annoncé publiquement : un service facultatif de modèles hébergés, sans clé API personnelle, attendu dans environ un mois, le temps des tests. Toujours selon l'éditeur, il ne bloquera jamais aucune partie de Rin Chat derrière un paiement et ne sera jamais obligatoire, car chaque fonction marche avec votre propre clé API ou un modèle local. PromptQuorum n'en a trouvé aucun prix.",
           "La licence rend Rin Chat propriétaire et gratuit pour un usage personnel non commercial, et les utilisateurs doivent avoir au moins 18 ans. L'application est à code fermé et PromptQuorum n'a inspecté ni son stockage ni son trafic réseau : rien de tout cela n'est vérifié.",
         ],
       },
@@ -970,7 +1019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Avantage: 'Stockage chiffré',
             "En pratique": 'Selon l\'éditeur, cartes et conversations illisibles sans mot de passe ou clé.',
-            'Limite / réserve': 'Code fermé : le chiffrement ne peut pas être audité.',
+            'Limite / réserve': "Code fermé ; l'éditeur décrit une vérification de fichiers, que PromptQuorum n'a pas faite.",
           },
           {
             Avantage: 'Backends flexibles',
@@ -1036,6 +1085,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: "Les plateformes, les prix et les fonctions des applications tierces changent fréquemment. Vérifiez les détails actuels sur la page de chaque projet avant de décider.",
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: "Mot de l'éditeur",
+        content: [
+          "L'éditeur de Rin Chat a lu cet article le 22 novembre 2026, l'a jugé juste et soigné, et a envoyé les corrections désormais appliquées ici : l'abonnement facultatif, pas encore annoncé publiquement (l'éditeur accepte qu'il soit mentionné) ; l'accès depuis un téléphone ou une tablette via l'accès à distance et l'application Android en test fermé ; sept langues d'interface au lieu de cinq ; une manière de vérifier le chiffrement sans le code source ; les fonctions de mémoire ; et les formats d'import supplémentaires. La note ci-dessous reprend les propres mots de l'éditeur, et non une évaluation indépendante de PromptQuorum.",
+          "« J'ai commencé par modérer le Discord et le Reddit de SillyTavern et par créer le premier installateur simple de SillyTavern ([sillyTavernSimpleLauncher](https://github.com/blueprintCoding/sillyTavernSimpleLauncher)), puis j'ai travaillé avec les développeurs de SillyTavern et DeffColony sur le SillyTavern Launcher, un installateur et outil de mise à jour en ligne de commande, avant de passer à mes propres projets. »",
+          "« J'ai créé [aicharactercards.com](https://aicharactercards.com/), un site pour partager et noter des cartes de personnages IA, et je rencontrais sans cesse des gens qui voulaient utiliser ces cartes mais n'arrivaient pas à faire fonctionner une application de chat. J'ai donc créé Rin Chat pour y remédier : facile à installer, centré sur la confidentialité et la sécurité, et pour faire avancer le jeu de rôle avec un meilleur format de carte, une vraie mémoire, la Forge de cartes et le mode Aventure. »",
+          "« Je suis seul et je m'autofinance. Prochaines étapes : Android, macOS, et des cartes plus immersives grâce aux styles de documents et aux styles de chat portés par la carte. »",
+        ],
+        note: "— L'éditeur de Rin Chat",
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Pour qui Rin Chat est adapté',
@@ -1051,7 +1111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "Pour qui Rin Chat n'est pas adapté",
         items: [
           "**Ceux qui ont besoin d'un code open source.** L'application est propriétaire.",
-          "**Les utilisateurs de Mac et de téléphone.** Il n'existe pas encore de version macOS ni de version Android publiée.",
+          "**Les utilisateurs de Mac et ceux qui ont besoin aujourd'hui d'une application mobile native.** Il n'existe pas de version macOS, et l'application Android est encore en test fermé selon l'éditeur ; l'accès à distance fonctionne depuis le navigateur d'un téléphone ou d'une tablette.",
           "**Les utilisateurs professionnels.** La licence couvre l'usage personnel non commercial.",
           "**Ceux qui veulent zéro télémétrie.** Les conditions d'utilisation indiquent que les statistiques d'usage de base ne peuvent pas être désactivées.",
         ],
@@ -1066,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Rin Chat est-elle gratuite ?',
-            a: "La page d'accueil indique que toutes les fonctions sont débloquées, sans essai ni compte. Un abonnement Rin Chat apparaît dans la politique, sans prix trouvé.",
+            a: "La page d'accueil indique que toutes les fonctions sont débloquées, sans essai ni compte. Selon l'éditeur, un abonnement facultatif de modèles hébergés, pas encore annoncé, ne sera jamais obligatoire et ne bloquera aucune partie de Rin Chat derrière un paiement ; aucun prix n'a été trouvé.",
           },
           {
             q: 'Puis-je utiliser mes cartes SillyTavern ?',
@@ -1074,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Existe-t-il une version Mac ou Android ?',
-            a: "Pas encore. Selon l'éditeur, macOS est en cours, sans date, et Android est annoncé mais n'a ni page de téléchargement ni fiche de boutique.",
+            a: "Pas encore en application native. Selon l'éditeur, macOS est en cours, sans date, et une application Android est en test fermé sur Google Play, avec une sortie publique prévue environ deux semaines après le 22 novembre 2026. Téléphones et tablettes peuvent déjà utiliser Rin Chat via l'accès à distance, qui sert l'application depuis votre ordinateur au navigateur du téléphone.",
           },
           {
             q: 'Qui édite Rin Chat ?',
@@ -1086,8 +1146,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content: [
-          "Rin Chat convient si vous voulez une application Windows ou Linux toute prête pour discuter avec des personnages, qui ouvre les fichiers SillyTavern et AI Character Cards, garde ses données chiffrées sur votre ordinateur et ajoute dés et statistiques. Elle a publié la version 1.0.4 le 20 novembre 2026.",
-          "Les réserves tiennent au code fermé, aux statistiques d'usage obligatoires, à l'installateur Windows non signé, à l'absence de version Mac et de version Android publiée, à l'étiquette de bêta ouverte et à des affirmations que PromptQuorum n'a pas pu vérifier. Essayez-la avec une carte et un backend local avant de déplacer une grande bibliothèque.",
+          "Rin Chat convient si vous voulez une application Windows ou Linux toute prête pour discuter avec des personnages, qui ouvre les fichiers SillyTavern et AI Character Cards, garde ses données chiffrées sur votre ordinateur et ajoute dés et statistiques. Elle a publié la version 1.0.4 le 20 novembre 2026. L'éditeur a lu cet article et envoyé des corrections, qui sont appliquées.",
+          "Les réserves tiennent au code fermé, aux statistiques d'usage obligatoires, à l'installateur Windows non signé, à l'absence de version Mac, une application Android encore en test fermé, à l'étiquette de bêta ouverte et à des affirmations que PromptQuorum n'a pas pu vérifier. Essayez-la avec une carte et un backend local avant de déplacer une grande bibliothèque.",
         ],
       },
       sources: {
@@ -1119,7 +1179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-21',
-    dateModified: '2026-11-21',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-05-21',
     theme: 'Creative & Roleplay',
     heroImage: '/images/rin-chat-review-hero-ja.webp',
@@ -1152,12 +1212,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Rin ChatはローカルのAIロールプレイアプリですか？',
         answer: '一部はそうです。アプリ自体はお使いのコンピューター上で動作してデータもそこに保存しますが、モデルは付属しないため、Ollama、KoboldCpp、LM Studio、またはOpenAI互換のサービスに接続します。ローカルのバックエンドならチャットはお使いのマシンにとどまり、クラウドAPIでは、開発元のプライバシーポリシーによると、プロンプトがお使いのデバイスからそのプロバイダーへ送られます。',
         bullets: [
-          'PNG画像に埋め込まれたカードを含むV1、V2、V3のキャラクターカードと、ロアブックを開けます。',
-          '開発元によると、カードとチャットはAES-256-GCM暗号化で、お使いのコンピューターに保存されます。',
-          'Windows 10または11と64ビットLinuxのビルドがあります。macOSは公開日未定で、Android版はまだありません。',
+          '開発元によると、PNG画像や.charxバンドルのカードを含むV1、V2、V3のキャラクターカード、ロアブック、そして独自の.aiccバンドルを開けます。',
+          '開発元によると、カードとチャットはAES-256-GCM暗号化で、お使いのコンピューターに保存されます。開発元は、ソースコードがなくても確認できる方法も説明しています。',
+          'Windows 10または11と64ビットLinuxのビルドがあります。macOSは公開日未定です。スマートフォンやタブレットからはリモートアクセス（Remote Access）で使え、開発元によるとAndroidアプリはGoogle Playでクローズドテスト中です。',
           'アプリはクローズドソースのため、その主張をコードで確認することはできません。',
         ],
-        updatedDate: '2026-11-21',
+        updatedDate: '2026-11-22',
       },
     },
     toc: [
@@ -1171,6 +1231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'プライバシー・ライセンス・費用', anchor: 'privacy' },
       { label: 'メリットと制限', anchor: 'tradeoffs' },
       { label: 'Rin Chatと代替ツールの比較', anchor: 'vs-alternatives' },
+      { label: '開発元より', anchor: 'from-the-maker' },
       { label: 'Rin Chatが向いている人', anchor: 'who-should-use' },
       { label: 'Rin Chatが向いていない人', anchor: 'who-should-not-use' },
       { label: 'よくある質問', anchor: 'faq' },
@@ -1198,7 +1259,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '開発元：連絡先ページによると、米国ユタ州の企業Rin Chat LLCです。',
           'メンテナンス：バージョン1.0.4は2026年11月20日付で、開発が活発であることがわかりますが、サイトはまだオープンベータと表示しています。',
           '費用：プロプライエタリのライセンスで、個人の非商用利用なら無料です。',
-          '不足点：クローズドソースであること、必須の利用統計、署名のないWindowsインストーラー、macOS版とリリース済みのAndroid版がないこと、PromptQuorumによる実機テストがないことです。',
+          '不足点：クローズドソースであること、必須の利用統計、署名のないWindowsインストーラー、macOS版がないこと、開発元によるとまだクローズドテスト中のAndroidアプリ、PromptQuorumによる実機テストがないことです。',
+          '開発元のレビュー：開発元は2026年11月22日にこのレビューを読み、公平で丁寧だと評価したうえで訂正を送ってくれました。訂正は以下に反映済みです。',
         ],
       },
       getItRinChat: {
@@ -1218,8 +1280,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '[AppImageまたは.debをダウンロード](https://rin.chat/download/) — 64ビットx86（amd64）',
           },
           {
-            'プラットフォーム': 'MacとAndroid',
-            '入手先': 'ダウンロードはまだありません。開発元によるとmacOSは開発中で日程未定、Androidは発表済みですがダウンロードページもストア掲載もありません',
+            'プラットフォーム': 'Mac',
+            '入手先': 'ダウンロードはまだなし。macOSは開発中で、時期は未定',
+          },
+          {
+            'プラットフォーム': 'スマホとタブレット',
+            '入手先': 'リモートアクセスでスマホのブラウザから利用可。Androidはクローズドテスト中（開発元）',
           },
           {
             'プラットフォーム': '公式サイト',
@@ -1230,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '[Rin Chatのプライバシーポリシー](https://rin.chat/privacy/)',
           },
         ],
-        note: 'ダウンロードページには、アプリがオープンベータだと書かれています。公開されたソースリポジトリは見つかりませんでした。',
+        note: 'ダウンロードページには、アプリがオープンベータだと書かれています。公開されたソースリポジトリは見つかりませんでした。開発元によると、Android版は2026年11月22日から約2週間以内に公開される予定です。',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -1289,13 +1355,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**機能の中心は、カード、ゲームの仕組み、プライバシーです。** 以下はすべて、開発元の機能ページと変更履歴に基づいています。',
         ],
         items: [
-          '**カードとロアブックのインポート。** PNGに埋め込まれたカードを含むV1、V2、V3のキャラクターカードと、単体のロアブックを読み込めます。Chub、RisuRealm、Pygmalion、Perchance、AI Character Cardsからはリンクで取り込めます。',
+          '**カードとロアブックのインポート。** PNGに埋め込まれたカードを含むV1、V2、V3のキャラクターカードと、単体のロアブックを読み込めます。Chub、RisuRealm、Pygmalion、Perchance、AI Character Cardsからはリンクで取り込めます。開発元によると、インポートは.charxと.aiccのバンドル、さらにRin Chatのテーマ、ジェネレーター、ドキュメントスタイルにも対応しています。',
           '**アドベンチャーモード。** モデルがゲームマスターを務め、アプリが審判としてダイスを振り、ステータスを管理し、メッセージを編集したり再生成したりしたときにはきれいに元へ戻します。',
           '**ドキュメントスタイル。** カードは、通知、手紙、賞金首のポスター、ターミナル画面など、スタイル付きのチャット内ドキュメントを定義できます。30種類のスタイルが内蔵されています。',
           '**カードフォージ。** 接続したモデルで動く対話型のエディターで、カード、ロアブック、そのほかのアプリ要素の作成と編集を手伝います。',
+          '**メモリー。** 開発元は、ローリング要約、長いチャット向けのメモリーツリー、古いメッセージを任意でベクトル検索する機能、ピン留めしたメモリーを挙げています。',
           '**グループ、音声、画像。** グループチャット、同梱のオフライン音声合成（Piper、Kokoro、Pocket TTS）、Whisperによるオフラインの音声入力、そしてAutomatic1111、Forge、SwarmUI、ComfyUIなどのツールを使った画像生成に対応します。',
-          '**利用の幅。** Discordボットと、スマートフォンのブラウザーからのリモートアクセスがあります。',
-          '**言語。** 機能ページには7つのインターフェース言語（英語、簡体字中国語、日本語、スペイン語、ドイツ語、フランス語、ロシア語）が挙げられていますが、ホームページのFAQでは5つです。',
+          '**利用範囲。** Discordボットと、お使いのコンピューターからスマートフォンやタブレットのブラウザへアプリを配信するリモートアクセス（Remote Access）。開発元によると、AndroidアプリはGoogle Playでクローズドテスト中です。',
+          '**言語。** 開発元によると、アプリのインターフェース言語は英語、簡体字中国語、日本語、スペイン語、ドイツ語、フランス語、ロシア語の7つです。ホームページのFAQは5つとしていましたが、開発元はそれが誤りで、すでに修正したと述べています。',
         ],
       },
       backendsHardware: {
@@ -1311,7 +1378,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'プライバシー・ライセンス・費用',
         content: [
           '**開発元によると、カードとチャットはAES-256-GCMで暗号化されてお使いのコンピューターに保存され、パスワードまたはOSのキーチェーンで保護され、24語のリカバリーフレーズが付きます。** ポリシーによると、リクエストはお使いのデバイスから選んだプロバイダーへ直接送られ、開発元のサーバーを経由しません。',
-          '利用規約には、アプリはインストール時と起動時に利用統計（ランダムなインストールID、バージョン、オペレーティングシステム、アーキテクチャ、パッケージ形式、言語）を送信し、これは「オフにできない」と書かれています。ポリシーによると、プロンプトやキャラクターが含まれることはありません。使用したプロバイダーなどのさらなる統計は任意です。ウェブサイトではGoogle Analyticsを使っており、EU、英国、スイスでは同意を得ています。ポリシーには、任意のRin Chatのサブスクリプションとアカウントにも触れられていますが、PromptQuorumは価格を見つけられませんでした。',
+          '開発元は、ソースコードがなくても暗号化を確認できる方法を説明しています。保管庫（ボールト）はフォルダーで、標準ではドキュメント内のrin-chatフォルダーの下に、ユーザー名のサブフォルダーとして作られます。インデックスのaicc.dbはSQLCipherで暗号化されているため、どのSQLiteツールでも「file is not a database」と表示されます。カード、チャット、画像、設定はそれぞれ個別のAES-256-GCM形式の.blobファイルで、ランダムなバイト列にしか見えず、PNGやJSON、平文は含まれません。開発元によると、OSのキーチェーンに保管された鍵でボールトを解除するまで、何も読めません。PromptQuorumはこの確認を実施していません。',
+          '利用規約には、アプリはインストール時と起動時に利用統計（ランダムなインストールID、バージョン、オペレーティングシステム、アーキテクチャ、パッケージ形式、言語）を送信し、これは「オフにできない」と書かれています。ポリシーによると、プロンプトやキャラクターが含まれることはありません。使用したプロバイダーなどのさらなる統計は任意です。ウェブサイトではGoogle Analyticsを使っており、EU、英国、スイスでは同意を得ています。ポリシーには、任意のRin Chatのサブスクリプションにも触れられています。開発元によると、これはまだ公に発表されていません。ホスト型モデルを使う任意のサービスで、自分のAPIキーは不要です。テスト中のため、公開は約1か月先の見込みです。開発元は、Rin Chatのどの部分も有料化せず、必須にもならないと述べています。すべての機能は自分のAPIキーまたはローカルモデルで使えるためです。PromptQuorumは価格を見つけられませんでした。',
           'ライセンス上、Rin Chatはプロプライエタリで、個人の非商用利用なら無料であり、利用者は18歳以上である必要があります。アプリはクローズドソースで、PromptQuorumはそのストレージもネットワーク通信も調べていないため、これらはいずれも未確認です。',
         ],
       },
@@ -1339,7 +1407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'メリット': '暗号化された保存',
             '実際の使い勝手': '開発元によると、パスワードまたはキーがなければ、カードとチャットは読めません。',
-            '制限・注意点': 'クローズドソースのため、暗号化を監査できません。',
+            '制限・注意点': 'クローズドソース。開発元はファイルによる確認方法を説明していますが、PromptQuorumは未実施です。',
           },
           {
             'メリット': '柔軟なバックエンド',
@@ -1405,6 +1473,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'サードパーティ製アプリの対応環境、価格、機能は頻繁に変わります。決める前に各プロジェクトの公式ページで最新情報をご確認ください。',
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発元より',
+        content: [
+          'Rin Chatの開発元は2026年11月22日にこのレビューを読み、公平で丁寧だと評価したうえで、ここに反映した訂正を送ってくれました。内容は、まだ公に発表されていない任意のサブスクリプション（言及してかまわないとのことです）、リモートアクセスによるスマホ・タブレットでの利用とクローズドテスト中のAndroidアプリ、5つではなく7つのインターフェース言語、ソースコードなしで暗号化を確認する方法、メモリー機能、追加のインポート形式です。以下は開発元自身の言葉であり、PromptQuorumの独立した評価ではありません。',
+          '「私はSillyTavernのDiscordとRedditのモデレーターとして活動を始め、SillyTavern用の最初のシンプルなインストーラー（[sillyTavernSimpleLauncher](https://github.com/blueprintCoding/sillyTavernSimpleLauncher)）を作りました。その後、SillyTavernの開発者やDeffColonyと協力して、コマンドラインのインストーラー兼アップデーターであるSillyTavern Launcherを手がけ、自分のプロジェクトへ進みました。」',
+          '「私は、AIキャラクターカードを共有・評価するサイト[aicharactercards.com](https://aicharactercards.com/)を作り、カードを使いたいのにチャットアプリを動かせない人たちに何度も出会いました。それを解決するためにRin Chatを作りました。簡単にインストールでき、プライバシーとセキュリティを重視し、より優れたカード形式、本格的なメモリー、カードフォージ、アドベンチャーモードでロールプレイを前進させます。」',
+          '「開発は私ひとりで、自己資金です。次はAndroid、macOS、そしてドキュメントスタイルやカードに組み込むチャットスタイルによる、より没入感のあるカードです。」',
+        ],
+        note: '— Rin Chatの開発元',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Rin Chatが向いている人',
@@ -1420,7 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Rin Chatが向いていない人',
         items: [
           '**オープンソースのコードが必要な人。** アプリはプロプライエタリです。',
-          '**Macやスマートフォンのユーザー。** macOS版もリリース済みのAndroid版も、まだありません。',
+          '**Macのユーザーと、今すぐネイティブのスマホアプリが必要な人。** macOS版はなく、開発元によるとAndroidアプリはクローズドテスト中です。スマホやタブレットのブラウザからはリモートアクセスで使えます。',
           '**商用で使いたい人。** ライセンスは個人の非商用利用が対象です。',
           '**テレメトリーをまったく送りたくない人。** 利用規約には、基本の利用統計はオフにできないと書かれています。',
         ],
@@ -1435,7 +1514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Rin Chatは無料ですか？',
-            a: 'ホームページには、試用期間もアカウントもなく、すべての機能が使えると書かれています。ポリシーにはRin Chatのサブスクリプションが登場しますが、価格は見つかりませんでした。',
+            a: 'ホームページには、体験版もアカウントもなくすべての機能が使えると書かれています。開発元によると、まだ発表されていないホスト型モデルの任意サブスクリプションは、必須にならず、Rin Chatのどの部分も有料化しません。価格は見つかりませんでした。',
           },
           {
             q: 'SillyTavernのカードは使えますか？',
@@ -1443,7 +1522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MacやAndroidのバージョンはありますか？',
-            a: 'まだありません。開発元によるとmacOSは開発中で日程未定、Androidは発表済みですが、ダウンロードページもストア掲載もありません。',
+            a: 'ネイティブアプリとしてはまだありません。開発元によると、macOSは開発中で時期は未定です。AndroidアプリはGoogle Playでクローズドテスト中で、2026年11月22日から約2週間以内に公開される予定です。スマートフォンやタブレットでは、お使いのコンピューターからブラウザへアプリを配信するリモートアクセスで、すでにRin Chatを使えます。',
           },
           {
             q: 'Rin Chatは誰が作っていますか？',
@@ -1455,8 +1534,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content: [
-          'Rin Chatは、SillyTavernとAI Character Cardsのファイルを開け、データを暗号化してコンピューターに保存し、ダイスとステータスも使える、キャラクターチャット向けのパッケージ版WindowsまたはLinuxアプリがほしい方に向いています。2026年11月20日にバージョン1.0.4が公開されました。',
-          '注意点は、クローズドソースであること、必須の利用統計、署名のないWindowsインストーラー、MacとリリースされたAndroid版がないこと、オープンベータという表示、そしてPromptQuorumが確認できなかった主張です。大きなライブラリを移す前に、まず1枚のカードとローカルのバックエンドで試してください。',
+          'Rin Chatは、SillyTavernとAI Character Cardsのファイルを開け、データを暗号化してコンピューターに保存し、ダイスとステータスも使える、キャラクターチャット向けのパッケージ版WindowsまたはLinuxアプリがほしい方に向いています。2026年11月20日にバージョン1.0.4が公開されました。開発元はこのレビューを読み、訂正を送ってくれました。反映済みです。',
+          '注意点は、クローズドソースであること、必須の利用統計、署名のないWindowsインストーラー、Mac版がないこと、開発元によるとまだクローズドテスト中のAndroidアプリ、オープンベータという表示、そしてPromptQuorumが確認できなかった主張です。大きなライブラリを移す前に、まず1枚のカードとローカルのバックエンドで試してください。',
         ],
       },
       sources: {
@@ -1488,7 +1567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-21',
-    dateModified: '2026-11-21',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-05-21',
     theme: 'Creative & Roleplay',
     heroImage: '/images/rin-chat-review-hero-zh.webp',
@@ -1521,12 +1600,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Rin Chat是本地AI角色扮演应用吗？',
         answer: '部分是。应用本身在你的电脑上运行并把数据保存在本机，但它不附带模型：你需要连接Ollama、KoboldCpp、LM Studio或任何兼容OpenAI的服务。使用本地后端时，聊天内容留在你的电脑上；使用云端API时，据开发者的隐私政策，提示词会从你的设备发送到该服务商。',
         bullets: [
-          '它可以打开V1、V2和V3角色卡（包括嵌入PNG图片中的角色卡）以及世界书。',
-          '据开发者称，角色卡和聊天记录以AES-256-GCM加密保存在你的电脑上。',
-          '提供Windows 10或11以及64位Linux版本；macOS没有发布日期，目前也没有Android版本。',
+          '据开发者称，它可以打开V1、V2和V3角色卡（包括来自PNG图片和.charx包的角色卡）、世界书以及自家的.aicc包。',
+          '据开发者称，角色卡和聊天记录以AES-256-GCM加密保存在你的电脑上；开发者还介绍了一种无需源代码即可检查的方法。',
+          '提供Windows 10或11以及64位Linux版本；macOS没有发布日期。手机和平板可通过其远程访问（Remote Access）使用该应用，开发者称Android应用正在Google Play上进行封闭测试。',
           '应用是闭源的，因此其说法无法通过代码核实。',
         ],
-        updatedDate: '2026-11-21',
+        updatedDate: '2026-11-22',
       },
     },
     toc: [
@@ -1540,6 +1619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '隐私、许可与费用', anchor: 'privacy' },
       { label: '优势与局限', anchor: 'tradeoffs' },
       { label: 'Rin Chat与替代方案对比', anchor: 'vs-alternatives' },
+      { label: '开发者的话', anchor: 'from-the-maker' },
       { label: '适合使用Rin Chat的人', anchor: 'who-should-use' },
       { label: '不适合使用Rin Chat的人', anchor: 'who-should-not-use' },
       { label: '常见问题', anchor: 'faq' },
@@ -1567,7 +1647,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '开发者：据其联系页面，为美国犹他州的公司Rin Chat LLC。',
           '维护状态：版本1.0.4的日期为2026年11月20日，表明仍在积极开发，但官网仍称其为公开测试版。',
           '费用：采用专有许可，个人非商业使用免费。',
-          '不足：闭源、强制的使用统计、未签名的Windows安装程序、没有macOS版本和已发布的Android版本，以及PromptQuorum没有实测。',
+          '不足：闭源、强制的使用统计、未签名的Windows安装程序、没有macOS版本、据开发者称仍在封闭测试中的Android应用，以及PromptQuorum没有实测。',
+          '开发者审阅：开发者于2026年11月22日阅读了这篇评测，称其公允、细致，并提供了更正，已在下文采纳。',
         ],
       },
       getItRinChat: {
@@ -1587,8 +1668,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取方式': '[下载AppImage或.deb](https://rin.chat/download/) — 64位x86（amd64）',
           },
           {
-            '平台': 'Mac和Android',
-            '获取方式': '暂无下载；开发者称macOS正在开发中，没有日期，Android已宣布但没有下载页面或应用商店页面',
+            '平台': 'Mac',
+            '获取方式': '暂无下载；macOS正在开发，无日期',
+          },
+          {
+            '平台': '手机和平板',
+            '获取方式': '远程访问可在手机浏览器中使用；Android应用封闭测试中（开发者称）',
           },
           {
             '平台': '官网',
@@ -1599,7 +1684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取方式': '[Rin Chat隐私政策](https://rin.chat/privacy/)',
           },
         ],
-        note: '下载页面称该应用为公开测试版。没有找到公开的源代码仓库。',
+        note: '下载页面称该应用为公开测试版。没有找到公开的源代码仓库。开发者称，Android应用应在2026年11月22日后约两周内公开。',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -1658,13 +1743,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**功能集中在角色卡、游戏机制和隐私上。** 以下内容均来自开发者的功能页面和更新日志。',
         ],
         items: [
-          '**角色卡和世界书导入。** 可读取V1、V2和V3角色卡（包括嵌入PNG的角色卡）以及独立的世界书；可通过链接从Chub、RisuRealm、Pygmalion、Perchance和AI Character Cards导入。',
+          '**角色卡和世界书导入。** 可读取V1、V2和V3角色卡（包括嵌入PNG的角色卡）以及独立的世界书；可通过链接从Chub、RisuRealm、Pygmalion、Perchance和AI Character Cards导入。开发者补充说，导入还支持.charx和.aicc包，以及Rin Chat的主题、生成器和文档样式。',
           '**冒险模式。** 模型担任游戏主持人，应用担任裁判：掷骰子、记录属性，并在你编辑或重新生成消息时干净地撤销这些变化。',
           '**文档样式。** 角色卡可以定义带样式的聊天内文档，例如通知、信件、悬赏海报和终端屏幕；内置三十种样式。',
           '**角色卡工坊。** 一个基于你所连接模型运行的对话式编辑器，帮助你创建和编辑角色卡、世界书及其他应用元素。',
+          '**记忆。** 开发者列出了滚动摘要、用于长聊天的记忆树、可选的旧消息向量召回，以及置顶记忆。',
           '**群聊、语音和图像。** 支持群聊、内置的离线文字转语音（Piper、Kokoro、Pocket TTS）、使用Whisper的离线听写，以及通过Automatic1111、Forge、SwarmUI和ComfyUI等工具生成图像。',
-          '**使用范围。** 提供Discord机器人，并支持通过手机浏览器远程访问。',
-          '**语言。** 功能页面列出七种界面语言：英语、简体中文、日语、西班牙语、德语、法语和俄语；首页的常见问题则列出五种。',
+          '**覆盖范围。** 提供Discord机器人，以及远程访问（Remote Access），可从你的电脑向手机或平板的浏览器提供该应用。开发者称Android应用正在Google Play上进行封闭测试。',
+          '**语言。** 开发者称，应用提供七种界面语言：英语、简体中文、日语、西班牙语、德语、法语和俄语。官网首页FAQ曾写五种；开发者称那是他们的错误，已经修正。',
         ],
       },
       backendsHardware: {
@@ -1680,7 +1766,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '隐私、许可与费用',
         content: [
           '**开发者称，角色卡和聊天记录以AES-256-GCM加密保存在你的电脑上，由你的密码或操作系统钥匙串保护，并附带24个单词的恢复短语。** 据隐私政策，请求直接从你的设备发送到你选择的服务商，不经过开发者的服务器。',
-          '条款称，应用在安装和启动时会发送使用统计（随机的安装ID、版本、操作系统、架构、安装包格式和语言），并且这“无法关闭”；政策称其中绝不包含提示词或角色。其他统计（例如使用过的服务商）是可选的。网站使用Google Analytics，在欧盟、英国和瑞士需经同意。政策还提到一项可选的Rin Chat订阅和账号；PromptQuorum没有找到其价格。',
+          '开发者介绍了一种无需源代码即可检查加密的方法。保险库是一个文件夹，默认位于“文档”中的rin-chat文件夹下，以你的用户名命名的子文件夹里。其索引文件aicc.db使用SQLCipher加密，因此任何SQLite工具都会提示“file is not a database”；每张角色卡、每段聊天、每张图片和每项设置都是各自独立的AES-256-GCM格式.blob文件，看起来是随机字节，内部没有PNG、JSON或明文。开发者称，只有用保存在操作系统钥匙串中的密钥解锁保险库后，才能读取其中内容。PromptQuorum没有进行这项检查。',
+          '条款称，应用在安装和启动时会发送使用统计（随机的安装ID、版本、操作系统、架构、安装包格式和语言），并且这“无法关闭”；政策称其中绝不包含提示词或角色。其他统计（例如使用过的服务商）是可选的。网站使用Google Analytics，在欧盟、英国和瑞士需经同意。政策还提到一项可选的Rin Chat订阅。开发者称它尚未公开发布：这是一项使用托管模型的可选服务，因此无需自己的API密钥，由于仍在测试，预计还需约一个月。开发者称，它绝不会对Rin Chat的任何部分设置付费墙，也绝不会成为必需，因为所有功能都可使用你自己的API密钥或本地模型。PromptQuorum没有找到价格。',
           '许可使Rin Chat成为专有软件，个人非商业使用免费，用户必须年满18岁。应用是闭源的，PromptQuorum没有检查其存储或网络流量，因此以上说法均未经核实。',
         ],
       },
@@ -1708,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '优势': '加密存储',
             '实际使用中的意义': '据开发者称，没有你的密码或密钥，角色卡和聊天记录无法读取。',
-            '局限 / 注意事项': '闭源，因此无法审计其加密。',
+            '局限 / 注意事项': '闭源；开发者介绍了一种文件检查方法，PromptQuorum未执行。',
           },
           {
             '优势': '灵活的后端',
@@ -1774,6 +1861,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '第三方应用的平台、价格和功能细节经常变化。决定之前，请到各项目自己的页面核实最新信息。',
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '开发者的话',
+        content: [
+          'Rin Chat的开发者于2026年11月22日阅读了这篇评测，称其公允、细致，并提供了现已在此采纳的更正：尚未公开发布的可选订阅（开发者同意在此提及）；通过远程访问在手机和平板上使用，以及处于封闭测试中的Android应用；七种界面语言而不是五种；一种无需源代码即可检查加密的方法；记忆功能；以及额外的导入格式。以下内容是开发者本人的话，不是PromptQuorum的独立评估。',
+          '“我最初是SillyTavern的Discord和Reddit的版主，并为SillyTavern制作了第一个简单的安装程序（[sillyTavernSimpleLauncher](https://github.com/blueprintCoding/sillyTavernSimpleLauncher)），后来与SillyTavern开发者和DeffColony合作开发了SillyTavern Launcher（一个命令行安装与更新工具），然后转向自己的项目。”',
+          '“我做了[aicharactercards.com](https://aicharactercards.com/)，一个用于分享和评分AI角色卡的网站，发现很多人想用这些角色卡，却没法把聊天应用跑起来。所以我做了Rin Chat来解决这个问题：易于安装，注重隐私与安全，并以更好的角色卡格式、真正的记忆、角色卡锻造（Card Forge）和冒险模式推动角色扮演向前发展。”',
+          '“只有我一个人，自筹资金。接下来是：Android、macOS，以及通过文档样式和随卡携带的聊天样式实现更沉浸的角色卡。”',
+        ],
+        note: '— Rin Chat的开发者',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '适合使用Rin Chat的人',
@@ -1789,7 +1887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '不适合使用Rin Chat的人',
         items: [
           '**需要开源代码的人。** 该应用是专有的。',
-          '**Mac和手机用户。** 目前还没有macOS版本，也没有已发布的Android版本。',
+          '**Mac用户，以及现在就需要原生手机应用的人。** 目前没有macOS版本，据开发者称Android应用仍在封闭测试；远程访问可在手机或平板的浏览器中使用。',
           '**商业用户。** 许可仅涵盖个人非商业使用。',
           '**需要零遥测的人。** 条款称基本的使用统计无法关闭。',
         ],
@@ -1804,7 +1902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Rin Chat是免费的吗？',
-            a: '首页称所有功能均已解锁，无需试用或账号。政策中出现了Rin Chat订阅，但没有找到价格。',
+            a: '首页称所有功能均已解锁，无需试用或账号。开发者称，尚未公布的可选托管模型订阅绝不会成为必需，也绝不会对Rin Chat的任何部分设置付费墙；未找到价格。',
           },
           {
             q: '我可以使用SillyTavern的角色卡吗？',
@@ -1812,7 +1910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '有Mac或Android版本吗？',
-            a: '暂时没有。开发者称macOS正在开发中，没有日期；Android已宣布，但没有下载页面或应用商店页面。',
+            a: '还没有原生应用。开发者称，macOS正在开发，无日期；Android应用正在Google Play上进行封闭测试，应在2026年11月22日后约两周内公开。手机和平板现在就可以通过远程访问使用Rin Chat，它从你的电脑向手机浏览器提供该应用。',
           },
           {
             q: 'Rin Chat是谁开发的？',
@@ -1824,8 +1922,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content: [
-          '如果你想要一款打包好的Windows或Linux角色聊天应用，能打开SillyTavern和AI Character Cards的文件，把数据加密保存在你的电脑上，并提供骰子和属性，那么Rin Chat是不错的选择。它于2026年11月20日发布了1.0.4版本。',
-          '需要注意的是：闭源、强制的使用统计、未签名的Windows安装程序、没有Mac版本和已发布的Android版本、公开测试版的标注，以及PromptQuorum无法核实的说法。在迁移大型资料库之前，请先用一张角色卡和一个本地后端试用。',
+          '如果你想要一款打包好的Windows或Linux角色聊天应用，能打开SillyTavern和AI Character Cards的文件，把数据加密保存在你的电脑上，并提供骰子和属性，那么Rin Chat是不错的选择。它于2026年11月20日发布了1.0.4版本。开发者阅读了这篇评测并提供了更正，均已采纳。',
+          '需要注意的是：闭源、强制的使用统计、未签名的Windows安装程序、没有Mac版本、Android应用仍在封闭测试、公开测试版的标注，以及PromptQuorum无法核实的说法。在迁移大型资料库之前，请先用一张角色卡和一个本地后端试用。',
         ],
       },
       sources: {
@@ -1857,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-21',
-    dateModified: '2026-11-21',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-05-21',
     theme: 'Creative & Roleplay',
     heroImage: '/images/rin-chat-review-hero-es.webp',
@@ -1890,12 +1988,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '¿Es Rin Chat una app de rol con IA local?',
         answer: 'En parte. La app se ejecuta en tu ordenador y guarda allí sus datos, pero no incluye ningún modelo: conectas Ollama, KoboldCpp, LM Studio o cualquier servicio compatible con OpenAI. Con un backend local el chat se queda en tu equipo; con una API en la nube, los prompts van desde tu dispositivo a ese proveedor, según la política de privacidad del fabricante.',
         bullets: [
-          'Abre tarjetas de personaje V1, V2 y V3, incluidas las incrustadas en imágenes PNG, y lorebooks.',
-          'Las tarjetas y los chats se guardan con cifrado AES-256-GCM en tu ordenador, según el fabricante.',
-          'Existen versiones para Windows 10 u 11 y Linux de 64 bits; macOS no tiene fecha de lanzamiento y aún no hay versión para Android.',
+          'Abre tarjetas de personaje V1, V2 y V3 (también desde imágenes PNG y paquetes .charx), lorebooks y sus propios paquetes .aicc, según el fabricante.',
+          'Las tarjetas y los chats se guardan con cifrado AES-256-GCM en tu ordenador, según el fabricante, que además describe una comprobación que no requiere el código fuente.',
+          'Existen versiones para Windows 10 u 11 y Linux de 64 bits; macOS no tiene fecha de lanzamiento. Los móviles y las tabletas pueden usar la app mediante su acceso remoto (Remote Access), y el fabricante dice que una app de Android está en pruebas cerradas en Google Play.',
           'La app es de código cerrado, así que sus afirmaciones no se pueden comprobar en el código.',
         ],
-        updatedDate: '2026-11-21',
+        updatedDate: '2026-11-22',
       },
     },
     toc: [
@@ -1909,6 +2007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Privacidad, licencia y coste', anchor: 'privacy' },
       { label: 'Equilibrio: ventajas y limitaciones', anchor: 'tradeoffs' },
       { label: 'Rin Chat frente a alternativas', anchor: 'vs-alternatives' },
+      { label: 'Del fabricante', anchor: 'from-the-maker' },
       { label: 'Quién debería usar Rin Chat', anchor: 'who-should-use' },
       { label: 'Quién no debería usar Rin Chat', anchor: 'who-should-not-use' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
@@ -1936,7 +2035,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fabricante: Rin Chat LLC, una empresa de Utah, Estados Unidos, según su página de contacto.',
           'Mantenimiento: la versión 1.0.4 está fechada el 20 de noviembre de 2026, lo que indica desarrollo activo, pero el sitio sigue llamándola beta abierta.',
           'Coste: gratis para uso personal y no comercial bajo una licencia propietaria.',
-          'Carencias: código cerrado, estadísticas de uso obligatorias, un instalador de Windows sin firmar, ninguna versión para macOS ni Android publicada y ninguna prueba práctica de PromptQuorum.',
+          'Carencias: código cerrado, estadísticas de uso obligatorias, un instalador de Windows sin firmar, ninguna versión para macOS, una app de Android que según el fabricante sigue en pruebas cerradas y ninguna prueba práctica de PromptQuorum.',
+          'Revisión del fabricante: leyó esta reseña el 22 de noviembre de 2026, la calificó de justa y cuidadosa y envió correcciones, que se aplican más abajo.',
         ],
       },
       getItRinChat: {
@@ -1956,8 +2056,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde conseguirla': '[Descargar el AppImage o el .deb](https://rin.chat/download/) — x86 de 64 bits (amd64)',
           },
           {
-            Plataforma: 'Mac y Android',
-            'Dónde conseguirla': 'Aún sin descarga; macOS sin fecha y Android sin página de descarga ni ficha en tienda',
+            Plataforma: 'Mac',
+            'Dónde conseguirla': 'Aún sin descarga; macOS está en curso, sin fecha',
+          },
+          {
+            Plataforma: 'Móvil y tableta',
+            'Dónde conseguirla': 'El acceso remoto sirve la app al navegador del móvil; Android en pruebas cerradas, según el fabricante',
           },
           {
             Plataforma: 'Sitio web',
@@ -1968,7 +2072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde conseguirla': '[Política de privacidad](https://rin.chat/privacy/)',
           },
         ],
-        note: 'La página de descarga dice que la app es una beta abierta. No se encontró ningún repositorio público de código fuente.',
+        note: 'La página de descarga dice que la app es una beta abierta. No se encontró ningún repositorio público de código fuente. El fabricante dice que la app de Android debería ser pública unas dos semanas después del 22 de noviembre de 2026.',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -2027,13 +2131,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**El conjunto de funciones gira en torno a las tarjetas, la mecánica de juego y la privacidad.** Todo lo siguiente procede de la página de funciones y del registro de cambios del fabricante.',
         ],
         items: [
-          '**Importación de tarjetas y lorebooks.** Lee tarjetas de personaje V1, V2 y V3, incluidas las incrustadas en un PNG, además de lorebooks independientes; los enlaces funcionan desde Chub, RisuRealm, Pygmalion, Perchance y AI Character Cards.',
+          '**Importación de tarjetas y lorebooks.** Lee tarjetas de personaje V1, V2 y V3, incluidas las incrustadas en un PNG, además de lorebooks independientes; los enlaces funcionan desde Chub, RisuRealm, Pygmalion, Perchance y AI Character Cards. El fabricante añade que la importación también acepta paquetes .charx y .aicc, además de temas, generadores y estilos de documento de Rin Chat.',
           '**Modo aventura.** El modelo hace de director de juego mientras la app actúa como árbitro: tira los dados, lleva las estadísticas y las revierte limpiamente cuando editas o repites un mensaje.',
           '**Estilos de documento.** Las tarjetas pueden definir documentos con estilo dentro del chat, como avisos, cartas, carteles de recompensa y pantallas de terminal; incluye treinta estilos.',
           '**Creador de tarjetas.** Un editor conversacional, ejecutado con el modelo que conectas, que te ayuda a crear y editar tarjetas, lorebooks y otros elementos de la app.',
+          '**Memoria.** El fabricante menciona resúmenes progresivos, un árbol de memoria para chats largos, recuperación vectorial opcional de mensajes antiguos y recuerdos fijados.',
           '**Grupos, voz e imágenes.** Chats de grupo, texto a voz sin conexión incluido (Piper, Kokoro, Pocket TTS), dictado sin conexión con Whisper y generación de imágenes mediante herramientas como Automatic1111, Forge, SwarmUI y ComfyUI.',
-          '**Alcance.** Un bot de Discord y acceso remoto desde el navegador de un teléfono.',
-          '**Idiomas.** La página de funciones enumera siete idiomas de interfaz: inglés, chino simplificado, japonés, español, alemán, francés y ruso; las preguntas frecuentes de la página de inicio enumeran cinco.',
+          '**Alcance.** Un bot de Discord y el acceso remoto (Remote Access), que sirve la app desde tu ordenador al navegador de un móvil o una tableta. El fabricante dice que una app de Android está en pruebas cerradas en Google Play.',
+          '**Idiomas.** El fabricante dice que la app viene en siete idiomas de interfaz: inglés, chino simplificado, japonés, español, alemán, francés y ruso. Las preguntas frecuentes de la página de inicio decían cinco; el fabricante dice que fue un error y ya está corregido.',
         ],
       },
       backendsHardware: {
@@ -2049,7 +2154,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidad, licencia y coste',
         content: [
           '**El fabricante dice que las tarjetas y los chats se cifran con AES-256-GCM en tu ordenador, protegidos por tu contraseña o por el llavero del sistema operativo, con una frase de recuperación de 24 palabras.** Según la política de privacidad, las solicitudes van directamente desde tu dispositivo al proveedor que elijas y no pasan por los servidores del fabricante.',
-          'Las condiciones dicen que la app envía estadísticas de uso al instalar y al iniciar (un identificador de instalación aleatorio, la versión, el sistema operativo, la arquitectura, el formato del paquete y el idioma) y que esto "no se puede desactivar"; la política dice que nunca incluye prompts ni personajes. Otras estadísticas, como los proveedores usados, son opcionales. El sitio web usa Google Analytics, con consentimiento en la UE, el Reino Unido y Suiza. La política también menciona una suscripción y una cuenta opcionales de Rin Chat; PromptQuorum no encontró ningún precio.',
+          'El fabricante describe una forma de comprobar el cifrado sin el código fuente. La bóveda es una carpeta, por defecto la carpeta rin-chat dentro de Documentos, en una subcarpeta con tu nombre de usuario. Su archivo de índice, aicc.db, está cifrado con SQLCipher, así que cualquier herramienta de SQLite indica "file is not a database", y cada tarjeta, chat, imagen y ajuste es su propio archivo .blob AES-256-GCM que parece bytes aleatorios, sin PNG, JSON ni texto plano dentro. Según el fabricante, nada se puede leer hasta desbloquear la bóveda con una clave guardada en el llavero de tu sistema operativo. PromptQuorum no realizó esta comprobación.',
+          'Las condiciones dicen que la app envía estadísticas de uso al instalar y al iniciar (un identificador de instalación aleatorio, la versión, el sistema operativo, la arquitectura, el formato del paquete y el idioma) y que esto "no se puede desactivar"; la política dice que nunca incluye prompts ni personajes. Otras estadísticas, como los proveedores usados, son opcionales. El sitio web usa Google Analytics, con consentimiento en la UE, el Reino Unido y Suiza. La política también menciona una suscripción opcional de Rin Chat. El fabricante dice que aún no se ha anunciado públicamente: un servicio opcional con modelos alojados, para el que no necesitas tu propia clave de API, previsto dentro de aproximadamente un mes mientras se prueba. Según el fabricante, nunca pondrá ninguna parte de Rin Chat tras un muro de pago ni será obligatorio, porque todas las funciones van con tu propia clave de API o con un modelo local. PromptQuorum no encontró ningún precio.',
           'La licencia hace que Rin Chat sea propietaria y gratis para uso personal y no comercial, y los usuarios deben tener al menos 18 años. La app es de código cerrado y PromptQuorum no inspeccionó su almacenamiento ni su tráfico de red, así que nada de esto está verificado.',
         ],
       },
@@ -2077,7 +2183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Ventaja: 'Almacenamiento cifrado',
             'Qué implica en uso real': 'Según el fabricante, tarjetas y chats ilegibles sin tu contraseña o clave.',
-            'Limitación / advertencia': 'Código cerrado, así que el cifrado no se puede auditar.',
+            'Limitación / advertencia': 'Código cerrado; el fabricante describe una comprobación de archivos que PromptQuorum no hizo.',
           },
           {
             Ventaja: 'Backends flexibles',
@@ -2143,6 +2249,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Los detalles de plataforma, precio y funciones de las apps de terceros cambian con frecuencia. Comprueba los datos actuales en la página de cada proyecto antes de decidir.',
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Del fabricante',
+        content: [
+          'El fabricante de Rin Chat leyó esta reseña el 22 de noviembre de 2026, la calificó de justa y cuidadosa y envió las correcciones que ahora se aplican aquí: la suscripción opcional, aún sin anunciar públicamente (el fabricante está de acuerdo en que se mencione); el acceso desde móviles y tabletas mediante el acceso remoto y la app de Android en pruebas cerradas; siete idiomas de interfaz en lugar de cinco; una forma de comprobar el cifrado sin el código fuente; las funciones de memoria; y los formatos de importación adicionales. La nota siguiente son las palabras del propio fabricante, no una valoración independiente de PromptQuorum.',
+          '«Empecé moderando el Discord y el Reddit de SillyTavern y creando el primer instalador sencillo de SillyTavern ([sillyTavernSimpleLauncher](https://github.com/blueprintCoding/sillyTavernSimpleLauncher)); después trabajé con los desarrolladores de SillyTavern y DeffColony en el SillyTavern Launcher, un instalador y actualizador de línea de comandos, antes de pasar a mis propios proyectos.»',
+          '«Creé [aicharactercards.com](https://aicharactercards.com/), un sitio para compartir y valorar tarjetas de personajes de IA, y me encontraba con gente que quería usar esas tarjetas pero no conseguía poner en marcha una app de chat. Así que creé Rin Chat para arreglarlo: fácil de instalar, centrado en la privacidad y la seguridad, y para impulsar el rol con un mejor formato de tarjeta, memoria de verdad, la Forja de tarjetas y el Modo aventura.»',
+          '«Soy solo yo, con financiación propia. Lo siguiente: Android, macOS y tarjetas más inmersivas mediante estilos de documento y estilos de chat que viajan en la propia tarjeta.»',
+        ],
+        note: '— El fabricante de Rin Chat',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Quién debería usar Rin Chat',
@@ -2158,7 +2275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quién no debería usar Rin Chat',
         items: [
           '**Quien necesite código abierto.** La app es propietaria.',
-          '**Usuarios de Mac y de móvil.** Aún no existe ninguna versión para macOS ni Android publicada.',
+          '**Usuarios de Mac y quien necesite hoy una app móvil nativa.** No existe versión para macOS y la app de Android sigue en pruebas cerradas, según el fabricante; el acceso remoto funciona desde el navegador de un móvil o una tableta.',
           '**Usuarios comerciales.** La licencia cubre el uso personal y no comercial.',
           '**Quien necesite cero telemetría.** Las condiciones dicen que las estadísticas básicas de uso no se pueden desactivar.',
         ],
@@ -2173,7 +2290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es gratis Rin Chat?',
-            a: 'La página de inicio dice que todas las funciones están desbloqueadas, sin prueba ni cuenta. En la política aparece una suscripción a Rin Chat, sin precio encontrado.',
+            a: 'La página de inicio dice que todas las funciones están desbloqueadas, sin prueba ni cuenta. El fabricante dice que una suscripción opcional con modelos alojados, aún sin anunciar, nunca será obligatoria ni pondrá ninguna parte de Rin Chat tras un muro de pago; no se encontró ningún precio.',
           },
           {
             q: '¿Puedo usar mis tarjetas de SillyTavern?',
@@ -2181,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Hay una versión para Mac o Android?',
-            a: 'Todavía no. El fabricante dice que macOS está en curso sin fecha, y Android está anunciado pero no tiene página de descarga ni ficha en una tienda.',
+            a: 'Todavía no como app nativa. El fabricante dice que macOS está en curso, sin fecha, y que una app de Android está en pruebas cerradas en Google Play y debería ser pública unas dos semanas después del 22 de noviembre de 2026. Los móviles y las tabletas ya pueden usar Rin Chat mediante el acceso remoto, que sirve la app desde tu ordenador al navegador del móvil.',
           },
           {
             q: '¿Quién hace Rin Chat?',
@@ -2193,8 +2310,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content: [
-          'Rin Chat es una buena opción si quieres una app empaquetada para Windows o Linux para chatear con personajes, que abre archivos de SillyTavern y AI Character Cards, guarda sus datos cifrados en tu ordenador y añade dados y estadísticas. Publicó la versión 1.0.4 el 20 de noviembre de 2026.',
-          'Las advertencias son el código cerrado, las estadísticas de uso obligatorias, un instalador de Windows sin firmar, la ausencia de versión para Mac y de una versión de Android publicada, la etiqueta de beta abierta y afirmaciones que PromptQuorum no pudo comprobar. Pruébala con una tarjeta y un backend local antes de mover una biblioteca grande.',
+          'Rin Chat es una buena opción si quieres una app empaquetada para Windows o Linux para chatear con personajes, que abre archivos de SillyTavern y AI Character Cards, guarda sus datos cifrados en tu ordenador y añade dados y estadísticas. Publicó la versión 1.0.4 el 20 de noviembre de 2026. El fabricante leyó esta reseña y envió correcciones, que están aplicadas.',
+          'Las advertencias son el código cerrado, las estadísticas de uso obligatorias, un instalador de Windows sin firmar, la ausencia de versión para Mac, una app de Android que sigue en pruebas cerradas, la etiqueta de beta abierta y afirmaciones que PromptQuorum no pudo comprobar. Pruébala con una tarjeta y un backend local antes de mover una biblioteca grande.',
         ],
       },
       sources: {
@@ -2226,7 +2343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-21',
-    dateModified: '2026-11-21',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-05-21',
     theme: 'Creative & Roleplay',
     heroImage: '/images/rin-chat-review-hero-pt.webp',
@@ -2259,12 +2376,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'O Rin Chat é um app de roleplay com IA local?',
         answer: 'Em parte. O app roda no seu computador e guarda os dados lá, mas não inclui nenhum modelo: você conecta Ollama, KoboldCpp, LM Studio ou qualquer serviço compatível com OpenAI. Com um backend local, o chat fica na sua máquina; com uma API na nuvem, os prompts vão do seu dispositivo para esse provedor, segundo a política de privacidade do fabricante.',
         bullets: [
-          'Abre cartões de personagem V1, V2 e V3, inclusive os embutidos em imagens PNG, e lorebooks.',
-          'Cartões e chats são guardados com criptografia AES-256-GCM no seu computador, segundo o fabricante.',
-          'Existem versões para Windows 10 ou 11 e Linux de 64 bits; o macOS não tem data de lançamento e ainda não há versão para Android.',
+          'Abre cartões de personagem V1, V2 e V3 (também de imagens PNG e pacotes .charx), lorebooks e seus próprios pacotes .aicc, segundo o fabricante.',
+          'Cartões e chats são guardados com criptografia AES-256-GCM no seu computador, segundo o fabricante, que também descreve uma verificação que dispensa o código-fonte.',
+          'Existem versões para Windows 10 ou 11 e Linux de 64 bits; o macOS não tem data de lançamento. Celulares e tablets podem usar o app pelo acesso remoto (Remote Access), e o fabricante diz que um app Android está em testes fechados no Google Play.',
           'O app é de código fechado, então suas afirmações não podem ser verificadas no código.',
         ],
-        updatedDate: '2026-11-21',
+        updatedDate: '2026-11-22',
       },
     },
     toc: [
@@ -2278,6 +2395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Privacidade, licença e custo', anchor: 'privacy' },
       { label: 'Prós e contras', anchor: 'tradeoffs' },
       { label: 'Rin Chat e as alternativas', anchor: 'vs-alternatives' },
+      { label: 'Do fabricante', anchor: 'from-the-maker' },
       { label: 'Para quem o Rin Chat serve', anchor: 'who-should-use' },
       { label: 'Para quem o Rin Chat não serve', anchor: 'who-should-not-use' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
@@ -2305,7 +2423,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fabricante: Rin Chat LLC, uma empresa em Utah, nos Estados Unidos, segundo sua página de contato.',
           'Manutenção: a versão 1.0.4 é datada de 20 de novembro de 2026, o que indica desenvolvimento ativo, mas o site ainda a chama de beta aberto.',
           'Custo: grátis para uso pessoal e não comercial, sob uma licença proprietária.',
-          'Lacunas: código fechado, estatísticas de uso obrigatórias, um instalador do Windows sem assinatura, nenhuma versão publicada para macOS ou Android e nenhum teste prático do PromptQuorum.',
+          'Lacunas: código fechado, estatísticas de uso obrigatórias, um instalador do Windows sem assinatura, nenhuma versão para macOS, um app Android que, segundo o fabricante, ainda está em testes fechados, e nenhum teste prático do PromptQuorum.',
+          'Revisão do fabricante: ele leu esta resenha em 22 de novembro de 2026, a considerou justa e cuidadosa e enviou correções, aplicadas abaixo.',
         ],
       },
       getItRinChat: {
@@ -2325,8 +2444,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': '[Baixar o AppImage ou o .deb](https://rin.chat/download/) — x86 de 64 bits (amd64)',
           },
           {
-            Plataforma: 'Mac e Android',
-            'Onde obter': 'Ainda sem download; macOS sem data e Android sem página de download nem página em loja',
+            Plataforma: 'Mac',
+            'Onde obter': 'Ainda sem download; o macOS está em andamento, sem data',
+          },
+          {
+            Plataforma: 'Celular e tablet',
+            'Onde obter': 'O acesso remoto serve o app ao navegador do celular; Android em testes fechados, segundo o fabricante',
           },
           {
             Plataforma: 'Site',
@@ -2337,7 +2460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': '[Política de privacidade](https://rin.chat/privacy/)',
           },
         ],
-        note: 'A página de download diz que o app é um beta aberto. Nenhum repositório público de código-fonte foi encontrado.',
+        note: 'A página de download diz que o app é um beta aberto. Nenhum repositório público de código-fonte foi encontrado. O fabricante diz que o app Android deve ficar público cerca de duas semanas após 22 de novembro de 2026.',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -2396,13 +2519,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O conjunto de recursos gira em torno de cartões, mecânicas de jogo e privacidade.** Tudo abaixo vem da página de recursos e do registro de alterações do fabricante.',
         ],
         items: [
-          '**Importação de cartões e lorebooks.** Lê cartões de personagem V1, V2 e V3, inclusive os embutidos em um PNG, além de lorebooks avulsos; links funcionam a partir de Chub, RisuRealm, Pygmalion, Perchance e AI Character Cards.',
+          '**Importação de cartões e lorebooks.** Lê cartões de personagem V1, V2 e V3, inclusive os embutidos em um PNG, além de lorebooks avulsos; links funcionam a partir de Chub, RisuRealm, Pygmalion, Perchance e AI Character Cards. O fabricante acrescenta que a importação também aceita pacotes .charx e .aicc, além de temas, geradores e estilos de documento do Rin Chat.',
           '**Modo aventura.** O modelo faz o papel de mestre de jogo enquanto o app atua como árbitro: rola os dados, acompanha as estatísticas e as reverte corretamente quando você edita ou refaz uma mensagem.',
           '**Estilos de documento.** Os cartões podem definir documentos estilizados dentro do chat, como avisos, cartas, cartazes de recompensa e telas de terminal; trinta estilos já vêm incluídos.',
           '**Criador de cartões.** Um editor conversacional, executado no modelo que você conectou, que ajuda a criar e editar cartões, lorebooks e outros elementos do app.',
+          '**Memória.** O fabricante cita resumos contínuos, uma árvore de memória para chats longos, recuperação vetorial opcional de mensagens antigas e memórias fixadas.',
           '**Grupos, voz e imagens.** Chats em grupo, texto para fala offline incluído (Piper, Kokoro, Pocket TTS), ditado offline com Whisper e geração de imagens por ferramentas como Automatic1111, Forge, SwarmUI e ComfyUI.',
-          '**Alcance.** Um bot do Discord e acesso remoto pelo navegador do celular.',
-          '**Idiomas.** A página de recursos lista sete idiomas de interface: inglês, chinês simplificado, japonês, espanhol, alemão, francês e russo; as perguntas frequentes da página inicial listam cinco.',
+          '**Alcance.** Um bot do Discord e o acesso remoto (Remote Access), que serve o app do seu computador ao navegador de um celular ou tablet. O fabricante diz que um app Android está em testes fechados no Google Play.',
+          '**Idiomas.** O fabricante diz que o app vem em sete idiomas de interface: inglês, chinês simplificado, japonês, espanhol, alemão, francês e russo. O FAQ da página inicial dizia cinco; o fabricante diz que foi um erro e já está corrigido.',
         ],
       },
       backendsHardware: {
@@ -2418,7 +2542,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidade, licença e custo',
         content: [
           '**O fabricante diz que cartões e chats são criptografados com AES-256-GCM no seu computador, protegidos pela sua senha ou pelo chaveiro do sistema operacional, com uma frase de recuperação de 24 palavras.** Segundo a política de privacidade, as requisições vão direto do seu dispositivo para o provedor que você escolher e não passam pelos servidores do fabricante.',
-          'Os termos dizem que o app envia estatísticas de uso na instalação e na abertura (um ID de instalação aleatório, versão, sistema operacional, arquitetura, formato do pacote e idioma) e que isso "não pode ser desativado"; a política diz que nunca inclui prompts nem personagens. Outras estatísticas, como os provedores usados, são opcionais. O site usa o Google Analytics, com consentimento na UE, no Reino Unido e na Suíça. A política também menciona uma assinatura e uma conta opcionais do Rin Chat; o PromptQuorum não encontrou nenhum preço.',
+          'O fabricante descreve uma forma de verificar a criptografia sem o código-fonte. O cofre é uma pasta, por padrão a pasta rin-chat dentro de Documentos, em uma subpasta com o seu nome de usuário. Seu arquivo de índice, aicc.db, é criptografado com SQLCipher, então qualquer ferramenta SQLite informa "file is not a database", e cada cartão, chat, imagem e configuração é um arquivo .blob AES-256-GCM próprio que parece bytes aleatórios, sem PNG, JSON ou texto simples dentro. Segundo o fabricante, nada pode ser lido até o cofre ser desbloqueado com uma chave guardada no chaveiro do seu sistema operacional. O PromptQuorum não executou essa verificação.',
+          'Os termos dizem que o app envia estatísticas de uso na instalação e na abertura (um ID de instalação aleatório, versão, sistema operacional, arquitetura, formato do pacote e idioma) e que isso "não pode ser desativado"; a política diz que nunca inclui prompts nem personagens. Outras estatísticas, como os provedores usados, são opcionais. O site usa o Google Analytics, com consentimento na UE, no Reino Unido e na Suíça. A política também menciona uma assinatura opcional do Rin Chat. O fabricante diz que ela ainda não foi anunciada publicamente: um serviço opcional com modelos hospedados, para o qual você não precisa de uma chave de API própria, previsto para daqui a cerca de um mês, enquanto é testado. Segundo o fabricante, ela nunca vai colocar nenhuma parte do Rin Chat atrás de um paywall nem será obrigatória, porque todos os recursos funcionam com a sua própria chave de API ou com um modelo local. O PromptQuorum não encontrou nenhum preço.',
           'A licença torna o Rin Chat proprietário e grátis para uso pessoal e não comercial, e os usuários devem ter pelo menos 18 anos. O app é de código fechado e o PromptQuorum não inspecionou seu armazenamento nem seu tráfego de rede, então nada disso foi verificado.',
         ],
       },
@@ -2446,7 +2571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             Vantagem: 'Armazenamento criptografado',
             'Significado na prática': 'Segundo o fabricante, cartões e chats ficam ilegíveis sem sua senha ou chave.',
-            'Limitação / ressalva': 'Código fechado, então a criptografia não pode ser auditada.',
+            'Limitação / ressalva': 'Código fechado; o fabricante descreve uma verificação de arquivos, que o PromptQuorum não executou.',
           },
           {
             Vantagem: 'Backends flexíveis',
@@ -2512,6 +2637,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Os detalhes de plataforma, preço e recursos dos apps de terceiros mudam com frequência. Confira os dados atuais na página de cada projeto antes de decidir.',
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Do fabricante',
+        content: [
+          'O fabricante do Rin Chat leu esta resenha em 22 de novembro de 2026, a considerou justa e cuidadosa e enviou as correções agora aplicadas aqui: a assinatura opcional, ainda não anunciada publicamente (o fabricante concorda que seja mencionada); o acesso por celular e tablet pelo acesso remoto e o app Android em testes fechados; sete idiomas de interface em vez de cinco; uma forma de verificar a criptografia sem o código-fonte; os recursos de memória; e os formatos de importação adicionais. A nota abaixo são as palavras do próprio fabricante, não uma avaliação independente do PromptQuorum.',
+          '“Comecei moderando o Discord e o Reddit do SillyTavern e criando o primeiro instalador simples do SillyTavern ([sillyTavernSimpleLauncher](https://github.com/blueprintCoding/sillyTavernSimpleLauncher)); depois trabalhei com os desenvolvedores do SillyTavern e a DeffColony no SillyTavern Launcher, um instalador e atualizador de linha de comando, antes de partir para meus próprios projetos.”',
+          '“Criei [aicharactercards.com](https://aicharactercards.com/), um site para compartilhar e avaliar cartões de personagens de IA, e vivia encontrando pessoas que queriam usar esses cartões, mas não conseguiam colocar um app de chat para funcionar. Então criei o Rin Chat para resolver isso: fácil de instalar, com foco em privacidade e segurança, e para levar o roleplay adiante com um formato de cartão melhor, memória de verdade, a Forja de cartões e o Modo aventura.”',
+          '“Sou só eu, com recursos próprios. Os próximos passos: Android, macOS e cartões mais imersivos por meio de estilos de documento e de estilos de chat levados pelo próprio cartão.”',
+        ],
+        note: '— O fabricante do Rin Chat',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Para quem o Rin Chat serve',
@@ -2527,7 +2663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Para quem o Rin Chat não serve',
         items: [
           '**Quem precisa de código aberto.** O app é proprietário.',
-          '**Usuários de Mac e de celular.** Ainda não existe versão publicada para macOS nem para Android.',
+          '**Usuários de Mac e quem precisa hoje de um app móvel nativo.** Não existe versão para macOS e o app Android ainda está em testes fechados, segundo o fabricante; o acesso remoto funciona no navegador de um celular ou tablet.',
           '**Usuários comerciais.** A licença cobre uso pessoal e não comercial.',
           '**Quem precisa de zero telemetria.** Os termos dizem que as estatísticas básicas de uso não podem ser desativadas.',
         ],
@@ -2542,7 +2678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Rin Chat é grátis?',
-            a: 'A página inicial diz que todos os recursos estão liberados, sem período de teste nem conta. Uma assinatura do Rin Chat aparece na política, sem preço encontrado.',
+            a: 'A página inicial diz que todos os recursos estão liberados, sem teste nem conta. O fabricante diz que uma assinatura opcional com modelos hospedados, ainda não anunciada, nunca será obrigatória nem colocará nenhuma parte do Rin Chat atrás de um paywall; nenhum preço foi encontrado.',
           },
           {
             q: 'Posso usar meus cartões do SillyTavern?',
@@ -2550,7 +2686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Existe versão para Mac ou Android?',
-            a: 'Ainda não. O fabricante diz que o macOS está em andamento, sem data, e o Android foi anunciado, mas não tem página de download nem página em loja.',
+            a: 'Ainda não como app nativo. O fabricante diz que o macOS está em andamento, sem data, e que um app Android está em testes fechados no Google Play e deve ficar público cerca de duas semanas após 22 de novembro de 2026. Celulares e tablets já podem usar o Rin Chat pelo acesso remoto, que serve o app do seu computador ao navegador do celular.',
           },
           {
             q: 'Quem faz o Rin Chat?',
@@ -2562,8 +2698,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content: [
-          'O Rin Chat é uma boa escolha se você quer um app empacotado para Windows ou Linux para conversar com personagens, que abre arquivos do SillyTavern e do AI Character Cards, guarda seus dados criptografados no seu computador e acrescenta dados e estatísticas. Ele lançou a versão 1.0.4 em 20 de novembro de 2026.',
-          'As ressalvas são o código fechado, as estatísticas de uso obrigatórias, um instalador do Windows sem assinatura, a ausência de versão para Mac e de uma versão publicada para Android, o rótulo de beta aberto e afirmações que o PromptQuorum não pôde verificar. Teste com um cartão e um backend local antes de migrar uma biblioteca grande.',
+          'O Rin Chat é uma boa escolha se você quer um app empacotado para Windows ou Linux para conversar com personagens, que abre arquivos do SillyTavern e do AI Character Cards, guarda seus dados criptografados no seu computador e acrescenta dados e estatísticas. Ele lançou a versão 1.0.4 em 20 de novembro de 2026. O fabricante leu esta resenha e enviou correções, que foram aplicadas.',
+          'As ressalvas são o código fechado, as estatísticas de uso obrigatórias, um instalador do Windows sem assinatura, a ausência de versão para Mac, um app Android que ainda está em testes fechados, o rótulo de beta aberto e afirmações que o PromptQuorum não pôde verificar. Teste com um cartão e um backend local antes de migrar uma biblioteca grande.',
         ],
       },
       sources: {
@@ -2595,7 +2731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-21',
-    dateModified: '2026-11-21',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-05-21',
     theme: 'Creative & Roleplay',
     heroImage: '/images/rin-chat-review-hero-ar.webp',
@@ -2628,12 +2764,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'هل Rin Chat تطبيق محلي للعب الأدوار بالذكاء الاصطناعي؟',
         answer: 'جزئيًا. التطبيق نفسه يعمل على حاسوبك ويخزّن بياناته عليه، لكنه لا يأتي بأي نموذج: تتصل بـ Ollama أو KoboldCpp أو LM Studio أو أي خدمة متوافقة مع OpenAI. مع واجهة خلفية محلية تبقى المحادثة على جهازك؛ ومع واجهة API سحابية تنتقل الرسائل من جهازك إلى ذلك المزوّد، بحسب سياسة الخصوصية لدى المطوّر.',
         bullets: [
-          'يفتح بطاقات الشخصيات بصيغ V1 وV2 وV3، ومنها البطاقات المضمّنة في صور PNG، وكتب المعرفة (lorebooks).',
-          'تُخزَّن البطاقات والمحادثات بتشفير AES-256-GCM على حاسوبك، بحسب المطوّر.',
-          'تتوفر نسخ لنظام Windows 10 أو 11 ولنظام Linux بمعمارية 64 بت؛ ولا يوجد موعد لإصدار macOS ولا نسخة لـ Android حتى الآن.',
+          'يفتح بطاقات الشخصيات بصيغ V1 وV2 وV3 (ومنها المأخوذة من صور PNG وحِزم .charx) وكتب المعرفة (lorebooks) وحِزم .aicc الخاصة به، بحسب المطوّر.',
+          'تُخزَّن البطاقات والمحادثات بتشفير AES-256-GCM على حاسوبك، بحسب المطوّر، الذي يصف أيضًا طريقة للتحقق لا تتطلب الشيفرة المصدرية.',
+          'تتوفر نسخ لنظام Windows 10 أو 11 ولنظام Linux بمعمارية 64 بت؛ ولا يوجد موعد لإصدار macOS. ويمكن للهواتف واللوحات استخدام التطبيق عبر الوصول عن بُعد (Remote Access)، ويقول المطوّر إن تطبيق Android في اختبار مغلق على Google Play.',
           'التطبيق مغلق المصدر، فلا يمكن التحقق من ادعاءاته في الشيفرة.',
         ],
-        updatedDate: '2026-11-21',
+        updatedDate: '2026-11-22',
       },
     },
     toc: [
@@ -2647,6 +2783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الخصوصية والترخيص والتكلفة', anchor: 'privacy' },
       { label: 'المزايا والقيود', anchor: 'tradeoffs' },
       { label: 'Rin Chat مقابل البدائل', anchor: 'vs-alternatives' },
+      { label: 'من المطوّر', anchor: 'from-the-maker' },
       { label: 'لمن يناسب Rin Chat', anchor: 'who-should-use' },
       { label: 'لمن لا يناسب Rin Chat', anchor: 'who-should-not-use' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
@@ -2674,7 +2811,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المطوّر: Rin Chat LLC، شركة في ولاية يوتا بالولايات المتحدة، بحسب صفحة التواصل لديها.',
           'الصيانة: الإصدار 1.0.4 مؤرخ في 20 نوفمبر 2026، ما يدل على تطوير نشط، لكن الموقع ما زال يسميه نسخة تجريبية مفتوحة.',
           'التكلفة: مجاني للاستخدام الشخصي غير التجاري بموجب رخصة مملوكة.',
-          'الثغرات: مغلق المصدر، وإحصاءات استخدام إلزامية، ومثبّت Windows غير موقَّع، ولا نسخة لـ macOS ولا نسخة منشورة لـ Android، ولا اختبار عملي من PromptQuorum.',
+          'الثغرات: مغلق المصدر، وإحصاءات استخدام إلزامية، ومثبّت Windows غير موقَّع، ولا نسخة لـ macOS، وتطبيق Android لا يزال بحسب المطوّر في اختبار مغلق، ولا اختبار عملي من PromptQuorum.',
+          'مراجعة المطوّر: قرأ المطوّر هذه المراجعة في 22 نوفمبر 2026، ووصفها بأنها منصفة ودقيقة، وأرسل تصحيحات طُبِّقت أدناه.',
         ],
       },
       getItRinChat: {
@@ -2694,8 +2832,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'مصدر الحصول': '[تنزيل AppImage أو .deb](https://rin.chat/download/) — x86 بمعمارية 64 بت (amd64)',
           },
           {
-            'المنصة': 'Mac وAndroid',
-            'مصدر الحصول': 'لا تنزيل حتى الآن؛ macOS بلا موعد، وAndroid بلا صفحة تنزيل أو صفحة في المتجر',
+            'المنصة': 'Mac',
+            'مصدر الحصول': 'لا تنزيل بعد؛ macOS قيد العمل، بلا موعد',
+          },
+          {
+            'المنصة': 'الهاتف واللوحي',
+            'مصدر الحصول': 'الوصول عن بُعد يعرض التطبيق في متصفح الهاتف؛ Android في اختبار مغلق، بحسب المطوّر',
           },
           {
             'المنصة': 'الموقع',
@@ -2706,7 +2848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'مصدر الحصول': '[سياسة خصوصية Rin Chat](https://rin.chat/privacy/)',
           },
         ],
-        note: 'تقول صفحة التنزيل إن التطبيق نسخة تجريبية مفتوحة. ولم يُعثر على مستودع شيفرة عام.',
+        note: 'تقول صفحة التنزيل إن التطبيق نسخة تجريبية مفتوحة. ولم يُعثر على مستودع شيفرة عام. ويقول المطوّر إن تطبيق Android ينبغي أن يصبح عامًا خلال نحو أسبوعين من 22 نوفمبر 2026.',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -2765,13 +2907,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تتمحور الميزات حول البطاقات وآليات اللعب والخصوصية.** كل ما يلي مصدره صفحة الميزات وسجل التغييرات لدى المطوّر.',
         ],
         items: [
-          '**استيراد البطاقات وكتب المعرفة.** يقرأ بطاقات الشخصيات V1 وV2 وV3، ومنها المضمّنة في PNG، إضافةً إلى كتب المعرفة المستقلة؛ وتعمل الروابط من Chub وRisuRealm وPygmalion وPerchance وAI Character Cards.',
+          '**استيراد البطاقات وكتب المعرفة.** يقرأ بطاقات الشخصيات V1 وV2 وV3، ومنها المضمّنة في PNG، إضافةً إلى كتب المعرفة المستقلة؛ وتعمل الروابط من Chub وRisuRealm وPygmalion وPerchance وAI Character Cards. ويضيف المطوّر أن الاستيراد يقبل أيضًا حِزم .charx و.aicc، إضافةً إلى سمات Rin Chat ومولّداته وأنماط مستنداته.',
           '**وضع المغامرة.** يؤدي النموذج دور مدير اللعبة بينما يعمل التطبيق حكَمًا: يرمي النرد ويتتبع الإحصاءات ويعكسها بسلاسة عند تعديل رسالة أو إعادة توليدها.',
           '**أنماط المستندات.** يمكن للبطاقات تعريف مستندات منسّقة داخل المحادثة مثل الإشعارات والرسائل وملصقات المكافآت وشاشات الطرفية؛ وفيه ثلاثون نمطًا مدمجًا.',
           '**محرر البطاقات.** محرر حواري يعمل على النموذج الذي تتصل به، يساعدك على إنشاء البطاقات وكتب المعرفة وعناصر التطبيق الأخرى وتعديلها.',
+          '**الذاكرة.** يذكر المطوّر ملخصات متجددة، وشجرة ذاكرة للمحادثات الطويلة، واسترجاعًا متجهيًّا اختياريًّا للرسائل القديمة، وذكريات مثبّتة.',
           '**المجموعات والصوت والصور.** محادثات جماعية، وتحويل نص إلى كلام مضمّن يعمل دون اتصال (Piper وKokoro وPocket TTS)، وإملاء دون اتصال بـ Whisper، وتوليد صور عبر أدوات مثل Automatic1111 وForge وSwarmUI وComfyUI.',
-          '**الوصول.** بوت Discord، ووصول عن بُعد من متصفح الهاتف.',
-          '**اللغات.** تسرد صفحة الميزات سبع لغات للواجهة: الإنجليزية والصينية المبسطة واليابانية والإسبانية والألمانية والفرنسية والروسية؛ وتسرد الأسئلة الشائعة في الصفحة الرئيسية خمس لغات.',
+          '**الانتشار.** بوت Discord، والوصول عن بُعد (Remote Access) الذي يعرض التطبيق من حاسوبك في متصفح هاتف أو لوحي. ويقول المطوّر إن تطبيق Android في اختبار مغلق على Google Play.',
+          '**اللغات.** يقول المطوّر إن التطبيق يأتي بسبع لغات للواجهة: الإنجليزية والصينية المبسّطة واليابانية والإسبانية والألمانية والفرنسية والروسية. وكانت الأسئلة الشائعة في الصفحة الرئيسية تذكر خمسًا؛ ويقول المطوّر إن ذلك كان خطأً وقد صُحِّح.',
         ],
       },
       backendsHardware: {
@@ -2787,7 +2930,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخصوصية والترخيص والتكلفة',
         content: [
           '**يقول المطوّر إن البطاقات والمحادثات مشفّرة بـ AES-256-GCM على حاسوبك، ومحمية بكلمة المرور أو بسلسلة مفاتيح نظام التشغيل، مع عبارة استرداد من 24 كلمة.** وبحسب سياسة الخصوصية، تنتقل الطلبات مباشرةً من جهازك إلى المزوّد الذي تختاره ولا تمر عبر خوادم المطوّر.',
-          'تقول الشروط إن التطبيق يرسل إحصاءات استخدام عند التثبيت وعند التشغيل (معرّف تثبيت عشوائي والإصدار ونظام التشغيل والمعمارية وصيغة الحزمة واللغة) وإن هذا «لا يمكن إيقافه»؛ وتقول السياسة إنها لا تتضمن أبدًا الرسائل ولا الشخصيات. أما الإحصاءات الإضافية، مثل المزوّدين المستخدمين، فاختيارية. ويستخدم الموقع Google Analytics، بموافقة المستخدم في الاتحاد الأوروبي والمملكة المتحدة وسويسرا. وتذكر السياسة أيضًا اشتراكًا وحسابًا اختياريين في Rin Chat؛ ولم تجد PromptQuorum له سعرًا.',
+          'يصف المطوّر طريقة للتحقق من التشفير دون الشيفرة المصدرية. الخزنة مجلد، وهو افتراضيًا مجلد rin-chat داخل المستندات، في مجلد فرعي باسم المستخدم. وملف الفهرس aicc.db مشفّر بـ SQLCipher، لذا تُبلغ أي أداة SQLite بالرسالة "file is not a database"، وكل بطاقة ومحادثة وصورة وإعداد هو ملف .blob مستقل بتشفير AES-256-GCM يبدو بايتات عشوائية، دون PNG أو JSON أو نص صريح بداخله. ويقول المطوّر إن شيئًا لا يُقرأ حتى تُفتح الخزنة بمفتاح محفوظ في سلسلة مفاتيح نظام التشغيل لديك. ولم تُجرِ PromptQuorum هذا الفحص.',
+          'تقول الشروط إن التطبيق يرسل إحصاءات استخدام عند التثبيت وعند التشغيل (معرّف تثبيت عشوائي والإصدار ونظام التشغيل والمعمارية وصيغة الحزمة واللغة) وإن هذا «لا يمكن إيقافه»؛ وتقول السياسة إنها لا تتضمن أبدًا الرسائل ولا الشخصيات. أما الإحصاءات الإضافية، مثل المزوّدين المستخدمين، فاختيارية. ويستخدم الموقع Google Analytics، بموافقة المستخدم في الاتحاد الأوروبي والمملكة المتحدة وسويسرا. وتذكر السياسة أيضًا اشتراكًا اختياريًّا في Rin Chat. ويقول المطوّر إنه لم يُعلن عنه علنًا بعد: خدمة اختيارية بنماذج مستضافة، فلا تحتاج إلى مفتاح API خاص بك، ويُتوقع أن تأتي بعد نحو شهر أثناء اختبارها. ويقول المطوّر إنها لن تضع أي جزء من Rin Chat خلف جدار دفع ولن تكون إلزامية، لأن كل ميزة تعمل بمفتاح API الخاص بك أو بنموذج محلي. ولم تجد PromptQuorum سعرًا.',
           'تجعل الرخصة Rin Chat مملوكًا ومجانيًا للاستخدام الشخصي غير التجاري، ويجب ألا يقل عمر المستخدم عن 18 عامًا. والتطبيق مغلق المصدر ولم تفحص PromptQuorum تخزينه ولا حركة الشبكة فيه، لذا لا شيء من هذا موثّق.',
         ],
       },
@@ -2815,7 +2959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الميزة': 'تخزين مشفّر',
             'ما تعنيه في الاستخدام الفعلي': 'بحسب المطوّر، البطاقات والمحادثات غير مقروءة دون كلمة المرور أو المفتاح.',
-            'القيد / التنبيه': 'مغلق المصدر، فلا يمكن تدقيق التشفير.',
+            'القيد / التنبيه': 'مغلق المصدر؛ ويصف المطوّر فحصًا للملفات لم تُجره PromptQuorum.',
           },
           {
             'الميزة': 'واجهات خلفية مرنة',
@@ -2881,6 +3025,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'تتغير منصات التطبيقات الخارجية وأسعارها وميزاتها كثيرًا. تحقق من التفاصيل الحالية في صفحة كل مشروع قبل أن تقرر.',
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من المطوّر',
+        content: [
+          'قرأ مطوّر Rin Chat هذه المراجعة في 22 نوفمبر 2026، ووصفها بأنها منصفة ودقيقة، وأرسل التصحيحات المطبّقة هنا الآن: الاشتراك الاختياري الذي لم يُعلن عنه علنًا بعد (ولا مانع لدى المطوّر من ذكره)؛ والوصول من الهواتف واللوحات عبر الوصول عن بُعد وتطبيق Android في اختبار مغلق؛ وسبع لغات للواجهة بدل خمس؛ وطريقة للتحقق من التشفير دون الشيفرة المصدرية؛ وميزات الذاكرة؛ وصيغ الاستيراد الإضافية. والملاحظة التالية هي كلمات المطوّر نفسه، وليست تقييمًا مستقلًّا من PromptQuorum.',
+          '«بدأت بإدارة ديسكورد وريديت الخاصين بـ SillyTavern وببناء أول مثبّت بسيط لـ SillyTavern ([sillyTavernSimpleLauncher](https://github.com/blueprintCoding/sillyTavernSimpleLauncher))، ثم عملت مع مطوّري SillyTavern وفريق DeffColony على SillyTavern Launcher، وهو مثبّت ومحدّث بسطر الأوامر، قبل أن أنتقل إلى مشاريعي الخاصة.»',
+          '«بنيت [aicharactercards.com](https://aicharactercards.com/)، وهو موقع لمشاركة بطاقات شخصيات الذكاء الاصطناعي وتقييمها، وظللت ألتقي بأشخاص يريدون استخدام هذه البطاقات لكنهم لا يستطيعون تشغيل تطبيق محادثة. فبنيت Rin Chat لحل ذلك: سهل التثبيت، مع تركيز على الخصوصية والأمان، ولدفع لعب الأدوار إلى الأمام بصيغة بطاقات أفضل وذاكرة حقيقية وCard Forge ووضع المغامرة.»',
+          '«أنا وحدي، وبتمويل ذاتي. والخطوة التالية: Android وmacOS وبطاقات أكثر انغماسًا عبر أنماط المستندات وأنماط المحادثة التي تحملها البطاقة نفسها.»',
+        ],
+        note: '— مطوّر Rin Chat',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'لمن يناسب Rin Chat',
@@ -2896,7 +3051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'لمن لا يناسب Rin Chat',
         items: [
           '**من يحتاجون إلى شيفرة مفتوحة المصدر.** التطبيق مملوك.',
-          '**مستخدمو Mac والهاتف.** لا توجد نسخة لـ macOS ولا نسخة منشورة لـ Android حتى الآن.',
+          '**مستخدمو Mac ومن يحتاجون إلى تطبيق هاتف أصلي اليوم.** لا توجد نسخة لـ macOS، وتطبيق Android في اختبار مغلق بحسب المطوّر؛ والوصول عن بُعد يعمل من متصفح الهاتف أو اللوحي.',
           '**المستخدمون التجاريون.** تغطي الرخصة الاستخدام الشخصي غير التجاري.',
           '**من يحتاجون إلى تتبّع صفري.** تقول الشروط إن إحصاءات الاستخدام الأساسية لا يمكن إيقافها.',
         ],
@@ -2911,7 +3066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل Rin Chat مجاني؟',
-            a: 'تقول الصفحة الرئيسية إن كل الميزات مفتوحة دون تجربة محدودة ودون حساب. ويظهر اشتراك Rin Chat في السياسة، دون العثور على سعر له.',
+            a: 'تقول الصفحة الرئيسية إن كل الميزات مفتوحة دون فترة تجريبية أو حساب. ويقول المطوّر إن اشتراكًا اختياريًّا بنماذج مستضافة، لم يُعلن عنه بعد، لن يكون إلزاميًّا ولن يضع أي جزء من Rin Chat خلف جدار دفع؛ ولم يُعثر على سعر.',
           },
           {
             q: 'هل يمكنني استخدام بطاقات SillyTavern الخاصة بي؟',
@@ -2919,7 +3074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل توجد نسخة لـ Mac أو Android؟',
-            a: 'ليس بعد. يقول المطوّر إن macOS قيد العمل دون موعد، وإن Android معلن لكن بلا صفحة تنزيل أو صفحة في المتجر.',
+            a: 'ليس بعد كتطبيق أصلي. يقول المطوّر إن macOS قيد العمل بلا موعد، وإن تطبيق Android في اختبار مغلق على Google Play وينبغي أن يصبح عامًا خلال نحو أسبوعين من 22 نوفمبر 2026. ويمكن للهواتف واللوحات استخدام Rin Chat الآن عبر الوصول عن بُعد، الذي يعرض التطبيق من حاسوبك في متصفح الهاتف.',
           },
           {
             q: 'من يصنع Rin Chat؟',
@@ -2931,8 +3086,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content: [
-          'Rin Chat خيار جيد إن أردت تطبيقًا جاهزًا لنظام Windows أو Linux للمحادثة مع الشخصيات، يفتح ملفات SillyTavern وAI Character Cards ويُبقي بياناته مشفّرة على حاسوبك ويضيف النرد والإحصاءات. وقد صدر له الإصدار 1.0.4 في 20 نوفمبر 2026.',
-          'التنبيهات هي: مغلق المصدر، وإحصاءات استخدام إلزامية، ومثبّت Windows غير موقَّع، ولا نسخة لـ Mac ولا نسخة منشورة لـ Android، ووصف النسخة التجريبية المفتوحة، وادعاءات لم تستطع PromptQuorum التحقق منها. جرّبه ببطاقة واحدة وواجهة خلفية محلية قبل نقل مكتبة كبيرة.',
+          'Rin Chat خيار جيد إن أردت تطبيقًا جاهزًا لنظام Windows أو Linux للمحادثة مع الشخصيات، يفتح ملفات SillyTavern وAI Character Cards ويُبقي بياناته مشفّرة على حاسوبك ويضيف النرد والإحصاءات. وقد صدر له الإصدار 1.0.4 في 20 نوفمبر 2026. وقد قرأ المطوّر هذه المراجعة وأرسل تصحيحات، وقد طُبِّقت.',
+          'التنبيهات هي: مغلق المصدر، وإحصاءات استخدام إلزامية، ومثبّت Windows غير موقَّع، ولا نسخة لـ Mac، وتطبيق Android لا يزال في اختبار مغلق، ووصف النسخة التجريبية المفتوحة، وادعاءات لم تستطع PromptQuorum التحقق منها. جرّبه ببطاقة واحدة وواجهة خلفية محلية قبل نقل مكتبة كبيرة.',
         ],
       },
       sources: {
@@ -2964,7 +3119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     designSkin: 'hub',
     freshness_tier: 'semi_annual',
     publishDate: '2026-11-21',
-    dateModified: '2026-11-21',
+    dateModified: '2026-11-22',
     next_refresh_due: '2027-05-21',
     theme: 'Creative & Roleplay',
     heroImage: '/images/rin-chat-review-hero-ko.webp',
@@ -2997,12 +3152,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Rin Chat은 로컬 AI 롤플레이 앱입니까?',
         answer: '부분적으로 그렇습니다. 앱 자체는 사용자의 컴퓨터에서 실행되고 데이터도 그곳에 저장하지만, 모델은 포함되어 있지 않아 Ollama, KoboldCpp, LM Studio 또는 OpenAI 호환 서비스에 연결해야 합니다. 로컬 백엔드를 쓰면 채팅이 기기에 남고, 클라우드 API를 쓰면 개발사의 개인정보 처리방침에 따라 프롬프트가 기기에서 해당 제공업체로 전송됩니다.',
         bullets: [
-          'PNG 이미지에 내장된 카드를 포함한 V1, V2, V3 캐릭터 카드와 로어북을 엽니다.',
-          '개발사에 따르면 카드와 채팅은 컴퓨터에 AES-256-GCM 암호화로 저장됩니다.',
-          'Windows 10 또는 11과 64비트 Linux 빌드가 있으며, macOS는 출시일이 없고 Android 빌드는 아직 제공되지 않습니다.',
+          '개발사에 따르면 PNG 이미지와 .charx 번들에서 가져온 카드를 포함한 V1, V2, V3 캐릭터 카드와 로어북, 그리고 자체 .aicc 번들을 엽니다.',
+          '개발사에 따르면 카드와 채팅은 컴퓨터에 AES-256-GCM 암호화로 저장되며, 개발사는 소스 코드 없이도 확인할 수 있는 방법도 설명합니다.',
+          'Windows 10 또는 11과 64비트 Linux 빌드가 있으며, macOS는 출시일이 없습니다. 휴대폰과 태블릿에서는 원격 접속(Remote Access)으로 앱을 사용할 수 있고, 개발사에 따르면 Android 앱은 Google Play에서 비공개 테스트 중입니다.',
           '앱은 비공개 소스이므로 그 주장을 코드로 확인할 수 없습니다.',
         ],
-        updatedDate: '2026-11-21',
+        updatedDate: '2026-11-22',
       },
     },
     toc: [
@@ -3016,6 +3171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '개인정보 보호, 라이선스, 비용', anchor: 'privacy' },
       { label: '장점과 한계', anchor: 'tradeoffs' },
       { label: 'Rin Chat과 대안 비교', anchor: 'vs-alternatives' },
+      { label: '개발사의 말', anchor: 'from-the-maker' },
       { label: 'Rin Chat을 쓰면 좋은 사용자', anchor: 'who-should-use' },
       { label: 'Rin Chat을 쓰지 말아야 할 사용자', anchor: 'who-should-not-use' },
       { label: '자주 묻는 질문', anchor: 'faq' },
@@ -3043,7 +3199,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '개발사: 연락처 페이지에 따르면 미국 유타주의 회사인 Rin Chat LLC입니다.',
           '유지보수: 버전 1.0.4가 2026년 11월 20일자로 개발이 활발함을 보여 주지만, 사이트는 여전히 오픈 베타라고 부릅니다.',
           '비용: 독점 라이선스 아래 개인용, 비상업적 용도로 무료입니다.',
-          '공백: 비공개 소스, 필수 사용 통계, 서명되지 않은 Windows 설치 파일, macOS와 정식 출시된 Android 빌드 없음, PromptQuorum의 직접 테스트 없음.',
+          '공백: 비공개 소스, 필수 사용 통계, 서명되지 않은 Windows 설치 파일, macOS 빌드 없음, 개발사에 따르면 아직 비공개 테스트 중인 Android 앱, PromptQuorum의 직접 테스트 없음.',
+          '개발사 검토: 개발사는 2026년 11월 22일에 이 리뷰를 읽고 공정하고 꼼꼼하다고 평가했으며 정정 사항을 보내 왔습니다. 정정 사항은 아래에 반영되었습니다.',
         ],
       },
       getItRinChat: {
@@ -3063,8 +3220,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '[AppImage 또는 .deb 다운로드](https://rin.chat/download/) — 64비트 x86(amd64)',
           },
           {
-            '플랫폼': 'Mac과 Android',
-            '받는 곳': '아직 다운로드 없음, 개발사에 따르면 macOS는 일정 없이 작업 중이며 Android는 예고되었으나 다운로드 페이지나 스토어 등록이 없음',
+            '플랫폼': 'Mac',
+            '받는 곳': '아직 다운로드 없음, macOS는 일정 없이 작업 중',
+          },
+          {
+            '플랫폼': '휴대폰과 태블릿',
+            '받는 곳': '원격 접속으로 휴대폰 브라우저에서 사용, Android는 비공개 테스트 중(개발사)',
           },
           {
             '플랫폼': '공식 사이트',
@@ -3075,7 +3236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '[Rin Chat 개인정보 처리방침](https://rin.chat/privacy/)',
           },
         ],
-        note: '다운로드 페이지는 앱이 오픈 베타라고 밝힙니다. 공개 소스 저장소는 찾지 못했습니다.',
+        note: '다운로드 페이지는 앱을 오픈 베타라고 밝힙니다. 공개 소스 저장소는 찾지 못했습니다. 개발사에 따르면 Android 앱은 2026년 11월 22일부터 약 2주 안에 공개될 예정입니다.',
       },
       atAGlance: {
         id: 'at-a-glance',
@@ -3134,13 +3295,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**기능은 카드, 게임 메커니즘, 개인정보 보호를 중심으로 구성되어 있습니다.** 아래 내용은 모두 개발사의 기능 페이지와 변경 기록에서 가져왔습니다.',
         ],
         items: [
-          '**카드와 로어북 가져오기.** PNG에 내장된 카드를 포함한 V1, V2, V3 캐릭터 카드와 단독 로어북을 읽으며, Chub, RisuRealm, Pygmalion, Perchance, AI Character Cards의 링크가 작동합니다.',
+          '**카드와 로어북 가져오기.** PNG에 내장된 카드를 포함한 V1, V2, V3 캐릭터 카드와 단독 로어북을 읽으며, Chub, RisuRealm, Pygmalion, Perchance, AI Character Cards의 링크가 작동합니다. 개발사는 가져오기가 .charx와 .aicc 번들, 그리고 Rin Chat 테마, 생성기, 문서 스타일도 지원한다고 덧붙입니다.',
           '**모험 모드.** 모델이 게임 마스터를 맡고 앱이 심판 역할을 합니다. 주사위를 굴리고 능력치를 추적하며, 메시지를 수정하거나 다시 생성할 때 깔끔하게 되돌립니다.',
           '**문서 스타일.** 카드는 공지, 편지, 현상금 포스터, 터미널 화면 같은 채팅 안의 스타일 문서를 정의할 수 있으며, 서른 가지 스타일이 내장되어 있습니다.',
           '**카드 포지.** 연결한 모델로 실행되는 대화형 편집기로, 카드, 로어북, 기타 앱 요소를 만들고 편집하도록 돕습니다.',
+          '**메모리.** 개발사는 롤링 요약, 긴 채팅을 위한 메모리 트리, 이전 메시지의 선택형 벡터 회상, 고정 메모리를 소개합니다.',
           '**그룹, 음성, 이미지.** 그룹 채팅, 내장 오프라인 음성 합성(Piper, Kokoro, Pocket TTS), Whisper 기반 오프라인 받아쓰기, Automatic1111, Forge, SwarmUI, ComfyUI 같은 도구를 통한 이미지 생성을 지원합니다.',
-          '**접근성.** Discord 봇과 휴대폰 브라우저에서의 원격 접속을 지원합니다.',
-          '**언어.** 기능 페이지는 인터페이스 언어 일곱 가지(영어, 중국어 간체, 일본어, 스페인어, 독일어, 프랑스어, 러시아어)를 나열하고, 홈페이지 FAQ는 다섯 가지를 나열합니다.',
+          '**접근성.** Discord 봇과, 사용자의 컴퓨터에서 휴대폰이나 태블릿 브라우저로 앱을 제공하는 원격 접속(Remote Access)을 지원합니다. 개발사에 따르면 Android 앱은 Google Play에서 비공개 테스트 중입니다.',
+          '**언어.** 개발사에 따르면 앱은 인터페이스 언어 일곱 가지(영어, 중국어 간체, 일본어, 스페인어, 독일어, 프랑스어, 러시아어)로 제공됩니다. 홈페이지 FAQ에는 다섯 가지로 적혀 있었으나, 개발사는 그것이 실수였으며 수정되었다고 밝힙니다.',
         ],
       },
       backendsHardware: {
@@ -3156,7 +3318,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개인정보 보호, 라이선스, 비용',
         content: [
           '**개발사는 카드와 채팅이 컴퓨터에 AES-256-GCM으로 암호화되고, 비밀번호 또는 운영체제 키체인으로 보호되며, 24단어 복구 문구가 있다고 밝힙니다.** 방침에 따르면 요청은 기기에서 선택한 제공업체로 직접 전송되며 개발사의 서버를 거치지 않습니다.',
-          '약관에 따르면 앱은 설치 시와 실행 시 사용 통계(무작위 설치 ID, 버전, 운영체제, 아키텍처, 패키지 형식, 언어)를 보내며 이를 "끌 수 없습니다". 방침은 여기에 프롬프트나 캐릭터가 포함되지 않는다고 설명합니다. 사용 중인 제공업체 같은 추가 통계는 선택 사항입니다. 웹사이트는 Google Analytics를 사용하며, EU, 영국, 스위스에서는 동의를 받습니다. 방침에는 선택형 Rin Chat 구독과 계정도 언급되어 있으나, PromptQuorum은 그 가격을 찾지 못했습니다.',
+          '개발사는 소스 코드 없이 암호화를 확인하는 방법을 설명합니다. 볼트는 폴더이며, 기본적으로 문서 안의 rin-chat 폴더 아래에 사용자 이름으로 된 하위 폴더입니다. 색인 파일 aicc.db는 SQLCipher로 암호화되어 있어 어떤 SQLite 도구에서든 "file is not a database"라고 표시되고, 모든 카드, 채팅, 이미지, 설정은 각각 별도의 AES-256-GCM .blob 파일로 무작위 바이트처럼 보이며 PNG, JSON, 평문이 들어 있지 않습니다. 개발사에 따르면 운영체제 키체인에 보관된 키로 볼트를 잠금 해제하기 전에는 아무것도 읽을 수 없습니다. PromptQuorum은 이 확인을 수행하지 않았습니다.',
+          '약관에 따르면 앱은 설치 시와 실행 시 사용 통계(무작위 설치 ID, 버전, 운영체제, 아키텍처, 패키지 형식, 언어)를 보내며 이를 "끌 수 없습니다". 방침은 여기에 프롬프트나 캐릭터가 포함되지 않는다고 설명합니다. 사용 중인 제공업체 같은 추가 통계는 선택 사항입니다. 웹사이트는 Google Analytics를 사용하며, EU, 영국, 스위스에서는 동의를 받습니다. 방침에는 선택형 Rin Chat 구독도 언급되어 있습니다. 개발사에 따르면 아직 공개적으로 발표되지 않았으며, 호스팅 모델을 쓰는 선택형 서비스라 본인의 API 키가 필요 없고, 테스트 중이라 약 한 달 뒤가 될 전망입니다. 개발사는 Rin Chat의 어떤 부분도 유료화하지 않고 필수가 되지도 않을 것이라고 밝힙니다. 모든 기능이 본인의 API 키나 로컬 모델로 작동하기 때문입니다. PromptQuorum은 가격을 찾지 못했습니다.',
           '라이선스상 Rin Chat은 독점 소프트웨어이며 개인용, 비상업적 용도로 무료이고, 사용자는 만 18세 이상이어야 합니다. 앱은 비공개 소스이고 PromptQuorum은 저장 방식이나 네트워크 트래픽을 점검하지 않았으므로, 이 중 어느 것도 확인된 것이 아닙니다.',
         ],
       },
@@ -3184,7 +3347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '장점': '암호화 저장',
             '실제 사용에서의 의미': '개발사에 따르면 비밀번호나 키 없이는 카드와 채팅을 읽을 수 없습니다.',
-            '한계 / 주의점': '비공개 소스라 암호화를 감사할 수 없습니다.',
+            '한계 / 주의점': '비공개 소스이며, 개발사는 파일 확인 방법을 설명하지만 PromptQuorum은 수행하지 않았습니다.',
           },
           {
             '장점': '유연한 백엔드',
@@ -3250,6 +3413,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '서드파티 앱의 플랫폼, 가격, 기능은 자주 바뀝니다. 결정하기 전에 각 프로젝트의 공식 페이지에서 최신 정보를 확인하십시오.',
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발사의 말',
+        content: [
+          'Rin Chat 개발사는 2026년 11월 22일에 이 리뷰를 읽고 공정하고 꼼꼼하다고 평가했으며, 여기에 반영된 정정 사항을 보내 왔습니다. 아직 공개적으로 발표되지 않은 선택형 구독(언급해도 좋다고 합니다), 원격 접속을 통한 휴대폰·태블릿 사용과 비공개 테스트 중인 Android 앱, 다섯 가지가 아닌 일곱 가지 인터페이스 언어, 소스 코드 없이 암호화를 확인하는 방법, 메모리 기능, 추가 가져오기 형식입니다. 아래 글은 개발사 본인의 말이며 PromptQuorum의 독립적인 평가가 아닙니다.',
+          '“저는 SillyTavern의 Discord와 Reddit을 관리하고 SillyTavern용 첫 간단한 설치 프로그램([sillyTavernSimpleLauncher](https://github.com/blueprintCoding/sillyTavernSimpleLauncher))을 만드는 일로 시작했으며, 이후 SillyTavern 개발자들 및 DeffColony와 함께 명령줄 설치·업데이트 도구인 SillyTavern Launcher를 작업한 뒤 제 프로젝트로 넘어갔습니다.”',
+          '“저는 AI 캐릭터 카드를 공유하고 평가하는 사이트 [aicharactercards.com](https://aicharactercards.com/)를 만들었고, 그 카드를 쓰고 싶지만 채팅 앱을 실행하지 못하는 사람들을 계속 만났습니다. 그래서 이를 해결하려고 Rin Chat을 만들었습니다. 설치가 쉽고, 개인정보 보호와 보안에 중점을 두며, 더 나은 카드 형식, 진짜 메모리, 카드 포지, 어드벤처 모드로 롤플레이를 앞으로 나아가게 합니다.”',
+          '“저 혼자이며 자체 자금으로 운영합니다. 다음 계획은 Android, macOS, 그리고 문서 스타일과 카드에 담기는 채팅 스타일을 통한 더 몰입감 있는 카드입니다.”',
+        ],
+        note: '— Rin Chat 개발사',
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Rin Chat을 쓰면 좋은 사용자',
@@ -3265,7 +3439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Rin Chat을 쓰지 말아야 할 사용자',
         items: [
           '**오픈 소스 코드가 필요한 사용자.** 앱은 독점 소프트웨어입니다.',
-          '**Mac과 스마트폰 사용자.** macOS 빌드와 정식 출시된 Android 빌드가 아직 없습니다.',
+          '**Mac 사용자와 지금 당장 네이티브 휴대폰 앱이 필요한 사용자.** macOS 빌드가 없고 개발사에 따르면 Android 앱은 비공개 테스트 중입니다. 휴대폰이나 태블릿 브라우저에서는 원격 접속을 쓸 수 있습니다.',
           '**상업적 사용자.** 라이선스는 개인용, 비상업적 용도만 허용합니다.',
           '**텔레메트리가 전혀 없어야 하는 사용자.** 약관은 기본 사용 통계를 끌 수 없다고 밝힙니다.',
         ],
@@ -3280,7 +3454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Rin Chat은 무료입니까?',
-            a: '홈페이지는 체험판이나 계정 없이 모든 기능이 열려 있다고 밝힙니다. 방침에 Rin Chat 구독이 나오지만 가격은 찾지 못했습니다.',
+            a: '홈페이지는 체험판이나 계정 없이 모든 기능이 열려 있다고 밝힙니다. 개발사에 따르면 아직 발표되지 않은 호스팅 모델 선택형 구독은 필수가 되지 않으며 Rin Chat의 어떤 부분도 유료화하지 않습니다. 가격은 찾지 못했습니다.',
           },
           {
             q: 'SillyTavern 카드를 쓸 수 있습니까?',
@@ -3288,7 +3462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mac이나 Android 버전이 있습니까?',
-            a: '아직 없습니다. 개발사에 따르면 macOS는 일정 없이 작업 중이고, Android는 예고되었으나 다운로드 페이지나 스토어 등록이 없습니다.',
+            a: '네이티브 앱으로는 아직 없습니다. 개발사에 따르면 macOS는 일정 없이 작업 중이고, Android 앱은 Google Play에서 비공개 테스트 중이며 2026년 11월 22일부터 약 2주 안에 공개될 예정입니다. 휴대폰과 태블릿에서는 컴퓨터에서 휴대폰 브라우저로 앱을 제공하는 원격 접속으로 이미 Rin Chat을 쓸 수 있습니다.',
           },
           {
             q: 'Rin Chat은 누가 만듭니까?',
@@ -3300,8 +3474,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content: [
-          'Rin Chat은 SillyTavern과 AI Character Cards 파일을 열고, 데이터를 컴퓨터에 암호화해 보관하며, 주사위와 능력치까지 더한 캐릭터 채팅용 패키지 앱을 Windows나 Linux에서 쓰고 싶다면 잘 맞습니다. 2026년 11월 20일에 버전 1.0.4를 출시했습니다.',
-          '주의할 점은 비공개 소스, 필수 사용 통계, 서명되지 않은 Windows 설치 파일, Mac과 정식 출시된 Android 빌드 없음, 오픈 베타 표시, 그리고 PromptQuorum이 확인하지 못한 주장입니다. 큰 라이브러리를 옮기기 전에 카드 하나와 로컬 백엔드로 먼저 써 보십시오.',
+          'Rin Chat은 SillyTavern과 AI Character Cards 파일을 열고, 데이터를 컴퓨터에 암호화해 보관하며, 주사위와 능력치까지 더한 캐릭터 채팅용 패키지 앱을 Windows나 Linux에서 쓰고 싶다면 잘 맞습니다. 2026년 11월 20일에 버전 1.0.4를 출시했습니다. 개발사가 이 리뷰를 읽고 정정 사항을 보내 왔으며, 모두 반영되었습니다.',
+          '주의할 점은 비공개 소스, 필수 사용 통계, 서명되지 않은 Windows 설치 파일, Mac 빌드 없음, 아직 비공개 테스트 중인 Android 앱, 오픈 베타 표시, 그리고 PromptQuorum이 확인하지 못한 주장입니다. 큰 라이브러리를 옮기기 전에 카드 하나와 로컬 백엔드로 먼저 써 보십시오.',
         ],
       },
       sources: {
