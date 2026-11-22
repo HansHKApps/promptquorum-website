@@ -9,7 +9,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createHash } from 'crypto'
 import { Resend } from 'resend'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit } from '@/lib/safe-ratelimit'
 import { redis } from '@/lib/redis'
 
 export const runtime = 'nodejs'
@@ -18,7 +18,7 @@ const OWNER_EMAIL = 'hello@promptquorum.com'
 const LANGS = new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'])
 const DAY_TTL_S = 90 * 86_400
 
-const limiter = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(6, '1 h'), prefix: 'rl:askhans:feedback' })
+const limiter = new SafeRatelimit(6, '1 h', 'rl:askhans:feedback')
 
 export async function POST(req: NextRequest) {
   if (process.env.ASK_HANS_ENABLED !== 'true') return new NextResponse(null, { status: 404 })

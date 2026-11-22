@@ -12,7 +12,7 @@
 //   askhans:consent               list of consent proofs {ts, textVersion, visitId, type}  (capped)
 
 import { NextRequest, NextResponse } from 'next/server'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit } from '@/lib/safe-ratelimit'
 import { createHash } from 'crypto'
 import { redis } from '@/lib/redis'
 import { isCategoryKey, ASK_HANS_CATEGORIES } from '@/lib/askhans/categories'
@@ -23,7 +23,7 @@ import { isDaysBucket, isDurationBucket, isQuestionBucket, isReturnKind } from '
 
 export const runtime = 'nodejs'
 
-const limiter = new Ratelimit({ redis, limiter: Ratelimit.slidingWindow(60, '1 m'), prefix: 'rl:askhans:event' })
+const limiter = new SafeRatelimit(60, '1 m', 'rl:askhans:event')
 
 const DAY_TTL_S = 90 * 86_400 // owner decision 2026-11-07: daily counters 90 days
 const CONSENT_LIST_MAX = 50_000

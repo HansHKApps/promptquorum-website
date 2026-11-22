@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createHash, timingSafeEqual } from 'crypto'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit } from '@/lib/safe-ratelimit'
 import { redis } from '@/lib/redis'
 import { ALL_CLOUD_APPS, isLoggableQuery, matchCloudApp, normalizeQuery, MAX_LOGGED_MISS_WORDS } from '@/lib/power-local-llm/alternatives/match'
 
@@ -19,11 +19,7 @@ const MISS_LAST_KEY = 'alt:miss:last' // hash: normalized query -> ISO timestamp
 const HIT_KEY = 'alt:hit'             // hash: cloud app id -> count
 const MAX_MISS_FIELDS = 5000          // hard cap so the log cannot be flooded
 
-const ipLimiter = new Ratelimit({
-  redis,
-  limiter: Ratelimit.slidingWindow(30, '1 h'),
-  prefix: 'rl:alt:ip',
-})
+const ipLimiter = new SafeRatelimit(30, '1 h', 'rl:alt:ip')
 
 export async function POST(req: NextRequest) {
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? '127.0.0.1'

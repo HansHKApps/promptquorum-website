@@ -15,7 +15,7 @@
 import { NextRequest } from 'next/server'
 import { createHash } from 'crypto'
 import Anthropic from '@anthropic-ai/sdk'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit } from '@/lib/safe-ratelimit'
 import { redis } from '@/lib/redis'
 import { getSiteOverview } from '@/lib/home/overview'
 import { bumpPower } from '@/lib/askhans/totals'
@@ -29,11 +29,7 @@ export const runtime = 'nodejs'
 // Reports are long (up to ~6000 output tokens plus tool calls). Needs a Vercel plan that allows 120 s functions.
 export const maxDuration = 120
 
-const limiter = new Ratelimit({
-  redis,
-  limiter: Ratelimit.slidingWindow(ASK_HANS_SOLUTION_LIMITS.rateLimitRequests, ASK_HANS_SOLUTION_LIMITS.rateLimitWindow),
-  prefix: 'rl:askhans:solution:ip',
-})
+const limiter = new SafeRatelimit(ASK_HANS_SOLUTION_LIMITS.rateLimitRequests, ASK_HANS_SOLUTION_LIMITS.rateLimitWindow, 'rl:askhans:solution:ip')
 
 type ErrorCode = 'disabled' | 'unavailable' | 'rate' | 'limit' | 'refused' | 'failed' | 'rephrase'
 

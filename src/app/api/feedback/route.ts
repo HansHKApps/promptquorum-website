@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import { Ratelimit } from '@upstash/ratelimit'
+import { SafeRatelimit } from '@/lib/safe-ratelimit'
 import { redis } from '@/lib/redis'
 
 // Homepage feedback block ("What's your biggest local LLM headache?").
@@ -9,11 +9,7 @@ import { redis } from '@/lib/redis'
 // GDPR consent/audit-log machinery a double opt-in marketing flow would need.
 // Just a one-directional notification email to the site owner via Resend.
 
-const ipLimiter = new Ratelimit({
-  redis,
-  limiter: Ratelimit.slidingWindow(5, '1 h'),
-  prefix: 'rl:feedback:ip',
-})
+const ipLimiter = new SafeRatelimit(5, '1 h', 'rl:feedback:ip')
 
 export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY)
