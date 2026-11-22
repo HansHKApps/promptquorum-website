@@ -184,6 +184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Related Reading",
         "items": [
           "[Renting GPU Cloud vs Buying On-Prem for Enterprise AI (2026)](/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- the same rent-vs-buy question at enterprise procurement scale, with a full TCO break-even model.",
+          "[Local AI vs Cloud AI: Cost Calculator (Build vs Rent) 2026](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- plug in your own hours, electricity and hardware price.",
           "[Cloud GPU Rental Comparison: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026)",
           "[Is Buying a GPU Worth It vs AI Subscriptions?](/local-llms/gpu-vs-ai-subscription-roi)",
           "[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)",
@@ -493,6 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Lecturas relacionadas",
         "items": [
           "[Alquilar GPU en la nube vs comprar on-prem para IA empresarial (2026)](/es/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- la misma pregunta de alquilar vs comprar a escala de compra empresarial, con un modelo completo de TCO y punto de equilibrio.",
+          "[IA Local vs IA en la Nube: Calculadora de Costos (Comprar vs Rentar) 2026](/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- introduce tus propias horas, tu tarifa eléctrica y el precio del hardware.",
           "[Comparativa de alquiler de GPU en la nube: RunPod vs Vast.ai vs Lambda Labs](/es/local-llms/cloud-gpu-rental-comparison-2026)",
           "[¿Vale la pena comprar una GPU vs suscripciones de IA?](/es/local-llms/gpu-vs-ai-subscription-roi)",
           "[Mejores GPU económicas para LLM local](/es/local-llms/best-budget-gpus-local-llm)",
@@ -802,6 +804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "قراءات ذات صلة",
         "items": [
           "[استئجار GPU سحابي مقابل الشراء المحلي للذكاء الاصطناعي المؤسسي (2026)](/ar/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- نفس سؤال الاستئجار مقابل الشراء على نطاق الشراء المؤسسي، مع نموذج كامل للتكلفة الإجمالية ونقطة التعادل.",
+          "[الذكاء الاصطناعي المحلي مقابل السحابي: حاسبة التكلفة (شراء مقابل استئجار) 2026](/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- أدخل ساعات استخدامك وتعرفة الكهرباء وسعر العتاد.",
           "[مقارنة تأجير GPU السحابية: RunPod مقابل Vast.ai مقابل Lambda Labs](/ar/local-llms/cloud-gpu-rental-comparison-2026)",
           "[هل يستحق شراء GPU مقابل اشتراكات الذكاء الاصطناعي؟](/ar/local-llms/gpu-vs-ai-subscription-roi)",
           "[أفضل بطاقات GPU الاقتصادية لـLLM المحلي](/ar/local-llms/best-budget-gpus-local-llm)",
@@ -1111,6 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Leituras relacionadas",
         "items": [
           "[Alugar GPU na nuvem vs comprar on-prem para IA empresarial (2026)](/pt/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- a mesma pergunta de alugar vs comprar em escala de compra empresarial, com um modelo completo de TCO e ponto de equilíbrio.",
+          "[IA Local vs IA na Nuvem: Calculadora de Custo (Montar vs Alugar) 2026](/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- informe suas próprias horas, tarifa de energia e preço do hardware.",
           "[Comparativo de aluguel de GPU em nuvem: RunPod vs Vast.ai vs Lambda Labs](/pt/local-llms/cloud-gpu-rental-comparison-2026)",
           "[Vale a pena comprar uma GPU vs assinaturas de IA?](/pt/local-llms/gpu-vs-ai-subscription-roi)",
           "[Melhores GPUs econômicas para LLM local](/pt/local-llms/best-budget-gpus-local-llm)",
@@ -1420,6 +1424,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Weiterführende Artikel",
         "items": [
           "[GPU-Cloud mieten vs. On-Prem-Hardware kaufen für Enterprise-KI (2026)](/de/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- dieselbe Miete-vs-Kauf-Frage im Enterprise-Beschaffungsmaßstab, mit vollständigem TCO- und Break-Even-Modell.",
+          "[Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026](/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- setzen Sie Ihre eigenen Stunden, Stromkosten und Hardwarepreise ein.",
+          "[RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz 2026](/de/local-llms/cloud-gpu-rental-comparison-2026)",
+          "[GPU vs. ChatGPT Plus 2026: Wann sich der GPU-Kauf gegenüber dem Abo lohnt](/de/local-llms/gpu-vs-ai-subscription-roi)",
+          "[Beste Budget-GPU für lokale LLMs 2026: RTX 3060 12GB & Alternativen](/de/local-llms/best-budget-gpus-local-llm)",
+          "[Lokale LLMs vs ChatGPT Plus 2026: Vollständiger Kostenvergleich über 7 Preisstufen](/de/local-llms/local-llms-vs-chatgpt-plus)",
+          "[Multi-GPU Lokale LLMs 2026: 70B-Modelle auf 2+ GPUs mit vLLM und Ollama ausführen](/de/local-llms/multi-gpu-local-llms)",
           "[Wann sollten Sie lokale und Cloud-LLM-Inferenz kombinieren?](/de/prompt-bites/hybrid-local-cloud-llm-strategy) -- die Architekturfrage, sobald Sie bereits wissen, was günstiger ist."
         ]
       },
@@ -1724,6 +1734,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "関連記事",
         "items": [
           "[GPUクラウドレンタル vs オンプレ購入：エンタープライズAI TCO比較 2026](/ja/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- 企業調達規模での同じレンタル対購入の問いを、完全なTCOと損益分岐点モデルとともに。",
+          "[ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版](/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- 自分の利用時間・電気料金・ハードウェア価格を入力して計算できます。",
+          "[RunPod vs Vast.ai vs Lambda Labs：LLM推論向けGPUレンタル比較2026](/ja/local-llms/cloud-gpu-rental-comparison-2026)",
+          "[GPU vs ChatGPT Plus 2026: GPU購入でサブスク代は回収できるか](/ja/local-llms/gpu-vs-ai-subscription-roi)",
+          "[ローカルLLM向けの最高のバジェットGPU](/ja/local-llms/best-budget-gpus-local-llm)",
+          "[ローカルLLM vs ChatGPT Plus 2026：7つの価格レベルの完全比較](/ja/local-llms/local-llms-vs-chatgpt-plus)",
+          "[マルチGPU ローカルLLMs 2026: 2+ GPUsで70Bモデルを実行する（vLLM + Ollama）](/ja/local-llms/multi-gpu-local-llms)",
           "[ローカルとクラウドのLLM推論を組み合わせるべきタイミングとは？](/ja/prompt-bites/hybrid-local-cloud-llm-strategy) -- どちらが安いかが分かった後の、アーキテクチャの選択について。"
         ]
       },
@@ -2028,6 +2044,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "Lectures complémentaires",
         "items": [
           "[Louer du GPU cloud ou acheter du matériel on-prem pour l'IA d'entreprise (2026)](/fr/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- la même question louer-vs-acheter à l'échelle de l'achat d'entreprise, avec un modèle complet de TCO et de seuil de rentabilité.",
+          "[IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026](/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- renseignez vos propres heures, votre tarif d'électricité et le prix du matériel.",
+          "[RunPod vs Vast.ai vs Lambda Labs pour l'inférence LLM 2026](/fr/local-llms/cloud-gpu-rental-comparison-2026)",
+          "[GPU vs ChatGPT Plus 2026 : quand l'achat d'un GPU rentabilise l'abonnement](/fr/local-llms/gpu-vs-ai-subscription-roi)",
+          "[Meilleur GPU économique pour LLM locaux 2026 : RTX 3060 12GB et alternatives](/fr/local-llms/best-budget-gpus-local-llm)",
+          "[LLMs locaux vs ChatGPT Plus 2026 : Comparaison tarifaire complète sur 7 niveaux](/fr/local-llms/local-llms-vs-chatgpt-plus)",
+          "[Multi-GPU LLMs Locaux 2026 : Exécuter les Modèles 70B sur 2+ GPUs avec vLLM et Ollama](/fr/local-llms/multi-gpu-local-llms)",
           "[Quand faut-il combiner inférence LLM locale et cloud ?](/fr/prompt-bites/hybrid-local-cloud-llm-strategy) -- la question d'architecture, une fois que vous savez déjà lequel est le moins cher."
         ]
       },
@@ -2332,6 +2354,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "相关阅读",
         "items": [
           "[租用GPU云 vs 购买本地硬件：企业AI TCO对比 2026](/zh/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) — 在企业采购规模下的同一个租用vs购买问题，附完整的TCO与盈亏平衡模型。",
+          "[本地AI vs 云端AI：成本计算器（自建 vs 租用）2026](/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 代入你自己的使用时长、电费和硬件价格。",
+          "[RunPod vs Vast.ai vs Lambda Labs：LLM推理云GPU租赁对比2026](/zh/local-llms/cloud-gpu-rental-comparison-2026)",
+          "[GPU vs ChatGPT Plus 2026:买GPU何时能收回订阅成本](/zh/local-llms/gpu-vs-ai-subscription-roi)",
+          "[本地LLM的最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm)",
+          "[本地LLM vs ChatGPT Plus 2026：7个价格级别完整对比](/zh/local-llms/local-llms-vs-chatgpt-plus)",
+          "[多GPU本地LLMs 2026：在2+个GPU上运行70B模型（vLLM和Ollama）](/zh/local-llms/multi-gpu-local-llms)",
           "[什么时候应该结合本地和云端LLM推理？](/zh/prompt-bites/hybrid-local-cloud-llm-strategy) — 在你已经知道哪个更便宜之后，如何设计架构的问题。"
         ]
       },
@@ -2636,6 +2664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         "title": "관련 읽기",
         "items": [
           "[GPU 클라우드 임대 vs 온프레미스 구매: 기업 AI TCO 비교 (2026)](/ko/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- 기업 조달 규모에서의 같은 임대 대 구매 질문을, 완전한 TCO 손익분기 모델과 함께.",
+          "[로컬 AI vs 클라우드 AI: 비용 계산기(구매 vs 렌탈) 2026](/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026) -- 본인의 사용 시간, 전기 요금, 하드웨어 가격을 넣어 계산합니다.",
           "[클라우드 GPU 렌탈 비교: RunPod vs Vast.ai vs Lambda Labs](/ko/local-llms/cloud-gpu-rental-comparison-2026)",
           "[GPU 구매 vs AI 구독: 어느 쪽이 더 이득입니까?](/ko/local-llms/gpu-vs-ai-subscription-roi)",
           "[로컬 LLM을 위한 최고의 보급형 GPU](/ko/local-llms/best-budget-gpus-local-llm)",
