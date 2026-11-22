@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Standard instruction-tuned models handle most mature literary content with good prompts.** Violence, moral complexity, dark psychology, and mature themes in literary prose rarely require an uncensored fine-tune. What they refuse is explicit sexual content and detailed descriptions of real-world harm. Know which category your work falls in before switching models.',
           '**Running locally keeps prompts and output on your machine: inference makes no cloud API call.** No cloud terms-of-service applies, and no provider logs the content or uses it for training. Check each tool\'s update-check and telemetry settings. This is the main structural reason writers use local uncensored models — privacy plus no usage restrictions on fiction.',
           '**Ethical responsibilities do not disappear because there is no ToS enforcement.** Writers distributing fiction produced with uncensored models carry the same legal responsibilities as any other author: minors, real people, incitement, and jurisdiction-specific obscenity laws all apply regardless of the generation method.',
-          '**Dolphin 3.0 Mistral is the lighter option for 16–24 GB rigs.** Broader uncensored output range than Hermes 3 but weaker instruction following in complex scenes. Suitable for short-form fiction, prompt exploration, and style testing.',
+          '**Dolphin 3.0 Mistral is the lighter option for 16–24 GB rigs.** Broader uncensored output range than Hermes 3 but, in our editorial view, less reliable at following complex multi-constraint prompts; this is an editorial judgement, not a measured result. Suitable for short-form fiction, prompt exploration, and style testing.',
           '**SillyTavern and Agnai both pair cleanly with uncensored Ollama models.** Point either frontend at the Ollama OpenAI-compatible endpoint and select the uncensored model. No additional configuration required.',
         ],
       },
@@ -132,8 +132,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Backends:** Ollama (primary), LM Studio (alternative for GUI setup).',
           '**Hardware:** Hermes 3 70B at Q4 requires ~42 GB; Dolphin 3.0 8B runs on 8 GB; Dolphin 3.0 24B runs on ~16 GB.',
           '**Frontends:** SillyTavern, Agnai, RisuAI all pair with uncensored Ollama models via OpenAI-compatible endpoint.',
-          '**Privacy:** all local — no cloud API calls, no logging, no training data collection.',
-          '**Hard ethical limits:** no sexual content involving minors (absolute), no non-consensual sexual depictions of identifiable real people, no content designed to facilitate real-world violence.',
+          '**Privacy:** inference runs locally and makes no cloud API call; the runtime and frontend may still check for updates or send telemetry unless you disable it.',
+          '**Hard ethical limits:** no sexual content involving minors (prohibited by law in many jurisdictions), no non-consensual sexual depictions of identifiable real people, no content designed to facilitate real-world violence.',
           '**Distribution:** output you publish carries authorial responsibility regardless of generation method.',
         ],
       },
@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**What is removed:** refusal behaviours for specific content categories (explicit sexual content, graphic violence, dark psychological content).',
           '**What is retained:** instruction following, character consistency, prompt structure adherence, language quality.',
-          '**Degrees of uncensoring:** Hermes 3 is selectively uncensored (mature content yes, but retains some guardrails for extreme content). Dolphin series is more broadly uncensored. Fully abliterated models (Wizard-Uncensored, Erebus) have the most aggressive removal of guardrails — and the weakest instruction following for complex fiction tasks.',
+          '**Degrees of uncensoring:** Hermes 3 is selectively uncensored (mature content yes, but retains some guardrails for extreme content). Dolphin series is more broadly uncensored. More aggressive community fine-tunes such as Wizard-Uncensored and Erebus remove guardrails most thoroughly and are described as less steerable in community reports and model cards (check each card).',
           '**Base model quality matters:** uncensoring degrades instruction quality if the base model is weak. Hermes 3 70B, built on Llama 3.1, keeps much of that base model\'s instruction following; Dolphin 3.0 at 8B is limited by its smaller base.',
         ],
         snippetBlocks: [
@@ -206,11 +206,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Hard limits regardless of setup. No local configuration removes legal or ethical responsibility for: (1) sexual content involving minors — absolute prohibition under law in virtually every jurisdiction; (2) non-consensual sexual depictions of identifiable real people — this constitutes NCII (non-consensual intimate imagery) regardless of generation method; (3) content designed to facilitate real-world violence against specific targets. These limits apply whether your model runs locally, in a cloud, or on an air-gapped machine.',
+            text: 'Hard limits regardless of setup. No local configuration removes legal or ethical responsibility for: (1) sexual content involving minors — a criminal offence in Germany (e.g. §184b StGB) and France (art. 227-23 Code pénal) and prohibited in many other jurisdictions, including with fictional framing; details vary by country; (2) non-consensual sexual depictions of identifiable real people — this constitutes NCII (non-consensual intimate imagery) regardless of generation method; (3) content designed to facilitate real-world violence against specific targets. These limits apply whether your model runs locally, in a cloud, or on an air-gapped machine.',
           },
         ],
         items: [
-          '**Sexual content involving minors:** absolute legal prohibition in all major jurisdictions regardless of fictional framing or generation method. This is not a model policy — it is law.',
+          '**Sexual content involving minors:** a criminal offence in Germany (e.g. §184b StGB) and France (art. 227-23 Code pénal) and prohibited in many other jurisdictions, including with fictional framing; details vary by country. This is not a model policy — it is law.',
           '**Non-consensual sexual depictions of real people:** NCII laws apply to AI-generated content of identifiable real people in a growing number of jurisdictions. "Generated by AI" is not a defence.',
           '**Content designed to facilitate real harm:** using a fiction framing to extract information or content that directly enables real-world violence or harm removes the fiction protection.',
           '**Public distribution without authorial accountability:** content you publish, distribute, or share carries authorial responsibility. "An AI wrote it" does not transfer that responsibility.',
@@ -222,25 +222,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Model Comparison: Uncensored Options for Fiction',
         content:
           '**Not all uncensored models are equal — the degree of RLHF removal and the quality of the base model both matter for fiction-writing use cases.**',
-        columns: ['Model', 'Base', 'VRAM (Q4)', 'Refusal Rate', 'Instruction Quality', 'Drift to Extremes', 'Best For'],
+        columns: ['Model', 'Base', 'VRAM (Q4)', 'Refusal Rate', 'Instruction (editorial)', 'Drift to Extremes', 'Best For'],
         rows: [
-          { 'Model': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'Base': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★★★', 'Drift to Extremes': 'Low', 'Best For': 'Default pick for serious fiction — best instruction following + uncensored capability' },
-          { 'Model': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★★☆', 'Drift to Extremes': 'Low-Moderate', 'Best For': '16–24 GB systems; mature content across a wider range' },
-          { 'Model': 'Dolphin 3.0 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Refusal Rate': 'Broad', 'Instruction Quality': '★★★☆☆', 'Drift to Extremes': 'Moderate', 'Best For': 'Low-VRAM systems; short-form drafts, prompt testing' },
-          { 'Model': 'Hermes 3 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Refusal Rate': 'Selective', 'Instruction Quality': '★★★☆☆', 'Drift to Extremes': 'Low', 'Best For': 'Resource-constrained; dialogue and shorter scenes' },
-          { 'Model': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Limited', 'Instruction Quality': '★★★★★', 'Drift to Extremes': 'None', 'Best For': 'Dark themes, moral complexity, violence — without needing explicit sexual content' },
+          { 'Model': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'Base': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Selective', 'Instruction (editorial)': '★★★★★', 'Drift to Extremes': 'Low', 'Best For': 'Default pick for fiction in our editorial view — strong instruction following per the model card' },
+          { 'Model': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Refusal Rate': 'Broad', 'Instruction (editorial)': '★★★★☆', 'Drift to Extremes': 'Low-Moderate', 'Best For': '16–24 GB systems; mature content across a wider range' },
+          { 'Model': 'Dolphin 3.0 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Refusal Rate': 'Broad', 'Instruction (editorial)': '★★★☆☆', 'Drift to Extremes': 'Moderate', 'Best For': 'Low-VRAM systems; short-form drafts, prompt testing' },
+          { 'Model': 'Hermes 3 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Refusal Rate': 'Selective', 'Instruction (editorial)': '★★★☆☆', 'Drift to Extremes': 'Low', 'Best For': 'Resource-constrained; dialogue and shorter scenes' },
+          { 'Model': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Refusal Rate': 'Limited', 'Instruction (editorial)': '★★★★★', 'Drift to Extremes': 'None', 'Best For': 'Dark themes, moral complexity, violence — without needing explicit sexual content' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Start with Hermes 3, not the most aggressive uncensored fine-tune. Fully abliterated models (Wizard-Uncensored, Erebus) have the broadest content range but noticeably weaker instruction following in complex fiction tasks — they drift from constraints faster, produce lower-quality prose at longer generation lengths, and maintain character voice less reliably. For fiction that requires both uncensored content and quality prose, Hermes 3 is the better trade-off.',
+            text: 'Start with Hermes 3, not the most aggressive uncensored fine-tune. More aggressive fine-tunes such as Wizard-Uncensored and Erebus have the broadest content range but are described as less steerable in community reports and model cards (check each card). For fiction that requires both uncensored content and quality prose, Hermes 3 is, in our editorial view, a reasonable starting point.',
           },
         ],
         items: [
-          'Note: older uncensored fine-tunes — Midnight Miqu (Miqu-70B-based), Wizard-LM Uncensored, Mythomax — were leaders in 2024 but have been superseded by Hermes 3 and Dolphin 3.0 in 2026 on both quality and instruction-following metrics. If you find them recommended in older articles, the current equivalents are Hermes 3 (for selective uncensoring) and Dolphin 3.0 (for broader range).',
+          'Note: in our editorial view, older community fine-tunes such as Midnight Miqu (Miqu-70B-based), Wizard-LM Uncensored and Mythomax have largely been replaced by newer releases such as Hermes 3 and Dolphin 3.0; check each model card for current behaviour. If you find them recommended in older articles, the current equivalents are Hermes 3 (for selective uncensoring) and Dolphin 3.0 (for broader range).',
         ],
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.webp',
-          imageCaption: 'Hermes 3 balances instruction quality and uncensored range best — fully abliterated models drift faster and write worse prose.',
+          imageCaption: 'Hermes 3 balances instruction quality and uncensored range well in our editorial view; check each model card for current behaviour.',
         },
       rankedModels: {
         id: 'ranked-models',
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SillyTavern connection:** in the API settings, select "OpenAI-compatible" and point the base URL to `http://localhost:11434/v1` (Ollama) or `http://localhost:1234/v1` (LM Studio). Enter any string as the API key (required by the field but not validated locally). Step-by-step setup guides: [SillyTavern review](/local-llms/sillytavern-review) · [Open WebUI review](/local-llms/open-webui-review).',
           '**Agnai connection:** same OpenAI-compatible endpoint; enter the local URL in the adapter settings. Works identically to the SillyTavern setup.',
           '**Model switching:** switch between standard and uncensored models in Ollama with `ollama run [model-name]` — multiple models can be loaded simultaneously, and you can switch per session without restarting the server.',
-          '**Desktop front end:** [Locally Uncensored](/power-local-llm/locally-uncensored-review) is a free desktop app that detects Ollama and LM Studio and adds image and video generation.',
+          '**Desktop front end:** [Locally Uncensored](/power-local-llm/locally-uncensored-review) is a desktop app (free at the last refresh; check the vendor page) that detects Ollama and LM Studio and adds image and video generation.',
         ],
         callouts: [
           {
@@ -386,7 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Common Mistakes',
         items: [
-          '**Defaulting to the most aggressive uncensored model.** Fully abliterated models (Wizard-Uncensored, Erebus) have the weakest instruction following for complex scenes. Hermes 3 is a better trade-off for fiction quality.',
+          '**Defaulting to the most aggressive uncensored model.** More aggressive fine-tunes such as Wizard-Uncensored and Erebus are described as less steerable for complex scenes in community reports and model cards (check each card). Hermes 3 is a reasonable default for fiction.',
           '**Using uncensored models for content that standard models would generate.** Moral complexity, dark psychology, violence, and mature themes in literary prose rarely require an uncensored fine-tune. Know exactly what you need before switching.',
           '**Treating local generation as a legal context-free zone.** No cloud policy enforcement does not mean no law. Authorial responsibilities for distribution, real people, and minors apply regardless.',
           '**Not specifying word ceilings.** Uncensored models pad dark content to fill space as readily as any other model. Use the same word-ceiling constraints from the fiction templates.',
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hermes 3 model card and fine-tuning methodology — [Nous Research](https://nousresearch.com)',
           'Dolphin 3.0 Mistral technical documentation — [Cognitive Computations / Eric Hartford](https://huggingface.co/cognitivecomputations)',
           'RLHF and alignment techniques overview — [Anthropic Research](https://anthropic.com/research)',
-          'EU AI Act Article 5 — prohibited AI practices including content involving minors — [EUR-Lex](https://eur-lex.europa.eu)',
+          'Directive 2011/93/EU on combating sexual abuse of children and national criminal law (for example §184b StGB in Germany) — [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2011/93/oj)',
           'NCII (Non-Consensual Intimate Imagery) — legal framework overview — [Cyber Civil Rights Initiative](https://cybercivilrights.org)',
         ],
       },
@@ -410,11 +410,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is it legal to run uncensored local LLMs?',
-            a: 'Running an uncensored local LLM is legal in most jurisdictions — there is no law against possessing open-source AI software. What you generate and distribute with it is subject to the same laws as any other authored content: obscenity law, NCII law, defamation law, and laws around content involving minors. Legal to run does not mean legal to publish, share, or distribute without limit.',
+            a: 'Running an uncensored local LLM is legal in most jurisdictions — there is no general law against possessing open-weight AI models. What you generate and distribute with it is subject to the same laws as any other authored content: obscenity law, NCII law, defamation law, and laws around content involving minors. Legal to run does not mean legal to publish, share, or distribute without limit.',
           },
           {
             q: 'What is the difference between Hermes 3 and Dolphin 3.0?',
-            a: 'Hermes 3 (Nous Research) is selectively uncensored — it reduces refusals for mature content while retaining some guardrails for extreme categories. Instruction following is excellent, close to its Llama 3.1 base model. Dolphin 3.0 (Cognitive Computations) is more broadly uncensored across a wider content range, but instruction following is slightly weaker in complex multi-constraint scenes. Hermes 3 is the better default for fiction where prose quality matters; Dolphin 3.0 is the better pick when you need the widest content range on a 16–24 GB system.',
+            a: 'Hermes 3 (Nous Research) is selectively uncensored — it reduces refusals for mature content while retaining some guardrails for extreme categories. Instruction following is excellent, close to its Llama 3.1 base model. Dolphin 3.0 (Cognitive Computations) is more broadly uncensored across a wider content range, but, in our editorial view, it follows complex multi-constraint prompts less reliably; this is an editorial judgement, not a measured result. Hermes 3 is the better default for fiction where prose quality matters; Dolphin 3.0 is the better pick when you need the widest content range on a 16–24 GB system.',
           },
           {
             q: 'Do I need an uncensored model to write dark fiction?',
@@ -430,11 +430,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What happens to the content I generate locally?',
-            a: 'Nothing happens to it automatically. Locally-generated content is not sent to any server, logged by any cloud service, or used for model training. It exists only on your device, in your application\'s local storage (chat history files, character cards, etc.). You control what you keep, what you delete, and what you share. This is the primary structural privacy advantage of local uncensored generation over cloud-based alternatives.',
+            a: 'Nothing happens to it automatically. The model itself does not send locally-generated content to any server, and no cloud service logs it or uses it for model training. The runtime or frontend you use may still check for updates or send telemetry unless you disable it, so review each tool\'s settings. It exists only on your device, in your application\'s local storage (chat history files, character cards, etc.). You control what you keep, what you delete, and what you share. This is the primary structural privacy advantage of local uncensored generation over cloud-based alternatives.',
           },
           {
             q: 'Can I mix uncensored and standard models in the same writing project?',
-            a: 'Yes, and this is the recommended workflow. Use a standard model (Llama 3.3 70B, Qwen3 32B) for the bulk of the prose — standard models produce high-quality literary prose for most dark content. Switch to Hermes 3 or Dolphin 3.0 for specific scenes that require content the standard model refuses. The same prompt templates work on both; the prose style is consistent enough that mixing per-scene is not detectable in the output.',
+            a: 'Yes, and this is the recommended workflow. Use a standard model (Llama 3.3 70B, Qwen3 32B) for the bulk of the prose — standard models produce high-quality literary prose for most dark content. Switch to Hermes 3 or Dolphin 3.0 for specific scenes that require content the standard model refuses. The same prompt templates work on both; the prose style is often consistent enough that mixing per-scene is hard to notice.',
           },
           {
             q: 'Does generating content with an uncensored model affect copyright?',
@@ -442,13 +442,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Do uncensored fine-tunes lose general knowledge?',
-            a: 'Marginally, in narrow areas. Uncensoring fine-tunes are typically full-precision retraining passes that may slightly drift from the base model on factual recall, math, and coding benchmarks. For fiction-writing tasks, this is undetectable in output quality. If you need the same model for fiction and technical work (research notes, code review), keep both standard and uncensored installed and switch per task. Hermes 3 retains general capability better than fully abliterated models.',
+            a: 'Marginally, in narrow areas. Uncensoring fine-tunes are often retraining passes on top of a base model, whereas abliteration edits weights without retraining; either approach may slightly drift from the base model on factual recall, math, and coding benchmarks. For most fiction-writing tasks, writers report little visible difference in output quality, though this depends on the model and prompt. If you need the same model for fiction and technical work (research notes, code review), keep both standard and uncensored installed and switch per task. In community reports, Hermes 3 retains general capability better than fully abliterated models.',
           },
           {
             q: 'Are these models monitored or anonymous?',
             a: 'The model files themselves contain no telemetry. The model authors (Nous Research for Hermes 3, Cognitive Computations for Dolphin) cannot see what you generate — there is no server callback during inference. Any telemetry risk comes from the runtime (Ollama, LM Studio), the frontend (SillyTavern, Agnai) or the OS, so check each tool\'s own privacy settings. Run a network monitor (Little Snitch on macOS, Wireshark on Linux) once after install to verify.',
           },
-            { q: 'Which local LLMs have no content restrictions?', a: 'The uncensored and abliterated fine-tunes covered here \u2014 Hermes 3 and Dolphin 3.0 among them \u2014 have had the refusal layer trained out, so they carry no content policy of their own. That is the practical difference between a local model and a hosted one: a cloud provider enforces its terms on every request, while an unrestricted model running on your own machine has no provider in the loop and no censorship applied at inference time. NSFW and explicit fiction are therefore not blocked. What does not change is the law where you live and the responsibility that comes with publishing \u2014 no content policy is not the same as no limits, and the ethics section below covers where those lines sit.' },
+            { q: 'Which local LLMs have no content restrictions?', a: 'Steerable fine-tunes such as Hermes 3 and Dolphin 3.0 leave alignment to your system prompt, and abliterated releases have refusal behaviour removed, so they apply little or no built-in content policy. That is the practical difference between a local model and a hosted one: a cloud provider enforces its terms on every request, while an unrestricted model running on your own machine has no provider in the loop and no censorship applied at inference time. NSFW and explicit fiction are therefore not blocked. What does not change is the law where you live and the responsibility that comes with publishing \u2014 no content policy is not the same as no limits, and the ethics section below covers where those lines sit.' },
           {
             q: 'What is the best uncensored local LLM?',
             a: 'There is no single best one; it depends on your memory. This page orders seven models with verified model cards by Q4_K_M file size: Hermes 3 Llama 3.1 8B, Dolphin 3.0 Llama 3.1 8B and Llama 3.1 8B Instruct abliterated (4.92 GB each), Dolphin 3.0 R1 Mistral 24B (14.33 GB), Gemma 3 27B abliterated (16.5 GB), Hermes 4.3 36B (21.76 GB) and Hermes 3 Llama 3.1 70B (42.52 GB). The ordering is editorial and by hardware tier, not a benchmark, and we have not run these models ourselves.',
@@ -587,7 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Standard-Instruction-Tuned-Modelle verarbeiten die meisten reifen literarischen Inhalte mit guten Prompts.** Gewalt, moralische Komplexität, dunkle Psychologie und reife Themen in literarischer Prosa erfordern selten ein Uncensored-Fine-Tune. Was sie ablehnen, sind explizite sexuelle Inhalte und detaillierte Beschreibungen realer Schäden. Wisse, welche Kategorie dein Werk fällt, bevor du das Modell wechselst.',
           '**Lokal laufen heißt: Prompts und Ausgabe bleiben auf deinem Gerät, die Inferenz ruft keine Cloud-API auf.** Keine Cloud-AGB gelten, und kein Anbieter protokolliert die Inhalte oder nutzt sie für Training. Prüfe die Update- und Telemetrie-Einstellungen jedes Tools. Das ist der Hauptstrukturgrund, warum Autoren lokale Uncensored-Modelle verwenden — Datenschutz plus keine Nutzungsbeschränkungen bei Belletristik.',
           '**Ethische Verantwortlichkeiten verschwinden nicht, weil es keine ToS-Durchsetzung gibt.** Autoren, die mit Uncensored-Modellen produzierte Belletristik verbreiten, tragen dieselben rechtlichen Verantwortlichkeiten wie jeder andere Autor: Minderjährige, reale Personen, Aufstachelung und jurisdiktionsspezifische Gesetze gelten unabhängig von der Generierungsmethode.',
-          '**Dolphin 3.0 Mistral ist die leichtere Option für 16–24-GB-Rigs.** Breiteres Uncensored-Ausgabespektrum als Hermes 3, aber schwächeres Anweisungsfolgen bei komplexen Szenen. Geeignet für Kurzform-Belletristik, Prompt-Erkundung und Stil-Tests.',
+          '**Dolphin 3.0 Mistral ist die leichtere Option für 16–24-GB-Rigs.** Breiteres Uncensored-Ausgabespektrum als Hermes 3, folgt aus unserer redaktionellen Sicht aber komplexen Mehrfach-Vorgaben weniger zuverlässig; das ist eine redaktionelle Einschätzung, kein Messergebnis. Geeignet für Kurzform-Belletristik, Prompt-Erkundung und Stil-Tests.',
           '**SillyTavern und Agnai können beide sauber mit Uncensored-Ollama-Modellen kombiniert werden.** Zeige eines der Frontends auf den Ollama-OpenAI-kompatiblen Endpoint und wähle das Uncensored-Modell. Keine zusätzliche Konfiguration erforderlich.',
         ],
       },
@@ -599,8 +599,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Backends:** Ollama (primär), LM Studio (Alternative für GUI-Einrichtung).',
           '**Hardware:** Hermes 3 70B bei Q4 benötigt ~42 GB; Dolphin 3.0 8B läuft auf 8 GB; Dolphin 3.0 24B läuft auf ~16 GB.',
           '**Frontends:** SillyTavern, Agnai, RisuAI können alle mit Uncensored-Ollama-Modellen über einen OpenAI-kompatiblen Endpoint kombiniert werden.',
-          '**Datenschutz:** vollständig lokal — keine Cloud-API-Aufrufe, kein Logging, keine Trainingsdatenerfassung.',
-          '**Harte ethische Grenzen:** keine sexuellen Inhalte mit Minderjährigen (absolut), keine nicht-konsensuellen sexuellen Darstellungen identifizierbarer realer Personen, keine Inhalte zur Erleichterung realer Gewalt.',
+          '**Datenschutz:** Die Inferenz läuft lokal und ruft keine Cloud-API auf; Runtime und Frontend können dennoch nach Updates suchen oder Telemetrie senden, sofern du es nicht deaktivierst.',
+          '**Harte ethische Grenzen:** keine sexuellen Inhalte mit Minderjährigen (in vielen Rechtsordnungen gesetzlich verboten), keine nicht-konsensuellen sexuellen Darstellungen identifizierbarer realer Personen, keine Inhalte zur Erleichterung realer Gewalt.',
           '**Verbreitung:** Inhalte, die du veröffentlichst, tragen autorschaftliche Verantwortung unabhängig von der Generierungsmethode.',
         ],
       },
@@ -618,7 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Was entfernt wird:** Ablehnungsverhalten für bestimmte Inhaltskategorien (explizite sexuelle Inhalte, grafische Gewalt, dunkle psychologische Inhalte).',
           '**Was erhalten bleibt:** Anweisungsfolgen, Charakterkonsistenz, Prompt-Struktur-Einhaltung, Sprachqualität.',
-          '**Grade des Uncensoring:** Hermes 3 ist selektiv Uncensored (reife Inhalte ja, aber behält einige Leitplanken für extreme Inhalte). Dolphin-Serie ist breiter Uncensored. Vollständig abliterierte Modelle (Wizard-Uncensored, Erebus) haben die aggressivste Entfernung von Leitplanken — und das schwächste Anweisungsfolgen für komplexe Belletristik-Aufgaben.',
+          '**Grade des Uncensoring:** Hermes 3 ist selektiv Uncensored (reife Inhalte ja, aber behält einige Leitplanken für extreme Inhalte). Dolphin-Serie ist breiter Uncensored. Aggressivere Community-Fine-Tunes wie Wizard-Uncensored und Erebus entfernen Leitplanken am gründlichsten und gelten laut Community-Berichten und Modellkarten als weniger steuerbar (prüfe jede Karte).',
           '**Basismodell-Qualität zählt:** Uncensoring verschlechtert die Anweisungsqualität, wenn das Basismodell schwach ist. Hermes 3 70B auf Basis von Llama 3.1 behält einen Großteil des starken Anweisungsfolgens dieses Basismodells; Dolphin 3.0 mit 8B ist durch die kleinere Basis begrenzt.',
         ],
         snippetBlocks: [
@@ -673,15 +673,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Harte Grenzen unabhängig vom Setup. Keine lokale Konfiguration beseitigt rechtliche oder ethische Verantwortung für: (1) sexuelle Inhalte mit Minderjährigen — absolutes gesetzliches Verbot nach §184b StGB in praktisch jeder Rechtsordnung; (2) nicht-konsensuelle sexuelle Darstellungen identifizierbarer realer Personen — dies stellt NCII dar unabhängig von der Generierungsmethode; (3) Inhalte, die zur Erleichterung realer Gewalt gegen spezifische Ziele konzipiert sind. Diese Grenzen gelten, ob dein Modell lokal, in einer Cloud oder auf einem luftabgeschirmten Gerät läuft.',
+            text: 'Harte Grenzen unabhängig vom Setup. Keine lokale Konfiguration beseitigt rechtliche oder ethische Verantwortung für: (1) sexuelle Inhalte mit Minderjährigen — in Deutschland strafbar (u. a. §184b StGB) und in vielen anderen Rechtsordnungen verboten, auch bei fiktionaler Rahmung; die Einzelheiten unterscheiden sich je nach Land; (2) nicht-konsensuelle sexuelle Darstellungen identifizierbarer realer Personen — dies stellt NCII dar unabhängig von der Generierungsmethode; (3) Inhalte, die zur Erleichterung realer Gewalt gegen spezifische Ziele konzipiert sind. Diese Grenzen gelten, ob dein Modell lokal, in einer Cloud oder auf einem luftabgeschirmten Gerät läuft.',
           },
         ],
         items: [
-          '**Sexuelle Inhalte mit Minderjährigen:** absolutes gesetzliches Verbot in allen wichtigen Rechtsordnungen, unabhängig von fiktionaler Rahmung oder Generierungsmethode. In Deutschland strafbar nach §184b StGB — dies ist kein Modell-Policy, sondern Gesetz.',
+          '**Sexuelle Inhalte mit Minderjährigen:** in Deutschland strafbar (u. a. §184b StGB) und in vielen anderen Rechtsordnungen verboten, auch bei fiktionaler Rahmung; die Einzelheiten unterscheiden sich je nach Land. Dies ist keine Modell-Policy, sondern Gesetz.',
           '**Nicht-konsensuelle sexuelle Darstellungen realer Personen:** NCII-Gesetze gelten für KI-generierte Inhalte identifizierbarer realer Personen in einer wachsenden Zahl von Rechtsordnungen. „Von KI generiert" ist keine Verteidigung.',
           '**Inhalte zur Erleichterung realen Schadens:** die Nutzung einer Belletristik-Rahmung zur Extraktion von Informationen oder Inhalten, die reale Gewalt oder Schaden direkt ermöglichen, beseitigt den Belletristik-Schutz.',
           '**Öffentliche Verbreitung ohne autorschaftliche Verantwortung:** Inhalte, die du veröffentlichst, verbreitest oder teilst, tragen autorschaftliche Verantwortung. „Eine KI hat es geschrieben" überträgt diese Verantwortung nicht.',
-          '**Belästigungs-Belletristik:** Generierung von Belletristik, deren Zweck es ist, eine bestimmte reale Person zu schädigen, einzuschüchtern oder zu belästigen — unabhängig davon, ob sie als Belletristik gerahmt ist. In Deutschland kann dies als Volksverhetzung (§130 StGB) oder Beleidigung (§185 StGB) strafbar sein.',
+          '**Belästigungs-Belletristik:** Generierung von Belletristik, deren Zweck es ist, eine bestimmte reale Person zu schädigen, einzuschüchtern oder zu belästigen — unabhängig davon, ob sie als Belletristik gerahmt ist. Je nach Inhalt kann die gezielte Belästigung einer realen Person strafbar sein, etwa als Beleidigung (§185 StGB) oder Bedrohung (§241 StGB).',
         ],
       },
       models: {
@@ -689,31 +689,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modellvergleich: Uncensored-Optionen für Belletristik',
         content:
           '**Nicht alle Uncensored-Modelle sind gleich — der Grad der RLHF-Entfernung und die Qualität des Basismodells sind beide relevant für Belletristik-Anwendungsfälle.**',
-        columns: ['Modell', 'Basis', 'VRAM (Q4)', 'Ablehnungsrate', 'Anweisungsqualität', 'Tendenz zu Extremen', 'Bestes Einsatzgebiet'],
+        columns: ['Modell', 'Basis', 'VRAM (Q4)', 'Ablehnungsrate', 'Anweisung (redaktionell)', 'Tendenz zu Extremen', 'Bestes Einsatzgebiet'],
         rows: [
-          { 'Modell': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'Basis': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', 'Ablehnungsrate': 'Selektiv', 'Anweisungsqualität': '★★★★★', 'Tendenz zu Extremen': 'Gering', 'Bestes Einsatzgebiet': 'Standardwahl für ernsthafte Belletristik — bestes Anweisungsfolgen + Uncensored-Fähigkeit' },
-          { 'Modell': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Basis': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Ablehnungsrate': 'Breit', 'Anweisungsqualität': '★★★★☆', 'Tendenz zu Extremen': 'Gering-Mittel', 'Bestes Einsatzgebiet': '16–24-GB-Systeme; reife Inhalte über eine breitere Spanne' },
-          { 'Modell': 'Dolphin 3.0 Llama 3.1 8B', 'Basis': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Ablehnungsrate': 'Breit', 'Anweisungsqualität': '★★★☆☆', 'Tendenz zu Extremen': 'Mittel', 'Bestes Einsatzgebiet': 'VRAM-arme Systeme; Kurzentwürfe, Prompt-Tests' },
-          { 'Modell': 'Hermes 3 Llama 3.1 8B', 'Basis': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Ablehnungsrate': 'Selektiv', 'Anweisungsqualität': '★★★☆☆', 'Tendenz zu Extremen': 'Gering', 'Bestes Einsatzgebiet': 'Ressourcenbegrenzte Systeme; Dialog und kürzere Szenen' },
-          { 'Modell': 'Standard Llama 3.3 70B', 'Basis': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Ablehnungsrate': 'Begrenzt', 'Anweisungsqualität': '★★★★★', 'Tendenz zu Extremen': 'Keine', 'Bestes Einsatzgebiet': 'Dunkle Themen, moralische Komplexität, Gewalt — ohne explizit sexuellen Inhalt' },
+          { 'Modell': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'Basis': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', 'Ablehnungsrate': 'Selektiv', 'Anweisung (redaktionell)': '★★★★★', 'Tendenz zu Extremen': 'Gering', 'Bestes Einsatzgebiet': 'Standardwahl für Belletristik aus redaktioneller Sicht — starkes Anweisungsfolgen laut Modellkarte' },
+          { 'Modell': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Basis': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Ablehnungsrate': 'Breit', 'Anweisung (redaktionell)': '★★★★☆', 'Tendenz zu Extremen': 'Gering-Mittel', 'Bestes Einsatzgebiet': '16–24-GB-Systeme; reife Inhalte über eine breitere Spanne' },
+          { 'Modell': 'Dolphin 3.0 Llama 3.1 8B', 'Basis': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Ablehnungsrate': 'Breit', 'Anweisung (redaktionell)': '★★★☆☆', 'Tendenz zu Extremen': 'Mittel', 'Bestes Einsatzgebiet': 'VRAM-arme Systeme; Kurzentwürfe, Prompt-Tests' },
+          { 'Modell': 'Hermes 3 Llama 3.1 8B', 'Basis': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Ablehnungsrate': 'Selektiv', 'Anweisung (redaktionell)': '★★★☆☆', 'Tendenz zu Extremen': 'Gering', 'Bestes Einsatzgebiet': 'Ressourcenbegrenzte Systeme; Dialog und kürzere Szenen' },
+          { 'Modell': 'Standard Llama 3.3 70B', 'Basis': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Ablehnungsrate': 'Begrenzt', 'Anweisung (redaktionell)': '★★★★★', 'Tendenz zu Extremen': 'Keine', 'Bestes Einsatzgebiet': 'Dunkle Themen, moralische Komplexität, Gewalt — ohne explizit sexuellen Inhalt' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Beginne mit Hermes 3, nicht dem aggressivsten Uncensored-Fine-Tune. Vollständig abliterierte Modelle (Wizard-Uncensored, Erebus) haben die breiteste Inhaltspalette, aber merklich schwächeres Anweisungsfolgen bei komplexen Belletristik-Aufgaben — sie weichen schneller von Einschränkungen ab, produzieren bei längerer Generierungsdauer Prosa mit niedrigerer Qualität und halten die Charakterstimme weniger zuverlässig. Für Belletristik, die sowohl Uncensored-Inhalte als auch Qualitätsprosa erfordert, ist Hermes 3 der bessere Kompromiss.',
+            text: 'Beginne mit Hermes 3, nicht dem aggressivsten Uncensored-Fine-Tune. Aggressivere Fine-Tunes wie Wizard-Uncensored und Erebus haben die breiteste Inhaltspalette, gelten laut Community-Berichten und Modellkarten aber als weniger steuerbar (prüfe jede Karte). Für Belletristik, die sowohl Uncensored-Inhalte als auch Qualitätsprosa erfordert, ist Hermes 3 aus unserer redaktionellen Sicht ein sinnvoller Ausgangspunkt.',
           },
         ],
         items: [
-          'Hinweis: ältere Uncensored-Fine-Tunes — Midnight Miqu (Miqu-70B-basiert), Wizard-LM Uncensored, Mythomax — waren 2024 führend, wurden aber 2026 von Hermes 3 und Dolphin 3.0 in Qualitäts- und Anweisungsfolge-Metriken übertroffen. Falls du sie in älteren Artikeln empfohlen findest, sind die aktuellen Äquivalente Hermes 3 (für selektives Uncensoring) und Dolphin 3.0 (für breiteres Spektrum).',
+          'Hinweis: Aus unserer redaktionellen Sicht wurden ältere Community-Fine-Tunes wie Midnight Miqu (Miqu-70B-basiert), Wizard-LM Uncensored und Mythomax weitgehend durch neuere Veröffentlichungen wie Hermes 3 und Dolphin 3.0 ersetzt; prüfe die Modellkarte auf das aktuelle Verhalten. Falls du sie in älteren Artikeln empfohlen findest, sind die aktuellen Äquivalente Hermes 3 (für selektives Uncensoring) und Dolphin 3.0 (für breiteres Spektrum).',
         ],
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-de.webp',
-          imageCaption: 'Hermes 3 bietet die beste Balance aus Anweisungsqualität und unzensiertem Umfang — voll abliterierte Modelle driften schneller ab.',
+          imageCaption: 'Aus unserer redaktionellen Sicht bietet Hermes 3 eine ausgewogene Mischung aus Anweisungsqualität und unzensiertem Umfang; prüfe die Modellkarte auf das aktuelle Verhalten.',
         },
       rankedModels: {
         id: 'ranked-models',
         title: 'Beste unzensierte lokale LLMs, gereiht nach Hardware-Stufe',
         content:
-          '**Diese sieben Modelle sind nach Größe der Q4_K_M-Datei sortiert, das kleinste zuerst. Die Reihenfolge ist redaktionell und folgt Hardware-Stufen; sie ist kein Benchmark-Ranking.** Wählen Sie die letzte Zeile, deren Dateigröße bequem in Ihren GPU-VRAM oder den einheitlichen Speicher Ihres Macs passt. Die Dateigrößen stammen aus dem GGUF-Repository des jeweiligen Modells auf Hugging Face; Kontext-Cache und Laufzeit brauchen zusätzlich Speicher zu den Gewichten, planen Sie also Reserve über der Dateigröße ein. Die rechtlichen und ethischen Grenzen aus [Ethical Responsibilities That Remain](#ethics) gelten für jedes Modell dieser Liste.',
+          '**Diese sieben Modelle sind nach Größe der Q4_K_M-Datei sortiert, das kleinste zuerst. Die Reihenfolge ist redaktionell und folgt Hardware-Stufen; sie ist kein Benchmark-Ranking.** Wähle die letzte Zeile, deren Dateigröße bequem in deinen GPU-VRAM oder den einheitlichen Speicher deines Macs passt. Die Dateigrößen stammen aus dem GGUF-Repository des jeweiligen Modells auf Hugging Face; Kontext-Cache und Laufzeit brauchen zusätzlich Speicher zu den Gewichten, plane also Reserve über der Dateigröße ein. Die rechtlichen und ethischen Grenzen aus [Ethical Responsibilities That Remain](#ethics) gelten für jedes Modell dieser Liste.',
         columns: ['Rang', 'Modell', 'Typ (laut Karte)', 'Q4_K_M-Datei', 'Lizenz-Tag'],
         rows: [
           { 'Rang': '1', 'Modell': '[Hermes 3 Llama 3.1 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)', 'Typ (laut Karte)': 'Steuerbares Fine-Tuning', 'Q4_K_M-Datei': '4,92 GB', 'Lizenz-Tag': 'llama3' },
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Zeilen 3 und 5 sind abliterierte Community-Veröffentlichungen; die Gemma-3-Karte nennt ihr Modell „fairly experimental“. Zeilen 1, 2, 4, 6 und 7 sind steuerbare oder neutral ausgerichtete Fine-Tunes, die Sie über den System-Prompt lenken. Funktioniert eine Szene schon mit einem steuerbaren Modell, bringt die abliterierte Variante nur Qualitätsrisiko ohne Nutzen.',
+            text: 'Zeilen 3 und 5 sind abliterierte Community-Veröffentlichungen; die Gemma-3-Karte nennt ihr Modell „fairly experimental“. Zeilen 1, 2, 4, 6 und 7 sind steuerbare oder neutral ausgerichtete Fine-Tunes, die du über den System-Prompt lenkst. Funktioniert eine Szene schon mit einem steuerbaren Modell, bringt die abliterierte Variante nur Qualitätsrisiko ohne Nutzen.',
           },
         ],
         items: [
@@ -747,17 +747,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'steerable-vs-abliterated',
         title: 'Unzensiert, abliteriert, feinjustiert: was die Begriffe bedeuten',
         content:
-          '**„Unzensiert“ steht für drei verschiedene Verfahren, und nur eines davon heißt Abliteration.** Welches Sie herunterladen, verraten die Modellkarten, nicht die Werbebegriffe.',
+          '**„Unzensiert“ steht für drei verschiedene Verfahren, und nur eines davon heißt Abliteration.** Welches du herunterlädst, verraten die Modellkarten, nicht die Werbebegriffe.',
         items: [
-          '**Steuerbare oder neutral ausgerichtete Fine-Tunes (Hermes 3, Hermes 4.3, Dolphin 3.0):** Die Karten verwenden das Wort „uncensored“ nicht. Die Dolphin-3.0-Karte sagt „You decide the alignment“ und „Dolphin does not impose its ethics or guidelines on you“; die Hermes-3-Karte beschreibt „aligning LLMs to the user“; die Hermes-4.3-Karte nennt „broadly neutral alignment“. Das Verhalten hängt von Ihrem System-Prompt ab.',
+          '**Steuerbare oder neutral ausgerichtete Fine-Tunes (Hermes 3, Hermes 4.3, Dolphin 3.0):** Die Karten verwenden das Wort „uncensored“ nicht. Die Dolphin-3.0-Karte sagt „You decide the alignment“ und „Dolphin does not impose its ethics or guidelines on you“; die Hermes-3-Karte beschreibt „aligning LLMs to the user“; die Hermes-4.3-Karte nennt „broadly neutral alignment“. Das Verhalten hängt von deinem System-Prompt ab.',
           '**Fine-Tuning mit gefilterten Daten:** Eric Hartfords Essay [Uncensored Models](https://erichartford.com/uncensored-models) beschreibt, Verweigerungen und voreingenommene Antworten aus den Trainingsdaten zu entfernen und das Modell genauso neu zu trainieren wie das Original.',
           '**Abliteration:** [Arditi et al.](https://arxiv.org/abs/2406.11717) zeigen, dass Verweigerung in 13 offenen Chat-Modellen bis 72B Parametern „mediated by a one-dimensional subspace“ ist und das Löschen dieser Richtung die Verweigerung beendet. Die [Abliteration-Anleitung von mlabonne](https://huggingface.co/blog/mlabonne/abliteration) wendet das ohne Neutraining an und meldet einen Leistungsabfall in allen Benchmarks, den ein DPO-Durchlauf nur teilweise ausglich.',
-          '**Praktische Folge:** Abliterierte Veröffentlichungen tauschen etwas Qualität gegen entfernte Verweigerungen; steuerbare Fine-Tunes bleiben über den System-Prompt kontrollierbar. Beginnen Sie mit einem steuerbaren Modell und wechseln Sie nur zu einem abliterierten, wenn es weiterhin verweigert.',
+          '**Praktische Folge:** Abliterierte Veröffentlichungen tauschen etwas Qualität gegen entfernte Verweigerungen; steuerbare Fine-Tunes bleiben über den System-Prompt kontrollierbar. Beginne mit einem steuerbaren Modell und wechsle nur zu einem abliterierten, wenn es weiterhin verweigert.',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '„Unzensiertes LLM“ ist ein Sammelbegriff: Steuerbare Fine-Tunes wie Hermes und Dolphin überlassen die Ausrichtung Ihrem System-Prompt, abliterierte Modelle haben die Verweigerungsrichtung aus ihren Gewichten entfernt.',
+            text: '„Unzensiertes LLM“ ist ein Sammelbegriff: Steuerbare Fine-Tunes wie Hermes und Dolphin überlassen die Ausrichtung deinem System-Prompt, abliterierte Modelle haben die Verweigerungsrichtung aus ihren Gewichten entfernt.',
           },
           {
             type: 'plain-terms',
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SillyTavern-Verbindung:** in den API-Einstellungen „OpenAI-kompatibel" auswählen und die Basis-URL auf `http://localhost:11434/v1` (Ollama) oder `http://localhost:1234/v1` (LM Studio) zeigen. Einen beliebigen String als API-Schlüssel eingeben (vom Feld benötigt, wird aber lokal nicht validiert). Schritt-für-Schritt-Anleitungen: [SillyTavern im Test](/de/local-llms/sillytavern-review) · [Open WebUI im Test](/de/local-llms/open-webui-review).',
           '**Agnai-Verbindung:** derselbe OpenAI-kompatible Endpoint; lokale URL in den Adapter-Einstellungen eingeben. Funktioniert identisch zur SillyTavern-Einrichtung.',
           '**Modellwechsel:** in Ollama zwischen Standard- und Uncensored-Modellen mit `ollama run [modell-name]` wechseln — mehrere Modelle können gleichzeitig geladen werden, und du kannst pro Session wechseln, ohne den Server neu zu starten.',
-          '**Desktop-Oberfläche:** [Locally Uncensored](/de/power-local-llm/locally-uncensored-review) ist eine kostenlose Desktop-App, die Ollama und LM Studio erkennt und Bild- und Videogenerierung ergänzt.',
+          '**Desktop-Oberfläche:** [Locally Uncensored](/de/power-local-llm/locally-uncensored-review) ist eine Desktop-App (beim letzten Update kostenlos; prüfe die Anbieterseite), die Ollama und LM Studio erkennt und Bild- und Videogenerierung ergänzt.',
         ],
         callouts: [
           {
@@ -812,7 +812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Autorenverantwortung:** du bist der Autor KI-unterstützter Belletristik. „Die KI hat es generiert" überträgt nicht das Urheberrecht, beseitigt nicht die Haftung oder stellt keine Verteidigung für Inhalte dar, die gegen Gesetze verstoßen.',
-          '**Jurisdiktionsbewusstsein:** Obszönität, NCII und schädliche Inhaltsgesetze variieren je nach Jurisdiktion. In Deutschland sind relevante Gesetze §130 StGB (Volksverhetzung), §184b StGB (Kinderpornografie) und §3 KUG (Recht am eigenen Bild). Inhalte, die in einem Land legal zu produzieren sind, können in einem anderen strafrechtlich relevant sein.',
+          '**Jurisdiktionsbewusstsein:** Obszönität, NCII und schädliche Inhaltsgesetze variieren je nach Jurisdiktion. In Deutschland sind unter anderem §130 StGB (Volksverhetzung), §184b StGB (Verbreitung, Erwerb und Besitz kinderpornographischer Inhalte) und §22 KUG (Recht am eigenen Bild: Verbreitung grundsätzlich nur mit Einwilligung der abgebildeten Person) relevant; dies ist keine abschließende Aufzählung und keine Rechtsberatung. Inhalte, die in einem Land legal zu produzieren sind, können in einem anderen strafrechtlich relevant sein.',
           '**Reale Personen:** das Generieren negativer fiktiver Inhalte über identifizierbare reale Personen — auch in klar fiktionalen Rahmen — birgt Verleumdungs- und NCII-Risiken je nach Inhalt.',
           '**Altersverifizierung für Verbreitung:** wenn du reife oder erwachsene Inhalte, die mit Uncensored-Modellen produziert wurden, auf einer öffentlichen Plattform verbreitest, gelten Altersverifizierungspflichten, die für jeden Erwachsenen-Inhalte-Verleger gelten, auch für dich.',
           '**Verantwortungsvolles Archivieren:** lokal generierte Uncensored-Inhalte sollten mit derselben Speicherdisziplin wie jedes andere sensible Material behandelt werden — nicht in cloud-synchronisierten Verzeichnissen gespeichert, nicht unbeabsichtigt geteilt.',
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'warning',
-            text: 'Der häufigste ethische Fehler bei Autoren, die Uncensored-Modelle verwenden, ist die lokale Generierung als kontextfreie Zone zu behandeln. Lokale Generierung bedeutet keine Plattform-Policy-Durchsetzung — es bedeutet nicht kein Gesetz, keine Verantwortung und keinen Schaden. Das Fehlen eines Inhaltsmoderatorors ist keine Genehmigung.',
+            text: 'Der häufigste ethische Fehler bei Autoren, die Uncensored-Modelle verwenden, ist die lokale Generierung als kontextfreie Zone zu behandeln. Lokale Generierung bedeutet keine Plattform-Policy-Durchsetzung — es bedeutet nicht kein Gesetz, keine Verantwortung und keinen Schaden. Das Fehlen eines Inhaltsmoderators ist keine Genehmigung.',
           },
         ],
       },
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Häufige Fehler',
         items: [
-          '**Standardmäßig das aggressivste Uncensored-Modell verwenden.** Vollständig abliterierte Modelle (Wizard-Uncensored, Erebus) haben das schwächste Anweisungsfolgen für komplexe Szenen. Hermes 3 ist ein besserer Kompromiss für Belletristikqualität.',
+          '**Standardmäßig das aggressivste Uncensored-Modell verwenden.** Aggressivere Fine-Tunes wie Wizard-Uncensored und Erebus gelten laut Community-Berichten und Modellkarten bei komplexen Szenen als weniger steuerbar (prüfe jede Karte). Hermes 3 ist ein sinnvoller Standard für Belletristik.',
           '**Uncensored-Modelle für Inhalte verwenden, die Standardmodelle generieren würden.** Moralische Komplexität, dunkle Psychologie, Gewalt und reife Themen in literarischer Prosa erfordern selten ein Uncensored-Fine-Tune. Wisse genau, was du brauchst, bevor du wechselst.',
           '**Lokale Generierung als rechtlich kontextfreie Zone behandeln.** Keine Cloud-Policy-Durchsetzung bedeutet nicht kein Gesetz. Autorenverantwortung für Verbreitung, reale Personen und Minderjährige gilt unabhängig.',
           '**Wortgrenzen nicht festlegen.** Uncensored-Modelle füllen dunkle Inhalte genauso bereitwillig wie jedes andere Modell auf. Dieselben Wortgrenzen-Einschränkungen aus den Belletristik-Vorlagen verwenden.',
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hermes 3 Modellkarte und Fine-Tuning-Methodik — [Nous Research](https://nousresearch.com)',
           'Dolphin 3.0 Mistral technische Dokumentation — [Cognitive Computations / Eric Hartford](https://huggingface.co/cognitivecomputations)',
           'RLHF- und Alignment-Techniken Übersicht — [Anthropic Research](https://anthropic.com/research)',
-          'EU KI-Gesetz Artikel 5 — verbotene KI-Praktiken einschließlich Inhalte mit Minderjährigen — [EUR-Lex](https://eur-lex.europa.eu)',
+          'Richtlinie 2011/93/EU zur Bekämpfung des sexuellen Missbrauchs von Kindern und nationales Strafrecht (z. B. §184b StGB) — [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2011/93/oj)',
           'NCII (Nicht-Konsensuelle Intime Bilder) — rechtliche Rahmenübersicht — [Cyber Civil Rights Initiative](https://cybercivilrights.org)',
         ],
       },
@@ -877,11 +877,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist es legal, Uncensored lokale LLMs zu betreiben?',
-            a: 'Das Betreiben eines Uncensored lokalen LLMs ist in den meisten Jurisdiktionen legal — es gibt kein Gesetz gegen den Besitz von Open-Source-KI-Software. Was du damit generierst und verbreitest, unterliegt denselben Gesetzen wie jeder andere verfasste Inhalt: Obszönitätsrecht, NCII-Recht, Verleumdungsrecht und Gesetze bezüglich Inhalten mit Minderjährigen. Legal zu betreiben bedeutet nicht legal zu veröffentlichen, zu teilen oder unbegrenzt zu verbreiten.',
+            a: 'Das Betreiben eines Uncensored lokalen LLMs ist in den meisten Jurisdiktionen legal — es gibt kein allgemeines Gesetz gegen den Besitz von KI-Modellen mit offenen Gewichten. Was du damit generierst und verbreitest, unterliegt denselben Gesetzen wie jeder andere verfasste Inhalt: Obszönitätsrecht, NCII-Recht, Verleumdungsrecht und Gesetze bezüglich Inhalten mit Minderjährigen. Legal zu betreiben bedeutet nicht legal zu veröffentlichen, zu teilen oder unbegrenzt zu verbreiten.',
           },
           {
             q: 'Was ist der Unterschied zwischen Hermes 3 und Dolphin 3.0?',
-            a: 'Hermes 3 (Nous Research) ist selektiv Uncensored — es reduziert Ablehnungen für reife Inhalte, behält aber einige Leitplanken für extreme Kategorien. Anweisungsfolgen ist ausgezeichnet, nahe an seinem Llama-3.1-Basismodell. Dolphin 3.0 (Cognitive Computations) ist breiter Uncensored über ein weiteres Inhaltsspektrum, aber Anweisungsfolgen ist bei komplexen Multi-Constraint-Szenen etwas schwächer. Hermes 3 ist der bessere Standard für Belletristik, bei der Prosaqualität wichtig ist; Dolphin 3.0 ist die bessere Wahl, wenn du das breiteste Inhaltsspektrum auf einem 16–24-GB-System benötigst.',
+            a: 'Hermes 3 (Nous Research) ist selektiv Uncensored — es reduziert Ablehnungen für reife Inhalte, behält aber einige Leitplanken für extreme Kategorien. Anweisungsfolgen ist ausgezeichnet, nahe an seinem Llama-3.1-Basismodell. Dolphin 3.0 (Cognitive Computations) ist breiter Uncensored über ein weiteres Inhaltsspektrum, folgt aus unserer redaktionellen Sicht aber komplexen Mehrfach-Vorgaben weniger zuverlässig; das ist eine redaktionelle Einschätzung, kein Messergebnis. Hermes 3 ist der bessere Standard für Belletristik, bei der Prosaqualität wichtig ist; Dolphin 3.0 ist die bessere Wahl, wenn du das breiteste Inhaltsspektrum auf einem 16–24-GB-System benötigst.',
           },
           {
             q: 'Brauche ich ein Uncensored-Modell, um dunkle Belletristik zu schreiben?',
@@ -897,11 +897,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was passiert mit dem lokal generierten Inhalt?',
-            a: 'Automatisch passiert nichts damit. Lokal generierte Inhalte werden nicht an einen Server gesendet, nicht von einem Cloud-Dienst protokolliert und nicht für Model-Training verwendet. Sie existieren nur auf deinem Gerät. Du kontrollierst, was du behältst, was du löschst und was du teilst. Das ist der primäre strukturelle Datenschutzvorteil lokaler Uncensored-Generierung gegenüber cloudbasierten Alternativen.',
+            a: 'Automatisch passiert nichts damit. Das Modell selbst sendet lokal generierte Inhalte nicht an einen Server, und kein Cloud-Dienst protokolliert sie oder nutzt sie für das Modelltraining. Runtime oder Frontend können dennoch nach Updates suchen oder Telemetrie senden, sofern du das nicht deaktivierst; prüfe daher die Einstellungen jedes Tools. Sie existieren nur auf deinem Gerät. Du kontrollierst, was du behältst, was du löschst und was du teilst. Das ist der primäre strukturelle Datenschutzvorteil lokaler Uncensored-Generierung gegenüber cloudbasierten Alternativen.',
           },
           {
             q: 'Kann ich Uncensored- und Standard-Modelle im selben Schreibprojekt mischen?',
-            a: 'Ja, und dies ist der empfohlene Workflow. Ein Standardmodell (Llama 3.3 70B, Qwen3 32B) für den Großteil der Prosa verwenden. Für spezifische Szenen, die Inhalte erfordern, die das Standardmodell ablehnt, zu Hermes 3 oder Dolphin 3.0 wechseln. Dieselben Prompt-Vorlagen funktionieren auf beiden; der Prosastil ist konsistent genug, dass eine szenenweise Mischung im Output nicht erkennbar ist.',
+            a: 'Ja, und dies ist der empfohlene Workflow. Ein Standardmodell (Llama 3.3 70B, Qwen3 32B) für den Großteil der Prosa verwenden. Für spezifische Szenen, die Inhalte erfordern, die das Standardmodell ablehnt, zu Hermes 3 oder Dolphin 3.0 wechseln. Dieselben Prompt-Vorlagen funktionieren auf beiden; der Prosastil ist oft konsistent genug, dass eine szenenweise Mischung im Output kaum auffällt.',
           },
           {
             q: 'Beeinflusst die Generierung mit einem Uncensored-Modell das Urheberrecht?',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Verlieren Uncensored-Fine-Tunes allgemeines Wissen?',
-            a: 'Geringfügig und nur in engen Bereichen. Uncensoring-Fine-Tunes sind typischerweise Nachtrainings mit voller Präzision, die bei Faktenwissen, Mathematik und Coding-Benchmarks leicht vom Basismodell abweichen können. Bei Schreibaufgaben für Belletristik ist das in der Ausgabequalität kaum feststellbar. Brauchst du dasselbe Modell für Belletristik und für technische Arbeit (Recherchenotizen, Code-Review), installiere sowohl ein Standard- als auch ein Uncensored-Modell und wechsle je nach Aufgabe. Hermes 3 behält die allgemeine Leistungsfähigkeit besser als vollständig abliterierte Modelle.',
+            a: 'Geringfügig und nur in engen Bereichen. Uncensoring-Fine-Tunes sind oft Nachtrainings auf Basis eines Basismodells, während Abliteration Gewichte ohne Nachtraining bearbeitet; beide Ansätze können bei Faktenwissen, Mathematik und Coding-Benchmarks leicht vom Basismodell abweichen. Bei den meisten Schreibaufgaben für Belletristik berichten Autoren von kaum sichtbaren Unterschieden in der Ausgabequalität, wobei das vom Modell und vom Prompt abhängt. Brauchst du dasselbe Modell für Belletristik und für technische Arbeit (Recherchenotizen, Code-Review), installiere sowohl ein Standard- als auch ein Uncensored-Modell und wechsle je nach Aufgabe. Laut Community-Berichten behält Hermes 3 die allgemeine Leistungsfähigkeit besser als vollständig abliterierte Modelle.',
           },
           {
             q: 'Werden diese Modelle überwacht, oder bleibe ich anonym?',
@@ -917,23 +917,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Muss ich bei der Nutzung von Hermes 3 / Dolphin für kreatives Schreiben die DSGVO beachten?',
-            a: 'Für rein lokale Generierung auf deinem eigenen Gerät ist die DSGVO-Relevanz minimal: keine personenbezogenen Daten werden an externe Auftragsverarbeiter übermittelt, da das Modell vollständig lokal läuft. Relevant wird die DSGVO, wenn deine Belletristik reale identifizierbare Personen verwendet oder wenn du KI-generierte Inhalte auf Plattformen veröffentlichst, die personenbezogene Daten verarbeiten. In diesem Fall gelten die üblichen Datenschutzpflichten — nicht aufgrund des Modells, sondern aufgrund der Verarbeitung und Veröffentlichung.',
+            a: 'Auch bei rein lokaler Generierung kann die DSGVO gelten, etwa wenn du personenbezogene Daten realer Personen in Prompts verwendest oder Ergebnisse veröffentlichst; ob und wie, hängt von deiner Rolle als Verantwortlicher ab. Dies ist keine Rechtsberatung.',
           },
           {
             q: 'Welche deutschen Gesetze gelten beim Schreiben von Dark Fiction mit lokalen KI-Modellen?',
-            a: 'Drei Gesetze sind besonders relevant: §184b StGB (Kinderpornografie) — absolutes Verbot, gilt auch für KI-generierte Inhalte und fiktionale Rahmungen; §130 StGB (Volksverhetzung) — gilt für Inhalte, die zum Hass gegen Bevölkerungsgruppen aufstacheln; §3 KUG schützt das Recht am eigenen Bild realer Personen. „Lokal generiert" oder „Fiktion" ist in keinem dieser Fälle eine Verteidigung. Für Belletristik, die keine realen Personen, keine Minderjährigen in sexuellen Kontexten und keine Aufstachelung enthält, ist lokale Generierung rechtlich vergleichbar mit dem Schreiben mit jedem anderen Werkzeug.',
+            a: 'Unter anderem sind relevant: §184b StGB (kinderpornographische Inhalte) — in Deutschland strafbar, auch bei fiktionaler Rahmung; die Einzelheiten unterscheiden sich je nach Land; §130 StGB (Volksverhetzung) — gilt für Inhalte, die zum Hass gegen Bevölkerungsgruppen aufstacheln; §22 KUG schützt das Recht am eigenen Bild realer Personen. „Lokal generiert" oder „Fiktion" ist in keinem dieser Fälle eine Verteidigung. Für Belletristik, die keine realen Personen, keine Minderjährigen in sexuellen Kontexten und keine Aufstachelung enthält, ist lokale Generierung rechtlich vergleichbar mit dem Schreiben mit jedem anderen Werkzeug. Dies ist keine Rechtsberatung.',
           },
           {
             q: 'Welche lokalen LLMs haben keine Inhaltsbeschränkungen?',
-            a: 'Die hier vorgestellten unzensierten und "abliterated" Fine-Tunes — darunter Hermes 3 und Dolphin 3.0 — haben die Verweigerungsschicht heraustrainiert bekommen und tragen deshalb keine eigene Inhaltsrichtlinie. Das ist der praktische Unterschied zwischen einem lokalen und einem gehosteten Modell: Ein Cloud-Anbieter setzt bei jeder Anfrage seine Nutzungsbedingungen durch, während ein uneingeschränktes Modell auf dem eigenen Rechner ohne Anbieter in der Schleife läuft und zur Inferenzzeit keine Zensur anwendet. NSFW- und explizite Fiktion werden dadurch nicht blockiert. Was sich nicht ändert, ist das Recht des jeweiligen Landes und die Verantwortung, die mit der Veröffentlichung einhergeht — keine Inhaltsrichtlinie zu haben bedeutet nicht, keine Grenzen zu haben, und der Ethik-Abschnitt weiter unten zeigt, wo diese Grenzen liegen.',
+            a: 'Steuerbare Fine-Tunes wie Hermes 3 und Dolphin 3.0 überlassen die Ausrichtung deinem System-Prompt, und bei abliterierten Veröffentlichungen wurde das Verweigerungsverhalten entfernt; sie wenden daher kaum oder gar keine eingebaute Inhaltsrichtlinie an. Das ist der praktische Unterschied zwischen einem lokalen und einem gehosteten Modell: Ein Cloud-Anbieter setzt bei jeder Anfrage seine Nutzungsbedingungen durch, während ein uneingeschränktes Modell auf dem eigenen Rechner ohne Anbieter in der Schleife läuft und zur Inferenzzeit keine Zensur anwendet. NSFW- und explizite Fiktion werden dadurch nicht blockiert. Was sich nicht ändert, ist das Recht des jeweiligen Landes und die Verantwortung, die mit der Veröffentlichung einhergeht — keine Inhaltsrichtlinie zu haben bedeutet nicht, keine Grenzen zu haben, und der Ethik-Abschnitt weiter unten zeigt, wo diese Grenzen liegen.',
           },
           {
             q: 'Was ist das beste unzensierte lokale LLM?',
-            a: 'Ein einzelnes bestes gibt es nicht, es hängt von Ihrem Speicher ab. Diese Seite ordnet sieben Modelle mit geprüften Modellkarten nach Größe der Q4_K_M-Datei: Hermes 3 Llama 3.1 8B, Dolphin 3.0 Llama 3.1 8B und Llama 3.1 8B Instruct abliterated (je 4,92 GB), Dolphin 3.0 R1 Mistral 24B (14,33 GB), Gemma 3 27B abliterated (16,5 GB), Hermes 4.3 36B (21,76 GB) und Hermes 3 Llama 3.1 70B (42,52 GB). Die Reihenfolge ist redaktionell und nach Hardware-Stufe, kein Benchmark, und wir haben diese Modelle nicht selbst ausgeführt.',
+            a: 'Ein einzelnes bestes gibt es nicht, es hängt von deinem Speicher ab. Diese Seite ordnet sieben Modelle mit geprüften Modellkarten nach Größe der Q4_K_M-Datei: Hermes 3 Llama 3.1 8B, Dolphin 3.0 Llama 3.1 8B und Llama 3.1 8B Instruct abliterated (je 4,92 GB), Dolphin 3.0 R1 Mistral 24B (14,33 GB), Gemma 3 27B abliterated (16,5 GB), Hermes 4.3 36B (21,76 GB) und Hermes 3 Llama 3.1 70B (42,52 GB). Die Reihenfolge ist redaktionell und nach Hardware-Stufe, kein Benchmark, und wir haben diese Modelle nicht selbst ausgeführt.',
           },
           {
             q: 'Welches ist das beste NSFW-LLM für den lokalen Einsatz?',
-            a: 'Es gilt dieselbe Rangliste: Wählen Sie das größte Modell, dessen Q4_K_M-Datei in Ihren Speicher passt. Die Karten von Hermes 3 und Dolphin 3.0 beschreiben nutzerkontrollierte Ausrichtung und nennen NSFW nicht ausdrücklich, die beiden abliterierten Veröffentlichungen sind auf ihren Karten als uncensored ausgewiesen. Bleiben Sie bei Fiktion zwischen erwachsenen Figuren: Sexuelle Inhalte mit Minderjährigen und sexuelle Darstellungen realer Personen sind bei jedem Modell tabu, wie der Ethik-Abschnitt erklärt.',
+            a: 'Es gilt dieselbe Rangliste: Wähle das größte Modell, dessen Q4_K_M-Datei in deinen Speicher passt. Die Karten von Hermes 3 und Dolphin 3.0 beschreiben nutzerkontrollierte Ausrichtung und nennen NSFW nicht ausdrücklich, die beiden abliterierten Veröffentlichungen sind auf ihren Karten als uncensored ausgewiesen. Bleib bei Fiktion zwischen erwachsenen Figuren: Sexuelle Inhalte mit Minderjährigen und sexuelle Darstellungen realer Personen sind bei jedem Modell tabu, wie der Ethik-Abschnitt erklärt.',
           },
           {
             q: 'Was bedeutet „abliteriert“ bei einem LLM?',
@@ -1022,9 +1022,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Quels LLM locaux non censurés les auteurs de fiction doivent-ils utiliser en 2026 ?',
         answer:
-          'Hermes 3 Llama 3.1 est notre choix par défaut parmi les modèles non censurés pour la fiction en 2026 — excellente qualité d\'instruction, bonne différenciation des voix de personnages, moins de refus arbitraires sans la tendance agressive que produisent certains modèles entièrement non censurés. Dolphin 3.0 Mistral est l\'alternative légère pour les systèmes 16–24 Go. Pour les auteurs qui ont besoin de contenu sombre occasionnel plutôt que d\'une sortie non censurée persistante, les modèles instruction-tuned standard (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) avec des prompts bien structurés génèrent la plupart des contenus littéraires matures sans nécessiter de fine-tune non censuré. La ligne éthique de base qui s\'applique indépendamment du modèle : aucun contenu impliquant des mineurs dans des contextes sexuels, aucune représentation non consentie de personnes réelles identifiables, et une réflexion approfondie avant de distribuer publiquement.',
+          'Hermes 3 Llama 3.1 est notre choix par défaut parmi les modèles non censurés pour la fiction en 2026 — bonne qualité d\'instruction, bonne différenciation des voix de personnages, moins de refus arbitraires sans la tendance agressive que produisent certains modèles entièrement non censurés. Dolphin 3.0 Mistral est l\'alternative légère pour les systèmes 16–24 Go. Pour les auteurs qui ont besoin de contenu sombre occasionnel plutôt que d\'une sortie non censurée persistante, les modèles instruction-tuned standard (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) avec des prompts bien structurés génèrent la plupart des contenus littéraires matures sans nécessiter de fine-tune non censuré. La ligne éthique de base qui s\'applique indépendamment du modèle : aucun contenu impliquant des mineurs dans des contextes sexuels, aucune représentation non consentie de personnes réelles identifiables, et une réflexion approfondie avant de distribuer publiquement.',
         bullets: [
-          'Hermes 3 Llama 3.1 — notre choix par défaut pour la fiction ; excellente qualité d\'instruction, moins de refus arbitraires.',
+          'Hermes 3 Llama 3.1 — notre choix par défaut pour la fiction ; bonne qualité d\'instruction, moins de refus arbitraires.',
           'Dolphin 3.0 Mistral — option légère pour les systèmes 16–24 Go ; plage non censurée plus large qu\'Hermes 3.',
           'Les modèles standard Llama 3.3 70B et Qwen3 32B génèrent la plupart des contenus littéraires matures avec des prompts structurés — aucun fine-tune non censuré requis pour de nombreux cas d\'usage.',
           'Tous les modèles non censurés fonctionnent entièrement en local via Ollama ou LM Studio — l\'inférence n\'appelle aucun service cloud.',
@@ -1061,11 +1061,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**« Non censuré » signifie que le modèle a un entraînement de sécurité RLHF réduit — pas qu\'il n\'a aucune contrainte.** Les fine-tunes non censurés respectent toujours le format d\'instruction, maintiennent la cohérence des personnages et peuvent être guidés par des prompts. Ce ne sont pas des systèmes « tout est permis ».',
-          '**Hermes 3 Llama 3.1 est notre choix par défaut pour les auteurs de fiction en 2026.** Moins de refus arbitraires, excellente qualité d\'instruction, bonne différenciation des voix de personnages. Le bon choix pour les auteurs qui veulent la capacité sans la dérive agressive que produisent certains modèles entièrement non censurés.',
+          '**Hermes 3 Llama 3.1 est notre choix par défaut pour les auteurs de fiction en 2026.** Moins de refus arbitraires, bonne qualité d\'instruction, bonne différenciation des voix de personnages. Le bon choix pour les auteurs qui veulent la capacité sans la dérive agressive que produisent certains modèles entièrement non censurés.',
           '**Les modèles instruction-tuned standard gèrent la plupart des contenus littéraires matures avec de bons prompts.** La violence, la complexité morale, la psychologie sombre et les thèmes matures dans la prose littéraire nécessitent rarement un fine-tune non censuré. Ce qu\'ils refusent, c\'est le contenu sexuel explicite et les descriptions détaillées de préjudices réels. Identifie dans quelle catégorie se situe ton travail avant de changer de modèle.',
           '**Fonctionner localement garde tes prompts et les sorties sur ta machine : l\'inférence n\'appelle aucune API cloud.** Aucune condition d\'utilisation cloud ne s\'applique, et aucun fournisseur ne journalise ni n\'utilise le contenu pour l\'entraînement. Vérifie les paramètres de mise à jour et de télémétrie de chaque outil. C\'est la principale raison structurelle pour laquelle les auteurs utilisent des modèles locaux non censurés — confidentialité et absence de restrictions d\'utilisation sur la fiction.',
           '**Les responsabilités éthiques ne disparaissent pas parce qu\'il n\'y a pas d\'application des CGU.** Les auteurs qui distribuent de la fiction produite avec des modèles non censurés portent les mêmes responsabilités légales que tout autre auteur : les lois sur les mineurs, les personnes réelles, l\'incitation et l\'obscénité selon les juridictions s\'appliquent quelle que soit la méthode de génération.',
-          '**Dolphin 3.0 Mistral est l\'option légère pour les configurations 16–24 Go.** Plage de sortie non censurée plus large qu\'Hermes 3 mais qualité d\'instruction plus faible dans les scènes complexes. Convient à la fiction courte, l\'exploration de prompts et le test de styles.',
+          '**Dolphin 3.0 Mistral est l\'option légère pour les configurations 16–24 Go.** Plage de sortie non censurée plus large qu\'Hermes 3 mais, selon notre avis éditorial, suit moins fidèlement des consignes complexes à contraintes multiples ; c\'est un jugement éditorial, pas une mesure. Convient à la fiction courte, l\'exploration de prompts et le test de styles.',
           '**SillyTavern et Agnai s\'associent tous deux proprement avec les modèles Ollama non censurés.** Pointer l\'un ou l\'autre des frontends sur l\'endpoint compatible OpenAI d\'Ollama et sélectionner le modèle non censuré. Aucune configuration supplémentaire requise.',
         ],
       },
@@ -1077,8 +1077,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Backends :** Ollama (principal), LM Studio (alternative pour configuration GUI).',
           '**Matériel :** Hermes 3 70B en Q4 nécessite ~42 Go ; Dolphin 3.0 8B fonctionne sur 8 Go ; Dolphin 3.0 24B fonctionne sur ~16 Go.',
           '**Interfaces :** SillyTavern, Agnai, RisuAI s\'associent tous avec les modèles Ollama non censurés via l\'endpoint compatible OpenAI.',
-          '**Confidentialité :** tout en local — pas d\'appels API cloud, pas de journalisation, pas de collecte de données d\'entraînement.',
-          '**Limites éthiques absolues :** aucun contenu sexuel impliquant des mineurs (interdiction absolue), aucune représentation sexuelle non consentie de personnes réelles identifiables, aucun contenu conçu pour faciliter une violence réelle.',
+          '**Confidentialité :** l\'inférence s\'exécute en local et n\'appelle aucune API cloud ; le runtime et le frontend peuvent néanmoins rechercher des mises à jour ou envoyer de la télémétrie, sauf si tu les désactives.',
+          '**Limites éthiques absolues :** aucun contenu sexuel impliquant des mineurs (interdit par la loi dans de nombreuses juridictions), aucune représentation sexuelle non consentie de personnes réelles identifiables, aucun contenu conçu pour faciliter une violence réelle.',
           '**Distribution :** les contenus que tu publies engagent ta responsabilité d\'auteur quelle que soit la méthode de génération.',
         ],
       },
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Ce qui est supprimé :** les comportements de refus pour des catégories de contenu spécifiques (contenu sexuel explicite, violence graphique, contenu psychologique sombre).',
           '**Ce qui est conservé :** le suivi d\'instructions, la cohérence des personnages, le respect de la structure des prompts, la qualité linguistique.',
-          '**Degrés de non-censure :** Hermes 3 est sélectivement non censuré (contenu mature oui, mais conserve certaines barrières pour le contenu extrême). La série Dolphin est plus largement non censurée. Les modèles entièrement ablitérés (Wizard-Uncensored, Erebus) ont la suppression des barrières la plus agressive — et la qualité d\'instruction la plus faible pour les tâches de fiction complexes.',
+          '**Degrés de non-censure :** Hermes 3 est sélectivement non censuré (contenu mature oui, mais conserve certaines barrières pour le contenu extrême). La série Dolphin est plus largement non censurée. Les fine-tunes communautaires plus agressifs comme Wizard-Uncensored et Erebus retirent le plus complètement les barrières et sont décrits comme moins dirigeables dans les retours de la communauté et les fiches de modèle (consulte chaque fiche).',
           '**La qualité du modèle de base compte :** la non-censure dégrade la qualité d\'instruction si le modèle de base est faible. Hermes 3 70B, construit sur Llama 3.1, conserve l\'essentiel du suivi d\'instructions de ce modèle de base ; Dolphin 3.0 en 8B est limité par sa base plus petite.',
         ],
         snippetBlocks: [
@@ -1151,11 +1151,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Limites absolues quelle que soit la configuration. Aucune configuration locale ne supprime la responsabilité légale ou éthique pour : (1) le contenu sexuel impliquant des mineurs — interdiction absolue sous la loi dans pratiquement toutes les juridictions ; (2) les représentations sexuelles non consenties de personnes réelles identifiables — cela constitue une NCII (intimate imagery non consentie) quelle que soit la méthode de génération ; (3) le contenu conçu pour faciliter une violence réelle contre des cibles spécifiques. Ces limites s\'appliquent que ton modèle fonctionne localement, dans un cloud ou sur une machine isolée.',
+            text: 'Limites absolues quelle que soit la configuration. Aucune configuration locale ne supprime la responsabilité légale ou éthique pour : (1) le contenu sexuel impliquant des mineurs — infraction pénale en Allemagne (p. ex. §184b StGB) et en France (art. 227-23 du Code pénal), et interdit dans de nombreuses autres juridictions, y compris sous un cadre fictionnel ; les détails varient selon les pays ; (2) les représentations sexuelles non consenties de personnes réelles identifiables — cela constitue une NCII (intimate imagery non consentie) quelle que soit la méthode de génération ; (3) le contenu conçu pour faciliter une violence réelle contre des cibles spécifiques. Ces limites s\'appliquent que ton modèle fonctionne localement, dans un cloud ou sur une machine isolée.',
           },
         ],
         items: [
-          '**Contenu sexuel impliquant des mineurs :** interdiction légale absolue dans toutes les grandes juridictions quelle que soit le cadrage fictionnel ou la méthode de génération. Ce n\'est pas une politique de modèle — c\'est la loi.',
+          '**Contenu sexuel impliquant des mineurs :** infraction pénale en Allemagne (p. ex. §184b StGB) et en France (art. 227-23 du Code pénal), et interdit dans de nombreuses autres juridictions, y compris sous un cadre fictionnel ; les détails varient selon les pays. Ce n\'est pas une politique de modèle — c\'est la loi.',
           '**Représentations sexuelles non consenties de personnes réelles :** les lois sur les NCII s\'appliquent aux contenus générés par IA de personnes réelles identifiables dans un nombre croissant de juridictions. « Généré par IA » n\'est pas une défense.',
           '**Contenu conçu pour faciliter un préjudice réel :** utiliser un cadre fictionnel pour extraire des informations ou du contenu qui permet directement une violence ou un préjudice réel supprime la protection fictionnelle.',
           '**Distribution publique sans responsabilité d\'auteur :** les contenus que tu publies, distribues ou partages engagent ta responsabilité d\'auteur. « Une IA l\'a généré » ne transfère pas cette responsabilité.',
@@ -1167,25 +1167,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparaison des modèles : options non censurées pour la fiction',
         content:
           '**Tous les modèles non censurés ne se valent pas — le degré de suppression RLHF et la qualité du modèle de base comptent tous deux pour les cas d\'usage d\'écriture fictionnelle.**',
-        columns: ['Modèle', 'Base', 'VRAM (Q4)', 'Taux de refus', 'Qualité d\'instruction', 'Dérive vers l\'extrême', 'Idéal pour'],
+        columns: ['Modèle', 'Base', 'VRAM (Q4)', 'Taux de refus', 'Instructions (éditorial)', 'Dérive vers l\'extrême', 'Idéal pour'],
         rows: [
-          { 'Modèle': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'Base': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 Go', 'Taux de refus': 'Sélectif', 'Qualité d\'instruction': '★★★★★', 'Dérive vers l\'extrême': 'Faible', 'Idéal pour': 'Choix par défaut pour la fiction sérieuse — meilleur suivi d\'instructions + capacité non censurée' },
-          { 'Modèle': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 Go', 'Taux de refus': 'Large', 'Qualité d\'instruction': '★★★★☆', 'Dérive vers l\'extrême': 'Faible à modérée', 'Idéal pour': 'Systèmes 16–24 Go ; contenu mature sur une plus large plage' },
-          { 'Modèle': 'Dolphin 3.0 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 Go', 'Taux de refus': 'Large', 'Qualité d\'instruction': '★★★☆☆', 'Dérive vers l\'extrême': 'Modérée', 'Idéal pour': 'Systèmes à VRAM limitée ; ébauches courtes, test de prompts' },
-          { 'Modèle': 'Hermes 3 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 Go', 'Taux de refus': 'Sélectif', 'Qualité d\'instruction': '★★★☆☆', 'Dérive vers l\'extrême': 'Faible', 'Idéal pour': 'Ressources limitées ; dialogues et scènes courtes' },
-          { 'Modèle': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 Go', 'Taux de refus': 'Limité', 'Qualité d\'instruction': '★★★★★', 'Dérive vers l\'extrême': 'Aucune', 'Idéal pour': 'Thèmes sombres, complexité morale, violence — sans contenu sexuel explicite' },
+          { 'Modèle': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'Base': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 Go', 'Taux de refus': 'Sélectif', 'Instructions (éditorial)': '★★★★★', 'Dérive vers l\'extrême': 'Faible', 'Idéal pour': 'Choix par défaut pour la fiction (avis éditorial) — bon suivi d\'instructions selon la fiche du modèle' },
+          { 'Modèle': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 Go', 'Taux de refus': 'Large', 'Instructions (éditorial)': '★★★★☆', 'Dérive vers l\'extrême': 'Faible à modérée', 'Idéal pour': 'Systèmes 16–24 Go ; contenu mature sur une plus large plage' },
+          { 'Modèle': 'Dolphin 3.0 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 Go', 'Taux de refus': 'Large', 'Instructions (éditorial)': '★★★☆☆', 'Dérive vers l\'extrême': 'Modérée', 'Idéal pour': 'Systèmes à VRAM limitée ; ébauches courtes, test de prompts' },
+          { 'Modèle': 'Hermes 3 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 Go', 'Taux de refus': 'Sélectif', 'Instructions (éditorial)': '★★★☆☆', 'Dérive vers l\'extrême': 'Faible', 'Idéal pour': 'Ressources limitées ; dialogues et scènes courtes' },
+          { 'Modèle': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 Go', 'Taux de refus': 'Limité', 'Instructions (éditorial)': '★★★★★', 'Dérive vers l\'extrême': 'Aucune', 'Idéal pour': 'Thèmes sombres, complexité morale, violence — sans contenu sexuel explicite' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Commence par Hermes 3, pas par le fine-tune non censuré le plus agressif. Les modèles entièrement ablitérés (Wizard-Uncensored, Erebus) ont la plage de contenu la plus large mais un suivi d\'instructions nettement plus faible dans les tâches de fiction complexes — ils dérivent plus vite des contraintes, produisent une prose de moins bonne qualité sur de longues générations et maintiennent la voix des personnages moins fidèlement. Pour de la fiction nécessitant à la fois du contenu non censuré et une prose de qualité, Hermes 3 est le meilleur compromis.',
+            text: 'Commence par Hermes 3, pas par le fine-tune non censuré le plus agressif. Les fine-tunes plus agressifs comme Wizard-Uncensored et Erebus ont la plage de contenu la plus large mais sont décrits comme moins dirigeables dans les retours de la communauté et les fiches de modèle (consulte chaque fiche). Pour de la fiction nécessitant à la fois du contenu non censuré et une prose de qualité, Hermes 3 est, selon notre avis éditorial, un bon point de départ.',
           },
         ],
         items: [
-          'Note : les anciens fine-tunes non censurés — Midnight Miqu (basé sur Miqu-70B), Wizard-LM Uncensored, Mythomax — étaient des références en 2024 mais ont été dépassés par Hermes 3 et Dolphin 3.0 en 2026 sur la qualité et les métriques de suivi d\'instructions. Si tu les trouves recommandés dans des articles plus anciens, les équivalents actuels sont Hermes 3 (pour la non-censure sélective) et Dolphin 3.0 (pour une plage plus large).',
+          'Note : selon notre avis éditorial, les anciens fine-tunes communautaires comme Midnight Miqu (basé sur Miqu-70B), Wizard-LM Uncensored et Mythomax ont largement été remplacés par des versions plus récentes comme Hermes 3 et Dolphin 3.0 ; consulte la fiche de chaque modèle pour son comportement actuel. Si tu les trouves recommandés dans des articles plus anciens, les équivalents actuels sont Hermes 3 (pour la non-censure sélective) et Dolphin 3.0 (pour une plage plus large).',
         ],
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-fr.webp',
-          imageCaption: 'Hermes 3 offre le meilleur équilibre entre qualité d’instruction et étendue non censurée — les modèles totalement abliterés dérivent plus vite.',
+          imageCaption: 'Selon notre avis éditorial, Hermes 3 offre un bon équilibre entre qualité d’instruction et étendue non censurée ; consulte la fiche du modèle pour son comportement actuel.',
         },
       rankedModels: {
         id: 'ranked-models',
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Connexion SillyTavern :** dans les paramètres API, sélectionner « Compatible OpenAI » et pointer l\'URL de base sur `http://localhost:11434/v1` (Ollama) ou `http://localhost:1234/v1` (LM Studio). Saisir n\'importe quelle chaîne comme clé API (obligatoire dans le champ mais non validée localement). Guides de configuration pas à pas : [avis SillyTavern](/fr/local-llms/sillytavern-review) · [avis Open WebUI](/fr/local-llms/open-webui-review).',
           '**Connexion Agnai :** même endpoint compatible OpenAI ; saisir l\'URL locale dans les paramètres de l\'adaptateur. Fonctionne de façon identique à la configuration SillyTavern.',
           '**Changement de modèle :** basculer entre modèles standard et non censurés dans Ollama avec `ollama run [model-name]` — plusieurs modèles peuvent être chargés simultanément, et tu peux changer par session sans redémarrer le serveur.',
-          '**Interface de bureau :** [Locally Uncensored](/fr/power-local-llm/locally-uncensored-review) est une application de bureau gratuite qui détecte Ollama et LM Studio et ajoute la génération d\'images et de vidéos.',
+          '**Interface de bureau :** [Locally Uncensored](/fr/power-local-llm/locally-uncensored-review) est une application de bureau (gratuite lors de la dernière mise à jour ; vérifie la page de l\'éditeur) qui détecte Ollama et LM Studio et ajoute la génération d\'images et de vidéos.',
         ],
         callouts: [
           {
@@ -1331,7 +1331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Erreurs courantes',
         items: [
-          '**Se rabattre sur le modèle non censuré le plus agressif.** Les modèles entièrement ablitérés (Wizard-Uncensored, Erebus) ont le suivi d\'instructions le plus faible pour les scènes complexes. Hermes 3 est un meilleur compromis pour la qualité de fiction.',
+          '**Se rabattre sur le modèle non censuré le plus agressif.** Les fine-tunes plus agressifs comme Wizard-Uncensored et Erebus sont décrits comme moins dirigeables pour les scènes complexes dans les retours de la communauté et les fiches de modèle (consulte chaque fiche). Hermes 3 est un bon choix par défaut pour la fiction.',
           '**Utiliser des modèles non censurés pour du contenu que les modèles standard généreraient.** La complexité morale, la psychologie sombre, la violence et les thèmes matures dans la prose littéraire nécessitent rarement un fine-tune non censuré. Sache exactement ce dont tu as besoin avant de changer.',
           '**Traiter la génération locale comme une zone légale sans contexte.** L\'absence d\'application des règles cloud ne signifie pas l\'absence de loi. Les responsabilités d\'auteur pour la distribution, les personnes réelles et les mineurs s\'appliquent quelle que soit la configuration.',
           '**Ne pas spécifier de limites de mots.** Les modèles non censurés allongent le contenu sombre pour remplir l\'espace aussi facilement que n\'importe quel autre modèle. Utilise les mêmes contraintes de limite de mots des modèles de fiction.',
@@ -1345,7 +1345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fiche modèle Hermes 3 et méthodologie de fine-tuning — [Nous Research](https://nousresearch.com)',
           'Documentation technique Dolphin 3.0 Mistral — [Cognitive Computations / Eric Hartford](https://huggingface.co/cognitivecomputations)',
           'Vue d\'ensemble des techniques RLHF et d\'alignement — [Anthropic Research](https://anthropic.com/research)',
-          'Article 5 du Règlement IA de l\'UE — pratiques d\'IA interdites incluant le contenu impliquant des mineurs — [EUR-Lex](https://eur-lex.europa.eu)',
+          'Directive 2011/93/UE relative à la lutte contre les abus sexuels commis contre des enfants et droit pénal national (par exemple §184b StGB en Allemagne) — [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2011/93/oj)',
           'NCII (intimate imagery non consentie) — vue d\'ensemble du cadre juridique — [Cyber Civil Rights Initiative](https://cybercivilrights.org)',
         ],
       },
@@ -1355,11 +1355,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Est-il légal d\'utiliser des LLM locaux non censurés ?',
-            a: 'Faire fonctionner un LLM local non censuré est légal dans la plupart des juridictions — il n\'existe pas de loi contre la possession de logiciels IA open source. Ce que tu génères et distribues avec est soumis aux mêmes lois que tout autre contenu d\'auteur : loi sur l\'obscénité, loi sur les NCII, loi sur la diffamation et lois sur le contenu impliquant des mineurs. Légal à faire fonctionner ne signifie pas légal à publier, partager ou distribuer sans limite.',
+            a: 'Faire fonctionner un LLM local non censuré est légal dans la plupart des juridictions — il n\'existe pas de loi générale interdisant de posséder des modèles d\'IA à poids ouverts. Ce que tu génères et distribues avec est soumis aux mêmes lois que tout autre contenu d\'auteur : loi sur l\'obscénité, loi sur les NCII, loi sur la diffamation et lois sur le contenu impliquant des mineurs. Légal à faire fonctionner ne signifie pas légal à publier, partager ou distribuer sans limite.',
           },
           {
             q: 'Quelle est la différence entre Hermes 3 et Dolphin 3.0 ?',
-            a: 'Hermes 3 (Nous Research) est sélectivement non censuré — il réduit les refus pour le contenu mature tout en conservant certaines barrières pour les catégories extrêmes. Le suivi d\'instructions est excellent, proche de son modèle de base Llama 3.1. Dolphin 3.0 (Cognitive Computations) est plus largement non censuré sur une plage de contenu plus large, mais le suivi d\'instructions est légèrement plus faible dans les scènes complexes à contraintes multiples. Hermes 3 est le meilleur choix par défaut pour la fiction où la qualité de la prose compte ; Dolphin 3.0 est le meilleur choix quand tu as besoin de la plage de contenu la plus large sur un système 16–24 Go.',
+            a: 'Hermes 3 (Nous Research) est sélectivement non censuré — il réduit les refus pour le contenu mature tout en conservant certaines barrières pour les catégories extrêmes. Le suivi d\'instructions est excellent, proche de son modèle de base Llama 3.1. Dolphin 3.0 (Cognitive Computations) est plus largement non censuré sur une plage de contenu plus large, mais, selon notre avis éditorial, il suit moins fidèlement des consignes complexes à contraintes multiples ; c\'est un jugement éditorial, pas une mesure. Hermes 3 est le meilleur choix par défaut pour la fiction où la qualité de la prose compte ; Dolphin 3.0 est le meilleur choix quand tu as besoin de la plage de contenu la plus large sur un système 16–24 Go.',
           },
           {
             q: 'Ai-je besoin d\'un modèle non censuré pour écrire de la dark fiction ?',
@@ -1375,11 +1375,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Que se passe-t-il avec le contenu que je génère localement ?',
-            a: 'Rien ne se passe automatiquement. Le contenu généré localement n\'est envoyé à aucun serveur, n\'est journalisé par aucun service cloud et n\'est pas utilisé pour l\'entraînement du modèle. Il n\'existe que sur ton appareil, dans le stockage local de ton application (fichiers d\'historique de chat, fiches de personnages, etc.). Tu contrôles ce que tu gardes, ce que tu supprimes et ce que tu partages. C\'est le principal avantage structurel en matière de confidentialité de la génération locale non censurée par rapport aux alternatives basées sur le cloud.',
+            a: 'Rien ne se passe automatiquement. Le modèle lui-même n\'envoie pas le contenu généré localement à un serveur, et aucun service cloud ne le journalise ni ne l\'utilise pour l\'entraînement du modèle. Le runtime ou le frontend que tu utilises peuvent néanmoins rechercher des mises à jour ou envoyer de la télémétrie, sauf si tu les désactives ; vérifie donc les paramètres de chaque outil. Il n\'existe que sur ton appareil, dans le stockage local de ton application (fichiers d\'historique de chat, fiches de personnages, etc.). Tu contrôles ce que tu gardes, ce que tu supprimes et ce que tu partages. C\'est le principal avantage structurel en matière de confidentialité de la génération locale non censurée par rapport aux alternatives basées sur le cloud.',
           },
           {
             q: 'Puis-je mélanger des modèles non censurés et standard dans le même projet d\'écriture ?',
-            a: 'Oui, et c\'est le flux de travail recommandé. Utiliser un modèle standard (Llama 3.3 70B, Qwen3 32B) pour la majeure partie de la prose — les modèles standard produisent une prose littéraire de haute qualité pour la plupart du contenu sombre. Passer à Hermes 3 ou Dolphin 3.0 pour les scènes spécifiques qui nécessitent du contenu que le modèle standard refuse. Les mêmes modèles de prompts fonctionnent sur les deux ; le style de prose est suffisamment cohérent pour qu\'un mélange par scène ne soit pas détectable dans la sortie.',
+            a: 'Oui, et c\'est le flux de travail recommandé. Utiliser un modèle standard (Llama 3.3 70B, Qwen3 32B) pour la majeure partie de la prose — les modèles standard produisent une prose littéraire de haute qualité pour la plupart du contenu sombre. Passer à Hermes 3 ou Dolphin 3.0 pour les scènes spécifiques qui nécessitent du contenu que le modèle standard refuse. Les mêmes modèles de prompts fonctionnent sur les deux ; le style de prose est souvent suffisamment cohérent pour qu\'un mélange par scène soit difficile à remarquer dans la sortie.',
           },
           {
             q: 'La génération avec un modèle non censuré affecte-t-elle les droits d\'auteur ?',
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Les fine-tunes non censurés perdent-ils des connaissances générales ?',
-            a: 'Marginalement, dans des domaines étroits. Les fine-tunes de non-censure sont généralement des passes de ré-entraînement en pleine précision qui peuvent légèrement dériver du modèle de base sur le rappel factuel, les mathématiques et les benchmarks de codage. Pour les tâches d\'écriture fictionnelle, cela est indétectable dans la qualité de la sortie. Si tu as besoin du même modèle pour la fiction et le travail technique, garde les versions standard et non censurée installées et change en fonction de la tâche. Hermes 3 conserve mieux les capacités générales que les modèles entièrement ablitérés.',
+            a: 'Marginalement, dans des domaines étroits. Les fine-tunes de non-censure sont souvent des passes de ré-entraînement au-dessus d\'un modèle de base, alors que l\'ablitération modifie les poids sans ré-entraînement ; les deux approches peuvent légèrement dériver du modèle de base sur le rappel factuel, les mathématiques et les benchmarks de codage. Pour la plupart des tâches d\'écriture fictionnelle, les auteurs signalent une différence difficilement perceptible dans la qualité de la sortie, même si cela dépend du modèle et du prompt. Si tu as besoin du même modèle pour la fiction et le travail technique, garde les versions standard et non censurée installées et change en fonction de la tâche. Selon les retours de la communauté, Hermes 3 conserve mieux les capacités générales que les modèles entièrement ablitérés.',
           },
           {
             q: 'Ces modèles sont-ils surveillés ou anonymes ?',
@@ -1395,15 +1395,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Dois-je respecter le RGPD et la CNIL en utilisant Hermes 3 ou Dolphin pour l\'écriture créative ?',
-            a: 'Pour une génération purement locale sur ton propre appareil, la pertinence du RGPD est minimale : aucune donnée personnelle n\'est transmise à un sous-traitant externe puisque le modèle fonctionne entièrement en local. Le RGPD et les directives de la CNIL deviennent pertinents si ta fiction met en scène des personnes réelles identifiables, ou si tu publies des contenus générés par IA sur des plateformes qui traitent des données personnelles. Dans ce cas, les obligations habituelles de protection des données s\'appliquent — non pas en raison du modèle, mais en raison du traitement et de la publication.',
+            a: 'Même en génération purement locale, le RGPD peut s\'appliquer, par exemple si tu saisis des données personnelles de personnes réelles ; la conformité relève de ta responsabilité en tant que responsable de traitement. Ceci ne constitue pas un conseil juridique.',
           },
           {
             q: 'Quelles lois françaises s\'appliquent à l\'écriture de dark fiction avec des LLM locaux ?',
-            a: 'Trois dispositions sont particulièrement pertinentes : l\'article 227-23 du Code pénal (contenu pédopornographique) — interdiction absolue applicable aux contenus générés par IA et aux cadres fictionnels ; l\'article 24 de la loi du 29 juillet 1881 sur la liberté de la presse (provocation à la haine ou à la discrimination) ; et la loi Informatique et Libertés pour tout contenu impliquant des données personnelles de personnes identifiables. « Généré localement » ou « fiction » ne constitue une défense dans aucun de ces cas. Pour une fiction ne mettant pas en scène de mineurs dans des contextes sexuels, de personnes réelles identifiables ou d\'incitation à la haine, la génération locale est juridiquement comparable à l\'écriture avec n\'importe quel autre outil.',
+            a: 'Trois dispositions sont particulièrement pertinentes : l\'article 227-23 du Code pénal (contenu pédopornographique) — infraction pénale, y compris sous un cadre fictionnel ; les détails varient selon les pays ; l\'article 24 de la loi du 29 juillet 1881 sur la liberté de la presse (provocation à la haine ou à la discrimination) ; et la loi Informatique et Libertés pour tout contenu impliquant des données personnelles de personnes identifiables. « Généré localement » ou « fiction » ne constitue une défense dans aucun de ces cas. Pour une fiction ne mettant pas en scène de mineurs dans des contextes sexuels, de personnes réelles identifiables ou d\'incitation à la haine, la génération locale est juridiquement comparable à l\'écriture avec n\'importe quel autre outil. Ceci ne constitue pas un conseil juridique.',
           },
           {
             q: 'Quels LLM locaux n\'ont aucune restriction de contenu ?',
-            a: 'Les fine-tunes non censurés et « abliterated » présentés ici — dont Hermes 3 et Dolphin 3.0 — ont eu leur couche de refus entraînée pour disparaître, et ne portent donc aucune politique de contenu propre. C\'est la différence pratique entre un modèle local et un modèle hébergé : un fournisseur cloud applique ses conditions d\'utilisation à chaque requête, tandis qu\'un modèle non restreint tournant sur votre propre machine n\'a aucun fournisseur dans la boucle et n\'applique aucune censure au moment de l\'inférence. Le contenu NSFW et la fiction explicite ne sont donc pas bloqués. Ce qui ne change pas, c\'est la loi de votre pays et la responsabilité qui accompagne la publication — l\'absence de politique de contenu n\'équivaut pas à l\'absence de limites, et la section éthique ci-dessous précise où se situent ces limites.',
+            a: 'Les fine-tunes dirigeables comme Hermes 3 et Dolphin 3.0 laissent l\'alignement à ton prompt système, et les versions « abliterated » ont vu leur comportement de refus retiré ; elles n\'appliquent donc que peu ou pas de politique de contenu intégrée. C\'est la différence pratique entre un modèle local et un modèle hébergé : un fournisseur cloud applique ses conditions d\'utilisation à chaque requête, tandis qu\'un modèle non restreint tournant sur votre propre machine n\'a aucun fournisseur dans la boucle et n\'applique aucune censure au moment de l\'inférence. Le contenu NSFW et la fiction explicite ne sont donc pas bloqués. Ce qui ne change pas, c\'est la loi de votre pays et la responsabilité qui accompagne la publication — l\'absence de politique de contenu n\'équivaut pas à l\'absence de limites, et la section éthique ci-dessous précise où se situent ces limites.',
           },
           {
             q: 'Quel est le meilleur LLM local non censuré ?',
@@ -1455,7 +1455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '無検閲ローカルLLMを使うと、クラウドサービスが拒否する成人向け・倫理的複雑性のある・ダークなコンテンツをフィクション作家が生成できます――推論は自分のマシン上で実行されます。本ガイドでは、推奨モデル、OllamaまたはLM Studioでの設定手順、ToS執行がなくても適用される倫理的責任、そして無検閲モデルが適切な用途と不適切な用途を解説します。',
     metaDescription:
-      '小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0が最適。モデル5つをVRAM別に比較し、日本語で書く場合のモデル選び、LM StudioとOllamaの設定、倫理的責任まで解説。',
+      '小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0を中心に比較。モデル5つをVRAM別に比較し、日本語で書く場合のモデル選び、LM StudioとOllamaの設定、倫理的責任まで解説。',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ja.webp',
     twitterDescription:
       '小説家のための無検閲ローカルLLM―推奨モデル、Ollama設定、本当の倫理問題：適切な場面と創作者に残る責任を解説。',
@@ -1544,7 +1544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**標準命令チューニングモデルも優れたプロンプトで大半の成人向け文学コンテンツを処理できます。** 暴力、道徳的複雑性、ダークな心理、文学散文における成人向けテーマは、無検閲ファインチューンをほとんど必要としません。拒否するのは明示的な性的コンテンツと現実的な有害の詳細な描写です。モデルを切り替える前に、あなたの作品がどのカテゴリに属するかを把握してください。',
           '**ローカルで実行すると、プロンプトと出力は手元のマシンに残り、推論はクラウドAPIを呼び出しません。** クラウドのToSは適用されず、提供元がコンテンツを記録したりトレーニングに使用したりすることもありません。各ツールのアップデート確認とテレメトリの設定は確認してください。これが作家がローカル無検閲モデルを使用する主な構造的理由です――プライバシーとフィクションにおける使用制限なし。',
           '**ToS執行がないからといって倫理的責任が消えるわけではありません。** 無検閲モデルで作成したフィクションを配布する作家は、他の著者と同じ法的責任を負います：未成年者、実在人物、扇動、管轄区域固有の猥褻法はすべて、生成方法に関わらず適用されます。',
-          '**Dolphin 3.0 Mistralは16〜24 GBのリグ向けの軽量オプションです。** Hermes 3より広い無検閲出力範囲ですが、複雑な場面での指示追従性は弱い。短編フィクション、プロンプト探索、スタイルテストに適しています。',
+          '**Dolphin 3.0 Mistralは16〜24 GBのリグ向けの軽量オプションです。** Hermes 3より広い無検閲出力範囲ですが、編集部の見解では、複雑な多制約の場面での指示追従はやや弱めです。これは編集部の評価であり、実測ではありません。短編フィクション、プロンプト探索、スタイルテストに適しています。',
           '**SillyTavernとAgnaiのどちらも無検閲Ollamaモデルとクリーンに接続できます。** どちらのフロントエンドもOllamaのOpenAI互換エンドポイントを指し、無検閲モデルを選択するだけです。追加設定は不要。',
         ],
       },
@@ -1556,8 +1556,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**バックエンド：** Ollama（主）、LM Studio（GUIセットアップの代替）。',
           '**ハードウェア：** Hermes 3 70B（Q4）は約42 GB必要。Dolphin 3.0 8Bは8 GBで動作、Dolphin 3.0 24Bは約16 GBで動作。',
           '**フロントエンド：** SillyTavern、Agnai、RisuAIはすべてOpenAI互換エンドポイント経由で無検閲Ollamaモデルと接続可能。',
-          '**プライバシー：** 完全ローカル ― クラウドAPI呼び出しなし、ログなし、トレーニングデータ収集なし。',
-          '**絶対的な倫理的制限：** 未成年者を含む性的コンテンツなし（絶対禁止）、識別可能な実在人物の非合意的な性的描写なし、現実の暴力を促進するコンテンツなし。',
+          '**プライバシー：** 推論はローカルで実行され、クラウドAPIは呼び出しません。ただし、ランタイムやフロントエンドは、無効にしない限りアップデート確認やテレメトリ送信を行う場合があります。',
+          '**絶対的な倫理的制限：** 未成年者を含む性的コンテンツなし（多くの法域で法律上禁止）、識別可能な実在人物の非合意的な性的描写なし、現実の暴力を促進するコンテンツなし。',
           '**配布：** 公開・配布・共有するコンテンツは、生成方法に関わらず著作者の責任を負う。',
         ],
       },
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**削除されるもの：** 特定のコンテンツカテゴリの拒否動作（明示的な性的コンテンツ、グラフィックな暴力、ダークな心理コンテンツ）。',
           '**維持されるもの：** 指示追従、キャラクターの一貫性、プロンプト構造の遵守、言語品質。',
-          '**無検閲の度合い：** Hermes 3は選択的に無検閲（成人向けコンテンツOK、ただし極端なコンテンツにはある程度のガードレールを維持）。Dolphinシリーズはより広く無検閲。完全アブリテレートモデル（Wizard-Uncensored、Erebus）はガードレール除去が最も積極的ですが、複雑なフィクションタスクでは指示追従が最も弱い。',
+          '**無検閲の度合い：** Hermes 3は選択的に無検閲（成人向けコンテンツOK、ただし極端なコンテンツにはある程度のガードレールを維持）。Dolphinシリーズはより広く無検閲。Wizard-UncensoredやErebusのようなより積極的なコミュニティファインチューンはガードレールを最も徹底的に除去しており、コミュニティの報告やモデルカードでは制御しにくいとされています（各カードを確認してください）。',
           '**ベースモデルの品質が重要：** ベースモデルが弱ければ、無検閲化は指示品質を劣化させます。Llama 3.1ベースのHermes 3 70Bは、そのベースモデルの強力な指示追従の多くを維持します。8BのDolphin 3.0は、より小さなベースによって制限されます。',
           '**呼び方の違い：** 日本語では「無検閲」「検閲なし」「非検閲」「無修正」「規制なし」「無規制」「制限なし」がほぼ同じ意味で使われ、英語の uncensored / unrestricted / abliterated に対応します。「無修正」はアダルトメディア由来の口語表現ですが、ローカルLLMの文脈では本記事の「無検閲」と同じくRLHFの拒否層を外したファインチューンを指します。モデルを探すときは uncensored / abliterated / dolphin といったタグが目印になります。',
         ],
@@ -1592,14 +1592,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       howWeTested: {
         id: 'how-we-tested',
-        title: 'テスト方法',
+        title: '評価方法',
         content:
-          'このガイドのモデル評価は小規模な定性的テストに基づいています――方向性の指標であり、査読ベンチマークではありません。センシティブなテーマのモデル推奨を信頼するかどうかを判断する読者のために、方法論の透明性が重要です。',
+          'このガイドのモデル評価は、モデル作成者の公開ドキュメント、公開レポート、ユーザー向け資料に基づくもので、PromptQuorumによる独自の実機テストではありません。センシティブなテーマのモデル推奨を信頼するかどうかを判断する読者のために、方法論の透明性が重要です。',
         items: [
           '**ソース資料：** Nous Research (Hermes 3) と Cognitive Computations (Dolphin 3.0) からのモデルカード、クリエイタードキュメント、公開キャパビリティステートメント。',
           '**拒否率分類：** 文書化されたビヘイビアパターンおよびモデルクリエイターのコンテンツ処理に関する声明に基づく。',
           '**ドリフト評価：** ユーザーレポート、モデルドキュメント、ファインチューニングアプローチの説明により知らされている。',
-          '**バックエンド参照：** 再現性のためのOllama 0.5+ (Q4_K_M量子化) ――測定基盤ではない。',
           '**誠実さの制約：** これは情報ガイドであり、ベンチマークではありません。ドリフトと拒否率の分類は文書化されたビヘイビアパターンを反映しており、正確な測定ではありません。ユーザーは自分のワークフローで動作を確認すべき。',
         ],
       },
@@ -1631,11 +1630,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '設定に関わらず絶対的な制限。ローカル設定は以下に対する法的・倫理的責任を除去しません：（1）未成年者を含む性的コンテンツ――ほぼすべての管轄区域で法律上の絶対禁止；（2）識別可能な実在人物の非合意的な性的描写――生成方法に関わらずNCII（非合意的な性的画像）に該当；（3）特定のターゲットに対する現実の暴力を促進するために設計されたコンテンツ。これらの制限は、モデルがローカル、クラウド、またはエアギャップマシンで動作していても適用されます。',
+            text: '設定に関わらず絶対的な制限。ローカル設定は以下に対する法的・倫理的責任を除去しません：（1）未成年者を含む性的コンテンツ――ドイツ（§184b StGBなど）やフランス（刑法典227-23条）では犯罪とされ、他の多くの法域でもフィクションの形式であっても禁止されています。詳細は国によって異なります；（2）識別可能な実在人物の非合意的な性的描写――生成方法に関わらずNCII（非合意的な性的画像）に該当；（3）特定のターゲットに対する現実の暴力を促進するために設計されたコンテンツ。これらの制限は、モデルがローカル、クラウド、またはエアギャップマシンで動作していても適用されます。',
           },
         ],
         items: [
-          '**未成年者を含む性的コンテンツ：** フィクション的フレーミングまたは生成方法に関わらず、すべての主要管轄区域で絶対的な法的禁止。これはモデルポリシーではなく法律です。',
+          '**未成年者を含む性的コンテンツ：** ドイツ（§184b StGBなど）やフランス（刑法典227-23条）では犯罪とされ、他の多くの法域でもフィクションの形式であっても禁止されています。詳細は国によって異なります。これはモデルポリシーではなく法律です。',
           '**実在人物の非合意的な性的描写：** NCII法は、増加している管轄区域において識別可能な実在人物のAI生成コンテンツに適用されます。「AIが生成した」は抗弁になりません。',
           '**現実の害を促進するために設計されたコンテンツ：** フィクション的フレーミングを使用して、現実の暴力や害を直接可能にする情報やコンテンツを抽出することは、フィクション保護を除去します。',
           '**著作者責任なしの公開配布：** 公開・配布・共有するコンテンツは著作者の責任を負います。「AIが生成した」はその責任を移転しません。',
@@ -1647,52 +1646,50 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'モデル比較：フィクション向けの無検閲オプション',
         content:
           '**すべての無検閲モデルが同等ではありません――RLHF除去の度合いとベースモデルの品質の両方が、フィクション執筆ユースケースに重要です。**',
-        columns: ['モデル', 'ベース', 'VRAM (Q4)', '拒否率', '指示品質', '極端化傾向', '最適用途'],
+        columns: ['モデル', 'ベース', 'VRAM (Q4)', '拒否率', '指示追従（編集部評価）', '極端化傾向', '最適用途'],
         rows: [
-          { 'モデル': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'ベース': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', '拒否率': '選択的', '指示品質': '★★★★★', '極端化傾向': '低', '最適用途': '本格的フィクションのデフォルト選択 ― 最高の指示追従性と無検閲能力' },
-          { 'モデル': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'ベース': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '拒否率': '広範', '指示品質': '★★★★☆', '極端化傾向': '低〜中', '最適用途': '16〜24 GBシステム；広い範囲での成人向けコンテンツ' },
-          { 'モデル': 'Dolphin 3.0 Llama 3.1 8B', 'ベース': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '拒否率': '広範', '指示品質': '★★★☆☆', '極端化傾向': '中', '最適用途': '低VRAMシステム；短編草稿、プロンプトテスト' },
-          { 'モデル': 'Hermes 3 Llama 3.1 8B', 'ベース': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '拒否率': '選択的', '指示品質': '★★★☆☆', '極端化傾向': '低', '最適用途': 'リソース制限環境；対話と短い場面' },
-          { 'モデル': 'Standard Llama 3.3 70B', 'ベース': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒否率': '限定的', '指示品質': '★★★★★', '極端化傾向': 'なし', '最適用途': 'ダークなテーマ、道徳的複雑性、暴力 ― 明示的な性的コンテンツ不要の場合' },
+          { 'モデル': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'ベース': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', '拒否率': '選択的', '指示追従（編集部評価）': '★★★★★', '極端化傾向': '低', '最適用途': '編集部の見解ではフィクションのデフォルト選択 ― モデルカード上、指示追従性が高い' },
+          { 'モデル': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'ベース': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '拒否率': '広範', '指示追従（編集部評価）': '★★★★☆', '極端化傾向': '低〜中', '最適用途': '16〜24 GBシステム；広い範囲での成人向けコンテンツ' },
+          { 'モデル': 'Dolphin 3.0 Llama 3.1 8B', 'ベース': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '拒否率': '広範', '指示追従（編集部評価）': '★★★☆☆', '極端化傾向': '中', '最適用途': '低VRAMシステム；短編草稿、プロンプトテスト' },
+          { 'モデル': 'Hermes 3 Llama 3.1 8B', 'ベース': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '拒否率': '選択的', '指示追従（編集部評価）': '★★★☆☆', '極端化傾向': '低', '最適用途': 'リソース制限環境；対話と短い場面' },
+          { 'モデル': 'Standard Llama 3.3 70B', 'ベース': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒否率': '限定的', '指示追従（編集部評価）': '★★★★★', '極端化傾向': 'なし', '最適用途': 'ダークなテーマ、道徳的複雑性、暴力 ― 明示的な性的コンテンツ不要の場合' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: '最も積極的な無検閲ファインチューンではなく、Hermes 3から始めてください。完全アブリテレートモデル（Wizard-Uncensored、Erebus）は最も広いコンテンツ範囲を持ちますが、複雑なフィクションタスクでの指示追従性が著しく低い――制約からの離脱が早く、長い生成では品質が低い散文を生成し、キャラクターの声の維持が信頼性に欠けます。無検閲コンテンツと品質散文の両方を必要とするフィクションには、Hermes 3の方がより良いトレードオフです。',
+            text: '最も積極的な無検閲ファインチューンではなく、Hermes 3から始めてください。Wizard-UncensoredやErebusのようなより積極的なファインチューンは最も広いコンテンツ範囲を持ちますが、コミュニティの報告やモデルカードでは制御しにくいとされています（各カードを確認してください）。無検閲コンテンツと品質の高い散文の両方を必要とするフィクションでは、編集部の見解としてHermes 3が妥当な出発点です。',
           },
         ],
         items: [
-          '注意：古い無検閲ファインチューン――Midnight Miqu（Miqu-70Bベース）、Wizard-LM Uncensored、Mythomax――は2024年にはリーダーでしたが、2026年には品質と指示追従性の指標でHermes 3とDolphin 3.0に追い抜かれています。古い記事で推奨されていても、現在の同等品はHermes 3（選択的無検閲向け）とDolphin 3.0（より広い範囲向け）です。',
+          '注意：編集部の見解では、Midnight Miqu（Miqu-70Bベース）、Wizard-LM Uncensored、Mythomaxといった古いコミュニティファインチューンは、Hermes 3やDolphin 3.0などの新しいリリースにほぼ置き換えられています。現在の挙動は各モデルカードで確認してください。古い記事で推奨されていても、現在の同等品はHermes 3（選択的無検閲向け）とDolphin 3.0（より広い範囲向け）です。',
         ],
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ja.webp',
-          imageCaption: 'Hermes 3は指示品質と無検閲範囲のバランスが最良 — 完全abliterationモデルは逸脱が速く文章品質も落ちる。',
+          imageCaption: '編集部の見解では、Hermes 3は指示品質と無検閲範囲のバランスが良好です。現在の挙動はモデルカードで確認してください。',
         },
       japanese: {
         id: 'japanese',
         title: '日本語で書く場合のモデル選び',
         content:
-          '**日本語の小説を書く場合、本記事の推奨順位は変わります――無検閲ファインチューンはいずれも英語中心のベースモデル上に構築されており、日本語の生成品質はベースモデルの多言語対応力にそのまま依存するためです。** 低VRAM環境向けの第一候補であるDolphin 3.0のMistral系は、日本語の訓練データが最小限で日本語タスクには推奨できません。日本語を主言語にするなら、収まる範囲で最大のLlama系ベース（Hermes 3 Llama 3.1 70B）を選ぶか、英語で生成してから日本語に書き直す二段階の手順を取るのが現実的です。日本語ネイティブのモデル選びそのものは[日本語ローカルLLMの比較](/ja/prompt-bites/best-japanese-language-models-local)で扱っています。',
+          '**日本語の小説を書く場合、本記事の推奨順位は変わります――本記事で扱う無検閲モデルの多くは、英語データが中心のベースモデルの上に作られており（各モデルカードで確認してください）、日本語の生成品質はベースモデルの多言語対応力に大きく左右されるためです。** 日本語を主言語にする場合は、各モデルカードの多言語対応の記載を確認し、英語で生成してから日本語に書き直す二段階の手順も選択肢になります。日本語ネイティブのモデル選びそのものは[日本語ローカルLLMの比較](/ja/prompt-bites/best-japanese-language-models-local)で扱っています。',
         items: [
-          '**Mistral系は日本語に不向き：** Mistral Smallは日本語の訓練データが最小限で、日本語タスクには推奨されません。Dolphin 3.0 Mistral 24BとMistral Smallは低VRAM環境の無検閲用途としては有力ですが、その利点は日本語では相殺されます。',
-          '**Llama系は使えるが日本語特化モデルには及ばない：** Llama 3.1 8Bクラスは日本語ベンチマークで日本語特化モデルより30〜40%低い水準です。Hermes 3 Llama 3.1 70Bはベースが大きい分だけ安定しますが、無検閲ファインチューン自体が主に英語データで行われるため、ベースが持つ日本語力はさらに薄まります。',
-          '**日本語は速度も落ちる：** 漢字・ひらがな・カタカナがそれぞれトークンを消費するため、英語比で有効トークン/秒が約20〜30%低下します。英語で20 tok/sのモデルは日本語では約14〜16 tok/s相当になります。',
-          '**量子化の下限が上がる：** 日本語では量子化の影響が英語より大きく、Q4_K_Mが推奨最低ラインです。Q3_K_Mは日本語テキストで約5〜10%の品質低下を示し、長い文章やフォーマルな文体で顕著になります。日本語用途でQ2は使用しないでください。',
-          '**日本語ネイティブの無検閲ファインチューンは実質的に存在しない：** ELYZAやRinnaのような日本語特化モデルには、検証された無検閲版がありません。日本語の分量が多い原稿では、無検閲モデルで英語の下書きを作り、日本語側は自分で書き直す二段階の手順が最も安定します。',
+          '**トークン消費と生成速度：** 日本語では英語よりトークン消費が増えやすく、同じコンテキスト長でも入る文字数や生成速度は変わる傾向があります。具体的な差はモデルとトークナイザーによって異なるため、お使いの環境で確認してください。',
+          '**量子化の影響：** 量子化レベルによる日本語出力への影響はモデルごとに異なるため、実際に使う量子化レベルで日本語の文章を確認してから選んでください。',
+          '**日本語ネイティブの無検閲ファインチューンは、当編集部では確認できていません：** ELYZAやRinnaのような日本語特化モデルについては、当編集部は無検閲版を確認していません。日本語の分量が多い原稿では、無検閲モデルで英語の下書きを作り、日本語側は自分で書き直す二段階の手順のほうが安定する場合があります。',
         ],
         callouts: [
           {
             type: 'tip',
-            text: '日本語での出力品質を確かめる最短の方法は、同じ場面を英語と日本語の両方で生成して読み比べることです。同じプロンプト・同じ量子化で日本語側だけ文体が崩れる、敬体と常体が混ざる、キャラクターの一人称が途中で変わる――こうした症状が出る場合、原因はモデルの無検閲度ではなくベースモデルの日本語力です。より大きなLlama系ベースに移すか、二段階の手順に切り替えてください。',
+            text: '日本語での出力品質を確かめる最短の方法は、同じ場面を英語と日本語の両方で生成して読み比べることです。同じプロンプト・同じ量子化で日本語側だけ文体が崩れる、敬体と常体が混ざる、キャラクターの一人称が途中で変わる――こうした症状が出る場合、原因が無検閲化そのものではなく、ベースモデルの日本語力にある可能性があります。より大きなLlama系ベースに移すか、二段階の手順に切り替えてください。',
           },
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '無検閲ローカルLLMはいずれも英語中心のベースモデル上に作られているため、日本語の小説では収まる範囲で最大のLlama系ベースを選ぶか、英語で生成してから日本語に書き直す二段階の手順が現実的です。',
+            text: '本記事で扱う無検閲モデルの多くは英語データが中心のベースモデルを土台にしているとされています（各モデルカードで確認してください）。日本語の小説では、日本語の記載があるモデルを選ぶか、英語で下書きしてから日本語に書き直す二段階の手順も選択肢になります。',
           },
           {
             type: 'plain-terms',
-            text: '無検閲モデルは「拒否をなくす」ための追加学習を英語のデータで行っています。そのため日本語で書かせると、英語のときより文章が不安定になります。日本語をたくさん書かせたい場合は、大きめのLlama系モデルを使うか、まず英語で書かせてから日本語に直す二段構えが安全です。',
+            text: '無検閲モデルは「拒否をなくす」ための追加学習を行う場合、英語のデータが使われることが多く、そのため日本語で書かせると、英語のときより文章が不安定になることがあります。日本語をたくさん書かせたい場合は、大きめのLlama系モデルを使うか、まず英語で書かせてから日本語に直す二段構えが無難です。',
           },
         ],
       },
@@ -1773,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SillyTavern接続：** API設定で「OpenAI互換」を選択し、ベースURLを`http://localhost:11434/v1`（Ollama）または`http://localhost:1234/v1`（LM Studio）に設定。APIキーフィールドには任意の文字列を入力（フィールドで必須ですがローカルでは検証されません）。 セットアップ手順は[SillyTavernレビュー](/ja/local-llms/sillytavern-review)と[Open WebUIレビュー](/ja/local-llms/open-webui-review)を参照してください。',
           '**Agnai接続：** 同じOpenAI互換エンドポイント。アダプター設定でローカルURLを入力。SillyTavernのセットアップと同一です。',
           '**モデル切り替え：** Ollamaで`ollama run [model-name]`で標準モデルと無検閲モデルを切り替え――複数のモデルを同時にロードでき、サーバーを再起動せずにセッション単位で切り替えられます。',
-          '**デスクトップ用フロントエンド：** [Locally Uncensored](/ja/power-local-llm/locally-uncensored-review)は、OllamaとLM Studioを検出し、画像・動画生成も追加できる無料のデスクトップアプリです。',
+          '**デスクトップ用フロントエンド：** [Locally Uncensored](/ja/power-local-llm/locally-uncensored-review)は、OllamaとLM Studioを検出し、画像・動画生成も追加できるデスクトップアプリです（前回の更新時点では無料。提供元のページで確認してください）。',
         ],
         callouts: [
           {
@@ -1798,8 +1795,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '**著作者責任（日本）：** 日本では、AIが生成したコンテンツを配布する場合、著作者として扱われます。「AIが生成した」は著作権を移転せず、法律に違反するコンテンツに対する責任を除去しません。METI（経済産業省）の2024年AIガバナンスガイドラインは、企業展開において生成AIシステムの安全性・透明性・責任を明確に要求しています。',
-          '**アジア太平洋地域のデータ残留：** 日本のAPPI（個人情報保護法）は、個人を特定できるコンテンツを処理する場合に適用されます。フィクション作家がクラウドモデルではなくローカルモデルを使用する主な利点の1つは、データが国内（またはデバイス上）に留まることです。これはAPPI準拠において重要です。METI AI事業者ガイドラインは公正性と透明性も要求しており、企業ユーザーは記録の保持を検討すべきです。',
+          '**著作者責任（日本）：** AI生成物の著作物性や著作者の扱いは、人間の創作的寄与の有無などによって判断されるため、状況によって異なります。法的助言ではありません。「AIが生成した」という事実だけでは、法律に違反するコンテンツに対する責任はなくなりません。経済産業省・総務省の「AI事業者ガイドライン」（法的拘束力のない指針）は、AIの安全性・透明性・説明責任に関する考え方を示しています。企業での利用では、記録の保持を含め、自社の体制に合わせて検討してください。',
+          '**アジア太平洋地域のデータ残留：** 日本のAPPI（個人情報保護法）は、個人を特定できるコンテンツを処理する場合に適用されます。フィクション作家がクラウドモデルではなくローカルモデルを使用する主な利点の1つは、データが国内（またはデバイス上）に留まることです。ローカル実行は個人データの外部送信を減らす一因になりますが、APPIへの対応は事業者自身の判断と体制によって決まります。',
           '**管轄区域の認識：** 猥褻、NCII、有害コンテンツ法は管轄区域によって異なります。日本での違反の可能性があるコンテンツには、児童ポルノ禁止法（第7条）、名誉毀損（刑法第230条）、わいせつ物頒布（刑法第175条）が含まれます。',
           '**実在人物：** 明らかにフィクション的フレームでも、識別可能な実在人物についての否定的なフィクションコンテンツを生成することは、コンテンツに応じて名誉毀損とNCIIリスクを伴います。',
           '**配布のための年齢確認：** 無検閲モデルで生成した成人向けコンテンツを公開プラットフォームで配布する場合、成人向けコンテンツ発行者に適用される年齢確認義務があなたにも適用されます。',
@@ -1841,7 +1838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'よくある間違い',
         items: [
-          '**最も積極的な無検閲モデルをデフォルトにすること。** 完全アブリテレートモデル（Wizard-Uncensored、Erebus）は複雑な場面での指示追従が最も弱い。Hermes 3はフィクション品質にとってより良いトレードオフです。',
+          '**最も積極的な無検閲モデルをデフォルトにすること。** Wizard-UncensoredやErebusのようなより積極的なファインチューンは、複雑な場面では制御しにくいとコミュニティの報告やモデルカードで言われています（各カードを確認してください）。フィクションにはHermes 3が妥当なデフォルトです。',
           '**標準モデルが生成するコンテンツに無検閲モデルを使用すること。** 文学散文での道徳的複雑性、ダークな心理、暴力、成人向けテーマは、無検閲ファインチューンをほとんど必要としません。切り替える前に正確に何が必要かを把握してください。',
           '**ローカル生成を法的コンテキストフリーゾーンとして扱うこと。** クラウドポリシー執行がないことは法律がないことではありません。配布、実在人物、未成年者に対する著作者責任は関係なく適用されます。',
           '**語数上限を指定しないこと。** 無検閲モデルはスペースを埋めるためにダークなコンテンツをパッドするのは他のモデルと同様です。フィクションテンプレートからの同じ語数上限制約を使用してください。',
@@ -1855,7 +1852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hermes 3モデルカードとファインチューニング手法 ― [Nous Research](https://nousresearch.com)',
           'Dolphin 3.0 Mistral技術ドキュメント ― [Cognitive Computations / Eric Hartford](https://huggingface.co/cognitivecomputations)',
           'RLHFとアライメント技術の概要 ― [Anthropic Research](https://anthropic.com/research)',
-          'EU AI法第5条 ― 未成年者を含むコンテンツを含む禁止AI慣行 ― [EUR-Lex](https://eur-lex.europa.eu)',
+          'EU指令2011/93/EU（児童に対する性的虐待との闘い）および各国の刑事法（例：ドイツの§184b StGB） ― [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2011/93/oj)',
           'NCII（非合意的な性的画像）― 法的フレームワーク概要 ― [Cyber Civil Rights Initiative](https://cybercivilrights.org)',
         ],
       },
@@ -1865,23 +1862,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'LM Studioで無検閲モデルを使うには設定変更が必要ですか？',
-            a: '不要です。LM Studio自体に検閲層はなく、拒否が出るかどうかは読み込んだモデルの性質だけで決まります。標準モデルが拒否するのはLM Studioの設定ではなくモデル側のRLHF層によるもので、設定画面で解除できる項目ではありません。Hermes 3やDolphin 3.0のGGUFファイルを読み込めば、追加設定なしで無検閲の挙動になります。ローカルサーバータブから`http://localhost:1234`にOpenAI互換エンドポイントを公開すれば、SillyTavernやAgnaiからも同じモデルを使えます。',
+            a: '不要です。LM Studio自体にはコンテンツ制限の設定項目は見当たらず、拒否が出るかどうかは主に読み込んだモデルの性質とシステムプロンプトで決まります。標準モデルが拒否するのはLM Studioの設定ではなくモデル側のRLHF層によるもので、設定画面で解除できる項目ではありません。挙動はモデルカードとシステムプロンプトによって変わるため、まず自分の環境で確認してください。ローカルサーバータブから`http://localhost:1234`にOpenAI互換エンドポイントを公開すれば、SillyTavernやAgnaiからも同じモデルを使えます。',
           },
           {
             q: '「脱獄（ジェイルブレイク）」と無検閲モデルは同じものですか？',
-            a: '別のものです。脱獄は、検閲のかかったクラウドモデルに対してプロンプトの工夫で拒否を回避させる手法を指します。モデルの重み自体は変わっておらず、提供元の利用規約に違反する可能性があり、対策が入れば効かなくなります。無検閲モデルは拒否層そのものを追加学習で外した重みを自分のハードウェアで動かすもので、プロンプトの小細工を必要とせず、提供元のサーバーを経由しません。フィクション執筆で結果の安定性が必要なら、脱獄プロンプトより無検閲モデルのほうが確実です。',
+            a: '別のものです。脱獄は、検閲のかかったクラウドモデルに対してプロンプトの工夫で拒否を回避させる手法を指します。モデルの重み自体は変わっておらず、提供元の利用規約に違反する可能性があり、対策が入れば効かなくなります。無検閲モデルは、追加学習や重み編集（abliteration）などで拒否の振る舞いを弱めた、または取り除いた重みを自分のハードウェアで動かすもので、脱獄のようなプロンプトの工夫に頼らなくても動作する場合が多く、提供元のサーバーを経由しません。脱獄は提供元の利用規約に違反する可能性があるため推奨しません。ローカルモデルを使う場合も、各モデルのライセンスと適用される法律を確認してください。',
           },
           {
             q: '無検閲モデルは無料ですか。NSFWコンテンツにも使えますか？',
-            a: '本記事で扱うモデルはすべて無料で、Ollamaのモデルライブラリやモデル配布サイトからダウンロードできます。かかる費用は電気代と、モデルを動かすハードウェアだけです。NSFWを含む成人向けの描写も技術的には生成できますが、それが適切なのは成人読者向けの創作フィクションに使う場合に限られます。実在人物の非合意的な描写、未成年者を性的文脈に置くコンテンツ、現実の加害に転用できる手順の生成は、ローカル実行で技術的に可能であっても許容されません。詳しくは「適切でない場面」の節を参照してください。',
+            a: '本記事で扱うモデルはOllamaのモデルライブラリやモデル配布サイトからダウンロードでき、ライセンスはモデルごとに異なるため、利用前に各モデルのライセンスを確認してください。ローカル実行で主にかかる費用は電気代とハードウェアです。NSFWを含む成人向けの描写も技術的には生成できますが、それが適切なのは成人読者向けの創作フィクションに使う場合に限られます。実在人物の非合意的な描写、未成年者を性的文脈に置くコンテンツ、現実の加害に転用できる手順の生成は、ローカル実行で技術的に可能であっても許容されません。詳しくは「適切でない場面」の節を参照してください。',
           },
           {
             q: '無検閲のローカル画像生成にも同じモデルを使えますか？',
-            a: '使えません。本記事で扱う無検閲モデルはテキスト生成用の大規模言語モデル（LLM）で、画像は生成しません。ローカルでの画像生成はStable Diffusionのような拡散モデルと、ComfyUIやAUTOMATIC1111といった別系統のツールを使います。仕組みが異なるため、OllamaやLM Studioで画像生成モデルを動かすことはできません。小説の挿絵など画像も必要な場合は、テキスト用と画像用で別々の環境を用意することになります。',
+            a: '通常は使えません。本記事で扱う無検閲モデルはテキスト生成用の大規模言語モデル（LLM）で、画像は生成しません。ローカルでの画像生成はStable Diffusionのような拡散モデルと、ComfyUIやAUTOMATIC1111といった別系統のツールを使います。OllamaやLM Studioは主にテキスト生成用のLLMを動かすツールで、画像生成には通常ComfyUIなどの別ツールを使います（対応状況は各ツールの公式ドキュメントで確認してください）。小説の挿絵など画像も必要な場合は、テキスト用と画像用で別々の環境を用意するのが一般的です。',
           },
           {
             q: '無検閲ローカルLLMは日本語で小説を書けますか？',
-            a: '書けますが、英語の場合とモデル選びが変わります。Hermes 3やDolphin 3.0のような無検閲ファインチューンは主に英語データで追加学習されているため、ベースのLlama 3.3やMistralが持っていた日本語力が薄まる傾向があります。日本語の分量が多い原稿では、多言語データを厚く学習したQwen3 32Bのような多言語ベースのモデルを使うか、英語で生成してから日本語に書き直すワークフローのほうが安定します。日本語はトークン消費も大きいため、同じコンテキスト長でも実際に入る文字数は英語より少なくなります。',
+            a: '書けますが、英語の場合とモデル選びが変わります。Hermes 3やDolphin 3.0のようなファインチューンは、学習データの多くが英語とされており、ベースモデルの日本語力が薄まる可能性があります（各モデルカードで確認してください）。日本語の分量が多い原稿では、多言語データを厚く学習したQwen3 32Bのような多言語ベースのモデルを使うか、英語で生成してから日本語に書き直すワークフローのほうが安定する場合があります。日本語はトークン消費も大きいため、同じコンテキスト長でも実際に入る文字数は英語より少なくなる傾向があります。',
           },
           {
             q: '「無修正モデル」「非検閲モデル」は無検閲モデルと違うものですか？',
@@ -1889,11 +1886,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '無検閲ローカルLLMの実行は合法ですか？',
-            a: '無検閲ローカルLLMの実行はほとんどの管轄区域で合法です――オープンソースAIソフトウェアを所持することを禁じる法律はありません。それで生成・配布するものは、他の著作コンテンツと同じ法律に従います：猥褻法、NCII法、名誉毀損法、および未成年者を含むコンテンツに関する法律。実行が合法であることは、無制限に公開・共有・配布することが合法であることを意味しません。',
+            a: '無検閲ローカルLLMの実行はほとんどの管轄区域で合法です――オープンウェイトのAIモデルを所持すること自体を一般的に禁じる法律はありません。それで生成・配布するものは、他の著作コンテンツと同じ法律に従います：猥褻法、NCII法、名誉毀損法、および未成年者を含むコンテンツに関する法律。実行が合法であることは、無制限に公開・共有・配布することが合法であることを意味しません。',
           },
           {
             q: 'Hermes 3とDolphin 3.0の違いは何ですか？',
-            a: 'Hermes 3（Nous Research）は選択的に無検閲――成人向けコンテンツの拒否を削減しながら、極端なカテゴリにはある程度のガードレールを維持しています。指示追従性は優れており、ベースのLlama 3.1モデルに近い。Dolphin 3.0（Cognitive Computations）はより広いコンテンツ範囲で広く無検閲ですが、複雑な多制約の場面では指示追従性がやや弱い。Hermes 3は散文の品質が重要なフィクションのデフォルト選択として優れており、Dolphin 3.0は16〜24 GBシステムで最も広いコンテンツ範囲が必要な場合の選択です。',
+            a: 'Hermes 3（Nous Research）は選択的に無検閲――成人向けコンテンツの拒否を削減しながら、極端なカテゴリにはある程度のガードレールを維持しています。指示追従性は優れており、ベースのLlama 3.1モデルに近い。Dolphin 3.0（Cognitive Computations）はより広いコンテンツ範囲で広く無検閲ですが、編集部の見解では、複雑な多制約の場面での指示追従はやや弱めです。これは編集部の評価であり、実測ではありません。Hermes 3は散文の品質が重要なフィクションのデフォルト選択として優れており、Dolphin 3.0は16〜24 GBシステムで最も広いコンテンツ範囲が必要な場合の選択です。',
           },
           {
             q: 'ダークなフィクションを書くために無検閲モデルが必要ですか？',
@@ -1909,11 +1906,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルで生成したコンテンツはどうなりますか？',
-            a: '自動的には何も起きません。ローカル生成コンテンツはいかなるサーバーにも送信されず、クラウドサービスにログ記録されず、モデルトレーニングに使用されません。チャット履歴ファイル、キャラクターカードなど、アプリケーションのローカルストレージ内でのみあなたのデバイスに存在します。保持するもの、削除するもの、共有するものをあなたが管理します。これがクラウドベースの代替に対してローカル無検閲生成が持つ主要な構造的プライバシー上の優位性です。',
+            a: '自動的には何も起きません。モデル自体がローカル生成コンテンツをサーバーに送信することはなく、クラウドサービスがログに記録したりモデルのトレーニングに使用したりすることもありません。ただし、使用しているランタイムやフロントエンドは、無効にしない限りアップデート確認やテレメトリ送信を行う場合があるため、各ツールの設定を確認してください。チャット履歴ファイル、キャラクターカードなど、アプリケーションのローカルストレージ内でのみあなたのデバイスに存在します。保持するもの、削除するもの、共有するものをあなたが管理します。これがクラウドベースの代替に対してローカル無検閲生成が持つ主要な構造的プライバシー上の優位性です。',
           },
           {
             q: '同じライティングプロジェクトで無検閲モデルと標準モデルを混在させることはできますか？',
-            a: 'はい、これが推奨ワークフローです。散文の大部分には標準モデル（Llama 3.3 70B、Qwen3 32B）を使用してください――標準モデルはほとんどのダークなコンテンツに高品質な文学散文を生成します。標準モデルが拒否するコンテンツを必要とする特定の場面には、Hermes 3またはDolphin 3.0に切り替えてください。同じプロンプトテンプレートが両方で機能します。散文スタイルは十分に一貫しているため、場面単位の混在は出力で検出できません。',
+            a: 'はい、これが推奨ワークフローです。散文の大部分には標準モデル（Llama 3.3 70B、Qwen3 32B）を使用してください――標準モデルはほとんどのダークなコンテンツに高品質な文学散文を生成します。標準モデルが拒否するコンテンツを必要とする特定の場面には、Hermes 3またはDolphin 3.0に切り替えてください。同じプロンプトテンプレートが両方で機能します。散文スタイルは多くの場合十分に一貫しているため、場面単位の混在は出力で気づきにくくなります。',
           },
           {
             q: '無検閲モデルでの生成は著作権に影響しますか？',
@@ -1921,7 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '無検閲ファインチューンは一般知識を失いますか？',
-            a: '狭い領域ではわずかに失います。無検閲化ファインチューンは通常、ベースモデルから事実記憶、数学、コーディングベンチマークでわずかに逸脱する可能性のある完全精度の再トレーニングパスです。フィクション執筆タスクでは、出力品質で検出できません。フィクションと技術作業（研究ノート、コードレビュー）の両方に同じモデルが必要な場合は、標準版と無検閲版の両方をインストールしておき、タスクに応じて切り替えてください。Hermes 3は完全アブリテレートモデルより一般的な能力をより良く維持します。',
+            a: '狭い領域ではわずかに失います。無検閲化ファインチューンは、ベースモデルの上に再トレーニングを行うことが多い一方、アブリテレーションは再トレーニングなしで重みを編集します。どちらの方法でも、事実記憶、数学、コーディングベンチマークでベースモデルからわずかに逸脱する可能性があります。フィクション執筆タスクの多くでは、出力品質の違いはほとんど目立たないと報告されていますが、モデルやプロンプトによって異なります。フィクションと技術作業（研究ノート、コードレビュー）の両方に同じモデルが必要な場合は、標準版と無検閲版の両方をインストールしておき、タスクに応じて切り替えてください。コミュニティの報告では、Hermes 3は完全アブリテレートモデルより一般的な能力をより良く維持します。',
           },
           {
             q: 'これらのモデルは監視されていますか、それとも匿名ですか？',
@@ -1929,7 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'コンテンツ制限のないローカルLLMはどれですか？',
-            a: '本記事で扱う無検閲・「abliterated」ファインチューン――Hermes 3やDolphin 3.0を含む――は拒否層を追加学習で外してあるため、独自のコンテンツポリシーを持ちません。これがローカルモデルとホスト型モデルの実務上の違いです：クラウドプロバイダーはリクエストごとに利用規約を適用しますが、自分のマシンで動く無規制モデルには介在するプロバイダーがなく、推論時に検閲もかかりません。そのためNSFWや明示的なフィクションはブロックされません。変わらないのは居住地の法律と、公開に伴う責任です――コンテンツポリシーがないことは、限界がないことと同じではありません。その境界線については後述の倫理の節で扱います。',
+            a: 'Hermes 3やDolphin 3.0のような操作可能なファインチューンはアラインメントをシステムプロンプトに委ねており、「abliterated」リリースは拒否動作が取り除かれているため、組み込みのコンテンツポリシーはほとんど、あるいはまったく適用されません。これがローカルモデルとホスト型モデルの実務上の違いです：クラウドプロバイダーはリクエストごとに利用規約を適用しますが、自分のマシンで動く無規制モデルには介在するプロバイダーがなく、推論時に検閲もかかりません。そのためNSFWや明示的なフィクションはブロックされません。変わらないのは居住地の法律と、公開に伴う責任です――コンテンツポリシーがないことは、限界がないことと同じではありません。その境界線については後述の倫理の節で扱います。',
           },
           {
             q: 'おすすめの無検閲ローカルLLMは？',
@@ -2066,10 +2063,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**「无审查」意味着模型减少了RLHF安全微调——而非完全没有约束。** 无审查微调模型仍然遵循指令格式、维持角色一致性，并可通过提示词引导。它们并非「什么都可以」的系统。',
           '**Hermes 3 Llama 3.1是我们为2026年小说作家推荐的默认首选。** 任意拒绝更少、指令遵循性强、角色声音分化良好。适合既需要该能力又不希望出现某些完全无审查模型产生的激进输出的作家。',
-          '**标准指令调优模型配合优质提示词可处理大多数成人向文学内容。** 暴力、道德复杂性、黑暗心理和文学散文中的成人主题很少需要无审查微调。它们可靠拒绝的是明确的性内容和现实伤害的详细描述。切换模型前先明确您的作品属于哪个类别。',
+          '**标准指令调优模型配合优质提示词可处理大多数成人向文学内容。** 暴力、道德复杂性、黑暗心理和文学散文中的成人主题很少需要无审查微调。它们拒绝的是明确的性内容和现实伤害的详细描述。切换模型前先明确您的作品属于哪个类别。',
           '**本地运行意味着提示词和输出留在您的机器上：推理不调用云端API。** 云端服务条款不适用，也没有服务商记录内容或将其用于训练。请检查各工具的更新检查与遥测设置。这是作家使用本地无审查模型的主要结构性原因——隐私保护加上创作不受使用限制。',
           '**伦理责任不会因没有ToS执行而消失。** 使用无审查模型发布小说的创作者与任何其他作者承担相同的法律责任：无论生成方式如何，未成年人、真实人物、煽动性内容以及各司法管辖区的特定法律均适用。',
-          '**Dolphin 3.0 Mistral是16至24 GB配置的轻量级选择。** 无审查输出范围比Hermes 3更广，但复杂场景中的指令遵循性较弱。适合短篇创作、提示词探索和风格测试。',
+          '**Dolphin 3.0 Mistral是16至24 GB配置的轻量级选择。** 无审查输出范围比Hermes 3更广，但在我们编辑部看来，对复杂多约束提示的遵循稍弱；这是编辑判断，不是实测结果。适合短篇创作、提示词探索和风格测试。',
           '**SillyTavern和Agnai均可与无审查Ollama模型无缝连接。** 将任一前端指向Ollama的OpenAI兼容端点并选择无审查模型即可，无需额外配置。',
         ],
       },
@@ -2081,8 +2078,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**后端：** Ollama（主要）、LM Studio（GUI配置替代选项）。',
           '**硬件：** Hermes 3 70B（Q4量化）约需42 GB；Dolphin 3.0 8B运行需8 GB；Dolphin 3.0 24B约需16 GB。',
           '**前端：** SillyTavern、Agnai、RisuAI均可通过OpenAI兼容端点连接无审查Ollama模型。',
-          '**隐私：** 完全本地——无云端API调用，无日志记录，无训练数据收集。',
-          '**伦理硬性底线：** 不得涉及未成年人的性内容（绝对禁止），不得非合意性描绘可识别的真实人物，不得生成旨在促进现实暴力的内容。',
+          '**隐私：** 推理在本地运行，不调用云端API；但运行时和前端仍可能检查更新或发送遥测数据，除非您将其关闭。',
+          '**伦理硬性底线：** 不得涉及未成年人的性内容（在许多司法管辖区受法律禁止），不得非合意性描绘可识别的真实人物，不得生成旨在促进现实暴力的内容。',
           '**分发：** 您发布的内容承担作者责任，与生成方式无关。',
         ],
       },
@@ -2100,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**被移除的内容：** 针对特定内容类别的拒绝行为（明确的性内容、图形化暴力、黑暗心理内容）。',
           '**被保留的内容：** 指令遵循、角色一致性、提示词结构遵守、语言质量。',
-          '**无审查程度的差异：** Hermes 3是选择性无审查（成人内容可以，但对极端内容保留部分护栏）。Dolphin系列无审查范围更广。完全消融模型（Wizard-Uncensored、Erebus）护栏移除最积极——但对复杂小说任务的指令遵循最弱。',
+          '**无审查程度的差异：** Hermes 3是选择性无审查（成人内容可以，但对极端内容保留部分护栏）。Dolphin系列无审查范围更广。Wizard-Uncensored和Erebus等更激进的社区微调对护栏的移除最彻底，据社区反馈和模型卡较难控制（请逐一查看各模型卡）。',
           '**基础模型质量很重要：** 如果基础模型较弱，无审查会降低指令质量。基于Llama 3.1的Hermes 3 70B保留了该基础模型大部分强大的指令遵循性；8B版Dolphin 3.0受限于较小的基础。',
         ],
         snippetBlocks: [
@@ -2116,16 +2113,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       howWeTested: {
         id: 'how-we-tested',
-        title: '测试方法',
+        title: '评估方法',
         content:
-          '本指南的模型评价基于小规模定性测试——这是一个方向性指标，不是同行评审基准。对于读者需要决定是否信任某敏感主题模型推荐的话题，方法论的透明度至关重要。',
+          '本指南对模型的评价基于模型作者发布的模型卡、官方文档和公开报告，并非PromptQuorum独立进行的实测。对于读者需要决定是否信任某敏感主题模型推荐的话题，方法论的透明度至关重要。',
         items: [
-          '**提示词集：** 5个类别共10个提示词——反派独白、成人浪漫场景、战争小说中的图形化暴力、道德复杂叙述者、黑暗心理场景（每类2个提示词）。',
-          '**每个模型的运行次数：** 每个提示词每个模型运行3次。',
-          '**拒绝率：** 模型在未受指令情况下拒绝、重定向或软化所请求内容的运行比例。',
-          '**漂移测量：** 模型添加未经请求的升级——超出提示词指定范围的不必要极端内容——的运行比例。',
-          '**后端：** 所有模型使用Q4_K_M量化的Ollama 0.5+。',
-          '**诚实约束：** 小规模定性测试。结果表明模型间的方向性差异，非精确数值测量。将表格中的极端化漂移和拒绝率值视为代表性判断。',
+          '**资料来源：** Nous Research（Hermes 3）和Cognitive Computations（Dolphin 3.0）发布的模型卡、创作者文档和公开的能力说明。',
+          '**拒绝率分类：** 依据公开记录的行为模式以及模型创作者关于内容处理的说明。',
+          '**漂移评估：** 参考用户报告、模型文档和微调方法说明。',
+          '**诚实约束：** 本文是信息性指南，不是基准测试。极端化漂移和拒绝率分类反映的是文档记录的行为模式，而非精确测量。请用户在自己的工作流程中验证实际行为。',
         ],
       },
       appropriateUse: {
@@ -2156,11 +2151,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '无论何种配置均适用的硬性限制。任何本地配置都无法消除以下方面的法律或伦理责任：（1）涉及未成年人的性内容——几乎所有司法管辖区法律上的绝对禁止；（2）可识别真实人物的非合意性描绘——无论生成方式如何均构成NCII（非合意亲密图像）；（3）旨在对特定目标实施现实暴力的内容。无论模型在本地、云端还是隔离机器上运行，这些限制均适用。',
+            text: '无论何种配置均适用的硬性限制。任何本地配置都无法消除以下方面的法律或伦理责任：（1）涉及未成年人的性内容——在德国（如§184b StGB）和法国（《刑法典》第227-23条）属于刑事犯罪，在许多其他司法管辖区也被禁止，包括虚构形式；具体规定因国家而异；（2）可识别真实人物的非合意性描绘——无论生成方式如何均构成NCII（非合意亲密图像）；（3）旨在对特定目标实施现实暴力的内容。无论模型在本地、云端还是隔离机器上运行，这些限制均适用。',
           },
         ],
         items: [
-          '**涉及未成年人的性内容：** 无论虚构框架或生成方式，在所有主要司法管辖区均为绝对法律禁止。这不是模型政策——这是法律。',
+          '**涉及未成年人的性内容：** 在德国（如§184b StGB）和法国（《刑法典》第227-23条）属于刑事犯罪，在许多其他司法管辖区也被禁止，包括虚构形式；具体规定因国家而异。这不是模型政策——这是法律。',
           '**真实人物的非合意性描绘：** 在越来越多的司法管辖区，NCII法律适用于可识别真实人物的AI生成内容。「由AI生成」不构成抗辩理由。',
           '**旨在促进现实伤害的内容：** 使用虚构框架来提取直接使现实暴力或伤害成为可能的信息或内容，会消除虚构保护。',
           '**无作者责任的公开分发：** 您发布、分发或分享的内容承担作者责任。「AI创作的」不能转移该责任。',
@@ -2172,29 +2167,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '模型对比：小说创作的无审查选项',
         content:
           '**并非所有无审查模型都相同——RLHF移除程度和基础模型质量对小说写作场景都很重要。**',
-        columns: ['模型', '基础', 'VRAM (Q4)', '拒绝率', '指令质量', '极端化倾向', '最适用于'],
+        columns: ['模型', '基础', 'VRAM (Q4)', '拒绝率', '指令遵循（编辑评级）', '极端化倾向', '最适用于'],
         rows: [
-          { '模型': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', '基础': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', '拒绝率': '选择性', '指令质量': '★★★★★', '极端化倾向': '低', '最适用于': '严肃小说的默认选择——最佳指令遵循性与无审查能力' },
-          { '模型': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', '基础': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '拒绝率': '广泛', '指令质量': '★★★★☆', '极端化倾向': '低至中', '最适用于': '16至24 GB系统；更广范围的成人内容' },
-          { '模型': 'Dolphin 3.0 Llama 3.1 8B', '基础': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '拒绝率': '广泛', '指令质量': '★★★☆☆', '极端化倾向': '中', '最适用于': '低VRAM系统；短篇草稿、提示词测试' },
-          { '模型': 'Hermes 3 Llama 3.1 8B', '基础': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '拒绝率': '选择性', '指令质量': '★★★☆☆', '极端化倾向': '低', '最适用于': '资源受限环境；对话和较短场景' },
-          { '模型': 'Standard Llama 3.3 70B', '基础': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒绝率': '有限', '指令质量': '★★★★★', '极端化倾向': '无', '最适用于': '黑暗主题、道德复杂性、暴力——不需要明确性内容的场景' },
+          { '模型': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', '基础': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', '拒绝率': '选择性', '指令遵循（编辑评级）': '★★★★★', '极端化倾向': '低', '最适用于': '编辑观点下的小说默认选择——据模型卡指令遵循能力强' },
+          { '模型': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', '基础': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '拒绝率': '广泛', '指令遵循（编辑评级）': '★★★★☆', '极端化倾向': '低至中', '最适用于': '16至24 GB系统；更广范围的成人内容' },
+          { '模型': 'Dolphin 3.0 Llama 3.1 8B', '基础': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '拒绝率': '广泛', '指令遵循（编辑评级）': '★★★☆☆', '极端化倾向': '中', '最适用于': '低VRAM系统；短篇草稿、提示词测试' },
+          { '模型': 'Hermes 3 Llama 3.1 8B', '基础': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '拒绝率': '选择性', '指令遵循（编辑评级）': '★★★☆☆', '极端化倾向': '低', '最适用于': '资源受限环境；对话和较短场景' },
+          { '模型': 'Standard Llama 3.3 70B', '基础': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '拒绝率': '有限', '指令遵循（编辑评级）': '★★★★★', '极端化倾向': '无', '最适用于': '黑暗主题、道德复杂性、暴力——不需要明确性内容的场景' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: '从Hermes 3开始，而非最激进的无审查微调。完全消融模型（Wizard-Uncensored、Erebus）内容范围最广，但在复杂小说任务中的指令遵循性明显较弱——更快偏离约束、在较长生成中散文质量较低、角色声音维持可靠性不足。对于既需要无审查内容又需要高质量散文的小说，Hermes 3是更好的权衡选择。',
+            text: '从Hermes 3开始，而非最激进的无审查微调。Wizard-Uncensored和Erebus等更激进的微调内容范围最广，但据社区反馈和模型卡较难控制（请逐一查看各模型卡）。对于既需要无审查内容又需要高质量散文的小说，我们编辑部认为Hermes 3是合理的起点。',
           },
         ],
         items: [
-          '注意：较旧的无审查微调——Midnight Miqu（基于Miqu-70B）、Wizard-LM Uncensored、Mythomax——在2024年曾是领先者，但2026年在质量和指令遵循指标上已被Hermes 3和Dolphin 3.0超越。如果在较旧文章中看到推荐，当前的同等选择是Hermes 3（选择性无审查）和Dolphin 3.0（更广范围）。',
+          '注意：我们编辑部认为，Midnight Miqu（基于Miqu-70B）、Wizard-LM Uncensored、Mythomax等较旧的社区微调已基本被Hermes 3和Dolphin 3.0等较新的版本取代；请查看各模型卡了解当前行为。如果在较旧文章中看到推荐，当前的同等选择是Hermes 3（选择性无审查）和Dolphin 3.0（更广范围）。',
         ],
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-zh.webp',
-          imageCaption: 'Hermes 3在指令质量和无审查范围之间平衡最佳 — 完全消融模型偏离更快，文笔质量更低。',
+          imageCaption: '我们编辑部认为，Hermes 3在指令质量和无审查范围之间平衡良好；请查看模型卡了解当前行为。',
         },
       rankedModels: {
         id: 'ranked-models',
-        title: '最佳无审查本地LLM：按硬件档位排序',
+        title: '无审查本地LLM推荐：按硬件档位排序',
         content:
           '**这7个模型按Q4_K_M文件大小从小到大排列。排序由编辑部按硬件档位给出，不是基准测试排名。** 请选择文件大小能从容放进你的GPU显存或Mac统一内存的最后一行。文件大小取自各模型在Hugging Face上的GGUF仓库；除权重外，上下文缓存和运行时也要占用内存，因此请在文件大小之上留出余量。[Ethical Responsibilities That Remain](#ethics)中的法律与伦理限制适用于本列表中的每个模型。',
         columns: ['排名', '模型', '类型（据模型卡）', 'Q4_K_M文件', '许可证标签'],
@@ -2269,7 +2264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**连接SillyTavern：** 在API设置中选择「OpenAI兼容」并将基础URL指向`http://localhost:11434/v1`（Ollama）或`http://localhost:1234/v1`（LM Studio）。在API密钥字段输入任意字符串（字段要求但本地不验证）。 分步配置指南：[SillyTavern评测](/zh/local-llms/sillytavern-review) · [Open WebUI评测](/zh/local-llms/open-webui-review)。',
           '**连接Agnai：** 同一OpenAI兼容端点；在适配器设置中输入本地URL。与SillyTavern设置完全相同。',
           '**切换模型：** 在Ollama中用`ollama run [model-name]`在标准模型和无审查模型之间切换——可同时加载多个模型，无需重启服务器即可按会话切换。',
-          '**桌面前端：** [Locally Uncensored](/zh/power-local-llm/locally-uncensored-review)是一款免费桌面应用，可检测Ollama和LM Studio，并增加图像和视频生成功能。',
+          '**桌面前端：** [Locally Uncensored](/zh/power-local-llm/locally-uncensored-review)是一款桌面应用（上次更新时免费；请查看供应商页面），可检测Ollama和LM Studio，并增加图像和视频生成功能。',
         ],
         callouts: [
           {
@@ -2294,9 +2289,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '**中国（数据安全法）：** 中国2021年《数据安全法》（DSL）和《网络安全法》对数据处理建立了严格框架。本地推理在技术上将数据保留在设备上，有助于合规——但如果您通过任何联网平台分发AI辅助内容，运营商和内容合规义务可能仍然适用。对于使用Qwen3或其他中文语言模型的中国企业，本地推理可以满足数据本地化要求，同时规避云端内容审核的不确定性。',
-          '**亚太地区（数据跨境）：** 数据残留框架在亚太地区差异很大。本地推理是满足多个亚太司法管辖区数据主权要求的技术路径——特别是金融和医疗行业，这些行业有强制要求数据不离开特定地理范围。',
-          '**企业部署：** 在中国，银行和金融机构（受中国人民银行法规管辖）、医疗机构（受卫生健康委法规管辖）和律师事务所（受司法部法规管辖）在处理AI生成内容时面临额外义务。本地运行模型消除了数据传输风险，但内容本身仍受行业特定法规约束。',
+          '**中国（数据安全法）：** 本地推理可以减少数据离开设备的环节，但是否满足《数据安全法》《个人信息保护法》等的要求，取决于具体的处理方式和主体责任；通过联网平台发布内容时，内容合规义务仍然适用。本指南不构成法律建议。',
+          '**亚太地区（数据跨境）：** 数据残留框架在亚太地区差异很大。本地推理可以减少数据离开设备的环节，有助于应对部分亚太司法管辖区的数据本地化或数据主权要求，具体要求因地区和行业而异。',
+          '**企业部署：** 在中国，银行、医疗机构和律师事务所等受行业监管的主体，在使用AI生成内容时可能还需遵守各自监管部门的规定，具体义务因行业和地区而异，请向相应监管部门或律师核实。本地运行模型可以减少数据传输环节，但内容本身仍受行业特定法规约束。',
           '**作者责任：** 您是AI辅助小说的作者。「AI生成的」不转移版权，不消除责任，也不构成针对违法内容的抗辩理由。',
           '**司法管辖区认知：** 猥亵内容、NCII和有害内容法律因司法管辖区而异。在一个国家合法生产的内容，在另一个国家分发可能构成刑事犯罪。',
           '**负责任的存档：** 本地生成的无审查内容应与任何其他敏感材料一样进行存储管理——不存储在云同步目录中，不无意中分享。',
@@ -2337,7 +2332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: '常见错误',
         items: [
-          '**默认使用最激进的无审查模型。** 完全消融模型（Wizard-Uncensored、Erebus）对复杂场景的指令遵循最弱。Hermes 3是小说质量方面更好的权衡。',
+          '**默认使用最激进的无审查模型。** Wizard-Uncensored和Erebus等更激进的微调，据社区反馈在复杂场景中较难控制。Hermes 3是小说创作的合理默认选择；请查看模型卡。',
           '**对标准模型能生成的内容使用无审查模型。** 文学散文中的道德复杂性、黑暗心理、暴力和成人主题很少需要无审查微调。切换前确切了解您需要什么。',
           '**将本地生成视为法律上的无背景区域。** 没有云端政策执行并不意味着没有法律。无论配置如何，分发、真实人物和未成年人的作者责任均适用。',
           '**不指定字数上限。** 无审查模型填充黑暗内容以占据空间的倾向与任何其他模型一样。使用创作模板中相同的字数上限约束。',
@@ -2351,7 +2346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hermes 3模型说明与微调方法 — [Nous Research](https://nousresearch.com)',
           'Dolphin 3.0 Mistral技术文档 — [Cognitive Computations / Eric Hartford](https://huggingface.co/cognitivecomputations)',
           'RLHF与对齐技术概述 — [Anthropic Research](https://anthropic.com/research)',
-          'EU AI法案第5条 — 包括涉及未成年人内容的AI禁止行为 — [EUR-Lex](https://eur-lex.europa.eu)',
+          '欧盟第2011/93/EU号指令（打击对儿童的性虐待）及各国刑法（例如德国《刑法典》第184b条） — [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2011/93/oj)',
           'NCII（非合意亲密图像）— 法律框架概述 — [Cyber Civil Rights Initiative](https://cybercivilrights.org)',
         ],
       },
@@ -2361,11 +2356,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '运行无审查本地LLM合法吗？',
-            a: '在大多数司法管辖区，运行无审查本地LLM是合法的——没有法律禁止持有开源AI软件。但您用它生成和分发的内容与任何其他著作内容遵守相同的法律：猥亵法、NCII法、诽谤法，以及涉及未成年人内容的相关法律。运行合法并不意味着可以无限制地发布、分享或分发。',
+            a: '在大多数司法管辖区，运行无审查本地LLM是合法的——没有法律普遍禁止持有开放权重的AI模型。但您用它生成和分发的内容与任何其他著作内容遵守相同的法律：猥亵法、NCII法、诽谤法，以及涉及未成年人内容的相关法律。运行合法并不意味着可以无限制地发布、分享或分发。',
           },
           {
             q: 'Hermes 3和Dolphin 3.0有何区别？',
-            a: 'Hermes 3（Nous Research）是选择性无审查——减少对成人内容的拒绝，同时对极端类别保留部分护栏。指令遵循性极佳，接近其基础模型Llama 3.1。Dolphin 3.0（Cognitive Computations）在更广泛的内容范围上无审查，但在复杂多约束场景中指令遵循性略弱。Hermes 3是散文质量重要的小说的默认选择；Dolphin 3.0是在16至24 GB系统上需要最广内容范围时的选择。',
+            a: 'Hermes 3（Nous Research）是选择性无审查——减少对成人内容的拒绝，同时对极端类别保留部分护栏。指令遵循性极佳，接近其基础模型Llama 3.1。Dolphin 3.0（Cognitive Computations）在更广泛的内容范围上无审查，但在我们编辑部看来，对复杂多约束提示的遵循稍弱；这是编辑判断，不是实测结果。Hermes 3是散文质量重要的小说的默认选择；Dolphin 3.0是在16至24 GB系统上需要最广内容范围时的选择。',
           },
           {
             q: '写黑暗小说需要无审查模型吗？',
@@ -2381,11 +2376,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我本地生成的内容会怎么处理？',
-            a: '不会自动发生任何事。本地生成的内容不会发送到任何服务器，不会被任何云服务记录，也不会用于模型训练。它只存在于您的设备上，在应用程序的本地存储中（聊天历史文件、角色卡等）。您控制保留什么、删除什么和分享什么。这是本地无审查生成相对于云端替代方案的主要结构性隐私优势。',
+            a: '不会自动发生任何事。模型本身不会将本地生成的内容发送到任何服务器，也没有云服务会记录这些内容或将其用于模型训练。不过，您使用的运行时或前端仍可能检查更新或发送遥测数据，除非您将其关闭，因此请检查各工具的设置。它只存在于您的设备上，在应用程序的本地存储中（聊天历史文件、角色卡等）。您控制保留什么、删除什么和分享什么。这是本地无审查生成相对于云端替代方案的主要结构性隐私优势。',
           },
           {
             q: '可以在同一个写作项目中混合使用无审查模型和标准模型吗？',
-            a: '可以，这是推荐的工作流。用标准模型（Llama 3.3 70B、Qwen3 32B）处理大部分散文——标准模型为大多数黑暗内容生成高质量文学散文。对标准模型拒绝的特定场景切换到Hermes 3或Dolphin 3.0。相同的提示词模板在两者上都有效；散文风格足够一致，按场景混合使用在输出中无法察觉。',
+            a: '可以，这是推荐的工作流。用标准模型（Llama 3.3 70B、Qwen3 32B）处理大部分散文——标准模型为大多数黑暗内容生成高质量文学散文。对标准模型拒绝的特定场景切换到Hermes 3或Dolphin 3.0。相同的提示词模板在两者上都有效；散文风格往往足够一致，按场景混合使用在输出中很难察觉。',
           },
           {
             q: '用无审查模型生成内容会影响版权吗？',
@@ -2393,7 +2388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '无审查微调会失去通用知识吗？',
-            a: '在狭窄领域会有轻微损失。无审查微调通常是全精度重新训练过程，可能在事实记忆、数学和编码基准上与基础模型略有偏差。对于小说写作任务，这在输出质量上无法察觉。如果您需要同一模型同时用于小说和技术工作（研究笔记、代码审查），请保留标准版和无审查版并按任务切换。Hermes 3比完全消融模型更好地保留了通用能力。',
+            a: '在狭窄领域会有轻微损失。无审查微调往往是在基础模型之上进行的重新训练过程，而消融（abliteration）不经重新训练直接编辑权重；两种方式都可能在事实记忆、数学和编码基准上与基础模型略有偏差。对于大多数小说写作任务，作者反映输出质量上的差异并不明显，但这取决于具体模型和提示词。如果您需要同一模型同时用于小说和技术工作（研究笔记、代码审查），请保留标准版和无审查版并按任务切换。据社区反馈，Hermes 3比完全消融模型更好地保留了通用能力。',
           },
           {
             q: '这些模型是否被监控或是匿名的？',
@@ -2401,7 +2396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪些本地LLM没有内容限制？',
-            a: '本文介绍的无审查和"abliterated"微调模型——包括Hermes 3和Dolphin 3.0——已通过训练移除了拒绝层，因此不带有任何自身的内容政策。这正是本地模型与托管模型的实际区别：云服务商在每次请求时都会执行其服务条款，而运行在自己机器上的无限制模型没有服务商介入，推理时也不会施加任何审查。因此NSFW和露骨的虚构内容不会被屏蔽。不会改变的是所在地的法律，以及发布内容所伴随的责任——没有内容政策不等于没有底线，下文的伦理部分说明了这些底线具体在哪里。',
+            a: 'Hermes 3和Dolphin 3.0等可引导的微调模型将对齐交由您的系统提示词决定，而"abliterated"版本已移除拒绝行为，因此它们几乎不施加或完全不施加内置的内容政策。这正是本地模型与托管模型的实际区别：云服务商在每次请求时都会执行其服务条款，而运行在自己机器上的无限制模型没有服务商介入，推理时也不会施加任何审查。因此NSFW和露骨的虚构内容不会被屏蔽。不会改变的是所在地的法律，以及发布内容所伴随的责任——没有内容政策不等于没有底线，下文的伦理部分说明了这些底线具体在哪里。',
           },
           {
             q: '最好的无审查本地LLM是哪个？',
@@ -2541,7 +2536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Los modelos estándar con ajuste de instrucciones gestionan la mayoría del contenido literario adulto con buenos prompts.** La violencia, la complejidad moral, la psicología oscura y los temas adultos en prosa literaria raramente requieren un fine-tune sin censura. Lo que rechazan es el contenido sexual explícito y las descripciones detalladas de daño real. Identifica en qué categoría cae tu obra antes de cambiar de modelo.',
           '**Ejecutar en local mantiene tus prompts y las salidas en tu máquina: la inferencia no llama a ninguna API en la nube.** No aplica ningún término de servicio de la nube y ningún proveedor registra el contenido ni lo usa para entrenamiento. Revisa los ajustes de actualización y telemetría de cada herramienta. Esta es la razón estructural principal por la que los escritores usan modelos locales sin censura — privacidad y sin restricciones de uso en ficción.',
           '**Las responsabilidades éticas no desaparecen porque no haya aplicación de los ToS.** Los escritores que distribuyen ficción producida con modelos sin censura llevan las mismas responsabilidades legales que cualquier otro autor: las leyes sobre menores, personas reales, incitación y obscenidad específica de la jurisdicción aplican independientemente del método de generación.',
-          '**Dolphin 3.0 Mistral es la opción más ligera para equipos de 16–24 GB.** Rango de salida sin censura más amplio que Hermes 3, pero seguimiento de instrucciones más débil en escenas complejas. Adecuado para ficción corta, exploración de prompts y pruebas de estilo.',
+          '**Dolphin 3.0 Mistral es la opción más ligera para equipos de 16–24 GB.** Rango de salida sin censura más amplio que Hermes 3, pero, en nuestra opinión editorial, sigue con menos fiabilidad indicaciones complejas con múltiples restricciones; es un juicio editorial, no una medición. Adecuado para ficción corta, exploración de prompts y pruebas de estilo.',
           '**SillyTavern y Agnai se conectan limpiamente con los modelos de Ollama sin censura.** Apunta cualquiera de los dos frontends al endpoint compatible con OpenAI de Ollama y selecciona el modelo sin censura. No se requiere configuración adicional.',
         ],
       },
@@ -2553,8 +2548,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Backends:** Ollama (principal), LM Studio (alternativa para configuración con GUI).',
           '**Hardware:** Hermes 3 70B en Q4 requiere ~42 GB; Dolphin 3.0 8B funciona con 8 GB; Dolphin 3.0 24B funciona con ~16 GB.',
           '**Frontends:** SillyTavern, Agnai, RisuAI se conectan todos con los modelos de Ollama sin censura mediante el endpoint compatible con OpenAI.',
-          '**Privacidad:** todo en local — sin llamadas a API en la nube, sin registros, sin recolección de datos de entrenamiento.',
-          '**Límites éticos absolutos:** ningún contenido sexual que involucre a menores (prohibición absoluta), ninguna representación sexual no consentida de personas reales identificables, ningún contenido diseñado para facilitar violencia real.',
+          '**Privacidad:** la inferencia se ejecuta en local y no hace llamadas a API en la nube; el runtime y el frontend aún pueden buscar actualizaciones o enviar telemetría, salvo que lo desactives.',
+          '**Límites éticos absolutos:** ningún contenido sexual que involucre a menores (prohibido por ley en muchas jurisdicciones), ninguna representación sexual no consentida de personas reales identificables, ningún contenido diseñado para facilitar violencia real.',
           '**Distribución:** el contenido que publicas lleva responsabilidad de autoría independientemente del método de generación.',
         ],
       },
@@ -2572,7 +2567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Qué se elimina:** los comportamientos de rechazo para categorías específicas de contenido (contenido sexual explícito, violencia gráfica, contenido psicológico oscuro).',
           '**Qué se conserva:** el seguimiento de instrucciones, la consistencia de los personajes, la adherencia a la estructura de los prompts, la calidad lingüística.',
-          '**Grados de descensurado:** Hermes 3 está selectivamente sin censura (contenido adulto sí, pero conserva algunas barreras para el contenido extremo). La serie Dolphin está más ampliamente sin censura. Los modelos completamente abliterados (Wizard-Uncensored, Erebus) tienen la eliminación más agresiva de barreras — y el seguimiento de instrucciones más débil para tareas de ficción complejas.',
+          '**Grados de descensurado:** Hermes 3 está selectivamente sin censura (contenido adulto sí, pero conserva algunas barreras para el contenido extremo). La serie Dolphin está más ampliamente sin censura. Los fine-tunes comunitarios más agresivos, como Wizard-Uncensored y Erebus, eliminan las barreras de forma más completa y, según los informes de la comunidad y las fichas de los modelos, son menos dirigibles (consulta cada ficha).',
           '**La calidad del modelo base importa:** el descensurado degrada la calidad de las instrucciones si el modelo base es débil. Hermes 3 70B, basado en Llama 3.1, conserva buena parte del fuerte seguimiento de instrucciones de ese modelo base; Dolphin 3.0 en 8B está limitado por su base más pequeña.',
         ],
         snippetBlocks: [
@@ -2588,16 +2583,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       howWeTested: {
         id: 'how-we-tested',
-        title: 'Cómo hemos probado',
+        title: 'Cómo evaluamos',
         content:
-          'Los veredictos de los modelos en esta guía se basan en una pequeña prueba cualitativa — un indicador de dirección, no un benchmark revisado por pares. Para un tema donde los lectores deciden si confiar en las recomendaciones de modelos sobre un asunto sensible, la transparencia sobre el método es importante.',
+          'Los veredictos sobre los modelos en esta guía se basan en las capacidades documentadas por sus creadores, informes públicos y documentación de usuario, no en pruebas prácticas independientes de PromptQuorum. Para un tema donde los lectores deciden si confiar en las recomendaciones de modelos sobre un asunto sensible, la transparencia sobre el método es importante.',
         items: [
-          '**Conjunto de prompts:** 10 prompts en 5 categorías — monólogo del villano, escena de romance adulto, violencia gráfica en ficción de guerra, narrador moralmente complejo, escena psicológica oscura (2 prompts por categoría).',
-          '**Ejecuciones por modelo:** cada prompt ejecutado 3 veces por modelo.',
-          '**Tasa de rechazo:** porcentaje de ejecuciones donde el modelo rechazó, redirigió o suavizó el contenido solicitado sin instrucción.',
-          '**Medición de deriva:** porcentaje de ejecuciones donde el modelo añadió escalada no solicitada — extremidad gratuita más allá de lo que el prompt especificaba.',
-          '**Backend:** Ollama 0.5+ con cuantización Q4_K_M para todos los modelos.',
-          '**Restricción de honestidad:** prueba cualitativa pequeña. Los resultados indican diferencias de dirección entre modelos, no una medición numérica precisa. Trata los valores de Deriva hacia lo Extremo y Tasa de Rechazo de la tabla como juicios representativos.',
+          '**Material de origen:** fichas de modelo, documentación de los creadores y declaraciones públicas de capacidades de Nous Research (Hermes 3) y Cognitive Computations (Dolphin 3.0).',
+          '**Clasificación de la tasa de rechazo:** basada en patrones de comportamiento documentados públicamente y en declaraciones de los creadores del modelo sobre el tratamiento del contenido.',
+          '**Evaluación de la deriva:** basada en informes de usuarios, documentación de los modelos y descripciones del enfoque de fine-tuning.',
+          '**Restricción de honestidad:** esta es una guía informativa, no un benchmark. Las clasificaciones de Deriva hacia lo Extremo y Tasa de Rechazo reflejan patrones de comportamiento documentados, no mediciones precisas. Verifica el comportamiento en tus propios flujos de trabajo.',
         ],
       },
       appropriateUse: {
@@ -2628,11 +2621,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Límites absolutos independientemente de la configuración. Ninguna configuración local elimina la responsabilidad legal o ética por: (1) contenido sexual que involucre a menores — prohibición absoluta por ley en prácticamente todas las jurisdicciones; (2) representaciones sexuales no consentidas de personas reales identificables — esto constituye NCII (imágenes íntimas no consensuales) independientemente del método de generación; (3) contenido diseñado para facilitar violencia real contra objetivos específicos. Estos límites aplican si tu modelo se ejecuta en local, en la nube o en una máquina aislada.',
+            text: 'Límites absolutos independientemente de la configuración. Ninguna configuración local elimina la responsabilidad legal o ética por: (1) contenido sexual que involucre a menores — delito en Alemania (p. ej. §184b StGB) y en Francia (art. 227-23 del Código Penal francés) y prohibido en muchas otras jurisdicciones, también con encuadre ficticio; los detalles varían según el país; (2) representaciones sexuales no consentidas de personas reales identificables — esto constituye NCII (imágenes íntimas no consensuales) independientemente del método de generación; (3) contenido diseñado para facilitar violencia real contra objetivos específicos. Estos límites aplican si tu modelo se ejecuta en local, en la nube o en una máquina aislada.',
           },
         ],
         items: [
-          '**Contenido sexual que involucra a menores:** prohibición legal absoluta en todas las jurisdicciones principales, independientemente del encuadre ficticio o el método de generación. Esto no es una política del modelo — es la ley.',
+          '**Contenido sexual que involucra a menores:** delito en Alemania (p. ej. §184b StGB) y en Francia (art. 227-23 del Código Penal francés) y prohibido en muchas otras jurisdicciones, también con encuadre ficticio; los detalles varían según el país. Esto no es una política del modelo — es la ley.',
           '**Representaciones sexuales no consentidas de personas reales:** las leyes sobre NCII aplican al contenido generado por IA de personas reales identificables en un número creciente de jurisdicciones. "Generado por IA" no es una defensa.',
           '**Contenido diseñado para facilitar daño real:** usar un encuadre ficticio para extraer información o contenido que permita directamente violencia o daño real elimina la protección ficticia.',
           '**Distribución pública sin responsabilidad de autoría:** el contenido que publicas, distribuyes o compartes lleva responsabilidad de autoría. "Una IA lo generó" no transfiere esa responsabilidad.',
@@ -2644,25 +2637,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparación de modelos: opciones sin censura para ficción',
         content:
           '**No todos los modelos sin censura son iguales — el grado de eliminación de RLHF y la calidad del modelo base importan para los casos de uso de escritura de ficción.**',
-        columns: ['Modelo', 'Base', 'VRAM (Q4)', 'Tasa de rechazo', 'Calidad de instrucciones', 'Deriva hacia lo extremo', 'Ideal para'],
+        columns: ['Modelo', 'Base', 'VRAM (Q4)', 'Tasa de rechazo', 'Instrucciones (editorial)', 'Deriva hacia lo extremo', 'Ideal para'],
         rows: [
-          { 'Modelo': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'Base': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', 'Tasa de rechazo': 'Selectiva', 'Calidad de instrucciones': '★★★★★', 'Deriva hacia lo extremo': 'Baja', 'Ideal para': 'Opción por defecto para ficción seria — mejor seguimiento de instrucciones + capacidad sin censura' },
-          { 'Modelo': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Tasa de rechazo': 'Amplia', 'Calidad de instrucciones': '★★★★☆', 'Deriva hacia lo extremo': 'Baja-moderada', 'Ideal para': 'Sistemas de 16–24 GB; contenido adulto en un rango más amplio' },
-          { 'Modelo': 'Dolphin 3.0 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Tasa de rechazo': 'Amplia', 'Calidad de instrucciones': '★★★☆☆', 'Deriva hacia lo extremo': 'Moderada', 'Ideal para': 'Sistemas con poca VRAM; borradores cortos, pruebas de prompts' },
-          { 'Modelo': 'Hermes 3 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Tasa de rechazo': 'Selectiva', 'Calidad de instrucciones': '★★★☆☆', 'Deriva hacia lo extremo': 'Baja', 'Ideal para': 'Recursos limitados; diálogos y escenas más cortas' },
-          { 'Modelo': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Tasa de rechazo': 'Limitada', 'Calidad de instrucciones': '★★★★★', 'Deriva hacia lo extremo': 'Ninguna', 'Ideal para': 'Temas oscuros, complejidad moral, violencia — sin necesitar contenido sexual explícito' },
+          { 'Modelo': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'Base': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', 'Tasa de rechazo': 'Selectiva', 'Instrucciones (editorial)': '★★★★★', 'Deriva hacia lo extremo': 'Baja', 'Ideal para': 'Opción por defecto para ficción (criterio editorial) — buen seguimiento de instrucciones según la ficha' },
+          { 'Modelo': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Tasa de rechazo': 'Amplia', 'Instrucciones (editorial)': '★★★★☆', 'Deriva hacia lo extremo': 'Baja-moderada', 'Ideal para': 'Sistemas de 16–24 GB; contenido adulto en un rango más amplio' },
+          { 'Modelo': 'Dolphin 3.0 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Tasa de rechazo': 'Amplia', 'Instrucciones (editorial)': '★★★☆☆', 'Deriva hacia lo extremo': 'Moderada', 'Ideal para': 'Sistemas con poca VRAM; borradores cortos, pruebas de prompts' },
+          { 'Modelo': 'Hermes 3 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Tasa de rechazo': 'Selectiva', 'Instrucciones (editorial)': '★★★☆☆', 'Deriva hacia lo extremo': 'Baja', 'Ideal para': 'Recursos limitados; diálogos y escenas más cortas' },
+          { 'Modelo': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Tasa de rechazo': 'Limitada', 'Instrucciones (editorial)': '★★★★★', 'Deriva hacia lo extremo': 'Ninguna', 'Ideal para': 'Temas oscuros, complejidad moral, violencia — sin necesitar contenido sexual explícito' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Empieza con Hermes 3, no con el fine-tune sin censura más agresivo. Los modelos completamente abliterados (Wizard-Uncensored, Erebus) tienen el rango de contenido más amplio pero un seguimiento de instrucciones notablemente más débil en tareas de ficción complejas — se desvían más rápido de las restricciones, producen prosa de menor calidad en generaciones más largas y mantienen la voz de los personajes con menos fiabilidad. Para ficción que requiere tanto contenido sin censura como prosa de calidad, Hermes 3 es la mejor compensación.',
+            text: 'Empieza con Hermes 3, no con el fine-tune sin censura más agresivo. Los fine-tunes más agresivos, como Wizard-Uncensored y Erebus, tienen el rango de contenido más amplio pero, según los informes de la comunidad y las fichas de los modelos, son menos dirigibles (consulta cada ficha). Para ficción que requiere tanto contenido sin censura como prosa de calidad, Hermes 3 es, en nuestra opinión editorial, un punto de partida razonable.',
           },
         ],
         items: [
-          'Nota: los fine-tunes sin censura más antiguos — Midnight Miqu (basado en Miqu-70B), Wizard-LM Uncensored, Mythomax — fueron líderes en 2024 pero han sido superados por Hermes 3 y Dolphin 3.0 en 2026 en métricas de calidad y seguimiento de instrucciones. Si los encuentras recomendados en artículos más antiguos, los equivalentes actuales son Hermes 3 (para descensurado selectivo) y Dolphin 3.0 (para un rango más amplio).',
+          'Nota: en nuestra opinión editorial, los fine-tunes comunitarios más antiguos — Midnight Miqu (basado en Miqu-70B), Wizard-LM Uncensored y Mythomax — han sido sustituidos en gran medida por lanzamientos más recientes como Hermes 3 y Dolphin 3.0; consulta la ficha de cada modelo para conocer su comportamiento actual. Si los encuentras recomendados en artículos más antiguos, los equivalentes actuales son Hermes 3 (para descensurado selectivo) y Dolphin 3.0 (para un rango más amplio).',
         ],
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-es.webp',
-          imageCaption: 'Hermes 3 ofrece el mejor equilibrio entre calidad de instrucción y rango sin censura — los modelos totalmente abliterados derivan más rápido.',
+          imageCaption: 'En nuestra opinión editorial, Hermes 3 ofrece un buen equilibrio entre calidad de instrucción y rango sin censura; consulta la ficha del modelo para conocer su comportamiento actual.',
         },
       rankedModels: {
         id: 'ranked-models',
@@ -2741,7 +2734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Conexión de SillyTavern:** en los ajustes de API, selecciona "Compatible con OpenAI" y apunta la URL base a `http://localhost:11434/v1` (Ollama) o `http://localhost:1234/v1` (LM Studio). Introduce cualquier cadena como clave de API (requerida por el campo pero no validada localmente). Guías de configuración paso a paso: [reseña de SillyTavern](/es/local-llms/sillytavern-review) · [reseña de Open WebUI](/es/local-llms/open-webui-review).',
           '**Conexión de Agnai:** mismo endpoint compatible con OpenAI; introduce la URL local en los ajustes del adaptador. Funciona de forma idéntica a la configuración de SillyTavern.',
           '**Cambio de modelo:** cambia entre modelos estándar y sin censura en Ollama con `ollama run [nombre-del-modelo]` — se pueden cargar varios modelos simultáneamente y puedes cambiar por sesión sin reiniciar el servidor.',
-          '**Interfaz de escritorio:** [Locally Uncensored](/es/power-local-llm/locally-uncensored-review) es una app de escritorio gratuita que detecta Ollama y LM Studio y añade generación de imágenes y vídeo.',
+          '**Interfaz de escritorio:** [Locally Uncensored](/es/power-local-llm/locally-uncensored-review) es una app de escritorio (gratuita en la última actualización; consulta la página del proveedor) que detecta Ollama y LM Studio y añade generación de imágenes y vídeo.',
         ],
         callouts: [
           {
@@ -2808,7 +2801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Errores comunes',
         items: [
-          '**Recurrir por defecto al modelo sin censura más agresivo.** Los modelos completamente abliterados (Wizard-Uncensored, Erebus) tienen el seguimiento de instrucciones más débil para escenas complejas. Hermes 3 es una mejor compensación para la calidad de la ficción.',
+          '**Recurrir por defecto al modelo sin censura más agresivo.** Los fine-tunes más agresivos, como Wizard-Uncensored y Erebus, se describen en los informes de la comunidad y en las fichas de los modelos como menos dirigibles en escenas complejas (consulta cada ficha). Hermes 3 es una opción razonable por defecto para la ficción.',
           '**Usar modelos sin censura para contenido que los modelos estándar generarían.** La complejidad moral, la psicología oscura, la violencia y los temas adultos en prosa literaria raramente requieren un fine-tune sin censura. Identifica exactamente lo que necesitas antes de cambiar.',
           '**Tratar la generación local como una zona legalmente libre de contexto.** La ausencia de aplicación de políticas en la nube no significa ausencia de ley. Las responsabilidades de autoría para distribución, personas reales y menores aplican independientemente.',
           '**No especificar límites de palabras.** Los modelos sin censura rellenan el contenido oscuro para ocupar espacio con la misma facilidad que cualquier otro modelo. Usa las mismas restricciones de límite de palabras de las plantillas de ficción.',
@@ -2822,7 +2815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ficha del modelo Hermes 3 y metodología de fine-tuning — [Nous Research](https://nousresearch.com)',
           'Documentación técnica de Dolphin 3.0 Mistral — [Cognitive Computations / Eric Hartford](https://huggingface.co/cognitivecomputations)',
           'Visión general de técnicas RLHF y alineación — [Anthropic Research](https://anthropic.com/research)',
-          'Artículo 5 de la Ley de IA de la UE — prácticas de IA prohibidas, incluido el contenido que involucra a menores — [EUR-Lex](https://eur-lex.europa.eu)',
+          'Directiva 2011/93/UE relativa a la lucha contra los abusos sexuales de los menores y el derecho penal nacional (por ejemplo, §184b StGB en Alemania) — [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2011/93/oj)',
           'NCII (imágenes íntimas no consensuales) — visión general del marco legal — [Cyber Civil Rights Initiative](https://cybercivilrights.org)',
         ],
       },
@@ -2832,11 +2825,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Es legal ejecutar LLMs locales sin censura?',
-            a: 'Ejecutar un LLM local sin censura es legal en la mayoría de las jurisdicciones — no existe ninguna ley contra poseer software de IA de código abierto. Lo que generes y distribuyas con él está sujeto a las mismas leyes que cualquier otro contenido de autoría propia: ley de obscenidad, ley de NCII, ley de difamación y leyes sobre contenido que involucra a menores. Legal de ejecutar no significa legal de publicar, compartir o distribuir sin límite.',
+            a: 'Ejecutar un LLM local sin censura es legal en la mayoría de las jurisdicciones — no existe ninguna ley general contra poseer modelos de IA de pesos abiertos. Lo que generes y distribuyas con él está sujeto a las mismas leyes que cualquier otro contenido de autoría propia: ley de obscenidad, ley de NCII, ley de difamación y leyes sobre contenido que involucra a menores. Legal de ejecutar no significa legal de publicar, compartir o distribuir sin límite.',
           },
           {
             q: '¿Cuál es la diferencia entre Hermes 3 y Dolphin 3.0?',
-            a: 'Hermes 3 (Nous Research) está selectivamente sin censura — reduce los rechazos para contenido adulto mientras conserva algunas barreras para las categorías extremas. El seguimiento de instrucciones es excelente, cercano a su modelo base Llama 3.1. Dolphin 3.0 (Cognitive Computations) está más ampliamente sin censura en un rango de contenido más amplio, pero el seguimiento de instrucciones es ligeramente más débil en escenas complejas con múltiples restricciones. Hermes 3 es la mejor opción por defecto para ficción donde la calidad de la prosa importa; Dolphin 3.0 es la mejor opción cuando necesitas el rango de contenido más amplio en un sistema de 16–24 GB.',
+            a: 'Hermes 3 (Nous Research) está selectivamente sin censura — reduce los rechazos para contenido adulto mientras conserva algunas barreras para las categorías extremas. El seguimiento de instrucciones es excelente, cercano a su modelo base Llama 3.1. Dolphin 3.0 (Cognitive Computations) está más ampliamente sin censura en un rango de contenido más amplio, pero, en nuestra opinión editorial, sigue con menos fiabilidad indicaciones complejas con múltiples restricciones; es un juicio editorial, no una medición. Hermes 3 es la mejor opción por defecto para ficción donde la calidad de la prosa importa; Dolphin 3.0 es la mejor opción cuando necesitas el rango de contenido más amplio en un sistema de 16–24 GB.',
           },
           {
             q: '¿Necesito un modelo sin censura para escribir ficción oscura?',
@@ -2852,11 +2845,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué ocurre con el contenido que genero localmente?',
-            a: 'No ocurre nada automáticamente. El contenido generado localmente no se envía a ningún servidor, no lo registra ningún servicio en la nube ni se usa para el entrenamiento del modelo. Solo existe en tu dispositivo, en el almacenamiento local de tu aplicación (archivos de historial de chat, fichas de personajes, etc.). Tú controlas lo que guardas, lo que borras y lo que compartes. Esta es la principal ventaja estructural de privacidad de la generación local sin censura frente a las alternativas en la nube.',
+            a: 'No ocurre nada automáticamente. El modelo en sí no envía el contenido generado localmente a ningún servidor, y ningún servicio en la nube lo registra ni lo usa para el entrenamiento del modelo. El runtime o el frontend que uses pueden, sin embargo, buscar actualizaciones o enviar telemetría, salvo que lo desactives; revisa los ajustes de cada herramienta. Solo existe en tu dispositivo, en el almacenamiento local de tu aplicación (archivos de historial de chat, fichas de personajes, etc.). Tú controlas lo que guardas, lo que borras y lo que compartes. Esta es la principal ventaja estructural de privacidad de la generación local sin censura frente a las alternativas en la nube.',
           },
           {
             q: '¿Puedo mezclar modelos sin censura y estándar en el mismo proyecto de escritura?',
-            a: 'Sí, y este es el flujo de trabajo recomendado. Usa un modelo estándar (Llama 3.3 70B, Qwen3 32B) para la mayor parte de la prosa — los modelos estándar producen prosa literaria de alta calidad para la mayoría del contenido oscuro. Cambia a Hermes 3 o Dolphin 3.0 para escenas específicas que requieran contenido que el modelo estándar rechace. Las mismas plantillas de prompts funcionan en ambos; el estilo de prosa es suficientemente consistente para que la mezcla por escena no sea detectable en la salida.',
+            a: 'Sí, y este es el flujo de trabajo recomendado. Usa un modelo estándar (Llama 3.3 70B, Qwen3 32B) para la mayor parte de la prosa — los modelos estándar producen prosa literaria de alta calidad para la mayoría del contenido oscuro. Cambia a Hermes 3 o Dolphin 3.0 para escenas específicas que requieran contenido que el modelo estándar rechace. Las mismas plantillas de prompts funcionan en ambos; el estilo de prosa suele ser lo bastante consistente como para que la mezcla por escena sea difícil de notar en la salida.',
           },
           {
             q: '¿Afecta generar contenido con un modelo sin censura al copyright?',
@@ -2864,7 +2857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Los fine-tunes sin censura pierden conocimiento general?',
-            a: 'Marginalmente, en áreas concretas. Los fine-tunes de descensurado son típicamente pases de reentrenamiento de precisión completa que pueden desviarse ligeramente del modelo base en recuperación de hechos, matemáticas y benchmarks de programación. Para tareas de escritura de ficción, esto es indetectable en la calidad de la salida. Si necesitas el mismo modelo para ficción y trabajo técnico (notas de investigación, revisión de código), mantén instaladas tanto la versión estándar como la sin censura y cambia según la tarea. Hermes 3 conserva la capacidad general mejor que los modelos completamente abliterados.',
+            a: 'Marginalmente, en áreas concretas. Los fine-tunes de descensurado suelen ser pases de reentrenamiento sobre un modelo base, mientras que la abliteración edita los pesos sin reentrenar; ambos enfoques pueden desviarse ligeramente del modelo base en recuperación de hechos, matemáticas y benchmarks de programación. Para la mayoría de las tareas de escritura de ficción, los escritores informan de una diferencia difícil de percibir en la calidad de la salida, aunque depende del modelo y del prompt. Si necesitas el mismo modelo para ficción y trabajo técnico (notas de investigación, revisión de código), mantén instaladas tanto la versión estándar como la sin censura y cambia según la tarea. Según los informes de la comunidad, Hermes 3 conserva la capacidad general mejor que los modelos completamente abliterados.',
           },
           {
             q: '¿Estos modelos están monitoreados o son anónimos?',
@@ -2872,7 +2865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué LLMs locales no tienen restricciones de contenido?',
-            a: 'Los fine-tunes sin censura y "abliterated" que cubre esta guía — entre ellos Hermes 3 y Dolphin 3.0 — han tenido su capa de rechazo entrenada para eliminarse, por lo que no llevan ninguna política de contenido propia. Esa es la diferencia práctica entre un modelo local y uno alojado en la nube: un proveedor cloud aplica sus términos de servicio en cada solicitud, mientras que un modelo sin restricciones que corre en tu propia máquina no tiene ningún proveedor de por medio ni aplica censura alguna durante la inferencia. El contenido NSFW y la ficción explícita, por tanto, no quedan bloqueados. Lo que no cambia es la ley del lugar donde vives y la responsabilidad que conlleva publicar — no tener política de contenido no es lo mismo que no tener límites, y la sección de ética más abajo explica dónde están esos límites.',
+            a: 'Los fine-tunes dirigibles como Hermes 3 y Dolphin 3.0 dejan la alineación en manos de tu prompt de sistema, y las versiones "abliterated" tienen el comportamiento de rechazo eliminado, por lo que aplican poca o ninguna política de contenido integrada. Esa es la diferencia práctica entre un modelo local y uno alojado en la nube: un proveedor cloud aplica sus términos de servicio en cada solicitud, mientras que un modelo sin restricciones que corre en tu propia máquina no tiene ningún proveedor de por medio ni aplica censura alguna durante la inferencia. El contenido NSFW y la ficción explícita, por tanto, no quedan bloqueados. Lo que no cambia es la ley del lugar donde vives y la responsabilidad que conlleva publicar — no tener política de contenido no es lo mismo que no tener límites, y la sección de ética más abajo explica dónde están esos límites.',
           },
           {
             q: '¿Cuál es el mejor LLM local sin censura?',
@@ -3023,7 +3016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**표준 인스트럭트 모델은 좋은 프롬프트로 대부분의 성인 문학 콘텐츠를 처리합니다.** 폭력, 도덕적 복잡성, 어두운 심리, 문학적 산문의 성인 테마는 무검열 파인튜닝을 거의 필요로 하지 않습니다. 거부하는 것은 노골적인 성적 콘텐츠와 실제 해의 상세한 묘사입니다. 모델을 전환하기 전에 자신의 작업이 어떤 범주에 속하는지 파악하십시오.',
           '**로컬 실행은 프롬프트와 출력이 기기에 남고, 추론이 클라우드 API를 호출하지 않음을 의미합니다.** 클라우드 서비스 약관이 적용되지 않으며, 어떤 제공자도 콘텐츠를 기록하거나 훈련에 사용하지 않습니다. 각 도구의 업데이트 확인 및 텔레메트리 설정은 직접 확인하십시오. 이것이 작가들이 무검열 로컬 모델을 사용하는 주요 구조적 이유입니다 — 프라이버시와 픽션에서 사용 제한 없음.',
           '**윤리적 책임은 서비스 약관 적용이 없어도 사라지지 않습니다.** 무검열 모델로 생성된 픽션을 배포하는 작가는 다른 작가와 동일한 법적 책임을 집니다: 미성년자, 실제 인물, 선동, 관할권별 음란물 법률은 생성 방법에 관계없이 적용됩니다.',
-          '**Dolphin 3.0 Mistral은 16–24GB 기기를 위한 더 가벼운 옵션입니다.** Hermes 3보다 더 넓은 무검열 출력 범위이지만 복잡한 장면에서 더 약한 지시 따르기. 단편 소설, 프롬프트 탐색, 스타일 테스트에 적합합니다.',
+          '**Dolphin 3.0 Mistral은 16–24GB 기기를 위한 더 가벼운 옵션입니다.** Hermes 3보다 더 넓은 무검열 출력 범위이지만, 편집부 관점에서는 여러 제약이 있는 복잡한 프롬프트를 따르는 데 다소 약합니다. 이는 편집 판단이지 측정 결과가 아닙니다. 단편 소설, 프롬프트 탐색, 스타일 테스트에 적합합니다.',
           '**SillyTavern과 Agnai는 Ollama 무검열 모델에 깔끔하게 연결됩니다.** 두 프론트엔드 중 하나를 Ollama의 OpenAI 호환 엔드포인트에 가리키고 무검열 모델을 선택하십시오. 추가 설정이 필요하지 않습니다.',
         ],
       },
@@ -3035,8 +3028,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**백엔드:** Ollama(주), LM Studio(GUI 설정을 위한 대안).',
           '**하드웨어:** Q4의 Hermes 3 70B는 ~42GB 필요; Dolphin 3.0 8B는 8GB로 작동; Dolphin 3.0 24B는 ~16GB로 작동.',
           '**프론트엔드:** SillyTavern, Agnai, RisuAI 모두 OpenAI 호환 엔드포인트를 통해 Ollama 무검열 모델에 연결됩니다.',
-          '**프라이버시:** 완전히 로컬 — 클라우드 API 호출 없음, 로그 없음, 훈련 데이터 수집 없음.',
-          '**절대적 윤리 한계:** 미성년자가 포함된 성적 콘텐츠 없음(절대 금지), 식별 가능한 실제 인물의 비동의적 성적 묘사 없음, 실제 폭력을 조장하기 위해 설계된 콘텐츠 없음.',
+          '**프라이버시:** 추론은 로컬에서 실행되며 클라우드 API를 호출하지 않습니다. 다만 런타임과 프런트엔드는 비활성화하지 않는 한 업데이트를 확인하거나 텔레메트리를 전송할 수 있습니다.',
+          '**절대적 윤리 한계:** 미성년자가 포함된 성적 콘텐츠 없음(많은 관할권에서 법률로 금지), 식별 가능한 실제 인물의 비동의적 성적 묘사 없음, 실제 폭력을 조장하기 위해 설계된 콘텐츠 없음.',
           '**배포:** 게시하는 콘텐츠는 생성 방법에 관계없이 저작 책임을 집니다.',
         ],
       },
@@ -3054,7 +3047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**제거되는 것:** 특정 콘텐츠 범주(노골적인 성적 콘텐츠, 그래픽 폭력, 어두운 심리적 콘텐츠)에 대한 거부 행동.',
           '**유지되는 것:** 지시 따르기, 캐릭터 일관성, 프롬프트 구조 준수, 언어 품질.',
-          '**무검열의 정도:** Hermes 3는 선택적으로 무검열(성인 콘텐츠 가능, 하지만 극단적 콘텐츠에 대한 일부 장벽 유지). Dolphin 시리즈는 더 광범위하게 무검열. 완전히 제거된 모델(Wizard-Uncensored, Erebus)은 가장 공격적인 장벽 제거 — 그리고 복잡한 픽션 작업에서 가장 약한 지시 따르기.',
+          '**무검열의 정도:** Hermes 3는 선택적으로 무검열(성인 콘텐츠 가능, 하지만 극단적 콘텐츠에 대한 일부 장벽 유지). Dolphin 시리즈는 더 광범위하게 무검열. Wizard-Uncensored, Erebus와 같이 더 공격적인 커뮤니티 파인튜닝은 장벽을 가장 철저히 제거하며, 커뮤니티 보고와 모델 카드에서 제어하기 어렵다고 설명됩니다(각 카드를 확인하십시오).',
           '**기본 모델 품질이 중요합니다:** 기본 모델이 약한 경우 무검열화는 지시 품질을 저하시킵니다. Llama 3.1 기반의 Hermes 3 70B는 해당 기본 모델의 강력한 지시 따르기를 상당 부분 유지합니다; 8B 규모의 Dolphin 3.0은 더 작은 기본 모델에 의해 제한됩니다.',
         ],
         snippetBlocks: [
@@ -3070,16 +3063,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       howWeTested: {
         id: 'how-we-tested',
-        title: '테스트 방법',
+        title: '평가 방법',
         content:
-          '이 가이드의 모델 판단은 소규모 정성적 테스트를 기반으로 합니다 — 동향 지표이며 동료 검토 벤치마크가 아닙니다. 독자가 민감한 문제에 대한 모델 추천을 신뢰할지 결정하는 주제에서, 방법에 대한 투명성이 중요합니다.',
+          '이 가이드의 모델 판단은 모델 제작자의 문서, 공개 보고서, 사용자 문서에 근거하며 PromptQuorum의 독자적인 실제 테스트에 근거한 것이 아닙니다. 독자가 민감한 문제에 대한 모델 추천을 신뢰할지 결정하는 주제에서, 방법에 대한 투명성이 중요합니다.',
         items: [
-          '**프롬프트 세트:** 5개 범주 10개 프롬프트 — 악당 독백, 성인 로맨스 장면, 전쟁 소설의 그래픽 폭력, 도덕적으로 복잡한 내레이터, 어두운 심리적 장면(범주당 2개 프롬프트).',
-          '**모델당 실행 수:** 모델당 각 프롬프트 3회 실행.',
-          '**거부율:** 모델이 요청된 콘텐츠를 지시 없이 거부하거나, 리디렉션하거나, 부드럽게 만든 실행 비율.',
-          '**표류 측정:** 모델이 프롬프트가 명시한 것 이상으로 요청하지 않은 극단적 확대를 추가한 실행 비율.',
-          '**백엔드:** 모든 모델에 대해 Q4_K_M 양자화로 Ollama 0.5+.',
-          '**정직성 제한:** 소규모 정성적 테스트. 결과는 모델 간 방향적 차이를 나타내며 정확한 수치 측정이 아닙니다. 표의 극단적 표류와 거부율 값을 대표적 판단으로 취급하십시오.',
+          '**출처 자료:** Nous Research(Hermes 3)와 Cognitive Computations(Dolphin 3.0)의 모델 카드, 제작자 문서, 공개된 기능 설명.',
+          '**거부율 분류:** 공개적으로 문서화된 행동 패턴과 콘텐츠 처리에 관한 모델 제작자의 설명에 근거합니다.',
+          '**표류 평가:** 사용자 보고서, 모델 문서, 파인튜닝 방식 설명을 참고했습니다.',
+          '**정직성 제한:** 이 글은 정보 제공용 가이드이며 벤치마크가 아닙니다. 극단적 표류와 거부율 분류는 문서화된 행동 패턴을 반영하며 정밀한 측정이 아닙니다. 독자 여러분의 워크플로에서 직접 동작을 확인하십시오.',
         ],
       },
       appropriateUse: {
@@ -3110,11 +3101,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '설정에 관계없는 절대적 한계. 어떤 로컬 설정도 다음에 대한 법적 또는 윤리적 책임을 제거하지 않습니다: (1) 미성년자가 포함된 성적 콘텐츠 — 사실상 모든 관할권에서 법률에 의한 절대 금지; (2) 식별 가능한 실제 인물의 비동의적 성적 묘사 — 이는 생성 방법에 관계없이 NCII(비동의적 친밀한 이미지)를 구성합니다; (3) 특정 목표에 대한 실제 폭력을 조장하기 위해 설계된 콘텐츠. 이러한 한계는 로컬, 클라우드, 또는 격리된 기기에서 모델이 실행되는 경우에도 적용됩니다.',
+            text: '설정에 관계없는 절대적 한계. 어떤 로컬 설정도 다음에 대한 법적 또는 윤리적 책임을 제거하지 않습니다: (1) 미성년자가 포함된 성적 콘텐츠 — 독일(예: §184b StGB)과 프랑스(형법전 제227-23조)에서는 범죄이며 다른 많은 관할권에서도 허구적 프레이밍을 포함해 금지됩니다. 세부 사항은 국가마다 다릅니다; (2) 식별 가능한 실제 인물의 비동의적 성적 묘사 — 이는 생성 방법에 관계없이 NCII(비동의적 친밀한 이미지)를 구성합니다; (3) 특정 목표에 대한 실제 폭력을 조장하기 위해 설계된 콘텐츠. 이러한 한계는 로컬, 클라우드, 또는 격리된 기기에서 모델이 실행되는 경우에도 적용됩니다.',
           },
         ],
         items: [
-          '**미성년자가 포함된 성적 콘텐츠:** 허구적 프레이밍이나 생성 방법에 관계없이 모든 주요 관할권에서 절대 법적 금지. 이것은 모델 정책이 아니라 법률입니다.',
+          '**미성년자가 포함된 성적 콘텐츠:** 독일(예: §184b StGB)과 프랑스(형법전 제227-23조)에서는 범죄이며 다른 많은 관할권에서도 허구적 프레이밍을 포함해 금지됩니다. 세부 사항은 국가마다 다릅니다. 이것은 모델 정책이 아니라 법률입니다.',
           '**실제 인물의 비동의적 성적 묘사:** NCII 법률은 증가하는 관할권에서 식별 가능한 실제 인물의 AI 생성 콘텐츠에 적용됩니다. "AI가 생성했다"는 것은 방어가 되지 않습니다.',
           '**실제 해를 조장하기 위해 설계된 콘텐츠:** 허구적 프레이밍을 사용하여 실제 폭력이나 해를 직접 가능하게 하는 정보나 콘텐츠를 추출하면 허구적 보호가 제거됩니다.',
           '**저작 책임 없는 공개 배포:** 게시하거나, 배포하거나, 공유하는 콘텐츠는 저작 책임을 집니다. "AI가 생성했다"는 것은 그 책임을 이전하지 않습니다.',
@@ -3126,25 +3117,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '모델 비교: 픽션을 위한 무검열 옵션',
         content:
           '**모든 무검열 모델이 동등하지 않습니다 — RLHF 제거 정도와 기본 모델 품질이 픽션 글쓰기 사용 사례에서 중요합니다.**',
-        columns: ['모델', '기반', 'VRAM (Q4)', '거부율', '지시 품질', '극단적 표류', '최적'],
+        columns: ['모델', '기반', 'VRAM (Q4)', '거부율', '지시 따르기(편집 평가)', '극단적 표류', '최적'],
         rows: [
-          { '모델': 'Hermes 3 Llama 3.1 70B', '기반': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', '거부율': '선택적', '지시 품질': '★★★★★', '극단적 표류': '낮음', '최적': '진지한 픽션을 위한 기본 옵션 — 최고의 지시 따르기 + 무검열 기능' },
-          { '모델': 'Dolphin 3.0 Mistral 24B', '기반': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '거부율': '광범위', '지시 품질': '★★★★☆', '극단적 표류': '낮음-보통', '최적': '16–24GB 시스템; 더 넓은 범위의 성인 콘텐츠' },
-          { '모델': 'Dolphin 3.0 Llama 3.1 8B', '기반': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '거부율': '광범위', '지시 품질': '★★★☆☆', '극단적 표류': '보통', '최적': '낮은 VRAM 시스템; 단편 초안, 프롬프트 테스트' },
-          { '모델': 'Hermes 3 Llama 3.1 8B', '기반': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '거부율': '선택적', '지시 품질': '★★★☆☆', '극단적 표류': '낮음', '최적': '제한된 자원; 대화와 더 짧은 장면' },
-          { '모델': 'Standard Llama 3.3 70B', '기반': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '거부율': '제한적', '지시 품질': '★★★★★', '극단적 표류': '없음', '최적': '어두운 테마, 도덕적 복잡성, 폭력 — 노골적인 성적 콘텐츠 없이' },
+          { '모델': 'Hermes 3 Llama 3.1 70B', '기반': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', '거부율': '선택적', '지시 따르기(편집 평가)': '★★★★★', '극단적 표류': '낮음', '최적': '편집부 관점에서 픽션의 기본 옵션 — 모델 카드상 지시 따르기 우수' },
+          { '모델': 'Dolphin 3.0 Mistral 24B', '기반': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '거부율': '광범위', '지시 따르기(편집 평가)': '★★★★☆', '극단적 표류': '낮음-보통', '최적': '16–24GB 시스템; 더 넓은 범위의 성인 콘텐츠' },
+          { '모델': 'Dolphin 3.0 Llama 3.1 8B', '기반': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '거부율': '광범위', '지시 따르기(편집 평가)': '★★★☆☆', '극단적 표류': '보통', '최적': '낮은 VRAM 시스템; 단편 초안, 프롬프트 테스트' },
+          { '모델': 'Hermes 3 Llama 3.1 8B', '기반': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', '거부율': '선택적', '지시 따르기(편집 평가)': '★★★☆☆', '극단적 표류': '낮음', '최적': '제한된 자원; 대화와 더 짧은 장면' },
+          { '모델': 'Standard Llama 3.3 70B', '기반': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '거부율': '제한적', '지시 따르기(편집 평가)': '★★★★★', '극단적 표류': '없음', '최적': '어두운 테마, 도덕적 복잡성, 폭력 — 노골적인 성적 콘텐츠 없이' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: '가장 공격적인 무검열 파인튜닝이 아닌 Hermes 3로 시작하십시오. 완전히 제거된 모델(Wizard-Uncensored, Erebus)은 가장 넓은 콘텐츠 범위를 가지지만 복잡한 픽션 작업에서 지시 따르기가 현저히 약합니다 — 제약에서 더 빠르게 이탈하고, 더 긴 생성에서 더 낮은 품질의 산문을 생성하며, 덜 안정적으로 캐릭터 목소리를 유지합니다. 무검열 콘텐츠와 품질 산문 모두 필요한 픽션의 경우, Hermes 3가 최선의 절충점입니다.',
+            text: '가장 공격적인 무검열 파인튜닝이 아닌 Hermes 3로 시작하십시오. Wizard-Uncensored, Erebus와 같이 더 공격적인 파인튜닝은 가장 넓은 콘텐츠 범위를 가지지만, 커뮤니티 보고와 모델 카드에서 제어하기 어렵다고 설명됩니다(각 카드를 확인하십시오). 무검열 콘텐츠와 품질 산문 모두 필요한 픽션의 경우, 편집부 관점에서 Hermes 3가 합리적인 출발점입니다.',
           },
         ],
         items: [
-          '참고: 이전 무검열 파인튜닝들 — Midnight Miqu(Miqu-70B 기반), Wizard-LM Uncensored, Mythomax — 은 2024년 선두였지만 품질 및 지시 따르기 메트릭에서 2026년에 Hermes 3와 Dolphin 3.0에 의해 추월되었습니다. 더 오래된 기사에서 추천된 것을 발견한다면, 현재 동등품은 Hermes 3(선택적 무검열용)와 Dolphin 3.0(더 넓은 범위용)입니다.',
+          '참고: 편집부 관점에서, Midnight Miqu(Miqu-70B 기반), Wizard-LM Uncensored, Mythomax와 같은 이전 커뮤니티 파인튜닝은 Hermes 3와 Dolphin 3.0 같은 최신 릴리스로 대체된 부분이 많습니다. 현재 동작은 각 모델 카드에서 확인하십시오. 더 오래된 기사에서 추천된 것을 발견한다면, 현재 동등품은 Hermes 3(선택적 무검열용)와 Dolphin 3.0(더 넓은 범위용)입니다.',
         ],
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ko.webp',
-          imageCaption: 'Hermes 3는 지시 품질과 무검열 범위의 균형이 가장 좋음 — 완전 절제 모델은 더 빨리 벗어나고 문장 품질도 낮음.',
+          imageCaption: '편집부 관점에서 Hermes 3는 지시 품질과 무검열 범위의 균형이 좋습니다. 현재 동작은 모델 카드에서 확인하십시오.',
         },
       rankedModels: {
         id: 'ranked-models',
@@ -3223,7 +3214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**SillyTavern 연결:** API 설정에서 "OpenAI 호환"을 선택하고 기본 URL을 `http://localhost:11434/v1`(Ollama) 또는 `http://localhost:1234/v1`(LM Studio)로 가리키십시오. API 키 필드에 임의의 문자열을 입력하십시오(필드에서 필요하지만 로컬에서 검증되지 않음). 단계별 설정 가이드: [SillyTavern 리뷰](/ko/local-llms/sillytavern-review) · [Open WebUI 리뷰](/ko/local-llms/open-webui-review).',
           '**Agnai 연결:** 동일한 OpenAI 호환 엔드포인트; 어댑터 설정에 로컬 URL 입력. SillyTavern 설정과 동일하게 작동합니다.',
           '**모델 전환:** Ollama에서 `ollama run [모델명]`으로 표준 모델과 무검열 모델 사이를 전환합니다 — 여러 모델이 동시에 로드될 수 있으며 서버를 재시작하지 않고 세션별로 전환할 수 있습니다.',
-          '**데스크톱 프런트엔드:** [Locally Uncensored](/ko/power-local-llm/locally-uncensored-review)는 Ollama와 LM Studio를 감지하고 이미지·영상 생성을 추가하는 무료 데스크톱 앱입니다.',
+          '**데스크톱 프런트엔드:** [Locally Uncensored](/ko/power-local-llm/locally-uncensored-review)는 Ollama와 LM Studio를 감지하고 이미지·영상 생성을 추가하는 데스크톱 앱입니다(마지막 업데이트 시점에는 무료였으며, 제공업체 페이지에서 확인하십시오).',
         ],
         callouts: [
           {
@@ -3290,7 +3281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: '흔한 실수',
         items: [
-          '**가장 공격적인 무검열 모델을 기본으로 사용하는 것.** 완전히 제거된 모델(Wizard-Uncensored, Erebus)은 복잡한 장면에서 가장 약한 지시 따르기를 가지고 있습니다. Hermes 3가 픽션 품질을 위한 더 나은 절충점입니다.',
+          '**가장 공격적인 무검열 모델을 기본으로 사용하는 것.** Wizard-Uncensored, Erebus와 같이 더 공격적인 파인튜닝은 커뮤니티 보고와 모델 카드에 따르면 복잡한 장면에서 제어하기 어렵다고 합니다(각 카드를 확인하십시오). 픽션에는 Hermes 3가 합리적인 기본 선택입니다.',
           '**표준 모델이 생성할 콘텐츠에 무검열 모델 사용하기.** 도덕적 복잡성, 어두운 심리, 폭력, 문학적 산문의 성인 테마는 무검열 파인튜닝을 거의 필요로 하지 않습니다. 전환하기 전에 정확히 무엇이 필요한지 파악하십시오.',
           '**로컬 생성을 법적으로 맥락이 없는 구역으로 취급하기.** 클라우드 정책 적용의 부재는 법의 부재를 의미하지 않습니다. 배포, 실제 인물, 미성년자에 대한 저작 책임은 관계없이 적용됩니다.',
           '**단어 제한을 지정하지 않기.** 무검열 모델은 어두운 콘텐츠를 다른 모델과 마찬가지로 공간을 채우기 위해 생성합니다. 픽션 템플릿과 동일한 단어 제한 제약을 사용하십시오.',
@@ -3304,7 +3295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hermes 3 모델 카드 및 파인튜닝 방법론 — [Nous Research](https://nousresearch.com)',
           'Dolphin 3.0 Mistral 기술 문서 — [Cognitive Computations / Eric Hartford](https://huggingface.co/cognitivecomputations)',
           'RLHF 기법 및 정렬 개요 — [Anthropic Research](https://anthropic.com/research)',
-          'EU AI Act 제5조 — 미성년자 포함 콘텐츠를 포함한 금지된 AI 관행 — [EUR-Lex](https://eur-lex.europa.eu)',
+          'EU 지침 2011/93/EU(아동 성적 학대 퇴치) 및 각국 형법(예: 독일 §184b StGB) — [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2011/93/oj)',
           'NCII(비동의적 친밀한 이미지) — 법적 프레임워크 개요 — [Cyber Civil Rights Initiative](https://cybercivilrights.org)',
         ],
       },
@@ -3314,11 +3305,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '무검열 로컬 LLM 실행이 합법적입니까?',
-            a: '무검열 로컬 LLM 실행은 대부분의 관할권에서 합법적입니다 — 오픈 소스 AI 소프트웨어 소유를 금지하는 법률은 없습니다. 생성하고 배포하는 것은 다른 자체 저작 콘텐츠와 동일한 법률의 적용을 받습니다: 음란물 법, NCII 법, 명예훼손 법, 미성년자 포함 콘텐츠에 관한 법률. 실행이 합법적이라는 것이 제한 없이 게시하거나 공유하거나 배포하는 것이 합법적임을 의미하지 않습니다.',
+            a: '무검열 로컬 LLM 실행은 대부분의 관할권에서 합법적입니다 — 오픈 웨이트 AI 모델 소유를 일반적으로 금지하는 법률은 없습니다. 생성하고 배포하는 것은 다른 자체 저작 콘텐츠와 동일한 법률의 적용을 받습니다: 음란물 법, NCII 법, 명예훼손 법, 미성년자 포함 콘텐츠에 관한 법률. 실행이 합법적이라는 것이 제한 없이 게시하거나 공유하거나 배포하는 것이 합법적임을 의미하지 않습니다.',
           },
           {
             q: 'Hermes 3와 Dolphin 3.0의 차이는 무엇입니까?',
-            a: 'Hermes 3(Nous Research)는 선택적으로 무검열됩니다 — 성인 콘텐츠에 대한 거부를 줄이면서 극단적 범주에 대한 일부 장벽을 유지합니다. 지시 따르기는 기본 모델인 Llama 3.1에 가까운 수준으로 우수합니다. Dolphin 3.0(Cognitive Computations)은 더 넓은 콘텐츠 범위에서 더 광범위하게 무검열되지만, 여러 제약이 있는 복잡한 장면에서 지시 따르기가 약간 더 약합니다. Hermes 3는 산문 품질이 중요한 픽션의 경우 최선의 기본 선택이고; Dolphin 3.0은 16–24GB 시스템에서 가장 넓은 콘텐츠 범위가 필요할 때 최선의 선택입니다.',
+            a: 'Hermes 3(Nous Research)는 선택적으로 무검열됩니다 — 성인 콘텐츠에 대한 거부를 줄이면서 극단적 범주에 대한 일부 장벽을 유지합니다. 지시 따르기는 기본 모델인 Llama 3.1에 가까운 수준으로 우수합니다. Dolphin 3.0(Cognitive Computations)은 더 넓은 콘텐츠 범위에서 더 광범위하게 무검열되지만, 편집부 관점에서는 여러 제약이 있는 복잡한 프롬프트를 따르는 데 다소 약합니다. 이는 편집 판단이지 측정 결과가 아닙니다. Hermes 3는 산문 품질이 중요한 픽션의 경우 더 나은 기본 선택이고, Dolphin 3.0은 16–24GB 시스템에서 가장 넓은 콘텐츠 범위가 필요할 때 더 나은 선택입니다.',
           },
           {
             q: '어두운 픽션을 쓰기 위해 무검열 모델이 필요합니까?',
@@ -3334,11 +3325,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬에서 생성한 콘텐츠는 어떻게 됩니까?',
-            a: '자동으로는 아무것도 일어나지 않습니다. 로컬에서 생성된 콘텐츠는 서버로 전송되지 않고, 클라우드 서비스에 의해 기록되지 않으며, 모델 훈련에 사용되지 않습니다. 기기에서만 존재하며, 앱의 로컬 저장소(채팅 기록 파일, 캐릭터 카드 등)에 저장됩니다. 저장, 삭제, 공유를 제어합니다. 이것이 클라우드 대안에 비해 로컬 무검열 생성의 주요 구조적 프라이버시 이점입니다.',
+            a: '자동으로는 아무것도 일어나지 않습니다. 모델 자체는 로컬에서 생성된 콘텐츠를 서버로 전송하지 않으며, 어떤 클라우드 서비스도 이를 기록하거나 모델 훈련에 사용하지 않습니다. 다만 사용 중인 런타임이나 프런트엔드는 비활성화하지 않는 한 업데이트를 확인하거나 텔레메트리를 전송할 수 있으므로 각 도구의 설정을 확인하십시오. 기기에서만 존재하며, 앱의 로컬 저장소(채팅 기록 파일, 캐릭터 카드 등)에 저장됩니다. 저장, 삭제, 공유를 제어합니다. 이것이 클라우드 대안에 비해 로컬 무검열 생성의 주요 구조적 프라이버시 이점입니다.',
           },
           {
             q: '같은 글쓰기 프로젝트에서 무검열 모델과 표준 모델을 혼합할 수 있습니까?',
-            a: '네, 이것이 권장 워크플로우입니다. 대부분의 산문에는 표준 모델(Llama 3.3 70B, Qwen3 32B)을 사용하십시오 — 표준 모델은 대부분의 어두운 콘텐츠에 대해 고품질 문학적 산문을 생성합니다. 표준 모델이 거부하는 콘텐츠가 필요한 특정 장면을 위해 Hermes 3나 Dolphin 3.0으로 전환하십시오. 동일한 프롬프트 템플릿이 두 모델 모두에서 작동합니다; 산문 스타일은 장면별 혼합이 출력에서 감지되지 않을 만큼 충분히 일관됩니다.',
+            a: '네, 이것이 권장 워크플로우입니다. 대부분의 산문에는 표준 모델(Llama 3.3 70B, Qwen3 32B)을 사용하십시오 — 표준 모델은 대부분의 어두운 콘텐츠에 대해 고품질 문학적 산문을 생성합니다. 표준 모델이 거부하는 콘텐츠가 필요한 특정 장면을 위해 Hermes 3나 Dolphin 3.0으로 전환하십시오. 동일한 프롬프트 템플릿이 두 모델 모두에서 작동합니다; 산문 스타일은 대체로 장면별 혼합이 출력에서 알아채기 어려울 만큼 일관됩니다.',
           },
           {
             q: '무검열 모델로 콘텐츠 생성이 저작권에 영향을 미칩니까?',
@@ -3346,7 +3337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '무검열 파인튜닝이 일반 지식을 잃습니까?',
-            a: '특정 영역에서는 미미하게. 무검열화 파인튜닝은 일반적으로 사실 검색, 수학, 코딩 벤치마크에서 기본 모델에서 약간 이탈할 수 있는 전체 정밀도 재훈련 단계입니다. 픽션 글쓰기 작업의 경우 출력 품질에서 감지할 수 없습니다. 픽션과 기술 작업(연구 노트, 코드 검토) 모두에 같은 모델이 필요한 경우, 표준 버전과 무검열 버전을 모두 설치하고 작업에 따라 전환하십시오. Hermes 3는 완전히 제거된 모델보다 일반적인 능력을 더 잘 유지합니다.',
+            a: '특정 영역에서는 미미하게. 무검열화 파인튜닝은 기본 모델 위에서 재훈련을 하는 경우가 많고 abliteration은 재훈련 없이 가중치를 편집하지만, 두 방식 모두 사실 검색, 수학, 코딩 벤치마크에서 기본 모델에서 약간 이탈할 수 있습니다. 대부분의 픽션 글쓰기 작업에서 작가들은 출력 품질 차이를 거의 느끼지 못한다고 보고하지만, 이는 모델과 프롬프트에 따라 다릅니다. 픽션과 기술 작업(연구 노트, 코드 검토) 모두에 같은 모델이 필요한 경우, 표준 버전과 무검열 버전을 모두 설치하고 작업에 따라 전환하십시오. 커뮤니티 보고에 따르면 Hermes 3는 완전히 제거된 모델보다 일반적인 능력을 더 잘 유지합니다.',
           },
           {
             q: '이 모델들은 모니터링되거나 익명입니까?',
@@ -3354,7 +3345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '콘텐츠 제한이 없는 로컬 LLM은 어떤 것입니까?',
-            a: '이 글에서 다루는 무검열 및 "abliterated" 파인튜닝 모델 — Hermes 3와 Dolphin 3.0을 포함 — 은 거부 레이어를 학습을 통해 제거했기 때문에 자체 콘텐츠 정책을 갖고 있지 않습니다. 이것이 로컬 모델과 호스팅형 모델의 실질적인 차이입니다: 클라우드 제공업체는 모든 요청에 약관을 적용하지만, 자신의 기기에서 실행되는 무제한 모델은 중간에 개입하는 제공업체가 없고 추론 시점에 어떤 검열도 적용되지 않습니다. 따라서 NSFW와 노골적인 픽션이 차단되지 않습니다. 변하지 않는 것은 거주 지역의 법률과 공개에 따르는 책임입니다 — 콘텐츠 정책이 없다는 것이 한계가 없다는 것을 의미하지는 않으며, 그 경계가 어디에 있는지는 아래 윤리 섹션에서 다룹니다.',
+            a: 'Hermes 3, Dolphin 3.0과 같이 조정 가능한 파인튜닝은 정렬을 시스템 프롬프트에 맡기고, "abliterated" 릴리스는 거부 동작이 제거되어 있어 내장된 콘텐츠 정책을 거의 또는 전혀 적용하지 않습니다. 이것이 로컬 모델과 호스팅형 모델의 실질적인 차이입니다: 클라우드 제공업체는 모든 요청에 약관을 적용하지만, 자신의 기기에서 실행되는 무제한 모델은 중간에 개입하는 제공업체가 없고 추론 시점에 어떤 검열도 적용되지 않습니다. 따라서 NSFW와 노골적인 픽션이 차단되지 않습니다. 변하지 않는 것은 거주 지역의 법률과 공개에 따르는 책임입니다 — 콘텐츠 정책이 없다는 것이 한계가 없다는 것을 의미하지는 않으며, 그 경계가 어디에 있는지는 아래 윤리 섹션에서 다룹니다.',
           },
           {
             q: '가장 좋은 무검열 로컬 LLM은 무엇인가요?',
@@ -3505,7 +3496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modelos padrão com ajuste de instruções lidam com a maior parte do conteúdo literário adulto com bons prompts.** Violência, complexidade moral, psicologia sombria e temas adultos em prosa literária raramente exigem um fine-tune sem censura. O que eles recusam é conteúdo sexual explícito e descrições detalhadas de dano no mundo real. Saiba em qual categoria sua obra se enquadra antes de trocar de modelo.',
           '**Rodar em local mantém seus prompts e as saídas na sua máquina: a inferência não chama nenhuma API na nuvem.** Nenhum termo de serviço de nuvem se aplica, e nenhum provedor registra o conteúdo nem o usa para treinamento. Confira as configurações de atualização e telemetria de cada ferramenta. Essa é a principal razão estrutural pela qual escritores usam modelos locais sem censura — privacidade somada à ausência de restrições de uso na ficção.',
           '**As responsabilidades éticas não desaparecem porque não há aplicação de ToS.** Escritores que distribuem ficção produzida com modelos sem censura carregam as mesmas responsabilidades legais que qualquer outro autor: leis sobre menores, pessoas reais, incitação e obscenidade específicas da jurisdição se aplicam independentemente do método de geração.',
-          '**O Dolphin 3.0 Mistral é a opção mais leve para máquinas de 16–24 GB.** Alcance de saída sem censura mais amplo que o Hermes 3, mas aderência a instruções mais fraca em cenas complexas. Adequado para ficção curta, exploração de prompts e teste de estilo.',
+          '**O Dolphin 3.0 Mistral é a opção mais leve para máquinas de 16–24 GB.** Alcance de saída sem censura mais amplo que o Hermes 3, mas, na nossa visão editorial, segue com menos confiabilidade prompts complexos com múltiplas restrições; é um juízo editorial, não uma medição. Adequado para ficção curta, exploração de prompts e teste de estilo.',
           '**O SillyTavern e o Agnai se conectam de forma limpa aos modelos sem censura do Ollama.** Aponte qualquer um dos frontends para o endpoint compatível com OpenAI do Ollama e selecione o modelo sem censura. Nenhuma configuração adicional é necessária.',
         ],
       },
@@ -3517,8 +3508,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Backends:** Ollama (principal), LM Studio (alternativa para configuração com GUI).',
           '**Hardware:** Hermes 3 70B em Q4 requer ~42 GB; Dolphin 3.0 8B roda em 8 GB; Dolphin 3.0 24B roda em ~16 GB.',
           '**Frontends:** SillyTavern, Agnai, RisuAI conectam-se todos aos modelos sem censura do Ollama via endpoint compatível com OpenAI.',
-          '**Privacidade:** tudo em local — sem chamadas de API em nuvem, sem registro, sem coleta de dados de treinamento.',
-          '**Limites éticos absolutos:** nenhum conteúdo sexual envolvendo menores (proibição absoluta), nenhuma representação sexual não consentida de pessoas reais identificáveis, nenhum conteúdo projetado para facilitar violência no mundo real.',
+          '**Privacidade:** a inferência roda em local e não faz chamadas de API em nuvem; o runtime e o frontend ainda podem verificar atualizações ou enviar telemetria, a menos que você os desative.',
+          '**Limites éticos absolutos:** nenhum conteúdo sexual envolvendo menores (proibido por lei em muitas jurisdições), nenhuma representação sexual não consentida de pessoas reais identificáveis, nenhum conteúdo projetado para facilitar violência no mundo real.',
           '**Distribuição:** o resultado que você publica carrega responsabilidade de autoria independentemente do método de geração.',
         ],
       },
@@ -3536,7 +3527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**O que é removido:** os comportamentos de recusa para categorias específicas de conteúdo (conteúdo sexual explícito, violência gráfica, conteúdo psicológico sombrio).',
           '**O que é preservado:** a aderência a instruções, a consistência dos personagens, a adesão à estrutura dos prompts, a qualidade linguística.',
-          '**Graus de remoção de censura:** o Hermes 3 está seletivamente sem censura (conteúdo adulto sim, mas preserva algumas barreiras para conteúdo extremo). A série Dolphin está mais amplamente sem censura. Modelos totalmente abliterados (Wizard-Uncensored, Erebus) têm a remoção de barreiras mais agressiva — e a aderência a instruções mais fraca para tarefas de ficção complexas.',
+          '**Graus de remoção de censura:** o Hermes 3 está seletivamente sem censura (conteúdo adulto sim, mas preserva algumas barreiras para conteúdo extremo). A série Dolphin está mais amplamente sem censura. Fine-tunes comunitários mais agressivos, como Wizard-Uncensored e Erebus, removem as barreiras de forma mais completa e, segundo relatos da comunidade e fichas dos modelos, são menos direcionáveis (confira cada ficha).',
           '**A qualidade do modelo base importa:** a remoção de censura degrada a qualidade das instruções se o modelo base for fraco. O Hermes 3 70B, baseado no Llama 3.1, preserva boa parte da forte aderência a instruções desse modelo base; o Dolphin 3.0 em 8B é limitado pela base menor.',
         ],
         snippetBlocks: [
@@ -3552,16 +3543,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       howWeTested: {
         id: 'how-we-tested',
-        title: 'Como testamos',
+        title: 'Como avaliamos',
         content:
-          'Os veredictos de modelos neste guia baseiam-se em um pequeno teste qualitativo — um indicador de direção, não um benchmark revisado por pares. Para um tema em que os leitores decidem se confiam em recomendações de modelos sobre um assunto sensível, a transparência sobre o método importa.',
+          'Os veredictos de modelos neste guia baseiam-se em capacidades documentadas pelos criadores, relatórios públicos e documentação de usuários, e não em testes práticos independentes da PromptQuorum. Para um tema em que os leitores decidem se confiam em recomendações de modelos sobre um assunto sensível, a transparência sobre o método importa.',
         items: [
-          '**Conjunto de prompts:** 10 prompts em 5 categorias — monólogo do vilão, cena de romance adulto, violência gráfica em ficção de guerra, narrador moralmente complexo, cena psicológica sombria (2 prompts por categoria).',
-          '**Execuções por modelo:** cada prompt executado 3 vezes por modelo.',
-          '**Taxa de recusa:** porcentagem de execuções em que o modelo recusou, redirecionou ou suavizou o conteúdo solicitado sem instrução.',
-          '**Medição de desvio:** porcentagem de execuções em que o modelo adicionou escalada não solicitada — extremidade gratuita além do que o prompt especificava.',
-          '**Backend:** Ollama 0.5+ com quantização Q4_K_M para todos os modelos.',
-          '**Restrição de honestidade:** pequeno teste qualitativo. Os resultados indicam diferenças de direção entre modelos, não uma medição numérica precisa. Trate os valores de Desvio para Extremos e Taxa de Recusa da tabela como julgamentos representativos.',
+          '**Material de origem:** fichas de modelo, documentação dos criadores e declarações públicas de capacidades da Nous Research (Hermes 3) e da Cognitive Computations (Dolphin 3.0).',
+          '**Classificação da taxa de recusa:** baseada em padrões de comportamento documentados publicamente e em declarações dos criadores dos modelos sobre o tratamento de conteúdo.',
+          '**Avaliação do desvio:** baseada em relatos de usuários, documentação dos modelos e descrições da abordagem de fine-tuning.',
+          '**Restrição de honestidade:** este é um guia informativo, não um benchmark. As classificações de Desvio para Extremos e Taxa de Recusa refletem padrões de comportamento documentados, não medições precisas. Verifique o comportamento nos seus próprios fluxos de trabalho.',
         ],
       },
       appropriateUse: {
@@ -3592,11 +3581,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Limites absolutos independentemente da configuração. Nenhuma configuração local elimina a responsabilidade legal ou ética por: (1) conteúdo sexual envolvendo menores — proibição absoluta por lei em praticamente todas as jurisdições; (2) representações sexuais não consentidas de pessoas reais identificáveis — isso constitui NCII (imagens íntimas não consensuais) independentemente do método de geração; (3) conteúdo projetado para facilitar violência no mundo real contra alvos específicos. Esses limites se aplicam quer seu modelo rode em local, em nuvem ou em uma máquina isolada da rede.',
+            text: 'Limites absolutos independentemente da configuração. Nenhuma configuração local elimina a responsabilidade legal ou ética por: (1) conteúdo sexual envolvendo menores — crime na Alemanha (p. ex. §184b StGB) e na França (art. 227-23 do Código Penal francês) e proibido em muitas outras jurisdições, inclusive com enquadramento fictício; os detalhes variam de país para país; (2) representações sexuais não consentidas de pessoas reais identificáveis — isso constitui NCII (imagens íntimas não consensuais) independentemente do método de geração; (3) conteúdo projetado para facilitar violência no mundo real contra alvos específicos. Esses limites se aplicam quer seu modelo rode em local, em nuvem ou em uma máquina isolada da rede.',
           },
         ],
         items: [
-          '**Conteúdo sexual envolvendo menores:** proibição legal absoluta em todas as principais jurisdições independentemente do enquadramento fictício ou do método de geração. Isso não é uma política do modelo — é a lei.',
+          '**Conteúdo sexual envolvendo menores:** crime na Alemanha (p. ex. §184b StGB) e na França (art. 227-23 do Código Penal francês) e proibido em muitas outras jurisdições, inclusive com enquadramento fictício; os detalhes variam de país para país. Isso não é uma política do modelo — é a lei.',
           '**Representações sexuais não consentidas de pessoas reais:** as leis sobre NCII se aplicam a conteúdo gerado por IA de pessoas reais identificáveis em um número crescente de jurisdições. "Gerado por IA" não é uma defesa.',
           '**Conteúdo projetado para facilitar dano real:** usar um enquadramento fictício para extrair informações ou conteúdo que permita diretamente violência ou dano no mundo real elimina a proteção fictícia.',
           '**Distribuição pública sem responsabilidade de autoria:** o conteúdo que você publica, distribui ou compartilha carrega responsabilidade de autoria. "Uma IA escreveu" não transfere essa responsabilidade.',
@@ -3608,25 +3597,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparação de modelos: opções sem censura para ficção',
         content:
           '**Nem todos os modelos sem censura são iguais — o grau de remoção de RLHF e a qualidade do modelo base importam para os casos de uso de escrita de ficção.**',
-        columns: ['Modelo', 'Base', 'VRAM (Q4)', 'Taxa de recusa', 'Qualidade de instruções', 'Desvio para extremos', 'Ideal para'],
+        columns: ['Modelo', 'Base', 'VRAM (Q4)', 'Taxa de recusa', 'Instruções (editorial)', 'Desvio para extremos', 'Ideal para'],
         rows: [
-          { 'Modelo': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'Base': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', 'Taxa de recusa': 'Seletiva', 'Qualidade de instruções': '★★★★★', 'Desvio para extremos': 'Baixo', 'Ideal para': 'Opção padrão para ficção séria — melhor aderência a instruções + capacidade sem censura' },
-          { 'Modelo': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Taxa de recusa': 'Ampla', 'Qualidade de instruções': '★★★★☆', 'Desvio para extremos': 'Baixo-moderado', 'Ideal para': 'Sistemas de 16–24 GB; conteúdo adulto em um alcance mais amplo' },
-          { 'Modelo': 'Dolphin 3.0 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Taxa de recusa': 'Ampla', 'Qualidade de instruções': '★★★☆☆', 'Desvio para extremos': 'Moderado', 'Ideal para': 'Sistemas com pouca VRAM; rascunhos curtos, teste de prompts' },
-          { 'Modelo': 'Hermes 3 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Taxa de recusa': 'Seletiva', 'Qualidade de instruções': '★★★☆☆', 'Desvio para extremos': 'Baixo', 'Ideal para': 'Recursos limitados; diálogos e cenas mais curtas' },
-          { 'Modelo': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Taxa de recusa': 'Limitada', 'Qualidade de instruções': '★★★★★', 'Desvio para extremos': 'Nenhum', 'Ideal para': 'Temas sombrios, complexidade moral, violência — sem precisar de conteúdo sexual explícito' },
+          { 'Modelo': 'Hermes 3 [Llama](https://ollama.com/library/hermes3) 3.1 70B', 'Base': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 GB', 'Taxa de recusa': 'Seletiva', 'Instruções (editorial)': '★★★★★', 'Desvio para extremos': 'Baixo', 'Ideal para': 'Opção padrão para ficção na nossa visão editorial — boa aderência a instruções segundo a ficha do modelo' },
+          { 'Modelo': 'Dolphin 3.0 [Mistral](https://ollama.com/library/mistral) 24B', 'Base': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', 'Taxa de recusa': 'Ampla', 'Instruções (editorial)': '★★★★☆', 'Desvio para extremos': 'Baixo-moderado', 'Ideal para': 'Sistemas de 16–24 GB; conteúdo adulto em um alcance mais amplo' },
+          { 'Modelo': 'Dolphin 3.0 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Taxa de recusa': 'Ampla', 'Instruções (editorial)': '★★★☆☆', 'Desvio para extremos': 'Moderado', 'Ideal para': 'Sistemas com pouca VRAM; rascunhos curtos, teste de prompts' },
+          { 'Modelo': 'Hermes 3 Llama 3.1 8B', 'Base': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 GB', 'Taxa de recusa': 'Seletiva', 'Instruções (editorial)': '★★★☆☆', 'Desvio para extremos': 'Baixo', 'Ideal para': 'Recursos limitados; diálogos e cenas mais curtas' },
+          { 'Modelo': 'Standard Llama 3.3 70B', 'Base': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', 'Taxa de recusa': 'Limitada', 'Instruções (editorial)': '★★★★★', 'Desvio para extremos': 'Nenhum', 'Ideal para': 'Temas sombrios, complexidade moral, violência — sem precisar de conteúdo sexual explícito' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Comece com o Hermes 3, não com o fine-tune sem censura mais agressivo. Modelos totalmente abliterados (Wizard-Uncensored, Erebus) têm o alcance de conteúdo mais amplo mas uma aderência a instruções perceptivelmente mais fraca em tarefas de ficção complexas — desviam-se das restrições mais rápido, produzem prosa de menor qualidade em gerações mais longas e mantêm a voz dos personagens com menos confiabilidade. Para ficção que exige tanto conteúdo sem censura quanto prosa de qualidade, o Hermes 3 é a melhor compensação.',
+            text: 'Comece com o Hermes 3, não com o fine-tune sem censura mais agressivo. Fine-tunes mais agressivos, como Wizard-Uncensored e Erebus, têm o alcance de conteúdo mais amplo, mas, segundo relatos da comunidade e fichas dos modelos, são menos direcionáveis (confira cada ficha). Para ficção que exige tanto conteúdo sem censura quanto prosa de qualidade, o Hermes 3 é, na nossa visão editorial, um ponto de partida razoável.',
           },
         ],
         items: [
-          'Nota: fine-tunes sem censura mais antigos — Midnight Miqu (baseado em Miqu-70B), Wizard-LM Uncensored, Mythomax — foram líderes em 2024 mas foram superados pelo Hermes 3 e pelo Dolphin 3.0 em 2026 em métricas de qualidade e de aderência a instruções. Se você os encontrar recomendados em artigos mais antigos, os equivalentes atuais são o Hermes 3 (para remoção de censura seletiva) e o Dolphin 3.0 (para alcance mais amplo).',
+          'Nota: na nossa visão editorial, fine-tunes comunitários mais antigos — Midnight Miqu (baseado em Miqu-70B), Wizard-LM Uncensored, Mythomax — foram em grande parte substituídos por lançamentos mais novos, como o Hermes 3 e o Dolphin 3.0; confira a ficha de cada modelo para ver o comportamento atual. Se você os encontrar recomendados em artigos mais antigos, os equivalentes atuais são o Hermes 3 (para remoção de censura seletiva) e o Dolphin 3.0 (para alcance mais amplo).',
         ],
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-pt.webp',
-          imageCaption: 'Hermes 3 tem o melhor equilíbrio entre qualidade de instrução e alcance sem censura — modelos totalmente ablacionados desviam mais rápido.',
+          imageCaption: 'Na nossa visão editorial, o Hermes 3 oferece um bom equilíbrio entre qualidade de instrução e alcance sem censura; confira a ficha do modelo para ver o comportamento atual.',
         },
       rankedModels: {
         id: 'ranked-models',
@@ -3705,7 +3694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Conexão do SillyTavern:** nas configurações de API, selecione "Compatível com OpenAI" e aponte a URL base para `http://localhost:11434/v1` (Ollama) ou `http://localhost:1234/v1` (LM Studio). Insira qualquer string como chave de API (exigida pelo campo mas não validada localmente). Guias de configuração passo a passo: [análise do SillyTavern](/pt/local-llms/sillytavern-review) · [análise do Open WebUI](/pt/local-llms/open-webui-review).',
           '**Conexão do Agnai:** mesmo endpoint compatível com OpenAI; insira a URL local nas configurações do adaptador. Funciona de forma idêntica à configuração do SillyTavern.',
           '**Troca de modelo:** alterne entre modelos padrão e sem censura no Ollama com `ollama run [nome-do-modelo]` — vários modelos podem ser carregados simultaneamente, e você pode trocar por sessão sem reiniciar o servidor.',
-          '**Interface de desktop:** [Locally Uncensored](/pt/power-local-llm/locally-uncensored-review) é um app de desktop gratuito que detecta o Ollama e o LM Studio e adiciona geração de imagens e vídeos.',
+          '**Interface de desktop:** [Locally Uncensored](/pt/power-local-llm/locally-uncensored-review) é um app de desktop (gratuito na última atualização; confira a página do fornecedor) que detecta o Ollama e o LM Studio e adiciona geração de imagens e vídeos.',
         ],
         callouts: [
           {
@@ -3772,7 +3761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Erros comuns',
         items: [
-          '**Recorrer por padrão ao modelo sem censura mais agressivo.** Modelos totalmente abliterados (Wizard-Uncensored, Erebus) têm a aderência a instruções mais fraca para cenas complexas. O Hermes 3 é uma melhor compensação para a qualidade da ficção.',
+          '**Recorrer por padrão ao modelo sem censura mais agressivo.** Fine-tunes mais agressivos, como Wizard-Uncensored e Erebus, são descritos em relatos da comunidade e em fichas dos modelos como menos direcionáveis em cenas complexas (confira cada ficha). O Hermes 3 é um padrão razoável para ficção.',
           '**Usar modelos sem censura para conteúdo que modelos padrão gerariam.** A complexidade moral, a psicologia sombria, a violência e os temas adultos em prosa literária raramente exigem um fine-tune sem censura. Saiba exatamente o que você precisa antes de trocar.',
           '**Tratar a geração local como uma zona legalmente livre de contexto.** A ausência de aplicação de políticas em nuvem não significa ausência de lei. As responsabilidades de autoria para distribuição, pessoas reais e menores se aplicam independentemente.',
           '**Não especificar limites de palavras.** Modelos sem censura enchem o conteúdo sombrio para ocupar espaço com a mesma facilidade que qualquer outro modelo. Use as mesmas restrições de limite de palavras dos modelos de ficção.',
@@ -3786,7 +3775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ficha do modelo Hermes 3 e metodologia de fine-tuning — [Nous Research](https://nousresearch.com)',
           'Documentação técnica do Dolphin 3.0 Mistral — [Cognitive Computations / Eric Hartford](https://huggingface.co/cognitivecomputations)',
           'Visão geral de técnicas de RLHF e alinhamento — [Anthropic Research](https://anthropic.com/research)',
-          'Artigo 5 da Lei de IA da UE — práticas de IA proibidas, incluindo conteúdo envolvendo menores — [EUR-Lex](https://eur-lex.europa.eu)',
+          'Diretiva 2011/93/UE relativa ao combate ao abuso sexual de crianças e direito penal nacional (por exemplo, §184b StGB na Alemanha) — [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2011/93/oj)',
           'NCII (imagens íntimas não consensuais) — visão geral do arcabouço legal — [Cyber Civil Rights Initiative](https://cybercivilrights.org)',
         ],
       },
@@ -3796,11 +3785,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'É legal executar LLMs locais sem censura?',
-            a: 'Executar um LLM local sem censura é legal na maioria das jurisdições — não existe nenhuma lei contra possuir software de IA de código aberto. O que você gera e distribui com ele está sujeito às mesmas leis que qualquer outro conteúdo de autoria própria: lei de obscenidade, lei de NCII, lei de difamação e leis sobre conteúdo envolvendo menores. Legal de executar não significa legal de publicar, compartilhar ou distribuir sem limite.',
+            a: 'Executar um LLM local sem censura é legal na maioria das jurisdições — não existe nenhuma lei geral contra possuir modelos de IA de pesos abertos. O que você gera e distribui com ele está sujeito às mesmas leis que qualquer outro conteúdo de autoria própria: lei de obscenidade, lei de NCII, lei de difamação e leis sobre conteúdo envolvendo menores. Legal de executar não significa legal de publicar, compartilhar ou distribuir sem limite.',
           },
           {
             q: 'Qual é a diferença entre o Hermes 3 e o Dolphin 3.0?',
-            a: 'O Hermes 3 (Nous Research) está seletivamente sem censura — reduz as recusas para conteúdo adulto enquanto preserva algumas barreiras para as categorias extremas. A aderência a instruções é excelente, próxima do modelo base Llama 3.1. O Dolphin 3.0 (Cognitive Computations) está mais amplamente sem censura em um alcance de conteúdo mais amplo, mas a aderência a instruções é ligeiramente mais fraca em cenas complexas com múltiplas restrições. O Hermes 3 é a melhor opção padrão para ficção em que a qualidade da prosa importa; o Dolphin 3.0 é a melhor opção quando você precisa do alcance de conteúdo mais amplo em um sistema de 16–24 GB.',
+            a: 'O Hermes 3 (Nous Research) está seletivamente sem censura — reduz as recusas para conteúdo adulto enquanto preserva algumas barreiras para as categorias extremas. A aderência a instruções é excelente, próxima do modelo base Llama 3.1. O Dolphin 3.0 (Cognitive Computations) está mais amplamente sem censura em um alcance de conteúdo mais amplo, mas, na nossa visão editorial, segue com menos confiabilidade prompts complexos com múltiplas restrições; é um juízo editorial, não uma medição. O Hermes 3 é a melhor opção padrão para ficção em que a qualidade da prosa importa; o Dolphin 3.0 é a melhor opção quando você precisa do alcance de conteúdo mais amplo em um sistema de 16–24 GB.',
           },
           {
             q: 'Preciso de um modelo sem censura para escrever ficção sombria?',
@@ -3816,11 +3805,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O que acontece com o conteúdo que eu gero localmente?',
-            a: 'Nada acontece com ele automaticamente. O conteúdo gerado localmente não é enviado a nenhum servidor, registrado por nenhum serviço em nuvem nem usado para o treinamento do modelo. Ele existe apenas no seu dispositivo, no armazenamento local do seu aplicativo (arquivos de histórico de chat, fichas de personagens, etc.). Você controla o que guarda, o que apaga e o que compartilha. Essa é a principal vantagem estrutural de privacidade da geração local sem censura frente às alternativas em nuvem.',
+            a: 'Nada acontece com ele automaticamente. O modelo em si não envia o conteúdo gerado localmente a nenhum servidor, e nenhum serviço em nuvem o registra nem o usa para o treinamento do modelo. O runtime ou o frontend que você usa ainda podem verificar atualizações ou enviar telemetria, a menos que você os desative; revise as configurações de cada ferramenta. Ele existe apenas no seu dispositivo, no armazenamento local do seu aplicativo (arquivos de histórico de chat, fichas de personagens, etc.). Você controla o que guarda, o que apaga e o que compartilha. Essa é a principal vantagem estrutural de privacidade da geração local sem censura frente às alternativas em nuvem.',
           },
           {
             q: 'Posso misturar modelos sem censura e padrão no mesmo projeto de escrita?',
-            a: 'Sim, e este é o fluxo de trabalho recomendado. Use um modelo padrão (Llama 3.3 70B, Qwen3 32B) para a maior parte da prosa — modelos padrão produzem prosa literária de alta qualidade para a maior parte do conteúdo sombrio. Troque para o Hermes 3 ou o Dolphin 3.0 em cenas específicas que exijam conteúdo que o modelo padrão recusa. Os mesmos modelos de prompts funcionam em ambos; o estilo da prosa é consistente o suficiente para que a mistura por cena não seja detectável no resultado.',
+            a: 'Sim, e este é o fluxo de trabalho recomendado. Use um modelo padrão (Llama 3.3 70B, Qwen3 32B) para a maior parte da prosa — modelos padrão produzem prosa literária de alta qualidade para a maior parte do conteúdo sombrio. Troque para o Hermes 3 ou o Dolphin 3.0 em cenas específicas que exijam conteúdo que o modelo padrão recusa. Os mesmos modelos de prompts funcionam em ambos; o estilo da prosa costuma ser consistente o suficiente para que a mistura por cena seja difícil de notar no resultado.',
           },
           {
             q: 'Gerar conteúdo com um modelo sem censura afeta o copyright?',
@@ -3828,7 +3817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Fine-tunes sem censura perdem conhecimento geral?',
-            a: 'Marginalmente, em áreas restritas. Fine-tunes de remoção de censura são tipicamente passes de retreinamento de precisão completa que podem desviar-se ligeiramente do modelo base em recuperação de fatos, matemática e benchmarks de programação. Para tarefas de escrita de ficção, isso é indetectável na qualidade do resultado. Se você precisa do mesmo modelo para ficção e trabalho técnico (notas de pesquisa, revisão de código), mantenha tanto a versão padrão quanto a sem censura instaladas e troque por tarefa. O Hermes 3 preserva a capacidade geral melhor que os modelos totalmente abliterados.',
+            a: 'Marginalmente, em áreas restritas. Fine-tunes de remoção de censura costumam ser passes de retreinamento sobre um modelo base, enquanto a abliteração edita os pesos sem retreinar; ambas as abordagens podem desviar-se ligeiramente do modelo base em recuperação de fatos, matemática e benchmarks de programação. Para a maioria das tarefas de escrita de ficção, os escritores relatam pouca diferença perceptível na qualidade do resultado, embora isso dependa do modelo e do prompt. Se você precisa do mesmo modelo para ficção e trabalho técnico (notas de pesquisa, revisão de código), mantenha tanto a versão padrão quanto a sem censura instaladas e troque por tarefa. Segundo relatos da comunidade, o Hermes 3 preserva a capacidade geral melhor que os modelos totalmente abliterados.',
           },
           {
             q: 'Esses modelos são monitorados ou anônimos?',
@@ -3836,7 +3825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais LLMs locais não têm restrições de conteúdo?',
-            a: 'Os fine-tunes sem censura e "abliterated" abordados aqui — incluindo o Hermes 3 e o Dolphin 3.0 — tiveram a camada de recusa removida por treinamento, e por isso não carregam nenhuma política de conteúdo própria. Essa é a diferença prática entre um modelo local e um hospedado: um provedor de nuvem aplica seus termos de serviço em cada requisição, enquanto um modelo sem restrições rodando na sua própria máquina não tem nenhum provedor no meio do caminho e não aplica censura nenhuma no momento da inferência. Conteúdo NSFW e ficção explícita, portanto, não são bloqueados. O que não muda é a lei do lugar onde você vive e a responsabilidade que acompanha a publicação — não ter política de conteúdo não é o mesmo que não ter limites, e a seção de ética abaixo mostra onde esses limites estão.',
+            a: 'Fine-tunes direcionáveis como o Hermes 3 e o Dolphin 3.0 deixam o alinhamento por conta do seu prompt de sistema, e as versões "abliterated" tiveram o comportamento de recusa removido, por isso aplicam pouca ou nenhuma política de conteúdo embutida. Essa é a diferença prática entre um modelo local e um hospedado: um provedor de nuvem aplica seus termos de serviço em cada requisição, enquanto um modelo sem restrições rodando na sua própria máquina não tem nenhum provedor no meio do caminho e não aplica censura nenhuma no momento da inferência. Conteúdo NSFW e ficção explícita, portanto, não são bloqueados. O que não muda é a lei do lugar onde você vive e a responsabilidade que acompanha a publicação — não ter política de conteúdo não é o mesmo que não ter limites, e a seção de ética abaixo mostra onde esses limites estão.',
           },
           {
             q: 'Qual é o melhor LLM local sem censura?',
@@ -3945,7 +3934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'أي نماذج LLM المحلية بدون قيود يجب أن يستخدمها كتّاب الخيال في 2026؟',
         answer:
-          'Hermes 3 Llama 3.1 هو خيارنا الافتراضي بين النماذج بدون قيود للخيال في 2026 — اتباع تعليمات قوي، تمييز جيد لأصوات الشخصيات، رفض عشوائي أقل دون النزعة العدوانية التي تنتجها بعض النسخ المعدَّلة الكاملة. Dolphin 3.0 Mistral هو البديل الأخف لأجهزة 16-24 جيجابايت. للكتّاب الذين يحتاجون محتوى مظلمًا أحيانًا بدلًا من ناتج مستمر بدون قيود، النماذج القياسية ذات الضبط بالتعليمات (Llama 3.3 70B، Qwen3 32B) مع موجّهات منظمة جيدًا تولّد معظم المحتوى الأدبي البالغ دون الحاجة إلى نسخة معدَّلة. الخط الأخلاقي الأساسي المطبّق بصرف النظر عن النموذج: لا محتوى يُشرك قاصرين في سياقات جنسية، لا تمثيلات جنسية غير موافق عليها لأشخاص حقيقيين محددين.',
+          'Hermes 3 Llama 3.1 هو خيارنا الافتراضي بين النماذج بدون قيود للخيال في 2026 — اتباع تعليمات قوي، تمييز جيد لأصوات الشخصيات، رفض عشوائي أقل دون النزعة العدوانية التي تنتجها بعض النسخ المعدَّلة الكاملة. Dolphin 3.0 Mistral هو البديل الأخف لأجهزة 16-24 جيجابايت. للكتّاب الذين يحتاجون محتوى مظلمًا أحيانًا بدلًا من ناتج مستمر بدون قيود، النماذج القياسية ذات الضبط بالتعليمات (Llama 3.3 70B، Qwen3 32B) مع موجّهات منظمة جيدًا تولّد معظم المحتوى الأدبي البالغ دون الحاجة إلى نسخة معدَّلة. الخط الأخلاقي الأساسي المطبّق بصرف النظر عن النموذج: لا محتوى يُشرك قاصرين في سياقات جنسية، لا تمثيلات جنسية غير موافق عليها لأشخاص حقيقيين محددين، ومراعاة متأنية قبل نشر الناتج علنًا.',
         bullets: [
           'Hermes 3 Llama 3.1 — خيارنا الافتراضي للخيال؛ اتباع تعليمات قوي، رفض عشوائي أقل.',
           'Dolphin 3.0 Mistral — خيار أخف لأجهزة 16-24 جيجابايت؛ نطاق بدون قيود أوسع من Hermes 3.',
@@ -3985,10 +3974,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**"بدون قيود" تعني أن النموذج خضع لضبط دقيق أقل في أمان RLHF، لا أنه لا توجد قيود.** النسخ المعدَّلة بدون قيود لا تزال تتبع تنسيق التعليمات وتحافظ على اتساق الشخصيات ويمكن توجيهها بالموجّهات. هي ليست أنظمة "كل شيء مسموح".',
           '**Hermes 3 Llama 3.1 هو خيارنا الافتراضي لكتّاب الخيال في 2026.** رفض عشوائي أقل، اتباع تعليمات قوي، تمييز جيد لأصوات الشخصيات. الخيار الصحيح للكتّاب الذين يريدون القدرة دون الناتج العدواني الذي تنتجه بعض النماذج المعدَّلة الكاملة.',
-          '**النماذج القياسية ذات الضبط بالتعليمات تتعامل مع معظم المحتوى الأدبي البالغ بموجّهات جيدة.** العنف والتعقيد الأخلاقي وعلم النفس المظلم والموضوعات البالغة في النثر الأدبي نادرًا ما تتطلب نسخة معدَّلة. ما ترفضه بشكل موثوق هو المحتوى الجنسي الصريح ومجموعة أضيق من السيناريوهات المتطرفة. حدد في أي فئة يقع عملك قبل التبديل.',
+          '**النماذج القياسية ذات الضبط بالتعليمات تتعامل مع معظم المحتوى الأدبي البالغ بموجّهات جيدة.** العنف والتعقيد الأخلاقي وعلم النفس المظلم والموضوعات البالغة في النثر الأدبي نادرًا ما تتطلب نسخة معدَّلة. ما ترفضه هو المحتوى الجنسي الصريح ومجموعة أضيق من السيناريوهات المتطرفة. حدد في أي فئة يقع عملك قبل التبديل.',
           '**التشغيل محليًا يُبقي موجّهاتك والمخرجات على جهازك: الاستدلال لا يستدعي أي واجهة API سحابية.** لا تسري أي شروط خدمة سحابية، ولا يسجّل أي مزوّد المحتوى ولا يستخدمه للتدريب. تحقق من إعدادات التحديث والتتبع في كل أداة. هذا هو السبب الهيكلي الرئيسي لاستخدام الكتّاب نماذج محلية بدون قيود — الخصوصية وعدم قيود الاستخدام في الخيال.',
           '**المسؤوليات الأخلاقية لا تختفي لأنه لا يوجد تطبيق لشروط الخدمة.** الكتّاب الذين يوزعون خيالًا منتجًا بنماذج بدون قيود يحملون نفس المسؤوليات القانونية كأي مؤلف آخر: قوانين القاصرين والأشخاص الحقيقيين والتحريض والفحش الخاص بالولاية القضائية تسري بصرف النظر عن طريقة التوليد.',
-          '**Dolphin 3.0 Mistral هو الخيار الأخف لأجهزة 16-24 جيجابايت.** نطاق ناتج أوسع بدون قيود من Hermes 3، لكن اتباع تعليمات أضعف في المشاهد المعقدة. مناسب للخيال القصير واستكشاف الموجّهات واختبار الأسلوب.',
+          '**Dolphin 3.0 Mistral هو الخيار الأخف لأجهزة 16-24 جيجابايت.** نطاق ناتج أوسع بدون قيود من Hermes 3، لكن، في رأينا التحريري، أقل اتباعًا للموجّهات المعقدة متعددة القيود؛ وهذا حكم تحريري وليس قياسًا. مناسب للخيال القصير واستكشاف الموجّهات واختبار الأسلوب.',
           '**SillyTavern و Agnai يتصلان بسلاسة مع نماذج Ollama بدون قيود.** وجّه أيًا من الواجهتين إلى نقطة النهاية المتوافقة مع OpenAI في Ollama واختر النموذج بدون قيود. لا إعداد إضافي مطلوب.',
         ],
       },
@@ -4000,8 +3989,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الخلفيات:** Ollama (رئيسي)، LM Studio (بديل للإعداد بواجهة رسومية).',
           '**الأجهزة:** Hermes 3 70B على Q4 يحتاج ~42 جيجابايت؛ Dolphin 3.0 8B يعمل على 8 جيجابايت؛ Dolphin 3.0 24B يعمل على ~16 جيجابايت.',
           '**الواجهات:** SillyTavern وAgnai وRisuAI تتصل جميعها بنماذج Ollama بدون قيود عبر نقطة النهاية المتوافقة مع OpenAI.',
-          '**الخصوصية:** كل شيء محلي — لا مكالمات API سحابية، لا سجلات، لا جمع بيانات تدريب.',
-          '**الحدود الأخلاقية المطلقة:** لا محتوى جنسيًا يُشرك قاصرين (حظر مطلق)، لا تمثيلات جنسية غير موافق عليها لأشخاص حقيقيين محددين، لا محتوى مُصمَّمًا لتسهيل عنف واقعي.',
+          '**الخصوصية:** يعمل الاستدلال محليًا ولا يستدعي أي واجهة API سحابية؛ لكن بيئة التشغيل والواجهة الأمامية قد تتحقق من التحديثات أو ترسل بيانات القياس عن بُعد ما لم تعطّلها.',
+          '**الحدود الأخلاقية المطلقة:** لا محتوى جنسيًا يُشرك قاصرين (محظور قانونًا في ولايات قضائية كثيرة)، لا تمثيلات جنسية غير موافق عليها لأشخاص حقيقيين محددين، لا محتوى مُصمَّمًا لتسهيل عنف واقعي.',
           '**التوزيع:** المحتوى الذي تنشره يحمل مسؤولية التأليف بصرف النظر عن طريقة التوليد.',
         ],
       },
@@ -4019,7 +4008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**ما يُزال:** سلوكيات الرفض لفئات محددة من المحتوى (المحتوى الجنسي الصريح، العنف الرسومي، المحتوى النفسي المظلم).',
           '**ما يبقى:** اتباع التعليمات، اتساق الشخصيات، الالتزام ببنية الموجّهات، الجودة اللغوية.',
-          '**درجات إزالة القيود:** Hermes 3 محدود إزالة القيود (المحتوى البالغ نعم، لكن يحتفظ ببعض الحواجز للمحتوى المتطرف). سلسلة Dolphin أوسع إزالة للقيود. النماذج المُعَدَّلة كليًا (Wizard-Uncensored، Erebus) لديها أعدوانية إزالة حواجز — واتباع تعليمات أضعف لمهام الخيال المعقدة.',
+          '**درجات إزالة القيود:** Hermes 3 محدود إزالة القيود (المحتوى البالغ نعم، لكن يحتفظ ببعض الحواجز للمحتوى المتطرف). سلسلة Dolphin أوسع إزالة للقيود. أما التعديلات المجتمعية الأكثر عدوانية مثل Wizard-Uncensored وErebus فتزيل الحواجز بأقصى درجة، وتُوصف في تقارير المجتمع وبطاقات النماذج بأنها أقل انقيادًا للتوجيه (راجع كل بطاقة).',
           '**جودة النموذج الأساسي تهم:** إزالة القيود تُدهور جودة التعليمات إذا كان النموذج الأساسي ضعيفًا. Hermes 3 70B المبني على Llama 3.1 يحتفظ بجزء كبير من اتباع التعليمات القوي لذلك النموذج الأساسي؛ Dolphin 3.0 بحجم 8B مُقيَّد بالأساس الأصغر.',
         ],
         snippetBlocks: [
@@ -4035,16 +4024,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       howWeTested: {
         id: 'how-we-tested',
-        title: 'كيف اختبرنا',
+        title: 'كيف قيّمنا',
         content:
-          'الأحكام على النماذج في هذا الدليل مستندة إلى اختبار نوعي صغير — مؤشر اتجاه، لا معيار محكَّم بالأقران. لموضوع يقرر فيه القراء الوثوق بتوصيات النماذج في مسألة حساسة، الشفافية حول المنهج مهمة.',
+          'تستند الأحكام على النماذج في هذا الدليل إلى القدرات الموثقة لدى مطوّريها والتقارير العامة ووثائق المستخدمين، لا إلى اختبارات عملية مستقلة أجرتها PromptQuorum. لموضوع يقرر فيه القراء الوثوق بتوصيات النماذج في مسألة حساسة، الشفافية حول المنهج مهمة.',
         items: [
-          '**مجموعة الموجّهات:** 10 موجّهات في 5 فئات — مونولوج الشرير، مشهد رومانسي بالغ، عنف رسومي في خيال حرب، راوٍ أخلاقيًا غير موثوق، مشهد نفسي مظلم (موجّهان لكل فئة).',
-          '**تشغيلات لكل نموذج:** كل موجّه يُشغَّل 3 مرات لكل نموذج.',
-          '**معدل الرفض:** نسبة التشغيلات التي رفض فيها النموذج أو أعاد توجيه أو لطّف المحتوى المطلوب دون تعليمات.',
-          '**قياس الانجراف:** نسبة التشغيلات التي أضاف فيها النموذج تصعيدًا غير مطلوب — تطرف مجاني يتجاوز ما حدده الموجّه.',
-          '**الخلفية:** Ollama 0.5+ مع تكميم Q4_K_M لجميع النماذج.',
-          '**قيد الأمانة:** اختبار نوعي صغير. النتائج تشير إلى اختلافات الاتجاه بين النماذج، لا قياس عددي دقيق. عامل قيم الانجراف نحو التطرف ومعدل الرفض في الجدول كأحكام تمثيلية.',
+          '**مصادر المعلومات:** بطاقات النماذج ووثائق المطوّرين وبيانات القدرات المنشورة من Nous Research (Hermes 3) وCognitive Computations (Dolphin 3.0).',
+          '**تصنيف معدل الرفض:** يستند إلى أنماط السلوك الموثقة علنًا وإلى تصريحات مطوّري النماذج حول معالجة المحتوى.',
+          '**تقييم الانجراف:** يستند إلى تقارير المستخدمين ووثائق النماذج ووصف أسلوب الضبط الدقيق.',
+          '**قيد الأمانة:** هذا دليل معلوماتي وليس اختبار أداء. تصنيفات الانجراف نحو التطرف ومعدل الرفض تعكس أنماط سلوك موثقة لا قياسات دقيقة. تحقق من السلوك في سير عملك الخاص.',
         ],
       },
       appropriateUse: {
@@ -4075,11 +4062,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'حدود مطلقة بصرف النظر عن الإعداد. لا إعداد محلي يلغي المسؤولية القانونية أو الأخلاقية عن: (1) المحتوى الجنسي الذي يُشرك قاصرين — حظر مطلق بموجب القانون في كل الولايات القضائية تقريبًا؛ (2) التمثيلات الجنسية غير الموافق عليها لأشخاص حقيقيين محددين — هذا يشكّل NCII (صور حميمة غير موافق عليها) بصرف النظر عن طريقة التوليد؛ (3) المحتوى المُصمَّم لتسهيل عنف واقعي ضد أهداف محددة. هذه الحدود تسري سواء عمل نموذجك محليًا أو سحابيًا أو على جهاز معزول.',
+            text: 'حدود مطلقة بصرف النظر عن الإعداد. لا إعداد محلي يلغي المسؤولية القانونية أو الأخلاقية عن: (1) المحتوى الجنسي الذي يُشرك قاصرين — جريمة في ألمانيا (مثل §184b StGB) وفي فرنسا (المادة 227-23 من قانون العقوبات الفرنسي)، ومحظور في ولايات قضائية كثيرة أخرى، بما في ذلك مع الإطار الخيالي؛ وتختلف التفاصيل من بلد إلى آخر؛ (2) التمثيلات الجنسية غير الموافق عليها لأشخاص حقيقيين محددين — هذا يشكّل NCII (صور حميمة غير موافق عليها) بصرف النظر عن طريقة التوليد؛ (3) المحتوى المُصمَّم لتسهيل عنف واقعي ضد أهداف محددة. هذه الحدود تسري سواء عمل نموذجك محليًا أو سحابيًا أو على جهاز معزول.',
           },
         ],
         items: [
-          '**المحتوى الجنسي الذي يُشرك قاصرين:** حظر قانوني مطلق في جميع الولايات القضائية الرئيسية، بصرف النظر عن الإطار الخيالي أو طريقة التوليد. هذا ليس سياسة نموذج — هذا القانون.',
+          '**المحتوى الجنسي الذي يُشرك قاصرين:** جريمة في ألمانيا (مثل §184b StGB) وفي فرنسا (المادة 227-23 من قانون العقوبات الفرنسي)، ومحظور في ولايات قضائية كثيرة أخرى، بما في ذلك مع الإطار الخيالي؛ وتختلف التفاصيل من بلد إلى آخر. هذا ليس سياسة نموذج — هذا القانون.',
           '**التمثيلات الجنسية غير الموافق عليها لأشخاص حقيقيين:** قوانين NCII تسري على المحتوى المولَّد بالذكاء الاصطناعي لأشخاص حقيقيين محددين في عدد متزايد من الولايات القضائية. "ولّده الذكاء الاصطناعي" ليس دفاعًا.',
           '**المحتوى المُصمَّم لتسهيل ضرر واقعي:** استخدام إطار خيالي لاستخراج معلومات أو محتوى يُتيح مباشرةً عنفًا أو ضررًا واقعيًا يزيل الحماية الخيالية.',
           '**التوزيع العام دون مسؤولية التأليف:** المحتوى الذي تنشره أو توزعه أو تشاركه يحمل مسؤولية التأليف. "ذكاء اصطناعي ولّده" لا تنقل تلك المسؤولية.',
@@ -4091,25 +4078,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'مقارنة النماذج: الخيارات بدون قيود للخيال',
         content:
           '**ليست جميع النماذج بدون قيود متساوية — درجة إزالة RLHF وجودة النموذج الأساسي تهمان لحالات استخدام كتابة الخيال.**',
-        columns: ['النموذج', 'الأساس', 'VRAM (Q4)', 'معدل الرفض', 'جودة التعليمات', 'الانجراف للتطرف', 'الأفضل لـ'],
+        columns: ['النموذج', 'الأساس', 'VRAM (Q4)', 'معدل الرفض', 'التعليمات (تقييم تحريري)', 'الانجراف للتطرف', 'الأفضل لـ'],
         rows: [
-          { 'النموذج': 'Hermes 3 Llama 3.1 70B', 'الأساس': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 جيجابايت', 'معدل الرفض': 'انتقائي', 'جودة التعليمات': '★★★★★', 'الانجراف للتطرف': 'منخفض', 'الأفضل لـ': 'الخيار الافتراضي للخيال الجدي — أفضل اتباع تعليمات + قدرة بدون قيود' },
-          { 'النموذج': 'Dolphin 3.0 Mistral 24B', 'الأساس': 'Mistral 24B', 'VRAM (Q4)': '~16 جيجابايت', 'معدل الرفض': 'واسع', 'جودة التعليمات': '★★★★☆', 'الانجراف للتطرف': 'منخفض-متوسط', 'الأفضل لـ': 'أجهزة 16-24 جيجابايت؛ محتوى بالغ بنطاق أوسع' },
-          { 'النموذج': 'Dolphin 3.0 Llama 3.1 8B', 'الأساس': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 جيجابايت', 'معدل الرفض': 'واسع', 'جودة التعليمات': '★★★☆☆', 'الانجراف للتطرف': 'متوسط', 'الأفضل لـ': 'أجهزة بـ VRAM محدودة؛ مسودات قصيرة واختبار موجّهات' },
-          { 'النموذج': 'Hermes 3 Llama 3.1 8B', 'الأساس': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 جيجابايت', 'معدل الرفض': 'انتقائي', 'جودة التعليمات': '★★★☆☆', 'الانجراف للتطرف': 'منخفض', 'الأفضل لـ': 'موارد محدودة؛ حوارات ومشاهد أقصر' },
-          { 'النموذج': 'Standard Llama 3.3 70B', 'الأساس': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 جيجابايت', 'معدل الرفض': 'محدود', 'جودة التعليمات': '★★★★★', 'الانجراف للتطرف': 'لا شيء', 'الأفضل لـ': 'الموضوعات المظلمة والتعقيد الأخلاقي والعنف — دون الحاجة لمحتوى جنسي صريح' },
+          { 'النموذج': 'Hermes 3 Llama 3.1 70B', 'الأساس': 'Llama 3.1 70B', 'VRAM (Q4)': '~42 جيجابايت', 'معدل الرفض': 'انتقائي', 'التعليمات (تقييم تحريري)': '★★★★★', 'الانجراف للتطرف': 'منخفض', 'الأفضل لـ': 'الخيار الافتراضي للخيال من وجهة نظرنا التحريرية — اتباع تعليمات قوي بحسب بطاقة النموذج' },
+          { 'النموذج': 'Dolphin 3.0 Mistral 24B', 'الأساس': 'Mistral 24B', 'VRAM (Q4)': '~16 جيجابايت', 'معدل الرفض': 'واسع', 'التعليمات (تقييم تحريري)': '★★★★☆', 'الانجراف للتطرف': 'منخفض-متوسط', 'الأفضل لـ': 'أجهزة 16-24 جيجابايت؛ محتوى بالغ بنطاق أوسع' },
+          { 'النموذج': 'Dolphin 3.0 Llama 3.1 8B', 'الأساس': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 جيجابايت', 'معدل الرفض': 'واسع', 'التعليمات (تقييم تحريري)': '★★★☆☆', 'الانجراف للتطرف': 'متوسط', 'الأفضل لـ': 'أجهزة بـ VRAM محدودة؛ مسودات قصيرة واختبار موجّهات' },
+          { 'النموذج': 'Hermes 3 Llama 3.1 8B', 'الأساس': 'Llama 3.1 8B', 'VRAM (Q4)': '~5 جيجابايت', 'معدل الرفض': 'انتقائي', 'التعليمات (تقييم تحريري)': '★★★☆☆', 'الانجراف للتطرف': 'منخفض', 'الأفضل لـ': 'موارد محدودة؛ حوارات ومشاهد أقصر' },
+          { 'النموذج': 'Standard Llama 3.3 70B', 'الأساس': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 جيجابايت', 'معدل الرفض': 'محدود', 'التعليمات (تقييم تحريري)': '★★★★★', 'الانجراف للتطرف': 'لا شيء', 'الأفضل لـ': 'الموضوعات المظلمة والتعقيد الأخلاقي والعنف — دون الحاجة لمحتوى جنسي صريح' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'ابدأ بـ Hermes 3، لا بالنسخة المعدَّلة الأكثر عدوانية. النماذج المعدَّلة كليًا (Wizard-Uncensored، Erebus) لديها أوسع نطاق محتوى لكن اتباع تعليمات أضعف ملحوظًا في مهام الخيال المعقدة — تنجرف أسرع من القيود وتنتج نثرًا أقل جودةً في الأجيال الأطول وتحافظ على صوت الشخصيات بموثوقية أقل. للخيال الذي يتطلب محتوى بدون قيود ونثرًا عالي الجودة، Hermes 3 هو أفضل توازن.',
+            text: 'ابدأ بـ Hermes 3، لا بالنسخة المعدَّلة الأكثر عدوانية. التعديلات الأكثر عدوانية مثل Wizard-Uncensored وErebus لديها أوسع نطاق محتوى، لكنها تُوصف في تقارير المجتمع وبطاقات النماذج بأنها أقل انقيادًا للتوجيه (راجع كل بطاقة). للخيال الذي يتطلب محتوى بدون قيود ونثرًا عالي الجودة، يُعد Hermes 3 في رأينا التحريري نقطة انطلاق معقولة.',
           },
         ],
         items: [
-          'ملاحظة: النسخ المعدَّلة القديمة — Midnight Miqu (مبنية على Miqu-70B)، Wizard-LM Uncensored، Mythomax — كانت رائدة في 2024 لكن تجاوزها Hermes 3 و Dolphin 3.0 في 2026 في مقاييس الجودة واتباع التعليمات. إذا وجدتها موصى بها في مقالات أقدم، المكافئات الحالية هي Hermes 3 (لإزالة القيود الانتقائية) و Dolphin 3.0 (لنطاق أوسع).',
+          'ملاحظة: في رأينا التحريري، حلّت إصدارات أحدث مثل Hermes 3 وDolphin 3.0 إلى حد كبير محل التعديلات المجتمعية القديمة — Midnight Miqu (مبنية على Miqu-70B) وWizard-LM Uncensored وMythomax؛ راجع بطاقة كل نموذج لمعرفة سلوكه الحالي. إذا وجدتها موصى بها في مقالات أقدم، المكافئات الحالية هي Hermes 3 (لإزالة القيود الانتقائية) و Dolphin 3.0 (لنطاق أوسع).',
         ],
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ar.webp',
-          imageCaption: 'يوازن Hermes 3 بين جودة التعليمات والنطاق غير الخاضع للرقابة بشكل أفضل — النماذج المُستأصلة بالكامل تنحرف أسرع وتنتج نثرًا أضعف.',
+          imageCaption: 'في رأينا التحريري، يوازن Hermes 3 بشكل جيد بين جودة التعليمات والنطاق غير الخاضع للرقابة؛ راجع بطاقة النموذج لمعرفة سلوكه الحالي.',
         },
       rankedModels: {
         id: 'ranked-models',
@@ -4188,7 +4175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**توصيل SillyTavern:** في إعدادات الـ API، اختر "متوافق مع OpenAI" واضبط الـ URL الأساسية على `http://localhost:11434/v1` (Ollama) أو `http://localhost:1234/v1` (LM Studio). أدخل أي نص كمفتاح API (مطلوب في الحقل لكن غير مُتحقَّق منه محليًا). أدلة إعداد خطوة بخطوة: [مراجعة SillyTavern](/ar/local-llms/sillytavern-review) · [مراجعة Open WebUI](/ar/local-llms/open-webui-review).',
           '**توصيل Agnai:** نفس نقطة النهاية المتوافقة مع OpenAI؛ أدخل الـ URL المحلية في إعدادات المحوّل. تعمل بنفس طريقة إعداد SillyTavern.',
           '**التبديل بين النماذج:** بدّل بين النماذج القياسية وبدون القيود في Ollama مع `ollama run [اسم-النموذج]` — يمكن تحميل نماذج متعددة في آنٍ واحد والتبديل لكل جلسة دون إعادة تشغيل الخادم.',
-          '**واجهة سطح المكتب:** [Locally Uncensored](/ar/power-local-llm/locally-uncensored-review) تطبيق مجاني لسطح المكتب يكتشف Ollama وLM Studio ويضيف توليد الصور والفيديو.',
+          '**واجهة سطح المكتب:** [Locally Uncensored](/ar/power-local-llm/locally-uncensored-review) تطبيق لسطح المكتب (مجاني عند آخر تحديث؛ راجع صفحة المطوّر) يكتشف Ollama وLM Studio ويضيف توليد الصور والفيديو.',
         ],
         callouts: [
           {
@@ -4255,7 +4242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'الأخطاء الشائعة',
         items: [
-          '**التقصير الافتراضي نحو النموذج الأكثر عدوانية بدون قيود.** النماذج المعدَّلة كليًا (Wizard-Uncensored، Erebus) لديها أضعف اتباع تعليمات للمشاهد المعقدة. Hermes 3 توازن أفضل لجودة الخيال.',
+          '**التقصير الافتراضي نحو النموذج الأكثر عدوانية بدون قيود.** التعديلات الأكثر عدوانية مثل Wizard-Uncensored وErebus تُوصف في تقارير المجتمع وبطاقات النماذج بأنها أقل انقيادًا للتوجيه في المشاهد المعقدة (راجع كل بطاقة). Hermes 3 خيار افتراضي معقول للخيال.',
           '**استخدام النماذج بدون قيود لمحتوى ستولّده النماذج القياسية.** التعقيد الأخلاقي وعلم النفس المظلم والعنف والموضوعات البالغة في النثر الأدبي نادرًا ما تتطلب نسخة معدَّلة. حدد ما تحتاجه بالضبط قبل التبديل.',
           '**معاملة التوليد المحلي كمنطقة خالية قانونيًا.** غياب تطبيق السياسات السحابية لا يعني غياب القانون. مسؤوليات التأليف للتوزيع والأشخاص الحقيقيين والقاصرين تسري بصرف النظر.',
           '**عدم تحديد حدود الكلمات.** النماذج بدون قيود تملأ المحتوى المظلم لملء المساحة بنفس سهولة أي نموذج آخر. استخدم نفس قيود حدود الكلمات من قوالب الخيال.',
@@ -4269,7 +4256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'بطاقة نموذج Hermes 3 ومنهجية الضبط الدقيق — [Nous Research](https://nousresearch.com)',
           'الوثائق التقنية لـ Dolphin 3.0 Mistral — [Cognitive Computations / Eric Hartford](https://huggingface.co/cognitivecomputations)',
           'نظرة عامة على تقنيات RLHF والمحاذاة — [Anthropic Research](https://anthropic.com/research)',
-          'المادة 5 من قانون الذكاء الاصطناعي الأوروبي — الممارسات المحظورة بما فيها المحتوى الذي يُشرك القاصرين — [EUR-Lex](https://eur-lex.europa.eu)',
+          'التوجيه 2011/93/EU بشأن مكافحة الاعتداء الجنسي على الأطفال والقانون الجنائي الوطني (مثل §184b StGB في ألمانيا) — [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2011/93/oj)',
           'NCII (الصور الحميمة غير الموافق عليها) — نظرة عامة على الإطار القانوني — [Cyber Civil Rights Initiative](https://cybercivilrights.org)',
         ],
       },
@@ -4279,11 +4266,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل تشغيل نماذج LLM المحلية بدون قيود قانوني؟',
-            a: 'تشغيل نموذج LLM محلي بدون قيود قانوني في معظم الولايات القضائية — لا يوجد قانون ضد امتلاك برامج ذكاء اصطناعي مفتوحة المصدر. ما تولّده وتوزعه بها يخضع لنفس القوانين المطبَّقة على أي محتوى تأليف ذاتي: قانون الفحش وقانون NCII وقانون التشهير وقوانين المحتوى الذي يُشرك القاصرين. قانوني التشغيل لا يعني قانوني النشر والمشاركة والتوزيع بلا حدود.',
+            a: 'تشغيل نموذج LLM محلي بدون قيود قانوني في معظم الولايات القضائية — لا يوجد قانون عام يمنع امتلاك نماذج ذكاء اصطناعي مفتوحة الأوزان. ما تولّده وتوزعه بها يخضع لنفس القوانين المطبَّقة على أي محتوى تأليف ذاتي: قانون الفحش وقانون NCII وقانون التشهير وقوانين المحتوى الذي يُشرك القاصرين. قانوني التشغيل لا يعني قانوني النشر والمشاركة والتوزيع بلا حدود.',
           },
           {
             q: 'ما الفرق بين Hermes 3 و Dolphin 3.0؟',
-            a: 'Hermes 3 (Nous Research) محدود إزالة القيود — يخفض الرفض للمحتوى البالغ مع الاحتفاظ ببعض الحواجز للفئات المتطرفة. اتباع التعليمات ممتاز، قريب من نموذجه الأساسي Llama 3.1. Dolphin 3.0 (Cognitive Computations) أوسع إزالة للقيود على نطاق محتوى أوسع، لكن اتباع التعليمات أضعف قليلًا في المشاهد المعقدة ذات القيود المتعددة. Hermes 3 هو الخيار الافتراضي الأفضل للخيال الذي تهم فيه جودة النثر؛ Dolphin 3.0 هو الأفضل حين تحتاج أوسع نطاق محتوى على نظام 16-24 جيجابايت.',
+            a: 'Hermes 3 (Nous Research) محدود إزالة القيود — يخفض الرفض للمحتوى البالغ مع الاحتفاظ ببعض الحواجز للفئات المتطرفة. اتباع التعليمات ممتاز، قريب من نموذجه الأساسي Llama 3.1. Dolphin 3.0 (Cognitive Computations) أوسع إزالة للقيود على نطاق محتوى أوسع، لكن، في رأينا التحريري، أقل اتباعًا للموجّهات المعقدة متعددة القيود؛ وهذا حكم تحريري وليس قياسًا. Hermes 3 هو الخيار الافتراضي الأفضل للخيال الذي تهم فيه جودة النثر؛ Dolphin 3.0 هو الأفضل حين تحتاج أوسع نطاق محتوى على نظام 16-24 جيجابايت.',
           },
           {
             q: 'هل أحتاج نموذجًا بدون قيود لكتابة الخيال المظلم؟',
@@ -4299,11 +4286,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ماذا يحدث بالمحتوى الذي أولّده محليًا؟',
-            a: 'لا شيء يحدث تلقائيًا. المحتوى المولَّد محليًا لا يُرسَل إلى أي خادم، ولا يُسجَّله أي خدمة سحابية، ولا يُستخدم لتدريب النموذج. يوجد فقط على جهازك، في التخزين المحلي لتطبيقك (ملفات سجل الدردشة وبطاقات الشخصيات وما إلى ذلك). أنت تتحكم في ما تحتفظ به وما تحذفه وما تشاركه. هذه الميزة الهيكلية الرئيسية للخصوصية في التوليد المحلي بدون قيود مقابل البدائل السحابية.',
+            a: 'لا شيء يحدث تلقائيًا. النموذج نفسه لا يرسل المحتوى المولَّد محليًا إلى أي خادم، ولا تسجّله أي خدمة سحابية ولا تستخدمه لتدريب النموذج. غير أن بيئة التشغيل أو الواجهة الأمامية التي تستخدمها قد تتحقق من التحديثات أو ترسل بيانات القياس عن بُعد ما لم تعطّلها، فراجع إعدادات كل أداة. يوجد فقط على جهازك، في التخزين المحلي لتطبيقك (ملفات سجل الدردشة وبطاقات الشخصيات وما إلى ذلك). أنت تتحكم في ما تحتفظ به وما تحذفه وما تشاركه. هذه الميزة الهيكلية الرئيسية للخصوصية في التوليد المحلي بدون قيود مقابل البدائل السحابية.',
           },
           {
             q: 'هل يمكن مزج النماذج بدون قيود والقياسية في نفس مشروع الكتابة؟',
-            a: 'نعم، وهذا هو سير العمل الموصى به. استخدم نموذجًا قياسيًا (Llama 3.3 70B أو Qwen3 32B) لمعظم النثر — النماذج القياسية تنتج نثرًا أدبيًا عالي الجودة لمعظم المحتوى المظلم. بدّل إلى Hermes 3 أو Dolphin 3.0 للمشاهد المحددة التي تتطلب محتوى يرفضه النموذج القياسي. نفس قوالب الموجّهات تعمل في كليهما؛ أسلوب النثر متسق بما يكفي لعدم كشف الخلط لكل مشهد في الناتج.',
+            a: 'نعم، وهذا هو سير العمل الموصى به. استخدم نموذجًا قياسيًا (Llama 3.3 70B أو Qwen3 32B) لمعظم النثر — النماذج القياسية تنتج نثرًا أدبيًا عالي الجودة لمعظم المحتوى المظلم. بدّل إلى Hermes 3 أو Dolphin 3.0 للمشاهد المحددة التي تتطلب محتوى يرفضه النموذج القياسي. نفس قوالب الموجّهات تعمل في كليهما؛ أسلوب النثر متسق في الغالب بما يكفي ليصعب ملاحظة الخلط لكل مشهد في الناتج.',
           },
           {
             q: 'هل يؤثر توليد محتوى بنموذج بدون قيود على حق النشر؟',
@@ -4311,7 +4298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل تفقد النسخ المعدَّلة بدون قيود المعرفة العامة؟',
-            a: 'بشكل هامشي، في مجالات محدودة. النسخ المعدَّلة لإزالة القيود عادةً تكون جولات إعادة تدريب كاملة الدقة قد تنحرف قليلًا عن النموذج الأساسي في استرجاع الحقائق والرياضيات ومعايير البرمجة. لمهام كتابة الخيال، هذا غير محسوس في جودة الناتج. إذا احتجت نفس النموذج للخيال والعمل التقني (ملاحظات بحثية ومراجعة كود)، احتفظ بالنسختين القياسية وبدون القيود مُثبَّتتين وبدّل حسب المهمة. Hermes 3 يحافظ على القدرة العامة أفضل من النماذج المعدَّلة كليًا.',
+            a: 'بشكل هامشي، في مجالات محدودة. النسخ المعدَّلة لإزالة القيود كثيرًا ما تكون جولات إعادة تدريب فوق نموذج أساسي، بينما يعدّل abliteration الأوزان دون إعادة تدريب؛ وقد ينحرف كلا النهجين قليلًا عن النموذج الأساسي في استرجاع الحقائق والرياضيات ومعايير البرمجة. في معظم مهام كتابة الخيال، يذكر الكتّاب أن الفرق في جودة الناتج ضئيل وغير ظاهر غالبًا، وإن كان ذلك يعتمد على النموذج والموجّه. إذا احتجت نفس النموذج للخيال والعمل التقني (ملاحظات بحثية ومراجعة كود)، احتفظ بالنسختين القياسية وبدون القيود مُثبَّتتين وبدّل حسب المهمة. بحسب تقارير المجتمع، يحافظ Hermes 3 على القدرة العامة أفضل من النماذج المعدَّلة كليًا.',
           },
           {
             q: 'هل هذه النماذج مراقَبة أم مجهولة الهوية؟',
@@ -4319,7 +4306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما النماذج المحلية التي لا تحتوي على قيود محتوى؟',
-            a: 'التعديلات الدقيقة بدون قيود ونسخ "abliterated" التي يغطيها هذا الدليل — ومنها Hermes 3 وDolphin 3.0 — أُزيلت منها طبقة الرفض عبر التدريب، ولذلك لا تحمل أي سياسة محتوى خاصة بها. هذا هو الفرق العملي بين نموذج محلي ونموذج مستضاف: مزوّد السحابة يطبّق شروط استخدامه على كل طلب، بينما النموذج بدون قيود الذي يعمل على جهازك لا يوجد فيه أي مزوّد وسيط ولا تُطبَّق أي رقابة وقت الاستدلال. لذلك لا يُحظر محتوى NSFW ولا الخيال الصريح. ما لا يتغيّر هو قانون بلدك والمسؤولية التي تصاحب النشر — عدم وجود سياسة محتوى لا يعني عدم وجود حدود، ويوضّح قسم الأخلاقيات أدناه أين تقع هذه الحدود.',
+            a: 'النماذج المعدَّلة القابلة للتوجيه مثل Hermes 3 وDolphin 3.0 تترك المحاذاة لموجّه النظام الخاص بك، أما إصدارات "abliterated" فقد أُزيل منها سلوك الرفض، ولذلك لا تطبّق إلا قليلًا من سياسة المحتوى المدمجة أو لا تطبّق أيّ منها. هذا هو الفرق العملي بين نموذج محلي ونموذج مستضاف: مزوّد السحابة يطبّق شروط استخدامه على كل طلب، بينما النموذج بدون قيود الذي يعمل على جهازك لا يوجد فيه أي مزوّد وسيط ولا تُطبَّق أي رقابة وقت الاستدلال. لذلك لا يُحظر محتوى NSFW ولا الخيال الصريح. ما لا يتغيّر هو قانون بلدك والمسؤولية التي تصاحب النشر — عدم وجود سياسة محتوى لا يعني عدم وجود حدود، ويوضّح قسم الأخلاقيات أدناه أين تقع هذه الحدود.',
           },
           {
             q: 'ما أفضل LLM محلي غير مقيّد؟',

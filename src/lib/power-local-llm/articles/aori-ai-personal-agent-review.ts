@@ -17,11 +17,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Aori AI Review: Local-First Personal Agent for Desktop and Mobile',
     seoTitle: 'Aori AI Review: Local-First Personal Agent',
     intro:
-      'Aori is a personal AI agent app that runs on your desktop and phone, with persistent memory, switchable personas, and scheduled routines. It stores your API keys and conversations locally rather than on an Aori-run server, but it is not a fully offline app by default — most of its intelligence comes from whichever cloud LLM provider you connect. This review covers what Aori actually does, which platforms support fully local inference via Ollama, and where the local-first claim ends and the cloud dependency begins.',
+      'Aori is a personal AI agent app that runs on your desktop and phone, with persistent memory, switchable personas, and scheduled routines. According to its website, it stores your API keys and conversations locally rather than on an Aori-run server, but it is not a fully offline app by default — most of its intelligence comes from whichever cloud LLM provider you connect. This review covers what Aori says it does (based on the vendor\'s published information, not on hands-on testing), which platforms support fully local inference via Ollama, and where the local-first claim ends and the cloud dependency begins.',
     metaDescription:
       'Aori AI review: a local-first personal agent with memory, personas, and routines for desktop and Android. See when it runs fully offline via Ollama and when it depends on cloud providers.',
     twitterDescription:
-      'Aori AI review 2026: personal agent app for desktop and Android with memory, personas, and routines. Local via Ollama on desktop only — honest breakdown of the hybrid model.',
+      'Aori AI review 2026: personal agent app for desktop and Android with memory, personas, and routines. Local via Ollama on desktop only — breakdown of the hybrid model.',
     audience:
       'Users deciding whether to run a personal AI agent through Aori using their own cloud API key, or fully locally via Ollama on desktop — covers platform support, feature set, and the local-vs-cloud trade-off.',
     readTime: '7 min read',
@@ -44,18 +44,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Windows PC', 'Mac', 'Linux PC', 'Android'],
     leadAnswerBlock:
-      '**Aori is worth using if you want one personal AI agent — with memory, personas, and scheduled routines — across desktop and Android, and you are willing to bring your own LLM API key.** It only becomes a fully local, offline tool when you choose [Ollama](https://ollama.com) as the model backend on desktop; the Android app and any cloud-provider backend still send your prompts to that provider over the internet, even though Aori itself stores no copy of your data on its own servers.',
+      '**Aori is worth using if you want one personal AI agent — with memory, personas, and scheduled routines — across desktop and Android, and you are willing to bring your own LLM API key.** It only becomes a fully local, offline tool when you choose [Ollama](https://ollama.com) as the model backend on desktop; the Android app and any cloud-provider backend still send your prompts to that provider over the internet, even though, according to Aori, it stores no copy of your data on its own servers.',
     quickAnswerTop: {
       en: {
         question: 'Is Aori AI a fully local, offline AI app?',
         answer:
-          'No — Aori is hybrid. It runs on your device and never sends data to an Aori-run backend, but by default it routes prompts through a cloud provider (OpenAI, Anthropic, Google Gemini, Groq, DeepSeek, or OpenRouter) using your own API key. Fully local, offline inference only happens when you select Ollama as the backend, and that option exists on desktop only.',
+          'No — Aori is hybrid. According to Aori\'s website, the app runs on your device and does not operate a backend that stores your conversations; API keys are stored locally and requests go directly to the provider you choose. We have not independently audited Aori\'s network traffic. By default, though, it routes prompts through a cloud provider (OpenAI, Anthropic, Google Gemini, Groq, DeepSeek, or OpenRouter) using your own API key. Fully local, offline inference only happens when you select Ollama as the backend, and that option exists on desktop only.',
         bullets: [
           'Desktop (Windows/macOS/Linux) supports Ollama for fully local models; Android does not.',
-          'API keys are stored locally on your device and go straight to the provider — never through an Aori backend.',
+          'According to Aori\'s website, API keys are stored locally on your device and go straight to the provider, not through an Aori backend.',
           'Features: persistent memory, slash-command personas, Telegram/WhatsApp channels, Obsidian/Notion integration, scheduled routines.',
           'Platforms live now: Windows, macOS, Linux, Android. iOS is not yet available.',
-          'Pricing is not published — Aori itself is free in beta; you pay whichever LLM provider you connect (Groq has a free tier).',
+          'Aori\'s pricing is not published; it was free to use in beta at the time of the last refresh (see the Last updated date). Provider costs vary, and some providers, such as [Groq](https://groq.com), offer a free tier.',
         ],
         updatedDate: '2026-09',
       },
@@ -82,21 +82,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'one-sentence',
             text:
-              'Aori is a local-first desktop and mobile personal AI agent that keeps API keys and chat history on your device, but only runs fully offline when you choose Ollama as the model backend on desktop.',
+              'According to Aori\'s website, Aori is a local-first desktop and mobile personal AI agent that keeps API keys and chat history on your device (we have not audited this), but only runs fully offline when you choose Ollama as the model backend on desktop.',
           },
           {
             type: 'plain-terms',
             text:
-              'Aori is an app for your computer or Android phone that acts like a personal assistant with memory. You connect your own account and key from a provider like OpenAI or Anthropic to power it, or — on desktop only — you can run it with free local models through Ollama so nothing goes to the internet.',
+              'Aori is an app for your computer or Android phone that acts like a personal assistant with memory. You connect your own account and key from a provider like OpenAI or Anthropic to power it, or — on desktop only — you can run it with local models through Ollama, so prompts and responses are processed on your own machine.',
           },
         ],
         items: [
           'Aori is a local-first desktop and mobile personal AI agent app, currently in public beta at [aori-ai.app](https://www.aori-ai.app/).',
-          'No Aori backend stores your data — API keys and conversations are stored locally on your device and sent directly to the LLM provider you choose.',
+          'According to Aori\'s website, no Aori backend stores your data — API keys and conversations are stored locally on your device and sent directly to the LLM provider you choose.',
           'Supported cloud providers: OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek, and OpenRouter. On desktop only, Aori also supports [Ollama](https://ollama.com) for fully local models.',
           'Core features: persistent memory, personas switchable via slash commands (e.g. `/leo`, `/planner`), multi-channel chat (in-app, Telegram, WhatsApp) with isolated history per channel, knowledge integration (local folders, Obsidian, Notion), and proactive routines scheduled in plain English.',
           'Platforms: desktop on Windows, macOS, and Linux; mobile on Android now, with iOS coming later.',
-          'Pricing is not published. Aori is free to use in its current beta; the real cost is whatever the LLM provider you connect charges (Groq has a free tier).',
+          'Aori\'s pricing is not published. It was free to use in beta at the time of the last refresh (see the Last updated date); the real cost is whatever the LLM provider you connect charges, and some providers, such as [Groq](https://groq.com), offer a free tier.',
           'Fully offline operation is limited to desktop with Ollama selected — every other configuration, including the Android app, depends on an internet connection to a cloud provider.',
         ],
       },
@@ -105,8 +105,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Aori Is',
         content: [
           '**Aori is a personal AI agent app that runs on your desktop or phone instead of through a hosted chat website.** It is available at [aori-ai.app](https://www.aori-ai.app/) and is currently in public beta on Windows, macOS, Linux, and Android.',
-          'The core design choice is local-first: the app itself runs on your device, and Aori does not operate a backend server that stores your conversations. You connect your own API key from a supported LLM provider — OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek, or OpenRouter — and Aori stores that key locally, sending requests directly from your device to the provider you chose.',
-          'On desktop, Aori adds a second path: [Ollama](https://ollama.com) support, which lets you run open-source models entirely on your own hardware with no cloud provider involved at all. This path is desktop-only — the Android app has no local-model option and always depends on a cloud provider.',
+          'The core design choice is local-first: the app itself runs on your device, and, according to Aori\'s website, it does not operate a backend server that stores your conversations. You connect your own API key from a supported LLM provider — OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek, or OpenRouter — and, according to Aori\'s website, Aori stores that key locally and sends requests directly from your device to the provider you chose.',
+          'On desktop, Aori adds a second path: [Ollama](https://ollama.com) support, which lets you run open-weight models (check each model\'s licence) entirely on your own hardware with no cloud provider involved at all. This path is desktop-only — the Android app has no local-model option and always depends on a cloud provider.',
         ],
       },
       features: {
@@ -131,8 +131,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Platform / Plan': 'Windows, macOS, Linux (desktop)',
-            'What to expect': 'Full feature set. Supports cloud providers (OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter) and, uniquely, [Ollama](https://ollama.com) for fully local models.',
-            'Important note': 'This is the only environment where Aori can run with zero cloud dependency, provided you select Ollama and a model your hardware can run.',
+            'What to expect': 'Full feature set. Supports cloud providers (OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter) and, on desktop only, [Ollama](https://ollama.com) for fully local models.',
+            'Important note': 'This is the only environment where Aori can run with no cloud LLM provider needed, provided you select Ollama and a model your hardware can run.',
           },
           {
             'Platform / Plan': 'Android',
@@ -146,8 +146,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Platform / Plan': 'Pricing',
-            'What to expect': 'Not published. The app is usable in its current public beta without a subscription fee to Aori itself.',
-            'Important note': 'Your real cost is set by the LLM provider whose API key you use — Groq offers a free tier; OpenAI, Anthropic, Gemini, DeepSeek, and OpenRouter bill per your own account with that provider.',
+            'What to expect': 'Not published. It was free to use in beta at the time of the last refresh (see the Last updated date).',
+            'Important note': 'Provider costs vary: some providers, such as [Groq](https://groq.com), offer a free tier; OpenAI, Anthropic, Gemini, DeepSeek, and OpenRouter bill per your own account with that provider.',
           },
         ],
       },
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-vs-cloud',
         title: 'Local vs. Cloud: What "Local-First" Actually Means',
         content: [
-          '**"Local-first" describes where Aori stores your data, not where your prompts are processed.** In every configuration, your API keys and conversation history live on your device rather than on an Aori-run server. But whether the model itself runs on your device depends entirely on which backend you pick.',
+          '**"Local-first" describes where Aori stores your data, not where your prompts are processed.** According to Aori\'s website, in every configuration it describes, your API keys and conversation history live on your device rather than on an Aori-run server (we have not audited this). But whether the model itself runs on your device depends entirely on which backend you pick.',
           'This distinction matters because the two claims — "your data stays on your device" and "your AI runs on your device" — are not the same thing, and Aori only delivers both at once in one specific configuration.',
         ],
         decisionBlock: {
@@ -171,9 +171,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'You want access to the largest, most capable frontier models',
           ],
           quick: [
-            'Desktop + Ollama = prompts and inference stay entirely on your machine',
+            'Desktop + Ollama = inference runs on your machine, so prompts are not sent to a cloud LLM provider (Aori\'s and Ollama\'s other network activity, such as updates or channel integrations, is not covered here)',
             'Any other combination (desktop or Android + a cloud provider) = prompts leave your device and go to that provider\'s API',
-            'Aori itself never runs a backend that stores your data either way — the local-vs-cloud line is about the model backend, not about Aori\'s own servers',
+            'According to Aori\'s website, Aori itself does not run a backend that stores your data either way — the local-vs-cloud line is about the model backend, not about Aori\'s own servers',
           ],
         },
       },
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Who Should Use Aori',
         items: [
-          '**Users who want one agent across desktop and Android.** Persistent memory, personas, and routines follow you between platforms as long as you use the same provider account.',
+          '**Users who want one agent across desktop and Android.** Aori offers the same features on both; check Aori\'s documentation for whether memory and routines carry across devices.',
           '**Users comfortable bringing their own API key and paying providers directly.** Aori is the interface; you manage billing with OpenAI, Anthropic, Google, Groq, DeepSeek, or OpenRouter separately.',
           '**Users who want scheduled routines in plain English**, such as a recurring morning briefing, without setting up separate automation software.',
           '**Desktop users who want the option of fully local, offline inference** via [Ollama](https://ollama.com), without giving up the option to switch to a cloud provider for harder tasks.',
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**iPhone or iPad users.** Aori has no iOS app yet; the company describes iOS support as "coming later" with no published date.',
           '**Users who want a fully offline app with no cloud option at all.** Aori\'s local path exists only on desktop with Ollama selected — most of its useful features assume a connected cloud provider, so treat it as a hybrid tool, not a privacy-by-default offline app.',
-          '**Users who do not want to manage separate provider billing.** Aori has no bundled subscription that covers model usage; you open and fund your own account with whichever provider you pick.',
+          '**Users who do not want to manage separate provider billing.** Aori does not state a bundled subscription that covers model usage; you open and fund your own account with whichever provider you pick.',
           '**Users who need a published, predictable price before committing.** Aori has not published pricing for the app itself, and provider costs vary by which model and provider you choose.',
           '**Android users who specifically want local, offline models.** Ollama support is desktop-only; Android always depends on a cloud provider.',
         ],
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is Aori a fully offline, local AI app?',
-            a: 'No, not by default. Aori is hybrid: it stores your API keys and conversations locally rather than on an Aori-run server, but the model that generates responses runs in the cloud unless you specifically select Ollama as the backend on desktop. Only that one configuration — desktop plus Ollama — is fully local and offline.',
+            a: 'No, not by default. Aori is hybrid: according to Aori\'s website it stores your API keys and conversations locally rather than on an Aori-run server (we have not audited this), but the model that generates responses runs in the cloud unless you specifically select Ollama as the backend on desktop. Only that one configuration — desktop plus Ollama — is fully local and offline.',
           },
           {
             q: 'What platforms does Aori support?',
@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Does Aori store my data on its own servers?',
-            a: 'No. Aori does not operate a backend that stores your conversations. Your API keys are stored locally on your device, and requests go directly from your device to whichever LLM provider you connect — not through an Aori-run server.',
+            a: 'According to Aori\'s website, no: the app runs on your device and does not operate a backend that stores your conversations; API keys are stored locally and requests go directly to the provider you choose. We have not independently audited Aori\'s network traffic.',
           },
           {
             q: 'Which LLM providers does Aori support?',
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much does Aori cost?',
-            a: 'Aori has not published pricing; the app is usable in its current public beta without a fee to Aori itself. Your actual cost comes from the LLM provider you connect — Groq offers a free tier, while OpenAI, Anthropic, Gemini, DeepSeek, and OpenRouter bill you directly through your own account with that provider.',
+            a: 'Aori\'s pricing is not published; it was free to use in beta at the time of the last refresh (see the Last updated date). Your actual cost comes from the LLM provider you connect — some providers, such as [Groq](https://groq.com), offer a free tier, while OpenAI, Anthropic, Gemini, DeepSeek, and OpenRouter bill you directly through your own account with that provider.',
           },
           {
             q: 'Can I run Aori fully offline on Android?',
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          '**Aori is a well-scoped personal-agent app if you evaluate it as hybrid, not as a privacy-by-default local AI tool.** The combination of persistent memory, slash-command personas, multi-channel chat (Telegram and WhatsApp with isolated histories), Obsidian/Notion knowledge integration, and plain-English proactive routines is a coherent feature set aimed at making one agent feel consistent across contexts. Storing API keys and conversations locally, with no Aori-run backend, is a real and verifiable privacy property regardless of which model backend you choose. But the fully local, offline claim applies to exactly one configuration: desktop with Ollama selected. Every other path — cloud providers on desktop, or any use on Android — sends your prompts to a third-party API over the internet. Users who understand and accept that trade-off, and who are comfortable bringing and paying for their own LLM API key, get a genuinely useful cross-platform agent. Users looking for a fully offline app by default, or an iOS app, should look elsewhere for now.',
+          '**Aori is a well-scoped personal-agent app if you evaluate it as hybrid, not as a privacy-by-default local AI tool.** The combination of persistent memory, slash-command personas, multi-channel chat (Telegram and WhatsApp with isolated histories), Obsidian/Notion knowledge integration, and plain-English proactive routines is a coherent feature set aimed at making one agent feel consistent across contexts. Storing API keys and conversations locally, with no Aori-run backend, is a privacy property stated by the vendor (we have not audited Aori\'s network traffic), regardless of which model backend you choose. But the fully local, offline claim applies to exactly one configuration: desktop with Ollama selected. Every other path — cloud providers on desktop, or any use on Android — sends your prompts to a third-party API over the internet. Users who understand and accept that trade-off, and who are comfortable bringing and paying for their own LLM API key, get a potentially useful cross-platform agent. Users looking for a fully offline app by default, or an iOS app, should look elsewhere for now.',
       },
       sources: {
         id: 'sources',
@@ -284,11 +284,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة Aori AI: وكيل ذكاء اصطناعي شخصي محلي أولاً لسطح المكتب والهاتف المحمول',
     seoTitle: 'مراجعة Aori AI: وكيل شخصي محلي أولاً',
     intro:
-      'Aori هو تطبيق وكيل ذكاء اصطناعي شخصي يعمل على سطح المكتب والهاتف لديك، مع ذاكرة دائمة، وشخصيات (personas) قابلة للتبديل، وروتينات مجدولة. يخزّن مفاتيح API الخاصة بك ومحادثاتك محلياً بدلاً من خادم تديره Aori، لكنه ليس تطبيقاً يعمل بدون إنترنت بشكل افتراضي — معظم ذكائه يأتي من مزود LLM السحابي الذي تربطه به. تغطي هذه المراجعة ما يفعله Aori فعلياً، وأي المنصات تدعم الاستدلال المحلي الكامل عبر Ollama، وأين ينتهي ادعاء "المحلي أولاً" وأين يبدأ الاعتماد على السحابة.',
+      'Aori هو تطبيق وكيل ذكاء اصطناعي شخصي يعمل على سطح المكتب والهاتف لديك، مع ذاكرة دائمة، وشخصيات (personas) قابلة للتبديل، وروتينات مجدولة. بحسب موقع Aori، يخزّن مفاتيح API الخاصة بك ومحادثاتك محلياً بدلاً من خادم تديره Aori، لكنه ليس تطبيقاً يعمل بدون إنترنت بشكل افتراضي — معظم ذكائه يأتي من مزود LLM السحابي الذي تربطه به. تغطي هذه المراجعة ما يذكر Aori أنه يفعله (استناداً إلى المعلومات التي ينشرها المطوّر، وليس إلى اختبار عملي)، وأي المنصات تدعم الاستدلال المحلي الكامل عبر Ollama، وأين ينتهي ادعاء "المحلي أولاً" وأين يبدأ الاعتماد على السحابة.',
     metaDescription:
       'مراجعة Aori AI: وكيل شخصي محلي أولاً بذاكرة وشخصيات وروتينات لسطح المكتب و Android. تعرف متى يعمل دون إنترنت عبر Ollama ومتى يعتمد على مزودي السحابة.',
     twitterDescription:
-      'مراجعة Aori AI 2026: تطبيق وكيل شخصي لسطح المكتب و Android بذاكرة وشخصيات وروتينات. محلي عبر Ollama على سطح المكتب فقط — تفصيل صادق للنموذج الهجين.',
+      'مراجعة Aori AI 2026: تطبيق وكيل شخصي لسطح المكتب و Android بذاكرة وشخصيات وروتينات. محلي عبر Ollama على سطح المكتب فقط — تفصيل للنموذج الهجين.',
     audience:
       'المستخدمون الذين يقررون ما إذا كانوا سيشغّلون وكيل ذكاء اصطناعي شخصي عبر Aori باستخدام مفتاح API السحابي الخاص بهم، أو محلياً بالكامل عبر Ollama على سطح المكتب — يغطي دعم المنصات ومجموعة الميزات والمفاضلة بين المحلي والسحابي.',
     readTime: '7 دقائق للقراءة',
@@ -311,18 +311,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Windows PC', 'Mac', 'Linux PC', 'Android'],
     leadAnswerBlock:
-      '**يستحق Aori الاستخدام إذا كنت تريد وكيل ذكاء اصطناعي شخصي واحد — بذاكرة وشخصيات وروتينات مجدولة — عبر سطح المكتب و Android، وكنت مستعداً لإحضار مفتاح API الخاص بك لنموذج LLM.** لا يصبح أداة محلية بالكامل تعمل دون إنترنت إلا عندما تختار [Ollama](https://ollama.com) كخلفية النموذج على سطح المكتب؛ أما تطبيق Android وأي خلفية سحابية فلا تزال ترسل مطالباتك (prompts) إلى ذلك المزود عبر الإنترنت، حتى لو كان Aori نفسه لا يخزّن أي نسخة من بياناتك على خوادمه الخاصة.',
+      '**يستحق Aori الاستخدام إذا كنت تريد وكيل ذكاء اصطناعي شخصي واحد — بذاكرة وشخصيات وروتينات مجدولة — عبر سطح المكتب و Android، وكنت مستعداً لإحضار مفتاح API الخاص بك لنموذج LLM.** لا يصبح أداة محلية بالكامل تعمل دون إنترنت إلا عندما تختار [Ollama](https://ollama.com) كخلفية النموذج على سطح المكتب؛ أما تطبيق Android وأي خلفية سحابية فلا تزال ترسل مطالباتك (prompts) إلى ذلك المزود عبر الإنترنت، حتى لو كان Aori نفسه، بحسب ما يذكره، لا يخزّن أي نسخة من بياناتك على خوادمه الخاصة.',
     quickAnswerTop: {
       ar: {
         question: 'هل Aori AI تطبيق ذكاء اصطناعي محلي بالكامل ويعمل دون إنترنت؟',
         answer:
-          'لا — Aori هجين. يعمل على جهازك ولا يرسل بيانات إلى خادم تديره Aori، لكنه بشكل افتراضي يوجّه المطالبات عبر مزود سحابي (OpenAI أو Anthropic أو Google Gemini أو Groq أو DeepSeek أو OpenRouter) باستخدام مفتاح API الخاص بك. الاستدلال المحلي الكامل الذي يعمل دون إنترنت يحدث فقط عندما تختار Ollama كخلفية، وهذا الخيار متاح على سطح المكتب فقط.',
+          'لا — Aori هجين. بحسب موقع Aori، يعمل التطبيق على جهازك ولا يشغّل خادماً خلفياً يخزّن محادثاتك؛ تُخزَّن مفاتيح API محلياً وتذهب الطلبات مباشرة إلى المزود الذي تختاره. لم نقم بتدقيق مستقل لحركة الشبكة في Aori. لكنه بشكل افتراضي يوجّه المطالبات عبر مزود سحابي (OpenAI أو Anthropic أو Google Gemini أو Groq أو DeepSeek أو OpenRouter) باستخدام مفتاح API الخاص بك. الاستدلال المحلي الكامل الذي يعمل دون إنترنت يحدث فقط عندما تختار Ollama كخلفية، وهذا الخيار متاح على سطح المكتب فقط.',
         bullets: [
           'سطح المكتب (Windows/macOS/Linux) يدعم Ollama للنماذج المحلية الكاملة؛ Android لا يدعمه.',
-          'مفاتيح API تُخزَّن محلياً على جهازك وتذهب مباشرة إلى المزود — أبداً عبر خادم تديره Aori.',
+          'بحسب موقع Aori، تُخزَّن مفاتيح API محلياً على جهازك وتذهب مباشرة إلى المزود، وليس عبر خادم تديره Aori.',
           'الميزات: ذاكرة دائمة، شخصيات عبر أوامر شرطة مائلة، قنوات Telegram/WhatsApp، تكامل مع Obsidian/Notion، روتينات مجدولة.',
           'المنصات المتاحة الآن: Windows و macOS و Linux و Android. iOS غير متاح بعد.',
-          'التسعير غير منشور — Aori نفسه مجاني في مرحلة البيتا؛ تدفع لمزود LLM الذي تربطه به (Groq لديه مستوى مجاني).',
+          'تسعير Aori غير منشور؛ كان الاستخدام مجانياً في مرحلة البيتا وقت آخر تحديث (راجع تاريخ آخر تحديث). تختلف تكاليف المزودين، وبعضهم، مثل [Groq](https://groq.com)، يقدّم مستوى مجانياً.',
         ],
         updatedDate: '2026-09',
       },
@@ -349,21 +349,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'one-sentence',
             text:
-              'Aori هو وكيل ذكاء اصطناعي شخصي محلي أولاً لسطح المكتب والهاتف يحتفظ بمفاتيح API وسجل المحادثات على جهازك، لكنه يعمل دون إنترنت بالكامل فقط عند اختيار Ollama كخلفية النموذج على سطح المكتب.',
+              'بحسب موقع Aori، Aori هو وكيل ذكاء اصطناعي شخصي محلي أولاً لسطح المكتب والهاتف يحتفظ بمفاتيح API وسجل المحادثات على جهازك (لم ندقق ذلك)، لكنه يعمل دون إنترنت بالكامل فقط عند اختيار Ollama كخلفية النموذج على سطح المكتب.',
           },
           {
             type: 'plain-terms',
             text:
-              'Aori تطبيق لجهاز الكمبيوتر أو هاتف Android يعمل كمساعد شخصي له ذاكرة. تربطه بحسابك ومفتاحك الخاص من مزود مثل OpenAI أو Anthropic لتشغيله، أو — على سطح المكتب فقط — يمكنك تشغيله بنماذج محلية مجانية عبر Ollama بحيث لا يذهب شيء إلى الإنترنت.',
+              'Aori تطبيق لجهاز الكمبيوتر أو هاتف Android يعمل كمساعد شخصي له ذاكرة. تربطه بحسابك ومفتاحك الخاص من مزود مثل OpenAI أو Anthropic لتشغيله، أو — على سطح المكتب فقط — يمكنك تشغيله بنماذج محلية عبر Ollama، بحيث تُعالَج المطالبات والاستجابات على جهازك الخاص.',
           },
         ],
         items: [
           'Aori هو تطبيق وكيل ذكاء اصطناعي شخصي محلي أولاً لسطح المكتب والهاتف، وهو حالياً في مرحلة البيتا العامة على [aori-ai.app](https://www.aori-ai.app/).',
-          'لا يوجد خادم تديره Aori يخزّن بياناتك — مفاتيح API والمحادثات تُخزَّن محلياً على جهازك وتُرسل مباشرة إلى مزود LLM الذي تختاره.',
+          'بحسب موقع Aori، لا يوجد خادم تديره Aori يخزّن بياناتك — مفاتيح API والمحادثات تُخزَّن محلياً على جهازك وتُرسل مباشرة إلى مزود LLM الذي تختاره.',
           'مزودو السحابة المدعومون: OpenAI و Anthropic Claude و Google Gemini و Groq و DeepSeek و OpenRouter. على سطح المكتب فقط، يدعم Aori أيضاً [Ollama](https://ollama.com) للنماذج المحلية الكاملة.',
           'الميزات الأساسية: ذاكرة دائمة، شخصيات قابلة للتبديل عبر أوامر شرطة مائلة (مثل `/leo` و `/planner`)، محادثة متعددة القنوات (داخل التطبيق، Telegram، WhatsApp) بسجل معزول لكل قناة، تكامل مع مصادر المعرفة (مجلدات محلية، Obsidian، Notion)، وروتينات استباقية مجدولة بلغة عادية.',
           'المنصات: سطح مكتب على Windows و macOS و Linux؛ هاتف محمول على Android الآن، مع وصول iOS لاحقاً.',
-          'التسعير غير منشور. Aori مجاني للاستخدام في مرحلة البيتا الحالية؛ التكلفة الحقيقية هي ما يفرضه مزود LLM الذي تربطه به (Groq لديه مستوى مجاني).',
+          'تسعير Aori غير منشور. كان الاستخدام مجانياً في مرحلة البيتا وقت آخر تحديث (راجع تاريخ آخر تحديث)؛ التكلفة الحقيقية هي ما يفرضه مزود LLM الذي تربطه به، وبعض المزودين، مثل [Groq](https://groq.com)، يقدّمون مستوى مجانياً.',
           'التشغيل دون إنترنت بالكامل يقتصر على سطح المكتب مع اختيار Ollama — أي إعداد آخر، بما في ذلك تطبيق Android، يعتمد على اتصال إنترنت بمزود سحابي.',
         ],
       },
@@ -372,8 +372,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو Aori',
         content: [
           '**Aori تطبيق وكيل ذكاء اصطناعي شخصي يعمل على سطح المكتب أو هاتفك بدلاً من موقع محادثة مستضاف.** إنه متاح على [aori-ai.app](https://www.aori-ai.app/) وهو حالياً في مرحلة البيتا العامة على Windows و macOS و Linux و Android.',
-          'الخيار التصميمي الأساسي هو "محلي أولاً": التطبيق نفسه يعمل على جهازك، ولا تشغّل Aori خادماً خلفياً يخزّن محادثاتك. تربط مفتاح API الخاص بك من مزود LLM مدعوم — OpenAI أو Anthropic Claude أو Google Gemini أو Groq أو DeepSeek أو OpenRouter — وتخزّن Aori ذلك المفتاح محلياً، وترسل الطلبات مباشرة من جهازك إلى المزود الذي اخترته.',
-          'على سطح المكتب، تضيف Aori مساراً ثانياً: دعم [Ollama](https://ollama.com)، الذي يتيح لك تشغيل نماذج مفتوحة المصدر بالكامل على عتادك الخاص دون أي مزود سحابي على الإطلاق. هذا المسار متاح فقط على سطح المكتب — تطبيق Android لا يملك خيار نموذج محلي ويعتمد دائماً على مزود سحابي.',
+          'الخيار التصميمي الأساسي هو "محلي أولاً": التطبيق نفسه يعمل على جهازك، وبحسب موقع Aori لا تشغّل خادماً خلفياً يخزّن محادثاتك. تربط مفتاح API الخاص بك من مزود LLM مدعوم — OpenAI أو Anthropic Claude أو Google Gemini أو Groq أو DeepSeek أو OpenRouter — وبحسب موقع Aori، تخزّن Aori ذلك المفتاح محلياً وترسل الطلبات مباشرة من جهازك إلى المزود الذي اخترته.',
+          'على سطح المكتب، تضيف Aori مساراً ثانياً: دعم [Ollama](https://ollama.com)، الذي يتيح لك تشغيل نماذج مفتوحة الأوزان (تحقق من ترخيص كل نموذج) بالكامل على عتادك الخاص دون أي مزود سحابي على الإطلاق. هذا المسار متاح فقط على سطح المكتب — تطبيق Android لا يملك خيار نموذج محلي ويعتمد دائماً على مزود سحابي.',
         ],
       },
       features: {
@@ -398,8 +398,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'المنصة / الخطة': 'Windows و macOS و Linux (سطح المكتب)',
-            'ما يمكن توقعه': 'مجموعة ميزات كاملة. يدعم مزودي السحابة (OpenAI و Anthropic و Gemini و Groq و DeepSeek و OpenRouter) و — بشكل فريد — [Ollama](https://ollama.com) للنماذج المحلية الكاملة.',
-            'ملاحظة مهمة': 'هذه هي البيئة الوحيدة التي يمكن أن يعمل فيها Aori دون أي اعتماد سحابي، شريطة اختيار Ollama ونموذج يستطيع عتادك تشغيله.',
+            'ما يمكن توقعه': 'مجموعة ميزات كاملة. يدعم مزودي السحابة (OpenAI و Anthropic و Gemini و Groq و DeepSeek و OpenRouter) و — على سطح المكتب فقط — [Ollama](https://ollama.com) للنماذج المحلية الكاملة.',
+            'ملاحظة مهمة': 'هذه هي البيئة الوحيدة التي يمكن أن يعمل فيها Aori دون الحاجة إلى مزود LLM سحابي، شريطة اختيار Ollama ونموذج يستطيع عتادك تشغيله.',
           },
           {
             'المنصة / الخطة': 'Android',
@@ -413,8 +413,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'المنصة / الخطة': 'التسعير',
-            'ما يمكن توقعه': 'غير منشور. التطبيق قابل للاستخدام في مرحلة البيتا العامة الحالية دون رسوم اشتراك لـ Aori نفسه.',
-            'ملاحظة مهمة': 'تكلفتك الحقيقية يحددها مزود LLM الذي تستخدم مفتاح API الخاص به — Groq يقدّم مستوى مجانياً؛ أما OpenAI و Anthropic و Gemini و DeepSeek و OpenRouter فتفرض رسوماً عبر حسابك الخاص مع ذلك المزود.',
+            'ما يمكن توقعه': 'غير منشور. كان الاستخدام مجانياً في مرحلة البيتا وقت آخر تحديث (راجع تاريخ آخر تحديث).',
+            'ملاحظة مهمة': 'تختلف التكاليف بحسب المزود: بعض المزودين، مثل [Groq](https://groq.com)، يقدّمون مستوى مجانياً؛ أما OpenAI و Anthropic و Gemini و DeepSeek و OpenRouter فتفرض رسوماً عبر حسابك الخاص مع ذلك المزود.',
           },
         ],
       },
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-vs-cloud',
         title: 'المحلي مقابل السحابي: ماذا يعني "محلي أولاً" فعلياً',
         content: [
-          '**يصف "محلي أولاً" مكان تخزين بياناتك في Aori، لا مكان معالجة مطالباتك.** في كل إعداد، تعيش مفاتيح API وسجل المحادثات على جهازك بدلاً من خادم تديره Aori. لكن ما إذا كان النموذج نفسه يعمل على جهازك يعتمد بالكامل على الخلفية التي تختارها.',
+          '**يصف "محلي أولاً" مكان تخزين بياناتك في Aori، لا مكان معالجة مطالباتك.** بحسب موقع Aori، وفي كل إعداد يصفه، تعيش مفاتيح API وسجل المحادثات على جهازك بدلاً من خادم تديره Aori (لم ندقق ذلك). لكن ما إذا كان النموذج نفسه يعمل على جهازك يعتمد بالكامل على الخلفية التي تختارها.',
           'هذا الفرق مهم لأن الادعاءين — "بياناتك تبقى على جهازك" و"ذكاؤك الاصطناعي يعمل على جهازك" — ليسا نفس الشيء، ولا يحقق Aori كليهما معاً إلا في إعداد واحد محدد.',
         ],
         decisionBlock: {
@@ -438,9 +438,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'تريد الوصول إلى أكبر النماذج الحدودية وأكثرها قدرة',
           ],
           quick: [
-            'سطح المكتب + Ollama = تبقى المطالبات والاستدلال بالكامل على جهازك',
+            'سطح المكتب + Ollama = يعمل الاستدلال على جهازك، لذا لا تُرسل المطالبات إلى مزود LLM سحابي (النشاط الشبكي الآخر لـ Aori و Ollama، مثل التحديثات أو تكاملات القنوات، غير مشمول هنا)',
             'أي مزيج آخر (سطح المكتب أو Android + مزود سحابي) = تغادر المطالبات جهازك وتذهب إلى واجهة برمجة تطبيقات ذلك المزود',
-            'لا تشغّل Aori نفسها خادماً خلفياً يخزّن بياناتك في أي حال — الخط الفاصل بين المحلي والسحابي يتعلق بخلفية النموذج، وليس بخوادم Aori نفسها',
+            'بحسب موقع Aori، لا تشغّل Aori نفسها خادماً خلفياً يخزّن بياناتك في أي حال — الخط الفاصل بين المحلي والسحابي يتعلق بخلفية النموذج، وليس بخوادم Aori نفسها',
           ],
         },
       },
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'من يجب أن يستخدم Aori',
         items: [
-          '**المستخدمون الذين يريدون وكيلاً واحداً عبر سطح المكتب و Android.** تتبعك الذاكرة الدائمة والشخصيات والروتينات بين المنصات طالما تستخدم نفس حساب المزود.',
+          '**المستخدمون الذين يريدون وكيلاً واحداً عبر سطح المكتب و Android.** يقدّم Aori الميزات نفسها على المنصتين؛ راجع وثائق Aori لمعرفة ما إذا كانت الذاكرة والروتينات تنتقل بين الأجهزة.',
           '**المستخدمون المرتاحون لإحضار مفتاح API الخاص بهم والدفع للمزودين مباشرة.** Aori هي الواجهة؛ أنت تدير الفوترة مع OpenAI أو Anthropic أو Google أو Groq أو DeepSeek أو OpenRouter بشكل منفصل.',
           '**المستخدمون الذين يريدون روتينات مجدولة بلغة عادية**، مثل ملخص صباحي متكرر، دون إعداد برنامج أتمتة منفصل.',
           '**مستخدمو سطح المكتب الذين يريدون خيار الاستدلال المحلي الكامل دون إنترنت** عبر [Ollama](https://ollama.com)، دون التخلي عن خيار التبديل إلى مزود سحابي للمهام الأصعب.',
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**مستخدمو iPhone أو iPad.** لا يملك Aori تطبيق iOS بعد؛ تصف الشركة دعم iOS بأنه "قادم لاحقاً" دون تاريخ منشور.',
           '**المستخدمون الذين يريدون تطبيقاً يعمل دون إنترنت بالكامل بلا أي خيار سحابي إطلاقاً.** مسار Aori المحلي موجود فقط على سطح المكتب مع اختيار Ollama — معظم ميزاته المفيدة تفترض مزوداً سحابياً متصلاً، لذا تعامل معه كأداة هجينة، لا كأداة خصوصية افتراضية تعمل دون إنترنت.',
-          '**المستخدمون الذين لا يريدون إدارة فوترة منفصلة مع المزود.** لا يملك Aori اشتراكاً مجمّعاً يغطي استخدام النموذج؛ تفتح وتموّل حسابك الخاص مع المزود الذي تختاره.',
+          '**المستخدمون الذين لا يريدون إدارة فوترة منفصلة مع المزود.** لا يذكر Aori وجود اشتراك مجمّع يغطي استخدام النموذج؛ تفتح وتموّل حسابك الخاص مع المزود الذي تختاره.',
           '**المستخدمون الذين يحتاجون سعراً منشوراً وقابلاً للتنبؤ قبل الالتزام.** لم تنشر Aori تسعيراً للتطبيق نفسه، وتختلف تكاليف المزود حسب النموذج والمزود اللذين تختارهما.',
           '**مستخدمو Android الذين يريدون تحديداً نماذج محلية تعمل دون إنترنت.** دعم Ollama متاح فقط على سطح المكتب؛ يعتمد Android دائماً على مزود سحابي.',
         ],
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل Aori تطبيق ذكاء اصطناعي محلي بالكامل ويعمل دون إنترنت؟',
-            a: 'لا، ليس بشكل افتراضي. Aori هجين: يخزّن مفاتيح API ومحادثاتك محلياً بدلاً من خادم تديره Aori، لكن النموذج الذي يولّد الردود يعمل في السحابة ما لم تختر تحديداً Ollama كخلفية على سطح المكتب. إعداد واحد فقط — سطح المكتب مع Ollama — محلي بالكامل ويعمل دون إنترنت.',
+            a: 'لا، ليس بشكل افتراضي. Aori هجين: بحسب موقع Aori يخزّن مفاتيح API ومحادثاتك محلياً بدلاً من خادم تديره Aori (لم ندقق ذلك)، لكن النموذج الذي يولّد الردود يعمل في السحابة ما لم تختر تحديداً Ollama كخلفية على سطح المكتب. إعداد واحد فقط — سطح المكتب مع Ollama — محلي بالكامل ويعمل دون إنترنت.',
           },
           {
             q: 'ما المنصات التي يدعمها Aori؟',
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يخزّن Aori بياناتي على خوادمه الخاصة؟',
-            a: 'لا. لا تشغّل Aori خادماً خلفياً يخزّن محادثاتك. تُخزَّن مفاتيح API الخاصة بك محلياً على جهازك، وتذهب الطلبات مباشرة من جهازك إلى مزود LLM الذي تربطه به — وليس عبر خادم تديره Aori.',
+            a: 'بحسب موقع Aori، لا: يعمل التطبيق على جهازك ولا يشغّل خادماً خلفياً يخزّن محادثاتك؛ تُخزَّن مفاتيح API محلياً وتذهب الطلبات مباشرة إلى المزود الذي تختاره. لم نقم بتدقيق مستقل لحركة الشبكة في Aori.',
           },
           {
             q: 'ما مزودو LLM الذين يدعمهم Aori؟',
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم تكلفة Aori؟',
-            a: 'لم تنشر Aori تسعيراً؛ التطبيق قابل للاستخدام في مرحلة البيتا العامة الحالية دون رسوم لـ Aori نفسه. تكلفتك الفعلية تأتي من مزود LLM الذي تربطه به — Groq يقدّم مستوى مجانياً، بينما تفرض OpenAI و Anthropic و Gemini و DeepSeek و OpenRouter رسوماً مباشرة عبر حسابك الخاص مع ذلك المزود.',
+            a: 'تسعير Aori غير منشور؛ كان الاستخدام مجانياً في مرحلة البيتا وقت آخر تحديث (راجع تاريخ آخر تحديث). تكلفتك الفعلية تأتي من مزود LLM الذي تربطه به — بعض المزودين، مثل [Groq](https://groq.com)، يقدّمون مستوى مجانياً، بينما تفرض OpenAI و Anthropic و Gemini و DeepSeek و OpenRouter رسوماً مباشرة عبر حسابك الخاص مع ذلك المزود.',
           },
           {
             q: 'هل يمكنني تشغيل Aori دون إنترنت بالكامل على Android؟',
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الحكم النهائي',
         content:
-          '**Aori تطبيق وكيل شخصي محدد النطاق بشكل جيد إذا قيّمته كأداة هجينة، لا كأداة ذكاء اصطناعي محلية خصوصيتها افتراضية.** الجمع بين الذاكرة الدائمة وشخصيات أوامر الشرطة المائلة والمحادثة متعددة القنوات (Telegram و WhatsApp بسجلات معزولة) وتكامل معرفة Obsidian/Notion والروتينات الاستباقية بلغة عادية يشكّل مجموعة ميزات متماسكة تهدف إلى جعل وكيل واحد يبدو متسقاً عبر السياقات. تخزين مفاتيح API والمحادثات محلياً، دون خادم تديره Aori، خاصية خصوصية حقيقية وقابلة للتحقق بغض النظر عن خلفية النموذج التي تختارها. لكن ادعاء التشغيل المحلي الكامل دون إنترنت ينطبق على إعداد واحد بالضبط: سطح المكتب مع اختيار Ollama. كل مسار آخر — مزودو السحابة على سطح المكتب، أو أي استخدام على Android — يرسل مطالباتك إلى واجهة برمجة تطبيقات طرف ثالث عبر الإنترنت. المستخدمون الذين يفهمون هذه المفاضلة ويقبلونها، والمرتاحون لإحضار ودفع تكلفة مفتاح API الخاص بهم لنموذج LLM، يحصلون على وكيل متعدد المنصات مفيد فعلاً. أما المستخدمون الباحثون عن تطبيق يعمل دون إنترنت بالكامل بشكل افتراضي، أو تطبيق iOS، فعليهم البحث في مكان آخر حالياً.',
+          '**Aori تطبيق وكيل شخصي محدد النطاق بشكل جيد إذا قيّمته كأداة هجينة، لا كأداة ذكاء اصطناعي محلية خصوصيتها افتراضية.** الجمع بين الذاكرة الدائمة وشخصيات أوامر الشرطة المائلة والمحادثة متعددة القنوات (Telegram و WhatsApp بسجلات معزولة) وتكامل معرفة Obsidian/Notion والروتينات الاستباقية بلغة عادية يشكّل مجموعة ميزات متماسكة تهدف إلى جعل وكيل واحد يبدو متسقاً عبر السياقات. تخزين مفاتيح API والمحادثات محلياً، دون خادم تديره Aori، خاصية خصوصية يذكرها المطوّر (لم ندقق حركة الشبكة في Aori) بغض النظر عن خلفية النموذج التي تختارها. لكن ادعاء التشغيل المحلي الكامل دون إنترنت ينطبق على إعداد واحد بالضبط: سطح المكتب مع اختيار Ollama. كل مسار آخر — مزودو السحابة على سطح المكتب، أو أي استخدام على Android — يرسل مطالباتك إلى واجهة برمجة تطبيقات طرف ثالث عبر الإنترنت. المستخدمون الذين يفهمون هذه المفاضلة ويقبلونها، والمرتاحون لإحضار ودفع تكلفة مفتاح API الخاص بهم لنموذج LLM، يحصلون على وكيل متعدد المنصات قد يكون مفيداً. أما المستخدمون الباحثون عن تطبيق يعمل دون إنترنت بالكامل بشكل افتراضي، أو تطبيق iOS، فعليهم البحث في مكان آخر حالياً.',
       },
       sources: {
         id: 'sources',
@@ -551,11 +551,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Aori-AI-Rezension: Local-First Persönlicher KI-Agent für Desktop und Mobilgeräte',
     seoTitle: 'Aori-AI-Rezension: Local-First Persönlicher KI-Agent',
     intro:
-      'Aori ist eine App für einen persönlichen KI-Agenten, die auf Ihrem Desktop und Smartphone läuft, mit dauerhaftem Gedächtnis, umschaltbaren Personas und geplanten Routinen. Sie speichert Ihre API-Schlüssel und Unterhaltungen lokal statt auf einem von Aori betriebenen Server, ist aber standardmäßig keine vollständig offline-fähige App — der Großteil ihrer Intelligenz stammt von dem Cloud-LLM-Anbieter, den Sie anbinden. Diese Rezension zeigt, was Aori tatsächlich leistet, welche Plattformen vollständig lokale Inferenz über Ollama unterstützen und wo der Local-First-Anspruch endet und die Cloud-Abhängigkeit beginnt.',
+      'Aori ist eine App für einen persönlichen KI-Agenten, die auf Ihrem Desktop und Smartphone läuft, mit dauerhaftem Gedächtnis, umschaltbaren Personas und geplanten Routinen. Laut Aori speichert sie Ihre API-Schlüssel und Unterhaltungen lokal statt auf einem von Aori betriebenen Server, ist aber standardmäßig keine vollständig offline-fähige App — der Großteil ihrer Intelligenz stammt von dem Cloud-LLM-Anbieter, den Sie anbinden. Diese Rezension zeigt, was Aori nach eigener Darstellung leistet (auf Grundlage der vom Anbieter veröffentlichten Informationen, nicht auf Grundlage eigener Praxistests), welche Plattformen vollständig lokale Inferenz über Ollama unterstützen und wo der Local-First-Anspruch endet und die Cloud-Abhängigkeit beginnt.',
     metaDescription:
       'Aori-AI-Rezension: ein local-first persönlicher Agent mit Gedächtnis, Personas und Routinen für Desktop und Android. Wann läuft er offline über Ollama, wann hängt er von Cloud-Anbietern ab?',
     twitterDescription:
-      'Aori-AI-Rezension 2026: persönliche Agenten-App für Desktop und Android mit Gedächtnis, Personas und Routinen. Lokal über Ollama nur auf dem Desktop — ehrliche Analyse des Hybridmodells.',
+      'Aori-AI-Rezension 2026: persönliche Agenten-App für Desktop und Android mit Gedächtnis, Personas und Routinen. Lokal über Ollama nur auf dem Desktop — Analyse des Hybridmodells.',
     audience:
       'Nutzer, die entscheiden, ob sie einen persönlichen KI-Agenten über Aori mit ihrem eigenen Cloud-API-Schlüssel oder vollständig lokal über Ollama auf dem Desktop betreiben — mit Plattformunterstützung, Funktionsumfang und der Abwägung zwischen lokal und Cloud.',
     readTime: '7 Min. Lesezeit',
@@ -578,18 +578,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Windows PC', 'Mac', 'Linux PC', 'Android'],
     leadAnswerBlock:
-      '**Aori lohnt sich, wenn Sie einen einzigen persönlichen KI-Agenten — mit Gedächtnis, Personas und geplanten Routinen — für Desktop und Android nutzen möchten und bereit sind, Ihren eigenen LLM-API-Schlüssel mitzubringen.** Zu einem vollständig lokalen, offline-fähigen Werkzeug wird es nur, wenn Sie [Ollama](https://ollama.com) als Modell-Backend auf dem Desktop wählen; die Android-App und jedes Cloud-Backend senden Ihre Prompts weiterhin über das Internet an diesen Anbieter, auch wenn Aori selbst keine Kopie Ihrer Daten auf eigenen Servern speichert.',
+      '**Aori lohnt sich, wenn Sie einen einzigen persönlichen KI-Agenten — mit Gedächtnis, Personas und geplanten Routinen — für Desktop und Android nutzen möchten und bereit sind, Ihren eigenen LLM-API-Schlüssel mitzubringen.** Zu einem vollständig lokalen, offline-fähigen Werkzeug wird es nur, wenn Sie [Ollama](https://ollama.com) als Modell-Backend auf dem Desktop wählen; die Android-App und jedes Cloud-Backend senden Ihre Prompts weiterhin über das Internet an diesen Anbieter, auch wenn Aori selbst laut eigener Angabe keine Kopie Ihrer Daten auf eigenen Servern speichert.',
     quickAnswerTop: {
       de: {
         question: 'Ist Aori AI eine vollständig lokale, offline-fähige KI-App?',
         answer:
-          'Nein — Aori ist hybrid. Es läuft auf Ihrem Gerät und sendet nie Daten an ein von Aori betriebenes Backend, leitet Prompts aber standardmäßig über einen Cloud-Anbieter (OpenAI, Anthropic, Google Gemini, Groq, DeepSeek oder OpenRouter) mit Ihrem eigenen API-Schlüssel. Vollständig lokale, offline-fähige Inferenz gibt es nur, wenn Sie Ollama als Backend wählen — und diese Option existiert ausschließlich auf dem Desktop.',
+          'Nein — Aori ist hybrid. Laut der Website von Aori läuft die App auf Ihrem Gerät und betreibt kein Backend, das Ihre Unterhaltungen speichert; API-Schlüssel werden lokal gespeichert, und Anfragen gehen direkt an den von Ihnen gewählten Anbieter. Den Netzwerkverkehr von Aori haben wir nicht unabhängig geprüft. Standardmäßig leitet die App Prompts aber über einen Cloud-Anbieter (OpenAI, Anthropic, Google Gemini, Groq, DeepSeek oder OpenRouter) mit Ihrem eigenen API-Schlüssel. Vollständig lokale, offline-fähige Inferenz gibt es nur, wenn Sie Ollama als Backend wählen — und diese Option existiert ausschließlich auf dem Desktop.',
         bullets: [
           'Desktop (Windows/macOS/Linux) unterstützt Ollama für vollständig lokale Modelle; Android nicht.',
-          'API-Schlüssel werden lokal auf Ihrem Gerät gespeichert und gehen direkt an den Anbieter — niemals über ein Aori-Backend.',
+          'Laut Aori werden API-Schlüssel lokal auf Ihrem Gerät gespeichert und gehen direkt an den Anbieter, nicht über ein Aori-Backend.',
           'Funktionen: dauerhaftes Gedächtnis, Personas per Slash-Befehl, Telegram/WhatsApp-Kanäle, Obsidian/Notion-Integration, geplante Routinen.',
           'Aktuell verfügbare Plattformen: Windows, macOS, Linux, Android. iOS ist noch nicht verfügbar.',
-          'Preise sind nicht veröffentlicht — Aori selbst ist in der Beta kostenlos; Sie bezahlen den jeweils angebundenen LLM-Anbieter (Groq bietet eine kostenlose Stufe).',
+          'Die Preise von Aori sind nicht veröffentlicht; zum Zeitpunkt der letzten Aktualisierung war die Nutzung in der Beta kostenlos (siehe Datum der letzten Aktualisierung). Die Anbieterkosten variieren, und einige Anbieter, etwa [Groq](https://groq.com), bieten eine kostenlose Stufe.',
         ],
         updatedDate: '2026-09',
       },
@@ -616,21 +616,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'one-sentence',
             text:
-              'Aori ist ein local-first persönlicher KI-Agent für Desktop und Mobilgeräte, der API-Schlüssel und Chatverlauf auf Ihrem Gerät hält, aber nur dann vollständig offline läuft, wenn Sie auf dem Desktop Ollama als Modell-Backend wählen.',
+              'Laut der Website von Aori ist Aori ein local-first persönlicher KI-Agent für Desktop und Mobilgeräte, der API-Schlüssel und Chatverlauf auf Ihrem Gerät hält (von uns nicht geprüft), aber nur dann vollständig offline läuft, wenn Sie auf dem Desktop Ollama als Modell-Backend wählen.',
           },
           {
             type: 'plain-terms',
             text:
-              'Aori ist eine App für Ihren Computer oder Ihr Android-Smartphone, die wie ein persönlicher Assistent mit Gedächtnis funktioniert. Sie verbinden Ihr eigenes Konto und Ihren eigenen Schlüssel eines Anbieters wie OpenAI oder Anthropic, um es zu betreiben, oder — nur auf dem Desktop — Sie können es mit kostenlosen lokalen Modellen über Ollama betreiben, sodass nichts ins Internet geht.',
+              'Aori ist eine App für Ihren Computer oder Ihr Android-Smartphone, die wie ein persönlicher Assistent mit Gedächtnis funktioniert. Sie verbinden Ihr eigenes Konto und Ihren eigenen Schlüssel eines Anbieters wie OpenAI oder Anthropic, um es zu betreiben, oder — nur auf dem Desktop — Sie können es mit lokalen Modellen über Ollama betreiben, sodass Prompts und Antworten auf Ihrem eigenen Rechner verarbeitet werden.',
           },
         ],
         items: [
           'Aori ist eine local-first App für einen persönlichen KI-Agenten auf Desktop und Mobilgeräten, aktuell in der öffentlichen Beta unter [aori-ai.app](https://www.aori-ai.app/).',
-          'Kein von Aori betriebenes Backend speichert Ihre Daten — API-Schlüssel und Unterhaltungen werden lokal auf Ihrem Gerät gespeichert und direkt an den gewählten LLM-Anbieter gesendet.',
+          'Laut der Website von Aori speichert kein von Aori betriebenes Backend Ihre Daten — API-Schlüssel und Unterhaltungen werden lokal auf Ihrem Gerät gespeichert und direkt an den gewählten LLM-Anbieter gesendet.',
           'Unterstützte Cloud-Anbieter: OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek und OpenRouter. Nur auf dem Desktop unterstützt Aori zusätzlich [Ollama](https://ollama.com) für vollständig lokale Modelle.',
           'Kernfunktionen: dauerhaftes Gedächtnis, per Slash-Befehl umschaltbare Personas (z. B. `/leo`, `/planner`), Multi-Channel-Chat (in der App, Telegram, WhatsApp) mit isoliertem Verlauf pro Kanal, Wissensintegration (lokale Ordner, Obsidian, Notion) und proaktive Routinen, die in normaler Sprache geplant werden.',
           'Plattformen: Desktop unter Windows, macOS und Linux; mobil aktuell unter Android, iOS folgt später.',
-          'Preise sind nicht veröffentlicht. Aori ist in der aktuellen Beta kostenlos nutzbar; die eigentlichen Kosten entstehen beim angebundenen LLM-Anbieter (Groq bietet eine kostenlose Stufe).',
+          'Die Preise von Aori sind nicht veröffentlicht. Zum Zeitpunkt der letzten Aktualisierung war die Nutzung in der Beta kostenlos (siehe Datum der letzten Aktualisierung); die eigentlichen Kosten entstehen beim angebundenen LLM-Anbieter, und einige Anbieter, etwa [Groq](https://groq.com), bieten eine kostenlose Stufe.',
           'Vollständig offline läuft die App nur auf dem Desktop mit ausgewähltem Ollama — jede andere Konfiguration, einschließlich der Android-App, hängt von einer Internetverbindung zu einem Cloud-Anbieter ab.',
         ],
       },
@@ -639,8 +639,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was Aori ist',
         content: [
           '**Aori ist eine App für einen persönlichen KI-Agenten, die auf Ihrem Desktop oder Smartphone läuft statt über eine gehostete Chat-Website.** Sie ist unter [aori-ai.app](https://www.aori-ai.app/) verfügbar und befindet sich aktuell in der öffentlichen Beta für Windows, macOS, Linux und Android.',
-          'Die zentrale Design-Entscheidung ist Local-First: Die App selbst läuft auf Ihrem Gerät, und Aori betreibt keinen Backend-Server, der Ihre Unterhaltungen speichert. Sie verbinden Ihren eigenen API-Schlüssel eines unterstützten LLM-Anbieters — OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek oder OpenRouter — und Aori speichert diesen Schlüssel lokal und sendet Anfragen direkt von Ihrem Gerät an den gewählten Anbieter.',
-          'Auf dem Desktop kommt ein zweiter Weg hinzu: die Unterstützung von [Ollama](https://ollama.com), mit der Sie Open-Source-Modelle vollständig auf Ihrer eigenen Hardware ausführen können, ganz ohne Cloud-Anbieter. Dieser Weg ist nur auf dem Desktop verfügbar — die Android-App hat keine Option für lokale Modelle und ist immer auf einen Cloud-Anbieter angewiesen.',
+          'Die zentrale Design-Entscheidung ist Local-First: Die App selbst läuft auf Ihrem Gerät, und laut der Website von Aori betreibt Aori keinen Backend-Server, der Ihre Unterhaltungen speichert. Sie verbinden Ihren eigenen API-Schlüssel eines unterstützten LLM-Anbieters — OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek oder OpenRouter — und laut der Website von Aori speichert Aori diesen Schlüssel lokal und sendet Anfragen direkt von Ihrem Gerät an den gewählten Anbieter.',
+          'Auf dem Desktop kommt ein zweiter Weg hinzu: die Unterstützung von [Ollama](https://ollama.com), mit der Sie Open-Weight-Modelle (Lizenz des jeweiligen Modells prüfen) vollständig auf Ihrer eigenen Hardware ausführen können, ganz ohne Cloud-Anbieter. Dieser Weg ist nur auf dem Desktop verfügbar — die Android-App hat keine Option für lokale Modelle und ist immer auf einen Cloud-Anbieter angewiesen.',
         ],
       },
       features: {
@@ -665,8 +665,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Plattform / Plan': 'Windows, macOS, Linux (Desktop)',
-            'Was Sie erwarten können': 'Voller Funktionsumfang. Unterstützt Cloud-Anbieter (OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter) und, einzigartig, [Ollama](https://ollama.com) für vollständig lokale Modelle.',
-            'Wichtiger Hinweis': 'Nur in dieser Umgebung kann Aori völlig ohne Cloud-Abhängigkeit laufen — vorausgesetzt, Sie wählen Ollama und ein Modell, das Ihre Hardware bewältigen kann.',
+            'Was Sie erwarten können': 'Voller Funktionsumfang. Unterstützt Cloud-Anbieter (OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter) und, nur auf dem Desktop, [Ollama](https://ollama.com) für vollständig lokale Modelle.',
+            'Wichtiger Hinweis': 'Nur in dieser Umgebung kann Aori ohne Cloud-LLM-Anbieter laufen — vorausgesetzt, Sie wählen Ollama und ein Modell, das Ihre Hardware bewältigen kann.',
           },
           {
             'Plattform / Plan': 'Android',
@@ -680,8 +680,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plattform / Plan': 'Preise',
-            'Was Sie erwarten können': 'Nicht veröffentlicht. Die App ist in der aktuellen öffentlichen Beta ohne Abogebühr für Aori selbst nutzbar.',
-            'Wichtiger Hinweis': 'Ihre tatsächlichen Kosten bestimmt der LLM-Anbieter, dessen API-Schlüssel Sie nutzen — Groq bietet eine kostenlose Stufe; OpenAI, Anthropic, Gemini, DeepSeek und OpenRouter rechnen über Ihr eigenes Konto bei diesem Anbieter ab.',
+            'Was Sie erwarten können': 'Nicht veröffentlicht. Zum Zeitpunkt der letzten Aktualisierung war die Nutzung in der Beta kostenlos (siehe Datum der letzten Aktualisierung).',
+            'Wichtiger Hinweis': 'Die Kosten variieren je nach Anbieter: Einige Anbieter, etwa [Groq](https://groq.com), bieten eine kostenlose Stufe; OpenAI, Anthropic, Gemini, DeepSeek und OpenRouter rechnen über Ihr eigenes Konto bei diesem Anbieter ab.',
           },
         ],
       },
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-vs-cloud',
         title: 'Lokal vs. Cloud: Was „Local-First" wirklich bedeutet',
         content: [
-          '**„Local-First" beschreibt, wo Aori Ihre Daten speichert — nicht, wo Ihre Prompts verarbeitet werden.** In jeder Konfiguration liegen Ihre API-Schlüssel und Ihr Gesprächsverlauf auf Ihrem Gerät statt auf einem von Aori betriebenen Server. Ob das Modell selbst aber auf Ihrem Gerät läuft, hängt vollständig davon ab, welches Backend Sie wählen.',
+          '**„Local-First" beschreibt, wo Aori Ihre Daten speichert — nicht, wo Ihre Prompts verarbeitet werden.** Laut der Website von Aori liegen in jeder von Aori beschriebenen Konfiguration Ihre API-Schlüssel und Ihr Gesprächsverlauf auf Ihrem Gerät statt auf einem von Aori betriebenen Server (von uns nicht geprüft). Ob das Modell selbst aber auf Ihrem Gerät läuft, hängt vollständig davon ab, welches Backend Sie wählen.',
           'Dieser Unterschied ist wichtig, weil die beiden Aussagen — „Ihre Daten bleiben auf Ihrem Gerät" und „Ihre KI läuft auf Ihrem Gerät" — nicht dasselbe sind, und Aori beides nur in einer ganz bestimmten Konfiguration gleichzeitig liefert.',
         ],
         decisionBlock: {
@@ -705,9 +705,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Sie möchten Zugriff auf die größten, leistungsfähigsten Frontier-Modelle',
           ],
           quick: [
-            'Desktop + Ollama = Prompts und Inferenz bleiben vollständig auf Ihrem Rechner',
+            'Desktop + Ollama = Die Inferenz läuft auf Ihrem Rechner, daher werden Prompts nicht an einen Cloud-LLM-Anbieter gesendet (sonstige Netzwerkaktivität von Aori und Ollama, etwa Updates oder Kanal-Integrationen, ist hier nicht erfasst)',
             'Jede andere Kombination (Desktop oder Android + ein Cloud-Anbieter) = Prompts verlassen Ihr Gerät und gehen an die API dieses Anbieters',
-            'Aori selbst betreibt in keinem Fall ein Backend, das Ihre Daten speichert — die Grenze zwischen lokal und Cloud verläuft beim Modell-Backend, nicht bei Aoris eigenen Servern',
+            'Laut der Website von Aori betreibt Aori selbst in keinem Fall ein Backend, das Ihre Daten speichert — die Grenze zwischen lokal und Cloud verläuft beim Modell-Backend, nicht bei Aoris eigenen Servern',
           ],
         },
       },
@@ -715,7 +715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Für wen sich Aori eignet',
         items: [
-          '**Nutzer, die einen einzigen Agenten für Desktop und Android möchten.** Dauerhaftes Gedächtnis, Personas und Routinen begleiten Sie plattformübergreifend, solange Sie dasselbe Anbieterkonto nutzen.',
+          '**Nutzer, die einen einzigen Agenten für Desktop und Android möchten.** Aori bietet auf beiden dieselben Funktionen; ob Gedächtnis und Routinen geräteübergreifend mitgenommen werden, entnehmen Sie der Dokumentation von Aori.',
           '**Nutzer, die bereit sind, ihren eigenen API-Schlüssel mitzubringen und Anbieter direkt zu bezahlen.** Aori ist die Oberfläche; die Abrechnung mit OpenAI, Anthropic, Google, Groq, DeepSeek oder OpenRouter verwalten Sie separat.',
           '**Nutzer, die geplante Routinen in normaler Sprache möchten**, etwa ein wiederkehrendes Morning-Briefing, ohne separate Automatisierungssoftware einzurichten.',
           '**Desktop-Nutzer, die die Option vollständig lokaler, offline-fähiger Inferenz** über [Ollama](https://ollama.com) möchten, ohne auf die Möglichkeit zu verzichten, für schwierigere Aufgaben zu einem Cloud-Anbieter zu wechseln.',
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**iPhone- oder iPad-Nutzer.** Aori hat noch keine iOS-App; das Unternehmen beschreibt die iOS-Unterstützung als „folgt später" ohne veröffentlichtes Datum.',
           '**Nutzer, die eine vollständig offline-fähige App ganz ohne Cloud-Option möchten.** Aoris lokaler Pfad existiert nur auf dem Desktop mit ausgewähltem Ollama — die meisten nützlichen Funktionen setzen einen verbundenen Cloud-Anbieter voraus. Behandeln Sie es also als Hybrid-Tool, nicht als standardmäßig private, offline-fähige App.',
-          '**Nutzer, die keine separate Anbieterabrechnung verwalten möchten.** Aori hat kein gebündeltes Abo, das die Modellnutzung abdeckt; Sie eröffnen und finanzieren ein eigenes Konto beim gewählten Anbieter.',
+          '**Nutzer, die keine separate Anbieterabrechnung verwalten möchten.** Aori nennt kein gebündeltes Abo, das die Modellnutzung abdeckt; Sie eröffnen und finanzieren ein eigenes Konto beim gewählten Anbieter.',
           '**Nutzer, die vor der Entscheidung einen veröffentlichten, vorhersehbaren Preis benötigen.** Aori hat für die App selbst keine Preise veröffentlicht, und die Anbieterkosten variieren je nach gewähltem Modell und Anbieter.',
           '**Android-Nutzer, die gezielt lokale, offline-fähige Modelle wollen.** Ollama-Unterstützung gibt es nur auf dem Desktop; Android ist immer auf einen Cloud-Anbieter angewiesen.',
         ],
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist Aori eine vollständig lokale, offline-fähige KI-App?',
-            a: 'Nein, nicht standardmäßig. Aori ist hybrid: Es speichert Ihre API-Schlüssel und Unterhaltungen lokal statt auf einem von Aori betriebenen Server, aber das Modell, das Antworten erzeugt, läuft in der Cloud, sofern Sie nicht ausdrücklich Ollama als Backend auf dem Desktop wählen. Nur diese eine Konfiguration — Desktop plus Ollama — ist vollständig lokal und offline-fähig.',
+            a: 'Nein, nicht standardmäßig. Aori ist hybrid: Laut der Website von Aori speichert es Ihre API-Schlüssel und Unterhaltungen lokal statt auf einem von Aori betriebenen Server (von uns nicht geprüft), aber das Modell, das Antworten erzeugt, läuft in der Cloud, sofern Sie nicht ausdrücklich Ollama als Backend auf dem Desktop wählen. Nur diese eine Konfiguration — Desktop plus Ollama — ist vollständig lokal und offline-fähig.',
           },
           {
             q: 'Welche Plattformen unterstützt Aori?',
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Speichert Aori meine Daten auf eigenen Servern?',
-            a: 'Nein. Aori betreibt kein Backend, das Ihre Unterhaltungen speichert. Ihre API-Schlüssel werden lokal auf Ihrem Gerät gespeichert, und Anfragen gehen direkt von Ihrem Gerät an den angebundenen LLM-Anbieter — nicht über einen von Aori betriebenen Server.',
+            a: 'Laut der Website von Aori nein: Die App läuft auf Ihrem Gerät und betreibt kein Backend, das Ihre Unterhaltungen speichert; API-Schlüssel werden lokal gespeichert, und Anfragen gehen direkt an den von Ihnen gewählten Anbieter. Den Netzwerkverkehr von Aori haben wir nicht unabhängig geprüft.',
           },
           {
             q: 'Welche LLM-Anbieter unterstützt Aori?',
@@ -756,7 +756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was kostet Aori?',
-            a: 'Aori hat keine Preise veröffentlicht; die App ist in der aktuellen öffentlichen Beta ohne Gebühr für Aori selbst nutzbar. Ihre tatsächlichen Kosten entstehen beim angebundenen LLM-Anbieter — Groq bietet eine kostenlose Stufe, während OpenAI, Anthropic, Gemini, DeepSeek und OpenRouter direkt über Ihr eigenes Konto bei diesem Anbieter abrechnen.',
+            a: 'Die Preise von Aori sind nicht veröffentlicht; zum Zeitpunkt der letzten Aktualisierung war die Nutzung in der Beta kostenlos (siehe Datum der letzten Aktualisierung). Ihre tatsächlichen Kosten entstehen beim angebundenen LLM-Anbieter — einige Anbieter, etwa [Groq](https://groq.com), bieten eine kostenlose Stufe, während OpenAI, Anthropic, Gemini, DeepSeek und OpenRouter direkt über Ihr eigenes Konto bei diesem Anbieter abrechnen.',
           },
           {
             q: 'Kann ich Aori auf Android vollständig offline betreiben?',
@@ -784,7 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          '**Aori ist eine gut abgegrenzte App für einen persönlichen Agenten, wenn Sie sie als Hybrid bewerten — nicht als standardmäßig private lokale KI.** Die Kombination aus dauerhaftem Gedächtnis, Personas per Slash-Befehl, Multi-Channel-Chat (Telegram und WhatsApp mit isolierten Verläufen), Obsidian/Notion-Wissensintegration und proaktiven Routinen in normaler Sprache ist ein stimmiger Funktionsumfang, der einen Agenten über verschiedene Kontexte hinweg konsistent wirken lassen soll. Die lokale Speicherung von API-Schlüsseln und Unterhaltungen ohne von Aori betriebenes Backend ist eine echte, überprüfbare Datenschutz-Eigenschaft, unabhängig davon, welches Modell-Backend Sie wählen. Der Anspruch auf vollständig lokalen, offline-fähigen Betrieb gilt aber genau für eine Konfiguration: Desktop mit ausgewähltem Ollama. Jeder andere Weg — Cloud-Anbieter auf dem Desktop oder jede Nutzung auf Android — sendet Ihre Prompts über das Internet an eine Drittanbieter-API. Nutzer, die diesen Kompromiss verstehen und akzeptieren und bereit sind, ihren eigenen LLM-API-Schlüssel mitzubringen und zu bezahlen, erhalten einen wirklich nützlichen plattformübergreifenden Agenten. Wer standardmäßig eine vollständig offline-fähige App oder eine iOS-App sucht, sollte sich vorerst anderweitig umsehen.',
+          '**Aori ist eine gut abgegrenzte App für einen persönlichen Agenten, wenn Sie sie als Hybrid bewerten — nicht als standardmäßig private lokale KI.** Die Kombination aus dauerhaftem Gedächtnis, Personas per Slash-Befehl, Multi-Channel-Chat (Telegram und WhatsApp mit isolierten Verläufen), Obsidian/Notion-Wissensintegration und proaktiven Routinen in normaler Sprache ist ein stimmiger Funktionsumfang, der einen Agenten über verschiedene Kontexte hinweg konsistent wirken lassen soll. Die lokale Speicherung von API-Schlüsseln und Unterhaltungen ohne von Aori betriebenes Backend ist eine vom Anbieter angegebene Datenschutz-Eigenschaft (wir haben den Netzwerkverkehr von Aori nicht geprüft), unabhängig davon, welches Modell-Backend Sie wählen. Der Anspruch auf vollständig lokalen, offline-fähigen Betrieb gilt aber genau für eine Konfiguration: Desktop mit ausgewähltem Ollama. Jeder andere Weg — Cloud-Anbieter auf dem Desktop oder jede Nutzung auf Android — sendet Ihre Prompts über das Internet an eine Drittanbieter-API. Nutzer, die diesen Kompromiss verstehen und akzeptieren und bereit sind, ihren eigenen LLM-API-Schlüssel mitzubringen und zu bezahlen, erhalten einen potenziell nützlichen plattformübergreifenden Agenten. Wer standardmäßig eine vollständig offline-fähige App oder eine iOS-App sucht, sollte sich vorerst anderweitig umsehen.',
       },
       sources: {
         id: 'sources',
@@ -798,7 +798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Hermes-Agent-Rezension: Lokaler autonomer KI-Agent](/de/power-local-llm/hermes-agent-review) — ein vergleichbarer local-first Agent, getestet auf dieser Website.',
+          '[Hermes-Agent-Rezension: Lokaler autonomer KI-Agent](/de/power-local-llm/hermes-agent-review) — ein vergleichbarer local-first Agent, der auf dieser Website besprochen wird.',
           '[BabyAGI-Rezension: Autonomer lokaler Agent](/de/power-local-llm/babyagi-review-autonomous-agent) — ein weiteres autonomes Agenten-Framework auf dieser Website.',
           '[Ein lokales LLM mit Obsidian betreiben](/de/power-local-llm/local-llm-with-obsidian-2026) — lokale Modelle mit Ihrem Obsidian-Vault verbinden, derselbe Integrationsweg, den Aori unterstützt.',
           '[Grammarly und Notion AI durch lokale Modelle ersetzen](/de/power-local-llm/replace-grammarly-notion-ai-with-local) — lokale KI neben einem Notion-Workspace nutzen.',
@@ -818,11 +818,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Reseña de Aori AI: Agente Personal Local-First para Escritorio y Móvil',
     seoTitle: 'Reseña de Aori AI: Agente Personal Local-First',
     intro:
-      'Aori es una app de agente de IA personal que funciona en tu escritorio y tu teléfono, con memoria persistente, personas intercambiables y rutinas programadas. Guarda tus claves de API y conversaciones localmente en lugar de en un servidor operado por Aori, pero no es una app totalmente offline por defecto — la mayor parte de su inteligencia proviene del proveedor de LLM en la nube que conectes. Esta reseña cubre lo que Aori realmente hace, qué plataformas admiten inferencia totalmente local vía Ollama, y dónde termina la promesa "local-first" y dónde empieza la dependencia de la nube.',
+      'Aori es una app de agente de IA personal que funciona en tu escritorio y tu teléfono, con memoria persistente, personas intercambiables y rutinas programadas. Según Aori, guarda tus claves de API y conversaciones localmente en lugar de en un servidor operado por Aori, pero no es una app totalmente offline por defecto — la mayor parte de su inteligencia proviene del proveedor de LLM en la nube que conectes. Esta reseña cubre lo que Aori dice que hace (según la información publicada por el desarrollador, no a partir de pruebas prácticas), qué plataformas admiten inferencia totalmente local vía Ollama, y dónde termina la promesa "local-first" y dónde empieza la dependencia de la nube.',
     metaDescription:
       'Reseña de Aori AI: un agente personal local-first con memoria, personas y rutinas para escritorio y Android. Cuándo funciona totalmente offline vía Ollama y cuándo depende de proveedores en la nube.',
     twitterDescription:
-      'Reseña de Aori AI 2026: app de agente personal para escritorio y Android con memoria, personas y rutinas. Local vía Ollama solo en escritorio — análisis honesto del modelo híbrido.',
+      'Reseña de Aori AI 2026: app de agente personal para escritorio y Android con memoria, personas y rutinas. Local vía Ollama solo en escritorio — análisis del modelo híbrido.',
     audience:
       'Usuarios que deciden si ejecutar un agente de IA personal con Aori usando su propia clave de API en la nube, o totalmente local vía Ollama en escritorio — cubre soporte de plataformas, funciones y el equilibrio entre local y nube.',
     readTime: '7 min de lectura',
@@ -845,18 +845,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Windows PC', 'Mac', 'Linux PC', 'Android'],
     leadAnswerBlock:
-      '**Aori vale la pena si quieres un solo agente de IA personal — con memoria, personas y rutinas programadas — para escritorio y Android, y estás dispuesto a traer tu propia clave de API de LLM.** Solo se convierte en una herramienta totalmente local y offline cuando eliges [Ollama](https://ollama.com) como backend de modelo en escritorio; la app de Android y cualquier backend en la nube siguen enviando tus prompts por internet a ese proveedor, aunque Aori en sí no almacene ninguna copia de tus datos en sus propios servidores.',
+      '**Aori vale la pena si quieres un solo agente de IA personal — con memoria, personas y rutinas programadas — para escritorio y Android, y estás dispuesto a traer tu propia clave de API de LLM.** Solo se convierte en una herramienta totalmente local y offline cuando eliges [Ollama](https://ollama.com) como backend de modelo en escritorio; la app de Android y cualquier backend en la nube siguen enviando tus prompts por internet a ese proveedor, aunque, según Aori, la propia app no almacene ninguna copia de tus datos en sus propios servidores.',
     quickAnswerTop: {
       es: {
         question: '¿Aori AI es una app de IA totalmente local y offline?',
         answer:
-          'No — Aori es híbrida. Funciona en tu dispositivo y nunca envía datos a un backend operado por Aori, pero por defecto enruta los prompts a través de un proveedor en la nube (OpenAI, Anthropic, Google Gemini, Groq, DeepSeek u OpenRouter) usando tu propia clave de API. La inferencia totalmente local y offline solo ocurre cuando eliges Ollama como backend, y esa opción existe únicamente en escritorio.',
+          'No — Aori es híbrida. Según el sitio web de Aori, la app funciona en tu dispositivo y no opera un backend que almacene tus conversaciones; las claves de API se guardan localmente y las solicitudes van directamente al proveedor que elijas. No hemos auditado de forma independiente el tráfico de red de Aori. Por defecto, la app enruta los prompts a través de un proveedor en la nube (OpenAI, Anthropic, Google Gemini, Groq, DeepSeek u OpenRouter) usando tu propia clave de API. La inferencia totalmente local y offline solo ocurre cuando eliges Ollama como backend, y esa opción existe únicamente en escritorio.',
         bullets: [
           'Escritorio (Windows/macOS/Linux) admite Ollama para modelos totalmente locales; Android no.',
-          'Las claves de API se guardan localmente en tu dispositivo y van directo al proveedor, nunca a través de un backend de Aori.',
+          'Según Aori, las claves de API se guardan localmente en tu dispositivo y van directo al proveedor, sin pasar por un backend de Aori.',
           'Funciones: memoria persistente, personas por comandos slash, canales de Telegram/WhatsApp, integración con Obsidian/Notion, rutinas programadas.',
           'Plataformas disponibles ahora: Windows, macOS, Linux, Android. iOS aún no está disponible.',
-          'El precio no está publicado — Aori en sí es gratis en beta; pagas al proveedor de LLM que conectes (Groq tiene un nivel gratuito).',
+          'El precio de Aori no está publicado; era gratis en beta en el momento de la última actualización (consulta la fecha de última actualización). Los costos de los proveedores varían, y algunos, como [Groq](https://groq.com), ofrecen un nivel gratuito.',
         ],
         updatedDate: '2026-09',
       },
@@ -883,21 +883,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'one-sentence',
             text:
-              'Aori es un agente de IA personal local-first para escritorio y móvil que mantiene las claves de API y el historial de chat en tu dispositivo, pero solo funciona totalmente offline cuando eliges Ollama como backend de modelo en escritorio.',
+              'Según el sitio web de Aori, Aori es un agente de IA personal local-first para escritorio y móvil que mantiene las claves de API y el historial de chat en tu dispositivo (no lo hemos auditado), pero solo funciona totalmente offline cuando eliges Ollama como backend de modelo en escritorio.',
           },
           {
             type: 'plain-terms',
             text:
-              'Aori es una app para tu computadora o tu teléfono Android que actúa como un asistente personal con memoria. Conectas tu propia cuenta y clave de un proveedor como OpenAI o Anthropic para usarla, o — solo en escritorio — puedes ejecutarla con modelos locales gratuitos vía Ollama para que nada salga a internet.',
+              'Aori es una app para tu computadora o tu teléfono Android que actúa como un asistente personal con memoria. Conectas tu propia cuenta y clave de un proveedor como OpenAI o Anthropic para usarla, o — solo en escritorio — puedes ejecutarla con modelos locales vía Ollama, de modo que los prompts y las respuestas se procesen en tu propio equipo.',
           },
         ],
         items: [
           'Aori es una app de agente de IA personal local-first para escritorio y móvil, actualmente en beta pública en [aori-ai.app](https://www.aori-ai.app/).',
-          'Ningún backend operado por Aori almacena tus datos — las claves de API y las conversaciones se guardan localmente en tu dispositivo y se envían directo al proveedor de LLM que elijas.',
+          'Según el sitio web de Aori, ningún backend operado por Aori almacena tus datos — las claves de API y las conversaciones se guardan localmente en tu dispositivo y se envían directo al proveedor de LLM que elijas.',
           'Proveedores en la nube compatibles: OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek y OpenRouter. Solo en escritorio, Aori también admite [Ollama](https://ollama.com) para modelos totalmente locales.',
           'Funciones principales: memoria persistente, personas intercambiables por comandos slash (por ejemplo `/leo`, `/planner`), chat multicanal (en la app, Telegram, WhatsApp) con historial aislado por canal, integración de conocimiento (carpetas locales, Obsidian, Notion) y rutinas proactivas programadas en lenguaje sencillo.',
           'Plataformas: escritorio en Windows, macOS y Linux; móvil en Android ahora, con iOS llegando más adelante.',
-          'El precio no está publicado. Aori es gratis en su beta actual; el costo real es el que cobre el proveedor de LLM que conectes (Groq tiene un nivel gratuito).',
+          'El precio de Aori no está publicado. Era gratis en beta en el momento de la última actualización (consulta la fecha de última actualización); el costo real es el que cobre el proveedor de LLM que conectes, y algunos proveedores, como [Groq](https://groq.com), ofrecen un nivel gratuito.',
           'El funcionamiento totalmente offline se limita a escritorio con Ollama seleccionado — cualquier otra configuración, incluida la app de Android, depende de una conexión a internet con un proveedor en la nube.',
         ],
       },
@@ -906,8 +906,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qué es Aori',
         content: [
           '**Aori es una app de agente de IA personal que funciona en tu escritorio o teléfono en lugar de a través de un sitio de chat alojado.** Está disponible en [aori-ai.app](https://www.aori-ai.app/) y actualmente está en beta pública para Windows, macOS, Linux y Android.',
-          'La decisión de diseño principal es local-first: la app en sí funciona en tu dispositivo, y Aori no opera un servidor backend que almacene tus conversaciones. Conectas tu propia clave de API de un proveedor de LLM compatible — OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek u OpenRouter — y Aori guarda esa clave localmente, enviando las solicitudes directamente desde tu dispositivo al proveedor que elegiste.',
-          'En escritorio, Aori añade una segunda vía: soporte de [Ollama](https://ollama.com), que te permite ejecutar modelos de código abierto totalmente en tu propio hardware, sin ningún proveedor en la nube de por medio. Esta vía es exclusiva de escritorio: la app de Android no tiene opción de modelo local y siempre depende de un proveedor en la nube.',
+          'La decisión de diseño principal es local-first: la app en sí funciona en tu dispositivo, y, según el sitio web de Aori, no opera un servidor backend que almacene tus conversaciones. Conectas tu propia clave de API de un proveedor de LLM compatible — OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek u OpenRouter — y, según el sitio web de Aori, Aori guarda esa clave localmente y envía las solicitudes directamente desde tu dispositivo al proveedor que elegiste.',
+          'En escritorio, Aori añade una segunda vía: soporte de [Ollama](https://ollama.com), que te permite ejecutar modelos de pesos abiertos (revisa la licencia de cada modelo) totalmente en tu propio hardware, sin ningún proveedor en la nube de por medio. Esta vía es exclusiva de escritorio: la app de Android no tiene opción de modelo local y siempre depende de un proveedor en la nube.',
         ],
       },
       features: {
@@ -932,8 +932,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Plataforma / Plan': 'Windows, macOS, Linux (escritorio)',
-            'Qué esperar': 'Conjunto completo de funciones. Admite proveedores en la nube (OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter) y, de forma única, [Ollama](https://ollama.com) para modelos totalmente locales.',
-            'Nota importante': 'Este es el único entorno donde Aori puede funcionar sin ninguna dependencia de la nube, siempre que elijas Ollama y un modelo que tu hardware pueda ejecutar.',
+            'Qué esperar': 'Conjunto completo de funciones. Admite proveedores en la nube (OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter) y, solo en escritorio, [Ollama](https://ollama.com) para modelos totalmente locales.',
+            'Nota importante': 'Este es el único entorno donde Aori puede funcionar sin necesitar un proveedor de LLM en la nube, siempre que elijas Ollama y un modelo que tu hardware pueda ejecutar.',
           },
           {
             'Plataforma / Plan': 'Android',
@@ -947,8 +947,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma / Plan': 'Precios',
-            'Qué esperar': 'No publicados. La app es usable en su beta pública actual sin cuota de suscripción para Aori en sí.',
-            'Nota importante': 'Tu costo real lo fija el proveedor de LLM cuya clave de API uses — Groq ofrece un nivel gratuito; OpenAI, Anthropic, Gemini, DeepSeek y OpenRouter cobran a través de tu propia cuenta con ese proveedor.',
+            'Qué esperar': 'No publicados. Era gratis en beta en el momento de la última actualización (consulta la fecha de última actualización).',
+            'Nota importante': 'Los costos varían según el proveedor: algunos, como [Groq](https://groq.com), ofrecen un nivel gratuito; OpenAI, Anthropic, Gemini, DeepSeek y OpenRouter cobran a través de tu propia cuenta con ese proveedor.',
           },
         ],
       },
@@ -956,7 +956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-vs-cloud',
         title: 'Local vs. nube: qué significa realmente "local-first"',
         content: [
-          '**"Local-first" describe dónde almacena Aori tus datos, no dónde se procesan tus prompts.** En cualquier configuración, tus claves de API y tu historial de conversación viven en tu dispositivo en lugar de en un servidor operado por Aori. Pero que el modelo en sí funcione en tu dispositivo depende por completo del backend que elijas.',
+          '**"Local-first" describe dónde almacena Aori tus datos, no dónde se procesan tus prompts.** Según el sitio web de Aori, en cualquier configuración que describe, tus claves de API y tu historial de conversación viven en tu dispositivo en lugar de en un servidor operado por Aori (no lo hemos auditado). Pero que el modelo en sí funcione en tu dispositivo depende por completo del backend que elijas.',
           'Esta distinción importa porque las dos afirmaciones — "tus datos permanecen en tu dispositivo" y "tu IA funciona en tu dispositivo" — no son lo mismo, y Aori solo cumple ambas a la vez en una configuración específica.',
         ],
         decisionBlock: {
@@ -972,9 +972,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Quieres acceso a los modelos de frontera más grandes y capaces',
           ],
           quick: [
-            'Escritorio + Ollama = los prompts y la inferencia permanecen enteramente en tu máquina',
+            'Escritorio + Ollama = la inferencia se ejecuta en tu máquina, por lo que los prompts no se envían a un proveedor de LLM en la nube (otra actividad de red de Aori y Ollama, como actualizaciones o integraciones de canales, no se cubre aquí)',
             'Cualquier otra combinación (escritorio o Android + un proveedor en la nube) = los prompts salen de tu dispositivo hacia la API de ese proveedor',
-            'Aori en sí nunca opera un backend que almacene tus datos, en ningún caso — la línea entre local y nube pasa por el backend del modelo, no por los servidores propios de Aori',
+            'Según el sitio web de Aori, la propia Aori no opera un backend que almacene tus datos, en ningún caso — la línea entre local y nube pasa por el backend del modelo, no por los servidores propios de Aori',
           ],
         },
       },
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Quién debería usar Aori',
         items: [
-          '**Usuarios que quieren un solo agente para escritorio y Android.** La memoria persistente, las personas y las rutinas te siguen entre plataformas mientras uses la misma cuenta de proveedor.',
+          '**Usuarios que quieren un solo agente para escritorio y Android.** Aori ofrece las mismas funciones en ambas; consulta la documentación de Aori para saber si la memoria y las rutinas se trasladan entre dispositivos.',
           '**Usuarios cómodos trayendo su propia clave de API y pagando directamente a los proveedores.** Aori es la interfaz; tú gestionas la facturación con OpenAI, Anthropic, Google, Groq, DeepSeek u OpenRouter por separado.',
           '**Usuarios que quieren rutinas programadas en lenguaje sencillo**, como un resumen matutino recurrente, sin configurar software de automatización aparte.',
           '**Usuarios de escritorio que quieren la opción de inferencia totalmente local y offline** vía [Ollama](https://ollama.com), sin renunciar a la opción de cambiar a un proveedor en la nube para tareas más difíciles.',
@@ -996,7 +996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Usuarios de iPhone o iPad.** Aori aún no tiene app de iOS; la empresa describe el soporte de iOS como "próximamente" sin fecha publicada.',
           '**Usuarios que quieren una app totalmente offline sin ninguna opción de nube.** La vía local de Aori solo existe en escritorio con Ollama seleccionado — la mayoría de sus funciones útiles asumen un proveedor en la nube conectado, así que trátala como una herramienta híbrida, no como una app offline con privacidad por defecto.',
-          '**Usuarios que no quieren gestionar facturación separada con un proveedor.** Aori no tiene una suscripción combinada que cubra el uso del modelo; abres y financias tu propia cuenta con el proveedor que elijas.',
+          '**Usuarios que no quieren gestionar facturación separada con un proveedor.** Aori no indica una suscripción combinada que cubra el uso del modelo; abres y financias tu propia cuenta con el proveedor que elijas.',
           '**Usuarios que necesitan un precio publicado y predecible antes de comprometerse.** Aori no ha publicado precios para la app en sí, y el costo del proveedor varía según el modelo y proveedor que elijas.',
           '**Usuarios de Android que específicamente quieren modelos locales y offline.** El soporte de Ollama es exclusivo de escritorio; Android siempre depende de un proveedor en la nube.',
         ],
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Aori es una app de IA totalmente offline y local?',
-            a: 'No, no por defecto. Aori es híbrida: guarda tus claves de API y conversaciones localmente en lugar de en un servidor operado por Aori, pero el modelo que genera las respuestas funciona en la nube a menos que elijas específicamente Ollama como backend en escritorio. Solo esa configuración — escritorio más Ollama — es totalmente local y offline.',
+            a: 'No, no por defecto. Aori es híbrida: según el sitio web de Aori, guarda tus claves de API y conversaciones localmente en lugar de en un servidor operado por Aori (no lo hemos auditado), pero el modelo que genera las respuestas funciona en la nube a menos que elijas específicamente Ollama como backend en escritorio. Solo esa configuración — escritorio más Ollama — es totalmente local y offline.',
           },
           {
             q: '¿Qué plataformas admite Aori?',
@@ -1015,7 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Aori guarda mis datos en sus propios servidores?',
-            a: 'No. Aori no opera un backend que almacene tus conversaciones. Tus claves de API se guardan localmente en tu dispositivo, y las solicitudes van directamente desde tu dispositivo al proveedor de LLM que conectes, no a través de un servidor operado por Aori.',
+            a: 'Según el sitio web de Aori, no: la app funciona en tu dispositivo y no opera un backend que almacene tus conversaciones; las claves de API se guardan localmente y las solicitudes van directamente al proveedor que elijas. No hemos auditado de forma independiente el tráfico de red de Aori.',
           },
           {
             q: '¿Qué proveedores de LLM admite Aori?',
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánto cuesta Aori?',
-            a: 'Aori no ha publicado precios; la app es usable en su beta pública actual sin costo para Aori en sí. Tu costo real proviene del proveedor de LLM que conectes — Groq ofrece un nivel gratuito, mientras que OpenAI, Anthropic, Gemini, DeepSeek y OpenRouter cobran directamente a través de tu propia cuenta con ese proveedor.',
+            a: 'El precio de Aori no está publicado; era gratis en beta en el momento de la última actualización (consulta la fecha de última actualización). Tu costo real proviene del proveedor de LLM que conectes — algunos proveedores, como [Groq](https://groq.com), ofrecen un nivel gratuito, mientras que OpenAI, Anthropic, Gemini, DeepSeek y OpenRouter cobran directamente a través de tu propia cuenta con ese proveedor.',
           },
           {
             q: '¿Puedo usar Aori totalmente offline en Android?',
@@ -1051,7 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          '**Aori es una app de agente personal bien delimitada si la evalúas como híbrida, no como una herramienta de IA local con privacidad por defecto.** La combinación de memoria persistente, personas por comandos slash, chat multicanal (Telegram y WhatsApp con historiales aislados), integración de conocimiento con Obsidian/Notion y rutinas proactivas en lenguaje sencillo es un conjunto de funciones coherente orientado a que un agente se sienta consistente en distintos contextos. Guardar las claves de API y las conversaciones localmente, sin un backend operado por Aori, es una propiedad de privacidad real y verificable sin importar qué backend de modelo elijas. Pero la afirmación de funcionamiento totalmente local y offline se aplica exactamente a una configuración: escritorio con Ollama seleccionado. Cualquier otra vía — proveedores en la nube en escritorio, o cualquier uso en Android — envía tus prompts a una API de terceros por internet. Los usuarios que entienden y aceptan ese equilibrio, y que están cómodos trayendo y pagando su propia clave de API de LLM, obtienen un agente multiplataforma genuinamente útil. Quienes buscan una app totalmente offline por defecto, o una app de iOS, deberían buscar en otro lugar por ahora.',
+          '**Aori es una app de agente personal bien delimitada si la evalúas como híbrida, no como una herramienta de IA local con privacidad por defecto.** La combinación de memoria persistente, personas por comandos slash, chat multicanal (Telegram y WhatsApp con historiales aislados), integración de conocimiento con Obsidian/Notion y rutinas proactivas en lenguaje sencillo es un conjunto de funciones coherente orientado a que un agente se sienta consistente en distintos contextos. Guardar las claves de API y las conversaciones localmente, sin un backend operado por Aori, es una propiedad de privacidad declarada por el desarrollador (no hemos auditado el tráfico de red de Aori), sin importar qué backend de modelo elijas. Pero la afirmación de funcionamiento totalmente local y offline se aplica exactamente a una configuración: escritorio con Ollama seleccionado. Cualquier otra vía — proveedores en la nube en escritorio, o cualquier uso en Android — envía tus prompts a una API de terceros por internet. Los usuarios que entienden y aceptan ese equilibrio, y que están cómodos trayendo y pagando su propia clave de API de LLM, obtienen un agente multiplataforma potencialmente útil. Quienes buscan una app totalmente offline por defecto, o una app de iOS, deberían buscar en otro lugar por ahora.',
       },
       sources: {
         id: 'sources',
@@ -1085,11 +1085,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Avis Aori AI: agent personnel local-first pour ordinateur et mobile',
     seoTitle: 'Avis Aori AI: agent personnel local-first',
     intro:
-      'Aori est une application d\'agent IA personnel qui fonctionne sur votre ordinateur et votre téléphone, avec mémoire persistante, personas interchangeables et routines planifiées. Elle stocke vos clés API et vos conversations localement plutôt que sur un serveur exploité par Aori, mais ce n\'est pas une application entièrement hors ligne par défaut — l\'essentiel de son intelligence provient du fournisseur de LLM cloud que vous connectez. Cet avis détaille ce qu\'Aori fait réellement, quelles plateformes prennent en charge l\'inférence entièrement locale via Ollama, et où s\'arrête la promesse « local-first » pour laisser place à la dépendance au cloud.',
+      'Aori est une application d\'agent IA personnel qui fonctionne sur votre ordinateur et votre téléphone, avec mémoire persistante, personas interchangeables et routines planifiées. Selon Aori, elle stocke vos clés API et vos conversations localement plutôt que sur un serveur exploité par Aori, mais ce n\'est pas une application entièrement hors ligne par défaut — l\'essentiel de son intelligence provient du fournisseur de LLM cloud que vous connectez. Cet avis détaille ce qu\'Aori dit faire (d\'après les informations publiées par l\'éditeur, et non d\'après des tests pratiques), quelles plateformes prennent en charge l\'inférence entièrement locale via Ollama, et où s\'arrête la promesse « local-first » pour laisser place à la dépendance au cloud.',
     metaDescription:
       'Avis Aori AI : un agent personnel local-first avec mémoire, personas et routines pour ordinateur et Android. Quand fonctionne-t-il hors ligne via Ollama, et quand dépend-il du cloud ?',
     twitterDescription:
-      'Avis Aori AI 2026 : application d\'agent personnel pour ordinateur et Android avec mémoire, personas et routines. Local via Ollama sur ordinateur uniquement — analyse honnête du modèle hybride.',
+      'Avis Aori AI 2026 : application d\'agent personnel pour ordinateur et Android avec mémoire, personas et routines. Local via Ollama sur ordinateur uniquement — analyse du modèle hybride.',
     audience:
       'Utilisateurs qui hésitent entre faire tourner un agent IA personnel via Aori avec leur propre clé API cloud, ou entièrement en local via Ollama sur ordinateur — couvre le support des plateformes, les fonctionnalités et l\'arbitrage local/cloud.',
     readTime: '7 min de lecture',
@@ -1112,18 +1112,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Windows PC', 'Mac', 'Linux PC', 'Android'],
     leadAnswerBlock:
-      '**Aori vaut le coup si vous voulez un seul agent IA personnel — avec mémoire, personas et routines planifiées — sur ordinateur et Android, et que vous êtes prêt à apporter votre propre clé API de LLM.** Il ne devient un outil entièrement local et hors ligne que lorsque vous choisissez [Ollama](https://ollama.com) comme backend de modèle sur ordinateur ; l\'application Android et tout backend cloud continuent d\'envoyer vos prompts sur internet à ce fournisseur, même si Aori lui-même ne stocke aucune copie de vos données sur ses propres serveurs.',
+      '**Aori vaut le coup si vous voulez un seul agent IA personnel — avec mémoire, personas et routines planifiées — sur ordinateur et Android, et que vous êtes prêt à apporter votre propre clé API de LLM.** Il ne devient un outil entièrement local et hors ligne que lorsque vous choisissez [Ollama](https://ollama.com) comme backend de modèle sur ordinateur ; l\'application Android et tout backend cloud continuent d\'envoyer vos prompts sur internet à ce fournisseur, même si, selon Aori, l\'application elle-même ne stocke aucune copie de vos données sur ses propres serveurs.',
     quickAnswerTop: {
       fr: {
         question: 'Aori AI est-elle une application IA entièrement locale et hors ligne ?',
         answer:
-          'Non — Aori est hybride. Elle fonctionne sur votre appareil et n\'envoie jamais de données à un backend exploité par Aori, mais elle achemine par défaut les prompts via un fournisseur cloud (OpenAI, Anthropic, Google Gemini, Groq, DeepSeek ou OpenRouter) avec votre propre clé API. L\'inférence entièrement locale et hors ligne n\'a lieu que si vous choisissez Ollama comme backend, une option qui n\'existe que sur ordinateur.',
+          'Non — Aori est hybride. Selon le site web d\'Aori, l\'application fonctionne sur votre appareil et n\'exploite pas de backend qui stockerait vos conversations ; les clés API sont stockées localement et les requêtes partent directement vers le fournisseur que vous choisissez. Nous n\'avons pas audité le trafic réseau d\'Aori de manière indépendante. Par défaut, elle achemine toutefois les prompts via un fournisseur cloud (OpenAI, Anthropic, Google Gemini, Groq, DeepSeek ou OpenRouter) avec votre propre clé API. L\'inférence entièrement locale et hors ligne n\'a lieu que si vous choisissez Ollama comme backend, une option qui n\'existe que sur ordinateur.',
         bullets: [
           'Ordinateur (Windows/macOS/Linux) prend en charge Ollama pour des modèles entièrement locaux ; Android non.',
-          'Les clés API sont stockées localement sur votre appareil et vont directement au fournisseur — jamais via un backend Aori.',
+          'Selon Aori, les clés API sont stockées localement sur votre appareil et vont directement au fournisseur, sans passer par un backend Aori.',
           'Fonctionnalités : mémoire persistante, personas via commandes slash, canaux Telegram/WhatsApp, intégration Obsidian/Notion, routines planifiées.',
           'Plateformes disponibles actuellement : Windows, macOS, Linux, Android. iOS n\'est pas encore disponible.',
-          'Le tarif n\'est pas publié — Aori lui-même est gratuit en bêta ; vous payez le fournisseur de LLM que vous connectez (Groq propose un niveau gratuit).',
+          'Le tarif d\'Aori n\'est pas publié ; il était gratuit en bêta lors de la dernière mise à jour (voir la date de dernière mise à jour). Les coûts des fournisseurs varient, et certains, comme [Groq](https://groq.com), proposent un niveau gratuit.',
         ],
         updatedDate: '2026-09',
       },
@@ -1150,21 +1150,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'one-sentence',
             text:
-              'Aori est un agent IA personnel local-first pour ordinateur et mobile qui conserve les clés API et l\'historique de discussion sur votre appareil, mais ne fonctionne entièrement hors ligne que si vous choisissez Ollama comme backend de modèle sur ordinateur.',
+              'Selon le site web d\'Aori, Aori est un agent IA personnel local-first pour ordinateur et mobile qui conserve les clés API et l\'historique de discussion sur votre appareil (nous ne l\'avons pas audité), mais ne fonctionne entièrement hors ligne que si vous choisissez Ollama comme backend de modèle sur ordinateur.',
           },
           {
             type: 'plain-terms',
             text:
-              'Aori est une application pour votre ordinateur ou votre téléphone Android qui agit comme un assistant personnel doté de mémoire. Vous connectez votre propre compte et votre propre clé d\'un fournisseur comme OpenAI ou Anthropic pour la faire fonctionner, ou — sur ordinateur uniquement — vous pouvez l\'utiliser avec des modèles locaux gratuits via Ollama pour que rien ne parte sur internet.',
+              'Aori est une application pour votre ordinateur ou votre téléphone Android qui agit comme un assistant personnel doté de mémoire. Vous connectez votre propre compte et votre propre clé d\'un fournisseur comme OpenAI ou Anthropic pour la faire fonctionner, ou — sur ordinateur uniquement — vous pouvez l\'utiliser avec des modèles locaux via Ollama, de sorte que les prompts et les réponses soient traités sur votre propre machine.',
           },
         ],
         items: [
           'Aori est une application d\'agent IA personnel local-first pour ordinateur et mobile, actuellement en bêta publique sur [aori-ai.app](https://www.aori-ai.app/).',
-          'Aucun backend exploité par Aori ne stocke vos données — les clés API et les conversations sont stockées localement sur votre appareil et envoyées directement au fournisseur de LLM que vous choisissez.',
+          'Selon le site web d\'Aori, aucun backend exploité par Aori ne stocke vos données — les clés API et les conversations sont stockées localement sur votre appareil et envoyées directement au fournisseur de LLM que vous choisissez.',
           'Fournisseurs cloud pris en charge : OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek et OpenRouter. Sur ordinateur uniquement, Aori prend aussi en charge [Ollama](https://ollama.com) pour des modèles entièrement locaux.',
           'Fonctionnalités clés : mémoire persistante, personas activables via commandes slash (par exemple `/leo`, `/planner`), discussion multicanal (dans l\'application, Telegram, WhatsApp) avec historique isolé par canal, intégration de connaissances (dossiers locaux, Obsidian, Notion) et routines proactives planifiées en langage courant.',
           'Plateformes : ordinateur sous Windows, macOS et Linux ; mobile sur Android dès maintenant, iOS à venir plus tard.',
-          'Le tarif n\'est pas publié. Aori est utilisable gratuitement dans sa bêta actuelle ; le coût réel est celui facturé par le fournisseur de LLM que vous connectez (Groq propose un niveau gratuit).',
+          'Le tarif d\'Aori n\'est pas publié. Il était gratuit en bêta lors de la dernière mise à jour (voir la date de dernière mise à jour) ; le coût réel est celui facturé par le fournisseur de LLM que vous connectez, et certains fournisseurs, comme [Groq](https://groq.com), proposent un niveau gratuit.',
           'Le fonctionnement entièrement hors ligne se limite à l\'ordinateur avec Ollama sélectionné — toute autre configuration, y compris l\'application Android, dépend d\'une connexion internet vers un fournisseur cloud.',
         ],
       },
@@ -1173,8 +1173,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ce qu\'est Aori',
         content: [
           '**Aori est une application d\'agent IA personnel qui fonctionne sur votre ordinateur ou votre téléphone plutôt que via un site de discussion hébergé.** Elle est disponible sur [aori-ai.app](https://www.aori-ai.app/) et se trouve actuellement en bêta publique sur Windows, macOS, Linux et Android.',
-          'Le choix de conception central est le local-first : l\'application elle-même fonctionne sur votre appareil, et Aori n\'exploite pas de serveur backend qui stockerait vos conversations. Vous connectez votre propre clé API d\'un fournisseur de LLM pris en charge — OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek ou OpenRouter — et Aori stocke cette clé localement, envoyant les requêtes directement depuis votre appareil vers le fournisseur choisi.',
-          'Sur ordinateur, Aori ajoute une seconde voie : la prise en charge d\'[Ollama](https://ollama.com), qui permet d\'exécuter des modèles open source entièrement sur votre propre matériel, sans aucun fournisseur cloud impliqué. Cette voie est réservée à l\'ordinateur — l\'application Android n\'a pas d\'option de modèle local et dépend toujours d\'un fournisseur cloud.',
+          'Le choix de conception central est le local-first : l\'application elle-même fonctionne sur votre appareil, et, selon le site web d\'Aori, il n\'exploite pas de serveur backend qui stockerait vos conversations. Vous connectez votre propre clé API d\'un fournisseur de LLM pris en charge — OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek ou OpenRouter — et, selon le site web d\'Aori, Aori stocke cette clé localement et envoie les requêtes directement depuis votre appareil vers le fournisseur choisi.',
+          'Sur ordinateur, Aori ajoute une seconde voie : la prise en charge d\'[Ollama](https://ollama.com), qui permet d\'exécuter des modèles à poids ouverts (vérifiez la licence de chaque modèle) entièrement sur votre propre matériel, sans aucun fournisseur cloud impliqué. Cette voie est réservée à l\'ordinateur — l\'application Android n\'a pas d\'option de modèle local et dépend toujours d\'un fournisseur cloud.',
         ],
       },
       features: {
@@ -1199,8 +1199,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Plateforme / offre': 'Windows, macOS, Linux (ordinateur)',
-            'À quoi s\'attendre': 'Ensemble complet de fonctionnalités. Prend en charge les fournisseurs cloud (OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter) et, fait unique, [Ollama](https://ollama.com) pour des modèles entièrement locaux.',
-            'Remarque importante': 'C\'est le seul environnement où Aori peut fonctionner sans aucune dépendance au cloud, à condition de choisir Ollama et un modèle que votre matériel peut exécuter.',
+            'À quoi s\'attendre': 'Ensemble complet de fonctionnalités. Prend en charge les fournisseurs cloud (OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter) et, sur ordinateur uniquement, [Ollama](https://ollama.com) pour des modèles entièrement locaux.',
+            'Remarque importante': 'C\'est le seul environnement où Aori peut fonctionner sans fournisseur de LLM cloud, à condition de choisir Ollama et un modèle que votre matériel peut exécuter.',
           },
           {
             'Plateforme / offre': 'Android',
@@ -1214,8 +1214,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plateforme / offre': 'Tarifs',
-            'À quoi s\'attendre': 'Non publiés. L\'application est utilisable dans sa bêta publique actuelle sans frais d\'abonnement pour Aori lui-même.',
-            'Remarque importante': 'Votre coût réel est fixé par le fournisseur de LLM dont vous utilisez la clé API — Groq propose un niveau gratuit ; OpenAI, Anthropic, Gemini, DeepSeek et OpenRouter facturent via votre propre compte chez ce fournisseur.',
+            'À quoi s\'attendre': 'Non publiés. Gratuit en bêta lors de la dernière mise à jour (voir la date de dernière mise à jour).',
+            'Remarque importante': 'Les coûts varient selon le fournisseur : certains, comme [Groq](https://groq.com), proposent un niveau gratuit ; OpenAI, Anthropic, Gemini, DeepSeek et OpenRouter facturent via votre propre compte chez ce fournisseur.',
           },
         ],
       },
@@ -1223,7 +1223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-vs-cloud',
         title: 'Local vs cloud : ce que « local-first » signifie vraiment',
         content: [
-          '**« Local-first » décrit où Aori stocke vos données, pas où vos prompts sont traités.** Dans toutes les configurations, vos clés API et votre historique de conversation résident sur votre appareil plutôt que sur un serveur exploité par Aori. Mais que le modèle lui-même s\'exécute sur votre appareil dépend entièrement du backend que vous choisissez.',
+          '**« Local-first » décrit où Aori stocke vos données, pas où vos prompts sont traités.** Selon le site web d\'Aori, dans toutes les configurations qu\'il décrit, vos clés API et votre historique de conversation résident sur votre appareil plutôt que sur un serveur exploité par Aori (nous ne l\'avons pas audité). Mais que le modèle lui-même s\'exécute sur votre appareil dépend entièrement du backend que vous choisissez.',
           'Cette distinction compte car les deux affirmations — « vos données restent sur votre appareil » et « votre IA fonctionne sur votre appareil » — ne sont pas la même chose, et Aori ne réunit les deux à la fois que dans une seule configuration précise.',
         ],
         decisionBlock: {
@@ -1239,9 +1239,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Vous voulez accéder aux modèles de pointe les plus grands et les plus performants',
           ],
           quick: [
-            'Ordinateur + Ollama = les prompts et l\'inférence restent entièrement sur votre machine',
+            'Ordinateur + Ollama = l\'inférence s\'exécute sur votre machine, donc les prompts ne sont pas envoyés à un fournisseur de LLM cloud (les autres activités réseau d\'Aori et d\'Ollama, comme les mises à jour ou les intégrations de canaux, ne sont pas couvertes ici)',
             'Toute autre combinaison (ordinateur ou Android + un fournisseur cloud) = les prompts quittent votre appareil et partent vers l\'API de ce fournisseur',
-            'Aori lui-même n\'exploite jamais de backend stockant vos données, dans aucun cas — la frontière local/cloud passe par le backend du modèle, pas par les serveurs propres d\'Aori',
+            'Selon le site web d\'Aori, Aori lui-même n\'exploite pas de backend stockant vos données, dans aucun cas — la frontière local/cloud passe par le backend du modèle, pas par les serveurs propres d\'Aori',
           ],
         },
       },
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'À qui s\'adresse Aori',
         items: [
-          '**Utilisateurs qui veulent un seul agent sur ordinateur et Android.** La mémoire persistante, les personas et les routines vous suivent d\'une plateforme à l\'autre tant que vous utilisez le même compte fournisseur.',
+          '**Utilisateurs qui veulent un seul agent sur ordinateur et Android.** Aori propose les mêmes fonctionnalités sur les deux ; consultez la documentation d\'Aori pour savoir si la mémoire et les routines se transfèrent d\'un appareil à l\'autre.',
           '**Utilisateurs à l\'aise pour apporter leur propre clé API et payer directement les fournisseurs.** Aori est l\'interface ; vous gérez séparément la facturation avec OpenAI, Anthropic, Google, Groq, DeepSeek ou OpenRouter.',
           '**Utilisateurs qui veulent des routines planifiées en langage courant**, comme un point du matin récurrent, sans configurer de logiciel d\'automatisation à part.',
           '**Utilisateurs sur ordinateur qui veulent l\'option d\'une inférence entièrement locale et hors ligne** via [Ollama](https://ollama.com), sans renoncer à la possibilité de basculer vers un fournisseur cloud pour les tâches plus difficiles.',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Utilisateurs d\'iPhone ou d\'iPad.** Aori n\'a pas encore d\'application iOS ; l\'entreprise décrit le support iOS comme « à venir plus tard », sans date publiée.',
           '**Utilisateurs qui veulent une application entièrement hors ligne, sans aucune option cloud.** La voie locale d\'Aori n\'existe que sur ordinateur avec Ollama sélectionné — la plupart de ses fonctionnalités utiles supposent un fournisseur cloud connecté ; considérez-la donc comme un outil hybride, pas comme une application hors ligne privée par défaut.',
-          '**Utilisateurs qui ne veulent pas gérer une facturation fournisseur séparée.** Aori n\'a pas d\'abonnement groupé couvrant l\'usage du modèle ; vous ouvrez et financez votre propre compte chez le fournisseur choisi.',
+          '**Utilisateurs qui ne veulent pas gérer une facturation fournisseur séparée.** Aori n\'indique pas d\'abonnement groupé couvrant l\'usage du modèle ; vous ouvrez et financez votre propre compte chez le fournisseur choisi.',
           '**Utilisateurs qui ont besoin d\'un tarif publié et prévisible avant de s\'engager.** Aori n\'a pas publié de tarif pour l\'application elle-même, et le coût du fournisseur varie selon le modèle et le fournisseur choisis.',
           '**Utilisateurs Android qui veulent spécifiquement des modèles locaux hors ligne.** Le support Ollama est réservé à l\'ordinateur ; Android dépend toujours d\'un fournisseur cloud.',
         ],
@@ -1274,7 +1274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Aori est-elle une application IA entièrement hors ligne et locale ?',
-            a: 'Non, pas par défaut. Aori est hybride : elle stocke vos clés API et vos conversations localement plutôt que sur un serveur exploité par Aori, mais le modèle qui génère les réponses fonctionne dans le cloud sauf si vous choisissez spécifiquement Ollama comme backend sur ordinateur. Seule cette configuration — ordinateur plus Ollama — est entièrement locale et hors ligne.',
+            a: 'Non, pas par défaut. Aori est hybride : selon le site web d\'Aori, elle stocke vos clés API et vos conversations localement plutôt que sur un serveur exploité par Aori (nous ne l\'avons pas audité), mais le modèle qui génère les réponses fonctionne dans le cloud sauf si vous choisissez spécifiquement Ollama comme backend sur ordinateur. Seule cette configuration — ordinateur plus Ollama — est entièrement locale et hors ligne.',
           },
           {
             q: 'Quelles plateformes Aori prend-elle en charge ?',
@@ -1282,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Aori stocke-t-elle mes données sur ses propres serveurs ?',
-            a: 'Non. Aori n\'exploite pas de backend qui stockerait vos conversations. Vos clés API sont stockées localement sur votre appareil, et les requêtes partent directement de votre appareil vers le fournisseur de LLM que vous connectez, jamais via un serveur exploité par Aori.',
+            a: 'Selon le site web d\'Aori, non : l\'application fonctionne sur votre appareil et n\'exploite pas de backend qui stockerait vos conversations ; les clés API sont stockées localement et les requêtes partent directement vers le fournisseur que vous choisissez. Nous n\'avons pas audité le trafic réseau d\'Aori de manière indépendante.',
           },
           {
             q: 'Quels fournisseurs de LLM Aori prend-elle en charge ?',
@@ -1290,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Combien coûte Aori ?',
-            a: 'Aori n\'a pas publié de tarif ; l\'application est utilisable dans sa bêta publique actuelle sans frais pour Aori lui-même. Votre coût réel provient du fournisseur de LLM que vous connectez — Groq propose un niveau gratuit, tandis qu\'OpenAI, Anthropic, Gemini, DeepSeek et OpenRouter facturent directement via votre propre compte chez ce fournisseur.',
+            a: 'Le tarif d\'Aori n\'est pas publié ; il était gratuit en bêta lors de la dernière mise à jour (voir la date de dernière mise à jour). Votre coût réel provient du fournisseur de LLM que vous connectez — certains fournisseurs, comme [Groq](https://groq.com), proposent un niveau gratuit, tandis qu\'OpenAI, Anthropic, Gemini, DeepSeek et OpenRouter facturent directement via votre propre compte chez ce fournisseur.',
           },
           {
             q: 'Puis-je utiliser Aori entièrement hors ligne sur Android ?',
@@ -1318,7 +1318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          '**Aori est une application d\'agent personnel bien délimitée si vous l\'évaluez comme hybride, et non comme un outil d\'IA locale privé par défaut.** La combinaison de mémoire persistante, de personas via commandes slash, de discussion multicanal (Telegram et WhatsApp avec historiques isolés), d\'intégration de connaissances Obsidian/Notion et de routines proactives en langage courant forme un ensemble de fonctionnalités cohérent visant à rendre un agent unique cohérent selon les contextes. Stocker les clés API et les conversations localement, sans backend exploité par Aori, est une propriété de confidentialité réelle et vérifiable quel que soit le backend de modèle choisi. Mais la promesse d\'un fonctionnement entièrement local et hors ligne s\'applique à une seule configuration précise : ordinateur avec Ollama sélectionné. Toute autre voie — fournisseurs cloud sur ordinateur, ou tout usage sur Android — envoie vos prompts vers une API tierce par internet. Les utilisateurs qui comprennent et acceptent ce compromis, et qui sont à l\'aise pour apporter et payer leur propre clé API de LLM, obtiennent un agent multiplateforme réellement utile. Ceux qui cherchent une application entièrement hors ligne par défaut, ou une application iOS, devraient pour l\'instant se tourner ailleurs.',
+          '**Aori est une application d\'agent personnel bien délimitée si vous l\'évaluez comme hybride, et non comme un outil d\'IA locale privé par défaut.** La combinaison de mémoire persistante, de personas via commandes slash, de discussion multicanal (Telegram et WhatsApp avec historiques isolés), d\'intégration de connaissances Obsidian/Notion et de routines proactives en langage courant forme un ensemble de fonctionnalités cohérent visant à rendre un agent unique cohérent selon les contextes. Stocker les clés API et les conversations localement, sans backend exploité par Aori, est une propriété de confidentialité déclarée par l\'éditeur (nous n\'avons pas audité le trafic réseau d\'Aori), quel que soit le backend de modèle choisi. Mais la promesse d\'un fonctionnement entièrement local et hors ligne s\'applique à une seule configuration précise : ordinateur avec Ollama sélectionné. Toute autre voie — fournisseurs cloud sur ordinateur, ou tout usage sur Android — envoie vos prompts vers une API tierce par internet. Les utilisateurs qui comprennent et acceptent ce compromis, et qui sont à l\'aise pour apporter et payer leur propre clé API de LLM, obtiennent un agent multiplateforme potentiellement utile. Ceux qui cherchent une application entièrement hors ligne par défaut, ou une application iOS, devraient pour l\'instant se tourner ailleurs.',
       },
       sources: {
         id: 'sources',
@@ -1352,11 +1352,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Aori AIレビュー:デスクトップとモバイル対応のローカルファースト個人向けAIエージェント',
     seoTitle: 'Aori AIレビュー:ローカルファーストAIエージェント',
     intro:
-      'Aoriはデスクトップとスマートフォンで動作する個人向けAIエージェントアプリで、永続的な記憶、切り替え可能なペルソナ、スケジュール実行されるルーティンを備えています。APIキーと会話はAoriが運営するサーバーではなく端末にローカル保存されますが、デフォルトで完全オフラインのアプリではありません — 知能の大部分は接続したクラウドLLMプロバイダーに由来します。このレビューではAoriが実際に何をするか、どのプラットフォームがOllama経由の完全ローカル推論に対応しているか、そして「ローカルファースト」という主張がどこで終わりクラウド依存がどこから始まるかを検証します。',
+      'Aoriはデスクトップとスマートフォンで動作する個人向けAIエージェントアプリで、永続的な記憶、切り替え可能なペルソナ、スケジュール実行されるルーティンを備えています。Aoriによると、APIキーと会話はAoriが運営するサーバーではなく端末にローカル保存されますが、デフォルトで完全オフラインのアプリではありません — 知能の大部分は接続したクラウドLLMプロバイダーに由来します。このレビューでは、Aoriが何をするとしているか(ベンダーの公開情報に基づくもので、実機での検証ではありません)、どのプラットフォームがOllama経由の完全ローカル推論に対応しているか、そして「ローカルファースト」という主張がどこで終わりクラウド依存がどこから始まるかを検証します。',
     metaDescription:
       'Aori AIレビュー:デスクトップとAndroid向けの記憶・ペルソナ・ルーティンを備えたローカルファースト個人エージェント。Ollamaで完全オフライン動作する条件とクラウド依存する条件を解説。',
     twitterDescription:
-      'Aori AIレビュー2026:記憶・ペルソナ・ルーティンを備えたデスクトップ/Android向け個人エージェントアプリ。デスクトップのOllamaのみローカル動作 — ハイブリッドモデルを正直に解説。',
+      'Aori AIレビュー2026:記憶・ペルソナ・ルーティンを備えたデスクトップ/Android向け個人エージェントアプリ。デスクトップのOllamaのみローカル動作 — ハイブリッドモデルを解説。',
     audience:
       '自分のクラウドAPIキーでAoriを使うか、デスクトップでOllamaを使い完全ローカルで運用するか判断したいユーザー向け。プラットフォーム対応、機能セット、ローカルとクラウドのトレードオフを解説します。',
     readTime: '7分で読める',
@@ -1379,18 +1379,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Windows PC', 'Mac', 'Linux PC', 'Android'],
     leadAnswerBlock:
-      '**記憶・ペルソナ・スケジュールルーティンを備えた1つの個人向けAIエージェントをデスクトップとAndroidで使いたく、自分のLLM APIキーを用意する意思があるなら、Aoriは検討する価値があります。** デスクトップで[Ollama](https://ollama.com)をモデルバックエンドに選んだ場合にのみ完全にローカルでオフラインのツールになります。Androidアプリやクラウドプロバイダーのバックエンドを使う場合は、Ori自身は自社サーバーにデータのコピーを保存しないものの、プロンプトはインターネット経由でそのプロバイダーに送信され続けます。',
+      '**記憶・ペルソナ・スケジュールルーティンを備えた1つの個人向けAIエージェントをデスクトップとAndroidで使いたく、自分のLLM APIキーを用意する意思があるなら、Aoriは検討する価値があります。** デスクトップで[Ollama](https://ollama.com)をモデルバックエンドに選んだ場合にのみ完全にローカルでオフラインのツールになります。Androidアプリやクラウドプロバイダーのバックエンドを使う場合は、Aori自身は(Aoriによると)自社サーバーにデータのコピーを保存しないものの、プロンプトはインターネット経由でそのプロバイダーに送信され続けます。',
     quickAnswerTop: {
       ja: {
         question: 'Aori AIは完全にローカルでオフライン動作するAIアプリですか?',
         answer:
-          'いいえ — Aoriはハイブリッドです。端末上で動作し、Aoriが運営するバックエンドにデータを送ることはありませんが、デフォルトでは自分のAPIキーを使ってクラウドプロバイダー(OpenAI、Anthropic、Google Gemini、Groq、DeepSeek、OpenRouter)経由でプロンプトを処理します。完全にローカルでオフラインの推論は、バックエンドにOllamaを選んだ場合のみで、これはデスクトップでのみ利用可能なオプションです。',
+          'いいえ — Aoriはハイブリッドです。Aoriの公式サイトによると、アプリは端末上で動作し、会話を保存するバックエンドを運営しておらず、APIキーはローカルに保存され、リクエストは選んだプロバイダーへ直接送られます。Aoriのネットワーク通信は独自に監査していません。ただしデフォルトでは自分のAPIキーを使ってクラウドプロバイダー(OpenAI、Anthropic、Google Gemini、Groq、DeepSeek、OpenRouter)経由でプロンプトを処理します。完全にローカルでオフラインの推論は、バックエンドにOllamaを選んだ場合のみで、これはデスクトップでのみ利用可能なオプションです。',
         bullets: [
           'デスクトップ(Windows/macOS/Linux)は完全ローカルモデル向けにOllamaに対応。Androidは非対応。',
-          'APIキーは端末にローカル保存され、プロバイダーへ直接送信される — Aoriのバックエンドを経由しない。',
+          'Aoriによると、APIキーは端末にローカル保存され、プロバイダーへ直接送信される — Aoriのバックエンドを経由しない。',
           '機能:永続的な記憶、スラッシュコマンドのペルソナ、Telegram/WhatsAppチャンネル、Obsidian/Notion連携、スケジュールルーティン。',
           '現在利用可能なプラットフォーム:Windows、macOS、Linux、Android。iOSはまだ未対応。',
-          '料金は未公開 — Aori自体はベータ版で無料。接続するLLMプロバイダーに対して料金を支払う(Groqには無料枠あり)。',
+          'Aoriの料金は未公開で、最終更新時点ではベータ版で無料で利用できた(最終更新日を参照)。プロバイダーの料金は異なり、[Groq](https://groq.com)など一部のプロバイダーには無料枠がある。',
         ],
         updatedDate: '2026-09',
       },
@@ -1417,21 +1417,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'one-sentence',
             text:
-              'AoriはAPIキーとチャット履歴を端末に保持するデスクトップ・モバイル向けローカルファースト個人AIエージェントだが、デスクトップでOllamaをモデルバックエンドに選んだ場合にのみ完全オフラインで動作する。',
+              'Aoriの公式サイトによると、AoriはAPIキーとチャット履歴を端末に保持するデスクトップ・モバイル向けローカルファースト個人AIエージェントだが(当社は監査していません)、デスクトップでOllamaをモデルバックエンドに選んだ場合にのみ完全オフラインで動作する。',
           },
           {
             type: 'plain-terms',
             text:
-              'Aoriはパソコンや Android スマートフォン向けのアプリで、記憶を持つ個人アシスタントのように動作する。OpenAIやAnthropicなどのプロバイダーの自分のアカウントとキーを接続して動かすか、あるいは — デスクトップのみ — Ollama経由の無料ローカルモデルで動かせば、何もインターネットに送られない。',
+              'AoriはパソコンやAndroidスマートフォン向けのアプリで、記憶を持つ個人アシスタントのように動作する。OpenAIやAnthropicなどのプロバイダーの自分のアカウントとキーを接続して動かすか、あるいは — デスクトップのみ — Ollama経由のローカルモデルで動かせば、プロンプトと応答は自分のマシン上で処理される。',
           },
         ],
         items: [
           'Aoriはデスクトップとモバイル向けのローカルファースト個人AIエージェントアプリで、現在[aori-ai.app](https://www.aori-ai.app/)で公開ベータ中。',
-          'Aoriが運営するバックエンドはデータを保存しない — APIキーと会話は端末にローカル保存され、選んだLLMプロバイダーに直接送信される。',
+          'Aoriの公式サイトによると、Aoriが運営するバックエンドはデータを保存しない — APIキーと会話は端末にローカル保存され、選んだLLMプロバイダーに直接送信される。',
           '対応するクラウドプロバイダー:OpenAI、Anthropic Claude、Google Gemini、Groq、DeepSeek、OpenRouter。デスクトップのみ、完全ローカルモデル向けに[Ollama](https://ollama.com)にも対応。',
           '主要機能:永続的な記憶、スラッシュコマンドで切り替え可能なペルソナ(例:`/leo`、`/planner`)、チャンネルごとに履歴が分離されたマルチチャンネルチャット(アプリ内、Telegram、WhatsApp)、ナレッジ連携(ローカルフォルダ、Obsidian、Notion)、平易な英語で指示するプロアクティブなルーティン。',
           'プラットフォーム:デスクトップはWindows、macOS、Linux。モバイルは現在Androidのみ、iOSは今後対応予定。',
-          '料金は未公開。Aori自体は現在の公開ベータでは無料で利用可能 — 実際のコストは接続するLLMプロバイダー次第(Groqには無料枠あり)。',
+          'Aoriの料金は未公開。最終更新時点ではベータ版で無料で利用できた(最終更新日を参照) — 実際のコストは接続するLLMプロバイダー次第で、[Groq](https://groq.com)など一部のプロバイダーには無料枠がある。',
           '完全オフライン動作はOllamaを選択したデスクトップに限られる — Androidアプリを含む他のすべての構成は、クラウドプロバイダーへのインターネット接続に依存する。',
         ],
       },
@@ -1440,8 +1440,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Aoriとは',
         content: [
           '**Aoriはホスト型のチャットサイトではなく、デスクトップやスマートフォン上で動作する個人向けAIエージェントアプリです。** [aori-ai.app](https://www.aori-ai.app/)で公開されており、現在Windows、macOS、Linux、Androidで公開ベータ中です。',
-          '中心的な設計思想はローカルファーストです。アプリ自体が端末上で動作し、Aoriは会話を保存するバックエンドサーバーを運営していません。OpenAI、Anthropic Claude、Google Gemini、Groq、DeepSeek、OpenRouterといった対応LLMプロバイダーの自分のAPIキーを接続すると、Aoriはそのキーを端末にローカル保存し、選んだプロバイダーへ端末から直接リクエストを送信します。',
-          'デスクトップでは、Aoriはもう一つの経路を追加しています。[Ollama](https://ollama.com)への対応により、クラウドプロバイダーを一切介さずオープンソースモデルを完全に自分のハードウェア上で実行できます。この経路はデスクトップ限定で、Androidアプリにはローカルモデルの選択肢がなく、常にクラウドプロバイダーに依存します。',
+          '中心的な設計思想はローカルファーストです。アプリ自体が端末上で動作し、Aoriの公式サイトによれば、Aoriは会話を保存するバックエンドサーバーを運営していません。OpenAI、Anthropic Claude、Google Gemini、Groq、DeepSeek、OpenRouterといった対応LLMプロバイダーの自分のAPIキーを接続すると、Aoriの公式サイトによれば、Aoriはそのキーを端末にローカル保存し、選んだプロバイダーへ端末から直接リクエストを送信します。',
+          'デスクトップでは、Aoriはもう一つの経路を追加しています。[Ollama](https://ollama.com)への対応により、クラウドプロバイダーを一切介さずオープンウェイトモデル(各モデルのライセンスを確認してください)を完全に自分のハードウェア上で実行できます。この経路はデスクトップ限定で、Androidアプリにはローカルモデルの選択肢がなく、常にクラウドプロバイダーに依存します。',
         ],
       },
       features: {
@@ -1466,8 +1466,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'プラットフォーム / プラン': 'Windows、macOS、Linux(デスクトップ)',
-            '期待できること': 'フル機能セット。クラウドプロバイダー(OpenAI、Anthropic、Gemini、Groq、DeepSeek、OpenRouter)に加え、独自に[Ollama](https://ollama.com)による完全ローカルモデルに対応。',
-            '重要な注意点': 'Ollamaと自分のハードウェアで実行可能なモデルを選べば、Aoriがクラウドに一切依存せず動作できる唯一の環境。',
+            '期待できること': 'フル機能セット。クラウドプロバイダー(OpenAI、Anthropic、Gemini、Groq、DeepSeek、OpenRouter)に加え、デスクトップ限定で[Ollama](https://ollama.com)による完全ローカルモデルに対応。',
+            '重要な注意点': 'Ollamaと自分のハードウェアで実行可能なモデルを選べば、クラウドのLLMプロバイダーなしでAoriが動作できる唯一の環境。',
           },
           {
             'プラットフォーム / プラン': 'Android',
@@ -1481,8 +1481,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'プラットフォーム / プラン': '料金',
-            '期待できること': '未公開。現在の公開ベータではAori自体のサブスクリプション料金なしで利用可能。',
-            '重要な注意点': '実際のコストは使用するAPIキーのLLMプロバイダーが決める — Groqには無料枠があり、OpenAI、Anthropic、Gemini、DeepSeek、OpenRouterはそのプロバイダーの自分のアカウントを通じて課金される。',
+            '期待できること': '未公開。最終更新時点ではベータ版で無料で利用できた(最終更新日を参照)。',
+            '重要な注意点': 'コストはプロバイダーによって異なる — [Groq](https://groq.com)など一部のプロバイダーには無料枠があり、OpenAI、Anthropic、Gemini、DeepSeek、OpenRouterはそのプロバイダーの自分のアカウントを通じて課金される。',
           },
         ],
       },
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-vs-cloud',
         title: 'ローカルvsクラウド:「ローカルファースト」の実際の意味',
         content: [
-          '**「ローカルファースト」はAoriがデータをどこに保存するかを表すもので、プロンプトがどこで処理されるかを表すものではありません。** どの構成でも、APIキーと会話履歴はAoriが運営するサーバーではなく端末上にあります。しかし、モデル自体が端末上で動作するかどうかは、選んだバックエンドに完全に依存します。',
+          '**「ローカルファースト」はAoriがデータをどこに保存するかを表すもので、プロンプトがどこで処理されるかを表すものではありません。** Aoriの公式サイトによると、同サイトが説明するどの構成でも、APIキーと会話履歴はAoriが運営するサーバーではなく端末上にあります(当社は監査していません)。しかし、モデル自体が端末上で動作するかどうかは、選んだバックエンドに完全に依存します。',
           'この違いが重要なのは、「データが端末に残る」ことと「AIが端末上で動作する」ことは同じではなく、Aoriがこの2つを同時に満たすのは特定の1つの構成のみだからです。',
         ],
         decisionBlock: {
@@ -1506,9 +1506,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最大級で最も高性能なフロンティアモデルにアクセスしたい',
           ],
           quick: [
-            'デスクトップ + Ollama = プロンプトと推論は完全に自分のマシン内にとどまる',
+            'デスクトップ + Ollama = 推論は自分のマシン上で実行されるため、プロンプトはクラウドのLLMプロバイダーに送信されない(AoriとOllamaのその他のネットワーク通信、たとえば更新やチャンネル連携はここでは対象外)',
             'それ以外の組み合わせ(デスクトップまたはAndroid + クラウドプロバイダー)= プロンプトは端末を離れ、そのプロバイダーのAPIへ送られる',
-            'いずれの場合もAori自体はデータを保存するバックエンドを運営しない — ローカルとクラウドの境界線はモデルバックエンドにあり、Aori自身のサーバーにあるわけではない',
+            'Aoriの公式サイトによると、いずれの場合もAori自体はデータを保存するバックエンドを運営しない — ローカルとクラウドの境界線はモデルバックエンドにあり、Aori自身のサーバーにあるわけではない',
           ],
         },
       },
@@ -1516,12 +1516,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Aoriが向いている人',
         items: [
-          '**デスクトップとAndroidで1つのエージェントを使いたい人。** 同じプロバイダーアカウントを使う限り、永続的な記憶、ペルソナ、ルーティンはプラットフォームをまたいで引き継がれる。',
+          '**デスクトップとAndroidで1つのエージェントを使いたい人。** Aoriは両方で同じ機能を提供している。記憶やルーティンが端末をまたいで引き継がれるかは、Aoriのドキュメントで確認してほしい。',
           '**自分のAPIキーを用意し、プロバイダーに直接支払うことに抵抗がない人。** Aoriはインターフェースであり、OpenAI、Anthropic、Google、Groq、DeepSeek、OpenRouterとの課金は別途自分で管理する。',
           '**朝のブリーフィングのような繰り返しの用件を平易な言葉でスケジュールしたい人。** 別途自動化ソフトを設定する必要がない。',
           '**[Ollama](https://ollama.com)による完全にローカルでオフラインの推論という選択肢を持ちつつ**、難しいタスクではクラウドプロバイダーに切り替える選択肢も残しておきたいデスクトップユーザー。',
           '**TelegramやWhatsAppユーザー。** それぞれ独立した会話履歴を持ったまま、同じエージェントと記憶をそれらのアプリでも使いたい人。',
-          '**Obsidianのvaultや Notionのワークスペースを持つユーザー。** チャット画面にノートをコピー&ペーストする代わりに、エージェントに直接参照させたい人。',
+          '**ObsidianのvaultやNotionのワークスペースを持つユーザー。** チャット画面にノートをコピー&ペーストする代わりに、エージェントに直接参照させたい人。',
         ],
       },
       whoShouldNotUse: {
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**iPhoneやiPadユーザー。** AoriにはまだiOSアプリがなく、同社はiOS対応を公開日未定の「今後対応予定」としている。',
           '**クラウドの選択肢が一切ない完全オフラインアプリを求めるユーザー。** Aoriのローカル経路はOllamaを選択したデスクトップにしか存在せず、有用な機能の大半は接続されたクラウドプロバイダーを前提としているため、デフォルトでプライベートなオフラインアプリではなく、ハイブリッドツールとして扱うべき。',
-          '**別途プロバイダーの課金を管理したくないユーザー。** Aoriにはモデル利用をカバーする一括サブスクリプションがなく、選んだプロバイダーで自分のアカウントを開設し費用を負担する必要がある。',
+          '**別途プロバイダーの課金を管理したくないユーザー。** Aoriはモデル利用をカバーする一括サブスクリプションを明示しておらず、選んだプロバイダーで自分のアカウントを開設し費用を負担する必要がある。',
           '**契約前に公開された予測可能な料金が必要なユーザー。** Aoriはアプリ自体の料金を公開しておらず、プロバイダーのコストは選ぶモデルとプロバイダーによって変動する。',
           '**ローカルでオフラインのモデルを特に求めるAndroidユーザー。** Ollama対応はデスクトップ限定で、Androidは常にクラウドプロバイダーに依存する。',
         ],
@@ -1541,7 +1541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Aoriは完全にオフラインで動作するローカルAIアプリですか?',
-            a: 'いいえ、デフォルトでは違います。Aoriはハイブリッドです。APIキーと会話はAoriが運営するサーバーではなく端末にローカル保存されますが、デスクトップで明示的にOllamaをバックエンドに選ばない限り、応答を生成するモデルはクラウドで動作します。デスクトップとOllamaの組み合わせという、その1つの構成のみが完全にローカルでオフラインです。',
+            a: 'いいえ、デフォルトでは違います。Aoriはハイブリッドです。Aoriの公式サイトによると、APIキーと会話はAoriが運営するサーバーではなく端末にローカル保存されます(当社は監査していません)が、デスクトップで明示的にOllamaをバックエンドに選ばない限り、応答を生成するモデルはクラウドで動作します。デスクトップとOllamaの組み合わせという、その1つの構成のみが完全にローカルでオフラインです。',
           },
           {
             q: 'Aoriはどのプラットフォームに対応していますか?',
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Aoriは私のデータを自社サーバーに保存しますか?',
-            a: 'いいえ。Aoriは会話を保存するバックエンドを運営していません。APIキーは端末にローカル保存され、リクエストはAoriが運営するサーバーを経由せず、端末から接続したLLMプロバイダーへ直接送られます。',
+            a: 'Aoriの公式サイトによると、いいえ。アプリは端末上で動作し、会話を保存するバックエンドを運営していません。APIキーはローカルに保存され、リクエストは選んだプロバイダーへ直接送られます。Aoriのネットワーク通信は独自に監査していません。',
           },
           {
             q: 'Aoriはどのようなプロバイダーに対応していますか?',
@@ -1557,7 +1557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Aoriの料金はいくらですか?',
-            a: 'Aoriは料金を公開していません。現在の公開ベータではAori自体への料金なしでアプリを利用できます。実際のコストは接続したLLMプロバイダーから発生します — Groqには無料枠があり、OpenAI、Anthropic、Gemini、DeepSeek、OpenRouterはそのプロバイダーの自分のアカウントを通じて直接課金されます。',
+            a: 'Aoriの料金は公開されていません。最終更新時点ではベータ版で無料で利用できました(最終更新日を参照)。実際のコストは接続したLLMプロバイダーから発生します — [Groq](https://groq.com)など一部のプロバイダーには無料枠があり、OpenAI、Anthropic、Gemini、DeepSeek、OpenRouterはそのプロバイダーの自分のアカウントを通じて直接課金されます。',
           },
           {
             q: 'Androidで完全にオフラインでAoriを使えますか?',
@@ -1585,7 +1585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '総評',
         content:
-          '**Aoriをデフォルトでプライベートなローカルツールとしてではなく、ハイブリッドとして評価するなら、これはよく設計された個人向けエージェントアプリです。** 永続的な記憶、スラッシュコマンドによるペルソナ、マルチチャンネルチャット(履歴が分離されたTelegramとWhatsApp)、Obsidian/Notionのナレッジ連携、平易な言葉によるプロアクティブなルーティンの組み合わせは、1つのエージェントを様々な文脈で一貫して感じさせることを狙った一貫性のある機能セットです。Aoriが運営するバックエンドを使わずAPIキーと会話をローカルに保存することは、選んだモデルバックエンドに関わらず本物で検証可能なプライバシー特性です。しかし、完全にローカルでオフラインという主張は、Ollamaを選択したデスクトップという1つの構成にのみ当てはまります。それ以外の経路 — デスクトップでのクラウドプロバイダー利用、あるいはAndroidでのあらゆる利用 — は、プロンプトをインターネット経由で第三者のAPIへ送信します。このトレードオフを理解し受け入れ、自分のLLM APIキーを用意して費用を負担することに抵抗がないユーザーは、実際に有用なクロスプラットフォームエージェントを手に入れられます。デフォルトで完全にオフラインのアプリやiOSアプリを求める人は、今のところ他を探すべきです。',
+          '**Aoriをデフォルトでプライベートなローカルツールとしてではなく、ハイブリッドとして評価するなら、これは用途の範囲がよく絞られた個人向けエージェントアプリです。** 永続的な記憶、スラッシュコマンドによるペルソナ、マルチチャンネルチャット(履歴が分離されたTelegramとWhatsApp)、Obsidian/Notionのナレッジ連携、平易な言葉によるプロアクティブなルーティンの組み合わせは、1つのエージェントを様々な文脈で一貫して感じさせることを狙った一貫性のある機能セットです。Aoriが運営するバックエンドを使わずAPIキーと会話をローカルに保存することは、選んだモデルバックエンドに関わらず、ベンダーが示しているプライバシー特性です(Aoriのネットワーク通信は監査していません)。しかし、完全にローカルでオフラインという主張は、Ollamaを選択したデスクトップという1つの構成にのみ当てはまります。それ以外の経路 — デスクトップでのクラウドプロバイダー利用、あるいはAndroidでのあらゆる利用 — は、プロンプトをインターネット経由で第三者のAPIへ送信します。このトレードオフを理解し受け入れ、自分のLLM APIキーを用意して費用を負担することに抵抗がないユーザーは、有用となりうるクロスプラットフォームエージェントを手に入れられます。デフォルトで完全にオフラインのアプリやiOSアプリを求める人は、今のところ他を探すべきです。',
       },
       sources: {
         id: 'sources',
@@ -1619,11 +1619,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Aori AI 리뷰: 데스크톱과 모바일을 위한 로컬 퍼스트 개인 AI 에이전트',
     seoTitle: 'Aori AI 리뷰: 로컬 퍼스트 개인 AI 에이전트',
     intro:
-      'Aori는 데스크톱과 휴대폰에서 실행되는 개인 AI 에이전트 앱으로, 지속적인 기억, 전환 가능한 페르소나, 예약된 루틴을 제공합니다. API 키와 대화는 Aori가 운영하는 서버가 아닌 기기에 로컬로 저장되지만, 기본적으로 완전한 오프라인 앱은 아닙니다 — 지능의 대부분은 연결한 클라우드 LLM 제공업체에서 나옵니다. 이 리뷰는 Aori가 실제로 무엇을 하는지, 어떤 플랫폼이 Ollama를 통한 완전한 로컬 추론을 지원하는지, 그리고 "로컬 퍼스트"라는 주장이 어디에서 끝나고 클라우드 의존이 어디에서 시작되는지를 다룹니다.',
+      'Aori는 데스크톱과 휴대폰에서 실행되는 개인 AI 에이전트 앱으로, 지속적인 기억, 전환 가능한 페르소나, 예약된 루틴을 제공합니다. Aori에 따르면 API 키와 대화는 Aori가 운영하는 서버가 아닌 기기에 로컬로 저장되지만, 기본적으로 완전한 오프라인 앱은 아닙니다 — 지능의 대부분은 연결한 클라우드 LLM 제공업체에서 나옵니다. 이 리뷰는 Aori가 무엇을 한다고 밝히는지(개발사가 공개한 정보에 근거하며, 직접 사용해 본 테스트에 근거하지 않습니다), 어떤 플랫폼이 Ollama를 통한 완전한 로컬 추론을 지원하는지, 그리고 "로컬 퍼스트"라는 주장이 어디에서 끝나고 클라우드 의존이 어디에서 시작되는지를 다룹니다.',
     metaDescription:
       'Aori AI 리뷰: 데스크톱과 Android용 기억, 페르소나, 루틴을 갖춘 로컬 퍼스트 개인 에이전트. Ollama로 완전히 오프라인 작동하는 경우와 클라우드에 의존하는 경우를 확인하세요.',
     twitterDescription:
-      'Aori AI 리뷰 2026: 기억, 페르소나, 루틴을 갖춘 데스크톱/Android용 개인 에이전트 앱. 데스크톱의 Ollama에서만 로컬 작동 — 하이브리드 모델을 정직하게 분석합니다.',
+      'Aori AI 리뷰 2026: 기억, 페르소나, 루틴을 갖춘 데스크톱/Android용 개인 에이전트 앱. 데스크톱의 Ollama에서만 로컬 작동 — 하이브리드 모델을 분석합니다.',
     audience:
       '자신의 클라우드 API 키로 Aori를 통해 개인 AI 에이전트를 운영할지, 아니면 데스크톱에서 Ollama를 통해 완전히 로컬로 운영할지 결정하려는 사용자 — 플랫폼 지원, 기능, 로컬 대 클라우드 트레이드오프를 다룹니다.',
     readTime: '7분 읽기',
@@ -1646,18 +1646,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Windows PC', 'Mac', 'Linux PC', 'Android'],
     leadAnswerBlock:
-      '**기억, 페르소나, 예약된 루틴을 갖춘 하나의 개인 AI 에이전트를 데스크톱과 Android에서 사용하고 싶고, 자신의 LLM API 키를 준비할 의향이 있다면 Aori는 사용할 가치가 있습니다.** 데스크톱에서 [Ollama](https://ollama.com)를 모델 백엔드로 선택했을 때만 완전히 로컬이며 오프라인으로 작동하는 도구가 됩니다. Android 앱이나 클라우드 제공업체 백엔드는 Aori 자체가 자체 서버에 데이터 사본을 저장하지 않더라도 여전히 프롬프트를 인터넷을 통해 해당 제공업체로 전송합니다.',
+      '**기억, 페르소나, 예약된 루틴을 갖춘 하나의 개인 AI 에이전트를 데스크톱과 Android에서 사용하고 싶고, 자신의 LLM API 키를 준비할 의향이 있다면 Aori는 사용할 가치가 있습니다.** 데스크톱에서 [Ollama](https://ollama.com)를 모델 백엔드로 선택했을 때만 완전히 로컬이며 오프라인으로 작동하는 도구가 됩니다. Android 앱이나 클라우드 제공업체 백엔드는 Aori 자체가 (Aori에 따르면) 자체 서버에 데이터 사본을 저장하지 않더라도 여전히 프롬프트를 인터넷을 통해 해당 제공업체로 전송합니다.',
     quickAnswerTop: {
       ko: {
         question: 'Aori AI는 완전히 로컬로 오프라인 작동하는 AI 앱입니까?',
         answer:
-          '아니요 — Aori는 하이브리드입니다. 기기에서 실행되며 Aori가 운영하는 백엔드로 데이터를 전송하지 않지만, 기본적으로 자신의 API 키를 사용해 클라우드 제공업체(OpenAI, Anthropic, Google Gemini, Groq, DeepSeek, OpenRouter)를 통해 프롬프트를 처리합니다. 완전히 로컬로 오프라인 추론이 이루어지는 경우는 백엔드로 Ollama를 선택했을 때뿐이며, 이 옵션은 데스크톱에서만 존재합니다.',
+          '아니요 — Aori는 하이브리드입니다. Aori 웹사이트에 따르면 앱은 기기에서 실행되며 대화를 저장하는 백엔드를 운영하지 않고, API 키는 로컬에 저장되며 요청은 선택한 제공업체로 직접 전송됩니다. Aori의 네트워크 트래픽은 독립적으로 감사하지 않았습니다. 다만 기본적으로 자신의 API 키를 사용해 클라우드 제공업체(OpenAI, Anthropic, Google Gemini, Groq, DeepSeek, OpenRouter)를 통해 프롬프트를 처리합니다. 완전히 로컬로 오프라인 추론이 이루어지는 경우는 백엔드로 Ollama를 선택했을 때뿐이며, 이 옵션은 데스크톱에서만 존재합니다.',
         bullets: [
           '데스크톱(Windows/macOS/Linux)은 완전한 로컬 모델을 위해 Ollama를 지원하지만 Android는 지원하지 않습니다.',
-          'API 키는 기기에 로컬로 저장되며 Aori 백엔드를 거치지 않고 제공업체로 직접 전송됩니다.',
+          'Aori에 따르면 API 키는 기기에 로컬로 저장되며 Aori 백엔드를 거치지 않고 제공업체로 직접 전송됩니다.',
           '기능: 지속적인 기억, 슬래시 명령 페르소나, Telegram/WhatsApp 채널, Obsidian/Notion 연동, 예약된 루틴.',
           '현재 사용 가능한 플랫폼: Windows, macOS, Linux, Android. iOS는 아직 제공되지 않습니다.',
-          '가격은 공개되지 않았습니다 — Aori 자체는 베타 기간 동안 무료이며, 연결한 LLM 제공업체에 비용을 지불합니다(Groq는 무료 등급 제공).',
+          'Aori의 가격은 공개되지 않았으며, 마지막 업데이트 시점에는 베타 기간 동안 무료로 사용할 수 있었습니다(마지막 업데이트 날짜 참조). 제공업체별 비용은 다르며, [Groq](https://groq.com)처럼 무료 등급을 제공하는 곳도 있습니다.',
         ],
         updatedDate: '2026-09',
       },
@@ -1684,21 +1684,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'one-sentence',
             text:
-              'Aori는 API 키와 채팅 기록을 기기에 보관하는 데스크톱/모바일용 로컬 퍼스트 개인 AI 에이전트지만, 데스크톱에서 Ollama를 모델 백엔드로 선택했을 때만 완전히 오프라인으로 작동합니다.',
+              'Aori 웹사이트에 따르면 Aori는 API 키와 채팅 기록을 기기에 보관하는 데스크톱/모바일용 로컬 퍼스트 개인 AI 에이전트지만(당사는 이를 감사하지 않았습니다), 데스크톱에서 Ollama를 모델 백엔드로 선택했을 때만 완전히 오프라인으로 작동합니다.',
           },
           {
             type: 'plain-terms',
             text:
-              'Aori는 컴퓨터나 Android 휴대폰용 앱으로, 기억을 가진 개인 비서처럼 작동합니다. OpenAI나 Anthropic 같은 제공업체의 자신의 계정과 키를 연결해 실행하거나, 데스크톱에서만 Ollama를 통한 무료 로컬 모델로 실행하면 아무것도 인터넷으로 전송되지 않습니다.',
+              'Aori는 컴퓨터나 Android 휴대폰용 앱으로, 기억을 가진 개인 비서처럼 작동합니다. OpenAI나 Anthropic 같은 제공업체의 자신의 계정과 키를 연결해 실행하거나, 데스크톱에서만 Ollama를 통한 로컬 모델로 실행하면 프롬프트와 응답이 자신의 기기에서 처리됩니다.',
           },
         ],
         items: [
           'Aori는 데스크톱과 모바일용 로컬 퍼스트 개인 AI 에이전트 앱으로, 현재 [aori-ai.app](https://www.aori-ai.app/)에서 공개 베타 중입니다.',
-          'Aori가 운영하는 백엔드는 데이터를 저장하지 않습니다 — API 키와 대화는 기기에 로컬로 저장되며 선택한 LLM 제공업체로 직접 전송됩니다.',
+          'Aori 웹사이트에 따르면 Aori가 운영하는 백엔드는 데이터를 저장하지 않습니다 — API 키와 대화는 기기에 로컬로 저장되며 선택한 LLM 제공업체로 직접 전송됩니다.',
           '지원되는 클라우드 제공업체: OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek, OpenRouter. 데스크톱에서만 완전한 로컬 모델을 위해 [Ollama](https://ollama.com)도 지원합니다.',
           '핵심 기능: 지속적인 기억, 슬래시 명령으로 전환 가능한 페르소나(예: `/leo`, `/planner`), 채널별로 분리된 기록을 가진 멀티채널 채팅(앱 내, Telegram, WhatsApp), 지식 연동(로컬 폴더, Obsidian, Notion), 평이한 언어로 예약하는 능동적 루틴.',
           '플랫폼: Windows, macOS, Linux 데스크톱; 현재 Android 모바일, iOS는 추후 지원 예정.',
-          '가격은 공개되지 않았습니다. Aori는 현재 베타 기간 동안 무료로 사용할 수 있습니다 — 실제 비용은 연결한 LLM 제공업체에 따라 달라집니다(Groq는 무료 등급 제공).',
+          'Aori의 가격은 공개되지 않았습니다. 마지막 업데이트 시점에는 베타 기간 동안 무료로 사용할 수 있었습니다(마지막 업데이트 날짜 참조) — 실제 비용은 연결한 LLM 제공업체에 따라 달라지며, [Groq](https://groq.com)처럼 무료 등급을 제공하는 곳도 있습니다.',
           '완전한 오프라인 작동은 Ollama를 선택한 데스크톱으로 제한됩니다 — Android 앱을 포함한 다른 모든 구성은 클라우드 제공업체로의 인터넷 연결에 의존합니다.',
         ],
       },
@@ -1707,8 +1707,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Aori란 무엇인가',
         content: [
           '**Aori는 호스팅된 채팅 웹사이트가 아니라 데스크톱이나 휴대폰에서 실행되는 개인 AI 에이전트 앱입니다.** [aori-ai.app](https://www.aori-ai.app/)에서 제공되며 현재 Windows, macOS, Linux, Android에서 공개 베타 중입니다.',
-          '핵심 설계 방향은 로컬 퍼스트입니다. 앱 자체는 기기에서 실행되며, Aori는 대화를 저장하는 백엔드 서버를 운영하지 않습니다. OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek, OpenRouter 등 지원되는 LLM 제공업체의 자신의 API 키를 연결하면, Aori는 해당 키를 로컬에 저장하고 기기에서 선택한 제공업체로 직접 요청을 전송합니다.',
-          '데스크톱에서 Aori는 두 번째 경로를 추가합니다. [Ollama](https://ollama.com) 지원을 통해 클라우드 제공업체를 전혀 거치지 않고 자신의 하드웨어에서 완전히 오픈소스 모델을 실행할 수 있습니다. 이 경로는 데스크톱 전용이며, Android 앱에는 로컬 모델 옵션이 없어 항상 클라우드 제공업체에 의존합니다.',
+          '핵심 설계 방향은 로컬 퍼스트입니다. 앱 자체는 기기에서 실행되며, Aori 웹사이트에 따르면 Aori는 대화를 저장하는 백엔드 서버를 운영하지 않습니다. OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek, OpenRouter 등 지원되는 LLM 제공업체의 자신의 API 키를 연결하면, Aori 웹사이트에 따르면 Aori는 해당 키를 로컬에 저장하고 기기에서 선택한 제공업체로 직접 요청을 전송합니다.',
+          '데스크톱에서 Aori는 두 번째 경로를 추가합니다. [Ollama](https://ollama.com) 지원을 통해 클라우드 제공업체를 전혀 거치지 않고 자신의 하드웨어에서 완전히 오픈 웨이트 모델(각 모델의 라이선스를 확인하세요)을 실행할 수 있습니다. 이 경로는 데스크톱 전용이며, Android 앱에는 로컬 모델 옵션이 없어 항상 클라우드 제공업체에 의존합니다.',
         ],
       },
       features: {
@@ -1733,8 +1733,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '플랫폼 / 요금제': 'Windows, macOS, Linux(데스크톱)',
-            '기대할 수 있는 것': '전체 기능 제공. 클라우드 제공업체(OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter)를 지원하며, 독자적으로 완전한 로컬 모델을 위한 [Ollama](https://ollama.com)도 지원합니다.',
-            '중요 참고 사항': 'Ollama와 하드웨어가 실행할 수 있는 모델을 선택하면 Aori가 클라우드 의존 없이 작동할 수 있는 유일한 환경입니다.',
+            '기대할 수 있는 것': '전체 기능 제공. 클라우드 제공업체(OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter)를 지원하며, 데스크톱에 한해 완전한 로컬 모델을 위한 [Ollama](https://ollama.com)도 지원합니다.',
+            '중요 참고 사항': 'Ollama와 하드웨어가 실행할 수 있는 모델을 선택하면 Aori가 클라우드 LLM 제공업체 없이 작동할 수 있는 유일한 환경입니다.',
           },
           {
             '플랫폼 / 요금제': 'Android',
@@ -1748,8 +1748,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '플랫폼 / 요금제': '가격',
-            '기대할 수 있는 것': '공개되지 않음. 현재 공개 베타에서는 Aori 자체에 대한 구독료 없이 앱을 사용할 수 있습니다.',
-            '중요 참고 사항': '실제 비용은 사용하는 API 키의 LLM 제공업체가 결정합니다 — Groq는 무료 등급을 제공하며, OpenAI, Anthropic, Gemini, DeepSeek, OpenRouter는 해당 제공업체의 자신의 계정을 통해 직접 청구됩니다.',
+            '기대할 수 있는 것': '공개되지 않음. 마지막 업데이트 시점에는 베타 기간 동안 무료로 사용할 수 있었습니다(마지막 업데이트 날짜 참조).',
+            '중요 참고 사항': '비용은 제공업체마다 다릅니다 — [Groq](https://groq.com)처럼 무료 등급을 제공하는 곳도 있으며, OpenAI, Anthropic, Gemini, DeepSeek, OpenRouter는 해당 제공업체의 자신의 계정을 통해 직접 청구됩니다.',
           },
         ],
       },
@@ -1757,7 +1757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-vs-cloud',
         title: '로컬 대 클라우드: "로컬 퍼스트"의 실제 의미',
         content: [
-          '**"로컬 퍼스트"는 Aori가 데이터를 어디에 저장하는지를 설명하는 것이지, 프롬프트가 어디에서 처리되는지를 설명하는 것이 아닙니다.** 어떤 구성이든 API 키와 대화 기록은 Aori가 운영하는 서버가 아닌 기기에 저장됩니다. 하지만 모델 자체가 기기에서 실행되는지는 전적으로 선택한 백엔드에 달려 있습니다.',
+          '**"로컬 퍼스트"는 Aori가 데이터를 어디에 저장하는지를 설명하는 것이지, 프롬프트가 어디에서 처리되는지를 설명하는 것이 아닙니다.** Aori 웹사이트에 따르면, Aori가 설명하는 모든 구성에서 API 키와 대화 기록은 Aori가 운영하는 서버가 아닌 기기에 저장됩니다(당사는 이를 감사하지 않았습니다). 하지만 모델 자체가 기기에서 실행되는지는 전적으로 선택한 백엔드에 달려 있습니다.',
           '이 구분이 중요한 이유는 "데이터가 기기에 남는다"는 것과 "AI가 기기에서 작동한다"는 것이 같은 말이 아니며, Aori가 이 둘을 동시에 충족하는 경우는 하나의 특정 구성에서만 가능하기 때문입니다.',
         ],
         decisionBlock: {
@@ -1773,9 +1773,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '가장 크고 강력한 프런티어 모델에 접근하고 싶다',
           ],
           quick: [
-            '데스크톱 + Ollama = 프롬프트와 추론이 전적으로 자신의 기기에 머무릅니다',
+            '데스크톱 + Ollama = 추론이 자신의 기기에서 실행되므로 프롬프트가 클라우드 LLM 제공업체로 전송되지 않습니다(Aori와 Ollama의 업데이트·채널 연동 등 그 밖의 네트워크 활동은 여기서 다루지 않습니다)',
             '그 외 모든 조합(데스크톱 또는 Android + 클라우드 제공업체) = 프롬프트가 기기를 떠나 해당 제공업체의 API로 전송됩니다',
-            'Aori 자체는 어떤 경우에도 데이터를 저장하는 백엔드를 운영하지 않습니다 — 로컬과 클라우드의 경계는 모델 백엔드에 있는 것이지 Aori 자체 서버에 있는 것이 아닙니다',
+            'Aori 웹사이트에 따르면 Aori 자체는 어떤 경우에도 데이터를 저장하는 백엔드를 운영하지 않습니다 — 로컬과 클라우드의 경계는 모델 백엔드에 있는 것이지 Aori 자체 서버에 있는 것이 아닙니다',
           ],
         },
       },
@@ -1783,7 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Aori를 사용해야 하는 사람',
         items: [
-          '**데스크톱과 Android에서 하나의 에이전트를 원하는 사용자.** 같은 제공업체 계정을 사용하는 한 지속적인 기억, 페르소나, 루틴이 플랫폼 간에 따라옵니다.',
+          '**데스크톱과 Android에서 하나의 에이전트를 원하는 사용자.** Aori는 두 플랫폼에서 같은 기능을 제공합니다. 기억과 루틴이 기기 간에 이어지는지는 Aori 문서를 확인하세요.',
           '**자신의 API 키를 준비하고 제공업체에 직접 비용을 지불하는 데 거부감이 없는 사용자.** Aori는 인터페이스일 뿐이며, OpenAI, Anthropic, Google, Groq, DeepSeek, OpenRouter와의 결제는 별도로 직접 관리합니다.',
           '**아침 브리핑처럼 반복되는 일정을 평이한 언어로 예약하고 싶은 사용자.** 별도의 자동화 소프트웨어를 설정할 필요가 없습니다.',
           '**[Ollama](https://ollama.com)를 통한 완전한 로컬 오프라인 추론이라는 선택지를 원하면서도**, 더 어려운 작업에는 클라우드 제공업체로 전환할 수 있는 선택지도 포기하고 싶지 않은 데스크톱 사용자.',
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**iPhone이나 iPad 사용자.** Aori는 아직 iOS 앱이 없으며, 회사는 iOS 지원을 공개된 날짜 없이 "추후 제공"이라고 설명하고 있습니다.',
           '**클라우드 옵션이 전혀 없는 완전한 오프라인 앱을 원하는 사용자.** Aori의 로컬 경로는 Ollama를 선택한 데스크톱에만 존재하며, 유용한 기능 대부분은 연결된 클라우드 제공업체를 전제로 하므로, 기본적으로 프라이버시가 보장되는 오프라인 앱이 아니라 하이브리드 도구로 취급해야 합니다.',
-          '**별도의 제공업체 결제를 관리하고 싶지 않은 사용자.** Aori에는 모델 사용을 포함하는 통합 구독이 없으며, 선택한 제공업체에서 자신의 계정을 개설하고 비용을 부담해야 합니다.',
+          '**별도의 제공업체 결제를 관리하고 싶지 않은 사용자.** Aori는 모델 사용을 포함하는 통합 구독을 명시하지 않으며, 선택한 제공업체에서 자신의 계정을 개설하고 비용을 부담해야 합니다.',
           '**결정 전에 공개되고 예측 가능한 가격이 필요한 사용자.** Aori는 앱 자체의 가격을 공개하지 않았으며, 제공업체 비용은 선택한 모델과 제공업체에 따라 달라집니다.',
           '**특히 로컬 오프라인 모델을 원하는 Android 사용자.** Ollama 지원은 데스크톱 전용이며, Android는 항상 클라우드 제공업체에 의존합니다.',
         ],
@@ -1808,7 +1808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Aori는 완전히 오프라인으로 작동하는 로컬 AI 앱입니까?',
-            a: '아니요, 기본적으로는 그렇지 않습니다. Aori는 하이브리드입니다. API 키와 대화는 Aori가 운영하는 서버가 아닌 기기에 로컬로 저장되지만, 데스크톱에서 명시적으로 Ollama를 백엔드로 선택하지 않는 한 응답을 생성하는 모델은 클라우드에서 실행됩니다. 데스크톱과 Ollama의 조합이라는 그 한 가지 구성만이 완전히 로컬이며 오프라인입니다.',
+            a: '아니요, 기본적으로는 그렇지 않습니다. Aori는 하이브리드입니다. Aori 웹사이트에 따르면 API 키와 대화는 Aori가 운영하는 서버가 아닌 기기에 로컬로 저장되지만(당사는 이를 감사하지 않았습니다), 데스크톱에서 명시적으로 Ollama를 백엔드로 선택하지 않는 한 응답을 생성하는 모델은 클라우드에서 실행됩니다. 데스크톱과 Ollama의 조합이라는 그 한 가지 구성만이 완전히 로컬이며 오프라인입니다.',
           },
           {
             q: 'Aori는 어떤 플랫폼을 지원합니까?',
@@ -1816,7 +1816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Aori는 제 데이터를 자체 서버에 저장합니까?',
-            a: '아니요. Aori는 대화를 저장하는 백엔드를 운영하지 않습니다. API 키는 기기에 로컬로 저장되며, 요청은 Aori가 운영하는 서버를 거치지 않고 기기에서 연결한 LLM 제공업체로 직접 전송됩니다.',
+            a: 'Aori 웹사이트에 따르면 아니요. 앱은 기기에서 실행되며 대화를 저장하는 백엔드를 운영하지 않고, API 키는 로컬에 저장되며 요청은 선택한 제공업체로 직접 전송됩니다. Aori의 네트워크 트래픽은 독립적으로 감사하지 않았습니다.',
           },
           {
             q: 'Aori는 어떤 LLM 제공업체를 지원합니까?',
@@ -1824,7 +1824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Aori 비용은 얼마입니까?',
-            a: 'Aori는 가격을 공개하지 않았습니다. 앱은 현재 공개 베타에서 Aori 자체에 대한 비용 없이 사용할 수 있습니다. 실제 비용은 연결한 LLM 제공업체에서 발생합니다 — Groq는 무료 등급을 제공하며, OpenAI, Anthropic, Gemini, DeepSeek, OpenRouter는 해당 제공업체의 자신의 계정을 통해 직접 청구됩니다.',
+            a: 'Aori의 가격은 공개되지 않았습니다. 마지막 업데이트 시점에는 베타 기간 동안 무료로 사용할 수 있었습니다(마지막 업데이트 날짜 참조). 실제 비용은 연결한 LLM 제공업체에서 발생합니다 — [Groq](https://groq.com)처럼 무료 등급을 제공하는 곳도 있으며, OpenAI, Anthropic, Gemini, DeepSeek, OpenRouter는 해당 제공업체의 자신의 계정을 통해 직접 청구됩니다.',
           },
           {
             q: 'Android에서 Aori를 완전히 오프라인으로 사용할 수 있습니까?',
@@ -1852,7 +1852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          '**Aori를 기본적으로 프라이버시가 보장되는 로컬 AI 도구가 아니라 하이브리드로 평가한다면, 이는 범위가 잘 설정된 개인 에이전트 앱입니다.** 지속적인 기억, 슬래시 명령 페르소나, 멀티채널 채팅(기록이 분리된 Telegram과 WhatsApp), Obsidian/Notion 지식 연동, 평이한 언어의 능동적 루틴의 조합은 하나의 에이전트가 여러 맥락에서 일관되게 느껴지도록 만드는 것을 목표로 한 일관된 기능 세트입니다. Aori가 운영하는 백엔드 없이 API 키와 대화를 로컬로 저장하는 것은 선택한 모델 백엔드와 무관하게 실제적이고 검증 가능한 프라이버시 특성입니다. 하지만 완전히 로컬이며 오프라인이라는 주장은 정확히 하나의 구성, 즉 Ollama를 선택한 데스크톱에만 적용됩니다. 그 외의 모든 경로 — 데스크톱에서의 클라우드 제공업체 사용, 또는 Android에서의 모든 사용 — 는 프롬프트를 인터넷을 통해 제3자 API로 전송합니다. 이러한 트레이드오프를 이해하고 받아들이며, 자신의 LLM API 키를 준비하고 비용을 지불하는 데 거부감이 없는 사용자는 실제로 유용한 크로스 플랫폼 에이전트를 얻게 됩니다. 기본적으로 완전한 오프라인 앱이나 iOS 앱을 찾는 사용자는 당분간 다른 곳을 찾아보아야 합니다.',
+          '**Aori를 기본적으로 프라이버시가 보장되는 로컬 AI 도구가 아니라 하이브리드로 평가한다면, 이는 범위가 잘 설정된 개인 에이전트 앱입니다.** 지속적인 기억, 슬래시 명령 페르소나, 멀티채널 채팅(기록이 분리된 Telegram과 WhatsApp), Obsidian/Notion 지식 연동, 평이한 언어의 능동적 루틴의 조합은 하나의 에이전트가 여러 맥락에서 일관되게 느껴지도록 만드는 것을 목표로 한 일관된 기능 세트입니다. Aori가 운영하는 백엔드 없이 API 키와 대화를 로컬로 저장하는 것은 선택한 모델 백엔드와 무관하게 개발사가 밝힌 프라이버시 특성입니다(Aori의 네트워크 트래픽은 감사하지 않았습니다). 하지만 완전히 로컬이며 오프라인이라는 주장은 정확히 하나의 구성, 즉 Ollama를 선택한 데스크톱에만 적용됩니다. 그 외의 모든 경로 — 데스크톱에서의 클라우드 제공업체 사용, 또는 Android에서의 모든 사용 — 는 프롬프트를 인터넷을 통해 제3자 API로 전송합니다. 이러한 트레이드오프를 이해하고 받아들이며, 자신의 LLM API 키를 준비하고 비용을 지불하는 데 거부감이 없는 사용자는 유용할 수 있는 크로스 플랫폼 에이전트를 얻게 됩니다. 기본적으로 완전한 오프라인 앱이나 iOS 앱을 찾는 사용자는 당분간 다른 곳을 찾아보아야 합니다.',
       },
       sources: {
         id: 'sources',
@@ -1886,11 +1886,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Avaliação do Aori AI: Agente Pessoal Local-First para Desktop e Mobile',
     seoTitle: 'Avaliação do Aori AI: Agente Pessoal Local-First',
     intro:
-      'Aori é um aplicativo de agente de IA pessoal que roda no seu computador e no seu celular, com memória persistente, personas alternáveis e rotinas agendadas. Ele guarda suas chaves de API e conversas localmente, em vez de em um servidor operado pelo Aori, mas não é um aplicativo totalmente offline por padrão — a maior parte da sua inteligência vem do provedor de LLM em nuvem que você conectar. Esta avaliação mostra o que o Aori realmente faz, quais plataformas suportam inferência totalmente local via Ollama, e onde termina a promessa "local-first" e começa a dependência da nuvem.',
+      'Aori é um aplicativo de agente de IA pessoal que roda no seu computador e no seu celular, com memória persistente, personas alternáveis e rotinas agendadas. Segundo o Aori, ele guarda suas chaves de API e conversas localmente, em vez de em um servidor operado pelo Aori, mas não é um aplicativo totalmente offline por padrão — a maior parte da sua inteligência vem do provedor de LLM em nuvem que você conectar. Esta avaliação mostra o que o Aori diz fazer (com base nas informações publicadas pelo desenvolvedor, não em testes práticos), quais plataformas suportam inferência totalmente local via Ollama, e onde termina a promessa "local-first" e começa a dependência da nuvem.',
     metaDescription:
       'Avaliação do Aori AI: um agente pessoal local-first com memória, personas e rotinas para desktop e Android. Veja quando ele funciona totalmente offline via Ollama e quando depende de provedores em nuvem.',
     twitterDescription:
-      'Avaliação do Aori AI 2026: app de agente pessoal para desktop e Android com memória, personas e rotinas. Local via Ollama só no desktop — uma análise honesta do modelo híbrido.',
+      'Avaliação do Aori AI 2026: app de agente pessoal para desktop e Android com memória, personas e rotinas. Local via Ollama só no desktop — uma análise do modelo híbrido.',
     audience:
       'Usuários decidindo entre rodar um agente de IA pessoal pelo Aori usando sua própria chave de API em nuvem, ou totalmente local via Ollama no desktop — cobre suporte de plataformas, conjunto de recursos e a troca entre local e nuvem.',
     readTime: '7 min de leitura',
@@ -1913,18 +1913,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Windows PC', 'Mac', 'Linux PC', 'Android'],
     leadAnswerBlock:
-      '**O Aori vale a pena se você quer um único agente de IA pessoal — com memória, personas e rotinas agendadas — no desktop e no Android, e está disposto a trazer sua própria chave de API de LLM.** Ele só se torna uma ferramenta totalmente local e offline quando você escolhe o [Ollama](https://ollama.com) como backend de modelo no desktop; o aplicativo Android e qualquer backend em nuvem continuam enviando seus prompts pela internet para esse provedor, mesmo que o próprio Aori não armazene nenhuma cópia dos seus dados em seus próprios servidores.',
+      '**O Aori vale a pena se você quer um único agente de IA pessoal — com memória, personas e rotinas agendadas — no desktop e no Android, e está disposto a trazer sua própria chave de API de LLM.** Ele só se torna uma ferramenta totalmente local e offline quando você escolhe o [Ollama](https://ollama.com) como backend de modelo no desktop; o aplicativo Android e qualquer backend em nuvem continuam enviando seus prompts pela internet para esse provedor, mesmo que o próprio Aori, segundo ele mesmo, não armazene nenhuma cópia dos seus dados em seus próprios servidores.',
     quickAnswerTop: {
       pt: {
         question: 'O Aori AI é um aplicativo de IA totalmente local e offline?',
         answer:
-          'Não — o Aori é híbrido. Ele roda no seu dispositivo e nunca envia dados para um backend operado pelo Aori, mas por padrão encaminha os prompts por meio de um provedor em nuvem (OpenAI, Anthropic, Google Gemini, Groq, DeepSeek ou OpenRouter) usando sua própria chave de API. A inferência totalmente local e offline só acontece quando você escolhe o Ollama como backend, e essa opção existe apenas no desktop.',
+          'Não — o Aori é híbrido. Segundo o site do Aori, o aplicativo roda no seu dispositivo e não opera um backend que armazene suas conversas; as chaves de API ficam armazenadas localmente e as solicitações vão diretamente ao provedor que você escolher. Não auditamos de forma independente o tráfego de rede do Aori. Por padrão, porém, ele encaminha os prompts por meio de um provedor em nuvem (OpenAI, Anthropic, Google Gemini, Groq, DeepSeek ou OpenRouter) usando sua própria chave de API. A inferência totalmente local e offline só acontece quando você escolhe o Ollama como backend, e essa opção existe apenas no desktop.',
         bullets: [
           'Desktop (Windows/macOS/Linux) suporta Ollama para modelos totalmente locais; o Android não.',
-          'As chaves de API ficam armazenadas localmente no seu dispositivo e vão direto ao provedor — nunca por um backend do Aori.',
+          'Segundo o Aori, as chaves de API ficam armazenadas localmente no seu dispositivo e vão direto ao provedor, sem passar por um backend do Aori.',
           'Recursos: memória persistente, personas por comandos de barra, canais de Telegram/WhatsApp, integração com Obsidian/Notion, rotinas agendadas.',
           'Plataformas disponíveis agora: Windows, macOS, Linux, Android. O iOS ainda não está disponível.',
-          'O preço não está publicado — o Aori em si é gratuito na beta; você paga o provedor de LLM que conectar (o Groq tem um nível gratuito).',
+          'O preço do Aori não está publicado; ele era gratuito na beta na época da última atualização (veja a data da última atualização). Os custos dos provedores variam, e alguns, como o [Groq](https://groq.com), oferecem um nível gratuito.',
         ],
         updatedDate: '2026-09',
       },
@@ -1951,21 +1951,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'one-sentence',
             text:
-              'O Aori é um agente de IA pessoal local-first para desktop e mobile que mantém chaves de API e histórico de chat no seu dispositivo, mas só funciona totalmente offline quando você escolhe o Ollama como backend de modelo no desktop.',
+              'Segundo o site do Aori, o Aori é um agente de IA pessoal local-first para desktop e mobile que mantém chaves de API e histórico de chat no seu dispositivo (não auditamos isso), mas só funciona totalmente offline quando você escolhe o Ollama como backend de modelo no desktop.',
           },
           {
             type: 'plain-terms',
             text:
-              'O Aori é um aplicativo para o seu computador ou celular Android que funciona como um assistente pessoal com memória. Você conecta sua própria conta e chave de um provedor como OpenAI ou Anthropic para usá-lo, ou — só no desktop — pode rodá-lo com modelos locais gratuitos via Ollama, de forma que nada vai para a internet.',
+              'O Aori é um aplicativo para o seu computador ou celular Android que funciona como um assistente pessoal com memória. Você conecta sua própria conta e chave de um provedor como OpenAI ou Anthropic para usá-lo, ou — só no desktop — pode rodá-lo com modelos locais via Ollama, de forma que os prompts e as respostas sejam processados na sua própria máquina.',
           },
         ],
         items: [
           'O Aori é um aplicativo de agente de IA pessoal local-first para desktop e mobile, atualmente em beta pública em [aori-ai.app](https://www.aori-ai.app/).',
-          'Nenhum backend operado pelo Aori armazena seus dados — chaves de API e conversas ficam armazenadas localmente no seu dispositivo e são enviadas diretamente ao provedor de LLM escolhido.',
+          'Segundo o site do Aori, nenhum backend operado pelo Aori armazena seus dados — chaves de API e conversas ficam armazenadas localmente no seu dispositivo e são enviadas diretamente ao provedor de LLM escolhido.',
           'Provedores em nuvem suportados: OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek e OpenRouter. Só no desktop, o Aori também suporta o [Ollama](https://ollama.com) para modelos totalmente locais.',
           'Recursos principais: memória persistente, personas alternáveis por comandos de barra (por exemplo, `/leo`, `/planner`), chat multicanal (no app, Telegram, WhatsApp) com histórico isolado por canal, integração de conhecimento (pastas locais, Obsidian, Notion) e rotinas proativas agendadas em linguagem simples.',
           'Plataformas: desktop em Windows, macOS e Linux; mobile em Android agora, com iOS chegando mais tarde.',
-          'O preço não está publicado. O Aori é gratuito na beta atual; o custo real é o que o provedor de LLM conectado cobrar (o Groq tem um nível gratuito).',
+          'O preço do Aori não está publicado. Ele era gratuito na beta na época da última atualização (veja a data da última atualização); o custo real é o que o provedor de LLM conectado cobrar, e alguns provedores, como o [Groq](https://groq.com), oferecem um nível gratuito.',
           'A operação totalmente offline se limita ao desktop com Ollama selecionado — qualquer outra configuração, incluindo o aplicativo Android, depende de uma conexão com a internet a um provedor em nuvem.',
         ],
       },
@@ -1974,8 +1974,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o Aori',
         content: [
           '**O Aori é um aplicativo de agente de IA pessoal que roda no seu computador ou celular em vez de um site de chat hospedado.** Está disponível em [aori-ai.app](https://www.aori-ai.app/) e atualmente está em beta pública para Windows, macOS, Linux e Android.',
-          'A escolha central de design é local-first: o próprio aplicativo roda no seu dispositivo, e o Aori não opera um servidor backend que armazene suas conversas. Você conecta sua própria chave de API de um provedor de LLM suportado — OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek ou OpenRouter — e o Aori armazena essa chave localmente, enviando solicitações diretamente do seu dispositivo ao provedor escolhido.',
-          'No desktop, o Aori adiciona um segundo caminho: suporte ao [Ollama](https://ollama.com), que permite rodar modelos de código aberto totalmente no seu próprio hardware, sem nenhum provedor em nuvem envolvido. Esse caminho é exclusivo do desktop — o aplicativo Android não tem opção de modelo local e sempre depende de um provedor em nuvem.',
+          'A escolha central de design é local-first: o próprio aplicativo roda no seu dispositivo, e, segundo o site do Aori, ele não opera um servidor backend que armazene suas conversas. Você conecta sua própria chave de API de um provedor de LLM suportado — OpenAI, Anthropic Claude, Google Gemini, Groq, DeepSeek ou OpenRouter — e, segundo o site do Aori, o Aori armazena essa chave localmente e envia solicitações diretamente do seu dispositivo ao provedor escolhido.',
+          'No desktop, o Aori adiciona um segundo caminho: suporte ao [Ollama](https://ollama.com), que permite rodar modelos de pesos abertos (confira a licença de cada modelo) totalmente no seu próprio hardware, sem nenhum provedor em nuvem envolvido. Esse caminho é exclusivo do desktop — o aplicativo Android não tem opção de modelo local e sempre depende de um provedor em nuvem.',
         ],
       },
       features: {
@@ -2000,8 +2000,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Plataforma / Plano': 'Windows, macOS, Linux (desktop)',
-            'O que esperar': 'Conjunto completo de recursos. Suporta provedores em nuvem (OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter) e, de forma exclusiva, o [Ollama](https://ollama.com) para modelos totalmente locais.',
-            'Nota importante': 'Este é o único ambiente em que o Aori pode rodar sem nenhuma dependência da nuvem, desde que você escolha o Ollama e um modelo que seu hardware consiga executar.',
+            'O que esperar': 'Conjunto completo de recursos. Suporta provedores em nuvem (OpenAI, Anthropic, Gemini, Groq, DeepSeek, OpenRouter) e, apenas no desktop, o [Ollama](https://ollama.com) para modelos totalmente locais.',
+            'Nota importante': 'Este é o único ambiente em que o Aori pode rodar sem precisar de um provedor de LLM na nuvem, desde que você escolha o Ollama e um modelo que seu hardware consiga executar.',
           },
           {
             'Plataforma / Plano': 'Android',
@@ -2015,8 +2015,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma / Plano': 'Preços',
-            'O que esperar': 'Não publicados. O aplicativo é utilizável na beta pública atual sem taxa de assinatura para o Aori em si.',
-            'Nota importante': 'Seu custo real é definido pelo provedor de LLM cuja chave de API você usa — o Groq oferece um nível gratuito; OpenAI, Anthropic, Gemini, DeepSeek e OpenRouter cobram pela sua própria conta com esse provedor.',
+            'O que esperar': 'Não publicados. Gratuito na beta na época da última atualização (veja a data da última atualização).',
+            'Nota importante': 'Os custos variam conforme o provedor — alguns, como o [Groq](https://groq.com), oferecem um nível gratuito; OpenAI, Anthropic, Gemini, DeepSeek e OpenRouter cobram pela sua própria conta com esse provedor.',
           },
         ],
       },
@@ -2024,7 +2024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-vs-cloud',
         title: 'Local vs. nuvem: o que "local-first" realmente significa',
         content: [
-          '**"Local-first" descreve onde o Aori armazena seus dados, não onde seus prompts são processados.** Em toda configuração, suas chaves de API e histórico de conversa ficam no seu dispositivo em vez de em um servidor operado pelo Aori. Mas se o próprio modelo roda no seu dispositivo depende inteiramente de qual backend você escolhe.',
+          '**"Local-first" descreve onde o Aori armazena seus dados, não onde seus prompts são processados.** Segundo o site do Aori, em toda configuração que ele descreve, suas chaves de API e histórico de conversa ficam no seu dispositivo em vez de em um servidor operado pelo Aori (não auditamos isso). Mas se o próprio modelo roda no seu dispositivo depende inteiramente de qual backend você escolhe.',
           'Essa distinção importa porque as duas afirmações — "seus dados ficam no seu dispositivo" e "sua IA roda no seu dispositivo" — não são a mesma coisa, e o Aori só entrega as duas ao mesmo tempo em uma configuração específica.',
         ],
         decisionBlock: {
@@ -2040,9 +2040,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Você quer acesso aos maiores e mais capazes modelos de fronteira',
           ],
           quick: [
-            'Desktop + Ollama = os prompts e a inferência ficam inteiramente na sua máquina',
+            'Desktop + Ollama = a inferência roda na sua máquina, então os prompts não são enviados a um provedor de LLM na nuvem (outras atividades de rede do Aori e do Ollama, como atualizações ou integrações de canais, não são cobertas aqui)',
             'Qualquer outra combinação (desktop ou Android + um provedor em nuvem) = os prompts saem do seu dispositivo e vão para a API desse provedor',
-            'O Aori em si nunca opera um backend que armazene seus dados em nenhum dos casos — a linha entre local e nuvem passa pelo backend do modelo, não pelos próprios servidores do Aori',
+            'Segundo o site do Aori, o Aori em si não opera um backend que armazene seus dados em nenhum dos casos — a linha entre local e nuvem passa pelo backend do modelo, não pelos próprios servidores do Aori',
           ],
         },
       },
@@ -2050,7 +2050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Quem deve usar o Aori',
         items: [
-          '**Usuários que querem um único agente no desktop e no Android.** Memória persistente, personas e rotinas acompanham você entre plataformas, desde que use a mesma conta de provedor.',
+          '**Usuários que querem um único agente no desktop e no Android.** O Aori oferece os mesmos recursos nos dois; consulte a documentação do Aori para saber se memória e rotinas passam de um dispositivo para outro.',
           '**Usuários confortáveis em trazer sua própria chave de API e pagar os provedores diretamente.** O Aori é a interface; você gerencia a cobrança com OpenAI, Anthropic, Google, Groq, DeepSeek ou OpenRouter separadamente.',
           '**Usuários que querem rotinas agendadas em linguagem simples**, como um resumo matinal recorrente, sem configurar um software de automação separado.',
           '**Usuários de desktop que querem a opção de inferência totalmente local e offline** via [Ollama](https://ollama.com), sem abrir mão da opção de trocar para um provedor em nuvem em tarefas mais difíceis.',
@@ -2064,7 +2064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Usuários de iPhone ou iPad.** O Aori ainda não tem aplicativo iOS; a empresa descreve o suporte a iOS como "chegando mais tarde", sem data publicada.',
           '**Usuários que querem um aplicativo totalmente offline sem nenhuma opção de nuvem.** O caminho local do Aori só existe no desktop com Ollama selecionado — a maioria dos seus recursos úteis pressupõe um provedor em nuvem conectado, então trate-o como uma ferramenta híbrida, não como um app offline com privacidade por padrão.',
-          '**Usuários que não querem gerenciar cobrança separada com um provedor.** O Aori não tem assinatura combinada que cubra o uso do modelo; você abre e custeia sua própria conta com o provedor escolhido.',
+          '**Usuários que não querem gerenciar cobrança separada com um provedor.** O Aori não informa uma assinatura combinada que cubra o uso do modelo; você abre e custeia sua própria conta com o provedor escolhido.',
           '**Usuários que precisam de um preço publicado e previsível antes de se comprometer.** O Aori não publicou preços para o aplicativo em si, e o custo do provedor varia conforme o modelo e o provedor escolhidos.',
           '**Usuários Android que especificamente querem modelos locais e offline.** O suporte ao Ollama é exclusivo do desktop; o Android sempre depende de um provedor em nuvem.',
         ],
@@ -2075,7 +2075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O Aori é um aplicativo de IA totalmente offline e local?',
-            a: 'Não, não por padrão. O Aori é híbrido: armazena suas chaves de API e conversas localmente em vez de em um servidor operado pelo Aori, mas o modelo que gera as respostas roda na nuvem, a menos que você escolha especificamente o Ollama como backend no desktop. Somente essa configuração — desktop mais Ollama — é totalmente local e offline.',
+            a: 'Não, não por padrão. O Aori é híbrido: segundo o site do Aori, armazena suas chaves de API e conversas localmente em vez de em um servidor operado pelo Aori (não auditamos isso), mas o modelo que gera as respostas roda na nuvem, a menos que você escolha especificamente o Ollama como backend no desktop. Somente essa configuração — desktop mais Ollama — é totalmente local e offline.',
           },
           {
             q: 'Quais plataformas o Aori suporta?',
@@ -2083,7 +2083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'O Aori armazena meus dados em seus próprios servidores?',
-            a: 'Não. O Aori não opera um backend que armazene suas conversas. Suas chaves de API ficam armazenadas localmente no seu dispositivo, e as solicitações vão diretamente do seu dispositivo ao provedor de LLM conectado — não por um servidor operado pelo Aori.',
+            a: 'Segundo o site do Aori, não: o aplicativo roda no seu dispositivo e não opera um backend que armazene suas conversas; as chaves de API ficam armazenadas localmente e as solicitações vão diretamente ao provedor que você escolher. Não auditamos de forma independente o tráfego de rede do Aori.',
           },
           {
             q: 'Quais provedores de LLM o Aori suporta?',
@@ -2091,7 +2091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quanto custa o Aori?',
-            a: 'O Aori não publicou preços; o aplicativo é utilizável na beta pública atual sem custo para o Aori em si. Seu custo real vem do provedor de LLM conectado — o Groq oferece um nível gratuito, enquanto OpenAI, Anthropic, Gemini, DeepSeek e OpenRouter cobram diretamente pela sua própria conta com esse provedor.',
+            a: 'O preço do Aori não está publicado; ele era gratuito na beta na época da última atualização (veja a data da última atualização). Seu custo real vem do provedor de LLM conectado — alguns provedores, como o [Groq](https://groq.com), oferecem um nível gratuito, enquanto OpenAI, Anthropic, Gemini, DeepSeek e OpenRouter cobram diretamente pela sua própria conta com esse provedor.',
           },
           {
             q: 'Posso rodar o Aori totalmente offline no Android?',
@@ -2119,7 +2119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          '**O Aori é um aplicativo de agente pessoal bem delimitado se você o avaliar como híbrido, não como uma ferramenta de IA local com privacidade por padrão.** A combinação de memória persistente, personas por comandos de barra, chat multicanal (Telegram e WhatsApp com históricos isolados), integração de conhecimento com Obsidian/Notion e rotinas proativas em linguagem simples é um conjunto de recursos coerente, voltado a fazer um único agente parecer consistente em diferentes contextos. Armazenar chaves de API e conversas localmente, sem um backend operado pelo Aori, é uma propriedade de privacidade real e verificável, independentemente do backend de modelo escolhido. Mas a afirmação de operação totalmente local e offline se aplica a exatamente uma configuração: desktop com Ollama selecionado. Qualquer outro caminho — provedores em nuvem no desktop, ou qualquer uso no Android — envia seus prompts para uma API de terceiros pela internet. Usuários que entendem e aceitam essa troca, e que estão confortáveis em trazer e pagar sua própria chave de API de LLM, obtêm um agente multiplataforma genuinamente útil. Quem procura um aplicativo totalmente offline por padrão, ou um aplicativo iOS, deve procurar em outro lugar por enquanto.',
+          '**O Aori é um aplicativo de agente pessoal bem delimitado se você o avaliar como híbrido, não como uma ferramenta de IA local com privacidade por padrão.** A combinação de memória persistente, personas por comandos de barra, chat multicanal (Telegram e WhatsApp com históricos isolados), integração de conhecimento com Obsidian/Notion e rotinas proativas em linguagem simples é um conjunto de recursos coerente, voltado a fazer um único agente parecer consistente em diferentes contextos. Armazenar chaves de API e conversas localmente, sem um backend operado pelo Aori, é uma propriedade de privacidade declarada pelo desenvolvedor (não auditamos o tráfego de rede do Aori), independentemente do backend de modelo escolhido. Mas a afirmação de operação totalmente local e offline se aplica a exatamente uma configuração: desktop com Ollama selecionado. Qualquer outro caminho — provedores em nuvem no desktop, ou qualquer uso no Android — envia seus prompts para uma API de terceiros pela internet. Usuários que entendem e aceitam essa troca, e que estão confortáveis em trazer e pagar sua própria chave de API de LLM, obtêm um agente multiplataforma potencialmente útil. Quem procura um aplicativo totalmente offline por padrão, ou um aplicativo iOS, deve procurar em outro lugar por enquanto.',
       },
       sources: {
         id: 'sources',
@@ -2153,11 +2153,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Aori AI 评测:面向桌面和移动端的本地优先个人代理',
     seoTitle: 'Aori AI 评测:本地优先个人 AI 代理',
     intro:
-      'Aori 是一款个人 AI 代理应用,可在你的电脑和手机上运行,具备持久记忆、可切换的人设(persona)以及可安排的例行任务。它将你的 API 密钥和对话保存在本地设备上,而不是 Aori 运营的服务器上,但默认情况下它并非完全离线的应用 —— 它的大部分智能来自你连接的云端 LLM 提供商。本评测介绍 Aori 实际能做什么、哪些平台支持通过 Ollama 实现完全本地推理,以及"本地优先"的说法在哪里结束、云端依赖从哪里开始。',
+      'Aori 是一款个人 AI 代理应用,可在你的电脑和手机上运行,具备持久记忆、可切换的人设(persona)以及可安排的例行任务。据 Aori 称,它将你的 API 密钥和对话保存在本地设备上,而不是 Aori 运营的服务器上,但默认情况下它并非完全离线的应用 —— 它的大部分智能来自你连接的云端 LLM 提供商。本评测介绍 Aori 自称能做什么(基于开发商公开的信息,而非亲身实测)、哪些平台支持通过 Ollama 实现完全本地推理,以及"本地优先"的说法在哪里结束、云端依赖从哪里开始。',
     metaDescription:
       'Aori AI 评测:一款面向桌面和 Android 的本地优先个人代理,具备记忆、人设和例行任务功能。了解它何时通过 Ollama 完全离线运行,何时依赖云端提供商。',
     twitterDescription:
-      'Aori AI 评测 2026:面向桌面和 Android 的个人代理应用,具备记忆、人设和例行任务。仅桌面端 Ollama 支持本地运行 —— 诚实拆解这一混合模式。',
+      'Aori AI 评测 2026:面向桌面和 Android 的个人代理应用,具备记忆、人设和例行任务。仅桌面端 Ollama 支持本地运行 —— 拆解这一混合模式。',
     audience:
       '正在决定是通过自己的云端 API 密钥使用 Aori,还是在桌面端通过 Ollama 完全本地运行个人 AI 代理的用户 —— 涵盖平台支持、功能集以及本地与云端的取舍。',
     readTime: '阅读约7分钟',
@@ -2180,18 +2180,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Windows PC', 'Mac', 'Linux PC', 'Android'],
     leadAnswerBlock:
-      '**如果你想在桌面端和 Android 上使用同一个具备记忆、人设和例行任务的个人 AI 代理,并且愿意自带 LLM API 密钥,那么 Aori 值得一用。** 只有在桌面端选择 [Ollama](https://ollama.com) 作为模型后端时,它才会成为完全本地、离线的工具;Android 应用以及任何云端后端仍会将你的提示词通过互联网发送给相应提供商 —— 即便 Aori 本身不会在自己的服务器上保存任何数据副本。',
+      '**如果你想在桌面端和 Android 上使用同一个具备记忆、人设和例行任务的个人 AI 代理,并且愿意自带 LLM API 密钥,那么 Aori 值得一用。** 只有在桌面端选择 [Ollama](https://ollama.com) 作为模型后端时,它才会成为完全本地、离线的工具;Android 应用以及任何云端后端仍会将你的提示词通过互联网发送给相应提供商 —— 即便据 Aori 称其本身不会在自己的服务器上保存任何数据副本。',
     quickAnswerTop: {
       zh: {
         question: 'Aori AI 是完全本地、离线运行的 AI 应用吗?',
         answer:
-          '不是 —— Aori 是混合模式。它在你的设备上运行,从不向 Aori 运营的后端发送数据,但默认情况下会使用你自己的 API 密钥,通过云端提供商(OpenAI、Anthropic、Google Gemini、Groq、DeepSeek 或 OpenRouter)转发提示词。只有当你选择 Ollama 作为后端时才会实现完全本地、离线的推理,而这一选项仅在桌面端提供。',
+          '不是 —— Aori 是混合模式。据 Aori 官网称,该应用在你的设备上运行,不运营存储你对话的后端;API 密钥保存在本地,请求直接发送给你选择的提供商。我们未对 Aori 的网络流量进行独立审计。但默认情况下会使用你自己的 API 密钥,通过云端提供商(OpenAI、Anthropic、Google Gemini、Groq、DeepSeek 或 OpenRouter)转发提示词。只有当你选择 Ollama 作为后端时才会实现完全本地、离线的推理,而这一选项仅在桌面端提供。',
         bullets: [
           '桌面端(Windows/macOS/Linux)支持 Ollama 实现完全本地模型;Android 不支持。',
-          'API 密钥保存在本地设备上,直接发送给提供商 —— 从不经过 Aori 的后端。',
+          '据 Aori 称,API 密钥保存在本地设备上,直接发送给提供商,不经过 Aori 的后端。',
           '功能:持久记忆、斜杠命令人设、Telegram/WhatsApp 频道、Obsidian/Notion 集成、可安排的例行任务。',
           '目前已上线的平台:Windows、macOS、Linux、Android。iOS 尚未推出。',
-          '定价未公开 —— Aori 本身在测试阶段免费;费用取决于你连接的 LLM 提供商(Groq 提供免费额度)。',
+          'Aori 的定价未公开;截至最近一次更新,它在测试阶段可免费使用(见最后更新日期)。各提供商费用不同,部分提供商(如 [Groq](https://groq.com))提供免费额度。',
         ],
         updatedDate: '2026-09',
       },
@@ -2218,21 +2218,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'one-sentence',
             text:
-              'Aori 是一款面向桌面和移动端的本地优先个人 AI 代理,将 API 密钥和聊天记录保存在你的设备上,但只有在桌面端选择 Ollama 作为模型后端时才会完全离线运行。',
+              '据 Aori 官网称,Aori 是一款面向桌面和移动端的本地优先个人 AI 代理,将 API 密钥和聊天记录保存在你的设备上(我们未审计),但只有在桌面端选择 Ollama 作为模型后端时才会完全离线运行。',
           },
           {
             type: 'plain-terms',
             text:
-              'Aori 是一款电脑或 Android 手机应用,像一个具有记忆能力的个人助理。你可以连接 OpenAI 或 Anthropic 等提供商的账号和密钥来使用它,或者 —— 仅在桌面端 —— 通过 Ollama 使用免费的本地模型运行,这样任何数据都不会发送到互联网。',
+              'Aori 是一款电脑或 Android 手机应用,像一个具有记忆能力的个人助理。你可以连接 OpenAI 或 Anthropic 等提供商的账号和密钥来使用它,或者 —— 仅在桌面端 —— 通过 Ollama 使用本地模型运行,这样提示词和响应都在你自己的设备上处理。',
           },
         ],
         items: [
           'Aori 是一款面向桌面和移动端的本地优先个人 AI 代理应用,目前在 [aori-ai.app](https://www.aori-ai.app/) 上公开测试。',
-          '没有 Aori 运营的后端会保存你的数据 —— API 密钥和对话保存在本地设备上,并直接发送给你选择的 LLM 提供商。',
+          '据 Aori 官网称,没有 Aori 运营的后端会保存你的数据 —— API 密钥和对话保存在本地设备上,并直接发送给你选择的 LLM 提供商。',
           '支持的云端提供商:OpenAI、Anthropic Claude、Google Gemini、Groq、DeepSeek 和 OpenRouter。仅在桌面端,Aori 还支持 [Ollama](https://ollama.com) 实现完全本地模型。',
           '核心功能:持久记忆、可通过斜杠命令切换的人设(例如 `/leo`、`/planner`)、多渠道聊天(应用内、Telegram、WhatsApp)且每个渠道的记录相互隔离、知识集成(本地文件夹、Obsidian、Notion),以及用简单语言安排的主动例行任务。',
           '平台:桌面端支持 Windows、macOS 和 Linux;移动端目前支持 Android,iOS 将在后续推出。',
-          '定价未公开。Aori 目前在测试阶段可免费使用;真正的费用取决于你连接的 LLM 提供商(Groq 提供免费额度)。',
+          'Aori 的定价未公开。截至最近一次更新,它在测试阶段可免费使用(见最后更新日期);真正的费用取决于你连接的 LLM 提供商,部分提供商(如 [Groq](https://groq.com))提供免费额度。',
           '完全离线运行仅限于选择 Ollama 的桌面端 —— 其他任何配置,包括 Android 应用,都依赖于与云端提供商的互联网连接。',
         ],
       },
@@ -2241,8 +2241,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Aori 是什么',
         content: [
           '**Aori 是一款个人 AI 代理应用,运行在你的电脑或手机上,而不是通过托管的聊天网站运行。** 它可在 [aori-ai.app](https://www.aori-ai.app/) 获取,目前在 Windows、macOS、Linux 和 Android 上公开测试。',
-          '其核心设计理念是本地优先:应用本身运行在你的设备上,Aori 不运营存储你对话记录的后端服务器。你连接自己在受支持 LLM 提供商(OpenAI、Anthropic Claude、Google Gemini、Groq、DeepSeek 或 OpenRouter)处的 API 密钥,Aori 会将该密钥保存在本地,并直接从你的设备向所选提供商发送请求。',
-          '在桌面端,Aori 还提供第二条路径:支持 [Ollama](https://ollama.com),让你完全在自己的硬件上运行开源模型,完全不涉及任何云端提供商。这条路径仅限桌面端 —— Android 应用没有本地模型选项,始终依赖云端提供商。',
+          '其核心设计理念是本地优先:应用本身运行在你的设备上,据 Aori 官网称,Aori 不运营存储你对话记录的后端服务器。你连接自己在受支持 LLM 提供商(OpenAI、Anthropic Claude、Google Gemini、Groq、DeepSeek 或 OpenRouter)处的 API 密钥,据 Aori 官网称,Aori 会将该密钥保存在本地,并直接从你的设备向所选提供商发送请求。',
+          '在桌面端,Aori 还提供第二条路径:支持 [Ollama](https://ollama.com),让你完全在自己的硬件上运行开放权重模型(请查看各模型的许可证),完全不涉及任何云端提供商。这条路径仅限桌面端 —— Android 应用没有本地模型选项,始终依赖云端提供商。',
         ],
       },
       features: {
@@ -2267,8 +2267,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '平台 / 方案': 'Windows、macOS、Linux(桌面端)',
-            '可以期待什么': '完整功能集。支持云端提供商(OpenAI、Anthropic、Gemini、Groq、DeepSeek、OpenRouter),并独家支持 [Ollama](https://ollama.com) 实现完全本地模型。',
-            '重要提示': '只有在这个环境中,只要选择 Ollama 和你硬件能够运行的模型,Aori 才能完全不依赖云端运行。',
+            '可以期待什么': '完整功能集。支持云端提供商(OpenAI、Anthropic、Gemini、Groq、DeepSeek、OpenRouter),并且仅在桌面端支持 [Ollama](https://ollama.com) 以运行完全本地模型。',
+            '重要提示': '只有在这个环境中,只要选择 Ollama 和你硬件能够运行的模型,Aori 才能在无需云端 LLM 提供商的情况下运行。',
           },
           {
             '平台 / 方案': 'Android',
@@ -2282,8 +2282,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '平台 / 方案': '定价',
-            '可以期待什么': '未公开。在当前公开测试阶段,应用可免费使用,无需向 Aori 本身支付订阅费。',
-            '重要提示': '你的实际成本取决于你使用其 API 密钥的 LLM 提供商 —— Groq 提供免费额度;OpenAI、Anthropic、Gemini、DeepSeek 和 OpenRouter 则通过你在该提供商处的账号直接计费。',
+            '可以期待什么': '未公开。截至最近一次更新,测试阶段可免费使用(见最后更新日期)。',
+            '重要提示': '成本因提供商而异 —— 部分提供商(如 [Groq](https://groq.com))提供免费额度;OpenAI、Anthropic、Gemini、DeepSeek 和 OpenRouter 则通过你在该提供商处的账号直接计费。',
           },
         ],
       },
@@ -2291,7 +2291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-vs-cloud',
         title: '本地 vs 云端:"本地优先"到底意味着什么',
         content: [
-          '**"本地优先"描述的是 Aori 在哪里存储你的数据,而不是你的提示词在哪里被处理。** 在任何配置下,你的 API 密钥和对话记录都保存在你的设备上,而不是 Aori 运营的服务器上。但模型本身是否在你的设备上运行,完全取决于你选择的后端。',
+          '**"本地优先"描述的是 Aori 在哪里存储你的数据,而不是你的提示词在哪里被处理。** 据 Aori 官网称,在其所述的任何配置下,你的 API 密钥和对话记录都保存在你的设备上,而不是 Aori 运营的服务器上(我们未审计)。但模型本身是否在你的设备上运行,完全取决于你选择的后端。',
           '这一区别很重要,因为"你的数据留在设备上"和"你的 AI 在设备上运行"这两种说法并不相同,而 Aori 只有在一种特定配置下才能同时满足这两点。',
         ],
         decisionBlock: {
@@ -2307,9 +2307,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '你希望访问最大、能力最强的前沿模型',
           ],
           quick: [
-            '桌面端 + Ollama = 提示词和推理完全留在你的设备上',
+            '桌面端 + Ollama = 推理在你的设备上运行,因此提示词不会发送给云端 LLM 提供商(Aori 和 Ollama 的其他网络活动,如更新或渠道集成,不在此范围内)',
             '其他任何组合(桌面端或 Android + 云端提供商)= 提示词离开你的设备,发送到该提供商的 API',
-            '无论哪种情况,Aori 本身都不会运营存储你数据的后端 —— 本地与云端的界线在于模型后端,而不在于 Aori 自己的服务器',
+            '据 Aori 官网称,无论哪种情况,Aori 本身都不会运营存储你数据的后端 —— 本地与云端的界线在于模型后端,而不在于 Aori 自己的服务器',
           ],
         },
       },
@@ -2317,7 +2317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: '谁适合使用 Aori',
         items: [
-          '**希望在桌面端和 Android 上使用同一个代理的用户。** 只要使用同一个提供商账号,持久记忆、人设和例行任务就会在各平台间保持同步。',
+          '**希望在桌面端和 Android 上使用同一个代理的用户。** Aori 在两个平台上提供相同功能;记忆和例行任务是否能在设备间同步,请查阅 Aori 的文档。',
           '**愿意自带 API 密钥并直接向提供商付费的用户。** Aori 只是界面;你需要单独管理与 OpenAI、Anthropic、Google、Groq、DeepSeek 或 OpenRouter 的账单。',
           '**希望用简单语言安排例行任务的用户**,例如周期性的晨间简报,而无需单独配置自动化软件。',
           '**希望通过 [Ollama](https://ollama.com) 获得完全本地、离线推理选项的桌面用户**,同时不放弃在处理更难任务时切换到云端提供商的选项。',
@@ -2331,7 +2331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**iPhone 或 iPad 用户。** Aori 目前还没有 iOS 应用;官方将 iOS 支持描述为"稍后推出",没有公布日期。',
           '**希望完全没有任何云端选项的纯离线应用的用户。** Aori 的本地路径仅在选择 Ollama 的桌面端存在 —— 它大部分有用功能都假定连接了云端提供商,因此应将其视为混合工具,而不是默认隐私优先的离线应用。',
-          '**不想单独管理提供商账单的用户。** Aori 没有涵盖模型使用费用的打包订阅;你需要在所选提供商处开设并自行支付账户费用。',
+          '**不想单独管理提供商账单的用户。** Aori 未说明有涵盖模型使用费用的打包订阅;你需要在所选提供商处开设并自行支付账户费用。',
           '**在做决定前需要公开、可预测价格的用户。** Aori 尚未公布应用本身的定价,提供商成本会因所选模型和提供商而异。',
           '**特别希望使用本地离线模型的 Android 用户。** Ollama 支持仅限桌面端;Android 始终依赖云端提供商。',
         ],
@@ -2342,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Aori 是完全离线的本地 AI 应用吗?',
-            a: '默认情况下不是。Aori 是混合模式:它将你的 API 密钥和对话保存在本地,而不是 Aori 运营的服务器上,但除非你在桌面端明确选择 Ollama 作为后端,否则生成回复的模型运行在云端。只有桌面端加 Ollama 这一种配置才是完全本地、离线的。',
+            a: '默认情况下不是。Aori 是混合模式:据 Aori 官网称,它将你的 API 密钥和对话保存在本地,而不是 Aori 运营的服务器上(我们未审计),但除非你在桌面端明确选择 Ollama 作为后端,否则生成回复的模型运行在云端。只有桌面端加 Ollama 这一种配置才是完全本地、离线的。',
           },
           {
             q: 'Aori 支持哪些平台?',
@@ -2350,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Aori 会把我的数据存储在它自己的服务器上吗?',
-            a: '不会。Aori 不运营存储你对话的后端。你的 API 密钥保存在本地设备上,请求直接从你的设备发送给你连接的 LLM 提供商 —— 不经过 Aori 运营的服务器。',
+            a: '据 Aori 官网称,不会:该应用在你的设备上运行,不运营存储你对话的后端;API 密钥保存在本地,请求直接发送给你选择的提供商。我们未对 Aori 的网络流量进行独立审计。',
           },
           {
             q: 'Aori 支持哪些 LLM 提供商?',
@@ -2358,7 +2358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Aori 收费多少?',
-            a: 'Aori 尚未公布定价;在当前公开测试阶段,应用可免费使用,无需向 Aori 本身付费。你的实际成本来自你连接的 LLM 提供商 —— Groq 提供免费额度,而 OpenAI、Anthropic、Gemini、DeepSeek 和 OpenRouter 会通过你在该提供商处的账号直接计费。',
+            a: 'Aori 的定价未公开;截至最近一次更新,测试阶段可免费使用(见最后更新日期)。你的实际成本来自你连接的 LLM 提供商 —— 部分提供商(如 [Groq](https://groq.com))提供免费额度,而 OpenAI、Anthropic、Gemini、DeepSeek 和 OpenRouter 会通过你在该提供商处的账号直接计费。',
           },
           {
             q: '我能在 Android 上完全离线使用 Aori 吗?',
@@ -2386,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          '**如果将 Aori 作为一款混合工具而非默认隐私优先的本地 AI 工具来评估,它是一款定位清晰的个人代理应用。** 持久记忆、斜杠命令人设、多渠道聊天(记录相互隔离的 Telegram 和 WhatsApp)、Obsidian/Notion 知识集成,以及用简单语言描述的主动例行任务,这些功能组合在一起,构成了一套连贯的功能集,目标是让一个代理在不同场景下保持一致的体验。无论你选择哪种模型后端,将 API 密钥和对话保存在本地、且没有 Aori 运营的后端,都是真实且可验证的隐私特性。但完全本地、离线运行的说法仅适用于一种确切配置:选择 Ollama 的桌面端。其他任何路径 —— 桌面端使用云端提供商,或在 Android 上的任何使用方式 —— 都会通过互联网将你的提示词发送给第三方 API。理解并接受这一取舍、愿意自带并支付 LLM API 密钥费用的用户,能够获得一个真正实用的跨平台代理。而那些默认寻求完全离线应用或 iOS 应用的用户,目前应另寻其他选择。',
+          '**如果将 Aori 作为一款混合工具而非默认隐私优先的本地 AI 工具来评估,它是一款定位清晰的个人代理应用。** 持久记忆、斜杠命令人设、多渠道聊天(记录相互隔离的 Telegram 和 WhatsApp)、Obsidian/Notion 知识集成,以及用简单语言描述的主动例行任务,这些功能组合在一起,构成了一套连贯的功能集,目标是让一个代理在不同场景下保持一致的体验。无论你选择哪种模型后端,将 API 密钥和对话保存在本地、且没有 Aori 运营的后端,都是开发商所声明的隐私特性(我们未审计 Aori 的网络流量)。但完全本地、离线运行的说法仅适用于一种确切配置:选择 Ollama 的桌面端。其他任何路径 —— 桌面端使用云端提供商,或在 Android 上的任何使用方式 —— 都会通过互联网将你的提示词发送给第三方 API。理解并接受这一取舍、愿意自带并支付 LLM API 密钥费用的用户,能够获得一个可能实用的跨平台代理。而那些默认寻求完全离线应用或 iOS 应用的用户,目前应另寻其他选择。',
       },
       sources: {
         id: 'sources',
