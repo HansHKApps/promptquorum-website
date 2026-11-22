@@ -16,6 +16,7 @@ import { AskIcon } from '@/components/askhans/icons'
 import type { Rect } from '@/components/askhans/types'
 import { useIsDesktop } from '@/components/askhans/useIsDesktop'
 import { ACADEMY_COPY } from './copy'
+import { durationBucket } from '@/lib/askhans/engagement'
 
 type Edge = 'n' | 's' | 'e' | 'w' | 'ne' | 'nw' | 'se' | 'sw'
 
@@ -53,6 +54,38 @@ function clampRect(r: Rect, vw: number, vh: number): Rect {
 
 const FOCUSABLE = 'a[href],button:not([disabled]),textarea:not([disabled]),input:not([disabled]),select:not([disabled]),[tabindex]:not([tabindex="-1"])'
 
+/**
+ * Active time with the Academy window open and the tab visible. When the window is closed (or the page is left) one
+ * anonymous event with a coarse time bucket is sent; exact seconds, dates and identifiers never leave the browser.
+ */
+function useActiveTimeReport(): void {
+  useEffect(() => {
+    let seconds = 0
+    let sent = false
+    const tick = window.setInterval(() => {
+      if (document.visibilityState === 'visible') seconds += 1
+    }, 1000)
+    const send = () => {
+      if (sent || seconds < 1) return
+      sent = true
+      const body = JSON.stringify({ type: 'session', dur: durationBucket(seconds) })
+      try {
+        if (!navigator.sendBeacon?.('/api/academy/event', new Blob([body], { type: 'application/json' }))) {
+          void fetch('/api/academy/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body, keepalive: true }).catch(() => {})
+        }
+      } catch {
+        // a lost counter must never affect the learner
+      }
+    }
+    window.addEventListener('pagehide', send)
+    return () => {
+      window.clearInterval(tick)
+      window.removeEventListener('pagehide', send)
+      send()
+    }
+  }, [])
+}
+
 interface Props {
   lang: AcademyLang
   maximized: boolean
@@ -70,6 +103,7 @@ export function AcademyWindow({ lang, maximized, rect, onRectChange, onClose, on
   const titleId = useId()
   const ref = useRef<HTMLDivElement>(null)
   const [vp, setVp] = useState({ w: window.innerWidth, h: window.innerHeight })
+  useActiveTimeReport()
 
   useEffect(() => {
     const on = () => setVp({ w: window.innerWidth, h: window.innerHeight })

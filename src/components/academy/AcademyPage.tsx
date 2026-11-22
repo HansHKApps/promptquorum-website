@@ -12,8 +12,10 @@ import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { PATH_PREFIX_LANGS, getLangDir, ogLocale, toOutputLocale } from '@/lib/i18n/constants'
 import { t as tTools } from '@/components/tools/tools-i18n'
 import { getAcademyTotalsLive } from '@/lib/academy/usage'
+import { getAcademyReport } from '@/lib/academy/report'
 import { TERMS } from '@/lib/terms/content'
 import { OpenAcademyButton } from './OpenAcademyButton'
+import { AcademyReport } from './AcademyReport'
 import { ACADEMY_COPY } from './copy'
 
 const SITE = 'https://www.promptquorum.com'
@@ -34,7 +36,7 @@ export async function AcademyPage({ lang }: { lang: AcademyLang }) {
   if (!academyEnabled()) notFound()
   const tx = ACADEMY_COPY[lang]
   const url = `${SITE}${localizedPath(lang)}`
-  const totals = await getAcademyTotalsLive()
+  const [totals, report] = await Promise.all([getAcademyTotalsLive(), getAcademyReport()])
   const fmt = (n: number) => n.toLocaleString(toOutputLocale(lang))
   const tone = HUB_TONES.violet
   const homeHref = lang === 'en' ? '/' : `/${lang}`
@@ -123,6 +125,7 @@ export async function AcademyPage({ lang }: { lang: AcademyLang }) {
           </Link>
         </p>
       </section>
+      <AcademyReport lang={lang} report={report} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

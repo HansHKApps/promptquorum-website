@@ -3,6 +3,7 @@
 
 import { unstable_cache } from 'next/cache'
 import { redis } from '@/lib/redis'
+import { recordAcademyDay } from './day-store'
 
 export const ACADEMY_COUNTERS = ['programme', 'lesson', 'test', 'certificate', 'feedback_mail'] as const
 export type AcademyCounter = (typeof ACADEMY_COUNTERS)[number]
@@ -17,7 +18,7 @@ const LEGACY_PROGRAMMES_KEY = 'academy:programmes:total'
 /** Never throws: a Redis outage must not break a learner's request. */
 export async function recordAcademy(counter: AcademyCounter): Promise<void> {
   try {
-    await Promise.all([redis.incr(key(counter)), redis.set(SINCE_KEY, new Date().toISOString().slice(0, 10), { nx: true })])
+    await Promise.all([redis.incr(key(counter)), redis.set(SINCE_KEY, new Date().toISOString().slice(0, 10), { nx: true }), recordAcademyDay([counter])])
   } catch (err) {
     console.error('[academy usage] failed to record', counter, err instanceof Error ? err.message : err)
   }
@@ -48,7 +49,7 @@ export type FeedbackField = (typeof FEEDBACK_FIELDS)[number]
 
 export async function recordAcademyFeedback(field: FeedbackField): Promise<void> {
   try {
-    await redis.hincrby(FEEDBACK_KEY, field, 1)
+    await Promise.all([redis.hincrby(FEEDBACK_KEY, field, 1), recordAcademyDay([field])])
   } catch (err) {
     console.error('[academy usage] failed to record feedback', field, err instanceof Error ? err.message : err)
   }

@@ -6,6 +6,8 @@
 import type { NextRequest } from 'next/server'
 import { z } from 'zod'
 import { academyError, academyGuard, academyJson } from '@/lib/academy/route'
+import { DURATION_BUCKETS } from '@/lib/askhans/engagement'
+import { recordAcademySession } from '@/lib/academy/day-store'
 import { recordAcademy, recordAcademyFeedback, type FeedbackField } from '@/lib/academy/usage'
 
 export const runtime = 'nodejs'
@@ -19,6 +21,7 @@ const eventSchema = z.discriminatedUnion('type', [
   z.object({ type: z.literal('rating_mail') }),
   z.object({ type: z.literal('report_mail') }),
   z.object({ type: z.literal('launcher_click') }),
+  z.object({ type: z.literal('session'), dur: z.enum(DURATION_BUCKETS) }),
   z.object({ type: z.literal('growth'), kind: z.enum(['share_card', 'challenge_shared', 'challenge_landed', 'linkedin', 'reminder', 'next_topic']) }),
   z.object({ type: z.literal('share_file'), kind: z.enum(['certificate', 'documentation', 'image']) }),
 ])
@@ -29,6 +32,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   const e = guard.body
   try {
     if (e.type === 'certificate' || e.type === 'feedback_mail') await recordAcademy(e.type)
+    else if (e.type === 'session') await recordAcademySession(e.dur)
     else {
       const field: FeedbackField =
         e.type === 'rating' ? (`rating:${e.kind}:${e.stars}` as FeedbackField) : e.type === 'tutor_thumb' ? (e.up ? 'tutor:up' : 'tutor:down') : e.type === 'tutor_message' ? 'tutor:message' : e.type === 'rating_mail' ? 'mail:rating' : e.type === 'launcher_click' ? 'launcher:click' : e.type === 'growth' ? (`growth:${e.kind}` as FeedbackField) : e.type === 'share_file' ? (`share:${e.kind}` as FeedbackField) : 'mail:report'
