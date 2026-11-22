@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Checks the affiliate-banner pilot assignment (src/lib/affiliate-banners/assignment.ts): 59 treated groups (15 each in
-// A1/A3/B3, 14 in B1), 20 controls, no overlap with the promo pilot (groups or controls), every page exists and is an
+// Checks the affiliate-banner pilot assignment (src/lib/affiliate-banners/assignment.ts): 52 treated groups (A1 13, A3 14,
+// B1 13, B3 12), 20 controls, no overlap with the promo pilot (groups or controls), every page exists and is an
 // affiliate-regime page (affiliateDisclosure: true), controls are not treated. Run: npm run test:affiliate-banner-assignment
 import fs from 'node:fs'
 import path from 'node:path'
@@ -22,10 +22,11 @@ const errors = []
 const fail = (m) => errors.push(m)
 
 const treated = Object.entries(AFF_BANNER_GROUPS)
-if (treated.length !== 59) fail(`expected 59 treated groups, got ${treated.length}`)
+if (treated.length !== 52) fail(`expected 52 treated groups, got ${treated.length}`)
 const per = {}
 for (const [, e] of treated) per[e.cell] = (per[e.cell] ?? 0) + 1
-for (const c of ['A1', 'A3', 'B1', 'B3']) if (per[c] !== (c === 'B1' ? 14 : 15)) fail(`${c}: expected ${c === 'B1' ? 14 : 15} groups, got ${per[c] ?? 0}`)
+const EXPECT = { A1: 13, A3: 14, B1: 13, B3: 12 }
+for (const c of Object.keys(EXPECT)) if (per[c] !== EXPECT[c]) fail(`${c}: expected ${EXPECT[c]} groups, got ${per[c] ?? 0}`)
 if (AFF_BANNER_CONTROLS.length !== 20) fail(`expected 20 controls, got ${AFF_BANNER_CONTROLS.length}`)
 if (new Set(AFF_BANNER_CONTROLS).size !== AFF_BANNER_CONTROLS.length) fail('duplicate controls')
 

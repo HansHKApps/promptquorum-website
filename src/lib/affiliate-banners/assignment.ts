@@ -1,6 +1,7 @@
 // Banner pilot assignment: static, no per-visitor randomisation. Stratified-random (cluster x traffic tier), seed 20261108,
-// from GSC 28 days to 2026-11-06. 59 treated groups (A1/A3/B3 x 15, B1 x 14) and 20 matched controls. Keys are English paths;
+// from GSC 28 days to 2026-11-06. 52 treated groups (A1 x 13, A3 x 14, B1 x 13, B3 x 12) and 20 matched controls. Keys are English paths;
 // all 9 locale versions share the arm. Phase 1: every treated group at AP2. offerIds are filled in when offers are written.
+// 2026-11-22: 7 pages that also sit in the promo pilot were removed from this pilot (promo pilot keeps them, owner decision).
 // 2026-11-22: the uncensored creative-writing page (former solo stratum, B1) was removed from the affiliate programme at the owner's request.
 import type { BannerCell } from './types'
 
@@ -8,9 +9,7 @@ export interface AssignmentEntry { cell: BannerCell; tier: 'high' | 'medium' | '
 
 export const AFF_BANNER_GROUPS: Readonly<Record<string, AssignmentEntry>> = {
   '/balcony-solar/best-balcony-solar-microinverters': { cell: 'A1', tier: 'high' },
-  '/local-llms/local-ai-workstations-strix-halo-vs-dgx-spark': { cell: 'A1', tier: 'medium' },
   '/local-llms/rtx-5090-vs-rtx-4090-local-llm': { cell: 'A1', tier: 'high' },
-  '/power-local-llm/best-nas-storage-local-ai-models-2026': { cell: 'A1', tier: 'high' },
   '/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies': { cell: 'A1', tier: 'medium' },
   '/power-local-llm/local-llm-images-video-compared': { cell: 'A1', tier: 'medium' },
   '/power-local-llm/loci-ai-review-offline-local-ai': { cell: 'A1', tier: 'medium' },
@@ -24,7 +23,6 @@ export const AFF_BANNER_GROUPS: Readonly<Record<string, AssignmentEntry>> = {
   '/smart-home/minisforum-um890-pro-local-ai-review': { cell: 'A1', tier: 'high' },
   '/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar': { cell: 'A3', tier: 'medium' },
   '/local-llms/best-gpu-for-llm-inference-under-500-2026': { cell: 'A3', tier: 'medium' },
-  '/local-llms/best-laptops-local-llm': { cell: 'A3', tier: 'high' },
   '/power-local-llm/best-ai-coding-tools-comparison-2026': { cell: 'A3', tier: 'high' },
   '/power-local-llm/elevenlabs-vs-local-tts-piper-xtts': { cell: 'A3', tier: 'medium' },
   '/power-local-llm/local-ai-video-generation-vs-cloud': { cell: 'A3', tier: 'high' },
@@ -39,7 +37,6 @@ export const AFF_BANNER_GROUPS: Readonly<Record<string, AssignmentEntry>> = {
   '/smart-home/geekom-a9-max-local-ai-review': { cell: 'A3', tier: 'medium' },
   '/balcony-solar/bluetti-balcony-solar': { cell: 'B1', tier: 'medium' },
   '/local-llms/best-nas-storage-local-llm': { cell: 'B1', tier: 'medium' },
-  '/local-llms/local-llm-cost-calculator-build-vs-rent-2026': { cell: 'B1', tier: 'high' },
   '/power-local-llm/aquavoice-review': { cell: 'B1', tier: 'medium' },
   '/power-local-llm/best-rag-tools-for-business-documents-2026': { cell: 'B1', tier: 'medium' },
   '/power-local-llm/deepseek-offline-china-self-hosted-2026': { cell: 'B1', tier: 'high' },
@@ -52,11 +49,8 @@ export const AFF_BANNER_GROUPS: Readonly<Record<string, AssignmentEntry>> = {
   '/smart-home/best-mini-pc-home-assistant-local-ai': { cell: 'B1', tier: 'high' },
   '/smart-home/gmktec-g3-plus-local-ai-review': { cell: 'B1', tier: 'high' },
   '/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives': { cell: 'B3', tier: 'high' },
-  '/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026': { cell: 'B3', tier: 'high' },
   '/local-llms/eu-cloud-gpu-gdpr-2026': { cell: 'B3', tier: 'medium' },
-  '/power-local-llm/best-monitors-ai-development-2026': { cell: 'B3', tier: 'high' },
   '/power-local-llm/best-vpn-ai-privacy-local-llm-2026': { cell: 'B3', tier: 'medium' },
-  '/power-local-llm/best-workstation-build-local-ai-2026': { cell: 'B3', tier: 'high' },
   '/power-local-llm/chatterbox-vs-elevenlabs': { cell: 'B3', tier: 'medium' },
   '/power-local-llm/kokoro-vs-elevenlabs': { cell: 'B3', tier: 'medium' },
   '/prompt-bites/best-local-llm-benchmarking-tool': { cell: 'B3', tier: 'high' },
