@@ -43,6 +43,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Common Workstation Build Mistakes', anchor: '#mistakes' },
         { label: 'Frequently Asked Questions', anchor: '#faq' },
       ],
+      gammaEmbedUrl: '/presentations/local-llm-workstation-build-static.html',
+      gammaDescription: "The slide deck below summarizes this guide: the 48 GB VRAM target for 70B models, a dual-GPU parts list with sourced prices, how two GPUs share one model over PCIe, RTX 3090 vs 4090 vs 5090 vs RTX PRO 6000, cooling and PSU sizing, and common build mistakes. Download the PDF as a local LLM workstation reference card.",
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -300,6 +302,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Häufige Fehler beim Bau einer Workstation', anchor: '#mistakes' },
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
       ],
+      gammaEmbedUrl: '/presentations/local-llm-workstation-build-static.html',
+      gammaDescription: "Die Folien unten fassen den Leitfaden zusammen: das 48-GB-VRAM-Ziel für 70B-Modelle, eine Teileliste für zwei GPUs mit belegten Preisen, die Aufteilung eines Modells auf zwei GPUs über PCIe, den Vergleich von RTX 3090, 4090, 5090 und RTX PRO 6000, Kühlung und Netzteil-Auslegung sowie häufige Fehler beim Bau. Laden Sie das PDF als Referenzkarte zur lokalen LLM-Workstation herunter.",
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -557,6 +561,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: "Erreurs courantes dans le montage d'une station de travail", anchor: '#mistakes' },
         { label: 'Questions fréquentes', anchor: '#faq' },
       ],
+      gammaEmbedUrl: '/presentations/local-llm-workstation-build-static.html',
+      gammaDescription: "Le diaporama ci-dessous résume ce guide : l'objectif de 48 GB de VRAM pour les modèles 70B, une liste de pièces bi-GPU avec des prix sourcés, le partage d'un modèle entre deux GPU via PCIe, la comparaison RTX 3090, 4090, 5090 et RTX PRO 6000, le refroidissement et le dimensionnement de l'alimentation, ainsi que les erreurs de montage courantes. Téléchargez le PDF comme fiche de référence sur la station de travail LLM locale.",
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -814,6 +820,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'ワークステーション自作でよくある失敗', anchor: '#mistakes' },
         { label: 'よくある質問', anchor: '#faq' },
       ],
+      gammaEmbedUrl: '/presentations/local-llm-workstation-build-static.html',
+      gammaDescription: "下のスライドはこのガイドの要点をまとめたものです。70Bモデル向けの48 GB VRAMという目安、出典付き価格のデュアルGPUパーツリスト、2枚のGPUがPCIe経由で1つのモデルを分担する方法、RTX 3090・4090・5090・RTX PRO 6000の比較、冷却と電源容量の目安、よくある組み立てミスを扱います。PDFはローカルLLMワークステーションのリファレンスカードとしてダウンロードできます。",
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1071,6 +1079,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: '装机常见错误', anchor: '#mistakes' },
         { label: '常见问题', anchor: '#faq' },
       ],
+      gammaEmbedUrl: '/presentations/local-llm-workstation-build-static.html',
+      gammaDescription: "下方幻灯片概括了本指南：70B模型所需的48 GB显存目标、带来源价格的双GPU部件清单、两张GPU如何通过PCIe共同承载一个模型、RTX 3090、4090、5090与RTX PRO 6000的对比、散热与电源功率估算，以及常见装机错误。可将PDF下载为本地LLM工作站参考卡。",
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1328,6 +1338,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Errores comunes al armar una estación de trabajo', anchor: '#mistakes' },
         { label: 'Preguntas frecuentes', anchor: '#faq' },
       ],
+      gammaEmbedUrl: '/presentations/local-llm-workstation-build-static.html',
+      gammaDescription: "Las diapositivas de abajo resumen esta guía: el objetivo de 48 GB de VRAM para modelos de 70B, una lista de piezas con dos GPU y precios con fuente, cómo dos GPU comparten un modelo por PCIe, la comparación entre RTX 3090, 4090, 5090 y RTX PRO 6000, la refrigeración y el dimensionamiento de la PSU, y los errores de montaje más comunes. Descarga el PDF como tarjeta de referencia de la estación de trabajo para LLM local.",
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1585,6 +1597,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'أخطاء شائعة في تجميع محطات العمل', anchor: '#mistakes' },
         { label: 'الأسئلة الشائعة', anchor: '#faq' },
       ],
+      gammaEmbedUrl: '/presentations/local-llm-workstation-build-static.html',
+      gammaDescription: "تلخّص الشرائح أدناه هذا الدليل: هدف ذاكرة VRAM بحجم 48 GB لنماذج 70B، وقائمة مكوّنات ببطاقتي GPU مع أسعار موثّقة بمصادرها، وكيف تتشارك بطاقتان نموذجًا واحدًا عبر PCIe، والمقارنة بين RTX 3090 وRTX 4090 وRTX 5090 وRTX PRO 6000، والتبريد وتقدير قدرة مزود الطاقة، وأخطاء التجميع الشائعة. نزّل ملف PDF كبطاقة مرجعية لمحطة عمل LLM محلية.",
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1842,6 +1856,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Erros comuns ao montar uma estação de trabalho', anchor: '#mistakes' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
       ],
+      gammaEmbedUrl: '/presentations/local-llm-workstation-build-static.html',
+      gammaDescription: "Os slides abaixo resumem este guia: a meta de 48 GB de VRAM para modelos 70B, uma lista de peças com duas GPUs e preços com fonte, como duas GPUs compartilham um modelo via PCIe, a comparação entre RTX 3090, 4090, 5090 e RTX PRO 6000, o resfriamento e o dimensionamento da fonte, e os erros de montagem mais comuns. Baixe o PDF como cartão de referência da estação de trabalho para LLM local.",
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -2099,6 +2115,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: '워크스테이션 구축 시 흔한 실수', anchor: '#mistakes' },
         { label: '자주 묻는 질문', anchor: '#faq' },
       ],
+      gammaEmbedUrl: '/presentations/local-llm-workstation-build-static.html',
+      gammaDescription: "아래 슬라이드는 이 가이드를 요약합니다. 70B 모델을 위한 48 GB VRAM 목표, 출처가 있는 가격의 듀얼 GPU 부품 목록, 두 GPU가 PCIe로 하나의 모델을 나누는 방식, RTX 3090·4090·5090·RTX PRO 6000 비교, 냉각과 파워 서플라이 용량 산정, 흔한 조립 실수를 다룹니다. PDF를 로컬 LLM 워크스테이션 참고 카드로 내려받을 수 있습니다.",
       sections: {
         tldr: {
           id: 'key-takeaways',
