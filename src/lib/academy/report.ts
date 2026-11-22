@@ -3,6 +3,7 @@
 // Reads the anonymous per-day hashes written by day-store.ts plus the lifetime counters. Only totals; never names,
 // IPs, subjects or learner text. A Redis outage yields an all-zero report, so the page never fails because of it.
 
+import { unstable_cache } from 'next/cache'
 import { redis } from '@/lib/redis'
 import { keepLastGood } from '@/lib/lastGood'
 import { DURATION_BUCKETS } from '@/lib/askhans/engagement'
@@ -150,4 +151,6 @@ async function readAcademyReport(): Promise<AcademyReport> {
 }
 
 /** Never shows a failed read as zeros: on a Redis error it returns the last good report (see lastGood.ts). */
-export const getAcademyReport = () => keepLastGood('academy:report', readAcademyReport, () => emptyReport(lastNDaysUtc(REPORT_DAYS)))
+// Shared 5-minute server cache: the report is ~20 Redis commands per view of every /academy page (quota exhausted 2026-11-22). A throw is never cached.
+const readAcademyReportCached = unstable_cache(readAcademyReport, ['academy-report'], { revalidate: 300, tags: ['academy-usage'] })
+export const getAcademyReport = () => keepLastGood('academy:report', readAcademyReportCached, () => emptyReport(lastNDaysUtc(REPORT_DAYS)))

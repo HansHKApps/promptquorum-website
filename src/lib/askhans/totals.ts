@@ -4,6 +4,7 @@
 //   askhans:total        hash  { requests, answers, opens, since }   lifetime
 //   askhans:day:<date>   hash  same field names, per UTC day (shared with the consent-based counters)
 
+import { unstable_cache } from 'next/cache'
 import { redis } from '@/lib/redis'
 import { keepLastGood } from '@/lib/lastGood'
 
@@ -64,5 +65,7 @@ async function readAskHansTotals(): Promise<AskHansTotals> {
 }
 
 /** Never shows a failed read as zero: on a Redis error it returns the last good totals (see lastGood.ts). */
+// Shared 5-minute server cache: every homepage view and /askhans view used to cost Redis a read (quota exhausted 2026-11-22). A throw is never cached.
+const readAskHansTotalsCached = unstable_cache(readAskHansTotals, ['askhans-totals'], { revalidate: 300, tags: ['askhans-usage'] })
 export const getAskHansTotals = (): Promise<AskHansTotals> =>
-  keepLastGood('askhans:totals', readAskHansTotals, (floor) => ({ requests: 0, answers: Number(floor?.answers ?? 0), opens: 0, power: 0, since: null }))
+  keepLastGood('askhans:totals', readAskHansTotalsCached, (floor) => ({ requests: 0, answers: Number(floor?.answers ?? 0), opens: 0, power: 0, since: null }))

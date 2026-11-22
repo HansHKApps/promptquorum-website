@@ -10,5 +10,5 @@ export const dynamic = 'force-dynamic'
 export async function GET(): Promise<Response> {
   if (process.env.ASK_HANS_ENABLED !== 'true') return new Response(null, { status: 404 })
   const { answers } = await getAskHansTotals()
-  return Response.json({ answers }, { headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300' } })
+  return Response.json({ answers }, { headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' } })
 }
