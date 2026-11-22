@@ -8,6 +8,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { Rect, UiState } from '@/components/askhans/types'
 import { useLang } from '@/hooks/useLang'
+import { trackPromoOpen } from '@/lib/tracking/promo'
 import { ACADEMY_OPEN_EVENT, ACADEMY_UI_KEY, ACADEMY_USED_KEY } from '@/lib/academy/config'
 import type { TopicSuggestion } from '@/lib/academy/types'
 import { CHALLENGE_PARAM, BEAT_PARAM, CHALLENGE_STORAGE_KEY, readChallenge } from '@/lib/academy/challenge'
@@ -83,9 +84,20 @@ export function AcademyRoot() {
     open()
   }, [ready, open])
 
+  // A promo slot (academy_promo_*) opens the window with detail.source = promo_academy_<placement>; counted only when the
+  // window was closed (an already open window is not a new open). Other senders dispatch a plain Event: no source, no count.
+  const isOpen = useRef(false)
   useEffect(() => {
-    window.addEventListener(ACADEMY_OPEN_EVENT, open)
-    return () => window.removeEventListener(ACADEMY_OPEN_EVENT, open)
+    isOpen.current = ui.open
+  }, [ui.open])
+  useEffect(() => {
+    const onOpen = (e: Event) => {
+      const source = (e as CustomEvent<{ source?: string } | undefined>).detail?.source
+      if (source && !isOpen.current) trackPromoOpen(source)
+      open()
+    }
+    window.addEventListener(ACADEMY_OPEN_EVENT, onOpen)
+    return () => window.removeEventListener(ACADEMY_OPEN_EVENT, onOpen)
   }, [open])
 
   // Subject suggestions are built on the server; fetch them once per language, when the window is first opened.

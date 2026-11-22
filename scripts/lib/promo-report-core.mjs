@@ -16,10 +16,14 @@ export function localeOf(p) {
 }
 
 /** Usage event that counts as "adoption" of each promoted product. MCP use happens outside the site: no usage event. */
+/** Targets that open a window in place (an `open` event exists, no landing page). */
+export const IN_PLACE = new Set(['ask-hans', 'power-mode', 'academy'])
+
 export const USAGE_EVENT = {
   'ask-hans': 'ask_hans_question',
   'power-mode': 'power_report_started',
   directory: 'directory_app_view',
+  academy: 'academy_programme_started',
   mcp: null,
 }
 
@@ -68,7 +72,7 @@ export function groupMetrics(w, gp, target) {
     pv, views, clicks, opens, usage,
     reach: div(views, pv),
     ctr: div(clicks, views),
-    openRate: target === 'ask-hans' || target === 'power-mode' ? div(opens, clicks) : null,
+    openRate: IN_PLACE.has(target) ? div(opens, clicks) : null,
     usagePerClick: usage == null ? null : div(usage, clicks),
     usagePerView: usage == null ? null : div(usage, views),
     usagePer1000: usage == null ? null : div(usage * 1000, pv),
@@ -133,8 +137,8 @@ export function median(xs) {
  * groups: [{path, placement, target, control|null}]
  */
 export function cellKey(g) {
-  // Ask Hans, MCP and Power Mode are judged pooled over placements (owner decision 2026-11-16 for Ask Hans); hubs (P5) stay their own cell.
-  return g.placement !== 'P5' && (g.target === 'mcp' || g.target === 'power-mode' || g.target === 'ask-hans') ? g.target : `${g.target} / ${g.placement}`
+  // Ask Hans, MCP, Power Mode and Academy are judged pooled over placements (owner decision 2026-11-16 for Ask Hans); hubs (P5) stay their own cell.
+  return g.placement !== 'P5' && (g.target === 'mcp' || g.target === 'power-mode' || g.target === 'ask-hans' || g.target === 'academy') ? g.target : `${g.target} / ${g.placement}`
 }
 
 /**
@@ -197,7 +201,7 @@ export function analyse({ groups, pilot, baseline, opts }) {
       pv, views, clicks, opens, usage, landings,
       landingRate: landings == null ? null : div(landings, clicks),
       reach: div(views, pv), ctr: div(clicks, views),
-      openRate: c.target === 'ask-hans' || c.target === 'power-mode' ? div(opens, clicks) : null,
+      openRate: IN_PLACE.has(c.target) ? div(opens, clicks) : null,
       usagePerClick: usage == null ? null : div(usage, clicks),
       usagePerView: usage == null ? null : div(usage, views),
       incr, incrBase, did,

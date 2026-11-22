@@ -1,4 +1,4 @@
-// Big inline SVG illustrations for the four promo targets. Generic shapes (no third-party logos) and NO text inside
+// Big inline SVG illustrations for the five promo targets. Generic shapes (no third-party logos) and NO text inside
 // the SVG, so every word stays in HTML where it translates and stays accessible. Drawn for the bold colored
 // slot background: white and tint fills from the hub palette tokens (CSS variables through Tailwind classes), no hex.
 import type { PromoTarget } from '@/lib/promo/types'
@@ -81,11 +81,39 @@ function McpGraphic() {
   )
 }
 
+/** Open book: a lesson page with a progress bar, and a checklist page (two done, one open). */
+function AcademyGraphic() {
+  return (
+    <svg {...common}>
+      <rect x="6" y="22" width="148" height="100" rx="14" className="fill-white/30" />
+      <rect x="14" y="14" width="70" height="100" rx="12" className="fill-white" />
+      <rect x="76" y="14" width="70" height="100" rx="12" className="fill-white" />
+      <rect x="74" y="14" width="12" height="100" className="fill-hub-olive-tint" />
+      <rect x="26" y="28" width="40" height="8" rx="4" className="fill-hub-olive" />
+      <rect x="26" y="44" width="46" height="5" rx="2.5" className="fill-hub-olive-edge" />
+      <rect x="26" y="55" width="38" height="5" rx="2.5" className="fill-hub-olive-edge" />
+      <rect x="26" y="66" width="44" height="5" rx="2.5" className="fill-hub-olive-edge" />
+      <rect x="26" y="90" width="44" height="12" rx="6" className="fill-hub-olive-tint" />
+      <rect x="26" y="90" width="28" height="12" rx="6" className="fill-hub-olive" />
+      <circle cx="94" cy="38" r="8" className="fill-hub-olive" />
+      <path d="M90.4 38l2.6 2.8 4.8-5.6" className="stroke-white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <circle cx="94" cy="62" r="8" className="fill-hub-olive" />
+      <path d="M90.4 62l2.6 2.8 4.8-5.6" className="stroke-white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <circle cx="94" cy="86" r="8" className="fill-hub-olive-tint" />
+      <circle cx="94" cy="86" r="8" className="stroke-hub-olive" strokeWidth="2" fill="none" />
+      <rect x="108" y="34" width="28" height="7" rx="3.5" className="fill-hub-olive-edge" />
+      <rect x="108" y="58" width="28" height="7" rx="3.5" className="fill-hub-olive-edge" />
+      <rect x="108" y="82" width="22" height="7" rx="3.5" className="fill-hub-olive-edge" />
+    </svg>
+  )
+}
+
 export function PromoGraphic({ target }: { target: PromoTarget }) {
   switch (target) {
     case 'directory': return <DirectoryGraphic />
     case 'ask-hans': return <AskHansGraphic />
     case 'power-mode': return <PowerGraphic />
     case 'mcp': return <McpGraphic />
+    case 'academy': return <AcademyGraphic />
   }
 }

@@ -21,9 +21,9 @@ ok(localeOf('/ja/a') === 'ja' && localeOf('/a') === 'en', 'localeOf')
 // Synthetic world: every page 10,000 pageviews in the pilot window (and in baseline). Control usage 20 per 10k views
 // (2 per 1,000). Treatment usage = control + 5 per 1,000 in the pilot window (the true effect), +0 in the baseline.
 const groups = Object.entries(PILOT_GROUPS).map(([p, e]) => ({ path: p, placement: e.placement, target: e.target, control: PILOT_CONTROLS[p] ?? null }))
-const UE = { 'ask-hans': 'ask_hans_question', 'power-mode': 'power_report_started', directory: 'directory_app_view' }
+const UE = { 'ask-hans': 'ask_hans_question', 'power-mode': 'power_report_started', directory: 'directory_app_view', academy: 'academy_programme_started' }
 function world(effectPer1000) {
-  const w = { pageviews: {}, events: { ask_hans_promo_view: {}, power_mode_promo_view: {}, directory_promo_view: {}, mcp_promo_view: {}, ask_hans_promo_click: {}, power_mode_promo_click: {}, directory_promo_click: {}, mcp_promo_click: {}, ask_hans_promo_open: {}, power_mode_promo_open: {}, directory_promo_landing: { P1: 0, P2: 0, P3: 0, P4: 0, P5: 0 }, mcp_promo_landing: { P1: 0, P2: 0, P3: 0, P4: 0 }, ask_hans_question: {}, power_report_started: {}, directory_app_view: {} } }
+  const w = { pageviews: {}, events: { ask_hans_promo_view: {}, power_mode_promo_view: {}, directory_promo_view: {}, mcp_promo_view: {}, academy_promo_view: {}, academy_promo_click: {}, academy_promo_open: {}, academy_programme_started: {}, ask_hans_promo_click: {}, power_mode_promo_click: {}, directory_promo_click: {}, mcp_promo_click: {}, ask_hans_promo_open: {}, power_mode_promo_open: {}, directory_promo_landing: { P1: 0, P2: 0, P3: 0, P4: 0, P5: 0 }, mcp_promo_landing: { P1: 0, P2: 0, P3: 0, P4: 0 }, ask_hans_question: {}, power_report_started: {}, directory_app_view: {} } }
   const add = (name, p, n) => { w.events[name][p] = (w.events[name][p] ?? 0) + n }
   for (const g of groups) {
     for (const [p, isT] of [[g.path, true], [g.control, false]]) {
@@ -32,7 +32,7 @@ function world(effectPer1000) {
       w.pageviews['/de' + p] = 4000 // a locale version
       const ue = UE[g.target]
       if (ue) add(ue, p, 20 + (isT ? effectPer1000 * 10 : 0))
-      if (isT) { const t = g.target.replace('-', '_'); add(`${t}_promo_view`, p, 3000); add(`${t}_promo_view`, '/de' + p, 1500); add(`${t}_promo_click`, p, 120); add(`${t}_promo_click`, '/de' + p, 30); if (t === 'ask_hans' || t === 'power_mode') add(`${t}_promo_open`, p, 60) }
+      if (isT) { const t = g.target.replace('-', '_'); add(`${t}_promo_view`, p, 3000); add(`${t}_promo_view`, '/de' + p, 1500); add(`${t}_promo_click`, p, 120); add(`${t}_promo_click`, '/de' + p, 30); if (t === 'ask_hans' || t === 'power_mode' || t === 'academy') add(`${t}_promo_open`, p, 60) }
     }
   }
   return w
@@ -60,6 +60,9 @@ ok(analyse({ groups, pilot: oldNames, baseline: null, opts: { reps: 50 } }).cell
 const mcp = a1.cells.find((c) => c.key === 'mcp')
 ok(mcp && mcp.incr === null && mcp.usage === null, 'MCP has no usage event: judged on reach/CTR only, pooled over placements')
 ok(a1.cells.some((c) => c.key === 'power-mode') && !a1.cells.some((c) => c.key.startsWith('power-mode /')), 'Power Mode is pooled over placements')
+ok(a1.cells.some((c) => c.key === 'academy') && !a1.cells.some((c) => /^academy \/ P[1-4]$/.test(c.key)), 'Academy is pooled over placements P1-P4')
+const ac = a1.cells.find((c) => c.key === 'academy')
+ok(ac && ac.usage != null && ac.openRate != null && ac.landings === null, 'Academy: usage event academy_programme_started, open rate, no landing metric (opens in place)')
 ok(a1.cells.some((c) => c.key === 'ask-hans') && !a1.cells.some((c) => /^ask-hans \/ P[1-4]$/.test(c.key)), 'Ask Hans is pooled over placements P1-P4 (hubs P5 stay separate)')
 const hub = a1.cells.find((c) => c.key === 'ask-hans / P5')
 ok(hub && hub.pairs === 0 && hub.incr?.note, 'hub cell has no matched pairs, no interval')

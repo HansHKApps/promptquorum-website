@@ -15,6 +15,8 @@ const nextConfig: NextConfig = {
     // Ask Hans kill switch, inlined for the browser at build time. Hans only ever sets
     // ASK_HANS_ENABLED; unset or anything but "true" = the German search behaves exactly as before.
     NEXT_PUBLIC_ASK_HANS_ENABLED: process.env.ASK_HANS_ENABLED === 'true' ? 'true' : 'false',
+    // Academy promo slots: on only while the Academy itself is on (same switch the server uses for AcademyRoot).
+    NEXT_PUBLIC_ACADEMY_PROMO_ENABLED: process.env.ACADEMY_ENABLED === 'true' ? 'true' : 'false',
   },
   compress: true,
   trailingSlash: false,

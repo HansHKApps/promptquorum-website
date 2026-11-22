@@ -1,20 +1,20 @@
 'use client'
 
-// PromoSlot: one inline slot for Directory, Ask Hans, Ask Hans Power Mode and the MCP server.
+// PromoSlot: one inline slot for Directory, Ask Hans, Ask Hans Power Mode, the MCP server and the Academy.
 //
 // Box, reserved height, provider switch, tracking, 9-locale copy and the SVG graphic per target.
-// Ask Hans / Power Mode open in place through lib/promo/open.ts (existing event, no navigation).
+// Ask Hans / Power Mode / Academy open in place through lib/promo/open.ts (existing events, no navigation).
 //
 // - Inline only: no overlay, popup or interstitial. Not dismissible (clean pilot data).
 // - Reserved height per variant and breakpoint, so the slot causes no layout shift.
 // - Colors come from theme tokens (CSS variables); no hex values. Graphics are inline SVG without text.
 // - <target>_promo_view fires once per page view when >=50% of the slot is visible for >=1 s (not on render).
-// - <target>_promo_click fires on the CTA for all four targets. Link targets carry `via=promo_<target>_<placement>`.
+// - <target>_promo_click fires on the CTA for all five targets. Link targets carry `via=promo_<target>_<placement>`.
 
 import { useEffect, useRef } from 'react'
 import { useLang } from '@/hooks/useLang'
 import facts from '@/generated/promo-facts.json'
-import { openAskHansFromPromo } from '@/lib/promo/open'
+import { openAcademyFromPromo, openAskHansFromPromo } from '@/lib/promo/open'
 import { PROMO_PROVIDER, PROMO_RESERVED_HEIGHT, PROMO_VIEW_MIN_MS, PROMO_VIEW_THRESHOLD } from '@/lib/promo/config'
 import type { PromoPlacement, PromoTarget, PromoVariant } from '@/lib/promo/types'
 import { promoSource, trackPromo } from '@/lib/tracking/promo'
@@ -29,6 +29,7 @@ const THEME: Record<PromoTarget, { bg: string; btn: string; ring: string }> = {
   'power-mode': { bg: 'bg-gradient-to-br from-hub-orange to-hub-amber', btn: 'text-hub-orange-ink', ring: 'ring-hub-amber-edge' },
   directory: { bg: 'bg-gradient-to-br from-hub-cyan to-hub-blue', btn: 'text-hub-cyan-ink', ring: 'ring-hub-cyan-edge' },
   mcp: { bg: 'bg-gradient-to-br from-hub-indigo to-hub-indigo-ink', btn: 'text-hub-indigo-ink', ring: 'ring-hub-indigo-edge' },
+  academy: { bg: 'bg-gradient-to-br from-hub-olive to-hub-olive-ink', btn: 'text-hub-olive-ink', ring: 'ring-hub-olive-edge' },
 }
 
 export interface PromoSlotProps {
@@ -89,8 +90,10 @@ export function PromoSlot({ target, placement, variant = 'card', stack = false, 
   const ctaClass = `inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-extrabold shadow-lg transition-transform hover:bg-white/95 motion-safe:hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${theme.btn}`
   const click = (e: React.MouseEvent<HTMLElement>) => {
     trackPromo('click', ctx)
-    // Ask Hans / Power Mode open in place (real <button>, focus returns to it on close); the others are links.
-    if (!href && (target === 'ask-hans' || target === 'power-mode')) openAskHansFromPromo(target, placement, e.currentTarget)
+    // Ask Hans / Power Mode / Academy open in place (real <button>); the others are links.
+    if (href) return
+    if (target === 'academy') openAcademyFromPromo(placement)
+    else if (target === 'ask-hans' || target === 'power-mode') openAskHansFromPromo(target, placement, e.currentTarget)
   }
 
   const cta =

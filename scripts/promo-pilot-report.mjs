@@ -40,12 +40,12 @@ const paths = [...new Set(groups.flatMap((g) => [g.path, g.control].filter(Boole
 
 // ---- data ---------------------------------------------------------------------------------------------------------
 // Promo events are `<target>_promo_<view|click|open|landing>`; the old promo_view/promo_click/promo_open are retired and not read.
-const TARGETS = ['ask_hans', 'power_mode', 'directory', 'mcp']
+const TARGETS = ['ask_hans', 'power_mode', 'directory', 'mcp', 'academy']
 const EVENTS = [
   ...TARGETS.flatMap((t) => [[`${t}_promo_view`, 'page'], [`${t}_promo_click`, 'page']]),
-  ['ask_hans_promo_open', 'page'], ['power_mode_promo_open', 'page'],
+  ['ask_hans_promo_open', 'page'], ['power_mode_promo_open', 'page'], ['academy_promo_open', 'page'],
   ['directory_promo_landing', 'placement'], ['mcp_promo_landing', 'placement'],
-  ['ask_hans_question', 'source_page'], ['power_report_started', 'source_page'], ['power_report_completed', 'source_page'], ['directory_app_view', 'source_page'],
+  ['ask_hans_question', 'source_page'], ['power_report_started', 'source_page'], ['power_report_completed', 'source_page'], ['directory_app_view', 'source_page'], ['academy_programme_started', 'source_page'],
 ]
 
 async function fromUmami(startDate, endDate) {
@@ -93,15 +93,15 @@ const ci = (c) => (!c ? 'n/a (no usage event)' : c.lo == null ? `${f(c.est)} (${
 
 const L = []
 L.push(`# Promo pilot report`, '', `Pilot window: ${launch} to ${end}. Baseline: ${baseStart} to ${baseEnd} (${baseDays} days before launch). Generated ${today}.`, '',
-  `Thresholds: at least ${minViews} views and ${minClicks} clicks per cell (MCP and Power Mode are judged pooled over placements). Intervals: 95% bootstrap over matched page-group pairs (${reps} resamples). Median CTR of eligible cells: ${pct(res.medianCtr)}.`, '',
+  `Thresholds: at least ${minViews} views and ${minClicks} clicks per cell (MCP, Power Mode, Ask Hans and Academy are judged pooled over placements). Intervals: 95% bootstrap over matched page-group pairs (${reps} resamples). Median CTR of eligible cells: ${pct(res.medianCtr)}.`, '',
   '## Cells (target / placement)', '',
   '| Cell | Groups (pairs) | Page views | Slot views | Clicks | Landings | Landing / click | Reach | CTR | Open rate | Usage / click | Usage / view | Verdict |', '|--|--|--|--|--|--|--|--|--|--|--|--|--|')
 for (const c of res.cells) L.push(`| ${c.key} | ${c.groups} (${c.pairs}) | ${c.pv} | ${c.views} | ${c.clicks} | ${c.landings ?? 'n/a'} | ${pct(c.landingRate)} | ${pct(c.reach)} | ${pct(c.ctr)} | ${pct(c.openRate)} | ${f(c.usagePerClick, 3)} | ${f(c.usagePerView, 4)} | ${c.verdict} |`)
 L.push('', '## Headline: incremental adoption (usage events per 1,000 page views, treatment minus matched control)', '',
   '| Cell | Pilot window | 28 days before launch | Pilot minus before (difference in differences) |', '|--|--|--|--|')
 for (const c of res.cells) L.push(`| ${c.key} | ${ci(c.incr)} | ${ci(c.incrBase)} | ${c.did ? `${f(c.did.est)} [${f(c.did.lo)}, ${f(c.did.hi)}] (n=${c.did.n})` : 'n/a'} |`)
-L.push('', 'Landings (Directory and MCP only) = `directory_promo_landing` / `mcp_promo_landing`, fired on /directory and /mcp-stats when the URL has `via=promo_<target>_<placement>`; Landing / click = landings / clicks of the same cell (MCP pooled over placements). Ask Hans and Power Mode open in place (see Open rate).', '',
-  'Usage event per product: Ask Hans = `ask_hans_question`, Power Mode = `power_report_started`, Directory = `directory_app_view`. MCP has no usage event on the site (MCP calls happen in the visitor\'s own AI): MCP is judged on reach and CTR only.', '',
+L.push('', 'Landings (Directory and MCP only) = `directory_promo_landing` / `mcp_promo_landing`, fired on /directory and /mcp-stats when the URL has `via=promo_<target>_<placement>`; Landing / click = landings / clicks of the same cell (MCP pooled over placements). Ask Hans, Power Mode and Academy open in place (see Open rate).', '',
+  'Usage event per product: Ask Hans = `ask_hans_question`, Power Mode = `power_report_started`, Directory = `directory_app_view`, Academy = `academy_programme_started` (a program was generated in the Academy window; no subject or text is sent). MCP has no usage event on the site (MCP calls happen in the visitor\'s own AI): MCP is judged on reach and CTR only.', '',
   '## Per locale (cells with at least 100 slot views; the rest pooled)', '', '| Locale | Slot views | Clicks | CTR |', '|--|--|--|--|')
 const lt = localeTable(groups, pilot)
 for (const r of lt.rows.sort((a, b) => b.views - a.views)) L.push(`| ${r.locale} | ${r.views} | ${r.clicks} | ${pct(r.ctr)} |`)
