@@ -51,7 +51,7 @@ ok(Math.abs(A.incr.est - 16) < 0.01 && Math.abs(B.incr.est - 24) < 0.01, `plante
 ok(all.incr.lo > 0 && /candidate winner/.test(all.verdict), 'a real effect gives an interval above zero and a candidate verdict')
 ok(Math.abs(all.incr.did - all.incr.est) < 0.01, 'difference in differences equals the pilot difference when the baseline was balanced')
 ok(real.cells[1].rows.every((r) => r.groups <= real.cells[0].rows.find((x) => x.set === r.set).groups), 'the without-uncensored-page variant never has more groups')
-ok(real.cells[1].rows.find((r) => r.set === 'cell B1').groups === real.cells[0].rows.find((r) => r.set === 'cell B1').groups - 1, 'the solo page is removed from B1 in the second variant')
+ok(real.cells[1].rows.find((r) => r.set === 'cell B1').groups === real.cells[0].rows.find((r) => r.set === 'cell B1').groups, 'no solo page since 2026-11-22: B1 group count is the same in both variants')
 
 const nul = run(world({ effectA: 0, effectB: 0 }))
 const nall = nul.cells[0].rows.find((r) => r.set === 'all')

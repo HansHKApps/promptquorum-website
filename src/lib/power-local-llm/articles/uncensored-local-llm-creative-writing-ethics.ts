@@ -31,7 +31,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { title: 'Use fiction prompt templates', description: 'Scene, dialogue and worldbuilding prompts that work on standard and uncensored models.', href: '/power-local-llm/local-llm-prompts-for-fiction-writers' },
       ],
     },
-    affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
@@ -111,27 +110,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
     gammaDescription: 'The slide deck below covers: what "uncensored" fine-tuning actually means (RLHF removal vs. zero constraints); a 5-model comparison table (Hermes 3 Llama 3.1 to Dolphin 3.0 Llama 3.1 8B with VRAM, refusal rate, instruction quality); appropriate vs. inappropriate use cases; Ollama setup commands; ethical responsibilities that remain regardless of local setup; and 5 common mistakes. Download the PDF as an uncensored local LLM creative writing reference card.',
-    affiliateLinks: [
-      {
-        productName: 'Ollama',
-        url: 'https://ollama.com',
-        productCategory: 'software',
-        label: 'Get Ollama',
-      },
-      {
-        productName: 'LM Studio',
-        url: 'https://lmstudio.ai',
-        productCategory: 'software',
-        label: 'Get LM Studio',
-      },
-      {
-        productName: 'NVIDIA RTX 4090 24GB',
-        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
-        productCategory: 'gpu',
-        priceRange: '2268-2755',
-        label: 'Check RTX 4090 price on Amazon',
-      },
-    ],
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -534,7 +512,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { title: 'Prompt-Vorlagen für Fiktion nutzen', description: 'Prompts für Szenen, Dialoge und Weltenbau, die auf Standard- und Uncensored-Modellen funktionieren.', href: '/de/power-local-llm/local-llm-prompts-for-fiction-writers' },
       ],
     },
-    affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
@@ -600,27 +577,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
     gammaDescription: 'Die Präsentation zeigt: was „Uncensored"-Fine-Tuning wirklich bedeutet (RLHF-Entfernung vs. null Einschränkungen); eine 5-Modell-Vergleichstabelle (Hermes 3 Llama 3.1 bis Dolphin 3.0 Llama 3.1 8B mit VRAM, Ablehnungsrate, Anweisungsqualität); geeignete und ungeeignete Anwendungsfälle; Ollama-Einrichtungsbefehle; bleibende ethische Verantwortlichkeiten; und 5 häufige Fehler. Als PDF-Referenzkarte für Uncensored-LLM-Kreativschreiben herunterladen.',
-    affiliateLinks: [
-      {
-        productName: 'Ollama',
-        url: 'https://ollama.com',
-        productCategory: 'software',
-        label: 'Ollama herunterladen',
-      },
-      {
-        productName: 'LM Studio',
-        url: 'https://lmstudio.ai',
-        productCategory: 'software',
-        label: 'LM Studio herunterladen',
-      },
-      {
-        productName: 'NVIDIA RTX 4090 24GB',
-        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
-        productCategory: 'gpu',
-        priceRange: '2268-2755',
-        label: 'RTX-4090-Preis bei Amazon prüfen',
-      },
-    ],
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1034,7 +990,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { title: 'Utiliser des modèles de prompts pour la fiction', description: 'Prompts de scène, de dialogue et de construction d\'univers qui fonctionnent sur les modèles standard et non censurés.', href: '/fr/power-local-llm/local-llm-prompts-for-fiction-writers' },
       ],
     },
-    affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
@@ -1100,27 +1055,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
     gammaDescription: 'La présentation ci-dessous couvre : ce que signifie réellement le fine-tuning « non censuré » (suppression du RLHF vs. zéro contrainte) ; un tableau de comparaison de 5 modèles (Hermes 3 Llama 3.1 à Dolphin 3.0 Llama 3.1 8B avec VRAM, taux de refus, qualité d\'instruction) ; cas d\'usage appropriés et inappropriés ; commandes de configuration Ollama ; responsabilités éthiques qui subsistent ; et 5 erreurs courantes. Téléchargez le PDF comme carte de référence pour l\'écriture créative avec LLM non censuré.',
-    affiliateLinks: [
-      {
-        productName: 'Ollama',
-        url: 'https://ollama.com',
-        productCategory: 'software',
-        label: 'Télécharger Ollama',
-      },
-      {
-        productName: 'LM Studio',
-        url: 'https://lmstudio.ai',
-        productCategory: 'software',
-        label: 'Télécharger LM Studio',
-      },
-      {
-        productName: 'NVIDIA RTX 4090 24GB',
-        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
-        productCategory: 'gpu',
-        priceRange: '2268-2755',
-        label: 'Vérifier le prix de la RTX 4090 sur Amazon',
-      },
-    ],
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1534,7 +1468,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { title: 'フィクション用プロンプトを使う', description: '標準モデルでも無検閲モデルでも使える、場面・対話・世界観構築のプロンプト集。', href: '/ja/power-local-llm/local-llm-prompts-for-fiction-writers' },
       ],
     },
-    affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
@@ -1601,27 +1534,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
     gammaDescription: '以下のスライドデッキでは：「無検閲」ファインチューニングが実際に意味すること（RLHF除去対ゼロ制約）；5モデル比較表（Hermes 3 Llama 3.1からDolphin 3.0 Llama 3.1 8BまでのVRAM、拒否率、指示品質）；適切・不適切なユースケース；Ollamaセットアップコマンド；ローカルセットアップに関わらず残る倫理的責任；5つのよくある間違いを掲載。PDFを無検閲ローカルLLM創作活動リファレンスカードとしてダウンロードしてください。',
-    affiliateLinks: [
-      {
-        productName: 'Ollama',
-        url: 'https://ollama.com',
-        productCategory: 'software',
-        label: 'Ollamaを入手',
-      },
-      {
-        productName: 'LM Studio',
-        url: 'https://lmstudio.ai',
-        productCategory: 'software',
-        label: 'LM Studioを入手',
-      },
-      {
-        productName: 'NVIDIA RTX 4090 24GB',
-        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
-        productCategory: 'gpu',
-        priceRange: '2268-2755',
-        label: 'AmazonでRTX 4090の価格を確認',
-      },
-    ],
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -2082,7 +1994,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { title: '使用小说提示词模板', description: '适用于标准和无审查模型的场景、对话与世界构建提示词。', href: '/zh/power-local-llm/local-llm-prompts-for-fiction-writers' },
       ],
     },
-    affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
@@ -2148,27 +2059,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
     gammaDescription: '以下幻灯片包含：「无审查」微调的真实含义（RLHF移除对比零约束）；5模型对比表（Hermes 3 Llama 3.1至Dolphin 3.0 Llama 3.1 8B，含VRAM、拒绝率、指令质量）；适用与不适用场景；Ollama配置命令；无论本地配置如何仍需承担的伦理责任；以及5个常见错误。将PDF作为无审查本地LLM创意写作参考卡下载。',
-    affiliateLinks: [
-      {
-        productName: 'Ollama',
-        url: 'https://ollama.com',
-        productCategory: 'software',
-        label: '获取 Ollama',
-      },
-      {
-        productName: 'LM Studio',
-        url: 'https://lmstudio.ai',
-        productCategory: 'software',
-        label: '获取 LM Studio',
-      },
-      {
-        productName: 'NVIDIA RTX 4090 24GB',
-        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
-        productCategory: 'gpu',
-        priceRange: '2268-2755',
-        label: '在亚马逊查看 RTX 4090 价格',
-      },
-    ],
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -2576,7 +2466,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { title: 'Usa plantillas de prompts para ficción', description: 'Prompts de escena, diálogo y construcción de mundos que funcionan en modelos estándar y sin censura.', href: '/es/power-local-llm/local-llm-prompts-for-fiction-writers' },
       ],
     },
-    affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
@@ -2642,27 +2531,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
     gammaDescription: 'La presentación a continuación cubre: qué significa realmente el fine-tuning "sin censura" (eliminación de RLHF frente a cero restricciones); una tabla comparativa de 5 modelos (de Hermes 3 Llama 3.1 a Dolphin 3.0 Llama 3.1 8B con VRAM, tasa de rechazo y calidad de instrucciones); casos de uso apropiados e inapropiados; comandos de configuración de Ollama; responsabilidades éticas que permanecen independientemente de la configuración local; y 5 errores comunes. Descarga el PDF como tarjeta de referencia para escritura creativa con LLM sin censura.',
-    affiliateLinks: [
-      {
-        productName: 'Ollama',
-        url: 'https://ollama.com',
-        productCategory: 'software',
-        label: 'Obtener Ollama',
-      },
-      {
-        productName: 'LM Studio',
-        url: 'https://lmstudio.ai',
-        productCategory: 'software',
-        label: 'Obtener LM Studio',
-      },
-      {
-        productName: 'NVIDIA RTX 4090 24GB',
-        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
-        productCategory: 'gpu',
-        priceRange: '2268-2755',
-        label: 'Ver precio de RTX 4090 en Amazon',
-      },
-    ],
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -3080,7 +2948,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { title: '소설용 프롬프트 템플릿 사용하기', description: '표준 모델과 무검열 모델 모두에서 작동하는 장면·대화·세계관 구축 프롬프트.', href: '/ko/power-local-llm/local-llm-prompts-for-fiction-writers' },
       ],
     },
-    affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
@@ -3146,27 +3013,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
     gammaDescription: '아래 프레젠테이션은 다음을 다룹니다: "무검열" 파인튜닝이 실제로 의미하는 것(RLHF 제거 대 제로 제한); 5개 모델 비교표(Hermes 3 Llama 3.1부터 Dolphin 3.0 Llama 3.1 8B까지 VRAM, 거부율, 지시 품질); 적합한 사용 사례와 부적합한 사용 사례; Ollama 설정 명령어; 로컬 설정과 무관하게 적용되는 윤리적 책임; 5가지 흔한 실수. PDF를 무검열 LLM 창의적 글쓰기 참조 카드로 다운로드하십시오.',
-    affiliateLinks: [
-      {
-        productName: 'Ollama',
-        url: 'https://ollama.com',
-        productCategory: 'software',
-        label: 'Ollama 받기',
-      },
-      {
-        productName: 'LM Studio',
-        url: 'https://lmstudio.ai',
-        productCategory: 'software',
-        label: 'LM Studio 받기',
-      },
-      {
-        productName: 'NVIDIA RTX 4090 24GB',
-        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
-        productCategory: 'gpu',
-        priceRange: '2268-2755',
-        label: 'Amazon에서 RTX 4090 가격 확인',
-      },
-    ],
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -3584,7 +3430,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { title: 'Use modelos de prompts para ficção', description: 'Prompts de cena, diálogo e construção de mundo que funcionam em modelos padrão e sem censura.', href: '/pt/power-local-llm/local-llm-prompts-for-fiction-writers' },
       ],
     },
-    affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
@@ -3650,27 +3495,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
     gammaDescription: 'A apresentação a seguir cobre: o que o fine-tuning "sem censura" realmente significa (remoção de RLHF versus zero restrições); uma tabela comparativa de 5 modelos (do Hermes 3 Llama 3.1 ao Dolphin 3.0 Llama 3.1 8B com VRAM, taxa de recusa e qualidade de instruções); casos de uso apropriados versus inapropriados; comandos de configuração do Ollama; responsabilidades éticas que permanecem independentemente da configuração local; e 5 erros comuns. Baixe o PDF como cartão de referência para escrita criativa com LLM sem censura.',
-    affiliateLinks: [
-      {
-        productName: 'Ollama',
-        url: 'https://ollama.com',
-        productCategory: 'software',
-        label: 'Baixar o Ollama',
-      },
-      {
-        productName: 'LM Studio',
-        url: 'https://lmstudio.ai',
-        productCategory: 'software',
-        label: 'Baixar o LM Studio',
-      },
-      {
-        productName: 'NVIDIA RTX 4090 24GB',
-        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
-        productCategory: 'gpu',
-        priceRange: '2268-2755',
-        label: 'Ver preço da RTX 4090 na Amazon',
-      },
-    ],
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -4089,7 +3913,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { title: 'استخدم قوالب prompts للخيال', description: 'prompts للمشاهد والحوار وبناء العوالم تعمل على النماذج القياسية وغير المقيّدة.', href: '/ar/power-local-llm/local-llm-prompts-for-fiction-writers' },
       ],
     },
-    affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
@@ -4155,27 +3978,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
     gammaDescription: 'العرض التقديمي أدناه يغطي: ما الذي يعنيه الضبط الدقيق "بدون قيود" حقًا (إزالة RLHF مقابل لا قيود)؛ جدول مقارنة 5 نماذج (من Hermes 3 Llama 3.1 إلى Dolphin 3.0 Llama 3.1 8B مع VRAM ومعدل الرفض وجودة التعليمات)؛ حالات الاستخدام المناسبة وغير المناسبة؛ أوامر إعداد Ollama؛ المسؤوليات الأخلاقية التي تبقى بصرف النظر عن الإعداد المحلي؛ و5 أخطاء شائعة. نزّل الـ PDF كبطاقة مرجعية للكتابة الإبداعية بنماذج LLM بدون قيود.',
-    affiliateLinks: [
-      {
-        productName: 'Ollama',
-        url: 'https://ollama.com',
-        productCategory: 'software',
-        label: 'احصل على Ollama',
-      },
-      {
-        productName: 'LM Studio',
-        url: 'https://lmstudio.ai',
-        productCategory: 'software',
-        label: 'احصل على LM Studio',
-      },
-      {
-        productName: 'NVIDIA RTX 4090 24GB',
-        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
-        productCategory: 'gpu',
-        priceRange: '2268-2755',
-        label: 'تحقق من سعر RTX 4090 على أمازون',
-      },
-    ],
     sections: {
       tldr: {
         id: 'key-takeaways',

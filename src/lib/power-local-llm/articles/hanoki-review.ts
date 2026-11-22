@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — Official Site', description: 'Product page for Hanoki, describing its branching conversation interface, model support, local storage, and platform availability.' },
+          { url: 'https://hanoki.app/', title: 'Hanoki — Official Site', description: 'Product page for Hanoki, describing its branching conversation interface, model support, local storage, and platform availability.' },
         ],
       },
       relatedReading: {
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — Offizielle Website', description: 'Produktseite für Hanoki mit Beschreibung der verzweigten Gesprächsoberfläche, Modellunterstützung, lokaler Speicherung und Plattformverfügbarkeit.' },
+          { url: 'https://hanoki.app/', title: 'Hanoki — Offizielle Website', description: 'Produktseite für Hanoki mit Beschreibung der verzweigten Gesprächsoberfläche, Modellunterstützung, lokaler Speicherung und Plattformverfügbarkeit.' },
         ],
       },
       relatedReading: {
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — Site officiel', description: 'Page produit de Hanoki décrivant son interface de conversation à embranchements, la prise en charge des modèles, le stockage local et la disponibilité des plateformes.' },
+          { url: 'https://hanoki.app/', title: 'Hanoki — Site officiel', description: 'Page produit de Hanoki décrivant son interface de conversation à embranchements, la prise en charge des modèles, le stockage local et la disponibilité des plateformes.' },
         ],
       },
       relatedReading: {
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — Sitio oficial', description: 'Página de producto de Hanoki que describe su interfaz de conversación con ramificaciones, el soporte de modelos, el almacenamiento local y la disponibilidad de plataformas.' },
+          { url: 'https://hanoki.app/', title: 'Hanoki — Sitio oficial', description: 'Página de producto de Hanoki que describe su interfaz de conversación con ramificaciones, el soporte de modelos, el almacenamiento local y la disponibilidad de plataformas.' },
         ],
       },
       relatedReading: {
@@ -1312,7 +1312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — Site oficial', description: 'Página do produto Hanoki descrevendo sua interface de conversa com ramificações, suporte a modelos, armazenamento local e disponibilidade de plataformas.' },
+          { url: 'https://hanoki.app/', title: 'Hanoki — Site oficial', description: 'Página do produto Hanoki descrevendo sua interface de conversa com ramificações, suporte a modelos, armazenamento local e disponibilidade de plataformas.' },
         ],
       },
       relatedReading: {
@@ -1581,7 +1581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         links: [
-          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — 公式サイト', description: '分岐型会話インターフェース、対応モデル、ローカル保存、対応プラットフォームについて説明するHanokiの製品ページ。' },
+          { url: 'https://hanoki.app/', title: 'Hanoki — 公式サイト', description: '分岐型会話インターフェース、対応モデル、ローカル保存、対応プラットフォームについて説明するHanokiの製品ページ。' },
         ],
       },
       relatedReading: {
@@ -1850,7 +1850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '资料来源',
         links: [
-          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — 官方网站', description: 'Hanoki的产品页面,介绍其分支式对话界面、模型支持、本地存储和平台支持情况。' },
+          { url: 'https://hanoki.app/', title: 'Hanoki — 官方网站', description: 'Hanoki的产品页面,介绍其分支式对话界面、模型支持、本地存储和平台支持情况。' },
         ],
       },
       relatedReading: {
@@ -2119,7 +2119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — الموقع الرسمي', description: 'صفحة منتج Hanoki التي تصف واجهة المحادثة المتفرعة ودعم النماذج والتخزين المحلي وتوفر المنصات.' },
+          { url: 'https://hanoki.app/', title: 'Hanoki — الموقع الرسمي', description: 'صفحة منتج Hanoki التي تصف واجهة المحادثة المتفرعة ودعم النماذج والتخزين المحلي وتوفر المنصات.' },
         ],
       },
       relatedReading: {
@@ -2388,7 +2388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://[hanoki.app](https://hanoki.app/)', title: 'Hanoki — 공식 사이트', description: '분기형 대화 인터페이스, 모델 지원, 로컬 저장, 지원 플랫폼을 설명하는 Hanoki 제품 페이지.' },
+          { url: 'https://hanoki.app/', title: 'Hanoki — 공식 사이트', description: '분기형 대화 인터페이스, 모델 지원, 로컬 저장, 지원 플랫폼을 설명하는 Hanoki 제품 페이지.' },
         ],
       },
       relatedReading: {

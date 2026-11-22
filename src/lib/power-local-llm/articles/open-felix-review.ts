@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'The product\'s own site, describing the local-by-default Qwen/MLX design, cloud escalation options, feature set (voice/text hotkey, screen vision, code execution, YouTube summaries, cron scheduling, notifications), platform requirements, license, and the OpenClaw skills ecosystem.' },
+          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'The product\'s own site, describing the local-by-default Qwen/MLX design, cloud escalation options, feature set (voice/text hotkey, screen vision, code execution, YouTube summaries, cron scheduling, notifications), platform requirements, license, and the OpenClaw skills ecosystem.' },
         ],
       },
       relatedReading: {
@@ -407,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'Die eigene Website des Produkts, die das lokal-first Qwen/MLX-Design, Cloud-Eskalationsoptionen, den Funktionsumfang (Sprach-/Text-Hotkey, Bildschirm-Erkennung, Code-Ausführung, YouTube-Zusammenfassungen, Cron-Planung, Benachrichtigungen), Plattformanforderungen, Lizenz und das OpenClaw-Skill-Ökosystem beschreibt.' },
+          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'Die eigene Website des Produkts, die das lokal-first Qwen/MLX-Design, Cloud-Eskalationsoptionen, den Funktionsumfang (Sprach-/Text-Hotkey, Bildschirm-Erkennung, Code-Ausführung, YouTube-Zusammenfassungen, Cron-Planung, Benachrichtigungen), Plattformanforderungen, Lizenz und das OpenClaw-Skill-Ökosystem beschreibt.' },
         ],
       },
       relatedReading: {
@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'Le site officiel du produit, décrivant la conception local par défaut Qwen/MLX, les options d\'escalade cloud, l\'ensemble des fonctionnalités (raccourci voix/texte, vision d\'écran, exécution de code, résumés YouTube, planification cron, notifications), la configuration requise, la licence et l\'écosystème de compétences OpenClaw.' },
+          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'Le site officiel du produit, décrivant la conception local par défaut Qwen/MLX, les options d\'escalade cloud, l\'ensemble des fonctionnalités (raccourci voix/texte, vision d\'écran, exécution de code, résumés YouTube, planification cron, notifications), la configuration requise, la licence et l\'écosystème de compétences OpenClaw.' },
         ],
       },
       relatedReading: {
@@ -827,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'El sitio oficial del producto, que describe el diseño local por defecto Qwen/MLX, las opciones de escalado a la nube, el conjunto de funciones (atajo de voz/texto, visión de pantalla, ejecución de código, resúmenes de YouTube, programación cron, notificaciones), requisitos de plataforma, licencia y el ecosistema de skills OpenClaw.' },
+          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'El sitio oficial del producto, que describe el diseño local por defecto Qwen/MLX, las opciones de escalado a la nube, el conjunto de funciones (atajo de voz/texto, visión de pantalla, ejecución de código, resúmenes de YouTube, programación cron, notificaciones), requisitos de plataforma, licencia y el ecosistema de skills OpenClaw.' },
         ],
       },
       relatedReading: {
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'O site oficial do produto, descrevendo o design local por padrão com Qwen/MLX, as opções de escalonamento para a nuvem, o conjunto de recursos (atalho de voz/texto, visão de tela, execução de código, resumos de YouTube, agendamento cron, notificações), requisitos de plataforma, licença e o ecossistema de skills OpenClaw.' },
+          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'O site oficial do produto, descrevendo o design local por padrão com Qwen/MLX, as opções de escalonamento para a nuvem, o conjunto de recursos (atalho de voz/texto, visão de tela, execução de código, resumos de YouTube, agendamento cron, notificações), requisitos de plataforma, licença e o ecossistema de skills OpenClaw.' },
         ],
       },
       relatedReading: {
@@ -1247,7 +1247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '情報源',
         links: [
-          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'ローカルファーストなQwen/MLX設計、クラウドエスカレーションのオプション、機能セット（音声/テキストホットキー、画面認識、コード実行、YouTube要約、cronスケジューリング、通知）、プラットフォーム要件、ライセンス、OpenClawスキルエコシステムを説明する製品公式サイト。' },
+          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'ローカルファーストなQwen/MLX設計、クラウドエスカレーションのオプション、機能セット（音声/テキストホットキー、画面認識、コード実行、YouTube要約、cronスケジューリング、通知）、プラットフォーム要件、ライセンス、OpenClawスキルエコシステムを説明する製品公式サイト。' },
         ],
       },
       relatedReading: {
@@ -1457,7 +1457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '资料来源',
         links: [
-          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: '产品官方网站，介绍了本地优先的Qwen/MLX设计、云端升级选项、功能集（语音/文本快捷键、屏幕识别、代码执行、YouTube总结、cron定时、通知）、平台要求、许可证以及OpenClaw技能生态系统。' },
+          { url: 'https://openfelix.com/', title: 'Open Felix', description: '产品官方网站，介绍了本地优先的Qwen/MLX设计、云端升级选项、功能集（语音/文本快捷键、屏幕识别、代码执行、YouTube总结、cron定时、通知）、平台要求、许可证以及OpenClaw技能生态系统。' },
         ],
       },
       relatedReading: {
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: 'موقع المنتج الرسمي، الذي يصف تصميم Qwen/MLX المحلي بشكل افتراضي، وخيارات التصعيد السحابي، ومجموعة الميزات (اختصار الصوت/النص، رؤية الشاشة، تنفيذ التعليمات البرمجية، تلخيص YouTube، جدولة cron، الإشعارات)، ومتطلبات المنصة، والترخيص، ونظام مهارات OpenClaw.' },
+          { url: 'https://openfelix.com/', title: 'Open Felix', description: 'موقع المنتج الرسمي، الذي يصف تصميم Qwen/MLX المحلي بشكل افتراضي، وخيارات التصعيد السحابي، ومجموعة الميزات (اختصار الصوت/النص، رؤية الشاشة، تنفيذ التعليمات البرمجية، تلخيص YouTube، جدولة cron، الإشعارات)، ومتطلبات المنصة، والترخيص، ونظام مهارات OpenClaw.' },
         ],
       },
       relatedReading: {
@@ -1877,7 +1877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://[openfelix.com](https://openfelix.com/)/', title: 'Open Felix', description: '로컬 우선 Qwen/MLX 설계, 클라우드 확장 옵션, 기능 세트(음성/텍스트 단축키, 화면 인식, 코드 실행, YouTube 요약, cron 예약, 알림), 플랫폼 요구 사항, 라이선스, OpenClaw 스킬 생태계를 설명하는 제품 공식 웹사이트.' },
+          { url: 'https://openfelix.com/', title: 'Open Felix', description: '로컬 우선 Qwen/MLX 설계, 클라우드 확장 옵션, 기능 세트(음성/텍스트 단축키, 화면 인식, 코드 실행, YouTube 요약, cron 예약, 알림), 플랫폼 요구 사항, 라이선스, OpenClaw 스킬 생태계를 설명하는 제품 공식 웹사이트.' },
         ],
       },
       relatedReading: {

@@ -36,7 +36,6 @@ export const AFF_BANNER_PAGE_OFFERS: Readonly<Record<string, readonly OfferId[]>
   '/power-local-llm/elevenlabs-vs-local-tts-piper-xtts': ['software'],
   '/prompt-bites/deepseek-r1-distill-vram-cheatsheet': ['gpu-budget'],
   // B1
-  '/power-local-llm/uncensored-local-llm-creative-writing-ethics': ['gpu-24gb', 'cloud-gpu'],
   '/smart-home/best-mini-pc-home-assistant-local-ai': ['mini-pc', 'smart-hub'],
   '/prompt-bites/best-intel-arc-gpu-local-llm': ['gpu-budget', 'gpu-24gb'],
   '/smart-home/gmktec-g3-plus-local-ai-review': ['mini-pc', 'sbc'],

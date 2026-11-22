@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — Official Site', description: 'Product page listing platform requirements, supported backends, agent features, and privacy claims for Osaurus.' },
+          { url: 'https://osaurus.ai/', title: 'Osaurus — Official Site', description: 'Product page listing platform requirements, supported backends, agent features, and privacy claims for Osaurus.' },
         ],
       },
       relatedReading: {
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — Offizielle Website', description: 'Produktseite mit Plattformanforderungen, unterstützten Backends, Agenten-Funktionen und Datenschutzangaben zu Osaurus.' },
+          { url: 'https://osaurus.ai/', title: 'Osaurus — Offizielle Website', description: 'Produktseite mit Plattformanforderungen, unterstützten Backends, Agenten-Funktionen und Datenschutzangaben zu Osaurus.' },
         ],
       },
       relatedReading: {
@@ -876,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — Site officiel', description: 'Page produit répertoriant les prérequis de plateforme, les backends pris en charge, les fonctionnalités d\'agent et les déclarations de confidentialité d\'Osaurus.' },
+          { url: 'https://osaurus.ai/', title: 'Osaurus — Site officiel', description: 'Page produit répertoriant les prérequis de plateforme, les backends pris en charge, les fonctionnalités d\'agent et les déclarations de confidentialité d\'Osaurus.' },
         ],
       },
       relatedReading: {
@@ -1172,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         links: [
-          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — 公式サイト', description: 'Osaurusのプラットフォーム要件、対応バックエンド、エージェント機能、プライバシーに関する主張を掲載した製品ページ。' },
+          { url: 'https://osaurus.ai/', title: 'Osaurus — 公式サイト', description: 'Osaurusのプラットフォーム要件、対応バックエンド、エージェント機能、プライバシーに関する主張を掲載した製品ページ。' },
         ],
       },
       relatedReading: {
@@ -1468,7 +1468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '资料来源',
         links: [
-          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — 官方网站', description: '列出 Osaurus 平台要求、支持的后端、智能体功能和隐私声明的产品页面。' },
+          { url: 'https://osaurus.ai/', title: 'Osaurus — 官方网站', description: '列出 Osaurus 平台要求、支持的后端、智能体功能和隐私声明的产品页面。' },
         ],
       },
       relatedReading: {
@@ -1764,7 +1764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — Sitio oficial', description: 'Página de producto con los requisitos de plataforma, backends compatibles, funciones de agente y afirmaciones de privacidad de Osaurus.' },
+          { url: 'https://osaurus.ai/', title: 'Osaurus — Sitio oficial', description: 'Página de producto con los requisitos de plataforma, backends compatibles, funciones de agente y afirmaciones de privacidad de Osaurus.' },
         ],
       },
       relatedReading: {
@@ -2060,7 +2060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — Site oficial', description: 'Página do produto com requisitos de plataforma, backends suportados, recursos de agente e declarações de privacidade do Osaurus.' },
+          { url: 'https://osaurus.ai/', title: 'Osaurus — Site oficial', description: 'Página do produto com requisitos de plataforma, backends suportados, recursos de agente e declarações de privacidade do Osaurus.' },
         ],
       },
       relatedReading: {
@@ -2356,7 +2356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — الموقع الرسمي', description: 'صفحة المنتج التي تسرد متطلبات المنصة، والخلفيات المدعومة، وميزات الوكيل، وإقرارات الخصوصية لـ Osaurus.' },
+          { url: 'https://osaurus.ai/', title: 'Osaurus — الموقع الرسمي', description: 'صفحة المنتج التي تسرد متطلبات المنصة، والخلفيات المدعومة، وميزات الوكيل، وإقرارات الخصوصية لـ Osaurus.' },
         ],
       },
       relatedReading: {
@@ -2652,7 +2652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://[osaurus.ai](https://osaurus.ai/)', title: 'Osaurus — 공식 웹사이트', description: 'Osaurus의 플랫폼 요구 사항, 지원 백엔드, 에이전트 기능, 개인정보 보호 주장을 나열한 제품 페이지.' },
+          { url: 'https://osaurus.ai/', title: 'Osaurus — 공식 웹사이트', description: 'Osaurus의 플랫폼 요구 사항, 지원 백엔드, 에이전트 기능, 개인정보 보호 주장을 나열한 제품 페이지.' },
         ],
       },
       relatedReading: {

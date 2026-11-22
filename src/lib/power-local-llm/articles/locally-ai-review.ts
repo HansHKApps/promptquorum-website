@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visit Locally AI official site →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Visit Locally AI official site →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI review',
     targetKeywords: [
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Zur offiziellen Locally AI-Website →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Zur offiziellen Locally AI-Website →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI Review',
     targetKeywords: [
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visiter le site officiel de Locally AI →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Visiter le site officiel de Locally AI →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI review',
     targetKeywords: [
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visitar el sitio oficial de Locally AI →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Visitar el sitio oficial de Locally AI →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI review',
     targetKeywords: [
@@ -1236,7 +1236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visitar o site oficial do Locally AI →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Visitar o site oficial do Locally AI →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI review',
     targetKeywords: [
@@ -1538,7 +1538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Locally AI公式サイトを見る →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Locally AI公式サイトを見る →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AIレビュー',
     targetKeywords: [
@@ -1840,7 +1840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: '访问Locally AI官网 →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
+      { label: '访问Locally AI官网 →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI评测',
     targetKeywords: [
@@ -2142,7 +2142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'زيارة موقع Locally AI الرسمي ←', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'زيارة موقع Locally AI الرسمي ←', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'مراجعة Locally AI',
     targetKeywords: [
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Locally AI 공식 사이트 방문 →', url: 'https://[www.locallyai.app](https://www.locallyai.app/)/', productName: 'Locally AI', productCategory: 'software' },
+      { label: 'Locally AI 공식 사이트 방문 →', url: 'https://www.locallyai.app/', productName: 'Locally AI', productCategory: 'software' },
     ],
     primaryTerm: 'Locally AI 리뷰',
     targetKeywords: [

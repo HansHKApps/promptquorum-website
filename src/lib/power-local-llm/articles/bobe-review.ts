@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://[www.bobebot.com](https://www.bobebot.com/)/', title: 'BoBe', description: 'BoBe\'s own site, describing it as a free, open-source, local AI desktop assistant for Mac under the tagline "Open Source, Private, Proactive."' },
+          { url: 'https://www.bobebot.com/', title: 'BoBe', description: 'BoBe\'s own site, describing it as a free, open-source, local AI desktop assistant for Mac under the tagline "Open Source, Private, Proactive."' },
         ],
       },
       relatedReading: {
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://[www.bobebot.com](https://www.bobebot.com/)/', title: 'BoBe', description: 'BoBes eigene Website, die ihn als kostenlosen, quelloffenen, lokalen KI-Desktop-Assistenten für Mac unter dem Slogan "Open Source, Private, Proactive" beschreibt.' },
+          { url: 'https://www.bobebot.com/', title: 'BoBe', description: 'BoBes eigene Website, die ihn als kostenlosen, quelloffenen, lokalen KI-Desktop-Assistenten für Mac unter dem Slogan "Open Source, Private, Proactive" beschreibt.' },
         ],
       },
       relatedReading: {
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://[www.bobebot.com](https://www.bobebot.com/)/', title: 'BoBe', description: 'Le site propre de BoBe, qui le décrit comme un assistant IA de bureau local, gratuit et open source pour Mac, sous le slogan « Open Source, Private, Proactive ».' },
+          { url: 'https://www.bobebot.com/', title: 'BoBe', description: 'Le site propre de BoBe, qui le décrit comme un assistant IA de bureau local, gratuit et open source pour Mac, sous le slogan « Open Source, Private, Proactive ».' },
         ],
       },
       relatedReading: {
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'ソース',
         links: [
-          { url: 'https://[www.bobebot.com](https://www.bobebot.com/)/', title: 'BoBe', description: 'BoBe自身のサイト。「Open Source, Private, Proactive」というタグラインの下、Mac向けの無料・オープンソースのローカルAIデスクトップアシスタントとして紹介している。' },
+          { url: 'https://www.bobebot.com/', title: 'BoBe', description: 'BoBe自身のサイト。「Open Source, Private, Proactive」というタグラインの下、Mac向けの無料・オープンソースのローカルAIデスクトップアシスタントとして紹介している。' },
         ],
       },
       relatedReading: {
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '来源',
         links: [
-          { url: 'https://[www.bobebot.com](https://www.bobebot.com/)/', title: 'BoBe', description: 'BoBe官网，以"Open Source, Private, Proactive"为宣传语，将其描述为面向Mac的免费、开源本地AI桌面助手。' },
+          { url: 'https://www.bobebot.com/', title: 'BoBe', description: 'BoBe官网，以"Open Source, Private, Proactive"为宣传语，将其描述为面向Mac的免费、开源本地AI桌面助手。' },
         ],
       },
       relatedReading: {
@@ -1109,7 +1109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://[www.bobebot.com](https://www.bobebot.com/)/', title: 'BoBe', description: 'El propio sitio de BoBe, que lo describe como un asistente de IA de escritorio local, gratuito y de código abierto para Mac, bajo el lema "Open Source, Private, Proactive".' },
+          { url: 'https://www.bobebot.com/', title: 'BoBe', description: 'El propio sitio de BoBe, que lo describe como un asistente de IA de escritorio local, gratuito y de código abierto para Mac, bajo el lema "Open Source, Private, Proactive".' },
         ],
       },
       relatedReading: {
@@ -1296,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://[www.bobebot.com](https://www.bobebot.com/)/', title: 'BoBe', description: 'O próprio site do BoBe, que o descreve como um assistente de IA de desktop local, gratuito e de código aberto para Mac, com o slogan "Open Source, Private, Proactive".' },
+          { url: 'https://www.bobebot.com/', title: 'BoBe', description: 'O próprio site do BoBe, que o descreve como um assistente de IA de desktop local, gratuito e de código aberto para Mac, com o slogan "Open Source, Private, Proactive".' },
         ],
       },
       relatedReading: {
@@ -1483,7 +1483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://[www.bobebot.com](https://www.bobebot.com/)/', title: 'BoBe', description: 'موقع BoBe الرسمي، الذي يصفه كمساعد ذكاء اصطناعي محلي مجاني ومفتوح المصدر لسطح مكتب Mac، تحت شعار "Open Source, Private, Proactive".' },
+          { url: 'https://www.bobebot.com/', title: 'BoBe', description: 'موقع BoBe الرسمي، الذي يصفه كمساعد ذكاء اصطناعي محلي مجاني ومفتوح المصدر لسطح مكتب Mac، تحت شعار "Open Source, Private, Proactive".' },
         ],
       },
       relatedReading: {
@@ -1670,7 +1670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://[www.bobebot.com](https://www.bobebot.com/)/', title: 'BoBe', description: 'BoBe 공식 사이트로, "Open Source, Private, Proactive" 태그라인 아래 Mac용 무료 오픈소스 로컬 AI 데스크톱 어시스턴트로 소개하고 있습니다.' },
+          { url: 'https://www.bobebot.com/', title: 'BoBe', description: 'BoBe 공식 사이트로, "Open Source, Private, Proactive" 태그라인 아래 Mac용 무료 오픈소스 로컬 AI 데스크톱 어시스턴트로 소개하고 있습니다.' },
         ],
       },
       relatedReading: {

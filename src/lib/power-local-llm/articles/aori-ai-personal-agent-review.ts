@@ -1,6 +1,6 @@
 // Aori AI Review: Local-First Personal Agent for Desktop and Mobile
 // Slug: aori-ai-personal-agent-review
-// Verified facts only: https://[www.aori-ai.app](https://www.aori-ai.app/)/ — hybrid local/cloud personal agent, public beta
+// Verified facts only: https://www.aori-ai.app/ — hybrid local/cloud personal agent, public beta
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visit Aori official site →', url: 'https://[www.aori-ai.app](https://www.aori-ai.app/)/', productName: 'Aori', productCategory: 'software' },
+      { label: 'Visit Aori official site →', url: 'https://www.aori-ai.app/', productName: 'Aori', productCategory: 'software' },
     ],
     primaryTerm: 'Aori AI review',
     targetKeywords: [
@@ -295,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'زيارة موقع Aori الرسمي ←', url: 'https://[www.aori-ai.app](https://www.aori-ai.app/)/', productName: 'Aori', productCategory: 'software' },
+      { label: 'زيارة موقع Aori الرسمي ←', url: 'https://www.aori-ai.app/', productName: 'Aori', productCategory: 'software' },
     ],
     primaryTerm: 'Aori AI review',
     targetKeywords: [
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Aori offizielle Website besuchen →', url: 'https://[www.aori-ai.app](https://www.aori-ai.app/)/', productName: 'Aori', productCategory: 'software' },
+      { label: 'Aori offizielle Website besuchen →', url: 'https://www.aori-ai.app/', productName: 'Aori', productCategory: 'software' },
     ],
     primaryTerm: 'Aori AI review',
     targetKeywords: [
@@ -829,7 +829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visitar el sitio oficial de Aori →', url: 'https://[www.aori-ai.app](https://www.aori-ai.app/)/', productName: 'Aori', productCategory: 'software' },
+      { label: 'Visitar el sitio oficial de Aori →', url: 'https://www.aori-ai.app/', productName: 'Aori', productCategory: 'software' },
     ],
     primaryTerm: 'Aori AI review',
     targetKeywords: [
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visiter le site officiel d\'Aori →', url: 'https://[www.aori-ai.app](https://www.aori-ai.app/)/', productName: 'Aori', productCategory: 'software' },
+      { label: 'Visiter le site officiel d\'Aori →', url: 'https://www.aori-ai.app/', productName: 'Aori', productCategory: 'software' },
     ],
     primaryTerm: 'Aori AI review',
     targetKeywords: [
@@ -1363,7 +1363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Aori公式サイトを見る →', url: 'https://[www.aori-ai.app](https://www.aori-ai.app/)/', productName: 'Aori', productCategory: 'software' },
+      { label: 'Aori公式サイトを見る →', url: 'https://www.aori-ai.app/', productName: 'Aori', productCategory: 'software' },
     ],
     primaryTerm: 'Aori AI review',
     targetKeywords: [
@@ -1630,7 +1630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Aori 공식 사이트 방문 →', url: 'https://[www.aori-ai.app](https://www.aori-ai.app/)/', productName: 'Aori', productCategory: 'software' },
+      { label: 'Aori 공식 사이트 방문 →', url: 'https://www.aori-ai.app/', productName: 'Aori', productCategory: 'software' },
     ],
     primaryTerm: 'Aori AI review',
     targetKeywords: [
@@ -1897,7 +1897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: 'Visitar o site oficial do Aori →', url: 'https://[www.aori-ai.app](https://www.aori-ai.app/)/', productName: 'Aori', productCategory: 'software' },
+      { label: 'Visitar o site oficial do Aori →', url: 'https://www.aori-ai.app/', productName: 'Aori', productCategory: 'software' },
     ],
     primaryTerm: 'Aori AI review',
     targetKeywords: [
@@ -2164,7 +2164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [
-      { label: '访问 Aori 官方网站 →', url: 'https://[www.aori-ai.app](https://www.aori-ai.app/)/', productName: 'Aori', productCategory: 'software' },
+      { label: '访问 Aori 官方网站 →', url: 'https://www.aori-ai.app/', productName: 'Aori', productCategory: 'software' },
     ],
     primaryTerm: 'Aori AI review',
     targetKeywords: [

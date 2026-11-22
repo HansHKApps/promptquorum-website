@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Voxa official site', description: 'Product overview, platform availability, and setup information for Voxa, the source for the facts in this review.' },
+          { url: 'https://askvoxa.dev/', title: 'Voxa official site', description: 'Product overview, platform availability, and setup information for Voxa, the source for the facts in this review.' },
         ],
       },
       relatedReading: {
@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Voxa offizielle Website', description: 'Produktübersicht, Plattformverfügbarkeit und Einrichtungsinformationen für Voxa, die Quelle für die Fakten in diesem Review.' },
+          { url: 'https://askvoxa.dev/', title: 'Voxa offizielle Website', description: 'Produktübersicht, Plattformverfügbarkeit und Einrichtungsinformationen für Voxa, die Quelle für die Fakten in diesem Review.' },
         ],
       },
       relatedReading: {
@@ -655,7 +655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Site officiel de Voxa', description: 'Présentation du produit, disponibilité par plateforme et informations de configuration pour Voxa, source des faits de cet avis.' },
+          { url: 'https://askvoxa.dev/', title: 'Site officiel de Voxa', description: 'Présentation du produit, disponibilité par plateforme et informations de configuration pour Voxa, source des faits de cet avis.' },
         ],
       },
       relatedReading: {
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Sitio oficial de Voxa', description: 'Descripción del producto, disponibilidad por plataforma e información de configuración de Voxa, la fuente de los datos de esta reseña.' },
+          { url: 'https://askvoxa.dev/', title: 'Sitio oficial de Voxa', description: 'Descripción del producto, disponibilidad por plataforma e información de configuración de Voxa, la fuente de los datos de esta reseña.' },
         ],
       },
       relatedReading: {
@@ -1101,7 +1101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Site oficial do Voxa', description: 'Visão geral do produto, disponibilidade por plataforma e informações de configuração do Voxa, a fonte dos fatos desta análise.' },
+          { url: 'https://askvoxa.dev/', title: 'Site oficial do Voxa', description: 'Visão geral do produto, disponibilidade por plataforma e informações de configuração do Voxa, a fonte dos fatos desta análise.' },
         ],
       },
       relatedReading: {
@@ -1324,7 +1324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         links: [
-          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Voxa公式サイト', description: 'この記事のファクトの出典であるVoxaの製品概要、プラットフォーム対応状況、セットアップ情報。' },
+          { url: 'https://askvoxa.dev/', title: 'Voxa公式サイト', description: 'この記事のファクトの出典であるVoxaの製品概要、プラットフォーム対応状況、セットアップ情報。' },
         ],
       },
       relatedReading: {
@@ -1547,7 +1547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '来源',
         links: [
-          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Voxa官方网站', description: 'Voxa的产品概览、平台可用性和安装信息，本评测中事实内容的来源。' },
+          { url: 'https://askvoxa.dev/', title: 'Voxa官方网站', description: 'Voxa的产品概览、平台可用性和安装信息，本评测中事实内容的来源。' },
         ],
       },
       relatedReading: {
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'الموقع الرسمي لـ Voxa', description: 'نظرة عامة على المنتج، وتوافر المنصات، ومعلومات الإعداد الخاصة بـ Voxa، وهي مصدر الحقائق الواردة في هذه المراجعة.' },
+          { url: 'https://askvoxa.dev/', title: 'الموقع الرسمي لـ Voxa', description: 'نظرة عامة على المنتج، وتوافر المنصات، ومعلومات الإعداد الخاصة بـ Voxa، وهي مصدر الحقائق الواردة في هذه المراجعة.' },
         ],
       },
       relatedReading: {
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://[askvoxa.dev](https://askvoxa.dev/)/', title: 'Voxa 공식 사이트', description: '이 리뷰에 담긴 사실의 출처인 Voxa의 제품 개요, 플랫폼 지원 현황, 설정 정보.' },
+          { url: 'https://askvoxa.dev/', title: 'Voxa 공식 사이트', description: '이 리뷰에 담긴 사실의 출처인 Voxa의 제품 개요, 플랫폼 지원 현황, 설정 정보.' },
         ],
       },
       relatedReading: {

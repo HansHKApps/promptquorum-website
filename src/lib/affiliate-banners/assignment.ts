@@ -1,7 +1,7 @@
 // Banner pilot assignment: static, no per-visitor randomisation. Stratified-random (cluster x traffic tier), seed 20261108,
-// from GSC 28 days to 2026-11-06. 60 treated groups (A1/A3/B1/B3 x 15) and 20 matched controls. Keys are English paths;
+// from GSC 28 days to 2026-11-06. 59 treated groups (A1/A3/B3 x 15, B1 x 14) and 20 matched controls. Keys are English paths;
 // all 9 locale versions share the arm. Phase 1: every treated group at AP2. offerIds are filled in when offers are written.
-// The uncensored creative-writing page is its own stratum (B1); reports must show results with and without it.
+// 2026-11-22: the uncensored creative-writing page (former solo stratum, B1) was removed from the affiliate programme at the owner's request.
 import type { BannerCell } from './types'
 
 export interface AssignmentEntry { cell: BannerCell; tier: 'high' | 'medium' | 'solo' }
@@ -44,7 +44,6 @@ export const AFF_BANNER_GROUPS: Readonly<Record<string, AssignmentEntry>> = {
   '/power-local-llm/best-rag-tools-for-business-documents-2026': { cell: 'B1', tier: 'medium' },
   '/power-local-llm/deepseek-offline-china-self-hosted-2026': { cell: 'B1', tier: 'high' },
   '/power-local-llm/local-llm-run-serve-compared': { cell: 'B1', tier: 'high' },
-  '/power-local-llm/uncensored-local-llm-creative-writing-ethics': { cell: 'B1', tier: 'solo' },
   '/prompt-bites/best-budget-ai-laptop-under-1000': { cell: 'B1', tier: 'high' },
   '/prompt-bites/best-intel-arc-gpu-local-llm': { cell: 'B1', tier: 'high' },
   '/prompt-bites/best-local-llm-obsidian-integration': { cell: 'B1', tier: 'medium' },

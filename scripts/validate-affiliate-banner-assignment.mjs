@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Checks the affiliate-banner pilot assignment (src/lib/affiliate-banners/assignment.ts): 60 treated groups (15 each in
-// A1/A3/B1/B3), 20 controls, no overlap with the promo pilot (groups or controls), every page exists and is an
+// Checks the affiliate-banner pilot assignment (src/lib/affiliate-banners/assignment.ts): 59 treated groups (15 each in
+// A1/A3/B3, 14 in B1), 20 controls, no overlap with the promo pilot (groups or controls), every page exists and is an
 // affiliate-regime page (affiliateDisclosure: true), controls are not treated. Run: npm run test:affiliate-banner-assignment
 import fs from 'node:fs'
 import path from 'node:path'
@@ -22,10 +22,10 @@ const errors = []
 const fail = (m) => errors.push(m)
 
 const treated = Object.entries(AFF_BANNER_GROUPS)
-if (treated.length !== 60) fail(`expected 60 treated groups, got ${treated.length}`)
+if (treated.length !== 59) fail(`expected 59 treated groups, got ${treated.length}`)
 const per = {}
 for (const [, e] of treated) per[e.cell] = (per[e.cell] ?? 0) + 1
-for (const c of ['A1', 'A3', 'B1', 'B3']) if (per[c] !== 15) fail(`${c}: expected 15 groups, got ${per[c] ?? 0}`)
+for (const c of ['A1', 'A3', 'B1', 'B3']) if (per[c] !== (c === 'B1' ? 14 : 15)) fail(`${c}: expected ${c === 'B1' ? 14 : 15} groups, got ${per[c] ?? 0}`)
 if (AFF_BANNER_CONTROLS.length !== 20) fail(`expected 20 controls, got ${AFF_BANNER_CONTROLS.length}`)
 if (new Set(AFF_BANNER_CONTROLS).size !== AFF_BANNER_CONTROLS.length) fail('duplicate controls')
 
@@ -46,7 +46,7 @@ for (const k of all) {
   if (!fs.readFileSync(f, 'utf8').includes('affiliateDisclosure: true')) fail(`${k}: not an affiliate-regime page`)
 }
 const u = '/power-local-llm/uncensored-local-llm-creative-writing-ethics'
-if (AFF_BANNER_GROUPS[u]?.tier !== 'solo') fail('the uncensored page must be its own stratum (tier solo)')
+if (AFF_BANNER_GROUPS[u]) fail('the uncensored page was removed from the affiliate programme and must not be a treated group')
 
 // Offers: A cells need 1 offer, B cells 2 (distinct); every offer has 9-locale copy and enough merchants; plain URLs only.
 const LOCALES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
